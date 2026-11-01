@@ -1,0 +1,581 @@
+{
+  "municipality": "Abbotsford",
+  "employerSlug": "city-of-abbotsford",
+  "website": "http://www.abbotsford.ca",
+  "checkedOn": "2026-10-31",
+  "method": "Bounded traversal of links actually present on the official website; at most two link hops.",
+  "status": "source-links-found-awaiting-review",
+  "pagesChecked": [
+    {
+      "url": "https://www.abbotsford.ca",
+      "depth": 0,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.abbotsford.ca",
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 117079,
+      "sha256": "84e7409c895c763f0beeeace330c66acbdaf0510abb8d4340f16d6aa2b2c7405",
+      "status": "html-read",
+      "containsSofiTerms": false
+    },
+    {
+      "url": "https://www.abbotsford.ca/city-hall/finance",
+      "depth": 1,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.abbotsford.ca/city-hall/finance",
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 200681,
+      "sha256": "3ded50b342d164831cc1c0aa2ade2ab115efd72958df6adac8c836c0cf508a0e",
+      "status": "html-read",
+      "containsSofiTerms": true
+    },
+    {
+      "url": "https://www.abbotsford.ca/city-hall",
+      "depth": 1,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.abbotsford.ca/city-hall",
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 175652,
+      "sha256": "62a6491ee1ef76ce6710878b64fb712caa8ff036786f71f76532ef75ee8feb6e",
+      "status": "html-read",
+      "containsSofiTerms": false
+    },
+    {
+      "url": "https://www.abbotsford.ca/city-hall/city-government",
+      "depth": 1,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.abbotsford.ca/city-hall/city-government",
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 178991,
+      "sha256": "77ca34e802c0769d7d70910d91a4afe0c25448ea498bef722ec1eb97b3b1d078",
+      "status": "html-read",
+      "containsSofiTerms": false
+    },
+    {
+      "url": "https://www.abbotsford.ca/city-hall/city-government/customer-culture-strategy",
+      "depth": 1,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.abbotsford.ca/city-hall/city-government/customer-culture-strategy",
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 179253,
+      "sha256": "23a076d5dc1925a4263d5239bd54c1ed5d8cd58ed337ef103e4bb45e0a0a64d7",
+      "status": "html-read",
+      "containsSofiTerms": false
+    },
+    {
+      "url": "https://www.abbotsford.ca/city-hall/city-government/freedom-information",
+      "depth": 1,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.abbotsford.ca/city-hall/city-government/freedom-information",
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 196878,
+      "sha256": "93c632463ca3f9c1f5ac3f3e0d909f485643811410998d3db373517355dd5307",
+      "status": "html-read",
+      "containsSofiTerms": false
+    },
+    {
+      "url": "https://www.abbotsford.ca/city-hall/city-government/intergovernmental-relations",
+      "depth": 1,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.abbotsford.ca/city-hall/city-government/intergovernmental-relations",
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 181868,
+      "sha256": "f63f33e8e3140f62241599ba616b9a469baaefd5d036bf9a29242f7f2bb23082",
+      "status": "html-read",
+      "containsSofiTerms": false
+    },
+    {
+      "url": "https://www.abbotsford.ca/city-hall/contact-us",
+      "depth": 1,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.abbotsford.ca/city-hall/contact-us",
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 332590,
+      "sha256": "79c232f925f7aec85e28766b8e2bca8614123f2fad1b84add781ecf987ce806c",
+      "status": "html-read",
+      "containsSofiTerms": false
+    },
+    {
+      "url": "https://www.abbotsford.ca/city-hall/contact-us/finance",
+      "depth": 2,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.abbotsford.ca/city-hall/contact-us/finance",
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 174662,
+      "sha256": "ee466af51b3927880c1643c13774901e717e275de9e8b0e3ed5b485071978a94",
+      "status": "html-read",
+      "containsSofiTerms": false
+    }
+  ],
+  "candidates": [
+    {
+      "url": "https://www.abbotsford.ca/sites/default/files/2021-02/2010%20Financial%20Statements.pdf",
+      "label": "2010 Financial Statements",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.abbotsford.ca/city-hall/finance",
+      "yearsInLabel": [
+        "2010",
+        "2021"
+      ]
+    },
+    {
+      "url": "https://www.abbotsford.ca/sites/default/files/2021-02/2011%20Financial%20Statements.pdf",
+      "label": "2011 Financial Statements",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.abbotsford.ca/city-hall/finance",
+      "yearsInLabel": [
+        "2011",
+        "2021"
+      ]
+    },
+    {
+      "url": "https://www.abbotsford.ca/sites/default/files/2021-02/2012%20Financial%20Statements.pdf",
+      "label": "2012 Financial Statements",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.abbotsford.ca/city-hall/finance",
+      "yearsInLabel": [
+        "2012",
+        "2021"
+      ]
+    },
+    {
+      "url": "https://www.abbotsford.ca/sites/default/files/2021-02/2013%20City%20of%20Abbotsford%20Annual%20Report-min.pdf",
+      "label": "2013 Annual Municipal Report",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.abbotsford.ca/city-hall/finance",
+      "yearsInLabel": [
+        "2013",
+        "2021"
+      ]
+    },
+    {
+      "url": "https://www.abbotsford.ca/sites/default/files/2021-02/2013%20Financial%20Statement.pdf",
+      "label": "2013 Financial Statements",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.abbotsford.ca/city-hall/finance",
+      "yearsInLabel": [
+        "2013",
+        "2021"
+      ]
+    },
+    {
+      "url": "https://www.abbotsford.ca/sites/default/files/2021-02/2014%20Year-end%20Financial%20Statements%20City%20of%20Abbotsford.pdf",
+      "label": "2014 Financial Statements",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.abbotsford.ca/city-hall/finance",
+      "yearsInLabel": [
+        "2014",
+        "2021"
+      ]
+    },
+    {
+      "url": "https://www.abbotsford.ca/sites/default/files/2021-02/2015%20Financial%20Statements-min.pdf",
+      "label": "2015 Financial Statements",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.abbotsford.ca/city-hall/finance",
+      "yearsInLabel": [
+        "2015",
+        "2021"
+      ]
+    },
+    {
+      "url": "https://www.abbotsford.ca/sites/default/files/2021-02/2016%20Annual%20Report_0.pdf",
+      "label": "2016 Annual Municipal Report",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.abbotsford.ca/city-hall/finance",
+      "yearsInLabel": [
+        "2016",
+        "2021"
+      ]
+    },
+    {
+      "url": "https://www.abbotsford.ca/sites/default/files/2021-02/2016%20Financial%20Statements.pdf",
+      "label": "2016 Financial Statements",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.abbotsford.ca/city-hall/finance",
+      "yearsInLabel": [
+        "2016",
+        "2021"
+      ]
+    },
+    {
+      "url": "https://www.abbotsford.ca/sites/default/files/2021-02/2017%20Abbotsford%20Police%20Budget%20Presentation.pdf",
+      "label": "2017 Abbotsford Police Budget Presentation",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.abbotsford.ca/city-hall/finance",
+      "yearsInLabel": [
+        "2017",
+        "2021"
+      ]
+    },
+    {
+      "url": "https://www.abbotsford.ca/sites/default/files/2021-02/2017%20Annual%20Report.pdf",
+      "label": "2017 Annual Municipal Report",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.abbotsford.ca/city-hall/finance",
+      "yearsInLabel": [
+        "2017",
+        "2021"
+      ]
+    },
+    {
+      "url": "https://www.abbotsford.ca/sites/default/files/2021-02/2017%20financial%20statements-min.pdf",
+      "label": "2017 Financial Statements",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.abbotsford.ca/city-hall/finance",
+      "yearsInLabel": [
+        "2017",
+        "2021"
+      ]
+    },
+    {
+      "url": "https://www.abbotsford.ca/sites/default/files/2021-02/2017-2021%20Financial%20Plan%20Budget%20Presentation-min.pdf",
+      "label": "2017-2021 Financial Plan Budget Presentation",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.abbotsford.ca/city-hall/finance",
+      "yearsInLabel": [
+        "2017",
+        "2021"
+      ]
+    },
+    {
+      "url": "https://www.abbotsford.ca/sites/default/files/2021-02/2018%20Annual%20Report.pdf",
+      "label": "2018 Annual Municipal Report",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.abbotsford.ca/city-hall/finance",
+      "yearsInLabel": [
+        "2018",
+        "2021"
+      ]
+    },
+    {
+      "url": "https://www.abbotsford.ca/sites/default/files/2021-02/2018%20Financial%20Statements.pdf",
+      "label": "2018 Financial Statements",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.abbotsford.ca/city-hall/finance",
+      "yearsInLabel": [
+        "2018",
+        "2021"
+      ]
+    },
+    {
+      "url": "https://www.abbotsford.ca/sites/default/files/2021-02/2019%20Consolidated%20Financial%20Statements.pdf",
+      "label": "2019 Financial Statements",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.abbotsford.ca/city-hall/finance",
+      "yearsInLabel": [
+        "2019",
+        "2021"
+      ]
+    },
+    {
+      "url": "https://www.abbotsford.ca/sites/default/files/2021-02/2019-2023%20Draft%20Financial%20Plan-min.pdf",
+      "label": "2019-2023 Draft Financial Plan PowerPoint presentation by staff",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.abbotsford.ca/city-hall/finance",
+      "yearsInLabel": [
+        "2019",
+        "2021",
+        "2023"
+      ]
+    },
+    {
+      "url": "https://www.abbotsford.ca/sites/default/files/2021-02/2020-2024%20Draft%20Financial%20Plan%20Powerpoint.pdf",
+      "label": "2020-2024 Draft Financial Plan PowerPoint presentation by staff",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.abbotsford.ca/city-hall/finance",
+      "yearsInLabel": [
+        "2020",
+        "2021",
+        "2024"
+      ]
+    },
+    {
+      "url": "https://www.abbotsford.ca/sites/default/files/2021-02/2021-2025%20Financial%20Plan%20PowerPoint%20Presentation.pdf",
+      "label": "2021-2025 Draft Financial Plan PowerPoint presentation by staff",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.abbotsford.ca/city-hall/finance",
+      "yearsInLabel": [
+        "2021",
+        "2025"
+      ]
+    },
+    {
+      "url": "https://www.abbotsford.ca/sites/default/files/2021-02/Annual%20Report%202015.pdf",
+      "label": "2015 Annual Municipal Report",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.abbotsford.ca/city-hall/finance",
+      "yearsInLabel": [
+        "2015",
+        "2021"
+      ]
+    },
+    {
+      "url": "https://www.abbotsford.ca/sites/default/files/2021-02/City%20of%20Abbotsford%202009%20Annual%20Report.pdf",
+      "label": "2009 Annual Municipal Report",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.abbotsford.ca/city-hall/finance",
+      "yearsInLabel": [
+        "2009",
+        "2021"
+      ]
+    },
+    {
+      "url": "https://www.abbotsford.ca/sites/default/files/2021-02/City%20of%20Abbotsford%202010%20Annual%20Report%20-%20part%201-min.pdf",
+      "label": "2010 Annual Municipal Report - Part 1",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.abbotsford.ca/city-hall/finance",
+      "yearsInLabel": [
+        "2010",
+        "2021"
+      ]
+    },
+    {
+      "url": "https://www.abbotsford.ca/sites/default/files/2021-02/City%20of%20Abbotsford%202010%20Annual%20Report%20-%20part%202-min.pdf",
+      "label": "2010 Annual Municipal Report - Part 2",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.abbotsford.ca/city-hall/finance",
+      "yearsInLabel": [
+        "2010",
+        "2021"
+      ]
+    },
+    {
+      "url": "https://www.abbotsford.ca/sites/default/files/2021-02/City%20of%20Abbotsford%202011%20Annual%20Report-min.pdf",
+      "label": "2011 Annual Municipal Report",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.abbotsford.ca/city-hall/finance",
+      "yearsInLabel": [
+        "2011",
+        "2021"
+      ]
+    },
+    {
+      "url": "https://www.abbotsford.ca/sites/default/files/2021-02/City%20of%20Abbotsford%202012%20Annual%20Report.pdf",
+      "label": "2012 Annual Municipal Report",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.abbotsford.ca/city-hall/finance",
+      "yearsInLabel": [
+        "2012",
+        "2021"
+      ]
+    },
+    {
+      "url": "https://www.abbotsford.ca/sites/default/files/2021-02/City%20of%20Abbotsford%202014%20Annual%20Report.pdf",
+      "label": "2014 Annual Municipal Report",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.abbotsford.ca/city-hall/finance",
+      "yearsInLabel": [
+        "2014",
+        "2021"
+      ]
+    },
+    {
+      "url": "https://www.abbotsford.ca/sites/default/files/2021-02/FINAL%20Abb%20Police%202018%20Budget%20Pres%20Nov%207-9.pdf",
+      "label": "2018 Draft Budget Abbotsford Police PowerPoint presentation",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.abbotsford.ca/city-hall/finance",
+      "yearsInLabel": [
+        "2018",
+        "2021"
+      ]
+    },
+    {
+      "url": "https://www.abbotsford.ca/sites/default/files/2021-05/Annual%20Report%202020_Consolidated%20Financial%20Statements%20Web.pdf",
+      "label": "2020 Financial Statements",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.abbotsford.ca/city-hall/finance",
+      "yearsInLabel": [
+        "2020",
+        "2021"
+      ]
+    },
+    {
+      "url": "https://www.abbotsford.ca/sites/default/files/2021-06/2020%20Annual%20Report.pdf",
+      "label": "2020 Annual Municipal Report",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.abbotsford.ca/city-hall/finance",
+      "yearsInLabel": [
+        "2020",
+        "2021"
+      ]
+    },
+    {
+      "url": "https://www.abbotsford.ca/sites/default/files/2022-05/2021%20Consolidated%20Financial%20Statements.pdf",
+      "label": "2021 Financial Statements",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.abbotsford.ca/city-hall/finance",
+      "yearsInLabel": [
+        "2021",
+        "2022"
+      ]
+    },
+    {
+      "url": "https://www.abbotsford.ca/sites/default/files/2022-06/Annual%20Report%202021.pdf",
+      "label": "2021 Annual Municipal Report",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.abbotsford.ca/city-hall/finance",
+      "yearsInLabel": [
+        "2021",
+        "2022"
+      ]
+    },
+    {
+      "url": "https://www.abbotsford.ca/sites/default/files/2023-03/2023%20BUDGET%20PRESENTATION%20Final%20March%203%2C%202023_0.pdf",
+      "label": "2023-2027 Draft Financial Plan PowerPoint presentation by staff",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.abbotsford.ca/city-hall/finance",
+      "yearsInLabel": [
+        "2023",
+        "2027"
+      ]
+    },
+    {
+      "url": "https://www.abbotsford.ca/sites/default/files/2023-05/Annual%20Report%202022_Consolidated%20Financial%20Statements.pdf",
+      "label": "2022 Financial Statements",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.abbotsford.ca/city-hall/finance",
+      "yearsInLabel": [
+        "2022",
+        "2023"
+      ]
+    },
+    {
+      "url": "https://www.abbotsford.ca/sites/default/files/2023-06/Annual%20Report%202022.pdf",
+      "label": "2022 Annual Municipal Report",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.abbotsford.ca/city-hall/finance",
+      "yearsInLabel": [
+        "2022",
+        "2023"
+      ]
+    },
+    {
+      "url": "https://www.abbotsford.ca/sites/default/files/2023-06/DRAFT%202022%20BUDGET%20PRESENTATION%20%28Finance%20working%20copy%29%20Oct%20-%20Oct%2026%20-%20FINAL.pdf",
+      "label": "2022-2026 Draft Financial Plan PowerPoint presentation by staff",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.abbotsford.ca/city-hall/finance",
+      "yearsInLabel": [
+        "2022",
+        "2023",
+        "2026"
+      ]
+    },
+    {
+      "url": "https://www.abbotsford.ca/sites/default/files/2023-11/2024%20Budget%20Slides.pdf",
+      "label": "2024-2028 Draft Financial Plan PowerPoint presentation by staff",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.abbotsford.ca/city-hall/finance",
+      "yearsInLabel": [
+        "2023",
+        "2024",
+        "2028"
+      ]
+    },
+    {
+      "url": "https://www.abbotsford.ca/sites/default/files/2024-06/Annual%20Report%202023_Consolidated%20Financial%20Statements.pdf",
+      "label": "2023 Financial Statements",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.abbotsford.ca/city-hall/finance",
+      "yearsInLabel": [
+        "2023",
+        "2024"
+      ]
+    },
+    {
+      "url": "https://www.abbotsford.ca/sites/default/files/2025-06/2024%20Annual%20Report.pdf",
+      "label": "2024 Annual Municipal Report",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.abbotsford.ca/city-hall/finance",
+      "yearsInLabel": [
+        "2024",
+        "2025"
+      ]
+    },
+    {
+      "url": "https://www.abbotsford.ca/sites/default/files/2025-06/2024%20Financial%20Statements.pdf",
+      "label": "2024 Financial Statements",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.abbotsford.ca/city-hall/finance",
+      "yearsInLabel": [
+        "2024",
+        "2025"
+      ]
+    },
+    {
+      "url": "https://www.abbotsford.ca/sites/default/files/2026-02/2025-2029%20Draft%20Financial%20Plan%20Presentation%20by%20staff.pdf",
+      "label": "2025-2029 Draft Financial Plan PowerPoint presentation by staff",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.abbotsford.ca/city-hall/finance",
+      "yearsInLabel": [
+        "2025",
+        "2026",
+        "2029"
+      ]
+    },
+    {
+      "url": "https://www.abbotsford.ca/sites/default/files/2026-02/2026%20Abbotsford%20Police%20Department%20PowerPoint%20Presentation.pdf",
+      "label": "2026 Abbotsford Police Department",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.abbotsford.ca/city-hall/finance",
+      "yearsInLabel": [
+        "2026"
+      ]
+    },
+    {
+      "url": "https://www.abbotsford.ca/sites/default/files/2026-02/2026%20Draft%20Financial%20Plan%20City%20Background%20Information.pdf",
+      "label": "2026 Draft Budget City Background Information",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.abbotsford.ca/city-hall/finance",
+      "yearsInLabel": [
+        "2026"
+      ]
+    },
+    {
+      "url": "https://www.abbotsford.ca/sites/default/files/2026-02/2026%20Draft%20Financial%20Plan%20Presentation.pdf",
+      "label": "2026 Draft Financial Plan Presentation",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.abbotsford.ca/city-hall/finance",
+      "yearsInLabel": [
+        "2026"
+      ]
+    },
+    {
+      "url": "https://www.abbotsford.ca/sites/default/files/2026-02/2026%20Financial%20Plan%20Overview.pdf",
+      "label": "2026 Financial Plan Overview",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.abbotsford.ca/city-hall/finance",
+      "yearsInLabel": [
+        "2026"
+      ]
+    },
+    {
+      "url": "https://www.abbotsford.ca/sites/default/files/2026-05/2025%20Annual%20Report_Financial%20Statements.pdf",
+      "label": "2025 Financial Statements",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.abbotsford.ca/city-hall/finance",
+      "yearsInLabel": [
+        "2025",
+        "2026"
+      ]
+    },
+    {
+      "url": "https://www.abbotsford.ca/sites/default/files/2026-06/2025%20Annual%20Report_FINAL%20for%20WEB.pdf",
+      "label": "2025 Annual Report",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.abbotsford.ca/city-hall/finance",
+      "yearsInLabel": [
+        "2025",
+        "2026"
+      ]
+    }
+  ]
+}

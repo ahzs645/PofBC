@@ -12,6 +12,7 @@ export const scopeLabel = (scope) => ({
   'named-employees-over-threshold': 'Employee remuneration disclosure above the reporting threshold',
   'executive-only': 'Executive compensation only',
   'elected-officials': 'Mayor and council remuneration',
+  'school-trustees': 'School trustee remuneration',
   'aggregate-only': 'Aggregate payroll only; no individual records',
   'deputy-ministers': 'Deputy minister remuneration',
   'deputy-minister-remuneration': 'Deputy minister remuneration',
@@ -33,6 +34,10 @@ export const rowCoverage = (coverage, sourceId, sources = {}) => {
 }
 
 export const expenseLabel = (sourceId, sources = {}) => sources[sourceId]?.travelSource ? 'Travel expenses' : 'Expenses'
+
+/** These qualifications affect interpretation of published values, so show them with the records. */
+export const sourceWarnings = (sourceIds = [], sources = {}) => [...new Set(sourceIds
+  .map((id) => sources[id]?.publicWarning).filter(Boolean))]
 
 /** Do not change an inclusive threshold into a strict one, or infer an unstated comparison. */
 export const thresholdLabel = (coverage) => {

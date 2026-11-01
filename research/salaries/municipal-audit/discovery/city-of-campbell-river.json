@@ -1,0 +1,491 @@
+{
+  "municipality": "Campbell River",
+  "employerSlug": "city-of-campbell-river",
+  "website": "http://www.campbellriver.ca",
+  "checkedOn": "2026-10-31",
+  "method": "Bounded traversal of links actually present on the official website; at most two link hops.",
+  "status": "source-links-found-awaiting-review",
+  "pagesChecked": [
+    {
+      "url": "https://www.campbellriver.ca",
+      "depth": 0,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.campbellriver.ca",
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 149071,
+      "sha256": "921446898bf4a3f0a874ce7bbc8db806d880ecf4507aea87f1f681854d380604",
+      "status": "html-read",
+      "containsSofiTerms": false
+    },
+    {
+      "url": "https://www.campbellriver.ca/financial-plans-and-reports",
+      "depth": 1,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.campbellriver.ca/financial-plans-and-reports",
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 152927,
+      "sha256": "4144be3789de1d2422b12773c62eaa8b469df4da4c76baf47fbcd07a5f855ae0",
+      "status": "html-read",
+      "containsSofiTerms": true
+    },
+    {
+      "url": "https://www.campbellriver.ca/media/file/2016-sofi-reportpdf",
+      "depth": 2,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.campbellriver.ca/media/file/2016-sofi-reportpdf",
+      "contentType": "application/pdf",
+      "bytes": 1143361,
+      "sha256": "97a5f68ebda85f21d89681bbc5abb981aa4526ee29d63f5595300b02f952ac7f",
+      "status": "pdf-downloaded-unreviewed"
+    },
+    {
+      "url": "https://www.campbellriver.ca/media/file/2017-sofi-reportpdf",
+      "depth": 2,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.campbellriver.ca/media/file/2017-sofi-reportpdf",
+      "contentType": "application/pdf",
+      "bytes": 413489,
+      "sha256": "593c188b8f9bd8dc8e58a26c2d19ff7fa60027cb5fdc12689a38aab448ef7f3d",
+      "status": "pdf-downloaded-unreviewed"
+    },
+    {
+      "url": "https://www.campbellriver.ca/media/file/2018-sofi-reportpdf",
+      "depth": 2,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.campbellriver.ca/media/file/2018-sofi-reportpdf",
+      "contentType": "application/pdf",
+      "bytes": 1806504,
+      "sha256": "e9f9fca5a32a5e7955690a97a92c05373171f8e27ea702b6fd2e5cb833909283",
+      "status": "pdf-downloaded-unreviewed"
+    },
+    {
+      "url": "https://www.campbellriver.ca/media/file/2019-sofi-reportpdf",
+      "depth": 2,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.campbellriver.ca/media/file/2019-sofi-reportpdf",
+      "contentType": "application/pdf",
+      "bytes": 250950,
+      "sha256": "803f7eee508b419fb0cc00748d910a2461b4cff696b242eaab07aafaee326ab2",
+      "status": "pdf-downloaded-unreviewed"
+    },
+    {
+      "url": "https://www.campbellriver.ca/media/file/2020-sofi-reportpdf",
+      "depth": 2,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.campbellriver.ca/media/file/2020-sofi-reportpdf",
+      "contentType": "application/pdf",
+      "bytes": 729870,
+      "sha256": "447523033f667c778ed9f88d81886a4e440dd812f03824d8a283ec9dccc1d50e",
+      "status": "pdf-downloaded-unreviewed"
+    },
+    {
+      "url": "https://www.campbellriver.ca/media/file/2021-sofi-reportpdf",
+      "depth": 2,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.campbellriver.ca/media/file/2021-sofi-reportpdf",
+      "contentType": "application/pdf",
+      "bytes": 1275232,
+      "sha256": "cfeaf09c22c5849143700ade5b089a5933be87781ad1bc91015a2db9401d0abc",
+      "status": "pdf-downloaded-unreviewed"
+    },
+    {
+      "url": "https://www.campbellriver.ca/media/file/2022-sofi-reportpdf",
+      "depth": 2,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.campbellriver.ca/media/file/2022-sofi-reportpdf",
+      "contentType": "application/pdf",
+      "bytes": 303158,
+      "sha256": "e013974f3bb3a47d5797f5211eb856ca5dffd0fcbe7989b5a2fb5628f5fedd44",
+      "status": "pdf-downloaded-unreviewed"
+    }
+  ],
+  "candidates": [
+    {
+      "url": "https://www.campbellriver.ca/media/file/2011-annual-report",
+      "label": "2011 Annual Report [PDF/2.7MB]",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.campbellriver.ca/financial-plans-and-reports",
+      "yearsInLabel": [
+        "2011"
+      ]
+    },
+    {
+      "url": "https://www.campbellriver.ca/media/file/2012-annual-report",
+      "label": "2012 Annual Report [PDF/12.8MB]",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.campbellriver.ca/financial-plans-and-reports",
+      "yearsInLabel": [
+        "2012"
+      ]
+    },
+    {
+      "url": "https://www.campbellriver.ca/media/file/2015-annual-report-web",
+      "label": "2015 Annual Report [PDF/4MB]",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.campbellriver.ca/financial-plans-and-reports",
+      "yearsInLabel": [
+        "2015"
+      ]
+    },
+    {
+      "url": "https://www.campbellriver.ca/media/file/2016-ccr-annual-report-web",
+      "label": "2016 Annual Report [PDF/10.9MB]",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.campbellriver.ca/financial-plans-and-reports",
+      "yearsInLabel": [
+        "2016"
+      ]
+    },
+    {
+      "url": "https://www.campbellriver.ca/media/file/2017-ccr-annual-report-final-print",
+      "label": "2017 Annual Report [PDF/95.1MB]",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.campbellriver.ca/financial-plans-and-reports",
+      "yearsInLabel": [
+        "2017"
+      ]
+    },
+    {
+      "url": "https://www.campbellriver.ca/media/file/2018-ccr-annual-report-web",
+      "label": "2018 Annual Report [PDF/151.1MB]",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.campbellriver.ca/financial-plans-and-reports",
+      "yearsInLabel": [
+        "2018"
+      ]
+    },
+    {
+      "url": "https://www.campbellriver.ca/media/file/2019-ccr-annual-report-final-aug31-2020-reduced",
+      "label": "2019 Annual Report [PDF/19.2MB]",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.campbellriver.ca/financial-plans-and-reports",
+      "yearsInLabel": [
+        "2019",
+        "2020"
+      ]
+    },
+    {
+      "url": "https://www.campbellriver.ca/media/file/2020-ccr-annual-final-june-9-2021-reduced-size",
+      "label": "2020 Annual Report [PDF/18.3MB]",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.campbellriver.ca/financial-plans-and-reports",
+      "yearsInLabel": [
+        "2020",
+        "2021"
+      ]
+    },
+    {
+      "url": "https://www.campbellriver.ca/media/file/2022-annual-report-pages-reduced",
+      "label": "2022 Annual Report [PDF/10.7MB]",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.campbellriver.ca/financial-plans-and-reports",
+      "yearsInLabel": [
+        "2022"
+      ]
+    },
+    {
+      "url": "https://www.campbellriver.ca/media/file/2023-sofi-reportpdf",
+      "label": "2023 SOFI Report [PDF/801KB]",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.campbellriver.ca/financial-plans-and-reports",
+      "yearsInLabel": [
+        "2023"
+      ]
+    },
+    {
+      "url": "https://www.campbellriver.ca/media/file/2024-campbell-river-annual-report-reduced",
+      "label": "2024 Annual Report [PDF/19.3MB]",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.campbellriver.ca/financial-plans-and-reports",
+      "yearsInLabel": [
+        "2024"
+      ]
+    },
+    {
+      "url": "https://www.campbellriver.ca/media/file/2024-sofi-reportpdf",
+      "label": "2024 SOFI Report [PDF/704KB]",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.campbellriver.ca/financial-plans-and-reports",
+      "yearsInLabel": [
+        "2024"
+      ]
+    },
+    {
+      "url": "https://www.campbellriver.ca/media/file/2025-campbell-river-annual-report",
+      "label": "2025 Annual Report [PDF/9.4MB]",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.campbellriver.ca/financial-plans-and-reports",
+      "yearsInLabel": [
+        "2025"
+      ]
+    },
+    {
+      "url": "https://www.campbellriver.ca/media/file/2025-sofi-reportpdf",
+      "label": "2025 SOFI Report [PDF/19.6MB]",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.campbellriver.ca/financial-plans-and-reports",
+      "yearsInLabel": [
+        "2025"
+      ]
+    },
+    {
+      "url": "https://www.campbellriver.ca/media/file/annual-report-2014-web",
+      "label": "2014 Annual Report [PDF/4.7MB]",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.campbellriver.ca/financial-plans-and-reports",
+      "yearsInLabel": [
+        "2014"
+      ]
+    },
+    {
+      "url": "https://www.campbellriver.ca/media/file/city-campbell-river-2013-annual-report-web",
+      "label": "2013 Annual Report [PDF/3.3MB]",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.campbellriver.ca/financial-plans-and-reports",
+      "yearsInLabel": [
+        "2013"
+      ]
+    },
+    {
+      "url": "https://www.campbellriver.ca/media/file/city-campbell-river-2023-annual-report-web",
+      "label": "2023 Annual Report [PDF/7.4MB]",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.campbellriver.ca/financial-plans-and-reports",
+      "yearsInLabel": [
+        "2023"
+      ]
+    },
+    {
+      "url": "https://www.campbellriver.ca/media/file/cityofcampbellriver2021annualreport",
+      "label": "2021 Annual Report [PDF/72.8MB]",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.campbellriver.ca/financial-plans-and-reports",
+      "yearsInLabel": [
+        "2021"
+      ]
+    },
+    {
+      "url": "https://www.campbellriver.ca/media/file/q1-2019-quarterly-financial-report-complete",
+      "label": "2019 Q1 Corporate Progress Report [PDF/1.1MB]",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.campbellriver.ca/financial-plans-and-reports",
+      "yearsInLabel": [
+        "2019"
+      ]
+    },
+    {
+      "url": "https://www.campbellriver.ca/media/file/rtc-quarterly-financial-report-q1-2020-final",
+      "label": "2020 Q1 Corporate Progress Report [PDF/269KB]",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.campbellriver.ca/financial-plans-and-reports",
+      "yearsInLabel": [
+        "2020"
+      ]
+    },
+    {
+      "url": "https://www.campbellriver.ca/media/file/rtc-quarterly-financial-report-q1-2021-final",
+      "label": "2021 Q1 Corporate Progress Report [PDF/784KB]",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.campbellriver.ca/financial-plans-and-reports",
+      "yearsInLabel": [
+        "2021"
+      ]
+    },
+    {
+      "url": "https://www.campbellriver.ca/media/file/rtc-quarterly-financial-report-q1-2022",
+      "label": "2022 Q1 Corporate Progress Report [PDF/1.1MB]",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.campbellriver.ca/financial-plans-and-reports",
+      "yearsInLabel": [
+        "2022"
+      ]
+    },
+    {
+      "url": "https://www.campbellriver.ca/media/file/rtc-quarterly-financial-report-q2-2019-final-includes-all-appendices",
+      "label": "2019 Q2 Corporate Progress Report [PDF/557KB]",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.campbellriver.ca/financial-plans-and-reports",
+      "yearsInLabel": [
+        "2019"
+      ]
+    },
+    {
+      "url": "https://www.campbellriver.ca/media/file/rtc-quarterly-financial-report-q2-2020",
+      "label": "2020 Q2 Corporate Progress Report [PDF/373KB]",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.campbellriver.ca/financial-plans-and-reports",
+      "yearsInLabel": [
+        "2020"
+      ]
+    },
+    {
+      "url": "https://www.campbellriver.ca/media/file/rtc-quarterly-financial-report-q2-2021-final",
+      "label": "2021 Q2 Corporate Progress Report [PDF/578KB]",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.campbellriver.ca/financial-plans-and-reports",
+      "yearsInLabel": [
+        "2021"
+      ]
+    },
+    {
+      "url": "https://www.campbellriver.ca/media/file/rtc-quarterly-financial-report-q2-package",
+      "label": "2022 Q2 Corporate Progress Report [PDF/606KB]",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.campbellriver.ca/financial-plans-and-reports",
+      "yearsInLabel": [
+        "2022"
+      ]
+    },
+    {
+      "url": "https://www.campbellriver.ca/media/file/rtc-quarterly-financial-report-q3-2019-appendices",
+      "label": "2019 Q3 Corporate Progress Report [PDF/565KB]",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.campbellriver.ca/financial-plans-and-reports",
+      "yearsInLabel": [
+        "2019"
+      ]
+    },
+    {
+      "url": "https://www.campbellriver.ca/media/file/rtc-quarterly-financial-report-q3-2020",
+      "label": "2020 Q3 Corporate Progress Report [PDF/671KB]",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.campbellriver.ca/financial-plans-and-reports",
+      "yearsInLabel": [
+        "2020"
+      ]
+    },
+    {
+      "url": "https://www.campbellriver.ca/media/file/rtc-quarterly-financial-report-q3-2021-final",
+      "label": "2021 Q3 Corporate Progress Report [PDF/620KB]",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.campbellriver.ca/financial-plans-and-reports",
+      "yearsInLabel": [
+        "2021"
+      ]
+    },
+    {
+      "url": "https://www.campbellriver.ca/media/file/rtc-quarterly-financial-report-q4-2019-final",
+      "label": "2019 Q4 Corporate Progress Report [PDF/168KB]",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.campbellriver.ca/financial-plans-and-reports",
+      "yearsInLabel": [
+        "2019"
+      ]
+    },
+    {
+      "url": "https://www.campbellriver.ca/media/file/rtc-quarterly-financial-report-q4-2020",
+      "label": "2020 Q4 Corporate Progress Report [PDF/1.2MB]",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.campbellriver.ca/financial-plans-and-reports",
+      "yearsInLabel": [
+        "2020"
+      ]
+    },
+    {
+      "url": "https://www.campbellriver.ca/media/file/rtc-quarterly-financial-report-q4-2021",
+      "label": "2021 Q4 Corporate Progress Report [PDF/530KB]",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.campbellriver.ca/financial-plans-and-reports",
+      "yearsInLabel": [
+        "2021"
+      ]
+    },
+    {
+      "url": "https://www.campbellriver.ca/media/file/rtc-quarterly-financial-report-q4-2022",
+      "label": "2022 Q4 Corporate Progress Report [PDF/783KB]",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.campbellriver.ca/financial-plans-and-reports",
+      "yearsInLabel": [
+        "2022"
+      ]
+    },
+    {
+      "url": "https://www.campbellriver.ca/media/file/rtc-quarterly-financial-report-q4-2023",
+      "label": "2023 Q4 Corporate Progress Report [PDF/2.6MB]",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.campbellriver.ca/financial-plans-and-reports",
+      "yearsInLabel": [
+        "2023"
+      ]
+    },
+    {
+      "url": "https://www.campbellriver.ca/media/file/2016-sofi-reportpdf",
+      "label": "2016 SOFI Report [PDF/1.1MB]",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.campbellriver.ca/media/file/2016-sofi-reportpdf",
+      "yearsInLabel": [
+        "2016",
+        "2016"
+      ]
+    },
+    {
+      "url": "https://www.campbellriver.ca/media/file/2017-sofi-reportpdf",
+      "label": "2017 SOFI Report [PDF/404KB]",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.campbellriver.ca/media/file/2017-sofi-reportpdf",
+      "yearsInLabel": [
+        "2017",
+        "2017"
+      ]
+    },
+    {
+      "url": "https://www.campbellriver.ca/media/file/2018-sofi-reportpdf",
+      "label": "2018 SOFI Report [PDF/1.7MB]",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.campbellriver.ca/media/file/2018-sofi-reportpdf",
+      "yearsInLabel": [
+        "2018",
+        "2018"
+      ]
+    },
+    {
+      "url": "https://www.campbellriver.ca/media/file/2019-sofi-reportpdf",
+      "label": "2019 SOFI Report [PDF/245KB]",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.campbellriver.ca/media/file/2019-sofi-reportpdf",
+      "yearsInLabel": [
+        "2019",
+        "2019"
+      ]
+    },
+    {
+      "url": "https://www.campbellriver.ca/media/file/2020-sofi-reportpdf",
+      "label": "2020 SOFI Report [PDF/713KB]",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.campbellriver.ca/media/file/2020-sofi-reportpdf",
+      "yearsInLabel": [
+        "2020",
+        "2020"
+      ]
+    },
+    {
+      "url": "https://www.campbellriver.ca/media/file/2021-sofi-reportpdf",
+      "label": "2021 SOFI Report [PDF/1.2MB]",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.campbellriver.ca/media/file/2021-sofi-reportpdf",
+      "yearsInLabel": [
+        "2021",
+        "2021"
+      ]
+    },
+    {
+      "url": "https://www.campbellriver.ca/media/file/2022-sofi-reportpdf",
+      "label": "2022 SOFI Report [PDF/296KB]",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.campbellriver.ca/media/file/2022-sofi-reportpdf",
+      "yearsInLabel": [
+        "2022",
+        "2022"
+      ]
+    }
+  ]
+}

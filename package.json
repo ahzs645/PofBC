@@ -70,7 +70,12 @@
     "build:research-queue": "node scripts/build-research-queue.mjs",
     "research:merge": "node scripts/merge-research.mjs",
     "build:health-estimates": "python3 scripts/build_health_estimates.py",
-    "build:health-comparisons": "node scripts/build-health-comparisons.mjs"
+    "build:health-comparisons": "node scripts/build-health-comparisons.mjs",
+    "follow-up:municipal-salaries": "node scripts/build-municipal-follow-up.mjs",
+    "review:sector-salaries": "python3 scripts/build-sector-salary-review.py --frozen",
+    "review:municipal-wave": "python3 scripts/build-municipal-wave-review.py",
+    "audit:municipal-salaries": "node scripts/audit-municipal-salaries.mjs",
+    "compare:municipal-periods": "node scripts/compare-municipal-periods.mjs"
   },
   "peerDependencies": {
     "react": ">=18",

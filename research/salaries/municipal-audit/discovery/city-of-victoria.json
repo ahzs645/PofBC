@@ -1,0 +1,195 @@
+{
+  "municipality": "Victoria",
+  "employerSlug": "city-of-victoria",
+  "website": "http://www.victoria.ca",
+  "checkedOn": "2026-10-31",
+  "method": "Bounded traversal of links actually present on the official website; at most two link hops.",
+  "status": "source-links-found-awaiting-review",
+  "pagesChecked": [
+    {
+      "url": "https://www.victoria.ca",
+      "depth": 0,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.victoria.ca",
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 142785,
+      "sha256": "a76a3f3e1af789497aa3d3c4069569d71be6211362813c69c55bef47980a4b7f",
+      "status": "html-read",
+      "containsSofiTerms": false
+    },
+    {
+      "url": "https://www.victoria.ca/city-government/corporate-strategic-plan/annual-report",
+      "depth": 1,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.victoria.ca/city-government/corporate-strategic-plan/annual-report",
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 150844,
+      "sha256": "eb1d7e65d298943685e8e304526276b25cb867a1e973876d1f53646eca5b3b67",
+      "status": "html-read",
+      "containsSofiTerms": false
+    },
+    {
+      "url": "https://www.victoria.ca/media/file/annual-report-2020",
+      "depth": 2,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.victoria.ca/media/file/annual-report-2020",
+      "contentType": "application/pdf",
+      "bytes": 2803495,
+      "sha256": "0c129b16bb829eff6bb754e8d947f0a6fa36330764c0ca76ada408a5edf27d1c",
+      "status": "pdf-downloaded-unreviewed"
+    },
+    {
+      "url": "https://www.victoria.ca/media/file/annual-report-2021",
+      "depth": 2,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.victoria.ca/media/file/annual-report-2021",
+      "contentType": "application/pdf",
+      "bytes": 2677763,
+      "sha256": "ba3e0eef6f24e780123f0d3e075d26534c460ff71d3a63aa067e2ddf6fdf722d",
+      "status": "pdf-downloaded-unreviewed"
+    },
+    {
+      "url": "https://www.victoria.ca/media/file/annual-report-2022",
+      "depth": 2,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.victoria.ca/media/file/annual-report-2022",
+      "contentType": "application/pdf",
+      "bytes": 2569022,
+      "sha256": "d121b4b5c30cdb8b1ea7c798508a93545afa1887803b2d921b83f419417fad3b",
+      "status": "pdf-downloaded-unreviewed"
+    },
+    {
+      "url": "https://www.victoria.ca/media/file/annual-report-2023",
+      "depth": 2,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.victoria.ca/media/file/annual-report-2023",
+      "contentType": "application/pdf",
+      "bytes": 3773948,
+      "sha256": "4890df17a72af199c55421455607c4e1b36b14375d3b5110c92818b955849221",
+      "status": "pdf-downloaded-unreviewed"
+    },
+    {
+      "url": "https://www.victoria.ca/media/file/annual-report-2024",
+      "depth": 2,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.victoria.ca/media/file/annual-report-2024",
+      "contentType": "application/pdf",
+      "bytes": 3578368,
+      "sha256": "006e1b40ca223aaec571b9d95e71258dae88c01eb864634721fc796c5e81ea0f",
+      "status": "pdf-downloaded-unreviewed"
+    },
+    {
+      "url": "https://www.victoria.ca/media/file/annual-report-2025",
+      "depth": 2,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.victoria.ca/media/file/annual-report-2025",
+      "contentType": "application/pdf",
+      "bytes": 3677194,
+      "sha256": "6c65b428d51bf47d4950b119e812fbe72aedbc683de308e01a149f5e1b9d26c5",
+      "status": "pdf-downloaded-unreviewed"
+    },
+    {
+      "url": "https://www.victoria.ca/city-government/city-budget",
+      "depth": 1,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.victoria.ca/city-government/city-budget",
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 157428,
+      "sha256": "5d3b71142c55c5be28532c9fcfdd9c45f4afaab59ba821e492bab450a61db4a6",
+      "status": "html-read",
+      "containsSofiTerms": true
+    }
+  ],
+  "candidates": [
+    {
+      "url": "https://www.victoria.ca/city-government/corporate-strategic-plan/annual-report",
+      "label": "Annual Report",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.victoria.ca",
+      "yearsInLabel": []
+    },
+    {
+      "url": "https://www.victoria.ca/city-government/resources/statement-financial-information",
+      "label": "Statement of Financial Information",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.victoria.ca/city-government/city-budget",
+      "yearsInLabel": []
+    },
+    {
+      "url": "https://www.victoria.ca/city-government/strategic-plan/annual-report",
+      "label": "Annual Report",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.victoria.ca/city-government/city-budget",
+      "yearsInLabel": []
+    },
+    {
+      "url": "https://www.victoria.ca/media/file/annual-report-2020",
+      "label": "2020 Annual Report",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.victoria.ca/media/file/annual-report-2020",
+      "yearsInLabel": [
+        "2020",
+        "2020"
+      ]
+    },
+    {
+      "url": "https://www.victoria.ca/media/file/annual-report-2021",
+      "label": "2021 Annual Report",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.victoria.ca/media/file/annual-report-2021",
+      "yearsInLabel": [
+        "2021",
+        "2021"
+      ]
+    },
+    {
+      "url": "https://www.victoria.ca/media/file/annual-report-2022",
+      "label": "2022 Annual Report",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.victoria.ca/media/file/annual-report-2022",
+      "yearsInLabel": [
+        "2022",
+        "2022"
+      ]
+    },
+    {
+      "url": "https://www.victoria.ca/media/file/annual-report-2023",
+      "label": "2023 Annual Report",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.victoria.ca/media/file/annual-report-2023",
+      "yearsInLabel": [
+        "2023",
+        "2023"
+      ]
+    },
+    {
+      "url": "https://www.victoria.ca/media/file/annual-report-2024",
+      "label": "2024 Annual Report",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.victoria.ca/media/file/annual-report-2024",
+      "yearsInLabel": [
+        "2024",
+        "2024"
+      ]
+    },
+    {
+      "url": "https://www.victoria.ca/media/file/annual-report-2025",
+      "label": "2025 Annual Report",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.victoria.ca/media/file/annual-report-2025",
+      "yearsInLabel": [
+        "2025",
+        "2025"
+      ]
+    }
+  ]
+}

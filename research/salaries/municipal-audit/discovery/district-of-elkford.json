@@ -1,0 +1,162 @@
+{
+  "municipality": "Elkford",
+  "employerSlug": "district-of-elkford",
+  "website": "http://www.elkford.ca",
+  "checkedOn": "2026-10-31",
+  "method": "Bounded traversal of links actually present on the official website; at most two link hops.",
+  "status": "source-links-found-awaiting-review",
+  "pagesChecked": [
+    {
+      "url": "https://www.elkford.ca",
+      "depth": 0,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.elkford.ca",
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 125937,
+      "sha256": "32321a248debc10290bbfb70f4367033a933444fd538244bca1059a6a4dee084",
+      "status": "html-read",
+      "containsSofiTerms": true
+    },
+    {
+      "url": "https://www.elkford.ca/finance_services",
+      "depth": 1,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.elkford.ca/finance_services",
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 79723,
+      "sha256": "35ad6ab131c5ee5808832ce25feb8d1c5d5389a2180abbec1137d9bcdc5c09dd",
+      "status": "html-read",
+      "containsSofiTerms": true
+    },
+    {
+      "url": "https://www.elkford.ca/public-services/financial-services",
+      "depth": 1,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.elkford.ca/public-services/financial-services",
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 75802,
+      "sha256": "4bb079e5911ec8204aaef06b91179b15169f2ca2f06b2561a1c4b2407b004f0e",
+      "status": "html-read",
+      "containsSofiTerms": true
+    },
+    {
+      "url": "https://www.elkford.ca/public-services/financial-services/property-taxes-utilities",
+      "depth": 1,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.elkford.ca/public-services/financial-services/property-taxes-utilities",
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 98251,
+      "sha256": "a3029b2bc843dd2ef3b3bb2e8849ce5859f1b46f1de3f20da4e99f5927abaff2",
+      "status": "html-read",
+      "containsSofiTerms": true
+    },
+    {
+      "url": "https://www.elkford.ca/styleswitcher/switch/stack8_default/custom/default?destination=/finance_services",
+      "depth": 2,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.elkford.ca/finance_services",
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 79723,
+      "sha256": "a3767dc4c7c517902c00aa4b75afb0b829304c201596e2f547c7cb605af85946",
+      "status": "html-read",
+      "containsSofiTerms": true
+    },
+    {
+      "url": "https://www.elkford.ca/styleswitcher/switch/stack8_default/custom/default?destination=/public-services/financial-services",
+      "depth": 2,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.elkford.ca/public-services/financial-services",
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 75802,
+      "sha256": "e8572d32e8f71aa4867c36aa28ae3b45f0d21f149e5a54a1fd3bd5c678b44850",
+      "status": "html-read",
+      "containsSofiTerms": true
+    },
+    {
+      "url": "https://www.elkford.ca/styleswitcher/switch/stack8_default/custom/default?destination=/public-services/financial-services/property-taxes-utilities",
+      "depth": 2,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.elkford.ca/public-services/financial-services/property-taxes-utilities",
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 98251,
+      "sha256": "b9e9e57f8954cbc8cd8075592c0d5132270a6fa6430fc6b647b635e58366ae68",
+      "status": "html-read",
+      "containsSofiTerms": true
+    },
+    {
+      "url": "https://www.elkford.ca/styleswitcher/switch/stack8_default/theme/enhanced-accessibility?destination=/finance_services",
+      "depth": 2,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.elkford.ca/finance_services",
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 79723,
+      "sha256": "c8252e8211e6712b6670941f6567ad0b8d65a5fb0e79aee3855183ec3d2d73dd",
+      "status": "html-read",
+      "containsSofiTerms": true
+    },
+    {
+      "url": "https://www.elkford.ca/styleswitcher/switch/stack8_default/theme/enhanced-accessibility?destination=/public-services/financial-services",
+      "depth": 2,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.elkford.ca/public-services/financial-services",
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 75802,
+      "sha256": "1f190d7c35372c7f88827c363a30ea4a13953f1035e9e83fc6deb56c17434c98",
+      "status": "html-read",
+      "containsSofiTerms": true
+    }
+  ],
+  "candidates": [
+    {
+      "url": "https://elkford.civicweb.net/filepro/documents/80995",
+      "label": "Statement of Financial Information (SOFI)",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.elkford.ca/finance_services",
+      "yearsInLabel": []
+    },
+    {
+      "url": "https://elkford.civicweb.net/filepro/documents/80995/",
+      "label": "Statement of Financial Information (SOFI)",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.elkford.ca",
+      "yearsInLabel": []
+    },
+    {
+      "url": "https://www.elkford.ca/sites/default/files/2026-05/2026%20District%20of%20Elkford%20Property%20Taxes%20Utilities.pdf",
+      "label": "2026 Property Tax & Utilities Flyer",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.elkford.ca/public-services/financial-services/property-taxes-utilities",
+      "yearsInLabel": [
+        "2026"
+      ]
+    },
+    {
+      "url": "https://www.elkford.ca/sites/default/files/2026-05/2026%20Tax%20Rate%20%20Summary.pdf",
+      "label": "2026 Property Tax Summary",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.elkford.ca/public-services/financial-services/property-taxes-utilities",
+      "yearsInLabel": [
+        "2026"
+      ]
+    },
+    {
+      "url": "https://www.elkford.ca/sites/default/files/2026-08/2025%20FINAL%20Financial%20Statements%20District%20of%20Elkford.pdf",
+      "label": "2025 Audited Financial Statements",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.elkford.ca/finance_services",
+      "yearsInLabel": [
+        "2025",
+        "2026"
+      ]
+    }
+  ]
+}

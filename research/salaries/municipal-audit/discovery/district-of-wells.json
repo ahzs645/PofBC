@@ -1,0 +1,190 @@
+{
+  "municipality": "Wells",
+  "employerSlug": "district-of-wells",
+  "website": "http://www.wells.ca",
+  "checkedOn": "2026-10-31",
+  "method": "Bounded traversal of links actually present on the official website; at most two link hops.",
+  "status": "source-links-found-awaiting-review",
+  "pagesChecked": [
+    {
+      "url": "https://www.wells.ca",
+      "depth": 0,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.wells.ca",
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 60074,
+      "sha256": "cc90129667adf2a93085563f43ae4bd1a338ceb280550124cfee3ea63250585d",
+      "status": "html-read",
+      "containsSofiTerms": true
+    },
+    {
+      "url": "https://www.wells.ca/district-wells/reports/statement-financial-information",
+      "depth": 1,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.wells.ca/district-wells/reports/statement-financial-information",
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 30691,
+      "sha256": "4f6996caaaad33fd70dafb958dd36d91b989fd3e0f91f440548f103ac68f3f64",
+      "status": "html-read",
+      "containsSofiTerms": true
+    },
+    {
+      "url": "https://www.wells.ca/download_file/view/125/375",
+      "depth": 2,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.wells.ca/application/files/1515/9372/8875/2014_Statement_of_Financial_Inforation.pdf",
+      "contentType": "application/pdf",
+      "bytes": 376122,
+      "sha256": "be17d482ccd90a32dcb2264b91227529807f1c17f1d76666764f5d8a1fa42440",
+      "status": "pdf-downloaded-unreviewed"
+    },
+    {
+      "url": "https://www.wells.ca/download_file/view/126/375",
+      "depth": 2,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.wells.ca/application/files/7615/9372/8875/2015_Statement_of_Financial_Information.pdf",
+      "contentType": "application/pdf",
+      "bytes": 575828,
+      "sha256": "7db6adbfb104c5970e98429b2b29b03bd13674ed01ca00e99ad63520223b90ba",
+      "status": "pdf-downloaded-unreviewed"
+    },
+    {
+      "url": "https://www.wells.ca/download_file/view/127/375",
+      "depth": 2,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.wells.ca/application/files/7615/9372/8876/2010__Statement_of_Financial_Information.pdf",
+      "contentType": "application/pdf",
+      "bytes": 339665,
+      "sha256": "17ea88b15a7164f945a8151919506ce180e6b9b8e6308b9c0a1db577eabcb3f4",
+      "status": "pdf-downloaded-unreviewed"
+    },
+    {
+      "url": "https://www.wells.ca/download_file/view/128/375",
+      "depth": 2,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.wells.ca/application/files/2515/9372/8876/District_of_Wells_-_SOFI_2017-18_Report_-_Submitted.pdf",
+      "contentType": "application/pdf",
+      "bytes": 1792619,
+      "sha256": "fbdf6d80a5a497d6687e9b33b00601360bc17647b1920e10103ee5d65e109de2",
+      "status": "pdf-downloaded-unreviewed"
+    },
+    {
+      "url": "https://www.wells.ca/download_file/view/129/375",
+      "depth": 2,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.wells.ca/application/files/1715/9372/8877/2011_Statement_of_Financial_Information.pdf",
+      "contentType": "application/pdf",
+      "bytes": 280490,
+      "sha256": "2253297df7b67f92b5c25c83497bef6e962b1224280283a2e2cebcd14c8db79c",
+      "status": "pdf-downloaded-unreviewed"
+    },
+    {
+      "url": "https://www.wells.ca/download_file/view/130/375",
+      "depth": 2,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.wells.ca/application/files/8815/9372/8877/2012_Statement_of_Financial_Information.pdf",
+      "contentType": "application/pdf",
+      "bytes": 239709,
+      "sha256": "cd9f50d208f34d0cb0810acea334fc9c83881c384be1ecb4a27cacdbc045c510",
+      "status": "pdf-downloaded-unreviewed"
+    },
+    {
+      "url": "https://www.wells.ca/download_file/view/586/375",
+      "depth": 2,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.wells.ca/application/files/5016/3847/2935/SOFI_2020_COMBINED_Binder1.pdf",
+      "contentType": "application/pdf",
+      "bytes": 2196390,
+      "sha256": "b52eea68b62eb7243dd60c0532e13c26cde88de8ce5ada53b83f209e5c88c925",
+      "status": "pdf-downloaded-unreviewed"
+    }
+  ],
+  "candidates": [
+    {
+      "url": "https://www.wells.ca/district-wells/financial-reports",
+      "label": "Financial Reports",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.wells.ca",
+      "yearsInLabel": []
+    },
+    {
+      "url": "https://www.wells.ca/district-wells/reports/statement-financial-information",
+      "label": "Statement of Financial Information - SOFI",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.wells.ca",
+      "yearsInLabel": []
+    },
+    {
+      "url": "https://www.wells.ca/download_file/view/125/375",
+      "label": "2014 Statement of Financial Information",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.wells.ca/download_file/view/125/375",
+      "yearsInLabel": [
+        "2014"
+      ]
+    },
+    {
+      "url": "https://www.wells.ca/download_file/view/126/375",
+      "label": "2015 Statement of Financial Information",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.wells.ca/download_file/view/126/375",
+      "yearsInLabel": [
+        "2015"
+      ]
+    },
+    {
+      "url": "https://www.wells.ca/download_file/view/127/375",
+      "label": "2010 Statement of Financial Information",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.wells.ca/download_file/view/127/375",
+      "yearsInLabel": [
+        "2010"
+      ]
+    },
+    {
+      "url": "https://www.wells.ca/download_file/view/128/375",
+      "label": "2017-18 Statement of Financial Information",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.wells.ca/download_file/view/128/375",
+      "yearsInLabel": [
+        "2017"
+      ]
+    },
+    {
+      "url": "https://www.wells.ca/download_file/view/129/375",
+      "label": "2011 Statement of Financial Information",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.wells.ca/download_file/view/129/375",
+      "yearsInLabel": [
+        "2011"
+      ]
+    },
+    {
+      "url": "https://www.wells.ca/download_file/view/130/375",
+      "label": "2012 Statement of Financial Information",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.wells.ca/download_file/view/130/375",
+      "yearsInLabel": [
+        "2012"
+      ]
+    },
+    {
+      "url": "https://www.wells.ca/download_file/view/586/375",
+      "label": "2020 Statement of Financial Information",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.wells.ca/download_file/view/586/375",
+      "yearsInLabel": [
+        "2020"
+      ]
+    }
+  ]
+}

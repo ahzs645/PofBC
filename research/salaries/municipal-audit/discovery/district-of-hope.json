@@ -1,0 +1,118 @@
+{
+  "municipality": "Hope",
+  "employerSlug": "district-of-hope",
+  "website": "http://www.hope.ca",
+  "checkedOn": "2026-10-31",
+  "method": "Bounded traversal of links actually present on the official website; at most two link hops.",
+  "status": "source-links-found-awaiting-review",
+  "pagesChecked": [
+    {
+      "url": "https://www.hope.ca",
+      "depth": 0,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://hope.ca/",
+      "contentType": "text/html",
+      "bytes": 52497,
+      "sha256": "3d3de9671e934d6ce6ef7c1662093785b94ff3860492b22e70eaa8ff38df0100",
+      "status": "html-read",
+      "containsSofiTerms": false
+    },
+    {
+      "url": "https://hope.ca/finance",
+      "depth": 1,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://hope.ca/finance",
+      "contentType": "text/html",
+      "bytes": 30700,
+      "sha256": "9af7772d7222bd066a959d7cfcbc14cd5df1a98004a9b59f64a2822508eb4466",
+      "status": "html-read",
+      "containsSofiTerms": false
+    },
+    {
+      "url": "https://hope.ca/government",
+      "depth": 1,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://hope.ca/government",
+      "contentType": "text/html",
+      "bytes": 30622,
+      "sha256": "299378d9d315c339ef5148bd6425d5380ef3b94dab1b4af9e48d23035aed4693",
+      "status": "html-read",
+      "containsSofiTerms": false
+    },
+    {
+      "url": "https://hope.ca/lgcap",
+      "depth": 1,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://hope.ca/lgcap",
+      "contentType": "text/html",
+      "bytes": 31964,
+      "sha256": "92c21a4b5b1ca185d6dd003bf0f6c413e59df0a4ebeef9d187227f9fdf0551b0",
+      "status": "html-read",
+      "containsSofiTerms": false
+    },
+    {
+      "url": "https://hope.ca/uploads/dm/145056/District_of_Hope_2025_LGCAP_Annual_Report_Provincial_Submission",
+      "depth": 2,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://hope.ca/uploads/dm/145056/District_of_Hope_2025_LGCAP_Annual_Report_Provincial_Submission",
+      "contentType": "application/pdf",
+      "bytes": 8000001,
+      "sha256": "1c1d38f7b836c4b1c9dcb095a3e8f94b1b84a155e3ea766cc95a586913d99cd5",
+      "status": "response-too-large"
+    },
+    {
+      "url": "https://hope.ca/uploads/dm/145056/District_of_Hope__2025_LGCAP_Annual_Report__Provincial_Submission",
+      "depth": 2,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://hope.ca/uploads/dm/145056/District_of_Hope__2025_LGCAP_Annual_Report__Provincial_Submission",
+      "contentType": "application/pdf",
+      "bytes": 8000001,
+      "sha256": "1c1d38f7b836c4b1c9dcb095a3e8f94b1b84a155e3ea766cc95a586913d99cd5",
+      "status": "response-too-large"
+    }
+  ],
+  "candidates": [
+    {
+      "url": "https://hope.ca/uploads/dm/145056/District_of_Hope_2025_LGCAP_Annual_Report_Provincial_Submission",
+      "label": "District of Hope – 2025 LGCAP Annual Report & Provincial Submission",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://hope.ca/lgcap",
+      "yearsInLabel": [
+        "2025"
+      ]
+    },
+    {
+      "url": "https://hope.ca/uploads/dm/145056/District_of_Hope__2025_LGCAP_Annual_Report__Provincial_Submission",
+      "label": "District of Hope – 2025 LGCAP Annual Report & Provincial Submission",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://hope.ca/lgcap",
+      "yearsInLabel": [
+        "2025"
+      ]
+    },
+    {
+      "url": "https://online.flippingbook.com/view/165609062/",
+      "label": "2025 LGCAP Annual Report & Provincial Survey",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://hope.ca/lgcap",
+      "yearsInLabel": [
+        "2025"
+      ]
+    },
+    {
+      "url": "https://online.flippingbook.com/view/987232020/",
+      "label": "District of Hope 2025 Annual Report",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://hope.ca/finance",
+      "yearsInLabel": [
+        "2025"
+      ]
+    }
+  ]
+}

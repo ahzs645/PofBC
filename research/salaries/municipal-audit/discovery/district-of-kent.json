@@ -1,0 +1,72 @@
+{
+  "municipality": "Kent",
+  "employerSlug": "district-of-kent",
+  "website": "http://www.kentbc.ca",
+  "checkedOn": "2026-10-31",
+  "method": "Bounded traversal of links actually present on the official website; at most two link hops.",
+  "status": "source-links-found-awaiting-review",
+  "pagesChecked": [
+    {
+      "url": "https://www.kentbc.ca",
+      "depth": 0,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.kentbc.ca",
+      "contentType": "text/html; charset=utf-8",
+      "bytes": 68585,
+      "sha256": "6115a66c695eb4164e2e64c5621a7764702ee260548b83f4fa29cde19eec64c4",
+      "status": "html-read",
+      "containsSofiTerms": false
+    },
+    {
+      "url": "https://www.kentbc.ca/district-hall/financial-plans-and-reports/",
+      "depth": 1,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.kentbc.ca/district-hall/financial-plans-and-reports/",
+      "contentType": "text/html; charset=utf-8",
+      "bytes": 59434,
+      "sha256": "a29e5c7a9732f3911bccb6adc58b49b39c08457df7cd60df0a54b08b0dcb3770",
+      "status": "html-read",
+      "containsSofiTerms": false
+    }
+  ],
+  "candidates": [
+    {
+      "url": "https://kentbc-ca.govstack.com/media/rqsfvflm/annual-report-2023-web.pdf",
+      "label": "2023 Annual Financial Report",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.kentbc.ca/district-hall/financial-plans-and-reports/",
+      "yearsInLabel": [
+        "2023"
+      ]
+    },
+    {
+      "url": "https://kentbc-ca.govstack.com/media/tevbb5ij/district-of-kent-2022-annual-report-for-web2.pdf",
+      "label": "2022 Annual Financial Report",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.kentbc.ca/district-hall/financial-plans-and-reports/",
+      "yearsInLabel": [
+        "2022"
+      ]
+    },
+    {
+      "url": "https://media-003-ca.cdn.govstack.com/kentbc-ca/media/2mhp3cwf/2024-annual-report-online-only.pdf",
+      "label": "2024 Annual Financial Report",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.kentbc.ca/district-hall/financial-plans-and-reports/",
+      "yearsInLabel": [
+        "2024"
+      ]
+    },
+    {
+      "url": "https://media-003-ca.cdn.govstack.com/kentbc-ca/media/voflegg4/district-of-kent-british-columbia-2025-annual-report.pdf",
+      "label": "View the 2025 Annual Financial Report.",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.kentbc.ca/district-hall/financial-plans-and-reports/",
+      "yearsInLabel": [
+        "2025"
+      ]
+    }
+  ]
+}

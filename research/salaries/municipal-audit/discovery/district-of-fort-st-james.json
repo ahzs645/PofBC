@@ -1,0 +1,132 @@
+{
+  "municipality": "Fort St. James",
+  "employerSlug": "district-of-fort-st-james",
+  "website": "http://fortstjames.ca",
+  "checkedOn": "2026-10-31",
+  "method": "Bounded traversal of links actually present on the official website; at most two link hops.",
+  "status": "source-links-found-awaiting-review",
+  "pagesChecked": [
+    {
+      "url": "https://fortstjames.ca",
+      "depth": 0,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.fortstjames.ca/",
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 64097,
+      "sha256": "b19456d44f5224bb42d5d1b4c432679b2f386ca62ca6a2ed248095f042a39e7e",
+      "status": "html-read",
+      "containsSofiTerms": false
+    },
+    {
+      "url": "https://www.fortstjames.ca/government/budget",
+      "depth": 1,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.fortstjames.ca/government/budget",
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 67763,
+      "sha256": "3a543a227b92809139cbe0ef3c34094895c4ed5a5909bcfeaf8da01e75934fc5",
+      "status": "html-read",
+      "containsSofiTerms": false
+    },
+    {
+      "url": "https://www.fortstjames.ca/government/budget/property-taxes",
+      "depth": 1,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.fortstjames.ca/government/budget/property-taxes",
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 71161,
+      "sha256": "8194112bdb6379139772784dad93c7086ea210df9939e57810f72890267d93f2",
+      "status": "html-read",
+      "containsSofiTerms": false
+    },
+    {
+      "url": "https://fortstjames.ca/government/climate-action",
+      "depth": 1,
+      "checkedOn": "2026-10-31",
+      "status": "fetch-failed",
+      "error": "HTTP Error 403: Forbidden",
+      "httpStatus": 403
+    },
+    {
+      "url": "https://www.fortstjames.ca/government",
+      "depth": 1,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.fortstjames.ca/government",
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 68091,
+      "sha256": "68f731759245264a4a2a194e59054ff2dfeba0cd92524b2d3e669040debb1397",
+      "status": "html-read",
+      "containsSofiTerms": false
+    },
+    {
+      "url": "https://www.fortstjames.ca/government/bylaws-policies",
+      "depth": 1,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.fortstjames.ca/government/bylaws-policies",
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 109485,
+      "sha256": "3eb23bde4936b8f02ce7b2953077635453d3f3f53d09310fa964da59b207978a",
+      "status": "html-read",
+      "containsSofiTerms": true
+    },
+    {
+      "url": "https://www.fortstjames.ca/government/elections",
+      "depth": 1,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.fortstjames.ca/government/elections",
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 80138,
+      "sha256": "11adb31913361459cd43dd542c0c7be94d9e39a84d97508b075b2dddfbed1ced",
+      "status": "html-read",
+      "containsSofiTerms": false
+    },
+    {
+      "url": "https://www.fortstjames.ca/government/elections/running-office",
+      "depth": 1,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.fortstjames.ca/government/elections/running-office",
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 83734,
+      "sha256": "93f26bf0fc20198d962fbe5e0f5cf268ce6724257d3ae573bb9c7e9b5ab0b352",
+      "status": "html-read",
+      "containsSofiTerms": false
+    },
+    {
+      "url": "https://www.fortstjames.ca/government/elections/voter-information",
+      "depth": 1,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.fortstjames.ca/government/elections/voter-information",
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 76861,
+      "sha256": "59b95c99798477acc1b8e0fbf1e8c49d1b36f1e680c719f2bbdabec3b6c6b8f2",
+      "status": "html-read",
+      "containsSofiTerms": false
+    }
+  ],
+  "candidates": [
+    {
+      "url": "https://elections.bc.ca/local-elections/financial-reporting-and-political-contributions/",
+      "label": "Financial Reporting and Political Contributions System [Elections BC]",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.fortstjames.ca/government/elections/running-office",
+      "yearsInLabel": []
+    },
+    {
+      "url": "https://www.fortstjames.ca/sites/default/files/2026-10/7.6%20Council%20Remuneration%20and%20Expenses%20-%20Rev%20M.pdf",
+      "label": "Council Remuneration",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.fortstjames.ca/government/bylaws-policies",
+      "yearsInLabel": [
+        "2026"
+      ]
+    }
+  ]
+}

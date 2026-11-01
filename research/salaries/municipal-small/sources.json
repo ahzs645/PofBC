@@ -1,0 +1,1356 @@
+{
+  "version": 1,
+  "rowSchema": [
+    "employerSlug",
+    "name",
+    "position",
+    "remuneration",
+    "expenses",
+    "pdfPage"
+  ],
+  "coverageNotes": [
+    "Reviewed original schedules from small northern and Interior municipalities. Only accepted schedules reach the salary build."
+  ],
+  "sources": [
+    {
+      "id": "municipal-small-town-of-golden-2024-elected-officials",
+      "employerSlug": "town-of-golden",
+      "employerName": "Town of Golden",
+      "sector": "Municipalities",
+      "year": "2024",
+      "periodType": "calendar",
+      "periodStart": "2024-01-01",
+      "periodEnd": "2024-12-31",
+      "title": "Town of Golden 2024 SOFI: elected-officials",
+      "sourceUrl": "https://www.golden.ca/sites/default/files/2025-07/2024%20Statement%20of%20Financial%20Information_signed.pdf",
+      "sourceIndexUrl": "https://www.golden.ca/town-hall/community-planning/annual-report",
+      "sha256": "48cf07c57312fefaf747e6d3ef278220c0779936dc57d32e6485dc3d1220f68b",
+      "file": "town-of-golden-2024-elected-officials.json.gzip",
+      "dataSha256": "796bcb3f69a5e739ad73901fdd367b45e817bf80fa9971453adf5999ab6d7b21",
+      "category": "elected-officials",
+      "scope": "elected-officials",
+      "threshold": null,
+      "thresholdComparison": null,
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "status": "verified",
+      "verifiedOn": "2026-10-31",
+      "rowCount": 7,
+      "totalRemuneration": 132058,
+      "totalExpenses": 36213,
+      "pages": [
+        52
+      ],
+      "nameDisclosure": "surname-only",
+      "positionDisclosure": "published",
+      "notes": [
+        "The linked document is the 2024 SOFI, despite the 2025 link label and filename. Cover and schedule agree on 2024; it is not imported as 2025.",
+        "Published remuneration includes base salary, per diems, taxable benefits and vacation payouts.",
+        "Actual calendar reporting year confirmed from the original schedule; URL/upload year and index labels are not used as the reporting period.",
+        "All published rows on the selected schedule were visually checked. Names and job titles remain as disclosed; a surname alone is not expanded.",
+        "Blank and dash expenses remain missing. Explicit nil is zero. Remuneration never includes expenses.",
+        "Displayed individual amounts have the recorded small residual against the source subtotal. Values are preserved; rounding is a possible explanation, not a proven reconciliation."
+      ],
+      "validation": {
+        "originalFingerprintVerified": true,
+        "independentReaders": [
+          "PyMuPDF positioned words",
+          "Poppler bbox-layout positioned words"
+        ],
+        "everyRowFieldAgreement": true,
+        "physicalPagesVisuallyReviewed": [
+          52
+        ],
+        "rowsIndependentlyChecked": 7,
+        "printedControls": [
+          {
+            "field": "pay",
+            "printedControl": 132060,
+            "rowSum": 132058,
+            "residual": -2,
+            "basis": "Printed named-cohort subtotal"
+          },
+          {
+            "field": "expenses",
+            "printedControl": 36215,
+            "rowSum": 36213,
+            "residual": -2,
+            "basis": "Printed named-cohort subtotal"
+          }
+        ],
+        "fieldCorrections": {},
+        "evidenceFile": "evidence/town-of-golden-2024-elected-officials.json.gzip"
+      }
+    },
+    {
+      "id": "municipal-small-town-of-golden-2024-employee-remuneration",
+      "employerSlug": "town-of-golden",
+      "employerName": "Town of Golden",
+      "sector": "Municipalities",
+      "year": "2024",
+      "periodType": "calendar",
+      "periodStart": "2024-01-01",
+      "periodEnd": "2024-12-31",
+      "title": "Town of Golden 2024 SOFI: employee-remuneration",
+      "sourceUrl": "https://www.golden.ca/sites/default/files/2025-07/2024%20Statement%20of%20Financial%20Information_signed.pdf",
+      "sourceIndexUrl": "https://www.golden.ca/town-hall/community-planning/annual-report",
+      "sha256": "48cf07c57312fefaf747e6d3ef278220c0779936dc57d32e6485dc3d1220f68b",
+      "file": "town-of-golden-2024-employee-remuneration.json.gzip",
+      "dataSha256": "08cf841f482f73ef9cfe1ae591784f0c44d876f1f7a1b9d115337bfc8477784a",
+      "category": "employee-remuneration",
+      "scope": "named-employees-over-threshold",
+      "threshold": 75000,
+      "thresholdComparison": ">",
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "status": "verified",
+      "verifiedOn": "2026-10-31",
+      "rowCount": 27,
+      "totalRemuneration": 2768700,
+      "totalExpenses": 70436,
+      "pages": [
+        52
+      ],
+      "nameDisclosure": "surname-or-surname-and-initials",
+      "positionDisclosure": "not-published",
+      "notes": [
+        "The linked document is the 2024 SOFI, despite the 2025 link label and filename. Cover and schedule agree on 2024; it is not imported as 2025.",
+        "Published remuneration includes base salary, per diems, taxable benefits and vacation payouts.",
+        "Actual calendar reporting year confirmed from the original schedule; URL/upload year and index labels are not used as the reporting period.",
+        "All published rows on the selected schedule were visually checked. Names and job titles remain as disclosed; a surname alone is not expanded.",
+        "Blank and dash expenses remain missing. Explicit nil is zero. Remuneration never includes expenses.",
+        "Displayed individual amounts have the recorded small residual against the source subtotal. Values are preserved; rounding is a possible explanation, not a proven reconciliation."
+      ],
+      "validation": {
+        "originalFingerprintVerified": true,
+        "independentReaders": [
+          "PyMuPDF positioned words",
+          "Poppler bbox-layout positioned words"
+        ],
+        "everyRowFieldAgreement": true,
+        "physicalPagesVisuallyReviewed": [
+          52
+        ],
+        "rowsIndependentlyChecked": 27,
+        "printedControls": [
+          {
+            "field": "pay",
+            "printedControl": 2768699,
+            "rowSum": 2768700,
+            "residual": 1,
+            "basis": "Printed named-cohort subtotal"
+          },
+          {
+            "field": "expenses",
+            "printedControl": 70434,
+            "rowSum": 70436,
+            "residual": 2,
+            "basis": "Printed named-cohort subtotal"
+          }
+        ],
+        "fieldCorrections": {},
+        "evidenceFile": "evidence/town-of-golden-2024-employee-remuneration.json.gzip"
+      }
+    },
+    {
+      "id": "municipal-small-village-of-burns-lake-2022-elected-officials",
+      "employerSlug": "village-of-burns-lake",
+      "employerName": "Village of Burns Lake",
+      "sector": "Municipalities",
+      "year": "2022",
+      "periodType": "calendar",
+      "periodStart": "2022-01-01",
+      "periodEnd": "2022-12-31",
+      "title": "Village of Burns Lake 2022 SOFI: elected-officials",
+      "sourceUrl": "https://www.burnslake.ca/media/file/2022-village-burns-lake-sofi-report",
+      "sourceIndexUrl": "https://www.burnslake.ca/media/file/2022-village-burns-lake-sofi-report",
+      "sha256": "7dc53871d68e31b361c160250d121b25a28c1fdeaeda80df16353dff10c9dfd4",
+      "file": "village-of-burns-lake-2022-elected-officials.json.gzip",
+      "dataSha256": "902ed6eb49d9b0df686c310623443dee08d68f64545c75fe34a5539802dcc123",
+      "category": "elected-officials",
+      "scope": "elected-officials",
+      "threshold": null,
+      "thresholdComparison": null,
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "status": "verified",
+      "verifiedOn": "2026-10-31",
+      "rowCount": 6,
+      "totalRemuneration": 80560,
+      "totalExpenses": 33741,
+      "pages": [
+        5
+      ],
+      "nameDisclosure": "published-name",
+      "positionDisclosure": "published",
+      "notes": [
+        "Actual calendar reporting year confirmed from the original schedule; URL/upload year and index labels are not used as the reporting period.",
+        "All published rows on the selected schedule were visually checked. Names and job titles remain as disclosed; a surname alone is not expanded.",
+        "Blank and dash expenses remain missing. Explicit nil is zero. Remuneration never includes expenses.",
+        "Displayed individual amounts have the recorded small residual against the source subtotal. Values are preserved; rounding is a possible explanation, not a proven reconciliation."
+      ],
+      "validation": {
+        "originalFingerprintVerified": true,
+        "independentReaders": [
+          "PyMuPDF positioned words",
+          "Poppler bbox-layout positioned words"
+        ],
+        "everyRowFieldAgreement": true,
+        "physicalPagesVisuallyReviewed": [
+          5
+        ],
+        "rowsIndependentlyChecked": 6,
+        "printedControls": [
+          {
+            "field": "pay",
+            "printedControl": 80559,
+            "rowSum": 80560,
+            "residual": 1,
+            "basis": "Printed named-cohort subtotal"
+          },
+          {
+            "field": "expenses",
+            "printedControl": 33741,
+            "rowSum": 33741,
+            "residual": 0,
+            "basis": "Printed named-cohort subtotal"
+          }
+        ],
+        "fieldCorrections": {},
+        "evidenceFile": "evidence/village-of-burns-lake-2022-elected-officials.json.gzip"
+      }
+    },
+    {
+      "id": "municipal-small-village-of-burns-lake-2022-employee-remuneration",
+      "employerSlug": "village-of-burns-lake",
+      "employerName": "Village of Burns Lake",
+      "sector": "Municipalities",
+      "year": "2022",
+      "periodType": "calendar",
+      "periodStart": "2022-01-01",
+      "periodEnd": "2022-12-31",
+      "title": "Village of Burns Lake 2022 SOFI: employee-remuneration",
+      "sourceUrl": "https://www.burnslake.ca/media/file/2022-village-burns-lake-sofi-report",
+      "sourceIndexUrl": "https://www.burnslake.ca/media/file/2022-village-burns-lake-sofi-report",
+      "sha256": "7dc53871d68e31b361c160250d121b25a28c1fdeaeda80df16353dff10c9dfd4",
+      "file": "village-of-burns-lake-2022-employee-remuneration.json.gzip",
+      "dataSha256": "6dc163bedd8b51e17ad7ae654ba9fda026741c512787eab82b6b5ea49fa37493",
+      "category": "employee-remuneration",
+      "scope": "named-employees-over-threshold",
+      "threshold": 75000,
+      "thresholdComparison": ">",
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "status": "verified",
+      "verifiedOn": "2026-10-31",
+      "rowCount": 8,
+      "totalRemuneration": 880473,
+      "totalExpenses": 31843,
+      "pages": [
+        5
+      ],
+      "nameDisclosure": "published-name",
+      "positionDisclosure": "published",
+      "notes": [
+        "Actual calendar reporting year confirmed from the original schedule; URL/upload year and index labels are not used as the reporting period.",
+        "All published rows on the selected schedule were visually checked. Names and job titles remain as disclosed; a surname alone is not expanded.",
+        "Blank and dash expenses remain missing. Explicit nil is zero. Remuneration never includes expenses.",
+        "Displayed individual amounts have the recorded small residual against the source subtotal. Values are preserved; rounding is a possible explanation, not a proven reconciliation."
+      ],
+      "validation": {
+        "originalFingerprintVerified": true,
+        "independentReaders": [
+          "PyMuPDF positioned words",
+          "Poppler bbox-layout positioned words"
+        ],
+        "everyRowFieldAgreement": true,
+        "physicalPagesVisuallyReviewed": [
+          5
+        ],
+        "rowsIndependentlyChecked": 8,
+        "printedControls": [
+          {
+            "field": "pay",
+            "printedControl": 880472,
+            "rowSum": 880473,
+            "residual": 1,
+            "basis": "Printed named-cohort subtotal"
+          },
+          {
+            "field": "expenses",
+            "printedControl": 31843,
+            "rowSum": 31843,
+            "residual": 0,
+            "basis": "Printed named-cohort subtotal"
+          }
+        ],
+        "fieldCorrections": {},
+        "evidenceFile": "evidence/village-of-burns-lake-2022-employee-remuneration.json.gzip"
+      }
+    },
+    {
+      "id": "municipal-small-village-of-cache-creek-2025-elected-officials",
+      "employerSlug": "village-of-cache-creek",
+      "employerName": "Village of Cache Creek",
+      "sector": "Municipalities",
+      "year": "2025",
+      "periodType": "calendar",
+      "periodStart": "2025-01-01",
+      "periodEnd": "2025-12-31",
+      "title": "Village of Cache Creek 2025 SOFI: elected-officials",
+      "sourceUrl": "https://img1.wsimg.com/blobby/go/bf7007c2-9476-4485-8364-d7ab1d6e599d/downloads/410fc72a-7450-4b44-ab46-8487501e5a48/2025%20SOFI%20REPORT_Executed.pdf?ver=1792599172574",
+      "sourceIndexUrl": "https://cachecreek.ca/financial-reporting",
+      "sha256": "8330decdde082eccac8c94fbeeb003aa88c7d35993001ef7b18063b94ac79d19",
+      "file": "village-of-cache-creek-2025-elected-officials.json.gzip",
+      "dataSha256": "09f9d01e5588f20c8e0eb6528420e7c47f645d9927386214ff86b7b37d1ff9bc",
+      "category": "elected-officials",
+      "scope": "elected-officials",
+      "threshold": null,
+      "thresholdComparison": null,
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "status": "verified",
+      "verifiedOn": "2026-10-31",
+      "rowCount": 5,
+      "totalRemuneration": 59912,
+      "totalExpenses": 8172,
+      "pages": [
+        5
+      ],
+      "nameDisclosure": "published-name",
+      "positionDisclosure": "published",
+      "notes": [
+        "The OCR layer reads GUMMING; the rendered original clearly reads CUMMING. This name correction is pinned to this PDF and recorded in fieldCorrections.",
+        "The separate Total column includes expenses and is never used as remuneration.",
+        "Actual calendar reporting year confirmed from the original schedule; URL/upload year and index labels are not used as the reporting period.",
+        "All published rows on the selected schedule were visually checked. Names and job titles remain as disclosed; a surname alone is not expanded.",
+        "Blank and dash expenses remain missing. Explicit nil is zero. Remuneration never includes expenses."
+      ],
+      "validation": {
+        "originalFingerprintVerified": true,
+        "independentReaders": [
+          "PyMuPDF positioned words",
+          "Poppler bbox-layout positioned words"
+        ],
+        "everyRowFieldAgreement": true,
+        "physicalPagesVisuallyReviewed": [
+          5
+        ],
+        "rowsIndependentlyChecked": 5,
+        "printedControls": [
+          {
+            "field": "pay",
+            "printedControl": 59912,
+            "rowSum": 59912,
+            "residual": 0,
+            "basis": "Printed named-cohort subtotal"
+          },
+          {
+            "field": "expenses",
+            "printedControl": 8172,
+            "rowSum": 8172,
+            "residual": 0,
+            "basis": "Printed named-cohort subtotal"
+          }
+        ],
+        "fieldCorrections": {
+          "name": {
+            "RANTA,P.A.JOHN": "RANTA, P.A. JOHN",
+            "DEBERT,KELLYJ": "DEBERT, KELLY J"
+          }
+        },
+        "evidenceFile": "evidence/village-of-cache-creek-2025-elected-officials.json.gzip"
+      }
+    },
+    {
+      "id": "municipal-small-village-of-cache-creek-2025-employee-remuneration",
+      "employerSlug": "village-of-cache-creek",
+      "employerName": "Village of Cache Creek",
+      "sector": "Municipalities",
+      "year": "2025",
+      "periodType": "calendar",
+      "periodStart": "2025-01-01",
+      "periodEnd": "2025-12-31",
+      "title": "Village of Cache Creek 2025 SOFI: employee-remuneration",
+      "sourceUrl": "https://img1.wsimg.com/blobby/go/bf7007c2-9476-4485-8364-d7ab1d6e599d/downloads/410fc72a-7450-4b44-ab46-8487501e5a48/2025%20SOFI%20REPORT_Executed.pdf?ver=1792599172574",
+      "sourceIndexUrl": "https://cachecreek.ca/financial-reporting",
+      "sha256": "8330decdde082eccac8c94fbeeb003aa88c7d35993001ef7b18063b94ac79d19",
+      "file": "village-of-cache-creek-2025-employee-remuneration.json.gzip",
+      "dataSha256": "65f4072d14b00ce4349b2071bebcd12510bb13dd7a9ac9371b834105f8bdf1bc",
+      "category": "employee-remuneration",
+      "scope": "named-employees-over-threshold",
+      "threshold": 75000,
+      "thresholdComparison": ">",
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "status": "verified",
+      "verifiedOn": "2026-10-31",
+      "rowCount": 6,
+      "totalRemuneration": 587890,
+      "totalExpenses": 10450,
+      "pages": [
+        5
+      ],
+      "nameDisclosure": "published-name",
+      "positionDisclosure": "published",
+      "notes": [
+        "The OCR layer reads GUMMING; the rendered original clearly reads CUMMING. This name correction is pinned to this PDF and recorded in fieldCorrections.",
+        "The separate Total column includes expenses and is never used as remuneration.",
+        "Actual calendar reporting year confirmed from the original schedule; URL/upload year and index labels are not used as the reporting period.",
+        "All published rows on the selected schedule were visually checked. Names and job titles remain as disclosed; a surname alone is not expanded.",
+        "Blank and dash expenses remain missing. Explicit nil is zero. Remuneration never includes expenses."
+      ],
+      "validation": {
+        "originalFingerprintVerified": true,
+        "independentReaders": [
+          "PyMuPDF positioned words",
+          "Poppler bbox-layout positioned words"
+        ],
+        "everyRowFieldAgreement": true,
+        "physicalPagesVisuallyReviewed": [
+          5
+        ],
+        "rowsIndependentlyChecked": 6,
+        "printedControls": [
+          {
+            "field": "pay",
+            "printedControl": 587890,
+            "rowSum": 587890,
+            "residual": 0,
+            "basis": "Named employee remuneration subtotal on physical PDF page 6"
+          },
+          {
+            "field": "expenses",
+            "printedControl": 10450,
+            "rowSum": 10450,
+            "residual": 0,
+            "basis": "Named employee expense subtotal on physical PDF page 6"
+          }
+        ],
+        "fieldCorrections": {
+          "name": {
+            "GUMMING, JORDAN D": "CUMMING, JORDAN D",
+            "GARDNER,ROBYN": "GARDNER, ROBYN"
+          }
+        },
+        "evidenceFile": "evidence/village-of-cache-creek-2025-employee-remuneration.json.gzip"
+      }
+    },
+    {
+      "id": "municipal-small-district-of-hudson-s-hope-2022-elected-officials",
+      "employerSlug": "district-of-hudson-s-hope",
+      "employerName": "District of Hudson's Hope",
+      "sector": "Municipalities",
+      "year": "2022",
+      "periodType": "calendar",
+      "periodStart": "2022-01-01",
+      "periodEnd": "2022-12-31",
+      "title": "District of Hudson's Hope 2022 SOFI: elected-officials",
+      "sourceUrl": "https://hudsonshope.ca/wp-content/uploads/2023/06/District-of-HH-SOFI-2022.pdf",
+      "sourceIndexUrl": "https://hudsonshope.ca/district-office/annual-report/",
+      "sha256": "811b5fc57be0402573c6fee7e6f42554f85ed44598407a20e8fc531c9fda084f",
+      "file": "district-of-hudson-s-hope-2022-elected-officials.json.gzip",
+      "dataSha256": "b80c9cad8e613579c5345d6c8204d6150f978359d5b1da8776c71af188f16e3e",
+      "category": "elected-officials",
+      "scope": "elected-officials",
+      "threshold": null,
+      "thresholdComparison": null,
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "status": "verified",
+      "verifiedOn": "2026-10-31",
+      "rowCount": 11,
+      "totalRemuneration": 85208.7,
+      "totalExpenses": 2511.37,
+      "pages": [
+        7
+      ],
+      "nameDisclosure": "published-name",
+      "positionDisclosure": "published",
+      "notes": [
+        "Reporting period is 2022, confirmed by the remuneration schedule; the upload path contains a later year.",
+        "Actual calendar reporting year confirmed from the original schedule; URL/upload year and index labels are not used as the reporting period.",
+        "All published rows on the selected schedule were visually checked. Names and job titles remain as disclosed; a surname alone is not expanded.",
+        "Blank and dash expenses remain missing. Explicit nil is zero. Remuneration never includes expenses."
+      ],
+      "validation": {
+        "originalFingerprintVerified": true,
+        "independentReaders": [
+          "PyMuPDF positioned words",
+          "Poppler bbox-layout positioned words"
+        ],
+        "everyRowFieldAgreement": true,
+        "physicalPagesVisuallyReviewed": [
+          7
+        ],
+        "rowsIndependentlyChecked": 11,
+        "printedControls": [
+          {
+            "field": "pay",
+            "printedControl": 85208.7,
+            "rowSum": 85208.7,
+            "residual": 0,
+            "basis": "Printed named-cohort subtotal"
+          },
+          {
+            "field": "expenses",
+            "printedControl": 2511.37,
+            "rowSum": 2511.37,
+            "residual": 0,
+            "basis": "Printed named-cohort subtotal"
+          }
+        ],
+        "fieldCorrections": {},
+        "evidenceFile": "evidence/district-of-hudson-s-hope-2022-elected-officials.json.gzip"
+      }
+    },
+    {
+      "id": "municipal-small-district-of-hudson-s-hope-2022-employee-remuneration",
+      "employerSlug": "district-of-hudson-s-hope",
+      "employerName": "District of Hudson's Hope",
+      "sector": "Municipalities",
+      "year": "2022",
+      "periodType": "calendar",
+      "periodStart": "2022-01-01",
+      "periodEnd": "2022-12-31",
+      "title": "District of Hudson's Hope 2022 SOFI: employee-remuneration",
+      "sourceUrl": "https://hudsonshope.ca/wp-content/uploads/2023/06/District-of-HH-SOFI-2022.pdf",
+      "sourceIndexUrl": "https://hudsonshope.ca/district-office/annual-report/",
+      "sha256": "811b5fc57be0402573c6fee7e6f42554f85ed44598407a20e8fc531c9fda084f",
+      "file": "district-of-hudson-s-hope-2022-employee-remuneration.json.gzip",
+      "dataSha256": "2e8c42a085d93e7644317dd9c6cc790e09effa3a89cdc85caf7a66dcf49a2bf8",
+      "category": "employee-remuneration",
+      "scope": "named-employees-over-threshold",
+      "threshold": 75000,
+      "thresholdComparison": ">",
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "status": "verified",
+      "verifiedOn": "2026-10-31",
+      "rowCount": 12,
+      "totalRemuneration": 1136218.84,
+      "totalExpenses": 22018.57,
+      "pages": [
+        7
+      ],
+      "nameDisclosure": "published-name",
+      "positionDisclosure": "not-published",
+      "notes": [
+        "Reporting period is 2022, confirmed by the remuneration schedule; the upload path contains a later year.",
+        "Actual calendar reporting year confirmed from the original schedule; URL/upload year and index labels are not used as the reporting period.",
+        "All published rows on the selected schedule were visually checked. Names and job titles remain as disclosed; a surname alone is not expanded.",
+        "Blank and dash expenses remain missing. Explicit nil is zero. Remuneration never includes expenses."
+      ],
+      "validation": {
+        "originalFingerprintVerified": true,
+        "independentReaders": [
+          "PyMuPDF positioned words",
+          "Poppler bbox-layout positioned words"
+        ],
+        "everyRowFieldAgreement": true,
+        "physicalPagesVisuallyReviewed": [
+          7
+        ],
+        "rowsIndependentlyChecked": 12,
+        "printedControls": [
+          {
+            "field": "pay",
+            "printedControl": 1136218.84,
+            "rowSum": 1136218.84,
+            "residual": 0,
+            "basis": "Total employee remuneration less disclosed under-threshold aggregate"
+          },
+          {
+            "field": "expenses",
+            "printedControl": 22018.57,
+            "rowSum": 22018.57,
+            "residual": 0,
+            "basis": "Total employee expenses less disclosed under-threshold aggregate"
+          }
+        ],
+        "fieldCorrections": {},
+        "evidenceFile": "evidence/district-of-hudson-s-hope-2022-employee-remuneration.json.gzip"
+      }
+    },
+    {
+      "id": "municipal-small-village-of-montrose-2023-elected-officials",
+      "employerSlug": "village-of-montrose",
+      "employerName": "Village of Montrose",
+      "sector": "Municipalities",
+      "year": "2023",
+      "periodType": "calendar",
+      "periodStart": "2023-01-01",
+      "periodEnd": "2023-12-31",
+      "title": "Village of Montrose 2023 SOFI: elected-officials",
+      "sourceUrl": "https://www.montrose.ca/wp-content/uploads/2025/05/2023-SOFI-Copy-for-website.pdf",
+      "sourceIndexUrl": "https://www.montrose.ca/document-category/annual-reports/",
+      "sha256": "bcdebe3816ebb0c69a783b379619da10608d9b2ff446084ef939c04906c83989",
+      "file": "village-of-montrose-2023-elected-officials.json.gzip",
+      "dataSha256": "a2302651bce87e962fde23faa41ede89a0dfb67bbc528415473c82782143351d",
+      "category": "elected-officials",
+      "scope": "elected-officials",
+      "threshold": null,
+      "thresholdComparison": null,
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "status": "verified",
+      "verifiedOn": "2026-10-31",
+      "rowCount": 5,
+      "totalRemuneration": 27681.09,
+      "totalExpenses": 1545.79,
+      "pages": [
+        33
+      ],
+      "nameDisclosure": "published-name",
+      "positionDisclosure": "published",
+      "notes": [
+        "The source is the 2023 report; the website upload path contains 2025. The literal nil expense cells are reported zeros.",
+        "Actual calendar reporting year confirmed from the original schedule; URL/upload year and index labels are not used as the reporting period.",
+        "All published rows on the selected schedule were visually checked. Names and job titles remain as disclosed; a surname alone is not expanded.",
+        "Blank and dash expenses remain missing. Explicit nil is zero. Remuneration never includes expenses."
+      ],
+      "validation": {
+        "originalFingerprintVerified": true,
+        "independentReaders": [
+          "PyMuPDF positioned words",
+          "Poppler bbox-layout positioned words"
+        ],
+        "everyRowFieldAgreement": true,
+        "physicalPagesVisuallyReviewed": [
+          33
+        ],
+        "rowsIndependentlyChecked": 5,
+        "printedControls": [
+          {
+            "field": "pay",
+            "printedControl": 27681.09,
+            "rowSum": 27681.09,
+            "residual": 0,
+            "basis": "Printed named-cohort subtotal"
+          },
+          {
+            "field": "expenses",
+            "printedControl": 1545.79,
+            "rowSum": 1545.79,
+            "residual": 0,
+            "basis": "Printed named-cohort subtotal"
+          }
+        ],
+        "fieldCorrections": {},
+        "evidenceFile": "evidence/village-of-montrose-2023-elected-officials.json.gzip",
+        "approvalEvidence": {
+          "physicalPage": 36,
+          "signedApprovalVisuallyReviewed": true,
+          "note": "Rendered original signed approval inspected during this follow-up; PDF hash is pinned."
+        }
+      }
+    },
+    {
+      "id": "municipal-small-village-of-montrose-2023-employee-remuneration",
+      "employerSlug": "village-of-montrose",
+      "employerName": "Village of Montrose",
+      "sector": "Municipalities",
+      "year": "2023",
+      "periodType": "calendar",
+      "periodStart": "2023-01-01",
+      "periodEnd": "2023-12-31",
+      "title": "Village of Montrose 2023 SOFI: employee-remuneration",
+      "sourceUrl": "https://www.montrose.ca/wp-content/uploads/2025/05/2023-SOFI-Copy-for-website.pdf",
+      "sourceIndexUrl": "https://www.montrose.ca/document-category/annual-reports/",
+      "sha256": "bcdebe3816ebb0c69a783b379619da10608d9b2ff446084ef939c04906c83989",
+      "file": "village-of-montrose-2023-employee-remuneration.json.gzip",
+      "dataSha256": "931654b1aad4a1fda5c31bb691c8d60623645aba3c0dee0893b3830bdc712ed2",
+      "category": "employee-remuneration",
+      "scope": "named-employees-over-threshold",
+      "threshold": 75000,
+      "thresholdComparison": ">",
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "status": "accepted",
+      "verifiedOn": "2026-10-31",
+      "rowCount": 3,
+      "totalRemuneration": 269287.16,
+      "totalExpenses": 6503.65,
+      "pages": [
+        33
+      ],
+      "nameDisclosure": "published-name",
+      "positionDisclosure": "published",
+      "notes": [
+        "The source is the 2023 report; the website upload path contains 2025. The literal nil expense cells are reported zeros.",
+        "Accepted as a faithful transcription with an unresolved expense control. The three named rows were visually checked against the rendered original. Council is a separate exactly reconciled cohort.",
+        "Actual calendar reporting year confirmed from the original schedule; URL/upload year and index labels are not used as the reporting period.",
+        "All published rows on the selected schedule were visually checked. Names and job titles remain as disclosed; a surname alone is not expanded.",
+        "Blank and dash expenses remain missing. Explicit nil is zero. Remuneration never includes expenses.",
+        "Montrose 2023 employees: remuneration reconciles exactly. Individual expenses sum to $6,503.65, $36 below the $6,539.65 implied by the printed aggregates. Published cells are preserved; the source difference is unresolved."
+      ],
+      "validation": {
+        "originalFingerprintVerified": true,
+        "independentReaders": [
+          "PyMuPDF positioned words",
+          "Poppler bbox-layout positioned words"
+        ],
+        "everyRowFieldAgreement": true,
+        "physicalPagesVisuallyReviewed": [
+          33
+        ],
+        "rowsIndependentlyChecked": 3,
+        "printedControls": [
+          {
+            "field": "pay",
+            "printedControl": 269287.16,
+            "rowSum": 269287.16,
+            "residual": 0,
+            "basis": "Printed total $393,137.06 less under-threshold aggregate $123,849.90"
+          },
+          {
+            "field": "expenses",
+            "printedControl": 6539.65,
+            "rowSum": 6503.65,
+            "residual": -36,
+            "basis": "Printed total $10,107.80 less under-threshold aggregate $3,568.15"
+          }
+        ],
+        "fieldCorrections": {},
+        "evidenceFile": "evidence/village-of-montrose-2023-employee-remuneration.json.gzip",
+        "acceptanceBasis": "Faithful transcription with fixed, publicly disclosed source-control exceptions; not exact source reconciliation.",
+        "approvalEvidence": {
+          "physicalPage": 36,
+          "signedApprovalVisuallyReviewed": true,
+          "note": "Rendered original signed approval inspected during this follow-up; PDF hash is pinned."
+        }
+      },
+      "publicWarning": "Montrose 2023 employees: remuneration reconciles exactly. Individual expenses sum to $6,503.65, $36 below the $6,539.65 implied by the printed aggregates. Published cells are preserved; the source difference is unresolved."
+    },
+    {
+      "id": "municipal-small-village-of-nakusp-2024-elected-officials",
+      "employerSlug": "village-of-nakusp",
+      "employerName": "Village of Nakusp",
+      "sector": "Municipalities",
+      "year": "2024",
+      "periodType": "calendar",
+      "periodStart": "2024-01-01",
+      "periodEnd": "2024-12-31",
+      "title": "Village of Nakusp 2024 SOFI: elected-officials",
+      "sourceUrl": "https://www.nakusp.com/sites/5/files/2025-06/2024%20SOFI%20Final.pdf",
+      "sourceIndexUrl": "https://www.nakusp.com/financialreports",
+      "sha256": "c808ae1ade228b9661e5b7b5a84281de92a4907c06a4682451106f625893ade7",
+      "file": "village-of-nakusp-2024-elected-officials.json.gzip",
+      "dataSha256": "ddff3ec0289f4fa1b9e573eb5e9374081d4b04eb7abf410cc855a026e680a878",
+      "category": "elected-officials",
+      "scope": "elected-officials",
+      "threshold": null,
+      "thresholdComparison": null,
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "status": "verified",
+      "verifiedOn": "2026-10-31",
+      "rowCount": 5,
+      "totalRemuneration": 58607,
+      "totalExpenses": 18313,
+      "pages": [
+        3
+      ],
+      "nameDisclosure": "published-name",
+      "positionDisclosure": "published",
+      "notes": [
+        "The document is the 2024 SOFI; do not infer its reporting period from the 2025 upload path.",
+        "Actual calendar reporting year confirmed from the original schedule; URL/upload year and index labels are not used as the reporting period.",
+        "All published rows on the selected schedule were visually checked. Names and job titles remain as disclosed; a surname alone is not expanded.",
+        "Blank and dash expenses remain missing. Explicit nil is zero. Remuneration never includes expenses."
+      ],
+      "validation": {
+        "originalFingerprintVerified": true,
+        "independentReaders": [
+          "PyMuPDF positioned words",
+          "Poppler bbox-layout positioned words"
+        ],
+        "everyRowFieldAgreement": true,
+        "physicalPagesVisuallyReviewed": [
+          3
+        ],
+        "rowsIndependentlyChecked": 5,
+        "printedControls": [
+          {
+            "field": "pay",
+            "printedControl": 58607,
+            "rowSum": 58607,
+            "residual": 0,
+            "basis": "Printed named-cohort subtotal"
+          },
+          {
+            "field": "expenses",
+            "printedControl": 18313,
+            "rowSum": 18313,
+            "residual": 0,
+            "basis": "Printed named-cohort subtotal"
+          }
+        ],
+        "fieldCorrections": {},
+        "evidenceFile": "evidence/village-of-nakusp-2024-elected-officials.json.gzip"
+      }
+    },
+    {
+      "id": "municipal-small-village-of-nakusp-2024-employee-remuneration",
+      "employerSlug": "village-of-nakusp",
+      "employerName": "Village of Nakusp",
+      "sector": "Municipalities",
+      "year": "2024",
+      "periodType": "calendar",
+      "periodStart": "2024-01-01",
+      "periodEnd": "2024-12-31",
+      "title": "Village of Nakusp 2024 SOFI: employee-remuneration",
+      "sourceUrl": "https://www.nakusp.com/sites/5/files/2025-06/2024%20SOFI%20Final.pdf",
+      "sourceIndexUrl": "https://www.nakusp.com/financialreports",
+      "sha256": "c808ae1ade228b9661e5b7b5a84281de92a4907c06a4682451106f625893ade7",
+      "file": "village-of-nakusp-2024-employee-remuneration.json.gzip",
+      "dataSha256": "982ed8da15a06bb14adfb1c2883f49054e51427af1e0860a6716e65171e4ce7c",
+      "category": "employee-remuneration",
+      "scope": "named-employees-over-threshold",
+      "threshold": 75000,
+      "thresholdComparison": ">=",
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "status": "verified",
+      "verifiedOn": "2026-10-31",
+      "rowCount": 7,
+      "totalRemuneration": 690067,
+      "totalExpenses": 17876,
+      "pages": [
+        3
+      ],
+      "nameDisclosure": "published-name",
+      "positionDisclosure": "published",
+      "notes": [
+        "The document is the 2024 SOFI; do not infer its reporting period from the 2025 upload path.",
+        "Actual calendar reporting year confirmed from the original schedule; URL/upload year and index labels are not used as the reporting period.",
+        "All published rows on the selected schedule were visually checked. Names and job titles remain as disclosed; a surname alone is not expanded.",
+        "Blank and dash expenses remain missing. Explicit nil is zero. Remuneration never includes expenses."
+      ],
+      "validation": {
+        "originalFingerprintVerified": true,
+        "independentReaders": [
+          "PyMuPDF positioned words",
+          "Poppler bbox-layout positioned words"
+        ],
+        "everyRowFieldAgreement": true,
+        "physicalPagesVisuallyReviewed": [
+          3
+        ],
+        "rowsIndependentlyChecked": 7,
+        "printedControls": [
+          {
+            "field": "pay",
+            "printedControl": 690067,
+            "rowSum": 690067,
+            "residual": 0,
+            "basis": "Printed named-cohort subtotal"
+          },
+          {
+            "field": "expenses",
+            "printedControl": 17876,
+            "rowSum": 17876,
+            "residual": 0,
+            "basis": "Printed named-cohort subtotal"
+          }
+        ],
+        "fieldCorrections": {},
+        "evidenceFile": "evidence/village-of-nakusp-2024-employee-remuneration.json.gzip"
+      }
+    },
+    {
+      "id": "municipal-small-village-of-valemount-2024-elected-officials",
+      "employerSlug": "village-of-valemount",
+      "employerName": "Village of Valemount",
+      "sector": "Municipalities",
+      "year": "2024",
+      "periodType": "calendar",
+      "periodStart": "2024-01-01",
+      "periodEnd": "2024-12-31",
+      "title": "Village of Valemount 2024 SOFI: elected-officials",
+      "sourceUrl": "https://valemount.ca/wp-content/uploads/2025/07/2024-SOFI-Report.pdf",
+      "sourceIndexUrl": "https://valemount.ca/village-office/documents-publications/financial-reports/",
+      "sha256": "035f165bc7ae6e974eefb3ee4e50c197cad9103570f16da569f09a111402b4a1",
+      "file": "village-of-valemount-2024-elected-officials.json.gzip",
+      "dataSha256": "27b87622ad92de86732ea5ab966d30beb7a04848d46a06c0d0613e912e26ee03",
+      "category": "elected-officials",
+      "scope": "elected-officials",
+      "threshold": null,
+      "thresholdComparison": null,
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "status": "verified",
+      "verifiedOn": "2026-10-31",
+      "rowCount": 5,
+      "totalRemuneration": 71853,
+      "totalExpenses": 33744,
+      "pages": [
+        4
+      ],
+      "nameDisclosure": "published-name",
+      "positionDisclosure": "not-published",
+      "notes": [
+        "The rendered schedule confirms December 31, 2024; its OCR layer prints Dec 311 2024. It is not treated as a 2025 disclosure.",
+        "The schedule does not publish individual council job titles; no mayor/councillor title is inferred from external knowledge.",
+        "The published capital L in MacLean, Donnie is restored after a rendered-page review; the source OCR text has Maclean.",
+        "Actual calendar reporting year confirmed from the original schedule; URL/upload year and index labels are not used as the reporting period.",
+        "All published rows on the selected schedule were visually checked. Names and job titles remain as disclosed; a surname alone is not expanded.",
+        "Blank and dash expenses remain missing. Explicit nil is zero. Remuneration never includes expenses.",
+        "Displayed individual amounts have the recorded small residual against the source subtotal. Values are preserved; rounding is a possible explanation, not a proven reconciliation."
+      ],
+      "validation": {
+        "originalFingerprintVerified": true,
+        "independentReaders": [
+          "PyMuPDF positioned words",
+          "Poppler bbox-layout positioned words"
+        ],
+        "everyRowFieldAgreement": true,
+        "physicalPagesVisuallyReviewed": [
+          4
+        ],
+        "rowsIndependentlyChecked": 5,
+        "printedControls": [
+          {
+            "field": "pay",
+            "printedControl": 71853,
+            "rowSum": 71853,
+            "residual": 0,
+            "basis": "Printed named-cohort subtotal"
+          },
+          {
+            "field": "expenses",
+            "printedControl": 33743,
+            "rowSum": 33744,
+            "residual": 1,
+            "basis": "Printed named-cohort subtotal"
+          }
+        ],
+        "fieldCorrections": {
+          "name": {
+            "Maclean, Donnie": "MacLean, Donnie"
+          }
+        },
+        "evidenceFile": "evidence/village-of-valemount-2024-elected-officials.json.gzip"
+      }
+    },
+    {
+      "id": "municipal-small-village-of-valemount-2024-employee-remuneration",
+      "employerSlug": "village-of-valemount",
+      "employerName": "Village of Valemount",
+      "sector": "Municipalities",
+      "year": "2024",
+      "periodType": "calendar",
+      "periodStart": "2024-01-01",
+      "periodEnd": "2024-12-31",
+      "title": "Village of Valemount 2024 SOFI: employee-remuneration",
+      "sourceUrl": "https://valemount.ca/wp-content/uploads/2025/07/2024-SOFI-Report.pdf",
+      "sourceIndexUrl": "https://valemount.ca/village-office/documents-publications/financial-reports/",
+      "sha256": "035f165bc7ae6e974eefb3ee4e50c197cad9103570f16da569f09a111402b4a1",
+      "file": "village-of-valemount-2024-employee-remuneration.json.gzip",
+      "dataSha256": "093a62c6c881e725e68ac03f3b4b6dbb4106f643eb7ebe58da8c74b5f18d0722",
+      "category": "employee-remuneration",
+      "scope": "named-employees-over-threshold",
+      "threshold": 75000,
+      "thresholdComparison": ">",
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "status": "verified",
+      "verifiedOn": "2026-10-31",
+      "rowCount": 6,
+      "totalRemuneration": 578558,
+      "totalExpenses": 0,
+      "pages": [
+        4
+      ],
+      "nameDisclosure": "published-name",
+      "positionDisclosure": "not-published",
+      "notes": [
+        "The rendered schedule confirms December 31, 2024; its OCR layer prints Dec 311 2024. It is not treated as a 2025 disclosure.",
+        "The schedule does not publish individual council job titles; no mayor/councillor title is inferred from external knowledge.",
+        "Employee Expenses & Taxable Benefits are a combined column. They remain in the audit components and are not published as employee expenses or added to remuneration.",
+        "Actual calendar reporting year confirmed from the original schedule; URL/upload year and index labels are not used as the reporting period.",
+        "All published rows on the selected schedule were visually checked. Names and job titles remain as disclosed; a surname alone is not expanded.",
+        "Blank and dash expenses remain missing. Explicit nil is zero. Remuneration never includes expenses.",
+        "Displayed individual amounts have the recorded small residual against the source subtotal. Values are preserved; rounding is a possible explanation, not a proven reconciliation."
+      ],
+      "validation": {
+        "originalFingerprintVerified": true,
+        "independentReaders": [
+          "PyMuPDF positioned words",
+          "Poppler bbox-layout positioned words"
+        ],
+        "everyRowFieldAgreement": true,
+        "physicalPagesVisuallyReviewed": [
+          4
+        ],
+        "rowsIndependentlyChecked": 6,
+        "printedControls": [
+          {
+            "field": "pay",
+            "printedControl": 578559,
+            "rowSum": 578558,
+            "residual": -1,
+            "basis": "Employee total less disclosed under-threshold aggregate"
+          },
+          {
+            "field": "combinedExpensesBenefits",
+            "printedControl": 33550,
+            "rowSum": 33549,
+            "residual": -1,
+            "basis": "Combined expense/benefit total less under-threshold aggregate"
+          }
+        ],
+        "fieldCorrections": {},
+        "evidenceFile": "evidence/village-of-valemount-2024-employee-remuneration.json.gzip"
+      },
+      "expensesNote": "The report combines employee expenses and taxable benefits; the combined values are retained only in the component audit and cannot be identified as expenses."
+    },
+    {
+      "id": "municipal-small-district-of-mackenzie-2025-elected-officials",
+      "employerSlug": "district-of-mackenzie",
+      "employerName": "District of Mackenzie",
+      "sector": "Municipalities",
+      "year": "2025",
+      "periodType": "calendar",
+      "periodStart": "2025-01-01",
+      "periodEnd": "2025-12-31",
+      "title": "District of Mackenzie 2025 SOFI: elected-officials",
+      "sourceUrl": "https://districtofmackenzie.ca/wp-content/uploads/2026/06/2025-SOFI-FINAL-Signed.pdf",
+      "sourceIndexUrl": "https://districtofmackenzie.ca/government-town-hall/budget-finance/",
+      "sha256": "0f687670ecd41405175406ea636b274045d0fa753f43719c3d9adfe88324401d",
+      "file": "district-of-mackenzie-2025-elected-officials.json.gzip",
+      "dataSha256": "0a653f6fc63fd729c3c8771c5de2d7ceb50ad6f70a0b7db118a2cf7d6dbf1872",
+      "category": "elected-officials",
+      "scope": "elected-officials",
+      "threshold": null,
+      "thresholdComparison": null,
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "status": "verified",
+      "verifiedOn": "2026-10-31",
+      "rowCount": 7,
+      "totalRemuneration": 112576,
+      "totalExpenses": 29550,
+      "pages": [
+        30
+      ],
+      "nameDisclosure": "published-name",
+      "positionDisclosure": "published",
+      "notes": [
+        "Actual calendar reporting year confirmed from the original schedule; URL/upload year and index labels are not used as the reporting period.",
+        "All published rows on the selected schedule were visually checked. Names and job titles remain as disclosed; a surname alone is not expanded.",
+        "Blank and dash expenses remain missing. Explicit nil is zero. Remuneration never includes expenses."
+      ],
+      "validation": {
+        "originalFingerprintVerified": true,
+        "independentReaders": [
+          "PyMuPDF positioned words",
+          "Poppler bbox-layout positioned words"
+        ],
+        "everyRowFieldAgreement": true,
+        "physicalPagesVisuallyReviewed": [
+          30
+        ],
+        "rowsIndependentlyChecked": 7,
+        "printedControls": [
+          {
+            "field": "pay",
+            "printedControl": 112576,
+            "rowSum": 112576,
+            "residual": 0,
+            "basis": "Printed named-cohort subtotal"
+          },
+          {
+            "field": "expenses",
+            "printedControl": 29550,
+            "rowSum": 29550,
+            "residual": 0,
+            "basis": "Printed named-cohort subtotal"
+          }
+        ],
+        "fieldCorrections": {},
+        "evidenceFile": "evidence/district-of-mackenzie-2025-elected-officials.json.gzip"
+      }
+    },
+    {
+      "id": "municipal-small-district-of-mackenzie-2025-employee-remuneration",
+      "employerSlug": "district-of-mackenzie",
+      "employerName": "District of Mackenzie",
+      "sector": "Municipalities",
+      "year": "2025",
+      "periodType": "calendar",
+      "periodStart": "2025-01-01",
+      "periodEnd": "2025-12-31",
+      "title": "District of Mackenzie 2025 SOFI: employee-remuneration",
+      "sourceUrl": "https://districtofmackenzie.ca/wp-content/uploads/2026/06/2025-SOFI-FINAL-Signed.pdf",
+      "sourceIndexUrl": "https://districtofmackenzie.ca/government-town-hall/budget-finance/",
+      "sha256": "0f687670ecd41405175406ea636b274045d0fa753f43719c3d9adfe88324401d",
+      "file": "district-of-mackenzie-2025-employee-remuneration.json.gzip",
+      "dataSha256": "10f7d7685d39e536fed20ba1dcfbafd7ae5bf064ab92c968a19afd5676b92030",
+      "category": "employee-remuneration",
+      "scope": "named-employees-over-threshold",
+      "threshold": 75000,
+      "thresholdComparison": ">",
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "status": "verified",
+      "verifiedOn": "2026-10-31",
+      "rowCount": 35,
+      "totalRemuneration": 3361805,
+      "totalExpenses": 70221,
+      "pages": [
+        31
+      ],
+      "nameDisclosure": "published-name",
+      "positionDisclosure": "published",
+      "notes": [
+        "Remuneration is base pay plus Other Compensation (overtime, lump sums, on-call and clothing allowance). The printed Total includes expenses and is not used as pay.",
+        "A wrapped two-line job title on physical page 31 is explicitly assigned to Taylor, Micaiah, not the preceding Stedeford row. The reviewed before/after cells are pinned and tested.",
+        "Actual calendar reporting year confirmed from the original schedule; URL/upload year and index labels are not used as the reporting period.",
+        "All published rows on the selected schedule were visually checked. Names and job titles remain as disclosed; a surname alone is not expanded.",
+        "Blank and dash expenses remain missing. Explicit nil is zero. Remuneration never includes expenses.",
+        "Displayed individual amounts have the recorded small residual against the source subtotal. Values are preserved; rounding is a possible explanation, not a proven reconciliation."
+      ],
+      "validation": {
+        "originalFingerprintVerified": true,
+        "independentReaders": [
+          "PyMuPDF positioned words",
+          "Poppler bbox-layout positioned words"
+        ],
+        "everyRowFieldAgreement": true,
+        "physicalPagesVisuallyReviewed": [
+          31
+        ],
+        "rowsIndependentlyChecked": 35,
+        "printedControls": [
+          {
+            "field": "base",
+            "printedControl": 3142117,
+            "rowSum": 3142117,
+            "residual": 0,
+            "basis": "Printed named-cohort subtotal"
+          },
+          {
+            "field": "other",
+            "printedControl": 219688,
+            "rowSum": 219688,
+            "residual": 0,
+            "basis": "Printed named-cohort subtotal"
+          },
+          {
+            "field": "pay",
+            "printedControl": 3361805,
+            "rowSum": 3361805,
+            "residual": 0,
+            "basis": "Printed base-pay subtotal plus printed other-compensation subtotal; excludes the expense column"
+          },
+          {
+            "field": "expenses",
+            "printedControl": 70220,
+            "rowSum": 70221,
+            "residual": 1,
+            "basis": "Printed named-cohort subtotal"
+          }
+        ],
+        "fieldCorrections": {
+          "positionByName": {
+            "Stedeford, Ron": {
+              "before": "LH Equipment Operator Deputy Emergency Program &",
+              "after": "LH Equipment Operator",
+              "evidence": "Original physical page 31: the next title begins on a separate line above Taylor’s remuneration baseline."
+            },
+            "Taylor, Micaiah": {
+              "before": "Firesmart Coordinator",
+              "after": "Deputy Emergency Program & Firesmart Coordinator",
+              "evidence": "Original physical page 31: both lines comprise Taylor’s title. Independent visual review corrected the nearest-anchor grouping."
+            }
+          }
+        },
+        "evidenceFile": "evidence/district-of-mackenzie-2025-employee-remuneration.json.gzip"
+      }
+    },
+    {
+      "id": "municipal-small-district-of-peachland-2025-elected-officials",
+      "employerSlug": "district-of-peachland",
+      "employerName": "District of Peachland",
+      "sector": "Municipalities",
+      "year": "2025",
+      "periodType": "calendar",
+      "periodStart": "2025-01-01",
+      "periodEnd": "2025-12-31",
+      "title": "District of Peachland 2025 SOFI: elected-officials",
+      "sourceUrl": "https://www.peachland.ca/media/file/peachland-2025-statement-financial-informationpdf",
+      "sourceIndexUrl": "https://www.peachland.ca/departments/finance/financial-plan",
+      "sha256": "309fee3e3c689015484004793f9f2144abe3ab7412c3b84577181da96b3cfaaf",
+      "file": "district-of-peachland-2025-elected-officials.json.gzip",
+      "dataSha256": "a8024cd61e1cc1bffdcb28721a45a46a1c5296b036b9771271d80c73d88cb6fd",
+      "category": "elected-officials",
+      "scope": "elected-officials",
+      "threshold": null,
+      "thresholdComparison": null,
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "status": "verified",
+      "verifiedOn": "2026-10-31",
+      "rowCount": 7,
+      "totalRemuneration": 165567,
+      "totalExpenses": 60601,
+      "pages": [
+        3
+      ],
+      "nameDisclosure": "published-name",
+      "positionDisclosure": "published",
+      "notes": [
+        "Two source OCR name renderings are corrected from the visible original and recorded in fieldCorrections.",
+        "Actual calendar reporting year confirmed from the original schedule; URL/upload year and index labels are not used as the reporting period.",
+        "All published rows on the selected schedule were visually checked. Names and job titles remain as disclosed; a surname alone is not expanded.",
+        "Blank and dash expenses remain missing. Explicit nil is zero. Remuneration never includes expenses."
+      ],
+      "validation": {
+        "originalFingerprintVerified": true,
+        "independentReaders": [
+          "PyMuPDF positioned words",
+          "Poppler bbox-layout positioned words"
+        ],
+        "everyRowFieldAgreement": true,
+        "physicalPagesVisuallyReviewed": [
+          3
+        ],
+        "rowsIndependentlyChecked": 7,
+        "printedControls": [
+          {
+            "field": "pay",
+            "printedControl": 165567,
+            "rowSum": 165567,
+            "residual": 0,
+            "basis": "Printed named-cohort subtotal"
+          },
+          {
+            "field": "expenses",
+            "printedControl": 60601,
+            "rowSum": 60601,
+            "residual": 0,
+            "basis": "Printed named-cohort subtotal"
+          }
+        ],
+        "fieldCorrections": {},
+        "evidenceFile": "evidence/district-of-peachland-2025-elected-officials.json.gzip"
+      }
+    },
+    {
+      "id": "municipal-small-district-of-peachland-2025-employee-remuneration",
+      "employerSlug": "district-of-peachland",
+      "employerName": "District of Peachland",
+      "sector": "Municipalities",
+      "year": "2025",
+      "periodType": "calendar",
+      "periodStart": "2025-01-01",
+      "periodEnd": "2025-12-31",
+      "title": "District of Peachland 2025 SOFI: employee-remuneration",
+      "sourceUrl": "https://www.peachland.ca/media/file/peachland-2025-statement-financial-informationpdf",
+      "sourceIndexUrl": "https://www.peachland.ca/departments/finance/financial-plan",
+      "sha256": "309fee3e3c689015484004793f9f2144abe3ab7412c3b84577181da96b3cfaaf",
+      "file": "district-of-peachland-2025-employee-remuneration.json.gzip",
+      "dataSha256": "c816f323f779cb4bb77570107b8fea1def630f1261a23d469e06fc0e05124e32",
+      "category": "employee-remuneration",
+      "scope": "named-employees-over-threshold",
+      "threshold": 75000,
+      "thresholdComparison": ">=",
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "status": "verified",
+      "verifiedOn": "2026-10-31",
+      "rowCount": 33,
+      "totalRemuneration": 3480752,
+      "totalExpenses": 62495,
+      "pages": [
+        4
+      ],
+      "nameDisclosure": "published-name",
+      "positionDisclosure": "published",
+      "notes": [
+        "Two source OCR name renderings are corrected from the visible original and recorded in fieldCorrections.",
+        "Actual calendar reporting year confirmed from the original schedule; URL/upload year and index labels are not used as the reporting period.",
+        "All published rows on the selected schedule were visually checked. Names and job titles remain as disclosed; a surname alone is not expanded.",
+        "Blank and dash expenses remain missing. Explicit nil is zero. Remuneration never includes expenses."
+      ],
+      "validation": {
+        "originalFingerprintVerified": true,
+        "independentReaders": [
+          "PyMuPDF positioned words",
+          "Poppler bbox-layout positioned words"
+        ],
+        "everyRowFieldAgreement": true,
+        "physicalPagesVisuallyReviewed": [
+          4
+        ],
+        "rowsIndependentlyChecked": 33,
+        "printedControls": [
+          {
+            "field": "pay",
+            "printedControl": 3480752,
+            "rowSum": 3480752,
+            "residual": 0,
+            "basis": "Printed named-cohort subtotal"
+          },
+          {
+            "field": "expenses",
+            "printedControl": 62495,
+            "rowSum": 62495,
+            "residual": 0,
+            "basis": "Printed named-cohort subtotal"
+          }
+        ],
+        "fieldCorrections": {
+          "name": {
+            "Roundel!, Jeff": "Roundell, Jeff",
+            "Maclean, Janice": "MacLean, Janice"
+          }
+        },
+        "evidenceFile": "evidence/district-of-peachland-2025-employee-remuneration.json.gzip"
+      }
+    }
+  ],
+  "unparsedSources": [
+    {
+      "id": "municipal-small-town-of-creston-2024-ocr",
+      "employerSlug": "town-of-creston",
+      "year": "2024",
+      "title": "town-of-creston scanned SOFI requiring transcription",
+      "sourceUrl": "https://www.creston.ca/sites/default/files/2025-07/Statement%20of%20Financial%20Information%202024.pdf",
+      "sourceIndexUrl": "https://www.creston.ca/statement-financial-information",
+      "sha256": "24a6cd0394f42596859f15cb4a1ec811c28c5a5c09e004a3766aa78130396ac6",
+      "status": "held-for-review",
+      "category": "employee-remuneration",
+      "pdfPages": 42,
+      "reason": "Council is now accepted separately. Candidate employee transcription totals $2,685,206 remuneration and $61,034 expenses versus printed $2,685,008 / $61,044. These are not established issuer discrepancies: remaining ambiguous monetary/name glyphs still need resolution from the original or an electronic file.",
+      "nextAction": "Obtain an existing employee spreadsheet or higher-quality scan, resolve ambiguous glyphs, and independently recheck every named employee field and control. Do not infer a cell from the difference to a total.",
+      "notes": [
+        "The first page was rendered and visually reviewed on 2026-10-31. No named records from this PDF are imported.",
+        "The cover/checklist says year ended December 31, 2024; upload-path years are not used.",
+        "Original audit blocker: Council is now accepted separately. Candidate employee transcription totals $2,685,206 remuneration and $61,034 expenses versus printed $2,685,008 / $61,044. These are not established issuer discrepancies: remaining ambiguous monetary/name glyphs still need resolution from the original or an electronic file.",
+        "OCR evidence: research/salaries/municipal-ocr/staging/municipal-small-town-of-creston-2024-ocr.json.gzip"
+      ]
+    },
+    {
+      "id": "municipal-small-district-of-new-hazelton-year-review-ocr",
+      "employerSlug": "district-of-new-hazelton",
+      "year": null,
+      "title": "district-of-new-hazelton scanned SOFI requiring transcription",
+      "sourceUrl": "https://newhazelton.ca/wp-content/uploads/2026/09/SOFI-2023-Complete-Package.pdf",
+      "sourceIndexUrl": "https://newhazelton.ca/sofi-reports/",
+      "sha256": "16597cd1df8eca9477c6dc7e2f3f7a1cf68549b73fcd949d07fb045861b4d5ac",
+      "status": "held-for-review",
+      "category": "employee-remuneration",
+      "pdfPages": 14,
+      "reason": "The attachment filename says 2023 but the first remuneration schedule says SOFI 2022. OCR discovery is now complete; the conflicting period evidence remains unresolved.",
+      "nextAction": "Transcribe and independently verify the named employee and council schedules; check their reporting years before accepting any rows.",
+      "notes": [
+        "The first page was rendered and visually reviewed on 2026-10-31. No named records from this PDF are imported.",
+        "The URL filename says SOFI 2023, but the first page is a remuneration schedule headed SOFI 2022. Resolve the mixed reporting-year evidence before assigning a period.",
+        "Original audit blocker: The retrieved original has no extractable text. Its named schedules require OCR, independent row review and monetary controls before import.",
+        "OCR evidence: research/salaries/municipal-ocr/staging/municipal-small-district-of-new-hazelton-year-review-ocr.json.gzip"
+      ]
+    }
+  ]
+}

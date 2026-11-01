@@ -1,0 +1,11 @@
+# North and Cariboo follow-up
+
+This bounded October 31, 2026 pass followed municipal-audit leads for 100 Mile House, Williams Lake, Dawson Creek, Chetwynd, Kitimat, Northern Rockies, Vanderhoof, Houston, Fort St. James, Stewart and Taylor, plus selected smaller villages. It produced the [accepted northern collection](../../municipal-wave-north/README.md): 373 employee and 28 council observations in five newly covered municipalities.
+
+[work-queue.json](work-queue.json) contains 39 normalized tasks covering the 34 municipal roster entries in the assigned regions, with explicit historical processing tasks for Williams Lake, Dawson Creek, Chetwynd and Northern Rockies. Entries inherited from the existing province-wide municipal audit are identified as earlier leads; this pass does not claim exhaustive new discovery for every municipality or historical year. [discovery-receipts.json](discovery-receipts.json) retains 26 fresh retrieval receipts with URLs, hashes, sizes, text diagnostics and located links.
+
+The most useful next work is processing public originals. 100 Mile House 2023 and Fraser Lake 2023 are image-only. Houston 2025 and Dawson Creek 2025 have noisy OCR layers that need independent OCR and complete rendered row/control checks. Hazelton's public original contains a small native 2024 remuneration table, but still needs calendar-date and complete source verification. Port Clements' final 2025 SOFI download is located. Older public histories are indexed for Williams Lake 2011–2023, Dawson Creek 2015–2023, Chetwynd 2017–2021, and Northern Rockies 2015–2023.
+
+Kitimat's earlier 2024 agenda original and its redacted replacement URL returned 404. Official July 7, 2025 meeting minutes record the June 23 approval, so the next step is recovering the adopted original through current municipal archives. Stewart's accessible 2024 annual report remains draft-labeled and needs adopted/final-version verification. These retrieval and version gaps are not proof that a formal FOI request is required.
+
+No requests or messages were sent to public bodies, no fee commitments were made, and no compiled rows were removed. The queue distinguishes processing, public archive research and the Chetwynd council punctuation clarification; formal FOI remains a fallback for specific unavailable originals after routine retrieval and records inquiry.

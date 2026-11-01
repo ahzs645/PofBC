@@ -1,0 +1,243 @@
+{
+  "status": "proved-complete-cohort-period-match",
+  "compiledBaselineFile": "research/salaries/compiled-baseline.json.gzip",
+  "compiledBaselineSha256": "410bcae27c9755e387c473ab44d62081a50b46e7330f4d6d5c0b74979d392760",
+  "compiledEmployerSlug": "inbc",
+  "compiledYear": "2023/24",
+  "selectedRows": [
+    [
+      "Earthy, J",
+      null,
+      264115,
+      23364
+    ],
+    [
+      "Nguyen, L",
+      null,
+      247281,
+      28923
+    ],
+    [
+      "Mortimer, D",
+      null,
+      196534,
+      13294
+    ],
+    [
+      "Deering, D",
+      null,
+      117575,
+      8563
+    ],
+    [
+      "Machin, W",
+      null,
+      111844,
+      7196
+    ],
+    [
+      "Chitroda, S",
+      null,
+      99204,
+      3443
+    ],
+    [
+      "Lo, C",
+      null,
+      99204,
+      5277
+    ],
+    [
+      "Sanders, A",
+      null,
+      86340,
+      4219
+    ],
+    [
+      "Wong, S",
+      null,
+      76821,
+      7994
+    ]
+  ],
+  "selectedRowsSha256": "168f29913adcc34f7e11f904efec738c68a33ed0684e05d6177356f388773d97",
+  "selectedRowsHashEncoding": "SHA-256 of JSON.stringify-style compact JSON of exact first four baseline row fields in original order; no trailing newline",
+  "comparisonMethod": "Exact multiset comparison of disclosed name, position, remuneration and expenses; no punctuation, amount or identity normalization.",
+  "officialMatchesByPeriod": {
+    "2022/23": 9,
+    "2023/24": 0,
+    "2024/25": 0
+  },
+  "verifiedSourceId": "sector-crowns-inbc-2022-23",
+  "verifiedSourcePdfSha256": "5c2c91aedda3251af04c9cf83c40a41188c22032c0309419fc70451bab08fa18",
+  "verifiedSourceDataSha256": "fdbbc16cbba4f4a4c6e1495f31838fc28704adbe96dec0b401db5328f435506b",
+  "verifiedPeriodStart": "2022-04-01",
+  "verifiedPeriodEnd": "2023-03-31",
+  "verifiedSourceRows": [
+    [
+      "Chitroda, S",
+      null,
+      99204,
+      3443
+    ],
+    [
+      "Deering, D",
+      null,
+      117575,
+      8563
+    ],
+    [
+      "Earthy, J",
+      null,
+      264115,
+      23364
+    ],
+    [
+      "Lo, C",
+      null,
+      99204,
+      5277
+    ],
+    [
+      "Machin, W",
+      null,
+      111844,
+      7196
+    ],
+    [
+      "Mortimer, D",
+      null,
+      196534,
+      13294
+    ],
+    [
+      "Nguyen, L",
+      null,
+      247281,
+      28923
+    ],
+    [
+      "Sanders, A",
+      null,
+      86340,
+      4219
+    ],
+    [
+      "Wong, S",
+      null,
+      76821,
+      7994
+    ]
+  ],
+  "later2023_24SourceRows": [
+    [
+      "Chiew, B.",
+      null,
+      85694,
+      69
+    ],
+    [
+      "Chitroda, S.",
+      null,
+      140129,
+      3963
+    ],
+    [
+      "Chui, A.",
+      null,
+      194900,
+      3583
+    ],
+    [
+      "Deering, A.",
+      null,
+      120878,
+      11943
+    ],
+    [
+      "Earthy, J.",
+      null,
+      270729,
+      29441
+    ],
+    [
+      "Lin, J.",
+      null,
+      106361,
+      1572
+    ],
+    [
+      "Lo, C.",
+      null,
+      140589,
+      1719
+    ],
+    [
+      "Machin, W.",
+      null,
+      129638,
+      14235
+    ],
+    [
+      "Mortimer, D.",
+      null,
+      208447,
+      16588
+    ],
+    [
+      "Nguyen, L.",
+      null,
+      290942,
+      5119
+    ],
+    [
+      "Sanders, A.",
+      null,
+      88424,
+      3715
+    ],
+    [
+      "Sharma, S.",
+      null,
+      96923,
+      2061
+    ],
+    [
+      "Tanaka, H.",
+      null,
+      185915,
+      3936
+    ],
+    [
+      "Wong, S.",
+      null,
+      188022,
+      6640
+    ],
+    [
+      "Zhu, E.",
+      null,
+      86730,
+      725
+    ]
+  ],
+  "employeeRowsReplaced": 9,
+  "boardOrOtherRowsRetained": 0,
+  "rule": {
+    "employerSlug": "inbc",
+    "compiledYear": "2023/24",
+    "replacementYear": "2022/23",
+    "sourceIds": [
+      "sector-crowns-inbc-2022-23"
+    ],
+    "sourceDataSha256": {
+      "sector-crowns-inbc-2022-23": "fdbbc16cbba4f4a4c6e1495f31838fc28704adbe96dec0b401db5328f435506b"
+    },
+    "retainPositions": [],
+    "expectedRows": 9,
+    "expectedRetainedRows": 0,
+    "selectedRowsSha256": "168f29913adcc34f7e11f904efec738c68a33ed0684e05d6177356f388773d97",
+    "reason": "Every one of the complete nine-row compiled InBC employee cohort labelled 2023/24 matches the 2022/23 official employee schedule exactly in disclosed name, position (not supplied), remuneration and expenses, with multiplicity. The official cover and statement establish April 1, 2022–March 31, 2023. None of those exact four-field observations matches the independently verified fifteen-row 2023/24 employee schedule. Replace the proved duplicate cohort under its actual 2022/23 fiscal period; there are no separate compiled board observations in this partition.",
+    "evidence": "sector-crowns/inbc-overlap.json"
+  }
+}

@@ -1,0 +1,4064 @@
+{
+  "version": 1,
+  "asOf": "2026-10-31",
+  "timeZone": "America/Vancouver",
+  "baselineCommit": "96d798e",
+  "scope": "Municipal historical follow-up; municipal police and regional districts assigned separately.",
+  "summary": {
+    "municipalArchiveChecks": 24,
+    "retrievedOriginals": 29,
+    "acceptedReports": 7,
+    "acceptedCohorts": 14,
+    "rowsReady": 411,
+    "employeeRowsReady": 360,
+    "councilRowsReady": 51,
+    "employersReady": 3
+  },
+  "assumptions": [
+    "Use the calendar year printed on the named schedule, never infer it from a fiscal-like compiled label or an upload path.",
+    "Import named payment disclosures in their actual scope, not aggregate payroll, supplier payments, executive-only substitutes or assumed full employee rosters.",
+    "Pitt Meadows pay is base salary plus benefits/other; Revelstoke uses its separate remuneration column; Parksville employee remuneration already includes taxable benefits. Expenses stay separate.",
+    "No inferred amounts, balancing edits, silent name/title repairs, compiled deletions or alias changes.",
+    "Minor issuer subtotal differences are disclosed with exact residuals after complete rendered-row verification; an ambiguous transcription is held.",
+    "A retrieved scanned report is processing work. Request an existing spreadsheet or clearer original only where review remains blocked; routine public access precedes any formal FOI fallback."
+  ],
+  "acceptedManifest": "../../sector-municipal/sources.json",
+  "employers": [
+    {
+      "employerSlug": "district-of-central-saanich",
+      "employerName": "District of Central Saanich",
+      "sector": "Municipalities",
+      "baselineOfficialEmployeeYears": [
+        "2024"
+      ],
+      "baselineOfficialCouncilYears": [
+        "2024"
+      ],
+      "baselineCompiledEditionLabels": [],
+      "baselineCompiledRecords": 0,
+      "officialIndexUrl": "https://www.centralsaanich.ca/node/3543",
+      "archiveReceipt": {
+        "employerSlug": "district-of-central-saanich",
+        "employerName": "District of Central Saanich",
+        "archiveUrl": "https://www.centralsaanich.ca/node/3543",
+        "officialEmployeeYears": [
+          "2024"
+        ],
+        "officialCouncilYears": [
+          "2024"
+        ],
+        "finalUrl": "https://www.centralsaanich.ca/node/3543",
+        "httpStatus": 200,
+        "contentType": "text/html; charset=UTF-8",
+        "bytes": 400284,
+        "sha256": "53bbea7be0851971549e912ccba5a29d8e9cc13db1e6d92783703912ec1f1351",
+        "kind": "official-index",
+        "candidates": [
+          {
+            "url": "https://www.centralsaanich.ca/municipal-hall/resource-library/statement-financial-information-2021",
+            "label": "Statement of Financial Information 2021",
+            "alreadyInMunicipalAudit": true,
+            "periodVerified": false,
+            "scopeVerified": false,
+            "yearTokensInLabelOrUrl": [
+              "2021"
+            ],
+            "indexedLabelYears": [
+              "2021"
+            ]
+          },
+          {
+            "url": "https://www.centralsaanich.ca/sites/default/files/2023-05/2021_sofi_with_financials_-_final.pdf",
+            "label": "2021_sofi_with_financials_-_final.pdf",
+            "alreadyInMunicipalAudit": true,
+            "periodVerified": false,
+            "scopeVerified": false,
+            "yearTokensInLabelOrUrl": [
+              "2023"
+            ],
+            "indexedLabelYears": []
+          },
+          {
+            "url": "https://www.centralsaanich.ca/municipal-hall/resource-library/statement-financial-information-2022",
+            "label": "Statement of Financial Information 2022",
+            "alreadyInMunicipalAudit": true,
+            "periodVerified": false,
+            "scopeVerified": false,
+            "yearTokensInLabelOrUrl": [
+              "2022"
+            ],
+            "indexedLabelYears": [
+              "2022"
+            ]
+          },
+          {
+            "url": "https://www.centralsaanich.ca/sites/default/files/2023-06/2022_statement_of_financial_information.pdf",
+            "label": "2022_statement_of_financial_information.pdf",
+            "alreadyInMunicipalAudit": true,
+            "periodVerified": false,
+            "scopeVerified": false,
+            "yearTokensInLabelOrUrl": [
+              "2023"
+            ],
+            "indexedLabelYears": []
+          },
+          {
+            "url": "https://www.centralsaanich.ca/municipal-hall/resource-library/statement-financial-information-2023",
+            "label": "Statement of Financial Information 2023",
+            "alreadyInMunicipalAudit": true,
+            "periodVerified": false,
+            "scopeVerified": false,
+            "yearTokensInLabelOrUrl": [
+              "2023"
+            ],
+            "indexedLabelYears": [
+              "2023"
+            ]
+          },
+          {
+            "url": "https://www.centralsaanich.ca/sites/default/files/2024-07/2023 Statement of Financial Information.pdf",
+            "label": "2023 Statement of Financial Information.pdf [PDF/557KB]",
+            "alreadyInMunicipalAudit": true,
+            "periodVerified": false,
+            "scopeVerified": false,
+            "yearTokensInLabelOrUrl": [
+              "2023",
+              "2024"
+            ],
+            "indexedLabelYears": [
+              "2023"
+            ]
+          },
+          {
+            "url": "https://www.centralsaanich.ca/municipal-hall/resource-library/statement-financial-information-2024",
+            "label": "Statement of Financial Information 2024",
+            "alreadyInMunicipalAudit": true,
+            "periodVerified": false,
+            "scopeVerified": false,
+            "yearTokensInLabelOrUrl": [
+              "2024"
+            ],
+            "indexedLabelYears": [
+              "2024"
+            ]
+          },
+          {
+            "url": "https://www.centralsaanich.ca/sites/default/files/2025-08/2024 Statement of Financial Information Jun 23.pdf",
+            "label": "2024 Statement of Financial Information Jun 23.pdf [PDF/2MB]",
+            "alreadyInMunicipalAudit": true,
+            "periodVerified": false,
+            "scopeVerified": false,
+            "yearTokensInLabelOrUrl": [
+              "2024",
+              "2025"
+            ],
+            "indexedLabelYears": [
+              "2024"
+            ]
+          },
+          {
+            "url": "https://www.centralsaanich.ca/municipal-hall/resource-library/statement-financial-information-2025",
+            "label": "Statement of Financial Information 2025",
+            "alreadyInMunicipalAudit": true,
+            "periodVerified": false,
+            "scopeVerified": false,
+            "yearTokensInLabelOrUrl": [
+              "2025"
+            ],
+            "indexedLabelYears": [
+              "2025"
+            ]
+          },
+          {
+            "url": "https://www.centralsaanich.ca/sites/default/files/2026-07/2025 Statement of Financial Information Jun 29.pdf",
+            "label": "2025 Statement of Financial Information Jun 29.pdf [PDF/0.9MB]",
+            "alreadyInMunicipalAudit": true,
+            "periodVerified": false,
+            "scopeVerified": false,
+            "yearTokensInLabelOrUrl": [
+              "2025",
+              "2026"
+            ],
+            "indexedLabelYears": [
+              "2025"
+            ]
+          }
+        ],
+        "candidateInterpretation": "Links and label/path year tokens only; a link is not proof of a named schedule or reporting period.",
+        "checkedOnLocalAuditDate": "2026-10-31"
+      },
+      "historicalRange": {
+        "indexedLabelYears": [
+          "2021",
+          "2022",
+          "2023",
+          "2024",
+          "2025"
+        ],
+        "documentYearsRetrieved": [],
+        "periodsInspected": [],
+        "caution": "Index labels and upload-path year tokens do not establish schedule periods or historical completeness."
+      },
+      "documents": [],
+      "reuseExistingOcr": [],
+      "processingOrProcurement": "processing",
+      "nextAction": "Follow the linked document/archive entries; check historical council attachments before making a routine report request."
+    },
+    {
+      "employerSlug": "city-of-chilliwack",
+      "employerName": "City of Chilliwack",
+      "sector": "Municipalities",
+      "baselineOfficialEmployeeYears": [],
+      "baselineOfficialCouncilYears": [],
+      "baselineCompiledEditionLabels": [
+        "2017/18",
+        "2020/21"
+      ],
+      "baselineCompiledRecords": 326,
+      "officialIndexUrl": "https://www.chilliwack.com/main/page.cfm?id=3202",
+      "archiveReceipt": {
+        "employerSlug": "city-of-chilliwack",
+        "employerName": "City of Chilliwack",
+        "archiveUrl": "https://www.chilliwack.com/main/page.cfm?id=3202",
+        "officialEmployeeYears": [],
+        "officialCouncilYears": [],
+        "finalUrl": "https://www.chilliwack.com/main/page.cfm?id=3202",
+        "httpStatus": 200,
+        "contentType": "text/html;charset=UTF-8",
+        "bytes": 139826,
+        "sha256": "22f68795cc05e078d782972926703beab44594c6615103becd186134c721242e",
+        "kind": "official-index",
+        "candidates": [],
+        "candidateInterpretation": "Links and label/path year tokens only; a link is not proof of a named schedule or reporting period.",
+        "checkedOnLocalAuditDate": "2026-10-31"
+      },
+      "historicalRange": {
+        "indexedLabelYears": [],
+        "documentYearsRetrieved": [],
+        "periodsInspected": [],
+        "caution": "Index labels and upload-path year tokens do not establish schedule periods or historical completeness."
+      },
+      "documents": [],
+      "reuseExistingOcr": [],
+      "processingOrProcurement": "deeper-archive-research",
+      "nextAction": "Search the official document centre and council agenda archive; absence of a detected HTML link is not evidence a report must be procured."
+    },
+    {
+      "employerSlug": "district-of-clearwater",
+      "employerName": "District of Clearwater",
+      "sector": "Municipalities",
+      "baselineOfficialEmployeeYears": [],
+      "baselineOfficialCouncilYears": [],
+      "baselineCompiledEditionLabels": [],
+      "baselineCompiledRecords": 0,
+      "officialIndexUrl": "https://www.districtofclearwater.com/municipal-hall/finance-services/",
+      "archiveReceipt": {
+        "employerSlug": "district-of-clearwater",
+        "employerName": "District of Clearwater",
+        "archiveUrl": "https://www.districtofclearwater.com/municipal-hall/finance-services/",
+        "officialEmployeeYears": [],
+        "officialCouncilYears": [],
+        "finalUrl": "https://www.districtofclearwater.com/municipal-hall/finance-services/",
+        "httpStatus": 200,
+        "contentType": "text/html; charset=UTF-8",
+        "bytes": 80918,
+        "sha256": "22325f1314dc95b7a09e7fa06339758b5423d42227b763fe4292ad48239bcb42",
+        "kind": "official-index",
+        "candidates": [
+          {
+            "url": "https://districtofclearwater.civicweb.net/filepro/documents/73943",
+            "label": "Statement of Financial Information (SOFI) Reports",
+            "alreadyInMunicipalAudit": true,
+            "periodVerified": false,
+            "scopeVerified": false,
+            "yearTokensInLabelOrUrl": [],
+            "indexedLabelYears": []
+          }
+        ],
+        "candidateInterpretation": "Links and label/path year tokens only; a link is not proof of a named schedule or reporting period.",
+        "checkedOnLocalAuditDate": "2026-10-31"
+      },
+      "historicalRange": {
+        "indexedLabelYears": [],
+        "documentYearsRetrieved": [],
+        "periodsInspected": [],
+        "caution": "Index labels and upload-path year tokens do not establish schedule periods or historical completeness."
+      },
+      "documents": [],
+      "reuseExistingOcr": [],
+      "processingOrProcurement": "processing",
+      "nextAction": "Follow the linked document/archive entries; check historical council attachments before making a routine report request."
+    },
+    {
+      "employerSlug": "district-of-coldstream",
+      "employerName": "District of Coldstream",
+      "sector": "Municipalities",
+      "baselineOfficialEmployeeYears": [],
+      "baselineOfficialCouncilYears": [],
+      "baselineCompiledEditionLabels": [],
+      "baselineCompiledRecords": 0,
+      "officialIndexUrl": "https://coldstream.civicweb.net/document/84263/",
+      "archiveReceipt": {
+        "employerSlug": "district-of-coldstream",
+        "employerName": "District of Coldstream",
+        "archiveUrl": "https://coldstream.civicweb.net/document/84263/",
+        "officialEmployeeYears": [],
+        "officialCouncilYears": [],
+        "finalUrl": "https://coldstream.civicweb.net/document/84263/",
+        "httpStatus": 200,
+        "contentType": "application/pdf",
+        "bytes": 7132556,
+        "sha256": "361faaf828f2bbc690f43028e2fffd3ddbf3985246844b2587815bddc8d5b98c",
+        "kind": "pdf-archive-target",
+        "candidates": [],
+        "candidateInterpretation": "Links and label/path year tokens only; a link is not proof of a named schedule or reporting period.",
+        "checkedOnLocalAuditDate": "2026-10-31"
+      },
+      "historicalRange": {
+        "indexedLabelYears": [],
+        "documentYearsRetrieved": [],
+        "periodsInspected": [],
+        "caution": "Index labels and upload-path year tokens do not establish schedule periods or historical completeness."
+      },
+      "documents": [],
+      "reuseExistingOcr": [],
+      "processingOrProcurement": "deeper-archive-research",
+      "nextAction": "Search the official document centre and council agenda archive; absence of a detected HTML link is not evidence a report must be procured."
+    },
+    {
+      "employerSlug": "city-of-colwood",
+      "employerName": "City of Colwood",
+      "sector": "Municipalities",
+      "baselineOfficialEmployeeYears": [],
+      "baselineOfficialCouncilYears": [],
+      "baselineCompiledEditionLabels": [],
+      "baselineCompiledRecords": 0,
+      "officialIndexUrl": "https://www.colwood.ca/local-government/plans-strategies/financial-plans-reports",
+      "archiveReceipt": {
+        "employerSlug": "city-of-colwood",
+        "employerName": "City of Colwood",
+        "archiveUrl": "https://www.colwood.ca/local-government/plans-strategies/financial-plans-reports",
+        "officialEmployeeYears": [],
+        "officialCouncilYears": [],
+        "finalUrl": "https://www.colwood.ca/local-government/plans-strategies/financial-plans-reports",
+        "httpStatus": 200,
+        "contentType": "text/html; charset=UTF-8",
+        "bytes": 94459,
+        "sha256": "4a153664d1379600ef1ffaf0bf935686384e9cf0d6d66d50ad12e5be3b6dfd22",
+        "kind": "official-index",
+        "candidates": [
+          {
+            "url": "https://www.colwood.ca/media/file/2025-statement-financial-information-signedpdf",
+            "label": "2025 Statement of Financial Information [PDF/1.2MB]",
+            "alreadyInMunicipalAudit": true,
+            "periodVerified": false,
+            "scopeVerified": false,
+            "yearTokensInLabelOrUrl": [
+              "2025"
+            ],
+            "indexedLabelYears": [
+              "2025"
+            ]
+          },
+          {
+            "url": "https://www.colwood.ca/media/file/2024-statement-financial-informationpdf",
+            "label": "2024 Statement of Financial Information [PDF/5.6MB]",
+            "alreadyInMunicipalAudit": true,
+            "periodVerified": false,
+            "scopeVerified": false,
+            "yearTokensInLabelOrUrl": [
+              "2024"
+            ],
+            "indexedLabelYears": [
+              "2024"
+            ]
+          },
+          {
+            "url": "https://www.colwood.ca/sites/default/files/2024-10/2023%20SOFI.pdf",
+            "label": "2023 Statement of Financial Information [PDF/5.6MB]",
+            "alreadyInMunicipalAudit": true,
+            "periodVerified": false,
+            "scopeVerified": false,
+            "yearTokensInLabelOrUrl": [
+              "2023",
+              "2024"
+            ],
+            "indexedLabelYears": [
+              "2023"
+            ]
+          },
+          {
+            "url": "https://www.colwood.ca/media/25642",
+            "label": "2022 Statement of Financial Information [PDF/1.9MB]",
+            "alreadyInMunicipalAudit": true,
+            "periodVerified": false,
+            "scopeVerified": false,
+            "yearTokensInLabelOrUrl": [
+              "2022"
+            ],
+            "indexedLabelYears": [
+              "2022"
+            ]
+          },
+          {
+            "url": "https://www.colwood.ca/media/25646",
+            "label": "2021 Statement of Financial Information [PDF/1.5MB]",
+            "alreadyInMunicipalAudit": true,
+            "periodVerified": false,
+            "scopeVerified": false,
+            "yearTokensInLabelOrUrl": [
+              "2021"
+            ],
+            "indexedLabelYears": [
+              "2021"
+            ]
+          },
+          {
+            "url": "https://www.colwood.ca/sites/default/files/2024-06/2020_SOFI_FINAL_signed.pdf",
+            "label": "2020 Statement of Financial Information [PDF/9.2MB]",
+            "alreadyInMunicipalAudit": true,
+            "periodVerified": false,
+            "scopeVerified": false,
+            "yearTokensInLabelOrUrl": [
+              "2020",
+              "2024"
+            ],
+            "indexedLabelYears": [
+              "2020"
+            ]
+          },
+          {
+            "url": "https://colwood.civicweb.net/FileStorage/BC5FFE7EF7E94C20BF8D40F8AEF782AA-REP%20-%202019%20SOFI.pdf",
+            "label": "2019 Statement of Financial Information",
+            "alreadyInMunicipalAudit": true,
+            "periodVerified": false,
+            "scopeVerified": false,
+            "yearTokensInLabelOrUrl": [
+              "2019"
+            ],
+            "indexedLabelYears": [
+              "2019"
+            ]
+          },
+          {
+            "url": "https://www.colwood.ca/media/25655",
+            "label": "2018 Statement of Financial Information [PDF/186KB]",
+            "alreadyInMunicipalAudit": true,
+            "periodVerified": false,
+            "scopeVerified": false,
+            "yearTokensInLabelOrUrl": [
+              "2018"
+            ],
+            "indexedLabelYears": [
+              "2018"
+            ]
+          },
+          {
+            "url": "https://www.colwood.ca/media/25658",
+            "label": "2017 Statement of Financial Information [PDF/400KB]",
+            "alreadyInMunicipalAudit": true,
+            "periodVerified": false,
+            "scopeVerified": false,
+            "yearTokensInLabelOrUrl": [
+              "2017"
+            ],
+            "indexedLabelYears": [
+              "2017"
+            ]
+          },
+          {
+            "url": "https://www.colwood.ca/media/25663",
+            "label": "2016 Statement of Financial Information [PDF/186KB]",
+            "alreadyInMunicipalAudit": true,
+            "periodVerified": false,
+            "scopeVerified": false,
+            "yearTokensInLabelOrUrl": [
+              "2016"
+            ],
+            "indexedLabelYears": [
+              "2016"
+            ]
+          },
+          {
+            "url": "https://www.colwood.ca/media/25666",
+            "label": "2015 Statement of Financial Information [PDF/687KB]",
+            "alreadyInMunicipalAudit": true,
+            "periodVerified": false,
+            "scopeVerified": false,
+            "yearTokensInLabelOrUrl": [
+              "2015"
+            ],
+            "indexedLabelYears": [
+              "2015"
+            ]
+          },
+          {
+            "url": "https://www.colwood.ca/media/25668",
+            "label": "2014 Statement of Financial Information [PDF/2.4MB]",
+            "alreadyInMunicipalAudit": true,
+            "periodVerified": false,
+            "scopeVerified": false,
+            "yearTokensInLabelOrUrl": [
+              "2014"
+            ],
+            "indexedLabelYears": [
+              "2014"
+            ]
+          },
+          {
+            "url": "https://www.colwood.ca/media/25670",
+            "label": "2013 Statement of Financial Information [PDF/4.1MB]",
+            "alreadyInMunicipalAudit": true,
+            "periodVerified": false,
+            "scopeVerified": false,
+            "yearTokensInLabelOrUrl": [
+              "2013"
+            ],
+            "indexedLabelYears": [
+              "2013"
+            ]
+          },
+          {
+            "url": "https://www.colwood.ca/media/25672",
+            "label": "2012 Statement of Financial Information [PDF/414KB]",
+            "alreadyInMunicipalAudit": true,
+            "periodVerified": false,
+            "scopeVerified": false,
+            "yearTokensInLabelOrUrl": [
+              "2012"
+            ],
+            "indexedLabelYears": [
+              "2012"
+            ]
+          },
+          {
+            "url": "https://www.colwood.ca/media/25673",
+            "label": "2011 Statement of Financial Information [PDF/405KB]",
+            "alreadyInMunicipalAudit": true,
+            "periodVerified": false,
+            "scopeVerified": false,
+            "yearTokensInLabelOrUrl": [
+              "2011"
+            ],
+            "indexedLabelYears": [
+              "2011"
+            ]
+          }
+        ],
+        "candidateInterpretation": "Links and label/path year tokens only; a link is not proof of a named schedule or reporting period.",
+        "checkedOnLocalAuditDate": "2026-10-31"
+      },
+      "historicalRange": {
+        "indexedLabelYears": [
+          "2011",
+          "2012",
+          "2013",
+          "2014",
+          "2015",
+          "2016",
+          "2017",
+          "2018",
+          "2019",
+          "2020",
+          "2021",
+          "2022",
+          "2023",
+          "2024",
+          "2025"
+        ],
+        "documentYearsRetrieved": [],
+        "periodsInspected": [],
+        "caution": "Index labels and upload-path year tokens do not establish schedule periods or historical completeness."
+      },
+      "documents": [],
+      "reuseExistingOcr": [],
+      "processingOrProcurement": "processing",
+      "nextAction": "Follow the linked document/archive entries; check historical council attachments before making a routine report request."
+    },
+    {
+      "employerSlug": "city-of-courtenay",
+      "employerName": "City of Courtenay",
+      "sector": "Municipalities",
+      "baselineOfficialEmployeeYears": [],
+      "baselineOfficialCouncilYears": [],
+      "baselineCompiledEditionLabels": [],
+      "baselineCompiledRecords": 0,
+      "officialIndexUrl": "https://www.courtenay.ca/city-hall/financial-services",
+      "archiveReceipt": {
+        "employerSlug": "city-of-courtenay",
+        "employerName": "City of Courtenay",
+        "archiveUrl": "https://www.courtenay.ca/city-hall/financial-services",
+        "officialEmployeeYears": [],
+        "officialCouncilYears": [],
+        "finalUrl": "https://www.courtenay.ca/city-hall/financial-services",
+        "httpStatus": 200,
+        "contentType": "text/html; charset=UTF-8",
+        "bytes": 131434,
+        "sha256": "e2a5f9eede81afc0491a3224b4250869048d6bd69bf686e2dd75aef0d4c8f639",
+        "kind": "official-index",
+        "candidates": [
+          {
+            "url": "https://www.courtenay.ca/city-hall/financial-services/annual-financial-plan/statement-financial-information",
+            "label": "Statement of Financial Information",
+            "alreadyInMunicipalAudit": true,
+            "periodVerified": false,
+            "scopeVerified": false,
+            "yearTokensInLabelOrUrl": [],
+            "indexedLabelYears": []
+          }
+        ],
+        "candidateInterpretation": "Links and label/path year tokens only; a link is not proof of a named schedule or reporting period.",
+        "checkedOnLocalAuditDate": "2026-10-31"
+      },
+      "historicalRange": {
+        "indexedLabelYears": [],
+        "documentYearsRetrieved": [],
+        "periodsInspected": [],
+        "caution": "Index labels and upload-path year tokens do not establish schedule periods or historical completeness."
+      },
+      "documents": [],
+      "reuseExistingOcr": [],
+      "processingOrProcurement": "processing",
+      "nextAction": "Follow the linked document/archive entries; check historical council attachments before making a routine report request."
+    },
+    {
+      "employerSlug": "city-of-dawson-creek",
+      "employerName": "City of Dawson Creek",
+      "sector": "Municipalities",
+      "baselineOfficialEmployeeYears": [],
+      "baselineOfficialCouncilYears": [],
+      "baselineCompiledEditionLabels": [],
+      "baselineCompiledRecords": 0,
+      "officialIndexUrl": "https://dawsoncreek.civicweb.net/filepro/documents/135340/",
+      "archiveReceipt": {
+        "employerSlug": "city-of-dawson-creek",
+        "employerName": "City of Dawson Creek",
+        "archiveUrl": "https://dawsoncreek.civicweb.net/filepro/documents/135340/",
+        "officialEmployeeYears": [],
+        "officialCouncilYears": [],
+        "finalUrl": "https://dawsoncreek.civicweb.net/filepro/documents/135340/",
+        "httpStatus": 200,
+        "contentType": "text/html; charset=utf-8",
+        "bytes": 82789,
+        "sha256": "add162a5b46c5c0f348d69d444a2d92e0e11217d0a99cadd6f2d848c76c66aa4",
+        "kind": "official-index",
+        "candidates": [],
+        "candidateInterpretation": "Links and label/path year tokens only; a link is not proof of a named schedule or reporting period.",
+        "checkedOnLocalAuditDate": "2026-10-31"
+      },
+      "historicalRange": {
+        "indexedLabelYears": [],
+        "documentYearsRetrieved": [],
+        "periodsInspected": [],
+        "caution": "Index labels and upload-path year tokens do not establish schedule periods or historical completeness."
+      },
+      "documents": [],
+      "reuseExistingOcr": [],
+      "processingOrProcurement": "deeper-archive-research",
+      "nextAction": "Search the official document centre and council agenda archive; absence of a detected HTML link is not evidence a report must be procured."
+    },
+    {
+      "employerSlug": "township-of-esquimalt",
+      "employerName": "Township of Esquimalt",
+      "sector": "Municipalities",
+      "baselineOfficialEmployeeYears": [],
+      "baselineOfficialCouncilYears": [],
+      "baselineCompiledEditionLabels": [],
+      "baselineCompiledRecords": 0,
+      "officialIndexUrl": "https://www.esquimalt.ca/government-bylaws/finance-budget/public-bodies-reports%25E2%2580%258B-statement-financial-information",
+      "archiveReceipt": {
+        "employerSlug": "township-of-esquimalt",
+        "employerName": "Township of Esquimalt",
+        "archiveUrl": "https://www.esquimalt.ca/government-bylaws/finance-budget/public-bodies-reports%25E2%2580%258B-statement-financial-information",
+        "officialEmployeeYears": [],
+        "officialCouncilYears": [],
+        "finalUrl": "https://www.esquimalt.ca/government-bylaws/finance-budget/public-bodies-reports%25E2%2580%258B-statement-financial-information",
+        "httpStatus": 200,
+        "contentType": "text/html; charset=UTF-8",
+        "bytes": 114442,
+        "sha256": "10ab7ec2e1fee9e32727f65ba028f78494e5ea0a60a2f901cb52f9b5b5d6b41b",
+        "kind": "official-index",
+        "candidates": [
+          {
+            "url": "https://www.esquimalt.ca/sites/default/files/2026-06/2025%20Statement%20of%20Financial%20Information.pdf",
+            "label": "2025 Statement of Financial Information",
+            "alreadyInMunicipalAudit": true,
+            "periodVerified": false,
+            "scopeVerified": false,
+            "yearTokensInLabelOrUrl": [
+              "2025",
+              "2026"
+            ],
+            "indexedLabelYears": [
+              "2025"
+            ]
+          },
+          {
+            "url": "https://www.esquimalt.ca/sites/default/files/2025-06/2024%20Statement%20of%20Financial%20Information%20APPROVED.pdf",
+            "label": "2024 Statement of Financial Information",
+            "alreadyInMunicipalAudit": true,
+            "periodVerified": false,
+            "scopeVerified": false,
+            "yearTokensInLabelOrUrl": [
+              "2024",
+              "2025"
+            ],
+            "indexedLabelYears": [
+              "2024"
+            ]
+          },
+          {
+            "url": "https://www.esquimalt.ca/sites/default/files/2024-07/2023%20Statement%20of%20Financial%20Information%20APPROVED_1.pdf",
+            "label": "2023 Statement of Financial Information",
+            "alreadyInMunicipalAudit": true,
+            "periodVerified": false,
+            "scopeVerified": false,
+            "yearTokensInLabelOrUrl": [
+              "2023",
+              "2024"
+            ],
+            "indexedLabelYears": [
+              "2023"
+            ]
+          },
+          {
+            "url": "https://www.esquimalt.ca/sites/default/files/docs/municipal-hall/finance/finance-2022/2022_Statement_of_Financial_Information_FINAL.pdf",
+            "label": "2022 Statement of Financial Information",
+            "alreadyInMunicipalAudit": true,
+            "periodVerified": false,
+            "scopeVerified": false,
+            "yearTokensInLabelOrUrl": [
+              "2022"
+            ],
+            "indexedLabelYears": [
+              "2022"
+            ]
+          },
+          {
+            "url": "https://www.esquimalt.ca/sites/default/files/docs/municipal-hall/finance/finance-2021/2021_Statement_of_Financial_Information_FINAL.pdf",
+            "label": "2021 Statement of Financial Information",
+            "alreadyInMunicipalAudit": true,
+            "periodVerified": false,
+            "scopeVerified": false,
+            "yearTokensInLabelOrUrl": [
+              "2021"
+            ],
+            "indexedLabelYears": [
+              "2021"
+            ]
+          },
+          {
+            "url": "https://www.esquimalt.ca/sites/default/files/docs/municipal-hall/finance/finance-2021/2020_Approved_SOFI.pdf",
+            "label": "2020 Statement of Financial Information",
+            "alreadyInMunicipalAudit": true,
+            "periodVerified": false,
+            "scopeVerified": false,
+            "yearTokensInLabelOrUrl": [
+              "2020",
+              "2021"
+            ],
+            "indexedLabelYears": [
+              "2020"
+            ]
+          },
+          {
+            "url": "https://www.esquimalt.ca/sites/default/files/docs/municipal-hall/finance/2019/FINAL_2019_Statement_of_Financial_Information.pdf",
+            "label": "2019 Statement of Financial Information",
+            "alreadyInMunicipalAudit": true,
+            "periodVerified": false,
+            "scopeVerified": false,
+            "yearTokensInLabelOrUrl": [
+              "2019"
+            ],
+            "indexedLabelYears": [
+              "2019"
+            ]
+          },
+          {
+            "url": "https://www.esquimalt.ca/sites/default/files/docs/municipal-hall/finance/2019/2018_Approved_SOFI_.pdf",
+            "label": "2018 Statement of Financial Information",
+            "alreadyInMunicipalAudit": true,
+            "periodVerified": false,
+            "scopeVerified": false,
+            "yearTokensInLabelOrUrl": [
+              "2018",
+              "2019"
+            ],
+            "indexedLabelYears": [
+              "2018"
+            ]
+          },
+          {
+            "url": "https://www.esquimalt.ca/sites/default/files/docs/municipal-hall/finance/2018/sofi_final_signed.pdf",
+            "label": "2017 Statement of Financial Information",
+            "alreadyInMunicipalAudit": true,
+            "periodVerified": false,
+            "scopeVerified": false,
+            "yearTokensInLabelOrUrl": [
+              "2017",
+              "2018"
+            ],
+            "indexedLabelYears": [
+              "2017"
+            ]
+          },
+          {
+            "url": "https://www.esquimalt.ca/sites/default/files/docs/municipal-hall/finance/2017/2016_sofi.pdf",
+            "label": "2016 Statement of Financial Information",
+            "alreadyInMunicipalAudit": true,
+            "periodVerified": false,
+            "scopeVerified": false,
+            "yearTokensInLabelOrUrl": [
+              "2016",
+              "2017"
+            ],
+            "indexedLabelYears": [
+              "2016"
+            ]
+          },
+          {
+            "url": "https://www.esquimalt.ca/sites/default/files/docs/municipal-hall/finance/2016/final_statement_of_financial_information_signed.pdf",
+            "label": "2015 Statement of Financial Information",
+            "alreadyInMunicipalAudit": true,
+            "periodVerified": false,
+            "scopeVerified": false,
+            "yearTokensInLabelOrUrl": [
+              "2015",
+              "2016"
+            ],
+            "indexedLabelYears": [
+              "2015"
+            ]
+          },
+          {
+            "url": "https://www.esquimalt.ca/sites/default/files/docs/municipal-hall/finance/sofi_2014.pdf",
+            "label": "2014 Statement of Financial Information",
+            "alreadyInMunicipalAudit": true,
+            "periodVerified": false,
+            "scopeVerified": false,
+            "yearTokensInLabelOrUrl": [
+              "2014"
+            ],
+            "indexedLabelYears": [
+              "2014"
+            ]
+          }
+        ],
+        "candidateInterpretation": "Links and label/path year tokens only; a link is not proof of a named schedule or reporting period.",
+        "checkedOnLocalAuditDate": "2026-10-31"
+      },
+      "historicalRange": {
+        "indexedLabelYears": [
+          "2014",
+          "2015",
+          "2016",
+          "2017",
+          "2018",
+          "2019",
+          "2020",
+          "2021",
+          "2022",
+          "2023",
+          "2024",
+          "2025"
+        ],
+        "documentYearsRetrieved": [],
+        "periodsInspected": [],
+        "caution": "Index labels and upload-path year tokens do not establish schedule periods or historical completeness."
+      },
+      "documents": [],
+      "reuseExistingOcr": [],
+      "processingOrProcurement": "processing",
+      "nextAction": "Follow the linked document/archive entries; check historical council attachments before making a routine report request."
+    },
+    {
+      "employerSlug": "langley-township",
+      "employerName": "Township of Langley",
+      "sector": "Municipalities",
+      "baselineOfficialEmployeeYears": [],
+      "baselineOfficialCouncilYears": [],
+      "baselineCompiledEditionLabels": [
+        "2017/18",
+        "2020/21",
+        "2023/24"
+      ],
+      "baselineCompiledRecords": 1251,
+      "officialIndexUrl": "https://www.tol.ca/en/the-township/annual-reports.aspx",
+      "archiveReceipt": {
+        "employerSlug": "langley-township",
+        "employerName": "Township of Langley",
+        "archiveUrl": "https://www.tol.ca/en/the-township/annual-reports.aspx",
+        "officialEmployeeYears": [],
+        "officialCouncilYears": [],
+        "finalUrl": "https://www.tol.ca/en/the-township/annual-reports.aspx",
+        "httpStatus": 200,
+        "contentType": "text/html; charset=utf-8",
+        "bytes": 122746,
+        "sha256": "c59db37b7b955197e3a7921457ca562b6efd296b73d55fd25e3898ef03d912de",
+        "kind": "official-index",
+        "candidates": [],
+        "candidateInterpretation": "Links and label/path year tokens only; a link is not proof of a named schedule or reporting period.",
+        "checkedOnLocalAuditDate": "2026-10-31"
+      },
+      "historicalRange": {
+        "indexedLabelYears": [],
+        "documentYearsRetrieved": [],
+        "periodsInspected": [],
+        "caution": "Index labels and upload-path year tokens do not establish schedule periods or historical completeness."
+      },
+      "documents": [],
+      "reuseExistingOcr": [],
+      "processingOrProcurement": "deeper-archive-research",
+      "nextAction": "Search the official document centre and council agenda archive; absence of a detected HTML link is not evidence a report must be procured."
+    },
+    {
+      "employerSlug": "city-of-mission",
+      "employerName": "City of Mission",
+      "sector": "Municipalities",
+      "baselineOfficialEmployeeYears": [],
+      "baselineOfficialCouncilYears": [],
+      "baselineCompiledEditionLabels": [
+        "2017/18",
+        "2020/21"
+      ],
+      "baselineCompiledRecords": 207,
+      "officialIndexUrl": "https://www.mission.ca/council-government/budget-finance/financial-reporting",
+      "archiveReceipt": {
+        "employerSlug": "city-of-mission",
+        "employerName": "City of Mission",
+        "archiveUrl": "https://www.mission.ca/council-government/budget-finance/financial-reporting",
+        "officialEmployeeYears": [],
+        "officialCouncilYears": [],
+        "finalUrl": "https://www.mission.ca/council-government/budget-finance/financial-reporting",
+        "httpStatus": 200,
+        "contentType": "text/html; charset=UTF-8",
+        "bytes": 92882,
+        "sha256": "7a368438cba210ab5aed368379a4b3a46e59886644e9ed806c4a44d02a4f2a85",
+        "kind": "official-index",
+        "candidates": [
+          {
+            "url": "https://www.mission.ca/media/file/2025-sofi-reportpdf",
+            "label": "2025 SOFI Report [PDF/571KB]",
+            "alreadyInMunicipalAudit": true,
+            "periodVerified": false,
+            "scopeVerified": false,
+            "yearTokensInLabelOrUrl": [
+              "2025"
+            ],
+            "indexedLabelYears": [
+              "2025"
+            ]
+          },
+          {
+            "url": "https://www.mission.ca/media/file/2024-sofi-report",
+            "label": "2024 SOFI Report [PDF/510KB]",
+            "alreadyInMunicipalAudit": true,
+            "periodVerified": false,
+            "scopeVerified": false,
+            "yearTokensInLabelOrUrl": [
+              "2024"
+            ],
+            "indexedLabelYears": [
+              "2024"
+            ]
+          },
+          {
+            "url": "https://www.mission.ca/media/file/2023-sofi-report",
+            "label": "2023 SOFI Report [PDF/475KB]",
+            "alreadyInMunicipalAudit": true,
+            "periodVerified": false,
+            "scopeVerified": false,
+            "yearTokensInLabelOrUrl": [
+              "2023"
+            ],
+            "indexedLabelYears": [
+              "2023"
+            ]
+          }
+        ],
+        "candidateInterpretation": "Links and label/path year tokens only; a link is not proof of a named schedule or reporting period.",
+        "checkedOnLocalAuditDate": "2026-10-31"
+      },
+      "historicalRange": {
+        "indexedLabelYears": [
+          "2023",
+          "2024",
+          "2025"
+        ],
+        "documentYearsRetrieved": [
+          "2023",
+          "2024",
+          "2025"
+        ],
+        "periodsInspected": [],
+        "caution": "Index labels and upload-path year tokens do not establish schedule periods or historical completeness."
+      },
+      "documents": [
+        {
+          "id": "district-of-mission-2023",
+          "employerSlug": "city-of-mission",
+          "employerName": "City of Mission",
+          "url": "https://www.mission.ca/media/file/2023-sofi-report",
+          "indexUrl": "https://www.mission.ca/council-government/budget-finance/financial-reporting",
+          "downloaded": true,
+          "sha256": "82e0ab886a7e8a1e464e3afa25127be7176de79881b93b7602c5a101c8f4d6ac",
+          "bytes": 486250,
+          "pages": 14,
+          "scheduleMatches": [],
+          "totalTextChars": 0,
+          "checkedOnLocalAuditDate": "2026-10-31",
+          "downloadFileMtimeUtc": "2026-11-01T01:52:12.044774+00:00",
+          "receiptNote": "Successful urllib original download; initial HTTP response metadata was not retained. SHA-256 and byte count were rechecked against the local original.",
+          "indexedYear": "2023",
+          "acceptedOverlapAtBaseline": [],
+          "retrievalStatus": "retrieved",
+          "periodInspected": null,
+          "namedSchedulePresence": "not-yet-verified",
+          "textAvailability": "no-embedded-text",
+          "scope": null,
+          "processingOrProcurement": "processing",
+          "status": "public-ocr-or-layout-review",
+          "nextAction": "Locate the named employee/council schedules, verify their calendar period, then use source-specific OCR/layout extraction with complete row and monetary-control checks. Originals are already retrieved; no request is needed to start."
+        },
+        {
+          "id": "district-of-mission-2024",
+          "employerSlug": "city-of-mission",
+          "employerName": "City of Mission",
+          "url": "https://www.mission.ca/media/file/2024-sofi-report",
+          "indexUrl": "https://www.mission.ca/council-government/budget-finance/financial-reporting",
+          "downloaded": true,
+          "sha256": "a4fa12aba963169e276fcd69680887ff788f731fd3ac5260135b88705db4e5a9",
+          "bytes": 522117,
+          "pages": 16,
+          "scheduleMatches": [],
+          "totalTextChars": 0,
+          "checkedOnLocalAuditDate": "2026-10-31",
+          "downloadFileMtimeUtc": "2026-11-01T01:52:12.113363+00:00",
+          "receiptNote": "Successful urllib original download; initial HTTP response metadata was not retained. SHA-256 and byte count were rechecked against the local original.",
+          "indexedYear": "2024",
+          "acceptedOverlapAtBaseline": [],
+          "retrievalStatus": "retrieved",
+          "periodInspected": null,
+          "namedSchedulePresence": "not-yet-verified",
+          "textAvailability": "no-embedded-text",
+          "scope": null,
+          "processingOrProcurement": "processing",
+          "status": "public-ocr-or-layout-review",
+          "nextAction": "Locate the named employee/council schedules, verify their calendar period, then use source-specific OCR/layout extraction with complete row and monetary-control checks. Originals are already retrieved; no request is needed to start."
+        },
+        {
+          "id": "district-of-mission-2025",
+          "employerSlug": "city-of-mission",
+          "employerName": "City of Mission",
+          "url": "https://www.mission.ca/media/file/2025-sofi-reportpdf",
+          "indexUrl": "https://www.mission.ca/council-government/budget-finance/financial-reporting",
+          "downloaded": true,
+          "sha256": "23864d9e618e6ceaab92a67e06d38f43d7433e00b747ae53785d8f39f8822624",
+          "bytes": 584620,
+          "pages": 16,
+          "scheduleMatches": [],
+          "totalTextChars": 0,
+          "checkedOnLocalAuditDate": "2026-10-31",
+          "downloadFileMtimeUtc": "2026-11-01T01:52:12.137854+00:00",
+          "receiptNote": "Successful urllib original download; initial HTTP response metadata was not retained. SHA-256 and byte count were rechecked against the local original.",
+          "indexedYear": "2025",
+          "acceptedOverlapAtBaseline": [],
+          "retrievalStatus": "retrieved",
+          "periodInspected": null,
+          "namedSchedulePresence": "not-yet-verified",
+          "textAvailability": "no-embedded-text",
+          "scope": null,
+          "processingOrProcurement": "processing",
+          "status": "public-ocr-or-layout-review",
+          "nextAction": "Locate the named employee/council schedules, verify their calendar period, then use source-specific OCR/layout extraction with complete row and monetary-control checks. Originals are already retrieved; no request is needed to start."
+        }
+      ],
+      "reuseExistingOcr": [],
+      "processingOrProcurement": "processing",
+      "nextAction": "Review the retrieved schedules and remaining linked history."
+    },
+    {
+      "employerSlug": "city-of-nanaimo",
+      "employerName": "City of Nanaimo",
+      "sector": "Municipalities",
+      "baselineOfficialEmployeeYears": [
+        "2019",
+        "2021",
+        "2022",
+        "2023",
+        "2024",
+        "2025"
+      ],
+      "baselineOfficialCouncilYears": [],
+      "baselineCompiledEditionLabels": [],
+      "baselineCompiledRecords": 0,
+      "officialIndexUrl": "https://www.nanaimo.ca/your-government/budget-finance/annual-financial-reports/finance-division",
+      "archiveReceipt": {
+        "employerSlug": "city-of-nanaimo",
+        "employerName": "City of Nanaimo",
+        "archiveUrl": "https://www.nanaimo.ca/your-government/budget-finance/annual-financial-reports/finance-division",
+        "officialEmployeeYears": [
+          "2019",
+          "2021",
+          "2022",
+          "2023",
+          "2024",
+          "2025"
+        ],
+        "officialCouncilYears": [],
+        "finalUrl": "https://www.nanaimo.ca/your-government/budget-finance/annual-financial-reports/finance-division",
+        "httpStatus": 200,
+        "contentType": "text/html; charset=utf-8",
+        "bytes": 247270,
+        "sha256": "56fdd0ce0898639df890c7f04b204f10a231761edeccb303d61a5c85f6cc4130",
+        "kind": "official-index",
+        "candidates": [
+          {
+            "url": "https://www.nanaimo.ca/docs/your-government/budget-and-finance/2025-official-statement-of-financial-information.pdf",
+            "label": "2025 Statement Of Financial Information",
+            "alreadyInMunicipalAudit": true,
+            "periodVerified": false,
+            "scopeVerified": false,
+            "yearTokensInLabelOrUrl": [
+              "2025"
+            ],
+            "indexedLabelYears": [
+              "2025"
+            ]
+          },
+          {
+            "url": "https://www.nanaimo.ca/docs/your-government/budget-and-finance/2024-statement-of-financial-information.pdf",
+            "label": "2024 Statement Of Financial Information",
+            "alreadyInMunicipalAudit": true,
+            "periodVerified": false,
+            "scopeVerified": false,
+            "yearTokensInLabelOrUrl": [
+              "2024"
+            ],
+            "indexedLabelYears": [
+              "2024"
+            ]
+          },
+          {
+            "url": "https://www.nanaimo.ca/docs/your-government/budget-and-finance/2023-statement-of-financial-information.pdf",
+            "label": "2023 Statement Of Financial Information",
+            "alreadyInMunicipalAudit": true,
+            "periodVerified": false,
+            "scopeVerified": false,
+            "yearTokensInLabelOrUrl": [
+              "2023"
+            ],
+            "indexedLabelYears": [
+              "2023"
+            ]
+          },
+          {
+            "url": "https://www.nanaimo.ca/docs/your-government/budget-and-finance/2022-statement-of-financial-information.pdf",
+            "label": "2022 Statement Of Financial Information",
+            "alreadyInMunicipalAudit": true,
+            "periodVerified": false,
+            "scopeVerified": false,
+            "yearTokensInLabelOrUrl": [
+              "2022"
+            ],
+            "indexedLabelYears": [
+              "2022"
+            ]
+          },
+          {
+            "url": "https://www.nanaimo.ca/docs/default-document-library/2021-statement-of-financial-informationb74dd03a1b316d6b9fc9ff0f001037d2.pdf",
+            "label": "2021 Statement Of Financial Information",
+            "alreadyInMunicipalAudit": true,
+            "periodVerified": false,
+            "scopeVerified": false,
+            "yearTokensInLabelOrUrl": [
+              "2021"
+            ],
+            "indexedLabelYears": [
+              "2021"
+            ]
+          },
+          {
+            "url": "https://www.nanaimo.ca/docs/your-government/budget-and-finance/2020-statement-of-financial-information.pdf",
+            "label": "2020 Statement Of Financial Information",
+            "alreadyInMunicipalAudit": true,
+            "periodVerified": false,
+            "scopeVerified": false,
+            "yearTokensInLabelOrUrl": [
+              "2020"
+            ],
+            "indexedLabelYears": [
+              "2020"
+            ]
+          },
+          {
+            "url": "https://www.nanaimo.ca/docs/your-government/budget-and-finance/2019-statement-of-financial-information.pdf",
+            "label": "2019 Statement Of Financial Information",
+            "alreadyInMunicipalAudit": true,
+            "periodVerified": false,
+            "scopeVerified": false,
+            "yearTokensInLabelOrUrl": [
+              "2019"
+            ],
+            "indexedLabelYears": [
+              "2019"
+            ]
+          },
+          {
+            "url": "https://www.nanaimo.ca/docs/your-government/budget-and-finance/all-sofi-expenses-2023.pdf",
+            "label": "2023 Council Expenses - January 1 to December 31, 2023",
+            "alreadyInMunicipalAudit": true,
+            "periodVerified": false,
+            "scopeVerified": false,
+            "yearTokensInLabelOrUrl": [
+              "2023"
+            ],
+            "indexedLabelYears": [
+              "2023"
+            ]
+          }
+        ],
+        "candidateInterpretation": "Links and label/path year tokens only; a link is not proof of a named schedule or reporting period.",
+        "checkedOnLocalAuditDate": "2026-10-31"
+      },
+      "historicalRange": {
+        "indexedLabelYears": [
+          "2019",
+          "2020",
+          "2021",
+          "2022",
+          "2023",
+          "2024",
+          "2025"
+        ],
+        "documentYearsRetrieved": [],
+        "periodsInspected": [],
+        "caution": "Index labels and upload-path year tokens do not establish schedule periods or historical completeness."
+      },
+      "documents": [],
+      "reuseExistingOcr": [
+        "research/salaries/municipal-ocr/staging/nanaimo-2020-employees-held.json.gzip"
+      ],
+      "processingOrProcurement": "processing",
+      "nextAction": "Follow the linked document/archive entries; check historical council attachments before making a routine report request."
+    },
+    {
+      "employerSlug": "district-of-oak-bay",
+      "employerName": "District of Oak Bay",
+      "sector": "Municipalities",
+      "baselineOfficialEmployeeYears": [],
+      "baselineOfficialCouncilYears": [],
+      "baselineCompiledEditionLabels": [
+        "2020/21",
+        "2023/24"
+      ],
+      "baselineCompiledRecords": 155,
+      "officialIndexUrl": "https://oakbay.civicweb.net/document/175333/",
+      "archiveReceipt": {
+        "employerSlug": "district-of-oak-bay",
+        "employerName": "District of Oak Bay",
+        "archiveUrl": "https://oakbay.civicweb.net/document/175333/",
+        "officialEmployeeYears": [],
+        "officialCouncilYears": [],
+        "finalUrl": "https://oakbay.civicweb.net/document/175333/",
+        "httpStatus": 200,
+        "contentType": "text/html; charset=utf-8",
+        "bytes": 101503,
+        "sha256": "a562b5051878b173923001df016cdba3f6d19f9c71b6162594d550e07330b3b8",
+        "kind": "official-index",
+        "candidates": [],
+        "candidateInterpretation": "Links and label/path year tokens only; a link is not proof of a named schedule or reporting period.",
+        "checkedOnLocalAuditDate": "2026-10-31"
+      },
+      "historicalRange": {
+        "indexedLabelYears": [],
+        "documentYearsRetrieved": [],
+        "periodsInspected": [],
+        "caution": "Index labels and upload-path year tokens do not establish schedule periods or historical completeness."
+      },
+      "documents": [],
+      "reuseExistingOcr": [],
+      "processingOrProcurement": "deeper-archive-research",
+      "nextAction": "Search the official document centre and council agenda archive; absence of a detected HTML link is not evidence a report must be procured."
+    },
+    {
+      "employerSlug": "city-of-parksville",
+      "employerName": "City of Parksville",
+      "sector": "Municipalities",
+      "baselineOfficialEmployeeYears": [],
+      "baselineOfficialCouncilYears": [],
+      "baselineCompiledEditionLabels": [],
+      "baselineCompiledRecords": 0,
+      "officialIndexUrl": "https://parksville.civicweb.net/document/82602/",
+      "archiveReceipt": {
+        "employerSlug": "city-of-parksville",
+        "employerName": "City of Parksville",
+        "archiveUrl": "https://parksville.civicweb.net/document/82602/",
+        "officialEmployeeYears": [],
+        "officialCouncilYears": [],
+        "finalUrl": "https://parksville.civicweb.net/document/82602/",
+        "httpStatus": 200,
+        "contentType": "text/html; charset=utf-8",
+        "bytes": 49539,
+        "sha256": "25aab35eb16b7405f939d0eda9c6f8a1ebe4ad13aece8cabd81402b38368929b",
+        "kind": "official-index",
+        "candidates": [
+          {
+            "url": "https://parksville.civicweb.net/FileStorage/6F0BB1A06E80498CB57F01D450F88675-3f)%202025%20SOFI%20report%20to%20Council_Redacted.pdf",
+            "label": "3f) 2025 Statement of Financial Information",
+            "alreadyInMunicipalAudit": true,
+            "periodVerified": false,
+            "scopeVerified": false,
+            "yearTokensInLabelOrUrl": [
+              "2025"
+            ],
+            "indexedLabelYears": [
+              "2025"
+            ]
+          }
+        ],
+        "candidateInterpretation": "Links and label/path year tokens only; a link is not proof of a named schedule or reporting period.",
+        "checkedOnLocalAuditDate": "2026-10-31"
+      },
+      "historicalRange": {
+        "indexedLabelYears": [
+          "2025"
+        ],
+        "documentYearsRetrieved": [
+          "2025"
+        ],
+        "periodsInspected": [
+          "2025"
+        ],
+        "caution": "Index labels and upload-path year tokens do not establish schedule periods or historical completeness."
+      },
+      "documents": [
+        {
+          "id": "city-of-parksville-2025",
+          "employerSlug": "city-of-parksville",
+          "employerName": "City of Parksville",
+          "url": "https://parksville.civicweb.net/FileStorage/6F0BB1A06E80498CB57F01D450F88675-3f)%202025%20SOFI%20report%20to%20Council_Redacted.pdf",
+          "indexUrl": "https://parksville.civicweb.net/document/82602/",
+          "retrievedAtUtc": "2026-11-01T01:59:40.562201+00:00",
+          "httpStatus": 200,
+          "finalUrl": "https://parksville.civicweb.net/FileStorage/6F0BB1A06E80498CB57F01D450F88675-3f)%202025%20SOFI%20report%20to%20Council_Redacted.pdf",
+          "contentType": "application/pdf",
+          "downloaded": true,
+          "sha256": "e5084fdc345e6ca5da2a1275bed1e836880fe3031296e7b09f303e5da883646f",
+          "bytes": 1788006,
+          "pages": 46,
+          "totalTextChars": 90746,
+          "scheduleMatches": [
+            {
+              "page": 1,
+              "chars": 1870,
+              "excerpt": "May 28, 2026 \n \n \nREPORT TO:  \nK. KEHLER, CHIEF ADMINISTRATIVE OFFICER \n \nFROM:  \n \nM. BOVEN, MANAGER OF FINANCE \n \nSUBJECT: \n \n2025 STATEMENT OF FINANCIAL INFORMATION (SOFI) \n \nPURPOSE: \nPublic reporting of financial in"
+            },
+            {
+              "page": 2,
+              "chars": 1905,
+              "excerpt": "2025 Statement of Financial Information \n \nPage 2 of 3 \n \nThe schedule of remuneration and expenses must: \n• List by name and position the total amount of remuneration and the total amount of expenses paid \nto or on beha"
+            },
+            {
+              "page": 5,
+              "chars": 620,
+              "excerpt": "Schedule of Debts\nSchedule of Guarantee and Indemnity Agreements\nSchedule of Elected Official Remuneration and Expenses\nSchedule of Employee Remuneration and Expenses\nStatement of Severance Agreements\nSchedule of Payment"
+            },
+            {
+              "page": 7,
+              "chars": 749,
+              "excerpt": "Name\nRemuneration \nExpenses \nBeil, Mary\nCouncillor\n36,322.10\n$       \n3,654.57\n$        \nFras, Adam\nCouncillor\n36,917.56\n         \n-\n                  \nGaur, Amit\nCouncillor\n35,726.64\n         \n2,242.85\n          \nGrenz,"
+            },
+            {
+              "page": 8,
+              "chars": 4426,
+              "excerpt": "Name\nPosition \nRemuneration \n(including \ntaxable benefits)\nEmployee \nExpenses\nAdelborg, Mark\n Supervisor – Roads and Fleet\n104,437.30\n$         \n1,897.50\n$         \nAllen, Jacqueline\n Accountant/Payroll Coordinator\n90,19"
+            },
+            {
+              "page": 9,
+              "chars": 3348,
+              "excerpt": "Name\nPosition \nRemuneration \n(including \ntaxable benefits)\nEmployee \nExpenses\nCITY OF PARKSVILLE\nSTATEMENT OF FINANCIAL INFORMATION\nYEAR ENDED DECEMBER 31, 2025\nSchedule of Employee Remuneration and Expenses\nRoy, Paul\n F"
+            },
+            {
+              "page": 25,
+              "chars": 2926,
+              "excerpt": "CITY OF PARKSVILLE\nNOTES TO CONSOLIDATED FINANCIAL STATEMENTS\nYEAR ENDED DECEMBER 31, 2025\n1.\nSUMMARY OF SIGNIFICANT ACCOUNTING POLICIES (continued)\ne)\nEmployee future benefits\nThe City and its employees make contributio"
+            }
+          ],
+          "checkedOnLocalAuditDate": "2026-10-31",
+          "indexedYear": "2025",
+          "acceptedOverlapAtBaseline": [],
+          "retrievalStatus": "retrieved",
+          "periodInspected": {
+            "calendarYear": "2025",
+            "basis": "Named schedule year checked in complete rendered schedule; all row fields reviewed",
+            "physicalPages": [
+              7,
+              8,
+              9
+            ]
+          },
+          "namedSchedulePresence": "verified-named-employees-and-elected-officials",
+          "textAvailability": "embedded-text-present; may include OCR",
+          "scope": [
+            "employee-remuneration",
+            "elected-officials"
+          ],
+          "processingOrProcurement": "processing",
+          "status": "accepted-import-ready",
+          "acceptedImportSources": [
+            "sector-municipal-city-of-parksville-2025-elected-officials",
+            "sector-municipal-city-of-parksville-2025-employee-remuneration"
+          ],
+          "rowsReady": 79,
+          "nextAction": "Register the hash-pinned reviewed collection and expose its public source warnings; retain compiled cohorts unless a full independent match is proved."
+        }
+      ],
+      "reuseExistingOcr": [],
+      "processingOrProcurement": "processing",
+      "nextAction": "Review the retrieved schedules and remaining linked history."
+    },
+    {
+      "employerSlug": "city-of-pitt-meadows",
+      "employerName": "City of Pitt Meadows",
+      "sector": "Municipalities",
+      "baselineOfficialEmployeeYears": [],
+      "baselineOfficialCouncilYears": [],
+      "baselineCompiledEditionLabels": [
+        "2017/18",
+        "2020/21",
+        "2023/24"
+      ],
+      "baselineCompiledRecords": 176,
+      "officialIndexUrl": "https://www.pittmeadows.ca/city-hall/reports-and-policies/annual-reports",
+      "archiveReceipt": {
+        "employerSlug": "city-of-pitt-meadows",
+        "employerName": "City of Pitt Meadows",
+        "archiveUrl": "https://www.pittmeadows.ca/city-hall/reports-and-policies/annual-reports",
+        "officialEmployeeYears": [],
+        "officialCouncilYears": [],
+        "finalUrl": "https://www.pittmeadows.ca/city-hall/reports-and-policies/annual-reports",
+        "httpStatus": 200,
+        "contentType": "text/html; charset=UTF-8",
+        "bytes": 248036,
+        "sha256": "a64d54bead923a780865a3d147279d82b7b836c6f2f7e6cfa3b111c0fbc99104",
+        "kind": "official-index",
+        "candidates": [
+          {
+            "url": "https://pub-pittmeadows.escribemeetings.com/filestream.ashx?DocumentId=20039",
+            "label": "Read the 2025 Statement of Financial Information",
+            "alreadyInMunicipalAudit": true,
+            "periodVerified": false,
+            "scopeVerified": false,
+            "yearTokensInLabelOrUrl": [
+              "2025"
+            ],
+            "indexedLabelYears": [
+              "2025"
+            ]
+          },
+          {
+            "url": "https://pub-pittmeadows.escribemeetings.com/filestream.ashx?DocumentId=18509",
+            "label": "2024 Statement of Financial Information.",
+            "alreadyInMunicipalAudit": true,
+            "periodVerified": false,
+            "scopeVerified": false,
+            "yearTokensInLabelOrUrl": [
+              "2024"
+            ],
+            "indexedLabelYears": [
+              "2024"
+            ]
+          },
+          {
+            "url": "https://www.pittmeadows.ca/sites/default/files/docs/city-hall/reports/2023%20Statement%20of%20Financial%20Information.pdf",
+            "label": "2023 Statement of Financial Information",
+            "alreadyInMunicipalAudit": true,
+            "periodVerified": false,
+            "scopeVerified": false,
+            "yearTokensInLabelOrUrl": [
+              "2023"
+            ],
+            "indexedLabelYears": [
+              "2023"
+            ]
+          },
+          {
+            "url": "https://www.pittmeadows.ca/sites/default/files/2023-06/2022%20SOFI.pdf",
+            "label": "2022 Statement of Financial Information",
+            "alreadyInMunicipalAudit": true,
+            "periodVerified": false,
+            "scopeVerified": false,
+            "yearTokensInLabelOrUrl": [
+              "2022",
+              "2023"
+            ],
+            "indexedLabelYears": [
+              "2022"
+            ]
+          },
+          {
+            "url": "https://www.pittmeadows.ca/sites/default/files/2022-06/2021%20SOFI.pdf",
+            "label": "2021 Statement of Financial Information",
+            "alreadyInMunicipalAudit": true,
+            "periodVerified": false,
+            "scopeVerified": false,
+            "yearTokensInLabelOrUrl": [
+              "2021",
+              "2022"
+            ],
+            "indexedLabelYears": [
+              "2021"
+            ]
+          },
+          {
+            "url": "https://www.pittmeadows.ca/sites/default/files/docs/city-hall/reports/2020_sofi.pdf",
+            "label": "2020 Statement of Financial Information",
+            "alreadyInMunicipalAudit": true,
+            "periodVerified": false,
+            "scopeVerified": false,
+            "yearTokensInLabelOrUrl": [
+              "2020"
+            ],
+            "indexedLabelYears": [
+              "2020"
+            ]
+          },
+          {
+            "url": "https://www.pittmeadows.ca/sites/default/files/docs/city-hall/reports/2019_sofi_report.pdf",
+            "label": "2019 Statement of Financial Information",
+            "alreadyInMunicipalAudit": true,
+            "periodVerified": false,
+            "scopeVerified": false,
+            "yearTokensInLabelOrUrl": [
+              "2019"
+            ],
+            "indexedLabelYears": [
+              "2019"
+            ]
+          },
+          {
+            "url": "https://www.pittmeadows.ca/sites/default/files/docs/city-hall/reports/2018_sofi_report.pdf",
+            "label": "2018 Statement of Financial Information",
+            "alreadyInMunicipalAudit": true,
+            "periodVerified": false,
+            "scopeVerified": false,
+            "yearTokensInLabelOrUrl": [
+              "2018"
+            ],
+            "indexedLabelYears": [
+              "2018"
+            ]
+          },
+          {
+            "url": "https://www.pittmeadows.ca/sites/default/files/docs/city-hall/reports/2017_sofi_report.pdf",
+            "label": "2017 Statement of Financial Information",
+            "alreadyInMunicipalAudit": true,
+            "periodVerified": false,
+            "scopeVerified": false,
+            "yearTokensInLabelOrUrl": [
+              "2017"
+            ],
+            "indexedLabelYears": [
+              "2017"
+            ]
+          },
+          {
+            "url": "https://www.pittmeadows.ca/sites/default/files/docs/city-hall/reports/2016_sofi_report.pdf",
+            "label": "2016 Statement of Financial Information",
+            "alreadyInMunicipalAudit": true,
+            "periodVerified": false,
+            "scopeVerified": false,
+            "yearTokensInLabelOrUrl": [
+              "2016"
+            ],
+            "indexedLabelYears": [
+              "2016"
+            ]
+          },
+          {
+            "url": "https://www.pittmeadows.ca/sites/default/files/docs/city-hall/reports/2015_sofi_report.pdf",
+            "label": "2015 Statement of Financial Information",
+            "alreadyInMunicipalAudit": true,
+            "periodVerified": false,
+            "scopeVerified": false,
+            "yearTokensInLabelOrUrl": [
+              "2015"
+            ],
+            "indexedLabelYears": [
+              "2015"
+            ]
+          },
+          {
+            "url": "https://www.pittmeadows.ca/sites/default/files/docs/city-hall/reports/sofi_report_2014.pdf",
+            "label": "2014 Statement of Financial Information",
+            "alreadyInMunicipalAudit": true,
+            "periodVerified": false,
+            "scopeVerified": false,
+            "yearTokensInLabelOrUrl": [
+              "2014"
+            ],
+            "indexedLabelYears": [
+              "2014"
+            ]
+          },
+          {
+            "url": "https://www.pittmeadows.ca/sites/default/files/docs/city-hall/reports/2013_statement_of_financial.pdf",
+            "label": "2013 Statement of Financial Information",
+            "alreadyInMunicipalAudit": true,
+            "periodVerified": false,
+            "scopeVerified": false,
+            "yearTokensInLabelOrUrl": [
+              "2013"
+            ],
+            "indexedLabelYears": [
+              "2013"
+            ]
+          },
+          {
+            "url": "https://www.pittmeadows.ca/sites/default/files/docs/city-hall/reports/2012_statement_of_financial_information.pdf",
+            "label": "2012 Statement of Financial Information",
+            "alreadyInMunicipalAudit": true,
+            "periodVerified": false,
+            "scopeVerified": false,
+            "yearTokensInLabelOrUrl": [
+              "2012"
+            ],
+            "indexedLabelYears": [
+              "2012"
+            ]
+          },
+          {
+            "url": "https://www.pittmeadows.ca/sites/default/files/docs/city-hall/reports/2011_statement_of_financial_information.pdf",
+            "label": "2011 Statement of Financial Information",
+            "alreadyInMunicipalAudit": true,
+            "periodVerified": false,
+            "scopeVerified": false,
+            "yearTokensInLabelOrUrl": [
+              "2011"
+            ],
+            "indexedLabelYears": [
+              "2011"
+            ]
+          }
+        ],
+        "candidateInterpretation": "Links and label/path year tokens only; a link is not proof of a named schedule or reporting period.",
+        "checkedOnLocalAuditDate": "2026-10-31"
+      },
+      "historicalRange": {
+        "indexedLabelYears": [
+          "2011",
+          "2012",
+          "2013",
+          "2014",
+          "2015",
+          "2016",
+          "2017",
+          "2018",
+          "2019",
+          "2020",
+          "2021",
+          "2022",
+          "2023",
+          "2024",
+          "2025"
+        ],
+        "documentYearsRetrieved": [
+          "2011",
+          "2012",
+          "2013",
+          "2014",
+          "2015",
+          "2016",
+          "2017",
+          "2018",
+          "2019",
+          "2020",
+          "2021",
+          "2022",
+          "2023",
+          "2024",
+          "2025"
+        ],
+        "periodsInspected": [
+          "2013",
+          "2019",
+          "2020",
+          "2021",
+          "2022"
+        ],
+        "caution": "Index labels and upload-path year tokens do not establish schedule periods or historical completeness."
+      },
+      "documents": [
+        {
+          "id": "city-of-pitt-meadows-2011",
+          "employerSlug": "city-of-pitt-meadows",
+          "employerName": "City of Pitt Meadows",
+          "url": "https://www.pittmeadows.ca/sites/default/files/docs/city-hall/reports/2011_statement_of_financial_information.pdf",
+          "indexUrl": "https://www.pittmeadows.ca/city-hall/reports-and-policies/annual-reports",
+          "downloaded": true,
+          "sha256": "c137de316873932b1d0d731f506a8d4d2db28574f9749f2a0dec043086639301",
+          "bytes": 1803112,
+          "pages": 28,
+          "scheduleMatches": [],
+          "totalTextChars": 0,
+          "checkedOnLocalAuditDate": "2026-10-31",
+          "downloadFileMtimeUtc": "2026-11-01T01:52:12.133526+00:00",
+          "receiptNote": "Successful urllib original download; initial HTTP response metadata was not retained. SHA-256 and byte count were rechecked against the local original.",
+          "indexedYear": "2011",
+          "acceptedOverlapAtBaseline": [],
+          "retrievalStatus": "retrieved",
+          "periodInspected": null,
+          "namedSchedulePresence": "not-yet-verified",
+          "textAvailability": "no-embedded-text",
+          "scope": null,
+          "processingOrProcurement": "processing",
+          "status": "public-ocr-or-layout-review",
+          "nextAction": "Locate the named employee/council schedules, verify their calendar period, then use source-specific OCR/layout extraction with complete row and monetary-control checks. Originals are already retrieved; no request is needed to start."
+        },
+        {
+          "id": "city-of-pitt-meadows-2012",
+          "employerSlug": "city-of-pitt-meadows",
+          "employerName": "City of Pitt Meadows",
+          "url": "https://www.pittmeadows.ca/sites/default/files/docs/city-hall/reports/2012_statement_of_financial_information.pdf",
+          "indexUrl": "https://www.pittmeadows.ca/city-hall/reports-and-policies/annual-reports",
+          "downloaded": true,
+          "sha256": "a2ab0229794f1284e09b80ca7eda81eb038d1f04eada6c9b17e40bef24635253",
+          "bytes": 1718202,
+          "pages": 28,
+          "scheduleMatches": [],
+          "totalTextChars": 0,
+          "checkedOnLocalAuditDate": "2026-10-31",
+          "downloadFileMtimeUtc": "2026-11-01T01:52:12.043445+00:00",
+          "receiptNote": "Successful urllib original download; initial HTTP response metadata was not retained. SHA-256 and byte count were rechecked against the local original.",
+          "indexedYear": "2012",
+          "acceptedOverlapAtBaseline": [],
+          "retrievalStatus": "retrieved",
+          "periodInspected": null,
+          "namedSchedulePresence": "not-yet-verified",
+          "textAvailability": "no-embedded-text",
+          "scope": null,
+          "processingOrProcurement": "processing",
+          "status": "public-ocr-or-layout-review",
+          "nextAction": "Locate the named employee/council schedules, verify their calendar period, then use source-specific OCR/layout extraction with complete row and monetary-control checks. Originals are already retrieved; no request is needed to start."
+        },
+        {
+          "id": "city-of-pitt-meadows-2013",
+          "employerSlug": "city-of-pitt-meadows",
+          "employerName": "City of Pitt Meadows",
+          "url": "https://www.pittmeadows.ca/sites/default/files/docs/city-hall/reports/2013_statement_of_financial.pdf",
+          "indexUrl": "https://www.pittmeadows.ca/city-hall/reports-and-policies/annual-reports",
+          "downloaded": true,
+          "sha256": "7d38a11f0f44694a100b28522e9222bc8f583df81110e294e6bdd46f76b8f364",
+          "bytes": 818418,
+          "pages": 27,
+          "scheduleMatches": [
+            {
+              "page": 1,
+              "chars": 525,
+              "excerpt": "CITY OF PITT MEADOWS\n2013 STATEMENT OF FINANCIAL INFORMATION\nAs required by the Financial Information Act\n•\nStatement of Financial Information Approval\n•\nManagement Report\n•\n2013 Audited Financial Sta"
+            },
+            {
+              "page": 23,
+              "chars": 2436,
+              "excerpt": "CITY OF PITT MEADOWS\nTotal of other employees with base salary + benefits and other less than $75,000\nTOTAL EMPLOYEES\n73,909\n73,909\n103,245\n66,806\n77,074\n68,610\n103,246\n73,909\n149,481\n102,478\n121,469\n"
+            }
+          ],
+          "totalTextChars": 50589,
+          "checkedOnLocalAuditDate": "2026-10-31",
+          "downloadFileMtimeUtc": "2026-11-01T01:52:12.478836+00:00",
+          "receiptNote": "Successful urllib original download; initial HTTP response metadata was not retained. SHA-256 and byte count were rechecked against the local original.",
+          "indexedYear": "2013",
+          "acceptedOverlapAtBaseline": [],
+          "retrievalStatus": "retrieved",
+          "periodInspected": {
+            "calendarYear": "2013",
+            "basis": "Named schedule year checked in complete rendered schedule; all row fields reviewed",
+            "physicalPages": [
+              23
+            ]
+          },
+          "namedSchedulePresence": "verified-named-employees-and-elected-officials",
+          "textAvailability": "embedded-text-present; may include OCR",
+          "scope": [
+            "employee-remuneration",
+            "elected-officials"
+          ],
+          "processingOrProcurement": "processing",
+          "status": "accepted-import-ready",
+          "acceptedImportSources": [
+            "sector-municipal-city-of-pitt-meadows-2013-elected-officials",
+            "sector-municipal-city-of-pitt-meadows-2013-employee-remuneration"
+          ],
+          "rowsReady": 28,
+          "nextAction": "Register the hash-pinned reviewed collection and expose its public source warnings; retain compiled cohorts unless a full independent match is proved."
+        },
+        {
+          "id": "city-of-pitt-meadows-2014",
+          "employerSlug": "city-of-pitt-meadows",
+          "employerName": "City of Pitt Meadows",
+          "url": "https://www.pittmeadows.ca/sites/default/files/docs/city-hall/reports/sofi_report_2014.pdf",
+          "indexUrl": "https://www.pittmeadows.ca/city-hall/reports-and-policies/annual-reports",
+          "downloaded": true,
+          "sha256": "355f5191b9409b993ebf0a341d689f5e0148ec80f25be40d49dd34da3d3a772d",
+          "bytes": 6269213,
+          "pages": 27,
+          "scheduleMatches": [],
+          "totalTextChars": 0,
+          "checkedOnLocalAuditDate": "2026-10-31",
+          "downloadFileMtimeUtc": "2026-11-01T01:52:14.438565+00:00",
+          "receiptNote": "Successful urllib original download; initial HTTP response metadata was not retained. SHA-256 and byte count were rechecked against the local original.",
+          "indexedYear": "2014",
+          "acceptedOverlapAtBaseline": [],
+          "retrievalStatus": "retrieved",
+          "periodInspected": null,
+          "namedSchedulePresence": "not-yet-verified",
+          "textAvailability": "no-embedded-text",
+          "scope": null,
+          "processingOrProcurement": "processing",
+          "status": "public-ocr-or-layout-review",
+          "nextAction": "Locate the named employee/council schedules, verify their calendar period, then use source-specific OCR/layout extraction with complete row and monetary-control checks. Originals are already retrieved; no request is needed to start."
+        },
+        {
+          "id": "city-of-pitt-meadows-2015",
+          "employerSlug": "city-of-pitt-meadows",
+          "employerName": "City of Pitt Meadows",
+          "url": "https://www.pittmeadows.ca/sites/default/files/docs/city-hall/reports/2015_sofi_report.pdf",
+          "indexUrl": "https://www.pittmeadows.ca/city-hall/reports-and-policies/annual-reports",
+          "downloaded": true,
+          "sha256": "810f95b69d60508efacde5ca1325015dc3362620bdcb952f098f92b0a1ad2807",
+          "bytes": 4683761,
+          "pages": 27,
+          "scheduleMatches": [],
+          "totalTextChars": 0,
+          "checkedOnLocalAuditDate": "2026-10-31",
+          "downloadFileMtimeUtc": "2026-11-01T01:52:13.196042+00:00",
+          "receiptNote": "Successful urllib original download; initial HTTP response metadata was not retained. SHA-256 and byte count were rechecked against the local original.",
+          "indexedYear": "2015",
+          "acceptedOverlapAtBaseline": [],
+          "retrievalStatus": "retrieved",
+          "periodInspected": null,
+          "namedSchedulePresence": "not-yet-verified",
+          "textAvailability": "no-embedded-text",
+          "scope": null,
+          "processingOrProcurement": "processing",
+          "status": "public-ocr-or-layout-review",
+          "nextAction": "Locate the named employee/council schedules, verify their calendar period, then use source-specific OCR/layout extraction with complete row and monetary-control checks. Originals are already retrieved; no request is needed to start."
+        },
+        {
+          "id": "city-of-pitt-meadows-2016",
+          "employerSlug": "city-of-pitt-meadows",
+          "employerName": "City of Pitt Meadows",
+          "url": "https://www.pittmeadows.ca/sites/default/files/docs/city-hall/reports/2016_sofi_report.pdf",
+          "indexUrl": "https://www.pittmeadows.ca/city-hall/reports-and-policies/annual-reports",
+          "downloaded": true,
+          "sha256": "56eb789dbf5d187b5390d97ef76405c3a9db787aad177ba984a7c80c18e802fc",
+          "bytes": 3862978,
+          "pages": 28,
+          "scheduleMatches": [],
+          "totalTextChars": 0,
+          "checkedOnLocalAuditDate": "2026-10-31",
+          "downloadFileMtimeUtc": "2026-11-01T01:52:13.334297+00:00",
+          "receiptNote": "Successful urllib original download; initial HTTP response metadata was not retained. SHA-256 and byte count were rechecked against the local original.",
+          "indexedYear": "2016",
+          "acceptedOverlapAtBaseline": [],
+          "retrievalStatus": "retrieved",
+          "periodInspected": null,
+          "namedSchedulePresence": "not-yet-verified",
+          "textAvailability": "no-embedded-text",
+          "scope": null,
+          "processingOrProcurement": "processing",
+          "status": "public-ocr-or-layout-review",
+          "nextAction": "Locate the named employee/council schedules, verify their calendar period, then use source-specific OCR/layout extraction with complete row and monetary-control checks. Originals are already retrieved; no request is needed to start."
+        },
+        {
+          "id": "city-of-pitt-meadows-2017",
+          "employerSlug": "city-of-pitt-meadows",
+          "employerName": "City of Pitt Meadows",
+          "url": "https://www.pittmeadows.ca/sites/default/files/docs/city-hall/reports/2017_sofi_report.pdf",
+          "indexUrl": "https://www.pittmeadows.ca/city-hall/reports-and-policies/annual-reports",
+          "downloaded": true,
+          "sha256": "977578037900e5425ee9857347b53714d6c6bcd2392f170c0e6282c81d5af503",
+          "bytes": 1513865,
+          "pages": 27,
+          "scheduleMatches": [],
+          "totalTextChars": 0,
+          "checkedOnLocalAuditDate": "2026-10-31",
+          "downloadFileMtimeUtc": "2026-11-01T01:52:12.559572+00:00",
+          "receiptNote": "Successful urllib original download; initial HTTP response metadata was not retained. SHA-256 and byte count were rechecked against the local original.",
+          "indexedYear": "2017",
+          "acceptedOverlapAtBaseline": [],
+          "retrievalStatus": "retrieved",
+          "periodInspected": null,
+          "namedSchedulePresence": "not-yet-verified",
+          "textAvailability": "no-embedded-text",
+          "scope": null,
+          "processingOrProcurement": "processing",
+          "status": "public-ocr-or-layout-review",
+          "nextAction": "Locate the named employee/council schedules, verify their calendar period, then use source-specific OCR/layout extraction with complete row and monetary-control checks. Originals are already retrieved; no request is needed to start."
+        },
+        {
+          "id": "city-of-pitt-meadows-2018",
+          "employerSlug": "city-of-pitt-meadows",
+          "employerName": "City of Pitt Meadows",
+          "url": "https://www.pittmeadows.ca/sites/default/files/docs/city-hall/reports/2018_sofi_report.pdf",
+          "indexUrl": "https://www.pittmeadows.ca/city-hall/reports-and-policies/annual-reports",
+          "downloaded": true,
+          "sha256": "c156b7e0a506a73c90e582016df3a05cbddf3e7380df7ef3d85c53b049b8d84a",
+          "bytes": 29072201,
+          "pages": 34,
+          "scheduleMatches": [],
+          "totalTextChars": 170,
+          "checkedOnLocalAuditDate": "2026-10-31",
+          "downloadFileMtimeUtc": "2026-11-01T01:52:17.982620+00:00",
+          "receiptNote": "Successful urllib original download; initial HTTP response metadata was not retained. SHA-256 and byte count were rechecked against the local original.",
+          "indexedYear": "2018",
+          "acceptedOverlapAtBaseline": [],
+          "retrievalStatus": "retrieved",
+          "periodInspected": null,
+          "namedSchedulePresence": "not-yet-verified",
+          "textAvailability": "embedded-text-present; may include OCR",
+          "scope": null,
+          "processingOrProcurement": "processing",
+          "status": "public-ocr-or-layout-review",
+          "nextAction": "Locate the named employee/council schedules, verify their calendar period, then use source-specific OCR/layout extraction with complete row and monetary-control checks. Originals are already retrieved; no request is needed to start."
+        },
+        {
+          "id": "city-of-pitt-meadows-2019",
+          "employerSlug": "city-of-pitt-meadows",
+          "employerName": "City of Pitt Meadows",
+          "url": "https://www.pittmeadows.ca/sites/default/files/docs/city-hall/reports/2019_sofi_report.pdf",
+          "indexUrl": "https://www.pittmeadows.ca/city-hall/reports-and-policies/annual-reports",
+          "downloaded": true,
+          "sha256": "823b4e0904620cc3229317a32c38dbf7d4cfe1c780e8331cf8569907723a3f03",
+          "bytes": 666257,
+          "pages": 33,
+          "scheduleMatches": [
+            {
+              "page": 1,
+              "chars": 530,
+              "excerpt": "163415v1 \nCITY OF PITT MEADOWS \n2019 STATEMENT OF FINANCIAL INFORMATION \nAs required by the Financial Information Act \nx\nStatement of Financial Information Approval\nx\nManagement Report\nx\n2019  Audited"
+            },
+            {
+              "page": 29,
+              "chars": 7090,
+              "excerpt": "CITY OF PITT MEADOWS\nSCHEDULE SHOWING THE RENUMERATION AND EXPENSES PAID TO OR ON BEHALF OF ELECTED OFFICIALS AND EMPLOYEES\n2019\nELECTED OFFICIALS:\nPOSITION\nSalary *\nBenefits and \nOther **\nExpenses\nDI"
+            }
+          ],
+          "totalTextChars": 67825,
+          "checkedOnLocalAuditDate": "2026-10-31",
+          "downloadFileMtimeUtc": "2026-11-01T01:52:12.715052+00:00",
+          "receiptNote": "Successful urllib original download; initial HTTP response metadata was not retained. SHA-256 and byte count were rechecked against the local original.",
+          "indexedYear": "2019",
+          "acceptedOverlapAtBaseline": [],
+          "retrievalStatus": "retrieved",
+          "periodInspected": {
+            "calendarYear": "2019",
+            "basis": "Named schedule year checked in complete rendered schedule; all row fields reviewed",
+            "physicalPages": [
+              29
+            ]
+          },
+          "namedSchedulePresence": "verified-named-employees-and-elected-officials",
+          "textAvailability": "embedded-text-present; may include OCR",
+          "scope": [
+            "employee-remuneration",
+            "elected-officials"
+          ],
+          "processingOrProcurement": "processing",
+          "status": "accepted-import-ready",
+          "acceptedImportSources": [
+            "sector-municipal-city-of-pitt-meadows-2019-elected-officials",
+            "sector-municipal-city-of-pitt-meadows-2019-employee-remuneration"
+          ],
+          "rowsReady": 46,
+          "nextAction": "Register the hash-pinned reviewed collection and expose its public source warnings; retain compiled cohorts unless a full independent match is proved."
+        },
+        {
+          "id": "city-of-pitt-meadows-2020",
+          "employerSlug": "city-of-pitt-meadows",
+          "employerName": "City of Pitt Meadows",
+          "url": "https://www.pittmeadows.ca/sites/default/files/docs/city-hall/reports/2020_sofi.pdf",
+          "indexUrl": "https://www.pittmeadows.ca/city-hall/reports-and-policies/annual-reports",
+          "downloaded": true,
+          "sha256": "66baeadc3d221497268fb088496d954138264b1826b6f284d21b91dbefcef388",
+          "bytes": 567540,
+          "pages": 33,
+          "scheduleMatches": [
+            {
+              "page": 1,
+              "chars": 548,
+              "excerpt": "169473v1 \nCITY OF PITT MEADOWS \n2020 STATEMENT OF FINANCIAL INFORMATION \nAs required by the Financial Information Act \n\nStatement of Financial Information Approval\n\nManagement Report\n\n2020  Audited"
+            },
+            {
+              "page": 29,
+              "chars": 7720,
+              "excerpt": "CITY OF PITT MEADOWS\nSCHEDULE OF RENUMERATION AND EXPENSES PAID TO OR ON BEHALF OF ELECTED OFFICIALS AND EMPLOYEES\n2020\nELECTED OFFICIALS:\nPOSITION\nSalary *\nBenefits and \nOther **\nExpenses\nDINGWALL, B"
+            }
+          ],
+          "totalTextChars": 73084,
+          "checkedOnLocalAuditDate": "2026-10-31",
+          "downloadFileMtimeUtc": "2026-11-01T01:52:13.197444+00:00",
+          "receiptNote": "Successful urllib original download; initial HTTP response metadata was not retained. SHA-256 and byte count were rechecked against the local original.",
+          "indexedYear": "2020",
+          "acceptedOverlapAtBaseline": [],
+          "retrievalStatus": "retrieved",
+          "periodInspected": {
+            "calendarYear": "2020",
+            "basis": "Named schedule year checked in complete rendered schedule; all row fields reviewed",
+            "physicalPages": [
+              29
+            ]
+          },
+          "namedSchedulePresence": "verified-named-employees-and-elected-officials",
+          "textAvailability": "embedded-text-present; may include OCR",
+          "scope": [
+            "employee-remuneration",
+            "elected-officials"
+          ],
+          "processingOrProcurement": "processing",
+          "status": "accepted-import-ready",
+          "acceptedImportSources": [
+            "sector-municipal-city-of-pitt-meadows-2020-elected-officials",
+            "sector-municipal-city-of-pitt-meadows-2020-employee-remuneration"
+          ],
+          "rowsReady": 52,
+          "nextAction": "Register the hash-pinned reviewed collection and expose its public source warnings; retain compiled cohorts unless a full independent match is proved."
+        },
+        {
+          "id": "city-of-pitt-meadows-2021",
+          "employerSlug": "city-of-pitt-meadows",
+          "employerName": "City of Pitt Meadows",
+          "url": "https://www.pittmeadows.ca/sites/default/files/2022-06/2021%20SOFI.pdf",
+          "indexUrl": "https://www.pittmeadows.ca/city-hall/reports-and-policies/annual-reports",
+          "downloaded": true,
+          "sha256": "9ca9ab5a6c3158d066cd33293ab9e2bf2b52518d49940957116b9bc5c669ac4e",
+          "bytes": 705726,
+          "pages": 34,
+          "scheduleMatches": [
+            {
+              "page": 1,
+              "chars": 542,
+              "excerpt": "175685v1 \nCITY OF PITT MEADOWS \n2021 STATEMENT OF FINANCIAL INFORMATION \nAs required by the Financial Information Act \n\nStatement of Financial Information Approval\n\nManagement Report\n\n2021 Audited "
+            },
+            {
+              "page": 29,
+              "chars": 9699,
+              "excerpt": "CITY OF PITT MEADOWS\nSCHEDULE OF RENUMERATION AND EXPENSES PAID TO OR ON BEHALF OF ELECTED OFFICIALS AND EMPLOYEES\n2021\nELECTED OFFICIALS:\nPOSITION\nSalary *\nBenefits and \nOther **\nExpenses\nDINGWALL, B"
+            }
+          ],
+          "totalTextChars": 73870,
+          "checkedOnLocalAuditDate": "2026-10-31",
+          "downloadFileMtimeUtc": "2026-11-01T01:52:13.468078+00:00",
+          "receiptNote": "Successful urllib original download; initial HTTP response metadata was not retained. SHA-256 and byte count were rechecked against the local original.",
+          "indexedYear": "2021",
+          "acceptedOverlapAtBaseline": [],
+          "retrievalStatus": "retrieved",
+          "periodInspected": {
+            "calendarYear": "2021",
+            "basis": "Named schedule year checked in complete rendered schedule; all row fields reviewed",
+            "physicalPages": [
+              29
+            ]
+          },
+          "namedSchedulePresence": "verified-named-employees-and-elected-officials",
+          "textAvailability": "embedded-text-present; may include OCR",
+          "scope": [
+            "employee-remuneration",
+            "elected-officials"
+          ],
+          "processingOrProcurement": "processing",
+          "status": "accepted-import-ready",
+          "acceptedImportSources": [
+            "sector-municipal-city-of-pitt-meadows-2021-elected-officials",
+            "sector-municipal-city-of-pitt-meadows-2021-employee-remuneration"
+          ],
+          "rowsReady": 63,
+          "nextAction": "Register the hash-pinned reviewed collection and expose its public source warnings; retain compiled cohorts unless a full independent match is proved."
+        },
+        {
+          "id": "city-of-pitt-meadows-2022",
+          "employerSlug": "city-of-pitt-meadows",
+          "employerName": "City of Pitt Meadows",
+          "url": "https://www.pittmeadows.ca/sites/default/files/2023-06/2022%20SOFI.pdf",
+          "indexUrl": "https://www.pittmeadows.ca/city-hall/reports-and-policies/annual-reports",
+          "downloaded": true,
+          "sha256": "b1bc5be91d9cfe5befefe33029b3d637dfa0562733320c2a6b5bffc7c4466e71",
+          "bytes": 573357,
+          "pages": 33,
+          "scheduleMatches": [
+            {
+              "page": 1,
+              "chars": 542,
+              "excerpt": "182270v1 \nCITY OF PITT MEADOWS \n2022 STATEMENT OF FINANCIAL INFORMATION \nAs required by the Financial Information Act \n\nStatement of Financial Information Approval\n\nManagement Report\n\n2022 Audited "
+            },
+            {
+              "page": 27,
+              "chars": 6094,
+              "excerpt": "CITY OF PITT MEADOWS\nSCHEDULE OF RENUMERATION AND EXPENSES PAID TO OR ON BEHALF OF ELECTED OFFICIALS AND EMPLOYEES\n2022\nELECTED OFFICIALS:\nPOSITION\nSalary *\nBenefits and \nOther **\nExpenses\nDINGWALL, B"
+            }
+          ],
+          "totalTextChars": 71735,
+          "checkedOnLocalAuditDate": "2026-10-31",
+          "downloadFileMtimeUtc": "2026-11-01T01:52:13.522591+00:00",
+          "receiptNote": "Successful urllib original download; initial HTTP response metadata was not retained. SHA-256 and byte count were rechecked against the local original.",
+          "indexedYear": "2022",
+          "acceptedOverlapAtBaseline": [],
+          "retrievalStatus": "retrieved",
+          "periodInspected": {
+            "calendarYear": "2022",
+            "basis": "Named schedule year checked in complete rendered schedule; all row fields reviewed",
+            "physicalPages": [
+              27
+            ]
+          },
+          "namedSchedulePresence": "verified-named-employees-and-elected-officials",
+          "textAvailability": "embedded-text-present; may include OCR",
+          "scope": [
+            "employee-remuneration",
+            "elected-officials"
+          ],
+          "processingOrProcurement": "processing",
+          "status": "accepted-import-ready",
+          "acceptedImportSources": [
+            "sector-municipal-city-of-pitt-meadows-2022-elected-officials",
+            "sector-municipal-city-of-pitt-meadows-2022-employee-remuneration"
+          ],
+          "rowsReady": 71,
+          "nextAction": "Register the hash-pinned reviewed collection and expose its public source warnings; retain compiled cohorts unless a full independent match is proved."
+        },
+        {
+          "id": "city-of-pitt-meadows-2023",
+          "employerSlug": "city-of-pitt-meadows",
+          "employerName": "City of Pitt Meadows",
+          "url": "https://www.pittmeadows.ca/sites/default/files/docs/city-hall/reports/2023%20Statement%20of%20Financial%20Information.pdf",
+          "indexUrl": "https://www.pittmeadows.ca/city-hall/reports-and-policies/annual-reports",
+          "downloaded": true,
+          "sha256": "a723e8d6fae58d212e06e3efd5d0e3ac8741d8b7314c3759b802cd24074809ff",
+          "bytes": 7806557,
+          "pages": 36,
+          "scheduleMatches": [],
+          "totalTextChars": 0,
+          "checkedOnLocalAuditDate": "2026-10-31",
+          "downloadFileMtimeUtc": "2026-11-01T01:52:15.050574+00:00",
+          "receiptNote": "Successful urllib original download; initial HTTP response metadata was not retained. SHA-256 and byte count were rechecked against the local original.",
+          "indexedYear": "2023",
+          "acceptedOverlapAtBaseline": [],
+          "retrievalStatus": "retrieved",
+          "periodInspected": null,
+          "namedSchedulePresence": "not-yet-verified",
+          "textAvailability": "no-embedded-text",
+          "scope": null,
+          "processingOrProcurement": "processing",
+          "status": "public-ocr-or-layout-review",
+          "nextAction": "Locate the named employee/council schedules, verify their calendar period, then use source-specific OCR/layout extraction with complete row and monetary-control checks. Originals are already retrieved; no request is needed to start."
+        },
+        {
+          "id": "city-of-pitt-meadows-2024",
+          "employerSlug": "city-of-pitt-meadows",
+          "employerName": "City of Pitt Meadows",
+          "url": "https://pub-pittmeadows.escribemeetings.com/filestream.ashx?DocumentId=18509",
+          "indexUrl": "https://www.pittmeadows.ca/city-hall/reports-and-policies/annual-reports",
+          "downloaded": true,
+          "sha256": "f4dc1d3a14dd6b6293b7ea9145629281d947e3be3494b7fb9613b89d0b7a7676",
+          "bytes": 4653916,
+          "pages": 37,
+          "scheduleMatches": [
+            {
+              "page": 1,
+              "chars": 594,
+              "excerpt": "190052v1 \n1 \nCITY OF PITT MEADOWS \n2024 STATEMENT OF FINANCIAL INFORMATION \nAs required by the Financial Information Act \n\nStatement of Financial Information Approval\n\nManagement Report\n\n2024 Audit"
+            },
+            {
+              "page": 31,
+              "chars": 5619,
+              "excerpt": "CITY OF PITT MEADOWS\nSCHEDULE OF RENUMERATION AND EXPENSES PAID TO OR ON BEHALF OF ELECTED OFFICIALS AND EMPLOYEES\n2024\nPOSITION\nSalary *\nBenefits and \nOther **\nExpenses\nNAME\nMELANSON, NATALIE\nFIREFIG"
+            }
+          ],
+          "totalTextChars": 32441,
+          "checkedOnLocalAuditDate": "2026-10-31",
+          "downloadFileMtimeUtc": "2026-11-01T01:52:13.914845+00:00",
+          "receiptNote": "Successful urllib original download; initial HTTP response metadata was not retained. SHA-256 and byte count were rechecked against the local original.",
+          "indexedYear": "2024",
+          "acceptedOverlapAtBaseline": [],
+          "retrievalStatus": "retrieved",
+          "periodInspected": null,
+          "namedSchedulePresence": "not-yet-verified",
+          "textAvailability": "embedded-text-present; may include OCR",
+          "scope": null,
+          "processingOrProcurement": "processing",
+          "status": "public-ocr-or-layout-review",
+          "nextAction": "Locate the named employee/council schedules, verify their calendar period, then use source-specific OCR/layout extraction with complete row and monetary-control checks. Originals are already retrieved; no request is needed to start."
+        },
+        {
+          "id": "city-of-pitt-meadows-2025",
+          "employerSlug": "city-of-pitt-meadows",
+          "employerName": "City of Pitt Meadows",
+          "url": "https://pub-pittmeadows.escribemeetings.com/filestream.ashx?DocumentId=20039",
+          "indexUrl": "https://www.pittmeadows.ca/city-hall/reports-and-policies/annual-reports",
+          "downloaded": true,
+          "sha256": "ce4e7e63c40efdad13813121eb92c17fa9c54f15827f12d426eaeaab1a6ee7ab",
+          "bytes": 4004573,
+          "pages": 40,
+          "scheduleMatches": [
+            {
+              "page": 1,
+              "chars": 591,
+              "excerpt": "204891v1 \nCITY OF PITT MEADOWS \n2025 STATEMENT OF FINANCIAL INFORMATION \nAs required by the Financial Information Act \n\nStatement of Financial Information Approval\n\nManagement Report\n\n2025 Audited "
+            }
+          ],
+          "totalTextChars": 74857,
+          "checkedOnLocalAuditDate": "2026-10-31",
+          "downloadFileMtimeUtc": "2026-11-01T01:52:14.886646+00:00",
+          "receiptNote": "Successful urllib original download; initial HTTP response metadata was not retained. SHA-256 and byte count were rechecked against the local original.",
+          "indexedYear": "2025",
+          "acceptedOverlapAtBaseline": [],
+          "retrievalStatus": "retrieved",
+          "periodInspected": null,
+          "namedSchedulePresence": "not-yet-verified",
+          "textAvailability": "embedded-text-present; may include OCR",
+          "scope": null,
+          "processingOrProcurement": "processing",
+          "status": "public-ocr-or-layout-review",
+          "nextAction": "Locate the named employee/council schedules, verify their calendar period, then use source-specific OCR/layout extraction with complete row and monetary-control checks. Originals are already retrieved; no request is needed to start."
+        }
+      ],
+      "reuseExistingOcr": [],
+      "processingOrProcurement": "processing",
+      "nextAction": "Review the retrieved schedules and remaining linked history."
+    },
+    {
+      "employerSlug": "city-of-port-alberni",
+      "employerName": "City of Port Alberni",
+      "sector": "Municipalities",
+      "baselineOfficialEmployeeYears": [],
+      "baselineOfficialCouncilYears": [],
+      "baselineCompiledEditionLabels": [],
+      "baselineCompiledRecords": 0,
+      "officialIndexUrl": "https://portalberni.ca/sites/default/files/council_mtg/2025_07_14%20RCM%20Agenda_OPT.pdf",
+      "archiveReceipt": {
+        "employerSlug": "city-of-port-alberni",
+        "employerName": "City of Port Alberni",
+        "archiveUrl": "https://portalberni.ca/sites/default/files/council_mtg/2025_07_14%20RCM%20Agenda_OPT.pdf",
+        "officialEmployeeYears": [],
+        "officialCouncilYears": [],
+        "error": "HTTP Error 404: Not Found",
+        "candidates": [],
+        "candidateInterpretation": "Links and label/path year tokens only; a link is not proof of a named schedule or reporting period.",
+        "checkedOnLocalAuditDate": "2026-10-31"
+      },
+      "historicalRange": {
+        "indexedLabelYears": [],
+        "documentYearsRetrieved": [],
+        "periodsInspected": [],
+        "caution": "Index labels and upload-path year tokens do not establish schedule periods or historical completeness."
+      },
+      "documents": [],
+      "reuseExistingOcr": [],
+      "processingOrProcurement": "deeper-archive-research",
+      "nextAction": "Search the official document centre and council agenda archive; absence of a detected HTML link is not evidence a report must be procured."
+    },
+    {
+      "employerSlug": "city-of-port-moody",
+      "employerName": "City of Port Moody",
+      "sector": "Municipalities",
+      "baselineOfficialEmployeeYears": [],
+      "baselineOfficialCouncilYears": [],
+      "baselineCompiledEditionLabels": [
+        "2017/18",
+        "2020/21",
+        "2023/24"
+      ],
+      "baselineCompiledRecords": 412,
+      "officialIndexUrl": "https://www.portmoody.ca/city-government/plans-reports-and-publications/",
+      "archiveReceipt": {
+        "employerSlug": "city-of-port-moody",
+        "employerName": "City of Port Moody",
+        "archiveUrl": "https://www.portmoody.ca/city-government/plans-reports-and-publications/",
+        "officialEmployeeYears": [],
+        "officialCouncilYears": [],
+        "finalUrl": "https://www.portmoody.ca/city-government/plans-reports-and-publications/",
+        "httpStatus": 200,
+        "contentType": "text/html; charset=utf-8",
+        "bytes": 130970,
+        "sha256": "98bcba741674c82d835e55d08cf6ea63ebef8efe15cbc69c6ffec6f8f9e27081",
+        "kind": "official-index",
+        "candidates": [
+          {
+            "url": "https://media-002-ca.cdn.govstack.com/portmoody-014-ca/media/yrkh3rw0/edms-674189-v2-2025_statement_of_financial_information_-sofi.pdf",
+            "label": "2025 Statement of Financial Information",
+            "alreadyInMunicipalAudit": true,
+            "periodVerified": false,
+            "scopeVerified": false,
+            "yearTokensInLabelOrUrl": [
+              "2025"
+            ],
+            "indexedLabelYears": [
+              "2025"
+            ]
+          },
+          {
+            "url": "https://media-002-ca.cdn.govstack.com/portmoody-014-ca/media/0n3nhqjd/2024-statement-of-financial-information.pdf",
+            "label": "2024 Statement of Financial Information",
+            "alreadyInMunicipalAudit": true,
+            "periodVerified": false,
+            "scopeVerified": false,
+            "yearTokensInLabelOrUrl": [
+              "2024"
+            ],
+            "indexedLabelYears": [
+              "2024"
+            ]
+          },
+          {
+            "url": "https://media-002-ca.cdn.govstack.com/portmoody-014-ca/media/yuxhrlr4/2023_statement_of_financial_information_-sofi-3.pdf",
+            "label": "2023 Statement of Financial Information",
+            "alreadyInMunicipalAudit": true,
+            "periodVerified": false,
+            "scopeVerified": false,
+            "yearTokensInLabelOrUrl": [
+              "2023"
+            ],
+            "indexedLabelYears": [
+              "2023"
+            ]
+          },
+          {
+            "url": "https://www.portmoody.ca/eDocs/get?docnumber=616362",
+            "label": "2022 Statement of Financial Information",
+            "alreadyInMunicipalAudit": true,
+            "periodVerified": false,
+            "scopeVerified": false,
+            "yearTokensInLabelOrUrl": [
+              "2022"
+            ],
+            "indexedLabelYears": [
+              "2022"
+            ]
+          },
+          {
+            "url": "https://www.portmoody.ca/eDocs/get?docnumber=584992",
+            "label": "2021 Statement of Financial Information",
+            "alreadyInMunicipalAudit": true,
+            "periodVerified": false,
+            "scopeVerified": false,
+            "yearTokensInLabelOrUrl": [
+              "2021"
+            ],
+            "indexedLabelYears": [
+              "2021"
+            ]
+          },
+          {
+            "url": "https://www.portmoody.ca/city-government/budget-and-finances/statement-of-financial-information/",
+            "label": "Statement of Financial Information",
+            "alreadyInMunicipalAudit": true,
+            "periodVerified": false,
+            "scopeVerified": false,
+            "yearTokensInLabelOrUrl": [],
+            "indexedLabelYears": []
+          }
+        ],
+        "candidateInterpretation": "Links and label/path year tokens only; a link is not proof of a named schedule or reporting period.",
+        "checkedOnLocalAuditDate": "2026-10-31"
+      },
+      "historicalRange": {
+        "indexedLabelYears": [
+          "2021",
+          "2022",
+          "2023",
+          "2024",
+          "2025"
+        ],
+        "documentYearsRetrieved": [
+          "2021",
+          "2022",
+          "2023",
+          "2024",
+          "2025"
+        ],
+        "periodsInspected": [],
+        "caution": "Index labels and upload-path year tokens do not establish schedule periods or historical completeness."
+      },
+      "documents": [
+        {
+          "id": "city-of-port-moody-2021",
+          "employerSlug": "city-of-port-moody",
+          "employerName": "City of Port Moody",
+          "url": "https://www.portmoody.ca/eDocs/get?docnumber=584992",
+          "indexUrl": "https://www.portmoody.ca/city-government/plans-reports-and-publications/",
+          "downloaded": true,
+          "sha256": "3b8bc27b7131b7550cf73ca3cebfb2ba60f0e7ed48aaeae6ade124fbe57388da",
+          "bytes": 806134,
+          "pages": 20,
+          "scheduleMatches": [
+            {
+              "page": 2,
+              "chars": 810,
+              "excerpt": "1 \n \nCity of Port Moody \nStatements and Schedules of Financial Information \nFor the Year Ended December 31, 2021 \n \n \nFinancial Information Regulation \nSchedule 1 \n \nSection \n \n \n \n \n \n \n \n \n \n \nPage "
+            },
+            {
+              "page": 8,
+              "chars": 3843,
+              "excerpt": "7 \n \nCity of Port Moody \nSchedule of Remuneration and Expenses \nFor the Year Ended December 31, 2021 \n \nPrepared under the Financial Information Regulation, Schedule 1, Section 6(2)(a). \nCouncil \nName"
+            },
+            {
+              "page": 9,
+              "chars": 5116,
+              "excerpt": "8 \n \nName \nPosition \n Remuneration  \nTax Benefits \n& Payouts \n Expenses  \nChung, Vinh \nEngineering Technologist \n             81,652  \n            214              2,399  \nCochran, Jill \nExecutive Ass"
+            },
+            {
+              "page": 10,
+              "chars": 4943,
+              "excerpt": "9 \n \nName \nPosition \n Remuneration  \nTax Benefits \n& Payouts \n \nExpenses  \nKolby, Patrik \nSenior Bylaw Officer \n             86,932  \n            236                 264  \nKumagai, Joji \nManager of Ec"
+            },
+            {
+              "page": 11,
+              "chars": 3941,
+              "excerpt": "10 \n \nName \nPosition \n \nRemuneration  \nTax Benefits \n& Payouts \n Expenses  \nRutherford, Virgelene \nManager of Labour Relations, Learning \n& Wellness \n           144,007  \n            920  \n           "
+            },
+            {
+              "page": 12,
+              "chars": 647,
+              "excerpt": "11 \n \nPrepared under the Financial Information Regulation, Schedule 1, Section 6(2)(c). \nTotal Staff (Less than $75,000) \n   9,386,935  \n99,109  \n48,294  \nGrand Total Staff \n26,993,011  \n431,771  \n201"
+            }
+          ],
+          "totalTextChars": 30342,
+          "checkedOnLocalAuditDate": "2026-10-31",
+          "downloadFileMtimeUtc": "2026-11-01T01:52:18.042727+00:00",
+          "receiptNote": "Successful urllib original download; initial HTTP response metadata was not retained. SHA-256 and byte count were rechecked against the local original.",
+          "indexedYear": "2021",
+          "acceptedOverlapAtBaseline": [],
+          "retrievalStatus": "retrieved",
+          "periodInspected": null,
+          "namedSchedulePresence": "candidate-named-tables-in-embedded-text",
+          "textAvailability": "embedded-text-present; may include OCR",
+          "scope": null,
+          "processingOrProcurement": "processing",
+          "status": "public-layout-review",
+          "nextAction": "Resolve wrapped positions and the separate remuneration/tax-benefits-and-payouts/expense columns; verify the exact schedule period and all rows and controls before import."
+        },
+        {
+          "id": "city-of-port-moody-2022",
+          "employerSlug": "city-of-port-moody",
+          "employerName": "City of Port Moody",
+          "url": "https://www.portmoody.ca/eDocs/get?docnumber=616362",
+          "indexUrl": "https://www.portmoody.ca/city-government/plans-reports-and-publications/",
+          "downloaded": true,
+          "sha256": "329dfd3600c4c3ba90cb996995a1137220f384ea0ff89ead5f39cff2b7d90a7a",
+          "bytes": 1895310,
+          "pages": 20,
+          "scheduleMatches": [
+            {
+              "page": 2,
+              "chars": 810,
+              "excerpt": "1 \n \nCity of Port Moody \nStatements and Schedules of Financial Information \nFor the Year Ended December 31, 2022 \n \n \nFinancial Information Regulation \nSchedule 1 \n \nSection \n \n \n \n \n \n \n \n \n \n \nPage "
+            },
+            {
+              "page": 8,
+              "chars": 3005,
+              "excerpt": "7 \n \nCity of Port Moody \nSchedule of Remuneration and Expenses \nFor the Year Ended December 31, 2022 \n \nPrepared under the Financial Information Regulation, Schedule 1, Section 6(2)(a). \nCouncil\nName "
+            },
+            {
+              "page": 9,
+              "chars": 4414,
+              "excerpt": "8 \n \nName\nPosition\nRemuneration \nTax Benefits \n& Payouts\nExpenses \nBoechler, Michael \nLieutenant Community Outreach & Life \nSafety \n           106,241  \n            305  \n               299 \nBoel, And"
+            },
+            {
+              "page": 10,
+              "chars": 4320,
+              "excerpt": "9 \n \nName\nPosition\nRemuneration \nTax Benefits \n& Payouts\n \nExpenses \nHeaven, Kirk \nDeputy Fire Chief Community Safety \nTraining & Emergency Management \n           150,960  \n         2,827  \n          "
+            },
+            {
+              "page": 11,
+              "chars": 4361,
+              "excerpt": "10 \n \nName\nPosition\nRemuneration \nTax Benefits \n& Payouts\n \nExpenses \nMoffatt, Bryan \nUrban Forestry Technician \n             90,648  \n            938  \n            1,293 \nMohebi, Mohammad \nSenior Fac"
+            },
+            {
+              "page": 12,
+              "chars": 2686,
+              "excerpt": "11 \n \nName \nPosition \nRemuneration  \nTax Benefits \n& Payouts \n \nExpenses \nTakahashi, Tracey \nDeputy Corporate Officer \n             96,403  \n         1,814  \n            1,638 \nTaylor, Andrew \nFirefig"
+            }
+          ],
+          "totalTextChars": 31543,
+          "checkedOnLocalAuditDate": "2026-10-31",
+          "downloadFileMtimeUtc": "2026-11-01T01:52:18.152701+00:00",
+          "receiptNote": "Successful urllib original download; initial HTTP response metadata was not retained. SHA-256 and byte count were rechecked against the local original.",
+          "indexedYear": "2022",
+          "acceptedOverlapAtBaseline": [],
+          "retrievalStatus": "retrieved",
+          "periodInspected": null,
+          "namedSchedulePresence": "candidate-named-tables-in-embedded-text",
+          "textAvailability": "embedded-text-present; may include OCR",
+          "scope": null,
+          "processingOrProcurement": "processing",
+          "status": "public-layout-review",
+          "nextAction": "Resolve wrapped positions and the separate remuneration/tax-benefits-and-payouts/expense columns; verify the exact schedule period and all rows and controls before import."
+        },
+        {
+          "id": "city-of-port-moody-2023",
+          "employerSlug": "city-of-port-moody",
+          "employerName": "City of Port Moody",
+          "url": "https://media-002-ca.cdn.govstack.com/portmoody-014-ca/media/yuxhrlr4/2023_statement_of_financial_information_-sofi-3.pdf",
+          "indexUrl": "https://www.portmoody.ca/city-government/plans-reports-and-publications/",
+          "downloaded": true,
+          "sha256": "31d3c09905e8318507a8eeb7ad8ef61f0c19b4aa5c7969885e0d044670e41ea1",
+          "bytes": 1694270,
+          "pages": 21,
+          "scheduleMatches": [
+            {
+              "page": 2,
+              "chars": 810,
+              "excerpt": "1 \n \nCity of Port Moody \nStatements and Schedules of Financial Information \nFor the Year Ended December 31, 2023 \n \n \nFinancial Information Regulation \nSchedule 1 \n \nSection \n \n \n \n \n \n \n \n \n \n \nPage "
+            },
+            {
+              "page": 8,
+              "chars": 3215,
+              "excerpt": "7 \n \nCity of Port Moody \nSchedule of Remuneration and Expenses \nFor the Year Ended December 31, 2023 \n \nPrepared under the Financial Information Regulation, Schedule 1, Section 6(2)(a). \nCouncil\nName "
+            },
+            {
+              "page": 9,
+              "chars": 4290,
+              "excerpt": "8 \n \nName\nPosition\nRemuneration \nTax Benefits \n& Payouts\nExpenses \nBrown, Corene \nPrograms & Youth Services Coordinator \n             84,781  \n            653  \n               171 \nBrownlee, Devon \nPr"
+            },
+            {
+              "page": 10,
+              "chars": 4306,
+              "excerpt": "9 \n \nName\nPosition\nRemuneration \nTax Benefits \n& Payouts\n \nExpenses \nHeaven, Kirk \nDeputy Fire Chief Community Safety \nTraining & Emergency Management \n           150,675  \n         2,338  \n          "
+            },
+            {
+              "page": 11,
+              "chars": 4345,
+              "excerpt": "10 \n \nName\nPosition\nRemuneration \nTax Benefits \n& Payouts\n \nExpenses \nMoffatt, Bryan \nUrban Forestry Supervisor \n             88,544  \n            244  \n            1,742 \nMohebi, Mohammad \nSenior Fac"
+            },
+            {
+              "page": 12,
+              "chars": 2416,
+              "excerpt": "11 \n \n \nName\nPosition\nRemuneration \nTax Benefits \n& Payouts\n \nExpenses \nTepes, Val \nManager of Facilities \n           125,783  \n            935  \n                 -    \nThomas, Sophie \nResearch & Spec"
+            }
+          ],
+          "totalTextChars": 32055,
+          "checkedOnLocalAuditDate": "2026-10-31",
+          "downloadFileMtimeUtc": "2026-11-01T01:52:16.595886+00:00",
+          "receiptNote": "Successful urllib original download; initial HTTP response metadata was not retained. SHA-256 and byte count were rechecked against the local original.",
+          "indexedYear": "2023",
+          "acceptedOverlapAtBaseline": [],
+          "retrievalStatus": "retrieved",
+          "periodInspected": null,
+          "namedSchedulePresence": "candidate-named-tables-in-embedded-text",
+          "textAvailability": "embedded-text-present; may include OCR",
+          "scope": null,
+          "processingOrProcurement": "processing",
+          "status": "public-layout-review",
+          "nextAction": "Resolve wrapped positions and the separate remuneration/tax-benefits-and-payouts/expense columns; verify the exact schedule period and all rows and controls before import."
+        },
+        {
+          "id": "city-of-port-moody-2024",
+          "employerSlug": "city-of-port-moody",
+          "employerName": "City of Port Moody",
+          "url": "https://media-002-ca.cdn.govstack.com/portmoody-014-ca/media/0n3nhqjd/2024-statement-of-financial-information.pdf",
+          "indexUrl": "https://www.portmoody.ca/city-government/plans-reports-and-publications/",
+          "downloaded": true,
+          "sha256": "8ca6ab1a4662257e8efd8f27d96ce169bc15e534ce3b5363789ba90f1064a6d0",
+          "bytes": 1514907,
+          "pages": 56,
+          "scheduleMatches": [
+            {
+              "page": 2,
+              "chars": 1074,
+              "excerpt": " \nC I T Y  O F  P O R T  M O O D Y  \n2024 Statement of Financial Information                                                                                                                            "
+            },
+            {
+              "page": 5,
+              "chars": 3319,
+              "excerpt": " \nC I T Y  O F  P O R T  M O O D Y  \n2024 Statement of Financial Information                                                                                                                            "
+            },
+            {
+              "page": 41,
+              "chars": 808,
+              "excerpt": " \nC I T Y  O F  P O R T  M O O D Y  \n2024 Statement of Financial Information                                                                                                                            "
+            },
+            {
+              "page": 42,
+              "chars": 2897,
+              "excerpt": " \nC I T Y  O F  P O R T  M O O D Y  \n2024 Statement of Financial Information                                                                                                                            "
+            },
+            {
+              "page": 43,
+              "chars": 2945,
+              "excerpt": " \nC I T Y  O F  P O R T  M O O D Y  \n2024 Statement of Financial Information                                                                                                                            "
+            },
+            {
+              "page": 44,
+              "chars": 2954,
+              "excerpt": " \nC I T Y  O F  P O R T  M O O D Y  \n2024 Statement of Financial Information                                                                                                                            "
+            },
+            {
+              "page": 45,
+              "chars": 2891,
+              "excerpt": " \nC I T Y  O F  P O R T  M O O D Y  \n2024 Statement of Financial Information                                                                                                                            "
+            },
+            {
+              "page": 46,
+              "chars": 2864,
+              "excerpt": " \nC I T Y  O F  P O R T  M O O D Y  \n2024 Statement of Financial Information                                                                                                                            "
+            },
+            {
+              "page": 47,
+              "chars": 2880,
+              "excerpt": " \nC I T Y  O F  P O R T  M O O D Y  \n2024 Statement of Financial Information                                                                                                                            "
+            },
+            {
+              "page": 48,
+              "chars": 2152,
+              "excerpt": " \nC I T Y  O F  P O R T  M O O D Y  \n2024 Statement of Financial Information                                                                                                                            "
+            }
+          ],
+          "totalTextChars": 112917,
+          "checkedOnLocalAuditDate": "2026-10-31",
+          "downloadFileMtimeUtc": "2026-11-01T01:52:17.430351+00:00",
+          "receiptNote": "Successful urllib original download; initial HTTP response metadata was not retained. SHA-256 and byte count were rechecked against the local original.",
+          "indexedYear": "2024",
+          "acceptedOverlapAtBaseline": [],
+          "retrievalStatus": "retrieved",
+          "periodInspected": null,
+          "namedSchedulePresence": "candidate-named-tables-in-embedded-text",
+          "textAvailability": "embedded-text-present; may include OCR",
+          "scope": null,
+          "processingOrProcurement": "processing",
+          "status": "public-layout-review",
+          "nextAction": "Resolve wrapped positions and the separate remuneration/tax-benefits-and-payouts/expense columns; verify the exact schedule period and all rows and controls before import."
+        },
+        {
+          "id": "city-of-port-moody-2025",
+          "employerSlug": "city-of-port-moody",
+          "employerName": "City of Port Moody",
+          "url": "https://media-002-ca.cdn.govstack.com/portmoody-014-ca/media/yrkh3rw0/edms-674189-v2-2025_statement_of_financial_information_-sofi.pdf",
+          "indexUrl": "https://www.portmoody.ca/city-government/plans-reports-and-publications/",
+          "downloaded": true,
+          "sha256": "2be6c71b4a1a12bf447fb363f8d3633acec16a55d4072631fb0cc973f8fdc44b",
+          "bytes": 1149849,
+          "pages": 55,
+          "scheduleMatches": [
+            {
+              "page": 2,
+              "chars": 1791,
+              "excerpt": " \nC I T Y  O F  P O R T  M O O D Y  \n2025 Statement of Financial Information                                                                                                                            "
+            },
+            {
+              "page": 5,
+              "chars": 3318,
+              "excerpt": " \nC I T Y  O F  P O R T  M O O D Y  \n2025 Statement of Financial Information                                                                                                                            "
+            },
+            {
+              "page": 40,
+              "chars": 809,
+              "excerpt": " \nC I T Y  O F  P O R T  M O O D Y  \n2025 Statement of Financial Information                                                                                                                            "
+            },
+            {
+              "page": 41,
+              "chars": 2797,
+              "excerpt": " \nC I T Y  O F  P O R T  M O O D Y  \n2025 Statement of Financial Information                                                                                                                            "
+            },
+            {
+              "page": 42,
+              "chars": 2848,
+              "excerpt": " \nC I T Y  O F  P O R T  M O O D Y  \n2025 Statement of Financial Information                                                                                                                            "
+            },
+            {
+              "page": 43,
+              "chars": 2825,
+              "excerpt": " \nC I T Y  O F  P O R T  M O O D Y  \n2025 Statement of Financial Information                                                                                                                            "
+            },
+            {
+              "page": 44,
+              "chars": 2764,
+              "excerpt": " \nC I T Y  O F  P O R T  M O O D Y  \n2025 Statement of Financial Information                                                                                                                            "
+            },
+            {
+              "page": 45,
+              "chars": 2548,
+              "excerpt": "C I T Y  O F  P O R T  M O O D Y\n2025 Statement of Financial Information \n 45 \nName \nPosition \nRemuneration \nTaxable \nBenefits \nExpenses \nPatterson, William \nPlatoon Captain \n 159,311 \n 18,283 \n 233 \n"
+            },
+            {
+              "page": 46,
+              "chars": 2781,
+              "excerpt": " \nC I T Y  O F  P O R T  M O O D Y  \n2025 Statement of Financial Information                                                                                                                            "
+            },
+            {
+              "page": 47,
+              "chars": 1213,
+              "excerpt": " \nC I T Y  O F  P O R T  M O O D Y  \n2025 Statement of Financial Information                                                                                                                            "
+            }
+          ],
+          "totalTextChars": 107889,
+          "checkedOnLocalAuditDate": "2026-10-31",
+          "downloadFileMtimeUtc": "2026-11-01T01:52:17.584524+00:00",
+          "receiptNote": "Successful urllib original download; initial HTTP response metadata was not retained. SHA-256 and byte count were rechecked against the local original.",
+          "indexedYear": "2025",
+          "acceptedOverlapAtBaseline": [],
+          "retrievalStatus": "retrieved",
+          "periodInspected": null,
+          "namedSchedulePresence": "candidate-named-tables-in-embedded-text",
+          "textAvailability": "embedded-text-present; may include OCR",
+          "scope": null,
+          "processingOrProcurement": "processing",
+          "status": "public-layout-review",
+          "nextAction": "Resolve wrapped positions and the separate remuneration/tax-benefits-and-payouts/expense columns; verify the exact schedule period and all rows and controls before import."
+        }
+      ],
+      "reuseExistingOcr": [],
+      "processingOrProcurement": "processing",
+      "nextAction": "Review the retrieved schedules and remaining linked history."
+    },
+    {
+      "employerSlug": "city-of-powell-river",
+      "employerName": "City of Powell River",
+      "sector": "Municipalities",
+      "baselineOfficialEmployeeYears": [],
+      "baselineOfficialCouncilYears": [],
+      "baselineCompiledEditionLabels": [],
+      "baselineCompiledRecords": 0,
+      "officialIndexUrl": "https://powellriver.ca/pages/financialstatementsandsofireports",
+      "archiveReceipt": {
+        "employerSlug": "city-of-powell-river",
+        "employerName": "City of Powell River",
+        "archiveUrl": "https://powellriver.ca/pages/financialstatementsandsofireports",
+        "officialEmployeeYears": [],
+        "officialCouncilYears": [],
+        "finalUrl": "https://powellriver.ca/pages/financialstatementsandsofireports",
+        "httpStatus": 200,
+        "contentType": "text/html; charset=utf-8",
+        "bytes": 277415,
+        "sha256": "1030c5b1161364174fd6e42c8cdcc960721e0eb8bcb9ca567beb9b3e9700d29d",
+        "kind": "official-index",
+        "candidates": [
+          {
+            "url": "https://powellriver.civicweb.net/filepro/documents/280/",
+            "label": "Financial Statements and SOFI Reports",
+            "alreadyInMunicipalAudit": false,
+            "periodVerified": false,
+            "scopeVerified": false,
+            "yearTokensInLabelOrUrl": [],
+            "indexedLabelYears": []
+          }
+        ],
+        "candidateInterpretation": "Links and label/path year tokens only; a link is not proof of a named schedule or reporting period.",
+        "checkedOnLocalAuditDate": "2026-10-31"
+      },
+      "historicalRange": {
+        "indexedLabelYears": [],
+        "documentYearsRetrieved": [],
+        "periodsInspected": [],
+        "caution": "Index labels and upload-path year tokens do not establish schedule periods or historical completeness."
+      },
+      "documents": [],
+      "reuseExistingOcr": [],
+      "processingOrProcurement": "processing",
+      "nextAction": "Follow the linked document/archive entries; check historical council attachments before making a routine report request."
+    },
+    {
+      "employerSlug": "city-of-revelstoke",
+      "employerName": "City of Revelstoke",
+      "sector": "Municipalities",
+      "baselineOfficialEmployeeYears": [],
+      "baselineOfficialCouncilYears": [],
+      "baselineCompiledEditionLabels": [],
+      "baselineCompiledRecords": 0,
+      "officialIndexUrl": "https://revelstoke.ca/86/Financial-Documents",
+      "archiveReceipt": {
+        "employerSlug": "city-of-revelstoke",
+        "employerName": "City of Revelstoke",
+        "archiveUrl": "http://www.revelstoke.ca",
+        "officialEmployeeYears": [],
+        "officialCouncilYears": [],
+        "finalUrl": "http://www.revelstoke.ca",
+        "httpStatus": 200,
+        "contentType": "text/html; charset=utf-8",
+        "bytes": 156962,
+        "sha256": "dc1befb46f2ad384530206ea52c7bb09aab71c1611999863459c5964dc9838ea",
+        "kind": "official-index",
+        "candidates": [],
+        "candidateInterpretation": "Links and label/path year tokens only; a link is not proof of a named schedule or reporting period.",
+        "checkedOnLocalAuditDate": "2026-10-31",
+        "alternateArchiveChecks": [
+          {
+            "archiveUrl": "https://revelstoke.ca/86/Financial-Documents",
+            "finalUrl": "https://revelstoke.ca/86/Financial-Documents",
+            "httpStatus": 200,
+            "bytes": 100529,
+            "sha256": "85bfe3a276b0b58eb66d8c4e45376c34f82e902582fb0fd8aac71dde62d6f2f4",
+            "retrievedAtUtc": "2026-11-01T02:03:05.298529+00:00",
+            "candidates": [
+              {
+                "url": "https://revelstoke.ca/86/Financial-Documents#tab42b95650-3f30-432e-9ea4-59c87018e4d4_1",
+                "label": "Statements of Financial Information (SOFI)",
+                "indexedLabelYears": [],
+                "periodVerified": false,
+                "scopeVerified": false,
+                "alreadyInMunicipalAudit": false
+              },
+              {
+                "url": "https://revelstoke.ca/DocumentCenter/View/16909/2025-SOFI-PDF",
+                "label": "2025 Statement of Financial Information (SOFI)",
+                "indexedLabelYears": [
+                  "2025"
+                ],
+                "periodVerified": false,
+                "scopeVerified": false,
+                "alreadyInMunicipalAudit": false
+              },
+              {
+                "url": "https://revelstoke.ca/DocumentCenter/View/16950/2024-SOFI-PDF",
+                "label": "2024 Statement of Financial Information (SOFI)",
+                "indexedLabelYears": [
+                  "2024"
+                ],
+                "periodVerified": false,
+                "scopeVerified": false,
+                "alreadyInMunicipalAudit": false
+              },
+              {
+                "url": "https://revelstoke.ca/DocumentCenter/View/16953/2023-SOFI-PDF",
+                "label": "2023 Statement of Financial Information (SOFI)",
+                "indexedLabelYears": [
+                  "2023"
+                ],
+                "periodVerified": false,
+                "scopeVerified": false,
+                "alreadyInMunicipalAudit": false
+              },
+              {
+                "url": "https://revelstoke.ca/DocumentCenter/View/16951/2022-SOFI-PDF",
+                "label": "2022 Statement of Financial Information (SOFI)",
+                "indexedLabelYears": [
+                  "2022"
+                ],
+                "periodVerified": false,
+                "scopeVerified": false,
+                "alreadyInMunicipalAudit": false
+              },
+              {
+                "url": "https://revelstoke.ca/DocumentCenter/View/16952/2021-SOFI-PDF",
+                "label": "2021 Statement of Financial Information (SOFI)",
+                "indexedLabelYears": [
+                  "2021"
+                ],
+                "periodVerified": false,
+                "scopeVerified": false,
+                "alreadyInMunicipalAudit": false
+              }
+            ]
+          }
+        ]
+      },
+      "historicalRange": {
+        "indexedLabelYears": [
+          "2021",
+          "2022",
+          "2023",
+          "2024",
+          "2025"
+        ],
+        "documentYearsRetrieved": [
+          "2021",
+          "2022",
+          "2023",
+          "2024",
+          "2025"
+        ],
+        "periodsInspected": [
+          "2021",
+          "2022",
+          "2023",
+          "2024",
+          "2025"
+        ],
+        "caution": "Index labels and upload-path year tokens do not establish schedule periods or historical completeness."
+      },
+      "documents": [
+        {
+          "id": "city-of-revelstoke-2021",
+          "employerSlug": "city-of-revelstoke",
+          "employerName": "City of Revelstoke",
+          "url": "https://revelstoke.ca/DocumentCenter/View/16952/2021-SOFI-PDF",
+          "indexUrl": "https://revelstoke.ca/86/Financial-Documents",
+          "retrievedAtUtc": "2026-11-01T01:59:39.187898+00:00",
+          "httpStatus": 200,
+          "finalUrl": "https://revelstoke.ca/DocumentCenter/View/16952/2021-SOFI-PDF",
+          "contentType": "application/pdf",
+          "downloaded": true,
+          "sha256": "895f800fac68609d2a4bea229be7a2c0941b06c3b075b0f189348885a1ac8c65",
+          "bytes": 1753611,
+          "pages": 51,
+          "totalTextChars": 73594,
+          "scheduleMatches": [
+            {
+              "page": 1,
+              "chars": 2125,
+              "excerpt": "Financial Information Act \nFinancial Information Regulation (FIR), Schedule 1 \nStatement of Financial Information (SOFI) \nIndex to FIR Schedule 1 and the Checklist\nPage 1:  Corporation Information \n \nMinistry Information"
+            },
+            {
+              "page": 2,
+              "chars": 1511,
+              "excerpt": "Index 2\nPage 3 & 4: Schedule of Remuneration and Expenses: Section Six  (continued)\n \n6(4) & (5) \n[Explanatory information for reference] \n6(6) \nReport employer portion of EI and CPP as a supplier payment \n6(7)(a) & (b) "
+            },
+            {
+              "page": 3,
+              "chars": 1025,
+              "excerpt": "1\nFinancial Information Regulation, Schedule 1 \nChecklist – Statement of Financial Information (SOFI)\nFor the Corporation:\nCorporate Name: \nContact Name: \nFiscal Year End: \nPhone Number:\nDate Submitted: \nE-mail:\nFor the "
+            },
+            {
+              "page": 5,
+              "chars": 1383,
+              "excerpt": "3\nFIR\nSchedule 1 \nSection \nItem \nYes \nNo \nN/A\nComments\nSchedule of Guarantee and Indemnity Agreements\n5 (1) \nList financial agreements that \nrequired government approval prior \nto being given (see Guarantees and \nIndemni"
+            },
+            {
+              "page": 6,
+              "chars": 1277,
+              "excerpt": "4\nFIR\nSchedule 1 \nSection \nItem \nYes \nNo \nN/A\nComments\nSchedule of Remuneration and Expenses \n(See Guidance Package for suggested format) \n6 (6) \nReport the employer portion of EI \nand CPP as a supplier payment to \nthe R"
+            },
+            {
+              "page": 37,
+              "chars": 1423,
+              "excerpt": "1\nName\nPosition\nRemuneration Expenses\nSee attached\n118,013\n$             \n3,228\n$          \n118,013\n$             \n3,228\n$          \n2\nName\nRemuneration\nExpenses\n3,102,640\n$         \n25,798\n          \n4,294,786\n         "
+            },
+            {
+              "page": 38,
+              "chars": 1160,
+              "excerpt": "Remuneration over $75,000\n3,102,639.72\n$   \nRemuneration under $75,000\n4,294,785.93\n     \n7,397,425.65\n     \nRemuneration ‐ elected officials\n118,013.00\n        \nBalance per T4 Summary\n7,515,438.65\n     \nReconciling item"
+            },
+            {
+              "page": 39,
+              "chars": 555,
+              "excerpt": "City of Revelstoke\nStatement of Remuneration and Expenses\nElected Officials\n2021\nName\nRemuneration\nExpenses\nMayor Gary Sulz\n36,084.00\n$     \n1,439.00\n$    \nCouncillor Michael Brooks-Hill\n16,608.00\n       \n-\n             "
+            },
+            {
+              "page": 40,
+              "chars": 2221,
+              "excerpt": "Position\nRemuneration\nExpenses\nADAM\nJesse\nRoads Foreman\n102,810.55\n$     \n-\n$             \nALLEN\nJodie\nHuman Resources Administrator\n82,427.34\n        \n3,204.92\n     \nBABCOCK\nJordan\nBuilding Inspector\n78,515.03\n        \n"
+            },
+            {
+              "page": 42,
+              "chars": 844,
+              "excerpt": "Balance per report\n30,359,280.37\n$    \nLess:\nGrants over $25,000\n(974,934.73)\n          \n29,384,345.64\n      \nAdd\nPayments under $25,000\n3,076,185.13\n        \nAdd\nGrants over $25,000\n974,934.73\n           \n33,435,465.50\n"
+            }
+          ],
+          "checkedOnLocalAuditDate": "2026-10-31",
+          "indexedYear": "2021",
+          "acceptedOverlapAtBaseline": [],
+          "retrievalStatus": "retrieved",
+          "periodInspected": {
+            "calendarYear": "2021",
+            "basis": "Year and named schedule text inspected; row acceptance not completed",
+            "physicalPages": [
+              39,
+              40
+            ]
+          },
+          "namedSchedulePresence": "named-employees-and-elected-officials-located",
+          "textAvailability": "embedded-text-present; may include OCR",
+          "scope": [
+            "employee-remuneration",
+            "elected-officials"
+          ],
+          "processingOrProcurement": "processing",
+          "status": "public-named-schedules-awaiting-review",
+          "nextAction": "Verify every rendered name/title/amount with both readers, full cohort counts, remuneration definition and monetary controls. The 2022 OCR-like layer requires particular glyph review."
+        },
+        {
+          "id": "city-of-revelstoke-2022",
+          "employerSlug": "city-of-revelstoke",
+          "employerName": "City of Revelstoke",
+          "url": "https://revelstoke.ca/DocumentCenter/View/16951/2022-SOFI-PDF",
+          "indexUrl": "https://revelstoke.ca/86/Financial-Documents",
+          "retrievedAtUtc": "2026-11-01T01:59:39.188650+00:00",
+          "httpStatus": 200,
+          "finalUrl": "https://revelstoke.ca/DocumentCenter/View/16951/2022-SOFI-PDF",
+          "contentType": "application/pdf",
+          "downloaded": true,
+          "sha256": "a69acb11e7a8c860ce0f300ec47af27ad64a6685c5a818f6012dc07d8c799286",
+          "bytes": 15011495,
+          "pages": 50,
+          "totalTextChars": 72270,
+          "scheduleMatches": [
+            {
+              "page": 1,
+              "chars": 2180,
+              "excerpt": "Print Form ]\nFinancial Information Act\nFinancial Information Regulation (FIR), Schedule 1\nStatement of Financial Information (SOFI)\nIndex to FIR Schedule 1 and the Checklist\nPage 1: Corporation Information\nMinistry Infor"
+            },
+            {
+              "page": 2,
+              "chars": 1580,
+              "excerpt": "Page 3 & 4: Schedule of Remuneration and Expenses: Section Six (continued)\n6(4) & (5) [Explanatory information for reference]\n6(6) Report employer portion of El and CPP as a supplier payment\n6(7)(a) & (b) Statement of se"
+            },
+            {
+              "page": 3,
+              "chars": 1191,
+              "excerpt": "Financial Information Regulation, Schedule 1\nChecklist - Statement of Financial Information fSOFI)\nFor the Corporation:\nCorporate Name: cltY of Revelstoke Contact Name: Justin Wetherill\nFiscal Year End: December 31, 2022"
+            },
+            {
+              "page": 5,
+              "chars": 1463,
+              "excerpt": "FIR\nSchedule 1\nSection\nItem\nYes No N/A\nComments\nSchedule of Guarantee and Indemnity Agreements\n5(1)\nList financial agreements that\nrequired government approval prior\nto being given (see Guarantees and\nIndemnities Regulat"
+            },
+            {
+              "page": 6,
+              "chars": 1357,
+              "excerpt": "FIR\nSchedule 1\nSection\nItem\nYes No N/A\nComments\nSchedule of Remuneration and Expenses\n(See Guidance Package for suggested format)\n6(6)\nReport the employer portion of El\nand CPP as a supplier payment to\nthe Receiver Gener"
+            },
+            {
+              "page": 36,
+              "chars": 1283,
+              "excerpt": "SCHEDULE SHOWING THE REMUNERATION AND EXPENSES PAID TO OR ON\nBEHALF OF EACH EMPLOYEE\n1\nElected Officials, Employees appointed by Cabinet and Members of the Board of Directors\nName\nPosition\nRemuneration Expenses\nSee attac"
+            },
+            {
+              "page": 37,
+              "chars": 984,
+              "excerpt": "City of Revelstoke\nReconciliation of Remuneration\n2022\nRemuneration over $75,000\nRemuneration under $75,000\nRemuneration - elected officials\nBalance per T4 Summary\nReconciling items:\nCapital project wages\nlncrease/(decre"
+            },
+            {
+              "page": 38,
+              "chars": 593,
+              "excerpt": "City of Revelstoke\nStatement of Remuneration and Expenses\nElected Officials\n2022\nName\nMayor Gary Sulz\nCouncillor Michael Brooks-Hill\nCouncillor Nicole Cherlet\nCouncillor Matt Cherry\nCouncillor Lee Devlin\nCouncillor Rob E"
+            },
+            {
+              "page": 39,
+              "chars": 2199,
+              "excerpt": "Employee's Remuneration over $75,000 & Employment Expenses\n2022\nName.\nADAM\nALLEN\nANDERSON\nBABCOCK\nBACON\nBIGGS\nBLACK\nBRON\nBROWN\nCAMERON\nCREIGHTON\nCYR\nDEROUSIE\nDO NATO\nECHLIN\nFLOYD\nHANSEN\nHARTLING\nHOWARD\nHUTCHISON\nJOHNSON\n"
+            },
+            {
+              "page": 40,
+              "chars": 399,
+              "excerpt": "CITY OF REVELSTOKE\nSTATEMENT OF SEVERANCE AGREEMENTS\nThere was one severance agreement under which payment commenced between City ofRevelstoke\nand its non-unionized employee during fiscal year 2022.\nThis agreement repres"
+            },
+            {
+              "page": 42,
+              "chars": 735,
+              "excerpt": "City of Revelstoke\nReconciliation of Supplier Payments over $25,000\n2022\nBalance per report\nLess: Grants over $25,000\nAdd Payments under $25,000\nAdd Grants over $25,000\nReconciling items:\nIncrease/fdecrease) in accounts "
+            }
+          ],
+          "checkedOnLocalAuditDate": "2026-10-31",
+          "indexedYear": "2022",
+          "acceptedOverlapAtBaseline": [],
+          "retrievalStatus": "retrieved",
+          "periodInspected": {
+            "calendarYear": "2022",
+            "basis": "Year and named schedule text inspected; row acceptance not completed",
+            "physicalPages": [
+              38,
+              39
+            ]
+          },
+          "namedSchedulePresence": "named-employees-and-elected-officials-located",
+          "textAvailability": "embedded-text-present; may include OCR",
+          "scope": [
+            "employee-remuneration",
+            "elected-officials"
+          ],
+          "processingOrProcurement": "processing",
+          "status": "public-named-schedules-awaiting-review",
+          "nextAction": "Verify every rendered name/title/amount with both readers, full cohort counts, remuneration definition and monetary controls. The 2022 OCR-like layer requires particular glyph review."
+        },
+        {
+          "id": "city-of-revelstoke-2023",
+          "employerSlug": "city-of-revelstoke",
+          "employerName": "City of Revelstoke",
+          "url": "https://revelstoke.ca/DocumentCenter/View/16953/2023-SOFI-PDF",
+          "indexUrl": "https://revelstoke.ca/86/Financial-Documents",
+          "retrievedAtUtc": "2026-11-01T01:59:39.189037+00:00",
+          "httpStatus": 200,
+          "finalUrl": "https://revelstoke.ca/DocumentCenter/View/16953/2023-SOFI-PDF",
+          "contentType": "application/pdf",
+          "downloaded": true,
+          "sha256": "0cb1508e353a98b073cbe42a9ad01045391c156a34833eed05dc05a098607834",
+          "bytes": 4607162,
+          "pages": 59,
+          "totalTextChars": 94251,
+          "scheduleMatches": [
+            {
+              "page": 1,
+              "chars": 2125,
+              "excerpt": "Financial Information Act \nFinancial Information Regulation (FIR), Schedule 1 \nStatement of Financial Information (SOFI) \nIndex to FIR Schedule 1 and the Checklist\nPage 1:  Corporation Information \n \nMinistry Information"
+            },
+            {
+              "page": 2,
+              "chars": 1511,
+              "excerpt": "Index 2\nPage 3 & 4: Schedule of Remuneration and Expenses: Section Six  (continued)\n \n6(4) & (5) \n[Explanatory information for reference] \n6(6) \nReport employer portion of EI and CPP as a supplier payment \n6(7)(a) & (b) "
+            },
+            {
+              "page": 3,
+              "chars": 1034,
+              "excerpt": "1\nFinancial Information Regulation, Schedule 1 \nChecklist – Statement of Financial Information (SOFI)\nFor the Corporation:\nCorporate Name: \nContact Name: \nFiscal Year End: \nPhone Number:\nDate Submitted: \nE-mail:\nFor the "
+            },
+            {
+              "page": 5,
+              "chars": 1383,
+              "excerpt": "3\nFIR\nSchedule 1 \nSection \nItem \nYes \nNo \nN/A\nComments\nSchedule of Guarantee and Indemnity Agreements\n5 (1) \nList financial agreements that \nrequired government approval prior \nto being given (see Guarantees and \nIndemni"
+            },
+            {
+              "page": 6,
+              "chars": 1277,
+              "excerpt": "4\nFIR\nSchedule 1 \nSection \nItem \nYes \nNo \nN/A\nComments\nSchedule of Remuneration and Expenses \n(See Guidance Package for suggested format) \n6 (6) \nReport the employer portion of EI \nand CPP as a supplier payment to \nthe R"
+            },
+            {
+              "page": 46,
+              "chars": 1423,
+              "excerpt": "1\nName\nPosition\nRemuneration Expenses\nSee attached\n192,165\n$            \n38,933\n$        \n192,165\n$             \n38,933\n$         \n2\nName\nRemuneration\nExpenses\n4,857,776\n$         \n76,929\n         \n4,167,441\n            "
+            },
+            {
+              "page": 47,
+              "chars": 1134,
+              "excerpt": "Remuneration over $75,000\n4,857,775.67\n$   \nRemuneration under $75,000\n4,167,441.26\n    \n9,025,216.93\n    \nRemuneration - elected officials\n192,165.00\n        \nBalance per T4 Summary\n9,217,381.93\n    \nReconciling items:\n"
+            },
+            {
+              "page": 48,
+              "chars": 515,
+              "excerpt": "City of Revelstoke\nStatement of Remuneration and Expenses\nElected Officials\n2023\nName\nRemuneration\nExpenses\nMayor Gary Sulz\n48,000.00\n$    \n8,193.76\n     \nCouncillor Matt Cherry\n24,027.50\n$    \n13,722.69\n   \nCouncillor L"
+            },
+            {
+              "page": 49,
+              "chars": 3287,
+              "excerpt": "Position\nRemuneration\nExpenses\nADAM\nJesse\nRoads Foreman\n122,034.19\n$      \n-\n$              \nALLEN\nJodie\nManager of Human Resources\n111,208.11\n$      \n2,849.28\n$     \nANDERSON\nJordie\nFinance Clerk\n79,165.31\n$        \n-\n$"
+            },
+            {
+              "page": 51,
+              "chars": 806,
+              "excerpt": "Balance per report\n40,825,482.32\n$   \nLess:\nGrants over $25,000\n(1,968,744.38)\n     \n38,856,737.94\n    \nAdd\nPayments under $25,000\n3,123,742.39\n      \nAdd\nGrants over $25,000\n1,968,744.38\n      \n43,949,224.71\n    \nReconc"
+            }
+          ],
+          "checkedOnLocalAuditDate": "2026-10-31",
+          "indexedYear": "2023",
+          "acceptedOverlapAtBaseline": [],
+          "retrievalStatus": "retrieved",
+          "periodInspected": {
+            "calendarYear": "2023",
+            "basis": "Year and named schedule text inspected; row acceptance not completed",
+            "physicalPages": [
+              48,
+              49
+            ]
+          },
+          "namedSchedulePresence": "named-employees-and-elected-officials-located",
+          "textAvailability": "embedded-text-present; may include OCR",
+          "scope": [
+            "employee-remuneration",
+            "elected-officials"
+          ],
+          "processingOrProcurement": "processing",
+          "status": "public-named-schedules-awaiting-review",
+          "nextAction": "Verify every rendered name/title/amount with both readers, full cohort counts, remuneration definition and monetary controls. The 2022 OCR-like layer requires particular glyph review."
+        },
+        {
+          "id": "city-of-revelstoke-2024",
+          "employerSlug": "city-of-revelstoke",
+          "employerName": "City of Revelstoke",
+          "url": "https://revelstoke.ca/DocumentCenter/View/16950/2024-SOFI-PDF",
+          "indexUrl": "https://revelstoke.ca/86/Financial-Documents",
+          "retrievedAtUtc": "2026-11-01T01:59:39.189685+00:00",
+          "httpStatus": 200,
+          "finalUrl": "https://revelstoke.ca/DocumentCenter/View/16950/2024-SOFI-PDF",
+          "contentType": "application/pdf",
+          "downloaded": true,
+          "sha256": "1fe9ba1403552dab4815ba9a8e111686c9ca60fccbc07529b3152be826a7386d",
+          "bytes": 4206916,
+          "pages": 58,
+          "totalTextChars": 92653,
+          "scheduleMatches": [
+            {
+              "page": 1,
+              "chars": 2125,
+              "excerpt": "Financial Information Act \nFinancial Information Regulation (FIR), Schedule 1 \nStatement of Financial Information (SOFI) \nIndex to FIR Schedule 1 and the Checklist\nPage 1:  Corporation Information \n \nMinistry Information"
+            },
+            {
+              "page": 2,
+              "chars": 1511,
+              "excerpt": "Index 2\nPage 3 & 4: Schedule of Remuneration and Expenses: Section Six  (continued)\n \n6(4) & (5) \n[Explanatory information for reference] \n6(6) \nReport employer portion of EI and CPP as a supplier payment \n6(7)(a) & (b) "
+            },
+            {
+              "page": 3,
+              "chars": 1020,
+              "excerpt": "1\nFinancial Information Regulation, Schedule 1 \nChecklist – Statement of Financial Information (SOFI)\nFor the Corporation:\nCorporate Name: \nContact Name: \nFiscal Year End: \nPhone Number:\nDate Submitted: \nE-mail:\nFor the "
+            },
+            {
+              "page": 5,
+              "chars": 1383,
+              "excerpt": "3\nFIR\nSchedule 1 \nSection \nItem \nYes \nNo \nN/A\nComments\nSchedule of Guarantee and Indemnity Agreements\n5 (1) \nList financial agreements that \nrequired government approval prior \nto being given (see Guarantees and \nIndemni"
+            },
+            {
+              "page": 6,
+              "chars": 1277,
+              "excerpt": "4\nFIR\nSchedule 1 \nSection \nItem \nYes \nNo \nN/A\nComments\nSchedule of Remuneration and Expenses \n(See Guidance Package for suggested format) \n6 (6) \nReport the employer portion of EI \nand CPP as a supplier payment to \nthe R"
+            },
+            {
+              "page": 44,
+              "chars": 1433,
+              "excerpt": "1\nName\nPosition\nRemuneration Expenses\nSee attached\n201,553\n$            \n31,718\n$          \n201,553\n$            \n31,718\n$          \n2\nName\nRemuneration\nExpenses\n6,235,614\n$         \n102,993\n          \n3,896,394\n        "
+            },
+            {
+              "page": 45,
+              "chars": 1184,
+              "excerpt": "Remuneration over $75,000\n6,235,613.89\n$    \nRemuneration under $75,000\n3,896,393.77\n      \n10,132,007.66\n    \nRemuneration - elected officials\n201,552.98\n          \nBalance per T4 Summary\n10,333,560.64\n    \nReconciling "
+            },
+            {
+              "page": 46,
+              "chars": 595,
+              "excerpt": "City of Revelstoke\nStatement of Remuneration and Expenses\nElected Officials\n2024\nName\nPosition\nRemuneration\nExpenses\nCHERRY\nMatt\nCouncillor\n24,969.00\n$        \n11,198.14\n$       \nDEVLIN\nLee\nCouncillor\n25,374.71\n$        "
+            },
+            {
+              "page": 47,
+              "chars": 6228,
+              "excerpt": "Position\nRemuneration\nExpenses\nADAM\nJesse\nRoads Foreman\n122,927.34\n$                    \n1,817.53\n$                        \nALLEN\nJodie\nManager of Human Resources\n121,387.57\n$                    \n3,816.01\n$              "
+            },
+            {
+              "page": 48,
+              "chars": 466,
+              "excerpt": "CITY OF REVELSTOKE \n \nSTATEMENT OF SEVERANCE AGREEMENTS \n \nThere were two severance agreements made between City of Revelstoke and its non-unionized \nemployees during fiscal year 2024. \n \nOne agreement represented 14.0 m"
+            },
+            {
+              "page": 50,
+              "chars": 804,
+              "excerpt": "Balance per report\n37,526,541.58\n$   \nLess:\nGrants over $25,000\n(1,943,904.45)\n     \n35,582,637.13\n    \nAdd\nPayments under $25,000\n3,359,538.40\n      \nAdd\nGrants over $25,000\n1,943,904.45\n      \n40,886,079.98\n    \nReconc"
+            }
+          ],
+          "checkedOnLocalAuditDate": "2026-10-31",
+          "indexedYear": "2024",
+          "acceptedOverlapAtBaseline": [],
+          "retrievalStatus": "retrieved",
+          "periodInspected": {
+            "calendarYear": "2024",
+            "basis": "Year and named schedule text inspected; row acceptance not completed",
+            "physicalPages": [
+              46,
+              47
+            ]
+          },
+          "namedSchedulePresence": "named-employees-and-elected-officials-located",
+          "textAvailability": "embedded-text-present; may include OCR",
+          "scope": [
+            "employee-remuneration",
+            "elected-officials"
+          ],
+          "processingOrProcurement": "processing",
+          "status": "public-named-schedules-awaiting-review",
+          "nextAction": "Verify every rendered name/title/amount with both readers, full cohort counts, remuneration definition and monetary controls. The 2022 OCR-like layer requires particular glyph review."
+        },
+        {
+          "id": "city-of-revelstoke-2025",
+          "employerSlug": "city-of-revelstoke",
+          "employerName": "City of Revelstoke",
+          "url": "https://revelstoke.ca/DocumentCenter/View/16909/2025-SOFI-PDF",
+          "indexUrl": "https://revelstoke.ca/86/Financial-Documents",
+          "retrievedAtUtc": "2026-11-01T01:59:40.082995+00:00",
+          "httpStatus": 200,
+          "finalUrl": "https://revelstoke.ca/DocumentCenter/View/16909/2025-SOFI-PDF",
+          "contentType": "application/pdf",
+          "downloaded": true,
+          "sha256": "00483f68e05588692d75b85390f0d9801331aab0da195437d4e9a7f10a03e71c",
+          "bytes": 4158637,
+          "pages": 53,
+          "totalTextChars": 78524,
+          "scheduleMatches": [
+            {
+              "page": 2,
+              "chars": 452,
+              "excerpt": "Consolidated Financial Statements\n1-33\nStatement of Guarantee and Indemnity Agreements\n34\nSchedule of Remuneration and Expenses\n35-37\nReconciliation of Remuneration\n38\nStatement of Severance Agreements\n39\nSchedule of Pay"
+            },
+            {
+              "page": 38,
+              "chars": 1356,
+              "excerpt": "1\nName\nPosition\nRemuneration\nExpenses\nSee attached\n205,251\n$ \n  \n60,477\n$ \n  \n205,251\n$ \n  \n60,477\n$ \n  \n2\nName\nRemuneration\nExpenses\n6,910,240\n$ \n  \n77,887\n$ \n  \n3,844,849\n  \n-  \nTotal: Other Employees\n10,755,089\n$ \n \n7"
+            },
+            {
+              "page": 39,
+              "chars": 468,
+              "excerpt": "Name\nPosition\nRemuneration\nExpenses\nCHERRY\nMatt\nCouncillor\n25,567\n  \n13,910\n  \nDEVLIN\nLee\nCouncillor\n25,567\n  \n6,402\n  \nLUCIOW\nAustin\nCouncillor\n25,567\n  \n4,720\n  \nORLANDO\nAaron\nCouncillor\n25,567\n  \n9,549\n  \nPALMER\nTim\nC"
+            },
+            {
+              "page": 40,
+              "chars": 3517,
+              "excerpt": "Position\nRemuneration\nExpenses\nADAM\nJesse\nRoads Supervisor \n125,669\n \n165\n \nALLEN\nJodie\nManager of Human Resources  \n130,113\n \n6,450\n \nANDERSON\nDerek\nEquipment Operator \n76,546\n \n- \nANDERSON\nJordie\nAccounting Technician "
+            },
+            {
+              "page": 41,
+              "chars": 975,
+              "excerpt": "City of Revelstoke\nReconciliation of Remuneration\nfor the year ended December 31, 2025\nRemuneration over $75,000\n6,910,240\n$ \n  \nRemuneration under $75,000\n3,844,849\n  \n10,755,089\n  \nRemuneration - elected officials\n205,"
+            },
+            {
+              "page": 42,
+              "chars": 354,
+              "excerpt": "Rebecca Armstrong, CPA, MAcc \nInterim Director of Finance\nStatement of Severance Agreements\nThere was one severance agreement made between the City of Revelstoke and its \nnon-unionized employees during the year ended Dec"
+            },
+            {
+              "page": 48,
+              "chars": 750,
+              "excerpt": "City of Revelstoke\nReconciliation of Supplier Payments over $25,000\nfor the year ended December 31, 2025\nBalance per report\n44,487,382\n$ \n  \nLess:\nGrants over $25,000\n(2,295,499)\n \n42,191,883\n  \nAdd\nPayments under $25,00"
+            }
+          ],
+          "checkedOnLocalAuditDate": "2026-10-31",
+          "indexedYear": "2025",
+          "acceptedOverlapAtBaseline": [],
+          "retrievalStatus": "retrieved",
+          "periodInspected": {
+            "calendarYear": "2025",
+            "basis": "Named schedule year checked in complete rendered schedule; all row fields reviewed",
+            "physicalPages": [
+              39,
+              40
+            ]
+          },
+          "namedSchedulePresence": "verified-named-employees-and-elected-officials",
+          "textAvailability": "embedded-text-present; may include OCR",
+          "scope": [
+            "employee-remuneration",
+            "elected-officials"
+          ],
+          "processingOrProcurement": "processing",
+          "status": "accepted-import-ready",
+          "acceptedImportSources": [
+            "sector-municipal-city-of-revelstoke-2025-elected-officials",
+            "sector-municipal-city-of-revelstoke-2025-employee-remuneration"
+          ],
+          "rowsReady": 72,
+          "nextAction": "Register the hash-pinned reviewed collection and expose its public source warnings; retain compiled cohorts unless a full independent match is proved."
+        }
+      ],
+      "reuseExistingOcr": [],
+      "processingOrProcurement": "processing",
+      "nextAction": "Review the retrieved schedules and remaining linked history."
+    },
+    {
+      "employerSlug": "city-of-rossland",
+      "employerName": "City of Rossland",
+      "sector": "Municipalities",
+      "baselineOfficialEmployeeYears": [],
+      "baselineOfficialCouncilYears": [],
+      "baselineCompiledEditionLabels": [],
+      "baselineCompiledRecords": 0,
+      "officialIndexUrl": "https://rossland.ca/departments/financial-services/financial-budgets-plans-reports/",
+      "archiveReceipt": {
+        "employerSlug": "city-of-rossland",
+        "employerName": "City of Rossland",
+        "archiveUrl": "https://rossland.ca/departments/financial-services/financial-budgets-plans-reports/",
+        "officialEmployeeYears": [],
+        "officialCouncilYears": [],
+        "finalUrl": "https://rossland.ca/departments/financial-services/financial-budgets-plans-reports/",
+        "httpStatus": 200,
+        "contentType": "text/html; charset=UTF-8",
+        "bytes": 269925,
+        "sha256": "ab827200deaed00ea32a7f61b3149c2ace4fc5bf94b041e6aa7552e7ddef3235",
+        "kind": "official-index",
+        "candidates": [
+          {
+            "url": "https://rossland.civicweb.net/filepro/documents/7042/",
+            "label": "SOFI Report",
+            "alreadyInMunicipalAudit": true,
+            "periodVerified": false,
+            "scopeVerified": false,
+            "yearTokensInLabelOrUrl": [],
+            "indexedLabelYears": []
+          }
+        ],
+        "candidateInterpretation": "Links and label/path year tokens only; a link is not proof of a named schedule or reporting period.",
+        "checkedOnLocalAuditDate": "2026-10-31"
+      },
+      "historicalRange": {
+        "indexedLabelYears": [],
+        "documentYearsRetrieved": [],
+        "periodsInspected": [],
+        "caution": "Index labels and upload-path year tokens do not establish schedule periods or historical completeness."
+      },
+      "documents": [],
+      "reuseExistingOcr": [],
+      "processingOrProcurement": "processing",
+      "nextAction": "Follow the linked document/archive entries; check historical council attachments before making a routine report request."
+    },
+    {
+      "employerSlug": "city-of-salmon-arm",
+      "employerName": "City of Salmon Arm",
+      "sector": "Municipalities",
+      "baselineOfficialEmployeeYears": [],
+      "baselineOfficialCouncilYears": [],
+      "baselineCompiledEditionLabels": [],
+      "baselineCompiledRecords": 0,
+      "officialIndexUrl": "https://www.salmonarm.ca/Archive.aspx?AMID=52",
+      "archiveReceipt": {
+        "employerSlug": "city-of-salmon-arm",
+        "employerName": "City of Salmon Arm",
+        "archiveUrl": "https://www.salmonarm.ca/Archive.aspx?AMID=52",
+        "officialEmployeeYears": [],
+        "officialCouncilYears": [],
+        "finalUrl": "https://www.salmonarm.ca/Archive.aspx?AMID=52",
+        "httpStatus": 200,
+        "contentType": "text/html; charset=utf-8",
+        "bytes": 107447,
+        "sha256": "1e21b9537a6452636aa44c7f1c54120681cc1b2d820859596aa67fba6c2bf799",
+        "kind": "official-index",
+        "candidates": [
+          {
+            "url": "https://www.salmonarm.ca/Archive.aspx?ADID=1286",
+            "label": "2025 Statement of Financial Information",
+            "alreadyInMunicipalAudit": true,
+            "periodVerified": false,
+            "scopeVerified": false,
+            "yearTokensInLabelOrUrl": [
+              "2025"
+            ],
+            "indexedLabelYears": [
+              "2025"
+            ]
+          },
+          {
+            "url": "https://www.salmonarm.ca/Archive.aspx?ADID=1275",
+            "label": "2024 Statement of Financial Information",
+            "alreadyInMunicipalAudit": true,
+            "periodVerified": false,
+            "scopeVerified": false,
+            "yearTokensInLabelOrUrl": [
+              "2024"
+            ],
+            "indexedLabelYears": [
+              "2024"
+            ]
+          },
+          {
+            "url": "https://www.salmonarm.ca/Archive.aspx?ADID=1219",
+            "label": "2023 Statement of Financial Information",
+            "alreadyInMunicipalAudit": true,
+            "periodVerified": false,
+            "scopeVerified": false,
+            "yearTokensInLabelOrUrl": [
+              "2023"
+            ],
+            "indexedLabelYears": [
+              "2023"
+            ]
+          },
+          {
+            "url": "https://www.salmonarm.ca/Archive.aspx?ADID=1170",
+            "label": "2022 Statement of Financial Information",
+            "alreadyInMunicipalAudit": true,
+            "periodVerified": false,
+            "scopeVerified": false,
+            "yearTokensInLabelOrUrl": [
+              "2022"
+            ],
+            "indexedLabelYears": [
+              "2022"
+            ]
+          },
+          {
+            "url": "https://www.salmonarm.ca/Archive.aspx?ADID=1131",
+            "label": "2021 Statement of Financial Information",
+            "alreadyInMunicipalAudit": true,
+            "periodVerified": false,
+            "scopeVerified": false,
+            "yearTokensInLabelOrUrl": [
+              "2021"
+            ],
+            "indexedLabelYears": [
+              "2021"
+            ]
+          }
+        ],
+        "candidateInterpretation": "Links and label/path year tokens only; a link is not proof of a named schedule or reporting period.",
+        "checkedOnLocalAuditDate": "2026-10-31"
+      },
+      "historicalRange": {
+        "indexedLabelYears": [
+          "2021",
+          "2022",
+          "2023",
+          "2024",
+          "2025"
+        ],
+        "documentYearsRetrieved": [],
+        "periodsInspected": [],
+        "caution": "Index labels and upload-path year tokens do not establish schedule periods or historical completeness."
+      },
+      "documents": [],
+      "reuseExistingOcr": [],
+      "processingOrProcurement": "processing",
+      "nextAction": "Follow the linked document/archive entries; check historical council attachments before making a routine report request."
+    },
+    {
+      "employerSlug": "town-of-sidney",
+      "employerName": "Town of Sidney",
+      "sector": "Municipalities",
+      "baselineOfficialEmployeeYears": [],
+      "baselineOfficialCouncilYears": [],
+      "baselineCompiledEditionLabels": [],
+      "baselineCompiledRecords": 0,
+      "officialIndexUrl": "https://www.sidney.ca/government/financial-accountability/financial-reporting/",
+      "archiveReceipt": {
+        "employerSlug": "town-of-sidney",
+        "employerName": "Town of Sidney",
+        "archiveUrl": "https://www.sidney.ca/government/financial-accountability/financial-reporting/",
+        "officialEmployeeYears": [],
+        "officialCouncilYears": [],
+        "finalUrl": "https://www.sidney.ca/government/financial-accountability/financial-reporting/",
+        "httpStatus": 200,
+        "contentType": "text/html; charset=UTF-8",
+        "bytes": 186111,
+        "sha256": "7bd6eadd38be5473dd9cbe93960a567b4acc19ef99fc5fd2de427b08d275a583",
+        "kind": "official-index",
+        "candidates": [
+          {
+            "url": "https://www.sidney.ca/government/your-council/council-remuneration/",
+            "label": "Council Remuneration",
+            "alreadyInMunicipalAudit": true,
+            "periodVerified": false,
+            "scopeVerified": false,
+            "yearTokensInLabelOrUrl": [],
+            "indexedLabelYears": []
+          }
+        ],
+        "candidateInterpretation": "Links and label/path year tokens only; a link is not proof of a named schedule or reporting period.",
+        "checkedOnLocalAuditDate": "2026-10-31"
+      },
+      "historicalRange": {
+        "indexedLabelYears": [],
+        "documentYearsRetrieved": [],
+        "periodsInspected": [],
+        "caution": "Index labels and upload-path year tokens do not establish schedule periods or historical completeness."
+      },
+      "documents": [],
+      "reuseExistingOcr": [],
+      "processingOrProcurement": "processing",
+      "nextAction": "Follow the linked document/archive entries; check historical council attachments before making a routine report request."
+    },
+    {
+      "employerSlug": "district-of-summerland",
+      "employerName": "District of Summerland",
+      "sector": "Municipalities",
+      "baselineOfficialEmployeeYears": [],
+      "baselineOfficialCouncilYears": [],
+      "baselineCompiledEditionLabels": [],
+      "baselineCompiledRecords": 0,
+      "officialIndexUrl": "https://www.summerland.ca/docs/default-source/your-city-hall/departments/finance/2023-signed-sofi.pdf?sfvrsn=360ecdfb_0",
+      "archiveReceipt": {
+        "employerSlug": "district-of-summerland",
+        "employerName": "District of Summerland",
+        "archiveUrl": "https://www.summerland.ca/docs/default-source/your-city-hall/departments/finance/2023-signed-sofi.pdf?sfvrsn=360ecdfb_0",
+        "officialEmployeeYears": [],
+        "officialCouncilYears": [],
+        "finalUrl": "https://www.summerland.ca/docs/default-source/your-city-hall/departments/finance/2023-signed-sofi.pdf?sfvrsn=360ecdfb_0",
+        "httpStatus": 200,
+        "contentType": "application/pdf",
+        "bytes": 315836,
+        "sha256": "60ecc506e045d56c4081e558636dc11651c64cb6606071af66d6644e4dbff6ea",
+        "kind": "pdf-archive-target",
+        "candidates": [],
+        "candidateInterpretation": "Links and label/path year tokens only; a link is not proof of a named schedule or reporting period.",
+        "checkedOnLocalAuditDate": "2026-10-31"
+      },
+      "historicalRange": {
+        "indexedLabelYears": [],
+        "documentYearsRetrieved": [],
+        "periodsInspected": [],
+        "caution": "Index labels and upload-path year tokens do not establish schedule periods or historical completeness."
+      },
+      "documents": [],
+      "reuseExistingOcr": [],
+      "processingOrProcurement": "deeper-archive-research",
+      "nextAction": "Search the official document centre and council agenda archive; absence of a detected HTML link is not evidence a report must be procured."
+    },
+    {
+      "employerSlug": "city-of-west-kelowna",
+      "employerName": "City of West Kelowna",
+      "sector": "Municipalities",
+      "baselineOfficialEmployeeYears": [],
+      "baselineOfficialCouncilYears": [],
+      "baselineCompiledEditionLabels": [],
+      "baselineCompiledRecords": 0,
+      "officialIndexUrl": "https://www.westkelownacity.ca/city-hall/annual-report-and-financial-statements/",
+      "archiveReceipt": {
+        "employerSlug": "city-of-west-kelowna",
+        "employerName": "City of West Kelowna",
+        "archiveUrl": "https://www.westkelownacity.ca/city-hall/annual-report-and-financial-statements/",
+        "officialEmployeeYears": [],
+        "officialCouncilYears": [],
+        "finalUrl": "https://www.westkelownacity.ca/city-hall/annual-report-and-financial-statements/",
+        "httpStatus": 200,
+        "contentType": "text/html; charset=utf-8",
+        "bytes": 86634,
+        "sha256": "7a5afb788e814349b7bdc1d91864560e279a65704f0b4f9d6df535476bec796e",
+        "kind": "official-index",
+        "candidates": [
+          {
+            "url": "https://media-003-ca.cdn.govstack.com/westkelownacity-ca/media/ivnmzv31/2025-draft-statement-of-financial-information.pdf",
+            "label": "Read the 2025 SOFI report",
+            "alreadyInMunicipalAudit": true,
+            "periodVerified": false,
+            "scopeVerified": false,
+            "yearTokensInLabelOrUrl": [
+              "2025"
+            ],
+            "indexedLabelYears": [
+              "2025"
+            ]
+          }
+        ],
+        "candidateInterpretation": "Links and label/path year tokens only; a link is not proof of a named schedule or reporting period.",
+        "checkedOnLocalAuditDate": "2026-10-31"
+      },
+      "historicalRange": {
+        "indexedLabelYears": [
+          "2025"
+        ],
+        "documentYearsRetrieved": [],
+        "periodsInspected": [],
+        "caution": "Index labels and upload-path year tokens do not establish schedule periods or historical completeness."
+      },
+      "documents": [],
+      "reuseExistingOcr": [],
+      "processingOrProcurement": "processing",
+      "nextAction": "Follow the linked document/archive entries; check historical council attachments before making a routine report request."
+    },
+    {
+      "employerSlug": "city-of-williams-lake",
+      "employerName": "City of Williams Lake",
+      "sector": "Municipalities",
+      "baselineOfficialEmployeeYears": [],
+      "baselineOfficialCouncilYears": [],
+      "baselineCompiledEditionLabels": [],
+      "baselineCompiledRecords": 0,
+      "officialIndexUrl": "https://williamslake.ca/Archive.aspx?AMID=49",
+      "archiveReceipt": {
+        "employerSlug": "city-of-williams-lake",
+        "employerName": "City of Williams Lake",
+        "archiveUrl": "https://williamslake.ca/Archive.aspx?AMID=49",
+        "officialEmployeeYears": [],
+        "officialCouncilYears": [],
+        "finalUrl": "https://williamslake.ca/Archive.aspx?AMID=49",
+        "httpStatus": 200,
+        "contentType": "text/html; charset=utf-8",
+        "bytes": 99456,
+        "sha256": "26b0f897c7c90e5b7d04c1a66882be69f2fcbe076ab8004f6af1187d85593034",
+        "kind": "official-index",
+        "candidates": [
+          {
+            "url": "https://williamslake.ca/Archive.aspx?ADID=674",
+            "label": "2025 SOFI Report",
+            "alreadyInMunicipalAudit": true,
+            "periodVerified": false,
+            "scopeVerified": false,
+            "yearTokensInLabelOrUrl": [
+              "2025"
+            ],
+            "indexedLabelYears": [
+              "2025"
+            ]
+          },
+          {
+            "url": "https://williamslake.ca/Archive.aspx?ADID=653",
+            "label": "2024 SOFI Report",
+            "alreadyInMunicipalAudit": true,
+            "periodVerified": false,
+            "scopeVerified": false,
+            "yearTokensInLabelOrUrl": [
+              "2024"
+            ],
+            "indexedLabelYears": [
+              "2024"
+            ]
+          },
+          {
+            "url": "https://williamslake.ca/Archive.aspx?ADID=630",
+            "label": "2023 SOFI Report",
+            "alreadyInMunicipalAudit": true,
+            "periodVerified": false,
+            "scopeVerified": false,
+            "yearTokensInLabelOrUrl": [
+              "2023"
+            ],
+            "indexedLabelYears": [
+              "2023"
+            ]
+          },
+          {
+            "url": "https://williamslake.ca/Archive.aspx?ADID=607",
+            "label": "2022 SOFI Report",
+            "alreadyInMunicipalAudit": true,
+            "periodVerified": false,
+            "scopeVerified": false,
+            "yearTokensInLabelOrUrl": [
+              "2022"
+            ],
+            "indexedLabelYears": [
+              "2022"
+            ]
+          },
+          {
+            "url": "https://williamslake.ca/Archive.aspx?ADID=577",
+            "label": "2021 SOFI Report",
+            "alreadyInMunicipalAudit": true,
+            "periodVerified": false,
+            "scopeVerified": false,
+            "yearTokensInLabelOrUrl": [
+              "2021"
+            ],
+            "indexedLabelYears": [
+              "2021"
+            ]
+          },
+          {
+            "url": "https://williamslake.ca/Archive.aspx?ADID=552",
+            "label": "2020 SOFI Report",
+            "alreadyInMunicipalAudit": true,
+            "periodVerified": false,
+            "scopeVerified": false,
+            "yearTokensInLabelOrUrl": [
+              "2020"
+            ],
+            "indexedLabelYears": [
+              "2020"
+            ]
+          },
+          {
+            "url": "https://williamslake.ca/Archive.aspx?ADID=537",
+            "label": "2019 SOFI Report",
+            "alreadyInMunicipalAudit": true,
+            "periodVerified": false,
+            "scopeVerified": false,
+            "yearTokensInLabelOrUrl": [
+              "2019"
+            ],
+            "indexedLabelYears": [
+              "2019"
+            ]
+          },
+          {
+            "url": "https://williamslake.ca/Archive.aspx?ADID=502",
+            "label": "2018 SOFI Report",
+            "alreadyInMunicipalAudit": true,
+            "periodVerified": false,
+            "scopeVerified": false,
+            "yearTokensInLabelOrUrl": [
+              "2018"
+            ],
+            "indexedLabelYears": [
+              "2018"
+            ]
+          },
+          {
+            "url": "https://williamslake.ca/Archive.aspx?ADID=473",
+            "label": "2017 SOFI Report",
+            "alreadyInMunicipalAudit": true,
+            "periodVerified": false,
+            "scopeVerified": false,
+            "yearTokensInLabelOrUrl": [
+              "2017"
+            ],
+            "indexedLabelYears": [
+              "2017"
+            ]
+          },
+          {
+            "url": "https://williamslake.ca/Archive.aspx?ADID=424",
+            "label": "2016 SOFI Report",
+            "alreadyInMunicipalAudit": true,
+            "periodVerified": false,
+            "scopeVerified": false,
+            "yearTokensInLabelOrUrl": [
+              "2016"
+            ],
+            "indexedLabelYears": [
+              "2016"
+            ]
+          },
+          {
+            "url": "https://williamslake.ca/Archive.aspx?ADID=363",
+            "label": "2015 SOFI Report",
+            "alreadyInMunicipalAudit": true,
+            "periodVerified": false,
+            "scopeVerified": false,
+            "yearTokensInLabelOrUrl": [
+              "2015"
+            ],
+            "indexedLabelYears": [
+              "2015"
+            ]
+          },
+          {
+            "url": "https://williamslake.ca/Archive.aspx?ADID=314",
+            "label": "2014 SOFI Report",
+            "alreadyInMunicipalAudit": true,
+            "periodVerified": false,
+            "scopeVerified": false,
+            "yearTokensInLabelOrUrl": [
+              "2014"
+            ],
+            "indexedLabelYears": [
+              "2014"
+            ]
+          },
+          {
+            "url": "https://williamslake.ca/Archive.aspx?ADID=265",
+            "label": "2013 SOFI Report",
+            "alreadyInMunicipalAudit": true,
+            "periodVerified": false,
+            "scopeVerified": false,
+            "yearTokensInLabelOrUrl": [
+              "2013"
+            ],
+            "indexedLabelYears": [
+              "2013"
+            ]
+          },
+          {
+            "url": "https://williamslake.ca/Archive.aspx?ADID=217",
+            "label": "2012 SOFI Report",
+            "alreadyInMunicipalAudit": true,
+            "periodVerified": false,
+            "scopeVerified": false,
+            "yearTokensInLabelOrUrl": [
+              "2012"
+            ],
+            "indexedLabelYears": [
+              "2012"
+            ]
+          },
+          {
+            "url": "https://williamslake.ca/Archive.aspx?ADID=216",
+            "label": "2011 SOFI Report",
+            "alreadyInMunicipalAudit": true,
+            "periodVerified": false,
+            "scopeVerified": false,
+            "yearTokensInLabelOrUrl": [
+              "2011"
+            ],
+            "indexedLabelYears": [
+              "2011"
+            ]
+          }
+        ],
+        "candidateInterpretation": "Links and label/path year tokens only; a link is not proof of a named schedule or reporting period.",
+        "checkedOnLocalAuditDate": "2026-10-31"
+      },
+      "historicalRange": {
+        "indexedLabelYears": [
+          "2011",
+          "2012",
+          "2013",
+          "2014",
+          "2015",
+          "2016",
+          "2017",
+          "2018",
+          "2019",
+          "2020",
+          "2021",
+          "2022",
+          "2023",
+          "2024",
+          "2025"
+        ],
+        "documentYearsRetrieved": [],
+        "periodsInspected": [],
+        "caution": "Index labels and upload-path year tokens do not establish schedule periods or historical completeness."
+      },
+      "documents": [],
+      "reuseExistingOcr": [],
+      "processingOrProcurement": "processing",
+      "nextAction": "Follow the linked document/archive entries; check historical council attachments before making a routine report request."
+    }
+  ],
+  "procurementRequests": {
+    "provenance": "../../municipal-audit/follow-up.json from the merged audit; carried forward, not newly asserted to have been reverified by these archive checks.",
+    "requestStatus": "not-sent",
+    "requests": [
+      {
+        "employerSlug": "city-of-abbotsford",
+        "municipality": "City of Abbotsford",
+        "year": null,
+        "blocker": "Official finance page says SOFI is available on request; no accepted official records.",
+        "ask": "Public adopted 2025 SOFI employee and council schedules and existing spreadsheet/CSV; an index of earlier available years and amendments.",
+        "route": "routine-public-record-request",
+        "url": "https://www.abbotsford.ca/city-hall/finance",
+        "archiveUrl": "https://www.abbotsford.ca/city-hall/finance",
+        "sourceUrls": [],
+        "firstRoute": "Check the linked public archive for the final/correct schedule, then ask Finance or Corporate Services routinely.",
+        "formalAccessFallback": "Only if routine access does not resolve it: verify the municipality’s official access-to-information process, recipient and any fee before filing.",
+        "contactVerified": false,
+        "requestStatus": "not-sent"
+      },
+      {
+        "employerSlug": "city-of-west-kelowna",
+        "municipality": "City of West Kelowna",
+        "year": "2025",
+        "blocker": "Linked report is labelled draft and its approval page is unsigned.",
+        "ask": "Final/adopted 2025 SOFI, or the adoption resolution and confirmation that the linked tables are the adopted version.",
+        "route": "final-version-or-adoption-evidence",
+        "archiveUrl": "https://www.westkelownacity.ca/city-hall/annual-report-and-financial-statements/",
+        "sourceUrls": [
+          "https://media-003-ca.cdn.govstack.com/westkelownacity-ca/media/ivnmzv31/2025-draft-statement-of-financial-information.pdf"
+        ],
+        "firstRoute": "Check the linked public archive for the final/correct schedule, then ask Finance or Corporate Services routinely.",
+        "formalAccessFallback": "Only if routine access does not resolve it: verify the municipality’s official access-to-information process, recipient and any fee before filing.",
+        "contactVerified": false,
+        "requestStatus": "not-sent"
+      },
+      {
+        "employerSlug": "city-of-salmon-arm",
+        "municipality": "City of Salmon Arm",
+        "year": "2025",
+        "blocker": "SOFI-labelled download contains financial statements without the named remuneration schedules.",
+        "ask": "Actual adopted 2025 employee and council remuneration/expense schedules, including amendments and existing electronic tables.",
+        "route": "missing-schedules",
+        "archiveUrl": "https://www.salmonarm.ca/Archive.aspx?AMID=52",
+        "sourceUrls": [
+          "https://www.salmonarm.ca/Archive.aspx?ADID=1286"
+        ],
+        "firstRoute": "Check the linked public archive for the final/correct schedule, then ask Finance or Corporate Services routinely.",
+        "formalAccessFallback": "Only if routine access does not resolve it: verify the municipality’s official access-to-information process, recipient and any fee before filing.",
+        "contactVerified": false,
+        "requestStatus": "not-sent"
+      },
+      {
+        "employerSlug": "district-of-new-hazelton",
+        "municipality": "District of New Hazelton",
+        "year": null,
+        "blocker": "Attachment filename says 2023 but its first remuneration schedule says 2022.",
+        "ask": "Separate adopted 2022 and 2023 employee and council schedules, with confirmation of each schedule’s reporting period.",
+        "route": "reporting-period-clarification",
+        "archiveUrl": "https://newhazelton.ca/sofi-reports/",
+        "sourceUrls": [
+          "https://newhazelton.ca/wp-content/uploads/2026/09/SOFI-2023-Complete-Package.pdf"
+        ],
+        "firstRoute": "Check the linked public archive for the final/correct schedule, then ask Finance or Corporate Services routinely.",
+        "formalAccessFallback": "Only if routine access does not resolve it: verify the municipality’s official access-to-information process, recipient and any fee before filing.",
+        "contactVerified": false,
+        "requestStatus": "not-sent"
+      },
+      {
+        "sourceId": "lower-mainland-surrey-2025-employees",
+        "employerSlug": "city-of-surrey",
+        "year": "2025",
+        "rows": 1543,
+        "componentResiduals": [
+          12,
+          -1,
+          473
+        ],
+        "action": "Import original individual amounts with a public warning; request explanation or amended component subtotals.",
+        "municipality": "City of Surrey",
+        "sourceUrl": "https://www.surrey.ca/sites/default/files/media/documents/2025-SOFI-Statement-of-Financial-Information.pdf",
+        "sourceSha256": "ad57a85407520cbe9ebc2928e0a8ad7bffa1d9529209f17a4640b19227fea5db",
+        "dataSha256": "b55916668fe8cd58578ea99c64fa800c97c1e3dc2c70c35995297b1b96441ca8",
+        "archiveUrl": "https://www.surrey.ca/city-government/city-departments/finance/financial-documents",
+        "requestStatus": "not-sent",
+        "route": "source-control-clarification",
+        "ask": "Explain the recorded component differences (12, -1, 473 CAD; row sums minus controls), or provide an amended 2025 schedule and existing electronic file. Do not allocate differences to an individual without source evidence.",
+        "blocker": "Import original individual amounts with a public warning; request explanation or amended component subtotals.",
+        "firstRoute": "Routine clarification/correction request to Finance; accepted published rows remain in the app with their warning.",
+        "formalAccessFallback": "If necessary, request existing source tables/corrections through the verified official access process; an access request cannot require a new explanation to be created.",
+        "contactVerified": false
+      },
+      {
+        "sourceId": "lower-mainland-north-vancouver-city-2022-employees",
+        "employerSlug": "city-of-north-vancouver",
+        "year": "2022",
+        "rows": 275,
+        "componentResiduals": [
+          0,
+          -143,
+          -1
+        ],
+        "action": "Import original remuneration and expenses with a public warning; do not use expense-inclusive total as pay. Request clarification.",
+        "municipality": "City of North Vancouver",
+        "sourceUrl": "https://www.cnv.org/-/media/City-of-North-Vancouver/Documents/City-Finances/2022/2022-Statement-of-Financial-Information-SOFI.PDF",
+        "sourceSha256": "5c6b3c4bc779ce2722735e8447d05f5422842a75dd3026e6ae9de231330ec773",
+        "dataSha256": "dab7f3248968d789ddac5dce857ae3bbd56978edc93757847b3ec4ae176c20fa",
+        "archiveUrl": "https://www.cnv.org/City-Hall/Finances/financial-statements",
+        "requestStatus": "not-sent",
+        "route": "source-control-clarification",
+        "ask": "Explain the recorded component differences (0, -143, -1 CAD; row sums minus controls), or provide an amended 2022 schedule and existing electronic file. Do not allocate differences to an individual without source evidence.",
+        "blocker": "Import original remuneration and expenses with a public warning; do not use expense-inclusive total as pay. Request clarification.",
+        "firstRoute": "Routine clarification/correction request to Finance; accepted published rows remain in the app with their warning.",
+        "formalAccessFallback": "If necessary, request existing source tables/corrections through the verified official access process; an access request cannot require a new explanation to be created.",
+        "contactVerified": false
+      },
+      {
+        "sourceId": "municipal-small-village-of-montrose-2023-employee-remuneration",
+        "employerSlug": "village-of-montrose",
+        "year": "2023",
+        "rows": 3,
+        "componentResiduals": [
+          0,
+          -36
+        ],
+        "action": "Import the three visually reviewed employee rows with a public warning; request the employee expense correction. Preserve the separately reconciled council cohort.",
+        "municipality": "Village of Montrose",
+        "sourceUrl": "https://www.montrose.ca/wp-content/uploads/2025/05/2023-SOFI-Copy-for-website.pdf",
+        "sourceSha256": "bcdebe3816ebb0c69a783b379619da10608d9b2ff446084ef939c04906c83989",
+        "dataSha256": "931654b1aad4a1fda5c31bb691c8d60623645aba3c0dee0893b3830bdc712ed2",
+        "archiveUrl": "https://www.montrose.ca/document-category/annual-reports/",
+        "requestStatus": "not-sent",
+        "route": "source-control-clarification",
+        "ask": "Explain the recorded component differences (0, -36 CAD; row sums minus controls), or provide an amended 2023 schedule and existing electronic file. Do not allocate differences to an individual without source evidence.",
+        "blocker": "Import the three visually reviewed employee rows with a public warning; request the employee expense correction. Preserve the separately reconciled council cohort.",
+        "firstRoute": "Routine clarification/correction request to Finance; accepted published rows remain in the app with their warning.",
+        "formalAccessFallback": "If necessary, request existing source tables/corrections through the verified official access process; an access request cannot require a new explanation to be created.",
+        "contactVerified": false
+      },
+      {
+        "employerSlug": "town-of-creston",
+        "municipality": "Town of Creston",
+        "year": "2024",
+        "route": "electronic-source-or-higher-quality-scan",
+        "archiveUrl": "https://www.creston.ca/statement-financial-information",
+        "ask": "Existing 2024 employee spreadsheet or a higher-quality remuneration scan, including the named row controls; several OCR glyphs and the candidate component sums remain unresolved. Council was accepted separately.",
+        "blocker": "Existing 2024 employee spreadsheet or a higher-quality remuneration scan, including the named row controls; several OCR glyphs and the candidate component sums remain unresolved. Council was accepted separately.",
+        "requestStatus": "not-sent",
+        "contactVerified": false,
+        "firstRoute": "Routine public-record or clarification request to Finance or Corporate Services.",
+        "formalAccessFallback": "Verify the official access process only if routine access does not resolve it; seek existing records, not newly created explanations."
+      },
+      {
+        "employerSlug": "city-of-terrace",
+        "municipality": "City of Terrace",
+        "year": "2022",
+        "route": "source-total-clarification",
+        "archiveUrl": "https://www.terrace.ca/city-services/finance-taxation",
+        "ask": "Amended or clarified expense-inclusive employee grand total for 2022. Remuneration and expenses each reconcile, but the printed combined grand total is $582,015.69 below its individual cells. Published pay is imported without using that grand total.",
+        "blocker": "Amended or clarified expense-inclusive employee grand total for 2022. Remuneration and expenses each reconcile, but the printed combined grand total is $582,015.69 below its individual cells. Published pay is imported without using that grand total.",
+        "requestStatus": "not-sent",
+        "contactVerified": false,
+        "firstRoute": "Routine public-record or clarification request to Finance or Corporate Services.",
+        "formalAccessFallback": "Verify the official access process only if routine access does not resolve it; seek existing records, not newly created explanations."
+      },
+      {
+        "employerSlug": "village-of-clinton",
+        "municipality": "Village of Clinton",
+        "year": "2024",
+        "route": "source-total-clarification",
+        "archiveUrl": "https://village.clinton.bc.ca/local-government/village-reports-plans/financial-reports/",
+        "ask": "Existing corrected 2024 council remuneration subtotal or records explaining the $2 excess of the five published rows over the subtotal; individual values are preserved in the app.",
+        "blocker": "Existing corrected 2024 council remuneration subtotal or records explaining the $2 excess of the five published rows over the subtotal; individual values are preserved in the app.",
+        "requestStatus": "not-sent",
+        "contactVerified": false,
+        "firstRoute": "Routine public-record or clarification request to Finance or Corporate Services.",
+        "formalAccessFallback": "Verify the official access process only if routine access does not resolve it; seek existing records, not newly created explanations."
+      },
+      {
+        "employerSlug": "village-of-salmo",
+        "municipality": "Village of Salmo",
+        "year": "2024",
+        "route": "source-total-clarification",
+        "archiveUrl": "https://salmo.ca/council/reports-links/",
+        "ask": "Existing corrected 2024 named employee remuneration subtotal or records explaining why the two disclosed rows total $1 below it; individual values are preserved in the app.",
+        "blocker": "Existing corrected 2024 named employee remuneration subtotal or records explaining why the two disclosed rows total $1 below it; individual values are preserved in the app.",
+        "requestStatus": "not-sent",
+        "contactVerified": false,
+        "firstRoute": "Routine public-record or clarification request to Finance or Corporate Services.",
+        "formalAccessFallback": "Verify the official access process only if routine access does not resolve it; seek existing records, not newly created explanations."
+      }
+    ]
+  },
+  "limits": [
+    "This pass checks 24 priority municipal archives; the existing province-wide municipal audit remains the full roster.",
+    "A successful index download does not establish that all historical documents or schedules were found.",
+    "Selectable PDF text may be embedded OCR. Reader agreement alone does not prove correct names, titles or amounts."
+  ]
+}

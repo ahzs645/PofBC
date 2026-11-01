@@ -1,0 +1,251 @@
+{
+  "version": 1,
+  "rowSchema": [
+    "employerSlug",
+    "name",
+    "position",
+    "remuneration",
+    "expenses",
+    "pdfPage"
+  ],
+  "sources": [
+    {
+      "id": "sector-crowns-inbc-2022-23",
+      "employerSlug": "inbc",
+      "employerName": "InBC Investment Corp.",
+      "sector": "Crown corporations",
+      "year": "2022/23",
+      "periodType": "fiscal",
+      "periodStart": "2022-04-01",
+      "periodEnd": "2023-03-31",
+      "title": "InBC Statement of Financial Information 2022/23: named employee remuneration and expenses",
+      "sourceUrl": "https://inbcinvestment.com/wp-content/uploads/2023/12/InBC-Statement-of-Financial-Information-March-31-2023-Signed.pdf",
+      "sourceIndexUrl": "https://inbcinvestment.com/accountability-governance/",
+      "sha256": "5c2c91aedda3251af04c9cf83c40a41188c22032c0309419fc70451bab08fa18",
+      "pdfBytes": 715892,
+      "file": "inbc-2022-23.json.gzip",
+      "dataSha256": "fdbbc16cbba4f4a4c6e1495f31838fc28704adbe96dec0b401db5328f435506b",
+      "category": "employee-remuneration",
+      "scope": "named-employees-over-threshold",
+      "threshold": 75000,
+      "thresholdComparison": ">",
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "status": "verified",
+      "verifiedOn": "2026-10-31",
+      "rowCount": 9,
+      "totalRemuneration": 1298918,
+      "totalExpenses": 102273,
+      "pages": [
+        28
+      ],
+      "nameDisclosure": "surname-and-initials",
+      "positionDisclosure": "not-published",
+      "publicWarning": null,
+      "notes": [
+        "Source heading spells remuneration as renumeration. The source-labelled remuneration is imported separately from expenses; component breakdown is not supplied and no base-salary inference is made.",
+        "Employee schedule only; board members, supplier payments and below-threshold aggregates are excluded. Fiscal year comes from the cover and statement header; the upload path is not the reporting period.",
+        "Source disclosure wording is employees with renumeration and expenses exceeding $75,000. Every accepted remuneration amount independently exceeds $75,000.",
+        "Names remain surname and initials exactly as disclosed; no identities or positions are inferred. The 2022/23 source says Deering, D; later schedules say Deering, A. These source spellings are preserved.",
+        "Two native-text readers independently agree on every employee field and named subtotal. All named rows were visually reviewed against rendered physical schedule pages.",
+        "A separately hash-pinned complete-cohort comparison proves all nine compiled InBC observations labelled 2023/24 are these 2022/23 employee records; the manifest replacement decision corrects that period explicitly. No board or other compiled cohort is removed."
+      ],
+      "validation": {
+        "originalFingerprintVerified": true,
+        "independentReaders": [
+          "PyMuPDF positioned words",
+          "Poppler layout text"
+        ],
+        "everyRowFieldAgreement": true,
+        "physicalPagesVisuallyReviewed": [
+          28
+        ],
+        "rowsIndependentlyChecked": 9,
+        "printedControls": [
+          {
+            "field": "pay",
+            "printedControl": 1298918,
+            "rowSum": 1298918,
+            "residual": 0,
+            "basis": "Printed named employee subtotal; numeric cells only, missing values retained"
+          },
+          {
+            "field": "expenses",
+            "printedControl": 102273,
+            "rowSum": 102273,
+            "residual": 0,
+            "basis": "Printed named employee subtotal; numeric cells only, missing values retained"
+          }
+        ],
+        "fieldCorrections": {},
+        "evidenceFile": "evidence/inbc-2022-23.json.gzip"
+      }
+    },
+    {
+      "id": "sector-crowns-inbc-2023-24",
+      "employerSlug": "inbc",
+      "employerName": "InBC Investment Corp.",
+      "sector": "Crown corporations",
+      "year": "2023/24",
+      "periodType": "fiscal",
+      "periodStart": "2023-04-01",
+      "periodEnd": "2024-03-31",
+      "title": "InBC Statement of Financial Information 2023/24: named employee remuneration and expenses",
+      "sourceUrl": "https://inbcinvestment.com/wp-content/uploads/2025/03/InBC-Statement-of-Financial-Information-March-31-2024-Signed.pdf",
+      "sourceIndexUrl": "https://inbcinvestment.com/accountability-governance/",
+      "sha256": "0d299af9e848a44091e84e79cf4fe0215c79e471745eb5213e3edb66af7654d2",
+      "pdfBytes": 731491,
+      "file": "inbc-2023-24.json.gzip",
+      "dataSha256": "2aed916a546fe3c40864326ae977b29c94c1d75ef1d023bf0d3db5fce9ef916e",
+      "category": "employee-remuneration",
+      "scope": "named-employees-over-threshold",
+      "threshold": 75000,
+      "thresholdComparison": ">",
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "status": "verified",
+      "verifiedOn": "2026-10-31",
+      "rowCount": 15,
+      "totalRemuneration": 2334321,
+      "totalExpenses": 105309,
+      "pages": [
+        30
+      ],
+      "nameDisclosure": "surname-and-initials",
+      "positionDisclosure": "not-published",
+      "publicWarning": "Published employee cells sum to $2,334,321 remuneration and $105,309 disclosed expenses; the printed named subtotals are $2,334,320 and $105,309. Residuals (rows minus printed): remuneration +$1, expenses +$0. Source values are preserved; the cause is unresolved.",
+      "notes": [
+        "Source heading spells remuneration as renumeration. The source-labelled remuneration is imported separately from expenses; component breakdown is not supplied and no base-salary inference is made.",
+        "Employee schedule only; board members, supplier payments and below-threshold aggregates are excluded. Fiscal year comes from the cover and statement header; the upload path is not the reporting period.",
+        "Source disclosure wording is employees with renumeration and expenses exceeding $75,000. Every accepted remuneration amount independently exceeds $75,000.",
+        "Names remain surname and initials exactly as disclosed; no identities or positions are inferred. The 2022/23 source says Deering, D; later schedules say Deering, A. These source spellings are preserved.",
+        "Two native-text readers independently agree on every employee field and named subtotal. All named rows were visually reviewed against rendered physical schedule pages.",
+        "A separately hash-pinned complete-cohort comparison proves all nine compiled InBC observations labelled 2023/24 are these 2022/23 employee records; the manifest replacement decision corrects that period explicitly. No board or other compiled cohort is removed.",
+        "Published employee cells sum to $2,334,321 remuneration and $105,309 disclosed expenses; the printed named subtotals are $2,334,320 and $105,309. Residuals (rows minus printed): remuneration +$1, expenses +$0. Source values are preserved; the cause is unresolved."
+      ],
+      "validation": {
+        "originalFingerprintVerified": true,
+        "independentReaders": [
+          "PyMuPDF positioned words",
+          "Poppler layout text"
+        ],
+        "everyRowFieldAgreement": true,
+        "physicalPagesVisuallyReviewed": [
+          30
+        ],
+        "rowsIndependentlyChecked": 15,
+        "printedControls": [
+          {
+            "field": "pay",
+            "printedControl": 2334320,
+            "rowSum": 2334321,
+            "residual": 1,
+            "basis": "Printed named employee subtotal; numeric cells only, missing values retained"
+          },
+          {
+            "field": "expenses",
+            "printedControl": 105309,
+            "rowSum": 105309,
+            "residual": 0,
+            "basis": "Printed named employee subtotal; numeric cells only, missing values retained"
+          }
+        ],
+        "fieldCorrections": {},
+        "evidenceFile": "evidence/inbc-2023-24.json.gzip"
+      }
+    },
+    {
+      "id": "sector-crowns-inbc-2024-25",
+      "employerSlug": "inbc",
+      "employerName": "InBC Investment Corp.",
+      "sector": "Crown corporations",
+      "year": "2024/25",
+      "periodType": "fiscal",
+      "periodStart": "2024-04-01",
+      "periodEnd": "2025-03-31",
+      "title": "InBC Statement of Financial Information 2024/25: named employee remuneration and expenses",
+      "sourceUrl": "https://inbcinvestment.com/wp-content/uploads/2025/10/FIA-Return-March-31-2025_Final_Chair-signed.pdf",
+      "sourceIndexUrl": "https://inbcinvestment.com/accountability-governance/",
+      "sha256": "c6e95c9635d1b42c593e4094d795ff3b74039e5159f238498d87ae415f1277e5",
+      "pdfBytes": 1445590,
+      "file": "inbc-2024-25.json.gzip",
+      "dataSha256": "3583baa1098bb41c88ae5a75e3c85dd700cec9859227ab73b2e390934eb35f20",
+      "category": "employee-remuneration",
+      "scope": "named-employees-over-threshold",
+      "threshold": 75000,
+      "thresholdComparison": ">",
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "status": "verified",
+      "verifiedOn": "2026-10-31",
+      "rowCount": 17,
+      "totalRemuneration": 2874812,
+      "totalExpenses": 152073,
+      "pages": [
+        29
+      ],
+      "nameDisclosure": "surname-and-initials",
+      "positionDisclosure": "not-published",
+      "publicWarning": "Published employee cells sum to $2,874,812 remuneration and $152,073 disclosed expenses; the printed named subtotals are $2,874,812 and $152,072. Residuals (rows minus printed): remuneration +$0, expenses +$1. Source values are preserved; the cause is unresolved.",
+      "notes": [
+        "Source heading spells remuneration as renumeration. The source-labelled remuneration is imported separately from expenses; component breakdown is not supplied and no base-salary inference is made.",
+        "Employee schedule only; board members, supplier payments and below-threshold aggregates are excluded. Fiscal year comes from the cover and statement header; the upload path is not the reporting period.",
+        "Source disclosure wording is employees with renumeration and expenses exceeding $75,000. Every accepted remuneration amount independently exceeds $75,000.",
+        "Names remain surname and initials exactly as disclosed; no identities or positions are inferred. The 2022/23 source says Deering, D; later schedules say Deering, A. These source spellings are preserved.",
+        "Two native-text readers independently agree on every employee field and named subtotal. All named rows were visually reviewed against rendered physical schedule pages.",
+        "A separately hash-pinned complete-cohort comparison proves all nine compiled InBC observations labelled 2023/24 are these 2022/23 employee records; the manifest replacement decision corrects that period explicitly. No board or other compiled cohort is removed.",
+        "Published employee cells sum to $2,874,812 remuneration and $152,073 disclosed expenses; the printed named subtotals are $2,874,812 and $152,072. Residuals (rows minus printed): remuneration +$0, expenses +$1. Source values are preserved; the cause is unresolved.",
+        "Chiew, B. has a blank expense cell, retained as missing (null). The disclosed expense sum includes only the 16 numeric expense cells; the blank is not converted to zero."
+      ],
+      "validation": {
+        "originalFingerprintVerified": true,
+        "independentReaders": [
+          "PyMuPDF positioned words",
+          "Poppler layout text"
+        ],
+        "everyRowFieldAgreement": true,
+        "physicalPagesVisuallyReviewed": [
+          29
+        ],
+        "rowsIndependentlyChecked": 17,
+        "printedControls": [
+          {
+            "field": "pay",
+            "printedControl": 2874812,
+            "rowSum": 2874812,
+            "residual": 0,
+            "basis": "Printed named employee subtotal; numeric cells only, missing values retained"
+          },
+          {
+            "field": "expenses",
+            "printedControl": 152072,
+            "rowSum": 152073,
+            "residual": 1,
+            "basis": "Printed named employee subtotal; numeric cells only, missing values retained"
+          }
+        ],
+        "fieldCorrections": {},
+        "evidenceFile": "evidence/inbc-2024-25.json.gzip"
+      }
+    }
+  ],
+  "compiledReplacements": [
+    {
+      "employerSlug": "inbc",
+      "compiledYear": "2023/24",
+      "replacementYear": "2022/23",
+      "sourceIds": [
+        "sector-crowns-inbc-2022-23"
+      ],
+      "sourceDataSha256": {
+        "sector-crowns-inbc-2022-23": "fdbbc16cbba4f4a4c6e1495f31838fc28704adbe96dec0b401db5328f435506b"
+      },
+      "retainPositions": [],
+      "expectedRows": 9,
+      "expectedRetainedRows": 0,
+      "selectedRowsSha256": "168f29913adcc34f7e11f904efec738c68a33ed0684e05d6177356f388773d97",
+      "reason": "Every one of the complete nine-row compiled InBC employee cohort labelled 2023/24 matches the 2022/23 official employee schedule exactly in disclosed name, position (not supplied), remuneration and expenses, with multiplicity. The official cover and statement establish April 1, 2022–March 31, 2023. None of those exact four-field observations matches the independently verified fifteen-row 2023/24 employee schedule. Replace the proved duplicate cohort under its actual 2022/23 fiscal period; there are no separate compiled board observations in this partition.",
+      "evidence": "sector-crowns/inbc-overlap.json"
+    }
+  ]
+}

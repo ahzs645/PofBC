@@ -1,0 +1,354 @@
+{
+  "municipality": "Creston",
+  "employerSlug": "town-of-creston",
+  "website": "http://www.creston.ca",
+  "checkedOn": "2026-10-31",
+  "method": "Bounded traversal of links actually present on the official website; at most two link hops.",
+  "status": "source-links-found-awaiting-review",
+  "pagesChecked": [
+    {
+      "url": "https://www.creston.ca",
+      "depth": 0,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.creston.ca",
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 150414,
+      "sha256": "5b8d90f01c07b31864e7d8439048d833402bf349a7540575316422756bca8c9c",
+      "status": "html-read",
+      "containsSofiTerms": true
+    },
+    {
+      "url": "https://www.creston.ca/statement-financial-information",
+      "depth": 1,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.creston.ca/statement-financial-information",
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 154272,
+      "sha256": "612b346ceda4358c503294765e06b0157acd4885c2a6f4c1ea0633de9c1244c6",
+      "status": "html-read",
+      "containsSofiTerms": true
+    },
+    {
+      "url": "https://www.creston.ca/annual-report",
+      "depth": 1,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.creston.ca/annual-report",
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 155960,
+      "sha256": "b4b5c60da9f13d0ee91045b6aba371c9c1b1d3894a73cbcd30a5bf668c94e7c5",
+      "status": "html-read",
+      "containsSofiTerms": true
+    },
+    {
+      "url": "https://www.creston.ca/budget",
+      "depth": 1,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.creston.ca/budget",
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 158475,
+      "sha256": "d6deb2fe47c809521319eea9f95ba4a4b9633ab48d4041d271e8ebd6ac4e2a97",
+      "status": "html-read",
+      "containsSofiTerms": true
+    },
+    {
+      "url": "https://letstalk.creston.ca/2026-municipal-budget",
+      "depth": 2,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://letstalk.creston.ca/2026-municipal-budget",
+      "contentType": "text/html; charset=utf-8",
+      "bytes": 43418,
+      "sha256": "6019887dc31cab3efa9c69c815a71197515c0d68c295459ebc1ca3eb49f8c4f2",
+      "status": "html-read",
+      "containsSofiTerms": false
+    },
+    {
+      "url": "https://www.creston.ca/2026-election",
+      "depth": 1,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.creston.ca/2026-election",
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 176629,
+      "sha256": "ae046267d00264c9c88dc37204e069521cbdba45b9d0eb62563226aeba1f05da",
+      "status": "html-read",
+      "containsSofiTerms": true
+    },
+    {
+      "url": "https://www.creston.ca/bylaw-enforcement/local-government-election-and-assent-voting",
+      "depth": 2,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.creston.ca/bylaw-enforcement/local-government-election-and-assent-voting",
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 137019,
+      "sha256": "52e4b2001e56d7bd654b00fbcc67960bb071c955562671e88b933533e7174917",
+      "status": "html-read",
+      "containsSofiTerms": true
+    }
+  ],
+  "candidates": [
+    {
+      "url": "https://www.creston.ca/annual-report",
+      "label": "Annual Report",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.creston.ca",
+      "yearsInLabel": []
+    },
+    {
+      "url": "https://www.creston.ca/statement-financial-information",
+      "label": "Statement of Financial Information",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.creston.ca",
+      "yearsInLabel": []
+    },
+    {
+      "url": "https://creston.ca/sites/default/files/2023-09/2019%20Budget.pdf",
+      "label": "2019",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.creston.ca/budget",
+      "yearsInLabel": [
+        "2019",
+        "2023"
+      ]
+    },
+    {
+      "url": "https://creston.ca/sites/default/files/2023-09/2020%20Budget.pdf",
+      "label": "2020",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.creston.ca/budget",
+      "yearsInLabel": [
+        "2020",
+        "2023"
+      ]
+    },
+    {
+      "url": "https://creston.ca/sites/default/files/2023-09/2020%20SOFI.pdf",
+      "label": "2020 Statement of Financial Information",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.creston.ca/statement-financial-information",
+      "yearsInLabel": [
+        "2020",
+        "2023"
+      ]
+    },
+    {
+      "url": "https://creston.ca/sites/default/files/2023-09/2021%20Budget.pdf",
+      "label": "2021",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.creston.ca/budget",
+      "yearsInLabel": [
+        "2021",
+        "2023"
+      ]
+    },
+    {
+      "url": "https://creston.ca/sites/default/files/2023-09/2021%20SOFI.pdf",
+      "label": "2021 Statement of Financial Information",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.creston.ca/statement-financial-information",
+      "yearsInLabel": [
+        "2021",
+        "2023"
+      ]
+    },
+    {
+      "url": "https://creston.ca/sites/default/files/2023-09/2022%20Budget.pdf",
+      "label": "2022",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.creston.ca/budget",
+      "yearsInLabel": [
+        "2022",
+        "2023"
+      ]
+    },
+    {
+      "url": "https://creston.ca/sites/default/files/2023-09/Statement%20of%20Financial%20Information%202022.pdf",
+      "label": "2022 Statement of Financial Information",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.creston.ca/statement-financial-information",
+      "yearsInLabel": [
+        "2022",
+        "2023"
+      ]
+    },
+    {
+      "url": "https://www.creston.ca/sites/default/files/2023-07/Annual%20Report%202022.pdf",
+      "label": "2022",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.creston.ca/annual-report",
+      "yearsInLabel": [
+        "2022",
+        "2023"
+      ]
+    },
+    {
+      "url": "https://www.creston.ca/sites/default/files/2023-08/Annual%20Report%202018%20.pdf",
+      "label": "2018",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.creston.ca/annual-report",
+      "yearsInLabel": [
+        "2018",
+        "2023"
+      ]
+    },
+    {
+      "url": "https://www.creston.ca/sites/default/files/2023-08/Annual%20Report%202019.pdf",
+      "label": "2019",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.creston.ca/annual-report",
+      "yearsInLabel": [
+        "2019",
+        "2023"
+      ]
+    },
+    {
+      "url": "https://www.creston.ca/sites/default/files/2023-08/Annual%20Report%202020.pdf",
+      "label": "2020",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.creston.ca/annual-report",
+      "yearsInLabel": [
+        "2020",
+        "2023"
+      ]
+    },
+    {
+      "url": "https://www.creston.ca/sites/default/files/2023-08/Annual%20Report%202021.pdf",
+      "label": "2021",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.creston.ca/annual-report",
+      "yearsInLabel": [
+        "2021",
+        "2023"
+      ]
+    },
+    {
+      "url": "https://www.creston.ca/sites/default/files/2023-09/2023%20Budget.pdf",
+      "label": "2023",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.creston.ca/budget",
+      "yearsInLabel": [
+        "2023"
+      ]
+    },
+    {
+      "url": "https://www.creston.ca/sites/default/files/2024-03/Budget2024.pdf",
+      "label": "2025",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.creston.ca/budget",
+      "yearsInLabel": [
+        "2024",
+        "2025"
+      ]
+    },
+    {
+      "url": "https://www.creston.ca/sites/default/files/2024-06/Annual%20Report%202023_0.pdf",
+      "label": "2023",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.creston.ca/annual-report",
+      "yearsInLabel": [
+        "2023",
+        "2024"
+      ]
+    },
+    {
+      "url": "https://www.creston.ca/sites/default/files/2024-07/Statement%20of%20Financial%20Information%202023_0.pdf",
+      "label": "2023 Statement of Financial Information",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.creston.ca/statement-financial-information",
+      "yearsInLabel": [
+        "2023",
+        "2024"
+      ]
+    },
+    {
+      "url": "https://www.creston.ca/sites/default/files/2025-06/Annual%20Report%202024_0_2.pdf",
+      "label": "2024",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.creston.ca/annual-report",
+      "yearsInLabel": [
+        "2024",
+        "2025"
+      ]
+    },
+    {
+      "url": "https://www.creston.ca/sites/default/files/2025-07/Statement%20of%20Financial%20Information%202024.pdf",
+      "label": "2024 Statement of Financial Information",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.creston.ca/statement-financial-information",
+      "yearsInLabel": [
+        "2024",
+        "2025"
+      ]
+    },
+    {
+      "url": "https://www.creston.ca/sites/default/files/2026-02/2026%20draft%20budget.pdf",
+      "label": "View the 2026 Draft Budget",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.creston.ca/budget",
+      "yearsInLabel": [
+        "2026"
+      ]
+    },
+    {
+      "url": "https://www.creston.ca/sites/default/files/2026-02/Appendix%20A%20-%202026%20Financial%20Policies.pdf",
+      "label": "Appendix A - 2026 Financial Policies",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.creston.ca/budget",
+      "yearsInLabel": [
+        "2026"
+      ]
+    },
+    {
+      "url": "https://www.creston.ca/sites/default/files/2026-02/Appendix%20B%20-%202026%20Proposed%20Initiatives.pdf",
+      "label": "Appendix B - 2026 Proposed Initiatives",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.creston.ca/budget",
+      "yearsInLabel": [
+        "2026"
+      ]
+    },
+    {
+      "url": "https://www.creston.ca/sites/default/files/2026-07/Annual%20report%202025.pdf",
+      "label": "View the 2025 Annual Report",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.creston.ca/annual-report",
+      "yearsInLabel": [
+        "2025",
+        "2026"
+      ]
+    },
+    {
+      "url": "https://www.creston.ca/sites/default/files/2026-07/Statement%20of%20Financial%20Information%202025.pdf",
+      "label": "2025 Statement of Financial Information",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.creston.ca/statement-financial-information",
+      "yearsInLabel": [
+        "2025",
+        "2026"
+      ]
+    },
+    {
+      "url": "https://www.creston.ca/sites/default/files/2026-10/2026_10_17_Preliminary%20Results.pdf",
+      "label": "Preliminary (unofficial) Election Results 2026",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.creston.ca/2026-election",
+      "yearsInLabel": [
+        "2026"
+      ]
+    },
+    {
+      "url": "https://www.creston.ca/sites/default/files/2026-10/2026_10_21_Determination%20of%20Election%20Results.pdf",
+      "label": "Determination of Official Election Results 2026",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.creston.ca/2026-election",
+      "yearsInLabel": [
+        "2026"
+      ]
+    }
+  ]
+}

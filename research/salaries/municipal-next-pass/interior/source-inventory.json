@@ -1,0 +1,2124 @@
+{
+  "version": 1,
+  "asOf": "2026-11-01",
+  "cacheDirectory": "/tmp/wave-interior",
+  "sources": [
+    {
+      "employerSlug": "district-of-barriere",
+      "sourceUrl": "https://barriere.municipalwebsites.ca/ckfinder/connector?command=Proxy&lang=en&type=Files&currentFolder=%2F&hash=c245c263ce0eced480effe66bbede6b4d46c15ae&fileName=COMPLETE%202020%20SOFI.pdf",
+      "retrievedUrl": "https://barriere.municipalwebsites.ca/ckfinder/connector?command=Proxy&lang=en&type=Files&currentFolder=%2F&hash=c245c263ce0eced480effe66bbede6b4d46c15ae&fileName=COMPLETE%202020%20SOFI.pdf",
+      "httpStatus": 200,
+      "bytes": 515546,
+      "sha256": "781bf4c10df9209fb19f6719718fdca882b4c2752a7ce9bb835e8ccf060571b5",
+      "kind": "known-official-source-lead",
+      "cacheFile": "district-of-barriere-781bf4c10df9.pdf",
+      "status": "retrieved-processing-needed",
+      "indexLabels": [],
+      "indexedReportingYears": [],
+      "indexedYearIsVerifiedPeriod": false,
+      "pdfPages": 13,
+      "textChars": 0,
+      "remunerationCandidatePhysicalPages": [],
+      "textStatus": "scan-or-text-unavailable-needs-OCR",
+      "acceptedCohorts": [],
+      "rowControlsReviewed": false,
+      "nextAction": "Locate actual calendar heading and complete named cohorts; prefer usable text layers, then OCR scans, verify all row fields against originals, and reconcile all printed components."
+    },
+    {
+      "employerSlug": "district-of-barriere",
+      "sourceUrl": "https://barriere.municipalwebsites.ca/ckfinder/connector?command=Proxy&lang=en&type=Files&currentFolder=%2FFinancial%20Reports%2F&hash=c245c263ce0eced480effe66bbede6b4d46c15ae&fileName=5b%202023%20SOFI%20Report.pdf",
+      "retrievedUrl": "https://barriere.municipalwebsites.ca/ckfinder/connector?command=Proxy&lang=en&type=Files&currentFolder=%2FFinancial%20Reports%2F&hash=c245c263ce0eced480effe66bbede6b4d46c15ae&fileName=5b%202023%20SOFI%20Report.pdf",
+      "httpStatus": 200,
+      "bytes": 1361706,
+      "sha256": "b3063b1fe32631c5712a975d7b22ba4bb2d075d0e0ae3ff8dde6aade6870b36e",
+      "kind": "known-official-source-lead",
+      "cacheFile": "district-of-barriere-b3063b1fe326.pdf",
+      "status": "accepted-in-part-or-full-see-cohort-scopes",
+      "indexLabels": [],
+      "indexedReportingYears": [],
+      "indexedYearIsVerifiedPeriod": false,
+      "pdfPages": 44,
+      "textChars": 47855,
+      "remunerationCandidatePhysicalPages": [
+        2
+      ],
+      "textStatus": "text-layer-present-source-layout-and-any-OCR-errors-require-review",
+      "acceptedCohorts": [
+        {
+          "id": "wave-interior-district-of-barriere-2023-employee-remuneration",
+          "year": "2023",
+          "category": "employee-remuneration",
+          "rowCount": 5,
+          "pages": [
+            2
+          ],
+          "publicWarning": null
+        },
+        {
+          "id": "wave-interior-district-of-barriere-2023-elected-officials",
+          "year": "2023",
+          "category": "elected-officials",
+          "rowCount": 7,
+          "pages": [
+            2
+          ],
+          "publicWarning": null
+        }
+      ],
+      "rowControlsReviewed": true,
+      "nextAction": "Preserve accepted source evidence; process only remaining employee/council scopes or periods."
+    },
+    {
+      "employerSlug": "district-of-barriere",
+      "sourceUrl": "https://barriere.municipalwebsites.ca/ckfinder/connector?command=Proxy&lang=en&type=Files&currentFolder=%2FFinancial%20Reports%2F&hash=c245c263ce0eced480effe66bbede6b4d46c15ae&fileName=Signed%202024%20SOFI%20Complete.pdf",
+      "retrievedUrl": "https://barriere.municipalwebsites.ca/ckfinder/connector?command=Proxy&lang=en&type=Files&currentFolder=%2FFinancial%20Reports%2F&hash=c245c263ce0eced480effe66bbede6b4d46c15ae&fileName=Signed%202024%20SOFI%20Complete.pdf",
+      "httpStatus": 200,
+      "bytes": 2099176,
+      "sha256": "6433575e105cecacd29b9c10fc5aa0e920e1c654c0c11bb6482870bc9e9a567a",
+      "kind": "known-official-source-lead",
+      "cacheFile": "district-of-barriere-6433575e105c.pdf",
+      "status": "retrieved-processing-needed",
+      "indexLabels": [],
+      "indexedReportingYears": [],
+      "indexedYearIsVerifiedPeriod": false,
+      "pdfPages": 11,
+      "textChars": 0,
+      "remunerationCandidatePhysicalPages": [],
+      "textStatus": "scan-or-text-unavailable-needs-OCR",
+      "acceptedCohorts": [],
+      "rowControlsReviewed": false,
+      "nextAction": "Locate actual calendar heading and complete named cohorts; prefer usable text layers, then OCR scans, verify all row fields against originals, and reconcile all printed components."
+    },
+    {
+      "employerSlug": "district-of-coldstream",
+      "sourceUrl": "https://coldstream.civicweb.net/document/84263/",
+      "retrievedUrl": "https://coldstream.civicweb.net/document/84263/",
+      "httpStatus": 200,
+      "bytes": 7132556,
+      "sha256": "361faaf828f2bbc690f43028e2fffd3ddbf3985246844b2587815bddc8d5b98c",
+      "kind": "known-official-source-lead",
+      "cacheFile": "district-of-coldstream-361faaf828f2.pdf",
+      "status": "accepted-in-part-or-full-see-cohort-scopes",
+      "indexLabels": [
+        "Official council report containing a SOFI schedule; reporting year awaits review"
+      ],
+      "indexedReportingYears": [],
+      "indexedYearIsVerifiedPeriod": false,
+      "pdfPages": 68,
+      "textChars": 113577,
+      "remunerationCandidatePhysicalPages": [
+        3,
+        63
+      ],
+      "textStatus": "text-layer-present-source-layout-and-any-OCR-errors-require-review",
+      "acceptedCohorts": [
+        {
+          "id": "wave-interior-district-of-coldstream-2021-employee-remuneration",
+          "year": "2021",
+          "category": "employee-remuneration",
+          "rowCount": 19,
+          "pages": [
+            63
+          ],
+          "publicWarning": "The 19 printed employee expense amounts sum to $23,794.17, $300 below the printed $24,094.17 subtotal. Their expense-inclusive totals likewise sum to $1,849,000.21, $300 below the printed $1,849,300.21 subtotal. Remuneration reconciles exactly. Published individual amounts remain unchanged; the cause of the subtotal inconsistency is unconfirmed."
+        },
+        {
+          "id": "wave-interior-district-of-coldstream-2021-elected-officials",
+          "year": "2021",
+          "category": "elected-officials",
+          "rowCount": 7,
+          "pages": [
+            63
+          ],
+          "publicWarning": null
+        }
+      ],
+      "rowControlsReviewed": true,
+      "nextAction": "Preserve accepted source evidence; process only remaining employee/council scopes or periods."
+    },
+    {
+      "employerSlug": "village-of-lytton",
+      "sourceUrl": "https://lyttonbc.civicweb.net/document/10326",
+      "retrievedUrl": "https://lyttonbc.civicweb.net/document/10326/",
+      "httpStatus": 200,
+      "bytes": 448897,
+      "sha256": "e585078dd9c5ee5d21c4ad4091591ffd2b9a0aab1928d7cf6bc23b2ba05d4976",
+      "kind": "known-official-source-lead",
+      "cacheFile": "village-of-lytton-e585078dd9c5.pdf",
+      "status": "retrieved-processing-needed",
+      "indexLabels": [
+        "2021 Statement of Financial Information"
+      ],
+      "indexedReportingYears": [
+        "2021"
+      ],
+      "indexedYearIsVerifiedPeriod": false,
+      "pdfPages": 40,
+      "textChars": 51231,
+      "remunerationCandidatePhysicalPages": [
+        37,
+        40
+      ],
+      "textStatus": "text-layer-present-source-layout-and-any-OCR-errors-require-review",
+      "acceptedCohorts": [],
+      "rowControlsReviewed": false,
+      "nextAction": "Locate actual calendar heading and complete named cohorts; prefer usable text layers, then OCR scans, verify all row fields against originals, and reconcile all printed components."
+    },
+    {
+      "employerSlug": "village-of-lytton",
+      "sourceUrl": "https://www.lytton.ca/media/2364",
+      "retrievedUrl": "https://www.lytton.ca/media/2364",
+      "httpStatus": 200,
+      "bytes": 2095294,
+      "sha256": "8455bb33689ea0caefd139319b343b8591e524978cb23375a26cd1de70dbc89c",
+      "kind": "known-official-source-lead",
+      "cacheFile": "village-of-lytton-8455bb33689e.pdf",
+      "status": "retrieved-processing-needed",
+      "indexLabels": [
+        "2025 Statement of Financial Information"
+      ],
+      "indexedReportingYears": [
+        "2025"
+      ],
+      "indexedYearIsVerifiedPeriod": false,
+      "pdfPages": 6,
+      "textChars": 5335,
+      "remunerationCandidatePhysicalPages": [
+        4
+      ],
+      "textStatus": "text-layer-present-source-layout-and-any-OCR-errors-require-review",
+      "acceptedCohorts": [],
+      "rowControlsReviewed": false,
+      "nextAction": "Locate actual calendar heading and complete named cohorts; prefer usable text layers, then OCR scans, verify all row fields against originals, and reconcile all printed components."
+    },
+    {
+      "employerSlug": "village-of-lytton",
+      "sourceUrl": "https://www.lytton.ca/sites/23/files/2024-08/2015-SOFI-Report.pdf",
+      "retrievedUrl": "https://www.lytton.ca/sites/23/files/2024-08/2015-SOFI-Report.pdf",
+      "httpStatus": 200,
+      "bytes": 608486,
+      "sha256": "790081afe24f0a3daf403acb7baf30d6a030a6ec417ddccb1f4dfc27f808c854",
+      "kind": "known-official-source-lead",
+      "cacheFile": "village-of-lytton-790081afe24f.pdf",
+      "status": "retrieved-processing-needed",
+      "indexLabels": [
+        "2015 Statement of Financial Information"
+      ],
+      "indexedReportingYears": [
+        "2015"
+      ],
+      "indexedYearIsVerifiedPeriod": false,
+      "pdfPages": 38,
+      "textChars": 0,
+      "remunerationCandidatePhysicalPages": [],
+      "textStatus": "scan-or-text-unavailable-needs-OCR",
+      "acceptedCohorts": [],
+      "rowControlsReviewed": false,
+      "nextAction": "Locate actual calendar heading and complete named cohorts; prefer usable text layers, then OCR scans, verify all row fields against originals, and reconcile all printed components."
+    },
+    {
+      "employerSlug": "village-of-lytton",
+      "sourceUrl": "https://www.lytton.ca/sites/23/files/2024-08/2017%20SOFI%20Report.pdf",
+      "retrievedUrl": "https://www.lytton.ca/sites/23/files/2024-08/2017%20SOFI%20Report.pdf",
+      "httpStatus": 200,
+      "bytes": 144017,
+      "sha256": "6a49422c0bc6cdd9777290213fc1159657508d4fee50141e3af8b4eee4a33c03",
+      "kind": "known-official-source-lead",
+      "cacheFile": "village-of-lytton-6a49422c0bc6.pdf",
+      "status": "retrieved-processing-needed",
+      "indexLabels": [
+        "2017 Statement of Financial Information"
+      ],
+      "indexedReportingYears": [
+        "2017"
+      ],
+      "indexedYearIsVerifiedPeriod": false,
+      "pdfPages": 6,
+      "textChars": 0,
+      "remunerationCandidatePhysicalPages": [],
+      "textStatus": "scan-or-text-unavailable-needs-OCR",
+      "acceptedCohorts": [],
+      "rowControlsReviewed": false,
+      "nextAction": "Locate actual calendar heading and complete named cohorts; prefer usable text layers, then OCR scans, verify all row fields against originals, and reconcile all printed components."
+    },
+    {
+      "employerSlug": "village-of-lytton",
+      "sourceUrl": "https://www.lytton.ca/sites/23/files/2024-08/2018%20SOFI%20Report%20signed%20June%2026%2C%202018.pdf",
+      "retrievedUrl": "https://www.lytton.ca/sites/23/files/2024-08/2018%20SOFI%20Report%20signed%20June%2026%2C%202018.pdf",
+      "httpStatus": 200,
+      "bytes": 117142,
+      "sha256": "e229b7c5e6375f1d3ef953083b0c8c331982872bd4f07f841e08f2945e5187c6",
+      "kind": "known-official-source-lead",
+      "cacheFile": "village-of-lytton-e229b7c5e637.pdf",
+      "status": "retrieved-processing-needed",
+      "indexLabels": [
+        "2018 Statement of Financial Information"
+      ],
+      "indexedReportingYears": [
+        "2018"
+      ],
+      "indexedYearIsVerifiedPeriod": false,
+      "pdfPages": 5,
+      "textChars": 0,
+      "remunerationCandidatePhysicalPages": [],
+      "textStatus": "scan-or-text-unavailable-needs-OCR",
+      "acceptedCohorts": [],
+      "rowControlsReviewed": false,
+      "nextAction": "Locate actual calendar heading and complete named cohorts; prefer usable text layers, then OCR scans, verify all row fields against originals, and reconcile all printed components."
+    },
+    {
+      "employerSlug": "village-of-lytton",
+      "sourceUrl": "https://www.lytton.ca/sites/23/files/2024-08/2023-Village-of-Lytton-SOFI-Report.pdf",
+      "retrievedUrl": "https://www.lytton.ca/sites/23/files/2024-08/2023-Village-of-Lytton-SOFI-Report.pdf",
+      "httpStatus": 200,
+      "bytes": 277801,
+      "sha256": "a80862cfbd631f38dd9a2f72c427ba93f5c9cb0dd694def722b9560a3fa833c1",
+      "kind": "known-official-source-lead",
+      "cacheFile": "village-of-lytton-a80862cfbd63.pdf",
+      "status": "retrieved-processing-needed",
+      "indexLabels": [
+        "2023 Statement of Financial Information"
+      ],
+      "indexedReportingYears": [
+        "2023"
+      ],
+      "indexedYearIsVerifiedPeriod": false,
+      "pdfPages": 5,
+      "textChars": 5647,
+      "remunerationCandidatePhysicalPages": [
+        4
+      ],
+      "textStatus": "text-layer-present-source-layout-and-any-OCR-errors-require-review",
+      "acceptedCohorts": [],
+      "rowControlsReviewed": false,
+      "nextAction": "Locate actual calendar heading and complete named cohorts; prefer usable text layers, then OCR scans, verify all row fields against originals, and reconcile all printed components."
+    },
+    {
+      "employerSlug": "village-of-lytton",
+      "sourceUrl": "https://www.lytton.ca/sites/23/files/2024-08/SOFI-2022-SignedMayor.pdf",
+      "retrievedUrl": "https://www.lytton.ca/sites/23/files/2024-08/SOFI-2022-SignedMayor.pdf",
+      "httpStatus": 200,
+      "bytes": 433432,
+      "sha256": "98b85b27299e6a458b7271c5f2c7e16ec5479a81fdb95fa3cdaf0e720e54c61d",
+      "kind": "known-official-source-lead",
+      "cacheFile": "village-of-lytton-98b85b27299e.pdf",
+      "status": "retrieved-processing-needed",
+      "indexLabels": [
+        "2022 Statement of Financial Information"
+      ],
+      "indexedReportingYears": [
+        "2022"
+      ],
+      "indexedYearIsVerifiedPeriod": false,
+      "pdfPages": 5,
+      "textChars": 5249,
+      "remunerationCandidatePhysicalPages": [
+        4
+      ],
+      "textStatus": "text-layer-present-source-layout-and-any-OCR-errors-require-review",
+      "acceptedCohorts": [],
+      "rowControlsReviewed": false,
+      "nextAction": "Locate actual calendar heading and complete named cohorts; prefer usable text layers, then OCR scans, verify all row fields against originals, and reconcile all printed components."
+    },
+    {
+      "employerSlug": "village-of-lytton",
+      "sourceUrl": "https://www.lytton.ca/sites/23/files/2024-08/VOL-2020-SOFI-REPORT-SIGNED-20211208.pdf",
+      "retrievedUrl": "https://www.lytton.ca/sites/23/files/2024-08/VOL-2020-SOFI-REPORT-SIGNED-20211208.pdf",
+      "httpStatus": 200,
+      "bytes": 1403749,
+      "sha256": "4799bd2ba3a61d385495a6738b13f1fc0337cd2a31ef65212c2f2bdaa99ee22f",
+      "kind": "known-official-source-lead",
+      "cacheFile": "village-of-lytton-4799bd2ba3a6.pdf",
+      "status": "retrieved-processing-needed",
+      "indexLabels": [
+        "2020 Statement of Financial Information"
+      ],
+      "indexedReportingYears": [
+        "2020"
+      ],
+      "indexedYearIsVerifiedPeriod": false,
+      "pdfPages": 5,
+      "textChars": 0,
+      "remunerationCandidatePhysicalPages": [],
+      "textStatus": "scan-or-text-unavailable-needs-OCR",
+      "acceptedCohorts": [],
+      "rowControlsReviewed": false,
+      "nextAction": "Locate actual calendar heading and complete named cohorts; prefer usable text layers, then OCR scans, verify all row fields against originals, and reconcile all printed components."
+    },
+    {
+      "employerSlug": "village-of-lytton",
+      "sourceUrl": "https://www.lytton.ca/sites/23/files/2026-03/VOL_Final_Signed_2024%20SOFI.pdf",
+      "retrievedUrl": "https://www.lytton.ca/sites/23/files/2026-03/VOL_Final_Signed_2024%20SOFI.pdf",
+      "httpStatus": 200,
+      "bytes": 1907406,
+      "sha256": "f22be0b1c71d8893e69d76da4d66d7eb43bd844a0f53c8d188aff7daa0160a82",
+      "kind": "known-official-source-lead",
+      "cacheFile": "village-of-lytton-f22be0b1c71d.pdf",
+      "status": "retrieved-processing-needed",
+      "indexLabels": [
+        "2024 Statement of Financial Information"
+      ],
+      "indexedReportingYears": [
+        "2024"
+      ],
+      "indexedYearIsVerifiedPeriod": false,
+      "pdfPages": 6,
+      "textChars": 5205,
+      "remunerationCandidatePhysicalPages": [
+        4
+      ],
+      "textStatus": "text-layer-present-source-layout-and-any-OCR-errors-require-review",
+      "acceptedCohorts": [],
+      "rowControlsReviewed": false,
+      "nextAction": "Locate actual calendar heading and complete named cohorts; prefer usable text layers, then OCR scans, verify all row fields against originals, and reconcile all printed components."
+    },
+    {
+      "employerSlug": "city-of-merritt",
+      "sourceUrl": "https://www.merritt.ca/wp-content/uploads/2026/09/2025-SOFI.pdf",
+      "retrievedUrl": "https://www.merritt.ca/wp-content/uploads/2026/09/2025-SOFI.pdf",
+      "httpStatus": 200,
+      "bytes": 758508,
+      "sha256": "887d8b9ec8fcb72288485f0b77ae8b3a4e09751bb69fa2b991bd392acdebf0ce",
+      "kind": "known-official-source-lead",
+      "cacheFile": "city-of-merritt-887d8b9ec8fc.pdf",
+      "status": "retrieved-processing-needed",
+      "indexLabels": [
+        "2025 Statement of Financial Information"
+      ],
+      "indexedReportingYears": [
+        "2025"
+      ],
+      "indexedYearIsVerifiedPeriod": false,
+      "pdfPages": 8,
+      "textChars": 9746,
+      "remunerationCandidatePhysicalPages": [
+        4
+      ],
+      "textStatus": "text-layer-present-source-layout-and-any-OCR-errors-require-review",
+      "acceptedCohorts": [],
+      "rowControlsReviewed": false,
+      "nextAction": "Locate actual calendar heading and complete named cohorts; prefer usable text layers, then OCR scans, verify all row fields against originals, and reconcile all printed components."
+    },
+    {
+      "employerSlug": "village-of-new-denver",
+      "sourceUrl": "https://newdenver.ca/wp-content/uploads/2026/06/Village_of_New_Denver_2025_Annual_Report-w-SOFI.pdf",
+      "retrievedUrl": "https://newdenver.ca/wp-content/uploads/2026/06/Village_of_New_Denver_2025_Annual_Report-w-SOFI.pdf",
+      "httpStatus": 200,
+      "bytes": 2377007,
+      "sha256": "807a2d1b38271d4c0c5712c596ef13017e1a20a7dc50064b6dc959f7d6e91715",
+      "kind": "known-official-source-lead",
+      "cacheFile": "village-of-new-denver-807a2d1b3827.pdf",
+      "status": "accepted-in-part-or-full-see-cohort-scopes",
+      "indexLabels": [
+        "Annual Report and Financial Statements 2025"
+      ],
+      "indexedReportingYears": [
+        "2025"
+      ],
+      "indexedYearIsVerifiedPeriod": false,
+      "pdfPages": 51,
+      "textChars": 71898,
+      "remunerationCandidatePhysicalPages": [
+        49,
+        51
+      ],
+      "textStatus": "text-layer-present-source-layout-and-any-OCR-errors-require-review",
+      "acceptedCohorts": [
+        {
+          "id": "wave-interior-village-of-new-denver-2025-employee-remuneration",
+          "year": "2025",
+          "category": "employee-remuneration",
+          "rowCount": 1,
+          "pages": [
+            49
+          ],
+          "publicWarning": null
+        },
+        {
+          "id": "wave-interior-village-of-new-denver-2025-elected-officials",
+          "year": "2025",
+          "category": "elected-officials",
+          "rowCount": 5,
+          "pages": [
+            49
+          ],
+          "publicWarning": "Published row sums minus printed named-cohort controls: remuneration +1 CAD, expenses -1 CAD. Amounts are retained as printed; the cause is unconfirmed."
+        }
+      ],
+      "rowControlsReviewed": true,
+      "nextAction": "Preserve accepted source evidence; process only remaining employee/council scopes or periods."
+    },
+    {
+      "employerSlug": "town-of-princeton",
+      "sourceUrl": "https://princeton.ca/Home/DownloadDocument?docId=19a67da2-51d5-408d-ae4f-6d8b6300de51",
+      "retrievedUrl": "https://princeton.ca/Home/DownloadDocument?docId=19a67da2-51d5-408d-ae4f-6d8b6300de51",
+      "httpStatus": 200,
+      "bytes": 147844,
+      "sha256": "37c2b374a148799d4fc32bb8059738d37a83dfa567eb8127bbcd982fb64b599a",
+      "kind": "known-official-source-lead",
+      "cacheFile": "town-of-princeton-37c2b374a148.pdf",
+      "status": "accepted-in-part-or-full-see-cohort-scopes",
+      "indexLabels": [
+        "Please click here to see the PDF version of the SOFI 2023 document."
+      ],
+      "indexedReportingYears": [
+        "2023"
+      ],
+      "indexedYearIsVerifiedPeriod": false,
+      "pdfPages": 11,
+      "textChars": 13512,
+      "remunerationCandidatePhysicalPages": [
+        9,
+        10
+      ],
+      "textStatus": "text-layer-present-source-layout-and-any-OCR-errors-require-review",
+      "acceptedCohorts": [
+        {
+          "id": "wave-interior-town-of-princeton-2023-employee-remuneration",
+          "year": "2023",
+          "category": "employee-remuneration",
+          "rowCount": 19,
+          "pages": [
+            9
+          ],
+          "publicWarning": "Known named employee expense cells total $70,697.11, $44.78 below the $70,741.89 control derived from the printed employee total and below-threshold aggregate. Two published expense dashes remain missing. Individual amounts and the two published below-threshold remuneration exceptions are retained unchanged; the discrepancy's cause is unconfirmed."
+        },
+        {
+          "id": "wave-interior-town-of-princeton-2023-elected-officials",
+          "year": "2023",
+          "category": "elected-officials",
+          "rowCount": 5,
+          "pages": [
+            9
+          ],
+          "publicWarning": null
+        }
+      ],
+      "rowControlsReviewed": true,
+      "nextAction": "Preserve accepted source evidence; process only remaining employee/council scopes or periods."
+    },
+    {
+      "employerSlug": "town-of-princeton",
+      "sourceUrl": "https://princeton.municipalwebsites.ca/UploadFiles/Docs/SOFI2022_Ezpuz1.pdf",
+      "retrievedUrl": "https://princeton.municipalwebsites.ca/UploadFiles/Docs/SOFI2022_Ezpuz1.pdf",
+      "httpStatus": 200,
+      "bytes": 536762,
+      "sha256": "53b62dc3aa710917c6d7178efadc60397e89f73bac2e54d0c90ee061233b1d50",
+      "kind": "known-official-source-lead",
+      "cacheFile": "town-of-princeton-53b62dc3aa71.pdf",
+      "status": "retrieved-processing-needed",
+      "indexLabels": [
+        "Princeton SOFI 2022"
+      ],
+      "indexedReportingYears": [
+        "2022"
+      ],
+      "indexedYearIsVerifiedPeriod": false,
+      "pdfPages": 10,
+      "textChars": 12049,
+      "remunerationCandidatePhysicalPages": [
+        9,
+        10
+      ],
+      "textStatus": "text-layer-present-source-layout-and-any-OCR-errors-require-review",
+      "acceptedCohorts": [],
+      "rowControlsReviewed": false,
+      "nextAction": "Locate actual calendar heading and complete named cohorts; prefer usable text layers, then OCR scans, verify all row fields against originals, and reconcile all printed components."
+    },
+    {
+      "employerSlug": "village-of-radium-hot-springs",
+      "sourceUrl": "https://radiumhotsprings.ca/wp-content/uploads/2022/05/Radium-Hot-Springs-2021-Statement-of-Financial-Information.pdf",
+      "retrievedUrl": "https://radiumhotsprings.ca/wp-content/uploads/2022/05/Radium-Hot-Springs-2021-Statement-of-Financial-Information.pdf",
+      "httpStatus": 200,
+      "bytes": 1254112,
+      "sha256": "ad51c2e27b35f326416d547ec0808c1de699fed63ecf17f949e9086b9f23db45",
+      "kind": "known-official-source-lead",
+      "cacheFile": "village-of-radium-hot-springs-ad51c2e27b35.pdf",
+      "status": "retrieved-processing-needed",
+      "indexLabels": [
+        "Village of Radium Hot Springs"
+      ],
+      "indexedReportingYears": [],
+      "indexedYearIsVerifiedPeriod": false,
+      "pdfPages": 17,
+      "textChars": 0,
+      "remunerationCandidatePhysicalPages": [],
+      "textStatus": "scan-or-text-unavailable-needs-OCR",
+      "acceptedCohorts": [],
+      "rowControlsReviewed": false,
+      "nextAction": "Locate actual calendar heading and complete named cohorts; prefer usable text layers, then OCR scans, verify all row fields against originals, and reconcile all printed components."
+    },
+    {
+      "employerSlug": "district-of-summerland",
+      "sourceUrl": "https://www.summerland.ca/docs/default-source/your-city-hall/departments/finance/2023-signed-sofi.pdf?sfvrsn=360ecdfb_0",
+      "retrievedUrl": "https://www.summerland.ca/docs/default-source/your-city-hall/departments/finance/2023-signed-sofi.pdf?sfvrsn=360ecdfb_0",
+      "httpStatus": 200,
+      "bytes": 315836,
+      "sha256": "60ecc506e045d56c4081e558636dc11651c64cb6606071af66d6644e4dbff6ea",
+      "kind": "known-official-source-lead",
+      "cacheFile": "district-of-summerland-60ecc506e045.pdf",
+      "status": "accepted-in-part-or-full-see-cohort-scopes",
+      "indexLabels": [
+        "THE CORPORATION OF THE DISTRICT OF SUMMERLAND"
+      ],
+      "indexedReportingYears": [],
+      "indexedYearIsVerifiedPeriod": false,
+      "pdfPages": 11,
+      "textChars": 20968,
+      "remunerationCandidatePhysicalPages": [
+        5,
+        6
+      ],
+      "textStatus": "text-layer-present-source-layout-and-any-OCR-errors-require-review",
+      "acceptedCohorts": [
+        {
+          "id": "wave-interior-district-of-summerland-2023-employee-remuneration",
+          "year": "2023",
+          "category": "employee-remuneration",
+          "rowCount": 60,
+          "pages": [
+            5,
+            6
+          ],
+          "publicWarning": null
+        },
+        {
+          "id": "wave-interior-district-of-summerland-2023-elected-officials",
+          "year": "2023",
+          "category": "elected-officials",
+          "rowCount": 7,
+          "pages": [
+            5
+          ],
+          "publicWarning": null
+        }
+      ],
+      "rowControlsReviewed": true,
+      "nextAction": "Preserve accepted source evidence; process only remaining employee/council scopes or periods."
+    },
+    {
+      "employerSlug": "sun-peaks-mountain-resort-municipality",
+      "sourceUrl": "https://sunpeaksmunicipality.ca/sites/4/files/2026-03/2024%20SOFI%20Report.pdf",
+      "retrievedUrl": "https://sunpeaksmunicipality.ca/sites/4/files/2026-03/2024%20SOFI%20Report.pdf",
+      "httpStatus": 200,
+      "bytes": 2811426,
+      "sha256": "b213620420e860247a97045f9bfffc31ab96b829231357a6d2ace1673300875d",
+      "kind": "known-official-source-lead",
+      "cacheFile": "sun-peaks-mountain-resort-municipality-b213620420e8.pdf",
+      "status": "accepted-in-part-or-full-see-cohort-scopes",
+      "indexLabels": [
+        "2024"
+      ],
+      "indexedReportingYears": [
+        "2024"
+      ],
+      "indexedYearIsVerifiedPeriod": false,
+      "pdfPages": 13,
+      "textChars": 9475,
+      "remunerationCandidatePhysicalPages": [
+        2,
+        6,
+        7,
+        12
+      ],
+      "textStatus": "text-layer-present-source-layout-and-any-OCR-errors-require-review",
+      "acceptedCohorts": [
+        {
+          "id": "wave-interior-sun-peaks-mountain-resort-municipality-2024-employee-remuneration",
+          "year": "2024",
+          "category": "employee-remuneration",
+          "rowCount": 15,
+          "pages": [
+            7
+          ],
+          "publicWarning": "Published row sums minus printed named-cohort controls: remuneration -1 CAD, expenses +0 CAD. Amounts are retained as printed; the cause is unconfirmed."
+        }
+      ],
+      "rowControlsReviewed": true,
+      "nextAction": "Preserve accepted source evidence; process only remaining employee/council scopes or periods."
+    },
+    {
+      "employerSlug": "city-of-trail",
+      "sourceUrl": "https://trail.ca/wp-content/uploads/2026/06/2022-STATEMENT-OF-FINANCIAL-INFORMATION.pdf",
+      "retrievedUrl": "https://trail.ca/wp-content/uploads/2026/06/2022-STATEMENT-OF-FINANCIAL-INFORMATION.pdf",
+      "httpStatus": 200,
+      "bytes": 822618,
+      "sha256": "01fc098f4a3c0ecf38136a7849e52e2b94994e839c3237a866012bae111116c8",
+      "kind": "known-official-source-lead",
+      "cacheFile": "city-of-trail-01fc098f4a3c.pdf",
+      "status": "retrieved-processing-needed",
+      "indexLabels": [
+        ""
+      ],
+      "indexedReportingYears": [],
+      "indexedYearIsVerifiedPeriod": false,
+      "pdfPages": 37,
+      "textChars": 53894,
+      "remunerationCandidatePhysicalPages": [
+        34,
+        35
+      ],
+      "textStatus": "text-layer-present-source-layout-and-any-OCR-errors-require-review",
+      "acceptedCohorts": [],
+      "rowControlsReviewed": false,
+      "nextAction": "Locate actual calendar heading and complete named cohorts; prefer usable text layers, then OCR scans, verify all row fields against originals, and reconcile all printed components."
+    },
+    {
+      "employerSlug": "city-of-trail",
+      "sourceUrl": "https://trail.ca/wp-content/uploads/2026/06/2023_Statement-of-Financial-Information.pdf",
+      "retrievedUrl": "https://trail.ca/wp-content/uploads/2026/06/2023_Statement-of-Financial-Information.pdf",
+      "httpStatus": 200,
+      "bytes": 749298,
+      "sha256": "21bc7671ceef428b4632f90712c63f1b00ab541f684dff90ddeae2b6e119e253",
+      "kind": "known-official-source-lead",
+      "cacheFile": "city-of-trail-21bc7671ceef.pdf",
+      "status": "retrieved-processing-needed",
+      "indexLabels": [
+        ""
+      ],
+      "indexedReportingYears": [],
+      "indexedYearIsVerifiedPeriod": false,
+      "pdfPages": 40,
+      "textChars": 70726,
+      "remunerationCandidatePhysicalPages": [
+        37,
+        38
+      ],
+      "textStatus": "text-layer-present-source-layout-and-any-OCR-errors-require-review",
+      "acceptedCohorts": [],
+      "rowControlsReviewed": false,
+      "nextAction": "Locate actual calendar heading and complete named cohorts; prefer usable text layers, then OCR scans, verify all row fields against originals, and reconcile all printed components."
+    },
+    {
+      "employerSlug": "city-of-trail",
+      "sourceUrl": "https://trail.ca/wp-content/uploads/2026/06/2024-City-of-Trail-Statement-of-Financial-Information.pdf",
+      "retrievedUrl": "https://trail.ca/wp-content/uploads/2026/06/2024-City-of-Trail-Statement-of-Financial-Information.pdf",
+      "httpStatus": 200,
+      "bytes": 1195861,
+      "sha256": "650ef014a0f2dac7108fd1fc1b62dc1a227693bde4a164b004979f10279a720f",
+      "kind": "known-official-source-lead",
+      "cacheFile": "city-of-trail-650ef014a0f2.pdf",
+      "status": "retrieved-processing-needed",
+      "indexLabels": [
+        ""
+      ],
+      "indexedReportingYears": [],
+      "indexedYearIsVerifiedPeriod": false,
+      "pdfPages": 42,
+      "textChars": 71596,
+      "remunerationCandidatePhysicalPages": [
+        39,
+        40
+      ],
+      "textStatus": "text-layer-present-source-layout-and-any-OCR-errors-require-review",
+      "acceptedCohorts": [],
+      "rowControlsReviewed": false,
+      "nextAction": "Locate actual calendar heading and complete named cohorts; prefer usable text layers, then OCR scans, verify all row fields against originals, and reconcile all printed components."
+    },
+    {
+      "employerSlug": "district-of-clearwater",
+      "sourceUrl": "https://districtofclearwater.civicweb.net/document/106358",
+      "retrievedUrl": "https://districtofclearwater.civicweb.net/document/106358/",
+      "httpStatus": 200,
+      "bytes": 3903270,
+      "sha256": "29c5bda80e7dcc390a2392f28927c6bfc503ab38b8c422c77777627ae097da2f",
+      "kind": "archive-linked-original",
+      "cacheFile": "district-of-clearwater-29c5bda80e7d.pdf",
+      "status": "accepted-in-part-or-full-see-cohort-scopes",
+      "indexLabels": [
+        "2025 Statement of Financial Information"
+      ],
+      "indexedReportingYears": [
+        "2025"
+      ],
+      "indexedYearIsVerifiedPeriod": false,
+      "pdfPages": 48,
+      "textChars": 66152,
+      "remunerationCandidatePhysicalPages": [
+        3,
+        5,
+        7,
+        8,
+        47
+      ],
+      "textStatus": "text-layer-present-source-layout-and-any-OCR-errors-require-review",
+      "acceptedCohorts": [
+        {
+          "id": "wave-interior-district-of-clearwater-2025-employee-remuneration",
+          "year": "2025",
+          "category": "employee-remuneration",
+          "rowCount": 11,
+          "pages": [
+            47
+          ],
+          "publicWarning": null
+        },
+        {
+          "id": "wave-interior-district-of-clearwater-2025-elected-officials",
+          "year": "2025",
+          "category": "elected-officials",
+          "rowCount": 7,
+          "pages": [
+            47
+          ],
+          "publicWarning": null
+        }
+      ],
+      "rowControlsReviewed": true,
+      "nextAction": "Preserve accepted source evidence; process only remaining employee/council scopes or periods."
+    },
+    {
+      "employerSlug": "district-of-clearwater",
+      "sourceUrl": "https://districtofclearwater.civicweb.net/document/6230",
+      "retrievedUrl": "https://districtofclearwater.civicweb.net/document/6230/",
+      "httpStatus": 200,
+      "bytes": 3225018,
+      "sha256": "0403cd1b4359f2d2dd9e187231c3c18675b3b377a2bbb83fb2b245928109c773",
+      "kind": "archive-linked-original",
+      "cacheFile": "district-of-clearwater-0403cd1b4359.pdf",
+      "status": "retrieved-processing-needed",
+      "indexLabels": [
+        "2011 Statement of Financial Information"
+      ],
+      "indexedReportingYears": [
+        "2011"
+      ],
+      "indexedYearIsVerifiedPeriod": false,
+      "pdfPages": 13,
+      "textChars": 0,
+      "remunerationCandidatePhysicalPages": [],
+      "textStatus": "scan-or-text-unavailable-needs-OCR",
+      "acceptedCohorts": [],
+      "rowControlsReviewed": false,
+      "nextAction": "Locate actual calendar heading and complete named cohorts; prefer usable text layers, then OCR scans, verify all row fields against originals, and reconcile all printed components."
+    },
+    {
+      "employerSlug": "district-of-clearwater",
+      "sourceUrl": "https://districtofclearwater.civicweb.net/document/6229",
+      "retrievedUrl": "https://districtofclearwater.civicweb.net/document/6229/",
+      "httpStatus": 200,
+      "bytes": 2546642,
+      "sha256": "74b9c233c0814d10f2e10198b0460134d6c84feb8e4591fa4981f5cb433f4f09",
+      "kind": "archive-linked-original",
+      "cacheFile": "district-of-clearwater-74b9c233c081.pdf",
+      "status": "retrieved-processing-needed",
+      "indexLabels": [
+        "2012 Statement of Financial Information"
+      ],
+      "indexedReportingYears": [
+        "2012"
+      ],
+      "indexedYearIsVerifiedPeriod": false,
+      "pdfPages": 6,
+      "textChars": 3232,
+      "remunerationCandidatePhysicalPages": [
+        2
+      ],
+      "textStatus": "text-layer-present-source-layout-and-any-OCR-errors-require-review",
+      "acceptedCohorts": [],
+      "rowControlsReviewed": false,
+      "nextAction": "Locate actual calendar heading and complete named cohorts; prefer usable text layers, then OCR scans, verify all row fields against originals, and reconcile all printed components."
+    },
+    {
+      "employerSlug": "district-of-clearwater",
+      "sourceUrl": "https://districtofclearwater.civicweb.net/document/6228",
+      "retrievedUrl": "https://districtofclearwater.civicweb.net/document/6228/",
+      "httpStatus": 200,
+      "bytes": 2579455,
+      "sha256": "98e145752fb7cc9a4df5e7c171f40811cad730782c4ff6e958d4b63561d8e495",
+      "kind": "archive-linked-original",
+      "cacheFile": "district-of-clearwater-98e145752fb7.pdf",
+      "status": "retrieved-processing-needed",
+      "indexLabels": [
+        "2013 Statement of Financial Information"
+      ],
+      "indexedReportingYears": [
+        "2013"
+      ],
+      "indexedYearIsVerifiedPeriod": false,
+      "pdfPages": 6,
+      "textChars": 3843,
+      "remunerationCandidatePhysicalPages": [
+        2
+      ],
+      "textStatus": "text-layer-present-source-layout-and-any-OCR-errors-require-review",
+      "acceptedCohorts": [],
+      "rowControlsReviewed": false,
+      "nextAction": "Locate actual calendar heading and complete named cohorts; prefer usable text layers, then OCR scans, verify all row fields against originals, and reconcile all printed components."
+    },
+    {
+      "employerSlug": "district-of-clearwater",
+      "sourceUrl": "https://districtofclearwater.civicweb.net/document/6227",
+      "retrievedUrl": "https://districtofclearwater.civicweb.net/document/6227/",
+      "httpStatus": 200,
+      "bytes": 2641252,
+      "sha256": "a4791023258978262f24b62b3638eca8069b593869f5dee91df1acef6633d001",
+      "kind": "archive-linked-original",
+      "cacheFile": "district-of-clearwater-a47910232589.pdf",
+      "status": "retrieved-processing-needed",
+      "indexLabels": [
+        "2014 Statement of Financial Information"
+      ],
+      "indexedReportingYears": [
+        "2014"
+      ],
+      "indexedYearIsVerifiedPeriod": false,
+      "pdfPages": 6,
+      "textChars": 4330,
+      "remunerationCandidatePhysicalPages": [
+        2
+      ],
+      "textStatus": "text-layer-present-source-layout-and-any-OCR-errors-require-review",
+      "acceptedCohorts": [],
+      "rowControlsReviewed": false,
+      "nextAction": "Locate actual calendar heading and complete named cohorts; prefer usable text layers, then OCR scans, verify all row fields against originals, and reconcile all printed components."
+    },
+    {
+      "employerSlug": "district-of-clearwater",
+      "sourceUrl": "https://districtofclearwater.civicweb.net/document/6226",
+      "retrievedUrl": "https://districtofclearwater.civicweb.net/document/6226/",
+      "httpStatus": 200,
+      "bytes": 2861162,
+      "sha256": "7ef7d7b46337b1e33f4996e4d7bb28806f58532911b55297249cf7a460717049",
+      "kind": "archive-linked-original",
+      "cacheFile": "district-of-clearwater-7ef7d7b46337.pdf",
+      "status": "retrieved-processing-needed",
+      "indexLabels": [
+        "2015 Statement of Financial Information"
+      ],
+      "indexedReportingYears": [
+        "2015"
+      ],
+      "indexedYearIsVerifiedPeriod": false,
+      "pdfPages": 6,
+      "textChars": 4446,
+      "remunerationCandidatePhysicalPages": [
+        2
+      ],
+      "textStatus": "text-layer-present-source-layout-and-any-OCR-errors-require-review",
+      "acceptedCohorts": [],
+      "rowControlsReviewed": false,
+      "nextAction": "Locate actual calendar heading and complete named cohorts; prefer usable text layers, then OCR scans, verify all row fields against originals, and reconcile all printed components."
+    },
+    {
+      "employerSlug": "district-of-clearwater",
+      "sourceUrl": "https://districtofclearwater.civicweb.net/document/6061",
+      "retrievedUrl": "https://districtofclearwater.civicweb.net/document/6061/",
+      "httpStatus": 200,
+      "bytes": 11485452,
+      "sha256": "1040cf980005fe2f1a138e549fdd952188fd268260fcdf7811b8eb578e326721",
+      "kind": "archive-linked-original",
+      "cacheFile": "district-of-clearwater-1040cf980005.pdf",
+      "status": "retrieved-processing-needed",
+      "indexLabels": [
+        "2016 Statement of Financial Information"
+      ],
+      "indexedReportingYears": [
+        "2016"
+      ],
+      "indexedYearIsVerifiedPeriod": false,
+      "pdfPages": 44,
+      "textChars": 52438,
+      "remunerationCandidatePhysicalPages": [
+        7,
+        11,
+        13,
+        15,
+        16
+      ],
+      "textStatus": "text-layer-present-source-layout-and-any-OCR-errors-require-review",
+      "acceptedCohorts": [],
+      "rowControlsReviewed": false,
+      "nextAction": "Locate actual calendar heading and complete named cohorts; prefer usable text layers, then OCR scans, verify all row fields against originals, and reconcile all printed components."
+    },
+    {
+      "employerSlug": "district-of-clearwater",
+      "sourceUrl": "https://districtofclearwater.civicweb.net/document/13454",
+      "retrievedUrl": "https://districtofclearwater.civicweb.net/document/13454/",
+      "httpStatus": 200,
+      "bytes": 1613715,
+      "sha256": "db8642b32d6f999e9ff00ec1ff9b78d1cc763109e16235528542563ea8719316",
+      "kind": "archive-linked-original",
+      "cacheFile": "district-of-clearwater-db8642b32d6f.pdf",
+      "status": "retrieved-processing-needed",
+      "indexLabels": [
+        "2017 Statement of Financial Information"
+      ],
+      "indexedReportingYears": [
+        "2017"
+      ],
+      "indexedYearIsVerifiedPeriod": false,
+      "pdfPages": 38,
+      "textChars": 5033,
+      "remunerationCandidatePhysicalPages": [],
+      "textStatus": "text-layer-present-source-layout-and-any-OCR-errors-require-review",
+      "acceptedCohorts": [],
+      "rowControlsReviewed": false,
+      "nextAction": "Locate actual calendar heading and complete named cohorts; prefer usable text layers, then OCR scans, verify all row fields against originals, and reconcile all printed components."
+    },
+    {
+      "employerSlug": "district-of-clearwater",
+      "sourceUrl": "https://districtofclearwater.civicweb.net/document/23506",
+      "retrievedUrl": "https://districtofclearwater.civicweb.net/document/23506/",
+      "httpStatus": 200,
+      "bytes": 1729784,
+      "sha256": "7c2f7c934eb96e524dcf098c68b11a63dba6a46affb3c150827d23bee5c59c85",
+      "kind": "archive-linked-original",
+      "cacheFile": "district-of-clearwater-7c2f7c934eb9.pdf",
+      "status": "retrieved-processing-needed",
+      "indexLabels": [
+        "2018 Statement of Financial Information"
+      ],
+      "indexedReportingYears": [
+        "2018"
+      ],
+      "indexedYearIsVerifiedPeriod": false,
+      "pdfPages": 36,
+      "textChars": 8430,
+      "remunerationCandidatePhysicalPages": [],
+      "textStatus": "text-layer-present-source-layout-and-any-OCR-errors-require-review",
+      "acceptedCohorts": [],
+      "rowControlsReviewed": false,
+      "nextAction": "Locate actual calendar heading and complete named cohorts; prefer usable text layers, then OCR scans, verify all row fields against originals, and reconcile all printed components."
+    },
+    {
+      "employerSlug": "district-of-clearwater",
+      "sourceUrl": "https://districtofclearwater.civicweb.net/document/35207",
+      "retrievedUrl": "https://districtofclearwater.civicweb.net/document/35207/",
+      "httpStatus": 200,
+      "bytes": 1235368,
+      "sha256": "5795f93d951382b0b4db3cba65f6a475c2f4428b03df18c653fdbea689366573",
+      "kind": "archive-linked-original",
+      "cacheFile": "district-of-clearwater-5795f93d9513.pdf",
+      "status": "retrieved-processing-needed",
+      "indexLabels": [
+        "2019 Statement of Financial Information"
+      ],
+      "indexedReportingYears": [
+        "2019"
+      ],
+      "indexedYearIsVerifiedPeriod": false,
+      "pdfPages": 31,
+      "textChars": 169,
+      "remunerationCandidatePhysicalPages": [],
+      "textStatus": "scan-or-text-unavailable-needs-OCR",
+      "acceptedCohorts": [],
+      "rowControlsReviewed": false,
+      "nextAction": "Locate actual calendar heading and complete named cohorts; prefer usable text layers, then OCR scans, verify all row fields against originals, and reconcile all printed components."
+    },
+    {
+      "employerSlug": "district-of-clearwater",
+      "sourceUrl": "https://districtofclearwater.civicweb.net/document/44958",
+      "retrievedUrl": "https://districtofclearwater.civicweb.net/document/44958/",
+      "httpStatus": 200,
+      "bytes": 1414401,
+      "sha256": "92a491e9872edbf1c5dbad1fdee747441fd6b8f19cbb53185a3ff00a0ece025c",
+      "kind": "archive-linked-original",
+      "cacheFile": "district-of-clearwater-92a491e9872e.pdf",
+      "status": "retrieved-processing-needed",
+      "indexLabels": [
+        "2020 Statement of Financial Information"
+      ],
+      "indexedReportingYears": [
+        "2020"
+      ],
+      "indexedYearIsVerifiedPeriod": false,
+      "pdfPages": 37,
+      "textChars": 6962,
+      "remunerationCandidatePhysicalPages": [
+        3,
+        5,
+        6
+      ],
+      "textStatus": "text-layer-present-source-layout-and-any-OCR-errors-require-review",
+      "acceptedCohorts": [],
+      "rowControlsReviewed": false,
+      "nextAction": "Locate actual calendar heading and complete named cohorts; prefer usable text layers, then OCR scans, verify all row fields against originals, and reconcile all printed components."
+    },
+    {
+      "employerSlug": "district-of-clearwater",
+      "sourceUrl": "https://districtofclearwater.civicweb.net/document/61408",
+      "retrievedUrl": "https://districtofclearwater.civicweb.net/document/61408/",
+      "httpStatus": 200,
+      "bytes": 3079446,
+      "sha256": "93428c2dc0567313ffad0d67c835ce2277d3635a3dcf310e1594ff883542eb44",
+      "kind": "archive-linked-original",
+      "cacheFile": "district-of-clearwater-93428c2dc056.pdf",
+      "status": "retrieved-processing-needed",
+      "indexLabels": [
+        "2021 Statement of Financial Information"
+      ],
+      "indexedReportingYears": [
+        "2021"
+      ],
+      "indexedYearIsVerifiedPeriod": false,
+      "pdfPages": 37,
+      "textChars": 50680,
+      "remunerationCandidatePhysicalPages": [
+        3,
+        5,
+        6,
+        36
+      ],
+      "textStatus": "text-layer-present-source-layout-and-any-OCR-errors-require-review",
+      "acceptedCohorts": [],
+      "rowControlsReviewed": false,
+      "nextAction": "Locate actual calendar heading and complete named cohorts; prefer usable text layers, then OCR scans, verify all row fields against originals, and reconcile all printed components."
+    },
+    {
+      "employerSlug": "district-of-clearwater",
+      "sourceUrl": "https://districtofclearwater.civicweb.net/document/78166",
+      "retrievedUrl": "https://districtofclearwater.civicweb.net/document/78166/",
+      "httpStatus": 200,
+      "bytes": 1114806,
+      "sha256": "4433fd96ccd15c28d03ba25b8591e31f6b5b37e2d9689e667c0a581aef39d0c5",
+      "kind": "archive-linked-original",
+      "cacheFile": "district-of-clearwater-4433fd96ccd1.pdf",
+      "status": "retrieved-processing-needed",
+      "indexLabels": [
+        "2022 Statement of Financial Information"
+      ],
+      "indexedReportingYears": [
+        "2022"
+      ],
+      "indexedYearIsVerifiedPeriod": false,
+      "pdfPages": 38,
+      "textChars": 54516,
+      "remunerationCandidatePhysicalPages": [
+        3,
+        5,
+        6,
+        37
+      ],
+      "textStatus": "text-layer-present-source-layout-and-any-OCR-errors-require-review",
+      "acceptedCohorts": [],
+      "rowControlsReviewed": false,
+      "nextAction": "Locate actual calendar heading and complete named cohorts; prefer usable text layers, then OCR scans, verify all row fields against originals, and reconcile all printed components."
+    },
+    {
+      "employerSlug": "district-of-clearwater",
+      "sourceUrl": "https://districtofclearwater.civicweb.net/document/85147",
+      "retrievedUrl": "https://districtofclearwater.civicweb.net/document/85147/",
+      "httpStatus": 200,
+      "bytes": 1281440,
+      "sha256": "3bb679eaa53ce3f819e57ddd1a6499c83781d22be3fb67257d18fd3117f28e49",
+      "kind": "archive-linked-original",
+      "cacheFile": "district-of-clearwater-3bb679eaa53c.pdf",
+      "status": "accepted-in-part-or-full-see-cohort-scopes",
+      "indexLabels": [
+        "2023 Statement of Financial Information"
+      ],
+      "indexedReportingYears": [
+        "2023"
+      ],
+      "indexedYearIsVerifiedPeriod": false,
+      "pdfPages": 44,
+      "textChars": 68423,
+      "remunerationCandidatePhysicalPages": [
+        3,
+        5,
+        6,
+        43
+      ],
+      "textStatus": "text-layer-present-source-layout-and-any-OCR-errors-require-review",
+      "acceptedCohorts": [
+        {
+          "id": "wave-interior-district-of-clearwater-2023-employee-remuneration",
+          "year": "2023",
+          "category": "employee-remuneration",
+          "rowCount": 9,
+          "pages": [
+            43
+          ],
+          "publicWarning": null
+        },
+        {
+          "id": "wave-interior-district-of-clearwater-2023-elected-officials",
+          "year": "2023",
+          "category": "elected-officials",
+          "rowCount": 7,
+          "pages": [
+            43
+          ],
+          "publicWarning": null
+        }
+      ],
+      "rowControlsReviewed": true,
+      "nextAction": "Preserve accepted source evidence; process only remaining employee/council scopes or periods."
+    },
+    {
+      "employerSlug": "district-of-clearwater",
+      "sourceUrl": "https://districtofclearwater.civicweb.net/document/98886",
+      "retrievedUrl": "https://districtofclearwater.civicweb.net/document/98886/",
+      "httpStatus": 200,
+      "bytes": 4878151,
+      "sha256": "72177a1c281da5514a8f885359073ab382d8ffbbabc58757b5aa223e9cac4b5f",
+      "kind": "archive-linked-original",
+      "cacheFile": "district-of-clearwater-72177a1c281d.pdf",
+      "status": "retrieved-processing-needed",
+      "indexLabels": [
+        "2024 Statement of Financial Information"
+      ],
+      "indexedReportingYears": [
+        "2024"
+      ],
+      "indexedYearIsVerifiedPeriod": false,
+      "pdfPages": 47,
+      "textChars": 21540,
+      "remunerationCandidatePhysicalPages": [
+        3,
+        5,
+        6,
+        46
+      ],
+      "textStatus": "text-layer-present-source-layout-and-any-OCR-errors-require-review",
+      "acceptedCohorts": [],
+      "rowControlsReviewed": false,
+      "nextAction": "Locate actual calendar heading and complete named cohorts; prefer usable text layers, then OCR scans, verify all row fields against originals, and reconcile all printed components."
+    },
+    {
+      "employerSlug": "city-of-rossland",
+      "sourceUrl": "https://rossland.civicweb.net/document/55626",
+      "retrievedUrl": "https://rossland.civicweb.net/document/55626/",
+      "httpStatus": 200,
+      "bytes": 1508665,
+      "sha256": "2c22b2dd6dcbe258469192400c14c6e6a94e8e0dff93ee823f343408b63d98a0",
+      "kind": "archive-linked-original",
+      "cacheFile": "city-of-rossland-2c22b2dd6dcb.pdf",
+      "status": "accepted-in-part-or-full-see-cohort-scopes",
+      "indexLabels": [
+        "SOFI 2025"
+      ],
+      "indexedReportingYears": [
+        "2025"
+      ],
+      "indexedYearIsVerifiedPeriod": false,
+      "pdfPages": 45,
+      "textChars": 79469,
+      "remunerationCandidatePhysicalPages": [
+        2,
+        4,
+        6,
+        7,
+        40,
+        41,
+        42,
+        45
+      ],
+      "textStatus": "text-layer-present-source-layout-and-any-OCR-errors-require-review",
+      "acceptedCohorts": [
+        {
+          "id": "wave-interior-city-of-rossland-2025-employee-remuneration",
+          "year": "2025",
+          "category": "employee-remuneration",
+          "rowCount": 33,
+          "pages": [
+            41
+          ],
+          "publicWarning": "Published row sums minus printed named-cohort controls: remuneration +1 CAD, expenses +5 CAD, expense-inclusive total +0 CAD. Amounts are retained as printed; the cause is unconfirmed."
+        },
+        {
+          "id": "wave-interior-city-of-rossland-2025-elected-officials",
+          "year": "2025",
+          "category": "elected-officials",
+          "rowCount": 7,
+          "pages": [
+            40
+          ],
+          "publicWarning": "Published row sums minus printed named-cohort controls: remuneration -2 CAD, expenses -1 CAD, expense-inclusive total -1 CAD. Amounts are retained as printed; the cause is unconfirmed."
+        }
+      ],
+      "rowControlsReviewed": true,
+      "nextAction": "Preserve accepted source evidence; process only remaining employee/council scopes or periods."
+    },
+    {
+      "employerSlug": "city-of-rossland",
+      "sourceUrl": "https://rossland.civicweb.net/document/47078",
+      "retrievedUrl": "https://rossland.civicweb.net/document/47078/",
+      "httpStatus": 200,
+      "bytes": 9194965,
+      "sha256": "8aee94ae1927117c2c7be04d402f88fb1bccf5aaac611017698444ceb49bd862",
+      "kind": "archive-linked-original",
+      "cacheFile": "city-of-rossland-8aee94ae1927.pdf",
+      "status": "retrieved-processing-needed",
+      "indexLabels": [
+        "SOFI 2024"
+      ],
+      "indexedReportingYears": [
+        "2024"
+      ],
+      "indexedYearIsVerifiedPeriod": false,
+      "pdfPages": 50,
+      "textChars": 24464,
+      "remunerationCandidatePhysicalPages": [
+        2,
+        4,
+        6,
+        7,
+        45,
+        46,
+        47,
+        50
+      ],
+      "textStatus": "text-layer-present-source-layout-and-any-OCR-errors-require-review",
+      "acceptedCohorts": [],
+      "rowControlsReviewed": false,
+      "nextAction": "Locate actual calendar heading and complete named cohorts; prefer usable text layers, then OCR scans, verify all row fields against originals, and reconcile all printed components."
+    },
+    {
+      "employerSlug": "city-of-rossland",
+      "sourceUrl": "https://rossland.civicweb.net/document/38506",
+      "retrievedUrl": "https://rossland.civicweb.net/document/38506/",
+      "httpStatus": 200,
+      "bytes": 3039622,
+      "sha256": "ffa3b5b7e017cdbd96482c7152e468f8f11e718d028e69041f64ce85806cdec2",
+      "kind": "archive-linked-original",
+      "cacheFile": "city-of-rossland-ffa3b5b7e017.pdf",
+      "status": "retrieved-processing-needed",
+      "indexLabels": [
+        "SOFI 2023"
+      ],
+      "indexedReportingYears": [
+        "2023"
+      ],
+      "indexedYearIsVerifiedPeriod": false,
+      "pdfPages": 50,
+      "textChars": 61226,
+      "remunerationCandidatePhysicalPages": [
+        2,
+        4,
+        6,
+        7,
+        37,
+        40
+      ],
+      "textStatus": "text-layer-present-source-layout-and-any-OCR-errors-require-review",
+      "acceptedCohorts": [],
+      "rowControlsReviewed": false,
+      "nextAction": "Locate actual calendar heading and complete named cohorts; prefer usable text layers, then OCR scans, verify all row fields against originals, and reconcile all printed components."
+    },
+    {
+      "employerSlug": "city-of-rossland",
+      "sourceUrl": "https://rossland.civicweb.net/document/29583",
+      "retrievedUrl": "https://rossland.civicweb.net/document/29583/",
+      "httpStatus": 200,
+      "bytes": 1085084,
+      "sha256": "b9ca337284cb3e9158148c226a6face87fa14b9d8caefedfb7a1b4f1f46be6ab",
+      "kind": "archive-linked-original",
+      "cacheFile": "city-of-rossland-b9ca337284cb.pdf",
+      "status": "retrieved-processing-needed",
+      "indexLabels": [
+        "SOFI 2022"
+      ],
+      "indexedReportingYears": [
+        "2022"
+      ],
+      "indexedYearIsVerifiedPeriod": false,
+      "pdfPages": 43,
+      "textChars": 69431,
+      "remunerationCandidatePhysicalPages": [
+        2,
+        4,
+        5,
+        33,
+        36,
+        40,
+        41,
+        42
+      ],
+      "textStatus": "text-layer-present-source-layout-and-any-OCR-errors-require-review",
+      "acceptedCohorts": [],
+      "rowControlsReviewed": false,
+      "nextAction": "Locate actual calendar heading and complete named cohorts; prefer usable text layers, then OCR scans, verify all row fields against originals, and reconcile all printed components."
+    },
+    {
+      "employerSlug": "city-of-rossland",
+      "sourceUrl": "https://rossland.civicweb.net/document/23216",
+      "retrievedUrl": "https://rossland.civicweb.net/document/23216/",
+      "httpStatus": 200,
+      "bytes": 1535721,
+      "sha256": "abd851dea348424911a9d5b78a1834a9265c0ae33f902224a4bd7c6caba04c1c",
+      "kind": "archive-linked-original",
+      "cacheFile": "city-of-rossland-abd851dea348.pdf",
+      "status": "retrieved-processing-needed",
+      "indexLabels": [
+        "SOFI 2021"
+      ],
+      "indexedReportingYears": [
+        "2021"
+      ],
+      "indexedYearIsVerifiedPeriod": false,
+      "pdfPages": 10,
+      "textChars": 11850,
+      "remunerationCandidatePhysicalPages": [
+        6,
+        7
+      ],
+      "textStatus": "text-layer-present-source-layout-and-any-OCR-errors-require-review",
+      "acceptedCohorts": [],
+      "rowControlsReviewed": false,
+      "nextAction": "Locate actual calendar heading and complete named cohorts; prefer usable text layers, then OCR scans, verify all row fields against originals, and reconcile all printed components."
+    },
+    {
+      "employerSlug": "city-of-rossland",
+      "sourceUrl": "https://rossland.civicweb.net/document/19597",
+      "retrievedUrl": "https://rossland.civicweb.net/document/19597/",
+      "httpStatus": 200,
+      "bytes": 2580094,
+      "sha256": "7e75b21642517a81e1d0ef4eb2f4f3d568eb0b8ed0f772182ecec121cd25e0ad",
+      "kind": "archive-linked-original",
+      "cacheFile": "city-of-rossland-7e75b2164251.pdf",
+      "status": "retrieved-processing-needed",
+      "indexLabels": [
+        "SOFI 2020"
+      ],
+      "indexedReportingYears": [
+        "2020"
+      ],
+      "indexedYearIsVerifiedPeriod": false,
+      "pdfPages": 44,
+      "textChars": 56530,
+      "remunerationCandidatePhysicalPages": [
+        2,
+        24,
+        38,
+        39,
+        42
+      ],
+      "textStatus": "text-layer-present-source-layout-and-any-OCR-errors-require-review",
+      "acceptedCohorts": [],
+      "rowControlsReviewed": false,
+      "nextAction": "Locate actual calendar heading and complete named cohorts; prefer usable text layers, then OCR scans, verify all row fields against originals, and reconcile all printed components."
+    },
+    {
+      "employerSlug": "city-of-rossland",
+      "sourceUrl": "https://rossland.civicweb.net/document/7063",
+      "retrievedUrl": "https://rossland.civicweb.net/document/7063/",
+      "httpStatus": 200,
+      "bytes": 9510413,
+      "sha256": "698458fdc4ba3869b76224ee7b6ef22e5deba47fcb7c4a685b0b1d5241cd226b",
+      "kind": "archive-linked-original",
+      "cacheFile": "city-of-rossland-698458fdc4ba.pdf",
+      "status": "retrieved-processing-needed",
+      "indexLabels": [
+        "SOFI 2019"
+      ],
+      "indexedReportingYears": [
+        "2019"
+      ],
+      "indexedYearIsVerifiedPeriod": false,
+      "pdfPages": 42,
+      "textChars": 49314,
+      "remunerationCandidatePhysicalPages": [
+        17,
+        22,
+        36,
+        37,
+        40
+      ],
+      "textStatus": "text-layer-present-source-layout-and-any-OCR-errors-require-review",
+      "acceptedCohorts": [],
+      "rowControlsReviewed": false,
+      "nextAction": "Locate actual calendar heading and complete named cohorts; prefer usable text layers, then OCR scans, verify all row fields against originals, and reconcile all printed components."
+    },
+    {
+      "employerSlug": "city-of-rossland",
+      "sourceUrl": "https://rossland.civicweb.net/document/7045",
+      "retrievedUrl": "https://rossland.civicweb.net/document/7045/",
+      "httpStatus": 200,
+      "bytes": 4153150,
+      "sha256": "11dd025d45a198122f5aa590ea963655e8f72cf5970bb935ab33825871d223cf",
+      "kind": "archive-linked-original",
+      "cacheFile": "city-of-rossland-11dd025d45a1.pdf",
+      "status": "retrieved-processing-needed",
+      "indexLabels": [
+        "SOFI 2018"
+      ],
+      "indexedReportingYears": [
+        "2018"
+      ],
+      "indexedYearIsVerifiedPeriod": false,
+      "pdfPages": 42,
+      "textChars": 50018,
+      "remunerationCandidatePhysicalPages": [
+        17,
+        22,
+        36,
+        37
+      ],
+      "textStatus": "text-layer-present-source-layout-and-any-OCR-errors-require-review",
+      "acceptedCohorts": [],
+      "rowControlsReviewed": false,
+      "nextAction": "Locate actual calendar heading and complete named cohorts; prefer usable text layers, then OCR scans, verify all row fields against originals, and reconcile all printed components."
+    },
+    {
+      "employerSlug": "city-of-rossland",
+      "sourceUrl": "https://rossland.civicweb.net/document/7047",
+      "retrievedUrl": "https://rossland.civicweb.net/document/7047/",
+      "httpStatus": 200,
+      "bytes": 32302609,
+      "sha256": "fd093bc75659a0fe4364e05500897265fcc3f9707c7dbb0969d11f0e04baa59a",
+      "kind": "archive-linked-original",
+      "cacheFile": "city-of-rossland-fd093bc75659.pdf",
+      "status": "retrieved-processing-needed",
+      "indexLabels": [
+        "SOFI 2017"
+      ],
+      "indexedReportingYears": [
+        "2017"
+      ],
+      "indexedYearIsVerifiedPeriod": false,
+      "pdfPages": 41,
+      "textChars": 0,
+      "remunerationCandidatePhysicalPages": [],
+      "textStatus": "scan-or-text-unavailable-needs-OCR",
+      "acceptedCohorts": [],
+      "rowControlsReviewed": false,
+      "nextAction": "Locate actual calendar heading and complete named cohorts; prefer usable text layers, then OCR scans, verify all row fields against originals, and reconcile all printed components."
+    },
+    {
+      "employerSlug": "city-of-rossland",
+      "sourceUrl": "https://rossland.civicweb.net/document/7043",
+      "retrievedUrl": "https://rossland.civicweb.net/document/7043/",
+      "httpStatus": 200,
+      "bytes": 1322606,
+      "sha256": "31dadfc3ccf66e6f408df9ee3e428e21ed1ea45cf7c945bec6763d92311e9b1e",
+      "kind": "archive-linked-original",
+      "cacheFile": "city-of-rossland-31dadfc3ccf6.pdf",
+      "status": "retrieved-processing-needed",
+      "indexLabels": [
+        "SOFI 2016"
+      ],
+      "indexedReportingYears": [
+        "2016"
+      ],
+      "indexedYearIsVerifiedPeriod": false,
+      "pdfPages": 40,
+      "textChars": 12376,
+      "remunerationCandidatePhysicalPages": [],
+      "textStatus": "text-layer-present-source-layout-and-any-OCR-errors-require-review",
+      "acceptedCohorts": [],
+      "rowControlsReviewed": false,
+      "nextAction": "Locate actual calendar heading and complete named cohorts; prefer usable text layers, then OCR scans, verify all row fields against originals, and reconcile all printed components."
+    },
+    {
+      "employerSlug": "city-of-rossland",
+      "sourceUrl": "https://rossland.civicweb.net/document/7064",
+      "retrievedUrl": "https://rossland.civicweb.net/document/7064/",
+      "httpStatus": 200,
+      "bytes": 1556810,
+      "sha256": "c9600b788c909a3246d1d095505936249387daa524ca0c5328b36913f88a360c",
+      "kind": "archive-linked-original",
+      "cacheFile": "city-of-rossland-c9600b788c90.pdf",
+      "status": "retrieved-processing-needed",
+      "indexLabels": [
+        "SOFI 2015"
+      ],
+      "indexedReportingYears": [
+        "2015"
+      ],
+      "indexedYearIsVerifiedPeriod": false,
+      "pdfPages": 47,
+      "textChars": 20308,
+      "remunerationCandidatePhysicalPages": [
+        1,
+        3,
+        5,
+        6,
+        41,
+        42
+      ],
+      "textStatus": "text-layer-present-source-layout-and-any-OCR-errors-require-review",
+      "acceptedCohorts": [],
+      "rowControlsReviewed": false,
+      "nextAction": "Locate actual calendar heading and complete named cohorts; prefer usable text layers, then OCR scans, verify all row fields against originals, and reconcile all printed components."
+    },
+    {
+      "employerSlug": "city-of-rossland",
+      "sourceUrl": "https://rossland.civicweb.net/document/23217",
+      "retrievedUrl": "https://rossland.civicweb.net/document/23217/",
+      "httpStatus": 200,
+      "bytes": 4021853,
+      "sha256": "963a9c8569e74f351e87c088e4f63cb1d5d9aeeec616201df799eddd66a2bab9",
+      "kind": "archive-linked-original",
+      "cacheFile": "city-of-rossland-963a9c8569e7.pdf",
+      "status": "retrieved-processing-needed",
+      "indexLabels": [
+        "SOFI 2014"
+      ],
+      "indexedReportingYears": [
+        "2014"
+      ],
+      "indexedYearIsVerifiedPeriod": false,
+      "pdfPages": 48,
+      "textChars": 61277,
+      "remunerationCandidatePhysicalPages": [
+        1,
+        3,
+        5,
+        6,
+        24,
+        43,
+        45
+      ],
+      "textStatus": "text-layer-present-source-layout-and-any-OCR-errors-require-review",
+      "acceptedCohorts": [],
+      "rowControlsReviewed": false,
+      "nextAction": "Locate actual calendar heading and complete named cohorts; prefer usable text layers, then OCR scans, verify all row fields against originals, and reconcile all printed components."
+    },
+    {
+      "employerSlug": "city-of-rossland",
+      "sourceUrl": "https://rossland.civicweb.net/document/7046",
+      "retrievedUrl": "https://rossland.civicweb.net/document/7046/",
+      "httpStatus": 200,
+      "bytes": 4021853,
+      "sha256": "963a9c8569e74f351e87c088e4f63cb1d5d9aeeec616201df799eddd66a2bab9",
+      "kind": "archive-linked-original",
+      "cacheFile": "city-of-rossland-963a9c8569e7.pdf",
+      "status": "retrieved-processing-needed",
+      "indexLabels": [
+        "SOFI 2013"
+      ],
+      "indexedReportingYears": [
+        "2013"
+      ],
+      "indexedYearIsVerifiedPeriod": false,
+      "pdfPages": 48,
+      "textChars": 61277,
+      "remunerationCandidatePhysicalPages": [
+        1,
+        3,
+        5,
+        6,
+        24,
+        43,
+        45
+      ],
+      "textStatus": "text-layer-present-source-layout-and-any-OCR-errors-require-review",
+      "acceptedCohorts": [],
+      "rowControlsReviewed": false,
+      "nextAction": "Locate actual calendar heading and complete named cohorts; prefer usable text layers, then OCR scans, verify all row fields against originals, and reconcile all printed components."
+    },
+    {
+      "employerSlug": "city-of-rossland",
+      "sourceUrl": "https://rossland.civicweb.net/document/7082",
+      "retrievedUrl": "https://rossland.civicweb.net/document/7082/",
+      "httpStatus": 200,
+      "bytes": 3941598,
+      "sha256": "2c30435db6cd05bbcee257ce8a8db60121e44216e8f78208693e1ba3421a214a",
+      "kind": "archive-linked-original",
+      "cacheFile": "city-of-rossland-2c30435db6cd.pdf",
+      "status": "retrieved-processing-needed",
+      "indexLabels": [
+        "SOFI 2012"
+      ],
+      "indexedReportingYears": [
+        "2012"
+      ],
+      "indexedYearIsVerifiedPeriod": false,
+      "pdfPages": 44,
+      "textChars": 391,
+      "remunerationCandidatePhysicalPages": [],
+      "textStatus": "scan-or-text-unavailable-needs-OCR",
+      "acceptedCohorts": [],
+      "rowControlsReviewed": false,
+      "nextAction": "Locate actual calendar heading and complete named cohorts; prefer usable text layers, then OCR scans, verify all row fields against originals, and reconcile all printed components."
+    },
+    {
+      "employerSlug": "city-of-rossland",
+      "sourceUrl": "https://rossland.civicweb.net/document/7066",
+      "retrievedUrl": "https://rossland.civicweb.net/document/7066/",
+      "httpStatus": 200,
+      "bytes": 30486867,
+      "sha256": "f779bc15d6c5b3709853067c42a9db68e29c68794167adaa5134e465f73f3f0e",
+      "kind": "archive-linked-original",
+      "cacheFile": "city-of-rossland-f779bc15d6c5.pdf",
+      "status": "retrieved-processing-needed",
+      "indexLabels": [
+        "SOFI 2011"
+      ],
+      "indexedReportingYears": [
+        "2011"
+      ],
+      "indexedYearIsVerifiedPeriod": false,
+      "pdfPages": 44,
+      "textChars": 61942,
+      "remunerationCandidatePhysicalPages": [
+        1,
+        3,
+        5,
+        6,
+        40
+      ],
+      "textStatus": "text-layer-present-source-layout-and-any-OCR-errors-require-review",
+      "acceptedCohorts": [],
+      "rowControlsReviewed": false,
+      "nextAction": "Locate actual calendar heading and complete named cohorts; prefer usable text layers, then OCR scans, verify all row fields against originals, and reconcile all printed components."
+    },
+    {
+      "employerSlug": "city-of-rossland",
+      "sourceUrl": "https://rossland.civicweb.net/document/7065",
+      "retrievedUrl": "https://rossland.civicweb.net/document/7065/",
+      "httpStatus": 200,
+      "bytes": 1094579,
+      "sha256": "83056ad7d4ca96ed5d28b3bb6ec1cd50db1bcd6f19a1459d275989cfa1ec20fa",
+      "kind": "archive-linked-original",
+      "cacheFile": "city-of-rossland-83056ad7d4ca.pdf",
+      "status": "retrieved-processing-needed",
+      "indexLabels": [
+        "SOFI 2010"
+      ],
+      "indexedReportingYears": [
+        "2010"
+      ],
+      "indexedYearIsVerifiedPeriod": false,
+      "pdfPages": 45,
+      "textChars": 56541,
+      "remunerationCandidatePhysicalPages": [
+        1,
+        3,
+        5,
+        6,
+        40,
+        41
+      ],
+      "textStatus": "text-layer-present-source-layout-and-any-OCR-errors-require-review",
+      "acceptedCohorts": [],
+      "rowControlsReviewed": false,
+      "nextAction": "Locate actual calendar heading and complete named cohorts; prefer usable text layers, then OCR scans, verify all row fields against originals, and reconcile all printed components."
+    },
+    {
+      "employerSlug": "district-of-sparwood",
+      "sourceUrl": "https://sparwood.civicweb.net/document/177527",
+      "retrievedUrl": "https://sparwood.civicweb.net/document/177527/",
+      "httpStatus": 200,
+      "bytes": 5283055,
+      "sha256": "b4d627f2193603b65e43630c5e072f4b308c6350efa4be8924560679a4ce9c7a",
+      "kind": "archive-linked-original",
+      "cacheFile": "district-of-sparwood-b4d627f21936.pdf",
+      "status": "accepted-in-part-or-full-see-cohort-scopes",
+      "indexLabels": [
+        "2025 Statement of Financial Information (SOFI)"
+      ],
+      "indexedReportingYears": [
+        "2025"
+      ],
+      "indexedYearIsVerifiedPeriod": false,
+      "pdfPages": 34,
+      "textChars": 57258,
+      "remunerationCandidatePhysicalPages": [
+        3
+      ],
+      "textStatus": "text-layer-present-source-layout-and-any-OCR-errors-require-review",
+      "acceptedCohorts": [
+        {
+          "id": "wave-interior-district-of-sparwood-2025-employee-remuneration",
+          "year": "2025",
+          "category": "employee-remuneration",
+          "rowCount": 33,
+          "pages": [
+            3
+          ],
+          "publicWarning": null
+        },
+        {
+          "id": "wave-interior-district-of-sparwood-2025-elected-officials",
+          "year": "2025",
+          "category": "elected-officials",
+          "rowCount": 7,
+          "pages": [
+            3
+          ],
+          "publicWarning": null
+        }
+      ],
+      "rowControlsReviewed": true,
+      "nextAction": "Preserve accepted source evidence; process only remaining employee/council scopes or periods."
+    },
+    {
+      "employerSlug": "district-of-sparwood",
+      "sourceUrl": "https://sparwood.civicweb.net/document/163055",
+      "retrievedUrl": "https://sparwood.civicweb.net/document/163055/",
+      "httpStatus": 200,
+      "bytes": 5001956,
+      "sha256": "26886ddeee87c195226f98004529559812dd7a6629207666196324d9ae499b12",
+      "kind": "archive-linked-original",
+      "cacheFile": "district-of-sparwood-26886ddeee87.pdf",
+      "status": "accepted-in-part-or-full-see-cohort-scopes",
+      "indexLabels": [
+        "2024 Statement of Financial Information (SOFI)"
+      ],
+      "indexedReportingYears": [
+        "2024"
+      ],
+      "indexedYearIsVerifiedPeriod": false,
+      "pdfPages": 34,
+      "textChars": 55877,
+      "remunerationCandidatePhysicalPages": [
+        3
+      ],
+      "textStatus": "text-layer-present-source-layout-and-any-OCR-errors-require-review",
+      "acceptedCohorts": [
+        {
+          "id": "wave-interior-district-of-sparwood-2024-employee-remuneration",
+          "year": "2024",
+          "category": "employee-remuneration",
+          "rowCount": 28,
+          "pages": [
+            3
+          ],
+          "publicWarning": null
+        },
+        {
+          "id": "wave-interior-district-of-sparwood-2024-elected-officials",
+          "year": "2024",
+          "category": "elected-officials",
+          "rowCount": 7,
+          "pages": [
+            3
+          ],
+          "publicWarning": null
+        }
+      ],
+      "rowControlsReviewed": true,
+      "nextAction": "Preserve accepted source evidence; process only remaining employee/council scopes or periods."
+    },
+    {
+      "employerSlug": "district-of-sparwood",
+      "sourceUrl": "https://sparwood.civicweb.net/document/149182",
+      "retrievedUrl": "https://sparwood.civicweb.net/document/149182/",
+      "httpStatus": 200,
+      "bytes": 1436714,
+      "sha256": "e98d22768213d0ba39bbcf39228e5946221590c0a9732e174654492aa634dc74",
+      "kind": "archive-linked-original",
+      "cacheFile": "district-of-sparwood-e98d22768213.pdf",
+      "status": "retrieved-processing-needed",
+      "indexLabels": [
+        "2023 Statement of Financial Information (SOFI)"
+      ],
+      "indexedReportingYears": [
+        "2023"
+      ],
+      "indexedYearIsVerifiedPeriod": false,
+      "pdfPages": 34,
+      "textChars": 49147,
+      "remunerationCandidatePhysicalPages": [
+        3
+      ],
+      "textStatus": "text-layer-present-source-layout-and-any-OCR-errors-require-review",
+      "acceptedCohorts": [],
+      "rowControlsReviewed": false,
+      "nextAction": "Locate actual calendar heading and complete named cohorts; prefer usable text layers, then OCR scans, verify all row fields against originals, and reconcile all printed components."
+    },
+    {
+      "employerSlug": "district-of-sparwood",
+      "sourceUrl": "https://sparwood.civicweb.net/document/137920",
+      "retrievedUrl": "https://sparwood.civicweb.net/document/137920/",
+      "httpStatus": 200,
+      "bytes": 1901404,
+      "sha256": "177131f9d2f9ed283a9fd775eeceef746f34841f93704957aa6b7c0e4ba9cb91",
+      "kind": "archive-linked-original",
+      "cacheFile": "district-of-sparwood-177131f9d2f9.pdf",
+      "status": "retrieved-processing-needed",
+      "indexLabels": [
+        "2022 Statement of Financial Information (SOFI)"
+      ],
+      "indexedReportingYears": [
+        "2022"
+      ],
+      "indexedYearIsVerifiedPeriod": false,
+      "pdfPages": 33,
+      "textChars": 49028,
+      "remunerationCandidatePhysicalPages": [
+        1,
+        3
+      ],
+      "textStatus": "text-layer-present-source-layout-and-any-OCR-errors-require-review",
+      "acceptedCohorts": [],
+      "rowControlsReviewed": false,
+      "nextAction": "Locate actual calendar heading and complete named cohorts; prefer usable text layers, then OCR scans, verify all row fields against originals, and reconcile all printed components."
+    },
+    {
+      "employerSlug": "district-of-sparwood",
+      "sourceUrl": "https://sparwood.civicweb.net/document/121451",
+      "retrievedUrl": "https://sparwood.civicweb.net/document/121451/",
+      "httpStatus": 200,
+      "bytes": 2186762,
+      "sha256": "a65387d4e5b6a6b3ce35d88096baf71715d48ddf73582b387e2707be71f290de",
+      "kind": "archive-linked-original",
+      "cacheFile": "district-of-sparwood-a65387d4e5b6.pdf",
+      "status": "retrieved-processing-needed",
+      "indexLabels": [
+        "2021 Statement of Financial Information (SOFI)"
+      ],
+      "indexedReportingYears": [
+        "2021"
+      ],
+      "indexedYearIsVerifiedPeriod": false,
+      "pdfPages": 30,
+      "textChars": 47810,
+      "remunerationCandidatePhysicalPages": [
+        1,
+        3
+      ],
+      "textStatus": "text-layer-present-source-layout-and-any-OCR-errors-require-review",
+      "acceptedCohorts": [],
+      "rowControlsReviewed": false,
+      "nextAction": "Locate actual calendar heading and complete named cohorts; prefer usable text layers, then OCR scans, verify all row fields against originals, and reconcile all printed components."
+    },
+    {
+      "employerSlug": "district-of-sparwood",
+      "sourceUrl": "https://sparwood.civicweb.net/document/113695",
+      "retrievedUrl": "https://sparwood.civicweb.net/document/113695/",
+      "httpStatus": 200,
+      "bytes": 1344145,
+      "sha256": "6c5ae8cc1e4b358bd7e989c1bfc675949f84f44744f8ada22a0c3fb505c6dd2c",
+      "kind": "archive-linked-original",
+      "cacheFile": "district-of-sparwood-6c5ae8cc1e4b.pdf",
+      "status": "retrieved-processing-needed",
+      "indexLabels": [
+        "2020 Statement of Financial Information (SOFI)"
+      ],
+      "indexedReportingYears": [
+        "2020"
+      ],
+      "indexedYearIsVerifiedPeriod": false,
+      "pdfPages": 37,
+      "textChars": 54450,
+      "remunerationCandidatePhysicalPages": [
+        1,
+        3,
+        30,
+        31,
+        33,
+        35,
+        36
+      ],
+      "textStatus": "text-layer-present-source-layout-and-any-OCR-errors-require-review",
+      "acceptedCohorts": [],
+      "rowControlsReviewed": false,
+      "nextAction": "Locate actual calendar heading and complete named cohorts; prefer usable text layers, then OCR scans, verify all row fields against originals, and reconcile all printed components."
+    },
+    {
+      "employerSlug": "district-of-sparwood",
+      "sourceUrl": "https://sparwood.civicweb.net/document/102421",
+      "retrievedUrl": "https://sparwood.civicweb.net/document/102421/",
+      "httpStatus": 200,
+      "bytes": 8596049,
+      "sha256": "f1f2b9c8364c745a9d54742f3e0450e1a0eaddc06740f5dcbd63b5267f6de7b8",
+      "kind": "archive-linked-original",
+      "cacheFile": "district-of-sparwood-f1f2b9c8364c.pdf",
+      "status": "retrieved-processing-needed",
+      "indexLabels": [
+        "2019 Statement of Financial Information (SOFI)"
+      ],
+      "indexedReportingYears": [
+        "2019"
+      ],
+      "indexedYearIsVerifiedPeriod": false,
+      "pdfPages": 30,
+      "textChars": 6989,
+      "remunerationCandidatePhysicalPages": [
+        3,
+        7
+      ],
+      "textStatus": "text-layer-present-source-layout-and-any-OCR-errors-require-review",
+      "acceptedCohorts": [],
+      "rowControlsReviewed": false,
+      "nextAction": "Locate actual calendar heading and complete named cohorts; prefer usable text layers, then OCR scans, verify all row fields against originals, and reconcile all printed components."
+    },
+    {
+      "employerSlug": "district-of-sparwood",
+      "sourceUrl": "https://sparwood.civicweb.net/document/91167",
+      "retrievedUrl": "https://sparwood.civicweb.net/document/91167/",
+      "httpStatus": 200,
+      "bytes": 1291907,
+      "sha256": "397cb56be5bacb3659bb2527c6c6506d2896c63584b69e2e9b41dda778273fd2",
+      "kind": "archive-linked-original",
+      "cacheFile": "district-of-sparwood-397cb56be5ba.pdf",
+      "status": "retrieved-processing-needed",
+      "indexLabels": [
+        "2018 Statement of Financial Information (SOFI)"
+      ],
+      "indexedReportingYears": [
+        "2018"
+      ],
+      "indexedYearIsVerifiedPeriod": false,
+      "pdfPages": 31,
+      "textChars": 48490,
+      "remunerationCandidatePhysicalPages": [
+        1,
+        3,
+        7
+      ],
+      "textStatus": "text-layer-present-source-layout-and-any-OCR-errors-require-review",
+      "acceptedCohorts": [],
+      "rowControlsReviewed": false,
+      "nextAction": "Locate actual calendar heading and complete named cohorts; prefer usable text layers, then OCR scans, verify all row fields against originals, and reconcile all printed components."
+    },
+    {
+      "employerSlug": "district-of-sparwood",
+      "sourceUrl": "https://sparwood.civicweb.net/document/77864",
+      "retrievedUrl": "https://sparwood.civicweb.net/document/77864/",
+      "httpStatus": 200,
+      "bytes": 31073,
+      "sha256": "5ecf69786783d66b03fe982e86a7dbbb9fd59a6274e3cd6275abe067ddc1ae06",
+      "kind": "archive-linked-original",
+      "cacheFile": "district-of-sparwood-5ecf69786783.pdf",
+      "status": "retrieved-processing-needed",
+      "indexLabels": [
+        "2017 Statement of Financial Information (SOFI)"
+      ],
+      "indexedReportingYears": [
+        "2017"
+      ],
+      "indexedYearIsVerifiedPeriod": false,
+      "pdfPages": 5,
+      "textChars": 6720,
+      "remunerationCandidatePhysicalPages": [
+        1,
+        3
+      ],
+      "textStatus": "text-layer-present-source-layout-and-any-OCR-errors-require-review",
+      "acceptedCohorts": [],
+      "rowControlsReviewed": false,
+      "nextAction": "Locate actual calendar heading and complete named cohorts; prefer usable text layers, then OCR scans, verify all row fields against originals, and reconcile all printed components."
+    },
+    {
+      "employerSlug": "district-of-sparwood",
+      "sourceUrl": "https://sparwood.civicweb.net/document/70325",
+      "retrievedUrl": "https://sparwood.civicweb.net/document/70325/",
+      "httpStatus": 200,
+      "bytes": 11017,
+      "sha256": "ab2887334237abbc8ce79d37a625c1d81e9b7b2c212da49dcdc1a2af72fb77ff",
+      "kind": "archive-linked-original",
+      "cacheFile": "district-of-sparwood-ab2887334237.pdf",
+      "status": "retrieved-processing-needed",
+      "indexLabels": [
+        "2016 Statement of Financial Information (SOFI)"
+      ],
+      "indexedReportingYears": [
+        "2016"
+      ],
+      "indexedYearIsVerifiedPeriod": false,
+      "pdfPages": 3,
+      "textChars": 5540,
+      "remunerationCandidatePhysicalPages": [
+        1
+      ],
+      "textStatus": "text-layer-present-source-layout-and-any-OCR-errors-require-review",
+      "acceptedCohorts": [],
+      "rowControlsReviewed": false,
+      "nextAction": "Locate actual calendar heading and complete named cohorts; prefer usable text layers, then OCR scans, verify all row fields against originals, and reconcile all printed components."
+    },
+    {
+      "employerSlug": "district-of-sparwood",
+      "sourceUrl": "https://sparwood.civicweb.net/document/60160",
+      "retrievedUrl": "https://sparwood.civicweb.net/document/60160/",
+      "httpStatus": 200,
+      "bytes": 83749,
+      "sha256": "c2c1d6076656af8f87f4e1aafaf71b193f1bf90700f6e2064795fadff6060b32",
+      "kind": "archive-linked-original",
+      "cacheFile": "district-of-sparwood-c2c1d6076656.pdf",
+      "status": "retrieved-processing-needed",
+      "indexLabels": [
+        "2015 Statement of Financial Information (SOFI)"
+      ],
+      "indexedReportingYears": [
+        "2015"
+      ],
+      "indexedYearIsVerifiedPeriod": false,
+      "pdfPages": 5,
+      "textChars": 6885,
+      "remunerationCandidatePhysicalPages": [
+        3
+      ],
+      "textStatus": "text-layer-present-source-layout-and-any-OCR-errors-require-review",
+      "acceptedCohorts": [],
+      "rowControlsReviewed": false,
+      "nextAction": "Locate actual calendar heading and complete named cohorts; prefer usable text layers, then OCR scans, verify all row fields against originals, and reconcile all printed components."
+    },
+    {
+      "employerSlug": "district-of-sparwood",
+      "sourceUrl": "https://sparwood.civicweb.net/document/49524",
+      "retrievedUrl": "https://sparwood.civicweb.net/document/49524/",
+      "httpStatus": 200,
+      "bytes": 190101,
+      "sha256": "fce1b7b7ce100e5bb49cde2b937e6909ea051d165e24b9d28fb0b6c881a72870",
+      "kind": "archive-linked-original",
+      "cacheFile": "district-of-sparwood-fce1b7b7ce10.pdf",
+      "status": "retrieved-processing-needed",
+      "indexLabels": [
+        "2014 Statement of Financial Information (SOFI)"
+      ],
+      "indexedReportingYears": [
+        "2014"
+      ],
+      "indexedYearIsVerifiedPeriod": false,
+      "pdfPages": 27,
+      "textChars": 37651,
+      "remunerationCandidatePhysicalPages": [
+        3,
+        27
+      ],
+      "textStatus": "text-layer-present-source-layout-and-any-OCR-errors-require-review",
+      "acceptedCohorts": [],
+      "rowControlsReviewed": false,
+      "nextAction": "Locate actual calendar heading and complete named cohorts; prefer usable text layers, then OCR scans, verify all row fields against originals, and reconcile all printed components."
+    },
+    {
+      "employerSlug": "district-of-sparwood",
+      "sourceUrl": "https://sparwood.civicweb.net/document/50580",
+      "retrievedUrl": "https://sparwood.civicweb.net/document/50580/",
+      "httpStatus": 200,
+      "bytes": 1734987,
+      "sha256": "1af3197cbb45348b344265f5984e41170b02892b525b4d674bc29c8b06d85e7c",
+      "kind": "archive-linked-original",
+      "cacheFile": "district-of-sparwood-1af3197cbb45.pdf",
+      "status": "retrieved-processing-needed",
+      "indexLabels": [
+        "2013 Statement of Financial Information (SOFI)"
+      ],
+      "indexedReportingYears": [
+        "2013"
+      ],
+      "indexedYearIsVerifiedPeriod": false,
+      "pdfPages": 22,
+      "textChars": 10301,
+      "remunerationCandidatePhysicalPages": [
+        3
+      ],
+      "textStatus": "text-layer-present-source-layout-and-any-OCR-errors-require-review",
+      "acceptedCohorts": [],
+      "rowControlsReviewed": false,
+      "nextAction": "Locate actual calendar heading and complete named cohorts; prefer usable text layers, then OCR scans, verify all row fields against originals, and reconcile all printed components."
+    },
+    {
+      "employerSlug": "district-of-sparwood",
+      "sourceUrl": "https://sparwood.civicweb.net/document/50579",
+      "retrievedUrl": "https://sparwood.civicweb.net/document/50579/",
+      "httpStatus": 200,
+      "bytes": 486967,
+      "sha256": "1e51a15cb5a60ff7ff01d657d33a9f8bd333805cb30a416653567715810ede87",
+      "kind": "archive-linked-original",
+      "cacheFile": "district-of-sparwood-1e51a15cb5a6.pdf",
+      "status": "retrieved-processing-needed",
+      "indexLabels": [
+        "2012 Statement of Financial Information (SOFI)"
+      ],
+      "indexedReportingYears": [
+        "2012"
+      ],
+      "indexedYearIsVerifiedPeriod": false,
+      "pdfPages": 21,
+      "textChars": 6893,
+      "remunerationCandidatePhysicalPages": [
+        3
+      ],
+      "textStatus": "text-layer-present-source-layout-and-any-OCR-errors-require-review",
+      "acceptedCohorts": [],
+      "rowControlsReviewed": false,
+      "nextAction": "Locate actual calendar heading and complete named cohorts; prefer usable text layers, then OCR scans, verify all row fields against originals, and reconcile all printed components."
+    }
+  ]
+}

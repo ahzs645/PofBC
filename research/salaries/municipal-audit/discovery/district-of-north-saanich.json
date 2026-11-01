@@ -1,0 +1,532 @@
+{
+  "municipality": "North Saanich",
+  "employerSlug": "district-of-north-saanich",
+  "website": "http://www.northsaanich.ca",
+  "checkedOn": "2026-10-31",
+  "method": "Bounded traversal of links actually present on the official website; at most two link hops.",
+  "status": "source-links-found-awaiting-review",
+  "pagesChecked": [
+    {
+      "url": "https://www.northsaanich.ca",
+      "depth": 0,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.northsaanich.ca",
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 64411,
+      "sha256": "6e27b5b6269c785c91d44c27d44c486b36456447e6b878ff2d6f29a1328eb7d0",
+      "status": "html-read",
+      "containsSofiTerms": false
+    },
+    {
+      "url": "https://www.northsaanich.ca/local-government/plans-reports/budget",
+      "depth": 1,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.northsaanich.ca/local-government/plans-reports/budget",
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 66048,
+      "sha256": "5d598ae85264b73772b955c2e98c3efe8382b55e23c80ccb386e88164b44131d",
+      "status": "html-read",
+      "containsSofiTerms": false
+    },
+    {
+      "url": "https://www.northsaanich.ca/local-government/corporate-annual-reports/",
+      "depth": 2,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.northsaanich.ca/local-government/plans-reports",
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 75343,
+      "sha256": "b78437c05cfa327e8bba62d97fe4237deff7b521086c45a8a53c7374ac522e5d",
+      "status": "html-read",
+      "containsSofiTerms": true
+    },
+    {
+      "url": "https://www.northsaanich.ca/media/file/2023-budget-engagement-summary-report",
+      "depth": 2,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.northsaanich.ca/media/file/2023-budget-engagement-summary-report",
+      "contentType": "application/pdf",
+      "bytes": 1340911,
+      "sha256": "910bd21b5b02f4a4da689cbe8d99ab757a33d2f4805db6d281858768457922da",
+      "status": "pdf-downloaded-unreviewed"
+    },
+    {
+      "url": "https://www.northsaanich.ca/lands-planning/housing/housing-needs-reports",
+      "depth": 1,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.northsaanich.ca/lands-planning/housing/housing-needs-reports",
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 64636,
+      "sha256": "28bd98142d8488e7868617084705861465b80897c61b594287699185e1e25c09",
+      "status": "html-read",
+      "containsSofiTerms": false
+    },
+    {
+      "url": "https://www.northsaanich.ca/local-government",
+      "depth": 1,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.northsaanich.ca/local-government",
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 70008,
+      "sha256": "ec62d35e26a47f992343c69a8e844f5d8e88650a42ad82d308589fa64105b15e",
+      "status": "html-read",
+      "containsSofiTerms": false
+    },
+    {
+      "url": "https://www.northsaanich.ca/local-government/applications-permits-licences",
+      "depth": 1,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.northsaanich.ca/local-government/applications-permits-licences",
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 73831,
+      "sha256": "50d26f8ab68401045b4a380c3990a0677c00b40cc3f18b2553fce8d384dbe5c5",
+      "status": "html-read",
+      "containsSofiTerms": false
+    },
+    {
+      "url": "https://www.northsaanich.ca/local-government/applications-permits-licences/business-licences",
+      "depth": 1,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.northsaanich.ca/local-government/applications-permits-licences/business-licences",
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 70965,
+      "sha256": "0ea1f2e866c100f3b72d0ed9fad234d58a3c5fdeb4065cf3fd46570acfd2e2f8",
+      "status": "html-read",
+      "containsSofiTerms": false
+    },
+    {
+      "url": "https://www.northsaanich.ca/local-government/applications-permits-licences/dog-licences",
+      "depth": 1,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.northsaanich.ca/local-government/applications-permits-licences/dog-licences",
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 69718,
+      "sha256": "5c181be747597ab01f2e9576a80a674d98704b5048f896a60ae9339f95252d72",
+      "status": "html-read",
+      "containsSofiTerms": false
+    }
+  ],
+  "candidates": [
+    {
+      "url": "https://www.northsaanich.ca/local-government/corporate-annual-reports/",
+      "label": "Financial Plans and Bylaws",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.northsaanich.ca/local-government/plans-reports/budget",
+      "yearsInLabel": []
+    },
+    {
+      "url": "https://www.northsaanich.ca/media/file/2023-financial-statements-signed",
+      "label": "2023 Financial Statements",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.northsaanich.ca/local-government/plans-reports",
+      "yearsInLabel": [
+        "2023"
+      ]
+    },
+    {
+      "url": "https://www.northsaanich.ca/media/file/2024-annual-report",
+      "label": "2024 Annual Report",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.northsaanich.ca/local-government/plans-reports",
+      "yearsInLabel": [
+        "2024"
+      ]
+    },
+    {
+      "url": "https://www.northsaanich.ca/media/file/2025-annual-report",
+      "label": "2025 Annual Report",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.northsaanich.ca/local-government/plans-reports",
+      "yearsInLabel": [
+        "2025"
+      ]
+    },
+    {
+      "url": "https://www.northsaanich.ca/media/file/2025-north-saanich-financial-statements",
+      "label": "2025 Financial Statements",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.northsaanich.ca/local-government/plans-reports",
+      "yearsInLabel": [
+        "2025"
+      ]
+    },
+    {
+      "url": "https://www.northsaanich.ca/media/file/2025-statement-financial-information-sofi",
+      "label": "2025 SOFI",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.northsaanich.ca/local-government/plans-reports",
+      "yearsInLabel": [
+        "2025"
+      ]
+    },
+    {
+      "url": "https://www.northsaanich.ca/media/file/2023-budget-engagement-summary-report",
+      "label": "2023 Budget Engagement Summary Report",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.northsaanich.ca/media/file/2023-budget-engagement-summary-report",
+      "yearsInLabel": [
+        "2023",
+        "2023"
+      ]
+    },
+    {
+      "url": "https://www.northsaanich.ca/wp-content/uploads/2019-Annual-Report.pdf",
+      "label": "2019 Annual Report",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.northsaanich.ca/local-government/plans-reports",
+      "yearsInLabel": [
+        "2019"
+      ]
+    },
+    {
+      "url": "https://www.northsaanich.ca/wp-content/uploads/2019-Financial-Statements.pdf",
+      "label": "2019 Financial Statements",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.northsaanich.ca/local-government/plans-reports",
+      "yearsInLabel": [
+        "2019"
+      ]
+    },
+    {
+      "url": "https://www.northsaanich.ca/wp-content/uploads/2019-SOFI.pdf",
+      "label": "2019 SOFI",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.northsaanich.ca/local-government/plans-reports",
+      "yearsInLabel": [
+        "2019"
+      ]
+    },
+    {
+      "url": "https://www.northsaanich.ca/wp-content/uploads/2020-Annual-Report.pdf",
+      "label": "2020 Annual Report",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.northsaanich.ca/local-government/plans-reports",
+      "yearsInLabel": [
+        "2020"
+      ]
+    },
+    {
+      "url": "https://www.northsaanich.ca/wp-content/uploads/2020-Financial-Statements.pdf",
+      "label": "2020 Financial Statements",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.northsaanich.ca/local-government/plans-reports",
+      "yearsInLabel": [
+        "2020"
+      ]
+    },
+    {
+      "url": "https://www.northsaanich.ca/wp-content/uploads/2020-SOFI.pdf",
+      "label": "2020 SOFI",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.northsaanich.ca/local-government/plans-reports",
+      "yearsInLabel": [
+        "2020"
+      ]
+    },
+    {
+      "url": "https://www.northsaanich.ca/wp-content/uploads/2021-08-16-Strategic-Plan.pdf",
+      "label": "2021 Strategic Plan",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.northsaanich.ca/local-government/plans-reports",
+      "yearsInLabel": [
+        "2021"
+      ]
+    },
+    {
+      "url": "https://www.northsaanich.ca/wp-content/uploads/2021-2025-Financial-Plan.pdf",
+      "label": "2021-2025 Financial Plan",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.northsaanich.ca/local-government/plans-reports",
+      "yearsInLabel": [
+        "2021",
+        "2025"
+      ]
+    },
+    {
+      "url": "https://www.northsaanich.ca/wp-content/uploads/2021-Annual-Report.pdf",
+      "label": "2021 Annual Report",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.northsaanich.ca/local-government/plans-reports",
+      "yearsInLabel": [
+        "2021"
+      ]
+    },
+    {
+      "url": "https://www.northsaanich.ca/wp-content/uploads/2021-Financial-Plan-Bylaw.pdf",
+      "label": "2021-2025 Financial Plan Bylaw",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.northsaanich.ca/local-government/plans-reports",
+      "yearsInLabel": [
+        "2021",
+        "2025"
+      ]
+    },
+    {
+      "url": "https://www.northsaanich.ca/wp-content/uploads/2021-Financial-Statements.pdf",
+      "label": "2021 Financial Statements",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.northsaanich.ca/local-government/plans-reports",
+      "yearsInLabel": [
+        "2021"
+      ]
+    },
+    {
+      "url": "https://www.northsaanich.ca/wp-content/uploads/2021-Statement-of-Financial-Information.pdf",
+      "label": "2021 SOFI",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.northsaanich.ca/local-government/plans-reports",
+      "yearsInLabel": [
+        "2021"
+      ]
+    },
+    {
+      "url": "https://www.northsaanich.ca/wp-content/uploads/2022-2026-Financial-Plan.pdf",
+      "label": "2022-2026 Financial Plan",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.northsaanich.ca/local-government/plans-reports",
+      "yearsInLabel": [
+        "2022",
+        "2026"
+      ]
+    },
+    {
+      "url": "https://www.northsaanich.ca/wp-content/uploads/2022-Annual-Report.pdf",
+      "label": "2022 Annual Report",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.northsaanich.ca/local-government/plans-reports",
+      "yearsInLabel": [
+        "2022"
+      ]
+    },
+    {
+      "url": "https://www.northsaanich.ca/wp-content/uploads/2022-Financial-Plan-Bylaw-No-1539-1.pdf",
+      "label": "2022-2026 Financial Plan Bylaw",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.northsaanich.ca/local-government/plans-reports",
+      "yearsInLabel": [
+        "2022",
+        "2026"
+      ]
+    },
+    {
+      "url": "https://www.northsaanich.ca/wp-content/uploads/2022-Financial-Statements-signed.pdf",
+      "label": "2022 Financial Statements",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.northsaanich.ca/local-government/plans-reports",
+      "yearsInLabel": [
+        "2022"
+      ]
+    },
+    {
+      "url": "https://www.northsaanich.ca/wp-content/uploads/2022-Statement-of-Financial-Information-SOFI.pdf",
+      "label": "2022 SOFI",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.northsaanich.ca/local-government/plans-reports",
+      "yearsInLabel": [
+        "2022"
+      ]
+    },
+    {
+      "url": "https://www.northsaanich.ca/wp-content/uploads/2022-Strategic-Plan.pdf",
+      "label": "2022 Strategic Plan",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.northsaanich.ca/local-government/plans-reports",
+      "yearsInLabel": [
+        "2022"
+      ]
+    },
+    {
+      "url": "https://www.northsaanich.ca/wp-content/uploads/2023-2027-Financial-Plan.pdf",
+      "label": "2023-2027 Financial Plan",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.northsaanich.ca/local-government/plans-reports",
+      "yearsInLabel": [
+        "2023",
+        "2027"
+      ]
+    },
+    {
+      "url": "https://www.northsaanich.ca/wp-content/uploads/2023-Annual-Report-Final.pdf",
+      "label": "2023 Annual Report",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.northsaanich.ca/local-government/plans-reports",
+      "yearsInLabel": [
+        "2023"
+      ]
+    },
+    {
+      "url": "https://www.northsaanich.ca/wp-content/uploads/2023-Statement-of-Financial-Information-SOFI.pdf",
+      "label": "2023 SOFI",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.northsaanich.ca/local-government/plans-reports",
+      "yearsInLabel": [
+        "2023"
+      ]
+    },
+    {
+      "url": "https://www.northsaanich.ca/wp-content/uploads/2023-Strategic-Plan-WEB.pdf",
+      "label": "2023-2026 Strategic Plan (2023)",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.northsaanich.ca/local-government/plans-reports",
+      "yearsInLabel": [
+        "2023",
+        "2026"
+      ]
+    },
+    {
+      "url": "https://www.northsaanich.ca/wp-content/uploads/2024-Financial-Statements-Signed.pdf",
+      "label": "2024 Financial Statements",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.northsaanich.ca/local-government/plans-reports",
+      "yearsInLabel": [
+        "2024"
+      ]
+    },
+    {
+      "url": "https://www.northsaanich.ca/wp-content/uploads/2024-Statement-of-Financial-Information-SOFI.pdf",
+      "label": "2024 SOFI",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.northsaanich.ca/local-government/plans-reports",
+      "yearsInLabel": [
+        "2024"
+      ]
+    },
+    {
+      "url": "https://www.northsaanich.ca/wp-content/uploads/2024-Strategic-Plan.pdf",
+      "label": "2023-2026 Strategic Plan (2024)",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.northsaanich.ca/local-government/plans-reports",
+      "yearsInLabel": [
+        "2023",
+        "2024",
+        "2026"
+      ]
+    },
+    {
+      "url": "https://www.northsaanich.ca/wp-content/uploads/2025-2029-Financial-Plan.pdf",
+      "label": "2025-2029 Financial Plan",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.northsaanich.ca/local-government/plans-reports",
+      "yearsInLabel": [
+        "2025",
+        "2029"
+      ]
+    },
+    {
+      "url": "https://www.northsaanich.ca/wp-content/uploads/2026-2030-Financial-Plan.pdf",
+      "label": "2026-2030 Financial Plan",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.northsaanich.ca/local-government/plans-reports",
+      "yearsInLabel": [
+        "2026",
+        "2030"
+      ]
+    },
+    {
+      "url": "https://www.northsaanich.ca/wp-content/uploads/Bylaw-No.-1598-FInancial-Plan-for-the-Years-2026-to-2030.pdf",
+      "label": "2026-2030 Financial Plan Bylaw",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.northsaanich.ca/local-government/plans-reports",
+      "yearsInLabel": [
+        "2026",
+        "2030"
+      ]
+    },
+    {
+      "url": "https://www.northsaanich.ca/wp-content/uploads/DNS_StrategicPlan_Feb2025_WEB-V2.pdf",
+      "label": "2023-2026 Strategic Plan (2025)",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.northsaanich.ca/local-government/plans-reports",
+      "yearsInLabel": [
+        "2023",
+        "2025",
+        "2026"
+      ]
+    },
+    {
+      "url": "https://www.northsaanich.ca/wp-content/uploads/District-of-North-Saanich-Portfolio-Analysis-Dec-31-2022.pdf",
+      "label": "District of North Saanich - Portfolio Analysis - As of December 31, 2022",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.northsaanich.ca/local-government/plans-reports",
+      "yearsInLabel": [
+        "2022"
+      ]
+    },
+    {
+      "url": "https://www.northsaanich.ca/wp-content/uploads/District-of-North-Saanich-Portfolio-Analysis-Dec-31-2023.pdf",
+      "label": "District of North Saanich - Portfolio Analysis - As of December 31, 2023",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.northsaanich.ca/local-government/plans-reports",
+      "yearsInLabel": [
+        "2023"
+      ]
+    },
+    {
+      "url": "https://www.northsaanich.ca/wp-content/uploads/District-of-North-Saanich-Portfolio-Analysis-as-of-December-31-2024.pdf",
+      "label": "District of North Saanich - Portfolio Analysis - As of December 31, 2024",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.northsaanich.ca/local-government/plans-reports",
+      "yearsInLabel": [
+        "2024"
+      ]
+    },
+    {
+      "url": "https://www.northsaanich.ca/wp-content/uploads/Financial-Plan-Bylaw-No.-1572.pdf",
+      "label": "2024-2028 Financial Plan Bylaw",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.northsaanich.ca/local-government/plans-reports",
+      "yearsInLabel": [
+        "2024",
+        "2028"
+      ]
+    },
+    {
+      "url": "https://www.northsaanich.ca/wp-content/uploads/NS-2023-2026-Strategic-Plan-Updated-Mar-2026-WEB.pdf",
+      "label": "2023-2026 Strategic Plan (2026)",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.northsaanich.ca/local-government/plans-reports",
+      "yearsInLabel": [
+        "2023",
+        "2026"
+      ]
+    },
+    {
+      "url": "https://www.northsaanich.ca/wp-content/uploads/NS-2024-2028-Financial-Plan-8.5x11-Web-Final-V1.pdf",
+      "label": "2024-2028 Financial Plan",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.northsaanich.ca/local-government/plans-reports",
+      "yearsInLabel": [
+        "2024",
+        "2028"
+      ]
+    },
+    {
+      "url": "https://www.northsaanich.ca/wp-content/uploads/North-Saanich-Financial-Plan-Bylaw-No.-1560-2023-Amendment-Bylaw-2023-No.-1569.pdf",
+      "label": "2023-2027 Financial Plan Bylaw",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.northsaanich.ca/local-government/plans-reports",
+      "yearsInLabel": [
+        "2023",
+        "2027"
+      ]
+    },
+    {
+      "url": "https://www.northsaanich.ca/wp-content/uploads/North-Saanich-Financial-Plan-Bylaw-No.-1582-2025.pdf",
+      "label": "2025-2029 Financial Plan Bylaw",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.northsaanich.ca/local-government/plans-reports",
+      "yearsInLabel": [
+        "2025",
+        "2029"
+      ]
+    }
+  ]
+}

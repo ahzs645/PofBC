@@ -71,8 +71,14 @@ export const applyCompiledReplacements = (baseline, official, sources, rules = [
       if (!sources[id] || !official.some((row) => row.slug === employerSlug && row.year === replacementYear && row.sourceId === id)) {
         throw new Error(`${employerSlug}|${compiledYear}: replacement source ${id} was not imported`)
       }
+      // A reviewed comparison must not survive a later source update under the
+      // same ID. New municipal rules pin the exact accepted data bytes as well
+      // as the compiled cohort selected for removal.
+      if (rule.sourceDataSha256 && (!/^[a-f0-9]{64}$/.test(rule.sourceDataSha256[id] ?? '') || sources[id].dataSha256 !== rule.sourceDataSha256[id])) {
+        throw new Error(`${employerSlug}|${compiledYear}: official replacement source fingerprint changed for ${id}`)
+      }
     }
-    if (!sourceIds.some((id) => ['employee-remuneration', 'named-employees-over-threshold'].includes(sources[id].scope))) {
+    if (!sourceIds.some((id) => ['employee-remuneration', 'named-employees-over-threshold'].includes(sources[id].scope) && sources[id].completeEmployeeSchedule !== false && sources[id].validation?.completeEmployeeSchedule !== false)) {
       throw new Error(`${employerSlug}|${compiledYear}: partial disclosure cannot replace a compiled employee cohort across periods`)
     }
     const partition = baseline.filter((row) => row.slug === employerSlug && row.year === compiledYear)
@@ -184,7 +190,7 @@ export const validateReplacementScopes = (baseline, official, sources, decisions
     partitions.get(key).add(row.sourceId)
   }
   for (const [key, ids] of partitions) {
-    if ([...ids].some((id) => ['employee-remuneration', 'named-employees-over-threshold'].includes(sources[id]?.scope))) continue
+    if ([...ids].some((id) => ['employee-remuneration', 'named-employees-over-threshold'].includes(sources[id]?.scope) && sources[id]?.completeEmployeeSchedule !== false && sources[id]?.validation?.completeEmployeeSchedule !== false)) continue
     const [employer, year] = key.split('|')
     const decision = decisions.find((entry) => entry.kind === 'replace-partition-scope' && entry.employer === employer && entry.year === year)
     if (decision?.reason?.trim() && Array.isArray(decision.sourceIds) && [...ids].every((id) => decision.sourceIds.includes(id))) continue

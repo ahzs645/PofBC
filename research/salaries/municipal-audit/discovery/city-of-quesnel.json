@@ -1,0 +1,262 @@
+{
+  "municipality": "Quesnel",
+  "employerSlug": "city-of-quesnel",
+  "website": "http://www.quesnel.ca",
+  "checkedOn": "2026-10-31",
+  "method": "Bounded traversal of links actually present on the official website; at most two link hops.",
+  "status": "source-links-found-awaiting-review",
+  "pagesChecked": [
+    {
+      "url": "https://www.quesnel.ca",
+      "depth": 0,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.quesnel.ca",
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 124300,
+      "sha256": "31e2b6019c4ccd2d576f07c9054b628d67eb95c2b07f9f7deb18cc1a461d307f",
+      "status": "html-read",
+      "containsSofiTerms": false
+    },
+    {
+      "url": "https://www.quesnel.ca/city-hall/finance/financial-statements",
+      "depth": 1,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.quesnel.ca/city-hall/finance/financial-statements",
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 120477,
+      "sha256": "7932e4addc6c496682b5df52b8742249305035aa5a4497104a873117ff058901",
+      "status": "html-read",
+      "containsSofiTerms": true
+    },
+    {
+      "url": "https://www.quesnel.ca/media/file/2018-statement-financial-information-city-quesnel",
+      "depth": 2,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.quesnel.ca/media/file/2018-statement-financial-information-city-quesnel",
+      "contentType": "application/pdf",
+      "bytes": 3343647,
+      "sha256": "d3557bfa5946ccfb03951ad4ddc5646e13f62510e61bc04598c560c8820de583",
+      "status": "pdf-downloaded-unreviewed"
+    },
+    {
+      "url": "https://www.quesnel.ca/media/file/2021-sofi",
+      "depth": 2,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.quesnel.ca/media/file/2021-sofi",
+      "contentType": "application/pdf",
+      "bytes": 360748,
+      "sha256": "9a555be7fe2c8a15d0dc16309743bc46fce707445f6f6d3a8f11283002cb8eba",
+      "status": "pdf-downloaded-unreviewed"
+    },
+    {
+      "url": "https://www.quesnel.ca/media/file/2022-sofi",
+      "depth": 2,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.quesnel.ca/media/file/2022-sofi",
+      "contentType": "application/pdf",
+      "bytes": 191337,
+      "sha256": "d14f10a478cb3b620bb70e3ca98bee12a960b13f4dea1834cc49a969344babdf",
+      "status": "pdf-downloaded-unreviewed"
+    },
+    {
+      "url": "https://www.quesnel.ca/media/file/2024-sofisignedpdf",
+      "depth": 2,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.quesnel.ca/media/file/2024-sofisignedpdf",
+      "contentType": "application/pdf",
+      "bytes": 395242,
+      "sha256": "7578426f64644bfcf577ddd658318b7782dd622a62743b14a875de1438e8abfd",
+      "status": "pdf-downloaded-unreviewed"
+    },
+    {
+      "url": "https://www.quesnel.ca/media/file/2025-statement-financial-information-sofi",
+      "depth": 2,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.quesnel.ca/media/file/2025-statement-financial-information-sofi",
+      "contentType": "application/pdf",
+      "bytes": 551325,
+      "sha256": "5f202dbee815eae242c1bf1413b2b25565b33dcd547543d1f905c902a2cf7513",
+      "status": "pdf-downloaded-unreviewed"
+    },
+    {
+      "url": "https://www.quesnel.ca/media/file/city-quesnel-2019-sofi",
+      "depth": 2,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.quesnel.ca/media/file/city-quesnel-2019-sofi",
+      "contentType": "application/pdf",
+      "bytes": 3330275,
+      "sha256": "c5fecb2384863ab6c39a222ee7daa83c9c58b156c002d3b31b1f3f1de563a996",
+      "status": "pdf-downloaded-unreviewed"
+    },
+    {
+      "url": "https://www.quesnel.ca/media/file/city-quesnel-2020-sofi",
+      "depth": 2,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.quesnel.ca/media/file/city-quesnel-2020-sofi",
+      "contentType": "application/pdf",
+      "bytes": 2391823,
+      "sha256": "9342db01ff8c6c72488815d9c71069023f02d4528be54bcc491e24db9bffd9f4",
+      "status": "pdf-downloaded-unreviewed"
+    }
+  ],
+  "candidates": [
+    {
+      "url": "https://www.quesnel.ca/2025-financial-statements",
+      "label": "2025 City of Quesnel Financial Statements [PDF/3.8MB]",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.quesnel.ca/city-hall/finance/financial-statements",
+      "yearsInLabel": [
+        "2025"
+      ]
+    },
+    {
+      "url": "https://www.quesnel.ca/city-hall/finance/financial-statements",
+      "label": "Financial Statements",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.quesnel.ca",
+      "yearsInLabel": []
+    },
+    {
+      "url": "https://www.quesnel.ca/media/file/2018-financial-statements-audit-final-signed",
+      "label": "2018 City of Quesnel Financial Statements [PDF/2.3MB]",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.quesnel.ca/city-hall/finance/financial-statements",
+      "yearsInLabel": [
+        "2018"
+      ]
+    },
+    {
+      "url": "https://www.quesnel.ca/media/file/2019-financial-statements-final",
+      "label": "2019 City of Quesnel Financial Statements [PDF/2.5MB]",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.quesnel.ca/city-hall/finance/financial-statements",
+      "yearsInLabel": [
+        "2019"
+      ]
+    },
+    {
+      "url": "https://www.quesnel.ca/media/file/2020-city-quesnel-financial-statements",
+      "label": "2020 City of Quesnel Financial Statements [PDF/709KB]",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.quesnel.ca/city-hall/finance/financial-statements",
+      "yearsInLabel": [
+        "2020"
+      ]
+    },
+    {
+      "url": "https://www.quesnel.ca/media/file/2021-city-quesnel-financial-statements",
+      "label": "2021 City of Quesnel Financial Statements [PDF/2.7MB]",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.quesnel.ca/city-hall/finance/financial-statements",
+      "yearsInLabel": [
+        "2021"
+      ]
+    },
+    {
+      "url": "https://www.quesnel.ca/media/file/2022-city-quesnel-financial-statements-web",
+      "label": "2022 City of Quesnel Financial Statements [PDF/839KB]",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.quesnel.ca/city-hall/finance/financial-statements",
+      "yearsInLabel": [
+        "2022"
+      ]
+    },
+    {
+      "url": "https://www.quesnel.ca/media/file/2023-city-quesnel-financial-statements-web",
+      "label": "2023 City of Quesnel Financial Statements [PDF/3.3MB]",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.quesnel.ca/city-hall/finance/financial-statements",
+      "yearsInLabel": [
+        "2023"
+      ]
+    },
+    {
+      "url": "https://www.quesnel.ca/media/file/2024-financial-statements-finalpdf",
+      "label": "2024 City of Quesnel Financial Statements [PDF/619KB]",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.quesnel.ca/city-hall/finance/financial-statements",
+      "yearsInLabel": [
+        "2024"
+      ]
+    },
+    {
+      "url": "https://www.quesnel.ca/media/file/2018-statement-financial-information-city-quesnel",
+      "label": "2018 City of Quesnel Statement of Financial Information [PDF/3.2MB]",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.quesnel.ca/media/file/2018-statement-financial-information-city-quesnel",
+      "yearsInLabel": [
+        "2018",
+        "2018"
+      ]
+    },
+    {
+      "url": "https://www.quesnel.ca/media/file/2021-sofi",
+      "label": "2021 City of Quesnel Statement of Financial Information [PDF/352KB]",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.quesnel.ca/media/file/2021-sofi",
+      "yearsInLabel": [
+        "2021",
+        "2021"
+      ]
+    },
+    {
+      "url": "https://www.quesnel.ca/media/file/2022-sofi",
+      "label": "2022 City of Quesnel Statement of Financial Information [PDF/187KB]",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.quesnel.ca/media/file/2022-sofi",
+      "yearsInLabel": [
+        "2022",
+        "2022"
+      ]
+    },
+    {
+      "url": "https://www.quesnel.ca/media/file/2024-sofisignedpdf",
+      "label": "2024 City of Quesnel Statement of Financial Information [PDF/386KB]",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.quesnel.ca/media/file/2024-sofisignedpdf",
+      "yearsInLabel": [
+        "2024",
+        "2024"
+      ]
+    },
+    {
+      "url": "https://www.quesnel.ca/media/file/2025-statement-financial-information-sofi",
+      "label": "2025 City of Quesnel Statement of Financial Information [PDF/538KB]",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.quesnel.ca/media/file/2025-statement-financial-information-sofi",
+      "yearsInLabel": [
+        "2025",
+        "2025"
+      ]
+    },
+    {
+      "url": "https://www.quesnel.ca/media/file/city-quesnel-2019-sofi",
+      "label": "2019 City of Quesnel Statement of Financial Information [PDF/3.2MB]",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.quesnel.ca/media/file/city-quesnel-2019-sofi",
+      "yearsInLabel": [
+        "2019",
+        "2019"
+      ]
+    },
+    {
+      "url": "https://www.quesnel.ca/media/file/city-quesnel-2020-sofi",
+      "label": "2020 City of Quesnel Statement of Financial Information [PDF/2.3MB]",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.quesnel.ca/media/file/city-quesnel-2020-sofi",
+      "yearsInLabel": [
+        "2020",
+        "2020"
+      ]
+    }
+  ]
+}

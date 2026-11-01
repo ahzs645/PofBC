@@ -1,0 +1,402 @@
+{
+  "municipality": "Sidney",
+  "employerSlug": "town-of-sidney",
+  "website": "http://www.sidney.ca",
+  "checkedOn": "2026-10-31",
+  "method": "Bounded traversal of links actually present on the official website; at most two link hops.",
+  "status": "source-links-found-awaiting-review",
+  "pagesChecked": [
+    {
+      "url": "https://www.sidney.ca",
+      "depth": 0,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.sidney.ca",
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 156240,
+      "sha256": "edd6043e695be73134339d3a35c2442c43c897cfd0d7a8be2a54c86113451c36",
+      "status": "html-read",
+      "containsSofiTerms": true
+    },
+    {
+      "url": "https://www.sidney.ca/government/your-council/council-remuneration/",
+      "depth": 1,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.sidney.ca/government/your-council/council-remuneration/",
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 160548,
+      "sha256": "683c98e3eca38dd6aea0a8cf154b74e8af8c7a2e4329c661c0f8fd07bd3317cc",
+      "status": "html-read",
+      "containsSofiTerms": true
+    },
+    {
+      "url": "https://www.sidney.ca/government/financial-accountability/financial-reporting/",
+      "depth": 2,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.sidney.ca/government/financial-accountability/financial-reporting/",
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 186111,
+      "sha256": "a543c3b2afa74c264ecc72e7b062df509b279993efec394c7ad2e0f9cf5d011e",
+      "status": "html-read",
+      "containsSofiTerms": true
+    },
+    {
+      "url": "https://www.sidney.ca/government/financial-accountability/financial-reporting/                                                                                                                        ",
+      "depth": 2,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.sidney.ca/government/financial-accountability/financial-reporting/",
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 186111,
+      "sha256": "1108e9cd78b4efae4066c7d71dc84af91f781f1f5cbd9cca31acb3165406d229",
+      "status": "html-read",
+      "containsSofiTerms": true
+    },
+    {
+      "url": "https://www.sidney.ca/wp-content/uploads/FN-025-Council-Remuneration-Review.pdf                                                                                                                        ",
+      "depth": 2,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.sidney.ca/wp-content/uploads/FN-025-Council-Remuneration-Review.pdf",
+      "contentType": "application/pdf",
+      "bytes": 17108,
+      "sha256": "6835e370e3a76ddaa009a521837e5aa3f9f524bb31911d4767f8d0d2bde998de",
+      "status": "pdf-downloaded-unreviewed"
+    },
+    {
+      "url": "https://www.sidney.ca/government/financial-accountability/annual-report/",
+      "depth": 1,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.sidney.ca/government/financial-accountability/annual-report/",
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 160296,
+      "sha256": "6f7d11f176f1a53b2d3d131f4f24d37978b61b1fd15f1b354ddb9642969d5350",
+      "status": "html-read",
+      "containsSofiTerms": true
+    },
+    {
+      "url": "https://www.sidney.ca/government/financial-accountability/",
+      "depth": 1,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.sidney.ca/government/financial-accountability/",
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 148841,
+      "sha256": "57cbee756e37b2e0ee73e7f464c906f9582099bf3e9e11751984e64351a87190",
+      "status": "html-read",
+      "containsSofiTerms": true
+    },
+    {
+      "url": "https://www.sidney.ca/government/financial-accountability/budget/",
+      "depth": 1,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.sidney.ca/government/financial-accountability/budget/",
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 163147,
+      "sha256": "fb73ab0f81df1a59357a62bf38256e50078a98d31a6226e6d815230c560d26bc",
+      "status": "html-read",
+      "containsSofiTerms": true
+    },
+    {
+      "url": "https://www.sidney.ca/government/",
+      "depth": 1,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.sidney.ca/government/",
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 162001,
+      "sha256": "1bfaa562ec8a5a7268f5ce62f951e71adea97bed26da9317542e1d8c222cd20a",
+      "status": "html-read",
+      "containsSofiTerms": true
+    }
+  ],
+  "candidates": [
+    {
+      "url": "https://www.sidney.ca/government/financial-accountability/annual-report/",
+      "label": "Annual Report",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.sidney.ca",
+      "yearsInLabel": []
+    },
+    {
+      "url": "https://www.sidney.ca/government/financial-accountability/financial-reporting/",
+      "label": "Financial Reporting",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.sidney.ca",
+      "yearsInLabel": []
+    },
+    {
+      "url": "https://www.sidney.ca/government/financial-accountability/financial-reporting/                                                                                                                        ",
+      "label": "Statements of Financial Information (SOFI)",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.sidney.ca/government/your-council/council-remuneration/",
+      "yearsInLabel": []
+    },
+    {
+      "url": "https://www.sidney.ca/government/your-council/council-remuneration/",
+      "label": "Council Remuneration",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.sidney.ca",
+      "yearsInLabel": []
+    },
+    {
+      "url": "https://sidney.civicweb.net/document/37693/2023%20Year-End%20Financial%20Results.pdf",
+      "label": "2023 Year End Report",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.sidney.ca/government/financial-accountability/financial-reporting/",
+      "yearsInLabel": [
+        "2023"
+      ]
+    },
+    {
+      "url": "https://sidney.civicweb.net/document/39656/BUDGET%20VARIANCE%20REPORT%20%E2%80%93%20FIRST%20HALF%20OF%202024.pdf",
+      "label": "2024 First Half Report",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.sidney.ca/government/financial-accountability/financial-reporting/",
+      "yearsInLabel": [
+        "2024"
+      ]
+    },
+    {
+      "url": "https://sidney.civicweb.net/document/46207/13d-Budget%20Variance%20Report%20-%20Third%20Quarter%20of%202024.pdf",
+      "label": "2024 Third Quarter Report",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.sidney.ca/government/financial-accountability/financial-reporting/",
+      "yearsInLabel": [
+        "2024"
+      ]
+    },
+    {
+      "url": "https://sidney.civicweb.net/document/49481/2024%20Year%20End%20Financial%20Results.pdf",
+      "label": "2024 Year End Report",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.sidney.ca/government/financial-accountability/financial-reporting/",
+      "yearsInLabel": [
+        "2024"
+      ]
+    },
+    {
+      "url": "https://sidney.civicweb.net/document/50718/Budget%20Variance%20Report%20-%20First%20Half%20of%202025.pdf",
+      "label": "2025 First Half Report",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.sidney.ca/government/financial-accountability/financial-reporting/",
+      "yearsInLabel": [
+        "2025"
+      ]
+    },
+    {
+      "url": "https://sidney.civicweb.net/document/52448/13d-Budget%20Variance%20Report%20-%20Third%20Quarter%20of%202025.pdf",
+      "label": "2025 Third Quarter Report",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.sidney.ca/government/financial-accountability/financial-reporting/",
+      "yearsInLabel": [
+        "2025"
+      ]
+    },
+    {
+      "url": "https://sidney.civicweb.net/document/57945/2025%20Year%20End%20Financial%20Results.pdf",
+      "label": "2025 Year End Report",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.sidney.ca/government/financial-accountability/financial-reporting/",
+      "yearsInLabel": [
+        "2025"
+      ]
+    },
+    {
+      "url": "https://www.sidney.ca/wp-content/uploads/2013-2017-Draft-Financial-Plan.pdf",
+      "label": "2013-2017 Financial Plan",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.sidney.ca/government/financial-accountability/budget/",
+      "yearsInLabel": [
+        "2013",
+        "2017"
+      ]
+    },
+    {
+      "url": "https://www.sidney.ca/wp-content/uploads/2014-Draft-Financial-Plan.pdf",
+      "label": "2014-2018 Financial Plan",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.sidney.ca/government/financial-accountability/budget/",
+      "yearsInLabel": [
+        "2014",
+        "2018"
+      ]
+    },
+    {
+      "url": "https://www.sidney.ca/wp-content/uploads/2015-2019-Financial-Plan-final.pdf",
+      "label": "2015-2019 Financial Plan",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.sidney.ca/government/financial-accountability/budget/",
+      "yearsInLabel": [
+        "2015",
+        "2019"
+      ]
+    },
+    {
+      "url": "https://www.sidney.ca/wp-content/uploads/2016-2020-Financial-Plan.pdf",
+      "label": "2016-2020 Financial Plan",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.sidney.ca/government/financial-accountability/budget/",
+      "yearsInLabel": [
+        "2016",
+        "2020"
+      ]
+    },
+    {
+      "url": "https://www.sidney.ca/wp-content/uploads/2017-2021-Financial-Plan.pdf",
+      "label": "2017-2021 Financial Plan",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.sidney.ca/government/financial-accountability/budget/",
+      "yearsInLabel": [
+        "2017",
+        "2021"
+      ]
+    },
+    {
+      "url": "https://www.sidney.ca/wp-content/uploads/2018-2022-Financial-Plan-Approved.pdf",
+      "label": "2018-2022 Financial Plan",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.sidney.ca/government/financial-accountability/budget/",
+      "yearsInLabel": [
+        "2018",
+        "2022"
+      ]
+    },
+    {
+      "url": "https://www.sidney.ca/wp-content/uploads/2019-Financial-Plan.pdf",
+      "label": "2019-2023 Financial Plan",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.sidney.ca/government/financial-accountability/budget/",
+      "yearsInLabel": [
+        "2019",
+        "2023"
+      ]
+    },
+    {
+      "url": "https://www.sidney.ca/wp-content/uploads/2020-2024-Financial-Plan-Final.pdf",
+      "label": "2020-2024 Financial Plan",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.sidney.ca/government/financial-accountability/budget/",
+      "yearsInLabel": [
+        "2020",
+        "2024"
+      ]
+    },
+    {
+      "url": "https://www.sidney.ca/wp-content/uploads/2021-2025-Financial-Plan.pdf",
+      "label": "2021-2025 Financial Plan",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.sidney.ca/government/financial-accountability/budget/",
+      "yearsInLabel": [
+        "2021",
+        "2025"
+      ]
+    },
+    {
+      "url": "https://www.sidney.ca/wp-content/uploads/2023-Public-Budget-Binder.pdf",
+      "label": "2023-2027 Financial Plan",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.sidney.ca/government/financial-accountability/budget/",
+      "yearsInLabel": [
+        "2023",
+        "2027"
+      ]
+    },
+    {
+      "url": "https://www.sidney.ca/wp-content/uploads/2024-Public-Binder-Final.pdf",
+      "label": "2024-2028 Financial Plan",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.sidney.ca/government/financial-accountability/budget/",
+      "yearsInLabel": [
+        "2024",
+        "2028"
+      ]
+    },
+    {
+      "url": "https://www.sidney.ca/wp-content/uploads/2025-Public-Binder-Final.pdf",
+      "label": "2025-2029 Financial Plan",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.sidney.ca/government/financial-accountability/budget/",
+      "yearsInLabel": [
+        "2025",
+        "2029"
+      ]
+    },
+    {
+      "url": "https://www.sidney.ca/wp-content/uploads/2026-Capital-Projects.pdf",
+      "label": "2026 Capital Projects",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.sidney.ca/government/financial-accountability/budget/",
+      "yearsInLabel": [
+        "2026"
+      ]
+    },
+    {
+      "url": "https://www.sidney.ca/wp-content/uploads/2026-Financial-Plan-Final.pdf",
+      "label": "See the final 2026-2030 Financial Plan",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.sidney.ca/government/financial-accountability/budget/",
+      "yearsInLabel": [
+        "2026",
+        "2030"
+      ]
+    },
+    {
+      "url": "https://www.sidney.ca/wp-content/uploads/Bylaw-No-1-1.pdf",
+      "label": "2011-2015 Financial Plan",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.sidney.ca/government/financial-accountability/budget/",
+      "yearsInLabel": [
+        "2011",
+        "2015"
+      ]
+    },
+    {
+      "url": "https://www.sidney.ca/wp-content/uploads/Draft-Financial-Plan-2012-2016.pdf",
+      "label": "2012-2016 Financial Plan",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.sidney.ca/government/financial-accountability/budget/",
+      "yearsInLabel": [
+        "2012",
+        "2016"
+      ]
+    },
+    {
+      "url": "https://www.sidney.ca/wp-content/uploads/FN-025-Council-Remuneration-Review.pdf",
+      "label": "Council Remuneration Review Policy",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.sidney.ca/government/your-council/council-remuneration/",
+      "yearsInLabel": []
+    },
+    {
+      "url": "https://www.sidney.ca/wp-content/uploads/FN-025-Council-Remuneration-Review.pdf                                                                                                                        ",
+      "label": "Council Remuneration Review Policy",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.sidney.ca/wp-content/uploads/FN-025-Council-Remuneration-Review.pdf                                                                                                                        ",
+      "yearsInLabel": []
+    },
+    {
+      "url": "https://www.sidney.ca/wp-content/uploads/Final-2022-Budget.pdf",
+      "label": "2022-2026 Financial Plan",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.sidney.ca/government/financial-accountability/budget/",
+      "yearsInLabel": [
+        "2022",
+        "2026"
+      ]
+    },
+    {
+      "url": "https://www.sidney.ca/wp-content/uploads/Sidney-2025-Annual-Report.-Approved.pdf",
+      "label": "",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.sidney.ca/government/financial-accountability/annual-report/",
+      "yearsInLabel": [
+        "2025"
+      ]
+    }
+  ]
+}

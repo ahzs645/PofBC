@@ -1,0 +1,544 @@
+{
+  "municipality": "Lions Bay",
+  "employerSlug": "village-of-lions-bay",
+  "website": "http://www.lionsbay.ca/",
+  "checkedOn": "2026-10-31",
+  "method": "Bounded traversal of links actually present on the official website; at most two link hops.",
+  "status": "source-links-found-awaiting-review",
+  "pagesChecked": [
+    {
+      "url": "https://www.lionsbay.ca/",
+      "depth": 0,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.lionsbay.ca/",
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 101274,
+      "sha256": "e7a60994327eff0446667731b32d81db1a9573d239a94f676a4fad684e877788",
+      "status": "html-read",
+      "containsSofiTerms": false
+    },
+    {
+      "url": "https://www.lionsbay.ca/municipal-services/finance/financial-reports",
+      "depth": 1,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.lionsbay.ca/municipal-services/finance/financial-reports",
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 137991,
+      "sha256": "75e25d0aab589c57727c075ab59b4c440c7523f98ac74410cc705d379f4b9dcc",
+      "status": "html-read",
+      "containsSofiTerms": true
+    },
+    {
+      "url": "https://www.lionsbay.ca/municipal-services/finance",
+      "depth": 1,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.lionsbay.ca/municipal-services/finance",
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 132205,
+      "sha256": "83256cbabe7a25dc98a5e7dd7bf44b0eef7ef230f19dbcc7d3fadf7a02142649",
+      "status": "html-read",
+      "containsSofiTerms": true
+    },
+    {
+      "url": "https://www.lionsbay.ca/municipal-services/finance/property-taxes",
+      "depth": 1,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.lionsbay.ca/municipal-services/finance/property-taxes",
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 152639,
+      "sha256": "73e5533155f8a612d10db6a522cbc5c47cccdd71e39b2ff76a86a6df84c0027b",
+      "status": "html-read",
+      "containsSofiTerms": false
+    },
+    {
+      "url": "https://www.lionsbay.ca/municipal-services/finance/utility-notices",
+      "depth": 1,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.lionsbay.ca/municipal-services/finance/utility-notices",
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 133756,
+      "sha256": "da0971af2aa7f5b29e02bbd2d6f5b3eb178b04fe6b381ddbc3d8717eab538eff",
+      "status": "html-read",
+      "containsSofiTerms": false
+    },
+    {
+      "url": "https://www.lionsbay.ca/services/finance/grant-aid",
+      "depth": 1,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.lionsbay.ca/services/finance/grant-aid",
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 147229,
+      "sha256": "d9bbde9340beee157ec3ca170103aaa06beeedd9c3e5152c47d682e7ba030d8f",
+      "status": "html-read",
+      "containsSofiTerms": false
+    },
+    {
+      "url": "https://www.lionsbay.ca/services/financial-services/asset-management",
+      "depth": 1,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.lionsbay.ca/services/financial-services/asset-management",
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 133186,
+      "sha256": "b8687fbc26d917010badffe5db2a69fa8608e63ee5eb9592acbab095a7f2b224",
+      "status": "html-read",
+      "containsSofiTerms": false
+    },
+    {
+      "url": "https://www.lionsbay.ca/services/financial-services/online-services",
+      "depth": 1,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.lionsbay.ca/services/financial-services/online-services",
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 131884,
+      "sha256": "c6e026ea09285a724dfad824db8c85590df30b29dd2a57990f89ed3884ecf2d8",
+      "status": "html-read",
+      "containsSofiTerms": false
+    },
+    {
+      "url": "https://www.lionsbay.ca/government/board-variance",
+      "depth": 1,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.lionsbay.ca/government/board-variance",
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 134476,
+      "sha256": "abdf91055ba8dcc7983cb42ef8aa0d9740e40497a91f9ca208281ab809dcbbe8",
+      "status": "html-read",
+      "containsSofiTerms": false
+    }
+  ],
+  "candidates": [
+    {
+      "url": "https://www.lionsbay.ca/municipal-services/finance/financial-reports",
+      "label": "Financial Reports",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.lionsbay.ca/",
+      "yearsInLabel": []
+    },
+    {
+      "url": "https://www.lionsbay.ca/sites/2/files/2022-06/2021%20Annual%20Report%20-%20FINAL%20.pdf",
+      "label": "2021",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.lionsbay.ca/municipal-services/finance/financial-reports",
+      "yearsInLabel": [
+        "2021",
+        "2022"
+      ]
+    },
+    {
+      "url": "https://www.lionsbay.ca/sites/2/files/2022-06/2021%20SOFI%20-%20Final.pdf",
+      "label": "2021",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.lionsbay.ca/municipal-services/finance/financial-reports",
+      "yearsInLabel": [
+        "2021",
+        "2022"
+      ]
+    },
+    {
+      "url": "https://www.lionsbay.ca/sites/2/files/2022-06/Signed%202021%20Financial%20Statements.pdf",
+      "label": "2021",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.lionsbay.ca/municipal-services/finance/financial-reports",
+      "yearsInLabel": [
+        "2021",
+        "2022"
+      ]
+    },
+    {
+      "url": "https://www.lionsbay.ca/sites/2/files/2025-05/2023%20Audted%20Annual%20Financial%20Statements.pdf",
+      "label": "2023",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.lionsbay.ca/municipal-services/finance/financial-reports",
+      "yearsInLabel": [
+        "2023",
+        "2025"
+      ]
+    },
+    {
+      "url": "https://www.lionsbay.ca/sites/2/files/2025-05/2023%20SOFI%20%28executed%29.pdf",
+      "label": "2023",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.lionsbay.ca/municipal-services/finance/financial-reports",
+      "yearsInLabel": [
+        "2023",
+        "2025"
+      ]
+    },
+    {
+      "url": "https://www.lionsbay.ca/sites/2/files/2025-09/2023%20Annual%20Report%20-%20for%20publication_0.pdf",
+      "label": "2023",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.lionsbay.ca/municipal-services/finance/financial-reports",
+      "yearsInLabel": [
+        "2023",
+        "2025"
+      ]
+    },
+    {
+      "url": "https://www.lionsbay.ca/sites/2/files/2025-11/2024%20SOFI%20Final.pdf",
+      "label": "2024",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.lionsbay.ca/municipal-services/finance/financial-reports",
+      "yearsInLabel": [
+        "2024",
+        "2025"
+      ]
+    },
+    {
+      "url": "https://www.lionsbay.ca/sites/2/files/2026-05/2024%20Annual%20Report%20-%20FINAL.pdf",
+      "label": "2024",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.lionsbay.ca/municipal-services/finance/financial-reports",
+      "yearsInLabel": [
+        "2024",
+        "2026"
+      ]
+    },
+    {
+      "url": "https://www.lionsbay.ca/sites/2/files/2026-06/2024%20Financial%20Statements%20FINAL.pdf",
+      "label": "2024",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.lionsbay.ca/municipal-services/finance/financial-reports",
+      "yearsInLabel": [
+        "2024",
+        "2026"
+      ]
+    },
+    {
+      "url": "https://www.lionsbay.ca/sites/2/files/2026-07/%288%29%202025%20Financial%20Statements%20FINAL%20%28signed%29.pdf",
+      "label": "2025",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.lionsbay.ca/municipal-services/finance/financial-reports",
+      "yearsInLabel": [
+        "2025",
+        "2026"
+      ]
+    },
+    {
+      "url": "https://www.lionsbay.ca/sites/2/files/2026-07/2025%20SOFI%20report.pdf",
+      "label": "2025",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.lionsbay.ca/municipal-services/finance/financial-reports",
+      "yearsInLabel": [
+        "2025",
+        "2026"
+      ]
+    },
+    {
+      "url": "https://www.lionsbay.ca/sites/2/files/2026-08/2025%20Annual%20Report%20-%20Final%20v2.pdf",
+      "label": "2025",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.lionsbay.ca/municipal-services/finance/financial-reports",
+      "yearsInLabel": [
+        "2025",
+        "2026"
+      ]
+    },
+    {
+      "url": "https://www.lionsbay.ca/sites/2/files/audited_2020_financial_statements.pdf",
+      "label": "2020",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.lionsbay.ca/municipal-services/finance/financial-reports",
+      "yearsInLabel": [
+        "2020"
+      ]
+    },
+    {
+      "url": "https://www.lionsbay.ca/sites/2/files/docs/related/audited_financial_statements_2019.pdf",
+      "label": "2019",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.lionsbay.ca/municipal-services/finance/financial-reports",
+      "yearsInLabel": [
+        "2019"
+      ]
+    },
+    {
+      "url": "https://www.lionsbay.ca/sites/2/files/docs/related/complete_2019_annual_report.pdf",
+      "label": "2019",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.lionsbay.ca/municipal-services/finance/financial-reports",
+      "yearsInLabel": [
+        "2019"
+      ]
+    },
+    {
+      "url": "https://www.lionsbay.ca/sites/2/files/docs/related/pdf_for_website.pdf",
+      "label": "2019",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.lionsbay.ca/municipal-services/finance/financial-reports",
+      "yearsInLabel": [
+        "2019"
+      ]
+    },
+    {
+      "url": "https://www.lionsbay.ca/sites/2/files/docs/services/Finance/Financial_Reports/1_2017_annual_report.pdf",
+      "label": "2017",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.lionsbay.ca/municipal-services/finance/financial-reports",
+      "yearsInLabel": [
+        "2017"
+      ]
+    },
+    {
+      "url": "https://www.lionsbay.ca/sites/2/files/docs/services/Finance/Financial_Reports/2015_annual_report_final.pdf",
+      "label": "2015",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.lionsbay.ca/municipal-services/finance/financial-reports",
+      "yearsInLabel": [
+        "2015"
+      ]
+    },
+    {
+      "url": "https://www.lionsbay.ca/sites/2/files/docs/services/Finance/Financial_Reports/2016_annual_report_-_final_vf.pdf",
+      "label": "2016",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.lionsbay.ca/municipal-services/finance/financial-reports",
+      "yearsInLabel": [
+        "2016"
+      ]
+    },
+    {
+      "url": "https://www.lionsbay.ca/sites/2/files/docs/services/Finance/Financial_Reports/2017_sofi_submission_website.pdf",
+      "label": "2017",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.lionsbay.ca/municipal-services/finance/financial-reports",
+      "yearsInLabel": [
+        "2017"
+      ]
+    },
+    {
+      "url": "https://www.lionsbay.ca/sites/2/files/docs/services/Finance/Financial_Reports/2018_sofi_submission_website.pdf",
+      "label": "2018",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.lionsbay.ca/municipal-services/finance/financial-reports",
+      "yearsInLabel": [
+        "2018"
+      ]
+    },
+    {
+      "url": "https://www.lionsbay.ca/sites/2/files/docs/services/Finance/Financial_Reports/2020_annual_report_-_final.pdf",
+      "label": "2020",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.lionsbay.ca/municipal-services/finance/financial-reports",
+      "yearsInLabel": [
+        "2020"
+      ]
+    },
+    {
+      "url": "https://www.lionsbay.ca/sites/2/files/docs/services/Finance/Financial_Reports/210616_for_website.pdf",
+      "label": "2020",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.lionsbay.ca/municipal-services/finance/financial-reports",
+      "yearsInLabel": [
+        "2020"
+      ]
+    },
+    {
+      "url": "https://www.lionsbay.ca/sites/2/files/docs/services/Finance/Financial_Reports/8_audited_2017_financial_statements.pdf",
+      "label": "2017",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.lionsbay.ca/municipal-services/finance/financial-reports",
+      "yearsInLabel": [
+        "2017"
+      ]
+    },
+    {
+      "url": "https://www.lionsbay.ca/sites/2/files/docs/services/Finance/Financial_Reports/sofi_2016_-_website.pdf",
+      "label": "2016",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.lionsbay.ca/municipal-services/finance/financial-reports",
+      "yearsInLabel": [
+        "2016"
+      ]
+    },
+    {
+      "url": "https://www.lionsbay.ca/sites/2/files/images/services/Finance/2011_sofi_reports.pdf",
+      "label": "2011",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.lionsbay.ca/municipal-services/finance/financial-reports",
+      "yearsInLabel": [
+        "2011"
+      ]
+    },
+    {
+      "url": "https://www.lionsbay.ca/sites/2/files/images/services/Finance/2012_sofi_reports.pdf",
+      "label": "2012",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.lionsbay.ca/municipal-services/finance/financial-reports",
+      "yearsInLabel": [
+        "2012"
+      ]
+    },
+    {
+      "url": "https://www.lionsbay.ca/sites/2/files/images/services/Finance/2013_sofi_reports.pdf",
+      "label": "2013",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.lionsbay.ca/municipal-services/finance/financial-reports",
+      "yearsInLabel": [
+        "2013"
+      ]
+    },
+    {
+      "url": "https://www.lionsbay.ca/sites/2/files/images/services/Finance/2014_sofi_reports.pdf",
+      "label": "2014",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.lionsbay.ca/municipal-services/finance/financial-reports",
+      "yearsInLabel": [
+        "2014"
+      ]
+    },
+    {
+      "url": "https://www.lionsbay.ca/sites/2/files/images/services/Finance/2015_sofi_reports.pdf",
+      "label": "2015",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.lionsbay.ca/municipal-services/finance/financial-reports",
+      "yearsInLabel": [
+        "2015"
+      ]
+    },
+    {
+      "url": "https://www.lionsbay.ca/sites/2/files/images/services/Finance/2018_annual_report.pdf",
+      "label": "2018",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.lionsbay.ca/municipal-services/finance/financial-reports",
+      "yearsInLabel": [
+        "2018"
+      ]
+    },
+    {
+      "url": "https://www.lionsbay.ca/sites/2/files/images/services/Finance/2018_audited_financial_statements.pdf",
+      "label": "2018",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.lionsbay.ca/municipal-services/finance/financial-reports",
+      "yearsInLabel": [
+        "2018"
+      ]
+    },
+    {
+      "url": "https://www.lionsbay.ca/sites/2/files/images/services/Finance/annual_report_2011.pdf",
+      "label": "2011",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.lionsbay.ca/municipal-services/finance/financial-reports",
+      "yearsInLabel": [
+        "2011"
+      ]
+    },
+    {
+      "url": "https://www.lionsbay.ca/sites/2/files/images/services/Finance/annual_report_2012.pdf",
+      "label": "2012",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.lionsbay.ca/municipal-services/finance/financial-reports",
+      "yearsInLabel": [
+        "2012"
+      ]
+    },
+    {
+      "url": "https://www.lionsbay.ca/sites/2/files/images/services/Finance/annual_report_2013.pdf",
+      "label": "2013",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.lionsbay.ca/municipal-services/finance/financial-reports",
+      "yearsInLabel": [
+        "2013"
+      ]
+    },
+    {
+      "url": "https://www.lionsbay.ca/sites/2/files/images/services/Finance/annual_report_2014_0.pdf",
+      "label": "2014",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.lionsbay.ca/municipal-services/finance/financial-reports",
+      "yearsInLabel": [
+        "2014"
+      ]
+    },
+    {
+      "url": "https://www.lionsbay.ca/sites/2/files/images/services/Finance/audited_financial_statements_2011.pdf",
+      "label": "2011",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.lionsbay.ca/municipal-services/finance/financial-reports",
+      "yearsInLabel": [
+        "2011"
+      ]
+    },
+    {
+      "url": "https://www.lionsbay.ca/sites/2/files/images/services/Finance/audited_financial_statements_2012.pdf",
+      "label": "2012",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.lionsbay.ca/municipal-services/finance/financial-reports",
+      "yearsInLabel": [
+        "2012"
+      ]
+    },
+    {
+      "url": "https://www.lionsbay.ca/sites/2/files/images/services/Finance/audited_financial_statements_2013.pdf",
+      "label": "2013",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.lionsbay.ca/municipal-services/finance/financial-reports",
+      "yearsInLabel": [
+        "2013"
+      ]
+    },
+    {
+      "url": "https://www.lionsbay.ca/sites/2/files/images/services/Finance/audited_financial_statements_2014.pdf",
+      "label": "2014",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.lionsbay.ca/municipal-services/finance/financial-reports",
+      "yearsInLabel": [
+        "2014"
+      ]
+    },
+    {
+      "url": "https://www.lionsbay.ca/sites/2/files/images/services/Finance/audited_financial_statements_2015.pdf",
+      "label": "2015",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.lionsbay.ca/municipal-services/finance/financial-reports",
+      "yearsInLabel": [
+        "2015"
+      ]
+    },
+    {
+      "url": "https://www.lionsbay.ca/sites/2/files/images/services/Finance/audited_financial_statements_2016.pdf",
+      "label": "2016",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.lionsbay.ca/municipal-services/finance/financial-reports",
+      "yearsInLabel": [
+        "2016"
+      ]
+    },
+    {
+      "url": "https://www.lionsbay.ca/sites/lionsbay.ca/files/images/2022%20Annual%20Report%20-%20v4.pdf",
+      "label": "2022",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.lionsbay.ca/municipal-services/finance/financial-reports",
+      "yearsInLabel": [
+        "2022"
+      ]
+    },
+    {
+      "url": "https://www.lionsbay.ca/sites/lionsbay.ca/files/images/2022%20SOFI.pdf",
+      "label": "2022",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.lionsbay.ca/municipal-services/finance/financial-reports",
+      "yearsInLabel": [
+        "2022"
+      ]
+    },
+    {
+      "url": "https://www.lionsbay.ca/sites/lionsbay.ca/files/images/FINAL%202022%20Village%20of%20Lions%20Bay%20Financial%20Statements.pdf",
+      "label": "2022",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.lionsbay.ca/municipal-services/finance/financial-reports",
+      "yearsInLabel": [
+        "2022"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,57 @@
+{
+  "sources": [
+    {
+      "year": "2025",
+      "cohorts": {
+        "employees": {
+          "pages": [
+            6,
+            7,
+            8,
+            9
+          ],
+          "columns": 3,
+          "expenseIndex": 1,
+          "controlRegex": "^Subtotal for Over",
+          "rowSum": {
+            "parts": [
+              0,
+              1
+            ],
+            "total": 2,
+            "toleranceCents": 100
+          }
+        },
+        "elected-officials": {
+          "pages": [
+            10
+          ],
+          "columns": 3,
+          "expenseIndex": 1,
+          "controlRegex": "^\\s*\\$",
+          "rowSum": {
+            "parts": [
+              0,
+              1
+            ],
+            "total": 2,
+            "toleranceCents": 100
+          }
+        }
+      },
+      "amountPrecision": "dollars",
+      "expectedRows": {
+        "employees": 191,
+        "elected-officials": 7
+      },
+      "status": "held-for-review",
+      "sourceUrl": "https://media-003-ca.cdn.govstack.com/westkelownacity-ca/media/ivnmzv31/2025-draft-statement-of-financial-information.pdf",
+      "pdfSha256": "22fe94626e08b0f8dab406644b24c32a999597be240c2c1a69b2ef684effb45f",
+      "reason": "Linked filename says draft; approval page 2 unsigned. Do not import pending final/adopted source verification.",
+      "thresholdRule": "at-least",
+      "periodEvidencePages": [
+        6
+      ]
+    }
+  ]
+}

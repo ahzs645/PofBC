@@ -1,0 +1,4087 @@
+{
+  "version": 1,
+  "rowSchema": [
+    "employerSlug",
+    "name",
+    "position",
+    "remuneration",
+    "expenses",
+    "pdfPage"
+  ],
+  "sources": [
+    {
+      "id": "prince-george-sofi-2023-employees",
+      "employerSlug": "city-of-prince-george",
+      "employerName": "City of Prince George",
+      "sector": "Municipalities",
+      "year": "2023",
+      "slug": "2023",
+      "periodType": "calendar",
+      "periodStart": "2023-01-01",
+      "periodEnd": "2023-12-31",
+      "title": "City of Prince George 2023 SOFI: employees",
+      "sourceUrl": "https://pub-princegeorge.escribemeetings.com/filestream.ashx?DocumentId=26123",
+      "sourceIndexUrl": "https://www.princegeorge.ca/finance",
+      "sha256": "27ec609122c5b7ae96967d7de3fac7eb1b5b6779998b4dc03e7cfe6126865530",
+      "file": "prince-george-2023-employees.json.gzip",
+      "dataSha256": "f9be99c2e1abd49e84caaf9837136c8edede319998a7c954c8dab43375691ed3",
+      "normalizedSha256": "28c0741900b7fc941240206543d5d6fbb5493ca5e9b863265aec42c22cc57dec",
+      "category": "employee-remuneration",
+      "scope": "named-employees-over-threshold",
+      "scopeDescription": "Published named employee schedule; council reported separately",
+      "threshold": 75000,
+      "thresholdRule": "over",
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "amountPrecision": "cents",
+      "nameDisclosure": "published-full-name",
+      "positionDisclosure": "published",
+      "rowCount": 404,
+      "totalRemuneration": 42084726.65,
+      "totalExpenses": 569397.71,
+      "pages": [
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19
+      ],
+      "status": "verified",
+      "verifiedOn": "2026-10-31",
+      "validation": {
+        "rowsByPhysicalPage": {
+          "13": 68,
+          "14": 69,
+          "15": 65,
+          "16": 69,
+          "17": 61,
+          "18": 69,
+          "19": 3
+        },
+        "printedNamedEmployeeCount": 404,
+        "printedComponentSubtotalsCents": [
+          3955243653,
+          253229012,
+          56939771
+        ],
+        "allComponentSubtotalsExact": true,
+        "summaryPhysicalPage": 19,
+        "sourceGroupHeadings": [
+          "Canadian Union of Publice Employees (CUPE) Group:",
+          "International Association of Fire Fighters (IAFF) Group:",
+          "Library (LIB) Group:",
+          "Management Exempt (MGMTX) Group:"
+        ],
+        "sourceFingerprintVerified": true,
+        "pdfPages": 35,
+        "independentPdfReaders": "Poppler layout and separately read PyMuPDF positioned words",
+        "allRowFieldsAndMultiplicitiesAgree": true,
+        "rowsIndependentlyChecked": 404,
+        "unparsedRows": 0,
+        "glyphCorrections": [],
+        "negativeExpenseRows": 0,
+        "missingExpenseRows": 89,
+        "explicitZeroExpenseRows": 0,
+        "exactDuplicateSourceRows": 0,
+        "visuallyReviewedPhysicalPages": [
+          13,
+          19,
+          20
+        ],
+        "visualReviewDate": "2026-10-31",
+        "belowOrEqualThresholdRemunerationRows": 0
+      },
+      "componentAuditFile": "audit/prince-george-2023-employees.json.gzip",
+      "componentAuditSha256": "11e0d557077c09a21564c18e7acbc58337abe2839e4c21451b7175342ba3eb05",
+      "notes": [
+        "Resolves the earlier HTTP 403 hold: original official PDF obtained and validated on 31 October 2026.",
+        "Employee remuneration is base pay plus all other compensation; every component subtotal and the printed 404-employee count reconcile exactly. The 2023 source explicitly includes a Library group.",
+        "Council remuneration uses the printed S.168(1)(a) amount including vehicle allowance once. Benefits remain separate in the component audit.",
+        "Uses the actual January–December calendar year. Names and initials remain as published; these are disclosures, not verified unique identities.",
+        "Expenses are separate. Blank/dash cells remain missing; disclosed numeric zero remains zero."
+      ]
+    },
+    {
+      "id": "prince-george-sofi-2023-elected-officials",
+      "employerSlug": "city-of-prince-george",
+      "employerName": "City of Prince George",
+      "sector": "Municipalities",
+      "year": "2023",
+      "slug": "2023",
+      "periodType": "calendar",
+      "periodStart": "2023-01-01",
+      "periodEnd": "2023-12-31",
+      "title": "City of Prince George 2023 SOFI: elected-officials",
+      "sourceUrl": "https://pub-princegeorge.escribemeetings.com/filestream.ashx?DocumentId=26123",
+      "sourceIndexUrl": "https://www.princegeorge.ca/finance",
+      "sha256": "27ec609122c5b7ae96967d7de3fac7eb1b5b6779998b4dc03e7cfe6126865530",
+      "file": "prince-george-2023-elected-officials.json.gzip",
+      "dataSha256": "b82dc33ee38ad0dd60fd2e8b7928e6b9fefe9a824a58d216cc2c3a90acccc602",
+      "normalizedSha256": "91b4682eb24ed95659c3bcd443af43e1630b71e46c5020eefafda4eb0c2b49b9",
+      "category": "elected-officials",
+      "scope": "elected-officials",
+      "scopeDescription": "Mayor and councillors; separate from employees",
+      "threshold": null,
+      "thresholdRule": null,
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "amountPrecision": "cents",
+      "nameDisclosure": "published-full-name",
+      "positionDisclosure": "published",
+      "rowCount": 9,
+      "totalRemuneration": 463672.28,
+      "totalExpenses": 74071.8,
+      "pages": [
+        20
+      ],
+      "status": "verified",
+      "verifiedOn": "2026-10-31",
+      "validation": {
+        "rowsByPhysicalPage": {
+          "20": 9
+        },
+        "printedComponentSubtotalsCents": [
+          45467228,
+          900000,
+          46367228,
+          7407180,
+          107368
+        ],
+        "allComponentSubtotalsExact": true,
+        "summaryPhysicalPage": 20,
+        "sourceFingerprintVerified": true,
+        "pdfPages": 35,
+        "independentPdfReaders": "Poppler layout and separately read PyMuPDF positioned words",
+        "allRowFieldsAndMultiplicitiesAgree": true,
+        "rowsIndependentlyChecked": 9,
+        "unparsedRows": 0,
+        "glyphCorrections": [],
+        "negativeExpenseRows": 0,
+        "missingExpenseRows": 0,
+        "explicitZeroExpenseRows": 0,
+        "exactDuplicateSourceRows": 0,
+        "visuallyReviewedPhysicalPages": [
+          13,
+          19,
+          20
+        ],
+        "visualReviewDate": "2026-10-31",
+        "belowOrEqualThresholdRemunerationRows": 0
+      },
+      "componentAuditFile": "audit/prince-george-2023-elected-officials.json.gzip",
+      "componentAuditSha256": "540b091875a3fd5983669a5d8f887b68a0a946828de6fca39fac3d8ea6032228",
+      "notes": [
+        "Resolves the earlier HTTP 403 hold: original official PDF obtained and validated on 31 October 2026.",
+        "Employee remuneration is base pay plus all other compensation; every component subtotal and the printed 404-employee count reconcile exactly. The 2023 source explicitly includes a Library group.",
+        "Council remuneration uses the printed S.168(1)(a) amount including vehicle allowance once. Benefits remain separate in the component audit.",
+        "Uses the actual January–December calendar year. Names and initials remain as published; these are disclosures, not verified unique identities.",
+        "Expenses are separate. Blank/dash cells remain missing; disclosed numeric zero remains zero."
+      ]
+    },
+    {
+      "id": "fort-st-john-sofi-2025-employees",
+      "employerSlug": "city-of-fort-st-john",
+      "employerName": "City of Fort St. John",
+      "sector": "Municipalities",
+      "year": "2025",
+      "slug": "2025",
+      "periodType": "calendar",
+      "periodStart": "2025-01-01",
+      "periodEnd": "2025-12-31",
+      "title": "City of Fort St. John 2025 SOFI: employees",
+      "sourceUrl": "https://www.fortstjohn.ca/media/file/statement-financial-information-sofi-2025",
+      "sourceIndexUrl": "https://www.fortstjohn.ca/local-government/budget-and-finance/annual-reports",
+      "sha256": "b0ee7785d14d3555a4d0e9439cb0a742727b7567d98262bf018037888018966f",
+      "file": "fort-st-john-2025-employees.json.gzip",
+      "dataSha256": "d0a21eba411a9cd00f5783d21eb2148eceea289c94bdaf53b7937a77918bd7a4",
+      "normalizedSha256": "02aa31ed7cc1be41847c7da15bf19df0ea408881650209f415039b5fc5a54b7a",
+      "category": "employee-remuneration",
+      "scope": "named-employees-over-threshold",
+      "scopeDescription": "Published named employee schedule; council reported separately",
+      "threshold": 75000,
+      "thresholdRule": "over",
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "amountPrecision": "cents",
+      "nameDisclosure": "published-name-or-initials",
+      "positionDisclosure": "published",
+      "rowCount": 180,
+      "totalRemuneration": 21211463.87,
+      "totalExpenses": 176512.57,
+      "pages": [
+        7,
+        8,
+        9,
+        10
+      ],
+      "status": "verified",
+      "verifiedOn": "2026-10-31",
+      "validation": {
+        "printedComponentSubtotalsCents": [
+          2121146387,
+          17651257,
+          2138797644
+        ],
+        "componentResidualsCents": [
+          0,
+          0,
+          0
+        ],
+        "allComponentSubtotalsExact": true,
+        "allRowFieldsAndMultiplicitiesAgree": true,
+        "rowsByPhysicalPage": {
+          "7": 41,
+          "8": 52,
+          "9": 52,
+          "10": 35
+        },
+        "rowsIndependentlyChecked": 180,
+        "sourceFingerprintVerified": true,
+        "unparsedRows": 0,
+        "independentPdfReaders": "Poppler layout and separately read PyMuPDF positioned words",
+        "missingExpenseRows": 123,
+        "explicitZeroExpenseRows": 0,
+        "negativeExpenseRows": 0,
+        "belowOrEqualThresholdRemunerationRows": 0,
+        "visuallyReviewedPhysicalPages": [
+          7
+        ],
+        "visualReviewDate": "2026-10-31"
+      },
+      "componentAuditFile": "audit/fort-st-john-2025-employees.json.gzip",
+      "componentAuditSha256": "797968f54c0925f7f986c228c17eeeb1004a625a0fb656b7315333da4779966e",
+      "notes": [
+        "Uses column (1) remuneration. Column (3) is remuneration plus expenses and is retained for audit only; expenses are never added to pay.",
+        "Uses the actual January–December calendar year. Names and initials remain as published; these are disclosures, not verified unique identities.",
+        "Expenses are separate. Blank/dash cells remain missing; disclosed numeric zero remains zero."
+      ]
+    },
+    {
+      "id": "fort-st-john-sofi-2025-elected-officials",
+      "employerSlug": "city-of-fort-st-john",
+      "employerName": "City of Fort St. John",
+      "sector": "Municipalities",
+      "year": "2025",
+      "slug": "2025",
+      "periodType": "calendar",
+      "periodStart": "2025-01-01",
+      "periodEnd": "2025-12-31",
+      "title": "City of Fort St. John 2025 SOFI: elected-officials",
+      "sourceUrl": "https://www.fortstjohn.ca/media/file/statement-financial-information-sofi-2025",
+      "sourceIndexUrl": "https://www.fortstjohn.ca/local-government/budget-and-finance/annual-reports",
+      "sha256": "b0ee7785d14d3555a4d0e9439cb0a742727b7567d98262bf018037888018966f",
+      "file": "fort-st-john-2025-elected-officials.json.gzip",
+      "dataSha256": "f67b3b14035ebec5a44eb23f140c49162409e753dec026cf3daefe6aea2296c1",
+      "normalizedSha256": "f365f974de461bbddb40a4631a5893854d7a65c3594ce0c8e9f4b5348cb42d4f",
+      "category": "elected-officials",
+      "scope": "elected-officials",
+      "scopeDescription": "Mayor and councillors; separate from employees",
+      "threshold": null,
+      "thresholdRule": null,
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "amountPrecision": "cents",
+      "nameDisclosure": "published-name-or-initials",
+      "positionDisclosure": "published",
+      "rowCount": 7,
+      "totalRemuneration": 373682.18,
+      "totalExpenses": 72986.09,
+      "pages": [
+        7
+      ],
+      "status": "verified",
+      "verifiedOn": "2026-10-31",
+      "validation": {
+        "printedComponentSubtotalsCents": [
+          37368218,
+          7298609,
+          44666827
+        ],
+        "componentResidualsCents": [
+          0,
+          0,
+          0
+        ],
+        "allComponentSubtotalsExact": true,
+        "allRowFieldsAndMultiplicitiesAgree": true,
+        "rowsByPhysicalPage": {
+          "7": 7
+        },
+        "rowsIndependentlyChecked": 7,
+        "sourceFingerprintVerified": true,
+        "unparsedRows": 0,
+        "independentPdfReaders": "Poppler layout and separately read PyMuPDF positioned words",
+        "missingExpenseRows": 2,
+        "explicitZeroExpenseRows": 0,
+        "negativeExpenseRows": 0,
+        "belowOrEqualThresholdRemunerationRows": 0,
+        "visuallyReviewedPhysicalPages": [
+          7
+        ],
+        "visualReviewDate": "2026-10-31"
+      },
+      "componentAuditFile": "audit/fort-st-john-2025-elected-officials.json.gzip",
+      "componentAuditSha256": "6730297a4be07be880e52e163f80d6bd2744de6acfd87fe100b1e52e0d94e7d3",
+      "notes": [
+        "Uses column (1) remuneration. Column (3) is remuneration plus expenses and is retained for audit only; expenses are never added to pay.",
+        "Uses the actual January–December calendar year. Names and initials remain as published; these are disclosures, not verified unique identities.",
+        "Expenses are separate. Blank/dash cells remain missing; disclosed numeric zero remains zero."
+      ]
+    },
+    {
+      "id": "kamloops-sofi-2016-employees",
+      "employerSlug": "city-of-kamloops",
+      "employerName": "City of Kamloops",
+      "sector": "Municipalities",
+      "year": "2016",
+      "slug": "2016",
+      "periodType": "calendar",
+      "periodStart": "2016-01-01",
+      "periodEnd": "2016-12-31",
+      "title": "City of Kamloops 2016 SOFI: employees",
+      "sourceUrl": "https://www.kamloops.ca/sites/default/files/2022-06/SOFI%202016.pdf",
+      "sourceIndexUrl": "https://www.kamloops.ca/city-hall/governance-finance/financial-statements",
+      "sha256": "0cb42fb8490cfe8607839e25dd6d4f4a114ab91e0df70bffc1cd034b1399debd",
+      "file": "kamloops-2016-employees.json.gzip",
+      "dataSha256": "4f21dc0a518745c2296cc68dfd4a60e719ef643b6a8710a82c683b985f9ed6d1",
+      "normalizedSha256": "c41990e43d84c94bff5065bd3695057c50bfd091100dc7c5fb694f222e8227c6",
+      "category": "employee-remuneration",
+      "scope": "named-employees-over-threshold",
+      "scopeDescription": "Published named employee schedule; source remuneration column, with separate benefits/payouts excluded",
+      "threshold": 75000,
+      "thresholdRule": "over",
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "amountPrecision": "cents",
+      "nameDisclosure": "published-name-or-initials",
+      "positionDisclosure": "published",
+      "rowCount": 283,
+      "totalRemuneration": 27658685.21,
+      "totalExpenses": 254318.84,
+      "pages": [
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "status": "verified",
+      "verifiedOn": "2026-10-31",
+      "validation": {
+        "printedComponentSubtotalsCents": [
+          2765868521,
+          25431884
+        ],
+        "componentResidualsCents": [
+          0,
+          0
+        ],
+        "allComponentSubtotalsExact": true,
+        "allRowFieldsAndMultiplicitiesAgree": true,
+        "unclippedSourceTextFields": [],
+        "reconciliationNote": "Exact published component controls.",
+        "rowsByPhysicalPage": {
+          "6": 46,
+          "7": 46,
+          "8": 46,
+          "9": 46,
+          "10": 46,
+          "11": 46,
+          "12": 7
+        },
+        "rowsIndependentlyChecked": 283,
+        "sourceFingerprintVerified": true,
+        "unparsedRows": 0,
+        "independentPdfReaders": "Poppler layout and separately read PyMuPDF positioned words",
+        "missingExpenseRows": 135,
+        "explicitZeroExpenseRows": 0,
+        "negativeExpenseRows": 0,
+        "belowOrEqualThresholdRemunerationRows": 0,
+        "visuallyReviewedPhysicalPages": [
+          6
+        ],
+        "visualReviewDate": "2026-10-31"
+      },
+      "componentAuditFile": "audit/kamloops-2016-employees.json.gzip",
+      "componentAuditSha256": "5ae269f770abc8fb075190dde90eb11250aaef86a5a389b02dfaafccefa88231",
+      "notes": [
+        "Uses the published Remuneration (or Renumeration) column. Separately disclosed taxable benefits/payouts and Total Income are retained in the component audit, not added to pay.",
+        "All rows in the published named employee schedule are retained, including rows whose remuneration column is at or below $75,000; membership is not filtered or inferred from that single column.",
+        "Whole-dollar tables have small residuals against printed component totals. All independently extracted row values are preserved; the source does not establish the cause of residuals.",
+        "The 2025 source uses surname and first initial, unlike preceding full-name schedules; no full-name identity is inferred across the change.",
+        "Uses the actual January–December calendar year. Names and initials remain as published; these are disclosures, not verified unique identities.",
+        "Expenses are separate. Blank/dash cells remain missing; disclosed numeric zero remains zero."
+      ]
+    },
+    {
+      "id": "kamloops-sofi-2017-employees",
+      "employerSlug": "city-of-kamloops",
+      "employerName": "City of Kamloops",
+      "sector": "Municipalities",
+      "year": "2017",
+      "slug": "2017",
+      "periodType": "calendar",
+      "periodStart": "2017-01-01",
+      "periodEnd": "2017-12-31",
+      "title": "City of Kamloops 2017 SOFI: employees",
+      "sourceUrl": "https://www.kamloops.ca/sites/default/files/2022-06/SOFI%202017.pdf",
+      "sourceIndexUrl": "https://www.kamloops.ca/city-hall/governance-finance/financial-statements",
+      "sha256": "74fb4d4e7e0bf548ddfca4865af3de397bf6233d995f8391404e6c99a93e4328",
+      "file": "kamloops-2017-employees.json.gzip",
+      "dataSha256": "07e09c1406b8d7e62d0e0947f5b9cc32fcb411a1bd0c958f15cb2821ab402f51",
+      "normalizedSha256": "53bf32633812da4c20dbec9bc43574397f90b31e0882adf93f1f54b3f720f8e4",
+      "category": "employee-remuneration",
+      "scope": "named-employees-over-threshold",
+      "scopeDescription": "Published named employee schedule; source remuneration column, with separate benefits/payouts excluded",
+      "threshold": 75000,
+      "thresholdRule": "over",
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "amountPrecision": "dollars",
+      "nameDisclosure": "published-name-or-initials",
+      "positionDisclosure": "published",
+      "rowCount": 301,
+      "totalRemuneration": 28880186.0,
+      "totalExpenses": 301043.0,
+      "pages": [
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "status": "verified",
+      "verifiedOn": "2026-10-31",
+      "validation": {
+        "printedComponentSubtotalsCents": [
+          2888017400,
+          242605400,
+          3130622800,
+          30104300
+        ],
+        "componentResidualsCents": [
+          1200,
+          -100,
+          500,
+          0
+        ],
+        "allComponentSubtotalsExact": false,
+        "allRowFieldsAndMultiplicitiesAgree": true,
+        "unclippedSourceTextFields": [],
+        "reconciliationNote": "Whole-dollar rows and printed totals may differ; residuals are preserved without attributing a cause.",
+        "rowsByPhysicalPage": {
+          "6": 64,
+          "7": 64,
+          "8": 64,
+          "9": 64,
+          "10": 45
+        },
+        "rowsIndependentlyChecked": 301,
+        "sourceFingerprintVerified": true,
+        "unparsedRows": 0,
+        "independentPdfReaders": "Poppler layout and separately read PyMuPDF positioned words",
+        "missingExpenseRows": 125,
+        "explicitZeroExpenseRows": 0,
+        "negativeExpenseRows": 0,
+        "belowOrEqualThresholdRemunerationRows": 40,
+        "visuallyReviewedPhysicalPages": [
+          4,
+          6
+        ],
+        "visualReviewDate": "2026-10-31"
+      },
+      "componentAuditFile": "audit/kamloops-2017-employees.json.gzip",
+      "componentAuditSha256": "f332aa97dc189af14a071457698fea34b53ebbb4f0d418585bbc962a2edf11f2",
+      "notes": [
+        "Uses the published Remuneration (or Renumeration) column. Separately disclosed taxable benefits/payouts and Total Income are retained in the component audit, not added to pay.",
+        "All rows in the published named employee schedule are retained, including rows whose remuneration column is at or below $75,000; membership is not filtered or inferred from that single column.",
+        "Whole-dollar tables have small residuals against printed component totals. All independently extracted row values are preserved; the source does not establish the cause of residuals.",
+        "The 2025 source uses surname and first initial, unlike preceding full-name schedules; no full-name identity is inferred across the change.",
+        "Uses the actual January–December calendar year. Names and initials remain as published; these are disclosures, not verified unique identities.",
+        "Expenses are separate. Blank/dash cells remain missing; disclosed numeric zero remains zero."
+      ]
+    },
+    {
+      "id": "kamloops-sofi-2018-employees",
+      "employerSlug": "city-of-kamloops",
+      "employerName": "City of Kamloops",
+      "sector": "Municipalities",
+      "year": "2018",
+      "slug": "2018",
+      "periodType": "calendar",
+      "periodStart": "2018-01-01",
+      "periodEnd": "2018-12-31",
+      "title": "City of Kamloops 2018 SOFI: employees",
+      "sourceUrl": "https://www.kamloops.ca/sites/default/files/2022-06/SOFI%202018.pdf",
+      "sourceIndexUrl": "https://www.kamloops.ca/city-hall/governance-finance/financial-statements",
+      "sha256": "cf8a656870f257b6fab6b81caa68b5edf5bbbb54f89850e1b04a474e643a77fa",
+      "file": "kamloops-2018-employees.json.gzip",
+      "dataSha256": "f784df38bdfb2f1cedd6c684969536436eec5ba7a7b2b8b575b47097b9085508",
+      "normalizedSha256": "44a97751bc6d3a421254923fe23ec5a454b8747ce19d6fcfcd1920a9b27b01fc",
+      "category": "employee-remuneration",
+      "scope": "named-employees-over-threshold",
+      "scopeDescription": "Published named employee schedule; source remuneration column, with separate benefits/payouts excluded",
+      "threshold": 75000,
+      "thresholdRule": "over",
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "amountPrecision": "dollars",
+      "nameDisclosure": "published-name-or-initials",
+      "positionDisclosure": "published",
+      "rowCount": 327,
+      "totalRemuneration": 31127975.0,
+      "totalExpenses": 406772.0,
+      "pages": [
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "status": "verified",
+      "verifiedOn": "2026-10-31",
+      "validation": {
+        "printedComponentSubtotalsCents": [
+          3112796500,
+          168496400,
+          3281292900,
+          40676900
+        ],
+        "componentResidualsCents": [
+          1000,
+          0,
+          -100,
+          300
+        ],
+        "allComponentSubtotalsExact": false,
+        "allRowFieldsAndMultiplicitiesAgree": true,
+        "unclippedSourceTextFields": [],
+        "reconciliationNote": "Whole-dollar rows and printed totals may differ; residuals are preserved without attributing a cause.",
+        "rowsByPhysicalPage": {
+          "6": 61,
+          "7": 61,
+          "8": 61,
+          "9": 61,
+          "10": 61,
+          "11": 22
+        },
+        "rowsIndependentlyChecked": 327,
+        "sourceFingerprintVerified": true,
+        "unparsedRows": 0,
+        "independentPdfReaders": "Poppler layout and separately read PyMuPDF positioned words",
+        "missingExpenseRows": 0,
+        "explicitZeroExpenseRows": 123,
+        "negativeExpenseRows": 0,
+        "belowOrEqualThresholdRemunerationRows": 55,
+        "visuallyReviewedPhysicalPages": [],
+        "visualReviewDate": "2026-10-31"
+      },
+      "componentAuditFile": "audit/kamloops-2018-employees.json.gzip",
+      "componentAuditSha256": "f054e879be491d03f015283144bc91acc17577206f79ded105a47c5266bedcf9",
+      "notes": [
+        "Uses the published Remuneration (or Renumeration) column. Separately disclosed taxable benefits/payouts and Total Income are retained in the component audit, not added to pay.",
+        "All rows in the published named employee schedule are retained, including rows whose remuneration column is at or below $75,000; membership is not filtered or inferred from that single column.",
+        "Whole-dollar tables have small residuals against printed component totals. All independently extracted row values are preserved; the source does not establish the cause of residuals.",
+        "The 2025 source uses surname and first initial, unlike preceding full-name schedules; no full-name identity is inferred across the change.",
+        "Uses the actual January–December calendar year. Names and initials remain as published; these are disclosures, not verified unique identities.",
+        "Expenses are separate. Blank/dash cells remain missing; disclosed numeric zero remains zero."
+      ]
+    },
+    {
+      "id": "kamloops-sofi-2019-employees",
+      "employerSlug": "city-of-kamloops",
+      "employerName": "City of Kamloops",
+      "sector": "Municipalities",
+      "year": "2019",
+      "slug": "2019",
+      "periodType": "calendar",
+      "periodStart": "2019-01-01",
+      "periodEnd": "2019-12-31",
+      "title": "City of Kamloops 2019 SOFI: employees",
+      "sourceUrl": "https://www.kamloops.ca/sites/default/files/2022-06/SOFI%202019.pdf",
+      "sourceIndexUrl": "https://www.kamloops.ca/city-hall/governance-finance/financial-statements",
+      "sha256": "1c9e29f1b180c6b5ac838c34e8221d72d679e18d252939599e2f4cd1aff2258d",
+      "file": "kamloops-2019-employees.json.gzip",
+      "dataSha256": "5f08fe33116e421b60edc5fbfc4b36c5bd3b65e4d31162c3c389d35fc563045e",
+      "normalizedSha256": "8f9fd3d8ba37131f308cf374119a75a2a4d3b8c1922db4722286eb882c6ae4f9",
+      "category": "employee-remuneration",
+      "scope": "named-employees-over-threshold",
+      "scopeDescription": "Published named employee schedule; source remuneration column, with separate benefits/payouts excluded",
+      "threshold": 75000,
+      "thresholdRule": "over",
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "amountPrecision": "dollars",
+      "nameDisclosure": "published-name-or-initials",
+      "positionDisclosure": "published",
+      "rowCount": 344,
+      "totalRemuneration": 33242953.0,
+      "totalExpenses": 444194.0,
+      "pages": [
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "status": "verified",
+      "verifiedOn": "2026-10-31",
+      "validation": {
+        "printedComponentSubtotalsCents": [
+          3324293200,
+          167808400,
+          3492101600,
+          44419100
+        ],
+        "componentResidualsCents": [
+          2100,
+          1000,
+          100,
+          300
+        ],
+        "allComponentSubtotalsExact": false,
+        "allRowFieldsAndMultiplicitiesAgree": true,
+        "unclippedSourceTextFields": [],
+        "reconciliationNote": "Whole-dollar rows and printed totals may differ; residuals are preserved without attributing a cause.",
+        "rowsByPhysicalPage": {
+          "6": 61,
+          "7": 61,
+          "8": 61,
+          "9": 61,
+          "10": 61,
+          "11": 39
+        },
+        "rowsIndependentlyChecked": 344,
+        "sourceFingerprintVerified": true,
+        "unparsedRows": 0,
+        "independentPdfReaders": "Poppler layout and separately read PyMuPDF positioned words",
+        "missingExpenseRows": 0,
+        "explicitZeroExpenseRows": 154,
+        "negativeExpenseRows": 0,
+        "belowOrEqualThresholdRemunerationRows": 59,
+        "visuallyReviewedPhysicalPages": [],
+        "visualReviewDate": "2026-10-31"
+      },
+      "componentAuditFile": "audit/kamloops-2019-employees.json.gzip",
+      "componentAuditSha256": "25bce36a5cd952343f9cf72dddc15b9c6773d4c7ca87a2a305208e4ff7039aba",
+      "notes": [
+        "Uses the published Remuneration (or Renumeration) column. Separately disclosed taxable benefits/payouts and Total Income are retained in the component audit, not added to pay.",
+        "All rows in the published named employee schedule are retained, including rows whose remuneration column is at or below $75,000; membership is not filtered or inferred from that single column.",
+        "Whole-dollar tables have small residuals against printed component totals. All independently extracted row values are preserved; the source does not establish the cause of residuals.",
+        "The 2025 source uses surname and first initial, unlike preceding full-name schedules; no full-name identity is inferred across the change.",
+        "Uses the actual January–December calendar year. Names and initials remain as published; these are disclosures, not verified unique identities.",
+        "Expenses are separate. Blank/dash cells remain missing; disclosed numeric zero remains zero."
+      ]
+    },
+    {
+      "id": "kamloops-sofi-2020-employees",
+      "employerSlug": "city-of-kamloops",
+      "employerName": "City of Kamloops",
+      "sector": "Municipalities",
+      "year": "2020",
+      "slug": "2020",
+      "periodType": "calendar",
+      "periodStart": "2020-01-01",
+      "periodEnd": "2020-12-31",
+      "title": "City of Kamloops 2020 SOFI: employees",
+      "sourceUrl": "https://www.kamloops.ca/sites/default/files/2022-06/SOFI%202020.pdf",
+      "sourceIndexUrl": "https://www.kamloops.ca/city-hall/governance-finance/financial-statements",
+      "sha256": "601dde331569d5bf7c1cc82f467ee4bff1b5e0c482c04c28222d140ff7ba8e21",
+      "file": "kamloops-2020-employees.json.gzip",
+      "dataSha256": "af8e19505bdd0e2e90ac6bf2cf1046338f51d6aaa06c8aae32916d893b12b7ad",
+      "normalizedSha256": "f054583fea3292ada3691e759d04bdeb50b82f13b874764363ee5f4f2b291f4c",
+      "category": "employee-remuneration",
+      "scope": "named-employees-over-threshold",
+      "scopeDescription": "Published named employee schedule; source remuneration column, with separate benefits/payouts excluded",
+      "threshold": 75000,
+      "thresholdRule": "over",
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "amountPrecision": "dollars",
+      "nameDisclosure": "published-name-or-initials",
+      "positionDisclosure": "published",
+      "rowCount": 359,
+      "totalRemuneration": 35588184.0,
+      "totalExpenses": 229581.0,
+      "pages": [
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "status": "verified",
+      "verifiedOn": "2026-10-31",
+      "validation": {
+        "printedComponentSubtotalsCents": [
+          3558817800,
+          85398100,
+          3644215900,
+          22958900
+        ],
+        "componentResidualsCents": [
+          600,
+          2400,
+          -1200,
+          -800
+        ],
+        "allComponentSubtotalsExact": false,
+        "allRowFieldsAndMultiplicitiesAgree": true,
+        "unclippedSourceTextFields": [],
+        "reconciliationNote": "Whole-dollar rows and printed totals may differ; residuals are preserved without attributing a cause.",
+        "rowsByPhysicalPage": {
+          "6": 62,
+          "7": 62,
+          "8": 59,
+          "9": 62,
+          "10": 62,
+          "11": 52
+        },
+        "rowsIndependentlyChecked": 359,
+        "sourceFingerprintVerified": true,
+        "unparsedRows": 0,
+        "independentPdfReaders": "Poppler layout and separately read PyMuPDF positioned words",
+        "missingExpenseRows": 0,
+        "explicitZeroExpenseRows": 113,
+        "negativeExpenseRows": 0,
+        "belowOrEqualThresholdRemunerationRows": 24,
+        "visuallyReviewedPhysicalPages": [],
+        "visualReviewDate": "2026-10-31"
+      },
+      "componentAuditFile": "audit/kamloops-2020-employees.json.gzip",
+      "componentAuditSha256": "cff7731fba826257694da26a085af6886810a361643eb856c468be670fe00c48",
+      "notes": [
+        "Uses the published Remuneration (or Renumeration) column. Separately disclosed taxable benefits/payouts and Total Income are retained in the component audit, not added to pay.",
+        "All rows in the published named employee schedule are retained, including rows whose remuneration column is at or below $75,000; membership is not filtered or inferred from that single column.",
+        "Whole-dollar tables have small residuals against printed component totals. All independently extracted row values are preserved; the source does not establish the cause of residuals.",
+        "The 2025 source uses surname and first initial, unlike preceding full-name schedules; no full-name identity is inferred across the change.",
+        "Uses the actual January–December calendar year. Names and initials remain as published; these are disclosures, not verified unique identities.",
+        "Expenses are separate. Blank/dash cells remain missing; disclosed numeric zero remains zero."
+      ]
+    },
+    {
+      "id": "kamloops-sofi-2021-employees",
+      "employerSlug": "city-of-kamloops",
+      "employerName": "City of Kamloops",
+      "sector": "Municipalities",
+      "year": "2021",
+      "slug": "2021",
+      "periodType": "calendar",
+      "periodStart": "2021-01-01",
+      "periodEnd": "2021-12-31",
+      "title": "City of Kamloops 2021 SOFI: employees",
+      "sourceUrl": "https://www.kamloops.ca/sites/default/files/2022-07/2021%20SOFI%20Attachment%20A-SIGNED.pdf",
+      "sourceIndexUrl": "https://www.kamloops.ca/city-hall/governance-finance/financial-statements",
+      "sha256": "89ca7831b64cf6301fb2ee25f78d01c8fd365fc2d88fd45fb93675046051040f",
+      "file": "kamloops-2021-employees.json.gzip",
+      "dataSha256": "fba96e7a4d0c7f5ea5695c909dfb2a3ddb0f522f05212d781def5eb8c0eaca61",
+      "normalizedSha256": "e49885b25dfd1e62651ac1c568b48f56f46c568e94c7f95dbe4cbf1047985d93",
+      "category": "employee-remuneration",
+      "scope": "named-employees-over-threshold",
+      "scopeDescription": "Published named employee schedule; source remuneration column, with separate benefits/payouts excluded",
+      "threshold": 75000,
+      "thresholdRule": "over",
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "amountPrecision": "dollars",
+      "nameDisclosure": "published-name-or-initials",
+      "positionDisclosure": "published",
+      "rowCount": 387,
+      "totalRemuneration": 38769373.0,
+      "totalExpenses": 327576.0,
+      "pages": [
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "status": "verified",
+      "verifiedOn": "2026-10-31",
+      "validation": {
+        "printedComponentSubtotalsCents": [
+          3876937200,
+          102959000,
+          3979896200,
+          32755400
+        ],
+        "componentResidualsCents": [
+          100,
+          1100,
+          -100,
+          2200
+        ],
+        "allComponentSubtotalsExact": false,
+        "allRowFieldsAndMultiplicitiesAgree": true,
+        "unclippedSourceTextFields": [],
+        "reconciliationNote": "Whole-dollar rows and printed totals may differ; residuals are preserved without attributing a cause.",
+        "rowsByPhysicalPage": {
+          "6": 62,
+          "7": 62,
+          "8": 59,
+          "9": 62,
+          "10": 62,
+          "11": 62,
+          "12": 18
+        },
+        "rowsIndependentlyChecked": 387,
+        "sourceFingerprintVerified": true,
+        "unparsedRows": 0,
+        "independentPdfReaders": "Poppler layout and separately read PyMuPDF positioned words",
+        "missingExpenseRows": 0,
+        "explicitZeroExpenseRows": 95,
+        "negativeExpenseRows": 0,
+        "belowOrEqualThresholdRemunerationRows": 36,
+        "visuallyReviewedPhysicalPages": [],
+        "visualReviewDate": "2026-10-31"
+      },
+      "componentAuditFile": "audit/kamloops-2021-employees.json.gzip",
+      "componentAuditSha256": "819b345821c703450c61f2bbb5831a40a0ed27789a2505ffac175d36c25a8e33",
+      "notes": [
+        "Uses the published Remuneration (or Renumeration) column. Separately disclosed taxable benefits/payouts and Total Income are retained in the component audit, not added to pay.",
+        "All rows in the published named employee schedule are retained, including rows whose remuneration column is at or below $75,000; membership is not filtered or inferred from that single column.",
+        "Whole-dollar tables have small residuals against printed component totals. All independently extracted row values are preserved; the source does not establish the cause of residuals.",
+        "The 2025 source uses surname and first initial, unlike preceding full-name schedules; no full-name identity is inferred across the change.",
+        "Uses the actual January–December calendar year. Names and initials remain as published; these are disclosures, not verified unique identities.",
+        "Expenses are separate. Blank/dash cells remain missing; disclosed numeric zero remains zero."
+      ]
+    },
+    {
+      "id": "kamloops-sofi-2022-employees",
+      "employerSlug": "city-of-kamloops",
+      "employerName": "City of Kamloops",
+      "sector": "Municipalities",
+      "year": "2022",
+      "slug": "2022",
+      "periodType": "calendar",
+      "periodStart": "2022-01-01",
+      "periodEnd": "2022-12-31",
+      "title": "City of Kamloops 2022 SOFI: employees",
+      "sourceUrl": "https://www.kamloops.ca/sites/default/files/2023-07/City%20of%20Kamloops_2022%20SOFI%20Attachment%20A.pdf",
+      "sourceIndexUrl": "https://www.kamloops.ca/city-hall/governance-finance/financial-statements",
+      "sha256": "2528fb839954e8cec1a82f0bb323c63a5efe40eba022baf4872c07cb5cc70615",
+      "file": "kamloops-2022-employees.json.gzip",
+      "dataSha256": "34c675de9d8dfecf0a26a67ea1e97a01b49e61610dfa02bbb4e9907a18266a34",
+      "normalizedSha256": "bdcffbd8c90fd0235a87d5cfc07b2bf00e07126c3717588d6eb2e92bbcd0039e",
+      "category": "employee-remuneration",
+      "scope": "named-employees-over-threshold",
+      "scopeDescription": "Published named employee schedule; source remuneration column, with separate benefits/payouts excluded",
+      "threshold": 75000,
+      "thresholdRule": "over",
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "amountPrecision": "dollars",
+      "nameDisclosure": "published-name-or-initials",
+      "positionDisclosure": "published",
+      "rowCount": 426,
+      "totalRemuneration": 44877362.0,
+      "totalExpenses": 516996.0,
+      "pages": [
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "status": "verified",
+      "verifiedOn": "2026-10-31",
+      "validation": {
+        "printedComponentSubtotalsCents": [
+          4487735300,
+          40992500,
+          4528727800,
+          51698700
+        ],
+        "componentResidualsCents": [
+          900,
+          3000,
+          700,
+          900
+        ],
+        "allComponentSubtotalsExact": false,
+        "allRowFieldsAndMultiplicitiesAgree": true,
+        "unclippedSourceTextFields": [],
+        "reconciliationNote": "Whole-dollar rows and printed totals may differ; residuals are preserved without attributing a cause.",
+        "rowsByPhysicalPage": {
+          "6": 61,
+          "7": 61,
+          "8": 61,
+          "9": 61,
+          "10": 61,
+          "11": 61,
+          "12": 60
+        },
+        "rowsIndependentlyChecked": 426,
+        "sourceFingerprintVerified": true,
+        "unparsedRows": 0,
+        "independentPdfReaders": "Poppler layout and separately read PyMuPDF positioned words",
+        "missingExpenseRows": 0,
+        "explicitZeroExpenseRows": 112,
+        "negativeExpenseRows": 0,
+        "belowOrEqualThresholdRemunerationRows": 14,
+        "visuallyReviewedPhysicalPages": [],
+        "visualReviewDate": "2026-10-31"
+      },
+      "componentAuditFile": "audit/kamloops-2022-employees.json.gzip",
+      "componentAuditSha256": "049fc8d626c26378dd20ad9c91a225efa77787c52675e9175023b7537a49b9a2",
+      "notes": [
+        "Uses the published Remuneration (or Renumeration) column. Separately disclosed taxable benefits/payouts and Total Income are retained in the component audit, not added to pay.",
+        "All rows in the published named employee schedule are retained, including rows whose remuneration column is at or below $75,000; membership is not filtered or inferred from that single column.",
+        "Whole-dollar tables have small residuals against printed component totals. All independently extracted row values are preserved; the source does not establish the cause of residuals.",
+        "The 2025 source uses surname and first initial, unlike preceding full-name schedules; no full-name identity is inferred across the change.",
+        "Uses the actual January–December calendar year. Names and initials remain as published; these are disclosures, not verified unique identities.",
+        "Expenses are separate. Blank/dash cells remain missing; disclosed numeric zero remains zero."
+      ]
+    },
+    {
+      "id": "kamloops-sofi-2023-employees",
+      "employerSlug": "city-of-kamloops",
+      "employerName": "City of Kamloops",
+      "sector": "Municipalities",
+      "year": "2023",
+      "slug": "2023",
+      "periodType": "calendar",
+      "periodStart": "2023-01-01",
+      "periodEnd": "2023-12-31",
+      "title": "City of Kamloops 2023 SOFI: employees",
+      "sourceUrl": "https://www.kamloops.ca/sites/default/files/docs/2023%20SOFI%20Report.pdf",
+      "sourceIndexUrl": "https://www.kamloops.ca/city-hall/governance-finance/financial-statements",
+      "sha256": "74641136590f9284df25746171e5739e9db563d27be60988e5e50bc7589c2b42",
+      "file": "kamloops-2023-employees.json.gzip",
+      "dataSha256": "3873da69940e26f4dd522444ab4c2f2e71e554156e33cef1c879d15ff306cd0a",
+      "normalizedSha256": "20da1dfb5f03e12dd84a4436b2e98fffa589fe18846669d4068c733d39f80d11",
+      "category": "employee-remuneration",
+      "scope": "named-employees-over-threshold",
+      "scopeDescription": "Published named employee schedule; source remuneration column, with separate benefits/payouts excluded",
+      "threshold": 75000,
+      "thresholdRule": "over",
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "amountPrecision": "dollars",
+      "nameDisclosure": "published-name-or-initials",
+      "positionDisclosure": "published",
+      "rowCount": 460,
+      "totalRemuneration": 47140556.0,
+      "totalExpenses": 610870.0,
+      "pages": [
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13
+      ],
+      "status": "verified",
+      "verifiedOn": "2026-10-31",
+      "validation": {
+        "printedComponentSubtotalsCents": [
+          4714055100,
+          39053800,
+          4753108900,
+          61085500
+        ],
+        "componentResidualsCents": [
+          500,
+          800,
+          1600,
+          1500
+        ],
+        "allComponentSubtotalsExact": false,
+        "allRowFieldsAndMultiplicitiesAgree": true,
+        "unclippedSourceTextFields": [],
+        "reconciliationNote": "Whole-dollar rows and printed totals may differ; residuals are preserved without attributing a cause.",
+        "rowsByPhysicalPage": {
+          "6": 61,
+          "7": 61,
+          "8": 61,
+          "9": 61,
+          "10": 61,
+          "11": 61,
+          "12": 61,
+          "13": 33
+        },
+        "rowsIndependentlyChecked": 460,
+        "sourceFingerprintVerified": true,
+        "unparsedRows": 0,
+        "independentPdfReaders": "Poppler layout and separately read PyMuPDF positioned words",
+        "missingExpenseRows": 0,
+        "explicitZeroExpenseRows": 112,
+        "negativeExpenseRows": 1,
+        "belowOrEqualThresholdRemunerationRows": 14,
+        "visuallyReviewedPhysicalPages": [],
+        "visualReviewDate": "2026-10-31"
+      },
+      "componentAuditFile": "audit/kamloops-2023-employees.json.gzip",
+      "componentAuditSha256": "b276aedb59a74f86a734dfe2cb8f98a9ef0750adb83303af1302c58407b4c9ef",
+      "notes": [
+        "Uses the published Remuneration (or Renumeration) column. Separately disclosed taxable benefits/payouts and Total Income are retained in the component audit, not added to pay.",
+        "All rows in the published named employee schedule are retained, including rows whose remuneration column is at or below $75,000; membership is not filtered or inferred from that single column.",
+        "Whole-dollar tables have small residuals against printed component totals. All independently extracted row values are preserved; the source does not establish the cause of residuals.",
+        "The 2025 source uses surname and first initial, unlike preceding full-name schedules; no full-name identity is inferred across the change.",
+        "Uses the actual January–December calendar year. Names and initials remain as published; these are disclosures, not verified unique identities.",
+        "Expenses are separate. Blank/dash cells remain missing; disclosed numeric zero remains zero."
+      ]
+    },
+    {
+      "id": "kamloops-sofi-2025-employees",
+      "employerSlug": "city-of-kamloops",
+      "employerName": "City of Kamloops",
+      "sector": "Municipalities",
+      "year": "2025",
+      "slug": "2025",
+      "periodType": "calendar",
+      "periodStart": "2025-01-01",
+      "periodEnd": "2025-12-31",
+      "title": "City of Kamloops 2025 SOFI: employees",
+      "sourceUrl": "https://www.kamloops.ca/sites/default/files/Report%20-%202025%20Statement%20of%20Financial%20Information.pdf",
+      "sourceIndexUrl": "https://www.kamloops.ca/city-hall/governance-finance/financial-statements",
+      "sha256": "7dcf561d219cb23edf565d7fa0f715796235e12ecdbd750c6e6f1df26c538001",
+      "file": "kamloops-2025-employees.json.gzip",
+      "dataSha256": "f6bb490a02de68f770085afc77750c439d6a19f9fdcea225c2ada36764626a38",
+      "normalizedSha256": "f47072ffac9cef524461e37a9f78c1beb235c4555df8e7371b89445bd9b54acc",
+      "category": "employee-remuneration",
+      "scope": "named-employees-over-threshold",
+      "scopeDescription": "Published named employee schedule; source remuneration column, with separate benefits/payouts excluded",
+      "threshold": 75000,
+      "thresholdRule": "over",
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "amountPrecision": "dollars",
+      "nameDisclosure": "published-name-or-initials",
+      "positionDisclosure": "published",
+      "rowCount": 630,
+      "totalRemuneration": 69781523.0,
+      "totalExpenses": 774905.0,
+      "pages": [
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21
+      ],
+      "status": "verified",
+      "verifiedOn": "2026-10-31",
+      "validation": {
+        "printedComponentSubtotalsCents": [
+          6978152300,
+          48623700,
+          77489800
+        ],
+        "componentResidualsCents": [
+          0,
+          0,
+          700
+        ],
+        "allComponentSubtotalsExact": false,
+        "allRowFieldsAndMultiplicitiesAgree": true,
+        "unclippedSourceTextFields": [
+          {
+            "physicalPdfPage": 19,
+            "name": "Luison, J",
+            "position": "Assistant Civic Operations Director/Public Works Divisional Manager",
+            "reason": "Complete source text span is clipped in the rendered table; original text is preserved."
+          }
+        ],
+        "reconciliationNote": "Whole-dollar rows and printed totals may differ; residuals are preserved without attributing a cause.",
+        "rowsByPhysicalPage": {
+          "10": 55,
+          "11": 58,
+          "12": 58,
+          "13": 58,
+          "14": 58,
+          "15": 58,
+          "16": 54,
+          "17": 58,
+          "18": 54,
+          "19": 58,
+          "20": 54,
+          "21": 7
+        },
+        "rowsIndependentlyChecked": 630,
+        "sourceFingerprintVerified": true,
+        "unparsedRows": 0,
+        "independentPdfReaders": "Poppler layout and separately read PyMuPDF positioned words",
+        "missingExpenseRows": 154,
+        "explicitZeroExpenseRows": 0,
+        "negativeExpenseRows": 0,
+        "belowOrEqualThresholdRemunerationRows": 19,
+        "visuallyReviewedPhysicalPages": [],
+        "visualReviewDate": "2026-10-31"
+      },
+      "componentAuditFile": "audit/kamloops-2025-employees.json.gzip",
+      "componentAuditSha256": "cab08b39ec2bd9ad5834f67b5d7ff30ce84b9a09f4c4b78d29084c9363cfc585",
+      "notes": [
+        "Uses the published Remuneration (or Renumeration) column. Separately disclosed taxable benefits/payouts and Total Income are retained in the component audit, not added to pay.",
+        "All rows in the published named employee schedule are retained, including rows whose remuneration column is at or below $75,000; membership is not filtered or inferred from that single column.",
+        "Whole-dollar tables have small residuals against printed component totals. All independently extracted row values are preserved; the source does not establish the cause of residuals.",
+        "The 2025 source uses surname and first initial, unlike preceding full-name schedules; no full-name identity is inferred across the change.",
+        "One long position is clipped in the rendered PDF. Its exact complete text is present in both Poppler text and the independent PyMuPDF text trace; the complete source text is retained and recorded in validation.unclippedSourceTextFields.",
+        "Uses the actual January–December calendar year. Names and initials remain as published; these are disclosures, not verified unique identities.",
+        "Expenses are separate. Blank/dash cells remain missing; disclosed numeric zero remains zero."
+      ]
+    },
+    {
+      "id": "castlegar-sofi-2025-employees",
+      "employerSlug": "city-of-castlegar",
+      "employerName": "City of Castlegar",
+      "sector": "Municipalities",
+      "year": "2025",
+      "slug": "2025",
+      "periodType": "calendar",
+      "periodStart": "2025-01-01",
+      "periodEnd": "2025-12-31",
+      "title": "City of Castlegar 2025 SOFI: employees",
+      "sourceUrl": "https://castlegar.ca/wp-content/uploads/2026/06/Castlegar-2025-SOFI-Report.pdf",
+      "sourceIndexUrl": "https://castlegar.ca/government/reports-plans-publications/financial-reporting/",
+      "sha256": "6ab69fdd2bc76a29b9f566be5e63974b09515d17190545e829f231f86e34fb28",
+      "file": "castlegar-2025-employees.json.gzip",
+      "dataSha256": "efd3e777721b928e33e4b4d831d07c52c1e55d4fbee8a418e868bebd0feabcb1",
+      "normalizedSha256": "c5a3c0df34e41c93e73c7035875f031920032f16a465e99e0fd3846464c5c4ca",
+      "category": "employee-remuneration",
+      "scope": "named-employees-over-threshold",
+      "scopeDescription": "Published named employee schedule; council reported separately",
+      "threshold": 75000,
+      "thresholdRule": "at-least",
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "amountPrecision": "dollars",
+      "nameDisclosure": "published-full-name",
+      "positionDisclosure": "published",
+      "rowCount": 57,
+      "totalRemuneration": 6048641.0,
+      "totalExpenses": 175547.0,
+      "pages": [
+        31,
+        32,
+        33
+      ],
+      "status": "verified",
+      "verifiedOn": "2026-10-31",
+      "validation": {
+        "printedNamedControlCents": [
+          604864100,
+          17554400
+        ],
+        "controlComponentIndexes": [
+          0,
+          1
+        ],
+        "componentResidualsCents": [
+          0,
+          300
+        ],
+        "allComponentSubtotalsExact": false,
+        "allRowFieldsAndMultiplicitiesAgree": true,
+        "calendarPeriodEvidencePhysicalPages": [
+          31
+        ],
+        "calendarPeriodEvidencePattern": "2025 Payroll",
+        "unclippedSourceTextFields": [],
+        "reconciliationNote": "Small whole-dollar source residuals are preserved; no individual value is altered.",
+        "rowsByPhysicalPage": {
+          "31": 21,
+          "32": 35,
+          "33": 1
+        },
+        "rowsIndependentlyChecked": 57,
+        "sourceFingerprintVerified": true,
+        "unparsedRows": 0,
+        "independentPdfReaders": "Poppler layout and separately read PyMuPDF positioned words",
+        "missingExpenseRows": 0,
+        "explicitZeroExpenseRows": 1,
+        "negativeExpenseRows": 0,
+        "belowOrEqualThresholdRemunerationRows": 0,
+        "visuallyReviewedPhysicalPages": [
+          30,
+          33
+        ],
+        "visualReviewDate": "2026-10-31"
+      },
+      "componentAuditFile": "audit/castlegar-2025-employees.json.gzip",
+      "componentAuditSha256": "f3940c2c69fabd1013e02df77367c9690211aeabf1942ab9e1ef69d8f70ecef7",
+      "notes": [
+        "Uses published 2025 Payroll. The source defines remuneration to include base salary/wages, overtime, statutory holiday pay, payouts of vacation or sick time, retroactive pay adjustments, allowances, and taxable benefits. Council is a separate schedule.",
+        "The employee threshold is inclusive: the source prints Employees earning $75,000 or more. Published numerical zero council expenses remain zero.",
+        "Uses the actual January–December calendar year. Names and initials remain as published; these are disclosures, not verified unique identities.",
+        "Expenses are separate. Blank/dash cells remain missing; disclosed numeric zero remains zero."
+      ]
+    },
+    {
+      "id": "castlegar-sofi-2025-elected-officials",
+      "employerSlug": "city-of-castlegar",
+      "employerName": "City of Castlegar",
+      "sector": "Municipalities",
+      "year": "2025",
+      "slug": "2025",
+      "periodType": "calendar",
+      "periodStart": "2025-01-01",
+      "periodEnd": "2025-12-31",
+      "title": "City of Castlegar 2025 SOFI: elected-officials",
+      "sourceUrl": "https://castlegar.ca/wp-content/uploads/2026/06/Castlegar-2025-SOFI-Report.pdf",
+      "sourceIndexUrl": "https://castlegar.ca/government/reports-plans-publications/financial-reporting/",
+      "sha256": "6ab69fdd2bc76a29b9f566be5e63974b09515d17190545e829f231f86e34fb28",
+      "file": "castlegar-2025-elected-officials.json.gzip",
+      "dataSha256": "1bdde260d3bde2fa5c40e84ca30a8ec1ddf6d482350846a2c3315022a0d2acc7",
+      "normalizedSha256": "342279405b5e8403774260f47c96407cc584ea40378d82bcf4a558f88ebb4834",
+      "category": "elected-officials",
+      "scope": "elected-officials",
+      "scopeDescription": "Mayor and councillors; separate from employees",
+      "threshold": null,
+      "thresholdRule": null,
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "amountPrecision": "dollars",
+      "nameDisclosure": "published-full-name",
+      "positionDisclosure": "published",
+      "rowCount": 7,
+      "totalRemuneration": 156543.0,
+      "totalExpenses": 15247.0,
+      "pages": [
+        30
+      ],
+      "status": "verified",
+      "verifiedOn": "2026-10-31",
+      "validation": {
+        "printedNamedControlCents": [
+          15654300,
+          1524700
+        ],
+        "controlComponentIndexes": [
+          0,
+          1
+        ],
+        "componentResidualsCents": [
+          0,
+          0
+        ],
+        "allComponentSubtotalsExact": true,
+        "allRowFieldsAndMultiplicitiesAgree": true,
+        "calendarPeriodEvidencePhysicalPages": [
+          31
+        ],
+        "calendarPeriodEvidencePattern": "2025 Payroll",
+        "unclippedSourceTextFields": [],
+        "reconciliationNote": "Exact named controls.",
+        "rowsByPhysicalPage": {
+          "30": 7
+        },
+        "rowsIndependentlyChecked": 7,
+        "sourceFingerprintVerified": true,
+        "unparsedRows": 0,
+        "independentPdfReaders": "Poppler layout and separately read PyMuPDF positioned words",
+        "missingExpenseRows": 0,
+        "explicitZeroExpenseRows": 3,
+        "negativeExpenseRows": 0,
+        "belowOrEqualThresholdRemunerationRows": 0,
+        "visuallyReviewedPhysicalPages": [
+          30,
+          33
+        ],
+        "visualReviewDate": "2026-10-31"
+      },
+      "componentAuditFile": "audit/castlegar-2025-elected-officials.json.gzip",
+      "componentAuditSha256": "34cd20e618f2e286938be4b146ed239352403eee480675c158be3260fa37ccfb",
+      "notes": [
+        "Uses published 2025 Payroll. The source defines remuneration to include base salary/wages, overtime, statutory holiday pay, payouts of vacation or sick time, retroactive pay adjustments, allowances, and taxable benefits. Council is a separate schedule.",
+        "The employee threshold is inclusive: the source prints Employees earning $75,000 or more. Published numerical zero council expenses remain zero.",
+        "Uses the actual January–December calendar year. Names and initials remain as published; these are disclosures, not verified unique identities.",
+        "Expenses are separate. Blank/dash cells remain missing; disclosed numeric zero remains zero."
+      ]
+    },
+    {
+      "id": "cranbrook-sofi-2025-employees",
+      "employerSlug": "city-of-cranbrook",
+      "employerName": "City of Cranbrook",
+      "sector": "Municipalities",
+      "year": "2025",
+      "slug": "2025",
+      "periodType": "calendar",
+      "periodStart": "2025-01-01",
+      "periodEnd": "2025-12-31",
+      "title": "City of Cranbrook 2025 SOFI: employees",
+      "sourceUrl": "https://docs.cranbrook.ca/downloads/finance/SOFI-2025.pdf",
+      "sourceIndexUrl": "https://cranbrook.ca/our-city/city-departments/finance/statement-of-financial-information-sofi",
+      "sha256": "c873a97c91c2a396848cb7c01c2f736c84d704b022777a9a128469b7bf85a9f5",
+      "file": "cranbrook-2025-employees.json.gzip",
+      "dataSha256": "4ee486e98cdb10819a6048257cc39e86955eab8206c95604e874ddc4b17b6193",
+      "normalizedSha256": "9fd0fff3de6509ab5c4cb89e6183e0978491e47106482f0867ba5db8a469bdcd",
+      "category": "employee-remuneration",
+      "scope": "named-employees-over-threshold",
+      "scopeDescription": "Published named employee schedule; council reported separately",
+      "threshold": 75000,
+      "thresholdRule": "over",
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "amountPrecision": "dollars",
+      "nameDisclosure": "published-full-name",
+      "positionDisclosure": "published",
+      "rowCount": 123,
+      "totalRemuneration": 13831191.0,
+      "totalExpenses": 211832.0,
+      "pages": [
+        5,
+        6,
+        7
+      ],
+      "status": "verified",
+      "verifiedOn": "2026-10-31",
+      "validation": {
+        "printedNamedControlCents": [
+          1383119100,
+          21183200
+        ],
+        "controlComponentIndexes": [
+          0,
+          1
+        ],
+        "componentResidualsCents": [
+          0,
+          0
+        ],
+        "allComponentSubtotalsExact": true,
+        "allRowFieldsAndMultiplicitiesAgree": true,
+        "calendarPeriodEvidencePhysicalPages": [
+          4,
+          5,
+          6,
+          7
+        ],
+        "calendarPeriodEvidencePattern": "December\\s+31,?\\s+2025",
+        "unclippedSourceTextFields": [],
+        "reconciliationNote": "Exact named controls.",
+        "rowsByPhysicalPage": {
+          "5": 56,
+          "6": 56,
+          "7": 11
+        },
+        "rowsIndependentlyChecked": 123,
+        "sourceFingerprintVerified": true,
+        "unparsedRows": 0,
+        "independentPdfReaders": "Poppler layout and separately read PyMuPDF positioned words",
+        "missingExpenseRows": 14,
+        "explicitZeroExpenseRows": 0,
+        "negativeExpenseRows": 0,
+        "belowOrEqualThresholdRemunerationRows": 0,
+        "visuallyReviewedPhysicalPages": [
+          7
+        ],
+        "visualReviewDate": "2026-10-31"
+      },
+      "componentAuditFile": "audit/cranbrook-2025-employees.json.gzip",
+      "componentAuditSha256": "7f176b3dfa89fb5e547aef782a9db6ca482b7b1391139ac9e595bdd8f4ad12d6",
+      "notes": [
+        "Uses published Total Remuneration including taxable benefits. Employer-share benefits appear separately below the table and are excluded from individual remuneration.",
+        "Uses the actual January–December calendar year. Names and initials remain as published; these are disclosures, not verified unique identities.",
+        "Expenses are separate. Blank/dash cells remain missing; disclosed numeric zero remains zero."
+      ]
+    },
+    {
+      "id": "cranbrook-sofi-2025-elected-officials",
+      "employerSlug": "city-of-cranbrook",
+      "employerName": "City of Cranbrook",
+      "sector": "Municipalities",
+      "year": "2025",
+      "slug": "2025",
+      "periodType": "calendar",
+      "periodStart": "2025-01-01",
+      "periodEnd": "2025-12-31",
+      "title": "City of Cranbrook 2025 SOFI: elected-officials",
+      "sourceUrl": "https://docs.cranbrook.ca/downloads/finance/SOFI-2025.pdf",
+      "sourceIndexUrl": "https://cranbrook.ca/our-city/city-departments/finance/statement-of-financial-information-sofi",
+      "sha256": "c873a97c91c2a396848cb7c01c2f736c84d704b022777a9a128469b7bf85a9f5",
+      "file": "cranbrook-2025-elected-officials.json.gzip",
+      "dataSha256": "1a7a3a245e1772747585d12235d5a13732983a3ed18682612d83311702d6b505",
+      "normalizedSha256": "d626368f8d5d97cfaf5077b39f414993b43e63370a2ca8b65de2968aecd8bd03",
+      "category": "elected-officials",
+      "scope": "elected-officials",
+      "scopeDescription": "Mayor and councillors; separate from employees",
+      "threshold": null,
+      "thresholdRule": null,
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "amountPrecision": "dollars",
+      "nameDisclosure": "published-full-name",
+      "positionDisclosure": "published",
+      "rowCount": 7,
+      "totalRemuneration": 258887.0,
+      "totalExpenses": 57454.0,
+      "pages": [
+        4
+      ],
+      "status": "verified",
+      "verifiedOn": "2026-10-31",
+      "validation": {
+        "printedNamedControlCents": [
+          25888800,
+          5745500
+        ],
+        "controlComponentIndexes": [
+          0,
+          1
+        ],
+        "componentResidualsCents": [
+          -100,
+          -100
+        ],
+        "allComponentSubtotalsExact": false,
+        "allRowFieldsAndMultiplicitiesAgree": true,
+        "calendarPeriodEvidencePhysicalPages": [
+          4,
+          5,
+          6,
+          7
+        ],
+        "calendarPeriodEvidencePattern": "December\\s+31,?\\s+2025",
+        "unclippedSourceTextFields": [],
+        "reconciliationNote": "Small whole-dollar source residuals are preserved; no individual value is altered.",
+        "rowsByPhysicalPage": {
+          "4": 7
+        },
+        "rowsIndependentlyChecked": 7,
+        "sourceFingerprintVerified": true,
+        "unparsedRows": 0,
+        "independentPdfReaders": "Poppler layout and separately read PyMuPDF positioned words",
+        "missingExpenseRows": 0,
+        "explicitZeroExpenseRows": 0,
+        "negativeExpenseRows": 0,
+        "belowOrEqualThresholdRemunerationRows": 0,
+        "visuallyReviewedPhysicalPages": [
+          7
+        ],
+        "visualReviewDate": "2026-10-31"
+      },
+      "componentAuditFile": "audit/cranbrook-2025-elected-officials.json.gzip",
+      "componentAuditSha256": "af0d93e2138edeb26cac431f8d0a7ae79e499a94f2264fb5f71bd930b9d9a02a",
+      "notes": [
+        "Uses published Total Remuneration including taxable benefits. Employer-share benefits appear separately below the table and are excluded from individual remuneration.",
+        "Uses the actual January–December calendar year. Names and initials remain as published; these are disclosures, not verified unique identities.",
+        "Expenses are separate. Blank/dash cells remain missing; disclosed numeric zero remains zero."
+      ]
+    },
+    {
+      "id": "kelowna-sofi-2019-employees",
+      "employerSlug": "city-of-kelowna",
+      "employerName": "City of Kelowna",
+      "sector": "Municipalities",
+      "year": "2019",
+      "slug": "2019",
+      "periodType": "calendar",
+      "periodStart": "2019-01-01",
+      "periodEnd": "2019-12-31",
+      "title": "City of Kelowna 2019 SOFI: employees",
+      "sourceUrl": "https://www.kelowna.ca/sites/files/1/docs/related/2019_sofi_final_0.pdf",
+      "sourceIndexUrl": "https://www.kelowna.ca/node/268267",
+      "sha256": "d9e8f68a3c16123971fd4e690d154a9d5998151ce07f607402c9d9b41abf0073",
+      "file": "kelowna-2019-employees.json.gzip",
+      "dataSha256": "b3a06336f76c68e2cab3496aa1f03634ac9ef540ef9ef558fd5745062cfd4040",
+      "normalizedSha256": "017d9c50f6e049005080556f2afbaaf4715189eabec3e5f09a1c9e745a91b799",
+      "category": "employee-remuneration",
+      "scope": "named-employees-over-threshold",
+      "scopeDescription": "Published named employee schedule; council reported separately",
+      "threshold": 75000,
+      "thresholdRule": "over",
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "amountPrecision": "dollars",
+      "nameDisclosure": "published-surname-and-initial",
+      "positionDisclosure": "published",
+      "rowCount": 449,
+      "totalRemuneration": 44109817.0,
+      "totalExpenses": 583109.0,
+      "pages": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13
+      ],
+      "status": "verified",
+      "verifiedOn": "2026-10-31",
+      "validation": {
+        "printedNamedControlCents": [
+          4410981700,
+          58310900
+        ],
+        "controlComponentIndexes": [
+          0,
+          1
+        ],
+        "componentResidualsCents": [
+          0,
+          0
+        ],
+        "allComponentSubtotalsExact": true,
+        "allRowFieldsAndMultiplicitiesAgree": true,
+        "calendarPeriodEvidencePhysicalPages": [
+          3
+        ],
+        "calendarPeriodEvidencePattern": "December\\s+31,?\\s+2019",
+        "unclippedSourceTextFields": [],
+        "reconciliationNote": "Exact named controls.",
+        "rowsByPhysicalPage": {
+          "3": 40,
+          "4": 46,
+          "5": 42,
+          "6": 45,
+          "7": 46,
+          "8": 44,
+          "9": 46,
+          "10": 46,
+          "11": 46,
+          "12": 46,
+          "13": 2
+        },
+        "rowsIndependentlyChecked": 449,
+        "sourceFingerprintVerified": true,
+        "unparsedRows": 0,
+        "independentPdfReaders": "Poppler layout and separately read PyMuPDF positioned words",
+        "missingExpenseRows": 121,
+        "explicitZeroExpenseRows": 0,
+        "negativeExpenseRows": 0,
+        "belowOrEqualThresholdRemunerationRows": 0,
+        "visuallyReviewedPhysicalPages": [
+          4
+        ],
+        "visualReviewDate": "2026-10-31"
+      },
+      "componentAuditFile": "audit/kelowna-2019-employees.json.gzip",
+      "componentAuditSha256": "521a4845c20202a4d5dca2452929e9b200614c00ae43e9cfde76f93f6b7c6e57",
+      "notes": [
+        "Uses the published Remuneration column through 2023; in 2024–2025 uses Total Remuneration, including separately disclosed emergency operations centre deployment remuneration once. Separate normal-operations and EOC columns remain in the audit.",
+        "Named employee controls are derived from the published all-employee control less the consolidated employees-below-threshold amount. Titles are joined only where independent PDF coordinates confirm the wrap.",
+        "Uses the actual January–December calendar year. Names and initials remain as published; these are disclosures, not verified unique identities.",
+        "Expenses are separate. Blank/dash cells remain missing; disclosed numeric zero remains zero."
+      ]
+    },
+    {
+      "id": "kelowna-sofi-2021-employees",
+      "employerSlug": "city-of-kelowna",
+      "employerName": "City of Kelowna",
+      "sector": "Municipalities",
+      "year": "2021",
+      "slug": "2021",
+      "periodType": "calendar",
+      "periodStart": "2021-01-01",
+      "periodEnd": "2021-12-31",
+      "title": "City of Kelowna 2021 SOFI: employees",
+      "sourceUrl": "https://www.kelowna.ca/sites/files/1/docs/related/2021_sofi_final.pdf",
+      "sourceIndexUrl": "https://www.kelowna.ca/node/268267",
+      "sha256": "90ecde13949c714d71e6a5721b66cd92c316d4f6a9461fb60592d633366214f1",
+      "file": "kelowna-2021-employees.json.gzip",
+      "dataSha256": "4e6a757f3cc225617b5483dbb2e08cb4ea51d5a1efb9de964c7ad40e6964b38a",
+      "normalizedSha256": "9503de497b602685b63e9449403026dcbb2053ac7fc7f017dcda7e82565aded7",
+      "category": "employee-remuneration",
+      "scope": "named-employees-over-threshold",
+      "scopeDescription": "Published named employee schedule; council reported separately",
+      "threshold": 75000,
+      "thresholdRule": "over",
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "amountPrecision": "dollars",
+      "nameDisclosure": "published-surname-and-initial",
+      "positionDisclosure": "published",
+      "rowCount": 525,
+      "totalRemuneration": 52477418.0,
+      "totalExpenses": 320169.0,
+      "pages": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14
+      ],
+      "status": "verified",
+      "verifiedOn": "2026-10-31",
+      "validation": {
+        "printedNamedControlCents": [
+          5247740100,
+          32015800
+        ],
+        "controlComponentIndexes": [
+          0,
+          1
+        ],
+        "componentResidualsCents": [
+          1700,
+          1100
+        ],
+        "allComponentSubtotalsExact": false,
+        "allRowFieldsAndMultiplicitiesAgree": true,
+        "calendarPeriodEvidencePhysicalPages": [
+          3
+        ],
+        "calendarPeriodEvidencePattern": "December\\s+31,?\\s+2021",
+        "unclippedSourceTextFields": [],
+        "reconciliationNote": "Small whole-dollar source residuals are preserved; no individual value is altered.",
+        "rowsByPhysicalPage": {
+          "3": 42,
+          "4": 48,
+          "5": 48,
+          "6": 46,
+          "7": 48,
+          "8": 48,
+          "9": 46,
+          "10": 48,
+          "11": 48,
+          "12": 48,
+          "13": 48,
+          "14": 7
+        },
+        "rowsIndependentlyChecked": 525,
+        "sourceFingerprintVerified": true,
+        "unparsedRows": 0,
+        "independentPdfReaders": "Poppler layout and separately read PyMuPDF positioned words",
+        "missingExpenseRows": 186,
+        "explicitZeroExpenseRows": 0,
+        "negativeExpenseRows": 0,
+        "belowOrEqualThresholdRemunerationRows": 0,
+        "visuallyReviewedPhysicalPages": [],
+        "visualReviewDate": "2026-10-31"
+      },
+      "componentAuditFile": "audit/kelowna-2021-employees.json.gzip",
+      "componentAuditSha256": "8da825163844925e235e758137f2a1390fc01337f2db2e31c4fa8ce9a0ccac99",
+      "notes": [
+        "Uses the published Remuneration column through 2023; in 2024–2025 uses Total Remuneration, including separately disclosed emergency operations centre deployment remuneration once. Separate normal-operations and EOC columns remain in the audit.",
+        "Named employee controls are derived from the published all-employee control less the consolidated employees-below-threshold amount. Titles are joined only where independent PDF coordinates confirm the wrap.",
+        "Uses the actual January–December calendar year. Names and initials remain as published; these are disclosures, not verified unique identities.",
+        "Expenses are separate. Blank/dash cells remain missing; disclosed numeric zero remains zero."
+      ]
+    },
+    {
+      "id": "kelowna-sofi-2022-employees",
+      "employerSlug": "city-of-kelowna",
+      "employerName": "City of Kelowna",
+      "sector": "Municipalities",
+      "year": "2022",
+      "slug": "2022",
+      "periodType": "calendar",
+      "periodStart": "2022-01-01",
+      "periodEnd": "2022-12-31",
+      "title": "City of Kelowna 2022 SOFI: employees",
+      "sourceUrl": "https://www.kelowna.ca/sites/files/1/docs/related/2022_sofi_final.pdf",
+      "sourceIndexUrl": "https://www.kelowna.ca/node/268267",
+      "sha256": "f287fe5a987281728eda5b483d3e37952ed1c0c689fa9976169064815cdcbd13",
+      "file": "kelowna-2022-employees.json.gzip",
+      "dataSha256": "61a17b5dd7b1c0afc86a3b3cdfb69099d963d81a7bdd7d1ee7c8ad1f7008b833",
+      "normalizedSha256": "ffd4f5d3bd3881771bc004f037993685828a66daed60b89071e522c121a17be6",
+      "category": "employee-remuneration",
+      "scope": "named-employees-over-threshold",
+      "scopeDescription": "Published named employee schedule; council reported separately",
+      "threshold": 75000,
+      "thresholdRule": "over",
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "amountPrecision": "dollars",
+      "nameDisclosure": "published-surname-and-initial",
+      "positionDisclosure": "published",
+      "rowCount": 570,
+      "totalRemuneration": 59427550.0,
+      "totalExpenses": 733491.0,
+      "pages": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14
+      ],
+      "status": "verified",
+      "verifiedOn": "2026-10-31",
+      "validation": {
+        "printedNamedControlCents": [
+          5942755200,
+          73348700
+        ],
+        "controlComponentIndexes": [
+          0,
+          1
+        ],
+        "componentResidualsCents": [
+          -200,
+          400
+        ],
+        "allComponentSubtotalsExact": false,
+        "allRowFieldsAndMultiplicitiesAgree": true,
+        "calendarPeriodEvidencePhysicalPages": [
+          3
+        ],
+        "calendarPeriodEvidencePattern": "December\\s+31,?\\s+2022",
+        "unclippedSourceTextFields": [],
+        "reconciliationNote": "Small whole-dollar source residuals are preserved; no individual value is altered.",
+        "rowsByPhysicalPage": {
+          "3": 46,
+          "4": 52,
+          "5": 52,
+          "6": 50,
+          "7": 52,
+          "8": 51,
+          "9": 51,
+          "10": 52,
+          "11": 52,
+          "12": 52,
+          "13": 52,
+          "14": 8
+        },
+        "rowsIndependentlyChecked": 570,
+        "sourceFingerprintVerified": true,
+        "unparsedRows": 0,
+        "independentPdfReaders": "Poppler layout and separately read PyMuPDF positioned words",
+        "missingExpenseRows": 175,
+        "explicitZeroExpenseRows": 0,
+        "negativeExpenseRows": 1,
+        "belowOrEqualThresholdRemunerationRows": 0,
+        "visuallyReviewedPhysicalPages": [],
+        "visualReviewDate": "2026-10-31"
+      },
+      "componentAuditFile": "audit/kelowna-2022-employees.json.gzip",
+      "componentAuditSha256": "c54387ac748202fd0de091d8e90a06c9c8a30416ea5b1337c825612a1ca1b09d",
+      "notes": [
+        "Uses the published Remuneration column through 2023; in 2024–2025 uses Total Remuneration, including separately disclosed emergency operations centre deployment remuneration once. Separate normal-operations and EOC columns remain in the audit.",
+        "Named employee controls are derived from the published all-employee control less the consolidated employees-below-threshold amount. Titles are joined only where independent PDF coordinates confirm the wrap.",
+        "Uses the actual January–December calendar year. Names and initials remain as published; these are disclosures, not verified unique identities.",
+        "Expenses are separate. Blank/dash cells remain missing; disclosed numeric zero remains zero."
+      ]
+    },
+    {
+      "id": "kelowna-sofi-2023-employees",
+      "employerSlug": "city-of-kelowna",
+      "employerName": "City of Kelowna",
+      "sector": "Municipalities",
+      "year": "2023",
+      "slug": "2023",
+      "periodType": "calendar",
+      "periodStart": "2023-01-01",
+      "periodEnd": "2023-12-31",
+      "title": "City of Kelowna 2023 SOFI: employees",
+      "sourceUrl": "https://www.kelowna.ca/sites/files/1/2023_sofi_final.pdf",
+      "sourceIndexUrl": "https://www.kelowna.ca/node/268267",
+      "sha256": "6df4b128245a968f7c819783950a59dd5cc91055fc5fae0949192861043f7825",
+      "file": "kelowna-2023-employees.json.gzip",
+      "dataSha256": "9cb0125b5a69cb85ab9b3beade07e51292e1d21d7365469490eb3d7af8670264",
+      "normalizedSha256": "5aaf0d0ec76509015c0a674df6ad2522b68f98c078dea6698c6bdf971c5d1969",
+      "category": "employee-remuneration",
+      "scope": "named-employees-over-threshold",
+      "scopeDescription": "Published named employee schedule; council reported separately",
+      "threshold": 75000,
+      "thresholdRule": "over",
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "amountPrecision": "dollars",
+      "nameDisclosure": "published-surname-and-initial",
+      "positionDisclosure": "published",
+      "rowCount": 650,
+      "totalRemuneration": 67844270.0,
+      "totalExpenses": 1012910.0,
+      "pages": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16
+      ],
+      "status": "verified",
+      "verifiedOn": "2026-10-31",
+      "validation": {
+        "printedNamedControlCents": [
+          6784426300,
+          101290400
+        ],
+        "controlComponentIndexes": [
+          0,
+          1
+        ],
+        "componentResidualsCents": [
+          700,
+          600
+        ],
+        "allComponentSubtotalsExact": false,
+        "allRowFieldsAndMultiplicitiesAgree": true,
+        "calendarPeriodEvidencePhysicalPages": [
+          3
+        ],
+        "calendarPeriodEvidencePattern": "December\\s+31,?\\s+2023",
+        "unclippedSourceTextFields": [
+          {
+            "physicalPdfPage": 5,
+            "name": "Molina, T",
+            "position": "Senior Manager Commercial and Business Development",
+            "reason": "Independent character coordinates recover source text split across PDF font spans."
+          },
+          {
+            "physicalPdfPage": 6,
+            "name": "Smith, R",
+            "position": "Divisional Director, Planning, Climate Sustainability & Development Services",
+            "reason": "Complete source text span is clipped in the rendered table; original text is preserved."
+          },
+          {
+            "physicalPdfPage": 6,
+            "name": "Van der Gulik, A",
+            "position": "Corporate and Client Services Support Supervisor",
+            "reason": "Independent character coordinates recover source text split across PDF font spans."
+          },
+          {
+            "physicalPdfPage": 13,
+            "name": "Misiewicz Buzahora, J",
+            "position": "Lic/Bylaw Enforcement Officer",
+            "reason": "Overlapping surname and initial are independently present in separate original PDF text spans."
+          }
+        ],
+        "reconciliationNote": "Small whole-dollar source residuals are preserved; no individual value is altered.",
+        "rowsByPhysicalPage": {
+          "3": 45,
+          "4": 51,
+          "5": 51,
+          "6": 49,
+          "7": 51,
+          "8": 51,
+          "9": 49,
+          "10": 51,
+          "11": 51,
+          "12": 51,
+          "13": 51,
+          "14": 51,
+          "15": 39,
+          "16": 9
+        },
+        "rowsIndependentlyChecked": 650,
+        "sourceFingerprintVerified": true,
+        "unparsedRows": 0,
+        "independentPdfReaders": "Poppler layout and separately read PyMuPDF positioned words",
+        "missingExpenseRows": 200,
+        "explicitZeroExpenseRows": 0,
+        "negativeExpenseRows": 0,
+        "belowOrEqualThresholdRemunerationRows": 0,
+        "visuallyReviewedPhysicalPages": [
+          5,
+          6,
+          13
+        ],
+        "visualReviewDate": "2026-10-31"
+      },
+      "componentAuditFile": "audit/kelowna-2023-employees.json.gzip",
+      "componentAuditSha256": "5c5bc18278aca5801ecb1fba24e0b3584885225a60cbb568cdec6838543a37b8",
+      "notes": [
+        "Uses the published Remuneration column through 2023; in 2024–2025 uses Total Remuneration, including separately disclosed emergency operations centre deployment remuneration once. Separate normal-operations and EOC columns remain in the audit.",
+        "Named employee controls are derived from the published all-employee control less the consolidated employees-below-threshold amount. Titles are joined only where independent PDF coordinates confirm the wrap.",
+        "The original 2023 PDF overlaps one long surname with the first-initial column and clips one long title. Exact original PDF text spans independently confirm both surname and initial and the complete title; these are preserved without guessing. Font-split characters are independently checked by source coordinates.",
+        "Uses the actual January–December calendar year. Names and initials remain as published; these are disclosures, not verified unique identities.",
+        "Expenses are separate. Blank/dash cells remain missing; disclosed numeric zero remains zero."
+      ]
+    },
+    {
+      "id": "kelowna-sofi-2024-employees",
+      "employerSlug": "city-of-kelowna",
+      "employerName": "City of Kelowna",
+      "sector": "Municipalities",
+      "year": "2024",
+      "slug": "2024",
+      "periodType": "calendar",
+      "periodStart": "2024-01-01",
+      "periodEnd": "2024-12-31",
+      "title": "City of Kelowna 2024 SOFI: employees",
+      "sourceUrl": "https://www.kelowna.ca/sites/files/1/docs/city-hall/AnnualReport/sofi_2024.pdf",
+      "sourceIndexUrl": "https://www.kelowna.ca/node/268267",
+      "sha256": "7fb936207e169fad9d36da164eb7c543a734949ae90d03f8d71846d0c7564b86",
+      "file": "kelowna-2024-employees.json.gzip",
+      "dataSha256": "fbc70de332fa3bc42c6e0029e4869c62d21f34cca812e83ba89a4e31eace025f",
+      "normalizedSha256": "254058d12f7bc720292743b78cb04b0bcb5d53751ae6d115de047f96ca2fe239",
+      "category": "employee-remuneration",
+      "scope": "named-employees-over-threshold",
+      "scopeDescription": "Published named employee schedule; council reported separately",
+      "threshold": 75000,
+      "thresholdRule": "over",
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "amountPrecision": "dollars",
+      "nameDisclosure": "published-surname-and-initial",
+      "positionDisclosure": "published",
+      "rowCount": 755,
+      "totalRemuneration": 83473641.0,
+      "totalExpenses": 1269224.0,
+      "pages": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "status": "verified",
+      "verifiedOn": "2026-10-31",
+      "validation": {
+        "printedNamedControlCents": [
+          8320693500,
+          26670400,
+          8347363900,
+          126921700
+        ],
+        "controlComponentIndexes": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "componentResidualsCents": [
+          400,
+          200,
+          200,
+          700
+        ],
+        "allComponentSubtotalsExact": false,
+        "allRowFieldsAndMultiplicitiesAgree": true,
+        "calendarPeriodEvidencePhysicalPages": [
+          3
+        ],
+        "calendarPeriodEvidencePattern": "December\\s+31,?\\s+2024",
+        "unclippedSourceTextFields": [],
+        "reconciliationNote": "Small whole-dollar source residuals are preserved; no individual value is altered.",
+        "rowsByPhysicalPage": {
+          "3": 53,
+          "4": 59,
+          "5": 58,
+          "6": 57,
+          "7": 60,
+          "8": 60,
+          "9": 58,
+          "10": 60,
+          "11": 60,
+          "12": 60,
+          "13": 60,
+          "14": 60,
+          "15": 50
+        },
+        "rowsIndependentlyChecked": 755,
+        "sourceFingerprintVerified": true,
+        "unparsedRows": 0,
+        "independentPdfReaders": "Poppler layout and separately read PyMuPDF positioned words",
+        "missingExpenseRows": 210,
+        "explicitZeroExpenseRows": 0,
+        "negativeExpenseRows": 2,
+        "belowOrEqualThresholdRemunerationRows": 0,
+        "visuallyReviewedPhysicalPages": [],
+        "visualReviewDate": "2026-10-31"
+      },
+      "componentAuditFile": "audit/kelowna-2024-employees.json.gzip",
+      "componentAuditSha256": "0af7ecb1473f6164919a2d91746dd43567bf74f5015b7b932aac69d78b943a15",
+      "notes": [
+        "Uses the published Remuneration column through 2023; in 2024–2025 uses Total Remuneration, including separately disclosed emergency operations centre deployment remuneration once. Separate normal-operations and EOC columns remain in the audit.",
+        "Named employee controls are derived from the published all-employee control less the consolidated employees-below-threshold amount. Titles are joined only where independent PDF coordinates confirm the wrap.",
+        "Uses the actual January–December calendar year. Names and initials remain as published; these are disclosures, not verified unique identities.",
+        "Expenses are separate. Blank/dash cells remain missing; disclosed numeric zero remains zero."
+      ]
+    },
+    {
+      "id": "kelowna-sofi-2025-employees",
+      "employerSlug": "city-of-kelowna",
+      "employerName": "City of Kelowna",
+      "sector": "Municipalities",
+      "year": "2025",
+      "slug": "2025",
+      "periodType": "calendar",
+      "periodStart": "2025-01-01",
+      "periodEnd": "2025-12-31",
+      "title": "City of Kelowna 2025 SOFI: employees",
+      "sourceUrl": "https://kelownapublishing.escribemeetings.com/filestream.ashx?DocumentId=56771",
+      "sourceIndexUrl": "https://www.kelowna.ca/node/268267",
+      "sha256": "7a23abfc35d756643a4dd70397ac8657171934ee5fcb84e2ead17c7c5d39d570",
+      "file": "kelowna-2025-employees.json.gzip",
+      "dataSha256": "4d70e7a00df5343c236379d939cb767b2e84d80a2c2df0938e47a2299f74bd2c",
+      "normalizedSha256": "dd8b17c2fa502ebebda96a14c75254915207ccc7a7839c6fb946c6621aad69b4",
+      "category": "employee-remuneration",
+      "scope": "named-employees-over-threshold",
+      "scopeDescription": "Published named employee schedule; council reported separately",
+      "threshold": 75000,
+      "thresholdRule": "over",
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "amountPrecision": "dollars",
+      "nameDisclosure": "published-surname-and-initial",
+      "positionDisclosure": "published",
+      "rowCount": 899,
+      "totalRemuneration": 98247986.0,
+      "totalExpenses": 1399924.0,
+      "pages": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16
+      ],
+      "status": "verified",
+      "verifiedOn": "2026-10-31",
+      "validation": {
+        "printedNamedControlCents": [
+          9805022300,
+          19775400,
+          9824797700,
+          139990900
+        ],
+        "controlComponentIndexes": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "componentResidualsCents": [
+          900,
+          200,
+          900,
+          1500
+        ],
+        "allComponentSubtotalsExact": false,
+        "allRowFieldsAndMultiplicitiesAgree": true,
+        "calendarPeriodEvidencePhysicalPages": [
+          3
+        ],
+        "calendarPeriodEvidencePattern": "December\\s+31,?\\s+2025",
+        "unclippedSourceTextFields": [],
+        "reconciliationNote": "Small whole-dollar source residuals are preserved; no individual value is altered.",
+        "rowsByPhysicalPage": {
+          "3": 60,
+          "4": 66,
+          "5": 66,
+          "6": 64,
+          "7": 67,
+          "8": 67,
+          "9": 65,
+          "10": 67,
+          "11": 67,
+          "12": 67,
+          "13": 67,
+          "14": 67,
+          "15": 67,
+          "16": 42
+        },
+        "rowsIndependentlyChecked": 899,
+        "sourceFingerprintVerified": true,
+        "unparsedRows": 0,
+        "independentPdfReaders": "Poppler layout and separately read PyMuPDF positioned words",
+        "missingExpenseRows": 253,
+        "explicitZeroExpenseRows": 1,
+        "negativeExpenseRows": 0,
+        "belowOrEqualThresholdRemunerationRows": 0,
+        "visuallyReviewedPhysicalPages": [
+          3,
+          15
+        ],
+        "visualReviewDate": "2026-10-31"
+      },
+      "componentAuditFile": "audit/kelowna-2025-employees.json.gzip",
+      "componentAuditSha256": "2e214e2ae2b760fbd43f1fe9cf712dae7e68414078ac813c981ef54536385546",
+      "notes": [
+        "Uses the published Remuneration column through 2023; in 2024–2025 uses Total Remuneration, including separately disclosed emergency operations centre deployment remuneration once. Separate normal-operations and EOC columns remain in the audit.",
+        "Named employee controls are derived from the published all-employee control less the consolidated employees-below-threshold amount. Titles are joined only where independent PDF coordinates confirm the wrap.",
+        "Uses the actual January–December calendar year. Names and initials remain as published; these are disclosures, not verified unique identities.",
+        "Expenses are separate. Blank/dash cells remain missing; disclosed numeric zero remains zero."
+      ]
+    },
+    {
+      "id": "nelson-sofi-2025-employees",
+      "employerSlug": "city-of-nelson",
+      "employerName": "City of Nelson",
+      "sector": "Municipalities",
+      "year": "2025",
+      "slug": "2025",
+      "periodType": "calendar",
+      "periodStart": "2025-01-01",
+      "periodEnd": "2025-12-31",
+      "title": "City of Nelson 2025 SOFI: employees",
+      "sourceUrl": "https://www.nelson.ca/Archive.aspx?ADID=186",
+      "sourceIndexUrl": "https://www.nelson.ca/Archive.aspx?AMID=36",
+      "sha256": "0d7b291d034fecac530e634de90aa956464506269ea81540b9913294a18b187a",
+      "file": "nelson-2025-employees.json.gzip",
+      "dataSha256": "e94d5a3a52c12cdc4192fd52bef1fda586b466d32ef140720c31023822e55c92",
+      "normalizedSha256": "5b77adcc5b4c0ec8de119f1a57ec4b1be1912caa5a609b36dc1bdb8f3e0ca070",
+      "category": "employee-remuneration",
+      "scope": "named-employees-over-threshold",
+      "scopeDescription": "Published named employee schedule; council reported separately",
+      "threshold": 75000,
+      "thresholdRule": "over",
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "amountPrecision": "dollars",
+      "nameDisclosure": "published-surname-and-initial",
+      "positionDisclosure": "not-published",
+      "rowCount": 128,
+      "totalRemuneration": 13700696.0,
+      "totalExpenses": 235674.0,
+      "pages": [
+        39,
+        40,
+        41
+      ],
+      "status": "verified",
+      "verifiedOn": "2026-10-31",
+      "validation": {
+        "printedNamedControlCents": [
+          1370069600,
+          23567400
+        ],
+        "controlComponentIndexes": [
+          0,
+          1
+        ],
+        "componentResidualsCents": [
+          0,
+          0
+        ],
+        "allComponentSubtotalsExact": true,
+        "allRowFieldsAndMultiplicitiesAgree": true,
+        "calendarPeriodEvidencePhysicalPages": [
+          39
+        ],
+        "calendarPeriodEvidencePattern": "December\\s+31,?\\s+2025",
+        "unclippedSourceTextFields": [],
+        "reconciliationNote": "Exact named controls.",
+        "rowsByPhysicalPage": {
+          "39": 35,
+          "40": 53,
+          "41": 40
+        },
+        "rowsIndependentlyChecked": 128,
+        "sourceFingerprintVerified": true,
+        "unparsedRows": 0,
+        "independentPdfReaders": "Poppler layout and separately read PyMuPDF positioned words",
+        "missingExpenseRows": 29,
+        "explicitZeroExpenseRows": 0,
+        "negativeExpenseRows": 0,
+        "belowOrEqualThresholdRemunerationRows": 0,
+        "visuallyReviewedPhysicalPages": [
+          39
+        ],
+        "visualReviewDate": "2026-10-31"
+      },
+      "componentAuditFile": "audit/nelson-2025-employees.json.gzip",
+      "componentAuditSha256": "5e262473f3d2a970049752abd1096f657ce76e9ce485130eaae9a48f74c34d08",
+      "notes": [
+        "Uses the published Remuneration and Expense columns. Employee positions are not disclosed. The employee section begins after the separate elected-official schedule and stops at TOTAL DETAILED EMPLOYEES.",
+        "Uses the actual January–December calendar year. Names and initials remain as published; these are disclosures, not verified unique identities.",
+        "Expenses are separate. Blank/dash cells remain missing; disclosed numeric zero remains zero."
+      ]
+    },
+    {
+      "id": "nelson-sofi-2025-elected-officials",
+      "employerSlug": "city-of-nelson",
+      "employerName": "City of Nelson",
+      "sector": "Municipalities",
+      "year": "2025",
+      "slug": "2025",
+      "periodType": "calendar",
+      "periodStart": "2025-01-01",
+      "periodEnd": "2025-12-31",
+      "title": "City of Nelson 2025 SOFI: elected-officials",
+      "sourceUrl": "https://www.nelson.ca/Archive.aspx?ADID=186",
+      "sourceIndexUrl": "https://www.nelson.ca/Archive.aspx?AMID=36",
+      "sha256": "0d7b291d034fecac530e634de90aa956464506269ea81540b9913294a18b187a",
+      "file": "nelson-2025-elected-officials.json.gzip",
+      "dataSha256": "dc9e5d81a6fa24c5d10919be09b09077c5f01a38284225747ec0bf52045c5a72",
+      "normalizedSha256": "db88ea82f6b1434b305bf9665a506430f52deec118c854298cca3b7e8aff3016",
+      "category": "elected-officials",
+      "scope": "elected-officials",
+      "scopeDescription": "Mayor and councillors; separate from employees",
+      "threshold": null,
+      "thresholdRule": null,
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "amountPrecision": "dollars",
+      "nameDisclosure": "published-surname-and-initial",
+      "positionDisclosure": "published",
+      "rowCount": 7,
+      "totalRemuneration": 248306.0,
+      "totalExpenses": 65081.0,
+      "pages": [
+        39
+      ],
+      "status": "verified",
+      "verifiedOn": "2026-10-31",
+      "validation": {
+        "printedNamedControlCents": [
+          24830600,
+          6508100
+        ],
+        "controlComponentIndexes": [
+          0,
+          1
+        ],
+        "componentResidualsCents": [
+          0,
+          0
+        ],
+        "allComponentSubtotalsExact": true,
+        "allRowFieldsAndMultiplicitiesAgree": true,
+        "calendarPeriodEvidencePhysicalPages": [
+          39
+        ],
+        "calendarPeriodEvidencePattern": "December\\s+31,?\\s+2025",
+        "unclippedSourceTextFields": [],
+        "reconciliationNote": "Exact named controls.",
+        "rowsByPhysicalPage": {
+          "39": 7
+        },
+        "rowsIndependentlyChecked": 7,
+        "sourceFingerprintVerified": true,
+        "unparsedRows": 0,
+        "independentPdfReaders": "Poppler layout and separately read PyMuPDF positioned words",
+        "missingExpenseRows": 0,
+        "explicitZeroExpenseRows": 0,
+        "negativeExpenseRows": 0,
+        "belowOrEqualThresholdRemunerationRows": 0,
+        "visuallyReviewedPhysicalPages": [
+          39
+        ],
+        "visualReviewDate": "2026-10-31"
+      },
+      "componentAuditFile": "audit/nelson-2025-elected-officials.json.gzip",
+      "componentAuditSha256": "e0bdca4c08c10a1945f30efd4de369c531ba442ed9cfcd1f565d0e529bd1c302",
+      "notes": [
+        "Uses the published Remuneration and Expense columns. Employee positions are not disclosed. The employee section begins after the separate elected-official schedule and stops at TOTAL DETAILED EMPLOYEES.",
+        "Uses the actual January–December calendar year. Names and initials remain as published; these are disclosures, not verified unique identities.",
+        "Expenses are separate. Blank/dash cells remain missing; disclosed numeric zero remains zero."
+      ]
+    },
+    {
+      "id": "penticton-sofi-2025-employees",
+      "employerSlug": "city-of-penticton",
+      "employerName": "City of Penticton",
+      "sector": "Municipalities",
+      "year": "2025",
+      "slug": "2025",
+      "periodType": "calendar",
+      "periodStart": "2025-01-01",
+      "periodEnd": "2025-12-31",
+      "title": "City of Penticton 2025 SOFI: employees",
+      "sourceUrl": "https://www.penticton.ca/sites/default/files/docs/city-hall/financial-statements/2025%20Statement%20of%20Financial%20Information%20(SOFI).pdf",
+      "sourceIndexUrl": "https://www.penticton.ca/city-hall/reports-plans/statement-financial-information",
+      "sha256": "25fb0ae7f6c6b5f39c06468018547e8e0d282adc3cf55a2535b4934657a5d957",
+      "file": "penticton-2025-employees.json.gzip",
+      "dataSha256": "3c118477b76d1e3fd166664bee552ae49093dc578ae694095c0e138719350d70",
+      "normalizedSha256": "3ce394a9a4b883bd627bd0db27a624d7362a93d0e4468f7a6a6de517e145368e",
+      "category": "employee-remuneration",
+      "scope": "named-employees-over-threshold",
+      "scopeDescription": "Published named employee schedule; council reported separately",
+      "threshold": 75000,
+      "thresholdRule": "over",
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "amountPrecision": "cents",
+      "nameDisclosure": "published-full-name",
+      "positionDisclosure": "published",
+      "rowCount": 250,
+      "totalRemuneration": 27539267.16,
+      "totalExpenses": 590257.69,
+      "pages": [
+        5,
+        6,
+        7
+      ],
+      "status": "verified",
+      "verifiedOn": "2026-10-31",
+      "validation": {
+        "printedNamedControlCents": [
+          2753926716,
+          59025769,
+          2812952485
+        ],
+        "controlComponentIndexes": [
+          0,
+          1,
+          2
+        ],
+        "componentResidualsCents": [
+          0,
+          0,
+          0
+        ],
+        "allComponentSubtotalsExact": true,
+        "allRowFieldsAndMultiplicitiesAgree": true,
+        "calendarPeriodEvidencePhysicalPages": [
+          4,
+          5,
+          7
+        ],
+        "calendarPeriodEvidencePattern": "December\\s+31,?\\s+2025",
+        "unclippedSourceTextFields": [],
+        "reconciliationNote": "Exact named controls.",
+        "rowsByPhysicalPage": {
+          "5": 80,
+          "6": 88,
+          "7": 82
+        },
+        "rowsIndependentlyChecked": 250,
+        "sourceFingerprintVerified": true,
+        "unparsedRows": 0,
+        "independentPdfReaders": "Poppler layout and separately read PyMuPDF positioned words",
+        "missingExpenseRows": 7,
+        "explicitZeroExpenseRows": 0,
+        "negativeExpenseRows": 1,
+        "belowOrEqualThresholdRemunerationRows": 0,
+        "visuallyReviewedPhysicalPages": [
+          4,
+          7
+        ],
+        "visualReviewDate": "2026-10-31"
+      },
+      "componentAuditFile": "audit/penticton-2025-employees.json.gzip",
+      "componentAuditSha256": "e94e409b0b966a4bd2743d59791754622bcfded000f0bb95397ef9bcc8bc4e6e",
+      "notes": [
+        "Uses the published remuneration column, which includes base pay, acting pay, overtime, standby pay and taxable benefits. The adjacent Total adds expenses and is never used as remuneration.",
+        "Employee positions are those as at 31 December 2025 or the final position held, as stated by the source. Council includes the published negative expense adjustment unchanged.",
+        "Uses the actual January–December calendar year. Names and initials remain as published; these are disclosures, not verified unique identities.",
+        "Expenses are separate. Blank/dash cells remain missing; disclosed numeric zero remains zero."
+      ]
+    },
+    {
+      "id": "penticton-sofi-2025-elected-officials",
+      "employerSlug": "city-of-penticton",
+      "employerName": "City of Penticton",
+      "sector": "Municipalities",
+      "year": "2025",
+      "slug": "2025",
+      "periodType": "calendar",
+      "periodStart": "2025-01-01",
+      "periodEnd": "2025-12-31",
+      "title": "City of Penticton 2025 SOFI: elected-officials",
+      "sourceUrl": "https://www.penticton.ca/sites/default/files/docs/city-hall/financial-statements/2025%20Statement%20of%20Financial%20Information%20(SOFI).pdf",
+      "sourceIndexUrl": "https://www.penticton.ca/city-hall/reports-plans/statement-financial-information",
+      "sha256": "25fb0ae7f6c6b5f39c06468018547e8e0d282adc3cf55a2535b4934657a5d957",
+      "file": "penticton-2025-elected-officials.json.gzip",
+      "dataSha256": "11e365ed91032d1747b089d01963f9681ad2d4a3213a5e8c0bc836ce59ccb662",
+      "normalizedSha256": "15b73c4d5a37dc4c1b314abfd4b08ec054a7717c4469fa6b6d8a9755a42a9fda",
+      "category": "elected-officials",
+      "scope": "elected-officials",
+      "scopeDescription": "Mayor and councillors; separate from employees",
+      "threshold": null,
+      "thresholdRule": null,
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "amountPrecision": "cents",
+      "nameDisclosure": "published-full-name",
+      "positionDisclosure": "published",
+      "rowCount": 8,
+      "totalRemuneration": 241043.71,
+      "totalExpenses": 54785.29,
+      "pages": [
+        4
+      ],
+      "status": "verified",
+      "verifiedOn": "2026-10-31",
+      "validation": {
+        "printedNamedControlCents": [
+          24104371,
+          5478529,
+          29582900
+        ],
+        "controlComponentIndexes": [
+          0,
+          1,
+          2
+        ],
+        "componentResidualsCents": [
+          0,
+          0,
+          0
+        ],
+        "allComponentSubtotalsExact": true,
+        "allRowFieldsAndMultiplicitiesAgree": true,
+        "calendarPeriodEvidencePhysicalPages": [
+          4,
+          5,
+          7
+        ],
+        "calendarPeriodEvidencePattern": "December\\s+31,?\\s+2025",
+        "unclippedSourceTextFields": [],
+        "reconciliationNote": "Exact named controls.",
+        "rowsByPhysicalPage": {
+          "4": 8
+        },
+        "rowsIndependentlyChecked": 8,
+        "sourceFingerprintVerified": true,
+        "unparsedRows": 0,
+        "independentPdfReaders": "Poppler layout and separately read PyMuPDF positioned words",
+        "missingExpenseRows": 0,
+        "explicitZeroExpenseRows": 0,
+        "negativeExpenseRows": 1,
+        "belowOrEqualThresholdRemunerationRows": 0,
+        "visuallyReviewedPhysicalPages": [
+          4,
+          7
+        ],
+        "visualReviewDate": "2026-10-31"
+      },
+      "componentAuditFile": "audit/penticton-2025-elected-officials.json.gzip",
+      "componentAuditSha256": "0f87c8046449e507f89822288dc9f968cc75c146e9caaf572b755da1bf67a34e",
+      "notes": [
+        "Uses the published remuneration column, which includes base pay, acting pay, overtime, standby pay and taxable benefits. The adjacent Total adds expenses and is never used as remuneration.",
+        "Employee positions are those as at 31 December 2025 or the final position held, as stated by the source. Council includes the published negative expense adjustment unchanged.",
+        "Uses the actual January–December calendar year. Names and initials remain as published; these are disclosures, not verified unique identities.",
+        "Expenses are separate. Blank/dash cells remain missing; disclosed numeric zero remains zero."
+      ]
+    },
+    {
+      "id": "prince-rupert-sofi-2025-employees",
+      "employerSlug": "city-of-prince-rupert",
+      "employerName": "City of Prince Rupert",
+      "sector": "Municipalities",
+      "year": "2025",
+      "slug": "2025",
+      "periodType": "calendar",
+      "periodStart": "2025-01-01",
+      "periodEnd": "2025-12-31",
+      "title": "City of Prince Rupert 2025 SOFI: employees",
+      "sourceUrl": "https://www.princerupert.ca/sites/7/files/2026-06/2025%20Statement%20of%20Financial%20Information%20-%20FINAL%20-signatures%20avail.pdf",
+      "sourceIndexUrl": "https://www.princerupert.ca/city-hall/city-financials",
+      "sha256": "8ead65e33556a5e4e7b53faa9fdb276c6bc35fcb2df7204e745e1e87cca0d698",
+      "file": "prince-rupert-2025-employees.json.gzip",
+      "dataSha256": "695bb57207552a6ad9d0991492c18b599adbd1a7d58d4dfa0cf6d4735b0e24be",
+      "normalizedSha256": "e1c840999805c5a0d2f2b328e15f211e1c5ac196ffa4cc883a8122725beb2aa2",
+      "category": "employee-remuneration",
+      "scope": "named-employees-over-threshold",
+      "scopeDescription": "Published named employee schedule; council reported separately",
+      "threshold": 75000,
+      "thresholdRule": "over",
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "amountPrecision": "dollars",
+      "nameDisclosure": "published-full-name",
+      "positionDisclosure": "not-published",
+      "rowCount": 133,
+      "totalRemuneration": 15790664.0,
+      "totalExpenses": 530418.0,
+      "pages": [
+        6,
+        7,
+        8,
+        9
+      ],
+      "status": "verified",
+      "verifiedOn": "2026-10-31",
+      "validation": {
+        "printedNamedControlCents": [
+          1579066300,
+          53041900
+        ],
+        "controlComponentIndexes": [
+          2,
+          3
+        ],
+        "componentResidualsCents": [
+          100,
+          -100
+        ],
+        "allComponentSubtotalsExact": false,
+        "allRowFieldsAndMultiplicitiesAgree": true,
+        "calendarPeriodEvidencePhysicalPages": [
+          6,
+          7,
+          8,
+          9
+        ],
+        "calendarPeriodEvidencePattern": "December\\s+31,?\\s+2025",
+        "unclippedSourceTextFields": [],
+        "reconciliationNote": "Small whole-dollar source residuals are preserved; no individual value is altered.",
+        "rowsByPhysicalPage": {
+          "6": 39,
+          "7": 39,
+          "8": 39,
+          "9": 16
+        },
+        "rowsIndependentlyChecked": 133,
+        "sourceFingerprintVerified": true,
+        "unparsedRows": 0,
+        "independentPdfReaders": "Poppler layout and separately read PyMuPDF positioned words",
+        "missingExpenseRows": 19,
+        "explicitZeroExpenseRows": 0,
+        "negativeExpenseRows": 0,
+        "belowOrEqualThresholdRemunerationRows": 0,
+        "visuallyReviewedPhysicalPages": [
+          9
+        ],
+        "visualReviewDate": "2026-10-31"
+      },
+      "componentAuditFile": "audit/prince-rupert-2025-employees.json.gzip",
+      "componentAuditSha256": "ed0535ecd4b09a1f5f70c20ff92c43cc31cba1ddc13ba1b9637579e63a63afc8",
+      "notes": [
+        "Uses published Total Remuneration: remuneration and taxable benefits plus Other Remuneration. The source defines Other Remuneration as retirement allowances and tax-free payments. Both component columns are preserved in the audit; expenses remain separate. Employee positions are not disclosed.",
+        "Uses the actual January–December calendar year. Names and initials remain as published; these are disclosures, not verified unique identities.",
+        "Expenses are separate. Blank/dash cells remain missing; disclosed numeric zero remains zero."
+      ]
+    },
+    {
+      "id": "quesnel-sofi-2025-employees",
+      "employerSlug": "city-of-quesnel",
+      "employerName": "City of Quesnel",
+      "sector": "Municipalities",
+      "year": "2025",
+      "slug": "2025",
+      "periodType": "calendar",
+      "periodStart": "2025-01-01",
+      "periodEnd": "2025-12-31",
+      "title": "City of Quesnel 2025 SOFI: employees",
+      "sourceUrl": "https://www.quesnel.ca/media/file/2025-statement-financial-information-sofi",
+      "sourceIndexUrl": "https://www.quesnel.ca/city-hall/finance/financial-statements",
+      "sha256": "5f202dbee815eae242c1bf1413b2b25565b33dcd547543d1f905c902a2cf7513",
+      "file": "quesnel-2025-employees.json.gzip",
+      "dataSha256": "ad60c2eb00795f4d21307875b137f8f1396ce2939bd6385d4fabca50df736a5d",
+      "normalizedSha256": "b856d68daf8964639ac544adc52fb636b865191174be0a9e1b724bf74016520c",
+      "category": "employee-remuneration",
+      "scope": "named-employees-over-threshold",
+      "scopeDescription": "Published named employee schedule; council reported separately",
+      "threshold": 75000,
+      "thresholdRule": "over",
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "amountPrecision": "dollars",
+      "nameDisclosure": "published-full-name",
+      "positionDisclosure": "published",
+      "rowCount": 78,
+      "totalRemuneration": 7207642.0,
+      "totalExpenses": 103275.0,
+      "pages": [
+        6,
+        7,
+        8
+      ],
+      "status": "verified",
+      "verifiedOn": "2026-10-31",
+      "validation": {
+        "printedNamedControlCents": [
+          720764100,
+          8777900,
+          729542100,
+          10327400
+        ],
+        "controlComponentIndexes": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "componentResidualsCents": [
+          100,
+          -200,
+          -100,
+          100
+        ],
+        "allComponentSubtotalsExact": false,
+        "allRowFieldsAndMultiplicitiesAgree": true,
+        "calendarPeriodEvidencePhysicalPages": [
+          6,
+          7,
+          8
+        ],
+        "calendarPeriodEvidencePattern": "December\\s+31,?\\s+2025",
+        "unclippedSourceTextFields": [],
+        "reconciliationNote": "Small whole-dollar source residuals are preserved; no individual value is altered.",
+        "rowsByPhysicalPage": {
+          "6": 32,
+          "7": 30,
+          "8": 16
+        },
+        "rowsIndependentlyChecked": 78,
+        "sourceFingerprintVerified": true,
+        "unparsedRows": 0,
+        "independentPdfReaders": "Poppler layout and separately read PyMuPDF positioned words",
+        "missingExpenseRows": 25,
+        "explicitZeroExpenseRows": 0,
+        "negativeExpenseRows": 0,
+        "belowOrEqualThresholdRemunerationRows": 6,
+        "visuallyReviewedPhysicalPages": [
+          8
+        ],
+        "visualReviewDate": "2026-10-31"
+      },
+      "componentAuditFile": "audit/quesnel-2025-employees.json.gzip",
+      "componentAuditSha256": "ad37db66f620a392961676bce7b13d2a7df43faec6a5e36a21f38083ac0fa651",
+      "notes": [
+        "Uses the published Remuneration column. Separately reported Taxable Benefits and Total Income remain in the audit and are not silently substituted for remuneration. The source includes Sub-Regional Recreation employees. Names combine the published surname and first-name columns using a comma without expanding or inferring an identity.",
+        "Uses the actual January–December calendar year. Names and initials remain as published; these are disclosures, not verified unique identities.",
+        "Expenses are separate. Blank/dash cells remain missing; disclosed numeric zero remains zero."
+      ]
+    },
+    {
+      "id": "smithers-sofi-2025-employees",
+      "employerSlug": "town-of-smithers",
+      "employerName": "Town of Smithers",
+      "sector": "Municipalities",
+      "year": "2025",
+      "slug": "2025",
+      "periodType": "calendar",
+      "periodStart": "2025-01-01",
+      "periodEnd": "2025-12-31",
+      "title": "Town of Smithers 2025 SOFI: employees",
+      "sourceUrl": "https://www.smithers.ca/sites/default/files/2026-06/TOS%20-%202025%20STATEMENT%20OF%20FINANCIAL%20INFORMATION.pdf",
+      "sourceIndexUrl": "https://www.smithers.ca/finance-taxes/financial-reporting",
+      "sha256": "2fd0b7429d8e90e67e0dd5ef036a0f1530c7e3f438219ad8f851f6c558eb7002",
+      "file": "smithers-2025-employees.json.gzip",
+      "dataSha256": "2a46daaeb50128c0fd26f4e8d08d9583912fee202580731247aa4108a51a22f3",
+      "normalizedSha256": "ad6efac323d414de8916296a690225ed31012c2f79ad77a8b427a9e76bd69d71",
+      "category": "employee-remuneration",
+      "scope": "named-employees-over-threshold",
+      "scopeDescription": "Published named employee schedule; council reported separately",
+      "threshold": 75000,
+      "thresholdRule": "over",
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "amountPrecision": "dollars",
+      "nameDisclosure": "published-surname-and-initial",
+      "positionDisclosure": "not-published",
+      "rowCount": 43,
+      "totalRemuneration": 4178179.0,
+      "totalExpenses": 144543.0,
+      "pages": [
+        6,
+        7
+      ],
+      "status": "verified",
+      "verifiedOn": "2026-10-31",
+      "validation": {
+        "printedNamedControlCents": [
+          417818100,
+          14454000,
+          432272000
+        ],
+        "controlComponentIndexes": [
+          0,
+          1,
+          2
+        ],
+        "componentResidualsCents": [
+          -200,
+          300,
+          -200
+        ],
+        "allComponentSubtotalsExact": false,
+        "allRowFieldsAndMultiplicitiesAgree": true,
+        "calendarPeriodEvidencePhysicalPages": [
+          6
+        ],
+        "calendarPeriodEvidencePattern": "December\\s+31,?\\s+2025",
+        "unclippedSourceTextFields": [],
+        "reconciliationNote": "Small whole-dollar source residuals are preserved; no individual value is altered.",
+        "rowsByPhysicalPage": {
+          "6": 24,
+          "7": 19
+        },
+        "rowsIndependentlyChecked": 43,
+        "sourceFingerprintVerified": true,
+        "unparsedRows": 0,
+        "independentPdfReaders": "Poppler layout and separately read PyMuPDF positioned words",
+        "missingExpenseRows": 0,
+        "explicitZeroExpenseRows": 1,
+        "negativeExpenseRows": 0,
+        "belowOrEqualThresholdRemunerationRows": 0,
+        "visuallyReviewedPhysicalPages": [
+          7
+        ],
+        "visualReviewDate": "2026-10-31"
+      },
+      "componentAuditFile": "audit/smithers-2025-employees.json.gzip",
+      "componentAuditSha256": "4c068643648d12503cbf13d2d1b0ce9ee2f7132b2dbfda97586dd4ff27932e64",
+      "notes": [
+        "Uses published Remuneration & Taxable Benefits. The adjacent Total adds expenses and is not used as remuneration. Employee positions are not disclosed.",
+        "Uses the actual January–December calendar year. Names and initials remain as published; these are disclosures, not verified unique identities.",
+        "Expenses are separate. Blank/dash cells remain missing; disclosed numeric zero remains zero."
+      ]
+    }
+  ],
+  "unparsedSources": [
+    {
+      "id": "kamloops-sofi-2025-elected-officials-pending",
+      "employerSlug": "city-of-kamloops",
+      "employerName": "City of Kamloops",
+      "year": "2025",
+      "periodType": "calendar",
+      "category": "elected-officials",
+      "sourceUrl": "https://www.kamloops.ca/sites/default/files/Report%20-%202025%20Statement%20of%20Financial%20Information.pdf",
+      "indexUrl": "https://www.kamloops.ca/city-hall/governance-finance/financial-statements",
+      "status": "source-found-awaiting-extraction",
+      "reason": "Employee schedule imported; elected-official schedule has not yet completed extraction and validation.",
+      "nextAction": "Extract the separate council schedule and verify names, values, counts, physical pages, and its published subtotal."
+    },
+    {
+      "id": "kamloops-sofi-2024",
+      "employerSlug": "city-of-kamloops",
+      "employerName": "City of Kamloops",
+      "year": "2024",
+      "sourceUrl": "https://www.kamloops.ca/sites/default/files/2024%20SOFI.pdf",
+      "indexUrl": "https://www.kamloops.ca/city-hall/governance-finance/financial-statements",
+      "status": "held-for-review",
+      "reason": "Downloaded report has wrapped employee titles and additional retroactive-pay columns. A dedicated mapping and independent reconciliation remain unfinished; no rows imported.",
+      "nextAction": "Verify actual reporting period from the report, isolate employee and elected schedules, reconcile rows and subtotals, and retain original compensation components before importing.",
+      "notes": [
+        "Archive label alone does not establish the reporting period."
+      ]
+    },
+    {
+      "id": "kamloops-sofi-2023-elected-officials-pending",
+      "employerSlug": "city-of-kamloops",
+      "employerName": "City of Kamloops",
+      "year": "2023",
+      "periodType": "calendar",
+      "category": "elected-officials",
+      "sourceUrl": "https://www.kamloops.ca/sites/default/files/docs/2023%20SOFI%20Report.pdf",
+      "indexUrl": "https://www.kamloops.ca/city-hall/governance-finance/financial-statements",
+      "status": "source-found-awaiting-extraction",
+      "reason": "Employee schedule imported; elected-official schedule has not yet completed extraction and validation.",
+      "nextAction": "Extract the separate council schedule and verify names, values, counts, physical pages, and its published subtotal."
+    },
+    {
+      "id": "kamloops-sofi-2022-elected-officials-pending",
+      "employerSlug": "city-of-kamloops",
+      "employerName": "City of Kamloops",
+      "year": "2022",
+      "periodType": "calendar",
+      "category": "elected-officials",
+      "sourceUrl": "https://www.kamloops.ca/sites/default/files/2023-07/City%20of%20Kamloops_2022%20SOFI%20Attachment%20A.pdf",
+      "indexUrl": "https://www.kamloops.ca/city-hall/governance-finance/financial-statements",
+      "status": "source-found-awaiting-extraction",
+      "reason": "Employee schedule imported; elected-official schedule has not yet completed extraction and validation.",
+      "nextAction": "Extract the separate council schedule and verify names, values, counts, physical pages, and its published subtotal."
+    },
+    {
+      "id": "kamloops-sofi-2021-elected-officials-pending",
+      "employerSlug": "city-of-kamloops",
+      "employerName": "City of Kamloops",
+      "year": "2021",
+      "periodType": "calendar",
+      "category": "elected-officials",
+      "sourceUrl": "https://www.kamloops.ca/sites/default/files/2022-07/2021%20SOFI%20Attachment%20A-SIGNED.pdf",
+      "indexUrl": "https://www.kamloops.ca/city-hall/governance-finance/financial-statements",
+      "status": "source-found-awaiting-extraction",
+      "reason": "Employee schedule imported; elected-official schedule has not yet completed extraction and validation.",
+      "nextAction": "Extract the separate council schedule and verify names, values, counts, physical pages, and its published subtotal."
+    },
+    {
+      "id": "kamloops-sofi-2020-elected-officials-pending",
+      "employerSlug": "city-of-kamloops",
+      "employerName": "City of Kamloops",
+      "year": "2020",
+      "periodType": "calendar",
+      "category": "elected-officials",
+      "sourceUrl": "https://www.kamloops.ca/sites/default/files/2022-06/SOFI%202020.pdf",
+      "indexUrl": "https://www.kamloops.ca/city-hall/governance-finance/financial-statements",
+      "status": "source-found-awaiting-extraction",
+      "reason": "Employee schedule imported; elected-official schedule has not yet completed extraction and validation.",
+      "nextAction": "Extract the separate council schedule and verify names, values, counts, physical pages, and its published subtotal."
+    },
+    {
+      "id": "kamloops-sofi-2019-elected-officials-pending",
+      "employerSlug": "city-of-kamloops",
+      "employerName": "City of Kamloops",
+      "year": "2019",
+      "periodType": "calendar",
+      "category": "elected-officials",
+      "sourceUrl": "https://www.kamloops.ca/sites/default/files/2022-06/SOFI%202019.pdf",
+      "indexUrl": "https://www.kamloops.ca/city-hall/governance-finance/financial-statements",
+      "status": "source-found-awaiting-extraction",
+      "reason": "Employee schedule imported; elected-official schedule has not yet completed extraction and validation.",
+      "nextAction": "Extract the separate council schedule and verify names, values, counts, physical pages, and its published subtotal."
+    },
+    {
+      "id": "kamloops-sofi-2018-elected-officials-pending",
+      "employerSlug": "city-of-kamloops",
+      "employerName": "City of Kamloops",
+      "year": "2018",
+      "periodType": "calendar",
+      "category": "elected-officials",
+      "sourceUrl": "https://www.kamloops.ca/sites/default/files/2022-06/SOFI%202018.pdf",
+      "indexUrl": "https://www.kamloops.ca/city-hall/governance-finance/financial-statements",
+      "status": "source-found-awaiting-extraction",
+      "reason": "Employee schedule imported; elected-official schedule has not yet completed extraction and validation.",
+      "nextAction": "Extract the separate council schedule and verify names, values, counts, physical pages, and its published subtotal."
+    },
+    {
+      "id": "kamloops-sofi-2017-elected-officials-pending",
+      "employerSlug": "city-of-kamloops",
+      "employerName": "City of Kamloops",
+      "year": "2017",
+      "periodType": "calendar",
+      "category": "elected-officials",
+      "sourceUrl": "https://www.kamloops.ca/sites/default/files/2022-06/SOFI%202017.pdf",
+      "indexUrl": "https://www.kamloops.ca/city-hall/governance-finance/financial-statements",
+      "status": "source-found-awaiting-extraction",
+      "reason": "Employee schedule imported; elected-official schedule has not yet completed extraction and validation.",
+      "nextAction": "Extract the separate council schedule and verify names, values, counts, physical pages, and its published subtotal."
+    },
+    {
+      "id": "kamloops-sofi-2016-elected-officials-pending",
+      "employerSlug": "city-of-kamloops",
+      "employerName": "City of Kamloops",
+      "year": "2016",
+      "periodType": "calendar",
+      "category": "elected-officials",
+      "sourceUrl": "https://www.kamloops.ca/sites/default/files/2022-06/SOFI%202016.pdf",
+      "indexUrl": "https://www.kamloops.ca/city-hall/governance-finance/financial-statements",
+      "status": "source-found-awaiting-extraction",
+      "reason": "Employee schedule imported; elected-official schedule has not yet completed extraction and validation.",
+      "nextAction": "Extract the separate council schedule and verify names, values, counts, physical pages, and its published subtotal."
+    },
+    {
+      "id": "quesnel-sofi-2025-elected-officials-pending",
+      "employerSlug": "city-of-quesnel",
+      "employerName": "City of Quesnel",
+      "year": "2025",
+      "periodType": "calendar",
+      "category": "elected-officials",
+      "sourceUrl": "https://www.quesnel.ca/media/file/2025-statement-financial-information-sofi",
+      "indexUrl": "https://www.quesnel.ca/city-hall/finance/financial-statements",
+      "status": "source-found-awaiting-extraction",
+      "reason": "Employee schedule imported; elected-official schedule has not yet completed extraction and validation.",
+      "nextAction": "Extract the separate council schedule and verify names, values, counts, physical pages, and its published subtotal."
+    },
+    {
+      "id": "quesnel-sofi-2024",
+      "employerSlug": "city-of-quesnel",
+      "employerName": "City of Quesnel",
+      "year": "2024",
+      "sourceUrl": "https://www.quesnel.ca/media/file/2024-sofisignedpdf",
+      "indexUrl": "https://www.quesnel.ca/city-hall/finance/financial-statements",
+      "status": "source-found-awaiting-extraction",
+      "reason": "Original PDF downloaded; named schedules have not completed parsing, independent row comparison, and control reconciliation.",
+      "nextAction": "Verify actual reporting period from the report, isolate employee and elected schedules, reconcile rows and subtotals, and retain original compensation components before importing.",
+      "notes": [
+        "Archive label alone does not establish the reporting period."
+      ]
+    },
+    {
+      "id": "quesnel-sofi-2023",
+      "employerSlug": "city-of-quesnel",
+      "employerName": "City of Quesnel",
+      "year": "2023",
+      "sourceUrl": "https://www.quesnel.ca/city-hall/finance/financial-statements",
+      "indexUrl": "https://www.quesnel.ca/city-hall/finance/financial-statements",
+      "status": "held-for-review",
+      "reason": "The official 2023 label links back to the financial-statements index rather than a report. No 2023 PDF was obtained from this link.",
+      "nextAction": "Verify actual reporting period from the report, isolate employee and elected schedules, reconcile rows and subtotals, and retain original compensation components before importing.",
+      "notes": [
+        "Archive label alone does not establish the reporting period."
+      ]
+    },
+    {
+      "id": "quesnel-sofi-2022",
+      "employerSlug": "city-of-quesnel",
+      "employerName": "City of Quesnel",
+      "year": "2022",
+      "sourceUrl": "https://www.quesnel.ca/media/file/2022-sofi",
+      "indexUrl": "https://www.quesnel.ca/city-hall/finance/financial-statements",
+      "status": "source-found-awaiting-extraction",
+      "reason": "Official report link located; original document and named schedules not yet validated.",
+      "nextAction": "Verify actual reporting period from the report, isolate employee and elected schedules, reconcile rows and subtotals, and retain original compensation components before importing.",
+      "notes": [
+        "Archive label alone does not establish the reporting period."
+      ]
+    },
+    {
+      "id": "quesnel-sofi-2021",
+      "employerSlug": "city-of-quesnel",
+      "employerName": "City of Quesnel",
+      "year": "2021",
+      "sourceUrl": "https://www.quesnel.ca/media/file/2021-sofi",
+      "indexUrl": "https://www.quesnel.ca/city-hall/finance/financial-statements",
+      "status": "source-found-awaiting-extraction",
+      "reason": "Official report link located; original document and named schedules not yet validated.",
+      "nextAction": "Verify actual reporting period from the report, isolate employee and elected schedules, reconcile rows and subtotals, and retain original compensation components before importing.",
+      "notes": [
+        "Archive label alone does not establish the reporting period."
+      ]
+    },
+    {
+      "id": "quesnel-sofi-2020",
+      "employerSlug": "city-of-quesnel",
+      "employerName": "City of Quesnel",
+      "year": "2020",
+      "sourceUrl": "https://www.quesnel.ca/media/file/city-quesnel-2020-sofi",
+      "indexUrl": "https://www.quesnel.ca/city-hall/finance/financial-statements",
+      "status": "source-found-awaiting-extraction",
+      "reason": "Official report link located; original document and named schedules not yet validated.",
+      "nextAction": "Verify actual reporting period from the report, isolate employee and elected schedules, reconcile rows and subtotals, and retain original compensation components before importing.",
+      "notes": [
+        "Archive label alone does not establish the reporting period."
+      ]
+    },
+    {
+      "id": "quesnel-sofi-2019",
+      "employerSlug": "city-of-quesnel",
+      "employerName": "City of Quesnel",
+      "year": "2019",
+      "sourceUrl": "https://www.quesnel.ca/media/file/city-quesnel-2019-sofi",
+      "indexUrl": "https://www.quesnel.ca/city-hall/finance/financial-statements",
+      "status": "source-found-awaiting-extraction",
+      "reason": "Official report link located; original document and named schedules not yet validated.",
+      "nextAction": "Verify actual reporting period from the report, isolate employee and elected schedules, reconcile rows and subtotals, and retain original compensation components before importing.",
+      "notes": [
+        "Archive label alone does not establish the reporting period."
+      ]
+    },
+    {
+      "id": "quesnel-sofi-2018",
+      "employerSlug": "city-of-quesnel",
+      "employerName": "City of Quesnel",
+      "year": "2018",
+      "sourceUrl": "https://www.quesnel.ca/media/file/2018-statement-financial-information-city-quesnel",
+      "indexUrl": "https://www.quesnel.ca/city-hall/finance/financial-statements",
+      "status": "source-found-awaiting-extraction",
+      "reason": "Official report link located; original document and named schedules not yet validated.",
+      "nextAction": "Verify actual reporting period from the report, isolate employee and elected schedules, reconcile rows and subtotals, and retain original compensation components before importing.",
+      "notes": [
+        "Archive label alone does not establish the reporting period."
+      ]
+    },
+    {
+      "id": "kelowna-sofi-2025-elected-officials-pending",
+      "employerSlug": "city-of-kelowna",
+      "employerName": "City of Kelowna",
+      "year": "2025",
+      "periodType": "calendar",
+      "category": "elected-officials",
+      "sourceUrl": "https://kelownapublishing.escribemeetings.com/filestream.ashx?DocumentId=56771",
+      "indexUrl": "https://www.kelowna.ca/node/268267",
+      "status": "source-found-awaiting-extraction",
+      "reason": "Employee schedule imported; elected-official schedule has not yet completed extraction and validation.",
+      "nextAction": "Extract the separate council schedule and verify names, values, counts, physical pages, and its published subtotal."
+    },
+    {
+      "id": "kelowna-sofi-2024-elected-officials-pending",
+      "employerSlug": "city-of-kelowna",
+      "employerName": "City of Kelowna",
+      "year": "2024",
+      "periodType": "calendar",
+      "category": "elected-officials",
+      "sourceUrl": "https://www.kelowna.ca/sites/files/1/docs/city-hall/AnnualReport/sofi_2024.pdf",
+      "indexUrl": "https://www.kelowna.ca/node/268267",
+      "status": "source-found-awaiting-extraction",
+      "reason": "Employee schedule imported; elected-official schedule has not yet completed extraction and validation.",
+      "nextAction": "Extract the separate council schedule and verify names, values, counts, physical pages, and its published subtotal."
+    },
+    {
+      "id": "kelowna-sofi-2023-elected-officials-pending",
+      "employerSlug": "city-of-kelowna",
+      "employerName": "City of Kelowna",
+      "year": "2023",
+      "periodType": "calendar",
+      "category": "elected-officials",
+      "sourceUrl": "https://www.kelowna.ca/sites/files/1/2023_sofi_final.pdf",
+      "indexUrl": "https://www.kelowna.ca/node/268267",
+      "status": "source-found-awaiting-extraction",
+      "reason": "Employee schedule imported; elected-official schedule has not yet completed extraction and validation.",
+      "nextAction": "Extract the separate council schedule and verify names, values, counts, physical pages, and its published subtotal."
+    },
+    {
+      "id": "kelowna-sofi-2022-elected-officials-pending",
+      "employerSlug": "city-of-kelowna",
+      "employerName": "City of Kelowna",
+      "year": "2022",
+      "periodType": "calendar",
+      "category": "elected-officials",
+      "sourceUrl": "https://www.kelowna.ca/sites/files/1/docs/related/2022_sofi_final.pdf",
+      "indexUrl": "https://www.kelowna.ca/node/268267",
+      "status": "source-found-awaiting-extraction",
+      "reason": "Employee schedule imported; elected-official schedule has not yet completed extraction and validation.",
+      "nextAction": "Extract the separate council schedule and verify names, values, counts, physical pages, and its published subtotal."
+    },
+    {
+      "id": "kelowna-sofi-2021-elected-officials-pending",
+      "employerSlug": "city-of-kelowna",
+      "employerName": "City of Kelowna",
+      "year": "2021",
+      "periodType": "calendar",
+      "category": "elected-officials",
+      "sourceUrl": "https://www.kelowna.ca/sites/files/1/docs/related/2021_sofi_final.pdf",
+      "indexUrl": "https://www.kelowna.ca/node/268267",
+      "status": "source-found-awaiting-extraction",
+      "reason": "Employee schedule imported; elected-official schedule has not yet completed extraction and validation.",
+      "nextAction": "Extract the separate council schedule and verify names, values, counts, physical pages, and its published subtotal."
+    },
+    {
+      "id": "kelowna-sofi-2020",
+      "employerSlug": "city-of-kelowna",
+      "employerName": "City of Kelowna",
+      "year": "2020",
+      "sourceUrl": "https://www.kelowna.ca/sites/files/1/docs/related/2020_sofi_final.pdf",
+      "indexUrl": "https://www.kelowna.ca/node/268267",
+      "status": "held-for-review",
+      "reason": "Earlier audit: Downloaded original PDF contains no extractable text. OCR with visual row verification is required before import. Follow-up: OCR discovery is complete on all 28 physical pages, with 28 two-pass candidate pages retained. Source-specific row, period and control acceptance is still unfinished; no OCR candidate rows are imported.",
+      "nextAction": "Review retained OCR and original page images field by field, verify the reporting period and compensation columns, and reconcile the complete named controls; obtain an existing spreadsheet or clearer original if glyphs remain ambiguous.",
+      "notes": [
+        "Archive label alone does not establish the reporting period.",
+        "Original audit blocker: Downloaded original PDF contains no extractable text. OCR with visual row verification is required before import.",
+        "OCR evidence: research/salaries/municipal-ocr/staging/kelowna-sofi-2020.json.gzip"
+      ]
+    },
+    {
+      "id": "kelowna-sofi-2019-elected-officials-pending",
+      "employerSlug": "city-of-kelowna",
+      "employerName": "City of Kelowna",
+      "year": "2019",
+      "periodType": "calendar",
+      "category": "elected-officials",
+      "sourceUrl": "https://www.kelowna.ca/sites/files/1/docs/related/2019_sofi_final_0.pdf",
+      "indexUrl": "https://www.kelowna.ca/node/268267",
+      "status": "source-found-awaiting-extraction",
+      "reason": "Employee schedule imported; elected-official schedule has not yet completed extraction and validation.",
+      "nextAction": "Extract the separate council schedule and verify names, values, counts, physical pages, and its published subtotal."
+    },
+    {
+      "id": "smithers-sofi-2025-elected-officials-pending",
+      "employerSlug": "town-of-smithers",
+      "employerName": "Town of Smithers",
+      "year": "2025",
+      "periodType": "calendar",
+      "category": "elected-officials",
+      "sourceUrl": "https://www.smithers.ca/sites/default/files/2026-06/TOS%20-%202025%20STATEMENT%20OF%20FINANCIAL%20INFORMATION.pdf",
+      "indexUrl": "https://www.smithers.ca/finance-taxes/financial-reporting",
+      "status": "source-found-awaiting-extraction",
+      "reason": "Employee schedule imported; elected-official schedule has not yet completed extraction and validation.",
+      "nextAction": "Extract the separate council schedule and verify names, values, counts, physical pages, and its published subtotal."
+    },
+    {
+      "id": "smithers-sofi-2024",
+      "employerSlug": "town-of-smithers",
+      "employerName": "Town of Smithers",
+      "year": "2024",
+      "sourceUrl": "https://www.smithers.ca/sites/default/files/2025-07/FIN%2025-012%20Attach.%201%202024%20SOFI%20Filing.pdf",
+      "indexUrl": "https://www.smithers.ca/finance-taxes/financial-reporting",
+      "status": "source-found-awaiting-extraction",
+      "reason": "Original PDF downloaded; named schedules have not completed parsing, independent row comparison, and control reconciliation.",
+      "nextAction": "Verify actual reporting period from the report, isolate employee and elected schedules, reconcile rows and subtotals, and retain original compensation components before importing.",
+      "notes": [
+        "Archive label alone does not establish the reporting period."
+      ]
+    },
+    {
+      "id": "smithers-sofi-2023",
+      "employerSlug": "town-of-smithers",
+      "employerName": "Town of Smithers",
+      "year": "2023",
+      "sourceUrl": "https://www.smithers.ca/sites/default/files/2024-06/2023%20Smithers%20Approved%20SOFI%20Report%2C%2005-28-24.pdf",
+      "indexUrl": "https://www.smithers.ca/finance-taxes/financial-reporting",
+      "status": "source-found-awaiting-extraction",
+      "reason": "Original PDF downloaded; named schedules have not completed parsing, independent row comparison, and control reconciliation.",
+      "nextAction": "Verify actual reporting period from the report, isolate employee and elected schedules, reconcile rows and subtotals, and retain original compensation components before importing.",
+      "notes": [
+        "Archive label alone does not establish the reporting period."
+      ]
+    },
+    {
+      "id": "prince-rupert-sofi-2025-elected-officials-pending",
+      "employerSlug": "city-of-prince-rupert",
+      "employerName": "City of Prince Rupert",
+      "year": "2025",
+      "periodType": "calendar",
+      "category": "elected-officials",
+      "sourceUrl": "https://www.princerupert.ca/sites/7/files/2026-06/2025%20Statement%20of%20Financial%20Information%20-%20FINAL%20-signatures%20avail.pdf",
+      "indexUrl": "https://www.princerupert.ca/city-hall/city-financials",
+      "status": "source-found-awaiting-extraction",
+      "reason": "Employee schedule imported; elected-official schedule has not yet completed extraction and validation.",
+      "nextAction": "Extract the separate council schedule and verify names, values, counts, physical pages, and its published subtotal."
+    },
+    {
+      "id": "prince-rupert-sofi-2024",
+      "employerSlug": "city-of-prince-rupert",
+      "employerName": "City of Prince Rupert",
+      "year": "2024",
+      "sourceUrl": "https://www.princerupert.ca/sites/7/files/2025-06/2024%20SOFI.pdf",
+      "indexUrl": "https://www.princerupert.ca/city-hall/city-financials",
+      "status": "source-found-awaiting-extraction",
+      "reason": "Original PDF downloaded; named schedules have not completed parsing, independent row comparison, and control reconciliation.",
+      "nextAction": "Verify actual reporting period from the report, isolate employee and elected schedules, reconcile rows and subtotals, and retain original compensation components before importing.",
+      "notes": [
+        "Archive label alone does not establish the reporting period."
+      ]
+    },
+    {
+      "id": "prince-rupert-sofi-2023",
+      "employerSlug": "city-of-prince-rupert",
+      "employerName": "City of Prince Rupert",
+      "year": "2023",
+      "sourceUrl": "https://www.princerupert.ca/sites/7/files/2024-06/2023%20SOFI%20and%20Financial%20Statements.pdf",
+      "indexUrl": "https://www.princerupert.ca/city-hall/city-financials",
+      "status": "source-found-awaiting-extraction",
+      "reason": "Original PDF downloaded; named schedules have not completed parsing, independent row comparison, and control reconciliation.",
+      "nextAction": "Verify actual reporting period from the report, isolate employee and elected schedules, reconcile rows and subtotals, and retain original compensation components before importing.",
+      "notes": [
+        "Archive label alone does not establish the reporting period."
+      ]
+    },
+    {
+      "id": "prince-rupert-sofi-2022",
+      "employerSlug": "city-of-prince-rupert",
+      "employerName": "City of Prince Rupert",
+      "year": "2022",
+      "sourceUrl": "https://www.princerupert.ca/sites/7/files/2023-07/2022%20SOFI%20-%2015Jun2023.pdf",
+      "indexUrl": "https://www.princerupert.ca/city-hall/city-financials",
+      "status": "source-found-awaiting-extraction",
+      "reason": "Official report link located; original document and named schedules not yet validated.",
+      "nextAction": "Verify actual reporting period from the report, isolate employee and elected schedules, reconcile rows and subtotals, and retain original compensation components before importing.",
+      "notes": [
+        "Archive label alone does not establish the reporting period."
+      ]
+    },
+    {
+      "id": "prince-rupert-sofi-2021",
+      "employerSlug": "city-of-prince-rupert",
+      "employerName": "City of Prince Rupert",
+      "year": "2021",
+      "sourceUrl": "https://www.princerupert.ca/sites/7/files/2023-06/SOFI%20June%2013%202022.pdf",
+      "indexUrl": "https://www.princerupert.ca/city-hall/city-financials",
+      "status": "source-found-awaiting-extraction",
+      "reason": "Official report link located; original document and named schedules not yet validated.",
+      "nextAction": "Verify actual reporting period from the report, isolate employee and elected schedules, reconcile rows and subtotals, and retain original compensation components before importing.",
+      "notes": [
+        "Archive label alone does not establish the reporting period."
+      ]
+    },
+    {
+      "id": "prince-rupert-sofi-2020",
+      "employerSlug": "city-of-prince-rupert",
+      "employerName": "City of Prince Rupert",
+      "year": "2020",
+      "sourceUrl": "https://www.princerupert.ca/sites/7/files/2023-06/2020%20Statement%20of%20Financial%20Information.pdf",
+      "indexUrl": "https://www.princerupert.ca/city-hall/city-financials",
+      "status": "source-found-awaiting-extraction",
+      "reason": "Official report link located; original document and named schedules not yet validated.",
+      "nextAction": "Verify actual reporting period from the report, isolate employee and elected schedules, reconcile rows and subtotals, and retain original compensation components before importing.",
+      "notes": [
+        "Archive label alone does not establish the reporting period."
+      ]
+    },
+    {
+      "id": "prince-rupert-sofi-2019",
+      "employerSlug": "city-of-prince-rupert",
+      "employerName": "City of Prince Rupert",
+      "year": "2019",
+      "sourceUrl": "https://www.princerupert.ca/sites/7/files/2023-06/2019%20SOFI%20Submission%20set.pdf",
+      "indexUrl": "https://www.princerupert.ca/city-hall/city-financials",
+      "status": "source-found-awaiting-extraction",
+      "reason": "Official report link located; original document and named schedules not yet validated.",
+      "nextAction": "Verify actual reporting period from the report, isolate employee and elected schedules, reconcile rows and subtotals, and retain original compensation components before importing.",
+      "notes": [
+        "Archive label alone does not establish the reporting period."
+      ]
+    },
+    {
+      "id": "prince-rupert-sofi-2018",
+      "employerSlug": "city-of-prince-rupert",
+      "employerName": "City of Prince Rupert",
+      "year": "2018",
+      "sourceUrl": "https://www.princerupert.ca/sites/7/files/2023-06/2018%20SOFI.pdf",
+      "indexUrl": "https://www.princerupert.ca/city-hall/city-financials",
+      "status": "source-found-awaiting-extraction",
+      "reason": "Official report link located; original document and named schedules not yet validated.",
+      "nextAction": "Verify actual reporting period from the report, isolate employee and elected schedules, reconcile rows and subtotals, and retain original compensation components before importing.",
+      "notes": [
+        "Archive label alone does not establish the reporting period."
+      ]
+    },
+    {
+      "id": "prince-rupert-sofi-2017",
+      "employerSlug": "city-of-prince-rupert",
+      "employerName": "City of Prince Rupert",
+      "year": "2017",
+      "sourceUrl": "https://www.princerupert.ca/sites/7/files/2023-06/2018-06-11%202017%20SOFI%20Report.pdf",
+      "indexUrl": "https://www.princerupert.ca/city-hall/city-financials",
+      "status": "source-found-awaiting-extraction",
+      "reason": "Official report link located; original document and named schedules not yet validated.",
+      "nextAction": "Verify actual reporting period from the report, isolate employee and elected schedules, reconcile rows and subtotals, and retain original compensation components before importing.",
+      "notes": [
+        "Archive label alone does not establish the reporting period."
+      ]
+    },
+    {
+      "id": "prince-rupert-sofi-2016",
+      "employerSlug": "city-of-prince-rupert",
+      "employerName": "City of Prince Rupert",
+      "year": "2016",
+      "sourceUrl": "https://www.princerupert.ca/sites/7/files/2023-06/2016%20Statement%20of%20Financial%20Information_0.pdf",
+      "indexUrl": "https://www.princerupert.ca/city-hall/city-financials",
+      "status": "source-found-awaiting-extraction",
+      "reason": "Official report link located; original document and named schedules not yet validated.",
+      "nextAction": "Verify actual reporting period from the report, isolate employee and elected schedules, reconcile rows and subtotals, and retain original compensation components before importing.",
+      "notes": [
+        "Archive label alone does not establish the reporting period."
+      ]
+    },
+    {
+      "id": "dawson-creek-sofi-2025",
+      "employerSlug": "city-of-dawson-creek",
+      "employerName": "City of Dawson Creek",
+      "year": "2025",
+      "sourceUrl": "https://dawsoncreek.civicweb.net/document/163514",
+      "indexUrl": "https://dawsoncreek.civicweb.net/filepro/documents/135340/",
+      "status": "source-found-awaiting-extraction",
+      "reason": "Official report link located; original document and named schedules not yet validated.",
+      "nextAction": "Verify actual reporting period from the report, isolate employee and elected schedules, reconcile rows and subtotals, and retain original compensation components before importing.",
+      "notes": [
+        "Archive label alone does not establish the reporting period."
+      ]
+    },
+    {
+      "id": "dawson-creek-sofi-2024",
+      "employerSlug": "city-of-dawson-creek",
+      "employerName": "City of Dawson Creek",
+      "year": "2024",
+      "sourceUrl": "https://dawsoncreek.civicweb.net/document/153465",
+      "indexUrl": "https://dawsoncreek.civicweb.net/filepro/documents/135340/",
+      "status": "source-found-awaiting-extraction",
+      "reason": "Official report link located; original document and named schedules not yet validated.",
+      "nextAction": "Verify actual reporting period from the report, isolate employee and elected schedules, reconcile rows and subtotals, and retain original compensation components before importing.",
+      "notes": [
+        "Archive label alone does not establish the reporting period."
+      ]
+    },
+    {
+      "id": "dawson-creek-sofi-2023",
+      "employerSlug": "city-of-dawson-creek",
+      "employerName": "City of Dawson Creek",
+      "year": "2023",
+      "sourceUrl": "https://dawsoncreek.civicweb.net/document/144371",
+      "indexUrl": "https://dawsoncreek.civicweb.net/filepro/documents/135340/",
+      "status": "source-found-awaiting-extraction",
+      "reason": "Official report link located; original document and named schedules not yet validated.",
+      "nextAction": "Verify actual reporting period from the report, isolate employee and elected schedules, reconcile rows and subtotals, and retain original compensation components before importing.",
+      "notes": [
+        "Archive label alone does not establish the reporting period."
+      ]
+    },
+    {
+      "id": "dawson-creek-sofi-2022",
+      "employerSlug": "city-of-dawson-creek",
+      "employerName": "City of Dawson Creek",
+      "year": "2022",
+      "sourceUrl": "https://dawsoncreek.civicweb.net/document/135370",
+      "indexUrl": "https://dawsoncreek.civicweb.net/filepro/documents/135340/",
+      "status": "source-found-awaiting-extraction",
+      "reason": "Official report link located; original document and named schedules not yet validated.",
+      "nextAction": "Verify actual reporting period from the report, isolate employee and elected schedules, reconcile rows and subtotals, and retain original compensation components before importing.",
+      "notes": [
+        "Archive label alone does not establish the reporting period."
+      ]
+    },
+    {
+      "id": "dawson-creek-sofi-2021",
+      "employerSlug": "city-of-dawson-creek",
+      "employerName": "City of Dawson Creek",
+      "year": "2021",
+      "sourceUrl": "https://dawsoncreek.civicweb.net/document/135369",
+      "indexUrl": "https://dawsoncreek.civicweb.net/filepro/documents/135340/",
+      "status": "source-found-awaiting-extraction",
+      "reason": "Official report link located; original document and named schedules not yet validated.",
+      "nextAction": "Verify actual reporting period from the report, isolate employee and elected schedules, reconcile rows and subtotals, and retain original compensation components before importing.",
+      "notes": [
+        "Archive label alone does not establish the reporting period."
+      ]
+    },
+    {
+      "id": "dawson-creek-sofi-2020",
+      "employerSlug": "city-of-dawson-creek",
+      "employerName": "City of Dawson Creek",
+      "year": "2020",
+      "sourceUrl": "https://dawsoncreek.civicweb.net/document/135368",
+      "indexUrl": "https://dawsoncreek.civicweb.net/filepro/documents/135340/",
+      "status": "source-found-awaiting-extraction",
+      "reason": "Official report link located; original document and named schedules not yet validated.",
+      "nextAction": "Verify actual reporting period from the report, isolate employee and elected schedules, reconcile rows and subtotals, and retain original compensation components before importing.",
+      "notes": [
+        "Archive label alone does not establish the reporting period."
+      ]
+    },
+    {
+      "id": "dawson-creek-sofi-2019",
+      "employerSlug": "city-of-dawson-creek",
+      "employerName": "City of Dawson Creek",
+      "year": "2019",
+      "sourceUrl": "https://dawsoncreek.civicweb.net/document/135367",
+      "indexUrl": "https://dawsoncreek.civicweb.net/filepro/documents/135340/",
+      "status": "source-found-awaiting-extraction",
+      "reason": "Official report link located; original document and named schedules not yet validated.",
+      "nextAction": "Verify actual reporting period from the report, isolate employee and elected schedules, reconcile rows and subtotals, and retain original compensation components before importing.",
+      "notes": [
+        "Archive label alone does not establish the reporting period."
+      ]
+    },
+    {
+      "id": "dawson-creek-sofi-2018",
+      "employerSlug": "city-of-dawson-creek",
+      "employerName": "City of Dawson Creek",
+      "year": "2018",
+      "sourceUrl": "https://dawsoncreek.civicweb.net/document/135366",
+      "indexUrl": "https://dawsoncreek.civicweb.net/filepro/documents/135340/",
+      "status": "source-found-awaiting-extraction",
+      "reason": "Official report link located; original document and named schedules not yet validated.",
+      "nextAction": "Verify actual reporting period from the report, isolate employee and elected schedules, reconcile rows and subtotals, and retain original compensation components before importing.",
+      "notes": [
+        "Archive label alone does not establish the reporting period."
+      ]
+    },
+    {
+      "id": "dawson-creek-sofi-2017",
+      "employerSlug": "city-of-dawson-creek",
+      "employerName": "City of Dawson Creek",
+      "year": "2017",
+      "sourceUrl": "https://dawsoncreek.civicweb.net/document/135365",
+      "indexUrl": "https://dawsoncreek.civicweb.net/filepro/documents/135340/",
+      "status": "source-found-awaiting-extraction",
+      "reason": "Official report link located; original document and named schedules not yet validated.",
+      "nextAction": "Verify actual reporting period from the report, isolate employee and elected schedules, reconcile rows and subtotals, and retain original compensation components before importing.",
+      "notes": [
+        "Archive label alone does not establish the reporting period."
+      ]
+    },
+    {
+      "id": "dawson-creek-sofi-2016",
+      "employerSlug": "city-of-dawson-creek",
+      "employerName": "City of Dawson Creek",
+      "year": "2016",
+      "sourceUrl": "https://dawsoncreek.civicweb.net/document/135364",
+      "indexUrl": "https://dawsoncreek.civicweb.net/filepro/documents/135340/",
+      "status": "source-found-awaiting-extraction",
+      "reason": "Official report link located; original document and named schedules not yet validated.",
+      "nextAction": "Verify actual reporting period from the report, isolate employee and elected schedules, reconcile rows and subtotals, and retain original compensation components before importing.",
+      "notes": [
+        "Archive label alone does not establish the reporting period."
+      ]
+    },
+    {
+      "id": "dawson-creek-sofi-2015",
+      "employerSlug": "city-of-dawson-creek",
+      "employerName": "City of Dawson Creek",
+      "year": "2015",
+      "sourceUrl": "https://dawsoncreek.civicweb.net/document/135363",
+      "indexUrl": "https://dawsoncreek.civicweb.net/filepro/documents/135340/",
+      "status": "source-found-awaiting-extraction",
+      "reason": "Official report link located; original document and named schedules not yet validated.",
+      "nextAction": "Verify actual reporting period from the report, isolate employee and elected schedules, reconcile rows and subtotals, and retain original compensation components before importing.",
+      "notes": [
+        "Archive label alone does not establish the reporting period."
+      ]
+    },
+    {
+      "id": "penticton-sofi-2024",
+      "employerSlug": "city-of-penticton",
+      "employerName": "City of Penticton",
+      "year": "2024",
+      "sourceUrl": "https://www.penticton.ca/sites/default/files/docs/city-hall/financial-statements/Attachment%20A%20%E2%80%93%202024%20Statement%20of%20Financial%20Information%20(SOFI).pdf",
+      "indexUrl": "https://www.penticton.ca/city-hall/reports-plans/statement-financial-information",
+      "status": "source-found-awaiting-extraction",
+      "reason": "Original PDF downloaded; named schedules have not completed parsing, independent row comparison, and control reconciliation.",
+      "nextAction": "Verify actual reporting period from the report, isolate employee and elected schedules, reconcile rows and subtotals, and retain original compensation components before importing.",
+      "notes": [
+        "Archive label alone does not establish the reporting period."
+      ]
+    },
+    {
+      "id": "penticton-sofi-2023",
+      "employerSlug": "city-of-penticton",
+      "employerName": "City of Penticton",
+      "year": "2023",
+      "sourceUrl": "https://www.penticton.ca/sites/default/files/docs/city-hall/annual-reports/SOFIs/2023%20Statement%20of%20Financial%20Information%20(SOFI).pdf",
+      "indexUrl": "https://www.penticton.ca/city-hall/reports-plans/statement-financial-information",
+      "status": "source-found-awaiting-extraction",
+      "reason": "Original PDF downloaded; named schedules have not completed parsing, independent row comparison, and control reconciliation.",
+      "nextAction": "Verify actual reporting period from the report, isolate employee and elected schedules, reconcile rows and subtotals, and retain original compensation components before importing.",
+      "notes": [
+        "Archive label alone does not establish the reporting period."
+      ]
+    },
+    {
+      "id": "penticton-sofi-2022",
+      "employerSlug": "city-of-penticton",
+      "employerName": "City of Penticton",
+      "year": "2022",
+      "sourceUrl": "https://www.penticton.ca/sites/default/files/docs/city-hall/annual-reports/SOFIs/2022%20Statement%20of%20Financial%20Information%20(SOFI).pdf",
+      "indexUrl": "https://www.penticton.ca/city-hall/reports-plans/statement-financial-information",
+      "status": "source-found-awaiting-extraction",
+      "reason": "Official report link located; original document and named schedules not yet validated.",
+      "nextAction": "Verify actual reporting period from the report, isolate employee and elected schedules, reconcile rows and subtotals, and retain original compensation components before importing.",
+      "notes": [
+        "Archive label alone does not establish the reporting period."
+      ]
+    },
+    {
+      "id": "penticton-sofi-2021",
+      "employerSlug": "city-of-penticton",
+      "employerName": "City of Penticton",
+      "year": "2021",
+      "sourceUrl": "https://www.penticton.ca/sites/default/files/docs/city-hall/financial-statements/2021%20SOFI%20Report.pdf",
+      "indexUrl": "https://www.penticton.ca/city-hall/reports-plans/statement-financial-information",
+      "status": "source-found-awaiting-extraction",
+      "reason": "Official report link located; original document and named schedules not yet validated.",
+      "nextAction": "Verify actual reporting period from the report, isolate employee and elected schedules, reconcile rows and subtotals, and retain original compensation components before importing.",
+      "notes": [
+        "Archive label alone does not establish the reporting period."
+      ]
+    },
+    {
+      "id": "vernon-sofi-2025",
+      "employerSlug": "city-of-vernon",
+      "employerName": "City of Vernon",
+      "year": "2025",
+      "sourceUrl": "https://www.vernon.ca/sites/default/files/2026-08/SOFI%20Signed%20-%20CORRECTED.pdf",
+      "indexUrl": "https://www.vernon.ca/government-services/departments/financial-services/financial-statements-annual-reports",
+      "status": "held-for-review",
+      "reason": "Earlier audit: Corrected signed report obtained; named employee tables are image-based (physical page 5 visually checked) and are absent from text extraction. OCR with row and subtotal verification is required. Follow-up: OCR discovery is complete on all 14 physical pages, with 7 two-pass candidate pages retained. Source-specific row, period and control acceptance is still unfinished; no OCR candidate rows are imported.",
+      "nextAction": "Review retained OCR and original page images field by field, verify the reporting period and compensation columns, and reconcile the complete named controls; obtain an existing spreadsheet or clearer original if glyphs remain ambiguous.",
+      "notes": [
+        "Archive label alone does not establish the reporting period.",
+        "Original audit blocker: Corrected signed report obtained; named employee tables are image-based (physical page 5 visually checked) and are absent from text extraction. OCR with row and subtotal verification is required.",
+        "OCR evidence: research/salaries/municipal-ocr/staging/vernon-sofi-2025.json.gzip"
+      ]
+    },
+    {
+      "id": "west-kelowna-sofi-2025",
+      "employerSlug": "city-of-west-kelowna",
+      "employerName": "City of West Kelowna",
+      "year": "2025",
+      "sourceUrl": "https://media-003-ca.cdn.govstack.com/westkelownacity-ca/media/ivnmzv31/2025-draft-statement-of-financial-information.pdf",
+      "indexUrl": "https://www.westkelownacity.ca/city-hall/annual-report-and-financial-statements/",
+      "status": "held-for-review",
+      "reason": "Official index links a filename containing draft. The report approval page (physical page 2) is unsigned. Parsed 191 employees and 7 elected officials are held until final/adopted publication status is established.",
+      "nextAction": "Verify actual reporting period from the report, isolate employee and elected schedules, reconcile rows and subtotals, and retain original compensation components before importing.",
+      "notes": [
+        "Archive label alone does not establish the reporting period."
+      ]
+    },
+    {
+      "id": "salmon-arm-sofi-2025",
+      "employerSlug": "city-of-salmon-arm",
+      "employerName": "City of Salmon Arm",
+      "year": "2025",
+      "sourceUrl": "https://www.salmonarm.ca/Archive.aspx?ADID=1286",
+      "indexUrl": "https://www.salmonarm.ca/Archive.aspx?AMID=52",
+      "status": "held-for-review",
+      "reason": "Official archive label says 2025 SOFI, but its download is a 38-page Financial Statements document whose contents and final schedules do not contain named remuneration disclosures. Locate the actual 2025 SOFI schedules.",
+      "nextAction": "Verify actual reporting period from the report, isolate employee and elected schedules, reconcile rows and subtotals, and retain original compensation components before importing.",
+      "notes": [
+        "Archive label alone does not establish the reporting period."
+      ]
+    },
+    {
+      "id": "salmon-arm-sofi-2024",
+      "employerSlug": "city-of-salmon-arm",
+      "employerName": "City of Salmon Arm",
+      "year": "2024",
+      "sourceUrl": "https://www.salmonarm.ca/Archive.aspx?ADID=1275",
+      "indexUrl": "https://www.salmonarm.ca/Archive.aspx?AMID=52",
+      "status": "source-found-awaiting-extraction",
+      "reason": "Original PDF downloaded; named schedules have not completed parsing, independent row comparison, and control reconciliation.",
+      "nextAction": "Verify actual reporting period from the report, isolate employee and elected schedules, reconcile rows and subtotals, and retain original compensation components before importing.",
+      "notes": [
+        "Archive label alone does not establish the reporting period."
+      ]
+    },
+    {
+      "id": "salmon-arm-sofi-2023",
+      "employerSlug": "city-of-salmon-arm",
+      "employerName": "City of Salmon Arm",
+      "year": "2023",
+      "sourceUrl": "https://www.salmonarm.ca/Archive.aspx?ADID=1219",
+      "indexUrl": "https://www.salmonarm.ca/Archive.aspx?AMID=52",
+      "status": "source-found-awaiting-extraction",
+      "reason": "Original PDF downloaded; named schedules have not completed parsing, independent row comparison, and control reconciliation.",
+      "nextAction": "Verify actual reporting period from the report, isolate employee and elected schedules, reconcile rows and subtotals, and retain original compensation components before importing.",
+      "notes": [
+        "Archive label alone does not establish the reporting period."
+      ]
+    },
+    {
+      "id": "salmon-arm-sofi-2022",
+      "employerSlug": "city-of-salmon-arm",
+      "employerName": "City of Salmon Arm",
+      "year": "2022",
+      "sourceUrl": "https://www.salmonarm.ca/Archive.aspx?ADID=1170",
+      "indexUrl": "https://www.salmonarm.ca/Archive.aspx?AMID=52",
+      "status": "source-found-awaiting-extraction",
+      "reason": "Official report link located; original document and named schedules not yet validated.",
+      "nextAction": "Verify actual reporting period from the report, isolate employee and elected schedules, reconcile rows and subtotals, and retain original compensation components before importing.",
+      "notes": [
+        "Archive label alone does not establish the reporting period."
+      ]
+    },
+    {
+      "id": "salmon-arm-sofi-2021",
+      "employerSlug": "city-of-salmon-arm",
+      "employerName": "City of Salmon Arm",
+      "year": "2021",
+      "sourceUrl": "https://www.salmonarm.ca/Archive.aspx?ADID=1131",
+      "indexUrl": "https://www.salmonarm.ca/Archive.aspx?AMID=52",
+      "status": "source-found-awaiting-extraction",
+      "reason": "Official report link located; original document and named schedules not yet validated.",
+      "nextAction": "Verify actual reporting period from the report, isolate employee and elected schedules, reconcile rows and subtotals, and retain original compensation components before importing.",
+      "notes": [
+        "Archive label alone does not establish the reporting period."
+      ]
+    },
+    {
+      "id": "nelson-sofi-2024",
+      "employerSlug": "city-of-nelson",
+      "employerName": "City of Nelson",
+      "year": "2024",
+      "sourceUrl": "https://www.nelson.ca/Archive.aspx?ADID=179",
+      "indexUrl": "https://www.nelson.ca/Archive.aspx?AMID=36",
+      "status": "source-found-awaiting-extraction",
+      "reason": "Original PDF downloaded; named schedules have not completed parsing, independent row comparison, and control reconciliation.",
+      "nextAction": "Verify actual reporting period from the report, isolate employee and elected schedules, reconcile rows and subtotals, and retain original compensation components before importing.",
+      "notes": [
+        "Archive label alone does not establish the reporting period."
+      ]
+    },
+    {
+      "id": "nelson-sofi-2023",
+      "employerSlug": "city-of-nelson",
+      "employerName": "City of Nelson",
+      "year": "2023",
+      "sourceUrl": "https://www.nelson.ca/Archive.aspx?ADID=178",
+      "indexUrl": "https://www.nelson.ca/Archive.aspx?AMID=36",
+      "status": "source-found-awaiting-extraction",
+      "reason": "Original PDF downloaded; named schedules have not completed parsing, independent row comparison, and control reconciliation.",
+      "nextAction": "Verify actual reporting period from the report, isolate employee and elected schedules, reconcile rows and subtotals, and retain original compensation components before importing.",
+      "notes": [
+        "Archive label alone does not establish the reporting period."
+      ]
+    },
+    {
+      "id": "nelson-sofi-2022",
+      "employerSlug": "city-of-nelson",
+      "employerName": "City of Nelson",
+      "year": "2022",
+      "sourceUrl": "https://www.nelson.ca/Archive.aspx?ADID=174",
+      "indexUrl": "https://www.nelson.ca/Archive.aspx?AMID=36",
+      "status": "source-found-awaiting-extraction",
+      "reason": "Official report link located; original document and named schedules not yet validated.",
+      "nextAction": "Verify actual reporting period from the report, isolate employee and elected schedules, reconcile rows and subtotals, and retain original compensation components before importing.",
+      "notes": [
+        "Archive label alone does not establish the reporting period."
+      ]
+    },
+    {
+      "id": "nelson-sofi-2021",
+      "employerSlug": "city-of-nelson",
+      "employerName": "City of Nelson",
+      "year": "2021",
+      "sourceUrl": "https://www.nelson.ca/Archive.aspx?ADID=172",
+      "indexUrl": "https://www.nelson.ca/Archive.aspx?AMID=36",
+      "status": "source-found-awaiting-extraction",
+      "reason": "Official report link located; original document and named schedules not yet validated.",
+      "nextAction": "Verify actual reporting period from the report, isolate employee and elected schedules, reconcile rows and subtotals, and retain original compensation components before importing.",
+      "notes": [
+        "Archive label alone does not establish the reporting period."
+      ]
+    },
+    {
+      "id": "nelson-sofi-2020",
+      "employerSlug": "city-of-nelson",
+      "employerName": "City of Nelson",
+      "year": "2020",
+      "sourceUrl": "https://www.nelson.ca/Archive.aspx?ADID=167",
+      "indexUrl": "https://www.nelson.ca/Archive.aspx?AMID=36",
+      "status": "source-found-awaiting-extraction",
+      "reason": "Official report link located; original document and named schedules not yet validated.",
+      "nextAction": "Verify actual reporting period from the report, isolate employee and elected schedules, reconcile rows and subtotals, and retain original compensation components before importing.",
+      "notes": [
+        "Archive label alone does not establish the reporting period."
+      ]
+    },
+    {
+      "id": "nelson-sofi-2019",
+      "employerSlug": "city-of-nelson",
+      "employerName": "City of Nelson",
+      "year": "2019",
+      "sourceUrl": "https://www.nelson.ca/Archive.aspx?ADID=165",
+      "indexUrl": "https://www.nelson.ca/Archive.aspx?AMID=36",
+      "status": "source-found-awaiting-extraction",
+      "reason": "Official report link located; original document and named schedules not yet validated.",
+      "nextAction": "Verify actual reporting period from the report, isolate employee and elected schedules, reconcile rows and subtotals, and retain original compensation components before importing.",
+      "notes": [
+        "Archive label alone does not establish the reporting period."
+      ]
+    },
+    {
+      "id": "nelson-sofi-2018",
+      "employerSlug": "city-of-nelson",
+      "employerName": "City of Nelson",
+      "year": "2018",
+      "sourceUrl": "https://www.nelson.ca/Archive.aspx?ADID=162",
+      "indexUrl": "https://www.nelson.ca/Archive.aspx?AMID=36",
+      "status": "source-found-awaiting-extraction",
+      "reason": "Official report link located; original document and named schedules not yet validated.",
+      "nextAction": "Verify actual reporting period from the report, isolate employee and elected schedules, reconcile rows and subtotals, and retain original compensation components before importing.",
+      "notes": [
+        "Archive label alone does not establish the reporting period."
+      ]
+    },
+    {
+      "id": "nelson-sofi-2017",
+      "employerSlug": "city-of-nelson",
+      "employerName": "City of Nelson",
+      "year": "2017",
+      "sourceUrl": "https://www.nelson.ca/Archive.aspx?ADID=151",
+      "indexUrl": "https://www.nelson.ca/Archive.aspx?AMID=36",
+      "status": "source-found-awaiting-extraction",
+      "reason": "Official report link located; original document and named schedules not yet validated.",
+      "nextAction": "Verify actual reporting period from the report, isolate employee and elected schedules, reconcile rows and subtotals, and retain original compensation components before importing.",
+      "notes": [
+        "Archive label alone does not establish the reporting period."
+      ]
+    },
+    {
+      "id": "nelson-sofi-2016",
+      "employerSlug": "city-of-nelson",
+      "employerName": "City of Nelson",
+      "year": "2016",
+      "sourceUrl": "https://www.nelson.ca/Archive.aspx?ADID=148",
+      "indexUrl": "https://www.nelson.ca/Archive.aspx?AMID=36",
+      "status": "source-found-awaiting-extraction",
+      "reason": "Official report link located; original document and named schedules not yet validated.",
+      "nextAction": "Verify actual reporting period from the report, isolate employee and elected schedules, reconcile rows and subtotals, and retain original compensation components before importing.",
+      "notes": [
+        "Archive label alone does not establish the reporting period."
+      ]
+    },
+    {
+      "id": "nelson-sofi-2015",
+      "employerSlug": "city-of-nelson",
+      "employerName": "City of Nelson",
+      "year": "2015",
+      "sourceUrl": "https://www.nelson.ca/Archive.aspx?ADID=53",
+      "indexUrl": "https://www.nelson.ca/Archive.aspx?AMID=36",
+      "status": "source-found-awaiting-extraction",
+      "reason": "Official report link located; original document and named schedules not yet validated.",
+      "nextAction": "Verify actual reporting period from the report, isolate employee and elected schedules, reconcile rows and subtotals, and retain original compensation components before importing.",
+      "notes": [
+        "Archive label alone does not establish the reporting period."
+      ]
+    },
+    {
+      "id": "nelson-sofi-2014",
+      "employerSlug": "city-of-nelson",
+      "employerName": "City of Nelson",
+      "year": "2014",
+      "sourceUrl": "https://www.nelson.ca/Archive.aspx?ADID=52",
+      "indexUrl": "https://www.nelson.ca/Archive.aspx?AMID=36",
+      "status": "source-found-awaiting-extraction",
+      "reason": "Official report link located; original document and named schedules not yet validated.",
+      "nextAction": "Verify actual reporting period from the report, isolate employee and elected schedules, reconcile rows and subtotals, and retain original compensation components before importing.",
+      "notes": [
+        "Archive label alone does not establish the reporting period."
+      ]
+    },
+    {
+      "id": "nelson-sofi-2013",
+      "employerSlug": "city-of-nelson",
+      "employerName": "City of Nelson",
+      "year": "2013",
+      "sourceUrl": "https://www.nelson.ca/Archive.aspx?ADID=51",
+      "indexUrl": "https://www.nelson.ca/Archive.aspx?AMID=36",
+      "status": "source-found-awaiting-extraction",
+      "reason": "Official report link located; original document and named schedules not yet validated.",
+      "nextAction": "Verify actual reporting period from the report, isolate employee and elected schedules, reconcile rows and subtotals, and retain original compensation components before importing.",
+      "notes": [
+        "Archive label alone does not establish the reporting period."
+      ]
+    },
+    {
+      "id": "nelson-sofi-2012",
+      "employerSlug": "city-of-nelson",
+      "employerName": "City of Nelson",
+      "year": "2012",
+      "sourceUrl": "https://www.nelson.ca/Archive.aspx?ADID=50",
+      "indexUrl": "https://www.nelson.ca/Archive.aspx?AMID=36",
+      "status": "source-found-awaiting-extraction",
+      "reason": "Official report link located; original document and named schedules not yet validated.",
+      "nextAction": "Verify actual reporting period from the report, isolate employee and elected schedules, reconcile rows and subtotals, and retain original compensation components before importing.",
+      "notes": [
+        "Archive label alone does not establish the reporting period."
+      ]
+    },
+    {
+      "id": "nelson-sofi-2011",
+      "employerSlug": "city-of-nelson",
+      "employerName": "City of Nelson",
+      "year": "2011",
+      "sourceUrl": "https://www.nelson.ca/Archive.aspx?ADID=49",
+      "indexUrl": "https://www.nelson.ca/Archive.aspx?AMID=36",
+      "status": "source-found-awaiting-extraction",
+      "reason": "Official report link located; original document and named schedules not yet validated.",
+      "nextAction": "Verify actual reporting period from the report, isolate employee and elected schedules, reconcile rows and subtotals, and retain original compensation components before importing.",
+      "notes": [
+        "Archive label alone does not establish the reporting period."
+      ]
+    },
+    {
+      "id": "castlegar-sofi-2024",
+      "employerSlug": "city-of-castlegar",
+      "employerName": "City of Castlegar",
+      "year": "2024",
+      "sourceUrl": "https://castlegar.ca/wp-content/uploads/2025/09/2024-Statement-of-Financial-Information.pdf",
+      "indexUrl": "https://castlegar.ca/government/reports-plans-publications/financial-reporting/",
+      "status": "held-for-review",
+      "reason": "Earlier audit: Downloaded original PDF contains no extractable text. OCR with visual row verification is required before import. Follow-up: OCR discovery is complete on all 41 physical pages, with 8 two-pass candidate pages retained. Source-specific row, period and control acceptance is still unfinished; no OCR candidate rows are imported.",
+      "nextAction": "Review retained OCR and original page images field by field, verify the reporting period and compensation columns, and reconcile the complete named controls; obtain an existing spreadsheet or clearer original if glyphs remain ambiguous.",
+      "notes": [
+        "Archive label alone does not establish the reporting period.",
+        "Original audit blocker: Downloaded original PDF contains no extractable text. OCR with visual row verification is required before import.",
+        "OCR evidence: research/salaries/municipal-ocr/staging/castlegar-sofi-2024.json.gzip"
+      ]
+    },
+    {
+      "id": "castlegar-sofi-2023",
+      "employerSlug": "city-of-castlegar",
+      "employerName": "City of Castlegar",
+      "year": "2023",
+      "sourceUrl": "https://castlegar.ca/wp-content/uploads/2024/07/2023-Statement-of-Financial-Information.pdf",
+      "indexUrl": "https://castlegar.ca/government/reports-plans-publications/financial-reporting/",
+      "status": "held-for-review",
+      "reason": "Earlier audit: Downloaded original PDF contains no extractable text. OCR with visual row verification is required before import. Follow-up: OCR discovery is complete on all 12 physical pages, with 5 two-pass candidate pages retained. Source-specific row, period and control acceptance is still unfinished; no OCR candidate rows are imported.",
+      "nextAction": "Review retained OCR and original page images field by field, verify the reporting period and compensation columns, and reconcile the complete named controls; obtain an existing spreadsheet or clearer original if glyphs remain ambiguous.",
+      "notes": [
+        "Archive label alone does not establish the reporting period.",
+        "Original audit blocker: Downloaded original PDF contains no extractable text. OCR with visual row verification is required before import.",
+        "OCR evidence: research/salaries/municipal-ocr/staging/castlegar-sofi-2023.json.gzip"
+      ]
+    },
+    {
+      "id": "castlegar-sofi-2022",
+      "employerSlug": "city-of-castlegar",
+      "employerName": "City of Castlegar",
+      "year": "2022",
+      "sourceUrl": "https://castlegar.ca/wp-content/uploads/2023/11/2022-Statement-of-Financial-Information.pdf",
+      "indexUrl": "https://castlegar.ca/government/reports-plans-publications/financial-reporting/",
+      "status": "source-found-awaiting-extraction",
+      "reason": "Official report link located; original document and named schedules not yet validated.",
+      "nextAction": "Verify actual reporting period from the report, isolate employee and elected schedules, reconcile rows and subtotals, and retain original compensation components before importing.",
+      "notes": [
+        "Archive label alone does not establish the reporting period."
+      ]
+    },
+    {
+      "id": "castlegar-sofi-2021",
+      "employerSlug": "city-of-castlegar",
+      "employerName": "City of Castlegar",
+      "year": "2021",
+      "sourceUrl": "https://castlegar.ca/wp-content/uploads/2023/05/2021-Statement-of-Financial-Information-amended-FINAL.pdf",
+      "indexUrl": "https://castlegar.ca/government/reports-plans-publications/financial-reporting/",
+      "status": "source-found-awaiting-extraction",
+      "reason": "Official report link located; original document and named schedules not yet validated.",
+      "nextAction": "Verify actual reporting period from the report, isolate employee and elected schedules, reconcile rows and subtotals, and retain original compensation components before importing.",
+      "notes": [
+        "Archive label alone does not establish the reporting period."
+      ]
+    },
+    {
+      "id": "cranbrook-sofi-2024",
+      "employerSlug": "city-of-cranbrook",
+      "employerName": "City of Cranbrook",
+      "year": "2024",
+      "sourceUrl": "https://docs.cranbrook.ca/downloads/finance/SOFI-2024.pdf",
+      "indexUrl": "https://cranbrook.ca/our-city/city-departments/finance/statement-of-financial-information-sofi",
+      "status": "source-found-awaiting-extraction",
+      "reason": "Original PDF downloaded; named schedules have not completed parsing, independent row comparison, and control reconciliation.",
+      "nextAction": "Verify actual reporting period from the report, isolate employee and elected schedules, reconcile rows and subtotals, and retain original compensation components before importing.",
+      "notes": [
+        "Archive label alone does not establish the reporting period."
+      ]
+    },
+    {
+      "id": "cranbrook-sofi-2023",
+      "employerSlug": "city-of-cranbrook",
+      "employerName": "City of Cranbrook",
+      "year": "2023",
+      "sourceUrl": "https://docs.cranbrook.ca/downloads/finance/2023_Statement_of_Financial_Information.pdf",
+      "indexUrl": "https://cranbrook.ca/our-city/city-departments/finance/statement-of-financial-information-sofi",
+      "status": "source-found-awaiting-extraction",
+      "reason": "Original PDF downloaded; named schedules have not completed parsing, independent row comparison, and control reconciliation.",
+      "nextAction": "Verify actual reporting period from the report, isolate employee and elected schedules, reconcile rows and subtotals, and retain original compensation components before importing.",
+      "notes": [
+        "Archive label alone does not establish the reporting period."
+      ]
+    },
+    {
+      "id": "kitimat-sofi-2024",
+      "employerSlug": "district-of-kitimat",
+      "employerName": "District of Kitimat",
+      "year": "2024",
+      "sourceUrl": "https://www.kitimat.ca/en/municipal-hall/resources/Documents/Council-Meetings-and-Agendas/Agendas/2025-Agendas/2025_06_23_SPEC-agenda-final.pdf",
+      "indexUrl": "https://www.kitimat.ca/en/municipal-hall/resources/Documents/Council-Meetings-and-Agendas/Agendas/2025-Agendas/2025_06_23_SPEC-agenda-final.pdf",
+      "status": "source-found-awaiting-extraction",
+      "reason": "Official report link located; original document and named schedules not yet validated.",
+      "nextAction": "Verify actual reporting period from the report, isolate employee and elected schedules, reconcile rows and subtotals, and retain original compensation components before importing.",
+      "notes": [
+        "Archive label alone does not establish the reporting period."
+      ]
+    },
+    {
+      "id": "williams-lake-sofi-2025",
+      "employerSlug": "city-of-williams-lake",
+      "employerName": "City of Williams Lake",
+      "year": "2025",
+      "sourceUrl": "https://williamslake.ca/Archive.aspx?ADID=674",
+      "indexUrl": "https://williamslake.ca/Archive.aspx?AMID=49",
+      "status": "source-found-awaiting-extraction",
+      "reason": "Official report link located; original document and named schedules not yet validated.",
+      "nextAction": "Verify actual reporting period from the report, isolate employee and elected schedules, reconcile rows and subtotals, and retain original compensation components before importing.",
+      "notes": [
+        "Archive label alone does not establish the reporting period."
+      ]
+    },
+    {
+      "id": "williams-lake-sofi-2024",
+      "employerSlug": "city-of-williams-lake",
+      "employerName": "City of Williams Lake",
+      "year": "2024",
+      "sourceUrl": "https://williamslake.ca/Archive.aspx?ADID=653",
+      "indexUrl": "https://williamslake.ca/Archive.aspx?AMID=49",
+      "status": "source-found-awaiting-extraction",
+      "reason": "Official report link located; original document and named schedules not yet validated.",
+      "nextAction": "Verify actual reporting period from the report, isolate employee and elected schedules, reconcile rows and subtotals, and retain original compensation components before importing.",
+      "notes": [
+        "Archive label alone does not establish the reporting period."
+      ]
+    },
+    {
+      "id": "williams-lake-sofi-2023",
+      "employerSlug": "city-of-williams-lake",
+      "employerName": "City of Williams Lake",
+      "year": "2023",
+      "sourceUrl": "https://williamslake.ca/Archive.aspx?ADID=630",
+      "indexUrl": "https://williamslake.ca/Archive.aspx?AMID=49",
+      "status": "source-found-awaiting-extraction",
+      "reason": "Official report link located; original document and named schedules not yet validated.",
+      "nextAction": "Verify actual reporting period from the report, isolate employee and elected schedules, reconcile rows and subtotals, and retain original compensation components before importing.",
+      "notes": [
+        "Archive label alone does not establish the reporting period."
+      ]
+    },
+    {
+      "id": "williams-lake-sofi-2022",
+      "employerSlug": "city-of-williams-lake",
+      "employerName": "City of Williams Lake",
+      "year": "2022",
+      "sourceUrl": "https://williamslake.ca/Archive.aspx?ADID=607",
+      "indexUrl": "https://williamslake.ca/Archive.aspx?AMID=49",
+      "status": "source-found-awaiting-extraction",
+      "reason": "Official report link located; original document and named schedules not yet validated.",
+      "nextAction": "Verify actual reporting period from the report, isolate employee and elected schedules, reconcile rows and subtotals, and retain original compensation components before importing.",
+      "notes": [
+        "Archive label alone does not establish the reporting period."
+      ]
+    },
+    {
+      "id": "williams-lake-sofi-2021",
+      "employerSlug": "city-of-williams-lake",
+      "employerName": "City of Williams Lake",
+      "year": "2021",
+      "sourceUrl": "https://williamslake.ca/Archive.aspx?ADID=577",
+      "indexUrl": "https://williamslake.ca/Archive.aspx?AMID=49",
+      "status": "source-found-awaiting-extraction",
+      "reason": "Official report link located; original document and named schedules not yet validated.",
+      "nextAction": "Verify actual reporting period from the report, isolate employee and elected schedules, reconcile rows and subtotals, and retain original compensation components before importing.",
+      "notes": [
+        "Archive label alone does not establish the reporting period."
+      ]
+    },
+    {
+      "id": "williams-lake-sofi-2020",
+      "employerSlug": "city-of-williams-lake",
+      "employerName": "City of Williams Lake",
+      "year": "2020",
+      "sourceUrl": "https://williamslake.ca/Archive.aspx?ADID=552",
+      "indexUrl": "https://williamslake.ca/Archive.aspx?AMID=49",
+      "status": "source-found-awaiting-extraction",
+      "reason": "Official report link located; original document and named schedules not yet validated.",
+      "nextAction": "Verify actual reporting period from the report, isolate employee and elected schedules, reconcile rows and subtotals, and retain original compensation components before importing.",
+      "notes": [
+        "Archive label alone does not establish the reporting period."
+      ]
+    },
+    {
+      "id": "williams-lake-sofi-2019",
+      "employerSlug": "city-of-williams-lake",
+      "employerName": "City of Williams Lake",
+      "year": "2019",
+      "sourceUrl": "https://williamslake.ca/Archive.aspx?ADID=537",
+      "indexUrl": "https://williamslake.ca/Archive.aspx?AMID=49",
+      "status": "source-found-awaiting-extraction",
+      "reason": "Official report link located; original document and named schedules not yet validated.",
+      "nextAction": "Verify actual reporting period from the report, isolate employee and elected schedules, reconcile rows and subtotals, and retain original compensation components before importing.",
+      "notes": [
+        "Archive label alone does not establish the reporting period."
+      ]
+    },
+    {
+      "id": "williams-lake-sofi-2018",
+      "employerSlug": "city-of-williams-lake",
+      "employerName": "City of Williams Lake",
+      "year": "2018",
+      "sourceUrl": "https://williamslake.ca/Archive.aspx?ADID=502",
+      "indexUrl": "https://williamslake.ca/Archive.aspx?AMID=49",
+      "status": "source-found-awaiting-extraction",
+      "reason": "Official report link located; original document and named schedules not yet validated.",
+      "nextAction": "Verify actual reporting period from the report, isolate employee and elected schedules, reconcile rows and subtotals, and retain original compensation components before importing.",
+      "notes": [
+        "Archive label alone does not establish the reporting period."
+      ]
+    },
+    {
+      "id": "williams-lake-sofi-2017",
+      "employerSlug": "city-of-williams-lake",
+      "employerName": "City of Williams Lake",
+      "year": "2017",
+      "sourceUrl": "https://williamslake.ca/Archive.aspx?ADID=473",
+      "indexUrl": "https://williamslake.ca/Archive.aspx?AMID=49",
+      "status": "source-found-awaiting-extraction",
+      "reason": "Official report link located; original document and named schedules not yet validated.",
+      "nextAction": "Verify actual reporting period from the report, isolate employee and elected schedules, reconcile rows and subtotals, and retain original compensation components before importing.",
+      "notes": [
+        "Archive label alone does not establish the reporting period."
+      ]
+    },
+    {
+      "id": "williams-lake-sofi-2016",
+      "employerSlug": "city-of-williams-lake",
+      "employerName": "City of Williams Lake",
+      "year": "2016",
+      "sourceUrl": "https://williamslake.ca/Archive.aspx?ADID=424",
+      "indexUrl": "https://williamslake.ca/Archive.aspx?AMID=49",
+      "status": "source-found-awaiting-extraction",
+      "reason": "Official report link located; original document and named schedules not yet validated.",
+      "nextAction": "Verify actual reporting period from the report, isolate employee and elected schedules, reconcile rows and subtotals, and retain original compensation components before importing.",
+      "notes": [
+        "Archive label alone does not establish the reporting period."
+      ]
+    },
+    {
+      "id": "williams-lake-sofi-2015",
+      "employerSlug": "city-of-williams-lake",
+      "employerName": "City of Williams Lake",
+      "year": "2015",
+      "sourceUrl": "https://williamslake.ca/Archive.aspx?ADID=363",
+      "indexUrl": "https://williamslake.ca/Archive.aspx?AMID=49",
+      "status": "source-found-awaiting-extraction",
+      "reason": "Official report link located; original document and named schedules not yet validated.",
+      "nextAction": "Verify actual reporting period from the report, isolate employee and elected schedules, reconcile rows and subtotals, and retain original compensation components before importing.",
+      "notes": [
+        "Archive label alone does not establish the reporting period."
+      ]
+    },
+    {
+      "id": "williams-lake-sofi-2014",
+      "employerSlug": "city-of-williams-lake",
+      "employerName": "City of Williams Lake",
+      "year": "2014",
+      "sourceUrl": "https://williamslake.ca/Archive.aspx?ADID=314",
+      "indexUrl": "https://williamslake.ca/Archive.aspx?AMID=49",
+      "status": "source-found-awaiting-extraction",
+      "reason": "Official report link located; original document and named schedules not yet validated.",
+      "nextAction": "Verify actual reporting period from the report, isolate employee and elected schedules, reconcile rows and subtotals, and retain original compensation components before importing.",
+      "notes": [
+        "Archive label alone does not establish the reporting period."
+      ]
+    },
+    {
+      "id": "williams-lake-sofi-2013",
+      "employerSlug": "city-of-williams-lake",
+      "employerName": "City of Williams Lake",
+      "year": "2013",
+      "sourceUrl": "https://williamslake.ca/Archive.aspx?ADID=265",
+      "indexUrl": "https://williamslake.ca/Archive.aspx?AMID=49",
+      "status": "source-found-awaiting-extraction",
+      "reason": "Official report link located; original document and named schedules not yet validated.",
+      "nextAction": "Verify actual reporting period from the report, isolate employee and elected schedules, reconcile rows and subtotals, and retain original compensation components before importing.",
+      "notes": [
+        "Archive label alone does not establish the reporting period."
+      ]
+    },
+    {
+      "id": "williams-lake-sofi-2012",
+      "employerSlug": "city-of-williams-lake",
+      "employerName": "City of Williams Lake",
+      "year": "2012",
+      "sourceUrl": "https://williamslake.ca/Archive.aspx?ADID=217",
+      "indexUrl": "https://williamslake.ca/Archive.aspx?AMID=49",
+      "status": "source-found-awaiting-extraction",
+      "reason": "Official report link located; original document and named schedules not yet validated.",
+      "nextAction": "Verify actual reporting period from the report, isolate employee and elected schedules, reconcile rows and subtotals, and retain original compensation components before importing.",
+      "notes": [
+        "Archive label alone does not establish the reporting period."
+      ]
+    },
+    {
+      "id": "williams-lake-sofi-2011",
+      "employerSlug": "city-of-williams-lake",
+      "employerName": "City of Williams Lake",
+      "year": "2011",
+      "sourceUrl": "https://williamslake.ca/Archive.aspx?ADID=216",
+      "indexUrl": "https://williamslake.ca/Archive.aspx?AMID=49",
+      "status": "source-found-awaiting-extraction",
+      "reason": "Official report link located; original document and named schedules not yet validated.",
+      "nextAction": "Verify actual reporting period from the report, isolate employee and elected schedules, reconcile rows and subtotals, and retain original compensation components before importing.",
+      "notes": [
+        "Archive label alone does not establish the reporting period."
+      ]
+    }
+  ]
+}

@@ -181,7 +181,8 @@ for (const directory of requiredCollections ?? readdirSync(research).sort()) {
       provenance: 'Official published schedule; independently downloaded and validated by the source importer.',
       sha256: source.sha256 ?? source.pdfSha256, dataSha256: sha256(bytes), notes: source.notes ?? [],
       validation: source.validation ?? null, nameDisclosure: source.nameDisclosure ?? null, positionDisclosure: source.positionDisclosure ?? null,
-      travelSource: source.travelSource ?? null, expensesNote: source.expensesNote ?? null, currency: source.currency ?? 'CAD'
+      ...(source.completeEmployeeSchedule !== undefined ? { completeEmployeeSchedule: source.completeEmployeeSchedule } : {}),
+      travelSource: source.travelSource ?? null, expensesNote: source.expensesNote ?? null, publicWarning: source.publicWarning ?? null, currency: source.currency ?? 'CAD'
     }
     official.push(...accepted)
     importStats.push({ id: source.id, year, rows: accepted.length, employers: [...new Set(accepted.map((row) => row.slug))], totalRemuneration: sumMoney(accepted.map((row) => row.pay)) })

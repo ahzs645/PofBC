@@ -1,0 +1,268 @@
+{
+  "municipality": "Cranbrook",
+  "employerSlug": "city-of-cranbrook",
+  "website": "http://www.cranbrook.ca",
+  "checkedOn": "2026-10-31",
+  "method": "Bounded traversal of links actually present on the official website; at most two link hops.",
+  "status": "source-links-found-awaiting-review",
+  "pagesChecked": [
+    {
+      "url": "https://www.cranbrook.ca",
+      "depth": 0,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://cranbrook.ca/",
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 264077,
+      "sha256": "a881dbf891e50e6a81b62936da509cd9846d11ec3e00b836a70d11011d9ea56a",
+      "status": "html-read",
+      "containsSofiTerms": true
+    },
+    {
+      "url": "https://cranbrook.ca/our-city/city-departments/finance/statement-of-financial-information-sofi",
+      "depth": 1,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://cranbrook.ca/our-city/city-departments/finance/statement-of-financial-information-sofi",
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 260257,
+      "sha256": "ee8f6021460971008522ff4434ef222a7a779dff546728bd29116ed809dc91bf",
+      "status": "html-read",
+      "containsSofiTerms": true
+    },
+    {
+      "url": "https://cranbrook.ca/our-city/city-departments/finance/statement-of-financial-information-sofi/",
+      "depth": 2,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://cranbrook.ca/our-city/city-departments/finance/statement-of-financial-information-sofi",
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 260257,
+      "sha256": "4fb511873c99254e2fa9bd0302028783fd752770b9555ad349efde0182334609",
+      "status": "html-read",
+      "containsSofiTerms": true
+    },
+    {
+      "url": "https://cranbrook.ca/our-city/city-departments/finance/annual-reports",
+      "depth": 1,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://cranbrook.ca/our-city/city-departments/finance/annual-reports",
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 260624,
+      "sha256": "c3616e3818fc666dce61151da1c851ac78bfed48f23e934450f4d886214f349d",
+      "status": "html-read",
+      "containsSofiTerms": true
+    },
+    {
+      "url": "https://cranbrook.ca/our-city/city-departments/finance/annual-reports/",
+      "depth": 2,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://cranbrook.ca/our-city/city-departments/finance/annual-reports",
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 260624,
+      "sha256": "4e1b29fc8b2da033ff5bdfe4df6d34e0812db8cb66f356d62319e66e3300d856",
+      "status": "html-read",
+      "containsSofiTerms": true
+    },
+    {
+      "url": "https://cranbrook.ca/our-city/city-departments/finance/budget/",
+      "depth": 2,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://cranbrook.ca/our-city/city-departments/finance/budget",
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 261998,
+      "sha256": "3183df2de61b57b1b7cf64a6f6984af810449ed5c8e54e842e009bb3e00d5da9",
+      "status": "html-read",
+      "containsSofiTerms": true
+    },
+    {
+      "url": "https://cranbrook.ca/assets/uploads/2025/our-city/city-departments/finance/municipal-grants/",
+      "depth": 1,
+      "checkedOn": "2026-10-31",
+      "status": "fetch-failed",
+      "error": "HTTP Error 404: Not Found",
+      "httpStatus": 404
+    },
+    {
+      "url": "https://cranbrook.ca/news/repairs-complete-as-work-continues-toward-reopening-lane-pool-at-western-financial-place",
+      "depth": 1,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://cranbrook.ca/news/repairs-complete-as-work-continues-toward-reopening-lane-pool-at-western-financial-place",
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 257165,
+      "sha256": "0c0745cf9b3ca7e36f71d95ec8d40e336acedf878f9e7639b0da15b923dfe8db",
+      "status": "html-read",
+      "containsSofiTerms": true
+    },
+    {
+      "url": "https://cranbrook.ca/our-city/city-departments/finance",
+      "depth": 1,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://cranbrook.ca/our-city/city-departments/finance",
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 259835,
+      "sha256": "4e16da82719504bb869ae858c71928dc3d4b17a9f17e5ec6e39113c128deb4d6",
+      "status": "html-read",
+      "containsSofiTerms": true
+    }
+  ],
+  "candidates": [
+    {
+      "url": "https://cranbrook.ca/our-city/city-departments/finance/annual-reports",
+      "label": "Annual Reports",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://cranbrook.ca/",
+      "yearsInLabel": []
+    },
+    {
+      "url": "https://cranbrook.ca/our-city/city-departments/finance/annual-reports/",
+      "label": "Annual Reports",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://cranbrook.ca/our-city/city-departments/finance/statement-of-financial-information-sofi",
+      "yearsInLabel": []
+    },
+    {
+      "url": "https://cranbrook.ca/our-city/city-departments/finance/budget/",
+      "label": "Budget & Financial Reports",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://cranbrook.ca/our-city/city-departments/finance/statement-of-financial-information-sofi",
+      "yearsInLabel": []
+    },
+    {
+      "url": "https://cranbrook.ca/our-city/city-departments/finance/statement-of-financial-information-sofi",
+      "label": "SOFI Reports",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://cranbrook.ca/",
+      "yearsInLabel": []
+    },
+    {
+      "url": "https://cranbrook.ca/our-city/city-departments/finance/statement-of-financial-information-sofi/",
+      "label": "Statement of Financial Information (SOFI)",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://cranbrook.ca/our-city/city-departments/finance/statement-of-financial-information-sofi",
+      "yearsInLabel": []
+    },
+    {
+      "url": "https://issuu.com/chriszettel/docs/2020_annual_report",
+      "label": "Annual Report 2020",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://cranbrook.ca/our-city/city-departments/finance/annual-reports",
+      "yearsInLabel": [
+        "2020"
+      ]
+    },
+    {
+      "url": "https://issuu.com/chriszettel/docs/2021_annual_report_final",
+      "label": "Annual Report 2021",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://cranbrook.ca/our-city/city-departments/finance/annual-reports",
+      "yearsInLabel": [
+        "2021"
+      ]
+    },
+    {
+      "url": "https://issuu.com/chriszettel/docs/2022_annual_report",
+      "label": "Annual Report 2022",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://cranbrook.ca/our-city/city-departments/finance/annual-reports",
+      "yearsInLabel": [
+        "2022"
+      ]
+    },
+    {
+      "url": "https://issuu.com/chriszettel/docs/2023_annual_report_draft_3",
+      "label": "Annual Report 2023",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://cranbrook.ca/our-city/city-departments/finance/annual-reports",
+      "yearsInLabel": [
+        "2023"
+      ]
+    },
+    {
+      "url": "https://issuu.com/chriszettel/docs/2024_annual_report",
+      "label": "Annual Report 2024",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://cranbrook.ca/our-city/city-departments/finance/annual-reports",
+      "yearsInLabel": [
+        "2024"
+      ]
+    },
+    {
+      "url": "http://docs.cranbrook.ca/downloads/corporate/2020-Housing-Needs-Report.pdf",
+      "label": "2020 Housing Needs Report",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://cranbrook.ca/",
+      "yearsInLabel": [
+        "2020"
+      ]
+    },
+    {
+      "url": "https://docs.cranbrook.ca/downloads/corporate/2023-Housing-Needs-Report.pdf",
+      "label": "2023 Housing Needs Report",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://cranbrook.ca/",
+      "yearsInLabel": [
+        "2023"
+      ]
+    },
+    {
+      "url": "https://docs.cranbrook.ca/downloads/engineering/2024_BC_Building-Plumbing_Code_Changes.pdf",
+      "label": "2024 BC Building & Public Code Changes Notice",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://cranbrook.ca/",
+      "yearsInLabel": [
+        "2024"
+      ]
+    },
+    {
+      "url": "https://docs.cranbrook.ca/downloads/engineering/Notable-Code-Requirements-2018.pdf",
+      "label": "2018 Notable Building Code Requirements",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://cranbrook.ca/",
+      "yearsInLabel": [
+        "2018"
+      ]
+    },
+    {
+      "url": "https://docs.cranbrook.ca/downloads/finance/2023_Statement_of_Financial_Information.pdf",
+      "label": "SOFI Report 2023",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://cranbrook.ca/our-city/city-departments/finance/statement-of-financial-information-sofi",
+      "yearsInLabel": [
+        "2023"
+      ]
+    },
+    {
+      "url": "https://docs.cranbrook.ca/downloads/finance/2025_Annual_Report_final.pdf",
+      "label": "Annual Report 2025",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://cranbrook.ca/our-city/city-departments/finance/annual-reports",
+      "yearsInLabel": [
+        "2025"
+      ]
+    },
+    {
+      "url": "https://docs.cranbrook.ca/downloads/finance/SOFI-2024.pdf",
+      "label": "SOFI Report 2024",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://cranbrook.ca/our-city/city-departments/finance/statement-of-financial-information-sofi",
+      "yearsInLabel": [
+        "2024"
+      ]
+    },
+    {
+      "url": "https://docs.cranbrook.ca/downloads/finance/SOFI-2025.pdf",
+      "label": "SOFI Report 2025",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://cranbrook.ca/our-city/city-departments/finance/statement-of-financial-information-sofi",
+      "yearsInLabel": [
+        "2025"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,576 @@
+{
+  "municipality": "Fruitvale",
+  "employerSlug": "village-of-fruitvale",
+  "website": "http://www.fruitvale.ca",
+  "checkedOn": "2026-10-31",
+  "method": "Bounded traversal of links actually present on the official website; at most two link hops.",
+  "status": "source-links-found-awaiting-review",
+  "pagesChecked": [
+    {
+      "url": "https://www.fruitvale.ca",
+      "depth": 0,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://fruitvale.ca/",
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 123047,
+      "sha256": "9f3eb76ce4fb64e4bfb47bb0de03c517e6c9fd7b71d56c1d5200eb6bc646fd9f",
+      "status": "html-read",
+      "containsSofiTerms": false
+    },
+    {
+      "url": "https://fruitvale.ca/reports-publications/",
+      "depth": 1,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://fruitvale.ca/services/reports-publications/",
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 99660,
+      "sha256": "7ea0922252bbafae1986c188e9c31489134a5e802c4cd828b88dcbb63317ad8b",
+      "status": "html-read",
+      "containsSofiTerms": true
+    },
+    {
+      "url": "https://fruitvale.ca/services/reports-publications/",
+      "depth": 2,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://fruitvale.ca/services/reports-publications/",
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 99660,
+      "sha256": "7ea0922252bbafae1986c188e9c31489134a5e802c4cd828b88dcbb63317ad8b",
+      "status": "html-read",
+      "containsSofiTerms": true
+    }
+  ],
+  "candidates": [
+    {
+      "url": "https://fruitvale.ca/services/reports-publications/",
+      "label": "Financial Reports",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://fruitvale.ca/services/reports-publications/",
+      "yearsInLabel": []
+    },
+    {
+      "url": "https://fruitvale.ca/wp-content/uploads/2022/10/2014-Carbon-Neutral-Public-Report.pdf",
+      "label": "2014 Carbon Neutral Public Report",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://fruitvale.ca/services/reports-publications/",
+      "yearsInLabel": [
+        "2014",
+        "2022"
+      ]
+    },
+    {
+      "url": "https://fruitvale.ca/wp-content/uploads/2022/10/2015-2018-Strategic-Plan.pdf",
+      "label": "2015-2018 Strategic Plan",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://fruitvale.ca/services/reports-publications/",
+      "yearsInLabel": [
+        "2015",
+        "2018",
+        "2022"
+      ]
+    },
+    {
+      "url": "https://fruitvale.ca/wp-content/uploads/2022/10/2015-Climate-Action-Revenue-Incentive-Public-Report-CARIP.pdf",
+      "label": "2015 Climate Action Revenue Incentive Public Report (CARIP)",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://fruitvale.ca/services/reports-publications/",
+      "yearsInLabel": [
+        "2015",
+        "2022"
+      ]
+    },
+    {
+      "url": "https://fruitvale.ca/wp-content/uploads/2022/10/2016-Climate-Action-Revenue-Incentive-Public-Report-CARIP.pdf",
+      "label": "2016 Climate Action Revenue Incentive Public Report (CARIP)",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://fruitvale.ca/services/reports-publications/",
+      "yearsInLabel": [
+        "2016",
+        "2022"
+      ]
+    },
+    {
+      "url": "https://fruitvale.ca/wp-content/uploads/2022/10/2017-audited-Financial-Statement-FINAL-SIGNED-FS.pdf",
+      "label": "2017 Village of Fruitvale Audited Financial Statements",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://fruitvale.ca/services/reports-publications/",
+      "yearsInLabel": [
+        "2017",
+        "2022"
+      ]
+    },
+    {
+      "url": "https://fruitvale.ca/wp-content/uploads/2022/10/2018-Climate-Action-Revenue-Incentive-Public-Report-CARIP.pdf",
+      "label": "2018 Climate Action Revenue Incentive Public Report (CARIP)",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://fruitvale.ca/services/reports-publications/",
+      "yearsInLabel": [
+        "2018",
+        "2022"
+      ]
+    },
+    {
+      "url": "https://fruitvale.ca/wp-content/uploads/2022/10/2018-The-Corporation-of-the-Village-of-Fruitvale-FINAL-SIGNED-FS.pdf",
+      "label": "2018 Village of Fruitvale Audited Financial Statements",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://fruitvale.ca/services/reports-publications/",
+      "yearsInLabel": [
+        "2018",
+        "2022"
+      ]
+    },
+    {
+      "url": "https://fruitvale.ca/wp-content/uploads/2022/10/2019-2022-Strategic-Plan.pdf",
+      "label": "2019-2022 Strategic Plan",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://fruitvale.ca/services/reports-publications/",
+      "yearsInLabel": [
+        "2019",
+        "2022"
+      ]
+    },
+    {
+      "url": "https://fruitvale.ca/wp-content/uploads/2022/10/2019-2023-Village-of-Fruitvale-5-Year-Financial-Plan-Presentation.pdf",
+      "label": "2019-2023 Village of Fruitvale 5-Year Financial Plan Presentation",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://fruitvale.ca/services/reports-publications/",
+      "yearsInLabel": [
+        "2019",
+        "2022",
+        "2023"
+      ]
+    },
+    {
+      "url": "https://fruitvale.ca/wp-content/uploads/2022/10/2019-Climate-Action-Revenue-Incentive-Public-Report-CARIP.pdf",
+      "label": "2019 Climate Action Revenue Incentive Public Report (CARIP)",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://fruitvale.ca/services/reports-publications/",
+      "yearsInLabel": [
+        "2019",
+        "2022"
+      ]
+    },
+    {
+      "url": "https://fruitvale.ca/wp-content/uploads/2022/10/2019-The-Corporation-of-the-Village-of-Fruitvale-FINAL-FS.pdf",
+      "label": "2019 Village of Fruitvale Audited Financial Statements",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://fruitvale.ca/services/reports-publications/",
+      "yearsInLabel": [
+        "2019",
+        "2022"
+      ]
+    },
+    {
+      "url": "https://fruitvale.ca/wp-content/uploads/2022/10/2019-Village-of-Fruitvale-Annual-Report.pdf",
+      "label": "2019 Village of Fruitvale Annual Report",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://fruitvale.ca/services/reports-publications/",
+      "yearsInLabel": [
+        "2019",
+        "2022"
+      ]
+    },
+    {
+      "url": "https://fruitvale.ca/wp-content/uploads/2022/10/2020-Village-of-Fruitvale-Annual-Report.pdf",
+      "label": "2020 Village of Fruitvale Annual Report",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://fruitvale.ca/services/reports-publications/",
+      "yearsInLabel": [
+        "2020",
+        "2022"
+      ]
+    },
+    {
+      "url": "https://fruitvale.ca/wp-content/uploads/2022/10/2021-Climate-Action-Revenue-Incentive-Public-Report-CARIP.pdf",
+      "label": "2021 Climate Action Revenue Incentive Public Report (CARIP)",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://fruitvale.ca/services/reports-publications/",
+      "yearsInLabel": [
+        "2021",
+        "2022"
+      ]
+    },
+    {
+      "url": "https://fruitvale.ca/wp-content/uploads/2022/10/2021-Statement-of-Financial-Information-SOFI-Report.pdf",
+      "label": "2021 Statement of Financial Information (SOFI) Report",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://fruitvale.ca/services/reports-publications/",
+      "yearsInLabel": [
+        "2021",
+        "2022"
+      ]
+    },
+    {
+      "url": "https://fruitvale.ca/wp-content/uploads/2022/10/5-Year-Financial-Plan-presentation-2014-website-version.pdf",
+      "label": "2014-2018 Village of Fruitvale 5 Year Financial Plan Presentation",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://fruitvale.ca/services/reports-publications/",
+      "yearsInLabel": [
+        "2014",
+        "2018",
+        "2022"
+      ]
+    },
+    {
+      "url": "https://fruitvale.ca/wp-content/uploads/2022/10/5-Year-Financial-Plan-presentation-2015-annotated.pdf",
+      "label": "2015-2019 Village of Fruitvale 5 Year Financial Plan Presentation",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://fruitvale.ca/services/reports-publications/",
+      "yearsInLabel": [
+        "2015",
+        "2019",
+        "2022"
+      ]
+    },
+    {
+      "url": "https://fruitvale.ca/wp-content/uploads/2022/10/5-Year-Financial-Plan-presentation-2016-for-website.pdf",
+      "label": "2016-2020 Village of Fruitvale 5 Year Financial Plan PowerPoint (PDF)",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://fruitvale.ca/services/reports-publications/",
+      "yearsInLabel": [
+        "2016",
+        "2020",
+        "2022"
+      ]
+    },
+    {
+      "url": "https://fruitvale.ca/wp-content/uploads/2022/10/5-Year-Financial-Plan-presentation-2017.pdf",
+      "label": "2017-2021 Village of Fruitvale 5 Year Financial Plan for Bylaw",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://fruitvale.ca/services/reports-publications/",
+      "yearsInLabel": [
+        "2017",
+        "2021",
+        "2022"
+      ]
+    },
+    {
+      "url": "https://fruitvale.ca/wp-content/uploads/2022/10/5-Year-Financial-Plan-public-presentation-2013-PDF.pdf",
+      "label": "2013-2017 Village of Fruitvale 5 Year Financial Plan Presentation",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://fruitvale.ca/services/reports-publications/",
+      "yearsInLabel": [
+        "2013",
+        "2017",
+        "2022"
+      ]
+    },
+    {
+      "url": "https://fruitvale.ca/wp-content/uploads/2022/10/5-yr-financial-plan-2016-2020-for-bylaw.pdf",
+      "label": "2016-2020 Village of Fruitvale 5 Year Financial Plan for Bylaw",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://fruitvale.ca/services/reports-publications/",
+      "yearsInLabel": [
+        "2016",
+        "2020",
+        "2022"
+      ]
+    },
+    {
+      "url": "https://fruitvale.ca/wp-content/uploads/2022/10/5-yr-financial-plan-2017-2021.pdf",
+      "label": "2017-2021 Village of Fruitvale 5 Year Financial Plan Presentation Materials",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://fruitvale.ca/services/reports-publications/",
+      "yearsInLabel": [
+        "2017",
+        "2021",
+        "2022"
+      ]
+    },
+    {
+      "url": "https://fruitvale.ca/wp-content/uploads/2022/10/843-5-yr-financial-plan-2013-2017_1.pdf",
+      "label": "2013-2017 Village of Fruitvale 5 Year Financial Plan",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://fruitvale.ca/services/reports-publications/",
+      "yearsInLabel": [
+        "2013",
+        "2017",
+        "2022"
+      ]
+    },
+    {
+      "url": "https://fruitvale.ca/wp-content/uploads/2022/10/Climate-Action-Revenue-Incentive-CARIP-Public-Report-for-2014.pdf",
+      "label": "Climate Action Revenue Incentive (CARIP) Public Report for 2014",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://fruitvale.ca/services/reports-publications/",
+      "yearsInLabel": [
+        "2014",
+        "2022"
+      ]
+    },
+    {
+      "url": "https://fruitvale.ca/wp-content/uploads/2022/10/Comprehensive-Storm-Water-Management-Plan-Update-2010.pdf",
+      "label": "Comprehensive Storm Water Management Plan Update 2010",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://fruitvale.ca/services/reports-publications/",
+      "yearsInLabel": [
+        "2010",
+        "2022"
+      ]
+    },
+    {
+      "url": "https://fruitvale.ca/wp-content/uploads/2022/10/Former-Middle-School-Project-Preliminary-Background-Report-January-2020.pdf",
+      "label": "Former Middle School Project Preliminary Background Report, January 2020",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://fruitvale.ca/services/reports-publications/",
+      "yearsInLabel": [
+        "2020",
+        "2022"
+      ]
+    },
+    {
+      "url": "https://fruitvale.ca/wp-content/uploads/2022/10/Prioritization-Framework-for-Capital-Infrastructure-Planning-November-2016.pdf",
+      "label": "Prioritization Framework for Capital Infrastructure Planning – November 2016",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://fruitvale.ca/services/reports-publications/",
+      "yearsInLabel": [
+        "2016",
+        "2022"
+      ]
+    },
+    {
+      "url": "https://fruitvale.ca/wp-content/uploads/2022/10/Roads-Rating-2015.pdf",
+      "label": "Roads Rating 2015",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://fruitvale.ca/services/reports-publications/",
+      "yearsInLabel": [
+        "2015",
+        "2022"
+      ]
+    },
+    {
+      "url": "https://fruitvale.ca/wp-content/uploads/2022/10/Village-of-Fruitvale-2020-FS-FINAL-signed.pdf",
+      "label": "2020 Village of Fruitvale Audited Financial Statements",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://fruitvale.ca/services/reports-publications/",
+      "yearsInLabel": [
+        "2020",
+        "2022"
+      ]
+    },
+    {
+      "url": "https://fruitvale.ca/wp-content/uploads/2022/10/Village-of-Fruitvale-2021-FS.pdf",
+      "label": "2021 Village of Fruitvale Audited Financial Statements",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://fruitvale.ca/services/reports-publications/",
+      "yearsInLabel": [
+        "2021",
+        "2022"
+      ]
+    },
+    {
+      "url": "https://fruitvale.ca/wp-content/uploads/2022/10/Village-of-Fruitvale-5-Year-Financial-Plan-2014.pdf",
+      "label": "2014-2018 Village of Fruitvale 5 Year Financial Plan",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://fruitvale.ca/services/reports-publications/",
+      "yearsInLabel": [
+        "2014",
+        "2018",
+        "2022"
+      ]
+    },
+    {
+      "url": "https://fruitvale.ca/wp-content/uploads/2022/10/public-document-for-consultation.pdf",
+      "label": "2015-2019 Village of Fruitvale 5 Year Financial Plan",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://fruitvale.ca/services/reports-publications/",
+      "yearsInLabel": [
+        "2015",
+        "2019",
+        "2022"
+      ]
+    },
+    {
+      "url": "https://fruitvale.ca/wp-content/uploads/2023/05/Fruitvale-AR-2022-for-web.pdf",
+      "label": "2022 Village of Fruitvale Annual Report",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://fruitvale.ca/services/reports-publications/",
+      "yearsInLabel": [
+        "2022",
+        "2023"
+      ]
+    },
+    {
+      "url": "https://fruitvale.ca/wp-content/uploads/2023/07/2021-Annual-Report-with-mayor-message.pdf",
+      "label": "2021 Village of Fruitvale Annual Report",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://fruitvale.ca/services/reports-publications/",
+      "yearsInLabel": [
+        "2021",
+        "2023"
+      ]
+    },
+    {
+      "url": "https://fruitvale.ca/wp-content/uploads/2023/09/LGCAP-2022-Survey.pdf",
+      "label": "2022 LGCAP Survey",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://fruitvale.ca/services/reports-publications/",
+      "yearsInLabel": [
+        "2022",
+        "2023"
+      ]
+    },
+    {
+      "url": "https://fruitvale.ca/wp-content/uploads/2023/10/Fruitvale-RES-Final.pdf",
+      "label": "Village of Fruitvale Renewable Energy Strategy 2023",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://fruitvale.ca/services/reports-publications/",
+      "yearsInLabel": [
+        "2023"
+      ]
+    },
+    {
+      "url": "https://fruitvale.ca/wp-content/uploads/2024/06/Village-of-Fruitvale-2022-.pdf",
+      "label": "2022 Village of Fruitvale Audited Financial Statements",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://fruitvale.ca/services/reports-publications/",
+      "yearsInLabel": [
+        "2022",
+        "2024"
+      ]
+    },
+    {
+      "url": "https://fruitvale.ca/wp-content/uploads/2024/09/2023-LGCAP-Survey.pdf",
+      "label": "2023 LGCAP Survey",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://fruitvale.ca/services/reports-publications/",
+      "yearsInLabel": [
+        "2023",
+        "2024"
+      ]
+    },
+    {
+      "url": "https://fruitvale.ca/wp-content/uploads/2025/04/2023-SOFI-Schedules-and-AFS.pdf",
+      "label": "2023 Statement of Financial Information (SOFI) Report",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://fruitvale.ca/services/reports-publications/",
+      "yearsInLabel": [
+        "2023",
+        "2025"
+      ]
+    },
+    {
+      "url": "https://fruitvale.ca/wp-content/uploads/2025/04/2023-Village-of-Fruitvale-Annual-Report.pdf",
+      "label": "2023 Village of Fruitvale Annual Report",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://fruitvale.ca/services/reports-publications/",
+      "yearsInLabel": [
+        "2023",
+        "2025"
+      ]
+    },
+    {
+      "url": "https://fruitvale.ca/wp-content/uploads/2025/04/2023-Village-of-Fruitvale-Audited-Financial-Statements.pdf",
+      "label": "2023 Village of Fruitvale Audited Financial Statements",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://fruitvale.ca/services/reports-publications/",
+      "yearsInLabel": [
+        "2023",
+        "2025"
+      ]
+    },
+    {
+      "url": "https://fruitvale.ca/wp-content/uploads/2025/05/Fruitvale-2024-Annual-Report-v3.pdf",
+      "label": "2024 Village of Fruitvale Annual Report",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://fruitvale.ca/services/reports-publications/",
+      "yearsInLabel": [
+        "2024",
+        "2025"
+      ]
+    },
+    {
+      "url": "https://fruitvale.ca/wp-content/uploads/2025/05/Village-of-Fruitvale-2024-FS-FINAL-signed.pdf",
+      "label": "2024 Village of Fruitvale Audited Financial Statements",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://fruitvale.ca/services/reports-publications/",
+      "yearsInLabel": [
+        "2024",
+        "2025"
+      ]
+    },
+    {
+      "url": "https://fruitvale.ca/wp-content/uploads/2025/07/2024-LGCAP-Survey-1.pdf",
+      "label": "2024 LGCAP Survey",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://fruitvale.ca/services/reports-publications/",
+      "yearsInLabel": [
+        "2024",
+        "2025"
+      ]
+    },
+    {
+      "url": "https://fruitvale.ca/wp-content/uploads/2025/07/2024-Statement-of-Financial-Information-SOFI-Report.pdf",
+      "label": "2024 Statement of Financial Information (SOFI) Report",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://fruitvale.ca/services/reports-publications/",
+      "yearsInLabel": [
+        "2024",
+        "2025"
+      ]
+    },
+    {
+      "url": "https://fruitvale.ca/wp-content/uploads/2026/01/2022-12-31-SOFI.pdf",
+      "label": "2022 Statement of Financial Information (SOFI) Report",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://fruitvale.ca/services/reports-publications/",
+      "yearsInLabel": [
+        "2022",
+        "2026"
+      ]
+    },
+    {
+      "url": "https://fruitvale.ca/wp-content/uploads/2026/06/Fruitvale-2025-Annual-Report.pdf",
+      "label": "2025 Village of Fruitvale Annual Report",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://fruitvale.ca/services/reports-publications/",
+      "yearsInLabel": [
+        "2025",
+        "2026"
+      ]
+    },
+    {
+      "url": "https://fruitvale.ca/wp-content/uploads/2026/06/Village-of-Fruitvale-2025-May-12-2026-Signed.pdf",
+      "label": "2025 Village of Fruitvale Audited Financial Statements",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://fruitvale.ca/services/reports-publications/",
+      "yearsInLabel": [
+        "2025",
+        "2026"
+      ]
+    },
+    {
+      "url": "https://fruitvale.ca/wp-content/uploads/2026/07/2025-LGCAP-Survey.pdf",
+      "label": "2025 LGCAP Survey",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://fruitvale.ca/services/reports-publications/",
+      "yearsInLabel": [
+        "2025",
+        "2026"
+      ]
+    },
+    {
+      "url": "https://fruitvale.ca/wp-content/uploads/2026/08/2025-SOFI-with-Financials.pdf",
+      "label": "2025 Statement of Financial Information (SOFI) Report",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://fruitvale.ca/services/reports-publications/",
+      "yearsInLabel": [
+        "2025",
+        "2026"
+      ]
+    },
+    {
+      "url": "https://fruitvale.ca/wp-content/uploads/2026/10/2025-11-20-Beaver-Creek-Flood-Assessment.pdf",
+      "label": "2025 Flood Assessment/Flood Risk Assessment Report Final",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://fruitvale.ca/services/reports-publications/",
+      "yearsInLabel": [
+        "2025",
+        "2026"
+      ]
+    }
+  ]
+}

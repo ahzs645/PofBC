@@ -1,0 +1,456 @@
+{
+  "municipality": "Burnaby",
+  "employerSlug": "city-of-burnaby",
+  "website": "http://www.burnaby.ca",
+  "checkedOn": "2026-10-31",
+  "method": "Bounded traversal of links actually present on the official website; at most two link hops.",
+  "status": "source-links-found-awaiting-review",
+  "pagesChecked": [
+    {
+      "url": "https://www.burnaby.ca",
+      "depth": 0,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.burnaby.ca",
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 101065,
+      "sha256": "a33cdce9ea437dafbc5faf3ef0a3c17264d54960b162beb03ea02e31b7082197",
+      "status": "html-read",
+      "containsSofiTerms": false
+    },
+    {
+      "url": "https://www.burnaby.ca/our-city/financial-and-annual-reports",
+      "depth": 1,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.burnaby.ca/our-city/financial-and-annual-reports",
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 114981,
+      "sha256": "3eeca414c38784b4d5249576a497b434bbfa4310f1637d7dca8ab50fe7f71a54",
+      "status": "html-read",
+      "containsSofiTerms": true
+    },
+    {
+      "url": "https://www.burnaby.ca/our-city/news/2026-10-30/2026-2030-financial-plan-bylaw-amendment",
+      "depth": 1,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.burnaby.ca/our-city/news/2026-10-30/2026-2030-financial-plan-bylaw-amendment",
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 88948,
+      "sha256": "5a4306445ad1dbe80938754acafce5fd6aef2f53371da001fb1b12a4d1278efd",
+      "status": "html-read",
+      "containsSofiTerms": false
+    },
+    {
+      "url": "https://www.burnaby.ca/our-city/city-departments",
+      "depth": 1,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.burnaby.ca/our-city/city-departments",
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 94293,
+      "sha256": "8a9b038ca80b42dba6cb8133a8017f7a97366f5cb268931aef10b1f4e2b91684",
+      "status": "html-read",
+      "containsSofiTerms": false
+    },
+    {
+      "url": "https://www.burnaby.ca/our-city/city-departments/finance",
+      "depth": 2,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.burnaby.ca/our-city/city-departments/finance",
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 100750,
+      "sha256": "8a7b8fa5e78bb4b2923587be94946d91b5bde889397925b15225abee9e06e5af",
+      "status": "html-read",
+      "containsSofiTerms": false
+    },
+    {
+      "url": "https://www.burnaby.ca/our-city/meetings-and-public-hearings",
+      "depth": 1,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.burnaby.ca/our-city/meetings-and-public-hearings",
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 98568,
+      "sha256": "e645e177d76b54cce39ccace299eeb552271a8aaf63f8fddf02da2601f4dc5de",
+      "status": "html-read",
+      "containsSofiTerms": false
+    },
+    {
+      "url": "https://www.burnaby.ca/our-city/city-departments/burnaby-public-library",
+      "depth": 2,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.burnaby.ca/our-city/city-departments/burnaby-public-library",
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 95136,
+      "sha256": "a972bce8232781c5be0268a2a68338b0a3f670bf0812c6e2437f8f613b09d0ac",
+      "status": "html-read",
+      "containsSofiTerms": false
+    },
+    {
+      "url": "https://www.burnaby.ca/our-city/city-departments/community-safety",
+      "depth": 2,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.burnaby.ca/our-city/city-departments/community-safety",
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 105060,
+      "sha256": "0942dfc0716dbb4e161ade3eb090fbd1da125fb956f901e8410ac90a4bf50c4d",
+      "status": "html-read",
+      "containsSofiTerms": false
+    },
+    {
+      "url": "https://www.burnaby.ca/our-city/city-departments/corporate-services",
+      "depth": 2,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.burnaby.ca/our-city/city-departments/corporate-services",
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 95803,
+      "sha256": "2dee89a95fb0387c45fbad325f37f660bf9026d29be7d407ef72c85ef0f37167",
+      "status": "html-read",
+      "containsSofiTerms": false
+    }
+  ],
+  "candidates": [
+    {
+      "url": "https://bpl.bc.ca/burnaby-public-library-board",
+      "label": "Burnaby Public Library Annual Reports",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.burnaby.ca/our-city/financial-and-annual-reports",
+      "yearsInLabel": []
+    },
+    {
+      "url": "https://www.burnaby.ca/our-city/financial-and-annual-reports",
+      "label": "Financial & Annual Reports",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.burnaby.ca",
+      "yearsInLabel": []
+    },
+    {
+      "url": "https://pub-burnaby.escribemeetings.com/filestream.ashx?DocumentId=83911",
+      "label": "2025-2029 Amendment (Bylaw)",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.burnaby.ca/our-city/financial-and-annual-reports",
+      "yearsInLabel": [
+        "2025",
+        "2029"
+      ]
+    },
+    {
+      "url": "https://www.burnaby.ca/sites/default/files/acquiadam/2021-10/Burnaby-Village-Museum-Annual-Report.pdf",
+      "label": "Burnaby Village Museum 2024 Annual Report",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.burnaby.ca/our-city/financial-and-annual-reports",
+      "yearsInLabel": [
+        "2021",
+        "2024"
+      ]
+    },
+    {
+      "url": "https://www.burnaby.ca/sites/default/files/acquiadam/2022-01/2022-20226-Financial-Plan-Highlights.pdf",
+      "label": "2022-2026 highlights",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.burnaby.ca/our-city/financial-and-annual-reports",
+      "yearsInLabel": [
+        "2022",
+        "2026"
+      ]
+    },
+    {
+      "url": "https://www.burnaby.ca/sites/default/files/acquiadam/2022-03/Solid-Waste-and-Recycling-Annual-Report.pdf",
+      "label": "Solid Waste & Recycling 2025 Annual Report",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.burnaby.ca/our-city/financial-and-annual-reports",
+      "yearsInLabel": [
+        "2022",
+        "2025"
+      ]
+    },
+    {
+      "url": "https://www.burnaby.ca/sites/default/files/acquiadam/2022-04/2021-Annual-Municipal-Report-Highlights.pdf",
+      "label": "2021 highlights",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.burnaby.ca/our-city/financial-and-annual-reports",
+      "yearsInLabel": [
+        "2021",
+        "2022"
+      ]
+    },
+    {
+      "url": "https://www.burnaby.ca/sites/default/files/acquiadam/2022-05/2021-Annual-Municipal-Report.pdf",
+      "label": "2021 report",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.burnaby.ca/our-city/financial-and-annual-reports",
+      "yearsInLabel": [
+        "2021",
+        "2022"
+      ]
+    },
+    {
+      "url": "https://www.burnaby.ca/sites/default/files/acquiadam/2022-05/2022-2026-Financial-Plan.pdf",
+      "label": "2022-2026",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.burnaby.ca/our-city/financial-and-annual-reports",
+      "yearsInLabel": [
+        "2022",
+        "2026"
+      ]
+    },
+    {
+      "url": "https://www.burnaby.ca/sites/default/files/acquiadam/2022-06/Fire-Department-Annual-Report.pdf",
+      "label": "Burnaby Fire Department 2025 Annual Report",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.burnaby.ca/our-city/financial-and-annual-reports",
+      "yearsInLabel": [
+        "2022",
+        "2025"
+      ]
+    },
+    {
+      "url": "https://www.burnaby.ca/sites/default/files/acquiadam/2022-07/2021-Statement-of-Financial-Information.pdf",
+      "label": "2021",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.burnaby.ca/our-city/financial-and-annual-reports",
+      "yearsInLabel": [
+        "2021",
+        "2022"
+      ]
+    },
+    {
+      "url": "https://www.burnaby.ca/sites/default/files/acquiadam/2023-01/2023-2027-Financial-Plan-Highlights.pdf",
+      "label": "2023-2027 highlights",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.burnaby.ca/our-city/financial-and-annual-reports",
+      "yearsInLabel": [
+        "2023",
+        "2027"
+      ]
+    },
+    {
+      "url": "https://www.burnaby.ca/sites/default/files/acquiadam/2023-02/2023-2027-Financial-Plan.pdf",
+      "label": "2023-2027",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.burnaby.ca/our-city/financial-and-annual-reports",
+      "yearsInLabel": [
+        "2023",
+        "2027"
+      ]
+    },
+    {
+      "url": "https://www.burnaby.ca/sites/default/files/acquiadam/2023-04/2022-Annual-Municipal-Report-Highlights.pdf",
+      "label": "2022 highlights",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.burnaby.ca/our-city/financial-and-annual-reports",
+      "yearsInLabel": [
+        "2022",
+        "2023"
+      ]
+    },
+    {
+      "url": "https://www.burnaby.ca/sites/default/files/acquiadam/2023-04/2022-Annual-Municipal-Report.pdf",
+      "label": "2022 report",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.burnaby.ca/our-city/financial-and-annual-reports",
+      "yearsInLabel": [
+        "2022",
+        "2023"
+      ]
+    },
+    {
+      "url": "https://www.burnaby.ca/sites/default/files/acquiadam/2023-06/2022-Statement-of-Financial-Information.pdf",
+      "label": "2022",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.burnaby.ca/our-city/financial-and-annual-reports",
+      "yearsInLabel": [
+        "2022",
+        "2023"
+      ]
+    },
+    {
+      "url": "https://www.burnaby.ca/sites/default/files/acquiadam/2023-07/RCMP-Annual-Report.pdf",
+      "label": "Burnaby RCMP 2024 Annual Report",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.burnaby.ca/our-city/financial-and-annual-reports",
+      "yearsInLabel": [
+        "2023",
+        "2024"
+      ]
+    },
+    {
+      "url": "https://www.burnaby.ca/sites/default/files/acquiadam/2023-11/2024-2028-Financial-Plan-Highlights.pdf",
+      "label": "2024-2028 highlights",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.burnaby.ca/our-city/financial-and-annual-reports",
+      "yearsInLabel": [
+        "2023",
+        "2024",
+        "2028"
+      ]
+    },
+    {
+      "url": "https://www.burnaby.ca/sites/default/files/acquiadam/2024-01/2024-2028-Financial-Plan.pdf",
+      "label": "2024-2028",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.burnaby.ca/our-city/financial-and-annual-reports",
+      "yearsInLabel": [
+        "2024",
+        "2028"
+      ]
+    },
+    {
+      "url": "https://www.burnaby.ca/sites/default/files/acquiadam/2024-04/2023-Annual-Municipal-Report-Highlights.pdf",
+      "label": "2023 highlights",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.burnaby.ca/our-city/financial-and-annual-reports",
+      "yearsInLabel": [
+        "2023",
+        "2024"
+      ]
+    },
+    {
+      "url": "https://www.burnaby.ca/sites/default/files/acquiadam/2024-04/2023-Annual-Municipal-Report.pdf",
+      "label": "2023 report",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.burnaby.ca/our-city/financial-and-annual-reports",
+      "yearsInLabel": [
+        "2023",
+        "2024"
+      ]
+    },
+    {
+      "url": "https://www.burnaby.ca/sites/default/files/acquiadam/2024-06/2023-Statement-of-Financial-Information.pdf",
+      "label": "2023",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.burnaby.ca/our-city/financial-and-annual-reports",
+      "yearsInLabel": [
+        "2023",
+        "2024"
+      ]
+    },
+    {
+      "url": "https://www.burnaby.ca/sites/default/files/acquiadam/2025-03/2025-2029-Financial-Plan-Highlights.pdf",
+      "label": "2025-2029 highlights",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.burnaby.ca/our-city/financial-and-annual-reports",
+      "yearsInLabel": [
+        "2025",
+        "2029"
+      ]
+    },
+    {
+      "url": "https://www.burnaby.ca/sites/default/files/acquiadam/2025-04/2024-Annual-Municipal-Report-Highlights.pdf",
+      "label": "2024 highlights",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.burnaby.ca/our-city/financial-and-annual-reports",
+      "yearsInLabel": [
+        "2024",
+        "2025"
+      ]
+    },
+    {
+      "url": "https://www.burnaby.ca/sites/default/files/acquiadam/2025-04/2024-Annual-Municipal-Report.pdf",
+      "label": "2024 report",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.burnaby.ca/our-city/financial-and-annual-reports",
+      "yearsInLabel": [
+        "2024",
+        "2025"
+      ]
+    },
+    {
+      "url": "https://www.burnaby.ca/sites/default/files/acquiadam/2025-04/2025-2029-Financial-Plan.pdf",
+      "label": "2025-2029",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.burnaby.ca/our-city/financial-and-annual-reports",
+      "yearsInLabel": [
+        "2025",
+        "2029"
+      ]
+    },
+    {
+      "url": "https://www.burnaby.ca/sites/default/files/acquiadam/2025-06/2024-Statement-of-Financial-Information.pdf",
+      "label": "2024",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.burnaby.ca/our-city/financial-and-annual-reports",
+      "yearsInLabel": [
+        "2024",
+        "2025"
+      ]
+    },
+    {
+      "url": "https://www.burnaby.ca/sites/default/files/acquiadam/2025-11/2026-2030-Financial-Plan-Highlights-2025.pdf",
+      "label": "2026-2030 Highlights",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.burnaby.ca/our-city/financial-and-annual-reports",
+      "yearsInLabel": [
+        "2025",
+        "2026",
+        "2030"
+      ]
+    },
+    {
+      "url": "https://www.burnaby.ca/sites/default/files/acquiadam/2026-01/2026-2030-Financial-Plan.pdf",
+      "label": "2026-2030",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.burnaby.ca/our-city/financial-and-annual-reports",
+      "yearsInLabel": [
+        "2026",
+        "2030"
+      ]
+    },
+    {
+      "url": "https://www.burnaby.ca/sites/default/files/acquiadam/2026-03/Burnaby-Art-Gallery-Annual-Report-2025.pdf",
+      "label": "Burnaby Art Gallery 2025 Annual Report",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.burnaby.ca/our-city/financial-and-annual-reports",
+      "yearsInLabel": [
+        "2025",
+        "2026"
+      ]
+    },
+    {
+      "url": "https://www.burnaby.ca/sites/default/files/acquiadam/2026-04/2025-Annual-Municipal-Report-Highlights.pdf",
+      "label": "2025 highlights",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.burnaby.ca/our-city/financial-and-annual-reports",
+      "yearsInLabel": [
+        "2025",
+        "2026"
+      ]
+    },
+    {
+      "url": "https://www.burnaby.ca/sites/default/files/acquiadam/2026-04/2025-Annual-Municipal-Report.pdf",
+      "label": "2025 report",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.burnaby.ca/our-city/financial-and-annual-reports",
+      "yearsInLabel": [
+        "2025",
+        "2026"
+      ]
+    },
+    {
+      "url": "https://www.burnaby.ca/sites/default/files/acquiadam/2026-06/2025-Statement-of-Financial-Information.pdf",
+      "label": "2025",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.burnaby.ca/our-city/financial-and-annual-reports",
+      "yearsInLabel": [
+        "2025",
+        "2026"
+      ]
+    },
+    {
+      "url": "https://www.burnaby.ca/sites/default/files/acquiadam/2026-07/Annual-Drinking-Water-Quality-Report-2025.pdf",
+      "label": "Drinking Water 2025 Annual Report",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.burnaby.ca/our-city/financial-and-annual-reports",
+      "yearsInLabel": [
+        "2025",
+        "2026"
+      ]
+    }
+  ]
+}

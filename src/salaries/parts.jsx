@@ -150,19 +150,21 @@ export const rangeLabel = (years, range) => (!range ? 'Every period'
  * `single` chooses one period and closes on it; `only` limits the periods offered; `describe` says
  * what each holds, in place of its record count.
  */
-export const PeriodRange = ({ years, counts, value, onChange, single = false, only, describe }) => {
+export const PeriodRange = ({ years, counts, value, onChange, single = false, only, describe, inline = false }) => {
   const [open, setOpen] = useState(false)
   const [anchor, setAnchor] = useState(null)
   const [hover, setHover] = useState(null)
   const root = useRef(null)
+  // A containing filter sheet can clear the range while the first end is being chosen.
+  useEffect(() => { if (!value) { setAnchor(null); setHover(null) } }, [value])
   useEffect(() => {
-    if (!open) return undefined
+    if (!open || inline) return undefined
     const away = (event) => { if (!root.current?.contains(event.target)) setOpen(false) }
     const key = (event) => { if (event.key === 'Escape') setOpen(false) }
     document.addEventListener('pointerdown', away)
     document.addEventListener('keydown', key)
     return () => { document.removeEventListener('pointerdown', away); document.removeEventListener('keydown', key) }
-  }, [open])
+  }, [open, inline])
   const most = Math.max(1, ...counts)
   const calendar = (label) => /^\d{4}$/.test(label)
   const offered = only ? new Set(only) : null
@@ -183,13 +185,13 @@ export const PeriodRange = ({ years, counts, value, onChange, single = false, on
   const fiscal = groups.find((group) => group.kind === 'fiscal')?.indexes ?? []
   const lastFive = fiscal.length >= 5 ? [fiscal.at(-5), years.length - 1] : null
   return (
-    <div className={`salaries-range${single ? ' salaries-range--single' : ''}`} ref={root}>
-      <button type="button" className="salaries-range__trigger" aria-haspopup="dialog" aria-expanded={open} onClick={() => { setOpen((now) => !now); setAnchor(null) }}>
+    <div className={`salaries-range${single ? ' salaries-range--single' : ''}${inline ? ' salaries-range--inline' : ''}`} ref={root}>
+      {!inline && <button type="button" className="salaries-range__trigger" aria-haspopup="dialog" aria-expanded={open} onClick={() => { setOpen((now) => !now); setAnchor(null) }}>
         <span className="salaries-range__label">{rangeLabel(years, value)}</span>
         <svg width="10" height="10" viewBox="0 0 18 10" aria-hidden="true" style={{ transform: open ? 'rotate(180deg)' : undefined }}><path d="M1.64 0.74 0.74 1.64 8.55 9.45 9 9.88 9.45 9.45 17.26 1.64 16.36 0.74 9 8.1 1.64 0.74Z" fill="currentColor" /></svg>
-      </button>
-      {open && (
-        <div className="salaries-range__panel" role="dialog" aria-label="Reporting periods">
+      </button>}
+      {(inline || open) && (
+        <div className="salaries-range__panel" role={inline ? 'group' : 'dialog'} aria-label="Reporting periods">
           <div className="salaries-range__head">
             <p className="salaries-range__chosen" aria-live="polite">{rangeLabel(years, shown)}</p>
             <p className="salaries-range__hint">{single ? 'Tap a period.' : anchor === null ? 'Tap a period, or the first of a range.' : `Now the last period, from ${years[anchor]}.`}</p>
@@ -224,9 +226,9 @@ export const PeriodRange = ({ years, counts, value, onChange, single = false, on
               </div>
             </section>
           ))}
-          <div className="salaries-range__actions">
+          {!inline && <div className="salaries-range__actions">
             <button type="button" className="salaries__more" onClick={() => setOpen(false)}>Done</button>
-          </div>
+          </div>}
         </div>
       )}
     </div>

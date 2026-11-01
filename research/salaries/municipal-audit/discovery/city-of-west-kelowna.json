@@ -1,0 +1,478 @@
+{
+  "municipality": "West Kelowna",
+  "employerSlug": "city-of-west-kelowna",
+  "website": "http://www.westkelownacity.ca",
+  "checkedOn": "2026-10-31",
+  "method": "Bounded traversal of links actually present on the official website; at most two link hops.",
+  "status": "source-links-found-awaiting-review",
+  "pagesChecked": [
+    {
+      "url": "https://www.westkelownacity.ca",
+      "depth": 0,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.westkelownacity.ca",
+      "contentType": "text/html; charset=utf-8",
+      "bytes": 84738,
+      "sha256": "a10d774989683048fbaa38fc16cb28e523b712a0ed4f52baa2bc0364b8b029ba",
+      "status": "html-read",
+      "containsSofiTerms": false
+    },
+    {
+      "url": "https://www.westkelownacity.ca/city-hall/annual-report-and-financial-statements/",
+      "depth": 1,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.westkelownacity.ca/city-hall/annual-report-and-financial-statements/",
+      "contentType": "text/html; charset=utf-8",
+      "bytes": 86634,
+      "sha256": "51094ec446b62fd650549c5684a58fb4769d1561897f390ffaeafa5c163a332d",
+      "status": "html-read",
+      "containsSofiTerms": true
+    },
+    {
+      "url": "https://www.westkelownacity.ca/city-hall/budget/",
+      "depth": 1,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.westkelownacity.ca/city-hall/budget/",
+      "contentType": "text/html; charset=utf-8",
+      "bytes": 78471,
+      "sha256": "d898871f60a2cb08185d3ec74cc57a9ca424705c7c0fc543c1faa65d541e02b3",
+      "status": "html-read",
+      "containsSofiTerms": false
+    },
+    {
+      "url": "https://www.westkelownacity.ca/parks-recreation-facilities/financial-assistance-programs/",
+      "depth": 1,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.westkelownacity.ca/parks-recreation-facilities/financial-assistance-programs/",
+      "contentType": "text/html; charset=utf-8",
+      "bytes": 62459,
+      "sha256": "a402094b2a49a62416df7eece40ece7f80a81c3363764969a26684a1749f35a5",
+      "status": "html-read",
+      "containsSofiTerms": false
+    },
+    {
+      "url": "https://www.westkelownacity.ca/city-hall/budget/five-year-financial-plan/",
+      "depth": 2,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.westkelownacity.ca/city-hall/budget/five-year-financial-plan/",
+      "contentType": "text/html; charset=utf-8",
+      "bytes": 71322,
+      "sha256": "33720ae6ccce4353a077b934f7d5e149528b1310a185254f7682ab10da99d093",
+      "status": "html-read",
+      "containsSofiTerms": false
+    },
+    {
+      "url": "https://www.westkelownacity.ca/city-hall/budget/grants-in-aid/",
+      "depth": 2,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.westkelownacity.ca/city-hall/budget/grants-in-aid/",
+      "contentType": "text/html; charset=utf-8",
+      "bytes": 67754,
+      "sha256": "9b4072dabee720a7e745dfed545515f705139ce8d65455a7a53ab89e7c609400",
+      "status": "html-read",
+      "containsSofiTerms": false
+    },
+    {
+      "url": "https://www.westkelownacity.ca/city-hall/budget/past-tax-increases/",
+      "depth": 2,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.westkelownacity.ca/city-hall/budget/past-tax-increases/",
+      "contentType": "text/html; charset=utf-8",
+      "bytes": 65557,
+      "sha256": "4f4686155d65553d4b26f7a7e40e8d2d7c62e16b30fc4140d709b7a1251fa690",
+      "status": "html-read",
+      "containsSofiTerms": false
+    },
+    {
+      "url": "https://www.westkelownacity.ca/city-hall/budget/revenues-and-spending/",
+      "depth": 2,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.westkelownacity.ca/city-hall/budget/revenues-and-spending/",
+      "contentType": "text/html; charset=utf-8",
+      "bytes": 75285,
+      "sha256": "1b1fead22b9111478eece5471b5698eee02249f627503dba8143b30bddf2e41a",
+      "status": "html-read",
+      "containsSofiTerms": false
+    },
+    {
+      "url": "https://www.westkelownacity.ca/city-hall/",
+      "depth": 1,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.westkelownacity.ca/city-hall/",
+      "contentType": "text/html; charset=utf-8",
+      "bytes": 96664,
+      "sha256": "b7e85d1b468a63f2d8e07dabd3933a3e1e7a56cd46926078e05383d082f116ed",
+      "status": "html-read",
+      "containsSofiTerms": false
+    }
+  ],
+  "candidates": [
+    {
+      "url": "https://issuu.com/westkelownacity/docs/2022_annual_report_27june23_final",
+      "label": "2022 Annual Report",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.westkelownacity.ca/city-hall/annual-report-and-financial-statements/",
+      "yearsInLabel": [
+        "2022"
+      ]
+    },
+    {
+      "url": "https://issuu.com/westkelownacity/docs/2025_annual_report",
+      "label": "Click here to view the full 2025 Annual Report",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.westkelownacity.ca/city-hall/annual-report-and-financial-statements/",
+      "yearsInLabel": [
+        "2025"
+      ]
+    },
+    {
+      "url": "https://issuu.com/westkelownacity/docs/cwk_2023_annual_report?fr=xKAE9_zMzMw",
+      "label": "2023 Annual Report",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.westkelownacity.ca/city-hall/annual-report-and-financial-statements/",
+      "yearsInLabel": [
+        "2023"
+      ]
+    },
+    {
+      "url": "https://issuu.com/westkelownacity/docs/draft_2024_annual_report",
+      "label": "2024 Annual Report",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.westkelownacity.ca/city-hall/annual-report-and-financial-statements/",
+      "yearsInLabel": [
+        "2024"
+      ]
+    },
+    {
+      "url": "https://www.westkelownacity.ca/city-hall/annual-report-and-financial-statements/",
+      "label": "Annual Report and Financial Statements",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.westkelownacity.ca",
+      "yearsInLabel": []
+    },
+    {
+      "url": "https://media-003-ca.cdn.govstack.com/westkelownacity-ca/media/1mhd3clt/2014-annual-report.pdf",
+      "label": "2014 Annual Report",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.westkelownacity.ca/city-hall/annual-report-and-financial-statements/",
+      "yearsInLabel": [
+        "2014"
+      ]
+    },
+    {
+      "url": "https://media-003-ca.cdn.govstack.com/westkelownacity-ca/media/3zph3xsh/2016-annual-report.pdf",
+      "label": "2016 Annual Report",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.westkelownacity.ca/city-hall/annual-report-and-financial-statements/",
+      "yearsInLabel": [
+        "2016"
+      ]
+    },
+    {
+      "url": "https://media-003-ca.cdn.govstack.com/westkelownacity-ca/media/4byhxfpz/2016-cwk-audited-financial-statements.pdf",
+      "label": "2016 Financial Statements",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.westkelownacity.ca/city-hall/annual-report-and-financial-statements/",
+      "yearsInLabel": [
+        "2016"
+      ]
+    },
+    {
+      "url": "https://media-003-ca.cdn.govstack.com/westkelownacity-ca/media/4sfnsiwr/cwk-2021-year-end-financial-statements-final-signed.pdf",
+      "label": "2021 Financial Statements",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.westkelownacity.ca/city-hall/annual-report-and-financial-statements/",
+      "yearsInLabel": [
+        "2021"
+      ]
+    },
+    {
+      "url": "https://media-003-ca.cdn.govstack.com/westkelownacity-ca/media/abvd1bze/2011-financial-statements.pdf",
+      "label": "2011 Financial Statements",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.westkelownacity.ca/city-hall/annual-report-and-financial-statements/",
+      "yearsInLabel": [
+        "2011"
+      ]
+    },
+    {
+      "url": "https://media-003-ca.cdn.govstack.com/westkelownacity-ca/media/alilou3a/2008-annual-report-financial.pdf",
+      "label": "2008 Financial Statements",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.westkelownacity.ca/city-hall/annual-report-and-financial-statements/",
+      "yearsInLabel": [
+        "2008"
+      ]
+    },
+    {
+      "url": "https://media-003-ca.cdn.govstack.com/westkelownacity-ca/media/arxnf3cn/2015-financial-statements.pdf",
+      "label": "2015 Financial Statements",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.westkelownacity.ca/city-hall/annual-report-and-financial-statements/",
+      "yearsInLabel": [
+        "2015"
+      ]
+    },
+    {
+      "url": "https://media-003-ca.cdn.govstack.com/westkelownacity-ca/media/askhlo5v/west_kelowna-auditedfinancialstatements-2019.pdf",
+      "label": "2019 Financial Statements",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.westkelownacity.ca/city-hall/annual-report-and-financial-statements/",
+      "yearsInLabel": [
+        "2019"
+      ]
+    },
+    {
+      "url": "https://media-003-ca.cdn.govstack.com/westkelownacity-ca/media/b02b0q4u/2024-financial-statements-final.pdf",
+      "label": "2024 Financial Statements",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.westkelownacity.ca/city-hall/annual-report-and-financial-statements/",
+      "yearsInLabel": [
+        "2024"
+      ]
+    },
+    {
+      "url": "https://media-003-ca.cdn.govstack.com/westkelownacity-ca/media/c1kd4nqe/2025-city-of-west-kelowna-consolidated-financial-statements.pdf",
+      "label": "2025 Financial Statements",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.westkelownacity.ca/city-hall/annual-report-and-financial-statements/",
+      "yearsInLabel": [
+        "2025"
+      ]
+    },
+    {
+      "url": "https://media-003-ca.cdn.govstack.com/westkelownacity-ca/media/e2ahqpl3/2010-annual-report.pdf",
+      "label": "2010 Annual Report",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.westkelownacity.ca/city-hall/annual-report-and-financial-statements/",
+      "yearsInLabel": [
+        "2010"
+      ]
+    },
+    {
+      "url": "https://media-003-ca.cdn.govstack.com/westkelownacity-ca/media/eb5l5qbh/2011-annual-report.pdf",
+      "label": "2011 Annual Report",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.westkelownacity.ca/city-hall/annual-report-and-financial-statements/",
+      "yearsInLabel": [
+        "2011"
+      ]
+    },
+    {
+      "url": "https://media-003-ca.cdn.govstack.com/westkelownacity-ca/media/fgeju3q2/2018financialstatements.pdf",
+      "label": "2018 Financial Statements",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.westkelownacity.ca/city-hall/annual-report-and-financial-statements/",
+      "yearsInLabel": [
+        "2018"
+      ]
+    },
+    {
+      "url": "https://media-003-ca.cdn.govstack.com/westkelownacity-ca/media/idjearnm/2008-annual-report.pdf",
+      "label": "2008 Annual Report",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.westkelownacity.ca/city-hall/annual-report-and-financial-statements/",
+      "yearsInLabel": [
+        "2008"
+      ]
+    },
+    {
+      "url": "https://media-003-ca.cdn.govstack.com/westkelownacity-ca/media/ikjlxjl5/pay_transparency_report_2026.pdf",
+      "label": "2026 City of West Kelowna Pay Transparency Report",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.westkelownacity.ca/city-hall/annual-report-and-financial-statements/",
+      "yearsInLabel": [
+        "2026"
+      ]
+    },
+    {
+      "url": "https://media-003-ca.cdn.govstack.com/westkelownacity-ca/media/ivnmzv31/2025-draft-statement-of-financial-information.pdf",
+      "label": "Read the 2025 SOFI report",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.westkelownacity.ca/city-hall/annual-report-and-financial-statements/",
+      "yearsInLabel": [
+        "2025"
+      ]
+    },
+    {
+      "url": "https://media-003-ca.cdn.govstack.com/westkelownacity-ca/media/jfjmzxaz/2013-financial-statements.pdf",
+      "label": "2013 Financial Statements",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.westkelownacity.ca/city-hall/annual-report-and-financial-statements/",
+      "yearsInLabel": [
+        "2013"
+      ]
+    },
+    {
+      "url": "https://media-003-ca.cdn.govstack.com/westkelownacity-ca/media/kjmadmfp/2019annualreport-reduced-file-size.pdf",
+      "label": "2019 Annual Report",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.westkelownacity.ca/city-hall/annual-report-and-financial-statements/",
+      "yearsInLabel": [
+        "2019"
+      ]
+    },
+    {
+      "url": "https://media-003-ca.cdn.govstack.com/westkelownacity-ca/media/l3yeysdu/2009-annual-report-financial.pdf",
+      "label": "2009 Financial Statements",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.westkelownacity.ca/city-hall/annual-report-and-financial-statements/",
+      "yearsInLabel": [
+        "2009"
+      ]
+    },
+    {
+      "url": "https://media-003-ca.cdn.govstack.com/westkelownacity-ca/media/l4ld2ljg/2013-annual-report.pdf",
+      "label": "2013 Annual Report",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.westkelownacity.ca/city-hall/annual-report-and-financial-statements/",
+      "yearsInLabel": [
+        "2013"
+      ]
+    },
+    {
+      "url": "https://media-003-ca.cdn.govstack.com/westkelownacity-ca/media/lntarkz2/2012-annual-report.pdf",
+      "label": "2012 Annual Report",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.westkelownacity.ca/city-hall/annual-report-and-financial-statements/",
+      "yearsInLabel": [
+        "2012"
+      ]
+    },
+    {
+      "url": "https://media-003-ca.cdn.govstack.com/westkelownacity-ca/media/pyqhrlhl/2017-financial-statements-web.pdf",
+      "label": "2017 Financial Statements",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.westkelownacity.ca/city-hall/annual-report-and-financial-statements/",
+      "yearsInLabel": [
+        "2017"
+      ]
+    },
+    {
+      "url": "https://media-003-ca.cdn.govstack.com/westkelownacity-ca/media/qjyn5ab4/2010-annual-report-wid-lid-financial.pdf",
+      "label": "2010 LID/WID Financial Statements",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.westkelownacity.ca/city-hall/annual-report-and-financial-statements/",
+      "yearsInLabel": [
+        "2010"
+      ]
+    },
+    {
+      "url": "https://media-003-ca.cdn.govstack.com/westkelownacity-ca/media/qtbal34b/2021-annual-report_final.pdf",
+      "label": "2021 Annual Report",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.westkelownacity.ca/city-hall/annual-report-and-financial-statements/",
+      "yearsInLabel": [
+        "2021"
+      ]
+    },
+    {
+      "url": "https://media-003-ca.cdn.govstack.com/westkelownacity-ca/media/qusfsxuf/2010-annual-report-financial.pdf",
+      "label": "2010 Financial Statements",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.westkelownacity.ca/city-hall/annual-report-and-financial-statements/",
+      "yearsInLabel": [
+        "2010"
+      ]
+    },
+    {
+      "url": "https://media-003-ca.cdn.govstack.com/westkelownacity-ca/media/ry2pqpzn/2020_annualreport-full.pdf",
+      "label": "2020 Annual Report",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.westkelownacity.ca/city-hall/annual-report-and-financial-statements/",
+      "yearsInLabel": [
+        "2020"
+      ]
+    },
+    {
+      "url": "https://media-003-ca.cdn.govstack.com/westkelownacity-ca/media/rz1kbthp/2015-annual-report.pdf",
+      "label": "2015 Annual Report",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.westkelownacity.ca/city-hall/annual-report-and-financial-statements/",
+      "yearsInLabel": [
+        "2015"
+      ]
+    },
+    {
+      "url": "https://media-003-ca.cdn.govstack.com/westkelownacity-ca/media/tgwheai2/2017-annual-report-web-version.pdf",
+      "label": "2017 Annual Report",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.westkelownacity.ca/city-hall/annual-report-and-financial-statements/",
+      "yearsInLabel": [
+        "2017"
+      ]
+    },
+    {
+      "url": "https://media-003-ca.cdn.govstack.com/westkelownacity-ca/media/ulslz1im/2018annualreport-pages.pdf",
+      "label": "2018 Annual Report",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.westkelownacity.ca/city-hall/annual-report-and-financial-statements/",
+      "yearsInLabel": [
+        "2018"
+      ]
+    },
+    {
+      "url": "https://media-003-ca.cdn.govstack.com/westkelownacity-ca/media/vvopbara/2023-cwk-financial-statements-signed.pdf",
+      "label": "2023 Financial Statements",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.westkelownacity.ca/city-hall/annual-report-and-financial-statements/",
+      "yearsInLabel": [
+        "2023"
+      ]
+    },
+    {
+      "url": "https://media-003-ca.cdn.govstack.com/westkelownacity-ca/media/w40ikwbg/2014-financial-statements.pdf",
+      "label": "2014 Financial Statements",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.westkelownacity.ca/city-hall/annual-report-and-financial-statements/",
+      "yearsInLabel": [
+        "2014"
+      ]
+    },
+    {
+      "url": "https://media-003-ca.cdn.govstack.com/westkelownacity-ca/media/w5yp5tlq/2009-annual-report.pdf",
+      "label": "2009 Annual Report",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.westkelownacity.ca/city-hall/annual-report-and-financial-statements/",
+      "yearsInLabel": [
+        "2009"
+      ]
+    },
+    {
+      "url": "https://media-003-ca.cdn.govstack.com/westkelownacity-ca/media/wjwm1c5r/2012-financial-statements.pdf",
+      "label": "2012 Financial Statements",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.westkelownacity.ca/city-hall/annual-report-and-financial-statements/",
+      "yearsInLabel": [
+        "2012"
+      ]
+    },
+    {
+      "url": "https://media-003-ca.cdn.govstack.com/westkelownacity-ca/media/zmomz14d/2022-city-of-west-kelowna-final-financial-statements-signed.pdf",
+      "label": "2022 Financial Statements",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.westkelownacity.ca/city-hall/annual-report-and-financial-statements/",
+      "yearsInLabel": [
+        "2022"
+      ]
+    },
+    {
+      "url": "https://media-003-ca.cdn.govstack.com/westkelownacity-ca/media/zv5nrjok/2020-cwkfinancial-statements-final-signed.pdf",
+      "label": "2020 Financial Statements",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.westkelownacity.ca/city-hall/annual-report-and-financial-statements/",
+      "yearsInLabel": [
+        "2020"
+      ]
+    }
+  ]
+}

@@ -1556,6 +1556,8 @@ button.gallery__collecting-status, .gallery__collecting-graph {
 .salaries__intro p { margin: 8px 0 0; max-width: 70ch; font-size: 15px; line-height: 1.5; color: var(--ink-muted); }
 .salaries__heading { margin: 0; font-size: 22px; font-weight: 600; color: var(--ink); }
 .salaries__search { display: grid; grid-template-columns: 1fr auto; gap: 8px; }
+.salaries__desktop-filters { display: grid; gap: 16px; }
+.salaries__mobile-filters { display: none; }
 @media (max-width: 560px) { .salaries__search { grid-template-columns: 1fr; } .salaries-range__trigger { width: 100%; } }
 .salaries__search input, .salaries__search select {
   box-sizing: border-box;
@@ -1675,6 +1677,51 @@ button.gallery__collecting-status, .gallery__collecting-graph {
 .salaries__browse-bar .segmented { --track: var(--mid); --segment: var(--surface); }
 .salaries__browse-bar .segmented button { white-space: nowrap; }
 .salaries__intro .salaries__tiles { margin-top: 12px; }
+
+/* The main mobile filters use one modal sheet; its period chips stay inside that sheet. */
+.salaries__filter-field { min-width: 0; }
+.salaries__filter-label { display: block; margin: 0 0 8px; font-size: 14px; font-weight: 600; color: var(--ink); }
+.salaries__filter-trigger {
+  display: inline-flex; flex: none; align-items: center; justify-content: center; gap: 7px; min-height: 44px;
+  padding: 9px 12px; border: 1px solid var(--mid); border-radius: 10px;
+  background: var(--surface); color: var(--ink); font: inherit; font-size: 14px; font-weight: 600; cursor: pointer;
+}
+.salaries__filter-trigger:hover { background: var(--hover); }
+.salaries__filter-summary { min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-size: 12px; color: var(--ink-faint); }
+.salaries__filter-count { display: grid; place-items: center; min-width: 20px; height: 20px; padding: 0 5px; border-radius: 10px; background: var(--salaries-ink); color: var(--surface); font-size: 11px; font-variant-numeric: tabular-nums; }
+.salaries-filter-sheet {
+  position: fixed; inset: auto 0 var(--salaries-sheet-bottom, 0px); width: 100%; max-width: 560px; max-height: 90vh; max-height: var(--salaries-sheet-height, 90dvh); margin: 0 auto; padding: 0;
+  grid-template-rows: auto minmax(0, 1fr) auto; overflow: hidden;
+  border: 1px solid var(--outline); border-bottom: 0; border-radius: 20px 20px 0 0;
+  background: var(--surface); color: var(--ink); box-shadow: var(--menu-shadow-token);
+}
+.salaries-filter-sheet[open] { display: grid; }
+.salaries-filter-sheet::backdrop { background: rgb(0 0 0 / 0.4); }
+.salaries-filter-sheet__head { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 10px 12px 10px 18px; border-bottom: 1px solid var(--outline); }
+.salaries-filter-sheet__head h2 { margin: 0; font-size: 18px; font-weight: 600; }
+.salaries-filter-sheet__head h2:focus { outline: none; }
+.salaries-filter-sheet__close { display: grid; place-items: center; flex: none; width: 44px; height: 44px; padding: 0; border: 0; border-radius: 10px; background: transparent; color: var(--ink); cursor: pointer; }
+.salaries-filter-sheet__close:hover { background: var(--hover); }
+.salaries-filter-sheet__body { display: grid; gap: 22px; min-height: 0; padding: 18px; overflow-y: auto; overscroll-behavior: contain; }
+.salaries-filter-sheet input[type='search'] { min-width: 0; padding: 11px 44px 11px 12px; border: 1px solid var(--mid); border-radius: 10px; background: var(--surface); color: var(--ink); font: inherit; font-size: 16px; }
+.salaries-filter-sheet .salaries__chips { flex-wrap: wrap; overflow: visible; margin: 0; padding: 0; }
+.salaries-filter-sheet .salaries__chips button { min-height: 40px; }
+.salaries-filter-sheet__actions { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 12px 18px max(12px, env(safe-area-inset-bottom)); border-top: 1px solid var(--outline); background: var(--surface); }
+.salaries-filter-sheet__actions .salaries__more { min-height: 44px; min-width: 104px; margin: 0; }
+.salaries-filter-sheet__actions .salaries__link { min-height: 44px; font-size: 14px; }
+.salaries-filter-sheet__actions .salaries__link:disabled { opacity: 0.45; cursor: default; }
+.salaries__filter-trigger:focus-visible, .salaries-filter-sheet button:focus-visible { outline: 2px solid var(--salaries-ink); outline-offset: 2px; }
+.salaries-range--inline .salaries-range__panel { position: static; width: 100%; max-height: none; overflow: visible; padding: 0; border: 0; border-radius: 0; background: transparent; box-shadow: none; }
+
+@media (max-width: 639px) {
+  .salaries__desktop-filters { display: none; }
+  .salaries__mobile-filters { display: flex; align-items: center; justify-content: space-between; gap: 12px; min-width: 0; }
+  .salaries__browse-bar { flex-wrap: nowrap; gap: 6px; }
+  .salaries__browse-bar > .field:first-child:not(.field--compact) { flex: 1 1 auto; min-width: 0; max-width: none; }
+  .salaries__browse-bar .segmented { min-height: 44px; gap: 0; padding: 2px; }
+  .salaries__browse-bar .segmented button { flex: 1 1 auto; min-width: 0; min-height: 40px; padding: 4px; font-size: 12px; }
+  .salaries__browse-bar .field--compact .segmented button { min-height: 40px; padding: 4px 5px; font-size: 12px; }
+}
 
 .salaries__hint, .salaries__note { margin: 0; font-size: 14px; color: var(--ink-faint); }
 .salaries__head { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 8px 12px; margin-bottom: 8px; }

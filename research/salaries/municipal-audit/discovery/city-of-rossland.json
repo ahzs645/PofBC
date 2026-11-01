@@ -1,0 +1,134 @@
+{
+  "municipality": "Rossland",
+  "employerSlug": "city-of-rossland",
+  "website": "http://www.rossland.ca",
+  "checkedOn": "2026-10-31",
+  "method": "Bounded traversal of links actually present on the official website; at most two link hops.",
+  "status": "source-links-found-awaiting-review",
+  "pagesChecked": [
+    {
+      "url": "https://www.rossland.ca",
+      "depth": 0,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://rossland.ca/",
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 285041,
+      "sha256": "a1fee4bade4ced282b297472501dbd3334c72f032dab602c9455464a8e7412b4",
+      "status": "html-read",
+      "containsSofiTerms": false
+    },
+    {
+      "url": "https://rossland.ca/departments/financial-services/",
+      "depth": 1,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://rossland.ca/departments/financial-services/",
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 274619,
+      "sha256": "cbb7f7f8d18a41ae35886f165a2c4986c79af3e8c99a243760170cda429aefdb",
+      "status": "html-read",
+      "containsSofiTerms": true
+    },
+    {
+      "url": "https://rossland.ca/recreation/financial-assistance/",
+      "depth": 1,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://rossland.ca/recreation/financial-assistance/",
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 268136,
+      "sha256": "0b9c52e61fa456429a94c14ad1581077b0febfdb32262bb9dd79ae247625f5ac",
+      "status": "html-read",
+      "containsSofiTerms": false
+    },
+    {
+      "url": "https://rossland.ca/departments/financial-services/financial-budgets-plans-reports/",
+      "depth": 2,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://rossland.ca/departments/financial-services/financial-budgets-plans-reports/",
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 269925,
+      "sha256": "137287a382047f4f707ced6f885107f2c3970b0895b8605d64a40f1726189aa1",
+      "status": "html-read",
+      "containsSofiTerms": true
+    },
+    {
+      "url": "https://rossland.ca/departments/financial-services/grant-funding/",
+      "depth": 2,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://rossland.ca/departments/financial-services/grant-funding/",
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 265788,
+      "sha256": "a2b2b94c70c0efeb82a82a7579f617188aa65cc850c058d1f2843679e9c71287",
+      "status": "html-read",
+      "containsSofiTerms": false
+    },
+    {
+      "url": "https://rossland.ca/",
+      "depth": 1,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://rossland.ca/",
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 285041,
+      "sha256": "a1fee4bade4ced282b297472501dbd3334c72f032dab602c9455464a8e7412b4",
+      "status": "html-read",
+      "containsSofiTerms": false
+    },
+    {
+      "url": "https://rossland.ca/buzz_items/election2026/",
+      "depth": 1,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://rossland.ca/buzz_items/election2026/",
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 289953,
+      "sha256": "e36b87d0f8c49c7af6a2d69e2d0e61918d2236ebecf190cc4b4fed0d6e412c24",
+      "status": "html-read",
+      "containsSofiTerms": false
+    },
+    {
+      "url": "https://rossland.ca/city-hall/news-and-notices/",
+      "depth": 1,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://rossland.ca/news-and-notices/",
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 269059,
+      "sha256": "ededec195405b67850591d598860a75b256274fcf55f05a4c6ba0d35a6e681cc",
+      "status": "html-read",
+      "containsSofiTerms": false
+    },
+    {
+      "url": "https://rossland.ca/departments/",
+      "depth": 1,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://rossland.ca/departments/",
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 273285,
+      "sha256": "5819c031eecbb6d65a8205efa0dcac6d51348306373a5bc0562056f40e7f69b1",
+      "status": "html-read",
+      "containsSofiTerms": false
+    }
+  ],
+  "candidates": [
+    {
+      "url": "https://rossland.civicweb.net/filepro/documents/3615/",
+      "label": "Annual Report",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://rossland.ca/departments/financial-services/financial-budgets-plans-reports/",
+      "yearsInLabel": []
+    },
+    {
+      "url": "https://rossland.civicweb.net/filepro/documents/7042/",
+      "label": "SOFI Report",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://rossland.ca/departments/financial-services/financial-budgets-plans-reports/",
+      "yearsInLabel": []
+    }
+  ]
+}

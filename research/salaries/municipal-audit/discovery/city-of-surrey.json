@@ -1,0 +1,463 @@
+{
+  "municipality": "Surrey",
+  "employerSlug": "city-of-surrey",
+  "website": "http://www.surrey.ca",
+  "checkedOn": "2026-10-31",
+  "method": "Bounded traversal of links actually present on the official website; at most two link hops.",
+  "status": "source-links-found-awaiting-review",
+  "pagesChecked": [
+    {
+      "url": "https://www.surrey.ca",
+      "depth": 0,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.surrey.ca",
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 124216,
+      "sha256": "b98670190f4cf5aa92f03ab5e810ff3fff0a7a68caa9864035c42ffc7f4ee99c",
+      "status": "html-read",
+      "containsSofiTerms": false
+    },
+    {
+      "url": "https://www.surrey.ca/city-government/city-budget",
+      "depth": 1,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.surrey.ca/city-government/city-budget",
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 132461,
+      "sha256": "ac72d182315f01b84fd1b56dd3c0d181255d4e702bf585322bb49d8e793399c8",
+      "status": "html-read",
+      "containsSofiTerms": false
+    },
+    {
+      "url": "https://engage.surrey.ca/budget-2026",
+      "depth": 2,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://engage.surrey.ca/budget-2026",
+      "contentType": "text/html; charset=utf-8",
+      "bytes": 47280,
+      "sha256": "5aee914baa62fa87305a28914cff357a5ed1444a7753b26c00ba4b21ef873d1f",
+      "status": "html-read",
+      "containsSofiTerms": false
+    },
+    {
+      "url": "https://www.surrey.ca/city-government/city-departments/finance/financial-documents",
+      "depth": 2,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.surrey.ca/city-government/city-departments/finance/financial-documents",
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 135629,
+      "sha256": "5b4dde077807e70a8c630061da468c1a0ead2c6bd99aa9dee4517a2527de6b46",
+      "status": "html-read",
+      "containsSofiTerms": true
+    },
+    {
+      "url": "https://www.surrey.ca/city-government",
+      "depth": 1,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.surrey.ca/city-government",
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 139127,
+      "sha256": "d952cdb9f9fa93c811374aa9553991e385dbf90c60ae069875bb6b1e8929d7bb",
+      "status": "html-read",
+      "containsSofiTerms": false
+    },
+    {
+      "url": "https://www.surrey.ca/city-government/mayor-council/council-financial-statements",
+      "depth": 2,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.surrey.ca/city-government/mayor-council/council-financial-statements",
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 123111,
+      "sha256": "4317ef3b79088a9f2e98952e5ab4b5b22c84bb1152df0948fa1a6cfc34fafd09",
+      "status": "html-read",
+      "containsSofiTerms": false
+    },
+    {
+      "url": "https://www.surrey.ca/city-government/city-departments/finance",
+      "depth": 2,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.surrey.ca/city-government/city-departments/finance",
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 123289,
+      "sha256": "310d2f3bd9fb5ea6ae05192dff03b3593209629ef8aa54545f2aca20cb7b968f",
+      "status": "html-read",
+      "containsSofiTerms": true
+    },
+    {
+      "url": "https://www.surrey.ca/city-government/city-departments/finance/accounts-payable",
+      "depth": 2,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.surrey.ca/city-government/city-departments/finance/accounts-payable",
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 115853,
+      "sha256": "387078870d3a17a5f5c399b4cc8c1ca5a423b028b6d4d4e074813835672c2eda",
+      "status": "html-read",
+      "containsSofiTerms": false
+    },
+    {
+      "url": "https://www.surrey.ca/city-government/city-departments/finance/procurement-services",
+      "depth": 2,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.surrey.ca/city-government/city-departments/finance/procurement-services",
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 117591,
+      "sha256": "58b164ccbaa9a09ed392449cb318be4cb2c8320561f2ab073f0bfe1ef571649f",
+      "status": "html-read",
+      "containsSofiTerms": false
+    }
+  ],
+  "candidates": [
+    {
+      "url": "https://Flipbook-surrey-ca.cld.bz/City-of-Surrey-s-2023-Annual-Financial-Report",
+      "label": "Interactive version",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.surrey.ca/city-government/city-departments/finance/financial-documents",
+      "yearsInLabel": [
+        "2023"
+      ]
+    },
+    {
+      "url": "https://Flipbook-surrey-ca.cld.bz/City-of-Surrey-s-Annual-Financial-Report-2022",
+      "label": "Interactive version",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.surrey.ca/city-government/city-departments/finance/financial-documents",
+      "yearsInLabel": [
+        "2022"
+      ]
+    },
+    {
+      "url": "https://flipbook-surrey-ca.cld.bz/City-of-Surrey-s-2024-Annual-Financial-Report",
+      "label": "Interactive version",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.surrey.ca/city-government/city-departments/finance/financial-documents",
+      "yearsInLabel": [
+        "2024"
+      ]
+    },
+    {
+      "url": "https://flipbook-surrey-ca.cld.bz/City-of-Surrey-s-2025-Annual-Financial-Report",
+      "label": "Interactive version",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.surrey.ca/city-government/city-departments/finance/financial-documents",
+      "yearsInLabel": [
+        "2025"
+      ]
+    },
+    {
+      "url": "https://flipbook-surrey-ca.cld.bz/City-of-Surrey-s-Annual-Financial-Report-2021",
+      "label": "Interactive version",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.surrey.ca/city-government/city-departments/finance/financial-documents",
+      "yearsInLabel": [
+        "2021"
+      ]
+    },
+    {
+      "url": "https://www.surrey.ca/city-government/council-meetings-documents/corporate-reports/r209-quarterly-financial-report-third-quarter-2024",
+      "label": "2024 3rd Quarterly Financial Report",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.surrey.ca/city-government/city-departments/finance/financial-documents",
+      "yearsInLabel": [
+        "2024"
+      ]
+    },
+    {
+      "url": "https://www.surrey.ca/city-government/mayor-council/council-financial-statements",
+      "label": "Council Financial Statements",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.surrey.ca/city-government",
+      "yearsInLabel": []
+    },
+    {
+      "url": "https://www2.gov.bc.ca/gov/content/governments/local-governments/finance/financial-reporting",
+      "label": "Ministry of Municipal Affairs - Local Government Financial Reporting website",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.surrey.ca/city-government/city-departments/finance/financial-documents",
+      "yearsInLabel": []
+    },
+    {
+      "url": "https://www.surrey.ca/sites/default/files/media/documents/2021AnnualFinancialReport.pdf",
+      "label": "2021 Annual Financial Report",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.surrey.ca/city-government/city-departments/finance/financial-documents",
+      "yearsInLabel": [
+        "2021"
+      ]
+    },
+    {
+      "url": "https://www.surrey.ca/sites/default/files/media/documents/2021AnnualFinancialReportHighlights.pdf",
+      "label": "2021 Annual Financial Report Highlights",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.surrey.ca/city-government/city-departments/finance/financial-documents",
+      "yearsInLabel": [
+        "2021"
+      ]
+    },
+    {
+      "url": "https://www.surrey.ca/sites/default/files/media/documents/2021SurreyPublicLibrariesStatementFinancialInformation.pdf",
+      "label": "2021 SOFI - Statement of Financial Information - Library",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.surrey.ca/city-government/city-departments/finance/financial-documents",
+      "yearsInLabel": [
+        "2021"
+      ]
+    },
+    {
+      "url": "https://www.surrey.ca/sites/default/files/media/documents/2021SurreyStatementFinancialInformation.pdf",
+      "label": "2021 SOFI - Statement of Financial Information",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.surrey.ca/city-government/city-departments/finance/financial-documents",
+      "yearsInLabel": [
+        "2021"
+      ]
+    },
+    {
+      "url": "https://www.surrey.ca/sites/default/files/media/documents/2022-2026SurreyFinancialPlan.pdf",
+      "label": "2022 – 2026 Financial Plan",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.surrey.ca/city-government/city-departments/finance/financial-documents",
+      "yearsInLabel": [
+        "2022",
+        "2026"
+      ]
+    },
+    {
+      "url": "https://www.surrey.ca/sites/default/files/media/documents/2022-libraries-statement-financial-information.pdf",
+      "label": "2022 SOFI - Statement of Financial Information - Library",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.surrey.ca/city-government/city-departments/finance/financial-documents",
+      "yearsInLabel": [
+        "2022"
+      ]
+    },
+    {
+      "url": "https://www.surrey.ca/sites/default/files/media/documents/2022-surrey-statement-financial-information.pdf",
+      "label": "2022 SOFI - Statement of Financial Information",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.surrey.ca/city-government/city-departments/finance/financial-documents",
+      "yearsInLabel": [
+        "2022"
+      ]
+    },
+    {
+      "url": "https://www.surrey.ca/sites/default/files/media/documents/2022AnnualFinancialReport.pdf",
+      "label": "2022 Annual Financial Report",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.surrey.ca/city-government/city-departments/finance/financial-documents",
+      "yearsInLabel": [
+        "2022"
+      ]
+    },
+    {
+      "url": "https://www.surrey.ca/sites/default/files/media/documents/2022AnnualFinancialReportHighlights.pdf",
+      "label": "2022 Annual Financial Report Highlights",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.surrey.ca/city-government/city-departments/finance/financial-documents",
+      "yearsInLabel": [
+        "2022"
+      ]
+    },
+    {
+      "url": "https://www.surrey.ca/sites/default/files/media/documents/2023-2027SurreyFinancialPlan.pdf",
+      "label": "2023 – 2027 Financial Plan",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.surrey.ca/city-government/city-departments/finance/financial-documents",
+      "yearsInLabel": [
+        "2023",
+        "2027"
+      ]
+    },
+    {
+      "url": "https://www.surrey.ca/sites/default/files/media/documents/2023-Annual-Financial-Report-Highlights.pdf",
+      "label": "2023 Annual Financial Report Highlights",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.surrey.ca/city-government/city-departments/finance/financial-documents",
+      "yearsInLabel": [
+        "2023"
+      ]
+    },
+    {
+      "url": "https://www.surrey.ca/sites/default/files/media/documents/2023-Annual-Financial-Report.pdf",
+      "label": "2023 Annual Financial Report",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.surrey.ca/city-government/city-departments/finance/financial-documents",
+      "yearsInLabel": [
+        "2023"
+      ]
+    },
+    {
+      "url": "https://www.surrey.ca/sites/default/files/media/documents/2023-libraries-statement-financial-information.pdf",
+      "label": "2023 SOFI - Statement of Financial Information - Library",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.surrey.ca/city-government/city-departments/finance/financial-documents",
+      "yearsInLabel": [
+        "2023"
+      ]
+    },
+    {
+      "url": "https://www.surrey.ca/sites/default/files/media/documents/2023-surrey-statement-financial-information.pdf",
+      "label": "2023 SOFI - Statement of Financial Information",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.surrey.ca/city-government/city-departments/finance/financial-documents",
+      "yearsInLabel": [
+        "2023"
+      ]
+    },
+    {
+      "url": "https://www.surrey.ca/sites/default/files/media/documents/2024-2028-Surrey-Financial-Plan.pdf",
+      "label": "2024 – 2028 Financial Plan",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.surrey.ca/city-government/city-departments/finance/financial-documents",
+      "yearsInLabel": [
+        "2024",
+        "2028"
+      ]
+    },
+    {
+      "url": "https://www.surrey.ca/sites/default/files/media/documents/2024-Annual-Financial-Report-Highlights.pdf",
+      "label": "2024 Annual Financial Report Highlights",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.surrey.ca/city-government/city-departments/finance/financial-documents",
+      "yearsInLabel": [
+        "2024"
+      ]
+    },
+    {
+      "url": "https://www.surrey.ca/sites/default/files/media/documents/2024-Annual-Financial-Report.pdf",
+      "label": "2024 Annual Financial Report",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.surrey.ca/city-government/city-departments/finance/financial-documents",
+      "yearsInLabel": [
+        "2024"
+      ]
+    },
+    {
+      "url": "https://www.surrey.ca/sites/default/files/media/documents/2024-libraries-statement-financial-information.pdf",
+      "label": "2024 SOFI - Statement of Financial Information - Library",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.surrey.ca/city-government/city-departments/finance/financial-documents",
+      "yearsInLabel": [
+        "2024"
+      ]
+    },
+    {
+      "url": "https://www.surrey.ca/sites/default/files/media/documents/2024-surrey-statement-financial-information.pdf",
+      "label": "2024 SOFI - Statement of Financial Information",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.surrey.ca/city-government/city-departments/finance/financial-documents",
+      "yearsInLabel": [
+        "2024"
+      ]
+    },
+    {
+      "url": "https://www.surrey.ca/sites/default/files/media/documents/2025-1st-quarterly-financial-report.pdf",
+      "label": "2025 1st Quarterly Financial Report",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.surrey.ca/city-government/city-departments/finance/financial-documents",
+      "yearsInLabel": [
+        "2025"
+      ]
+    },
+    {
+      "url": "https://www.surrey.ca/sites/default/files/media/documents/2025-2029-Surrey-Financial-Plan.pdf",
+      "label": "2025 – 2029 Financial Plan",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.surrey.ca/city-government/city-departments/finance/financial-documents",
+      "yearsInLabel": [
+        "2025",
+        "2029"
+      ]
+    },
+    {
+      "url": "https://www.surrey.ca/sites/default/files/media/documents/2025-Annual-Financial-Report-Highlights.pdf",
+      "label": "2025 Annual Financial Report Highlights",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.surrey.ca/city-government/city-departments/finance/financial-documents",
+      "yearsInLabel": [
+        "2025"
+      ]
+    },
+    {
+      "url": "https://www.surrey.ca/sites/default/files/media/documents/2025-Annual-Financial-Report.pdf",
+      "label": "2025 Annual Financial Report",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.surrey.ca/city-government/city-departments/finance/financial-documents",
+      "yearsInLabel": [
+        "2025"
+      ]
+    },
+    {
+      "url": "https://www.surrey.ca/sites/default/files/media/documents/2025-SOFI-Statement-of-Financial-Information.pdf",
+      "label": "2025 SOFI - Statement of Financial Information",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.surrey.ca/city-government/city-departments/finance/financial-documents",
+      "yearsInLabel": [
+        "2025"
+      ]
+    },
+    {
+      "url": "https://www.surrey.ca/sites/default/files/media/documents/2025-Statement-of-Financial-Information-Surrey-Public-Library.pdf",
+      "label": "2025 SOFI - Statement of Financial Information - Library",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.surrey.ca/city-government/city-departments/finance/financial-documents",
+      "yearsInLabel": [
+        "2025"
+      ]
+    },
+    {
+      "url": "https://www.surrey.ca/sites/default/files/media/documents/2026-2030-Surrey-Financial-Plan.pdf",
+      "label": "2026 – 2030 Financial Plan",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.surrey.ca/city-government/city-departments/finance/financial-documents",
+      "yearsInLabel": [
+        "2026",
+        "2030"
+      ]
+    },
+    {
+      "url": "https://www.surrey.ca/sites/default/files/media/documents/CR_2025-R163.pdf",
+      "label": "2025 2nd Quarterly Financial Report",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.surrey.ca/city-government/city-departments/finance/financial-documents",
+      "yearsInLabel": [
+        "2025"
+      ]
+    },
+    {
+      "url": "https://www.surrey.ca/sites/default/files/media/documents/CR_2025_R259.pdf",
+      "label": "2025 3rd Quarterly Financial Report",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.surrey.ca/city-government/city-departments/finance/financial-documents",
+      "yearsInLabel": [
+        "2025"
+      ]
+    },
+    {
+      "url": "https://www.surrey.ca/sites/default/files/media/documents/Quarterly-Financial-Report-First-Quarter-2026.pdf",
+      "label": "2026 1st Quarterly Financial Report",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.surrey.ca/city-government/city-departments/finance/financial-documents",
+      "yearsInLabel": [
+        "2026"
+      ]
+    },
+    {
+      "url": "https://www.surrey.ca/sites/default/files/media/documents/Quarterly-Financial-Report-Second-Quarter-2026.pdf",
+      "label": "2026 2nd Quarterly Financial Report",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.surrey.ca/city-government/city-departments/finance/financial-documents",
+      "yearsInLabel": [
+        "2026"
+      ]
+    }
+  ]
+}

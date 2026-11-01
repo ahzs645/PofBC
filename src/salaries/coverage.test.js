@@ -1,6 +1,14 @@
 import { test } from 'node:test'
 import assert from 'node:assert/strict'
+import { sourceWarnings } from './coverage.js'
 import { coverageAt, categoryCoverage, shortYearLabel, reportingYearLabel, relevantYearIndexes, samePeriodKinds, coverageStatus, disclosurePeriod, expenseLabel, filterEmployers, gapReason, gapRuns, missingYearMessage, rowCoverage, scopeLabel, sourceHref, thresholdLabel, yearAvailability } from './coverage.js'
+
+test('source caveats follow the selected cohort without leaking into a separate council schedule', () => {
+  const sources = { staff: { publicWarning: 'Employee expenses do not reconcile.' }, council: {},
+    other: { publicWarning: 'Employee expenses do not reconcile.' } }
+  assert.deepEqual(sourceWarnings(['staff', 'staff', 'other', 'missing'], sources), ['Employee expenses do not reconcile.'])
+  assert.deepEqual(sourceWarnings(['council'], sources), [])
+})
 
 test('calendar labels stay distinct and elected officials do not inherit employee thresholds', () => {
   assert.equal(shortYearLabel('2020'), '2020')
@@ -34,6 +42,7 @@ test('missing or excluded employer data cannot imply no employment', () => {
 
 test('scope and exact period come from evidence, never the collection label', () => {
   assert.equal(scopeLabel('executive-only'), 'Executive compensation only')
+  assert.equal(scopeLabel('school-trustees'), 'School trustee remuneration')
   assert.match(scopeLabel('mixed-disclosure'), /Combined/)
   assert.equal(scopeLabel('deputy-minister-remuneration'), 'Deputy minister remuneration')
   assert.equal(scopeLabel('appointee-remuneration'), 'Order in Council appointee remuneration')

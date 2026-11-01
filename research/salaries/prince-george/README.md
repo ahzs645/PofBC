@@ -1,9 +1,16 @@
-# City of Prince George: six calendar years processed
+# City of Prince George: seven calendar years recovered
 
 Reviewed 30 October 2026. These reports add **2,420 employee payment records** and
 **58 elected-official payment records**. Each record uses its actual January to
 December year, its source cents and its physical PDF page. The two cohorts have
 separate source IDs/files/categories under `city-of-prince-george`.
+
+**Update, 31 October 2026:** the original 2023 attachment has now been recovered.
+Its **404 employee records and nine elected-official records** are accepted in the
+[municipal-north collection](../municipal-north/README.md), with exact component
+controls and independent PDF readers. Combined with this six-report collection,
+Prince George now has 2,824 employee observations and 67 elected-official
+observations across calendar 2019–2025. The table below includes the recovered year.
 
 | Calendar year | Employee records | Employee remuneration | Employee expenses | Elected-official records |
 |---|---:|---:|---:|---:|
@@ -11,14 +18,16 @@ separate source IDs/files/categories under `city-of-prince-george`.
 | 2020 | 383 | $39,783,531.91 | $295,107.17 | 9 |
 | 2021 | 330 | $33,727,467.86 | $403,652.77 | 9 |
 | 2022 | 365 | $39,114,631.12 | $469,638.76 | 13 |
-| 2023 | pending | pending | pending | pending |
+| 2023 | 404 | $42,084,726.65 | $569,397.71 | 9 |
 | 2024 | 467 | $51,605,355.75 | $785,536.69 | 9 |
 | 2025 | 531 | $57,720,981.90 | $756,747.67 | 9 |
 
 The [official financial-report index](https://www.princegeorge.ca/finance) supplies
 the links retained in [sources.json](sources.json). The official 2023 eScribe
-attachment returned HTTP 403 again on 30 October; its contents remain unverified
-and no 2023 records are invented.
+attachment's earlier HTTP 403 hold was resolved on 31 October. Its accepted
+source IDs, original fingerprint and physical pages are recorded in
+[the northern manifest](../municipal-north/sources.json); the resolved lead remains
+documented in this collection's manifest.
 
 ## Extraction and controls
 
@@ -48,14 +57,14 @@ overtime, vacation and other compensation. The import uses that total once and
 checks it against the component sum for every row. It does not add the total to
 its components.
 
-For **2022, 2024 and 2025**, the source publishes base pay and all other
+For **2022–2025**, the source publishes base pay and all other
 compensation in separate columns. Their exact sum is the remuneration field;
 expenses remain separate. The footnote defines other compensation to include
 vacation, overtime, shift premiums, sick gratuity and sick-bank payouts. Base pay
 alone can be below $75,000 even when total remuneration exceeds the threshold.
 
 Library employees appear within the combined 2019 schedule and in an explicit
-Library group in 2020–2022. The 2024–2025 employee schedules contain no Library
+Library group in 2020–2023. The 2024–2025 employee schedules contain no Library
 group. The import preserves the City report's actual cohort rather than assuming
 all years cover the same organization boundary.
 

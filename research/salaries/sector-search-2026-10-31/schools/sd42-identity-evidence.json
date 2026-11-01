@@ -1,0 +1,89 @@
+{
+  "reviewed": "2026-10-31",
+  "decisionScope": "Identity and overlap evidence for root review. This sector agent does not edit aliases or delete compiled records.",
+  "canonicalOfficialIdentity": "School District No.42 (Maple Ridge - Pitt Meadows)",
+  "officialIdentityEvidence": {
+    "sourceUrl": "https://www.sd42.ca/assets/media/2023-24-SOFI-Report.pdf",
+    "sourceIndexUrl": "https://www.sd42.ca/financial-information/",
+    "sourceSha256": "a7c575f155fab04072f9880f7ea48454496064e3358a607d9ecddc764049d197",
+    "fiscalYear": "2023/24",
+    "fiscalYearEnd": "2024-06-30",
+    "identityAndPeriodOnEmployeePhysicalPages": [
+      52,
+      53,
+      54,
+      55,
+      56,
+      57,
+      58,
+      59,
+      60,
+      61,
+      62,
+      63,
+      64,
+      65,
+      66,
+      67,
+      68,
+      69,
+      70,
+      71
+    ],
+    "heading": "THE BOARD OF EDUCATION OF SCHOOL DISTRICT NO.42 (MAPLE RIDGE - PITT MEADOWS); YEAR ENDED JUNE 30, 2024"
+  },
+  "compiledIdentity": {
+    "slug": "ridge-meadows-school-district",
+    "names": [
+      "Ridge-Meadows school district"
+    ],
+    "sourceSnapshot": "research/salaries/compiled-baseline.json.gzip",
+    "snapshotSha256": "410bcae27c9755e387c473ab44d62081a50b46e7330f4d6d5c0b74979d392760",
+    "label": "2023/24",
+    "rows": 1030
+  },
+  "officialEmployeeRows": 1030,
+  "all1030CompiledEmployeeNamesHaveCorrespondingOfficialSD42Names": true,
+  "officialEmployeeNameMultiplicityIsOneToOne": true,
+  "examples": [
+    {
+      "compiledName": "Dhillon, Hardeep",
+      "compiledTitle": "Superintendent",
+      "compiledRemuneration": 287515,
+      "compiledExpenses": 11589,
+      "officialName": "DHILLON, HARDEEP",
+      "officialTitle": "SUPERINTENDENT",
+      "officialRemuneration": 287514.88,
+      "officialExpenses": 11588.59,
+      "officialPhysicalPage": 55
+    },
+    {
+      "compiledName": "Rennie, Richard J.",
+      "compiledTitle": "Secretary Treasurer",
+      "compiledRemuneration": 249958,
+      "compiledExpenses": 11950,
+      "officialName": "RENNIE, RICHARD J.",
+      "officialTitle": "SECRETARY TREASURER",
+      "officialRemuneration": 249958,
+      "officialExpenses": 11949.51,
+      "officialPhysicalPage": 66
+    },
+    {
+      "compiledName": "Schwarz, Cheryl",
+      "compiledTitle": "Deputy Superintendent",
+      "compiledRemuneration": 223987,
+      "compiledExpenses": 12015,
+      "officialName": "SCHWARZ, CHERYL",
+      "officialTitle": "DEPUTY SUPERINTENDENT",
+      "officialRemuneration": 223986.88,
+      "officialExpenses": 12014.9,
+      "officialPhysicalPage": 67
+    }
+  ],
+  "cautions": [
+    "Identity correspondence does not prove every compiled amount correct. The original cents, signs and missing values take precedence in a reviewed official source.",
+    "The compiled Ridge-Meadows group is employee-only; the original has seven additional trustees in a separate cohort.",
+    "Older Maple Ridge/Pitt Meadows FY2017/18 compiled data include six trustees; FY2020/21 compiled employee coverage is incomplete. Review whole employee/trustee cohorts separately.",
+    "Compiled whole dollars and source cents require an explicit reviewed same-fiscal source decision; there is no automatic general rounding-based deletion rule in this collection."
+  ]
+}

@@ -1,0 +1,229 @@
+{
+  "municipality": "Port Moody",
+  "employerSlug": "city-of-port-moody",
+  "website": "http://www.portmoody.ca",
+  "checkedOn": "2026-10-31",
+  "method": "Bounded traversal of links actually present on the official website; at most two link hops.",
+  "status": "source-links-found-awaiting-review",
+  "pagesChecked": [
+    {
+      "url": "https://www.portmoody.ca",
+      "depth": 0,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.portmoody.ca",
+      "contentType": "text/html; charset=utf-8",
+      "bytes": 93702,
+      "sha256": "3546f2fc939193b4895ffda8388da402c8b4b88a44e19d2d32ac6b54bf624004",
+      "status": "html-read",
+      "containsSofiTerms": false
+    },
+    {
+      "url": "https://ecalendar.portmoody.ca/meetings/detail/2026-11-17-1702-Finance-Committee",
+      "depth": 1,
+      "checkedOn": "2026-10-31",
+      "status": "fetch-failed",
+      "error": "HTTP Error 403: Forbidden",
+      "httpStatus": 403
+    },
+    {
+      "url": "https://www.portmoody.ca/city-government/budget-and-finances/",
+      "depth": 1,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.portmoody.ca/city-government/budget-and-finances/",
+      "contentType": "text/html; charset=utf-8",
+      "bytes": 78754,
+      "sha256": "3ec349838efee5b74467bc4604ab27a339be1de668cd06967c25c2c71f0d8b76",
+      "status": "html-read",
+      "containsSofiTerms": true
+    },
+    {
+      "url": "https://www.portmoody.ca/city-government/budget-and-finances/statement-of-financial-information/",
+      "depth": 2,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.portmoody.ca/city-government/budget-and-finances/statement-of-financial-information/",
+      "contentType": "text/html; charset=utf-8",
+      "bytes": 77678,
+      "sha256": "58cd72fc4fef34fcbd07b80bb86fcf054bdc9a73f86872ee26c566013768ab78",
+      "status": "html-read",
+      "containsSofiTerms": true
+    },
+    {
+      "url": "https://www.portmoody.ca/eDocs/PortMoody?docnumber=674189",
+      "depth": 2,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://portmoody-edocs.ghdcdn.com/v1/eDocs/PortMoody?docnumber=674189",
+      "contentType": "application/pdf",
+      "bytes": 2369284,
+      "sha256": "3c2a723f83b778b7853ce7b4963de9ac68740eacbc7699b74c78501edda8ae21",
+      "status": "pdf-downloaded-unreviewed"
+    },
+    {
+      "url": "https://www.portmoody.ca/eDocs/get?docnumber=672715",
+      "depth": 2,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://portmoody-edocs.ghdcdn.com/v1/eDocs/PortMoody?docnumber=672715",
+      "contentType": "application/pdf",
+      "bytes": 3316272,
+      "sha256": "d1f1001f0bcf747dc6c03a919720760c9f83bd51bd1f08398974c5da433a212a",
+      "status": "pdf-downloaded-unreviewed"
+    },
+    {
+      "url": "https://www.portmoody.ca/city-government/budget-and-finances/annual-budgets/",
+      "depth": 2,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.portmoody.ca/city-government/budget-and-finances/annual-budgets/",
+      "contentType": "text/html; charset=utf-8",
+      "bytes": 102531,
+      "sha256": "34d42b0266873138618c64d0fecb4139b3fe4efba8597698f8558762d6dbd3a6",
+      "status": "html-read",
+      "containsSofiTerms": true
+    },
+    {
+      "url": "https://www.portmoody.ca/city-government/budget-and-finances/past-budgets/",
+      "depth": 2,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.portmoody.ca/city-government/budget-and-finances/past-budgets/",
+      "contentType": "text/html; charset=utf-8",
+      "bytes": 239908,
+      "sha256": "319b1ed9fa0336aeaf1b9e0eb78995b04eccabd5abb36cf696037cf08cfe6f0f",
+      "status": "html-read",
+      "containsSofiTerms": true
+    },
+    {
+      "url": "https://www.portmoody.ca/eDocs/Get?docnumber=671931",
+      "depth": 2,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://portmoody-edocs.ghdcdn.com/v1/eDocs/PortMoody?docnumber=671931",
+      "contentType": "application/pdf",
+      "bytes": 1346165,
+      "sha256": "7f96068e40d9439ad798c5e6f03477809dfb67f87b61bba44312d7355488799c",
+      "status": "pdf-downloaded-unreviewed"
+    }
+  ],
+  "candidates": [
+    {
+      "url": "https://www.portmoody.ca/city-government/budget-and-finances/statement-of-financial-information/",
+      "label": "Statement of Financial Information",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.portmoody.ca/city-government/budget-and-finances/",
+      "yearsInLabel": []
+    },
+    {
+      "url": "https://media-002-ca.cdn.govstack.com/portmoody-014-ca/media/0n3nhqjd/2024-statement-of-financial-information.pdf",
+      "label": "2024 Statement of Financial Information",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.portmoody.ca/city-government/budget-and-finances/statement-of-financial-information/",
+      "yearsInLabel": [
+        "2024"
+      ]
+    },
+    {
+      "url": "https://media-002-ca.cdn.govstack.com/portmoody-014-ca/media/bk5efsqj/2020-budget-booklet.pdf",
+      "label": "2020 Budget Guide",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.portmoody.ca/city-government/budget-and-finances/past-budgets/",
+      "yearsInLabel": [
+        "2020"
+      ]
+    },
+    {
+      "url": "https://media-002-ca.cdn.govstack.com/portmoody-014-ca/media/g4nhjkxr/2021-budget-guide.pdf",
+      "label": "2021 Budget Guide",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.portmoody.ca/city-government/budget-and-finances/past-budgets/",
+      "yearsInLabel": [
+        "2021"
+      ]
+    },
+    {
+      "url": "https://media-002-ca.cdn.govstack.com/portmoody-014-ca/media/k4aekbp0/2021-proposed-city-of-port-moody-budget-breakdown.pdf",
+      "label": "2021 Budget Breakdown",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.portmoody.ca/city-government/budget-and-finances/past-budgets/",
+      "yearsInLabel": [
+        "2021"
+      ]
+    },
+    {
+      "url": "https://media-002-ca.cdn.govstack.com/portmoody-014-ca/media/qmuixtd3/capital-budget-2017-2021.pdf",
+      "label": "2017 Five Year Financial Plan",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.portmoody.ca/city-government/budget-and-finances/past-budgets/",
+      "yearsInLabel": [
+        "2017",
+        "2021"
+      ]
+    },
+    {
+      "url": "https://media-002-ca.cdn.govstack.com/portmoody-014-ca/media/t11d1e14/2020_proposed_city_of_port_moody_budget_breakdown.pdf",
+      "label": "2020 budget breakdown",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.portmoody.ca/city-government/budget-and-finances/past-budgets/",
+      "yearsInLabel": [
+        "2020"
+      ]
+    },
+    {
+      "url": "https://media-002-ca.cdn.govstack.com/portmoody-014-ca/media/u2tn4gin/2023-budget-guide-web.pdf",
+      "label": "2023 Budget Guide",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.portmoody.ca/city-government/budget-and-finances/past-budgets/",
+      "yearsInLabel": [
+        "2023"
+      ]
+    },
+    {
+      "url": "https://media-002-ca.cdn.govstack.com/portmoody-014-ca/media/yuxhrlr4/2023_statement_of_financial_information_-sofi-3.pdf",
+      "label": "2023 Statement of Financial Information",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.portmoody.ca/city-government/budget-and-finances/statement-of-financial-information/",
+      "yearsInLabel": [
+        "2023"
+      ]
+    },
+    {
+      "url": "https://media-002-ca.cdn.govstack.com/portmoody-014-ca/media/zl0icjwy/2023-proposed-city-of-port-moody-budget-breakdown.pdf",
+      "label": "2023 Budget Breakdown",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.portmoody.ca/city-government/budget-and-finances/past-budgets/",
+      "yearsInLabel": [
+        "2023"
+      ]
+    },
+    {
+      "url": "https://www.portmoody.ca/eDocs/Get?docnumber=671931",
+      "label": "City of Port Moody Financial Plan Bylaw, 2026, No. 3540",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.portmoody.ca/eDocs/Get?docnumber=671931",
+      "yearsInLabel": [
+        "2026"
+      ]
+    },
+    {
+      "url": "https://www.portmoody.ca/eDocs/PortMoody?docnumber=674189",
+      "label": "2025 Statement of Financial Information",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.portmoody.ca/eDocs/PortMoody?docnumber=674189",
+      "yearsInLabel": [
+        "2025"
+      ]
+    },
+    {
+      "url": "https://www.portmoody.ca/eDocs/get?docnumber=672715",
+      "label": "2025 Annual Report",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.portmoody.ca/eDocs/get?docnumber=672715",
+      "yearsInLabel": [
+        "2025"
+      ]
+    }
+  ]
+}

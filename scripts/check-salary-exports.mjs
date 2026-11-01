@@ -1,7 +1,7 @@
 // Independently reconcile every published salary view against the normalized source schedules.
 // Run after build:salaries. --write-inventory also refreshes the human-readable coverage table.
 import assert from 'node:assert/strict'
-import { readFileSync, readdirSync, writeFileSync } from 'node:fs'
+import { readFileSync, readdirSync, writeFileSync, existsSync } from 'node:fs'
 import { gunzipSync } from 'node:zlib'
 import { createHash } from 'node:crypto'
 import { fileURLToPath } from 'node:url'
@@ -192,8 +192,15 @@ assert.equal(audit.output.availableEmployerYears, availableEmployerYears)
 assert.equal(audit.officialRows, officialRows)
 assert.equal(audit.legacyRowsRetained + officialRows, totalRows)
 assert.equal(audit.duplicates.reduce((sum, entry) => sum + entry.duplicateRows, 0), duplicateRows)
+const municipalRosterPath = join(research, 'municipal-audit/roster.json')
+const municipalRosterSlugs = new Set(existsSync(municipalRosterPath) ? json(municipalRosterPath).municipalities.map(entry => canonical(entry.employerSlug)) : [])
 for (const entry of audit.sourceCatalog ?? []) {
-  assert.ok(employers.employers.some((employer) => employer.slug === entry.employerSlug), `Source catalog: unknown employer ${entry.employerSlug}`)
+  const publishedEmployer = employers.employers.some((employer) => employer.slug === entry.employerSlug)
+  // Province-wide discovery legitimately includes municipalities with no accepted
+  // rows yet. They need a verified roster identity, never a fabricated empty
+  // employee export or an imported status unsupported by source records.
+  const rosterOnlyLead = municipalRosterSlugs.has(entry.employerSlug) && entry.status !== 'imported' && !entry.acceptedSourceId && !entry.rows
+  assert.ok(publishedEmployer || rosterOnlyLead, `Source catalog: unknown employer ${entry.employerSlug}`)
   if (entry.status === 'imported') {
     assert.ok(employers.sources[entry.acceptedSourceId], `Source catalog: accepted source missing ${entry.acceptedSourceId}`)
     assert.equal(employers.sources[entry.acceptedSourceId].url, entry.url, 'Source catalog: accepted source URL differs')

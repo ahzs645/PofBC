@@ -1,0 +1,63 @@
+{
+  "municipality": "Slocan",
+  "employerSlug": "village-of-slocan",
+  "website": "http://www.slocancity.com/",
+  "checkedOn": "2026-10-31",
+  "method": "Bounded traversal of links actually present on the official website; at most two link hops.",
+  "status": "no-source-link-found-in-bounded-search",
+  "pagesChecked": [
+    {
+      "url": "https://www.slocancity.com/",
+      "depth": 0,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.slocancity.com/",
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 17991,
+      "sha256": "0582bfb27f83463e298d59a38b7fbe89130a929ef5cc3b82bd2e0aa119138960",
+      "status": "html-read",
+      "containsSofiTerms": false
+    },
+    {
+      "url": "https://www.slocancity.com/administration/",
+      "depth": 1,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.slocancity.com/administration/",
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 16271,
+      "sha256": "57d18ca7a7091424bc05710fceea42f0ed4e0da38a083278b2160639bf8a0539",
+      "status": "html-read",
+      "containsSofiTerms": false
+    },
+    {
+      "url": "https://www.slocancity.com/village-departments/",
+      "depth": 1,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.slocancity.com/village-departments/",
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 20028,
+      "sha256": "e7b75ac663f117e879e6f1f0cb59bf8de37eb62b19749021ae5569ac1264deb6",
+      "status": "html-read",
+      "containsSofiTerms": false
+    },
+    {
+      "url": "https://www.slocancity.com/village-departments/springr@telus.net",
+      "depth": 2,
+      "checkedOn": "2026-10-31",
+      "status": "fetch-failed",
+      "error": "HTTP Error 404: Not Found",
+      "httpStatus": 404
+    },
+    {
+      "url": "https://www.slocancity.com/village-departments/svlegion@telus.net ",
+      "depth": 2,
+      "checkedOn": "2026-10-31",
+      "status": "fetch-failed",
+      "error": "HTTP Error 404: Not Found",
+      "httpStatus": 404
+    }
+  ],
+  "candidates": []
+}

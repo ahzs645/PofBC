@@ -1,0 +1,141 @@
+{
+  "municipality": "Lake Country",
+  "employerSlug": "district-of-lake-country",
+  "website": "http://www.lakecountry.bc.ca",
+  "checkedOn": "2026-10-31",
+  "method": "Bounded traversal of links actually present on the official website; at most two link hops.",
+  "status": "source-links-found-awaiting-review",
+  "pagesChecked": [
+    {
+      "url": "https://www.lakecountry.bc.ca",
+      "depth": 0,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.lakecountry.bc.ca",
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 87897,
+      "sha256": "954d48e8a6f117e9b1452920b4e5ff8827fc9c262d8850d4d1f9c9f563a73e83",
+      "status": "html-read",
+      "containsSofiTerms": false
+    },
+    {
+      "url": "https://www.lakecountry.bc.ca/government",
+      "depth": 1,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.lakecountry.bc.ca/government",
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 63815,
+      "sha256": "3697b82da0be98b4b08ec3774fd08da080152f54e1ac57c4387b9db27c57ef28",
+      "status": "html-read",
+      "containsSofiTerms": false
+    },
+    {
+      "url": "https://www.lakecountry.bc.ca/government/accessibility",
+      "depth": 1,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.lakecountry.bc.ca/government/accessibility",
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 60897,
+      "sha256": "70afe42838869318751deee24403a0fbcc836348924da35f19d8c694cea2e6d3",
+      "status": "html-read",
+      "containsSofiTerms": false
+    },
+    {
+      "url": "https://www.lakecountry.bc.ca/government/bylaws",
+      "depth": 1,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.lakecountry.bc.ca/government/bylaws",
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 77160,
+      "sha256": "82becd80d68b0c581b07c6cec1bc55c4f0a0b4745931f7c69dc2ad5d027b54da",
+      "status": "html-read",
+      "containsSofiTerms": false
+    },
+    {
+      "url": "https://www.lakecountry.bc.ca/media/file/2017-2021-financial-plan-1002-2017-consolidated",
+      "depth": 2,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.lakecountry.bc.ca/media/file/2017-2021-financial-plan-1002-2017-consolidated",
+      "contentType": "application/pdf",
+      "bytes": 202283,
+      "sha256": "7a51d1c49af5c8a0019d3c9c2d68f4add6d40e73d5bad27b5d07ee9c5ff85d06",
+      "status": "pdf-downloaded-unreviewed"
+    },
+    {
+      "url": "https://www.lakecountry.bc.ca/government/bylaws/bylaw-enforcement",
+      "depth": 1,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.lakecountry.bc.ca/government/bylaws/bylaw-enforcement",
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 79914,
+      "sha256": "cfc904c3f320373439fab4cc66a2c68961d49ff792d284bd62d16a8d682fca38",
+      "status": "html-read",
+      "containsSofiTerms": false
+    },
+    {
+      "url": "https://www.lakecountry.bc.ca/government/climate-action",
+      "depth": 1,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.lakecountry.bc.ca/government/climate-action",
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 60847,
+      "sha256": "4faff54394dc3922b00448299c7c07833df0ff901ecbc2d6f2dbef9d8a43d420",
+      "status": "html-read",
+      "containsSofiTerms": false
+    },
+    {
+      "url": "https://www.lakecountry.bc.ca/government/document-library",
+      "depth": 1,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.lakecountry.bc.ca/government/document-library",
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 72640,
+      "sha256": "167b0d10b730f8c2f0e727d60ed4f78d5eec54a7e3dddb306515ed4ac5b0302b",
+      "status": "html-read",
+      "containsSofiTerms": false
+    },
+    {
+      "url": "https://www.lakecountry.bc.ca/media/file/2021-annual-report",
+      "depth": 2,
+      "checkedOn": "2026-10-31",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.lakecountry.bc.ca/media/file/2021-annual-report",
+      "contentType": "application/pdf",
+      "bytes": 8000001,
+      "sha256": "0781f5405b499648e6af79d8b8537d75661e0f50e14befc7c00c3a3e8df90834",
+      "status": "response-too-large"
+    }
+  ],
+  "candidates": [
+    {
+      "url": "https://www.lakecountry.bc.ca/media/file/2021-annual-report",
+      "label": "2021 Annual Report [PDF/31.7MB]",
+      "kind": "archive-linked-unreviewed",
+      "foundOn": "https://www.lakecountry.bc.ca/government/document-library",
+      "yearsInLabel": [
+        "2021"
+      ]
+    },
+    {
+      "url": "https://www.lakecountry.bc.ca/media/file/2017-2021-financial-plan-1002-2017-consolidated",
+      "label": "2017-2021 Financial Plan 1002, 2017 CONSOLIDATED [PDF/198KB]",
+      "kind": "report-linked-unreviewed",
+      "foundOn": "https://www.lakecountry.bc.ca/media/file/2017-2021-financial-plan-1002-2017-consolidated",
+      "yearsInLabel": [
+        "2017",
+        "2021",
+        "2017",
+        "2017",
+        "2021",
+        "2017"
+      ]
+    }
+  ]
+}

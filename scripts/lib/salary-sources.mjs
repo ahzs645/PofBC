@@ -27,6 +27,7 @@ export function sourceCatalog (backlog = {}, collections = []) {
       url: urlOf(source), indexUrl: source.indexUrl ?? source.sourceIndexUrl ?? null,
       status: source.status ?? 'source-found-awaiting-extraction',
       scope: source.category ?? source.scope ?? null,
+      reason: source.reason ?? null,
       nextAction: source.nextAction ?? source.reason ?? 'Verify the report period, employee schedule, extraction completeness, and totals before importing.',
       notes: notes(source.notes), ...extra
     }
@@ -81,4 +82,4 @@ export function sourceCatalog (backlog = {}, collections = []) {
 
 export const sourceLeadsFor = (catalog, employer, year) => catalog
   .filter((entry) => entry.employerSlug === employer && entry.year === year && entry.status !== 'imported')
-  .map(({ id, title, url, status, nextAction, notes }) => ({ id, title, url, status, nextAction, notes }))
+  .map(({ id, title, url, status, reason, nextAction, notes }) => ({ id, title, url, status, reason, nextAction, notes }))
