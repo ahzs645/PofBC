@@ -1,0 +1,1896 @@
+{
+  "version": 1,
+  "rowSchema": [
+    "employerSlug",
+    "name",
+    "position",
+    "remuneration",
+    "expenses",
+    "pdfPage"
+  ],
+  "sources": [
+    {
+      "id": "wave-lower-mainland-village-of-belcarra-2010-employee-remuneration",
+      "employerSlug": "village-of-belcarra",
+      "employerName": "Village of Belcarra",
+      "sector": "Municipalities",
+      "year": "2010",
+      "periodType": "calendar",
+      "periodStart": "2010-01-01",
+      "periodEnd": "2010-12-31",
+      "sourceUrl": "https://belcarra.ca/assets/media/2019/05/2010_SOFI_Report.pdf",
+      "sourceIndexUrl": "https://belcarra.ca/municipal-hall/finance/",
+      "sha256": "1f5e5f09f713148d2b2c68b70d5accd4fa91aaf8f25c0546c556ed3102667c31",
+      "file": "village-of-belcarra-2010-employee-remuneration.json.gzip",
+      "dataSha256": "9f6eaea2ef473a443a8d789b0ac3907d2741c90d06284dc3f6456a3ddf68ea8d",
+      "category": "employee-remuneration",
+      "scope": "employee-remuneration",
+      "title": "Village of Belcarra 2010 SOFI: employee-remuneration",
+      "status": "accepted",
+      "rowCount": 2,
+      "totalRemuneration": 176837.69,
+      "totalExpenses": 9760.63,
+      "pages": [
+        4
+      ],
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "threshold": 75000,
+      "thresholdComparison": ">",
+      "notes": [
+        "Employee and council cohorts are separate. Pre-2019 council amounts remain held because combined expense allowances and ordinary expenses require a scope decision.",
+        "Remuneration uses the separate published employee/council remuneration column, including taxable benefits where the source specifies; expense-inclusive totals are evidence only. Expenses remain separate. Published blanks and dashes remain missing; explicit zeros stay zero. Names and positions remain as disclosed."
+      ],
+      "validation": {
+        "independentPdfReaders": [
+          "PyMuPDF positioned words",
+          "Poppler bbox-layout words"
+        ],
+        "allRowFieldsAgree": true,
+        "physicalPagesVisuallyReviewed": [
+          4
+        ],
+        "controls": [
+          {
+            "field": "pay",
+            "printedOrDerivedControl": 176837.69,
+            "knownCellSum": 176837.69,
+            "residual": 0,
+            "basis": "Printed named-employee subtotal; known monetary cells summed without changing any published value"
+          },
+          {
+            "field": "expenses",
+            "printedOrDerivedControl": 9760.63,
+            "knownCellSum": 9760.63,
+            "residual": 0,
+            "basis": "Printed named-employee subtotal; known monetary cells summed without changing any published value"
+          }
+        ],
+        "evidenceFile": "evidence/village-of-belcarra-2010-employee-remuneration.json.gzip",
+        "evidenceSha256": "439685eae87875a60cecc24418818fd1f32ed2d88017d03f30ff8fa69498e0cc",
+        "corrections": [],
+        "periodEvidence": [
+          {
+            "page": 4,
+            "text": "for the Year Ended December 31, 2010"
+          }
+        ],
+        "namedControlUnavailable": false,
+        "sourceNamedRows": 2,
+        "acceptedRows": 2,
+        "heldMissingBenefitRows": 0,
+        "heldRows": [],
+        "completeEmployeeSchedule": true
+      },
+      "completeEmployeeSchedule": true
+    },
+    {
+      "id": "wave-lower-mainland-village-of-belcarra-2012-employee-remuneration",
+      "employerSlug": "village-of-belcarra",
+      "employerName": "Village of Belcarra",
+      "sector": "Municipalities",
+      "year": "2012",
+      "periodType": "calendar",
+      "periodStart": "2012-01-01",
+      "periodEnd": "2012-12-31",
+      "sourceUrl": "https://belcarra.ca/assets/media/2019/05/2012_SOFI_Report.pdf",
+      "sourceIndexUrl": "https://belcarra.ca/municipal-hall/finance/",
+      "sha256": "9ddef57e055c97d807f9769dc370797792ab8b8640a8bb1d64c8a1a1306507e0",
+      "file": "village-of-belcarra-2012-employee-remuneration.json.gzip",
+      "dataSha256": "b662ed117cb09298af47e0daf628a6954b84c71d98bfb1ac2d7c9e2a17ea9d76",
+      "category": "employee-remuneration",
+      "scope": "employee-remuneration",
+      "title": "Village of Belcarra 2012 SOFI: employee-remuneration",
+      "status": "accepted",
+      "rowCount": 2,
+      "totalRemuneration": 186181.14,
+      "totalExpenses": 8045.52,
+      "pages": [
+        4
+      ],
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "threshold": 75000,
+      "thresholdComparison": ">",
+      "notes": [
+        "Employee and council cohorts are separate. Pre-2019 council amounts remain held because combined expense allowances and ordinary expenses require a scope decision.",
+        "Remuneration uses the separate published employee/council remuneration column, including taxable benefits where the source specifies; expense-inclusive totals are evidence only. Expenses remain separate. Published blanks and dashes remain missing; explicit zeros stay zero. Names and positions remain as disclosed."
+      ],
+      "validation": {
+        "independentPdfReaders": [
+          "PyMuPDF positioned words",
+          "Poppler bbox-layout words"
+        ],
+        "allRowFieldsAgree": true,
+        "physicalPagesVisuallyReviewed": [
+          4
+        ],
+        "controls": [
+          {
+            "field": "pay",
+            "printedOrDerivedControl": 186181.14,
+            "knownCellSum": 186181.14,
+            "residual": 0,
+            "basis": "Printed named-employee subtotal; known monetary cells summed without changing any published value"
+          },
+          {
+            "field": "expenses",
+            "printedOrDerivedControl": 8045.52,
+            "knownCellSum": 8045.52,
+            "residual": 0,
+            "basis": "Printed named-employee subtotal; known monetary cells summed without changing any published value"
+          }
+        ],
+        "evidenceFile": "evidence/village-of-belcarra-2012-employee-remuneration.json.gzip",
+        "evidenceSha256": "f353250b11f2f3b00d72fc1c97de630fa78ea6eeebb0bc088353c2ae1556ab3f",
+        "corrections": [],
+        "periodEvidence": [
+          {
+            "page": 4,
+            "text": "for the Year Ended December 31, 2012"
+          }
+        ],
+        "namedControlUnavailable": false,
+        "sourceNamedRows": 2,
+        "acceptedRows": 2,
+        "heldMissingBenefitRows": 0,
+        "heldRows": [],
+        "completeEmployeeSchedule": true
+      },
+      "completeEmployeeSchedule": true
+    },
+    {
+      "id": "wave-lower-mainland-village-of-belcarra-2013-employee-remuneration",
+      "employerSlug": "village-of-belcarra",
+      "employerName": "Village of Belcarra",
+      "sector": "Municipalities",
+      "year": "2013",
+      "periodType": "calendar",
+      "periodStart": "2013-01-01",
+      "periodEnd": "2013-12-31",
+      "sourceUrl": "https://belcarra.ca/assets/media/2019/05/2013_SOFI_Report.pdf",
+      "sourceIndexUrl": "https://belcarra.ca/municipal-hall/finance/",
+      "sha256": "fa72057d618d563dfa3c062bdcc5c9ece18cb5f1dfbb3f7d8a337760485ecb53",
+      "file": "village-of-belcarra-2013-employee-remuneration.json.gzip",
+      "dataSha256": "b7f11ea2e98efba8ca1a64faaf2a9904dd2458755b899211a69650ef0bea9f79",
+      "category": "employee-remuneration",
+      "scope": "employee-remuneration",
+      "title": "Village of Belcarra 2013 SOFI: employee-remuneration",
+      "status": "accepted",
+      "rowCount": 3,
+      "totalRemuneration": 275284.54,
+      "totalExpenses": 0,
+      "pages": [
+        4
+      ],
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "threshold": 75000,
+      "thresholdComparison": ">",
+      "notes": [
+        "Employee and council cohorts are separate. Pre-2019 council amounts remain held because combined expense allowances and ordinary expenses require a scope decision.",
+        "Individual employee expense cells are blank and the printed expense subtotal is a dash. Those cells remain null; no zero expense control is invented.",
+        "Remuneration uses the separate published employee/council remuneration column, including taxable benefits where the source specifies; expense-inclusive totals are evidence only. Expenses remain separate. Published blanks and dashes remain missing; explicit zeros stay zero. Names and positions remain as disclosed."
+      ],
+      "validation": {
+        "independentPdfReaders": [
+          "PyMuPDF positioned words",
+          "Poppler bbox-layout words"
+        ],
+        "allRowFieldsAgree": true,
+        "physicalPagesVisuallyReviewed": [
+          4
+        ],
+        "controls": [
+          {
+            "field": "pay",
+            "printedOrDerivedControl": 275284.54,
+            "knownCellSum": 275284.54,
+            "residual": 0,
+            "basis": "Printed named-employee subtotal; known monetary cells summed without changing any published value"
+          }
+        ],
+        "evidenceFile": "evidence/village-of-belcarra-2013-employee-remuneration.json.gzip",
+        "evidenceSha256": "cbc7797f819801f0f1a027d9ac2378901bee49215564ba5639de6d1253c0f18c",
+        "corrections": [],
+        "periodEvidence": [
+          {
+            "page": 4,
+            "text": "for the Year Ended December 31, 2013"
+          }
+        ],
+        "namedControlUnavailable": false,
+        "sourceNamedRows": 3,
+        "acceptedRows": 3,
+        "heldMissingBenefitRows": 0,
+        "heldRows": [],
+        "completeEmployeeSchedule": true
+      },
+      "completeEmployeeSchedule": true
+    },
+    {
+      "id": "wave-lower-mainland-village-of-belcarra-2014-employee-remuneration",
+      "employerSlug": "village-of-belcarra",
+      "employerName": "Village of Belcarra",
+      "sector": "Municipalities",
+      "year": "2014",
+      "periodType": "calendar",
+      "periodStart": "2014-01-01",
+      "periodEnd": "2014-12-31",
+      "sourceUrl": "https://belcarra.ca/assets/media/2019/05/2014_SOFI_Report.pdf",
+      "sourceIndexUrl": "https://belcarra.ca/municipal-hall/finance/",
+      "sha256": "2d2d121fa570e987b8d78d814fadab8567a2814f5e7b0884508af8b928b9b63b",
+      "file": "village-of-belcarra-2014-employee-remuneration.json.gzip",
+      "dataSha256": "372b09e1567bddde5244f27a509198915538bac79be4db5a6d0103cbbde66314",
+      "category": "employee-remuneration",
+      "scope": "employee-remuneration",
+      "title": "Village of Belcarra 2014 SOFI: employee-remuneration",
+      "status": "accepted",
+      "rowCount": 4,
+      "totalRemuneration": 347114.5,
+      "totalExpenses": 13753.6,
+      "pages": [
+        4
+      ],
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "threshold": 75000,
+      "thresholdComparison": ">",
+      "notes": [
+        "Employee and council cohorts are separate. Pre-2019 council amounts remain held because combined expense allowances and ordinary expenses require a scope decision.",
+        "Remuneration uses the separate published employee/council remuneration column, including taxable benefits where the source specifies; expense-inclusive totals are evidence only. Expenses remain separate. Published blanks and dashes remain missing; explicit zeros stay zero. Names and positions remain as disclosed."
+      ],
+      "validation": {
+        "independentPdfReaders": [
+          "PyMuPDF positioned words",
+          "Poppler bbox-layout words"
+        ],
+        "allRowFieldsAgree": true,
+        "physicalPagesVisuallyReviewed": [
+          4
+        ],
+        "controls": [
+          {
+            "field": "pay",
+            "printedOrDerivedControl": 347114.5,
+            "knownCellSum": 347114.5,
+            "residual": 0,
+            "basis": "Printed named-employee subtotal; known monetary cells summed without changing any published value"
+          },
+          {
+            "field": "expenses",
+            "printedOrDerivedControl": 13753.6,
+            "knownCellSum": 13753.6,
+            "residual": 0,
+            "basis": "Printed named-employee subtotal; known monetary cells summed without changing any published value"
+          }
+        ],
+        "evidenceFile": "evidence/village-of-belcarra-2014-employee-remuneration.json.gzip",
+        "evidenceSha256": "556dc2e1ba09952e36f31a70f5186904884f54ce66d15bf467fb983e60392aad",
+        "corrections": [],
+        "periodEvidence": [
+          {
+            "page": 4,
+            "text": "for the Year Ended December 31, 2014"
+          }
+        ],
+        "namedControlUnavailable": false,
+        "sourceNamedRows": 4,
+        "acceptedRows": 4,
+        "heldMissingBenefitRows": 0,
+        "heldRows": [],
+        "completeEmployeeSchedule": true
+      },
+      "completeEmployeeSchedule": true
+    },
+    {
+      "id": "wave-lower-mainland-village-of-belcarra-2017-employee-remuneration",
+      "employerSlug": "village-of-belcarra",
+      "employerName": "Village of Belcarra",
+      "sector": "Municipalities",
+      "year": "2017",
+      "periodType": "calendar",
+      "periodStart": "2017-01-01",
+      "periodEnd": "2017-12-31",
+      "sourceUrl": "https://belcarra.ca/assets/media/2019/05/2017_SOFI_Report.pdf",
+      "sourceIndexUrl": "https://belcarra.ca/municipal-hall/finance/",
+      "sha256": "0cb6baa91bb2f0d4b89ee2fe01db5ce91c65e4c6c01b0fc9e8547e2e2cc548ec",
+      "file": "village-of-belcarra-2017-employee-remuneration.json.gzip",
+      "dataSha256": "be5514d2fc79decda5695767fb202e63ab70559213c27d536728e50183d6272f",
+      "category": "employee-remuneration",
+      "scope": "employee-remuneration",
+      "title": "Village of Belcarra 2017 SOFI: employee-remuneration",
+      "status": "accepted",
+      "rowCount": 3,
+      "totalRemuneration": 277092.16,
+      "totalExpenses": 11153.39,
+      "pages": [
+        4
+      ],
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "threshold": 75000,
+      "thresholdComparison": ">",
+      "notes": [
+        "Employee and council cohorts are separate. Pre-2019 council amounts remain held because combined expense allowances and ordinary expenses require a scope decision.",
+        "Remuneration uses the separate published employee/council remuneration column, including taxable benefits where the source specifies; expense-inclusive totals are evidence only. Expenses remain separate. Published blanks and dashes remain missing; explicit zeros stay zero. Names and positions remain as disclosed."
+      ],
+      "validation": {
+        "independentPdfReaders": [
+          "PyMuPDF positioned words",
+          "Poppler bbox-layout words"
+        ],
+        "allRowFieldsAgree": true,
+        "physicalPagesVisuallyReviewed": [
+          4
+        ],
+        "controls": [
+          {
+            "field": "pay",
+            "printedOrDerivedControl": 277092.16,
+            "knownCellSum": 277092.16,
+            "residual": 0,
+            "basis": "Printed named-employee subtotal; known monetary cells summed without changing any published value"
+          },
+          {
+            "field": "expenses",
+            "printedOrDerivedControl": 11153.39,
+            "knownCellSum": 11153.39,
+            "residual": 0,
+            "basis": "Printed named-employee subtotal; known monetary cells summed without changing any published value"
+          }
+        ],
+        "evidenceFile": "evidence/village-of-belcarra-2017-employee-remuneration.json.gzip",
+        "evidenceSha256": "accf1de296d0d404f8f82c79598eddfa3567f188becda1e562e0ee530078cae9",
+        "corrections": [],
+        "periodEvidence": [
+          {
+            "page": 4,
+            "text": "for the Year Ended December 31, 2017"
+          }
+        ],
+        "namedControlUnavailable": false,
+        "sourceNamedRows": 3,
+        "acceptedRows": 3,
+        "heldMissingBenefitRows": 0,
+        "heldRows": [],
+        "completeEmployeeSchedule": true
+      },
+      "completeEmployeeSchedule": true
+    },
+    {
+      "id": "wave-lower-mainland-village-of-belcarra-2018-employee-remuneration",
+      "employerSlug": "village-of-belcarra",
+      "employerName": "Village of Belcarra",
+      "sector": "Municipalities",
+      "year": "2018",
+      "periodType": "calendar",
+      "periodStart": "2018-01-01",
+      "periodEnd": "2018-12-31",
+      "sourceUrl": "https://belcarra.ca/assets/media/2021/04/2018-SOFI-Report-Statement-of-Financial-Information-Report-Council.pdf",
+      "sourceIndexUrl": "https://belcarra.ca/municipal-hall/finance/",
+      "sha256": "78af4daced14128d9fa5389ad16de55683e379abfd2e8cdc56c42437a5c8fc93",
+      "file": "village-of-belcarra-2018-employee-remuneration.json.gzip",
+      "dataSha256": "0e164e09e40d9be389b3348294ec7715f1b6b204a23a24818412fd6017027573",
+      "category": "employee-remuneration",
+      "scope": "employee-remuneration",
+      "title": "Village of Belcarra 2018 SOFI: employee-remuneration",
+      "status": "accepted",
+      "rowCount": 4,
+      "totalRemuneration": 379104.27,
+      "totalExpenses": 12962.63,
+      "pages": [
+        4
+      ],
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "threshold": 75000,
+      "thresholdComparison": ">",
+      "notes": [
+        "Employee and council cohorts are separate. Pre-2019 council amounts remain held because combined expense allowances and ordinary expenses require a scope decision.",
+        "Remuneration uses the separate published employee/council remuneration column, including taxable benefits where the source specifies; expense-inclusive totals are evidence only. Expenses remain separate. Published blanks and dashes remain missing; explicit zeros stay zero. Names and positions remain as disclosed."
+      ],
+      "validation": {
+        "independentPdfReaders": [
+          "PyMuPDF positioned words",
+          "Poppler bbox-layout words"
+        ],
+        "allRowFieldsAgree": true,
+        "physicalPagesVisuallyReviewed": [
+          4
+        ],
+        "controls": [
+          {
+            "field": "pay",
+            "printedOrDerivedControl": 379104.27,
+            "knownCellSum": 379104.27,
+            "residual": 0,
+            "basis": "Printed named-employee subtotal; known monetary cells summed without changing any published value"
+          },
+          {
+            "field": "expenses",
+            "printedOrDerivedControl": 12962.63,
+            "knownCellSum": 12962.63,
+            "residual": 0,
+            "basis": "Printed named-employee subtotal; known monetary cells summed without changing any published value"
+          }
+        ],
+        "evidenceFile": "evidence/village-of-belcarra-2018-employee-remuneration.json.gzip",
+        "evidenceSha256": "1e488fe75a4fbde6a067922a6e1b924ac24ca73ad1b1624a74d3151889f9bcac",
+        "corrections": [],
+        "periodEvidence": [
+          {
+            "page": 4,
+            "text": "for the Year Ended December 31, 2018"
+          }
+        ],
+        "namedControlUnavailable": false,
+        "sourceNamedRows": 4,
+        "acceptedRows": 4,
+        "heldMissingBenefitRows": 0,
+        "heldRows": [],
+        "completeEmployeeSchedule": true
+      },
+      "completeEmployeeSchedule": true
+    },
+    {
+      "id": "wave-lower-mainland-village-of-belcarra-2019-elected-officials",
+      "employerSlug": "village-of-belcarra",
+      "employerName": "Village of Belcarra",
+      "sector": "Municipalities",
+      "year": "2019",
+      "periodType": "calendar",
+      "periodStart": "2019-01-01",
+      "periodEnd": "2019-12-31",
+      "sourceUrl": "https://belcarra.ca/assets/media/2021/04/2020-09-14-final-2019-Statement-of-Financial-Information-SOFI.pdf",
+      "sourceIndexUrl": "https://belcarra.ca/municipal-hall/finance/",
+      "sha256": "5add059dcae8d88645309260e24fc216b79ec91d79cde6bfca339511fc384d4d",
+      "file": "village-of-belcarra-2019-elected-officials.json.gzip",
+      "dataSha256": "d6b408d8ee7ef13061f40f8ea849a05ba5f9f94754a0b93acd02da9bf7a6b02e",
+      "category": "elected-officials",
+      "scope": "elected-officials",
+      "title": "Village of Belcarra 2019 SOFI: elected-officials",
+      "status": "accepted",
+      "rowCount": 5,
+      "totalRemuneration": 64620.12,
+      "totalExpenses": 6677.28,
+      "pages": [
+        5
+      ],
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "threshold": null,
+      "thresholdComparison": null,
+      "notes": [
+        "Employee and council cohorts are separate. Pre-2019 council amounts remain held because combined expense allowances and ordinary expenses require a scope decision.",
+        "Remuneration uses the separate published employee/council remuneration column, including taxable benefits where the source specifies; expense-inclusive totals are evidence only. Expenses remain separate. Published blanks and dashes remain missing; explicit zeros stay zero. Names and positions remain as disclosed."
+      ],
+      "validation": {
+        "independentPdfReaders": [
+          "PyMuPDF positioned words",
+          "Poppler bbox-layout words"
+        ],
+        "allRowFieldsAgree": true,
+        "physicalPagesVisuallyReviewed": [
+          5
+        ],
+        "controls": [
+          {
+            "field": "pay",
+            "printedOrDerivedControl": 64620.12,
+            "knownCellSum": 64620.12,
+            "residual": 0,
+            "basis": "Printed council component subtotals"
+          },
+          {
+            "field": "expenses",
+            "printedOrDerivedControl": 6677.28,
+            "knownCellSum": 6677.28,
+            "residual": 0,
+            "basis": "Printed council component subtotals"
+          },
+          {
+            "field": "total",
+            "printedOrDerivedControl": 71297.4,
+            "knownCellSum": 71297.4,
+            "residual": 0,
+            "basis": "Printed council component subtotals"
+          }
+        ],
+        "evidenceFile": "evidence/village-of-belcarra-2019-elected-officials.json.gzip",
+        "evidenceSha256": "5aa7055961672eb1890501f7fc04db386258e28efb7f34d02837694c446c28ea",
+        "corrections": [],
+        "periodEvidence": [
+          {
+            "page": 1,
+            "text": "FOR THE YEAR ENDED DECEMBER 31, 2019"
+          }
+        ],
+        "namedControlUnavailable": false,
+        "sourceNamedRows": 5,
+        "acceptedRows": 5,
+        "heldMissingBenefitRows": 0,
+        "heldRows": []
+      }
+    },
+    {
+      "id": "wave-lower-mainland-village-of-belcarra-2019-employee-remuneration",
+      "employerSlug": "village-of-belcarra",
+      "employerName": "Village of Belcarra",
+      "sector": "Municipalities",
+      "year": "2019",
+      "periodType": "calendar",
+      "periodStart": "2019-01-01",
+      "periodEnd": "2019-12-31",
+      "sourceUrl": "https://belcarra.ca/assets/media/2021/04/2020-09-14-final-2019-Statement-of-Financial-Information-SOFI.pdf",
+      "sourceIndexUrl": "https://belcarra.ca/municipal-hall/finance/",
+      "sha256": "5add059dcae8d88645309260e24fc216b79ec91d79cde6bfca339511fc384d4d",
+      "file": "village-of-belcarra-2019-employee-remuneration.json.gzip",
+      "dataSha256": "bd2cd98fbf529343c26bfdc3e2ead1d49abb24e75136a8656a708e253e114f3a",
+      "category": "employee-remuneration",
+      "scope": "employee-remuneration",
+      "title": "Village of Belcarra 2019 SOFI: employee-remuneration",
+      "status": "accepted",
+      "rowCount": 3,
+      "totalRemuneration": 299207.01,
+      "totalExpenses": 10365.72,
+      "pages": [
+        5
+      ],
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "threshold": 75000,
+      "thresholdComparison": ">",
+      "notes": [
+        "Employee and council cohorts are separate. Pre-2019 council amounts remain held because combined expense allowances and ordinary expenses require a scope decision.",
+        "Remuneration uses the separate published employee/council remuneration column, including taxable benefits where the source specifies; expense-inclusive totals are evidence only. Expenses remain separate. Published blanks and dashes remain missing; explicit zeros stay zero. Names and positions remain as disclosed."
+      ],
+      "validation": {
+        "independentPdfReaders": [
+          "PyMuPDF positioned words",
+          "Poppler bbox-layout words"
+        ],
+        "allRowFieldsAgree": true,
+        "physicalPagesVisuallyReviewed": [
+          5
+        ],
+        "controls": [
+          {
+            "field": "pay",
+            "printedOrDerivedControl": 299207.01,
+            "knownCellSum": 299207.01,
+            "residual": 0,
+            "basis": "Printed named-employee subtotal; known monetary cells summed without changing any published value"
+          },
+          {
+            "field": "expenses",
+            "printedOrDerivedControl": 10365.72,
+            "knownCellSum": 10365.72,
+            "residual": 0,
+            "basis": "Printed named-employee subtotal; known monetary cells summed without changing any published value"
+          }
+        ],
+        "evidenceFile": "evidence/village-of-belcarra-2019-employee-remuneration.json.gzip",
+        "evidenceSha256": "face9589cdb6b3e364ce7f825c665cbbacdb4d33b8f6244af98c38b2b7ee0008",
+        "corrections": [],
+        "periodEvidence": [
+          {
+            "page": 1,
+            "text": "FOR THE YEAR ENDED DECEMBER 31, 2019"
+          }
+        ],
+        "namedControlUnavailable": false,
+        "sourceNamedRows": 3,
+        "acceptedRows": 3,
+        "heldMissingBenefitRows": 0,
+        "heldRows": [],
+        "completeEmployeeSchedule": true
+      },
+      "completeEmployeeSchedule": true
+    },
+    {
+      "id": "wave-lower-mainland-village-of-belcarra-2023-elected-officials",
+      "employerSlug": "village-of-belcarra",
+      "employerName": "Village of Belcarra",
+      "sector": "Municipalities",
+      "year": "2023",
+      "periodType": "calendar",
+      "periodStart": "2023-01-01",
+      "periodEnd": "2023-12-31",
+      "sourceUrl": "https://belcarra.ca/assets/media/2024/06/2023-Belcarra-SOFI-Report.pdf",
+      "sourceIndexUrl": "https://belcarra.ca/municipal-hall/finance/",
+      "sha256": "07802fcbe1bf5bdf501182eb99bd8378507812990af9f9f458a802b9600b3f38",
+      "file": "village-of-belcarra-2023-elected-officials.json.gzip",
+      "dataSha256": "5eb0d64c1b229091c59a9c53a86730ce76b4486bc1bbdc316f68b843de8c4412",
+      "category": "elected-officials",
+      "scope": "elected-officials",
+      "title": "Village of Belcarra 2023 SOFI: elected-officials",
+      "status": "accepted",
+      "rowCount": 5,
+      "totalRemuneration": 72004.7,
+      "totalExpenses": 16758.47,
+      "pages": [
+        5
+      ],
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "threshold": null,
+      "thresholdComparison": null,
+      "notes": [
+        "Employee and council cohorts are separate. Pre-2019 council amounts remain held because combined expense allowances and ordinary expenses require a scope decision.",
+        "Remuneration uses the separate published employee/council remuneration column, including taxable benefits where the source specifies; expense-inclusive totals are evidence only. Expenses remain separate. Published blanks and dashes remain missing; explicit zeros stay zero. Names and positions remain as disclosed."
+      ],
+      "validation": {
+        "independentPdfReaders": [
+          "PyMuPDF positioned words",
+          "Poppler bbox-layout words"
+        ],
+        "allRowFieldsAgree": true,
+        "physicalPagesVisuallyReviewed": [
+          5
+        ],
+        "controls": [
+          {
+            "field": "pay",
+            "printedOrDerivedControl": 72004.7,
+            "knownCellSum": 72004.7,
+            "residual": 0,
+            "basis": "Printed council component subtotals"
+          },
+          {
+            "field": "expenses",
+            "printedOrDerivedControl": 16758.47,
+            "knownCellSum": 16758.47,
+            "residual": 0,
+            "basis": "Printed council component subtotals"
+          },
+          {
+            "field": "total",
+            "printedOrDerivedControl": 88763.17,
+            "knownCellSum": 88763.17,
+            "residual": 0,
+            "basis": "Printed council component subtotals"
+          }
+        ],
+        "evidenceFile": "evidence/village-of-belcarra-2023-elected-officials.json.gzip",
+        "evidenceSha256": "e9b89b6e90798b98c7bc4eeaaf5a18301d503610c8109e1044e609d077adb05b",
+        "corrections": [],
+        "periodEvidence": [
+          {
+            "page": 1,
+            "text": "FOR THE YEAR ENDED DECEMBER 31, 2023"
+          }
+        ],
+        "namedControlUnavailable": false,
+        "sourceNamedRows": 5,
+        "acceptedRows": 5,
+        "heldMissingBenefitRows": 0,
+        "heldRows": []
+      }
+    },
+    {
+      "id": "wave-lower-mainland-village-of-belcarra-2023-employee-remuneration",
+      "employerSlug": "village-of-belcarra",
+      "employerName": "Village of Belcarra",
+      "sector": "Municipalities",
+      "year": "2023",
+      "periodType": "calendar",
+      "periodStart": "2023-01-01",
+      "periodEnd": "2023-12-31",
+      "sourceUrl": "https://belcarra.ca/assets/media/2024/06/2023-Belcarra-SOFI-Report.pdf",
+      "sourceIndexUrl": "https://belcarra.ca/municipal-hall/finance/",
+      "sha256": "07802fcbe1bf5bdf501182eb99bd8378507812990af9f9f458a802b9600b3f38",
+      "file": "village-of-belcarra-2023-employee-remuneration.json.gzip",
+      "dataSha256": "1db57d8ed155c36ee0fad65eb80dec54920620bc7d5954dda4f4f70122709bee",
+      "category": "employee-remuneration",
+      "scope": "employee-remuneration",
+      "title": "Village of Belcarra 2023 SOFI: employee-remuneration",
+      "status": "accepted",
+      "rowCount": 7,
+      "totalRemuneration": 633744.14,
+      "totalExpenses": 10288.3,
+      "pages": [
+        5
+      ],
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "threshold": 75000,
+      "thresholdComparison": ">",
+      "notes": [
+        "Employee and council cohorts are separate. Pre-2019 council amounts remain held because combined expense allowances and ordinary expenses require a scope decision.",
+        "Remuneration uses the separate published employee/council remuneration column, including taxable benefits where the source specifies; expense-inclusive totals are evidence only. Expenses remain separate. Published blanks and dashes remain missing; explicit zeros stay zero. Names and positions remain as disclosed."
+      ],
+      "validation": {
+        "independentPdfReaders": [
+          "PyMuPDF positioned words",
+          "Poppler bbox-layout words"
+        ],
+        "allRowFieldsAgree": true,
+        "physicalPagesVisuallyReviewed": [
+          5
+        ],
+        "controls": [
+          {
+            "field": "pay",
+            "printedOrDerivedControl": 633744.14,
+            "knownCellSum": 633744.14,
+            "residual": 0,
+            "basis": "Printed named-employee subtotal; known monetary cells summed without changing any published value"
+          },
+          {
+            "field": "expenses",
+            "printedOrDerivedControl": 10288.3,
+            "knownCellSum": 10288.3,
+            "residual": 0,
+            "basis": "Printed named-employee subtotal; known monetary cells summed without changing any published value"
+          }
+        ],
+        "evidenceFile": "evidence/village-of-belcarra-2023-employee-remuneration.json.gzip",
+        "evidenceSha256": "81225b25d8e934214b7b96bd98006a91cad1b3db799b12f2727102087a95ae5a",
+        "corrections": [],
+        "periodEvidence": [
+          {
+            "page": 1,
+            "text": "FOR THE YEAR ENDED DECEMBER 31, 2023"
+          }
+        ],
+        "namedControlUnavailable": false,
+        "sourceNamedRows": 7,
+        "acceptedRows": 7,
+        "heldMissingBenefitRows": 0,
+        "heldRows": [],
+        "completeEmployeeSchedule": true
+      },
+      "completeEmployeeSchedule": true
+    },
+    {
+      "id": "wave-lower-mainland-village-of-belcarra-2025-elected-officials",
+      "employerSlug": "village-of-belcarra",
+      "employerName": "Village of Belcarra",
+      "sector": "Municipalities",
+      "year": "2025",
+      "periodType": "calendar",
+      "periodStart": "2025-01-01",
+      "periodEnd": "2025-12-31",
+      "sourceUrl": "https://belcarra.ca/assets/media/2026/06/2025-Statement-of-Financial-Information.pdf",
+      "sourceIndexUrl": "https://belcarra.ca/municipal-hall/finance/",
+      "sha256": "c513112f5398877a8bb96d516415f577501c72c817b4eab7bbc9781fe8d26ee6",
+      "file": "village-of-belcarra-2025-elected-officials.json.gzip",
+      "dataSha256": "9904e9f952342d052f722b655dd9c2640f2b2a70b19c6114e22d474e6d24d01f",
+      "category": "elected-officials",
+      "scope": "elected-officials",
+      "title": "Village of Belcarra 2025 SOFI: elected-officials",
+      "status": "accepted",
+      "rowCount": 5,
+      "totalRemuneration": 77131.32,
+      "totalExpenses": 21090.75,
+      "pages": [
+        5
+      ],
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "threshold": null,
+      "thresholdComparison": null,
+      "notes": [
+        "Employee and council cohorts are separate. Pre-2019 council amounts remain held because combined expense allowances and ordinary expenses require a scope decision.",
+        "Remuneration uses the separate published employee/council remuneration column, including taxable benefits where the source specifies; expense-inclusive totals are evidence only. Expenses remain separate. Published blanks and dashes remain missing; explicit zeros stay zero. Names and positions remain as disclosed."
+      ],
+      "validation": {
+        "independentPdfReaders": [
+          "PyMuPDF positioned words",
+          "Poppler bbox-layout words"
+        ],
+        "allRowFieldsAgree": true,
+        "physicalPagesVisuallyReviewed": [
+          5
+        ],
+        "controls": [
+          {
+            "field": "pay",
+            "printedOrDerivedControl": 77131.32,
+            "knownCellSum": 77131.32,
+            "residual": 0,
+            "basis": "Printed council component subtotals"
+          },
+          {
+            "field": "expenses",
+            "printedOrDerivedControl": 21090.75,
+            "knownCellSum": 21090.75,
+            "residual": 0,
+            "basis": "Printed council component subtotals"
+          },
+          {
+            "field": "total",
+            "printedOrDerivedControl": 98222.07,
+            "knownCellSum": 98222.07,
+            "residual": 0,
+            "basis": "Printed council component subtotals"
+          }
+        ],
+        "evidenceFile": "evidence/village-of-belcarra-2025-elected-officials.json.gzip",
+        "evidenceSha256": "ef9008af9f9970f4401469500f9c48708ed7ced415f6e7a615010a6578e2ca17",
+        "corrections": [],
+        "periodEvidence": [
+          {
+            "page": 1,
+            "text": "FOR THE YEAR ENDED DECEMBER 31, 2025"
+          }
+        ],
+        "namedControlUnavailable": false,
+        "sourceNamedRows": 5,
+        "acceptedRows": 5,
+        "heldMissingBenefitRows": 0,
+        "heldRows": []
+      }
+    },
+    {
+      "id": "wave-lower-mainland-village-of-belcarra-2025-employee-remuneration",
+      "employerSlug": "village-of-belcarra",
+      "employerName": "Village of Belcarra",
+      "sector": "Municipalities",
+      "year": "2025",
+      "periodType": "calendar",
+      "periodStart": "2025-01-01",
+      "periodEnd": "2025-12-31",
+      "sourceUrl": "https://belcarra.ca/assets/media/2026/06/2025-Statement-of-Financial-Information.pdf",
+      "sourceIndexUrl": "https://belcarra.ca/municipal-hall/finance/",
+      "sha256": "c513112f5398877a8bb96d516415f577501c72c817b4eab7bbc9781fe8d26ee6",
+      "file": "village-of-belcarra-2025-employee-remuneration.json.gzip",
+      "dataSha256": "435dd7c79b4333f6f12cd68d6e228a5b7fa0ae4f241f2734629c8b531417911b",
+      "category": "employee-remuneration",
+      "scope": "employee-remuneration",
+      "title": "Village of Belcarra 2025 SOFI: employee-remuneration",
+      "status": "accepted",
+      "rowCount": 8,
+      "totalRemuneration": 757998.03,
+      "totalExpenses": 14841.67,
+      "pages": [
+        5
+      ],
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "threshold": 75000,
+      "thresholdComparison": ">",
+      "notes": [
+        "Employee and council cohorts are separate. Pre-2019 council amounts remain held because combined expense allowances and ordinary expenses require a scope decision.",
+        "Remuneration uses the separate published employee/council remuneration column, including taxable benefits where the source specifies; expense-inclusive totals are evidence only. Expenses remain separate. Published blanks and dashes remain missing; explicit zeros stay zero. Names and positions remain as disclosed."
+      ],
+      "validation": {
+        "independentPdfReaders": [
+          "PyMuPDF positioned words",
+          "Poppler bbox-layout words"
+        ],
+        "allRowFieldsAgree": true,
+        "physicalPagesVisuallyReviewed": [
+          5
+        ],
+        "controls": [
+          {
+            "field": "pay",
+            "printedOrDerivedControl": 757998.03,
+            "knownCellSum": 757998.03,
+            "residual": 0,
+            "basis": "Printed named-employee subtotal; known monetary cells summed without changing any published value"
+          },
+          {
+            "field": "expenses",
+            "printedOrDerivedControl": 14841.67,
+            "knownCellSum": 14841.67,
+            "residual": 0,
+            "basis": "Printed named-employee subtotal; known monetary cells summed without changing any published value"
+          }
+        ],
+        "evidenceFile": "evidence/village-of-belcarra-2025-employee-remuneration.json.gzip",
+        "evidenceSha256": "7f5bbdcddbc53e5bd41dbcf93d85c86768dfb14bf39e196826806e266a20f2a2",
+        "corrections": [],
+        "periodEvidence": [
+          {
+            "page": 1,
+            "text": "FOR THE YEAR ENDED DECEMBER 31, 2025"
+          }
+        ],
+        "namedControlUnavailable": false,
+        "sourceNamedRows": 8,
+        "acceptedRows": 8,
+        "heldMissingBenefitRows": 0,
+        "heldRows": [],
+        "completeEmployeeSchedule": true
+      },
+      "completeEmployeeSchedule": true
+    },
+    {
+      "id": "wave-lower-mainland-city-of-abbotsford-2023-employee-remuneration",
+      "employerSlug": "city-of-abbotsford",
+      "employerName": "City of Abbotsford",
+      "sector": "Municipalities",
+      "year": "2023",
+      "periodType": "calendar",
+      "periodStart": "2023-01-01",
+      "periodEnd": "2023-12-31",
+      "sourceUrl": "https://abbotsford.civicweb.net/document/57862/",
+      "sourceIndexUrl": "https://www.abbotsford.ca/city-hall/finance",
+      "sha256": "8cce0bc7013f866085cd7a301d406c2ce0438d2a6de5e20bf133b458c44db5ff",
+      "file": "city-of-abbotsford-2023-employee-remuneration.json.gzip",
+      "dataSha256": "0414647a5f1a0c385ed576f0873404ada5ddfdf090a855024e75ff48058f596a",
+      "category": "employee-remuneration",
+      "scope": "employee-remuneration",
+      "title": "City of Abbotsford 2023 SOFI: employee-remuneration",
+      "status": "accepted",
+      "rowCount": 449,
+      "totalRemuneration": 51509891.5,
+      "totalExpenses": 670869.19,
+      "pages": [
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14
+      ],
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "threshold": 75000,
+      "thresholdComparison": ">",
+      "notes": [
+        "Original employee schedule explicitly excludes Police and Elected Officials. Published surname/initial spellings remain as disclosed; no compiled full-name or job-title enrichment is copied. The public source is a complete published SOFI council-report attachment; no adoption or signature is inferred from the recommendation text.",
+        "Partial employee cohort: only rows with numeric remuneration and taxable-benefit/payout components are accepted. Original dash/blank benefits remain null and those named rows are held, regardless of component subtotal agreement. Raw known remuneration and all component cells remain in evidence.",
+        "Composite remuneration is the published Remuneration & Payouts plus numeric Taxable Benefits (2023), or numeric Remuneration plus Taxable Benefits & Payouts (2024). Expense-inclusive totals, aggregate payroll and employer payroll costs are not pay. Expenses remain separate. Published blanks and dashes remain missing; explicit zeros stay zero. Names and positions remain as disclosed."
+      ],
+      "validation": {
+        "independentPdfReaders": [
+          "PyMuPDF positioned words",
+          "Poppler bbox-layout words"
+        ],
+        "allRowFieldsAgree": true,
+        "physicalPagesVisuallyReviewed": [
+          6,
+          10,
+          12,
+          14
+        ],
+        "controls": [
+          {
+            "field": "salary",
+            "printedOrDerivedControl": 52083193.04,
+            "knownCellSum": 52083193.04,
+            "residual": 0,
+            "basis": "Known original named-component cells compared with full printed named-cohort controls. This is distinct from accepted numeric-component subset totals and does not establish missing/dash benefits are zero."
+          },
+          {
+            "field": "benefits",
+            "printedOrDerivedControl": 384475.48,
+            "knownCellSum": 384475.48,
+            "residual": 0,
+            "basis": "Known original named-component cells compared with full printed named-cohort controls. This is distinct from accepted numeric-component subset totals and does not establish missing/dash benefits are zero."
+          },
+          {
+            "field": "expenses",
+            "printedOrDerivedControl": 679513.35,
+            "knownCellSum": 679513.35,
+            "residual": 0,
+            "basis": "Known original named-component cells compared with full printed named-cohort controls. This is distinct from accepted numeric-component subset totals and does not establish missing/dash benefits are zero."
+          }
+        ],
+        "evidenceFile": "evidence/city-of-abbotsford-2023-employee-remuneration.json.gzip",
+        "evidenceSha256": "b5f2139d20d595cab30a12eae9ca187fd56af63d168d4783e424af72b6ead0c5",
+        "corrections": [],
+        "periodEvidence": [
+          {
+            "page": 6,
+            "text": "Employees Earning over $75,000 for the year ended December 31, 2023"
+          }
+        ],
+        "namedControlUnavailable": false,
+        "sourceNamedRows": 460,
+        "acceptedRows": 449,
+        "heldMissingBenefitRows": 11,
+        "heldRows": [
+          {
+            "name": "BEERS EDDY",
+            "position": "Aux Facility Maintenance Technician II",
+            "pdfPage": 6,
+            "knownRemunerationColumn": 75171.36,
+            "benefits": null,
+            "expenses": 337.8
+          },
+          {
+            "name": "BOYER MICHELLE",
+            "position": "PT Recreation Supervisor (Arenas)",
+            "pdfPage": 6,
+            "knownRemunerationColumn": 75363.29,
+            "benefits": null,
+            "expenses": 1777.66
+          },
+          {
+            "name": "BROWN STEVEN",
+            "position": "Airport Operations Specialist",
+            "pdfPage": 6,
+            "knownRemunerationColumn": 86831.18,
+            "benefits": null,
+            "expenses": 1277.86
+          },
+          {
+            "name": "BROWNRIDGE KRISTEN",
+            "position": "Aquatic Leader",
+            "pdfPage": 6,
+            "knownRemunerationColumn": 77619.63,
+            "benefits": null,
+            "expenses": 668.32
+          },
+          {
+            "name": "GRINDLER PAUL",
+            "position": "Equipment Operator V (Backhoe)",
+            "pdfPage": 7,
+            "knownRemunerationColumn": 78346.91,
+            "benefits": null,
+            "expenses": 19.5
+          },
+          {
+            "name": "MOON CHRIS",
+            "position": "GIS Systems Administrator",
+            "pdfPage": 8,
+            "knownRemunerationColumn": 96942.3,
+            "benefits": null,
+            "expenses": null
+          },
+          {
+            "name": "MUNCHINSKY CHAD",
+            "position": "Duty Officer",
+            "pdfPage": 8,
+            "knownRemunerationColumn": 117696.79,
+            "benefits": null,
+            "expenses": 1570.45
+          },
+          {
+            "name": "SUMAN JATINDER",
+            "position": "Cart Coordinator (TERM)",
+            "pdfPage": 9,
+            "knownRemunerationColumn": 89977.41,
+            "benefits": null,
+            "expenses": 209.99
+          },
+          {
+            "name": "WANG JIM",
+            "position": "Infrastructure Management Accountant",
+            "pdfPage": 9,
+            "knownRemunerationColumn": 80870.28,
+            "benefits": null,
+            "expenses": 1313.79
+          },
+          {
+            "name": "WU LARRY",
+            "position": "Business Solutions Analyst (GIS)",
+            "pdfPage": 9,
+            "knownRemunerationColumn": 85331.66,
+            "benefits": null,
+            "expenses": null
+          },
+          {
+            "name": "KUMAR RAHUL",
+            "position": "Financial Analyst (TEMP)",
+            "pdfPage": 11,
+            "knownRemunerationColumn": 93626.21,
+            "benefits": null,
+            "expenses": 1468.79
+          }
+        ],
+        "completeEmployeeSchedule": false
+      },
+      "completeEmployeeSchedule": false,
+      "publicWarning": "Partial employee cohort: 11 named rows with an unpublished/dash taxable-benefit component remain held; their known remuneration cells and raw dashes remain in evidence, and are not substituted for composite remuneration. Accepted-subset totals differ in scope from full named-cohort controls. Held names/pages: BEERS EDDY (p6); BOYER MICHELLE (p6); BROWN STEVEN (p6); BROWNRIDGE KRISTEN (p6); GRINDLER PAUL (p7); MOON CHRIS (p8); MUNCHINSKY CHAD (p8); SUMAN JATINDER (p9); WANG JIM (p9); WU LARRY (p9); KUMAR RAHUL (p11)"
+    },
+    {
+      "id": "wave-lower-mainland-city-of-abbotsford-2023-elected-officials",
+      "employerSlug": "city-of-abbotsford",
+      "employerName": "City of Abbotsford",
+      "sector": "Municipalities",
+      "year": "2023",
+      "periodType": "calendar",
+      "periodStart": "2023-01-01",
+      "periodEnd": "2023-12-31",
+      "sourceUrl": "https://abbotsford.civicweb.net/document/57862/",
+      "sourceIndexUrl": "https://www.abbotsford.ca/city-hall/finance",
+      "sha256": "8cce0bc7013f866085cd7a301d406c2ce0438d2a6de5e20bf133b458c44db5ff",
+      "file": "city-of-abbotsford-2023-elected-officials.json.gzip",
+      "dataSha256": "d3dfe06b911133c32da0e87426a1b061b1a12788402c3735a57318df0eb26ffe",
+      "category": "elected-officials",
+      "scope": "elected-officials",
+      "title": "City of Abbotsford 2023 SOFI: elected-officials",
+      "status": "accepted",
+      "rowCount": 9,
+      "totalRemuneration": 607326,
+      "totalExpenses": 29218,
+      "pages": [
+        15
+      ],
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "threshold": null,
+      "thresholdComparison": null,
+      "notes": [
+        "Original employee schedule explicitly excludes Police and Elected Officials. Published surname/initial spellings remain as disclosed; no compiled full-name or job-title enrichment is copied. The public source is a complete published SOFI council-report attachment; no adoption or signature is inferred from the recommendation text.",
+        "Council remuneration is the source Indemnity column, with ordinary expenses separate. The annual reporting period is established by this same SOFI report and its dated named employee schedules, not by an upload path.",
+        "Composite remuneration is the published Remuneration & Payouts plus numeric Taxable Benefits (2023), or numeric Remuneration plus Taxable Benefits & Payouts (2024). Expense-inclusive totals, aggregate payroll and employer payroll costs are not pay. Expenses remain separate. Published blanks and dashes remain missing; explicit zeros stay zero. Names and positions remain as disclosed."
+      ],
+      "validation": {
+        "independentPdfReaders": [
+          "PyMuPDF positioned words",
+          "Poppler bbox-layout words"
+        ],
+        "allRowFieldsAgree": true,
+        "physicalPagesVisuallyReviewed": [
+          15
+        ],
+        "controls": [
+          {
+            "field": "pay",
+            "printedOrDerivedControl": 607324,
+            "knownCellSum": 607326,
+            "residual": 2,
+            "basis": "Printed whole-dollar elected official component subtotals"
+          },
+          {
+            "field": "expenses",
+            "printedOrDerivedControl": 29220,
+            "knownCellSum": 29218,
+            "residual": -2,
+            "basis": "Printed whole-dollar elected official component subtotals"
+          }
+        ],
+        "evidenceFile": "evidence/city-of-abbotsford-2023-elected-officials.json.gzip",
+        "evidenceSha256": "e44c035a31fbdf1d5c997d7033e83aa9f1eaba6411a38e60076de7a6f687f91c",
+        "corrections": [],
+        "periodEvidence": [
+          {
+            "page": 6,
+            "text": "Employees Earning over $75,000 for the year ended December 31, 2023"
+          }
+        ],
+        "namedControlUnavailable": false,
+        "sourceNamedRows": 9,
+        "acceptedRows": 9,
+        "heldMissingBenefitRows": 0,
+        "heldRows": []
+      },
+      "publicWarning": "Abbotsford 2023 council: sum of published individual indemnities minus printed council control is +2 CAD; expenses -2 CAD. Values are retained as printed; the cause is unknown."
+    },
+    {
+      "id": "wave-lower-mainland-city-of-abbotsford-2024-report-employee-remuneration",
+      "employerSlug": "city-of-abbotsford",
+      "employerName": "City of Abbotsford",
+      "sector": "Municipalities",
+      "year": "2024",
+      "periodType": "calendar",
+      "periodStart": "2024-01-01",
+      "periodEnd": "2024-12-31",
+      "sourceUrl": "https://abbotsford.civicweb.net/document/58192/",
+      "sourceIndexUrl": "https://www.abbotsford.ca/city-hall/finance",
+      "sha256": "4d8a45fbf4c2987262036a223ea4c09b8b4c1a35a1fa7edc77daaf541a878639",
+      "file": "city-of-abbotsford-2024-report-employee-remuneration.json.gzip",
+      "dataSha256": "83b27042e338df967455fb5d7f7db2272878812d0e7a2bc1623fa8f05990ea38",
+      "category": "employee-remuneration",
+      "scope": "employee-remuneration",
+      "title": "City of Abbotsford 2024 SOFI: employee-remuneration",
+      "status": "accepted",
+      "rowCount": 501,
+      "totalRemuneration": 60812232.07,
+      "totalExpenses": 592649.9,
+      "pages": [
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "threshold": 75000,
+      "thresholdComparison": ">",
+      "notes": [
+        "Original employee schedule explicitly excludes Police and Elected Officials. Published surname/initial spellings remain as disclosed; no compiled full-name or job-title enrichment is copied. The public source is a complete published SOFI council-report attachment; no adoption or signature is inferred from the recommendation text.",
+        "Partial employee cohort: only rows with numeric remuneration and taxable-benefit/payout components are accepted. Original dash/blank benefits remain null and those named rows are held, regardless of component subtotal agreement. Raw known remuneration and all component cells remain in evidence.",
+        "Composite remuneration is the published Remuneration & Payouts plus numeric Taxable Benefits (2023), or numeric Remuneration plus Taxable Benefits & Payouts (2024). Expense-inclusive totals, aggregate payroll and employer payroll costs are not pay. Expenses remain separate. Published blanks and dashes remain missing; explicit zeros stay zero. Names and positions remain as disclosed."
+      ],
+      "validation": {
+        "independentPdfReaders": [
+          "PyMuPDF positioned words",
+          "Poppler bbox-layout words"
+        ],
+        "allRowFieldsAgree": true,
+        "physicalPagesVisuallyReviewed": [
+          6,
+          10,
+          13,
+          15
+        ],
+        "controls": [
+          {
+            "field": "salary",
+            "printedOrDerivedControl": 59612320.56,
+            "knownCellSum": 59612320.57,
+            "residual": 0.01,
+            "basis": "Known original named-component cells compared with full printed named-cohort controls. This is distinct from accepted numeric-component subset totals and does not establish missing/dash benefits are zero."
+          },
+          {
+            "field": "benefits",
+            "printedOrDerivedControl": 1361300.18,
+            "knownCellSum": 1361300.17,
+            "residual": -0.01,
+            "basis": "Known original named-component cells compared with full printed named-cohort controls. This is distinct from accepted numeric-component subset totals and does not establish missing/dash benefits are zero."
+          },
+          {
+            "field": "expenses",
+            "printedOrDerivedControl": 593371.47,
+            "knownCellSum": 593371.47,
+            "residual": 0,
+            "basis": "Known original named-component cells compared with full printed named-cohort controls. This is distinct from accepted numeric-component subset totals and does not establish missing/dash benefits are zero."
+          }
+        ],
+        "evidenceFile": "evidence/city-of-abbotsford-2024-report-employee-remuneration.json.gzip",
+        "evidenceSha256": "c8b4f5a69930553bfd959662df70d38075b2dc14f43a9fa3327e7b8c48f40190",
+        "corrections": [],
+        "periodEvidence": [
+          {
+            "page": 6,
+            "text": "Employees Earning over $75,000 for the year ended December 31, 2024"
+          }
+        ],
+        "namedControlUnavailable": false,
+        "sourceNamedRows": 503,
+        "acceptedRows": 501,
+        "heldMissingBenefitRows": 2,
+        "heldRows": [
+          {
+            "name": "MACINTYRE, D",
+            "position": "Trades II (Carpenter)",
+            "pdfPage": 8,
+            "knownRemunerationColumn": 79203.52,
+            "benefits": null,
+            "expenses": 461.31
+          },
+          {
+            "name": "THIESSEN, J",
+            "position": "Operations Maintenance Coordinator",
+            "pdfPage": 9,
+            "knownRemunerationColumn": 82185.15,
+            "benefits": null,
+            "expenses": 260.26
+          }
+        ],
+        "completeEmployeeSchedule": false
+      },
+      "publicWarning": "Abbotsford 2024 employees: known remuneration-column cells sum +0.01 CAD and known taxable-benefit/payout cells -0.01 CAD relative to the printed component controls; known expense cells reconcile. Published values are retained; the cause is unknown. Partial employee cohort: 2 named rows with an unpublished/dash taxable-benefit component remain held; their known remuneration cells and raw dashes remain in evidence, and are not substituted for composite remuneration. Accepted-subset totals differ in scope from full named-cohort controls. Held names/pages: MACINTYRE, D (p8); THIESSEN, J (p9)",
+      "completeEmployeeSchedule": false
+    },
+    {
+      "id": "wave-lower-mainland-city-of-abbotsford-2024-report-elected-officials",
+      "employerSlug": "city-of-abbotsford",
+      "employerName": "City of Abbotsford",
+      "sector": "Municipalities",
+      "year": "2024",
+      "periodType": "calendar",
+      "periodStart": "2024-01-01",
+      "periodEnd": "2024-12-31",
+      "sourceUrl": "https://abbotsford.civicweb.net/document/58192/",
+      "sourceIndexUrl": "https://www.abbotsford.ca/city-hall/finance",
+      "sha256": "4d8a45fbf4c2987262036a223ea4c09b8b4c1a35a1fa7edc77daaf541a878639",
+      "file": "city-of-abbotsford-2024-report-elected-officials.json.gzip",
+      "dataSha256": "4223b71fb5b36915f448c82b374ac7ce21986f66e6a5cfbe9e21759111e4240f",
+      "category": "elected-officials",
+      "scope": "elected-officials",
+      "title": "City of Abbotsford 2024 SOFI: elected-officials",
+      "status": "accepted",
+      "rowCount": 9,
+      "totalRemuneration": 629169,
+      "totalExpenses": 30189,
+      "pages": [
+        16
+      ],
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "threshold": null,
+      "thresholdComparison": null,
+      "notes": [
+        "Original employee schedule explicitly excludes Police and Elected Officials. Published surname/initial spellings remain as disclosed; no compiled full-name or job-title enrichment is copied. The public source is a complete published SOFI council-report attachment; no adoption or signature is inferred from the recommendation text.",
+        "Published expense-inclusive row totals are retained only as supporting evidence. Their exact differences from indemnity plus expenses are pinned; they are never used as remuneration.",
+        "Council remuneration is the source Indemnity column, with ordinary expenses separate. The annual reporting period is established by this same SOFI report and its dated named employee schedules, not by an upload path.",
+        "Composite remuneration is the published Remuneration & Payouts plus numeric Taxable Benefits (2023), or numeric Remuneration plus Taxable Benefits & Payouts (2024). Expense-inclusive totals, aggregate payroll and employer payroll costs are not pay. Expenses remain separate. Published blanks and dashes remain missing; explicit zeros stay zero. Names and positions remain as disclosed."
+      ],
+      "validation": {
+        "independentPdfReaders": [
+          "PyMuPDF positioned words",
+          "Poppler bbox-layout words"
+        ],
+        "allRowFieldsAgree": true,
+        "physicalPagesVisuallyReviewed": [
+          16
+        ],
+        "controls": [
+          {
+            "field": "pay",
+            "printedOrDerivedControl": 629169,
+            "knownCellSum": 629169,
+            "residual": 0,
+            "basis": "Printed whole-dollar elected official component subtotals"
+          },
+          {
+            "field": "expenses",
+            "printedOrDerivedControl": 30189,
+            "knownCellSum": 30189,
+            "residual": 0,
+            "basis": "Printed whole-dollar elected official component subtotals"
+          }
+        ],
+        "evidenceFile": "evidence/city-of-abbotsford-2024-report-elected-officials.json.gzip",
+        "evidenceSha256": "50e1ed145d683f704847a30db4c7ebd980d9ea028909fcd903f19beeadc7c3cc",
+        "corrections": [],
+        "periodEvidence": [
+          {
+            "page": 6,
+            "text": "Employees Earning over $75,000 for the year ended December 31, 2024"
+          }
+        ],
+        "namedControlUnavailable": false,
+        "sourceNamedRows": 9,
+        "acceptedRows": 9,
+        "heldMissingBenefitRows": 0,
+        "heldRows": []
+      },
+      "publicWarning": "Abbotsford 2024 council: two published expense-inclusive row totals differ from indemnity plus expenses by -1 CAD and +1 CAD. Separate indemnity and expense subtotals reconcile exactly; printed values remain unchanged and the cause is unknown. Expense-inclusive totals are not used as remuneration."
+    },
+    {
+      "id": "wave-lower-mainland-village-of-harrison-hot-springs-2021-elected-officials",
+      "employerSlug": "village-of-harrison-hot-springs",
+      "employerName": "Village of Harrison Hot Springs",
+      "sector": "Municipalities",
+      "year": "2021",
+      "periodType": "calendar",
+      "periodStart": "2021-01-01",
+      "periodEnd": "2021-12-31",
+      "sourceUrl": "https://www.harrisonhotsprings.ca/sites/default/files/2023-03/1.%20Combined%20SOFI%20files%20for%20Council.pdf",
+      "sourceIndexUrl": "https://www.harrisonhotsprings.ca/village-office/departments/finance",
+      "sha256": "b85213a4a8ed7e8d5052704c2bb3635cc936aecbbf7a447502ebec4178a6a3bf",
+      "file": "village-of-harrison-hot-springs-2021-elected-officials.json.gzip",
+      "dataSha256": "71412d4c9fad593ffe59e2661c0d072d6d650c95bb71e40242c52f6660996138",
+      "category": "elected-officials",
+      "scope": "elected-officials",
+      "title": "Village of Harrison Hot Springs 2021 SOFI: elected-officials",
+      "status": "accepted",
+      "rowCount": 5,
+      "totalRemuneration": 90000,
+      "totalExpenses": 2508.1,
+      "pages": [
+        3
+      ],
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "threshold": null,
+      "thresholdComparison": null,
+      "notes": [
+        "The named schedules identify the reporting year; the same original report financial-statement cover on physical page 9 explicitly gives December 31. That scanned period heading was visually checked and its rendered page is fingerprinted. These are payment disclosures, not base salary rates or complete employee rosters.",
+        "Only roles explicitly printed in a source name cell are separated into position; other positions remain missing. The complete original council table publishes no named-cohort monetary subtotal; no issuer subtotal reconciliation is claimed.",
+        "Remuneration uses the separate published employee/council remuneration column, without adding the separately disclosed expenses or employer EI/CPP. Expenses remain separate. Published blanks and dashes remain missing; explicit zeros stay zero. Names and positions remain as disclosed."
+      ],
+      "validation": {
+        "independentPdfReaders": [
+          "PyMuPDF positioned words",
+          "Poppler bbox-layout words"
+        ],
+        "allRowFieldsAgree": true,
+        "physicalPagesVisuallyReviewed": [
+          3
+        ],
+        "controls": [],
+        "evidenceFile": "evidence/village-of-harrison-hot-springs-2021-elected-officials.json.gzip",
+        "evidenceSha256": "21ed12769b7ca46492070331a7741b8042368b60fa8b16ff8799adc57171d70b",
+        "corrections": [],
+        "periodEvidence": [
+          {
+            "page": 3,
+            "text": "2021"
+          },
+          {
+            "page": 4,
+            "text": "2021"
+          },
+          {
+            "page": 9,
+            "visualText": "Financial Statements December 31, 2021",
+            "renderDpi": 110,
+            "renderedPageSha256": "46d99faf51ca98f393586d685c47134a210b8f31ec7e06053d75e5b38b0b1f46"
+          }
+        ],
+        "namedControlUnavailable": true,
+        "sourceNamedRows": 5,
+        "acceptedRows": 5,
+        "heldMissingBenefitRows": 0,
+        "heldRows": []
+      },
+      "publicWarning": "Harrison Hot Springs 2021: the complete council table has no printed monetary subtotal. Every named row and its values were verified visually and between PDF readers; totals are calculated from disclosed rows."
+    },
+    {
+      "id": "wave-lower-mainland-village-of-harrison-hot-springs-2021-employee-remuneration",
+      "employerSlug": "village-of-harrison-hot-springs",
+      "employerName": "Village of Harrison Hot Springs",
+      "sector": "Municipalities",
+      "year": "2021",
+      "periodType": "calendar",
+      "periodStart": "2021-01-01",
+      "periodEnd": "2021-12-31",
+      "sourceUrl": "https://www.harrisonhotsprings.ca/sites/default/files/2023-03/1.%20Combined%20SOFI%20files%20for%20Council.pdf",
+      "sourceIndexUrl": "https://www.harrisonhotsprings.ca/village-office/departments/finance",
+      "sha256": "b85213a4a8ed7e8d5052704c2bb3635cc936aecbbf7a447502ebec4178a6a3bf",
+      "file": "village-of-harrison-hot-springs-2021-employee-remuneration.json.gzip",
+      "dataSha256": "938069d2b78f265509f99857511933b7b1ba21508ecd3dc785d9e138ff34480e",
+      "category": "employee-remuneration",
+      "scope": "employee-remuneration",
+      "title": "Village of Harrison Hot Springs 2021 SOFI: employee-remuneration",
+      "status": "accepted",
+      "rowCount": 7,
+      "totalRemuneration": 747088.84,
+      "totalExpenses": 4997.41,
+      "pages": [
+        4
+      ],
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "threshold": 75000,
+      "thresholdComparison": ">",
+      "notes": [
+        "The named schedules identify the reporting year; the same original report financial-statement cover on physical page 9 explicitly gives December 31. That scanned period heading was visually checked and its rendered page is fingerprinted. These are payment disclosures, not base salary rates or complete employee rosters.",
+        "The original complete named employee table has seven rows but publishes no named-cohort monetary subtotal. Both reader representations, the complete rendered table and the exact seven-row count were independently checked; an issuer subtotal reconciliation cannot be claimed.",
+        "Remuneration uses the separate published employee/council remuneration column, without adding the separately disclosed expenses or employer EI/CPP. Expenses remain separate. Published blanks and dashes remain missing; explicit zeros stay zero. Names and positions remain as disclosed."
+      ],
+      "validation": {
+        "independentPdfReaders": [
+          "PyMuPDF positioned words",
+          "Poppler bbox-layout words"
+        ],
+        "allRowFieldsAgree": true,
+        "physicalPagesVisuallyReviewed": [
+          4
+        ],
+        "controls": [],
+        "evidenceFile": "evidence/village-of-harrison-hot-springs-2021-employee-remuneration.json.gzip",
+        "evidenceSha256": "cc2c32b39e0565fd2dec019939358410c28054d01baf2149e52363a39845bb41",
+        "corrections": [],
+        "periodEvidence": [
+          {
+            "page": 3,
+            "text": "2021"
+          },
+          {
+            "page": 4,
+            "text": "2021"
+          },
+          {
+            "page": 9,
+            "visualText": "Financial Statements December 31, 2021",
+            "renderDpi": 110,
+            "renderedPageSha256": "46d99faf51ca98f393586d685c47134a210b8f31ec7e06053d75e5b38b0b1f46"
+          }
+        ],
+        "namedControlUnavailable": true,
+        "sourceNamedRows": 7,
+        "acceptedRows": 7,
+        "heldMissingBenefitRows": 0,
+        "heldRows": [],
+        "completeEmployeeSchedule": true
+      },
+      "publicWarning": "Harrison Hot Springs 2021: the original named employee schedule publishes no employee subtotal. All seven disclosed rows were checked against the complete table and both PDF readers; row sums are calculated totals, not issuer-subtotal reconciliations.",
+      "completeEmployeeSchedule": true
+    },
+    {
+      "id": "wave-lower-mainland-village-of-harrison-hot-springs-2022-elected-officials",
+      "employerSlug": "village-of-harrison-hot-springs",
+      "employerName": "Village of Harrison Hot Springs",
+      "sector": "Municipalities",
+      "year": "2022",
+      "periodType": "calendar",
+      "periodStart": "2022-01-01",
+      "periodEnd": "2022-12-31",
+      "sourceUrl": "https://www.harrisonhotsprings.ca/sites/default/files/2023-06/Combined%20SOFI%20files%20for%20Council%20-%202022.pdf",
+      "sourceIndexUrl": "https://www.harrisonhotsprings.ca/village-office/departments/finance",
+      "sha256": "8359b5e409dc0c738b4c339302bafafe4b94e369fa013f49f7763da1b36f164a",
+      "file": "village-of-harrison-hot-springs-2022-elected-officials.json.gzip",
+      "dataSha256": "93a4b09c08d75089b6a1ce77c8eef34fdda9c8b03b02d56bdeaf1106b2bdc0b9",
+      "category": "elected-officials",
+      "scope": "elected-officials",
+      "title": "Village of Harrison Hot Springs 2022 SOFI: elected-officials",
+      "status": "accepted",
+      "rowCount": 8,
+      "totalRemuneration": 90000,
+      "totalExpenses": 7542.08,
+      "pages": [
+        3
+      ],
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "threshold": null,
+      "thresholdComparison": null,
+      "notes": [
+        "The named schedules identify the reporting year; the same original report financial-statement cover on physical page 9 explicitly gives December 31. That scanned period heading was visually checked and its rendered page is fingerprinted. These are payment disclosures, not base salary rates or complete employee rosters.",
+        "Only roles explicitly printed in a source name cell are separated into position; other positions remain missing. The complete original council table publishes no named-cohort monetary subtotal; no issuer subtotal reconciliation is claimed.",
+        "Remuneration uses the separate published employee/council remuneration column, without adding the separately disclosed expenses or employer EI/CPP. Expenses remain separate. Published blanks and dashes remain missing; explicit zeros stay zero. Names and positions remain as disclosed."
+      ],
+      "validation": {
+        "independentPdfReaders": [
+          "PyMuPDF positioned words",
+          "Poppler bbox-layout words"
+        ],
+        "allRowFieldsAgree": true,
+        "physicalPagesVisuallyReviewed": [
+          3
+        ],
+        "controls": [],
+        "evidenceFile": "evidence/village-of-harrison-hot-springs-2022-elected-officials.json.gzip",
+        "evidenceSha256": "8615a2153d662770e45723f8a758d938fa09bbf5ad7d5031ce59a08833365017",
+        "corrections": [],
+        "periodEvidence": [
+          {
+            "page": 3,
+            "text": "2022"
+          },
+          {
+            "page": 4,
+            "text": "2022"
+          },
+          {
+            "page": 9,
+            "visualText": "Financial Statements December 31, 2022",
+            "renderDpi": 110,
+            "renderedPageSha256": "d533283f3bd05c9254d5605f62b1c42c2d0d4f13bad8908f34b1f9d22eac26a9"
+          }
+        ],
+        "namedControlUnavailable": true,
+        "sourceNamedRows": 8,
+        "acceptedRows": 8,
+        "heldMissingBenefitRows": 0,
+        "heldRows": []
+      },
+      "publicWarning": "Harrison Hot Springs 2022: the complete council table has no printed monetary subtotal. Every named row and its values were verified visually and between PDF readers; totals are calculated from disclosed rows."
+    },
+    {
+      "id": "wave-lower-mainland-village-of-harrison-hot-springs-2022-employee-remuneration",
+      "employerSlug": "village-of-harrison-hot-springs",
+      "employerName": "Village of Harrison Hot Springs",
+      "sector": "Municipalities",
+      "year": "2022",
+      "periodType": "calendar",
+      "periodStart": "2022-01-01",
+      "periodEnd": "2022-12-31",
+      "sourceUrl": "https://www.harrisonhotsprings.ca/sites/default/files/2023-06/Combined%20SOFI%20files%20for%20Council%20-%202022.pdf",
+      "sourceIndexUrl": "https://www.harrisonhotsprings.ca/village-office/departments/finance",
+      "sha256": "8359b5e409dc0c738b4c339302bafafe4b94e369fa013f49f7763da1b36f164a",
+      "file": "village-of-harrison-hot-springs-2022-employee-remuneration.json.gzip",
+      "dataSha256": "5e01e001edbfc7a61fa3f6d5d54378911cd8d0667aa49f53de2000bea0e1ca24",
+      "category": "employee-remuneration",
+      "scope": "employee-remuneration",
+      "title": "Village of Harrison Hot Springs 2022 SOFI: employee-remuneration",
+      "status": "accepted",
+      "rowCount": 7,
+      "totalRemuneration": 744079.99,
+      "totalExpenses": 13035.52,
+      "pages": [
+        4
+      ],
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "threshold": 75000,
+      "thresholdComparison": ">",
+      "notes": [
+        "The named schedules identify the reporting year; the same original report financial-statement cover on physical page 9 explicitly gives December 31. That scanned period heading was visually checked and its rendered page is fingerprinted. These are payment disclosures, not base salary rates or complete employee rosters.",
+        "The original complete named employee table has seven rows but publishes no named-cohort monetary subtotal. Both reader representations, the complete rendered table and the exact seven-row count were independently checked; an issuer subtotal reconciliation cannot be claimed.",
+        "Remuneration uses the separate published employee/council remuneration column, without adding the separately disclosed expenses or employer EI/CPP. Expenses remain separate. Published blanks and dashes remain missing; explicit zeros stay zero. Names and positions remain as disclosed."
+      ],
+      "validation": {
+        "independentPdfReaders": [
+          "PyMuPDF positioned words",
+          "Poppler bbox-layout words"
+        ],
+        "allRowFieldsAgree": true,
+        "physicalPagesVisuallyReviewed": [
+          4
+        ],
+        "controls": [],
+        "evidenceFile": "evidence/village-of-harrison-hot-springs-2022-employee-remuneration.json.gzip",
+        "evidenceSha256": "2ddbabd002c5026f7d033e4a068ea1ad9e0c51f00d656bff1900d51c67a9ee9e",
+        "corrections": [],
+        "periodEvidence": [
+          {
+            "page": 3,
+            "text": "2022"
+          },
+          {
+            "page": 4,
+            "text": "2022"
+          },
+          {
+            "page": 9,
+            "visualText": "Financial Statements December 31, 2022",
+            "renderDpi": 110,
+            "renderedPageSha256": "d533283f3bd05c9254d5605f62b1c42c2d0d4f13bad8908f34b1f9d22eac26a9"
+          }
+        ],
+        "namedControlUnavailable": true,
+        "sourceNamedRows": 7,
+        "acceptedRows": 7,
+        "heldMissingBenefitRows": 0,
+        "heldRows": [],
+        "completeEmployeeSchedule": true
+      },
+      "publicWarning": "Harrison Hot Springs 2022: the original named employee schedule publishes no employee subtotal. All seven disclosed rows were checked against the complete table and both PDF readers; row sums are calculated totals, not issuer-subtotal reconciliations.",
+      "completeEmployeeSchedule": true
+    },
+    {
+      "id": "wave-lower-mainland-city-of-port-moody-2024-elected-officials",
+      "employerSlug": "city-of-port-moody",
+      "employerName": "City of Port Moody",
+      "sector": "Municipalities",
+      "year": "2024",
+      "periodType": "calendar",
+      "periodStart": "2024-01-01",
+      "periodEnd": "2024-12-31",
+      "sourceUrl": "https://media-002-ca.cdn.govstack.com/portmoody-014-ca/media/0n3nhqjd/2024-statement-of-financial-information.pdf",
+      "sourceIndexUrl": "https://www.portmoody.ca/city-government/plans-reports-and-publications/",
+      "sha256": "8ca6ab1a4662257e8efd8f27d96ce169bc15e534ce3b5363789ba90f1064a6d0",
+      "file": "city-of-port-moody-2024-elected-officials.json.gzip",
+      "dataSha256": "4118205e0cc51a7e605370c51f4d4f5dc1efad37910727c9fb0ed8009be05802",
+      "category": "elected-officials",
+      "scope": "elected-officials",
+      "title": "City of Port Moody 2024 SOFI: elected-officials",
+      "status": "accepted",
+      "rowCount": 7,
+      "totalRemuneration": 496026,
+      "totalExpenses": 37249,
+      "pages": [
+        41
+      ],
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "threshold": null,
+      "thresholdComparison": null,
+      "notes": [
+        "Complete council cohort only. Employee schedules remain unaccepted and are tracked separately; council acceptance does not establish employee coverage. Rendered council tables and all individual fields were visually checked; the Richmond PDF has an OCR text layer, corroborated against every rendered council cell.",
+        "Council remuneration is published Base Salary plus numeric Taxable Benefits or Benefits & Other. Ordinary expenses remain separate. Expenses remain separate. Published blanks and dashes remain missing; explicit zeros stay zero. Names and positions remain as disclosed."
+      ],
+      "validation": {
+        "independentPdfReaders": [
+          "PyMuPDF positioned words",
+          "Poppler bbox-layout words"
+        ],
+        "allRowFieldsAgree": true,
+        "physicalPagesVisuallyReviewed": [
+          41
+        ],
+        "controls": [
+          {
+            "field": "salary",
+            "printedOrDerivedControl": 492279,
+            "knownCellSum": 492279,
+            "residual": 0,
+            "basis": "Printed council base salary, taxable benefits/other and expense component subtotals"
+          },
+          {
+            "field": "benefits",
+            "printedOrDerivedControl": 3747,
+            "knownCellSum": 3747,
+            "residual": 0,
+            "basis": "Printed council base salary, taxable benefits/other and expense component subtotals"
+          },
+          {
+            "field": "expenses",
+            "printedOrDerivedControl": 37249,
+            "knownCellSum": 37249,
+            "residual": 0,
+            "basis": "Printed council base salary, taxable benefits/other and expense component subtotals"
+          }
+        ],
+        "evidenceFile": "evidence/city-of-port-moody-2024-elected-officials.json.gzip",
+        "evidenceSha256": "e2a792e64d200f7a0136b67ef2c2a5fa61450da379850f923f3ed1add1a487e8",
+        "corrections": [],
+        "periodEvidence": [
+          {
+            "page": 2,
+            "text": "Year Ended December 31, 2024"
+          }
+        ],
+        "namedControlUnavailable": false,
+        "sourceNamedRows": 7,
+        "acceptedRows": 7,
+        "heldMissingBenefitRows": 0,
+        "heldRows": []
+      }
+    },
+    {
+      "id": "wave-lower-mainland-city-of-port-moody-2025-elected-officials",
+      "employerSlug": "city-of-port-moody",
+      "employerName": "City of Port Moody",
+      "sector": "Municipalities",
+      "year": "2025",
+      "periodType": "calendar",
+      "periodStart": "2025-01-01",
+      "periodEnd": "2025-12-31",
+      "sourceUrl": "https://media-002-ca.cdn.govstack.com/portmoody-014-ca/media/yrkh3rw0/edms-674189-v2-2025_statement_of_financial_information_-sofi.pdf",
+      "sourceIndexUrl": "https://www.portmoody.ca/city-government/plans-reports-and-publications/",
+      "sha256": "2be6c71b4a1a12bf447fb363f8d3633acec16a55d4072631fb0cc973f8fdc44b",
+      "file": "city-of-port-moody-2025-elected-officials.json.gzip",
+      "dataSha256": "8c27c3072139aea645b293735270d17d5158982f7814a9a3e33897c8eaa3eea4",
+      "category": "elected-officials",
+      "scope": "elected-officials",
+      "title": "City of Port Moody 2025 SOFI: elected-officials",
+      "status": "accepted",
+      "rowCount": 7,
+      "totalRemuneration": 517197,
+      "totalExpenses": 44013,
+      "pages": [
+        40
+      ],
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "threshold": null,
+      "thresholdComparison": null,
+      "notes": [
+        "Complete council cohort only. Employee schedules remain unaccepted and are tracked separately; council acceptance does not establish employee coverage. Rendered council tables and all individual fields were visually checked; the Richmond PDF has an OCR text layer, corroborated against every rendered council cell.",
+        "Council remuneration is published Base Salary plus numeric Taxable Benefits or Benefits & Other. Ordinary expenses remain separate. Expenses remain separate. Published blanks and dashes remain missing; explicit zeros stay zero. Names and positions remain as disclosed."
+      ],
+      "validation": {
+        "independentPdfReaders": [
+          "PyMuPDF positioned words",
+          "Poppler bbox-layout words"
+        ],
+        "allRowFieldsAgree": true,
+        "physicalPagesVisuallyReviewed": [
+          40
+        ],
+        "controls": [
+          {
+            "field": "salary",
+            "printedOrDerivedControl": 513265,
+            "knownCellSum": 513266,
+            "residual": 1,
+            "basis": "Printed council base salary, taxable benefits/other and expense component subtotals"
+          },
+          {
+            "field": "benefits",
+            "printedOrDerivedControl": 3932,
+            "knownCellSum": 3931,
+            "residual": -1,
+            "basis": "Printed council base salary, taxable benefits/other and expense component subtotals"
+          },
+          {
+            "field": "expenses",
+            "printedOrDerivedControl": 44012,
+            "knownCellSum": 44013,
+            "residual": 1,
+            "basis": "Printed council base salary, taxable benefits/other and expense component subtotals"
+          }
+        ],
+        "evidenceFile": "evidence/city-of-port-moody-2025-elected-officials.json.gzip",
+        "evidenceSha256": "3d5a8c12f1844d0e3a2b751ef9e3a12446cc808242f97454f503d490f57f65ef",
+        "corrections": [],
+        "periodEvidence": [
+          {
+            "page": 2,
+            "text": "Year Ended December 31, 2025"
+          }
+        ],
+        "namedControlUnavailable": false,
+        "sourceNamedRows": 7,
+        "acceptedRows": 7,
+        "heldMissingBenefitRows": 0,
+        "heldRows": []
+      },
+      "publicWarning": "City of Port Moody 2025 council: published row sums minus component controls are salary +1 CAD; taxable benefits/other -1 CAD; expenses +1 CAD. Published values are unchanged; the cause is unknown."
+    },
+    {
+      "id": "wave-lower-mainland-city-of-richmond-2024-elected-officials",
+      "employerSlug": "city-of-richmond",
+      "employerName": "City of Richmond",
+      "sector": "Municipalities",
+      "year": "2024",
+      "periodType": "calendar",
+      "periodStart": "2024-01-01",
+      "periodEnd": "2024-12-31",
+      "sourceUrl": "https://citycouncil.richmond.ca/__shared/assets/2024_Statement_of_Financial_Information77285.pdf",
+      "sourceIndexUrl": "https://citycouncil.richmond.ca/agendas/council/062226_agenda.htm",
+      "sha256": "f63925088a6b381fe2ff96d9759c62a8c5316f59e2bf464ec532ba5d4409fde2",
+      "file": "city-of-richmond-2024-elected-officials.json.gzip",
+      "dataSha256": "4f4e87a2a9edf6a58e7b2c3636125fe73f01626a2ccf23ccc28110bd215d17c8",
+      "category": "elected-officials",
+      "scope": "elected-officials",
+      "title": "City of Richmond 2024 SOFI: elected-officials",
+      "status": "accepted",
+      "rowCount": 9,
+      "totalRemuneration": 1109143,
+      "totalExpenses": 17171,
+      "pages": [
+        46
+      ],
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "threshold": null,
+      "thresholdComparison": null,
+      "notes": [
+        "Complete council cohort only. Employee schedules remain unaccepted and are tracked separately; council acceptance does not establish employee coverage. Rendered council tables and all individual fields were visually checked; the Richmond PDF has an OCR text layer, corroborated against every rendered council cell.",
+        "Independent cross-review found the leading salary currency symbol assigned to the first Mayor title. The reviewed position/salary boundary now assigns that symbol to its monetary column; a literal Mayor regression and source-specific text-field currency guards prevent recurrence. No monetary cell was changed.",
+        "Council remuneration is published Base Salary plus numeric Taxable Benefits or Benefits & Other. Ordinary expenses remain separate. Expenses remain separate. Published blanks and dashes remain missing; explicit zeros stay zero. Names and positions remain as disclosed."
+      ],
+      "validation": {
+        "independentPdfReaders": [
+          "PyMuPDF positioned words",
+          "Poppler bbox-layout words"
+        ],
+        "allRowFieldsAgree": true,
+        "physicalPagesVisuallyReviewed": [
+          46
+        ],
+        "controls": [
+          {
+            "field": "salary",
+            "printedOrDerivedControl": 948916,
+            "knownCellSum": 948916,
+            "residual": 0,
+            "basis": "Printed council base salary, taxable benefits/other and expense component subtotals"
+          },
+          {
+            "field": "benefits",
+            "printedOrDerivedControl": 160227,
+            "knownCellSum": 160227,
+            "residual": 0,
+            "basis": "Printed council base salary, taxable benefits/other and expense component subtotals"
+          },
+          {
+            "field": "expenses",
+            "printedOrDerivedControl": 17171,
+            "knownCellSum": 17171,
+            "residual": 0,
+            "basis": "Printed council base salary, taxable benefits/other and expense component subtotals"
+          }
+        ],
+        "evidenceFile": "evidence/city-of-richmond-2024-elected-officials.json.gzip",
+        "evidenceSha256": "96d1d42a6ced9e543ef8ec25b41fa399500fbd37d79002f20627bc3867b01be7",
+        "corrections": [],
+        "periodEvidence": [
+          {
+            "page": 4,
+            "text": "year ended December 31, 2024"
+          }
+        ],
+        "namedControlUnavailable": false,
+        "sourceNamedRows": 9,
+        "acceptedRows": 9,
+        "heldMissingBenefitRows": 0,
+        "heldRows": []
+      }
+    }
+  ]
+}

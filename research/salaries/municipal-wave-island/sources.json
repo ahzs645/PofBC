@@ -1,0 +1,1459 @@
+{
+  "version": 1,
+  "rowSchema": [
+    "employerSlug",
+    "name",
+    "position",
+    "remuneration",
+    "expenses",
+    "pdfPage"
+  ],
+  "sources": [
+    {
+      "id": "wave-island-city-of-courtenay-2025-employees",
+      "employerSlug": "city-of-courtenay",
+      "employerName": "City of Courtenay",
+      "sector": "Municipalities",
+      "year": "2025",
+      "periodType": "calendar",
+      "periodStart": "2025-01-01",
+      "periodEnd": "2025-12-31",
+      "title": "City of Courtenay 2025 official employee remuneration and expenses",
+      "sourceUrl": "https://www.courtenay.ca/media/file/2025-statement-financial-information",
+      "sourceIndexUrl": "https://www.courtenay.ca/city-hall/financial-services",
+      "sha256": "f62a90a67f1067b6c771fd41b3109ee7ee998991eda3fde5fdb4c7b56c36d7dd",
+      "pdfBytes": 3273852,
+      "file": "city-of-courtenay-2025-employees.json.gzip",
+      "dataSha256": "5b4b3048a0b37b5e21321bb59ade0bc0edc6d5066d3fc992a3af697f6ec0e63a",
+      "normalizedSha256": "e7a5fd4b945d764f7cd5ab3a9d4aabc9d7df82074bce97ce54ea6ad07757008f",
+      "currency": "CAD",
+      "scope": "employee-remuneration",
+      "category": "employee-remuneration",
+      "threshold": 75000,
+      "thresholdComparison": ">",
+      "nameDisclosure": "as-published",
+      "positionDisclosure": "as-published",
+      "rowCount": 99,
+      "totalRemuneration": 10322461.0,
+      "totalDisclosedExpenses": 256771.0,
+      "pages": [
+        33,
+        34,
+        35
+      ],
+      "status": "verified",
+      "verifiedOn": "2026-10-31",
+      "publicWarning": "Published named rows differ from the printed named subtotals: remuneration $+0; expenses $+1. The cause is unresolved; every published cell is retained unchanged.",
+      "notes": [
+        "Employee and elected-official cohorts remain separate. Under-threshold and grand-total aggregates are evidence controls only, not individual records.",
+        "Blank and dash expense cells remain missing; numeric zeroes and negative amounts retain their source meaning. Names, initials, published title abbreviations and source spelling are retained without identity inference.",
+        "Remuneration and expenses are separate source columns. Expense-inclusive Total columns in Gibsons are retained only as evidence; they are never imported as remuneration.",
+        "No compiled records are deleted or relabelled by this collection.",
+        "Wyka, R.'s title is visibly clipped at Perform. A guarded correction removes hidden Poppler-only glyphs; the visible source and PyMuPDF agree. The full title is not inferred."
+      ],
+      "validation": {
+        "sourceFingerprintLocked": true,
+        "completeNamedCohort": true,
+        "rowsIndependentlyCompared": 99,
+        "bothReadersAgreeAfterGuardedVisibleTextCorrection": true,
+        "physicalPdfPages": [
+          33,
+          34,
+          35
+        ],
+        "printedControls": [
+          {
+            "scope": "named",
+            "labelRegex": "Total for employees where remuneration is over \\$75,000",
+            "printedValues": [
+              10322461,
+              256770
+            ],
+            "physicalPdfPage": 35,
+            "bothReadersAgree": true,
+            "positionedWords": [
+              [
+                430.9104309082031,
+                388.4890441894531,
+                477.1306457519531,
+                399.759033203125,
+                "10,322,461"
+              ],
+              [
+                522.4345703125,
+                388.4890441894531,
+                555.8271484375,
+                399.759033203125,
+                "256,770"
+              ]
+            ]
+          }
+        ],
+        "namedControlBasis": "Directly printed named-cohort subtotal",
+        "namedControlValues": [
+          10322461,
+          256770
+        ],
+        "remunerationResidual": 0.0,
+        "expensesResidual": 1.0,
+        "summaryTotalReconciled": false,
+        "belowPrintedRemunerationThresholdRows": [],
+        "missingExpenseRows": 0,
+        "explicitZeroExpenseRows": 0,
+        "negativeExpenseRows": 0,
+        "evidenceFile": "evidence/city-of-courtenay-2025-employees.json.gzip",
+        "evidenceSha256": "3492775f34732e16bd98f9aa33c43d73a89c928074a800db10c4690bad26b0f4",
+        "visualReviewPdfPages": [
+          33,
+          34,
+          35
+        ],
+        "allNamedSchedulePagesVisuallyInspected": true,
+        "approvalPhysicalPage": 45,
+        "approvalDate": "2026-06-24",
+        "approvalRepresentation": "Visible signatures",
+        "approvalPageVisuallyReviewed": true
+      }
+    },
+    {
+      "id": "wave-island-city-of-courtenay-2025-council",
+      "employerSlug": "city-of-courtenay",
+      "employerName": "City of Courtenay",
+      "sector": "Municipalities",
+      "year": "2025",
+      "periodType": "calendar",
+      "periodStart": "2025-01-01",
+      "periodEnd": "2025-12-31",
+      "title": "City of Courtenay 2025 official elected official remuneration and expenses",
+      "sourceUrl": "https://www.courtenay.ca/media/file/2025-statement-financial-information",
+      "sourceIndexUrl": "https://www.courtenay.ca/city-hall/financial-services",
+      "sha256": "f62a90a67f1067b6c771fd41b3109ee7ee998991eda3fde5fdb4c7b56c36d7dd",
+      "pdfBytes": 3273852,
+      "file": "city-of-courtenay-2025-council.json.gzip",
+      "dataSha256": "a403c011ecbffe0416d91cd0b8e90c310767c3ff24a34ce45629b1c796f669b8",
+      "normalizedSha256": "c76fcbb67b42b7a7eb0e627facad44ed27b8af6e85ddfc214d7bb8b14a6ce45a",
+      "currency": "CAD",
+      "scope": "elected-officials",
+      "category": "elected-officials",
+      "threshold": null,
+      "thresholdComparison": null,
+      "nameDisclosure": "as-published",
+      "positionDisclosure": "as-published",
+      "rowCount": 7,
+      "totalRemuneration": 302945.0,
+      "totalDisclosedExpenses": 58952.0,
+      "pages": [
+        32
+      ],
+      "status": "verified",
+      "verifiedOn": "2026-10-31",
+      "publicWarning": "Published named rows differ from the printed named subtotals: remuneration $-3; expenses $+1. The cause is unresolved; every published cell is retained unchanged.",
+      "notes": [
+        "Employee and elected-official cohorts remain separate. Under-threshold and grand-total aggregates are evidence controls only, not individual records.",
+        "Blank and dash expense cells remain missing; numeric zeroes and negative amounts retain their source meaning. Names, initials, published title abbreviations and source spelling are retained without identity inference.",
+        "Remuneration and expenses are separate source columns. Expense-inclusive Total columns in Gibsons are retained only as evidence; they are never imported as remuneration.",
+        "No compiled records are deleted or relabelled by this collection."
+      ],
+      "validation": {
+        "sourceFingerprintLocked": true,
+        "completeNamedCohort": true,
+        "rowsIndependentlyCompared": 7,
+        "bothReadersAgreeAfterGuardedVisibleTextCorrection": true,
+        "physicalPdfPages": [
+          32
+        ],
+        "printedControls": [
+          {
+            "scope": "named",
+            "labelRegex": "TOTAL",
+            "printedValues": [
+              302948,
+              58951
+            ],
+            "physicalPdfPage": 32,
+            "bothReadersAgree": true,
+            "positionedWords": [
+              [
+                385.8000183105469,
+                372.92840576171875,
+                429.7158203125,
+                385.78948974609375,
+                "$302,948"
+              ],
+              [
+                478.55999755859375,
+                372.92840576171875,
+                516.6668701171875,
+                385.78948974609375,
+                "$58,951"
+              ]
+            ]
+          }
+        ],
+        "namedControlBasis": "Directly printed named-cohort subtotal",
+        "namedControlValues": [
+          302948,
+          58951
+        ],
+        "remunerationResidual": -3.0,
+        "expensesResidual": 1.0,
+        "summaryTotalReconciled": false,
+        "belowPrintedRemunerationThresholdRows": [],
+        "missingExpenseRows": 0,
+        "explicitZeroExpenseRows": 0,
+        "negativeExpenseRows": 0,
+        "evidenceFile": "evidence/city-of-courtenay-2025-council.json.gzip",
+        "evidenceSha256": "e1958d54d1031ed21252c401db2e77bb08d040221c9647e35c1f2a4ec7133d0f",
+        "visualReviewPdfPages": [
+          32
+        ],
+        "allNamedSchedulePagesVisuallyInspected": true,
+        "approvalPhysicalPage": 45,
+        "approvalDate": "2026-06-24",
+        "approvalRepresentation": "Visible signatures",
+        "approvalPageVisuallyReviewed": true
+      }
+    },
+    {
+      "id": "wave-island-village-of-cumberland-2025-employees",
+      "employerSlug": "village-of-cumberland",
+      "employerName": "Village of Cumberland",
+      "sector": "Municipalities",
+      "year": "2025",
+      "periodType": "calendar",
+      "periodStart": "2025-01-01",
+      "periodEnd": "2025-12-31",
+      "title": "Village of Cumberland 2025 official employee remuneration and expenses",
+      "sourceUrl": "https://cumberland.ca/wp-content/uploads/2026/06/2025-SOFI.pdf",
+      "sourceIndexUrl": "https://cumberland.ca/financial-statements/",
+      "sha256": "f6f5f9268b14640773b1a0045e68c2bebbc82e786bfc44522367a71dbbf4683c",
+      "pdfBytes": 2974790,
+      "file": "village-of-cumberland-2025-employees.json.gzip",
+      "dataSha256": "59acf99a3d2afa325b6a1dd559a96bbeaf2049d6b45e90faa2c1b37fbf250d09",
+      "normalizedSha256": "d002dc7ba66281d8e62c14a6db4ebedbb05688b3423532f3e3a01ad594c5f9e3",
+      "currency": "CAD",
+      "scope": "employee-remuneration",
+      "category": "employee-remuneration",
+      "threshold": 75000,
+      "thresholdComparison": null,
+      "nameDisclosure": "as-published",
+      "positionDisclosure": "as-published",
+      "rowCount": 22,
+      "totalRemuneration": 2077429.0,
+      "totalDisclosedExpenses": 48966.0,
+      "pages": [
+        32
+      ],
+      "status": "verified",
+      "verifiedOn": "2026-10-31",
+      "publicWarning": "Published named rows differ from controls derived from printed all-employee and below-threshold aggregates: remuneration $+0; expenses $+1. The cause is unresolved; every published cell is retained unchanged.",
+      "notes": [
+        "Employee and elected-official cohorts remain separate. Under-threshold and grand-total aggregates are evidence controls only, not individual records.",
+        "Blank and dash expense cells remain missing; numeric zeroes and negative amounts retain their source meaning. Names, initials, published title abbreviations and source spelling are retained without identity inference.",
+        "Remuneration and expenses are separate source columns. Expense-inclusive Total columns in Gibsons are retained only as evidence; they are never imported as remuneration.",
+        "No compiled records are deleted or relabelled by this collection.",
+        "The below-threshold aggregate says remuneration and expenses of $75,000 or less. The exact selection rule is not inferred; all 22 published named rows independently have remuneration above $75,000."
+      ],
+      "validation": {
+        "sourceFingerprintLocked": true,
+        "completeNamedCohort": true,
+        "rowsIndependentlyCompared": 22,
+        "bothReadersAgreeAfterGuardedVisibleTextCorrection": true,
+        "physicalPdfPages": [
+          32
+        ],
+        "printedControls": [
+          {
+            "scope": "below",
+            "labelRegex": "Consolidated total of other employees with\\s+remuneration and expenses of \\$75,000 or less",
+            "printedValues": [
+              1541319,
+              29144
+            ],
+            "physicalPdfPage": 32,
+            "bothReadersAgree": true,
+            "positionedWords": [
+              [
+                372.84368896484375,
+                536.7578735351562,
+                403.61676025390625,
+                544.4368896484375,
+                "1,541,319"
+              ],
+              [
+                426.72021484375,
+                536.7578735351562,
+                447.8931884765625,
+                544.4368896484375,
+                "29,144"
+              ]
+            ]
+          },
+          {
+            "scope": "all",
+            "labelRegex": "Total: Other Employees",
+            "printedValues": [
+              3618748,
+              78109
+            ],
+            "physicalPdfPage": 32,
+            "bothReadersAgree": true,
+            "positionedWords": [
+              [
+                372.4828186035156,
+                546.595947265625,
+                403.4959411621094,
+                554.2749633789062,
+                "3,618,748"
+              ],
+              [
+                426.4822082519531,
+                546.595947265625,
+                447.821533203125,
+                554.2749633789062,
+                "78,109"
+              ]
+            ]
+          }
+        ],
+        "namedControlBasis": "Derived as printed all-employee total minus printed below-threshold aggregate; not a separately printed named subtotal",
+        "namedControlValues": [
+          2077429,
+          48965
+        ],
+        "remunerationResidual": 0.0,
+        "expensesResidual": 1.0,
+        "summaryTotalReconciled": false,
+        "belowPrintedRemunerationThresholdRows": [],
+        "missingExpenseRows": 0,
+        "explicitZeroExpenseRows": 0,
+        "negativeExpenseRows": 0,
+        "evidenceFile": "evidence/village-of-cumberland-2025-employees.json.gzip",
+        "evidenceSha256": "23098349a4035c5a47d22fe8490d681da59d4c8d2857a458312251f89005b939",
+        "visualReviewPdfPages": [
+          32
+        ],
+        "allNamedSchedulePagesVisuallyInspected": true,
+        "approvalPhysicalPage": 38,
+        "approvalDate": "2026-05-25",
+        "approvalRepresentation": "Published signature notation A. Bérard-Ball and V. Brown",
+        "approvalPageVisuallyReviewed": true
+      }
+    },
+    {
+      "id": "wave-island-village-of-cumberland-2025-council",
+      "employerSlug": "village-of-cumberland",
+      "employerName": "Village of Cumberland",
+      "sector": "Municipalities",
+      "year": "2025",
+      "periodType": "calendar",
+      "periodStart": "2025-01-01",
+      "periodEnd": "2025-12-31",
+      "title": "Village of Cumberland 2025 official elected official remuneration and expenses",
+      "sourceUrl": "https://cumberland.ca/wp-content/uploads/2026/06/2025-SOFI.pdf",
+      "sourceIndexUrl": "https://cumberland.ca/financial-statements/",
+      "sha256": "f6f5f9268b14640773b1a0045e68c2bebbc82e786bfc44522367a71dbbf4683c",
+      "pdfBytes": 2974790,
+      "file": "village-of-cumberland-2025-council.json.gzip",
+      "dataSha256": "60c89a088f9f419746cd1d5000176bbc4a2db26ef8526e4deb8871a8f8d5c139",
+      "normalizedSha256": "1fa469aca96120c2f9ae89dfd22e65a821928d4f1430301b0f11f37143d1e7a4",
+      "currency": "CAD",
+      "scope": "elected-officials",
+      "category": "elected-officials",
+      "threshold": null,
+      "thresholdComparison": null,
+      "nameDisclosure": "as-published",
+      "positionDisclosure": "as-published",
+      "rowCount": 5,
+      "totalRemuneration": 90723.0,
+      "totalDisclosedExpenses": 26852.0,
+      "pages": [
+        32
+      ],
+      "status": "verified",
+      "verifiedOn": "2026-10-31",
+      "publicWarning": null,
+      "notes": [
+        "Employee and elected-official cohorts remain separate. Under-threshold and grand-total aggregates are evidence controls only, not individual records.",
+        "Blank and dash expense cells remain missing; numeric zeroes and negative amounts retain their source meaning. Names, initials, published title abbreviations and source spelling are retained without identity inference.",
+        "Remuneration and expenses are separate source columns. Expense-inclusive Total columns in Gibsons are retained only as evidence; they are never imported as remuneration.",
+        "No compiled records are deleted or relabelled by this collection."
+      ],
+      "validation": {
+        "sourceFingerprintLocked": true,
+        "completeNamedCohort": true,
+        "rowsIndependentlyCompared": 5,
+        "bothReadersAgreeAfterGuardedVisibleTextCorrection": true,
+        "physicalPdfPages": [
+          32
+        ],
+        "printedControls": [
+          {
+            "scope": "named",
+            "labelRegex": "Total: Council/Elected Officials",
+            "printedValues": [
+              90723,
+              26852
+            ],
+            "physicalPdfPage": 32,
+            "bothReadersAgree": true,
+            "positionedWords": [
+              [
+                382.2031555175781,
+                161.75115966796875,
+                403.54248046875,
+                169.43016052246094,
+                "90,723"
+              ],
+              [
+                426.4822082519531,
+                161.75115966796875,
+                447.821533203125,
+                169.43016052246094,
+                "26,852"
+              ]
+            ]
+          }
+        ],
+        "namedControlBasis": "Directly printed named-cohort subtotal",
+        "namedControlValues": [
+          90723,
+          26852
+        ],
+        "remunerationResidual": 0.0,
+        "expensesResidual": 0.0,
+        "summaryTotalReconciled": true,
+        "belowPrintedRemunerationThresholdRows": [],
+        "missingExpenseRows": 0,
+        "explicitZeroExpenseRows": 0,
+        "negativeExpenseRows": 0,
+        "evidenceFile": "evidence/village-of-cumberland-2025-council.json.gzip",
+        "evidenceSha256": "94625be4e1d0c5afebe7f6396b74c48152ac9aa1bbbe9c8ce562ebdfcd306805",
+        "visualReviewPdfPages": [
+          32
+        ],
+        "allNamedSchedulePagesVisuallyInspected": true,
+        "approvalPhysicalPage": 38,
+        "approvalDate": "2026-05-25",
+        "approvalRepresentation": "Published signature notation A. Bérard-Ball and V. Brown",
+        "approvalPageVisuallyReviewed": true
+      }
+    },
+    {
+      "id": "wave-island-town-of-gibsons-2025-employees",
+      "employerSlug": "town-of-gibsons",
+      "employerName": "Town of Gibsons",
+      "sector": "Municipalities",
+      "year": "2025",
+      "periodType": "calendar",
+      "periodStart": "2025-01-01",
+      "periodEnd": "2025-12-31",
+      "title": "Town of Gibsons 2025 official employee remuneration and expenses",
+      "sourceUrl": "https://gibsons.ca/wp-content/uploads/2026/07/2025-Statement-of-Financial-Information.pdf",
+      "sourceIndexUrl": "https://gibsons.ca/town-hall/budget-finances/financial-reporting/",
+      "sha256": "8a9c0dea77b960c9b491a2b52f3c6f898f5f05cf15878e8975228c510c6988d3",
+      "pdfBytes": 28071371,
+      "file": "town-of-gibsons-2025-employees.json.gzip",
+      "dataSha256": "2bca466a6a189214a295c0c0a8e69fca79ae70959f680e4998e3203da67fbdba",
+      "normalizedSha256": "cea356b3bce3b29a374a85b8ce5d1a8d066423c07fb559d9d33abefefa65ffd9",
+      "currency": "CAD",
+      "scope": "employee-remuneration",
+      "category": "employee-remuneration",
+      "threshold": 75000,
+      "thresholdComparison": ">",
+      "nameDisclosure": "as-published",
+      "positionDisclosure": "as-published",
+      "rowCount": 24,
+      "totalRemuneration": 2715735.0,
+      "totalDisclosedExpenses": 71293.0,
+      "pages": [
+        10
+      ],
+      "status": "verified",
+      "verifiedOn": "2026-10-31",
+      "publicWarning": "The source places 1 employees with remuneration below $75,000 in its named schedule despite its remuneration threshold heading. The source rows and separate expenses are retained; no threshold explanation is assumed.",
+      "notes": [
+        "Employee and elected-official cohorts remain separate. Under-threshold and grand-total aggregates are evidence controls only, not individual records.",
+        "Blank and dash expense cells remain missing; numeric zeroes and negative amounts retain their source meaning. Names, initials, published title abbreviations and source spelling are retained without identity inference.",
+        "Remuneration and expenses are separate source columns. Expense-inclusive Total columns in Gibsons are retained only as evidence; they are never imported as remuneration.",
+        "No compiled records are deleted or relabelled by this collection."
+      ],
+      "validation": {
+        "sourceFingerprintLocked": true,
+        "completeNamedCohort": true,
+        "rowsIndependentlyCompared": 24,
+        "bothReadersAgreeAfterGuardedVisibleTextCorrection": true,
+        "physicalPdfPages": [
+          10
+        ],
+        "printedControls": [
+          {
+            "scope": "named",
+            "labelRegex": "Remuneration:\\s+Above \\$75,000",
+            "printedValues": [
+              2715735,
+              71293,
+              2787028
+            ],
+            "physicalPdfPage": 10,
+            "bothReadersAgree": true,
+            "positionedWords": [
+              [
+                352.67999267578125,
+                647.80224609375,
+                397.08770751953125,
+                662.06494140625,
+                "2,715,735"
+              ],
+              [
+                435.3599853515625,
+                647.80224609375,
+                465.97406005859375,
+                662.06494140625,
+                "71,293"
+              ],
+              [
+                489.8399963378906,
+                647.80224609375,
+                534.2476806640625,
+                662.06494140625,
+                "2,787,028"
+              ]
+            ]
+          }
+        ],
+        "namedControlBasis": "Directly printed named-cohort subtotal",
+        "namedControlValues": [
+          2715735,
+          71293
+        ],
+        "remunerationResidual": 0.0,
+        "expensesResidual": 0.0,
+        "summaryTotalReconciled": true,
+        "belowPrintedRemunerationThresholdRows": [
+          {
+            "name": "Jaswal, Tamara",
+            "remuneration": 74572,
+            "expenses": 3252,
+            "pdfPage": 10
+          }
+        ],
+        "missingExpenseRows": 0,
+        "explicitZeroExpenseRows": 0,
+        "negativeExpenseRows": 0,
+        "evidenceFile": "evidence/town-of-gibsons-2025-employees.json.gzip",
+        "evidenceSha256": "67e2b263a87d3719e50ed7695fb3fa77c139e6cc5fbde18c43f3d85ba6e1b117",
+        "visualReviewPdfPages": [
+          10
+        ],
+        "allNamedSchedulePagesVisuallyInspected": true,
+        "approvalPhysicalPage": 1,
+        "approvalDate": "2026-06-02",
+        "approvalRepresentation": "Approved Council resolution R2026-130 and visible certification/finance signatures",
+        "approvalPageVisuallyReviewed": true
+      }
+    },
+    {
+      "id": "wave-island-town-of-gibsons-2025-council",
+      "employerSlug": "town-of-gibsons",
+      "employerName": "Town of Gibsons",
+      "sector": "Municipalities",
+      "year": "2025",
+      "periodType": "calendar",
+      "periodStart": "2025-01-01",
+      "periodEnd": "2025-12-31",
+      "title": "Town of Gibsons 2025 official elected official remuneration and expenses",
+      "sourceUrl": "https://gibsons.ca/wp-content/uploads/2026/07/2025-Statement-of-Financial-Information.pdf",
+      "sourceIndexUrl": "https://gibsons.ca/town-hall/budget-finances/financial-reporting/",
+      "sha256": "8a9c0dea77b960c9b491a2b52f3c6f898f5f05cf15878e8975228c510c6988d3",
+      "pdfBytes": 28071371,
+      "file": "town-of-gibsons-2025-council.json.gzip",
+      "dataSha256": "423078ba432d86fd9a0b24268b55dd919feb93d32fd50606970e7b104921a86d",
+      "normalizedSha256": "83582ae580cf2f2badfde6811ad17625b8bdc44e21a4a89fdcd392a47bed507b",
+      "currency": "CAD",
+      "scope": "elected-officials",
+      "category": "elected-officials",
+      "threshold": null,
+      "thresholdComparison": null,
+      "nameDisclosure": "as-published",
+      "positionDisclosure": "as-published",
+      "rowCount": 5,
+      "totalRemuneration": 198492.0,
+      "totalDisclosedExpenses": 33276.0,
+      "pages": [
+        9
+      ],
+      "status": "verified",
+      "verifiedOn": "2026-10-31",
+      "publicWarning": null,
+      "notes": [
+        "Employee and elected-official cohorts remain separate. Under-threshold and grand-total aggregates are evidence controls only, not individual records.",
+        "Blank and dash expense cells remain missing; numeric zeroes and negative amounts retain their source meaning. Names, initials, published title abbreviations and source spelling are retained without identity inference.",
+        "Remuneration and expenses are separate source columns. Expense-inclusive Total columns in Gibsons are retained only as evidence; they are never imported as remuneration.",
+        "No compiled records are deleted or relabelled by this collection."
+      ],
+      "validation": {
+        "sourceFingerprintLocked": true,
+        "completeNamedCohort": true,
+        "rowsIndependentlyCompared": 5,
+        "bothReadersAgreeAfterGuardedVisibleTextCorrection": true,
+        "physicalPdfPages": [
+          9
+        ],
+        "printedControls": [
+          {
+            "scope": "named",
+            "labelRegex": "Total",
+            "printedValues": [
+              198492,
+              33276,
+              231768
+            ],
+            "physicalPdfPage": 9,
+            "bothReadersAgree": true,
+            "positionedWords": [
+              [
+                327.3599853515625,
+                289.12225341796875,
+                363.48992919921875,
+                303.3849792480469,
+                "198,492"
+              ],
+              [
+                423.0,
+                289.12225341796875,
+                453.4915771484375,
+                303.3849792480469,
+                "33,276"
+              ],
+              [
+                498.1199951171875,
+                289.12225341796875,
+                534.2518920898438,
+                303.3849792480469,
+                "231,768"
+              ]
+            ]
+          }
+        ],
+        "namedControlBasis": "Directly printed named-cohort subtotal",
+        "namedControlValues": [
+          198492,
+          33276
+        ],
+        "remunerationResidual": 0.0,
+        "expensesResidual": 0.0,
+        "summaryTotalReconciled": true,
+        "belowPrintedRemunerationThresholdRows": [],
+        "missingExpenseRows": 0,
+        "explicitZeroExpenseRows": 0,
+        "negativeExpenseRows": 0,
+        "evidenceFile": "evidence/town-of-gibsons-2025-council.json.gzip",
+        "evidenceSha256": "3b7fda296e13bd74be6fb4ca1b87d9664ea3a32f5c632dc6e4db09f7ca8b5d95",
+        "visualReviewPdfPages": [
+          9
+        ],
+        "allNamedSchedulePagesVisuallyInspected": true,
+        "approvalPhysicalPage": 1,
+        "approvalDate": "2026-06-02",
+        "approvalRepresentation": "Approved Council resolution R2026-130 and visible certification/finance signatures",
+        "approvalPageVisuallyReviewed": true
+      }
+    },
+    {
+      "id": "wave-island-village-of-gold-river-2025-employees",
+      "employerSlug": "village-of-gold-river",
+      "employerName": "Village of Gold River",
+      "sector": "Municipalities",
+      "year": "2025",
+      "periodType": "calendar",
+      "periodStart": "2025-01-01",
+      "periodEnd": "2025-12-31",
+      "title": "Village of Gold River 2025 official employee remuneration and expenses",
+      "sourceUrl": "https://goldriver.ca/wp-content/uploads/2026/09/2025-SOFI.pdf",
+      "sourceIndexUrl": "https://goldriver.ca/documents/",
+      "sha256": "432709caae1fe6069897107644bd62563d03644f320d34a6c39738239a793d73",
+      "pdfBytes": 77646,
+      "file": "village-of-gold-river-2025-employees.json.gzip",
+      "dataSha256": "08ad9ad12871622e0b4a31d871f2dd469849e5376f0b3077baca5eda61d46d13",
+      "normalizedSha256": "d01cf977d47b87baeb921facd5a50e0f457d7b58698c43fe374f4ba8e2c9635c",
+      "currency": "CAD",
+      "scope": "employee-remuneration",
+      "category": "employee-remuneration",
+      "threshold": 75000,
+      "thresholdComparison": ">",
+      "nameDisclosure": "as-published",
+      "positionDisclosure": "as-published",
+      "rowCount": 5,
+      "totalRemuneration": 551229.0,
+      "totalDisclosedExpenses": 10261.0,
+      "pages": [
+        5
+      ],
+      "status": "verified",
+      "verifiedOn": "2026-10-31",
+      "publicWarning": "Published named rows differ from controls derived from printed all-employee and below-threshold aggregates: remuneration $+1; expenses $+0. The cause is unresolved; every published cell is retained unchanged.",
+      "notes": [
+        "Employee and elected-official cohorts remain separate. Under-threshold and grand-total aggregates are evidence controls only, not individual records.",
+        "Blank and dash expense cells remain missing; numeric zeroes and negative amounts retain their source meaning. Names, initials, published title abbreviations and source spelling are retained without identity inference.",
+        "Remuneration and expenses are separate source columns. Expense-inclusive Total columns in Gibsons are retained only as evidence; they are never imported as remuneration.",
+        "No compiled records are deleted or relabelled by this collection."
+      ],
+      "validation": {
+        "sourceFingerprintLocked": true,
+        "completeNamedCohort": true,
+        "rowsIndependentlyCompared": 5,
+        "bothReadersAgreeAfterGuardedVisibleTextCorrection": true,
+        "physicalPdfPages": [
+          5
+        ],
+        "printedControls": [
+          {
+            "scope": "below",
+            "labelRegex": "Consolidated Total of Employees less than \\$75,000",
+            "printedValues": [
+              965499,
+              11336
+            ],
+            "physicalPdfPage": 5,
+            "bothReadersAgree": true,
+            "positionedWords": [
+              [
+                428.7637023925781,
+                377.0921936035156,
+                466.6522216796875,
+                386.8678894042969,
+                "$965,499"
+              ],
+              [
+                523.6807861328125,
+                377.0921936035156,
+                552.4537353515625,
+                386.8678894042969,
+                "$11,336"
+              ]
+            ]
+          },
+          {
+            "scope": "all",
+            "labelRegex": "(?m)^\\s*\\(B\\)",
+            "printedValues": [
+              1516727,
+              21597
+            ],
+            "physicalPdfPage": 5,
+            "bothReadersAgree": true,
+            "positionedWords": [
+              [
+                425.8832092285156,
+                398.5693054199219,
+                466.7224426269531,
+                408.3450012207031,
+                "$1,516,727"
+              ],
+              [
+                521.9998168945312,
+                398.5693054199219,
+                552.5206298828125,
+                408.3450012207031,
+                "$21,597"
+              ]
+            ]
+          }
+        ],
+        "namedControlBasis": "Derived as printed all-employee total minus printed below-threshold aggregate; not a separately printed named subtotal",
+        "namedControlValues": [
+          551228,
+          10261
+        ],
+        "remunerationResidual": 1.0,
+        "expensesResidual": 0.0,
+        "summaryTotalReconciled": false,
+        "belowPrintedRemunerationThresholdRows": [],
+        "missingExpenseRows": 3,
+        "explicitZeroExpenseRows": 0,
+        "negativeExpenseRows": 0,
+        "evidenceFile": "evidence/village-of-gold-river-2025-employees.json.gzip",
+        "evidenceSha256": "3b27f329f80146979ded3ecbbf0a6b1be8df7f8bb593c83c09d1e73e177f47f2",
+        "visualReviewPdfPages": [
+          5
+        ],
+        "allNamedSchedulePagesVisuallyInspected": true,
+        "approvalPhysicalPage": 2,
+        "approvalDate": null,
+        "approvalRepresentation": "Published Signed notation for Mayor and CAO; date fields blank",
+        "approvalPageVisuallyReviewed": true
+      }
+    },
+    {
+      "id": "wave-island-village-of-gold-river-2025-council",
+      "employerSlug": "village-of-gold-river",
+      "employerName": "Village of Gold River",
+      "sector": "Municipalities",
+      "year": "2025",
+      "periodType": "calendar",
+      "periodStart": "2025-01-01",
+      "periodEnd": "2025-12-31",
+      "title": "Village of Gold River 2025 official elected official remuneration and expenses",
+      "sourceUrl": "https://goldriver.ca/wp-content/uploads/2026/09/2025-SOFI.pdf",
+      "sourceIndexUrl": "https://goldriver.ca/documents/",
+      "sha256": "432709caae1fe6069897107644bd62563d03644f320d34a6c39738239a793d73",
+      "pdfBytes": 77646,
+      "file": "village-of-gold-river-2025-council.json.gzip",
+      "dataSha256": "f56e91ffc8a4431e0fa3bdea6b1c836e10c3fe6df7519598310e75324bad75a3",
+      "normalizedSha256": "738aca13c933bd2f4c1664235d8ae610c28aa419ac031df34df9799a4f2d9ef2",
+      "currency": "CAD",
+      "scope": "elected-officials",
+      "category": "elected-officials",
+      "threshold": null,
+      "thresholdComparison": null,
+      "nameDisclosure": "as-published",
+      "positionDisclosure": "as-published",
+      "rowCount": 5,
+      "totalRemuneration": 48148.0,
+      "totalDisclosedExpenses": 13159.0,
+      "pages": [
+        5
+      ],
+      "status": "verified",
+      "verifiedOn": "2026-10-31",
+      "publicWarning": "Published named rows differ from the printed named subtotals: remuneration $+1; expenses $+0. The cause is unresolved; every published cell is retained unchanged.",
+      "notes": [
+        "Employee and elected-official cohorts remain separate. Under-threshold and grand-total aggregates are evidence controls only, not individual records.",
+        "Blank and dash expense cells remain missing; numeric zeroes and negative amounts retain their source meaning. Names, initials, published title abbreviations and source spelling are retained without identity inference.",
+        "Remuneration and expenses are separate source columns. Expense-inclusive Total columns in Gibsons are retained only as evidence; they are never imported as remuneration.",
+        "No compiled records are deleted or relabelled by this collection."
+      ],
+      "validation": {
+        "sourceFingerprintLocked": true,
+        "completeNamedCohort": true,
+        "rowsIndependentlyCompared": 5,
+        "bothReadersAgreeAfterGuardedVisibleTextCorrection": true,
+        "physicalPdfPages": [
+          5
+        ],
+        "printedControls": [
+          {
+            "scope": "named",
+            "labelRegex": "(?m)^\\s*\\(A\\)",
+            "printedValues": [
+              48147,
+              13159
+            ],
+            "physicalPdfPage": 5,
+            "bothReadersAgree": true,
+            "positionedWords": [
+              [
+                436.3362731933594,
+                234.89608764648438,
+                466.7371826171875,
+                244.67176818847656,
+                "$48,147"
+              ],
+              [
+                523.5748291015625,
+                234.89608764648438,
+                552.461181640625,
+                244.67176818847656,
+                "$13,159"
+              ]
+            ]
+          }
+        ],
+        "namedControlBasis": "Directly printed named-cohort subtotal",
+        "namedControlValues": [
+          48147,
+          13159
+        ],
+        "remunerationResidual": 1.0,
+        "expensesResidual": 0.0,
+        "summaryTotalReconciled": false,
+        "belowPrintedRemunerationThresholdRows": [],
+        "missingExpenseRows": 1,
+        "explicitZeroExpenseRows": 0,
+        "negativeExpenseRows": 0,
+        "evidenceFile": "evidence/village-of-gold-river-2025-council.json.gzip",
+        "evidenceSha256": "6bb2d800ad716f0b78747d45a8fd1183f4f2ff1f22e77f4ec42051de5b3361b8",
+        "visualReviewPdfPages": [
+          5
+        ],
+        "allNamedSchedulePagesVisuallyInspected": true,
+        "approvalPhysicalPage": 2,
+        "approvalDate": null,
+        "approvalRepresentation": "Published Signed notation for Mayor and CAO; date fields blank",
+        "approvalPageVisuallyReviewed": true
+      }
+    },
+    {
+      "id": "wave-island-village-of-tahsis-2025-employees",
+      "employerSlug": "village-of-tahsis",
+      "employerName": "Village of Tahsis",
+      "sector": "Municipalities",
+      "year": "2025",
+      "periodType": "calendar",
+      "periodStart": "2025-01-01",
+      "periodEnd": "2025-12-31",
+      "title": "Village of Tahsis 2025 official employee remuneration and expenses",
+      "sourceUrl": "https://villageoftahsis.com/wp-content/uploads/2026/06/2025-SOFI-Signed-copy.pdf",
+      "sourceIndexUrl": "https://villageoftahsis.com/government/documents-reports/finance-and-other-reports/",
+      "sha256": "e6983aecae0ecf2803756d74f2e759c0ea8ece5ffc41293ab7d587814e627ed0",
+      "pdfBytes": 2248930,
+      "file": "village-of-tahsis-2025-employees.json.gzip",
+      "dataSha256": "02d9cf2b3f12f2057baa9c805233f2ba17ccb38056fab4cb423fca5f54613931",
+      "normalizedSha256": "bb8b6aad27cdfb240ecddd279b5388b9aa2901b4191d3b7b49d546a30e614150",
+      "currency": "CAD",
+      "scope": "employee-remuneration",
+      "category": "employee-remuneration",
+      "threshold": 75000,
+      "thresholdComparison": ">",
+      "nameDisclosure": "as-published",
+      "positionDisclosure": "as-published",
+      "rowCount": 8,
+      "totalRemuneration": 826838.0,
+      "totalDisclosedExpenses": 68560.0,
+      "pages": [
+        28
+      ],
+      "status": "verified",
+      "verifiedOn": "2026-10-31",
+      "publicWarning": "Published named rows differ from controls derived from printed all-employee and below-threshold aggregates: remuneration $-1; expenses not separately controlled. The cause is unresolved; every published cell is retained unchanged. The source places 3 employees with remuneration below $75,000 in its named schedule despite its remuneration threshold heading. The source rows and separate expenses are retained; no threshold explanation is assumed. The source does not print a separate below-threshold expense aggregate or named-expense subtotal. The named numeric expense sum equals its all-employee expense total; no missing aggregate is assumed zero.",
+      "notes": [
+        "Employee and elected-official cohorts remain separate. Under-threshold and grand-total aggregates are evidence controls only, not individual records.",
+        "Blank and dash expense cells remain missing; numeric zeroes and negative amounts retain their source meaning. Names, initials, published title abbreviations and source spelling are retained without identity inference.",
+        "Remuneration and expenses are separate source columns. Expense-inclusive Total columns in Gibsons are retained only as evidence; they are never imported as remuneration.",
+        "No compiled records are deleted or relabelled by this collection."
+      ],
+      "validation": {
+        "sourceFingerprintLocked": true,
+        "completeNamedCohort": true,
+        "rowsIndependentlyCompared": 8,
+        "bothReadersAgreeAfterGuardedVisibleTextCorrection": true,
+        "physicalPdfPages": [
+          28
+        ],
+        "printedControls": [
+          {
+            "scope": "below",
+            "labelRegex": "remuneration of \\$75,000 or less",
+            "printedValues": [
+              579585
+            ],
+            "physicalPdfPage": 28,
+            "bothReadersAgree": true,
+            "positionedWords": [
+              [
+                419.2174987792969,
+                402.1875305175781,
+                454.1394958496094,
+                416.6982727050781,
+                "579,585"
+              ]
+            ]
+          },
+          {
+            "scope": "all",
+            "labelRegex": "Total Employees",
+            "printedValues": [
+              1406424,
+              68560
+            ],
+            "physicalPdfPage": 28,
+            "bothReadersAgree": true,
+            "positionedWords": [
+              [
+                407.2308044433594,
+                416.64404296875,
+                450.3951721191406,
+                431.15478515625,
+                "1,406,424"
+              ],
+              [
+                530.7935791015625,
+                416.64404296875,
+                560.4703979492188,
+                431.15478515625,
+                "68,560"
+              ]
+            ]
+          }
+        ],
+        "namedControlBasis": "Derived as printed all-employee total minus printed below-threshold aggregate; not a separately printed named subtotal",
+        "namedControlValues": [
+          826839,
+          null
+        ],
+        "remunerationResidual": -1.0,
+        "expensesResidual": null,
+        "summaryTotalReconciled": false,
+        "belowPrintedRemunerationThresholdRows": [
+          {
+            "name": "Adia Mavrikos",
+            "remuneration": 73621,
+            "expenses": 4331,
+            "pdfPage": 28
+          },
+          {
+            "name": "Paige Sawyer",
+            "remuneration": 73633,
+            "expenses": 6061,
+            "pdfPage": 28
+          },
+          {
+            "name": "Kyle Wilkinson",
+            "remuneration": 72620,
+            "expenses": 8810,
+            "pdfPage": 28
+          }
+        ],
+        "missingExpenseRows": 1,
+        "explicitZeroExpenseRows": 0,
+        "negativeExpenseRows": 0,
+        "evidenceFile": "evidence/village-of-tahsis-2025-employees.json.gzip",
+        "evidenceSha256": "ca126a87256238deee8300d1a8eeff840c3f9aa9a137e0711a8cd9a3ae52f6f2",
+        "visualReviewPdfPages": [
+          28
+        ],
+        "allNamedSchedulePagesVisuallyInspected": true,
+        "approvalPhysicalPage": 31,
+        "approvalDate": "2026-06-02",
+        "approvalRepresentation": "Visible signatures",
+        "approvalPageVisuallyReviewed": true
+      }
+    },
+    {
+      "id": "wave-island-village-of-tahsis-2025-council",
+      "employerSlug": "village-of-tahsis",
+      "employerName": "Village of Tahsis",
+      "sector": "Municipalities",
+      "year": "2025",
+      "periodType": "calendar",
+      "periodStart": "2025-01-01",
+      "periodEnd": "2025-12-31",
+      "title": "Village of Tahsis 2025 official elected official remuneration and expenses",
+      "sourceUrl": "https://villageoftahsis.com/wp-content/uploads/2026/06/2025-SOFI-Signed-copy.pdf",
+      "sourceIndexUrl": "https://villageoftahsis.com/government/documents-reports/finance-and-other-reports/",
+      "sha256": "e6983aecae0ecf2803756d74f2e759c0ea8ece5ffc41293ab7d587814e627ed0",
+      "pdfBytes": 2248930,
+      "file": "village-of-tahsis-2025-council.json.gzip",
+      "dataSha256": "245de8d111c655b2a839d469cb1e8b85826ef74e6047c1793d4c67147ff13e7e",
+      "normalizedSha256": "b187b8da03a932a5c5f3a74e403ce88bb805eb4d48e3cdbec219b1faeeb93c81",
+      "currency": "CAD",
+      "scope": "elected-officials",
+      "category": "elected-officials",
+      "threshold": null,
+      "thresholdComparison": null,
+      "nameDisclosure": "as-published",
+      "positionDisclosure": "as-published",
+      "rowCount": 5,
+      "totalRemuneration": 33113.0,
+      "totalDisclosedExpenses": 21836.0,
+      "pages": [
+        28
+      ],
+      "status": "verified",
+      "verifiedOn": "2026-10-31",
+      "publicWarning": null,
+      "notes": [
+        "Employee and elected-official cohorts remain separate. Under-threshold and grand-total aggregates are evidence controls only, not individual records.",
+        "Blank and dash expense cells remain missing; numeric zeroes and negative amounts retain their source meaning. Names, initials, published title abbreviations and source spelling are retained without identity inference.",
+        "Remuneration and expenses are separate source columns. Expense-inclusive Total columns in Gibsons are retained only as evidence; they are never imported as remuneration.",
+        "No compiled records are deleted or relabelled by this collection."
+      ],
+      "validation": {
+        "sourceFingerprintLocked": true,
+        "completeNamedCohort": true,
+        "rowsIndependentlyCompared": 5,
+        "bothReadersAgreeAfterGuardedVisibleTextCorrection": true,
+        "physicalPdfPages": [
+          28
+        ],
+        "printedControls": [
+          {
+            "scope": "named",
+            "labelRegex": "Total Elected Officials",
+            "printedValues": [
+              33113,
+              21836
+            ],
+            "physicalPdfPage": 28,
+            "bothReadersAgree": true,
+            "positionedWords": [
+              [
+                420.7242126464844,
+                198.28106689453125,
+                450.40106201171875,
+                212.79180908203125,
+                "33,113"
+              ],
+              [
+                530.80615234375,
+                198.28106689453125,
+                560.4829711914062,
+                212.79180908203125,
+                "21,836"
+              ]
+            ]
+          }
+        ],
+        "namedControlBasis": "Directly printed named-cohort subtotal",
+        "namedControlValues": [
+          33113,
+          21836
+        ],
+        "remunerationResidual": 0.0,
+        "expensesResidual": 0.0,
+        "summaryTotalReconciled": true,
+        "belowPrintedRemunerationThresholdRows": [],
+        "missingExpenseRows": 1,
+        "explicitZeroExpenseRows": 0,
+        "negativeExpenseRows": 0,
+        "evidenceFile": "evidence/village-of-tahsis-2025-council.json.gzip",
+        "evidenceSha256": "9b8c0a8db62e23ac750a20db94f39313e43b116a1bd7662a7df848743aada52f",
+        "visualReviewPdfPages": [
+          28
+        ],
+        "allNamedSchedulePagesVisuallyInspected": true,
+        "approvalPhysicalPage": 31,
+        "approvalDate": "2026-06-02",
+        "approvalRepresentation": "Visible signatures",
+        "approvalPageVisuallyReviewed": true
+      }
+    },
+    {
+      "id": "wave-island-district-of-ucluelet-2025-employees",
+      "employerSlug": "district-of-ucluelet",
+      "employerName": "District of Ucluelet",
+      "sector": "Municipalities",
+      "year": "2025",
+      "periodType": "calendar",
+      "periodStart": "2025-01-01",
+      "periodEnd": "2025-12-31",
+      "title": "District of Ucluelet 2025 official employee remuneration and expenses",
+      "sourceUrl": "https://ucluelet.ca/wp-content/uploads/2026/10/2025-Statement-of-Financial-Information.pdf",
+      "sourceIndexUrl": "https://ucluelet.ca/government/finance/financial-reports/",
+      "sha256": "e469988b3a14d86679c2b3cc64b3553945d520ea4fc2d96d2b6c40b21c3bf902",
+      "pdfBytes": 1730848,
+      "file": "district-of-ucluelet-2025-employees.json.gzip",
+      "dataSha256": "df322049741f9ad5066a92f9960b47e217d9b7e3849cfbbac4f63c2299812837",
+      "normalizedSha256": "a2ea0bb97de068db66c10fdf4cf9b87a369664128b88d9de211da67694171654",
+      "currency": "CAD",
+      "scope": "employee-remuneration",
+      "category": "employee-remuneration",
+      "threshold": 75000,
+      "thresholdComparison": ">",
+      "nameDisclosure": "as-published",
+      "positionDisclosure": "as-published",
+      "rowCount": 19,
+      "totalRemuneration": 1788026.9,
+      "totalDisclosedExpenses": 58958.69,
+      "pages": [
+        30
+      ],
+      "status": "verified",
+      "verifiedOn": "2026-10-31",
+      "publicWarning": "Published named rows differ from the printed named subtotals: remuneration $+0; expenses $+0.01. The cause is unresolved; every published cell is retained unchanged.",
+      "notes": [
+        "Employee and elected-official cohorts remain separate. Under-threshold and grand-total aggregates are evidence controls only, not individual records.",
+        "Blank and dash expense cells remain missing; numeric zeroes and negative amounts retain their source meaning. Names, initials, published title abbreviations and source spelling are retained without identity inference.",
+        "Remuneration and expenses are separate source columns. Expense-inclusive Total columns in Gibsons are retained only as evidence; they are never imported as remuneration.",
+        "No compiled records are deleted or relabelled by this collection.",
+        "Remuneration includes gross salary and applicable benefits. The source defines expenses broadly, including third-party payments for job functions, and distinguishes cash payments from accrual-basis financial statements."
+      ],
+      "validation": {
+        "sourceFingerprintLocked": true,
+        "completeNamedCohort": true,
+        "rowsIndependentlyCompared": 19,
+        "bothReadersAgreeAfterGuardedVisibleTextCorrection": true,
+        "physicalPdfPages": [
+          30
+        ],
+        "printedControls": [
+          {
+            "scope": "named",
+            "labelRegex": "Total Individual Remuneration Paid over \\$75,000",
+            "printedValues": [
+              1788026.9,
+              58958.68
+            ],
+            "physicalPdfPage": 30,
+            "bothReadersAgree": true,
+            "positionedWords": [
+              [
+                366.7186279296875,
+                399.18536376953125,
+                425.6928405761719,
+                413.6199035644531,
+                "1,788,026.90"
+              ],
+              [
+                507.5967102050781,
+                399.18536376953125,
+                552.535400390625,
+                413.6199035644531,
+                "58,958.68"
+              ]
+            ]
+          }
+        ],
+        "namedControlBasis": "Directly printed named-cohort subtotal",
+        "namedControlValues": [
+          1788026.9,
+          58958.68
+        ],
+        "remunerationResidual": 0.0,
+        "expensesResidual": 0.01,
+        "summaryTotalReconciled": false,
+        "belowPrintedRemunerationThresholdRows": [],
+        "missingExpenseRows": 4,
+        "explicitZeroExpenseRows": 0,
+        "negativeExpenseRows": 0,
+        "evidenceFile": "evidence/district-of-ucluelet-2025-employees.json.gzip",
+        "evidenceSha256": "9dedffa7c072862b5706110aa6688e6551d097ee1a5ea1ca0c8f11d8b8712e35",
+        "visualReviewPdfPages": [
+          30
+        ],
+        "allNamedSchedulePagesVisuallyInspected": true,
+        "approvalPhysicalPage": 3,
+        "approvalDate": "2026-10-05",
+        "approvalRepresentation": "Visible signatures",
+        "approvalPageVisuallyReviewed": true
+      }
+    },
+    {
+      "id": "wave-island-district-of-ucluelet-2025-council",
+      "employerSlug": "district-of-ucluelet",
+      "employerName": "District of Ucluelet",
+      "sector": "Municipalities",
+      "year": "2025",
+      "periodType": "calendar",
+      "periodStart": "2025-01-01",
+      "periodEnd": "2025-12-31",
+      "title": "District of Ucluelet 2025 official elected official remuneration and expenses",
+      "sourceUrl": "https://ucluelet.ca/wp-content/uploads/2026/10/2025-Statement-of-Financial-Information.pdf",
+      "sourceIndexUrl": "https://ucluelet.ca/government/finance/financial-reports/",
+      "sha256": "e469988b3a14d86679c2b3cc64b3553945d520ea4fc2d96d2b6c40b21c3bf902",
+      "pdfBytes": 1730848,
+      "file": "district-of-ucluelet-2025-council.json.gzip",
+      "dataSha256": "81e8b95b035941bfec8a018af74aba2cdfac21241a9dc0e14e6d77c991319e30",
+      "normalizedSha256": "8099accb397b8c5cd8d3c5151b296d6866156671ac988a12b3388620553d040b",
+      "currency": "CAD",
+      "scope": "elected-officials",
+      "category": "elected-officials",
+      "threshold": null,
+      "thresholdComparison": null,
+      "nameDisclosure": "as-published",
+      "positionDisclosure": "as-published",
+      "rowCount": 6,
+      "totalRemuneration": 104336.03,
+      "totalDisclosedExpenses": 37834.41,
+      "pages": [
+        29
+      ],
+      "status": "verified",
+      "verifiedOn": "2026-10-31",
+      "publicWarning": null,
+      "notes": [
+        "Employee and elected-official cohorts remain separate. Under-threshold and grand-total aggregates are evidence controls only, not individual records.",
+        "Blank and dash expense cells remain missing; numeric zeroes and negative amounts retain their source meaning. Names, initials, published title abbreviations and source spelling are retained without identity inference.",
+        "Remuneration and expenses are separate source columns. Expense-inclusive Total columns in Gibsons are retained only as evidence; they are never imported as remuneration.",
+        "No compiled records are deleted or relabelled by this collection.",
+        "Remuneration includes gross salary and applicable benefits. The source defines expenses broadly, including third-party payments for job functions, and distinguishes cash payments from accrual-basis financial statements."
+      ],
+      "validation": {
+        "sourceFingerprintLocked": true,
+        "completeNamedCohort": true,
+        "rowsIndependentlyCompared": 6,
+        "bothReadersAgreeAfterGuardedVisibleTextCorrection": true,
+        "physicalPdfPages": [
+          29
+        ],
+        "printedControls": [
+          {
+            "scope": "named",
+            "labelRegex": "Total Remuneration and Expenses",
+            "printedValues": [
+              104336.03,
+              37834.41
+            ],
+            "physicalPdfPage": 29,
+            "bothReadersAgree": true,
+            "positionedWords": [
+              [
+                315.2073669433594,
+                249.08358764648438,
+                370.3995666503906,
+                264.8928527832031,
+                "104,336.03"
+              ],
+              [
+                426.0931091308594,
+                249.08358764648438,
+                475.1691589355469,
+                264.8928527832031,
+                "37,834.41"
+              ]
+            ]
+          }
+        ],
+        "namedControlBasis": "Directly printed named-cohort subtotal",
+        "namedControlValues": [
+          104336.03,
+          37834.41
+        ],
+        "remunerationResidual": 0.0,
+        "expensesResidual": 0.0,
+        "summaryTotalReconciled": true,
+        "belowPrintedRemunerationThresholdRows": [],
+        "missingExpenseRows": 1,
+        "explicitZeroExpenseRows": 0,
+        "negativeExpenseRows": 0,
+        "evidenceFile": "evidence/district-of-ucluelet-2025-council.json.gzip",
+        "evidenceSha256": "c9a982435edccbd1b54449cedddaa1ead75cffaeda278e3c44f3aff5d78312b2",
+        "visualReviewPdfPages": [
+          29
+        ],
+        "allNamedSchedulePagesVisuallyInspected": true,
+        "approvalPhysicalPage": 3,
+        "approvalDate": "2026-10-05",
+        "approvalRepresentation": "Visible signatures",
+        "approvalPageVisuallyReviewed": true
+      }
+    },
+    {
+      "id": "wave-island-village-of-sayward-2024-employees",
+      "employerSlug": "village-of-sayward",
+      "employerName": "Village of Sayward",
+      "sector": "Municipalities",
+      "year": "2024",
+      "periodType": "calendar",
+      "periodStart": "2024-01-01",
+      "periodEnd": "2024-12-31",
+      "title": "Village of Sayward 2024 official employees remuneration and expenses (reviewed scanned original)",
+      "sourceUrl": "https://www.sayward.ca/sites/sayward.ca/files/2026-05/2024%20SOFI%20Package%20-%20signed.pdf",
+      "sourceIndexUrl": "https://www.sayward.ca/government-bylaws/reports-financial-statements",
+      "sha256": "03d0899a20d184af02094d0832a07d52294affe955737d9cdac9d6060a5475e2",
+      "pdfBytes": 186125,
+      "file": "village-of-sayward-2024-employees.json.gzip",
+      "dataSha256": "58f5c3d7361b95bc11ad908cb562a17e6fa65acd21d80514d6925422f2de56b5",
+      "normalizedSha256": "fc6707c4829e29259e53422064cd36c9b9f7b154ee1a320d66c6f53b2515ba88",
+      "currency": "CAD",
+      "scope": "employee-remuneration",
+      "category": "employee-remuneration",
+      "threshold": 75000,
+      "thresholdComparison": ">",
+      "nameDisclosure": "as-published",
+      "positionDisclosure": "as-published",
+      "rowCount": 2,
+      "totalRemuneration": 177668.0,
+      "totalDisclosedExpenses": 1316.0,
+      "pages": [
+        3
+      ],
+      "status": "verified",
+      "verifiedOn": "2026-10-31",
+      "publicWarning": null,
+      "notes": [
+        "Complete scanned named cohort transcribed. Two retained Tesseract configurations are checked against a separate complete manual image reading; they are not described as independent OCR engines.",
+        "Five OCR row contexts are guarded and corrected only from the rendered original. Every name, title, remuneration, expense, reporting heading and control was visually reviewed.",
+        "Numeric zero expenses for Gilkin, Kohen and Tinsley, Tom remain zero. No blank was inferred to be zero.",
+        "The report says calendar 2024 and is visibly approved May 6, 2025; its 2026 upload path is not its reporting period.",
+        "No compiled records are removed, relabelled or enriched from this source."
+      ],
+      "validation": {
+        "sourceFingerprintLocked": true,
+        "completeNamedCohort": true,
+        "methods": [
+          "Tesseract250dpiPSM6 with guarded image-grounded corrections",
+          "Tesseract300dpiPSM3",
+          "Independent complete manual transcription of every rendered named row"
+        ],
+        "allNamedCellsVisuallyVerified": true,
+        "ocrReadingsAgreeAfterGuardedCorrections": true,
+        "remunerationResidual": 0.0,
+        "expensesResidual": 0.0,
+        "summaryTotalReconciled": true,
+        "printedNamedRemuneration": 177668,
+        "printedNamedExpenses": 1316,
+        "missingExpenseRows": 0,
+        "explicitZeroExpenseRows": 0,
+        "negativeExpenseRows": 0,
+        "approvalPhysicalPage": 7,
+        "approvalDate": "2025-05-06",
+        "approvalRepresentation": "Visible signatures of CFO Lisa Clark and Mayor Mark Baker",
+        "evidenceFile": "review/sayward-2024-ocr.json",
+        "evidenceSha256": "0c231b9a98b8e5811e2c1ab746713f0c75de7aec1f26572539421fd9db60b160",
+        "ocrConfigurationsAreIndependentEngines": false,
+        "secondHumanAllNamedCellsVerified": true,
+        "independentCrossReviewFile": "../municipal-next-pass/reviews/sayward-ocr.md"
+      }
+    },
+    {
+      "id": "wave-island-village-of-sayward-2024-council",
+      "employerSlug": "village-of-sayward",
+      "employerName": "Village of Sayward",
+      "sector": "Municipalities",
+      "year": "2024",
+      "periodType": "calendar",
+      "periodStart": "2024-01-01",
+      "periodEnd": "2024-12-31",
+      "title": "Village of Sayward 2024 official council remuneration and expenses (reviewed scanned original)",
+      "sourceUrl": "https://www.sayward.ca/sites/sayward.ca/files/2026-05/2024%20SOFI%20Package%20-%20signed.pdf",
+      "sourceIndexUrl": "https://www.sayward.ca/government-bylaws/reports-financial-statements",
+      "sha256": "03d0899a20d184af02094d0832a07d52294affe955737d9cdac9d6060a5475e2",
+      "pdfBytes": 186125,
+      "file": "village-of-sayward-2024-council.json.gzip",
+      "dataSha256": "56c3c03b39c1fac736a0d0252c8c0b72d794f07532a78d9fabf9b475fdb9d877",
+      "normalizedSha256": "83c5319eefc373206d9ef2b2d9c8a2bbf963c4e228a6727c292a61e594a792a7",
+      "currency": "CAD",
+      "scope": "elected-officials",
+      "category": "elected-officials",
+      "threshold": null,
+      "thresholdComparison": null,
+      "nameDisclosure": "as-published",
+      "positionDisclosure": "as-published",
+      "rowCount": 7,
+      "totalRemuneration": 38780.0,
+      "totalDisclosedExpenses": 16876.0,
+      "pages": [
+        3
+      ],
+      "status": "verified",
+      "verifiedOn": "2026-10-31",
+      "publicWarning": "Published council expenses sum to $16,876; the printed subtotal is $16,877. The $1 shortfall is unresolved. All published amounts, including two explicit zero expenses, are retained unchanged.",
+      "notes": [
+        "Complete scanned named cohort transcribed. Two retained Tesseract configurations are checked against a separate complete manual image reading; they are not described as independent OCR engines.",
+        "Five OCR row contexts are guarded and corrected only from the rendered original. Every name, title, remuneration, expense, reporting heading and control was visually reviewed.",
+        "Numeric zero expenses for Gilkin, Kohen and Tinsley, Tom remain zero. No blank was inferred to be zero.",
+        "The report says calendar 2024 and is visibly approved May 6, 2025; its 2026 upload path is not its reporting period.",
+        "No compiled records are removed, relabelled or enriched from this source."
+      ],
+      "validation": {
+        "sourceFingerprintLocked": true,
+        "completeNamedCohort": true,
+        "methods": [
+          "Tesseract250dpiPSM6 with guarded image-grounded corrections",
+          "Tesseract300dpiPSM3",
+          "Independent complete manual transcription of every rendered named row"
+        ],
+        "allNamedCellsVisuallyVerified": true,
+        "ocrReadingsAgreeAfterGuardedCorrections": true,
+        "remunerationResidual": 0.0,
+        "expensesResidual": -1.0,
+        "summaryTotalReconciled": false,
+        "printedNamedRemuneration": 38780,
+        "printedNamedExpenses": 16877,
+        "missingExpenseRows": 0,
+        "explicitZeroExpenseRows": 2,
+        "negativeExpenseRows": 0,
+        "approvalPhysicalPage": 7,
+        "approvalDate": "2025-05-06",
+        "approvalRepresentation": "Visible signatures of CFO Lisa Clark and Mayor Mark Baker",
+        "evidenceFile": "review/sayward-2024-ocr.json",
+        "evidenceSha256": "0c231b9a98b8e5811e2c1ab746713f0c75de7aec1f26572539421fd9db60b160",
+        "ocrConfigurationsAreIndependentEngines": false,
+        "secondHumanAllNamedCellsVerified": true,
+        "independentCrossReviewFile": "../municipal-next-pass/reviews/sayward-ocr.md"
+      }
+    }
+  ]
+}

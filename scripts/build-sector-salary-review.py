@@ -4,6 +4,7 @@ import csv
 import gzip
 import hashlib
 import json
+import sys
 from collections import Counter, defaultdict
 from pathlib import Path
 
@@ -30,6 +31,27 @@ def cell(value):
 
 def main():
     baseline = read(OUT / 'baseline.json')
+    if '--frozen' in sys.argv:
+        # PR25 is a historical release. Later municipal imports must not rewrite
+        # its totals or cause its old baseline reconciliation to absorb new rows.
+        release = read(OUT / 'release.json')
+        actual = []
+        for collection in COLLECTIONS:
+            for source in read(RESEARCH / collection / 'sources.json')['sources']:
+                raw = (RESEARCH / collection / source['file']).read_bytes()
+                assert hashlib.sha256(raw).hexdigest() == source['dataSha256'], source['id']
+                assert len(json.loads(gzip.decompress(raw))) == source['rowCount'], source['id']
+                actual.append(dict(collection=collection, sourceId=source['id'], employerSlug=source['employerSlug'], year=source['year'], scope=source['category'], rows=source['rowCount'], sourceUrl=source['sourceUrl'], sourceSha256=source['sha256'], dataSha256=source['dataSha256'], publicWarning=source.get('publicWarning')))
+        assert actual == release['imports'], 'Historical release input changed; review the original release explicitly'
+        assert release['baseline'] == baseline['overall']
+        assert sum(source['rows'] for source in actual) == release['officialRowsAdded']
+        assert release['proposed']['officialRecords'] - release['baseline']['officialRecords'] == release['officialRowsAdded']
+        assert release['baseline']['compiledRecords'] - release['proposed']['compiledRecords'] == release['compiledRowsReplaced']
+        assert release['proposed']['records'] - release['baseline']['records'] == release['officialRowsAdded'] - release['compiledRowsReplaced'] == release['netRowsAdded']
+        for area, expected in release['taskInputSha256'].items():
+            assert hashlib.sha256((OUT / area / 'work-queue.json').read_bytes()).hexdigest() == expected, area
+        print(json.dumps({'historicalRelease': 'PR25', 'records': release['proposed']['records'], 'sourceInputsVerified': len(actual)}))
+        return
     index = read(ROOT / 'public/salaries/employers/index.json')
     current = defaultdict(lambda: dict(employerEntries=0, records=0, officialRecords=0, compiledRecords=0, employersWithOfficialRecords=0))
     current_employers = []

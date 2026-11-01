@@ -1,0 +1,1742 @@
+{
+  "version": 1,
+  "rowSchema": [
+    "employerSlug",
+    "name",
+    "position",
+    "remuneration",
+    "expenses",
+    "pdfPage"
+  ],
+  "sources": [
+    {
+      "id": "municipal-wave-capital-district-of-highlands-2024-elected-officials",
+      "employerSlug": "district-of-highlands",
+      "employerName": "District of Highlands",
+      "sector": "Municipalities",
+      "year": "2024",
+      "periodType": "calendar",
+      "periodStart": "2024-01-01",
+      "periodEnd": "2024-12-31",
+      "title": "District of Highlands 2024 SOFI: elected-officials",
+      "sourceUrl": "https://www.highlands.ca/sites/31/files/2025-06/2024%20Annual%20Report%20-%20FINAL_5.pdf",
+      "sourceIndexUrl": "https://www.highlands.ca/annual-reports",
+      "sha256": "b7e4fd88706c4681498b077b78d691d2e7a75f5022db09f4076a8d6f11c8f292",
+      "file": "district-of-highlands-2024-elected-officials.json.gzip",
+      "dataSha256": "b87b1e6144c690f9d864dcde8e78f6559873c205c9d50a4f5d1b2d172789a56e",
+      "category": "elected-officials",
+      "scope": "elected-officials",
+      "threshold": null,
+      "thresholdComparison": null,
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "status": "verified",
+      "verifiedOn": "2026-10-31",
+      "rowCount": 7,
+      "totalRemuneration": 84205,
+      "totalExpenses": 6692,
+      "pages": [
+        71
+      ],
+      "publicWarning": null,
+      "nameDisclosure": "as-published",
+      "positionDisclosure": "published",
+      "notes": [
+        "Remuneration and expenses are disclosed separately. Non-taxable employer benefits are excluded by the source reconciliation note. Four named employees are separate from the below-threshold aggregate.",
+        "Named cells are preserved as disclosed. Blank and dash expenses remain missing; only a numeric zero becomes zero. No inferred annual base salary or identity expansion is introduced.",
+        "Employee position titles are published. The finance clerk expense is a dash and remains missing; the below-threshold expense aggregate is also a dash and is not converted to an individual zero.",
+        "Complete named cohort verified field by field with two independent PDF readers and rendered source. Printed all-employee controls are compared after subtracting the separately printed below-threshold aggregate when applicable."
+      ],
+      "validation": {
+        "originalFingerprintVerified": true,
+        "publicationEvidence": null,
+        "independentReaders": [
+          "PyMuPDF positioned words",
+          "Poppler bbox-layout positioned words"
+        ],
+        "everyRowFieldAgreement": true,
+        "physicalPagesVisuallyReviewed": [
+          71
+        ],
+        "rowsIndependentlyChecked": 7,
+        "sourceControls": {
+          "council": [
+            84205,
+            6692
+          ],
+          "below": [
+            319966,
+            null
+          ],
+          "allEmployees": [
+            823793,
+            10391
+          ]
+        },
+        "printedControls": [
+          {
+            "field": "pay",
+            "printedControl": 84205,
+            "rowSum": 84205,
+            "residual": 0,
+            "basis": {
+              "total": "council"
+            }
+          },
+          {
+            "field": "expenses",
+            "printedControl": 6692,
+            "rowSum": 6692,
+            "residual": 0,
+            "basis": {
+              "total": "council"
+            }
+          }
+        ],
+        "evidenceFile": "evidence/district-of-highlands-2024-elected-officials.json.gzip"
+      }
+    },
+    {
+      "id": "municipal-wave-capital-district-of-highlands-2024-employee-remuneration",
+      "employerSlug": "district-of-highlands",
+      "employerName": "District of Highlands",
+      "sector": "Municipalities",
+      "year": "2024",
+      "periodType": "calendar",
+      "periodStart": "2024-01-01",
+      "periodEnd": "2024-12-31",
+      "title": "District of Highlands 2024 SOFI: employee-remuneration",
+      "sourceUrl": "https://www.highlands.ca/sites/31/files/2025-06/2024%20Annual%20Report%20-%20FINAL_5.pdf",
+      "sourceIndexUrl": "https://www.highlands.ca/annual-reports",
+      "sha256": "b7e4fd88706c4681498b077b78d691d2e7a75f5022db09f4076a8d6f11c8f292",
+      "file": "district-of-highlands-2024-employee-remuneration.json.gzip",
+      "dataSha256": "795d1b7ba98eaadcf2c4b464ec87ead46feb5742a06aecb1ee399699f8bf1abc",
+      "category": "employee-remuneration",
+      "scope": "named-employees-over-threshold",
+      "threshold": 75000,
+      "thresholdComparison": null,
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "status": "verified",
+      "verifiedOn": "2026-10-31",
+      "rowCount": 4,
+      "totalRemuneration": 503827,
+      "totalExpenses": 10391,
+      "pages": [
+        71
+      ],
+      "publicWarning": null,
+      "nameDisclosure": "as-published",
+      "positionDisclosure": "published",
+      "notes": [
+        "Remuneration and expenses are disclosed separately. Non-taxable employer benefits are excluded by the source reconciliation note. Four named employees are separate from the below-threshold aggregate.",
+        "Named cells are preserved as disclosed. Blank and dash expenses remain missing; only a numeric zero becomes zero. No inferred annual base salary or identity expansion is introduced.",
+        "Employee position titles are published. The finance clerk expense is a dash and remains missing; the below-threshold expense aggregate is also a dash and is not converted to an individual zero.",
+        "Complete named cohort verified field by field with two independent PDF readers and rendered source. Printed all-employee controls are compared after subtracting the separately printed below-threshold aggregate when applicable.",
+        "The below-threshold employee expense cell is a dash. No named expense control is derived by treating that dash as zero; the source all-employee expense total10391 is retained separately, while the known named expense cells sum10391.",
+        "The named heading says Employees and the excluded aggregate says Other Employees (under $75,000). The precise comparison boundary for the named cohort is not printed; thresholdComparison is null. All four accepted named remuneration amounts exceed $75,000."
+      ],
+      "validation": {
+        "originalFingerprintVerified": true,
+        "publicationEvidence": null,
+        "independentReaders": [
+          "PyMuPDF positioned words",
+          "Poppler bbox-layout positioned words"
+        ],
+        "everyRowFieldAgreement": true,
+        "physicalPagesVisuallyReviewed": [
+          71
+        ],
+        "rowsIndependentlyChecked": 4,
+        "sourceControls": {
+          "council": [
+            84205,
+            6692
+          ],
+          "below": [
+            319966,
+            null
+          ],
+          "allEmployees": [
+            823793,
+            10391
+          ]
+        },
+        "printedControls": [
+          {
+            "field": "pay",
+            "printedControl": 503827,
+            "rowSum": 503827,
+            "residual": 0,
+            "basis": {
+              "total": "allEmployees",
+              "subtract": "below"
+            }
+          },
+          {
+            "field": "expenses",
+            "printedControl": null,
+            "rowSum": 10391,
+            "residual": null,
+            "basis": {
+              "total": "allEmployees",
+              "subtract": "below"
+            }
+          }
+        ],
+        "evidenceFile": "evidence/district-of-highlands-2024-employee-remuneration.json.gzip"
+      }
+    },
+    {
+      "id": "municipal-wave-capital-town-of-lake-cowichan-2025-elected-officials",
+      "employerSlug": "town-of-lake-cowichan",
+      "employerName": "Town of Lake Cowichan",
+      "sector": "Municipalities",
+      "year": "2025",
+      "periodType": "calendar",
+      "periodStart": "2025-01-01",
+      "periodEnd": "2025-12-31",
+      "title": "Town of Lake Cowichan 2025 SOFI: elected-officials",
+      "sourceUrl": "https://lakecowichan.ca/dl/2025%20SOFI.pdf",
+      "sourceIndexUrl": "https://lakecowichan.ca/finance.php",
+      "sha256": "36720c68d563ff907a8fc9f05f05068ff9842459fe4e8adce5078d308249d315",
+      "file": "town-of-lake-cowichan-2025-elected-officials.json.gzip",
+      "dataSha256": "69f2608ea61fd09c783c0ddd121d61637f80e41f12fb15100a79169b6ef502f4",
+      "category": "elected-officials",
+      "scope": "elected-officials",
+      "threshold": null,
+      "thresholdComparison": null,
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "status": "verified",
+      "verifiedOn": "2026-10-31",
+      "rowCount": 5,
+      "totalRemuneration": 98485.65,
+      "totalExpenses": 26127.39,
+      "pages": [
+        32
+      ],
+      "publicWarning": null,
+      "nameDisclosure": "as-published",
+      "positionDisclosure": "published",
+      "notes": [
+        "Remuneration and expenses are separate printed columns; the third expense-inclusive total is retained only as supporting evidence, never used as remuneration. The source explains cash/accrual timing and exclusion of non-taxable employer benefits in its financial-statement reconciliation.",
+        "Named cells are preserved as disclosed. Blank and dash expenses remain missing; only a numeric zero becomes zero. No inferred annual base salary or identity expansion is introduced.",
+        "Complete named cohort verified field by field with two independent PDF readers and rendered source. Printed all-employee controls are compared after subtracting the separately printed below-threshold aggregate when applicable."
+      ],
+      "validation": {
+        "originalFingerprintVerified": true,
+        "publicationEvidence": null,
+        "independentReaders": [
+          "PyMuPDF positioned words",
+          "Poppler bbox-layout positioned words"
+        ],
+        "everyRowFieldAgreement": true,
+        "physicalPagesVisuallyReviewed": [
+          32
+        ],
+        "rowsIndependentlyChecked": 5,
+        "sourceControls": {
+          "council": [
+            98485.65,
+            26127.39
+          ],
+          "below": [
+            1369233.11,
+            28225.25
+          ],
+          "allEmployees": [
+            2510499.28,
+            42886.88
+          ]
+        },
+        "printedControls": [
+          {
+            "field": "pay",
+            "printedControl": 98485.65,
+            "rowSum": 98485.65,
+            "residual": 0,
+            "basis": {
+              "total": "council"
+            }
+          },
+          {
+            "field": "expenses",
+            "printedControl": 26127.39,
+            "rowSum": 26127.39,
+            "residual": 0,
+            "basis": {
+              "total": "council"
+            }
+          }
+        ],
+        "evidenceFile": "evidence/town-of-lake-cowichan-2025-elected-officials.json.gzip"
+      }
+    },
+    {
+      "id": "municipal-wave-capital-town-of-lake-cowichan-2025-employee-remuneration",
+      "employerSlug": "town-of-lake-cowichan",
+      "employerName": "Town of Lake Cowichan",
+      "sector": "Municipalities",
+      "year": "2025",
+      "periodType": "calendar",
+      "periodStart": "2025-01-01",
+      "periodEnd": "2025-12-31",
+      "title": "Town of Lake Cowichan 2025 SOFI: employee-remuneration",
+      "sourceUrl": "https://lakecowichan.ca/dl/2025%20SOFI.pdf",
+      "sourceIndexUrl": "https://lakecowichan.ca/finance.php",
+      "sha256": "36720c68d563ff907a8fc9f05f05068ff9842459fe4e8adce5078d308249d315",
+      "file": "town-of-lake-cowichan-2025-employee-remuneration.json.gzip",
+      "dataSha256": "ec492698c648998d85a19c172303c156d2e2718600342f153f9bfc5d9f6b2f3d",
+      "category": "employee-remuneration",
+      "scope": "named-employees-over-threshold",
+      "threshold": 75000,
+      "thresholdComparison": ">",
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "status": "verified",
+      "verifiedOn": "2026-10-31",
+      "rowCount": 11,
+      "totalRemuneration": 1141266.17,
+      "totalExpenses": 14661.63,
+      "pages": [
+        32
+      ],
+      "publicWarning": null,
+      "nameDisclosure": "as-published",
+      "positionDisclosure": "published",
+      "notes": [
+        "Remuneration and expenses are separate printed columns; the third expense-inclusive total is retained only as supporting evidence, never used as remuneration. The source explains cash/accrual timing and exclusion of non-taxable employer benefits in its financial-statement reconciliation.",
+        "Named cells are preserved as disclosed. Blank and dash expenses remain missing; only a numeric zero becomes zero. No inferred annual base salary or identity expansion is introduced.",
+        "Complete named cohort verified field by field with two independent PDF readers and rendered source. Printed all-employee controls are compared after subtracting the separately printed below-threshold aggregate when applicable."
+      ],
+      "validation": {
+        "originalFingerprintVerified": true,
+        "publicationEvidence": null,
+        "independentReaders": [
+          "PyMuPDF positioned words",
+          "Poppler bbox-layout positioned words"
+        ],
+        "everyRowFieldAgreement": true,
+        "physicalPagesVisuallyReviewed": [
+          32
+        ],
+        "rowsIndependentlyChecked": 11,
+        "sourceControls": {
+          "council": [
+            98485.65,
+            26127.39
+          ],
+          "below": [
+            1369233.11,
+            28225.25
+          ],
+          "allEmployees": [
+            2510499.28,
+            42886.88
+          ]
+        },
+        "printedControls": [
+          {
+            "field": "pay",
+            "printedControl": 1141266.17,
+            "rowSum": 1141266.17,
+            "residual": 0,
+            "basis": {
+              "total": "allEmployees",
+              "subtract": "below"
+            }
+          },
+          {
+            "field": "expenses",
+            "printedControl": 14661.63,
+            "rowSum": 14661.63,
+            "residual": 0,
+            "basis": {
+              "total": "allEmployees",
+              "subtract": "below"
+            }
+          }
+        ],
+        "evidenceFile": "evidence/town-of-lake-cowichan-2025-employee-remuneration.json.gzip"
+      }
+    },
+    {
+      "id": "municipal-wave-capital-town-of-view-royal-2025-elected-officials",
+      "employerSlug": "town-of-view-royal",
+      "employerName": "Town of View Royal",
+      "sector": "Municipalities",
+      "year": "2025",
+      "periodType": "calendar",
+      "periodStart": "2025-01-01",
+      "periodEnd": "2025-12-31",
+      "title": "Town of View Royal 2025 SOFI: elected-officials",
+      "sourceUrl": "https://www.viewroyal.ca/assets/Town~Hall/Documents-Forms/Administration/Annual%20Report%20for%20Year%20Ended%202025.pdf",
+      "sourceIndexUrl": "https://www.viewroyal.ca/EN/main/town/documents.html",
+      "sha256": "bd58681b48c75cdeb78664c95a9e9adb95fd928fafb60e21bd9befd78a0d053e",
+      "file": "town-of-view-royal-2025-elected-officials.json.gzip",
+      "dataSha256": "79ee2aa450295f9822c3e30bc2a57f7b13260eb989b4353bf878c685773c3df2",
+      "category": "elected-officials",
+      "scope": "elected-officials",
+      "threshold": null,
+      "thresholdComparison": null,
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "status": "verified",
+      "verifiedOn": "2026-10-31",
+      "rowCount": 7,
+      "totalRemuneration": 203241,
+      "totalExpenses": 7659,
+      "pages": [
+        82
+      ],
+      "publicWarning": "Published row amounts minus printed named-cohort controls differ by remuneration $-3.00 and expenses $0.00. Original values are preserved; the cause is unresolved. Disclosed numeric expenses alone are summed; missing expense cells remain missing.",
+      "nameDisclosure": "as-published",
+      "positionDisclosure": "published",
+      "notes": [
+        "The remuneration schedule explicitly states December31,2025. Remuneration and expenses are separately published; the total column includes expenses and is retained solely as supporting evidence. The below-threshold aggregate is excluded from individual rows.",
+        "Named cells are preserved as disclosed. Blank and dash expenses remain missing; only a numeric zero becomes zero. No inferred annual base salary or identity expansion is introduced.",
+        "Complete named cohort verified field by field with two independent PDF readers and rendered source. Printed all-employee controls are compared after subtracting the separately printed below-threshold aggregate when applicable.",
+        "Published row amounts minus printed named-cohort controls differ by remuneration $-3.00 and expenses $0.00. Original values are preserved; the cause is unresolved. Disclosed numeric expenses alone are summed; missing expense cells remain missing."
+      ],
+      "validation": {
+        "originalFingerprintVerified": true,
+        "publicationEvidence": null,
+        "independentReaders": [
+          "PyMuPDF positioned words",
+          "Poppler bbox-layout positioned words"
+        ],
+        "everyRowFieldAgreement": true,
+        "physicalPagesVisuallyReviewed": [
+          82
+        ],
+        "rowsIndependentlyChecked": 7,
+        "sourceControls": {
+          "council": [
+            203244,
+            7659
+          ],
+          "below": [
+            1259383,
+            20779
+          ],
+          "allEmployees": [
+            5357553,
+            102712
+          ]
+        },
+        "printedControls": [
+          {
+            "field": "pay",
+            "printedControl": 203244,
+            "rowSum": 203241,
+            "residual": -3,
+            "basis": {
+              "total": "council"
+            }
+          },
+          {
+            "field": "expenses",
+            "printedControl": 7659,
+            "rowSum": 7659,
+            "residual": 0,
+            "basis": {
+              "total": "council"
+            }
+          }
+        ],
+        "evidenceFile": "evidence/town-of-view-royal-2025-elected-officials.json.gzip"
+      }
+    },
+    {
+      "id": "municipal-wave-capital-town-of-view-royal-2025-employee-remuneration",
+      "employerSlug": "town-of-view-royal",
+      "employerName": "Town of View Royal",
+      "sector": "Municipalities",
+      "year": "2025",
+      "periodType": "calendar",
+      "periodStart": "2025-01-01",
+      "periodEnd": "2025-12-31",
+      "title": "Town of View Royal 2025 SOFI: employee-remuneration",
+      "sourceUrl": "https://www.viewroyal.ca/assets/Town~Hall/Documents-Forms/Administration/Annual%20Report%20for%20Year%20Ended%202025.pdf",
+      "sourceIndexUrl": "https://www.viewroyal.ca/EN/main/town/documents.html",
+      "sha256": "bd58681b48c75cdeb78664c95a9e9adb95fd928fafb60e21bd9befd78a0d053e",
+      "file": "town-of-view-royal-2025-employee-remuneration.json.gzip",
+      "dataSha256": "6b96e64b9006643496486d9f410a7ca2b0d9244fcec7139e76798eae87cac186",
+      "category": "employee-remuneration",
+      "scope": "named-employees-over-threshold",
+      "threshold": 75000,
+      "thresholdComparison": ">",
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "status": "verified",
+      "verifiedOn": "2026-10-31",
+      "rowCount": 34,
+      "totalRemuneration": 4098172,
+      "totalExpenses": 81931,
+      "pages": [
+        82
+      ],
+      "publicWarning": "Published row amounts minus printed named-cohort controls differ by remuneration $2.00 and expenses $-2.00. Original values are preserved; the cause is unresolved. Disclosed numeric expenses alone are summed; missing expense cells remain missing.",
+      "nameDisclosure": "as-published",
+      "positionDisclosure": "published",
+      "notes": [
+        "The remuneration schedule explicitly states December31,2025. Remuneration and expenses are separately published; the total column includes expenses and is retained solely as supporting evidence. The below-threshold aggregate is excluded from individual rows.",
+        "Named cells are preserved as disclosed. Blank and dash expenses remain missing; only a numeric zero becomes zero. No inferred annual base salary or identity expansion is introduced.",
+        "Complete named cohort verified field by field with two independent PDF readers and rendered source. Printed all-employee controls are compared after subtracting the separately printed below-threshold aggregate when applicable.",
+        "Published row amounts minus printed named-cohort controls differ by remuneration $2.00 and expenses $-2.00. Original values are preserved; the cause is unresolved. Disclosed numeric expenses alone are summed; missing expense cells remain missing."
+      ],
+      "validation": {
+        "originalFingerprintVerified": true,
+        "publicationEvidence": null,
+        "independentReaders": [
+          "PyMuPDF positioned words",
+          "Poppler bbox-layout positioned words"
+        ],
+        "everyRowFieldAgreement": true,
+        "physicalPagesVisuallyReviewed": [
+          82
+        ],
+        "rowsIndependentlyChecked": 34,
+        "sourceControls": {
+          "council": [
+            203244,
+            7659
+          ],
+          "below": [
+            1259383,
+            20779
+          ],
+          "allEmployees": [
+            5357553,
+            102712
+          ]
+        },
+        "printedControls": [
+          {
+            "field": "pay",
+            "printedControl": 4098170,
+            "rowSum": 4098172,
+            "residual": 2,
+            "basis": {
+              "total": "allEmployees",
+              "subtract": "below"
+            }
+          },
+          {
+            "field": "expenses",
+            "printedControl": 81933,
+            "rowSum": 81931,
+            "residual": -2,
+            "basis": {
+              "total": "allEmployees",
+              "subtract": "below"
+            }
+          }
+        ],
+        "evidenceFile": "evidence/town-of-view-royal-2025-employee-remuneration.json.gzip"
+      }
+    },
+    {
+      "id": "municipal-wave-capital-township-of-esquimalt-2025-employee-remuneration",
+      "employerSlug": "township-of-esquimalt",
+      "employerName": "Township of Esquimalt",
+      "sector": "Municipalities",
+      "year": "2025",
+      "periodType": "calendar",
+      "periodStart": "2025-01-01",
+      "periodEnd": "2025-12-31",
+      "title": "Township of Esquimalt 2025 SOFI: employee-remuneration",
+      "sourceUrl": "https://www.esquimalt.ca/sites/default/files/2026-06/2025%20Statement%20of%20Financial%20Information.pdf",
+      "sourceIndexUrl": "https://www.esquimalt.ca/government-bylaws/finance-budget/public-bodies-reports%25E2%2580%258B-statement-financial-information",
+      "sha256": "bc050c63fadd8b47c0c516bf8d134853f395f090bba8a68b6dc0f1f59ea49be2",
+      "file": "township-of-esquimalt-2025-employee-remuneration.json.gzip",
+      "dataSha256": "2554baf75d2007eab1cf4b952d64f7eed7d29307ed85418cae551d7c76a9ce7c",
+      "category": "employee-remuneration",
+      "scope": "named-employees-over-threshold",
+      "threshold": 75000,
+      "thresholdComparison": ">",
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "status": "verified",
+      "verifiedOn": "2026-10-31",
+      "rowCount": 86,
+      "totalRemuneration": 10280622.8,
+      "totalExpenses": 175605.32,
+      "pages": [
+        34,
+        35,
+        36
+      ],
+      "publicWarning": null,
+      "nameDisclosure": "as-published",
+      "positionDisclosure": "not-published",
+      "notes": [
+        "Original schedule reporting year is2025, regardless of upload path. Published remuneration is a payment disclosure, not an annual base salary.",
+        "All named fields are compared across two independent PDF readers. Blank/dash expenses stay missing; explicit numeric zero is zero. Employees and elected officials are separate cohorts; no compiled records are removed.",
+        "The employee source column is Department, not job title. Departments are retained as supporting evidence; employee positions remain null.",
+        "Council schedules publish names and payment columns without individual office titles; council positions remain null. Cash-basis schedule and accrual financial statements are not reconciled by the publisher."
+      ],
+      "validation": {
+        "originalFingerprintVerified": true,
+        "publicationEvidence": null,
+        "independentReaders": [
+          "PyMuPDF positioned words",
+          "Poppler bbox-layout positioned words"
+        ],
+        "everyRowFieldAgreement": true,
+        "physicalPagesVisuallyReviewed": [
+          34,
+          35,
+          36
+        ],
+        "rowsIndependentlyChecked": 86,
+        "sourceControls": {
+          "employees": [
+            10280622.8,
+            175605.32
+          ],
+          "council": [
+            248762.44,
+            23426.62
+          ]
+        },
+        "printedControls": [
+          {
+            "field": "pay",
+            "printedControl": 10280622.8,
+            "rowSum": 10280622.8,
+            "residual": 0,
+            "basis": {
+              "total": "employees"
+            }
+          },
+          {
+            "field": "expenses",
+            "printedControl": 175605.32,
+            "rowSum": 175605.32,
+            "residual": 0,
+            "basis": {
+              "total": "employees"
+            }
+          }
+        ],
+        "evidenceFile": "evidence/township-of-esquimalt-2025-employee-remuneration.json.gzip"
+      }
+    },
+    {
+      "id": "municipal-wave-capital-township-of-esquimalt-2025-elected-officials",
+      "employerSlug": "township-of-esquimalt",
+      "employerName": "Township of Esquimalt",
+      "sector": "Municipalities",
+      "year": "2025",
+      "periodType": "calendar",
+      "periodStart": "2025-01-01",
+      "periodEnd": "2025-12-31",
+      "title": "Township of Esquimalt 2025 SOFI: elected-officials",
+      "sourceUrl": "https://www.esquimalt.ca/sites/default/files/2026-06/2025%20Statement%20of%20Financial%20Information.pdf",
+      "sourceIndexUrl": "https://www.esquimalt.ca/government-bylaws/finance-budget/public-bodies-reports%25E2%2580%258B-statement-financial-information",
+      "sha256": "bc050c63fadd8b47c0c516bf8d134853f395f090bba8a68b6dc0f1f59ea49be2",
+      "file": "township-of-esquimalt-2025-elected-officials.json.gzip",
+      "dataSha256": "989bae98abb66922bd8abec3def222486d7d18c0e120e0303cd57eac9dcbb504",
+      "category": "elected-officials",
+      "scope": "elected-officials",
+      "threshold": null,
+      "thresholdComparison": null,
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "status": "verified",
+      "verifiedOn": "2026-10-31",
+      "rowCount": 7,
+      "totalRemuneration": 248762.44,
+      "totalExpenses": 23426.62,
+      "pages": [
+        37
+      ],
+      "publicWarning": null,
+      "nameDisclosure": "as-published",
+      "positionDisclosure": "not-published",
+      "notes": [
+        "Original schedule reporting year is2025, regardless of upload path. Published remuneration is a payment disclosure, not an annual base salary.",
+        "All named fields are compared across two independent PDF readers. Blank/dash expenses stay missing; explicit numeric zero is zero. Employees and elected officials are separate cohorts; no compiled records are removed.",
+        "The employee source column is Department, not job title. Departments are retained as supporting evidence; employee positions remain null.",
+        "Council schedules publish names and payment columns without individual office titles; council positions remain null. Cash-basis schedule and accrual financial statements are not reconciled by the publisher."
+      ],
+      "validation": {
+        "originalFingerprintVerified": true,
+        "publicationEvidence": null,
+        "independentReaders": [
+          "PyMuPDF positioned words",
+          "Poppler bbox-layout positioned words"
+        ],
+        "everyRowFieldAgreement": true,
+        "physicalPagesVisuallyReviewed": [
+          37
+        ],
+        "rowsIndependentlyChecked": 7,
+        "sourceControls": {
+          "employees": [
+            10280622.8,
+            175605.32
+          ],
+          "council": [
+            248762.44,
+            23426.62
+          ]
+        },
+        "printedControls": [
+          {
+            "field": "pay",
+            "printedControl": 248762.44,
+            "rowSum": 248762.44,
+            "residual": 0,
+            "basis": {
+              "total": "council"
+            }
+          },
+          {
+            "field": "expenses",
+            "printedControl": 23426.62,
+            "rowSum": 23426.62,
+            "residual": 0,
+            "basis": {
+              "total": "council"
+            }
+          }
+        ],
+        "evidenceFile": "evidence/township-of-esquimalt-2025-elected-officials.json.gzip"
+      }
+    },
+    {
+      "id": "municipal-wave-capital-city-of-langford-2025-employee-remuneration",
+      "employerSlug": "city-of-langford",
+      "employerName": "City of Langford",
+      "sector": "Municipalities",
+      "year": "2025",
+      "periodType": "calendar",
+      "periodStart": "2025-01-01",
+      "periodEnd": "2025-12-31",
+      "title": "City of Langford 2025 SOFI: employee-remuneration",
+      "sourceUrl": "https://langford.ca/wp-content/uploads/2026/06/2025-SOFI-Package-FINAL.pdf",
+      "sourceIndexUrl": "https://langford.ca/city-hall/document-libraries/document-library/",
+      "sha256": "c5d56822817dbbbac943ec0b196fc4cc6222876fe4fb91710e2e5c12c64ca953",
+      "file": "city-of-langford-2025-employee-remuneration.json.gzip",
+      "dataSha256": "7e3e0e4798eac99c26638f888dadd9a4b389661bb5785eef4aa072eaaa85e631",
+      "category": "employee-remuneration",
+      "scope": "named-employees-over-threshold",
+      "threshold": 75000,
+      "thresholdComparison": ">",
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "status": "verified",
+      "verifiedOn": "2026-10-31",
+      "rowCount": 130,
+      "totalRemuneration": 15259283,
+      "totalExpenses": 130994,
+      "pages": [
+        8,
+        9,
+        10,
+        11
+      ],
+      "publicWarning": "Published row amounts minus printed named-cohort controls differ by remuneration $2.00 and expenses $-1.00. Original values are preserved; the cause is unresolved. Disclosed numeric expenses alone are summed; missing expense cells remain missing.",
+      "nameDisclosure": "as-published",
+      "positionDisclosure": "published",
+      "notes": [
+        "Original schedule reporting year is2025, regardless of upload path. Published remuneration is a payment disclosure, not an annual base salary.",
+        "All named fields are compared across two independent PDF readers. Blank/dash expenses stay missing; explicit numeric zero is zero. Employees and elected officials are separate cohorts; no compiled records are removed.",
+        "Source remuneration includes salary, wages and taxable benefits on a cash-paid basis. Expense amounts are separate; the financial statements also include accruals and employer payroll obligations.",
+        "The council name Szpak, the Late Lillian remains as published.",
+        "Published row amounts minus printed named-cohort controls differ by remuneration $2.00 and expenses $-1.00. Original values are preserved; the cause is unresolved. Disclosed numeric expenses alone are summed; missing expense cells remain missing."
+      ],
+      "validation": {
+        "originalFingerprintVerified": true,
+        "publicationEvidence": null,
+        "independentReaders": [
+          "PyMuPDF positioned words",
+          "Poppler bbox-layout positioned words"
+        ],
+        "everyRowFieldAgreement": true,
+        "physicalPagesVisuallyReviewed": [
+          8,
+          9,
+          10,
+          11
+        ],
+        "rowsIndependentlyChecked": 130,
+        "sourceControls": {
+          "employees": [
+            15259281,
+            130995
+          ],
+          "council": [
+            300927,
+            36473
+          ]
+        },
+        "printedControls": [
+          {
+            "field": "pay",
+            "printedControl": 15259281,
+            "rowSum": 15259283,
+            "residual": 2,
+            "basis": {
+              "total": "employees"
+            }
+          },
+          {
+            "field": "expenses",
+            "printedControl": 130995,
+            "rowSum": 130994,
+            "residual": -1,
+            "basis": {
+              "total": "employees"
+            }
+          }
+        ],
+        "evidenceFile": "evidence/city-of-langford-2025-employee-remuneration.json.gzip"
+      }
+    },
+    {
+      "id": "municipal-wave-capital-city-of-langford-2025-elected-officials",
+      "employerSlug": "city-of-langford",
+      "employerName": "City of Langford",
+      "sector": "Municipalities",
+      "year": "2025",
+      "periodType": "calendar",
+      "periodStart": "2025-01-01",
+      "periodEnd": "2025-12-31",
+      "title": "City of Langford 2025 SOFI: elected-officials",
+      "sourceUrl": "https://langford.ca/wp-content/uploads/2026/06/2025-SOFI-Package-FINAL.pdf",
+      "sourceIndexUrl": "https://langford.ca/city-hall/document-libraries/document-library/",
+      "sha256": "c5d56822817dbbbac943ec0b196fc4cc6222876fe4fb91710e2e5c12c64ca953",
+      "file": "city-of-langford-2025-elected-officials.json.gzip",
+      "dataSha256": "15b633a7c2e9c82a540af3671f04cf88b0a5b6555c3f6c9bfc2460dfd9b1450f",
+      "category": "elected-officials",
+      "scope": "elected-officials",
+      "threshold": null,
+      "thresholdComparison": null,
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "status": "verified",
+      "verifiedOn": "2026-10-31",
+      "rowCount": 7,
+      "totalRemuneration": 300928,
+      "totalExpenses": 36473,
+      "pages": [
+        7
+      ],
+      "publicWarning": "Published row amounts minus printed named-cohort controls differ by remuneration $1.00 and expenses $0.00. Original values are preserved; the cause is unresolved. Disclosed numeric expenses alone are summed; missing expense cells remain missing.",
+      "nameDisclosure": "as-published",
+      "positionDisclosure": "published",
+      "notes": [
+        "Original schedule reporting year is2025, regardless of upload path. Published remuneration is a payment disclosure, not an annual base salary.",
+        "All named fields are compared across two independent PDF readers. Blank/dash expenses stay missing; explicit numeric zero is zero. Employees and elected officials are separate cohorts; no compiled records are removed.",
+        "Source remuneration includes salary, wages and taxable benefits on a cash-paid basis. Expense amounts are separate; the financial statements also include accruals and employer payroll obligations.",
+        "The council name Szpak, the Late Lillian remains as published.",
+        "Published row amounts minus printed named-cohort controls differ by remuneration $1.00 and expenses $0.00. Original values are preserved; the cause is unresolved. Disclosed numeric expenses alone are summed; missing expense cells remain missing."
+      ],
+      "validation": {
+        "originalFingerprintVerified": true,
+        "publicationEvidence": null,
+        "independentReaders": [
+          "PyMuPDF positioned words",
+          "Poppler bbox-layout positioned words"
+        ],
+        "everyRowFieldAgreement": true,
+        "physicalPagesVisuallyReviewed": [
+          7
+        ],
+        "rowsIndependentlyChecked": 7,
+        "sourceControls": {
+          "employees": [
+            15259281,
+            130995
+          ],
+          "council": [
+            300927,
+            36473
+          ]
+        },
+        "printedControls": [
+          {
+            "field": "pay",
+            "printedControl": 300927,
+            "rowSum": 300928,
+            "residual": 1,
+            "basis": {
+              "total": "council"
+            }
+          },
+          {
+            "field": "expenses",
+            "printedControl": 36473,
+            "rowSum": 36473,
+            "residual": 0,
+            "basis": {
+              "total": "council"
+            }
+          }
+        ],
+        "evidenceFile": "evidence/city-of-langford-2025-elected-officials.json.gzip"
+      }
+    },
+    {
+      "id": "municipal-wave-capital-town-of-sidney-2025-employee-remuneration",
+      "employerSlug": "town-of-sidney",
+      "employerName": "Town of Sidney",
+      "sector": "Municipalities",
+      "year": "2025",
+      "periodType": "calendar",
+      "periodStart": "2025-01-01",
+      "periodEnd": "2025-12-31",
+      "title": "Town of Sidney 2025 SOFI: employee-remuneration",
+      "sourceUrl": "https://www.sidney.ca/wp-content/uploads/2025-Statement-of-Financial-Information.pdf",
+      "sourceIndexUrl": "https://www.sidney.ca/government/financial-accountability/financial-reporting/",
+      "sha256": "8dcb3d11c0ce8b6cad9d0a06be6b618fbfe90a0517aef51c791afa0387294c21",
+      "file": "town-of-sidney-2025-employee-remuneration.json.gzip",
+      "dataSha256": "91d536097cf0543f03851941dbc2f9a27fe3a3c7e8b8b559529e7a859c6dc9cf",
+      "category": "employee-remuneration",
+      "scope": "named-employees-over-threshold",
+      "threshold": 75000,
+      "thresholdComparison": ">",
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "status": "verified",
+      "verifiedOn": "2026-10-31",
+      "rowCount": 53,
+      "totalRemuneration": 5703363,
+      "totalExpenses": 66298,
+      "pages": [
+        40,
+        41
+      ],
+      "publicWarning": "Published row amounts minus printed named-cohort controls differ by remuneration $0.00 and expenses $-1.00. Original values are preserved; the cause is unresolved. Disclosed numeric expenses alone are summed; missing expense cells remain missing.",
+      "nameDisclosure": "as-published",
+      "positionDisclosure": "published",
+      "notes": [
+        "Original schedule reporting year is2025, regardless of upload path. Published remuneration is a payment disclosure, not an annual base salary.",
+        "All named fields are compared across two independent PDF readers. Blank/dash expenses stay missing; explicit numeric zero is zero. Employees and elected officials are separate cohorts; no compiled records are removed.",
+        "Council remuneration is the source’s numeric TOTAL column under REMUNERATION; gross and benefit columns are supporting evidence. That published numeric total is not reconstructed by treating component dashes as zero.",
+        "Employee remuneration is the separately published REMUNERATION column. The under-threshold expense aggregate is n/a; no inference is made from it.",
+        "Published row amounts minus printed named-cohort controls differ by remuneration $0.00 and expenses $-1.00. Original values are preserved; the cause is unresolved. Disclosed numeric expenses alone are summed; missing expense cells remain missing."
+      ],
+      "validation": {
+        "originalFingerprintVerified": true,
+        "publicationEvidence": null,
+        "independentReaders": [
+          "PyMuPDF positioned words",
+          "Poppler bbox-layout positioned words"
+        ],
+        "everyRowFieldAgreement": true,
+        "physicalPagesVisuallyReviewed": [
+          40,
+          41
+        ],
+        "rowsIndependentlyChecked": 53,
+        "sourceControls": {
+          "employees": [
+            5703363,
+            66299
+          ],
+          "council": [
+            167722,
+            8495
+          ]
+        },
+        "printedControls": [
+          {
+            "field": "pay",
+            "printedControl": 5703363,
+            "rowSum": 5703363,
+            "residual": 0,
+            "basis": {
+              "total": "employees"
+            }
+          },
+          {
+            "field": "expenses",
+            "printedControl": 66299,
+            "rowSum": 66298,
+            "residual": -1,
+            "basis": {
+              "total": "employees"
+            }
+          }
+        ],
+        "evidenceFile": "evidence/town-of-sidney-2025-employee-remuneration.json.gzip"
+      }
+    },
+    {
+      "id": "municipal-wave-capital-town-of-sidney-2025-elected-officials",
+      "employerSlug": "town-of-sidney",
+      "employerName": "Town of Sidney",
+      "sector": "Municipalities",
+      "year": "2025",
+      "periodType": "calendar",
+      "periodStart": "2025-01-01",
+      "periodEnd": "2025-12-31",
+      "title": "Town of Sidney 2025 SOFI: elected-officials",
+      "sourceUrl": "https://www.sidney.ca/wp-content/uploads/2025-Statement-of-Financial-Information.pdf",
+      "sourceIndexUrl": "https://www.sidney.ca/government/financial-accountability/financial-reporting/",
+      "sha256": "8dcb3d11c0ce8b6cad9d0a06be6b618fbfe90a0517aef51c791afa0387294c21",
+      "file": "town-of-sidney-2025-elected-officials.json.gzip",
+      "dataSha256": "d559c940a3acd91a177de00694644ede15d0a9c11bbb28a5a454e078423eca78",
+      "category": "elected-officials",
+      "scope": "elected-officials",
+      "threshold": null,
+      "thresholdComparison": null,
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "status": "verified",
+      "verifiedOn": "2026-10-31",
+      "rowCount": 7,
+      "totalRemuneration": 167722,
+      "totalExpenses": 8495,
+      "pages": [
+        40
+      ],
+      "publicWarning": null,
+      "nameDisclosure": "as-published",
+      "positionDisclosure": "published",
+      "notes": [
+        "Original schedule reporting year is2025, regardless of upload path. Published remuneration is a payment disclosure, not an annual base salary.",
+        "All named fields are compared across two independent PDF readers. Blank/dash expenses stay missing; explicit numeric zero is zero. Employees and elected officials are separate cohorts; no compiled records are removed.",
+        "Council remuneration is the source’s numeric TOTAL column under REMUNERATION; gross and benefit columns are supporting evidence. That published numeric total is not reconstructed by treating component dashes as zero.",
+        "Employee remuneration is the separately published REMUNERATION column. The under-threshold expense aggregate is n/a; no inference is made from it."
+      ],
+      "validation": {
+        "originalFingerprintVerified": true,
+        "publicationEvidence": null,
+        "independentReaders": [
+          "PyMuPDF positioned words",
+          "Poppler bbox-layout positioned words"
+        ],
+        "everyRowFieldAgreement": true,
+        "physicalPagesVisuallyReviewed": [
+          40
+        ],
+        "rowsIndependentlyChecked": 7,
+        "sourceControls": {
+          "employees": [
+            5703363,
+            66299
+          ],
+          "council": [
+            167722,
+            8495
+          ]
+        },
+        "printedControls": [
+          {
+            "field": "pay",
+            "printedControl": 167722,
+            "rowSum": 167722,
+            "residual": 0,
+            "basis": {
+              "total": "council"
+            }
+          },
+          {
+            "field": "expenses",
+            "printedControl": 8495,
+            "rowSum": 8495,
+            "residual": 0,
+            "basis": {
+              "total": "council"
+            }
+          }
+        ],
+        "evidenceFile": "evidence/town-of-sidney-2025-elected-officials.json.gzip"
+      }
+    },
+    {
+      "id": "municipal-wave-capital-town-of-ladysmith-2025-employee-remuneration",
+      "employerSlug": "town-of-ladysmith",
+      "employerName": "Town of Ladysmith",
+      "sector": "Municipalities",
+      "year": "2025",
+      "periodType": "calendar",
+      "periodStart": "2025-01-01",
+      "periodEnd": "2025-12-31",
+      "title": "Town of Ladysmith 2025 SOFI: employee-remuneration",
+      "sourceUrl": "https://www.ladysmith.ca/docs/default-source/reports-2021/2025-ladysmith-sofi.pdf?sfvrsn=529f3db_4",
+      "sourceIndexUrl": "https://www.ladysmith.ca/city-hall/reports-publications",
+      "sha256": "8911dc0187db824e0a947d95dddd625516298146a5b78bf9df08674409fe6df0",
+      "file": "town-of-ladysmith-2025-employee-remuneration.json.gzip",
+      "dataSha256": "e3878a056114bc6349a0991148eaf5ff8a29e4301d7f3e184e9df398b0db82b2",
+      "category": "employee-remuneration",
+      "scope": "named-employees-over-threshold",
+      "threshold": 75000,
+      "thresholdComparison": ">",
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "status": "verified",
+      "verifiedOn": "2026-10-31",
+      "rowCount": 39,
+      "totalRemuneration": 4066962,
+      "totalExpenses": 47379,
+      "pages": [
+        48
+      ],
+      "publicWarning": null,
+      "nameDisclosure": "as-published",
+      "positionDisclosure": "published",
+      "notes": [
+        "Original schedule reporting year is2025, regardless of upload path. Published remuneration is a payment disclosure, not an annual base salary.",
+        "All named fields are compared across two independent PDF readers. Blank/dash expenses stay missing; explicit numeric zero is zero. Employees and elected officials are separate cohorts; no compiled records are removed.",
+        "The employee source labels its pay column PAYROLL. That published amount is retained as remuneration, separately from EXPENSES. The reconciliation separately adds purchased employer benefits, capital labour and accrual adjustments.",
+        "Published titles and spellings remain unchanged, including Sr Parks Maintenace Worker and Supervisor-Community Programs & Serv."
+      ],
+      "validation": {
+        "originalFingerprintVerified": true,
+        "publicationEvidence": null,
+        "independentReaders": [
+          "PyMuPDF positioned words",
+          "Poppler bbox-layout positioned words"
+        ],
+        "everyRowFieldAgreement": true,
+        "physicalPagesVisuallyReviewed": [
+          48
+        ],
+        "rowsIndependentlyChecked": 39,
+        "sourceControls": {
+          "employees": [
+            4066962,
+            47379
+          ],
+          "council": [
+            149003,
+            27882
+          ]
+        },
+        "printedControls": [
+          {
+            "field": "pay",
+            "printedControl": 4066962,
+            "rowSum": 4066962,
+            "residual": 0,
+            "basis": {
+              "total": "employees"
+            }
+          },
+          {
+            "field": "expenses",
+            "printedControl": 47379,
+            "rowSum": 47379,
+            "residual": 0,
+            "basis": {
+              "total": "employees"
+            }
+          }
+        ],
+        "evidenceFile": "evidence/town-of-ladysmith-2025-employee-remuneration.json.gzip"
+      }
+    },
+    {
+      "id": "municipal-wave-capital-town-of-ladysmith-2025-elected-officials",
+      "employerSlug": "town-of-ladysmith",
+      "employerName": "Town of Ladysmith",
+      "sector": "Municipalities",
+      "year": "2025",
+      "periodType": "calendar",
+      "periodStart": "2025-01-01",
+      "periodEnd": "2025-12-31",
+      "title": "Town of Ladysmith 2025 SOFI: elected-officials",
+      "sourceUrl": "https://www.ladysmith.ca/docs/default-source/reports-2021/2025-ladysmith-sofi.pdf?sfvrsn=529f3db_4",
+      "sourceIndexUrl": "https://www.ladysmith.ca/city-hall/reports-publications",
+      "sha256": "8911dc0187db824e0a947d95dddd625516298146a5b78bf9df08674409fe6df0",
+      "file": "town-of-ladysmith-2025-elected-officials.json.gzip",
+      "dataSha256": "892cef3617e4eb740b5f9bf189537f65cb16bb244a27529454a2a226abdf2fb3",
+      "category": "elected-officials",
+      "scope": "elected-officials",
+      "threshold": null,
+      "thresholdComparison": null,
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "status": "verified",
+      "verifiedOn": "2026-10-31",
+      "rowCount": 7,
+      "totalRemuneration": 149003,
+      "totalExpenses": 27882,
+      "pages": [
+        48
+      ],
+      "publicWarning": null,
+      "nameDisclosure": "as-published",
+      "positionDisclosure": "published",
+      "notes": [
+        "Original schedule reporting year is2025, regardless of upload path. Published remuneration is a payment disclosure, not an annual base salary.",
+        "All named fields are compared across two independent PDF readers. Blank/dash expenses stay missing; explicit numeric zero is zero. Employees and elected officials are separate cohorts; no compiled records are removed.",
+        "The employee source labels its pay column PAYROLL. That published amount is retained as remuneration, separately from EXPENSES. The reconciliation separately adds purchased employer benefits, capital labour and accrual adjustments.",
+        "Published titles and spellings remain unchanged, including Sr Parks Maintenace Worker and Supervisor-Community Programs & Serv."
+      ],
+      "validation": {
+        "originalFingerprintVerified": true,
+        "publicationEvidence": null,
+        "independentReaders": [
+          "PyMuPDF positioned words",
+          "Poppler bbox-layout positioned words"
+        ],
+        "everyRowFieldAgreement": true,
+        "physicalPagesVisuallyReviewed": [
+          48
+        ],
+        "rowsIndependentlyChecked": 7,
+        "sourceControls": {
+          "employees": [
+            4066962,
+            47379
+          ],
+          "council": [
+            149003,
+            27882
+          ]
+        },
+        "printedControls": [
+          {
+            "field": "pay",
+            "printedControl": 149003,
+            "rowSum": 149003,
+            "residual": 0,
+            "basis": {
+              "total": "council"
+            }
+          },
+          {
+            "field": "expenses",
+            "printedControl": 27882,
+            "rowSum": 27882,
+            "residual": 0,
+            "basis": {
+              "total": "council"
+            }
+          }
+        ],
+        "evidenceFile": "evidence/town-of-ladysmith-2025-elected-officials.json.gzip"
+      }
+    },
+    {
+      "id": "municipal-wave-capital-city-of-colwood-2025-employee-remuneration",
+      "employerSlug": "city-of-colwood",
+      "employerName": "City of Colwood",
+      "sector": "Municipalities",
+      "year": "2025",
+      "periodType": "calendar",
+      "periodStart": "2025-01-01",
+      "periodEnd": "2025-12-31",
+      "title": "City of Colwood 2025 SOFI: employee-remuneration",
+      "sourceUrl": "https://www.colwood.ca/media/file/2025-statement-financial-information-signedpdf",
+      "sourceIndexUrl": "https://www.colwood.ca/local-government/plans-strategies/financial-plans-reports",
+      "sha256": "3671fec5cfd727eefc1d03b4341a3ae8413171dc4774f9f50ed693aa088619cc",
+      "file": "city-of-colwood-2025-employee-remuneration.json.gzip",
+      "dataSha256": "6566d99cb54c20d628e42c8d6f2c58c705265d69b41a2c1be43e98ceee9a6443",
+      "category": "employee-remuneration",
+      "scope": "named-employees-over-threshold",
+      "threshold": 75000,
+      "thresholdComparison": ">=",
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "status": "verified",
+      "verifiedOn": "2026-10-31",
+      "rowCount": 74,
+      "totalRemuneration": 8631050,
+      "totalExpenses": 149787,
+      "pages": [
+        10,
+        11
+      ],
+      "publicWarning": "Published row amounts minus printed named-cohort controls differ by remuneration $0.00 and expenses $1.00. Original values are preserved; the cause is unresolved. Disclosed numeric expenses alone are summed; missing expense cells remain missing. Employee pages10–11 retain DRAFT watermarks. The same signed original records Council approval of all statements and schedules on physical page4 at the June29,2026 special meeting, with the Finance Director and Mayor signatures; the management report on page5 is also signed.",
+      "nameDisclosure": "as-published",
+      "positionDisclosure": "published",
+      "notes": [
+        "Original schedule reporting year is2025, regardless of upload path. Published remuneration is a payment disclosure, not an annual base salary.",
+        "All named fields are compared across two independent PDF readers. Blank/dash expenses stay missing; explicit numeric zero is zero. Employees and elected officials are separate cohorts; no compiled records are removed.",
+        "Source REMUNERATION contains gross earnings, taxable benefits and a numeric TOTAL. The source TOTAL is accepted as remuneration, separately from expenses; it is never reconstructed from missing components. Gross and taxable benefits remain supporting evidence with dashes/blank as null.",
+        "The source definition excludes severance agreements and non-taxable employer contributions; expenses include travel, memberships, tuition, relocation, vehicle and similar payments outside remuneration.",
+        "Council source page9 is an image table and is held for OCR verification; these sources include employees only.",
+        "Employee schedule pages10–11 retain DRAFT watermarks. The same original physical page4 explicitly records Council approval of all statements and schedules at the special meeting of June29,2026, signed by the Finance Director and Mayor. The management report on physical page5 is also signed. Approval evidence is retained; the watermark is not silently ignored.",
+        "Published row amounts minus printed named-cohort controls differ by remuneration $0.00 and expenses $1.00. Original values are preserved; the cause is unresolved. Disclosed numeric expenses alone are summed; missing expense cells remain missing. Employee pages10–11 retain DRAFT watermarks. The same signed original records Council approval of all statements and schedules on physical page4 at the June29,2026 special meeting, with the Finance Director and Mayor signatures; the management report on page5 is also signed."
+      ],
+      "validation": {
+        "originalFingerprintVerified": true,
+        "publicationEvidence": {
+          "pdfPage": 4,
+          "approvalDate": "2026-06-29",
+          "statement": "Approved by Council for the City of Colwood at the special meeting of June 29, 2026.",
+          "signaturesVisuallyReviewed": [
+            "Kathy McLennan, Director of Finance",
+            "Doug Kobayashi, Mayor"
+          ],
+          "originalPageText": "Section 1 \nStatement of Financial Information Approval \nApproved by Council for the City of Colwood at the special meeting of June 29, 2026. \nThe undersigned, as authorized by the Financial Information Regulation, Schedule 1, subsection 9(2), \napproves all the statements and schedules included in this Statement of Financial Information, produced \nunder the Financial Information Act. \n___________________________ \n___________________________ \nKathy McLennan, CPA \nDoug Kobayashi \nDirector of Finance \nMayor \nJune 29, 2026  \nJune 29, 2026  \n",
+          "managementReportSignedPhysicalPage": 5,
+          "salaryTableWatermark": "DRAFT",
+          "decision": "The same hash-pinned original contains the explicit Council approval of all statements/schedules and both signatures. The salary-page watermark is retained and disclosed; finality is supported by the approval evidence, not inferred from the filename."
+        },
+        "independentReaders": [
+          "PyMuPDF positioned words",
+          "Poppler bbox-layout positioned words"
+        ],
+        "everyRowFieldAgreement": true,
+        "physicalPagesVisuallyReviewed": [
+          10,
+          11
+        ],
+        "rowsIndependentlyChecked": 74,
+        "sourceControls": {
+          "employees": [
+            8631050,
+            149786
+          ]
+        },
+        "printedControls": [
+          {
+            "field": "pay",
+            "printedControl": 8631050,
+            "rowSum": 8631050,
+            "residual": 0,
+            "basis": {
+              "total": "employees"
+            }
+          },
+          {
+            "field": "expenses",
+            "printedControl": 149786,
+            "rowSum": 149787,
+            "residual": 1,
+            "basis": {
+              "total": "employees"
+            }
+          }
+        ],
+        "evidenceFile": "evidence/city-of-colwood-2025-employee-remuneration.json.gzip"
+      }
+    },
+    {
+      "id": "municipal-wave-capital-district-of-north-saanich-2025-employee-remuneration",
+      "employerSlug": "district-of-north-saanich",
+      "employerName": "District of North Saanich",
+      "sector": "Municipalities",
+      "year": "2025",
+      "periodType": "calendar",
+      "periodStart": "2025-01-01",
+      "periodEnd": "2025-12-31",
+      "title": "District of North Saanich 2025 SOFI: employee-remuneration",
+      "sourceUrl": "https://www.northsaanich.ca/media/file/2025-statement-financial-information-sofi",
+      "sourceIndexUrl": "https://www.northsaanich.ca/local-government/plans-reports",
+      "sha256": "e76c8b993f6126dcb069eb458b70cc7d53d3032750d22b69f7c5a17a5030b360",
+      "file": "district-of-north-saanich-2025-employee-remuneration.json.gzip",
+      "dataSha256": "3a6d810d4664492c4c0bf169f999256532a2c5590d74f822be4a2c5c809df67e",
+      "category": "employee-remuneration",
+      "scope": "named-employees-over-threshold",
+      "threshold": 75000,
+      "thresholdComparison": ">",
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "status": "verified",
+      "verifiedOn": "2026-10-31",
+      "rowCount": 44,
+      "totalRemuneration": 4864563,
+      "totalExpenses": 83731,
+      "pages": [
+        39,
+        40
+      ],
+      "publicWarning": null,
+      "nameDisclosure": "as-published",
+      "positionDisclosure": "published",
+      "notes": [
+        "Original schedule reporting year is2025, regardless of upload path. Published remuneration is a payment disclosure, not an annual base salary.",
+        "All named fields are compared across two independent PDF readers. Blank/dash expenses stay missing; explicit numeric zero is zero. Employees and elected officials are separate cohorts; no compiled records are removed.",
+        "Source remuneration includes regular salaries/wages, retroactive increases, holiday, overtime, other earned pay and fringe benefits. It excludes severance and general non-taxable employee benefits.",
+        "Two disclosed Munro, S observations have different published positions and amounts. Both are retained as distinct source rows; no identity merge is inferred."
+      ],
+      "validation": {
+        "originalFingerprintVerified": true,
+        "publicationEvidence": null,
+        "independentReaders": [
+          "PyMuPDF positioned words",
+          "Poppler bbox-layout positioned words"
+        ],
+        "everyRowFieldAgreement": true,
+        "physicalPagesVisuallyReviewed": [
+          39,
+          40
+        ],
+        "rowsIndependentlyChecked": 44,
+        "sourceControls": {
+          "employees": [
+            4864563,
+            83731
+          ],
+          "council": [
+            151739,
+            14205
+          ]
+        },
+        "printedControls": [
+          {
+            "field": "pay",
+            "printedControl": 4864563,
+            "rowSum": 4864563,
+            "residual": 0,
+            "basis": {
+              "total": "employees"
+            }
+          },
+          {
+            "field": "expenses",
+            "printedControl": 83731,
+            "rowSum": 83731,
+            "residual": 0,
+            "basis": {
+              "total": "employees"
+            }
+          }
+        ],
+        "evidenceFile": "evidence/district-of-north-saanich-2025-employee-remuneration.json.gzip"
+      }
+    },
+    {
+      "id": "municipal-wave-capital-district-of-north-saanich-2025-elected-officials",
+      "employerSlug": "district-of-north-saanich",
+      "employerName": "District of North Saanich",
+      "sector": "Municipalities",
+      "year": "2025",
+      "periodType": "calendar",
+      "periodStart": "2025-01-01",
+      "periodEnd": "2025-12-31",
+      "title": "District of North Saanich 2025 SOFI: elected-officials",
+      "sourceUrl": "https://www.northsaanich.ca/media/file/2025-statement-financial-information-sofi",
+      "sourceIndexUrl": "https://www.northsaanich.ca/local-government/plans-reports",
+      "sha256": "e76c8b993f6126dcb069eb458b70cc7d53d3032750d22b69f7c5a17a5030b360",
+      "file": "district-of-north-saanich-2025-elected-officials.json.gzip",
+      "dataSha256": "0c2cdd0cf67aaf1d169867f9319a9d8711cc5c4f17018ed8e7a866b9ba2f56cc",
+      "category": "elected-officials",
+      "scope": "elected-officials",
+      "threshold": null,
+      "thresholdComparison": null,
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "status": "verified",
+      "verifiedOn": "2026-10-31",
+      "rowCount": 7,
+      "totalRemuneration": 151739,
+      "totalExpenses": 14205,
+      "pages": [
+        39
+      ],
+      "publicWarning": null,
+      "nameDisclosure": "as-published",
+      "positionDisclosure": "published",
+      "notes": [
+        "Original schedule reporting year is2025, regardless of upload path. Published remuneration is a payment disclosure, not an annual base salary.",
+        "All named fields are compared across two independent PDF readers. Blank/dash expenses stay missing; explicit numeric zero is zero. Employees and elected officials are separate cohorts; no compiled records are removed.",
+        "Source remuneration includes regular salaries/wages, retroactive increases, holiday, overtime, other earned pay and fringe benefits. It excludes severance and general non-taxable employee benefits.",
+        "Two disclosed Munro, S observations have different published positions and amounts. Both are retained as distinct source rows; no identity merge is inferred."
+      ],
+      "validation": {
+        "originalFingerprintVerified": true,
+        "publicationEvidence": null,
+        "independentReaders": [
+          "PyMuPDF positioned words",
+          "Poppler bbox-layout positioned words"
+        ],
+        "everyRowFieldAgreement": true,
+        "physicalPagesVisuallyReviewed": [
+          39
+        ],
+        "rowsIndependentlyChecked": 7,
+        "sourceControls": {
+          "employees": [
+            4864563,
+            83731
+          ],
+          "council": [
+            151739,
+            14205
+          ]
+        },
+        "printedControls": [
+          {
+            "field": "pay",
+            "printedControl": 151739,
+            "rowSum": 151739,
+            "residual": 0,
+            "basis": {
+              "total": "council"
+            }
+          },
+          {
+            "field": "expenses",
+            "printedControl": 14205,
+            "rowSum": 14205,
+            "residual": 0,
+            "basis": {
+              "total": "council"
+            }
+          }
+        ],
+        "evidenceFile": "evidence/district-of-north-saanich-2025-elected-officials.json.gzip"
+      }
+    },
+    {
+      "id": "municipal-wave-capital-town-of-lake-cowichan-2023-elected-officials",
+      "employerSlug": "town-of-lake-cowichan",
+      "employerName": "Town of Lake Cowichan",
+      "sector": "Municipalities",
+      "year": "2023",
+      "periodType": "calendar",
+      "periodStart": "2023-01-01",
+      "periodEnd": "2023-12-31",
+      "title": "Town of Lake Cowichan 2023 SOFI: elected-officials",
+      "sourceUrl": "https://www.town.lakecowichan.bc.ca/dl/2023%20SOFI.pdf",
+      "sourceIndexUrl": "https://lakecowichan.ca/finance.php",
+      "sha256": "7f1bdf7be9125b1c8b254cb9dd833ede30ab1101d494cf07502578659356ea83",
+      "file": "town-of-lake-cowichan-2023-elected-officials.json.gzip",
+      "dataSha256": "bece40199234c5c6b7b8bc8d7d45f1997e2c972d947c8b91cbef0bf603b67fd6",
+      "category": "elected-officials",
+      "scope": "elected-officials",
+      "threshold": null,
+      "thresholdComparison": null,
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "status": "verified",
+      "verifiedOn": "2026-10-31",
+      "rowCount": 5,
+      "totalRemuneration": 89401.8,
+      "totalExpenses": 31360.83,
+      "pages": [
+        32
+      ],
+      "publicWarning": null,
+      "nameDisclosure": "as-published",
+      "positionDisclosure": "published",
+      "notes": [
+        "The source labels remuneration as Financial Compensation. The distinct expense column is Travel, Conferences and Other. Expense-inclusive Totals remain supporting evidence and are not remuneration.",
+        "Exact source names, roles and cent amounts are preserved. Blank/dash expenses remain missing; numeric zeros remain zero. Employees below the threshold are aggregate-only and excluded from individual observations."
+      ],
+      "validation": {
+        "originalFingerprintVerified": true,
+        "publicationEvidence": null,
+        "independentReaders": [
+          "PyMuPDF positioned words",
+          "Poppler bbox-layout positioned words"
+        ],
+        "everyRowFieldAgreement": true,
+        "physicalPagesVisuallyReviewed": [
+          32
+        ],
+        "rowsIndependentlyChecked": 5,
+        "sourceControls": {
+          "council": [
+            89401.8,
+            31360.83
+          ],
+          "allEmployees": [
+            1762904.75,
+            30159.91
+          ],
+          "below": [
+            938715.53,
+            8168.37
+          ]
+        },
+        "printedControls": [
+          {
+            "field": "pay",
+            "printedControl": 89401.8,
+            "rowSum": 89401.8,
+            "residual": 0,
+            "basis": {
+              "total": "council"
+            }
+          },
+          {
+            "field": "expenses",
+            "printedControl": 31360.83,
+            "rowSum": 31360.83,
+            "residual": 0,
+            "basis": {
+              "total": "council"
+            }
+          }
+        ],
+        "evidenceFile": "evidence/town-of-lake-cowichan-2023-elected-officials.json.gzip"
+      }
+    },
+    {
+      "id": "municipal-wave-capital-town-of-lake-cowichan-2023-employee-remuneration",
+      "employerSlug": "town-of-lake-cowichan",
+      "employerName": "Town of Lake Cowichan",
+      "sector": "Municipalities",
+      "year": "2023",
+      "periodType": "calendar",
+      "periodStart": "2023-01-01",
+      "periodEnd": "2023-12-31",
+      "title": "Town of Lake Cowichan 2023 SOFI: employee-remuneration",
+      "sourceUrl": "https://www.town.lakecowichan.bc.ca/dl/2023%20SOFI.pdf",
+      "sourceIndexUrl": "https://lakecowichan.ca/finance.php",
+      "sha256": "7f1bdf7be9125b1c8b254cb9dd833ede30ab1101d494cf07502578659356ea83",
+      "file": "town-of-lake-cowichan-2023-employee-remuneration.json.gzip",
+      "dataSha256": "35e8015ac60aef64a6556cd7bb427c6f3e9f3d8791370f72b003bcc6493f8444",
+      "category": "employee-remuneration",
+      "scope": "named-employees-over-threshold",
+      "threshold": 75000,
+      "thresholdComparison": null,
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "status": "verified",
+      "verifiedOn": "2026-10-31",
+      "rowCount": 8,
+      "totalRemuneration": 824189.22,
+      "totalExpenses": 21991.54,
+      "pages": [
+        32
+      ],
+      "publicWarning": null,
+      "nameDisclosure": "as-published",
+      "positionDisclosure": "published",
+      "notes": [
+        "The source labels remuneration as Financial Compensation. The distinct expense column is Travel, Conferences and Other. Expense-inclusive Totals remain supporting evidence and are not remuneration.",
+        "Exact source names, roles and cent amounts are preserved. Blank/dash expenses remain missing; numeric zeros remain zero. Employees below the threshold are aggregate-only and excluded from individual observations.",
+        "The staff schedule does not print a named-threshold comparison. It excludes All other employees and cites Financial Information Regulation Schedule1 Section6(2)(b)&(c). The $75,000 context comes from that reporting framework; thresholdComparison remains null rather than asserting a printed strict boundary. All eight accepted named remuneration amounts exceed $75,000."
+      ],
+      "validation": {
+        "originalFingerprintVerified": true,
+        "publicationEvidence": null,
+        "independentReaders": [
+          "PyMuPDF positioned words",
+          "Poppler bbox-layout positioned words"
+        ],
+        "everyRowFieldAgreement": true,
+        "physicalPagesVisuallyReviewed": [
+          32
+        ],
+        "rowsIndependentlyChecked": 8,
+        "sourceControls": {
+          "council": [
+            89401.8,
+            31360.83
+          ],
+          "allEmployees": [
+            1762904.75,
+            30159.91
+          ],
+          "below": [
+            938715.53,
+            8168.37
+          ]
+        },
+        "printedControls": [
+          {
+            "field": "pay",
+            "printedControl": 824189.22,
+            "rowSum": 824189.22,
+            "residual": 0,
+            "basis": {
+              "total": "allEmployees",
+              "subtract": "below"
+            }
+          },
+          {
+            "field": "expenses",
+            "printedControl": 21991.54,
+            "rowSum": 21991.54,
+            "residual": 0,
+            "basis": {
+              "total": "allEmployees",
+              "subtract": "below"
+            }
+          }
+        ],
+        "evidenceFile": "evidence/town-of-lake-cowichan-2023-employee-remuneration.json.gzip"
+      }
+    },
+    {
+      "id": "municipal-wave-capital-town-of-lake-cowichan-2024-elected-officials",
+      "employerSlug": "town-of-lake-cowichan",
+      "employerName": "Town of Lake Cowichan",
+      "sector": "Municipalities",
+      "year": "2024",
+      "periodType": "calendar",
+      "periodStart": "2024-01-01",
+      "periodEnd": "2024-12-31",
+      "title": "Town of Lake Cowichan 2024 SOFI: elected-officials",
+      "sourceUrl": "https://lakecowichan.ca/dl/2024%20SOFI.pdf",
+      "sourceIndexUrl": "https://lakecowichan.ca/finance.php",
+      "sha256": "e909d34599f0a3d2f8a1ebbdb706bb1139e9fecccbbd9cf04b12b96ffc4d7c46",
+      "file": "town-of-lake-cowichan-2024-elected-officials.json.gzip",
+      "dataSha256": "5d498abaa1ce49f7411589e0cfa84e5a7cbf0269646e111700a393b02f2b5f30",
+      "category": "elected-officials",
+      "scope": "elected-officials",
+      "threshold": null,
+      "thresholdComparison": null,
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "status": "verified",
+      "verifiedOn": "2026-10-31",
+      "rowCount": 5,
+      "totalRemuneration": 95187.31,
+      "totalExpenses": 26074.56,
+      "pages": [
+        31
+      ],
+      "publicWarning": null,
+      "nameDisclosure": "as-published",
+      "positionDisclosure": "published",
+      "notes": [
+        "The source labels remuneration as Financial Compensation. The distinct expense column is Travel, Conferences and Other. Expense-inclusive Totals remain supporting evidence and are not remuneration.",
+        "Exact source names, roles and cent amounts are preserved. Blank/dash expenses remain missing; numeric zeros remain zero. Employees below the threshold are aggregate-only and excluded from individual observations."
+      ],
+      "validation": {
+        "originalFingerprintVerified": true,
+        "publicationEvidence": null,
+        "independentReaders": [
+          "PyMuPDF positioned words",
+          "Poppler bbox-layout positioned words"
+        ],
+        "everyRowFieldAgreement": true,
+        "physicalPagesVisuallyReviewed": [
+          31
+        ],
+        "rowsIndependentlyChecked": 5,
+        "sourceControls": {
+          "council": [
+            95187.31,
+            26074.56
+          ],
+          "allEmployees": [
+            2142501.52,
+            47788.55
+          ],
+          "below": [
+            1320535.75,
+            27343.4
+          ]
+        },
+        "printedControls": [
+          {
+            "field": "pay",
+            "printedControl": 95187.31,
+            "rowSum": 95187.31,
+            "residual": 0,
+            "basis": {
+              "total": "council"
+            }
+          },
+          {
+            "field": "expenses",
+            "printedControl": 26074.56,
+            "rowSum": 26074.56,
+            "residual": 0,
+            "basis": {
+              "total": "council"
+            }
+          }
+        ],
+        "evidenceFile": "evidence/town-of-lake-cowichan-2024-elected-officials.json.gzip"
+      }
+    }
+  ]
+}

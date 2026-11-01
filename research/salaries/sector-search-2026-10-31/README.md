@@ -56,3 +56,5 @@ npm run preview:salaries -- --build
 ```
 
 Original extraction, rendered review, independent-reader agreement and source residuals are retained per collection. Queue CSV files are generated from the six normalized handoffs. The frozen baseline is the previously deployed main commit; rebuilds assert that official additions, compiled replacements and the total change reconcile.
+
+This document records PR #25 at merge `5e5fe01`. Later imports have their own release reviews. `npm run review:sector-salaries` validates these frozen source inputs and reconciliation without rewriting this historical snapshot from newer app totals. To regenerate the original report, run its builder on the PR #25 checkout.

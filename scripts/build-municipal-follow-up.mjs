@@ -15,8 +15,8 @@ const ocrRequests = existsSync(join(ocrFolder, 'additional-requests.json')) ? JS
 const municipalityBySlug = new Map(coverage.municipalities.map((m) => [m.employerSlug, m]))
 const mtext = (text) => String(text ?? '—').replaceAll('|', '\\|').replaceAll('\n', ' ')
 const requestOverrides = new Map([
-  ['city-of-abbotsford', { year: null, blocker: 'Official finance page says SOFI is available on request; no accepted official records.',
-    ask: 'Public adopted 2025 SOFI employee and council schedules and existing spreadsheet/CSV; an index of earlier available years and amendments.',
+  ['city-of-abbotsford', { year: '2025', blocker: 'The finance page directs readers to request SOFI. Historical named schedules for 2023 and 2024 have now been recovered from public council attachments; the 2025 schedules still need locating.',
+    ask: 'Public adopted 2025 SOFI employee and council schedules and the existing spreadsheet/CSV; an index of earlier available years and amendments. Do not request the recovered 2023/2024 reports as if unavailable.',
     route: 'routine-public-record-request', url: 'https://www.abbotsford.ca/city-hall/finance' }],
   ['city-of-west-kelowna', { year: '2025', blocker: 'Linked report is labelled draft and its approval page is unsigned.',
     ask: 'Final/adopted 2025 SOFI, or the adoption resolution and confirmation that the linked tables are the adopted version.',
@@ -28,6 +28,12 @@ const requestOverrides = new Map([
     ask: 'Separate adopted 2022 and 2023 employee and council schedules, with confirmation of each schedule’s reporting period.',
     route: 'reporting-period-clarification' }],
 ])
+// A later accepted final schedule resolves these particular procurement blockers.
+for (const slug of ['city-of-abbotsford', 'city-of-west-kelowna', 'city-of-salmon-arm']) {
+  const entry = requestOverrides.get(slug)
+  const sources = municipalityBySlug.get(slug)?.acceptedSources ?? []
+  if (['employee-remuneration', 'elected-officials'].every(category => sources.some(source => source.year === entry.year && source.category === category))) requestOverrides.delete(slug)
+}
 const sourceTasks = coverage.municipalities.flatMap((m) => m.heldOrUnparsedSources.map((s, at) => {
   const specific = requestOverrides.get(m.employerSlug)
   const needsRequest = specific && (specific.year == null || specific.year === s.year)

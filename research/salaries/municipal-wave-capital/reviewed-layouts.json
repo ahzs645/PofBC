@@ -1,0 +1,2083 @@
+{
+  "version": 1,
+  "reports": [
+    {
+      "employerSlug": "district-of-highlands",
+      "employerName": "District of Highlands",
+      "year": "2024",
+      "sourceUrl": "https://www.highlands.ca/sites/31/files/2025-06/2024%20Annual%20Report%20-%20FINAL_5.pdf",
+      "sourceIndexUrl": "https://www.highlands.ca/annual-reports",
+      "sha256": "b7e4fd88706c4681498b077b78d691d2e7a75f5022db09f4076a8d6f11c8f292",
+      "cacheFile": "district-of-highlands-2024-c4fce28ea5.pdf",
+      "periodEvidence": {
+        "page": 71,
+        "text": "Year ended December31,2024"
+      },
+      "notes": [
+        "Remuneration and expenses are disclosed separately. Non-taxable employer benefits are excluded by the source reconciliation note. Four named employees are separate from the below-threshold aggregate.",
+        "Named cells are preserved as disclosed. Blank and dash expenses remain missing; only a numeric zero becomes zero. No inferred annual base salary or identity expansion is introduced.",
+        "Employee position titles are published. The finance clerk expense is a dash and remains missing; the below-threshold expense aggregate is also a dash and is not converted to an individual zero."
+      ],
+      "controls": [
+        {
+          "id": "council",
+          "page": 71,
+          "y": 296.28,
+          "columns": [
+            [
+              350,
+              420
+            ],
+            [
+              430,
+              510
+            ]
+          ],
+          "values": [
+            84205,
+            6692
+          ]
+        },
+        {
+          "id": "below",
+          "page": 71,
+          "y": 437.4,
+          "columns": [
+            [
+              350,
+              420
+            ],
+            [
+              430,
+              510
+            ]
+          ],
+          "values": [
+            319966,
+            null
+          ]
+        },
+        {
+          "id": "allEmployees",
+          "page": 71,
+          "y": 448.56,
+          "columns": [
+            [
+              350,
+              420
+            ],
+            [
+              430,
+              510
+            ]
+          ],
+          "values": [
+            823793,
+            10391
+          ]
+        }
+      ],
+      "cohorts": [
+        {
+          "category": "elected-officials",
+          "layouts": [
+            {
+              "page": 71,
+              "columns": [
+                50,
+                150,
+                330,
+                420,
+                510
+              ],
+              "roles": [
+                "name",
+                "position",
+                "pay",
+                "expenses"
+              ],
+              "yRange": [
+                200,
+                288
+              ],
+              "rows": 7,
+              "renderedEdgeChecks": {
+                "field": "position",
+                "first": {
+                  "name": "Williams, Ken",
+                  "position": "Mayor"
+                },
+                "last": {
+                  "name": "Stanton, Rose",
+                  "position": "Councillor"
+                }
+              }
+            }
+          ],
+          "controlFormula": {
+            "total": "council"
+          },
+          "residuals": [
+            0,
+            0
+          ],
+          "visuallyReviewedPages": [
+            71
+          ],
+          "notes": [
+            "Complete named cohort verified field by field with two independent PDF readers and rendered source. Printed all-employee controls are compared after subtracting the separately printed below-threshold aggregate when applicable."
+          ]
+        },
+        {
+          "category": "employee-remuneration",
+          "layouts": [
+            {
+              "page": 71,
+              "columns": [
+                50,
+                150,
+                330,
+                420,
+                510
+              ],
+              "roles": [
+                "name",
+                "position",
+                "pay",
+                "expenses"
+              ],
+              "yRange": [
+                380,
+                429
+              ],
+              "rows": 4,
+              "renderedEdgeChecks": {
+                "field": "position",
+                "first": {
+                  "name": "Beckett, Laura",
+                  "position": "Planner"
+                },
+                "last": {
+                  "name": "Leek, Chris",
+                  "position": "Building Official"
+                }
+              }
+            }
+          ],
+          "controlFormula": {
+            "total": "allEmployees",
+            "subtract": "below"
+          },
+          "residuals": [
+            0,
+            null
+          ],
+          "visuallyReviewedPages": [
+            71
+          ],
+          "notes": [
+            "Complete named cohort verified field by field with two independent PDF readers and rendered source. Printed all-employee controls are compared after subtracting the separately printed below-threshold aggregate when applicable.",
+            "The below-threshold employee expense cell is a dash. No named expense control is derived by treating that dash as zero; the source all-employee expense total10391 is retained separately, while the known named expense cells sum10391.",
+            "The named heading says Employees and the excluded aggregate says Other Employees (under $75,000). The precise comparison boundary for the named cohort is not printed; thresholdComparison is null. All four accepted named remuneration amounts exceed $75,000."
+          ],
+          "thresholdComparison": null
+        }
+      ]
+    },
+    {
+      "employerSlug": "town-of-lake-cowichan",
+      "employerName": "Town of Lake Cowichan",
+      "year": "2025",
+      "sourceUrl": "https://lakecowichan.ca/dl/2025%20SOFI.pdf",
+      "sourceIndexUrl": "https://lakecowichan.ca/finance.php",
+      "sha256": "36720c68d563ff907a8fc9f05f05068ff9842459fe4e8adce5078d308249d315",
+      "cacheFile": "town-of-lake-cowichan-2025-f0cbd81e88.pdf",
+      "periodEvidence": {
+        "page": 32,
+        "text": "Year ended December31,2025"
+      },
+      "notes": [
+        "Remuneration and expenses are separate printed columns; the third expense-inclusive total is retained only as supporting evidence, never used as remuneration. The source explains cash/accrual timing and exclusion of non-taxable employer benefits in its financial-statement reconciliation.",
+        "Named cells are preserved as disclosed. Blank and dash expenses remain missing; only a numeric zero becomes zero. No inferred annual base salary or identity expansion is introduced."
+      ],
+      "controls": [
+        {
+          "id": "council",
+          "page": 32,
+          "y": 233.9,
+          "columns": [
+            [
+              325,
+              410
+            ],
+            [
+              410,
+              480
+            ]
+          ],
+          "values": [
+            98485.65,
+            26127.39
+          ]
+        },
+        {
+          "id": "below",
+          "page": 32,
+          "y": 478.99,
+          "columns": [
+            [
+              325,
+              410
+            ],
+            [
+              410,
+              480
+            ]
+          ],
+          "values": [
+            1369233.11,
+            28225.25
+          ]
+        },
+        {
+          "id": "allEmployees",
+          "page": 32,
+          "y": 501.19,
+          "columns": [
+            [
+              325,
+              410
+            ],
+            [
+              410,
+              480
+            ]
+          ],
+          "values": [
+            2510499.28,
+            42886.88
+          ]
+        }
+      ],
+      "cohorts": [
+        {
+          "category": "elected-officials",
+          "layouts": [
+            {
+              "page": 32,
+              "columns": [
+                95,
+                195,
+                325,
+                410,
+                480,
+                555
+              ],
+              "roles": [
+                "name",
+                "position",
+                "pay",
+                "expenses",
+                "total"
+              ],
+              "yRange": [
+                150,
+                222
+              ],
+              "rows": 5,
+              "renderedEdgeChecks": {
+                "field": "position",
+                "first": {
+                  "name": "Tim McGonigle",
+                  "position": "Mayor"
+                },
+                "last": {
+                  "name": "Lorna Vomacka",
+                  "position": "Councillor"
+                }
+              }
+            }
+          ],
+          "controlFormula": {
+            "total": "council"
+          },
+          "residuals": [
+            0,
+            0
+          ],
+          "visuallyReviewedPages": [
+            32
+          ],
+          "notes": [
+            "Complete named cohort verified field by field with two independent PDF readers and rendered source. Printed all-employee controls are compared after subtracting the separately printed below-threshold aggregate when applicable."
+          ]
+        },
+        {
+          "category": "employee-remuneration",
+          "layouts": [
+            {
+              "page": 32,
+              "columns": [
+                95,
+                195,
+                325,
+                410,
+                480,
+                555
+              ],
+              "roles": [
+                "name",
+                "position",
+                "pay",
+                "expenses",
+                "total"
+              ],
+              "yRange": [
+                302,
+                462
+              ],
+              "rows": 11,
+              "renderedEdgeChecks": {
+                "field": "position",
+                "first": {
+                  "name": "John Thomas",
+                  "position": "Chief Admin. Officer"
+                },
+                "last": {
+                  "name": "Jill Walters",
+                  "position": "Public Works Cat. 1"
+                }
+              }
+            }
+          ],
+          "controlFormula": {
+            "total": "allEmployees",
+            "subtract": "below"
+          },
+          "residuals": [
+            0,
+            0
+          ],
+          "visuallyReviewedPages": [
+            32
+          ],
+          "notes": [
+            "Complete named cohort verified field by field with two independent PDF readers and rendered source. Printed all-employee controls are compared after subtracting the separately printed below-threshold aggregate when applicable."
+          ]
+        }
+      ]
+    },
+    {
+      "employerSlug": "town-of-view-royal",
+      "employerName": "Town of View Royal",
+      "year": "2025",
+      "sourceUrl": "https://www.viewroyal.ca/assets/Town~Hall/Documents-Forms/Administration/Annual%20Report%20for%20Year%20Ended%202025.pdf",
+      "sourceIndexUrl": "https://www.viewroyal.ca/EN/main/town/documents.html",
+      "sha256": "bd58681b48c75cdeb78664c95a9e9adb95fd928fafb60e21bd9befd78a0d053e",
+      "cacheFile": "town-of-view-royal-2025-6d50954970.pdf",
+      "periodEvidence": {
+        "page": 82,
+        "text": "As at December31,2025"
+      },
+      "notes": [
+        "The remuneration schedule explicitly states December31,2025. Remuneration and expenses are separately published; the total column includes expenses and is retained solely as supporting evidence. The below-threshold aggregate is excluded from individual rows.",
+        "Named cells are preserved as disclosed. Blank and dash expenses remain missing; only a numeric zero becomes zero. No inferred annual base salary or identity expansion is introduced."
+      ],
+      "controls": [
+        {
+          "id": "council",
+          "page": 82,
+          "y": 205.91,
+          "columns": [
+            [
+              350,
+              405
+            ],
+            [
+              405,
+              460
+            ]
+          ],
+          "values": [
+            203244,
+            7659
+          ]
+        },
+        {
+          "id": "below",
+          "page": 82,
+          "y": 550.19,
+          "columns": [
+            [
+              350,
+              405
+            ],
+            [
+              405,
+              460
+            ]
+          ],
+          "values": [
+            1259383,
+            20779
+          ]
+        },
+        {
+          "id": "allEmployees",
+          "page": 82,
+          "y": 561.35,
+          "columns": [
+            [
+              350,
+              405
+            ],
+            [
+              405,
+              460
+            ]
+          ],
+          "values": [
+            5357553,
+            102712
+          ]
+        }
+      ],
+      "cohorts": [
+        {
+          "category": "elected-officials",
+          "layouts": [
+            {
+              "page": 82,
+              "columns": [
+                110,
+                185,
+                350,
+                405,
+                460,
+                515
+              ],
+              "roles": [
+                "name",
+                "position",
+                "pay",
+                "expenses",
+                "total"
+              ],
+              "yRange": [
+                137,
+                199
+              ],
+              "rows": 7,
+              "renderedEdgeChecks": {
+                "field": "position",
+                "first": {
+                  "name": "Tobias, Sid",
+                  "position": "Mayor"
+                },
+                "last": {
+                  "name": "Rogers, John",
+                  "position": "Councillor"
+                }
+              }
+            }
+          ],
+          "controlFormula": {
+            "total": "council"
+          },
+          "residuals": [
+            -3,
+            0
+          ],
+          "visuallyReviewedPages": [
+            82
+          ],
+          "notes": [
+            "Complete named cohort verified field by field with two independent PDF readers and rendered source. Printed all-employee controls are compared after subtracting the separately printed below-threshold aggregate when applicable."
+          ]
+        },
+        {
+          "category": "employee-remuneration",
+          "layouts": [
+            {
+              "page": 82,
+              "columns": [
+                110,
+                185,
+                350,
+                405,
+                460,
+                515
+              ],
+              "roles": [
+                "name",
+                "position",
+                "pay",
+                "expenses",
+                "total"
+              ],
+              "yRange": [
+                230,
+                534
+              ],
+              "rows": 34,
+              "renderedEdgeChecks": {
+                "field": "position",
+                "first": {
+                  "name": "Bevan, Heath",
+                  "position": "Assistant Fire Chief"
+                },
+                "last": {
+                  "name": "Zanette, Robert",
+                  "position": "IT Manager"
+                }
+              }
+            }
+          ],
+          "controlFormula": {
+            "total": "allEmployees",
+            "subtract": "below"
+          },
+          "residuals": [
+            2,
+            -2
+          ],
+          "visuallyReviewedPages": [
+            82
+          ],
+          "notes": [
+            "Complete named cohort verified field by field with two independent PDF readers and rendered source. Printed all-employee controls are compared after subtracting the separately printed below-threshold aggregate when applicable."
+          ]
+        }
+      ]
+    },
+    {
+      "employerSlug": "township-of-esquimalt",
+      "employerName": "Township of Esquimalt",
+      "year": "2025",
+      "sourceUrl": "https://www.esquimalt.ca/sites/default/files/2026-06/2025%20Statement%20of%20Financial%20Information.pdf",
+      "sourceIndexUrl": "https://www.esquimalt.ca/government-bylaws/finance-budget/public-bodies-reports%25E2%2580%258B-statement-financial-information",
+      "sha256": "bc050c63fadd8b47c0c516bf8d134853f395f090bba8a68b6dc0f1f59ea49be2",
+      "cacheFile": "township-of-esquimalt-2025-ae6dfed297.pdf",
+      "periodEvidence": {
+        "text": "Year ended December31,2025; original employee/council schedule headers",
+        "page": 34
+      },
+      "notes": [
+        "Original schedule reporting year is2025, regardless of upload path. Published remuneration is a payment disclosure, not an annual base salary.",
+        "All named fields are compared across two independent PDF readers. Blank/dash expenses stay missing; explicit numeric zero is zero. Employees and elected officials are separate cohorts; no compiled records are removed.",
+        "The employee source column is Department, not job title. Departments are retained as supporting evidence; employee positions remain null.",
+        "Council schedules publish names and payment columns without individual office titles; council positions remain null. Cash-basis schedule and accrual financial statements are not reconciled by the publisher."
+      ],
+      "controls": [
+        {
+          "id": "employees",
+          "page": 36,
+          "y": 303.84,
+          "columns": [
+            [
+              350,
+              460
+            ],
+            [
+              460,
+              530
+            ]
+          ],
+          "values": [
+            10280622.8,
+            175605.32
+          ]
+        },
+        {
+          "id": "council",
+          "page": 37,
+          "y": 257.16,
+          "columns": [
+            [
+              350,
+              450
+            ],
+            [
+              450,
+              530
+            ]
+          ],
+          "values": [
+            248762.44,
+            23426.62
+          ]
+        }
+      ],
+      "cohorts": [
+        {
+          "category": "employee-remuneration",
+          "layouts": [
+            {
+              "page": 34,
+              "columns": [
+                50,
+                180,
+                380,
+                460,
+                530
+              ],
+              "roles": [
+                "name",
+                "department",
+                "pay",
+                "expenses"
+              ],
+              "yRange": [
+                143,
+                716
+              ],
+              "rows": 38,
+              "renderedEdgeChecks": {
+                "field": "department",
+                "first": {
+                  "name": "Ahlers, David",
+                  "department": "Engineering & Public Works"
+                },
+                "last": {
+                  "name": "Jerome, Seth",
+                  "department": "Parks & Recreation Services"
+                }
+              }
+            },
+            {
+              "page": 35,
+              "columns": [
+                50,
+                180,
+                380,
+                460,
+                530
+              ],
+              "roles": [
+                "name",
+                "department",
+                "pay",
+                "expenses"
+              ],
+              "yRange": [
+                143,
+                716
+              ],
+              "rows": 38,
+              "renderedEdgeChecks": {
+                "field": "department",
+                "first": {
+                  "name": "Kauffman, Brent",
+                  "department": "Engineering & Public Works"
+                },
+                "last": {
+                  "name": "Taberner, Gregory",
+                  "department": "Engineering & Public Works"
+                }
+              }
+            },
+            {
+              "page": 36,
+              "columns": [
+                50,
+                180,
+                380,
+                460,
+                530
+              ],
+              "roles": [
+                "name",
+                "department",
+                "pay",
+                "expenses"
+              ],
+              "yRange": [
+                143,
+                289
+              ],
+              "rows": 10,
+              "renderedEdgeChecks": {
+                "field": "department",
+                "first": {
+                  "name": "Tang, Alex",
+                  "department": "Development Services"
+                },
+                "last": {
+                  "name": "Zajac, Tara",
+                  "department": "Corporate Services"
+                }
+              }
+            }
+          ],
+          "controlFormula": {
+            "total": "employees"
+          },
+          "residuals": [
+            0,
+            0
+          ],
+          "visuallyReviewedPages": [
+            34,
+            35,
+            36
+          ],
+          "notes": []
+        },
+        {
+          "category": "elected-officials",
+          "layouts": [
+            {
+              "page": 37,
+              "columns": [
+                50,
+                350,
+                450,
+                530
+              ],
+              "roles": [
+                "name",
+                "pay",
+                "expenses"
+              ],
+              "yRange": [
+                143,
+                243
+              ],
+              "rows": 7,
+              "renderedEdgeChecks": {
+                "field": "position",
+                "first": {
+                  "name": "Armour, Kenneth",
+                  "position": null
+                },
+                "last": {
+                  "name": "Morrison, Timothy",
+                  "position": null
+                }
+              }
+            }
+          ],
+          "controlFormula": {
+            "total": "council"
+          },
+          "residuals": [
+            0,
+            0
+          ],
+          "visuallyReviewedPages": [
+            37
+          ],
+          "notes": []
+        }
+      ]
+    },
+    {
+      "employerSlug": "city-of-langford",
+      "employerName": "City of Langford",
+      "year": "2025",
+      "sourceUrl": "https://langford.ca/wp-content/uploads/2026/06/2025-SOFI-Package-FINAL.pdf",
+      "sourceIndexUrl": "https://langford.ca/city-hall/document-libraries/document-library/",
+      "sha256": "c5d56822817dbbbac943ec0b196fc4cc6222876fe4fb91710e2e5c12c64ca953",
+      "cacheFile": "city-of-langford-2025-7a46f42fd2.pdf",
+      "periodEvidence": {
+        "text": "Year ended December31,2025; original employee/council schedule headers",
+        "page": 8
+      },
+      "notes": [
+        "Original schedule reporting year is2025, regardless of upload path. Published remuneration is a payment disclosure, not an annual base salary.",
+        "All named fields are compared across two independent PDF readers. Blank/dash expenses stay missing; explicit numeric zero is zero. Employees and elected officials are separate cohorts; no compiled records are removed.",
+        "Source remuneration includes salary, wages and taxable benefits on a cash-paid basis. Expense amounts are separate; the financial statements also include accruals and employer payroll obligations.",
+        "The council name Szpak, the Late Lillian remains as published."
+      ],
+      "controls": [
+        {
+          "id": "employees",
+          "page": 11,
+          "y": 266,
+          "columns": [
+            [
+              420,
+              500
+            ],
+            [
+              500,
+              560
+            ]
+          ],
+          "values": [
+            15259281,
+            130995
+          ]
+        },
+        {
+          "id": "council",
+          "page": 7,
+          "y": 256.52,
+          "columns": [
+            [
+              410,
+              495
+            ],
+            [
+              495,
+              560
+            ]
+          ],
+          "values": [
+            300927,
+            36473
+          ]
+        }
+      ],
+      "cohorts": [
+        {
+          "category": "employee-remuneration",
+          "layouts": [
+            {
+              "page": 8,
+              "columns": [
+                50,
+                158,
+                410,
+                500,
+                560
+              ],
+              "roles": [
+                "name",
+                "position",
+                "pay",
+                "expenses"
+              ],
+              "yRange": [
+                134,
+                706
+              ],
+              "rows": 41,
+              "renderedEdgeChecks": {
+                "field": "position",
+                "first": {
+                  "name": "Ablitt, Chris",
+                  "position": "Firefighter"
+                },
+                "last": {
+                  "name": "Dube, Kevin",
+                  "position": "Sr. Manager of Information Technology & GIS"
+                }
+              }
+            },
+            {
+              "page": 9,
+              "columns": [
+                50,
+                158,
+                410,
+                500,
+                560
+              ],
+              "roles": [
+                "name",
+                "position",
+                "pay",
+                "expenses"
+              ],
+              "yRange": [
+                135,
+                707
+              ],
+              "rows": 41,
+              "renderedEdgeChecks": {
+                "field": "position",
+                "first": {
+                  "name": "Dupuis, Tianna",
+                  "position": "Fire Prevention Officer"
+                },
+                "last": {
+                  "name": "McPherson, Andrea",
+                  "position": "Building Official"
+                }
+              }
+            },
+            {
+              "page": 10,
+              "columns": [
+                50,
+                158,
+                410,
+                500,
+                560
+              ],
+              "roles": [
+                "name",
+                "position",
+                "pay",
+                "expenses"
+              ],
+              "yRange": [
+                134,
+                706
+              ],
+              "rows": 41,
+              "renderedEdgeChecks": {
+                "field": "position",
+                "first": {
+                  "name": "Miles, Melisa",
+                  "position": "Manager of Legislative Services"
+                },
+                "last": {
+                  "name": "Wagner, Calvin",
+                  "position": "Technical Field Arborist"
+                }
+              }
+            },
+            {
+              "page": 11,
+              "columns": [
+                50,
+                158,
+                410,
+                500,
+                560
+              ],
+              "roles": [
+                "name",
+                "position",
+                "pay",
+                "expenses"
+              ],
+              "yRange": [
+                134,
+                229
+              ],
+              "rows": 7,
+              "renderedEdgeChecks": {
+                "field": "position",
+                "first": {
+                  "name": "Watmough, Marie",
+                  "position": "Director of Legislative & Protective Services"
+                },
+                "last": {
+                  "name": "Zetaruk, Logan",
+                  "position": "Application Developer/Analyst"
+                }
+              }
+            }
+          ],
+          "controlFormula": {
+            "total": "employees"
+          },
+          "residuals": [
+            2,
+            -1
+          ],
+          "visuallyReviewedPages": [
+            8,
+            9,
+            10,
+            11
+          ],
+          "notes": []
+        },
+        {
+          "category": "elected-officials",
+          "layouts": [
+            {
+              "page": 7,
+              "columns": [
+                50,
+                180,
+                410,
+                495,
+                560
+              ],
+              "roles": [
+                "name",
+                "position",
+                "pay",
+                "expenses"
+              ],
+              "yRange": [
+                137,
+                233
+              ],
+              "rows": 7,
+              "renderedEdgeChecks": {
+                "field": "position",
+                "first": {
+                  "name": "Goodmanson, Scott",
+                  "position": "Mayor"
+                },
+                "last": {
+                  "name": "Yacucha, Keith",
+                  "position": "Councillor"
+                }
+              }
+            }
+          ],
+          "controlFormula": {
+            "total": "council"
+          },
+          "residuals": [
+            1,
+            0
+          ],
+          "visuallyReviewedPages": [
+            7
+          ],
+          "notes": []
+        }
+      ]
+    },
+    {
+      "employerSlug": "town-of-sidney",
+      "employerName": "Town of Sidney",
+      "year": "2025",
+      "sourceUrl": "https://www.sidney.ca/wp-content/uploads/2025-Statement-of-Financial-Information.pdf",
+      "sourceIndexUrl": "https://www.sidney.ca/government/financial-accountability/financial-reporting/",
+      "sha256": "8dcb3d11c0ce8b6cad9d0a06be6b618fbfe90a0517aef51c791afa0387294c21",
+      "cacheFile": "town-of-sidney-2025-84143a99a6.pdf",
+      "periodEvidence": {
+        "text": "Year ended December31,2025; original employee/council schedule headers",
+        "page": 40
+      },
+      "notes": [
+        "Original schedule reporting year is2025, regardless of upload path. Published remuneration is a payment disclosure, not an annual base salary.",
+        "All named fields are compared across two independent PDF readers. Blank/dash expenses stay missing; explicit numeric zero is zero. Employees and elected officials are separate cohorts; no compiled records are removed.",
+        "Council remuneration is the source\u2019s numeric TOTAL column under REMUNERATION; gross and benefit columns are supporting evidence. That published numeric total is not reconstructed by treating component dashes as zero.",
+        "Employee remuneration is the separately published REMUNERATION column. The under-threshold expense aggregate is n/a; no inference is made from it."
+      ],
+      "controls": [
+        {
+          "id": "employees",
+          "page": 41,
+          "y": 410,
+          "columns": [
+            [
+              420,
+              480
+            ],
+            [
+              480,
+              555
+            ]
+          ],
+          "values": [
+            5703363,
+            66299
+          ]
+        },
+        {
+          "id": "council",
+          "page": 40,
+          "y": 270.57,
+          "columns": [
+            [
+              420,
+              480
+            ],
+            [
+              480,
+              555
+            ]
+          ],
+          "values": [
+            167722,
+            8495
+          ]
+        }
+      ],
+      "cohorts": [
+        {
+          "category": "employee-remuneration",
+          "layouts": [
+            {
+              "page": 40,
+              "columns": [
+                80,
+                200,
+                420,
+                480,
+                555
+              ],
+              "roles": [
+                "name",
+                "position",
+                "pay",
+                "expenses"
+              ],
+              "yRange": [
+                339,
+                710
+              ],
+              "rows": 30,
+              "renderedEdgeChecks": {
+                "field": "position",
+                "first": {
+                  "name": "Bankes, Connor",
+                  "position": "Senior Engineering Technician"
+                },
+                "last": {
+                  "name": "Macedo, John",
+                  "position": "Chargehand (Surface Infrastructure)"
+                }
+              }
+            },
+            {
+              "page": 41,
+              "columns": [
+                80,
+                200,
+                420,
+                480,
+                555
+              ],
+              "roles": [
+                "name",
+                "position",
+                "pay",
+                "expenses"
+              ],
+              "yRange": [
+                105,
+                390
+              ],
+              "rows": 23,
+              "renderedEdgeChecks": {
+                "field": "position",
+                "first": {
+                  "name": "Maxwell, Will",
+                  "position": "Manager of Information Services"
+                },
+                "last": {
+                  "name": "Youell, Matt",
+                  "position": "Crew Chief (Underground Utilities)"
+                }
+              }
+            }
+          ],
+          "controlFormula": {
+            "total": "employees"
+          },
+          "residuals": [
+            0,
+            -1
+          ],
+          "visuallyReviewedPages": [
+            40,
+            41
+          ],
+          "notes": []
+        },
+        {
+          "category": "elected-officials",
+          "layouts": [
+            {
+              "page": 40,
+              "columns": [
+                80,
+                200,
+                300,
+                360,
+                420,
+                480,
+                555
+              ],
+              "roles": [
+                "name",
+                "position",
+                "gross",
+                "benefits",
+                "pay",
+                "expenses"
+              ],
+              "yRange": [
+                166,
+                250
+              ],
+              "rows": 7,
+              "renderedEdgeChecks": {
+                "field": "position",
+                "first": {
+                  "name": "McNeil-Smith, Cliff",
+                  "position": "Mayor"
+                },
+                "last": {
+                  "name": "Rintoul, Chad",
+                  "position": "Councillor"
+                }
+              }
+            }
+          ],
+          "controlFormula": {
+            "total": "council"
+          },
+          "residuals": [
+            0,
+            0
+          ],
+          "visuallyReviewedPages": [
+            40
+          ],
+          "notes": []
+        }
+      ]
+    },
+    {
+      "employerSlug": "town-of-ladysmith",
+      "employerName": "Town of Ladysmith",
+      "year": "2025",
+      "sourceUrl": "https://www.ladysmith.ca/docs/default-source/reports-2021/2025-ladysmith-sofi.pdf?sfvrsn=529f3db_4",
+      "sourceIndexUrl": "https://www.ladysmith.ca/city-hall/reports-publications",
+      "sha256": "8911dc0187db824e0a947d95dddd625516298146a5b78bf9df08674409fe6df0",
+      "cacheFile": "town-of-ladysmith-2025-0e8e7f54fb.pdf",
+      "periodEvidence": {
+        "text": "Year ended December31,2025; original employee/council schedule headers",
+        "page": 48
+      },
+      "notes": [
+        "Original schedule reporting year is2025, regardless of upload path. Published remuneration is a payment disclosure, not an annual base salary.",
+        "All named fields are compared across two independent PDF readers. Blank/dash expenses stay missing; explicit numeric zero is zero. Employees and elected officials are separate cohorts; no compiled records are removed.",
+        "The employee source labels its pay column PAYROLL. That published amount is retained as remuneration, separately from EXPENSES. The reconciliation separately adds purchased employer benefits, capital labour and accrual adjustments.",
+        "Published titles and spellings remain unchanged, including Sr Parks Maintenace Worker and Supervisor-Community Programs & Serv."
+      ],
+      "controls": [
+        {
+          "id": "employees",
+          "page": 48,
+          "y": 644.33,
+          "columns": [
+            [
+              410,
+              485
+            ],
+            [
+              485,
+              530
+            ]
+          ],
+          "values": [
+            4066962,
+            47379
+          ]
+        },
+        {
+          "id": "council",
+          "page": 48,
+          "y": 208.39,
+          "columns": [
+            [
+              410,
+              485
+            ],
+            [
+              485,
+              530
+            ]
+          ],
+          "values": [
+            149003,
+            27882
+          ]
+        }
+      ],
+      "cohorts": [
+        {
+          "category": "employee-remuneration",
+          "layouts": [
+            {
+              "page": 48,
+              "columns": [
+                70,
+                215,
+                410,
+                485,
+                530
+              ],
+              "roles": [
+                "name",
+                "position",
+                "pay",
+                "expenses"
+              ],
+              "yRange": [
+                241,
+                635
+              ],
+              "rows": 39,
+              "renderedEdgeChecks": {
+                "field": "position",
+                "first": {
+                  "name": "Anderson, Erin",
+                  "position": "Director of Financial Services"
+                },
+                "last": {
+                  "name": "Zhang, Keija",
+                  "position": "Certified Utility Operator III"
+                }
+              }
+            }
+          ],
+          "controlFormula": {
+            "total": "employees"
+          },
+          "residuals": [
+            0,
+            0
+          ],
+          "visuallyReviewedPages": [
+            48
+          ],
+          "notes": []
+        },
+        {
+          "category": "elected-officials",
+          "layouts": [
+            {
+              "page": 48,
+              "columns": [
+                70,
+                215,
+                410,
+                485,
+                530
+              ],
+              "roles": [
+                "name",
+                "position",
+                "pay",
+                "expenses"
+              ],
+              "yRange": [
+                129,
+                199
+              ],
+              "rows": 7,
+              "renderedEdgeChecks": {
+                "field": "position",
+                "first": {
+                  "name": "Beeston, Deena",
+                  "position": "Mayor"
+                },
+                "last": {
+                  "name": "Virtanen, Jeffrey",
+                  "position": "Councillor"
+                }
+              }
+            }
+          ],
+          "controlFormula": {
+            "total": "council"
+          },
+          "residuals": [
+            0,
+            0
+          ],
+          "visuallyReviewedPages": [
+            48
+          ],
+          "notes": []
+        }
+      ]
+    },
+    {
+      "employerSlug": "city-of-colwood",
+      "employerName": "City of Colwood",
+      "year": "2025",
+      "sourceUrl": "https://www.colwood.ca/media/file/2025-statement-financial-information-signedpdf",
+      "sourceIndexUrl": "https://www.colwood.ca/local-government/plans-strategies/financial-plans-reports",
+      "sha256": "3671fec5cfd727eefc1d03b4341a3ae8413171dc4774f9f50ed693aa088619cc",
+      "cacheFile": "city-of-colwood-2025-c740738efc.pdf",
+      "periodEvidence": {
+        "text": "Year ended December31,2025; original employee/council schedule headers",
+        "page": 10
+      },
+      "notes": [
+        "Original schedule reporting year is2025, regardless of upload path. Published remuneration is a payment disclosure, not an annual base salary.",
+        "All named fields are compared across two independent PDF readers. Blank/dash expenses stay missing; explicit numeric zero is zero. Employees and elected officials are separate cohorts; no compiled records are removed.",
+        "Source REMUNERATION contains gross earnings, taxable benefits and a numeric TOTAL. The source TOTAL is accepted as remuneration, separately from expenses; it is never reconstructed from missing components. Gross and taxable benefits remain supporting evidence with dashes/blank as null.",
+        "The source definition excludes severance agreements and non-taxable employer contributions; expenses include travel, memberships, tuition, relocation, vehicle and similar payments outside remuneration.",
+        "Council source page9 is an image table and is held for OCR verification; these sources include employees only.",
+        "Employee schedule pages10\u201311 retain DRAFT watermarks. The same original physical page4 explicitly records Council approval of all statements and schedules at the special meeting of June29,2026, signed by the Finance Director and Mayor. The management report on physical page5 is also signed. Approval evidence is retained; the watermark is not silently ignored."
+      ],
+      "controls": [
+        {
+          "id": "employees",
+          "page": 11,
+          "y": 610.62,
+          "columns": [
+            [
+              445,
+              490
+            ],
+            [
+              490,
+              555
+            ]
+          ],
+          "values": [
+            8631050,
+            149786
+          ]
+        }
+      ],
+      "cohorts": [
+        {
+          "category": "employee-remuneration",
+          "layouts": [
+            {
+              "page": 10,
+              "columns": [
+                70,
+                190,
+                360,
+                405,
+                445,
+                490,
+                555
+              ],
+              "roles": [
+                "name",
+                "position",
+                "gross",
+                "benefits",
+                "pay",
+                "expenses"
+              ],
+              "yRange": [
+                200,
+                709
+              ],
+              "rows": 42,
+              "renderedEdgeChecks": {
+                "field": "position",
+                "first": {
+                  "name": "ABRAHAMSON, LISA",
+                  "position": "EMERGENCY SERVICES SUPPORT COORDINATOR"
+                },
+                "last": {
+                  "name": "MURPHY, SEAN",
+                  "position": "PARKS LEAD HAND"
+                }
+              }
+            },
+            {
+              "page": 11,
+              "columns": [
+                70,
+                190,
+                360,
+                405,
+                445,
+                490,
+                555
+              ],
+              "roles": [
+                "name",
+                "position",
+                "gross",
+                "benefits",
+                "pay",
+                "expenses"
+              ],
+              "yRange": [
+                204,
+                601
+              ],
+              "rows": 32,
+              "renderedEdgeChecks": {
+                "field": "position",
+                "first": {
+                  "name": "NORTHRUP, TANNER",
+                  "position": "MANAGER OF ROADS & UTILITIES"
+                },
+                "last": {
+                  "name": "WHITTAKER, ADAM",
+                  "position": "FIREFIGHTER"
+                }
+              }
+            }
+          ],
+          "controlFormula": {
+            "total": "employees"
+          },
+          "residuals": [
+            0,
+            1
+          ],
+          "visuallyReviewedPages": [
+            10,
+            11
+          ],
+          "notes": [],
+          "thresholdComparison": ">="
+        }
+      ],
+      "publicationEvidence": {
+        "pdfPage": 4,
+        "approvalDate": "2026-06-29",
+        "statement": "Approved by Council for the City of Colwood at the special meeting of June 29, 2026.",
+        "signaturesVisuallyReviewed": [
+          "Kathy McLennan, Director of Finance",
+          "Doug Kobayashi, Mayor"
+        ],
+        "originalPageText": "Section 1 \nStatement of Financial Information Approval \nApproved by Council for the City of Colwood at the special meeting of June 29, 2026. \nThe undersigned, as authorized by the Financial Information Regulation, Schedule 1, subsection 9(2), \napproves all the statements and schedules included in this Statement of Financial Information, produced \nunder the Financial Information Act. \n___________________________ \n___________________________ \nKathy McLennan, CPA \nDoug Kobayashi \nDirector of Finance \nMayor \nJune 29, 2026  \nJune 29, 2026  \n",
+        "managementReportSignedPhysicalPage": 5,
+        "salaryTableWatermark": "DRAFT",
+        "decision": "The same hash-pinned original contains the explicit Council approval of all statements/schedules and both signatures. The salary-page watermark is retained and disclosed; finality is supported by the approval evidence, not inferred from the filename."
+      },
+      "additionalPublicWarning": "Employee pages10\u201311 retain DRAFT watermarks. The same signed original records Council approval of all statements and schedules on physical page4 at the June29,2026 special meeting, with the Finance Director and Mayor signatures; the management report on page5 is also signed."
+    },
+    {
+      "employerSlug": "district-of-north-saanich",
+      "employerName": "District of North Saanich",
+      "year": "2025",
+      "sourceUrl": "https://www.northsaanich.ca/media/file/2025-statement-financial-information-sofi",
+      "sourceIndexUrl": "https://www.northsaanich.ca/local-government/plans-reports",
+      "sha256": "e76c8b993f6126dcb069eb458b70cc7d53d3032750d22b69f7c5a17a5030b360",
+      "cacheFile": "district-of-north-saanich-2025-de2a7a1e9e.pdf",
+      "periodEvidence": {
+        "text": "Year ended December31,2025; original employee/council schedule headers",
+        "page": 39
+      },
+      "notes": [
+        "Original schedule reporting year is2025, regardless of upload path. Published remuneration is a payment disclosure, not an annual base salary.",
+        "All named fields are compared across two independent PDF readers. Blank/dash expenses stay missing; explicit numeric zero is zero. Employees and elected officials are separate cohorts; no compiled records are removed.",
+        "Source remuneration includes regular salaries/wages, retroactive increases, holiday, overtime, other earned pay and fringe benefits. It excludes severance and general non-taxable employee benefits.",
+        "Two disclosed Munro, S observations have different published positions and amounts. Both are retained as distinct source rows; no identity merge is inferred."
+      ],
+      "controls": [
+        {
+          "id": "employees",
+          "page": 40,
+          "y": 363.86,
+          "columns": [
+            [
+              410,
+              480
+            ],
+            [
+              480,
+              565
+            ]
+          ],
+          "values": [
+            4864563,
+            83731
+          ]
+        },
+        {
+          "id": "council",
+          "page": 39,
+          "y": 305.06,
+          "columns": [
+            [
+              410,
+              480
+            ],
+            [
+              480,
+              565
+            ]
+          ],
+          "values": [
+            151739,
+            14205
+          ]
+        }
+      ],
+      "cohorts": [
+        {
+          "category": "employee-remuneration",
+          "layouts": [
+            {
+              "page": 39,
+              "columns": [
+                50,
+                160,
+                410,
+                480,
+                565
+              ],
+              "roles": [
+                "name",
+                "position",
+                "pay",
+                "expenses"
+              ],
+              "yRange": [
+                401,
+                720
+              ],
+              "rows": 26,
+              "renderedEdgeChecks": {
+                "field": "position",
+                "first": {
+                  "name": "Aldred, T",
+                  "position": "Records Coordinator"
+                },
+                "last": {
+                  "name": "Newcombe, S",
+                  "position": "Firefighter"
+                }
+              }
+            },
+            {
+              "page": 40,
+              "columns": [
+                50,
+                160,
+                410,
+                480,
+                565
+              ],
+              "roles": [
+                "name",
+                "position",
+                "pay",
+                "expenses"
+              ],
+              "yRange": [
+                137,
+                356
+              ],
+              "rows": 18,
+              "renderedEdgeChecks": {
+                "field": "position",
+                "first": {
+                  "name": "Noullette, A",
+                  "position": "Utilities Supervisor"
+                },
+                "last": {
+                  "name": "Wiebe, W",
+                  "position": "Manager of Financial Services"
+                }
+              }
+            }
+          ],
+          "controlFormula": {
+            "total": "employees"
+          },
+          "residuals": [
+            0,
+            0
+          ],
+          "visuallyReviewedPages": [
+            39,
+            40
+          ],
+          "notes": []
+        },
+        {
+          "category": "elected-officials",
+          "layouts": [
+            {
+              "page": 39,
+              "columns": [
+                50,
+                160,
+                410,
+                480,
+                565
+              ],
+              "roles": [
+                "name",
+                "position",
+                "pay",
+                "expenses"
+              ],
+              "yRange": [
+                210,
+                297
+              ],
+              "rows": 7,
+              "renderedEdgeChecks": {
+                "field": "position",
+                "first": {
+                  "name": "Jones, Peter",
+                  "position": "Mayor"
+                },
+                "last": {
+                  "name": "Marshall, Kristine",
+                  "position": "Councillor"
+                }
+              }
+            }
+          ],
+          "controlFormula": {
+            "total": "council"
+          },
+          "residuals": [
+            0,
+            0
+          ],
+          "visuallyReviewedPages": [
+            39
+          ],
+          "notes": []
+        }
+      ]
+    },
+    {
+      "employerSlug": "town-of-lake-cowichan",
+      "employerName": "Town of Lake Cowichan",
+      "year": "2023",
+      "sourceUrl": "https://www.town.lakecowichan.bc.ca/dl/2023%20SOFI.pdf",
+      "sourceIndexUrl": "https://lakecowichan.ca/finance.php",
+      "sha256": "7f1bdf7be9125b1c8b254cb9dd833ede30ab1101d494cf07502578659356ea83",
+      "cacheFile": "town-of-lake-cowichan-2023-9a75cfa012.pdf",
+      "periodEvidence": {
+        "page": 32,
+        "text": "2023 Schedule of Council/Staff Remuneration and Expenses; financial statements year endedDecember31,2023"
+      },
+      "notes": [
+        "The source labels remuneration as Financial Compensation. The distinct expense column is Travel, Conferences and Other. Expense-inclusive Totals remain supporting evidence and are not remuneration.",
+        "Exact source names, roles and cent amounts are preserved. Blank/dash expenses remain missing; numeric zeros remain zero. Employees below the threshold are aggregate-only and excluded from individual observations."
+      ],
+      "controls": [
+        {
+          "id": "council",
+          "page": 32,
+          "y": 245.78,
+          "columns": [
+            [
+              310,
+              390
+            ],
+            [
+              390,
+              465
+            ]
+          ],
+          "values": [
+            89401.8,
+            31360.83
+          ]
+        },
+        {
+          "id": "allEmployees",
+          "page": 32,
+          "y": 610.18,
+          "columns": [
+            [
+              310,
+              400
+            ],
+            [
+              400,
+              465
+            ]
+          ],
+          "values": [
+            1762904.75,
+            30159.91
+          ]
+        },
+        {
+          "id": "below",
+          "page": 32,
+          "y": 593.02,
+          "columns": [
+            [
+              310,
+              400
+            ],
+            [
+              400,
+              465
+            ]
+          ],
+          "values": [
+            938715.53,
+            8168.37
+          ]
+        }
+      ],
+      "cohorts": [
+        {
+          "category": "elected-officials",
+          "layouts": [
+            {
+              "page": 32,
+              "columns": [
+                95,
+                195,
+                310,
+                390,
+                465,
+                550
+              ],
+              "roles": [
+                "name",
+                "position",
+                "pay",
+                "expenses",
+                "total"
+              ],
+              "yRange": [
+                163,
+                233
+              ],
+              "rows": 5,
+              "renderedEdgeChecks": {
+                "field": "position",
+                "first": {
+                  "name": "Tim McGonigle",
+                  "position": "Mayor"
+                },
+                "last": {
+                  "name": "Lorna Vomacka",
+                  "position": "Councillor"
+                }
+              }
+            }
+          ],
+          "controlFormula": {
+            "total": "council"
+          },
+          "residuals": [
+            0,
+            0
+          ],
+          "visuallyReviewedPages": [
+            32
+          ],
+          "notes": []
+        },
+        {
+          "category": "employee-remuneration",
+          "layouts": [
+            {
+              "page": 32,
+              "columns": [
+                95,
+                200,
+                310,
+                400,
+                475,
+                555
+              ],
+              "roles": [
+                "name",
+                "position",
+                "pay",
+                "expenses",
+                "total"
+              ],
+              "yRange": [
+                453,
+                582
+              ],
+              "rows": 8,
+              "renderedEdgeChecks": {
+                "field": "position",
+                "first": {
+                  "name": "Joseph Fernandez",
+                  "position": "Chief Admin. Officer"
+                },
+                "last": {
+                  "name": "Terry McMahon",
+                  "position": "Public Works Cat. 3"
+                }
+              }
+            }
+          ],
+          "controlFormula": {
+            "total": "allEmployees",
+            "subtract": "below"
+          },
+          "residuals": [
+            0,
+            0
+          ],
+          "visuallyReviewedPages": [
+            32
+          ],
+          "notes": [
+            "The staff schedule does not print a named-threshold comparison. It excludes All other employees and cites Financial Information Regulation Schedule1 Section6(2)(b)&(c). The $75,000 context comes from that reporting framework; thresholdComparison remains null rather than asserting a printed strict boundary. All eight accepted named remuneration amounts exceed $75,000."
+          ],
+          "thresholdComparison": null
+        }
+      ]
+    },
+    {
+      "employerSlug": "town-of-lake-cowichan",
+      "employerName": "Town of Lake Cowichan",
+      "year": "2024",
+      "sourceUrl": "https://lakecowichan.ca/dl/2024%20SOFI.pdf",
+      "sourceIndexUrl": "https://lakecowichan.ca/finance.php",
+      "sha256": "e909d34599f0a3d2f8a1ebbdb706bb1139e9fecccbbd9cf04b12b96ffc4d7c46",
+      "cacheFile": "town-of-lake-cowichan-2024-d853e162c9.pdf",
+      "periodEvidence": {
+        "page": 31,
+        "text": "2024 Schedule of Council/Staff Remuneration and Expenses; financial statements year endedDecember31,2024"
+      },
+      "notes": [
+        "The source labels remuneration as Financial Compensation. The distinct expense column is Travel, Conferences and Other. Expense-inclusive Totals remain supporting evidence and are not remuneration.",
+        "Exact source names, roles and cent amounts are preserved. Blank/dash expenses remain missing; numeric zeros remain zero. Employees below the threshold are aggregate-only and excluded from individual observations."
+      ],
+      "controls": [
+        {
+          "id": "council",
+          "page": 31,
+          "y": 245.78,
+          "columns": [
+            [
+              310,
+              390
+            ],
+            [
+              390,
+              465
+            ]
+          ],
+          "values": [
+            95187.31,
+            26074.56
+          ]
+        },
+        {
+          "id": "allEmployees",
+          "page": 31,
+          "y": 595.18,
+          "columns": [
+            [
+              310,
+              400
+            ],
+            [
+              400,
+              465
+            ]
+          ],
+          "values": [
+            2142501.52,
+            47788.55
+          ]
+        },
+        {
+          "id": "below",
+          "page": 31,
+          "y": 577.99,
+          "columns": [
+            [
+              310,
+              400
+            ],
+            [
+              400,
+              465
+            ]
+          ],
+          "values": [
+            1320535.75,
+            27343.4
+          ]
+        }
+      ],
+      "cohorts": [
+        {
+          "category": "elected-officials",
+          "layouts": [
+            {
+              "page": 31,
+              "columns": [
+                95,
+                195,
+                310,
+                390,
+                465,
+                550
+              ],
+              "roles": [
+                "name",
+                "position",
+                "pay",
+                "expenses",
+                "total"
+              ],
+              "yRange": [
+                163,
+                233
+              ],
+              "rows": 5,
+              "renderedEdgeChecks": {
+                "field": "position",
+                "first": {
+                  "name": "Tim McGonigle",
+                  "position": "Mayor"
+                },
+                "last": {
+                  "name": "Lorna Vomacka",
+                  "position": "Councillor"
+                }
+              }
+            }
+          ],
+          "controlFormula": {
+            "total": "council"
+          },
+          "residuals": [
+            0,
+            0
+          ],
+          "visuallyReviewedPages": [
+            31
+          ],
+          "notes": []
+        },
+        {
+          "category": "employee-remuneration",
+          "layouts": [
+            {
+              "page": 31,
+              "columns": [
+                95,
+                200,
+                310,
+                400,
+                475,
+                555
+              ],
+              "roles": [
+                "name",
+                "position",
+                "pay",
+                "expenses",
+                "total"
+              ],
+              "yRange": [
+                453,
+                568
+              ],
+              "rows": 8,
+              "renderedEdgeChecks": {
+                "field": "position",
+                "first": {
+                  "name": "Joseph Fernandez",
+                  "position": "Chief Admin. Officer"
+                },
+                "last": {
+                  "name": "Kuldeep Johel",
+                  "position": "Foreman"
+                }
+              }
+            }
+          ],
+          "controlFormula": {
+            "total": "allEmployees",
+            "subtract": "below"
+          },
+          "residuals": [
+            0,
+            0
+          ],
+          "visuallyReviewedPages": [
+            31
+          ],
+          "notes": [],
+          "status": "held-for-source-clarification",
+          "holdReason": "Jessica May has remuneration92354.93, expenses5429.75, but printed expense-inclusive Total92784.68. The first two columns sum97784.68, a5000.00 difference. The printed all-other-employee total also differs from its component sum by0.09. Full named-field extraction agrees across readers, but material conflicting source components require explanation; no 2024 employee rows are accepted."
+        }
+      ]
+    }
+  ]
+}
