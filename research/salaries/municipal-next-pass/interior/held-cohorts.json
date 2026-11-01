@@ -1,0 +1,165 @@
+[
+  {
+    "report": {
+      "employerSlug": "town-of-princeton",
+      "employerName": "Town of Princeton",
+      "year": "2023",
+      "cacheFile": "town-of-princeton-37c2b374a148.pdf",
+      "sourceUrl": "https://princeton.ca/Home/DownloadDocument?docId=19a67da2-51d5-408d-ae4f-6d8b6300de51",
+      "indexUrl": "https://www.princeton.ca",
+      "sha256": "37c2b374a148799d4fc32bb8059738d37a83dfa567eb8127bbcd982fb64b599a",
+      "periodEvidence": [
+        {
+          "physicalPage": 1,
+          "text": "FOR THE YEAR ENDED DECEMBER 31, 2023"
+        }
+      ]
+    },
+    "cohort": {
+      "category": "employee-remuneration",
+      "rowCount": 19,
+      "sections": [
+        {
+          "page": 9,
+          "y": [
+            320.6942443847656,
+            609.6942749023438
+          ],
+          "columns": {
+            "name": [
+              20,
+              180
+            ],
+            "position": [
+              180,
+              375
+            ],
+            "pay": [
+              375,
+              485
+            ],
+            "expenses": [
+              485,
+              555
+            ]
+          },
+          "rowCount": 19,
+          "maxRowDistance": 8,
+          "allowPublishedThresholdExceptions": true
+        }
+      ],
+      "controlsCents": {
+        "pay": 179645459,
+        "expenses": 7074189
+      },
+      "controlBasis": {
+        "pay": "Printed all-other-employee remuneration 2,971,744.73 minus under-threshold aggregate 1,175,290.14",
+        "expenses": "Printed all-other-employee expenses 90,055.52 minus under-threshold aggregate 19,313.63"
+      },
+      "notes": [
+        "Two published named employees have remuneration below $75,000 but expense-inclusive totals above that amount. Their actual remuneration and separate expenses are retained; completeness below the usual threshold is not inferred.",
+        "Two published employee expense dashes remain null. The expense sum is the sum of known disclosed cells, not a complete measure of all employee expenses. The $44.78 control difference cannot be assigned to either missing cell or assumed to be solely an arithmetic error."
+      ],
+      "reviewedResidualsCents": {
+        "pay": 0,
+        "expenses": -4478
+      },
+      "completeEmployeeSchedule": true,
+      "independentCrossReviewFile": "research/salaries/municipal-next-pass/north/cross-review-interior-held.json",
+      "publicWarning": "Known named employee expense cells total $70,697.11, $44.78 below the $70,741.89 control derived from the printed employee total and below-threshold aggregate. Two published expense dashes remain missing. Individual amounts and the two published below-threshold remuneration exceptions are retained unchanged; the discrepancy's cause is unconfirmed.",
+      "expensesNote": "Two published employee expense dashes remain null. The expense sum is the sum of known disclosed cells, not a complete measure of all employee expenses. The $44.78 control difference cannot be assigned to either missing cell or assumed to be solely an arithmetic error.",
+      "expensesComplete": false
+    },
+    "status": "accepted-qualified-after-independent-review",
+    "reason": "Known named employee expense cells total $70,697.11, $44.78 below the $70,741.89 control derived from the printed employee total and below-threshold aggregate. Two published expense dashes remain missing. Individual amounts and the two published below-threshold remuneration exceptions are retained unchanged; the discrepancy's cause is unconfirmed.",
+    "evidenceFile": "held-evidence/town-of-princeton-2023-employees.json.gzip",
+    "evidenceSha256": "99c84670aa73f09a4e6aca94d7648c78380348a1614c6e91922f556525f585a5",
+    "acceptedSourceId": "wave-interior-town-of-princeton-2023-employee-remuneration",
+    "approval": "Root approved faithful qualified acceptance after independent full-row and rendered-page review; no imputation or amount adjustment."
+  },
+  {
+    "report": {
+      "employerSlug": "district-of-coldstream",
+      "employerName": "District of Coldstream",
+      "year": "2021",
+      "cacheFile": "district-of-coldstream-361faaf828f2.pdf",
+      "sourceUrl": "https://coldstream.civicweb.net/document/84263/",
+      "indexUrl": "https://coldstream.civicweb.net/document/84263/",
+      "sha256": "361faaf828f2bbc690f43028e2fffd3ddbf3985246844b2587815bddc8d5b98c",
+      "periodEvidence": [
+        {
+          "physicalPage": 10,
+          "text": "for the year ended December 31, 2021"
+        },
+        {
+          "physicalPage": 63,
+          "text": "Annual Report 2021"
+        }
+      ],
+      "notes": [
+        "The integrated 2021 annual report explicitly states its calendar year ending December31,2021 in the CFO report. The remuneration schedule carries the matching Annual Report2021 footer; both locations are retained as period evidence. Names are published without surname/given-name punctuation and are retained without inserting it."
+      ]
+    },
+    "cohort": {
+      "category": "employee-remuneration",
+      "rowCount": 19,
+      "sections": [
+        {
+          "page": 63,
+          "y": [
+            270.7469940185547,
+            539.9670104980469
+          ],
+          "columns": {
+            "name": [
+              70,
+              168
+            ],
+            "position": [
+              168,
+              332
+            ],
+            "pay": [
+              332,
+              411
+            ],
+            "expenses": [
+              411,
+              479
+            ],
+            "expenseInclusiveTotal": [
+              479,
+              545
+            ]
+          },
+          "rowCount": 19,
+          "maxRowDistance": 8
+        }
+      ],
+      "controlsCents": {
+        "pay": 182520604,
+        "expenses": 2409417,
+        "expenseInclusiveTotal": 184930021
+      },
+      "reviewedResidualsCents": {
+        "pay": 0,
+        "expenses": -30000,
+        "expenseInclusiveTotal": -30000
+      },
+      "completeEmployeeSchedule": true,
+      "independentCrossReviewFile": "research/salaries/municipal-next-pass/north/cross-review-interior-held.json",
+      "publicWarning": "The 19 printed employee expense amounts sum to $23,794.17, $300 below the printed $24,094.17 subtotal. Their expense-inclusive totals likewise sum to $1,849,000.21, $300 below the printed $1,849,300.21 subtotal. Remuneration reconciles exactly. Published individual amounts remain unchanged; the cause of the subtotal inconsistency is unconfirmed.",
+      "expensesNote": "All19 individual expense cells are numeric, and every printed row total equals remuneration plus expenses. The two printed expense-related cohort subtotals exceed the individual row sums by $300; no amount or subtotal has been adjusted.",
+      "expensesComplete": true,
+      "notes": [
+        "All19 individual expense cells are numeric, and every printed row total equals remuneration plus expenses. The two printed expense-related cohort subtotals exceed the individual row sums by $300; no amount or subtotal has been adjusted."
+      ]
+    },
+    "status": "accepted-qualified-after-independent-review",
+    "reason": "The 19 printed employee expense amounts sum to $23,794.17, $300 below the printed $24,094.17 subtotal. Their expense-inclusive totals likewise sum to $1,849,000.21, $300 below the printed $1,849,300.21 subtotal. Remuneration reconciles exactly. Published individual amounts remain unchanged; the cause of the subtotal inconsistency is unconfirmed.",
+    "evidenceFile": "held-evidence/district-of-coldstream-2021-employees.json.gzip",
+    "evidenceSha256": "3d772b05353cc234fbd5db6a1f780782414cb8407c13307a08b0beac36663804",
+    "acceptedSourceId": "wave-interior-district-of-coldstream-2021-employee-remuneration",
+    "approval": "Root approved faithful qualified acceptance after independent full-row and rendered-page review; no imputation or amount adjustment."
+  }
+]

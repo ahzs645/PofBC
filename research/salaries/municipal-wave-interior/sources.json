@@ -1,0 +1,1806 @@
+{
+  "version": 1,
+  "rowSchema": [
+    "employerSlug",
+    "name",
+    "position",
+    "remuneration",
+    "expenses",
+    "pdfPage"
+  ],
+  "coverageNotes": [
+    "Verified Southern Interior official calendar schedules. Compiled records and aliases are untouched."
+  ],
+  "sources": [
+    {
+      "id": "wave-interior-village-of-new-denver-2025-employee-remuneration",
+      "employerSlug": "village-of-new-denver",
+      "employerName": "Village of New Denver",
+      "sector": "Municipalities",
+      "year": "2025",
+      "periodType": "calendar",
+      "periodStart": "2025-01-01",
+      "periodEnd": "2025-12-31",
+      "title": "Village of New Denver 2025 official employee-remuneration",
+      "sourceUrl": "https://newdenver.ca/wp-content/uploads/2026/06/Village_of_New_Denver_2025_Annual_Report-w-SOFI.pdf",
+      "sourceIndexUrl": "https://newdenver.ca/village-business/reports-studies-planning-documents/",
+      "sha256": "807a2d1b38271d4c0c5712c596ef13017e1a20a7dc50064b6dc959f7d6e91715",
+      "file": "village-of-new-denver-2025-employee-remuneration.json.gzip",
+      "dataSha256": "24404a5f956c9f3e7e94710f23555644dc02f5066faff044f867d21b69b63d39",
+      "provenanceFile": "evidence/village-of-new-denver-2025-employee-remuneration.json.gzip",
+      "provenanceSha256": "ac5413153fa761f7399c5be8b88ba3c826b3859327c1f974bdc4d47a02a0ba42",
+      "category": "employee-remuneration",
+      "scope": "named-employees-over-threshold",
+      "scopeDescription": "Published named employee schedule",
+      "threshold": 75000,
+      "thresholdComparison": ">",
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "amountPrecision": "whole-dollars",
+      "status": "verified",
+      "verifiedOn": "2026-11-01",
+      "rowCount": 1,
+      "totalRemuneration": 77300,
+      "totalExpenses": 2031,
+      "pages": [
+        49
+      ],
+      "nameDisclosure": "published-name-as-disclosed",
+      "positionDisclosure": "published-where-present",
+      "notes": [
+        "The original printed calendar period establishes the year; upload paths and later meeting dates do not change it.",
+        "Remuneration preserves the published compensation column, including any disclosed benefits, overtime or other payments. It is not an annual base salary rate. Expense-inclusive totals are retained only in supporting evidence.",
+        "Names, initials and available positions remain as disclosed. Blank or dash expenses remain null; explicit zero and negative values are retained. These threshold disclosures are not complete employee rosters.",
+        "Every name, title and monetary component agrees between independently positioned PyMuPDF and Poppler words. All accepted salary pages were visually reviewed against the rendered originals."
+      ],
+      "publicWarning": null,
+      "validation": {
+        "originalFingerprintVerified": true,
+        "periodEvidence": [
+          {
+            "physicalPage": 49,
+            "text": "YEAR ENDED DECEMBER 31, 2025"
+          }
+        ],
+        "independentReaders": [
+          "PyMuPDF positioned words",
+          "Poppler bbox-layout positioned words"
+        ],
+        "everyRowFieldAgreement": true,
+        "physicalPagesVisuallyReviewed": [
+          49
+        ],
+        "rowsIndependentlyChecked": 1,
+        "printedControls": [
+          {
+            "field": "pay",
+            "printedControl": 77300,
+            "rowSum": 77300,
+            "residual": 0,
+            "basis": "Printed named-cohort subtotal"
+          },
+          {
+            "field": "expenses",
+            "printedControl": 2031,
+            "rowSum": 2031,
+            "residual": 0,
+            "basis": "Printed named-cohort subtotal"
+          }
+        ],
+        "allPrintedComponentControlsExact": true,
+        "expensesControlPublished": true,
+        "publishedThresholdExceptions": 0,
+        "evidenceFile": "evidence/village-of-new-denver-2025-employee-remuneration.json.gzip",
+        "completeEmployeeSchedule": true
+      },
+      "completeEmployeeSchedule": true
+    },
+    {
+      "id": "wave-interior-village-of-new-denver-2025-elected-officials",
+      "employerSlug": "village-of-new-denver",
+      "employerName": "Village of New Denver",
+      "sector": "Municipalities",
+      "year": "2025",
+      "periodType": "calendar",
+      "periodStart": "2025-01-01",
+      "periodEnd": "2025-12-31",
+      "title": "Village of New Denver 2025 official elected-officials",
+      "sourceUrl": "https://newdenver.ca/wp-content/uploads/2026/06/Village_of_New_Denver_2025_Annual_Report-w-SOFI.pdf",
+      "sourceIndexUrl": "https://newdenver.ca/village-business/reports-studies-planning-documents/",
+      "sha256": "807a2d1b38271d4c0c5712c596ef13017e1a20a7dc50064b6dc959f7d6e91715",
+      "file": "village-of-new-denver-2025-elected-officials.json.gzip",
+      "dataSha256": "166f7f5b5dbb32937d90010b9951b5cd02d22cfe641c15f59e22a06052a2ad7b",
+      "provenanceFile": "evidence/village-of-new-denver-2025-elected-officials.json.gzip",
+      "provenanceSha256": "d01231f10a17cfe4c233b00e9ab8f0274d3ac51c7ed6aa7ea5df40a59c23138a",
+      "category": "elected-officials",
+      "scope": "elected-officials",
+      "scopeDescription": "Published elected officials",
+      "threshold": null,
+      "thresholdComparison": null,
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "amountPrecision": "whole-dollars",
+      "status": "verified",
+      "verifiedOn": "2026-11-01",
+      "rowCount": 5,
+      "totalRemuneration": 19724,
+      "totalExpenses": 9052,
+      "pages": [
+        49
+      ],
+      "nameDisclosure": "published-name-as-disclosed",
+      "positionDisclosure": "published-where-present",
+      "notes": [
+        "The original printed calendar period establishes the year; upload paths and later meeting dates do not change it.",
+        "Remuneration preserves the published compensation column, including any disclosed benefits, overtime or other payments. It is not an annual base salary rate. Expense-inclusive totals are retained only in supporting evidence.",
+        "Names, initials and available positions remain as disclosed. Blank or dash expenses remain null; explicit zero and negative values are retained. These threshold disclosures are not complete employee rosters.",
+        "Every name, title and monetary component agrees between independently positioned PyMuPDF and Poppler words. All accepted salary pages were visually reviewed against the rendered originals."
+      ],
+      "publicWarning": "Published row sums minus printed named-cohort controls: remuneration +1 CAD, expenses -1 CAD. Amounts are retained as printed; the cause is unconfirmed.",
+      "validation": {
+        "originalFingerprintVerified": true,
+        "periodEvidence": [
+          {
+            "physicalPage": 49,
+            "text": "YEAR ENDED DECEMBER 31, 2025"
+          }
+        ],
+        "independentReaders": [
+          "PyMuPDF positioned words",
+          "Poppler bbox-layout positioned words"
+        ],
+        "everyRowFieldAgreement": true,
+        "physicalPagesVisuallyReviewed": [
+          49
+        ],
+        "rowsIndependentlyChecked": 5,
+        "printedControls": [
+          {
+            "field": "pay",
+            "printedControl": 19723,
+            "rowSum": 19724,
+            "residual": 1,
+            "basis": "Printed named-cohort subtotal"
+          },
+          {
+            "field": "expenses",
+            "printedControl": 9053,
+            "rowSum": 9052,
+            "residual": -1,
+            "basis": "Printed named-cohort subtotal"
+          }
+        ],
+        "allPrintedComponentControlsExact": false,
+        "expensesControlPublished": true,
+        "publishedThresholdExceptions": null,
+        "evidenceFile": "evidence/village-of-new-denver-2025-elected-officials.json.gzip"
+      }
+    },
+    {
+      "id": "wave-interior-district-of-sparwood-2025-employee-remuneration",
+      "employerSlug": "district-of-sparwood",
+      "employerName": "District of Sparwood",
+      "sector": "Municipalities",
+      "year": "2025",
+      "periodType": "calendar",
+      "periodStart": "2025-01-01",
+      "periodEnd": "2025-12-31",
+      "title": "District of Sparwood 2025 official employee-remuneration",
+      "sourceUrl": "https://sparwood.civicweb.net/document/177527",
+      "sourceIndexUrl": "https://www.sparwood.ca/municipal-hall/budget-taxes",
+      "sha256": "b4d627f2193603b65e43630c5e072f4b308c6350efa4be8924560679a4ce9c7a",
+      "file": "district-of-sparwood-2025-employee-remuneration.json.gzip",
+      "dataSha256": "6daeaf6b4521143ae922592a08c13e2a23736268edf4f2fab04e591d4459b0c4",
+      "provenanceFile": "evidence/district-of-sparwood-2025-employee-remuneration.json.gzip",
+      "provenanceSha256": "27e54f376f727318a2f63677832a32e730639faad7264d224cb27b0a448bbbea",
+      "category": "employee-remuneration",
+      "scope": "named-employees-over-threshold",
+      "scopeDescription": "Published named employee schedule",
+      "threshold": 75000,
+      "thresholdComparison": ">",
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "amountPrecision": "whole-dollars",
+      "status": "verified",
+      "verifiedOn": "2026-11-01",
+      "rowCount": 33,
+      "totalRemuneration": 3350367,
+      "totalExpenses": 114583,
+      "pages": [
+        3
+      ],
+      "nameDisclosure": "published-name-as-disclosed",
+      "positionDisclosure": "published-where-present",
+      "notes": [
+        "Published payroll includes taxable benefits such as insurance. Employee job titles are not published; council roles are explicit prefixes in the source name cells and are separated without expanding initials.",
+        "The original printed calendar period establishes the year; upload paths and later meeting dates do not change it.",
+        "Remuneration preserves the published compensation column, including any disclosed benefits, overtime or other payments. It is not an annual base salary rate. Expense-inclusive totals are retained only in supporting evidence.",
+        "Names, initials and available positions remain as disclosed. Blank or dash expenses remain null; explicit zero and negative values are retained. These threshold disclosures are not complete employee rosters.",
+        "Every name, title and monetary component agrees between independently positioned PyMuPDF and Poppler words. All accepted salary pages were visually reviewed against the rendered originals."
+      ],
+      "publicWarning": null,
+      "validation": {
+        "originalFingerprintVerified": true,
+        "periodEvidence": [
+          {
+            "physicalPage": 3,
+            "text": "For the Year ended December 31, 2025"
+          }
+        ],
+        "independentReaders": [
+          "PyMuPDF positioned words",
+          "Poppler bbox-layout positioned words"
+        ],
+        "everyRowFieldAgreement": true,
+        "physicalPagesVisuallyReviewed": [
+          3
+        ],
+        "rowsIndependentlyChecked": 33,
+        "printedControls": [
+          {
+            "field": "pay",
+            "printedControl": 3350367,
+            "rowSum": 3350367,
+            "residual": 0,
+            "basis": "Printed named-cohort subtotal"
+          },
+          {
+            "field": "expenses",
+            "printedControl": 114583,
+            "rowSum": 114583,
+            "residual": 0,
+            "basis": "Printed named-cohort subtotal"
+          }
+        ],
+        "allPrintedComponentControlsExact": true,
+        "expensesControlPublished": true,
+        "publishedThresholdExceptions": 0,
+        "evidenceFile": "evidence/district-of-sparwood-2025-employee-remuneration.json.gzip",
+        "completeEmployeeSchedule": true
+      },
+      "completeEmployeeSchedule": true
+    },
+    {
+      "id": "wave-interior-district-of-sparwood-2025-elected-officials",
+      "employerSlug": "district-of-sparwood",
+      "employerName": "District of Sparwood",
+      "sector": "Municipalities",
+      "year": "2025",
+      "periodType": "calendar",
+      "periodStart": "2025-01-01",
+      "periodEnd": "2025-12-31",
+      "title": "District of Sparwood 2025 official elected-officials",
+      "sourceUrl": "https://sparwood.civicweb.net/document/177527",
+      "sourceIndexUrl": "https://www.sparwood.ca/municipal-hall/budget-taxes",
+      "sha256": "b4d627f2193603b65e43630c5e072f4b308c6350efa4be8924560679a4ce9c7a",
+      "file": "district-of-sparwood-2025-elected-officials.json.gzip",
+      "dataSha256": "243a1e402688d0f0f868a7160f7183fd4a645f059a68a99ca46771c9b7d6560a",
+      "provenanceFile": "evidence/district-of-sparwood-2025-elected-officials.json.gzip",
+      "provenanceSha256": "2b76b32481511b5db03a4ed8e5e759d9e27c1ef721177080d2bcd3d27e5d1fb2",
+      "category": "elected-officials",
+      "scope": "elected-officials",
+      "scopeDescription": "Published elected officials",
+      "threshold": null,
+      "thresholdComparison": null,
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "amountPrecision": "whole-dollars",
+      "status": "verified",
+      "verifiedOn": "2026-11-01",
+      "rowCount": 7,
+      "totalRemuneration": 173350,
+      "totalExpenses": 50682,
+      "pages": [
+        3
+      ],
+      "nameDisclosure": "published-name-as-disclosed",
+      "positionDisclosure": "published-where-present",
+      "notes": [
+        "Published payroll includes taxable benefits such as insurance. Employee job titles are not published; council roles are explicit prefixes in the source name cells and are separated without expanding initials.",
+        "The original printed calendar period establishes the year; upload paths and later meeting dates do not change it.",
+        "Remuneration preserves the published compensation column, including any disclosed benefits, overtime or other payments. It is not an annual base salary rate. Expense-inclusive totals are retained only in supporting evidence.",
+        "Names, initials and available positions remain as disclosed. Blank or dash expenses remain null; explicit zero and negative values are retained. These threshold disclosures are not complete employee rosters.",
+        "Every name, title and monetary component agrees between independently positioned PyMuPDF and Poppler words. All accepted salary pages were visually reviewed against the rendered originals."
+      ],
+      "publicWarning": null,
+      "validation": {
+        "originalFingerprintVerified": true,
+        "periodEvidence": [
+          {
+            "physicalPage": 3,
+            "text": "For the Year ended December 31, 2025"
+          }
+        ],
+        "independentReaders": [
+          "PyMuPDF positioned words",
+          "Poppler bbox-layout positioned words"
+        ],
+        "everyRowFieldAgreement": true,
+        "physicalPagesVisuallyReviewed": [
+          3
+        ],
+        "rowsIndependentlyChecked": 7,
+        "printedControls": [
+          {
+            "field": "pay",
+            "printedControl": 173350,
+            "rowSum": 173350,
+            "residual": 0,
+            "basis": "Printed named-cohort subtotal"
+          },
+          {
+            "field": "expenses",
+            "printedControl": 50682,
+            "rowSum": 50682,
+            "residual": 0,
+            "basis": "Printed named-cohort subtotal"
+          }
+        ],
+        "allPrintedComponentControlsExact": true,
+        "expensesControlPublished": true,
+        "publishedThresholdExceptions": null,
+        "evidenceFile": "evidence/district-of-sparwood-2025-elected-officials.json.gzip"
+      }
+    },
+    {
+      "id": "wave-interior-city-of-rossland-2025-employee-remuneration",
+      "employerSlug": "city-of-rossland",
+      "employerName": "City of Rossland",
+      "sector": "Municipalities",
+      "year": "2025",
+      "periodType": "calendar",
+      "periodStart": "2025-01-01",
+      "periodEnd": "2025-12-31",
+      "title": "City of Rossland 2025 official employee-remuneration",
+      "sourceUrl": "https://rossland.civicweb.net/document/55626",
+      "sourceIndexUrl": "https://rossland.ca/departments/financial-services/financial-budgets-plans-reports/",
+      "sha256": "2c22b2dd6dcbe258469192400c14c6e6a94e8e0dff93ee823f343408b63d98a0",
+      "file": "city-of-rossland-2025-employee-remuneration.json.gzip",
+      "dataSha256": "22b5303208a2fca6cc30b33affe8a4425a3aadb01adfc2f7b502e840000fc99b",
+      "provenanceFile": "evidence/city-of-rossland-2025-employee-remuneration.json.gzip",
+      "provenanceSha256": "5156f0749e2799055fb2f8db013398f85c8c71d53a6f119f522668db93ab7610",
+      "category": "employee-remuneration",
+      "scope": "named-employees-over-threshold",
+      "scopeDescription": "Published named employee schedule",
+      "threshold": 75000,
+      "thresholdComparison": ">",
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "amountPrecision": "whole-dollars",
+      "status": "verified",
+      "verifiedOn": "2026-11-01",
+      "rowCount": 33,
+      "totalRemuneration": 3185073,
+      "totalExpenses": 76855,
+      "pages": [
+        41
+      ],
+      "nameDisclosure": "published-name-as-disclosed",
+      "positionDisclosure": "published-where-present",
+      "notes": [
+        "The published named schedule includes one employee with remuneration below $75,000. That row is retained; the expense-inclusive total does not become remuneration.",
+        "The original printed calendar period establishes the year; upload paths and later meeting dates do not change it.",
+        "Remuneration preserves the published compensation column, including any disclosed benefits, overtime or other payments. It is not an annual base salary rate. Expense-inclusive totals are retained only in supporting evidence.",
+        "Names, initials and available positions remain as disclosed. Blank or dash expenses remain null; explicit zero and negative values are retained. These threshold disclosures are not complete employee rosters.",
+        "Every name, title and monetary component agrees between independently positioned PyMuPDF and Poppler words. All accepted salary pages were visually reviewed against the rendered originals."
+      ],
+      "publicWarning": "Published row sums minus printed named-cohort controls: remuneration +1 CAD, expenses +5 CAD, expense-inclusive total +0 CAD. Amounts are retained as printed; the cause is unconfirmed.",
+      "validation": {
+        "originalFingerprintVerified": true,
+        "periodEvidence": [
+          {
+            "physicalPage": 41,
+            "text": "For the Year Ended December 31, 2025"
+          }
+        ],
+        "independentReaders": [
+          "PyMuPDF positioned words",
+          "Poppler bbox-layout positioned words"
+        ],
+        "everyRowFieldAgreement": true,
+        "physicalPagesVisuallyReviewed": [
+          41
+        ],
+        "rowsIndependentlyChecked": 33,
+        "printedControls": [
+          {
+            "field": "pay",
+            "printedControl": 3185072,
+            "rowSum": 3185073,
+            "residual": 1,
+            "basis": "Printed named-cohort subtotal"
+          },
+          {
+            "field": "expenses",
+            "printedControl": 76850,
+            "rowSum": 76855,
+            "residual": 5,
+            "basis": "Printed named-cohort subtotal"
+          },
+          {
+            "field": "expenseInclusiveTotal",
+            "printedControl": 3261923,
+            "rowSum": 3261923,
+            "residual": 0,
+            "basis": "Printed named-cohort subtotal"
+          }
+        ],
+        "allPrintedComponentControlsExact": false,
+        "expensesControlPublished": true,
+        "publishedThresholdExceptions": 1,
+        "evidenceFile": "evidence/city-of-rossland-2025-employee-remuneration.json.gzip",
+        "completeEmployeeSchedule": true
+      },
+      "completeEmployeeSchedule": true
+    },
+    {
+      "id": "wave-interior-city-of-rossland-2025-elected-officials",
+      "employerSlug": "city-of-rossland",
+      "employerName": "City of Rossland",
+      "sector": "Municipalities",
+      "year": "2025",
+      "periodType": "calendar",
+      "periodStart": "2025-01-01",
+      "periodEnd": "2025-12-31",
+      "title": "City of Rossland 2025 official elected-officials",
+      "sourceUrl": "https://rossland.civicweb.net/document/55626",
+      "sourceIndexUrl": "https://rossland.ca/departments/financial-services/financial-budgets-plans-reports/",
+      "sha256": "2c22b2dd6dcbe258469192400c14c6e6a94e8e0dff93ee823f343408b63d98a0",
+      "file": "city-of-rossland-2025-elected-officials.json.gzip",
+      "dataSha256": "e208cac1392063904d989bf6ed2eaea9cb526e1b155293c12453f830a18e67c4",
+      "provenanceFile": "evidence/city-of-rossland-2025-elected-officials.json.gzip",
+      "provenanceSha256": "cbc6702de4c35bfc027d12d16790428c32eac089a2ec4238cd4fc01587172faa",
+      "category": "elected-officials",
+      "scope": "elected-officials",
+      "scopeDescription": "Published elected officials",
+      "threshold": null,
+      "thresholdComparison": null,
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "amountPrecision": "whole-dollars",
+      "status": "verified",
+      "verifiedOn": "2026-11-01",
+      "rowCount": 7,
+      "totalRemuneration": 127193,
+      "totalExpenses": 22811,
+      "pages": [
+        40
+      ],
+      "nameDisclosure": "published-name-as-disclosed",
+      "positionDisclosure": "published-where-present",
+      "notes": [
+        "The original printed calendar period establishes the year; upload paths and later meeting dates do not change it.",
+        "Remuneration preserves the published compensation column, including any disclosed benefits, overtime or other payments. It is not an annual base salary rate. Expense-inclusive totals are retained only in supporting evidence.",
+        "Names, initials and available positions remain as disclosed. Blank or dash expenses remain null; explicit zero and negative values are retained. These threshold disclosures are not complete employee rosters.",
+        "Every name, title and monetary component agrees between independently positioned PyMuPDF and Poppler words. All accepted salary pages were visually reviewed against the rendered originals."
+      ],
+      "publicWarning": "Published row sums minus printed named-cohort controls: remuneration -2 CAD, expenses -1 CAD, expense-inclusive total -1 CAD. Amounts are retained as printed; the cause is unconfirmed.",
+      "validation": {
+        "originalFingerprintVerified": true,
+        "periodEvidence": [
+          {
+            "physicalPage": 41,
+            "text": "For the Year Ended December 31, 2025"
+          }
+        ],
+        "independentReaders": [
+          "PyMuPDF positioned words",
+          "Poppler bbox-layout positioned words"
+        ],
+        "everyRowFieldAgreement": true,
+        "physicalPagesVisuallyReviewed": [
+          40
+        ],
+        "rowsIndependentlyChecked": 7,
+        "printedControls": [
+          {
+            "field": "pay",
+            "printedControl": 127195,
+            "rowSum": 127193,
+            "residual": -2,
+            "basis": "Printed named-cohort subtotal"
+          },
+          {
+            "field": "expenses",
+            "printedControl": 22812,
+            "rowSum": 22811,
+            "residual": -1,
+            "basis": "Printed named-cohort subtotal"
+          },
+          {
+            "field": "expenseInclusiveTotal",
+            "printedControl": 150007,
+            "rowSum": 150006,
+            "residual": -1,
+            "basis": "Printed named-cohort subtotal"
+          }
+        ],
+        "allPrintedComponentControlsExact": false,
+        "expensesControlPublished": true,
+        "publishedThresholdExceptions": null,
+        "evidenceFile": "evidence/city-of-rossland-2025-elected-officials.json.gzip"
+      }
+    },
+    {
+      "id": "wave-interior-district-of-summerland-2023-employee-remuneration",
+      "employerSlug": "district-of-summerland",
+      "employerName": "District of Summerland",
+      "sector": "Municipalities",
+      "year": "2023",
+      "periodType": "calendar",
+      "periodStart": "2023-01-01",
+      "periodEnd": "2023-12-31",
+      "title": "District of Summerland 2023 official employee-remuneration",
+      "sourceUrl": "https://www.summerland.ca/docs/default-source/your-city-hall/departments/finance/2023-signed-sofi.pdf?sfvrsn=360ecdfb_0",
+      "sourceIndexUrl": "https://www.summerland.ca/docs/default-source/your-city-hall/departments/finance/2023-signed-sofi.pdf?sfvrsn=360ecdfb_0",
+      "sha256": "60ecc506e045d56c4081e558636dc11651c64cb6606071af66d6644e4dbff6ea",
+      "file": "district-of-summerland-2023-employee-remuneration.json.gzip",
+      "dataSha256": "16f145029f78db4773a72349667715ccef9a8781fac6af83ccbfa120a96cef62",
+      "provenanceFile": "evidence/district-of-summerland-2023-employee-remuneration.json.gzip",
+      "provenanceSha256": "60705d0cf63343f5e084b96915630f5c386defacaac3ee7c98e8c1eb16ba0fb8",
+      "category": "employee-remuneration",
+      "scope": "named-employees-over-threshold",
+      "scopeDescription": "Published named employee schedule",
+      "threshold": 75000,
+      "thresholdComparison": ">",
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "amountPrecision": "cents",
+      "status": "verified",
+      "verifiedOn": "2026-11-01",
+      "rowCount": 60,
+      "totalRemuneration": 6031391.37,
+      "totalExpenses": 75805.28,
+      "pages": [
+        5,
+        6
+      ],
+      "nameDisclosure": "published-name-as-disclosed",
+      "positionDisclosure": "published-where-present",
+      "notes": [
+        "Total taxable remuneration includes auxiliary firefighter earnings for the footnoted employees. Footnote asterisks and printed row sequence numbers are supporting annotations; names are not expanded.",
+        "The original printed calendar period establishes the year; upload paths and later meeting dates do not change it.",
+        "Remuneration preserves the published compensation column, including any disclosed benefits, overtime or other payments. It is not an annual base salary rate. Expense-inclusive totals are retained only in supporting evidence.",
+        "Names, initials and available positions remain as disclosed. Blank or dash expenses remain null; explicit zero and negative values are retained. These threshold disclosures are not complete employee rosters.",
+        "Every name, title and monetary component agrees between independently positioned PyMuPDF and Poppler words. All accepted salary pages were visually reviewed against the rendered originals."
+      ],
+      "publicWarning": null,
+      "validation": {
+        "originalFingerprintVerified": true,
+        "periodEvidence": [
+          {
+            "physicalPage": 5,
+            "text": "FOR THE YEAR ENDED DECEMBER 31, 2023"
+          }
+        ],
+        "independentReaders": [
+          "PyMuPDF positioned words",
+          "Poppler bbox-layout positioned words"
+        ],
+        "everyRowFieldAgreement": true,
+        "physicalPagesVisuallyReviewed": [
+          5,
+          6
+        ],
+        "rowsIndependentlyChecked": 60,
+        "printedControls": [
+          {
+            "field": "pay",
+            "printedControl": 6031391.37,
+            "rowSum": 6031391.37,
+            "residual": 0,
+            "basis": "Printed named-cohort subtotal"
+          },
+          {
+            "field": "expenses",
+            "printedControl": 75805.28,
+            "rowSum": 75805.28,
+            "residual": 0,
+            "basis": "Printed named-cohort subtotal"
+          }
+        ],
+        "allPrintedComponentControlsExact": true,
+        "expensesControlPublished": true,
+        "publishedThresholdExceptions": 0,
+        "evidenceFile": "evidence/district-of-summerland-2023-employee-remuneration.json.gzip",
+        "completeEmployeeSchedule": true
+      },
+      "completeEmployeeSchedule": true
+    },
+    {
+      "id": "wave-interior-district-of-summerland-2023-elected-officials",
+      "employerSlug": "district-of-summerland",
+      "employerName": "District of Summerland",
+      "sector": "Municipalities",
+      "year": "2023",
+      "periodType": "calendar",
+      "periodStart": "2023-01-01",
+      "periodEnd": "2023-12-31",
+      "title": "District of Summerland 2023 official elected-officials",
+      "sourceUrl": "https://www.summerland.ca/docs/default-source/your-city-hall/departments/finance/2023-signed-sofi.pdf?sfvrsn=360ecdfb_0",
+      "sourceIndexUrl": "https://www.summerland.ca/docs/default-source/your-city-hall/departments/finance/2023-signed-sofi.pdf?sfvrsn=360ecdfb_0",
+      "sha256": "60ecc506e045d56c4081e558636dc11651c64cb6606071af66d6644e4dbff6ea",
+      "file": "district-of-summerland-2023-elected-officials.json.gzip",
+      "dataSha256": "06801a6c51cd144955e8171fbb60de4bb8a1a13645fd5e11daf3f68d3073ab4e",
+      "provenanceFile": "evidence/district-of-summerland-2023-elected-officials.json.gzip",
+      "provenanceSha256": "19f69438a58a32b5527d17379efe550eb160cf4b7da64e716694036986439813",
+      "category": "elected-officials",
+      "scope": "elected-officials",
+      "scopeDescription": "Published elected officials",
+      "threshold": null,
+      "thresholdComparison": null,
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "amountPrecision": "cents",
+      "status": "verified",
+      "verifiedOn": "2026-11-01",
+      "rowCount": 7,
+      "totalRemuneration": 150865.88,
+      "totalExpenses": 28940.09,
+      "pages": [
+        5
+      ],
+      "nameDisclosure": "published-name-as-disclosed",
+      "positionDisclosure": "published-where-present",
+      "notes": [
+        "The original printed calendar period establishes the year; upload paths and later meeting dates do not change it.",
+        "Remuneration preserves the published compensation column, including any disclosed benefits, overtime or other payments. It is not an annual base salary rate. Expense-inclusive totals are retained only in supporting evidence.",
+        "Names, initials and available positions remain as disclosed. Blank or dash expenses remain null; explicit zero and negative values are retained. These threshold disclosures are not complete employee rosters.",
+        "Every name, title and monetary component agrees between independently positioned PyMuPDF and Poppler words. All accepted salary pages were visually reviewed against the rendered originals."
+      ],
+      "publicWarning": null,
+      "validation": {
+        "originalFingerprintVerified": true,
+        "periodEvidence": [
+          {
+            "physicalPage": 5,
+            "text": "FOR THE YEAR ENDED DECEMBER 31, 2023"
+          }
+        ],
+        "independentReaders": [
+          "PyMuPDF positioned words",
+          "Poppler bbox-layout positioned words"
+        ],
+        "everyRowFieldAgreement": true,
+        "physicalPagesVisuallyReviewed": [
+          5
+        ],
+        "rowsIndependentlyChecked": 7,
+        "printedControls": [
+          {
+            "field": "pay",
+            "printedControl": 150865.88,
+            "rowSum": 150865.88,
+            "residual": 0,
+            "basis": "Printed named-cohort subtotal"
+          },
+          {
+            "field": "expenses",
+            "printedControl": 28940.09,
+            "rowSum": 28940.09,
+            "residual": 0,
+            "basis": "Printed named-cohort subtotal"
+          }
+        ],
+        "allPrintedComponentControlsExact": true,
+        "expensesControlPublished": true,
+        "publishedThresholdExceptions": null,
+        "evidenceFile": "evidence/district-of-summerland-2023-elected-officials.json.gzip"
+      }
+    },
+    {
+      "id": "wave-interior-district-of-clearwater-2025-employee-remuneration",
+      "employerSlug": "district-of-clearwater",
+      "employerName": "District of Clearwater",
+      "sector": "Municipalities",
+      "year": "2025",
+      "periodType": "calendar",
+      "periodStart": "2025-01-01",
+      "periodEnd": "2025-12-31",
+      "title": "District of Clearwater 2025 official employee-remuneration",
+      "sourceUrl": "https://districtofclearwater.civicweb.net/document/106358",
+      "sourceIndexUrl": "https://www.districtofclearwater.com/municipal-hall/finance-services/",
+      "sha256": "29c5bda80e7dcc390a2392f28927c6bfc503ab38b8c422c77777627ae097da2f",
+      "file": "district-of-clearwater-2025-employee-remuneration.json.gzip",
+      "dataSha256": "27e8aab495dcd066e4f8f8bf96e66712597beb0eeb1b55a504f0023b27d66b7d",
+      "provenanceFile": "evidence/district-of-clearwater-2025-employee-remuneration.json.gzip",
+      "provenanceSha256": "3e4bc1f4269aec57dd60de99c0916a15c12b09535d9d7afb548e09c113a11815",
+      "category": "employee-remuneration",
+      "scope": "named-employees-over-threshold",
+      "scopeDescription": "Published named employee schedule",
+      "threshold": 75000,
+      "thresholdComparison": ">",
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "amountPrecision": "cents",
+      "status": "verified",
+      "verifiedOn": "2026-11-01",
+      "rowCount": 11,
+      "totalRemuneration": 1240533.94,
+      "totalExpenses": 44395.11,
+      "pages": [
+        47
+      ],
+      "nameDisclosure": "published-name-as-disclosed",
+      "positionDisclosure": "published-where-present",
+      "notes": [
+        "The source does not print a named-employee expense subtotal. Every individual expense was checked with two readers and against the rendered page; no expense control was invented.",
+        "The original printed calendar period establishes the year; upload paths and later meeting dates do not change it.",
+        "Remuneration preserves the published compensation column, including any disclosed benefits, overtime or other payments. It is not an annual base salary rate. Expense-inclusive totals are retained only in supporting evidence.",
+        "Names, initials and available positions remain as disclosed. Blank or dash expenses remain null; explicit zero and negative values are retained. These threshold disclosures are not complete employee rosters.",
+        "Every name, title and monetary component agrees between independently positioned PyMuPDF and Poppler words. All accepted salary pages were visually reviewed against the rendered originals."
+      ],
+      "publicWarning": null,
+      "validation": {
+        "originalFingerprintVerified": true,
+        "periodEvidence": [
+          {
+            "physicalPage": 47,
+            "text": "FOR PERIOD JANUARY 1 TO DECEMBER 31, 2025"
+          }
+        ],
+        "independentReaders": [
+          "PyMuPDF positioned words",
+          "Poppler bbox-layout positioned words"
+        ],
+        "everyRowFieldAgreement": true,
+        "physicalPagesVisuallyReviewed": [
+          47
+        ],
+        "rowsIndependentlyChecked": 11,
+        "printedControls": [
+          {
+            "field": "pay",
+            "printedControl": 1240533.94,
+            "rowSum": 1240533.94,
+            "residual": 0,
+            "basis": "Printed named-cohort subtotal"
+          }
+        ],
+        "allPrintedComponentControlsExact": true,
+        "expensesControlPublished": false,
+        "publishedThresholdExceptions": 0,
+        "evidenceFile": "evidence/district-of-clearwater-2025-employee-remuneration.json.gzip",
+        "completeEmployeeSchedule": true
+      },
+      "completeEmployeeSchedule": true
+    },
+    {
+      "id": "wave-interior-district-of-clearwater-2025-elected-officials",
+      "employerSlug": "district-of-clearwater",
+      "employerName": "District of Clearwater",
+      "sector": "Municipalities",
+      "year": "2025",
+      "periodType": "calendar",
+      "periodStart": "2025-01-01",
+      "periodEnd": "2025-12-31",
+      "title": "District of Clearwater 2025 official elected-officials",
+      "sourceUrl": "https://districtofclearwater.civicweb.net/document/106358",
+      "sourceIndexUrl": "https://www.districtofclearwater.com/municipal-hall/finance-services/",
+      "sha256": "29c5bda80e7dcc390a2392f28927c6bfc503ab38b8c422c77777627ae097da2f",
+      "file": "district-of-clearwater-2025-elected-officials.json.gzip",
+      "dataSha256": "e8ae187a62e5f776d620ceb8508e746700cb8cd901fa4ce6838ebaece25387a7",
+      "provenanceFile": "evidence/district-of-clearwater-2025-elected-officials.json.gzip",
+      "provenanceSha256": "b8406df00bf4e5b0c5341ef2078e3f18923d967bf445d8c27a9ee791359035a9",
+      "category": "elected-officials",
+      "scope": "elected-officials",
+      "scopeDescription": "Published elected officials",
+      "threshold": null,
+      "thresholdComparison": null,
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "amountPrecision": "cents",
+      "status": "verified",
+      "verifiedOn": "2026-11-01",
+      "rowCount": 7,
+      "totalRemuneration": 102691.34,
+      "totalExpenses": 25327.27,
+      "pages": [
+        47
+      ],
+      "nameDisclosure": "published-name-as-disclosed",
+      "positionDisclosure": "published-where-present",
+      "notes": [
+        "The original printed calendar period establishes the year; upload paths and later meeting dates do not change it.",
+        "Remuneration preserves the published compensation column, including any disclosed benefits, overtime or other payments. It is not an annual base salary rate. Expense-inclusive totals are retained only in supporting evidence.",
+        "Names, initials and available positions remain as disclosed. Blank or dash expenses remain null; explicit zero and negative values are retained. These threshold disclosures are not complete employee rosters.",
+        "Every name, title and monetary component agrees between independently positioned PyMuPDF and Poppler words. All accepted salary pages were visually reviewed against the rendered originals."
+      ],
+      "publicWarning": null,
+      "validation": {
+        "originalFingerprintVerified": true,
+        "periodEvidence": [
+          {
+            "physicalPage": 47,
+            "text": "FOR PERIOD JANUARY 1 TO DECEMBER 31, 2025"
+          }
+        ],
+        "independentReaders": [
+          "PyMuPDF positioned words",
+          "Poppler bbox-layout positioned words"
+        ],
+        "everyRowFieldAgreement": true,
+        "physicalPagesVisuallyReviewed": [
+          47
+        ],
+        "rowsIndependentlyChecked": 7,
+        "printedControls": [
+          {
+            "field": "pay",
+            "printedControl": 102691.34,
+            "rowSum": 102691.34,
+            "residual": 0,
+            "basis": "Printed named-cohort subtotal"
+          },
+          {
+            "field": "expenses",
+            "printedControl": 25327.27,
+            "rowSum": 25327.27,
+            "residual": 0,
+            "basis": "Printed named-cohort subtotal"
+          }
+        ],
+        "allPrintedComponentControlsExact": true,
+        "expensesControlPublished": true,
+        "publishedThresholdExceptions": null,
+        "evidenceFile": "evidence/district-of-clearwater-2025-elected-officials.json.gzip"
+      }
+    },
+    {
+      "id": "wave-interior-town-of-princeton-2023-employee-remuneration",
+      "employerSlug": "town-of-princeton",
+      "employerName": "Town of Princeton",
+      "sector": "Municipalities",
+      "year": "2023",
+      "periodType": "calendar",
+      "periodStart": "2023-01-01",
+      "periodEnd": "2023-12-31",
+      "title": "Town of Princeton 2023 official employee-remuneration",
+      "sourceUrl": "https://princeton.ca/Home/DownloadDocument?docId=19a67da2-51d5-408d-ae4f-6d8b6300de51",
+      "sourceIndexUrl": "https://www.princeton.ca",
+      "sha256": "37c2b374a148799d4fc32bb8059738d37a83dfa567eb8127bbcd982fb64b599a",
+      "file": "town-of-princeton-2023-employee-remuneration.json.gzip",
+      "dataSha256": "b3b0aecb6fd6fec0f17264b0e03f9b46caa5a662db173d71e6196dcf4183d933",
+      "provenanceFile": "evidence/town-of-princeton-2023-employee-remuneration.json.gzip",
+      "provenanceSha256": "25f382111eb5805c2ae1409adfe12410cc8abb6b579f35fe45b719c3c47a0ce3",
+      "category": "employee-remuneration",
+      "scope": "named-employees-over-threshold",
+      "scopeDescription": "Published named employee schedule",
+      "threshold": 75000,
+      "thresholdComparison": ">",
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "amountPrecision": "cents",
+      "status": "verified",
+      "verifiedOn": "2026-11-01",
+      "rowCount": 19,
+      "totalRemuneration": 1796454.59,
+      "totalExpenses": 70697.11,
+      "pages": [
+        9
+      ],
+      "nameDisclosure": "published-name-as-disclosed",
+      "positionDisclosure": "published-where-present",
+      "notes": [
+        "Two published named employees have remuneration below $75,000 but expense-inclusive totals above that amount. Their actual remuneration and separate expenses are retained; completeness below the usual threshold is not inferred.",
+        "Two published employee expense dashes remain null. The expense sum is the sum of known disclosed cells, not a complete measure of all employee expenses. The $44.78 control difference cannot be assigned to either missing cell or assumed to be solely an arithmetic error.",
+        "The original printed calendar period establishes the year; upload paths and later meeting dates do not change it.",
+        "Remuneration preserves the published compensation column, including any disclosed benefits, overtime or other payments. It is not an annual base salary rate. Expense-inclusive totals are retained only in supporting evidence.",
+        "Names, initials and available positions remain as disclosed. Blank or dash expenses remain null; explicit zero and negative values are retained. These threshold disclosures are not complete employee rosters.",
+        "Every name, title and monetary component agrees between independently positioned PyMuPDF and Poppler words. All accepted salary pages were visually reviewed against the rendered originals."
+      ],
+      "publicWarning": "Known named employee expense cells total $70,697.11, $44.78 below the $70,741.89 control derived from the printed employee total and below-threshold aggregate. Two published expense dashes remain missing. Individual amounts and the two published below-threshold remuneration exceptions are retained unchanged; the discrepancy's cause is unconfirmed.",
+      "validation": {
+        "originalFingerprintVerified": true,
+        "periodEvidence": [
+          {
+            "physicalPage": 1,
+            "text": "FOR THE YEAR ENDED DECEMBER 31, 2023"
+          }
+        ],
+        "independentReaders": [
+          "PyMuPDF positioned words",
+          "Poppler bbox-layout positioned words"
+        ],
+        "everyRowFieldAgreement": true,
+        "physicalPagesVisuallyReviewed": [
+          9
+        ],
+        "rowsIndependentlyChecked": 19,
+        "printedControls": [
+          {
+            "field": "pay",
+            "printedControl": 1796454.59,
+            "rowSum": 1796454.59,
+            "residual": 0,
+            "basis": "Printed all-other-employee remuneration 2,971,744.73 minus under-threshold aggregate 1,175,290.14"
+          },
+          {
+            "field": "expenses",
+            "printedControl": 70741.89,
+            "rowSum": 70697.11,
+            "residual": -44.78,
+            "basis": "Printed all-other-employee expenses 90,055.52 minus under-threshold aggregate 19,313.63"
+          }
+        ],
+        "allPrintedComponentControlsExact": false,
+        "expensesControlPublished": true,
+        "publishedThresholdExceptions": 2,
+        "evidenceFile": "evidence/town-of-princeton-2023-employee-remuneration.json.gzip",
+        "completeEmployeeSchedule": true,
+        "expensesComplete": false,
+        "independentCrossReviewFile": "research/salaries/municipal-next-pass/north/cross-review-interior-held.json",
+        "acceptanceBasis": "Faithful complete named employee transcription with explicit unresolved source-control qualification after independent full-row and rendered-page review."
+      },
+      "completeEmployeeSchedule": true,
+      "expensesNote": "Two published employee expense dashes remain null. The expense sum is the sum of known disclosed cells, not a complete measure of all employee expenses. The $44.78 control difference cannot be assigned to either missing cell or assumed to be solely an arithmetic error."
+    },
+    {
+      "id": "wave-interior-town-of-princeton-2023-elected-officials",
+      "employerSlug": "town-of-princeton",
+      "employerName": "Town of Princeton",
+      "sector": "Municipalities",
+      "year": "2023",
+      "periodType": "calendar",
+      "periodStart": "2023-01-01",
+      "periodEnd": "2023-12-31",
+      "title": "Town of Princeton 2023 official elected-officials",
+      "sourceUrl": "https://princeton.ca/Home/DownloadDocument?docId=19a67da2-51d5-408d-ae4f-6d8b6300de51",
+      "sourceIndexUrl": "https://www.princeton.ca",
+      "sha256": "37c2b374a148799d4fc32bb8059738d37a83dfa567eb8127bbcd982fb64b599a",
+      "file": "town-of-princeton-2023-elected-officials.json.gzip",
+      "dataSha256": "8bab81c64f84324eb61f492bf14825a7cbd476582ebcd4fe412b8198bda0caae",
+      "provenanceFile": "evidence/town-of-princeton-2023-elected-officials.json.gzip",
+      "provenanceSha256": "d9352b633d0dc11fc78a467bf7f31addb3dc4a06c5abd47d0900f2b125224efb",
+      "category": "elected-officials",
+      "scope": "elected-officials",
+      "scopeDescription": "Published elected officials",
+      "threshold": null,
+      "thresholdComparison": null,
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "amountPrecision": "cents",
+      "status": "verified",
+      "verifiedOn": "2026-11-01",
+      "rowCount": 5,
+      "totalRemuneration": 78444.48,
+      "totalExpenses": 42386.49,
+      "pages": [
+        9
+      ],
+      "nameDisclosure": "published-name-as-disclosed",
+      "positionDisclosure": "published-where-present",
+      "notes": [
+        "The original printed calendar period establishes the year; upload paths and later meeting dates do not change it.",
+        "Remuneration preserves the published compensation column, including any disclosed benefits, overtime or other payments. It is not an annual base salary rate. Expense-inclusive totals are retained only in supporting evidence.",
+        "Names, initials and available positions remain as disclosed. Blank or dash expenses remain null; explicit zero and negative values are retained. These threshold disclosures are not complete employee rosters.",
+        "Every name, title and monetary component agrees between independently positioned PyMuPDF and Poppler words. All accepted salary pages were visually reviewed against the rendered originals."
+      ],
+      "publicWarning": null,
+      "validation": {
+        "originalFingerprintVerified": true,
+        "periodEvidence": [
+          {
+            "physicalPage": 1,
+            "text": "FOR THE YEAR ENDED DECEMBER 31, 2023"
+          }
+        ],
+        "independentReaders": [
+          "PyMuPDF positioned words",
+          "Poppler bbox-layout positioned words"
+        ],
+        "everyRowFieldAgreement": true,
+        "physicalPagesVisuallyReviewed": [
+          9
+        ],
+        "rowsIndependentlyChecked": 5,
+        "printedControls": [
+          {
+            "field": "pay",
+            "printedControl": 78444.48,
+            "rowSum": 78444.48,
+            "residual": 0,
+            "basis": "Printed named-cohort subtotal"
+          },
+          {
+            "field": "expenses",
+            "printedControl": 42386.49,
+            "rowSum": 42386.49,
+            "residual": 0,
+            "basis": "Printed named-cohort subtotal"
+          }
+        ],
+        "allPrintedComponentControlsExact": true,
+        "expensesControlPublished": true,
+        "publishedThresholdExceptions": null,
+        "evidenceFile": "evidence/town-of-princeton-2023-elected-officials.json.gzip"
+      }
+    },
+    {
+      "id": "wave-interior-district-of-barriere-2023-employee-remuneration",
+      "employerSlug": "district-of-barriere",
+      "employerName": "District of Barriere",
+      "sector": "Municipalities",
+      "year": "2023",
+      "periodType": "calendar",
+      "periodStart": "2023-01-01",
+      "periodEnd": "2023-12-31",
+      "title": "District of Barriere 2023 official employee-remuneration",
+      "sourceUrl": "https://barriere.municipalwebsites.ca/ckfinder/connector?command=Proxy&lang=en&type=Files&currentFolder=%2FFinancial%20Reports%2F&hash=c245c263ce0eced480effe66bbede6b4d46c15ae&fileName=5b%202023%20SOFI%20Report.pdf",
+      "sourceIndexUrl": "https://www.barriere.ca/p/finance",
+      "sha256": "b3063b1fe32631c5712a975d7b22ba4bb2d075d0e0ae3ff8dde6aade6870b36e",
+      "file": "district-of-barriere-2023-employee-remuneration.json.gzip",
+      "dataSha256": "e78c44145d82696c052bb5c21188cf2790972e121f204f8e996f78a429933f18",
+      "provenanceFile": "evidence/district-of-barriere-2023-employee-remuneration.json.gzip",
+      "provenanceSha256": "53b983310c70890022a6cac87c853dd5cc982ce437f6ca2c1ef02cdc66d38d1d",
+      "category": "employee-remuneration",
+      "scope": "named-employees-over-threshold",
+      "scopeDescription": "Named employees in source group headed remuneration and expenses exceeding $75,000",
+      "threshold": 75000,
+      "thresholdComparison": ">",
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "amountPrecision": "cents",
+      "status": "verified",
+      "verifiedOn": "2026-11-01",
+      "rowCount": 5,
+      "totalRemuneration": 467197.49,
+      "totalExpenses": 17331.52,
+      "pages": [
+        2
+      ],
+      "nameDisclosure": "published-name-as-disclosed",
+      "positionDisclosure": "published-where-present",
+      "notes": [
+        "The source group heading refers to remuneration and expenses exceeding $75,000. Separate remuneration and expense columns are retained; the total column is not used as pay.",
+        "The original printed calendar period establishes the year; upload paths and later meeting dates do not change it.",
+        "Remuneration preserves the published compensation column, including any disclosed benefits, overtime or other payments. It is not an annual base salary rate. Expense-inclusive totals are retained only in supporting evidence.",
+        "Names, initials and available positions remain as disclosed. Blank or dash expenses remain null; explicit zero and negative values are retained. These threshold disclosures are not complete employee rosters.",
+        "Every name, title and monetary component agrees between independently positioned PyMuPDF and Poppler words. All accepted salary pages were visually reviewed against the rendered originals."
+      ],
+      "publicWarning": null,
+      "validation": {
+        "originalFingerprintVerified": true,
+        "periodEvidence": [
+          {
+            "physicalPage": 1,
+            "text": "Year Ended December 31, 2023"
+          }
+        ],
+        "independentReaders": [
+          "PyMuPDF positioned words",
+          "Poppler bbox-layout positioned words"
+        ],
+        "everyRowFieldAgreement": true,
+        "physicalPagesVisuallyReviewed": [
+          2
+        ],
+        "rowsIndependentlyChecked": 5,
+        "printedControls": [
+          {
+            "field": "pay",
+            "printedControl": 467197.49,
+            "rowSum": 467197.49,
+            "residual": 0,
+            "basis": "Printed staff remuneration 964,498.38 minus under-threshold aggregate 497,300.89"
+          },
+          {
+            "field": "expenses",
+            "printedControl": 17331.52,
+            "rowSum": 17331.52,
+            "residual": 0,
+            "basis": "Printed staff expenses 56,165.34 minus under-threshold aggregate 38,833.82"
+          },
+          {
+            "field": "expenseInclusiveTotal",
+            "printedControl": 484529.01,
+            "rowSum": 484529.01,
+            "residual": 0,
+            "basis": "Printed combined staff total 1,020,663.72 minus under-threshold combined total 536,134.71"
+          }
+        ],
+        "allPrintedComponentControlsExact": true,
+        "expensesControlPublished": true,
+        "publishedThresholdExceptions": 0,
+        "evidenceFile": "evidence/district-of-barriere-2023-employee-remuneration.json.gzip",
+        "completeEmployeeSchedule": true
+      },
+      "completeEmployeeSchedule": true
+    },
+    {
+      "id": "wave-interior-district-of-barriere-2023-elected-officials",
+      "employerSlug": "district-of-barriere",
+      "employerName": "District of Barriere",
+      "sector": "Municipalities",
+      "year": "2023",
+      "periodType": "calendar",
+      "periodStart": "2023-01-01",
+      "periodEnd": "2023-12-31",
+      "title": "District of Barriere 2023 official elected-officials",
+      "sourceUrl": "https://barriere.municipalwebsites.ca/ckfinder/connector?command=Proxy&lang=en&type=Files&currentFolder=%2FFinancial%20Reports%2F&hash=c245c263ce0eced480effe66bbede6b4d46c15ae&fileName=5b%202023%20SOFI%20Report.pdf",
+      "sourceIndexUrl": "https://www.barriere.ca/p/finance",
+      "sha256": "b3063b1fe32631c5712a975d7b22ba4bb2d075d0e0ae3ff8dde6aade6870b36e",
+      "file": "district-of-barriere-2023-elected-officials.json.gzip",
+      "dataSha256": "ae22ff5be9432c6406e2bedb151a604d0c6c03853775c3a9d943748e11257a63",
+      "provenanceFile": "evidence/district-of-barriere-2023-elected-officials.json.gzip",
+      "provenanceSha256": "377bdf55467fee3b89af6e798e6ac562b5e91e2366382b79b398a437c6e844c5",
+      "category": "elected-officials",
+      "scope": "elected-officials",
+      "scopeDescription": "Published elected officials",
+      "threshold": null,
+      "thresholdComparison": null,
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "amountPrecision": "cents",
+      "status": "verified",
+      "verifiedOn": "2026-11-01",
+      "rowCount": 7,
+      "totalRemuneration": 67495.68,
+      "totalExpenses": 10025.3,
+      "pages": [
+        2
+      ],
+      "nameDisclosure": "published-name-as-disclosed",
+      "positionDisclosure": "published-where-present",
+      "notes": [
+        "The original printed calendar period establishes the year; upload paths and later meeting dates do not change it.",
+        "Remuneration preserves the published compensation column, including any disclosed benefits, overtime or other payments. It is not an annual base salary rate. Expense-inclusive totals are retained only in supporting evidence.",
+        "Names, initials and available positions remain as disclosed. Blank or dash expenses remain null; explicit zero and negative values are retained. These threshold disclosures are not complete employee rosters.",
+        "Every name, title and monetary component agrees between independently positioned PyMuPDF and Poppler words. All accepted salary pages were visually reviewed against the rendered originals."
+      ],
+      "publicWarning": null,
+      "validation": {
+        "originalFingerprintVerified": true,
+        "periodEvidence": [
+          {
+            "physicalPage": 1,
+            "text": "Year Ended December 31, 2023"
+          }
+        ],
+        "independentReaders": [
+          "PyMuPDF positioned words",
+          "Poppler bbox-layout positioned words"
+        ],
+        "everyRowFieldAgreement": true,
+        "physicalPagesVisuallyReviewed": [
+          2
+        ],
+        "rowsIndependentlyChecked": 7,
+        "printedControls": [
+          {
+            "field": "pay",
+            "printedControl": 67495.68,
+            "rowSum": 67495.68,
+            "residual": 0,
+            "basis": "Printed named-cohort subtotal"
+          },
+          {
+            "field": "expenses",
+            "printedControl": 10025.3,
+            "rowSum": 10025.3,
+            "residual": 0,
+            "basis": "Printed named-cohort subtotal"
+          },
+          {
+            "field": "expenseInclusiveTotal",
+            "printedControl": 77520.98,
+            "rowSum": 77520.98,
+            "residual": 0,
+            "basis": "Printed named-cohort subtotal"
+          }
+        ],
+        "allPrintedComponentControlsExact": true,
+        "expensesControlPublished": true,
+        "publishedThresholdExceptions": null,
+        "evidenceFile": "evidence/district-of-barriere-2023-elected-officials.json.gzip"
+      }
+    },
+    {
+      "id": "wave-interior-sun-peaks-mountain-resort-municipality-2024-employee-remuneration",
+      "employerSlug": "sun-peaks-mountain-resort-municipality",
+      "employerName": "Sun Peaks Mountain Resort Municipality",
+      "sector": "Municipalities",
+      "year": "2024",
+      "periodType": "calendar",
+      "periodStart": "2024-01-01",
+      "periodEnd": "2024-12-31",
+      "title": "Sun Peaks Mountain Resort Municipality 2024 official employee-remuneration",
+      "sourceUrl": "https://sunpeaksmunicipality.ca/sites/4/files/2026-03/2024%20SOFI%20Report.pdf",
+      "sourceIndexUrl": "https://sunpeaksmunicipality.ca/municipal-hall/finance-and-taxes/financial-plans-and-reports",
+      "sha256": "b213620420e860247a97045f9bfffc31ab96b829231357a6d2ace1673300875d",
+      "file": "sun-peaks-mountain-resort-municipality-2024-employee-remuneration.json.gzip",
+      "dataSha256": "a6caf38d7272d8348daa9efaefcb314296630809875f5493d4e5f22d31bc1a97",
+      "provenanceFile": "evidence/sun-peaks-mountain-resort-municipality-2024-employee-remuneration.json.gzip",
+      "provenanceSha256": "df4e65b60a675f208d4f0164f7de5227d90f06970e5a7b43e314728ac4e51ddb",
+      "category": "employee-remuneration",
+      "scope": "named-employees-over-threshold",
+      "scopeDescription": "Published named employee schedule",
+      "threshold": 75000,
+      "thresholdComparison": ">",
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "amountPrecision": "whole-dollars",
+      "status": "verified",
+      "verifiedOn": "2026-11-01",
+      "rowCount": 15,
+      "totalRemuneration": 1597103,
+      "totalExpenses": 52866,
+      "pages": [
+        7
+      ],
+      "nameDisclosure": "published-name-as-disclosed",
+      "positionDisclosure": "published-where-present",
+      "notes": [
+        "The original has a text-recognition layer. All employee rows were checked against the rendered page; McDougall is explicitly corrected from the source glyphs, rather than inheriting the text-layer token l\\4cDougall. Published title spelling is retained.",
+        "The original printed calendar period establishes the year; upload paths and later meeting dates do not change it.",
+        "Remuneration preserves the published compensation column, including any disclosed benefits, overtime or other payments. It is not an annual base salary rate. Expense-inclusive totals are retained only in supporting evidence.",
+        "Names, initials and available positions remain as disclosed. Blank or dash expenses remain null; explicit zero and negative values are retained. These threshold disclosures are not complete employee rosters.",
+        "Every name, title and monetary component agrees between independently positioned PyMuPDF and Poppler words. All accepted salary pages were visually reviewed against the rendered originals."
+      ],
+      "publicWarning": "Published row sums minus printed named-cohort controls: remuneration -1 CAD, expenses +0 CAD. Amounts are retained as printed; the cause is unconfirmed.",
+      "validation": {
+        "originalFingerprintVerified": true,
+        "periodEvidence": [
+          {
+            "physicalPage": 7,
+            "text": "For the Year End December 31,2024"
+          }
+        ],
+        "independentReaders": [
+          "PyMuPDF positioned words",
+          "Poppler bbox-layout positioned words"
+        ],
+        "everyRowFieldAgreement": true,
+        "physicalPagesVisuallyReviewed": [
+          7
+        ],
+        "rowsIndependentlyChecked": 15,
+        "printedControls": [
+          {
+            "field": "pay",
+            "printedControl": 1597104,
+            "rowSum": 1597103,
+            "residual": -1,
+            "basis": "Printed named-cohort subtotal"
+          },
+          {
+            "field": "expenses",
+            "printedControl": 52866,
+            "rowSum": 52866,
+            "residual": 0,
+            "basis": "Printed named-cohort subtotal"
+          }
+        ],
+        "allPrintedComponentControlsExact": false,
+        "expensesControlPublished": true,
+        "publishedThresholdExceptions": 0,
+        "evidenceFile": "evidence/sun-peaks-mountain-resort-municipality-2024-employee-remuneration.json.gzip",
+        "completeEmployeeSchedule": true
+      },
+      "completeEmployeeSchedule": true
+    },
+    {
+      "id": "wave-interior-district-of-coldstream-2021-employee-remuneration",
+      "employerSlug": "district-of-coldstream",
+      "employerName": "District of Coldstream",
+      "sector": "Municipalities",
+      "year": "2021",
+      "periodType": "calendar",
+      "periodStart": "2021-01-01",
+      "periodEnd": "2021-12-31",
+      "title": "District of Coldstream 2021 official employee-remuneration",
+      "sourceUrl": "https://coldstream.civicweb.net/document/84263/",
+      "sourceIndexUrl": "https://coldstream.civicweb.net/document/84263/",
+      "sha256": "361faaf828f2bbc690f43028e2fffd3ddbf3985246844b2587815bddc8d5b98c",
+      "file": "district-of-coldstream-2021-employee-remuneration.json.gzip",
+      "dataSha256": "ac68983029159d797304ecbe4a03b526aea0df149b2ed3067e59fbcd98616693",
+      "provenanceFile": "evidence/district-of-coldstream-2021-employee-remuneration.json.gzip",
+      "provenanceSha256": "606fdbfbd40a240f4b153f3b6043fd60629a3a2c2344ce3427279d5e48da64a2",
+      "category": "employee-remuneration",
+      "scope": "named-employees-over-threshold",
+      "scopeDescription": "Published named employee schedule",
+      "threshold": 75000,
+      "thresholdComparison": ">",
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "amountPrecision": "cents",
+      "status": "verified",
+      "verifiedOn": "2026-11-01",
+      "rowCount": 19,
+      "totalRemuneration": 1825206.04,
+      "totalExpenses": 23794.17,
+      "pages": [
+        63
+      ],
+      "nameDisclosure": "published-name-as-disclosed",
+      "positionDisclosure": "published-where-present",
+      "notes": [
+        "The integrated 2021 annual report explicitly states its calendar year ending December31,2021 in the CFO report. The remuneration schedule carries the matching Annual Report2021 footer; both locations are retained as period evidence. Names are published without surname/given-name punctuation and are retained without inserting it.",
+        "All19 individual expense cells are numeric, and every printed row total equals remuneration plus expenses. The two printed expense-related cohort subtotals exceed the individual row sums by $300; no amount or subtotal has been adjusted.",
+        "The original printed calendar period establishes the year; upload paths and later meeting dates do not change it.",
+        "Remuneration preserves the published compensation column, including any disclosed benefits, overtime or other payments. It is not an annual base salary rate. Expense-inclusive totals are retained only in supporting evidence.",
+        "Names, initials and available positions remain as disclosed. Blank or dash expenses remain null; explicit zero and negative values are retained. These threshold disclosures are not complete employee rosters.",
+        "Every name, title and monetary component agrees between independently positioned PyMuPDF and Poppler words. All accepted salary pages were visually reviewed against the rendered originals."
+      ],
+      "publicWarning": "The 19 printed employee expense amounts sum to $23,794.17, $300 below the printed $24,094.17 subtotal. Their expense-inclusive totals likewise sum to $1,849,000.21, $300 below the printed $1,849,300.21 subtotal. Remuneration reconciles exactly. Published individual amounts remain unchanged; the cause of the subtotal inconsistency is unconfirmed.",
+      "validation": {
+        "originalFingerprintVerified": true,
+        "periodEvidence": [
+          {
+            "physicalPage": 10,
+            "text": "for the year ended December 31, 2021"
+          },
+          {
+            "physicalPage": 63,
+            "text": "Annual Report 2021"
+          }
+        ],
+        "independentReaders": [
+          "PyMuPDF positioned words",
+          "Poppler bbox-layout positioned words"
+        ],
+        "everyRowFieldAgreement": true,
+        "physicalPagesVisuallyReviewed": [
+          63
+        ],
+        "rowsIndependentlyChecked": 19,
+        "printedControls": [
+          {
+            "field": "pay",
+            "printedControl": 1825206.04,
+            "rowSum": 1825206.04,
+            "residual": 0,
+            "basis": "Printed named-cohort subtotal"
+          },
+          {
+            "field": "expenses",
+            "printedControl": 24094.17,
+            "rowSum": 23794.17,
+            "residual": -300,
+            "basis": "Printed named-cohort subtotal"
+          },
+          {
+            "field": "expenseInclusiveTotal",
+            "printedControl": 1849300.21,
+            "rowSum": 1849000.21,
+            "residual": -300,
+            "basis": "Printed named-cohort subtotal"
+          }
+        ],
+        "allPrintedComponentControlsExact": false,
+        "expensesControlPublished": true,
+        "publishedThresholdExceptions": 0,
+        "evidenceFile": "evidence/district-of-coldstream-2021-employee-remuneration.json.gzip",
+        "completeEmployeeSchedule": true,
+        "expensesComplete": true,
+        "independentCrossReviewFile": "research/salaries/municipal-next-pass/north/cross-review-interior-held.json",
+        "acceptanceBasis": "Faithful complete named employee transcription with explicit unresolved source-control qualification after independent full-row and rendered-page review."
+      },
+      "completeEmployeeSchedule": true,
+      "expensesNote": "All19 individual expense cells are numeric, and every printed row total equals remuneration plus expenses. The two printed expense-related cohort subtotals exceed the individual row sums by $300; no amount or subtotal has been adjusted."
+    },
+    {
+      "id": "wave-interior-district-of-coldstream-2021-elected-officials",
+      "employerSlug": "district-of-coldstream",
+      "employerName": "District of Coldstream",
+      "sector": "Municipalities",
+      "year": "2021",
+      "periodType": "calendar",
+      "periodStart": "2021-01-01",
+      "periodEnd": "2021-12-31",
+      "title": "District of Coldstream 2021 official elected-officials",
+      "sourceUrl": "https://coldstream.civicweb.net/document/84263/",
+      "sourceIndexUrl": "https://coldstream.civicweb.net/document/84263/",
+      "sha256": "361faaf828f2bbc690f43028e2fffd3ddbf3985246844b2587815bddc8d5b98c",
+      "file": "district-of-coldstream-2021-elected-officials.json.gzip",
+      "dataSha256": "02cbdd993544f768018fb038e4f123bd98168e0e1adfe72d3de1a9f259dd3939",
+      "provenanceFile": "evidence/district-of-coldstream-2021-elected-officials.json.gzip",
+      "provenanceSha256": "4828cded99383f5af4a98d20c7b36df21624476d564865e7002f70c9319f47f7",
+      "category": "elected-officials",
+      "scope": "elected-officials",
+      "scopeDescription": "Published elected officials",
+      "threshold": null,
+      "thresholdComparison": null,
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "amountPrecision": "cents",
+      "status": "verified",
+      "verifiedOn": "2026-11-01",
+      "rowCount": 7,
+      "totalRemuneration": 141998.72,
+      "totalExpenses": 1160.85,
+      "pages": [
+        63
+      ],
+      "nameDisclosure": "published-name-as-disclosed",
+      "positionDisclosure": "published-where-present",
+      "notes": [
+        "The integrated 2021 annual report explicitly states its calendar year ending December31,2021 in the CFO report. The remuneration schedule carries the matching Annual Report2021 footer; both locations are retained as period evidence. Names are published without surname/given-name punctuation and are retained without inserting it.",
+        "The original printed calendar period establishes the year; upload paths and later meeting dates do not change it.",
+        "Remuneration preserves the published compensation column, including any disclosed benefits, overtime or other payments. It is not an annual base salary rate. Expense-inclusive totals are retained only in supporting evidence.",
+        "Names, initials and available positions remain as disclosed. Blank or dash expenses remain null; explicit zero and negative values are retained. These threshold disclosures are not complete employee rosters.",
+        "Every name, title and monetary component agrees between independently positioned PyMuPDF and Poppler words. All accepted salary pages were visually reviewed against the rendered originals."
+      ],
+      "publicWarning": null,
+      "validation": {
+        "originalFingerprintVerified": true,
+        "periodEvidence": [
+          {
+            "physicalPage": 10,
+            "text": "for the year ended December 31, 2021"
+          },
+          {
+            "physicalPage": 63,
+            "text": "Annual Report 2021"
+          }
+        ],
+        "independentReaders": [
+          "PyMuPDF positioned words",
+          "Poppler bbox-layout positioned words"
+        ],
+        "everyRowFieldAgreement": true,
+        "physicalPagesVisuallyReviewed": [
+          63
+        ],
+        "rowsIndependentlyChecked": 7,
+        "printedControls": [
+          {
+            "field": "pay",
+            "printedControl": 141998.72,
+            "rowSum": 141998.72,
+            "residual": 0,
+            "basis": "Printed named-cohort subtotal"
+          },
+          {
+            "field": "expenses",
+            "printedControl": 1160.85,
+            "rowSum": 1160.85,
+            "residual": 0,
+            "basis": "Printed named-cohort subtotal"
+          },
+          {
+            "field": "expenseInclusiveTotal",
+            "printedControl": 143159.57,
+            "rowSum": 143159.57,
+            "residual": 0,
+            "basis": "Printed named-cohort subtotal"
+          }
+        ],
+        "allPrintedComponentControlsExact": true,
+        "expensesControlPublished": true,
+        "publishedThresholdExceptions": null,
+        "evidenceFile": "evidence/district-of-coldstream-2021-elected-officials.json.gzip"
+      }
+    },
+    {
+      "id": "wave-interior-district-of-clearwater-2023-employee-remuneration",
+      "employerSlug": "district-of-clearwater",
+      "employerName": "District of Clearwater",
+      "sector": "Municipalities",
+      "year": "2023",
+      "periodType": "calendar",
+      "periodStart": "2023-01-01",
+      "periodEnd": "2023-12-31",
+      "title": "District of Clearwater 2023 official employee-remuneration",
+      "sourceUrl": "https://districtofclearwater.civicweb.net/document/85147",
+      "sourceIndexUrl": "https://www.districtofclearwater.com/municipal-hall/finance-services/",
+      "sha256": "3bb679eaa53ce3f819e57ddd1a6499c83781d22be3fb67257d18fd3117f28e49",
+      "file": "district-of-clearwater-2023-employee-remuneration.json.gzip",
+      "dataSha256": "d38c47cbbdd9dee0c395aa9d094ef6718357ee75d69231435b33b5e596655e45",
+      "provenanceFile": "evidence/district-of-clearwater-2023-employee-remuneration.json.gzip",
+      "provenanceSha256": "9c228925dc38a78239f5b85f8bc7cd6be8968efc48f6c52bcc8a833492567865",
+      "category": "employee-remuneration",
+      "scope": "named-employees-over-threshold",
+      "scopeDescription": "Published named employee schedule",
+      "threshold": 75000,
+      "thresholdComparison": ">",
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "amountPrecision": "cents",
+      "status": "verified",
+      "verifiedOn": "2026-11-01",
+      "rowCount": 9,
+      "totalRemuneration": 852348.16,
+      "totalExpenses": 36591.22,
+      "pages": [
+        43
+      ],
+      "nameDisclosure": "published-name-as-disclosed",
+      "positionDisclosure": "published-where-present",
+      "notes": [
+        "The original printed calendar period establishes the year; upload paths and later meeting dates do not change it.",
+        "Remuneration preserves the published compensation column, including any disclosed benefits, overtime or other payments. It is not an annual base salary rate. Expense-inclusive totals are retained only in supporting evidence.",
+        "Names, initials and available positions remain as disclosed. Blank or dash expenses remain null; explicit zero and negative values are retained. These threshold disclosures are not complete employee rosters.",
+        "Every name, title and monetary component agrees between independently positioned PyMuPDF and Poppler words. All accepted salary pages were visually reviewed against the rendered originals."
+      ],
+      "publicWarning": null,
+      "validation": {
+        "originalFingerprintVerified": true,
+        "periodEvidence": [
+          {
+            "physicalPage": 43,
+            "text": "FOR PERIOD JANUARY 1 TO DECEMBER 31, 2023"
+          }
+        ],
+        "independentReaders": [
+          "PyMuPDF positioned words",
+          "Poppler bbox-layout positioned words"
+        ],
+        "everyRowFieldAgreement": true,
+        "physicalPagesVisuallyReviewed": [
+          43
+        ],
+        "rowsIndependentlyChecked": 9,
+        "printedControls": [
+          {
+            "field": "pay",
+            "printedControl": 852348.16,
+            "rowSum": 852348.16,
+            "residual": 0,
+            "basis": "Printed named-cohort subtotal"
+          },
+          {
+            "field": "expenses",
+            "printedControl": 36591.22,
+            "rowSum": 36591.22,
+            "residual": 0,
+            "basis": "Printed named-cohort subtotal"
+          }
+        ],
+        "allPrintedComponentControlsExact": true,
+        "expensesControlPublished": true,
+        "publishedThresholdExceptions": 0,
+        "evidenceFile": "evidence/district-of-clearwater-2023-employee-remuneration.json.gzip",
+        "completeEmployeeSchedule": true
+      },
+      "completeEmployeeSchedule": true
+    },
+    {
+      "id": "wave-interior-district-of-clearwater-2023-elected-officials",
+      "employerSlug": "district-of-clearwater",
+      "employerName": "District of Clearwater",
+      "sector": "Municipalities",
+      "year": "2023",
+      "periodType": "calendar",
+      "periodStart": "2023-01-01",
+      "periodEnd": "2023-12-31",
+      "title": "District of Clearwater 2023 official elected-officials",
+      "sourceUrl": "https://districtofclearwater.civicweb.net/document/85147",
+      "sourceIndexUrl": "https://www.districtofclearwater.com/municipal-hall/finance-services/",
+      "sha256": "3bb679eaa53ce3f819e57ddd1a6499c83781d22be3fb67257d18fd3117f28e49",
+      "file": "district-of-clearwater-2023-elected-officials.json.gzip",
+      "dataSha256": "f02ce02825130d53bebb69ed47c6da145e4d57278fa5f3476df74db50154c577",
+      "provenanceFile": "evidence/district-of-clearwater-2023-elected-officials.json.gzip",
+      "provenanceSha256": "b4c228d6a736455b3bf004db18a9c62616c5b6aeef273db941d539b2738d9a2b",
+      "category": "elected-officials",
+      "scope": "elected-officials",
+      "scopeDescription": "Published elected officials",
+      "threshold": null,
+      "thresholdComparison": null,
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "amountPrecision": "cents",
+      "status": "verified",
+      "verifiedOn": "2026-11-01",
+      "rowCount": 7,
+      "totalRemuneration": 96984.23,
+      "totalExpenses": 37466.22,
+      "pages": [
+        43
+      ],
+      "nameDisclosure": "published-name-as-disclosed",
+      "positionDisclosure": "published-where-present",
+      "notes": [
+        "The original printed calendar period establishes the year; upload paths and later meeting dates do not change it.",
+        "Remuneration preserves the published compensation column, including any disclosed benefits, overtime or other payments. It is not an annual base salary rate. Expense-inclusive totals are retained only in supporting evidence.",
+        "Names, initials and available positions remain as disclosed. Blank or dash expenses remain null; explicit zero and negative values are retained. These threshold disclosures are not complete employee rosters.",
+        "Every name, title and monetary component agrees between independently positioned PyMuPDF and Poppler words. All accepted salary pages were visually reviewed against the rendered originals."
+      ],
+      "publicWarning": null,
+      "validation": {
+        "originalFingerprintVerified": true,
+        "periodEvidence": [
+          {
+            "physicalPage": 43,
+            "text": "FOR PERIOD JANUARY 1 TO DECEMBER 31, 2023"
+          }
+        ],
+        "independentReaders": [
+          "PyMuPDF positioned words",
+          "Poppler bbox-layout positioned words"
+        ],
+        "everyRowFieldAgreement": true,
+        "physicalPagesVisuallyReviewed": [
+          43
+        ],
+        "rowsIndependentlyChecked": 7,
+        "printedControls": [
+          {
+            "field": "pay",
+            "printedControl": 96984.23,
+            "rowSum": 96984.23,
+            "residual": 0,
+            "basis": "Printed named-cohort subtotal"
+          },
+          {
+            "field": "expenses",
+            "printedControl": 37466.22,
+            "rowSum": 37466.22,
+            "residual": 0,
+            "basis": "Printed named-cohort subtotal"
+          }
+        ],
+        "allPrintedComponentControlsExact": true,
+        "expensesControlPublished": true,
+        "publishedThresholdExceptions": null,
+        "evidenceFile": "evidence/district-of-clearwater-2023-elected-officials.json.gzip"
+      }
+    },
+    {
+      "id": "wave-interior-district-of-sparwood-2024-employee-remuneration",
+      "employerSlug": "district-of-sparwood",
+      "employerName": "District of Sparwood",
+      "sector": "Municipalities",
+      "year": "2024",
+      "periodType": "calendar",
+      "periodStart": "2024-01-01",
+      "periodEnd": "2024-12-31",
+      "title": "District of Sparwood 2024 official employee-remuneration",
+      "sourceUrl": "https://sparwood.civicweb.net/document/163055",
+      "sourceIndexUrl": "https://www.sparwood.ca/municipal-hall/budget-taxes",
+      "sha256": "26886ddeee87c195226f98004529559812dd7a6629207666196324d9ae499b12",
+      "file": "district-of-sparwood-2024-employee-remuneration.json.gzip",
+      "dataSha256": "937c97c0c5e08b4553c4f874df645c814bdced8e50810186903a830427cd8c81",
+      "provenanceFile": "evidence/district-of-sparwood-2024-employee-remuneration.json.gzip",
+      "provenanceSha256": "0f14408dce8feb49db1a396cb4a2d449573aa76efa4bf4444bcde2fa66d8b50e",
+      "category": "employee-remuneration",
+      "scope": "named-employees-over-threshold",
+      "scopeDescription": "Published named employee schedule",
+      "threshold": 75000,
+      "thresholdComparison": ">",
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "amountPrecision": "whole-dollars",
+      "status": "verified",
+      "verifiedOn": "2026-11-01",
+      "rowCount": 28,
+      "totalRemuneration": 2894757,
+      "totalExpenses": 99374,
+      "pages": [
+        3
+      ],
+      "nameDisclosure": "published-name-as-disclosed",
+      "positionDisclosure": "published-where-present",
+      "notes": [
+        "All28 employee rows were checked against the rendered original. Explicit text-layer name fixes preserve the printed glyphs LIU, PAULI and LUCAS; full given names remain as disclosed in2024 and are not substituted into other years.",
+        "The original printed calendar period establishes the year; upload paths and later meeting dates do not change it.",
+        "Remuneration preserves the published compensation column, including any disclosed benefits, overtime or other payments. It is not an annual base salary rate. Expense-inclusive totals are retained only in supporting evidence.",
+        "Names, initials and available positions remain as disclosed. Blank or dash expenses remain null; explicit zero and negative values are retained. These threshold disclosures are not complete employee rosters.",
+        "Every name, title and monetary component agrees between independently positioned PyMuPDF and Poppler words. All accepted salary pages were visually reviewed against the rendered originals."
+      ],
+      "publicWarning": null,
+      "validation": {
+        "originalFingerprintVerified": true,
+        "periodEvidence": [
+          {
+            "physicalPage": 3,
+            "text": "For the Year ended December 31,2024"
+          }
+        ],
+        "independentReaders": [
+          "PyMuPDF positioned words",
+          "Poppler bbox-layout positioned words"
+        ],
+        "everyRowFieldAgreement": true,
+        "physicalPagesVisuallyReviewed": [
+          3
+        ],
+        "rowsIndependentlyChecked": 28,
+        "printedControls": [
+          {
+            "field": "pay",
+            "printedControl": 2894757,
+            "rowSum": 2894757,
+            "residual": 0,
+            "basis": "Printed named-cohort subtotal"
+          },
+          {
+            "field": "expenses",
+            "printedControl": 99374,
+            "rowSum": 99374,
+            "residual": 0,
+            "basis": "Printed named-cohort subtotal"
+          }
+        ],
+        "allPrintedComponentControlsExact": true,
+        "expensesControlPublished": true,
+        "publishedThresholdExceptions": 0,
+        "evidenceFile": "evidence/district-of-sparwood-2024-employee-remuneration.json.gzip",
+        "completeEmployeeSchedule": true
+      },
+      "completeEmployeeSchedule": true
+    },
+    {
+      "id": "wave-interior-district-of-sparwood-2024-elected-officials",
+      "employerSlug": "district-of-sparwood",
+      "employerName": "District of Sparwood",
+      "sector": "Municipalities",
+      "year": "2024",
+      "periodType": "calendar",
+      "periodStart": "2024-01-01",
+      "periodEnd": "2024-12-31",
+      "title": "District of Sparwood 2024 official elected-officials",
+      "sourceUrl": "https://sparwood.civicweb.net/document/163055",
+      "sourceIndexUrl": "https://www.sparwood.ca/municipal-hall/budget-taxes",
+      "sha256": "26886ddeee87c195226f98004529559812dd7a6629207666196324d9ae499b12",
+      "file": "district-of-sparwood-2024-elected-officials.json.gzip",
+      "dataSha256": "9fde5ceaa5206b018194a80580fe89330fae9737105f27048f79c870fde9d5da",
+      "provenanceFile": "evidence/district-of-sparwood-2024-elected-officials.json.gzip",
+      "provenanceSha256": "8c46bc231f7778969bb594e914ad2d1e21ed814ae89dd6e9e7d5fd5c647d17ea",
+      "category": "elected-officials",
+      "scope": "elected-officials",
+      "scopeDescription": "Published elected officials",
+      "threshold": null,
+      "thresholdComparison": null,
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "amountPrecision": "whole-dollars",
+      "status": "verified",
+      "verifiedOn": "2026-11-01",
+      "rowCount": 7,
+      "totalRemuneration": 169125,
+      "totalExpenses": 33619,
+      "pages": [
+        3
+      ],
+      "nameDisclosure": "published-name-as-disclosed",
+      "positionDisclosure": "published-where-present",
+      "notes": [
+        "All28 employee rows were checked against the rendered original. Explicit text-layer name fixes preserve the printed glyphs LIU, PAULI and LUCAS; full given names remain as disclosed in2024 and are not substituted into other years.",
+        "The original printed calendar period establishes the year; upload paths and later meeting dates do not change it.",
+        "Remuneration preserves the published compensation column, including any disclosed benefits, overtime or other payments. It is not an annual base salary rate. Expense-inclusive totals are retained only in supporting evidence.",
+        "Names, initials and available positions remain as disclosed. Blank or dash expenses remain null; explicit zero and negative values are retained. These threshold disclosures are not complete employee rosters.",
+        "Every name, title and monetary component agrees between independently positioned PyMuPDF and Poppler words. All accepted salary pages were visually reviewed against the rendered originals."
+      ],
+      "publicWarning": null,
+      "validation": {
+        "originalFingerprintVerified": true,
+        "periodEvidence": [
+          {
+            "physicalPage": 3,
+            "text": "For the Year ended December 31,2024"
+          }
+        ],
+        "independentReaders": [
+          "PyMuPDF positioned words",
+          "Poppler bbox-layout positioned words"
+        ],
+        "everyRowFieldAgreement": true,
+        "physicalPagesVisuallyReviewed": [
+          3
+        ],
+        "rowsIndependentlyChecked": 7,
+        "printedControls": [
+          {
+            "field": "pay",
+            "printedControl": 169125,
+            "rowSum": 169125,
+            "residual": 0,
+            "basis": "Printed named-cohort subtotal"
+          },
+          {
+            "field": "expenses",
+            "printedControl": 33619,
+            "rowSum": 33619,
+            "residual": 0,
+            "basis": "Printed named-cohort subtotal"
+          }
+        ],
+        "allPrintedComponentControlsExact": true,
+        "expensesControlPublished": true,
+        "publishedThresholdExceptions": null,
+        "evidenceFile": "evidence/district-of-sparwood-2024-elected-officials.json.gzip"
+      }
+    }
+  ]
+}

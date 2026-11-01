@@ -14,7 +14,8 @@ const baselineManifest = json(join(research, 'baseline-manifest.json'))
 const baselineBytes = readFileSync(join(research, baselineManifest.file))
 if (sha256(baselineBytes) !== baselineManifest.sha256) throw new Error('Baseline fingerprint mismatch')
 const baseline = JSON.parse(gunzipSync(baselineBytes))
-const directories = ['municipal-north', 'municipal-island', 'municipal-lower-mainland', 'municipal-small', 'municipal-ocr', 'sector-municipal', 'sector-government-police']
+const directories = ['municipal-north', 'municipal-island', 'municipal-lower-mainland', 'municipal-small', 'municipal-ocr', 'sector-municipal', 'sector-government-police',
+  ...json(join(research, 'collections.json')).collections.filter(name => name.startsWith('municipal-wave-'))]
 const official = new Map()
 const fingerprints = []
 for (const directory of directories) {

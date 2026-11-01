@@ -1,0 +1,1655 @@
+{
+  "version": 1,
+  "asOf": "2026-10-31",
+  "timezone": "America/Vancouver",
+  "baselineCommit": "5e5fe01",
+  "baselineDatasetRecords": 917420,
+  "scope": "Island and coast outside Capital and Cowichan; 22municipalities plus distinct shishalh governance case",
+  "summary": {
+    "rosterEntriesReviewed": 23,
+    "newJurisdictions": 7,
+    "newSources": 14,
+    "newOfficialRows": 219,
+    "employeeRows": 179,
+    "councilRows": 40,
+    "externalRequestsSent": 0
+  },
+  "entries": [
+    {
+      "municipality": "Courtenay",
+      "employerSlug": "city-of-courtenay",
+      "employerName": "City of Courtenay",
+      "regionalDistrict": "Comox Valley Regional District",
+      "archiveUrl": "https://www.courtenay.ca/city-hall/financial-services",
+      "baselineOfficialRecords": 106,
+      "baselineCompiledRecords": 0,
+      "newSources": [
+        {
+          "id": "wave-island-city-of-courtenay-2025-employees",
+          "year": "2025",
+          "category": "employee-remuneration",
+          "rows": 99,
+          "sha256": "f62a90a67f1067b6c771fd41b3109ee7ee998991eda3fde5fdb4c7b56c36d7dd",
+          "sourceUrl": "https://www.courtenay.ca/media/file/2025-statement-financial-information",
+          "pages": [
+            33,
+            34,
+            35
+          ],
+          "publicWarning": "Published named rows differ from the printed named subtotals: remuneration $+0; expenses $+1. The cause is unresolved; every published cell is retained unchanged."
+        },
+        {
+          "id": "wave-island-city-of-courtenay-2025-council",
+          "year": "2025",
+          "category": "elected-officials",
+          "rows": 7,
+          "sha256": "f62a90a67f1067b6c771fd41b3109ee7ee998991eda3fde5fdb4c7b56c36d7dd",
+          "sourceUrl": "https://www.courtenay.ca/media/file/2025-statement-financial-information",
+          "pages": [
+            32
+          ],
+          "publicWarning": "Published named rows differ from the printed named subtotals: remuneration $-3; expenses $+1. The cause is unresolved; every published cell is retained unchanged."
+        }
+      ],
+      "newOfficialRows": 106,
+      "originalRetrieval": {
+        "municipality": "Courtenay",
+        "employerSlug": "city-of-courtenay",
+        "employerName": "City of Courtenay",
+        "sourceIndexUrl": "https://www.courtenay.ca/city-hall/financial-services",
+        "sourceUrl": "https://www.courtenay.ca/media/file/2025-statement-financial-information",
+        "label": "2025 Statement of Financial Information [PDF/3.1MB]",
+        "status": "downloaded",
+        "bytes": 3273852,
+        "sha256": "f62a90a67f1067b6c771fd41b3109ee7ee998991eda3fde5fdb4c7b56c36d7dd",
+        "pdfPages": 45,
+        "nativeTextChars": 79779,
+        "remunerationPages": [
+          2,
+          32,
+          33,
+          34,
+          35
+        ],
+        "localPdf": "/tmp/pofbc-wave-island/city-of-courtenay.pdf",
+        "retrievedOn": "2026-10-31",
+        "dateTimezone": "America/Vancouver"
+      },
+      "indexRetrieval": null,
+      "retainedSalaryLeads": [
+        {
+          "label": "Statement of Financial Information",
+          "url": "https://www.courtenay.ca/city-hall/financial-services/annual-financial-plan/statement-financial-information",
+          "status": "linked-unreviewed"
+        },
+        {
+          "label": "2020 Statement of Financial Information [PDF/3.1MB]",
+          "url": "https://www.courtenay.ca/media/file/2020-statement-financial-informationpdf",
+          "status": "linked-unreviewed"
+        },
+        {
+          "label": "2021 Statement of Financial Information [PDF/3.2MB]",
+          "url": "https://www.courtenay.ca/media/file/2021-statement-financial-informationpdf",
+          "status": "linked-unreviewed"
+        },
+        {
+          "label": "2022 Statement of Financial Information [PDF/4.2MB]",
+          "url": "https://www.courtenay.ca/media/file/2022-statement-financial-informationpdf",
+          "status": "linked-unreviewed"
+        },
+        {
+          "label": "2023 Statement of Financial Information [PDF/2.4MB]",
+          "url": "https://www.courtenay.ca/media/file/2023-statement-financial-informationpdf",
+          "status": "linked-unreviewed"
+        },
+        {
+          "label": "2024 Statement of Financial Information [PDF/3.9MB]",
+          "url": "https://www.courtenay.ca/media/file/2024-statement-financial-informationpdf",
+          "status": "linked-unreviewed"
+        },
+        {
+          "label": "City of Courtenay 2025 elected-officials",
+          "url": "https://www.courtenay.ca/media/file/2025-statement-financial-information",
+          "status": "imported"
+        }
+      ],
+      "historicalCompleteness": "Not established; linked files and failed retrievals are distinct from accepted employee cohorts."
+    },
+    {
+      "municipality": "Cumberland",
+      "employerSlug": "village-of-cumberland",
+      "employerName": "Village of Cumberland",
+      "regionalDistrict": "Comox Valley Regional District",
+      "archiveUrl": "https://cumberland.ca/financial-statements/",
+      "baselineOfficialRecords": 27,
+      "baselineCompiledRecords": 0,
+      "newSources": [
+        {
+          "id": "wave-island-village-of-cumberland-2025-employees",
+          "year": "2025",
+          "category": "employee-remuneration",
+          "rows": 22,
+          "sha256": "f6f5f9268b14640773b1a0045e68c2bebbc82e786bfc44522367a71dbbf4683c",
+          "sourceUrl": "https://cumberland.ca/wp-content/uploads/2026/06/2025-SOFI.pdf",
+          "pages": [
+            32
+          ],
+          "publicWarning": "Published named rows differ from controls derived from printed all-employee and below-threshold aggregates: remuneration $+0; expenses $+1. The cause is unresolved; every published cell is retained unchanged."
+        },
+        {
+          "id": "wave-island-village-of-cumberland-2025-council",
+          "year": "2025",
+          "category": "elected-officials",
+          "rows": 5,
+          "sha256": "f6f5f9268b14640773b1a0045e68c2bebbc82e786bfc44522367a71dbbf4683c",
+          "sourceUrl": "https://cumberland.ca/wp-content/uploads/2026/06/2025-SOFI.pdf",
+          "pages": [
+            32
+          ],
+          "publicWarning": null
+        }
+      ],
+      "newOfficialRows": 27,
+      "originalRetrieval": {
+        "municipality": "Cumberland",
+        "employerSlug": "village-of-cumberland",
+        "employerName": "Village of Cumberland",
+        "sourceIndexUrl": "https://cumberland.ca/financial-statements/",
+        "sourceUrl": "https://cumberland.ca/wp-content/uploads/2026/06/2025-SOFI.pdf",
+        "label": "2025 Statement of Financial Information",
+        "status": "downloaded",
+        "bytes": 2974790,
+        "sha256": "f6f5f9268b14640773b1a0045e68c2bebbc82e786bfc44522367a71dbbf4683c",
+        "pdfPages": 38,
+        "nativeTextChars": 82184,
+        "remunerationPages": [
+          1,
+          32
+        ],
+        "localPdf": "/tmp/pofbc-wave-island/village-of-cumberland.pdf",
+        "retrievedOn": "2026-10-31",
+        "dateTimezone": "America/Vancouver"
+      },
+      "indexRetrieval": null,
+      "retainedSalaryLeads": [
+        {
+          "label": "2013 Statement of Financial Information",
+          "url": "https://cumberland.ca/wp-content/uploads/2012/08/2013-Cumberland-SOFI-Statements.pdf",
+          "status": "linked-unreviewed"
+        },
+        {
+          "label": "2012 Statement of Financial Information",
+          "url": "https://cumberland.ca/wp-content/uploads/2012/08/SOFI-2012-for-Web.pdf",
+          "status": "linked-unreviewed"
+        },
+        {
+          "label": "2016 Statement of Financial Information",
+          "url": "https://cumberland.ca/wp-content/uploads/2012/08/SOFI-2016.pdf",
+          "status": "linked-unreviewed"
+        },
+        {
+          "label": "2014 Statement of Financial Information",
+          "url": "https://cumberland.ca/wp-content/uploads/2012/08/SOFI-for-2014-June-2015-package-WEBSITE.pdf",
+          "status": "linked-unreviewed"
+        },
+        {
+          "label": "2015 Statement of Financial Information",
+          "url": "https://cumberland.ca/wp-content/uploads/2012/08/SOFI-for-2015-June-2016-website-posting.pdf",
+          "status": "linked-unreviewed"
+        },
+        {
+          "label": "Statement of Financial Information (SOFI) 2011",
+          "url": "https://cumberland.ca/wp-content/uploads/2012/08/Statement-of-Financial-Information-2011.pdf",
+          "status": "linked-unreviewed"
+        },
+        {
+          "label": "2017 Statement of Financial Information",
+          "url": "https://cumberland.ca/wp-content/uploads/2018/06/Council-approved-2017-SOFI.pdf",
+          "status": "linked-unreviewed"
+        },
+        {
+          "label": "2018 Statement of Financial Information",
+          "url": "https://cumberland.ca/wp-content/uploads/2019/06/2018-Sofi-report-council-approved.pdf",
+          "status": "linked-unreviewed"
+        },
+        {
+          "label": "2019 Statement of Financial Information",
+          "url": "https://cumberland.ca/wp-content/uploads/2020/09/2019-SOFI-ministry-package.pdf",
+          "status": "linked-unreviewed"
+        },
+        {
+          "label": "2020 Statement of Financial Information",
+          "url": "https://cumberland.ca/wp-content/uploads/2021/06/2020-SOFI-Report.pdf",
+          "status": "linked-unreviewed"
+        },
+        {
+          "label": "December 31, 2021",
+          "url": "https://cumberland.ca/wp-content/uploads/2022/04/2021-Statement-of-Financial-Information.pdf",
+          "status": "linked-unreviewed"
+        },
+        {
+          "label": "2021 Statement of Financial Information",
+          "url": "https://cumberland.ca/wp-content/uploads/2023/06/2021-SOFI-for-website_Redacted.pdf",
+          "status": "linked-unreviewed"
+        },
+        {
+          "label": "2022 Statement of Financial Information",
+          "url": "https://cumberland.ca/wp-content/uploads/2023/06/2022-SOFI-Council-report-attachments_Redacted.pdf",
+          "status": "linked-unreviewed"
+        },
+        {
+          "label": "2023 Statement of Financial Information",
+          "url": "https://cumberland.ca/wp-content/uploads/2024/07/2023-Statement-of-Financial-Information.pdf",
+          "status": "linked-unreviewed"
+        },
+        {
+          "label": "Cumberland 2024 disclosure",
+          "url": "https://cumberland.ca/wp-content/uploads/2025/07/2024-SOFI.pdf",
+          "status": "held-for-review"
+        },
+        {
+          "label": "Village of Cumberland 2025 elected-officials",
+          "url": "https://cumberland.ca/wp-content/uploads/2026/06/2025-SOFI.pdf",
+          "status": "imported"
+        }
+      ],
+      "historicalCompleteness": "Not established; linked files and failed retrievals are distinct from accepted employee cohorts."
+    },
+    {
+      "municipality": "Comox",
+      "employerSlug": "town-of-comox",
+      "employerName": "Town of Comox",
+      "regionalDistrict": "Comox Valley Regional District",
+      "archiveUrl": "https://www.comox.ca/SOFI",
+      "baselineOfficialRecords": 47,
+      "baselineCompiledRecords": 0,
+      "newSources": [],
+      "newOfficialRows": 0,
+      "originalRetrieval": null,
+      "indexRetrieval": null,
+      "retainedSalaryLeads": [
+        {
+          "label": "2022 Statement of Financial Information",
+          "url": "https://www.comox.ca/sites/default/files/2023-07/2022SOFI_Report_FINAL_20230706.pdf",
+          "status": "linked-unreviewed"
+        },
+        {
+          "label": "2023 Statement of Financial Information",
+          "url": "https://www.comox.ca/sites/default/files/2024-08/20240807_SOFI%20Report_0.pdf",
+          "status": "linked-unreviewed"
+        },
+        {
+          "label": "2025 Statement of Financial Information",
+          "url": "https://www.comox.ca/sites/default/files/2026-05/2025%20Statement%20of%20Financial%20Information.pdf",
+          "status": "linked-unreviewed"
+        },
+        {
+          "label": "Statement of Financial Information (SOFI)",
+          "url": "https://www.comox.ca/SOFI",
+          "status": "linked-unreviewed"
+        }
+      ],
+      "historicalCompleteness": "Not established; linked files and failed retrievals are distinct from accepted employee cohorts."
+    },
+    {
+      "municipality": "Nanaimo",
+      "employerSlug": "city-of-nanaimo",
+      "employerName": "City of Nanaimo",
+      "regionalDistrict": "Regional District of Nanaimo",
+      "archiveUrl": "https://www.nanaimo.ca/your-government/budget-finance/annual-financial-reports/finance-division",
+      "baselineOfficialRecords": 2579,
+      "baselineCompiledRecords": 0,
+      "newSources": [],
+      "newOfficialRows": 0,
+      "originalRetrieval": null,
+      "indexRetrieval": null,
+      "retainedSalaryLeads": [
+        {
+          "label": "City of Nanaimo 2021 employee-remuneration",
+          "url": "https://www.nanaimo.ca/docs/default-document-library/2021-statement-of-financial-informationb74dd03a1b316d6b9fc9ff0f001037d2.pdf",
+          "status": "imported"
+        },
+        {
+          "label": "City of Nanaimo 2019 employee-remuneration",
+          "url": "https://www.nanaimo.ca/docs/your-government/budget-and-finance/2019-statement-of-financial-information.pdf",
+          "status": "imported"
+        },
+        {
+          "label": "City of Nanaimo 2020 disclosure",
+          "url": "https://www.nanaimo.ca/docs/your-government/budget-and-finance/2020-statement-of-financial-information.pdf",
+          "status": "held-for-review"
+        },
+        {
+          "label": "City of Nanaimo 2022 employee-remuneration",
+          "url": "https://www.nanaimo.ca/docs/your-government/budget-and-finance/2022-statement-of-financial-information.pdf",
+          "status": "imported"
+        },
+        {
+          "label": "City of Nanaimo 2023 employee-remuneration",
+          "url": "https://www.nanaimo.ca/docs/your-government/budget-and-finance/2023-statement-of-financial-information.pdf",
+          "status": "imported"
+        },
+        {
+          "label": "City of Nanaimo 2024 employee-remuneration",
+          "url": "https://www.nanaimo.ca/docs/your-government/budget-and-finance/2024-statement-of-financial-information.pdf",
+          "status": "imported"
+        },
+        {
+          "label": "City of Nanaimo 2025 employee-remuneration",
+          "url": "https://www.nanaimo.ca/docs/your-government/budget-and-finance/2025-official-statement-of-financial-information.pdf",
+          "status": "imported"
+        },
+        {
+          "label": "2023 Council Expenses - January 1 to December 31, 2023",
+          "url": "https://www.nanaimo.ca/docs/your-government/budget-and-finance/all-sofi-expenses-2023.pdf",
+          "status": "linked-unreviewed"
+        }
+      ],
+      "historicalCompleteness": "Not established; linked files and failed retrievals are distinct from accepted employee cohorts."
+    },
+    {
+      "municipality": "Parksville",
+      "employerSlug": "city-of-parksville",
+      "employerName": "City of Parksville",
+      "regionalDistrict": "Regional District of Nanaimo",
+      "archiveUrl": "https://parksville.civicweb.net/document/82602/",
+      "baselineOfficialRecords": 79,
+      "baselineCompiledRecords": 0,
+      "newSources": [],
+      "newOfficialRows": 0,
+      "originalRetrieval": null,
+      "indexRetrieval": {
+        "municipality": "Parksville",
+        "employerSlug": "city-of-parksville",
+        "sourceUrl": "https://parksville.civicweb.net/document/82602/",
+        "sourceIndexUrl": "https://parksville.civicweb.net/document/82602/",
+        "kind": "index",
+        "status": "downloaded",
+        "finalUrl": "https://parksville.civicweb.net/document/82602/",
+        "bytes": 49539,
+        "sha256": "25aab35eb16b7405f939d0eda9c6f8a1ebe4ad13aece8cabd81402b38368929b",
+        "isPdf": false,
+        "localPath": "/tmp/pofbc-wave-island/city-of-parksville-index.html"
+      },
+      "retainedSalaryLeads": [
+        {
+          "label": "City of Parksville 2025 employee-remuneration",
+          "url": "https://parksville.civicweb.net/FileStorage/6F0BB1A06E80498CB57F01D450F88675-3f)%202025%20SOFI%20report%20to%20Council_Redacted.pdf",
+          "status": "imported"
+        },
+        {
+          "label": "3f) 2025 Statement of Financial Information",
+          "url": "https://parksville.civicweb.net/FileStorage/6F0BB1A06E80498CB57F01D450F88675-3f%29%202025%20SOFI%20report%20to%20Council_Redacted.pdf",
+          "status": "source-found-awaiting-extraction"
+        }
+      ],
+      "historicalCompleteness": "Not established; linked files and failed retrievals are distinct from accepted employee cohorts."
+    },
+    {
+      "municipality": "Qualicum Beach",
+      "employerSlug": "town-of-qualicum-beach",
+      "employerName": "Town of Qualicum Beach",
+      "regionalDistrict": "Regional District of Nanaimo",
+      "archiveUrl": "https://qualicumbeach.com/preview/?file_path=Council+Agendas%2F2026+Council+Agendas%2FJune+24%2C+2026%2C+Regular+Council+Meeting.pdf",
+      "baselineOfficialRecords": 0,
+      "baselineCompiledRecords": 0,
+      "newSources": [],
+      "newOfficialRows": 0,
+      "originalRetrieval": null,
+      "indexRetrieval": {
+        "municipality": "Qualicum Beach",
+        "employerSlug": "town-of-qualicum-beach",
+        "sourceUrl": "https://qualicumbeach.com/preview/?file_path=Council+Agendas%2F2026+Council+Agendas%2FJune+24%2C+2026%2C+Regular+Council+Meeting.pdf",
+        "sourceIndexUrl": "https://qualicumbeach.com/preview/?file_path=Council+Agendas%2F2026+Council+Agendas%2FJune+24%2C+2026%2C+Regular+Council+Meeting.pdf",
+        "kind": "index",
+        "status": "retrieval-failed",
+        "error": "HTTP Error 404: Not Found"
+      },
+      "retainedSalaryLeads": [
+        {
+          "label": "",
+          "url": "https://qualicumbeach.com/document-library?folder_path=Financial%20Information/Statements%20of%20Financial%20Information%20%28SOFI%29",
+          "status": "linked-unreviewed"
+        },
+        {
+          "label": "Statements of Financial Information (SOFI)",
+          "url": "https://qualicumbeach.com/document-library?folder_path=Financial%20Information/Statements%20of%20Financial%20Information%20%28SOFI%29  ",
+          "status": "linked-unreviewed"
+        },
+        {
+          "label": "Read the Latest Annual Report",
+          "url": "https://qualicumbeach.com/document-library?folder_path=Financial+Information/Annual+Reports",
+          "status": "linked-unreviewed"
+        }
+      ],
+      "historicalCompleteness": "Not established; linked files and failed retrievals are distinct from accepted employee cohorts."
+    },
+    {
+      "municipality": "Lantzville",
+      "employerSlug": "district-of-lantzville",
+      "employerName": "District of Lantzville",
+      "regionalDistrict": "Regional District of Nanaimo",
+      "archiveUrl": "https://www.lantzville.ca/cms.asp?wpID=485",
+      "baselineOfficialRecords": 0,
+      "baselineCompiledRecords": 0,
+      "newSources": [],
+      "newOfficialRows": 0,
+      "originalRetrieval": null,
+      "indexRetrieval": {
+        "municipality": "Lantzville",
+        "employerSlug": "district-of-lantzville",
+        "sourceUrl": "https://www.lantzville.ca/cms.asp?wpID=485",
+        "sourceIndexUrl": "https://www.lantzville.ca/cms.asp?wpID=485",
+        "kind": "index",
+        "status": "downloaded",
+        "finalUrl": "https://www.lantzville.ca/cms.asp?wpID=485",
+        "bytes": 38000,
+        "sha256": "99604ccbcbc47476f8156616647a6c52bfa201cd99642cda42093f4229641546",
+        "isPdf": false,
+        "localPath": "/tmp/pofbc-wave-island/district-of-lantzville-index.html"
+      },
+      "retainedSalaryLeads": [
+        {
+          "label": "Annual Reports, Financial Statements and SOFI",
+          "url": "https://www.lantzville.ca/cms.asp?wpID=485",
+          "status": "linked-unreviewed"
+        },
+        {
+          "label": "Council Remuneration Bylaw No. 170, 2018 CONSOLIDATED to Bylaw No. 294, 2021",
+          "url": "https://www.lantzville.ca/cms/wpattachments/wpID483atID5838.pdf",
+          "status": "linked-unreviewed"
+        },
+        {
+          "label": "SOFI 2013",
+          "url": "https://www.lantzville.ca/cms/wpattachments/wpID485atID3808.pdf",
+          "status": "linked-unreviewed"
+        },
+        {
+          "label": "SOFI 2012",
+          "url": "https://www.lantzville.ca/cms/wpattachments/wpID485atID3809.pdf",
+          "status": "linked-unreviewed"
+        },
+        {
+          "label": "SOFI 2011",
+          "url": "https://www.lantzville.ca/cms/wpattachments/wpID485atID3810.pdf",
+          "status": "linked-unreviewed"
+        },
+        {
+          "label": "SOFI 2010",
+          "url": "https://www.lantzville.ca/cms/wpattachments/wpID485atID3811.pdf",
+          "status": "linked-unreviewed"
+        },
+        {
+          "label": "SOFI 2009",
+          "url": "https://www.lantzville.ca/cms/wpattachments/wpID485atID3812.pdf",
+          "status": "linked-unreviewed"
+        },
+        {
+          "label": "SOFI 2008",
+          "url": "https://www.lantzville.ca/cms/wpattachments/wpID485atID3813.pdf",
+          "status": "linked-unreviewed"
+        },
+        {
+          "label": "SOFI 2007",
+          "url": "https://www.lantzville.ca/cms/wpattachments/wpID485atID3814.pdf",
+          "status": "linked-unreviewed"
+        },
+        {
+          "label": "SOFI 2006",
+          "url": "https://www.lantzville.ca/cms/wpattachments/wpID485atID3815.pdf",
+          "status": "linked-unreviewed"
+        },
+        {
+          "label": "SOFI 2004",
+          "url": "https://www.lantzville.ca/cms/wpattachments/wpID485atID3816.pdf",
+          "status": "linked-unreviewed"
+        },
+        {
+          "label": "SOFI 2003",
+          "url": "https://www.lantzville.ca/cms/wpattachments/wpID485atID3817.pdf",
+          "status": "linked-unreviewed"
+        },
+        {
+          "label": "SOFI 2014",
+          "url": "https://www.lantzville.ca/cms/wpattachments/wpID485atID3905.pdf",
+          "status": "linked-unreviewed"
+        },
+        {
+          "label": "SOFI 2015",
+          "url": "https://www.lantzville.ca/cms/wpattachments/wpID485atID4072.pdf",
+          "status": "linked-unreviewed"
+        },
+        {
+          "label": "2016 Statement of Financial Information (SOFI)",
+          "url": "https://www.lantzville.ca/cms/wpattachments/wpID485atID4220.pdf",
+          "status": "linked-unreviewed"
+        },
+        {
+          "label": "2017 Statement of Financial Information (SOFI)",
+          "url": "https://www.lantzville.ca/cms/wpattachments/wpID485atID4548.pdf",
+          "status": "linked-unreviewed"
+        },
+        {
+          "label": "2018 Statement of Financial Information (SOFI)",
+          "url": "https://www.lantzville.ca/cms/wpattachments/wpID485atID4885.pdf",
+          "status": "linked-unreviewed"
+        },
+        {
+          "label": "2019 Statement of Financial Information (SOFI)",
+          "url": "https://www.lantzville.ca/cms/wpattachments/wpID485atID5215.pdf",
+          "status": "linked-unreviewed"
+        },
+        {
+          "label": "2020 Statement of Financial Information (SOFI)",
+          "url": "https://www.lantzville.ca/cms/wpattachments/wpID485atID5586.pdf",
+          "status": "linked-unreviewed"
+        },
+        {
+          "label": "2021 Statement of Financial Information (SOFI)",
+          "url": "https://www.lantzville.ca/cms/wpattachments/wpID485atID6048.pdf",
+          "status": "linked-unreviewed"
+        },
+        {
+          "label": "2022 Statement of Financial Information (SOFI)",
+          "url": "https://www.lantzville.ca/cms/wpattachments/wpID485atID6489.pdf",
+          "status": "linked-unreviewed"
+        },
+        {
+          "label": "Corrected 2023 Statement of Financial Information (SOFI)",
+          "url": "https://www.lantzville.ca/cms/wpattachments/wpID485atID6875.pdf",
+          "status": "linked-unreviewed"
+        },
+        {
+          "label": "2025 Statement of Financial Information (SOFI)",
+          "url": "https://www.lantzville.ca/cms/wpattachments/wpID485atID7293.pdf",
+          "status": "linked-unreviewed"
+        }
+      ],
+      "historicalCompleteness": "Not established; linked files and failed retrievals are distinct from accepted employee cohorts.",
+      "nextCandidateRetrieval": {
+        "municipality": "Lantzville",
+        "employerSlug": "district-of-lantzville",
+        "sourceUrl": "https://www.lantzville.ca/cms/wpattachments/wpID485atID7293.pdf",
+        "sourceIndexUrl": "https://www.lantzville.ca/cms.asp?wpID=485",
+        "unverifiedLinkYear": "2025",
+        "label": "2025 Statement of Financial Information (SOFI)",
+        "status": "downloaded",
+        "bytes": 409742,
+        "sha256": "9b49ae1c58e98255e3c464946dc2bc129f2b58d90fecc3a01536c703f8809f33",
+        "pdfPages": 8,
+        "nativeTextChars": 8086,
+        "remunerationPages": [
+          2,
+          4
+        ],
+        "localPdf": "/tmp/pofbc-wave-island/district-of-lantzville-next-candidate.pdf",
+        "retrievedOn": "2026-10-31",
+        "dateTimezone": "America/Vancouver"
+      }
+    },
+    {
+      "municipality": "Port Alberni",
+      "employerSlug": "city-of-port-alberni",
+      "employerName": "City of Port Alberni",
+      "regionalDistrict": "Regional District of Alberni-Clayoquot",
+      "archiveUrl": "https://portalberni.ca/sites/default/files/council_mtg/2025_07_14%20RCM%20Agenda_OPT.pdf",
+      "baselineOfficialRecords": 0,
+      "baselineCompiledRecords": 0,
+      "newSources": [],
+      "newOfficialRows": 0,
+      "originalRetrieval": null,
+      "indexRetrieval": {
+        "municipality": "Port Alberni",
+        "employerSlug": "city-of-port-alberni",
+        "sourceUrl": "https://portalberni.ca/sites/default/files/council_mtg/2025_07_14%20RCM%20Agenda_OPT.pdf",
+        "sourceIndexUrl": "https://portalberni.ca/sites/default/files/council_mtg/2025_07_14%20RCM%20Agenda_OPT.pdf",
+        "kind": "index",
+        "status": "retrieval-failed",
+        "error": "HTTP Error 404: Not Found"
+      },
+      "retainedSalaryLeads": [],
+      "historicalCompleteness": "Not established; linked files and failed retrievals are distinct from accepted employee cohorts.",
+      "nextCandidateRetrieval": {
+        "municipality": "Port Alberni",
+        "employerSlug": "city-of-port-alberni",
+        "sourceUrl": "https://www.portalberni.ca/sites/default/files/council_mtg/2025_06_23%20RCM%20Agenda_OPT.pdf",
+        "sourceIndexUrl": "https://www.portalberni.ca/",
+        "unverifiedLinkYear": "2024",
+        "label": "2024 SOFI attachment in June2025 Council agenda, public search indexed",
+        "status": "retrieval-failed",
+        "error": "HTTP Error 404: Not Found",
+        "retrievedOn": "2026-10-31",
+        "dateTimezone": "America/Vancouver"
+      }
+    },
+    {
+      "municipality": "Tofino",
+      "employerSlug": "district-of-tofino",
+      "employerName": "District of Tofino",
+      "regionalDistrict": "Regional District of Alberni-Clayoquot",
+      "archiveUrl": "https://tofino.civicweb.net/filepro/documents/14588/",
+      "baselineOfficialRecords": 0,
+      "baselineCompiledRecords": 0,
+      "newSources": [],
+      "newOfficialRows": 0,
+      "originalRetrieval": null,
+      "indexRetrieval": {
+        "municipality": "Tofino",
+        "employerSlug": "district-of-tofino",
+        "sourceUrl": "https://tofino.civicweb.net/filepro/documents/14588/",
+        "sourceIndexUrl": "https://tofino.civicweb.net/filepro/documents/14588/",
+        "kind": "index",
+        "status": "downloaded",
+        "finalUrl": "https://tofino.civicweb.net/filepro/documents/14588/",
+        "bytes": 94139,
+        "sha256": "7daaaeb135c88e59ccccd63f2508441733c0f62b482d4a453eb6a0d8d72d72ec",
+        "isPdf": false,
+        "localPath": "/tmp/pofbc-wave-island/district-of-tofino-index.html"
+      },
+      "retainedSalaryLeads": [
+        {
+          "label": "2011 SOFI Report",
+          "url": "https://tofino.civicweb.net/document/10256",
+          "status": "source-found-awaiting-extraction"
+        },
+        {
+          "label": "2020 SOFI Report",
+          "url": "https://tofino.civicweb.net/document/117532",
+          "status": "source-found-awaiting-extraction"
+        },
+        {
+          "label": "2019 SOFI Report",
+          "url": "https://tofino.civicweb.net/document/130160",
+          "status": "source-found-awaiting-extraction"
+        },
+        {
+          "label": "2021 SOFI Report",
+          "url": "https://tofino.civicweb.net/document/130197",
+          "status": "source-found-awaiting-extraction"
+        },
+        {
+          "label": "2022 SOFI Report",
+          "url": "https://tofino.civicweb.net/document/143317",
+          "status": "source-found-awaiting-extraction"
+        },
+        {
+          "label": "Council Remuneration, Bylaw No. 1254, 2018 - Consolidated Version",
+          "url": "https://tofino.civicweb.net/document/163622",
+          "status": "linked-unreviewed"
+        },
+        {
+          "label": "2024 SOFI Report",
+          "url": "https://tofino.civicweb.net/document/175800",
+          "status": "source-found-awaiting-extraction"
+        },
+        {
+          "label": "2023 SOFI Report",
+          "url": "https://tofino.civicweb.net/document/175801",
+          "status": "source-found-awaiting-extraction"
+        },
+        {
+          "label": "2025 SOFI Report",
+          "url": "https://tofino.civicweb.net/document/179851",
+          "status": "source-found-awaiting-extraction"
+        },
+        {
+          "label": "2012 SOFI Report",
+          "url": "https://tofino.civicweb.net/document/21790",
+          "status": "source-found-awaiting-extraction"
+        },
+        {
+          "label": "2013 SOFI Report",
+          "url": "https://tofino.civicweb.net/document/42098",
+          "status": "source-found-awaiting-extraction"
+        },
+        {
+          "label": "2014 SOFI Report",
+          "url": "https://tofino.civicweb.net/document/45824",
+          "status": "source-found-awaiting-extraction"
+        },
+        {
+          "label": "2015 SOFI Report",
+          "url": "https://tofino.civicweb.net/document/55690",
+          "status": "source-found-awaiting-extraction"
+        },
+        {
+          "label": "2016 SOFI Report",
+          "url": "https://tofino.civicweb.net/document/65589",
+          "status": "source-found-awaiting-extraction"
+        },
+        {
+          "label": "2017 SOFI Report",
+          "url": "https://tofino.civicweb.net/document/81625",
+          "status": "source-found-awaiting-extraction"
+        },
+        {
+          "label": "2018 SOFI Report",
+          "url": "https://tofino.civicweb.net/document/94947",
+          "status": "source-found-awaiting-extraction"
+        }
+      ],
+      "historicalCompleteness": "Not established; linked files and failed retrievals are distinct from accepted employee cohorts.",
+      "nextCandidateRetrieval": {
+        "municipality": "Tofino",
+        "employerSlug": "district-of-tofino",
+        "sourceUrl": "https://tofino.civicweb.net/document/179851",
+        "sourceIndexUrl": "https://tofino.civicweb.net/filepro/documents/14588/",
+        "unverifiedLinkYear": "2025",
+        "label": "2025 SOFI Report",
+        "status": "downloaded",
+        "bytes": 737219,
+        "sha256": "beb8eed8fc02de07c8b5181d262a0ac5881ac92c0fb791b4090a063d84443192",
+        "pdfPages": 12,
+        "nativeTextChars": 10979,
+        "remunerationPages": [
+          2,
+          5,
+          6
+        ],
+        "localPdf": "/tmp/pofbc-wave-island/district-of-tofino-next-candidate.pdf",
+        "retrievedOn": "2026-10-31",
+        "dateTimezone": "America/Vancouver"
+      }
+    },
+    {
+      "municipality": "Ucluelet",
+      "employerSlug": "district-of-ucluelet",
+      "employerName": "District of Ucluelet",
+      "regionalDistrict": "Regional District of Alberni-Clayoquot",
+      "archiveUrl": "https://ucluelet.ca/government/finance/financial-reports/",
+      "baselineOfficialRecords": 25,
+      "baselineCompiledRecords": 0,
+      "newSources": [
+        {
+          "id": "wave-island-district-of-ucluelet-2025-employees",
+          "year": "2025",
+          "category": "employee-remuneration",
+          "rows": 19,
+          "sha256": "e469988b3a14d86679c2b3cc64b3553945d520ea4fc2d96d2b6c40b21c3bf902",
+          "sourceUrl": "https://ucluelet.ca/wp-content/uploads/2026/10/2025-Statement-of-Financial-Information.pdf",
+          "pages": [
+            30
+          ],
+          "publicWarning": "Published named rows differ from the printed named subtotals: remuneration $+0; expenses $+0.01. The cause is unresolved; every published cell is retained unchanged."
+        },
+        {
+          "id": "wave-island-district-of-ucluelet-2025-council",
+          "year": "2025",
+          "category": "elected-officials",
+          "rows": 6,
+          "sha256": "e469988b3a14d86679c2b3cc64b3553945d520ea4fc2d96d2b6c40b21c3bf902",
+          "sourceUrl": "https://ucluelet.ca/wp-content/uploads/2026/10/2025-Statement-of-Financial-Information.pdf",
+          "pages": [
+            29
+          ],
+          "publicWarning": null
+        }
+      ],
+      "newOfficialRows": 25,
+      "originalRetrieval": {
+        "municipality": "Ucluelet",
+        "employerSlug": "district-of-ucluelet",
+        "employerName": "District of Ucluelet",
+        "sourceIndexUrl": "https://ucluelet.ca/government/finance/financial-reports/",
+        "sourceUrl": "https://ucluelet.ca/wp-content/uploads/2026/10/2025-Statement-of-Financial-Information.pdf",
+        "label": "2025 SOFI",
+        "status": "downloaded",
+        "bytes": 1730848,
+        "sha256": "e469988b3a14d86679c2b3cc64b3553945d520ea4fc2d96d2b6c40b21c3bf902",
+        "pdfPages": 36,
+        "nativeTextChars": 70994,
+        "remunerationPages": [
+          2,
+          17,
+          29,
+          30
+        ],
+        "localPdf": "/tmp/pofbc-wave-island/district-of-ucluelet.pdf",
+        "retrievedOn": "2026-10-31",
+        "dateTimezone": "America/Vancouver"
+      },
+      "indexRetrieval": null,
+      "retainedSalaryLeads": [
+        {
+          "label": "2018 SOFI",
+          "url": "https://ucluelet.ca/wp-content/uploads/2025/06/2018_SOFI_Report_Final_Signed.pdf",
+          "status": "linked-unreviewed"
+        },
+        {
+          "label": "2019 SOFI",
+          "url": "https://ucluelet.ca/wp-content/uploads/2025/06/2019_SOFI_Report_FINAL_signed.pdf",
+          "status": "linked-unreviewed"
+        },
+        {
+          "label": "2021 SOFI",
+          "url": "https://ucluelet.ca/wp-content/uploads/2025/06/2021_SOFI_Website.pdf",
+          "status": "linked-unreviewed"
+        },
+        {
+          "label": "2022 SOFI",
+          "url": "https://ucluelet.ca/wp-content/uploads/2025/06/2022_SOFI_Signed_Reduced.pdf",
+          "status": "linked-unreviewed"
+        },
+        {
+          "label": "2023 SOFI",
+          "url": "https://ucluelet.ca/wp-content/uploads/2025/06/2023_SOFI.pdf",
+          "status": "linked-unreviewed"
+        },
+        {
+          "label": "2020 SOFI",
+          "url": "https://ucluelet.ca/wp-content/uploads/2025/06/Compressed_-_2020_SOFI_Report_FINAL_signed.pdf",
+          "status": "linked-unreviewed"
+        },
+        {
+          "label": "2024 SOFI",
+          "url": "https://ucluelet.ca/wp-content/uploads/2025/09/SOFI-2024-FINAL.pdf",
+          "status": "linked-unreviewed"
+        },
+        {
+          "label": "District of Ucluelet 2025 elected-officials",
+          "url": "https://ucluelet.ca/wp-content/uploads/2026/10/2025-Statement-of-Financial-Information.pdf",
+          "status": "imported"
+        }
+      ],
+      "historicalCompleteness": "Not established; linked files and failed retrievals are distinct from accepted employee cohorts."
+    },
+    {
+      "municipality": "Campbell River",
+      "employerSlug": "city-of-campbell-river",
+      "employerName": "City of Campbell River",
+      "regionalDistrict": "Strathcona Regional District",
+      "archiveUrl": "https://www.campbellriver.ca/financial-plans-and-reports",
+      "baselineOfficialRecords": 0,
+      "baselineCompiledRecords": 0,
+      "newSources": [],
+      "newOfficialRows": 0,
+      "originalRetrieval": {
+        "municipality": "Campbell River",
+        "employerSlug": "city-of-campbell-river",
+        "employerName": "City of Campbell River",
+        "sourceIndexUrl": "https://www.campbellriver.ca/financial-plans-and-reports",
+        "sourceUrl": "https://www.campbellriver.ca/media/file/2023-sofi-reportpdf",
+        "label": "2023 SOFI Report [PDF/801KB]",
+        "status": "downloaded",
+        "bytes": 820025,
+        "sha256": "f7d96aac6e23ee955c664ccd1f03b857c5a96f12a2b19ac6d595ed65579d6f4d",
+        "pdfPages": 17,
+        "nativeTextChars": 0,
+        "remunerationPages": [],
+        "localPdf": "/tmp/pofbc-wave-island/city-of-campbell-river.pdf",
+        "retrievedOn": "2026-10-31",
+        "dateTimezone": "America/Vancouver"
+      },
+      "indexRetrieval": null,
+      "retainedSalaryLeads": [
+        {
+          "label": "2016 SOFI Report [PDF/1.1MB]",
+          "url": "https://www.campbellriver.ca/media/file/2016-sofi-reportpdf",
+          "status": "linked-unreviewed"
+        },
+        {
+          "label": "2017 SOFI Report [PDF/404KB]",
+          "url": "https://www.campbellriver.ca/media/file/2017-sofi-reportpdf",
+          "status": "linked-unreviewed"
+        },
+        {
+          "label": "2018 SOFI Report [PDF/1.7MB]",
+          "url": "https://www.campbellriver.ca/media/file/2018-sofi-reportpdf",
+          "status": "linked-unreviewed"
+        },
+        {
+          "label": "2019 SOFI Report [PDF/245KB]",
+          "url": "https://www.campbellriver.ca/media/file/2019-sofi-reportpdf",
+          "status": "linked-unreviewed"
+        },
+        {
+          "label": "2020 SOFI Report [PDF/713KB]",
+          "url": "https://www.campbellriver.ca/media/file/2020-sofi-reportpdf",
+          "status": "linked-unreviewed"
+        },
+        {
+          "label": "2021 SOFI Report [PDF/1.2MB]",
+          "url": "https://www.campbellriver.ca/media/file/2021-sofi-reportpdf",
+          "status": "linked-unreviewed"
+        },
+        {
+          "label": "2022 SOFI Report [PDF/296KB]",
+          "url": "https://www.campbellriver.ca/media/file/2022-sofi-reportpdf",
+          "status": "linked-unreviewed"
+        },
+        {
+          "label": "2023 SOFI Report [PDF/801KB]",
+          "url": "https://www.campbellriver.ca/media/file/2023-sofi-reportpdf",
+          "status": "linked-unreviewed"
+        },
+        {
+          "label": "Campbell River 2024 disclosure",
+          "url": "https://www.campbellriver.ca/media/file/2024-sofi-reportpdf",
+          "status": "held-for-review"
+        },
+        {
+          "label": "2025 SOFI Report [PDF/19.6MB]",
+          "url": "https://www.campbellriver.ca/media/file/2025-sofi-reportpdf",
+          "status": "linked-unreviewed"
+        }
+      ],
+      "historicalCompleteness": "Not established; linked files and failed retrievals are distinct from accepted employee cohorts."
+    },
+    {
+      "municipality": "Gold River",
+      "employerSlug": "village-of-gold-river",
+      "employerName": "Village of Gold River",
+      "regionalDistrict": "Strathcona Regional District",
+      "archiveUrl": "https://goldriver.ca/documents/",
+      "baselineOfficialRecords": 10,
+      "baselineCompiledRecords": 0,
+      "newSources": [
+        {
+          "id": "wave-island-village-of-gold-river-2025-employees",
+          "year": "2025",
+          "category": "employee-remuneration",
+          "rows": 5,
+          "sha256": "432709caae1fe6069897107644bd62563d03644f320d34a6c39738239a793d73",
+          "sourceUrl": "https://goldriver.ca/wp-content/uploads/2026/09/2025-SOFI.pdf",
+          "pages": [
+            5
+          ],
+          "publicWarning": "Published named rows differ from controls derived from printed all-employee and below-threshold aggregates: remuneration $+1; expenses $+0. The cause is unresolved; every published cell is retained unchanged."
+        },
+        {
+          "id": "wave-island-village-of-gold-river-2025-council",
+          "year": "2025",
+          "category": "elected-officials",
+          "rows": 5,
+          "sha256": "432709caae1fe6069897107644bd62563d03644f320d34a6c39738239a793d73",
+          "sourceUrl": "https://goldriver.ca/wp-content/uploads/2026/09/2025-SOFI.pdf",
+          "pages": [
+            5
+          ],
+          "publicWarning": "Published named rows differ from the printed named subtotals: remuneration $+1; expenses $+0. The cause is unresolved; every published cell is retained unchanged."
+        }
+      ],
+      "newOfficialRows": 10,
+      "originalRetrieval": {
+        "municipality": "Gold River",
+        "employerSlug": "village-of-gold-river",
+        "employerName": "Village of Gold River",
+        "sourceIndexUrl": "https://goldriver.ca/documents/",
+        "sourceUrl": "https://goldriver.ca/wp-content/uploads/2026/09/2025-SOFI.pdf",
+        "label": "2025 SOFI",
+        "status": "downloaded",
+        "bytes": 77646,
+        "sha256": "432709caae1fe6069897107644bd62563d03644f320d34a6c39738239a793d73",
+        "pdfPages": 7,
+        "nativeTextChars": 6293,
+        "remunerationPages": [
+          5
+        ],
+        "localPdf": "/tmp/pofbc-wave-island/village-of-gold-river.pdf",
+        "retrievedOn": "2026-10-31",
+        "dateTimezone": "America/Vancouver"
+      },
+      "indexRetrieval": null,
+      "retainedSalaryLeads": [
+        {
+          "label": "Statement of Financial Information (SOFI)",
+          "url": "https://goldriver.ca/document-category/statement-of-financial-information-sofi-2/",
+          "status": "linked-unreviewed"
+        },
+        {
+          "label": "Bylaw No 714, 2018 Council Remuneration and Expense Bylaw",
+          "url": "https://goldriver.ca/wp-content/uploads/2022/07/Bylaw-No-714-2018-Council-Remuneration-and-Expense-Bylaw.pdf",
+          "status": "linked-unreviewed"
+        },
+        {
+          "label": "2019 SOFI",
+          "url": "https://goldriver.ca/wp-content/uploads/2022/12/2019-SOFI.pdf",
+          "status": "linked-unreviewed"
+        },
+        {
+          "label": "2020 SOFI",
+          "url": "https://goldriver.ca/wp-content/uploads/2022/12/2020-SOFI.pdf",
+          "status": "linked-unreviewed"
+        },
+        {
+          "label": "2021 SOFI",
+          "url": "https://goldriver.ca/wp-content/uploads/2022/12/2021-SOFI-Signed-1.pdf",
+          "status": "linked-unreviewed"
+        },
+        {
+          "label": "2022 SOFI",
+          "url": "https://goldriver.ca/wp-content/uploads/2023/06/2022-SOFI.pdf",
+          "status": "linked-unreviewed"
+        },
+        {
+          "label": "2023 SOFI",
+          "url": "https://goldriver.ca/wp-content/uploads/2024/07/2023-SOFI.pdf",
+          "status": "linked-unreviewed"
+        },
+        {
+          "label": "Gold River 2024 disclosure",
+          "url": "https://goldriver.ca/wp-content/uploads/2025/08/2024-SOFI-Signed.pdf",
+          "status": "held-for-review"
+        },
+        {
+          "label": "Village of Gold River 2025 elected-officials",
+          "url": "https://goldriver.ca/wp-content/uploads/2026/09/2025-SOFI.pdf",
+          "status": "imported"
+        }
+      ],
+      "historicalCompleteness": "Not established; linked files and failed retrievals are distinct from accepted employee cohorts."
+    },
+    {
+      "municipality": "Tahsis",
+      "employerSlug": "village-of-tahsis",
+      "employerName": "Village of Tahsis",
+      "regionalDistrict": "Strathcona Regional District",
+      "archiveUrl": "https://villageoftahsis.com/government/documents-reports/finance-and-other-reports/",
+      "baselineOfficialRecords": 13,
+      "baselineCompiledRecords": 0,
+      "newSources": [
+        {
+          "id": "wave-island-village-of-tahsis-2025-employees",
+          "year": "2025",
+          "category": "employee-remuneration",
+          "rows": 8,
+          "sha256": "e6983aecae0ecf2803756d74f2e759c0ea8ece5ffc41293ab7d587814e627ed0",
+          "sourceUrl": "https://villageoftahsis.com/wp-content/uploads/2026/06/2025-SOFI-Signed-copy.pdf",
+          "pages": [
+            28
+          ],
+          "publicWarning": "Published named rows differ from controls derived from printed all-employee and below-threshold aggregates: remuneration $-1; expenses not separately controlled. The cause is unresolved; every published cell is retained unchanged. The source places 3 employees with remuneration below $75,000 in its named schedule despite its remuneration threshold heading. The source rows and separate expenses are retained; no threshold explanation is assumed. The source does not print a separate below-threshold expense aggregate or named-expense subtotal. The named numeric expense sum equals its all-employee expense total; no missing aggregate is assumed zero."
+        },
+        {
+          "id": "wave-island-village-of-tahsis-2025-council",
+          "year": "2025",
+          "category": "elected-officials",
+          "rows": 5,
+          "sha256": "e6983aecae0ecf2803756d74f2e759c0ea8ece5ffc41293ab7d587814e627ed0",
+          "sourceUrl": "https://villageoftahsis.com/wp-content/uploads/2026/06/2025-SOFI-Signed-copy.pdf",
+          "pages": [
+            28
+          ],
+          "publicWarning": null
+        }
+      ],
+      "newOfficialRows": 13,
+      "originalRetrieval": {
+        "municipality": "Tahsis",
+        "employerSlug": "village-of-tahsis",
+        "employerName": "Village of Tahsis",
+        "sourceIndexUrl": "https://villageoftahsis.com/government/documents-reports/finance-and-other-reports/",
+        "sourceUrl": "https://villageoftahsis.com/wp-content/uploads/2026/06/2025-SOFI-Signed-copy.pdf",
+        "label": "2025 Statement of Financial Information for the Year Ended December 31, 2025.",
+        "status": "downloaded",
+        "bytes": 2248930,
+        "sha256": "e6983aecae0ecf2803756d74f2e759c0ea8ece5ffc41293ab7d587814e627ed0",
+        "pdfPages": 32,
+        "nativeTextChars": 47859,
+        "remunerationPages": [
+          1,
+          28
+        ],
+        "localPdf": "/tmp/pofbc-wave-island/village-of-tahsis.pdf",
+        "retrievedOn": "2026-10-31",
+        "dateTimezone": "America/Vancouver"
+      },
+      "indexRetrieval": null,
+      "retainedSalaryLeads": [
+        {
+          "label": "Statement of Financial Information for the Year Ended December 31, 2017",
+          "url": "https://villageoftahsis.com/wp-content/uploads/2018/06/FINAL-2017-SOFI-Report.pdf",
+          "status": "linked-unreviewed"
+        },
+        {
+          "label": "Statement of Financial Information for the Year Ended December 31, 2018",
+          "url": "https://villageoftahsis.com/wp-content/uploads/2019/06/Village-of-Tahsis-2018-SOFI-Report.pdf",
+          "status": "linked-unreviewed"
+        },
+        {
+          "label": "Statement of Financial Information for the Year Ended December 31, 2019",
+          "url": "https://villageoftahsis.com/wp-content/uploads/2020/08/2019-Statement-of-Financial-Information-final.pdf",
+          "status": "linked-unreviewed"
+        },
+        {
+          "label": "2020 Statement of Financial Information for the Year Ended December 31, 2020",
+          "url": "https://villageoftahsis.com/wp-content/uploads/2021/06/M2-2020-Statement-of-Financial-Information-print-version.pdf",
+          "status": "linked-unreviewed"
+        },
+        {
+          "label": "2021 Statement of Financial Information for the Year Ended December 31, 2021",
+          "url": "https://villageoftahsis.com/wp-content/uploads/2022/06/VOT-2021-SOFI-Report-Final-Print-Version-signed.pdf",
+          "status": "linked-unreviewed"
+        },
+        {
+          "label": "2022 Statement of Financial Information for the Year Ended December 31, 2022",
+          "url": "https://villageoftahsis.com/wp-content/uploads/2023/06/2022-SOFI.pdf",
+          "status": "linked-unreviewed"
+        },
+        {
+          "label": "Village of Tahsis Council Remuneration Bylaw No. 662 2024",
+          "url": "https://villageoftahsis.com/wp-content/uploads/2024/05/Village-of-Tahsis-Council-Remuneration-Bylaw-no.-662-2024_mt_signed-1.pdf",
+          "status": "linked-unreviewed"
+        },
+        {
+          "label": "Village of Tahsis Remuneration Bylaw No. 662, 2024",
+          "url": "https://villageoftahsis.com/wp-content/uploads/2024/05/Village-of-Tahsis-Council-Remuneration-Bylaw-no.-662-2024_mt_signed.pdf",
+          "status": "linked-unreviewed"
+        },
+        {
+          "label": "2023 Statement of financial information for the year ended December 31, 2023",
+          "url": "https://villageoftahsis.com/wp-content/uploads/2024/06/SOFI-REPORT-signed.pdf",
+          "status": "linked-unreviewed"
+        },
+        {
+          "label": "Tahsis 2024 disclosure",
+          "url": "https://villageoftahsis.com/wp-content/uploads/2025/06/sofi-report.pdf",
+          "status": "held-for-review"
+        },
+        {
+          "label": "Village of Tahsis 2025 elected-officials",
+          "url": "https://villageoftahsis.com/wp-content/uploads/2026/06/2025-SOFI-Signed-copy.pdf",
+          "status": "imported"
+        }
+      ],
+      "historicalCompleteness": "Not established; linked files and failed retrievals are distinct from accepted employee cohorts."
+    },
+    {
+      "municipality": "Zeballos",
+      "employerSlug": "village-of-zeballos",
+      "employerName": "Village of Zeballos",
+      "regionalDistrict": "Strathcona Regional District",
+      "archiveUrl": "https://www.zeballos.com/Zeballos2016/wp-content/uploads/2023/07/2021-Statement-of-Financial-Information_FINAL.pdf",
+      "baselineOfficialRecords": 0,
+      "baselineCompiledRecords": 0,
+      "newSources": [],
+      "newOfficialRows": 0,
+      "originalRetrieval": {
+        "municipality": "Zeballos",
+        "employerSlug": "village-of-zeballos",
+        "employerName": "Village of Zeballos",
+        "sourceIndexUrl": "https://www.zeballos.com/Zeballos2016/wp-content/uploads/2023/07/2021-Statement-of-Financial-Information_FINAL.pdf",
+        "sourceUrl": "https://www.zeballos.com/Zeballos2016/wp-content/uploads/2024/06/2023-SOFI-Report_Signed.pdf",
+        "label": "2023 Statement of Financial Information",
+        "status": "downloaded",
+        "bytes": 421756,
+        "sha256": "2ddd9c53744efc2b50309edfd5ced2a6fc4016b5f2f458af6fc08e866a487984",
+        "pdfPages": 12,
+        "nativeTextChars": 0,
+        "remunerationPages": [],
+        "localPdf": "/tmp/pofbc-wave-island/village-of-zeballos.pdf",
+        "retrievedOn": "2026-10-31",
+        "dateTimezone": "America/Vancouver"
+      },
+      "indexRetrieval": null,
+      "retainedSalaryLeads": [
+        {
+          "label": "2021 Statement of Financial Information",
+          "url": "https://www.zeballos.com/Zeballos2016/wp-content/uploads/2023/07/2021-Statement-of-Financial-Information_FINAL.pdf",
+          "status": "linked-unreviewed"
+        },
+        {
+          "label": "2022 Statement of Financial Information",
+          "url": "https://www.zeballos.com/Zeballos2016/wp-content/uploads/2023/07/2022-Statement-of-Financial-Information-SOFI_SIGNED.pdf",
+          "status": "linked-unreviewed"
+        },
+        {
+          "label": "2023 Statement of Financial Information",
+          "url": "https://www.zeballos.com/Zeballos2016/wp-content/uploads/2024/06/2023-SOFI-Report_Signed.pdf",
+          "status": "linked-unreviewed"
+        }
+      ],
+      "historicalCompleteness": "Not established; linked files and failed retrievals are distinct from accepted employee cohorts."
+    },
+    {
+      "municipality": "Sayward",
+      "employerSlug": "village-of-sayward",
+      "employerName": "Village of Sayward",
+      "regionalDistrict": "Strathcona Regional District",
+      "archiveUrl": "https://www.sayward.ca/government-bylaws/reports-financial-statements",
+      "baselineOfficialRecords": 9,
+      "baselineCompiledRecords": 0,
+      "newSources": [
+        {
+          "id": "wave-island-village-of-sayward-2024-employees",
+          "year": "2024",
+          "category": "employee-remuneration",
+          "rows": 2,
+          "sha256": "03d0899a20d184af02094d0832a07d52294affe955737d9cdac9d6060a5475e2",
+          "sourceUrl": "https://www.sayward.ca/sites/sayward.ca/files/2026-05/2024%20SOFI%20Package%20-%20signed.pdf",
+          "pages": [
+            3
+          ],
+          "publicWarning": null
+        },
+        {
+          "id": "wave-island-village-of-sayward-2024-council",
+          "year": "2024",
+          "category": "elected-officials",
+          "rows": 7,
+          "sha256": "03d0899a20d184af02094d0832a07d52294affe955737d9cdac9d6060a5475e2",
+          "sourceUrl": "https://www.sayward.ca/sites/sayward.ca/files/2026-05/2024%20SOFI%20Package%20-%20signed.pdf",
+          "pages": [
+            3
+          ],
+          "publicWarning": "Published council expenses sum to $16,876; the printed subtotal is $16,877. The $1 shortfall is unresolved. All published amounts, including two explicit zero expenses, are retained unchanged."
+        }
+      ],
+      "newOfficialRows": 9,
+      "originalRetrieval": {
+        "municipality": "Sayward",
+        "employerSlug": "village-of-sayward",
+        "employerName": "Village of Sayward",
+        "sourceIndexUrl": "https://www.sayward.ca/government-bylaws/reports-financial-statements",
+        "sourceUrl": "https://www.sayward.ca/sites/sayward.ca/files/2026-05/2024%20SOFI%20Package%20-%20signed.pdf",
+        "label": "Sayward 2024 disclosure",
+        "status": "downloaded",
+        "bytes": 186125,
+        "sha256": "03d0899a20d184af02094d0832a07d52294affe955737d9cdac9d6060a5475e2",
+        "pdfPages": 8,
+        "nativeTextChars": 0,
+        "remunerationPages": [],
+        "localPdf": "/tmp/pofbc-wave-island/village-of-sayward.pdf",
+        "retrievedOn": "2026-10-31",
+        "dateTimezone": "America/Vancouver"
+      },
+      "indexRetrieval": null,
+      "retainedSalaryLeads": [
+        {
+          "label": "Bylaw 490 - Council Remuneration Consolidated Version, for convenience only.pdf",
+          "url": "https://www.sayward.ca/media/1582",
+          "status": "linked-unreviewed"
+        },
+        {
+          "label": "Council Remuneration Bylaw No. 490, 2022 (Consolidated)",
+          "url": "https://www.sayward.ca/municipal-services/bylaws/council-remuneration-bylaw-no-490-2022-consolidated",
+          "status": "linked-unreviewed"
+        },
+        {
+          "label": "View PDF",
+          "url": "https://www.sayward.ca/sites/sayward.ca/files/2023-03/Bylaw%20490%20-%20Council%20Remuneration%20Consolidated%20Version%2C%20for%20convenience%20only.pdf",
+          "status": "linked-unreviewed"
+        },
+        {
+          "label": "2021 SOFI",
+          "url": "https://www.sayward.ca/sites/sayward.ca/files/2026-05/2021%20SOFI%20Submission%20Signed_0.pdf",
+          "status": "linked-unreviewed"
+        },
+        {
+          "label": "2022 SOFI",
+          "url": "https://www.sayward.ca/sites/sayward.ca/files/2026-05/2022%20SOFI%20Submission%20Signed.pdf",
+          "status": "linked-unreviewed"
+        },
+        {
+          "label": "2023 SOFI",
+          "url": "https://www.sayward.ca/sites/sayward.ca/files/2026-05/2023%20SOFI%20Package%20Amended%20-%20signed.pdf",
+          "status": "linked-unreviewed"
+        },
+        {
+          "label": "Village of Sayward 2024 elected-officials",
+          "url": "https://www.sayward.ca/sites/sayward.ca/files/2026-05/2024%20SOFI%20Package%20-%20signed.pdf",
+          "status": "imported"
+        },
+        {
+          "label": "2025 SOFI",
+          "url": "https://www.sayward.ca/sites/sayward.ca/files/2026-06/2025%20Statement%20of%20Financial%20Information%20-%20Village%20of%20Sayward%20-%20COMBINED%20signed%202026-06-02.pdf",
+          "status": "linked-unreviewed"
+        }
+      ],
+      "historicalCompleteness": "Not established; linked files and failed retrievals are distinct from accepted employee cohorts."
+    },
+    {
+      "municipality": "Port Hardy",
+      "employerSlug": "district-of-port-hardy",
+      "employerName": "District of Port Hardy",
+      "regionalDistrict": "Regional District of Mount Waddington",
+      "archiveUrl": "https://porthardy.ca/municipal-hall/financial-services/annual-report-info/",
+      "baselineOfficialRecords": 0,
+      "baselineCompiledRecords": 0,
+      "newSources": [],
+      "newOfficialRows": 0,
+      "originalRetrieval": {
+        "municipality": "Port Hardy",
+        "employerSlug": "district-of-port-hardy",
+        "employerName": "District of Port Hardy",
+        "sourceIndexUrl": "https://porthardy.ca/municipal-hall/financial-services/annual-report-info/",
+        "sourceUrl": "https://porthardy.ca/wp-content/uploads/2026/07/2025-SOFI-Report.pdf",
+        "label": "2025 Statement of Financial Information",
+        "status": "downloaded",
+        "bytes": 13623723,
+        "sha256": "6c197a764af21bc9f65bf2fe435ebb5431fa0f3f1f5aff359cf8b9518b3bb0cf",
+        "pdfPages": 12,
+        "nativeTextChars": 0,
+        "remunerationPages": [],
+        "localPdf": "/tmp/pofbc-wave-island/district-of-port-hardy.pdf",
+        "retrievedOn": "2026-10-31",
+        "dateTimezone": "America/Vancouver"
+      },
+      "indexRetrieval": null,
+      "retainedSalaryLeads": [
+        {
+          "label": "2025 Statement of Financial Information",
+          "url": "https://porthardy.ca/document/2025-statement-of-financial-information/",
+          "status": "linked-unreviewed"
+        },
+        {
+          "label": "2022 Statement of Financial Information",
+          "url": "https://porthardy.ca/wp-content/uploads/2023/11/2022-SOFI-Report.pdf",
+          "status": "linked-unreviewed"
+        },
+        {
+          "label": "2021 Statement of Financial Information",
+          "url": "https://porthardy.ca/wp-content/uploads/2023/11/SIGNED-2021-SOFI-Report.pdf",
+          "status": "linked-unreviewed"
+        },
+        {
+          "label": "2023 Statement of Financial Information",
+          "url": "https://porthardy.ca/wp-content/uploads/2024/06/District-of-Port-Hardy-2023-SOFI-SIGNED.pdf",
+          "status": "linked-unreviewed"
+        },
+        {
+          "label": "2024 Statement of Financial Information",
+          "url": "https://porthardy.ca/wp-content/uploads/2025/06/District-of-Port-Hardy-2024-SOFI-SIGNED.pdf",
+          "status": "linked-unreviewed"
+        },
+        {
+          "label": "2025 Statement of Financial Information",
+          "url": "https://porthardy.ca/wp-content/uploads/2026/07/2025-SOFI-Report.pdf",
+          "status": "linked-unreviewed"
+        }
+      ],
+      "historicalCompleteness": "Not established; linked files and failed retrievals are distinct from accepted employee cohorts."
+    },
+    {
+      "municipality": "Port McNeill",
+      "employerSlug": "town-of-port-mcneill",
+      "employerName": "Town of Port McNeill",
+      "regionalDistrict": "Regional District of Mount Waddington",
+      "archiveUrl": "https://portmcneill.ca/town-hall/reports/",
+      "baselineOfficialRecords": 0,
+      "baselineCompiledRecords": 0,
+      "newSources": [],
+      "newOfficialRows": 0,
+      "originalRetrieval": null,
+      "indexRetrieval": {
+        "municipality": "Port McNeill",
+        "employerSlug": "town-of-port-mcneill",
+        "sourceUrl": "https://portmcneill.ca/town-hall/reports/",
+        "sourceIndexUrl": "https://portmcneill.ca/town-hall/reports/",
+        "kind": "index",
+        "status": "downloaded",
+        "finalUrl": "https://portmcneill.ca/town-hall/reports/",
+        "bytes": 3484181,
+        "sha256": "87c19d0ca4a23e80000eb681e28bfab36a19221f790025bbcc86351b7328596a",
+        "isPdf": false,
+        "localPath": "/tmp/pofbc-wave-island/town-of-port-mcneill-index.html"
+      },
+      "retainedSalaryLeads": [
+        {
+          "label": "THE TOWN OF PORT McNEILL STATEMENT OF FINANCIAL INFORMATION 2021",
+          "url": "https://portmcneill.ca/wp-content/uploads/2022/06/2021-Statement-of-Financial-Information-SOFI-003.pdf",
+          "status": "linked-unreviewed"
+        }
+      ],
+      "historicalCompleteness": "Not established; linked files and failed retrievals are distinct from accepted employee cohorts.",
+      "nextCandidateRetrieval": {
+        "municipality": "Port McNeill",
+        "employerSlug": "town-of-port-mcneill",
+        "sourceUrl": "https://portmcneill.ca/wp-content/uploads/2022/06/2021-Statement-of-Financial-Information-SOFI-003.pdf",
+        "sourceIndexUrl": "https://portmcneill.ca/town-hall/reports/",
+        "unverifiedLinkYear": "2021",
+        "label": "THE TOWN OF PORT McNEILL STATEMENT OF FINANCIAL INFORMATION 2021",
+        "status": "downloaded",
+        "bytes": 1845323,
+        "sha256": "d4c23f34368755c6940b8f0c96351a84de5d1aea977d8f68b67abf5cecbbd5ca",
+        "pdfPages": 38,
+        "nativeTextChars": 16191,
+        "remunerationPages": [
+          1,
+          27,
+          28,
+          32,
+          34,
+          35
+        ],
+        "localPdf": "/tmp/pofbc-wave-island/town-of-port-mcneill-next-candidate.pdf",
+        "retrievedOn": "2026-10-31",
+        "dateTimezone": "America/Vancouver"
+      }
+    },
+    {
+      "municipality": "Port Alice",
+      "employerSlug": "village-of-port-alice",
+      "employerName": "Village of Port Alice",
+      "regionalDistrict": "Regional District of Mount Waddington",
+      "archiveUrl": "https://portalice.ca/town-hall/minutes-agendas/",
+      "baselineOfficialRecords": 0,
+      "baselineCompiledRecords": 0,
+      "newSources": [],
+      "newOfficialRows": 0,
+      "originalRetrieval": {
+        "municipality": "Port Alice",
+        "employerSlug": "village-of-port-alice",
+        "employerName": "Village of Port Alice",
+        "sourceIndexUrl": "https://portalice.ca/town-hall/minutes-agendas/",
+        "sourceUrl": "https://portalice.ca/wp-content/uploads/2025/06/2025-06-25-Statement-of-Financial-Information.pdf",
+        "label": "2025-06-25 Statement of Financial Information Download",
+        "status": "downloaded",
+        "bytes": 1717256,
+        "sha256": "30bc6de9bed07c6dc7e065c4a1f9a0201d455cec24effad6802b5e30f993750f",
+        "pdfPages": 38,
+        "nativeTextChars": 0,
+        "remunerationPages": [],
+        "localPdf": "/tmp/pofbc-wave-island/village-of-port-alice.pdf",
+        "retrievedOn": "2026-10-31",
+        "dateTimezone": "America/Vancouver"
+      },
+      "indexRetrieval": null,
+      "retainedSalaryLeads": [
+        {
+          "label": "2025-06-25 Statement of Financial Information Download",
+          "url": "https://portalice.ca/wp-content/uploads/2025/06/2025-06-25-Statement-of-Financial-Information.pdf",
+          "status": "source-found-awaiting-extraction"
+        }
+      ],
+      "historicalCompleteness": "Not established; linked files and failed retrievals are distinct from accepted employee cohorts."
+    },
+    {
+      "municipality": "Alert Bay",
+      "employerSlug": "village-of-alert-bay",
+      "employerName": "Village of Alert Bay",
+      "regionalDistrict": "Regional District of Mount Waddington",
+      "archiveUrl": "https://www.alertbay.ca/news/2018/6/9/2017-annual-report",
+      "baselineOfficialRecords": 0,
+      "baselineCompiledRecords": 0,
+      "newSources": [],
+      "newOfficialRows": 0,
+      "originalRetrieval": null,
+      "indexRetrieval": {
+        "municipality": "Alert Bay",
+        "employerSlug": "village-of-alert-bay",
+        "sourceUrl": "https://www.alertbay.ca/news/2018/6/9/2017-annual-report",
+        "sourceIndexUrl": "https://www.alertbay.ca/news/2018/6/9/2017-annual-report",
+        "kind": "index",
+        "status": "downloaded",
+        "finalUrl": "https://www.alertbay.ca/news/2018/6/9/2017-annual-report",
+        "bytes": 100050,
+        "sha256": "76424f38ced8ba6d154335082d18d91ff3b3542f285d03f6acb36088b1e9b0bf",
+        "isPdf": false,
+        "localPath": "/tmp/pofbc-wave-island/village-of-alert-bay-index.html"
+      },
+      "retainedSalaryLeads": [],
+      "historicalCompleteness": "Not established; linked files and failed retrievals are distinct from accepted employee cohorts."
+    },
+    {
+      "municipality": "Powell River",
+      "employerSlug": "city-of-powell-river",
+      "employerName": "City of Powell River",
+      "regionalDistrict": "qathet Regional District",
+      "archiveUrl": "https://powellriver.ca/pages/financialstatementsandsofireports",
+      "baselineOfficialRecords": 0,
+      "baselineCompiledRecords": 0,
+      "newSources": [],
+      "newOfficialRows": 0,
+      "originalRetrieval": null,
+      "indexRetrieval": {
+        "municipality": "Powell River",
+        "employerSlug": "city-of-powell-river",
+        "sourceUrl": "https://powellriver.ca/pages/financialstatementsandsofireports",
+        "sourceIndexUrl": "https://powellriver.ca/pages/financialstatementsandsofireports",
+        "kind": "index",
+        "status": "downloaded",
+        "finalUrl": "https://powellriver.ca/pages/financialstatementsandsofireports",
+        "bytes": 277415,
+        "sha256": "1030c5b1161364174fd6e42c8cdcc960721e0eb8bcb9ca567beb9b3e9700d29d",
+        "isPdf": false,
+        "localPath": "/tmp/pofbc-wave-island/city-of-powell-river-index.html"
+      },
+      "retainedSalaryLeads": [
+        {
+          "label": "Powell River official source index",
+          "url": "https://powellriver.ca/pages/financialstatementsandsofireports",
+          "status": "index-located"
+        }
+      ],
+      "historicalCompleteness": "Not established; linked files and failed retrievals are distinct from accepted employee cohorts."
+    },
+    {
+      "municipality": "Gibsons",
+      "employerSlug": "town-of-gibsons",
+      "employerName": "Town of Gibsons",
+      "regionalDistrict": "Sunshine Coast Regional District",
+      "archiveUrl": "https://gibsons.ca/town-hall/budget-finances/financial-reporting/",
+      "baselineOfficialRecords": 29,
+      "baselineCompiledRecords": 0,
+      "newSources": [
+        {
+          "id": "wave-island-town-of-gibsons-2025-employees",
+          "year": "2025",
+          "category": "employee-remuneration",
+          "rows": 24,
+          "sha256": "8a9c0dea77b960c9b491a2b52f3c6f898f5f05cf15878e8975228c510c6988d3",
+          "sourceUrl": "https://gibsons.ca/wp-content/uploads/2026/07/2025-Statement-of-Financial-Information.pdf",
+          "pages": [
+            10
+          ],
+          "publicWarning": "The source places 1 employees with remuneration below $75,000 in its named schedule despite its remuneration threshold heading. The source rows and separate expenses are retained; no threshold explanation is assumed."
+        },
+        {
+          "id": "wave-island-town-of-gibsons-2025-council",
+          "year": "2025",
+          "category": "elected-officials",
+          "rows": 5,
+          "sha256": "8a9c0dea77b960c9b491a2b52f3c6f898f5f05cf15878e8975228c510c6988d3",
+          "sourceUrl": "https://gibsons.ca/wp-content/uploads/2026/07/2025-Statement-of-Financial-Information.pdf",
+          "pages": [
+            9
+          ],
+          "publicWarning": null
+        }
+      ],
+      "newOfficialRows": 29,
+      "originalRetrieval": {
+        "municipality": "Gibsons",
+        "employerSlug": "town-of-gibsons",
+        "employerName": "Town of Gibsons",
+        "sourceIndexUrl": "https://gibsons.ca/town-hall/budget-finances/financial-reporting/",
+        "sourceUrl": "https://gibsons.ca/wp-content/uploads/2026/07/2025-Statement-of-Financial-Information.pdf",
+        "label": "2025",
+        "status": "downloaded",
+        "bytes": 28071371,
+        "sha256": "8a9c0dea77b960c9b491a2b52f3c6f898f5f05cf15878e8975228c510c6988d3",
+        "pdfPages": 51,
+        "nativeTextChars": 25711,
+        "remunerationPages": [
+          2,
+          3,
+          4,
+          6,
+          7,
+          9,
+          10
+        ],
+        "localPdf": "/tmp/pofbc-wave-island/town-of-gibsons.pdf",
+        "retrievedOn": "2026-10-31",
+        "dateTimezone": "America/Vancouver"
+      },
+      "indexRetrieval": null,
+      "retainedSalaryLeads": [
+        {
+          "label": "2021 Statement of Financial Information",
+          "url": "https://gibsons.ca/wp-content/uploads/2026/07/2021-Statement-of-Financial-Information.pdf",
+          "status": "linked-unreviewed"
+        },
+        {
+          "label": "2022 Statement of Financial Information",
+          "url": "https://gibsons.ca/wp-content/uploads/2026/07/2022-Statement-of-Financial-Information.pdf",
+          "status": "linked-unreviewed"
+        },
+        {
+          "label": "2023 Statement of Financial Information",
+          "url": "https://gibsons.ca/wp-content/uploads/2026/07/2023-Statement-of-Financial-Information.pdf",
+          "status": "linked-unreviewed"
+        },
+        {
+          "label": "Gibsons 2024 disclosure",
+          "url": "https://gibsons.ca/wp-content/uploads/2026/07/2024-Statement-of-Financial-Information.pdf",
+          "status": "held-for-review"
+        },
+        {
+          "label": "Town of Gibsons 2025 elected-officials",
+          "url": "https://gibsons.ca/wp-content/uploads/2026/07/2025-Statement-of-Financial-Information.pdf",
+          "status": "imported"
+        }
+      ],
+      "historicalCompleteness": "Not established; linked files and failed retrievals are distinct from accepted employee cohorts."
+    },
+    {
+      "municipality": "Sechelt",
+      "employerSlug": "district-of-sechelt",
+      "employerName": "District of Sechelt",
+      "regionalDistrict": "Sunshine Coast Regional District",
+      "archiveUrl": "https://www.sechelt.ca/our-government/budget-and-finances/financial-plan-and-reports/",
+      "baselineOfficialRecords": 43,
+      "baselineCompiledRecords": 0,
+      "newSources": [],
+      "newOfficialRows": 0,
+      "originalRetrieval": null,
+      "indexRetrieval": null,
+      "retainedSalaryLeads": [
+        {
+          "label": "2025",
+          "url": "https://media-003-ca.cdn.govstack.com/sechelt-ca/media/3adc0cnt/2025-statement-of-financial-information-sofi-1.pdf",
+          "status": "linked-unreviewed"
+        },
+        {
+          "label": "2023",
+          "url": "https://www.sechelt.ca/media/0ijmhd01/2023-statement-of-financial-information-sofi.pdf",
+          "status": "linked-unreviewed"
+        },
+        {
+          "label": "District of Sechelt 2024 elected-officials",
+          "url": "https://www.sechelt.ca/media/ckxgv52f/2024-sofi-report.pdf",
+          "status": "imported"
+        }
+      ],
+      "historicalCompleteness": "Not established; linked files and failed retrievals are distinct from accepted employee cohorts."
+    },
+    {
+      "municipality": "shíshálh Nation Government District",
+      "employerSlug": "shishalh-nation-government-district",
+      "employerName": "shíshálh Nation Government District",
+      "regionalDistrict": "Sunshine Coast Regional District",
+      "archiveUrl": "https://shishalh.com/services/inter-government/sngd/",
+      "baselineOfficialRecords": 0,
+      "baselineCompiledRecords": 0,
+      "newSources": [],
+      "newOfficialRows": 0,
+      "originalRetrieval": null,
+      "indexRetrieval": null,
+      "retainedSalaryLeads": [],
+      "historicalCompleteness": "Not established; linked files and failed retrievals are distinct from accepted employee cohorts.",
+      "governanceCaveat": "Distinct governance case. Ordinary municipal SOFI and FIPPA obligations are not assumed."
+    }
+  ]
+}
