@@ -426,7 +426,7 @@ export const SalariesView = ({ onOpenGovernment }) => {
       {!typed && (
         <section aria-label="Browse" className="salaries__records">
           {browse === 'employers' && <EmployerBrowse employers={employersIndex.employers} years={employersIndex.years} sector={sector} range={range} layout={layout} onOpen={openEmployer} onSector={(name) => { setSector(name); toTop() }} />}
-          {browse === 'people' && <PeopleBrowse index={index} sector={sector} range={range} layout={layout} onPerson={openPerson} onEmployer={openEmployer} />}
+          {browse === 'people' && <PeopleBrowse index={index} sector={sector} range={range} layout={layout} onPerson={openPersonAt} onEmployer={openEmployer} />}
           {browse === 'positions' && <PositionBrowse titlesIndex={titlesIndex} years={years} range={range} layout={layout} onTitle={openTitle} />}
         </section>
       )}

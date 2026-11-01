@@ -47,6 +47,33 @@ export const personKey = (name) => {
   return `${surname}|${given.join(' ')}`
 }
 
+/**
+ * Browse names once per employer, retaining every ranked observation behind the card/table row.
+ * This groups disclosed names, not verified people or proved duplicate payments. Filter before
+ * grouping, never sum payments, and prefer an original source when equal payments tie.
+ */
+export const groupHighestPaidRecords = (rows, { employers, sources = {}, sector = 'all', range = null }) => {
+  const groups = new Map()
+  const original = (row) => {
+    const source = sources[row[6]]
+    return Boolean(source?.url && source.sourceKind !== 'compiled' && source.scope !== 'compiled-unverified')
+  }
+  const better = (candidate, current) => candidate[2] > current[2] || (candidate[2] === current[2] && (
+    Number(original(candidate)) > Number(original(current)) || (original(candidate) === original(current) && candidate[5] > current[5])
+  ))
+  for (const row of rows) {
+    if (!row[0] || (range && (row[5] < range[0] || row[5] > range[1]))) continue
+    if (sector !== 'all' && employers[row[4]]?.[1] !== sector) continue
+    const key = `${personKey(row[0])}|${row[4]}`
+    if (!groups.has(key)) groups.set(key, { key, row, records: [], years: [] })
+    const group = groups.get(key)
+    group.records.push(row)
+    if (better(row, group.row)) group.row = row
+  }
+  return [...groups.values()].map((group) => ({ ...group, years: [...new Set(group.records.map((row) => row[5]))].sort((a, b) => a - b) }))
+    .sort((a, b) => b.row[2] - a.row[2] || a.key.localeCompare(b.key))
+}
+
 /** A prefix search supports several given names without discarding or concatenating their tokens. */
 export const matchesNameQuery = (name, query, nameDisclosure) => {
   const candidate = partsOf(name)
