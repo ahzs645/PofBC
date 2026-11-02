@@ -183,21 +183,29 @@ export const positionKey = (position) => String(position ?? '').toLowerCase().re
  * Fold a compiled observation only when one primary row has the same employer, reporting label,
  * payment and disclosed expenses. Unknown expenses and compiled-only repetitions stay visible.
  * This display grouping does not establish the compiled observation's reporting year.
+ *
+ * `layout` gives the column of each field: the people index's rows by default, or an employer
+ * file's ([name, position, pay, expenses, year, source, page], no employer column). `nameKey`, when
+ * given, must also agree: an employer's list holds every name, so only the same name, or a spelling
+ * the reviewed link list joins to it, can be the same payment disclosed twice.
  */
-export const withoutCompiledRepeats = (rows, sources = {}, currencyOfRow = () => 'CAD') => {
-  const compiled = (row) => sources[row[6]]?.sourceKind === 'compiled' || sources[row[6]]?.scope === 'compiled-unverified'
-  const key = (row) => `${row[4]}|${row[5]}|${row[2]}|${row[3]}|${currencyOfRow(row)}`
+export const PEOPLE_LAYOUT = { position: 1, pay: 2, expenses: 3, employer: 4, year: 5, source: 6 }
+export const EMPLOYER_LAYOUT = { position: 1, pay: 2, expenses: 3, employer: null, year: 4, source: 5 }
+export const withoutCompiledRepeats = (rows, sources = {}, currencyOfRow = () => 'CAD', { layout = PEOPLE_LAYOUT, nameKey = null } = {}) => {
+  const at = layout
+  const compiled = (row) => sources[row[at.source]]?.sourceKind === 'compiled' || sources[row[at.source]]?.scope === 'compiled-unverified'
+  const key = (row) => [nameKey ? nameKey(row) : '', at.employer === null ? '' : row[at.employer], row[at.year], row[at.pay], row[at.expenses], currencyOfRow(row)].join('|')
   const primary = new Map()
   for (const row of rows) {
-    const source = sources[row[6]]
-    if (compiled(row) || !source?.url || !source.sha256 || row[3] == null) continue
+    const source = sources[row[at.source]]
+    if (compiled(row) || !source?.url || !source.sha256 || row[at.expenses] == null) continue
     const signature = key(row)
     if (!primary.has(signature)) primary.set(signature, [])
     primary.get(signature).push(row)
   }
   return rows.filter((row) => {
-    if (!compiled(row) || row[3] == null) return true
+    if (!compiled(row) || row[at.expenses] == null) return true
     const matches = primary.get(key(row)) ?? []
-    return matches.length !== 1 || Boolean(row[1] && matches[0][1] && positionKey(row[1]) !== positionKey(matches[0][1]))
+    return matches.length !== 1 || Boolean(row[at.position] && matches[0][at.position] && positionKey(row[at.position]) !== positionKey(matches[0][at.position]))
   })
 }

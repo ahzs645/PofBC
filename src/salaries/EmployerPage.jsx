@@ -7,7 +7,8 @@
 
 import { useEffect, useMemo, useState } from 'react'
 import { Segmented } from '../site/Segmented.jsx'
-import { displayName, personKey } from './people.js'
+import { displayName, EMPLOYER_LAYOUT, personKey, withoutCompiledRepeats } from './people.js'
+import { employerNameKeys } from './nameLinks.js'
 import { meanMoney, titleKey, titleLabel } from './positions.js'
 import { categoryCoverage, coverageAt, expenseLabel, reportingYearLabel, scopeLabel } from './coverage.js'
 import { DisclosureSummary } from './DisclosureEvidence.jsx'
@@ -56,7 +57,22 @@ const POSITION_ORDER = {
 export const EmployerPage = ({ entry, years, sources, year: wantedYear, show, role, layout = 'cards', back, onYear, onShow, onLayout, onRole, onTitle, onPerson, onOpenGovernment, remember }) => {
   const seen = seenYears(entry)
   const [sourceRows, setRows] = useState(null)
-  const rows = useMemo(() => sourceRows?.filter((row) => isCadEmployer(row, entry.slug, years, sources)) ?? null, [sourceRows, entry.slug, years, sources])
+  // The employer's reviewed name joins (nameLinks.js): until they arrive, only identical names count.
+  const [nameLinks, setNameLinks] = useState(null)
+  useEffect(() => {
+    let live = true
+    setNameLinks(null)
+    loadJson(`salaries/links/employers/${entry.slug}.json.gzip`).then((published) => live && setNameLinks(employerNameKeys(published, entry.slug)), () => live && setNameLinks(new Map()))
+    return () => { live = false }
+  }, [entry.slug])
+  // A compiled copy of a payment the employer's own report discloses, under the same name or a
+  // joined spelling, is listed once: the report's record stays.
+  const rows = useMemo(() => {
+    const cad = sourceRows?.filter((row) => isCadEmployer(row, entry.slug, years, sources))
+    if (!cad) return null
+    const nameKey = (row) => { const key = personKey(row[0] ?? ''); return nameLinks?.get(key) ?? key }
+    return withoutCompiledRepeats(cad, sources, undefined, { layout: EMPLOYER_LAYOUT, nameKey })
+  }, [sourceRows, entry.slug, years, sources, nameLinks])
   const foreignRows = useMemo(() => sourceRows?.filter((row) => !isCadEmployer(row, entry.slug, years, sources)) ?? [], [sourceRows, entry.slug, years, sources])
   const [failed, setFailed] = useState(false)
   const [loadVersion, setLoadVersion] = useState(0)

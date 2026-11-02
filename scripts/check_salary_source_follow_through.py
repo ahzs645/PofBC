@@ -22,7 +22,7 @@ COLLECTIONS = ('follow-through-clbc', 'follow-through-cnc', 'follow-through-rru'
                'follow-through-langara', 'follow-through-small-crowns',
                'follow-through-translink', 'follow-through-worksafe-uvic')
 PINS = {
-    'baseline.json.gzip': '944bd02b3df220417f5715866f5830fb66ace88f9f3f38b281f0c9be27156a6f',
+    'baseline.json.gzip': '8f414198c5d2612972b071dd99ffd9ffdf37a2066f7eee24dfb0aa16cd8ec3ee',
     'baseline-row-groups.json.gzip': '2377f2220fdae030a2cf484dfce43091d16c484f4231d451c5705a409a01cb89',
     'baseline-live-links.json.gzip': 'c6b77c67224e1bbb554abb76b54b52e815e0861e888cca0081e30b9082a6f47c',
     'source-qualifications.json': '720c1e3bd87d24bfab5af9b812cdd4743e5cc9f5d97ac6b96e19a72e871f3322',
@@ -30,6 +30,7 @@ PINS = {
     'name-review-cnc.json': '416d65ab51729bcb303f8831caf21977ddfd438476adcf6b42a739ccfac2c4bf',
     'provided-source-backlog.json': '88f864e71d588308760ad9b20330d1b1b07d482a454db884e52ebcd3dc5b7c5a',
     'backlog-reconciliation.json': '8e530484dded211587c6c5cac9f013ef05a7ff593e7b69c4a406f79fa9ae57a9',
+    'concurrent-main.json': '5fae15c739ecd783139bd2abc5a160871a42aba9a8b940d9e5565f5363de5c70',
 }
 EXPECTED_OLD_ROWS = 1385021
 EXPECTED_COMPILED_ROWS = 228364
@@ -367,6 +368,31 @@ def live_link_groups(root):
     return groups
 
 
+def verify_employer_link_exports(root, groups):
+    expected = defaultdict(list)
+    for group in groups:
+        slug = group[0]
+        require(re.fullmatch(r'[a-z0-9]+(?:-[a-z0-9]+)*', slug) is not None, 'Invalid employer link export identifier')
+        if group[3]:expected[slug].append(group)
+    folder = root / 'public/salaries/links/employers'
+    require(folder.is_dir(), 'Employer link exports are missing')
+    require({path.name for path in folder.iterdir()} == {slug + '.json.gzip' for slug in expected},
+            'Employer link export inventory has missing/unknown files')
+    reviewed_names = set()
+    for path in (root / 'public/salaries/links').glob('*.json.gzip'):
+        reviewed_names.update(read(path).get('reviewedNames', []))
+    for slug, wanted in expected.items():
+        payload = read(folder / (slug + '.json.gzip'))
+        require(isinstance(payload.get('links'), list)
+                and Counter(serial(group) for group in payload['links']) == Counter(serial(group) for group in wanted),
+                'Employer link groups differ from the full public graph: ' + slug)
+        wanted_reviewed = {slug + '|' + group[1] for group in wanted} & reviewed_names
+        actual_reviewed = payload.get('reviewedNames', [])
+        require(len(actual_reviewed) == len(set(actual_reviewed)) and set(actual_reviewed) == wanted_reviewed,
+                'Employer reviewed-name markers differ from the public graph: ' + slug)
+    return len(expected)
+
+
 def verify_required_name_links(decisions, groups):
     expected = []
     for entry in decisions:
@@ -548,7 +574,35 @@ def verify_currency(root, baseline, index):
     return len(annotated)
 
 
-def verify_review_receipts(root, baseline):
+def verify_concurrent_main_review(root, baseline, capsule):
+    relative = 'research/salaries/name-links/reviewed.json'
+    pins = [pin for pin in baseline['researchInputs'] if pin['path'] == relative]
+    require(len(pins) == 1 and capsule.get('schemaVersion') == 1
+            and capsule.get('reviewedFile') == relative
+            and re.fullmatch(r'[a-f0-9]{40}', capsule.get('mainCommit', '')) is not None
+            and capsule.get('baselineReviewedFileSha256') == pins[0]['sha256'],
+            'Concurrent main review capsule disagrees with the immutable baseline')
+    archive = root / AREA / 'baseline-code.tar.gz'
+    require(digest(archive.read_bytes()) == baseline['baselineCodeSha256'], 'Historical code archive changed')
+    with tarfile.open(archive, 'r:gz') as stream:
+        original = stream.extractfile(relative).read()
+    require(digest(original) == pins[0]['sha256'], 'Archived original four manual decisions changed')
+    old = json.loads(original)
+    require(len(capsule.get('baselineDecisions', [])) == 4
+            and strict_equal(old.get('decisions'), capsule['baselineDecisions']),
+            'Concurrent capsule changed the original four manual decisions')
+    additions = capsule.get('additionalDecisions', [])
+    require(len(additions) == 1 and additions[0].get('decision') == 'verified'
+            and additions[0].get('preferredName') in additions[0].get('names', []),
+            'Concurrent capsule must approve exactly one explicit verified addition')
+    raw = (root / relative).read_bytes()
+    require(digest(raw) == capsule.get('reviewedFileSha256'), 'Concurrent manual review file differs from its exact approved capsule')
+    require(strict_equal(json.loads(raw).get('decisions'), capsule['baselineDecisions'] + additions),
+            'Manual review file changed old decisions or added an unapproved decision')
+    return len(additions)
+
+
+def verify_review_receipts(root, baseline, concurrent=None):
     counts = {'source-reviewed.json': 251, 'continuation-reviewed.json': 43,
               'held-completion-reviewed.json': 167, 'reviewed.json': None}
     preserved = 0
@@ -556,6 +610,9 @@ def verify_review_receipts(root, baseline):
         relative = 'research/salaries/name-links/' + name
         pins = [p for p in baseline['researchInputs'] if p['path'] == relative]
         path = root / relative
+        if name == 'reviewed.json' and concurrent is not None:
+            verify_concurrent_main_review(root, baseline, concurrent)
+            continue
         require(len(pins) == 1 and digest(path.read_bytes()) == pins[0]['sha256'],
                 'Original name-review receipt changed: ' + name)
         if count is not None:
@@ -674,7 +731,7 @@ def verify(root=ROOT, check_graph=True):
                           'year': source['year'], **verify_source_rows(source, expected_rows[sid], actual_rows[sid])}
     require(set(actual_rows) == set(sources), 'Published new source set differs from accepted manifests')
     annotation_count = verify_currency(root, baseline, index)
-    review_count = verify_review_receipts(root, baseline)
+    review_count = verify_review_receipts(root, baseline, inputs['concurrent-main.json'])
     result = {'schemaVersion': 1, 'checkedOn': '2026-11-02', 'accepted': True, 'noOutreach': True,
               'immutableInputSha256': PINS, 'acceptedDocuments': document_count, 'acceptedEmployeeSources': len(sources), 'acceptedEmployeeRows': EXPECTED_NEW_ROWS,
               'heldEmployeeSources': len(held), 'heldCandidateRowsExcluded': HELD_ROWS, 'preservedOriginalRows': preserved,
@@ -685,6 +742,7 @@ def verify(root=ROOT, check_graph=True):
     if check_graph:
         groups = live_link_groups(root)
         result.update(verify_link_preservation(inputs['baseline-live-links.json.gzip']['groups'], groups))
+        result['verifiedEmployerLinkExports'] = verify_employer_link_exports(root, groups)
         new_decisions = verify_new_name_receipts(root, inputs)
         result['validatedNewNameDecisions'] = verify_required_name_links(new_decisions, groups)
     return result

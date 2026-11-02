@@ -332,3 +332,14 @@ export const personRecordShards = (published, key) => {
   }
   return [...new Set([...keys].map((nameKey) => surnameShard(`${nameKey.split('|')[0]},`)))].sort()
 }
+
+/** One employer's joins from its published file: each spelling's name key → its group's key. */
+export const employerNameKeys = (published, slug) => {
+  const keys = new Map()
+  for (const [employer, key, , aliases] of published?.links ?? []) {
+    if (employer !== slug) continue
+    keys.set(key, key)
+    for (const [aliasKey] of aliases) keys.set(aliasKey, key)
+  }
+  return keys
+}

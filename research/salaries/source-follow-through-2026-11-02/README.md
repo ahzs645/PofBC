@@ -36,6 +36,8 @@ Each new connection pins both complete live name histories, both complete compar
 
 [RRU reviewed connections](name-review-rru.csv), [CNC individual review](cnc-name-review.json), and the current [original queue outcomes](held-pair-outcomes.csv) retain the individual decisions. Existing verified and likely confidence levels remain distinct. Pittman's source-established USD amount remains excluded from CAD rankings and aggregates.
 
+The original 3,173-case queue now has **145 verified connections, 25 likely connections and 3,003 unconnected pairs**. Fifteen original cases gained individual source evidence in this release; the three extra connections remain outside that denominator.
+
 ## Remaining work and acquisition
 
 [All 134 supplied source leads](backlog-reconciliation.md) were reconciled against current accepted payloads and their hashes. **110 entries are fully accepted for employee scope, one report is partially accepted, and 23 older entries remain unresolved.** Twenty old PHSA/Island Health pending labels and two prepared-implementation manifest pointers were stale and have been corrected in the [live source backlog](../source-backlog.json).
@@ -60,5 +62,9 @@ npm run preview:salaries -- --build
 Each collection guide documents original-PDF download/extraction commands and the complete artifact checks. Normal app builds and CI consume committed normalized evidence without fetching mutable public reports or running OCR. The original-PDF extraction paths remain available for a separate source reproduction.
 
 The current release verifier checks every original observation, every new normalized observation, all 61 document dispositions, held-row exclusion, source fingerprints, missing/zero/negative values, compiled preservation, old identity graph connections and currency separation. `--write` records its successful result in [release-validation.json](release-validation.json).
+
+Two combined builds reproduce **1,909 generated files identically**, including 121 employer-specific name-link exports. The [determinism receipt](determinism.json) records the comparison. The [browser receipt](browser-validation.json) covers narrow and desktop layouts, source evidence, old name URLs, accepted/held cohorts and USD separation.
+
+Concurrent changes from main are preserved, including the employer-page treatment of repeated payments and the owner's separately requested Martineau spelling connection. The [concurrent-main capsule](concurrent-main.json) pins that single additional legacy review while preserving the original four decisions. The current verifier checks each employer-specific link file against the complete published graph.
 
 Earlier release receipts remain immutable. Their sixteen historical gates run using exact baseline code and pinned inputs in an isolated directory, reproducing **1,749 original exports byte for byte**. The historical reader adapter supplies only their original byte pins; all 461 earlier adopted identity decisions are still semantically checked against current live observations. This prevents a new source from silently extending an outdated name review.

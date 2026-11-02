@@ -2,7 +2,7 @@ import { test } from 'node:test'
 import assert from 'node:assert/strict'
 import { readFileSync, readdirSync } from 'node:fs'
 import { gunzipSync } from 'node:zlib'
-import { groupHighestPaidRecords, matchesNameQuery, nameMatch, nameQueryTier, nameReadings, personKey, readName, surnameShard, withoutCompiledRepeats } from './people.js'
+import { groupHighestPaidRecords, matchesNameQuery, nameMatch, nameQueryTier, nameReadings, personKey, readName, surnameShard, withoutCompiledRepeats, EMPLOYER_LAYOUT } from './people.js'
 
 const DIR = new URL('../../public/salaries/people/', import.meta.url)
 
@@ -253,4 +253,17 @@ test('unknown expenses, absent original provenance, or conflicting positions can
   const rows = [row('official', 0), row('compiled', 0)]
   assert.deepEqual(withoutCompiledRepeats(rows, sources), [rows[0]])
   assert.deepEqual(withoutCompiledRepeats(rows, { ...sources, official: { url: sources.official.url } }), rows)
+})
+
+test('an employer list folds a compiled copy only under the same or a joined name', () => {
+  const sources = { official: { url: 'https://example.test/report.pdf', sha256: 'original-hash' }, compiled: { sourceKind: 'compiled' } }
+  // Employer file rows: [name, position, pay, expenses, year, source, page].
+  const original = ['Chan,Wee-Shian', null, 620886, 8062, 46, 'official', 39]
+  const misread = ['Chan, W ee0Shian', null, 620886, 8062, 46, 'compiled', null]
+  const stranger = ['Wong, Alex', null, 620886, 8062, 46, 'compiled', null]
+  const links = new Map([['chan|w eeshian', 'chan|weeshian'], ['chan|weeshian', 'chan|weeshian']])
+  const nameKey = (row) => links.get(personKey(row[0])) ?? personKey(row[0])
+  const shown = withoutCompiledRepeats([original, misread, stranger], sources, undefined, { layout: EMPLOYER_LAYOUT, nameKey })
+  assert.deepEqual(shown, [original, stranger], 'the joined misreading folds; another name with the same payment does not')
+  assert.deepEqual(withoutCompiledRepeats([original, misread], sources, undefined, { layout: EMPLOYER_LAYOUT, nameKey: (row) => personKey(row[0]) }), [original, misread], 'without the join both stay')
 })

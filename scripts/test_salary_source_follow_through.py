@@ -2,8 +2,10 @@
 import copy
 import gzip
 import hashlib
+import io
 import json
 from pathlib import Path
+import tarfile
 import tempfile
 import unittest
 
@@ -202,6 +204,85 @@ class ImmutableReceiptTests(unittest.TestCase):
             path.write_text(json.dumps(changed))
             with self.assertRaisesRegex(ValueError, 'Original name-review receipt changed'):
                 check.verify_review_receipts(root, baseline)
+
+
+class ConcurrentMainReviewTests(unittest.TestCase):
+    def setUp(self):
+        self.temp = tempfile.TemporaryDirectory();self.addCleanup(self.temp.cleanup);self.root = Path(self.temp.name)
+        self.relative = 'research/salaries/name-links/reviewed.json'
+        self.old = [{'employer': 'employer', 'names': [f'Alias{i}, A', f'Original{i}, A'],
+                     'decision': 'verified', 'note': 'Original individual decision'} for i in range(4)]
+        self.addition = {'employer': 'employer', 'names': ['Misread, Name', 'Original, Name'],
+                         'decision': 'verified', 'preferredName': 'Original, Name', 'note': 'Explicit owner review'}
+        original = json.dumps({'note': 'Legacy policy', 'decisions': self.old}).encode()
+        archive = self.root / check.AREA / 'baseline-code.tar.gz';archive.parent.mkdir(parents=True)
+        with tarfile.open(archive, 'w:gz') as stream:
+            info = tarfile.TarInfo(self.relative);info.size = len(original);stream.addfile(info, io.BytesIO(original))
+        self.baseline = {'baselineCodeSha256': check.digest(archive.read_bytes()),
+                         'researchInputs': [{'path': self.relative, 'sha256': check.digest(original)}]}
+        self.current = {'note': 'Legacy policy', 'decisions': copy.deepcopy(self.old) + [self.addition]}
+        path = self.root / self.relative;path.parent.mkdir(parents=True, exist_ok=True);path.write_text(json.dumps(self.current))
+        self.capsule = {'schemaVersion': 1, 'mainCommit': 'a' * 40, 'reviewedFile': self.relative,
+                        'reviewedFileSha256': check.digest(path.read_bytes()),
+                        'baselineReviewedFileSha256': check.digest(original),
+                        'baselineDecisions': copy.deepcopy(self.old), 'additionalDecisions': [self.addition]}
+
+    def rewrite_current_and_repin_only_current_bytes(self):
+        path = self.root / self.relative;path.write_text(json.dumps(self.current))
+        self.capsule['reviewedFileSha256'] = check.digest(path.read_bytes())
+
+    def test_only_the_exact_one_capsule_addition_can_extend_the_original_four(self):
+        self.assertEqual(check.verify_concurrent_main_review(self.root, self.baseline, self.capsule), 1)
+
+    def test_altering_any_original_decision_is_rejected_even_with_a_new_current_file_hash(self):
+        self.current['decisions'][0]['note'] = 'Silently broadened old evidence'
+        self.rewrite_current_and_repin_only_current_bytes()
+        with self.assertRaisesRegex(ValueError, 'changed old decisions'):
+            check.verify_concurrent_main_review(self.root, self.baseline, self.capsule)
+
+    def test_removing_a_baseline_decision_cannot_be_excused_as_concurrent_main(self):
+        del self.current['decisions'][2];self.rewrite_current_and_repin_only_current_bytes()
+        with self.assertRaisesRegex(ValueError, 'changed old decisions'):
+            check.verify_concurrent_main_review(self.root, self.baseline, self.capsule)
+
+    def test_an_unapproved_sixth_decision_cannot_use_the_approved_addition_capsule(self):
+        self.current['decisions'].append({'names': ['Other, A', 'Other, B'], 'decision': 'verified'})
+        self.rewrite_current_and_repin_only_current_bytes()
+        with self.assertRaisesRegex(ValueError, 'unapproved decision'):
+            check.verify_concurrent_main_review(self.root, self.baseline, self.capsule)
+
+
+class EmployerLinkExportTests(unittest.TestCase):
+    def setUp(self):
+        self.temp = tempfile.TemporaryDirectory();self.addCleanup(self.temp.cleanup);self.root = Path(self.temp.name)
+        self.folder = self.root / 'public/salaries/links/employers';self.folder.mkdir(parents=True)
+        self.groups = [['employer', 'surname|full', 'Surname, Full',
+                        [['surname|f', 'Surname, F', 'verified', 'Pinned source row']]],
+                       ['employer', 'other|full', 'Other, Full',
+                        [['other|f', 'Other, F', 'likely', 'Qualified inference']]]]
+        self.write(self.groups)
+
+    def write(self, groups):
+        raw = json.dumps({'links': groups}).encode()
+        (self.folder / 'employer.json.gzip').write_bytes(gzip.compress(raw, mtime=0))
+
+    def test_employer_file_contains_the_exact_complete_groups_independent_of_order(self):
+        self.write(list(reversed(self.groups)))
+        self.assertEqual(check.verify_employer_link_exports(self.root, self.groups), 1)
+
+    def test_missing_a_group_is_rejected_even_though_the_file_exists(self):
+        self.write(self.groups[:1])
+        with self.assertRaisesRegex(ValueError, 'groups differ'):check.verify_employer_link_exports(self.root, self.groups)
+
+    def test_altered_status_or_evidence_in_an_employer_file_is_rejected(self):
+        changed = copy.deepcopy(self.groups);changed[0][3][0][2] = 'likely';self.write(changed)
+        with self.assertRaisesRegex(ValueError, 'groups differ'):check.verify_employer_link_exports(self.root, self.groups)
+
+    def test_missing_or_unknown_employer_files_cannot_hide_behind_valid_global_groups(self):
+        (self.folder / 'employer.json.gzip').unlink()
+        with self.assertRaisesRegex(ValueError, 'missing/unknown files'):check.verify_employer_link_exports(self.root, self.groups)
+        self.write(self.groups);(self.folder / 'unknown.json.gzip').write_bytes(gzip.compress(b'{"links":[]}'))
+        with self.assertRaisesRegex(ValueError, 'missing/unknown files'):check.verify_employer_link_exports(self.root, self.groups)
 
 
 class GraphPreservationTests(unittest.TestCase):
