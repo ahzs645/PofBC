@@ -56,6 +56,9 @@ hashes of all compiled observations and official witnesses. During every rebuild
 `validateReviewedNameConnections` rechecks completeness, monetary uniqueness,
 row multiplicity, source hashes and physical pages. A later source or row change
 cannot silently inherit an outdated review.
+Record guards use employer slugs and reporting labels instead of temporary
+index offsets, so adding unrelated employers or historical periods does not
+invalidate unchanged source evidence.
 
 ## Decisions for the other candidates
 

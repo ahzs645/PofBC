@@ -20,8 +20,12 @@ def digest(value):
     return hashlib.sha256(json.dumps(value, ensure_ascii=False, separators=(',', ':')).encode()).hexdigest()
 
 
-def row_fingerprint(rows):
-    return digest(sorted(digest(row) for row in rows))
+def stable_row(row, index):
+    return [*row[:4], index['employers'][row[4]][3], index['years'][row[5]], row[6], row[7] if len(row) > 7 else None]
+
+
+def row_fingerprint(rows, index=None):
+    return digest(sorted(digest(stable_row(row, index) if index else row) for row in rows))
 
 
 def is_compiled(row, sources):
@@ -37,7 +41,7 @@ def signature(row, years):
 
 def evidence_row(row, index):
     source = index['sources'][row[6]]
-    return {'row': row, 'rowSha256': digest(row), 'periodLabel': index['years'][row[5]],
+    return {'row': row, 'rowSha256': digest(stable_row(row, index)), 'periodLabel': index['years'][row[5]],
             'sourceId': row[6], 'sourceUrl': source.get('url'), 'pdfSha256': source.get('sha256'),
             'physicalPage': row[7] if len(row) > 7 else None, 'scope': source.get('scope')}
 
@@ -117,7 +121,7 @@ def build():
                               reason='Every observation of one compiled-only spelling matches exact pay and expenses for one unique official name in the corresponding year-label prefix.',
                               compiledName=typo[0][0], proposedName=matches[0][1][0][0],
                               compiledNameKey=name_key(typo[0][0]), targetNameKey=target_key[1],
-                              compiledRowsSha256=row_fingerprint(typo),
+                              compiledRowsSha256=row_fingerprint(typo, index),
                               compiledGivenNameIsInitial=bool(parts(typo[0][0])[1] and len(parts(typo[0][0])[1][0]) == 1))
                 result['matches'] = [{'compiled': evidence_row(row, index), 'official': evidence_row(witnesses[0], index),
                                       'otherIdenticalWitnesses': len(witnesses) - 1} for row, witnesses in matches]
@@ -180,7 +184,8 @@ def reviewed_links(dispositions):
             'proof': {'compiledNameKey': case['compiledNameKey'], 'compiledRowsSha256': case['compiledRowsSha256'],
                       'witnesses': [{'rowSha256': row['rowSha256'], 'sourceId': row['sourceId'], 'pdfSha256': row['pdfSha256'], 'pdfPage': row['physicalPage']} for row in case['evidence']]}
         })
-    return {'schemaVersion': 1, 'scope': 'Reviewed source-spelling corrections at one employer. No payment deletions, period relabeling or verified lifetime identities.',
+    return {'schemaVersion': 1, 'recordProjection': 'Name, position, remuneration, expenses, employer slug, reporting label, source ID, physical page. Index offsets are not identity evidence.',
+            'scope': 'Reviewed source-spelling corrections at one employer. No payment deletions, period relabeling or verified lifetime identities.',
             'visualReview': {'path': str(visual_path.relative_to(ROOT)), 'sha256': hashlib.sha256(visual_path.read_bytes()).hexdigest()},
             'renderManifest': {'path': str(manifest_path.relative_to(ROOT)), 'sha256': hashlib.sha256(manifest_path.read_bytes()).hexdigest()},
             'decisions': entries}

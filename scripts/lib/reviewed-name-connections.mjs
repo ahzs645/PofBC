@@ -2,7 +2,9 @@ import { createHash } from 'node:crypto'
 import { nameOnly, personKey } from '../../src/salaries/people.js'
 
 const hash = (value) => createHash('sha256').update(JSON.stringify(value)).digest('hex')
-export const nameRowsFingerprint = (rows) => hash(rows.map(hash).sort())
+const stableRow = (row, index) => [...row.slice(0, 4), index.employers[row[4]][3], index.years[row[5]], row[6], row[7] ?? null]
+export const nameRecordFingerprint = (row, index) => hash(stableRow(row, index))
+export const nameRowsFingerprint = (rows, index) => hash(rows.map((row) => nameRecordFingerprint(row, index)).sort())
 const compiled = (source) => source?.sourceKind === 'compiled' || source?.scope === 'compiled-unverified'
 const signature = (row, years) => JSON.stringify([row[4], years[row[5]].slice(0, 4), Math.round(row[2] * 100), row[3] == null ? null : Math.round(row[3] * 100)])
 
@@ -21,7 +23,7 @@ export const validateReviewedNameConnections = (payload, rows, index) => {
     if (wanted.has(key)) {
       if (!byName.has(key)) byName.set(key, [])
       byName.get(key).push(row)
-      byHash.set(hash(row), row)
+      byHash.set(nameRecordFingerprint(row, index), row)
     }
     const source = index.sources[row[6]]
     if (!compiled(source) && source?.url && source.sha256) {
@@ -42,7 +44,7 @@ export const validateReviewedNameConnections = (payload, rows, index) => {
     if (seen.has(from)) throw new Error('A compiled spelling has conflicting reviewed targets')
     seen.add(from)
     const originals = byName.get(from) ?? []
-    if (!originals.length || originals.some((row) => !compiled(index.sources[row[6]])) || nameRowsFingerprint(originals) !== entry.proof.compiledRowsSha256) throw new Error('Compiled alias observations changed; review again')
+    if (!originals.length || originals.some((row) => !compiled(index.sources[row[6]])) || nameRowsFingerprint(originals, index) !== entry.proof.compiledRowsSha256) throw new Error('Compiled alias observations changed; review again')
     const witnesses = entry.proof.witnesses.map((evidence) => {
       const row = byHash.get(evidence.rowSha256)
       const source = index.sources[evidence.sourceId]

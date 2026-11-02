@@ -52,6 +52,15 @@ class NameConnectionEvidenceTests(unittest.TestCase):
         self.assertNotEqual(row_fingerprint([a]), row_fingerprint([a, a]))
         self.assertNotEqual(row_fingerprint([b]), row_fingerprint([self.row(expense=0)]))
 
+    def test_index_offsets_do_not_change_the_underlying_record_guard(self):
+        index = {'employers': [['PHSA', 'Health', None, 'phsa']], 'years': self.years}
+        shifted = {'employers': [['Other', 'Other', None, 'other'], *index['employers']], 'years': ['1990', *self.years]}
+        row = self.row()
+        moved = list(row)
+        moved[4] += 1
+        moved[5] += 1
+        self.assertEqual(row_fingerprint([row], index), row_fingerprint([moved], shifted))
+
 
 if __name__ == '__main__':
     unittest.main()
