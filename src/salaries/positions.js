@@ -93,3 +93,8 @@ export const relatedTitles = (titles, key) => {
   const order = (a, b) => b.employers - a.employers || b.rows - a.rows
   return { narrower: narrower.sort(order), broader: broader.sort(order) }
 }
+
+/** A disclosed title without a department it already names: "VP, Private Equity · Private Equity". */
+export const shortTitle = (title) => String(title ?? '').split(' · ').reduce((kept, part) => (
+  kept.some((earlier) => earlier.toLowerCase().includes(part.trim().toLowerCase())) ? kept : [...kept, part.trim()]
+), []).join(' · ')

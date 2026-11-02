@@ -188,14 +188,16 @@ export const TitlePage = ({ titleKey: key, employers, years, sector, year: wante
         <section aria-labelledby="salaries-title-employers" className="salaries__records">
           <div className="salaries__head">
             <h2 id="salaries-title-employers" className="salaries__title">Employers in {years[year]}</h2>
-            <p className="salaries__meta">{count(chosen.length, 'employer', 'employers')}</p>
+            <div className="salaries__head-tools">
+              <p className="salaries__meta">{count(chosen.length, 'employer', 'employers')}</p>
+              <Segmented compact ariaLabel="Layout" value={layout} onChange={onLayout} options={LAYOUTS} />
+            </div>
           </div>
-          <div className="salaries__browse-bar">
-            {layout === 'cards'
-              ? <Segmented compact ariaLabel="Order employers" value={order} onChange={setOrder} options={[{ value: 'median', label: 'Highest median' }, { value: 'records', label: 'Most records' }, { value: 'name', label: 'A–Z' }]} />
-              : <span />}
-            <Segmented compact ariaLabel="Layout" value={layout} onChange={onLayout} options={LAYOUTS} />
-          </div>
+          {layout === 'cards' && (
+            <div className="salaries__browse-bar">
+              <Segmented compact ariaLabel="Order employers" value={order} onChange={setOrder} options={[{ value: 'median', label: 'Highest median' }, { value: 'records', label: 'Most records' }, { value: 'name', label: 'A–Z' }]} />
+            </div>
+          )}
           {layout === 'table' && <DataTable data={chosen} columns={employerColumns} sorting={[{ id: 'median', desc: true }]} label={`Employers in ${years[year]}`} />}
           {layout === 'cards' && (
           <Paged list={chosen} size={24} reset={`${year}|${order}|${sector}`}>

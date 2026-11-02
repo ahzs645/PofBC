@@ -8,7 +8,7 @@
 import { useEffect, useMemo, useState } from 'react'
 import { displayName, groupHighestPaidRecords } from './people.js'
 import { linkLookup } from './nameLinks.js'
-import { keyedTitles } from './positions.js'
+import { keyedTitles, shortTitle } from './positions.js'
 import { reportingYearLabel } from './coverage.js'
 import { formatMoney as money } from './money.js'
 import { personAnnotation, personCurrency } from './recordAnnotations.js'
@@ -98,14 +98,18 @@ const TopRecordCard = ({ group, rank, index, onPerson }) => {
       <span className="salaries__lead"><PersonIcon /></span>
       <span className="salaries__text">
         <span className="salaries__name">{displayName(group.name, index.sources?.[row[6]]?.nameDisclosure)}</span>
-        {row[1] && <span className="salaries__line">{row[1]}</span>}
+        {row[1] && <span className="salaries__line">{shortTitle(row[1])}</span>}
         <span className="salaries__line">{index.employers[row[4]][0]}</span>
-        {records.length > 1 && <span className="salaries__line">{count(records.length, 'ranked record', 'ranked records')} · {count(years.length, 'period', 'periods')}</span>}
+        {years.length > 1 && <span className="salaries__line">{records.length > years.length ? `${count(records.length, 'record', 'records')} in ${count(years.length, 'period', 'periods')}` : count(years.length, 'period', 'periods')}</span>}
         {group.aliases.length > 0 && <AliasLine aliases={group.aliases} records={records} sources={index.sources} />}
+        {/* Another currency is a different measure, so it is listed here rather than beside the ranked CAD amount. */}
+        {group.foreign?.map((foreign, at) => (
+          <span className="salaries__line" key={at} title={personAnnotation(foreign, index)?.measure}>
+            Also {money(foreign[2], '—', personCurrency(foreign, index))} in {index.years[foreign[5]]}, not ranked
+          </span>
+        ))}
       </span>
-      <span className="salaries__aside">{money(row[2], '—', personCurrency(row, index))}<span className="salaries__line">{rank != null ? `No. ${rank} · ` : 'Unranked · '}{index.years[row[5]]}</span>
-        {group.foreign?.map((foreign, at) => <span className="salaries__line" key={at}>{money(foreign[2], '—', personCurrency(foreign, index))} · {index.years[foreign[5]]} · {personAnnotation(foreign, index)?.measure ?? 'other currency'} · unranked</span>)}
-      </span>
+      <span className="salaries__aside">{money(row[2], '—', personCurrency(row, index))}<span className="salaries__line">{rank != null ? `No. ${rank} · ` : 'Unranked · '}{index.years[row[5]]}</span></span>
     </button>
   )
 }
@@ -116,7 +120,7 @@ export const AliasLine = ({ aliases, records, sources }) => {
   return (
     <span className="salaries__line">
       Also disclosed as {aliases.map((alias) => displayName(alias.name, sources?.[records.find((row) => row[0].startsWith(alias.name))?.[6]]?.nameDisclosure)).join(', ')}
-      {' · '}{sure ? 'verified' : 'likely the same person'}
+      {sure ? '' : ' (likely the same person)'}
     </span>
   )
 }

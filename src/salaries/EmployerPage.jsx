@@ -225,18 +225,18 @@ export const EmployerPage = ({ entry, years, sources, year: wantedYear, show, ro
             <h2 id="salaries-records" className="salaries__title">
               {{ positions: `Positions in ${years[year]}`, people: `Highest paid in ${years[year]}`, everyone: 'Everyone, every year' }[view]}
             </h2>
-            <p className="salaries__meta">
-              {view === 'positions' && count(matchingPositions.length, 'position', 'positions')}
-              {view === 'people' && count(matchingPeople.length, 'record', 'records')}
-              {view === 'everyone' && count(matchingEveryone.length, 'name', 'names')}
-            </p>
+            <div className="salaries__head-tools">
+              <p className="salaries__meta">
+                {view === 'positions' && count(matchingPositions.length, 'position', 'positions')}
+                {view === 'people' && count(matchingPeople.length, 'record', 'records')}
+                {view === 'everyone' && count(matchingEveryone.length, 'name', 'names')}
+              </p>
+              {view !== 'everyone' && <Segmented compact ariaLabel="Layout" value={layout} onChange={onLayout} options={LAYOUTS} />}
+            </div>
           </div>
-          {view !== 'everyone' && (
+          {view === 'positions' && layout === 'cards' && (
             <div className="salaries__browse-bar">
-              {view === 'positions' && layout === 'cards'
-                ? <Segmented compact ariaLabel="Order positions" value={order} onChange={setOrder} options={[{ value: 'records', label: 'Most records' }, { value: 'average', label: 'Highest average' }, { value: 'name', label: 'A–Z' }]} />
-                : <span />}
-              <Segmented compact ariaLabel="Layout" value={layout} onChange={onLayout} options={LAYOUTS} />
+              <Segmented compact ariaLabel="Order positions" value={order} onChange={setOrder} options={[{ value: 'records', label: 'Most records' }, { value: 'average', label: 'Highest average' }, { value: 'name', label: 'A–Z' }]} />
             </div>
           )}
           {view === 'people' && !withPositions && people.length > 0 && (

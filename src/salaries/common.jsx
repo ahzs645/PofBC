@@ -154,5 +154,20 @@ export const Paged = ({ list, size, reset, children }) => {
   return <>{children(items)}{pager}</>
 }
 
-/** Cards or a table: the choice offered above every list that has both. */
-export const LAYOUTS = [{ value: 'cards', label: 'Cards' }, { value: 'table', label: 'Table' }]
+const CardsIcon = () => (
+  <svg className="salaries__layout-icon" viewBox="0 0 16 16" aria-hidden="true">
+    <rect x="2" y="2" width="5" height="5" rx="1.2" /><rect x="9" y="2" width="5" height="5" rx="1.2" />
+    <rect x="2" y="9" width="5" height="5" rx="1.2" /><rect x="9" y="9" width="5" height="5" rx="1.2" />
+  </svg>
+)
+const TableIcon = () => (
+  <svg className="salaries__layout-icon" viewBox="0 0 16 16" aria-hidden="true">
+    <rect x="2" y="2.5" width="12" height="2.5" rx="1" /><rect x="2" y="6.75" width="12" height="2.5" rx="1" /><rect x="2" y="11" width="12" height="2.5" rx="1" />
+  </svg>
+)
+
+/** Cards or a table: the choice offered above every list that has both, as two icons. */
+export const LAYOUTS = [
+  { value: 'cards', label: <CardsIcon />, ariaLabel: 'Cards', title: 'Cards' },
+  { value: 'table', label: <TableIcon />, ariaLabel: 'Table', title: 'Table' }
+]

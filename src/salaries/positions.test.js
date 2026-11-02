@@ -2,7 +2,7 @@ import { test } from 'node:test'
 import assert from 'node:assert/strict'
 import { readFileSync } from 'node:fs'
 import { gunzipSync } from 'node:zlib'
-import { keyedTitles, meanMoney, relatedTitles, titleKey, titleLabel, titleMatcher, titleShard } from './positions.js'
+import { keyedTitles, meanMoney, relatedTitles, shortTitle, titleKey, titleLabel, titleMatcher, titleShard } from './positions.js'
 
 const DIR = new URL('../../public/salaries/positions/', import.meta.url)
 const read = (file) => JSON.parse(gunzipSync(readFileSync(new URL(file, DIR))))
@@ -58,4 +58,9 @@ test('the position index lists each title once, filed in the slice its key names
   for (const [, year, rows, mean, median, low, high] of slice.teacher.cells) {
     assert.ok(index.years[year] && rows > 0 && low <= mean && mean <= high && low <= median && median <= high)
   }
+})
+
+test('a card title drops a department it already names', () => {
+  assert.equal(shortTitle('Senior Vice President, Private Equity · Private Equity'), 'Senior Vice President, Private Equity')
+  assert.equal(shortTitle('Director · Finance'), 'Director · Finance')
 })

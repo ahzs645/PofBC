@@ -1774,7 +1774,7 @@ button.gallery__collecting-status, .gallery__collecting-graph {
 .salaries__name { line-height: 1.25; color: var(--ink); overflow-wrap: anywhere; }
 .salaries__line { display: block; font-size: 12px; line-height: 1.35; color: var(--ink-faint); font-weight: 400; }
 .salaries__line[data-up] { color: #2e7d4f; }
-.salaries__aside { flex: none; display: grid; justify-items: end; font-size: 13px; font-weight: 600; font-variant-numeric: tabular-nums; color: var(--ink); }
+.salaries__aside { flex: none; white-space: nowrap; display: grid; justify-items: end; font-size: 13px; font-weight: 600; font-variant-numeric: tabular-nums; color: var(--ink); }
 .salaries__more, .salaries__back {
   justify-self: start;
   margin-top: 8px;
@@ -1821,6 +1821,14 @@ button.gallery__collecting-status, .gallery__collecting-graph {
 .salaries__tiles dd.salaries__line { margin: 0; font-size: 12px; font-weight: 400; color: var(--ink-faint); }
 .salaries__hint--small { font-size: 13px; }
 .salaries__joins { margin: 4px 0 0; padding-left: 1.2em; display: grid; gap: 2px; }
+.salaries-movers { margin: 0; padding: 0; list-style: none; display: grid; gap: 6px; font-size: 13px; }
+.salaries-movers li { display: flex; justify-content: space-between; gap: 12px; align-items: baseline; padding-bottom: 6px; border-bottom: 1px solid var(--border); }
+.salaries-movers li:last-child { border-bottom: 0; }
+.salaries-movers__rate { font-weight: 600; font-variant-numeric: tabular-nums; white-space: nowrap; }
+.salaries__head-tools { display: flex; align-items: center; gap: 10px; }
+.salaries__head-tools .field { margin: 0; }
+.salaries__layout-icon { display: block; width: 14px; height: 14px; fill: currentColor; }
+.segmented[aria-label='Layout'] button { padding-inline: 8px; }
 .salaries__caveats > summary { cursor: pointer; width: fit-content; }
 .salaries__matches + .salaries__about { margin-top: 0; }
 .salaries__about { margin-top: 24px; padding-top: 12px; border-top: 1px solid var(--border); }

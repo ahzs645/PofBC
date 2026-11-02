@@ -51,10 +51,11 @@ export const DataTable = ({ data, columns, sorting: initialSorting = [], label, 
 
   return (
     <div className="salaries-datatable">
-      <p className="salaries__meta salaries-datatable__count" role="status">
-        {rows.length.toLocaleString('en-CA')} of {data.length.toLocaleString('en-CA')} {data.length === 1 ? 'row' : 'rows'}
-        {columnFilters.length > 0 && <> · <button type="button" className="salaries__link" onClick={() => setColumnFilters([])}>Clear column filters</button></>}
-      </p>
+      {columnFilters.length > 0 && (
+        <p className="salaries__meta salaries-datatable__count" role="status">
+          {rows.length.toLocaleString('en-CA')} of {data.length.toLocaleString('en-CA')} rows match · <button type="button" className="salaries__link" onClick={() => setColumnFilters([])}>Clear column filters</button>
+        </p>
+      )}
       <div ref={box} className="salaries-table salaries-table--scroll" role="region" aria-label={label} tabIndex={0}>
         <table>
           <thead>

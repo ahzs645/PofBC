@@ -1,12 +1,13 @@
-// An employer's records over the years: how many there were and what the middle of them was paid,
-// who came onto and went off its list, the raises of names that stayed, its positions by how fast
-// their pay grew, and the year chosen in pay bands. Rows are the employer file's: [name, position,
+// An employer's records in two parts. First the year chosen on the employer's page (its latest by
+// default) against the one before it: records, median pay, raises, who came onto and went off the
+// list, its pay bands and the positions whose pay rose most. Then the whole run of years: the
+// long-run rates, charts, every period, and positions by how fast their pay grew. Rows are the employer file's: [name, position,
 // pay, expenses, year index, source id, PDF page].
 
 import { useMemo } from 'react'
 import { personKey } from './people.js'
 import { meanMoney, titleKey, titleLabel } from './positions.js'
-import { annualRate, formatRate, listChanges, medianOf, payBands, seriesGrowth, stayerRaises, typicalRaise, yearNumber } from './growth.js'
+import { annualRate, formatRate, listChanges, medianOf, MIN_RECORDS, payBands, seriesGrowth, stayerRaises, typicalRaise, yearNumber } from './growth.js'
 import { compactMoney, PayChart } from './parts.jsx'
 import { count } from './common.jsx'
 import { DataTable } from './DataTable.jsx'
@@ -59,11 +60,16 @@ const analyse = (rows, years) => {
     }
     const series = [...cells.values()].map((cell) => ({ ...cell, mean: cell.sum / cell.count }))
     const latest = series.reduce((best, cell) => (yearNumber(years[cell.year]) > yearNumber(years[best.year]) ? cell : best))
+    const titleRaises = stayerRaises(title.rows.map((row) => ({ name: row[0], group: '', pay: row[2], year: row[4] })), years)
+    // Each year's raises within the position, for the chosen year's biggest movers.
+    const raisesByYear = new Map()
+    for (const raise of titleRaises) raisesByYear.set(raise.to.year, [...(raisesByYear.get(raise.to.year) ?? []), raise.rate])
     return {
       key: title.key,
       label: titleLabel([...title.spellings].sort((a, b) => b[1] - a[1])[0][0]),
       growth: seriesGrowth(series, years),
-      raise: typicalRaise(stayerRaises(title.rows.map((row) => ({ name: row[0], group: '', pay: row[2], year: row[4] })), years)),
+      raise: typicalRaise(titleRaises),
+      raisesByYear,
       latest
     }
   }).filter((position) => position.growth || position.raise)
@@ -107,16 +113,69 @@ export const Trends = ({ rows, years, year, onRole, onYear }) => {
   ], [years, onRole])
 
   if (!perYear.length) return null
-  const latestChange = perYear.findLast((each) => each.joined !== undefined)
+  // The chosen period is compared with the one before it of the same kind (fiscal or calendar).
+  const calendar = (label) => /^\d{4}$/.test(label)
+  const sameKind = perYear.filter((each) => calendar(each.label) === calendar(chosen.label))
+  const previous = sameKind[sameKind.indexOf(chosen) - 1] ?? null
+  const versus = previous ? `vs ${previous.label}` : 'first period'
+  const recordChange = previous ? chosen.records - previous.records : null
+  const medianChange = previous && previous.median > 0 ? chosen.median / previous.median - 1 : null
+  // Positions whose people were paid the most more this year, among those with enough raises to say.
+  const movers = positions
+    .map((position) => ({ ...position, rates: position.raisesByYear.get(chosen.year) ?? [] }))
+    .filter((position) => position.rates.length >= MIN_RECORDS)
+    .map((position) => ({ ...position, yearRaise: medianOf(position.rates) }))
+    .sort((a, b) => b.yearRaise - a.yearRaise)
+    .slice(0, 5)
+  const isLatest = chosen === last || chosen === perYear.at(-1)
+
   return (
     <>
-      <section className="salaries__person" aria-labelledby="salaries-trends">
-        <h2 id="salaries-trends" className="salaries__title">Over the years <GrowthTip id="salaries-trends-help" /></h2>
+      <section className="salaries__person" aria-labelledby="salaries-trends-year">
+        <h2 id="salaries-trends-year" className="salaries__title">{isLatest ? `Latest: ${chosen.label}` : chosen.label} <GrowthTip id="salaries-trends-year-help" /></h2>
         <dl className="salaries__tiles">
-          <div><dt>Records</dt><dd>{first.records.toLocaleString('en-CA')} → {last.records.toLocaleString('en-CA')}</dd><dd className="salaries__line">{first.label}–{last.label}</dd></div>
+          <div><dt>Records</dt><dd>{chosen.records.toLocaleString('en-CA')}</dd><dd className="salaries__line">{recordChange === null ? versus : `${recordChange > 0 ? '+' : recordChange < 0 ? '−' : ''}${Math.abs(recordChange).toLocaleString('en-CA')} ${versus}`}</dd></div>
+          <div><dt>Median</dt><dd>{compactMoney(chosen.median)}</dd><dd className="salaries__line">{medianChange === null ? versus : `${formatRate(medianChange, '')} ${versus}`}</dd></div>
+          <div><dt>Typical raise</dt><dd>{formatRate(chosen.raise, '')}</dd><dd className="salaries__line">{chosen.raises ? `from ${count(chosen.raises, 'name', 'names')} who stayed` : 'no names to compare'}</dd></div>
+          <div><dt>New to the list</dt><dd>{chosen.joined?.toLocaleString('en-CA') ?? '—'}</dd><dd className="salaries__line">{chosen.left !== undefined ? `${chosen.left.toLocaleString('en-CA')} off it` : versus}</dd></div>
+        </dl>
+        <div className="salaries__charts">
+          {bands.length > 1 && (
+            <div>
+              <h3 className="salaries__chart-title">Pay bands</h3>
+              <ol className="salaries-bands">
+                {bands.map((band) => (
+                  <li key={band.from}>
+                    <span className="salaries-bands__label">{band.to === null ? `${compactMoney(band.from)}+` : `${compactMoney(band.from)}–${compactMoney(band.to)}`}</span>
+                    <span className="salaries-bands__bar"><span style={{ width: `${(band.count / widest) * 100}%` }} /></span>
+                    <span className="salaries-bands__count">{band.count.toLocaleString('en-CA')}</span>
+                  </li>
+                ))}
+              </ol>
+            </div>
+          )}
+          {movers.length > 0 && (
+            <div>
+              <h3 className="salaries__chart-title">Biggest raises by position</h3>
+              <ol className="salaries-movers">
+                {movers.map((position) => (
+                  <li key={position.key}>
+                    <button type="button" className="salaries__link" onClick={() => onRole(position.key)}>{position.label}</button>
+                    <span className="salaries-movers__rate" title={`Median of ${count(position.rates.length, 'raise', 'raises')} in ${chosen.label}`}>{formatRate(position.yearRaise, '')}</span>
+                  </li>
+                ))}
+              </ol>
+            </div>
+          )}
+        </div>
+      </section>
+
+      <section className="salaries__person" aria-labelledby="salaries-trends">
+        <h2 id="salaries-trends" className="salaries__title">Over the years{first && last && first !== last ? `: ${first.label}–${last.label}` : ''}</h2>
+        <dl className="salaries__tiles salaries__tiles--three">
+          <div><dt>Records</dt><dd>{first.records.toLocaleString('en-CA')} → {last.records.toLocaleString('en-CA')}</dd><dd className="salaries__line">{first.label} to {last.label}</dd></div>
           <div><dt>Median</dt><dd>{formatRate(medianGrowth, '')}</dd><dd className="salaries__line">{medianGrowth === null ? 'one period only' : `a year, ${compactMoney(first.median)} → ${compactMoney(last.median)}`}</dd></div>
-          <div><dt>Typical raise</dt><dd>{formatRate(raise?.rate, '')}</dd><dd className="salaries__line">{raise ? `a year, from ${count(raise.pairs, 'raise', 'raises')}` : 'no name in two disclosures'}</dd></div>
-          <div><dt>New to the list</dt><dd>{latestChange ? latestChange.joined.toLocaleString('en-CA') : '—'}</dd><dd className="salaries__line">{latestChange ? `in ${latestChange.label}; ${latestChange.left.toLocaleString('en-CA')} off it` : 'one period only'}</dd></div>
+          <div><dt>Typical raise</dt><dd>{formatRate(raise?.rate, '')}</dd><dd className="salaries__line">{raise ? 'a year, for names that stayed' : 'no name in two disclosures'}</dd></div>
         </dl>
         {main.length > 1 && (
           <div className="salaries__charts">
@@ -134,11 +193,10 @@ export const Trends = ({ rows, years, year, onRole, onYear }) => {
 
       <section aria-labelledby="salaries-trends-years" className="salaries__records">
         <div className="salaries__head">
-          <h2 id="salaries-trends-years" className="salaries__title">Year by year</h2>
+          <h2 id="salaries-trends-years" className="salaries__title">Every period</h2>
           <p className="salaries__meta">{count(perYear.length, 'period', 'periods')}</p>
         </div>
         <DataTable data={perYear} columns={yearColumns} sorting={[{ id: 'label', desc: true }]} label="The employer's records by period" />
-        <p className="salaries__hint salaries__hint--small">New and off the list compare each period with the one before it of the same kind; crossing the disclosure threshold counts as either.</p>
       </section>
 
       {positions.length > 0 && (
@@ -148,21 +206,6 @@ export const Trends = ({ rows, years, year, onRole, onYear }) => {
             <p className="salaries__meta">{count(positions.length, 'position', 'positions')}</p>
           </div>
           <DataTable data={positions} columns={positionColumns} sorting={[{ id: 'growth', desc: true }]} label="Positions by pay growth" />
-        </section>
-      )}
-
-      {bands.length > 1 && (
-        <section aria-labelledby="salaries-trends-bands" className="salaries__person">
-          <h2 id="salaries-trends-bands" className="salaries__title">Pay bands in {chosen.label}</h2>
-          <ol className="salaries-bands">
-            {bands.map((band) => (
-              <li key={band.from}>
-                <span className="salaries-bands__label">{band.to === null ? `${compactMoney(band.from)}+` : `${compactMoney(band.from)}–${compactMoney(band.to)}`}</span>
-                <span className="salaries-bands__bar"><span style={{ width: `${(band.count / widest) * 100}%` }} /></span>
-                <span className="salaries-bands__count">{band.count.toLocaleString('en-CA')}</span>
-              </li>
-            ))}
-          </ol>
         </section>
       )}
     </>

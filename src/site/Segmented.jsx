@@ -35,6 +35,7 @@ export const Segmented = ({ label, ariaLabel, options, value, onChange, hint, co
             aria-pressed={value === option.value}
             disabled={option.disabled}
             title={option.title}
+            aria-label={option.ariaLabel}
             onClick={() => onChange(option.value)}
           >
             {option.label}
