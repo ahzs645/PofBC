@@ -21,6 +21,12 @@ const brandkit = (path) => fileURLToPath(new URL(`./vendor/brandkit/${path}`, im
 // dependencies or a separate package build. These entry points need only React and local helpers.
 const storyToolkit = (entry) => fileURLToPath(new URL(`./vendor/geo-toolkit/src/${entry}`, import.meta.url))
 
+// PlateForge (licence plates, drawn as SVG from its region data) is a submodule too, aliased to its
+// embed entry points (vendor/plateforge/docs/embed.md): `plateforge/bc` registers British Columbia
+// alone, and `plateforge` is the renderer and gallery API. Its fonts come from the @fontsource
+// packages this app installs at PlateForge's pinned versions.
+const plateforge = (entry) => fileURLToPath(new URL(`./vendor/plateforge/src/embed/${entry}`, import.meta.url))
+
 export default defineConfig(({ command }) => ({
   plugins: [react(), manualPages({ pack: 'bc', mount: 'visual-guides' })],
   // Scan the host entry rather than example applications within vendored repositories.
@@ -34,6 +40,8 @@ export default defineConfig(({ command }) => ({
       { find: /^brandkit\/studio$/, replacement: brandkit('src/studio/TemplateStudio.jsx') },
       { find: /^brandkit\/manuals$/, replacement: brandkit('src/manuals/index.js') },
       { find: /^brandkit$/, replacement: brandkit('src/engine/index.js') },
+      { find: /^plateforge\/bc$/, replacement: plateforge('bc.ts') },
+      { find: /^plateforge$/, replacement: plateforge('index.ts') },
       { find: /^@pgmaps\/geo-toolkit\/stories\/components\/StorySidecar$/, replacement: storyToolkit('stories/components/StorySidecar.tsx') },
       { find: /^@pgmaps\/geo-toolkit\/stories\/components\/StoryChapterNavigation$/, replacement: storyToolkit('stories/components/StoryChapterNavigation.tsx') },
       { find: /^@pgmaps\/geo-toolkit\/workspace\/workspace-context$/, replacement: storyToolkit('workspace/workspace-context.tsx') },
