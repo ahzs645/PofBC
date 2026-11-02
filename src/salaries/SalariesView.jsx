@@ -317,7 +317,7 @@ export const SalariesView = ({ onOpenGovernment }) => {
     .map((row) => [`${row[4]}|${linkOf(row).key}`, { employer: row[4], key: linkOf(row).key, name: linkOf(row).name, status: linkOf(row).status }])).values()]
   const atEmployer = place.personAt ? personList.filter((row) => index.employers[row[4]][3] === place.personAt) : []
   const scoped = atEmployer.length > 0 && atEmployer.length < personList.length
-  const chosen = personList.length ? { ...describeNameGroup(place.person, scoped ? atEmployer : personList, linkedName, index), reviewedName: personList.some((row) => linkOf(row)?.reviewedName) } : null
+  const chosen = personList.length ? { ...describeNameGroup(place.person, scoped ? atEmployer : personList, linkedName, index), reviewedName: personList.some((row) => linkOf(row)?.reviewedName && linkOf(row).key === place.person) } : null
   const scope = scoped ? {
     employer: index.employers[atEmployer[0][4]][0],
     others: new Set(personList.filter((row) => !atEmployer.includes(row)).map((row) => row[4])).size,
