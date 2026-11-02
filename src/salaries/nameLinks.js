@@ -1,0 +1,232 @@
+// Which differently written names at one employer are one person. Employers change how they write
+// names ("Garant, D." one year, "Garant, Daniel" another), sources disagree, and extraction splits
+// letters off ("Nevill, T homas"). Each spelling of a name at an employer is either joined to one
+// fuller spelling there, with the evidence and the assumption behind it, or kept apart with the
+// reason. Nothing here joins names across employers.
+//
+// A join is:
+//   verified — the records establish it: an extraction split, a distinctive position held under both
+//              spellings, or a reviewed decision (research/salaries/name-links/reviewed.json).
+//   likely   — an assumption: the only fuller name at the employer that agrees, never in the same
+//              period, and within LINK_RULES.maxGapYears of it. Between neighbouring years (a year
+//              apart or less) pay may not jump more than LINK_RULES.maxPayRatio times; over longer
+//              gaps a jump is a promotion as often as a different person, so it is not weighed.
+//   Both spellings in one period keep them apart, unless every such period has the same payment
+//   under both: one record disclosed twice, which verifies the join.
+// Everything else — several fuller names fit, both spellings in one period, a long gap, a pay jump,
+// a reviewed rejection — is kept apart, and listed with its reason.
+
+import { nameOnly, nameParts, personKey } from './people.js'
+import { titleKey } from './positions.js'
+
+export const LINK_RULES = { maxGapYears: 6, maxPayRatio: 3, distinctiveTitle: 3 }
+
+export { nameOnly }
+
+const yearOf = (label) => Number(String(label).slice(0, 4))
+
+/** How much a spelling says: a full first name outweighs any number of initials. */
+const information = (given) => (given[0]?.length > 1 ? 1000 : 0) + given.join('').length * 10 + given.length
+
+/** "T homas" read as the extraction split it: the first two given parts rejoined, else null. */
+const rejoined = (given) => (given.length > 1 && given[0].length === 1 ? [given[0] + given[1], ...given.slice(2)] : null)
+
+/**
+ * Whether two names can be one person's: the same surname, and each given name the same, an initial
+ * of the other, or — the first only — the start of the other of three letters or more ("Jeff",
+ * "Jeffrey"). Middle names one spelling leaves out do not disagree.
+ */
+export const compatibleNames = (a, b) => {
+  const x = nameParts(nameOnly(a))
+  const y = nameParts(nameOnly(b))
+  if (!x.surname || x.surname !== y.surname || !x.given.length || !y.given.length) return false
+  return x.given.slice(0, Math.min(x.given.length, y.given.length)).every((left, at) => {
+    const right = y.given[at]
+    if (left === right) return true
+    if (left[0] === right[0] && (left.length === 1 || right.length === 1)) return true
+    const [short, long] = left.length < right.length ? [left, right] : [right, left]
+    return at === 0 && short.length >= 3 && long.startsWith(short)
+  })
+}
+
+const shown = (spelling) => spelling.names[0]
+const matchable = (spelling) => nameOnly(spelling.names[0])
+
+/**
+ * Every spelling-to-spelling decision for the rows given (the people index's row schema).
+ * `years` are period labels; `employers` the index's [name, sector, body, slug] rows; `reviewed`
+ * decisions by employer slug and both disclosed names: { employer, names: [a, b], decision:
+ * 'verified' | 'reject', note }.
+ * Returns { links: [{ employer, key, name, aliases: [{ key, name, status, reason }] }], decisions }.
+ */
+export const findNameLinks = (rows, { years, employers, reviewed = [] }) => {
+  const spellings = new Map()
+  for (const row of rows) {
+    if (!row[0]) continue
+    const key = personKey(nameOnly(row[0]))
+    const id = `${row[4]}|${key}`
+    if (!spellings.has(id)) {
+      const { surname, given } = nameParts(nameOnly(row[0]))
+      if (!surname || !given.length) continue
+      spellings.set(id, { id, employer: row[4], key, surname, given, raw: new Map(), nameCounts: new Map(), periods: new Map(), titles: new Set() })
+    }
+    const spelling = spellings.get(id)
+    const raw = personKey(row[0])
+    if (!spelling.raw.has(raw)) spelling.raw.set(raw, new Map())
+    spelling.raw.get(raw).set(row[0], (spelling.raw.get(raw).get(row[0]) ?? 0) + 1)
+    spelling.nameCounts.set(row[0], (spelling.nameCounts.get(row[0]) ?? 0) + 1)
+    spelling.periods.set(row[5], Math.max(spelling.periods.get(row[5]) ?? 0, row[2]))
+    if (row[1] && titleKey(row[1])) spelling.titles.add(titleKey(row[1]))
+  }
+  for (const spelling of spellings.values()) {
+    // A name written without a position in it is shown before one with.
+    spelling.names = [...spelling.nameCounts].sort((a, b) => Number(nameOnly(b[0]) === b[0]) - Number(nameOnly(a[0]) === a[0]) || b[1] - a[1]).map(([name]) => name)
+    spelling.info = information(spelling.given)
+    spelling.count = [...spelling.nameCounts.values()].reduce((sum, value) => sum + value, 0)
+  }
+
+  // How many spellings at an employer held each title: a title few people hold says more.
+  const holders = new Map()
+  for (const spelling of spellings.values()) {
+    for (const title of spelling.titles) holders.set(`${spelling.employer}|${title}`, (holders.get(`${spelling.employer}|${title}`) ?? 0) + 1)
+  }
+  const reviewOf = new Map()
+  for (const entry of reviewed) {
+    const [a, b] = entry.names.map(personKey)
+    reviewOf.set(`${entry.employer}|${[a, b].sort().join('~')}`, entry)
+  }
+
+  const buckets = new Map()
+  for (const spelling of spellings.values()) {
+    const bucket = `${spelling.employer}|${spelling.surname}`
+    if (!buckets.has(bucket)) buckets.set(bucket, [])
+    buckets.get(bucket).push(spelling)
+  }
+
+  const decisions = []
+  const placed = new Set()
+  const parent = new Map()
+  const find = (spelling) => {
+    let at = spelling
+    while (parent.get(at.id) && parent.get(at.id) !== at) at = parent.get(at.id)
+    return at
+  }
+  const membersOf = new Map()
+  const members = (root) => membersOf.get(root.id) ?? [root]
+  const fuller = (a, b) => (b.info > a.info || (b.info === a.info && b.count > a.count) ? b : a)
+  const bestOf = (root) => members(find(root)).reduce(fuller)
+  const join = (spelling, other) => {
+    const [from, to] = [find(spelling), find(other)]
+    if (from === to) return
+    parent.set(from.id, to)
+    membersOf.set(to.id, [...members(to), ...members(from)])
+    membersOf.delete(from.id)
+  }
+
+  for (const bucket of buckets.values()) {
+    if (bucket.length < 2) continue
+    const slug = employers[bucket[0].employer]?.[3]
+    // Fuller spellings first, so a short one is weighed against everything its fuller fits joined.
+    // Reviewed joins first, whatever the rules would say.
+    for (const spelling of bucket) {
+      for (const other of bucket) {
+        const review = other !== spelling && reviewOf.get(`${slug}|${[spelling.key, other.key].sort().join('~')}`)
+        if (review?.decision !== 'verified' || spelling.info > other.info || (spelling.info === other.info && spelling.id > other.id)) continue
+        decisions.push({ employer: slug, name: shown(spelling), key: spelling.key, target: shown(other), targetKey: other.key, status: 'verified', reason: `Reviewed: ${review.note}`, pay: Math.max(...spelling.periods.values(), ...other.periods.values()) })
+        join(spelling, other)
+        placed.add(spelling.id).add(other.id)
+      }
+    }
+    for (const spelling of [...bucket].sort((a, b) => a.info - b.info).reverse()) {
+      if (placed.has(spelling.id)) continue
+      const split = rejoined(spelling.given)
+      const fits = bucket.filter((other) => other !== spelling && other.info > spelling.info && compatibleNames(matchable(spelling), matchable(other)))
+      const splitFit = split && bucket.find((other) => other !== spelling && other.given.join(' ') === split.join(' '))
+      if (!fits.length && !splitFit) continue
+      const roots = [...new Map((splitFit ? [splitFit] : fits).map((other) => [find(other).id, find(other)])).values()]
+      const decide = (status, reason, root) => {
+        const target = root ? bestOf(root) : null
+        decisions.push({ employer: slug, name: shown(spelling), key: spelling.key, target: target && shown(target), targetKey: target?.key, status, reason, pay: Math.max(...spelling.periods.values(), ...(root ? members(root).flatMap((each) => [...each.periods.values()]) : [])) })
+        if (root && status !== 'apart') join(spelling, root)
+      }
+      if (roots.length > 1) {
+        decide('apart', `Agrees with ${roots.length} different names here: ${roots.map((root) => `“${shown(bestOf(root))}”`).join(', ')}`)
+        continue
+      }
+      const [root] = roots
+      const cluster = members(root)
+      const review = cluster.map((each) => reviewOf.get(`${slug}|${[spelling.key, each.key].sort().join('~')}`)).find(Boolean)
+      if (review?.decision === 'reject') { decide('apart', `Reviewed: ${review.note}`); continue }
+      if (review?.decision === 'verified') { decide('verified', `Reviewed: ${review.note}`, root); continue }
+      const conflicting = cluster.find((each) => !splitFit && !compatibleNames(matchable(spelling), matchable(each)))
+      if (conflicting) { decide('apart', `Disagrees with “${shown(conflicting)}”, already joined to “${shown(bestOf(root))}”`); continue }
+      const theirs = new Map(cluster.flatMap((each) => [...each.periods]))
+      const shared = [...spelling.periods.keys()].filter((at) => theirs.has(at))
+      const twice = shared.length > 0 && shared.every((at) => spelling.periods.get(at) === theirs.get(at))
+      if (shared.length && !twice) { decide('apart', `Both spellings appear in ${years[shared[0]]}: two records in one period`); continue }
+      if (twice) { decide('verified', `The same payment under both spellings in ${shared.map((at) => years[at]).join(', ')}: one record disclosed twice`, root); continue }
+      if (splitFit) { decide('verified', `Extraction split the given name: “${shown(spelling)}” is “${shown(splitFit)}”`, root); continue }
+      const title = [...spelling.titles].find((each) => cluster.some((other) => other.titles.has(each)) && holders.get(`${spelling.employer}|${each}`) <= LINK_RULES.distinctiveTitle)
+      // The nearest periods of the two spellings, for the gap and the change in pay between them.
+      let nearest = null
+      for (const [mine, pay] of spelling.periods) {
+        for (const [other, otherPay] of theirs) {
+          const gap = Math.abs(yearOf(years[mine]) - yearOf(years[other]))
+          if (!nearest || gap < nearest.gap) nearest = { gap, ratio: Math.max(pay, otherPay) / Math.max(1, Math.min(pay, otherPay)), mine, other }
+        }
+      }
+      const span = (mine) => {
+        const labels = [...mine.keys()].sort((a, b) => a - b).map((at) => years[at])
+        return labels.length > 1 ? `${labels[0]}–${labels.at(-1)}` : labels[0]
+      }
+      if (title) {
+        decide('verified', `Same position under both spellings: “${title}”, held by ${holders.get(`${spelling.employer}|${title}`) === 1 ? 'no one else' : 'few others'} here`, root)
+        continue
+      }
+      if (nearest.gap > LINK_RULES.maxGapYears) { decide('apart', `${nearest.gap} years between “${shown(spelling)}” (${span(spelling.periods)}) and “${shown(bestOf(root))}” (${span(theirs)})`); continue }
+      if (nearest.gap <= 1 && nearest.ratio > LINK_RULES.maxPayRatio) { decide('apart', `Pay changes ${nearest.ratio.toFixed(1)}× between ${years[nearest.mine]} and ${years[nearest.other]}`); continue }
+      decide('likely', `Only fuller name here that agrees; “${shown(spelling)}” in ${span(spelling.periods)}, “${shown(bestOf(root))}” in ${span(theirs)}, never both in one period`, root)
+    }
+  }
+
+  // Every disclosed spelling in a group, the fullest first; a group is published once it holds two.
+  const clusters = new Map()
+  for (const spelling of spellings.values()) {
+    const root = find(spelling)
+    if (!clusters.has(root.id)) clusters.set(root.id, members(root))
+  }
+  const decisionOf = new Map(decisions.filter((entry) => entry.status !== 'apart').map((entry) => [`${entry.employer}|${entry.key}`, entry]))
+  const joinedTo = new Map(decisions.filter((entry) => entry.status !== 'apart').map((entry) => [`${entry.employer}|${entry.targetKey}`, entry]))
+  const result = []
+  for (const cluster of clusters.values()) {
+    const employer = employers[cluster[0].employer]?.[3]
+    const best = cluster.reduce(fuller)
+    const rawOf = (spelling) => [...spelling.raw].map(([key, names]) => ({ key, name: [...names].sort((a, b) => b[1] - a[1])[0][0] }))
+    const own = rawOf(best).find((each) => each.name === shown(best)) ?? rawOf(best)[0]
+    const aliases = cluster.flatMap((spelling) => rawOf(spelling).filter((each) => each.key !== own.key).map((each) => {
+      if (spelling === best) return { ...each, status: 'verified', reason: 'The same name with a position written into it' }
+      // A reviewed pair may name either spelling first: the decision is the join's, either way.
+      const decision = decisionOf.get(`${employer}|${spelling.key}`) ?? joinedTo.get(`${employer}|${spelling.key}`)
+      return { ...each, status: decision.status, reason: decision.reason }
+    }))
+    if (aliases.length) result.push({ employer, key: own.key, name: own.name, aliases })
+  }
+  return { links: result, decisions }
+}
+
+/**
+ * The published links as a lookup: `${employer index}|${disclosed name key}` → the group's
+ * { key, name, status, reason } (status and reason null for the group's own spelling).
+ */
+export const linkLookup = (published, employers) => {
+  const lookup = new Map()
+  if (!published) return lookup
+  const indexOf = new Map(employers.map((entry, at) => [entry[3], at]))
+  for (const [slug, key, name, aliases] of published.links) {
+    const at = indexOf.get(slug)
+    if (at === undefined) continue
+    lookup.set(`${at}|${key}`, { key, name, status: null, reason: null })
+    for (const [aliasKey, aliasName, status, reason] of aliases) lookup.set(`${at}|${aliasKey}`, { key, name, aliasName, status, reason })
+  }
+  return lookup
+}

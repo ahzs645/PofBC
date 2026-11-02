@@ -209,37 +209,21 @@ test('employer coverage distinguishes excluded compiled years from verified repl
   }
 })
 
-test('people browse joins an initial to the one full name it agrees with at the same employer', () => {
+test('people browse joins only the spellings the link list connects, shown by its name', () => {
   const rows = [
-    ['Garant, D.', 'Senior Vice President', 1961537, 15299, 0, 0, 'official'],
+    ['Garant, D.', 'Senior Vice President', 4000000, 15299, 0, 0, 'official'],
     ['Garant, Daniel', 'Executive Vice President', 3686064, 0, 0, 1, 'official'],
     ['Garant, D.', null, 100, null, 1, 0, 'official']
   ]
-  const groups = groupHighestPaidRecords(rows, browseIndex)
-  assert.equal(groups.length, 2, 'another employer stays apart')
-  const joined = groups.find((group) => group.row[0] === 'Garant, Daniel')
-  assert.deepEqual(joined.records, [rows[1], rows[0]])
-  assert.deepEqual(joined.years, [0, 1])
-  assert.deepEqual(joined.aliases, ['Garant, D.'])
-  const shownFull = groupHighestPaidRecords([['Lalonde, V', null, 300, null, 0, 0, 'official'], ['Lalonde, Vincent A.', null, 200, null, 0, 1, 'official']], browseIndex)
-  assert.equal(shownFull.length, 1)
-  assert.equal(shownFull[0].name, 'Lalonde, Vincent A.', 'shown by the full name')
-  assert.equal(shownFull[0].row[2], 300)
-  assert.deepEqual(shownFull[0].aliases, ['Lalonde, V'])
-  assert.equal(joined.row[2], 3686064, 'display the highest payment, never the sum')
-})
-
-test('people browse keeps an initial apart when several full names fit or a period is shared', () => {
-  const ambiguous = groupHighestPaidRecords([
-    ['Garant, D.', null, 100, null, 0, 0, 'official'],
-    ['Garant, Daniel', null, 200, null, 0, 1, 'official'],
-    ['Garant, Diane', null, 300, null, 0, 1, 'official']
-  ], browseIndex)
-  assert.equal(ambiguous.length, 3)
-  const samePeriod = groupHighestPaidRecords([
-    ['Garant, D.', null, 100, null, 0, 1, 'official'],
-    ['Garant, Daniel', null, 200, null, 0, 1, 'official']
-  ], browseIndex)
-  assert.equal(samePeriod.length, 2)
-  assert.ok(samePeriod.every((group) => group.aliases.length === 0))
+  assert.equal(groupHighestPaidRecords(rows, browseIndex).length, 3, 'no list, no joins')
+  const links = new Map([
+    ['0|garant|daniel', { key: 'garant|daniel', name: 'Garant, Daniel', status: null }],
+    ['0|garant|d', { key: 'garant|daniel', name: 'Garant, Daniel', status: 'likely' }]
+  ])
+  const groups = groupHighestPaidRecords(rows, { ...browseIndex, links })
+  assert.equal(groups.length, 2, 'the same spelling at another employer stays apart')
+  const joined = groups.find((group) => group.name === 'Garant, Daniel')
+  assert.deepEqual(joined.records, rows.slice(0, 2))
+  assert.equal(joined.row[2], 4000000, 'display the highest payment, never the sum')
+  assert.deepEqual(joined.aliases, [{ name: 'Garant, D.', status: 'likely' }])
 })

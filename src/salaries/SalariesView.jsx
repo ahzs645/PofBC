@@ -27,13 +27,14 @@ import { EmployerBrowse, EmployerCard, PeopleBrowse, PositionBrowse } from './Br
 import { count, LAYOUTS, loadJson, Paged, PersonIcon, readPlace, toTop, wordsOf, writePlace } from './common.jsx'
 import { EmployerPage } from './EmployerPage.jsx'
 import { PersonPage } from './PersonPage.jsx'
+import { linkLookup } from './nameLinks.js'
 import { TitleCard, TitlePage } from './TitlePage.jsx'
 
-const describeNameGroup = (key, list) => {
+const describeNameGroup = (key, list, name) => {
   const latest = list.reduce((best, row) => (row[5] > best[5] || (row[5] === best[5] && row[2] > best[2]) ? row : best))
   const years = [...new Set(list.map((row) => row[5]))].sort((a, b) => a - b)
   const shared = years.some((each) => list.filter((row) => row[5] === each).length > 1)
-  return { key, name: latest[0], latest, years, rows: list, shared }
+  return { key, name: name ?? latest[0], latest, years, rows: list, shared }
 }
 
 const shardOf = (reading) => surnameShard(`${reading.surname},`)
@@ -70,6 +71,8 @@ export const SalariesView = ({ onOpenGovernment }) => {
   const [trail, setTrail] = useState([])
   const heading = useRef(null)
   const [shards, setShards] = useState({})
+  // The link list's slices (nameLinks.js), by surname slice: which spellings at an employer are one name.
+  const [linkShards, setLinkShards] = useState({})
   const [reading, setReading] = useState(null)
   const query = place.q
   const sector = place.sector
@@ -105,6 +108,17 @@ export const SalariesView = ({ onOpenGovernment }) => {
     }
     return () => { live = false }
   }, [needed, index, loadVersion]) // eslint-disable-line react-hooks/exhaustive-deps
+
+  // A name's page joins the spellings the link list connects; a slice with no links has no file.
+  const linkShard = place.person ? shardOfKey(place.person) : null
+  useEffect(() => {
+    if (!linkShard || linkShards[linkShard]) return
+    loadJson(`salaries/links/${linkShard}.json.gzip`).then(
+      (list) => setLinkShards((current) => ({ ...current, [linkShard]: list })),
+      () => setLinkShards((current) => ({ ...current, [linkShard]: { links: [] } }))
+    )
+  }, [linkShard]) // eslint-disable-line react-hooks/exhaustive-deps
+  const personLinks = useMemo(() => (index && linkShard && linkShards[linkShard] ? linkLookup(linkShards[linkShard], index.employers) : null), [index, linkShard, linkShards])
 
   // Position titles are searched once three letters are typed, and browsed under Positions; their
   // index is loaded then.
@@ -279,21 +293,31 @@ export const SalariesView = ({ onOpenGovernment }) => {
   const personRows = place.person ? shards[shardOfKey(place.person)] : null
   // Opened from an employer's page, the name is limited to that employer's records, unless it has none
   // there (a stale link), when every record under the name is shown.
-  const personList = personRows ? personRows.filter((row) => personKey(row[0]) === place.person) : []
+  // The name's own records, and those under other spellings the link list joins to it at their employer.
+  const linkOf = (row) => personLinks?.get(`${row[4]}|${personKey(row[0])}`)
+  const personList = personRows && personLinks ? personRows.filter((row) => personKey(row[0]) === place.person || linkOf(row)?.key === place.person) : []
+  const linkedName = personList.map(linkOf).find((link) => link?.key === place.person)?.name
+  const joins = [...new Map(personList.filter((row) => personKey(row[0]) !== place.person).map((row) => {
+    const link = linkOf(row)
+    return [`${row[4]}|${personKey(row[0])}`, { name: row[0], employer: row[4], status: link.status, reason: link.reason }]
+  })).values()]
+  // Where this spelling is itself joined to a fuller name at an employer, that name's page is the whole of it.
+  const joinedElsewhere = [...new Map(personList.filter((row) => personKey(row[0]) === place.person && linkOf(row) && linkOf(row).key !== place.person)
+    .map((row) => [`${row[4]}|${linkOf(row).key}`, { employer: row[4], key: linkOf(row).key, name: linkOf(row).name, status: linkOf(row).status }])).values()]
   const atEmployer = place.personAt ? personList.filter((row) => index.employers[row[4]][3] === place.personAt) : []
   const scoped = atEmployer.length > 0 && atEmployer.length < personList.length
-  const chosen = personList.length ? describeNameGroup(place.person, scoped ? atEmployer : personList) : null
+  const chosen = personList.length ? describeNameGroup(place.person, scoped ? atEmployer : personList, linkedName) : null
   const scope = scoped ? {
     employer: index.employers[atEmployer[0][4]][0],
     others: new Set(personList.filter((row) => !atEmployer.includes(row)).map((row) => row[4])).size,
     hidden: personList.length - atEmployer.length,
     onShowAll: () => setPlace((current) => ({ ...current, personAt: null }))
   } : null
-  if (place.person && !personRows) return <p className="gallery__intro" role="status">Loading the name…</p>
+  if (place.person && (!personRows || !personLinks)) return <p className="gallery__intro" role="status">Loading the name…</p>
   if (chosen) {
     return (
       <div className="salaries">
-        <PersonPage chosen={chosen} all={scoped ? personRows.filter((row) => index.employers[row[4]][3] === place.personAt) : personRows} scope={scope} index={index} back={back} onEmployer={openEmployer} onRole={openRole} onOpenGovernment={onOpenGovernment} remember={remember} />
+        <PersonPage chosen={chosen} joins={joins} joinedElsewhere={joinedElsewhere} onPerson={openPersonKey} all={scoped ? personRows.filter((row) => index.employers[row[4]][3] === place.personAt) : personRows} scope={scope} index={index} back={back} onEmployer={openEmployer} onRole={openRole} onOpenGovernment={onOpenGovernment} remember={remember} />
       </div>
     )
   }

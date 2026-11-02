@@ -2,7 +2,7 @@
 // absent from folded into runs that give the reason. Names that only may be the same — a surname with
 // compatible initials — are kept apart, below. None of this is a verified employment history.
 
-import { displayName, nameMatch } from './people.js'
+import { displayName, nameMatch, nameOnly, personKey } from './people.js'
 import { titleKey } from './positions.js'
 import { expenseLabel, GAP_LABELS, gapReason, gapRuns, missingYearMessage, samePeriodKinds, sourceHref } from './coverage.js'
 import { SourceLink, SourceWarnings } from './DisclosureEvidence.jsx'
@@ -12,7 +12,10 @@ import { count } from './common.jsx'
 import { hasExpenseAmount } from './viewState.js'
 
 /** A position in a record opens that position's page at its employer, in the record's year. */
-export const PersonPage = ({ chosen, all, scope, index, back, onEmployer, onRole, onOpenGovernment, remember }) => {
+export const PersonPage = ({ chosen, joins = [], joinedElsewhere = [], all, scope, index, back, onEmployer, onRole, onPerson, onOpenGovernment, remember }) => {
+  // A record under a joined spelling says how it was disclosed.
+  const disclosedAs = (row) => (personKey(row[0]) === chosen.key ? null : row[0])
+  const sureness = (status) => (status === 'verified' ? 'verified' : 'likely the same person')
   const employerOf = (row) => index.employers[row[4]]
   const slugOf = (row) => employerOf(row)[3]
   const associated = [...new Set(chosen.rows.map(slugOf))]
@@ -52,7 +55,7 @@ export const PersonPage = ({ chosen, all, scope, index, back, onEmployer, onRole
               <button type="button" className="salaries__link" onClick={() => onEmployer(slug)}>{employerName}</button>
             </span>
           )}
-          {as && <span className="salaries__line">As “{as}”</span>}
+          {as && <span className="salaries__line">As “{nameOnly(as)}”</span>}
         </span>
         <span className="salaries-row__pay">
           {money(row[2])}
@@ -96,6 +99,26 @@ export const PersonPage = ({ chosen, all, scope, index, back, onEmployer, onRole
         {hasTruncatedNames ? ' At least one source publishes truncated names. The published text is preserved; an incomplete name may hide other records or combine different people.' : ''}
       </p>
 
+      {joins.length > 0 && (
+        <div className="salaries__hint salaries__hint--small">
+          <p className="salaries__hint salaries__hint--small">Joined with other spellings of the name at the same employer:</p>
+          <ul className="salaries__joins">
+            {joins.map((join) => (
+              <li key={`${join.employer}|${join.name}`}>
+                “{nameOnly(join.name)}” at {index.employers[join.employer][0]}, {sureness(join.status)}: {join.reason}
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
+      {joinedElsewhere.map((join) => (
+        <p key={`${join.employer}|${join.key}`} className="salaries__hint salaries__hint--small">
+          At {index.employers[join.employer][0]} this spelling is joined to{' '}
+          <button type="button" className="salaries__link" onClick={() => onPerson?.(join.key)}>{displayName(join.name)}</button>
+          {' '}({sureness(join.status)}), whose page holds every spelling.
+        </p>
+      ))}
+
       <SourceWarnings sourceIds={chosen.rows.map((row) => row[6])} sources={index.sources} />
       <dl className="salaries__tiles salaries__tiles--three">
         <div><dt>Latest</dt><dd>{money(chosen.latest[2])}</dd><dd className="salaries__line">{index.years[chosen.latest[5]]}</dd></div>
@@ -117,7 +140,7 @@ export const PersonPage = ({ chosen, all, scope, index, back, onEmployer, onRole
           : (
             <li key={line.at} className="salaries-years__year">
               <span className="salaries-years__label">{index.years[line.at]}</span>
-              <span className="salaries-years__records">{line.rows.map((row, at) => recordLine(row, null, at))}</span>
+              <span className="salaries-years__records">{line.rows.map((row, at) => recordLine(row, disclosedAs(row), at))}</span>
             </li>
           ))}
       </ol>

@@ -7,6 +7,7 @@
 
 import { useEffect, useMemo, useState } from 'react'
 import { displayName, groupHighestPaidRecords } from './people.js'
+import { linkLookup } from './nameLinks.js'
 import { keyedTitles } from './positions.js'
 import { reportingYearLabel } from './coverage.js'
 import { formatMoney as money } from './money.js'
@@ -99,19 +100,36 @@ const TopRecordCard = ({ group, rank, index, onPerson }) => {
         {row[1] && <span className="salaries__line">{row[1]}</span>}
         <span className="salaries__line">{index.employers[row[4]][0]}</span>
         {records.length > 1 && <span className="salaries__line">{count(records.length, 'ranked record', 'ranked records')} · {count(years.length, 'period', 'periods')}</span>}
-        {group.aliases.length > 0 && <span className="salaries__line">Also disclosed as {group.aliases.map((name) => displayName(name, index.sources?.[records.find((row) => row[0] === name)?.[6]]?.nameDisclosure)).join(', ')}</span>}
+        {group.aliases.length > 0 && <AliasLine aliases={group.aliases} records={records} sources={index.sources} />}
       </span>
       <span className="salaries__aside">{money(row[2])}<span className="salaries__line">No. {rank} · {index.years[row[5]]}</span></span>
     </button>
   )
 }
 
+/** The other spellings a name's records were joined under, and how sure the join is (nameLinks.js). */
+export const AliasLine = ({ aliases, records, sources }) => {
+  const sure = aliases.every((alias) => alias.status === 'verified')
+  return (
+    <span className="salaries__line">
+      Also disclosed as {aliases.map((alias) => displayName(alias.name, sources?.[records.find((row) => row[0].startsWith(alias.name))?.[6]]?.nameDisclosure)).join(', ')}
+      {' · '}{sure ? 'verified' : 'likely the same person'}
+    </span>
+  )
+}
+
 /** Highest payments grouped by disclosed name and employer, in the chosen periods and sector. */
 export const PeopleBrowse = ({ index, sector, range, layout, onPerson, onEmployer }) => {
   const [top, setTop] = useState(null)
+  const [links, setLinks] = useState(null)
   const [failed, setFailed] = useState(false)
-  useEffect(() => { loadJson('salaries/people/top.json.gzip').then(setTop, () => setFailed(true)) }, [])
-  const rows = useMemo(() => top ? groupHighestPaidRecords(top.rows, { employers: index.employers, sources: index.sources, sector, range }) : [], [top, index, sector, range])
+  useEffect(() => {
+    loadJson('salaries/people/top.json.gzip').then(setTop, () => setFailed(true))
+    // Without the link list the names are shown as disclosed, each spelling apart.
+    loadJson('salaries/links/top.json.gzip').then(setLinks, () => setLinks({ links: [] }))
+  }, [])
+  const lookup = useMemo(() => linkLookup(links, index.employers), [links, index])
+  const rows = useMemo(() => top && links ? groupHighestPaidRecords(top.rows, { employers: index.employers, sources: index.sources, sector, range, links: lookup }) : [], [top, links, lookup, index, sector, range])
   const columns = useMemo(() => [
     { id: 'name', header: 'Name', accessorFn: ({ name, row }) => displayName(name, index.sources?.[row[6]]?.nameDisclosure), cell: ({ row: { original }, getValue }) => <button type="button" className="salaries__link salaries-row__name" onClick={() => onPerson(original.name, index.employers[original.row[4]][3])}>{getValue()}</button> },
     { id: 'position', header: 'Position', accessorFn: ({ row }) => row[1] ?? '' },
@@ -123,8 +141,8 @@ export const PeopleBrowse = ({ index, sector, range, layout, onPerson, onEmploye
   ], [index, onPerson, onEmployer])
 
   if (failed) return <p className="salaries__hint" role="alert">The highest-paid records could not be loaded.</p>
-  if (!top) return <p className="salaries__hint" role="status">Loading the highest-paid records…</p>
-  const note = <p className="salaries__hint salaries__hint--small">Names grouped by employer, showing the highest payment. From each period’s {top.perPeriod.toLocaleString('en-CA')} highest-paid records; matching names may be different people. Open a name for all records and sources.</p>
+  if (!top || !links) return <p className="salaries__hint" role="status">Loading the highest-paid records…</p>
+  const note = <p className="salaries__hint salaries__hint--small">Names grouped by employer, showing the highest payment. From each period’s {top.perPeriod.toLocaleString('en-CA')} highest-paid records; matching names may be different people. Spellings of one name at one employer (“D. Garant”, “Daniel Garant”) are joined where the link list connects them. Open a name for all records and sources.</p>
   if (layout === 'table') return <>{note}<DataTable data={rows} columns={columns} sorting={[{ id: 'pay', desc: true }]} label="Highest payments by name and employer" /></>
   return (
     <>
