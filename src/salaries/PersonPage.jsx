@@ -15,6 +15,7 @@ import { RecordAnnotation } from './RecordAnnotation.jsx'
 
 /** A change between two payments as a signed whole percentage, with a true minus sign. */
 export const percentChange = (from, to) => {
+  if (!Number.isFinite(from) || !Number.isFinite(to) || from <= 0) return null
   const change = Math.round(((to - from) / from) * 100)
   return change === 0 ? '0%' : `${change > 0 ? '+' : '−'}${Math.abs(change)}%`
 }
