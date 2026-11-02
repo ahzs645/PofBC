@@ -228,12 +228,29 @@ test('people browse joins only the spellings the link list connects, shown by it
   assert.deepEqual(joined.aliases, [{ name: 'Garant, D.', status: 'likely' }])
 })
 
-test('a compiled record repeating another record of the same label is shown once', () => {
-  const sources = { official: { url: 'https://example.test/report.pdf', sourceKind: 'official-pdf' }, compiled: { scope: 'compiled-unverified', sourceKind: 'compiled' } }
+test('only a complete compiled match at the same employer and label is folded under its original report', () => {
+  const sources = { official: { url: 'https://example.test/report.pdf', sourceKind: 'official-pdf', sha256: 'original-hash' }, compiled: { scope: 'compiled-unverified', sourceKind: 'compiled' } }
   const original = ['Ionescu, Diana', null, 480016, 6085, 0, 4, 'official', 113]
-  const repeat = ['lonescu, Diana', null, 480016, 6085, 1, 4, 'compiled']
+  const repeat = ['lonescu, Diana', null, 480016, 6085, 0, 4, 'compiled']
+  const anotherEmployer = ['lonescu, Diana', null, 480016, 6085, 1, 4, 'compiled']
   const other = ['lonescu, Diana', null, 300000, 6085, 1, 4, 'compiled']
   const earlier = ['lonescu, Diana', null, 480016, 6085, 1, 3, 'compiled']
-  assert.deepEqual(withoutCompiledRepeats([repeat, original, other, earlier], sources), [original, other, earlier])
-  assert.deepEqual(withoutCompiledRepeats([repeat, [...repeat]], sources), [repeat])
+  const rows = [repeat, original, anotherEmployer, other, earlier]
+  assert.deepEqual(withoutCompiledRepeats(rows, sources), [original, anotherEmployer, other, earlier])
+  assert.deepEqual(rows, [repeat, original, anotherEmployer, other, earlier], 'source observations are not mutated')
+  const compiledOnly = [repeat, [...repeat]]
+  assert.deepEqual(withoutCompiledRepeats(compiledOnly, sources), compiledOnly)
+  assert.deepEqual(withoutCompiledRepeats([repeat, original, [...original]], sources), [repeat, original, original], 'multiple primary rows do not establish a unique witness')
+})
+
+test('unknown expenses, absent original provenance, or conflicting positions cannot hide a compiled observation', () => {
+  const sources = { official: { url: 'https://example.test/report.pdf', sha256: 'original-hash' }, compiled: { sourceKind: 'compiled' } }
+  const row = (source, expense, position = null) => ['Smith, Alex', position, 100000, expense, 0, 0, source]
+  for (const rows of [[row('official', null), row('compiled', null)], [row('official', 0), row('compiled', null)],
+    [row('official', null), row('compiled', 0)], [row('official', 0, 'Manager'), row('compiled', 0, 'Director')]]) {
+    assert.deepEqual(withoutCompiledRepeats(rows, sources), rows)
+  }
+  const rows = [row('official', 0), row('compiled', 0)]
+  assert.deepEqual(withoutCompiledRepeats(rows, sources), [rows[0]])
+  assert.deepEqual(withoutCompiledRepeats(rows, { ...sources, official: { url: sources.official.url } }), rows)
 })

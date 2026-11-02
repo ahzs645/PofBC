@@ -107,6 +107,14 @@ change the accepted source definitions, salary amounts or reporting labels.
 No requests, forms or messages were sent. The existing four acquisition requests
 remain on hold as instructed.
 
+The newer `main` interface changes through `582956bb9` are preserved: source notes
+and name-link evidence open under **About these records**. Matching compiled
+observations are folded only when one primary row agrees on employer, reporting
+label, payment, known expenses and any disclosed position. The folded rows remain
+accessible in that section. Equal amounts at another employer, unknown expenses,
+multiple primary witnesses and compiled-only repetitions remain visible. Compiled
+reporting years retain their unverified status in labels and the folded notes.
+
 ## Reproduction
 
 From the repository root:

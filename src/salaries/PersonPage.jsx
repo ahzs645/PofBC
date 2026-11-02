@@ -18,8 +18,9 @@ export const PersonPage = ({ chosen, joins = [], joinedElsewhere = [], all, scop
   const sureness = (status) => (status === 'verified' ? 'verified' : 'likely the same person')
   const employerOf = (row) => index.employers[row[4]]
   const slugOf = (row) => employerOf(row)[3]
-  // A compiled edition's copy of a record already shown is left out, so a payment is listed once.
+  // Matching compiled observations are folded below; every original row remains accessible.
   const rows = withoutCompiledRepeats(chosen.rows, index.sources)
+  const foldedRows = chosen.rows.filter((row) => !rows.includes(row))
   // Whether any label still has more than one record once repeats are left out.
   const shared = rows.some((row, at) => rows.findIndex((other) => other[5] === row[5]) !== at)
   const associated = [...new Set(rows.map(slugOf))]
@@ -34,15 +35,12 @@ export const PersonPage = ({ chosen, joins = [], joinedElsewhere = [], all, scop
     .filter(({ link }) => link === 'initial' || link === 'partial')
     .map(({ row }) => row)
   const yearLabels = chosen.years.map((at) => index.years[at])
-  // Compiled-edition records are shown under their plain label, without naming the compilation.
-  const periodOf = (row) => {
-    const period = recordPeriodLabel(index.years[row[5]], index.sources?.[row[6]])
-    return period.kind === 'compiled' ? { label: index.years[row[5]], kind: 'verified' } : period
-  }
-  const hasUnverifiedPeriods = rows.some((row) => periodOf(row).kind !== 'verified')
+  const periodOf = (row) => recordPeriodLabel(index.years[row[5]], index.sources?.[row[6]])
+  const hasCompiled = chosen.rows.some((row) => periodOf(row).kind === 'compiled')
+  const hasUnverifiedPeriods = chosen.rows.some((row) => periodOf(row).kind !== 'verified')
   const yearLabel = (at) => {
     const labels = rows.filter((row) => row[5] === at).map(periodOf)
-    if (labels.some((period) => period.kind === 'unverified')) return `${index.years[at]} · period unverified`
+    if (labels.some((period) => period.kind !== 'verified')) return `${index.years[at]} · year unverified`
     return index.years[at]
   }
   const hasTruncatedNames = rows.some((row) => index.sources?.[row[6]]?.nameDisclosure === 'published-truncated-names')
@@ -63,7 +61,7 @@ export const PersonPage = ({ chosen, joins = [], joinedElsewhere = [], all, scop
     const [employerName, , , slug] = employerOf(row)
     const details = [
       hasExpenseAmount(row[3]) && `${expenseLabel(row[6], index.sources)} ${money(row[3])}`,
-      periodOf(row).kind === 'unverified' && 'Reporting period unverified',
+      periodOf(row).kind !== 'verified' && 'Reporting year unverified',
       sourceHref(index.sources?.[row[6]], row[7]) && <SourceLink sourceId={row[6]} sources={index.sources} pdfPage={row[7]} />
     ].filter(Boolean)
     return (
@@ -173,7 +171,7 @@ export const PersonPage = ({ chosen, joins = [], joinedElsewhere = [], all, scop
           {hasTruncatedNames ? ' At least one source publishes truncated names. The published text is preserved; an incomplete name may hide other records or combine different people.' : ''}
         </p>
         {hasUnverifiedPeriods && (
-          <p className="salaries__hint salaries__hint--small">Some reporting periods are unverified. Labels on the chart and list do not establish separate payment years.</p>
+          <p className="salaries__hint salaries__hint--small">{hasCompiled ? 'Compiled reporting labels have unverified years and may overlap employer reports. ' : 'Some reporting periods are unverified. '}Labels on the chart and list do not establish separate payment years.</p>
         )}
         {joins.length > 0 && (
           <div className="salaries__hint salaries__hint--small">
@@ -188,7 +186,14 @@ export const PersonPage = ({ chosen, joins = [], joinedElsewhere = [], all, scop
             </ul>
           </div>
         )}
-        <SourceNotes sourceIds={rows.map((row) => row[6])} sources={index.sources} />
+        {foldedRows.length > 0 && (
+          <details className="salaries__caveats">
+            <summary className="salaries__hint salaries__hint--small">Matching compiled observations ({foldedRows.length})</summary>
+            <p className="salaries__hint salaries__hint--small">These match one employer report on employer, reporting label, payment and disclosed expenses. They are folded here for readability; their reporting years remain unverified.</p>
+            {foldedRows.map((row, at) => recordLine(row, nameOnly(row[0]), at))}
+          </details>
+        )}
+        <SourceNotes sourceIds={chosen.rows.map((row) => row[6])} sources={index.sources} />
       </details>
     </section>
   )
