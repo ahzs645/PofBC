@@ -2,6 +2,7 @@
 // write what was joined and what was kept apart. Run after build:salaries: npm run build:name-links.
 //   public/salaries/links/<surname slice>.json.gzip  the joins the site applies, sliced as the people index
 //   public/salaries/links/top.json.gzip              the joins touching the highest-paid records
+//   public/salaries/links/employers/<slug>.json.gzip one employer's joins, for its page's lists
 //   research/salaries/name-links/decisions.csv        every decision, highest pay first, with its reason
 //   research/salaries/name-links/summary.json         counts by decision and by reason
 // Reviewed decisions (research/salaries/name-links/reviewed.json) override the rules either way.
@@ -54,6 +55,11 @@ const slugOf = (at) => index.employers[at][3]
 const top = gzip(join(people, 'top.json.gzip'))
 const topKeys = new Set([...top.rows, ...(top.unrankedRows ?? [])].filter((row) => row[0]).map((row) => `${slugOf(row[4])}|${personKey(row[0])}`))
 writeFileSync(join(out, 'top.json.gzip'), packed(links.filter((link) => [link.key, ...link.aliases.map((alias) => alias.key)].some((key) => topKeys.has(`${link.employer}|${key}`)))))
+// An employer's page lists every name it disclosed, across nearly every surname slice: its own joins
+// in one file let it show a payment disclosed twice under two joined spellings once.
+mkdirSync(join(out, 'employers'), { recursive: true })
+const byEmployer = Map.groupBy(links.filter((link) => link.aliases.length), (link) => link.employer)
+for (const [slug, list] of byEmployer) writeFileSync(join(out, 'employers', `${slug}.json.gzip`), packed(list))
 
 const csv = (value) => (/[",\n]/.test(String(value ?? '')) ? `"${String(value).replace(/"/g, '""')}"` : String(value ?? ''))
 const sorted = [...decisions].sort((a, b) => b.pay - a.pay || a.employer.localeCompare(b.employer) || a.key.localeCompare(b.key))
