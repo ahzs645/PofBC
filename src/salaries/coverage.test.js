@@ -99,6 +99,12 @@ test('consecutive gap years with one reason are one run', () => {
   ])
 })
 
+test('gap years run on through the other kind of period between them', () => {
+  // Fiscal years at 0, 2, 4, 6 with calendar years between: 0, 2 and 4 are one run of fiscal gaps.
+  assert.deepEqual(gapRuns([0, 2, 4], () => 'a', [0, 2, 4, 6]), [{ from: 0, to: 4, reason: 'a' }])
+  assert.deepEqual(gapRuns([0, 4], () => 'a', [0, 2, 4, 6]), [{ from: 0, to: 0, reason: 'a' }, { from: 4, to: 4, reason: 'a' }], 'a year with records breaks the run')
+})
+
 test('source leads and held reports are distinct from accepted source data', () => {
   assert.equal(coverageStatus({ status: 'excluded' }).kind, 'held')
   assert.equal(coverageStatus({ status: 'source-found' }).kind, 'found')
