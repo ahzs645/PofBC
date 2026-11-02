@@ -13,11 +13,13 @@ import { canOutline, outlineLineMarkup, outlineTextMarkup } from './textOutline.
 
 // The outline table is generated from a licensed font and is not committed, so a fresh clone that
 // has not run `npm run build:fonts` skips these rather than failing.
-const outlines = await import('../fonts/generated/outlines.js')
-  .then((module) => module.default)
-  .catch(() => null)
+const outlineModule = await import('../fonts/generated/outlines.js').catch(() => null)
+const outlines = outlineModule?.default ?? null
 
 const missing = outlines ? false : 'run `npm run build:fonts` first'
+// The TeX Gyre Heros stand-in shares Helvetica's widths, not its exact ink, so placement checks
+// against Helvetica's committed bearings only run on a Helvetica build.
+const notHelvetica = missing || (outlineModule?.standIn ? 'outlines are from the TeX Gyre Heros stand-in, not Helvetica' : false)
 
 const FORESTS = { ministry: 'Ministry of Forests' }
 
@@ -51,7 +53,7 @@ test('the outline table carries both faces', { skip: missing }, () => {
   assert.equal(canOutline({ regular: outlines.regular }), false, 'one face is not enough')
 })
 
-test('outlined glyphs land exactly where the layout model says', { skip: missing }, () => {
+test('outlined glyphs land exactly where the layout model says', { skip: notHelvetica }, () => {
   for (const layout of ['stacked', 'centred', 'horizontal']) {
     const { lines } = resolveLockup({
       layout,

@@ -51,50 +51,30 @@ function range (from, to) {
   return Array.from({ length: to - from + 1 }, (_, i) => String.fromCodePoint(from + i)).join('')
 }
 
-if (!existsSync(SOURCE)) {
+// Without Helvetica, the faces are built from TeX Gyre Heros instead: a free (GUST Font License)
+// clone whose advance widths match Helvetica's to within 0.2/1000 em, converted once to TrueType so
+// PDF export can embed it (src/fonts/stand-in). The site, outlined exports and PDFs all work; the
+// letterforms differ slightly from the source artwork. The committed metrics stay Helvetica's.
+// A build that will be published (CI) or asked to be exact (FONT_REQUIRED) still stops.
+const STAND_IN = {
+  regular: resolve(root, 'src/fonts/stand-in/texgyreheros-regular.ttf'),
+  bold: resolve(root, 'src/fonts/stand-in/texgyreheros-bold.ttf')
+}
+const standIn = !existsSync(SOURCE)
+if (standIn) {
   const message =
     `\nCould not find Helvetica at ${SOURCE}.\n` +
     'This project embeds the real Helvetica the source artwork was set in. On macOS it ships at\n' +
     '/System/Library/Fonts/Helvetica.ttc. Elsewhere, point FONT_SOURCE at a licensed copy:\n\n' +
     '    FONT_SOURCE=/path/to/Helvetica.ttc npm run build:fonts\n'
-  // A build that will be published (CI) or asked to be exact (FONT_REQUIRED) still stops here.
   if (process.env.CI || process.env.FONT_REQUIRED) {
     console.error(message)
     process.exit(1)
   }
-  writeFallback()
-  console.warn(message +
-    '\nContinuing with a stand-in: the site runs and the committed metrics still lay text out, but\n' +
-    'lockups show in a system sans, outlined exports keep live text and exports embed no font.\n')
-  process.exit(0)
+  console.warn(`${message}\nUsing the TeX Gyre Heros stand-in in src/fonts/stand-in instead.\n`)
 }
 
-/**
- * Without Helvetica, write only what the app imports so it can start: a stylesheet that maps the
- * brand family to a local sans, and an empty outline table (exports then keep their text live).
- * Real generated files from an earlier build are never replaced, and no font file is invented.
- */
-function writeFallback () {
-  const generated = resolve(root, 'src/fonts/generated')
-  mkdirSync(generated, { recursive: true })
-  const outlinesPath = resolve(generated, 'outlines.js')
-  if (!existsSync(outlinesPath)) {
-    writeFileSync(outlinesPath, '// Stand-in written by scripts/build-fonts.mjs because Helvetica was not found.\nexport default null\n')
-  }
-  const cssPath = resolve(root, 'src/fonts.css')
-  if (!existsSync(cssPath)) {
-    writeFileSync(cssPath, `/* Stand-in written by scripts/build-fonts.mjs because Helvetica was not found. */
-${FACES.map((face) => `@font-face {
-  font-family: '${EMBEDDED_FAMILY}';
-  src: local('Helvetica Neue'), local('Helvetica'), local('Arial'), local('Liberation Sans');
-  font-weight: ${face.weight};
-  font-style: normal;
-}`).join('\n\n')}
-`)
-  }
-}
-
-const source = readFileSync(SOURCE)
+const source = standIn ? null : readFileSync(SOURCE)
 const generatedDir = resolve(root, 'src/fonts/generated')
 mkdirSync(generatedDir, { recursive: true })
 
@@ -102,7 +82,7 @@ const metrics = {}
 const outlines = {}
 
 for (const face of FACES) {
-  const standalone = extractFace(source, face.postscriptName)
+  const standalone = standIn ? readFileSync(STAND_IN[face.key]) : extractFace(source, face.postscriptName)
   const subsetted = await subsetFont(standalone, charset, { targetFormat: 'truetype' })
 
   // Subsetting strips the name table down to a single record. Putting a full one back is what
@@ -114,7 +94,7 @@ for (const face of FACES) {
     0: readName(standalone, 0),
     1: EMBEDDED_FAMILY,
     2: face.style,
-    3: `${EMBEDDED_FAMILY}-${face.style}; subset of ${face.postscriptName}`,
+    3: `${EMBEDDED_FAMILY}-${face.style}; subset of ${standIn ? `TeX Gyre Heros ${face.style}` : face.postscriptName}`,
     4: named,
     5: 'Version 1.000; subset',
     6: named.replace(/\s+/g, ''),
@@ -129,17 +109,18 @@ for (const face of FACES) {
   outlines[face.key] = outlineFace(font)
 
   const kb = (subset.length / 1024).toFixed(1)
-  console.log(`  ${face.postscriptName.padEnd(16)} ${String(font.numGlyphs).padStart(4)} glyphs  ${kb.padStart(6)} KB`)
+  console.log(`  ${(standIn ? `Heros ${face.style}` : face.postscriptName).padEnd(16)} ${String(font.numGlyphs).padStart(4)} glyphs  ${kb.padStart(6)} KB`)
 }
 
-writeFileSync(resolve(root, 'src/logo/fontMetrics.js'), renderMetricsModule(metrics))
+// The committed metrics are Helvetica's; a stand-in build leaves them as they are.
+if (!standIn) writeFileSync(resolve(root, 'src/logo/fontMetrics.js'), renderMetricsModule(metrics))
 writeFileSync(resolve(generatedDir, 'outlines.js'), renderOutlinesModule(outlines))
 
 // The stylesheet lives beside the faces it points at, so importing '@pofbc/logo/fonts.css' is all
 // an app needs to do to make the live preview match what the exporter will produce.
 writeFileSync(resolve(root, 'src/fonts.css'), `/* Generated by scripts/build-fonts.mjs — do not edit. */
 /*                                                                                                */
-/* The brand face, subset to the glyphs the lockups can use. The family is renamed so that neither */
+${standIn ? '/* STAND-IN: built from TeX Gyre Heros because Helvetica was not found.                          */\n' : ''}/* The brand face, subset to the glyphs the lockups can use. The family is renamed so that neither */
 /* the page nor an exported SVG can fall back to a system "Helvetica" that differs from the one    */
 /* this build embedded.                                                                           */
 
@@ -156,7 +137,7 @@ const outlineBytes = Object.values(outlines)
   .reduce((total, face) => total + Object.values(face.glyphs).join('').length, 0)
 
 console.log(`  outlines          ${String(Object.values(outlines).reduce((n, f) => n + Object.keys(f.glyphs).length, 0)).padStart(4)} glyphs  ${(outlineBytes / 1024).toFixed(1).padStart(6)} KB`)
-console.log('  → src/fonts/generated/*.{ttf,js}, src/fonts.css, src/logo/fontMetrics.js')
+console.log(`  → src/fonts/generated/*.{ttf,js}, src/fonts.css${standIn ? '' : ', src/logo/fontMetrics.js'}`)
 
 // Advance widths are normalised to a 1000-unit em so the layout constants read as round numbers
 // and stay comparable to the values measured off the source artwork.
@@ -197,6 +178,9 @@ function renderOutlinesModule (data) {
 // Glyph outlines for exports that convert type to paths, keyed by code point, in each face's own
 // units with the y axis flipped into SVG's direction. Loaded on demand: most exports keep their
 // text live and never need this.
+
+// True when these outlines come from the TeX Gyre Heros stand-in rather than Helvetica.
+export const standIn = ${standIn}
 
 export default {
 ${faces.join(',\n')}

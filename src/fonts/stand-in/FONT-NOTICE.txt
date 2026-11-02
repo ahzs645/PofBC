@@ -1,0 +1,12 @@
+TeX Gyre Heros, converted to TrueType: a stand-in for Helvetica when it is not installed.
+
+scripts/build-fonts.mjs builds the app's faces from these files when Helvetica cannot be found
+(and neither CI nor FONT_REQUIRED is set). Heros is a free clone of Helvetica whose advance widths
+match it to within 0.2/1000 em, so layout is unchanged; the letterforms differ slightly from the
+source artwork, and a published build still requires the real Helvetica.
+
+Source: texgyreheros-regular.otf and texgyreheros-bold.otf from vendor/brandkit
+(originally the CTAN TeX Gyre distribution, https://www.gust.org.pl/projects/e-foundry/tex-gyre).
+Cut down to Latin-1, Latin Extended-A and common punctuation, with kerning kept, and converted from
+CFF to TrueType outlines with fontTools (cu2qu, tolerance 1 unit) so jsPDF can embed them.
+Copyright and authorship remain in each file's name table. GUST-FONT-LICENSE.txt applies.

@@ -82,10 +82,11 @@ test('T mirrors the previous quadratic control point', () => {
 test('glyph outlines measure to the metrics the layout engine uses', async (t) => {
   // TrueType outlines are quadratic throughout, so this is the path that exercises Q in anger.
   // The table is generated from a licensed font and not committed, so a fresh clone skips this.
-  const outlines = await import('../src/fonts/generated/outlines.js')
-    .then((module) => module.default)
-    .catch(() => null)
+  const module = await import('../src/fonts/generated/outlines.js').catch(() => null)
+  const outlines = module?.default
   if (!outlines) return t.skip('run `npm run build:fonts` first')
+  // The stand-in shares Helvetica's widths, not its exact letterforms.
+  if (module.standIn) return t.skip('outlines are from the TeX Gyre Heros stand-in, not Helvetica')
 
   const box = pathBounds(outlines.regular.glyphs[77]) // capital M
   const scale = 1000 / outlines.regular.unitsPerEm
