@@ -5,7 +5,7 @@
 import { displayName, nameMatch, nameOnly, personKey, withoutCompiledRepeats } from './people.js'
 import { titleKey } from './positions.js'
 import { expenseLabel, GAP_LABELS, gapReason, gapRuns, missingYearMessage, recordPeriodLabel, samePeriodKinds, sourceHref } from './coverage.js'
-import { SourceLink, SourceWarnings } from './DisclosureEvidence.jsx'
+import { SourceLink, SourceNotes } from './DisclosureEvidence.jsx'
 import { formatMoney as money } from './money.js'
 import { PayChart, yearSpan } from './parts.jsx'
 import { count } from './common.jsx'
@@ -20,6 +20,8 @@ export const PersonPage = ({ chosen, joins = [], joinedElsewhere = [], all, scop
   const slugOf = (row) => employerOf(row)[3]
   // A compiled edition's copy of a record already shown is left out, so a payment is listed once.
   const rows = withoutCompiledRepeats(chosen.rows, index.sources)
+  // Whether any label still has more than one record once repeats are left out.
+  const shared = rows.some((row, at) => rows.findIndex((other) => other[5] === row[5]) !== at)
   const associated = [...new Set(rows.map(slugOf))]
   const employers = [...new Map(rows.map((row) => {
     const [name, , body, slug] = employerOf(row)
@@ -115,30 +117,6 @@ export const PersonPage = ({ chosen, joins = [], joinedElsewhere = [], all, scop
           <button type="button" className="salaries__link" onClick={scope.onShowAll}>Show every employer</button>
         </p>
       )}
-      <p className="salaries__hint salaries__hint--small">
-        Records are grouped by the disclosed name only, so they may not all concern one person.
-        {chosen.shared ? ' Some years have more than one record under this name: different people, separate payments or source duplicates.' : ''}
-        {hasTruncatedNames ? ' At least one source publishes truncated names. The published text is preserved; an incomplete name may hide other records or combine different people.' : ''}
-      </p>
-      {hasUnverifiedPeriods && (
-        <p className="salaries__hint salaries__hint--small">
-          Some reporting periods are unverified. Labels on the chart and list do not establish separate payment years.
-        </p>
-      )}
-
-      {joins.length > 0 && (
-        <div className="salaries__hint salaries__hint--small">
-          <p className="salaries__hint salaries__hint--small">Joined with other spellings of the name at the same employer:</p>
-          <ul className="salaries__joins">
-            {joins.map((join) => (
-              <li key={`${join.employer}|${join.name}`}>
-                “{nameOnly(join.name)}” at {index.employers[join.employer][0]}, {/^Reviewed: /.test(join.reason) ? `verified on review: ${join.reason.replace(/^Reviewed: /, '')}` : `${sureness(join.status)}: ${join.reason}`}
-                {join.evidence?.map((evidence, at) => <span key={`${evidence.sourceId}|${evidence.pdfPage}`}>{' · '}<SourceLink sourceId={evidence.sourceId} sources={index.sources} pdfPage={evidence.pdfPage} label={join.evidence.length > 1 ? `Evidence ${at + 1} · p. ${evidence.pdfPage}` : `Evidence · p. ${evidence.pdfPage}`} /></span>)}
-              </li>
-            ))}
-          </ul>
-        </div>
-      )}
       {joinedElsewhere.map((join) => (
         <p key={`${join.employer}|${join.key}`} className="salaries__hint salaries__hint--small">
           At {index.employers[join.employer][0]} this spelling is joined to{' '}
@@ -147,14 +125,13 @@ export const PersonPage = ({ chosen, joins = [], joinedElsewhere = [], all, scop
         </p>
       ))}
 
-      <SourceWarnings sourceIds={rows.map((row) => row[6])} sources={index.sources} />
       <dl className="salaries__tiles salaries__tiles--three salaries__tiles--person">
         <div><dt>{periodOf(chosen.latest).kind === 'verified' ? 'Latest' : 'Latest label'}</dt><dd>{money(chosen.latest[2])}</dd><dd className="salaries__line">{periodOf(chosen.latest).label}</dd></div>
         <div><dt>Highest</dt><dd>{money(Math.max(...points.map((point) => point.pay)))}</dd><dd className="salaries__line">{yearLabel(points.reduce((best, point) => (point.pay > best.pay ? point : best)).year)}</dd></div>
         <div><dt>{hasUnverifiedPeriods ? 'Labels' : 'Periods'}</dt><dd>{yearLabels.length}</dd><dd className="salaries__line">of {periods.length} corresponding {hasUnverifiedPeriods ? 'labels' : 'periods'}</dd></div>
       </dl>
 
-      {points.length > 1 && <PayChart years={index.years} points={points} multiple={chosen.shared} label={hasUnverifiedPeriods ? 'Disclosed payments by reporting label; some periods are unverified' : undefined} />}
+      {points.length > 1 && <PayChart years={index.years} points={points} multiple={shared} label={hasUnverifiedPeriods ? 'Disclosed payments by reporting label; some periods are unverified' : undefined} />}
 
       <h3 className="salaries__title salaries__title--spaced">{hasUnverifiedPeriods ? 'Records by label' : 'Year by year'}</h3>
       <ol className="salaries-years">
@@ -188,6 +165,31 @@ export const PersonPage = ({ chosen, joins = [], joinedElsewhere = [], all, scop
         </>
       )}
 
+      <details className="salaries__about">
+        <summary className="salaries__title">About these records</summary>
+        <p className="salaries__hint salaries__hint--small">
+          Records are grouped by the disclosed name only, so they may not all concern one person.
+          {shared ? ' Some years have more than one record under this name: different people, separate payments or source duplicates.' : ''}
+          {hasTruncatedNames ? ' At least one source publishes truncated names. The published text is preserved; an incomplete name may hide other records or combine different people.' : ''}
+        </p>
+        {hasUnverifiedPeriods && (
+          <p className="salaries__hint salaries__hint--small">Some reporting periods are unverified. Labels on the chart and list do not establish separate payment years.</p>
+        )}
+        {joins.length > 0 && (
+          <div className="salaries__hint salaries__hint--small">
+            <p className="salaries__hint salaries__hint--small">Joined with other spellings of the name at the same employer:</p>
+            <ul className="salaries__joins">
+              {joins.map((join) => (
+                <li key={`${join.employer}|${join.name}`}>
+                  “{nameOnly(join.name)}” at {index.employers[join.employer][0]}, {/^Reviewed: /.test(join.reason) ? `verified on review: ${join.reason.replace(/^Reviewed: /, '')}` : `${sureness(join.status)}: ${join.reason}`}
+                  {join.evidence?.map((evidence, at) => <span key={`${evidence.sourceId}|${evidence.pdfPage}`}>{' · '}<SourceLink sourceId={evidence.sourceId} sources={index.sources} pdfPage={evidence.pdfPage} label={join.evidence.length > 1 ? `Evidence ${at + 1} · p. ${evidence.pdfPage}` : `Evidence · p. ${evidence.pdfPage}`} /></span>)}
+                </li>
+              ))}
+            </ul>
+          </div>
+        )}
+        <SourceNotes sourceIds={rows.map((row) => row[6])} sources={index.sources} />
+      </details>
     </section>
   )
 }

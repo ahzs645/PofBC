@@ -142,8 +142,7 @@ export const TitlePage = ({ titleKey: key, employers, years, sector, year: wante
         )}
         {detail?.spellings?.length > 1 && (
           <p className="salaries__hint salaries__hint--small">
-            Written as {detail.spellings.slice(0, 6).map(([text]) => `“${text}”`).join(', ')}{detail.spellings.length > 6 ? ', and other ways' : ''}. Capitals,
-            stops, plurals, common abbreviations and departments are set aside to gather these; the jobs behind one title can still differ between employers.
+            Also written as {detail.spellings.slice(1, 4).map(([text]) => `“${text}”`).join(', ')}{detail.spellings.length > 4 ? ' and others' : ''}. The jobs behind one title can differ between employers.
           </p>
         )}
         {failed && <p className="salaries__hint" role="alert">This title could not be loaded. <button type="button" onClick={() => setLoadVersion((value) => value + 1)}>Retry</button></p>}
