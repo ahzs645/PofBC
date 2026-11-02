@@ -11,9 +11,17 @@ export const SourceLink = ({ sourceId, sources = {}, pdfPage, label }) => {
 
 const month = (value) => new Intl.DateTimeFormat('en-CA', { month: 'short', year: 'numeric', timeZone: 'UTC' }).format(new Date(`${value}T00:00:00Z`))
 
-export const SourceWarnings = ({ sourceIds, sources }) => sourceWarnings(sourceIds, sources).map((warning) => (
-  <p key={warning} className="salaries__hint salaries__hint--small"><strong>Source caveat: </strong>{warning}</p>
-))
+/** Source caveats stay folded away until asked for: on a long history they would fill the page. */
+export const SourceWarnings = ({ sourceIds, sources }) => {
+  const warnings = sourceWarnings(sourceIds, sources)
+  if (!warnings.length) return null
+  return (
+    <details className="salaries__caveats">
+      <summary className="salaries__hint salaries__hint--small">{warnings.length === 1 ? 'Source note' : `Source notes (${warnings.length})`}</summary>
+      {warnings.map((warning) => <p key={warning} className="salaries__hint salaries__hint--small">{warning}</p>)}
+    </details>
+  )
+}
 
 /**
  * A disclosure at a glance, on one line: what was disclosed, for when, above what threshold, and

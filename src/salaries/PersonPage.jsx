@@ -2,7 +2,7 @@
 // absent from folded into runs that give the reason. Names that only may be the same — a surname with
 // compatible initials — are kept apart, below. None of this is a verified employment history.
 
-import { displayName, nameMatch, nameOnly, personKey } from './people.js'
+import { displayName, nameMatch, nameOnly, personKey, withoutCompiledRepeats } from './people.js'
 import { titleKey } from './positions.js'
 import { expenseLabel, GAP_LABELS, gapReason, gapRuns, missingYearMessage, recordPeriodLabel, samePeriodKinds, sourceHref } from './coverage.js'
 import { SourceLink, SourceWarnings } from './DisclosureEvidence.jsx'
@@ -18,8 +18,10 @@ export const PersonPage = ({ chosen, joins = [], joinedElsewhere = [], all, scop
   const sureness = (status) => (status === 'verified' ? 'verified' : 'likely the same person')
   const employerOf = (row) => index.employers[row[4]]
   const slugOf = (row) => employerOf(row)[3]
-  const associated = [...new Set(chosen.rows.map(slugOf))]
-  const employers = [...new Map(chosen.rows.map((row) => {
+  // A compiled edition's copy of a record already shown is left out, so a payment is listed once.
+  const rows = withoutCompiledRepeats(chosen.rows, index.sources)
+  const associated = [...new Set(rows.map(slugOf))]
+  const employers = [...new Map(rows.map((row) => {
     const [name, , body, slug] = employerOf(row)
     return [slug, { name, body, slug }]
   })).values()]
@@ -30,32 +32,38 @@ export const PersonPage = ({ chosen, joins = [], joinedElsewhere = [], all, scop
     .filter(({ link }) => link === 'initial' || link === 'partial')
     .map(({ row }) => row)
   const yearLabels = chosen.years.map((at) => index.years[at])
-  const periodOf = (row) => recordPeriodLabel(index.years[row[5]], index.sources?.[row[6]])
-  const hasCompiled = chosen.rows.some((row) => periodOf(row).kind === 'compiled')
-  const hasUnverifiedPeriods = chosen.rows.some((row) => periodOf(row).kind !== 'verified')
+  // Compiled-edition records are shown under their plain label, without naming the compilation.
+  const periodOf = (row) => {
+    const period = recordPeriodLabel(index.years[row[5]], index.sources?.[row[6]])
+    return period.kind === 'compiled' ? { label: index.years[row[5]], kind: 'verified' } : period
+  }
+  const hasUnverifiedPeriods = rows.some((row) => periodOf(row).kind !== 'verified')
   const yearLabel = (at) => {
-    const labels = chosen.rows.filter((row) => row[5] === at).map(periodOf)
-    if (labels.every((period) => period.kind === 'compiled')) return labels[0].label
-    if (labels.some((period) => period.kind === 'compiled')) return `${index.years[at]} · includes compiled records`
+    const labels = rows.filter((row) => row[5] === at).map(periodOf)
     if (labels.some((period) => period.kind === 'unverified')) return `${index.years[at]} · period unverified`
     return index.years[at]
   }
-  const hasTruncatedNames = chosen.rows.some((row) => index.sources?.[row[6]]?.nameDisclosure === 'published-truncated-names')
+  const hasTruncatedNames = rows.some((row) => index.sources?.[row[6]]?.nameDisclosure === 'published-truncated-names')
   // The chart plots a year's highest record: where a name has more than one in a year, the table
   // shows them all.
-  const points = chosen.years.map((at) => ({ year: at, pay: Math.max(...chosen.rows.filter((row) => row[5] === at).map((row) => row[2])) }))
+  const points = chosen.years.map((at) => ({ year: at, pay: Math.max(...rows.filter((row) => row[5] === at).map((row) => row[2])) }))
   // Gaps are counted only among periods of the kinds the name appears in: a name in calendar-year
   // reports has no gap at every fiscal label.
   const periods = samePeriodKinds(index.years, chosen.years)
   const missing = periods.filter((at) => !chosen.years.includes(at))
   const runs = gapRuns(missing, (at) => gapReason(index.coverage, associated, at), periods)
   const lines = [
-    ...chosen.years.map((at) => ({ at, rows: chosen.rows.filter((row) => row[5] === at).sort((a, b) => b[2] - a[2]) })),
+    ...chosen.years.map((at) => ({ at, rows: rows.filter((row) => row[5] === at).sort((a, b) => b[2] - a[2]) })),
     ...runs.map((run) => ({ at: run.from, run }))
   ].sort((a, b) => b.at - a.at)
 
   const recordLine = (row, as, rowIndex = 0) => {
     const [employerName, , , slug] = employerOf(row)
+    const details = [
+      hasExpenseAmount(row[3]) && `${expenseLabel(row[6], index.sources)} ${money(row[3])}`,
+      periodOf(row).kind === 'unverified' && 'Reporting period unverified',
+      sourceHref(index.sources?.[row[6]], row[7]) && <SourceLink sourceId={row[6]} sources={index.sources} pdfPage={row[7]} />
+    ].filter(Boolean)
     return (
       <div className="salaries-record" key={`${row[5]}-${row[2]}-${row[4]}-${as ?? ''}-${rowIndex}`}>
         <span className="salaries-record__what">
@@ -72,13 +80,11 @@ export const PersonPage = ({ chosen, joins = [], joinedElsewhere = [], all, scop
         </span>
         <span className="salaries-row__pay">
           {money(row[2])}
-          <span className="salaries__line">
-            {hasExpenseAmount(row[3]) ? `${expenseLabel(row[6], index.sources)} ${money(row[3])} · ` : ''}
-            {periodOf(row).kind === 'compiled' ? 'Compiled edition · reporting year unverified · ' : periodOf(row).kind === 'unverified' ? 'Reporting period unverified · ' : ''}
-            {sourceHref(index.sources?.[row[6]], row[7])
-              ? <SourceLink sourceId={row[6]} sources={index.sources} pdfPage={row[7]} />
-              : 'Original source not attached'}
-          </span>
+          {details.length > 0 && (
+            <span className="salaries__line">
+              {details.map((detail, at) => <span key={at}>{at > 0 ? ' · ' : ''}{detail}</span>)}
+            </span>
+          )}
         </span>
       </div>
     )
@@ -116,9 +122,7 @@ export const PersonPage = ({ chosen, joins = [], joinedElsewhere = [], all, scop
       </p>
       {hasUnverifiedPeriods && (
         <p className="salaries__hint salaries__hint--small">
-          {hasCompiled
-            ? 'Compiled edition labels have unverified reporting years and may overlap employer reports. All observations are retained; labels on the chart and list do not establish separate payment years.'
-            : 'Some reporting periods are unverified. Labels on the chart and list do not establish separate payment years.'}
+          Some reporting periods are unverified. Labels on the chart and list do not establish separate payment years.
         </p>
       )}
 
@@ -143,7 +147,7 @@ export const PersonPage = ({ chosen, joins = [], joinedElsewhere = [], all, scop
         </p>
       ))}
 
-      <SourceWarnings sourceIds={chosen.rows.map((row) => row[6])} sources={index.sources} />
+      <SourceWarnings sourceIds={rows.map((row) => row[6])} sources={index.sources} />
       <dl className="salaries__tiles salaries__tiles--three salaries__tiles--person">
         <div><dt>{periodOf(chosen.latest).kind === 'verified' ? 'Latest' : 'Latest label'}</dt><dd>{money(chosen.latest[2])}</dd><dd className="salaries__line">{periodOf(chosen.latest).label}</dd></div>
         <div><dt>Highest</dt><dd>{money(Math.max(...points.map((point) => point.pay)))}</dd><dd className="salaries__line">{yearLabel(points.reduce((best, point) => (point.pay > best.pay ? point : best)).year)}</dd></div>
