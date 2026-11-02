@@ -86,3 +86,8 @@ test('who came onto and went off the list is counted against the last period of 
   assert.deepEqual(changes.get(1), { before: 0, joined: 1, left: 1, stayed: 1 })
   assert.equal(changes.has(4), false, 'a calendar year is not compared with a fiscal one')
 })
+
+test('executive disclosures entirely above the last pay band retain an open-ended bucket', () => {
+  assert.deepEqual(payBands([2607639, 3357387, 3686064, 5391800]), [{ from: 300000, to: null, count: 4 }])
+  assert.deepEqual(payBands([300000]), [{ from: 300000, to: null, count: 1 }])
+})

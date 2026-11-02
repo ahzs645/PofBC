@@ -10,6 +10,14 @@ import { formatMoney as money } from './money.js'
 import { PayChart, yearSpan } from './parts.jsx'
 import { count } from './common.jsx'
 import { hasExpenseAmount } from './viewState.js'
+import { isCadPerson, personAnnotation, personCurrency } from './recordAnnotations.js'
+import { RecordAnnotation } from './RecordAnnotation.jsx'
+
+/** A change between two payments as a signed whole percentage, with a true minus sign. */
+export const percentChange = (from, to) => {
+  const change = Math.round(((to - from) / from) * 100)
+  return change === 0 ? '0%' : `${change > 0 ? '+' : '−'}${Math.abs(change)}%`
+}
 
 /** A position in a record opens that position's page at its employer, in the record's year. */
 export const PersonPage = ({ chosen, joins = [], joinedElsewhere = [], all, scope, index, back, onEmployer, onRole, onPerson, onOpenGovernment, remember }) => {
@@ -19,7 +27,9 @@ export const PersonPage = ({ chosen, joins = [], joinedElsewhere = [], all, scop
   const employerOf = (row) => index.employers[row[4]]
   const slugOf = (row) => employerOf(row)[3]
   // Matching compiled observations are folded below; every original row remains accessible.
-  const rows = withoutCompiledRepeats(chosen.rows, index.sources)
+  const rows = withoutCompiledRepeats(chosen.rows, index.sources, (row) => personCurrency(row, index))
+  const cadRows = rows.filter((row) => isCadPerson(row, index))
+  const hasOtherCurrencies = cadRows.length !== rows.length
   const foldedRows = chosen.rows.filter((row) => !rows.includes(row))
   // Whether any label still has more than one record once repeats are left out.
   const shared = rows.some((row, at) => rows.findIndex((other) => other[5] === row[5]) !== at)
@@ -34,6 +44,9 @@ export const PersonPage = ({ chosen, joins = [], joinedElsewhere = [], all, scop
     .map((row) => ({ row, link: nameMatch(row[0], chosen.name) }))
     .filter(({ link }) => link === 'initial' || link === 'partial')
     .map(({ row }) => row)
+    // A period this name already has a record in is covered: a near spelling paid in the same period
+    // would be a second salary, so it is most likely someone else and is not offered.
+    .filter((row) => !chosen.years.includes(row[5]))
   const yearLabels = chosen.years.map((at) => index.years[at])
   const periodOf = (row) => recordPeriodLabel(index.years[row[5]], index.sources?.[row[6]])
   const hasCompiled = chosen.rows.some((row) => periodOf(row).kind === 'compiled')
@@ -46,11 +59,28 @@ export const PersonPage = ({ chosen, joins = [], joinedElsewhere = [], all, scop
   const hasTruncatedNames = rows.some((row) => index.sources?.[row[6]]?.nameDisclosure === 'published-truncated-names')
   // The chart plots a year's highest record: where a name has more than one in a year, the table
   // shows them all.
-  const points = chosen.years.map((at) => ({ year: at, pay: Math.max(...rows.filter((row) => row[5] === at).map((row) => row[2])) }))
+  const points = chosen.years.flatMap((at) => {
+    const matching = cadRows.filter((row) => row[5] === at)
+    return matching.length ? [{ year: at, pay: Math.max(...matching.map((row) => row[2])) }] : []
+  })
   // Gaps are counted only among periods of the kinds the name appears in: a name in calendar-year
   // reports has no gap at every fiscal label.
   const periods = samePeriodKinds(index.years, chosen.years)
   const missing = periods.filter((at) => !chosen.years.includes(at))
+  // Change from one period to the next, only where both have a single record and nothing missing
+  // between them: several records in a year or a gap would make a percentage misleading.
+  const single = (at) => rows.filter((row) => row[5] === at).length === 1
+  const payAt = (at) => points.find((point) => point.year === at)?.pay
+  const changeAt = new Map(chosen.years.map((at) => {
+    const before = periods[periods.indexOf(at) - 1]
+    return [at, before !== undefined && chosen.years.includes(before) && single(at) && single(before) && payAt(before) > 0 ? percentChange(payAt(before), payAt(at)) : null]
+  }))
+  const first = points.reduce((low, point) => (!low || point.year < low.year ? point : low), null)
+  const last = points.reduce((high, point) => (!high || point.year > high.year ? point : high), null)
+  const top = points.reduce((best, point) => (!best || point.pay > best.pay ? point : best), null)
+  // Where the latest payment is also the highest, the second tile shows the change since the first
+  // period — only when every record is in CAD, so the two ends are comparable.
+  const sinceFirst = top && !hasOtherCurrencies && !shared && top.year === last.year && first.year !== last.year && first.pay > 0 ? percentChange(first.pay, last.pay) : null
   const runs = gapRuns(missing, (at) => gapReason(index.coverage, associated, at), periods)
   const lines = [
     ...chosen.years.map((at) => ({ at, rows: rows.filter((row) => row[5] === at).sort((a, b) => b[2] - a[2]) })),
@@ -59,8 +89,10 @@ export const PersonPage = ({ chosen, joins = [], joinedElsewhere = [], all, scop
 
   const recordLine = (row, as, rowIndex = 0) => {
     const [employerName, , , slug] = employerOf(row)
+    const annotation = personAnnotation(row, index)
+    const currency = personCurrency(row, index)
     const details = [
-      hasExpenseAmount(row[3]) && `${expenseLabel(row[6], index.sources)} ${money(row[3])}`,
+      hasExpenseAmount(row[3]) && `${expenseLabel(row[6], index.sources)} ${money(row[3], '—', annotation?.expenseCurrency ?? currency)}`,
       periodOf(row).kind !== 'verified' && 'Reporting year unverified',
       sourceHref(index.sources?.[row[6]], row[7]) && <SourceLink sourceId={row[6]} sources={index.sources} pdfPage={row[7]} />
     ].filter(Boolean)
@@ -77,9 +109,10 @@ export const PersonPage = ({ chosen, joins = [], joinedElsewhere = [], all, scop
             </span>
           )}
           {as && <span className="salaries__line">As “{nameOnly(as)}”</span>}
+          <RecordAnnotation annotation={annotation} />
         </span>
         <span className="salaries-row__pay">
-          {money(row[2])}
+          {money(row[2], '—', currency)}
           {details.length > 0 && (
             <span className="salaries__line">
               {details.map((detail, at) => <span key={at}>{at > 0 ? ' · ' : ''}{detail}</span>)}
@@ -107,7 +140,7 @@ export const PersonPage = ({ chosen, joins = [], joinedElsewhere = [], all, scop
         ))}
       </p>
       <p className="salaries__note">
-        {yearLabels.length} {hasUnverifiedPeriods ? (yearLabels.length === 1 ? 'reporting label' : 'reporting labels') : (yearLabels.length === 1 ? 'disclosure period' : 'disclosure periods')}, {yearSpan(yearLabels)} · disclosed as “{nameOnly(chosen.name)}”
+        {yearLabels.length} {hasUnverifiedPeriods ? (yearLabels.length === 1 ? 'reporting label' : 'reporting labels') : (yearLabels.length === 1 ? 'disclosure period' : 'disclosure periods')}, {yearSpan(yearLabels)} · {chosen.reviewedName ? 'reviewed name' : 'disclosed as'} “{nameOnly(chosen.name)}”
       </p>
       {scope && (
         <p className="salaries__hint salaries__hint--small">
@@ -124,12 +157,15 @@ export const PersonPage = ({ chosen, joins = [], joinedElsewhere = [], all, scop
       ))}
 
       <dl className="salaries__tiles salaries__tiles--three salaries__tiles--person">
-        <div><dt>{periodOf(chosen.latest).kind === 'verified' ? 'Latest' : 'Latest label'}</dt><dd>{money(chosen.latest[2])}</dd><dd className="salaries__line">{periodOf(chosen.latest).label}</dd></div>
-        <div><dt>Highest</dt><dd>{money(Math.max(...points.map((point) => point.pay)))}</dd><dd className="salaries__line">{yearLabel(points.reduce((best, point) => (point.pay > best.pay ? point : best)).year)}</dd></div>
+        <div><dt>{periodOf(chosen.latest).kind === 'verified' ? 'Latest' : 'Latest label'}</dt><dd>{money(chosen.latest[2], '—', personCurrency(chosen.latest, index))}</dd><dd className="salaries__line">{periodOf(chosen.latest).label}</dd></div>
+        {sinceFirst
+          ? <div><dt>Change</dt><dd>{sinceFirst}</dd><dd className="salaries__line">since {index.years[first.year]}</dd></div>
+          : <div><dt>{hasOtherCurrencies ? 'Highest CAD' : 'Highest'}</dt><dd>{top ? money(top.pay) : '—'}</dd><dd className="salaries__line">{top ? yearLabel(top.year) : 'No comparable CAD observation'}</dd></div>}
         <div><dt>{hasUnverifiedPeriods ? 'Labels' : 'Periods'}</dt><dd>{yearLabels.length}</dd><dd className="salaries__line">of {periods.length} corresponding {hasUnverifiedPeriods ? 'labels' : 'periods'}</dd></div>
       </dl>
+      {hasOtherCurrencies && <p className="salaries__hint salaries__hint--small">CAD comparisons exclude observations in other currencies. Their original amounts and currency evidence are listed below; no exchange rate is assumed.</p>}
 
-      {points.length > 1 && <PayChart years={index.years} points={points} multiple={shared} label={hasUnverifiedPeriods ? 'Disclosed payments by reporting label; some periods are unverified' : undefined} />}
+      {points.length > 1 && <PayChart years={index.years} points={points} multiple={shared} label={hasOtherCurrencies ? 'CAD observations only, by reporting label' : hasUnverifiedPeriods ? 'Disclosed payments by reporting label; some periods are unverified' : undefined} />}
 
       <h3 className="salaries__title salaries__title--spaced">{hasUnverifiedPeriods ? 'Records by label' : 'Year by year'}</h3>
       <ol className="salaries-years">
@@ -142,16 +178,19 @@ export const PersonPage = ({ chosen, joins = [], joinedElsewhere = [], all, scop
           )
           : (
             <li key={line.at} className="salaries-years__year">
-              <span className="salaries-years__label">{yearLabel(line.at)}</span>
+              <span className="salaries-years__label">
+                {yearLabel(line.at)}
+                {changeAt.get(line.at) && <span className="salaries-years__change">{changeAt.get(line.at)}</span>}
+              </span>
               <span className="salaries-years__records">{line.rows.map((row, at) => recordLine(row, disclosedAs(row), at))}</span>
             </li>
           ))}
       </ol>
 
       {near.length > 0 && (
-        <>
-          <h3 className="salaries__title salaries__title--spaced">Possible matches</h3>
-          <p className="salaries__hint salaries__hint--small">The same surname with compatible initials or given names. These may be the same person or someone else.</p>
+        <details className="salaries__about salaries__matches">
+          <summary className="salaries__title">Possible matches ({near.length})</summary>
+          <p className="salaries__hint salaries__hint--small">The same surname with compatible initials or given names, in periods this name has no record. These may be the same person or someone else.</p>
           <ol className="salaries-years salaries-years--weak">
             {[...new Set(near.map((row) => row[5]))].sort((a, b) => b - a).map((at) => (
               <li key={at} className="salaries-years__year">
@@ -160,12 +199,13 @@ export const PersonPage = ({ chosen, joins = [], joinedElsewhere = [], all, scop
               </li>
             ))}
           </ol>
-        </>
+        </details>
       )}
 
       <details className="salaries__about">
         <summary className="salaries__title">About these records</summary>
         <p className="salaries__hint salaries__hint--small">
+          Amounts are payments disclosed for a reporting period, not annual salary rates.
           Records are grouped by the disclosed name only, so they may not all concern one person.
           {shared ? ' Some years have more than one record under this name: different people, separate payments or source duplicates.' : ''}
           {hasTruncatedNames ? ' At least one source publishes truncated names. The published text is preserved; an incomplete name may hide other records or combine different people.' : ''}
@@ -175,12 +215,12 @@ export const PersonPage = ({ chosen, joins = [], joinedElsewhere = [], all, scop
         )}
         {joins.length > 0 && (
           <div className="salaries__hint salaries__hint--small">
-            <p className="salaries__hint salaries__hint--small">Joined with other spellings of the name at the same employer:</p>
+            <p className="salaries__hint salaries__hint--small">Other spellings joined to this name:</p>
             <ul className="salaries__joins">
               {joins.map((join) => (
-                <li key={`${join.employer}|${join.name}`}>
-                  “{nameOnly(join.name)}” at {index.employers[join.employer][0]}, {/^Reviewed: /.test(join.reason) ? `verified on review: ${join.reason.replace(/^Reviewed: /, '')}` : `${sureness(join.status)}: ${join.reason}`}
-                  {join.evidence?.map((evidence, at) => <span key={`${evidence.sourceId}|${evidence.pdfPage}`}>{' · '}<SourceLink sourceId={evidence.sourceId} sources={index.sources} pdfPage={evidence.pdfPage} label={join.evidence.length > 1 ? `Evidence ${at + 1} · p. ${evidence.pdfPage}` : `Evidence · p. ${evidence.pdfPage}`} /></span>)}
+                <li key={`${join.employer}|${join.name}`} title={join.reason.replace(/^Reviewed: /, '')}>
+                  “{nameOnly(join.name)}” at {index.employers[join.employer][0]} · {join.status === 'verified' && /^Reviewed: /.test(join.reason) ? 'verified on review' : sureness(join.status)}
+                  {join.evidence?.map((evidence, at) => <span key={`${evidence.sourceId ?? evidence.url}|${evidence.pdfPage ?? ''}`}>{' · '}<SourceLink sourceId={evidence.sourceId} url={evidence.url} sources={index.sources} pdfPage={evidence.pdfPage} label={evidence.pdfPage ? `Evidence${join.evidence.length > 1 ? ` ${at + 1}` : ''} · p. ${evidence.pdfPage}` : 'Identity evidence'} /></span>)}
                 </li>
               ))}
             </ul>
@@ -194,6 +234,7 @@ export const PersonPage = ({ chosen, joins = [], joinedElsewhere = [], all, scop
           </details>
         )}
         <SourceNotes sourceIds={chosen.rows.map((row) => row[6])} sources={index.sources} />
+        {[...new Map(chosen.rows.map((row) => personAnnotation(row, index)).filter(Boolean).map((annotation) => [annotation.id, annotation])).values()].map((annotation) => <p className="salaries__hint salaries__hint--small" key={annotation.id}>{annotation.note}</p>)}
       </details>
     </section>
   )

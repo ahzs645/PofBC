@@ -1,24 +1,24 @@
-import { coverageStatus, disclosurePeriod, scopeLabel, sourceHref, sourceWarnings, thresholdLabel } from './coverage.js'
+import { coverageStatus, disclosurePeriod, readerNotes, scopeLabel, sourceHref, thresholdLabel } from './coverage.js'
 
-export const SourceLink = ({ sourceId, sources = {}, pdfPage, label }) => {
-  const source = sources[sourceId]
+export const SourceLink = ({ sourceId, sources = {}, pdfPage, label, url }) => {
+  const source = sources[sourceId] ?? (url ? { url, title: 'Reviewed source evidence' } : null)
   const href = sourceHref(source, pdfPage)
   const page = Number.isInteger(pdfPage) && pdfPage > 0 && href?.includes('#page=')
   return href
-    ? <a href={href} target="_blank" rel="noreferrer" title={[source.title, source.publicWarning].filter(Boolean).join(' — ')}>{label ?? (page ? `Source · p. ${pdfPage}` : 'Source')}{source.publicWarning ? ' †' : ''}</a>
+    ? <a href={href} target="_blank" rel="noreferrer" title={[source.title, source.publicWarning].filter(Boolean).join(' — ')}>{label ?? (page ? `Source · p. ${pdfPage}` : 'Source')}</a>
     : null
 }
 
 const month = (value) => new Intl.DateTimeFormat('en-CA', { month: 'short', year: 'numeric', timeZone: 'UTC' }).format(new Date(`${value}T00:00:00Z`))
 
-/** Source caveats as plain notes, for a section that is already folded away. */
-export const SourceNotes = ({ sourceIds, sources }) => sourceWarnings(sourceIds, sources).map((warning) => (
+/** A source's reader caveats as plain notes, for a section that is already folded away. */
+export const SourceNotes = ({ sourceIds, sources }) => readerNotes(sourceIds, sources).map((warning) => (
   <p key={warning} className="salaries__hint salaries__hint--small">{warning}</p>
 ))
 
 /** Source caveats stay folded away until asked for: on a long history they would fill the page. */
 export const SourceWarnings = ({ sourceIds, sources }) => {
-  const warnings = sourceWarnings(sourceIds, sources)
+  const warnings = readerNotes(sourceIds, sources)
   if (!warnings.length) return null
   return (
     <details className="salaries__caveats">

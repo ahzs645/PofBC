@@ -9,6 +9,7 @@ import { resolve, dirname, join } from 'node:path'
 import { SALARY_YEARS, SALARY_INDEX, SALARY_SOURCES, SALARY_COVERAGE } from '../src/government/salaryIndex.js'
 import { titleKey, titleShard } from '../src/salaries/positions.js'
 import { periodMean, topRecords } from './lib/salary-data.mjs'
+import { isCadEmployer, isCadPerson, currencyOf, governmentAnnotation, RECORD_ANNOTATIONS } from '../src/salaries/recordAnnotations.js'
 
 const root = resolve(dirname(fileURLToPath(import.meta.url)), '..')
 const published = join(root, 'public/salaries')
@@ -29,6 +30,7 @@ const people = json(join(published, 'people/index.json'))
 const atlas = json(join(published, 'index.json'))
 const audit = json(join(published, 'coverage.json'))
 const years = employers.years
+assert.deepEqual(json(join(published, 'record-annotations.json')), RECORD_ANNOTATIONS)
 assert.deepEqual(people.years, years, 'People and employer year indices differ')
 assert.deepEqual(atlas.years.map((year) => year.label), years, 'Atlas year indices differ')
 assert.deepEqual(people.sources, employers.sources)
@@ -60,7 +62,7 @@ for (const employer of employers.employers) {
     byYear[year].push(row)
     const key = JSON.stringify([employer.slug, years[year], name, position, pay, expenses, sourceId, page])
     if (name !== null) { namedRows += 1; add(named, key) }
-    if (position && titleKey(position)) {
+    if (position && titleKey(position) && isCadEmployer(row, employer.slug, years, employers.sources)) {
       const cell = `${titleKey(position)}|${employers.employers.indexOf(employer)}|${year}`
       if (!titled.has(cell)) titled.set(cell, [])
       titled.get(cell).push(pay)
@@ -104,7 +106,8 @@ for (const [shard, expected] of Object.entries(people.shards)) {
 assert.equal(named.size, 0, 'Named employer rows are absent from the people index')
 // The landing page's highest-paid records are exactly each period's top of the named records.
 const top = gzip(join(published, 'people/top.json.gzip'))
-assert.deepEqual(top.rows, topRecords(personRows, top.perPeriod), 'Highest-paid records differ from the people index')
+assert.deepEqual(top.rows, topRecords(personRows.filter((row) => isCadPerson(row, people)), top.perPeriod), 'CAD rankings differ from the people index')
+assert.deepEqual(top.unrankedRows, personRows.filter((row) => !isCadPerson(row, people)), 'Other-currency observations must remain accessible without a CAD rank')
 assert.deepEqual(new Set(readdirSync(join(published, 'people')).filter((file) => file.endsWith('.gzip'))), new Set([...Object.keys(people.shards).map((shard) => `${shard}.json.gzip`), 'top.json.gzip']))
 
 // Each title's employer/years hold exactly the positioned rows read independently from the employer files.
@@ -145,8 +148,14 @@ for (const [body, periods] of Object.entries(atlas.bodies)) {
     assert.ok(expected, `Unexpected atlas partition ${key}`)
     assert.deepEqual(data.rows.map((row) => JSON.stringify(row)).sort(), expected.map((row) => JSON.stringify(row)).sort(), `Atlas partition ${key}`)
     assert.equal(summary.count, expected.length)
-    assert.equal(cents(summary.total), expected.reduce((sum, row) => sum + cents(row[2]), 0))
-    assert.equal(summary.max, Math.max(...expected.map((row) => row[2])))
+    const cad = expected.filter((row) => currencyOf(governmentAnnotation(row, body, data.year), employers.sources[row[4]]) === 'CAD')
+    assert.equal(cents(summary.total), cad.reduce((sum, row) => sum + cents(row[2]), 0))
+    assert.equal(summary.max, cad.length ? Math.max(...cad.map((row) => row[2])) : null)
+    if (cad.length !== expected.length) {
+      assert.equal(summary.nonCadRecords, expected.length - cad.length)
+      assert.equal(summary.comparableRecords, cad.length)
+      assert.equal(summary.comparisonCurrency, 'CAD')
+    }
     bodyRows.delete(key); atlasFiles += 1
   }
 }

@@ -759,7 +759,11 @@ const BCT_SOURCES = {
     'cover: the loop and its tagline; tabled 17 February 2009'),
   S5: source('BC Transit, “New Livery — Exterior Bus Design Update” [S5]', 'https://www.bctransit.com/news-and-media/bus-designs/',
     'the previous exterior design dates from 2007; the logo is unchanged'),
-  S6: source('BC Transit, “BC Transit buses are getting a new look”, 19 Sep 2024 [S6]', 'https://www.bctransit.com/bc-transit-buses-are-getting-a-new-look-2024-09-19/')
+  S6: source('BC Transit, “BC Transit buses are getting a new look”, 19 Sep 2024 [S6]', 'https://www.bctransit.com/bc-transit-buses-are-getting-a-new-look-2024-09-19/'),
+  S7: source('The Daily Colonist, 16 Sep 1979, p. 10 [S7]', 'https://archive.org/details/dailycolonist19790916/page/n9/mode/1up',
+    'an Urban Transit Authority recruitment advertisement, signed with its lettering'),
+  S8: source('The Daily Colonist, 1 Jul 1980, p. 12 [S8]', 'https://archive.org/details/dailycolonist19800701/page/n11/mode/1up',
+    'a Capital Region transit advertisement signed by the Capital Regional District and the Urban Transit Authority')
 }
 
 /**
@@ -1191,6 +1195,22 @@ export const COLLECTION_ERAS = {
   // known, so they share one era rather than being given a sequence the evidence does not have;
   // and neither livery change (2007, 2024) is a logo era, since BC Transit says the 2024 one kept it.
   'bc-transit': [
+    {
+      id: 'bct-urban-transit-authority',
+      status: 'held',
+      years: '1979–1982',
+      label: 'The Urban Transit Authority',
+      note: 'BC Transit before it took that name: the Urban Transit Authority of British Columbia, whose ' +
+        'italic UTA lettering and double-arrow device appear in newspaper advertisements of 1979 and 1980. ' +
+        'These are the specimens collected as found, and a later reconstruction of the same identity.',
+      applicability: {
+        kind: 'dated_specimen',
+        years: '1979–1980',
+        note: 'The advertisements are dated 16 September 1979 and 1 July 1980; that is when the marks were seen, ' +
+          'not when they were introduced. The authority was renamed BC Transit in 1982.'
+      },
+      sources: [BCT_SOURCES.S7, BCT_SOURCES.S8, BCT_SOURCES.S1]
+    },
     {
       id: 'bct-flag',
       status: 'held',

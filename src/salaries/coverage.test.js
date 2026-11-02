@@ -1,6 +1,6 @@
 import { test } from 'node:test'
 import assert from 'node:assert/strict'
-import { recordPeriodLabel, sourceWarnings } from './coverage.js'
+import { readerNotes, readerNoteSentences, recordPeriodLabel, sourceWarnings } from './coverage.js'
 import { coverageAt, categoryCoverage, shortYearLabel, reportingYearLabel, relevantYearIndexes, samePeriodKinds, coverageStatus, disclosurePeriod, expenseLabel, filterEmployers, gapReason, gapRuns, missingYearMessage, rowCoverage, scopeLabel, sourceHref, thresholdLabel, yearAvailability } from './coverage.js'
 
 test('source caveats follow the selected cohort without leaking into a separate council schedule', () => {
@@ -152,4 +152,13 @@ test('inclusive and strict disclosure thresholds keep their source meaning', () 
   assert.equal(thresholdLabel({ threshold: 75000, thresholdComparison: '>' }), 'over $75,000')
   assert.equal(thresholdLabel({ threshold: 75000 }), 'threshold $75,000')
   assert.equal(thresholdLabel({ threshold: null }), null)
+})
+
+test('reader notes keep what changes how a number reads and leave out transcription notes', () => {
+  const sources = {
+    a: { publicWarning: 'These are published payment observations, not annual base salary rates or a workforce census. Source expense dashes and blanks remain unknown; numeric zero remains zero. The printed asterisk means partial year. Official Legislative Library archival download with an added catalogue cover at physical page 1; page citations identify this downloaded copy.' },
+    b: { publicWarning: 'Expenses may include third-party supplier payments; original expense dashes remain unknown (null). The printed asterisk means partial year.' }
+  }
+  assert.deepEqual(readerNotes(['a', 'b'], sources), ['The printed asterisk means partial year.', 'Expenses may include third-party supplier payments.'])
+  assert.deepEqual(readerNoteSentences('Existing compiled observations are retained and may overlap this official schedule.'), [])
 })
