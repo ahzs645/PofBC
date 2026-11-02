@@ -512,9 +512,27 @@ shows a single collection with an era for each name. These are:
 - BC Enterprise Corporation, then PavCo;
 - Partnerships BC, then Infrastructure BC.
 
-BC Ferries' and BC Transit's earlier bodies sit in eras of their own histories instead. Old
-`?logos=collected-…` links still open the merged collection. Amalgamations, where several bodies
-became one, keep a collection each (`CONTINUATIONS`, `src/gallery/collectedCollections.js`).
+BC Ferries' and BC Transit's earlier bodies sit in eras of their own histories instead: the Toll
+Highways and Bridges Authority's ferry system and the BC Ferry Authority, and the Urban Transit
+Authority. Old `?logos=collected-…` links still open the merged collection, and the collecting list
+opens it at the body's era.
+
+**Only one-to-one lines are merged.** A timeline of names claims a single lineage, so a body is folded
+into another only when the history records it becoming that body and nothing else shares the link:
+
+- no other body with logos here became the same one (that would be an amalgamation, many to one);
+- no other body took its work over (a split, one to many).
+
+So these keep a collection each, with their links left to the government diagram:
+
+- the 2001 health regions, boards and councils that became Fraser, Interior, Northern, Vancouver
+  Coastal and Island Health;
+- the BC Power Commission and the BC Transmission Corporation, which became part of BC Hydro;
+- BC Place Ltd. and the BC Development Corporation, which together became the BC Enterprise
+  Corporation.
+
+The list is `CONTINUATIONS` in `src/gallery/collectedCollections.js`, and
+`collectedCollections.test.js` checks each fold against `src/government/historyData.js`.
 
 ---
 

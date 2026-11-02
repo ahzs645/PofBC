@@ -65,7 +65,7 @@ test('asset links respect both root and project deployments; leads stay uncollec
   assert.equal(researchLabel({ status: 'not-searched' }), 'Wanted')
 })
 
-test('a body folded into a later name is one the government history records becoming it, alone', () => {
+test('a body folded into a later name is a one-to-one line in the government history', () => {
   const history = new Map(HISTORICAL_BODIES.map((body) => [body.id, body]))
   const held = new Set(COLLECTED_BODIES.filter((body) => body.assets.length).map((body) => body.id))
   const folded = [...CONTINUATIONS, ...GALLERY_COLLECTIONS.filter((collection) => collection.eras && collection.graphNodes)
@@ -74,9 +74,13 @@ test('a body folded into a later name is one the government history records beco
     const became = history.get(from)?.became
     assert.ok(became, `${from} became something`)
     if (to) assert.equal(became, to, from)
-    // No other body with logos here became the same one: that would be an amalgamation.
+    // Many to one: no other body with logos here became the same one — that is an amalgamation.
     const others = HISTORICAL_BODIES.filter((body) => body.became === became && body.id !== from && held.has(body.id))
     assert.deepEqual(others.map((body) => body.id), [], from)
+    // One to many: nothing else counts this body among its predecessors, nor took its services over.
+    const heirs = HISTORICAL_BODIES.filter((body) => body.id !== became && body.predecessors?.includes(from))
+    assert.deepEqual(heirs.map((body) => body.id), [], from)
+    assert.ok(!(history.get(from).servicesPassedTo ?? []).some((id) => id !== became), from)
   }
 })
 

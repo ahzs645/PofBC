@@ -70,9 +70,14 @@ const collectionOf = (body) => ({
  * Bodies that carried on as another under a new name, each with the body it became, as the
  * government history records them (historyData.js: the body's `became`, with no other body holding
  * logos here becoming the same one). Each line is shown as one collection — the last body's, under
- * which the earlier ones are an era each — rather than as a collection per name. Amalgamations,
- * where several bodies became one, keep a collection each. BC Ferries' and BC Transit's earlier
- * names are eras of their researched histories instead (collections.js).
+ * which the earlier ones are an era each — rather than as a collection per name. BC Ferries' and
+ * BC Transit's earlier names are eras of their researched histories instead (collections.js).
+ *
+ * Only one-to-one lines are folded. An amalgamation (several bodies becoming one, as the 2001 health
+ * regions did) or a split (one body's work passing to several) is not a line of names: putting a
+ * predecessor's logos on one successor's timeline would claim a single lineage the history does
+ * not record, and would hide that the others shared it. Those bodies keep a collection each, and
+ * their links stay in the government diagram. collectedCollections.test.js checks every fold.
  */
 export const CONTINUATIONS = [
   ['pacific-great-eastern-railway', 'bc-railway-company'],
