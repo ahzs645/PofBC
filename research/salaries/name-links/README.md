@@ -1,5 +1,13 @@
 # Name links
 
+The [2 November 2026 connection review](connection-review-2026-11-02/README.md)
+adds a repeatable scan of every published named observation, a queue of possible
+surname variants, and original-source findings for BCI. It distinguishes the
+existing heuristic `verified` status from independent source review. The Pittman
+connection is supported by primary evidence but held from new application joins
+pending treatment of the later USD executive-compensation amount. This research
+pass does not change the links applied by the site.
+
 Employers write the same person's name differently from year to year ("Garant, D." in 2017/18,
 "Garant, Daniel" in 2023/24), sources disagree, and extraction splits letters off ("Nevill, T homas").
 This list says which spellings **at one employer** are one person, how sure that is, and why. The
