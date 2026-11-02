@@ -78,7 +78,7 @@ export const RecordRow = ({ rank, name, position, pay, expenses, expenseText, so
       <span className="salaries__text">
         {name !== undefined && (name
           ? <button type="button" className="salaries__name salaries-record-card__open" onClick={() => onPerson(name)}>{displayName(name, nameDisclosure)}</button>
-          : <span className="salaries__name" data-missing>Name not given</span>)}
+          : <span className="salaries__name" data-missing>Name unavailable</span>)}
         {position && <span className="salaries__line">{position}</span>}
         {(expense || href) && (
           <span className="salaries__line">

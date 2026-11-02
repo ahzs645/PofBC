@@ -1,0 +1,872 @@
+{
+  "schemaVersion": 1,
+  "status": "verified nine-source employee history extension; source qualifications retained",
+  "noOutreach": true,
+  "rootSourceAcceptance": {
+    "path": "research/salaries/gap-fill-2026-11-02/reviews/root-nine-other-health-source-acceptance.json",
+    "sha256": "f67d5d4ac05381b37bcfbf6cc9710de331d9d1c1705aea1d9d8c73a7af81b99c"
+  },
+  "sources": [
+    {
+      "id": "gap-health-other-history-northern-health-2007-08",
+      "employerSlug": "northern-health",
+      "employerName": "Northern Health",
+      "sector": "Health authorities",
+      "year": "2007/08",
+      "periodType": "fiscal",
+      "periodStart": "2007-04-01",
+      "periodEnd": "2008-03-31",
+      "periodEvidence": "Actual original salary-period heading independently reviewed in the exact first/last context images; catalogue metadata used for discovery only.",
+      "title": "Northern Health employee remuneration 2007/08 (official Legislative Library copy)",
+      "sourceUrl": "https://digitalcollectionsrepository.llbc.leg.bc.ca/server/api/core/bitstreams/fd70d950-b224-41bf-92ad-d11efbbb1a28/content",
+      "sourceIndexUrl": "https://www.northernhealth.ca/about-us/accountability/reports/financial-accountability",
+      "catalogueUrl": "https://digitalcollections.llbc.leg.bc.ca/handle/123456789/302561",
+      "sha256": "a3dcff9c721efc1ad1ca849de9a429af0087e8cb934fa71d74128711577bf0d8",
+      "file": "northern-health-2007-08-employees.json.gzip",
+      "dataSha256": "5152c6b7edab58cd476bf4887d928a79cdfe3ef7514e9286bfda05f4b272f605",
+      "rowCount": 694,
+      "status": "verified",
+      "sourceKind": "official",
+      "scope": "employee-remuneration",
+      "category": "employee-remuneration",
+      "currency": "CAD",
+      "threshold": 75000,
+      "thresholdComparison": "as-published",
+      "completeEmployeeSchedule": true,
+      "retainCompiledPartition": true,
+      "notes": [
+        "Complete source table is retained in printed order, including repeated observations. Source names are disclosed strings, not resolved identities.",
+        "No job titles are published in this employee schedule; position remains null.",
+        "The conventional fiscal start is April 1 before the actual internally printed March 31 year-end; these are payment periods, not annualized salary rates.",
+        "Remuneration includes base salary, retroactive pay, taxable benefits, prior year's and/or current year's vacation payouts, and retiring allowances paid in accordance with union and non-contract agreements. Remuneration also includes overtime and on call premiums.",
+        "Expenses includes travel expenses, tuition, registration fees, relocation allowances and professional membership fees paid to or on behalf of each employee."
+      ],
+      "publicWarning": "Official Legislative Library archival copy includes an added cover at physical page 1; page citations identify this downloaded copy. These are disclosed payments, not annual base salary rates or a complete workforce roster. Separate expenses remain literal: printed zero stays zero, blank/dash stays unknown, negative amounts stay negative. Literal named rows differ from printed named controls by 1 dollars remuneration and -7 dollars known expenses. No amount is adjusted and no cause is established. Existing compiled observations are retained and may overlap this official schedule. No complete-copy, calendar-label or identity equivalence is assumed.",
+      "provenanceFile": "northern-health-2007-08-reviewed-provenance.json.gzip",
+      "provenanceSha256": "deb5e4df7f7f9ec5e95662128cf872b483ac68aa2e4ed4f03a31b56bb4d7fae4",
+      "validation": {
+        "candidateOnly": false,
+        "completeEmployeeSchedule": true,
+        "compiledPartitionRetained": true,
+        "compiledPartitionRetentionReason": "No complete source-compatible duplicate-copy comparison proves this official cohort replaces a compiled partition. Preserve every compiled observation.",
+        "literalRemunerationSum": "62688122",
+        "literalKnownExpenseSum": "2666309",
+        "printedNamedControls": {
+          "physicalPage": 16,
+          "label": "TOTAL EMPLOYEES > $75,000",
+          "remuneration": 62688121,
+          "expenses": 2666316,
+          "raw": "TOTAL EMPLOYEES > $75,000                    62,688,121    2,666,316"
+        },
+        "literalNamedControlResiduals": [
+          "1",
+          "-7"
+        ],
+        "residualCauseEstablished": false,
+        "printedEmployeeSummaryCount": null,
+        "actualEmployeeObservations": 694,
+        "allNativeRowsExactlyAgreeBeforeSourceAddition": true,
+        "independentOriginalImageTargetsForThisSource": 0,
+        "sourceContextAcceptance": {
+          "path": "research/salaries/gap-fill-2026-11-02/reviews/health-other-context-root/root-nine-source-context-acceptance.json",
+          "sha256": "637ee861ba71716949d5e72e73bcda78e1ac6772f952cc4017270dba04d025f8"
+        },
+        "independentSourceImageReview": {
+          "first": {
+            "path": "research/salaries/gap-fill-2026-11-02/school_native/reviews/health-other-history/independent-first247-source-transcript.json",
+            "sha256": "554b27110baa72d90d1c36c4f07a7eb3eb566b6882e3ee334e9066f0d1815b06"
+          },
+          "additive": {
+            "path": "research/salaries/gap-fill-2026-11-02/school_native/reviews/health-other-history/additive-three-own-source-rereads.json",
+            "sha256": "8aba7a9731055abd4773d39787eed87f92278fe49f837baa1993d380628b59f6"
+          },
+          "final": {
+            "path": "research/salaries/gap-fill-2026-11-02/school_native/reviews/health-other-history/independent-final247-source-transcript.json",
+            "sha256": "5ec070934054f9430d9344f10fd8173582fbb3f0881573c470993e5eb61a5706"
+          },
+          "reviewAcceptance": {
+            "path": "research/salaries/gap-fill-2026-11-02/school_native/reviews/health-other-history/independent247-source-exception-review.json",
+            "sha256": "48d870b7820a1e8b20c2d5528b6d99244313434f778e4951e210f5f92e15610b"
+          }
+        },
+        "pendingGates": [],
+        "status": "verified with literal source qualifications",
+        "rootSourceAcceptance": {
+          "path": "research/salaries/gap-fill-2026-11-02/reviews/root-nine-other-health-source-acceptance.json",
+          "sha256": "f67d5d4ac05381b37bcfbf6cc9710de331d9d1c1705aea1d9d8c73a7af81b99c"
+        },
+        "acceptedCandidateManifest": {
+          "path": "research/salaries/gap-fill-health-other-history/sources-candidate.json",
+          "sha256": "ab974e2780ef9fc3706b0d2d64b8fafd188644ca556a6763a4cf22ce4e8e8a22"
+        },
+        "acceptedCandidateProvenance": {
+          "path": "research/salaries/gap-fill-health-other-history/northern-health-2007-08-provenance.json.gzip",
+          "sha256": "984a6c7b9dc7963ff31fd08f0e9d1c5df12bc3d0da0fd390fd96a4599f598990"
+        }
+      }
+    },
+    {
+      "id": "gap-health-other-history-northern-health-2006-07",
+      "employerSlug": "northern-health",
+      "employerName": "Northern Health",
+      "sector": "Health authorities",
+      "year": "2006/07",
+      "periodType": "fiscal",
+      "periodStart": "2006-04-01",
+      "periodEnd": "2007-03-31",
+      "periodEvidence": "Actual original salary-period heading independently reviewed in the exact first/last context images; catalogue metadata used for discovery only.",
+      "title": "Northern Health employee remuneration 2006/07 (official Legislative Library copy)",
+      "sourceUrl": "https://digitalcollectionsrepository.llbc.leg.bc.ca/server/api/core/bitstreams/7b5da01e-e6fb-4e74-99b2-ecfbbe0e7027/content",
+      "sourceIndexUrl": "https://www.northernhealth.ca/about-us/accountability/reports/financial-accountability",
+      "catalogueUrl": "https://digitalcollections.llbc.leg.bc.ca/handle/123456789/302528",
+      "sha256": "569f2dfd190f37eb85daeacd52c43779384f8f83309a28f6620adbfd37742454",
+      "file": "northern-health-2006-07-employees.json.gzip",
+      "dataSha256": "4d078dc07276c67c1bf39eac41ea3bac29308af593566cd65e5e92c0c56f7b65",
+      "rowCount": 710,
+      "status": "verified",
+      "sourceKind": "official",
+      "scope": "employee-remuneration",
+      "category": "employee-remuneration",
+      "currency": "CAD",
+      "threshold": 75000,
+      "thresholdComparison": "as-published",
+      "completeEmployeeSchedule": true,
+      "retainCompiledPartition": true,
+      "notes": [
+        "Complete source table is retained in printed order, including repeated observations. Source names are disclosed strings, not resolved identities.",
+        "No job titles are published in this employee schedule; position remains null.",
+        "The conventional fiscal start is April 1 before the actual internally printed March 31 year-end; these are payment periods, not annualized salary rates.",
+        "Remuneration includes base salary, retroactive pay, taxable benefits, prior year's and/or current year's vacation payouts, and retiring allowances paid in accordance with union and non-contract agreements. Remuneration also includes overtime and on call premiums.",
+        "Expenses includes travel expenses, tuition, registration fees, relocation allowances and professional membership fees paid to or on behalf of each employee."
+      ],
+      "publicWarning": "Official Legislative Library archival copy includes an added cover at physical page 1; page citations identify this downloaded copy. These are disclosed payments, not annual base salary rates or a complete workforce roster. Separate expenses remain literal: printed zero stays zero, blank/dash stays unknown, negative amounts stay negative. Literal named rows differ from printed named controls by -4 dollars remuneration and 9 dollars known expenses. No amount is adjusted and no cause is established. Existing compiled observations are retained and may overlap this official schedule. No complete-copy, calendar-label or identity equivalence is assumed.",
+      "provenanceFile": "northern-health-2006-07-reviewed-provenance.json.gzip",
+      "provenanceSha256": "e3c28e8cee4223240e94d8acf312df122691bb644d36b73502a3b9d092de45a6",
+      "validation": {
+        "candidateOnly": false,
+        "completeEmployeeSchedule": true,
+        "compiledPartitionRetained": true,
+        "compiledPartitionRetentionReason": "No complete source-compatible duplicate-copy comparison proves this official cohort replaces a compiled partition. Preserve every compiled observation.",
+        "literalRemunerationSum": "64013207",
+        "literalKnownExpenseSum": "2768912",
+        "printedNamedControls": {
+          "physicalPage": 16,
+          "label": "TOTAL EMPLOYEES > $75,000",
+          "remuneration": 64013211,
+          "expenses": 2768903,
+          "raw": "    TOTAL EMPLOYEES > $75,000             64,013,211    2,768,903"
+        },
+        "literalNamedControlResiduals": [
+          "-4",
+          "9"
+        ],
+        "residualCauseEstablished": false,
+        "printedEmployeeSummaryCount": null,
+        "actualEmployeeObservations": 710,
+        "allNativeRowsExactlyAgreeBeforeSourceAddition": true,
+        "independentOriginalImageTargetsForThisSource": 0,
+        "sourceContextAcceptance": {
+          "path": "research/salaries/gap-fill-2026-11-02/reviews/health-other-context-root/root-nine-source-context-acceptance.json",
+          "sha256": "637ee861ba71716949d5e72e73bcda78e1ac6772f952cc4017270dba04d025f8"
+        },
+        "independentSourceImageReview": {
+          "first": {
+            "path": "research/salaries/gap-fill-2026-11-02/school_native/reviews/health-other-history/independent-first247-source-transcript.json",
+            "sha256": "554b27110baa72d90d1c36c4f07a7eb3eb566b6882e3ee334e9066f0d1815b06"
+          },
+          "additive": {
+            "path": "research/salaries/gap-fill-2026-11-02/school_native/reviews/health-other-history/additive-three-own-source-rereads.json",
+            "sha256": "8aba7a9731055abd4773d39787eed87f92278fe49f837baa1993d380628b59f6"
+          },
+          "final": {
+            "path": "research/salaries/gap-fill-2026-11-02/school_native/reviews/health-other-history/independent-final247-source-transcript.json",
+            "sha256": "5ec070934054f9430d9344f10fd8173582fbb3f0881573c470993e5eb61a5706"
+          },
+          "reviewAcceptance": {
+            "path": "research/salaries/gap-fill-2026-11-02/school_native/reviews/health-other-history/independent247-source-exception-review.json",
+            "sha256": "48d870b7820a1e8b20c2d5528b6d99244313434f778e4951e210f5f92e15610b"
+          }
+        },
+        "pendingGates": [],
+        "status": "verified with literal source qualifications",
+        "rootSourceAcceptance": {
+          "path": "research/salaries/gap-fill-2026-11-02/reviews/root-nine-other-health-source-acceptance.json",
+          "sha256": "f67d5d4ac05381b37bcfbf6cc9710de331d9d1c1705aea1d9d8c73a7af81b99c"
+        },
+        "acceptedCandidateManifest": {
+          "path": "research/salaries/gap-fill-health-other-history/sources-candidate.json",
+          "sha256": "ab974e2780ef9fc3706b0d2d64b8fafd188644ca556a6763a4cf22ce4e8e8a22"
+        },
+        "acceptedCandidateProvenance": {
+          "path": "research/salaries/gap-fill-health-other-history/northern-health-2006-07-provenance.json.gzip",
+          "sha256": "47ce32ea320ad68839db4c9f6fc6a712d0a2d43aa40b2dfc2f971ec6c63929e2"
+        }
+      }
+    },
+    {
+      "id": "gap-health-other-history-northern-health-2005-06",
+      "employerSlug": "northern-health",
+      "employerName": "Northern Health",
+      "sector": "Health authorities",
+      "year": "2005/06",
+      "periodType": "fiscal",
+      "periodStart": "2005-04-01",
+      "periodEnd": "2006-03-31",
+      "periodEvidence": "Actual original salary-period heading independently reviewed in the exact first/last context images; catalogue metadata used for discovery only.",
+      "title": "Northern Health employee remuneration 2005/06 (official Legislative Library copy)",
+      "sourceUrl": "https://digitalcollectionsrepository.llbc.leg.bc.ca/server/api/core/bitstreams/345e75a3-f22b-4491-86b3-a8b8284778ea/content",
+      "sourceIndexUrl": "https://www.northernhealth.ca/about-us/accountability/reports/financial-accountability",
+      "catalogueUrl": "https://digitalcollections.llbc.leg.bc.ca/handle/123456789/302477",
+      "sha256": "b97d1662baeca2c42128da1d19480d6dedc7045a0d5ad7317ac3a20786d14581",
+      "file": "northern-health-2005-06-employees.json.gzip",
+      "dataSha256": "bf8fa35bb4545230827c3643e538c385f2a3bf297da201c05066abffbcfe4252",
+      "rowCount": 405,
+      "status": "verified",
+      "sourceKind": "official",
+      "scope": "employee-remuneration",
+      "category": "employee-remuneration",
+      "currency": "CAD",
+      "threshold": 75000,
+      "thresholdComparison": "as-published",
+      "completeEmployeeSchedule": true,
+      "retainCompiledPartition": true,
+      "notes": [
+        "Complete source table is retained in printed order, including repeated observations. Source names are disclosed strings, not resolved identities.",
+        "No job titles are published in this employee schedule; position remains null.",
+        "The conventional fiscal start is April 1 before the actual internally printed March 31 year-end; these are payment periods, not annualized salary rates.",
+        "Remuneration includes base salary, retroactive pay, taxable benefits, prior year's and/or current year's vacation payouts, and retiring allowances paid in accordance with union and non-contract agreements. Remuneration also includes overtime and on call premiums.",
+        "Expenses includes travel expenses, tuition, registration fees, relocation allowances and professional membership fees paid to or on behalf of each employee."
+      ],
+      "publicWarning": "Official Legislative Library archival copy includes an added cover at physical page 1; page citations identify this downloaded copy. These are disclosed payments, not annual base salary rates or a complete workforce roster. Separate expenses remain literal: printed zero stays zero, blank/dash stays unknown, negative amounts stay negative. Literal named rows differ from printed named controls by 8 dollars remuneration and 0 dollars known expenses. No amount is adjusted and no cause is established. Existing compiled observations are retained and may overlap this official schedule. No complete-copy, calendar-label or identity equivalence is assumed.",
+      "provenanceFile": "northern-health-2005-06-reviewed-provenance.json.gzip",
+      "provenanceSha256": "38f132e3f0f4eddf275aca80d5ca2a78fdbd68ceeb248fc590032fc753148b2b",
+      "validation": {
+        "candidateOnly": false,
+        "completeEmployeeSchedule": true,
+        "compiledPartitionRetained": true,
+        "compiledPartitionRetentionReason": "No complete source-compatible duplicate-copy comparison proves this official cohort replaces a compiled partition. Preserve every compiled observation.",
+        "literalRemunerationSum": "36592611",
+        "literalKnownExpenseSum": "1621136",
+        "printedNamedControls": {
+          "physicalPage": 10,
+          "label": "TOTAL EMPLOYEES > $75,000",
+          "remuneration": 36592603,
+          "expenses": 1621136,
+          "raw": "TOTAL EMPLOYEES > $75,000             36,592,603     1,621,136"
+        },
+        "literalNamedControlResiduals": [
+          "8",
+          "0"
+        ],
+        "residualCauseEstablished": false,
+        "printedEmployeeSummaryCount": null,
+        "actualEmployeeObservations": 405,
+        "allNativeRowsExactlyAgreeBeforeSourceAddition": true,
+        "independentOriginalImageTargetsForThisSource": 0,
+        "sourceContextAcceptance": {
+          "path": "research/salaries/gap-fill-2026-11-02/reviews/health-other-context-root/root-nine-source-context-acceptance.json",
+          "sha256": "637ee861ba71716949d5e72e73bcda78e1ac6772f952cc4017270dba04d025f8"
+        },
+        "independentSourceImageReview": {
+          "first": {
+            "path": "research/salaries/gap-fill-2026-11-02/school_native/reviews/health-other-history/independent-first247-source-transcript.json",
+            "sha256": "554b27110baa72d90d1c36c4f07a7eb3eb566b6882e3ee334e9066f0d1815b06"
+          },
+          "additive": {
+            "path": "research/salaries/gap-fill-2026-11-02/school_native/reviews/health-other-history/additive-three-own-source-rereads.json",
+            "sha256": "8aba7a9731055abd4773d39787eed87f92278fe49f837baa1993d380628b59f6"
+          },
+          "final": {
+            "path": "research/salaries/gap-fill-2026-11-02/school_native/reviews/health-other-history/independent-final247-source-transcript.json",
+            "sha256": "5ec070934054f9430d9344f10fd8173582fbb3f0881573c470993e5eb61a5706"
+          },
+          "reviewAcceptance": {
+            "path": "research/salaries/gap-fill-2026-11-02/school_native/reviews/health-other-history/independent247-source-exception-review.json",
+            "sha256": "48d870b7820a1e8b20c2d5528b6d99244313434f778e4951e210f5f92e15610b"
+          }
+        },
+        "pendingGates": [],
+        "status": "verified with literal source qualifications",
+        "rootSourceAcceptance": {
+          "path": "research/salaries/gap-fill-2026-11-02/reviews/root-nine-other-health-source-acceptance.json",
+          "sha256": "f67d5d4ac05381b37bcfbf6cc9710de331d9d1c1705aea1d9d8c73a7af81b99c"
+        },
+        "acceptedCandidateManifest": {
+          "path": "research/salaries/gap-fill-health-other-history/sources-candidate.json",
+          "sha256": "ab974e2780ef9fc3706b0d2d64b8fafd188644ca556a6763a4cf22ce4e8e8a22"
+        },
+        "acceptedCandidateProvenance": {
+          "path": "research/salaries/gap-fill-health-other-history/northern-health-2005-06-provenance.json.gzip",
+          "sha256": "7a8c68cc52c7c652733a140a4ce57852fa2056826788fbd99188aa9ece6e6f94"
+        }
+      }
+    },
+    {
+      "id": "gap-health-other-history-northern-health-2004-05",
+      "employerSlug": "northern-health",
+      "employerName": "Northern Health",
+      "sector": "Health authorities",
+      "year": "2004/05",
+      "periodType": "fiscal",
+      "periodStart": "2004-04-01",
+      "periodEnd": "2005-03-31",
+      "periodEvidence": "Actual original salary-period heading independently reviewed in the exact first/last context images; catalogue metadata used for discovery only.",
+      "title": "Northern Health employee remuneration 2004/05 (official Legislative Library copy)",
+      "sourceUrl": "https://digitalcollectionsrepository.llbc.leg.bc.ca/server/api/core/bitstreams/8c9467e9-f596-42cc-9e93-fdf731db22a7/content",
+      "sourceIndexUrl": "https://www.northernhealth.ca/about-us/accountability/reports/financial-accountability",
+      "catalogueUrl": "https://digitalcollections.llbc.leg.bc.ca/handle/123456789/302506",
+      "sha256": "fb11d3cad59dcc6d1068e6b2895c468f8badc80bf43adfde4f27f921d736b324",
+      "file": "northern-health-2004-05-employees.json.gzip",
+      "dataSha256": "ed58c66bc4b29d02443599348ba4459a809ff7b72bbd828972e32be855d30ba8",
+      "rowCount": 380,
+      "status": "verified",
+      "sourceKind": "official",
+      "scope": "employee-remuneration",
+      "category": "employee-remuneration",
+      "currency": "CAD",
+      "threshold": 75000,
+      "thresholdComparison": "as-published",
+      "completeEmployeeSchedule": true,
+      "retainCompiledPartition": true,
+      "notes": [
+        "Complete source table is retained in printed order, including repeated observations. Source names are disclosed strings, not resolved identities.",
+        "No job titles are published in this employee schedule; position remains null.",
+        "The conventional fiscal start is April 1 before the actual internally printed March 31 year-end; these are payment periods, not annualized salary rates.",
+        "Remuneration includes base salary, retroactive pay, taxable benefits, prior year's and/or current year's vacation payouts, and retiring allowances paid in accordance with union and non-contract agreements. Remuneration also includes overtime and on call premiums.",
+        "Expenses includes travel expenses, tuition, registration fees, relocation allowances and professional membership fees paid to or on behalf of each employee."
+      ],
+      "publicWarning": "Official Legislative Library archival copy includes an added cover at physical page 1; page citations identify this downloaded copy. These are disclosed payments, not annual base salary rates or a complete workforce roster. Separate expenses remain literal: printed zero stays zero, blank/dash stays unknown, negative amounts stay negative. Literal named rows differ from printed named controls by 10 dollars remuneration and 4 dollars known expenses. No amount is adjusted and no cause is established. Existing compiled observations are retained and may overlap this official schedule. No complete-copy, calendar-label or identity equivalence is assumed.",
+      "provenanceFile": "northern-health-2004-05-reviewed-provenance.json.gzip",
+      "provenanceSha256": "2ff76d1141b9a009d4bcf4d6dc2ac1a85937d3e99f7dcf40554a5bbaf1061695",
+      "validation": {
+        "candidateOnly": false,
+        "completeEmployeeSchedule": true,
+        "compiledPartitionRetained": true,
+        "compiledPartitionRetentionReason": "No complete source-compatible duplicate-copy comparison proves this official cohort replaces a compiled partition. Preserve every compiled observation.",
+        "literalRemunerationSum": "33863916",
+        "literalKnownExpenseSum": "1296818",
+        "printedNamedControls": {
+          "physicalPage": 10,
+          "label": "TOTAL EMPLOYEES > $75,000",
+          "remuneration": 33863906,
+          "expenses": 1296814,
+          "raw": "     TOTAL EMPLOYEES > $75,000             33,863,906    1,296,814"
+        },
+        "literalNamedControlResiduals": [
+          "10",
+          "4"
+        ],
+        "residualCauseEstablished": false,
+        "printedEmployeeSummaryCount": null,
+        "actualEmployeeObservations": 380,
+        "allNativeRowsExactlyAgreeBeforeSourceAddition": true,
+        "independentOriginalImageTargetsForThisSource": 0,
+        "sourceContextAcceptance": {
+          "path": "research/salaries/gap-fill-2026-11-02/reviews/health-other-context-root/root-nine-source-context-acceptance.json",
+          "sha256": "637ee861ba71716949d5e72e73bcda78e1ac6772f952cc4017270dba04d025f8"
+        },
+        "independentSourceImageReview": {
+          "first": {
+            "path": "research/salaries/gap-fill-2026-11-02/school_native/reviews/health-other-history/independent-first247-source-transcript.json",
+            "sha256": "554b27110baa72d90d1c36c4f07a7eb3eb566b6882e3ee334e9066f0d1815b06"
+          },
+          "additive": {
+            "path": "research/salaries/gap-fill-2026-11-02/school_native/reviews/health-other-history/additive-three-own-source-rereads.json",
+            "sha256": "8aba7a9731055abd4773d39787eed87f92278fe49f837baa1993d380628b59f6"
+          },
+          "final": {
+            "path": "research/salaries/gap-fill-2026-11-02/school_native/reviews/health-other-history/independent-final247-source-transcript.json",
+            "sha256": "5ec070934054f9430d9344f10fd8173582fbb3f0881573c470993e5eb61a5706"
+          },
+          "reviewAcceptance": {
+            "path": "research/salaries/gap-fill-2026-11-02/school_native/reviews/health-other-history/independent247-source-exception-review.json",
+            "sha256": "48d870b7820a1e8b20c2d5528b6d99244313434f778e4951e210f5f92e15610b"
+          }
+        },
+        "pendingGates": [],
+        "status": "verified with literal source qualifications",
+        "rootSourceAcceptance": {
+          "path": "research/salaries/gap-fill-2026-11-02/reviews/root-nine-other-health-source-acceptance.json",
+          "sha256": "f67d5d4ac05381b37bcfbf6cc9710de331d9d1c1705aea1d9d8c73a7af81b99c"
+        },
+        "acceptedCandidateManifest": {
+          "path": "research/salaries/gap-fill-health-other-history/sources-candidate.json",
+          "sha256": "ab974e2780ef9fc3706b0d2d64b8fafd188644ca556a6763a4cf22ce4e8e8a22"
+        },
+        "acceptedCandidateProvenance": {
+          "path": "research/salaries/gap-fill-health-other-history/northern-health-2004-05-provenance.json.gzip",
+          "sha256": "237b44b78154768acc05226b9309ac3c02890810eee40a8dd029d332144f819c"
+        }
+      }
+    },
+    {
+      "id": "gap-health-other-history-northern-health-2003-04",
+      "employerSlug": "northern-health",
+      "employerName": "Northern Health",
+      "sector": "Health authorities",
+      "year": "2003/04",
+      "periodType": "fiscal",
+      "periodStart": "2003-04-01",
+      "periodEnd": "2004-03-31",
+      "periodEvidence": "Actual original salary-period heading independently reviewed in the exact first/last context images; catalogue metadata used for discovery only.",
+      "title": "Northern Health employee remuneration 2003/04 (official Legislative Library copy)",
+      "sourceUrl": "https://digitalcollectionsrepository.llbc.leg.bc.ca/server/api/core/bitstreams/649f5191-2ab8-4abd-ae5c-885b93a45bc3/content",
+      "sourceIndexUrl": "https://www.northernhealth.ca/about-us/accountability/reports/financial-accountability",
+      "catalogueUrl": "https://digitalcollections.llbc.leg.bc.ca/handle/123456789/302529",
+      "sha256": "9fe5e1c52ac889449357d147abb1d2d964c6be4af48cb932425ac1132e18d1ef",
+      "file": "northern-health-2003-04-employees.json.gzip",
+      "dataSha256": "0ef6c69f2d770005668a0f56e88da63d19b4178d7abc7f8e9db043612f36b076",
+      "rowCount": 363,
+      "status": "verified",
+      "sourceKind": "official",
+      "scope": "employee-remuneration",
+      "category": "employee-remuneration",
+      "currency": "CAD",
+      "threshold": 75000,
+      "thresholdComparison": "as-published",
+      "completeEmployeeSchedule": true,
+      "retainCompiledPartition": true,
+      "notes": [
+        "Complete source table is retained in printed order, including repeated observations. Source names are disclosed strings, not resolved identities.",
+        "No job titles are published in this employee schedule; position remains null.",
+        "The conventional fiscal start is April 1 before the actual internally printed March 31 year-end; these are payment periods, not annualized salary rates.",
+        "Remuneration includes base salary, retroactive pay, taxable benefits, payments of prior years' and/or current year's vacation payouts, and retiring allowances paid in accordance with union and non-contract agreements. Remuneration also includes overtime and on call premiums.",
+        "Expenses includes travel expenses, tuition, registration fees, relocation allowances and professional membership fees paid to or on behalf of each employee."
+      ],
+      "publicWarning": "Official Legislative Library archival copy includes an added cover at physical page 1; page citations identify this downloaded copy. These are disclosed payments, not annual base salary rates or a complete workforce roster. Separate expenses remain literal: printed zero stays zero, blank/dash stays unknown, negative amounts stay negative. Literal named rows differ from printed named controls by 9 dollars remuneration and 5 dollars known expenses. No amount is adjusted and no cause is established. Existing compiled observations are retained and may overlap this official schedule. No complete-copy, calendar-label or identity equivalence is assumed.",
+      "provenanceFile": "northern-health-2003-04-reviewed-provenance.json.gzip",
+      "provenanceSha256": "cea822cb3d6e26ee5ff389bcd0f5d185cf16805c6dce58b06d2b03163ccbe41a",
+      "validation": {
+        "candidateOnly": false,
+        "completeEmployeeSchedule": true,
+        "compiledPartitionRetained": true,
+        "compiledPartitionRetentionReason": "No complete source-compatible duplicate-copy comparison proves this official cohort replaces a compiled partition. Preserve every compiled observation.",
+        "literalRemunerationSum": "32074714",
+        "literalKnownExpenseSum": "892785",
+        "printedNamedControls": {
+          "physicalPage": 9,
+          "label": "TOTAL EMPLOYEES > $75,000",
+          "remuneration": 32074705,
+          "expenses": 892780,
+          "raw": "TOTAL EMPLOYEES > $75,000                      32,074,705      892,780"
+        },
+        "literalNamedControlResiduals": [
+          "9",
+          "5"
+        ],
+        "residualCauseEstablished": false,
+        "printedEmployeeSummaryCount": null,
+        "actualEmployeeObservations": 363,
+        "allNativeRowsExactlyAgreeBeforeSourceAddition": true,
+        "independentOriginalImageTargetsForThisSource": 0,
+        "sourceContextAcceptance": {
+          "path": "research/salaries/gap-fill-2026-11-02/reviews/health-other-context-root/root-nine-source-context-acceptance.json",
+          "sha256": "637ee861ba71716949d5e72e73bcda78e1ac6772f952cc4017270dba04d025f8"
+        },
+        "independentSourceImageReview": {
+          "first": {
+            "path": "research/salaries/gap-fill-2026-11-02/school_native/reviews/health-other-history/independent-first247-source-transcript.json",
+            "sha256": "554b27110baa72d90d1c36c4f07a7eb3eb566b6882e3ee334e9066f0d1815b06"
+          },
+          "additive": {
+            "path": "research/salaries/gap-fill-2026-11-02/school_native/reviews/health-other-history/additive-three-own-source-rereads.json",
+            "sha256": "8aba7a9731055abd4773d39787eed87f92278fe49f837baa1993d380628b59f6"
+          },
+          "final": {
+            "path": "research/salaries/gap-fill-2026-11-02/school_native/reviews/health-other-history/independent-final247-source-transcript.json",
+            "sha256": "5ec070934054f9430d9344f10fd8173582fbb3f0881573c470993e5eb61a5706"
+          },
+          "reviewAcceptance": {
+            "path": "research/salaries/gap-fill-2026-11-02/school_native/reviews/health-other-history/independent247-source-exception-review.json",
+            "sha256": "48d870b7820a1e8b20c2d5528b6d99244313434f778e4951e210f5f92e15610b"
+          }
+        },
+        "pendingGates": [],
+        "status": "verified with literal source qualifications",
+        "rootSourceAcceptance": {
+          "path": "research/salaries/gap-fill-2026-11-02/reviews/root-nine-other-health-source-acceptance.json",
+          "sha256": "f67d5d4ac05381b37bcfbf6cc9710de331d9d1c1705aea1d9d8c73a7af81b99c"
+        },
+        "acceptedCandidateManifest": {
+          "path": "research/salaries/gap-fill-health-other-history/sources-candidate.json",
+          "sha256": "ab974e2780ef9fc3706b0d2d64b8fafd188644ca556a6763a4cf22ce4e8e8a22"
+        },
+        "acceptedCandidateProvenance": {
+          "path": "research/salaries/gap-fill-health-other-history/northern-health-2003-04-provenance.json.gzip",
+          "sha256": "06168dc157cbdc5dd02291c5cf9b42e1a456a94c480c36cefc9fe427d2491574"
+        }
+      }
+    },
+    {
+      "id": "gap-health-other-history-island-health-2011-12",
+      "employerSlug": "island-health",
+      "employerName": "Vancouver Island Health",
+      "sector": "Health authorities",
+      "year": "2011/12",
+      "periodType": "fiscal",
+      "periodStart": "2011-04-01",
+      "periodEnd": "2012-03-31",
+      "periodEvidence": "Actual original salary-period heading independently reviewed in the exact first/last context images; catalogue metadata used for discovery only.",
+      "title": "Vancouver Island Health employee remuneration 2011/12 (official Legislative Library copy)",
+      "sourceUrl": "https://digitalcollectionsrepository.llbc.leg.bc.ca/server/api/core/bitstreams/814dd085-4f32-4408-8fe6-84378336f26d/content",
+      "sourceIndexUrl": "https://www.islandhealth.ca/about-us/plans-reports-and-policies/financial-reports",
+      "catalogueUrl": "https://digitalcollections.llbc.leg.bc.ca/handle/123456789/303672",
+      "sha256": "e3c542a9920489149942772039776fb137a0ae98a75867f874c8a2e278122c5c",
+      "file": "island-health-2011-12-employees.json.gzip",
+      "dataSha256": "9733a181ba8bb8095618a77b6271f2a6aec413d0fd7ae59cb6dd9fe55e0ccbbf",
+      "rowCount": 2804,
+      "status": "verified",
+      "sourceKind": "official",
+      "scope": "employee-remuneration",
+      "category": "employee-remuneration",
+      "currency": "CAD",
+      "threshold": 75000,
+      "thresholdComparison": "as-published",
+      "completeEmployeeSchedule": true,
+      "retainCompiledPartition": true,
+      "notes": [
+        "Complete source table is retained in printed order, including repeated observations. Source names are disclosed strings, not resolved identities.",
+        "No job titles are published in this employee schedule; position remains null.",
+        "The conventional fiscal start is April 1 before the actual internally printed March 31 year-end; these are payment periods, not annualized salary rates."
+      ],
+      "publicWarning": "Official Legislative Library archival copy includes an added cover at physical page 1; page citations identify this downloaded copy. These are disclosed payments, not annual base salary rates or a complete workforce roster. Separate expenses remain literal: printed zero stays zero, blank/dash stays unknown, negative amounts stay negative. Literal named rows differ from printed named controls by 0.19 dollars remuneration and 0.41 dollars known expenses. No amount is adjusted and no cause is established. Existing compiled observations are retained and may overlap this official schedule. No complete-copy, calendar-label or identity equivalence is assumed.",
+      "provenanceFile": "island-health-2011-12-reviewed-provenance.json.gzip",
+      "provenanceSha256": "fec1dfe4e37a5fee54426f45a418a87d4d722080c43ba94d1e779933db755206",
+      "validation": {
+        "candidateOnly": false,
+        "completeEmployeeSchedule": true,
+        "compiledPartitionRetained": true,
+        "compiledPartitionRetentionReason": "No complete source-compatible duplicate-copy comparison proves this official cohort replaces a compiled partition. Preserve every compiled observation.",
+        "literalRemunerationSum": "253010877.19",
+        "literalKnownExpenseSum": "3749103.41",
+        "printedNamedControls": {
+          "physicalPage": 53,
+          "label": "Total over $75,000",
+          "remuneration": 253010877,
+          "expenses": 3749103,
+          "raw": "Total over $75,000    253,010,877   3,749,103"
+        },
+        "literalNamedControlResiduals": [
+          "0.19",
+          "0.41"
+        ],
+        "residualCauseEstablished": false,
+        "printedEmployeeSummaryCount": null,
+        "actualEmployeeObservations": 2804,
+        "allNativeRowsExactlyAgreeBeforeSourceAddition": true,
+        "independentOriginalImageTargetsForThisSource": 217,
+        "sourceContextAcceptance": {
+          "path": "research/salaries/gap-fill-2026-11-02/reviews/health-other-context-root/root-nine-source-context-acceptance.json",
+          "sha256": "637ee861ba71716949d5e72e73bcda78e1ac6772f952cc4017270dba04d025f8"
+        },
+        "independentSourceImageReview": {
+          "first": {
+            "path": "research/salaries/gap-fill-2026-11-02/school_native/reviews/health-other-history/independent-first247-source-transcript.json",
+            "sha256": "554b27110baa72d90d1c36c4f07a7eb3eb566b6882e3ee334e9066f0d1815b06"
+          },
+          "additive": {
+            "path": "research/salaries/gap-fill-2026-11-02/school_native/reviews/health-other-history/additive-three-own-source-rereads.json",
+            "sha256": "8aba7a9731055abd4773d39787eed87f92278fe49f837baa1993d380628b59f6"
+          },
+          "final": {
+            "path": "research/salaries/gap-fill-2026-11-02/school_native/reviews/health-other-history/independent-final247-source-transcript.json",
+            "sha256": "5ec070934054f9430d9344f10fd8173582fbb3f0881573c470993e5eb61a5706"
+          },
+          "reviewAcceptance": {
+            "path": "research/salaries/gap-fill-2026-11-02/school_native/reviews/health-other-history/independent247-source-exception-review.json",
+            "sha256": "48d870b7820a1e8b20c2d5528b6d99244313434f778e4951e210f5f92e15610b"
+          }
+        },
+        "pendingGates": [],
+        "status": "verified with literal source qualifications",
+        "rootSourceAcceptance": {
+          "path": "research/salaries/gap-fill-2026-11-02/reviews/root-nine-other-health-source-acceptance.json",
+          "sha256": "f67d5d4ac05381b37bcfbf6cc9710de331d9d1c1705aea1d9d8c73a7af81b99c"
+        },
+        "acceptedCandidateManifest": {
+          "path": "research/salaries/gap-fill-health-other-history/sources-candidate.json",
+          "sha256": "ab974e2780ef9fc3706b0d2d64b8fafd188644ca556a6763a4cf22ce4e8e8a22"
+        },
+        "acceptedCandidateProvenance": {
+          "path": "research/salaries/gap-fill-health-other-history/island-health-2011-12-provenance.json.gzip",
+          "sha256": "716beb6e6ac1506ddb89e7f4f4b1c55690defb7a380c7441588e809a754cbecf"
+        }
+      }
+    },
+    {
+      "id": "gap-health-other-history-island-health-2010-11",
+      "employerSlug": "island-health",
+      "employerName": "Vancouver Island Health",
+      "sector": "Health authorities",
+      "year": "2010/11",
+      "periodType": "fiscal",
+      "periodStart": "2010-04-01",
+      "periodEnd": "2011-03-31",
+      "periodEvidence": "Actual original salary-period heading independently reviewed in the exact first/last context images; catalogue metadata used for discovery only.",
+      "title": "Vancouver Island Health employee remuneration 2010/11 (official Legislative Library copy)",
+      "sourceUrl": "https://digitalcollectionsrepository.llbc.leg.bc.ca/server/api/core/bitstreams/2407afe3-04b4-4629-b7c3-13d6bb311a5d/content",
+      "sourceIndexUrl": "https://www.islandhealth.ca/about-us/plans-reports-and-policies/financial-reports",
+      "catalogueUrl": "https://digitalcollections.llbc.leg.bc.ca/handle/123456789/303705",
+      "sha256": "bcfe29a91214ca2b676d71271059f438d068d64ab369a8d18476e6e30bf6c8be",
+      "file": "island-health-2010-11-employees.json.gzip",
+      "dataSha256": "00f5bdb1577602bfb4d637fc6cc02376b41c60ff7ae6414ded9b55c7a3373d88",
+      "rowCount": 2616,
+      "status": "verified",
+      "sourceKind": "official",
+      "scope": "employee-remuneration",
+      "category": "employee-remuneration",
+      "currency": "CAD",
+      "threshold": 75000,
+      "thresholdComparison": "as-published",
+      "completeEmployeeSchedule": true,
+      "retainCompiledPartition": true,
+      "notes": [
+        "Complete source table is retained in printed order, including repeated observations. Source names are disclosed strings, not resolved identities.",
+        "No job titles are published in this employee schedule; position remains null.",
+        "The conventional fiscal start is April 1 before the actual internally printed March 31 year-end; these are payment periods, not annualized salary rates."
+      ],
+      "publicWarning": "Official Legislative Library archival copy includes an added cover at physical page 1; page citations identify this downloaded copy. These are disclosed payments, not annual base salary rates or a complete workforce roster. Separate expenses remain literal: printed zero stays zero, blank/dash stays unknown, negative amounts stay negative. Existing compiled observations are retained and may overlap this official schedule. No complete-copy, calendar-label or identity equivalence is assumed.",
+      "provenanceFile": "island-health-2010-11-reviewed-provenance.json.gzip",
+      "provenanceSha256": "88fbd812fc614fbbbe2971972169d70ab539daba65d9985a8fc7f3f9200037db",
+      "validation": {
+        "candidateOnly": false,
+        "completeEmployeeSchedule": true,
+        "compiledPartitionRetained": true,
+        "compiledPartitionRetentionReason": "No complete source-compatible duplicate-copy comparison proves this official cohort replaces a compiled partition. Preserve every compiled observation.",
+        "literalRemunerationSum": "233825826",
+        "literalKnownExpenseSum": "3039796",
+        "printedNamedControls": null,
+        "literalNamedControlResiduals": null,
+        "residualCauseEstablished": false,
+        "printedEmployeeSummaryCount": null,
+        "actualEmployeeObservations": 2616,
+        "allNativeRowsExactlyAgreeBeforeSourceAddition": true,
+        "independentOriginalImageTargetsForThisSource": 29,
+        "sourceContextAcceptance": {
+          "path": "research/salaries/gap-fill-2026-11-02/reviews/health-other-context-root/root-nine-source-context-acceptance.json",
+          "sha256": "637ee861ba71716949d5e72e73bcda78e1ac6772f952cc4017270dba04d025f8"
+        },
+        "independentSourceImageReview": {
+          "first": {
+            "path": "research/salaries/gap-fill-2026-11-02/school_native/reviews/health-other-history/independent-first247-source-transcript.json",
+            "sha256": "554b27110baa72d90d1c36c4f07a7eb3eb566b6882e3ee334e9066f0d1815b06"
+          },
+          "additive": {
+            "path": "research/salaries/gap-fill-2026-11-02/school_native/reviews/health-other-history/additive-three-own-source-rereads.json",
+            "sha256": "8aba7a9731055abd4773d39787eed87f92278fe49f837baa1993d380628b59f6"
+          },
+          "final": {
+            "path": "research/salaries/gap-fill-2026-11-02/school_native/reviews/health-other-history/independent-final247-source-transcript.json",
+            "sha256": "5ec070934054f9430d9344f10fd8173582fbb3f0881573c470993e5eb61a5706"
+          },
+          "reviewAcceptance": {
+            "path": "research/salaries/gap-fill-2026-11-02/school_native/reviews/health-other-history/independent247-source-exception-review.json",
+            "sha256": "48d870b7820a1e8b20c2d5528b6d99244313434f778e4951e210f5f92e15610b"
+          }
+        },
+        "pendingGates": [],
+        "status": "verified with literal source qualifications",
+        "rootSourceAcceptance": {
+          "path": "research/salaries/gap-fill-2026-11-02/reviews/root-nine-other-health-source-acceptance.json",
+          "sha256": "f67d5d4ac05381b37bcfbf6cc9710de331d9d1c1705aea1d9d8c73a7af81b99c"
+        },
+        "acceptedCandidateManifest": {
+          "path": "research/salaries/gap-fill-health-other-history/sources-candidate.json",
+          "sha256": "ab974e2780ef9fc3706b0d2d64b8fafd188644ca556a6763a4cf22ce4e8e8a22"
+        },
+        "acceptedCandidateProvenance": {
+          "path": "research/salaries/gap-fill-health-other-history/island-health-2010-11-provenance.json.gzip",
+          "sha256": "3c78a4eeb431616e838d1db07fdb04dcf4ea9e58da15f38b1ee8212fd96b9779"
+        }
+      }
+    },
+    {
+      "id": "gap-health-other-history-island-health-2009-10",
+      "employerSlug": "island-health",
+      "employerName": "Vancouver Island Health",
+      "sector": "Health authorities",
+      "year": "2009/10",
+      "periodType": "fiscal",
+      "periodStart": "2009-04-01",
+      "periodEnd": "2010-03-31",
+      "periodEvidence": "Actual original salary-period heading independently reviewed in the exact first/last context images; catalogue metadata used for discovery only.",
+      "title": "Vancouver Island Health employee remuneration 2009/10 (official Legislative Library copy)",
+      "sourceUrl": "https://digitalcollectionsrepository.llbc.leg.bc.ca/server/api/core/bitstreams/8d77df34-0bf3-4201-9dce-deded80da2d6/content",
+      "sourceIndexUrl": "https://www.islandhealth.ca/about-us/plans-reports-and-policies/financial-reports",
+      "catalogueUrl": "https://digitalcollections.llbc.leg.bc.ca/handle/123456789/303680",
+      "sha256": "2b33bb37350b0db8036f17e2e1bbab63b91b15b429748142541f95743af3814f",
+      "file": "island-health-2009-10-employees.json.gzip",
+      "dataSha256": "4d64bde2d2c58562fa259ba389d31a6cfc80e4fc9533e75ecce619b04450a5fe",
+      "rowCount": 2245,
+      "status": "verified",
+      "sourceKind": "official",
+      "scope": "employee-remuneration",
+      "category": "employee-remuneration",
+      "currency": "CAD",
+      "threshold": 75000,
+      "thresholdComparison": "as-published",
+      "completeEmployeeSchedule": true,
+      "retainCompiledPartition": true,
+      "notes": [
+        "Complete source table is retained in printed order, including repeated observations. Source names are disclosed strings, not resolved identities.",
+        "No job titles are published in this employee schedule; position remains null.",
+        "The conventional fiscal start is April 1 before the actual internally printed March 31 year-end; these are payment periods, not annualized salary rates.",
+        "Remuneration includes base salary, retroactive pay, taxable benefits, payments of prior years' and/or current year's vacation payouts and retiring allowances paid in accordance with union and non-contract agreements.",
+        "Travel and Expenses includes travel, conferences and membership in professional associations."
+      ],
+      "publicWarning": "Official Legislative Library archival copy includes an added cover at physical page 1; page citations identify this downloaded copy. These are disclosed payments, not annual base salary rates or a complete workforce roster. Separate expenses remain literal: printed zero stays zero, blank/dash stays unknown, negative amounts stay negative. One name is literally printed WILSON. TOM with a period; that punctuation and its explicit zero expense are preserved without an inferred name correction. Existing compiled observations are retained and may overlap this official schedule. No complete-copy, calendar-label or identity equivalence is assumed.",
+      "provenanceFile": "island-health-2009-10-reviewed-provenance.json.gzip",
+      "provenanceSha256": "db2e047065bdb653864e2fcbf663a02941379b0e00902f20b59bbe2f17b0c9b3",
+      "validation": {
+        "candidateOnly": false,
+        "completeEmployeeSchedule": true,
+        "compiledPartitionRetained": true,
+        "compiledPartitionRetentionReason": "No complete source-compatible duplicate-copy comparison proves this official cohort replaces a compiled partition. Preserve every compiled observation.",
+        "literalRemunerationSum": "199848769",
+        "literalKnownExpenseSum": "2349401",
+        "printedNamedControls": null,
+        "literalNamedControlResiduals": null,
+        "residualCauseEstablished": false,
+        "printedEmployeeSummaryCount": 2245,
+        "actualEmployeeObservations": 2245,
+        "allNativeRowsExactlyAgreeBeforeSourceAddition": true,
+        "independentOriginalImageTargetsForThisSource": 1,
+        "sourceContextAcceptance": {
+          "path": "research/salaries/gap-fill-2026-11-02/reviews/health-other-context-root/root-nine-source-context-acceptance.json",
+          "sha256": "637ee861ba71716949d5e72e73bcda78e1ac6772f952cc4017270dba04d025f8"
+        },
+        "independentSourceImageReview": {
+          "first": {
+            "path": "research/salaries/gap-fill-2026-11-02/school_native/reviews/health-other-history/independent-first247-source-transcript.json",
+            "sha256": "554b27110baa72d90d1c36c4f07a7eb3eb566b6882e3ee334e9066f0d1815b06"
+          },
+          "additive": {
+            "path": "research/salaries/gap-fill-2026-11-02/school_native/reviews/health-other-history/additive-three-own-source-rereads.json",
+            "sha256": "8aba7a9731055abd4773d39787eed87f92278fe49f837baa1993d380628b59f6"
+          },
+          "final": {
+            "path": "research/salaries/gap-fill-2026-11-02/school_native/reviews/health-other-history/independent-final247-source-transcript.json",
+            "sha256": "5ec070934054f9430d9344f10fd8173582fbb3f0881573c470993e5eb61a5706"
+          },
+          "reviewAcceptance": {
+            "path": "research/salaries/gap-fill-2026-11-02/school_native/reviews/health-other-history/independent247-source-exception-review.json",
+            "sha256": "48d870b7820a1e8b20c2d5528b6d99244313434f778e4951e210f5f92e15610b"
+          }
+        },
+        "pendingGates": [],
+        "status": "verified with literal source qualifications",
+        "rootSourceAcceptance": {
+          "path": "research/salaries/gap-fill-2026-11-02/reviews/root-nine-other-health-source-acceptance.json",
+          "sha256": "f67d5d4ac05381b37bcfbf6cc9710de331d9d1c1705aea1d9d8c73a7af81b99c"
+        },
+        "acceptedCandidateManifest": {
+          "path": "research/salaries/gap-fill-health-other-history/sources-candidate.json",
+          "sha256": "ab974e2780ef9fc3706b0d2d64b8fafd188644ca556a6763a4cf22ce4e8e8a22"
+        },
+        "acceptedCandidateProvenance": {
+          "path": "research/salaries/gap-fill-health-other-history/island-health-2009-10-provenance.json.gzip",
+          "sha256": "a3f2d955ffeb4592ed2a200637bb882c8eaab3c389e9844f0c9666a43d08e1ec"
+        }
+      }
+    },
+    {
+      "id": "gap-health-other-history-northern-health-2014-15",
+      "employerSlug": "northern-health",
+      "employerName": "Northern Health",
+      "sector": "Health authorities",
+      "year": "2014/15",
+      "periodType": "fiscal",
+      "periodStart": "2014-04-01",
+      "periodEnd": "2015-03-31",
+      "periodEvidence": "Actual original salary-period heading independently reviewed in the exact first/last context images; catalogue metadata used for discovery only.",
+      "title": "Northern Health employee remuneration 2014/15 (official Legislative Library copy)",
+      "sourceUrl": "https://digitalcollectionsrepository.llbc.leg.bc.ca/server/api/core/bitstreams/194961c7-c25b-458e-84f4-02659868492c/content",
+      "sourceIndexUrl": "https://www.northernhealth.ca/about-us/accountability/reports/financial-accountability",
+      "catalogueUrl": "https://digitalcollections.llbc.leg.bc.ca/handle/123456789/302517",
+      "sha256": "7de44fa99781492489987c639cf547dfd431dfdf465b5e3ef6b00a00c8512ab8",
+      "file": "northern-health-2014-15-employees.json.gzip",
+      "dataSha256": "68daac9975721928677507a9f076277dbcafd1e4eb083aa31da5c031ce38aff2",
+      "rowCount": 1254,
+      "status": "verified",
+      "sourceKind": "official",
+      "scope": "employee-remuneration",
+      "category": "employee-remuneration",
+      "currency": "CAD",
+      "threshold": 75000,
+      "thresholdComparison": "as-published",
+      "completeEmployeeSchedule": true,
+      "retainCompiledPartition": true,
+      "notes": [
+        "Complete source table is retained in printed order, including repeated observations. Source names are disclosed strings, not resolved identities.",
+        "No job titles are published in this employee schedule; position remains null.",
+        "The conventional fiscal start is April 1 before the actual internally printed March 31 year-end; these are payment periods, not annualized salary rates.",
+        "Remuneration includes base salary, retroactive pay, taxable benefits, vacation payouts, and retiring allowances paid in accordance with union and non-contract agreements. Remuneration also includes overtime and on call premiums.",
+        "Expenses includes travel expenses, tuition, registration fees, relocation allowances and professional membership fees paid to or on behalf of each employee.",
+        "1. The financial statements are prepared on an accrual basis while the above schedule is prepared on a cash basis."
+      ],
+      "publicWarning": "Official Legislative Library archival copy includes an added cover at physical page 1; page citations identify this downloaded copy. These are disclosed payments, not annual base salary rates or a complete workforce roster. Separate expenses remain literal: printed zero stays zero, blank/dash stays unknown, negative amounts stay negative. Literal named rows differ from printed named controls by -2 dollars remuneration and 5 dollars known expenses. No amount is adjusted and no cause is established. The source summary counts 1,255 employees above the disclosure threshold; the complete actual table contains 1,254 observations. Complete independent monetary-anchor and row censuses find no extra employee row. The count discrepancy remains unexplained; no employee is invented. Existing compiled observations are retained and may overlap this official schedule. No complete-copy, calendar-label or identity equivalence is assumed.",
+      "provenanceFile": "northern-health-2014-15-reviewed-provenance.json.gzip",
+      "provenanceSha256": "ccfcde117e54512b971e39f720c7a89073617a1416b57086d12c8734067fe9f7",
+      "validation": {
+        "candidateOnly": false,
+        "completeEmployeeSchedule": true,
+        "compiledPartitionRetained": true,
+        "compiledPartitionRetentionReason": "No complete source-compatible duplicate-copy comparison proves this official cohort replaces a compiled partition. Preserve every compiled observation.",
+        "literalRemunerationSum": "116974824",
+        "literalKnownExpenseSum": "2438430",
+        "printedNamedControls": {
+          "physicalPage": 26,
+          "label": "TOTAL EMPLOYEES > $75,000",
+          "remuneration": 116974826,
+          "expenses": 2438425,
+          "raw": "TOTAL EMPLOYEES > $75,000                                                                   $         116,974,826          $   2,438,425"
+        },
+        "literalNamedControlResiduals": [
+          "-2",
+          "5"
+        ],
+        "residualCauseEstablished": false,
+        "printedEmployeeSummaryCount": 1255,
+        "actualEmployeeObservations": 1254,
+        "allNativeRowsExactlyAgreeBeforeSourceAddition": true,
+        "independentOriginalImageTargetsForThisSource": 0,
+        "sourceContextAcceptance": {
+          "path": "research/salaries/gap-fill-2026-11-02/reviews/health-other-context-root/root-nine-source-context-acceptance.json",
+          "sha256": "637ee861ba71716949d5e72e73bcda78e1ac6772f952cc4017270dba04d025f8"
+        },
+        "independentSourceImageReview": {
+          "first": {
+            "path": "research/salaries/gap-fill-2026-11-02/school_native/reviews/health-other-history/independent-first247-source-transcript.json",
+            "sha256": "554b27110baa72d90d1c36c4f07a7eb3eb566b6882e3ee334e9066f0d1815b06"
+          },
+          "additive": {
+            "path": "research/salaries/gap-fill-2026-11-02/school_native/reviews/health-other-history/additive-three-own-source-rereads.json",
+            "sha256": "8aba7a9731055abd4773d39787eed87f92278fe49f837baa1993d380628b59f6"
+          },
+          "final": {
+            "path": "research/salaries/gap-fill-2026-11-02/school_native/reviews/health-other-history/independent-final247-source-transcript.json",
+            "sha256": "5ec070934054f9430d9344f10fd8173582fbb3f0881573c470993e5eb61a5706"
+          },
+          "reviewAcceptance": {
+            "path": "research/salaries/gap-fill-2026-11-02/school_native/reviews/health-other-history/independent247-source-exception-review.json",
+            "sha256": "48d870b7820a1e8b20c2d5528b6d99244313434f778e4951e210f5f92e15610b"
+          }
+        },
+        "pendingGates": [],
+        "status": "verified with literal source qualifications",
+        "rootSourceAcceptance": {
+          "path": "research/salaries/gap-fill-2026-11-02/reviews/root-nine-other-health-source-acceptance.json",
+          "sha256": "f67d5d4ac05381b37bcfbf6cc9710de331d9d1c1705aea1d9d8c73a7af81b99c"
+        },
+        "acceptedCandidateManifest": {
+          "path": "research/salaries/gap-fill-health-other-history/sources-candidate.json",
+          "sha256": "ab974e2780ef9fc3706b0d2d64b8fafd188644ca556a6763a4cf22ce4e8e8a22"
+        },
+        "acceptedCandidateProvenance": {
+          "path": "research/salaries/gap-fill-health-other-history/northern-health-2014-15-provenance.json.gzip",
+          "sha256": "76259a5c64cda4fb79afd2ea189d0f493e41bb546125761ba41e0384197d40c1"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,858 @@
+{
+  "schema": "salary-additional-gap-school-south-handoff-v1",
+  "owner": "school_south",
+  "status": "complete",
+  "createdOn": "2026-11-02",
+  "assignedLeadsProcessed": 10,
+  "acceptedOriginals": 10,
+  "acceptedCohorts": 20,
+  "acceptedRows": 9845,
+  "acceptedEmployeeRows": 9773,
+  "acceptedTrusteeRows": 72,
+  "normalizedManifest": {
+    "path": "research/salaries/gap-fill-school-south/sources.json",
+    "sha256": "caaf9cca2d1ccf7a788bf53f311933023fdc08d3195434ff2e829253be4f89af"
+  },
+  "sourceGuide": {
+    "path": "research/salaries/gap-fill-2026-11-02/school_south/README.md",
+    "sha256": "8d2a89a9693344cdc2aabaa23c2df299845033b85835fdba1a1d5b388e646f72"
+  },
+  "leadDispositions": [
+    {
+      "leadId": "lead-004",
+      "district": 35,
+      "employer": "School District No. 35 (Langley)",
+      "reportingPeriod": "2024/25",
+      "status": "accepted-official-with-public-qualifications",
+      "originalSourceKind": "public-Ministry-original-scan",
+      "originalSourceUrl": "https://www2.gov.bc.ca/assets/gov/education/administration/resource-management/school-district-financial-reporting/financial-information/sd35-sofi-2025.pdf",
+      "originalSourceSha256": "a448738bfef377585942516cbcae91c61dfe2ddab7069d9868c062ce1e9a5e77",
+      "cohorts": [
+        {
+          "sourceId": "gap-fill-school-south-sd35-2025-employees",
+          "scope": "employee-remuneration",
+          "rowCount": 1631,
+          "normalizedPayload": "sd35-2025-employees.json.gzip",
+          "dataSha256": "7a428cc6ed6eb299a1bb872ad49f73a9f6209a7f6c502580217488f6d38eb422",
+          "normalizedSha256": "d3ae667ffa7a69b15aa5a5270ed736c45d40452e6dd4a5ba54bff18d5a26779d",
+          "evidence": "sd35-2025-employees-evidence.json.gzip",
+          "evidenceSha256": "5fcc5f03ad4c7d20680034530a337c70599f8b7a5862b2bdf84250d79e5dde36",
+          "literalPrintedControlTotals": [
+            "166850934",
+            "902000"
+          ],
+          "computedComponentTotals": [
+            "166850947",
+            "902007"
+          ],
+          "controlResiduals": [
+            "13",
+            "7"
+          ],
+          "independentPeers": [
+            {
+              "path": "research/salaries/gap-fill-2026-11-02/school_north/reviews/south35-38/sd35-independent-source-peer-acceptance.json",
+              "sha256": "f25434abf1c772d1b172c4c0bab93b82a198dc5cba48f50bb5deb6bd4a3fcece"
+            }
+          ],
+          "publicWarning": "Fiscal-year payment disclosures are not annual base salary rates or a complete employee roster. Source blank/dash expenses remain unknown (null); explicit numeric zero remains zero. Literal employees rows total $166850947 remuneration/$902007 known expenses versus printed $166850934/$902000 (row sum minus printed: 13/7). Causes are not established; no amounts are adjusted to balance. Starred expenses include travel for international student recruitment. Existing compiled observations remain retained where equivalence of complete cohorts and reporting periods has not been proved."
+        },
+        {
+          "sourceId": "gap-fill-school-south-sd35-2025-trustees",
+          "scope": "school-trustees",
+          "rowCount": 7,
+          "normalizedPayload": "sd35-2025-trustees.json.gzip",
+          "dataSha256": "f46a0bb7fe155945ace2b167c25d29ac3ede4c1b693d90083b08810af3faa637",
+          "normalizedSha256": "00d88c7515d38a084b333a4c2e9481388b8032b279be1b4ee47ae74caea4c945",
+          "evidence": "sd35-2025-trustees-evidence.json.gzip",
+          "evidenceSha256": "f0009de279e5d40cc5c75c0a47cfc89520061308ae47831220cb110378422f10",
+          "literalPrintedControlTotals": [
+            "236812",
+            "23782"
+          ],
+          "computedComponentTotals": [
+            "236810",
+            "23783"
+          ],
+          "controlResiduals": [
+            "-2",
+            "1"
+          ],
+          "independentPeers": [
+            {
+              "path": "research/salaries/gap-fill-2026-11-02/school_north/reviews/south35-38/sd35-independent-source-peer-acceptance.json",
+              "sha256": "f25434abf1c772d1b172c4c0bab93b82a198dc5cba48f50bb5deb6bd4a3fcece"
+            }
+          ],
+          "publicWarning": "Fiscal-year payment disclosures are not annual base salary rates or a complete employee roster. Source blank/dash expenses remain unknown (null); explicit numeric zero remains zero. Literal trustees rows total $236810 remuneration/$23783 known expenses versus printed $236812/$23782 (row sum minus printed: -2/1). Causes are not established; no amounts are adjusted to balance. Starred expenses include travel for international student recruitment. Existing compiled observations remain retained where equivalence of complete cohorts and reporting periods has not been proved."
+        }
+      ],
+      "unacceptedNamedScopes": [],
+      "acquisitionBlockers": [],
+      "compiledRowsDeleted": 0
+    },
+    {
+      "leadId": "lead-005",
+      "district": 37,
+      "employer": "School District No. 37 (Delta)",
+      "reportingPeriod": "2024/25",
+      "status": "accepted-official-with-public-qualifications",
+      "originalSourceKind": "recovered-native-district-original",
+      "originalSourceUrl": "https://www.deltasd.bc.ca/wp-content/uploads/sites/2/2025/12/SOFI-24-25-E-signed.pdf",
+      "originalSourceSha256": "1a4a0667cbfa4e90f3a73ea4446dfe2f25ad79a0de07ac0f623e43a7a2a92c51",
+      "cohorts": [
+        {
+          "sourceId": "gap-fill-school-south-sd37-2025-employees",
+          "scope": "employee-remuneration",
+          "rowCount": 1049,
+          "normalizedPayload": "sd37-2025-employees.json.gzip",
+          "dataSha256": "f1dbce3e3305e871c937c4c6230241d083ac07cb2042536dd5063c23c920397d",
+          "normalizedSha256": "ed147e44c115760329bc881673cd7c041c7ea3013b57423f3af825ea158b7f73",
+          "evidence": "sd37-2025-employees-evidence.json.gzip",
+          "evidenceSha256": "7f83011b0df2e63e3eca7b791968214ac8eb653097db0e4fa9f64498b1eeeb95",
+          "literalPrintedControlTotals": [
+            "114425758",
+            "579812"
+          ],
+          "computedComponentTotals": [
+            "114425760",
+            "579807"
+          ],
+          "controlResiduals": [
+            "2",
+            "-5"
+          ],
+          "independentPeers": [
+            {
+              "path": "research/salaries/gap-fill-2026-11-02/reviews/delta-root/complete-delta-source-acceptance.json",
+              "sha256": "18dbce72ec9cfe9b62e08d417adaed5e901b104b1bd9f1bfdd4a0fa982bc859c"
+            }
+          ],
+          "publicWarning": "Fiscal-year payment disclosures are not annual base salary rates or a complete employee roster. Source blank/dash expenses remain unknown (null); explicit numeric zero remains zero. Literal employees rows total $114425760 remuneration/$579807 known expenses versus printed $114425758/$579812 (row sum minus printed: 2/-5). Causes are not established; no amounts are adjusted to balance. Some names are visibly clipped by source cell masks; only visible fragments are retained. One employee payment has name unavailable because the next given-name glyph is partly clipped; its visible source fragment is retained in evidence. Hidden PDF overflow is not used to complete a name. Existing compiled observations remain retained where equivalence of complete cohorts and reporting periods has not been proved."
+        },
+        {
+          "sourceId": "gap-fill-school-south-sd37-2025-trustees",
+          "scope": "school-trustees",
+          "rowCount": 7,
+          "normalizedPayload": "sd37-2025-trustees.json.gzip",
+          "dataSha256": "8b8d549937b3738c5e4654ca71784a7c932ee79eeb216a4d4b1e9837feaa3af5",
+          "normalizedSha256": "e66d667d7583cd0ca0360841e50b93620df2fb6ec0cecdf35346b92f9b6afbe2",
+          "evidence": "sd37-2025-trustees-evidence.json.gzip",
+          "evidenceSha256": "f6ddf2863b4f033a2820474e2fde442630d4000be289a7c35f789d0a50d25229",
+          "literalPrintedControlTotals": [
+            "247664",
+            "17194"
+          ],
+          "computedComponentTotals": [
+            "247662",
+            "17193"
+          ],
+          "controlResiduals": [
+            "-2",
+            "-1"
+          ],
+          "independentPeers": [
+            {
+              "path": "research/salaries/gap-fill-2026-11-02/reviews/delta-root/complete-delta-source-acceptance.json",
+              "sha256": "18dbce72ec9cfe9b62e08d417adaed5e901b104b1bd9f1bfdd4a0fa982bc859c"
+            }
+          ],
+          "publicWarning": "Fiscal-year payment disclosures are not annual base salary rates or a complete employee roster. Source blank/dash expenses remain unknown (null); explicit numeric zero remains zero. Literal trustees rows total $247662 remuneration/$17193 known expenses versus printed $247664/$17194 (row sum minus printed: -2/-1). Causes are not established; no amounts are adjusted to balance. Some names are visibly clipped by source cell masks; only visible fragments are retained. One employee payment has name unavailable because the next given-name glyph is partly clipped; its visible source fragment is retained in evidence. Hidden PDF overflow is not used to complete a name. Existing compiled observations remain retained where equivalence of complete cohorts and reporting periods has not been proved."
+        }
+      ],
+      "unacceptedNamedScopes": [],
+      "acquisitionBlockers": [],
+      "compiledRowsDeleted": 0
+    },
+    {
+      "leadId": "lead-006",
+      "district": 38,
+      "employer": "School District No. 38 (Richmond)",
+      "reportingPeriod": "2024/25",
+      "status": "accepted-official-with-public-qualifications",
+      "originalSourceKind": "public-Ministry-original-scan",
+      "originalSourceUrl": "https://www2.gov.bc.ca/assets/gov/education/administration/resource-management/school-district-financial-reporting/financial-information/sd38-sofi-2025.pdf",
+      "originalSourceSha256": "eb69468875190cc01f29da395ce5c8e43d5d8784642dfd17d41477fe2bb2eff4",
+      "cohorts": [
+        {
+          "sourceId": "gap-fill-school-south-sd38-2025-employees",
+          "scope": "employee-remuneration",
+          "rowCount": 1592,
+          "normalizedPayload": "sd38-2025-employees.json.gzip",
+          "dataSha256": "adc790bc4db5e2ac67d2c92c1c1cce536314782c67a30502842bdd05fcbaece8",
+          "normalizedSha256": "b3fd1e332cf3256168b7dfe1b36f736350fc30a342e76ad154aceb2615d56e7a",
+          "evidence": "sd38-2025-employees-evidence.json.gzip",
+          "evidenceSha256": "fc61e7c42fae8600f9fc32f6187ba6b7f17ca3cb01817011a318c330422b5e28",
+          "literalPrintedControlTotals": [
+            "167465170",
+            "1018479"
+          ],
+          "computedComponentTotals": [
+            "167465154",
+            "1018508"
+          ],
+          "controlResiduals": [
+            "-16",
+            "29"
+          ],
+          "independentPeers": [
+            {
+              "path": "research/salaries/gap-fill-2026-11-02/school_north/reviews/south35-38/sd38-independent-source-peer-acceptance.json",
+              "sha256": "dfae5eb0864f8d8254eb826767cf02bca33e008a557fe2481a9a0841882b3584"
+            }
+          ],
+          "publicWarning": "Fiscal-year payment disclosures are not annual base salary rates or a complete employee roster. Source blank/dash expenses remain unknown (null); explicit numeric zero remains zero. Literal employees rows total $167465154 remuneration/$1018508 known expenses versus printed $167465170/$1018479 (row sum minus printed: -16/29). Causes are not established; no amounts are adjusted to balance. Source expense footnotes identify international recruitment/program travel and partial/full reimbursements. Printed amounts are retained without netting. Separate trustee role/term observations are preserved even when a name repeats. The source spelling DISTRCT ADMINISTRATOR is retained. Existing compiled observations remain retained where equivalence of complete cohorts and reporting periods has not been proved."
+        },
+        {
+          "sourceId": "gap-fill-school-south-sd38-2025-trustees",
+          "scope": "school-trustees",
+          "rowCount": 10,
+          "normalizedPayload": "sd38-2025-trustees.json.gzip",
+          "dataSha256": "22bce18d25fe97ec1f353aaba424122f928a4ab448923f752bafafbaee5a7506",
+          "normalizedSha256": "9f82f394a1134c541c18b8347830848e8447a000506f9a08d9beadc1ce3b2735",
+          "evidence": "sd38-2025-trustees-evidence.json.gzip",
+          "evidenceSha256": "6a5a89c69fdaff809db75b2d63abdfd981183b8e585e699362284610234b72a1",
+          "literalPrintedControlTotals": [
+            "228630",
+            "23957"
+          ],
+          "computedComponentTotals": [
+            "228629",
+            "23957"
+          ],
+          "controlResiduals": [
+            "-1",
+            "0"
+          ],
+          "independentPeers": [
+            {
+              "path": "research/salaries/gap-fill-2026-11-02/school_north/reviews/south35-38/sd38-independent-source-peer-acceptance.json",
+              "sha256": "dfae5eb0864f8d8254eb826767cf02bca33e008a557fe2481a9a0841882b3584"
+            }
+          ],
+          "publicWarning": "Fiscal-year payment disclosures are not annual base salary rates or a complete employee roster. Source blank/dash expenses remain unknown (null); explicit numeric zero remains zero. Literal trustees rows total $228629 remuneration/$23957 known expenses versus printed $228630/$23957 (row sum minus printed: -1/0). Causes are not established; no amounts are adjusted to balance. Source expense footnotes identify international recruitment/program travel and partial/full reimbursements. Printed amounts are retained without netting. Separate trustee role/term observations are preserved even when a name repeats. The source spelling DISTRCT ADMINISTRATOR is retained. Existing compiled observations remain retained where equivalence of complete cohorts and reporting periods has not been proved."
+        }
+      ],
+      "unacceptedNamedScopes": [],
+      "acquisitionBlockers": [],
+      "compiledRowsDeleted": 0
+    },
+    {
+      "leadId": "lead-007",
+      "district": 39,
+      "employer": "School District No. 39 (Vancouver)",
+      "reportingPeriod": "2024/25",
+      "status": "accepted-official",
+      "originalSourceKind": "recovered-native-district-original",
+      "originalSourceUrl": "https://media.vsb.bc.ca/media/Default/medialib/2024-2025-statement-of-financial-information.300e3385920.pdf",
+      "originalSourceSha256": "62cfa30e70e18a02644f974d0196f55602138f7b8db389988c4fed0600e15265",
+      "cohorts": [
+        {
+          "sourceId": "gap-fill-school-south-sd39-2025-employees",
+          "scope": "employee-remuneration",
+          "rowCount": 3360,
+          "normalizedPayload": "sd39-2025-employees.json.gzip",
+          "dataSha256": "f3c8db0d3d965a957cecf73877facf14ebcffd806d056b4807cc7a3825b2d21b",
+          "normalizedSha256": "47e9aaaf4ab6a737362f3e2d6a7b35bcd59a05e9add5c446897be1906ff3074b",
+          "evidence": "sd39-2025-employees-evidence.json.gzip",
+          "evidenceSha256": "cd508f02d58dabd5de0cc25635e574b4fd2c38dd7ea2048a518c27249bbfa2fe",
+          "literalPrintedControlTotals": [
+            "353889803",
+            "1208681"
+          ],
+          "computedComponentTotals": [
+            "353889803",
+            "1208681"
+          ],
+          "controlResiduals": [
+            "0",
+            "0"
+          ],
+          "independentPeers": [
+            {
+              "path": "research/salaries/gap-fill-2026-11-02/school_native/peer-south-native-final-review.json",
+              "sha256": "55c45627a784e266b23c3baa23c26ceb8f2b2caea29617ac3de5735e5f07809a"
+            }
+          ],
+          "publicWarning": "Fiscal-year payment disclosures are not annual base salary rates or a complete workforce census. Source expense dashes remain unknown (null); explicit zero and negative amounts remain literal. The source surname and given-name columns are joined with a comma and space, without expanding or resolving identities. Student trustee observations are retained in the separate trustee category. Existing compiled observations, where present, remain retained; equivalence between compiled edition labels and this fiscal reporting year has not been proved."
+        },
+        {
+          "sourceId": "gap-fill-school-south-sd39-2025-trustees",
+          "scope": "school-trustees",
+          "rowCount": 11,
+          "normalizedPayload": "sd39-2025-trustees.json.gzip",
+          "dataSha256": "df538fc75760a8e22c045f6047e6f2f765f2f96326cbdaceb97279b64af1f642",
+          "normalizedSha256": "d9b7297bf8ee487defa34356f7cd0d84da6ebb8cdc679419ee17723eb7574a89",
+          "evidence": "sd39-2025-trustees-evidence.json.gzip",
+          "evidenceSha256": "8b397f16382af56287f7f8a6840da672e5f2f45d4b66add0d767b0c92011369b",
+          "literalPrintedControlTotals": [
+            "333819",
+            "17169"
+          ],
+          "computedComponentTotals": [
+            "333819",
+            "17169"
+          ],
+          "controlResiduals": [
+            "0",
+            "0"
+          ],
+          "independentPeers": [
+            {
+              "path": "research/salaries/gap-fill-2026-11-02/school_native/peer-south-native-final-review.json",
+              "sha256": "55c45627a784e266b23c3baa23c26ceb8f2b2caea29617ac3de5735e5f07809a"
+            }
+          ],
+          "publicWarning": "Fiscal-year payment disclosures are not annual base salary rates or a complete workforce census. Source expense dashes remain unknown (null); explicit zero and negative amounts remain literal. The source surname and given-name columns are joined with a comma and space, without expanding or resolving identities. Student trustee observations are retained in the separate trustee category. Existing compiled observations, where present, remain retained; equivalence between compiled edition labels and this fiscal reporting year has not been proved."
+        }
+      ],
+      "unacceptedNamedScopes": [],
+      "acquisitionBlockers": [],
+      "compiledRowsDeleted": 0
+    },
+    {
+      "leadId": "lead-010",
+      "district": 45,
+      "employer": "School District No. 45 (West Vancouver)",
+      "reportingPeriod": "2024/25",
+      "status": "accepted-official-with-public-qualifications",
+      "originalSourceKind": "recovered-native-district-original",
+      "originalSourceUrl": "https://westvancouverschools.ca/wp-content/uploads/2025/11/SOFI-2024-2025-FINAL-FOR-WEBSITE.pdf",
+      "originalSourceSha256": "f83a486961b1165f50639adf118f6a9729f2e5f6dc3ca9099382dc93be56a695",
+      "cohorts": [
+        {
+          "sourceId": "gap-fill-school-south-sd45-2025-employees",
+          "scope": "employee-remuneration",
+          "rowCount": 413,
+          "normalizedPayload": "sd45-2025-employees.json.gzip",
+          "dataSha256": "5a40bfadb2648fe6485d524e160a2ad98d83b815f304519d45560fce1eefc077",
+          "normalizedSha256": "08933428f9cf6de20d65fe3e528b3bcad33cf2884faab52a1d42d51babfa2090",
+          "evidence": "sd45-2025-employees-evidence.json.gzip",
+          "evidenceSha256": "60d48ad08277f1d3527000ff371272a257f43caaa61e80deaba4c310105f7d0c",
+          "literalPrintedControlTotals": [
+            "44364330",
+            "258403"
+          ],
+          "computedComponentTotals": [
+            "44364345",
+            "258403"
+          ],
+          "controlResiduals": [
+            "15",
+            "0"
+          ],
+          "independentPeers": [
+            {
+              "path": "research/salaries/gap-fill-2026-11-02/school_native/peer-south-native-final-review.json",
+              "sha256": "55c45627a784e266b23c3baa23c26ceb8f2b2caea29617ac3de5735e5f07809a"
+            }
+          ],
+          "publicWarning": "Fiscal-year payment disclosures are not annual base salary rates or a complete workforce census. Source expense dashes remain unknown (null); explicit zero and negative amounts remain literal. Literal employee rows total $44,364,345 remuneration versus the printed $44,364,330 (+$15); known expenses reconcile at $258,403. Trustee rows total $133,244/$1,797 versus printed $133,243/$1,798 (+$1/−$1). Causes are not established and no amount is adjusted. Two starred employee expense cells include travel for international student recruitment. Existing compiled observations, where present, remain retained; equivalence between compiled edition labels and this fiscal reporting year has not been proved."
+        },
+        {
+          "sourceId": "gap-fill-school-south-sd45-2025-trustees",
+          "scope": "school-trustees",
+          "rowCount": 6,
+          "normalizedPayload": "sd45-2025-trustees.json.gzip",
+          "dataSha256": "730f85335d26adeb5074e5ab52ba436252ece785ac21377924a2332f949094fb",
+          "normalizedSha256": "d783452cc41b4185903d11798c4168f97c45f700bf81bc70c33a3094b8dca390",
+          "evidence": "sd45-2025-trustees-evidence.json.gzip",
+          "evidenceSha256": "fb67fc82ec7891a45a89e07379c7b43750fc508892d717ebb034ab1a394db50e",
+          "literalPrintedControlTotals": [
+            "133243",
+            "1798"
+          ],
+          "computedComponentTotals": [
+            "133244",
+            "1797"
+          ],
+          "controlResiduals": [
+            "1",
+            "-1"
+          ],
+          "independentPeers": [
+            {
+              "path": "research/salaries/gap-fill-2026-11-02/school_native/peer-south-native-final-review.json",
+              "sha256": "55c45627a784e266b23c3baa23c26ceb8f2b2caea29617ac3de5735e5f07809a"
+            }
+          ],
+          "publicWarning": "Fiscal-year payment disclosures are not annual base salary rates or a complete workforce census. Source expense dashes remain unknown (null); explicit zero and negative amounts remain literal. Literal employee rows total $44,364,345 remuneration versus the printed $44,364,330 (+$15); known expenses reconcile at $258,403. Trustee rows total $133,244/$1,797 versus printed $133,243/$1,798 (+$1/−$1). Causes are not established and no amount is adjusted. Two starred employee expense cells include travel for international student recruitment. Existing compiled observations, where present, remain retained; equivalence between compiled edition labels and this fiscal reporting year has not been proved."
+        }
+      ],
+      "unacceptedNamedScopes": [],
+      "acquisitionBlockers": [],
+      "compiledRowsDeleted": 0
+    },
+    {
+      "leadId": "lead-018",
+      "district": 69,
+      "employer": "School District No. 69 (Qualicum)",
+      "reportingPeriod": "2024/25",
+      "status": "accepted-official",
+      "originalSourceKind": "public-Ministry-original-scan",
+      "originalSourceUrl": "https://www2.gov.bc.ca/assets/gov/education/administration/resource-management/school-district-financial-reporting/financial-information/sd69-sofi-2025.pdf",
+      "originalSourceSha256": "a5afb62a710909a8512aedca6ce5217e5e555bd44e9f7a7bb15f9a1be5eaf18f",
+      "cohorts": [
+        {
+          "sourceId": "gap-fill-school-south-sd69-2025-employees",
+          "scope": "employee-remuneration",
+          "rowCount": 304,
+          "normalizedPayload": "sd69-2025-employees.json.gzip",
+          "dataSha256": "811413fb39b7fa0c86cf201d31767a2f0185e5b626f046a0d21c2d768d7844db",
+          "normalizedSha256": "91336fc3fb76001354b1a7ec5595cdf13d7d5c3c14b7d9f9c73d14b4cc36924c",
+          "evidence": "sd69-2025-employees-evidence.json.gzip",
+          "evidenceSha256": "fb899903c220730be1754e092b3bbec60ab4963dc165bdabfe22813f6dc775a0",
+          "literalPrintedControlTotals": [
+            "32130920.92",
+            "164942.12"
+          ],
+          "computedComponentTotals": [
+            "32130920.92",
+            "164942.12"
+          ],
+          "controlResiduals": [
+            "0.00",
+            "0.00"
+          ],
+          "independentPeers": [
+            {
+              "path": "research/salaries/gap-fill-2026-11-02/school_native/reviews/south-scans/independent-three-scan-source-acceptance.json",
+              "sha256": "e36bba0ff0922f1012883198770e9bbb0fd2f8315c446d141572ca8c87f71ada"
+            }
+          ],
+          "publicWarning": "Fiscal-year payment disclosures are not annual base salary rates or a complete employee roster. Source blank/dash expenses remain unknown (null); explicit numeric zero remains zero. Existing compiled observations remain retained where equivalence of complete cohorts and reporting periods has not been proved."
+        },
+        {
+          "sourceId": "gap-fill-school-south-sd69-2025-trustees",
+          "scope": "school-trustees",
+          "rowCount": 5,
+          "normalizedPayload": "sd69-2025-trustees.json.gzip",
+          "dataSha256": "158217d4b1230581213b7b103b659ab785bd226fa15cf3da055fd3ce3873c9d7",
+          "normalizedSha256": "d4fc5a5fa40bac9c202f207b69fd717a7791f2f2f17520b0505607294d9f388d",
+          "evidence": "sd69-2025-trustees-evidence.json.gzip",
+          "evidenceSha256": "3d4ecdf0664149a0e30b77db71e3df63d5ac01914338c121b3b6b06dfba5359b",
+          "literalPrintedControlTotals": [
+            "103830.85",
+            "6583.78"
+          ],
+          "computedComponentTotals": [
+            "103830.85",
+            "6583.78"
+          ],
+          "controlResiduals": [
+            "0.00",
+            "0.00"
+          ],
+          "independentPeers": [
+            {
+              "path": "research/salaries/gap-fill-2026-11-02/school_native/reviews/south-scans/independent-three-scan-source-acceptance.json",
+              "sha256": "e36bba0ff0922f1012883198770e9bbb0fd2f8315c446d141572ca8c87f71ada"
+            }
+          ],
+          "publicWarning": "Fiscal-year payment disclosures are not annual base salary rates or a complete employee roster. Source blank/dash expenses remain unknown (null); explicit numeric zero remains zero. Existing compiled observations remain retained where equivalence of complete cohorts and reporting periods has not been proved."
+        }
+      ],
+      "unacceptedNamedScopes": [],
+      "acquisitionBlockers": [],
+      "compiledRowsDeleted": 0
+    },
+    {
+      "leadId": "lead-019",
+      "district": 70,
+      "employer": "School District No. 70 (Pacific Rim)",
+      "reportingPeriod": "2024/25",
+      "status": "accepted-official",
+      "originalSourceKind": "public-Ministry-original-scan",
+      "originalSourceUrl": "https://www2.gov.bc.ca/assets/gov/education/administration/resource-management/school-district-financial-reporting/financial-information/sd70-sofi-2025.pdf",
+      "originalSourceSha256": "460d9ffe988b4223030d777c7f6eea375ff3305032156108f3b58e820ac83223",
+      "cohorts": [
+        {
+          "sourceId": "gap-fill-school-south-sd70-2025-employees",
+          "scope": "employee-remuneration",
+          "rowCount": 290,
+          "normalizedPayload": "sd70-2025-employees.json.gzip",
+          "dataSha256": "3710023accb177efc58d2a46b6fca8e46f7959adc582aca7b8774e63b31c13fe",
+          "normalizedSha256": "693599f692f07c4068684db34daa1991b3eebeff8a7a4765faf901f21bcc2191",
+          "evidence": "sd70-2025-employees-evidence.json.gzip",
+          "evidenceSha256": "3d8678d9fb7fcc095c115e010a5f1ce51a129efa62007b230efd7d9c4bd08e88",
+          "literalPrintedControlTotals": [
+            "30296137.71",
+            "252872.22"
+          ],
+          "computedComponentTotals": [
+            "30296137.71",
+            "252872.22"
+          ],
+          "controlResiduals": [
+            "0.00",
+            "0.00"
+          ],
+          "independentPeers": [
+            {
+              "path": "research/salaries/gap-fill-2026-11-02/school_native/reviews/south-scans/independent-three-scan-source-acceptance.json",
+              "sha256": "e36bba0ff0922f1012883198770e9bbb0fd2f8315c446d141572ca8c87f71ada"
+            }
+          ],
+          "publicWarning": "Fiscal-year payment disclosures are not annual base salary rates or a complete employee roster. Source blank/dash expenses remain unknown (null); explicit numeric zero remains zero. Employee position groups are sometimes visibly truncated; only printed prefixes are retained. Trustee positions are not published and remain null. Existing compiled observations remain retained where equivalence of complete cohorts and reporting periods has not been proved."
+        },
+        {
+          "sourceId": "gap-fill-school-south-sd70-2025-trustees",
+          "scope": "school-trustees",
+          "rowCount": 7,
+          "normalizedPayload": "sd70-2025-trustees.json.gzip",
+          "dataSha256": "d73985850d9d1c4104386cb0be2e5db0e8c65e6e0aa660bbf194ca50e023e21b",
+          "normalizedSha256": "30b01f7b8dcdc4d1c941848e34f034166692565407c8296fe74098fc3a6922cd",
+          "evidence": "sd70-2025-trustees-evidence.json.gzip",
+          "evidenceSha256": "da491fd60d45144f0c9776821a6fa8ae5fa90d2efcf9fdfa37c883b20a9665a1",
+          "literalPrintedControlTotals": [
+            "114152.16",
+            "14884.92"
+          ],
+          "computedComponentTotals": [
+            "114152.16",
+            "14884.92"
+          ],
+          "controlResiduals": [
+            "0.00",
+            "0.00"
+          ],
+          "independentPeers": [
+            {
+              "path": "research/salaries/gap-fill-2026-11-02/school_native/reviews/south-scans/independent-three-scan-source-acceptance.json",
+              "sha256": "e36bba0ff0922f1012883198770e9bbb0fd2f8315c446d141572ca8c87f71ada"
+            }
+          ],
+          "publicWarning": "Fiscal-year payment disclosures are not annual base salary rates or a complete employee roster. Source blank/dash expenses remain unknown (null); explicit numeric zero remains zero. Employee position groups are sometimes visibly truncated; only printed prefixes are retained. Trustee positions are not published and remain null. Existing compiled observations remain retained where equivalence of complete cohorts and reporting periods has not been proved."
+        }
+      ],
+      "unacceptedNamedScopes": [],
+      "acquisitionBlockers": [],
+      "compiledRowsDeleted": 0
+    },
+    {
+      "leadId": "lead-020",
+      "district": 75,
+      "employer": "School District No. 75 (Mission)",
+      "reportingPeriod": "2024/25",
+      "status": "accepted-official",
+      "originalSourceKind": "recovered-native-district-original",
+      "originalSourceUrl": "https://media.mpsd.ca/media/Default/medialib/2024-25-sofi-web.96b0649287.pdf",
+      "originalSourceSha256": "f75d1507378ad392c0dde03d1c707c184dfdc2853a19a1d425d142b43ef93b09",
+      "cohorts": [
+        {
+          "sourceId": "gap-fill-school-south-sd75-2025-employees",
+          "scope": "employee-remuneration",
+          "rowCount": 444,
+          "normalizedPayload": "sd75-2025-employees.json.gzip",
+          "dataSha256": "cbe89b2e78bca4c6ca387d58c3b360ac260e7c8993e9b724895106cd2c00ccbc",
+          "normalizedSha256": "ce85427c1fc80e50256d3d95d133928e0a23d74eac3fbc7098639723ba9a97fd",
+          "evidence": "sd75-2025-employees-evidence.json.gzip",
+          "evidenceSha256": "1db608e88582fb47dd3c2148277b4181038e7dec9c1be07d80b9616008da906c",
+          "literalPrintedControlTotals": [
+            "46654547.67",
+            "1619521.76"
+          ],
+          "computedComponentTotals": [
+            "46654547.67",
+            "1619521.76"
+          ],
+          "controlResiduals": [
+            "0.00",
+            "0.00"
+          ],
+          "independentPeers": [
+            {
+              "path": "research/salaries/gap-fill-2026-11-02/school_native/peer-south-native-final-review.json",
+              "sha256": "55c45627a784e266b23c3baa23c26ceb8f2b2caea29617ac3de5735e5f07809a"
+            }
+          ],
+          "publicWarning": "Fiscal-year payment disclosures are not annual base salary rates or a complete workforce census. Source expense dashes remain unknown (null); explicit zero and negative amounts remain literal. Existing compiled observations, where present, remain retained; equivalence between compiled edition labels and this fiscal reporting year has not been proved."
+        },
+        {
+          "sourceId": "gap-fill-school-south-sd75-2025-trustees",
+          "scope": "school-trustees",
+          "rowCount": 5,
+          "normalizedPayload": "sd75-2025-trustees.json.gzip",
+          "dataSha256": "449f5d5a19d9420023033b7f582aa9ef38ee56879e90fe05400b8c3aa810b92c",
+          "normalizedSha256": "6b86512a914470212e43402c1ade6187977caad84ce04059b4e4f562de8d7c01",
+          "evidence": "sd75-2025-trustees-evidence.json.gzip",
+          "evidenceSha256": "8d21464b7260e357369f185ee97301d369cd17243230cecc364d4d271d18fa40",
+          "literalPrintedControlTotals": [
+            "101651.32",
+            "11307.95"
+          ],
+          "computedComponentTotals": [
+            "101651.32",
+            "11307.95"
+          ],
+          "controlResiduals": [
+            "0.00",
+            "0.00"
+          ],
+          "independentPeers": [
+            {
+              "path": "research/salaries/gap-fill-2026-11-02/school_native/peer-south-native-final-review.json",
+              "sha256": "55c45627a784e266b23c3baa23c26ceb8f2b2caea29617ac3de5735e5f07809a"
+            }
+          ],
+          "publicWarning": "Fiscal-year payment disclosures are not annual base salary rates or a complete workforce census. Source expense dashes remain unknown (null); explicit zero and negative amounts remain literal. Trustee position cells are not published in the named table and remain null. Existing compiled observations, where present, remain retained; equivalence between compiled edition labels and this fiscal reporting year has not been proved."
+        }
+      ],
+      "unacceptedNamedScopes": [],
+      "acquisitionBlockers": [],
+      "compiledRowsDeleted": 0
+    },
+    {
+      "leadId": "lead-021",
+      "district": 78,
+      "employer": "School District No. 78 (Fraser-Cascade)",
+      "reportingPeriod": "2024/25",
+      "status": "accepted-official",
+      "originalSourceKind": "public-Ministry-original-scan",
+      "originalSourceUrl": "https://www2.gov.bc.ca/assets/gov/education/administration/resource-management/school-district-financial-reporting/financial-information/sd78-sofi-2025.pdf",
+      "originalSourceSha256": "35e3dd525d788dd8ecc7e11c01dad53d9ae11ba1a93f5437ab7bd9f9af52517f",
+      "cohorts": [
+        {
+          "sourceId": "gap-fill-school-south-sd78-2025-employees",
+          "scope": "employee-remuneration",
+          "rowCount": 137,
+          "normalizedPayload": "sd78-2025-employees.json.gzip",
+          "dataSha256": "0253373029b62bbf59241b608713925a6ed5aed31836527c908776f5e33495fc",
+          "normalizedSha256": "75c6f0dbbd68faaff549f2678d28e06dea970897d8395cdce815279900c45054",
+          "evidence": "sd78-2025-employees-evidence.json.gzip",
+          "evidenceSha256": "28a9306946cb717cbe3151cf1178549ad96f761177d79a7fd67c123dc479e060",
+          "literalPrintedControlTotals": [
+            "15064017.60",
+            "155972.29"
+          ],
+          "computedComponentTotals": [
+            "15064017.60",
+            "155972.29"
+          ],
+          "controlResiduals": [
+            "0.00",
+            "0.00"
+          ],
+          "independentPeers": [
+            {
+              "path": "research/salaries/gap-fill-2026-11-02/school_native/reviews/south-scans/independent-three-scan-source-acceptance.json",
+              "sha256": "e36bba0ff0922f1012883198770e9bbb0fd2f8315c446d141572ca8c87f71ada"
+            }
+          ],
+          "publicWarning": "Fiscal-year payment disclosures are not annual base salary rates or a complete employee roster. Source blank/dash expenses remain unknown (null); explicit numeric zero remains zero. Employee positions are not published and remain null. Existing compiled observations remain retained where equivalence of complete cohorts and reporting periods has not been proved."
+        },
+        {
+          "sourceId": "gap-fill-school-south-sd78-2025-trustees",
+          "scope": "school-trustees",
+          "rowCount": 7,
+          "normalizedPayload": "sd78-2025-trustees.json.gzip",
+          "dataSha256": "96da743a5963ffdb7f333cab34d4c33c2a9ade91103cc1e5d228ba73789fae5b",
+          "normalizedSha256": "88f1f6f8150d0e35befb1c7e35d4b741aa51a4003f3cc452a670521bb5d4ad74",
+          "evidence": "sd78-2025-trustees-evidence.json.gzip",
+          "evidenceSha256": "5cf1fccaa4fcada4a2b0763b339254bc9d2d5e929e482ced82b6aabc1aaf4ec4",
+          "literalPrintedControlTotals": [
+            "183841.37",
+            "17565.34"
+          ],
+          "computedComponentTotals": [
+            "183841.37",
+            "17565.34"
+          ],
+          "controlResiduals": [
+            "0.00",
+            "0.00"
+          ],
+          "independentPeers": [
+            {
+              "path": "research/salaries/gap-fill-2026-11-02/school_native/reviews/south-scans/independent-three-scan-source-acceptance.json",
+              "sha256": "e36bba0ff0922f1012883198770e9bbb0fd2f8315c446d141572ca8c87f71ada"
+            }
+          ],
+          "publicWarning": "Fiscal-year payment disclosures are not annual base salary rates or a complete employee roster. Source blank/dash expenses remain unknown (null); explicit numeric zero remains zero. Existing compiled observations remain retained where equivalence of complete cohorts and reporting periods has not been proved."
+        }
+      ],
+      "unacceptedNamedScopes": [],
+      "acquisitionBlockers": [],
+      "compiledRowsDeleted": 0
+    },
+    {
+      "leadId": "lead-022",
+      "district": 79,
+      "employer": "School District No. 79 (Cowichan Valley)",
+      "reportingPeriod": "2024/25",
+      "status": "accepted-official",
+      "originalSourceKind": "public-Ministry-original-scan",
+      "originalSourceUrl": "https://www2.gov.bc.ca/assets/gov/education/administration/resource-management/school-district-financial-reporting/financial-information/sd79-sofi-2025.pdf",
+      "originalSourceSha256": "a46b4157713d5351996d98fedbb3530d029a6747e9ece90d330b37f4f9ea2b32",
+      "cohorts": [
+        {
+          "sourceId": "gap-fill-school-south-sd79-2025-employees",
+          "scope": "employee-remuneration",
+          "rowCount": 553,
+          "normalizedPayload": "sd79-2025-employees.json.gzip",
+          "dataSha256": "6d84996a1c752be23c2885c628ad2777cc9964352e80be01fae411fbe3413afe",
+          "normalizedSha256": "3c79136bfccdc0aab9c84902518c8903ecca5e92abc51c5a1889b1535dfbb16f",
+          "evidence": "sd79-2025-employees-evidence.json.gzip",
+          "evidenceSha256": "6ed33749f4047b3fe82bba6c6b96eeec649fe383f1b6fe6bb5bc292ab2412188",
+          "literalPrintedControlTotals": [
+            "57938687.24",
+            "881200.55"
+          ],
+          "computedComponentTotals": [
+            "57938687.24",
+            "881200.55"
+          ],
+          "controlResiduals": [
+            "0.00",
+            "0.00"
+          ],
+          "independentPeers": [
+            {
+              "path": "research/salaries/gap-fill-2026-11-02/municipal/reviews/school-south/sd79-peer-source-review.json",
+              "sha256": "a9987b468270eb93924a74d62e0fce2c8fdcc48d2fdb63383bac5c94b00dea66"
+            }
+          ],
+          "publicWarning": "Fiscal-year payment disclosures are not annual base salary rates or a complete employee roster. Source blank/dash expenses remain unknown (null); explicit numeric zero remains zero. Starred source expense cells include international student recruitment (*) or teacher remedy payments above $5,000 (**), so expenses mix travel/other expenses with some compensation. Source columns remain literal; teacher remedy payments are not moved into remuneration. Some long titles are visibly truncated. Existing compiled observations remain retained where equivalence of complete cohorts and reporting periods has not been proved."
+        },
+        {
+          "sourceId": "gap-fill-school-south-sd79-2025-trustees",
+          "scope": "school-trustees",
+          "rowCount": 7,
+          "normalizedPayload": "sd79-2025-trustees.json.gzip",
+          "dataSha256": "27b2b3ec90d8e9cb1a6402b558d4b2d1cde2bcfa06cbdea8a08133fc124bce93",
+          "normalizedSha256": "b527b850ee139b24ac0097fa51e6833d50326e6198a095bdf4f8bb51555d7e20",
+          "evidence": "sd79-2025-trustees-evidence.json.gzip",
+          "evidenceSha256": "4bf4e23d77b069fb47e64592fafa321d8bace49805ff7b1aeb7f49d7898a7e83",
+          "literalPrintedControlTotals": [
+            "126624.00",
+            "23481.98"
+          ],
+          "computedComponentTotals": [
+            "126624.00",
+            "23481.98"
+          ],
+          "controlResiduals": [
+            "0.00",
+            "0.00"
+          ],
+          "independentPeers": [
+            {
+              "path": "research/salaries/gap-fill-2026-11-02/municipal/reviews/school-south/sd79-peer-source-review.json",
+              "sha256": "a9987b468270eb93924a74d62e0fce2c8fdcc48d2fdb63383bac5c94b00dea66"
+            }
+          ],
+          "publicWarning": "Fiscal-year payment disclosures are not annual base salary rates or a complete employee roster. Source blank/dash expenses remain unknown (null); explicit numeric zero remains zero. Starred source expense cells include international student recruitment (*) or teacher remedy payments above $5,000 (**), so expenses mix travel/other expenses with some compensation. Source columns remain literal; teacher remedy payments are not moved into remuneration. Some long titles are visibly truncated. Existing compiled observations remain retained where equivalence of complete cohorts and reporting periods has not been proved."
+        }
+      ],
+      "unacceptedNamedScopes": [],
+      "acquisitionBlockers": [],
+      "compiledRowsDeleted": 0
+    }
+  ],
+  "acceptedScanRows": 4550,
+  "sourceOriginalScanPagesReplayed": 95,
+  "scanOriginalReplayAndCompletePageCensus": [
+    {
+      "district": 35,
+      "salaryPages": 30,
+      "path": "research/salaries/gap-fill-2026-11-02/school_south/sd35-complete-page-census-and-original-replay.json",
+      "sha256": "95243035b4cf89c8f5d95513757e5af54b40690e5ecc33bf639f389276ee82af"
+    },
+    {
+      "district": 38,
+      "salaryPages": 35,
+      "path": "research/salaries/gap-fill-2026-11-02/school_south/sd38-complete-page-census-and-original-replay.json",
+      "sha256": "1293a61fa02a67169a672eedeaa55cfd5e1156be0e3abb230c9a5d5916f29f81"
+    },
+    {
+      "district": 69,
+      "salaryPages": 7,
+      "path": "research/salaries/gap-fill-2026-11-02/school_south/sd69-complete-page-census-and-original-replay.json",
+      "sha256": "3f9b485606103b2f944b670564b3359d41834fef68da526c0c51743731ec3cbe"
+    },
+    {
+      "district": 70,
+      "salaryPages": 7,
+      "path": "research/salaries/gap-fill-2026-11-02/school_south/sd70-complete-page-census-and-original-replay.json",
+      "sha256": "8d76691026cc70111258388b19153299a92ef3b370c3addde6cb2d86fd3a6712"
+    },
+    {
+      "district": 78,
+      "salaryPages": 5,
+      "path": "research/salaries/gap-fill-2026-11-02/school_south/sd78-complete-page-census-and-original-replay.json",
+      "sha256": "229d8d2be9b4a2fc29f9004cf3f05f95a5baac93fbdc19ed048d4c8df1b1c46f"
+    },
+    {
+      "district": 79,
+      "salaryPages": 11,
+      "path": "research/salaries/gap-fill-2026-11-02/school_south/sd79-complete-page-census-and-original-replay.json",
+      "sha256": "1936b85286a843be226837a04e0de84843884b096303acdbf6217aa9a677094e"
+    }
+  ],
+  "finiteReviewPolicy": "Independent raw readers over complete sources, whole-page monetary census, actual-source field flag/low-score/recovered-row readings, independently source-first flags and preselected agreement benchmarks, explicit calibrated whole-cell dash evidence. No claim that every row was personally transcribed twice or that OCR/model agreement is infallible.",
+  "unknownNamePaymentRows": 1,
+  "unknownNameCase": {
+    "district": 37,
+    "physicalPage": 67,
+    "remuneration": 90486,
+    "expenses": 42,
+    "name": null,
+    "visibleSourceFragment": "STEWART-HIBBELN, BRIANN",
+    "reason": "Next given-name glyph partly clipped by the source cell mask; no final glyph or complete identity inferred."
+  },
+  "remainingMissingNamedScopes": [],
+  "acquisitionBlockers": [],
+  "optionalIssuerClarifications": [
+    {
+      "district": 35,
+      "issue": "Explain literal whole-dollar component residuals, whose causes remain unestablished; existing accepted rows are publicly qualified.",
+      "sourceGuide": "README.md",
+      "sendStatus": "not-authorized-no-outreach"
+    },
+    {
+      "district": 37,
+      "issue": "Explain literal whole-dollar component residuals, whose causes remain unestablished; existing accepted rows are publicly qualified.",
+      "sourceGuide": "README.md",
+      "sendStatus": "not-authorized-no-outreach"
+    },
+    {
+      "district": 38,
+      "issue": "Explain literal whole-dollar component residuals, whose causes remain unestablished; existing accepted rows are publicly qualified.",
+      "sourceGuide": "README.md",
+      "sendStatus": "not-authorized-no-outreach"
+    },
+    {
+      "district": 45,
+      "issue": "Explain literal whole-dollar component residuals, whose causes remain unestablished; existing accepted rows are publicly qualified.",
+      "sourceGuide": "README.md",
+      "sendStatus": "not-authorized-no-outreach"
+    }
+  ],
+  "optionalUnclippedNameClarification": {
+    "district": 37,
+    "issue": "Unclipped original name field for the preserved page67 employee payment.",
+    "sendStatus": "not-authorized-no-outreach"
+  },
+  "additionalPublicArchiveDiscoveries": {
+    "path": "research/salaries/gap-fill-2026-11-02/school_south/mission-additional-public-archive-links.json",
+    "sha256": "c0a44b18ab8e788573ffb5a401d6fd8e04f2caa7b60e7b8bdedd917488be545e"
+  },
+  "additionalPublicArchiveScopeNote": "Extra Mission public links extend outside the assigned2024/25 source. They are discovery records, not accepted salary observations or claims of exhaustive historical coverage.",
+  "meaningfulOfflineRegressionTests": 14,
+  "offlineRegressionCommand": "python3 -m unittest discover -s scripts -p test_gap_school_south.py",
+  "byteReplayCommands": [
+    "python3 scripts/gap_school_south_finalize_scans.py --check",
+    "python3 scripts/gap_school_south_build.py --check",
+    "python3 scripts/gap_school_south_expand.py --activate --check"
+  ],
+  "verification": "All14 offline tests and immutable selected/evidence/normalized replay checks passed. Raw native/scan snapshots, early parsing windows and first personal reading/recording errors are preserved; final choices are additive and source-pinned.",
+  "producerFreeze": {
+    "path": "research/salaries/gap-fill-2026-11-02/school_south/producer-freeze.json",
+    "sha256": "384c393d6b59045b5f1d2ca406e28b3f0802578c80c436a3a60f0c7618928691"
+  },
+  "oldFrozenAndGlobalInputsEdited": false,
+  "noBranchesOrCommitsCreated": true,
+  "noOutreach": true,
+  "noFormsOrFOIRequestsOrFeesSubmitted": true,
+  "compiledRowsDeleted": 0
+}

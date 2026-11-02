@@ -1,0 +1,41 @@
+{
+  "firstTranscriptIndex": {
+    "path": "research/salaries/gap-fill-2026-11-02/health_boards/peer-health-employees/clip-effects-001/first-transcript-index.json",
+    "sha256": "c1f66ab64d9e07ffeb834fcf60dbc4dfcb9e65c94b9c4f8e0e7823cded0fcd1f"
+  },
+  "additiveRereads": [
+    {
+      "path": "research/salaries/gap-fill-2026-11-02/health_boards/peer-health-employees/clip-effects-001/additive-reread-001.json",
+      "sha256": "336626ff740521f32179e2c629af35bd8a49f4cdcd279b0f16fc2f616c6826e7"
+    }
+  ],
+  "selectionRule": "Use all 264 first-transcript observations and all their fields except the one exact nameLiteral supersession below. Do not select later files implicitly. Original first transcripts remain immutable.",
+  "fieldSupersessions": [
+    {
+      "id": "health-clip-001-067",
+      "field": "nameLiteral",
+      "value": "HEPPNER,ROSEMARY",
+      "from": {
+        "path": "research/salaries/gap-fill-2026-11-02/health_boards/peer-health-employees/clip-effects-001/additive-reread-001.json",
+        "sha256": "336626ff740521f32179e2c629af35bd8a49f4cdcd279b0f16fc2f616c6826e7"
+      }
+    }
+  ],
+  "allMonetaryFirstReadingsRemainSelected": true,
+  "unchangedVisualEncodingObservations": [
+    {
+      "id": "health-clip-001-243",
+      "field": "nameLiteral",
+      "nativeCodePointPolicy": "Preserve the native Unicode hyphen code point; the personally viewed separator is a hyphen but image evidence establishes no code point. No field supersession."
+    },
+    {
+      "id": "health-clip-001-258",
+      "field": "nameLiteral",
+      "nativeCodePointPolicy": "Preserve the native Unicode hyphen code point; the personally viewed separator is a hyphen but image evidence establishes no code point. No field supersession."
+    }
+  ],
+  "sourceClippingNullNamePolicy": "Separate root adoption for seven actual source-clipped names. This selector preserves the original partial literal review observations and uncertainty; it does not itself implement any public-data null-name policy.",
+  "candidateValuesSeenBeforeFirstTranscripts": false,
+  "candidateValuesSeenBeforeAdditiveReread": false,
+  "noOutreach": true
+}

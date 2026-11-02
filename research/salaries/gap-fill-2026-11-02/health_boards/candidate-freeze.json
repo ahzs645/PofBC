@@ -1,0 +1,1197 @@
+{
+  "schema": "salary-gap-fill-health-boards-worker-freeze-v1",
+  "noOutreach": true,
+  "scope": "Only board-worker owned source/code/normalization inputs. Root independent receipts are separately owned and hash-referenced by review-adoption.json. Later peer-health-employees readings are separately reviewed inputs and excluded from this board freeze.",
+  "files": [
+    {
+      "path": "research/salaries/gap-fill-2026-11-02/health_boards/README.md",
+      "sha256": "1811cd17f2ee0d47055cf9bcad09d5e15eb425690275e7c9bbab544c5184c4ca",
+      "bytes": 6210
+    },
+    {
+      "path": "research/salaries/gap-fill-2026-11-02/health_boards/assigned-leads.json",
+      "sha256": "22061b30f9fff8238a925bf0a83f30844c1cabbd0f456f67201c3f365306a749",
+      "bytes": 2155
+    },
+    {
+      "path": "research/salaries/gap-fill-2026-11-02/health_boards/baseline-board-coverage.json",
+      "sha256": "36a9b9e88f1589cd08b2526495877985a25b38a302298e9f228a96a758398197",
+      "bytes": 914
+    },
+    {
+      "path": "research/salaries/gap-fill-2026-11-02/health_boards/candidate-sources-before-root-adoption.json",
+      "sha256": "0259b60f20ce6f770d140863cc3ea6c3c002286ccb70e95c7fb7cb5d7267d3fa",
+      "bytes": 134688
+    },
+    {
+      "path": "research/salaries/gap-fill-2026-11-02/health_boards/extraction-summary.json",
+      "sha256": "eaec2045e8c448706baeaaf686c4452127aae5c9c691e76abf40b4c1dfffd49d",
+      "bytes": 5598
+    },
+    {
+      "path": "research/salaries/gap-fill-2026-11-02/health_boards/gap-health-boards-island-2015-16-row-review.json",
+      "sha256": "0df31e6f47a8a8a12ac5f50c7acf395a0c01f8d25e7c5a36ce02e78a902afa8e",
+      "bytes": 17225
+    },
+    {
+      "path": "research/salaries/gap-fill-2026-11-02/health_boards/gap-health-boards-island-2015-16-visibility.json",
+      "sha256": "63da80613ddaa48ba6aadd3735a9900709d187288ad41b69c80dd7fe48e3f41e",
+      "bytes": 1192
+    },
+    {
+      "path": "research/salaries/gap-fill-2026-11-02/health_boards/gap-health-boards-island-2016-17-row-review.json",
+      "sha256": "683cbd7fac4bda198255ae4929a322c8bdfa96473948f1bfe1ae9e3aa2a5449b",
+      "bytes": 17017
+    },
+    {
+      "path": "research/salaries/gap-fill-2026-11-02/health_boards/gap-health-boards-island-2016-17-visibility.json",
+      "sha256": "9089e5a36676189f9f7c6dc5e6887660f3eec2f610d543e3041c61d045e5e80d",
+      "bytes": 1188
+    },
+    {
+      "path": "research/salaries/gap-fill-2026-11-02/health_boards/gap-health-boards-island-2017-18-row-review.json",
+      "sha256": "8051fb8270ef03f685a3f983605dfcf8b775bce9cc8fbf901126fc808651c55c",
+      "bytes": 23133
+    },
+    {
+      "path": "research/salaries/gap-fill-2026-11-02/health_boards/gap-health-boards-island-2017-18-visibility.json",
+      "sha256": "a3e9b5202ee18d7fa3f30ebf97910368801b096850d20300d8a3a1e369e476fa",
+      "bytes": 1193
+    },
+    {
+      "path": "research/salaries/gap-fill-2026-11-02/health_boards/gap-health-boards-island-2018-19-row-review.json",
+      "sha256": "ef2f354c9bf180b5262252265448fce488beba54330da6b42813ac6a206b573c",
+      "bytes": 24960
+    },
+    {
+      "path": "research/salaries/gap-fill-2026-11-02/health_boards/gap-health-boards-island-2018-19-visibility.json",
+      "sha256": "c8ce18c41042ac7d8ebfcc4118f60deed03fa5054ae5d2773ef822b3612939a7",
+      "bytes": 1659
+    },
+    {
+      "path": "research/salaries/gap-fill-2026-11-02/health_boards/gap-health-boards-island-2019-20-row-review.json",
+      "sha256": "ce725ab38b0bdcf29a6cb2d8579229ace27b15e08c3c56e160209fe2096a542e",
+      "bytes": 21015
+    },
+    {
+      "path": "research/salaries/gap-fill-2026-11-02/health_boards/gap-health-boards-island-2019-20-visibility.json",
+      "sha256": "ac88ca5967522d1897cf19b57c2c5ab1a132245f03aed927639ec2e20d1e3fde",
+      "bytes": 1407
+    },
+    {
+      "path": "research/salaries/gap-fill-2026-11-02/health_boards/gap-health-boards-island-2020-21-row-review.json",
+      "sha256": "8a886c5f3d1ab3e053d5585cf1ac9c61846ad217f4d541daea9389394f5a82b2",
+      "bytes": 20112
+    },
+    {
+      "path": "research/salaries/gap-fill-2026-11-02/health_boards/gap-health-boards-island-2020-21-visibility.json",
+      "sha256": "cc3c8caff199c52160dfe237e80effa2d0023b0d78331252975648f0d0bd89c0",
+      "bytes": 1661
+    },
+    {
+      "path": "research/salaries/gap-fill-2026-11-02/health_boards/gap-health-boards-island-2021-22-row-review.json",
+      "sha256": "bc0b89b0b66391d459ea7e4e5bdfd4e7860eab9450a3f0eea9a8b8982c2ea9a0",
+      "bytes": 21809
+    },
+    {
+      "path": "research/salaries/gap-fill-2026-11-02/health_boards/gap-health-boards-island-2021-22-visibility.json",
+      "sha256": "91fe4218c3b44ea126abfb04fea63bea9e33181092377af1960a24861def8771",
+      "bytes": 1406
+    },
+    {
+      "path": "research/salaries/gap-fill-2026-11-02/health_boards/gap-health-boards-island-2022-23-row-review.json",
+      "sha256": "4b0fd86425da63539534caf722f22e61773018e394df34870b432eead8f412dd",
+      "bytes": 20998
+    },
+    {
+      "path": "research/salaries/gap-fill-2026-11-02/health_boards/gap-health-boards-island-2022-23-visibility.json",
+      "sha256": "01b2c585dc388e5027253d1f45c2ca456736e5a97a7199e625a29150048c6b7f",
+      "bytes": 1406
+    },
+    {
+      "path": "research/salaries/gap-fill-2026-11-02/health_boards/gap-health-boards-island-2023-24-row-review.json",
+      "sha256": "1736e8d304a238361582ebcf78b616e6a6a3abd81d6d3dd056b6f1daf7dce482",
+      "bytes": 20896
+    },
+    {
+      "path": "research/salaries/gap-fill-2026-11-02/health_boards/gap-health-boards-island-2023-24-visibility.json",
+      "sha256": "c1e62960b874274ca17c3d050a539682844bc2a12e8d0f61fa06ab0496065f7a",
+      "bytes": 1406
+    },
+    {
+      "path": "research/salaries/gap-fill-2026-11-02/health_boards/gap-health-boards-island-2024-25-row-review.json",
+      "sha256": "31a1436f53c3da3d48fbac9998a2a124a2584f259a748cd6f9b05ad7b9387329",
+      "bytes": 18361
+    },
+    {
+      "path": "research/salaries/gap-fill-2026-11-02/health_boards/gap-health-boards-island-2024-25-visibility.json",
+      "sha256": "533dd65ed082dbaed5d46baa385225997b7b9c3f38d9ed1da6bbe83618ca2775",
+      "bytes": 1352
+    },
+    {
+      "path": "research/salaries/gap-fill-2026-11-02/health_boards/gap-health-boards-island-2025-26-row-review.json",
+      "sha256": "8dd92a133700ca8b295f88c3e2d21ee69ac7b665824489696f19d80501b84ee2",
+      "bytes": 21007
+    },
+    {
+      "path": "research/salaries/gap-fill-2026-11-02/health_boards/gap-health-boards-island-2025-26-visibility.json",
+      "sha256": "c839783b7f0ed81c44bf0096f23b7d90546e6435df300690d2361dac77907697",
+      "bytes": 1353
+    },
+    {
+      "path": "research/salaries/gap-fill-2026-11-02/health_boards/gap-health-boards-phsa-2015-16-row-review.json",
+      "sha256": "fafe86be28f2c0872b99aaa87ebe6d72a4c4f48ebbbd1cac9db83892aa849b99",
+      "bytes": 21895
+    },
+    {
+      "path": "research/salaries/gap-fill-2026-11-02/health_boards/gap-health-boards-phsa-2015-16-visibility.json",
+      "sha256": "914b70e886d68669b36d2c921e685c534d3d7e555fd8c6cc9819eb4c05e9ff03",
+      "bytes": 5130
+    },
+    {
+      "path": "research/salaries/gap-fill-2026-11-02/health_boards/gap-health-boards-phsa-2016-17-row-review.json",
+      "sha256": "c9a2f8f62c2ecb0c64d40d95748ab16745f4dc35df32eadb0a6c1aff0e9f3596",
+      "bytes": 23943
+    },
+    {
+      "path": "research/salaries/gap-fill-2026-11-02/health_boards/gap-health-boards-phsa-2016-17-visibility.json",
+      "sha256": "2729f1cd57b45778125ff322713128cf7852d5e3959fc497e06a647003cc0e30",
+      "bytes": 1191
+    },
+    {
+      "path": "research/salaries/gap-fill-2026-11-02/health_boards/gap-health-boards-phsa-2017-18-row-review.json",
+      "sha256": "ab15d3db33a9d324b2716ad4732155a09506ad5b01e2bee1d34b186173f389c6",
+      "bytes": 24285
+    },
+    {
+      "path": "research/salaries/gap-fill-2026-11-02/health_boards/gap-health-boards-phsa-2017-18-visibility.json",
+      "sha256": "888b11f0c27f67edb4671b7fd9b3bd88de952d8600380f73d534a950b4cabe26",
+      "bytes": 1189
+    },
+    {
+      "path": "research/salaries/gap-fill-2026-11-02/health_boards/gap-health-boards-phsa-2018-19-row-review.json",
+      "sha256": "cfa2baf2d514bee7d5073163fbcedf3055219100eccc4e9859c6b798cd801894",
+      "bytes": 33508
+    },
+    {
+      "path": "research/salaries/gap-fill-2026-11-02/health_boards/gap-health-boards-phsa-2018-19-visibility.json",
+      "sha256": "4ffeda6dd5b870c735791a2329d854ea0d6fd261a94e2c4ee054ab7a5b5dee78",
+      "bytes": 1406
+    },
+    {
+      "path": "research/salaries/gap-fill-2026-11-02/health_boards/gap-health-boards-phsa-2019-20-row-review.json",
+      "sha256": "f5d5f517950399caeb6770280c2f657bed98f32835707f59bd03c4d7572b54be",
+      "bytes": 24913
+    },
+    {
+      "path": "research/salaries/gap-fill-2026-11-02/health_boards/gap-health-boards-phsa-2019-20-visibility.json",
+      "sha256": "73201e5293807f3191484c9e0854919adaf69c72c3ba845b0c84d3bed07dcde4",
+      "bytes": 1404
+    },
+    {
+      "path": "research/salaries/gap-fill-2026-11-02/health_boards/gap-health-boards-phsa-2020-21-row-review.json",
+      "sha256": "b679f1075a1c11d95d98673ebc9fe4cb5f4690ce492f985c6a00f20ad5007cc3",
+      "bytes": 25380
+    },
+    {
+      "path": "research/salaries/gap-fill-2026-11-02/health_boards/gap-health-boards-phsa-2020-21-visibility.json",
+      "sha256": "3875a78f8713ce44172eed636cd3b4a48cbcddd6520998165e2728f7087520ac",
+      "bytes": 1406
+    },
+    {
+      "path": "research/salaries/gap-fill-2026-11-02/health_boards/gap-health-boards-phsa-2021-22-row-review.json",
+      "sha256": "84447d51522f59eff39863f34d20bfa37d500ca1a261d65ef8d25195aa3f75cd",
+      "bytes": 26731
+    },
+    {
+      "path": "research/salaries/gap-fill-2026-11-02/health_boards/gap-health-boards-phsa-2021-22-visibility.json",
+      "sha256": "a94126bfef300cb986e11838d860bb6c22d31dcba8647d9a645ccb613227c859",
+      "bytes": 1406
+    },
+    {
+      "path": "research/salaries/gap-fill-2026-11-02/health_boards/gap-health-boards-phsa-2022-23-row-review.json",
+      "sha256": "fe04ca245c54527379fdb5e07a135c0a4cca0545c873a9ceb8a23bc4b038beff",
+      "bytes": 31497
+    },
+    {
+      "path": "research/salaries/gap-fill-2026-11-02/health_boards/gap-health-boards-phsa-2022-23-visibility.json",
+      "sha256": "f7e62732da7778092fbf3d11ec5d2a1fd86c2f1e2370c45ae004f5c9ea82e9ba",
+      "bytes": 1646
+    },
+    {
+      "path": "research/salaries/gap-fill-2026-11-02/health_boards/gap-health-boards-phsa-2023-24-row-review.json",
+      "sha256": "151112c06ce24eb427c3c13135c871c89e3f64f257804be2450359eaf0afbafc",
+      "bytes": 30949
+    },
+    {
+      "path": "research/salaries/gap-fill-2026-11-02/health_boards/gap-health-boards-phsa-2023-24-visibility.json",
+      "sha256": "f33895196255db13cb997c0525ae9e0afb5141c2d51e01e605414322c8af645f",
+      "bytes": 3392
+    },
+    {
+      "path": "research/salaries/gap-fill-2026-11-02/health_boards/gap-health-boards-providence-2020-21-row-review.json",
+      "sha256": "d5bb8188171673fd059f345f41ca4b027c96cc19bc84b98a3245b7a9ac129824",
+      "bytes": 24798
+    },
+    {
+      "path": "research/salaries/gap-fill-2026-11-02/health_boards/gap-health-boards-providence-2020-21-visibility.json",
+      "sha256": "826ea46dd9ceb5b4c6aa931a38ff7fc5313bac795e51582a5d2e58ffe4db28f9",
+      "bytes": 1194
+    },
+    {
+      "path": "research/salaries/gap-fill-2026-11-02/health_boards/gap-health-boards-providence-2021-22-row-review.json",
+      "sha256": "c1c4a9d958b2e3c6086564a7673e4c35db5ef822d368960ec6d6e78faea29aec",
+      "bytes": 27348
+    },
+    {
+      "path": "research/salaries/gap-fill-2026-11-02/health_boards/gap-health-boards-providence-2021-22-visibility.json",
+      "sha256": "ef3deb8e0f4bf3083e6d56a9abca9c5a6c30c4bb150e442d574649c754ddadf8",
+      "bytes": 1194
+    },
+    {
+      "path": "research/salaries/gap-fill-2026-11-02/health_boards/gap-health-boards-providence-2022-23-row-review.json",
+      "sha256": "c032ea788656123992f728c1c29f54f2502adac1c1f503539e0859d2c8bc1fcd",
+      "bytes": 21440
+    },
+    {
+      "path": "research/salaries/gap-fill-2026-11-02/health_boards/gap-health-boards-providence-2022-23-visibility.json",
+      "sha256": "af693dcf2d275320907777d2b15eb1e4545a2c4258316d785ce458948a8962ed",
+      "bytes": 1194
+    },
+    {
+      "path": "research/salaries/gap-fill-2026-11-02/health_boards/gap-health-boards-providence-2024-25-row-review.json",
+      "sha256": "3cbe32839ce2c6770e57a6b617938e12537838d2cc3adac86c6b1d9aedf3caea",
+      "bytes": 21551
+    },
+    {
+      "path": "research/salaries/gap-fill-2026-11-02/health_boards/gap-health-boards-providence-2024-25-visibility.json",
+      "sha256": "155c89aedd85e61c3adbcadb7b9893250b77ea626c2e84dd67443477cd5d3618",
+      "bytes": 1194
+    },
+    {
+      "path": "research/salaries/gap-fill-2026-11-02/health_boards/gap-health-boards-vch-2022-23-row-review.json",
+      "sha256": "3311e15e635c079c98d9954e2c24f158025e55be53f9a5abc30ca0ead339b08a",
+      "bytes": 24210
+    },
+    {
+      "path": "research/salaries/gap-fill-2026-11-02/health_boards/gap-health-boards-vch-2022-23-source-variant-v1-evidence.json.gzip",
+      "sha256": "95feaeb61212c8b7701ffa17e37fbbc6272848279eefb4d816e7dc560c5250c3",
+      "bytes": 46373
+    },
+    {
+      "path": "research/salaries/gap-fill-2026-11-02/health_boards/gap-health-boards-vch-2022-23-visibility.json",
+      "sha256": "4f1aa8da103affe3e63223ac067e42c9cbd48af3956ddedaa1360307a08ca100",
+      "bytes": 4541
+    },
+    {
+      "path": "research/salaries/gap-fill-2026-11-02/health_boards/handoff-candidate.json",
+      "sha256": "ec94d2d1e54d99f4c5838249a90b528ce2f06133d20ef10e6b54dc46222625b1",
+      "bytes": 17770
+    },
+    {
+      "path": "research/salaries/gap-fill-2026-11-02/health_boards/http-snapshots/88828f44bcf57c3fb8.bin.gzip",
+      "sha256": "92d4edbc0e1e5b5bd68eeddec4f65bd47185e8cc28407a986b72645f8d8e6093",
+      "bytes": 40162
+    },
+    {
+      "path": "research/salaries/gap-fill-2026-11-02/health_boards/http-snapshots/f93509c7ea9053f683.bin.gzip",
+      "sha256": "0132ac78c773844c7653437ca4edf84d7f02fcca7804129b04a51a5c882adafc",
+      "bytes": 12349
+    },
+    {
+      "path": "research/salaries/gap-fill-2026-11-02/health_boards/library-17fe1b952abd.json",
+      "sha256": "ea451232ebeb59400b5fb29efde2345872c1c331c650a5f943e973f05290b6bc",
+      "bytes": 5902
+    },
+    {
+      "path": "research/salaries/gap-fill-2026-11-02/health_boards/library-328d3afe2468.json",
+      "sha256": "86aabd6adfc552b6d0153f8867fb6860d5cdf9d599fe757a0635877d217bfc9a",
+      "bytes": 2092
+    },
+    {
+      "path": "research/salaries/gap-fill-2026-11-02/health_boards/library-71b6977ef515.json",
+      "sha256": "7254c503226e2c850a03799da21f1ddcb76d79f7dd0bd9d7c9fd5c27211bbecd",
+      "bytes": 5902
+    },
+    {
+      "path": "research/salaries/gap-fill-2026-11-02/health_boards/library-799bf0ee22bc.json",
+      "sha256": "dc7bf4fcf2da1ea479bb959de77f1515a6e592dac545ff4e0386a5e8cc481eee",
+      "bytes": 2136
+    },
+    {
+      "path": "research/salaries/gap-fill-2026-11-02/health_boards/library-891e510a1872.json",
+      "sha256": "3c2b378f7987281efb9ae0d7d5fd34ebb7f8597dd4e86fea307bdb66034fd1f8",
+      "bytes": 3557
+    },
+    {
+      "path": "research/salaries/gap-fill-2026-11-02/health_boards/library-adbecdcc69a5.json",
+      "sha256": "6cdf2391b694ea44dff2c071f336b77222994a64b266a5ef24e4d8f57c10ab00",
+      "bytes": 3557
+    },
+    {
+      "path": "research/salaries/gap-fill-2026-11-02/health_boards/library-c4f5587d7fde.json",
+      "sha256": "e67ece6855ac509abd8d3b28e4148524ca2d10361d39cbc5b0d9a411ca2ffeef",
+      "bytes": 3557
+    },
+    {
+      "path": "research/salaries/gap-fill-2026-11-02/health_boards/library-current-retrieval-receipts.json",
+      "sha256": "481b6ae9f55e096b33019aea77254400122f94658ba34df7c54eec23638e7b76",
+      "bytes": 5478
+    },
+    {
+      "path": "research/salaries/gap-fill-2026-11-02/health_boards/library-e1c78e7e25b5.json",
+      "sha256": "7c63f2807af256d9fc3bee7fded93e4fd47c4f786caae201d4de521d3819a050",
+      "bytes": 5767
+    },
+    {
+      "path": "research/salaries/gap-fill-2026-11-02/health_boards/library-f9c9b50d7a14.json",
+      "sha256": "463b6707058b9534385439bc85f5a0ff6b72174d8ba0382286baa13d4b7e52a7",
+      "bytes": 2087
+    },
+    {
+      "path": "research/salaries/gap-fill-2026-11-02/health_boards/library-originals.json",
+      "sha256": "7f2818f088779286f223d442d9d14b143e426c42dc6e671f8fec6b3d535c6693",
+      "bytes": 2246
+    },
+    {
+      "path": "research/salaries/gap-fill-2026-11-02/health_boards/library-vch-2022-23-retrieval.json",
+      "sha256": "d34a726f9bcfac8447addfc4900dba112650e2c7f5bc729b4df90cca1c1dd7b1",
+      "bytes": 1050
+    },
+    {
+      "path": "research/salaries/gap-fill-2026-11-02/health_boards/peer-review-packet-v2.json",
+      "sha256": "cd6ad0e6b3ff7575d7d03918251b8ff32472f836de1f57527a093fb23ae53600",
+      "bytes": 40298
+    },
+    {
+      "path": "research/salaries/gap-fill-2026-11-02/health_boards/peer-review-packet.json",
+      "sha256": "d576859ee456269a0cfb7f509a7b71e830f6203603e930165803488b824f2142",
+      "bytes": 28032
+    },
+    {
+      "path": "research/salaries/gap-fill-2026-11-02/health_boards/pre-adoption-provenance/gap-health-boards-island-2015-16.json.gzip",
+      "sha256": "6ac9eb67b7312a15b6659d6893837e63e3a2ff1d0eb4401fe59628a18660d7c3",
+      "bytes": 1943
+    },
+    {
+      "path": "research/salaries/gap-fill-2026-11-02/health_boards/pre-adoption-provenance/gap-health-boards-island-2016-17.json.gzip",
+      "sha256": "9bc06bc4a075e2ded71874ff7c1efd40a7b9db859c6e8d215944f9ae1390923d",
+      "bytes": 1943
+    },
+    {
+      "path": "research/salaries/gap-fill-2026-11-02/health_boards/pre-adoption-provenance/gap-health-boards-island-2017-18.json.gzip",
+      "sha256": "55243a89c3436f7b565f8691630f55edd6e5f147fc6b867359eb0d38bb4eb78f",
+      "bytes": 2357
+    },
+    {
+      "path": "research/salaries/gap-fill-2026-11-02/health_boards/pre-adoption-provenance/gap-health-boards-island-2018-19.json.gzip",
+      "sha256": "9796c1b20cbde493312138d54bf5b1241d6e572459bf7e718502b4a4b1dcb00f",
+      "bytes": 2538
+    },
+    {
+      "path": "research/salaries/gap-fill-2026-11-02/health_boards/pre-adoption-provenance/gap-health-boards-island-2019-20.json.gzip",
+      "sha256": "463196f237e39544a1426396901193dcefec7fea22e8cef103766c0d10f26c80",
+      "bytes": 2263
+    },
+    {
+      "path": "research/salaries/gap-fill-2026-11-02/health_boards/pre-adoption-provenance/gap-health-boards-island-2020-21.json.gzip",
+      "sha256": "8ebee1a0e0dcef5bd298756b84931e24eeb674ea6ac3ebcffa65c0a5f56d2b08",
+      "bytes": 2047
+    },
+    {
+      "path": "research/salaries/gap-fill-2026-11-02/health_boards/pre-adoption-provenance/gap-health-boards-island-2021-22.json.gzip",
+      "sha256": "8947c74a27e458a9a4026e6c38ae8db9be36f931be823e5ca1b2b001010be249",
+      "bytes": 2154
+    },
+    {
+      "path": "research/salaries/gap-fill-2026-11-02/health_boards/pre-adoption-provenance/gap-health-boards-island-2022-23.json.gzip",
+      "sha256": "8c42617b8bc14a4aea3bb3fb6ce78bcf2f648a91ebc7245094ff459cb10597c4",
+      "bytes": 2216
+    },
+    {
+      "path": "research/salaries/gap-fill-2026-11-02/health_boards/pre-adoption-provenance/gap-health-boards-island-2023-24.json.gzip",
+      "sha256": "16d4b575ef4a022efe314998bd0bd3319a0beb8b5c0bf68b01d9d7a5d9d426a3",
+      "bytes": 2226
+    },
+    {
+      "path": "research/salaries/gap-fill-2026-11-02/health_boards/pre-adoption-provenance/gap-health-boards-island-2024-25.json.gzip",
+      "sha256": "caf1efc60803789ce8a5952046f00b4188e31a1c5b42cc35dc038398a155942b",
+      "bytes": 2152
+    },
+    {
+      "path": "research/salaries/gap-fill-2026-11-02/health_boards/pre-adoption-provenance/gap-health-boards-island-2025-26.json.gzip",
+      "sha256": "37f766818e922519e90ea160f4911c5f3fdff3ea30ed98dd58668dca473fb420",
+      "bytes": 2334
+    },
+    {
+      "path": "research/salaries/gap-fill-2026-11-02/health_boards/pre-adoption-provenance/gap-health-boards-phsa-2015-16.json.gzip",
+      "sha256": "54aca52884498612a565714b741b052562af2e946b33dc048e54d8779ea63095",
+      "bytes": 2216
+    },
+    {
+      "path": "research/salaries/gap-fill-2026-11-02/health_boards/pre-adoption-provenance/gap-health-boards-phsa-2016-17.json.gzip",
+      "sha256": "a36d9d198dd6afa70531e4b3a4390331b1d3826170a6da8568f14ca002473752",
+      "bytes": 2328
+    },
+    {
+      "path": "research/salaries/gap-fill-2026-11-02/health_boards/pre-adoption-provenance/gap-health-boards-phsa-2017-18.json.gzip",
+      "sha256": "fae2ae773035365a43abef7a890baa9ee7e903a92105d06fbf14609b309a2093",
+      "bytes": 2291
+    },
+    {
+      "path": "research/salaries/gap-fill-2026-11-02/health_boards/pre-adoption-provenance/gap-health-boards-phsa-2018-19.json.gzip",
+      "sha256": "8729e6180acec774b5dd9e7d55d0498f040fc063b0c25ed05386958c7a0a7421",
+      "bytes": 2858
+    },
+    {
+      "path": "research/salaries/gap-fill-2026-11-02/health_boards/pre-adoption-provenance/gap-health-boards-phsa-2019-20.json.gzip",
+      "sha256": "a0c8b893aa08ac136757a0d4d72240a234bad37f4fdff9c0e4f3e32fc4c3a5ee",
+      "bytes": 2373
+    },
+    {
+      "path": "research/salaries/gap-fill-2026-11-02/health_boards/pre-adoption-provenance/gap-health-boards-phsa-2020-21.json.gzip",
+      "sha256": "5c4c18a75a30655f80460a5a55334081384b945726ed9031f4029864ad42b17a",
+      "bytes": 2332
+    },
+    {
+      "path": "research/salaries/gap-fill-2026-11-02/health_boards/pre-adoption-provenance/gap-health-boards-phsa-2021-22.json.gzip",
+      "sha256": "1385b6f8ea0d924ceb89a395c60ad8209fec2c498e48a4356320aaac1e37698b",
+      "bytes": 2535
+    },
+    {
+      "path": "research/salaries/gap-fill-2026-11-02/health_boards/pre-adoption-provenance/gap-health-boards-phsa-2022-23.json.gzip",
+      "sha256": "798cc8359c37e8398aa8e10c9858b6834142474414de3eaf32c6281fea864d36",
+      "bytes": 2827
+    },
+    {
+      "path": "research/salaries/gap-fill-2026-11-02/health_boards/pre-adoption-provenance/gap-health-boards-phsa-2023-24.json.gzip",
+      "sha256": "878c2ba6a99180b00161c2c8a062e83c50e9d9516a19c0d08dfee245684a877d",
+      "bytes": 2898
+    },
+    {
+      "path": "research/salaries/gap-fill-2026-11-02/health_boards/pre-adoption-provenance/gap-health-boards-providence-2020-21.json.gzip",
+      "sha256": "d9d6c1090a0a42eeec6a115de964b5f6d1fda5c6ba1098dd77ba2723ae0687e1",
+      "bytes": 2048
+    },
+    {
+      "path": "research/salaries/gap-fill-2026-11-02/health_boards/pre-adoption-provenance/gap-health-boards-providence-2021-22.json.gzip",
+      "sha256": "a09133a7d4b954dd5c582deeefe95f70dd4cb4a36f27268b0dbe4854bb37e6aa",
+      "bytes": 2169
+    },
+    {
+      "path": "research/salaries/gap-fill-2026-11-02/health_boards/pre-adoption-provenance/gap-health-boards-providence-2022-23.json.gzip",
+      "sha256": "924be0b8f47eb44bf1ced8e7cb6c754940ed03b844dfa4fa70ca62392feb0f67",
+      "bytes": 2066
+    },
+    {
+      "path": "research/salaries/gap-fill-2026-11-02/health_boards/pre-adoption-provenance/gap-health-boards-providence-2024-25.json.gzip",
+      "sha256": "6f5eedf55f51e47081cbe68e8b27c852aa700aa71aaec890282d840298f5c64b",
+      "bytes": 2066
+    },
+    {
+      "path": "research/salaries/gap-fill-2026-11-02/health_boards/pre-adoption-provenance/gap-health-boards-vch-2022-23.json.gzip",
+      "sha256": "ef613aef647cc0e5785bd42f6419e50196acbd2e8167a1cb8627f355ad941f3b",
+      "bytes": 2388
+    },
+    {
+      "path": "research/salaries/gap-fill-2026-11-02/health_boards/retrieval-refresh.json",
+      "sha256": "bfb7a4e4c79215cf9da503814e53b0ecc0960eaacd2feeb0c0a17bee3c398744",
+      "bytes": 21276
+    },
+    {
+      "path": "research/salaries/gap-fill-2026-11-02/health_boards/review-adoption.json",
+      "sha256": "02c48f1351b4b034c1ab7c6ed031798b65c58ecba40c965048340b765c76abe0",
+      "bytes": 9651
+    },
+    {
+      "path": "research/salaries/gap-fill-2026-11-02/health_boards/source-specs.json",
+      "sha256": "91b1e0e7308bb8026bd3a12cfb9e258015a400eb4244035cc1b1613124710c88",
+      "bytes": 45202
+    },
+    {
+      "path": "research/salaries/gap-fill-2026-11-02/health_boards/vch-2022-23-source-variant-adoption.json",
+      "sha256": "77b5a79881390e385db712e4faeb3952d1e4b642ee00c315202138ed824fbc75",
+      "bytes": 2358
+    },
+    {
+      "path": "research/salaries/gap-fill-2026-11-02/health_boards/visibility-manifest-v2.json",
+      "sha256": "462a801952f5f32ef2d04d492d2213ab27c137729f069c06683d386566e4f0ea",
+      "bytes": 16695
+    },
+    {
+      "path": "research/salaries/gap-fill-2026-11-02/health_boards/visibility-manifest.json",
+      "sha256": "f1e76909d72fb840eb07a230706a8154c531e6b3a26fa2425d4d5ab897937790",
+      "bytes": 16345
+    },
+    {
+      "path": "research/salaries/gap-fill-2026-11-02/health_boards/visibility-v2/gap-health-boards-island-2015-16-visibility.json",
+      "sha256": "80ffe976772bd868497ac38a2c6a3986faaa53745a9ea6e02ce419bd54d81925",
+      "bytes": 1192
+    },
+    {
+      "path": "research/salaries/gap-fill-2026-11-02/health_boards/visibility-v2/gap-health-boards-island-2016-17-visibility.json",
+      "sha256": "95622e3f04180a7e35b74d64209cd297c39e0c75ee72c520d300d59a39c12a5c",
+      "bytes": 1188
+    },
+    {
+      "path": "research/salaries/gap-fill-2026-11-02/health_boards/visibility-v2/gap-health-boards-island-2017-18-visibility.json",
+      "sha256": "c3f128abbc5665eaa5d10798ebcce47e8781b5f0f79915272e38f7fd6b2b7cd1",
+      "bytes": 1192
+    },
+    {
+      "path": "research/salaries/gap-fill-2026-11-02/health_boards/visibility-v2/gap-health-boards-island-2018-19-visibility.json",
+      "sha256": "33d7a3fb09ee4015d0136161b84c3800cb22b243576d97a844fdedc2a3bcb11e",
+      "bytes": 1658
+    },
+    {
+      "path": "research/salaries/gap-fill-2026-11-02/health_boards/visibility-v2/gap-health-boards-island-2019-20-visibility.json",
+      "sha256": "ac88ca5967522d1897cf19b57c2c5ab1a132245f03aed927639ec2e20d1e3fde",
+      "bytes": 1407
+    },
+    {
+      "path": "research/salaries/gap-fill-2026-11-02/health_boards/visibility-v2/gap-health-boards-island-2020-21-visibility.json",
+      "sha256": "cc3c8caff199c52160dfe237e80effa2d0023b0d78331252975648f0d0bd89c0",
+      "bytes": 1661
+    },
+    {
+      "path": "research/salaries/gap-fill-2026-11-02/health_boards/visibility-v2/gap-health-boards-island-2021-22-visibility.json",
+      "sha256": "91fe4218c3b44ea126abfb04fea63bea9e33181092377af1960a24861def8771",
+      "bytes": 1406
+    },
+    {
+      "path": "research/salaries/gap-fill-2026-11-02/health_boards/visibility-v2/gap-health-boards-island-2022-23-visibility.json",
+      "sha256": "01b2c585dc388e5027253d1f45c2ca456736e5a97a7199e625a29150048c6b7f",
+      "bytes": 1406
+    },
+    {
+      "path": "research/salaries/gap-fill-2026-11-02/health_boards/visibility-v2/gap-health-boards-island-2023-24-visibility.json",
+      "sha256": "c1e62960b874274ca17c3d050a539682844bc2a12e8d0f61fa06ab0496065f7a",
+      "bytes": 1406
+    },
+    {
+      "path": "research/salaries/gap-fill-2026-11-02/health_boards/visibility-v2/gap-health-boards-island-2024-25-visibility.json",
+      "sha256": "533dd65ed082dbaed5d46baa385225997b7b9c3f38d9ed1da6bbe83618ca2775",
+      "bytes": 1352
+    },
+    {
+      "path": "research/salaries/gap-fill-2026-11-02/health_boards/visibility-v2/gap-health-boards-island-2025-26-visibility.json",
+      "sha256": "c839783b7f0ed81c44bf0096f23b7d90546e6435df300690d2361dac77907697",
+      "bytes": 1353
+    },
+    {
+      "path": "research/salaries/gap-fill-2026-11-02/health_boards/visibility-v2/gap-health-boards-phsa-2015-16-visibility.json",
+      "sha256": "1a13eb32b95e967b5dc5312535744684e0e898e1fd5921faf9df74bab927cafd",
+      "bytes": 4361
+    },
+    {
+      "path": "research/salaries/gap-fill-2026-11-02/health_boards/visibility-v2/gap-health-boards-phsa-2016-17-visibility.json",
+      "sha256": "da0a0d7d6276a54ebc70c9b59faf8df4b6cddc1e5d06549d39cfa961815d9716",
+      "bytes": 1190
+    },
+    {
+      "path": "research/salaries/gap-fill-2026-11-02/health_boards/visibility-v2/gap-health-boards-phsa-2017-18-visibility.json",
+      "sha256": "888b11f0c27f67edb4671b7fd9b3bd88de952d8600380f73d534a950b4cabe26",
+      "bytes": 1189
+    },
+    {
+      "path": "research/salaries/gap-fill-2026-11-02/health_boards/visibility-v2/gap-health-boards-phsa-2018-19-visibility.json",
+      "sha256": "b4ec3701d6ca7181ac4ee8282ae23873e478a6d9033b154796152658c5453c99",
+      "bytes": 1406
+    },
+    {
+      "path": "research/salaries/gap-fill-2026-11-02/health_boards/visibility-v2/gap-health-boards-phsa-2019-20-visibility.json",
+      "sha256": "73201e5293807f3191484c9e0854919adaf69c72c3ba845b0c84d3bed07dcde4",
+      "bytes": 1404
+    },
+    {
+      "path": "research/salaries/gap-fill-2026-11-02/health_boards/visibility-v2/gap-health-boards-phsa-2020-21-visibility.json",
+      "sha256": "a1c7f83e4cfe5252b2c214bd279f43a20e4f0f1a3e835a31da659d77237b10ef",
+      "bytes": 1405
+    },
+    {
+      "path": "research/salaries/gap-fill-2026-11-02/health_boards/visibility-v2/gap-health-boards-phsa-2021-22-visibility.json",
+      "sha256": "c0b2fe91a51b35954e8fe49a4584b98faa2e7aefac228d39969d2e38aebf90f8",
+      "bytes": 1405
+    },
+    {
+      "path": "research/salaries/gap-fill-2026-11-02/health_boards/visibility-v2/gap-health-boards-phsa-2022-23-visibility.json",
+      "sha256": "f7e62732da7778092fbf3d11ec5d2a1fd86c2f1e2370c45ae004f5c9ea82e9ba",
+      "bytes": 1646
+    },
+    {
+      "path": "research/salaries/gap-fill-2026-11-02/health_boards/visibility-v2/gap-health-boards-phsa-2023-24-visibility.json",
+      "sha256": "c87ab77e2c2289df4b38a1a802ed60936479cacd2d25e2abda3ce172e60395de",
+      "bytes": 3392
+    },
+    {
+      "path": "research/salaries/gap-fill-2026-11-02/health_boards/visibility-v2/gap-health-boards-providence-2020-21-visibility.json",
+      "sha256": "826ea46dd9ceb5b4c6aa931a38ff7fc5313bac795e51582a5d2e58ffe4db28f9",
+      "bytes": 1194
+    },
+    {
+      "path": "research/salaries/gap-fill-2026-11-02/health_boards/visibility-v2/gap-health-boards-providence-2021-22-visibility.json",
+      "sha256": "ef3deb8e0f4bf3083e6d56a9abca9c5a6c30c4bb150e442d574649c754ddadf8",
+      "bytes": 1194
+    },
+    {
+      "path": "research/salaries/gap-fill-2026-11-02/health_boards/visibility-v2/gap-health-boards-providence-2022-23-visibility.json",
+      "sha256": "af693dcf2d275320907777d2b15eb1e4545a2c4258316d785ce458948a8962ed",
+      "bytes": 1194
+    },
+    {
+      "path": "research/salaries/gap-fill-2026-11-02/health_boards/visibility-v2/gap-health-boards-providence-2024-25-visibility.json",
+      "sha256": "155c89aedd85e61c3adbcadb7b9893250b77ea626c2e84dd67443477cd5d3618",
+      "bytes": 1194
+    },
+    {
+      "path": "research/salaries/gap-fill-2026-11-02/health_boards/visibility-v2/gap-health-boards-vch-2022-23-visibility.json",
+      "sha256": "4f1aa8da103affe3e63223ac067e42c9cbd48af3956ddedaa1360307a08ca100",
+      "bytes": 4541
+    },
+    {
+      "path": "research/salaries/gap-fill-health-boards/README.md",
+      "sha256": "52adf45e15b66001c636799fb5b33e7dfbb85f42cbfb8b322d58fa01f336c73e",
+      "bytes": 433
+    },
+    {
+      "path": "research/salaries/gap-fill-health-boards/evidence/gap-health-boards-island-2015-16.json.gzip",
+      "sha256": "72d81b01bfab34362c0b0a800f9016985957e5a31e65988a244b4043229c73b4",
+      "bytes": 14463
+    },
+    {
+      "path": "research/salaries/gap-fill-health-boards/evidence/gap-health-boards-island-2016-17.json.gzip",
+      "sha256": "09cdc6c54963f6e241e94dc2f46f748ac34f11a081d2727a4ca3444ca768d0b5",
+      "bytes": 11322
+    },
+    {
+      "path": "research/salaries/gap-fill-health-boards/evidence/gap-health-boards-island-2017-18.json.gzip",
+      "sha256": "f63bb739e8d445670f6df1a2bb333a2dc38e12b3195957a18d181359f0963237",
+      "bytes": 20341
+    },
+    {
+      "path": "research/salaries/gap-fill-health-boards/evidence/gap-health-boards-island-2018-19.json.gzip",
+      "sha256": "e3a60bd443e9f797543cb15c667561021545b0a59de2a06fa21a1a0c901fb00e",
+      "bytes": 20493
+    },
+    {
+      "path": "research/salaries/gap-fill-health-boards/evidence/gap-health-boards-island-2019-20.json.gzip",
+      "sha256": "d72a4cf8f89388af7d6ebd05fd98ad8698ff80eca77967c3290c2c9e3da736be",
+      "bytes": 16996
+    },
+    {
+      "path": "research/salaries/gap-fill-health-boards/evidence/gap-health-boards-island-2020-21.json.gzip",
+      "sha256": "34e6a42dcdac8b99404536f079151675211a611a4580a8c8c377f5a105b4bb92",
+      "bytes": 15994
+    },
+    {
+      "path": "research/salaries/gap-fill-health-boards/evidence/gap-health-boards-island-2021-22.json.gzip",
+      "sha256": "e21f7bfda80c1aebe8ba687a74a7601671e7159bdb2aadb0167832730aa2076f",
+      "bytes": 12594
+    },
+    {
+      "path": "research/salaries/gap-fill-health-boards/evidence/gap-health-boards-island-2022-23.json.gzip",
+      "sha256": "a0568718db2b1643f4fd2384556bfbd4efdeb7177b46b23dad88bbe13b6e63b8",
+      "bytes": 12162
+    },
+    {
+      "path": "research/salaries/gap-fill-health-boards/evidence/gap-health-boards-island-2023-24.json.gzip",
+      "sha256": "feebb5309f677cd166526bd63aa8fd3c3ab0b52a7d92f7b2db5fb065d9fe4518",
+      "bytes": 12052
+    },
+    {
+      "path": "research/salaries/gap-fill-health-boards/evidence/gap-health-boards-island-2024-25.json.gzip",
+      "sha256": "26d1e5ea09573d9ee2a00cf729e0e46590123788291c3a311ae5ec6c02c6986b",
+      "bytes": 9668
+    },
+    {
+      "path": "research/salaries/gap-fill-health-boards/evidence/gap-health-boards-island-2025-26.json.gzip",
+      "sha256": "96883791627c859d262e0b518b1d7cf50ff699ca4d10aaf5f8a8861335f5b83c",
+      "bytes": 11866
+    },
+    {
+      "path": "research/salaries/gap-fill-health-boards/evidence/gap-health-boards-phsa-2015-16.json.gzip",
+      "sha256": "069dfd6f18fa72fdcac6211ff25278b02fc9104241705f1daaef43989dace5e0",
+      "bytes": 16951
+    },
+    {
+      "path": "research/salaries/gap-fill-health-boards/evidence/gap-health-boards-phsa-2016-17.json.gzip",
+      "sha256": "7b883b92c5471434dc589ab833f977c0fcec94e66c8dcfd1699cad8d413806b4",
+      "bytes": 25207
+    },
+    {
+      "path": "research/salaries/gap-fill-health-boards/evidence/gap-health-boards-phsa-2017-18.json.gzip",
+      "sha256": "7c5fb6803df9b035b1189de281f3e7ac0cfa491c864fd17cd9a7421527adfc83",
+      "bytes": 23289
+    },
+    {
+      "path": "research/salaries/gap-fill-health-boards/evidence/gap-health-boards-phsa-2018-19.json.gzip",
+      "sha256": "a049d81d913e4afd2a6ed07d353b36a91bcfa4703568b274b007b3f223a7548b",
+      "bytes": 26020
+    },
+    {
+      "path": "research/salaries/gap-fill-health-boards/evidence/gap-health-boards-phsa-2019-20.json.gzip",
+      "sha256": "315fec0811a80294fc7a6034de37b49c9a266a336e4120c6f2178e715846ec6e",
+      "bytes": 21935
+    },
+    {
+      "path": "research/salaries/gap-fill-health-boards/evidence/gap-health-boards-phsa-2020-21.json.gzip",
+      "sha256": "f0b465f25da06d02d246cfa691aca588ba161e4d54e9369c3627813a6f771bea",
+      "bytes": 22781
+    },
+    {
+      "path": "research/salaries/gap-fill-health-boards/evidence/gap-health-boards-phsa-2021-22.json.gzip",
+      "sha256": "439415ab51c171137e6d220ebf9b04ed816d217f000d92b9834ca939330752cd",
+      "bytes": 24964
+    },
+    {
+      "path": "research/salaries/gap-fill-health-boards/evidence/gap-health-boards-phsa-2022-23.json.gzip",
+      "sha256": "f1b966f90e33e459beaf4551fb540fe8b703f2ba6c2845759b6147a722145ec2",
+      "bytes": 24437
+    },
+    {
+      "path": "research/salaries/gap-fill-health-boards/evidence/gap-health-boards-phsa-2023-24.json.gzip",
+      "sha256": "bf39c6bbffb8b42f12b7e344521220491bcdd2664afc4908c10c2bfc2072d904",
+      "bytes": 24080
+    },
+    {
+      "path": "research/salaries/gap-fill-health-boards/evidence/gap-health-boards-providence-2020-21.json.gzip",
+      "sha256": "daa8465bc6d686de987be11bf32490a8149e3b1810f2b80ca06a4687175107d6",
+      "bytes": 10980
+    },
+    {
+      "path": "research/salaries/gap-fill-health-boards/evidence/gap-health-boards-providence-2021-22.json.gzip",
+      "sha256": "b1a0a9a2b08422644373d565f31e02e4e3bf40dcb62941941ad4e6db7789bb4f",
+      "bytes": 11838
+    },
+    {
+      "path": "research/salaries/gap-fill-health-boards/evidence/gap-health-boards-providence-2022-23.json.gzip",
+      "sha256": "5859c3fc8067a1c36a099551f10d32623b42ac8345d7b67c91b2597f22e022a7",
+      "bytes": 11457
+    },
+    {
+      "path": "research/salaries/gap-fill-health-boards/evidence/gap-health-boards-providence-2024-25.json.gzip",
+      "sha256": "b056054e3e2589d75f42d68ab8a2adea7abaaeb204c1fdabdc49164af68e676b",
+      "bytes": 11488
+    },
+    {
+      "path": "research/salaries/gap-fill-health-boards/evidence/gap-health-boards-vch-2022-23.json.gzip",
+      "sha256": "6ab7e2b945388016022a48938166ae8e701f65733f2efb112729b9e434050e2a",
+      "bytes": 46391
+    },
+    {
+      "path": "research/salaries/gap-fill-health-boards/gap-health-boards-island-2015-16.json.gzip",
+      "sha256": "aa45cd0e5ea4583a227753dc7e34f9cef99baa6fb2537d7a89c4f23255bc6d4a",
+      "bytes": 312
+    },
+    {
+      "path": "research/salaries/gap-fill-health-boards/gap-health-boards-island-2016-17.json.gzip",
+      "sha256": "2fbdabebf00af4501837bd4915907a6a03e10405078ac2798de69f547012dd3e",
+      "bytes": 345
+    },
+    {
+      "path": "research/salaries/gap-fill-health-boards/gap-health-boards-island-2017-18.json.gzip",
+      "sha256": "ce9b3b478d97135d8473ac2f6dd1be8aa85d9dacb75c7e8e914b8ef9f6e24c4f",
+      "bytes": 466
+    },
+    {
+      "path": "research/salaries/gap-fill-health-boards/gap-health-boards-island-2018-19.json.gzip",
+      "sha256": "1039eaca5693d89615e3442089f63536cd5b0522877c9a2aa70102e1a2479d90",
+      "bytes": 436
+    },
+    {
+      "path": "research/salaries/gap-fill-health-boards/gap-health-boards-island-2019-20.json.gzip",
+      "sha256": "a625e08f5f3a37712e1ef011dde637bc5ab219cd6abec68d5fe3bb68f5ac59b7",
+      "bytes": 370
+    },
+    {
+      "path": "research/salaries/gap-fill-health-boards/gap-health-boards-island-2020-21.json.gzip",
+      "sha256": "01206eb631670f82d3f96e147340773e426cea8bb34e66e76137ef8a3c4d7563",
+      "bytes": 293
+    },
+    {
+      "path": "research/salaries/gap-fill-health-boards/gap-health-boards-island-2021-22.json.gzip",
+      "sha256": "9f8de797bf5abf9443d1b40999fea6a5a6eabda5b76ceed09350f5bfcfe5ee66",
+      "bytes": 303
+    },
+    {
+      "path": "research/salaries/gap-fill-health-boards/gap-health-boards-island-2022-23.json.gzip",
+      "sha256": "b8db75a3f0e472022d3021b019b2358b3170e815b8923d8511c03ba66904813a",
+      "bytes": 323
+    },
+    {
+      "path": "research/salaries/gap-fill-health-boards/gap-health-boards-island-2023-24.json.gzip",
+      "sha256": "91d53c2594811b7ea3c7000d300da17128afd38c2ec654d145784a7de582f117",
+      "bytes": 302
+    },
+    {
+      "path": "research/salaries/gap-fill-health-boards/gap-health-boards-island-2024-25.json.gzip",
+      "sha256": "ae84c3819793dfbc075360192d801c7ed28fb4a60abb061976ae05794479cb69",
+      "bytes": 309
+    },
+    {
+      "path": "research/salaries/gap-fill-health-boards/gap-health-boards-island-2025-26.json.gzip",
+      "sha256": "2e6b43c91255ec0bd9c127113d50693dbc2c121af54f0b45a8c516741753b9e8",
+      "bytes": 344
+    },
+    {
+      "path": "research/salaries/gap-fill-health-boards/gap-health-boards-phsa-2015-16.json.gzip",
+      "sha256": "600c37ea72ffebdb772418918e1de4c286372d8b302751b09314c00544e1e4ed",
+      "bytes": 388
+    },
+    {
+      "path": "research/salaries/gap-fill-health-boards/gap-health-boards-phsa-2016-17.json.gzip",
+      "sha256": "5ccced0dc663b8c5fcb3c9e8f774ea4de1e982380144f9992c1ad9f7b9890d81",
+      "bytes": 467
+    },
+    {
+      "path": "research/salaries/gap-fill-health-boards/gap-health-boards-phsa-2017-18.json.gzip",
+      "sha256": "ecf7454f8a771c497f710404d04db965aabbd9a6c1552b55c422c73f5c580fb7",
+      "bytes": 424
+    },
+    {
+      "path": "research/salaries/gap-fill-health-boards/gap-health-boards-phsa-2018-19.json.gzip",
+      "sha256": "f6099adf83f587a1afca2c593d1113945454b6a074520bdee726d915e2d39020",
+      "bytes": 536
+    },
+    {
+      "path": "research/salaries/gap-fill-health-boards/gap-health-boards-phsa-2019-20.json.gzip",
+      "sha256": "c0dff3b3bb39f2347ff2d9992a25cb4977b1d4b1ef521073bff106fcc6eec4b2",
+      "bytes": 402
+    },
+    {
+      "path": "research/salaries/gap-fill-health-boards/gap-health-boards-phsa-2020-21.json.gzip",
+      "sha256": "ff9cfeaa1cf92e002590b625462330692bf8422b4226f20cf01994f31483323e",
+      "bytes": 406
+    },
+    {
+      "path": "research/salaries/gap-fill-health-boards/gap-health-boards-phsa-2021-22.json.gzip",
+      "sha256": "faac4bf336aaa8fa2b9a5325b0089b87a1d5a84fda2613034a57604c2ef7b8ff",
+      "bytes": 501
+    },
+    {
+      "path": "research/salaries/gap-fill-health-boards/gap-health-boards-phsa-2022-23.json.gzip",
+      "sha256": "9b9fe85bb27c1213ce32eee04a3bf5d891b6ce0ac949c806e23dc547c723fe8f",
+      "bytes": 585
+    },
+    {
+      "path": "research/salaries/gap-fill-health-boards/gap-health-boards-phsa-2023-24.json.gzip",
+      "sha256": "92f0125e628ebfa4549925163087dd23ecab659b088289915d3cbb0db3a876b1",
+      "bytes": 624
+    },
+    {
+      "path": "research/salaries/gap-fill-health-boards/gap-health-boards-providence-2020-21.json.gzip",
+      "sha256": "d15254cd9d142b950433cb8d1c0efb328352fa04db90c0f4d6eb2a68dead445f",
+      "bytes": 22
+    },
+    {
+      "path": "research/salaries/gap-fill-health-boards/gap-health-boards-providence-2021-22.json.gzip",
+      "sha256": "d15254cd9d142b950433cb8d1c0efb328352fa04db90c0f4d6eb2a68dead445f",
+      "bytes": 22
+    },
+    {
+      "path": "research/salaries/gap-fill-health-boards/gap-health-boards-providence-2022-23.json.gzip",
+      "sha256": "7509a6296515ed6edf6d2bd5961f34c95314f8a13ac46d5d173f4bccd3d287c3",
+      "bytes": 230
+    },
+    {
+      "path": "research/salaries/gap-fill-health-boards/gap-health-boards-providence-2024-25.json.gzip",
+      "sha256": "88297bff6c312ccb5dd72b1224fe1752e74574924a56a262f080a12e68f8515d",
+      "bytes": 224
+    },
+    {
+      "path": "research/salaries/gap-fill-health-boards/gap-health-boards-vch-2022-23.json.gzip",
+      "sha256": "cedca3441a02391d04c78402b4bb61565be58752daa790c0d451041f14f25b1e",
+      "bytes": 306
+    },
+    {
+      "path": "research/salaries/gap-fill-health-boards/provenance/gap-health-boards-island-2015-16.json.gzip",
+      "sha256": "cd87a6a2b98809f0aa8f3cc65bcf10fd0e02bba8b5bfedbb72bfb5f73ddb69cf",
+      "bytes": 2057
+    },
+    {
+      "path": "research/salaries/gap-fill-health-boards/provenance/gap-health-boards-island-2016-17.json.gzip",
+      "sha256": "a66caa0dcc856ec51724e4195ff4cae74e565b2669d48fd9cf9048420e62ef71",
+      "bytes": 2054
+    },
+    {
+      "path": "research/salaries/gap-fill-health-boards/provenance/gap-health-boards-island-2017-18.json.gzip",
+      "sha256": "732d988869dc3d4396d26eab921ef5ed02a2b863138855ac0d6cdc8ac9af9c1a",
+      "bytes": 2472
+    },
+    {
+      "path": "research/salaries/gap-fill-health-boards/provenance/gap-health-boards-island-2018-19.json.gzip",
+      "sha256": "58bea15a2be5c169b0e01aef9cdc66031784d09dc3487addc39abbacfb06d89a",
+      "bytes": 2650
+    },
+    {
+      "path": "research/salaries/gap-fill-health-boards/provenance/gap-health-boards-island-2019-20.json.gzip",
+      "sha256": "fadf17192bd90a152878472636865ab2bf5c6c02b06784f84e9759c90baef822",
+      "bytes": 2376
+    },
+    {
+      "path": "research/salaries/gap-fill-health-boards/provenance/gap-health-boards-island-2020-21.json.gzip",
+      "sha256": "0839ccf8217fcebc220098edffcfaa5207bac2839794be2d99a257f85c935247",
+      "bytes": 2162
+    },
+    {
+      "path": "research/salaries/gap-fill-health-boards/provenance/gap-health-boards-island-2021-22.json.gzip",
+      "sha256": "4eab67f7869e103719505c36ffbcb79f0e9f533b0acbc06b2514414815ffa8c9",
+      "bytes": 2270
+    },
+    {
+      "path": "research/salaries/gap-fill-health-boards/provenance/gap-health-boards-island-2022-23.json.gzip",
+      "sha256": "9af67626deac7588981b2301c34b336cde162536a18de1fa5b095682513d7316",
+      "bytes": 2330
+    },
+    {
+      "path": "research/salaries/gap-fill-health-boards/provenance/gap-health-boards-island-2023-24.json.gzip",
+      "sha256": "b7b37983b9e78418044327c72187a0f5c817286bef6ced9e1e4e9068b678f2f8",
+      "bytes": 2338
+    },
+    {
+      "path": "research/salaries/gap-fill-health-boards/provenance/gap-health-boards-island-2024-25.json.gzip",
+      "sha256": "4ef735c09b31f53a19ce46f0e0941786a1cb3d9b31d1d320db1b03d09c721d00",
+      "bytes": 2269
+    },
+    {
+      "path": "research/salaries/gap-fill-health-boards/provenance/gap-health-boards-island-2025-26.json.gzip",
+      "sha256": "579992113bf5041193e51e246533fd052d79fa9d01eb591ae6e9fc0a0bfb6d4c",
+      "bytes": 2447
+    },
+    {
+      "path": "research/salaries/gap-fill-health-boards/provenance/gap-health-boards-phsa-2015-16.json.gzip",
+      "sha256": "eb90092de489b2df07d4e106d9c47eaedd2fb0970150d3b68d1b6015927790ad",
+      "bytes": 2330
+    },
+    {
+      "path": "research/salaries/gap-fill-health-boards/provenance/gap-health-boards-phsa-2016-17.json.gzip",
+      "sha256": "27831082629d577c6dcfac02261fb48c77d8f20d1813baf6886cb11701d3c7ef",
+      "bytes": 2442
+    },
+    {
+      "path": "research/salaries/gap-fill-health-boards/provenance/gap-health-boards-phsa-2017-18.json.gzip",
+      "sha256": "1bba2d1e01206447dadc5b79958ce9b07f474f03ca6a0d77728b71a70be8603f",
+      "bytes": 2401
+    },
+    {
+      "path": "research/salaries/gap-fill-health-boards/provenance/gap-health-boards-phsa-2018-19.json.gzip",
+      "sha256": "7efbe707e4a2cbdc3d7778b629a30279fb57b2dee62a91918e9cf132fcaade54",
+      "bytes": 2968
+    },
+    {
+      "path": "research/salaries/gap-fill-health-boards/provenance/gap-health-boards-phsa-2019-20.json.gzip",
+      "sha256": "d39183f005fbb831075ccb551d492fb9b3a0fd73229f91cb78cf4446fac858d9",
+      "bytes": 2485
+    },
+    {
+      "path": "research/salaries/gap-fill-health-boards/provenance/gap-health-boards-phsa-2020-21.json.gzip",
+      "sha256": "c15f9c95b2f5db63f0c354228f3ad3905ffd022cc6cb2b44cd4f38f6ae746845",
+      "bytes": 2444
+    },
+    {
+      "path": "research/salaries/gap-fill-health-boards/provenance/gap-health-boards-phsa-2021-22.json.gzip",
+      "sha256": "c383178fda15b0621c795bdf8c38a71611c3758bae4e15f0e5c478199713eca0",
+      "bytes": 2645
+    },
+    {
+      "path": "research/salaries/gap-fill-health-boards/provenance/gap-health-boards-phsa-2022-23.json.gzip",
+      "sha256": "3aedef313f809ad40f6b1a692eb4061499e61bc9205d8e19adae7bbcb66eb0a2",
+      "bytes": 2938
+    },
+    {
+      "path": "research/salaries/gap-fill-health-boards/provenance/gap-health-boards-phsa-2023-24.json.gzip",
+      "sha256": "60f263e99fe1fa28cf7f121ff6a781a44c78d331e22565f1b57862ae300d6762",
+      "bytes": 3007
+    },
+    {
+      "path": "research/salaries/gap-fill-health-boards/provenance/gap-health-boards-providence-2020-21.json.gzip",
+      "sha256": "f4c9526ed051b8f8b6af73c1e66b5f35ab7d6ec6152dde196254a9f5c0431f63",
+      "bytes": 2165
+    },
+    {
+      "path": "research/salaries/gap-fill-health-boards/provenance/gap-health-boards-providence-2021-22.json.gzip",
+      "sha256": "51f3286a3e213e913bed380120c116a4cb0fe3f59f10cc0bfa214c91f61972ca",
+      "bytes": 2283
+    },
+    {
+      "path": "research/salaries/gap-fill-health-boards/provenance/gap-health-boards-providence-2022-23.json.gzip",
+      "sha256": "3cb779a73a6d1f3402bffd1ce5a92217b6e5499ea0a0b8d484c2196cfdc8d5fb",
+      "bytes": 2177
+    },
+    {
+      "path": "research/salaries/gap-fill-health-boards/provenance/gap-health-boards-providence-2024-25.json.gzip",
+      "sha256": "70f44eab4128850e50d75c0e384ed9d17a3561fe34d75f208f9605d66eaa8d02",
+      "bytes": 2178
+    },
+    {
+      "path": "research/salaries/gap-fill-health-boards/provenance/gap-health-boards-vch-2022-23.json.gzip",
+      "sha256": "37c396d24a6a8b48d9a231f02b30059c5da4937bdb01b9ea00e319f598d3ce9b",
+      "bytes": 2502
+    },
+    {
+      "path": "research/salaries/gap-fill-health-boards/sources.json",
+      "sha256": "dc4e106e88b055623a01174f35823d719e2943109c0277b75ad49d0451c58a32",
+      "bytes": 141174
+    },
+    {
+      "path": "research/salaries/gap-fill-health-boards/visibility/gap-health-boards-island-2015-16.json.gzip",
+      "sha256": "4c6dcdd8015daa63186d0d132089339f9282c1acb6f507b04efc87a998775199",
+      "bytes": 600
+    },
+    {
+      "path": "research/salaries/gap-fill-health-boards/visibility/gap-health-boards-island-2016-17.json.gzip",
+      "sha256": "8bad2863804d6e64ebb6fb8adc6eea5a85e58ba6d4e4ad4a1e22094f332ebf6c",
+      "bytes": 598
+    },
+    {
+      "path": "research/salaries/gap-fill-health-boards/visibility/gap-health-boards-island-2017-18.json.gzip",
+      "sha256": "4a45706ac09bbdcae2fc64b066df4cce47fc4f0ea8935f1f12e622f06cbdea13",
+      "bytes": 602
+    },
+    {
+      "path": "research/salaries/gap-fill-health-boards/visibility/gap-health-boards-island-2018-19.json.gzip",
+      "sha256": "b59b1c22d206227284ba3a1d3dd4ce25b0a77beb7b0cfa59b7d9e7a36fb09730",
+      "bytes": 731
+    },
+    {
+      "path": "research/salaries/gap-fill-health-boards/visibility/gap-health-boards-island-2019-20.json.gzip",
+      "sha256": "9245aab0708be8cc0a20f043ab8dfb13af756986d0fbbc9a3475cbddce5c7391",
+      "bytes": 640
+    },
+    {
+      "path": "research/salaries/gap-fill-health-boards/visibility/gap-health-boards-island-2020-21.json.gzip",
+      "sha256": "93ad800c48fa4650dba4036e110090042b3a76298e6ca4f1785553c29cca6814",
+      "bytes": 731
+    },
+    {
+      "path": "research/salaries/gap-fill-health-boards/visibility/gap-health-boards-island-2021-22.json.gzip",
+      "sha256": "9152243daad33f187f85645a6a101ee17f762a712aebd6c10cd07465af81ab24",
+      "bytes": 643
+    },
+    {
+      "path": "research/salaries/gap-fill-health-boards/visibility/gap-health-boards-island-2022-23.json.gzip",
+      "sha256": "24dc2fe376b5a483971a22a7d84605d26dd0892781dc90fe84b2ec42869e4257",
+      "bytes": 647
+    },
+    {
+      "path": "research/salaries/gap-fill-health-boards/visibility/gap-health-boards-island-2023-24.json.gzip",
+      "sha256": "3217ba3e0cc2fe139c6626f3940dfc1e38154a97a50f1289dedc4a7e4aeb1951",
+      "bytes": 648
+    },
+    {
+      "path": "research/salaries/gap-fill-health-boards/visibility/gap-health-boards-island-2024-25.json.gzip",
+      "sha256": "f0e190a24e2089b556310995f1a4526975c5b0a1d02efbfe37efa0af3f88d0cc",
+      "bytes": 627
+    },
+    {
+      "path": "research/salaries/gap-fill-health-boards/visibility/gap-health-boards-island-2025-26.json.gzip",
+      "sha256": "80aaa2eb88ec54c6cadc8c2af1c3348b2551559c7054a37bda1d488329565918",
+      "bytes": 631
+    },
+    {
+      "path": "research/salaries/gap-fill-health-boards/visibility/gap-health-boards-phsa-2015-16.json.gzip",
+      "sha256": "bb7e194dad4e4d966840aa90f9089546611f3cefec07617900d3b83a46b2ea74",
+      "bytes": 1186
+    },
+    {
+      "path": "research/salaries/gap-fill-health-boards/visibility/gap-health-boards-phsa-2016-17.json.gzip",
+      "sha256": "635a93d6863a6ca087177746a2a9d13e875bc8c6cd7ea3474cfd9988e5dd681d",
+      "bytes": 599
+    },
+    {
+      "path": "research/salaries/gap-fill-health-boards/visibility/gap-health-boards-phsa-2017-18.json.gzip",
+      "sha256": "b1c18a467dedda5a631037dc6dfcdcabebf87f0964cea75b000ee8e1d353903b",
+      "bytes": 599
+    },
+    {
+      "path": "research/salaries/gap-fill-health-boards/visibility/gap-health-boards-phsa-2018-19.json.gzip",
+      "sha256": "d93be9e0664064f35acd2fa5b8e6bcab2445bfcf20c3706678dab40556520f00",
+      "bytes": 646
+    },
+    {
+      "path": "research/salaries/gap-fill-health-boards/visibility/gap-health-boards-phsa-2019-20.json.gzip",
+      "sha256": "bee1fcba01a85c1fa9be5be000493f5b6db551c58c5673f42d7e4a58e7a21773",
+      "bytes": 645
+    },
+    {
+      "path": "research/salaries/gap-fill-health-boards/visibility/gap-health-boards-phsa-2020-21.json.gzip",
+      "sha256": "12160e84097a5a0e51b266de105966dd7a4bf5cf52ee0e7d8eb7f12443fe7223",
+      "bytes": 643
+    },
+    {
+      "path": "research/salaries/gap-fill-health-boards/visibility/gap-health-boards-phsa-2021-22.json.gzip",
+      "sha256": "718512baa486d2403b1b82dab2031b554de0d70be13935480cba7d27f50d082b",
+      "bytes": 646
+    },
+    {
+      "path": "research/salaries/gap-fill-health-boards/visibility/gap-health-boards-phsa-2022-23.json.gzip",
+      "sha256": "10f3ee88d2fdfd7adbe07c2d9d510e725753d5527d5448153f0c072265140a8b",
+      "bytes": 725
+    },
+    {
+      "path": "research/salaries/gap-fill-health-boards/visibility/gap-health-boards-phsa-2023-24.json.gzip",
+      "sha256": "3eb43142bcad82594df3ef97ebb9a7abea2d47ff0d6b4af68bb2c9bd67340047",
+      "bytes": 1037
+    },
+    {
+      "path": "research/salaries/gap-fill-health-boards/visibility/gap-health-boards-providence-2020-21.json.gzip",
+      "sha256": "975c198d5d587457232ec3013cdf4bd1e0a5eef3cff9174e6a31bdb3e3070024",
+      "bytes": 603
+    },
+    {
+      "path": "research/salaries/gap-fill-health-boards/visibility/gap-health-boards-providence-2021-22.json.gzip",
+      "sha256": "06b585113c5ddfe5f33ca362f98469f8f92f88361ca3b72c7f207b568dd54925",
+      "bytes": 604
+    },
+    {
+      "path": "research/salaries/gap-fill-health-boards/visibility/gap-health-boards-providence-2022-23.json.gzip",
+      "sha256": "6adb57c0a5be99e389921d076c82dc1aabfc8850d7dc0fffee05cb5c210a7212",
+      "bytes": 603
+    },
+    {
+      "path": "research/salaries/gap-fill-health-boards/visibility/gap-health-boards-providence-2024-25.json.gzip",
+      "sha256": "961a73978c9b35147886ee86826ed500273291f3162eecf1dfe0ae81876f4531",
+      "bytes": 605
+    },
+    {
+      "path": "research/salaries/gap-fill-health-boards/visibility/gap-health-boards-vch-2022-23.json.gzip",
+      "sha256": "6149e8159da86200b03e2bb84347d08eb2c93c42119b2c4e9bcda7a3795daadb",
+      "bytes": 1094
+    },
+    {
+      "path": "scripts/gap_health_boards.py",
+      "sha256": "dd156ab9866c2d7eaddbb9177cc394fcd5dac7906b09d4a1de90c6b76787b943",
+      "bytes": 18320
+    },
+    {
+      "path": "scripts/gap_health_boards_fetch.py",
+      "sha256": "4d9502f5c250e81c3d51a4f1ff39cd941c5d92424a210e07ecdaa15f6b09e42e",
+      "bytes": 3838
+    },
+    {
+      "path": "scripts/gap_health_boards_freeze.py",
+      "sha256": "9dde238644211b06f0c13ba195dc92adc5aad68ce592c9b8a947ef5e824d34c0",
+      "bytes": 2431
+    },
+    {
+      "path": "scripts/gap_health_boards_library.py",
+      "sha256": "91600c9647464ef65bea0842a2a5d914cd833bce75d036006564e44781a73fcb",
+      "bytes": 2557
+    },
+    {
+      "path": "scripts/gap_health_boards_visibility.py",
+      "sha256": "5f32c262f20cb8890d8290f3f6bf40ad408a19e287ec2f070be5f68ba8413203",
+      "bytes": 5474
+    },
+    {
+      "path": "scripts/gap_health_boards_visibility_v1.py",
+      "sha256": "5340669ff2eb07c6646b0dbe4b055091f9a8bff614587059cf3104202a69334d",
+      "bytes": 5398
+    },
+    {
+      "path": "scripts/test_gap_health_boards.py",
+      "sha256": "ba1ce6fd8409b0a7b7896d944ee5a610f40c59ab16ec15c3044e5fa98041cdf5",
+      "bytes": 7848
+    }
+  ]
+}

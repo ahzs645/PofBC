@@ -1,0 +1,10 @@
+{
+  "firstReceipt": "two-final-normalized-sources-replay.json",
+  "firstReceiptSha256": "166a30bb6a66640155b55bc157b2ff5534e5f2d07f59f10dbb2354f5331957cd",
+  "firstCode": "first-execution-code.py",
+  "firstCodeSha256": "85058550a2ffdc45ac5cdacac965f30ee48bd27068b775dc7be4a18ce086956b",
+  "checkFailure": "Own --check compared in-memory integer page-map keys to their required JSON string keys. All source/data/provenance assertions passed again before this receipt comparison; no source mismatch occurred.",
+  "correction": "Emit string physical-page dictionary keys, retain the first receipt and code unchanged, and write a separate v2 replay receipt with a passing read-only check.",
+  "producerInputsEdited": false,
+  "firstReceiptsPreserved": true
+}

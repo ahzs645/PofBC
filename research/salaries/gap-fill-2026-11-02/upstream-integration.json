@@ -1,0 +1,17 @@
+{
+  "sourceDataBaselineCommit": "de42c55e98e42b8001f07e4ecbd210f892ab2716",
+  "integratedMainCommit": "def373c6aa868cdf7679109d320bc9c403c875a4",
+  "mainSalaryObservationsUnchanged": true,
+  "preservedChanges": [
+    "mobile person-page and employer record cards",
+    "year strips fitted to cards",
+    "people initial/fullname and reviewed employer-specific spelling links",
+    "salary build includes regenerated name links"
+  ],
+  "reviewedNameLinkDecisions": {
+    "path": "research/salaries/name-links/reviewed.json",
+    "sha256": "d6bddc0fd5aa74363dac425b268f73582740ec5b70bbd06c263f699f414d2b34"
+  },
+  "rootConflictResolution": "Preserved main new RecordRow card component and changed only missing-name fallback toName unavailable; all other upstream name-link/layout logic preserved.",
+  "noOutreach": true
+}

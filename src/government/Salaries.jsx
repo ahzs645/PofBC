@@ -138,7 +138,7 @@ export const Salaries = ({ node, year }) => {
                 <Card
                   key={`${name}-${position}-${index}`}
                   icon={<KindIcon person branch={node.branch ?? 'executive'} />}
-                  title={displayName(name, SALARY_SOURCES[sourceId]?.nameDisclosure) ?? 'Name not given'}
+                  title={displayName(name, SALARY_SOURCES[sourceId]?.nameDisclosure) ?? 'Name unavailable'}
                   lines={[position, hasExpenseAmount(expenses) ? `${expenseLabel(sourceId, SALARY_SOURCES)} ${money(expenses)}` : null, !oneSource && !pdfPage && sourceId ? SALARY_SOURCES[sourceId]?.title : null]}
                   aside={money(pay)}
                   onClick={name ? () => follow(name) : undefined}

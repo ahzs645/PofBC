@@ -1,0 +1,1877 @@
+{
+  "sourceKey": "phsa-2013-14",
+  "phase": "final selected-v2 complete computational replay after personal source review",
+  "sourceSha256": "2ec6e1491b9686cebad8a350c2229d9b1eddd1a5180052292a4adf662053cd98",
+  "candidatePin": {
+    "path": "research/salaries/gap-fill-2026-11-02/phsa_history/phsa-2013-14-scan-candidate-v4.json.gzip",
+    "sha256": "0d980edd6cc19f437fa14fc7c0508f40429cbfafd5138a6dd8c5805ead67b9a5"
+  },
+  "selectedPin": {
+    "path": "research/salaries/gap-fill-2026-11-02/phsa_history/phsa-2013-14-scan-selected-v2.json.gzip",
+    "sha256": "2c3b5fc5bd716113644f6d811da71b5beb24e4d8bad4d29faff90f596888eec9"
+  },
+  "personalFinalReadingPin": {
+    "path": "research/salaries/gap-fill-2026-11-02/municipal/reviews/phsa-history/phsa-2013-14-selected-v2-final-personal-source-readings.json",
+    "sha256": "b76656f49a6cedc18a3e8c82b0e79653bd98307b0a54473a1f02b207291a6f96"
+  },
+  "personallyImageReadUniqueRows": 453,
+  "completeCohortRows": 3991,
+  "allPersonalFieldsAgree": true,
+  "allOriginalPixelPaymentRowsMappedInExactOrderAndPage": true,
+  "allOriginalExpenseCellsComparedToIndependentPreCandidateGlyphGuard": true,
+  "expenseGlyphCounts": {
+    "small horizontal dash-shaped glyph": 1639,
+    "digit-sized source ink": 2352
+  },
+  "expenseGlyphMismatchCount": 0,
+  "allSalaryPagesOriginalRGBPixelsAndRawOCRPinsReplayed": true,
+  "rawReaderMatchedNamedRowCounts": {
+    "tesseract": 3991,
+    "rapid": 3991
+  },
+  "allSnapshotReaderRowsReplayedExactly": true,
+  "fullSourcePaymentCensusPin": {
+    "path": "research/salaries/gap-fill-2026-11-02/municipal/reviews/phsa-history/latest-two-scan-independent-pixel-census.json",
+    "sha256": "e9f22e8c632b07b1c43cde5575a37d027f5b4b602f6c48e548eac627e0ef93f5"
+  },
+  "independentExpenseGuardPin": {
+    "path": "research/salaries/gap-fill-2026-11-02/municipal/reviews/phsa-history/latest-two-scans-source-expense-glyph-calibration.json",
+    "sha256": "ba3f9778beb7aab6e97bcec6f309e2bbe417380d298c5c0217b4ac4c8fc69c18"
+  },
+  "allPrimaryReceiptPinsAndFiniteGuardSelectionReplayedExactly": true,
+  "sourcePeriodAllPageHeaderPin": {
+    "path": "research/salaries/gap-fill-2026-11-02/municipal/reviews/phsa-history/latest-two-scans-complete-period-header-review.json",
+    "sha256": "2809de1235c3f5696c0d3d4212a3bbabf16111563c703cd21f37e30fd509c8eb"
+  },
+  "sourceContextPin": {
+    "path": "research/salaries/gap-fill-2026-11-02/municipal/reviews/phsa-history/latest-two-scans-first-source-context-transcript.json",
+    "sha256": "2986df3cbb1a86b9f5fd66e5c5846358b1813687f3a9ec3798f40535b9ff5787"
+  },
+  "candidatePending": [],
+  "literalComputedTotals": [
+    425632576,
+    8642235
+  ],
+  "literalPrintedTotals": [
+    425632576,
+    8642235
+  ],
+  "literalResiduals": [
+    0,
+    0
+  ],
+  "residualTreatment": "Preserve every literal row and printed control. No amount adjustment, zero imputation, inferred rounding or cause.",
+  "scopeLimit": "Bounded human source transcription; complete source-pixel census, glyph guard and raw-reader/selection replay are computational. Replayed producer readers are not independent model inference. Finite confidence benchmarks are not an accuracy rate.",
+  "pages": [
+    {
+      "physicalPage": 3,
+      "rawOcrPin": {
+        "path": "research/salaries/gap-fill-2026-11-02/phsa_history/raw-ocr/phsa-2013-14-p003.json.gzip",
+        "sha256": "a34906e1ec549019f1d660ea3bbbc92d2d52c6a32b9aeb10ec056bab7a84cc4d"
+      },
+      "originalWholePagePngSha256": "1d1be7ca8d26592b363c4dd415d6eec800a77e44db1b4b3904005c9353385fbc",
+      "freshOriginalRGBPixelSha256": "db21b5cdf4c6d832950834df7f8b5eb6371fabc902b9f3e28b756fd17f21718f",
+      "independentOriginalPixelPaymentRows": 44,
+      "replayedReaderCounts": [
+        44,
+        44
+      ],
+      "allSnapshotReaderRowsReplayedExactly": true,
+      "outsideReaderRows": {
+        "tesseract": [],
+        "rapid": []
+      }
+    },
+    {
+      "physicalPage": 4,
+      "rawOcrPin": {
+        "path": "research/salaries/gap-fill-2026-11-02/phsa_history/raw-ocr/phsa-2013-14-p004.json.gzip",
+        "sha256": "c2f3a89bb64c4b47f66e7006afdfefa37a7b0c8bc40122dba1dec677247b5511"
+      },
+      "originalWholePagePngSha256": "5ba8423b6e537e5ee2885a025442e889ca78e198a156fd7be1770589a2f82b2c",
+      "freshOriginalRGBPixelSha256": "fd45110b1f6c55f73d465ab22388649847f1d7c627617349953a47d14f3ecaf9",
+      "independentOriginalPixelPaymentRows": 44,
+      "replayedReaderCounts": [
+        44,
+        44
+      ],
+      "allSnapshotReaderRowsReplayedExactly": true,
+      "outsideReaderRows": {
+        "tesseract": [],
+        "rapid": []
+      }
+    },
+    {
+      "physicalPage": 5,
+      "rawOcrPin": {
+        "path": "research/salaries/gap-fill-2026-11-02/phsa_history/raw-ocr/phsa-2013-14-p005.json.gzip",
+        "sha256": "f6f7fa98a9bdf77bc4fcf45738a207fd875a8b8bbbf3002f1fa3045409386b34"
+      },
+      "originalWholePagePngSha256": "178f732ac0d1ebc3ddfda1af852e33db8bfca4d6494884098eaac2b8e49a2a0a",
+      "freshOriginalRGBPixelSha256": "b3be8e5e2041da1c40b881d53dec0deaf74eecdbe6d521fdbca9fa34ef7b8b2f",
+      "independentOriginalPixelPaymentRows": 44,
+      "replayedReaderCounts": [
+        44,
+        44
+      ],
+      "allSnapshotReaderRowsReplayedExactly": true,
+      "outsideReaderRows": {
+        "tesseract": [],
+        "rapid": []
+      }
+    },
+    {
+      "physicalPage": 6,
+      "rawOcrPin": {
+        "path": "research/salaries/gap-fill-2026-11-02/phsa_history/raw-ocr/phsa-2013-14-p006.json.gzip",
+        "sha256": "6f1564a958f8bf7e5ca1101adb64fb9b90200bcd1559dc6b48ef885cafdf0f93"
+      },
+      "originalWholePagePngSha256": "55bb37b132102548af35d8d0c5a0de23599f991f4f397953478f5f193db3bb53",
+      "freshOriginalRGBPixelSha256": "085b6d79809d94571508cd933456c4b111e9542ef0606c943dc4864a2e4714fe",
+      "independentOriginalPixelPaymentRows": 44,
+      "replayedReaderCounts": [
+        44,
+        44
+      ],
+      "allSnapshotReaderRowsReplayedExactly": true,
+      "outsideReaderRows": {
+        "tesseract": [],
+        "rapid": []
+      }
+    },
+    {
+      "physicalPage": 7,
+      "rawOcrPin": {
+        "path": "research/salaries/gap-fill-2026-11-02/phsa_history/raw-ocr/phsa-2013-14-p007.json.gzip",
+        "sha256": "db83d62b26ec9def5c80ede6c659bda86592e6bdd726597f871140fab1cb0168"
+      },
+      "originalWholePagePngSha256": "ae27728991ee0ffda236828d6bb2bf339c77e1fb89bc4c31c419fd351b220df5",
+      "freshOriginalRGBPixelSha256": "e2aa2455ed8325bceac9837d48e858efa438c9621e4f71c3a9e3e5850193a1a7",
+      "independentOriginalPixelPaymentRows": 44,
+      "replayedReaderCounts": [
+        44,
+        44
+      ],
+      "allSnapshotReaderRowsReplayedExactly": true,
+      "outsideReaderRows": {
+        "tesseract": [],
+        "rapid": []
+      }
+    },
+    {
+      "physicalPage": 8,
+      "rawOcrPin": {
+        "path": "research/salaries/gap-fill-2026-11-02/phsa_history/raw-ocr/phsa-2013-14-p008.json.gzip",
+        "sha256": "22ed5c43c995ec58c9c5d85d4ce103b8b57c3a64e3a21b97c436289fd593df3a"
+      },
+      "originalWholePagePngSha256": "9903d3bea2eecd75e4436af22ecc7f014aedfcd44e11376b89027aa3c218968f",
+      "freshOriginalRGBPixelSha256": "198c2cb702896c2da2d3c007799c9086dd2d8a973022ce2fd40529990d0e49c4",
+      "independentOriginalPixelPaymentRows": 44,
+      "replayedReaderCounts": [
+        44,
+        44
+      ],
+      "allSnapshotReaderRowsReplayedExactly": true,
+      "outsideReaderRows": {
+        "tesseract": [],
+        "rapid": []
+      }
+    },
+    {
+      "physicalPage": 9,
+      "rawOcrPin": {
+        "path": "research/salaries/gap-fill-2026-11-02/phsa_history/raw-ocr/phsa-2013-14-p009.json.gzip",
+        "sha256": "aeafe504253e18b5082de3f8f800da5cc43f5c7c81e414fbc4628f330031d3de"
+      },
+      "originalWholePagePngSha256": "7c0032146227be04ccb0db119de591536fc987d1527fb6955b76a5f8d93b9a19",
+      "freshOriginalRGBPixelSha256": "921994052825a5c9831f4f9b1e3b58ec3a2c461a114283213e1072b94c7b087a",
+      "independentOriginalPixelPaymentRows": 44,
+      "replayedReaderCounts": [
+        44,
+        44
+      ],
+      "allSnapshotReaderRowsReplayedExactly": true,
+      "outsideReaderRows": {
+        "tesseract": [],
+        "rapid": []
+      }
+    },
+    {
+      "physicalPage": 10,
+      "rawOcrPin": {
+        "path": "research/salaries/gap-fill-2026-11-02/phsa_history/raw-ocr/phsa-2013-14-p010.json.gzip",
+        "sha256": "eb3da86992f35d25fa32e64f8235eeae9c4b754c0d2f17c518832cf655b865f8"
+      },
+      "originalWholePagePngSha256": "16dc6a1dd6207b9f1da47bdf0d06b0105ed453c6798dd1333c03f7120b5641f3",
+      "freshOriginalRGBPixelSha256": "24427fa21ae94de3f6851e316bb3708c4297f3239fdc006d5da91a87e6fce8db",
+      "independentOriginalPixelPaymentRows": 44,
+      "replayedReaderCounts": [
+        44,
+        44
+      ],
+      "allSnapshotReaderRowsReplayedExactly": true,
+      "outsideReaderRows": {
+        "tesseract": [],
+        "rapid": []
+      }
+    },
+    {
+      "physicalPage": 11,
+      "rawOcrPin": {
+        "path": "research/salaries/gap-fill-2026-11-02/phsa_history/raw-ocr/phsa-2013-14-p011.json.gzip",
+        "sha256": "c09096b40fd2f400beb3080a6f7f7dc5b8fcc95dcb7ccd25073fef698be5ebdc"
+      },
+      "originalWholePagePngSha256": "fdbba319516b2c38e20ef09b23e4ec128b02d04f9401467f4dbd21366abf64f5",
+      "freshOriginalRGBPixelSha256": "dc2e8a41c395e03073f9df6bdfb0048271163a7334f2201bf566916fb1415822",
+      "independentOriginalPixelPaymentRows": 44,
+      "replayedReaderCounts": [
+        44,
+        44
+      ],
+      "allSnapshotReaderRowsReplayedExactly": true,
+      "outsideReaderRows": {
+        "tesseract": [],
+        "rapid": []
+      }
+    },
+    {
+      "physicalPage": 12,
+      "rawOcrPin": {
+        "path": "research/salaries/gap-fill-2026-11-02/phsa_history/raw-ocr/phsa-2013-14-p012.json.gzip",
+        "sha256": "c823f430aff2d5c2e60e56935bb557edfe81a1784b187af247403e0b969e938f"
+      },
+      "originalWholePagePngSha256": "cba8bbb62253b59496549b61c8cab3fd6de4d6f5dd0e01918eb38d895763c7ba",
+      "freshOriginalRGBPixelSha256": "be2ae85556c177134fb6665fbf78c84eb08b9fef7bfd6efbe2f1fe47044d60d9",
+      "independentOriginalPixelPaymentRows": 44,
+      "replayedReaderCounts": [
+        44,
+        44
+      ],
+      "allSnapshotReaderRowsReplayedExactly": true,
+      "outsideReaderRows": {
+        "tesseract": [],
+        "rapid": []
+      }
+    },
+    {
+      "physicalPage": 13,
+      "rawOcrPin": {
+        "path": "research/salaries/gap-fill-2026-11-02/phsa_history/raw-ocr/phsa-2013-14-p013.json.gzip",
+        "sha256": "93ecab29deb491a9caed8b40abd90a57b0cc09a87b637ace336232ce5f6cba45"
+      },
+      "originalWholePagePngSha256": "f0244e194f99cfadc640aecc5a2c3feb4c7c1d41cc1077de01432b7031616331",
+      "freshOriginalRGBPixelSha256": "081bb47d0aa0b7241c486ee5417f8a389074b0470189197ffdb85ef4c8dd74c7",
+      "independentOriginalPixelPaymentRows": 44,
+      "replayedReaderCounts": [
+        44,
+        44
+      ],
+      "allSnapshotReaderRowsReplayedExactly": true,
+      "outsideReaderRows": {
+        "tesseract": [],
+        "rapid": []
+      }
+    },
+    {
+      "physicalPage": 14,
+      "rawOcrPin": {
+        "path": "research/salaries/gap-fill-2026-11-02/phsa_history/raw-ocr/phsa-2013-14-p014.json.gzip",
+        "sha256": "0aaeaab924db86953a2f582e45be9e1a54bd6d06f63b9c05c6fb3fc246d6f514"
+      },
+      "originalWholePagePngSha256": "5d801e5bdf7f2a6b956c29d9f7a1805832b4a4280d0632390aa08a6c699fecf4",
+      "freshOriginalRGBPixelSha256": "ec751fd903e9403d1753944900bc5b31d2342008ba8345f0bdf05155e5b57923",
+      "independentOriginalPixelPaymentRows": 44,
+      "replayedReaderCounts": [
+        44,
+        44
+      ],
+      "allSnapshotReaderRowsReplayedExactly": true,
+      "outsideReaderRows": {
+        "tesseract": [],
+        "rapid": []
+      }
+    },
+    {
+      "physicalPage": 15,
+      "rawOcrPin": {
+        "path": "research/salaries/gap-fill-2026-11-02/phsa_history/raw-ocr/phsa-2013-14-p015.json.gzip",
+        "sha256": "53406f3c500b6fe27e098552c43757e97e06fb74fe025fdb8b2548c2ae5c30e4"
+      },
+      "originalWholePagePngSha256": "f2322f744cb08586274eeea780063411b19c1a73d771a54d0d5072958880563c",
+      "freshOriginalRGBPixelSha256": "f634a03b3493a815be91c9c5f9fecf4d262e8b7fbdc2951cece38d460162a7d4",
+      "independentOriginalPixelPaymentRows": 44,
+      "replayedReaderCounts": [
+        44,
+        44
+      ],
+      "allSnapshotReaderRowsReplayedExactly": true,
+      "outsideReaderRows": {
+        "tesseract": [],
+        "rapid": []
+      }
+    },
+    {
+      "physicalPage": 16,
+      "rawOcrPin": {
+        "path": "research/salaries/gap-fill-2026-11-02/phsa_history/raw-ocr/phsa-2013-14-p016.json.gzip",
+        "sha256": "462b3a6696ad97a73526f9785887b6bd447b7f3d2160a2b56006f2774ebe66a1"
+      },
+      "originalWholePagePngSha256": "0ddcaaccdc0bf381350e820538641cb1b003edfc5eb95d823bdf517aa950826b",
+      "freshOriginalRGBPixelSha256": "8c055ad11e7db757a0c50cfcab8fef5177f8ee5b6354e46445fd146dc5f9a761",
+      "independentOriginalPixelPaymentRows": 44,
+      "replayedReaderCounts": [
+        44,
+        44
+      ],
+      "allSnapshotReaderRowsReplayedExactly": true,
+      "outsideReaderRows": {
+        "tesseract": [],
+        "rapid": []
+      }
+    },
+    {
+      "physicalPage": 17,
+      "rawOcrPin": {
+        "path": "research/salaries/gap-fill-2026-11-02/phsa_history/raw-ocr/phsa-2013-14-p017.json.gzip",
+        "sha256": "c84535ed835114c7e1cd9f08c4837c0be29930772e94b9a74ba583cbd806f4b4"
+      },
+      "originalWholePagePngSha256": "9e0f27b0dfda538254ead5db3ad721407842bffb6b48a4f42f035130fde500d0",
+      "freshOriginalRGBPixelSha256": "7ebcb84cd46eae72ad1b7be27440a1ab6f5d3f0f96e14d744c06aef677f596ad",
+      "independentOriginalPixelPaymentRows": 44,
+      "replayedReaderCounts": [
+        44,
+        44
+      ],
+      "allSnapshotReaderRowsReplayedExactly": true,
+      "outsideReaderRows": {
+        "tesseract": [],
+        "rapid": []
+      }
+    },
+    {
+      "physicalPage": 18,
+      "rawOcrPin": {
+        "path": "research/salaries/gap-fill-2026-11-02/phsa_history/raw-ocr/phsa-2013-14-p018.json.gzip",
+        "sha256": "370540cf56d6c29b08d04528a5db684b9d1fd0b3bc1ba6117f81f0bd0654ba41"
+      },
+      "originalWholePagePngSha256": "7a50f8be855d9772f30f1e59ab422f4818d283e3ef5f2b7896e4925eba8da85e",
+      "freshOriginalRGBPixelSha256": "9dcf67030fe5efbf2886fa0761d20bb5120eb9856c3d5a1eabb952affe785b58",
+      "independentOriginalPixelPaymentRows": 44,
+      "replayedReaderCounts": [
+        44,
+        44
+      ],
+      "allSnapshotReaderRowsReplayedExactly": true,
+      "outsideReaderRows": {
+        "tesseract": [],
+        "rapid": []
+      }
+    },
+    {
+      "physicalPage": 19,
+      "rawOcrPin": {
+        "path": "research/salaries/gap-fill-2026-11-02/phsa_history/raw-ocr/phsa-2013-14-p019.json.gzip",
+        "sha256": "e881cd21b83c9bb18b255eef9842afb86dba98b00011651683333d4e642dbed1"
+      },
+      "originalWholePagePngSha256": "efcefe07c895095d85418a0da8944b6ce474b601d8414802b240cc1009af6b0c",
+      "freshOriginalRGBPixelSha256": "1e6cde37755373b24e9c5ce892c0b67cd410c737c0b615522490a320b1188436",
+      "independentOriginalPixelPaymentRows": 44,
+      "replayedReaderCounts": [
+        44,
+        44
+      ],
+      "allSnapshotReaderRowsReplayedExactly": true,
+      "outsideReaderRows": {
+        "tesseract": [],
+        "rapid": []
+      }
+    },
+    {
+      "physicalPage": 20,
+      "rawOcrPin": {
+        "path": "research/salaries/gap-fill-2026-11-02/phsa_history/raw-ocr/phsa-2013-14-p020.json.gzip",
+        "sha256": "6f0564d2ea2d761aa9ed14244b6b4a0155dd6f0b0e680592853f25a57fc4753b"
+      },
+      "originalWholePagePngSha256": "0f3f8b5b3e7065cbad340de5d786f33486b022edb192cafb0e03ce70fb10c526",
+      "freshOriginalRGBPixelSha256": "1fa0022fe573e4afd53a5ee2463ecd1ea544aa05864d8428870ee2bcc7c035c8",
+      "independentOriginalPixelPaymentRows": 44,
+      "replayedReaderCounts": [
+        44,
+        44
+      ],
+      "allSnapshotReaderRowsReplayedExactly": true,
+      "outsideReaderRows": {
+        "tesseract": [],
+        "rapid": []
+      }
+    },
+    {
+      "physicalPage": 21,
+      "rawOcrPin": {
+        "path": "research/salaries/gap-fill-2026-11-02/phsa_history/raw-ocr/phsa-2013-14-p021.json.gzip",
+        "sha256": "f01e0bc25f5b0c71df89e140f7b3c0b7f4943fab35949aa7db0e057d601df5d3"
+      },
+      "originalWholePagePngSha256": "484240626ef6846c5eb0f4302c2ea3b33c7bb692d2a7e1c5fe4fc2a50af6a599",
+      "freshOriginalRGBPixelSha256": "d8545b46fcac14f693ccadb47d3dbc682784695f1ff6acae198407e827684783",
+      "independentOriginalPixelPaymentRows": 44,
+      "replayedReaderCounts": [
+        44,
+        44
+      ],
+      "allSnapshotReaderRowsReplayedExactly": true,
+      "outsideReaderRows": {
+        "tesseract": [],
+        "rapid": []
+      }
+    },
+    {
+      "physicalPage": 22,
+      "rawOcrPin": {
+        "path": "research/salaries/gap-fill-2026-11-02/phsa_history/raw-ocr/phsa-2013-14-p022.json.gzip",
+        "sha256": "99996fd0f64d5469bff06fe3258bfd12a154bd07d6f3aea6ce461d6598d414c8"
+      },
+      "originalWholePagePngSha256": "7d52ccc901aaecdb8978224a860d72f1ec4d326e4b334d4f0b239372713301b8",
+      "freshOriginalRGBPixelSha256": "efb5774678f57e9b0d0e7cfb2c5ed7865f16771eacfde44693fb4a5c9fd86820",
+      "independentOriginalPixelPaymentRows": 44,
+      "replayedReaderCounts": [
+        44,
+        44
+      ],
+      "allSnapshotReaderRowsReplayedExactly": true,
+      "outsideReaderRows": {
+        "tesseract": [],
+        "rapid": []
+      }
+    },
+    {
+      "physicalPage": 23,
+      "rawOcrPin": {
+        "path": "research/salaries/gap-fill-2026-11-02/phsa_history/raw-ocr/phsa-2013-14-p023.json.gzip",
+        "sha256": "ab129f5e900f7715ae70559eaf168d0e1a5f681cb7147bd4b53f3c7829bd3113"
+      },
+      "originalWholePagePngSha256": "1320746c5654b8a6637473d73ce044af01faa259b4dcb2cd31af67838dac14ec",
+      "freshOriginalRGBPixelSha256": "a098bb396aec5eac6661e2f06cd2ce7a52574489b9bb44bfc21bd9a8210880ff",
+      "independentOriginalPixelPaymentRows": 44,
+      "replayedReaderCounts": [
+        44,
+        44
+      ],
+      "allSnapshotReaderRowsReplayedExactly": true,
+      "outsideReaderRows": {
+        "tesseract": [],
+        "rapid": []
+      }
+    },
+    {
+      "physicalPage": 24,
+      "rawOcrPin": {
+        "path": "research/salaries/gap-fill-2026-11-02/phsa_history/raw-ocr/phsa-2013-14-p024.json.gzip",
+        "sha256": "fbb196eb777badca8637738bb012cf93fd7e1f5086e39c4092123d4fc8049c23"
+      },
+      "originalWholePagePngSha256": "08ab1fd9f11ccd9a1088636016e876fe9a9945e55791c6d2b7b3bf2d24451b34",
+      "freshOriginalRGBPixelSha256": "6891bf4613a62bcf56a5496195d71834e27bbe1113256c9b8872bf0838ea5c76",
+      "independentOriginalPixelPaymentRows": 44,
+      "replayedReaderCounts": [
+        44,
+        44
+      ],
+      "allSnapshotReaderRowsReplayedExactly": true,
+      "outsideReaderRows": {
+        "tesseract": [],
+        "rapid": []
+      }
+    },
+    {
+      "physicalPage": 25,
+      "rawOcrPin": {
+        "path": "research/salaries/gap-fill-2026-11-02/phsa_history/raw-ocr/phsa-2013-14-p025.json.gzip",
+        "sha256": "15b31f54675cd238dadcb739ba688e4859dc0198661ccd8466e0b08ba536d43f"
+      },
+      "originalWholePagePngSha256": "d240ba9f51e5b5eaf3006bd7d039132b3d470389cb678f9b1ea12075b9c51181",
+      "freshOriginalRGBPixelSha256": "c26d713aa027f2ccfdf873de13853e9d47ab4e3e976a906cceb985ea8c522b2e",
+      "independentOriginalPixelPaymentRows": 44,
+      "replayedReaderCounts": [
+        44,
+        44
+      ],
+      "allSnapshotReaderRowsReplayedExactly": true,
+      "outsideReaderRows": {
+        "tesseract": [],
+        "rapid": []
+      }
+    },
+    {
+      "physicalPage": 26,
+      "rawOcrPin": {
+        "path": "research/salaries/gap-fill-2026-11-02/phsa_history/raw-ocr/phsa-2013-14-p026.json.gzip",
+        "sha256": "77c1ee502f692ac405f36d1c30b791d32aec9e590fa57e2f397f93d6f27e799c"
+      },
+      "originalWholePagePngSha256": "ab17688977875c34b53ee548060fac1250899f9ed2caf63e78c879f6934d5007",
+      "freshOriginalRGBPixelSha256": "3f84ad1598c61e31290b66d7316def55605b182e64a0392636fb668dde890541",
+      "independentOriginalPixelPaymentRows": 44,
+      "replayedReaderCounts": [
+        44,
+        44
+      ],
+      "allSnapshotReaderRowsReplayedExactly": true,
+      "outsideReaderRows": {
+        "tesseract": [],
+        "rapid": []
+      }
+    },
+    {
+      "physicalPage": 27,
+      "rawOcrPin": {
+        "path": "research/salaries/gap-fill-2026-11-02/phsa_history/raw-ocr/phsa-2013-14-p027.json.gzip",
+        "sha256": "685b474cdd965be21ce75f35d422f9765484f7cc1905c0b726a867dcb0796140"
+      },
+      "originalWholePagePngSha256": "f19c09c0b27e7e31293bc26f426db15a3100516809e44529a04f31354fff5807",
+      "freshOriginalRGBPixelSha256": "b1fb307a740fe32b6ae9b8d17ea862b2fc4bc35388150b294225a820615f3aa6",
+      "independentOriginalPixelPaymentRows": 44,
+      "replayedReaderCounts": [
+        44,
+        44
+      ],
+      "allSnapshotReaderRowsReplayedExactly": true,
+      "outsideReaderRows": {
+        "tesseract": [],
+        "rapid": []
+      }
+    },
+    {
+      "physicalPage": 28,
+      "rawOcrPin": {
+        "path": "research/salaries/gap-fill-2026-11-02/phsa_history/raw-ocr/phsa-2013-14-p028.json.gzip",
+        "sha256": "b27c6a1f4d4cbd18d4b8c382697783d436162bff64aff01619604129dd060ca1"
+      },
+      "originalWholePagePngSha256": "ee93fda99dfbe85971c505a28fef822f8891783d4ae0a362db42cc8a3810512b",
+      "freshOriginalRGBPixelSha256": "4a021ac58ec6049bcb5a50d0868b91bd3fa521a6d1bbc365312307c7ccc46dbd",
+      "independentOriginalPixelPaymentRows": 44,
+      "replayedReaderCounts": [
+        44,
+        44
+      ],
+      "allSnapshotReaderRowsReplayedExactly": true,
+      "outsideReaderRows": {
+        "tesseract": [],
+        "rapid": []
+      }
+    },
+    {
+      "physicalPage": 29,
+      "rawOcrPin": {
+        "path": "research/salaries/gap-fill-2026-11-02/phsa_history/raw-ocr/phsa-2013-14-p029.json.gzip",
+        "sha256": "a8ad870c6cc9b727fc1660834dc534b1abf65b42b5d933cea9518ee15527b919"
+      },
+      "originalWholePagePngSha256": "25c7095355fba034701cc3cacfdaaa668e1d89a07fba96af7e3b54b87c1f2851",
+      "freshOriginalRGBPixelSha256": "9bd3576b223890293ee0f0faa6b24dd1213191bff2977ee219657e691c126cc9",
+      "independentOriginalPixelPaymentRows": 44,
+      "replayedReaderCounts": [
+        44,
+        44
+      ],
+      "allSnapshotReaderRowsReplayedExactly": true,
+      "outsideReaderRows": {
+        "tesseract": [],
+        "rapid": []
+      }
+    },
+    {
+      "physicalPage": 30,
+      "rawOcrPin": {
+        "path": "research/salaries/gap-fill-2026-11-02/phsa_history/raw-ocr/phsa-2013-14-p030.json.gzip",
+        "sha256": "9b67a35b0e3d9b3173a48fa23dd6fb0cb1b76a0debee95c8541518b3ee023228"
+      },
+      "originalWholePagePngSha256": "98cd4602431e1c38927219601ba8ab8890440fa9e01aabbd4fd6c119aade85c5",
+      "freshOriginalRGBPixelSha256": "e302655d89187f9025f40caa6ead11fa7da7164b588faa3d9d3520523b4f3203",
+      "independentOriginalPixelPaymentRows": 44,
+      "replayedReaderCounts": [
+        44,
+        44
+      ],
+      "allSnapshotReaderRowsReplayedExactly": true,
+      "outsideReaderRows": {
+        "tesseract": [],
+        "rapid": []
+      }
+    },
+    {
+      "physicalPage": 31,
+      "rawOcrPin": {
+        "path": "research/salaries/gap-fill-2026-11-02/phsa_history/raw-ocr/phsa-2013-14-p031.json.gzip",
+        "sha256": "f20ef83057deb020349a8e2337d95f6d5ac27bb3cdce94fe937737095a2a86f3"
+      },
+      "originalWholePagePngSha256": "4c68b1199d67c347bd52ce9675ba14b71a60d818745eb2e8cf5bf3f84c9c9d34",
+      "freshOriginalRGBPixelSha256": "59c3fdb174453fc35742b1d35b0334ada0e84cb1e7bac49275ce47b17d0585a7",
+      "independentOriginalPixelPaymentRows": 44,
+      "replayedReaderCounts": [
+        44,
+        44
+      ],
+      "allSnapshotReaderRowsReplayedExactly": true,
+      "outsideReaderRows": {
+        "tesseract": [],
+        "rapid": []
+      }
+    },
+    {
+      "physicalPage": 32,
+      "rawOcrPin": {
+        "path": "research/salaries/gap-fill-2026-11-02/phsa_history/raw-ocr/phsa-2013-14-p032.json.gzip",
+        "sha256": "725ffa49c090d63d76644d82696250e405b96afc67fd7e782dc0a78bb1b3f43f"
+      },
+      "originalWholePagePngSha256": "a097f74adedb1a43eafbbb9e7bd3b8a750e965264830bef46130950985f30617",
+      "freshOriginalRGBPixelSha256": "c68bb10ae82f4f78acbcc9a160af4cc22c9868cffedb62ff2410d166523f035c",
+      "independentOriginalPixelPaymentRows": 44,
+      "replayedReaderCounts": [
+        44,
+        44
+      ],
+      "allSnapshotReaderRowsReplayedExactly": true,
+      "outsideReaderRows": {
+        "tesseract": [],
+        "rapid": []
+      }
+    },
+    {
+      "physicalPage": 33,
+      "rawOcrPin": {
+        "path": "research/salaries/gap-fill-2026-11-02/phsa_history/raw-ocr/phsa-2013-14-p033.json.gzip",
+        "sha256": "c5c29b1815f97f325a13830e709e4a33402517ca10e8b8d60b73a7a8b64e6433"
+      },
+      "originalWholePagePngSha256": "d00fc9c12ae923753e84ccc3fade44e3240a734a7a376de7f18cd951c3dd51c8",
+      "freshOriginalRGBPixelSha256": "2a1413830d42712edfef493641aed91d89da8e57273e2636c403184bd2996c20",
+      "independentOriginalPixelPaymentRows": 44,
+      "replayedReaderCounts": [
+        44,
+        44
+      ],
+      "allSnapshotReaderRowsReplayedExactly": true,
+      "outsideReaderRows": {
+        "tesseract": [],
+        "rapid": []
+      }
+    },
+    {
+      "physicalPage": 34,
+      "rawOcrPin": {
+        "path": "research/salaries/gap-fill-2026-11-02/phsa_history/raw-ocr/phsa-2013-14-p034.json.gzip",
+        "sha256": "d57bf2b0424cd94f0d542f7e778811eccad2498546cdd990c9b7c2d974814837"
+      },
+      "originalWholePagePngSha256": "2a84ad764a3c2056d3c46a734e68c622ab722388b6cee782d01a2a3e5675f372",
+      "freshOriginalRGBPixelSha256": "266d159230fa4e283339010005b42b03a6a909608b59ac6a6424848761252bb1",
+      "independentOriginalPixelPaymentRows": 44,
+      "replayedReaderCounts": [
+        44,
+        44
+      ],
+      "allSnapshotReaderRowsReplayedExactly": true,
+      "outsideReaderRows": {
+        "tesseract": [],
+        "rapid": []
+      }
+    },
+    {
+      "physicalPage": 35,
+      "rawOcrPin": {
+        "path": "research/salaries/gap-fill-2026-11-02/phsa_history/raw-ocr/phsa-2013-14-p035.json.gzip",
+        "sha256": "bff0faaaf67cb68ece57d86ff79f84ae8242ab52467ece2cf69194c2c44be7e8"
+      },
+      "originalWholePagePngSha256": "398518728885e3c516c79883b974b29f45ef846c180a28cae487c9228680ba67",
+      "freshOriginalRGBPixelSha256": "d00a156da0a38f586c0128d1d67ba23da8f7a32f2af2b3540a459f75c7fd2f2c",
+      "independentOriginalPixelPaymentRows": 44,
+      "replayedReaderCounts": [
+        44,
+        44
+      ],
+      "allSnapshotReaderRowsReplayedExactly": true,
+      "outsideReaderRows": {
+        "tesseract": [],
+        "rapid": []
+      }
+    },
+    {
+      "physicalPage": 36,
+      "rawOcrPin": {
+        "path": "research/salaries/gap-fill-2026-11-02/phsa_history/raw-ocr/phsa-2013-14-p036.json.gzip",
+        "sha256": "ed13d6e4ec8975879e0a233eb1a89a3e3a1e01e9df0fce87343bb69388831b1c"
+      },
+      "originalWholePagePngSha256": "7876d6cd407bfcf29e38e5ad85a2dbf69b278caf8845debb377d4c5c880f0cd1",
+      "freshOriginalRGBPixelSha256": "76a20ba64abdbb93753be88c4711700f7db8a6724864d4cf1f99f6b8ebb57db8",
+      "independentOriginalPixelPaymentRows": 44,
+      "replayedReaderCounts": [
+        44,
+        44
+      ],
+      "allSnapshotReaderRowsReplayedExactly": true,
+      "outsideReaderRows": {
+        "tesseract": [],
+        "rapid": []
+      }
+    },
+    {
+      "physicalPage": 37,
+      "rawOcrPin": {
+        "path": "research/salaries/gap-fill-2026-11-02/phsa_history/raw-ocr/phsa-2013-14-p037.json.gzip",
+        "sha256": "d792e399d5db2df49123b7dda7f293ddd02e769063c5373b26471bef48049cd7"
+      },
+      "originalWholePagePngSha256": "0e391b8cafa135d0f17f5b635bfa870dd3cb381af08e27f5823b0445860a1124",
+      "freshOriginalRGBPixelSha256": "01180b371b036da359dd32726135877767d2296ce300439f938e2b9e39e14ebf",
+      "independentOriginalPixelPaymentRows": 44,
+      "replayedReaderCounts": [
+        44,
+        44
+      ],
+      "allSnapshotReaderRowsReplayedExactly": true,
+      "outsideReaderRows": {
+        "tesseract": [],
+        "rapid": []
+      }
+    },
+    {
+      "physicalPage": 38,
+      "rawOcrPin": {
+        "path": "research/salaries/gap-fill-2026-11-02/phsa_history/raw-ocr/phsa-2013-14-p038.json.gzip",
+        "sha256": "07f758de3de8b23f43763f76d19a3e9c71ae14e4926a7d85feff531521ab030c"
+      },
+      "originalWholePagePngSha256": "ca287c66d406f7d422839ee7bb86d79b5dc85d06f614e93bfa5b6e5ca07b2f13",
+      "freshOriginalRGBPixelSha256": "03adba0b6dbafc14a51fc963ad80d2fed29c7726631e1b64b1532a2b7ae98243",
+      "independentOriginalPixelPaymentRows": 44,
+      "replayedReaderCounts": [
+        44,
+        44
+      ],
+      "allSnapshotReaderRowsReplayedExactly": true,
+      "outsideReaderRows": {
+        "tesseract": [],
+        "rapid": []
+      }
+    },
+    {
+      "physicalPage": 39,
+      "rawOcrPin": {
+        "path": "research/salaries/gap-fill-2026-11-02/phsa_history/raw-ocr/phsa-2013-14-p039.json.gzip",
+        "sha256": "8248ced7cdea405e8163edd9821b046d48245b373faec4bc5639a32c8adc0780"
+      },
+      "originalWholePagePngSha256": "675791266a82f3a2ab6a42d5e1b0e1d32d70c374eb1e36cc8b69f266f1bf6ba7",
+      "freshOriginalRGBPixelSha256": "fde4ea3b858d50eb3c3738e6de0a6195528543f100e68f10edc8a52b96cbb3a9",
+      "independentOriginalPixelPaymentRows": 44,
+      "replayedReaderCounts": [
+        44,
+        44
+      ],
+      "allSnapshotReaderRowsReplayedExactly": true,
+      "outsideReaderRows": {
+        "tesseract": [],
+        "rapid": []
+      }
+    },
+    {
+      "physicalPage": 40,
+      "rawOcrPin": {
+        "path": "research/salaries/gap-fill-2026-11-02/phsa_history/raw-ocr/phsa-2013-14-p040.json.gzip",
+        "sha256": "43bf1bb21c09d19fbc64137510f8872f09d4e955692fdb246be4e72531b74232"
+      },
+      "originalWholePagePngSha256": "fb7bfac95ee6687edeedfd6e945e952cea04f493fba640d04353d897d9712432",
+      "freshOriginalRGBPixelSha256": "7504b9a30c2bf3b49f863d0746b7bd24feea7d727c3fde22b9232dfd53f4f39c",
+      "independentOriginalPixelPaymentRows": 44,
+      "replayedReaderCounts": [
+        44,
+        44
+      ],
+      "allSnapshotReaderRowsReplayedExactly": true,
+      "outsideReaderRows": {
+        "tesseract": [],
+        "rapid": []
+      }
+    },
+    {
+      "physicalPage": 41,
+      "rawOcrPin": {
+        "path": "research/salaries/gap-fill-2026-11-02/phsa_history/raw-ocr/phsa-2013-14-p041.json.gzip",
+        "sha256": "f26a767d0df20319757cc183de6a55ee1eaedd5945ed67e773bdfff9ed34b061"
+      },
+      "originalWholePagePngSha256": "2232214a72a0b328d0576a998ff8b1d02ea85aac299484af3be54f535e3a9989",
+      "freshOriginalRGBPixelSha256": "5743b65ac9666d53bc43c6a3c1a358a93e988eef6d9fa1f9b5594b321d6f15fe",
+      "independentOriginalPixelPaymentRows": 44,
+      "replayedReaderCounts": [
+        44,
+        44
+      ],
+      "allSnapshotReaderRowsReplayedExactly": true,
+      "outsideReaderRows": {
+        "tesseract": [],
+        "rapid": []
+      }
+    },
+    {
+      "physicalPage": 42,
+      "rawOcrPin": {
+        "path": "research/salaries/gap-fill-2026-11-02/phsa_history/raw-ocr/phsa-2013-14-p042.json.gzip",
+        "sha256": "83439ef1ce41b232e20e658c9cf094533dad9a29f775ebd8ffae54adfbd13126"
+      },
+      "originalWholePagePngSha256": "4f14bb7cae362ef35a42be66be5388ea736e0231a43e994c5a2fcd7feb051442",
+      "freshOriginalRGBPixelSha256": "197631534b6687d868875e491ab5f9e1427d29b353023022c607ca03724082a0",
+      "independentOriginalPixelPaymentRows": 44,
+      "replayedReaderCounts": [
+        44,
+        44
+      ],
+      "allSnapshotReaderRowsReplayedExactly": true,
+      "outsideReaderRows": {
+        "tesseract": [],
+        "rapid": []
+      }
+    },
+    {
+      "physicalPage": 43,
+      "rawOcrPin": {
+        "path": "research/salaries/gap-fill-2026-11-02/phsa_history/raw-ocr/phsa-2013-14-p043.json.gzip",
+        "sha256": "cc5d013bc1bf22f32ce352136c1e1aad3b0faefb02870d82108e149afd314055"
+      },
+      "originalWholePagePngSha256": "3b53f62305c16a2f247530e04500e773d3944c6c0b2ab5211b9ae91a4fd74189",
+      "freshOriginalRGBPixelSha256": "480955768b9aa26bfc569e3ae42e6ae77b82a2e84602808eb4db39eff95e42ec",
+      "independentOriginalPixelPaymentRows": 44,
+      "replayedReaderCounts": [
+        44,
+        44
+      ],
+      "allSnapshotReaderRowsReplayedExactly": true,
+      "outsideReaderRows": {
+        "tesseract": [],
+        "rapid": []
+      }
+    },
+    {
+      "physicalPage": 44,
+      "rawOcrPin": {
+        "path": "research/salaries/gap-fill-2026-11-02/phsa_history/raw-ocr/phsa-2013-14-p044.json.gzip",
+        "sha256": "ba1c0e2cb57a5bd53e6cf87d10438e356c4efafecd3e610c795ac77443ad20f7"
+      },
+      "originalWholePagePngSha256": "e1b41250c041c448b5fb14885e1f5cb833a38495e004c5e43b532212fd809f54",
+      "freshOriginalRGBPixelSha256": "ba292259c87ade7f4c4f9af484e74ffb264375e195ec211afb405ad587f1b98b",
+      "independentOriginalPixelPaymentRows": 44,
+      "replayedReaderCounts": [
+        44,
+        44
+      ],
+      "allSnapshotReaderRowsReplayedExactly": true,
+      "outsideReaderRows": {
+        "tesseract": [],
+        "rapid": []
+      }
+    },
+    {
+      "physicalPage": 45,
+      "rawOcrPin": {
+        "path": "research/salaries/gap-fill-2026-11-02/phsa_history/raw-ocr/phsa-2013-14-p045.json.gzip",
+        "sha256": "d0e77e2ce09f0038a9db3e3385eaf09e5b9431f571b60d246295364a3ebea5dd"
+      },
+      "originalWholePagePngSha256": "78c5a6d4ae87ea760a39b0fdc71ae8fffdb7b621656bdfb6f33943cf3939a303",
+      "freshOriginalRGBPixelSha256": "884a13dc7e8a6ab1f46d2abf4c87d8ee9c88bc82da882184805ac0f953529b1c",
+      "independentOriginalPixelPaymentRows": 44,
+      "replayedReaderCounts": [
+        44,
+        44
+      ],
+      "allSnapshotReaderRowsReplayedExactly": true,
+      "outsideReaderRows": {
+        "tesseract": [],
+        "rapid": []
+      }
+    },
+    {
+      "physicalPage": 46,
+      "rawOcrPin": {
+        "path": "research/salaries/gap-fill-2026-11-02/phsa_history/raw-ocr/phsa-2013-14-p046.json.gzip",
+        "sha256": "13aaced0ecad6c5d007f2eb5904e892e8882223384d5d8f29dc547bf52ce933a"
+      },
+      "originalWholePagePngSha256": "dc12e928ea9be12f0937ba1da66ab28b08e4881097c4a4d238609d3764052a7f",
+      "freshOriginalRGBPixelSha256": "a42b17f411779d9c2ecea99dd123abc1dda7c023397600b39338ddd7fa25049a",
+      "independentOriginalPixelPaymentRows": 44,
+      "replayedReaderCounts": [
+        44,
+        44
+      ],
+      "allSnapshotReaderRowsReplayedExactly": true,
+      "outsideReaderRows": {
+        "tesseract": [],
+        "rapid": []
+      }
+    },
+    {
+      "physicalPage": 47,
+      "rawOcrPin": {
+        "path": "research/salaries/gap-fill-2026-11-02/phsa_history/raw-ocr/phsa-2013-14-p047.json.gzip",
+        "sha256": "fce80478375f34034c25a0968b96320cdc9edc3e74264c07fdab5e728fbe0d8a"
+      },
+      "originalWholePagePngSha256": "a69df6ddb9d88ff1083db0f5954670899b8bdca5368cd5c66d5dcdddd6a82f64",
+      "freshOriginalRGBPixelSha256": "bb4fc8c724860136ce025116011ce7619e5caded0949b7338c090988831ab47c",
+      "independentOriginalPixelPaymentRows": 44,
+      "replayedReaderCounts": [
+        44,
+        44
+      ],
+      "allSnapshotReaderRowsReplayedExactly": true,
+      "outsideReaderRows": {
+        "tesseract": [],
+        "rapid": []
+      }
+    },
+    {
+      "physicalPage": 48,
+      "rawOcrPin": {
+        "path": "research/salaries/gap-fill-2026-11-02/phsa_history/raw-ocr/phsa-2013-14-p048.json.gzip",
+        "sha256": "552922091f5b0ff6d20fb84587794b88610d883a0a2ee97435570be49841fe8d"
+      },
+      "originalWholePagePngSha256": "50184a5e7c11b7d83ba9bb1b4852c6cb4a17af809aabc17758388d3ddb38f82f",
+      "freshOriginalRGBPixelSha256": "76856561ab1a2375befaa5618241042ff4b5771ad07d56bf758e8f59ace4e9c8",
+      "independentOriginalPixelPaymentRows": 44,
+      "replayedReaderCounts": [
+        44,
+        44
+      ],
+      "allSnapshotReaderRowsReplayedExactly": true,
+      "outsideReaderRows": {
+        "tesseract": [],
+        "rapid": []
+      }
+    },
+    {
+      "physicalPage": 49,
+      "rawOcrPin": {
+        "path": "research/salaries/gap-fill-2026-11-02/phsa_history/raw-ocr/phsa-2013-14-p049.json.gzip",
+        "sha256": "366a7d011916356fb47962c5d2c053c886604a3850642e34eba8533107d42f04"
+      },
+      "originalWholePagePngSha256": "43b26680b2f149822e99d9bc594ad9dad5d4c8cceff843c02212429daebd01bb",
+      "freshOriginalRGBPixelSha256": "85aacdb74759842347951167896c7ce4a73c54b6733adef909ad20cf927ffe17",
+      "independentOriginalPixelPaymentRows": 44,
+      "replayedReaderCounts": [
+        44,
+        44
+      ],
+      "allSnapshotReaderRowsReplayedExactly": true,
+      "outsideReaderRows": {
+        "tesseract": [],
+        "rapid": []
+      }
+    },
+    {
+      "physicalPage": 50,
+      "rawOcrPin": {
+        "path": "research/salaries/gap-fill-2026-11-02/phsa_history/raw-ocr/phsa-2013-14-p050.json.gzip",
+        "sha256": "06f6fbc44e683a12c27fda06d93330e6f453c68899ff38a2af23e20af5370188"
+      },
+      "originalWholePagePngSha256": "773d3d35e0254f96ebea33ff8736d2a23695f68a445810085a07525c33f1b4f4",
+      "freshOriginalRGBPixelSha256": "13614006714c8040dcc2efdb2f57d3efcd5d031fbd0f6fde7434386d1c70d55a",
+      "independentOriginalPixelPaymentRows": 44,
+      "replayedReaderCounts": [
+        44,
+        44
+      ],
+      "allSnapshotReaderRowsReplayedExactly": true,
+      "outsideReaderRows": {
+        "tesseract": [],
+        "rapid": []
+      }
+    },
+    {
+      "physicalPage": 51,
+      "rawOcrPin": {
+        "path": "research/salaries/gap-fill-2026-11-02/phsa_history/raw-ocr/phsa-2013-14-p051.json.gzip",
+        "sha256": "30671ee4933d0e79756a2ea1f4dd1531c1c8471a945ba203b6ae284ae1fb0f66"
+      },
+      "originalWholePagePngSha256": "b34589b2df857fcd89ce0309423ce497e21c21936f6d328e0164d1e81104fb3c",
+      "freshOriginalRGBPixelSha256": "9a4f0388f6e2d53f0bad74f80cf2d2482f4e10d7fefc43542e8431b85e1cb269",
+      "independentOriginalPixelPaymentRows": 44,
+      "replayedReaderCounts": [
+        44,
+        44
+      ],
+      "allSnapshotReaderRowsReplayedExactly": true,
+      "outsideReaderRows": {
+        "tesseract": [],
+        "rapid": []
+      }
+    },
+    {
+      "physicalPage": 52,
+      "rawOcrPin": {
+        "path": "research/salaries/gap-fill-2026-11-02/phsa_history/raw-ocr/phsa-2013-14-p052.json.gzip",
+        "sha256": "324bee39e3931c658f2e75854a5f5b94d96c9daf2df629b7bb64830f97f1a25b"
+      },
+      "originalWholePagePngSha256": "9e9ea4578f7eb6c653c96352904517cdef0e04a5f278658452f82918228b8152",
+      "freshOriginalRGBPixelSha256": "4b4b66316463c9a984afc9564e11b5ea06cc5e7b43558be4e04dc17e7cfa7e3f",
+      "independentOriginalPixelPaymentRows": 44,
+      "replayedReaderCounts": [
+        44,
+        44
+      ],
+      "allSnapshotReaderRowsReplayedExactly": true,
+      "outsideReaderRows": {
+        "tesseract": [],
+        "rapid": []
+      }
+    },
+    {
+      "physicalPage": 53,
+      "rawOcrPin": {
+        "path": "research/salaries/gap-fill-2026-11-02/phsa_history/raw-ocr/phsa-2013-14-p053.json.gzip",
+        "sha256": "4e951f47273e97da6c1da897e82cbb2affb69508166fd88a71732258a12796a1"
+      },
+      "originalWholePagePngSha256": "11a16c787dd32d1326a384599796475e4458b59c674520375352ecb7cba396b8",
+      "freshOriginalRGBPixelSha256": "3862fe4cd1d930e8c03690be1fb8545de976085f881a747945cd140da2558d73",
+      "independentOriginalPixelPaymentRows": 44,
+      "replayedReaderCounts": [
+        44,
+        44
+      ],
+      "allSnapshotReaderRowsReplayedExactly": true,
+      "outsideReaderRows": {
+        "tesseract": [],
+        "rapid": []
+      }
+    },
+    {
+      "physicalPage": 54,
+      "rawOcrPin": {
+        "path": "research/salaries/gap-fill-2026-11-02/phsa_history/raw-ocr/phsa-2013-14-p054.json.gzip",
+        "sha256": "c84157a44ad743ec9957f99dbcfe4faf5a799b2a36ce09ea4208b6fe627e6286"
+      },
+      "originalWholePagePngSha256": "7dd581a541b380eb7c05f3c2f3f9e1337c399736dd9fbd5ec2296e1665c10b8b",
+      "freshOriginalRGBPixelSha256": "ae406ab705a9153e6d93abfcaca457f0d548fcbdee4e7b94279175cc9cee6906",
+      "independentOriginalPixelPaymentRows": 44,
+      "replayedReaderCounts": [
+        44,
+        44
+      ],
+      "allSnapshotReaderRowsReplayedExactly": true,
+      "outsideReaderRows": {
+        "tesseract": [],
+        "rapid": []
+      }
+    },
+    {
+      "physicalPage": 55,
+      "rawOcrPin": {
+        "path": "research/salaries/gap-fill-2026-11-02/phsa_history/raw-ocr/phsa-2013-14-p055.json.gzip",
+        "sha256": "de4152d4c1e3f39bdd75a4416cccb34c71056e113232abf6fc7a83fbafa5c7d6"
+      },
+      "originalWholePagePngSha256": "a8ad6e855fdd9e50ad6933697c2cf7f4d78b171eaf3c35f08ee8ccdcc2aae69a",
+      "freshOriginalRGBPixelSha256": "143d6760179b66783139eaefd54c71b978561ff3df3ff324d6048f1aaa069f73",
+      "independentOriginalPixelPaymentRows": 44,
+      "replayedReaderCounts": [
+        44,
+        44
+      ],
+      "allSnapshotReaderRowsReplayedExactly": true,
+      "outsideReaderRows": {
+        "tesseract": [],
+        "rapid": []
+      }
+    },
+    {
+      "physicalPage": 56,
+      "rawOcrPin": {
+        "path": "research/salaries/gap-fill-2026-11-02/phsa_history/raw-ocr/phsa-2013-14-p056.json.gzip",
+        "sha256": "41b2188fc273cfaa9782aabd553118b42f22ee318b850df6a7d6c633a42799e5"
+      },
+      "originalWholePagePngSha256": "bdcc13cd95631f0a4f9843f2a60ef5cd949ca6913eeca4ad8ad7fe723139708d",
+      "freshOriginalRGBPixelSha256": "8609a93b8c4285a70e2f65938e63eb73aa4bea52d762f458230583c054378bb3",
+      "independentOriginalPixelPaymentRows": 44,
+      "replayedReaderCounts": [
+        44,
+        44
+      ],
+      "allSnapshotReaderRowsReplayedExactly": true,
+      "outsideReaderRows": {
+        "tesseract": [],
+        "rapid": []
+      }
+    },
+    {
+      "physicalPage": 57,
+      "rawOcrPin": {
+        "path": "research/salaries/gap-fill-2026-11-02/phsa_history/raw-ocr/phsa-2013-14-p057.json.gzip",
+        "sha256": "fea09de2b6734d0cde913f4928e4eae4e4bd1984978fd69ab47f0128e7a78175"
+      },
+      "originalWholePagePngSha256": "cb3e61d3c51679f2b88de35e22dc39d76ffe1c32f44611a64add0d7edc457929",
+      "freshOriginalRGBPixelSha256": "0cc002bbd3a27ce36f4f01e302e481b741cf7ce2362f59fd300627b110c12de8",
+      "independentOriginalPixelPaymentRows": 44,
+      "replayedReaderCounts": [
+        44,
+        44
+      ],
+      "allSnapshotReaderRowsReplayedExactly": true,
+      "outsideReaderRows": {
+        "tesseract": [],
+        "rapid": []
+      }
+    },
+    {
+      "physicalPage": 58,
+      "rawOcrPin": {
+        "path": "research/salaries/gap-fill-2026-11-02/phsa_history/raw-ocr/phsa-2013-14-p058.json.gzip",
+        "sha256": "825144dec8c1138722ffab69042079ddb518bdae9b81b23f0b86ac8bad442161"
+      },
+      "originalWholePagePngSha256": "4fed3071ca6717e2500e2185d1aa8cd7f673d548ebaf7f11956b88f941351f8d",
+      "freshOriginalRGBPixelSha256": "1fa499386c128e59f343930429b84035a51857921ac7fcd148b08271122c6438",
+      "independentOriginalPixelPaymentRows": 44,
+      "replayedReaderCounts": [
+        44,
+        44
+      ],
+      "allSnapshotReaderRowsReplayedExactly": true,
+      "outsideReaderRows": {
+        "tesseract": [],
+        "rapid": []
+      }
+    },
+    {
+      "physicalPage": 59,
+      "rawOcrPin": {
+        "path": "research/salaries/gap-fill-2026-11-02/phsa_history/raw-ocr/phsa-2013-14-p059.json.gzip",
+        "sha256": "7c7915a7c94896b939a50ed8795a486a9872ac1b7c5aa904bf2773b65ecb17bd"
+      },
+      "originalWholePagePngSha256": "3be5bdc5a226cf06e607666cac88b86e5b89fc3212ac0744841e4f6d48da08d5",
+      "freshOriginalRGBPixelSha256": "4323fe105b90d8642d51f92b5da424c43d6ec46aa3e4272aafd8164e91a4e7e7",
+      "independentOriginalPixelPaymentRows": 44,
+      "replayedReaderCounts": [
+        44,
+        44
+      ],
+      "allSnapshotReaderRowsReplayedExactly": true,
+      "outsideReaderRows": {
+        "tesseract": [],
+        "rapid": []
+      }
+    },
+    {
+      "physicalPage": 60,
+      "rawOcrPin": {
+        "path": "research/salaries/gap-fill-2026-11-02/phsa_history/raw-ocr/phsa-2013-14-p060.json.gzip",
+        "sha256": "79625ccdb64034ac9885dc80f97b575989d6a49c3488041f505687987b480218"
+      },
+      "originalWholePagePngSha256": "9e62821ae043f231a0a12a676a1397fba8f9900cd7df93de5d8a2bd1127c3206",
+      "freshOriginalRGBPixelSha256": "4607e5902a9226b27188b5ef95985f7d1c573a9a7c8531ee2f78baafeed08b79",
+      "independentOriginalPixelPaymentRows": 44,
+      "replayedReaderCounts": [
+        44,
+        44
+      ],
+      "allSnapshotReaderRowsReplayedExactly": true,
+      "outsideReaderRows": {
+        "tesseract": [],
+        "rapid": []
+      }
+    },
+    {
+      "physicalPage": 61,
+      "rawOcrPin": {
+        "path": "research/salaries/gap-fill-2026-11-02/phsa_history/raw-ocr/phsa-2013-14-p061.json.gzip",
+        "sha256": "206fd0f53eafa34bab1a4651d37df4d7a275774ef3b5aa19f91e979d5699e66f"
+      },
+      "originalWholePagePngSha256": "eb3dd84d79ab324a8e19ba2d14b84c8a77ea29f9c8bb97e42fda29a08444c37c",
+      "freshOriginalRGBPixelSha256": "be794ac1fce5a0b6ab7fe29416843b09310fee63a936547c59cf580fcfb87960",
+      "independentOriginalPixelPaymentRows": 44,
+      "replayedReaderCounts": [
+        44,
+        44
+      ],
+      "allSnapshotReaderRowsReplayedExactly": true,
+      "outsideReaderRows": {
+        "tesseract": [],
+        "rapid": []
+      }
+    },
+    {
+      "physicalPage": 62,
+      "rawOcrPin": {
+        "path": "research/salaries/gap-fill-2026-11-02/phsa_history/raw-ocr/phsa-2013-14-p062.json.gzip",
+        "sha256": "2cf2bb21702f3ca85a96fc8a10456de189985f2a35ee726498085e727c9c6423"
+      },
+      "originalWholePagePngSha256": "b6c7b4031f4a071d1e56159ea666b3b554d6fa7c829378e940e55304276bdc6a",
+      "freshOriginalRGBPixelSha256": "eb7e5e350e91d1714f96aaf8aad23d00eb303f649aa9bcf85c2ac242f05de5ef",
+      "independentOriginalPixelPaymentRows": 44,
+      "replayedReaderCounts": [
+        44,
+        44
+      ],
+      "allSnapshotReaderRowsReplayedExactly": true,
+      "outsideReaderRows": {
+        "tesseract": [],
+        "rapid": []
+      }
+    },
+    {
+      "physicalPage": 63,
+      "rawOcrPin": {
+        "path": "research/salaries/gap-fill-2026-11-02/phsa_history/raw-ocr/phsa-2013-14-p063.json.gzip",
+        "sha256": "6b67b5735c0ab1cf0f1e1289d7557dc5233b0175492a73600eafff9723f916db"
+      },
+      "originalWholePagePngSha256": "095d97072f5de9e92b73490b8d0a1ef4849e5af497a6c892969e75d4405b0983",
+      "freshOriginalRGBPixelSha256": "83308cda6a2f30eb5913069a7e4c509c8d300edc0fd75e048bab74a035412168",
+      "independentOriginalPixelPaymentRows": 44,
+      "replayedReaderCounts": [
+        44,
+        44
+      ],
+      "allSnapshotReaderRowsReplayedExactly": true,
+      "outsideReaderRows": {
+        "tesseract": [],
+        "rapid": []
+      }
+    },
+    {
+      "physicalPage": 64,
+      "rawOcrPin": {
+        "path": "research/salaries/gap-fill-2026-11-02/phsa_history/raw-ocr/phsa-2013-14-p064.json.gzip",
+        "sha256": "55d41676e0a2acc7ec3265dad17125b325fc6af07898639c85df5b8b11797966"
+      },
+      "originalWholePagePngSha256": "c21eb089075e8fa0482c49794e246be39f0e394eb50d6cb48264953b1ba0c481",
+      "freshOriginalRGBPixelSha256": "8fe33d0143dcbee371f6c32279af4969028b2b941576551a14db9a48d13d0ff6",
+      "independentOriginalPixelPaymentRows": 44,
+      "replayedReaderCounts": [
+        44,
+        44
+      ],
+      "allSnapshotReaderRowsReplayedExactly": true,
+      "outsideReaderRows": {
+        "tesseract": [],
+        "rapid": []
+      }
+    },
+    {
+      "physicalPage": 65,
+      "rawOcrPin": {
+        "path": "research/salaries/gap-fill-2026-11-02/phsa_history/raw-ocr/phsa-2013-14-p065.json.gzip",
+        "sha256": "a4f775475c2a72219eb134b32ad32fa0dc196b2562c22078ef94626481dcbd44"
+      },
+      "originalWholePagePngSha256": "bf0bbfcef090061c8ebffc8b445dbaf240b98df43fbaa88ae698eee2e124d5ff",
+      "freshOriginalRGBPixelSha256": "71e1bec6513f0f5181eb0339619c203d9c6e15c2b8e5a73f2a725e31a880b95f",
+      "independentOriginalPixelPaymentRows": 44,
+      "replayedReaderCounts": [
+        44,
+        44
+      ],
+      "allSnapshotReaderRowsReplayedExactly": true,
+      "outsideReaderRows": {
+        "tesseract": [],
+        "rapid": []
+      }
+    },
+    {
+      "physicalPage": 66,
+      "rawOcrPin": {
+        "path": "research/salaries/gap-fill-2026-11-02/phsa_history/raw-ocr/phsa-2013-14-p066.json.gzip",
+        "sha256": "061e8d2a8b0474ee10890b2264942121283b295dbf205be51b90ece73ed4772c"
+      },
+      "originalWholePagePngSha256": "46609b63040fbb9fae60f6b2ab49adc9a1c86207475819ec7aa7c555fa4a963a",
+      "freshOriginalRGBPixelSha256": "1d4fb3823078aace8f5911cfedee776a9131457f2abac4a588102acaa1fcc8b7",
+      "independentOriginalPixelPaymentRows": 44,
+      "replayedReaderCounts": [
+        44,
+        44
+      ],
+      "allSnapshotReaderRowsReplayedExactly": true,
+      "outsideReaderRows": {
+        "tesseract": [],
+        "rapid": []
+      }
+    },
+    {
+      "physicalPage": 67,
+      "rawOcrPin": {
+        "path": "research/salaries/gap-fill-2026-11-02/phsa_history/raw-ocr/phsa-2013-14-p067.json.gzip",
+        "sha256": "74dcd62074154d15d3ca90fb9df0f18d427f2059c35cb65015a01c7bf112bdbc"
+      },
+      "originalWholePagePngSha256": "87f1aa184b2d3b1b097b04bf166551487fecd2e162486a0a13b4ad8acef6d448",
+      "freshOriginalRGBPixelSha256": "6ac3781b0d144dc49f64242b1702a6085b10f1f17ab64ba4ec776e68c28b106d",
+      "independentOriginalPixelPaymentRows": 44,
+      "replayedReaderCounts": [
+        44,
+        44
+      ],
+      "allSnapshotReaderRowsReplayedExactly": true,
+      "outsideReaderRows": {
+        "tesseract": [],
+        "rapid": []
+      }
+    },
+    {
+      "physicalPage": 68,
+      "rawOcrPin": {
+        "path": "research/salaries/gap-fill-2026-11-02/phsa_history/raw-ocr/phsa-2013-14-p068.json.gzip",
+        "sha256": "eff100159a0e38a7db333e616cf0ef4b4767bdc3ccba3c52767ad8222fc6cde7"
+      },
+      "originalWholePagePngSha256": "c8aa17aa4fe34bbd0331eace3c31ecac40ddd7ebe791bd9fa6b1060dba7e5748",
+      "freshOriginalRGBPixelSha256": "c2f8e9efceaa0971154e75e7d9d7ba5040c7de6b15bf7c670c9407623e2b6923",
+      "independentOriginalPixelPaymentRows": 44,
+      "replayedReaderCounts": [
+        44,
+        44
+      ],
+      "allSnapshotReaderRowsReplayedExactly": true,
+      "outsideReaderRows": {
+        "tesseract": [],
+        "rapid": []
+      }
+    },
+    {
+      "physicalPage": 69,
+      "rawOcrPin": {
+        "path": "research/salaries/gap-fill-2026-11-02/phsa_history/raw-ocr/phsa-2013-14-p069.json.gzip",
+        "sha256": "ce175e1ab5bda9c6cdfd4fac73205ed1caf24a2401358c67a66d1b5af5db80e5"
+      },
+      "originalWholePagePngSha256": "331205411951568d9ede504e6a290b8e870d9f72b3039fc66583f7420218fb21",
+      "freshOriginalRGBPixelSha256": "d1f42f5f5b0d7618317bcaec9e5508006ddab26886da131aee79d7403972a4de",
+      "independentOriginalPixelPaymentRows": 44,
+      "replayedReaderCounts": [
+        44,
+        44
+      ],
+      "allSnapshotReaderRowsReplayedExactly": true,
+      "outsideReaderRows": {
+        "tesseract": [],
+        "rapid": []
+      }
+    },
+    {
+      "physicalPage": 70,
+      "rawOcrPin": {
+        "path": "research/salaries/gap-fill-2026-11-02/phsa_history/raw-ocr/phsa-2013-14-p070.json.gzip",
+        "sha256": "7aacf2e46dcf499b10b58ee933bfdb51acdebf971d33ca95843f5efaa5d3ae9e"
+      },
+      "originalWholePagePngSha256": "f1b9a70f1bb583f4ea506c27eb0305e01ee78fd8626eaaf9b5e1a8b7402e738f",
+      "freshOriginalRGBPixelSha256": "ea148cae6f648795fa1c10c1d5b4d56911a483daa0fc08a14f80864074d3036f",
+      "independentOriginalPixelPaymentRows": 44,
+      "replayedReaderCounts": [
+        44,
+        44
+      ],
+      "allSnapshotReaderRowsReplayedExactly": true,
+      "outsideReaderRows": {
+        "tesseract": [],
+        "rapid": []
+      }
+    },
+    {
+      "physicalPage": 71,
+      "rawOcrPin": {
+        "path": "research/salaries/gap-fill-2026-11-02/phsa_history/raw-ocr/phsa-2013-14-p071.json.gzip",
+        "sha256": "5aa100ba6b7713ea383c1cb4ace8b7157306cb6bda1f353b379e9735e7b48b7f"
+      },
+      "originalWholePagePngSha256": "f097ae3de431b9c495a356a868a59ca0bf6300af547b66f2d975fee4a28059b5",
+      "freshOriginalRGBPixelSha256": "7a9aec527ce50a2798d30486fc0bd40eab7a63d100f2494f3b11760bbb1f0a26",
+      "independentOriginalPixelPaymentRows": 44,
+      "replayedReaderCounts": [
+        44,
+        44
+      ],
+      "allSnapshotReaderRowsReplayedExactly": true,
+      "outsideReaderRows": {
+        "tesseract": [],
+        "rapid": []
+      }
+    },
+    {
+      "physicalPage": 72,
+      "rawOcrPin": {
+        "path": "research/salaries/gap-fill-2026-11-02/phsa_history/raw-ocr/phsa-2013-14-p072.json.gzip",
+        "sha256": "f54136bc4da1489cd360deb1f31e8cc41a6355b9083632bc158774c600fb86b4"
+      },
+      "originalWholePagePngSha256": "f5c25ad9c77d9771a51066782d3ad5f6757ea77f7761eb1043b9eeacd28f5aeb",
+      "freshOriginalRGBPixelSha256": "8d02135d68325502e0f25461dc80a717e17f08366570d6794f60317a6b152d55",
+      "independentOriginalPixelPaymentRows": 44,
+      "replayedReaderCounts": [
+        44,
+        44
+      ],
+      "allSnapshotReaderRowsReplayedExactly": true,
+      "outsideReaderRows": {
+        "tesseract": [],
+        "rapid": []
+      }
+    },
+    {
+      "physicalPage": 73,
+      "rawOcrPin": {
+        "path": "research/salaries/gap-fill-2026-11-02/phsa_history/raw-ocr/phsa-2013-14-p073.json.gzip",
+        "sha256": "5f6c70d1c1ba848c91a8fee2c1d0b51e9850e9278098417a03e83073463daf8e"
+      },
+      "originalWholePagePngSha256": "a82b25821ca56ffafbe460e4863fd3e10599d5ab9405d221b4a5c1e2ff14669f",
+      "freshOriginalRGBPixelSha256": "affc22b19717a547f478ea3054ba2293f06ab42e2562fa30662fd0a99f8e386b",
+      "independentOriginalPixelPaymentRows": 44,
+      "replayedReaderCounts": [
+        44,
+        44
+      ],
+      "allSnapshotReaderRowsReplayedExactly": true,
+      "outsideReaderRows": {
+        "tesseract": [],
+        "rapid": []
+      }
+    },
+    {
+      "physicalPage": 74,
+      "rawOcrPin": {
+        "path": "research/salaries/gap-fill-2026-11-02/phsa_history/raw-ocr/phsa-2013-14-p074.json.gzip",
+        "sha256": "5364408dc3c44975acb5f6ebd2926041a147dbcee8489d395710b8cad222f7e4"
+      },
+      "originalWholePagePngSha256": "dee03819fdb8132fcbf02ef820f15366781f0ba399889fcdaf56fc9c9787222c",
+      "freshOriginalRGBPixelSha256": "121c3228624d4570785ac345943214597215020ad1b06071e17dcd7d50cb8742",
+      "independentOriginalPixelPaymentRows": 44,
+      "replayedReaderCounts": [
+        44,
+        44
+      ],
+      "allSnapshotReaderRowsReplayedExactly": true,
+      "outsideReaderRows": {
+        "tesseract": [],
+        "rapid": []
+      }
+    },
+    {
+      "physicalPage": 75,
+      "rawOcrPin": {
+        "path": "research/salaries/gap-fill-2026-11-02/phsa_history/raw-ocr/phsa-2013-14-p075.json.gzip",
+        "sha256": "6cb9193415f00176cd7ed598fed646c174f0b2f98d4620df0d3da0fd11f62c9e"
+      },
+      "originalWholePagePngSha256": "70b55a7e72dcfa88a10e8eed80dd37841f3cecbae1bf70e1a0df14c5b7cd5e57",
+      "freshOriginalRGBPixelSha256": "d19e90377d425b03b792be3e89a8cbab0d9102563b59dfcee10eca84e0e18ef8",
+      "independentOriginalPixelPaymentRows": 44,
+      "replayedReaderCounts": [
+        44,
+        44
+      ],
+      "allSnapshotReaderRowsReplayedExactly": true,
+      "outsideReaderRows": {
+        "tesseract": [],
+        "rapid": []
+      }
+    },
+    {
+      "physicalPage": 76,
+      "rawOcrPin": {
+        "path": "research/salaries/gap-fill-2026-11-02/phsa_history/raw-ocr/phsa-2013-14-p076.json.gzip",
+        "sha256": "aeb36e53c9b62c40a265ef6fe68e01ee03b0b97c571f6a3751d3913a8dd4c8aa"
+      },
+      "originalWholePagePngSha256": "5efcda6fdf9f19acbc3e67632997c280518705be12a9b67e3ab731fe8621c4e7",
+      "freshOriginalRGBPixelSha256": "ce9e87904b6f3272419908e83b70774d2faea6d7b0838b6e63a5929016a69608",
+      "independentOriginalPixelPaymentRows": 44,
+      "replayedReaderCounts": [
+        44,
+        44
+      ],
+      "allSnapshotReaderRowsReplayedExactly": true,
+      "outsideReaderRows": {
+        "tesseract": [],
+        "rapid": []
+      }
+    },
+    {
+      "physicalPage": 77,
+      "rawOcrPin": {
+        "path": "research/salaries/gap-fill-2026-11-02/phsa_history/raw-ocr/phsa-2013-14-p077.json.gzip",
+        "sha256": "dea56520af7f705ec95905206059506e492a7746b3c22db94acd2fd4ed759009"
+      },
+      "originalWholePagePngSha256": "1827a00044decc35d8e9728469e235188e74053f643e43ab159eaf43fd97335d",
+      "freshOriginalRGBPixelSha256": "45e0e481be19898bfc7655a96a7ae5d6df34ee6bbd94db619b1356fe4ea7dc00",
+      "independentOriginalPixelPaymentRows": 44,
+      "replayedReaderCounts": [
+        44,
+        44
+      ],
+      "allSnapshotReaderRowsReplayedExactly": true,
+      "outsideReaderRows": {
+        "tesseract": [],
+        "rapid": []
+      }
+    },
+    {
+      "physicalPage": 78,
+      "rawOcrPin": {
+        "path": "research/salaries/gap-fill-2026-11-02/phsa_history/raw-ocr/phsa-2013-14-p078.json.gzip",
+        "sha256": "05158324499fa1e52de71243bf461690c17f22f41b77636554a0e8b357b532cf"
+      },
+      "originalWholePagePngSha256": "7ffdbd1a002ad05b6b1644e04f024acd18d4c903ea6ae7aa7c19034854fc38d7",
+      "freshOriginalRGBPixelSha256": "05846f827b2a64588f1b2052fe19ee4507a00a11350c43701a78a140853e9ff7",
+      "independentOriginalPixelPaymentRows": 44,
+      "replayedReaderCounts": [
+        44,
+        44
+      ],
+      "allSnapshotReaderRowsReplayedExactly": true,
+      "outsideReaderRows": {
+        "tesseract": [],
+        "rapid": []
+      }
+    },
+    {
+      "physicalPage": 79,
+      "rawOcrPin": {
+        "path": "research/salaries/gap-fill-2026-11-02/phsa_history/raw-ocr/phsa-2013-14-p079.json.gzip",
+        "sha256": "08d912ab6ce79fbfb3925965b3f87bd6d79f4e287be4232a2cee26bb9ecc912f"
+      },
+      "originalWholePagePngSha256": "a5d66aa1af957e7caeb42f639ce604688dac49e019d1a2c60a11410df4f55a6f",
+      "freshOriginalRGBPixelSha256": "0e0af39af1d45640455235d417cc2059fa9eee809016aaa72abb33f714de1ed3",
+      "independentOriginalPixelPaymentRows": 44,
+      "replayedReaderCounts": [
+        44,
+        44
+      ],
+      "allSnapshotReaderRowsReplayedExactly": true,
+      "outsideReaderRows": {
+        "tesseract": [],
+        "rapid": []
+      }
+    },
+    {
+      "physicalPage": 80,
+      "rawOcrPin": {
+        "path": "research/salaries/gap-fill-2026-11-02/phsa_history/raw-ocr/phsa-2013-14-p080.json.gzip",
+        "sha256": "4f85a91430ea03c70447b9630af3c100e6f6df1e77faa48c9ed39ee1287652b7"
+      },
+      "originalWholePagePngSha256": "df1b066dc874f3a0a0fe5d27283c796954230fb004a5b62e06f0fe4482f2eff8",
+      "freshOriginalRGBPixelSha256": "2ced9ead08e26c6590621acf3dc61c6a9f2c1ce25db85fb494233be0bf05aea6",
+      "independentOriginalPixelPaymentRows": 44,
+      "replayedReaderCounts": [
+        44,
+        44
+      ],
+      "allSnapshotReaderRowsReplayedExactly": true,
+      "outsideReaderRows": {
+        "tesseract": [],
+        "rapid": []
+      }
+    },
+    {
+      "physicalPage": 81,
+      "rawOcrPin": {
+        "path": "research/salaries/gap-fill-2026-11-02/phsa_history/raw-ocr/phsa-2013-14-p081.json.gzip",
+        "sha256": "21464224965a4835df5ac257ad1f27c8e9efc07908f5edbe72dfe721e571e15d"
+      },
+      "originalWholePagePngSha256": "08d47093000165bf2018723c3ff4a9e2f3b2715d2d5363afdcea2aee986dacc9",
+      "freshOriginalRGBPixelSha256": "00842bffe5b5bf6f329b708a0e7b37e5a57898d1aec1bf551070e64a436eb66b",
+      "independentOriginalPixelPaymentRows": 44,
+      "replayedReaderCounts": [
+        44,
+        44
+      ],
+      "allSnapshotReaderRowsReplayedExactly": true,
+      "outsideReaderRows": {
+        "tesseract": [],
+        "rapid": []
+      }
+    },
+    {
+      "physicalPage": 82,
+      "rawOcrPin": {
+        "path": "research/salaries/gap-fill-2026-11-02/phsa_history/raw-ocr/phsa-2013-14-p082.json.gzip",
+        "sha256": "45044c001faca872c7ec01b36740ba50ad4205f157fe1291600e8a8d982eb547"
+      },
+      "originalWholePagePngSha256": "c5e90c5a40228533b19384596204913cb0a3b13659ac526ac9affe73de64f007",
+      "freshOriginalRGBPixelSha256": "75bb23acec61d328402c2e419e74123fbc5da47ca13e4c4b17eff3aead42e592",
+      "independentOriginalPixelPaymentRows": 44,
+      "replayedReaderCounts": [
+        44,
+        44
+      ],
+      "allSnapshotReaderRowsReplayedExactly": true,
+      "outsideReaderRows": {
+        "tesseract": [],
+        "rapid": []
+      }
+    },
+    {
+      "physicalPage": 83,
+      "rawOcrPin": {
+        "path": "research/salaries/gap-fill-2026-11-02/phsa_history/raw-ocr/phsa-2013-14-p083.json.gzip",
+        "sha256": "08c9bbf7e8a5d4c27a52d9e433c767c1ff1fbd4afb4d465075bad210fd4588c8"
+      },
+      "originalWholePagePngSha256": "b4cf2db0e34d6657a406912c3f289a90f8d844ce7b224451011e1b27d1a56965",
+      "freshOriginalRGBPixelSha256": "4e6a4a18b47159ef9ee6044a0b5bbd2aa701680c164afd53408c1e41fe5e8a69",
+      "independentOriginalPixelPaymentRows": 44,
+      "replayedReaderCounts": [
+        44,
+        44
+      ],
+      "allSnapshotReaderRowsReplayedExactly": true,
+      "outsideReaderRows": {
+        "tesseract": [],
+        "rapid": []
+      }
+    },
+    {
+      "physicalPage": 84,
+      "rawOcrPin": {
+        "path": "research/salaries/gap-fill-2026-11-02/phsa_history/raw-ocr/phsa-2013-14-p084.json.gzip",
+        "sha256": "3b6f312e8b36931b805094d9f793354b84b499a42ad32a5ca4c275a305cf3394"
+      },
+      "originalWholePagePngSha256": "f0e65f7c46f75dd968592527b0046035aa09909468ca43ac2359c6b5c754e4af",
+      "freshOriginalRGBPixelSha256": "0672fc65e7c14e4c2ead5cc005c18a3c21dee19636cea64dc45a11d461c97e19",
+      "independentOriginalPixelPaymentRows": 44,
+      "replayedReaderCounts": [
+        44,
+        44
+      ],
+      "allSnapshotReaderRowsReplayedExactly": true,
+      "outsideReaderRows": {
+        "tesseract": [],
+        "rapid": []
+      }
+    },
+    {
+      "physicalPage": 85,
+      "rawOcrPin": {
+        "path": "research/salaries/gap-fill-2026-11-02/phsa_history/raw-ocr/phsa-2013-14-p085.json.gzip",
+        "sha256": "7a76a2845cd4ecf54bd68d46a0226cc55be92b3281a21a2dd582dfc709b0957a"
+      },
+      "originalWholePagePngSha256": "167742f922528c1541c3a5207c11eff9f488d7333abba85528cab11609c01755",
+      "freshOriginalRGBPixelSha256": "0a0c82f883142c1910574b0f49905f313fcad316180d8196bf5301f234b058b0",
+      "independentOriginalPixelPaymentRows": 44,
+      "replayedReaderCounts": [
+        44,
+        44
+      ],
+      "allSnapshotReaderRowsReplayedExactly": true,
+      "outsideReaderRows": {
+        "tesseract": [],
+        "rapid": []
+      }
+    },
+    {
+      "physicalPage": 86,
+      "rawOcrPin": {
+        "path": "research/salaries/gap-fill-2026-11-02/phsa_history/raw-ocr/phsa-2013-14-p086.json.gzip",
+        "sha256": "ec578330c71163a6028df03f44c69b2f4fc4b01dbc997f0bb0e743c13f356e70"
+      },
+      "originalWholePagePngSha256": "78c1c961eceb4a0af8ca4c46d916e4d52aa79695f5e6b097e077f0bf75dff87b",
+      "freshOriginalRGBPixelSha256": "c6f2d74883fa17f66a7d5f44d229f5b99659731c1f88702e35ceaba95ac53cb1",
+      "independentOriginalPixelPaymentRows": 44,
+      "replayedReaderCounts": [
+        44,
+        44
+      ],
+      "allSnapshotReaderRowsReplayedExactly": true,
+      "outsideReaderRows": {
+        "tesseract": [],
+        "rapid": []
+      }
+    },
+    {
+      "physicalPage": 87,
+      "rawOcrPin": {
+        "path": "research/salaries/gap-fill-2026-11-02/phsa_history/raw-ocr/phsa-2013-14-p087.json.gzip",
+        "sha256": "592ef22cc271c5360bfbcedda52ca1c95aad7973442beda4b7f4d34742c5ffff"
+      },
+      "originalWholePagePngSha256": "d8973df6df74c729f317bc7e9f61cbe823d3d32aa8b235212126d0ed7cb3039b",
+      "freshOriginalRGBPixelSha256": "690ed54149a5f9ffd005b8ce86c1094a9921015b26762e7624e577ee815b7670",
+      "independentOriginalPixelPaymentRows": 44,
+      "replayedReaderCounts": [
+        44,
+        44
+      ],
+      "allSnapshotReaderRowsReplayedExactly": true,
+      "outsideReaderRows": {
+        "tesseract": [],
+        "rapid": []
+      }
+    },
+    {
+      "physicalPage": 88,
+      "rawOcrPin": {
+        "path": "research/salaries/gap-fill-2026-11-02/phsa_history/raw-ocr/phsa-2013-14-p088.json.gzip",
+        "sha256": "4b0a69dc6de810c78fcecdecceb2f11144142b29097969f44221450c5c615726"
+      },
+      "originalWholePagePngSha256": "88876cf58664390c4622a67ea8f67c827fa6f40dec085dbf3844184b10b0e7fa",
+      "freshOriginalRGBPixelSha256": "d9fbac6488ff5689dbf9d4adc9190f0eb3ffcda7c5e0a3080bdc09776cda931b",
+      "independentOriginalPixelPaymentRows": 44,
+      "replayedReaderCounts": [
+        44,
+        44
+      ],
+      "allSnapshotReaderRowsReplayedExactly": true,
+      "outsideReaderRows": {
+        "tesseract": [],
+        "rapid": []
+      }
+    },
+    {
+      "physicalPage": 89,
+      "rawOcrPin": {
+        "path": "research/salaries/gap-fill-2026-11-02/phsa_history/raw-ocr/phsa-2013-14-p089.json.gzip",
+        "sha256": "005382885ebb8cb408112c11afcda0b40a9038cb58b4eca4069d306ab8fec74b"
+      },
+      "originalWholePagePngSha256": "6c02f8427ee283f0f29606be9cfb854cbbbf49403e7c84e6652e07bafa1e3199",
+      "freshOriginalRGBPixelSha256": "1f60973f1d3f8e81ac15818d7dbc5c6f6d4d193b36982769bdf1a0a3d16ceec0",
+      "independentOriginalPixelPaymentRows": 44,
+      "replayedReaderCounts": [
+        44,
+        44
+      ],
+      "allSnapshotReaderRowsReplayedExactly": true,
+      "outsideReaderRows": {
+        "tesseract": [],
+        "rapid": []
+      }
+    },
+    {
+      "physicalPage": 90,
+      "rawOcrPin": {
+        "path": "research/salaries/gap-fill-2026-11-02/phsa_history/raw-ocr/phsa-2013-14-p090.json.gzip",
+        "sha256": "c37c6de2761dd1e7349512254a7a14f3bccb3bf9967c2575fcf5dc71cd59881f"
+      },
+      "originalWholePagePngSha256": "3783ca46d2b14adc398f83be2f84818e25a06d354ed4533cbf0d5a828c51d3a3",
+      "freshOriginalRGBPixelSha256": "4b6ee02bca68e0c8c9ab4a963ef6bc576bce8c07e9f296b95c6df7ffc0b7b0c7",
+      "independentOriginalPixelPaymentRows": 44,
+      "replayedReaderCounts": [
+        44,
+        44
+      ],
+      "allSnapshotReaderRowsReplayedExactly": true,
+      "outsideReaderRows": {
+        "tesseract": [],
+        "rapid": []
+      }
+    },
+    {
+      "physicalPage": 91,
+      "rawOcrPin": {
+        "path": "research/salaries/gap-fill-2026-11-02/phsa_history/raw-ocr/phsa-2013-14-p091.json.gzip",
+        "sha256": "46e7163653f0402a7d960577a2b3c11a8e8ddc92339786434b5eb97713579b94"
+      },
+      "originalWholePagePngSha256": "56da512fb715794e9b4f5131716b795dcdb040daa67dda8615bbc63ada46bcb8",
+      "freshOriginalRGBPixelSha256": "6f9f49e7c6ca350d8e1f9c67c3760fc1250b90e356844953e166504e9ce4cd18",
+      "independentOriginalPixelPaymentRows": 44,
+      "replayedReaderCounts": [
+        44,
+        44
+      ],
+      "allSnapshotReaderRowsReplayedExactly": true,
+      "outsideReaderRows": {
+        "tesseract": [],
+        "rapid": []
+      }
+    },
+    {
+      "physicalPage": 92,
+      "rawOcrPin": {
+        "path": "research/salaries/gap-fill-2026-11-02/phsa_history/raw-ocr/phsa-2013-14-p092.json.gzip",
+        "sha256": "948b7d572f0ebae97eea3efc7b84deaf20b895318b78010e9ba505c7114b3bae"
+      },
+      "originalWholePagePngSha256": "03d5c2031f65f30ede91447e113bca758f77dba2d0e3b4594c8285c7c3cf4b49",
+      "freshOriginalRGBPixelSha256": "3e54ee85ed0523cec9afd65c66be5de43c22983d2c7f8cd692662c0189fe0102",
+      "independentOriginalPixelPaymentRows": 44,
+      "replayedReaderCounts": [
+        44,
+        44
+      ],
+      "allSnapshotReaderRowsReplayedExactly": true,
+      "outsideReaderRows": {
+        "tesseract": [],
+        "rapid": []
+      }
+    },
+    {
+      "physicalPage": 93,
+      "rawOcrPin": {
+        "path": "research/salaries/gap-fill-2026-11-02/phsa_history/raw-ocr/phsa-2013-14-p093.json.gzip",
+        "sha256": "bcea946a622831fb398acb03d5a09cd5e1fbc7bc47081be04f31db0777930810"
+      },
+      "originalWholePagePngSha256": "8643771037dbf501e50fe36b015410c5ed0902c9290a1cc57c31ce32ee423f5d",
+      "freshOriginalRGBPixelSha256": "936b96f2f0ee08082954d61800d061e8929497b84507883d5d2dc3a5be505b20",
+      "independentOriginalPixelPaymentRows": 31,
+      "replayedReaderCounts": [
+        32,
+        31
+      ],
+      "allSnapshotReaderRowsReplayedExactly": true,
+      "outsideReaderRows": {
+        "tesseract": [
+          {
+            "name": "Toalsssss—“(‘(CSUTO;!WWOWOOUOUOUOUOUOUOUOUOUOUOUOUOUUUUUCOC*«‘“‘a“‘#S&",
+            "y": 2492.0,
+            "nameBox": [
+              213,
+              2468,
+              2252,
+              2516
+            ],
+            "nameConfidence": 0.0,
+            "pay": {
+              "kind": "number",
+              "value": 632576,
+              "raw": "632,576"
+            },
+            "expense": {
+              "kind": "number",
+              "value": 8642235,
+              "raw": "8,642,235"
+            },
+            "payConfidence": 67.49044,
+            "expenseConfidence": 14.635391,
+            "rawWords": [
+              {
+                "text": "Toalsssss—“(‘(CSUTO;!WWOWOOUOUOUOUOUOUOUOUOUOUOUOUOUUUUUCOC*«‘“‘a“‘#S&",
+                "box": [
+                  213,
+                  2468,
+                  2252,
+                  2516
+                ],
+                "x": 1232.5,
+                "y": 2492.0,
+                "confidence": 0.0,
+                "line": [
+                  "1",
+                  "1",
+                  "1",
+                  "38"
+                ]
+              },
+              {
+                "text": "632,576",
+                "box": [
+                  1795,
+                  2464,
+                  1946,
+                  2526
+                ],
+                "x": 1870.5,
+                "y": 2495.0,
+                "confidence": 67.49044,
+                "line": [
+                  "1",
+                  "1",
+                  "1",
+                  "38"
+                ]
+              },
+              {
+                "text": "8,642,235",
+                "box": [
+                  2007,
+                  2464,
+                  2256,
+                  2526
+                ],
+                "x": 2131.5,
+                "y": 2495.0,
+                "confidence": 14.635391,
+                "line": [
+                  "1",
+                  "1",
+                  "1",
+                  "38"
+                ]
+              }
+            ]
+          }
+        ],
+        "rapid": []
+      }
+    }
+  ],
+  "noOutreach": true
+}

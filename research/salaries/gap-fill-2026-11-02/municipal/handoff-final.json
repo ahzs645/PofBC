@@ -1,0 +1,198 @@
+{
+  "status": "municipal-producer-accepted-verified-and-frozen",
+  "allEightAssignedLeadsCompletedThroughAvailablePublicOriginals": true,
+  "noOutreach": true,
+  "globalRegistryEditedByWorker": false,
+  "publicOutputsEditedByWorker": false,
+  "acceptedSourceCohorts": 52,
+  "acceptedOriginals": 28,
+  "acceptedRowsAdded": 411,
+  "employeeRowsAdded": 212,
+  "councilRowsAdded": 199,
+  "compiledRowsDeleted": 0,
+  "allEarlierOfficialDataAndMetadataUnchanged": true,
+  "collection": "research/salaries/gap-fill-municipal",
+  "acceptedManifest": {
+    "path": "research/salaries/gap-fill-municipal/sources.json",
+    "sha256": "08fa4d263981e3bd325cd28d9dd9645698f0ea3fdfd7f1a3cdd15f30b94875da"
+  },
+  "acceptedReconciliation": {
+    "path": "research/salaries/gap-fill-2026-11-02/municipal/accepted-summary.json",
+    "sha256": "d5677833ccec3edef24a78da1a97577d1ad3acdeff302e252f54e43bb466f98b"
+  },
+  "rootAcceptance": {
+    "path": "research/salaries/gap-fill-2026-11-02/municipal/acceptance.json",
+    "sha256": "117e8f668e9fb2b49ec711f9036c6a1c609a4795936c13e1faa887f6c5fc06db"
+  },
+  "producerFreeze": {
+    "path": "research/salaries/gap-fill-2026-11-02/municipal/producer-freeze.json",
+    "sha256": "eab7b5d6e3f90e82f526066298e588e4773928c35df95b02a3382a36b7f7cb30"
+  },
+  "frozenProducerFiles": 759,
+  "peerReviewSubtreeExcludedFromProducerFreeze": true,
+  "leadDispositions": {
+    "path": "research/salaries/gap-fill-2026-11-02/municipal/lead-dispositions.json",
+    "sha256": "256f2120b86c8e22a3473b98c5247330a4f9f0ece6f7217f350152000789fa39"
+  },
+  "heldAcquisitionNotes": {
+    "path": "research/salaries/gap-fill-2026-11-02/municipal/acquisition-notes.json",
+    "sha256": "e51d47ffebd1bf782a4e7a204773c2e72c12abebda48588a49cb8880df409ff7"
+  },
+  "sourceApprovalQualificationReplay": {
+    "path": "research/salaries/gap-fill-2026-11-02/municipal/source-approval-qualification-replay.json",
+    "sha256": "a670572c9696d90510176fca1b48090302b338727c42a46e1e0cb3995f519ee6"
+  },
+  "rossland2014AdoptionEvidence": {
+    "path": "research/salaries/gap-fill-2026-11-02/municipal/rossland-2014-adoption-source-receipt.json",
+    "sha256": "2b017cfcd54750fa85944ffa58093079140636e8bf3f054b1627e37dd266ddb3"
+  },
+  "regressionTestsPassed": 13,
+  "offlineChecksPassed": [
+    "python3 scripts/gap_municipal_emit.py --check",
+    "python3 scripts/gap_municipal_qualification_check.py",
+    "python3 -m unittest discover -s scripts -p test_gap_municipal.py -v",
+    "python3 scripts/gap_municipal_freeze.py --check"
+  ],
+  "all411RowsIndependentlyReadFromActualOriginalImages": true,
+  "remainingProcurementQuestionsCount": 3,
+  "remainingProcurementQuestions": [
+    "Rossland 2011: a complete named employee schedule.",
+    "Rossland 2014: the named council table added under the carried June 22, 2015 SOFI resolution.",
+    "Abbotsford 2023: an existing benefit dash legend or original spreadsheet for eleven unknown components; the known literal payments are already accepted."
+  ],
+  "retainedSourceApprovalQualifications": [
+    "Rossland 2011 mayor signature blank; 2012/2013 approval copies unsigned; 2020 printed Council approval date with blank signature lines.",
+    "Rossland 2014 original agenda approval form unsigned. Signed, certified-correct FINAL minutes 4114 record the carried 2014 package approval with a council table to be added. Six employee observations are accepted; the missing council attachment is not inferred.",
+    "Abbotsford 2023 source is a signed staff recommendation, which does not itself prove Council adoption. This qualification applies only to the new eleven known-column payments; the previous 449 are untouched.",
+    "Clearwater 2020 approval dates and the 2021 mayor date are blank. The 2015 cover presentation year differs from the signature year. Explicit salary periods and all source dates remain qualified."
+  ],
+  "leadResults": [
+    {
+      "leadId": "lead-026",
+      "employer": "City of Abbotsford",
+      "status": "accepted-official-sources-with-documented-existing-record-questions",
+      "acceptedCohorts": 1,
+      "acceptedRowsAdded": 11,
+      "employeeRowsAdded": 11,
+      "councilRowsAdded": 0,
+      "yearsAdded": [
+        "2023"
+      ],
+      "remainingExistingRecordQuestions": [
+        "An existing original spreadsheet or explicit taxable-benefit dash/blank legend covering the exact eleven previously held source observations."
+      ]
+    },
+    {
+      "leadId": "lead-027",
+      "employer": "City of Port Moody",
+      "status": "already-covered-exact-original",
+      "acceptedCohorts": 0,
+      "acceptedRowsAdded": 0,
+      "employeeRowsAdded": 0,
+      "councilRowsAdded": 0,
+      "yearsAdded": [],
+      "remainingExistingRecordQuestions": []
+    },
+    {
+      "leadId": "lead-028",
+      "employer": "City of Rossland",
+      "status": "accepted-official-sources-with-documented-existing-record-questions",
+      "acceptedCohorts": 20,
+      "acceptedRowsAdded": 200,
+      "employeeRowsAdded": 121,
+      "councilRowsAdded": 79,
+      "yearsAdded": [
+        "2010",
+        "2011",
+        "2012",
+        "2013",
+        "2014",
+        "2016",
+        "2017",
+        "2018",
+        "2019",
+        "2020",
+        "2023"
+      ],
+      "remainingExistingRecordQuestions": [
+        "A complete existing 2011 named employee remuneration and expense schedule, or its original spreadsheet.",
+        "The council remuneration table added to the 2014 SOFI package under the carried June 22, 2015 Council resolution, or a complete filed/adopted copy containing it."
+      ]
+    },
+    {
+      "leadId": "lead-029",
+      "employer": "City of Trail",
+      "status": "already-covered-exact-original",
+      "acceptedCohorts": 0,
+      "acceptedRowsAdded": 0,
+      "employeeRowsAdded": 0,
+      "councilRowsAdded": 0,
+      "yearsAdded": [],
+      "remainingExistingRecordQuestions": []
+    },
+    {
+      "leadId": "lead-030",
+      "employer": "District of 100 Mile House",
+      "status": "accepted-official-sources",
+      "acceptedCohorts": 2,
+      "acceptedRowsAdded": 13,
+      "employeeRowsAdded": 8,
+      "councilRowsAdded": 5,
+      "yearsAdded": [
+        "2023"
+      ],
+      "remainingExistingRecordQuestions": []
+    },
+    {
+      "leadId": "lead-031",
+      "employer": "District of Barriere",
+      "status": "accepted-official-sources",
+      "acceptedCohorts": 3,
+      "acceptedRowsAdded": 17,
+      "employeeRowsAdded": 3,
+      "councilRowsAdded": 14,
+      "yearsAdded": [
+        "2020",
+        "2024"
+      ],
+      "remainingExistingRecordQuestions": []
+    },
+    {
+      "leadId": "lead-032",
+      "employer": "District of Clearwater",
+      "status": "accepted-official-sources",
+      "acceptedCohorts": 24,
+      "acceptedRowsAdded": 156,
+      "employeeRowsAdded": 60,
+      "councilRowsAdded": 96,
+      "yearsAdded": [
+        "2011",
+        "2012",
+        "2013",
+        "2014",
+        "2015",
+        "2016",
+        "2017",
+        "2018",
+        "2019",
+        "2020",
+        "2021",
+        "2022"
+      ],
+      "remainingExistingRecordQuestions": []
+    },
+    {
+      "leadId": "lead-033",
+      "employer": "District of Lantzville",
+      "status": "accepted-official-sources",
+      "acceptedCohorts": 2,
+      "acceptedRowsAdded": 14,
+      "employeeRowsAdded": 9,
+      "councilRowsAdded": 5,
+      "yearsAdded": [
+        "2024"
+      ],
+      "remainingExistingRecordQuestions": []
+    }
+  ]
+}

@@ -1,0 +1,81 @@
+{
+  "status": "ready-for-root-integration",
+  "sources": [
+    {
+      "sourceKey": "phsa-2011-12",
+      "status": "accepted-bounded-independent-source-review",
+      "sourceSha256": "65070afa02af25d614688b5e83b2121def9684288534a4b2d2245db4d39fa754",
+      "namedRows": 3423,
+      "uniquePersonallyReadRows": 399,
+      "selectedSnapshot": {
+        "path": "research/salaries/gap-fill-2026-11-02/school_north/reviews/phsa-history/phsa-2011-12-selected-peer-snapshot-v2.json.gzip",
+        "sha256": "8cffe708136da7244bef789e328cb1bc376f4243c4998f590c0f1c6b04d6b702"
+      },
+      "independentReceipt": {
+        "path": "research/salaries/gap-fill-2026-11-02/school_north/reviews/phsa-history/phsa-2011-12-independent-bounded-source-review.json",
+        "sha256": "e1c5f627f38659e62019e622b70c3f81bbfd6b82009b2a4eb7d9bae0af3348b3"
+      },
+      "printedAndComputedNamedComponents": [
+        369888459,
+        8500874
+      ],
+      "nullExpenses": 1217
+    },
+    {
+      "sourceKey": "phsa-2012-13",
+      "status": "accepted-bounded-independent-source-review",
+      "sourceSha256": "6df15d7695b46bd5bc699286d7f104cf0eeb68eea42cd34ab955265bdad841fb",
+      "namedRows": 3351,
+      "uniquePersonallyReadRows": 479,
+      "selectedSnapshot": {
+        "path": "research/salaries/gap-fill-2026-11-02/school_north/reviews/phsa-history/phsa-2012-13-selected-peer-snapshot-v2-source-reread.json.gzip",
+        "sha256": "438c7b62eea4f0ba09cbff2c7696cbb323b64cd51bde4ec4bd925beaf2892bac"
+      },
+      "independentReceipt": {
+        "path": "research/salaries/gap-fill-2026-11-02/school_north/reviews/phsa-history/phsa-2012-13-independent-bounded-source-review.json",
+        "sha256": "0b38bc9de3783573e4a9408053025600a7473f93dea17756767f41aab8a96210"
+      },
+      "printedAndComputedNamedComponents": [
+        369114727,
+        8792836
+      ],
+      "nullExpenses": 1180
+    }
+  ],
+  "namedRows": 6774,
+  "uniquePersonallyReadRows": 878,
+  "personalReadingsIncludingOverlaps": 897,
+  "allInitialSourceOnlyTargetsReadBeforeRawCandidateAccess": 804,
+  "additionalSourceOnlyAdaptiveTargets": 25,
+  "independentHoldouts": 40,
+  "independentExpenseCalibrationRows": 28,
+  "trueFieldGeometryFlags": 581,
+  "completeOriginalPaymentCensus": true,
+  "completeRawReaderReplay": true,
+  "completeOriginal300dpiRasterReplay": true,
+  "completeTargetCropPixelReplay": true,
+  "remainingSourceReviewBlockers": [],
+  "noOutreach": true,
+  "controls": "Both named remuneration/expense totals match source literally; no balancing adjustments.",
+  "sourceQualifications": [
+    "Payment disclosures above75000, not complete employee rosters or annual base rates.",
+    "Positions undisclosed; aggregate occupational counts do not assign individual jobs.",
+    "Personal field review is bounded to the exact878 unique rows. All6774 rows have independent source payment-band census and two retained raw-reader replay; no infallibility claim.",
+    "Exactly2397 source-dash expense cells stay null; all nine observed numeric expenses below10 personally source-read.",
+    "Initial peer transcription errors, primary Moosa271 expense omission, clipping and isolated blank-page scan speck are retained and resolved additively from originals."
+  ],
+  "downstreamRootTask": "Map accepted selected payloads exactly to normalized data/provenance, retain compiled partitions unless separately proved, adopt receipts and integrate. This handoff does not edit a global registry or public outputs.",
+  "futureMappingOverlayLocation": "research/salaries/gap-fill-2026-11-02/school_north/reviews/phsa-history/integration",
+  "checks": [
+    "python scripts/gap_school_north_peer_phsa_handoff.py --check",
+    "python scripts/gap_school_north_peer_phsa_acceptance.py --key phsa-2011-12 --selected research/salaries/gap-fill-2026-11-02/phsa_history/phsa-2011-12-scan-selected-v2.json.gzip --revision v2 --check",
+    "python scripts/gap_school_north_peer_phsa_acceptance.py --key phsa-2012-13 --selected research/salaries/gap-fill-2026-11-02/phsa_history/phsa-2012-13-scan-selected-v2.json.gzip --revision v2-source-reread --check",
+    "python scripts/gap_school_north_peer_phsa_crop_replay.py --check",
+    "python scripts/gap_school_north_peer_phsa_crop_replay.py --adaptive2012 --check",
+    "OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 /tmp/held-health-ocr/venv/bin/python scripts/gap_school_north_peer_phsa_replay.py --check"
+  ],
+  "freeze": {
+    "path": "research/salaries/gap-fill-2026-11-02/school_north/reviews/phsa-history/phsa-history-peer-freeze.json",
+    "sha256": "63947542522a5c997658d06efe3f168366ba9d813a7fdd7ded1cb4d23958c057"
+  }
+}

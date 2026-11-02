@@ -1,0 +1,57 @@
+{
+  "stage": "native candidates awaiting all source-image peer and parent acceptance",
+  "sourceOriginals": 65,
+  "candidateEmployeeObservations": 207000,
+  "exactTwoEngineSources": 61,
+  "assignedLeads": 29,
+  "workerProofReferences": [
+    {
+      "path": "recovered-employee-originals-v2.json",
+      "sha256": "905ff37b413bba85ca5fc3c99131a9d16bf8e5d2cea120e2bf4ddab2a9b75651"
+    },
+    {
+      "path": "native-reader-evidence-index-v2.json",
+      "sha256": "ab307b9ba65b94b75a53259de677ea538752b714d979431694c58a3356687219"
+    },
+    {
+      "path": "native-visibility-index-v1.json",
+      "sha256": "30cbd03abf089a4c24c3ec294502b1fb2496eed0bf57294ece305489e26b6475"
+    },
+    {
+      "path": "native-clip-pixel-audit-index-v2.json",
+      "sha256": "0cec68ce84accadd78c8f0435bb7a335e9d490fd1fc4a4812a049bab9a3c7fd8"
+    },
+    {
+      "path": "source-context-review-packet.json",
+      "sha256": "4a87127fb70c80c52ed8c1fbdd90b38c590f5eec1f3712f6b1b0ca182761c892"
+    },
+    {
+      "path": "source-context-image-index.json",
+      "sha256": "0ee4ed4ecdaaeee409f45a3311179e9d2cb3800c4b83539902b9a03882a596aa"
+    },
+    {
+      "path": "source-review-packets/reader-disagreements-001/packet.json",
+      "sha256": "212a16530fbd466f55432b6e2ac742ede361f17c1f7fe03c60ba626c63baf57c"
+    },
+    {
+      "path": "source-review-packets/clip-effects-001/packet.json",
+      "sha256": "cfe2424f4d0d90408c25038e7d6303bbbd5f6b9c63939ce58a17afc0622da53d"
+    }
+  ],
+  "sourceIssuesNotBalanced": true,
+  "compiledRowsDeleted": 0,
+  "sourceAccepted": false,
+  "outreachSent": false,
+  "currentRegressionTests": {
+    "command": "python3 -m unittest discover -s scripts -p test_gap_health_employees.py",
+    "tests": 16,
+    "exitCode": 0
+  },
+  "pending": [
+    "independent88-source-exception image readings",
+    "independent264remainingclip image readings",
+    "root source definitions/control context review",
+    "explicit per-source review adoption",
+    "final normalized payload/manifest,29lead dispositions and freeze"
+  ]
+}

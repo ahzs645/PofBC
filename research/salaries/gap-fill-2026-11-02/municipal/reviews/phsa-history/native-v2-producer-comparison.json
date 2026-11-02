@@ -1,0 +1,109 @@
+{
+  "status": "pass for exact pinned native-v2 candidate fields, qualified source controls/counts retained",
+  "scope": "Complete4082-row native computational comparison and independent full payment census; bounded33-row personal image transcription/66money cells plus actual source contexts/definitions/control totals.",
+  "sourceFirstEvidenceFreeze": {
+    "path": "research/salaries/gap-fill-2026-11-02/municipal/reviews/phsa-history/native-independent-source-freeze.json",
+    "sha256": "a21132ec60f015bc0c0107ab548f2b31eb8d920aeba30e0fd44313952309bec7"
+  },
+  "independentSourceAudit": {
+    "path": "research/salaries/gap-fill-2026-11-02/municipal/reviews/phsa-history/native-complete-independent-source-audit.json",
+    "sha256": "873c1179dbba3aee46e288e9782c6a52db7ea5dac7d95f0cbd5b2adfe2257577"
+  },
+  "sources": [
+    {
+      "sourceKey": "phsa-2006-07",
+      "sourceSha256": "b6199473463fd6cd44853ec5eb36723995419e40a064568abe91c14694823aa4",
+      "producerCandidatePin": {
+        "path": "research/salaries/gap-fill-2026-11-02/phsa_history/phsa-2006-07-native-candidate-v2.json.gzip",
+        "sha256": "02a3c1824bd5d0a2a02a52e53d9de32b1beb9e990eaf062bab1f1790c0146c91"
+      },
+      "independentPeerRowsPin": {
+        "path": "research/salaries/gap-fill-2026-11-02/municipal/reviews/phsa-history/phsa-2006-07-peer-selected-native-rows.json.gzip",
+        "sha256": "0a16de1045be506d1713e7b01a29065ea3578e6ef84c675a244e84ea712e53db"
+      },
+      "comparisons": [
+        {
+          "reader": "popplerRows",
+          "rowsCompared": 1267,
+          "fiveFieldsAndLiteralMoneyAndFootnotesCompared": true,
+          "differences": []
+        },
+        {
+          "reader": "mupdfRows",
+          "rowsCompared": 1267,
+          "fiveFieldsAndLiteralMoneyAndFootnotesCompared": true,
+          "differences": []
+        }
+      ],
+      "all4082PersonRowsPersonallyRead": false
+    },
+    {
+      "sourceKey": "phsa-2007-08",
+      "sourceSha256": "c0b484b637f2b4193bcabeaae4b866c1d333687f7f4a4a3171d1db8553ce7a10",
+      "producerCandidatePin": {
+        "path": "research/salaries/gap-fill-2026-11-02/phsa_history/phsa-2007-08-native-candidate-v2.json.gzip",
+        "sha256": "8ff3d870b49c36880e40a4ffbefea06e17c280de1f31104fc6fc7a249588cdc9"
+      },
+      "independentPeerRowsPin": {
+        "path": "research/salaries/gap-fill-2026-11-02/municipal/reviews/phsa-history/phsa-2007-08-peer-selected-native-rows.json.gzip",
+        "sha256": "2aaa4eab66894cdc1f90693ab968d89bb05f97a5658b7eadbae8d4b41ffe8535"
+      },
+      "comparisons": [
+        {
+          "reader": "popplerRows",
+          "rowsCompared": 1271,
+          "fiveFieldsAndLiteralMoneyAndFootnotesCompared": true,
+          "differences": []
+        },
+        {
+          "reader": "mupdfRows",
+          "rowsCompared": 1271,
+          "fiveFieldsAndLiteralMoneyAndFootnotesCompared": true,
+          "differences": []
+        }
+      ],
+      "all4082PersonRowsPersonallyRead": false
+    },
+    {
+      "sourceKey": "phsa-2008-09",
+      "sourceSha256": "4f95f2274cc9ef661bfccc5c4367b3907a5492b70dad8078a6d4a039a1f3e850",
+      "producerCandidatePin": {
+        "path": "research/salaries/gap-fill-2026-11-02/phsa_history/phsa-2008-09-native-candidate-v2.json.gzip",
+        "sha256": "532ad4ef05816892cb35821ee1069f2a2f9fd30dbd3e30fc0d711e1e36ba9127"
+      },
+      "independentPeerRowsPin": {
+        "path": "research/salaries/gap-fill-2026-11-02/municipal/reviews/phsa-history/phsa-2008-09-peer-selected-native-rows.json.gzip",
+        "sha256": "16272fc464ad71f874bae192b03f384cbf773e286ae27304b9083a4d9ff2d79c"
+      },
+      "comparisons": [
+        {
+          "reader": "popplerRows",
+          "rowsCompared": 1544,
+          "fiveFieldsAndLiteralMoneyAndFootnotesCompared": true,
+          "differences": []
+        },
+        {
+          "reader": "mupdfRows",
+          "rowsCompared": 1544,
+          "fiveFieldsAndLiteralMoneyAndFootnotesCompared": true,
+          "differences": []
+        }
+      ],
+      "all4082PersonRowsPersonallyRead": false
+    }
+  ],
+  "totalRows": 4082,
+  "twoProducerReadersComparedAgainstIndependentPeerExtraction": true,
+  "allFieldsAgree": true,
+  "allLiteralMoneyCellsAgree": true,
+  "sourceDashesRemainUnknown": true,
+  "noAmountsBalancedOrRowsDropped": true,
+  "requiredPublicationQualifications": [
+    "2006/07 actual table1267names differs narrative1280; literal printed pay and known-expense controls differ from rows.",
+    "2007/08 and2008/09 literal monetary-control residuals preserved, no inferred rounding cause.",
+    "No annualized base salary or complete workforce claim; expenses can include third-party payments; job titles not published.",
+    "Source is official Legislative Library archival copy with explicit added cover and delivered SHA distinct from stored bitstreamMD5/size."
+  ],
+  "producerFinalNormalizedSourceManifestNotYetReviewed": true,
+  "noOutreach": true
+}

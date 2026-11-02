@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en-CA" xml:lang="en-CA">
+<head>
+	<meta charset="utf-8" />
+		<script async src="https://docaccess.com/docbox.js"></script>
+	<title>City of Rossland - Search</title>
+	<link id="favicon" rel="icon" href="https://i.civicweb.net/Global/Images/icon.png" type="image/png" />
+	<link rel="apple-touch-icon" href="https://i.civicweb.net/Global/Images/MobileIcons/ic-icon-57.png" />
+	<link rel="apple-touch-icon" sizes="72x72" href="https://i.civicweb.net/Global/Images/MobileIcons/ic-icon-72.png" />
+	<link rel="apple-touch-icon" sizes="76x76" href="https://i.civicweb.net/Global/Images/MobileIcons/ic-icon-76.png" />
+	<link rel="apple-touch-icon" sizes="114x114" href="https://i.civicweb.net/Global/Images/MobileIcons/ic-icon-114.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="https://i.civicweb.net/Global/Images/MobileIcons/ic-icon-144.png" />
+	<link rel="apple-touch-icon" sizes="152x152" href="https://i.civicweb.net/Global/Images/MobileIcons/ic-icon-152.png">
+
+	<meta name="application-name" content="City of Rossland - Search" />
+	<meta name="msapplication-tooltip" content="Start - City of Rossland - Search" />
+	<meta name="msapplication-TileColor" content="#ffffff" />
+	<meta name="msapplication-TileImage" content="https://i.civicweb.net/Global/Images/MobileIcons/ic-icon-144.png" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+	<meta name="HandheldFriendly" content="true" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+	<meta name="app-mobile-web-app-capable" content="yes" />
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
+	<meta name="apple-touch-fullscreen" content="YES" />
+
+	<link href="/css/bootstrap?v=ezB7utSrfQLa3fGnkbhzBYKNJLNUZ04S5XeulqGSfec1" rel="stylesheet"/>
+
+	<link href="/css/kendo/kendoui?v=0OIdVFEw_KD7VNXS7BXdz6-AVuFaIL_fAdnzLD5b2QM1" rel="stylesheet"/>
+
+	
+	<link href="/css/bootstrap/override?v=LSFU99MXgVOn_hBQy6QrysI3Ong3f_Yo62lVkXhCJag1" rel="stylesheet"/>
+
+	<link href="/css/main?v=NPiMONeC-Oasn5NYxoHzwnRNhhJHKwMExpYTsKdZxVA1" rel="stylesheet"/>
+
+	<link href="//code.jquery.com/ui/1.13.3/themes/smoothness/jquery-ui.css" rel="stylesheet"/>
+
+	<link id="CustomColor" rel="Stylesheet" type="text/css" href="/Global/CustomStyleHandler.axd?Type=8&amp;Culture=en-CA">
+	<script src="/bundles/jquery?v=5bKV9x183rmlW4VvTyYFaroMFJ3un7w-xE4R9wzSQXc1"></script>
+
+
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+
+	
+</head>
+<body class="default">
+	<div class="layout">
+				<header class="layout-section">
+					<div id="menuHeader">
+						<nav id="HeaderContainer"> <div id="MenuContainer">
+<div class="row-fluid">
+<div class="navbar navbar-inverse">
+<div class="container-fluid">
+<div id="header-search" class="search pull-left" data-placement="right"><input name="search-textbox" type="search" id="search-textbox" placeholder="Search" class="search-text-box" aria-labelledby="searchBtn" /><button id="searchBtn" type="button" class="search-button background-color glyphicon glyphicon-search glyphbutton" onclick="return Global.Controls.HeaderMenus.instance.OnSearchButtonClick();" aria-label="Search"></button></div>
+<button value="Quick Menu" type="button" class="navbar-toggle navbar-left" data-toggle="collapse" data-target=".navbar-collapse"><span class="icon-bar"> </span><span class="icon-bar"> </span><span class="icon-bar"></span><span class="sr-only" style='color:white; background-color:black'>Quick Menu</span></button>
+<div class="navbar-collapse collapse">
+<div class="nav pull-left"><ul style='list-style: none;padding-left: 0;'>
+</ul></div>
+<ul id="header-menu" class="nav navbar-nav pull-right">
+<li><a id="header-portal" href="/Portal">Portal</a></li>
+<li><a id="header-filepro-link" href="/filepro/documents">Document Center</a></li>
+<li><a class="user-sign-in" href="/user/signin">Sign In</a></li></ul></div></div></div></div></div></nav>
+
+					</div>
+				</header>
+			<div class="layout-section layout-section-fill content">
+				<div class="layout">
+
+					<div class="row layout-section layout-section-fill">
+						
+
+						<main class="col-md-12 col-sm-12 layout main" role="main">
+							<div class="layout-section layout-section-fill">
+								<div class="container-fluid">
+	<div class="row">
+		<div class="col-md-12">
+			<div class="document-control-bar row">
+				<div id="document-control-bar-left">
+				</div>
+				<nav id="document-bread-crumbs" class="bread-crumbs"></nav>
+			</div>
+			<div id="content" class="row">
+				<div class="col-md-4 col-golden-ratio-narrow">
+					<div id="options-title" class="pane-title">
+						<span id="options-title-label">Search</span>
+					</div>
+					<div id="search-options" class="pane">
+						<div class="data-form search-basic">
+							<label for="key-words">Basic Search: </label>
+							<input id="key-words" type="search" autocomplete="off" value="2014 remuneration" />
+							<div class="button-row">
+								<button class="button button-short background-color-hover" id="search-button-top" title="Search "><span class="text">Search</span></button>
+							</div>
+						</div>
+						<div id="search-suggestion-row" class="hidden">
+							<div id="search-suggestion"></div>
+						</div>
+						<div>
+							<hr />
+						</div>
+						<div class="data-form accordian-header" data-accordian="advanced" data-position="open">
+							<div>
+								<div class="accordian-header-content">
+									<strong>Advanced Search</strong>
+									<div class="accordian-caret">▼</div>
+								</div>
+							</div>
+						</div>
+						<div class="data-form accordian-body search-input-container" data-accordian="advanced">
+							<label for="exact"><strong>Exact</strong> keyword or phrase (use * for wildcard search) </label>
+							<input id="exact" type="search" autocomplete="off" value="" />
+						</div>
+						<div class="data-form accordian-body search-input-container" data-accordian="advanced">
+							<label for="all">Containing <strong>all</strong> these words </label>
+							<input id="all" type="search" autocomplete="off" value="2014 remuneration" />
+						</div>
+						<div class="data-form accordian-body search-input-container" data-accordian="advanced">
+							<label for="one">Containing <strong>one or more</strong> of these words</label>
+							<input id="one" type="search" autocomplete="off" value="" />
+						</div>
+						<div class="data-form accordian-body search-input-container" data-accordian="advanced">
+							<label for="proximity">Containing <strong>each of these words</strong> in close proximity</label>
+							<input id="proximity" type="search" autocomplete="off" value="" />
+						</div>
+						<div class="data-form accordian-body search-input-container" data-accordian="advanced">
+							<label for="not"><strong>Not</strong> containing any of these words</label>
+							<label for="chrome-autofill-workaround" style="display: none;">.</label>
+							<input id="chrome-autofill-workaround" name="not" style="display: none;" type="text" chrome-auto-complete-hack />
+							<input id="not" type="search" autocomplete="off" value="" />
+						</div>
+						<div class="data-form accordian-header" data-accordian="order" data-position="closed">
+							<div>
+								<div class="accordian-header-content">
+									<strong>Order Results By</strong>
+									<div class="accordian-caret">▶</div>
+								</div>
+							</div>
+						</div>
+						<div class="data-form accordian-body search-input-container hidden" data-accordian="order">
+							<label for="order-by">Order By</label>
+							<select id="order-by">
+								<option value="Rank">Relevance</option>
+								<option value="DateCreated">Date Created</option>
+								<option value="DateUpdated">Date Modified</option>
+								<option value="192">Title</option>
+								<option value="298">Size</option>
+							</select>
+						</div>
+						<div class="data-form accordian-body search-input-container hidden" data-accordian="order">
+							<label for="order-type">Order Type</label>
+							<select id="order-type">
+								<option value="DESC">Z to A - Descending</option>
+								<option value="ASC">A to Z - Ascending</option>
+							</select>
+						</div>
+						<div class="data-form accordian-header" data-accordian="location" data-position="closed">
+							<div>
+								<div class="accordian-header-content">
+									<strong>Select Location</strong>
+									<div class="accordian-caret">▶</div>
+								</div>
+							</div>
+						</div>
+						<div class="data-form accordian-body search-input-container hidden" data-accordian="location">
+								<div id="location-folders" class="hidden search-folders"></div>
+						</div>
+						<div class="button-row default-margin">
+							<button class="button button-wide background-color-hover" id="search-button" title="Search "><span class="text">Search</span></button>
+						</div>
+							<div id="search-result" class="notification  hidden" >
+		<span class="notification-icon "></span>
+		<span class="notification-text">
+		</span>
+	</div>
+
+					</div>
+				</div>
+				<div class="col-md-8 col-golden-ratio-wide search-results">
+					<div id="list-titles">
+						<div class="document-list-view-header-name pane-title pane-title-left">
+							<a id="column-header-link-name" data-sort="" data-field="192" title="Name">Name</a>
+						</div>
+							<div class="document-list-view-header-modified pane-title">
+								<a id="column-header-link-modified" data-sort="" data-field="DateUpdated" title="Modified">Modified</a>
+							</div>
+							<div class="document-list-view-header-size pane-title">
+								<a id="column-header-link-size" data-sort="" data-field="298" title="Size">Size</a>
+							</div>
+					</div>
+					<div>
+							<div id="location-notification" class="notification  notification-instruction hidden" >
+		<span class="notification-icon cw-icon-instruction"></span>
+		<span class="notification-text">
+		</span>
+	</div>
+
+					</div>
+					<div id="document-list-view" class="document-list-view document-search-list-view"></div>
+					<div id="pager"></div>
+				</div>
+				<div id="document-delete-confirm-window" class="hidden">
+					<div id="documents-to-delete" class="document-deletion-list"></div>
+					<div style="margin: 0.5em;">
+						<label for="confirm-password-input">Confirm Password</label>
+						<input type="password" id="confirm-password-input" title="Password" />
+						<br />
+						<div style="margin: 0.5em;">
+							<button id="confirm-delete-button" class="button background-color-hover" title="Confirm Password">Confirm Password</button>
+							<button id="cancel-delete-button" class="button background-color-hover" title="Cancel">Cancel</button>
+								<div id="delete-result" class="notification  hidden" >
+		<span class="notification-icon "></span>
+		<span class="notification-text">
+		</span>
+	</div>
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div id="social-media-control" class="hidden">
+		<div id="" data-state="collapsed" class="social-media-share hidden background-color">
+		<div class="inner" title="Share Link" data-container="body" role="button" tabindex="0"></div>
+		<ul>
+							<li class="facebook">
+					<a title="Share with Facebook" data-container="body" data-type="facebook" href="#"></a>
+				</li>
+							<li class="twitter">
+					<a title="Share with Twitter" data-container="body" data-type="twitter" href="#"></a>
+				</li>
+							<li class="linkedin">
+					<a title="Share with LinkedIn" data-container="body" data-type="linkedin" href="#"></a>
+				</li>
+					</ul>
+	</div>
+
+</div>
+
+<a class="container-document-quickview document-quickview hidden" href="#" onclick="CivicWeb.Common.QuickViews.closeQuickView(event);">
+	Close
+</a>
+	<div class="document-quickview hidden portal-header background-color">
+		<div id="quickview-header-container" class="background-color" style="height: auto; overflow: hidden;">
+			<div class="menu" style="margin-right: 1em; max-width: 45%; float: right; text-align: right;">
+				<ul class="main-level">
+					<li id="PrintDocument" class="hidden"><a href="#"><em class="glyphicon glyphicon-print" style="margin-right: 0.4em;"></em><span>Print</span></a></li>
+					<li id="OpenFullPdfMenuItem"><a href="#"><em class="glyphicon glyphicon-file" style="margin-right: 0.4em;"></em><span>Open Full Pdf</span></a></li>
+					<li id="PrintNotes" class="hidden"><a href="#" title="Click to print agenda with notes"><em class="glyphicon glyphicon-print" style="margin: 0 0.4em 0 0;"></em><span>Print Notes</span></a></li>
+					<li id="VideoLink" class="hidden"><a href="#" target="_blank"><em class="glyphicon glyphicon-facetime-video" style="margin: 0 0.4em 0 0;"></em><span>Show Video</span></a></li>
+					<li><a id="FullScreen" href="#" target="_blank" title="Open document in new window"><em class="glyphicon glyphicon-new-window icon-white" style="margin-right: 0.4em;"></em><span>New Window</span></a></li>
+					<li id="CloseQuickViewMenuItem">
+						<a onclick="CivicWeb.Common.QuickViews.closeQuickView(event);" href="#" class="glyphicon glyphicon-remove icon-white" style="cursor: pointer; font-size: 1.5em; vertical-align: sub;" title="Press Esc to close"></a>
+					</li>
+				</ul>
+			</div>
+			<div id="agenda-notes-enabled-message" class="alert alert-info hidden" style="position: absolute; right: 2px; top: 34px;">
+				<em class="glyphicon glyphicon-info-sign"></em>
+				Web AgendaNotes enabled. Click Headings/Items/Recommendations/Attachments to add/edit a note.
+			</div>
+			<span id="QuickViewDocumentIcon" style="float: left; margin: 0.4em 0.2em 0 0.2em;"></span>
+			<div id="quickview-document-containter" style="float: left; white-space: nowrap; max-width: 35%;">
+				<span id="QuickViewDocumentName" class="quickview-document-name"></span>
+			</div>
+			<div id="FavoriteMediaShare" class="quickview-document-options">
+				<a id="EditDetails" role="button" class="edit-node-icon edit-quickview-icon cw-fp-icon-edit-disabled" style="margin-top: 0.4em;" href=""><span class="hidden">Edit</span></a>
+				<a id="QuickViewFavorite" tabindex="0" role="button" class='favorite-icon cw-fp-icon-star' title="Favorite - Click to add or remove from your Favorites folder" style="margin-top: 0.4em; margin-left: 0.25em; float: left;" data-type='remove'></a>
+				<span id="social-media-share-quick-view-span">	<div id="social-media-share-quick-view" data-state="collapsed" class="social-media-share hidden background-color">
+		<div class="inner" title="Share Link" data-container="body" role="button" tabindex="0"></div>
+		<ul>
+							<li class="facebook">
+					<a title="Share with Facebook" data-container="body" data-type="facebook" href="#"></a>
+				</li>
+							<li class="twitter">
+					<a title="Share with Twitter" data-container="body" data-type="twitter" href="#"></a>
+				</li>
+							<li class="linkedin">
+					<a title="Share with LinkedIn" data-container="body" data-type="linkedin" href="#"></a>
+				</li>
+							<li class="link">
+					<a title="Share links" data-container="body" data-type="link" href="#"></a>
+				</li>
+		</ul>
+	</div>
+</span>
+			</div>
+			<div id="CoverPreviewLabel" style="text-transform: uppercase; font-weight: bold; margin-top: 0.7em; vertical-align: top; display: inline-block; position: absolute; left: 50%; transform: translateX(-50%);">Cover Preview</div>
+		</div>
+
+		<table style="width: 100%; empty-cells: show; border-spacing: 0; border-collapse: collapse;" role="presentation">
+			<tr>
+				<td id="previousQuickViewCell" class="navigation" role="button">
+					<div id="previousQuickView" tabindex="0" class="background-color-hover quickview-previous-div" title="Previous Document">&lsaquo;</div>
+				</td>
+				<td id="documentQuickViewCell" style="text-align: center; vertical-align: top;">
+					<div class="document-quickview-content"></div>
+				</td>
+				<td id="nextQuickViewCell" class="navigation quickview-next-cell" role="button">
+					<div id="nextQuickView" tabindex="0" class="background-color-hover quickview-next-div" title="Next Document">&rsaquo;</div>
+				</td>
+			</tr>
+		</table>
+
+	</div>
+
+
+
+							</div>
+						</main>
+					</div>
+						<header id="custom-header" class="layout-section">
+							
+		<div class="PublicCustomHeaderBorder">
+			<link id="CustomStyle" rel="Stylesheet" type="text/css" href="/Global/CustomStyleHandler.axd?Type=1&amp;Culture=en-CA" />
+			<div id="Header" class="PublicHeader NoPrint" runat="server">
+				
+				<div class="PublicHeaderLayer2">
+				</div>
+				<div class="PublicHeaderLogoContainer">
+					<div id="HeaderLogoTextContainer" class="PublicHeaderLogoText" runat="server">Document<span class="HeaderLogoTextItalic">Center</span></div>
+				</div>
+				<div class="PublicMenuContainer">
+					<div class="PublicMenu">
+						<div class="PublicMenuBackground">
+						</div>
+					</div>
+				</div>
+				<div class="PublicHeaderInformation">
+					<div class="PublicHeaderOrganization">
+						<span>City of Rossland</span>
+					</div>
+				</div>
+			</div>
+		</div>
+
+							<noscript><span class="notification notification-warning">Your Javascript is turned off, without it, this site will not operate as intended.</span></noscript>
+						</header>
+				</div>
+			</div>
+				<footer class="layout-section layout-alternate-basis footer">
+					<div class="left-middle">
+						<a href="http://www.icompasstech.com/" title="iCompass - A Diligent Brand" target="_blank">&copy; iCompass - A Diligent Brand 2026</a>
+					</div>
+				</footer>
+		</div>
+	<div id="sign-in" role="form" class="layout-full hidden" data-popup="True" data-url="" data-close="False">
+		<div class="layout-full layout-column sign-in">
+			<div class="layout-section layout-golden layout-pane layout-separator layout-full sign-in-credentials">
+				<div class="sign-in-content center-top">
+					<div class="sign-in-logo">
+						<img src="/images/iCompass_DIL_logo.svg" style="max-height:100px;" alt="iCompass - A Diligent Brand" />
+					</div>
+					<div class="sign-in-organization">
+						City of Rossland
+					</div>
+					<form id="sign-in-form" class="sign-in-form" action="/user/signin" method="post">
+						<div class="sign-in-section">
+							<div class="hidden">
+								<label for="sign-in-user-name">User name</label>
+							</div>
+							<input id="sign-in-user-name" name="username" type="text" placeholder="User name" title="User name" autocapitalize="off" />
+						</div>
+						<div class="sign-in-section">
+							<div class="hidden">
+								<label for="sign-in-password">Password</label>
+							</div>
+							<input id="sign-in-password" name="password" type="password" placeholder="Password" title="Password" autocapitalize="off" />
+						</div>
+						<div class="sign-in-section">
+							<button id="sign-in-button" class="button button-full button-important">Sign In</button>
+						</div>
+						<div class="sign-in-section layout-column">
+							<div class="layout-section layout-middle">
+								<input id="sign-in-remember-me" type="checkbox" /><label for="sign-in-remember-me">Remember me next time.</label>
+							</div>
+							<div class="layout-section layout-section-fill layout-right layout-middle">
+								<a href="/user/resetpassword">Forgot password?</a>
+							</div>
+						</div>
+						<div class="sign-in-section hidden">
+								<div id="sign-in-warning-message" class="notification  notification-warning hidden" >
+		<span class="notification-icon cw-icon-warning"></span>
+		<span class="notification-text">
+		</span>
+	</div>
+
+						</div>
+					</form>
+				</div>
+			</div>
+				<div class="layout-section layout-section-fill layout-full sign-in-marketing">
+						<iframe id="marketing-frame" title="Product Information" src="about:blank"></iframe>
+				</div>
+		</div>
+	</div>
+	<input type="hidden" value="Document" id="controllerName" />
+	<input type="hidden" value="Search" id="actionName" />
+	<script src="/bundles/jqueryui?v=b9SMBqeErhV01znmDbMWKyTZhf4LXCikbUm4F0vnVqM1"></script>
+<script src="/js/header?v=BEwVfRdxfCslNlSnXhpMpRRwSl0iV85im7jK1vlrzVw1"></script>
+<script type="text/javascript">jQuery(document).ready(function ($) {Global.Controls.HeaderMenus.createInstance({"selectLanguageLabelText":"Select Language: ","searchingText":"Searching","selectedCulture":"en-CA","availableCultures":[{"name":"en-CA","nativeName":"English (Canada)"}],"impersonatePublicUser":false,"purchasedVideo":false,"module":"DocumentCenter","entityId":0,"recycleBin":false,"feedbackData":{"BrowserData":{"Browser":"Unknown","Browser Version":"0.0"},"UserData":{"UserName":"","FullName":"Public User","Email":"developers@icompasstech.com"},"PageData":{"Url":"http://rossland.civicweb.net/filepro/documents/search/?keywords=2014+remuneration"},"AgendaFree":false,"FullSupport":false,"Localization":{"notificationUpgradeRequestSent":"Thank you for your upgrade request. Our sales department will contact you with next steps.","buttonRequestingUpgrade":"Requesting Upgrade","faq":"AgendaFree FAQ","optionHighPrioritySupport":"High - 30 minute email response or call 1-800-260-7409 (11:30 PM to 10:00 AM)","optionHighPrioritySupportUnpurchased":"High - 30 minute email response or by phone (11:30 PM to 10:00 AM)"}},"signInLocalization":{"labelLogOn":"Sign In","pleaseEnterAUserNameWarningMessageText":"Please enter a user name.","pleaseEnterAPasswordWarningMessageText":"Please enter a password.","invalidUserNameOrPasswordWarningMessageText":"Your login attempt was not successful. Please try again.","notificationLoginDuplicateEmails":"This site contains duplicate emails please use your user name.","lockedOutMinutesWarningMessageText":"Due to too many failed attempts to log on, your account has been locked for the next {0} minutes.","lockedOutMinuteWarningMessageText":"Due to too many failed attempts to log on, your account has been locked for the next minute.","lockedOutSecondsWarningMessageText":"Due to too many failed attempts to log on, your account has been locked for the next {1} seconds.","lockedOutSecondWarningMessageText":"Due to too many failed attempts to log on, your account has been locked for the next second.","passwordExpiredWarningMessageText":"Your password has expired. Please contact a system administrator in order to update your password.","signInButtonLabelText":"Sign In","signingInButtonLabelText":"Signing In"}});
+});</script>
+
+	<script src="/bundles/modernizr?v=6_E8bAsjohm8fKGxr16w1WmwO01WiZ6Q7YVeHYmnveY1"></script>
+
+	<script src="/bundles/jqueryui?v=b9SMBqeErhV01znmDbMWKyTZhf4LXCikbUm4F0vnVqM1"></script>
+
+	<script src="/js/kendo/kendoui?v=9IfldLoPBpSWXsssxSW4xuYyi20eVE7PpZWTBA1WMDo1"></script>
+
+	<script src="/js/common/all?v=87uBylIGnZIoRoEmHdN7KKuQ12CwdgrZv85ik7oYpyY1"></script>
+
+	
+	<script src="/js/document/search?v=8YRGSFz27rq5ZtIp7RidGNYboxPuEKYWk_e0YRVeGYU1"></script>
+
+	<script type="text/javascript">
+		$(document).ready(function ()
+		{
+			CivicWeb.Documents.DocumentOperations.createInstance({"localization":{"invalidPassword":"The password that you entered is not correct.  Please enter the correct password.","createFolderHeaderText":"Create a new folder","createButtonText":"Create","confirmDeleteHeaderText":"Confirm Deletion","confirmRestoreHeaderText":"Confirm Restore","creatingNotificationText":"Creating","creatingSucceededNotificationText":"Folder Successfully Created","savingSucceededNotificationText":"Saved.","savingFailedNotificationText":"Saving failed.","savingErroredNotificationText":"An error occurred during saving.","deletingSucceededNotificationText":"Deleted.","deletingFailedNotificationText":"Deletion failed.","deletingText":"Deleting","savingText":"Saving","searchingText":"Searching","validatingText":"Validating","criteriaRequiredWarningMessageText":"Please enter criteria for your search.","labelDidYouMeanSearch":"Did you mean <a href=\"{0}\">{1}</a>?","searchSucceededNotificationText":"Found {0} results.","searchFailedNotificationText":"No results were found.","searchErrorNotificationText":"An error occurred during the search.","notificationYouAreSearchingTheFollowingFolders":"<div>You are searching within the following folders:</div><div><ul>{0}</ul></div><div><a href=\"{1}\">Search All Folders</a></div>","deletedText":"Deleted","destroyedText":"Record Destroyed","newWindow":"New Window","clickToDownLoadDocument":"Click to down load document","toolTipClicktoOpenLoadFullPDF":"Click to Open Full PDF","loadingInProgress":"Loading...","openInNewWindowText":"Open in New Window","homeLinkText":"Home","homeLinkToolTip":"Home Folder","labelRecordsCenter":"Records Center","searchText":"Search","linkSearchRecordsCenter":"Search Records Center","linkSearchFilePro":"Search Document Center","restoringSucceededNotificationText":"Restored.","restoringFailedNotificationText":"Restoring failed.","restoringText":"Restoring","cancelButtonText":"Cancel","continueButtonText":"Continue","confirmPasswordText":"Confirm Password","favoritesFolderLabel":"Favorites","favoritesFolderToolTip":"Favorites Folder - click the star on any document or folder for fast access in your favorites","bookmarkListRadioLabel":"Share link as displayed on the page","bookmarkDisplayRadioLabel":"Share link to this document only","copyLinkMessage":"Copy","editToolTipText":"Edit"},"pagerLocalization":{"linkFirst":"First","linkPrevious":"Previous","linkNext":"Next","linkLast":"Last"},"initialSearchResults":{"Results":[{"Id":54565,"Folder":false,"LinkUrl":"/filepro/documents/54565","TitleHtml":"4. March 9, 2026 Regular Agenda Package - Pdf","SampleHtml":"<strong>...</strong> Request for Council Decision - 2026-2030 Mayor and Council <strong>Remuneration</strong> Review THAT Council <strong>Remuneration</strong> Bylaw No. 2865, 2026 be read a first time. THAT Council <strong>Remuneration</strong> Bylaw No. 2865, 2026 be read a second and third time. RFD - <strong>...</strong> a second and third time. RFD - 2026-2030 Mayor and Council <strong>Remuneration</strong> Review - Pdf (8) STAFF REPORTS AND UPDATES a) Request for <strong>...</strong>","PathHtml":"<a href=\"/filepro/documents/55725\" data-id=\"55725\" target=\"_blank\">Agendas</a> &gt; <a href=\"/filepro/documents/55726\" data-id=\"55726\" target=\"_blank\">Regular Council</a> &gt; <a href=\"/filepro/documents/55727\" data-id=\"55727\" target=\"_blank\">2026</a>","FileFormat":"pdf","FileSize":"27 MB","FileName":"4. March 9, 2026 Regular Agenda Package - Pdf.pdf","DateUpdated":"13 Jul 2026","Classification":"","DestructionDate":"","Destroyed":false,"IsPublic":true,"UpdateAllowed":false,"Deleted":false,"Enterprise":false},{"Id":4338,"Folder":false,"LinkUrl":"/filepro/documents/4338","TitleHtml":"14. August 11.14 Reg Meeting Agenda PKG","SampleHtml":"<strong>...</strong> OF COUNCIL CITY HALL COUNCIL CHAMBER MONDAY, AUGUST 11, <strong>2014</strong> IMMEDIATELY FOLLOWING PUBLIC HEARINGS (1) CALL TO ORDER (2) <strong>...</strong> minutes of the Regular Meeting of Council held on July 14, <strong>2014</strong> be adopted. (5) REGISTERED PETITIONS AND DELEGATIONS Nil <strong>...</strong> Assistant b) Request for Council Decision, Council <strong>Remuneration</strong> Review, Deputy Chief Administrative Officer/Corporate <strong>...</strong>","PathHtml":"<a href=\"/filepro/documents/55725\" data-id=\"55725\" target=\"_blank\">Agendas</a> &gt; <a href=\"/filepro/documents/55726\" data-id=\"55726\" target=\"_blank\">Regular Council</a> &gt; <a href=\"/filepro/documents/54090\" data-id=\"54090\" target=\"_blank\">Achieved Agendas (2008-2015)</a> &gt; <a href=\"/filepro/documents/16941\" data-id=\"16941\" target=\"_blank\">2014</a>","FileFormat":"pdf","FileSize":"67 MB","FileName":"14. August 11.14 Reg Meeting Agenda PKG.pdf","DateUpdated":"04 Nov 2018","Classification":"","DestructionDate":"","Destroyed":false,"IsPublic":true,"UpdateAllowed":false,"Deleted":false,"Enterprise":false},{"Id":4349,"Folder":false,"LinkUrl":"/filepro/documents/4349","TitleHtml":"2. May 14.14 Special Meeting Agenda PKG","SampleHtml":"<strong>...</strong> OF COUNCIL CITY HALL COUNCIL CHAMBER WEDNESDAY, MAY 14, <strong>2014</strong> 8:00 A.M. (1) CALL TO ORDER (2) PUBLIC INPUT PERIOD (3) <strong>...</strong> FROM STAFF FOR DECISION a) Request for Council Decision, <strong>2014</strong> Municipal Tax Rate Bylaw No. 2569, Acting Chief Financial <strong>...</strong> Chief Financial Officer RESOLVED THAT Bylaw No. 2569, <strong>2014</strong> Municipal Tax Rate Bylaw be adopted. b) Request for Council <strong>...</strong>","PathHtml":"<a href=\"/filepro/documents/55725\" data-id=\"55725\" target=\"_blank\">Agendas</a> &gt; <a href=\"/filepro/documents/16335\" data-id=\"16335\" target=\"_blank\">Special Meeting</a> &gt; <a href=\"/filepro/documents/56292\" data-id=\"56292\" target=\"_blank\">Archive Special Meeting Minutes 2009-2019</a> &gt; <a href=\"/filepro/documents/17126\" data-id=\"17126\" target=\"_blank\">2014</a>","FileFormat":"pdf","FileSize":"4 MB","FileName":"2. May 14.14 Special Meeting Agenda PKG.pdf","DateUpdated":"30 Oct 2018","Classification":"","DestructionDate":"","Destroyed":false,"IsPublic":true,"UpdateAllowed":false,"Deleted":false,"Enterprise":false},{"Id":6189,"Folder":false,"LinkUrl":"/filepro/documents/6189","TitleHtml":"13. August 12, 2019 REG Agenda Package","SampleHtml":"<strong>...</strong> parameters of the existing agreement. BACKGROUND: In <strong>2014</strong>, the City of Rossland entered into a five-year contract <strong>...</strong> the professional engineering rates the City has seen since <strong>2014</strong> until 2024. CITYOf ,,$ IRQ,SSLAND 166 of 288 LEGISLATIVE <strong>...</strong> Administrative Officer 167 of 288City of Rossland October, <strong>2014</strong> ENGINEERING SERVICES FIVE (5) YEAR MASTER STANDING OFFER <strong>...</strong>","PathHtml":"<a href=\"/filepro/documents/55725\" data-id=\"55725\" target=\"_blank\">Agendas</a> &gt; <a href=\"/filepro/documents/55726\" data-id=\"55726\" target=\"_blank\">Regular Council</a> &gt; <a href=\"/filepro/documents/16379\" data-id=\"16379\" target=\"_blank\">2019</a>","FileFormat":"pdf","FileSize":"70 MB","FileName":"13. August 12, 2019 REG Agenda Package.pdf","DateUpdated":"09 Aug 2019","Classification":"","DestructionDate":"","Destroyed":false,"IsPublic":true,"UpdateAllowed":false,"Deleted":false,"Enterprise":false},{"Id":4890,"Folder":false,"LinkUrl":"/filepro/documents/4890","TitleHtml":"10. May 22, 2018 REG Agenda Package","SampleHtml":"<strong>...</strong> Street across from the Legion. (8) BYLAWS a) Council <strong>Remuneration</strong> Bylaw No. 2666 THAT Council <strong>Remuneration</strong> Bylaw No. 2666 be adopted. b) Ophir Reservoir Local Service <strong>...</strong> BYLAW NO. 2651, 2018 BE ADOPTED. CARRIED. f) Council <strong>Remuneration</strong> Bylaw No. 2666 MOTION: KRUYSSE / MCLELLAN RESOLVED THAT <strong>...</strong> No. 2666 MOTION: KRUYSSE / MCLELLAN RESOLVED THAT COUNCIL <strong>REMUNERATION</strong> BYLAW NO. 2666 BE READ A FIRST, SECOND, AND THIRD TIME. <strong>...</strong>","PathHtml":"<a href=\"/filepro/documents/55725\" data-id=\"55725\" target=\"_blank\">Agendas</a> &gt; <a href=\"/filepro/documents/55726\" data-id=\"55726\" target=\"_blank\">Regular Council</a> &gt; <a href=\"/filepro/documents/16380\" data-id=\"16380\" target=\"_blank\">2018</a>","FileFormat":"pdf","FileSize":"65 MB","FileName":"10. May 22, 2018 REG Agenda Package.pdf","DateUpdated":"28 Sep 2021","Classification":"","DestructionDate":"","Destroyed":false,"IsPublic":true,"UpdateAllowed":false,"Deleted":false,"Enterprise":false},{"Id":4297,"Folder":false,"LinkUrl":"/filepro/documents/4297","TitleHtml":"12. June 22.15 Regular Agenda PKG","SampleHtml":"<strong>...</strong> a) Request for Council Decision, Annual Report for <strong>2014</strong>, Deputy Corporate Officer THAT Council receives the Annual <strong>...</strong> Officer THAT Council receives the Annual Report for <strong>2014</strong> and schedules the Annual Meeting, for consideration of any <strong>...</strong> Meeting of July 13, 2015. b) Request for Council Decision, <strong>2014</strong> Statement of Financial Information (SOFI Report), Acting <strong>...</strong>","PathHtml":"<a href=\"/filepro/documents/55725\" data-id=\"55725\" target=\"_blank\">Agendas</a> &gt; <a href=\"/filepro/documents/55726\" data-id=\"55726\" target=\"_blank\">Regular Council</a> &gt; <a href=\"/filepro/documents/54090\" data-id=\"54090\" target=\"_blank\">Achieved Agendas (2008-2015)</a> &gt; <a href=\"/filepro/documents/16940\" data-id=\"16940\" target=\"_blank\">2015</a>","FileFormat":"pdf","FileSize":"12 MB","FileName":"12. June 22.15 Regular Agenda PKG.pdf","DateUpdated":"03 Jul 2020","Classification":"","DestructionDate":"","Destroyed":false,"IsPublic":true,"UpdateAllowed":false,"Deleted":false,"Enterprise":false},{"Id":4752,"Folder":false,"LinkUrl":"/filepro/documents/4752","TitleHtml":"4. Feb 26, 2018 REG Agenda Package","SampleHtml":"<strong>...</strong> Amendments - Required Council Procedure Bylaw No. 2580, <strong>2014</strong> With the date change of the general municipal election from <strong>...</strong> Local Government Election Procedures Bylaw No. 2572, <strong>2014</strong> With the date change of the general municipal election from <strong>...</strong> felt that Council should consider adjusting the current <strong>remuneration</strong> of appointed election officials as noted below: APPOINTMENT <strong>...</strong>","PathHtml":"<a href=\"/filepro/documents/55725\" data-id=\"55725\" target=\"_blank\">Agendas</a> &gt; <a href=\"/filepro/documents/55726\" data-id=\"55726\" target=\"_blank\">Regular Council</a> &gt; <a href=\"/filepro/documents/16380\" data-id=\"16380\" target=\"_blank\">2018</a>","FileFormat":"pdf","FileSize":"6 MB","FileName":"4. Feb 26, 2018 REG Agenda Package.pdf","DateUpdated":"28 Sep 2021","Classification":"","DestructionDate":"","Destroyed":false,"IsPublic":true,"UpdateAllowed":false,"Deleted":false,"Enterprise":false},{"Id":7092,"Folder":false,"LinkUrl":"/filepro/documents/7092","TitleHtml":"9. May 19, 2020 Regular Agenda Package","SampleHtml":"<strong>...</strong> staff report. d) Mail Ballot Voting and Election Official <strong>Remuneration</strong> THAT Council provides direction to staff regarding mail <strong>...</strong> provides direction to staff regarding election official <strong>remuneration</strong>. 2 of 159May 19, 2020 REGULAR MEETING AGENDA 3 of 4 e) <strong>...</strong> 4200.20 TOPIC: Mail Ballot Voting and Election Official <strong>Remuneration</strong> SUBMITTED BY: Alison Worsfold, Executive Assistant <strong>...</strong>","PathHtml":"<a href=\"/filepro/documents/55725\" data-id=\"55725\" target=\"_blank\">Agendas</a> &gt; <a href=\"/filepro/documents/55726\" data-id=\"55726\" target=\"_blank\">Regular Council</a> &gt; <a href=\"/filepro/documents/16378\" data-id=\"16378\" target=\"_blank\">2020</a>","FileFormat":"pdf","FileSize":"26 MB","FileName":"9. May 19, 2020 Regular Agenda Package.pdf","DateUpdated":"14 May 2020","Classification":"","DestructionDate":"","Destroyed":false,"IsPublic":true,"UpdateAllowed":false,"Deleted":false,"Enterprise":false},{"Id":4604,"Folder":false,"LinkUrl":"/filepro/documents/4604","TitleHtml":"3. June 22.17 Special Regular Agenda","SampleHtml":"<strong>...</strong> not have been paid or received any form of financial <strong>remuneration</strong> for the work or activity for which the honour is being <strong>...</strong> ROSS LAND File No. 1870.06/2015 - RFD Annual Report <strong>2014</strong> 1 THE CITY OF ROSSLAND Request for Council Decision DATE: <strong>...</strong> ,$ IRQ,SSLAND File No. 1870.06/2015 - RFD Annual Report <strong>2014</strong> 2 (f) a statement of municipal objectives, and the measures <strong>...</strong>","PathHtml":"<a href=\"/filepro/documents/55725\" data-id=\"55725\" target=\"_blank\">Agendas</a> &gt; <a href=\"/filepro/documents/16335\" data-id=\"16335\" target=\"_blank\">Special Meeting</a> &gt; <a href=\"/filepro/documents/56292\" data-id=\"56292\" target=\"_blank\">Archive Special Meeting Minutes 2009-2019</a> &gt; <a href=\"/filepro/documents/17123\" data-id=\"17123\" target=\"_blank\">2017</a>","FileFormat":"pdf","FileSize":"8 MB","FileName":"3. June 22.17 Special Regular Agenda.pdf","DateUpdated":"05 May 2019","Classification":"","DestructionDate":"","Destroyed":false,"IsPublic":true,"UpdateAllowed":false,"Deleted":false,"Enterprise":false},{"Id":6981,"Folder":false,"LinkUrl":"/filepro/documents/6981","TitleHtml":"6. April 6, 2020 Regular Agenda Package","SampleHtml":"<strong>...</strong> 0.:2:0 Financial Assets to UabHities 2010 2011 2012 2013 <strong>2014</strong> 2015 2016 2017 2018 2019 - Financia Assets to O 96 ,o. 58 <strong>...</strong> Revenue 40% 20% 0% (20%) (40%) (60%) 2010 2011 2012 2013 <strong>2014</strong> 2015 2016 2017 2018 - Net Deb~:~rty Tax (6%) 7% (70%) (56%) <strong>...</strong> . 1.00 0.80 0.60 0.40 0.20 2010 2011 2012 2013 <strong>2014</strong> 2015 2016 2017 2018 2019 - Tota ExpT enRses to Property <strong>...</strong>","PathHtml":"<a href=\"/filepro/documents/55725\" data-id=\"55725\" target=\"_blank\">Agendas</a> &gt; <a href=\"/filepro/documents/55726\" data-id=\"55726\" target=\"_blank\">Regular Council</a> &gt; <a href=\"/filepro/documents/16378\" data-id=\"16378\" target=\"_blank\">2020</a>","FileFormat":"pdf","FileSize":"37 MB","FileName":"6. April 6, 2020 Regular Agenda Package.pdf","DateUpdated":"03 Apr 2020","Classification":"","DestructionDate":"","Destroyed":false,"IsPublic":true,"UpdateAllowed":false,"Deleted":false,"Enterprise":false}],"Page":1,"Total":147},"isLoggedIn":false,"recordsCenter":false,"recordsSearch":false,"destructionDateFieldId":389,"creationDateFieldId":381,"dispositionStatusFieldId":244,"disposedListValueId":144,"destroyArguements":null,"viewingDeleted":false,"locations":[],"dateFormat":"dd MMM yyyy"});
+			CivicWeb.Documents.DocumentSearchPage.createInstance({"localization":{"invalidPassword":"The password that you entered is not correct.  Please enter the correct password.","createFolderHeaderText":"Create a new folder","createButtonText":"Create","confirmDeleteHeaderText":"Confirm Deletion","confirmRestoreHeaderText":"Confirm Restore","creatingNotificationText":"Creating","creatingSucceededNotificationText":"Folder Successfully Created","savingSucceededNotificationText":"Saved.","savingFailedNotificationText":"Saving failed.","savingErroredNotificationText":"An error occurred during saving.","deletingSucceededNotificationText":"Deleted.","deletingFailedNotificationText":"Deletion failed.","deletingText":"Deleting","savingText":"Saving","searchingText":"Searching","validatingText":"Validating","criteriaRequiredWarningMessageText":"Please enter criteria for your search.","labelDidYouMeanSearch":"Did you mean <a href=\"{0}\">{1}</a>?","searchSucceededNotificationText":"Found {0} results.","searchFailedNotificationText":"No results were found.","searchErrorNotificationText":"An error occurred during the search.","notificationYouAreSearchingTheFollowingFolders":"<div>You are searching within the following folders:</div><div><ul>{0}</ul></div><div><a href=\"{1}\">Search All Folders</a></div>","deletedText":"Deleted","destroyedText":"Record Destroyed","newWindow":"New Window","clickToDownLoadDocument":"Click to down load document","toolTipClicktoOpenLoadFullPDF":"Click to Open Full PDF","loadingInProgress":"Loading...","openInNewWindowText":"Open in New Window","homeLinkText":"Home","homeLinkToolTip":"Home Folder","labelRecordsCenter":"Records Center","searchText":"Search","linkSearchRecordsCenter":"Search Records Center","linkSearchFilePro":"Search Document Center","restoringSucceededNotificationText":"Restored.","restoringFailedNotificationText":"Restoring failed.","restoringText":"Restoring","cancelButtonText":"Cancel","continueButtonText":"Continue","confirmPasswordText":"Confirm Password","favoritesFolderLabel":"Favorites","favoritesFolderToolTip":"Favorites Folder - click the star on any document or folder for fast access in your favorites","bookmarkListRadioLabel":"Share link as displayed on the page","bookmarkDisplayRadioLabel":"Share link to this document only","copyLinkMessage":"Copy","editToolTipText":"Edit"},"pagerLocalization":{"linkFirst":"First","linkPrevious":"Previous","linkNext":"Next","linkLast":"Last"},"initialSearchResults":{"Results":[{"Id":54565,"Folder":false,"LinkUrl":"/filepro/documents/54565","TitleHtml":"4. March 9, 2026 Regular Agenda Package - Pdf","SampleHtml":"<strong>...</strong> Request for Council Decision - 2026-2030 Mayor and Council <strong>Remuneration</strong> Review THAT Council <strong>Remuneration</strong> Bylaw No. 2865, 2026 be read a first time. THAT Council <strong>Remuneration</strong> Bylaw No. 2865, 2026 be read a second and third time. RFD - <strong>...</strong> a second and third time. RFD - 2026-2030 Mayor and Council <strong>Remuneration</strong> Review - Pdf (8) STAFF REPORTS AND UPDATES a) Request for <strong>...</strong>","PathHtml":"<a href=\"/filepro/documents/55725\" data-id=\"55725\" target=\"_blank\">Agendas</a> &gt; <a href=\"/filepro/documents/55726\" data-id=\"55726\" target=\"_blank\">Regular Council</a> &gt; <a href=\"/filepro/documents/55727\" data-id=\"55727\" target=\"_blank\">2026</a>","FileFormat":"pdf","FileSize":"27 MB","FileName":"4. March 9, 2026 Regular Agenda Package - Pdf.pdf","DateUpdated":"13 Jul 2026","Classification":"","DestructionDate":"","Destroyed":false,"IsPublic":true,"UpdateAllowed":false,"Deleted":false,"Enterprise":false},{"Id":4338,"Folder":false,"LinkUrl":"/filepro/documents/4338","TitleHtml":"14. August 11.14 Reg Meeting Agenda PKG","SampleHtml":"<strong>...</strong> OF COUNCIL CITY HALL COUNCIL CHAMBER MONDAY, AUGUST 11, <strong>2014</strong> IMMEDIATELY FOLLOWING PUBLIC HEARINGS (1) CALL TO ORDER (2) <strong>...</strong> minutes of the Regular Meeting of Council held on July 14, <strong>2014</strong> be adopted. (5) REGISTERED PETITIONS AND DELEGATIONS Nil <strong>...</strong> Assistant b) Request for Council Decision, Council <strong>Remuneration</strong> Review, Deputy Chief Administrative Officer/Corporate <strong>...</strong>","PathHtml":"<a href=\"/filepro/documents/55725\" data-id=\"55725\" target=\"_blank\">Agendas</a> &gt; <a href=\"/filepro/documents/55726\" data-id=\"55726\" target=\"_blank\">Regular Council</a> &gt; <a href=\"/filepro/documents/54090\" data-id=\"54090\" target=\"_blank\">Achieved Agendas (2008-2015)</a> &gt; <a href=\"/filepro/documents/16941\" data-id=\"16941\" target=\"_blank\">2014</a>","FileFormat":"pdf","FileSize":"67 MB","FileName":"14. August 11.14 Reg Meeting Agenda PKG.pdf","DateUpdated":"04 Nov 2018","Classification":"","DestructionDate":"","Destroyed":false,"IsPublic":true,"UpdateAllowed":false,"Deleted":false,"Enterprise":false},{"Id":4349,"Folder":false,"LinkUrl":"/filepro/documents/4349","TitleHtml":"2. May 14.14 Special Meeting Agenda PKG","SampleHtml":"<strong>...</strong> OF COUNCIL CITY HALL COUNCIL CHAMBER WEDNESDAY, MAY 14, <strong>2014</strong> 8:00 A.M. (1) CALL TO ORDER (2) PUBLIC INPUT PERIOD (3) <strong>...</strong> FROM STAFF FOR DECISION a) Request for Council Decision, <strong>2014</strong> Municipal Tax Rate Bylaw No. 2569, Acting Chief Financial <strong>...</strong> Chief Financial Officer RESOLVED THAT Bylaw No. 2569, <strong>2014</strong> Municipal Tax Rate Bylaw be adopted. b) Request for Council <strong>...</strong>","PathHtml":"<a href=\"/filepro/documents/55725\" data-id=\"55725\" target=\"_blank\">Agendas</a> &gt; <a href=\"/filepro/documents/16335\" data-id=\"16335\" target=\"_blank\">Special Meeting</a> &gt; <a href=\"/filepro/documents/56292\" data-id=\"56292\" target=\"_blank\">Archive Special Meeting Minutes 2009-2019</a> &gt; <a href=\"/filepro/documents/17126\" data-id=\"17126\" target=\"_blank\">2014</a>","FileFormat":"pdf","FileSize":"4 MB","FileName":"2. May 14.14 Special Meeting Agenda PKG.pdf","DateUpdated":"30 Oct 2018","Classification":"","DestructionDate":"","Destroyed":false,"IsPublic":true,"UpdateAllowed":false,"Deleted":false,"Enterprise":false},{"Id":6189,"Folder":false,"LinkUrl":"/filepro/documents/6189","TitleHtml":"13. August 12, 2019 REG Agenda Package","SampleHtml":"<strong>...</strong> parameters of the existing agreement. BACKGROUND: In <strong>2014</strong>, the City of Rossland entered into a five-year contract <strong>...</strong> the professional engineering rates the City has seen since <strong>2014</strong> until 2024. CITYOf ,,$ IRQ,SSLAND 166 of 288 LEGISLATIVE <strong>...</strong> Administrative Officer 167 of 288City of Rossland October, <strong>2014</strong> ENGINEERING SERVICES FIVE (5) YEAR MASTER STANDING OFFER <strong>...</strong>","PathHtml":"<a href=\"/filepro/documents/55725\" data-id=\"55725\" target=\"_blank\">Agendas</a> &gt; <a href=\"/filepro/documents/55726\" data-id=\"55726\" target=\"_blank\">Regular Council</a> &gt; <a href=\"/filepro/documents/16379\" data-id=\"16379\" target=\"_blank\">2019</a>","FileFormat":"pdf","FileSize":"70 MB","FileName":"13. August 12, 2019 REG Agenda Package.pdf","DateUpdated":"09 Aug 2019","Classification":"","DestructionDate":"","Destroyed":false,"IsPublic":true,"UpdateAllowed":false,"Deleted":false,"Enterprise":false},{"Id":4890,"Folder":false,"LinkUrl":"/filepro/documents/4890","TitleHtml":"10. May 22, 2018 REG Agenda Package","SampleHtml":"<strong>...</strong> Street across from the Legion. (8) BYLAWS a) Council <strong>Remuneration</strong> Bylaw No. 2666 THAT Council <strong>Remuneration</strong> Bylaw No. 2666 be adopted. b) Ophir Reservoir Local Service <strong>...</strong> BYLAW NO. 2651, 2018 BE ADOPTED. CARRIED. f) Council <strong>Remuneration</strong> Bylaw No. 2666 MOTION: KRUYSSE / MCLELLAN RESOLVED THAT <strong>...</strong> No. 2666 MOTION: KRUYSSE / MCLELLAN RESOLVED THAT COUNCIL <strong>REMUNERATION</strong> BYLAW NO. 2666 BE READ A FIRST, SECOND, AND THIRD TIME. <strong>...</strong>","PathHtml":"<a href=\"/filepro/documents/55725\" data-id=\"55725\" target=\"_blank\">Agendas</a> &gt; <a href=\"/filepro/documents/55726\" data-id=\"55726\" target=\"_blank\">Regular Council</a> &gt; <a href=\"/filepro/documents/16380\" data-id=\"16380\" target=\"_blank\">2018</a>","FileFormat":"pdf","FileSize":"65 MB","FileName":"10. May 22, 2018 REG Agenda Package.pdf","DateUpdated":"28 Sep 2021","Classification":"","DestructionDate":"","Destroyed":false,"IsPublic":true,"UpdateAllowed":false,"Deleted":false,"Enterprise":false},{"Id":4297,"Folder":false,"LinkUrl":"/filepro/documents/4297","TitleHtml":"12. June 22.15 Regular Agenda PKG","SampleHtml":"<strong>...</strong> a) Request for Council Decision, Annual Report for <strong>2014</strong>, Deputy Corporate Officer THAT Council receives the Annual <strong>...</strong> Officer THAT Council receives the Annual Report for <strong>2014</strong> and schedules the Annual Meeting, for consideration of any <strong>...</strong> Meeting of July 13, 2015. b) Request for Council Decision, <strong>2014</strong> Statement of Financial Information (SOFI Report), Acting <strong>...</strong>","PathHtml":"<a href=\"/filepro/documents/55725\" data-id=\"55725\" target=\"_blank\">Agendas</a> &gt; <a href=\"/filepro/documents/55726\" data-id=\"55726\" target=\"_blank\">Regular Council</a> &gt; <a href=\"/filepro/documents/54090\" data-id=\"54090\" target=\"_blank\">Achieved Agendas (2008-2015)</a> &gt; <a href=\"/filepro/documents/16940\" data-id=\"16940\" target=\"_blank\">2015</a>","FileFormat":"pdf","FileSize":"12 MB","FileName":"12. June 22.15 Regular Agenda PKG.pdf","DateUpdated":"03 Jul 2020","Classification":"","DestructionDate":"","Destroyed":false,"IsPublic":true,"UpdateAllowed":false,"Deleted":false,"Enterprise":false},{"Id":4752,"Folder":false,"LinkUrl":"/filepro/documents/4752","TitleHtml":"4. Feb 26, 2018 REG Agenda Package","SampleHtml":"<strong>...</strong> Amendments - Required Council Procedure Bylaw No. 2580, <strong>2014</strong> With the date change of the general municipal election from <strong>...</strong> Local Government Election Procedures Bylaw No. 2572, <strong>2014</strong> With the date change of the general municipal election from <strong>...</strong> felt that Council should consider adjusting the current <strong>remuneration</strong> of appointed election officials as noted below: APPOINTMENT <strong>...</strong>","PathHtml":"<a href=\"/filepro/documents/55725\" data-id=\"55725\" target=\"_blank\">Agendas</a> &gt; <a href=\"/filepro/documents/55726\" data-id=\"55726\" target=\"_blank\">Regular Council</a> &gt; <a href=\"/filepro/documents/16380\" data-id=\"16380\" target=\"_blank\">2018</a>","FileFormat":"pdf","FileSize":"6 MB","FileName":"4. Feb 26, 2018 REG Agenda Package.pdf","DateUpdated":"28 Sep 2021","Classification":"","DestructionDate":"","Destroyed":false,"IsPublic":true,"UpdateAllowed":false,"Deleted":false,"Enterprise":false},{"Id":7092,"Folder":false,"LinkUrl":"/filepro/documents/7092","TitleHtml":"9. May 19, 2020 Regular Agenda Package","SampleHtml":"<strong>...</strong> staff report. d) Mail Ballot Voting and Election Official <strong>Remuneration</strong> THAT Council provides direction to staff regarding mail <strong>...</strong> provides direction to staff regarding election official <strong>remuneration</strong>. 2 of 159May 19, 2020 REGULAR MEETING AGENDA 3 of 4 e) <strong>...</strong> 4200.20 TOPIC: Mail Ballot Voting and Election Official <strong>Remuneration</strong> SUBMITTED BY: Alison Worsfold, Executive Assistant <strong>...</strong>","PathHtml":"<a href=\"/filepro/documents/55725\" data-id=\"55725\" target=\"_blank\">Agendas</a> &gt; <a href=\"/filepro/documents/55726\" data-id=\"55726\" target=\"_blank\">Regular Council</a> &gt; <a href=\"/filepro/documents/16378\" data-id=\"16378\" target=\"_blank\">2020</a>","FileFormat":"pdf","FileSize":"26 MB","FileName":"9. May 19, 2020 Regular Agenda Package.pdf","DateUpdated":"14 May 2020","Classification":"","DestructionDate":"","Destroyed":false,"IsPublic":true,"UpdateAllowed":false,"Deleted":false,"Enterprise":false},{"Id":4604,"Folder":false,"LinkUrl":"/filepro/documents/4604","TitleHtml":"3. June 22.17 Special Regular Agenda","SampleHtml":"<strong>...</strong> not have been paid or received any form of financial <strong>remuneration</strong> for the work or activity for which the honour is being <strong>...</strong> ROSS LAND File No. 1870.06/2015 - RFD Annual Report <strong>2014</strong> 1 THE CITY OF ROSSLAND Request for Council Decision DATE: <strong>...</strong> ,$ IRQ,SSLAND File No. 1870.06/2015 - RFD Annual Report <strong>2014</strong> 2 (f) a statement of municipal objectives, and the measures <strong>...</strong>","PathHtml":"<a href=\"/filepro/documents/55725\" data-id=\"55725\" target=\"_blank\">Agendas</a> &gt; <a href=\"/filepro/documents/16335\" data-id=\"16335\" target=\"_blank\">Special Meeting</a> &gt; <a href=\"/filepro/documents/56292\" data-id=\"56292\" target=\"_blank\">Archive Special Meeting Minutes 2009-2019</a> &gt; <a href=\"/filepro/documents/17123\" data-id=\"17123\" target=\"_blank\">2017</a>","FileFormat":"pdf","FileSize":"8 MB","FileName":"3. June 22.17 Special Regular Agenda.pdf","DateUpdated":"05 May 2019","Classification":"","DestructionDate":"","Destroyed":false,"IsPublic":true,"UpdateAllowed":false,"Deleted":false,"Enterprise":false},{"Id":6981,"Folder":false,"LinkUrl":"/filepro/documents/6981","TitleHtml":"6. April 6, 2020 Regular Agenda Package","SampleHtml":"<strong>...</strong> 0.:2:0 Financial Assets to UabHities 2010 2011 2012 2013 <strong>2014</strong> 2015 2016 2017 2018 2019 - Financia Assets to O 96 ,o. 58 <strong>...</strong> Revenue 40% 20% 0% (20%) (40%) (60%) 2010 2011 2012 2013 <strong>2014</strong> 2015 2016 2017 2018 - Net Deb~:~rty Tax (6%) 7% (70%) (56%) <strong>...</strong> . 1.00 0.80 0.60 0.40 0.20 2010 2011 2012 2013 <strong>2014</strong> 2015 2016 2017 2018 2019 - Tota ExpT enRses to Property <strong>...</strong>","PathHtml":"<a href=\"/filepro/documents/55725\" data-id=\"55725\" target=\"_blank\">Agendas</a> &gt; <a href=\"/filepro/documents/55726\" data-id=\"55726\" target=\"_blank\">Regular Council</a> &gt; <a href=\"/filepro/documents/16378\" data-id=\"16378\" target=\"_blank\">2020</a>","FileFormat":"pdf","FileSize":"37 MB","FileName":"6. April 6, 2020 Regular Agenda Package.pdf","DateUpdated":"03 Apr 2020","Classification":"","DestructionDate":"","Destroyed":false,"IsPublic":true,"UpdateAllowed":false,"Deleted":false,"Enterprise":false}],"Page":1,"Total":147},"isLoggedIn":false,"recordsCenter":false,"recordsSearch":false,"destructionDateFieldId":389,"creationDateFieldId":381,"dispositionStatusFieldId":244,"disposedListValueId":144,"destroyArguements":null,"viewingDeleted":false,"locations":[],"dateFormat":"dd MMM yyyy"});
+		});
+	</script>
+
+	<style type="text/css">
+		.k-state-selected {	/*DXImageTransform to eliminate bugs in IE7 and IE8 */	filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);	background: none;		/*Change only the color*/	background-color: rgb(112,112,130);}
+		.k-state-selected { color: white; }
+		.k-state-selected a { color: white; }
+		.k-state-selected a.k-link { color: white; }
+		.k-state-selected a.k-link:hover { color: inherit; }
+	</style>
+
+	<script type="text/javascript" defer="defer">
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', 'UA-7652396-1'], ['_setDomainName', '.civicweb.net']);
+		_gaq.push(['_trackPageview']);
+
+		(function ()
+		{
+			var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+			ga.src = ('https:' === document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		})();
+	</script>
+
+</body>
+</html>

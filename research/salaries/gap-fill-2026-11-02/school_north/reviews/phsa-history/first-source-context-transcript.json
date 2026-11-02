@@ -1,0 +1,69 @@
+{
+  "candidateValuesOpened": false,
+  "sourceHeadersPersonallyViewed": true,
+  "definition": "Employee remuneration and expenses based on money physically received by or paid on behalf of employee for fiscal year. Remuneration includes, but is not limited to, salaries and wages, taxable benefits, bonuses, stipends, MOCAP and sessional fees. Expenses may be reimbursed to employee or paid to a third-party supplier.",
+  "columns": [
+    "Name",
+    "Remuneration",
+    "Expenses"
+  ],
+  "positionNotDisclosed": true,
+  "threshold": "remuneration exceeding75000CAD",
+  "nullRule": "Visible source dashes are nonnumeric/missing. Never infer0 from absent/OCR-unread expense.",
+  "sources": [
+    {
+      "sourceKey": "phsa-2011-12",
+      "sourcePeriodEnd": "2012-03-31",
+      "contextPhysicalPage": 2,
+      "printedAllEmployees": 18350,
+      "printedNamedThresholdEmployees": 3423,
+      "printedComponents": [
+        862,
+        909,
+        399,
+        1126,
+        127
+      ],
+      "salaryPhysicalPages": [
+        3,
+        90
+      ],
+      "printedTotalsPhysicalPage": 90,
+      "printedRemuneration": "369988459",
+      "printedExpenses": "8500874",
+      "firstVisibleName": "Aarbo,Trevor",
+      "lastVisibleName": "Zwack,Shane",
+      "firstSalaryPagePersonallyCountedNamedRows": 38,
+      "lastSalaryPagePersonallyCountedNamedRows": 31
+    },
+    {
+      "sourceKey": "phsa-2012-13",
+      "sourcePeriodEnd": "2013-03-31",
+      "contextPhysicalPage": 2,
+      "printedAllEmployees": 16943,
+      "printedNamedThresholdEmployees": 3351,
+      "printedComponents": [
+        865,
+        973,
+        399,
+        330,
+        658,
+        126
+      ],
+      "salaryPhysicalPages": [
+        3,
+        86
+      ],
+      "physical87": "Blank original page personally viewed",
+      "printedTotalsPhysicalPage": 86,
+      "printedRemuneration": "369114727",
+      "printedExpenses": "8792836",
+      "firstVisibleName": "Aarbo, Trevor",
+      "lastVisibleName": "Zwack, Shane",
+      "firstSalaryPagePersonallyCountedNamedRows": 40,
+      "lastSalaryPagePersonallyCountedNamedRows": 31
+    }
+  ],
+  "method": "Personal source-image first reads of exact byte-pinned originals before any producer candidate/rawreader access; no employer-wide employee count treated as named salary record count.",
+  "noOutreach": true
+}

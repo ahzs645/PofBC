@@ -1,0 +1,261 @@
+{
+  "reviewer": "gap_health_boards",
+  "accepted": true,
+  "acceptedScope": "Exact selected-v4 literal named employee observations for PHSA fiscal2009/10 and2010/11, subject to explicit financial/period/typography qualifications below. This receipt neither publishes nor edits producer outputs.",
+  "sources": [
+    {
+      "sourceKey": "phsa-2009-10",
+      "sourceSha256": "44b3d86ed71674e42ce6a3983642befab8f5cf5399fbf6cc17b38b7cf2d442c6",
+      "selected": {
+        "path": "research/salaries/gap-fill-2026-11-02/phsa_history/phsa-2009-10-scan-selected-v4.json.gzip",
+        "sha256": "0b06d193c0e484e9e28edc541bdde447ede83d8d53696ba6db146c87dff420b0"
+      },
+      "candidate": {
+        "path": "research/salaries/gap-fill-2026-11-02/phsa_history/phsa-2009-10-scan-candidate-v4.json.gzip",
+        "sha256": "e2498993a13352eec592e7fe637031f58921583d3591dbc02293a26b128a528a"
+      },
+      "selectedRows": 1800,
+      "personalSourceFirstFullRowsCompared": 260,
+      "allPersonallyReadNamesMoneyAndPagesAgree": true,
+      "allSelectedExpensesIndependentlyMatchEveryCompleteSourceCellClass": true,
+      "allIndependentPaymentBandCountsAgree": true,
+      "bothCompleteRawReadersReplayedExactly": true,
+      "rawReaderCounts": {
+        "tesseract": 1800,
+        "rapid": 1800
+      },
+      "literalComputedTotals": {
+        "remuneration": 217818851,
+        "expenses": 4396581
+      },
+      "personallySourceReadPrintedTotals": {
+        "remuneration": 217818830,
+        "expenses": 4433493
+      },
+      "residuals": {
+        "remuneration": 21,
+        "expenses": -36912
+      },
+      "qualification": "Paired complete independent OCR/raster capture with complete original payment-band/expense-cell census and finite image-first personal flag/holdout/calibration review. This does not claim complete personal monetary transcription, exact printed-total reconciliation, infallible OCR, inferred missing amount or a source-error cause. Literal discrepancies remain public warnings; no amount adjusted to balance.",
+      "personalSourceReadingUncertainties": [
+        {
+          "sequence": 843,
+          "uncertainty": [
+            "The final initial after Wendy is a simple vertical stroke; read as uppercase I, but uppercase I/lowercase l are not independently distinguished from this crop."
+          ]
+        },
+        {
+          "sequence": 1372,
+          "uncertainty": [
+            "Final standalone initial is a simple vertical stroke; read as uppercase I, but uppercase I/lowercase l are visually confusable in this crop."
+          ]
+        },
+        {
+          "sequence": 1768,
+          "uncertainty": [
+            "Final standalone initial is a simple vertical stroke; read as uppercase I, but uppercase I/lowercase l are visually confusable in this crop."
+          ]
+        },
+        {
+          "sequence": 1065,
+          "uncertainty": [
+            "I/l adjacent vertical strokes in surname read McIlwaine; typography confusable."
+          ]
+        }
+      ]
+    },
+    {
+      "sourceKey": "phsa-2010-11",
+      "sourceSha256": "085883ae7c1375807eaaf57c0e8f19ffd415bb42176efe4cb9325f7362f6fc4d",
+      "selected": {
+        "path": "research/salaries/gap-fill-2026-11-02/phsa_history/phsa-2010-11-scan-selected-v4.json.gzip",
+        "sha256": "e302c794676f87a3ee70daf693a780bb765f99ad8a30abcd764fcd72742703c5"
+      },
+      "candidate": {
+        "path": "research/salaries/gap-fill-2026-11-02/phsa_history/phsa-2010-11-scan-candidate-v4.json.gzip",
+        "sha256": "a00817fc2e0f231a24ea99ba2f8bf573e10df5ae93b301d09cee749c93833df8"
+      },
+      "selectedRows": 2004,
+      "personalSourceFirstFullRowsCompared": 317,
+      "allPersonallyReadNamesMoneyAndPagesAgree": true,
+      "allSelectedExpensesIndependentlyMatchEveryCompleteSourceCellClass": true,
+      "allIndependentPaymentBandCountsAgree": true,
+      "bothCompleteRawReadersReplayedExactly": true,
+      "rawReaderCounts": {
+        "tesseract": 2004,
+        "rapid": 2004
+      },
+      "literalComputedTotals": {
+        "remuneration": 237473291,
+        "expenses": 5486077
+      },
+      "personallySourceReadPrintedTotals": {
+        "remuneration": 237473281,
+        "expenses": 5486042
+      },
+      "residuals": {
+        "remuneration": 10,
+        "expenses": 35
+      },
+      "qualification": "Paired complete independent OCR/raster capture with complete original payment-band/expense-cell census and finite image-first personal flag/holdout/calibration review. This does not claim complete personal monetary transcription, exact printed-total reconciliation, infallible OCR, inferred missing amount or a source-error cause. Literal discrepancies remain public warnings; no amount adjusted to balance.",
+      "personalSourceReadingUncertainties": [
+        {
+          "sequence": 252,
+          "uncertainty": [
+            "Final standalone vertical-stroke initial read I; I/l case visually confusable."
+          ]
+        },
+        {
+          "sequence": 946,
+          "uncertainty": [
+            "Final standalone vertical-stroke initial read I; I/l case visually confusable."
+          ]
+        },
+        {
+          "sequence": 1528,
+          "uncertainty": [
+            "Final standalone vertical-stroke initial read I; I/l case visually confusable."
+          ]
+        },
+        {
+          "sequence": 1548,
+          "uncertainty": [
+            "Final vertical-stroke initial before period read I; I/l case visually confusable."
+          ]
+        },
+        {
+          "sequence": 1189,
+          "uncertainty": [
+            "I/l adjacent vertical strokes in surname read McIlwaine; typography confusable."
+          ]
+        },
+        {
+          "sequence": 1193,
+          "uncertainty": [
+            "I/l vertical stroke after Mc read I; typography confusable."
+          ]
+        }
+      ]
+    }
+  ],
+  "evidence": [
+    {
+      "path": "research/salaries/gap-fill-2026-11-02/health_boards/peer-phsa-history/first-two-scans-first-reading-freeze.json",
+      "sha256": "080b2a1b5749d630d871ff6f12c16e0190ada10f9442b46fa9bd20648cac7c1d"
+    },
+    {
+      "path": "research/salaries/gap-fill-2026-11-02/health_boards/peer-phsa-history/current-source-reading-selection.json",
+      "sha256": "2481a744a0fe73f2cc4659decb74f41ec4038cf79a51c763090c8a08e8076836"
+    },
+    {
+      "path": "research/salaries/gap-fill-2026-11-02/health_boards/peer-phsa-history/initial-source-context-first-read.json",
+      "sha256": "733c2768f0aaa427cc90cefb920a789c39620426acc76dd19526f35986f69e0d"
+    },
+    {
+      "path": "research/salaries/gap-fill-2026-11-02/health_boards/peer-phsa-history/v4-original-pixel-replay.json",
+      "sha256": "4347289cc377f4082df8f4c82c68b229be63742dc6e7aa437e1c62ad2b504c7a"
+    },
+    {
+      "path": "research/salaries/gap-fill-2026-11-02/health_boards/peer-phsa-history/independent-complete-cell-census-v1.json.gzip",
+      "sha256": "0ba3e40b2f5257aaa6f6a50492b44bc14152891a89d267fa11131d0f6f1dd499"
+    },
+    {
+      "path": "research/salaries/gap-fill-2026-11-02/health_boards/peer-phsa-history/independent-complete-cell-census-v2.json.gzip",
+      "sha256": "e795595c8b778c0c4126210ac116d5a1fc28fbdd9b14997665b801531752cf93"
+    },
+    {
+      "path": "research/salaries/gap-fill-2026-11-02/health_boards/peer-phsa-history/independent-source-calibrated-expense-cells-v1.json.gzip",
+      "sha256": "11ca20782fe3c9dcf3f77858a891e3650e1d614a0bd5bfe03c085a5445c177b2"
+    },
+    {
+      "path": "research/salaries/gap-fill-2026-11-02/health_boards/peer-phsa-history/independent-first-two-scans-comparison-v1.json",
+      "sha256": "98e5e39de890e57cc88cf17d9e721632d0c27e0bface3a030b6bca8e3a64522d"
+    },
+    {
+      "path": "research/salaries/gap-fill-2026-11-02/health_boards/peer-phsa-history/finite-source-selection-replay.json",
+      "sha256": "457d5e88066cf9e2c1a580f1fa877086c3a04babf70bfd9ec0445d85cb560dfa"
+    },
+    {
+      "path": "research/salaries/gap-fill-2026-11-02/health_boards/peer-phsa-history/source-context/all-schedule-date-views.json",
+      "sha256": "f4b57064b1eecc7c2c8d03b42b4338aa1ff0f81738f25007ec7b34fb40585d6f"
+    }
+  ],
+  "methodSnapshots": [
+    {
+      "path": "research/salaries/gap-fill-2026-11-02/health_boards/peer-phsa-history/review-method-snapshots/phsa_calibrate_cells.py",
+      "sha256": "8295e5a63ae86d2374016c067ff875a815e355c83c1f44b1543838d488d06c02"
+    },
+    {
+      "path": "research/salaries/gap-fill-2026-11-02/health_boards/peer-phsa-history/review-method-snapshots/phsa_independent_cells.py",
+      "sha256": "766e4fd918311152497e33cae35bbc5ab14cb24df0a12be982506a3346b856e6"
+    },
+    {
+      "path": "research/salaries/gap-fill-2026-11-02/health_boards/peer-phsa-history/review-method-snapshots/phsa_independent_cells_v2.py",
+      "sha256": "ed1c135989c0a1806597da058da35c87a8298071cb59e935f95ef06fac8e74e1"
+    },
+    {
+      "path": "research/salaries/gap-fill-2026-11-02/health_boards/peer-phsa-history/review-method-snapshots/phsa_peer_compare.py",
+      "sha256": "22b8755c23a8cf453e31c433073abc88150ca93451f8de7d851d1e92363235f7"
+    }
+  ],
+  "completeSourcePixelChecks": {
+    "all101OriginalSalaryPagesIndependentlyRenderedAt300dpi": true,
+    "all555MainSourceCropsPixelReplayExact": true,
+    "all22AdaptiveSourceCropsPixelReplayExact": true,
+    "twoDistinctRemunerationStripBandCountsIndependentlyReconstructed": true,
+    "all3804ExpenseCellsMeasuredIncludingEntireRightPageMargin": true,
+    "allExpenseCellsExplicitlyNonblank": true,
+    "sourceCalibratedDashCells": [
+      632,
+      623
+    ],
+    "tallNumericInkCells": [
+      1168,
+      1381
+    ],
+    "allCellClassesMatchSelectedNullsAndNumericExpenses": true,
+    "noUnknownExpenseInventedAsZero": true,
+    "initial2009Count1806Preserved": "Six12pixel remuneration-header descender bands were overcounted by the first generic>=12height diagnostic. Actual six original header photographs show they belong to Remuneration headings; source money bands are>=18px in independentv2. All101 page counts then agree in two distinct strips. No count was chosen from narrative totals.",
+    "sixHeaderViews": {
+      "path": "research/salaries/gap-fill-2026-11-02/health_boards/peer-phsa-history/source-context/header-descender-contacts.png",
+      "sha256": "24116f301a5f0a63f346e710c0843d5af0bbd0efc8c2e53cc3280475b0cea1e7"
+    }
+  },
+  "boundedPersonalSourceChecks": {
+    "all577MainAndAdaptiveFullRowsReadBeforeCandidateAccess": true,
+    "all101PrintedScheduleDateHeadingsPersonallyViewed": true,
+    "allSixHeaderDescenderExclusionsPersonallySourceViewed": true,
+    "bothDefinitionPagesAndFirstAndLastSalaryPagesPersonallyViewedBeforeCandidates": true,
+    "sourceFirstMargin729ExpandedReadingPreserved": true,
+    "allNamesAndAmountsManualTranscribed": false,
+    "uncertainty": "Ten source readings retain I/l typography uncertainty; these do not establish identity or Unicode codepoint. Source spellings preserved; no hidden letters reconstructed."
+  },
+  "sourceDefinitions": {
+    "remuneration": "Amounts physically received or paid on behalf in year, including salary/wages,taxable benefits,bonuses,stipends,MOCAP and sessional fees; not annual base salary.",
+    "threshold": "Strictly exceeding75000 according to printed salary schedule. Literal observed exceptions are verified rather than adjusted.",
+    "expenses": "May be reimbursed directly or paid to third-party supplier. Separate from remuneration; actual dashes remain null, numeric0 remains0."
+  },
+  "periodDecision": {
+    "phsa-2009-10": {
+      "selectedFiscalPeriod": "2009/10",
+      "scheduleFiscalEnd": "2010-03-31",
+      "all51ScheduleHeadingsPersonallyRead": "31 March2010",
+      "firstScheduleIntroduction": "Year ended31March2010",
+      "definitionWorkforceNarrative": "March31,2009",
+      "qualification": "Conflicting literal narrative remains disclosed. Repeated original salary-schedule period supports selected2009/10; no typo/copy-forward cause or narrative count correction assumed. The actual original row census independently finds1800.",
+      "allScheduleDateViews": {
+        "path": "research/salaries/gap-fill-2026-11-02/health_boards/peer-phsa-history/source-context/all-schedule-date-views.json",
+        "sha256": "f4b57064b1eecc7c2c8d03b42b4338aa1ff0f81738f25007ec7b34fb40585d6f"
+      }
+    },
+    "phsa-2010-11": {
+      "selectedFiscalPeriod": "2010/11",
+      "scheduleFiscalEnd": "2011-03-31",
+      "all50ScheduleHeadingsPersonallyRead": "31 March2011",
+      "definitionNarrative": "March31,2011",
+      "actualIndependentPaymentBandCount": 2004
+    }
+  },
+  "financialQualification": "All literal known amounts are retained unchanged; current sums differ from personally read printed controls:2009 remuneration+21,expenses−36912;2010 remuneration+10,expenses+35. Complete paired raster-reader capture, full original band/cell census, all true field/geometry exceptions and finite source-first confidence/dash/numeric/holdout review have closed. This is bounded verification and does not claim every monetary cell manually transcribed, exact source-total reconciliation, a cause for discrepancies, or infallibleOCR. Public source warnings must retain exact residuals. No balancing or compensation imputation.",
+  "noOutreach": true
+}

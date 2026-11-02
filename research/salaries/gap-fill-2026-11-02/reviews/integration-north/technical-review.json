@@ -1,0 +1,89 @@
+{
+  "status": "passed-current-inputs-with-one-fixed-finding",
+  "scope": "Independent read-only technical review of current retention/build/release checks; only explicitly assigned baseline metadata fix/test were edited.",
+  "reviewedFiles": [
+    {
+      "path": "scripts/lib/salary-data.mjs",
+      "sha256": "c8c39f0f2b3d3f8d75dc9f6b58ead979d111d6a0cda7b210fd95768623812179"
+    },
+    {
+      "path": "scripts/build-salaries.mjs",
+      "sha256": "2f68acd438b9a0455ce215dda2e914c72ea64606c34d90962f12cc768992f1f5"
+    },
+    {
+      "path": "scripts/salary-data.test.mjs",
+      "sha256": "c99fcc6f9d9c90961cbd1c8fee25f8c1445aea41263e1b104f20e48fc1161ec2"
+    },
+    {
+      "path": "scripts/review_salary_gap_fill.py",
+      "sha256": "8c82cbf2b8be2c65b5fca889fddc5a7daaf56f87b4964aec4c42a54d710435ef"
+    },
+    {
+      "path": "scripts/test_review_salary_gap_fill.py",
+      "sha256": "aef7e21e428f18f8aeccdd3185bda6fd0fbc3cbcd6b0f47fc339e4a886ebe538"
+    },
+    {
+      "path": "scripts/gap_fill_baseline.py",
+      "sha256": "e5fac9450625e75058ebb2f8f7ec632cae832acd7ffc179cb08bd09d4fb1922b"
+    },
+    {
+      "path": "scripts/test_gap_fill_baseline.py",
+      "sha256": "a6e1f9269ceaa19ffc7bb9620ded93eb576db4c8b671a10f9e0e928761dbf699"
+    },
+    {
+      "path": "research/salaries/compiled-retention-decisions.json",
+      "sha256": "e876436f37ef4be3c71ed97894723822652a10e532b8a45d51293c92aa8cca1e"
+    },
+    {
+      "path": ".github/workflows/salaries.yml",
+      "sha256": "804d22f3345e15cf3861360afb3792e9ef38b351fd73acfdc825dc7122df9498"
+    }
+  ],
+  "baseline": {
+    "path": "research/salaries/gap-fill-2026-11-02/baseline.json.gzip",
+    "sha256": "fa35799b84e173aa7e61f9225935ec1936d744375107c14ccf709edeac937fa4"
+  },
+  "preservedOldRecords": 1125685,
+  "preservedCompiledRecords": 228364,
+  "preservedCompiledGroups": 284,
+  "currentNewCohorts": 209,
+  "currentNewOfficialRows": 225069,
+  "currentRetentionAdoptions": 195,
+  "allCurrentAdoptionSourceAndDataPinsMatch": true,
+  "allCurrentNewSourceFullMetadataAndDataMultisetsMatch": true,
+  "noUnexpectedSourceOrObservationGroup": true,
+  "findings": [
+    {
+      "priority": "P2",
+      "status": "fixed",
+      "reference": "scripts/gap_fill_baseline.py:70",
+      "problem": "Prior-source Python dictionary equality accepted false as numeric0 and true as1, including nested validation/list values.",
+      "fix": "Type-strict recursive comparison preserves source-definition value types, keys, lists and exact scalar values.",
+      "test": "Six subcases failed under old code and now pass; actual1,125,685-row baseline also passes after the fix."
+    }
+  ],
+  "otherBlockingFindings": [],
+  "controlsReviewed": [
+    "Published compiled whitelist requires exact employer/year/source keys, multiplicity, monetary cents, null vs0, literal names/titles/pages, UTF8 ordering and exact overall228364 count. Extra retired groups are dropped rather than revived.",
+    "Retention adoption requires explicit root approval, original+data SHA pins, source-kind, public warning and consistent completeness flags. Raw frozen source metadata is not rewritten.",
+    "Offline release gate pins baseline constant and all source/provenance/evidence references, preserves all old groups and metadata, bounds same-scope supplements and rejects unreviewed extra sources/groups.",
+    "Generic builder permits an absent publishedCompiledBaseline in other retention fixtures; this release requires the exact reference in review_salary_gap_fill.py:198 and salaries.yml runs the gate before workflow success. No current missing-reference defect."
+  ],
+  "tests": [
+    {
+      "command": "node --test scripts/salary-data.test.mjs",
+      "passed": 25
+    },
+    {
+      "command": "PYTHONPATH=scripts python -m unittest scripts/test_gap_fill_baseline.py scripts/test_review_salary_gap_fill.py -v",
+      "passed": 21
+    },
+    {
+      "command": "python scripts/gap_fill_baseline.py",
+      "preservedRows": 1125685,
+      "groups": 1357
+    }
+  ],
+  "limit": "Point-in-time review before final PHSA-history collection integration. Root must repin or rerun final release checks after any inputs change; no completed final root acceptance/freeze is claimed by this receipt.",
+  "noOutreach": true
+}

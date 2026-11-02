@@ -126,7 +126,7 @@ export const EmployerPage = ({ entry, years, sources, year: wantedYear, show, ro
     { id: 'high', header: 'Highest', accessorKey: 'high', meta: { kind: 'money' }, cell: ({ getValue }) => money(getValue()) }
   ], [onRole])
   const peopleColumns = useMemo(() => [
-    { id: 'name', header: 'Name', accessorFn: (row) => (row[0] ? displayName(row[0], sources?.[row[5]]?.nameDisclosure) : 'Name not given'), cell: ({ row, getValue }) => (row.original[0] ? <button type="button" className="salaries__link salaries-row__name" onClick={() => onPerson(row.original[0])}>{getValue()}</button> : <span className="salaries__line">{getValue()}</span>) },
+    { id: 'name', header: 'Name', accessorFn: (row) => (row[0] ? displayName(row[0], sources?.[row[5]]?.nameDisclosure) : 'Name unavailable'), cell: ({ row, getValue }) => (row.original[0] ? <button type="button" className="salaries__link salaries-row__name" onClick={() => onPerson(row.original[0])}>{getValue()}</button> : <span className="salaries__line">{getValue()}</span>) },
     { id: 'position', header: 'Position', accessorFn: (row) => row[1] ?? '' },
     { id: 'pay', header: 'Pay', accessorFn: (row) => row[2], meta: { kind: 'money' }, cell: ({ getValue }) => money(getValue()) },
     { id: 'expenses', header: expenseLabel(people[0]?.[5], sources), accessorFn: (row) => row[3], meta: { kind: 'money' }, cell: ({ getValue }) => money(getValue()) },

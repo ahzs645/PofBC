@@ -8,6 +8,7 @@ on:
       - 'scripts/**'
       - 'src/salaries/**'
       - 'src/government/Salaries.jsx'
+      - 'src/government/salaries.test.js'
       - 'src/government/salaryIndex.js'
       - 'src/site/site.css'
       - 'package*.json'
@@ -20,6 +21,7 @@ on:
       - 'scripts/**'
       - 'src/salaries/**'
       - 'src/government/Salaries.jsx'
+      - 'src/government/salaries.test.js'
       - 'src/government/salaryIndex.js'
       - 'src/site/site.css'
       - 'package*.json'
@@ -57,6 +59,10 @@ jobs:
           import unittest
           from pathlib import Path
           sys.path.insert(0, 'scripts')
+          # Rebind immutable historical replayers to this checkout, without
+          # changing their source evidence, financial rules or pinned files.
+          from gap_fill_repository_paths import bind_frozen_checkout
+          bind_frozen_checkout()
           tests = sorted(path.stem for path in Path('scripts').glob('test_*.py')
                          if not path.stem.startswith('test_health_')
                          and path.stem != 'test_rectify_health_maps')
@@ -78,6 +84,7 @@ jobs:
           npm run review:salary-recovery
           npm run review:salary-held-resolution
           npm run review:salary-queue-completion
+          npm run review:salary-gap-fill
           git diff --exit-code -- public/salaries src/government/salaryIndex.js research/salaries/coverage-inventory.md research/salaries/source-inventory.md research/salaries/municipal-audit/coverage.json research/salaries/municipal-audit/coverage.md research/salaries/municipal-audit/follow-up.json research/salaries/municipal-audit/follow-up.csv research/salaries/municipal-audit/follow-up.md research/salaries/municipal-corrections
           git diff --exit-code -- research/salaries/sector-search-2026-10-31
           git diff --exit-code -- research/salaries/municipal-next-pass
@@ -86,6 +93,8 @@ jobs:
           git diff --exit-code -- research/salaries/recovery-wave-2026-11-01
           git diff --exit-code -- research/salaries/held-resolution-2026-11-01
           git diff --exit-code -- research/salaries/queue-completion-2026-11-01
+          git diff --exit-code -- research/salaries/collections.json research/salaries/compiled-retention-decisions.json research/salaries/name-links
+          git diff --exit-code -- research/salaries/gap-fill-2026-11-02 research/salaries/gap-fill-health-boards research/salaries/gap-fill-health-employees research/salaries/gap-fill-health-board-supplement research/salaries/gap-fill-health-other-history research/salaries/gap-fill-phsa-history research/salaries/gap-fill-municipal research/salaries/gap-fill-school-native research/salaries/gap-fill-school-north research/salaries/gap-fill-school-south
           test -z "$(git ls-files --others --exclude-standard -- public/salaries research/salaries)"
       - name: Build the salary interface preview
         run: npm run preview:salaries -- --build

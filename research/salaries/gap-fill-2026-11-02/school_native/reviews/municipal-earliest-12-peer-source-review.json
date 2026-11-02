@@ -1,0 +1,988 @@
+{
+  "reviewer": "/root/gap_school_native",
+  "reviewProtocol": "Complete actual-original image-first personal transcription of every named row of all12assigned originals before any candidate literals or normalized payloads were opened. Every149name/title/pay/expense and every separately printed benefit/expense-inclusive total compared. All22normalized cohorts match exactly with explicitly declared footnote-marker removal and2016employee benefit addition. Not merely an OCR or control-total check.",
+  "completeOriginalCount": 12,
+  "completeCohortCount": 22,
+  "completeRowCount": 149,
+  "allNormalizedRowsExact": true,
+  "firstTranscript": "research/salaries/gap-fill-2026-11-02/school_native/reviews/municipal-earliest-12-first-source-transcript.json",
+  "firstTranscriptSha256": "0ef0222577ead359215a43d22ef04f4ca60463ed8443485a14964fc368f09cf3",
+  "firstTranscriptPreserved": true,
+  "originalReplayFile": "research/salaries/gap-fill-2026-11-02/school_native/reviews/municipal-earliest-12-original-replay.json",
+  "originalReplaySha256": "0e450479c88b004d02d782c8b5cb7905bc223933c1be4b7b731cb90e604e4608",
+  "initialComparisonFile": "research/salaries/gap-fill-2026-11-02/school_native/reviews/municipal-earliest-12-initial-comparison.json",
+  "initialComparisonSha256": "653f50e42f650e1a7ae55dfd9060634679fc76e1064e85ace3b2e667f79a2ca2",
+  "firstDifferencesAndResolutions": [
+    {
+      "type": "only whitespace before footnote marker",
+      "sourceId": "gap-fill-municipal-district-of-clearwater-2014-elected-officials",
+      "row": 4,
+      "peerFirst": "Greffard, Dennis *",
+      "candidate": "Greffard, Dennis*",
+      "resolution": "Original image shows a separate star. The exact footnote marker is preserved in both evidence readings; no changed letters or value. Normalized name is Greffard, Dennis in both."
+    },
+    {
+      "type": "peer first aggregate reading error; candidate already correct",
+      "sourceId": "gap-fill-municipal-city-of-rossland-2010-employee-remuneration",
+      "peerFirst": "1447863.64",
+      "freshOriginalImageReading": "1417863.64",
+      "candidate": "1417863.64",
+      "freshOriginalCropFile": "research/salaries/gap-fill-2026-11-02/school_native/reviews/rossland2010-aggregate-fresh-reread.png",
+      "freshOriginalCropSha256": "ea5fd4c00bce2bc217abf56be9347c3295b4b5452a019caa28959ebb36b48078",
+      "resolution": "Fresh rendered original clearly prints1,417,863.64; candidate control was already correct. Earlier peer30,000aggregate-disagreement claim is withdrawn, first transcript preserved."
+    }
+  ],
+  "allPrintedControlComparisons": [
+    {
+      "sourceId": "gap-fill-municipal-city-of-rossland-2010-elected-officials",
+      "allPeerPrintedControlsComparedExact": true,
+      "math": {
+        "remunerationComponent": {
+          "knownRowSum": "45806.80",
+          "unknownRows": 0,
+          "printedNamedControlOrDerivation": "45806.80",
+          "knownMinusControl": "0.00",
+          "controlBasis": "printed named total",
+          "unknownCellsNotImputedZero": true
+        },
+        "expenses": {
+          "knownRowSum": "13644.59",
+          "unknownRows": 0,
+          "printedNamedControlOrDerivation": "13644.59",
+          "knownMinusControl": "0.00",
+          "controlBasis": "printed named total",
+          "unknownCellsNotImputedZero": true
+        },
+        "expenseInclusiveTotal": {
+          "knownRowSum": "0",
+          "unknownRows": 7,
+          "printedNamedControlOrDerivation": null,
+          "knownMinusControl": null,
+          "controlBasis": null,
+          "unknownCellsNotImputedZero": true
+        }
+      },
+      "additionalIndependentPrintedControlsNotClaimedInCandidateNamedControl": {}
+    },
+    {
+      "sourceId": "gap-fill-municipal-city-of-rossland-2010-employee-remuneration",
+      "allPeerPrintedControlsComparedExact": true,
+      "math": {
+        "remunerationComponent": {
+          "knownRowSum": "578730.05",
+          "unknownRows": 0,
+          "printedNamedControlOrDerivation": "578730.02",
+          "knownMinusControl": "0.03",
+          "controlBasis": "printed all-employee less printed unnamed aggregate",
+          "unknownCellsNotImputedZero": true
+        },
+        "expenses": {
+          "knownRowSum": "24630.00",
+          "unknownRows": 0,
+          "printedNamedControlOrDerivation": "24630.00",
+          "knownMinusControl": "0.00",
+          "controlBasis": "printed all-employee less printed unnamed aggregate",
+          "unknownCellsNotImputedZero": true
+        },
+        "expenseInclusiveTotal": {
+          "knownRowSum": "603360.05",
+          "unknownRows": 0,
+          "printedNamedControlOrDerivation": "603360.02",
+          "knownMinusControl": "0.03",
+          "controlBasis": "printed all-employee less printed unnamed aggregate",
+          "unknownCellsNotImputedZero": true
+        }
+      },
+      "additionalIndependentPrintedControlsNotClaimedInCandidateNamedControl": {}
+    },
+    {
+      "sourceId": "gap-fill-municipal-district-of-clearwater-2011-elected-officials",
+      "allPeerPrintedControlsComparedExact": true,
+      "math": {
+        "remunerationComponent": {
+          "knownRowSum": "70316.39",
+          "unknownRows": 0,
+          "printedNamedControlOrDerivation": "70316.39",
+          "knownMinusControl": "0.00",
+          "controlBasis": "printed named total",
+          "unknownCellsNotImputedZero": true
+        },
+        "expenses": {
+          "knownRowSum": "20660.76",
+          "unknownRows": 0,
+          "printedNamedControlOrDerivation": "20660.76",
+          "knownMinusControl": "0.00",
+          "controlBasis": "printed named total",
+          "unknownCellsNotImputedZero": true
+        },
+        "expenseInclusiveTotal": {
+          "knownRowSum": "0",
+          "unknownRows": 12,
+          "printedNamedControlOrDerivation": null,
+          "knownMinusControl": null,
+          "controlBasis": null,
+          "unknownCellsNotImputedZero": true
+        }
+      },
+      "additionalIndependentPrintedControlsNotClaimedInCandidateNamedControl": {}
+    },
+    {
+      "sourceId": "gap-fill-municipal-district-of-clearwater-2011-employee-remuneration",
+      "allPeerPrintedControlsComparedExact": true,
+      "math": {
+        "remunerationComponent": {
+          "knownRowSum": "283230.82",
+          "unknownRows": 0,
+          "printedNamedControlOrDerivation": "283230.82",
+          "knownMinusControl": "0.00",
+          "controlBasis": "printed all-employee less printed unnamed aggregate",
+          "unknownCellsNotImputedZero": true
+        },
+        "expenses": {
+          "knownRowSum": "12292.45",
+          "unknownRows": 0,
+          "printedNamedControlOrDerivation": "12292.45",
+          "knownMinusControl": "0.00",
+          "controlBasis": "printed all-employee less printed unnamed aggregate",
+          "unknownCellsNotImputedZero": true
+        },
+        "expenseInclusiveTotal": {
+          "knownRowSum": "0",
+          "unknownRows": 3,
+          "printedNamedControlOrDerivation": null,
+          "knownMinusControl": null,
+          "controlBasis": null,
+          "unknownCellsNotImputedZero": true
+        }
+      },
+      "additionalIndependentPrintedControlsNotClaimedInCandidateNamedControl": {}
+    },
+    {
+      "sourceId": "gap-fill-municipal-city-of-rossland-2011-elected-officials",
+      "allPeerPrintedControlsComparedExact": true,
+      "math": {
+        "remunerationComponent": {
+          "knownRowSum": "46808.71",
+          "unknownRows": 0,
+          "printedNamedControlOrDerivation": "46808.71",
+          "knownMinusControl": "0.00",
+          "controlBasis": "printed named total",
+          "unknownCellsNotImputedZero": true
+        },
+        "expenses": {
+          "knownRowSum": "11013.24",
+          "unknownRows": 0,
+          "printedNamedControlOrDerivation": "11013.24",
+          "knownMinusControl": "0.00",
+          "controlBasis": "printed named total",
+          "unknownCellsNotImputedZero": true
+        },
+        "expenseInclusiveTotal": {
+          "knownRowSum": "0",
+          "unknownRows": 10,
+          "printedNamedControlOrDerivation": null,
+          "knownMinusControl": null,
+          "controlBasis": null,
+          "unknownCellsNotImputedZero": true
+        }
+      },
+      "additionalIndependentPrintedControlsNotClaimedInCandidateNamedControl": {}
+    },
+    {
+      "sourceId": "gap-fill-municipal-district-of-clearwater-2012-elected-officials",
+      "allPeerPrintedControlsComparedExact": true,
+      "math": {
+        "remunerationComponent": {
+          "knownRowSum": "70662.54",
+          "unknownRows": 0,
+          "printedNamedControlOrDerivation": "70662.54",
+          "knownMinusControl": "0.00",
+          "controlBasis": "printed named total",
+          "unknownCellsNotImputedZero": true
+        },
+        "expenses": {
+          "knownRowSum": "27173.13",
+          "unknownRows": 0,
+          "printedNamedControlOrDerivation": "27173.13",
+          "knownMinusControl": "0.00",
+          "controlBasis": "printed named total",
+          "unknownCellsNotImputedZero": true
+        },
+        "expenseInclusiveTotal": {
+          "knownRowSum": "0",
+          "unknownRows": 7,
+          "printedNamedControlOrDerivation": null,
+          "knownMinusControl": null,
+          "controlBasis": null,
+          "unknownCellsNotImputedZero": true
+        }
+      },
+      "additionalIndependentPrintedControlsNotClaimedInCandidateNamedControl": {}
+    },
+    {
+      "sourceId": "gap-fill-municipal-district-of-clearwater-2012-employee-remuneration",
+      "allPeerPrintedControlsComparedExact": true,
+      "math": {
+        "remunerationComponent": {
+          "knownRowSum": "266282.82",
+          "unknownRows": 0,
+          "printedNamedControlOrDerivation": "266282.82",
+          "knownMinusControl": "0.00",
+          "controlBasis": "printed all-employee less printed unnamed aggregate",
+          "unknownCellsNotImputedZero": true
+        },
+        "expenses": {
+          "knownRowSum": "14176.89",
+          "unknownRows": 0,
+          "printedNamedControlOrDerivation": "14176.89",
+          "knownMinusControl": "0.00",
+          "controlBasis": "printed all-employee less printed unnamed aggregate",
+          "unknownCellsNotImputedZero": true
+        },
+        "expenseInclusiveTotal": {
+          "knownRowSum": "0",
+          "unknownRows": 3,
+          "printedNamedControlOrDerivation": null,
+          "knownMinusControl": null,
+          "controlBasis": null,
+          "unknownCellsNotImputedZero": true
+        }
+      },
+      "additionalIndependentPrintedControlsNotClaimedInCandidateNamedControl": {}
+    },
+    {
+      "sourceId": "gap-fill-municipal-city-of-rossland-2012-elected-officials",
+      "allPeerPrintedControlsComparedExact": true,
+      "math": {
+        "remunerationComponent": {
+          "knownRowSum": "47894.07",
+          "unknownRows": 0,
+          "printedNamedControlOrDerivation": "47894.07",
+          "knownMinusControl": "0.00",
+          "controlBasis": "printed named total",
+          "unknownCellsNotImputedZero": true
+        },
+        "expenses": {
+          "knownRowSum": "12201.83",
+          "unknownRows": 0,
+          "printedNamedControlOrDerivation": "12201.83",
+          "knownMinusControl": "0.00",
+          "controlBasis": "printed named total",
+          "unknownCellsNotImputedZero": true
+        },
+        "expenseInclusiveTotal": {
+          "knownRowSum": "0",
+          "unknownRows": 7,
+          "printedNamedControlOrDerivation": null,
+          "knownMinusControl": null,
+          "controlBasis": null,
+          "unknownCellsNotImputedZero": true
+        }
+      },
+      "additionalIndependentPrintedControlsNotClaimedInCandidateNamedControl": {}
+    },
+    {
+      "sourceId": "gap-fill-municipal-city-of-rossland-2012-employee-remuneration",
+      "allPeerPrintedControlsComparedExact": true,
+      "math": {
+        "remunerationComponent": {
+          "knownRowSum": "741296.57",
+          "unknownRows": 0,
+          "printedNamedControlOrDerivation": "741296.57",
+          "knownMinusControl": "0.00",
+          "controlBasis": "printed all-employee less printed unnamed aggregate",
+          "unknownCellsNotImputedZero": true
+        },
+        "expenses": {
+          "knownRowSum": "28182.03",
+          "unknownRows": 1,
+          "printedNamedControlOrDerivation": "28182.03",
+          "knownMinusControl": "0.00",
+          "controlBasis": "printed all-employee less printed unnamed aggregate",
+          "unknownCellsNotImputedZero": true
+        },
+        "expenseInclusiveTotal": {
+          "knownRowSum": "769478.60",
+          "unknownRows": 0,
+          "printedNamedControlOrDerivation": "769478.60",
+          "knownMinusControl": "0.00",
+          "controlBasis": "printed all-employee less printed unnamed aggregate",
+          "unknownCellsNotImputedZero": true
+        }
+      },
+      "additionalIndependentPrintedControlsNotClaimedInCandidateNamedControl": {}
+    },
+    {
+      "sourceId": "gap-fill-municipal-district-of-clearwater-2013-elected-officials",
+      "allPeerPrintedControlsComparedExact": true,
+      "math": {
+        "remunerationComponent": {
+          "knownRowSum": "70944.90",
+          "unknownRows": 0,
+          "printedNamedControlOrDerivation": "70944.90",
+          "knownMinusControl": "0.00",
+          "controlBasis": "printed named total",
+          "unknownCellsNotImputedZero": true
+        },
+        "expenses": {
+          "knownRowSum": "30889.46",
+          "unknownRows": 0,
+          "printedNamedControlOrDerivation": "30889.46",
+          "knownMinusControl": "0.00",
+          "controlBasis": "printed named total",
+          "unknownCellsNotImputedZero": true
+        },
+        "expenseInclusiveTotal": {
+          "knownRowSum": "0",
+          "unknownRows": 7,
+          "printedNamedControlOrDerivation": null,
+          "knownMinusControl": null,
+          "controlBasis": null,
+          "unknownCellsNotImputedZero": true
+        }
+      },
+      "additionalIndependentPrintedControlsNotClaimedInCandidateNamedControl": {}
+    },
+    {
+      "sourceId": "gap-fill-municipal-district-of-clearwater-2013-employee-remuneration",
+      "allPeerPrintedControlsComparedExact": true,
+      "math": {
+        "remunerationComponent": {
+          "knownRowSum": "360904.98",
+          "unknownRows": 0,
+          "printedNamedControlOrDerivation": "360904.98",
+          "knownMinusControl": "0.00",
+          "controlBasis": "printed all-employee less printed unnamed aggregate",
+          "unknownCellsNotImputedZero": true
+        },
+        "expenses": {
+          "knownRowSum": "27743.90",
+          "unknownRows": 0,
+          "printedNamedControlOrDerivation": "27743.90",
+          "knownMinusControl": "0.00",
+          "controlBasis": "printed all-employee less printed unnamed aggregate",
+          "unknownCellsNotImputedZero": true
+        },
+        "expenseInclusiveTotal": {
+          "knownRowSum": "0",
+          "unknownRows": 4,
+          "printedNamedControlOrDerivation": null,
+          "knownMinusControl": null,
+          "controlBasis": null,
+          "unknownCellsNotImputedZero": true
+        }
+      },
+      "additionalIndependentPrintedControlsNotClaimedInCandidateNamedControl": {}
+    },
+    {
+      "sourceId": "gap-fill-municipal-city-of-rossland-2013-elected-officials",
+      "allPeerPrintedControlsComparedExact": true,
+      "math": {
+        "remunerationComponent": {
+          "knownRowSum": "47894.07",
+          "unknownRows": 0,
+          "printedNamedControlOrDerivation": "47894.07",
+          "knownMinusControl": "0.00",
+          "controlBasis": "printed named total",
+          "unknownCellsNotImputedZero": true
+        },
+        "expenses": {
+          "knownRowSum": "14103.09",
+          "unknownRows": 0,
+          "printedNamedControlOrDerivation": "14103.09",
+          "knownMinusControl": "0.00",
+          "controlBasis": "printed named total",
+          "unknownCellsNotImputedZero": true
+        },
+        "expenseInclusiveTotal": {
+          "knownRowSum": "0",
+          "unknownRows": 7,
+          "printedNamedControlOrDerivation": null,
+          "knownMinusControl": null,
+          "controlBasis": null,
+          "unknownCellsNotImputedZero": true
+        }
+      },
+      "additionalIndependentPrintedControlsNotClaimedInCandidateNamedControl": {}
+    },
+    {
+      "sourceId": "gap-fill-municipal-city-of-rossland-2013-employee-remuneration",
+      "allPeerPrintedControlsComparedExact": true,
+      "math": {
+        "remunerationComponent": {
+          "knownRowSum": "668935.04",
+          "unknownRows": 0,
+          "printedNamedControlOrDerivation": "668935.04",
+          "knownMinusControl": "0.00",
+          "controlBasis": "printed all-employee less printed unnamed aggregate",
+          "unknownCellsNotImputedZero": true
+        },
+        "expenses": {
+          "knownRowSum": "19889.19",
+          "unknownRows": 0,
+          "printedNamedControlOrDerivation": "19889.19",
+          "knownMinusControl": "0.00",
+          "controlBasis": "printed all-employee less printed unnamed aggregate",
+          "unknownCellsNotImputedZero": true
+        },
+        "expenseInclusiveTotal": {
+          "knownRowSum": "689824.23",
+          "unknownRows": 0,
+          "printedNamedControlOrDerivation": "688824.23",
+          "knownMinusControl": "1000.00",
+          "controlBasis": "printed all-employee less printed unnamed aggregate",
+          "unknownCellsNotImputedZero": true
+        }
+      },
+      "additionalIndependentPrintedControlsNotClaimedInCandidateNamedControl": {}
+    },
+    {
+      "sourceId": "gap-fill-municipal-district-of-clearwater-2014-elected-officials",
+      "allPeerPrintedControlsComparedExact": true,
+      "math": {
+        "remunerationComponent": {
+          "knownRowSum": "70944.91",
+          "unknownRows": 0,
+          "printedNamedControlOrDerivation": "70944.91",
+          "knownMinusControl": "0.00",
+          "controlBasis": "printed named total",
+          "unknownCellsNotImputedZero": true
+        },
+        "expenses": {
+          "knownRowSum": "24366.86",
+          "unknownRows": 0,
+          "printedNamedControlOrDerivation": "24366.86",
+          "knownMinusControl": "0.00",
+          "controlBasis": "printed named total",
+          "unknownCellsNotImputedZero": true
+        },
+        "expenseInclusiveTotal": {
+          "knownRowSum": "0",
+          "unknownRows": 8,
+          "printedNamedControlOrDerivation": null,
+          "knownMinusControl": null,
+          "controlBasis": null,
+          "unknownCellsNotImputedZero": true
+        }
+      },
+      "additionalIndependentPrintedControlsNotClaimedInCandidateNamedControl": {}
+    },
+    {
+      "sourceId": "gap-fill-municipal-district-of-clearwater-2014-employee-remuneration",
+      "allPeerPrintedControlsComparedExact": true,
+      "math": {
+        "remunerationComponent": {
+          "knownRowSum": "353823.21",
+          "unknownRows": 0,
+          "printedNamedControlOrDerivation": "353823.21",
+          "knownMinusControl": "0.00",
+          "controlBasis": "printed all-employee less printed unnamed aggregate",
+          "unknownCellsNotImputedZero": true
+        },
+        "expenses": {
+          "knownRowSum": "17435.25",
+          "unknownRows": 0,
+          "printedNamedControlOrDerivation": "17435.25",
+          "knownMinusControl": "0.00",
+          "controlBasis": "printed all-employee less printed unnamed aggregate",
+          "unknownCellsNotImputedZero": true
+        },
+        "expenseInclusiveTotal": {
+          "knownRowSum": "0",
+          "unknownRows": 5,
+          "printedNamedControlOrDerivation": null,
+          "knownMinusControl": null,
+          "controlBasis": null,
+          "unknownCellsNotImputedZero": true
+        }
+      },
+      "additionalIndependentPrintedControlsNotClaimedInCandidateNamedControl": {}
+    },
+    {
+      "sourceId": "gap-fill-municipal-city-of-rossland-2014-employee-remuneration",
+      "allPeerPrintedControlsComparedExact": true,
+      "math": {
+        "remunerationComponent": {
+          "knownRowSum": "599015",
+          "unknownRows": 0,
+          "printedNamedControlOrDerivation": "599015",
+          "knownMinusControl": "0",
+          "controlBasis": "printed all-employee less printed unnamed aggregate",
+          "unknownCellsNotImputedZero": true
+        },
+        "expenses": {
+          "knownRowSum": "35810",
+          "unknownRows": 0,
+          "printedNamedControlOrDerivation": null,
+          "knownMinusControl": null,
+          "controlBasis": null,
+          "unknownCellsNotImputedZero": true
+        },
+        "expenseInclusiveTotal": {
+          "knownRowSum": "634826",
+          "unknownRows": 0,
+          "printedNamedControlOrDerivation": "634826",
+          "knownMinusControl": "0",
+          "controlBasis": "printed all-employee less printed unnamed aggregate",
+          "unknownCellsNotImputedZero": true
+        }
+      },
+      "additionalIndependentPrintedControlsNotClaimedInCandidateNamedControl": {}
+    },
+    {
+      "sourceId": "gap-fill-municipal-district-of-clearwater-2015-elected-officials",
+      "allPeerPrintedControlsComparedExact": true,
+      "math": {
+        "remunerationComponent": {
+          "knownRowSum": "74373.59",
+          "unknownRows": 0,
+          "printedNamedControlOrDerivation": "74373.59",
+          "knownMinusControl": "0.00",
+          "controlBasis": "printed named total",
+          "unknownCellsNotImputedZero": true
+        },
+        "expenses": {
+          "knownRowSum": "31141.89",
+          "unknownRows": 0,
+          "printedNamedControlOrDerivation": "31141.89",
+          "knownMinusControl": "0.00",
+          "controlBasis": "printed named total",
+          "unknownCellsNotImputedZero": true
+        },
+        "expenseInclusiveTotal": {
+          "knownRowSum": "0",
+          "unknownRows": 7,
+          "printedNamedControlOrDerivation": null,
+          "knownMinusControl": null,
+          "controlBasis": null,
+          "unknownCellsNotImputedZero": true
+        }
+      },
+      "additionalIndependentPrintedControlsNotClaimedInCandidateNamedControl": {}
+    },
+    {
+      "sourceId": "gap-fill-municipal-district-of-clearwater-2015-employee-remuneration",
+      "allPeerPrintedControlsComparedExact": true,
+      "math": {
+        "remunerationComponent": {
+          "knownRowSum": "388528.17",
+          "unknownRows": 0,
+          "printedNamedControlOrDerivation": "388528.17",
+          "knownMinusControl": "0.00",
+          "controlBasis": "printed all-employee less printed unnamed aggregate",
+          "unknownCellsNotImputedZero": true
+        },
+        "expenses": {
+          "knownRowSum": "28280.88",
+          "unknownRows": 0,
+          "printedNamedControlOrDerivation": "28280.88",
+          "knownMinusControl": "0.00",
+          "controlBasis": "printed all-employee less printed unnamed aggregate",
+          "unknownCellsNotImputedZero": true
+        },
+        "expenseInclusiveTotal": {
+          "knownRowSum": "0",
+          "unknownRows": 6,
+          "printedNamedControlOrDerivation": null,
+          "knownMinusControl": null,
+          "controlBasis": null,
+          "unknownCellsNotImputedZero": true
+        }
+      },
+      "additionalIndependentPrintedControlsNotClaimedInCandidateNamedControl": {}
+    },
+    {
+      "sourceId": "gap-fill-municipal-district-of-clearwater-2016-elected-officials",
+      "allPeerPrintedControlsComparedExact": true,
+      "math": {
+        "remunerationComponent": {
+          "knownRowSum": "72442.86",
+          "unknownRows": 0,
+          "printedNamedControlOrDerivation": "72442.86",
+          "knownMinusControl": "0.00",
+          "controlBasis": "printed named total",
+          "unknownCellsNotImputedZero": true
+        },
+        "expenses": {
+          "knownRowSum": "22940.81",
+          "unknownRows": 0,
+          "printedNamedControlOrDerivation": "22940.81",
+          "knownMinusControl": "0.00",
+          "controlBasis": "printed named total",
+          "unknownCellsNotImputedZero": true
+        },
+        "expenseInclusiveTotal": {
+          "knownRowSum": "0",
+          "unknownRows": 7,
+          "printedNamedControlOrDerivation": null,
+          "knownMinusControl": null,
+          "controlBasis": null,
+          "unknownCellsNotImputedZero": true
+        }
+      },
+      "additionalIndependentPrintedControlsNotClaimedInCandidateNamedControl": {}
+    },
+    {
+      "sourceId": "gap-fill-municipal-district-of-clearwater-2016-employee-remuneration",
+      "allPeerPrintedControlsComparedExact": true,
+      "math": {
+        "remunerationComponent": {
+          "knownRowSum": "392969.67",
+          "unknownRows": 0,
+          "printedNamedControlOrDerivation": "392969.67",
+          "knownMinusControl": "0.00",
+          "controlBasis": "printed all-employee less printed unnamed aggregate",
+          "unknownCellsNotImputedZero": true
+        },
+        "expenses": {
+          "knownRowSum": "13299.79",
+          "unknownRows": 0,
+          "printedNamedControlOrDerivation": null,
+          "knownMinusControl": null,
+          "controlBasis": null,
+          "unknownCellsNotImputedZero": true
+        },
+        "expenseInclusiveTotal": {
+          "knownRowSum": "0",
+          "unknownRows": 5,
+          "printedNamedControlOrDerivation": null,
+          "knownMinusControl": null,
+          "controlBasis": null,
+          "unknownCellsNotImputedZero": true
+        }
+      },
+      "additionalIndependentPrintedControlsNotClaimedInCandidateNamedControl": {}
+    },
+    {
+      "sourceId": "gap-fill-municipal-city-of-rossland-2016-elected-officials",
+      "allPeerPrintedControlsComparedExact": true,
+      "math": {
+        "remunerationComponent": {
+          "knownRowSum": "47894",
+          "unknownRows": 0,
+          "printedNamedControlOrDerivation": "47894",
+          "knownMinusControl": "0",
+          "controlBasis": "printed named total",
+          "unknownCellsNotImputedZero": true
+        },
+        "taxableBenefits": {
+          "knownRowSum": "0",
+          "unknownRows": 1,
+          "printedNamedControlOrDerivation": "0",
+          "knownMinusControl": "0",
+          "controlBasis": "printed named total",
+          "unknownCellsNotImputedZero": true
+        },
+        "expenses": {
+          "knownRowSum": "11027",
+          "unknownRows": 0,
+          "printedNamedControlOrDerivation": "11027",
+          "knownMinusControl": "0",
+          "controlBasis": "printed named total",
+          "unknownCellsNotImputedZero": true
+        },
+        "expenseInclusiveTotal": {
+          "knownRowSum": "58921",
+          "unknownRows": 0,
+          "printedNamedControlOrDerivation": "58921",
+          "knownMinusControl": "0",
+          "controlBasis": "printed named total",
+          "unknownCellsNotImputedZero": true
+        }
+      },
+      "additionalIndependentPrintedControlsNotClaimedInCandidateNamedControl": {}
+    },
+    {
+      "sourceId": "gap-fill-municipal-city-of-rossland-2016-employee-remuneration",
+      "allPeerPrintedControlsComparedExact": true,
+      "math": {
+        "remunerationComponent": {
+          "knownRowSum": "958261",
+          "unknownRows": 0,
+          "printedNamedControlOrDerivation": "958261",
+          "knownMinusControl": "0",
+          "controlBasis": "printed named total",
+          "unknownCellsNotImputedZero": true
+        },
+        "taxableBenefits": {
+          "knownRowSum": "41922",
+          "unknownRows": 0,
+          "printedNamedControlOrDerivation": "41922",
+          "knownMinusControl": "0",
+          "controlBasis": "printed named total",
+          "unknownCellsNotImputedZero": true
+        },
+        "expenses": {
+          "knownRowSum": "16307",
+          "unknownRows": 3,
+          "printedNamedControlOrDerivation": "16307",
+          "knownMinusControl": "0",
+          "controlBasis": "printed named total",
+          "unknownCellsNotImputedZero": true
+        },
+        "expenseInclusiveTotal": {
+          "knownRowSum": "1016490",
+          "unknownRows": 0,
+          "printedNamedControlOrDerivation": "1016490",
+          "knownMinusControl": "0",
+          "controlBasis": "printed named total",
+          "unknownCellsNotImputedZero": true
+        }
+      },
+      "additionalIndependentPrintedControlsNotClaimedInCandidateNamedControl": {
+        "allEmployees": {
+          "remunerationComponent": "2302221",
+          "expenses": "25877",
+          "expenseInclusiveTotal": "2398620"
+        },
+        "unnamedEmployees": {
+          "remunerationComponent": "1343960",
+          "expenses": "9570"
+        },
+        "sourceOnlyOtherBenefits": "28600",
+        "sourceOnlyOtherExpenseInclusiveTotal": "1382130",
+        "sourceOnlyAllBenefitsTotal": "70522"
+      }
+    }
+  ],
+  "literalSourceQualifications": [
+    "Memo May16,2011; actual remuneration heading ELECTED OFFICIALS2010. Explicit0.00 expense stayszero.",
+    "Memo May16,2011; actual prose For the year2010. No employee position column. Printed other-employee inclusive total differs from its component sum; retain as aggregate evidence, never remuneration.",
+    "Actual heading JAN1,2011 toDEC31,2011. Source* denotes part ofyear.",
+    "Source** includes EOC wages donated toCancer Foundation and earnings related toMunicipal Election.",
+    "Memo June20,2012; actual salary heading2011.",
+    "Actual heading JAN1,2012 toDEC31,2012.",
+    "Memo June20,2013; actual salary heading2012.",
+    "Source explicitly prints year2012; Ryan Zanussi is a named row below75,000 and remains included. Star: employee reimburses municipality for benefit participation14,038.75 included in remuneration; do not deduct it.",
+    "Actual Jan1,2013 toDec31,2013.",
+    "Memo June20,2013; actual salary heading2013. ExplicitNil is a printed zero statement, not an unread blank.",
+    "Actual prose year2013 though memo dateMay12,2013 precedes yearend; no year inferred from memo date. Footnote employee reimburses municipality15,000 for benefit participation. Tony Jenkins printed inclusive total89,967.79 differs from printed pay88,877.79+expense90.00; preserve individual columns and do not balance.",
+    "Actual Jan1,2014 toDec31,2014; source* indicates partialyear.",
+    "Two publicworks namedpartialyear rows belowthreshold remain included; source* indicatespartialyear.",
+    "Memo June16,2015; actual employee prose year2014. Otheremployees aggregate explicitly includes electedofficials; no councilnames table on this page. Printed Hunterinclusive96873 differs from pay89412+expense7460 by1; printedindividualcolumns retained. Blankaggregateexpense isnotzero.",
+    "Source explicitly2015; heading remuneration** and note2015 included27payperiods for electedofficials and otheremployees.",
+    "Source*partialyear; heading remuneration** and note2015 included27payperiods for electedofficials and otheremployees. Literal Papp Ryan surname-first sourceordering retained. Namedbelowthreshold employees retained.",
+    "Actual Jan1,2016 toDec31,2016.",
+    "Source*partialyear; namedForsythpartialyearbelowthreshold retained. Underthresholdaggregateexpensecell blank, notzero.",
+    "For yearendedDec31,2016; sourceheadingUnaudited. Separate taxablebenefitcolumn isnotordinaryexpense. Kruysebenefitcellblank, others explicit0. PrintednameKruyse retainedliteral.",
+    "Actual2016; Unaudited. SourceheadingTOTALREMUNERATION spans Remuneration+TaxableBenefits columns. This peertranscript records firstRemunerationcolumn separately; any normalizedpaydefinition mustexplicitly state adding taxablebenefits. Expensesseparate andexcluded. Threeblankexpensecells remainnull. Benefitsseparateexplicitamounts. Definition remuneration includes overtime,sicktime,statutorypay,vacationpay,retiringallowances. EmployerEI/CPP elsewhere; no nonunionseveranceagreements."
+  ],
+  "approvalContext": {
+    "Rossland2010": "Checklist2010, actual2010schedule; Mayor and finance signaturesMay18,2011.",
+    "Rossland2011": "Checklist2011; CAO signedJune25,2012, mayor signature blank. No employee schedule in this allocation.",
+    "Rossland2012": "ChecklistDec31,2012 and submittedJune28,2013; approval page names/datesJune27,2013 but both signature lines blank. Official archive publication supports literal-source acceptance, must retain unsigned-approval qualification.",
+    "Rossland2013": "Checklist2013 submittedMay12,2014 and approval names/datesMay12,2014; bothsignaturelinesblank. Memo datesJune20,2013 andMay12,2013 conflict with later full-year schedule but actualsalaryyear2013 consistentlyexplicit. Mustretain exact date and unsigned-approval qualifications.",
+    "Rossland2014": "OfficialJune22,2015agenda p16 recommendsCouncilapproval of2014SOFI and p60approval signatures/daydates blank. Literal employee table fullyverified but final/adoptedstatus not established bythisagenda. Issuer minutes/adopted report evidence required before treating approval as confirmed.",
+    "Rossland2016": "Originalp3 bothSOFIapprovalsignaturesJune22,2017; salarysupplementlabelUnaudited isdisclosed, distinctfromdraftstatus.",
+    "Clearwater2011-2016": "Allsixoriginals haveactualSOFIyearcover andsignedapprovals.2015cover sayspresentedJune21st,2015whileapprovalsignaturesareJune24,2016; retaincover/signaturedateinconsistency withoutalteringexplicit2015salaryperiod."
+  },
+  "acceptance": "All149candidate normalized rows and literalsourcefields accepted as faithful source transcription. Publication acceptance requires the stated source-approval qualifications; Rossland2014 six employee rows remain approval-context pending until municipal/root pins corroborating adoption evidence.",
+  "candidatePayloadPins": [
+    {
+      "sourceId": "gap-fill-municipal-city-of-rossland-2010-elected-officials",
+      "sourceSha256": "83056ad7d4ca96ed5d28b3bb6ec1cd50db1bcd6f19a1459d275989cfa1ec20fa",
+      "file": "research/salaries/gap-fill-municipal/city-of-rossland-2010-elected-officials.json.gzip",
+      "dataSha256": "5dc1d89399827f03db2fb3a3e5aba579055adda4c4abe111ab82eb5c90c60af1",
+      "provenanceFile": "research/salaries/gap-fill-municipal/evidence/city-of-rossland-2010-elected-officials.json.gzip",
+      "provenanceSha256": "bc86a400cab6448955502d4ac34e389a981fffa46bc07841c23319bd95dd354f",
+      "rowCount": 7
+    },
+    {
+      "sourceId": "gap-fill-municipal-city-of-rossland-2010-employee-remuneration",
+      "sourceSha256": "83056ad7d4ca96ed5d28b3bb6ec1cd50db1bcd6f19a1459d275989cfa1ec20fa",
+      "file": "research/salaries/gap-fill-municipal/city-of-rossland-2010-employee-remuneration.json.gzip",
+      "dataSha256": "bf61a7683e086d7513b6ae8d040e144527aebffff066d77ee20586e0c118dfde",
+      "provenanceFile": "research/salaries/gap-fill-municipal/evidence/city-of-rossland-2010-employee-remuneration.json.gzip",
+      "provenanceSha256": "f37df5722ee4ebfdb6bda0020ca2474290256d38cbff10c8bdf75c9ccc453c12",
+      "rowCount": 6
+    },
+    {
+      "sourceId": "gap-fill-municipal-district-of-clearwater-2011-elected-officials",
+      "sourceSha256": "0403cd1b4359f2d2dd9e187231c3c18675b3b377a2bbb83fb2b245928109c773",
+      "file": "research/salaries/gap-fill-municipal/district-of-clearwater-2011-elected-officials.json.gzip",
+      "dataSha256": "824610b1863be50f15b7beef3da41fa76e74c80a072f85e457071dc44a5ed70c",
+      "provenanceFile": "research/salaries/gap-fill-municipal/evidence/district-of-clearwater-2011-elected-officials.json.gzip",
+      "provenanceSha256": "eee03f2c2cb8195927c8497fbb4b28ebce721b47f69bbf5e7dcfe7f39ba35127",
+      "rowCount": 12
+    },
+    {
+      "sourceId": "gap-fill-municipal-district-of-clearwater-2011-employee-remuneration",
+      "sourceSha256": "0403cd1b4359f2d2dd9e187231c3c18675b3b377a2bbb83fb2b245928109c773",
+      "file": "research/salaries/gap-fill-municipal/district-of-clearwater-2011-employee-remuneration.json.gzip",
+      "dataSha256": "5186a5b0f13b46f520c42461845e2f0433ed42948a151e854ecedef85c3d68dc",
+      "provenanceFile": "research/salaries/gap-fill-municipal/evidence/district-of-clearwater-2011-employee-remuneration.json.gzip",
+      "provenanceSha256": "22ad4f336a073a469c581425aba1b4f1c4711bca10c09e3dce637b7a9e34701b",
+      "rowCount": 3
+    },
+    {
+      "sourceId": "gap-fill-municipal-city-of-rossland-2011-elected-officials",
+      "sourceSha256": "f779bc15d6c5b3709853067c42a9db68e29c68794167adaa5134e465f73f3f0e",
+      "file": "research/salaries/gap-fill-municipal/city-of-rossland-2011-elected-officials.json.gzip",
+      "dataSha256": "e7aed342b5844e735d8b33f39706dc71844669206632202d206f170e28df5c54",
+      "provenanceFile": "research/salaries/gap-fill-municipal/evidence/city-of-rossland-2011-elected-officials.json.gzip",
+      "provenanceSha256": "e0aec811d181c04858d143442419a23dc8fb058a65cc9b59cda9d2970ec1c5f0",
+      "rowCount": 10
+    },
+    {
+      "sourceId": "gap-fill-municipal-district-of-clearwater-2012-elected-officials",
+      "sourceSha256": "74b9c233c0814d10f2e10198b0460134d6c84feb8e4591fa4981f5cb433f4f09",
+      "file": "research/salaries/gap-fill-municipal/district-of-clearwater-2012-elected-officials.json.gzip",
+      "dataSha256": "8cc6f33f7e3dc876a798c2df7ea0d4a7e70c502c6aa56a89d3a1b62bc4a1fd7d",
+      "provenanceFile": "research/salaries/gap-fill-municipal/evidence/district-of-clearwater-2012-elected-officials.json.gzip",
+      "provenanceSha256": "239ced8ecb14bee7773c4a8346c384988087842fb19fa9c5e4609cf4969b070b",
+      "rowCount": 7
+    },
+    {
+      "sourceId": "gap-fill-municipal-district-of-clearwater-2012-employee-remuneration",
+      "sourceSha256": "74b9c233c0814d10f2e10198b0460134d6c84feb8e4591fa4981f5cb433f4f09",
+      "file": "research/salaries/gap-fill-municipal/district-of-clearwater-2012-employee-remuneration.json.gzip",
+      "dataSha256": "b51bc0948f8b6563f67880bb1796daa197275f79d74b69e8efea38135381611d",
+      "provenanceFile": "research/salaries/gap-fill-municipal/evidence/district-of-clearwater-2012-employee-remuneration.json.gzip",
+      "provenanceSha256": "f87cfd7344d8b3830312d9d18b4b1343b4d03048ab19aa0d98133efee69918e1",
+      "rowCount": 3
+    },
+    {
+      "sourceId": "gap-fill-municipal-city-of-rossland-2012-elected-officials",
+      "sourceSha256": "2c30435db6cd05bbcee257ce8a8db60121e44216e8f78208693e1ba3421a214a",
+      "file": "research/salaries/gap-fill-municipal/city-of-rossland-2012-elected-officials.json.gzip",
+      "dataSha256": "12a5db8d85095336523f5feb20a4deda11328c005f675c2bbd76b9faf5605445",
+      "provenanceFile": "research/salaries/gap-fill-municipal/evidence/city-of-rossland-2012-elected-officials.json.gzip",
+      "provenanceSha256": "11f59f71cc532d53e6974c82975b9d227350b6f0f2c1d2cdeb65d4b661eb2edd",
+      "rowCount": 7
+    },
+    {
+      "sourceId": "gap-fill-municipal-city-of-rossland-2012-employee-remuneration",
+      "sourceSha256": "2c30435db6cd05bbcee257ce8a8db60121e44216e8f78208693e1ba3421a214a",
+      "file": "research/salaries/gap-fill-municipal/city-of-rossland-2012-employee-remuneration.json.gzip",
+      "dataSha256": "b2211d30f6235fb2055dd4bdd9d3f1b01d00750ade96958a124ef7df1e761564",
+      "provenanceFile": "research/salaries/gap-fill-municipal/evidence/city-of-rossland-2012-employee-remuneration.json.gzip",
+      "provenanceSha256": "39f20de5ea68cb221ccc3897458b35a2b67056550c461bbb91a4db0a7372dc11",
+      "rowCount": 7
+    },
+    {
+      "sourceId": "gap-fill-municipal-district-of-clearwater-2013-elected-officials",
+      "sourceSha256": "98e145752fb7cc9a4df5e7c171f40811cad730782c4ff6e958d4b63561d8e495",
+      "file": "research/salaries/gap-fill-municipal/district-of-clearwater-2013-elected-officials.json.gzip",
+      "dataSha256": "28b62ea12f0e130f42de99e86ae038046930d55e432f1d9e6e2bb6450ecf0459",
+      "provenanceFile": "research/salaries/gap-fill-municipal/evidence/district-of-clearwater-2013-elected-officials.json.gzip",
+      "provenanceSha256": "c95f9b76a8870fec928cdb53814b657da20e997a2dfadb54532f7fca840ea597",
+      "rowCount": 7
+    },
+    {
+      "sourceId": "gap-fill-municipal-district-of-clearwater-2013-employee-remuneration",
+      "sourceSha256": "98e145752fb7cc9a4df5e7c171f40811cad730782c4ff6e958d4b63561d8e495",
+      "file": "research/salaries/gap-fill-municipal/district-of-clearwater-2013-employee-remuneration.json.gzip",
+      "dataSha256": "9e1aee0cf99c1422c548cf0314b21ab131fcf0d71498e1d016928bec765f1bcc",
+      "provenanceFile": "research/salaries/gap-fill-municipal/evidence/district-of-clearwater-2013-employee-remuneration.json.gzip",
+      "provenanceSha256": "c37872532943999997c32127f4b9033235beb22f2ae6ef50c3b2a3fb237b7ecd",
+      "rowCount": 4
+    },
+    {
+      "sourceId": "gap-fill-municipal-city-of-rossland-2013-elected-officials",
+      "sourceSha256": "963a9c8569e74f351e87c088e4f63cb1d5d9aeeec616201df799eddd66a2bab9",
+      "file": "research/salaries/gap-fill-municipal/city-of-rossland-2013-elected-officials.json.gzip",
+      "dataSha256": "3905751ad5e28ab4f68c96c12b463baaa17832d9707cae6a733be651f44b088a",
+      "provenanceFile": "research/salaries/gap-fill-municipal/evidence/city-of-rossland-2013-elected-officials.json.gzip",
+      "provenanceSha256": "0017f721f951c2aa65a0f8c8484933210142b5cd3768e79c9eb7f9ea05c1c2ef",
+      "rowCount": 7
+    },
+    {
+      "sourceId": "gap-fill-municipal-city-of-rossland-2013-employee-remuneration",
+      "sourceSha256": "963a9c8569e74f351e87c088e4f63cb1d5d9aeeec616201df799eddd66a2bab9",
+      "file": "research/salaries/gap-fill-municipal/city-of-rossland-2013-employee-remuneration.json.gzip",
+      "dataSha256": "ae8dc97456b2ffe431414ae143debc08047dcbeef0b8316897c22f49d04b4f6e",
+      "provenanceFile": "research/salaries/gap-fill-municipal/evidence/city-of-rossland-2013-employee-remuneration.json.gzip",
+      "provenanceSha256": "ca2b78034ef05774503d31adb70d9e7a2f6a5736447e6e08ed727d90702b7258",
+      "rowCount": 6
+    },
+    {
+      "sourceId": "gap-fill-municipal-district-of-clearwater-2014-elected-officials",
+      "sourceSha256": "a4791023258978262f24b62b3638eca8069b593869f5dee91df1acef6633d001",
+      "file": "research/salaries/gap-fill-municipal/district-of-clearwater-2014-elected-officials.json.gzip",
+      "dataSha256": "b82bf9dfa327265f1dfc30227826bfff24a2cf01cfde607773a6b9fad97fda26",
+      "provenanceFile": "research/salaries/gap-fill-municipal/evidence/district-of-clearwater-2014-elected-officials.json.gzip",
+      "provenanceSha256": "31b2c4d0ba5ae38b48af9b6644a7795a264649ba953d52d3bff5b643ef7b77d1",
+      "rowCount": 8
+    },
+    {
+      "sourceId": "gap-fill-municipal-district-of-clearwater-2014-employee-remuneration",
+      "sourceSha256": "a4791023258978262f24b62b3638eca8069b593869f5dee91df1acef6633d001",
+      "file": "research/salaries/gap-fill-municipal/district-of-clearwater-2014-employee-remuneration.json.gzip",
+      "dataSha256": "ac41fb2d1236af489295fb1a58d8e0ea162be87005747e5d41d9d1f9899691e4",
+      "provenanceFile": "research/salaries/gap-fill-municipal/evidence/district-of-clearwater-2014-employee-remuneration.json.gzip",
+      "provenanceSha256": "71d0512b2de30b16a119ce0c8fdb46cfc2301f93bd5651e7b3b6b0b0da74359d",
+      "rowCount": 5
+    },
+    {
+      "sourceId": "gap-fill-municipal-city-of-rossland-2014-employee-remuneration",
+      "sourceSha256": "5c8e8ff1f8c0f9d6c5d4152e22fbf8ed547ac33562cc363d049da4dfbb422ba0",
+      "file": "research/salaries/gap-fill-municipal/city-of-rossland-2014-employee-remuneration.json.gzip",
+      "dataSha256": "17a9117f7e49162b916971b6736d94df7a735f25ac9fe5a135a3ce49a46fdd86",
+      "provenanceFile": "research/salaries/gap-fill-municipal/evidence/city-of-rossland-2014-employee-remuneration.json.gzip",
+      "provenanceSha256": "73484d28bf67620d91a70030948718695415115af38152f28726e9d7f5d42067",
+      "rowCount": 6
+    },
+    {
+      "sourceId": "gap-fill-municipal-district-of-clearwater-2015-elected-officials",
+      "sourceSha256": "7ef7d7b46337b1e33f4996e4d7bb28806f58532911b55297249cf7a460717049",
+      "file": "research/salaries/gap-fill-municipal/district-of-clearwater-2015-elected-officials.json.gzip",
+      "dataSha256": "bdb68fc36034553b2f822edb1abfd7b970db3a08cc6a38bb6206468c12034746",
+      "provenanceFile": "research/salaries/gap-fill-municipal/evidence/district-of-clearwater-2015-elected-officials.json.gzip",
+      "provenanceSha256": "303dbf432da117f212e9db90a5f5c6757585b824e88496a8a893eaeb34296bd4",
+      "rowCount": 7
+    },
+    {
+      "sourceId": "gap-fill-municipal-district-of-clearwater-2015-employee-remuneration",
+      "sourceSha256": "7ef7d7b46337b1e33f4996e4d7bb28806f58532911b55297249cf7a460717049",
+      "file": "research/salaries/gap-fill-municipal/district-of-clearwater-2015-employee-remuneration.json.gzip",
+      "dataSha256": "836259bc9a8ed94a1909728a5a34048dffc6ed0b138d1d9e3c390c93261e3044",
+      "provenanceFile": "research/salaries/gap-fill-municipal/evidence/district-of-clearwater-2015-employee-remuneration.json.gzip",
+      "provenanceSha256": "8c7e0cfddea6583658b7453636693fdeabd9940ffc9d46afbcf1aebd550ce406",
+      "rowCount": 6
+    },
+    {
+      "sourceId": "gap-fill-municipal-district-of-clearwater-2016-elected-officials",
+      "sourceSha256": "1040cf980005fe2f1a138e549fdd952188fd268260fcdf7811b8eb578e326721",
+      "file": "research/salaries/gap-fill-municipal/district-of-clearwater-2016-elected-officials.json.gzip",
+      "dataSha256": "5fbfaf2c17ef5c991e618f93feeff54ffe5e7448a83dba84f0d79414172ec09b",
+      "provenanceFile": "research/salaries/gap-fill-municipal/evidence/district-of-clearwater-2016-elected-officials.json.gzip",
+      "provenanceSha256": "404627084c577deea618bb779478c0c4a1ebe71410b437ffb2a1b7a3ae5a6f4d",
+      "rowCount": 7
+    },
+    {
+      "sourceId": "gap-fill-municipal-district-of-clearwater-2016-employee-remuneration",
+      "sourceSha256": "1040cf980005fe2f1a138e549fdd952188fd268260fcdf7811b8eb578e326721",
+      "file": "research/salaries/gap-fill-municipal/district-of-clearwater-2016-employee-remuneration.json.gzip",
+      "dataSha256": "f6601794162d5024c00b429f9dfc343552d848e4622faf4b4acae3489d7b16f5",
+      "provenanceFile": "research/salaries/gap-fill-municipal/evidence/district-of-clearwater-2016-employee-remuneration.json.gzip",
+      "provenanceSha256": "91926c4a6492900fe4c534d08cdb60f4e3bde1155497370fb1645aa1baf24307",
+      "rowCount": 5
+    },
+    {
+      "sourceId": "gap-fill-municipal-city-of-rossland-2016-elected-officials",
+      "sourceSha256": "31dadfc3ccf66e6f408df9ee3e428e21ed1ea45cf7c945bec6763d92311e9b1e",
+      "file": "research/salaries/gap-fill-municipal/city-of-rossland-2016-elected-officials.json.gzip",
+      "dataSha256": "b79a5099c0b2c8983274fe8b91860fb63375df39384d0083c7eade8907a07d5a",
+      "provenanceFile": "research/salaries/gap-fill-municipal/evidence/city-of-rossland-2016-elected-officials.json.gzip",
+      "provenanceSha256": "829a326b511c48726fa9b5fa571025bd518fff153d3932b264b5270fd44d9264",
+      "rowCount": 7
+    },
+    {
+      "sourceId": "gap-fill-municipal-city-of-rossland-2016-employee-remuneration",
+      "sourceSha256": "31dadfc3ccf66e6f408df9ee3e428e21ed1ea45cf7c945bec6763d92311e9b1e",
+      "file": "research/salaries/gap-fill-municipal/city-of-rossland-2016-employee-remuneration.json.gzip",
+      "dataSha256": "61f38e9d15e70845eac0b4deeec84f8d3431faddbaa45b4c70d768f3bfb39932",
+      "provenanceFile": "research/salaries/gap-fill-municipal/evidence/city-of-rossland-2016-employee-remuneration.json.gzip",
+      "provenanceSha256": "3516cfdc28d9615ed3a6b157ca3a12254016dde42eae5ab1df889b7f7b5f5a13",
+      "rowCount": 12
+    }
+  ],
+  "noOutreach": true,
+  "noCompiledRowsDeleted": true,
+  "limitations": [
+    "No claim that unsigned source copies prove signature/adoption.",
+    "All source blanks/dashes remain unknown; explicitNil is a source zero statement.",
+    "Payment disclosures do not establish annual base salary or complete workforce rosters.",
+    "All sums preserve source residuals and do not adjust published individual cells."
+  ]
+}

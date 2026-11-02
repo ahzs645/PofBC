@@ -1,0 +1,93 @@
+#!/usr/bin/env python3
+"""Compare actual salary-page pixels with a separately declipped in-memory view.
+
+Only syntactic PDF W/W* clipping operators outside strings, names, hex strings,
+comments and dictionaries are removed. Original files remain untouched. Pixel
+differences are review targets, not inferred corrections or accuracy claims.
+"""
+from __future__ import annotations
+import concurrent.futures,gzip,hashlib,json,pathlib,re
+import fitz
+from gap_health_employees_fetch import ROOT,AREA,sha
+
+def remove_clip_operators(raw):
+    out=bytearray(raw);i=0;count=0;n=len(raw);space=b'\x00\t\n\x0c\r ';delims=b'()<>[]{}/%'
+    while i<n:
+        c=raw[i]
+        if c in space:i+=1;continue
+        if c==37:
+            while i<n and raw[i] not in b'\r\n':i+=1
+            continue
+        if c==40:
+            depth=1;i+=1
+            while i<n and depth:
+                if raw[i]==92:i+=2;continue
+                if raw[i]==40:depth+=1
+                elif raw[i]==41:depth-=1
+                i+=1
+            if depth:raise ValueError('Unterminated literal PDF string')
+            continue
+        if c==60 and not raw[i:i+2]==b'<<':
+            end=raw.find(b'>',i+1)
+            if end<0:raise ValueError('Unterminated PDF hexadecimal string')
+            i=end+1;continue
+        if c==47:
+            i+=1
+            while i<n and raw[i] not in space+delims:i+=1
+            continue
+        if c in delims:i+=1;continue
+        start=i
+        while i<n and raw[i] not in space+delims:i+=1
+        if raw[start:i] in (b'W',b'W*'):
+            out[start:i]=b'n'+b' '*(i-start-1);count+=1
+    return bytes(out),count
+
+def declipped_document(raw):
+    d=fitz.open(stream=raw,filetype='pdf');refs=set()
+    for p in d:
+        refs.update(p.get_contents());refs.update(v[0] for v in p.get_xobjects())
+    changed=[]
+    for xref in sorted(refs):
+        old=d.xref_stream(xref)
+        if old is None:continue
+        new,count=remove_clip_operators(old)
+        if count:d.update_stream(xref,new);changed.append({'xref':xref,'removedClipOperators':count,'originalStreamSha256':sha(old),'derivedStreamSha256':sha(new)})
+    return d,changed
+
+def compare(a,b,regions):
+    assert (a.width,a.height,a.n)==(b.width,b.height,b.n)
+    try:
+        import numpy as np
+        aa=np.frombuffer(a.samples,dtype=np.uint8).reshape(a.height,a.width,a.n);bb=np.frombuffer(b.samples,dtype=np.uint8).reshape(b.height,b.width,b.n);mask=np.any(aa!=bb,axis=2);ys,xs=np.nonzero(mask)
+        bounds=[int(xs.min()),int(ys.min()),int(xs.max()+1),int(ys.max()+1)] if len(xs) else None
+        counts=[int(mask[max(0,y0):min(a.height,y1),max(0,x0):min(a.width,x1)].sum()) for x0,y0,x1,y1 in regions]
+        return int(mask.sum()),bounds,counts
+    except ImportError:
+        #Small synthetic fixture fallback; production analysis uses numpy only
+        #inside this function, so importing/replaying frozen evidence is stdlib.
+        av=a.samples;bv=b.samples;positions=[i for i in range(a.width*a.height) if av[i*a.n:(i+1)*a.n]!=bv[i*a.n:(i+1)*a.n]]
+        ys=[p//a.width for p in positions];xs=[p%a.width for p in positions];bounds=[min(xs),min(ys),max(xs)+1,max(ys)+1] if xs else None
+        counts=[sum(x0<=x<x1 and y0<=y<y1 for x,y in zip(xs,ys)) for x0,y0,x1,y1 in regions]
+        return len(positions),bounds,counts
+
+def one(pair):
+    spec,candidate=pair;key=candidate['key'];out=AREA/'clip-pixel-audit-v1';out.mkdir(exist_ok=True);dest=out/(key+'.json.gzip')
+    if dest.exists():return {'key':key,'path':str(dest.relative_to(ROOT)),'sha256':sha(dest.read_bytes())}
+    raw=pathlib.Path(spec['retrieval']['cachePath']).read_bytes();assert sha(raw)==spec['sourceSha256'];original=fitz.open(stream=raw,filetype='pdf');derived,changes=declipped_document(raw)
+    secondary=json.loads(gzip.decompress((ROOT/candidate['secondaryFile']).read_bytes()));by={}
+    for row in secondary['rows']:
+        words=row['nameWords']+[row['remunerationWord']]+row['expenseWords'];bbox=[min(w[0] for w in words),min(w[1] for w in words),max(w[2] for w in words),max(w[3] for w in words)];by.setdefault(row['row'][5],[]).append({'sourceRowOnPage':row['sourceRowOnPage'],'bbox':bbox})
+    pages=[]
+    for pn in range(candidate['firstPage'],candidate['lastPage']+1):
+        p=original[pn-1];q=derived[pn-1];a=p.get_pixmap(matrix=fitz.Matrix(2,2),alpha=False);b=q.get_pixmap(matrix=fitz.Matrix(2,2),alpha=False)
+        entries=by.get(pn,[]);regions=[[int(2*x0)-1,int(2*y0)-1,int(2*x1)+2,int(2*y1)+2] for x0,y0,x1,y1 in (v['bbox'] for v in entries)];total,bounds,counts=compare(a,b,regions)
+        affected=[{**entry,'changedPixels':n} for entry,n in zip(entries,counts) if n]
+        pages.append({'physicalPage':pn,'widthPixels':a.width,'heightPixels':a.height,'dpi':144,'originalRawPixelSha256':sha(a.samples),'derivedRawPixelSha256':sha(b.samples),'allChangedPixels':total,'allChangedBoundsPixels':bounds,'rowsWithPixelChanges':affected})
+    result={'key':key,'sourceSha256':spec['sourceSha256'],'originalFileUnchanged':sha(pathlib.Path(spec['retrieval']['cachePath']).read_bytes())==spec['sourceSha256'],'execution':'Isolated process; whole-page native 144dpi render before integer field-region comparison; no PDF clips used for rendering','derivedView':'Only syntactic W/W* operators removed in an in-memory copy; differences are not accepted source corrections','changedContentStreams':changes,'pages':pages}
+    dest.write_bytes(gzip.compress(json.dumps(result,ensure_ascii=False,separators=(',',':')).encode(),mtime=0))
+    summary={'key':key,'sourceSha256':spec['sourceSha256'],'path':str(dest.relative_to(ROOT)),'sha256':sha(dest.read_bytes()),'salaryPages':len(pages),'pagesWithPixelChanges':sum(bool(p['allChangedPixels']) for p in pages),'candidateRowsWithPixelChanges':sum(len(p['rowsWithPixelChanges']) for p in pages)};print(json.dumps(summary),flush=True);return summary
+
+if __name__=='__main__':
+    specs=json.loads((AREA/'recovered-employee-originals-v2.json').read_bytes());candidates=json.loads((AREA/'native-primary-candidate-index.json').read_bytes());by={x['sourceSha256']:x for x in candidates}
+    with concurrent.futures.ProcessPoolExecutor(max_workers=3) as pool:result=list(pool.map(one,[(s,by[s['sourceSha256']]) for s in specs]))
+    (AREA/'native-clip-pixel-audit-index-v1.json').write_text(json.dumps(result,ensure_ascii=False,indent=2)+'\n')

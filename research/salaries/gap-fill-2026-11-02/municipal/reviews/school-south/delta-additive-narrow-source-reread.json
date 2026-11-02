@@ -1,0 +1,54 @@
+{
+  "reviewerAgent": "/root/gap_municipal",
+  "phase": "additive-source-image-narrow-reread",
+  "priorFirstTranscript": {
+    "path": "research/salaries/gap-fill-2026-11-02/municipal/reviews/school-south/delta-first-source-eight-cases.json",
+    "sha256": "5425f6e743fd4277f89ac3e7bc6a110d0da7bbad764c4dc9365e8c29a81decec"
+  },
+  "primaryTranscriptOpened": false,
+  "candidatePayloadsOpened": false,
+  "corrections": [
+    {
+      "sequence": 199,
+      "sourceLiteral": {
+        "nameVisible": "COUWENBERGHS, DARLENE",
+        "positionVisible": "TEACHER",
+        "worksiteVisible": "SECONDARY SCHOOL"
+      },
+      "replacesInitialOwnRead": {
+        "nameVisible": "UWENBERGHS, DARLENE",
+        "positionVisible": null,
+        "worksiteVisible": null
+      }
+    },
+    {
+      "sequence": 794,
+      "sourceLiteral": {
+        "nameVisible": "RENNER WALLACE, LINDSAY",
+        "positionVisible": "TEACHER",
+        "worksiteVisible": "CONTINUING EDUCATION"
+      },
+      "replacesInitialOwnRead": {
+        "positionVisible": null
+      }
+    }
+  ],
+  "reason": "I missed visible prefix letters and job-title glyphs in the wide initial image presentation. I personally re-read narrow integer crops of the same actual source pixels and can now clearly read them. The full-page600dpi rendered-and-cropped source pixels for199and794 match the supplied original row images byte-for-byte at pixel level; no alternate source or inferred glyph is used. Initial transcript is preserved.",
+  "narrowOriginalSourceCrops": [
+    {
+      "path": "research/salaries/gap-fill-2026-11-02/municipal/reviews/school-south/peer-delta-seq199-name-junction600.png",
+      "sha256": "459725119cf513cc9e4f5aefb7bd87ca670ed14e5fae2e914aff1cc11da660c6"
+    },
+    {
+      "path": "research/salaries/gap-fill-2026-11-02/municipal/reviews/school-south/delta794-title-only600.png",
+      "sha256": "c4b0a7e7e89de7b39bc89bd585097487caed43570ecc529a36567bad86611795"
+    },
+    {
+      "path": "research/salaries/gap-fill-2026-11-02/municipal/reviews/school-south/delta199-worksite-only600.png",
+      "sha256": "424b020bfc57e91fce48f1ba2aafe40f1e416374b22e5df913969f8be75f6fc5"
+    }
+  ],
+  "unchangedOtherSixSourceReadings": true,
+  "sequence926": "Visible BRIANN followed by partial slanted glyph remains the qualified reading; no complete trailing letter is invented.",
+  "noOutreach": true
+}

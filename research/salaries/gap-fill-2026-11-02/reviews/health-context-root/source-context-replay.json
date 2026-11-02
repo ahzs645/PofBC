@@ -1,0 +1,4340 @@
+{
+  "status": "Independent evidence replay complete; awaiting personal control-strip review and separate row-exception closure",
+  "sourceCount": 65,
+  "sourceImagesReplayed": 131,
+  "inputs": [
+    {
+      "path": "research/salaries/gap-fill-2026-11-02/health_employees/source-context-review-packet.json",
+      "sha256": "4a87127fb70c80c52ed8c1fbdd90b38c590f5eec1f3712f6b1b0ca182761c892"
+    },
+    {
+      "path": "research/salaries/gap-fill-2026-11-02/health_employees/source-context-image-index.json",
+      "sha256": "0ee4ed4ecdaaeee409f45a3311179e9d2cb3800c4b83539902b9a03882a596aa"
+    },
+    {
+      "path": "research/salaries/gap-fill-2026-11-02/reviews/health-context-ocr/index.json",
+      "sha256": "43a3290da2ecd86f8c617870ca4e4f29494f67e6c8e5ab41463b7607411fc2e4"
+    },
+    {
+      "path": "scripts/gap_fill_health_context_review.py",
+      "sha256": "ec0a9321b9e0f74b23b50431c2918724722f3e0d66045e9dd3fd662347da023d"
+    }
+  ],
+  "sources": [
+    {
+      "sourceKey": "fraser-health-2012-13",
+      "sourceSha256": "b1e55364215549f3cdcb6ebcf1b89c6dbb3cfff20d1df62595bf830c6b54ad1b",
+      "candidateYear": "2012/13",
+      "candidateRowsBeforeFinalPeerClosure": 4730,
+      "sourceImagesPixelReplayed": [
+        {
+          "path": "research/salaries/gap-fill-2026-11-02/health_employees/source-review-contexts/fraser-health-2012-13-p003.png",
+          "sha256": "1a61dbd19a9af548f07607ebd05ea6e4895f98ea271c46d88891bcbefc9f3456"
+        },
+        {
+          "path": "research/salaries/gap-fill-2026-11-02/health_employees/source-review-contexts/fraser-health-2012-13-p101.png",
+          "sha256": "4a6ded772cf53c4005bdac9840a823ccf8d90280bd09bcf0b2923d168d09c715"
+        }
+      ],
+      "independentImagePeriodOcr": {
+        "sourceKey": "fraser-health-2012-13",
+        "physicalPage": 3,
+        "purpose": "first employee page/internal period and column definitions",
+        "path": "research/salaries/gap-fill-2026-11-02/reviews/health-context-ocr/fraser-health-2012-13-p3.json.gzip",
+        "sha256": "009f24620f99a6180bacf3c45823b1b99fca588c4c18952fe55f3a0a8f56e2bd",
+        "headerMarchYearEnds": [
+          "2013"
+        ],
+        "headerFiscalPairs": []
+      },
+      "periodImageCorroborationPassed": true,
+      "printedNamedControl": {
+        "physicalPage": 101,
+        "label": "Total Payments Equal to or Greater than $75,000",
+        "remuneration": 432947947,
+        "expenses": 3947423,
+        "raw": "Total Payments Equal to or Greater than $75,000                     432,947,947              3,947,423"
+      },
+      "literalResidualBeforeFinalPeerClosure": [
+        "87",
+        "97"
+      ],
+      "controlSelectionAddendum": false,
+      "namedControlViewingAid": {
+        "path": "research/salaries/gap-fill-2026-11-02/reviews/health-context-root/fraser-health-2012-13-named-control.png",
+        "sha256": "7de3aeeee48c20caeb3432a7c531c60aebdebf9ab1183672b2430a1464289eae",
+        "sourceSha256": "b1e55364215549f3cdcb6ebcf1b89c6dbb3cfff20d1df62595bf830c6b54ad1b",
+        "physicalPage": 101,
+        "dpi": 144,
+        "integerCropBox": [
+          0,
+          917,
+          1224,
+          1087
+        ],
+        "noResampling": true,
+        "purpose": "Named control and surrounding original source pixels; crop located from literal control token, not a replacement source"
+      }
+    },
+    {
+      "sourceKey": "fraser-health-2011-12",
+      "sourceSha256": "b98ff548d8168780292e0002c7942fc9bf3ed57e279e77bf8c2e349004af59ba",
+      "candidateYear": "2011/12",
+      "candidateRowsBeforeFinalPeerClosure": 4326,
+      "sourceImagesPixelReplayed": [
+        {
+          "path": "research/salaries/gap-fill-2026-11-02/health_employees/source-review-contexts/fraser-health-2011-12-p003.png",
+          "sha256": "81cd4110534421f86ddb1e742ffe9f981ed14ff5a70c35944db829e739df2e6b"
+        },
+        {
+          "path": "research/salaries/gap-fill-2026-11-02/health_employees/source-review-contexts/fraser-health-2011-12-p093.png",
+          "sha256": "9183aa83471169f394e25366acd0b52627e501c0b138a275e2de4defdd053063"
+        }
+      ],
+      "independentImagePeriodOcr": {
+        "sourceKey": "fraser-health-2011-12",
+        "physicalPage": 3,
+        "purpose": "first employee page/internal period and column definitions",
+        "path": "research/salaries/gap-fill-2026-11-02/reviews/health-context-ocr/fraser-health-2011-12-p3.json.gzip",
+        "sha256": "37328edb789ce37ffe77c235d5cfcf5bbb0e8d3974af6be1616896bb1b24a936",
+        "headerMarchYearEnds": [
+          "2012"
+        ],
+        "headerFiscalPairs": []
+      },
+      "periodImageCorroborationPassed": true,
+      "printedNamedControl": {
+        "physicalPage": 93,
+        "label": "Total Payments Equal to or Greater than $75,000",
+        "remuneration": 393710377,
+        "expenses": 3900356,
+        "raw": "Total Payments Equal to or Greater than $75,000      393,710,377      3,900,356"
+      },
+      "literalResidualBeforeFinalPeerClosure": [
+        "123",
+        "133"
+      ],
+      "controlSelectionAddendum": false,
+      "namedControlViewingAid": {
+        "path": "research/salaries/gap-fill-2026-11-02/reviews/health-context-root/fraser-health-2011-12-named-control.png",
+        "sha256": "2d9dbf229029d14e7112d0370cb1e44b538f48a038c8abc8cc0fc338eeaa7ec8",
+        "sourceSha256": "b98ff548d8168780292e0002c7942fc9bf3ed57e279e77bf8c2e349004af59ba",
+        "physicalPage": 93,
+        "dpi": 144,
+        "integerCropBox": [
+          0,
+          391,
+          1224,
+          561
+        ],
+        "noResampling": true,
+        "purpose": "Named control and surrounding original source pixels; crop located from literal control token, not a replacement source"
+      }
+    },
+    {
+      "sourceKey": "fraser-health-2010-11",
+      "sourceSha256": "d1c51a7cb39a122bcd8fe612b8fd8173519412678495039acd5744cae15e122d",
+      "candidateYear": "2010/11",
+      "candidateRowsBeforeFinalPeerClosure": 4439,
+      "sourceImagesPixelReplayed": [
+        {
+          "path": "research/salaries/gap-fill-2026-11-02/health_employees/source-review-contexts/fraser-health-2010-11-p002.png",
+          "sha256": "b58b0001a60c56eafbab45ceba1b8cceabcff1d28db896299b1604235c375bca"
+        },
+        {
+          "path": "research/salaries/gap-fill-2026-11-02/health_employees/source-review-contexts/fraser-health-2010-11-p094.png",
+          "sha256": "6989035502cce25e1053fbcc462634842ba5a679df8dc7c4af596cfc90e57e6d"
+        }
+      ],
+      "independentImagePeriodOcr": {
+        "sourceKey": "fraser-health-2010-11",
+        "physicalPage": 2,
+        "purpose": "first employee page/internal period and column definitions",
+        "path": "research/salaries/gap-fill-2026-11-02/reviews/health-context-ocr/fraser-health-2010-11-p2.json.gzip",
+        "sha256": "fc2b19b4d1a169f4d3ce4aa066d92ec9d75c382ad8c07919e4ccfe0409770f2d",
+        "headerMarchYearEnds": [
+          "2011"
+        ],
+        "headerFiscalPairs": []
+      },
+      "periodImageCorroborationPassed": true,
+      "printedNamedControl": {
+        "physicalPage": 94,
+        "label": "Total Payments Equal to or Greater than $75,000",
+        "remuneration": 405631447,
+        "expenses": 4290249,
+        "raw": "Total Payments Equal to or Greater than $75,000                             405,631,447     4,290,249"
+      },
+      "literalResidualBeforeFinalPeerClosure": [
+        "18",
+        "166"
+      ],
+      "controlSelectionAddendum": false,
+      "namedControlViewingAid": {
+        "path": "research/salaries/gap-fill-2026-11-02/reviews/health-context-root/fraser-health-2010-11-named-control.png",
+        "sha256": "144c25f79ab55b1de64a2f52d704144897a5723d31bdb9f85a694f74b96ef9d2",
+        "sourceSha256": "d1c51a7cb39a122bcd8fe612b8fd8173519412678495039acd5744cae15e122d",
+        "physicalPage": 94,
+        "dpi": 144,
+        "integerCropBox": [
+          0,
+          816,
+          1224,
+          986
+        ],
+        "noResampling": true,
+        "purpose": "Named control and surrounding original source pixels; crop located from literal control token, not a replacement source"
+      }
+    },
+    {
+      "sourceKey": "fraser-health-2009-10",
+      "sourceSha256": "86a8fa64f7ea35d5175970bc39c857aee35d4f30ebfe7531bb708b643f368b8a",
+      "candidateYear": "2009/10",
+      "candidateRowsBeforeFinalPeerClosure": 3543,
+      "sourceImagesPixelReplayed": [
+        {
+          "path": "research/salaries/gap-fill-2026-11-02/health_employees/source-review-contexts/fraser-health-2009-10-p004.png",
+          "sha256": "4a233aa4c03d686d94695af5374113f4a66f80d27fc90dbd1c95ec73a646fa84"
+        },
+        {
+          "path": "research/salaries/gap-fill-2026-11-02/health_employees/source-review-contexts/fraser-health-2009-10-p081.png",
+          "sha256": "30846f6c406e4ca53e4252ddfe6fca6b1fcf32fa150135e9392d61a2dc72fa5d"
+        }
+      ],
+      "independentImagePeriodOcr": {
+        "sourceKey": "fraser-health-2009-10",
+        "physicalPage": 4,
+        "purpose": "first employee page/internal period and column definitions",
+        "path": "research/salaries/gap-fill-2026-11-02/reviews/health-context-ocr/fraser-health-2009-10-p4.json.gzip",
+        "sha256": "0c8c53e1e765cc15d0300571e8a653077859fe4c0e37399f1214f91532816c9c",
+        "headerMarchYearEnds": [
+          "2010"
+        ],
+        "headerFiscalPairs": []
+      },
+      "periodImageCorroborationPassed": true,
+      "printedNamedControl": {
+        "physicalPage": 81,
+        "label": "Total Payments Equal to or Greater than $75,000",
+        "remuneration": 321477600,
+        "expenses": 3135212,
+        "raw": "Total Payments Equal to or Greater than $75,000                             321,477,600     3,135,212"
+      },
+      "literalResidualBeforeFinalPeerClosure": [
+        "35",
+        "95"
+      ],
+      "controlSelectionAddendum": false,
+      "namedControlViewingAid": {
+        "path": "research/salaries/gap-fill-2026-11-02/reviews/health-context-root/fraser-health-2009-10-named-control.png",
+        "sha256": "3952dac90e0a62df06b6d41c788f6006f23f71cc2f883fe6a2af7c04219b7c13",
+        "sourceSha256": "86a8fa64f7ea35d5175970bc39c857aee35d4f30ebfe7531bb708b643f368b8a",
+        "physicalPage": 81,
+        "dpi": 144,
+        "integerCropBox": [
+          0,
+          315,
+          1224,
+          485
+        ],
+        "noResampling": true,
+        "purpose": "Named control and surrounding original source pixels; crop located from literal control token, not a replacement source"
+      }
+    },
+    {
+      "sourceKey": "fraser-health-2008-09",
+      "sourceSha256": "cc5520235c5064a7e5a9db8f70fc65ede8201b69cdc97c0e1888594204bf30f9",
+      "candidateYear": "2008/09",
+      "candidateRowsBeforeFinalPeerClosure": 2975,
+      "sourceImagesPixelReplayed": [
+        {
+          "path": "research/salaries/gap-fill-2026-11-02/health_employees/source-review-contexts/fraser-health-2008-09-p004.png",
+          "sha256": "b0aa399b1980e5b872740fd8cc17edcfa551092d5e82b5353d2f3e1542f4e1b7"
+        },
+        {
+          "path": "research/salaries/gap-fill-2026-11-02/health_employees/source-review-contexts/fraser-health-2008-09-p067.png",
+          "sha256": "96bd597fb5aa26cfe838c8c4b0b5bfb0f218f4d4935fefd81d829331c8338652"
+        }
+      ],
+      "independentImagePeriodOcr": {
+        "sourceKey": "fraser-health-2008-09",
+        "physicalPage": 4,
+        "purpose": "first employee page/internal period and column definitions",
+        "path": "research/salaries/gap-fill-2026-11-02/reviews/health-context-ocr/fraser-health-2008-09-p4.json.gzip",
+        "sha256": "8d8201989bf2247767786f4260e4c2f2a5e7a847604603fe3b7614c40bfe6aad",
+        "headerMarchYearEnds": [
+          "2009"
+        ],
+        "headerFiscalPairs": []
+      },
+      "periodImageCorroborationPassed": true,
+      "printedNamedControl": {
+        "physicalPage": 67,
+        "label": "Total Payments Equal to or Greater than $75,000",
+        "remuneration": 271184295,
+        "expenses": 3578511,
+        "raw": "Total Payments Equal to or Greater than $75,000                           271,184,295      3,578,511"
+      },
+      "literalResidualBeforeFinalPeerClosure": [
+        "0",
+        "0"
+      ],
+      "controlSelectionAddendum": false,
+      "namedControlViewingAid": {
+        "path": "research/salaries/gap-fill-2026-11-02/reviews/health-context-root/fraser-health-2008-09-named-control.png",
+        "sha256": "882976f07f8c9fe1d2f3928589f8b65c5e26f3ee94ac3f52258d07599e445047",
+        "sourceSha256": "cc5520235c5064a7e5a9db8f70fc65ede8201b69cdc97c0e1888594204bf30f9",
+        "physicalPage": 67,
+        "dpi": 144,
+        "integerCropBox": [
+          0,
+          604,
+          1224,
+          774
+        ],
+        "noResampling": true,
+        "purpose": "Named control and surrounding original source pixels; crop located from literal control token, not a replacement source"
+      }
+    },
+    {
+      "sourceKey": "fraser-health-2007-08",
+      "sourceSha256": "ea0fe6ecb9e39b94fcb9a051612aaaf74499950cde49e303de80071c3ccf8c8a",
+      "candidateYear": "2007/08",
+      "candidateRowsBeforeFinalPeerClosure": 2343,
+      "sourceImagesPixelReplayed": [
+        {
+          "path": "research/salaries/gap-fill-2026-11-02/health_employees/source-review-contexts/fraser-health-2007-08-p004.png",
+          "sha256": "a6be422400b4b9a90ed17bde13846f6a1a4fb41c9db36111b275668e58fc48e3"
+        },
+        {
+          "path": "research/salaries/gap-fill-2026-11-02/health_employees/source-review-contexts/fraser-health-2007-08-p052.png",
+          "sha256": "08cfcb7414c74a8366069db10f2fd74f8e403890b266063b5238f8a34b3847b6"
+        }
+      ],
+      "independentImagePeriodOcr": {
+        "sourceKey": "fraser-health-2007-08",
+        "physicalPage": 4,
+        "purpose": "first employee page/internal period and column definitions",
+        "path": "research/salaries/gap-fill-2026-11-02/reviews/health-context-ocr/fraser-health-2007-08-p4.json.gzip",
+        "sha256": "ca2ee03c88173816cc21fa58e063cc0e0afbc1cf6d09d3820eae6b082cbeeec1",
+        "headerMarchYearEnds": [
+          "2008"
+        ],
+        "headerFiscalPairs": []
+      },
+      "periodImageCorroborationPassed": true,
+      "printedNamedControl": {
+        "physicalPage": 52,
+        "label": "Total Payments Equal to or Greater Than $75,000",
+        "remuneration": 212222097,
+        "expenses": 2829358,
+        "raw": "Total Payments Equal to or Greater Than $75,000                             212,222,097    2,829,358"
+      },
+      "literalResidualBeforeFinalPeerClosure": [
+        "37",
+        "81"
+      ],
+      "controlSelectionAddendum": false,
+      "namedControlViewingAid": {
+        "path": "research/salaries/gap-fill-2026-11-02/reviews/health-context-root/fraser-health-2007-08-named-control.png",
+        "sha256": "bc0755f40ca3f049641d33d1e01f632effae21b5538bcd51053f29a391d56f4a",
+        "sourceSha256": "ea0fe6ecb9e39b94fcb9a051612aaaf74499950cde49e303de80071c3ccf8c8a",
+        "physicalPage": 52,
+        "dpi": 144,
+        "integerCropBox": [
+          0,
+          1211,
+          1224,
+          1381
+        ],
+        "noResampling": true,
+        "purpose": "Named control and surrounding original source pixels; crop located from literal control token, not a replacement source"
+      }
+    },
+    {
+      "sourceKey": "fraser-health-2006-07",
+      "sourceSha256": "abc3650b650857273b1f87c8bbcc1b60abe794714fd406ac3b7274fd3cc4f228",
+      "candidateYear": "2006/07",
+      "candidateRowsBeforeFinalPeerClosure": 2279,
+      "sourceImagesPixelReplayed": [
+        {
+          "path": "research/salaries/gap-fill-2026-11-02/health_employees/source-review-contexts/fraser-health-2006-07-p004.png",
+          "sha256": "66acc9ab6de44a4c09d0c0a01efc6a94768f75035f31f1eef6865998121536b0"
+        },
+        {
+          "path": "research/salaries/gap-fill-2026-11-02/health_employees/source-review-contexts/fraser-health-2006-07-p053.png",
+          "sha256": "0e4443324016711fffa61c8f7240f148dcc90cc1bab4c3edeac5eadaf5adb749"
+        }
+      ],
+      "independentImagePeriodOcr": {
+        "sourceKey": "fraser-health-2006-07",
+        "physicalPage": 4,
+        "purpose": "first employee page/internal period and column definitions",
+        "path": "research/salaries/gap-fill-2026-11-02/reviews/health-context-ocr/fraser-health-2006-07-p4.json.gzip",
+        "sha256": "e3805ede75ca64b156ea96e71122c7af635f7e6302c425b0a1175b630dcbabda",
+        "headerMarchYearEnds": [
+          "2007"
+        ],
+        "headerFiscalPairs": []
+      },
+      "periodImageCorroborationPassed": true,
+      "printedNamedControl": {
+        "physicalPage": 53,
+        "label": "Payments Equal To or Greater Than $75,000",
+        "remuneration": 204478042,
+        "expenses": 2894021,
+        "raw": "Payments Equal To or Greater Than $75,000                             204,478,042    2,894,021"
+      },
+      "literalResidualBeforeFinalPeerClosure": [
+        "7",
+        "43"
+      ],
+      "controlSelectionAddendum": false,
+      "namedControlViewingAid": {
+        "path": "research/salaries/gap-fill-2026-11-02/reviews/health-context-root/fraser-health-2006-07-named-control.png",
+        "sha256": "ca077437b348c993273f4d27f6c1c98855a3bc9e429ad85d1e3753ad2ae02f35",
+        "sourceSha256": "abc3650b650857273b1f87c8bbcc1b60abe794714fd406ac3b7274fd3cc4f228",
+        "physicalPage": 53,
+        "dpi": 144,
+        "integerCropBox": [
+          0,
+          881,
+          1224,
+          1051
+        ],
+        "noResampling": true,
+        "purpose": "Named control and surrounding original source pixels; crop located from literal control token, not a replacement source"
+      }
+    },
+    {
+      "sourceKey": "fraser-health-2005-06",
+      "sourceSha256": "70ee636035e1b50c72b3d3f7c3561d18d2840436e7af101786b052f636c8bc9f",
+      "candidateYear": "2005/06",
+      "candidateRowsBeforeFinalPeerClosure": 1277,
+      "sourceImagesPixelReplayed": [
+        {
+          "path": "research/salaries/gap-fill-2026-11-02/health_employees/source-review-contexts/fraser-health-2005-06-p004.png",
+          "sha256": "b9c8b02ff6caf85fa7933c9b5e0cae56ce5efcf6ff851fa671e0a5dfb1eb3ce4"
+        },
+        {
+          "path": "research/salaries/gap-fill-2026-11-02/health_employees/source-review-contexts/fraser-health-2005-06-p031.png",
+          "sha256": "9a65b788f0d4aad46c700d477ca4a605d18ad995c63c38301c46e4606aabafa2"
+        }
+      ],
+      "independentImagePeriodOcr": {
+        "sourceKey": "fraser-health-2005-06",
+        "physicalPage": 4,
+        "purpose": "first employee page/internal period and column definitions",
+        "path": "research/salaries/gap-fill-2026-11-02/reviews/health-context-ocr/fraser-health-2005-06-p4.json.gzip",
+        "sha256": "add53565b1efc9c77f234e0ecdc17ba61bd7ff5a8be3f9c079b99c4a1466d4ea",
+        "headerMarchYearEnds": [
+          "2006"
+        ],
+        "headerFiscalPairs": []
+      },
+      "periodImageCorroborationPassed": true,
+      "printedNamedControl": {
+        "physicalPage": 31,
+        "label": "Total Payments Equal To or Greater Than $75,000",
+        "remuneration": 115303375,
+        "expenses": 1948174,
+        "raw": "Total Payments Equal To or Greater Than $75,000      115,303,375    1,948,174"
+      },
+      "literalResidualBeforeFinalPeerClosure": [
+        "37",
+        "14"
+      ],
+      "controlSelectionAddendum": false,
+      "namedControlViewingAid": {
+        "path": "research/salaries/gap-fill-2026-11-02/reviews/health-context-root/fraser-health-2005-06-named-control.png",
+        "sha256": "a165774d09f7af8ba1ef338886d52e4d258789c4cec81e862daa631032010f48",
+        "sourceSha256": "70ee636035e1b50c72b3d3f7c3561d18d2840436e7af101786b052f636c8bc9f",
+        "physicalPage": 31,
+        "dpi": 144,
+        "integerCropBox": [
+          0,
+          1128,
+          1224,
+          1298
+        ],
+        "noResampling": true,
+        "purpose": "Named control and surrounding original source pixels; crop located from literal control token, not a replacement source"
+      }
+    },
+    {
+      "sourceKey": "fraser-health-2004-05",
+      "sourceSha256": "d238d8ad9e1911ef1f0166ed80f9d47b4d3bf7a4bdc3352e17b77b9cfd85fd0b",
+      "candidateYear": "2004/05",
+      "candidateRowsBeforeFinalPeerClosure": 1068,
+      "sourceImagesPixelReplayed": [
+        {
+          "path": "research/salaries/gap-fill-2026-11-02/health_employees/source-review-contexts/fraser-health-2004-05-p004.png",
+          "sha256": "5405c3410031e607c1caa9dacd4d2103649aa9cfec92e7a8b6d6f9d6c346a24a"
+        },
+        {
+          "path": "research/salaries/gap-fill-2026-11-02/health_employees/source-review-contexts/fraser-health-2004-05-p027.png",
+          "sha256": "005ff027d21238e44bb7f680f36fa755421006e702e3a72d4595cdf45b24878c"
+        }
+      ],
+      "independentImagePeriodOcr": {
+        "sourceKey": "fraser-health-2004-05",
+        "physicalPage": 4,
+        "purpose": "first employee page/internal period and column definitions",
+        "path": "research/salaries/gap-fill-2026-11-02/reviews/health-context-ocr/fraser-health-2004-05-p4.json.gzip",
+        "sha256": "22a60ff8d9a168317075f6b3ce3fd1071eed2550eeb6cffabea780421f0cb95e",
+        "headerMarchYearEnds": [
+          "2005"
+        ],
+        "headerFiscalPairs": []
+      },
+      "periodImageCorroborationPassed": true,
+      "printedNamedControl": {
+        "physicalPage": 27,
+        "label": "Total Payments Equal To or Greater Than $75,000",
+        "remuneration": 94829158,
+        "expenses": 1752379,
+        "raw": "Total Payments Equal To or Greater Than $75,000                                  94,829,158    1,752,379"
+      },
+      "literalResidualBeforeFinalPeerClosure": [
+        "39",
+        "12"
+      ],
+      "controlSelectionAddendum": false,
+      "namedControlViewingAid": {
+        "path": "research/salaries/gap-fill-2026-11-02/reviews/health-context-root/fraser-health-2004-05-named-control.png",
+        "sha256": "3f43e9d3d0f747f9b3dddbee32db0688cee59108b05853859e0456d1c14f5033",
+        "sourceSha256": "d238d8ad9e1911ef1f0166ed80f9d47b4d3bf7a4bdc3352e17b77b9cfd85fd0b",
+        "physicalPage": 27,
+        "dpi": 144,
+        "integerCropBox": [
+          0,
+          510,
+          1224,
+          680
+        ],
+        "noResampling": true,
+        "purpose": "Named control and surrounding original source pixels; crop located from literal control token, not a replacement source"
+      }
+    },
+    {
+      "sourceKey": "interior-health-2013-14",
+      "sourceSha256": "15ff45067bfed739ab78715adba37c0e397535ac170bf97d88d66c8c9444b52c",
+      "candidateYear": "2013/14",
+      "candidateRowsBeforeFinalPeerClosure": 3251,
+      "sourceImagesPixelReplayed": [
+        {
+          "path": "research/salaries/gap-fill-2026-11-02/health_employees/source-review-contexts/interior-health-2013-14-p002.png",
+          "sha256": "a8053e29d8791f24c50fa66da853f0b53cd2eabb288e6a4a84cd45e0ee2c32c2"
+        },
+        {
+          "path": "research/salaries/gap-fill-2026-11-02/health_employees/source-review-contexts/interior-health-2013-14-p063.png",
+          "sha256": "659335aa62d77fea5f500d07d03c330b4f7e6d19fb1bf2ec82adece8f061bec6"
+        }
+      ],
+      "independentImagePeriodOcr": {
+        "sourceKey": "interior-health-2013-14",
+        "physicalPage": 2,
+        "purpose": "first employee page/internal period and column definitions",
+        "path": "research/salaries/gap-fill-2026-11-02/reviews/health-context-ocr/interior-health-2013-14-p2.json.gzip",
+        "sha256": "68018bdf2b3eb694a4bf241b1b626c10d06de6d59b6ae698edf103e89187f87f",
+        "headerMarchYearEnds": [
+          "2014"
+        ],
+        "headerFiscalPairs": []
+      },
+      "periodImageCorroborationPassed": true,
+      "printedNamedControl": {
+        "physicalPage": 63,
+        "label": "Total Greater than $75,000",
+        "remuneration": 297321343,
+        "expenses": 3423959,
+        "raw": "Total Greater than $75,000                    $       297,321,343   $      3,423,959"
+      },
+      "literalResidualBeforeFinalPeerClosure": [
+        "50",
+        "59"
+      ],
+      "controlSelectionAddendum": false,
+      "namedControlViewingAid": {
+        "path": "research/salaries/gap-fill-2026-11-02/reviews/health-context-root/interior-health-2013-14-named-control.png",
+        "sha256": "91d32d988ecf25d5acda61a26e73d82d3610afe93f4f3acf4e127055ec755edd",
+        "sourceSha256": "15ff45067bfed739ab78715adba37c0e397535ac170bf97d88d66c8c9444b52c",
+        "physicalPage": 63,
+        "dpi": 144,
+        "integerCropBox": [
+          0,
+          561,
+          1224,
+          731
+        ],
+        "noResampling": true,
+        "purpose": "Named control and surrounding original source pixels; crop located from literal control token, not a replacement source"
+      }
+    },
+    {
+      "sourceKey": "interior-health-2012-13",
+      "sourceSha256": "5ea6a715ce9c36d83a64a133c450ed1995964844cca0d6cb81d4c55eaaf44771",
+      "candidateYear": "2012/13",
+      "candidateRowsBeforeFinalPeerClosure": 2750,
+      "sourceImagesPixelReplayed": [
+        {
+          "path": "research/salaries/gap-fill-2026-11-02/health_employees/source-review-contexts/interior-health-2012-13-p002.png",
+          "sha256": "3a6ce3c1924204882daed9684fa430a6da0a7684b6014cd5e853ac10c1b6b2d2"
+        },
+        {
+          "path": "research/salaries/gap-fill-2026-11-02/health_employees/source-review-contexts/interior-health-2012-13-p054.png",
+          "sha256": "22cc4463927ebd13892070190d40adc41f7bf2921efc2acc60d3f4a29af89ec0"
+        }
+      ],
+      "independentImagePeriodOcr": {
+        "sourceKey": "interior-health-2012-13",
+        "physicalPage": 2,
+        "purpose": "first employee page/internal period and column definitions",
+        "path": "research/salaries/gap-fill-2026-11-02/reviews/health-context-ocr/interior-health-2012-13-p2.json.gzip",
+        "sha256": "2b38afb052a34afc71f982822243edd357c6855686a7827640f749ffecc87d72",
+        "headerMarchYearEnds": [
+          "2013"
+        ],
+        "headerFiscalPairs": []
+      },
+      "periodImageCorroborationPassed": true,
+      "printedNamedControl": {
+        "physicalPage": 54,
+        "label": "Total Greater than $75,000",
+        "remuneration": 247235315,
+        "expenses": 4012904,
+        "raw": " Total Greater than $75,000                    $       247,235,315   $     4,012,904"
+      },
+      "literalResidualBeforeFinalPeerClosure": [
+        "10",
+        "15"
+      ],
+      "controlSelectionAddendum": false,
+      "namedControlViewingAid": {
+        "path": "research/salaries/gap-fill-2026-11-02/reviews/health-context-root/interior-health-2012-13-named-control.png",
+        "sha256": "8f2b741eb629df6c6be3e29583736d918ca2d1a3861da79b0af2c07b481ecbe8",
+        "sourceSha256": "5ea6a715ce9c36d83a64a133c450ed1995964844cca0d6cb81d4c55eaaf44771",
+        "physicalPage": 54,
+        "dpi": 144,
+        "integerCropBox": [
+          0,
+          163,
+          1224,
+          333
+        ],
+        "noResampling": true,
+        "purpose": "Named control and surrounding original source pixels; crop located from literal control token, not a replacement source"
+      }
+    },
+    {
+      "sourceKey": "interior-health-2011-12",
+      "sourceSha256": "692f8c3492757464e514d7eb1b94e697788bda05ad263729bd311916fd07cc04",
+      "candidateYear": "2011/12",
+      "candidateRowsBeforeFinalPeerClosure": 2622,
+      "sourceImagesPixelReplayed": [
+        {
+          "path": "research/salaries/gap-fill-2026-11-02/health_employees/source-review-contexts/interior-health-2011-12-p002.png",
+          "sha256": "480b63f4f124567194c040486172ebe1320fb8882847e2ae9fb2375030e28e18"
+        },
+        {
+          "path": "research/salaries/gap-fill-2026-11-02/health_employees/source-review-contexts/interior-health-2011-12-p052.png",
+          "sha256": "3c7299f1ebcc9530b92ed62851e7e49653b0f9c2cb11564c421542d428b4be67"
+        }
+      ],
+      "independentImagePeriodOcr": {
+        "sourceKey": "interior-health-2011-12",
+        "physicalPage": 2,
+        "purpose": "first employee page/internal period and column definitions",
+        "path": "research/salaries/gap-fill-2026-11-02/reviews/health-context-ocr/interior-health-2011-12-p2.json.gzip",
+        "sha256": "67dfc22034ffa8ed4956e0effc447c3b0ea75882617290ca91ca21bb71cc5192",
+        "headerMarchYearEnds": [
+          "2012"
+        ],
+        "headerFiscalPairs": []
+      },
+      "periodImageCorroborationPassed": true,
+      "printedNamedControl": {
+        "physicalPage": 52,
+        "label": "TOTAL>75,000",
+        "remuneration": 235344002,
+        "expenses": 4254989,
+        "raw": "TOTAL>75,000                       $  235,344,002   $    4,254,989"
+      },
+      "literalResidualBeforeFinalPeerClosure": [
+        "28",
+        "50"
+      ],
+      "controlSelectionAddendum": true,
+      "namedControlViewingAid": {
+        "path": "research/salaries/gap-fill-2026-11-02/reviews/health-context-root/interior-health-2011-12-named-control.png",
+        "sha256": "26172efaccf666d13beef1ceec2d90926b28a0de78fab5efcec149f82c5d7d44",
+        "sourceSha256": "692f8c3492757464e514d7eb1b94e697788bda05ad263729bd311916fd07cc04",
+        "physicalPage": 52,
+        "dpi": 144,
+        "integerCropBox": [
+          0,
+          874,
+          1224,
+          1044
+        ],
+        "noResampling": true,
+        "purpose": "Named control and surrounding original source pixels; crop located from literal control token, not a replacement source"
+      }
+    },
+    {
+      "sourceKey": "interior-health-2010-11",
+      "sourceSha256": "34466dcf7e71335874d0990745d633217853a383d83165f9736d9afb61f577bf",
+      "candidateYear": "2010/11",
+      "candidateRowsBeforeFinalPeerClosure": 2316,
+      "sourceImagesPixelReplayed": [
+        {
+          "path": "research/salaries/gap-fill-2026-11-02/health_employees/source-review-contexts/interior-health-2010-11-p003.png",
+          "sha256": "cd9dfa004cbc9ae3e7d143a4eb84a69cd564cfdb35e023ee368af4c25689bdaa"
+        },
+        {
+          "path": "research/salaries/gap-fill-2026-11-02/health_employees/source-review-contexts/interior-health-2010-11-p047.png",
+          "sha256": "6d900db7664c2ca1f8794d4259e1336095b7eddb3abd8c6746b91296b77c0536"
+        }
+      ],
+      "independentImagePeriodOcr": {
+        "sourceKey": "interior-health-2010-11",
+        "physicalPage": 3,
+        "purpose": "first employee page/internal period and column definitions",
+        "path": "research/salaries/gap-fill-2026-11-02/reviews/health-context-ocr/interior-health-2010-11-p3.json.gzip",
+        "sha256": "722fc84c3d21dbf29dfa480e4cf11574a5c4454b9dc6c403b53ca011b8cff150",
+        "headerMarchYearEnds": [
+          "2011"
+        ],
+        "headerFiscalPairs": []
+      },
+      "periodImageCorroborationPassed": true,
+      "printedNamedControl": {
+        "physicalPage": 47,
+        "label": "TOTAL>75,000",
+        "remuneration": 205743666,
+        "expenses": 3237004,
+        "raw": "TOTAL>75,000                       $       205,743,666   $      3,237,004"
+      },
+      "literalResidualBeforeFinalPeerClosure": [
+        "26",
+        "38"
+      ],
+      "controlSelectionAddendum": true,
+      "namedControlViewingAid": {
+        "path": "research/salaries/gap-fill-2026-11-02/reviews/health-context-root/interior-health-2010-11-named-control.png",
+        "sha256": "8933d18bfe36794e936ee9483d2cd1dd5374d594da3d65b5c64325983e81f8a1",
+        "sourceSha256": "34466dcf7e71335874d0990745d633217853a383d83165f9736d9afb61f577bf",
+        "physicalPage": 47,
+        "dpi": 144,
+        "integerCropBox": [
+          0,
+          1034,
+          1224,
+          1204
+        ],
+        "noResampling": true,
+        "purpose": "Named control and surrounding original source pixels; crop located from literal control token, not a replacement source"
+      }
+    },
+    {
+      "sourceKey": "interior-health-2009-10",
+      "sourceSha256": "2e9e3f3257e66ea9c17827a1e521e10af35f5b686a86e681bc6c5290f212ee1a",
+      "candidateYear": "2009/10",
+      "candidateRowsBeforeFinalPeerClosure": 2091,
+      "sourceImagesPixelReplayed": [
+        {
+          "path": "research/salaries/gap-fill-2026-11-02/health_employees/source-review-contexts/interior-health-2009-10-p002.png",
+          "sha256": "d98ffc3d9f23654e4a9dec8d112a81bfef05486da6d9726de5af0b4a243e4c74"
+        },
+        {
+          "path": "research/salaries/gap-fill-2026-11-02/health_employees/source-review-contexts/interior-health-2009-10-p042.png",
+          "sha256": "ba68f99235157abfae67d2acac6757dd6390a28fd5f4e49d2ae89aa690488eaa"
+        }
+      ],
+      "independentImagePeriodOcr": {
+        "sourceKey": "interior-health-2009-10",
+        "physicalPage": 2,
+        "purpose": "first employee page/internal period and column definitions",
+        "path": "research/salaries/gap-fill-2026-11-02/reviews/health-context-ocr/interior-health-2009-10-p2.json.gzip",
+        "sha256": "b3c366ac2537c6381e80437ca9c929b145674cf39740769d574e100d6140e338",
+        "headerMarchYearEnds": [
+          "2010"
+        ],
+        "headerFiscalPairs": []
+      },
+      "periodImageCorroborationPassed": true,
+      "printedNamedControl": {
+        "physicalPage": 42,
+        "label": "TOTAL>75,000",
+        "remuneration": 185833532,
+        "expenses": 2098654,
+        "raw": "TOTAL>75,000                      $       185,833,532   $      2,098,654"
+      },
+      "literalResidualBeforeFinalPeerClosure": [
+        "-14",
+        "14"
+      ],
+      "controlSelectionAddendum": true,
+      "namedControlViewingAid": {
+        "path": "research/salaries/gap-fill-2026-11-02/reviews/health-context-root/interior-health-2009-10-named-control.png",
+        "sha256": "ef466bde0d1f1454bbb5091f8bb9010321beb82c77b74503f2ae47d091e277cb",
+        "sourceSha256": "2e9e3f3257e66ea9c17827a1e521e10af35f5b686a86e681bc6c5290f212ee1a",
+        "physicalPage": 42,
+        "dpi": 144,
+        "integerCropBox": [
+          0,
+          613,
+          1224,
+          783
+        ],
+        "noResampling": true,
+        "purpose": "Named control and surrounding original source pixels; crop located from literal control token, not a replacement source"
+      }
+    },
+    {
+      "sourceKey": "interior-health-2008-09",
+      "sourceSha256": "e648b250f88a58341d399299d8db47dc2d09c607fa7d83868d965308e2beda44",
+      "candidateYear": "2008/09",
+      "candidateRowsBeforeFinalPeerClosure": 1777,
+      "sourceImagesPixelReplayed": [
+        {
+          "path": "research/salaries/gap-fill-2026-11-02/health_employees/source-review-contexts/interior-health-2008-09-p002.png",
+          "sha256": "6a5365f8bfd2c3a538f896b07a39179b1213e9e153478f8dffbc98a84b39f1a3"
+        },
+        {
+          "path": "research/salaries/gap-fill-2026-11-02/health_employees/source-review-contexts/interior-health-2008-09-p036.png",
+          "sha256": "7e31e16a231591902796c7033c0bebded20f62b1738fb07f3a3d6e450efac44b"
+        }
+      ],
+      "independentImagePeriodOcr": {
+        "sourceKey": "interior-health-2008-09",
+        "physicalPage": 2,
+        "purpose": "first employee page/internal period and column definitions",
+        "path": "research/salaries/gap-fill-2026-11-02/reviews/health-context-ocr/interior-health-2008-09-p2.json.gzip",
+        "sha256": "db4f1623e0f5cb095b996e40157a27c6e7e312d375d0d8e06849c221b40c2a4c",
+        "headerMarchYearEnds": [
+          "2009"
+        ],
+        "headerFiscalPairs": []
+      },
+      "periodImageCorroborationPassed": true,
+      "printedNamedControl": {
+        "physicalPage": 36,
+        "label": "TOTAL>75,000",
+        "remuneration": 156725156.2,
+        "expenses": 3581096.75,
+        "raw": "TOTAL>75,000                     $ 156,725,156.20   $ 3,581,096.75"
+      },
+      "literalResidualBeforeFinalPeerClosure": [
+        "0.00",
+        "0.01"
+      ],
+      "controlSelectionAddendum": true,
+      "namedControlViewingAid": {
+        "path": "research/salaries/gap-fill-2026-11-02/reviews/health-context-root/interior-health-2008-09-named-control.png",
+        "sha256": "22a87d5edde9af1cd9483f363f08ac511089102b3a5c25a9b13c80b0eebc97a3",
+        "sourceSha256": "e648b250f88a58341d399299d8db47dc2d09c607fa7d83868d965308e2beda44",
+        "physicalPage": 36,
+        "dpi": 144,
+        "integerCropBox": [
+          0,
+          554,
+          1224,
+          724
+        ],
+        "noResampling": true,
+        "purpose": "Named control and surrounding original source pixels; crop located from literal control token, not a replacement source"
+      }
+    },
+    {
+      "sourceKey": "interior-health-2007-08",
+      "sourceSha256": "310bcb2ade5e2769621507452d3a12f4695a0640058b355ad830acedd334070d",
+      "candidateYear": "2007/08",
+      "candidateRowsBeforeFinalPeerClosure": 1497,
+      "sourceImagesPixelReplayed": [
+        {
+          "path": "research/salaries/gap-fill-2026-11-02/health_employees/source-review-contexts/interior-health-2007-08-p002.png",
+          "sha256": "b0e3af2824ed673a75eb116260209b4b85d0e593c5e96e3da99af36f2046c90a"
+        },
+        {
+          "path": "research/salaries/gap-fill-2026-11-02/health_employees/source-review-contexts/interior-health-2007-08-p032.png",
+          "sha256": "c051ed86207f6b46dc4956ddbb0e1284c7846187adf8c7c09a8de91bfb640a07"
+        }
+      ],
+      "independentImagePeriodOcr": {
+        "sourceKey": "interior-health-2007-08",
+        "physicalPage": 2,
+        "purpose": "first employee page/internal period and column definitions",
+        "path": "research/salaries/gap-fill-2026-11-02/reviews/health-context-ocr/interior-health-2007-08-p2.json.gzip",
+        "sha256": "48788838c538af87e6287afd1038a6136d24061682555f4ac887fb5a195385e1",
+        "headerMarchYearEnds": [
+          "2008"
+        ],
+        "headerFiscalPairs": []
+      },
+      "periodImageCorroborationPassed": true,
+      "printedNamedControl": {
+        "physicalPage": 32,
+        "label": "TOTAL>75,000",
+        "remuneration": 131357455.29,
+        "expenses": 3251580.6,
+        "raw": "TOTAL>75,000                   131,357,455.29    3,251,580.60"
+      },
+      "literalResidualBeforeFinalPeerClosure": [
+        "0.00",
+        "0.00"
+      ],
+      "controlSelectionAddendum": true,
+      "namedControlViewingAid": {
+        "path": "research/salaries/gap-fill-2026-11-02/reviews/health-context-root/interior-health-2007-08-named-control.png",
+        "sha256": "09dcdd73bfe8789702f36c333b311ff38c6d2f7eb4ddd946126b35c831eb1728",
+        "sourceSha256": "310bcb2ade5e2769621507452d3a12f4695a0640058b355ad830acedd334070d",
+        "physicalPage": 32,
+        "dpi": 144,
+        "integerCropBox": [
+          0,
+          301,
+          1224,
+          471
+        ],
+        "noResampling": true,
+        "purpose": "Named control and surrounding original source pixels; crop located from literal control token, not a replacement source"
+      }
+    },
+    {
+      "sourceKey": "interior-health-2006-07",
+      "sourceSha256": "b878659efb337285ba6118bc0e290b8cf9ac078809a49fed4ef0311569c56410",
+      "candidateYear": "2006/07",
+      "candidateRowsBeforeFinalPeerClosure": 1519,
+      "sourceImagesPixelReplayed": [
+        {
+          "path": "research/salaries/gap-fill-2026-11-02/health_employees/source-review-contexts/interior-health-2006-07-p002.png",
+          "sha256": "678372337963b728f436331ac7b130057e4bd6b353bcfd77d065f54a1732ec5a"
+        },
+        {
+          "path": "research/salaries/gap-fill-2026-11-02/health_employees/source-review-contexts/interior-health-2006-07-p026.png",
+          "sha256": "be2c0b186c39bd27324e9f912ff5459169c4b7650f933a84ab7fb577b76f1469"
+        }
+      ],
+      "independentImagePeriodOcr": {
+        "sourceKey": "interior-health-2006-07",
+        "physicalPage": 2,
+        "purpose": "first employee page/internal period and column definitions",
+        "path": "research/salaries/gap-fill-2026-11-02/reviews/health-context-ocr/interior-health-2006-07-p2.json.gzip",
+        "sha256": "ae289ee14619eb97f37bf7d160bfbfdfdc65dadf27f87395f1adbf393b8ef1d3",
+        "headerMarchYearEnds": [
+          "2007"
+        ],
+        "headerFiscalPairs": []
+      },
+      "periodImageCorroborationPassed": true,
+      "printedNamedControl": {
+        "physicalPage": 26,
+        "label": "TOTAL > 75,000",
+        "remuneration": 132912532.88,
+        "expenses": 2744270.41,
+        "raw": "TOTAL > 75,000                   132,912,532.88   2,744,270.41"
+      },
+      "literalResidualBeforeFinalPeerClosure": [
+        "0.00",
+        "0.00"
+      ],
+      "controlSelectionAddendum": true,
+      "namedControlViewingAid": {
+        "path": "research/salaries/gap-fill-2026-11-02/reviews/health-context-root/interior-health-2006-07-named-control.png",
+        "sha256": "77fd2947785618cdab985336c7642a3d6b1c1107385d68fd4388ac207b6e1562",
+        "sourceSha256": "b878659efb337285ba6118bc0e290b8cf9ac078809a49fed4ef0311569c56410",
+        "physicalPage": 26,
+        "dpi": 144,
+        "integerCropBox": [
+          0,
+          418,
+          1224,
+          588
+        ],
+        "noResampling": true,
+        "purpose": "Named control and surrounding original source pixels; crop located from literal control token, not a replacement source"
+      }
+    },
+    {
+      "sourceKey": "interior-health-2005-06",
+      "sourceSha256": "772bb6c41f9ccd868e3945136da08273e1f806bda63be9537785a32c70c20499",
+      "candidateYear": "2005/06",
+      "candidateRowsBeforeFinalPeerClosure": 1052,
+      "sourceImagesPixelReplayed": [
+        {
+          "path": "research/salaries/gap-fill-2026-11-02/health_employees/source-review-contexts/interior-health-2005-06-p002.png",
+          "sha256": "db9347990187e41a1bc1aecf84acfa58d229517f342b76f46a07db2b57dd1018"
+        },
+        {
+          "path": "research/salaries/gap-fill-2026-11-02/health_employees/source-review-contexts/interior-health-2005-06-p018.png",
+          "sha256": "04b22d89d6cb5eb8d812219eff8956b7b1006d76299febef86f1868a7cd93ff1"
+        }
+      ],
+      "independentImagePeriodOcr": {
+        "sourceKey": "interior-health-2005-06",
+        "physicalPage": 2,
+        "purpose": "first employee page/internal period and column definitions",
+        "path": "research/salaries/gap-fill-2026-11-02/reviews/health-context-ocr/interior-health-2005-06-p2.json.gzip",
+        "sha256": "30ca02c101a69989f493580ec099cb27512515de5d698696c278cedd4315fd2e",
+        "headerMarchYearEnds": [
+          "2006"
+        ],
+        "headerFiscalPairs": []
+      },
+      "periodImageCorroborationPassed": true,
+      "printedNamedControl": {
+        "physicalPage": 18,
+        "label": "Total Greater than $75,000",
+        "remuneration": 91400705.52,
+        "expenses": 2573927.68,
+        "raw": "Total Greater than $75,000                         91,400,705.52    2,573,927.68"
+      },
+      "literalResidualBeforeFinalPeerClosure": [
+        "0.00",
+        "0.00"
+      ],
+      "controlSelectionAddendum": false,
+      "namedControlViewingAid": {
+        "path": "research/salaries/gap-fill-2026-11-02/reviews/health-context-root/interior-health-2005-06-named-control.png",
+        "sha256": "969c2bbf518adead0926382d1fa3c35ac6244baa4b5cd51c73bb5f4766dd6878",
+        "sourceSha256": "772bb6c41f9ccd868e3945136da08273e1f806bda63be9537785a32c70c20499",
+        "physicalPage": 18,
+        "dpi": 144,
+        "integerCropBox": [
+          0,
+          1187,
+          1224,
+          1357
+        ],
+        "noResampling": true,
+        "purpose": "Named control and surrounding original source pixels; crop located from literal control token, not a replacement source"
+      }
+    },
+    {
+      "sourceKey": "interior-health-2004-05",
+      "sourceSha256": "9be5485b61845509cce8e1395062abc0ab7d95da809ba0959ea4b91e6b9c6784",
+      "candidateYear": "2004/05",
+      "candidateRowsBeforeFinalPeerClosure": 659,
+      "sourceImagesPixelReplayed": [
+        {
+          "path": "research/salaries/gap-fill-2026-11-02/health_employees/source-review-contexts/interior-health-2004-05-p002.png",
+          "sha256": "d478f2efad53920e67f8d0fd4349e6ccdd16ce93c73957cd956ab3a992625e47"
+        },
+        {
+          "path": "research/salaries/gap-fill-2026-11-02/health_employees/source-review-contexts/interior-health-2004-05-p012.png",
+          "sha256": "c95e5df7ffb6152878e8863cd559c0d2f449bb10c95786770d35d14c55d2ff4a"
+        }
+      ],
+      "independentImagePeriodOcr": {
+        "sourceKey": "interior-health-2004-05",
+        "physicalPage": 2,
+        "purpose": "first employee page/internal period and column definitions",
+        "path": "research/salaries/gap-fill-2026-11-02/reviews/health-context-ocr/interior-health-2004-05-p2.json.gzip",
+        "sha256": "b1c3cef4f0cf6babb843645472947b995453a7969302f1e8842427dd1f56d88b",
+        "headerMarchYearEnds": [
+          "2005"
+        ],
+        "headerFiscalPairs": []
+      },
+      "periodImageCorroborationPassed": true,
+      "printedNamedControl": {
+        "physicalPage": 12,
+        "label": "TOTAL GREATER THAN $75,000",
+        "remuneration": 57230777.37,
+        "expenses": 1825712.41,
+        "raw": "TOTAL GREATER THAN $75,000                 57,230,777.37    1,825,712.41"
+      },
+      "literalResidualBeforeFinalPeerClosure": [
+        "0.00",
+        "0.00"
+      ],
+      "controlSelectionAddendum": false,
+      "namedControlViewingAid": {
+        "path": "research/salaries/gap-fill-2026-11-02/reviews/health-context-root/interior-health-2004-05-named-control.png",
+        "sha256": "6727965d04c75b29066b9d7a01fe70619a620d3f2e86ac4bfd9f0a30ee58bee4",
+        "sourceSha256": "9be5485b61845509cce8e1395062abc0ab7d95da809ba0959ea4b91e6b9c6784",
+        "physicalPage": 12,
+        "dpi": 144,
+        "integerCropBox": [
+          0,
+          887,
+          1224,
+          1057
+        ],
+        "noResampling": true,
+        "purpose": "Named control and surrounding original source pixels; crop located from literal control token, not a replacement source"
+      }
+    },
+    {
+      "sourceKey": "interior-health-2003-04",
+      "sourceSha256": "47142a34060f57a2000e6b13bdd8b6715fa7b4ac637ffedf1171d990cb9ca2bb",
+      "candidateYear": "2003/04",
+      "candidateRowsBeforeFinalPeerClosure": 586,
+      "sourceImagesPixelReplayed": [
+        {
+          "path": "research/salaries/gap-fill-2026-11-02/health_employees/source-review-contexts/interior-health-2003-04-p002.png",
+          "sha256": "99212bab763df6944fe11645bdde714ccfef4b3fdd80de8d95294af595ae1e24"
+        },
+        {
+          "path": "research/salaries/gap-fill-2026-11-02/health_employees/source-review-contexts/interior-health-2003-04-p013.png",
+          "sha256": "de26c7e87c6c1eda0c43878e6290fc06207e600997caecf01d6effa13fe76b9c"
+        },
+        {
+          "path": "research/salaries/gap-fill-2026-11-02/health_employees/source-review-contexts/interior-health-2003-04-p006.png",
+          "sha256": "9da188ec4499096c9db6131e82636a6cc383c48eef79655d5ad1cbe12e9758d0"
+        }
+      ],
+      "independentImagePeriodOcr": {
+        "sourceKey": "interior-health-2003-04",
+        "physicalPage": 2,
+        "purpose": "first employee page/internal period and column definitions",
+        "path": "research/salaries/gap-fill-2026-11-02/reviews/health-context-ocr/interior-health-2003-04-p2.json.gzip",
+        "sha256": "7e8b0e6081c335c341377a716c8434d4f17c1a945f129f0210ab94be1da88e81",
+        "headerMarchYearEnds": [
+          "2004"
+        ],
+        "headerFiscalPairs": []
+      },
+      "periodImageCorroborationPassed": true,
+      "printedNamedControl": {
+        "physicalPage": 13,
+        "label": "TOTAL GREATER THAN 75K",
+        "remuneration": 51197842.18,
+        "expenses": 1427074.3,
+        "raw": "TOTAL GREATER THAN 75K                51,197,842.18         1,427,074.30"
+      },
+      "literalResidualBeforeFinalPeerClosure": [
+        "95713.33",
+        "0.00"
+      ],
+      "controlSelectionAddendum": false,
+      "namedControlViewingAid": {
+        "path": "research/salaries/gap-fill-2026-11-02/reviews/health-context-root/interior-health-2003-04-named-control.png",
+        "sha256": "da3c2040c1bccb2ca8e5caba36280b3fca1b683f962532cf7f0d0fb646cdf319",
+        "sourceSha256": "47142a34060f57a2000e6b13bdd8b6715fa7b4ac637ffedf1171d990cb9ca2bb",
+        "physicalPage": 13,
+        "dpi": 144,
+        "integerCropBox": [
+          0,
+          1214,
+          1224,
+          1384
+        ],
+        "noResampling": true,
+        "purpose": "Named control and surrounding original source pixels; crop located from literal control token, not a replacement source"
+      }
+    },
+    {
+      "sourceKey": "northern-health-2019-20",
+      "sourceSha256": "9fa1e3c27aa9eb406d2f84aee0dfe5017cbe3fdafe16a05f99a2a349ae064a54",
+      "candidateYear": "2019/20",
+      "candidateRowsBeforeFinalPeerClosure": 2087,
+      "sourceImagesPixelReplayed": [
+        {
+          "path": "research/salaries/gap-fill-2026-11-02/health_employees/source-review-contexts/northern-health-2019-20-p002.png",
+          "sha256": "2e59cf4f4d5e6faad349fa982fab8bb2acad19a55ca7d66e9631b4d4b69c6d05"
+        },
+        {
+          "path": "research/salaries/gap-fill-2026-11-02/health_employees/source-review-contexts/northern-health-2019-20-p046.png",
+          "sha256": "b51b306d2a970f2545e85e76207e77bbe246c92e992ce2f9c661b207215821ab"
+        }
+      ],
+      "independentImagePeriodOcr": {
+        "sourceKey": "northern-health-2019-20",
+        "physicalPage": 2,
+        "purpose": "first employee page/internal period and column definitions",
+        "path": "research/salaries/gap-fill-2026-11-02/reviews/health-context-ocr/northern-health-2019-20-p2.json.gzip",
+        "sha256": "6d6bb4295c0b5b6135a0abd0c5b7cd6439896ea8e17e08e4f1d927ffa1ec6154",
+        "headerMarchYearEnds": [
+          "2020"
+        ],
+        "headerFiscalPairs": []
+      },
+      "periodImageCorroborationPassed": true,
+      "printedNamedControl": {
+        "physicalPage": 46,
+        "label": "TOTAL EMPLOYEES > $75,000",
+        "remuneration": 205079224,
+        "expenses": 3054290,
+        "raw": "TOTAL EMPLOYEES > $75,000                            $            205,079,224 $                     3,054,290"
+      },
+      "literalResidualBeforeFinalPeerClosure": [
+        "14",
+        "30"
+      ],
+      "controlSelectionAddendum": false,
+      "namedControlViewingAid": {
+        "path": "research/salaries/gap-fill-2026-11-02/reviews/health-context-root/northern-health-2019-20-named-control.png",
+        "sha256": "6de852de75789c809ce7af9e4b6f2698ae666d1b166ad97099925a84ba9fe46f",
+        "sourceSha256": "9fa1e3c27aa9eb406d2f84aee0dfe5017cbe3fdafe16a05f99a2a349ae064a54",
+        "physicalPage": 46,
+        "dpi": 144,
+        "integerCropBox": [
+          0,
+          99,
+          1224,
+          269
+        ],
+        "noResampling": true,
+        "purpose": "Named control and surrounding original source pixels; crop located from literal control token, not a replacement source"
+      }
+    },
+    {
+      "sourceKey": "northern-health-2018-19",
+      "sourceSha256": "d7b986fc2bd877d21080203b52aa31cabe632cf2628622daa141ac9f6e48a7f2",
+      "candidateYear": "2018/19",
+      "candidateRowsBeforeFinalPeerClosure": 1807,
+      "sourceImagesPixelReplayed": [
+        {
+          "path": "research/salaries/gap-fill-2026-11-02/health_employees/source-review-contexts/northern-health-2018-19-p002.png",
+          "sha256": "6ca25ad8e438259dc882ce8d9e2a46db113f96dd7f0308912e40eec5301189e9"
+        },
+        {
+          "path": "research/salaries/gap-fill-2026-11-02/health_employees/source-review-contexts/northern-health-2018-19-p040.png",
+          "sha256": "cbec79b71eace83e2ec900ee18208711792ed9aadc9c530427761e9ee4c547f4"
+        }
+      ],
+      "independentImagePeriodOcr": {
+        "sourceKey": "northern-health-2018-19",
+        "physicalPage": 2,
+        "purpose": "first employee page/internal period and column definitions",
+        "path": "research/salaries/gap-fill-2026-11-02/reviews/health-context-ocr/northern-health-2018-19-p2.json.gzip",
+        "sha256": "5ee533abaa8cb5e8cd1f596fef85358eed4d99f745361300c81a1bf090228dce",
+        "headerMarchYearEnds": [
+          "2019"
+        ],
+        "headerFiscalPairs": []
+      },
+      "periodImageCorroborationPassed": true,
+      "printedNamedControl": {
+        "physicalPage": 40,
+        "label": "TOTAL EMPLOYEES > $75,000",
+        "remuneration": 175858665,
+        "expenses": 3060162,
+        "raw": "TOTAL EMPLOYEES > $75,000                                                 $          175,858,665 $             3,060,162"
+      },
+      "literalResidualBeforeFinalPeerClosure": [
+        "10",
+        "-6"
+      ],
+      "controlSelectionAddendum": false,
+      "namedControlViewingAid": {
+        "path": "research/salaries/gap-fill-2026-11-02/reviews/health-context-root/northern-health-2018-19-named-control.png",
+        "sha256": "0d3ccd320cf0c3b0bab1a177f023b90f816964241053a2f69b1ba72e84dc4144",
+        "sourceSha256": "d7b986fc2bd877d21080203b52aa31cabe632cf2628622daa141ac9f6e48a7f2",
+        "physicalPage": 40,
+        "dpi": 144,
+        "integerCropBox": [
+          0,
+          395,
+          1224,
+          565
+        ],
+        "noResampling": true,
+        "purpose": "Named control and surrounding original source pixels; crop located from literal control token, not a replacement source"
+      }
+    },
+    {
+      "sourceKey": "northern-health-2017-18",
+      "sourceSha256": "d89a0f11de54224f021d586534675c04bb3a4565d0881f91f3e5b8edb963b5aa",
+      "candidateYear": "2017/18",
+      "candidateRowsBeforeFinalPeerClosure": 1721,
+      "sourceImagesPixelReplayed": [
+        {
+          "path": "research/salaries/gap-fill-2026-11-02/health_employees/source-review-contexts/northern-health-2017-18-p002.png",
+          "sha256": "e5d75bbfa5339902d4d6fcb1f558d68e8098eccb6bec4799d7bb611d921c7112"
+        },
+        {
+          "path": "research/salaries/gap-fill-2026-11-02/health_employees/source-review-contexts/northern-health-2017-18-p040.png",
+          "sha256": "3c1118b62bb6877a19cce04cf980160a7768b4647189c49327b7a93fc6169be8"
+        }
+      ],
+      "independentImagePeriodOcr": {
+        "sourceKey": "northern-health-2017-18",
+        "physicalPage": 2,
+        "purpose": "first employee page/internal period and column definitions",
+        "path": "research/salaries/gap-fill-2026-11-02/reviews/health-context-ocr/northern-health-2017-18-p2.json.gzip",
+        "sha256": "4aa0590056473420992a8dca5cd1747461bb36de0aba7de1106535eaee449ab3",
+        "headerMarchYearEnds": [
+          "2018"
+        ],
+        "headerFiscalPairs": []
+      },
+      "periodImageCorroborationPassed": true,
+      "printedNamedControl": {
+        "physicalPage": 40,
+        "label": "TOTAL EMPLOYEES > $75,000",
+        "remuneration": 164473010,
+        "expenses": 2402503,
+        "raw": "TOTAL EMPLOYEES > $75,000                                                        $          164,473,010 $   2,402,503"
+      },
+      "literalResidualBeforeFinalPeerClosure": [
+        "3",
+        "27"
+      ],
+      "controlSelectionAddendum": false,
+      "namedControlViewingAid": {
+        "path": "research/salaries/gap-fill-2026-11-02/reviews/health-context-root/northern-health-2017-18-named-control.png",
+        "sha256": "5b71b46cf47f0f7a5d9a6c8fb38fa3f4fe45c4608001aab392ef35cd85c927b9",
+        "sourceSha256": "d89a0f11de54224f021d586534675c04bb3a4565d0881f91f3e5b8edb963b5aa",
+        "physicalPage": 40,
+        "dpi": 144,
+        "integerCropBox": [
+          0,
+          156,
+          1224,
+          326
+        ],
+        "noResampling": true,
+        "purpose": "Named control and surrounding original source pixels; crop located from literal control token, not a replacement source"
+      }
+    },
+    {
+      "sourceKey": "northern-health-2016-17",
+      "sourceSha256": "4b814bbe0f6185c72c1b8ec1187d89126dfb6158ffe4bb04edd6029006470cfb",
+      "candidateYear": "2016/17",
+      "candidateRowsBeforeFinalPeerClosure": 1563,
+      "sourceImagesPixelReplayed": [
+        {
+          "path": "research/salaries/gap-fill-2026-11-02/health_employees/source-review-contexts/northern-health-2016-17-p002.png",
+          "sha256": "50fa7cf492f6d13800fff0da4fde25a530ec8b6c082b2a4ac3b9cd421d42ebd7"
+        },
+        {
+          "path": "research/salaries/gap-fill-2026-11-02/health_employees/source-review-contexts/northern-health-2016-17-p036.png",
+          "sha256": "955334a9340dff0f3d27e55dbfed9213514fab44a28856564143a1f9cb99a8a2"
+        }
+      ],
+      "independentImagePeriodOcr": {
+        "sourceKey": "northern-health-2016-17",
+        "physicalPage": 2,
+        "purpose": "first employee page/internal period and column definitions",
+        "path": "research/salaries/gap-fill-2026-11-02/reviews/health-context-ocr/northern-health-2016-17-p2.json.gzip",
+        "sha256": "9ff4d7824216d1cd08fc4bee83d5b58bfbac52142d49ce43394df3b585fc5a64",
+        "headerMarchYearEnds": [
+          "2017"
+        ],
+        "headerFiscalPairs": []
+      },
+      "periodImageCorroborationPassed": true,
+      "printedNamedControl": {
+        "physicalPage": 36,
+        "label": "TOTAL EMPLOYEES > $75,000",
+        "remuneration": 148808432,
+        "expenses": 2402583,
+        "raw": "TOTAL EMPLOYEES > $75,000                                                        $          148,808,432 $   2,402,583"
+      },
+      "literalResidualBeforeFinalPeerClosure": [
+        "2",
+        "28"
+      ],
+      "controlSelectionAddendum": false,
+      "namedControlViewingAid": {
+        "path": "research/salaries/gap-fill-2026-11-02/reviews/health-context-root/northern-health-2016-17-named-control.png",
+        "sha256": "3a14fc6c3272034602ee45abed554fb09a9f4a0c79c56db200e030ff9b9bb59b",
+        "sourceSha256": "4b814bbe0f6185c72c1b8ec1187d89126dfb6158ffe4bb04edd6029006470cfb",
+        "physicalPage": 36,
+        "dpi": 144,
+        "integerCropBox": [
+          0,
+          912,
+          1224,
+          1082
+        ],
+        "noResampling": true,
+        "purpose": "Named control and surrounding original source pixels; crop located from literal control token, not a replacement source"
+      }
+    },
+    {
+      "sourceKey": "northern-health-2015-16",
+      "sourceSha256": "b01bed9622af7a8ffbd3eac2c356b0e641af5465c01bdf6ca89544331533918e",
+      "candidateYear": "2015/16",
+      "candidateRowsBeforeFinalPeerClosure": 1331,
+      "sourceImagesPixelReplayed": [
+        {
+          "path": "research/salaries/gap-fill-2026-11-02/health_employees/source-review-contexts/northern-health-2015-16-p002.png",
+          "sha256": "6bde7315a2b7d56f8bdedcf99fe534a4c8815d86b41ecfadb4d795d77df0538c"
+        },
+        {
+          "path": "research/salaries/gap-fill-2026-11-02/health_employees/source-review-contexts/northern-health-2015-16-p031.png",
+          "sha256": "3c1ac19d4329d6e919ff310c21023e726d928a7be9f3ad058c180cfdde11ba66"
+        }
+      ],
+      "independentImagePeriodOcr": {
+        "sourceKey": "northern-health-2015-16",
+        "physicalPage": 2,
+        "purpose": "first employee page/internal period and column definitions",
+        "path": "research/salaries/gap-fill-2026-11-02/reviews/health-context-ocr/northern-health-2015-16-p2.json.gzip",
+        "sha256": "7a1423dc443f0425251e634614143f19557628d8df7f79ad7ecc0a303427df12",
+        "headerMarchYearEnds": [
+          "2016"
+        ],
+        "headerFiscalPairs": []
+      },
+      "periodImageCorroborationPassed": true,
+      "printedNamedControl": {
+        "physicalPage": 31,
+        "label": "TOTAL EMPLOYEES > $75,000",
+        "remuneration": 125639371,
+        "expenses": 2503914,
+        "raw": "TOTAL EMPLOYEES > $75,000                                                                     $        125,639,371   $   2,503,914"
+      },
+      "literalResidualBeforeFinalPeerClosure": [
+        "8",
+        "3"
+      ],
+      "controlSelectionAddendum": false,
+      "namedControlViewingAid": {
+        "path": "research/salaries/gap-fill-2026-11-02/reviews/health-context-root/northern-health-2015-16-named-control.png",
+        "sha256": "55c2c64ec340ee4e917a22b8b90d9589470ad81f14e80113a15caaff4ed59509",
+        "sourceSha256": "b01bed9622af7a8ffbd3eac2c356b0e641af5465c01bdf6ca89544331533918e",
+        "physicalPage": 31,
+        "dpi": 144,
+        "integerCropBox": [
+          0,
+          952,
+          1224,
+          1122
+        ],
+        "noResampling": true,
+        "purpose": "Named control and surrounding original source pixels; crop located from literal control token, not a replacement source"
+      }
+    },
+    {
+      "sourceKey": "northern-health-2013-14",
+      "sourceSha256": "6219b099a392c9a40d9b471ef5ce8fcebb85bcf96722bc6bcf8b99a9b5555574",
+      "candidateYear": "2013/14",
+      "candidateRowsBeforeFinalPeerClosure": 1235,
+      "sourceImagesPixelReplayed": [
+        {
+          "path": "research/salaries/gap-fill-2026-11-02/health_employees/source-review-contexts/northern-health-2013-14-p002.png",
+          "sha256": "c1ca2175f473e29e618df3baa71d1c98ef96cf8e8a67f5e512a084869c824fe9"
+        },
+        {
+          "path": "research/salaries/gap-fill-2026-11-02/health_employees/source-review-contexts/northern-health-2013-14-p024.png",
+          "sha256": "f80707f76f3e4bd7662117c54cd3ad8ebd7917902a7b80fbe609b29760e867ea"
+        }
+      ],
+      "independentImagePeriodOcr": {
+        "sourceKey": "northern-health-2013-14",
+        "physicalPage": 2,
+        "purpose": "first employee page/internal period and column definitions",
+        "path": "research/salaries/gap-fill-2026-11-02/reviews/health-context-ocr/northern-health-2013-14-p2.json.gzip",
+        "sha256": "4a67c7183252bbc1a6b25293976e8e70d558ef9571475cc7596a150eda5c56df",
+        "headerMarchYearEnds": [
+          "2014"
+        ],
+        "headerFiscalPairs": []
+      },
+      "periodImageCorroborationPassed": true,
+      "printedNamedControl": {
+        "physicalPage": 24,
+        "label": "TOTAL EMPLOYEES > $75,000",
+        "remuneration": 116033504,
+        "expenses": 3037207,
+        "raw": "TOTAL EMPLOYEES > $75,000        $    116,033,504 $     3,037,207"
+      },
+      "literalResidualBeforeFinalPeerClosure": [
+        "-2",
+        "0"
+      ],
+      "controlSelectionAddendum": false,
+      "namedControlViewingAid": {
+        "path": "research/salaries/gap-fill-2026-11-02/reviews/health-context-root/northern-health-2013-14-named-control.png",
+        "sha256": "806cb39c2cb57201b29304ec07eea8648e721082778449d5c6cf19318e33a5cd",
+        "sourceSha256": "6219b099a392c9a40d9b471ef5ce8fcebb85bcf96722bc6bcf8b99a9b5555574",
+        "physicalPage": 24,
+        "dpi": 144,
+        "integerCropBox": [
+          0,
+          775,
+          1224,
+          945
+        ],
+        "noResampling": true,
+        "purpose": "Named control and surrounding original source pixels; crop located from literal control token, not a replacement source"
+      }
+    },
+    {
+      "sourceKey": "northern-health-2012-13",
+      "sourceSha256": "1064540ecd99fc273e127121ce9e4fcd93f0b83cea81a4189141151e177302a3",
+      "candidateYear": "2012/13",
+      "candidateRowsBeforeFinalPeerClosure": 1071,
+      "sourceImagesPixelReplayed": [
+        {
+          "path": "research/salaries/gap-fill-2026-11-02/health_employees/source-review-contexts/northern-health-2012-13-p002.png",
+          "sha256": "8feb6e53b1828debf14e9d42d5247dd6d16eb0abb36fc7888a88c579f83eb779"
+        },
+        {
+          "path": "research/salaries/gap-fill-2026-11-02/health_employees/source-review-contexts/northern-health-2012-13-p021.png",
+          "sha256": "76dffb31cb4bc1fac64bfb8e1687c0816df75f6c71456de16cd8d9fbddf678c1"
+        }
+      ],
+      "independentImagePeriodOcr": {
+        "sourceKey": "northern-health-2012-13",
+        "physicalPage": 2,
+        "purpose": "first employee page/internal period and column definitions",
+        "path": "research/salaries/gap-fill-2026-11-02/reviews/health-context-ocr/northern-health-2012-13-p2.json.gzip",
+        "sha256": "9be65c1a44b2d975cb4e4d8c688e813e79bfcc882fa144d0659761e082d540f4",
+        "headerMarchYearEnds": [
+          "2013",
+          "2013"
+        ],
+        "headerFiscalPairs": []
+      },
+      "periodImageCorroborationPassed": true,
+      "printedNamedControl": {
+        "physicalPage": 21,
+        "label": "TOTAL EMPLOYEES > $75,000",
+        "remuneration": 98942650,
+        "expenses": 3028967,
+        "raw": "TOTAL EMPLOYEES > $75,000        $       98,942,650   $   3,028,967"
+      },
+      "literalResidualBeforeFinalPeerClosure": [
+        "23",
+        "19"
+      ],
+      "controlSelectionAddendum": false,
+      "namedControlViewingAid": {
+        "path": "research/salaries/gap-fill-2026-11-02/reviews/health-context-root/northern-health-2012-13-named-control.png",
+        "sha256": "914072e3901b710f4fea1e6577c1fd75ee58aa9a870e59e13893e5a1ebbd4d03",
+        "sourceSha256": "1064540ecd99fc273e127121ce9e4fcd93f0b83cea81a4189141151e177302a3",
+        "physicalPage": 21,
+        "dpi": 144,
+        "integerCropBox": [
+          0,
+          698,
+          1224,
+          868
+        ],
+        "noResampling": true,
+        "purpose": "Named control and surrounding original source pixels; crop located from literal control token, not a replacement source"
+      }
+    },
+    {
+      "sourceKey": "northern-health-2011-12",
+      "sourceSha256": "7099788a2fcfa9ccfeb0ef35874a46f1ac90e8fd11d83f7bf432609b64886c12",
+      "candidateYear": "2011/12",
+      "candidateRowsBeforeFinalPeerClosure": 1034,
+      "sourceImagesPixelReplayed": [
+        {
+          "path": "research/salaries/gap-fill-2026-11-02/health_employees/source-review-contexts/northern-health-2011-12-p002.png",
+          "sha256": "71870f3e55d9889a9ded710b1ba51af1a25d40bbac3d9f1c31443b96a56f2562"
+        },
+        {
+          "path": "research/salaries/gap-fill-2026-11-02/health_employees/source-review-contexts/northern-health-2011-12-p022.png",
+          "sha256": "701d6c77328b451aa060f2fbf1215eacc087bc37c7c57885da7093c503a7e8ab"
+        }
+      ],
+      "independentImagePeriodOcr": {
+        "sourceKey": "northern-health-2011-12",
+        "physicalPage": 2,
+        "purpose": "first employee page/internal period and column definitions",
+        "path": "research/salaries/gap-fill-2026-11-02/reviews/health-context-ocr/northern-health-2011-12-p2.json.gzip",
+        "sha256": "43db963715dd5bb5493f588a9ec83845cbbc4e68e5b7434b3ca71b1290f266ad",
+        "headerMarchYearEnds": [
+          "2012",
+          "2012"
+        ],
+        "headerFiscalPairs": []
+      },
+      "periodImageCorroborationPassed": true,
+      "printedNamedControl": {
+        "physicalPage": 22,
+        "label": "TOTAL EMPLOYEES > $75,000",
+        "remuneration": 95745073,
+        "expenses": 3090505,
+        "raw": "  TOTAL EMPLOYEES > $75,000                  95,745,073    3,090,505"
+      },
+      "literalResidualBeforeFinalPeerClosure": [
+        "9",
+        "4"
+      ],
+      "controlSelectionAddendum": false,
+      "namedControlViewingAid": {
+        "path": "research/salaries/gap-fill-2026-11-02/reviews/health-context-root/northern-health-2011-12-named-control.png",
+        "sha256": "af3a6d04a3f81ef94bed41d43a06b372d0aba528de438f3cdb89ce831610d6f9",
+        "sourceSha256": "7099788a2fcfa9ccfeb0ef35874a46f1ac90e8fd11d83f7bf432609b64886c12",
+        "physicalPage": 22,
+        "dpi": 144,
+        "integerCropBox": [
+          0,
+          287,
+          1224,
+          457
+        ],
+        "noResampling": true,
+        "purpose": "Named control and surrounding original source pixels; crop located from literal control token, not a replacement source"
+      }
+    },
+    {
+      "sourceKey": "northern-health-2010-11",
+      "sourceSha256": "28178fe258df8884c8c21312a36c033b6ac6e65d92b92645f13a0cef2ad6d287",
+      "candidateYear": "2010/11",
+      "candidateRowsBeforeFinalPeerClosure": 1125,
+      "sourceImagesPixelReplayed": [
+        {
+          "path": "research/salaries/gap-fill-2026-11-02/health_employees/source-review-contexts/northern-health-2010-11-p002.png",
+          "sha256": "5aaba5ace1d68305003b281b0bcaa9256551f631f29381d9971de0780e430525"
+        },
+        {
+          "path": "research/salaries/gap-fill-2026-11-02/health_employees/source-review-contexts/northern-health-2010-11-p027.png",
+          "sha256": "14bb3f9d8f76c9f8153f2538a679ac8a2b6278486c2d00db24e993218250f613"
+        }
+      ],
+      "independentImagePeriodOcr": {
+        "sourceKey": "northern-health-2010-11",
+        "physicalPage": 2,
+        "purpose": "first employee page/internal period and column definitions",
+        "path": "research/salaries/gap-fill-2026-11-02/reviews/health-context-ocr/northern-health-2010-11-p2.json.gzip",
+        "sha256": "153982c0d02e9fa9730aa2a06d84398f6a7e69cc142934bf06cf514967ea4632",
+        "headerMarchYearEnds": [
+          "2011",
+          "2011"
+        ],
+        "headerFiscalPairs": []
+      },
+      "periodImageCorroborationPassed": true,
+      "printedNamedControl": {
+        "physicalPage": 27,
+        "label": "TOTAL EMPLOYEES > $75,000",
+        "remuneration": 104042072,
+        "expenses": 2992442,
+        "raw": "TOTAL EMPLOYEES > $75,000                   104,042,072    2,992,442"
+      },
+      "literalResidualBeforeFinalPeerClosure": [
+        "14",
+        "-1"
+      ],
+      "controlSelectionAddendum": false,
+      "namedControlViewingAid": {
+        "path": "research/salaries/gap-fill-2026-11-02/reviews/health-context-root/northern-health-2010-11-named-control.png",
+        "sha256": "c273ed2ad36849eb23b791bce58469a0fb335661329847ae46fc261103ef1176",
+        "sourceSha256": "28178fe258df8884c8c21312a36c033b6ac6e65d92b92645f13a0cef2ad6d287",
+        "physicalPage": 27,
+        "dpi": 144,
+        "integerCropBox": [
+          0,
+          1025,
+          1224,
+          1195
+        ],
+        "noResampling": true,
+        "purpose": "Named control and surrounding original source pixels; crop located from literal control token, not a replacement source"
+      }
+    },
+    {
+      "sourceKey": "northern-health-2009-10",
+      "sourceSha256": "e99fa7e0a98cd8cbe3f51f1c37220850895f45b87952a3d66e63f90681c5dfe7",
+      "candidateYear": "2009/10",
+      "candidateRowsBeforeFinalPeerClosure": 921,
+      "sourceImagesPixelReplayed": [
+        {
+          "path": "research/salaries/gap-fill-2026-11-02/health_employees/source-review-contexts/northern-health-2009-10-p002.png",
+          "sha256": "061649a4344dc4d5b4bade622de147a6045a3157fe5e2c5191dec3a492d29ae1"
+        },
+        {
+          "path": "research/salaries/gap-fill-2026-11-02/health_employees/source-review-contexts/northern-health-2009-10-p021.png",
+          "sha256": "e5cd4a2e4d15bcf29817ba116581e0df45433a73ef4534f5fa97b7b10ffc3969"
+        }
+      ],
+      "independentImagePeriodOcr": {
+        "sourceKey": "northern-health-2009-10",
+        "physicalPage": 2,
+        "purpose": "first employee page/internal period and column definitions",
+        "path": "research/salaries/gap-fill-2026-11-02/reviews/health-context-ocr/northern-health-2009-10-p2.json.gzip",
+        "sha256": "03fd9d84ef3043ec93681580459319ec1ee142467caeb53fac7c15038079c67a",
+        "headerMarchYearEnds": [
+          "2010",
+          "2010"
+        ],
+        "headerFiscalPairs": []
+      },
+      "periodImageCorroborationPassed": true,
+      "printedNamedControl": {
+        "physicalPage": 21,
+        "label": "TOTAL EMPLOYEES > $75,000",
+        "remuneration": 83806925,
+        "expenses": 2633299,
+        "raw": "TOTAL EMPLOYEES > $75,000                    83,806,925      2,633,299"
+      },
+      "literalResidualBeforeFinalPeerClosure": [
+        "13",
+        "24"
+      ],
+      "controlSelectionAddendum": false,
+      "namedControlViewingAid": {
+        "path": "research/salaries/gap-fill-2026-11-02/reviews/health-context-root/northern-health-2009-10-named-control.png",
+        "sha256": "4918983d007d712eb82adf556227f2b4dff3e5078a4d1f2bb8424552441e4d25",
+        "sourceSha256": "e99fa7e0a98cd8cbe3f51f1c37220850895f45b87952a3d66e63f90681c5dfe7",
+        "physicalPage": 21,
+        "dpi": 144,
+        "integerCropBox": [
+          0,
+          297,
+          1224,
+          467
+        ],
+        "noResampling": true,
+        "purpose": "Named control and surrounding original source pixels; crop located from literal control token, not a replacement source"
+      }
+    },
+    {
+      "sourceKey": "northern-health-2008-09",
+      "sourceSha256": "bb3a8c67ab5dea860e78ea105adb29176d9d32a774169f713d4ebddc7e785010",
+      "candidateYear": "2008/09",
+      "candidateRowsBeforeFinalPeerClosure": 787,
+      "sourceImagesPixelReplayed": [
+        {
+          "path": "research/salaries/gap-fill-2026-11-02/health_employees/source-review-contexts/northern-health-2008-09-p002.png",
+          "sha256": "a3ba3a7b1ba890606eeabc163c836a45626682d4bcc9143490800dd03082ef30"
+        },
+        {
+          "path": "research/salaries/gap-fill-2026-11-02/health_employees/source-review-contexts/northern-health-2008-09-p018.png",
+          "sha256": "72072866cfcf4a86addf4d39374e861f9836f4e8c4607a4426cd9aa48e1b116d"
+        }
+      ],
+      "independentImagePeriodOcr": {
+        "sourceKey": "northern-health-2008-09",
+        "physicalPage": 2,
+        "purpose": "first employee page/internal period and column definitions",
+        "path": "research/salaries/gap-fill-2026-11-02/reviews/health-context-ocr/northern-health-2008-09-p2.json.gzip",
+        "sha256": "f6b9dd9f564fb52a134bac722537eb53bdb42f12022f9a31e6a645928903ccd8",
+        "headerMarchYearEnds": [
+          "2009",
+          "2009"
+        ],
+        "headerFiscalPairs": []
+      },
+      "periodImageCorroborationPassed": true,
+      "printedNamedControl": {
+        "physicalPage": 18,
+        "label": "TOTAL EMPLOYEES > $75,000",
+        "remuneration": 71249039,
+        "expenses": 2918320,
+        "raw": "TOTAL EMPLOYEES > $75,000                    71,249,039    2,918,320"
+      },
+      "literalResidualBeforeFinalPeerClosure": [
+        "15",
+        "6"
+      ],
+      "controlSelectionAddendum": false,
+      "namedControlViewingAid": {
+        "path": "research/salaries/gap-fill-2026-11-02/reviews/health-context-root/northern-health-2008-09-named-control.png",
+        "sha256": "1969d4540ae5fe1c59cbcc06f9198aece463525ff505f89575e4c1aba658a239",
+        "sourceSha256": "bb3a8c67ab5dea860e78ea105adb29176d9d32a774169f713d4ebddc7e785010",
+        "physicalPage": 18,
+        "dpi": 144,
+        "integerCropBox": [
+          0,
+          689,
+          1224,
+          859
+        ],
+        "noResampling": true,
+        "purpose": "Named control and surrounding original source pixels; crop located from literal control token, not a replacement source"
+      }
+    },
+    {
+      "sourceKey": "providence-health-care-2024-25",
+      "sourceSha256": "37b0b91d65c1d89ecdfd7f148fb9097092ee3554d186c36c7fb63cfb0132fa44",
+      "candidateYear": "2024/25",
+      "candidateRowsBeforeFinalPeerClosure": 3841,
+      "sourceImagesPixelReplayed": [
+        {
+          "path": "research/salaries/gap-fill-2026-11-02/health_employees/source-review-contexts/providence-health-care-2024-25-p057.png",
+          "sha256": "f943b3caee56874fc3afc2ba2692fe2417cf9f0aa28fcdc6a73f8935c7c68b22"
+        },
+        {
+          "path": "research/salaries/gap-fill-2026-11-02/health_employees/source-review-contexts/providence-health-care-2024-25-p199.png",
+          "sha256": "a0e89cf1c118c02390c944e1a14d61a240b31895bf4a11b9925e070f20c2620a"
+        }
+      ],
+      "independentImagePeriodOcr": {
+        "sourceKey": "providence-health-care-2024-25",
+        "physicalPage": 57,
+        "purpose": "first employee page/internal period and column definitions",
+        "path": "research/salaries/gap-fill-2026-11-02/reviews/health-context-ocr/providence-health-care-2024-25-p57.json.gzip",
+        "sha256": "f4ce2afa9bf0c7b0e24b9078356e16b095acc02cdc5e4e65e8f827a435d4cfc0",
+        "headerMarchYearEnds": [
+          "2025"
+        ],
+        "headerFiscalPairs": []
+      },
+      "periodImageCorroborationPassed": true,
+      "printedNamedControl": {
+        "physicalPage": 199,
+        "label": "Total Salaries Greater than $75,000",
+        "remuneration": 440111299,
+        "expenses": 4375267,
+        "raw": " Total Salaries Greater than $75,000                           440,111,299                 4,375,267"
+      },
+      "literalResidualBeforeFinalPeerClosure": [
+        "0",
+        "0"
+      ],
+      "controlSelectionAddendum": false,
+      "namedControlViewingAid": {
+        "path": "research/salaries/gap-fill-2026-11-02/reviews/health-context-root/providence-health-care-2024-25-named-control.png",
+        "sha256": "50250cb2e6a65613a347e11555081cbe90ce89869b387a5a9ee1428449fa5554",
+        "sourceSha256": "37b0b91d65c1d89ecdfd7f148fb9097092ee3554d186c36c7fb63cfb0132fa44",
+        "physicalPage": 199,
+        "dpi": 144,
+        "integerCropBox": [
+          0,
+          817,
+          1224,
+          987
+        ],
+        "noResampling": true,
+        "purpose": "Named control and surrounding original source pixels; crop located from literal control token, not a replacement source"
+      }
+    },
+    {
+      "sourceKey": "providence-health-care-2022-23",
+      "sourceSha256": "2dc3e947deae74996169840041bb36e5b5e44b82bfa44bc720f850e2f8f5359e",
+      "candidateYear": "2022/23",
+      "candidateRowsBeforeFinalPeerClosure": 2609,
+      "sourceImagesPixelReplayed": [
+        {
+          "path": "research/salaries/gap-fill-2026-11-02/health_employees/source-review-contexts/providence-health-care-2022-23-p058.png",
+          "sha256": "2d991877b7b7818c8d057dd22abd9c757f8682d2676c2f6146954999b2456b0a"
+        },
+        {
+          "path": "research/salaries/gap-fill-2026-11-02/health_employees/source-review-contexts/providence-health-care-2022-23-p188.png",
+          "sha256": "2fb0d33084a4b4f452b9241cf402037d9222812edb981ae50b26c9ef4ddd2859"
+        }
+      ],
+      "independentImagePeriodOcr": {
+        "sourceKey": "providence-health-care-2022-23",
+        "physicalPage": 58,
+        "purpose": "first employee page/internal period and column definitions",
+        "path": "research/salaries/gap-fill-2026-11-02/reviews/health-context-ocr/providence-health-care-2022-23-p58.json.gzip",
+        "sha256": "7c920dcb8df7de88932817c0b6c16ccf249467e8a9fba10ac3996d4188092425",
+        "headerMarchYearEnds": [
+          "2023"
+        ],
+        "headerFiscalPairs": []
+      },
+      "periodImageCorroborationPassed": true,
+      "printedNamedControl": {
+        "physicalPage": 188,
+        "label": "Total Salaries Greater than $75,000",
+        "remuneration": 271920175,
+        "expenses": 1919909,
+        "raw": " Total Salaries Greater than $75,000                           271,920,175                 1,919,909"
+      },
+      "literalResidualBeforeFinalPeerClosure": [
+        "0",
+        "0"
+      ],
+      "controlSelectionAddendum": false,
+      "namedControlViewingAid": {
+        "path": "research/salaries/gap-fill-2026-11-02/reviews/health-context-root/providence-health-care-2022-23-named-control.png",
+        "sha256": "189f59f86a896edd90047ddf2b61a4b4d99cfb41ae4e07698c7089a4760212b7",
+        "sourceSha256": "2dc3e947deae74996169840041bb36e5b5e44b82bfa44bc720f850e2f8f5359e",
+        "physicalPage": 188,
+        "dpi": 144,
+        "integerCropBox": [
+          0,
+          890,
+          1224,
+          1060
+        ],
+        "noResampling": true,
+        "purpose": "Named control and surrounding original source pixels; crop located from literal control token, not a replacement source"
+      }
+    },
+    {
+      "sourceKey": "providence-health-care-2021-22",
+      "sourceSha256": "43b42a53b47a9de0aa18ab3e2ad14c28749f25250c77938a41200ab284b74bda",
+      "candidateYear": "2021/22",
+      "candidateRowsBeforeFinalPeerClosure": 2464,
+      "sourceImagesPixelReplayed": [
+        {
+          "path": "research/salaries/gap-fill-2026-11-02/health_employees/source-review-contexts/providence-health-care-2021-22-p057.png",
+          "sha256": "30d5a1210af9beefe8ddd38f01eb152d0ca10861ba5a212df8f815377ea238c2"
+        },
+        {
+          "path": "research/salaries/gap-fill-2026-11-02/health_employees/source-review-contexts/providence-health-care-2021-22-p180.png",
+          "sha256": "4cb7562e63c45c7bc0d770f96e1f8e7e83d92ff21e7f0ebe5a0f3f29aa187a7a"
+        }
+      ],
+      "independentImagePeriodOcr": {
+        "sourceKey": "providence-health-care-2021-22",
+        "physicalPage": 57,
+        "purpose": "first employee page/internal period and column definitions",
+        "path": "research/salaries/gap-fill-2026-11-02/reviews/health-context-ocr/providence-health-care-2021-22-p57.json.gzip",
+        "sha256": "12920916cb474088178d0a0a0681a468681c72c170b642af1b92c25d200b85c4",
+        "headerMarchYearEnds": [
+          "2022"
+        ],
+        "headerFiscalPairs": []
+      },
+      "periodImageCorroborationPassed": true,
+      "printedNamedControl": {
+        "physicalPage": 180,
+        "label": "Total Salaries Greater than $75,000",
+        "remuneration": 254193348,
+        "expenses": 1286688,
+        "raw": " Total Salaries Greater than $75,000                           254,193,348                 1,286,688"
+      },
+      "literalResidualBeforeFinalPeerClosure": [
+        "0",
+        "0"
+      ],
+      "controlSelectionAddendum": false,
+      "namedControlViewingAid": {
+        "path": "research/salaries/gap-fill-2026-11-02/reviews/health-context-root/providence-health-care-2021-22-named-control.png",
+        "sha256": "ca37de0574c5356c0dc1ba825d35fcbdc0a23b9a7765bb26a3a80c4a357780d4",
+        "sourceSha256": "43b42a53b47a9de0aa18ab3e2ad14c28749f25250c77938a41200ab284b74bda",
+        "physicalPage": 180,
+        "dpi": 144,
+        "integerCropBox": [
+          0,
+          637,
+          1224,
+          807
+        ],
+        "noResampling": true,
+        "purpose": "Named control and surrounding original source pixels; crop located from literal control token, not a replacement source"
+      }
+    },
+    {
+      "sourceKey": "providence-health-care-2020-21",
+      "sourceSha256": "5fcf93ee1f3acedeb30c1033268aea2faa0f55d945ce9c138acc42910b2635b4",
+      "candidateYear": "2020/21",
+      "candidateRowsBeforeFinalPeerClosure": 2396,
+      "sourceImagesPixelReplayed": [
+        {
+          "path": "research/salaries/gap-fill-2026-11-02/health_employees/source-review-contexts/providence-health-care-2020-21-p058.png",
+          "sha256": "a2c49d59ca42e64280b6ed01941b2134217dc758a919c227b9e34bf69666c13a"
+        },
+        {
+          "path": "research/salaries/gap-fill-2026-11-02/health_employees/source-review-contexts/providence-health-care-2020-21-p177.png",
+          "sha256": "514b27485b497d4391b76287f251df066da231e7b4e7c392e412ad337fb6fbc2"
+        }
+      ],
+      "independentImagePeriodOcr": {
+        "sourceKey": "providence-health-care-2020-21",
+        "physicalPage": 58,
+        "purpose": "first employee page/internal period and column definitions",
+        "path": "research/salaries/gap-fill-2026-11-02/reviews/health-context-ocr/providence-health-care-2020-21-p58.json.gzip",
+        "sha256": "e628d65ab636643dd12f63cc8b976ff59a45d747bb42e555732870583d38e09b",
+        "headerMarchYearEnds": [
+          "2021"
+        ],
+        "headerFiscalPairs": []
+      },
+      "periodImageCorroborationPassed": true,
+      "printedNamedControl": {
+        "physicalPage": 177,
+        "label": "Total Salaries Greater than $75,000",
+        "remuneration": 244725079,
+        "expenses": 1518622,
+        "raw": "Total Salaries Greater than $75,000                244,725,079    1,518,622"
+      },
+      "literalResidualBeforeFinalPeerClosure": [
+        "0",
+        "0"
+      ],
+      "controlSelectionAddendum": false,
+      "namedControlViewingAid": {
+        "path": "research/salaries/gap-fill-2026-11-02/reviews/health-context-root/providence-health-care-2020-21-named-control.png",
+        "sha256": "405e563d25d09ffe1e04d00ac9478fdacb65393d7c2b99a8e177a911ef016343",
+        "sourceSha256": "5fcf93ee1f3acedeb30c1033268aea2faa0f55d945ce9c138acc42910b2635b4",
+        "physicalPage": 177,
+        "dpi": 144,
+        "integerCropBox": [
+          0,
+          1251,
+          1224,
+          1421
+        ],
+        "noResampling": true,
+        "purpose": "Named control and surrounding original source pixels; crop located from literal control token, not a replacement source"
+      }
+    },
+    {
+      "sourceKey": "vancouver-coastal-health-2024-25",
+      "sourceSha256": "b7e3149f4ba3f2c44a19953e405fce7af322a0908bd49c15ed1b7ce5b3db7041",
+      "candidateYear": "2024/25",
+      "candidateRowsBeforeFinalPeerClosure": 11881,
+      "sourceImagesPixelReplayed": [
+        {
+          "path": "research/salaries/gap-fill-2026-11-02/health_employees/source-review-contexts/vancouver-coastal-health-2024-25-p004.png",
+          "sha256": "8016839934b09f43666ec186a538d7453cb8db04f38a134dcea7cf2b1f23aad6"
+        },
+        {
+          "path": "research/salaries/gap-fill-2026-11-02/health_employees/source-review-contexts/vancouver-coastal-health-2024-25-p224.png",
+          "sha256": "a7552c180a5b3fe6eb9d81bae0eb60f42bb0abd98bd5d189b1331c9bd9d13847"
+        }
+      ],
+      "independentImagePeriodOcr": {
+        "sourceKey": "vancouver-coastal-health-2024-25",
+        "physicalPage": 4,
+        "purpose": "first employee page/internal period and column definitions",
+        "path": "research/salaries/gap-fill-2026-11-02/reviews/health-context-ocr/vancouver-coastal-health-2024-25-p4.json.gzip",
+        "sha256": "5f4388922341d0e4ac8067efd921c67d9f6d522c3e094591860c00b9130ff139",
+        "headerMarchYearEnds": [
+          "2025"
+        ],
+        "headerFiscalPairs": []
+      },
+      "periodImageCorroborationPassed": true,
+      "printedNamedControl": {
+        "physicalPage": 224,
+        "label": "TOTAL REMUNERATION OVER $75,000",
+        "remuneration": 1373799350,
+        "expenses": 15034449,
+        "raw": "TOTAL REMUNERATION OVER $75,000                                                         1,373,799,350   15,034,449"
+      },
+      "literalResidualBeforeFinalPeerClosure": [
+        "50",
+        "975"
+      ],
+      "controlSelectionAddendum": false,
+      "namedControlViewingAid": {
+        "path": "research/salaries/gap-fill-2026-11-02/reviews/health-context-root/vancouver-coastal-health-2024-25-named-control.png",
+        "sha256": "0b90ed29df5a228de87d51b83a3e3917eaac8152a8ea84afdf4a632fda5d1d68",
+        "sourceSha256": "b7e3149f4ba3f2c44a19953e405fce7af322a0908bd49c15ed1b7ce5b3db7041",
+        "physicalPage": 224,
+        "dpi": 144,
+        "integerCropBox": [
+          0,
+          344,
+          1224,
+          514
+        ],
+        "noResampling": true,
+        "purpose": "Named control and surrounding original source pixels; crop located from literal control token, not a replacement source"
+      }
+    },
+    {
+      "sourceKey": "vancouver-coastal-health-2023-24",
+      "sourceSha256": "34622138b85e091d2d25be847a09cefe054367ad6838fbd2c2dfc41fe8b0d63e",
+      "candidateYear": "2023/24",
+      "candidateRowsBeforeFinalPeerClosure": 11462,
+      "sourceImagesPixelReplayed": [
+        {
+          "path": "research/salaries/gap-fill-2026-11-02/health_employees/source-review-contexts/vancouver-coastal-health-2023-24-p004.png",
+          "sha256": "f8babb7c629e98cf235d381a66da39a721db1676d0fb3a8f1558a21a329fd215"
+        },
+        {
+          "path": "research/salaries/gap-fill-2026-11-02/health_employees/source-review-contexts/vancouver-coastal-health-2023-24-p212.png",
+          "sha256": "8e90471044471b2535506c68132665e0358487c5a9388888ecd1252d15aaa2c9"
+        }
+      ],
+      "independentImagePeriodOcr": {
+        "sourceKey": "vancouver-coastal-health-2023-24",
+        "physicalPage": 4,
+        "purpose": "first employee page/internal period and column definitions",
+        "path": "research/salaries/gap-fill-2026-11-02/reviews/health-context-ocr/vancouver-coastal-health-2023-24-p4.json.gzip",
+        "sha256": "88eb449cc92abb17bf91914216578d68f69ce0d562148ae6f8c68b71d577b18a",
+        "headerMarchYearEnds": [
+          "2024"
+        ],
+        "headerFiscalPairs": []
+      },
+      "periodImageCorroborationPassed": true,
+      "printedNamedControl": {
+        "physicalPage": 212,
+        "label": "TOTAL REMUNERATION OVER $75,000",
+        "remuneration": 1294386618,
+        "expenses": 9007583,
+        "raw": "TOTAL REMUNERATION OVER $75,000                                                         1,294,386,618    9,007,583"
+      },
+      "literalResidualBeforeFinalPeerClosure": [
+        "28",
+        "26"
+      ],
+      "controlSelectionAddendum": false,
+      "namedControlViewingAid": {
+        "path": "research/salaries/gap-fill-2026-11-02/reviews/health-context-root/vancouver-coastal-health-2023-24-named-control.png",
+        "sha256": "b2a7fce62dab2d8885fa99e7e8d9a6d8c91288d5cc433e77e197956ac13e9ddc",
+        "sourceSha256": "34622138b85e091d2d25be847a09cefe054367ad6838fbd2c2dfc41fe8b0d63e",
+        "physicalPage": 212,
+        "dpi": 144,
+        "integerCropBox": [
+          0,
+          1045,
+          1530,
+          1215
+        ],
+        "noResampling": true,
+        "purpose": "Named control and surrounding original source pixels; crop located from literal control token, not a replacement source"
+      }
+    },
+    {
+      "sourceKey": "vancouver-coastal-health-2022-23",
+      "sourceSha256": "62c60426df91d03ec863981286403870d4e74f75bf1afbc7f92e2a74594c00b5",
+      "candidateYear": "2022/23",
+      "candidateRowsBeforeFinalPeerClosure": 8756,
+      "sourceImagesPixelReplayed": [
+        {
+          "path": "research/salaries/gap-fill-2026-11-02/health_employees/source-review-contexts/vancouver-coastal-health-2022-23-p004.png",
+          "sha256": "dca6d7580ed806da7ecd2e6591d8e168549babfafe832b822f45026aff218630"
+        },
+        {
+          "path": "research/salaries/gap-fill-2026-11-02/health_employees/source-review-contexts/vancouver-coastal-health-2022-23-p157.png",
+          "sha256": "f7726f8b2da9ae7d572f46f9a7a4707476a80a6f3f3694f576e4afdef71c7556"
+        }
+      ],
+      "independentImagePeriodOcr": {
+        "sourceKey": "vancouver-coastal-health-2022-23",
+        "physicalPage": 4,
+        "purpose": "first employee page/internal period and column definitions",
+        "path": "research/salaries/gap-fill-2026-11-02/reviews/health-context-ocr/vancouver-coastal-health-2022-23-p4.json.gzip",
+        "sha256": "b660273416b0649de0263f044a3347b29ff0c7cc8e668254740ad9d6d753d50f",
+        "headerMarchYearEnds": [
+          "2023"
+        ],
+        "headerFiscalPairs": []
+      },
+      "periodImageCorroborationPassed": true,
+      "printedNamedControl": {
+        "physicalPage": 157,
+        "label": "TOTAL REMUNERATION OVER $75,000",
+        "remuneration": 899065629,
+        "expenses": 6319571,
+        "raw": "TOTAL REMUNERATION OVER $75,000                                                           899,065,629    6,319,571"
+      },
+      "literalResidualBeforeFinalPeerClosure": [
+        "19",
+        "53"
+      ],
+      "controlSelectionAddendum": false,
+      "namedControlViewingAid": {
+        "path": "research/salaries/gap-fill-2026-11-02/reviews/health-context-root/vancouver-coastal-health-2022-23-named-control.png",
+        "sha256": "e2294d14f1463dde348d36740d489783222a22478454c624c7f337105c4d6cc4",
+        "sourceSha256": "62c60426df91d03ec863981286403870d4e74f75bf1afbc7f92e2a74594c00b5",
+        "physicalPage": 157,
+        "dpi": 144,
+        "integerCropBox": [
+          0,
+          1094,
+          1224,
+          1264
+        ],
+        "noResampling": true,
+        "purpose": "Named control and surrounding original source pixels; crop located from literal control token, not a replacement source"
+      }
+    },
+    {
+      "sourceKey": "vancouver-coastal-health-2021-22",
+      "sourceSha256": "b249e364b1da6fb3b59700427c80a677d84565add22f9b8ea0c9ca2e1b1b72e7",
+      "candidateYear": "2021/22",
+      "candidateRowsBeforeFinalPeerClosure": 8076,
+      "sourceImagesPixelReplayed": [
+        {
+          "path": "research/salaries/gap-fill-2026-11-02/health_employees/source-review-contexts/vancouver-coastal-health-2021-22-p004.png",
+          "sha256": "52588c60608a9ed6a20095d5faddf3e07b1861a730cb46bedd6827c095587930"
+        },
+        {
+          "path": "research/salaries/gap-fill-2026-11-02/health_employees/source-review-contexts/vancouver-coastal-health-2021-22-p162.png",
+          "sha256": "03fecfb6a54924e6cf44cd03be41b6c694e9d8d7e529c8e3417b2dcc605a61de"
+        }
+      ],
+      "independentImagePeriodOcr": {
+        "sourceKey": "vancouver-coastal-health-2021-22",
+        "physicalPage": 4,
+        "purpose": "first employee page/internal period and column definitions",
+        "path": "research/salaries/gap-fill-2026-11-02/reviews/health-context-ocr/vancouver-coastal-health-2021-22-p4.json.gzip",
+        "sha256": "f9b8564543218a37b805944271e0907bc9749eb9002a1032ab509e83b9e7c1be",
+        "headerMarchYearEnds": [
+          "2022"
+        ],
+        "headerFiscalPairs": []
+      },
+      "periodImageCorroborationPassed": true,
+      "printedNamedControl": {
+        "physicalPage": 162,
+        "label": "TOTAL REMUNERATION OVER $75,000",
+        "remuneration": 821541254,
+        "expenses": 4263960,
+        "raw": "TOTAL REMUNERATION OVER $75,000                                              821,541,254       4,263,960"
+      },
+      "literalResidualBeforeFinalPeerClosure": [
+        "-24",
+        "50"
+      ],
+      "controlSelectionAddendum": false,
+      "namedControlViewingAid": {
+        "path": "research/salaries/gap-fill-2026-11-02/reviews/health-context-root/vancouver-coastal-health-2021-22-named-control.png",
+        "sha256": "031c34bc55aa6671c84d950f3e6f5640cf2802fd86dfd6e2684db86f29fb13a3",
+        "sourceSha256": "b249e364b1da6fb3b59700427c80a677d84565add22f9b8ea0c9ca2e1b1b72e7",
+        "physicalPage": 162,
+        "dpi": 144,
+        "integerCropBox": [
+          0,
+          754,
+          1224,
+          924
+        ],
+        "noResampling": true,
+        "purpose": "Named control and surrounding original source pixels; crop located from literal control token, not a replacement source"
+      }
+    },
+    {
+      "sourceKey": "vancouver-coastal-health-2019-20",
+      "sourceSha256": "dd5b76799149b87e76008eed4149a3a0790001c3c9ce23093a67c1bc1b5bc3f6",
+      "candidateYear": "2019/20",
+      "candidateRowsBeforeFinalPeerClosure": 6246,
+      "sourceImagesPixelReplayed": [
+        {
+          "path": "research/salaries/gap-fill-2026-11-02/health_employees/source-review-contexts/vancouver-coastal-health-2019-20-p004.png",
+          "sha256": "5775e1e0d2b41bbca7f70a1f535fc56d849a2a49fc971cc61b0ff10496b21560"
+        },
+        {
+          "path": "research/salaries/gap-fill-2026-11-02/health_employees/source-review-contexts/vancouver-coastal-health-2019-20-p131.png",
+          "sha256": "583e0960cec02f41f9879cde2aad8998b7d22a447d2b069b118e23a6f937a031"
+        }
+      ],
+      "independentImagePeriodOcr": {
+        "sourceKey": "vancouver-coastal-health-2019-20",
+        "physicalPage": 4,
+        "purpose": "first employee page/internal period and column definitions",
+        "path": "research/salaries/gap-fill-2026-11-02/reviews/health-context-ocr/vancouver-coastal-health-2019-20-p4.json.gzip",
+        "sha256": "12ae5f3b34ade520d7092ee00c671eff401649d70838c65d7101dcec8a7654a2",
+        "headerMarchYearEnds": [
+          "2020"
+        ],
+        "headerFiscalPairs": []
+      },
+      "periodImageCorroborationPassed": true,
+      "printedNamedControl": {
+        "physicalPage": 131,
+        "label": "TOTAL REMUNERATION OVER $75,000",
+        "remuneration": 605289411,
+        "expenses": 4965783,
+        "raw": "TOTAL REMUNERATION OVER $75,000                                                    605,289,411     4,965,783"
+      },
+      "literalResidualBeforeFinalPeerClosure": [
+        "60",
+        "22"
+      ],
+      "controlSelectionAddendum": false,
+      "namedControlViewingAid": {
+        "path": "research/salaries/gap-fill-2026-11-02/reviews/health-context-root/vancouver-coastal-health-2019-20-named-control.png",
+        "sha256": "d26b63c4667ba9037dfd829e9c19b2bff5ebc0e2abd43a54863d2730c7d9116e",
+        "sourceSha256": "dd5b76799149b87e76008eed4149a3a0790001c3c9ce23093a67c1bc1b5bc3f6",
+        "physicalPage": 131,
+        "dpi": 144,
+        "integerCropBox": [
+          0,
+          886,
+          1224,
+          1056
+        ],
+        "noResampling": true,
+        "purpose": "Named control and surrounding original source pixels; crop located from literal control token, not a replacement source"
+      }
+    },
+    {
+      "sourceKey": "vancouver-coastal-health-2018-19",
+      "sourceSha256": "a9de23592e9b7a307992d9c23ce20e15ecdb1a54b1cf1dfb93de221225e41dd0",
+      "candidateYear": "2018/19",
+      "candidateRowsBeforeFinalPeerClosure": 5572,
+      "sourceImagesPixelReplayed": [
+        {
+          "path": "research/salaries/gap-fill-2026-11-02/health_employees/source-review-contexts/vancouver-coastal-health-2018-19-p005.png",
+          "sha256": "c157008f3ec4bc90f64ea56d34037f20859aab5a0be5b652eb229a56e281be4d"
+        },
+        {
+          "path": "research/salaries/gap-fill-2026-11-02/health_employees/source-review-contexts/vancouver-coastal-health-2018-19-p108.png",
+          "sha256": "02e7c47c102cf0563ec75aaada5e044d8e75d3a5fcec466b618db8ec202128c9"
+        }
+      ],
+      "independentImagePeriodOcr": {
+        "sourceKey": "vancouver-coastal-health-2018-19",
+        "physicalPage": 5,
+        "purpose": "first employee page/internal period and column definitions",
+        "path": "research/salaries/gap-fill-2026-11-02/reviews/health-context-ocr/vancouver-coastal-health-2018-19-p5.json.gzip",
+        "sha256": "3fcc7a91b84cadf4d9dee2b0c74e5e5aaa5e34a8349c94c3a33d9b2908b51bd8",
+        "headerMarchYearEnds": [
+          "2019"
+        ],
+        "headerFiscalPairs": []
+      },
+      "periodImageCorroborationPassed": true,
+      "printedNamedControl": {
+        "physicalPage": 108,
+        "label": "TOTAL REMUNERATION OVER $75,000",
+        "remuneration": 534171230,
+        "expenses": 4991464,
+        "raw": "TOTAL REMUNERATION OVER $75,000                                            534,171,230         4,991,464"
+      },
+      "literalResidualBeforeFinalPeerClosure": [
+        "26",
+        "40"
+      ],
+      "controlSelectionAddendum": false,
+      "namedControlViewingAid": {
+        "path": "research/salaries/gap-fill-2026-11-02/reviews/health-context-root/vancouver-coastal-health-2018-19-named-control.png",
+        "sha256": "c3f9106ce0f1d8d5f8a2c906d4b13c1859ec45d7283ea7614232c6252bf2e3ff",
+        "sourceSha256": "a9de23592e9b7a307992d9c23ce20e15ecdb1a54b1cf1dfb93de221225e41dd0",
+        "physicalPage": 108,
+        "dpi": 144,
+        "integerCropBox": [
+          0,
+          480,
+          1224,
+          650
+        ],
+        "noResampling": true,
+        "purpose": "Named control and surrounding original source pixels; crop located from literal control token, not a replacement source"
+      }
+    },
+    {
+      "sourceKey": "vancouver-coastal-health-2017-18",
+      "sourceSha256": "eb7b35082cef57bb89120b021c2b42ab7e61bb01bf760f9e33873c846c4012e0",
+      "candidateYear": "2017/18",
+      "candidateRowsBeforeFinalPeerClosure": 5191,
+      "sourceImagesPixelReplayed": [
+        {
+          "path": "research/salaries/gap-fill-2026-11-02/health_employees/source-review-contexts/vancouver-coastal-health-2017-18-p005.png",
+          "sha256": "aff65cb6ae6eaef7352494db04af6a049c3b1c412cc982010ee7573f18d938c8"
+        },
+        {
+          "path": "research/salaries/gap-fill-2026-11-02/health_employees/source-review-contexts/vancouver-coastal-health-2017-18-p101.png",
+          "sha256": "aefe710ebe0f2a74e1e1a37e13b487b65e933d7da8607872b87f79f20f6abd7e"
+        }
+      ],
+      "independentImagePeriodOcr": {
+        "sourceKey": "vancouver-coastal-health-2017-18",
+        "physicalPage": 5,
+        "purpose": "first employee page/internal period and column definitions",
+        "path": "research/salaries/gap-fill-2026-11-02/reviews/health-context-ocr/vancouver-coastal-health-2017-18-p5.json.gzip",
+        "sha256": "d5fe34ef6c6ec9f52631d6c00829132bfd4881d5c91b8ced227f6681e1aa1367",
+        "headerMarchYearEnds": [
+          "2018"
+        ],
+        "headerFiscalPairs": []
+      },
+      "periodImageCorroborationPassed": true,
+      "printedNamedControl": {
+        "physicalPage": 101,
+        "label": "TOTAL REMUNERATION OVER $75,000",
+        "remuneration": 492330117,
+        "expenses": 3796743,
+        "raw": "TOTAL REMUNERATION OVER $75,000                                            492,330,117        3,796,743"
+      },
+      "literalResidualBeforeFinalPeerClosure": [
+        "30",
+        "29"
+      ],
+      "controlSelectionAddendum": false,
+      "namedControlViewingAid": {
+        "path": "research/salaries/gap-fill-2026-11-02/reviews/health-context-root/vancouver-coastal-health-2017-18-named-control.png",
+        "sha256": "be6eede7e0d753a4034dde0b39131406fbf651c55f0546b2081ec1bc1b115752",
+        "sourceSha256": "eb7b35082cef57bb89120b021c2b42ab7e61bb01bf760f9e33873c846c4012e0",
+        "physicalPage": 101,
+        "dpi": 144,
+        "integerCropBox": [
+          0,
+          377,
+          1224,
+          547
+        ],
+        "noResampling": true,
+        "purpose": "Named control and surrounding original source pixels; crop located from literal control token, not a replacement source"
+      }
+    },
+    {
+      "sourceKey": "vancouver-coastal-health-2016-17",
+      "sourceSha256": "95865b81d7efdf32200957fd555c896705dba8f77b02aad11dddeee2082d45fb",
+      "candidateYear": "2016/17",
+      "candidateRowsBeforeFinalPeerClosure": 5347,
+      "sourceImagesPixelReplayed": [
+        {
+          "path": "research/salaries/gap-fill-2026-11-02/health_employees/source-review-contexts/vancouver-coastal-health-2016-17-p005.png",
+          "sha256": "4b0b1faf508bbc657779a94beb21831fef9ab638a78e3f170013102af2cd26d7"
+        },
+        {
+          "path": "research/salaries/gap-fill-2026-11-02/health_employees/source-review-contexts/vancouver-coastal-health-2016-17-p121.png",
+          "sha256": "afb5b46fd39fb188173643e69303e17c95e5dbe3281e018db4cf48adcc5e08f5"
+        }
+      ],
+      "independentImagePeriodOcr": {
+        "sourceKey": "vancouver-coastal-health-2016-17",
+        "physicalPage": 5,
+        "purpose": "first employee page/internal period and column definitions",
+        "path": "research/salaries/gap-fill-2026-11-02/reviews/health-context-ocr/vancouver-coastal-health-2016-17-p5.json.gzip",
+        "sha256": "c04bb0583ad1d1419b6f17de5251c7b6f018b83b3783ff7f16ae3da22d08aef6",
+        "headerMarchYearEnds": [
+          "2017"
+        ],
+        "headerFiscalPairs": []
+      },
+      "periodImageCorroborationPassed": true,
+      "printedNamedControl": {
+        "physicalPage": 121,
+        "label": "TOTAL REMUNERATION OVER $75,000",
+        "remuneration": 516021969,
+        "expenses": 4211615,
+        "raw": "TOTAL REMUNERATION OVER $75,000                                   516,021,969                 4,211,615"
+      },
+      "literalResidualBeforeFinalPeerClosure": [
+        "29",
+        "37"
+      ],
+      "controlSelectionAddendum": false,
+      "namedControlViewingAid": {
+        "path": "research/salaries/gap-fill-2026-11-02/reviews/health-context-root/vancouver-coastal-health-2016-17-named-control.png",
+        "sha256": "837599061eedc271328fbd8ccba2eac1f10cdf885cee4f554d2b781bfca96a39",
+        "sourceSha256": "95865b81d7efdf32200957fd555c896705dba8f77b02aad11dddeee2082d45fb",
+        "physicalPage": 121,
+        "dpi": 144,
+        "integerCropBox": [
+          0,
+          558,
+          1224,
+          728
+        ],
+        "noResampling": true,
+        "purpose": "Named control and surrounding original source pixels; crop located from literal control token, not a replacement source"
+      }
+    },
+    {
+      "sourceKey": "vancouver-coastal-health-2015-16",
+      "sourceSha256": "914fb5a55718ddc4caa5605e9e9f5ff7c39ffa4fcfc190fa2e0f209e9b2ae827",
+      "candidateYear": "2015/16",
+      "candidateRowsBeforeFinalPeerClosure": 4619,
+      "sourceImagesPixelReplayed": [
+        {
+          "path": "research/salaries/gap-fill-2026-11-02/health_employees/source-review-contexts/vancouver-coastal-health-2015-16-p005.png",
+          "sha256": "40f3810c986924a79cc3bada6d916b0e8a599c8a6d780278fd009873c3bbdf18"
+        },
+        {
+          "path": "research/salaries/gap-fill-2026-11-02/health_employees/source-review-contexts/vancouver-coastal-health-2015-16-p103.png",
+          "sha256": "d5971a11606bce904104436f885cad6f2840ad9acdd5f096a2bad94460acab34"
+        }
+      ],
+      "independentImagePeriodOcr": {
+        "sourceKey": "vancouver-coastal-health-2015-16",
+        "physicalPage": 5,
+        "purpose": "first employee page/internal period and column definitions",
+        "path": "research/salaries/gap-fill-2026-11-02/reviews/health-context-ocr/vancouver-coastal-health-2015-16-p5.json.gzip",
+        "sha256": "c9e8c0549b4a2b0c3fbc014775dbd5292c899fb6733fa3a04ecfe2a1fb6e97d6",
+        "headerMarchYearEnds": [
+          "2016"
+        ],
+        "headerFiscalPairs": []
+      },
+      "periodImageCorroborationPassed": true,
+      "printedNamedControl": {
+        "physicalPage": 103,
+        "label": "TOTAL REMUNERATION OVER $75,000",
+        "remuneration": 430824345,
+        "expenses": 3689011,
+        "raw": "TOTAL REMUNERATION OVER $75,000                                   430,824,345                 3,689,011"
+      },
+      "literalResidualBeforeFinalPeerClosure": [
+        "-2",
+        "52"
+      ],
+      "controlSelectionAddendum": false,
+      "namedControlViewingAid": {
+        "path": "research/salaries/gap-fill-2026-11-02/reviews/health-context-root/vancouver-coastal-health-2015-16-named-control.png",
+        "sha256": "0842ef4e145063b4670f2726c101ee421db35abba227d39be4d998cf405889dd",
+        "sourceSha256": "914fb5a55718ddc4caa5605e9e9f5ff7c39ffa4fcfc190fa2e0f209e9b2ae827",
+        "physicalPage": 103,
+        "dpi": 144,
+        "integerCropBox": [
+          0,
+          615,
+          1224,
+          785
+        ],
+        "noResampling": true,
+        "purpose": "Named control and surrounding original source pixels; crop located from literal control token, not a replacement source"
+      }
+    },
+    {
+      "sourceKey": "vancouver-coastal-health-2014-15",
+      "sourceSha256": "72b242a78ca41d4f9f1eb8f9700c4d76571f8b3bf29792fc0117c890e997e086",
+      "candidateYear": "2014/15",
+      "candidateRowsBeforeFinalPeerClosure": 4471,
+      "sourceImagesPixelReplayed": [
+        {
+          "path": "research/salaries/gap-fill-2026-11-02/health_employees/source-review-contexts/vancouver-coastal-health-2014-15-p005.png",
+          "sha256": "8f1b6ec00b256d736675cbc0c05e4c9c2b12363151202cf92a444abea77bc213"
+        },
+        {
+          "path": "research/salaries/gap-fill-2026-11-02/health_employees/source-review-contexts/vancouver-coastal-health-2014-15-p104.png",
+          "sha256": "bc65927093956a8ab2456f8cea29bf89c9fb2450d626ca16c112a16a64f38c3e"
+        }
+      ],
+      "independentImagePeriodOcr": {
+        "sourceKey": "vancouver-coastal-health-2014-15",
+        "physicalPage": 5,
+        "purpose": "first employee page/internal period and column definitions",
+        "path": "research/salaries/gap-fill-2026-11-02/reviews/health-context-ocr/vancouver-coastal-health-2014-15-p5.json.gzip",
+        "sha256": "b7e5192c93879b4265a0d1d2bc7b64152fabe39131d0dcd87e4d7bab9220b125",
+        "headerMarchYearEnds": [
+          "2015"
+        ],
+        "headerFiscalPairs": []
+      },
+      "periodImageCorroborationPassed": true,
+      "printedNamedControl": {
+        "physicalPage": 104,
+        "label": "TOTAL REMUNERATION OVER $75,000",
+        "remuneration": 414750711,
+        "expenses": 3564656,
+        "raw": "TOTAL REMUNERATION OVER $75,000                                          414,750,711            3,564,656"
+      },
+      "literalResidualBeforeFinalPeerClosure": [
+        "28",
+        "43"
+      ],
+      "controlSelectionAddendum": false,
+      "namedControlViewingAid": {
+        "path": "research/salaries/gap-fill-2026-11-02/reviews/health-context-root/vancouver-coastal-health-2014-15-named-control.png",
+        "sha256": "d2cd256a5fc92163677ccabdd5a1b2b156a76528a453e657ce946f1bda3e82c3",
+        "sourceSha256": "72b242a78ca41d4f9f1eb8f9700c4d76571f8b3bf29792fc0117c890e997e086",
+        "physicalPage": 104,
+        "dpi": 144,
+        "integerCropBox": [
+          0,
+          650,
+          1224,
+          820
+        ],
+        "noResampling": true,
+        "purpose": "Named control and surrounding original source pixels; crop located from literal control token, not a replacement source"
+      }
+    },
+    {
+      "sourceKey": "vancouver-coastal-health-2013-14",
+      "sourceSha256": "42cf7cc582fefa910b36bb94b4d4999766cba98040aa79a6fbc87c62a24980b3",
+      "candidateYear": "2013/14",
+      "candidateRowsBeforeFinalPeerClosure": 4312,
+      "sourceImagesPixelReplayed": [
+        {
+          "path": "research/salaries/gap-fill-2026-11-02/health_employees/source-review-contexts/vancouver-coastal-health-2013-14-p005.png",
+          "sha256": "1b83e07bb2f23c088aaa501660b3c97502b5fd558ac392bce7549dfdcc03f10d"
+        },
+        {
+          "path": "research/salaries/gap-fill-2026-11-02/health_employees/source-review-contexts/vancouver-coastal-health-2013-14-p094.png",
+          "sha256": "c288385802ba332a47b9fbec7a031ed0ba0e1e6658888459e4f687406013b5f1"
+        }
+      ],
+      "independentImagePeriodOcr": {
+        "sourceKey": "vancouver-coastal-health-2013-14",
+        "physicalPage": 5,
+        "purpose": "first employee page/internal period and column definitions",
+        "path": "research/salaries/gap-fill-2026-11-02/reviews/health-context-ocr/vancouver-coastal-health-2013-14-p5.json.gzip",
+        "sha256": "678700c937d84e58fa965aea44e4f8bdcebf43db4820c1b37559a96921e0bf92",
+        "headerMarchYearEnds": [
+          "2014"
+        ],
+        "headerFiscalPairs": []
+      },
+      "periodImageCorroborationPassed": true,
+      "printedNamedControl": {
+        "physicalPage": 94,
+        "label": "TOTAL REMUNERATION OVER $75,000",
+        "remuneration": 399449517,
+        "expenses": 3099131,
+        "raw": "TOTAL REMUNERATION OVER $75,000                         399,449,517   3,099,131"
+      },
+      "literalResidualBeforeFinalPeerClosure": [
+        "42",
+        "34"
+      ],
+      "controlSelectionAddendum": false,
+      "namedControlViewingAid": {
+        "path": "research/salaries/gap-fill-2026-11-02/reviews/health-context-root/vancouver-coastal-health-2013-14-named-control.png",
+        "sha256": "df4a86fdc7c82c476090ca03fb518c6f77004ee600d9aae40617f5b93a8236f3",
+        "sourceSha256": "42cf7cc582fefa910b36bb94b4d4999766cba98040aa79a6fbc87c62a24980b3",
+        "physicalPage": 94,
+        "dpi": 144,
+        "integerCropBox": [
+          0,
+          1256,
+          1224,
+          1426
+        ],
+        "noResampling": true,
+        "purpose": "Named control and surrounding original source pixels; crop located from literal control token, not a replacement source"
+      }
+    },
+    {
+      "sourceKey": "vancouver-coastal-health-2012-13",
+      "sourceSha256": "0ace1ba6508ac6c0278effd0d0aa570e3ab60a3b04bb4933203d4e87488ac1be",
+      "candidateYear": "2012/13",
+      "candidateRowsBeforeFinalPeerClosure": 3563,
+      "sourceImagesPixelReplayed": [
+        {
+          "path": "research/salaries/gap-fill-2026-11-02/health_employees/source-review-contexts/vancouver-coastal-health-2012-13-p002.png",
+          "sha256": "439e203299107e8bc5c907bb7110a55b8f059b0a603c8d799719c39738dcb5be"
+        },
+        {
+          "path": "research/salaries/gap-fill-2026-11-02/health_employees/source-review-contexts/vancouver-coastal-health-2012-13-p073.png",
+          "sha256": "9a71ee9f075406e898fcd41ca890853be55b93242ae806284b09f7439ad8f742"
+        }
+      ],
+      "independentImagePeriodOcr": {
+        "sourceKey": "vancouver-coastal-health-2012-13",
+        "physicalPage": 2,
+        "purpose": "first employee page/internal period and column definitions",
+        "path": "research/salaries/gap-fill-2026-11-02/reviews/health-context-ocr/vancouver-coastal-health-2012-13-p2.json.gzip",
+        "sha256": "d8ed0e67a262527a6d8d467324e4037a04c56d02709564e81f684fcd93142970",
+        "headerMarchYearEnds": [
+          "2013"
+        ],
+        "headerFiscalPairs": []
+      },
+      "periodImageCorroborationPassed": true,
+      "printedNamedControl": {
+        "physicalPage": 73,
+        "label": "TOTAL REMUNERATION OVER $75,000",
+        "remuneration": 330891352.08,
+        "expenses": 3167132.37,
+        "raw": "TOTAL REMUNERATION OVER $75,000                                     330,891,352.08             3,167,132.37"
+      },
+      "literalResidualBeforeFinalPeerClosure": [
+        "0.00",
+        "0.00"
+      ],
+      "controlSelectionAddendum": false,
+      "namedControlViewingAid": {
+        "path": "research/salaries/gap-fill-2026-11-02/reviews/health-context-root/vancouver-coastal-health-2012-13-named-control.png",
+        "sha256": "20453a6d47681d38c420a135ac5cb7f35a0fb67432db50eefa71ec0322607023",
+        "sourceSha256": "0ace1ba6508ac6c0278effd0d0aa570e3ab60a3b04bb4933203d4e87488ac1be",
+        "physicalPage": 73,
+        "dpi": 144,
+        "integerCropBox": [
+          0,
+          564,
+          1224,
+          734
+        ],
+        "noResampling": true,
+        "purpose": "Named control and surrounding original source pixels; crop located from literal control token, not a replacement source"
+      }
+    },
+    {
+      "sourceKey": "vancouver-coastal-health-2011-12",
+      "sourceSha256": "b60b08dd5bab09eabad54ae02120aa90ec67f430a68d51c42ede765ba921c11e",
+      "candidateYear": "2011/12",
+      "candidateRowsBeforeFinalPeerClosure": 3545,
+      "sourceImagesPixelReplayed": [
+        {
+          "path": "research/salaries/gap-fill-2026-11-02/health_employees/source-review-contexts/vancouver-coastal-health-2011-12-p002.png",
+          "sha256": "017dc031c21b6cf35cedc46ea54d4c546af0ba904307d1ec51b683d650be4043"
+        },
+        {
+          "path": "research/salaries/gap-fill-2026-11-02/health_employees/source-review-contexts/vancouver-coastal-health-2011-12-p080.png",
+          "sha256": "5c4db8970762de34d9f38e9671431da4c3a8894a9111c988d9eca1aed081218f"
+        }
+      ],
+      "independentImagePeriodOcr": {
+        "sourceKey": "vancouver-coastal-health-2011-12",
+        "physicalPage": 2,
+        "purpose": "first employee page/internal period and column definitions",
+        "path": "research/salaries/gap-fill-2026-11-02/reviews/health-context-ocr/vancouver-coastal-health-2011-12-p2.json.gzip",
+        "sha256": "c988319e5f5e14e32bf3126a7f7917e0829fd974d72601b1494df7dfd93f7047",
+        "headerMarchYearEnds": [
+          "2012"
+        ],
+        "headerFiscalPairs": []
+      },
+      "periodImageCorroborationPassed": true,
+      "printedNamedControl": {
+        "physicalPage": 80,
+        "label": "TOTAL REMUNERATION OVER $75, 000",
+        "remuneration": 328059975.99,
+        "expenses": 3302536.02,
+        "raw": "TOTAL REMUNERATION OVER $75, 000                 328,059,975.99   3,302,536.02"
+      },
+      "literalResidualBeforeFinalPeerClosure": [
+        "0.00",
+        "-0.02"
+      ],
+      "controlSelectionAddendum": false,
+      "namedControlViewingAid": {
+        "path": "research/salaries/gap-fill-2026-11-02/reviews/health-context-root/vancouver-coastal-health-2011-12-named-control.png",
+        "sha256": "2ed23483aed934162986c56eef1214175da6e94f960cb5606d98921dd2f89c76",
+        "sourceSha256": "b60b08dd5bab09eabad54ae02120aa90ec67f430a68d51c42ede765ba921c11e",
+        "physicalPage": 80,
+        "dpi": 144,
+        "integerCropBox": [
+          0,
+          1156,
+          1224,
+          1326
+        ],
+        "noResampling": true,
+        "purpose": "Named control and surrounding original source pixels; crop located from literal control token, not a replacement source"
+      }
+    },
+    {
+      "sourceKey": "vancouver-coastal-health-2010-11",
+      "sourceSha256": "09cad85a1a1d864c9df7f3a247ce708b75c683fc98525bfddba0c8bfe311ec6b",
+      "candidateYear": "2010/11",
+      "candidateRowsBeforeFinalPeerClosure": 3244,
+      "sourceImagesPixelReplayed": [
+        {
+          "path": "research/salaries/gap-fill-2026-11-02/health_employees/source-review-contexts/vancouver-coastal-health-2010-11-p002.png",
+          "sha256": "748235af853855d31a6f65be538cb85cf3c577e877c3c25d1f2f969cce91d5ae"
+        },
+        {
+          "path": "research/salaries/gap-fill-2026-11-02/health_employees/source-review-contexts/vancouver-coastal-health-2010-11-p069.png",
+          "sha256": "d8c900c0cdee3b84a300c78f6f473658b4056e0c76f3226730ac150355d84526"
+        }
+      ],
+      "independentImagePeriodOcr": {
+        "sourceKey": "vancouver-coastal-health-2010-11",
+        "physicalPage": 2,
+        "purpose": "first employee page/internal period and column definitions",
+        "path": "research/salaries/gap-fill-2026-11-02/reviews/health-context-ocr/vancouver-coastal-health-2010-11-p2.json.gzip",
+        "sha256": "6643d8a4c9d6b9a11a0d68f7ef722e9e1dd0624f2edbdcd8c71b7408954ba67d",
+        "headerMarchYearEnds": [
+          "2011"
+        ],
+        "headerFiscalPairs": []
+      },
+      "periodImageCorroborationPassed": true,
+      "printedNamedControl": {
+        "physicalPage": 69,
+        "label": "TOTAL REMUNERATION OVER $75,000",
+        "remuneration": 297193232.51,
+        "expenses": 2834821.68,
+        "raw": "TOTAL REMUNERATION OVER $75,000                                                   297,193,232.51   2,834,821.68"
+      },
+      "literalResidualBeforeFinalPeerClosure": [
+        "0.00",
+        "0.00"
+      ],
+      "controlSelectionAddendum": false,
+      "namedControlViewingAid": {
+        "path": "research/salaries/gap-fill-2026-11-02/reviews/health-context-root/vancouver-coastal-health-2010-11-named-control.png",
+        "sha256": "49478b0c522d4ef0a3891ed49e9fdd0a03067102b9483981c5d92d0a3e6becd3",
+        "sourceSha256": "09cad85a1a1d864c9df7f3a247ce708b75c683fc98525bfddba0c8bfe311ec6b",
+        "physicalPage": 69,
+        "dpi": 144,
+        "integerCropBox": [
+          0,
+          944,
+          1224,
+          1114
+        ],
+        "noResampling": true,
+        "purpose": "Named control and surrounding original source pixels; crop located from literal control token, not a replacement source"
+      }
+    },
+    {
+      "sourceKey": "vancouver-coastal-health-2009-10",
+      "sourceSha256": "18d623782fad4c15f2533597aa085500576f8ef5b2108fc1ad96b874e5313cb7",
+      "candidateYear": "2009/10",
+      "candidateRowsBeforeFinalPeerClosure": 3003,
+      "sourceImagesPixelReplayed": [
+        {
+          "path": "research/salaries/gap-fill-2026-11-02/health_employees/source-review-contexts/vancouver-coastal-health-2009-10-p005.png",
+          "sha256": "22f99a74c9588f4701bdfc70623ce6ab758b2b2a9eaa580a5c9ca8a46bfe832a"
+        },
+        {
+          "path": "research/salaries/gap-fill-2026-11-02/health_employees/source-review-contexts/vancouver-coastal-health-2009-10-p070.png",
+          "sha256": "677dc8f4fdc01557d95a0057cb80067a37fcc17234f24d9015d20f367570f87b"
+        }
+      ],
+      "independentImagePeriodOcr": {
+        "sourceKey": "vancouver-coastal-health-2009-10",
+        "physicalPage": 5,
+        "purpose": "first employee page/internal period and column definitions",
+        "path": "research/salaries/gap-fill-2026-11-02/reviews/health-context-ocr/vancouver-coastal-health-2009-10-p5.json.gzip",
+        "sha256": "b952d55c21f225989ff83440581b20a451587a7cadec4d1e8eba5c80a6ed6d04",
+        "headerMarchYearEnds": [
+          "2010"
+        ],
+        "headerFiscalPairs": []
+      },
+      "periodImageCorroborationPassed": true,
+      "printedNamedControl": {
+        "physicalPage": 70,
+        "label": "TOTAL REMUNERATION OVER $75,000",
+        "remuneration": 275640257.73,
+        "expenses": 3137694.93,
+        "raw": "TOTAL REMUNERATION OVER $75,000                                                   275,640,257.73   3,137,694.93"
+      },
+      "literalResidualBeforeFinalPeerClosure": [
+        "0.00",
+        "0.00"
+      ],
+      "controlSelectionAddendum": false,
+      "namedControlViewingAid": {
+        "path": "research/salaries/gap-fill-2026-11-02/reviews/health-context-root/vancouver-coastal-health-2009-10-named-control.png",
+        "sha256": "536eea71cd1aa73b2477c9b4ab2e9a02ec1149c26dba5c2e341963c9608d5989",
+        "sourceSha256": "18d623782fad4c15f2533597aa085500576f8ef5b2108fc1ad96b874e5313cb7",
+        "physicalPage": 70,
+        "dpi": 144,
+        "integerCropBox": [
+          0,
+          611,
+          1224,
+          781
+        ],
+        "noResampling": true,
+        "purpose": "Named control and surrounding original source pixels; crop located from literal control token, not a replacement source"
+      }
+    },
+    {
+      "sourceKey": "vancouver-coastal-health-2008-09",
+      "sourceSha256": "e74cc78bf42ba67ec02526fe3219ff21d74662ceb4cdd4e659c257ba268cb6b3",
+      "candidateYear": "2008/09",
+      "candidateRowsBeforeFinalPeerClosure": 2480,
+      "sourceImagesPixelReplayed": [
+        {
+          "path": "research/salaries/gap-fill-2026-11-02/health_employees/source-review-contexts/vancouver-coastal-health-2008-09-p004.png",
+          "sha256": "654600fea24237534e72b3089a36922e5f25c8b82c831e19bbc54999154b053a"
+        },
+        {
+          "path": "research/salaries/gap-fill-2026-11-02/health_employees/source-review-contexts/vancouver-coastal-health-2008-09-p060.png",
+          "sha256": "848763b7402670747c31564a6949acbf0c73e17da19e28a239ec51ebf08ca7fa"
+        }
+      ],
+      "independentImagePeriodOcr": {
+        "sourceKey": "vancouver-coastal-health-2008-09",
+        "physicalPage": 4,
+        "purpose": "first employee page/internal period and column definitions",
+        "path": "research/salaries/gap-fill-2026-11-02/reviews/health-context-ocr/vancouver-coastal-health-2008-09-p4.json.gzip",
+        "sha256": "9eac391c57d2182f113b8b8fc171fef187ea3bef855eeb2b987ede943bb381db",
+        "headerMarchYearEnds": [
+          "2009"
+        ],
+        "headerFiscalPairs": []
+      },
+      "periodImageCorroborationPassed": true,
+      "printedNamedControl": {
+        "physicalPage": 60,
+        "label": "TOTAL REMUNERATION OVER $75,000",
+        "remuneration": 229870784.04,
+        "expenses": 2565988.42,
+        "raw": "TOTAL REMUNERATION OVER $75,000                                             229,870,784.04     2,565,988.42"
+      },
+      "literalResidualBeforeFinalPeerClosure": [
+        "0.00",
+        "0.00"
+      ],
+      "controlSelectionAddendum": false,
+      "namedControlViewingAid": {
+        "path": "research/salaries/gap-fill-2026-11-02/reviews/health-context-root/vancouver-coastal-health-2008-09-named-control.png",
+        "sha256": "db88172519213e2bc6913a77d0ee12cd2252609f5d3f3f057f39db44cb640145",
+        "sourceSha256": "e74cc78bf42ba67ec02526fe3219ff21d74662ceb4cdd4e659c257ba268cb6b3",
+        "physicalPage": 60,
+        "dpi": 144,
+        "integerCropBox": [
+          0,
+          719,
+          1224,
+          889
+        ],
+        "noResampling": true,
+        "purpose": "Named control and surrounding original source pixels; crop located from literal control token, not a replacement source"
+      }
+    },
+    {
+      "sourceKey": "vancouver-coastal-health-2007-08",
+      "sourceSha256": "898a859d9576fa45c1d7668a4ca01a9f8a580713cd9091f92af613aadfd002be",
+      "candidateYear": "2007/08",
+      "candidateRowsBeforeFinalPeerClosure": 2093,
+      "sourceImagesPixelReplayed": [
+        {
+          "path": "research/salaries/gap-fill-2026-11-02/health_employees/source-review-contexts/vancouver-coastal-health-2007-08-p003.png",
+          "sha256": "8186e817e12feae90f4255aa19770daf9ffa4b9ccedc24a6993c8be573083d96"
+        },
+        {
+          "path": "research/salaries/gap-fill-2026-11-02/health_employees/source-review-contexts/vancouver-coastal-health-2007-08-p048.png",
+          "sha256": "861022a49e8001842b95ac66af9295218b3df46fcd875221aef13b7999541858"
+        }
+      ],
+      "independentImagePeriodOcr": {
+        "sourceKey": "vancouver-coastal-health-2007-08",
+        "physicalPage": 3,
+        "purpose": "first employee page/internal period and column definitions",
+        "path": "research/salaries/gap-fill-2026-11-02/reviews/health-context-ocr/vancouver-coastal-health-2007-08-p3.json.gzip",
+        "sha256": "f493606752e0aa7df6a4d867d6c5093b4f062134bf1ffe20b9a76f73ba61676f",
+        "headerMarchYearEnds": [
+          "2008"
+        ],
+        "headerFiscalPairs": []
+      },
+      "periodImageCorroborationPassed": true,
+      "printedNamedControl": {
+        "physicalPage": 48,
+        "label": "TOTAL REMUNERATION OVER $75,000",
+        "remuneration": 194207567.81,
+        "expenses": 2877792.33,
+        "raw": "TOTAL REMUNERATION OVER $75,000                                                   194,207,567.81    2,877,792.33"
+      },
+      "literalResidualBeforeFinalPeerClosure": [
+        "0.00",
+        "0.00"
+      ],
+      "controlSelectionAddendum": false,
+      "namedControlViewingAid": {
+        "path": "research/salaries/gap-fill-2026-11-02/reviews/health-context-root/vancouver-coastal-health-2007-08-named-control.png",
+        "sha256": "b8d639b9adb49b7d4047d1fd26d0d4e054dc3c1df9272a4074c2bd6303dd641b",
+        "sourceSha256": "898a859d9576fa45c1d7668a4ca01a9f8a580713cd9091f92af613aadfd002be",
+        "physicalPage": 48,
+        "dpi": 144,
+        "integerCropBox": [
+          0,
+          851,
+          1224,
+          1021
+        ],
+        "noResampling": true,
+        "purpose": "Named control and surrounding original source pixels; crop located from literal control token, not a replacement source"
+      }
+    },
+    {
+      "sourceKey": "vancouver-coastal-health-2006-07",
+      "sourceSha256": "b5c3379a868fce683a4ad00f962acf106da1320f22569cb0321b29546b803d05",
+      "candidateYear": "2006/07",
+      "candidateRowsBeforeFinalPeerClosure": 2078,
+      "sourceImagesPixelReplayed": [
+        {
+          "path": "research/salaries/gap-fill-2026-11-02/health_employees/source-review-contexts/vancouver-coastal-health-2006-07-p003.png",
+          "sha256": "7875062ea5843f5d2f49b899e3bc8c852c1a4b77c98b3297015f4f377a731a0c"
+        },
+        {
+          "path": "research/salaries/gap-fill-2026-11-02/health_employees/source-review-contexts/vancouver-coastal-health-2006-07-p042.png",
+          "sha256": "b6f3072c1688036400598ff1ca7f34610432cec44c72666deadad5eff7d55ef2"
+        }
+      ],
+      "independentImagePeriodOcr": {
+        "sourceKey": "vancouver-coastal-health-2006-07",
+        "physicalPage": 3,
+        "purpose": "first employee page/internal period and column definitions",
+        "path": "research/salaries/gap-fill-2026-11-02/reviews/health-context-ocr/vancouver-coastal-health-2006-07-p3.json.gzip",
+        "sha256": "c4b63721666da94b92158b22e74cc566fc1497232001b8eb30a41cfec3e7b1c2",
+        "headerMarchYearEnds": [
+          "2007"
+        ],
+        "headerFiscalPairs": []
+      },
+      "periodImageCorroborationPassed": true,
+      "printedNamedControl": {
+        "physicalPage": 42,
+        "label": "TOTAL REMUNERATION OVER $75, 000",
+        "remuneration": 191310933.32,
+        "expenses": 2893269.34,
+        "raw": "TOTAL REMUNERATION OVER $75, 000                                                  191,310,933.32    2,893,269.34"
+      },
+      "literalResidualBeforeFinalPeerClosure": [
+        "0.00",
+        "0.00"
+      ],
+      "controlSelectionAddendum": false,
+      "namedControlViewingAid": {
+        "path": "research/salaries/gap-fill-2026-11-02/reviews/health-context-root/vancouver-coastal-health-2006-07-named-control.png",
+        "sha256": "1d5d35af42844796d11f6950dfe714bca63bc893babd41c3c1f1557657ceedd6",
+        "sourceSha256": "b5c3379a868fce683a4ad00f962acf106da1320f22569cb0321b29546b803d05",
+        "physicalPage": 42,
+        "dpi": 144,
+        "integerCropBox": [
+          0,
+          507,
+          1224,
+          677
+        ],
+        "noResampling": true,
+        "purpose": "Named control and surrounding original source pixels; crop located from literal control token, not a replacement source"
+      }
+    },
+    {
+      "sourceKey": "vancouver-coastal-health-2005-06",
+      "sourceSha256": "01e484e66f65accae089a79bbf3975f4b021407a003ff0b23d4db62d9be049f4",
+      "candidateYear": "2005/06",
+      "candidateRowsBeforeFinalPeerClosure": 1478,
+      "sourceImagesPixelReplayed": [
+        {
+          "path": "research/salaries/gap-fill-2026-11-02/health_employees/source-review-contexts/vancouver-coastal-health-2005-06-p002.png",
+          "sha256": "68ef8d6398ec27fea029bd451960a9ab55e21b4780dcb56d4517c9acd5536b88"
+        },
+        {
+          "path": "research/salaries/gap-fill-2026-11-02/health_employees/source-review-contexts/vancouver-coastal-health-2005-06-p029.png",
+          "sha256": "e32ddf15d406f11958f44f8976bd26d1168ce2ad2a2a1e942a4339d86326048e"
+        }
+      ],
+      "independentImagePeriodOcr": {
+        "sourceKey": "vancouver-coastal-health-2005-06",
+        "physicalPage": 2,
+        "purpose": "first employee page/internal period and column definitions",
+        "path": "research/salaries/gap-fill-2026-11-02/reviews/health-context-ocr/vancouver-coastal-health-2005-06-p2.json.gzip",
+        "sha256": "93f0c585450854d3d97fc7417e3e6ac43bb86e9eafbb9cd1696bfd514238dc47",
+        "headerMarchYearEnds": [
+          "2006"
+        ],
+        "headerFiscalPairs": []
+      },
+      "periodImageCorroborationPassed": true,
+      "printedNamedControl": {
+        "physicalPage": 29,
+        "label": "Total Remuneration Over $75,000",
+        "remuneration": 139106090.75,
+        "expenses": 2424592.4,
+        "raw": "Total Remuneration Over $75,000                  139,106,090.75   2,424,592.40"
+      },
+      "literalResidualBeforeFinalPeerClosure": [
+        "0.00",
+        "0.00"
+      ],
+      "controlSelectionAddendum": false,
+      "namedControlViewingAid": {
+        "path": "research/salaries/gap-fill-2026-11-02/reviews/health-context-root/vancouver-coastal-health-2005-06-named-control.png",
+        "sha256": "4d1f48551168ec17887b88847d746c2b00fc38fecc83b4adfdb94b66e2568296",
+        "sourceSha256": "01e484e66f65accae089a79bbf3975f4b021407a003ff0b23d4db62d9be049f4",
+        "physicalPage": 29,
+        "dpi": 144,
+        "integerCropBox": [
+          0,
+          1276,
+          1224,
+          1446
+        ],
+        "noResampling": true,
+        "purpose": "Named control and surrounding original source pixels; crop located from literal control token, not a replacement source"
+      }
+    },
+    {
+      "sourceKey": "island-health-2023-24",
+      "sourceSha256": "d98a8b9f355e39ef536b71f1de559dce559946dd46208b50d782021e074f678b",
+      "candidateYear": "2023/24",
+      "candidateRowsBeforeFinalPeerClosure": 10884,
+      "sourceImagesPixelReplayed": [
+        {
+          "path": "research/salaries/gap-fill-2026-11-02/health_employees/source-review-contexts/island-health-2023-24-p128.png",
+          "sha256": "a96948ec965f1eb65e06a82ef10e31b6b7bd4ab9f767067fc848f27d609dbac5"
+        },
+        {
+          "path": "research/salaries/gap-fill-2026-11-02/health_employees/source-review-contexts/island-health-2023-24-p375.png",
+          "sha256": "3f5d20ea090a675fb4f6c9dd7b53ff99d70b8d152f88712008d6614ecc631ea4"
+        }
+      ],
+      "independentImagePeriodOcr": {
+        "sourceKey": "island-health-2023-24",
+        "physicalPage": 128,
+        "purpose": "first employee page/internal period and column definitions",
+        "path": "research/salaries/gap-fill-2026-11-02/reviews/health-context-ocr/island-health-2023-24-p128.json.gzip",
+        "sha256": "e0cf3653bb151d1dedd03eb14415fc3a6452c805d8bd88ac0dd9ed77e078f62f",
+        "headerMarchYearEnds": [
+          "2024"
+        ],
+        "headerFiscalPairs": []
+      },
+      "periodImageCorroborationPassed": true,
+      "printedNamedControl": {
+        "physicalPage": 375,
+        "label": "remuneration exceeding $75,000",
+        "remuneration": 1197885168,
+        "expenses": 14638203,
+        "raw": " remuneration exceeding $75,000                                              1,197,885,168       14,638,203"
+      },
+      "literalResidualBeforeFinalPeerClosure": [
+        "41",
+        "-45772"
+      ],
+      "controlSelectionAddendum": false,
+      "namedControlViewingAid": {
+        "path": "research/salaries/gap-fill-2026-11-02/reviews/health-context-root/island-health-2023-24-named-control.png",
+        "sha256": "e6af6f6a3df47cbd59c94db34788ef399da6fdce82b8239f0c6dba93199a18d3",
+        "sourceSha256": "d98a8b9f355e39ef536b71f1de559dce559946dd46208b50d782021e074f678b",
+        "physicalPage": 375,
+        "dpi": 144,
+        "integerCropBox": [
+          0,
+          674,
+          1224,
+          844
+        ],
+        "noResampling": true,
+        "purpose": "Named control and surrounding original source pixels; crop located from literal control token, not a replacement source"
+      }
+    },
+    {
+      "sourceKey": "island-health-2022-23",
+      "sourceSha256": "b9c800ab4036dde385684c7a2b3f081a88b8d18df530a6ec9668e33da1ce6a90",
+      "candidateYear": "2022/23",
+      "candidateRowsBeforeFinalPeerClosure": 8252,
+      "sourceImagesPixelReplayed": [
+        {
+          "path": "research/salaries/gap-fill-2026-11-02/health_employees/source-review-contexts/island-health-2022-23-p123.png",
+          "sha256": "8dd820d9e551c5a7869e163587e31130e9c8bdb74e324f6a8124ecd150311173"
+        },
+        {
+          "path": "research/salaries/gap-fill-2026-11-02/health_employees/source-review-contexts/island-health-2022-23-p291.png",
+          "sha256": "90e9d8a8f8c62098b91c81899095e2f95a5c70c644160914504632f81b5f0797"
+        }
+      ],
+      "independentImagePeriodOcr": {
+        "sourceKey": "island-health-2022-23",
+        "physicalPage": 123,
+        "purpose": "first employee page/internal period and column definitions",
+        "path": "research/salaries/gap-fill-2026-11-02/reviews/health-context-ocr/island-health-2022-23-p123.json.gzip",
+        "sha256": "b9304d4cfbfa71273ed70d2b4c38fb35ebb5bb93a237a15e7277de44010c09dc",
+        "headerMarchYearEnds": [
+          "2023"
+        ],
+        "headerFiscalPairs": []
+      },
+      "periodImageCorroborationPassed": true,
+      "printedNamedControl": {
+        "physicalPage": 291,
+        "label": "remuneration exceeding $75,000",
+        "remuneration": 828394295,
+        "expenses": 7029563,
+        "raw": "remuneration exceeding $75,000                                                 828,394,295      7,029,563"
+      },
+      "literalResidualBeforeFinalPeerClosure": [
+        "54",
+        "93"
+      ],
+      "controlSelectionAddendum": false,
+      "namedControlViewingAid": {
+        "path": "research/salaries/gap-fill-2026-11-02/reviews/health-context-root/island-health-2022-23-named-control.png",
+        "sha256": "2889fffda588834a32786bf5b01fb84857d7fe5c6b414723f46efe0b84795ed5",
+        "sourceSha256": "b9c800ab4036dde385684c7a2b3f081a88b8d18df530a6ec9668e33da1ce6a90",
+        "physicalPage": 291,
+        "dpi": 144,
+        "integerCropBox": [
+          0,
+          797,
+          1346,
+          967
+        ],
+        "noResampling": true,
+        "purpose": "Named control and surrounding original source pixels; crop located from literal control token, not a replacement source"
+      }
+    },
+    {
+      "sourceKey": "island-health-2014-15",
+      "sourceSha256": "03c3be591042d609b9fe74d15a751f18f56015b68c6fe74e03a64c008b6d0c24",
+      "candidateYear": "2014/15",
+      "candidateRowsBeforeFinalPeerClosure": 3654,
+      "sourceImagesPixelReplayed": [
+        {
+          "path": "research/salaries/gap-fill-2026-11-02/health_employees/source-review-contexts/island-health-2014-15-p002.png",
+          "sha256": "88914e9c23bea2b98836e202123fb2f9df548575b23cebf260ba915e9e3693e9"
+        },
+        {
+          "path": "research/salaries/gap-fill-2026-11-02/health_employees/source-review-contexts/island-health-2014-15-p075.png",
+          "sha256": "64d9db49e8f8cf09ddf9f725f938c53f98e17485ccf96d26cbe80baff5be3531"
+        }
+      ],
+      "independentImagePeriodOcr": {
+        "sourceKey": "island-health-2014-15",
+        "physicalPage": 2,
+        "purpose": "first employee page/internal period and column definitions",
+        "path": "research/salaries/gap-fill-2026-11-02/reviews/health-context-ocr/island-health-2014-15-p2.json.gzip",
+        "sha256": "6b937ebf0c523d60543aaa2ce50c1f49c3f4bb40557f0896daafd111e20c3664",
+        "headerMarchYearEnds": [],
+        "headerFiscalPairs": [
+          [
+            "2014",
+            "15"
+          ]
+        ]
+      },
+      "periodImageCorroborationPassed": true,
+      "printedNamedControl": null,
+      "literalResidualBeforeFinalPeerClosure": null,
+      "controlSelectionAddendum": false,
+      "namedControlViewingAid": null
+    },
+    {
+      "sourceKey": "island-health-2013-14",
+      "sourceSha256": "d306b98e3c9167ae11169d11f3d49beb25a68e2918461a0b47106d58c357b9f3",
+      "candidateYear": "2013/14",
+      "candidateRowsBeforeFinalPeerClosure": 3465,
+      "sourceImagesPixelReplayed": [
+        {
+          "path": "research/salaries/gap-fill-2026-11-02/health_employees/source-review-contexts/island-health-2013-14-p002.png",
+          "sha256": "07ee250b3508119d71da32170bb85b99ce6643728cb30a1468ad0892d9a7ba00"
+        },
+        {
+          "path": "research/salaries/gap-fill-2026-11-02/health_employees/source-review-contexts/island-health-2013-14-p071.png",
+          "sha256": "ad3b1b8b61535c95d365b64e74ffbe328fc39bb68577033adaf54851c1f8201f"
+        }
+      ],
+      "independentImagePeriodOcr": {
+        "sourceKey": "island-health-2013-14",
+        "physicalPage": 2,
+        "purpose": "first employee page/internal period and column definitions",
+        "path": "research/salaries/gap-fill-2026-11-02/reviews/health-context-ocr/island-health-2013-14-p2.json.gzip",
+        "sha256": "065bd7642657a6da68c59846723594fa93c62967c164fd025f4ea818434f9fef",
+        "headerMarchYearEnds": [],
+        "headerFiscalPairs": [
+          [
+            "2013",
+            "14"
+          ]
+        ]
+      },
+      "periodImageCorroborationPassed": true,
+      "printedNamedControl": null,
+      "literalResidualBeforeFinalPeerClosure": null,
+      "controlSelectionAddendum": false,
+      "namedControlViewingAid": null
+    },
+    {
+      "sourceKey": "island-health-2012-13",
+      "sourceSha256": "4f2b52f9505b3271197eac5d4d9e060129cd47824090cca7a35d74260ef5b55d",
+      "candidateYear": "2012/13",
+      "candidateRowsBeforeFinalPeerClosure": 2935,
+      "sourceImagesPixelReplayed": [
+        {
+          "path": "research/salaries/gap-fill-2026-11-02/health_employees/source-review-contexts/island-health-2012-13-p002.png",
+          "sha256": "1050cd9ec1fc7ecf54b6ba6cb37a6a9b814a93ef4b49280600bca2a464e9a49a"
+        },
+        {
+          "path": "research/salaries/gap-fill-2026-11-02/health_employees/source-review-contexts/island-health-2012-13-p060.png",
+          "sha256": "84e1be1a7ad69da538de10744555ff36809440d63ba0a2d8eec9158ed2a4422a"
+        }
+      ],
+      "independentImagePeriodOcr": {
+        "sourceKey": "island-health-2012-13",
+        "physicalPage": 2,
+        "purpose": "first employee page/internal period and column definitions",
+        "path": "research/salaries/gap-fill-2026-11-02/reviews/health-context-ocr/island-health-2012-13-p2.json.gzip",
+        "sha256": "1a8cfb28f446e0d918e82314be748258edc64057182ac9c4327c84a1b9d84c14",
+        "headerMarchYearEnds": [],
+        "headerFiscalPairs": [
+          [
+            "2012",
+            "13"
+          ]
+        ]
+      },
+      "periodImageCorroborationPassed": true,
+      "printedNamedControl": null,
+      "literalResidualBeforeFinalPeerClosure": null,
+      "controlSelectionAddendum": false,
+      "namedControlViewingAid": null
+    },
+    {
+      "sourceKey": "island-health-2008-09",
+      "sourceSha256": "3ad00f518b247df7d14fc83e9088b645172581857f1f090d753585b9887fd947",
+      "candidateYear": "2008/09",
+      "candidateRowsBeforeFinalPeerClosure": 1890,
+      "sourceImagesPixelReplayed": [
+        {
+          "path": "research/salaries/gap-fill-2026-11-02/health_employees/source-review-contexts/island-health-2008-09-p002.png",
+          "sha256": "e2b8835dcab2b2cdb02f25fb76c4b2b96cb293208efa5845e98318f90917f00c"
+        },
+        {
+          "path": "research/salaries/gap-fill-2026-11-02/health_employees/source-review-contexts/island-health-2008-09-p038.png",
+          "sha256": "949a7825a66579cbae05b35cb593a83224e024d309684b77d3e8a63fae7e9a64"
+        }
+      ],
+      "independentImagePeriodOcr": {
+        "sourceKey": "island-health-2008-09",
+        "physicalPage": 2,
+        "purpose": "first employee page/internal period and column definitions",
+        "path": "research/salaries/gap-fill-2026-11-02/reviews/health-context-ocr/island-health-2008-09-p2.json.gzip",
+        "sha256": "0e42f0a7bb9c67cd2a10fd77d762a4f4cf6a69c05e607ce7e52cc913c3257dec",
+        "headerMarchYearEnds": [
+          "2009"
+        ],
+        "headerFiscalPairs": [
+          [
+            "2008",
+            "09"
+          ]
+        ]
+      },
+      "periodImageCorroborationPassed": true,
+      "printedNamedControl": null,
+      "literalResidualBeforeFinalPeerClosure": null,
+      "controlSelectionAddendum": false,
+      "namedControlViewingAid": null
+    },
+    {
+      "sourceKey": "island-health-2007-08",
+      "sourceSha256": "95bd63d982a28f0ec487d729afd1c9c79dc9a0a7bb873bec4b73d4e13c4ca97b",
+      "candidateYear": "2007/08",
+      "candidateRowsBeforeFinalPeerClosure": 1538,
+      "sourceImagesPixelReplayed": [
+        {
+          "path": "research/salaries/gap-fill-2026-11-02/health_employees/source-review-contexts/island-health-2007-08-p002.png",
+          "sha256": "c13deafd98ce007033d93e8b7d9b93bc474b311927095aebf57f53d889e9778c"
+        },
+        {
+          "path": "research/salaries/gap-fill-2026-11-02/health_employees/source-review-contexts/island-health-2007-08-p031.png",
+          "sha256": "ebfcc7ca5bf39e15cf706186f5da2caff765d17adb3f4e7539b13bca7b584604"
+        }
+      ],
+      "independentImagePeriodOcr": {
+        "sourceKey": "island-health-2007-08",
+        "physicalPage": 2,
+        "purpose": "first employee page/internal period and column definitions",
+        "path": "research/salaries/gap-fill-2026-11-02/reviews/health-context-ocr/island-health-2007-08-p2.json.gzip",
+        "sha256": "3b5c796ac5c86a1f7c900da88d24ad63254084c0c4a3cab375df9825b6767d58",
+        "headerMarchYearEnds": [
+          "2008"
+        ],
+        "headerFiscalPairs": [
+          [
+            "2007",
+            "08"
+          ]
+        ]
+      },
+      "periodImageCorroborationPassed": true,
+      "printedNamedControl": null,
+      "literalResidualBeforeFinalPeerClosure": null,
+      "controlSelectionAddendum": false,
+      "namedControlViewingAid": null
+    },
+    {
+      "sourceKey": "island-health-2006-07",
+      "sourceSha256": "08af8bae03971a64b0f16a8eedfb2f12c4f95791dcee4110ef093f958c28f727",
+      "candidateYear": "2006/07",
+      "candidateRowsBeforeFinalPeerClosure": 1512,
+      "sourceImagesPixelReplayed": [
+        {
+          "path": "research/salaries/gap-fill-2026-11-02/health_employees/source-review-contexts/island-health-2006-07-p002.png",
+          "sha256": "ac74a0411f79e44fcc6bc713aaa2a5cfdab9312f48b90ddbda2cff331071b12e"
+        },
+        {
+          "path": "research/salaries/gap-fill-2026-11-02/health_employees/source-review-contexts/island-health-2006-07-p032.png",
+          "sha256": "e937169ca3e970aa79fc8b9b24279d4475f5943728b96f63649491c39224b385"
+        }
+      ],
+      "independentImagePeriodOcr": {
+        "sourceKey": "island-health-2006-07",
+        "physicalPage": 2,
+        "purpose": "first employee page/internal period and column definitions",
+        "path": "research/salaries/gap-fill-2026-11-02/reviews/health-context-ocr/island-health-2006-07-p2.json.gzip",
+        "sha256": "e11c9e6f61c4256c47dcbdf3181eccfa126f55629eb5897d649807211f3dc4f2",
+        "headerMarchYearEnds": [
+          "2007"
+        ],
+        "headerFiscalPairs": [
+          [
+            "2006",
+            "07"
+          ]
+        ]
+      },
+      "periodImageCorroborationPassed": true,
+      "printedNamedControl": null,
+      "literalResidualBeforeFinalPeerClosure": null,
+      "controlSelectionAddendum": false,
+      "namedControlViewingAid": null
+    },
+    {
+      "sourceKey": "island-health-2005-06",
+      "sourceSha256": "bd7da0347a4bc1fb948eda4f28b4681d9c1b9ead6d228449920ea32362eb75ec",
+      "candidateYear": "2005/06",
+      "candidateRowsBeforeFinalPeerClosure": 859,
+      "sourceImagesPixelReplayed": [
+        {
+          "path": "research/salaries/gap-fill-2026-11-02/health_employees/source-review-contexts/island-health-2005-06-p002.png",
+          "sha256": "2fbf5c6ee80de1e338a324d9947434f7f08430171ef9d228211f0a6cb89afd88"
+        },
+        {
+          "path": "research/salaries/gap-fill-2026-11-02/health_employees/source-review-contexts/island-health-2005-06-p019.png",
+          "sha256": "cbafd7d8a22f2d26f62efb5c69106093ede0ee95c09275caa3c76cafbadfd6e0"
+        }
+      ],
+      "independentImagePeriodOcr": {
+        "sourceKey": "island-health-2005-06",
+        "physicalPage": 2,
+        "purpose": "first employee page/internal period and column definitions",
+        "path": "research/salaries/gap-fill-2026-11-02/reviews/health-context-ocr/island-health-2005-06-p2.json.gzip",
+        "sha256": "797397c6499b0fb0a7c0ddeb89aacdba6c5d31a5447e494a5c587f22cb149188",
+        "headerMarchYearEnds": [
+          "2006"
+        ],
+        "headerFiscalPairs": [
+          [
+            "2005",
+            "06"
+          ]
+        ]
+      },
+      "periodImageCorroborationPassed": true,
+      "printedNamedControl": null,
+      "literalResidualBeforeFinalPeerClosure": null,
+      "controlSelectionAddendum": false,
+      "namedControlViewingAid": null
+    },
+    {
+      "sourceKey": "island-health-2004-05",
+      "sourceSha256": "a622ba3ec1f698399e4ca73df4aaff990199a8903b96b476740a6d875791d230",
+      "candidateYear": "2004/05",
+      "candidateRowsBeforeFinalPeerClosure": 763,
+      "sourceImagesPixelReplayed": [
+        {
+          "path": "research/salaries/gap-fill-2026-11-02/health_employees/source-review-contexts/island-health-2004-05-p002.png",
+          "sha256": "e2a4cb316106bec05e55db661d100173de307a48c5997f7e32566995a4941ad5"
+        },
+        {
+          "path": "research/salaries/gap-fill-2026-11-02/health_employees/source-review-contexts/island-health-2004-05-p017.png",
+          "sha256": "dd61b7b376d5ae19d3a5e55a184fa47782d903444399d7ce7889291fed9e0a7f"
+        }
+      ],
+      "independentImagePeriodOcr": {
+        "sourceKey": "island-health-2004-05",
+        "physicalPage": 2,
+        "purpose": "first employee page/internal period and column definitions",
+        "path": "research/salaries/gap-fill-2026-11-02/reviews/health-context-ocr/island-health-2004-05-p2.json.gzip",
+        "sha256": "ef2e3d63c90b0cbdbdf9c72a170431026f53d5a748fa45034ffaf94f923140d2",
+        "headerMarchYearEnds": [
+          "2005"
+        ],
+        "headerFiscalPairs": [
+          [
+            "2004",
+            "05"
+          ]
+        ]
+      },
+      "periodImageCorroborationPassed": true,
+      "printedNamedControl": null,
+      "literalResidualBeforeFinalPeerClosure": null,
+      "controlSelectionAddendum": false,
+      "namedControlViewingAid": null
+    },
+    {
+      "sourceKey": "island-health-2003-04",
+      "sourceSha256": "5bc55aba29e3428a2e74c9d96514bcc1c7f59c02796918b02958375a1dbccffb",
+      "candidateYear": "2003/04",
+      "candidateRowsBeforeFinalPeerClosure": 739,
+      "sourceImagesPixelReplayed": [
+        {
+          "path": "research/salaries/gap-fill-2026-11-02/health_employees/source-review-contexts/island-health-2003-04-p002.png",
+          "sha256": "de451a3f911c022e2d73716c11b6de04ecddf4b818908a1682ac782d54a729b5"
+        },
+        {
+          "path": "research/salaries/gap-fill-2026-11-02/health_employees/source-review-contexts/island-health-2003-04-p017.png",
+          "sha256": "385602953ab0b86b60b676f457286204f5d5bc58565dcd9c8bd109e3ce6521c0"
+        }
+      ],
+      "independentImagePeriodOcr": {
+        "sourceKey": "island-health-2003-04",
+        "physicalPage": 2,
+        "purpose": "first employee page/internal period and column definitions",
+        "path": "research/salaries/gap-fill-2026-11-02/reviews/health-context-ocr/island-health-2003-04-p2.json.gzip",
+        "sha256": "7f0eebf7157c7d82a904bd9209cca1d4636d904d0d7d3f1df4df7d06c5a85665",
+        "headerMarchYearEnds": [
+          "2004"
+        ],
+        "headerFiscalPairs": [
+          [
+            "2003",
+            "04"
+          ]
+        ]
+      },
+      "periodImageCorroborationPassed": true,
+      "printedNamedControl": null,
+      "literalResidualBeforeFinalPeerClosure": null,
+      "controlSelectionAddendum": false,
+      "namedControlViewingAid": null
+    }
+  ],
+  "controlViewingSheets": [
+    {
+      "path": "research/salaries/gap-fill-2026-11-02/reviews/health-context-root/named-controls-01-07.png",
+      "sha256": "942fdb3673ea3a0fe8bd87a309cba8289d548acb9632f862f120a37985ff6781",
+      "sourceCrops": [
+        {
+          "path": "research/salaries/gap-fill-2026-11-02/reviews/health-context-root/fraser-health-2012-13-named-control.png",
+          "sha256": "7de3aeeee48c20caeb3432a7c531c60aebdebf9ab1183672b2430a1464289eae",
+          "sourceSha256": "b1e55364215549f3cdcb6ebcf1b89c6dbb3cfff20d1df62595bf830c6b54ad1b",
+          "physicalPage": 101,
+          "dpi": 144,
+          "integerCropBox": [
+            0,
+            917,
+            1224,
+            1087
+          ],
+          "noResampling": true,
+          "purpose": "Named control and surrounding original source pixels; crop located from literal control token, not a replacement source"
+        },
+        {
+          "path": "research/salaries/gap-fill-2026-11-02/reviews/health-context-root/fraser-health-2011-12-named-control.png",
+          "sha256": "2d9dbf229029d14e7112d0370cb1e44b538f48a038c8abc8cc0fc338eeaa7ec8",
+          "sourceSha256": "b98ff548d8168780292e0002c7942fc9bf3ed57e279e77bf8c2e349004af59ba",
+          "physicalPage": 93,
+          "dpi": 144,
+          "integerCropBox": [
+            0,
+            391,
+            1224,
+            561
+          ],
+          "noResampling": true,
+          "purpose": "Named control and surrounding original source pixels; crop located from literal control token, not a replacement source"
+        },
+        {
+          "path": "research/salaries/gap-fill-2026-11-02/reviews/health-context-root/fraser-health-2010-11-named-control.png",
+          "sha256": "144c25f79ab55b1de64a2f52d704144897a5723d31bdb9f85a694f74b96ef9d2",
+          "sourceSha256": "d1c51a7cb39a122bcd8fe612b8fd8173519412678495039acd5744cae15e122d",
+          "physicalPage": 94,
+          "dpi": 144,
+          "integerCropBox": [
+            0,
+            816,
+            1224,
+            986
+          ],
+          "noResampling": true,
+          "purpose": "Named control and surrounding original source pixels; crop located from literal control token, not a replacement source"
+        },
+        {
+          "path": "research/salaries/gap-fill-2026-11-02/reviews/health-context-root/fraser-health-2009-10-named-control.png",
+          "sha256": "3952dac90e0a62df06b6d41c788f6006f23f71cc2f883fe6a2af7c04219b7c13",
+          "sourceSha256": "86a8fa64f7ea35d5175970bc39c857aee35d4f30ebfe7531bb708b643f368b8a",
+          "physicalPage": 81,
+          "dpi": 144,
+          "integerCropBox": [
+            0,
+            315,
+            1224,
+            485
+          ],
+          "noResampling": true,
+          "purpose": "Named control and surrounding original source pixels; crop located from literal control token, not a replacement source"
+        },
+        {
+          "path": "research/salaries/gap-fill-2026-11-02/reviews/health-context-root/fraser-health-2008-09-named-control.png",
+          "sha256": "882976f07f8c9fe1d2f3928589f8b65c5e26f3ee94ac3f52258d07599e445047",
+          "sourceSha256": "cc5520235c5064a7e5a9db8f70fc65ede8201b69cdc97c0e1888594204bf30f9",
+          "physicalPage": 67,
+          "dpi": 144,
+          "integerCropBox": [
+            0,
+            604,
+            1224,
+            774
+          ],
+          "noResampling": true,
+          "purpose": "Named control and surrounding original source pixels; crop located from literal control token, not a replacement source"
+        },
+        {
+          "path": "research/salaries/gap-fill-2026-11-02/reviews/health-context-root/fraser-health-2007-08-named-control.png",
+          "sha256": "bc0755f40ca3f049641d33d1e01f632effae21b5538bcd51053f29a391d56f4a",
+          "sourceSha256": "ea0fe6ecb9e39b94fcb9a051612aaaf74499950cde49e303de80071c3ccf8c8a",
+          "physicalPage": 52,
+          "dpi": 144,
+          "integerCropBox": [
+            0,
+            1211,
+            1224,
+            1381
+          ],
+          "noResampling": true,
+          "purpose": "Named control and surrounding original source pixels; crop located from literal control token, not a replacement source"
+        },
+        {
+          "path": "research/salaries/gap-fill-2026-11-02/reviews/health-context-root/fraser-health-2006-07-named-control.png",
+          "sha256": "ca077437b348c993273f4d27f6c1c98855a3bc9e429ad85d1e3753ad2ae02f35",
+          "sourceSha256": "abc3650b650857273b1f87c8bbcc1b60abe794714fd406ac3b7274fd3cc4f228",
+          "physicalPage": 53,
+          "dpi": 144,
+          "integerCropBox": [
+            0,
+            881,
+            1224,
+            1051
+          ],
+          "noResampling": true,
+          "purpose": "Named control and surrounding original source pixels; crop located from literal control token, not a replacement source"
+        }
+      ],
+      "noResampling": true
+    },
+    {
+      "path": "research/salaries/gap-fill-2026-11-02/reviews/health-context-root/named-controls-08-14.png",
+      "sha256": "ee04173dbbf29430934961b00d986343a8cb92e0cc74b1420bf683428caae1cb",
+      "sourceCrops": [
+        {
+          "path": "research/salaries/gap-fill-2026-11-02/reviews/health-context-root/fraser-health-2005-06-named-control.png",
+          "sha256": "a165774d09f7af8ba1ef338886d52e4d258789c4cec81e862daa631032010f48",
+          "sourceSha256": "70ee636035e1b50c72b3d3f7c3561d18d2840436e7af101786b052f636c8bc9f",
+          "physicalPage": 31,
+          "dpi": 144,
+          "integerCropBox": [
+            0,
+            1128,
+            1224,
+            1298
+          ],
+          "noResampling": true,
+          "purpose": "Named control and surrounding original source pixels; crop located from literal control token, not a replacement source"
+        },
+        {
+          "path": "research/salaries/gap-fill-2026-11-02/reviews/health-context-root/fraser-health-2004-05-named-control.png",
+          "sha256": "3f43e9d3d0f747f9b3dddbee32db0688cee59108b05853859e0456d1c14f5033",
+          "sourceSha256": "d238d8ad9e1911ef1f0166ed80f9d47b4d3bf7a4bdc3352e17b77b9cfd85fd0b",
+          "physicalPage": 27,
+          "dpi": 144,
+          "integerCropBox": [
+            0,
+            510,
+            1224,
+            680
+          ],
+          "noResampling": true,
+          "purpose": "Named control and surrounding original source pixels; crop located from literal control token, not a replacement source"
+        },
+        {
+          "path": "research/salaries/gap-fill-2026-11-02/reviews/health-context-root/interior-health-2013-14-named-control.png",
+          "sha256": "91d32d988ecf25d5acda61a26e73d82d3610afe93f4f3acf4e127055ec755edd",
+          "sourceSha256": "15ff45067bfed739ab78715adba37c0e397535ac170bf97d88d66c8c9444b52c",
+          "physicalPage": 63,
+          "dpi": 144,
+          "integerCropBox": [
+            0,
+            561,
+            1224,
+            731
+          ],
+          "noResampling": true,
+          "purpose": "Named control and surrounding original source pixels; crop located from literal control token, not a replacement source"
+        },
+        {
+          "path": "research/salaries/gap-fill-2026-11-02/reviews/health-context-root/interior-health-2012-13-named-control.png",
+          "sha256": "8f2b741eb629df6c6be3e29583736d918ca2d1a3861da79b0af2c07b481ecbe8",
+          "sourceSha256": "5ea6a715ce9c36d83a64a133c450ed1995964844cca0d6cb81d4c55eaaf44771",
+          "physicalPage": 54,
+          "dpi": 144,
+          "integerCropBox": [
+            0,
+            163,
+            1224,
+            333
+          ],
+          "noResampling": true,
+          "purpose": "Named control and surrounding original source pixels; crop located from literal control token, not a replacement source"
+        },
+        {
+          "path": "research/salaries/gap-fill-2026-11-02/reviews/health-context-root/interior-health-2011-12-named-control.png",
+          "sha256": "26172efaccf666d13beef1ceec2d90926b28a0de78fab5efcec149f82c5d7d44",
+          "sourceSha256": "692f8c3492757464e514d7eb1b94e697788bda05ad263729bd311916fd07cc04",
+          "physicalPage": 52,
+          "dpi": 144,
+          "integerCropBox": [
+            0,
+            874,
+            1224,
+            1044
+          ],
+          "noResampling": true,
+          "purpose": "Named control and surrounding original source pixels; crop located from literal control token, not a replacement source"
+        },
+        {
+          "path": "research/salaries/gap-fill-2026-11-02/reviews/health-context-root/interior-health-2010-11-named-control.png",
+          "sha256": "8933d18bfe36794e936ee9483d2cd1dd5374d594da3d65b5c64325983e81f8a1",
+          "sourceSha256": "34466dcf7e71335874d0990745d633217853a383d83165f9736d9afb61f577bf",
+          "physicalPage": 47,
+          "dpi": 144,
+          "integerCropBox": [
+            0,
+            1034,
+            1224,
+            1204
+          ],
+          "noResampling": true,
+          "purpose": "Named control and surrounding original source pixels; crop located from literal control token, not a replacement source"
+        },
+        {
+          "path": "research/salaries/gap-fill-2026-11-02/reviews/health-context-root/interior-health-2009-10-named-control.png",
+          "sha256": "ef466bde0d1f1454bbb5091f8bb9010321beb82c77b74503f2ae47d091e277cb",
+          "sourceSha256": "2e9e3f3257e66ea9c17827a1e521e10af35f5b686a86e681bc6c5290f212ee1a",
+          "physicalPage": 42,
+          "dpi": 144,
+          "integerCropBox": [
+            0,
+            613,
+            1224,
+            783
+          ],
+          "noResampling": true,
+          "purpose": "Named control and surrounding original source pixels; crop located from literal control token, not a replacement source"
+        }
+      ],
+      "noResampling": true
+    },
+    {
+      "path": "research/salaries/gap-fill-2026-11-02/reviews/health-context-root/named-controls-15-21.png",
+      "sha256": "a1e9b13528820788d0e8ea1bbf3b1b70bf3a50d5cba49fee41cf6e1d5ba84bcd",
+      "sourceCrops": [
+        {
+          "path": "research/salaries/gap-fill-2026-11-02/reviews/health-context-root/interior-health-2008-09-named-control.png",
+          "sha256": "22a87d5edde9af1cd9483f363f08ac511089102b3a5c25a9b13c80b0eebc97a3",
+          "sourceSha256": "e648b250f88a58341d399299d8db47dc2d09c607fa7d83868d965308e2beda44",
+          "physicalPage": 36,
+          "dpi": 144,
+          "integerCropBox": [
+            0,
+            554,
+            1224,
+            724
+          ],
+          "noResampling": true,
+          "purpose": "Named control and surrounding original source pixels; crop located from literal control token, not a replacement source"
+        },
+        {
+          "path": "research/salaries/gap-fill-2026-11-02/reviews/health-context-root/interior-health-2007-08-named-control.png",
+          "sha256": "09dcdd73bfe8789702f36c333b311ff38c6d2f7eb4ddd946126b35c831eb1728",
+          "sourceSha256": "310bcb2ade5e2769621507452d3a12f4695a0640058b355ad830acedd334070d",
+          "physicalPage": 32,
+          "dpi": 144,
+          "integerCropBox": [
+            0,
+            301,
+            1224,
+            471
+          ],
+          "noResampling": true,
+          "purpose": "Named control and surrounding original source pixels; crop located from literal control token, not a replacement source"
+        },
+        {
+          "path": "research/salaries/gap-fill-2026-11-02/reviews/health-context-root/interior-health-2006-07-named-control.png",
+          "sha256": "77fd2947785618cdab985336c7642a3d6b1c1107385d68fd4388ac207b6e1562",
+          "sourceSha256": "b878659efb337285ba6118bc0e290b8cf9ac078809a49fed4ef0311569c56410",
+          "physicalPage": 26,
+          "dpi": 144,
+          "integerCropBox": [
+            0,
+            418,
+            1224,
+            588
+          ],
+          "noResampling": true,
+          "purpose": "Named control and surrounding original source pixels; crop located from literal control token, not a replacement source"
+        },
+        {
+          "path": "research/salaries/gap-fill-2026-11-02/reviews/health-context-root/interior-health-2005-06-named-control.png",
+          "sha256": "969c2bbf518adead0926382d1fa3c35ac6244baa4b5cd51c73bb5f4766dd6878",
+          "sourceSha256": "772bb6c41f9ccd868e3945136da08273e1f806bda63be9537785a32c70c20499",
+          "physicalPage": 18,
+          "dpi": 144,
+          "integerCropBox": [
+            0,
+            1187,
+            1224,
+            1357
+          ],
+          "noResampling": true,
+          "purpose": "Named control and surrounding original source pixels; crop located from literal control token, not a replacement source"
+        },
+        {
+          "path": "research/salaries/gap-fill-2026-11-02/reviews/health-context-root/interior-health-2004-05-named-control.png",
+          "sha256": "6727965d04c75b29066b9d7a01fe70619a620d3f2e86ac4bfd9f0a30ee58bee4",
+          "sourceSha256": "9be5485b61845509cce8e1395062abc0ab7d95da809ba0959ea4b91e6b9c6784",
+          "physicalPage": 12,
+          "dpi": 144,
+          "integerCropBox": [
+            0,
+            887,
+            1224,
+            1057
+          ],
+          "noResampling": true,
+          "purpose": "Named control and surrounding original source pixels; crop located from literal control token, not a replacement source"
+        },
+        {
+          "path": "research/salaries/gap-fill-2026-11-02/reviews/health-context-root/interior-health-2003-04-named-control.png",
+          "sha256": "da3c2040c1bccb2ca8e5caba36280b3fca1b683f962532cf7f0d0fb646cdf319",
+          "sourceSha256": "47142a34060f57a2000e6b13bdd8b6715fa7b4ac637ffedf1171d990cb9ca2bb",
+          "physicalPage": 13,
+          "dpi": 144,
+          "integerCropBox": [
+            0,
+            1214,
+            1224,
+            1384
+          ],
+          "noResampling": true,
+          "purpose": "Named control and surrounding original source pixels; crop located from literal control token, not a replacement source"
+        },
+        {
+          "path": "research/salaries/gap-fill-2026-11-02/reviews/health-context-root/northern-health-2019-20-named-control.png",
+          "sha256": "6de852de75789c809ce7af9e4b6f2698ae666d1b166ad97099925a84ba9fe46f",
+          "sourceSha256": "9fa1e3c27aa9eb406d2f84aee0dfe5017cbe3fdafe16a05f99a2a349ae064a54",
+          "physicalPage": 46,
+          "dpi": 144,
+          "integerCropBox": [
+            0,
+            99,
+            1224,
+            269
+          ],
+          "noResampling": true,
+          "purpose": "Named control and surrounding original source pixels; crop located from literal control token, not a replacement source"
+        }
+      ],
+      "noResampling": true
+    },
+    {
+      "path": "research/salaries/gap-fill-2026-11-02/reviews/health-context-root/named-controls-22-28.png",
+      "sha256": "7dc637ec9620dd696c2088f324545af2b9ed97a85f93d2f4e3dc6696871d6245",
+      "sourceCrops": [
+        {
+          "path": "research/salaries/gap-fill-2026-11-02/reviews/health-context-root/northern-health-2018-19-named-control.png",
+          "sha256": "0d3ccd320cf0c3b0bab1a177f023b90f816964241053a2f69b1ba72e84dc4144",
+          "sourceSha256": "d7b986fc2bd877d21080203b52aa31cabe632cf2628622daa141ac9f6e48a7f2",
+          "physicalPage": 40,
+          "dpi": 144,
+          "integerCropBox": [
+            0,
+            395,
+            1224,
+            565
+          ],
+          "noResampling": true,
+          "purpose": "Named control and surrounding original source pixels; crop located from literal control token, not a replacement source"
+        },
+        {
+          "path": "research/salaries/gap-fill-2026-11-02/reviews/health-context-root/northern-health-2017-18-named-control.png",
+          "sha256": "5b71b46cf47f0f7a5d9a6c8fb38fa3f4fe45c4608001aab392ef35cd85c927b9",
+          "sourceSha256": "d89a0f11de54224f021d586534675c04bb3a4565d0881f91f3e5b8edb963b5aa",
+          "physicalPage": 40,
+          "dpi": 144,
+          "integerCropBox": [
+            0,
+            156,
+            1224,
+            326
+          ],
+          "noResampling": true,
+          "purpose": "Named control and surrounding original source pixels; crop located from literal control token, not a replacement source"
+        },
+        {
+          "path": "research/salaries/gap-fill-2026-11-02/reviews/health-context-root/northern-health-2016-17-named-control.png",
+          "sha256": "3a14fc6c3272034602ee45abed554fb09a9f4a0c79c56db200e030ff9b9bb59b",
+          "sourceSha256": "4b814bbe0f6185c72c1b8ec1187d89126dfb6158ffe4bb04edd6029006470cfb",
+          "physicalPage": 36,
+          "dpi": 144,
+          "integerCropBox": [
+            0,
+            912,
+            1224,
+            1082
+          ],
+          "noResampling": true,
+          "purpose": "Named control and surrounding original source pixels; crop located from literal control token, not a replacement source"
+        },
+        {
+          "path": "research/salaries/gap-fill-2026-11-02/reviews/health-context-root/northern-health-2015-16-named-control.png",
+          "sha256": "55c2c64ec340ee4e917a22b8b90d9589470ad81f14e80113a15caaff4ed59509",
+          "sourceSha256": "b01bed9622af7a8ffbd3eac2c356b0e641af5465c01bdf6ca89544331533918e",
+          "physicalPage": 31,
+          "dpi": 144,
+          "integerCropBox": [
+            0,
+            952,
+            1224,
+            1122
+          ],
+          "noResampling": true,
+          "purpose": "Named control and surrounding original source pixels; crop located from literal control token, not a replacement source"
+        },
+        {
+          "path": "research/salaries/gap-fill-2026-11-02/reviews/health-context-root/northern-health-2013-14-named-control.png",
+          "sha256": "806cb39c2cb57201b29304ec07eea8648e721082778449d5c6cf19318e33a5cd",
+          "sourceSha256": "6219b099a392c9a40d9b471ef5ce8fcebb85bcf96722bc6bcf8b99a9b5555574",
+          "physicalPage": 24,
+          "dpi": 144,
+          "integerCropBox": [
+            0,
+            775,
+            1224,
+            945
+          ],
+          "noResampling": true,
+          "purpose": "Named control and surrounding original source pixels; crop located from literal control token, not a replacement source"
+        },
+        {
+          "path": "research/salaries/gap-fill-2026-11-02/reviews/health-context-root/northern-health-2012-13-named-control.png",
+          "sha256": "914072e3901b710f4fea1e6577c1fd75ee58aa9a870e59e13893e5a1ebbd4d03",
+          "sourceSha256": "1064540ecd99fc273e127121ce9e4fcd93f0b83cea81a4189141151e177302a3",
+          "physicalPage": 21,
+          "dpi": 144,
+          "integerCropBox": [
+            0,
+            698,
+            1224,
+            868
+          ],
+          "noResampling": true,
+          "purpose": "Named control and surrounding original source pixels; crop located from literal control token, not a replacement source"
+        },
+        {
+          "path": "research/salaries/gap-fill-2026-11-02/reviews/health-context-root/northern-health-2011-12-named-control.png",
+          "sha256": "af3a6d04a3f81ef94bed41d43a06b372d0aba528de438f3cdb89ce831610d6f9",
+          "sourceSha256": "7099788a2fcfa9ccfeb0ef35874a46f1ac90e8fd11d83f7bf432609b64886c12",
+          "physicalPage": 22,
+          "dpi": 144,
+          "integerCropBox": [
+            0,
+            287,
+            1224,
+            457
+          ],
+          "noResampling": true,
+          "purpose": "Named control and surrounding original source pixels; crop located from literal control token, not a replacement source"
+        }
+      ],
+      "noResampling": true
+    },
+    {
+      "path": "research/salaries/gap-fill-2026-11-02/reviews/health-context-root/named-controls-29-35.png",
+      "sha256": "3042fa774c83e605f407f4db78de09d804248b500d4391427cadc9c77378e01a",
+      "sourceCrops": [
+        {
+          "path": "research/salaries/gap-fill-2026-11-02/reviews/health-context-root/northern-health-2010-11-named-control.png",
+          "sha256": "c273ed2ad36849eb23b791bce58469a0fb335661329847ae46fc261103ef1176",
+          "sourceSha256": "28178fe258df8884c8c21312a36c033b6ac6e65d92b92645f13a0cef2ad6d287",
+          "physicalPage": 27,
+          "dpi": 144,
+          "integerCropBox": [
+            0,
+            1025,
+            1224,
+            1195
+          ],
+          "noResampling": true,
+          "purpose": "Named control and surrounding original source pixels; crop located from literal control token, not a replacement source"
+        },
+        {
+          "path": "research/salaries/gap-fill-2026-11-02/reviews/health-context-root/northern-health-2009-10-named-control.png",
+          "sha256": "4918983d007d712eb82adf556227f2b4dff3e5078a4d1f2bb8424552441e4d25",
+          "sourceSha256": "e99fa7e0a98cd8cbe3f51f1c37220850895f45b87952a3d66e63f90681c5dfe7",
+          "physicalPage": 21,
+          "dpi": 144,
+          "integerCropBox": [
+            0,
+            297,
+            1224,
+            467
+          ],
+          "noResampling": true,
+          "purpose": "Named control and surrounding original source pixels; crop located from literal control token, not a replacement source"
+        },
+        {
+          "path": "research/salaries/gap-fill-2026-11-02/reviews/health-context-root/northern-health-2008-09-named-control.png",
+          "sha256": "1969d4540ae5fe1c59cbcc06f9198aece463525ff505f89575e4c1aba658a239",
+          "sourceSha256": "bb3a8c67ab5dea860e78ea105adb29176d9d32a774169f713d4ebddc7e785010",
+          "physicalPage": 18,
+          "dpi": 144,
+          "integerCropBox": [
+            0,
+            689,
+            1224,
+            859
+          ],
+          "noResampling": true,
+          "purpose": "Named control and surrounding original source pixels; crop located from literal control token, not a replacement source"
+        },
+        {
+          "path": "research/salaries/gap-fill-2026-11-02/reviews/health-context-root/providence-health-care-2024-25-named-control.png",
+          "sha256": "50250cb2e6a65613a347e11555081cbe90ce89869b387a5a9ee1428449fa5554",
+          "sourceSha256": "37b0b91d65c1d89ecdfd7f148fb9097092ee3554d186c36c7fb63cfb0132fa44",
+          "physicalPage": 199,
+          "dpi": 144,
+          "integerCropBox": [
+            0,
+            817,
+            1224,
+            987
+          ],
+          "noResampling": true,
+          "purpose": "Named control and surrounding original source pixels; crop located from literal control token, not a replacement source"
+        },
+        {
+          "path": "research/salaries/gap-fill-2026-11-02/reviews/health-context-root/providence-health-care-2022-23-named-control.png",
+          "sha256": "189f59f86a896edd90047ddf2b61a4b4d99cfb41ae4e07698c7089a4760212b7",
+          "sourceSha256": "2dc3e947deae74996169840041bb36e5b5e44b82bfa44bc720f850e2f8f5359e",
+          "physicalPage": 188,
+          "dpi": 144,
+          "integerCropBox": [
+            0,
+            890,
+            1224,
+            1060
+          ],
+          "noResampling": true,
+          "purpose": "Named control and surrounding original source pixels; crop located from literal control token, not a replacement source"
+        },
+        {
+          "path": "research/salaries/gap-fill-2026-11-02/reviews/health-context-root/providence-health-care-2021-22-named-control.png",
+          "sha256": "ca37de0574c5356c0dc1ba825d35fcbdc0a23b9a7765bb26a3a80c4a357780d4",
+          "sourceSha256": "43b42a53b47a9de0aa18ab3e2ad14c28749f25250c77938a41200ab284b74bda",
+          "physicalPage": 180,
+          "dpi": 144,
+          "integerCropBox": [
+            0,
+            637,
+            1224,
+            807
+          ],
+          "noResampling": true,
+          "purpose": "Named control and surrounding original source pixels; crop located from literal control token, not a replacement source"
+        },
+        {
+          "path": "research/salaries/gap-fill-2026-11-02/reviews/health-context-root/providence-health-care-2020-21-named-control.png",
+          "sha256": "405e563d25d09ffe1e04d00ac9478fdacb65393d7c2b99a8e177a911ef016343",
+          "sourceSha256": "5fcf93ee1f3acedeb30c1033268aea2faa0f55d945ce9c138acc42910b2635b4",
+          "physicalPage": 177,
+          "dpi": 144,
+          "integerCropBox": [
+            0,
+            1251,
+            1224,
+            1421
+          ],
+          "noResampling": true,
+          "purpose": "Named control and surrounding original source pixels; crop located from literal control token, not a replacement source"
+        }
+      ],
+      "noResampling": true
+    },
+    {
+      "path": "research/salaries/gap-fill-2026-11-02/reviews/health-context-root/named-controls-36-42.png",
+      "sha256": "ff1478ed8a8bdc9e029866f837230637f8939440294405c5ae5c4d261e56dc81",
+      "sourceCrops": [
+        {
+          "path": "research/salaries/gap-fill-2026-11-02/reviews/health-context-root/vancouver-coastal-health-2024-25-named-control.png",
+          "sha256": "0b90ed29df5a228de87d51b83a3e3917eaac8152a8ea84afdf4a632fda5d1d68",
+          "sourceSha256": "b7e3149f4ba3f2c44a19953e405fce7af322a0908bd49c15ed1b7ce5b3db7041",
+          "physicalPage": 224,
+          "dpi": 144,
+          "integerCropBox": [
+            0,
+            344,
+            1224,
+            514
+          ],
+          "noResampling": true,
+          "purpose": "Named control and surrounding original source pixels; crop located from literal control token, not a replacement source"
+        },
+        {
+          "path": "research/salaries/gap-fill-2026-11-02/reviews/health-context-root/vancouver-coastal-health-2023-24-named-control.png",
+          "sha256": "b2a7fce62dab2d8885fa99e7e8d9a6d8c91288d5cc433e77e197956ac13e9ddc",
+          "sourceSha256": "34622138b85e091d2d25be847a09cefe054367ad6838fbd2c2dfc41fe8b0d63e",
+          "physicalPage": 212,
+          "dpi": 144,
+          "integerCropBox": [
+            0,
+            1045,
+            1530,
+            1215
+          ],
+          "noResampling": true,
+          "purpose": "Named control and surrounding original source pixels; crop located from literal control token, not a replacement source"
+        },
+        {
+          "path": "research/salaries/gap-fill-2026-11-02/reviews/health-context-root/vancouver-coastal-health-2022-23-named-control.png",
+          "sha256": "e2294d14f1463dde348d36740d489783222a22478454c624c7f337105c4d6cc4",
+          "sourceSha256": "62c60426df91d03ec863981286403870d4e74f75bf1afbc7f92e2a74594c00b5",
+          "physicalPage": 157,
+          "dpi": 144,
+          "integerCropBox": [
+            0,
+            1094,
+            1224,
+            1264
+          ],
+          "noResampling": true,
+          "purpose": "Named control and surrounding original source pixels; crop located from literal control token, not a replacement source"
+        },
+        {
+          "path": "research/salaries/gap-fill-2026-11-02/reviews/health-context-root/vancouver-coastal-health-2021-22-named-control.png",
+          "sha256": "031c34bc55aa6671c84d950f3e6f5640cf2802fd86dfd6e2684db86f29fb13a3",
+          "sourceSha256": "b249e364b1da6fb3b59700427c80a677d84565add22f9b8ea0c9ca2e1b1b72e7",
+          "physicalPage": 162,
+          "dpi": 144,
+          "integerCropBox": [
+            0,
+            754,
+            1224,
+            924
+          ],
+          "noResampling": true,
+          "purpose": "Named control and surrounding original source pixels; crop located from literal control token, not a replacement source"
+        },
+        {
+          "path": "research/salaries/gap-fill-2026-11-02/reviews/health-context-root/vancouver-coastal-health-2019-20-named-control.png",
+          "sha256": "d26b63c4667ba9037dfd829e9c19b2bff5ebc0e2abd43a54863d2730c7d9116e",
+          "sourceSha256": "dd5b76799149b87e76008eed4149a3a0790001c3c9ce23093a67c1bc1b5bc3f6",
+          "physicalPage": 131,
+          "dpi": 144,
+          "integerCropBox": [
+            0,
+            886,
+            1224,
+            1056
+          ],
+          "noResampling": true,
+          "purpose": "Named control and surrounding original source pixels; crop located from literal control token, not a replacement source"
+        },
+        {
+          "path": "research/salaries/gap-fill-2026-11-02/reviews/health-context-root/vancouver-coastal-health-2018-19-named-control.png",
+          "sha256": "c3f9106ce0f1d8d5f8a2c906d4b13c1859ec45d7283ea7614232c6252bf2e3ff",
+          "sourceSha256": "a9de23592e9b7a307992d9c23ce20e15ecdb1a54b1cf1dfb93de221225e41dd0",
+          "physicalPage": 108,
+          "dpi": 144,
+          "integerCropBox": [
+            0,
+            480,
+            1224,
+            650
+          ],
+          "noResampling": true,
+          "purpose": "Named control and surrounding original source pixels; crop located from literal control token, not a replacement source"
+        },
+        {
+          "path": "research/salaries/gap-fill-2026-11-02/reviews/health-context-root/vancouver-coastal-health-2017-18-named-control.png",
+          "sha256": "be6eede7e0d753a4034dde0b39131406fbf651c55f0546b2081ec1bc1b115752",
+          "sourceSha256": "eb7b35082cef57bb89120b021c2b42ab7e61bb01bf760f9e33873c846c4012e0",
+          "physicalPage": 101,
+          "dpi": 144,
+          "integerCropBox": [
+            0,
+            377,
+            1224,
+            547
+          ],
+          "noResampling": true,
+          "purpose": "Named control and surrounding original source pixels; crop located from literal control token, not a replacement source"
+        }
+      ],
+      "noResampling": true
+    },
+    {
+      "path": "research/salaries/gap-fill-2026-11-02/reviews/health-context-root/named-controls-43-49.png",
+      "sha256": "43542a7cec26a32f61978c7d83ac08105143565e586b13784a521c6a21f5ab2b",
+      "sourceCrops": [
+        {
+          "path": "research/salaries/gap-fill-2026-11-02/reviews/health-context-root/vancouver-coastal-health-2016-17-named-control.png",
+          "sha256": "837599061eedc271328fbd8ccba2eac1f10cdf885cee4f554d2b781bfca96a39",
+          "sourceSha256": "95865b81d7efdf32200957fd555c896705dba8f77b02aad11dddeee2082d45fb",
+          "physicalPage": 121,
+          "dpi": 144,
+          "integerCropBox": [
+            0,
+            558,
+            1224,
+            728
+          ],
+          "noResampling": true,
+          "purpose": "Named control and surrounding original source pixels; crop located from literal control token, not a replacement source"
+        },
+        {
+          "path": "research/salaries/gap-fill-2026-11-02/reviews/health-context-root/vancouver-coastal-health-2015-16-named-control.png",
+          "sha256": "0842ef4e145063b4670f2726c101ee421db35abba227d39be4d998cf405889dd",
+          "sourceSha256": "914fb5a55718ddc4caa5605e9e9f5ff7c39ffa4fcfc190fa2e0f209e9b2ae827",
+          "physicalPage": 103,
+          "dpi": 144,
+          "integerCropBox": [
+            0,
+            615,
+            1224,
+            785
+          ],
+          "noResampling": true,
+          "purpose": "Named control and surrounding original source pixels; crop located from literal control token, not a replacement source"
+        },
+        {
+          "path": "research/salaries/gap-fill-2026-11-02/reviews/health-context-root/vancouver-coastal-health-2014-15-named-control.png",
+          "sha256": "d2cd256a5fc92163677ccabdd5a1b2b156a76528a453e657ce946f1bda3e82c3",
+          "sourceSha256": "72b242a78ca41d4f9f1eb8f9700c4d76571f8b3bf29792fc0117c890e997e086",
+          "physicalPage": 104,
+          "dpi": 144,
+          "integerCropBox": [
+            0,
+            650,
+            1224,
+            820
+          ],
+          "noResampling": true,
+          "purpose": "Named control and surrounding original source pixels; crop located from literal control token, not a replacement source"
+        },
+        {
+          "path": "research/salaries/gap-fill-2026-11-02/reviews/health-context-root/vancouver-coastal-health-2013-14-named-control.png",
+          "sha256": "df4a86fdc7c82c476090ca03fb518c6f77004ee600d9aae40617f5b93a8236f3",
+          "sourceSha256": "42cf7cc582fefa910b36bb94b4d4999766cba98040aa79a6fbc87c62a24980b3",
+          "physicalPage": 94,
+          "dpi": 144,
+          "integerCropBox": [
+            0,
+            1256,
+            1224,
+            1426
+          ],
+          "noResampling": true,
+          "purpose": "Named control and surrounding original source pixels; crop located from literal control token, not a replacement source"
+        },
+        {
+          "path": "research/salaries/gap-fill-2026-11-02/reviews/health-context-root/vancouver-coastal-health-2012-13-named-control.png",
+          "sha256": "20453a6d47681d38c420a135ac5cb7f35a0fb67432db50eefa71ec0322607023",
+          "sourceSha256": "0ace1ba6508ac6c0278effd0d0aa570e3ab60a3b04bb4933203d4e87488ac1be",
+          "physicalPage": 73,
+          "dpi": 144,
+          "integerCropBox": [
+            0,
+            564,
+            1224,
+            734
+          ],
+          "noResampling": true,
+          "purpose": "Named control and surrounding original source pixels; crop located from literal control token, not a replacement source"
+        },
+        {
+          "path": "research/salaries/gap-fill-2026-11-02/reviews/health-context-root/vancouver-coastal-health-2011-12-named-control.png",
+          "sha256": "2ed23483aed934162986c56eef1214175da6e94f960cb5606d98921dd2f89c76",
+          "sourceSha256": "b60b08dd5bab09eabad54ae02120aa90ec67f430a68d51c42ede765ba921c11e",
+          "physicalPage": 80,
+          "dpi": 144,
+          "integerCropBox": [
+            0,
+            1156,
+            1224,
+            1326
+          ],
+          "noResampling": true,
+          "purpose": "Named control and surrounding original source pixels; crop located from literal control token, not a replacement source"
+        },
+        {
+          "path": "research/salaries/gap-fill-2026-11-02/reviews/health-context-root/vancouver-coastal-health-2010-11-named-control.png",
+          "sha256": "49478b0c522d4ef0a3891ed49e9fdd0a03067102b9483981c5d92d0a3e6becd3",
+          "sourceSha256": "09cad85a1a1d864c9df7f3a247ce708b75c683fc98525bfddba0c8bfe311ec6b",
+          "physicalPage": 69,
+          "dpi": 144,
+          "integerCropBox": [
+            0,
+            944,
+            1224,
+            1114
+          ],
+          "noResampling": true,
+          "purpose": "Named control and surrounding original source pixels; crop located from literal control token, not a replacement source"
+        }
+      ],
+      "noResampling": true
+    },
+    {
+      "path": "research/salaries/gap-fill-2026-11-02/reviews/health-context-root/named-controls-50-56.png",
+      "sha256": "e2e9db46a650fd417b5cf366586f88f2a2b83009cea55336946f41674c17dfdd",
+      "sourceCrops": [
+        {
+          "path": "research/salaries/gap-fill-2026-11-02/reviews/health-context-root/vancouver-coastal-health-2009-10-named-control.png",
+          "sha256": "536eea71cd1aa73b2477c9b4ab2e9a02ec1149c26dba5c2e341963c9608d5989",
+          "sourceSha256": "18d623782fad4c15f2533597aa085500576f8ef5b2108fc1ad96b874e5313cb7",
+          "physicalPage": 70,
+          "dpi": 144,
+          "integerCropBox": [
+            0,
+            611,
+            1224,
+            781
+          ],
+          "noResampling": true,
+          "purpose": "Named control and surrounding original source pixels; crop located from literal control token, not a replacement source"
+        },
+        {
+          "path": "research/salaries/gap-fill-2026-11-02/reviews/health-context-root/vancouver-coastal-health-2008-09-named-control.png",
+          "sha256": "db88172519213e2bc6913a77d0ee12cd2252609f5d3f3f057f39db44cb640145",
+          "sourceSha256": "e74cc78bf42ba67ec02526fe3219ff21d74662ceb4cdd4e659c257ba268cb6b3",
+          "physicalPage": 60,
+          "dpi": 144,
+          "integerCropBox": [
+            0,
+            719,
+            1224,
+            889
+          ],
+          "noResampling": true,
+          "purpose": "Named control and surrounding original source pixels; crop located from literal control token, not a replacement source"
+        },
+        {
+          "path": "research/salaries/gap-fill-2026-11-02/reviews/health-context-root/vancouver-coastal-health-2007-08-named-control.png",
+          "sha256": "b8d639b9adb49b7d4047d1fd26d0d4e054dc3c1df9272a4074c2bd6303dd641b",
+          "sourceSha256": "898a859d9576fa45c1d7668a4ca01a9f8a580713cd9091f92af613aadfd002be",
+          "physicalPage": 48,
+          "dpi": 144,
+          "integerCropBox": [
+            0,
+            851,
+            1224,
+            1021
+          ],
+          "noResampling": true,
+          "purpose": "Named control and surrounding original source pixels; crop located from literal control token, not a replacement source"
+        },
+        {
+          "path": "research/salaries/gap-fill-2026-11-02/reviews/health-context-root/vancouver-coastal-health-2006-07-named-control.png",
+          "sha256": "1d5d35af42844796d11f6950dfe714bca63bc893babd41c3c1f1557657ceedd6",
+          "sourceSha256": "b5c3379a868fce683a4ad00f962acf106da1320f22569cb0321b29546b803d05",
+          "physicalPage": 42,
+          "dpi": 144,
+          "integerCropBox": [
+            0,
+            507,
+            1224,
+            677
+          ],
+          "noResampling": true,
+          "purpose": "Named control and surrounding original source pixels; crop located from literal control token, not a replacement source"
+        },
+        {
+          "path": "research/salaries/gap-fill-2026-11-02/reviews/health-context-root/vancouver-coastal-health-2005-06-named-control.png",
+          "sha256": "4d1f48551168ec17887b88847d746c2b00fc38fecc83b4adfdb94b66e2568296",
+          "sourceSha256": "01e484e66f65accae089a79bbf3975f4b021407a003ff0b23d4db62d9be049f4",
+          "physicalPage": 29,
+          "dpi": 144,
+          "integerCropBox": [
+            0,
+            1276,
+            1224,
+            1446
+          ],
+          "noResampling": true,
+          "purpose": "Named control and surrounding original source pixels; crop located from literal control token, not a replacement source"
+        },
+        {
+          "path": "research/salaries/gap-fill-2026-11-02/reviews/health-context-root/island-health-2023-24-named-control.png",
+          "sha256": "e6af6f6a3df47cbd59c94db34788ef399da6fdce82b8239f0c6dba93199a18d3",
+          "sourceSha256": "d98a8b9f355e39ef536b71f1de559dce559946dd46208b50d782021e074f678b",
+          "physicalPage": 375,
+          "dpi": 144,
+          "integerCropBox": [
+            0,
+            674,
+            1224,
+            844
+          ],
+          "noResampling": true,
+          "purpose": "Named control and surrounding original source pixels; crop located from literal control token, not a replacement source"
+        },
+        {
+          "path": "research/salaries/gap-fill-2026-11-02/reviews/health-context-root/island-health-2022-23-named-control.png",
+          "sha256": "2889fffda588834a32786bf5b01fb84857d7fe5c6b414723f46efe0b84795ed5",
+          "sourceSha256": "b9c800ab4036dde385684c7a2b3f081a88b8d18df530a6ec9668e33da1ce6a90",
+          "physicalPage": 291,
+          "dpi": 144,
+          "integerCropBox": [
+            0,
+            797,
+            1346,
+            967
+          ],
+          "noResampling": true,
+          "purpose": "Named control and surrounding original source pixels; crop located from literal control token, not a replacement source"
+        }
+      ],
+      "noResampling": true
+    }
+  ],
+  "scope": "Original raster and independent image-OCR period corroboration for all sources, plus literal named-control selection. Does not assert a personal transcription of every row."
+}

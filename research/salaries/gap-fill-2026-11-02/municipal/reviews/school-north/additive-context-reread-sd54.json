@@ -1,0 +1,26 @@
+{
+  "reviewerAgent": "/root/gap_municipal",
+  "phase": "additive-source-image-reread-before-candidate-access",
+  "candidateValuesOpened": false,
+  "priorFirstContextTranscript": {
+    "path": "research/salaries/gap-fill-2026-11-02/municipal/reviews/school-north/first-source-context-transcript.json",
+    "sha256": "c618818899f9fb6556ac92daed4b91f8df5a40332f7b64dab51e7b65baed625e"
+  },
+  "corrections": [
+    {
+      "number": 54,
+      "sourceField": "electedOfficialsRepeatedSummaryPhysical51.expenses",
+      "firstReadLiteral": "34,347.75",
+      "freshOriginalImageReadLiteral": "38,347.75",
+      "reason": "A small 180dpi source rendering made the second digit look like4. I personally viewed the higher-resolution original source crop and can read the closed upper and lower bowls of8. This corrects my own source reading from source pixels; no subtotal was used to infer the digit.",
+      "originalSourceCrop": {
+        "path": "research/salaries/gap-fill-2026-11-02/municipal/reviews/school-north/sd54-original-summary-close500dpi.png",
+        "sha256": "22d1d5cc26a5583a7b0b74144c15784d0a4d92f1ab46083f1adeaea6d2617e16",
+        "renderDpi": 500,
+        "physicalPage": 51
+      },
+      "effect": "The detailed elected-official table and repeated source summary both print38,347.75; the initially suspected source contradiction is withdrawn."
+    }
+  ],
+  "noOutreach": true
+}

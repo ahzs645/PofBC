@@ -1,0 +1,23 @@
+{
+  "reviewerAgent": "/root/gap_municipal",
+  "phase": "additive-own-source-reread-and-comparison-mapping-correction",
+  "firstTranscript": {
+    "path": "research/salaries/gap-fill-2026-11-02/municipal/reviews/school-south/sd79-first-source-transcript.json",
+    "sha256": "0394591b87b52098cebc96387580e59912fc109c28598865ad60169bf150d95d"
+  },
+  "sourceCorrections": [
+    {
+      "sequence": 216,
+      "field": "name",
+      "firstOwnReading": "Haidu, Kim",
+      "freshNarrowOriginalReading": "Hajdu, Kim",
+      "originalSourceCrop": {
+        "path": "research/salaries/gap-fill-2026-11-02/municipal/reviews/school-south/sd79-seq216-original-name300.png",
+        "sha256": "a6044e2cdca2a88977ab4da45088e6526c4aeb715067b9f577f7bef94fd333f6"
+      },
+      "reason": "Narrow actual-original source pixels clearly show the j descender. This corrects my own first wide-image reading; no dictionary or identity source used."
+    }
+  ],
+  "comparisonMappingCorrection": "The one/twoasterisk markers are visibly before the source name. Candidate sourceNameFootnote preserves them; sourceExpenseFootnotes is for a separate expense-cell location. The first comparison incorrectly checked the latter field. Compare observed leading markers against sourceNameFootnote and retain their page69expense definitions. This is a comparison-field mapping correction, not a salary data alteration.",
+  "noOutreach": true
+}

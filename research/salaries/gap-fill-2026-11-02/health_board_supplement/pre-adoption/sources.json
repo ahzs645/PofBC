@@ -1,0 +1,2298 @@
+{
+  "version": 1,
+  "rowSchema": [
+    "employerSlug",
+    "name",
+    "position",
+    "remuneration",
+    "expenses",
+    "pdfPage"
+  ],
+  "sources": [
+    {
+      "id": "gap-health-board-supplement-fraser-health-2009-10",
+      "title": "Fraser Health Board Remuneration 2009/10",
+      "year": "2009/10",
+      "employerSlug": "fraser-health",
+      "employerName": "Fraser Health",
+      "sector": "Health authorities",
+      "sourceUrl": "https://digitalcollectionsrepository.llbc.leg.bc.ca/server/api/core/bitstreams/20b6bab1-ad38-4014-bfad-c14b981fbf0f/content",
+      "sha256": "86a8fa64f7ea35d5175970bc39c857aee35d4f30ebfe7531bb708b643f368b8a",
+      "file": "gap-health-board-supplement-fraser-health-2009-10.json.gzip",
+      "dataSha256": "519257768f3928ee122e77f8186c4811c64cfd126a247efc50ab17b883cc3ff2",
+      "rowCount": 11,
+      "status": "candidate",
+      "sourceKind": "official",
+      "category": "board-remuneration",
+      "scope": "board-remuneration",
+      "provenanceFile": "provenance/gap-health-board-supplement-fraser-health-2009-10.json.gzip",
+      "provenanceSha256": "3cf2f6332c532584f483877213a626c1308b9aa0d3f243c566aa19b06d305d6d",
+      "evidenceFile": "evidence/gap-health-board-supplement-fraser-health-2009-10.json.gzip",
+      "evidenceSha256": "83fd0fb7a90d81405076062a19519e758e65c5e3bc02e09de05c63540f44c7e5",
+      "completeEmployeeSchedule": false,
+      "completeBoardSchedule": true,
+      "periodType": "fiscal",
+      "periodStart": "2009-04-01",
+      "periodEnd": "2010-03-31",
+      "nameDisclosure": "named",
+      "positionDisclosure": "literal-source-board-role",
+      "currency": "CAD",
+      "threshold": null,
+      "validation": {
+        "completeNamedBoardScopeRead": true,
+        "completeBoardSchedule": true,
+        "completeEmployeeSchedule": false,
+        "independentReaders": [
+          "PyMuPDF native word geometry / complete row bands",
+          "Poppler bbox-layout / independently assembled nearest name baselines"
+        ],
+        "independentlyComparedRows": 11,
+        "namedRows": 11,
+        "numericPayRows": 11,
+        "heldUnknownPayRows": [],
+        "sourcePhysicalPages": 81,
+        "schedulePhysicalPages": [
+          3
+        ],
+        "totalRemuneration": 157000,
+        "importedKnownExpenses": 5762,
+        "heldKnownExpenses": 0,
+        "allNamedKnownExpenses": 5762,
+        "missingExpenseRows": 2,
+        "explicitZeroExpenseRows": 0,
+        "printedControls": {
+          "remuneration": 157000,
+          "expenses": 5762
+        },
+        "sourceControlResiduals": {
+          "remuneration": 0,
+          "expenses": 0
+        },
+        "rowInclusiveTotalResiduals": [],
+        "compiledPartitionRetained": true,
+        "compiledPartitionRetentionReason": "Complete copy equivalence with retained compiled observations has not been established; no calendar or identity match is assumed.",
+        "nativeVisibilityDiagnostics": {
+          "file": "visibility/gap-health-board-supplement-fraser-health-2009-10.json.gzip",
+          "sha256": "14109c653eb3c9d0fed7a94ea35a6096db8008be454f84931dde511294e11399",
+          "flags": {
+            "ignoredOrLowOpacityCharacters": 0,
+            "nearWhiteCharacters": 0,
+            "unicodeReplacementCharacters": 0,
+            "identicalGlyphOverprints": 0,
+            "conflictingGlyphOverprints": 0,
+            "nativeWordsCrossingReviewedFieldEdges": 0,
+            "nativeWordsWithoutDarkRenderedInk": 0
+          },
+          "limitation": "Paired native readers can share missing/overprinted text. Paint, overlap, pixel-ink and field-edge diagnostics only identify review targets and do not establish every glyph or row value. Human source-view coverage is recorded separately."
+        }
+      },
+      "publicWarning": "Board payment disclosures are not annual salary rates or employee rosters. Remuneration uses the separately labelled remuneration column. Expenses and any expense-inclusive total are excluded from pay. Blank and dash expense cells remain unknown (null), not zero. Existing compiled observations are retained and may overlap this official schedule; no identity or reporting-period equivalence is assumed.",
+      "notes": [
+        "Remuneration uses the separately labelled remuneration column. Expenses and any expense-inclusive total are excluded from pay. Blank and dash expense cells remain unknown (null), not zero.",
+        "Source spellings, footnote markers and original names including explicit Chair suffixes are retained in provenance.",
+        "The internally stated fiscal payment year is used even when source footnotes discuss earlier appointments, terms or retainer payments."
+      ]
+    },
+    {
+      "id": "gap-health-board-supplement-fraser-health-2008-09",
+      "title": "Fraser Health Board Remuneration 2008/09",
+      "year": "2008/09",
+      "employerSlug": "fraser-health",
+      "employerName": "Fraser Health",
+      "sector": "Health authorities",
+      "sourceUrl": "https://digitalcollectionsrepository.llbc.leg.bc.ca/server/api/core/bitstreams/6154ec74-fbb4-453e-87cc-df1583b5e80d/content",
+      "sha256": "cc5520235c5064a7e5a9db8f70fc65ede8201b69cdc97c0e1888594204bf30f9",
+      "file": "gap-health-board-supplement-fraser-health-2008-09.json.gzip",
+      "dataSha256": "909a3761e14ccec38db05cc130d8bcafc9a824b691eddb3d81432a215ae14978",
+      "rowCount": 9,
+      "status": "candidate",
+      "sourceKind": "official",
+      "category": "board-remuneration",
+      "scope": "board-remuneration",
+      "provenanceFile": "provenance/gap-health-board-supplement-fraser-health-2008-09.json.gzip",
+      "provenanceSha256": "ffa5f9a121ef7bb33ba6586ce4610a699b402ef0f7ff61335fb566691d063f55",
+      "evidenceFile": "evidence/gap-health-board-supplement-fraser-health-2008-09.json.gzip",
+      "evidenceSha256": "c9df0ece7a82255f49f62bc32a7e70f17416135421c6532f1bbfd5cf8bc2899e",
+      "completeEmployeeSchedule": false,
+      "completeBoardSchedule": true,
+      "periodType": "fiscal",
+      "periodStart": "2008-04-01",
+      "periodEnd": "2009-03-31",
+      "nameDisclosure": "named",
+      "positionDisclosure": "literal-source-board-role",
+      "currency": "CAD",
+      "threshold": null,
+      "validation": {
+        "completeNamedBoardScopeRead": true,
+        "completeBoardSchedule": true,
+        "completeEmployeeSchedule": false,
+        "independentReaders": [
+          "PyMuPDF native word geometry / complete row bands",
+          "Poppler bbox-layout / independently assembled nearest name baselines"
+        ],
+        "independentlyComparedRows": 9,
+        "namedRows": 9,
+        "numericPayRows": 9,
+        "heldUnknownPayRows": [],
+        "sourcePhysicalPages": 67,
+        "schedulePhysicalPages": [
+          3
+        ],
+        "totalRemuneration": 147000,
+        "importedKnownExpenses": 8639,
+        "heldKnownExpenses": 0,
+        "allNamedKnownExpenses": 8639,
+        "missingExpenseRows": 0,
+        "explicitZeroExpenseRows": 0,
+        "printedControls": {
+          "remuneration": 147000,
+          "expenses": 8639
+        },
+        "sourceControlResiduals": {
+          "remuneration": 0,
+          "expenses": 0
+        },
+        "rowInclusiveTotalResiduals": [],
+        "compiledPartitionRetained": true,
+        "compiledPartitionRetentionReason": "Complete copy equivalence with retained compiled observations has not been established; no calendar or identity match is assumed.",
+        "nativeVisibilityDiagnostics": {
+          "file": "visibility/gap-health-board-supplement-fraser-health-2008-09.json.gzip",
+          "sha256": "3a4baabf7791c07e48c4b11df26a061cb5f90179f8c537cbb747af996af0e256",
+          "flags": {
+            "ignoredOrLowOpacityCharacters": 0,
+            "nearWhiteCharacters": 0,
+            "unicodeReplacementCharacters": 0,
+            "identicalGlyphOverprints": 0,
+            "conflictingGlyphOverprints": 0,
+            "nativeWordsCrossingReviewedFieldEdges": 0,
+            "nativeWordsWithoutDarkRenderedInk": 0
+          },
+          "limitation": "Paired native readers can share missing/overprinted text. Paint, overlap, pixel-ink and field-edge diagnostics only identify review targets and do not establish every glyph or row value. Human source-view coverage is recorded separately."
+        }
+      },
+      "publicWarning": "Board payment disclosures are not annual salary rates or employee rosters. Remuneration uses the separately labelled remuneration column. Expenses and any expense-inclusive total are excluded from pay. Blank and dash expense cells remain unknown (null), not zero. Existing compiled observations are retained and may overlap this official schedule; no identity or reporting-period equivalence is assumed.",
+      "notes": [
+        "Remuneration uses the separately labelled remuneration column. Expenses and any expense-inclusive total are excluded from pay. Blank and dash expense cells remain unknown (null), not zero.",
+        "Source spellings, footnote markers and original names including explicit Chair suffixes are retained in provenance.",
+        "The internally stated fiscal payment year is used even when source footnotes discuss earlier appointments, terms or retainer payments."
+      ]
+    },
+    {
+      "id": "gap-health-board-supplement-fraser-health-2007-08",
+      "title": "Fraser Health Board Remuneration 2007/08",
+      "year": "2007/08",
+      "employerSlug": "fraser-health",
+      "employerName": "Fraser Health",
+      "sector": "Health authorities",
+      "sourceUrl": "https://digitalcollectionsrepository.llbc.leg.bc.ca/server/api/core/bitstreams/abd706c1-cacc-4090-ae37-06a3cecd6b26/content",
+      "sha256": "ea0fe6ecb9e39b94fcb9a051612aaaf74499950cde49e303de80071c3ccf8c8a",
+      "file": "gap-health-board-supplement-fraser-health-2007-08.json.gzip",
+      "dataSha256": "9e47343e4ba52ef1e44413fbaecb69159ab6630b3f2b768d91a94cdc03dbe2cd",
+      "rowCount": 9,
+      "status": "candidate",
+      "sourceKind": "official",
+      "category": "board-remuneration",
+      "scope": "board-remuneration",
+      "provenanceFile": "provenance/gap-health-board-supplement-fraser-health-2007-08.json.gzip",
+      "provenanceSha256": "821c1a9feb07cf6c7c3b2d78c9af659a69da8c49e169286f39af74646e5a13cb",
+      "evidenceFile": "evidence/gap-health-board-supplement-fraser-health-2007-08.json.gzip",
+      "evidenceSha256": "550181f115278bde4b978e12f6bdeb8de2498e47275f1acab154c20bc2ab0992",
+      "completeEmployeeSchedule": false,
+      "completeBoardSchedule": true,
+      "periodType": "fiscal",
+      "periodStart": "2007-04-01",
+      "periodEnd": "2008-03-31",
+      "nameDisclosure": "named",
+      "positionDisclosure": "literal-source-board-role",
+      "currency": "CAD",
+      "threshold": null,
+      "validation": {
+        "completeNamedBoardScopeRead": true,
+        "completeBoardSchedule": true,
+        "completeEmployeeSchedule": false,
+        "independentReaders": [
+          "PyMuPDF native word geometry / complete row bands",
+          "Poppler bbox-layout / independently assembled nearest name baselines"
+        ],
+        "independentlyComparedRows": 9,
+        "namedRows": 9,
+        "numericPayRows": 9,
+        "heldUnknownPayRows": [],
+        "sourcePhysicalPages": 52,
+        "schedulePhysicalPages": [
+          3
+        ],
+        "totalRemuneration": 128626,
+        "importedKnownExpenses": 3101,
+        "heldKnownExpenses": 0,
+        "allNamedKnownExpenses": 3101,
+        "missingExpenseRows": 1,
+        "explicitZeroExpenseRows": 0,
+        "printedControls": {
+          "remuneration": 128626,
+          "expenses": 3101
+        },
+        "sourceControlResiduals": {
+          "remuneration": 0,
+          "expenses": 0
+        },
+        "rowInclusiveTotalResiduals": [],
+        "compiledPartitionRetained": true,
+        "compiledPartitionRetentionReason": "Complete copy equivalence with retained compiled observations has not been established; no calendar or identity match is assumed.",
+        "nativeVisibilityDiagnostics": {
+          "file": "visibility/gap-health-board-supplement-fraser-health-2007-08.json.gzip",
+          "sha256": "680700c803daff00548ce343176dc5839280ec8b46769a96cfa96ece509f4b45",
+          "flags": {
+            "ignoredOrLowOpacityCharacters": 0,
+            "nearWhiteCharacters": 0,
+            "unicodeReplacementCharacters": 0,
+            "identicalGlyphOverprints": 0,
+            "conflictingGlyphOverprints": 0,
+            "nativeWordsCrossingReviewedFieldEdges": 0,
+            "nativeWordsWithoutDarkRenderedInk": 0
+          },
+          "limitation": "Paired native readers can share missing/overprinted text. Paint, overlap, pixel-ink and field-edge diagnostics only identify review targets and do not establish every glyph or row value. Human source-view coverage is recorded separately."
+        }
+      },
+      "publicWarning": "Board payment disclosures are not annual salary rates or employee rosters. Remuneration uses the separately labelled remuneration column. Expenses and any expense-inclusive total are excluded from pay. Blank and dash expense cells remain unknown (null), not zero. Existing compiled observations are retained and may overlap this official schedule; no identity or reporting-period equivalence is assumed.",
+      "notes": [
+        "Remuneration uses the separately labelled remuneration column. Expenses and any expense-inclusive total are excluded from pay. Blank and dash expense cells remain unknown (null), not zero.",
+        "Source spellings, footnote markers and original names including explicit Chair suffixes are retained in provenance.",
+        "The internally stated fiscal payment year is used even when source footnotes discuss earlier appointments, terms or retainer payments."
+      ]
+    },
+    {
+      "id": "gap-health-board-supplement-fraser-health-2006-07",
+      "title": "Fraser Health Board Remuneration 2006/07",
+      "year": "2006/07",
+      "employerSlug": "fraser-health",
+      "employerName": "Fraser Health",
+      "sector": "Health authorities",
+      "sourceUrl": "https://digitalcollectionsrepository.llbc.leg.bc.ca/server/api/core/bitstreams/99391edc-a808-434e-86ee-8fc682058ab3/content",
+      "sha256": "abc3650b650857273b1f87c8bbcc1b60abe794714fd406ac3b7274fd3cc4f228",
+      "file": "gap-health-board-supplement-fraser-health-2006-07.json.gzip",
+      "dataSha256": "f09bbe4b7149a77a7c97fd2945e0085d9a18a5c24e090173cc7efefb60dec15e",
+      "rowCount": 10,
+      "status": "candidate",
+      "sourceKind": "official",
+      "category": "board-remuneration",
+      "scope": "board-remuneration",
+      "provenanceFile": "provenance/gap-health-board-supplement-fraser-health-2006-07.json.gzip",
+      "provenanceSha256": "dbce97749f594a5ee3c55d05bed9393d96b2c0802860ae67614f4ebbc3ce3f90",
+      "evidenceFile": "evidence/gap-health-board-supplement-fraser-health-2006-07.json.gzip",
+      "evidenceSha256": "1644f30d04ba3e49933352ff0637f208219cfb6bdd86138da362fb633e204ab2",
+      "completeEmployeeSchedule": false,
+      "completeBoardSchedule": true,
+      "periodType": "fiscal",
+      "periodStart": "2006-04-01",
+      "periodEnd": "2007-03-31",
+      "nameDisclosure": "named",
+      "positionDisclosure": "literal-source-board-role",
+      "currency": "CAD",
+      "threshold": null,
+      "validation": {
+        "completeNamedBoardScopeRead": true,
+        "completeBoardSchedule": true,
+        "completeEmployeeSchedule": false,
+        "independentReaders": [
+          "PyMuPDF native word geometry / complete row bands",
+          "Poppler bbox-layout / independently assembled nearest name baselines"
+        ],
+        "independentlyComparedRows": 10,
+        "namedRows": 10,
+        "numericPayRows": 10,
+        "heldUnknownPayRows": [],
+        "sourcePhysicalPages": 53,
+        "schedulePhysicalPages": [
+          3
+        ],
+        "totalRemuneration": 142690,
+        "importedKnownExpenses": 753,
+        "heldKnownExpenses": 0,
+        "allNamedKnownExpenses": 753,
+        "missingExpenseRows": 7,
+        "explicitZeroExpenseRows": 0,
+        "printedControls": {
+          "remuneration": 142690,
+          "expenses": 753
+        },
+        "sourceControlResiduals": {
+          "remuneration": 0,
+          "expenses": 0
+        },
+        "rowInclusiveTotalResiduals": [],
+        "compiledPartitionRetained": true,
+        "compiledPartitionRetentionReason": "Complete copy equivalence with retained compiled observations has not been established; no calendar or identity match is assumed.",
+        "nativeVisibilityDiagnostics": {
+          "file": "visibility/gap-health-board-supplement-fraser-health-2006-07.json.gzip",
+          "sha256": "8c281a15fadcac195222047a824ec854e5ca5245059c3a294f413ffff11f6580",
+          "flags": {
+            "ignoredOrLowOpacityCharacters": 0,
+            "nearWhiteCharacters": 0,
+            "unicodeReplacementCharacters": 0,
+            "identicalGlyphOverprints": 0,
+            "conflictingGlyphOverprints": 0,
+            "nativeWordsCrossingReviewedFieldEdges": 0,
+            "nativeWordsWithoutDarkRenderedInk": 0
+          },
+          "limitation": "Paired native readers can share missing/overprinted text. Paint, overlap, pixel-ink and field-edge diagnostics only identify review targets and do not establish every glyph or row value. Human source-view coverage is recorded separately."
+        }
+      },
+      "publicWarning": "Board payment disclosures are not annual salary rates or employee rosters. Remuneration uses the separately labelled remuneration column. Expenses and any expense-inclusive total are excluded from pay. Blank and dash expense cells remain unknown (null), not zero. Existing compiled observations are retained and may overlap this official schedule; no identity or reporting-period equivalence is assumed.",
+      "notes": [
+        "Remuneration uses the separately labelled remuneration column. Expenses and any expense-inclusive total are excluded from pay. Blank and dash expense cells remain unknown (null), not zero.",
+        "Source spellings, footnote markers and original names including explicit Chair suffixes are retained in provenance.",
+        "The internally stated fiscal payment year is used even when source footnotes discuss earlier appointments, terms or retainer payments."
+      ]
+    },
+    {
+      "id": "gap-health-board-supplement-fraser-health-2005-06",
+      "title": "Fraser Health Board Remuneration 2005/06",
+      "year": "2005/06",
+      "employerSlug": "fraser-health",
+      "employerName": "Fraser Health",
+      "sector": "Health authorities",
+      "sourceUrl": "https://digitalcollectionsrepository.llbc.leg.bc.ca/server/api/core/bitstreams/2f001cd9-e9c5-47b9-958a-0c9a7a24f640/content",
+      "sha256": "70ee636035e1b50c72b3d3f7c3561d18d2840436e7af101786b052f636c8bc9f",
+      "file": "gap-health-board-supplement-fraser-health-2005-06.json.gzip",
+      "dataSha256": "5165a1a1ec2c32e50ccf81e423d200e2bd435febd0b0424bf45cdce42d26b8a2",
+      "rowCount": 10,
+      "status": "candidate",
+      "sourceKind": "official",
+      "category": "board-remuneration",
+      "scope": "board-remuneration",
+      "provenanceFile": "provenance/gap-health-board-supplement-fraser-health-2005-06.json.gzip",
+      "provenanceSha256": "2d85a40dea3628a16b55c3ce4a3f2124a6be37bc4fd2ea1fa74fb03746ba580c",
+      "evidenceFile": "evidence/gap-health-board-supplement-fraser-health-2005-06.json.gzip",
+      "evidenceSha256": "41dd0d88a04ba54063c8df2c3419e0d518c88c84ea298c55b9183d283fc5ae9f",
+      "completeEmployeeSchedule": false,
+      "completeBoardSchedule": true,
+      "periodType": "fiscal",
+      "periodStart": "2005-04-01",
+      "periodEnd": "2006-03-31",
+      "nameDisclosure": "named",
+      "positionDisclosure": "literal-source-board-role",
+      "currency": "CAD",
+      "threshold": null,
+      "validation": {
+        "completeNamedBoardScopeRead": true,
+        "completeBoardSchedule": true,
+        "completeEmployeeSchedule": false,
+        "independentReaders": [
+          "PyMuPDF native word geometry / complete row bands",
+          "Poppler bbox-layout / independently assembled nearest name baselines"
+        ],
+        "independentlyComparedRows": 10,
+        "namedRows": 10,
+        "numericPayRows": 10,
+        "heldUnknownPayRows": [],
+        "sourcePhysicalPages": 31,
+        "schedulePhysicalPages": [
+          3
+        ],
+        "totalRemuneration": 117888,
+        "importedKnownExpenses": 1281,
+        "heldKnownExpenses": 0,
+        "allNamedKnownExpenses": 1281,
+        "missingExpenseRows": 4,
+        "explicitZeroExpenseRows": 0,
+        "printedControls": {
+          "remuneration": 117888,
+          "expenses": 1281
+        },
+        "sourceControlResiduals": {
+          "remuneration": 0,
+          "expenses": 0
+        },
+        "rowInclusiveTotalResiduals": [],
+        "compiledPartitionRetained": true,
+        "compiledPartitionRetentionReason": "Complete copy equivalence with retained compiled observations has not been established; no calendar or identity match is assumed.",
+        "nativeVisibilityDiagnostics": {
+          "file": "visibility/gap-health-board-supplement-fraser-health-2005-06.json.gzip",
+          "sha256": "4f2029fa8d297232b7b5df877c2d44051cb4e565db1c854d0e02f4b0f0664998",
+          "flags": {
+            "ignoredOrLowOpacityCharacters": 0,
+            "nearWhiteCharacters": 0,
+            "unicodeReplacementCharacters": 0,
+            "identicalGlyphOverprints": 0,
+            "conflictingGlyphOverprints": 0,
+            "nativeWordsCrossingReviewedFieldEdges": 0,
+            "nativeWordsWithoutDarkRenderedInk": 0
+          },
+          "limitation": "Paired native readers can share missing/overprinted text. Paint, overlap, pixel-ink and field-edge diagnostics only identify review targets and do not establish every glyph or row value. Human source-view coverage is recorded separately."
+        }
+      },
+      "publicWarning": "Board payment disclosures are not annual salary rates or employee rosters. Remuneration uses the separately labelled remuneration column. Expenses and any expense-inclusive total are excluded from pay. Blank and dash expense cells remain unknown (null), not zero. Existing compiled observations are retained and may overlap this official schedule; no identity or reporting-period equivalence is assumed.",
+      "notes": [
+        "Remuneration uses the separately labelled remuneration column. Expenses and any expense-inclusive total are excluded from pay. Blank and dash expense cells remain unknown (null), not zero.",
+        "Source spellings, footnote markers and original names including explicit Chair suffixes are retained in provenance.",
+        "The internally stated fiscal payment year is used even when source footnotes discuss earlier appointments, terms or retainer payments."
+      ]
+    },
+    {
+      "id": "gap-health-board-supplement-fraser-health-2004-05",
+      "title": "Fraser Health Board Remuneration 2004/05",
+      "year": "2004/05",
+      "employerSlug": "fraser-health",
+      "employerName": "Fraser Health",
+      "sector": "Health authorities",
+      "sourceUrl": "https://digitalcollectionsrepository.llbc.leg.bc.ca/server/api/core/bitstreams/d12489e8-4fac-49ca-874c-74cf50451cbb/content",
+      "sha256": "d238d8ad9e1911ef1f0166ed80f9d47b4d3bf7a4bdc3352e17b77b9cfd85fd0b",
+      "file": "gap-health-board-supplement-fraser-health-2004-05.json.gzip",
+      "dataSha256": "6ac61368e0ed5441be3d2b143505f624fb3d5f9ec0186e9ec2a26f983cb2fddf",
+      "rowCount": 10,
+      "status": "candidate",
+      "sourceKind": "official",
+      "category": "board-remuneration",
+      "scope": "board-remuneration",
+      "provenanceFile": "provenance/gap-health-board-supplement-fraser-health-2004-05.json.gzip",
+      "provenanceSha256": "b9802498a2868d3b35f5bb585e8f9bdd395103e564ecf9486e957c8da1b28c8c",
+      "evidenceFile": "evidence/gap-health-board-supplement-fraser-health-2004-05.json.gzip",
+      "evidenceSha256": "de8202cd2b3f2087eda8d61b357ff9172fa8e35f1ff69f5e8aba00822186ea0c",
+      "completeEmployeeSchedule": false,
+      "completeBoardSchedule": true,
+      "periodType": "fiscal",
+      "periodStart": "2004-04-01",
+      "periodEnd": "2005-03-31",
+      "nameDisclosure": "named",
+      "positionDisclosure": "literal-source-board-role",
+      "currency": "CAD",
+      "threshold": null,
+      "validation": {
+        "completeNamedBoardScopeRead": true,
+        "completeBoardSchedule": true,
+        "completeEmployeeSchedule": false,
+        "independentReaders": [
+          "PyMuPDF native word geometry / complete row bands",
+          "Poppler bbox-layout / independently assembled nearest name baselines"
+        ],
+        "independentlyComparedRows": 10,
+        "namedRows": 10,
+        "numericPayRows": 10,
+        "heldUnknownPayRows": [],
+        "sourcePhysicalPages": 27,
+        "schedulePhysicalPages": [
+          3
+        ],
+        "totalRemuneration": 127244,
+        "importedKnownExpenses": 2175,
+        "heldKnownExpenses": 0,
+        "allNamedKnownExpenses": 2175,
+        "missingExpenseRows": 4,
+        "explicitZeroExpenseRows": 0,
+        "printedControls": {
+          "remuneration": 127244,
+          "expenses": 2175
+        },
+        "sourceControlResiduals": {
+          "remuneration": 0,
+          "expenses": 0
+        },
+        "rowInclusiveTotalResiduals": [],
+        "compiledPartitionRetained": true,
+        "compiledPartitionRetentionReason": "Complete copy equivalence with retained compiled observations has not been established; no calendar or identity match is assumed.",
+        "nativeVisibilityDiagnostics": {
+          "file": "visibility/gap-health-board-supplement-fraser-health-2004-05.json.gzip",
+          "sha256": "fdea59cdfd7e3f164889cdbf493ee2d43af8c054126b3b57854cd54088b6a7e4",
+          "flags": {
+            "ignoredOrLowOpacityCharacters": 0,
+            "nearWhiteCharacters": 0,
+            "unicodeReplacementCharacters": 0,
+            "identicalGlyphOverprints": 0,
+            "conflictingGlyphOverprints": 0,
+            "nativeWordsCrossingReviewedFieldEdges": 0,
+            "nativeWordsWithoutDarkRenderedInk": 0
+          },
+          "limitation": "Paired native readers can share missing/overprinted text. Paint, overlap, pixel-ink and field-edge diagnostics only identify review targets and do not establish every glyph or row value. Human source-view coverage is recorded separately."
+        }
+      },
+      "publicWarning": "Board payment disclosures are not annual salary rates or employee rosters. Remuneration uses the separately labelled remuneration column. Expenses and any expense-inclusive total are excluded from pay. Blank and dash expense cells remain unknown (null), not zero. The source states its July 2004 retainer-policy change means only three quarters of retainer payments appear in this fiscal disclosure. Existing compiled observations are retained and may overlap this official schedule; no identity or reporting-period equivalence is assumed.",
+      "notes": [
+        "Remuneration uses the separately labelled remuneration column. Expenses and any expense-inclusive total are excluded from pay. Blank and dash expense cells remain unknown (null), not zero.",
+        "Source spellings, footnote markers and original names including explicit Chair suffixes are retained in provenance.",
+        "The internally stated fiscal payment year is used even when source footnotes discuss earlier appointments, terms or retainer payments."
+      ]
+    },
+    {
+      "id": "gap-health-board-supplement-interior-health-2010-11",
+      "title": "Interior Health Board Remuneration 2010/11",
+      "year": "2010/11",
+      "employerSlug": "interior-health",
+      "employerName": "Interior Health",
+      "sector": "Health authorities",
+      "sourceUrl": "https://digitalcollectionsrepository.llbc.leg.bc.ca/server/api/core/bitstreams/2d3bc721-6ea6-4842-a0de-a098e7a8a5ec/content",
+      "sha256": "34466dcf7e71335874d0990745d633217853a383d83165f9736d9afb61f577bf",
+      "file": "gap-health-board-supplement-interior-health-2010-11.json.gzip",
+      "dataSha256": "fe792a7c485195fb8ff6f17002b9e0359a31e72f7afde23cf38899f49a9937f7",
+      "rowCount": 10,
+      "status": "candidate",
+      "sourceKind": "official",
+      "category": "board-remuneration",
+      "scope": "board-remuneration",
+      "provenanceFile": "provenance/gap-health-board-supplement-interior-health-2010-11.json.gzip",
+      "provenanceSha256": "5efd3201aac8d5346751e248d1859a6d3b96e5d2fa812332588d703c5a9e6d17",
+      "evidenceFile": "evidence/gap-health-board-supplement-interior-health-2010-11.json.gzip",
+      "evidenceSha256": "107217f698274e8c455d04b1c494f8d1f3ad90da747c89b4d9036a6ed2a2cd68",
+      "completeEmployeeSchedule": false,
+      "completeBoardSchedule": true,
+      "periodType": "fiscal",
+      "periodStart": "2010-04-01",
+      "periodEnd": "2011-03-31",
+      "nameDisclosure": "named",
+      "positionDisclosure": "literal-source-board-role",
+      "currency": "CAD",
+      "threshold": null,
+      "validation": {
+        "completeNamedBoardScopeRead": true,
+        "completeBoardSchedule": true,
+        "completeEmployeeSchedule": false,
+        "independentReaders": [
+          "PyMuPDF native word geometry / complete row bands",
+          "Poppler bbox-layout / independently assembled nearest name baselines"
+        ],
+        "independentlyComparedRows": 10,
+        "namedRows": 10,
+        "numericPayRows": 10,
+        "heldUnknownPayRows": [],
+        "sourcePhysicalPages": 47,
+        "schedulePhysicalPages": [
+          2
+        ],
+        "totalRemuneration": 243767,
+        "importedKnownExpenses": 53247,
+        "heldKnownExpenses": 0,
+        "allNamedKnownExpenses": 53247,
+        "missingExpenseRows": 0,
+        "explicitZeroExpenseRows": 0,
+        "printedControls": {
+          "remuneration": 243767,
+          "expenses": 53247
+        },
+        "sourceControlResiduals": {
+          "remuneration": 0,
+          "expenses": 0
+        },
+        "rowInclusiveTotalResiduals": [],
+        "compiledPartitionRetained": true,
+        "compiledPartitionRetentionReason": "Complete copy equivalence with retained compiled observations has not been established; no calendar or identity match is assumed.",
+        "nativeVisibilityDiagnostics": {
+          "file": "visibility/gap-health-board-supplement-interior-health-2010-11.json.gzip",
+          "sha256": "c18518a45ec7a07f6a63a6e99b1c689d7ea98237444169a29b86161975a59c2a",
+          "flags": {
+            "ignoredOrLowOpacityCharacters": 0,
+            "nearWhiteCharacters": 0,
+            "unicodeReplacementCharacters": 0,
+            "identicalGlyphOverprints": 0,
+            "conflictingGlyphOverprints": 0,
+            "nativeWordsCrossingReviewedFieldEdges": 0,
+            "nativeWordsWithoutDarkRenderedInk": 0
+          },
+          "limitation": "Paired native readers can share missing/overprinted text. Paint, overlap, pixel-ink and field-edge diagnostics only identify review targets and do not establish every glyph or row value. Human source-view coverage is recorded separately."
+        }
+      },
+      "publicWarning": "Board payment disclosures are not annual salary rates or employee rosters. Remuneration uses the separately labelled remuneration column. Expenses and any expense-inclusive total are excluded from pay. Blank and dash expense cells remain unknown (null), not zero. Existing compiled observations are retained and may overlap this official schedule; no identity or reporting-period equivalence is assumed.",
+      "notes": [
+        "Remuneration uses the separately labelled remuneration column. Expenses and any expense-inclusive total are excluded from pay. Blank and dash expense cells remain unknown (null), not zero.",
+        "Source spellings, footnote markers and original names including explicit Chair suffixes are retained in provenance.",
+        "The internally stated fiscal payment year is used even when source footnotes discuss earlier appointments, terms or retainer payments."
+      ]
+    },
+    {
+      "id": "gap-health-board-supplement-vancouver-coastal-health-2024-25",
+      "title": "Vancouver Coastal Health Board Remuneration 2024/25",
+      "year": "2024/25",
+      "employerSlug": "vancouver-coastal-health",
+      "employerName": "Vancouver Coastal Health",
+      "sector": "Health authorities",
+      "sourceUrl": "https://digitalcollectionsrepository.llbc.leg.bc.ca/server/api/core/bitstreams/9b847356-b373-4bea-8d58-c963379c3b86/content",
+      "sha256": "b7e3149f4ba3f2c44a19953e405fce7af322a0908bd49c15ed1b7ce5b3db7041",
+      "file": "gap-health-board-supplement-vancouver-coastal-health-2024-25.json.gzip",
+      "dataSha256": "bcc52a51c82709dd7ce12fb7834c2b24b67f89bb01de43f2bcc6e83dab494ebe",
+      "rowCount": 10,
+      "status": "candidate",
+      "sourceKind": "official",
+      "category": "board-remuneration",
+      "scope": "board-remuneration",
+      "provenanceFile": "provenance/gap-health-board-supplement-vancouver-coastal-health-2024-25.json.gzip",
+      "provenanceSha256": "8cddc0606348ce794010d725dc0e65795f3095dc5ea0325bd84fcd72403ff926",
+      "evidenceFile": "evidence/gap-health-board-supplement-vancouver-coastal-health-2024-25.json.gzip",
+      "evidenceSha256": "ecd791f1608992770863f737ba3f211e209758a4010067e0fa32d6b84696a9a8",
+      "completeEmployeeSchedule": false,
+      "completeBoardSchedule": true,
+      "periodType": "fiscal",
+      "periodStart": "2024-04-01",
+      "periodEnd": "2025-03-31",
+      "nameDisclosure": "named",
+      "positionDisclosure": "literal-source-board-role",
+      "currency": "CAD",
+      "threshold": null,
+      "validation": {
+        "completeNamedBoardScopeRead": true,
+        "completeBoardSchedule": true,
+        "completeEmployeeSchedule": false,
+        "independentReaders": [
+          "PyMuPDF native word geometry / complete row bands",
+          "Poppler bbox-layout / independently assembled nearest name baselines"
+        ],
+        "independentlyComparedRows": 10,
+        "namedRows": 10,
+        "numericPayRows": 10,
+        "heldUnknownPayRows": [],
+        "sourcePhysicalPages": 224,
+        "schedulePhysicalPages": [
+          3
+        ],
+        "totalRemuneration": 316765,
+        "importedKnownExpenses": 10030,
+        "heldKnownExpenses": 0,
+        "allNamedKnownExpenses": 10030,
+        "missingExpenseRows": 1,
+        "explicitZeroExpenseRows": 0,
+        "printedControls": {
+          "remuneration": 316765,
+          "expenses": 10030,
+          "total": 326795
+        },
+        "sourceControlResiduals": {
+          "remuneration": 0,
+          "expenses": 0,
+          "knownFieldsMinusPrintedGrand": 0
+        },
+        "rowInclusiveTotalResiduals": [
+          {
+            "sourceRow": 1,
+            "name": "Ballem, Penny",
+            "residual": 0
+          },
+          {
+            "sourceRow": 2,
+            "name": "Baker, Deborah",
+            "residual": 0
+          },
+          {
+            "sourceRow": 3,
+            "name": "Duvall, William",
+            "residual": 0
+          },
+          {
+            "sourceRow": 4,
+            "name": "Greenberg, Kathy",
+            "residual": 0
+          },
+          {
+            "sourceRow": 5,
+            "name": "McGregor, Margaret",
+            "residual": 0
+          },
+          {
+            "sourceRow": 6,
+            "name": "McKenzie, Davis Paul",
+            "residual": 0
+          },
+          {
+            "sourceRow": 7,
+            "name": "McLaughlin, John Hedley",
+            "residual": 0
+          },
+          {
+            "sourceRow": 8,
+            "name": "Naizghi, Eyob",
+            "residual": 0
+          },
+          {
+            "sourceRow": 9,
+            "name": "Shroff, Farah",
+            "residual": 0
+          },
+          {
+            "sourceRow": 10,
+            "name": "Slett, Marilyn",
+            "residual": 0
+          }
+        ],
+        "compiledPartitionRetained": true,
+        "compiledPartitionRetentionReason": "Complete copy equivalence with retained compiled observations has not been established; no calendar or identity match is assumed.",
+        "nativeVisibilityDiagnostics": {
+          "file": "visibility/gap-health-board-supplement-vancouver-coastal-health-2024-25.json.gzip",
+          "sha256": "0840970473f9a802784896fbf172e6ba6855286579074d1325423a1803143800",
+          "flags": {
+            "ignoredOrLowOpacityCharacters": 0,
+            "nearWhiteCharacters": 0,
+            "unicodeReplacementCharacters": 0,
+            "identicalGlyphOverprints": 0,
+            "conflictingGlyphOverprints": 0,
+            "nativeWordsCrossingReviewedFieldEdges": 0,
+            "nativeWordsWithoutDarkRenderedInk": 0
+          },
+          "limitation": "Paired native readers can share missing/overprinted text. Paint, overlap, pixel-ink and field-edge diagnostics only identify review targets and do not establish every glyph or row value. Human source-view coverage is recorded separately."
+        }
+      },
+      "publicWarning": "Board payment disclosures are not annual salary rates or employee rosters. Remuneration uses the separately labelled remuneration column. Expenses and any expense-inclusive total are excluded from pay. Blank and dash expense cells remain unknown (null), not zero. Existing compiled observations are retained and may overlap this official schedule; no identity or reporting-period equivalence is assumed.",
+      "notes": [
+        "Remuneration uses the separately labelled remuneration column. Expenses and any expense-inclusive total are excluded from pay. Blank and dash expense cells remain unknown (null), not zero.",
+        "Source spellings, footnote markers and original names including explicit Chair suffixes are retained in provenance.",
+        "The internally stated fiscal payment year is used even when source footnotes discuss earlier appointments, terms or retainer payments."
+      ]
+    },
+    {
+      "id": "gap-health-board-supplement-vancouver-coastal-health-2023-24",
+      "title": "Vancouver Coastal Health Board Remuneration 2023/24",
+      "year": "2023/24",
+      "employerSlug": "vancouver-coastal-health",
+      "employerName": "Vancouver Coastal Health",
+      "sector": "Health authorities",
+      "sourceUrl": "https://digitalcollectionsrepository.llbc.leg.bc.ca/server/api/core/bitstreams/350c734e-9223-4f2d-af94-8fc1d8608db5/content",
+      "sha256": "34622138b85e091d2d25be847a09cefe054367ad6838fbd2c2dfc41fe8b0d63e",
+      "file": "gap-health-board-supplement-vancouver-coastal-health-2023-24.json.gzip",
+      "dataSha256": "82722eec7d0db0a951f130c49b332895e5867fee81f5d53a5dc50ddca1211e60",
+      "rowCount": 11,
+      "status": "candidate",
+      "sourceKind": "official",
+      "category": "board-remuneration",
+      "scope": "board-remuneration",
+      "provenanceFile": "provenance/gap-health-board-supplement-vancouver-coastal-health-2023-24.json.gzip",
+      "provenanceSha256": "24698940480e78fc258291c1670508a028af98c2eb3f2cd5b715959c82c0d5c0",
+      "evidenceFile": "evidence/gap-health-board-supplement-vancouver-coastal-health-2023-24.json.gzip",
+      "evidenceSha256": "d9768d6dd274189786cc6868a22d3ef51a03782a4a6b4ade92b0bda3a465322c",
+      "completeEmployeeSchedule": false,
+      "completeBoardSchedule": true,
+      "periodType": "fiscal",
+      "periodStart": "2023-04-01",
+      "periodEnd": "2024-03-31",
+      "nameDisclosure": "named",
+      "positionDisclosure": "literal-source-board-role",
+      "currency": "CAD",
+      "threshold": null,
+      "validation": {
+        "completeNamedBoardScopeRead": true,
+        "completeBoardSchedule": true,
+        "completeEmployeeSchedule": false,
+        "independentReaders": [
+          "PyMuPDF native word geometry / complete row bands",
+          "Poppler bbox-layout / independently assembled nearest name baselines"
+        ],
+        "independentlyComparedRows": 11,
+        "namedRows": 11,
+        "numericPayRows": 11,
+        "heldUnknownPayRows": [],
+        "sourcePhysicalPages": 212,
+        "schedulePhysicalPages": [
+          3
+        ],
+        "totalRemuneration": 374371,
+        "importedKnownExpenses": 12783,
+        "heldKnownExpenses": 0,
+        "allNamedKnownExpenses": 12783,
+        "missingExpenseRows": 3,
+        "explicitZeroExpenseRows": 0,
+        "printedControls": {
+          "remuneration": 374371,
+          "expenses": 12781,
+          "total": 387152
+        },
+        "sourceControlResiduals": {
+          "remuneration": 0,
+          "expenses": 2,
+          "knownFieldsMinusPrintedGrand": 2
+        },
+        "rowInclusiveTotalResiduals": [
+          {
+            "sourceRow": 1,
+            "name": "Ballem, Penny",
+            "residual": 0
+          },
+          {
+            "sourceRow": 2,
+            "name": "Au, Wendy",
+            "residual": 0
+          },
+          {
+            "sourceRow": 3,
+            "name": "Baker, Deborah",
+            "residual": 0
+          },
+          {
+            "sourceRow": 4,
+            "name": "Baydala, Allan",
+            "residual": 0
+          },
+          {
+            "sourceRow": 5,
+            "name": "Duvall, William",
+            "residual": 0
+          },
+          {
+            "sourceRow": 6,
+            "name": "Greenberg, Kathy",
+            "residual": 0
+          },
+          {
+            "sourceRow": 7,
+            "name": "McGregor, Margaret",
+            "residual": 0
+          },
+          {
+            "sourceRow": 8,
+            "name": "McKenzie, Davis Paul",
+            "residual": 0
+          },
+          {
+            "sourceRow": 9,
+            "name": "McLaughlin, John Hedley",
+            "residual": 0
+          },
+          {
+            "sourceRow": 10,
+            "name": "Naizghi, Eyob",
+            "residual": 0
+          },
+          {
+            "sourceRow": 11,
+            "name": "Slett,Marilyn",
+            "residual": 0
+          }
+        ],
+        "compiledPartitionRetained": true,
+        "compiledPartitionRetentionReason": "Complete copy equivalence with retained compiled observations has not been established; no calendar or identity match is assumed.",
+        "nativeVisibilityDiagnostics": {
+          "file": "visibility/gap-health-board-supplement-vancouver-coastal-health-2023-24.json.gzip",
+          "sha256": "939eae14e3daf1606ef45ea427208e039af201b9023449d08469bd7472129e94",
+          "flags": {
+            "ignoredOrLowOpacityCharacters": 0,
+            "nearWhiteCharacters": 0,
+            "unicodeReplacementCharacters": 0,
+            "identicalGlyphOverprints": 0,
+            "conflictingGlyphOverprints": 0,
+            "nativeWordsCrossingReviewedFieldEdges": 0,
+            "nativeWordsWithoutDarkRenderedInk": 0
+          },
+          "limitation": "Paired native readers can share missing/overprinted text. Paint, overlap, pixel-ink and field-edge diagnostics only identify review targets and do not establish every glyph or row value. Human source-view coverage is recorded separately."
+        }
+      },
+      "publicWarning": "Board payment disclosures are not annual salary rates or employee rosters. Remuneration uses the separately labelled remuneration column. Expenses and any expense-inclusive total are excluded from pay. Blank and dash expense cells remain unknown (null), not zero. Full-board known expenses minus its printed control is 2 CAD. Known remuneration plus known expenses minus its printed control is 2 CAD. No payment has been balanced or adjusted. The cause is not established. Existing compiled observations are retained and may overlap this official schedule; no identity or reporting-period equivalence is assumed.",
+      "notes": [
+        "Remuneration uses the separately labelled remuneration column. Expenses and any expense-inclusive total are excluded from pay. Blank and dash expense cells remain unknown (null), not zero.",
+        "Source spellings, footnote markers and original names including explicit Chair suffixes are retained in provenance.",
+        "The internally stated fiscal payment year is used even when source footnotes discuss earlier appointments, terms or retainer payments."
+      ]
+    },
+    {
+      "id": "gap-health-board-supplement-vancouver-coastal-health-2021-22",
+      "title": "Vancouver Coastal Health Board Remuneration 2021/22",
+      "year": "2021/22",
+      "employerSlug": "vancouver-coastal-health",
+      "employerName": "Vancouver Coastal Health",
+      "sector": "Health authorities",
+      "sourceUrl": "https://digitalcollectionsrepository.llbc.leg.bc.ca/server/api/core/bitstreams/2200c15f-3f53-4eaa-af21-acf83009cdcd/content",
+      "sha256": "b249e364b1da6fb3b59700427c80a677d84565add22f9b8ea0c9ca2e1b1b72e7",
+      "file": "gap-health-board-supplement-vancouver-coastal-health-2021-22.json.gzip",
+      "dataSha256": "6ac1a0e51cc00cde336ef910e2b762feabfa3b03c8cea357522f5066343988b8",
+      "rowCount": 9,
+      "status": "candidate",
+      "sourceKind": "official",
+      "category": "board-remuneration",
+      "scope": "board-remuneration",
+      "provenanceFile": "provenance/gap-health-board-supplement-vancouver-coastal-health-2021-22.json.gzip",
+      "provenanceSha256": "1cc844713ba294267b4a5fe0e19d20df4d16f5fc701b1d93aed98ad16991c2a6",
+      "evidenceFile": "evidence/gap-health-board-supplement-vancouver-coastal-health-2021-22.json.gzip",
+      "evidenceSha256": "848415fce19ae707e80f01649ea21b8682582674e6200b35a84cc8ca336db6e7",
+      "completeEmployeeSchedule": false,
+      "completeBoardSchedule": true,
+      "periodType": "fiscal",
+      "periodStart": "2021-04-01",
+      "periodEnd": "2022-03-31",
+      "nameDisclosure": "named",
+      "positionDisclosure": "literal-source-board-role",
+      "currency": "CAD",
+      "threshold": null,
+      "validation": {
+        "completeNamedBoardScopeRead": true,
+        "completeBoardSchedule": true,
+        "completeEmployeeSchedule": false,
+        "independentReaders": [
+          "PyMuPDF native word geometry / complete row bands",
+          "Poppler bbox-layout / independently assembled nearest name baselines"
+        ],
+        "independentlyComparedRows": 9,
+        "namedRows": 9,
+        "numericPayRows": 9,
+        "heldUnknownPayRows": [],
+        "sourcePhysicalPages": 162,
+        "schedulePhysicalPages": [
+          3
+        ],
+        "totalRemuneration": 166875,
+        "importedKnownExpenses": 2753,
+        "heldKnownExpenses": 0,
+        "allNamedKnownExpenses": 2753,
+        "missingExpenseRows": 7,
+        "explicitZeroExpenseRows": 0,
+        "printedControls": {
+          "remuneration": 166875,
+          "expenses": 2753,
+          "total": 169628
+        },
+        "sourceControlResiduals": {
+          "remuneration": 0,
+          "expenses": 0,
+          "knownFieldsMinusPrintedGrand": 0
+        },
+        "rowInclusiveTotalResiduals": [
+          {
+            "sourceRow": 1,
+            "name": "Ballem, Penny",
+            "residual": 0
+          },
+          {
+            "sourceRow": 2,
+            "name": "Au, Wendy",
+            "residual": 0
+          },
+          {
+            "sourceRow": 3,
+            "name": "Baker, Deborah",
+            "residual": 0
+          },
+          {
+            "sourceRow": 4,
+            "name": "Baydala, Allan",
+            "residual": 0
+          },
+          {
+            "sourceRow": 5,
+            "name": "Duvall, William",
+            "residual": 0
+          },
+          {
+            "sourceRow": 6,
+            "name": "Greenberg, Kathy",
+            "residual": 0
+          },
+          {
+            "sourceRow": 7,
+            "name": "McGregor, Margaret",
+            "residual": 0
+          },
+          {
+            "sourceRow": 8,
+            "name": "Naizghi, Eyob",
+            "residual": 0
+          },
+          {
+            "sourceRow": 9,
+            "name": "Slett,Marilyn",
+            "residual": 0
+          }
+        ],
+        "compiledPartitionRetained": true,
+        "compiledPartitionRetentionReason": "Complete copy equivalence with retained compiled observations has not been established; no calendar or identity match is assumed.",
+        "nativeVisibilityDiagnostics": {
+          "file": "visibility/gap-health-board-supplement-vancouver-coastal-health-2021-22.json.gzip",
+          "sha256": "13db5217dbe151cba29ff71fdfe09b561e1cfec76fcdb49c13f993ea676890a6",
+          "flags": {
+            "ignoredOrLowOpacityCharacters": 0,
+            "nearWhiteCharacters": 0,
+            "unicodeReplacementCharacters": 0,
+            "identicalGlyphOverprints": 0,
+            "conflictingGlyphOverprints": 0,
+            "nativeWordsCrossingReviewedFieldEdges": 0,
+            "nativeWordsWithoutDarkRenderedInk": 0
+          },
+          "limitation": "Paired native readers can share missing/overprinted text. Paint, overlap, pixel-ink and field-edge diagnostics only identify review targets and do not establish every glyph or row value. Human source-view coverage is recorded separately."
+        }
+      },
+      "publicWarning": "Board payment disclosures are not annual salary rates or employee rosters. Remuneration uses the separately labelled remuneration column. Expenses and any expense-inclusive total are excluded from pay. Blank and dash expense cells remain unknown (null), not zero. Existing compiled observations are retained and may overlap this official schedule; no identity or reporting-period equivalence is assumed.",
+      "notes": [
+        "Remuneration uses the separately labelled remuneration column. Expenses and any expense-inclusive total are excluded from pay. Blank and dash expense cells remain unknown (null), not zero.",
+        "Source spellings, footnote markers and original names including explicit Chair suffixes are retained in provenance.",
+        "The internally stated fiscal payment year is used even when source footnotes discuss earlier appointments, terms or retainer payments."
+      ]
+    },
+    {
+      "id": "gap-health-board-supplement-vancouver-coastal-health-2019-20",
+      "title": "Vancouver Coastal Health Board Remuneration 2019/20",
+      "year": "2019/20",
+      "employerSlug": "vancouver-coastal-health",
+      "employerName": "Vancouver Coastal Health",
+      "sector": "Health authorities",
+      "sourceUrl": "https://digitalcollectionsrepository.llbc.leg.bc.ca/server/api/core/bitstreams/081604ef-ab22-4c11-9768-6fdf29714898/content",
+      "sha256": "dd5b76799149b87e76008eed4149a3a0790001c3c9ce23093a67c1bc1b5bc3f6",
+      "file": "gap-health-board-supplement-vancouver-coastal-health-2019-20.json.gzip",
+      "dataSha256": "5ce05e481a8df9264e81bd91a02f193594627bc2fada291758f8b76cd750fe6b",
+      "rowCount": 11,
+      "status": "candidate",
+      "sourceKind": "official",
+      "category": "board-remuneration",
+      "scope": "board-remuneration",
+      "provenanceFile": "provenance/gap-health-board-supplement-vancouver-coastal-health-2019-20.json.gzip",
+      "provenanceSha256": "41afa62df2bf03acf78e00dc3bb815e198ac078a99c53314add014cde157da87",
+      "evidenceFile": "evidence/gap-health-board-supplement-vancouver-coastal-health-2019-20.json.gzip",
+      "evidenceSha256": "e840e343c1c5543984b98ec0e498b74b8e28a76ca06a5cec38cca707e9389182",
+      "completeEmployeeSchedule": false,
+      "completeBoardSchedule": true,
+      "periodType": "fiscal",
+      "periodStart": "2019-04-01",
+      "periodEnd": "2020-03-31",
+      "nameDisclosure": "named",
+      "positionDisclosure": "literal-source-board-role",
+      "currency": "CAD",
+      "threshold": null,
+      "validation": {
+        "completeNamedBoardScopeRead": true,
+        "completeBoardSchedule": true,
+        "completeEmployeeSchedule": false,
+        "independentReaders": [
+          "PyMuPDF native word geometry / complete row bands",
+          "Poppler bbox-layout / independently assembled nearest name baselines"
+        ],
+        "independentlyComparedRows": 11,
+        "namedRows": 11,
+        "numericPayRows": 11,
+        "heldUnknownPayRows": [],
+        "sourcePhysicalPages": 131,
+        "schedulePhysicalPages": [
+          3
+        ],
+        "totalRemuneration": 190125,
+        "importedKnownExpenses": 5729,
+        "heldKnownExpenses": 0,
+        "allNamedKnownExpenses": 5729,
+        "missingExpenseRows": 4,
+        "explicitZeroExpenseRows": 0,
+        "printedControls": {
+          "remuneration": 190125,
+          "expenses": 5729,
+          "total": 195854
+        },
+        "sourceControlResiduals": {
+          "remuneration": 0,
+          "expenses": 0,
+          "knownFieldsMinusPrintedGrand": 0
+        },
+        "rowInclusiveTotalResiduals": [
+          {
+            "sourceRow": 1,
+            "name": "Ballem,Penny J",
+            "residual": 0
+          },
+          {
+            "sourceRow": 2,
+            "name": "Au, Wendy",
+            "residual": 0
+          },
+          {
+            "sourceRow": 3,
+            "name": "Baydala, Allan",
+            "residual": 0
+          },
+          {
+            "sourceRow": 4,
+            "name": "Duvall, Bill",
+            "residual": 0
+          },
+          {
+            "sourceRow": 5,
+            "name": "Fregin, Cliff",
+            "residual": 0
+          },
+          {
+            "sourceRow": 6,
+            "name": "Harowitz, Howard",
+            "residual": 0
+          },
+          {
+            "sourceRow": 7,
+            "name": "Liang, Rowena",
+            "residual": 0
+          },
+          {
+            "sourceRow": 8,
+            "name": "McGregor, Margaret",
+            "residual": 0
+          },
+          {
+            "sourceRow": 9,
+            "name": "Nguyen, Vi",
+            "residual": 0
+          },
+          {
+            "sourceRow": 10,
+            "name": "Nocente, Daniel",
+            "residual": 0
+          },
+          {
+            "sourceRow": 11,
+            "name": "Slett,Marilyn",
+            "residual": 0
+          }
+        ],
+        "compiledPartitionRetained": true,
+        "compiledPartitionRetentionReason": "Complete copy equivalence with retained compiled observations has not been established; no calendar or identity match is assumed.",
+        "nativeVisibilityDiagnostics": {
+          "file": "visibility/gap-health-board-supplement-vancouver-coastal-health-2019-20.json.gzip",
+          "sha256": "96f5b4d43197b524aa99e0f37bccfa7bf06bc9330bb172306ba23cb34f94e763",
+          "flags": {
+            "ignoredOrLowOpacityCharacters": 0,
+            "nearWhiteCharacters": 0,
+            "unicodeReplacementCharacters": 0,
+            "identicalGlyphOverprints": 0,
+            "conflictingGlyphOverprints": 0,
+            "nativeWordsCrossingReviewedFieldEdges": 0,
+            "nativeWordsWithoutDarkRenderedInk": 0
+          },
+          "limitation": "Paired native readers can share missing/overprinted text. Paint, overlap, pixel-ink and field-edge diagnostics only identify review targets and do not establish every glyph or row value. Human source-view coverage is recorded separately."
+        }
+      },
+      "publicWarning": "Board payment disclosures are not annual salary rates or employee rosters. Remuneration uses the separately labelled remuneration column. Expenses and any expense-inclusive total are excluded from pay. Blank and dash expense cells remain unknown (null), not zero. Existing compiled observations are retained and may overlap this official schedule; no identity or reporting-period equivalence is assumed.",
+      "notes": [
+        "Remuneration uses the separately labelled remuneration column. Expenses and any expense-inclusive total are excluded from pay. Blank and dash expense cells remain unknown (null), not zero.",
+        "Source spellings, footnote markers and original names including explicit Chair suffixes are retained in provenance.",
+        "The internally stated fiscal payment year is used even when source footnotes discuss earlier appointments, terms or retainer payments."
+      ]
+    },
+    {
+      "id": "gap-health-board-supplement-vancouver-coastal-health-2018-19",
+      "title": "Vancouver Coastal Health Board Remuneration 2018/19",
+      "year": "2018/19",
+      "employerSlug": "vancouver-coastal-health",
+      "employerName": "Vancouver Coastal Health",
+      "sector": "Health authorities",
+      "sourceUrl": "https://digitalcollectionsrepository.llbc.leg.bc.ca/server/api/core/bitstreams/73b90cdf-6466-4add-b95f-b6b7eda5c030/content",
+      "sha256": "a9de23592e9b7a307992d9c23ce20e15ecdb1a54b1cf1dfb93de221225e41dd0",
+      "file": "gap-health-board-supplement-vancouver-coastal-health-2018-19.json.gzip",
+      "dataSha256": "c66fad282dacce278068286f02cb9904deb74d4a81c0c8427e107e857fa109be",
+      "rowCount": 10,
+      "status": "candidate",
+      "sourceKind": "official",
+      "category": "board-remuneration",
+      "scope": "board-remuneration",
+      "provenanceFile": "provenance/gap-health-board-supplement-vancouver-coastal-health-2018-19.json.gzip",
+      "provenanceSha256": "e996ef5435c59777fa05c57850c50092ef1c409d82bd8e476f3203625bd39dc7",
+      "evidenceFile": "evidence/gap-health-board-supplement-vancouver-coastal-health-2018-19.json.gzip",
+      "evidenceSha256": "55c5b8907ed179e4e0522ae5e60fc750baa509cd102b8df3174d164da2fab10a",
+      "completeEmployeeSchedule": false,
+      "completeBoardSchedule": false,
+      "periodType": "fiscal",
+      "periodStart": "2018-04-01",
+      "periodEnd": "2019-03-31",
+      "nameDisclosure": "named",
+      "positionDisclosure": "literal-source-board-role",
+      "currency": "CAD",
+      "threshold": null,
+      "validation": {
+        "completeNamedBoardScopeRead": true,
+        "completeBoardSchedule": false,
+        "completeEmployeeSchedule": false,
+        "independentReaders": [
+          "PyMuPDF native word geometry / complete row bands",
+          "Poppler bbox-layout / independently assembled nearest name baselines"
+        ],
+        "independentlyComparedRows": 15,
+        "namedRows": 15,
+        "numericPayRows": 10,
+        "heldUnknownPayRows": [
+          [
+            "vancouver-coastal-health",
+            "Ballem,Penny J",
+            "Chair",
+            null,
+            194,
+            3
+          ],
+          [
+            "vancouver-coastal-health",
+            "Fung, Kenneth",
+            "Director",
+            null,
+            null,
+            3
+          ],
+          [
+            "vancouver-coastal-health",
+            "MacDiarmid, Margaret",
+            "Director",
+            null,
+            null,
+            3
+          ],
+          [
+            "vancouver-coastal-health",
+            "Slett,Marilyn",
+            "Director",
+            null,
+            null,
+            3
+          ],
+          [
+            "vancouver-coastal-health",
+            "Yeung, Sze-Mei",
+            "Director",
+            null,
+            null,
+            3
+          ]
+        ],
+        "sourcePhysicalPages": 108,
+        "schedulePhysicalPages": [
+          3
+        ],
+        "totalRemuneration": 134875,
+        "importedKnownExpenses": 6041,
+        "heldKnownExpenses": 194,
+        "allNamedKnownExpenses": 6235,
+        "missingExpenseRows": 2,
+        "explicitZeroExpenseRows": 0,
+        "printedControls": {
+          "remuneration": 134875,
+          "expenses": 6234,
+          "total": 141110
+        },
+        "sourceControlResiduals": {
+          "remuneration": 0,
+          "expenses": 1,
+          "knownFieldsMinusPrintedGrand": 0
+        },
+        "rowInclusiveTotalResiduals": [
+          {
+            "sourceRow": 2,
+            "name": "Woodward, Kip",
+            "residual": 0
+          },
+          {
+            "sourceRow": 3,
+            "name": "Au, Wendy",
+            "residual": 0
+          },
+          {
+            "sourceRow": 4,
+            "name": "Baydala, Allan",
+            "residual": 0
+          },
+          {
+            "sourceRow": 5,
+            "name": "Duvall, Bill",
+            "residual": 0
+          },
+          {
+            "sourceRow": 6,
+            "name": "Fregin, Cliff",
+            "residual": 0
+          },
+          {
+            "sourceRow": 8,
+            "name": "Harowitz, Howard",
+            "residual": 0
+          },
+          {
+            "sourceRow": 9,
+            "name": "Liang, Rowena",
+            "residual": 0
+          },
+          {
+            "sourceRow": 11,
+            "name": "McGregor, Margaret",
+            "residual": 0
+          },
+          {
+            "sourceRow": 12,
+            "name": "Nguyen, Vi",
+            "residual": 0
+          },
+          {
+            "sourceRow": 13,
+            "name": "Nocente, Daniel",
+            "residual": 0
+          }
+        ],
+        "compiledPartitionRetained": true,
+        "compiledPartitionRetentionReason": "Complete copy equivalence with retained compiled observations has not been established; no calendar or identity match is assumed.",
+        "nativeVisibilityDiagnostics": {
+          "file": "visibility/gap-health-board-supplement-vancouver-coastal-health-2018-19.json.gzip",
+          "sha256": "8e53933a45526a0247ddb450bf7c926448c4f6e59ad7b5feb65928a3d4d2f1cc",
+          "flags": {
+            "ignoredOrLowOpacityCharacters": 0,
+            "nearWhiteCharacters": 0,
+            "unicodeReplacementCharacters": 0,
+            "identicalGlyphOverprints": 0,
+            "conflictingGlyphOverprints": 0,
+            "nativeWordsCrossingReviewedFieldEdges": 0,
+            "nativeWordsWithoutDarkRenderedInk": 0
+          },
+          "limitation": "Paired native readers can share missing/overprinted text. Paint, overlap, pixel-ink and field-edge diagnostics only identify review targets and do not establish every glyph or row value. Human source-view coverage is recorded separately."
+        }
+      },
+      "publicWarning": "Board payment disclosures are not annual salary rates or employee rosters. Remuneration uses the separately labelled remuneration column. Expenses and any expense-inclusive total are excluded from pay. Blank and dash expense cells remain unknown (null), not zero. 5 named board observation(s) with nonnumeric remuneration remain supporting evidence; no zero pay is invented. Their known expenses total 194 CAD and remain included in full-board expense controls. Full-board known expenses minus its printed control is 1 CAD. No payment has been balanced or adjusted. The cause is not established. Existing compiled observations are retained and may overlap this official schedule; no identity or reporting-period equivalence is assumed.",
+      "notes": [
+        "Remuneration uses the separately labelled remuneration column. Expenses and any expense-inclusive total are excluded from pay. Blank and dash expense cells remain unknown (null), not zero.",
+        "Source spellings, footnote markers and original names including explicit Chair suffixes are retained in provenance.",
+        "The internally stated fiscal payment year is used even when source footnotes discuss earlier appointments, terms or retainer payments."
+      ]
+    },
+    {
+      "id": "gap-health-board-supplement-vancouver-coastal-health-2017-18",
+      "title": "Vancouver Coastal Health Board Remuneration 2017/18",
+      "year": "2017/18",
+      "employerSlug": "vancouver-coastal-health",
+      "employerName": "Vancouver Coastal Health",
+      "sector": "Health authorities",
+      "sourceUrl": "https://digitalcollectionsrepository.llbc.leg.bc.ca/server/api/core/bitstreams/2edcdfb4-a1e4-4921-a7db-2d7a768dd74b/content",
+      "sha256": "eb7b35082cef57bb89120b021c2b42ab7e61bb01bf760f9e33873c846c4012e0",
+      "file": "gap-health-board-supplement-vancouver-coastal-health-2017-18.json.gzip",
+      "dataSha256": "ce2aa88e41fa6c43f78cea03ed00c5c1bd28a9e8dab0274e7900ef4457b14a9b",
+      "rowCount": 12,
+      "status": "candidate",
+      "sourceKind": "official",
+      "category": "board-remuneration",
+      "scope": "board-remuneration",
+      "provenanceFile": "provenance/gap-health-board-supplement-vancouver-coastal-health-2017-18.json.gzip",
+      "provenanceSha256": "af710a1091fd7d4fe3ddcfe950e3a969c468d0544850dd26aa7cd1d667e0e2f8",
+      "evidenceFile": "evidence/gap-health-board-supplement-vancouver-coastal-health-2017-18.json.gzip",
+      "evidenceSha256": "4eb331a2ccfbc7814f7b8c3650e3f4018cb81f9a03b385f7dd3adad228dee124",
+      "completeEmployeeSchedule": false,
+      "completeBoardSchedule": false,
+      "periodType": "fiscal",
+      "periodStart": "2017-04-01",
+      "periodEnd": "2018-03-31",
+      "nameDisclosure": "named",
+      "positionDisclosure": "literal-source-board-role",
+      "currency": "CAD",
+      "threshold": null,
+      "validation": {
+        "completeNamedBoardScopeRead": true,
+        "completeBoardSchedule": false,
+        "completeEmployeeSchedule": false,
+        "independentReaders": [
+          "PyMuPDF native word geometry / complete row bands",
+          "Poppler bbox-layout / independently assembled nearest name baselines"
+        ],
+        "independentlyComparedRows": 13,
+        "namedRows": 13,
+        "numericPayRows": 12,
+        "heldUnknownPayRows": [
+          [
+            "vancouver-coastal-health",
+            "Duvall, Bill",
+            "Director",
+            null,
+            18,
+            3
+          ]
+        ],
+        "sourcePhysicalPages": 101,
+        "schedulePhysicalPages": [
+          3
+        ],
+        "totalRemuneration": 128221,
+        "importedKnownExpenses": 9791,
+        "heldKnownExpenses": 18,
+        "allNamedKnownExpenses": 9809,
+        "missingExpenseRows": 4,
+        "explicitZeroExpenseRows": 0,
+        "printedControls": {
+          "remuneration": 128221,
+          "expenses": 9809,
+          "total": 138030
+        },
+        "sourceControlResiduals": {
+          "remuneration": 0,
+          "expenses": 0,
+          "knownFieldsMinusPrintedGrand": 0
+        },
+        "rowInclusiveTotalResiduals": [
+          {
+            "sourceRow": 1,
+            "name": "Woodward, Kip",
+            "residual": 0
+          },
+          {
+            "sourceRow": 2,
+            "name": "Au, Wendy",
+            "residual": 0
+          },
+          {
+            "sourceRow": 3,
+            "name": "Baydala, Allan",
+            "residual": 0
+          },
+          {
+            "sourceRow": 5,
+            "name": "Fregin, Cliff",
+            "residual": 0
+          },
+          {
+            "sourceRow": 6,
+            "name": "Fung, Kenneth",
+            "residual": 0
+          },
+          {
+            "sourceRow": 7,
+            "name": "Harowitz, Howard",
+            "residual": 0
+          },
+          {
+            "sourceRow": 8,
+            "name": "Liang, Rowena",
+            "residual": 0
+          },
+          {
+            "sourceRow": 9,
+            "name": "MacDiarmid, Margaret",
+            "residual": 0
+          },
+          {
+            "sourceRow": 10,
+            "name": "McGregor, Margaret",
+            "residual": 0
+          },
+          {
+            "sourceRow": 11,
+            "name": "Nguyen, Vi",
+            "residual": 0
+          },
+          {
+            "sourceRow": 12,
+            "name": "Nocente, Daniel",
+            "residual": 0
+          },
+          {
+            "sourceRow": 13,
+            "name": "Yeung, Sze-Mei",
+            "residual": 0
+          }
+        ],
+        "compiledPartitionRetained": true,
+        "compiledPartitionRetentionReason": "Complete copy equivalence with retained compiled observations has not been established; no calendar or identity match is assumed.",
+        "nativeVisibilityDiagnostics": {
+          "file": "visibility/gap-health-board-supplement-vancouver-coastal-health-2017-18.json.gzip",
+          "sha256": "2284c543e0e46482c168b157aa596f900c7abece6054c995db84b2182f0733ab",
+          "flags": {
+            "ignoredOrLowOpacityCharacters": 0,
+            "nearWhiteCharacters": 0,
+            "unicodeReplacementCharacters": 0,
+            "identicalGlyphOverprints": 0,
+            "conflictingGlyphOverprints": 0,
+            "nativeWordsCrossingReviewedFieldEdges": 0,
+            "nativeWordsWithoutDarkRenderedInk": 0
+          },
+          "limitation": "Paired native readers can share missing/overprinted text. Paint, overlap, pixel-ink and field-edge diagnostics only identify review targets and do not establish every glyph or row value. Human source-view coverage is recorded separately."
+        }
+      },
+      "publicWarning": "Board payment disclosures are not annual salary rates or employee rosters. Remuneration uses the separately labelled remuneration column. Expenses and any expense-inclusive total are excluded from pay. Blank and dash expense cells remain unknown (null), not zero. 1 named board observation(s) with nonnumeric remuneration remain supporting evidence; no zero pay is invented. Their known expenses total 18 CAD and remain included in full-board expense controls. Existing compiled observations are retained and may overlap this official schedule; no identity or reporting-period equivalence is assumed.",
+      "notes": [
+        "Remuneration uses the separately labelled remuneration column. Expenses and any expense-inclusive total are excluded from pay. Blank and dash expense cells remain unknown (null), not zero.",
+        "Source spellings, footnote markers and original names including explicit Chair suffixes are retained in provenance.",
+        "The internally stated fiscal payment year is used even when source footnotes discuss earlier appointments, terms or retainer payments."
+      ]
+    },
+    {
+      "id": "gap-health-board-supplement-vancouver-coastal-health-2016-17",
+      "title": "Vancouver Coastal Health Board Remuneration 2016/17",
+      "year": "2016/17",
+      "employerSlug": "vancouver-coastal-health",
+      "employerName": "Vancouver Coastal Health",
+      "sector": "Health authorities",
+      "sourceUrl": "https://digitalcollectionsrepository.llbc.leg.bc.ca/server/api/core/bitstreams/4a95c7cc-b1e6-49d7-9201-df0e79b8ed78/content",
+      "sha256": "95865b81d7efdf32200957fd555c896705dba8f77b02aad11dddeee2082d45fb",
+      "file": "gap-health-board-supplement-vancouver-coastal-health-2016-17.json.gzip",
+      "dataSha256": "524f3cddab5c5ac794a2854cbd67591abe82291967efb5d46ecdbc13542d9fbd",
+      "rowCount": 10,
+      "status": "candidate",
+      "sourceKind": "official",
+      "category": "board-remuneration",
+      "scope": "board-remuneration",
+      "provenanceFile": "provenance/gap-health-board-supplement-vancouver-coastal-health-2016-17.json.gzip",
+      "provenanceSha256": "2dc704ba31d6261400096900e4dd30ff7cc5439e2b9d7eba9b0449735e342611",
+      "evidenceFile": "evidence/gap-health-board-supplement-vancouver-coastal-health-2016-17.json.gzip",
+      "evidenceSha256": "c72c158ca48214c0572cd7a42a71ba4d56248df71574e81d42eee438cbc0a8cf",
+      "completeEmployeeSchedule": false,
+      "completeBoardSchedule": true,
+      "periodType": "fiscal",
+      "periodStart": "2016-04-01",
+      "periodEnd": "2017-03-31",
+      "nameDisclosure": "named",
+      "positionDisclosure": "literal-source-board-role",
+      "currency": "CAD",
+      "threshold": null,
+      "validation": {
+        "completeNamedBoardScopeRead": true,
+        "completeBoardSchedule": true,
+        "completeEmployeeSchedule": false,
+        "independentReaders": [
+          "PyMuPDF native word geometry / complete row bands",
+          "Poppler bbox-layout / independently assembled nearest name baselines"
+        ],
+        "independentlyComparedRows": 10,
+        "namedRows": 10,
+        "numericPayRows": 10,
+        "heldUnknownPayRows": [],
+        "sourcePhysicalPages": 121,
+        "schedulePhysicalPages": [
+          3
+        ],
+        "totalRemuneration": 130938,
+        "importedKnownExpenses": 8655,
+        "heldKnownExpenses": 0,
+        "allNamedKnownExpenses": 8655,
+        "missingExpenseRows": 2,
+        "explicitZeroExpenseRows": 0,
+        "printedControls": {
+          "remuneration": 130938,
+          "expenses": 8655,
+          "total": 139593
+        },
+        "sourceControlResiduals": {
+          "remuneration": 0,
+          "expenses": 0,
+          "knownFieldsMinusPrintedGrand": 0
+        },
+        "rowInclusiveTotalResiduals": [
+          {
+            "sourceRow": 1,
+            "name": "Woodward, Kip",
+            "residual": 0
+          },
+          {
+            "sourceRow": 2,
+            "name": "Baydala, Allan",
+            "residual": 0
+          },
+          {
+            "sourceRow": 3,
+            "name": "Fregin, Cliff",
+            "residual": 0
+          },
+          {
+            "sourceRow": 4,
+            "name": "Fung, Kenneth",
+            "residual": 0
+          },
+          {
+            "sourceRow": 5,
+            "name": "Harowitz, Howard",
+            "residual": 0
+          },
+          {
+            "sourceRow": 6,
+            "name": "Liang, Rowena",
+            "residual": 0
+          },
+          {
+            "sourceRow": 7,
+            "name": "MacDiarmid, Margaret",
+            "residual": 0
+          },
+          {
+            "sourceRow": 8,
+            "name": "Nocente, Daniel",
+            "residual": 0
+          },
+          {
+            "sourceRow": 9,
+            "name": "Withers, Victoria",
+            "residual": 0
+          },
+          {
+            "sourceRow": 10,
+            "name": "Yeung, Sze-Mei",
+            "residual": 0
+          }
+        ],
+        "compiledPartitionRetained": true,
+        "compiledPartitionRetentionReason": "Complete copy equivalence with retained compiled observations has not been established; no calendar or identity match is assumed.",
+        "nativeVisibilityDiagnostics": {
+          "file": "visibility/gap-health-board-supplement-vancouver-coastal-health-2016-17.json.gzip",
+          "sha256": "06733983cd92332b7df79315c69e096055477b169354443c5cfa35c432132808",
+          "flags": {
+            "ignoredOrLowOpacityCharacters": 0,
+            "nearWhiteCharacters": 0,
+            "unicodeReplacementCharacters": 0,
+            "identicalGlyphOverprints": 0,
+            "conflictingGlyphOverprints": 0,
+            "nativeWordsCrossingReviewedFieldEdges": 0,
+            "nativeWordsWithoutDarkRenderedInk": 0
+          },
+          "limitation": "Paired native readers can share missing/overprinted text. Paint, overlap, pixel-ink and field-edge diagnostics only identify review targets and do not establish every glyph or row value. Human source-view coverage is recorded separately."
+        }
+      },
+      "publicWarning": "Board payment disclosures are not annual salary rates or employee rosters. Remuneration uses the separately labelled remuneration column. Expenses and any expense-inclusive total are excluded from pay. Blank and dash expense cells remain unknown (null), not zero. Existing compiled observations are retained and may overlap this official schedule; no identity or reporting-period equivalence is assumed.",
+      "notes": [
+        "Remuneration uses the separately labelled remuneration column. Expenses and any expense-inclusive total are excluded from pay. Blank and dash expense cells remain unknown (null), not zero.",
+        "Source spellings, footnote markers and original names including explicit Chair suffixes are retained in provenance.",
+        "The internally stated fiscal payment year is used even when source footnotes discuss earlier appointments, terms or retainer payments."
+      ]
+    },
+    {
+      "id": "gap-health-board-supplement-vancouver-coastal-health-2015-16",
+      "title": "Vancouver Coastal Health Board Remuneration 2015/16",
+      "year": "2015/16",
+      "employerSlug": "vancouver-coastal-health",
+      "employerName": "Vancouver Coastal Health",
+      "sector": "Health authorities",
+      "sourceUrl": "https://digitalcollectionsrepository.llbc.leg.bc.ca/server/api/core/bitstreams/b9471b5a-e94c-4efa-a33f-0f8b75714b09/content",
+      "sha256": "914fb5a55718ddc4caa5605e9e9f5ff7c39ffa4fcfc190fa2e0f209e9b2ae827",
+      "file": "gap-health-board-supplement-vancouver-coastal-health-2015-16.json.gzip",
+      "dataSha256": "8ca647cc6ea4204e7e1170515f2a41280a0ead91e09658f0b2135aa7105f28e7",
+      "rowCount": 10,
+      "status": "candidate",
+      "sourceKind": "official",
+      "category": "board-remuneration",
+      "scope": "board-remuneration",
+      "provenanceFile": "provenance/gap-health-board-supplement-vancouver-coastal-health-2015-16.json.gzip",
+      "provenanceSha256": "de7e53d7515b288c5eb7e4cd7a72f46b8b11395715655f4978f32e0d6b7f5415",
+      "evidenceFile": "evidence/gap-health-board-supplement-vancouver-coastal-health-2015-16.json.gzip",
+      "evidenceSha256": "f3ff49544acb80f3695d3e275cb653b5234324292c19e226357c4943cb2578f8",
+      "completeEmployeeSchedule": false,
+      "completeBoardSchedule": true,
+      "periodType": "fiscal",
+      "periodStart": "2015-04-01",
+      "periodEnd": "2016-03-31",
+      "nameDisclosure": "named",
+      "positionDisclosure": "literal-source-board-role",
+      "currency": "CAD",
+      "threshold": null,
+      "validation": {
+        "completeNamedBoardScopeRead": true,
+        "completeBoardSchedule": true,
+        "completeEmployeeSchedule": false,
+        "independentReaders": [
+          "PyMuPDF native word geometry / complete row bands",
+          "Poppler bbox-layout / independently assembled nearest name baselines"
+        ],
+        "independentlyComparedRows": 10,
+        "namedRows": 10,
+        "numericPayRows": 10,
+        "heldUnknownPayRows": [],
+        "sourcePhysicalPages": 103,
+        "schedulePhysicalPages": [
+          3
+        ],
+        "totalRemuneration": 122766,
+        "importedKnownExpenses": 15032,
+        "heldKnownExpenses": 0,
+        "allNamedKnownExpenses": 15032,
+        "missingExpenseRows": 0,
+        "explicitZeroExpenseRows": 0,
+        "printedControls": {
+          "remuneration": 122766,
+          "expenses": 15032,
+          "total": 137798
+        },
+        "sourceControlResiduals": {
+          "remuneration": 0,
+          "expenses": 0,
+          "knownFieldsMinusPrintedGrand": 0
+        },
+        "rowInclusiveTotalResiduals": [
+          {
+            "sourceRow": 1,
+            "name": "Woodward, Kip",
+            "residual": 0
+          },
+          {
+            "sourceRow": 2,
+            "name": "Baydala, Allan",
+            "residual": 0
+          },
+          {
+            "sourceRow": 3,
+            "name": "Gibson, Carol",
+            "residual": 0
+          },
+          {
+            "sourceRow": 4,
+            "name": "Harowitz, Howard",
+            "residual": 0
+          },
+          {
+            "sourceRow": 5,
+            "name": "Liang, Rowena",
+            "residual": 0
+          },
+          {
+            "sourceRow": 6,
+            "name": "MacDiarmid, Margaret",
+            "residual": 0
+          },
+          {
+            "sourceRow": 7,
+            "name": "Nocente, Daniel",
+            "residual": 0
+          },
+          {
+            "sourceRow": 8,
+            "name": "Rehkatsch, Axel F",
+            "residual": 0
+          },
+          {
+            "sourceRow": 9,
+            "name": "Withers, Victoria",
+            "residual": 0
+          },
+          {
+            "sourceRow": 10,
+            "name": "Yeung, Sze-Mei",
+            "residual": 0
+          }
+        ],
+        "compiledPartitionRetained": true,
+        "compiledPartitionRetentionReason": "Complete copy equivalence with retained compiled observations has not been established; no calendar or identity match is assumed.",
+        "nativeVisibilityDiagnostics": {
+          "file": "visibility/gap-health-board-supplement-vancouver-coastal-health-2015-16.json.gzip",
+          "sha256": "8bdb4fcfa8df1d67014a0b6cb6ea92318464648bf623ae7c316ca23ea87e0333",
+          "flags": {
+            "ignoredOrLowOpacityCharacters": 0,
+            "nearWhiteCharacters": 0,
+            "unicodeReplacementCharacters": 0,
+            "identicalGlyphOverprints": 0,
+            "conflictingGlyphOverprints": 0,
+            "nativeWordsCrossingReviewedFieldEdges": 0,
+            "nativeWordsWithoutDarkRenderedInk": 0
+          },
+          "limitation": "Paired native readers can share missing/overprinted text. Paint, overlap, pixel-ink and field-edge diagnostics only identify review targets and do not establish every glyph or row value. Human source-view coverage is recorded separately."
+        }
+      },
+      "publicWarning": "Board payment disclosures are not annual salary rates or employee rosters. Remuneration uses the separately labelled remuneration column. Expenses and any expense-inclusive total are excluded from pay. Blank and dash expense cells remain unknown (null), not zero. Existing compiled observations are retained and may overlap this official schedule; no identity or reporting-period equivalence is assumed.",
+      "notes": [
+        "Remuneration uses the separately labelled remuneration column. Expenses and any expense-inclusive total are excluded from pay. Blank and dash expense cells remain unknown (null), not zero.",
+        "Source spellings, footnote markers and original names including explicit Chair suffixes are retained in provenance.",
+        "The internally stated fiscal payment year is used even when source footnotes discuss earlier appointments, terms or retainer payments."
+      ]
+    },
+    {
+      "id": "gap-health-board-supplement-vancouver-coastal-health-2014-15",
+      "title": "Vancouver Coastal Health Board Remuneration 2014/15",
+      "year": "2014/15",
+      "employerSlug": "vancouver-coastal-health",
+      "employerName": "Vancouver Coastal Health",
+      "sector": "Health authorities",
+      "sourceUrl": "https://digitalcollectionsrepository.llbc.leg.bc.ca/server/api/core/bitstreams/c4a5a80b-16f2-4e55-948c-486490ba650d/content",
+      "sha256": "72b242a78ca41d4f9f1eb8f9700c4d76571f8b3bf29792fc0117c890e997e086",
+      "file": "gap-health-board-supplement-vancouver-coastal-health-2014-15.json.gzip",
+      "dataSha256": "c34ff17f45074672410bb1cb466b18c57035ed2087fc598f0f3dc77c44438fcf",
+      "rowCount": 9,
+      "status": "candidate",
+      "sourceKind": "official",
+      "category": "board-remuneration",
+      "scope": "board-remuneration",
+      "provenanceFile": "provenance/gap-health-board-supplement-vancouver-coastal-health-2014-15.json.gzip",
+      "provenanceSha256": "ce61fa39207be2fcb1fa91345c23bda4c429f33c3484efb837cc8c9425f5698c",
+      "evidenceFile": "evidence/gap-health-board-supplement-vancouver-coastal-health-2014-15.json.gzip",
+      "evidenceSha256": "a2c83f401901c3bfcb3fed30bff42d85e99bb15fc1f0a495fec431cf29337952",
+      "completeEmployeeSchedule": false,
+      "completeBoardSchedule": true,
+      "periodType": "fiscal",
+      "periodStart": "2014-04-01",
+      "periodEnd": "2015-03-31",
+      "nameDisclosure": "named",
+      "positionDisclosure": "literal-source-board-role",
+      "currency": "CAD",
+      "threshold": null,
+      "validation": {
+        "completeNamedBoardScopeRead": true,
+        "completeBoardSchedule": true,
+        "completeEmployeeSchedule": false,
+        "independentReaders": [
+          "PyMuPDF native word geometry / complete row bands",
+          "Poppler bbox-layout / independently assembled nearest name baselines"
+        ],
+        "independentlyComparedRows": 9,
+        "namedRows": 9,
+        "numericPayRows": 9,
+        "heldUnknownPayRows": [],
+        "sourcePhysicalPages": 104,
+        "schedulePhysicalPages": [
+          3
+        ],
+        "totalRemuneration": 120376,
+        "importedKnownExpenses": 17589,
+        "heldKnownExpenses": 0,
+        "allNamedKnownExpenses": 17589,
+        "missingExpenseRows": 0,
+        "explicitZeroExpenseRows": 0,
+        "printedControls": {
+          "remuneration": 120376,
+          "expenses": 17589,
+          "total": 137965
+        },
+        "sourceControlResiduals": {
+          "remuneration": 0,
+          "expenses": 0,
+          "knownFieldsMinusPrintedGrand": 0
+        },
+        "rowInclusiveTotalResiduals": [
+          {
+            "sourceRow": 1,
+            "name": "Woodward, Kip",
+            "residual": 0
+          },
+          {
+            "sourceRow": 2,
+            "name": "Gibson, Carol",
+            "residual": 0
+          },
+          {
+            "sourceRow": 3,
+            "name": "Heath, Sandra",
+            "residual": 0
+          },
+          {
+            "sourceRow": 4,
+            "name": "Liang, Rowena",
+            "residual": 0
+          },
+          {
+            "sourceRow": 5,
+            "name": "MacDiarmid, Margaret",
+            "residual": 0
+          },
+          {
+            "sourceRow": 6,
+            "name": "Nocente, Daniel",
+            "residual": 0
+          },
+          {
+            "sourceRow": 7,
+            "name": "Rehkatsch, Axel F",
+            "residual": 0
+          },
+          {
+            "sourceRow": 8,
+            "name": "Shields, Stacy",
+            "residual": 0
+          },
+          {
+            "sourceRow": 9,
+            "name": "Withers, Victoria",
+            "residual": 0
+          }
+        ],
+        "compiledPartitionRetained": true,
+        "compiledPartitionRetentionReason": "Complete copy equivalence with retained compiled observations has not been established; no calendar or identity match is assumed.",
+        "nativeVisibilityDiagnostics": {
+          "file": "visibility/gap-health-board-supplement-vancouver-coastal-health-2014-15.json.gzip",
+          "sha256": "361f1135e050a948e099d239d1578d56b7d3f6d0d9384710d2a4cb791ec8dcd0",
+          "flags": {
+            "ignoredOrLowOpacityCharacters": 0,
+            "nearWhiteCharacters": 0,
+            "unicodeReplacementCharacters": 0,
+            "identicalGlyphOverprints": 0,
+            "conflictingGlyphOverprints": 0,
+            "nativeWordsCrossingReviewedFieldEdges": 0,
+            "nativeWordsWithoutDarkRenderedInk": 0
+          },
+          "limitation": "Paired native readers can share missing/overprinted text. Paint, overlap, pixel-ink and field-edge diagnostics only identify review targets and do not establish every glyph or row value. Human source-view coverage is recorded separately."
+        }
+      },
+      "publicWarning": "Board payment disclosures are not annual salary rates or employee rosters. Remuneration uses the separately labelled remuneration column. Expenses and any expense-inclusive total are excluded from pay. Blank and dash expense cells remain unknown (null), not zero. Existing compiled observations are retained and may overlap this official schedule; no identity or reporting-period equivalence is assumed.",
+      "notes": [
+        "Remuneration uses the separately labelled remuneration column. Expenses and any expense-inclusive total are excluded from pay. Blank and dash expense cells remain unknown (null), not zero.",
+        "Source spellings, footnote markers and original names including explicit Chair suffixes are retained in provenance.",
+        "The internally stated fiscal payment year is used even when source footnotes discuss earlier appointments, terms or retainer payments."
+      ]
+    },
+    {
+      "id": "gap-health-board-supplement-vancouver-coastal-health-2013-14",
+      "title": "Vancouver Coastal Health Board Remuneration 2013/14",
+      "year": "2013/14",
+      "employerSlug": "vancouver-coastal-health",
+      "employerName": "Vancouver Coastal Health",
+      "sector": "Health authorities",
+      "sourceUrl": "https://digitalcollectionsrepository.llbc.leg.bc.ca/server/api/core/bitstreams/0fd399be-0783-4919-b814-75cde28eaad1/content",
+      "sha256": "42cf7cc582fefa910b36bb94b4d4999766cba98040aa79a6fbc87c62a24980b3",
+      "file": "gap-health-board-supplement-vancouver-coastal-health-2013-14.json.gzip",
+      "dataSha256": "7cd215a8dc7f91edfc7adece1cbef9975d8f893f1d490c0416f9ad7fcba5d09e",
+      "rowCount": 9,
+      "status": "candidate",
+      "sourceKind": "official",
+      "category": "board-remuneration",
+      "scope": "board-remuneration",
+      "provenanceFile": "provenance/gap-health-board-supplement-vancouver-coastal-health-2013-14.json.gzip",
+      "provenanceSha256": "eb624915044a24c853d28d10025fb1372eb266cf7a41be0fd57c8564df5b59f8",
+      "evidenceFile": "evidence/gap-health-board-supplement-vancouver-coastal-health-2013-14.json.gzip",
+      "evidenceSha256": "b53ab12c0058309a096e4627c340bb9e9da82cfc08b274ee389fb995b920726d",
+      "completeEmployeeSchedule": false,
+      "completeBoardSchedule": true,
+      "periodType": "fiscal",
+      "periodStart": "2013-04-01",
+      "periodEnd": "2014-03-31",
+      "nameDisclosure": "named",
+      "positionDisclosure": "literal-source-board-role",
+      "currency": "CAD",
+      "threshold": null,
+      "validation": {
+        "completeNamedBoardScopeRead": true,
+        "completeBoardSchedule": true,
+        "completeEmployeeSchedule": false,
+        "independentReaders": [
+          "PyMuPDF native word geometry / complete row bands",
+          "Poppler bbox-layout / independently assembled nearest name baselines"
+        ],
+        "independentlyComparedRows": 9,
+        "namedRows": 9,
+        "numericPayRows": 9,
+        "heldUnknownPayRows": [],
+        "sourcePhysicalPages": 95,
+        "schedulePhysicalPages": [
+          3
+        ],
+        "totalRemuneration": 118250,
+        "importedKnownExpenses": 11696,
+        "heldKnownExpenses": 0,
+        "allNamedKnownExpenses": 11696,
+        "missingExpenseRows": 2,
+        "explicitZeroExpenseRows": 0,
+        "printedControls": {
+          "remuneration": 118250,
+          "expenses": 11696,
+          "total": 129946
+        },
+        "sourceControlResiduals": {
+          "remuneration": 0,
+          "expenses": 0,
+          "knownFieldsMinusPrintedGrand": 0
+        },
+        "rowInclusiveTotalResiduals": [
+          {
+            "sourceRow": 1,
+            "name": "Woodward, Kip",
+            "residual": 0
+          },
+          {
+            "sourceRow": 2,
+            "name": "Gibson, Carol",
+            "residual": 0
+          },
+          {
+            "sourceRow": 3,
+            "name": "Heath, Sandra",
+            "residual": 0
+          },
+          {
+            "sourceRow": 4,
+            "name": "Hsieh, James",
+            "residual": 0
+          },
+          {
+            "sourceRow": 5,
+            "name": "MacDiarmid,Margaret",
+            "residual": 0
+          },
+          {
+            "sourceRow": 6,
+            "name": "Nocente Daniel",
+            "residual": 0
+          },
+          {
+            "sourceRow": 7,
+            "name": "Rehkatsch, Axel F",
+            "residual": 0
+          },
+          {
+            "sourceRow": 8,
+            "name": "Spitz, Grant",
+            "residual": 0
+          },
+          {
+            "sourceRow": 9,
+            "name": "Withers, Victoria",
+            "residual": 0
+          }
+        ],
+        "compiledPartitionRetained": true,
+        "compiledPartitionRetentionReason": "Complete copy equivalence with retained compiled observations has not been established; no calendar or identity match is assumed.",
+        "nativeVisibilityDiagnostics": {
+          "file": "visibility/gap-health-board-supplement-vancouver-coastal-health-2013-14.json.gzip",
+          "sha256": "c0a60443969f511e898a764c2aa1a92f2c200ef45abd27e32f10cbd8f202dfd1",
+          "flags": {
+            "ignoredOrLowOpacityCharacters": 0,
+            "nearWhiteCharacters": 0,
+            "unicodeReplacementCharacters": 0,
+            "identicalGlyphOverprints": 0,
+            "conflictingGlyphOverprints": 0,
+            "nativeWordsCrossingReviewedFieldEdges": 0,
+            "nativeWordsWithoutDarkRenderedInk": 0
+          },
+          "limitation": "Paired native readers can share missing/overprinted text. Paint, overlap, pixel-ink and field-edge diagnostics only identify review targets and do not establish every glyph or row value. Human source-view coverage is recorded separately."
+        }
+      },
+      "publicWarning": "Board payment disclosures are not annual salary rates or employee rosters. Remuneration uses the separately labelled remuneration column. Expenses and any expense-inclusive total are excluded from pay. Blank and dash expense cells remain unknown (null), not zero. Existing compiled observations are retained and may overlap this official schedule; no identity or reporting-period equivalence is assumed.",
+      "notes": [
+        "Remuneration uses the separately labelled remuneration column. Expenses and any expense-inclusive total are excluded from pay. Blank and dash expense cells remain unknown (null), not zero.",
+        "Source spellings, footnote markers and original names including explicit Chair suffixes are retained in provenance.",
+        "The internally stated fiscal payment year is used even when source footnotes discuss earlier appointments, terms or retainer payments."
+      ]
+    },
+    {
+      "id": "gap-health-board-supplement-vancouver-coastal-health-2009-10",
+      "title": "Vancouver Coastal Health Board Remuneration 2009/10",
+      "year": "2009/10",
+      "employerSlug": "vancouver-coastal-health",
+      "employerName": "Vancouver Coastal Health",
+      "sector": "Health authorities",
+      "sourceUrl": "https://digitalcollectionsrepository.llbc.leg.bc.ca/server/api/core/bitstreams/939485dd-6749-40e6-9dd1-9a80a8f5d6e6/content",
+      "sha256": "18d623782fad4c15f2533597aa085500576f8ef5b2108fc1ad96b874e5313cb7",
+      "file": "gap-health-board-supplement-vancouver-coastal-health-2009-10.json.gzip",
+      "dataSha256": "f4499d8cfa0e83dbfe9658bb3631050d789dd97c2add9d2cf06286ca340d2881",
+      "rowCount": 7,
+      "status": "candidate",
+      "sourceKind": "official",
+      "category": "board-remuneration",
+      "scope": "board-remuneration",
+      "provenanceFile": "provenance/gap-health-board-supplement-vancouver-coastal-health-2009-10.json.gzip",
+      "provenanceSha256": "e9d1dc3db7a0805aa412da8fee5fbd8e4651a8ab88f6cab9e6227ed373d8ecd2",
+      "evidenceFile": "evidence/gap-health-board-supplement-vancouver-coastal-health-2009-10.json.gzip",
+      "evidenceSha256": "3007ed0ec50d72ac5e3a701f3aad7933cecca0a48c66caeea61c6cdb4981285f",
+      "completeEmployeeSchedule": false,
+      "completeBoardSchedule": false,
+      "periodType": "fiscal",
+      "periodStart": "2009-04-01",
+      "periodEnd": "2010-03-31",
+      "nameDisclosure": "named",
+      "positionDisclosure": "literal-source-board-role",
+      "currency": "CAD",
+      "threshold": null,
+      "validation": {
+        "completeNamedBoardScopeRead": true,
+        "completeBoardSchedule": false,
+        "completeEmployeeSchedule": false,
+        "independentReaders": [
+          "PyMuPDF native word geometry / complete row bands",
+          "Poppler bbox-layout / independently assembled nearest name baselines"
+        ],
+        "independentlyComparedRows": 8,
+        "namedRows": 8,
+        "numericPayRows": 7,
+        "heldUnknownPayRows": [
+          [
+            "vancouver-coastal-health",
+            "Thompson, David",
+            "Chair",
+            null,
+            1589.71,
+            4
+          ]
+        ],
+        "sourcePhysicalPages": 70,
+        "schedulePhysicalPages": [
+          4
+        ],
+        "totalRemuneration": 100000,
+        "importedKnownExpenses": 5511.25,
+        "heldKnownExpenses": 1589.71,
+        "allNamedKnownExpenses": 7100.96,
+        "missingExpenseRows": 4,
+        "explicitZeroExpenseRows": 0,
+        "printedControls": {
+          "remuneration": 100000,
+          "expenses": 7100.96,
+          "total": 107100.96
+        },
+        "sourceControlResiduals": {
+          "remuneration": 0,
+          "expenses": 0,
+          "knownFieldsMinusPrintedGrand": 0
+        },
+        "rowInclusiveTotalResiduals": [
+          {
+            "sourceRow": 2,
+            "name": "Di Blasio, Alfredo",
+            "residual": 0
+          },
+          {
+            "sourceRow": 3,
+            "name": "Heath, Sandra",
+            "residual": 0
+          },
+          {
+            "sourceRow": 4,
+            "name": "Hsieh, James",
+            "residual": 0
+          },
+          {
+            "sourceRow": 5,
+            "name": "McLay, Catherine",
+            "residual": 0
+          },
+          {
+            "sourceRow": 6,
+            "name": "Rehkatsch, Axel F",
+            "residual": 0
+          },
+          {
+            "sourceRow": 7,
+            "name": "Spitz, Grant",
+            "residual": 0
+          },
+          {
+            "sourceRow": 8,
+            "name": "Withers, Victoria",
+            "residual": 0
+          }
+        ],
+        "compiledPartitionRetained": true,
+        "compiledPartitionRetentionReason": "Complete copy equivalence with retained compiled observations has not been established; no calendar or identity match is assumed.",
+        "nativeVisibilityDiagnostics": {
+          "file": "visibility/gap-health-board-supplement-vancouver-coastal-health-2009-10.json.gzip",
+          "sha256": "38851058dfaf9b7fd641ae9b445c638da6214c34013c21dacbcabba7ae6b26e0",
+          "flags": {
+            "ignoredOrLowOpacityCharacters": 0,
+            "nearWhiteCharacters": 0,
+            "unicodeReplacementCharacters": 0,
+            "identicalGlyphOverprints": 0,
+            "conflictingGlyphOverprints": 0,
+            "nativeWordsCrossingReviewedFieldEdges": 0,
+            "nativeWordsWithoutDarkRenderedInk": 0
+          },
+          "limitation": "Paired native readers can share missing/overprinted text. Paint, overlap, pixel-ink and field-edge diagnostics only identify review targets and do not establish every glyph or row value. Human source-view coverage is recorded separately."
+        }
+      },
+      "publicWarning": "Board payment disclosures are not annual salary rates or employee rosters. Remuneration uses the separately labelled remuneration column. Expenses and any expense-inclusive total are excluded from pay. Blank and dash expense cells remain unknown (null), not zero. 1 named board observation(s) with nonnumeric remuneration remain supporting evidence; no zero pay is invented. Their known expenses total 1589.71 CAD and remain included in full-board expense controls. Existing compiled observations are retained and may overlap this official schedule; no identity or reporting-period equivalence is assumed.",
+      "notes": [
+        "Remuneration uses the separately labelled remuneration column. Expenses and any expense-inclusive total are excluded from pay. Blank and dash expense cells remain unknown (null), not zero.",
+        "Source spellings, footnote markers and original names including explicit Chair suffixes are retained in provenance.",
+        "The internally stated fiscal payment year is used even when source footnotes discuss earlier appointments, terms or retainer payments."
+      ]
+    },
+    {
+      "id": "gap-health-board-supplement-vancouver-coastal-health-2008-09",
+      "title": "Vancouver Coastal Health Board Remuneration 2008/09",
+      "year": "2008/09",
+      "employerSlug": "vancouver-coastal-health",
+      "employerName": "Vancouver Coastal Health",
+      "sector": "Health authorities",
+      "sourceUrl": "https://digitalcollectionsrepository.llbc.leg.bc.ca/server/api/core/bitstreams/945d9750-609d-477f-a4cc-9aa382174885/content",
+      "sha256": "e74cc78bf42ba67ec02526fe3219ff21d74662ceb4cdd4e659c257ba268cb6b3",
+      "file": "gap-health-board-supplement-vancouver-coastal-health-2008-09.json.gzip",
+      "dataSha256": "b41b94a3e783f5bc9a6637434ffcb397a2209db29617e3c5cc8accc00b7ef0cb",
+      "rowCount": 9,
+      "status": "candidate",
+      "sourceKind": "official",
+      "category": "board-remuneration",
+      "scope": "board-remuneration",
+      "provenanceFile": "provenance/gap-health-board-supplement-vancouver-coastal-health-2008-09.json.gzip",
+      "provenanceSha256": "6b3db57271b49397223d7b22c2518792b40fa2d7a79cbaeb2fb9adc14e87ab75",
+      "evidenceFile": "evidence/gap-health-board-supplement-vancouver-coastal-health-2008-09.json.gzip",
+      "evidenceSha256": "9b503f15524f48036b1ac13f4fc3d27280f2daf54da11c0570276e962ec34de7",
+      "completeEmployeeSchedule": false,
+      "completeBoardSchedule": false,
+      "periodType": "fiscal",
+      "periodStart": "2008-04-01",
+      "periodEnd": "2009-03-31",
+      "nameDisclosure": "named",
+      "positionDisclosure": "literal-source-board-role",
+      "currency": "CAD",
+      "threshold": null,
+      "validation": {
+        "completeNamedBoardScopeRead": true,
+        "completeBoardSchedule": false,
+        "completeEmployeeSchedule": false,
+        "independentReaders": [
+          "PyMuPDF native word geometry / complete row bands",
+          "Poppler bbox-layout / independently assembled nearest name baselines"
+        ],
+        "independentlyComparedRows": 10,
+        "namedRows": 10,
+        "numericPayRows": 9,
+        "heldUnknownPayRows": [
+          [
+            "vancouver-coastal-health",
+            "Thompson, David",
+            "Chair",
+            null,
+            null,
+            2
+          ]
+        ],
+        "sourcePhysicalPages": 60,
+        "schedulePhysicalPages": [
+          2
+        ],
+        "totalRemuneration": 107250,
+        "importedKnownExpenses": 6110.65,
+        "heldKnownExpenses": 0,
+        "allNamedKnownExpenses": 6110.65,
+        "missingExpenseRows": 6,
+        "explicitZeroExpenseRows": 0,
+        "printedControls": {
+          "remuneration": 107250,
+          "expenses": 6110.65,
+          "total": 113360.65
+        },
+        "sourceControlResiduals": {
+          "remuneration": 0,
+          "expenses": 0,
+          "knownFieldsMinusPrintedGrand": 0
+        },
+        "rowInclusiveTotalResiduals": [
+          {
+            "sourceRow": 2,
+            "name": "Di Blasio, Alfredo",
+            "residual": 0
+          },
+          {
+            "sourceRow": 3,
+            "name": "Heath, Sandra",
+            "residual": 0
+          },
+          {
+            "sourceRow": 4,
+            "name": "Hsieh, James",
+            "residual": 0
+          },
+          {
+            "sourceRow": 5,
+            "name": "McLay, Catherine",
+            "residual": 0
+          },
+          {
+            "sourceRow": 6,
+            "name": "Rehkatsch, Axel F",
+            "residual": 0
+          },
+          {
+            "sourceRow": 7,
+            "name": "Smith, Andrew",
+            "residual": 0
+          },
+          {
+            "sourceRow": 8,
+            "name": "Spitz, Grant",
+            "residual": 0
+          },
+          {
+            "sourceRow": 9,
+            "name": "Yamamoto, Naomi",
+            "residual": 0
+          },
+          {
+            "sourceRow": 10,
+            "name": "Yung, Bennie",
+            "residual": 0
+          }
+        ],
+        "compiledPartitionRetained": true,
+        "compiledPartitionRetentionReason": "Complete copy equivalence with retained compiled observations has not been established; no calendar or identity match is assumed.",
+        "nativeVisibilityDiagnostics": {
+          "file": "visibility/gap-health-board-supplement-vancouver-coastal-health-2008-09.json.gzip",
+          "sha256": "8cd46f228e6fb3bd5b8d4e8f4f11f5bacb0b482cd374a6e15eab8afa217c643f",
+          "flags": {
+            "ignoredOrLowOpacityCharacters": 0,
+            "nearWhiteCharacters": 0,
+            "unicodeReplacementCharacters": 0,
+            "identicalGlyphOverprints": 0,
+            "conflictingGlyphOverprints": 0,
+            "nativeWordsCrossingReviewedFieldEdges": 0,
+            "nativeWordsWithoutDarkRenderedInk": 0
+          },
+          "limitation": "Paired native readers can share missing/overprinted text. Paint, overlap, pixel-ink and field-edge diagnostics only identify review targets and do not establish every glyph or row value. Human source-view coverage is recorded separately."
+        }
+      },
+      "publicWarning": "Board payment disclosures are not annual salary rates or employee rosters. Remuneration uses the separately labelled remuneration column. Expenses and any expense-inclusive total are excluded from pay. Blank and dash expense cells remain unknown (null), not zero. 1 named board observation(s) with nonnumeric remuneration remain supporting evidence; no zero pay is invented. Their known expenses total 0 CAD and remain included in full-board expense controls. Existing compiled observations are retained and may overlap this official schedule; no identity or reporting-period equivalence is assumed.",
+      "notes": [
+        "Remuneration uses the separately labelled remuneration column. Expenses and any expense-inclusive total are excluded from pay. Blank and dash expense cells remain unknown (null), not zero.",
+        "Source spellings, footnote markers and original names including explicit Chair suffixes are retained in provenance.",
+        "The internally stated fiscal payment year is used even when source footnotes discuss earlier appointments, terms or retainer payments."
+      ]
+    }
+  ]
+}

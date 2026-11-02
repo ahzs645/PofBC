@@ -1,0 +1,601 @@
+{
+  "candidateValuesOpened": false,
+  "method": "Personal original-image context reads before candidate/native transcript access. No aggregate count-band table is transcribed as individual records.",
+  "all19ScheduleHeadersExplicitFiscalYearEnds": true,
+  "all19CompleteNamedBoardTableRowsRead": 194,
+  "contextViews": {
+    "fraserAll6": "Physical2 contract count bands by union/classification, not individual board pay; fiscal headers corroborate table periods.",
+    "vancouverCoastalModern10": "Physical2 PART F SCHEDULE OF REMUNERATION & EXPENSES - Board - Employees.",
+    "vancouverCoastal2009": "Physical3 union/count table and explicit cash period April1,2009–March31,2010; definitions below.",
+    "vancouverCoastal2008": "Archive cover physical1 labels2008/2009; actual board physical2 March31,2009, union/count definitions physical3.",
+    "interior2010": "Archive cover physical1 labels2010/2011; actual board physical2 explicitly March31,2011."
+  },
+  "definitionPagesViewed": {
+    "vancouver-coastal-health-2008-09": 3,
+    "vancouver-coastal-health-2009-10": 3,
+    "vancouver-coastal-health-2013-14": 4,
+    "vancouver-coastal-health-2014-15": 4,
+    "vancouver-coastal-health-2015-16": 4,
+    "vancouver-coastal-health-2016-17": 4,
+    "vancouver-coastal-health-2017-18": 4,
+    "vancouver-coastal-health-2018-19": 4
+  },
+  "literalDefinition": {
+    "Remuneration": "Includes base salary, retroactive pay, taxable benefits, vacation payouts and retirement allowances paid in accordance with union and non-union agreements.",
+    "Expenses": "Includes travel, relocation costs, conferences and memberships in professional associations."
+  },
+  "definitionScopeQualification": "These definitions accompany employee-count/employee schedules. The board table column labels themselves establish separate Remuneration/Expenses/Total; do not extend employee-specific compensation composition to directors without explicit source evidence.",
+  "sourceNotes": [
+    "Fraser2004/05 source board footnote says only three quarterly retainer payments due to policy timing change; not annual salary rate.",
+    "VCH2009/10 and2017/18 have numeric expense with remuneration dash. VCH2018/19 has five remuneration-dash members and VCH2008/09 one entirely dash-only named member. Preserve literal nonnumeric cells and full named-table evidence; do not invent pay0.",
+    "VCH Total column includes expenses and cannot be used as remuneration.",
+    "VCH2018/19 footnotes explicitly discuss prior-year timing/appointments. Use cash disclosure fiscal heading, do not silently move payments to service year."
+  ],
+  "independentControls": [
+    {
+      "sourceKey": "fraser-health-2004-05",
+      "rowCount": 10,
+      "columns": [
+        {
+          "column": "REMUNERATION",
+          "knownNumericSum": "127244",
+          "literalDashCount": 0,
+          "literalBlankCount": 0,
+          "printedTotal": "127244",
+          "knownSumMinusPrinted": "0",
+          "noNullConvertedToZero": true
+        },
+        {
+          "column": "EXPENSES",
+          "knownNumericSum": "2175",
+          "literalDashCount": 4,
+          "literalBlankCount": 0,
+          "printedTotal": "2175",
+          "knownSumMinusPrinted": "0",
+          "noNullConvertedToZero": true
+        }
+      ]
+    },
+    {
+      "sourceKey": "fraser-health-2005-06",
+      "rowCount": 10,
+      "columns": [
+        {
+          "column": "REMUNERATION",
+          "knownNumericSum": "117888",
+          "literalDashCount": 0,
+          "literalBlankCount": 0,
+          "printedTotal": "117888",
+          "knownSumMinusPrinted": "0",
+          "noNullConvertedToZero": true
+        },
+        {
+          "column": "EXPENSES",
+          "knownNumericSum": "1281",
+          "literalDashCount": 4,
+          "literalBlankCount": 0,
+          "printedTotal": "1281",
+          "knownSumMinusPrinted": "0",
+          "noNullConvertedToZero": true
+        }
+      ]
+    },
+    {
+      "sourceKey": "fraser-health-2006-07",
+      "rowCount": 10,
+      "columns": [
+        {
+          "column": "REMUNERATION",
+          "knownNumericSum": "142690",
+          "literalDashCount": 0,
+          "literalBlankCount": 0,
+          "printedTotal": "142690",
+          "knownSumMinusPrinted": "0",
+          "noNullConvertedToZero": true
+        },
+        {
+          "column": "EXPENSES",
+          "knownNumericSum": "753",
+          "literalDashCount": 7,
+          "literalBlankCount": 0,
+          "printedTotal": "753",
+          "knownSumMinusPrinted": "0",
+          "noNullConvertedToZero": true
+        }
+      ]
+    },
+    {
+      "sourceKey": "fraser-health-2007-08",
+      "rowCount": 9,
+      "columns": [
+        {
+          "column": "REMUNERATION",
+          "knownNumericSum": "128626",
+          "literalDashCount": 0,
+          "literalBlankCount": 0,
+          "printedTotal": "128626",
+          "knownSumMinusPrinted": "0",
+          "noNullConvertedToZero": true
+        },
+        {
+          "column": "EXPENSES",
+          "knownNumericSum": "3101",
+          "literalDashCount": 1,
+          "literalBlankCount": 0,
+          "printedTotal": "3101",
+          "knownSumMinusPrinted": "0",
+          "noNullConvertedToZero": true
+        }
+      ]
+    },
+    {
+      "sourceKey": "fraser-health-2008-09",
+      "rowCount": 9,
+      "columns": [
+        {
+          "column": "REMUNERATION",
+          "knownNumericSum": "137000",
+          "literalDashCount": 0,
+          "literalBlankCount": 0,
+          "printedTotal": "147000",
+          "knownSumMinusPrinted": "-10000",
+          "noNullConvertedToZero": true
+        },
+        {
+          "column": "EXPENSES",
+          "knownNumericSum": "8639",
+          "literalDashCount": 0,
+          "literalBlankCount": 0,
+          "printedTotal": "8639",
+          "knownSumMinusPrinted": "0",
+          "noNullConvertedToZero": true
+        }
+      ]
+    },
+    {
+      "sourceKey": "fraser-health-2009-10",
+      "rowCount": 11,
+      "columns": [
+        {
+          "column": "REMUNERATION",
+          "knownNumericSum": "157000",
+          "literalDashCount": 0,
+          "literalBlankCount": 0,
+          "printedTotal": "157000",
+          "knownSumMinusPrinted": "0",
+          "noNullConvertedToZero": true
+        },
+        {
+          "column": "EXPENSES",
+          "knownNumericSum": "5762",
+          "literalDashCount": 2,
+          "literalBlankCount": 0,
+          "printedTotal": "5762",
+          "knownSumMinusPrinted": "0",
+          "noNullConvertedToZero": true
+        }
+      ]
+    },
+    {
+      "sourceKey": "interior-health-2010-11",
+      "rowCount": 10,
+      "columns": [
+        {
+          "column": "REMUNERATION",
+          "knownNumericSum": "243767",
+          "literalDashCount": 0,
+          "literalBlankCount": 0,
+          "printedTotal": "243767",
+          "knownSumMinusPrinted": "0",
+          "noNullConvertedToZero": true
+        },
+        {
+          "column": "EXPENSES",
+          "knownNumericSum": "53247",
+          "literalDashCount": 0,
+          "literalBlankCount": 0,
+          "printedTotal": "53247",
+          "knownSumMinusPrinted": "0",
+          "noNullConvertedToZero": true
+        }
+      ]
+    },
+    {
+      "sourceKey": "vancouver-coastal-health-2024-25",
+      "rowCount": 10,
+      "columns": [
+        {
+          "column": "Remuneration",
+          "knownNumericSum": "316765",
+          "literalDashCount": 0,
+          "literalBlankCount": 0,
+          "printedTotal": "316765",
+          "knownSumMinusPrinted": "0",
+          "noNullConvertedToZero": true
+        },
+        {
+          "column": "Expenses",
+          "knownNumericSum": "10030",
+          "literalDashCount": 0,
+          "literalBlankCount": 1,
+          "printedTotal": "10030",
+          "knownSumMinusPrinted": "0",
+          "noNullConvertedToZero": true
+        },
+        {
+          "column": "Total",
+          "knownNumericSum": "326795",
+          "literalDashCount": 0,
+          "literalBlankCount": 0,
+          "printedTotal": "326795",
+          "knownSumMinusPrinted": "0",
+          "noNullConvertedToZero": true
+        }
+      ]
+    },
+    {
+      "sourceKey": "vancouver-coastal-health-2023-24",
+      "rowCount": 11,
+      "columns": [
+        {
+          "column": "Remuneration",
+          "knownNumericSum": "374371",
+          "literalDashCount": 0,
+          "literalBlankCount": 0,
+          "printedTotal": "374371",
+          "knownSumMinusPrinted": "0",
+          "noNullConvertedToZero": true
+        },
+        {
+          "column": "Expenses",
+          "knownNumericSum": "12783",
+          "literalDashCount": 0,
+          "literalBlankCount": 3,
+          "printedTotal": "12781",
+          "knownSumMinusPrinted": "2",
+          "noNullConvertedToZero": true
+        },
+        {
+          "column": "Total",
+          "knownNumericSum": "387154",
+          "literalDashCount": 0,
+          "literalBlankCount": 0,
+          "printedTotal": "387152",
+          "knownSumMinusPrinted": "2",
+          "noNullConvertedToZero": true
+        }
+      ]
+    },
+    {
+      "sourceKey": "vancouver-coastal-health-2021-22",
+      "rowCount": 9,
+      "columns": [
+        {
+          "column": "Remuneration",
+          "knownNumericSum": "166875",
+          "literalDashCount": 0,
+          "literalBlankCount": 0,
+          "printedTotal": "166875",
+          "knownSumMinusPrinted": "0",
+          "noNullConvertedToZero": true
+        },
+        {
+          "column": "Expenses",
+          "knownNumericSum": "2753",
+          "literalDashCount": 0,
+          "literalBlankCount": 7,
+          "printedTotal": "2753",
+          "knownSumMinusPrinted": "0",
+          "noNullConvertedToZero": true
+        },
+        {
+          "column": "Total",
+          "knownNumericSum": "169628",
+          "literalDashCount": 0,
+          "literalBlankCount": 0,
+          "printedTotal": "169628",
+          "knownSumMinusPrinted": "0",
+          "noNullConvertedToZero": true
+        }
+      ]
+    },
+    {
+      "sourceKey": "vancouver-coastal-health-2019-20",
+      "rowCount": 11,
+      "columns": [
+        {
+          "column": "Remuneration",
+          "knownNumericSum": "190125",
+          "literalDashCount": 0,
+          "literalBlankCount": 0,
+          "printedTotal": "190125",
+          "knownSumMinusPrinted": "0",
+          "noNullConvertedToZero": true
+        },
+        {
+          "column": "Expenses",
+          "knownNumericSum": "5729",
+          "literalDashCount": 0,
+          "literalBlankCount": 4,
+          "printedTotal": "5729",
+          "knownSumMinusPrinted": "0",
+          "noNullConvertedToZero": true
+        },
+        {
+          "column": "Total",
+          "knownNumericSum": "195854",
+          "literalDashCount": 0,
+          "literalBlankCount": 0,
+          "printedTotal": "195854",
+          "knownSumMinusPrinted": "0",
+          "noNullConvertedToZero": true
+        }
+      ]
+    },
+    {
+      "sourceKey": "vancouver-coastal-health-2018-19",
+      "rowCount": 15,
+      "columns": [
+        {
+          "column": "Remuneration",
+          "knownNumericSum": "134875",
+          "literalDashCount": 5,
+          "literalBlankCount": 0,
+          "printedTotal": "134875",
+          "knownSumMinusPrinted": "0",
+          "noNullConvertedToZero": true
+        },
+        {
+          "column": "Expenses",
+          "knownNumericSum": "6235",
+          "literalDashCount": 6,
+          "literalBlankCount": 0,
+          "printedTotal": "6234",
+          "knownSumMinusPrinted": "1",
+          "noNullConvertedToZero": true
+        },
+        {
+          "column": "Total",
+          "knownNumericSum": "141110",
+          "literalDashCount": 4,
+          "literalBlankCount": 0,
+          "printedTotal": "141110",
+          "knownSumMinusPrinted": "0",
+          "noNullConvertedToZero": true
+        }
+      ]
+    },
+    {
+      "sourceKey": "vancouver-coastal-health-2017-18",
+      "rowCount": 13,
+      "columns": [
+        {
+          "column": "Remuneration",
+          "knownNumericSum": "128221",
+          "literalDashCount": 1,
+          "literalBlankCount": 0,
+          "printedTotal": "128221",
+          "knownSumMinusPrinted": "0",
+          "noNullConvertedToZero": true
+        },
+        {
+          "column": "Expenses",
+          "knownNumericSum": "9809",
+          "literalDashCount": 4,
+          "literalBlankCount": 0,
+          "printedTotal": "9809",
+          "knownSumMinusPrinted": "0",
+          "noNullConvertedToZero": true
+        },
+        {
+          "column": "Total",
+          "knownNumericSum": "138030",
+          "literalDashCount": 0,
+          "literalBlankCount": 0,
+          "printedTotal": "138030",
+          "knownSumMinusPrinted": "0",
+          "noNullConvertedToZero": true
+        }
+      ]
+    },
+    {
+      "sourceKey": "vancouver-coastal-health-2016-17",
+      "rowCount": 10,
+      "columns": [
+        {
+          "column": "Remuneration",
+          "knownNumericSum": "130938",
+          "literalDashCount": 0,
+          "literalBlankCount": 0,
+          "printedTotal": "130938",
+          "knownSumMinusPrinted": "0",
+          "noNullConvertedToZero": true
+        },
+        {
+          "column": "Expenses",
+          "knownNumericSum": "8655",
+          "literalDashCount": 2,
+          "literalBlankCount": 0,
+          "printedTotal": "8655",
+          "knownSumMinusPrinted": "0",
+          "noNullConvertedToZero": true
+        },
+        {
+          "column": "Total",
+          "knownNumericSum": "139593",
+          "literalDashCount": 0,
+          "literalBlankCount": 0,
+          "printedTotal": "139593",
+          "knownSumMinusPrinted": "0",
+          "noNullConvertedToZero": true
+        }
+      ]
+    },
+    {
+      "sourceKey": "vancouver-coastal-health-2015-16",
+      "rowCount": 10,
+      "columns": [
+        {
+          "column": "Remuneration",
+          "knownNumericSum": "122766",
+          "literalDashCount": 0,
+          "literalBlankCount": 0,
+          "printedTotal": "122766",
+          "knownSumMinusPrinted": "0",
+          "noNullConvertedToZero": true
+        },
+        {
+          "column": "Expenses",
+          "knownNumericSum": "15032",
+          "literalDashCount": 0,
+          "literalBlankCount": 0,
+          "printedTotal": "15032",
+          "knownSumMinusPrinted": "0",
+          "noNullConvertedToZero": true
+        },
+        {
+          "column": "Total",
+          "knownNumericSum": "137798",
+          "literalDashCount": 0,
+          "literalBlankCount": 0,
+          "printedTotal": "137798",
+          "knownSumMinusPrinted": "0",
+          "noNullConvertedToZero": true
+        }
+      ]
+    },
+    {
+      "sourceKey": "vancouver-coastal-health-2014-15",
+      "rowCount": 9,
+      "columns": [
+        {
+          "column": "Remuneration",
+          "knownNumericSum": "120376",
+          "literalDashCount": 0,
+          "literalBlankCount": 0,
+          "printedTotal": "120376",
+          "knownSumMinusPrinted": "0",
+          "noNullConvertedToZero": true
+        },
+        {
+          "column": "Expenses",
+          "knownNumericSum": "17589",
+          "literalDashCount": 0,
+          "literalBlankCount": 0,
+          "printedTotal": "17589",
+          "knownSumMinusPrinted": "0",
+          "noNullConvertedToZero": true
+        },
+        {
+          "column": "Total",
+          "knownNumericSum": "137965",
+          "literalDashCount": 0,
+          "literalBlankCount": 0,
+          "printedTotal": "137965",
+          "knownSumMinusPrinted": "0",
+          "noNullConvertedToZero": true
+        }
+      ]
+    },
+    {
+      "sourceKey": "vancouver-coastal-health-2013-14",
+      "rowCount": 9,
+      "columns": [
+        {
+          "column": "Remuneration",
+          "knownNumericSum": "118250",
+          "literalDashCount": 0,
+          "literalBlankCount": 0,
+          "printedTotal": "118250",
+          "knownSumMinusPrinted": "0",
+          "noNullConvertedToZero": true
+        },
+        {
+          "column": "Expenses",
+          "knownNumericSum": "11696",
+          "literalDashCount": 2,
+          "literalBlankCount": 0,
+          "printedTotal": "11696",
+          "knownSumMinusPrinted": "0",
+          "noNullConvertedToZero": true
+        },
+        {
+          "column": "Total",
+          "knownNumericSum": "129946",
+          "literalDashCount": 0,
+          "literalBlankCount": 0,
+          "printedTotal": "129946",
+          "knownSumMinusPrinted": "0",
+          "noNullConvertedToZero": true
+        }
+      ]
+    },
+    {
+      "sourceKey": "vancouver-coastal-health-2009-10",
+      "rowCount": 8,
+      "columns": [
+        {
+          "column": "Remuneration",
+          "knownNumericSum": "100000.00",
+          "literalDashCount": 1,
+          "literalBlankCount": 0,
+          "printedTotal": "100000.00",
+          "knownSumMinusPrinted": "0.00",
+          "noNullConvertedToZero": true
+        },
+        {
+          "column": "Expenses",
+          "knownNumericSum": "7100.96",
+          "literalDashCount": 4,
+          "literalBlankCount": 0,
+          "printedTotal": "7100.96",
+          "knownSumMinusPrinted": "0.00",
+          "noNullConvertedToZero": true
+        },
+        {
+          "column": "Total",
+          "knownNumericSum": "107100.96",
+          "literalDashCount": 0,
+          "literalBlankCount": 0,
+          "printedTotal": "107100.96",
+          "knownSumMinusPrinted": "0.00",
+          "noNullConvertedToZero": true
+        }
+      ]
+    },
+    {
+      "sourceKey": "vancouver-coastal-health-2008-09",
+      "rowCount": 10,
+      "columns": [
+        {
+          "column": "Remuneration",
+          "knownNumericSum": "107250.00",
+          "literalDashCount": 1,
+          "literalBlankCount": 0,
+          "printedTotal": "107250.00",
+          "knownSumMinusPrinted": "0.00",
+          "noNullConvertedToZero": true
+        },
+        {
+          "column": "Expenses",
+          "knownNumericSum": "6110.65",
+          "literalDashCount": 7,
+          "literalBlankCount": 0,
+          "printedTotal": "6110.65",
+          "knownSumMinusPrinted": "0.00",
+          "noNullConvertedToZero": true
+        },
+        {
+          "column": "Total",
+          "knownNumericSum": "113360.65",
+          "literalDashCount": 1,
+          "literalBlankCount": 0,
+          "printedTotal": "113360.65",
+          "knownSumMinusPrinted": "0.00",
+          "noNullConvertedToZero": true
+        }
+      ]
+    }
+  ],
+  "noOutreach": true
+}

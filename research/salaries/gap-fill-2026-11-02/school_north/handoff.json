@@ -1,0 +1,636 @@
+{
+  "schema": "gap-school-north-final-handoff-v1",
+  "complete": true,
+  "noOutreach": true,
+  "reports": 8,
+  "cohorts": 16,
+  "rowsAdded": 1884,
+  "employeeRowsAdded": 1827,
+  "trusteeRowsAdded": 57,
+  "employersNewAgainstBaseline": 7,
+  "compiledRowsRemoved": 0,
+  "collection": "gap-fill-school-north",
+  "sourceManifest": {
+    "file": "research/salaries/gap-fill-school-north/sources.json",
+    "sha256": "adc460b612249318e3f87d585621575e9c25370862c010dfade47f15b794d4b0"
+  },
+  "independentAcceptance": {
+    "file": "research/salaries/gap-fill-2026-11-02/school_north/review-adoption.json",
+    "sha256": "c04619a38f04c9289aab496981ddc328af2e26758a6255c5c08a3207643d502f"
+  },
+  "dispositions": [
+    {
+      "leadId": "lead-001",
+      "number": 8,
+      "disposition": "completed-official-source-import-with-explicit-source-qualifications",
+      "reportedPeriod": "2024/25",
+      "sourceUrl": "https://www2.gov.bc.ca/assets/gov/education/administration/resource-management/school-district-financial-reporting/financial-information/sd08-sofi-2025.pdf",
+      "sourceSha256": "23ba2672545a6d144847a99939f966436ba92df6b5f508b0f83fd709dd71de4c",
+      "sourcePhysicalSalaryPages": [
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59
+      ],
+      "rowsAdded": 354,
+      "cohorts": [
+        {
+          "id": "gap-school-north-sd08-2024-25-trustees",
+          "scope": "school-trustees",
+          "rows": 9,
+          "data": {
+            "file": "research/salaries/gap-fill-school-north/sd08-2024-25-trustees.json.gzip",
+            "sha256": "55715f551fb79614acba00a4f2e4f31743a044c7dc9e2ae4c8c514390907c95d"
+          },
+          "provenance": {
+            "file": "research/salaries/gap-fill-school-north/sd08-2024-25-trustees-evidence.json.gzip",
+            "sha256": "bc5417feb426ba08ef7c1f726bfc8567df07bca20e7549cac05598a9bd5406d9"
+          },
+          "printedControls": [
+            "194820",
+            "51129"
+          ],
+          "computedTotals": [
+            "194820",
+            "51130"
+          ],
+          "literalRowsMinusPrintedControls": [
+            "0",
+            "1"
+          ],
+          "publicWarning": "Payment disclosures are not an annual salary rate or a complete workforce roster. Source dashes or visibly blank expense cells remain unknown, not zero. Published clipped titles and literal spelling are retained. Literal row sums differ from the printed named controls by remuneration $0 and known expenses $1; no source amount was changed to balance and the cause is not established. Compiled entries, where present, are retained under their unverified edition labels; no same-person or reporting-period equivalence is assumed."
+        },
+        {
+          "id": "gap-school-north-sd08-2024-25-employees",
+          "scope": "employee-remuneration",
+          "rows": 345,
+          "data": {
+            "file": "research/salaries/gap-fill-school-north/sd08-2024-25-employees.json.gzip",
+            "sha256": "2afd0fac155541193dbf3a2df4adbab7c7f70008cc51a2b60c79987bafe4c5d2"
+          },
+          "provenance": {
+            "file": "research/salaries/gap-fill-school-north/sd08-2024-25-employees-evidence.json.gzip",
+            "sha256": "192afd3603b844bb371b21b328c92f92174728108514649ec24ff9ace7b9243a"
+          },
+          "printedControls": [
+            "36984246",
+            "450936"
+          ],
+          "computedTotals": [
+            "36984250",
+            "450935"
+          ],
+          "literalRowsMinusPrintedControls": [
+            "4",
+            "-1"
+          ],
+          "publicWarning": "Payment disclosures are not an annual salary rate or a complete workforce roster. Source dashes or visibly blank expense cells remain unknown, not zero. Published clipped titles and literal spelling are retained. Literal row sums differ from the printed named controls by remuneration $4 and known expenses $-1; no source amount was changed to balance and the cause is not established. Specific capital I/l name interpretations are qualified in source provenance; a unique glyph reading or identity is not claimed. Compiled entries, where present, are retained under their unverified edition labels; no same-person or reporting-period equivalence is assumed."
+        }
+      ],
+      "compiledRowsRemoved": 0,
+      "outreachPerformed": false,
+      "remainingProcessingBlockers": []
+    },
+    {
+      "leadId": "lead-002",
+      "number": 28,
+      "disposition": "completed-official-source-import-with-explicit-source-qualifications",
+      "reportedPeriod": "2024/25",
+      "sourceUrl": "https://www2.gov.bc.ca/assets/gov/education/administration/resource-management/school-district-financial-reporting/financial-information/sd28-sofi-2025.pdf",
+      "sourceSha256": "af0ac0df99e819730a6a48c63ac00e1d3a38b624f44e6b4c1a4738beb560e640",
+      "sourcePhysicalSalaryPages": [
+        49,
+        50,
+        51,
+        52,
+        53
+      ],
+      "rowsAdded": 217,
+      "cohorts": [
+        {
+          "id": "gap-school-north-sd28-2024-25-trustees",
+          "scope": "school-trustees",
+          "rows": 7,
+          "data": {
+            "file": "research/salaries/gap-fill-school-north/sd28-2024-25-trustees.json.gzip",
+            "sha256": "d5bcfbdeddf487450a952da0422ed50f933536d4edd5b4861194530d074038d4"
+          },
+          "provenance": {
+            "file": "research/salaries/gap-fill-school-north/sd28-2024-25-trustees-evidence.json.gzip",
+            "sha256": "7a51f845ef056daa4ee66264d9458bfe62d90c21ca93da30ef4dcc0cd12a241a"
+          },
+          "printedControls": [
+            "117029.40",
+            "7862.97"
+          ],
+          "computedTotals": [
+            "117029.40",
+            "7862.97"
+          ],
+          "literalRowsMinusPrintedControls": [
+            "0.00",
+            "0.00"
+          ],
+          "publicWarning": "Payment disclosures are not an annual salary rate or a complete workforce roster. Source dashes or visibly blank expense cells remain unknown, not zero. Published clipped titles and literal spelling are retained. Compiled entries, where present, are retained under their unverified edition labels; no same-person or reporting-period equivalence is assumed."
+        },
+        {
+          "id": "gap-school-north-sd28-2024-25-employees",
+          "scope": "employee-remuneration",
+          "rows": 210,
+          "data": {
+            "file": "research/salaries/gap-fill-school-north/sd28-2024-25-employees.json.gzip",
+            "sha256": "9ad0affebd29fd4e3416199674f09fc525377377ae82d5d483b5e6614585c29d"
+          },
+          "provenance": {
+            "file": "research/salaries/gap-fill-school-north/sd28-2024-25-employees-evidence.json.gzip",
+            "sha256": "412a5a6aff3c8faded53587db2e5430be98237a9a312b09917ead9acce562361"
+          },
+          "printedControls": [
+            "22251599.97",
+            "151556.63"
+          ],
+          "computedTotals": [
+            "22251599.97",
+            "151556.63"
+          ],
+          "literalRowsMinusPrintedControls": [
+            "0.00",
+            "0.00"
+          ],
+          "publicWarning": "Payment disclosures are not an annual salary rate or a complete workforce roster. Source dashes or visibly blank expense cells remain unknown, not zero. Published clipped titles and literal spelling are retained. Compiled entries, where present, are retained under their unverified edition labels; no same-person or reporting-period equivalence is assumed."
+        }
+      ],
+      "compiledRowsRemoved": 0,
+      "outreachPerformed": false,
+      "remainingProcessingBlockers": []
+    },
+    {
+      "leadId": "lead-012",
+      "number": 54,
+      "disposition": "completed-official-source-import-with-explicit-source-qualifications",
+      "reportedPeriod": "2024/25",
+      "sourceUrl": "https://www2.gov.bc.ca/assets/gov/education/administration/resource-management/school-district-financial-reporting/financial-information/sd54-sofi-2025.pdf",
+      "sourceSha256": "1e9b2010dbe293ae99909e4eae1ffe598e513860e308e073258e622c5d29a70d",
+      "sourcePhysicalSalaryPages": [
+        48,
+        49,
+        50,
+        51
+      ],
+      "rowsAdded": 134,
+      "cohorts": [
+        {
+          "id": "gap-school-north-sd54-2024-25-trustees",
+          "scope": "school-trustees",
+          "rows": 7,
+          "data": {
+            "file": "research/salaries/gap-fill-school-north/sd54-2024-25-trustees.json.gzip",
+            "sha256": "3f4da60c0c526bafc21ac5f15cfcc7de216131a7a6845ff8b6d534957e0a04eb"
+          },
+          "provenance": {
+            "file": "research/salaries/gap-fill-school-north/sd54-2024-25-trustees-evidence.json.gzip",
+            "sha256": "f7544192a325e7f0c9df52ef617337a0712a6e8b081d9866251ac64e4f8db641"
+          },
+          "printedControls": [
+            "99129.60",
+            "38347.75"
+          ],
+          "computedTotals": [
+            "99129.60",
+            "38347.75"
+          ],
+          "literalRowsMinusPrintedControls": [
+            "0.00",
+            "0.00"
+          ],
+          "publicWarning": "Payment disclosures are not an annual salary rate or a complete workforce roster. Source dashes or visibly blank expense cells remain unknown, not zero. Published clipped titles and literal spelling are retained. Compiled entries, where present, are retained under their unverified edition labels; no same-person or reporting-period equivalence is assumed."
+        },
+        {
+          "id": "gap-school-north-sd54-2024-25-employees",
+          "scope": "employee-remuneration",
+          "rows": 127,
+          "data": {
+            "file": "research/salaries/gap-fill-school-north/sd54-2024-25-employees.json.gzip",
+            "sha256": "97062434fb52a1d1833a759152ec5882aa6340aee2969c5a5b9b97c8a4d46820"
+          },
+          "provenance": {
+            "file": "research/salaries/gap-fill-school-north/sd54-2024-25-employees-evidence.json.gzip",
+            "sha256": "0ca31d681db6daec4c82b243c1db0222e7a1e1e8f8b575426a554dd13beea928"
+          },
+          "printedControls": [
+            "13820714.53",
+            "393279.19"
+          ],
+          "computedTotals": [
+            "13820714.53",
+            "393279.19"
+          ],
+          "literalRowsMinusPrintedControls": [
+            "0.00",
+            "0.00"
+          ],
+          "publicWarning": "Payment disclosures are not an annual salary rate or a complete workforce roster. Source dashes or visibly blank expense cells remain unknown, not zero. Published clipped titles and literal spelling are retained. Compiled entries, where present, are retained under their unverified edition labels; no same-person or reporting-period equivalence is assumed."
+        }
+      ],
+      "compiledRowsRemoved": 0,
+      "outreachPerformed": false,
+      "remainingProcessingBlockers": []
+    },
+    {
+      "leadId": "lead-014",
+      "number": 58,
+      "disposition": "completed-official-source-import-with-explicit-source-qualifications",
+      "reportedPeriod": "2024/25",
+      "sourceUrl": "https://www2.gov.bc.ca/assets/gov/education/administration/resource-management/school-district-financial-reporting/financial-information/sd58-sofi-2025.pdf",
+      "sourceSha256": "76bdb4e77fa9fdedda5544bf253d615fc3e4681f132eaf9d172cfbb161e25b9b",
+      "sourcePhysicalSalaryPages": [
+        50,
+        51,
+        52
+      ],
+      "rowsAdded": 160,
+      "cohorts": [
+        {
+          "id": "gap-school-north-sd58-2024-25-trustees",
+          "scope": "school-trustees",
+          "rows": 7,
+          "data": {
+            "file": "research/salaries/gap-fill-school-north/sd58-2024-25-trustees.json.gzip",
+            "sha256": "a5a20dfa2194e82bf2d7088c04a26203392809604ff60dd42564e1dbe66f6a80"
+          },
+          "provenance": {
+            "file": "research/salaries/gap-fill-school-north/sd58-2024-25-trustees-evidence.json.gzip",
+            "sha256": "5b47f4172e58245181d2f9ae3c50230e08ca80ed76d976fbd56911fb5d5e1966"
+          },
+          "printedControls": [
+            "155183.68",
+            "49455.08"
+          ],
+          "computedTotals": [
+            "155183.68",
+            "49455.08"
+          ],
+          "literalRowsMinusPrintedControls": [
+            "0.00",
+            "0.00"
+          ],
+          "publicWarning": "Payment disclosures are not an annual salary rate or a complete workforce roster. Source dashes or visibly blank expense cells remain unknown, not zero. Published clipped titles and literal spelling are retained. Compiled entries, where present, are retained under their unverified edition labels; no same-person or reporting-period equivalence is assumed."
+        },
+        {
+          "id": "gap-school-north-sd58-2024-25-employees",
+          "scope": "employee-remuneration",
+          "rows": 153,
+          "data": {
+            "file": "research/salaries/gap-fill-school-north/sd58-2024-25-employees.json.gzip",
+            "sha256": "d1fde6ee94a98f50b25ef39135b4a8271ff02efdff0bb7e4f2b9837b49071233"
+          },
+          "provenance": {
+            "file": "research/salaries/gap-fill-school-north/sd58-2024-25-employees-evidence.json.gzip",
+            "sha256": "c754a681e419700e5de90471539f8cc618820e17aead82ff29a1885fd03c16eb"
+          },
+          "printedControls": [
+            "16244426.44",
+            "243281.41"
+          ],
+          "computedTotals": [
+            "16244426.44",
+            "243281.41"
+          ],
+          "literalRowsMinusPrintedControls": [
+            "0.00",
+            "0.00"
+          ],
+          "publicWarning": "Payment disclosures are not an annual salary rate or a complete workforce roster. Source dashes or visibly blank expense cells remain unknown, not zero. Published clipped titles and literal spelling are retained. Two disclosed employee name cells are unreadable in both the Ministry and district copies. Their known payments and positions are retained with name unavailable; visible name fragments and source images remain in provenance, without guessed missing letters. Compiled entries, where present, are retained under their unverified edition labels; no same-person or reporting-period equivalence is assumed."
+        }
+      ],
+      "compiledRowsRemoved": 0,
+      "outreachPerformed": false,
+      "remainingProcessingBlockers": []
+    },
+    {
+      "leadId": "lead-015",
+      "number": 59,
+      "disposition": "completed-official-source-import-with-explicit-source-qualifications",
+      "reportedPeriod": "2024/25",
+      "sourceUrl": "https://www2.gov.bc.ca/assets/gov/education/administration/resource-management/school-district-financial-reporting/financial-information/sd59-sofi-2025.pdf",
+      "sourceSha256": "86d5a636ddddd3fc4e30886f61b5b18e63d512c30b851abea42d8298d5b05b4d",
+      "sourcePhysicalSalaryPages": [
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59
+      ],
+      "rowsAdded": 255,
+      "cohorts": [
+        {
+          "id": "gap-school-north-sd59-2024-25-trustees",
+          "scope": "school-trustees",
+          "rows": 7,
+          "data": {
+            "file": "research/salaries/gap-fill-school-north/sd59-2024-25-trustees.json.gzip",
+            "sha256": "7e64c77e580b07343dcae117ccf235304d3418f1a28c986662a333a9e86a84b0"
+          },
+          "provenance": {
+            "file": "research/salaries/gap-fill-school-north/sd59-2024-25-trustees-evidence.json.gzip",
+            "sha256": "91b8529611a20bc0bf72ca7d164b50aa9cb7b590ae2f7ab7c4b3f4667c698eca"
+          },
+          "printedControls": [
+            "125569.44",
+            "32790.44"
+          ],
+          "computedTotals": [
+            "125569.44",
+            "32790.44"
+          ],
+          "literalRowsMinusPrintedControls": [
+            "0.00",
+            "0.00"
+          ],
+          "publicWarning": "Payment disclosures are not an annual salary rate or a complete workforce roster. Source dashes or visibly blank expense cells remain unknown, not zero. Published clipped titles and literal spelling are retained. Compiled entries, where present, are retained under their unverified edition labels; no same-person or reporting-period equivalence is assumed."
+        },
+        {
+          "id": "gap-school-north-sd59-2024-25-employees",
+          "scope": "employee-remuneration",
+          "rows": 248,
+          "data": {
+            "file": "research/salaries/gap-fill-school-north/sd59-2024-25-employees.json.gzip",
+            "sha256": "0eed43ece8a35780983821b51b862d0bfcef99327dbfe3110c2bd338b1f2214a"
+          },
+          "provenance": {
+            "file": "research/salaries/gap-fill-school-north/sd59-2024-25-employees-evidence.json.gzip",
+            "sha256": "cfb4f5c84c9f92c5897124c14f00d665615543000a3ea6c0f93169d53661f64c"
+          },
+          "printedControls": [
+            "26885896.54",
+            "299076.71"
+          ],
+          "computedTotals": [
+            "26381510.97",
+            "298496.71"
+          ],
+          "literalRowsMinusPrintedControls": [
+            "-504385.57",
+            "-580.00"
+          ],
+          "publicWarning": "Payment disclosures are not an annual salary rate or a complete workforce roster. Source dashes or visibly blank expense cells remain unknown, not zero. Published clipped titles and literal spelling are retained. Literal row sums differ from the printed named controls by remuneration $-504385.57 and known expenses $-580.00; no source amount was changed to balance and the cause is not established. Compiled entries, where present, are retained under their unverified edition labels; no same-person or reporting-period equivalence is assumed."
+        }
+      ],
+      "compiledRowsRemoved": 0,
+      "outreachPerformed": false,
+      "remainingProcessingBlockers": []
+    },
+    {
+      "leadId": "lead-016",
+      "number": 60,
+      "disposition": "completed-official-source-import-with-explicit-source-qualifications",
+      "reportedPeriod": "2024/25",
+      "sourceUrl": "https://www2.gov.bc.ca/assets/gov/education/administration/resource-management/school-district-financial-reporting/financial-information/sd60-sofi-2025.pdf",
+      "sourceSha256": "eeb3c4fcec226958513371c8853b0172c112eb7af92ed7f327ab9a6f176c920d",
+      "sourcePhysicalSalaryPages": [
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61
+      ],
+      "rowsAdded": 404,
+      "cohorts": [
+        {
+          "id": "gap-school-north-sd60-2024-25-trustees",
+          "scope": "school-trustees",
+          "rows": 7,
+          "data": {
+            "file": "research/salaries/gap-fill-school-north/sd60-2024-25-trustees.json.gzip",
+            "sha256": "49f3f67bf3a30160636c38db0378543318141fdc4577ab15a88551ce75c11b85"
+          },
+          "provenance": {
+            "file": "research/salaries/gap-fill-school-north/sd60-2024-25-trustees-evidence.json.gzip",
+            "sha256": "4a5434798e349315d8754d7a566daded42088c7d5b29d6e2add565714813eaee"
+          },
+          "printedControls": [
+            "112757.09",
+            "21852.73"
+          ],
+          "computedTotals": [
+            "112757.09",
+            "21852.73"
+          ],
+          "literalRowsMinusPrintedControls": [
+            "0.00",
+            "0.00"
+          ],
+          "publicWarning": "Payment disclosures are not an annual salary rate or a complete workforce roster. Source dashes or visibly blank expense cells remain unknown, not zero. Published clipped titles and literal spelling are retained. Compiled entries, where present, are retained under their unverified edition labels; no same-person or reporting-period equivalence is assumed."
+        },
+        {
+          "id": "gap-school-north-sd60-2024-25-employees",
+          "scope": "employee-remuneration",
+          "rows": 397,
+          "data": {
+            "file": "research/salaries/gap-fill-school-north/sd60-2024-25-employees.json.gzip",
+            "sha256": "d2bb40a1221be3903809646e839175459a5697a31dccdd9a94ca4d520cfe77e3"
+          },
+          "provenance": {
+            "file": "research/salaries/gap-fill-school-north/sd60-2024-25-employees-evidence.json.gzip",
+            "sha256": "40302faaa2f6dc3f18b78db6390ddca0a6a76d6c4ba93193af91d08e31678522"
+          },
+          "printedControls": [
+            "42576364.73",
+            "586562.81"
+          ],
+          "computedTotals": [
+            "42576364.73",
+            "586562.81"
+          ],
+          "literalRowsMinusPrintedControls": [
+            "0.00",
+            "0.00"
+          ],
+          "publicWarning": "Payment disclosures are not an annual salary rate or a complete workforce roster. Source dashes or visibly blank expense cells remain unknown, not zero. Published clipped titles and literal spelling are retained. Specific capital I/l name interpretations are qualified in source provenance; a unique glyph reading or identity is not claimed. Compiled entries, where present, are retained under their unverified edition labels; no same-person or reporting-period equivalence is assumed."
+        }
+      ],
+      "compiledRowsRemoved": 0,
+      "outreachPerformed": false,
+      "remainingProcessingBlockers": []
+    },
+    {
+      "leadId": "lead-023",
+      "number": 81,
+      "disposition": "completed-official-source-import-with-explicit-source-qualifications",
+      "reportedPeriod": "2024/25",
+      "sourceUrl": "https://www2.gov.bc.ca/assets/gov/education/administration/resource-management/school-district-financial-reporting/financial-information/sd81-sofi-2025.pdf",
+      "sourceSha256": "4623c38a2e1d4b709ea2d20ea46b428607695949f2aca799cc3066d815f7456a",
+      "sourcePhysicalSalaryPages": [
+        50,
+        51
+      ],
+      "rowsAdded": 55,
+      "cohorts": [
+        {
+          "id": "gap-school-north-sd81-2024-25-trustees",
+          "scope": "school-trustees",
+          "rows": 5,
+          "data": {
+            "file": "research/salaries/gap-fill-school-north/sd81-2024-25-trustees.json.gzip",
+            "sha256": "fc356e9196d05ab13e9ef95a10e72486754ce9520854a027941ad13dc0316c91"
+          },
+          "provenance": {
+            "file": "research/salaries/gap-fill-school-north/sd81-2024-25-trustees-evidence.json.gzip",
+            "sha256": "a6797094d77f37523847edf0e0b79851a6cc6063924e5bb10e51fceed8474a40"
+          },
+          "printedControls": [
+            "63000",
+            "3712.11"
+          ],
+          "computedTotals": [
+            "63000.00",
+            "3712.11"
+          ],
+          "literalRowsMinusPrintedControls": [
+            "0.00",
+            "0.00"
+          ],
+          "publicWarning": "Payment disclosures are not an annual salary rate or a complete workforce roster. Source dashes or visibly blank expense cells remain unknown, not zero. Published clipped titles and literal spelling are retained. The approval form YEAR box says 2024, while its declaration and the salary schedules explicitly state the year ended June 30, 2025; the salary period follows those explicit statements. Compiled entries, where present, are retained under their unverified edition labels; no same-person or reporting-period equivalence is assumed."
+        },
+        {
+          "id": "gap-school-north-sd81-2024-25-employees",
+          "scope": "employee-remuneration",
+          "rows": 50,
+          "data": {
+            "file": "research/salaries/gap-fill-school-north/sd81-2024-25-employees.json.gzip",
+            "sha256": "7ce0137831724784df83aa3431a3289ed2b54916af180c03db0ffc9f4c9945ff"
+          },
+          "provenance": {
+            "file": "research/salaries/gap-fill-school-north/sd81-2024-25-employees-evidence.json.gzip",
+            "sha256": "e1a6cfa7c3ce1ec7d606bc9101a15958ff30ecfe12fe648feb9ce43b115ba964"
+          },
+          "printedControls": [
+            "5680305.87",
+            "126136.69"
+          ],
+          "computedTotals": [
+            "5680305.87",
+            "126136.69"
+          ],
+          "literalRowsMinusPrintedControls": [
+            "0.00",
+            "0.00"
+          ],
+          "publicWarning": "Payment disclosures are not an annual salary rate or a complete workforce roster. Source dashes or visibly blank expense cells remain unknown, not zero. Published clipped titles and literal spelling are retained. The approval form YEAR box says 2024, while its declaration and the salary schedules explicitly state the year ended June 30, 2025; the salary period follows those explicit statements. Compiled entries, where present, are retained under their unverified edition labels; no same-person or reporting-period equivalence is assumed."
+        }
+      ],
+      "compiledRowsRemoved": 0,
+      "outreachPerformed": false,
+      "remainingProcessingBlockers": []
+    },
+    {
+      "leadId": "lead-024",
+      "number": 82,
+      "disposition": "completed-official-source-import-with-explicit-source-qualifications",
+      "reportedPeriod": "2024/25",
+      "sourceUrl": "https://www2.gov.bc.ca/assets/gov/education/administration/resource-management/school-district-financial-reporting/financial-information/sd82-sofi-2025.pdf",
+      "sourceSha256": "8e37754ca43a21901aa09506a08017f15d24e0fe89f487a7d32082016dcb6e0a",
+      "sourcePhysicalSalaryPages": [
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58
+      ],
+      "rowsAdded": 305,
+      "cohorts": [
+        {
+          "id": "gap-school-north-sd82-2024-25-trustees",
+          "scope": "school-trustees",
+          "rows": 8,
+          "data": {
+            "file": "research/salaries/gap-fill-school-north/sd82-2024-25-trustees.json.gzip",
+            "sha256": "b1c3e9fe72a32152415961c129a7ef8ff1b072e8c1303ef18004870b8352f72b"
+          },
+          "provenance": {
+            "file": "research/salaries/gap-fill-school-north/sd82-2024-25-trustees-evidence.json.gzip",
+            "sha256": "f45218671a49ea6ef3880756ea11f0cc5ae468ba05ac08e6dcfd8e1368468e00"
+          },
+          "printedControls": [
+            "108258.96",
+            "36964.95"
+          ],
+          "computedTotals": [
+            "108258.96",
+            "36964.95"
+          ],
+          "literalRowsMinusPrintedControls": [
+            "0.00",
+            "0.00"
+          ],
+          "publicWarning": "Payment disclosures are not an annual salary rate or a complete workforce roster. Source dashes or visibly blank expense cells remain unknown, not zero. Published clipped titles and literal spelling are retained. The public copies redact the signature block and show blank approval-date fields; approval signatures and dates cannot be verified from the available copies. Compiled entries, where present, are retained under their unverified edition labels; no same-person or reporting-period equivalence is assumed."
+        },
+        {
+          "id": "gap-school-north-sd82-2024-25-employees",
+          "scope": "employee-remuneration",
+          "rows": 297,
+          "data": {
+            "file": "research/salaries/gap-fill-school-north/sd82-2024-25-employees.json.gzip",
+            "sha256": "f6b926fc688a8914957360baac6734c9719d884d5ef6d479d49f9ba8e004eb26"
+          },
+          "provenance": {
+            "file": "research/salaries/gap-fill-school-north/sd82-2024-25-employees-evidence.json.gzip",
+            "sha256": "db6e44bea7a8db4564b30a30991f619dfa76277c182454817d3c3442b221ffc4"
+          },
+          "printedControls": [
+            "31906004.74",
+            "296856.18"
+          ],
+          "computedTotals": [
+            "31906004.74",
+            "296856.18"
+          ],
+          "literalRowsMinusPrintedControls": [
+            "0.00",
+            "0.00"
+          ],
+          "publicWarning": "Payment disclosures are not an annual salary rate or a complete workforce roster. Source dashes or visibly blank expense cells remain unknown, not zero. Published clipped titles and literal spelling are retained. The public copies redact the signature block and show blank approval-date fields; approval signatures and dates cannot be verified from the available copies. Compiled entries, where present, are retained under their unverified edition labels; no same-person or reporting-period equivalence is assumed."
+        }
+      ],
+      "compiledRowsRemoved": 0,
+      "outreachPerformed": false,
+      "remainingProcessingBlockers": []
+    }
+  ],
+  "remainingPublicProcessingTasks": 0,
+  "sourceClarificationNotes": [
+    {
+      "number": 8,
+      "issue": "Source whole-dollar literal rows differ from printed named controls by small nonzero residuals. Cause unknown; no rounding claim. No outreach performed."
+    },
+    {
+      "number": 59,
+      "issue": "Complete independently transcribed248employee rows differ from printed named controls by−504385.57remuneration/−580.00expenses. Literal rows accepted with public warning; clarification from the publisher remains useful, with no outreach performed."
+    }
+  ],
+  "validationCommands": [
+    "python -m unittest discover -s scripts -p test_gap_school_north.py -v",
+    "python scripts/gap_school_north_accept.py",
+    "python scripts/gap_school_north_finalize.py --check",
+    "python scripts/gap_school_north_handoff.py --check"
+  ],
+  "freezeScopeExcludesFuturePeerWork": true,
+  "producerFreeze": {
+    "file": "research/salaries/gap-fill-2026-11-02/school_north/candidate-freeze.json",
+    "sha256": "17da5876cc20de4271f20760bb471979db7be44a340bef0ae18b33ed6cd8070a"
+  }
+}

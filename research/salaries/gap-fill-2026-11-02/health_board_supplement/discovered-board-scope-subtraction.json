@@ -1,0 +1,299 @@
+{
+  "inventory": {
+    "path": "research/salaries/gap-fill-2026-11-02/health_employees/located-separate-board-pages-v2.json",
+    "sha256": "1d605ebde639907bfcf2454f4cd1615ae15a9978c12573e198dd05848141d00a"
+  },
+  "baseline": {
+    "path": "research/salaries/gap-fill-2026-11-02/baseline.json.gzip",
+    "sha256": "fa35799b84e173aa7e61f9225935ec1936d744375107c14ccf709edeac937fa4"
+  },
+  "newBoardManifest": {
+    "path": "research/salaries/gap-fill-health-boards/sources.json",
+    "sha256": "dc4e106e88b055623a01174f35823d719e2943109c0277b75ad49d0451c58a32"
+  },
+  "inventoryPages": 28,
+  "aggregateOnlyPages": 2,
+  "alreadyAcceptedBoardScopes": 7,
+  "newUncoveredBoardScopes": 19,
+  "records": [
+    {
+      "sourceKey": "fraser-health-2009-10",
+      "employerSlug": "fraser-health",
+      "period": "2009/10",
+      "physicalPage": 3,
+      "sourceSha256": "86a8fa64f7ea35d5175970bc39c857aee35d4f30ebfe7531bb708b643f368b8a",
+      "disposition": "genuinely-uncovered-board-scope-selected-for-independent-review"
+    },
+    {
+      "sourceKey": "fraser-health-2008-09",
+      "employerSlug": "fraser-health",
+      "period": "2008/09",
+      "physicalPage": 3,
+      "sourceSha256": "cc5520235c5064a7e5a9db8f70fc65ede8201b69cdc97c0e1888594204bf30f9",
+      "disposition": "genuinely-uncovered-board-scope-selected-for-independent-review"
+    },
+    {
+      "sourceKey": "fraser-health-2007-08",
+      "employerSlug": "fraser-health",
+      "period": "2007/08",
+      "physicalPage": 3,
+      "sourceSha256": "ea0fe6ecb9e39b94fcb9a051612aaaf74499950cde49e303de80071c3ccf8c8a",
+      "disposition": "genuinely-uncovered-board-scope-selected-for-independent-review"
+    },
+    {
+      "sourceKey": "fraser-health-2006-07",
+      "employerSlug": "fraser-health",
+      "period": "2006/07",
+      "physicalPage": 3,
+      "sourceSha256": "abc3650b650857273b1f87c8bbcc1b60abe794714fd406ac3b7274fd3cc4f228",
+      "disposition": "genuinely-uncovered-board-scope-selected-for-independent-review"
+    },
+    {
+      "sourceKey": "fraser-health-2005-06",
+      "employerSlug": "fraser-health",
+      "period": "2005/06",
+      "physicalPage": 3,
+      "sourceSha256": "70ee636035e1b50c72b3d3f7c3561d18d2840436e7af101786b052f636c8bc9f",
+      "disposition": "genuinely-uncovered-board-scope-selected-for-independent-review"
+    },
+    {
+      "sourceKey": "fraser-health-2004-05",
+      "employerSlug": "fraser-health",
+      "period": "2004/05",
+      "physicalPage": 3,
+      "sourceSha256": "d238d8ad9e1911ef1f0166ed80f9d47b4d3bf7a4bdc3352e17b77b9cfd85fd0b",
+      "disposition": "genuinely-uncovered-board-scope-selected-for-independent-review"
+    },
+    {
+      "sourceKey": "interior-health-2010-11",
+      "employerSlug": "interior-health",
+      "period": "2010/11",
+      "physicalPage": 2,
+      "sourceSha256": "34466dcf7e71335874d0990745d633217853a383d83165f9736d9afb61f577bf",
+      "disposition": "genuinely-uncovered-board-scope-selected-for-independent-review"
+    },
+    {
+      "sourceKey": "providence-health-care-2024-25",
+      "employerSlug": "providence-health-care",
+      "period": "2024/25",
+      "physicalPage": 55,
+      "sourceSha256": "37b0b91d65c1d89ecdfd7f148fb9097092ee3554d186c36c7fb63cfb0132fa44",
+      "disposition": "already-accepted-board-scope",
+      "acceptedScope": [
+        {
+          "newAcceptedSourceId": "gap-health-boards-providence-2024-25",
+          "sourceSha256": "37b0b91d65c1d89ecdfd7f148fb9097092ee3554d186c36c7fb63cfb0132fa44",
+          "dataSha256": "88297bff6c312ccb5dd72b1224fe1752e74574924a56a262f080a12e68f8515d",
+          "rows": 9
+        }
+      ]
+    },
+    {
+      "sourceKey": "providence-health-care-2022-23",
+      "employerSlug": "providence-health-care",
+      "period": "2022/23",
+      "physicalPage": 56,
+      "sourceSha256": "2dc3e947deae74996169840041bb36e5b5e44b82bfa44bc720f850e2f8f5359e",
+      "disposition": "already-accepted-board-scope",
+      "acceptedScope": [
+        {
+          "newAcceptedSourceId": "gap-health-boards-providence-2022-23",
+          "sourceSha256": "2dc3e947deae74996169840041bb36e5b5e44b82bfa44bc720f850e2f8f5359e",
+          "dataSha256": "7509a6296515ed6edf6d2bd5961f34c95314f8a13ac46d5d173f4bccd3d287c3",
+          "rows": 10
+        }
+      ]
+    },
+    {
+      "sourceKey": "providence-health-care-2021-22",
+      "employerSlug": "providence-health-care",
+      "period": "2021/22",
+      "physicalPage": 55,
+      "sourceSha256": "43b42a53b47a9de0aa18ab3e2ad14c28749f25250c77938a41200ab284b74bda",
+      "disposition": "already-accepted-board-scope",
+      "acceptedScope": [
+        {
+          "newAcceptedSupportingOnly": true,
+          "reason": "Original board handoff personally reviewed complete all-dash-pay board schedule; no numeric payment rows."
+        }
+      ]
+    },
+    {
+      "sourceKey": "providence-health-care-2020-21",
+      "employerSlug": "providence-health-care",
+      "period": "2020/21",
+      "physicalPage": 56,
+      "sourceSha256": "5fcf93ee1f3acedeb30c1033268aea2faa0f55d945ce9c138acc42910b2635b4",
+      "disposition": "already-accepted-board-scope",
+      "acceptedScope": [
+        {
+          "newAcceptedSupportingOnly": true,
+          "reason": "Original board handoff personally reviewed complete all-dash-pay board schedule; no numeric payment rows."
+        }
+      ]
+    },
+    {
+      "sourceKey": "vancouver-coastal-health-2024-25",
+      "employerSlug": "vancouver-coastal-health",
+      "period": "2024/25",
+      "physicalPage": 3,
+      "sourceSha256": "b7e3149f4ba3f2c44a19953e405fce7af322a0908bd49c15ed1b7ce5b3db7041",
+      "disposition": "genuinely-uncovered-board-scope-selected-for-independent-review"
+    },
+    {
+      "sourceKey": "vancouver-coastal-health-2023-24",
+      "employerSlug": "vancouver-coastal-health",
+      "period": "2023/24",
+      "physicalPage": 3,
+      "sourceSha256": "34622138b85e091d2d25be847a09cefe054367ad6838fbd2c2dfc41fe8b0d63e",
+      "disposition": "genuinely-uncovered-board-scope-selected-for-independent-review"
+    },
+    {
+      "sourceKey": "vancouver-coastal-health-2022-23",
+      "employerSlug": "vancouver-coastal-health",
+      "period": "2022/23",
+      "physicalPage": 3,
+      "sourceSha256": "62c60426df91d03ec863981286403870d4e74f75bf1afbc7f92e2a74594c00b5",
+      "disposition": "already-accepted-board-scope",
+      "acceptedScope": [
+        {
+          "newAcceptedSourceId": "gap-health-boards-vch-2022-23",
+          "sourceSha256": "c5387fa2694e41ec226ffcc9aaa763b09b0c1896acbf3f02d571931c1ed670ea",
+          "dataSha256": "cedca3441a02391d04c78402b4bb61565be58752daa790c0d451041f14f25b1e",
+          "rows": 11
+        }
+      ]
+    },
+    {
+      "sourceKey": "vancouver-coastal-health-2021-22",
+      "employerSlug": "vancouver-coastal-health",
+      "period": "2021/22",
+      "physicalPage": 3,
+      "sourceSha256": "b249e364b1da6fb3b59700427c80a677d84565add22f9b8ea0c9ca2e1b1b72e7",
+      "disposition": "genuinely-uncovered-board-scope-selected-for-independent-review"
+    },
+    {
+      "sourceKey": "vancouver-coastal-health-2019-20",
+      "employerSlug": "vancouver-coastal-health",
+      "period": "2019/20",
+      "physicalPage": 3,
+      "sourceSha256": "dd5b76799149b87e76008eed4149a3a0790001c3c9ce23093a67c1bc1b5bc3f6",
+      "disposition": "genuinely-uncovered-board-scope-selected-for-independent-review"
+    },
+    {
+      "sourceKey": "vancouver-coastal-health-2018-19",
+      "employerSlug": "vancouver-coastal-health",
+      "period": "2018/19",
+      "physicalPage": 3,
+      "sourceSha256": "a9de23592e9b7a307992d9c23ce20e15ecdb1a54b1cf1dfb93de221225e41dd0",
+      "disposition": "genuinely-uncovered-board-scope-selected-for-independent-review"
+    },
+    {
+      "sourceKey": "vancouver-coastal-health-2017-18",
+      "employerSlug": "vancouver-coastal-health",
+      "period": "2017/18",
+      "physicalPage": 3,
+      "sourceSha256": "eb7b35082cef57bb89120b021c2b42ab7e61bb01bf760f9e33873c846c4012e0",
+      "disposition": "genuinely-uncovered-board-scope-selected-for-independent-review"
+    },
+    {
+      "sourceKey": "vancouver-coastal-health-2016-17",
+      "employerSlug": "vancouver-coastal-health",
+      "period": "2016/17",
+      "physicalPage": 3,
+      "sourceSha256": "95865b81d7efdf32200957fd555c896705dba8f77b02aad11dddeee2082d45fb",
+      "disposition": "genuinely-uncovered-board-scope-selected-for-independent-review"
+    },
+    {
+      "sourceKey": "vancouver-coastal-health-2015-16",
+      "employerSlug": "vancouver-coastal-health",
+      "period": "2015/16",
+      "physicalPage": 3,
+      "sourceSha256": "914fb5a55718ddc4caa5605e9e9f5ff7c39ffa4fcfc190fa2e0f209e9b2ae827",
+      "disposition": "genuinely-uncovered-board-scope-selected-for-independent-review"
+    },
+    {
+      "sourceKey": "vancouver-coastal-health-2014-15",
+      "employerSlug": "vancouver-coastal-health",
+      "period": "2014/15",
+      "physicalPage": 3,
+      "sourceSha256": "72b242a78ca41d4f9f1eb8f9700c4d76571f8b3bf29792fc0117c890e997e086",
+      "disposition": "genuinely-uncovered-board-scope-selected-for-independent-review"
+    },
+    {
+      "sourceKey": "vancouver-coastal-health-2013-14",
+      "employerSlug": "vancouver-coastal-health",
+      "period": "2013/14",
+      "physicalPage": 3,
+      "sourceSha256": "42cf7cc582fefa910b36bb94b4d4999766cba98040aa79a6fbc87c62a24980b3",
+      "disposition": "genuinely-uncovered-board-scope-selected-for-independent-review"
+    },
+    {
+      "sourceKey": "vancouver-coastal-health-2009-10",
+      "employerSlug": "vancouver-coastal-health",
+      "period": "2009/10",
+      "physicalPage": 4,
+      "sourceSha256": "18d623782fad4c15f2533597aa085500576f8ef5b2108fc1ad96b874e5313cb7",
+      "disposition": "genuinely-uncovered-board-scope-selected-for-independent-review"
+    },
+    {
+      "sourceKey": "vancouver-coastal-health-2008-09",
+      "employerSlug": "vancouver-coastal-health",
+      "period": "2008/09",
+      "physicalPage": 2,
+      "sourceSha256": "e74cc78bf42ba67ec02526fe3219ff21d74662ceb4cdd4e659c257ba268cb6b3",
+      "disposition": "genuinely-uncovered-board-scope-selected-for-independent-review"
+    },
+    {
+      "sourceKey": "island-health-2023-24",
+      "employerSlug": "island-health",
+      "period": "2023/24",
+      "physicalPage": 126,
+      "sourceSha256": "d98a8b9f355e39ef536b71f1de559dce559946dd46208b50d782021e074f678b",
+      "disposition": "already-accepted-board-scope",
+      "acceptedScope": [
+        {
+          "newAcceptedSourceId": "gap-health-boards-island-2023-24",
+          "sourceSha256": "89c9d1ab033de0b7bccffa46065972571b9a0ae37d200b27e4556197990b9b07",
+          "dataSha256": "91d53c2594811b7ea3c7000d300da17128afd38c2ec654d145784a7de582f117",
+          "rows": 9
+        }
+      ]
+    },
+    {
+      "sourceKey": "island-health-2023-24",
+      "employerSlug": "island-health",
+      "period": "2023/24",
+      "physicalPage": 376,
+      "sourceSha256": "d98a8b9f355e39ef536b71f1de559dce559946dd46208b50d782021e074f678b",
+      "disposition": "aggregate-reconciliation-not-individual-board-schedule",
+      "acceptedSalaryRows": 0
+    },
+    {
+      "sourceKey": "island-health-2022-23",
+      "employerSlug": "island-health",
+      "period": "2022/23",
+      "physicalPage": 121,
+      "sourceSha256": "b9c800ab4036dde385684c7a2b3f081a88b8d18df530a6ec9668e33da1ce6a90",
+      "disposition": "already-accepted-board-scope",
+      "acceptedScope": [
+        {
+          "newAcceptedSourceId": "gap-health-boards-island-2022-23",
+          "sourceSha256": "641e7d8f8653df67d601e2c9a5b71992844fa00c5abb57be68dbd918afe221de",
+          "dataSha256": "b8db75a3f0e472022d3021b019b2358b3170e815b8923d8511c03ba66904813a",
+          "rows": 10
+        }
+      ]
+    },
+    {
+      "sourceKey": "island-health-2022-23",
+      "employerSlug": "island-health",
+      "period": "2022/23",
+      "physicalPage": 292,
+      "sourceSha256": "b9c800ab4036dde385684c7a2b3f081a88b8d18df530a6ec9668e33da1ce6a90",
+      "disposition": "aggregate-reconciliation-not-individual-board-schedule",
+      "acceptedSalaryRows": 0
+    }
+  ],
+  "noOutreach": true
+}

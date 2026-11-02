@@ -1,6 +1,6 @@
 import { test } from 'node:test'
 import assert from 'node:assert/strict'
-import { sourceWarnings } from './coverage.js'
+import { recordPeriodLabel, sourceWarnings } from './coverage.js'
 import { coverageAt, categoryCoverage, shortYearLabel, reportingYearLabel, relevantYearIndexes, samePeriodKinds, coverageStatus, disclosurePeriod, expenseLabel, filterEmployers, gapReason, gapRuns, missingYearMessage, rowCoverage, scopeLabel, sourceHref, thresholdLabel, yearAvailability } from './coverage.js'
 
 test('source caveats follow the selected cohort without leaking into a separate council schedule', () => {
@@ -8,6 +8,24 @@ test('source caveats follow the selected cohort without leaking into a separate 
     other: { publicWarning: 'Employee expenses do not reconcile.' } }
   assert.deepEqual(sourceWarnings(['staff', 'staff', 'other', 'missing'], sources), ['Employee expenses do not reconcile.'])
   assert.deepEqual(sourceWarnings(['council'], sources), [])
+})
+
+test('compiled edition labels stay unverified beside official calendar payments', () => {
+  const official = Object.freeze({ sourceKind: 'official-pdf', scope: 'employee-remuneration', periodType: 'calendar' })
+  const compiled = Object.freeze({ sourceKind: 'compiled', scope: 'compiled-unverified', periodType: 'unverified', url: 'https://example.org/compilation.pdf' })
+  const observations = Object.freeze([
+    Object.freeze({ label: '2023', pay: 750302.39, source: official }),
+    Object.freeze({ label: '2023/24', pay: 750302, source: compiled })
+  ])
+  assert.deepEqual(observations.map((row) => recordPeriodLabel(row.label, row.source)), [
+    { label: '2023', kind: 'verified' },
+    { label: '2023/24 · compiled edition', kind: 'compiled' }
+  ])
+  assert.deepEqual(observations.map((row) => row.pay), [750302.39, 750302], 'qualifying a label must preserve both source observations')
+  assert.equal(recordPeriodLabel('2023/24', { ...compiled, periodType: 'fiscal' }).kind, 'compiled', 'a fiscal-shaped edition label or linked compilation cannot prove the payment year')
+  assert.equal(recordPeriodLabel('2023', { scope: 'compiled-unverified' }).kind, 'compiled')
+  assert.deepEqual(recordPeriodLabel('2024/25', { sourceKind: 'official-pdf', periodType: 'unverified' }), { label: '2024/25 · period unverified', kind: 'unverified' })
+  assert.equal(recordPeriodLabel('2024/25', undefined).kind, 'unverified')
 })
 
 test('calendar labels stay distinct and elected officials do not inherit employee thresholds', () => {

@@ -1,0 +1,127 @@
+{
+  "district": 35,
+  "sourceFirstCheckpoint": {
+    "file": "research/salaries/gap-fill-2026-11-02/school_north/reviews/south35-38/sd35-source-first-checkpoint.json",
+    "sha256": "d1acecfffc5322c3323a2fd2a643f8fe4190b74c6b65e23e0bd168b8644e4f40"
+  },
+  "firstSourceTranscriptSha256": "8d5b917374d75ddb44a8a487a11e3a90a5d5ab66d9b038affe24e62fdaa77998",
+  "candidateSnapshot": {
+    "file": "research/salaries/gap-fill-2026-11-02/school_south/sd35-scan-reviewed-candidate-v10.json.gzip",
+    "sha256": "61048d835a65fe4f2011bb8d95805be5be4bab6ee2d00c5dc5427d8c20e17f5e"
+  },
+  "personallyReadRows": 183,
+  "differences": [
+    {
+      "district": 35,
+      "sequence": 115,
+      "physicalPage": 65,
+      "differences": {
+        "name": {
+          "firstPersonalSourceRead": "BIRKHEIM, DEVON",
+          "candidate": "BIRKHIEM, DEVON"
+        }
+      }
+    },
+    {
+      "district": 35,
+      "sequence": 435,
+      "physicalPage": 70,
+      "differences": {
+        "name": {
+          "firstPersonalSourceRead": "FIDLER, REBECCA D",
+          "candidate": "FIDDLER, REBECCA D"
+        }
+      }
+    },
+    {
+      "district": 35,
+      "sequence": 498,
+      "physicalPage": 71,
+      "differences": {
+        "expenses": {
+          "firstPersonalSourceRead": "-",
+          "candidate": "7"
+        }
+      }
+    },
+    {
+      "district": 35,
+      "sequence": 523,
+      "physicalPage": 72,
+      "differences": {
+        "expenses": {
+          "firstPersonalSourceRead": "-",
+          "candidate": "7"
+        }
+      }
+    },
+    {
+      "district": 35,
+      "sequence": 613,
+      "physicalPage": 73,
+      "differences": {
+        "name": {
+          "firstPersonalSourceRead": "HERBERG, STACEY",
+          "candidate": "HERNBERG, STACEY"
+        }
+      }
+    },
+    {
+      "district": 35,
+      "sequence": 876,
+      "physicalPage": 78,
+      "differences": {
+        "remuneration": {
+          "firstPersonalSourceRead": "119151",
+          "candidate": "119951"
+        }
+      }
+    },
+    {
+      "district": 35,
+      "sequence": 1095,
+      "physicalPage": 82,
+      "differences": {
+        "name": {
+          "firstPersonalSourceRead": "O'DELL, M PATRICIA",
+          "candidate": "O’DELL, M PATRICIA"
+        }
+      }
+    },
+    {
+      "district": 35,
+      "sequence": 1454,
+      "physicalPage": 89,
+      "differences": {
+        "remuneration": {
+          "firstPersonalSourceRead": "84480",
+          "candidate": "84840"
+        }
+      }
+    },
+    {
+      "district": 35,
+      "sequence": 1513,
+      "physicalPage": 90,
+      "differences": {
+        "name": {
+          "firstPersonalSourceRead": "TRESSEL, MATHEW J",
+          "candidate": "TRESSEL, MATTHEW J"
+        }
+      }
+    },
+    {
+      "district": 35,
+      "sequence": 1539,
+      "physicalPage": 90,
+      "differences": {
+        "name": {
+          "firstPersonalSourceRead": "VERHOEVEN, ANDREW S.",
+          "candidate": "VERHOVEN, ANDREW S."
+        }
+      }
+    }
+  ],
+  "sourceOnlyFlagAndHoldoutProtocol": true,
+  "noOutreach": true
+}

@@ -1,0 +1,57 @@
+{
+  "method": "Post-execution inventory of the installed processing environment used by the immutable475page captures. Per-page raw checkpoints already pin the English recognition model and dictionary. Default detector/classifier/package model fingerprints are supplementary reproducibility evidence, not a retroactive per-page signature.",
+  "versions": {
+    "rapidocr-onnxruntime": "1.4.4",
+    "onnxruntime": "1.31.1",
+    "numpy": "2.3.5",
+    "Pillow": "12.3.0",
+    "PyMuPDF": "1.26.6"
+  },
+  "tesseractVersion": "tesseract 5.5.0",
+  "modelsAndConfiguration": [
+    {
+      "pathUsed": "/tmp/held-health-ocr/venv/lib/python3.12/site-packages/rapidocr_onnxruntime/models/ch_ppocr_mobile_v2.0_cls_infer.onnx",
+      "bytes": 585532,
+      "sha256": "e47acedf663230f8863ff1ab0e64dd2d82b838fceb5957146dab185a89d6215c",
+      "usedEnglishRecognizerOverride": false,
+      "defaultChineseRecognizerNotSelected": false
+    },
+    {
+      "pathUsed": "/tmp/held-health-ocr/venv/lib/python3.12/site-packages/rapidocr_onnxruntime/models/ch_PP-OCRv4_rec_infer.onnx",
+      "bytes": 10857958,
+      "sha256": "48fc40f24f6d2a207a2b1091d3437eb3cc3eb6b676dc3ef9c37384005483683b",
+      "usedEnglishRecognizerOverride": false,
+      "defaultChineseRecognizerNotSelected": true
+    },
+    {
+      "pathUsed": "/tmp/held-health-ocr/venv/lib/python3.12/site-packages/rapidocr_onnxruntime/models/ch_PP-OCRv4_det_infer.onnx",
+      "bytes": 4745517,
+      "sha256": "d2a7720d45a54257208b1e13e36a8479894cb74155a5efe29462512d42f49da9",
+      "usedEnglishRecognizerOverride": false,
+      "defaultChineseRecognizerNotSelected": false
+    },
+    {
+      "pathUsed": "/tmp/held-health-ocr/english-models/en_PP-OCRv4_rec_mobile.onnx",
+      "bytes": 7653044,
+      "sha256": "e8770c967605983d1570cdf5352041dfb68fa0c21664f49f47b155abd3e0e318",
+      "usedEnglishRecognizerOverride": true,
+      "defaultChineseRecognizerNotSelected": false
+    },
+    {
+      "pathUsed": "/tmp/held-health-ocr/english-models/en_dict.txt",
+      "bytes": 190,
+      "sha256": "5662df9d2d03f0e8ca0d3b0649d6acbab904b6a14b3d3521463c71c37c668ce3",
+      "usedEnglishRecognizerOverride": false,
+      "defaultChineseRecognizerNotSelected": false
+    },
+    {
+      "pathUsed": "/tmp/held-health-ocr/venv/lib/python3.12/site-packages/rapidocr_onnxruntime/config.yaml",
+      "bytes": 1221,
+      "sha256": "bf94a1da4cba828e67b1d61e27cee14d9e7da27c9f272e04048a17e41ae97332",
+      "usedEnglishRecognizerOverride": false,
+      "defaultChineseRecognizerNotSelected": false
+    }
+  ],
+  "threadCaps": 1,
+  "noOutreach": true
+}

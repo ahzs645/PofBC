@@ -5,7 +5,7 @@ import { tmpdir } from 'node:os'
 import { join, resolve } from 'node:path'
 import { gzipSync, gunzipSync } from 'node:zlib'
 import { spawnSync } from 'node:child_process'
-import { csvRows, money, sumMoney, median, duplicateStats, repeatedCandidates, sha256, validateReplacementScopes, compiledPartitionsToRetain, yearSlug, reportingPeriodType, applyCompiledReplacements, applyTravelJoinCorrections } from './lib/salary-data.mjs'
+import { csvRows, money, sumMoney, median, duplicateStats, repeatedCandidates, sha256, validateReplacementScopes, compiledPartitionsToRetain, preservePublishedCompiledRows, yearSlug, reportingPeriodType, applyCompiledReplacements, applyTravelJoinCorrections } from './lib/salary-data.mjs'
 import { sourceCatalog, sourceLeadsFor, hasLocatedSource } from './lib/salary-sources.mjs'
 import { employerSector, employerSlug, canonicalSlug } from './lib/salary-employers.mjs'
 
@@ -321,6 +321,70 @@ test('a partial original and retained compiled rows remain in all views of the s
     assert.equal(audit.officialRows, 1)
     assert.equal(audit.legacyRowsRetained, 1)
   } finally { rmSync(f.dir, { recursive: true, force: true }) }
+})
+
+test('a pinned retention decision preserves compiled records without rewriting the reviewed original', () => {
+  const f = fixture()
+  try {
+    const source = f.manifest.sources[0]
+    Object.assign(source, { year: '2017/18', periodStart: '2017-04-01', periodEnd: '2018-03-31', sha256: sha256('original PDF'), completeEmployeeSchedule: true,
+      validation: { compiledPartitionRetained: true, compiledPartitionRetentionReason: 'Calendar and disclosure-scope equivalence with compiled records is unproved.' }, publicWarning: 'Compiled observations remain retained and may overlap.' })
+    const original = JSON.stringify(f.manifest)
+    writeFileSync(join(f.sourceDir, 'sources.json'), original)
+    writeFileSync(join(f.research, 'compiled-retention-decisions.json'), JSON.stringify({ accepted: true, noOutreach: true, decisions: [{
+      sourceId: source.id, sourceSha256: source.sha256, dataSha256: source.dataSha256, approvedBy: 'root', retainCompiledPartition: true,
+      completeEmployeeSchedule: true, reason: 'Retain earlier observations until exact complete-copy equivalence is proved.'
+    }] }))
+    const result = f.run()
+    assert.equal(result.status, 0, result.stderr)
+    assert.equal(readFileSync(join(f.sourceDir, 'sources.json'), 'utf8'), original)
+    const employers = JSON.parse(readFileSync(join(f.out, 'employers/index.json')))
+    assert.deepEqual(employers.recordCounts, { official: 1, compiled: 1 })
+    assert.equal(employers.sources[source.id].retainCompiledPartition, true)
+    assert.equal(employers.sources[source.id].validation.completeEmployeeSchedule, true)
+    assert.equal(employers.sources[source.id].publicWarning, source.publicWarning)
+  } finally { rmSync(f.dir, { recursive: true, force: true }) }
+})
+
+test('a stale retention fingerprint or missing scope warning cannot replace published output', () => {
+  for (const mutation of ['pdf', 'data', 'warning', 'complete']) {
+    const f = fixture()
+    try {
+      const source = f.manifest.sources[0]
+      Object.assign(source, { sha256: sha256('original PDF'), completeEmployeeSchedule: true,
+        validation: { compiledPartitionRetained: true, compiledPartitionRetentionReason: 'No complete-copy comparison.' }, publicWarning: 'Compiled observations remain retained.' })
+      const decision = { sourceId: source.id, sourceSha256: source.sha256, dataSha256: source.dataSha256, approvedBy: 'root', retainCompiledPartition: true, completeEmployeeSchedule: true, reason: 'Preserve earlier observations.' }
+      if (mutation === 'pdf') decision.sourceSha256 = sha256('another PDF')
+      if (mutation === 'data') decision.dataSha256 = sha256('different normalized cells')
+      if (mutation === 'warning') source.publicWarning = null
+      if (mutation === 'complete') decision.completeEmployeeSchedule = false
+      writeFileSync(join(f.sourceDir, 'sources.json'), JSON.stringify(f.manifest))
+      writeFileSync(join(f.research, 'compiled-retention-decisions.json'), JSON.stringify({ accepted: true, noOutreach: true, decisions: [decision] }))
+      const result = f.run()
+      assert.notEqual(result.status, 0, mutation)
+      assert.match(result.stderr, /retention.*(?:fingerprint|qualification)/)
+      assert.equal(readFileSync(join(f.out, 'sentinel'), 'utf8'), 'working site')
+    } finally { rmSync(f.dir, { recursive: true, force: true }) }
+  }
+})
+
+test('new official scopes preserve published compiled rows without resurrecting retired groups', () => {
+  const published = [
+    { slug: 'college', year: '2023/24', sourceId: 'compiled', name: 'Åberg, B', position: null, pay: 200.01, expenses: 0, page: null },
+    { slug: 'college', year: '2023/24', sourceId: 'compiled', name: 'Zulu, A', position: 'Dean', pay: 100, expenses: null, page: null }
+  ]
+  const baseline = { schema: 'salary-gap-fill-baseline-v1', sourceMetadata: { compiled: { sourceKind: 'compiled' } }, overall: { compiledRecords: 2 }, groups: [{
+    employerSlug: 'college', year: '2023/24', sourceId: 'compiled', rows: 2,
+    rowMultisetSha256: sha256('["Zulu, A","Dean",10000,null,null]\n["Åberg, B",null,20001,0,null]')
+  }] }
+  const retired = { ...published[0], year: '2020/21', name: 'Retired compiled observation' }
+  assert.deepEqual(preservePublishedCompiledRows([...published, retired], baseline), published)
+  for (const mutation of [
+    [{ ...published[0], pay: 200.02 }, published[1]],
+    [published[0], { ...published[1], expenses: 0 }],
+    [published[0], published[0], published[1]],
+    [published[0]]
+  ]) assert.throws(() => preservePublishedCompiledRows(mutation, baseline), /Published compiled observations changed/)
 })
 
 test('employee and elected cohorts in one report retain distinct source-catalog entries', () => {

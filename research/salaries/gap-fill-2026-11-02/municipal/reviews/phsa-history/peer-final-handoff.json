@@ -1,0 +1,73 @@
+{
+  "status": "owned source peer review and final normalized five-source projection complete; parent owns final release adoption",
+  "sourceKeys": [
+    "phsa-2006-07",
+    "phsa-2007-08",
+    "phsa-2008-09",
+    "phsa-2013-14",
+    "phsa-2014-15"
+  ],
+  "sourceRows": {
+    "phsa-2006-07": 1267,
+    "phsa-2007-08": 1271,
+    "phsa-2008-09": 1544,
+    "phsa-2013-14": 3991,
+    "phsa-2014-15": 4145
+  },
+  "cohorts": 5,
+  "normalizedRows": 12218,
+  "boundedHumanUniqueRows": {
+    "nativeAcrossThreeSources": 33,
+    "phsa-2013-14": 459,
+    "phsa-2014-15": 614
+  },
+  "allRowsHumanTranscribed": false,
+  "allRowsCompleteComputationalSourceVerified": true,
+  "nativePeerReceipt": {
+    "path": "research/salaries/gap-fill-2026-11-02/municipal/reviews/phsa-history/native-v2-producer-comparison.json",
+    "sha256": "34a027299a867ada5470a78eabd1897d9d43d955a4428ec6765a5781c72f66b3"
+  },
+  "latestScanPeerReceipts": [
+    {
+      "path": "research/salaries/gap-fill-2026-11-02/municipal/reviews/phsa-history/phsa-2013-14-final-source-peer-acceptance-addendum.json",
+      "sha256": "8e9ddddce79814150d735ed49f954833743ef3d68d4a8d9a813d73817dad6501"
+    },
+    {
+      "path": "research/salaries/gap-fill-2026-11-02/municipal/reviews/phsa-history/phsa-2013-14-selected-v2-complete-source-replay.json",
+      "sha256": "a00ed9f85b28a3b2ff1bfa1daf228d48a7aa6cae3216eb3fb6a7dc0262dab753"
+    },
+    {
+      "path": "research/salaries/gap-fill-2026-11-02/municipal/reviews/phsa-history/phsa-2014-15-selected-v2-complete-source-replay.json",
+      "sha256": "50593eff6a894868ab27427680529160074161094984d21363ac0bd3f2ec3c13"
+    }
+  ],
+  "rootNineSourceContextCrosscheck": {
+    "path": "research/salaries/gap-fill-2026-11-02/municipal/reviews/phsa-history/root-nine-source-context-crosscheck.json",
+    "sha256": "a52c2b342611b55a1d556dd3325f740793570816879cae0988152b9aa16315b3"
+  },
+  "finalNormalizedProjection": {
+    "path": "research/salaries/gap-fill-2026-11-02/municipal/reviews/phsa-history/five-final-normalized-projection-review.json",
+    "sha256": "7dfa3f4bc9957427c58ebdc028d29db490eac6620860732c41e7a0ce2242ff94"
+  },
+  "peerFreeze": {
+    "path": "research/salaries/gap-fill-2026-11-02/municipal/reviews/phsa-history/peer-final-freeze.json",
+    "sha256": "81767643a04cfd243c105cf9f1a4da9cfbe769bdafa4109ab774767870a106e2"
+  },
+  "sourceQualifications": [
+    "2006/07 narrative1280 versus complete printed named-table1267; pay residual-25, known-expense residual-50831; dash expenses unknown.",
+    "2007/08 literal pay residual+3, known-expense residual+13.",
+    "2008/09 literal pay residual+23, known-expense residual+24; Cranston superscript footnote retained separately.",
+    "2013/14 literal named pay and known-expense totals exact; all451 primary source-review rows independently corroborated plus eight source-order holdouts.",
+    "2014/15 literal pay residual+48 and known-expense residual+7, preserved without established cause; all609 primary source-review rows independently corroborated plus five source-order holdouts.",
+    "All source payment definitions, actual31March periods, delivered Library copy/source hashes, dashes, explicit zeros and repeated observations retained. Fiscal April1 starts are explicitly conventional assumptions. No absent names or missing values inferred.",
+    "Compiled observations retained; no complete-copy or identity equivalence assumed."
+  ],
+  "unresolvedCandidateFields": [],
+  "rootAdoptionPending": true,
+  "municipalProducerFreezeStillPass": {
+    "sources": 52,
+    "rows": 411,
+    "files": 759
+  },
+  "noOutreach": true
+}

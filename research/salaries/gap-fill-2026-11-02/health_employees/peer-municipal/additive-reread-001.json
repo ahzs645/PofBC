@@ -1,0 +1,65 @@
+{
+  "firstIndexSha256": "615413e0c5ced6872638d246f440b3c64bf0067aa127854dfa955cdc5458e1cd",
+  "candidateValuesSeenAtReread": true,
+  "method": "Personally reread exact original source row crops after first immutable source-only transcript and comparison; no subtotal or other-period inference. First transcripts preserved.",
+  "sourceImageReceipts": [
+    {
+      "path": "research/salaries/gap-fill-2026-11-02/health_employees/peer-municipal/additive-reread-source-image-index.json",
+      "sha256": "09369576e9c559986b74473e17c7671178a7254465a1cc56a5f138c664dc79c7"
+    },
+    {
+      "path": "research/salaries/gap-fill-2026-11-02/health_employees/peer-municipal/additive-original-300dpi-crop-index.json",
+      "sha256": "5d1a13dfd6ff3f1a2f85937eea89b19ad55eaebeb356ef4b1e6871cadbb1a202"
+    }
+  ],
+  "fieldSelections": [
+    {
+      "reportNumber": 5,
+      "scope": "employee-remuneration",
+      "row": 11,
+      "field": "position",
+      "first": "Bylaw Officer",
+      "selected": "Bylaw Officier",
+      "reason": "Original visibly spells Officier; first image transcription omitted i."
+    },
+    {
+      "reportNumber": 11,
+      "scope": "employee-remuneration",
+      "row": 6,
+      "field": "name",
+      "first": "Woolliscroft, Shane",
+      "selected": "Wooliscroft, Shane",
+      "reason": "Fresh exact original 576dpi rendering shows one l after Woo; no other-period spelling used."
+    },
+    {
+      "reportNumber": 13,
+      "scope": "employee-remuneration",
+      "row": 3,
+      "field": "name",
+      "first": "C. MATHEWS",
+      "selected": "C. MATTHEWS",
+      "reason": "Original visibly spells MATTHEWS with two T characters; first image transcription omitted one."
+    },
+    {
+      "reportNumber": 15,
+      "scope": "elected-officials",
+      "row": 4,
+      "field": "position",
+      "first": "Councillor",
+      "selected": "Councillor.",
+      "reason": "Original source prints a trailing period for Savage title."
+    }
+  ],
+  "separatorTypographyOnly": [
+    {
+      "reportNumber": 8,
+      "scope": "employee-remuneration",
+      "row": 6,
+      "field": "position",
+      "first": "Fire Chief/ Bylaw/Safety",
+      "candidate": "Fire Chief/Bylaw/Safety",
+      "decision": "Original visible wording is Fire Chief, slash, Bylaw, slash, Safety. Space adjacent to first slash is typographic separation; both literal readings retained here. Candidate uses compact slash display spacing, with no name/title words changed, joined or dropped."
+    }
+  ],
+  "monetaryChanges": []
+}

@@ -1,0 +1,377 @@
+{
+  "status": "passed-final-normalized-two-source-replay",
+  "candidateManifest": {
+    "path": "research/salaries/gap-fill-phsa-history/sources-candidate.json",
+    "sha256": "069f8c7b8add887dba2d2bccbe33b8327b0b332308b7a7f6dd994decfcc26b7e"
+  },
+  "finalAcceptedManifest": {
+    "path": "research/salaries/gap-fill-phsa-history/sources.json",
+    "sha256": "875759c22c8e745be566ff619ddd70e3462d1f240797255b58f14ef42a68a529"
+  },
+  "rootNormalizedAdoption": {
+    "path": "research/salaries/gap-fill-2026-11-02/reviews/root-nine-phsa-history-source-acceptance.json",
+    "sha256": "0ac2f26bd907c1d46fd93fed52a35ab4ccd4d7e895bb98a47e2c6b5fadf7481a"
+  },
+  "finalProducerHandoff": {
+    "path": "research/salaries/gap-fill-2026-11-02/phsa_history/handoff.json",
+    "sha256": "367764ddda835f7e16b5bd874cc1f21000394ccd26dfdaea9aaffd8bb169e4b9"
+  },
+  "producerFreeze": {
+    "path": "research/salaries/gap-fill-2026-11-02/phsa_history/producer-freeze.json",
+    "sha256": "90a23179ac4cb8c0d528f6a4872985c9a059a5948270dd8a14e423563cbb4fdc"
+  },
+  "finalV4PeerAddendum": {
+    "path": "research/salaries/gap-fill-2026-11-02/school_north/reviews/phsa-history/integration/adaptive-surname-guard/final-v4-selection-addendum.json",
+    "sha256": "619456cdac8bbaa7ffca94ab29c92846b0a1df807255ade4952f040bafee29fd"
+  },
+  "sources": [
+    {
+      "sourceId": "gap-phsa-history-phsa-2011-12",
+      "sourceSha256": "65070afa02af25d614688b5e83b2121def9684288534a4b2d2245db4d39fa754",
+      "selectedInput": {
+        "path": "research/salaries/gap-fill-2026-11-02/phsa_history/phsa-2011-12-scan-selected-v4.json.gzip",
+        "sha256": "f523d4da9f7abbbdab1f26a2de8e0eac84ca693c32ebaedbe1e342d12122db18"
+      },
+      "initialBoundedPeerReceipt": {
+        "path": "research/salaries/gap-fill-2026-11-02/school_north/reviews/phsa-history/phsa-2011-12-independent-bounded-source-review.json",
+        "sha256": "e1c5f627f38659e62019e622b70c3f81bbfd6b82009b2a4eb7d9bae0af3348b3"
+      },
+      "surnameTypographyAddendum": {
+        "path": "research/salaries/gap-fill-2026-11-02/school_north/reviews/phsa-history/integration/adaptive-surname-guard/final-v4-selection-addendum.json",
+        "sha256": "619456cdac8bbaa7ffca94ab29c92846b0a1df807255ade4952f040bafee29fd"
+      },
+      "rows": 3423,
+      "data": {
+        "path": "research/salaries/gap-fill-phsa-history/phsa-2011-12-employees.json.gzip",
+        "sha256": "1e6865043e271ee3a3781beb6b441b8a7ed7259fbf924b8d475791f2e9dd9e3a"
+      },
+      "provenance": {
+        "path": "research/salaries/gap-fill-phsa-history/phsa-2011-12-provenance.json.gzip",
+        "sha256": "ac5cb77b3d4e50f95fb1f18ddb471904081204a742db2b4375645e20f81d53db"
+      },
+      "everyNormalizedRowExactlyMatchesFinalPeerSelection": true,
+      "sourceOrderAndMultiplicityPreserved": true,
+      "everyProvenanceNamePageAndIndexMatches": true,
+      "candidateDataBytesUnchangedAfterPromotion": true,
+      "candidateProvenanceBytesUnchangedAfterPromotion": true,
+      "metadataOnlyPromotionChanges": [
+        {
+          "pointer": "/status",
+          "before": "source-reviewed-awaiting-root-adoption",
+          "after": "verified"
+        },
+        {
+          "pointer": "/validation/candidateOnly",
+          "before": true,
+          "after": false
+        },
+        {
+          "pointer": "/validation/independentPeerVerified",
+          "beforeAbsent": true,
+          "after": true
+        },
+        {
+          "pointer": "/validation/pendingGates",
+          "before": [
+            "root final normalized reconstruction and adoption",
+            "producer freeze"
+          ],
+          "after": []
+        },
+        {
+          "pointer": "/validation/rootSourceAcceptance",
+          "beforeAbsent": true,
+          "after": {
+            "path": "research/salaries/gap-fill-2026-11-02/reviews/root-nine-phsa-history-source-acceptance.json",
+            "sha256": "0ac2f26bd907c1d46fd93fed52a35ab4ccd4d7e895bb98a47e2c6b5fadf7481a"
+          }
+        },
+        {
+          "pointer": "/verifiedOn",
+          "beforeAbsent": true,
+          "after": "2026-11-02"
+        }
+      ],
+      "actualFiscalPeriod": "2011/12",
+      "actualPrintedPeriodEnd": "2012-03-31",
+      "conventionalFiscalStartExplicitlyQualified": "2011-04-01",
+      "actualThresholdWording": "remuneration exceeding75000; final threshold metadata conservatively says as-published",
+      "nullExpenseRows": 1217,
+      "literalKnownComponents": [
+        "369888459",
+        "8500874"
+      ],
+      "residuals": [
+        "0",
+        "0"
+      ],
+      "namedRowsByPhysicalPage": {
+        "3": 38,
+        "4": 39,
+        "5": 39,
+        "6": 39,
+        "7": 39,
+        "8": 39,
+        "9": 39,
+        "10": 39,
+        "11": 39,
+        "12": 39,
+        "13": 39,
+        "14": 39,
+        "15": 39,
+        "16": 39,
+        "17": 39,
+        "18": 39,
+        "19": 39,
+        "20": 39,
+        "21": 39,
+        "22": 39,
+        "23": 39,
+        "24": 39,
+        "25": 39,
+        "26": 39,
+        "27": 39,
+        "28": 39,
+        "29": 39,
+        "30": 39,
+        "31": 39,
+        "32": 39,
+        "33": 39,
+        "34": 39,
+        "35": 39,
+        "36": 39,
+        "37": 39,
+        "38": 39,
+        "39": 39,
+        "40": 39,
+        "41": 39,
+        "42": 39,
+        "43": 39,
+        "44": 39,
+        "45": 39,
+        "46": 39,
+        "47": 39,
+        "48": 39,
+        "49": 39,
+        "50": 39,
+        "51": 39,
+        "52": 39,
+        "53": 39,
+        "54": 39,
+        "55": 39,
+        "56": 39,
+        "57": 39,
+        "58": 39,
+        "59": 39,
+        "60": 39,
+        "61": 39,
+        "62": 39,
+        "63": 39,
+        "64": 39,
+        "65": 39,
+        "66": 39,
+        "67": 39,
+        "68": 39,
+        "69": 39,
+        "70": 39,
+        "71": 39,
+        "72": 39,
+        "73": 39,
+        "74": 39,
+        "75": 39,
+        "76": 39,
+        "77": 39,
+        "78": 39,
+        "79": 39,
+        "80": 39,
+        "81": 39,
+        "82": 39,
+        "83": 39,
+        "84": 39,
+        "85": 39,
+        "86": 39,
+        "87": 39,
+        "88": 39,
+        "89": 39,
+        "90": 31
+      }
+    },
+    {
+      "sourceId": "gap-phsa-history-phsa-2012-13",
+      "sourceSha256": "6df15d7695b46bd5bc699286d7f104cf0eeb68eea42cd34ab955265bdad841fb",
+      "selectedInput": {
+        "path": "research/salaries/gap-fill-2026-11-02/phsa_history/phsa-2012-13-scan-selected-v4.json.gzip",
+        "sha256": "fc88ec372908b84b898440179d99de756e9075e876c2ce48b3ff8be545ee6296"
+      },
+      "initialBoundedPeerReceipt": {
+        "path": "research/salaries/gap-fill-2026-11-02/school_north/reviews/phsa-history/phsa-2012-13-independent-bounded-source-review.json",
+        "sha256": "0b38bc9de3783573e4a9408053025600a7473f93dea17756767f41aab8a96210"
+      },
+      "surnameTypographyAddendum": {
+        "path": "research/salaries/gap-fill-2026-11-02/school_north/reviews/phsa-history/integration/adaptive-surname-guard/final-v4-selection-addendum.json",
+        "sha256": "619456cdac8bbaa7ffca94ab29c92846b0a1df807255ade4952f040bafee29fd"
+      },
+      "rows": 3351,
+      "data": {
+        "path": "research/salaries/gap-fill-phsa-history/phsa-2012-13-employees.json.gzip",
+        "sha256": "c466eb3bde769af8d6705a3d11928d013cbe3d50c3a8e1d0c5eceace54134df2"
+      },
+      "provenance": {
+        "path": "research/salaries/gap-fill-phsa-history/phsa-2012-13-provenance.json.gzip",
+        "sha256": "3cdc6248c2972e6a98c6a67144cbfea0f07f88804a58a3417bb1067cfe4f8908"
+      },
+      "everyNormalizedRowExactlyMatchesFinalPeerSelection": true,
+      "sourceOrderAndMultiplicityPreserved": true,
+      "everyProvenanceNamePageAndIndexMatches": true,
+      "candidateDataBytesUnchangedAfterPromotion": true,
+      "candidateProvenanceBytesUnchangedAfterPromotion": true,
+      "metadataOnlyPromotionChanges": [
+        {
+          "pointer": "/status",
+          "before": "source-reviewed-awaiting-root-adoption",
+          "after": "verified"
+        },
+        {
+          "pointer": "/validation/candidateOnly",
+          "before": true,
+          "after": false
+        },
+        {
+          "pointer": "/validation/independentPeerVerified",
+          "beforeAbsent": true,
+          "after": true
+        },
+        {
+          "pointer": "/validation/pendingGates",
+          "before": [
+            "root final normalized reconstruction and adoption",
+            "producer freeze"
+          ],
+          "after": []
+        },
+        {
+          "pointer": "/validation/rootSourceAcceptance",
+          "beforeAbsent": true,
+          "after": {
+            "path": "research/salaries/gap-fill-2026-11-02/reviews/root-nine-phsa-history-source-acceptance.json",
+            "sha256": "0ac2f26bd907c1d46fd93fed52a35ab4ccd4d7e895bb98a47e2c6b5fadf7481a"
+          }
+        },
+        {
+          "pointer": "/verifiedOn",
+          "beforeAbsent": true,
+          "after": "2026-11-02"
+        }
+      ],
+      "actualFiscalPeriod": "2012/13",
+      "actualPrintedPeriodEnd": "2013-03-31",
+      "conventionalFiscalStartExplicitlyQualified": "2012-04-01",
+      "actualThresholdWording": "remuneration exceeding75000; final threshold metadata conservatively says as-published",
+      "nullExpenseRows": 1180,
+      "literalKnownComponents": [
+        "369114727",
+        "8792836"
+      ],
+      "residuals": [
+        "0",
+        "0"
+      ],
+      "namedRowsByPhysicalPage": {
+        "3": 40,
+        "4": 40,
+        "5": 40,
+        "6": 40,
+        "7": 40,
+        "8": 40,
+        "9": 40,
+        "10": 40,
+        "11": 40,
+        "12": 40,
+        "13": 40,
+        "14": 40,
+        "15": 40,
+        "16": 40,
+        "17": 40,
+        "18": 40,
+        "19": 40,
+        "20": 40,
+        "21": 40,
+        "22": 40,
+        "23": 40,
+        "24": 40,
+        "25": 40,
+        "26": 40,
+        "27": 40,
+        "28": 40,
+        "29": 40,
+        "30": 40,
+        "31": 40,
+        "32": 40,
+        "33": 40,
+        "34": 40,
+        "35": 40,
+        "36": 40,
+        "37": 40,
+        "38": 40,
+        "39": 40,
+        "40": 40,
+        "41": 40,
+        "42": 40,
+        "43": 40,
+        "44": 40,
+        "45": 40,
+        "46": 40,
+        "47": 40,
+        "48": 40,
+        "49": 40,
+        "50": 40,
+        "51": 40,
+        "52": 40,
+        "53": 40,
+        "54": 40,
+        "55": 40,
+        "56": 40,
+        "57": 40,
+        "58": 40,
+        "59": 40,
+        "60": 40,
+        "61": 40,
+        "62": 40,
+        "63": 40,
+        "64": 40,
+        "65": 40,
+        "66": 40,
+        "67": 40,
+        "68": 40,
+        "69": 40,
+        "70": 40,
+        "71": 40,
+        "72": 40,
+        "73": 40,
+        "74": 40,
+        "75": 40,
+        "76": 40,
+        "77": 40,
+        "78": 40,
+        "79": 40,
+        "80": 40,
+        "81": 40,
+        "82": 40,
+        "83": 40,
+        "84": 40,
+        "85": 40,
+        "86": 31
+      }
+    }
+  ],
+  "rows": 6774,
+  "noOutreach": true,
+  "reviewCode": {
+    "path": "research/salaries/gap-fill-2026-11-02/school_north/reviews/phsa-history/integration/final-normalized-replay/replay.py",
+    "sha256": "85058550a2ffdc45ac5cdacac965f30ee48bd27068b775dc7be4a18ce086956b"
+  },
+  "scope": "Exact normalized data/provenance mapping for two independently reviewed PHSA scans only; no new transcription, identity resolution, balancing, source reclassification or compiled deletion.",
+  "limitations": "Initial and superseded peer/primary readings and source-specific qualifications remain in their immutable receipts. Prior personal coverage was878 unique rows plus3 candidate-aware surname observations; this mapping replay is exhaustive over all6774 normalized rows but is not a claim to personal transcription or infallible OCR of all names.",
+  "draftLedgerEdited": false,
+  "producerInputsEdited": false
+}

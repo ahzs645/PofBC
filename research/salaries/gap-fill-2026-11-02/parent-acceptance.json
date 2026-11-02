@@ -1,0 +1,302 @@
+{
+  "schema": "salary-gap-fill-parent-acceptance-v1",
+  "accepted": true,
+  "approvedBy": "root",
+  "noOutreach": true,
+  "collections": [
+    "gap-fill-school-native",
+    "gap-fill-school-north",
+    "gap-fill-school-south",
+    "gap-fill-municipal",
+    "gap-fill-health-employees",
+    "gap-fill-health-boards",
+    "gap-fill-health-board-supplement",
+    "gap-fill-health-other-history",
+    "gap-fill-phsa-history"
+  ],
+  "manifests": [
+    {
+      "path": "research/salaries/gap-fill-school-native/sources.json",
+      "sha256": "d6a32eef5f0fc2d96d948651d2ab88d5d8ca38716dead6b5b937bce38025e5fb"
+    },
+    {
+      "path": "research/salaries/gap-fill-school-north/sources.json",
+      "sha256": "adc460b612249318e3f87d585621575e9c25370862c010dfade47f15b794d4b0"
+    },
+    {
+      "path": "research/salaries/gap-fill-school-south/sources.json",
+      "sha256": "caaf9cca2d1ccf7a788bf53f311933023fdc08d3195434ff2e829253be4f89af"
+    },
+    {
+      "path": "research/salaries/gap-fill-municipal/sources.json",
+      "sha256": "08fa4d263981e3bd325cd28d9dd9645698f0ea3fdfd7f1a3cdd15f30b94875da"
+    },
+    {
+      "path": "research/salaries/gap-fill-health-employees/sources.json",
+      "sha256": "d4b4f9f1140f3993eff525d25be28926ff60e444cd65458a9f0d3ee8bf0de389"
+    },
+    {
+      "path": "research/salaries/gap-fill-health-boards/sources.json",
+      "sha256": "dc4e106e88b055623a01174f35823d719e2943109c0277b75ad49d0451c58a32"
+    },
+    {
+      "path": "research/salaries/gap-fill-health-board-supplement/sources.json",
+      "sha256": "2588846870a3d21eff78c133cb43e3ef8dd25d33f75bcde75e001cd1a2f40553"
+    },
+    {
+      "path": "research/salaries/gap-fill-health-other-history/sources.json",
+      "sha256": "151318887f6426b8bffc816ab52fae19460c2fa4d97f4c47cc681c4d04f0f7c6"
+    },
+    {
+      "path": "research/salaries/gap-fill-phsa-history/sources.json",
+      "sha256": "875759c22c8e745be566ff619ddd70e3462d1f240797255b58f14ef42a68a529"
+    }
+  ],
+  "workerHandoffs": [
+    {
+      "path": "research/salaries/gap-fill-2026-11-02/school_native/handoff.json",
+      "sha256": "adf6d2306d948e6103be7faba8fd3d9e7ac959dd390c070f58b31cdeed5e249c"
+    },
+    {
+      "path": "research/salaries/gap-fill-2026-11-02/school_north/handoff.json",
+      "sha256": "8b4c9a69bec10c798351f1d8e76d927af6e0fd524ccbe034be3735ce9607964b"
+    },
+    {
+      "path": "research/salaries/gap-fill-2026-11-02/school_south/handoff.json",
+      "sha256": "669399a041526c81701a969f47a095700e6fae057b6bc05398b3d973fa1f956d"
+    },
+    {
+      "path": "research/salaries/gap-fill-2026-11-02/municipal/handoff-final.json",
+      "sha256": "3d1769cec4edb91cbeac50ea10c20ac34dec28aa6d0e131709197e551b717ba7"
+    },
+    {
+      "path": "research/salaries/gap-fill-2026-11-02/health_employees/handoff.json",
+      "sha256": "49030beda9ca4d508d50efb479685c0a17646222aea0107456008a99071fb322"
+    },
+    {
+      "path": "research/salaries/gap-fill-2026-11-02/health_boards/handoff.json",
+      "sha256": "68db8882a7ab452ca8bf73ce31f5d024a32a55dd0325ee2e2a6fdcb75c5adc66"
+    },
+    {
+      "path": "research/salaries/gap-fill-2026-11-02/health_board_supplement/handoff.json",
+      "sha256": "0e7bacf9a42471e3207a42efb5f9d4c07534eae89f6a0ad6d67b038b20f8c9aa"
+    },
+    {
+      "path": "research/salaries/gap-fill-2026-11-02/health_other_history/handoff.json",
+      "sha256": "c82e4efb963d3f5b2f582d631155b7f3eaf7ce1612753ca3673f65dff58240a7"
+    },
+    {
+      "path": "research/salaries/gap-fill-2026-11-02/phsa_history/handoff.json",
+      "sha256": "367764ddda835f7e16b5bd874cc1f21000394ccd26dfdaea9aaffd8bb169e4b9"
+    }
+  ],
+  "producerFreezes": [
+    {
+      "path": "research/salaries/gap-fill-2026-11-02/school_native/candidate-freeze.json",
+      "sha256": "7c6f32098de50aebe06f7c4c9b812a9bc677a3b7c76872bb2a8bc8ffc72bafce"
+    },
+    {
+      "path": "research/salaries/gap-fill-2026-11-02/school_north/candidate-freeze.json",
+      "sha256": "17da5876cc20de4271f20760bb471979db7be44a340bef0ae18b33ed6cd8070a"
+    },
+    {
+      "path": "research/salaries/gap-fill-2026-11-02/school_south/producer-freeze.json",
+      "sha256": "384c393d6b59045b5f1d2ca406e28b3f0802578c80c436a3a60f0c7618928691"
+    },
+    {
+      "path": "research/salaries/gap-fill-2026-11-02/municipal/producer-freeze.json",
+      "sha256": "eab7b5d6e3f90e82f526066298e588e4773928c35df95b02a3382a36b7f7cb30"
+    },
+    {
+      "path": "research/salaries/gap-fill-2026-11-02/health_employees/frozen-inputs.json",
+      "sha256": "82e689b029996d66df26402bda66c470dc4c918447e8b28e1da916661a014a08"
+    },
+    {
+      "path": "research/salaries/gap-fill-2026-11-02/health_boards/candidate-freeze.json",
+      "sha256": "9d3180dfb2dfa430ddf52274f6dbe580e113fd42e1dfdba674f3b4287200d20a"
+    },
+    {
+      "path": "research/salaries/gap-fill-2026-11-02/health_board_supplement/candidate-freeze.json",
+      "sha256": "2257b0b38612322df5372aa3aed4fdb58d3107d637d22b2eeba059e1c73a6162"
+    },
+    {
+      "path": "research/salaries/gap-fill-2026-11-02/health_other_history/frozen-inputs.json",
+      "sha256": "653948966c1898e5c32f56864b38a0fceb4e39282ab52cca97784e50c77754f9"
+    },
+    {
+      "path": "research/salaries/gap-fill-2026-11-02/phsa_history/producer-freeze.json",
+      "sha256": "90a23179ac4cb8c0d528f6a4872985c9a059a5948270dd8a14e423563cbb4fdc"
+    }
+  ],
+  "peerReceipts": [
+    {
+      "path": "research/salaries/gap-fill-2026-11-02/health_boards/peer-phsa-history/independent-first-two-scans-source-review.json",
+      "sha256": "5e2c6f79a811df61dd3c96020e883443a71ba379b4fc3d5329d82e9e4d4d0767"
+    },
+    {
+      "path": "research/salaries/gap-fill-2026-11-02/health_boards/peer-phsa-history/normalized-final-projection-review.json",
+      "sha256": "b0d06aa4713bec70137be598380cc10ad5d06125757357a57e3f69200deaba64"
+    },
+    {
+      "path": "research/salaries/gap-fill-2026-11-02/health_boards/peer-phsa-history/normalized-final-promotion-review.json",
+      "sha256": "6cd572ff6c84b3d1b8003ff04e1639c9b85c4f693b1a0086f287438c299136e0"
+    },
+    {
+      "path": "research/salaries/gap-fill-2026-11-02/municipal/reviews/phsa-history/native-complete-independent-source-audit.json",
+      "sha256": "873c1179dbba3aee46e288e9782c6a52db7ea5dac7d95f0cbd5b2adfe2257577"
+    },
+    {
+      "path": "research/salaries/gap-fill-2026-11-02/municipal/reviews/phsa-history/native-v2-producer-comparison.json",
+      "sha256": "34a027299a867ada5470a78eabd1897d9d43d955a4428ec6765a5781c72f66b3"
+    },
+    {
+      "path": "research/salaries/gap-fill-2026-11-02/municipal/reviews/phsa-history/peer-final-handoff.json",
+      "sha256": "d53371c09fd9fc66904ca5d872258ff2d5b637eb3b9bb00fd9fe95a2ecbfea5f"
+    },
+    {
+      "path": "research/salaries/gap-fill-2026-11-02/municipal/reviews/phsa-history/phsa-2013-14-final-source-peer-acceptance-addendum.json",
+      "sha256": "8e9ddddce79814150d735ed49f954833743ef3d68d4a8d9a813d73817dad6501"
+    },
+    {
+      "path": "research/salaries/gap-fill-2026-11-02/municipal/reviews/phsa-history/phsa-2013-14-selected-v2-complete-source-replay.json",
+      "sha256": "a00ed9f85b28a3b2ff1bfa1daf228d48a7aa6cae3216eb3fb6a7dc0262dab753"
+    },
+    {
+      "path": "research/salaries/gap-fill-2026-11-02/municipal/reviews/phsa-history/phsa-2014-15-selected-v2-complete-source-replay.json",
+      "sha256": "50593eff6a894868ab27427680529160074161094984d21363ac0bd3f2ec3c13"
+    },
+    {
+      "path": "research/salaries/gap-fill-2026-11-02/municipal/reviews/phsa-history/phsa-latest-two-source-peer-acceptance.json",
+      "sha256": "9e586c2963f70e11a2144ba326107e3f1253b16115f527f1914fe9cfff3001ad"
+    },
+    {
+      "path": "research/salaries/gap-fill-2026-11-02/reviews/delta-root/complete-delta-source-acceptance.json",
+      "sha256": "18dbce72ec9cfe9b62e08d417adaed5e901b104b1bd9f1bfdd4a0fa982bc859c"
+    },
+    {
+      "path": "research/salaries/gap-fill-2026-11-02/reviews/health-other-context-root/root-nine-source-context-acceptance.json",
+      "sha256": "637ee861ba71716949d5e72e73bcda78e1ac6772f952cc4017270dba04d025f8"
+    },
+    {
+      "path": "research/salaries/gap-fill-2026-11-02/reviews/integration-code-snapshot/manifest.json",
+      "sha256": "addf1d176be0761e4ef0743d5c0c42fa00d465c9cd9a92147dd6c7f803d66d3c"
+    },
+    {
+      "path": "research/salaries/gap-fill-2026-11-02/reviews/integration-north/technical-review.json",
+      "sha256": "2ca4c4efaf8e0227520fbfa5b570f0b2a8716625b48b0c2a03891f6bd163880e"
+    },
+    {
+      "path": "research/salaries/gap-fill-2026-11-02/reviews/municipal-root/four-qualified-pay-definition-adoptions.json",
+      "sha256": "2e917be21543b544060e9703d6c484218b3238049bb37d181fc4bd69935c9840"
+    },
+    {
+      "path": "research/salaries/gap-fill-2026-11-02/reviews/phsa-2013-primary/additive-crop-geometry-correction.json",
+      "sha256": "4766a805a9158695601515ad144d9bd399cb03f436bc0cdf13311999c7c12355"
+    },
+    {
+      "path": "research/salaries/gap-fill-2026-11-02/reviews/phsa-context-root/root-nine-source-context-acceptance.json",
+      "sha256": "e486351a8851756d83dfcea2a3a1f40968b49bc69513209c7bb5d8347018dda9"
+    },
+    {
+      "path": "research/salaries/gap-fill-2026-11-02/reviews/repeated-generated-build.json",
+      "sha256": "bc3c00f7ee0b0f9b1f0d8e7b659ad00af7ba4745d25c4a23f6aac8038a69424c"
+    },
+    {
+      "path": "research/salaries/gap-fill-2026-11-02/reviews/root-health-board-supplement-acceptance.json",
+      "sha256": "657345887859e30e0f114f00881fdf77536a66cc3a963f9f8a21abab5f9e8f53"
+    },
+    {
+      "path": "research/salaries/gap-fill-2026-11-02/reviews/root-health-source-context-acceptance.json",
+      "sha256": "1075218375658a66bbef098b4058325196110da03c94bd6a5d88a3bec54e01e5"
+    },
+    {
+      "path": "research/salaries/gap-fill-2026-11-02/reviews/root-nine-other-health-source-acceptance.json",
+      "sha256": "f67d5d4ac05381b37bcfbf6cc9710de331d9d1c1705aea1d9d8c73a7af81b99c"
+    },
+    {
+      "path": "research/salaries/gap-fill-2026-11-02/reviews/root-nine-phsa-history-source-acceptance.json",
+      "sha256": "0ac2f26bd907c1d46fd93fed52a35ab4ccd4d7e895bb98a47e2c6b5fadf7481a"
+    },
+    {
+      "path": "research/salaries/gap-fill-2026-11-02/reviews/root-seven-health-clipped-name-adoptions.json",
+      "sha256": "48f242d0533053463b377fd6f8e807b71ecf8e036c7ef07813e7df962c4b67ee"
+    },
+    {
+      "path": "research/salaries/gap-fill-2026-11-02/reviews/root-sixty-five-health-source-acceptance.json",
+      "sha256": "617e3e025adea89e6b44d2772564c80fedeb5ceae97dd88d67d70961e4445ee1"
+    },
+    {
+      "path": "research/salaries/gap-fill-2026-11-02/reviews/root-two-sd58-name-adoptions.json",
+      "sha256": "2062ef07539a09b15fea4717d0892bbf546d319ed8160a8a1bca57defad083f7"
+    },
+    {
+      "path": "research/salaries/gap-fill-2026-11-02/reviews/ui-health/final-nine/acceptance.json",
+      "sha256": "cee4615dcb254d9ebbab810d379e846323fb25540628d523c72e8ab119121494"
+    },
+    {
+      "path": "research/salaries/gap-fill-2026-11-02/school_native/reviews/health-other-history/final-root-adopted-data-replay.json",
+      "sha256": "6d2ec8364448124aca21d58b8145955c4478f2ad85712deb460ae7daccc0453d"
+    },
+    {
+      "path": "research/salaries/gap-fill-2026-11-02/school_north/reviews/phsa-history/handoff.json",
+      "sha256": "96f3d3b0d3d2b589ae78111575b5b8a491b68ca1f3377e9d76ef43896a8cc845"
+    },
+    {
+      "path": "research/salaries/gap-fill-2026-11-02/school_north/reviews/phsa-history/integration/adaptive-surname-guard/final-v4-selection-addendum.json",
+      "sha256": "619456cdac8bbaa7ffca94ab29c92846b0a1df807255ade4952f040bafee29fd"
+    },
+    {
+      "path": "research/salaries/gap-fill-2026-11-02/school_north/reviews/phsa-history/integration/final-normalized-replay/two-final-normalized-sources-replay-v2.json",
+      "sha256": "6b2d75465dbc57657a486131b0f6d2f59310d5563aaea8c8ba19653d3d33169e"
+    },
+    {
+      "path": "research/salaries/gap-fill-2026-11-02/school_north/reviews/phsa-history/phsa-2011-12-independent-bounded-source-review.json",
+      "sha256": "e1c5f627f38659e62019e622b70c3f81bbfd6b82009b2a4eb7d9bae0af3348b3"
+    },
+    {
+      "path": "research/salaries/gap-fill-2026-11-02/school_north/reviews/phsa-history/phsa-2012-13-independent-bounded-source-review.json",
+      "sha256": "0b38bc9de3783573e4a9408053025600a7473f93dea17756767f41aab8a96210"
+    },
+    {
+      "path": "research/salaries/gap-fill-2026-11-02/reviews/ci-portability-amendment/acceptance.json",
+      "sha256": "73d520b0c8845398aadd197c345fe6ce9747a0debc1e889531de2e3772fd1b37"
+    }
+  ],
+  "compiledRetentionAdoptions": {
+    "path": "research/salaries/compiled-retention-decisions.json",
+    "sha256": "e876436f37ef4be3c71ed97894723822652a10e532b8a45d51293c92aa8cca1e"
+  },
+  "inputLeads": {
+    "path": "research/salaries/gap-fill-2026-11-02/input-leads.json",
+    "sha256": "d2dfd62496ae1e3b7c95867e342219057a068868d715984e072fe2c488bf5dff"
+  },
+  "leadDispositions": {
+    "path": "research/salaries/gap-fill-2026-11-02/lead-dispositions.json",
+    "sha256": "cd35fdffad8e0d060be6ae8901bb5dc92f2a099416830e5822345ddd2bd7ee23"
+  },
+  "rootFreeze": {
+    "path": "research/salaries/gap-fill-2026-11-02/root-freeze-portable-ci.json",
+    "sha256": "a2a1d22c0d056efb2a868c83bb2d8e5e6d2d6c899b85c8686104c3dbe91f0318"
+  },
+  "integrationInputs": {
+    "path": "research/salaries/gap-fill-2026-11-02/integration-inputs.json",
+    "sha256": "fe5314230dec7c1817f6b978aec264ed670f390b4993052bdd2b345f227ac078"
+  },
+  "releaseEvidence": {
+    "path": "research/salaries/gap-fill-2026-11-02/release.json",
+    "sha256": "98aea40d3ea95e0f90e224f3a7b5ef52a8619688047f1c1d63592397206c77de"
+  },
+  "sharedIntegrationSnapshots": {
+    "path": "research/salaries/gap-fill-2026-11-02/reviews/integration-code-snapshot/manifest.json",
+    "sha256": "addf1d176be0761e4ef0743d5c0c42fa00d465c9cd9a92147dd6c7f803d66d3c"
+  },
+  "scope": "All65 exact research leads have substantive evidence-backed outcomes; all located assigned public salary sources are fully processed and accepted or explicitly support-only. Unlocated schedules, source clarifications and ten availability-unestablished historical questions are documented separately. This does not claim complete BC historical coverage, unique-person resolution or annual base pay.",
+  "outreachDirection": "No messages, forms or FOI applications sent. NIC,McBride,SD8andSD10 requests remain on hold. All27 acquisition/availability items are repo notes only.",
+  "compiledPreservation": "Every228364 previously published compiled observation and every earlier official observation/metadata definition is preserved exactly. Existing retired compiled groups cannot be resurrected; no new source authorizes deleting old compiled rows.",
+  "integrationAmendments": [
+    {
+      "path": "research/salaries/gap-fill-2026-11-02/reviews/ci-portability-amendment/acceptance.json",
+      "sha256": "73d520b0c8845398aadd197c345fe6ce9747a0debc1e889531de2e3772fd1b37"
+    }
+  ]
+}

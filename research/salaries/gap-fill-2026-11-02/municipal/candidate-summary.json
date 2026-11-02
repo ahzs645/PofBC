@@ -1,0 +1,469 @@
+{
+  "candidateOnly": true,
+  "noOutreach": true,
+  "sources": 52,
+  "originals": 28,
+  "rows": 411,
+  "employeeRows": 212,
+  "councilRows": 199,
+  "inputTranscripts": [
+    {
+      "path": "research/salaries/gap-fill-2026-11-02/municipal/transcripts-initial.json",
+      "sha256": "c598a662e5884538b81934334e70c5286387ab356f0ebe2ba37b61275ca091c1"
+    },
+    {
+      "path": "research/salaries/gap-fill-2026-11-02/municipal/transcripts-middle-v2.json",
+      "sha256": "678b6a7f07125b2b6a44c69c1703232c71fd49357faa44cb13c407d91c5f252b"
+    },
+    {
+      "path": "research/salaries/gap-fill-2026-11-02/municipal/transcripts-rossland-additional.json",
+      "sha256": "81edc8363d29fd6eda650a498897a8e552a0b76ff903b6d6e15f476141d2cc79"
+    },
+    {
+      "path": "research/salaries/gap-fill-2026-11-02/municipal/transcripts-clearwater-2012-2016.json",
+      "sha256": "ace88157eebf363a99e087640d6cb664a838e6fcca14273240519d772dacca3b"
+    },
+    {
+      "path": "research/salaries/gap-fill-2026-11-02/municipal/transcripts-clearwater-2011-and-2017-2020.json",
+      "sha256": "c3246a04f688fbb6e7571ca4cec01b1737cb7c1b785ff9c8d9ff477371e87541"
+    },
+    {
+      "path": "research/salaries/gap-fill-2026-11-02/municipal/transcripts-final.json",
+      "sha256": "c08aeaa56314ed5a30bc9f443a0ae662e6d983ec17f3a81cedc61c628acc62d1"
+    },
+    {
+      "path": "research/salaries/gap-fill-2026-11-02/municipal/transcripts-recovered-originals.json",
+      "sha256": "01ca673919ee7f1d6597ff89e4a61fa4c42d2ab2ed47f44e96cab1784e729c7f"
+    },
+    {
+      "path": "research/salaries/gap-fill-2026-11-02/municipal/transcripts-abbotsford-known-column.json",
+      "sha256": "709c0d1bc2c2cf74943e3b012c739e3f418420c5dc127a609490407d3245030c"
+    },
+    {
+      "path": "research/salaries/gap-fill-2026-11-02/municipal/source-publication-qualifications.json",
+      "sha256": "bec937ebacd079f3820f31a2d91885beaf266bf96e956ac316fe904bd15b0026"
+    }
+  ],
+  "outputs": [
+    {
+      "path": "research/salaries/gap-fill-municipal/city-of-rossland-2010-elected-officials.json.gzip",
+      "sha256": "5dc1d89399827f03db2fb3a3e5aba579055adda4c4abe111ab82eb5c90c60af1"
+    },
+    {
+      "path": "research/salaries/gap-fill-municipal/evidence/city-of-rossland-2010-elected-officials.json.gzip",
+      "sha256": "bc86a400cab6448955502d4ac34e389a981fffa46bc07841c23319bd95dd354f"
+    },
+    {
+      "path": "research/salaries/gap-fill-municipal/city-of-rossland-2010-employee-remuneration.json.gzip",
+      "sha256": "bf61a7683e086d7513b6ae8d040e144527aebffff066d77ee20586e0c118dfde"
+    },
+    {
+      "path": "research/salaries/gap-fill-municipal/evidence/city-of-rossland-2010-employee-remuneration.json.gzip",
+      "sha256": "f37df5722ee4ebfdb6bda0020ca2474290256d38cbff10c8bdf75c9ccc453c12"
+    },
+    {
+      "path": "research/salaries/gap-fill-municipal/city-of-rossland-2011-elected-officials.json.gzip",
+      "sha256": "e7aed342b5844e735d8b33f39706dc71844669206632202d206f170e28df5c54"
+    },
+    {
+      "path": "research/salaries/gap-fill-municipal/evidence/city-of-rossland-2011-elected-officials.json.gzip",
+      "sha256": "0435a14e70dc3c38d1624eb7c61649db60c8a38d65d43b357fe6c8c7d4addb30"
+    },
+    {
+      "path": "research/salaries/gap-fill-municipal/city-of-rossland-2013-elected-officials.json.gzip",
+      "sha256": "3905751ad5e28ab4f68c96c12b463baaa17832d9707cae6a733be651f44b088a"
+    },
+    {
+      "path": "research/salaries/gap-fill-municipal/evidence/city-of-rossland-2013-elected-officials.json.gzip",
+      "sha256": "ce716929cf0a90f4430a48ece301cb4d391882eb21e1acfb58a087cba7a0a423"
+    },
+    {
+      "path": "research/salaries/gap-fill-municipal/city-of-rossland-2013-employee-remuneration.json.gzip",
+      "sha256": "ae8dc97456b2ffe431414ae143debc08047dcbeef0b8316897c22f49d04b4f6e"
+    },
+    {
+      "path": "research/salaries/gap-fill-municipal/evidence/city-of-rossland-2013-employee-remuneration.json.gzip",
+      "sha256": "b503cd30181e304ae32f2b0944456ff05085758a0b6b28510989e9f21a019fba"
+    },
+    {
+      "path": "research/salaries/gap-fill-municipal/city-of-rossland-2016-elected-officials.json.gzip",
+      "sha256": "b79a5099c0b2c8983274fe8b91860fb63375df39384d0083c7eade8907a07d5a"
+    },
+    {
+      "path": "research/salaries/gap-fill-municipal/evidence/city-of-rossland-2016-elected-officials.json.gzip",
+      "sha256": "5191783380621122135895923fde84a86a8db4d589e2271fb7432417bb78c9b7"
+    },
+    {
+      "path": "research/salaries/gap-fill-municipal/city-of-rossland-2016-employee-remuneration.json.gzip",
+      "sha256": "61f38e9d15e70845eac0b4deeec84f8d3431faddbaa45b4c70d768f3bfb39932"
+    },
+    {
+      "path": "research/salaries/gap-fill-municipal/evidence/city-of-rossland-2016-employee-remuneration.json.gzip",
+      "sha256": "9894d8ec13ff4b6d9b8b201a21fce1d91942601f879e85786761c21c6b832869"
+    },
+    {
+      "path": "research/salaries/gap-fill-municipal/city-of-rossland-2018-elected-officials.json.gzip",
+      "sha256": "8c69730f0d93afd7f0647fcc10199bfb097215e3f5c7621bf6200a5f4c59e004"
+    },
+    {
+      "path": "research/salaries/gap-fill-municipal/evidence/city-of-rossland-2018-elected-officials.json.gzip",
+      "sha256": "6529060fe2a3ea50c9dd2fdd080f06c8120f65c455e987709f5641ead59e750e"
+    },
+    {
+      "path": "research/salaries/gap-fill-municipal/city-of-rossland-2018-employee-remuneration.json.gzip",
+      "sha256": "cfb9f70ec25be696f4ad5ae862f6134e92999dbce4db3c01dde34dd1a2dfbfd5"
+    },
+    {
+      "path": "research/salaries/gap-fill-municipal/evidence/city-of-rossland-2018-employee-remuneration.json.gzip",
+      "sha256": "936e62e02b58c478be99f0e98c6728d4c987026a4c9cdf810b8f0c9dc15e5d01"
+    },
+    {
+      "path": "research/salaries/gap-fill-municipal/city-of-rossland-2019-elected-officials.json.gzip",
+      "sha256": "b74d4be068359b1bc161f516f7b8e7f116bee35f1958b8e20b58ac07ecc9cbcf"
+    },
+    {
+      "path": "research/salaries/gap-fill-municipal/evidence/city-of-rossland-2019-elected-officials.json.gzip",
+      "sha256": "56b5cf681879290d36e99a164cae493678fdc90bc6cb64437cf4feba4d6ffc54"
+    },
+    {
+      "path": "research/salaries/gap-fill-municipal/city-of-rossland-2019-employee-remuneration.json.gzip",
+      "sha256": "e81dea21a1f70a7b974bb4a3e8248a8b9fd4fa7c823fed819b7407597f3e651b"
+    },
+    {
+      "path": "research/salaries/gap-fill-municipal/evidence/city-of-rossland-2019-employee-remuneration.json.gzip",
+      "sha256": "d15b3bcecfe76b6ee11d9658cd9e894c859cde003f60900260daf23b07cef0b1"
+    },
+    {
+      "path": "research/salaries/gap-fill-municipal/city-of-rossland-2020-elected-officials.json.gzip",
+      "sha256": "991d431ed22ca7e769c813cf5a702dcca222e635f54202861ed5f3e108678608"
+    },
+    {
+      "path": "research/salaries/gap-fill-municipal/evidence/city-of-rossland-2020-elected-officials.json.gzip",
+      "sha256": "a1623489feb749795585d008f678854039c04cffa2b6096202aad3d6a83a9c62"
+    },
+    {
+      "path": "research/salaries/gap-fill-municipal/city-of-rossland-2020-employee-remuneration.json.gzip",
+      "sha256": "a0e95a852cd8009e1ebb3e92cfe93097a114dc6f7afbbae0f7feb10d3aafe874"
+    },
+    {
+      "path": "research/salaries/gap-fill-municipal/evidence/city-of-rossland-2020-employee-remuneration.json.gzip",
+      "sha256": "90628371e56aaaa214b6306575e73e8df1a72b0b5f5e8bec60c861fe9d111cca"
+    },
+    {
+      "path": "research/salaries/gap-fill-municipal/city-of-rossland-2012-elected-officials.json.gzip",
+      "sha256": "12a5db8d85095336523f5feb20a4deda11328c005f675c2bbd76b9faf5605445"
+    },
+    {
+      "path": "research/salaries/gap-fill-municipal/evidence/city-of-rossland-2012-elected-officials.json.gzip",
+      "sha256": "229c9fd0ecca422ee928c4237b706e2f00242b76099c712729f1284057ee802b"
+    },
+    {
+      "path": "research/salaries/gap-fill-municipal/city-of-rossland-2012-employee-remuneration.json.gzip",
+      "sha256": "b2211d30f6235fb2055dd4bdd9d3f1b01d00750ade96958a124ef7df1e761564"
+    },
+    {
+      "path": "research/salaries/gap-fill-municipal/evidence/city-of-rossland-2012-employee-remuneration.json.gzip",
+      "sha256": "9f4cffbfb25e0db3b81c35a3761f54c4bac7c8915d9bcf0e0ef3cb81d141e200"
+    },
+    {
+      "path": "research/salaries/gap-fill-municipal/city-of-rossland-2017-elected-officials.json.gzip",
+      "sha256": "c2e612496a821eb6d260567354bd39cdded8dc3eea5ba99b32dd18460b1e94d1"
+    },
+    {
+      "path": "research/salaries/gap-fill-municipal/evidence/city-of-rossland-2017-elected-officials.json.gzip",
+      "sha256": "3ec9437537a5ebacc0a7d6865a9d6820819e61b5fbdec9aa9f89d27cdeb96438"
+    },
+    {
+      "path": "research/salaries/gap-fill-municipal/city-of-rossland-2017-employee-remuneration.json.gzip",
+      "sha256": "cf9f458127f5b557054a78ee9d7a8ae9d1209ca9d65027203eaf9ae1d3da03cb"
+    },
+    {
+      "path": "research/salaries/gap-fill-municipal/evidence/city-of-rossland-2017-employee-remuneration.json.gzip",
+      "sha256": "97329f86a14da438f29d25d6650d71e6052c1716f88ce4a9eb50249f9df48aec"
+    },
+    {
+      "path": "research/salaries/gap-fill-municipal/city-of-rossland-2023-elected-officials.json.gzip",
+      "sha256": "ddf2f16d486ea0d9a4f1b44ec7d180572eb793a59f3cc1092ed33a4a75f47860"
+    },
+    {
+      "path": "research/salaries/gap-fill-municipal/evidence/city-of-rossland-2023-elected-officials.json.gzip",
+      "sha256": "625175177b849ce020f41e64c8203578f7a2a57ebd87e28f7781cf93cc5afbad"
+    },
+    {
+      "path": "research/salaries/gap-fill-municipal/city-of-rossland-2023-employee-remuneration.json.gzip",
+      "sha256": "ab1e5740519e0cee7a913f1b7b7e2f753370826f6ab9c06854533104097af9a2"
+    },
+    {
+      "path": "research/salaries/gap-fill-municipal/evidence/city-of-rossland-2023-employee-remuneration.json.gzip",
+      "sha256": "6473bb9e97dd43d7bfde01e2396c640c8b6cf89f44a38714df5aa6a1ce6d052f"
+    },
+    {
+      "path": "research/salaries/gap-fill-municipal/district-of-clearwater-2012-elected-officials.json.gzip",
+      "sha256": "8cc6f33f7e3dc876a798c2df7ea0d4a7e70c502c6aa56a89d3a1b62bc4a1fd7d"
+    },
+    {
+      "path": "research/salaries/gap-fill-municipal/evidence/district-of-clearwater-2012-elected-officials.json.gzip",
+      "sha256": "239ced8ecb14bee7773c4a8346c384988087842fb19fa9c5e4609cf4969b070b"
+    },
+    {
+      "path": "research/salaries/gap-fill-municipal/district-of-clearwater-2012-employee-remuneration.json.gzip",
+      "sha256": "b51bc0948f8b6563f67880bb1796daa197275f79d74b69e8efea38135381611d"
+    },
+    {
+      "path": "research/salaries/gap-fill-municipal/evidence/district-of-clearwater-2012-employee-remuneration.json.gzip",
+      "sha256": "f87cfd7344d8b3830312d9d18b4b1343b4d03048ab19aa0d98133efee69918e1"
+    },
+    {
+      "path": "research/salaries/gap-fill-municipal/district-of-clearwater-2013-elected-officials.json.gzip",
+      "sha256": "28b62ea12f0e130f42de99e86ae038046930d55e432f1d9e6e2bb6450ecf0459"
+    },
+    {
+      "path": "research/salaries/gap-fill-municipal/evidence/district-of-clearwater-2013-elected-officials.json.gzip",
+      "sha256": "c95f9b76a8870fec928cdb53814b657da20e997a2dfadb54532f7fca840ea597"
+    },
+    {
+      "path": "research/salaries/gap-fill-municipal/district-of-clearwater-2013-employee-remuneration.json.gzip",
+      "sha256": "9e1aee0cf99c1422c548cf0314b21ab131fcf0d71498e1d016928bec765f1bcc"
+    },
+    {
+      "path": "research/salaries/gap-fill-municipal/evidence/district-of-clearwater-2013-employee-remuneration.json.gzip",
+      "sha256": "c37872532943999997c32127f4b9033235beb22f2ae6ef50c3b2a3fb237b7ecd"
+    },
+    {
+      "path": "research/salaries/gap-fill-municipal/district-of-clearwater-2014-elected-officials.json.gzip",
+      "sha256": "b82bf9dfa327265f1dfc30227826bfff24a2cf01cfde607773a6b9fad97fda26"
+    },
+    {
+      "path": "research/salaries/gap-fill-municipal/evidence/district-of-clearwater-2014-elected-officials.json.gzip",
+      "sha256": "31b2c4d0ba5ae38b48af9b6644a7795a264649ba953d52d3bff5b643ef7b77d1"
+    },
+    {
+      "path": "research/salaries/gap-fill-municipal/district-of-clearwater-2014-employee-remuneration.json.gzip",
+      "sha256": "ac41fb2d1236af489295fb1a58d8e0ea162be87005747e5d41d9d1f9899691e4"
+    },
+    {
+      "path": "research/salaries/gap-fill-municipal/evidence/district-of-clearwater-2014-employee-remuneration.json.gzip",
+      "sha256": "71d0512b2de30b16a119ce0c8fdb46cfc2301f93bd5651e7b3b6b0b0da74359d"
+    },
+    {
+      "path": "research/salaries/gap-fill-municipal/district-of-clearwater-2015-elected-officials.json.gzip",
+      "sha256": "bdb68fc36034553b2f822edb1abfd7b970db3a08cc6a38bb6206468c12034746"
+    },
+    {
+      "path": "research/salaries/gap-fill-municipal/evidence/district-of-clearwater-2015-elected-officials.json.gzip",
+      "sha256": "3849cc8df8e805966cb2d5edb2e23cafd0e6a938dfe8fa404588e16e956b351f"
+    },
+    {
+      "path": "research/salaries/gap-fill-municipal/district-of-clearwater-2015-employee-remuneration.json.gzip",
+      "sha256": "836259bc9a8ed94a1909728a5a34048dffc6ed0b138d1d9e3c390c93261e3044"
+    },
+    {
+      "path": "research/salaries/gap-fill-municipal/evidence/district-of-clearwater-2015-employee-remuneration.json.gzip",
+      "sha256": "0badce477ed211bb246630c96bd7b19c284264cf7e06278a54d844fb5173fec8"
+    },
+    {
+      "path": "research/salaries/gap-fill-municipal/district-of-clearwater-2016-elected-officials.json.gzip",
+      "sha256": "5fbfaf2c17ef5c991e618f93feeff54ffe5e7448a83dba84f0d79414172ec09b"
+    },
+    {
+      "path": "research/salaries/gap-fill-municipal/evidence/district-of-clearwater-2016-elected-officials.json.gzip",
+      "sha256": "404627084c577deea618bb779478c0c4a1ebe71410b437ffb2a1b7a3ae5a6f4d"
+    },
+    {
+      "path": "research/salaries/gap-fill-municipal/district-of-clearwater-2016-employee-remuneration.json.gzip",
+      "sha256": "f6601794162d5024c00b429f9dfc343552d848e4622faf4b4acae3489d7b16f5"
+    },
+    {
+      "path": "research/salaries/gap-fill-municipal/evidence/district-of-clearwater-2016-employee-remuneration.json.gzip",
+      "sha256": "91926c4a6492900fe4c534d08cdb60f4e3bde1155497370fb1645aa1baf24307"
+    },
+    {
+      "path": "research/salaries/gap-fill-municipal/district-of-clearwater-2011-elected-officials.json.gzip",
+      "sha256": "824610b1863be50f15b7beef3da41fa76e74c80a072f85e457071dc44a5ed70c"
+    },
+    {
+      "path": "research/salaries/gap-fill-municipal/evidence/district-of-clearwater-2011-elected-officials.json.gzip",
+      "sha256": "eee03f2c2cb8195927c8497fbb4b28ebce721b47f69bbf5e7dcfe7f39ba35127"
+    },
+    {
+      "path": "research/salaries/gap-fill-municipal/district-of-clearwater-2011-employee-remuneration.json.gzip",
+      "sha256": "5186a5b0f13b46f520c42461845e2f0433ed42948a151e854ecedef85c3d68dc"
+    },
+    {
+      "path": "research/salaries/gap-fill-municipal/evidence/district-of-clearwater-2011-employee-remuneration.json.gzip",
+      "sha256": "22ad4f336a073a469c581425aba1b4f1c4711bca10c09e3dce637b7a9e34701b"
+    },
+    {
+      "path": "research/salaries/gap-fill-municipal/district-of-clearwater-2017-elected-officials.json.gzip",
+      "sha256": "e7263e38103f896f6ee7a1521887dfe6afd7fa23d1052c622330d190d115887c"
+    },
+    {
+      "path": "research/salaries/gap-fill-municipal/evidence/district-of-clearwater-2017-elected-officials.json.gzip",
+      "sha256": "3ebe695e8dca181006217d4a684358b44a14af5f5174dc7136715a0fdc42b0c5"
+    },
+    {
+      "path": "research/salaries/gap-fill-municipal/district-of-clearwater-2017-employee-remuneration.json.gzip",
+      "sha256": "f07a9c1ec1f77173a4b0602c6f31e4ffc3cbbcc2c9d9dc9a699cf3e8fb253478"
+    },
+    {
+      "path": "research/salaries/gap-fill-municipal/evidence/district-of-clearwater-2017-employee-remuneration.json.gzip",
+      "sha256": "469ebc3827be9c2b47eddb352cb108dec8888622945d1246881f5d9c8aded036"
+    },
+    {
+      "path": "research/salaries/gap-fill-municipal/district-of-clearwater-2018-elected-officials.json.gzip",
+      "sha256": "92bbc737adf4b3f6805ba6f56a18be76b10fd6c9a6c7321869610275c40620b8"
+    },
+    {
+      "path": "research/salaries/gap-fill-municipal/evidence/district-of-clearwater-2018-elected-officials.json.gzip",
+      "sha256": "8271f4d4e7979eeb68f7dc1cca685aaa013e239774bce55666d3667fe4ac0053"
+    },
+    {
+      "path": "research/salaries/gap-fill-municipal/district-of-clearwater-2018-employee-remuneration.json.gzip",
+      "sha256": "405ce5f97dafccbedc24cc1ca98645760086ab7f73275a73d4ac135c98db0a1d"
+    },
+    {
+      "path": "research/salaries/gap-fill-municipal/evidence/district-of-clearwater-2018-employee-remuneration.json.gzip",
+      "sha256": "cbadb50df0e15450ea4f9a9c7eef744ba8695c7062ed27aceb75a24b8982416d"
+    },
+    {
+      "path": "research/salaries/gap-fill-municipal/district-of-clearwater-2019-elected-officials.json.gzip",
+      "sha256": "0fd4aa97637e314dcdc4d0680b48a83cf8d54bad7af72037c0d9a33847b71f4f"
+    },
+    {
+      "path": "research/salaries/gap-fill-municipal/evidence/district-of-clearwater-2019-elected-officials.json.gzip",
+      "sha256": "fd2adba77deb6f74481309ddd986138d20204302a6a88b32eed55b725382b08a"
+    },
+    {
+      "path": "research/salaries/gap-fill-municipal/district-of-clearwater-2019-employee-remuneration.json.gzip",
+      "sha256": "0729bdcb367d656f2b3c2ac2bbd47036443aa67abf38c601d5f48805f212aeab"
+    },
+    {
+      "path": "research/salaries/gap-fill-municipal/evidence/district-of-clearwater-2019-employee-remuneration.json.gzip",
+      "sha256": "dc2147ccaa87a3235f421e1895b3b34cf0d5b83dd4412936fb63586a9da1db14"
+    },
+    {
+      "path": "research/salaries/gap-fill-municipal/district-of-clearwater-2020-elected-officials.json.gzip",
+      "sha256": "95f738dc37fffc4b1581187f9d9933164e400619645eb813cac4c683b87fbeb6"
+    },
+    {
+      "path": "research/salaries/gap-fill-municipal/evidence/district-of-clearwater-2020-elected-officials.json.gzip",
+      "sha256": "c0e82742bad3a70c9a65866102504fd3832574404bba6645ebe704a3fa4bac01"
+    },
+    {
+      "path": "research/salaries/gap-fill-municipal/district-of-clearwater-2020-employee-remuneration.json.gzip",
+      "sha256": "81660de929bb44ea50126cd18c74ca8c188180e5dfe1aa5c0ea22231d1b13589"
+    },
+    {
+      "path": "research/salaries/gap-fill-municipal/evidence/district-of-clearwater-2020-employee-remuneration.json.gzip",
+      "sha256": "4949423c92995bc772507189b915f2204f78d786625a53a04acab0193bb99236"
+    },
+    {
+      "path": "research/salaries/gap-fill-municipal/district-of-clearwater-2021-elected-officials.json.gzip",
+      "sha256": "7a0787e5d8848e17ee77e4db3558bd48365621a1d8d5c9814f482db665937604"
+    },
+    {
+      "path": "research/salaries/gap-fill-municipal/evidence/district-of-clearwater-2021-elected-officials.json.gzip",
+      "sha256": "af3783a1316eba63732e40aa2320626d4f4b9024c75d682c382e4366781a9e80"
+    },
+    {
+      "path": "research/salaries/gap-fill-municipal/district-of-clearwater-2021-employee-remuneration.json.gzip",
+      "sha256": "a3c37de8f12c509eab69d9961988af162f46e8931d6b06403579243873908783"
+    },
+    {
+      "path": "research/salaries/gap-fill-municipal/evidence/district-of-clearwater-2021-employee-remuneration.json.gzip",
+      "sha256": "1dd8453cea961f685d49c7ad235e396c7a8d05a0d3aee99420380fcd0d335e59"
+    },
+    {
+      "path": "research/salaries/gap-fill-municipal/district-of-clearwater-2022-elected-officials.json.gzip",
+      "sha256": "b9e5736c4d2c75e9a2372d4b2427ac2ce0c46d60769b38def724fc0eadc212cb"
+    },
+    {
+      "path": "research/salaries/gap-fill-municipal/evidence/district-of-clearwater-2022-elected-officials.json.gzip",
+      "sha256": "64e325b1fd3989980a105990d7b6f5fc6eef655a638665246627e3cefa853db0"
+    },
+    {
+      "path": "research/salaries/gap-fill-municipal/district-of-clearwater-2022-employee-remuneration.json.gzip",
+      "sha256": "410bde6a1197dd532d4123cda8859cfb018565e5fb73414f4a73f17e5ead2bbb"
+    },
+    {
+      "path": "research/salaries/gap-fill-municipal/evidence/district-of-clearwater-2022-employee-remuneration.json.gzip",
+      "sha256": "416674faeea9e73d18b1bb9dc1a02b9a1e1494d47df063fc2c7afbb9b198eaca"
+    },
+    {
+      "path": "research/salaries/gap-fill-municipal/district-of-barriere-2020-elected-officials.json.gzip",
+      "sha256": "2e74a08898e64294305b4ed6e4555390f7ccefeb6a8411546358b81ae0244f53"
+    },
+    {
+      "path": "research/salaries/gap-fill-municipal/evidence/district-of-barriere-2020-elected-officials.json.gzip",
+      "sha256": "9219aab712b7722dad684a4236b508075f61a61ccb72efbfd360de384d7ac305"
+    },
+    {
+      "path": "research/salaries/gap-fill-municipal/district-of-barriere-2024-elected-officials.json.gzip",
+      "sha256": "95ae2e7fc2fa54123578234ffad7de19ee8525f96382679cf6a0c96ebcbe97e7"
+    },
+    {
+      "path": "research/salaries/gap-fill-municipal/evidence/district-of-barriere-2024-elected-officials.json.gzip",
+      "sha256": "ccc52c82ae871fec3488c6320b3376604b5ff720285f35e302f7212bffb3b768"
+    },
+    {
+      "path": "research/salaries/gap-fill-municipal/district-of-barriere-2024-employee-remuneration.json.gzip",
+      "sha256": "069f79a19ba8630b0578b4bcd6aacff2ad4194b0e5c3e8f86d75edac23fd4170"
+    },
+    {
+      "path": "research/salaries/gap-fill-municipal/evidence/district-of-barriere-2024-employee-remuneration.json.gzip",
+      "sha256": "9dfa899c78a1293360a83da2063e53b8ebd223c42224bdf3beb580b4c7b65230"
+    },
+    {
+      "path": "research/salaries/gap-fill-municipal/district-of-100-mile-house-2023-elected-officials.json.gzip",
+      "sha256": "854196d5807edfd4b1ef927228e679b85b866e08a831caab44c547a113ff78e7"
+    },
+    {
+      "path": "research/salaries/gap-fill-municipal/evidence/district-of-100-mile-house-2023-elected-officials.json.gzip",
+      "sha256": "295dba263789bea6f3295ba216c0c5d27ed76f48d0cfe4a1dcf1b3161c2ef27d"
+    },
+    {
+      "path": "research/salaries/gap-fill-municipal/district-of-100-mile-house-2023-employee-remuneration.json.gzip",
+      "sha256": "3ca5187d1d31f6fac72c108dd5bbfba572e4534a7c6b214d928a7f512456cada"
+    },
+    {
+      "path": "research/salaries/gap-fill-municipal/evidence/district-of-100-mile-house-2023-employee-remuneration.json.gzip",
+      "sha256": "0713c5b4fc07f28ed037ef185039bc85dc2f7e6a532f47e08969efe66b3f0598"
+    },
+    {
+      "path": "research/salaries/gap-fill-municipal/city-of-rossland-2014-employee-remuneration.json.gzip",
+      "sha256": "17a9117f7e49162b916971b6736d94df7a735f25ac9fe5a135a3ce49a46fdd86"
+    },
+    {
+      "path": "research/salaries/gap-fill-municipal/evidence/city-of-rossland-2014-employee-remuneration.json.gzip",
+      "sha256": "5d929da1df6503debf85b02ef38521ef3d6e48ede4306b7e19930f14837e952e"
+    },
+    {
+      "path": "research/salaries/gap-fill-municipal/district-of-lantzville-2024-elected-officials.json.gzip",
+      "sha256": "fcbbecf64ecd1d21d7739a6a598d400bd9e9539ccae6787cd62925f4dd53d5fd"
+    },
+    {
+      "path": "research/salaries/gap-fill-municipal/evidence/district-of-lantzville-2024-elected-officials.json.gzip",
+      "sha256": "158ae0611cd2892bd35fed682833666a5ed4840d813375d64efbe58abe2d4f91"
+    },
+    {
+      "path": "research/salaries/gap-fill-municipal/district-of-lantzville-2024-employee-remuneration.json.gzip",
+      "sha256": "a2c2032c7704ff9f23c1b8f17ea9d6e2766c841df6c7bfead1b4fba328fee479"
+    },
+    {
+      "path": "research/salaries/gap-fill-municipal/evidence/district-of-lantzville-2024-employee-remuneration.json.gzip",
+      "sha256": "11fdb4e1bfffa12674df9c4b7a36a850baa4268b0e3360d79a20ad1795698951"
+    },
+    {
+      "path": "research/salaries/gap-fill-municipal/city-of-abbotsford-2023-employee-remuneration.json.gzip",
+      "sha256": "c59c03633f55bc431ab68bace5e3b167ba036ba1c787986c18d5e43218e6fe31"
+    },
+    {
+      "path": "research/salaries/gap-fill-municipal/evidence/city-of-abbotsford-2023-employee-remuneration.json.gzip",
+      "sha256": "cb6177518e9f12221d5365247e0179384a67e8ab84afbaa581ea27b9af2a95cb"
+    },
+    {
+      "path": "research/salaries/gap-fill-municipal/sources.json",
+      "sha256": "477e19f88279d53bffdd5f06daab7660e9ca1b1f9fb34e217e4cd963478b58f0"
+    }
+  ]
+}
