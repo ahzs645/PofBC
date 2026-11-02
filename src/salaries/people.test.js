@@ -2,7 +2,7 @@ import { test } from 'node:test'
 import assert from 'node:assert/strict'
 import { readFileSync, readdirSync } from 'node:fs'
 import { gunzipSync } from 'node:zlib'
-import { groupHighestPaidRecords, matchesNameQuery, nameMatch, nameQueryTier, nameReadings, personKey, readName, surnameShard } from './people.js'
+import { groupHighestPaidRecords, matchesNameQuery, nameMatch, nameQueryTier, nameReadings, personKey, readName, surnameShard, withoutCompiledRepeats } from './people.js'
 
 const DIR = new URL('../../public/salaries/people/', import.meta.url)
 
@@ -226,4 +226,14 @@ test('people browse joins only the spellings the link list connects, shown by it
   assert.deepEqual(joined.records, rows.slice(0, 2))
   assert.equal(joined.row[2], 4000000, 'display the highest payment, never the sum')
   assert.deepEqual(joined.aliases, [{ name: 'Garant, D.', status: 'likely' }])
+})
+
+test('a compiled record repeating another record of the same label is shown once', () => {
+  const sources = { official: { url: 'https://example.test/report.pdf', sourceKind: 'official-pdf' }, compiled: { scope: 'compiled-unverified', sourceKind: 'compiled' } }
+  const original = ['Ionescu, Diana', null, 480016, 6085, 0, 4, 'official', 113]
+  const repeat = ['lonescu, Diana', null, 480016, 6085, 1, 4, 'compiled']
+  const other = ['lonescu, Diana', null, 300000, 6085, 1, 4, 'compiled']
+  const earlier = ['lonescu, Diana', null, 480016, 6085, 1, 3, 'compiled']
+  assert.deepEqual(withoutCompiledRepeats([repeat, original, other, earlier], sources), [original, other, earlier])
+  assert.deepEqual(withoutCompiledRepeats([repeat, [...repeat]], sources), [repeat])
 })

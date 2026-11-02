@@ -178,3 +178,19 @@ export const displayName = (name, nameDisclosure) => {
 
 /** One position however its employer spelled it from row to row: case, spacing and stops set aside. */
 export const positionKey = (position) => String(position ?? '').toLowerCase().replace(/[^a-z0-9&/+ ]+/g, ' ').replace(/\s+/g, ' ').trim()
+
+/**
+ * A name's records for display: a compiled-edition row that repeats another record of the same
+ * label — the same payment and expenses — is the same disclosure seen twice, so only one is shown,
+ * preferring the original source. Differing compiled payments are kept.
+ */
+export const withoutCompiledRepeats = (rows, sources = {}) => {
+  const compiled = (row) => sources[row[6]]?.sourceKind === 'compiled' || sources[row[6]]?.scope === 'compiled-unverified'
+  const seen = new Set()
+  return [...rows].sort((a, b) => Number(compiled(a)) - Number(compiled(b))).filter((row) => {
+    const key = `${row[5]}|${row[2]}|${row[3] ?? ''}`
+    if (compiled(row) && seen.has(key)) return false
+    seen.add(key)
+    return true
+  }).sort((a, b) => rows.indexOf(a) - rows.indexOf(b))
+}

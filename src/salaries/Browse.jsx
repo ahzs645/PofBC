@@ -142,7 +142,7 @@ export const PeopleBrowse = ({ index, sector, range, layout, onPerson, onEmploye
 
   if (failed) return <p className="salaries__hint" role="alert">The highest-paid records could not be loaded.</p>
   if (!top || !links) return <p className="salaries__hint" role="status">Loading the highest-paid records…</p>
-  const note = <p className="salaries__hint salaries__hint--small">Names grouped by employer, showing the highest payment. From each period’s {top.perPeriod.toLocaleString('en-CA')} highest-paid records; matching names may be different people. Spellings of one name at one employer (“D. Garant”, “Daniel Garant”) are joined where the link list connects them. Open a name for all records and sources.</p>
+  const note = <p className="salaries__hint salaries__hint--small">Each name’s highest payment at an employer, from each period’s top {top.perPeriod.toLocaleString('en-CA')}. The same name may be different people.</p>
   if (layout === 'table') return <>{note}<DataTable data={rows} columns={columns} sorting={[{ id: 'pay', desc: true }]} label="Highest payments by name and employer" /></>
   return (
     <>
