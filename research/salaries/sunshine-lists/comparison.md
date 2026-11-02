@@ -4,15 +4,15 @@
 
 The supplied snapshot contains **3 employers** and **0 annual observations**. **It is not a complete Sunshine Lists employer inventory.** 3 employer entries contain summary evidence only.
 
-All **1,125,685 published PofBC observations** across **254 employers** were reconciled against the actual employer files: **897,321 official-source observations** and **228,364 retained compiled observations**. 192 employers have some official records; 62 have compiled records only.
+All **1,385,021 published PofBC observations** across **270 employers** were reconciled against the actual employer files: **1,156,657 official-source observations** and **228,364 retained compiled observations**. 217 employers have some official records; 53 have compiled records only.
 
 ## Observed reference employers
 
 | Sunshine Lists employer | Identity match | Reference summary | PofBC official rows | PofBC compiled rows | Comparison result |
 | --- | --- | --- | ---: | ---: | --- |
 | [Core Government](https://www.sunshinelists.ca/british-columbia/employers/core-government) | public-service | 179,103 records; 2007-2025 | 242,158 | 0 | summary-only |
-| [Fraser Health Authority](https://www.sunshinelists.ca/british-columbia/employers/fraser-health-authority) | fraser-health | 111,202 records; 2014-2025 | 111,206 | 0 | summary-only |
-| [Provincial Health Services Authority](https://www.sunshinelists.ca/british-columbia/employers/provincial-health-services-authority) | provincial-health-services-authority | 103,411 records; 2005-2025 | 78,845 | 24,923 | summary-only |
+| [Fraser Health Authority](https://www.sunshinelists.ca/british-columbia/employers/fraser-health-authority) | fraser-health | 111,202 records; 2014-2025 | 138,245 | 0 | summary-only |
+| [Provincial Health Services Authority](https://www.sunshinelists.ca/british-columbia/employers/provincial-health-services-authority) | provincial-health-services-authority | 103,411 records; 2005-2025 | 101,761 | 24,923 | summary-only |
 
 Reference totals span the source’s own reported years and definitions. The table deliberately does not subtract employer-wide totals: PofBC can include different years and disclosure categories. A range is not an annual series.
 
@@ -22,10 +22,10 @@ Reference totals span the source’s own reported years and definitions. The tab
 | --- | ---: | ---: | ---: | ---: | ---: |
 | Crown corporations | 43 | 14 | 29 | 107,704 | 35,310 |
 | Government | 1 | 1 | 0 | 242,158 | 0 |
-| Health authorities | 8 | 8 | 0 | 334,058 | 65,369 |
+| Health authorities | 8 | 8 | 0 | 575,778 | 65,369 |
 | Municipal police | 13 | 1 | 12 | 142 | 9,232 |
-| Municipalities | 120 | 118 | 2 | 119,543 | 28,211 |
-| School districts | 45 | 36 | 9 | 37,002 | 45,385 |
+| Municipalities | 121 | 119 | 2 | 119,954 | 28,211 |
+| School districts | 60 | 60 | 0 | 54,207 | 45,385 |
 | Universities and colleges | 24 | 14 | 10 | 56,714 | 44,857 |
 
 ## Processing queue
@@ -52,5 +52,5 @@ Priority 1 covers missing official employer/period coverage, held partial employ
 - [Work queue](work-queue.csv) is suitable for filtering by employer, period, source status and priority.
 - [Usage and snapshot format](README.md) explains importing a saved snapshot and rerunning the audit.
 
-Repository input fingerprint: `c08cf752cc70c753deb257c9686a63a5b2fa685c5dc8cccc906749092847336c`.
+Repository input fingerprint: `d828174d0a9d7f0385e0ae4db08af88683e43d9478248f0dd0cb3fad0b23a3a3`.
 Reference snapshot fingerprint: `5955544e5deef4dcc72fcb201137dd943053ef78deeca303026c4a4bc19124f1`.
