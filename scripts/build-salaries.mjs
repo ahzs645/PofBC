@@ -11,6 +11,7 @@ import { pooledGrowth, stayerRaises, typicalRaise } from '../src/salaries/growth
 import { BODIES, EMPLOYER_ALIASES, canonicalSlug, employerSector, employerSlug, sectorOf } from './lib/salary-employers.mjs'
 import { periodMean, TOP_PER_PERIOD, topRecords, csvRows, money, median, sha256, yearSlug, reportingPeriodType, applyCompiledReplacements, applyTravelJoinCorrections, applyCompiledRetentionDecisions, preservePublishedCompiledRows, sumMoney, duplicateStats, repeatedCandidates, validateRow, validateReplacementScopes, compiledPartitionsToRetain } from './lib/salary-data.mjs'
 import { sourceCatalog, sourceLeadsFor, hasLocatedSource } from './lib/salary-sources.mjs'
+import { decodedCurrency, isCadPerson, validateRecordAnnotations } from '../src/salaries/recordAnnotations.js'
 
 const root = resolve(dirname(fileURLToPath(import.meta.url)), '..')
 const args = process.argv.slice(2)
@@ -21,6 +22,7 @@ const research = resolve(option('--research', join(root, 'research/salaries')))
 const legacyInput = args[0] && !args[0].startsWith('--') ? resolve(args[0]) : null
 const readJson = (path) => JSON.parse(readFileSync(path, 'utf8'))
 const readGzip = (path) => JSON.parse(gunzipSync(readFileSync(path)).toString('utf8'))
+const recordReviews = readJson(join(research, 'record-annotations.json'))
 const LEGACY = [
   { label: '2017/18', files: ['data/pssdb-fye17_18.csv'] },
   { label: '2020/21', files: ['data/pssdb-fye22_21'] },
@@ -225,6 +227,7 @@ if (retentionReview?.publishedCompiledBaseline) {
   legacyRetained = preservePublishedCompiledRows(legacyRetained, JSON.parse(gunzipSync(bytes)))
 }
 const rows = [...legacyRetained, ...official]
+validateRecordAnnotations(rows, sources, recordReviews)
 if (!rows.length) throw new Error('No salary rows; refusing to replace the published data')
 const labels = [...new Set([...LEGACY.map(({ label }) => label), ...rows.map((row) => row.year), ...catalog.map((entry) => entry.year).filter(Boolean)])].sort()
 const years = labels.map((label) => ({ label, slug: yearSlug(label), periodType: reportingPeriodType(label) }))
@@ -239,7 +242,7 @@ const audit = {
   deferred, aggregateSources, travelJoinCorrections: travelRecovery.corrections, sourceCollections, sourceCatalog: catalog, anonymousLabels, repeatedCandidates: repeatedCandidates(rows), duplicates: [],
   notes: ['An absent record does not establish unemployment or below-threshold pay.', 'Exact duplicate-looking rows remain flagged unless an official replacement resolves them; shared names can be different people.', 'Legacy edition labels are unverified reporting periods.']
 }
-const index = { source: 'Official remuneration schedules with retained, explicitly unverified pssdb snapshots', years, sources, bodies: {}, unmatched: {}, repeated: audit.corrections.filter((entry) => entry.status === 'excluded'), corrections: audit.corrections }
+const index = { source: 'Official remuneration schedules with retained, explicitly unverified pssdb snapshots', years, sources, bodies: {}, unmatched: {}, repeated: audit.corrections.filter((entry) => entry.status === 'excluded'), corrections: audit.corrections, comparisonCurrency: 'CAD', recordAnnotations: 'record-annotations.json' }
 
 // Stage all outputs first. A rejected input cannot erase a working website.
 mkdirSync(dirname(out), { recursive: true })
@@ -252,6 +255,7 @@ const write = (path, value, gzip = false) => {
 const compiledNotes = ['Compiled edition; the employer’s exact reporting period and completeness have not been verified against its report.']
 const employerList = []
 try {
+  write('record-annotations.json', recordReviews)
   for (const [slug, list] of [...bySlug].sort(([a], [b]) => a.localeCompare(b))) {
     const info = employerInfo.get(slug)
     const periodTypes = new Set(list.map((row) => sources[row.sourceId]?.periodType).filter((type) => ['calendar', 'fiscal'].includes(type)))
@@ -306,7 +310,9 @@ try {
       const bodyRows = exported.filter((row) => row[4] === at).map((row) => [row[0], row[1], row[2], row[3], row[5], row[6]])
       const details = coverage[at]
       write(`${year.slug}/${info.body}.json`, { ...details, year: year.label, agencies: info.names, rows: bodyRows })
-      ;(index.bodies[info.body] ??= {})[year.slug] = { count: bodyRows.length, total: sumMoney(subset.map((row) => row.pay)), median: median(subset.map((row) => row.pay)), max: Math.max(...subset.map((row) => row.pay)), agencies: info.names, sourceIds: details.sourceIds, scope: details.scope, notes: details.notes, periodStart: details.periodStart, periodEnd: details.periodEnd, threshold: details.threshold, duplicateRows: details.duplicateRows }
+      const cad = subset.filter((row) => decodedCurrency(row, sources) === 'CAD')
+      ;(index.bodies[info.body] ??= {})[year.slug] = { count: bodyRows.length, total: sumMoney(cad.map((row) => row.pay)), median: median(cad.map((row) => row.pay)), max: cad.length ? Math.max(...cad.map((row) => row.pay)) : null, agencies: info.names, sourceIds: details.sourceIds, scope: details.scope, notes: details.notes, periodStart: details.periodStart, periodEnd: details.periodEnd, threshold: details.threshold, duplicateRows: details.duplicateRows,
+        ...(cad.length !== subset.length ? { comparisonCurrency: 'CAD', comparableRecords: cad.length, nonCadRecords: subset.length - cad.length } : {}) }
     }
   }
   const coverage = Object.fromEntries(employerList.map((entry) => [entry.slug, entry.coverage]))
@@ -324,12 +330,16 @@ try {
     list.sort((a, b) => a[0].localeCompare(b[0]) || a[5] - b[5] || b[2] - a[2] || a[4] - b[4])
     write(`people/${shard}.json.gzip`, list, true); shardCounts[shard] = list.length
   }
-  write('people/top.json.gzip', { note: `Each period's ${TOP_PER_PERIOD} highest-paid named records across every employer, in the people index's row schema, highest first. The top only, not every record.`, perPeriod: TOP_PER_PERIOD, rows: topRecords([...shards.values()].flat()) }, true)
+  const peopleContext = { years: labels, sources, employers: employerList.map(({ slug, names, sector, body }) => [names.at(-1), sector, body, slug]) }
+  const namedRows = [...shards.values()].flat()
+  write('people/top.json.gzip', { note: `Each period's ${TOP_PER_PERIOD} highest CAD named records across every employer. Other currencies are retained separately without a CAD rank. No exchange rate is assumed.`, perPeriod: TOP_PER_PERIOD,
+    rows: topRecords(namedRows.filter((row) => isCadPerson(row, peopleContext))), unrankedRows: namedRows.filter((row) => !isCadPerson(row, peopleContext)), comparisonCurrency: 'CAD' }, true)
   write('people/index.json', { schemaVersion: 2, note: 'Rows: [disclosed name, position, remuneration, expenses, employer index, year index, source id, physical PDF page or null]. Names are not personal identifiers.', years: labels, sources, coverage, employers: employerList.map(({ slug, names, sector, body }) => [names.at(-1), sector, body, slug]), shards: shardCounts })
   // Every position title across employers (src/salaries/positions.js reads one title however it was
   // spelled): a list to search, then each title's employers and years in slices by its first letters.
   const titles = new Map()
   for (const row of rows) {
+    if (decodedCurrency(row, sources) !== 'CAD') continue
     const key = row.position ? titleKey(row.position) : ''
     if (!key) continue
     if (!titles.has(key)) titles.set(key, { spellings: new Map(), cells: new Map(), employers: new Set(), rows: 0, records: [] })
@@ -393,7 +403,7 @@ try {
   }
   titleList.sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0]))
   for (const [shard, entries] of titleShards) write(`positions/${shard}.json.gzip`, entries, true)
-  write('positions/index.json.gzip', { note: 'Titles: [most common spelling, rows, employers, first year index, last year index, average in the last period, average growth a year (each employer from its first to its last period with 5 or more records, 3 or more years apart, weighed by records; src/salaries/growth.js), records weighing it, employers in it, its first year index, its last year index, median yearly raise of a name kept under the title at one employer, raises in it, names in it]; growth and raise are null where none could be measured, and an entry ends where its remaining fields would all be empty. Slices by key: cells [employer index in employers/index.json, year index, rows, mean, median, lowest, highest]. Medians, where several employers share a year: { all, or a sector where the title spans several: [[year index, median of every record that year]] }; a year with one employer has that cell’s median. Rows are disclosure records, not positions filled.', years: labels, titles: titleList, shards: [...titleShards.keys()].sort() }, true)
+  write('positions/index.json.gzip', { note: 'CAD comparisons only; observations in other currencies remain in the employer and people exports with record-annotations.json. Titles: [most common spelling, rows, employers, first year index, last year index, average in the last period, average growth a year (each employer from its first to its last period with 5 or more records, 3 or more years apart, weighed by records; src/salaries/growth.js), records weighing it, employers in it, its first year index, its last year index, median yearly raise of a name kept under the title at one employer, raises in it, names in it]; growth and raise are null where none could be measured, and an entry ends where its remaining fields would all be empty. Slices by key: cells [employer index in employers/index.json, year index, rows, mean, median, lowest, highest]. Medians, where several employers share a year: { all, or a sector where the title spans several: [[year index, median of every record that year]] }; a year with one employer has that cell’s median. Rows are disclosure records, not positions filled.', years: labels, titles: titleList, shards: [...titleShards.keys()].sort() }, true)
   audit.output = { rows: rows.length, namedRows: Object.values(shardCounts).reduce((sum, count) => sum + count, 0), employers: employerList.length, atlasBodies: Object.keys(index.bodies).length, years: labels, availableEmployerYears: employerList.reduce((sum, entry) => sum + entry.coverage.filter((year) => year.status === 'available').length, 0) }
   write('coverage.json', { ...audit, employers: employerList.map(({ slug, names, sector, coverage }) => ({ slug, names, sector, coverage })) })
   index.coverage = Object.fromEntries(employerList.filter((entry) => entry.body).map((entry) => [entry.body, entry.coverage]))

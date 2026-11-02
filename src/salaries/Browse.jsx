@@ -11,6 +11,7 @@ import { linkLookup } from './nameLinks.js'
 import { keyedTitles } from './positions.js'
 import { reportingYearLabel } from './coverage.js'
 import { formatMoney as money } from './money.js'
+import { personAnnotation, personCurrency } from './recordAnnotations.js'
 import { rangeLabel, YearStrip } from './parts.jsx'
 import { count, loadJson, Paged, PersonIcon, RoleIcon, seenYears } from './common.jsx'
 import { DataTable } from './DataTable.jsx'
@@ -102,7 +103,9 @@ const TopRecordCard = ({ group, rank, index, onPerson }) => {
         {records.length > 1 && <span className="salaries__line">{count(records.length, 'ranked record', 'ranked records')} · {count(years.length, 'period', 'periods')}</span>}
         {group.aliases.length > 0 && <AliasLine aliases={group.aliases} records={records} sources={index.sources} />}
       </span>
-      <span className="salaries__aside">{money(row[2])}<span className="salaries__line">No. {rank} · {index.years[row[5]]}</span></span>
+      <span className="salaries__aside">{money(row[2], '—', personCurrency(row, index))}<span className="salaries__line">{rank != null ? `No. ${rank} · ` : 'Unranked · '}{index.years[row[5]]}</span>
+        {group.foreign?.map((foreign, at) => <span className="salaries__line" key={at}>{money(foreign[2], '—', personCurrency(foreign, index))} · {index.years[foreign[5]]} · {personAnnotation(foreign, index)?.measure ?? 'other currency'} · unranked</span>)}
+      </span>
     </button>
   )
 }
@@ -130,6 +133,9 @@ export const PeopleBrowse = ({ index, sector, range, layout, onPerson, onEmploye
   }, [])
   const lookup = useMemo(() => linkLookup(links, index.employers), [links, index])
   const rows = useMemo(() => top && links ? groupHighestPaidRecords(top.rows, { employers: index.employers, sources: index.sources, sector, range, links: lookup }) : [], [top, links, lookup, index, sector, range])
+  const foreign = useMemo(() => top && links ? groupHighestPaidRecords(top.unrankedRows ?? [], { employers: index.employers, sources: index.sources, sector, range, links: lookup }) : [], [top, links, lookup, index, sector, range])
+  const foreignByKey = useMemo(() => new Map(foreign.map((group) => [group.key, group.records])), [foreign])
+  const unranked = foreign.filter((group) => !rows.some((ranked) => ranked.key === group.key))
   const columns = useMemo(() => [
     { id: 'name', header: 'Name', accessorFn: ({ name, row }) => displayName(name, index.sources?.[row[6]]?.nameDisclosure), cell: ({ row: { original }, getValue }) => <button type="button" className="salaries__link salaries-row__name" onClick={() => onPerson(original.name, index.employers[original.row[4]][3])}>{getValue()}</button> },
     { id: 'position', header: 'Position', accessorFn: ({ row }) => row[1] ?? '' },
@@ -137,13 +143,15 @@ export const PeopleBrowse = ({ index, sector, range, layout, onPerson, onEmploye
     { id: 'period', header: 'Payment period', accessorFn: ({ row }) => index.years[row[5]] },
     { id: 'pay', header: 'Highest payment', accessorFn: ({ row }) => row[2], meta: { kind: 'money' }, cell: ({ getValue }) => money(getValue()) },
     { id: 'expenses', header: 'Expenses', accessorFn: ({ row }) => row[3], meta: { kind: 'money' }, cell: ({ getValue }) => money(getValue()) },
-    { id: 'records', header: 'Ranked records', accessorFn: ({ records }) => records.length, meta: { kind: 'number', filter: false } }
-  ], [index, onPerson, onEmployer])
+    { id: 'records', header: 'Ranked records', accessorFn: ({ records }) => records.length, meta: { kind: 'number', filter: false } },
+    ...(foreign.length ? [{ id: 'other-currencies', header: 'Other currencies · unranked', accessorFn: (group) => (foreignByKey.get(group.key) ?? []).map((row) => `${money(row[2], '—', personCurrency(row, index))} · ${index.years[row[5]]}`).join('; ') }] : [])
+  ], [index, onPerson, onEmployer, foreign, foreignByKey])
 
   if (failed) return <p className="salaries__hint" role="alert">The highest-paid records could not be loaded.</p>
   if (!top || !links) return <p className="salaries__hint" role="status">Loading the highest-paid records…</p>
-  const note = <p className="salaries__hint salaries__hint--small">Each name’s highest payment at an employer, from each period’s top {top.perPeriod.toLocaleString('en-CA')}. The same name may be different people.</p>
-  if (layout === 'table') return <>{note}<DataTable data={rows} columns={columns} sorting={[{ id: 'pay', desc: true }]} label="Highest payments by name and employer" /></>
+  const note = <p className="salaries__hint salaries__hint--small">Each name’s highest CAD payment at an employer, from each period’s top {top.perPeriod.toLocaleString('en-CA')}. Other currencies are unranked. The same name may be different people.</p>
+  const otherCurrencies = <>{unranked.length > 0 && <section aria-label="Other currencies"><h3 className="salaries__title">Other currencies · unranked</h3><div className="salaries__grid">{unranked.map((group) => <TopRecordCard key={group.key} group={group} index={index} onPerson={onPerson} />)}</div></section>}</>
+  if (layout === 'table') return <>{note}<DataTable data={rows} columns={columns} sorting={[{ id: 'pay', desc: true }]} label="Highest CAD payments by name and employer" />{otherCurrencies}</>
   return (
     <>
       {note}
@@ -152,11 +160,12 @@ export const PeopleBrowse = ({ index, sector, range, layout, onPerson, onEmploye
           const first = rows.indexOf(page[0])
           return (
             <div className="salaries__grid">
-              {page.map((group, at) => <TopRecordCard key={group.key} group={group} rank={first + at + 1} index={index} onPerson={onPerson} />)}
+              {page.map((group, at) => <TopRecordCard key={group.key} group={{ ...group, foreign: foreignByKey.get(group.key) }} rank={first + at + 1} index={index} onPerson={onPerson} />)}
             </div>
           )
         }}
       </Paged>
+      {unranked.length > 0 && <section aria-label="Other currencies"><h3 className="salaries__title">Other currencies · unranked</h3><div className="salaries__grid">{unranked.map((group) => <TopRecordCard key={group.key} group={group} index={index} onPerson={onPerson} />)}</div></section>}
     </>
   )
 }
@@ -195,7 +204,7 @@ export const PositionBrowse = ({ titlesIndex, years, range, layout, onTitle }) =
       <Segmented compact ariaLabel="Order positions" value={order} onChange={setOrder} options={TITLE_ORDERS} />
       <p className="salaries__hint salaries__hint--small salaries__order-note">
         {order === 'used'
-          ? 'Grouped titles · latest period averages'
+          ? 'Grouped titles · latest CAD averages'
           : order === 'growth'
             ? 'Titles whose average could be followed over 10 or more records, fastest first.'
             : 'Titles with 10 or more raises of a name kept under them, largest first.'}

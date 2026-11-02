@@ -20,6 +20,8 @@ import { peopleOverTime, Trends } from './Trends.jsx'
 import { seriesGrowth, stayerRaises, typicalRaise, yearNumber } from './growth.js'
 import { SourceLink } from './DisclosureEvidence.jsx'
 import { filterPositionGroups, matchesRecordQuery } from './viewState.js'
+import { isCadEmployer } from './recordAnnotations.js'
+import { ForeignObservations } from './RecordAnnotation.jsx'
 
 const SHOWS = ['positions', 'people', 'everyone', 'trends']
 
@@ -53,7 +55,9 @@ const POSITION_ORDER = {
  */
 export const EmployerPage = ({ entry, years, sources, year: wantedYear, show, role, layout = 'cards', back, onYear, onShow, onLayout, onRole, onTitle, onPerson, onOpenGovernment, remember }) => {
   const seen = seenYears(entry)
-  const [rows, setRows] = useState(null)
+  const [sourceRows, setRows] = useState(null)
+  const rows = useMemo(() => sourceRows?.filter((row) => isCadEmployer(row, entry.slug, years, sources)) ?? null, [sourceRows, entry.slug, years, sources])
+  const foreignRows = useMemo(() => sourceRows?.filter((row) => !isCadEmployer(row, entry.slug, years, sources)) ?? [], [sourceRows, entry.slug, years, sources])
   const [failed, setFailed] = useState(false)
   const [loadVersion, setLoadVersion] = useState(0)
   const [filter, setFilter] = useState('')
@@ -149,10 +153,13 @@ export const EmployerPage = ({ entry, years, sources, year: wantedYear, show, ro
 
   if (role) {
     return (
+      <>
       <RolePage
         entry={entry} years={years} sources={sources} rows={rows} failed={failed} roleKey={role} wantedYear={wantedYear} back={back}
         onRetry={() => setLoadVersion((value) => value + 1)} onYear={pick} onTitle={onTitle} onPerson={onPerson} remember={remember}
       />
+      <ForeignObservations rows={foreignRows.filter((row) => titleKey(row[1] ?? '') === role)} employer={entry.slug} years={years} sources={sources} onPerson={onPerson} />
+      </>
     )
   }
 
@@ -172,6 +179,7 @@ export const EmployerPage = ({ entry, years, sources, year: wantedYear, show, ro
         </p>
         <YearPicker years={years} counts={entry.counts} coverage={entry.coverage} value={year} onChange={pick} />
         <h3 className="salaries__year-title">{reportingYearLabel(years[year])}</h3>
+        {foreignRows.length > 0 && <p className="salaries__hint salaries__hint--small">Comparisons use CAD observations. Other currencies remain available below with their original amounts and evidence.</p>}
         {categories.length > 1 && (
           <label className="salaries__note salaries__category">
             Disclosure category{' '}
@@ -308,6 +316,7 @@ export const EmployerPage = ({ entry, years, sources, year: wantedYear, show, ro
 
         </section>
       )}
+      <ForeignObservations rows={foreignRows} employer={entry.slug} years={years} sources={sources} onPerson={onPerson} />
     </div>
   )
 }

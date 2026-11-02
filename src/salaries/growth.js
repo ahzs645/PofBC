@@ -114,7 +114,7 @@ export const formatRate = (rate, suffix = ' a year') => {
  */
 export const payBands = (pay, width = 25000, cap = 300000) => {
   if (!pay.length) return []
-  const floor = Math.floor(Math.min(...pay) / width) * width
+  const floor = Math.min(cap, Math.floor(Math.min(...pay) / width) * width)
   const top = Math.min(cap, Math.floor(Math.max(...pay) / width) * width)
   const bands = []
   for (let from = floor; from <= top; from += width) bands.push({ from, to: from >= cap ? null : from + width, count: 0 })

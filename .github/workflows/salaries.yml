@@ -49,7 +49,7 @@ jobs:
       # This salary-only check needs neither the licensed artwork fonts nor live report downloads.
       - run: npm ci --ignore-scripts
       - name: Test salary data and interface behavior
-        run: node --test scripts/salary-data.test.mjs scripts/reviewed-name-connections.test.mjs src/salaries/*.test.js src/government/salaries.test.js
+        run: node --test scripts/salary-data.test.mjs scripts/reviewed-name-connections.test.mjs scripts/held-name-connections.test.mjs src/salaries/*.test.js src/government/salaries.test.js
       - name: Test source parsers with local regression fixtures
         # GIS fixtures run in health-map.yml with their own pinned dependencies.
         # Retain every other parser fixture in this lightweight salary job.
@@ -87,6 +87,7 @@ jobs:
           npm run review:salary-gap-fill
           python3 scripts/review_name_connection_evidence.py --write-reviewed --check
           python3 scripts/review_name_connection_continuation.py --check
+          python3 scripts/assess_salary_name_queue.py --check
           git diff --exit-code -- public/salaries src/government/salaryIndex.js research/salaries/coverage-inventory.md research/salaries/source-inventory.md research/salaries/municipal-audit/coverage.json research/salaries/municipal-audit/coverage.md research/salaries/municipal-audit/follow-up.json research/salaries/municipal-audit/follow-up.csv research/salaries/municipal-audit/follow-up.md research/salaries/municipal-corrections
           git diff --exit-code -- research/salaries/sector-search-2026-10-31
           git diff --exit-code -- research/salaries/municipal-next-pass
