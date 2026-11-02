@@ -51,6 +51,12 @@ export const personKey = (name) => {
  * Browse names once per employer, retaining every ranked observation behind the card/table row.
  * This groups disclosed names, not verified people or proved duplicate payments. Filter before
  * grouping, never sum payments, and prefer an original source when equal payments tie.
+ *
+ * A name disclosed with only an initial ("Garant, D.") joins a full name at the same employer
+ * ("Garant, Daniel") when that is the only full name there it agrees with, and the two never appear
+ * in the same period — two records in one period are two people. Anything less certain stays apart.
+ * The group is shown by its full `name` even where an initial's payment is the highest, and the
+ * joined spellings are kept as `aliases` so the card can say so.
  */
 export const groupHighestPaidRecords = (rows, { employers, sources = {}, sector = 'all', range = null }) => {
   const groups = new Map()
@@ -70,8 +76,25 @@ export const groupHighestPaidRecords = (rows, { employers, sources = {}, sector 
     group.records.push(row)
     if (better(row, group.row)) group.row = row
   }
-  return [...groups.values()].map((group) => ({ ...group, years: [...new Set(group.records.map((row) => row[5]))].sort((a, b) => a - b) }))
-    .sort((a, b) => b.row[2] - a.row[2] || a.key.localeCompare(b.key))
+  const periods = (group) => new Set(group.records.map((row) => row[5]))
+  const initialOnly = (group) => partsOf(group.row[0]).given[0]?.length === 1
+  const list = [...groups.values()]
+  for (const short of list.filter(initialOnly)) {
+    const own = periods(short)
+    const fits = list.filter((full) => full !== short && !full.merged && !initialOnly(full) && full.row[4] === short.row[4] && nameMatch(short.row[0], full.row[0]))
+    if (fits.length !== 1 || [...periods(fits[0])].some((at) => own.has(at))) continue
+    const [full] = fits
+    full.name ??= full.row[0]
+    full.records.push(...short.records)
+    if (better(short.row, full.row)) full.row = short.row
+    short.merged = true
+  }
+  return list.filter((group) => !group.merged).map(({ merged, name, ...group }) => {
+    name ??= group.row[0]
+    const shown = personKey(name)
+    const aliases = [...new Map(group.records.filter((row) => personKey(row[0]) !== shown).map((row) => [personKey(row[0]), row[0]])).values()]
+    return { ...group, name, aliases, years: [...new Set(group.records.map((row) => row[5]))].sort((a, b) => a - b) }
+  }).sort((a, b) => b.row[2] - a.row[2] || a.key.localeCompare(b.key))
 }
 
 /** A prefix search supports several given names without discarding or concatenating their tokens. */
