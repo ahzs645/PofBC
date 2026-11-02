@@ -1,0 +1,52 @@
+{
+  "accepted": true,
+  "candidateProjection": {
+    "path": "research/salaries/gap-fill-2026-11-02/health_boards/peer-phsa-history/normalized-candidate-projection-review.json",
+    "sha256": "632f340e26883ed72c2ae69de52f56d4c4c9aa7751e4083391f64dea900dc1d6"
+  },
+  "finalProjection": {
+    "path": "research/salaries/gap-fill-2026-11-02/health_boards/peer-phsa-history/normalized-final-projection-review.json",
+    "sha256": "b0d06aa4713bec70137be598380cc10ad5d06125757357a57e3f69200deaba64"
+  },
+  "sources": [
+    {
+      "sourceId": "gap-phsa-history-phsa-2009-10",
+      "dataAndProvenanceUnchanged": true,
+      "sourceFieldChangesOnly": [
+        "status",
+        "validation",
+        "verifiedOn"
+      ],
+      "validationChangesOnly": [
+        "candidateOnly",
+        "independentPeerVerified",
+        "pendingGates",
+        "rootSourceAcceptance"
+      ],
+      "rootApprovalPinVerified": {
+        "path": "research/salaries/gap-fill-2026-11-02/reviews/root-nine-phsa-history-source-acceptance.json",
+        "sha256": "0ac2f26bd907c1d46fd93fed52a35ab4ccd4d7e895bb98a47e2c6b5fadf7481a"
+      }
+    },
+    {
+      "sourceId": "gap-phsa-history-phsa-2010-11",
+      "dataAndProvenanceUnchanged": true,
+      "sourceFieldChangesOnly": [
+        "status",
+        "validation",
+        "verifiedOn"
+      ],
+      "validationChangesOnly": [
+        "candidateOnly",
+        "independentPeerVerified",
+        "pendingGates",
+        "rootSourceAcceptance"
+      ],
+      "rootApprovalPinVerified": {
+        "path": "research/salaries/gap-fill-2026-11-02/reviews/root-nine-phsa-history-source-acceptance.json",
+        "sha256": "0ac2f26bd907c1d46fd93fed52a35ab4ccd4d7e895bb98a47e2c6b5fadf7481a"
+      }
+    }
+  ],
+  "noOutreach": true
+}

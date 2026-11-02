@@ -1,0 +1,99 @@
+{
+  "sources": [
+    {
+      "key": "phsa-2011-12",
+      "selectedSnapshot": {
+        "path": "research/salaries/gap-fill-2026-11-02/school_north/reviews/phsa-history/phsa-2011-12-selected-peer-snapshot-v2.json.gzip",
+        "sha256": "8cffe708136da7244bef789e328cb1bc376f4243c4998f590c0f1c6b04d6b702"
+      },
+      "allSelectedNumericExpensesRejectIndependentDashShape": true,
+      "allSelectedLowIntegerExpensesPersonallySourceRead": [
+        {
+          "sequence": 157,
+          "physicalPage": 7,
+          "rowOnPage": 2,
+          "literalIntegerExpense": 5,
+          "personalSourceRead": true
+        },
+        {
+          "sequence": 2144,
+          "physicalPage": 57,
+          "rowOnPage": 39,
+          "literalIntegerExpense": 4,
+          "personalSourceRead": true
+        }
+      ],
+      "nullExpenseHeuristicExceptionsPersonallySourceResolved": []
+    },
+    {
+      "key": "phsa-2012-13",
+      "selectedSnapshot": {
+        "path": "research/salaries/gap-fill-2026-11-02/school_north/reviews/phsa-history/phsa-2012-13-selected-peer-snapshot-v2-source-reread.json.gzip",
+        "sha256": "438c7b62eea4f0ba09cbff2c7696cbb323b64cd51bde4ec4bd925beaf2892bac"
+      },
+      "allSelectedNumericExpensesRejectIndependentDashShape": true,
+      "allSelectedLowIntegerExpensesPersonallySourceRead": [
+        {
+          "sequence": 479,
+          "physicalPage": 14,
+          "rowOnPage": 39,
+          "literalIntegerExpense": 8,
+          "personalSourceRead": true
+        },
+        {
+          "sequence": 1014,
+          "physicalPage": 28,
+          "rowOnPage": 14,
+          "literalIntegerExpense": 6,
+          "personalSourceRead": true
+        },
+        {
+          "sequence": 2572,
+          "physicalPage": 67,
+          "rowOnPage": 12,
+          "literalIntegerExpense": 9,
+          "personalSourceRead": true
+        },
+        {
+          "sequence": 2613,
+          "physicalPage": 68,
+          "rowOnPage": 13,
+          "literalIntegerExpense": 5,
+          "personalSourceRead": true
+        },
+        {
+          "sequence": 2620,
+          "physicalPage": 68,
+          "rowOnPage": 20,
+          "literalIntegerExpense": 7,
+          "personalSourceRead": true
+        },
+        {
+          "sequence": 2641,
+          "physicalPage": 69,
+          "rowOnPage": 1,
+          "literalIntegerExpense": 8,
+          "personalSourceRead": true
+        },
+        {
+          "sequence": 3329,
+          "physicalPage": 86,
+          "rowOnPage": 9,
+          "literalIntegerExpense": 8,
+          "personalSourceRead": true
+        }
+      ],
+      "nullExpenseHeuristicExceptionsPersonallySourceResolved": [
+        {
+          "sequence": 2806,
+          "physicalPage": 73,
+          "rowOnPage": 6,
+          "shape": "numeric-multiple-glyphs-or-noise",
+          "sourceResolution": "Full source personal first read has literal dash; numeric/noise heuristic is not a field value."
+        }
+      ]
+    }
+  ],
+  "heuristicLimit": "Source-only ink shape is diagnostic, not a number or proof of zero. One noisy source dash is individually source-read. All eight narrow/tall targets were personally read; narrow/tall target selection does not enumerate all single-digit amounts. This final selected-value guard separately enumerates all nine observed numeric expenses below10.",
+  "noOutreach": true
+}

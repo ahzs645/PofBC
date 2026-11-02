@@ -1,0 +1,33 @@
+{
+  "firstReadingsRetained": true,
+  "selectedV2AlreadyObserved": true,
+  "sourceLocators": "selected-v2-difference-locators-corrected.json",
+  "corrections": [
+    {
+      "sourceKey": "phsa-2011-12",
+      "sequence": 668,
+      "field": "name",
+      "first": "Dedhar,Shoukat R",
+      "freshLiteral": "Dedhar,Shoukat R.",
+      "cause": "Own first transcript omitted visible terminal period"
+    },
+    {
+      "sourceKey": "phsa-2011-12",
+      "sequence": 1352,
+      "field": "name",
+      "first": "Jacobson,John D.",
+      "freshLiteral": "Jacobson,John D",
+      "cause": "Own first transcript added a period absent from source"
+    },
+    {
+      "sourceKey": "phsa-2011-12",
+      "sequence": 2084,
+      "field": "expenses",
+      "first": 5563,
+      "freshLiteral": 5663,
+      "cause": "Own first transcript misread second visible digit6 as5"
+    }
+  ],
+  "candidateFieldsAlreadyCorrect": true,
+  "noOutreach": true
+}

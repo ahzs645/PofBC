@@ -1,0 +1,1738 @@
+{
+  "status": "normalized-candidate-data-replay-passed-for-allnine-sources-and247-personal-targets",
+  "sourceReview": {
+    "file": "research/salaries/gap-fill-2026-11-02/school_native/reviews/health-other-history/independent247-source-exception-review.json",
+    "sha256": "48d870b7820a1e8b20c2d5528b6d99244313434f778e4951e210f5f92e15610b"
+  },
+  "manifestSnapshot": {
+    "file": "research/salaries/gap-fill-health-other-history/sources-candidate.json",
+    "sha256": "ab974e2780ef9fc3706b0d2d64b8fafd188644ca556a6763a4cf22ce4e8e8a22"
+  },
+  "independentFinalTranscript": {
+    "file": "research/salaries/gap-fill-2026-11-02/school_native/reviews/health-other-history/independent-final247-source-transcript.json",
+    "sha256": "5ec070934054f9430d9344f10fd8173582fbb3f0881573c470993e5eb61a5706"
+  },
+  "counts": {
+    "normalizedSources": 9,
+    "normalizedObservations": 11471,
+    "rawNativeObservationsPreserved": 11470,
+    "explicitImageBackedOmittedObservationAdded": 1,
+    "personalSourceTargetsReplayedToNormalizedData": 247,
+    "unexpectedRawNativeValueChanges": 0
+  },
+  "sources": [
+    {
+      "sourceId": "gap-health-other-history-northern-health-2007-08",
+      "sourceSha256": "a3dcff9c721efc1ad1ca849de9a429af0087e8cb934fa71d74128711577bf0d8",
+      "sourceUrl": "https://digitalcollectionsrepository.llbc.leg.bc.ca/server/api/core/bitstreams/fd70d950-b224-41bf-92ad-d11efbbb1a28/content",
+      "rowCount": 694,
+      "data": {
+        "file": "research/salaries/gap-fill-health-other-history/northern-health-2007-08-employees.json.gzip",
+        "sha256": "5152c6b7edab58cd476bf4887d928a79cdfe3ef7514e9286bfda05f4b272f605"
+      },
+      "provenance": {
+        "file": "research/salaries/gap-fill-health-other-history/northern-health-2007-08-provenance.json.gzip",
+        "sha256": "984a6c7b9dc7963ff31fd08f0e9d1c5df12bc3d0da0fd390fd96a4599f598990"
+      },
+      "rawCandidate": {
+        "file": "research/salaries/gap-fill-2026-11-02/health_other_history/native-candidates/northern-health-2007-08-poppler-primary.json.gzip",
+        "sha256": "a6856d120335377fa6ade6236c4fd184f6077924b68b5b26a2afe3302512728b"
+      },
+      "rawCandidateRowsPreserved": 694,
+      "explicitSourceImageAdditions": []
+    },
+    {
+      "sourceId": "gap-health-other-history-northern-health-2006-07",
+      "sourceSha256": "569f2dfd190f37eb85daeacd52c43779384f8f83309a28f6620adbfd37742454",
+      "sourceUrl": "https://digitalcollectionsrepository.llbc.leg.bc.ca/server/api/core/bitstreams/7b5da01e-e6fb-4e74-99b2-ecfbbe0e7027/content",
+      "rowCount": 710,
+      "data": {
+        "file": "research/salaries/gap-fill-health-other-history/northern-health-2006-07-employees.json.gzip",
+        "sha256": "4d078dc07276c67c1bf39eac41ea3bac29308af593566cd65e5e92c0c56f7b65"
+      },
+      "provenance": {
+        "file": "research/salaries/gap-fill-health-other-history/northern-health-2006-07-provenance.json.gzip",
+        "sha256": "47ce32ea320ad68839db4c9f6fc6a712d0a2d43aa40b2dfc2f971ec6c63929e2"
+      },
+      "rawCandidate": {
+        "file": "research/salaries/gap-fill-2026-11-02/health_other_history/native-candidates/northern-health-2006-07-poppler-primary.json.gzip",
+        "sha256": "f1873f232cf2f0636b466813bdaa7bb53f56d1fa1f6317f30179eb44f87651c4"
+      },
+      "rawCandidateRowsPreserved": 710,
+      "explicitSourceImageAdditions": []
+    },
+    {
+      "sourceId": "gap-health-other-history-northern-health-2005-06",
+      "sourceSha256": "b97d1662baeca2c42128da1d19480d6dedc7045a0d5ad7317ac3a20786d14581",
+      "sourceUrl": "https://digitalcollectionsrepository.llbc.leg.bc.ca/server/api/core/bitstreams/345e75a3-f22b-4491-86b3-a8b8284778ea/content",
+      "rowCount": 405,
+      "data": {
+        "file": "research/salaries/gap-fill-health-other-history/northern-health-2005-06-employees.json.gzip",
+        "sha256": "bf8fa35bb4545230827c3643e538c385f2a3bf297da201c05066abffbcfe4252"
+      },
+      "provenance": {
+        "file": "research/salaries/gap-fill-health-other-history/northern-health-2005-06-provenance.json.gzip",
+        "sha256": "7a8c68cc52c7c652733a140a4ce57852fa2056826788fbd99188aa9ece6e6f94"
+      },
+      "rawCandidate": {
+        "file": "research/salaries/gap-fill-2026-11-02/health_other_history/native-candidates/northern-health-2005-06-poppler-primary.json.gzip",
+        "sha256": "8e32e7ca222a331a8e7e5402e09cf9536bffe1a9ce169bd8bf3568fc75194ece"
+      },
+      "rawCandidateRowsPreserved": 405,
+      "explicitSourceImageAdditions": []
+    },
+    {
+      "sourceId": "gap-health-other-history-northern-health-2004-05",
+      "sourceSha256": "fb11d3cad59dcc6d1068e6b2895c468f8badc80bf43adfde4f27f921d736b324",
+      "sourceUrl": "https://digitalcollectionsrepository.llbc.leg.bc.ca/server/api/core/bitstreams/8c9467e9-f596-42cc-9e93-fdf731db22a7/content",
+      "rowCount": 380,
+      "data": {
+        "file": "research/salaries/gap-fill-health-other-history/northern-health-2004-05-employees.json.gzip",
+        "sha256": "ed58c66bc4b29d02443599348ba4459a809ff7b72bbd828972e32be855d30ba8"
+      },
+      "provenance": {
+        "file": "research/salaries/gap-fill-health-other-history/northern-health-2004-05-provenance.json.gzip",
+        "sha256": "237b44b78154768acc05226b9309ac3c02890810eee40a8dd029d332144f819c"
+      },
+      "rawCandidate": {
+        "file": "research/salaries/gap-fill-2026-11-02/health_other_history/native-candidates/northern-health-2004-05-poppler-primary.json.gzip",
+        "sha256": "cb8bdb3e25007c640d76c2eab8e3dbb4a36029f73023437a502fa81e6aed951e"
+      },
+      "rawCandidateRowsPreserved": 380,
+      "explicitSourceImageAdditions": []
+    },
+    {
+      "sourceId": "gap-health-other-history-northern-health-2003-04",
+      "sourceSha256": "9fe5e1c52ac889449357d147abb1d2d964c6be4af48cb932425ac1132e18d1ef",
+      "sourceUrl": "https://digitalcollectionsrepository.llbc.leg.bc.ca/server/api/core/bitstreams/649f5191-2ab8-4abd-ae5c-885b93a45bc3/content",
+      "rowCount": 363,
+      "data": {
+        "file": "research/salaries/gap-fill-health-other-history/northern-health-2003-04-employees.json.gzip",
+        "sha256": "0ef6c69f2d770005668a0f56e88da63d19b4178d7abc7f8e9db043612f36b076"
+      },
+      "provenance": {
+        "file": "research/salaries/gap-fill-health-other-history/northern-health-2003-04-provenance.json.gzip",
+        "sha256": "06168dc157cbdc5dd02291c5cf9b42e1a456a94c480c36cefc9fe427d2491574"
+      },
+      "rawCandidate": {
+        "file": "research/salaries/gap-fill-2026-11-02/health_other_history/native-candidates/northern-health-2003-04-poppler-primary.json.gzip",
+        "sha256": "b8545b4acb7c56f8d142b5a0933e417e6560cae4856dd7d39c572ed0a007729e"
+      },
+      "rawCandidateRowsPreserved": 363,
+      "explicitSourceImageAdditions": []
+    },
+    {
+      "sourceId": "gap-health-other-history-island-health-2011-12",
+      "sourceSha256": "e3c542a9920489149942772039776fb137a0ae98a75867f874c8a2e278122c5c",
+      "sourceUrl": "https://digitalcollectionsrepository.llbc.leg.bc.ca/server/api/core/bitstreams/814dd085-4f32-4408-8fe6-84378336f26d/content",
+      "rowCount": 2804,
+      "data": {
+        "file": "research/salaries/gap-fill-health-other-history/island-health-2011-12-employees.json.gzip",
+        "sha256": "9733a181ba8bb8095618a77b6271f2a6aec413d0fd7ae59cb6dd9fe55e0ccbbf"
+      },
+      "provenance": {
+        "file": "research/salaries/gap-fill-health-other-history/island-health-2011-12-provenance.json.gzip",
+        "sha256": "716beb6e6ac1506ddb89e7f4f4b1c55690defb7a380c7441588e809a754cbecf"
+      },
+      "rawCandidate": {
+        "file": "research/salaries/gap-fill-2026-11-02/health_other_history/native-candidates/island-health-2011-12-poppler-primary.json.gzip",
+        "sha256": "c703afb4e1edafd6b5f541472a56ac10d1ffc2b5265f548dd03821a6f232907d"
+      },
+      "rawCandidateRowsPreserved": 2804,
+      "explicitSourceImageAdditions": []
+    },
+    {
+      "sourceId": "gap-health-other-history-island-health-2010-11",
+      "sourceSha256": "bcfe29a91214ca2b676d71271059f438d068d64ab369a8d18476e6e30bf6c8be",
+      "sourceUrl": "https://digitalcollectionsrepository.llbc.leg.bc.ca/server/api/core/bitstreams/2407afe3-04b4-4629-b7c3-13d6bb311a5d/content",
+      "rowCount": 2616,
+      "data": {
+        "file": "research/salaries/gap-fill-health-other-history/island-health-2010-11-employees.json.gzip",
+        "sha256": "00f5bdb1577602bfb4d637fc6cc02376b41c60ff7ae6414ded9b55c7a3373d88"
+      },
+      "provenance": {
+        "file": "research/salaries/gap-fill-health-other-history/island-health-2010-11-provenance.json.gzip",
+        "sha256": "3c78a4eeb431616e838d1db07fdb04dcf4ea9e58da15f38b1ee8212fd96b9779"
+      },
+      "rawCandidate": {
+        "file": "research/salaries/gap-fill-2026-11-02/health_other_history/native-candidates/island-health-2010-11-poppler-primary.json.gzip",
+        "sha256": "bbff00e66ad0ec9106ed5c356574a52b81eeaf22d2713bb933c3808dd375bfee"
+      },
+      "rawCandidateRowsPreserved": 2616,
+      "explicitSourceImageAdditions": []
+    },
+    {
+      "sourceId": "gap-health-other-history-island-health-2009-10",
+      "sourceSha256": "2b33bb37350b0db8036f17e2e1bbab63b91b15b429748142541f95743af3814f",
+      "sourceUrl": "https://digitalcollectionsrepository.llbc.leg.bc.ca/server/api/core/bitstreams/8d77df34-0bf3-4201-9dce-deded80da2d6/content",
+      "rowCount": 2245,
+      "data": {
+        "file": "research/salaries/gap-fill-health-other-history/island-health-2009-10-employees.json.gzip",
+        "sha256": "4d64bde2d2c58562fa259ba389d31a6cfc80e4fc9533e75ecce619b04450a5fe"
+      },
+      "provenance": {
+        "file": "research/salaries/gap-fill-health-other-history/island-health-2009-10-provenance.json.gzip",
+        "sha256": "a3f2d955ffeb4592ed2a200637bb882c8eaab3c389e9844f0c9666a43d08e1ec"
+      },
+      "rawCandidate": {
+        "file": "research/salaries/gap-fill-2026-11-02/health_other_history/native-candidates/island-health-2009-10-poppler-primary.json.gzip",
+        "sha256": "fda8863dbb36c09a540d9066da5a1dd8af1db99c1c9457ff38e80fd809b53416"
+      },
+      "rawCandidateRowsPreserved": 2244,
+      "explicitSourceImageAdditions": [
+        {
+          "target": "health-other-source-001-001",
+          "rowIndex": 2185,
+          "literalSourceRow": [
+            "island-health",
+            "WILSON. TOM",
+            null,
+            77451,
+            0,
+            47
+          ],
+          "provenance": {
+            "rowIndex": 2185,
+            "physicalPage": 47,
+            "sourceRowOnPage": 46,
+            "initialPrimarySourceRowOnPage": null,
+            "rawPrimaryLayoutLine": "WILSON. TOM                   77,451                   0",
+            "rawRemunerationToken": "77,451",
+            "rawExpenseToken": "0",
+            "independentNativeRowsAgree": false,
+            "sourceImageTargetIds": [
+              "health-other-source-001-001"
+            ],
+            "adoption": "Additional actual source observation omitted by comma-only candidate-name grammar. Preserve literal WILSON. TOM with period, numeric77451 and numericexpense0. No comma correction or expanded identity.",
+            "literalLayoutLineOnPage": 48,
+            "sourceNeighborsBeforeAndAfter": [
+              [
+                "island-health",
+                "WILSON,TANIS",
+                null,
+                92960,
+                0,
+                47
+              ],
+              [
+                "island-health",
+                "WILTON,MARGO",
+                null,
+                77054,
+                0,
+                47
+              ]
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "sourceId": "gap-health-other-history-northern-health-2014-15",
+      "sourceSha256": "7de44fa99781492489987c639cf547dfd431dfdf465b5e3ef6b00a00c8512ab8",
+      "sourceUrl": "https://digitalcollectionsrepository.llbc.leg.bc.ca/server/api/core/bitstreams/194961c7-c25b-458e-84f4-02659868492c/content",
+      "rowCount": 1254,
+      "data": {
+        "file": "research/salaries/gap-fill-health-other-history/northern-health-2014-15-employees.json.gzip",
+        "sha256": "68daac9975721928677507a9f076277dbcafd1e4eb083aa31da5c031ce38aff2"
+      },
+      "provenance": {
+        "file": "research/salaries/gap-fill-health-other-history/northern-health-2014-15-provenance.json.gzip",
+        "sha256": "76259a5c64cda4fb79afd2ea189d0f493e41bb546125761ba41e0384197d40c1"
+      },
+      "rawCandidate": {
+        "file": "research/salaries/gap-fill-2026-11-02/health_other_history/native-candidates/northern-health-2014-15-poppler-primary.json.gzip",
+        "sha256": "b1b2ef53d6bbe7055ade792eab09e0142c8607a5d45b720422d376b8fd2d4df3"
+      },
+      "rawCandidateRowsPreserved": 1254,
+      "explicitSourceImageAdditions": []
+    }
+  ],
+  "personalTargetReplay": [
+    {
+      "id": "health-other-source-001-031",
+      "sourceId": "gap-health-other-history-island-health-2011-12",
+      "normalizedRowIndex": 21,
+      "exactFieldsMatch": true
+    },
+    {
+      "id": "health-other-source-001-032",
+      "sourceId": "gap-health-other-history-island-health-2011-12",
+      "normalizedRowIndex": 30,
+      "exactFieldsMatch": true
+    },
+    {
+      "id": "health-other-source-001-033",
+      "sourceId": "gap-health-other-history-island-health-2011-12",
+      "normalizedRowIndex": 38,
+      "exactFieldsMatch": true
+    },
+    {
+      "id": "health-other-source-001-034",
+      "sourceId": "gap-health-other-history-island-health-2011-12",
+      "normalizedRowIndex": 39,
+      "exactFieldsMatch": true
+    },
+    {
+      "id": "health-other-source-001-035",
+      "sourceId": "gap-health-other-history-island-health-2011-12",
+      "normalizedRowIndex": 40,
+      "exactFieldsMatch": true
+    },
+    {
+      "id": "health-other-source-001-036",
+      "sourceId": "gap-health-other-history-island-health-2011-12",
+      "normalizedRowIndex": 51,
+      "exactFieldsMatch": true
+    },
+    {
+      "id": "health-other-source-001-037",
+      "sourceId": "gap-health-other-history-island-health-2011-12",
+      "normalizedRowIndex": 55,
+      "exactFieldsMatch": true
+    },
+    {
+      "id": "health-other-source-001-038",
+      "sourceId": "gap-health-other-history-island-health-2011-12",
+      "normalizedRowIndex": 65,
+      "exactFieldsMatch": true
+    },
+    {
+      "id": "health-other-source-001-039",
+      "sourceId": "gap-health-other-history-island-health-2011-12",
+      "normalizedRowIndex": 69,
+      "exactFieldsMatch": true
+    },
+    {
+      "id": "health-other-source-001-040",
+      "sourceId": "gap-health-other-history-island-health-2011-12",
+      "normalizedRowIndex": 72,
+      "exactFieldsMatch": true
+    },
+    {
+      "id": "health-other-source-001-041",
+      "sourceId": "gap-health-other-history-island-health-2011-12",
+      "normalizedRowIndex": 117,
+      "exactFieldsMatch": true
+    },
+    {
+      "id": "health-other-source-001-042",
+      "sourceId": "gap-health-other-history-island-health-2011-12",
+      "normalizedRowIndex": 123,
+      "exactFieldsMatch": true
+    },
+    {
+      "id": "health-other-source-001-043",
+      "sourceId": "gap-health-other-history-island-health-2011-12",
+      "normalizedRowIndex": 129,
+      "exactFieldsMatch": true
+    },
+    {
+      "id": "health-other-source-001-044",
+      "sourceId": "gap-health-other-history-island-health-2011-12",
+      "normalizedRowIndex": 154,
+      "exactFieldsMatch": true
+    },
+    {
+      "id": "health-other-source-001-045",
+      "sourceId": "gap-health-other-history-island-health-2011-12",
+      "normalizedRowIndex": 158,
+      "exactFieldsMatch": true
+    },
+    {
+      "id": "health-other-source-001-046",
+      "sourceId": "gap-health-other-history-island-health-2011-12",
+      "normalizedRowIndex": 161,
+      "exactFieldsMatch": true
+    },
+    {
+      "id": "health-other-source-001-047",
+      "sourceId": "gap-health-other-history-island-health-2011-12",
+      "normalizedRowIndex": 164,
+      "exactFieldsMatch": true
+    },
+    {
+      "id": "health-other-source-001-048",
+      "sourceId": "gap-health-other-history-island-health-2011-12",
+      "normalizedRowIndex": 173,
+      "exactFieldsMatch": true
+    },
+    {
+      "id": "health-other-source-001-049",
+      "sourceId": "gap-health-other-history-island-health-2011-12",
+      "normalizedRowIndex": 179,
+      "exactFieldsMatch": true
+    },
+    {
+      "id": "health-other-source-001-050",
+      "sourceId": "gap-health-other-history-island-health-2011-12",
+      "normalizedRowIndex": 190,
+      "exactFieldsMatch": true
+    },
+    {
+      "id": "health-other-source-001-051",
+      "sourceId": "gap-health-other-history-island-health-2011-12",
+      "normalizedRowIndex": 229,
+      "exactFieldsMatch": true
+    },
+    {
+      "id": "health-other-source-001-052",
+      "sourceId": "gap-health-other-history-island-health-2011-12",
+      "normalizedRowIndex": 273,
+      "exactFieldsMatch": true
+    },
+    {
+      "id": "health-other-source-001-053",
+      "sourceId": "gap-health-other-history-island-health-2011-12",
+      "normalizedRowIndex": 278,
+      "exactFieldsMatch": true
+    },
+    {
+      "id": "health-other-source-001-054",
+      "sourceId": "gap-health-other-history-island-health-2011-12",
+      "normalizedRowIndex": 325,
+      "exactFieldsMatch": true
+    },
+    {
+      "id": "health-other-source-001-055",
+      "sourceId": "gap-health-other-history-island-health-2011-12",
+      "normalizedRowIndex": 352,
+      "exactFieldsMatch": true
+    },
+    {
+      "id": "health-other-source-001-056",
+      "sourceId": "gap-health-other-history-island-health-2011-12",
+      "normalizedRowIndex": 357,
+      "exactFieldsMatch": true
+    },
+    {
+      "id": "health-other-source-001-057",
+      "sourceId": "gap-health-other-history-island-health-2011-12",
+      "normalizedRowIndex": 368,
+      "exactFieldsMatch": true
+    },
+    {
+      "id": "health-other-source-001-058",
+      "sourceId": "gap-health-other-history-island-health-2011-12",
+      "normalizedRowIndex": 377,
+      "exactFieldsMatch": true
+    },
+    {
+      "id": "health-other-source-001-059",
+      "sourceId": "gap-health-other-history-island-health-2011-12",
+      "normalizedRowIndex": 381,
+      "exactFieldsMatch": true
+    },
+    {
+      "id": "health-other-source-001-060",
+      "sourceId": "gap-health-other-history-island-health-2011-12",
+      "normalizedRowIndex": 384,
+      "exactFieldsMatch": true
+    },
+    {
+      "id": "health-other-source-001-061",
+      "sourceId": "gap-health-other-history-island-health-2011-12",
+      "normalizedRowIndex": 388,
+      "exactFieldsMatch": true
+    },
+    {
+      "id": "health-other-source-001-062",
+      "sourceId": "gap-health-other-history-island-health-2011-12",
+      "normalizedRowIndex": 402,
+      "exactFieldsMatch": true
+    },
+    {
+      "id": "health-other-source-001-063",
+      "sourceId": "gap-health-other-history-island-health-2011-12",
+      "normalizedRowIndex": 405,
+      "exactFieldsMatch": true
+    },
+    {
+      "id": "health-other-source-001-064",
+      "sourceId": "gap-health-other-history-island-health-2011-12",
+      "normalizedRowIndex": 411,
+      "exactFieldsMatch": true
+    },
+    {
+      "id": "health-other-source-001-065",
+      "sourceId": "gap-health-other-history-island-health-2011-12",
+      "normalizedRowIndex": 416,
+      "exactFieldsMatch": true
+    },
+    {
+      "id": "health-other-source-001-066",
+      "sourceId": "gap-health-other-history-island-health-2011-12",
+      "normalizedRowIndex": 417,
+      "exactFieldsMatch": true
+    },
+    {
+      "id": "health-other-source-001-067",
+      "sourceId": "gap-health-other-history-island-health-2011-12",
+      "normalizedRowIndex": 418,
+      "exactFieldsMatch": true
+    },
+    {
+      "id": "health-other-source-001-068",
+      "sourceId": "gap-health-other-history-island-health-2011-12",
+      "normalizedRowIndex": 449,
+      "exactFieldsMatch": true
+    },
+    {
+      "id": "health-other-source-001-069",
+      "sourceId": "gap-health-other-history-island-health-2011-12",
+      "normalizedRowIndex": 460,
+      "exactFieldsMatch": true
+    },
+    {
+      "id": "health-other-source-001-070",
+      "sourceId": "gap-health-other-history-island-health-2011-12",
+      "normalizedRowIndex": 508,
+      "exactFieldsMatch": true
+    },
+    {
+      "id": "health-other-source-001-071",
+      "sourceId": "gap-health-other-history-island-health-2011-12",
+      "normalizedRowIndex": 517,
+      "exactFieldsMatch": true
+    },
+    {
+      "id": "health-other-source-001-072",
+      "sourceId": "gap-health-other-history-island-health-2011-12",
+      "normalizedRowIndex": 523,
+      "exactFieldsMatch": true
+    },
+    {
+      "id": "health-other-source-001-073",
+      "sourceId": "gap-health-other-history-island-health-2011-12",
+      "normalizedRowIndex": 528,
+      "exactFieldsMatch": true
+    },
+    {
+      "id": "health-other-source-001-074",
+      "sourceId": "gap-health-other-history-island-health-2011-12",
+      "normalizedRowIndex": 540,
+      "exactFieldsMatch": true
+    },
+    {
+      "id": "health-other-source-001-075",
+      "sourceId": "gap-health-other-history-island-health-2011-12",
+      "normalizedRowIndex": 544,
+      "exactFieldsMatch": true
+    },
+    {
+      "id": "health-other-source-001-076",
+      "sourceId": "gap-health-other-history-island-health-2011-12",
+      "normalizedRowIndex": 545,
+      "exactFieldsMatch": true
+    },
+    {
+      "id": "health-other-source-001-077",
+      "sourceId": "gap-health-other-history-island-health-2011-12",
+      "normalizedRowIndex": 557,
+      "exactFieldsMatch": true
+    },
+    {
+      "id": "health-other-source-001-078",
+      "sourceId": "gap-health-other-history-island-health-2011-12",
+      "normalizedRowIndex": 576,
+      "exactFieldsMatch": true
+    },
+    {
+      "id": "health-other-source-001-079",
+      "sourceId": "gap-health-other-history-island-health-2011-12",
+      "normalizedRowIndex": 584,
+      "exactFieldsMatch": true
+    },
+    {
+      "id": "health-other-source-001-080",
+      "sourceId": "gap-health-other-history-island-health-2011-12",
+      "normalizedRowIndex": 585,
+      "exactFieldsMatch": true
+    },
+    {
+      "id": "health-other-source-001-081",
+      "sourceId": "gap-health-other-history-island-health-2011-12",
+      "normalizedRowIndex": 597,
+      "exactFieldsMatch": true
+    },
+    {
+      "id": "health-other-source-001-082",
+      "sourceId": "gap-health-other-history-island-health-2011-12",
+      "normalizedRowIndex": 605,
+      "exactFieldsMatch": true
+    },
+    {
+      "id": "health-other-source-001-083",
+      "sourceId": "gap-health-other-history-island-health-2011-12",
+      "normalizedRowIndex": 606,
+      "exactFieldsMatch": true
+    },
+    {
+      "id": "health-other-source-001-084",
+      "sourceId": "gap-health-other-history-island-health-2011-12",
+      "normalizedRowIndex": 621,
+      "exactFieldsMatch": true
+    },
+    {
+      "id": "health-other-source-001-085",
+      "sourceId": "gap-health-other-history-island-health-2011-12",
+      "normalizedRowIndex": 623,
+      "exactFieldsMatch": true
+    },
+    {
+      "id": "health-other-source-001-086",
+      "sourceId": "gap-health-other-history-island-health-2011-12",
+      "normalizedRowIndex": 631,
+      "exactFieldsMatch": true
+    },
+    {
+      "id": "health-other-source-001-087",
+      "sourceId": "gap-health-other-history-island-health-2011-12",
+      "normalizedRowIndex": 657,
+      "exactFieldsMatch": true
+    },
+    {
+      "id": "health-other-source-001-088",
+      "sourceId": "gap-health-other-history-island-health-2011-12",
+      "normalizedRowIndex": 659,
+      "exactFieldsMatch": true
+    },
+    {
+      "id": "health-other-source-001-089",
+      "sourceId": "gap-health-other-history-island-health-2011-12",
+      "normalizedRowIndex": 679,
+      "exactFieldsMatch": true
+    },
+    {
+      "id": "health-other-source-001-090",
+      "sourceId": "gap-health-other-history-island-health-2011-12",
+      "normalizedRowIndex": 691,
+      "exactFieldsMatch": true
+    },
+    {
+      "id": "health-other-source-001-091",
+      "sourceId": "gap-health-other-history-island-health-2011-12",
+      "normalizedRowIndex": 693,
+      "exactFieldsMatch": true
+    },
+    {
+      "id": "health-other-source-001-092",
+      "sourceId": "gap-health-other-history-island-health-2011-12",
+      "normalizedRowIndex": 702,
+      "exactFieldsMatch": true
+    },
+    {
+      "id": "health-other-source-001-093",
+      "sourceId": "gap-health-other-history-island-health-2011-12",
+      "normalizedRowIndex": 727,
+      "exactFieldsMatch": true
+    },
+    {
+      "id": "health-other-source-001-094",
+      "sourceId": "gap-health-other-history-island-health-2011-12",
+      "normalizedRowIndex": 732,
+      "exactFieldsMatch": true
+    },
+    {
+      "id": "health-other-source-001-095",
+      "sourceId": "gap-health-other-history-island-health-2011-12",
+      "normalizedRowIndex": 741,
+      "exactFieldsMatch": true
+    },
+    {
+      "id": "health-other-source-001-096",
+      "sourceId": "gap-health-other-history-island-health-2011-12",
+      "normalizedRowIndex": 742,
+      "exactFieldsMatch": true
+    },
+    {
+      "id": "health-other-source-001-097",
+      "sourceId": "gap-health-other-history-island-health-2011-12",
+      "normalizedRowIndex": 748,
+      "exactFieldsMatch": true
+    },
+    {
+      "id": "health-other-source-001-098",
+      "sourceId": "gap-health-other-history-island-health-2011-12",
+      "normalizedRowIndex": 755,
+      "exactFieldsMatch": true
+    },
+    {
+      "id": "health-other-source-001-099",
+      "sourceId": "gap-health-other-history-island-health-2011-12",
+      "normalizedRowIndex": 767,
+      "exactFieldsMatch": true
+    },
+    {
+      "id": "health-other-source-001-100",
+      "sourceId": "gap-health-other-history-island-health-2011-12",
+      "normalizedRowIndex": 777,
+      "exactFieldsMatch": true
+    },
+    {
+      "id": "health-other-source-001-101",
+      "sourceId": "gap-health-other-history-island-health-2011-12",
+      "normalizedRowIndex": 789,
+      "exactFieldsMatch": true
+    },
+    {
+      "id": "health-other-source-001-102",
+      "sourceId": "gap-health-other-history-island-health-2011-12",
+      "normalizedRowIndex": 880,
+      "exactFieldsMatch": true
+    },
+    {
+      "id": "health-other-source-001-103",
+      "sourceId": "gap-health-other-history-island-health-2011-12",
+      "normalizedRowIndex": 895,
+      "exactFieldsMatch": true
+    },
+    {
+      "id": "health-other-source-001-104",
+      "sourceId": "gap-health-other-history-island-health-2011-12",
+      "normalizedRowIndex": 942,
+      "exactFieldsMatch": true
+    },
+    {
+      "id": "health-other-source-001-105",
+      "sourceId": "gap-health-other-history-island-health-2011-12",
+      "normalizedRowIndex": 996,
+      "exactFieldsMatch": true
+    },
+    {
+      "id": "health-other-source-001-106",
+      "sourceId": "gap-health-other-history-island-health-2011-12",
+      "normalizedRowIndex": 1007,
+      "exactFieldsMatch": true
+    },
+    {
+      "id": "health-other-source-001-107",
+      "sourceId": "gap-health-other-history-island-health-2011-12",
+      "normalizedRowIndex": 1009,
+      "exactFieldsMatch": true
+    },
+    {
+      "id": "health-other-source-001-108",
+      "sourceId": "gap-health-other-history-island-health-2011-12",
+      "normalizedRowIndex": 1014,
+      "exactFieldsMatch": true
+    },
+    {
+      "id": "health-other-source-001-109",
+      "sourceId": "gap-health-other-history-island-health-2011-12",
+      "normalizedRowIndex": 1030,
+      "exactFieldsMatch": true
+    },
+    {
+      "id": "health-other-source-001-110",
+      "sourceId": "gap-health-other-history-island-health-2011-12",
+      "normalizedRowIndex": 1041,
+      "exactFieldsMatch": true
+    },
+    {
+      "id": "health-other-source-001-111",
+      "sourceId": "gap-health-other-history-island-health-2011-12",
+      "normalizedRowIndex": 1047,
+      "exactFieldsMatch": true
+    },
+    {
+      "id": "health-other-source-001-112",
+      "sourceId": "gap-health-other-history-island-health-2011-12",
+      "normalizedRowIndex": 1050,
+      "exactFieldsMatch": true
+    },
+    {
+      "id": "health-other-source-001-113",
+      "sourceId": "gap-health-other-history-island-health-2011-12",
+      "normalizedRowIndex": 1074,
+      "exactFieldsMatch": true
+    },
+    {
+      "id": "health-other-source-001-114",
+      "sourceId": "gap-health-other-history-island-health-2011-12",
+      "normalizedRowIndex": 1093,
+      "exactFieldsMatch": true
+    },
+    {
+      "id": "health-other-source-001-115",
+      "sourceId": "gap-health-other-history-island-health-2011-12",
+      "normalizedRowIndex": 1099,
+      "exactFieldsMatch": true
+    },
+    {
+      "id": "health-other-source-001-116",
+      "sourceId": "gap-health-other-history-island-health-2011-12",
+      "normalizedRowIndex": 1142,
+      "exactFieldsMatch": true
+    },
+    {
+      "id": "health-other-source-001-117",
+      "sourceId": "gap-health-other-history-island-health-2011-12",
+      "normalizedRowIndex": 1148,
+      "exactFieldsMatch": true
+    },
+    {
+      "id": "health-other-source-001-118",
+      "sourceId": "gap-health-other-history-island-health-2011-12",
+      "normalizedRowIndex": 1153,
+      "exactFieldsMatch": true
+    },
+    {
+      "id": "health-other-source-001-119",
+      "sourceId": "gap-health-other-history-island-health-2011-12",
+      "normalizedRowIndex": 1166,
+      "exactFieldsMatch": true
+    },
+    {
+      "id": "health-other-source-001-120",
+      "sourceId": "gap-health-other-history-island-health-2011-12",
+      "normalizedRowIndex": 1189,
+      "exactFieldsMatch": true
+    },
+    {
+      "id": "health-other-source-001-121",
+      "sourceId": "gap-health-other-history-island-health-2011-12",
+      "normalizedRowIndex": 1235,
+      "exactFieldsMatch": true
+    },
+    {
+      "id": "health-other-source-001-122",
+      "sourceId": "gap-health-other-history-island-health-2011-12",
+      "normalizedRowIndex": 1256,
+      "exactFieldsMatch": true
+    },
+    {
+      "id": "health-other-source-001-123",
+      "sourceId": "gap-health-other-history-island-health-2011-12",
+      "normalizedRowIndex": 1265,
+      "exactFieldsMatch": true
+    },
+    {
+      "id": "health-other-source-001-124",
+      "sourceId": "gap-health-other-history-island-health-2011-12",
+      "normalizedRowIndex": 1285,
+      "exactFieldsMatch": true
+    },
+    {
+      "id": "health-other-source-001-125",
+      "sourceId": "gap-health-other-history-island-health-2011-12",
+      "normalizedRowIndex": 1291,
+      "exactFieldsMatch": true
+    },
+    {
+      "id": "health-other-source-001-126",
+      "sourceId": "gap-health-other-history-island-health-2011-12",
+      "normalizedRowIndex": 1299,
+      "exactFieldsMatch": true
+    },
+    {
+      "id": "health-other-source-001-127",
+      "sourceId": "gap-health-other-history-island-health-2011-12",
+      "normalizedRowIndex": 1303,
+      "exactFieldsMatch": true
+    },
+    {
+      "id": "health-other-source-001-128",
+      "sourceId": "gap-health-other-history-island-health-2011-12",
+      "normalizedRowIndex": 1304,
+      "exactFieldsMatch": true
+    },
+    {
+      "id": "health-other-source-001-129",
+      "sourceId": "gap-health-other-history-island-health-2011-12",
+      "normalizedRowIndex": 1310,
+      "exactFieldsMatch": true
+    },
+    {
+      "id": "health-other-source-001-130",
+      "sourceId": "gap-health-other-history-island-health-2011-12",
+      "normalizedRowIndex": 1333,
+      "exactFieldsMatch": true
+    },
+    {
+      "id": "health-other-source-001-131",
+      "sourceId": "gap-health-other-history-island-health-2011-12",
+      "normalizedRowIndex": 1365,
+      "exactFieldsMatch": true
+    },
+    {
+      "id": "health-other-source-001-132",
+      "sourceId": "gap-health-other-history-island-health-2011-12",
+      "normalizedRowIndex": 1388,
+      "exactFieldsMatch": true
+    },
+    {
+      "id": "health-other-source-001-133",
+      "sourceId": "gap-health-other-history-island-health-2011-12",
+      "normalizedRowIndex": 1405,
+      "exactFieldsMatch": true
+    },
+    {
+      "id": "health-other-source-001-134",
+      "sourceId": "gap-health-other-history-island-health-2011-12",
+      "normalizedRowIndex": 1407,
+      "exactFieldsMatch": true
+    },
+    {
+      "id": "health-other-source-001-135",
+      "sourceId": "gap-health-other-history-island-health-2011-12",
+      "normalizedRowIndex": 1413,
+      "exactFieldsMatch": true
+    },
+    {
+      "id": "health-other-source-001-136",
+      "sourceId": "gap-health-other-history-island-health-2011-12",
+      "normalizedRowIndex": 1454,
+      "exactFieldsMatch": true
+    },
+    {
+      "id": "health-other-source-001-137",
+      "sourceId": "gap-health-other-history-island-health-2011-12",
+      "normalizedRowIndex": 1455,
+      "exactFieldsMatch": true
+    },
+    {
+      "id": "health-other-source-001-138",
+      "sourceId": "gap-health-other-history-island-health-2011-12",
+      "normalizedRowIndex": 1474,
+      "exactFieldsMatch": true
+    },
+    {
+      "id": "health-other-source-001-139",
+      "sourceId": "gap-health-other-history-island-health-2011-12",
+      "normalizedRowIndex": 1519,
+      "exactFieldsMatch": true
+    },
+    {
+      "id": "health-other-source-001-140",
+      "sourceId": "gap-health-other-history-island-health-2011-12",
+      "normalizedRowIndex": 1528,
+      "exactFieldsMatch": true
+    },
+    {
+      "id": "health-other-source-001-141",
+      "sourceId": "gap-health-other-history-island-health-2011-12",
+      "normalizedRowIndex": 1530,
+      "exactFieldsMatch": true
+    },
+    {
+      "id": "health-other-source-001-142",
+      "sourceId": "gap-health-other-history-island-health-2011-12",
+      "normalizedRowIndex": 1532,
+      "exactFieldsMatch": true
+    },
+    {
+      "id": "health-other-source-001-143",
+      "sourceId": "gap-health-other-history-island-health-2011-12",
+      "normalizedRowIndex": 1533,
+      "exactFieldsMatch": true
+    },
+    {
+      "id": "health-other-source-001-144",
+      "sourceId": "gap-health-other-history-island-health-2011-12",
+      "normalizedRowIndex": 1536,
+      "exactFieldsMatch": true
+    },
+    {
+      "id": "health-other-source-001-145",
+      "sourceId": "gap-health-other-history-island-health-2011-12",
+      "normalizedRowIndex": 1539,
+      "exactFieldsMatch": true
+    },
+    {
+      "id": "health-other-source-001-146",
+      "sourceId": "gap-health-other-history-island-health-2011-12",
+      "normalizedRowIndex": 1545,
+      "exactFieldsMatch": true
+    },
+    {
+      "id": "health-other-source-001-147",
+      "sourceId": "gap-health-other-history-island-health-2011-12",
+      "normalizedRowIndex": 1546,
+      "exactFieldsMatch": true
+    },
+    {
+      "id": "health-other-source-001-148",
+      "sourceId": "gap-health-other-history-island-health-2011-12",
+      "normalizedRowIndex": 1557,
+      "exactFieldsMatch": true
+    },
+    {
+      "id": "health-other-source-001-149",
+      "sourceId": "gap-health-other-history-island-health-2011-12",
+      "normalizedRowIndex": 1565,
+      "exactFieldsMatch": true
+    },
+    {
+      "id": "health-other-source-001-150",
+      "sourceId": "gap-health-other-history-island-health-2011-12",
+      "normalizedRowIndex": 1584,
+      "exactFieldsMatch": true
+    },
+    {
+      "id": "health-other-source-001-151",
+      "sourceId": "gap-health-other-history-island-health-2011-12",
+      "normalizedRowIndex": 1595,
+      "exactFieldsMatch": true
+    },
+    {
+      "id": "health-other-source-001-152",
+      "sourceId": "gap-health-other-history-island-health-2011-12",
+      "normalizedRowIndex": 1601,
+      "exactFieldsMatch": true
+    },
+    {
+      "id": "health-other-source-001-153",
+      "sourceId": "gap-health-other-history-island-health-2011-12",
+      "normalizedRowIndex": 1603,
+      "exactFieldsMatch": true
+    },
+    {
+      "id": "health-other-source-001-154",
+      "sourceId": "gap-health-other-history-island-health-2011-12",
+      "normalizedRowIndex": 1614,
+      "exactFieldsMatch": true
+    },
+    {
+      "id": "health-other-source-001-155",
+      "sourceId": "gap-health-other-history-island-health-2011-12",
+      "normalizedRowIndex": 1616,
+      "exactFieldsMatch": true
+    },
+    {
+      "id": "health-other-source-001-156",
+      "sourceId": "gap-health-other-history-island-health-2011-12",
+      "normalizedRowIndex": 1618,
+      "exactFieldsMatch": true
+    },
+    {
+      "id": "health-other-source-001-157",
+      "sourceId": "gap-health-other-history-island-health-2011-12",
+      "normalizedRowIndex": 1629,
+      "exactFieldsMatch": true
+    },
+    {
+      "id": "health-other-source-001-158",
+      "sourceId": "gap-health-other-history-island-health-2011-12",
+      "normalizedRowIndex": 1634,
+      "exactFieldsMatch": true
+    },
+    {
+      "id": "health-other-source-001-159",
+      "sourceId": "gap-health-other-history-island-health-2011-12",
+      "normalizedRowIndex": 1636,
+      "exactFieldsMatch": true
+    },
+    {
+      "id": "health-other-source-001-160",
+      "sourceId": "gap-health-other-history-island-health-2011-12",
+      "normalizedRowIndex": 1639,
+      "exactFieldsMatch": true
+    },
+    {
+      "id": "health-other-source-001-161",
+      "sourceId": "gap-health-other-history-island-health-2011-12",
+      "normalizedRowIndex": 1643,
+      "exactFieldsMatch": true
+    },
+    {
+      "id": "health-other-source-001-162",
+      "sourceId": "gap-health-other-history-island-health-2011-12",
+      "normalizedRowIndex": 1646,
+      "exactFieldsMatch": true
+    },
+    {
+      "id": "health-other-source-001-163",
+      "sourceId": "gap-health-other-history-island-health-2011-12",
+      "normalizedRowIndex": 1648,
+      "exactFieldsMatch": true
+    },
+    {
+      "id": "health-other-source-001-164",
+      "sourceId": "gap-health-other-history-island-health-2011-12",
+      "normalizedRowIndex": 1649,
+      "exactFieldsMatch": true
+    },
+    {
+      "id": "health-other-source-001-165",
+      "sourceId": "gap-health-other-history-island-health-2011-12",
+      "normalizedRowIndex": 1650,
+      "exactFieldsMatch": true
+    },
+    {
+      "id": "health-other-source-001-166",
+      "sourceId": "gap-health-other-history-island-health-2011-12",
+      "normalizedRowIndex": 1651,
+      "exactFieldsMatch": true
+    },
+    {
+      "id": "health-other-source-001-167",
+      "sourceId": "gap-health-other-history-island-health-2011-12",
+      "normalizedRowIndex": 1658,
+      "exactFieldsMatch": true
+    },
+    {
+      "id": "health-other-source-001-168",
+      "sourceId": "gap-health-other-history-island-health-2011-12",
+      "normalizedRowIndex": 1659,
+      "exactFieldsMatch": true
+    },
+    {
+      "id": "health-other-source-001-169",
+      "sourceId": "gap-health-other-history-island-health-2011-12",
+      "normalizedRowIndex": 1661,
+      "exactFieldsMatch": true
+    },
+    {
+      "id": "health-other-source-001-170",
+      "sourceId": "gap-health-other-history-island-health-2011-12",
+      "normalizedRowIndex": 1664,
+      "exactFieldsMatch": true
+    },
+    {
+      "id": "health-other-source-001-171",
+      "sourceId": "gap-health-other-history-island-health-2011-12",
+      "normalizedRowIndex": 1665,
+      "exactFieldsMatch": true
+    },
+    {
+      "id": "health-other-source-001-172",
+      "sourceId": "gap-health-other-history-island-health-2011-12",
+      "normalizedRowIndex": 1666,
+      "exactFieldsMatch": true
+    },
+    {
+      "id": "health-other-source-001-173",
+      "sourceId": "gap-health-other-history-island-health-2011-12",
+      "normalizedRowIndex": 1673,
+      "exactFieldsMatch": true
+    },
+    {
+      "id": "health-other-source-001-174",
+      "sourceId": "gap-health-other-history-island-health-2011-12",
+      "normalizedRowIndex": 1680,
+      "exactFieldsMatch": true
+    },
+    {
+      "id": "health-other-source-001-175",
+      "sourceId": "gap-health-other-history-island-health-2011-12",
+      "normalizedRowIndex": 1681,
+      "exactFieldsMatch": true
+    },
+    {
+      "id": "health-other-source-001-176",
+      "sourceId": "gap-health-other-history-island-health-2011-12",
+      "normalizedRowIndex": 1682,
+      "exactFieldsMatch": true
+    },
+    {
+      "id": "health-other-source-001-177",
+      "sourceId": "gap-health-other-history-island-health-2011-12",
+      "normalizedRowIndex": 1683,
+      "exactFieldsMatch": true
+    },
+    {
+      "id": "health-other-source-001-178",
+      "sourceId": "gap-health-other-history-island-health-2011-12",
+      "normalizedRowIndex": 1684,
+      "exactFieldsMatch": true
+    },
+    {
+      "id": "health-other-source-001-179",
+      "sourceId": "gap-health-other-history-island-health-2011-12",
+      "normalizedRowIndex": 1688,
+      "exactFieldsMatch": true
+    },
+    {
+      "id": "health-other-source-001-180",
+      "sourceId": "gap-health-other-history-island-health-2011-12",
+      "normalizedRowIndex": 1703,
+      "exactFieldsMatch": true
+    },
+    {
+      "id": "health-other-source-001-181",
+      "sourceId": "gap-health-other-history-island-health-2011-12",
+      "normalizedRowIndex": 1704,
+      "exactFieldsMatch": true
+    },
+    {
+      "id": "health-other-source-001-182",
+      "sourceId": "gap-health-other-history-island-health-2011-12",
+      "normalizedRowIndex": 1711,
+      "exactFieldsMatch": true
+    },
+    {
+      "id": "health-other-source-001-183",
+      "sourceId": "gap-health-other-history-island-health-2011-12",
+      "normalizedRowIndex": 1716,
+      "exactFieldsMatch": true
+    },
+    {
+      "id": "health-other-source-001-184",
+      "sourceId": "gap-health-other-history-island-health-2011-12",
+      "normalizedRowIndex": 1724,
+      "exactFieldsMatch": true
+    },
+    {
+      "id": "health-other-source-001-185",
+      "sourceId": "gap-health-other-history-island-health-2011-12",
+      "normalizedRowIndex": 1730,
+      "exactFieldsMatch": true
+    },
+    {
+      "id": "health-other-source-001-186",
+      "sourceId": "gap-health-other-history-island-health-2011-12",
+      "normalizedRowIndex": 1734,
+      "exactFieldsMatch": true
+    },
+    {
+      "id": "health-other-source-001-187",
+      "sourceId": "gap-health-other-history-island-health-2011-12",
+      "normalizedRowIndex": 1736,
+      "exactFieldsMatch": true
+    },
+    {
+      "id": "health-other-source-001-188",
+      "sourceId": "gap-health-other-history-island-health-2011-12",
+      "normalizedRowIndex": 1737,
+      "exactFieldsMatch": true
+    },
+    {
+      "id": "health-other-source-001-189",
+      "sourceId": "gap-health-other-history-island-health-2011-12",
+      "normalizedRowIndex": 1751,
+      "exactFieldsMatch": true
+    },
+    {
+      "id": "health-other-source-001-190",
+      "sourceId": "gap-health-other-history-island-health-2011-12",
+      "normalizedRowIndex": 1753,
+      "exactFieldsMatch": true
+    },
+    {
+      "id": "health-other-source-001-191",
+      "sourceId": "gap-health-other-history-island-health-2011-12",
+      "normalizedRowIndex": 1757,
+      "exactFieldsMatch": true
+    },
+    {
+      "id": "health-other-source-001-192",
+      "sourceId": "gap-health-other-history-island-health-2011-12",
+      "normalizedRowIndex": 1785,
+      "exactFieldsMatch": true
+    },
+    {
+      "id": "health-other-source-001-193",
+      "sourceId": "gap-health-other-history-island-health-2011-12",
+      "normalizedRowIndex": 1793,
+      "exactFieldsMatch": true
+    },
+    {
+      "id": "health-other-source-001-194",
+      "sourceId": "gap-health-other-history-island-health-2011-12",
+      "normalizedRowIndex": 1814,
+      "exactFieldsMatch": true
+    },
+    {
+      "id": "health-other-source-001-195",
+      "sourceId": "gap-health-other-history-island-health-2011-12",
+      "normalizedRowIndex": 1821,
+      "exactFieldsMatch": true
+    },
+    {
+      "id": "health-other-source-001-196",
+      "sourceId": "gap-health-other-history-island-health-2011-12",
+      "normalizedRowIndex": 1823,
+      "exactFieldsMatch": true
+    },
+    {
+      "id": "health-other-source-001-197",
+      "sourceId": "gap-health-other-history-island-health-2011-12",
+      "normalizedRowIndex": 1827,
+      "exactFieldsMatch": true
+    },
+    {
+      "id": "health-other-source-001-198",
+      "sourceId": "gap-health-other-history-island-health-2011-12",
+      "normalizedRowIndex": 1831,
+      "exactFieldsMatch": true
+    },
+    {
+      "id": "health-other-source-001-199",
+      "sourceId": "gap-health-other-history-island-health-2011-12",
+      "normalizedRowIndex": 1835,
+      "exactFieldsMatch": true
+    },
+    {
+      "id": "health-other-source-001-200",
+      "sourceId": "gap-health-other-history-island-health-2011-12",
+      "normalizedRowIndex": 1864,
+      "exactFieldsMatch": true
+    },
+    {
+      "id": "health-other-source-001-201",
+      "sourceId": "gap-health-other-history-island-health-2011-12",
+      "normalizedRowIndex": 1880,
+      "exactFieldsMatch": true
+    },
+    {
+      "id": "health-other-source-001-202",
+      "sourceId": "gap-health-other-history-island-health-2011-12",
+      "normalizedRowIndex": 1889,
+      "exactFieldsMatch": true
+    },
+    {
+      "id": "health-other-source-001-203",
+      "sourceId": "gap-health-other-history-island-health-2011-12",
+      "normalizedRowIndex": 1936,
+      "exactFieldsMatch": true
+    },
+    {
+      "id": "health-other-source-001-204",
+      "sourceId": "gap-health-other-history-island-health-2011-12",
+      "normalizedRowIndex": 1943,
+      "exactFieldsMatch": true
+    },
+    {
+      "id": "health-other-source-001-205",
+      "sourceId": "gap-health-other-history-island-health-2011-12",
+      "normalizedRowIndex": 1945,
+      "exactFieldsMatch": true
+    },
+    {
+      "id": "health-other-source-001-206",
+      "sourceId": "gap-health-other-history-island-health-2011-12",
+      "normalizedRowIndex": 1956,
+      "exactFieldsMatch": true
+    },
+    {
+      "id": "health-other-source-001-207",
+      "sourceId": "gap-health-other-history-island-health-2011-12",
+      "normalizedRowIndex": 1966,
+      "exactFieldsMatch": true
+    },
+    {
+      "id": "health-other-source-001-208",
+      "sourceId": "gap-health-other-history-island-health-2011-12",
+      "normalizedRowIndex": 1992,
+      "exactFieldsMatch": true
+    },
+    {
+      "id": "health-other-source-001-209",
+      "sourceId": "gap-health-other-history-island-health-2011-12",
+      "normalizedRowIndex": 2017,
+      "exactFieldsMatch": true
+    },
+    {
+      "id": "health-other-source-001-210",
+      "sourceId": "gap-health-other-history-island-health-2011-12",
+      "normalizedRowIndex": 2078,
+      "exactFieldsMatch": true
+    },
+    {
+      "id": "health-other-source-001-211",
+      "sourceId": "gap-health-other-history-island-health-2011-12",
+      "normalizedRowIndex": 2088,
+      "exactFieldsMatch": true
+    },
+    {
+      "id": "health-other-source-001-212",
+      "sourceId": "gap-health-other-history-island-health-2011-12",
+      "normalizedRowIndex": 2092,
+      "exactFieldsMatch": true
+    },
+    {
+      "id": "health-other-source-001-213",
+      "sourceId": "gap-health-other-history-island-health-2011-12",
+      "normalizedRowIndex": 2098,
+      "exactFieldsMatch": true
+    },
+    {
+      "id": "health-other-source-001-214",
+      "sourceId": "gap-health-other-history-island-health-2011-12",
+      "normalizedRowIndex": 2104,
+      "exactFieldsMatch": true
+    },
+    {
+      "id": "health-other-source-001-215",
+      "sourceId": "gap-health-other-history-island-health-2011-12",
+      "normalizedRowIndex": 2108,
+      "exactFieldsMatch": true
+    },
+    {
+      "id": "health-other-source-001-216",
+      "sourceId": "gap-health-other-history-island-health-2011-12",
+      "normalizedRowIndex": 2118,
+      "exactFieldsMatch": true
+    },
+    {
+      "id": "health-other-source-001-217",
+      "sourceId": "gap-health-other-history-island-health-2011-12",
+      "normalizedRowIndex": 2131,
+      "exactFieldsMatch": true
+    },
+    {
+      "id": "health-other-source-001-218",
+      "sourceId": "gap-health-other-history-island-health-2011-12",
+      "normalizedRowIndex": 2139,
+      "exactFieldsMatch": true
+    },
+    {
+      "id": "health-other-source-001-219",
+      "sourceId": "gap-health-other-history-island-health-2011-12",
+      "normalizedRowIndex": 2153,
+      "exactFieldsMatch": true
+    },
+    {
+      "id": "health-other-source-001-220",
+      "sourceId": "gap-health-other-history-island-health-2011-12",
+      "normalizedRowIndex": 2185,
+      "exactFieldsMatch": true
+    },
+    {
+      "id": "health-other-source-001-221",
+      "sourceId": "gap-health-other-history-island-health-2011-12",
+      "normalizedRowIndex": 2233,
+      "exactFieldsMatch": true
+    },
+    {
+      "id": "health-other-source-001-222",
+      "sourceId": "gap-health-other-history-island-health-2011-12",
+      "normalizedRowIndex": 2235,
+      "exactFieldsMatch": true
+    },
+    {
+      "id": "health-other-source-001-223",
+      "sourceId": "gap-health-other-history-island-health-2011-12",
+      "normalizedRowIndex": 2251,
+      "exactFieldsMatch": true
+    },
+    {
+      "id": "health-other-source-001-224",
+      "sourceId": "gap-health-other-history-island-health-2011-12",
+      "normalizedRowIndex": 2257,
+      "exactFieldsMatch": true
+    },
+    {
+      "id": "health-other-source-001-225",
+      "sourceId": "gap-health-other-history-island-health-2011-12",
+      "normalizedRowIndex": 2264,
+      "exactFieldsMatch": true
+    },
+    {
+      "id": "health-other-source-001-226",
+      "sourceId": "gap-health-other-history-island-health-2011-12",
+      "normalizedRowIndex": 2290,
+      "exactFieldsMatch": true
+    },
+    {
+      "id": "health-other-source-001-227",
+      "sourceId": "gap-health-other-history-island-health-2011-12",
+      "normalizedRowIndex": 2313,
+      "exactFieldsMatch": true
+    },
+    {
+      "id": "health-other-source-001-228",
+      "sourceId": "gap-health-other-history-island-health-2011-12",
+      "normalizedRowIndex": 2315,
+      "exactFieldsMatch": true
+    },
+    {
+      "id": "health-other-source-001-229",
+      "sourceId": "gap-health-other-history-island-health-2011-12",
+      "normalizedRowIndex": 2320,
+      "exactFieldsMatch": true
+    },
+    {
+      "id": "health-other-source-001-230",
+      "sourceId": "gap-health-other-history-island-health-2011-12",
+      "normalizedRowIndex": 2361,
+      "exactFieldsMatch": true
+    },
+    {
+      "id": "health-other-source-001-231",
+      "sourceId": "gap-health-other-history-island-health-2011-12",
+      "normalizedRowIndex": 2369,
+      "exactFieldsMatch": true
+    },
+    {
+      "id": "health-other-source-001-232",
+      "sourceId": "gap-health-other-history-island-health-2011-12",
+      "normalizedRowIndex": 2431,
+      "exactFieldsMatch": true
+    },
+    {
+      "id": "health-other-source-001-233",
+      "sourceId": "gap-health-other-history-island-health-2011-12",
+      "normalizedRowIndex": 2435,
+      "exactFieldsMatch": true
+    },
+    {
+      "id": "health-other-source-001-234",
+      "sourceId": "gap-health-other-history-island-health-2011-12",
+      "normalizedRowIndex": 2437,
+      "exactFieldsMatch": true
+    },
+    {
+      "id": "health-other-source-001-235",
+      "sourceId": "gap-health-other-history-island-health-2011-12",
+      "normalizedRowIndex": 2438,
+      "exactFieldsMatch": true
+    },
+    {
+      "id": "health-other-source-001-236",
+      "sourceId": "gap-health-other-history-island-health-2011-12",
+      "normalizedRowIndex": 2445,
+      "exactFieldsMatch": true
+    },
+    {
+      "id": "health-other-source-001-237",
+      "sourceId": "gap-health-other-history-island-health-2011-12",
+      "normalizedRowIndex": 2560,
+      "exactFieldsMatch": true
+    },
+    {
+      "id": "health-other-source-001-238",
+      "sourceId": "gap-health-other-history-island-health-2011-12",
+      "normalizedRowIndex": 2566,
+      "exactFieldsMatch": true
+    },
+    {
+      "id": "health-other-source-001-239",
+      "sourceId": "gap-health-other-history-island-health-2011-12",
+      "normalizedRowIndex": 2572,
+      "exactFieldsMatch": true
+    },
+    {
+      "id": "health-other-source-001-240",
+      "sourceId": "gap-health-other-history-island-health-2011-12",
+      "normalizedRowIndex": 2590,
+      "exactFieldsMatch": true
+    },
+    {
+      "id": "health-other-source-001-241",
+      "sourceId": "gap-health-other-history-island-health-2011-12",
+      "normalizedRowIndex": 2593,
+      "exactFieldsMatch": true
+    },
+    {
+      "id": "health-other-source-001-242",
+      "sourceId": "gap-health-other-history-island-health-2011-12",
+      "normalizedRowIndex": 2595,
+      "exactFieldsMatch": true
+    },
+    {
+      "id": "health-other-source-001-243",
+      "sourceId": "gap-health-other-history-island-health-2011-12",
+      "normalizedRowIndex": 2788,
+      "exactFieldsMatch": true
+    },
+    {
+      "id": "health-other-source-001-244",
+      "sourceId": "gap-health-other-history-island-health-2011-12",
+      "normalizedRowIndex": 2789,
+      "exactFieldsMatch": true
+    },
+    {
+      "id": "health-other-source-001-245",
+      "sourceId": "gap-health-other-history-island-health-2011-12",
+      "normalizedRowIndex": 2790,
+      "exactFieldsMatch": true
+    },
+    {
+      "id": "health-other-source-001-246",
+      "sourceId": "gap-health-other-history-island-health-2011-12",
+      "normalizedRowIndex": 2801,
+      "exactFieldsMatch": true
+    },
+    {
+      "id": "health-other-source-001-247",
+      "sourceId": "gap-health-other-history-island-health-2011-12",
+      "normalizedRowIndex": 2804,
+      "exactFieldsMatch": true
+    },
+    {
+      "id": "health-other-source-001-002",
+      "sourceId": "gap-health-other-history-island-health-2010-11",
+      "normalizedRowIndex": 25,
+      "exactFieldsMatch": true
+    },
+    {
+      "id": "health-other-source-001-003",
+      "sourceId": "gap-health-other-history-island-health-2010-11",
+      "normalizedRowIndex": 34,
+      "exactFieldsMatch": true
+    },
+    {
+      "id": "health-other-source-001-004",
+      "sourceId": "gap-health-other-history-island-health-2010-11",
+      "normalizedRowIndex": 143,
+      "exactFieldsMatch": true
+    },
+    {
+      "id": "health-other-source-001-005",
+      "sourceId": "gap-health-other-history-island-health-2010-11",
+      "normalizedRowIndex": 158,
+      "exactFieldsMatch": true
+    },
+    {
+      "id": "health-other-source-001-006",
+      "sourceId": "gap-health-other-history-island-health-2010-11",
+      "normalizedRowIndex": 371,
+      "exactFieldsMatch": true
+    },
+    {
+      "id": "health-other-source-001-007",
+      "sourceId": "gap-health-other-history-island-health-2010-11",
+      "normalizedRowIndex": 438,
+      "exactFieldsMatch": true
+    },
+    {
+      "id": "health-other-source-001-008",
+      "sourceId": "gap-health-other-history-island-health-2010-11",
+      "normalizedRowIndex": 546,
+      "exactFieldsMatch": true
+    },
+    {
+      "id": "health-other-source-001-009",
+      "sourceId": "gap-health-other-history-island-health-2010-11",
+      "normalizedRowIndex": 602,
+      "exactFieldsMatch": true
+    },
+    {
+      "id": "health-other-source-001-010",
+      "sourceId": "gap-health-other-history-island-health-2010-11",
+      "normalizedRowIndex": 700,
+      "exactFieldsMatch": true
+    },
+    {
+      "id": "health-other-source-001-011",
+      "sourceId": "gap-health-other-history-island-health-2010-11",
+      "normalizedRowIndex": 955,
+      "exactFieldsMatch": true
+    },
+    {
+      "id": "health-other-source-001-012",
+      "sourceId": "gap-health-other-history-island-health-2010-11",
+      "normalizedRowIndex": 1051,
+      "exactFieldsMatch": true
+    },
+    {
+      "id": "health-other-source-001-013",
+      "sourceId": "gap-health-other-history-island-health-2010-11",
+      "normalizedRowIndex": 1153,
+      "exactFieldsMatch": true
+    },
+    {
+      "id": "health-other-source-001-014",
+      "sourceId": "gap-health-other-history-island-health-2010-11",
+      "normalizedRowIndex": 1221,
+      "exactFieldsMatch": true
+    },
+    {
+      "id": "health-other-source-001-015",
+      "sourceId": "gap-health-other-history-island-health-2010-11",
+      "normalizedRowIndex": 1272,
+      "exactFieldsMatch": true
+    },
+    {
+      "id": "health-other-source-001-016",
+      "sourceId": "gap-health-other-history-island-health-2010-11",
+      "normalizedRowIndex": 1407,
+      "exactFieldsMatch": true
+    },
+    {
+      "id": "health-other-source-001-017",
+      "sourceId": "gap-health-other-history-island-health-2010-11",
+      "normalizedRowIndex": 1439,
+      "exactFieldsMatch": true
+    },
+    {
+      "id": "health-other-source-001-018",
+      "sourceId": "gap-health-other-history-island-health-2010-11",
+      "normalizedRowIndex": 1471,
+      "exactFieldsMatch": true
+    },
+    {
+      "id": "health-other-source-001-019",
+      "sourceId": "gap-health-other-history-island-health-2010-11",
+      "normalizedRowIndex": 1547,
+      "exactFieldsMatch": true
+    },
+    {
+      "id": "health-other-source-001-020",
+      "sourceId": "gap-health-other-history-island-health-2010-11",
+      "normalizedRowIndex": 1620,
+      "exactFieldsMatch": true
+    },
+    {
+      "id": "health-other-source-001-021",
+      "sourceId": "gap-health-other-history-island-health-2010-11",
+      "normalizedRowIndex": 1647,
+      "exactFieldsMatch": true
+    },
+    {
+      "id": "health-other-source-001-022",
+      "sourceId": "gap-health-other-history-island-health-2010-11",
+      "normalizedRowIndex": 1708,
+      "exactFieldsMatch": true
+    },
+    {
+      "id": "health-other-source-001-023",
+      "sourceId": "gap-health-other-history-island-health-2010-11",
+      "normalizedRowIndex": 1718,
+      "exactFieldsMatch": true
+    },
+    {
+      "id": "health-other-source-001-024",
+      "sourceId": "gap-health-other-history-island-health-2010-11",
+      "normalizedRowIndex": 1734,
+      "exactFieldsMatch": true
+    },
+    {
+      "id": "health-other-source-001-025",
+      "sourceId": "gap-health-other-history-island-health-2010-11",
+      "normalizedRowIndex": 1792,
+      "exactFieldsMatch": true
+    },
+    {
+      "id": "health-other-source-001-026",
+      "sourceId": "gap-health-other-history-island-health-2010-11",
+      "normalizedRowIndex": 1847,
+      "exactFieldsMatch": true
+    },
+    {
+      "id": "health-other-source-001-027",
+      "sourceId": "gap-health-other-history-island-health-2010-11",
+      "normalizedRowIndex": 2282,
+      "exactFieldsMatch": true
+    },
+    {
+      "id": "health-other-source-001-028",
+      "sourceId": "gap-health-other-history-island-health-2010-11",
+      "normalizedRowIndex": 2398,
+      "exactFieldsMatch": true
+    },
+    {
+      "id": "health-other-source-001-029",
+      "sourceId": "gap-health-other-history-island-health-2010-11",
+      "normalizedRowIndex": 2424,
+      "exactFieldsMatch": true
+    },
+    {
+      "id": "health-other-source-001-030",
+      "sourceId": "gap-health-other-history-island-health-2010-11",
+      "normalizedRowIndex": 2610,
+      "exactFieldsMatch": true
+    },
+    {
+      "id": "health-other-source-001-001",
+      "sourceId": "gap-health-other-history-island-health-2009-10",
+      "normalizedRowIndex": 2185,
+      "exactFieldsMatch": true
+    }
+  ],
+  "scopeQualification": "All11471 normalized records are checked against the immutable native rows plus one explicit image-backed source addition. Only247 records were personally image-transcribed here. Root separately owns complete source context, census and derivation review; no claim of second personal transcription of every record. Exact candidate manifest/provenance pins may need an explicit metadata-adoption overlay at promotion; data bytes are independently pinned.",
+  "preservedSourceQualification": "Northern2014/15 has1254 actual rows against printed1255 summary; source census and residual qualification remain root-owned. No missing employee or payment inferred.",
+  "noOutreach": true
+}

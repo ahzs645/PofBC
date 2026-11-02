@@ -1,0 +1,3047 @@
+{
+  "version": 1,
+  "rowSchema": [
+    "employerSlug",
+    "name",
+    "position",
+    "remuneration",
+    "expenses",
+    "pdfPage"
+  ],
+  "sources": [
+    {
+      "id": "gap-health-boards-island-2025-26",
+      "title": "Island Health Board Remuneration 2025/26",
+      "year": "2025/26",
+      "employerSlug": "island-health",
+      "sourceUrl": "https://www.islandhealth.ca/sites/default/files/accountability/documents/2025-26-board-appointees-remuneration-disclosure.pdf",
+      "sha256": "1ea96afacb74b9e9e06c8b7d0e0c7d21c0e946a8cc850ec01729ba1dcb5ca184",
+      "file": "gap-health-boards-island-2025-26.json.gzip",
+      "dataSha256": "2e6b43c91255ec0bd9c127113d50693dbc2c121af54f0b45a8c516741753b9e8",
+      "rowCount": 10,
+      "status": "verified",
+      "sourceKind": "official",
+      "category": "board-remuneration",
+      "scope": "board-remuneration",
+      "sector": "Health authorities",
+      "employerName": "Island Health",
+      "provenanceFile": "provenance/gap-health-boards-island-2025-26.json.gzip",
+      "provenanceSha256": "579992113bf5041193e51e246533fd052d79fa9d01eb591ae6e9fc0a0bfb6d4c",
+      "evidenceFile": "evidence/gap-health-boards-island-2025-26.json.gzip",
+      "evidenceSha256": "96883791627c859d262e0b518b1d7cf50ff699ca4d10aaf5f8a8861335f5b83c",
+      "completeEmployeeSchedule": false,
+      "completeBoardSchedule": true,
+      "periodType": "fiscal",
+      "periodStart": "2025-04-01",
+      "periodEnd": "2026-03-31",
+      "nameDisclosure": "named",
+      "positionDisclosure": "source-board-position",
+      "currency": "CAD",
+      "threshold": null,
+      "validation": {
+        "independentReaders": [
+          "PyMuPDF rotated word geometry / row bands",
+          "Poppler bbox-layout / nearest independent name baseline"
+        ],
+        "independentlyComparedRows": 10,
+        "completeBoardSchedule": true,
+        "completeEmployeeSchedule": false,
+        "namedRows": 10,
+        "numericPayRows": 10,
+        "heldUnknownPayRows": [],
+        "expensesNotDisclosed": false,
+        "missingExpenseRows": 4,
+        "explicitZeroExpenseRows": 0,
+        "totalRemuneration": 265549,
+        "knownExpenses": 24478,
+        "heldKnownExpenses": 0,
+        "allNamedKnownExpenses": 24478,
+        "rowInclusiveTotalResiduals": [
+          {
+            "name": "Andrew Adams",
+            "residual": 0
+          },
+          {
+            "name": "Diane Brennan",
+            "residual": 0
+          },
+          {
+            "name": "Shaunee Casavant",
+            "residual": 0
+          },
+          {
+            "name": "Harold Cull",
+            "residual": 0
+          },
+          {
+            "name": "Anne Davies",
+            "residual": 0
+          },
+          {
+            "name": "Joanna Gislason",
+            "residual": 0
+          },
+          {
+            "name": "Leah Hollins",
+            "residual": 0
+          },
+          {
+            "name": "Anne McFarlane",
+            "residual": 0
+          },
+          {
+            "name": "Morgan Price",
+            "residual": 0
+          },
+          {
+            "name": "Ronald Rice",
+            "residual": 0
+          }
+        ],
+        "sourceOriginalEvidenceSha256": "96883791627c859d262e0b518b1d7cf50ff699ca4d10aaf5f8a8861335f5b83c",
+        "sourcePhysicalPages": 1,
+        "schedulePhysicalPages": [
+          1
+        ],
+        "compiledPartitionRetained": true,
+        "compiledPartitionRetentionReason": "Full-copy equivalence with retained compiled observations has not been established; no identity or reporting-period equivalence is assumed.",
+        "nativeVisibilityDiagnostics": {
+          "file": "visibility/gap-health-boards-island-2025-26.json.gzip",
+          "sha256": "80aaa2eb88ec54c6cadc8c2af1c3348b2551559c7054a37bda1d488329565918",
+          "method": "Original PDF paint trace, glyph-overlap, field-edge and200dpi dark-ink diagnostics; no assertion that paired native text proves pixel accuracy.",
+          "reviewFieldEdgeCrossings": 0,
+          "ignoredOrLowOpacityCharacters": 0,
+          "nearWhiteCharacters": 0,
+          "identicalGlyphOverprints": 0,
+          "conflictingGlyphOverprints": 0,
+          "nativeWordsWithoutDarkRenderedInk": 0
+        },
+        "printedGrandTotal": 290027,
+        "knownFieldsMinusPrintedGrandTotal": 0,
+        "independentSourceReview": {
+          "path": "research/salaries/gap-fill-2026-11-02/reviews/root-health-board-histories-source-review.json",
+          "sha256": "27e04745f489c0e3171f9b99b908c263d5be9869f027cb1cdbfc2d3d08c76af9"
+        }
+      },
+      "publicWarning": "Board payment disclosures are not annual salary rates or an employee roster. Remuneration is the sum of the source's numeric retainers, meeting fees and any separately disclosed travel per-diem fees. Its expense-inclusive annual total is supporting evidence, not remuneration. Unfilled retainer-role columns are not additional pay observations. Source expense blanks and dashes stay unknown (null); no printed amount is adjusted to balance a subtotal. Existing compiled observations are retained and may overlap this official schedule; no identity or reporting-period equivalence is assumed.",
+      "notes": [
+        "Remuneration is the sum of the source's numeric retainers, meeting fees and any separately disclosed travel per-diem fees. Its expense-inclusive annual total is supporting evidence, not remuneration. Unfilled retainer-role columns are not additional pay observations.",
+        "Names retain the source spelling; adjacent footnote markers are separately preserved in row provenance.",
+        "Source footnotes may describe payments for meetings or travel from earlier years; observations retain the internally stated payment disclosure year."
+      ],
+      "verifiedOn": "2026-11-02"
+    },
+    {
+      "id": "gap-health-boards-island-2024-25",
+      "title": "Island Health Board Remuneration 2024/25",
+      "year": "2024/25",
+      "employerSlug": "island-health",
+      "sourceUrl": "https://www.islandhealth.ca/sites/default/files/accountability/documents/board-appointee-remuneration-2024-2025.pdf",
+      "sha256": "fd05ae742acc20afdb24ab7f7c5e9cd2b034290f6b8483256463a6ee173fc71f",
+      "file": "gap-health-boards-island-2024-25.json.gzip",
+      "dataSha256": "ae84c3819793dfbc075360192d801c7ed28fb4a60abb061976ae05794479cb69",
+      "rowCount": 9,
+      "status": "verified",
+      "sourceKind": "official",
+      "category": "board-remuneration",
+      "scope": "board-remuneration",
+      "sector": "Health authorities",
+      "employerName": "Island Health",
+      "provenanceFile": "provenance/gap-health-boards-island-2024-25.json.gzip",
+      "provenanceSha256": "4ef735c09b31f53a19ce46f0e0941786a1cb3d9b31d1d320db1b03d09c721d00",
+      "evidenceFile": "evidence/gap-health-boards-island-2024-25.json.gzip",
+      "evidenceSha256": "26d1e5ea09573d9ee2a00cf729e0e46590123788291c3a311ae5ec6c02c6986b",
+      "completeEmployeeSchedule": false,
+      "completeBoardSchedule": true,
+      "periodType": "fiscal",
+      "periodStart": "2024-04-01",
+      "periodEnd": "2025-03-31",
+      "nameDisclosure": "named",
+      "positionDisclosure": "source-board-position",
+      "currency": "CAD",
+      "threshold": null,
+      "validation": {
+        "independentReaders": [
+          "PyMuPDF rotated word geometry / row bands",
+          "Poppler bbox-layout / nearest independent name baseline"
+        ],
+        "independentlyComparedRows": 9,
+        "completeBoardSchedule": true,
+        "completeEmployeeSchedule": false,
+        "namedRows": 9,
+        "numericPayRows": 9,
+        "heldUnknownPayRows": [],
+        "expensesNotDisclosed": false,
+        "missingExpenseRows": 0,
+        "explicitZeroExpenseRows": 0,
+        "totalRemuneration": 278812,
+        "knownExpenses": 47138,
+        "heldKnownExpenses": 0,
+        "allNamedKnownExpenses": 47138,
+        "rowInclusiveTotalResiduals": [
+          {
+            "name": "Andy Adams",
+            "residual": 0
+          },
+          {
+            "name": "Diane Brennan",
+            "residual": 0
+          },
+          {
+            "name": "Shaunee Casavant",
+            "residual": 0
+          },
+          {
+            "name": "Harold Cull",
+            "residual": 0
+          },
+          {
+            "name": "Anne Davis",
+            "residual": 0
+          },
+          {
+            "name": "Leah Hollins",
+            "residual": 0
+          },
+          {
+            "name": "Ronald Mattson",
+            "residual": 0
+          },
+          {
+            "name": "Anne McFarlane",
+            "residual": 0
+          },
+          {
+            "name": "Ronald Rice",
+            "residual": 0
+          }
+        ],
+        "sourceOriginalEvidenceSha256": "26d1e5ea09573d9ee2a00cf729e0e46590123788291c3a311ae5ec6c02c6986b",
+        "sourcePhysicalPages": 1,
+        "schedulePhysicalPages": [
+          1
+        ],
+        "compiledPartitionRetained": true,
+        "compiledPartitionRetentionReason": "Full-copy equivalence with retained compiled observations has not been established; no identity or reporting-period equivalence is assumed.",
+        "nativeVisibilityDiagnostics": {
+          "file": "visibility/gap-health-boards-island-2024-25.json.gzip",
+          "sha256": "f0e190a24e2089b556310995f1a4526975c5b0a1d02efbfe37efa0af3f88d0cc",
+          "method": "Original PDF paint trace, glyph-overlap, field-edge and200dpi dark-ink diagnostics; no assertion that paired native text proves pixel accuracy.",
+          "reviewFieldEdgeCrossings": 0,
+          "ignoredOrLowOpacityCharacters": 0,
+          "nearWhiteCharacters": 0,
+          "identicalGlyphOverprints": 0,
+          "conflictingGlyphOverprints": 0,
+          "nativeWordsWithoutDarkRenderedInk": 0
+        },
+        "printedGrandTotal": 325950,
+        "knownFieldsMinusPrintedGrandTotal": 0,
+        "independentSourceReview": {
+          "path": "research/salaries/gap-fill-2026-11-02/reviews/root-health-board-histories-source-review.json",
+          "sha256": "27e04745f489c0e3171f9b99b908c263d5be9869f027cb1cdbfc2d3d08c76af9"
+        }
+      },
+      "publicWarning": "Board payment disclosures are not annual salary rates or an employee roster. Remuneration is the sum of the source's numeric retainers, meeting fees and any separately disclosed travel per-diem fees. Its expense-inclusive annual total is supporting evidence, not remuneration. Unfilled retainer-role columns are not additional pay observations. Source expense blanks and dashes stay unknown (null); no printed amount is adjusted to balance a subtotal. Existing compiled observations are retained and may overlap this official schedule; no identity or reporting-period equivalence is assumed.",
+      "notes": [
+        "Remuneration is the sum of the source's numeric retainers, meeting fees and any separately disclosed travel per-diem fees. Its expense-inclusive annual total is supporting evidence, not remuneration. Unfilled retainer-role columns are not additional pay observations.",
+        "Names retain the source spelling; adjacent footnote markers are separately preserved in row provenance.",
+        "Source footnotes may describe payments for meetings or travel from earlier years; observations retain the internally stated payment disclosure year."
+      ],
+      "verifiedOn": "2026-11-02"
+    },
+    {
+      "id": "gap-health-boards-island-2023-24",
+      "title": "Island Health Board Remuneration 2023/24",
+      "year": "2023/24",
+      "employerSlug": "island-health",
+      "sourceUrl": "https://www.islandhealth.ca/sites/default/files/accountability/documents/board-appointee-remuneration-2023-2024.pdf",
+      "sha256": "89c9d1ab033de0b7bccffa46065972571b9a0ae37d200b27e4556197990b9b07",
+      "file": "gap-health-boards-island-2023-24.json.gzip",
+      "dataSha256": "91d53c2594811b7ea3c7000d300da17128afd38c2ec654d145784a7de582f117",
+      "rowCount": 9,
+      "status": "verified",
+      "sourceKind": "official",
+      "category": "board-remuneration",
+      "scope": "board-remuneration",
+      "sector": "Health authorities",
+      "employerName": "Island Health",
+      "provenanceFile": "provenance/gap-health-boards-island-2023-24.json.gzip",
+      "provenanceSha256": "b7b37983b9e78418044327c72187a0f5c817286bef6ced9e1e4e9068b678f2f8",
+      "evidenceFile": "evidence/gap-health-boards-island-2023-24.json.gzip",
+      "evidenceSha256": "feebb5309f677cd166526bd63aa8fd3c3ab0b52a7d92f7b2db5fb065d9fe4518",
+      "completeEmployeeSchedule": false,
+      "completeBoardSchedule": false,
+      "periodType": "fiscal",
+      "periodStart": "2023-04-01",
+      "periodEnd": "2024-03-31",
+      "nameDisclosure": "named",
+      "positionDisclosure": "source-board-position",
+      "currency": "CAD",
+      "threshold": null,
+      "validation": {
+        "independentReaders": [
+          "PyMuPDF rotated word geometry / row bands",
+          "Poppler bbox-layout / nearest independent name baseline"
+        ],
+        "independentlyComparedRows": 10,
+        "completeBoardSchedule": false,
+        "completeEmployeeSchedule": false,
+        "namedRows": 10,
+        "numericPayRows": 9,
+        "heldUnknownPayRows": [
+          [
+            "island-health",
+            "Harold Cull",
+            "Director",
+            null,
+            null,
+            1
+          ]
+        ],
+        "expensesNotDisclosed": false,
+        "missingExpenseRows": 1,
+        "explicitZeroExpenseRows": 0,
+        "totalRemuneration": 242985,
+        "knownExpenses": 37190,
+        "heldKnownExpenses": 0,
+        "allNamedKnownExpenses": 37190,
+        "rowInclusiveTotalResiduals": [
+          {
+            "name": "Andy Adams",
+            "residual": 0
+          },
+          {
+            "name": "Diane Brennan",
+            "residual": 0
+          },
+          {
+            "name": "Shaunee Casavant",
+            "residual": 0
+          },
+          {
+            "name": "Anne Davis",
+            "residual": 0
+          },
+          {
+            "name": "Leah Hollins",
+            "residual": 0
+          },
+          {
+            "name": "Ronald Mattson",
+            "residual": 0
+          },
+          {
+            "name": "Anne McFarlane",
+            "residual": 0
+          },
+          {
+            "name": "Alana Nast",
+            "residual": 0
+          },
+          {
+            "name": "Ronald Rice",
+            "residual": 0
+          }
+        ],
+        "sourceOriginalEvidenceSha256": "feebb5309f677cd166526bd63aa8fd3c3ab0b52a7d92f7b2db5fb065d9fe4518",
+        "sourcePhysicalPages": 1,
+        "schedulePhysicalPages": [
+          1
+        ],
+        "compiledPartitionRetained": true,
+        "compiledPartitionRetentionReason": "Full-copy equivalence with retained compiled observations has not been established; no identity or reporting-period equivalence is assumed.",
+        "nativeVisibilityDiagnostics": {
+          "file": "visibility/gap-health-boards-island-2023-24.json.gzip",
+          "sha256": "3217ba3e0cc2fe139c6626f3940dfc1e38154a97a50f1289dedc4a7e4aeb1951",
+          "method": "Original PDF paint trace, glyph-overlap, field-edge and200dpi dark-ink diagnostics; no assertion that paired native text proves pixel accuracy.",
+          "reviewFieldEdgeCrossings": 0,
+          "ignoredOrLowOpacityCharacters": 0,
+          "nearWhiteCharacters": 0,
+          "identicalGlyphOverprints": 0,
+          "conflictingGlyphOverprints": 0,
+          "nativeWordsWithoutDarkRenderedInk": 0
+        },
+        "printedGrandTotal": 280174,
+        "knownFieldsMinusPrintedGrandTotal": 1,
+        "independentSourceReview": {
+          "path": "research/salaries/gap-fill-2026-11-02/reviews/root-health-board-histories-source-review.json",
+          "sha256": "27e04745f489c0e3171f9b99b908c263d5be9869f027cb1cdbfc2d3d08c76af9"
+        }
+      },
+      "publicWarning": "Board payment disclosures are not annual salary rates or an employee roster. Remuneration is the sum of the source's numeric retainers, meeting fees and any separately disclosed travel per-diem fees. Its expense-inclusive annual total is supporting evidence, not remuneration. Unfilled retainer-role columns are not additional pay observations. Source expense blanks and dashes stay unknown (null); no printed amount is adjusted to balance a subtotal. 1 named board observation(s) with nonnumeric remuneration are held as supporting evidence rather than assigned zero pay. Imported numeric-pay rows carry 37190 CAD in known expenses; excluded nonnumeric-pay rows carry 0 CAD. The full named-board expense control includes both subsets. Literal displayed fields and printed totals disagree; known remuneration plus known expenses minus the printed grand control is 1 CAD. The cause is not established; individual row differences remain in source evidence. Existing compiled observations are retained and may overlap this official schedule; no identity or reporting-period equivalence is assumed.",
+      "notes": [
+        "Remuneration is the sum of the source's numeric retainers, meeting fees and any separately disclosed travel per-diem fees. Its expense-inclusive annual total is supporting evidence, not remuneration. Unfilled retainer-role columns are not additional pay observations.",
+        "Names retain the source spelling; adjacent footnote markers are separately preserved in row provenance.",
+        "Source footnotes may describe payments for meetings or travel from earlier years; observations retain the internally stated payment disclosure year."
+      ],
+      "verifiedOn": "2026-11-02"
+    },
+    {
+      "id": "gap-health-boards-island-2022-23",
+      "title": "Island Health Board Remuneration 2022/23",
+      "year": "2022/23",
+      "employerSlug": "island-health",
+      "sourceUrl": "https://www.islandhealth.ca/sites/default/files/accountability/documents/board-remuneration-2022-2023.pdf",
+      "sha256": "641e7d8f8653df67d601e2c9a5b71992844fa00c5abb57be68dbd918afe221de",
+      "file": "gap-health-boards-island-2022-23.json.gzip",
+      "dataSha256": "b8db75a3f0e472022d3021b019b2358b3170e815b8923d8511c03ba66904813a",
+      "rowCount": 10,
+      "status": "verified",
+      "sourceKind": "official",
+      "category": "board-remuneration",
+      "scope": "board-remuneration",
+      "sector": "Health authorities",
+      "employerName": "Island Health",
+      "provenanceFile": "provenance/gap-health-boards-island-2022-23.json.gzip",
+      "provenanceSha256": "9af67626deac7588981b2301c34b336cde162536a18de1fa5b095682513d7316",
+      "evidenceFile": "evidence/gap-health-boards-island-2022-23.json.gzip",
+      "evidenceSha256": "a0568718db2b1643f4fd2384556bfbd4efdeb7177b46b23dad88bbe13b6e63b8",
+      "completeEmployeeSchedule": false,
+      "completeBoardSchedule": true,
+      "periodType": "fiscal",
+      "periodStart": "2022-04-01",
+      "periodEnd": "2023-03-31",
+      "nameDisclosure": "named",
+      "positionDisclosure": "source-board-position",
+      "currency": "CAD",
+      "threshold": null,
+      "validation": {
+        "independentReaders": [
+          "PyMuPDF rotated word geometry / row bands",
+          "Poppler bbox-layout / nearest independent name baseline"
+        ],
+        "independentlyComparedRows": 10,
+        "completeBoardSchedule": true,
+        "completeEmployeeSchedule": false,
+        "namedRows": 10,
+        "numericPayRows": 10,
+        "heldUnknownPayRows": [],
+        "expensesNotDisclosed": false,
+        "missingExpenseRows": 0,
+        "explicitZeroExpenseRows": 0,
+        "totalRemuneration": 204108,
+        "knownExpenses": 28256,
+        "heldKnownExpenses": 0,
+        "allNamedKnownExpenses": 28256,
+        "rowInclusiveTotalResiduals": [
+          {
+            "name": "Diane Brennan",
+            "residual": -1
+          },
+          {
+            "name": "Shaunee Casavant",
+            "residual": 0
+          },
+          {
+            "name": "Anne Davis",
+            "residual": 0
+          },
+          {
+            "name": "Vivian Hermansen",
+            "residual": 0
+          },
+          {
+            "name": "Leah Hollins",
+            "residual": -1
+          },
+          {
+            "name": "Ronald Mattson",
+            "residual": 0
+          },
+          {
+            "name": "Anne McFarlane",
+            "residual": 0
+          },
+          {
+            "name": "Alana Nast",
+            "residual": 0
+          },
+          {
+            "name": "Ronald Rice",
+            "residual": 0
+          },
+          {
+            "name": "Marilyn Whitemarsh",
+            "residual": 0
+          }
+        ],
+        "sourceOriginalEvidenceSha256": "a0568718db2b1643f4fd2384556bfbd4efdeb7177b46b23dad88bbe13b6e63b8",
+        "sourcePhysicalPages": 1,
+        "schedulePhysicalPages": [
+          1
+        ],
+        "compiledPartitionRetained": true,
+        "compiledPartitionRetentionReason": "Full-copy equivalence with retained compiled observations has not been established; no identity or reporting-period equivalence is assumed.",
+        "nativeVisibilityDiagnostics": {
+          "file": "visibility/gap-health-boards-island-2022-23.json.gzip",
+          "sha256": "24dc2fe376b5a483971a22a7d84605d26dd0892781dc90fe84b2ec42869e4257",
+          "method": "Original PDF paint trace, glyph-overlap, field-edge and200dpi dark-ink diagnostics; no assertion that paired native text proves pixel accuracy.",
+          "reviewFieldEdgeCrossings": 0,
+          "ignoredOrLowOpacityCharacters": 0,
+          "nearWhiteCharacters": 0,
+          "identicalGlyphOverprints": 0,
+          "conflictingGlyphOverprints": 0,
+          "nativeWordsWithoutDarkRenderedInk": 0
+        },
+        "printedGrandTotal": 232365,
+        "knownFieldsMinusPrintedGrandTotal": -1,
+        "independentSourceReview": {
+          "path": "research/salaries/gap-fill-2026-11-02/reviews/root-health-board-histories-source-review.json",
+          "sha256": "27e04745f489c0e3171f9b99b908c263d5be9869f027cb1cdbfc2d3d08c76af9"
+        }
+      },
+      "publicWarning": "Board payment disclosures are not annual salary rates or an employee roster. Remuneration is the sum of the source's numeric retainers, meeting fees and any separately disclosed travel per-diem fees. Its expense-inclusive annual total is supporting evidence, not remuneration. Unfilled retainer-role columns are not additional pay observations. Source expense blanks and dashes stay unknown (null); no printed amount is adjusted to balance a subtotal. Literal displayed fields and printed totals disagree; known remuneration plus known expenses minus the printed grand control is -1 CAD. The cause is not established; individual row differences remain in source evidence. Existing compiled observations are retained and may overlap this official schedule; no identity or reporting-period equivalence is assumed.",
+      "notes": [
+        "Remuneration is the sum of the source's numeric retainers, meeting fees and any separately disclosed travel per-diem fees. Its expense-inclusive annual total is supporting evidence, not remuneration. Unfilled retainer-role columns are not additional pay observations.",
+        "Names retain the source spelling; adjacent footnote markers are separately preserved in row provenance.",
+        "Source footnotes may describe payments for meetings or travel from earlier years; observations retain the internally stated payment disclosure year."
+      ],
+      "verifiedOn": "2026-11-02"
+    },
+    {
+      "id": "gap-health-boards-island-2021-22",
+      "title": "Island Health Board Remuneration 2021/22",
+      "year": "2021/22",
+      "employerSlug": "island-health",
+      "sourceUrl": "https://www.islandhealth.ca/sites/default/files/accountability/documents/board-remuneration-2021-2022.pdf",
+      "sha256": "6bd3bfa76c37254df68fa77f8c8d15036a897668fbb683cad223ce8dfe647768",
+      "file": "gap-health-boards-island-2021-22.json.gzip",
+      "dataSha256": "9f8de797bf5abf9443d1b40999fea6a5a6eabda5b76ceed09350f5bfcfe5ee66",
+      "rowCount": 10,
+      "status": "verified",
+      "sourceKind": "official",
+      "category": "board-remuneration",
+      "scope": "board-remuneration",
+      "sector": "Health authorities",
+      "employerName": "Island Health",
+      "provenanceFile": "provenance/gap-health-boards-island-2021-22.json.gzip",
+      "provenanceSha256": "4eab67f7869e103719505c36ffbcb79f0e9f533b0acbc06b2514414815ffa8c9",
+      "evidenceFile": "evidence/gap-health-boards-island-2021-22.json.gzip",
+      "evidenceSha256": "e21f7bfda80c1aebe8ba687a74a7601671e7159bdb2aadb0167832730aa2076f",
+      "completeEmployeeSchedule": false,
+      "completeBoardSchedule": false,
+      "periodType": "fiscal",
+      "periodStart": "2021-04-01",
+      "periodEnd": "2022-03-31",
+      "nameDisclosure": "named",
+      "positionDisclosure": "source-board-position",
+      "currency": "CAD",
+      "threshold": null,
+      "validation": {
+        "independentReaders": [
+          "PyMuPDF rotated word geometry / row bands",
+          "Poppler bbox-layout / nearest independent name baseline"
+        ],
+        "independentlyComparedRows": 11,
+        "completeBoardSchedule": false,
+        "completeEmployeeSchedule": false,
+        "namedRows": 11,
+        "numericPayRows": 10,
+        "heldUnknownPayRows": [
+          [
+            "island-health",
+            "Vivian Hermansen",
+            "Director",
+            null,
+            null,
+            1
+          ]
+        ],
+        "expensesNotDisclosed": false,
+        "missingExpenseRows": 8,
+        "explicitZeroExpenseRows": 0,
+        "totalRemuneration": 210875,
+        "knownExpenses": 339,
+        "heldKnownExpenses": 0,
+        "allNamedKnownExpenses": 339,
+        "rowInclusiveTotalResiduals": [
+          {
+            "name": "Diane Brennan",
+            "residual": 0
+          },
+          {
+            "name": "Shaunee Casavant",
+            "residual": 0
+          },
+          {
+            "name": "Anne Davis",
+            "residual": 0
+          },
+          {
+            "name": "Leah Hollins",
+            "residual": 0
+          },
+          {
+            "name": "Ronald Mattson",
+            "residual": 0
+          },
+          {
+            "name": "Anne McFarlane",
+            "residual": 0
+          },
+          {
+            "name": "Claire Moglove",
+            "residual": 0
+          },
+          {
+            "name": "Alana Nast",
+            "residual": 0
+          },
+          {
+            "name": "Ronald Rice",
+            "residual": 0
+          },
+          {
+            "name": "Marilyn Whitemarsh",
+            "residual": 0
+          }
+        ],
+        "sourceOriginalEvidenceSha256": "e21f7bfda80c1aebe8ba687a74a7601671e7159bdb2aadb0167832730aa2076f",
+        "sourcePhysicalPages": 1,
+        "schedulePhysicalPages": [
+          1
+        ],
+        "compiledPartitionRetained": true,
+        "compiledPartitionRetentionReason": "Full-copy equivalence with retained compiled observations has not been established; no identity or reporting-period equivalence is assumed.",
+        "nativeVisibilityDiagnostics": {
+          "file": "visibility/gap-health-boards-island-2021-22.json.gzip",
+          "sha256": "9152243daad33f187f85645a6a101ee17f762a712aebd6c10cd07465af81ab24",
+          "method": "Original PDF paint trace, glyph-overlap, field-edge and200dpi dark-ink diagnostics; no assertion that paired native text proves pixel accuracy.",
+          "reviewFieldEdgeCrossings": 0,
+          "ignoredOrLowOpacityCharacters": 0,
+          "nearWhiteCharacters": 0,
+          "identicalGlyphOverprints": 0,
+          "conflictingGlyphOverprints": 0,
+          "nativeWordsWithoutDarkRenderedInk": 0
+        },
+        "printedGrandTotal": 211214,
+        "knownFieldsMinusPrintedGrandTotal": 0,
+        "independentSourceReview": {
+          "path": "research/salaries/gap-fill-2026-11-02/reviews/root-health-board-histories-source-review.json",
+          "sha256": "27e04745f489c0e3171f9b99b908c263d5be9869f027cb1cdbfc2d3d08c76af9"
+        }
+      },
+      "publicWarning": "Board payment disclosures are not annual salary rates or an employee roster. Remuneration is the sum of the source's numeric retainers, meeting fees and any separately disclosed travel per-diem fees. Its expense-inclusive annual total is supporting evidence, not remuneration. Unfilled retainer-role columns are not additional pay observations. Source expense blanks and dashes stay unknown (null); no printed amount is adjusted to balance a subtotal. 1 named board observation(s) with nonnumeric remuneration are held as supporting evidence rather than assigned zero pay. Imported numeric-pay rows carry 339 CAD in known expenses; excluded nonnumeric-pay rows carry 0 CAD. The full named-board expense control includes both subsets. Existing compiled observations are retained and may overlap this official schedule; no identity or reporting-period equivalence is assumed.",
+      "notes": [
+        "Remuneration is the sum of the source's numeric retainers, meeting fees and any separately disclosed travel per-diem fees. Its expense-inclusive annual total is supporting evidence, not remuneration. Unfilled retainer-role columns are not additional pay observations.",
+        "Names retain the source spelling; adjacent footnote markers are separately preserved in row provenance.",
+        "Source footnotes may describe payments for meetings or travel from earlier years; observations retain the internally stated payment disclosure year."
+      ],
+      "verifiedOn": "2026-11-02"
+    },
+    {
+      "id": "gap-health-boards-island-2020-21",
+      "title": "Island Health Board Remuneration 2020/21",
+      "year": "2020/21",
+      "employerSlug": "island-health",
+      "sourceUrl": "https://www.islandhealth.ca/sites/default/files/board/documents/board-remuneration-2020-2021.pdf",
+      "sha256": "d9b36f31ac23c1c9d3a2158415ebac443b52f176e0785c8e0b95ca5068b7e405",
+      "file": "gap-health-boards-island-2020-21.json.gzip",
+      "dataSha256": "01206eb631670f82d3f96e147340773e426cea8bb34e66e76137ef8a3c4d7563",
+      "rowCount": 10,
+      "status": "verified",
+      "sourceKind": "official",
+      "category": "board-remuneration",
+      "scope": "board-remuneration",
+      "sector": "Health authorities",
+      "employerName": "Island Health",
+      "provenanceFile": "provenance/gap-health-boards-island-2020-21.json.gzip",
+      "provenanceSha256": "0839ccf8217fcebc220098edffcfaa5207bac2839794be2d99a257f85c935247",
+      "evidenceFile": "evidence/gap-health-boards-island-2020-21.json.gzip",
+      "evidenceSha256": "34e6a42dcdac8b99404536f079151675211a611a4580a8c8c377f5a105b4bb92",
+      "completeEmployeeSchedule": false,
+      "completeBoardSchedule": true,
+      "periodType": "fiscal",
+      "periodStart": "2020-04-01",
+      "periodEnd": "2021-03-31",
+      "nameDisclosure": "named",
+      "positionDisclosure": "source-board-position",
+      "currency": "CAD",
+      "threshold": null,
+      "validation": {
+        "independentReaders": [
+          "PyMuPDF rotated word geometry / row bands",
+          "Poppler bbox-layout / nearest independent name baseline"
+        ],
+        "independentlyComparedRows": 10,
+        "completeBoardSchedule": true,
+        "completeEmployeeSchedule": false,
+        "namedRows": 10,
+        "numericPayRows": 10,
+        "heldUnknownPayRows": [],
+        "expensesNotDisclosed": false,
+        "missingExpenseRows": 10,
+        "explicitZeroExpenseRows": 0,
+        "totalRemuneration": 186818,
+        "knownExpenses": 0,
+        "heldKnownExpenses": 0,
+        "allNamedKnownExpenses": 0,
+        "rowInclusiveTotalResiduals": [
+          {
+            "name": "Diane Brennan",
+            "residual": 0
+          },
+          {
+            "name": "Anne Davis",
+            "residual": 0
+          },
+          {
+            "name": "Leah Hollins",
+            "residual": 0
+          },
+          {
+            "name": "Ronald Mattson",
+            "residual": 0
+          },
+          {
+            "name": "Anne McFarlane",
+            "residual": 0
+          },
+          {
+            "name": "Claire Moglove",
+            "residual": 0
+          },
+          {
+            "name": "Alana Nast",
+            "residual": 0
+          },
+          {
+            "name": "Shaunee Casavant",
+            "residual": 0
+          },
+          {
+            "name": "Ronald Rice",
+            "residual": 0
+          },
+          {
+            "name": "Marilyn Whitemarsh",
+            "residual": 0
+          }
+        ],
+        "sourceOriginalEvidenceSha256": "34e6a42dcdac8b99404536f079151675211a611a4580a8c8c377f5a105b4bb92",
+        "sourcePhysicalPages": 1,
+        "schedulePhysicalPages": [
+          1
+        ],
+        "compiledPartitionRetained": true,
+        "compiledPartitionRetentionReason": "Full-copy equivalence with retained compiled observations has not been established; no identity or reporting-period equivalence is assumed.",
+        "nativeVisibilityDiagnostics": {
+          "file": "visibility/gap-health-boards-island-2020-21.json.gzip",
+          "sha256": "93ad800c48fa4650dba4036e110090042b3a76298e6ca4f1785553c29cca6814",
+          "method": "Original PDF paint trace, glyph-overlap, field-edge and200dpi dark-ink diagnostics; no assertion that paired native text proves pixel accuracy.",
+          "reviewFieldEdgeCrossings": 1,
+          "ignoredOrLowOpacityCharacters": 0,
+          "nearWhiteCharacters": 0,
+          "identicalGlyphOverprints": 0,
+          "conflictingGlyphOverprints": 0,
+          "nativeWordsWithoutDarkRenderedInk": 0
+        },
+        "printedGrandTotal": 186818,
+        "knownFieldsMinusPrintedGrandTotal": 0,
+        "independentSourceReview": {
+          "path": "research/salaries/gap-fill-2026-11-02/reviews/root-health-board-histories-source-review.json",
+          "sha256": "27e04745f489c0e3171f9b99b908c263d5be9869f027cb1cdbfc2d3d08c76af9"
+        }
+      },
+      "publicWarning": "Board payment disclosures are not annual salary rates or an employee roster. Remuneration is the sum of the source's numeric retainers, meeting fees and any separately disclosed travel per-diem fees. Its expense-inclusive annual total is supporting evidence, not remuneration. Unfilled retainer-role columns are not additional pay observations. Source expense blanks and dashes stay unknown (null); no printed amount is adjusted to balance a subtotal. Existing compiled observations are retained and may overlap this official schedule; no identity or reporting-period equivalence is assumed.",
+      "notes": [
+        "Remuneration is the sum of the source's numeric retainers, meeting fees and any separately disclosed travel per-diem fees. Its expense-inclusive annual total is supporting evidence, not remuneration. Unfilled retainer-role columns are not additional pay observations.",
+        "Names retain the source spelling; adjacent footnote markers are separately preserved in row provenance.",
+        "Source footnotes may describe payments for meetings or travel from earlier years; observations retain the internally stated payment disclosure year."
+      ],
+      "verifiedOn": "2026-11-02"
+    },
+    {
+      "id": "gap-health-boards-island-2017-18",
+      "title": "Island Health Board Remuneration 2017/18",
+      "year": "2017/18",
+      "employerSlug": "island-health",
+      "sourceUrl": "https://www.islandhealth.ca/sites/default/files/2018-09/PSEC-board-report-2017-2018.pdf",
+      "sha256": "95cf7e001ab2dce3bcde2a29a8535b36b314606d5bf64e391a2d45531c71ef94",
+      "file": "gap-health-boards-island-2017-18.json.gzip",
+      "dataSha256": "ce9b3b478d97135d8473ac2f6dd1be8aa85d9dacb75c7e8e914b8ef9f6e24c4f",
+      "rowCount": 15,
+      "status": "verified",
+      "sourceKind": "official",
+      "category": "board-remuneration",
+      "scope": "board-remuneration",
+      "sector": "Health authorities",
+      "employerName": "Island Health",
+      "provenanceFile": "provenance/gap-health-boards-island-2017-18.json.gzip",
+      "provenanceSha256": "732d988869dc3d4396d26eab921ef5ed02a2b863138855ac0d6cdc8ac9af9c1a",
+      "evidenceFile": "evidence/gap-health-boards-island-2017-18.json.gzip",
+      "evidenceSha256": "f63bb739e8d445670f6df1a2bb333a2dc38e12b3195957a18d181359f0963237",
+      "completeEmployeeSchedule": false,
+      "completeBoardSchedule": true,
+      "periodType": "fiscal",
+      "periodStart": "2017-04-01",
+      "periodEnd": "2018-03-31",
+      "nameDisclosure": "named",
+      "positionDisclosure": "source-board-position",
+      "currency": "CAD",
+      "threshold": null,
+      "validation": {
+        "independentReaders": [
+          "PyMuPDF rotated word geometry / row bands",
+          "Poppler bbox-layout / nearest independent name baseline"
+        ],
+        "independentlyComparedRows": 15,
+        "completeBoardSchedule": true,
+        "completeEmployeeSchedule": false,
+        "namedRows": 15,
+        "numericPayRows": 15,
+        "heldUnknownPayRows": [],
+        "expensesNotDisclosed": true,
+        "missingExpenseRows": 15,
+        "explicitZeroExpenseRows": 0,
+        "totalRemuneration": 201707,
+        "knownExpenses": 0,
+        "heldKnownExpenses": 0,
+        "allNamedKnownExpenses": 0,
+        "rowInclusiveTotalResiduals": [
+          {
+            "name": "Roger Barnsley",
+            "residual": 0
+          },
+          {
+            "name": "Anne Davis",
+            "residual": 0
+          },
+          {
+            "name": "James Dutton",
+            "residual": 0
+          },
+          {
+            "name": "Leah Hollins",
+            "residual": 0
+          },
+          {
+            "name": "Don Hubbard",
+            "residual": 0
+          },
+          {
+            "name": "Robin Kenyon",
+            "residual": 0
+          },
+          {
+            "name": "Ronald Mattson",
+            "residual": 0
+          },
+          {
+            "name": "Anne McFarlane",
+            "residual": 0
+          },
+          {
+            "name": "Claire Moglove",
+            "residual": 0
+          },
+          {
+            "name": "Robina Thomas",
+            "residual": 0
+          },
+          {
+            "name": "Matthew Watson",
+            "residual": 0
+          },
+          {
+            "name": "Kenneth Watts",
+            "residual": 0
+          },
+          {
+            "name": "Jean Wheeler",
+            "residual": 0
+          },
+          {
+            "name": "Marilyn Whitemarsh",
+            "residual": 0
+          },
+          {
+            "name": "Starr Winchester",
+            "residual": 0
+          }
+        ],
+        "sourceOriginalEvidenceSha256": "f63bb739e8d445670f6df1a2bb333a2dc38e12b3195957a18d181359f0963237",
+        "sourcePhysicalPages": 1,
+        "schedulePhysicalPages": [
+          1
+        ],
+        "compiledPartitionRetained": true,
+        "compiledPartitionRetentionReason": "Full-copy equivalence with retained compiled observations has not been established; no identity or reporting-period equivalence is assumed.",
+        "nativeVisibilityDiagnostics": {
+          "file": "visibility/gap-health-boards-island-2017-18.json.gzip",
+          "sha256": "4a45706ac09bbdcae2fc64b066df4cce47fc4f0ea8935f1f12e622f06cbdea13",
+          "method": "Original PDF paint trace, glyph-overlap, field-edge and200dpi dark-ink diagnostics; no assertion that paired native text proves pixel accuracy.",
+          "reviewFieldEdgeCrossings": 0,
+          "ignoredOrLowOpacityCharacters": 0,
+          "nearWhiteCharacters": 0,
+          "identicalGlyphOverprints": 0,
+          "conflictingGlyphOverprints": 0,
+          "nativeWordsWithoutDarkRenderedInk": 0
+        },
+        "printedGrandTotal": 201707,
+        "knownFieldsMinusPrintedGrandTotal": 0,
+        "independentSourceReview": {
+          "path": "research/salaries/gap-fill-2026-11-02/reviews/root-health-board-histories-source-review.json",
+          "sha256": "27e04745f489c0e3171f9b99b908c263d5be9869f027cb1cdbfc2d3d08c76af9"
+        }
+      },
+      "publicWarning": "Board payment disclosures are not annual salary rates or an employee roster. Remuneration uses the source's explicitly printed total remuneration. The report does not disclose a separate expense reimbursement column; expenses remain missing. Source expense blanks and dashes stay unknown (null); no printed amount is adjusted to balance a subtotal. Existing compiled observations are retained and may overlap this official schedule; no identity or reporting-period equivalence is assumed.",
+      "notes": [
+        "Remuneration uses the source's explicitly printed total remuneration. The report does not disclose a separate expense reimbursement column; expenses remain missing.",
+        "Names retain the source spelling; adjacent footnote markers are separately preserved in row provenance.",
+        "Source footnotes may describe payments for meetings or travel from earlier years; observations retain the internally stated payment disclosure year."
+      ],
+      "verifiedOn": "2026-11-02"
+    },
+    {
+      "id": "gap-health-boards-island-2016-17",
+      "title": "Island Health Board Remuneration 2016/17",
+      "year": "2016/17",
+      "employerSlug": "island-health",
+      "sourceUrl": "https://www.islandhealth.ca/sites/default/files/2018-04/board-compensation-2016-2017.pdf",
+      "sha256": "4c35469a915e1b2d6fe187e73e9d388c63eab2392d9417d6e89a7c446ecbba24",
+      "file": "gap-health-boards-island-2016-17.json.gzip",
+      "dataSha256": "2fbdabebf00af4501837bd4915907a6a03e10405078ac2798de69f547012dd3e",
+      "rowCount": 11,
+      "status": "verified",
+      "sourceKind": "official",
+      "category": "board-remuneration",
+      "scope": "board-remuneration",
+      "sector": "Health authorities",
+      "employerName": "Island Health",
+      "provenanceFile": "provenance/gap-health-boards-island-2016-17.json.gzip",
+      "provenanceSha256": "a66caa0dcc856ec51724e4195ff4cae74e565b2669d48fd9cf9048420e62ef71",
+      "evidenceFile": "evidence/gap-health-boards-island-2016-17.json.gzip",
+      "evidenceSha256": "09cdc6c54963f6e241e94dc2f46f748ac34f11a081d2727a4ca3444ca768d0b5",
+      "completeEmployeeSchedule": false,
+      "completeBoardSchedule": true,
+      "periodType": "fiscal",
+      "periodStart": "2016-04-01",
+      "periodEnd": "2017-03-31",
+      "nameDisclosure": "named",
+      "positionDisclosure": "source-board-position",
+      "currency": "CAD",
+      "threshold": null,
+      "validation": {
+        "independentReaders": [
+          "PyMuPDF rotated word geometry / row bands",
+          "Poppler bbox-layout / nearest independent name baseline"
+        ],
+        "independentlyComparedRows": 11,
+        "completeBoardSchedule": true,
+        "completeEmployeeSchedule": false,
+        "namedRows": 11,
+        "numericPayRows": 11,
+        "heldUnknownPayRows": [],
+        "expensesNotDisclosed": true,
+        "missingExpenseRows": 11,
+        "explicitZeroExpenseRows": 0,
+        "totalRemuneration": 192872,
+        "knownExpenses": 0,
+        "heldKnownExpenses": 0,
+        "allNamedKnownExpenses": 0,
+        "rowInclusiveTotalResiduals": [
+          {
+            "name": "Roger Barnsley",
+            "residual": 0
+          },
+          {
+            "name": "Frank Carson",
+            "residual": 0
+          },
+          {
+            "name": "James Dutton",
+            "residual": 0
+          },
+          {
+            "name": "Don Hubbard",
+            "residual": 0
+          },
+          {
+            "name": "Robin Kenyon",
+            "residual": 0
+          },
+          {
+            "name": "Claire Moglove",
+            "residual": 0
+          },
+          {
+            "name": "Robina Thomas",
+            "residual": 0
+          },
+          {
+            "name": "Matthew Watson",
+            "residual": 0
+          },
+          {
+            "name": "Jean Wheeler",
+            "residual": 0
+          },
+          {
+            "name": "Marilyn Whitemarsh",
+            "residual": 0
+          },
+          {
+            "name": "Starr Winchester",
+            "residual": 0
+          }
+        ],
+        "sourceOriginalEvidenceSha256": "09cdc6c54963f6e241e94dc2f46f748ac34f11a081d2727a4ca3444ca768d0b5",
+        "sourcePhysicalPages": 1,
+        "schedulePhysicalPages": [
+          1
+        ],
+        "compiledPartitionRetained": true,
+        "compiledPartitionRetentionReason": "Full-copy equivalence with retained compiled observations has not been established; no identity or reporting-period equivalence is assumed.",
+        "nativeVisibilityDiagnostics": {
+          "file": "visibility/gap-health-boards-island-2016-17.json.gzip",
+          "sha256": "8bad2863804d6e64ebb6fb8adc6eea5a85e58ba6d4e4ad4a1e22094f332ebf6c",
+          "method": "Original PDF paint trace, glyph-overlap, field-edge and200dpi dark-ink diagnostics; no assertion that paired native text proves pixel accuracy.",
+          "reviewFieldEdgeCrossings": 0,
+          "ignoredOrLowOpacityCharacters": 0,
+          "nearWhiteCharacters": 0,
+          "identicalGlyphOverprints": 0,
+          "conflictingGlyphOverprints": 0,
+          "nativeWordsWithoutDarkRenderedInk": 0
+        },
+        "independentSourceReview": {
+          "path": "research/salaries/gap-fill-2026-11-02/reviews/root-health-board-histories-source-review.json",
+          "sha256": "27e04745f489c0e3171f9b99b908c263d5be9869f027cb1cdbfc2d3d08c76af9"
+        }
+      },
+      "publicWarning": "Board payment disclosures are not annual salary rates or an employee roster. Remuneration uses the source's explicitly printed total remuneration. The report does not disclose a separate expense reimbursement column; expenses remain missing. Source expense blanks and dashes stay unknown (null); no printed amount is adjusted to balance a subtotal. Existing compiled observations are retained and may overlap this official schedule; no identity or reporting-period equivalence is assumed.",
+      "notes": [
+        "Remuneration uses the source's explicitly printed total remuneration. The report does not disclose a separate expense reimbursement column; expenses remain missing.",
+        "Names retain the source spelling; adjacent footnote markers are separately preserved in row provenance.",
+        "Source footnotes may describe payments for meetings or travel from earlier years; observations retain the internally stated payment disclosure year."
+      ],
+      "verifiedOn": "2026-11-02"
+    },
+    {
+      "id": "gap-health-boards-island-2015-16",
+      "title": "Island Health Board Remuneration 2015/16",
+      "year": "2015/16",
+      "employerSlug": "island-health",
+      "sourceUrl": "https://www.islandhealth.ca/sites/default/files/2018-04/board-compensation-2015-2016.pdf",
+      "sha256": "0bafe0ec64937615d0faa030784932f479efe2173366501ec36f1feb9f7c64c4",
+      "file": "gap-health-boards-island-2015-16.json.gzip",
+      "dataSha256": "aa45cd0e5ea4583a227753dc7e34f9cef99baa6fb2537d7a89c4f23255bc6d4a",
+      "rowCount": 11,
+      "status": "verified",
+      "sourceKind": "official",
+      "category": "board-remuneration",
+      "scope": "board-remuneration",
+      "sector": "Health authorities",
+      "employerName": "Island Health",
+      "provenanceFile": "provenance/gap-health-boards-island-2015-16.json.gzip",
+      "provenanceSha256": "cd87a6a2b98809f0aa8f3cc65bcf10fd0e02bba8b5bfedbb72bfb5f73ddb69cf",
+      "evidenceFile": "evidence/gap-health-boards-island-2015-16.json.gzip",
+      "evidenceSha256": "72d81b01bfab34362c0b0a800f9016985957e5a31e65988a244b4043229c73b4",
+      "completeEmployeeSchedule": false,
+      "completeBoardSchedule": true,
+      "periodType": "fiscal",
+      "periodStart": "2015-04-01",
+      "periodEnd": "2016-03-31",
+      "nameDisclosure": "named",
+      "positionDisclosure": "source-board-position",
+      "currency": "CAD",
+      "threshold": null,
+      "validation": {
+        "independentReaders": [
+          "PyMuPDF rotated word geometry / row bands",
+          "Poppler bbox-layout / nearest independent name baseline"
+        ],
+        "independentlyComparedRows": 11,
+        "completeBoardSchedule": true,
+        "completeEmployeeSchedule": false,
+        "namedRows": 11,
+        "numericPayRows": 11,
+        "heldUnknownPayRows": [],
+        "expensesNotDisclosed": true,
+        "missingExpenseRows": 11,
+        "explicitZeroExpenseRows": 0,
+        "totalRemuneration": 153375,
+        "knownExpenses": 0,
+        "heldKnownExpenses": 0,
+        "allNamedKnownExpenses": 0,
+        "rowInclusiveTotalResiduals": [
+          {
+            "name": "Roger Barnsley",
+            "residual": 0
+          },
+          {
+            "name": "Frank Carson",
+            "residual": 0
+          },
+          {
+            "name": "James Dutton",
+            "residual": 0
+          },
+          {
+            "name": "Don Hubbard",
+            "residual": 0
+          },
+          {
+            "name": "David Kruyt",
+            "residual": 0
+          },
+          {
+            "name": "Susan Mehinagic",
+            "residual": 0
+          },
+          {
+            "name": "Claire Moglove",
+            "residual": 0
+          },
+          {
+            "name": "Robina Thomas",
+            "residual": 0
+          },
+          {
+            "name": "Matthew Watson",
+            "residual": 0
+          },
+          {
+            "name": "Jean Wheeler",
+            "residual": 0
+          },
+          {
+            "name": "Starr Winchester",
+            "residual": 0
+          }
+        ],
+        "sourceOriginalEvidenceSha256": "72d81b01bfab34362c0b0a800f9016985957e5a31e65988a244b4043229c73b4",
+        "sourcePhysicalPages": 1,
+        "schedulePhysicalPages": [
+          1
+        ],
+        "compiledPartitionRetained": true,
+        "compiledPartitionRetentionReason": "Full-copy equivalence with retained compiled observations has not been established; no identity or reporting-period equivalence is assumed.",
+        "nativeVisibilityDiagnostics": {
+          "file": "visibility/gap-health-boards-island-2015-16.json.gzip",
+          "sha256": "4c6dcdd8015daa63186d0d132089339f9282c1acb6f507b04efc87a998775199",
+          "method": "Original PDF paint trace, glyph-overlap, field-edge and200dpi dark-ink diagnostics; no assertion that paired native text proves pixel accuracy.",
+          "reviewFieldEdgeCrossings": 0,
+          "ignoredOrLowOpacityCharacters": 0,
+          "nearWhiteCharacters": 0,
+          "identicalGlyphOverprints": 0,
+          "conflictingGlyphOverprints": 0,
+          "nativeWordsWithoutDarkRenderedInk": 0
+        },
+        "printedGrandTotal": 153375,
+        "knownFieldsMinusPrintedGrandTotal": 0,
+        "independentSourceReview": {
+          "path": "research/salaries/gap-fill-2026-11-02/reviews/root-health-board-histories-source-review.json",
+          "sha256": "27e04745f489c0e3171f9b99b908c263d5be9869f027cb1cdbfc2d3d08c76af9"
+        }
+      },
+      "publicWarning": "Board payment disclosures are not annual salary rates or an employee roster. Remuneration uses the source's explicitly printed total remuneration. The report does not disclose a separate expense reimbursement column; expenses remain missing. Source expense blanks and dashes stay unknown (null); no printed amount is adjusted to balance a subtotal. The heading establishes FY2015/16, but two appointment footnotes refer to dates after its ending date; these literal source inconsistencies do not relabel the payment schedule. Existing compiled observations are retained and may overlap this official schedule; no identity or reporting-period equivalence is assumed.",
+      "notes": [
+        "Remuneration uses the source's explicitly printed total remuneration. The report does not disclose a separate expense reimbursement column; expenses remain missing.",
+        "Names retain the source spelling; adjacent footnote markers are separately preserved in row provenance.",
+        "Source footnotes may describe payments for meetings or travel from earlier years; observations retain the internally stated payment disclosure year."
+      ],
+      "verifiedOn": "2026-11-02"
+    },
+    {
+      "id": "gap-health-boards-phsa-2023-24",
+      "title": "Provincial Health Services Authority Board Remuneration 2023/24",
+      "year": "2023/24",
+      "employerSlug": "provincial-health-services-authority",
+      "sourceUrl": "https://www.phsa.ca/about-site/Documents/PHSA%20Board%20Remuneration%20Summary%202023-24.pdf",
+      "sha256": "1ea3edd94572773d283607258c60fd72f48fcaaaad1cd00dd8bb6bee34c290be",
+      "file": "gap-health-boards-phsa-2023-24.json.gzip",
+      "dataSha256": "92f0125e628ebfa4549925163087dd23ecab659b088289915d3cbb0db3a876b1",
+      "rowCount": 14,
+      "status": "verified",
+      "sourceKind": "official",
+      "category": "board-remuneration",
+      "scope": "board-remuneration",
+      "sector": "Health authorities",
+      "employerName": "Provincial Health Services Authority",
+      "provenanceFile": "provenance/gap-health-boards-phsa-2023-24.json.gzip",
+      "provenanceSha256": "60f263e99fe1fa28cf7f121ff6a781a44c78d331e22565f1b57862ae300d6762",
+      "evidenceFile": "evidence/gap-health-boards-phsa-2023-24.json.gzip",
+      "evidenceSha256": "bf39c6bbffb8b42f12b7e344521220491bcdd2664afc4908c10c2bfc2072d904",
+      "completeEmployeeSchedule": false,
+      "completeBoardSchedule": true,
+      "periodType": "fiscal",
+      "periodStart": "2023-04-01",
+      "periodEnd": "2024-03-31",
+      "nameDisclosure": "named",
+      "positionDisclosure": "source-board-position",
+      "currency": "CAD",
+      "threshold": null,
+      "validation": {
+        "independentReaders": [
+          "PyMuPDF rotated word geometry / row bands",
+          "Poppler bbox-layout / nearest independent name baseline"
+        ],
+        "independentlyComparedRows": 14,
+        "completeBoardSchedule": true,
+        "completeEmployeeSchedule": false,
+        "namedRows": 14,
+        "numericPayRows": 14,
+        "heldUnknownPayRows": [],
+        "expensesNotDisclosed": false,
+        "missingExpenseRows": 4,
+        "explicitZeroExpenseRows": 0,
+        "totalRemuneration": 386196,
+        "knownExpenses": 68782,
+        "heldKnownExpenses": 0,
+        "allNamedKnownExpenses": 68782,
+        "rowInclusiveTotalResiduals": [
+          {
+            "name": "Tim Manning",
+            "residual": 0
+          },
+          {
+            "name": "Sandra Harris",
+            "residual": 0
+          },
+          {
+            "name": "Donisa Bernardo",
+            "residual": 0
+          },
+          {
+            "name": "Gurdeep Pooni",
+            "residual": 0
+          },
+          {
+            "name": "Joanna Gislason",
+            "residual": 0
+          },
+          {
+            "name": "Julia Dillabough",
+            "residual": 0
+          },
+          {
+            "name": "Gary Caroline",
+            "residual": 0
+          },
+          {
+            "name": "Gloria Ann Morgan",
+            "residual": 0
+          },
+          {
+            "name": "Bill Chan",
+            "residual": 0
+          },
+          {
+            "name": "Dr. Kenneth Bassett",
+            "residual": 0
+          },
+          {
+            "name": "Dianne Marie Doyle",
+            "residual": 0
+          },
+          {
+            "name": "Richard George Short",
+            "residual": 0
+          },
+          {
+            "name": "Piotr Ryszard Majkowski",
+            "residual": 0
+          },
+          {
+            "name": "Dr. Morgan Price",
+            "residual": 0
+          }
+        ],
+        "sourceOriginalEvidenceSha256": "bf39c6bbffb8b42f12b7e344521220491bcdd2664afc4908c10c2bfc2072d904",
+        "sourcePhysicalPages": 1,
+        "schedulePhysicalPages": [
+          1
+        ],
+        "compiledPartitionRetained": true,
+        "compiledPartitionRetentionReason": "Full-copy equivalence with retained compiled observations has not been established; no identity or reporting-period equivalence is assumed.",
+        "nativeVisibilityDiagnostics": {
+          "file": "visibility/gap-health-boards-phsa-2023-24.json.gzip",
+          "sha256": "3eb43142bcad82594df3ef97ebb9a7abea2d47ff0d6b4af68bb2c9bd67340047",
+          "method": "Original PDF paint trace, glyph-overlap, field-edge and200dpi dark-ink diagnostics; no assertion that paired native text proves pixel accuracy.",
+          "reviewFieldEdgeCrossings": 8,
+          "ignoredOrLowOpacityCharacters": 0,
+          "nearWhiteCharacters": 0,
+          "identicalGlyphOverprints": 0,
+          "conflictingGlyphOverprints": 0,
+          "nativeWordsWithoutDarkRenderedInk": 0
+        },
+        "printedGrandTotal": 454978,
+        "knownFieldsMinusPrintedGrandTotal": 0,
+        "independentSourceReview": {
+          "path": "research/salaries/gap-fill-2026-11-02/reviews/root-health-board-histories-source-review.json",
+          "sha256": "27e04745f489c0e3171f9b99b908c263d5be9869f027cb1cdbfc2d3d08c76af9"
+        }
+      },
+      "publicWarning": "Board payment disclosures are not annual salary rates or an employee roster. Remuneration is the sum of the source's numeric retainers, meeting fees and any separately disclosed travel per-diem fees. Its expense-inclusive annual total is supporting evidence, not remuneration. Unfilled retainer-role columns are not additional pay observations. Source expense blanks and dashes stay unknown (null); no printed amount is adjusted to balance a subtotal. Source notes distinguish meeting attendance from payments and include earlier-year meetings or travel paid in this fiscal year; no amount is moved to a different period. Existing compiled observations are retained and may overlap this official schedule; no identity or reporting-period equivalence is assumed.",
+      "notes": [
+        "Remuneration is the sum of the source's numeric retainers, meeting fees and any separately disclosed travel per-diem fees. Its expense-inclusive annual total is supporting evidence, not remuneration. Unfilled retainer-role columns are not additional pay observations.",
+        "Names retain the source spelling; adjacent footnote markers are separately preserved in row provenance.",
+        "Source footnotes may describe payments for meetings or travel from earlier years; observations retain the internally stated payment disclosure year."
+      ],
+      "verifiedOn": "2026-11-02"
+    },
+    {
+      "id": "gap-health-boards-phsa-2022-23",
+      "title": "Provincial Health Services Authority Board Remuneration 2022/23",
+      "year": "2022/23",
+      "employerSlug": "provincial-health-services-authority",
+      "sourceUrl": "https://www.phsa.ca/about-site/Documents/PHSA%20Board%20Remuneration%20Summary%202022-23.pdf",
+      "sha256": "062774d5e25895904a010a5469af0e002d5e9922fe7fbf0759c81e633d8e42ec",
+      "file": "gap-health-boards-phsa-2022-23.json.gzip",
+      "dataSha256": "9b9fe85bb27c1213ce32eee04a3bf5d891b6ce0ac949c806e23dc547c723fe8f",
+      "rowCount": 14,
+      "status": "verified",
+      "sourceKind": "official",
+      "category": "board-remuneration",
+      "scope": "board-remuneration",
+      "sector": "Health authorities",
+      "employerName": "Provincial Health Services Authority",
+      "provenanceFile": "provenance/gap-health-boards-phsa-2022-23.json.gzip",
+      "provenanceSha256": "3aedef313f809ad40f6b1a692eb4061499e61bc9205d8e19adae7bbcb66eb0a2",
+      "evidenceFile": "evidence/gap-health-boards-phsa-2022-23.json.gzip",
+      "evidenceSha256": "f1b966f90e33e459beaf4551fb540fe8b703f2ba6c2845759b6147a722145ec2",
+      "completeEmployeeSchedule": false,
+      "completeBoardSchedule": true,
+      "periodType": "fiscal",
+      "periodStart": "2022-04-01",
+      "periodEnd": "2023-03-31",
+      "nameDisclosure": "named",
+      "positionDisclosure": "source-board-position",
+      "currency": "CAD",
+      "threshold": null,
+      "validation": {
+        "independentReaders": [
+          "PyMuPDF rotated word geometry / row bands",
+          "Poppler bbox-layout / nearest independent name baseline"
+        ],
+        "independentlyComparedRows": 14,
+        "completeBoardSchedule": true,
+        "completeEmployeeSchedule": false,
+        "namedRows": 14,
+        "numericPayRows": 14,
+        "heldUnknownPayRows": [],
+        "expensesNotDisclosed": false,
+        "missingExpenseRows": 2,
+        "explicitZeroExpenseRows": 0,
+        "totalRemuneration": 264577,
+        "knownExpenses": 63984,
+        "heldKnownExpenses": 0,
+        "allNamedKnownExpenses": 63984,
+        "rowInclusiveTotalResiduals": [
+          {
+            "name": "Tim Manning",
+            "residual": 0
+          },
+          {
+            "name": "Sharon Stromdahl",
+            "residual": 0
+          },
+          {
+            "name": "David Turchen",
+            "residual": 0
+          },
+          {
+            "name": "Suki Gill",
+            "residual": 0
+          },
+          {
+            "name": "Dr. Kenneth Bassett",
+            "residual": 0
+          },
+          {
+            "name": "Dr. Kerry Jang",
+            "residual": 0
+          },
+          {
+            "name": "Sandra Harris",
+            "residual": 0
+          },
+          {
+            "name": "Gurdeep Pooni",
+            "residual": 0
+          },
+          {
+            "name": "Donisa Bernardo",
+            "residual": 0
+          },
+          {
+            "name": "Gary Caroline",
+            "residual": 0
+          },
+          {
+            "name": "Bill Chan",
+            "residual": 0
+          },
+          {
+            "name": "Joanna Gislason",
+            "residual": 0
+          },
+          {
+            "name": "Julia Dillabough",
+            "residual": 0
+          },
+          {
+            "name": "Gloria Morgan",
+            "residual": 0
+          }
+        ],
+        "sourceOriginalEvidenceSha256": "f1b966f90e33e459beaf4551fb540fe8b703f2ba6c2845759b6147a722145ec2",
+        "sourcePhysicalPages": 1,
+        "schedulePhysicalPages": [
+          1
+        ],
+        "compiledPartitionRetained": true,
+        "compiledPartitionRetentionReason": "Full-copy equivalence with retained compiled observations has not been established; no identity or reporting-period equivalence is assumed.",
+        "nativeVisibilityDiagnostics": {
+          "file": "visibility/gap-health-boards-phsa-2022-23.json.gzip",
+          "sha256": "10f3ee88d2fdfd7adbe07c2d9d510e725753d5527d5448153f0c072265140a8b",
+          "method": "Original PDF paint trace, glyph-overlap, field-edge and200dpi dark-ink diagnostics; no assertion that paired native text proves pixel accuracy.",
+          "reviewFieldEdgeCrossings": 1,
+          "ignoredOrLowOpacityCharacters": 0,
+          "nearWhiteCharacters": 0,
+          "identicalGlyphOverprints": 0,
+          "conflictingGlyphOverprints": 0,
+          "nativeWordsWithoutDarkRenderedInk": 0
+        },
+        "printedGrandTotal": 328560,
+        "knownFieldsMinusPrintedGrandTotal": 1,
+        "independentSourceReview": {
+          "path": "research/salaries/gap-fill-2026-11-02/reviews/root-health-board-histories-source-review.json",
+          "sha256": "27e04745f489c0e3171f9b99b908c263d5be9869f027cb1cdbfc2d3d08c76af9"
+        }
+      },
+      "publicWarning": "Board payment disclosures are not annual salary rates or an employee roster. Remuneration is the sum of the source's numeric retainers, meeting fees and any separately disclosed travel per-diem fees. Its expense-inclusive annual total is supporting evidence, not remuneration. Unfilled retainer-role columns are not additional pay observations. Source expense blanks and dashes stay unknown (null); no printed amount is adjusted to balance a subtotal. Literal displayed fields and printed totals disagree; known remuneration plus known expenses minus the printed grand control is 1 CAD. The cause is not established; individual row differences remain in source evidence. Source notes distinguish meeting attendance from payments and include earlier-year meetings or travel paid in this fiscal year; no amount is moved to a different period. Existing compiled observations are retained and may overlap this official schedule; no identity or reporting-period equivalence is assumed.",
+      "notes": [
+        "Remuneration is the sum of the source's numeric retainers, meeting fees and any separately disclosed travel per-diem fees. Its expense-inclusive annual total is supporting evidence, not remuneration. Unfilled retainer-role columns are not additional pay observations.",
+        "Names retain the source spelling; adjacent footnote markers are separately preserved in row provenance.",
+        "Source footnotes may describe payments for meetings or travel from earlier years; observations retain the internally stated payment disclosure year."
+      ],
+      "verifiedOn": "2026-11-02"
+    },
+    {
+      "id": "gap-health-boards-phsa-2021-22",
+      "title": "Provincial Health Services Authority Board Remuneration 2021/22",
+      "year": "2021/22",
+      "employerSlug": "provincial-health-services-authority",
+      "sourceUrl": "https://www.phsa.ca/about-site/Documents/PHSA%20Board%20Remuneration%20Summary%202021-22.pdf",
+      "sha256": "5fd5c0115a2f3a8813ea11d8562496db9cb02485b1dc71ebedab3dc93a461c44",
+      "file": "gap-health-boards-phsa-2021-22.json.gzip",
+      "dataSha256": "faac4bf336aaa8fa2b9a5325b0089b87a1d5a84fda2613034a57604c2ef7b8ff",
+      "rowCount": 12,
+      "status": "verified",
+      "sourceKind": "official",
+      "category": "board-remuneration",
+      "scope": "board-remuneration",
+      "sector": "Health authorities",
+      "employerName": "Provincial Health Services Authority",
+      "provenanceFile": "provenance/gap-health-boards-phsa-2021-22.json.gzip",
+      "provenanceSha256": "c383178fda15b0621c795bdf8c38a71611c3758bae4e15f0e5c478199713eca0",
+      "evidenceFile": "evidence/gap-health-boards-phsa-2021-22.json.gzip",
+      "evidenceSha256": "439415ab51c171137e6d220ebf9b04ed816d217f000d92b9834ca939330752cd",
+      "completeEmployeeSchedule": false,
+      "completeBoardSchedule": true,
+      "periodType": "fiscal",
+      "periodStart": "2021-04-01",
+      "periodEnd": "2022-03-31",
+      "nameDisclosure": "named",
+      "positionDisclosure": "source-board-position",
+      "currency": "CAD",
+      "threshold": null,
+      "validation": {
+        "independentReaders": [
+          "PyMuPDF rotated word geometry / row bands",
+          "Poppler bbox-layout / nearest independent name baseline"
+        ],
+        "independentlyComparedRows": 12,
+        "completeBoardSchedule": true,
+        "completeEmployeeSchedule": false,
+        "namedRows": 12,
+        "numericPayRows": 12,
+        "heldUnknownPayRows": [],
+        "expensesNotDisclosed": false,
+        "missingExpenseRows": 6,
+        "explicitZeroExpenseRows": 0,
+        "totalRemuneration": 274125,
+        "knownExpenses": 14653,
+        "heldKnownExpenses": 0,
+        "allNamedKnownExpenses": 14653,
+        "rowInclusiveTotalResiduals": [
+          {
+            "name": "Tim Manning",
+            "residual": 0
+          },
+          {
+            "name": "Robert Kiesman",
+            "residual": 0
+          },
+          {
+            "name": "Lorianna Bennett",
+            "residual": 0
+          },
+          {
+            "name": "David Turchen",
+            "residual": 0
+          },
+          {
+            "name": "Sharon Stromdahl",
+            "residual": 0
+          },
+          {
+            "name": "Chief Clarence Louie",
+            "residual": 0
+          },
+          {
+            "name": "Suki Gill",
+            "residual": 0
+          },
+          {
+            "name": "Gurdeep Pooni",
+            "residual": 0
+          },
+          {
+            "name": "Dr. Kenneth Bassett",
+            "residual": 0
+          },
+          {
+            "name": "Donisa Bernardo",
+            "residual": 0
+          },
+          {
+            "name": "Dr. Kerry Jang",
+            "residual": 0
+          },
+          {
+            "name": "Sandra Harris",
+            "residual": 0
+          }
+        ],
+        "sourceOriginalEvidenceSha256": "439415ab51c171137e6d220ebf9b04ed816d217f000d92b9834ca939330752cd",
+        "sourcePhysicalPages": 1,
+        "schedulePhysicalPages": [
+          1
+        ],
+        "compiledPartitionRetained": true,
+        "compiledPartitionRetentionReason": "Full-copy equivalence with retained compiled observations has not been established; no identity or reporting-period equivalence is assumed.",
+        "nativeVisibilityDiagnostics": {
+          "file": "visibility/gap-health-boards-phsa-2021-22.json.gzip",
+          "sha256": "718512baa486d2403b1b82dab2031b554de0d70be13935480cba7d27f50d082b",
+          "method": "Original PDF paint trace, glyph-overlap, field-edge and200dpi dark-ink diagnostics; no assertion that paired native text proves pixel accuracy.",
+          "reviewFieldEdgeCrossings": 0,
+          "ignoredOrLowOpacityCharacters": 0,
+          "nearWhiteCharacters": 0,
+          "identicalGlyphOverprints": 0,
+          "conflictingGlyphOverprints": 0,
+          "nativeWordsWithoutDarkRenderedInk": 0
+        },
+        "printedGrandTotal": 288778,
+        "knownFieldsMinusPrintedGrandTotal": 0,
+        "independentSourceReview": {
+          "path": "research/salaries/gap-fill-2026-11-02/reviews/root-health-board-histories-source-review.json",
+          "sha256": "27e04745f489c0e3171f9b99b908c263d5be9869f027cb1cdbfc2d3d08c76af9"
+        }
+      },
+      "publicWarning": "Board payment disclosures are not annual salary rates or an employee roster. Remuneration is the sum of the source's numeric retainers, meeting fees and any separately disclosed travel per-diem fees. Its expense-inclusive annual total is supporting evidence, not remuneration. Unfilled retainer-role columns are not additional pay observations. Source expense blanks and dashes stay unknown (null); no printed amount is adjusted to balance a subtotal. Source notes distinguish meeting attendance from payments and include earlier-year meetings or travel paid in this fiscal year; no amount is moved to a different period. Existing compiled observations are retained and may overlap this official schedule; no identity or reporting-period equivalence is assumed.",
+      "notes": [
+        "Remuneration is the sum of the source's numeric retainers, meeting fees and any separately disclosed travel per-diem fees. Its expense-inclusive annual total is supporting evidence, not remuneration. Unfilled retainer-role columns are not additional pay observations.",
+        "Names retain the source spelling; adjacent footnote markers are separately preserved in row provenance.",
+        "Source footnotes may describe payments for meetings or travel from earlier years; observations retain the internally stated payment disclosure year."
+      ],
+      "verifiedOn": "2026-11-02"
+    },
+    {
+      "id": "gap-health-boards-phsa-2020-21",
+      "title": "Provincial Health Services Authority Board Remuneration 2020/21",
+      "year": "2020/21",
+      "employerSlug": "provincial-health-services-authority",
+      "sourceUrl": "https://www.phsa.ca/about-site/Documents/PSEC%202020-21%20Board%20Appointees%20Remuneration%20Disclosure%20FINAL%20PHSA.pdf",
+      "sha256": "a2c9f5d76044a2d0433da4eec9f0ce1ca836b8b31ac4d531ce4db652d6dc5886",
+      "file": "gap-health-boards-phsa-2020-21.json.gzip",
+      "dataSha256": "ff9cfeaa1cf92e002590b625462330692bf8422b4226f20cf01994f31483323e",
+      "rowCount": 12,
+      "status": "verified",
+      "sourceKind": "official",
+      "category": "board-remuneration",
+      "scope": "board-remuneration",
+      "sector": "Health authorities",
+      "employerName": "Provincial Health Services Authority",
+      "provenanceFile": "provenance/gap-health-boards-phsa-2020-21.json.gzip",
+      "provenanceSha256": "c15f9c95b2f5db63f0c354228f3ad3905ffd022cc6cb2b44cd4f38f6ae746845",
+      "evidenceFile": "evidence/gap-health-boards-phsa-2020-21.json.gzip",
+      "evidenceSha256": "f0b465f25da06d02d246cfa691aca588ba161e4d54e9369c3627813a6f771bea",
+      "completeEmployeeSchedule": false,
+      "completeBoardSchedule": true,
+      "periodType": "fiscal",
+      "periodStart": "2020-04-01",
+      "periodEnd": "2021-03-31",
+      "nameDisclosure": "named",
+      "positionDisclosure": "source-board-position",
+      "currency": "CAD",
+      "threshold": null,
+      "validation": {
+        "independentReaders": [
+          "PyMuPDF rotated word geometry / row bands",
+          "Poppler bbox-layout / nearest independent name baseline"
+        ],
+        "independentlyComparedRows": 12,
+        "completeBoardSchedule": true,
+        "completeEmployeeSchedule": false,
+        "namedRows": 12,
+        "numericPayRows": 12,
+        "heldUnknownPayRows": [],
+        "expensesNotDisclosed": false,
+        "missingExpenseRows": 0,
+        "explicitZeroExpenseRows": 0,
+        "totalRemuneration": 215875,
+        "knownExpenses": 2718,
+        "heldKnownExpenses": 0,
+        "allNamedKnownExpenses": 2718,
+        "rowInclusiveTotalResiduals": [
+          {
+            "name": "Tim Manning",
+            "residual": 0
+          },
+          {
+            "name": "Robert Kiesman",
+            "residual": 0
+          },
+          {
+            "name": "Lorianna Bennett",
+            "residual": 0
+          },
+          {
+            "name": "David Turchen",
+            "residual": 0
+          },
+          {
+            "name": "Sharon Stromdahl",
+            "residual": 0
+          },
+          {
+            "name": "Chief Clarence Louie",
+            "residual": 0
+          },
+          {
+            "name": "Suki Gill",
+            "residual": 0
+          },
+          {
+            "name": "Gurdeep Pooni",
+            "residual": 0
+          },
+          {
+            "name": "Ken Bassett",
+            "residual": 0
+          },
+          {
+            "name": "Donisa Bernardo",
+            "residual": 0
+          },
+          {
+            "name": "Kerry Jang",
+            "residual": 0
+          },
+          {
+            "name": "Sandra Harris",
+            "residual": 0
+          }
+        ],
+        "sourceOriginalEvidenceSha256": "f0b465f25da06d02d246cfa691aca588ba161e4d54e9369c3627813a6f771bea",
+        "sourcePhysicalPages": 1,
+        "schedulePhysicalPages": [
+          1
+        ],
+        "compiledPartitionRetained": true,
+        "compiledPartitionRetentionReason": "Full-copy equivalence with retained compiled observations has not been established; no identity or reporting-period equivalence is assumed.",
+        "nativeVisibilityDiagnostics": {
+          "file": "visibility/gap-health-boards-phsa-2020-21.json.gzip",
+          "sha256": "12160e84097a5a0e51b266de105966dd7a4bf5cf52ee0e7d8eb7f12443fe7223",
+          "method": "Original PDF paint trace, glyph-overlap, field-edge and200dpi dark-ink diagnostics; no assertion that paired native text proves pixel accuracy.",
+          "reviewFieldEdgeCrossings": 0,
+          "ignoredOrLowOpacityCharacters": 0,
+          "nearWhiteCharacters": 0,
+          "identicalGlyphOverprints": 0,
+          "conflictingGlyphOverprints": 0,
+          "nativeWordsWithoutDarkRenderedInk": 0
+        },
+        "printedGrandTotal": 218595,
+        "knownFieldsMinusPrintedGrandTotal": -2,
+        "independentSourceReview": {
+          "path": "research/salaries/gap-fill-2026-11-02/reviews/root-health-board-histories-source-review.json",
+          "sha256": "27e04745f489c0e3171f9b99b908c263d5be9869f027cb1cdbfc2d3d08c76af9"
+        }
+      },
+      "publicWarning": "Board payment disclosures are not annual salary rates or an employee roster. Remuneration is the sum of the source's numeric retainers, meeting fees and any separately disclosed travel per-diem fees. Its expense-inclusive annual total is supporting evidence, not remuneration. Unfilled retainer-role columns are not additional pay observations. Source expense blanks and dashes stay unknown (null); no printed amount is adjusted to balance a subtotal. Literal displayed fields and printed totals disagree; known remuneration plus known expenses minus the printed grand control is -2 CAD. The cause is not established; individual row differences remain in source evidence. Source notes distinguish meeting attendance from payments and include earlier-year meetings or travel paid in this fiscal year; no amount is moved to a different period. Existing compiled observations are retained and may overlap this official schedule; no identity or reporting-period equivalence is assumed.",
+      "notes": [
+        "Remuneration is the sum of the source's numeric retainers, meeting fees and any separately disclosed travel per-diem fees. Its expense-inclusive annual total is supporting evidence, not remuneration. Unfilled retainer-role columns are not additional pay observations.",
+        "Names retain the source spelling; adjacent footnote markers are separately preserved in row provenance.",
+        "Source footnotes may describe payments for meetings or travel from earlier years; observations retain the internally stated payment disclosure year."
+      ],
+      "verifiedOn": "2026-11-02"
+    },
+    {
+      "id": "gap-health-boards-phsa-2019-20",
+      "title": "Provincial Health Services Authority Board Remuneration 2019/20",
+      "year": "2019/20",
+      "employerSlug": "provincial-health-services-authority",
+      "sourceUrl": "https://www.phsa.ca/about-site/Documents/PSEC%202019-20%20Board%20Appointees%20Remuneration%20Disclosure%20FINAL%20PHSA.PDF",
+      "sha256": "40fed2b228fb65eda1907df173b0af657ca328af7c89a02bc0eff5249d5f53bd",
+      "file": "gap-health-boards-phsa-2019-20.json.gzip",
+      "dataSha256": "c0dff3b3bb39f2347ff2d9992a25cb4977b1d4b1ef521073bff106fcc6eec4b2",
+      "rowCount": 12,
+      "status": "verified",
+      "sourceKind": "official",
+      "category": "board-remuneration",
+      "scope": "board-remuneration",
+      "sector": "Health authorities",
+      "employerName": "Provincial Health Services Authority",
+      "provenanceFile": "provenance/gap-health-boards-phsa-2019-20.json.gzip",
+      "provenanceSha256": "d39183f005fbb831075ccb551d492fb9b3a0fd73229f91cb78cf4446fac858d9",
+      "evidenceFile": "evidence/gap-health-boards-phsa-2019-20.json.gzip",
+      "evidenceSha256": "315fec0811a80294fc7a6034de37b49c9a266a336e4120c6f2178e715846ec6e",
+      "completeEmployeeSchedule": false,
+      "completeBoardSchedule": true,
+      "periodType": "fiscal",
+      "periodStart": "2019-04-01",
+      "periodEnd": "2020-03-31",
+      "nameDisclosure": "named",
+      "positionDisclosure": "source-board-position",
+      "currency": "CAD",
+      "threshold": null,
+      "validation": {
+        "independentReaders": [
+          "PyMuPDF rotated word geometry / row bands",
+          "Poppler bbox-layout / nearest independent name baseline"
+        ],
+        "independentlyComparedRows": 12,
+        "completeBoardSchedule": true,
+        "completeEmployeeSchedule": false,
+        "namedRows": 12,
+        "numericPayRows": 12,
+        "heldUnknownPayRows": [],
+        "expensesNotDisclosed": false,
+        "missingExpenseRows": 0,
+        "explicitZeroExpenseRows": 0,
+        "totalRemuneration": 186625,
+        "knownExpenses": 53179,
+        "heldKnownExpenses": 0,
+        "allNamedKnownExpenses": 53179,
+        "rowInclusiveTotalResiduals": [
+          {
+            "name": "Tim Manning",
+            "residual": 0
+          },
+          {
+            "name": "Robert Kiesman",
+            "residual": 0
+          },
+          {
+            "name": "Lorianna Bennett",
+            "residual": 0
+          },
+          {
+            "name": "David Turchen",
+            "residual": 0
+          },
+          {
+            "name": "Sharon Stromdahl",
+            "residual": 0
+          },
+          {
+            "name": "Chief Clarence Louie",
+            "residual": 0
+          },
+          {
+            "name": "Suki Gill",
+            "residual": 0
+          },
+          {
+            "name": "Gurdeep Pooni",
+            "residual": 0
+          },
+          {
+            "name": "Ken Bassett",
+            "residual": 0
+          },
+          {
+            "name": "Donisa Bernardo",
+            "residual": 0
+          },
+          {
+            "name": "Kerry Jang",
+            "residual": 0
+          },
+          {
+            "name": "Sandra Harris",
+            "residual": 0
+          }
+        ],
+        "sourceOriginalEvidenceSha256": "315fec0811a80294fc7a6034de37b49c9a266a336e4120c6f2178e715846ec6e",
+        "sourcePhysicalPages": 1,
+        "schedulePhysicalPages": [
+          1
+        ],
+        "compiledPartitionRetained": true,
+        "compiledPartitionRetentionReason": "Full-copy equivalence with retained compiled observations has not been established; no identity or reporting-period equivalence is assumed.",
+        "nativeVisibilityDiagnostics": {
+          "file": "visibility/gap-health-boards-phsa-2019-20.json.gzip",
+          "sha256": "bee1fcba01a85c1fa9be5be000493f5b6db551c58c5673f42d7e4a58e7a21773",
+          "method": "Original PDF paint trace, glyph-overlap, field-edge and200dpi dark-ink diagnostics; no assertion that paired native text proves pixel accuracy.",
+          "reviewFieldEdgeCrossings": 0,
+          "ignoredOrLowOpacityCharacters": 0,
+          "nearWhiteCharacters": 0,
+          "identicalGlyphOverprints": 0,
+          "conflictingGlyphOverprints": 0,
+          "nativeWordsWithoutDarkRenderedInk": 0
+        },
+        "printedGrandTotal": 239804,
+        "knownFieldsMinusPrintedGrandTotal": 0,
+        "independentSourceReview": {
+          "path": "research/salaries/gap-fill-2026-11-02/reviews/root-health-board-histories-source-review.json",
+          "sha256": "27e04745f489c0e3171f9b99b908c263d5be9869f027cb1cdbfc2d3d08c76af9"
+        }
+      },
+      "publicWarning": "Board payment disclosures are not annual salary rates or an employee roster. Remuneration is the sum of the source's numeric retainers, meeting fees and any separately disclosed travel per-diem fees. Its expense-inclusive annual total is supporting evidence, not remuneration. Unfilled retainer-role columns are not additional pay observations. Source expense blanks and dashes stay unknown (null); no printed amount is adjusted to balance a subtotal. Source notes distinguish meeting attendance from payments and include earlier-year meetings or travel paid in this fiscal year; no amount is moved to a different period. Existing compiled observations are retained and may overlap this official schedule; no identity or reporting-period equivalence is assumed.",
+      "notes": [
+        "Remuneration is the sum of the source's numeric retainers, meeting fees and any separately disclosed travel per-diem fees. Its expense-inclusive annual total is supporting evidence, not remuneration. Unfilled retainer-role columns are not additional pay observations.",
+        "Names retain the source spelling; adjacent footnote markers are separately preserved in row provenance.",
+        "Source footnotes may describe payments for meetings or travel from earlier years; observations retain the internally stated payment disclosure year."
+      ],
+      "verifiedOn": "2026-11-02"
+    },
+    {
+      "id": "gap-health-boards-phsa-2018-19",
+      "title": "Provincial Health Services Authority Board Remuneration 2018/19",
+      "year": "2018/19",
+      "employerSlug": "provincial-health-services-authority",
+      "sourceUrl": "https://www.phsa.ca/about-site/Documents/PHSA%202018-19%20Board%20Appointees%20Remuneration.PDF",
+      "sha256": "37ace58729ce7ab346200be2bfd8347dbacf4f230225624281bd0888dc823611",
+      "file": "gap-health-boards-phsa-2018-19.json.gzip",
+      "dataSha256": "f6099adf83f587a1afca2c593d1113945454b6a074520bdee726d915e2d39020",
+      "rowCount": 16,
+      "status": "verified",
+      "sourceKind": "official",
+      "category": "board-remuneration",
+      "scope": "board-remuneration",
+      "sector": "Health authorities",
+      "employerName": "Provincial Health Services Authority",
+      "provenanceFile": "provenance/gap-health-boards-phsa-2018-19.json.gzip",
+      "provenanceSha256": "7efbe707e4a2cbdc3d7778b629a30279fb57b2dee62a91918e9cf132fcaade54",
+      "evidenceFile": "evidence/gap-health-boards-phsa-2018-19.json.gzip",
+      "evidenceSha256": "a049d81d913e4afd2a6ed07d353b36a91bcfa4703568b274b007b3f223a7548b",
+      "completeEmployeeSchedule": false,
+      "completeBoardSchedule": true,
+      "periodType": "fiscal",
+      "periodStart": "2018-04-01",
+      "periodEnd": "2019-03-31",
+      "nameDisclosure": "named",
+      "positionDisclosure": "source-board-position",
+      "currency": "CAD",
+      "threshold": null,
+      "validation": {
+        "independentReaders": [
+          "PyMuPDF rotated word geometry / row bands",
+          "Poppler bbox-layout / nearest independent name baseline"
+        ],
+        "independentlyComparedRows": 16,
+        "completeBoardSchedule": true,
+        "completeEmployeeSchedule": false,
+        "namedRows": 16,
+        "numericPayRows": 16,
+        "heldUnknownPayRows": [],
+        "expensesNotDisclosed": false,
+        "missingExpenseRows": 0,
+        "explicitZeroExpenseRows": 0,
+        "totalRemuneration": 199708,
+        "knownExpenses": 48780,
+        "heldKnownExpenses": 0,
+        "allNamedKnownExpenses": 48780,
+        "rowInclusiveTotalResiduals": [
+          {
+            "name": "Tim Manning",
+            "residual": 0
+          },
+          {
+            "name": "Al Ritchie",
+            "residual": 0
+          },
+          {
+            "name": "Don Brooks",
+            "residual": 0
+          },
+          {
+            "name": "Robert Kiesman",
+            "residual": 0
+          },
+          {
+            "name": "Pauline Rafferty",
+            "residual": 0
+          },
+          {
+            "name": "Lorianna Bennett",
+            "residual": 0
+          },
+          {
+            "name": "David Turchen",
+            "residual": 0
+          },
+          {
+            "name": "Sharon Stromdahl",
+            "residual": 0
+          },
+          {
+            "name": "Chief Clarence Louie",
+            "residual": 0
+          },
+          {
+            "name": "Suki Gill",
+            "residual": 0
+          },
+          {
+            "name": "Sharon Ogasawara",
+            "residual": 0
+          },
+          {
+            "name": "Gurdeep Pooni",
+            "residual": 0
+          },
+          {
+            "name": "Ken Bassett",
+            "residual": 0
+          },
+          {
+            "name": "Donisa Bernardo",
+            "residual": 0
+          },
+          {
+            "name": "Kerry Jang",
+            "residual": 0
+          },
+          {
+            "name": "Sandra Harris",
+            "residual": 0
+          }
+        ],
+        "sourceOriginalEvidenceSha256": "a049d81d913e4afd2a6ed07d353b36a91bcfa4703568b274b007b3f223a7548b",
+        "sourcePhysicalPages": 1,
+        "schedulePhysicalPages": [
+          1
+        ],
+        "compiledPartitionRetained": true,
+        "compiledPartitionRetentionReason": "Full-copy equivalence with retained compiled observations has not been established; no identity or reporting-period equivalence is assumed.",
+        "nativeVisibilityDiagnostics": {
+          "file": "visibility/gap-health-boards-phsa-2018-19.json.gzip",
+          "sha256": "d93be9e0664064f35acd2fa5b8e6bcab2445bfcf20c3706678dab40556520f00",
+          "method": "Original PDF paint trace, glyph-overlap, field-edge and200dpi dark-ink diagnostics; no assertion that paired native text proves pixel accuracy.",
+          "reviewFieldEdgeCrossings": 0,
+          "ignoredOrLowOpacityCharacters": 0,
+          "nearWhiteCharacters": 0,
+          "identicalGlyphOverprints": 0,
+          "conflictingGlyphOverprints": 0,
+          "nativeWordsWithoutDarkRenderedInk": 0
+        },
+        "printedGrandTotal": 248489,
+        "knownFieldsMinusPrintedGrandTotal": -1,
+        "independentSourceReview": {
+          "path": "research/salaries/gap-fill-2026-11-02/reviews/root-health-board-histories-source-review.json",
+          "sha256": "27e04745f489c0e3171f9b99b908c263d5be9869f027cb1cdbfc2d3d08c76af9"
+        }
+      },
+      "publicWarning": "Board payment disclosures are not annual salary rates or an employee roster. Remuneration is the sum of the source's numeric retainers, meeting fees and any separately disclosed travel per-diem fees. Its expense-inclusive annual total is supporting evidence, not remuneration. Unfilled retainer-role columns are not additional pay observations. Source expense blanks and dashes stay unknown (null); no printed amount is adjusted to balance a subtotal. Literal displayed fields and printed totals disagree; known remuneration plus known expenses minus the printed grand control is -1 CAD. The cause is not established; individual row differences remain in source evidence. Source notes distinguish meeting attendance from payments and include earlier-year meetings or travel paid in this fiscal year; no amount is moved to a different period. Existing compiled observations are retained and may overlap this official schedule; no identity or reporting-period equivalence is assumed.",
+      "notes": [
+        "Remuneration is the sum of the source's numeric retainers, meeting fees and any separately disclosed travel per-diem fees. Its expense-inclusive annual total is supporting evidence, not remuneration. Unfilled retainer-role columns are not additional pay observations.",
+        "Names retain the source spelling; adjacent footnote markers are separately preserved in row provenance.",
+        "Source footnotes may describe payments for meetings or travel from earlier years; observations retain the internally stated payment disclosure year."
+      ],
+      "verifiedOn": "2026-11-02"
+    },
+    {
+      "id": "gap-health-boards-phsa-2017-18",
+      "title": "Provincial Health Services Authority Board Remuneration 2017/18",
+      "year": "2017/18",
+      "employerSlug": "provincial-health-services-authority",
+      "sourceUrl": "https://www.phsa.ca/about-site/Documents/PSEC%202017-18%20Board%20Appointees%20Remuneration%20Disclosure%20Final_PHSA.pdf",
+      "sha256": "375609d6f107ae8c76ae21175a5d4b95480bafd37b8c27d8263f4f5e571fe047",
+      "file": "gap-health-boards-phsa-2017-18.json.gzip",
+      "dataSha256": "ecf7454f8a771c497f710404d04db965aabbd9a6c1552b55c422c73f5c580fb7",
+      "rowCount": 14,
+      "status": "verified",
+      "sourceKind": "official",
+      "category": "board-remuneration",
+      "scope": "board-remuneration",
+      "sector": "Health authorities",
+      "employerName": "Provincial Health Services Authority",
+      "provenanceFile": "provenance/gap-health-boards-phsa-2017-18.json.gzip",
+      "provenanceSha256": "1bba2d1e01206447dadc5b79958ce9b07f474f03ca6a0d77728b71a70be8603f",
+      "evidenceFile": "evidence/gap-health-boards-phsa-2017-18.json.gzip",
+      "evidenceSha256": "7c5fb6803df9b035b1189de281f3e7ac0cfa491c864fd17cd9a7421527adfc83",
+      "completeEmployeeSchedule": false,
+      "completeBoardSchedule": false,
+      "periodType": "fiscal",
+      "periodStart": "2017-04-01",
+      "periodEnd": "2018-03-31",
+      "nameDisclosure": "named",
+      "positionDisclosure": "source-board-position",
+      "currency": "CAD",
+      "threshold": null,
+      "validation": {
+        "independentReaders": [
+          "PyMuPDF rotated word geometry / row bands",
+          "Poppler bbox-layout / nearest independent name baseline"
+        ],
+        "independentlyComparedRows": 15,
+        "completeBoardSchedule": false,
+        "completeEmployeeSchedule": false,
+        "namedRows": 15,
+        "numericPayRows": 14,
+        "heldUnknownPayRows": [
+          [
+            "provincial-health-services-authority",
+            "Ken Bassett",
+            "Member, term began Jan 15/2018 (Note 4,6 & 7)",
+            null,
+            null,
+            1
+          ]
+        ],
+        "expensesNotDisclosed": true,
+        "missingExpenseRows": 14,
+        "explicitZeroExpenseRows": 0,
+        "totalRemuneration": 186875,
+        "knownExpenses": 0,
+        "heldKnownExpenses": 0,
+        "allNamedKnownExpenses": 0,
+        "rowInclusiveTotalResiduals": [
+          {
+            "name": "Tim Manning",
+            "residual": 0
+          },
+          {
+            "name": "Al Ritchie",
+            "residual": 0
+          },
+          {
+            "name": "Don Brooks",
+            "residual": 0
+          },
+          {
+            "name": "George Peary",
+            "residual": 0
+          },
+          {
+            "name": "Pauline Rafferty",
+            "residual": 0
+          },
+          {
+            "name": "Robert Kiesman",
+            "residual": 0
+          },
+          {
+            "name": "Lorianna Bennett",
+            "residual": 0
+          },
+          {
+            "name": "David Turchen",
+            "residual": 0
+          },
+          {
+            "name": "Sharon Stromdahl",
+            "residual": 0
+          },
+          {
+            "name": "Chief Clarence Louie",
+            "residual": 0
+          },
+          {
+            "name": "Ida Chong",
+            "residual": 0
+          },
+          {
+            "name": "Suki Gill",
+            "residual": 0
+          },
+          {
+            "name": "Sharon Ogasawara",
+            "residual": 0
+          },
+          {
+            "name": "Gurdeep Pooni",
+            "residual": 0
+          }
+        ],
+        "sourceOriginalEvidenceSha256": "7c5fb6803df9b035b1189de281f3e7ac0cfa491c864fd17cd9a7421527adfc83",
+        "sourcePhysicalPages": 1,
+        "schedulePhysicalPages": [
+          1
+        ],
+        "compiledPartitionRetained": true,
+        "compiledPartitionRetentionReason": "Full-copy equivalence with retained compiled observations has not been established; no identity or reporting-period equivalence is assumed.",
+        "nativeVisibilityDiagnostics": {
+          "file": "visibility/gap-health-boards-phsa-2017-18.json.gzip",
+          "sha256": "b1c18a467dedda5a631037dc6dfcdcabebf87f0964cea75b000ee8e1d353903b",
+          "method": "Original PDF paint trace, glyph-overlap, field-edge and200dpi dark-ink diagnostics; no assertion that paired native text proves pixel accuracy.",
+          "reviewFieldEdgeCrossings": 0,
+          "ignoredOrLowOpacityCharacters": 0,
+          "nearWhiteCharacters": 0,
+          "identicalGlyphOverprints": 0,
+          "conflictingGlyphOverprints": 0,
+          "nativeWordsWithoutDarkRenderedInk": 0
+        },
+        "printedGrandTotal": 186875,
+        "knownFieldsMinusPrintedGrandTotal": 0,
+        "independentSourceReview": {
+          "path": "research/salaries/gap-fill-2026-11-02/reviews/root-health-board-histories-source-review.json",
+          "sha256": "27e04745f489c0e3171f9b99b908c263d5be9869f027cb1cdbfc2d3d08c76af9"
+        }
+      },
+      "publicWarning": "Board payment disclosures are not annual salary rates or an employee roster. Remuneration uses the source's explicitly printed total remuneration. The report does not disclose a separate expense reimbursement column; expenses remain missing. Source expense blanks and dashes stay unknown (null); no printed amount is adjusted to balance a subtotal. 1 named board observation(s) with nonnumeric remuneration are held as supporting evidence rather than assigned zero pay. Imported numeric-pay rows carry 0 CAD in known expenses; excluded nonnumeric-pay rows carry 0 CAD. The full named-board expense control includes both subsets. Source notes distinguish meeting attendance from payments and include earlier-year meetings or travel paid in this fiscal year; no amount is moved to a different period. Existing compiled observations are retained and may overlap this official schedule; no identity or reporting-period equivalence is assumed.",
+      "notes": [
+        "Remuneration uses the source's explicitly printed total remuneration. The report does not disclose a separate expense reimbursement column; expenses remain missing.",
+        "Names retain the source spelling; adjacent footnote markers are separately preserved in row provenance.",
+        "Source footnotes may describe payments for meetings or travel from earlier years; observations retain the internally stated payment disclosure year."
+      ],
+      "verifiedOn": "2026-11-02"
+    },
+    {
+      "id": "gap-health-boards-phsa-2016-17",
+      "title": "Provincial Health Services Authority Board Remuneration 2016/17",
+      "year": "2016/17",
+      "employerSlug": "provincial-health-services-authority",
+      "sourceUrl": "https://www.phsa.ca/about-site/Documents/2016-17%20Board%20Appointees%20Remuneration%20-%20PHSA.PDF",
+      "sha256": "650b7cb30401009d5d4749f481e3263f73870c9f743e2d33fcd7698901c1e80a",
+      "file": "gap-health-boards-phsa-2016-17.json.gzip",
+      "dataSha256": "5ccced0dc663b8c5fcb3c9e8f774ea4de1e982380144f9992c1ad9f7b9890d81",
+      "rowCount": 13,
+      "status": "verified",
+      "sourceKind": "official",
+      "category": "board-remuneration",
+      "scope": "board-remuneration",
+      "sector": "Health authorities",
+      "employerName": "Provincial Health Services Authority",
+      "provenanceFile": "provenance/gap-health-boards-phsa-2016-17.json.gzip",
+      "provenanceSha256": "27831082629d577c6dcfac02261fb48c77d8f20d1813baf6886cb11701d3c7ef",
+      "evidenceFile": "evidence/gap-health-boards-phsa-2016-17.json.gzip",
+      "evidenceSha256": "7b883b92c5471434dc589ab833f977c0fcec94e66c8dcfd1699cad8d413806b4",
+      "completeEmployeeSchedule": false,
+      "completeBoardSchedule": false,
+      "periodType": "fiscal",
+      "periodStart": "2016-04-01",
+      "periodEnd": "2017-03-31",
+      "nameDisclosure": "named",
+      "positionDisclosure": "source-board-position",
+      "currency": "CAD",
+      "threshold": null,
+      "validation": {
+        "independentReaders": [
+          "PyMuPDF rotated word geometry / row bands",
+          "Poppler bbox-layout / nearest independent name baseline"
+        ],
+        "independentlyComparedRows": 14,
+        "completeBoardSchedule": false,
+        "completeEmployeeSchedule": false,
+        "namedRows": 14,
+        "numericPayRows": 13,
+        "heldUnknownPayRows": [
+          [
+            "provincial-health-services-authority",
+            "Wynne Powell",
+            "Board Chair, term ended Dec 2016 (Note 3)",
+            null,
+            null,
+            1
+          ]
+        ],
+        "expensesNotDisclosed": true,
+        "missingExpenseRows": 13,
+        "explicitZeroExpenseRows": 0,
+        "totalRemuneration": 167375,
+        "knownExpenses": 0,
+        "heldKnownExpenses": 0,
+        "allNamedKnownExpenses": 0,
+        "rowInclusiveTotalResiduals": [
+          {
+            "name": "Al Ritchie",
+            "residual": 0
+          },
+          {
+            "name": "Don Brooks",
+            "residual": 0
+          },
+          {
+            "name": "Tim Manning",
+            "residual": 0
+          },
+          {
+            "name": "Lorraine McGrath",
+            "residual": 0
+          },
+          {
+            "name": "George Peary",
+            "residual": 0
+          },
+          {
+            "name": "Pauline Rafferty",
+            "residual": 0
+          },
+          {
+            "name": "John O'Fee",
+            "residual": 0
+          },
+          {
+            "name": "Robert Kiesman",
+            "residual": 0
+          },
+          {
+            "name": "David Turchen",
+            "residual": 0
+          },
+          {
+            "name": "Sharon Stromdahl",
+            "residual": 0
+          },
+          {
+            "name": "Chief Clarence Louie",
+            "residual": 0
+          },
+          {
+            "name": "Lorianna Bennett",
+            "residual": 0
+          },
+          {
+            "name": "Ida Chong",
+            "residual": 0
+          }
+        ],
+        "sourceOriginalEvidenceSha256": "7b883b92c5471434dc589ab833f977c0fcec94e66c8dcfd1699cad8d413806b4",
+        "sourcePhysicalPages": 1,
+        "schedulePhysicalPages": [
+          1
+        ],
+        "compiledPartitionRetained": true,
+        "compiledPartitionRetentionReason": "Full-copy equivalence with retained compiled observations has not been established; no identity or reporting-period equivalence is assumed.",
+        "nativeVisibilityDiagnostics": {
+          "file": "visibility/gap-health-boards-phsa-2016-17.json.gzip",
+          "sha256": "635a93d6863a6ca087177746a2a9d13e875bc8c6cd7ea3474cfd9988e5dd681d",
+          "method": "Original PDF paint trace, glyph-overlap, field-edge and200dpi dark-ink diagnostics; no assertion that paired native text proves pixel accuracy.",
+          "reviewFieldEdgeCrossings": 0,
+          "ignoredOrLowOpacityCharacters": 0,
+          "nearWhiteCharacters": 0,
+          "identicalGlyphOverprints": 0,
+          "conflictingGlyphOverprints": 0,
+          "nativeWordsWithoutDarkRenderedInk": 0
+        },
+        "printedGrandTotal": 167375,
+        "knownFieldsMinusPrintedGrandTotal": 0,
+        "independentSourceReview": {
+          "path": "research/salaries/gap-fill-2026-11-02/reviews/root-health-board-histories-source-review.json",
+          "sha256": "27e04745f489c0e3171f9b99b908c263d5be9869f027cb1cdbfc2d3d08c76af9"
+        }
+      },
+      "publicWarning": "Board payment disclosures are not annual salary rates or an employee roster. Remuneration uses the source's explicitly printed total remuneration. The report does not disclose a separate expense reimbursement column; expenses remain missing. Source expense blanks and dashes stay unknown (null); no printed amount is adjusted to balance a subtotal. 1 named board observation(s) with nonnumeric remuneration are held as supporting evidence rather than assigned zero pay. Imported numeric-pay rows carry 0 CAD in known expenses; excluded nonnumeric-pay rows carry 0 CAD. The full named-board expense control includes both subsets. Source notes distinguish meeting attendance from payments and include earlier-year meetings or travel paid in this fiscal year; no amount is moved to a different period. Existing compiled observations are retained and may overlap this official schedule; no identity or reporting-period equivalence is assumed.",
+      "notes": [
+        "Remuneration uses the source's explicitly printed total remuneration. The report does not disclose a separate expense reimbursement column; expenses remain missing.",
+        "Names retain the source spelling; adjacent footnote markers are separately preserved in row provenance.",
+        "Source footnotes may describe payments for meetings or travel from earlier years; observations retain the internally stated payment disclosure year."
+      ],
+      "verifiedOn": "2026-11-02"
+    },
+    {
+      "id": "gap-health-boards-phsa-2015-16",
+      "title": "Provincial Health Services Authority Board Remuneration 2015/16",
+      "year": "2015/16",
+      "employerSlug": "provincial-health-services-authority",
+      "sourceUrl": "https://www.phsa.ca/about-site/Documents/PHSA%20Board%20Remuneration%20Summary_2015-16.pdf",
+      "sha256": "669b7d45c5bb9f5cca17841dadf088fe7d805104a15b341ceba7738cceb7d621",
+      "file": "gap-health-boards-phsa-2015-16.json.gzip",
+      "dataSha256": "600c37ea72ffebdb772418918e1de4c286372d8b302751b09314c00544e1e4ed",
+      "rowCount": 13,
+      "status": "verified",
+      "sourceKind": "official",
+      "category": "board-remuneration",
+      "scope": "board-remuneration",
+      "sector": "Health authorities",
+      "employerName": "Provincial Health Services Authority",
+      "provenanceFile": "provenance/gap-health-boards-phsa-2015-16.json.gzip",
+      "provenanceSha256": "eb90092de489b2df07d4e106d9c47eaedd2fb0970150d3b68d1b6015927790ad",
+      "evidenceFile": "evidence/gap-health-boards-phsa-2015-16.json.gzip",
+      "evidenceSha256": "069dfd6f18fa72fdcac6211ff25278b02fc9104241705f1daaef43989dace5e0",
+      "completeEmployeeSchedule": false,
+      "completeBoardSchedule": false,
+      "periodType": "fiscal",
+      "periodStart": "2015-04-01",
+      "periodEnd": "2016-03-31",
+      "nameDisclosure": "named",
+      "positionDisclosure": "source-board-position",
+      "currency": "CAD",
+      "threshold": null,
+      "validation": {
+        "independentReaders": [
+          "PyMuPDF rotated word geometry / row bands",
+          "Poppler bbox-layout / nearest independent name baseline"
+        ],
+        "independentlyComparedRows": 14,
+        "completeBoardSchedule": false,
+        "completeEmployeeSchedule": false,
+        "namedRows": 14,
+        "numericPayRows": 13,
+        "heldUnknownPayRows": [
+          [
+            "provincial-health-services-authority",
+            "Wynne Powell",
+            "Board Chair (Note 3)",
+            null,
+            null,
+            1
+          ]
+        ],
+        "expensesNotDisclosed": true,
+        "missingExpenseRows": 13,
+        "explicitZeroExpenseRows": 0,
+        "totalRemuneration": 157125,
+        "knownExpenses": 0,
+        "heldKnownExpenses": 0,
+        "allNamedKnownExpenses": 0,
+        "rowInclusiveTotalResiduals": [
+          {
+            "name": "Al Ritchie",
+            "residual": 0
+          },
+          {
+            "name": "Don Brooks",
+            "residual": 0
+          },
+          {
+            "name": "CJ Sidhu",
+            "residual": 0
+          },
+          {
+            "name": "Murray Sadler",
+            "residual": 0
+          },
+          {
+            "name": "Tim Manning",
+            "residual": 0
+          },
+          {
+            "name": "Lorraine McGrath",
+            "residual": 0
+          },
+          {
+            "name": "George Peary",
+            "residual": 0
+          },
+          {
+            "name": "Pauline Rafferty",
+            "residual": 0
+          },
+          {
+            "name": "John O'Fee",
+            "residual": 0
+          },
+          {
+            "name": "Robert Kiesman",
+            "residual": 0
+          },
+          {
+            "name": "David Turchen",
+            "residual": 0
+          },
+          {
+            "name": "Sharon Stromdahl",
+            "residual": 0
+          },
+          {
+            "name": "Chief Clarence Louie",
+            "residual": 0
+          }
+        ],
+        "sourceOriginalEvidenceSha256": "069dfd6f18fa72fdcac6211ff25278b02fc9104241705f1daaef43989dace5e0",
+        "sourcePhysicalPages": 1,
+        "schedulePhysicalPages": [
+          1
+        ],
+        "compiledPartitionRetained": true,
+        "compiledPartitionRetentionReason": "Full-copy equivalence with retained compiled observations has not been established; no identity or reporting-period equivalence is assumed.",
+        "nativeVisibilityDiagnostics": {
+          "file": "visibility/gap-health-boards-phsa-2015-16.json.gzip",
+          "sha256": "bb7e194dad4e4d966840aa90f9089546611f3cefec07617900d3b83a46b2ea74",
+          "method": "Original PDF paint trace, glyph-overlap, field-edge and200dpi dark-ink diagnostics; no assertion that paired native text proves pixel accuracy.",
+          "reviewFieldEdgeCrossings": 13,
+          "ignoredOrLowOpacityCharacters": 0,
+          "nearWhiteCharacters": 0,
+          "identicalGlyphOverprints": 0,
+          "conflictingGlyphOverprints": 0,
+          "nativeWordsWithoutDarkRenderedInk": 0
+        },
+        "printedGrandTotal": 157125,
+        "knownFieldsMinusPrintedGrandTotal": 0,
+        "independentSourceReview": {
+          "path": "research/salaries/gap-fill-2026-11-02/reviews/root-health-board-histories-source-review.json",
+          "sha256": "27e04745f489c0e3171f9b99b908c263d5be9869f027cb1cdbfc2d3d08c76af9"
+        }
+      },
+      "publicWarning": "Board payment disclosures are not annual salary rates or an employee roster. Remuneration uses the source's explicitly printed total remuneration. The report does not disclose a separate expense reimbursement column; expenses remain missing. Source expense blanks and dashes stay unknown (null); no printed amount is adjusted to balance a subtotal. 1 named board observation(s) with nonnumeric remuneration are held as supporting evidence rather than assigned zero pay. Imported numeric-pay rows carry 0 CAD in known expenses; excluded nonnumeric-pay rows carry 0 CAD. The full named-board expense control includes both subsets. Source notes distinguish meeting attendance from payments and include earlier-year meetings or travel paid in this fiscal year; no amount is moved to a different period. Existing compiled observations are retained and may overlap this official schedule; no identity or reporting-period equivalence is assumed.",
+      "notes": [
+        "Remuneration uses the source's explicitly printed total remuneration. The report does not disclose a separate expense reimbursement column; expenses remain missing.",
+        "Names retain the source spelling; adjacent footnote markers are separately preserved in row provenance.",
+        "Source footnotes may describe payments for meetings or travel from earlier years; observations retain the internally stated payment disclosure year."
+      ],
+      "verifiedOn": "2026-11-02"
+    },
+    {
+      "id": "gap-health-boards-vch-2022-23",
+      "title": "Vancouver Coastal Health Schedule of Board Member Remuneration and Expenses 2022/23 (Legislative Library copy)",
+      "year": "2022/23",
+      "employerSlug": "vancouver-coastal-health",
+      "sourceUrl": "https://digitalcollectionsrepository.llbc.leg.bc.ca/server/api/core/bitstreams/53f7de55-2278-44cf-9710-b8f8bfe46c2f/content",
+      "sha256": "c5387fa2694e41ec226ffcc9aaa763b09b0c1896acbf3f02d571931c1ed670ea",
+      "file": "gap-health-boards-vch-2022-23.json.gzip",
+      "dataSha256": "cedca3441a02391d04c78402b4bb61565be58752daa790c0d451041f14f25b1e",
+      "rowCount": 11,
+      "status": "verified",
+      "sourceKind": "official",
+      "category": "board-remuneration",
+      "scope": "board-remuneration",
+      "sector": "Health authorities",
+      "employerName": "Vancouver Coastal Health",
+      "provenanceFile": "provenance/gap-health-boards-vch-2022-23.json.gzip",
+      "provenanceSha256": "37c396d24a6a8b48d9a231f02b30059c5da4937bdb01b9ea00e319f598d3ce9b",
+      "evidenceFile": "evidence/gap-health-boards-vch-2022-23.json.gzip",
+      "evidenceSha256": "6ab7e2b945388016022a48938166ae8e701f65733f2efb112729b9e434050e2a",
+      "completeEmployeeSchedule": false,
+      "completeBoardSchedule": true,
+      "periodType": "fiscal",
+      "periodStart": "2022-04-01",
+      "periodEnd": "2023-03-31",
+      "nameDisclosure": "named",
+      "positionDisclosure": "source-board-position",
+      "currency": "CAD",
+      "threshold": null,
+      "validation": {
+        "independentReaders": [
+          "PyMuPDF rotated word geometry / row bands",
+          "Poppler bbox-layout / nearest independent name baseline"
+        ],
+        "independentlyComparedRows": 11,
+        "completeBoardSchedule": true,
+        "completeEmployeeSchedule": false,
+        "namedRows": 11,
+        "numericPayRows": 11,
+        "heldUnknownPayRows": [],
+        "expensesNotDisclosed": false,
+        "missingExpenseRows": 6,
+        "explicitZeroExpenseRows": 0,
+        "totalRemuneration": 212625,
+        "knownExpenses": 5452,
+        "heldKnownExpenses": 0,
+        "allNamedKnownExpenses": 5452,
+        "rowInclusiveTotalResiduals": [
+          {
+            "name": "Au, Wendy",
+            "residual": 0
+          },
+          {
+            "name": "Baker, Deborah",
+            "residual": 0
+          },
+          {
+            "name": "Ballem, Penny",
+            "residual": 0
+          },
+          {
+            "name": "Baydala, Allan",
+            "residual": 0
+          },
+          {
+            "name": "Duvall, William",
+            "residual": 0
+          },
+          {
+            "name": "Greenberg, Kathy",
+            "residual": 0
+          },
+          {
+            "name": "McGregor, Margaret",
+            "residual": 0
+          },
+          {
+            "name": "McKenzie, Davis",
+            "residual": 0
+          },
+          {
+            "name": "McLaughlin, John",
+            "residual": 0
+          },
+          {
+            "name": "Naizghi, Eyob",
+            "residual": 0
+          },
+          {
+            "name": "Slett, Marilyn",
+            "residual": 0
+          }
+        ],
+        "sourceOriginalEvidenceSha256": "6ab7e2b945388016022a48938166ae8e701f65733f2efb112729b9e434050e2a",
+        "sourcePhysicalPages": 3,
+        "schedulePhysicalPages": [
+          2
+        ],
+        "compiledPartitionRetained": true,
+        "compiledPartitionRetentionReason": "Full-copy equivalence with retained compiled observations has not been established; no identity or reporting-period equivalence is assumed.",
+        "nativeVisibilityDiagnostics": {
+          "file": "visibility/gap-health-boards-vch-2022-23.json.gzip",
+          "sha256": "6149e8159da86200b03e2bb84347d08eb2c93c42119b2c4e9bcda7a3795daadb",
+          "method": "Original PDF paint trace, glyph-overlap, field-edge and200dpi dark-ink diagnostics; no assertion that paired native text proves pixel accuracy.",
+          "reviewFieldEdgeCrossings": 13,
+          "ignoredOrLowOpacityCharacters": 0,
+          "nearWhiteCharacters": 0,
+          "identicalGlyphOverprints": 0,
+          "conflictingGlyphOverprints": 0,
+          "nativeWordsWithoutDarkRenderedInk": 0
+        },
+        "printedGrandTotal": 218077,
+        "knownFieldsMinusPrintedGrandTotal": 0,
+        "independentSourceReview": {
+          "path": "research/salaries/gap-fill-2026-11-02/reviews/root-health-board-histories-source-review.json",
+          "sha256": "27e04745f489c0e3171f9b99b908c263d5be9869f027cb1cdbfc2d3d08c76af9"
+        }
+      },
+      "publicWarning": "Board payment disclosures are not annual salary rates or an employee roster. Remuneration is the sum of numeric retainers, meeting fees and any separately disclosed travel per-diem fees. Printed annual totals include expense reimbursements and are not used as pay. Source expense blanks and dashes stay unknown (null); no printed amount is adjusted to balance a subtotal. The Legislative Library copy includes an added catalogue cover and only board remuneration plus continuation notes, not employee remuneration. Source notes preserve deferred payments and meeting-fee limits; no amount is reassigned to a different period. Repeated library downloads can differ in PDF bytes; this import pins its exact downloaded representation. All3physicalpages have identical native words and200dpi rendered pixels across the two observed variants. Existing compiled observations are retained and may overlap this official schedule; no identity or reporting-period equivalence is assumed.",
+      "notes": [
+        "Remuneration is the sum of numeric retainers, meeting fees and any separately disclosed travel per-diem fees. Printed annual totals include expense reimbursements and are not used as pay.",
+        "Names retain the source spelling; adjacent footnote markers are separately preserved in row provenance.",
+        "Source footnotes may describe payments for meetings or travel from earlier years; observations retain the internally stated payment disclosure year."
+      ],
+      "verifiedOn": "2026-11-02"
+    },
+    {
+      "id": "gap-health-boards-island-2018-19",
+      "title": "Island Health Board Remuneration 2018/19 (Legislative Library copy)",
+      "year": "2018/19",
+      "employerSlug": "island-health",
+      "sourceUrl": "https://digitalcollectionsrepository.llbc.leg.bc.ca/server/api/core/bitstreams/cd856bac-2d4b-49cb-a956-74bfba5bf71a/content",
+      "sha256": "5c8088d2dfb89f52f6bd3e46709bc3e5dbe597d0173b7960cb60060dd754e0fa",
+      "file": "gap-health-boards-island-2018-19.json.gzip",
+      "dataSha256": "1039eaca5693d89615e3442089f63536cd5b0522877c9a2aa70102e1a2479d90",
+      "rowCount": 11,
+      "status": "verified",
+      "sourceKind": "official",
+      "category": "board-remuneration",
+      "scope": "board-remuneration",
+      "sector": "Health authorities",
+      "employerName": "Island Health",
+      "provenanceFile": "provenance/gap-health-boards-island-2018-19.json.gzip",
+      "provenanceSha256": "58bea15a2be5c169b0e01aef9cdc66031784d09dc3487addc39abbacfb06d89a",
+      "evidenceFile": "evidence/gap-health-boards-island-2018-19.json.gzip",
+      "evidenceSha256": "e3a60bd443e9f797543cb15c667561021545b0a59de2a06fa21a1a0c901fb00e",
+      "completeEmployeeSchedule": false,
+      "completeBoardSchedule": false,
+      "periodType": "fiscal",
+      "periodStart": "2018-04-01",
+      "periodEnd": "2019-03-31",
+      "nameDisclosure": "named",
+      "positionDisclosure": "source-board-position",
+      "currency": "CAD",
+      "threshold": null,
+      "validation": {
+        "independentReaders": [
+          "PyMuPDF rotated word geometry / row bands",
+          "Poppler bbox-layout / nearest independent name baseline"
+        ],
+        "independentlyComparedRows": 12,
+        "completeBoardSchedule": false,
+        "completeEmployeeSchedule": false,
+        "namedRows": 12,
+        "numericPayRows": 11,
+        "heldUnknownPayRows": [
+          [
+            "island-health",
+            "Diane Brennan",
+            "Director (March)",
+            null,
+            657,
+            2
+          ]
+        ],
+        "expensesNotDisclosed": false,
+        "missingExpenseRows": 0,
+        "explicitZeroExpenseRows": 0,
+        "totalRemuneration": 205844,
+        "knownExpenses": 40721,
+        "heldKnownExpenses": 657,
+        "allNamedKnownExpenses": 41378,
+        "rowInclusiveTotalResiduals": [
+          {
+            "name": "Roger Barnsley",
+            "residual": 0
+          },
+          {
+            "name": "Anne Davis",
+            "residual": 0
+          },
+          {
+            "name": "Leah Hollins",
+            "residual": 0
+          },
+          {
+            "name": "Ronald Mattson",
+            "residual": 0
+          },
+          {
+            "name": "Anne McFarlane",
+            "residual": 0
+          },
+          {
+            "name": "Claire Moglove",
+            "residual": 0
+          },
+          {
+            "name": "Alana Nast",
+            "residual": 0
+          },
+          {
+            "name": "Robina Thomas",
+            "residual": 0
+          },
+          {
+            "name": "Kenneth Watts",
+            "residual": 1
+          },
+          {
+            "name": "Jean Wheeler",
+            "residual": 0
+          },
+          {
+            "name": "Marilyn Whitemarsh",
+            "residual": 0
+          }
+        ],
+        "sourceOriginalEvidenceSha256": "e3a60bd443e9f797543cb15c667561021545b0a59de2a06fa21a1a0c901fb00e",
+        "sourcePhysicalPages": 2,
+        "schedulePhysicalPages": [
+          2
+        ],
+        "compiledPartitionRetained": true,
+        "compiledPartitionRetentionReason": "Full-copy equivalence with retained compiled observations has not been established; no identity or reporting-period equivalence is assumed.",
+        "nativeVisibilityDiagnostics": {
+          "file": "visibility/gap-health-boards-island-2018-19.json.gzip",
+          "sha256": "b59b1c22d206227284ba3a1d3dd4ce25b0a77beb7b0cfa59b7d9e7a36fb09730",
+          "method": "Original PDF paint trace, glyph-overlap, field-edge and200dpi dark-ink diagnostics; no assertion that paired native text proves pixel accuracy.",
+          "reviewFieldEdgeCrossings": 1,
+          "ignoredOrLowOpacityCharacters": 0,
+          "nearWhiteCharacters": 0,
+          "identicalGlyphOverprints": 0,
+          "conflictingGlyphOverprints": 0,
+          "nativeWordsWithoutDarkRenderedInk": 0
+        },
+        "printedGrandTotal": 247221,
+        "knownFieldsMinusPrintedGrandTotal": 1,
+        "independentSourceReview": {
+          "path": "research/salaries/gap-fill-2026-11-02/reviews/root-health-board-histories-source-review.json",
+          "sha256": "27e04745f489c0e3171f9b99b908c263d5be9869f027cb1cdbfc2d3d08c76af9"
+        }
+      },
+      "publicWarning": "Board payment disclosures are not annual salary rates or an employee roster. Remuneration is the sum of numeric retainers, meeting fees and separately disclosed travel per-diem fees. The final annual total includes expense reimbursements and is not used as remuneration. Source expense blanks and dashes stay unknown (null); no printed amount is adjusted to balance a subtotal. 1 named board observation(s) with nonnumeric remuneration are held as supporting evidence rather than assigned zero pay. Imported numeric-pay rows carry 40721 CAD in known expenses; excluded nonnumeric-pay rows carry 657 CAD. The full named-board expense control includes both subsets. Literal displayed fields and printed totals disagree; known remuneration plus known expenses minus the printed grand control is 1 CAD. The cause is not established; individual row differences remain in source evidence. The Legislative Library archival copy adds a catalogue cover; page references identify this downloaded representation. Source expense reimbursements attached to a nonnumeric-pay board row remain supporting evidence rather than a salary observation. Existing compiled observations are retained and may overlap this official schedule; no identity or reporting-period equivalence is assumed.",
+      "notes": [
+        "Remuneration is the sum of numeric retainers, meeting fees and separately disclosed travel per-diem fees. The final annual total includes expense reimbursements and is not used as remuneration.",
+        "Names retain the source spelling; adjacent footnote markers are separately preserved in row provenance.",
+        "Source footnotes may describe payments for meetings or travel from earlier years; observations retain the internally stated payment disclosure year."
+      ],
+      "verifiedOn": "2026-11-02"
+    },
+    {
+      "id": "gap-health-boards-island-2019-20",
+      "title": "Island Health Board Remuneration 2019/20 (Legislative Library copy)",
+      "year": "2019/20",
+      "employerSlug": "island-health",
+      "sourceUrl": "https://digitalcollectionsrepository.llbc.leg.bc.ca/server/api/core/bitstreams/87f6ab10-7695-42bf-8817-76867b286b5f/content",
+      "sha256": "588e0e1fea895fbf6653ea28c82be43cec2f66502dd5667ae6be4ebe19b6f815",
+      "file": "gap-health-boards-island-2019-20.json.gzip",
+      "dataSha256": "a625e08f5f3a37712e1ef011dde637bc5ab219cd6abec68d5fe3bb68f5ac59b7",
+      "rowCount": 10,
+      "status": "verified",
+      "sourceKind": "official",
+      "category": "board-remuneration",
+      "scope": "board-remuneration",
+      "sector": "Health authorities",
+      "employerName": "Island Health",
+      "provenanceFile": "provenance/gap-health-boards-island-2019-20.json.gzip",
+      "provenanceSha256": "fadf17192bd90a152878472636865ab2bf5c6c02b06784f84e9759c90baef822",
+      "evidenceFile": "evidence/gap-health-boards-island-2019-20.json.gzip",
+      "evidenceSha256": "d72a4cf8f89388af7d6ebd05fd98ad8698ff80eca77967c3290c2c9e3da736be",
+      "completeEmployeeSchedule": false,
+      "completeBoardSchedule": true,
+      "periodType": "fiscal",
+      "periodStart": "2019-04-01",
+      "periodEnd": "2020-03-31",
+      "nameDisclosure": "named",
+      "positionDisclosure": "source-board-position",
+      "currency": "CAD",
+      "threshold": null,
+      "validation": {
+        "independentReaders": [
+          "PyMuPDF rotated word geometry / row bands",
+          "Poppler bbox-layout / nearest independent name baseline"
+        ],
+        "independentlyComparedRows": 10,
+        "completeBoardSchedule": true,
+        "completeEmployeeSchedule": false,
+        "namedRows": 10,
+        "numericPayRows": 10,
+        "heldUnknownPayRows": [],
+        "expensesNotDisclosed": false,
+        "missingExpenseRows": 0,
+        "explicitZeroExpenseRows": 0,
+        "totalRemuneration": 206365,
+        "knownExpenses": 27834,
+        "heldKnownExpenses": 0,
+        "allNamedKnownExpenses": 27834,
+        "rowInclusiveTotalResiduals": [
+          {
+            "name": "Diane Brennan",
+            "residual": 0
+          },
+          {
+            "name": "Anne Davis",
+            "residual": 0
+          },
+          {
+            "name": "Leah Hollins",
+            "residual": 0
+          },
+          {
+            "name": "Ronald Mattson",
+            "residual": 0
+          },
+          {
+            "name": "Anne McFarlane",
+            "residual": 0
+          },
+          {
+            "name": "Claire Moglove",
+            "residual": 0
+          },
+          {
+            "name": "Alana Nast",
+            "residual": 0
+          },
+          {
+            "name": "Robina Thomas",
+            "residual": 0
+          },
+          {
+            "name": "Kenneth Watts",
+            "residual": 0
+          },
+          {
+            "name": "Marilyn Whitemarsh",
+            "residual": 0
+          }
+        ],
+        "sourceOriginalEvidenceSha256": "d72a4cf8f89388af7d6ebd05fd98ad8698ff80eca77967c3290c2c9e3da736be",
+        "sourcePhysicalPages": 2,
+        "schedulePhysicalPages": [
+          2
+        ],
+        "compiledPartitionRetained": true,
+        "compiledPartitionRetentionReason": "Full-copy equivalence with retained compiled observations has not been established; no identity or reporting-period equivalence is assumed.",
+        "nativeVisibilityDiagnostics": {
+          "file": "visibility/gap-health-boards-island-2019-20.json.gzip",
+          "sha256": "9245aab0708be8cc0a20f043ab8dfb13af756986d0fbbc9a3475cbddce5c7391",
+          "method": "Original PDF paint trace, glyph-overlap, field-edge and200dpi dark-ink diagnostics; no assertion that paired native text proves pixel accuracy.",
+          "reviewFieldEdgeCrossings": 0,
+          "ignoredOrLowOpacityCharacters": 0,
+          "nearWhiteCharacters": 0,
+          "identicalGlyphOverprints": 0,
+          "conflictingGlyphOverprints": 0,
+          "nativeWordsWithoutDarkRenderedInk": 0
+        },
+        "printedGrandTotal": 234198,
+        "knownFieldsMinusPrintedGrandTotal": 1,
+        "independentSourceReview": {
+          "path": "research/salaries/gap-fill-2026-11-02/reviews/root-health-board-histories-source-review.json",
+          "sha256": "27e04745f489c0e3171f9b99b908c263d5be9869f027cb1cdbfc2d3d08c76af9"
+        }
+      },
+      "publicWarning": "Board payment disclosures are not annual salary rates or an employee roster. Remuneration is the sum of numeric retainers, meeting fees and separately disclosed travel per-diem fees. The final annual total includes expense reimbursements and is not used as remuneration. Source expense blanks and dashes stay unknown (null); no printed amount is adjusted to balance a subtotal. Literal displayed fields and printed totals disagree; known remuneration plus known expenses minus the printed grand control is 1 CAD. The cause is not established; individual row differences remain in source evidence. The Legislative Library archival copy adds a catalogue cover; page references identify this downloaded representation. Source expense reimbursements attached to a nonnumeric-pay board row remain supporting evidence rather than a salary observation. Existing compiled observations are retained and may overlap this official schedule; no identity or reporting-period equivalence is assumed.",
+      "notes": [
+        "Remuneration is the sum of numeric retainers, meeting fees and separately disclosed travel per-diem fees. The final annual total includes expense reimbursements and is not used as remuneration.",
+        "Names retain the source spelling; adjacent footnote markers are separately preserved in row provenance.",
+        "Source footnotes may describe payments for meetings or travel from earlier years; observations retain the internally stated payment disclosure year."
+      ],
+      "verifiedOn": "2026-11-02"
+    },
+    {
+      "id": "gap-health-boards-providence-2024-25",
+      "title": "Providence Health Care Society Board Remuneration and Expenses 2024/25 (Legislative Library copy)",
+      "year": "2024/25",
+      "employerSlug": "providence-health-care",
+      "sourceUrl": "https://digitalcollectionsrepository.llbc.leg.bc.ca/server/api/core/bitstreams/f1de1c6c-b275-4150-9574-49ee482ef163/content",
+      "sha256": "37b0b91d65c1d89ecdfd7f148fb9097092ee3554d186c36c7fb63cfb0132fa44",
+      "file": "gap-health-boards-providence-2024-25.json.gzip",
+      "dataSha256": "88297bff6c312ccb5dd72b1224fe1752e74574924a56a262f080a12e68f8515d",
+      "rowCount": 9,
+      "status": "verified",
+      "sourceKind": "official",
+      "category": "board-remuneration",
+      "scope": "board-remuneration",
+      "sector": "Health authorities",
+      "employerName": "Providence Health Care",
+      "provenanceFile": "provenance/gap-health-boards-providence-2024-25.json.gzip",
+      "provenanceSha256": "70f44eab4128850e50d75c0e384ed9d17a3561fe34d75f208f9605d66eaa8d02",
+      "evidenceFile": "evidence/gap-health-boards-providence-2024-25.json.gzip",
+      "evidenceSha256": "b056054e3e2589d75f42d68ab8a2adea7abaaeb204c1fdabdc49164af68e676b",
+      "completeEmployeeSchedule": false,
+      "completeBoardSchedule": false,
+      "periodType": "fiscal",
+      "periodStart": "2024-04-01",
+      "periodEnd": "2025-03-31",
+      "nameDisclosure": "named",
+      "positionDisclosure": "not-published",
+      "currency": "CAD",
+      "threshold": null,
+      "validation": {
+        "independentReaders": [
+          "PyMuPDF rotated word geometry / row bands",
+          "Poppler bbox-layout / nearest independent name baseline"
+        ],
+        "independentlyComparedRows": 16,
+        "completeBoardSchedule": false,
+        "completeEmployeeSchedule": false,
+        "namedRows": 16,
+        "numericPayRows": 9,
+        "heldUnknownPayRows": [
+          [
+            "providence-health-care",
+            "Gorman, James, Chair",
+            null,
+            null,
+            217,
+            55
+          ],
+          [
+            "providence-health-care",
+            "Allore, Father Robert",
+            null,
+            null,
+            345,
+            55
+          ],
+          [
+            "providence-health-care",
+            "Bull, Peter",
+            null,
+            null,
+            324,
+            55
+          ],
+          [
+            "providence-health-care",
+            "Doucette, Debra",
+            null,
+            null,
+            324,
+            55
+          ],
+          [
+            "providence-health-care",
+            "Harris, Maria",
+            null,
+            null,
+            870,
+            55
+          ],
+          [
+            "providence-health-care",
+            "Kelleher, Dr. Dermot",
+            null,
+            null,
+            null,
+            55
+          ],
+          [
+            "providence-health-care",
+            "Luk, Ivor",
+            null,
+            null,
+            324,
+            55
+          ]
+        ],
+        "expensesNotDisclosed": false,
+        "missingExpenseRows": 0,
+        "explicitZeroExpenseRows": 0,
+        "totalRemuneration": 100000,
+        "knownExpenses": 4046,
+        "heldKnownExpenses": 2404,
+        "allNamedKnownExpenses": 6450,
+        "rowInclusiveTotalResiduals": [],
+        "sourceOriginalEvidenceSha256": "b056054e3e2589d75f42d68ab8a2adea7abaaeb204c1fdabdc49164af68e676b",
+        "sourcePhysicalPages": 233,
+        "schedulePhysicalPages": [
+          55
+        ],
+        "compiledPartitionRetained": true,
+        "compiledPartitionRetentionReason": "Full-copy equivalence with retained compiled observations has not been established; no identity or reporting-period equivalence is assumed.",
+        "nativeVisibilityDiagnostics": {
+          "file": "visibility/gap-health-boards-providence-2024-25.json.gzip",
+          "sha256": "961a73978c9b35147886ee86826ed500273291f3162eecf1dfe0ae81876f4531",
+          "method": "Original PDF paint trace, glyph-overlap, field-edge and200dpi dark-ink diagnostics; no assertion that paired native text proves pixel accuracy.",
+          "reviewFieldEdgeCrossings": 0,
+          "ignoredOrLowOpacityCharacters": 0,
+          "nearWhiteCharacters": 0,
+          "identicalGlyphOverprints": 0,
+          "conflictingGlyphOverprints": 0,
+          "nativeWordsWithoutDarkRenderedInk": 0
+        },
+        "printedRemunerationControl": 100000,
+        "remunerationControlResidual": 0,
+        "printedExpensesControl": 6450,
+        "allNamedExpenseControlResidual": 0,
+        "independentSourceReview": {
+          "path": "research/salaries/gap-fill-2026-11-02/reviews/root-health-board-histories-source-review.json",
+          "sha256": "27e04745f489c0e3171f9b99b908c263d5be9869f027cb1cdbfc2d3d08c76af9"
+        }
+      },
+      "publicWarning": "Board payment disclosures are not annual salary rates or an employee roster. The named remuneration column is remuneration; the expenses column is separate. The source name cell, including any Chair suffix, is retained literally; no separate position column is published. Source expense blanks and dashes stay unknown (null); no printed amount is adjusted to balance a subtotal. 7 named board observation(s) with nonnumeric remuneration are held as supporting evidence rather than assigned zero pay. Imported numeric-pay rows carry 4046 CAD in known expenses; excluded nonnumeric-pay rows carry 2404 CAD. The full named-board expense control includes both subsets. The Legislative Library archival copy includes an added catalogue cover. All dash-only remuneration observations remain supporting research, with their expenses retained for the full Board control; no zero remuneration is invented. The source notes that remuneration excludes fees paid in the next fiscal year. Existing compiled observations are retained and may overlap this official schedule; no identity or reporting-period equivalence is assumed.",
+      "notes": [
+        "The named remuneration column is remuneration; the expenses column is separate. The source name cell, including any Chair suffix, is retained literally; no separate position column is published.",
+        "Names retain the source spelling; adjacent footnote markers are separately preserved in row provenance.",
+        "Source footnotes may describe payments for meetings or travel from earlier years; observations retain the internally stated payment disclosure year."
+      ],
+      "verifiedOn": "2026-11-02"
+    },
+    {
+      "id": "gap-health-boards-providence-2022-23",
+      "title": "Providence Health Care Society Board Remuneration and Expenses 2022/23 (Legislative Library copy)",
+      "year": "2022/23",
+      "employerSlug": "providence-health-care",
+      "sourceUrl": "https://digitalcollectionsrepository.llbc.leg.bc.ca/server/api/core/bitstreams/a4d96958-9747-4f0e-932e-47e8238d366f/content",
+      "sha256": "2dc3e947deae74996169840041bb36e5b5e44b82bfa44bc720f850e2f8f5359e",
+      "file": "gap-health-boards-providence-2022-23.json.gzip",
+      "dataSha256": "7509a6296515ed6edf6d2bd5961f34c95314f8a13ac46d5d173f4bccd3d287c3",
+      "rowCount": 10,
+      "status": "verified",
+      "sourceKind": "official",
+      "category": "board-remuneration",
+      "scope": "board-remuneration",
+      "sector": "Health authorities",
+      "employerName": "Providence Health Care",
+      "provenanceFile": "provenance/gap-health-boards-providence-2022-23.json.gzip",
+      "provenanceSha256": "3cb779a73a6d1f3402bffd1ce5a92217b6e5499ea0a0b8d484c2196cfdc8d5fb",
+      "evidenceFile": "evidence/gap-health-boards-providence-2022-23.json.gzip",
+      "evidenceSha256": "5859c3fc8067a1c36a099551f10d32623b42ac8345d7b67c91b2597f22e022a7",
+      "completeEmployeeSchedule": false,
+      "completeBoardSchedule": false,
+      "periodType": "fiscal",
+      "periodStart": "2022-04-01",
+      "periodEnd": "2023-03-31",
+      "nameDisclosure": "named",
+      "positionDisclosure": "not-published",
+      "currency": "CAD",
+      "threshold": null,
+      "validation": {
+        "independentReaders": [
+          "PyMuPDF rotated word geometry / row bands",
+          "Poppler bbox-layout / nearest independent name baseline"
+        ],
+        "independentlyComparedRows": 16,
+        "completeBoardSchedule": false,
+        "completeEmployeeSchedule": false,
+        "namedRows": 16,
+        "numericPayRows": 10,
+        "heldUnknownPayRows": [
+          [
+            "providence-health-care",
+            "Allore, Father Robert",
+            null,
+            null,
+            518,
+            56
+          ],
+          [
+            "providence-health-care",
+            "Bull, Peter",
+            null,
+            null,
+            203,
+            56
+          ],
+          [
+            "providence-health-care",
+            "George-Wilson, Leah",
+            null,
+            null,
+            20,
+            56
+          ],
+          [
+            "providence-health-care",
+            "Kelleher, Dr. Dermot",
+            null,
+            null,
+            null,
+            56
+          ],
+          [
+            "providence-health-care",
+            "Kennedy, Michael",
+            null,
+            null,
+            280,
+            56
+          ],
+          [
+            "providence-health-care",
+            "Luk, Ivor",
+            null,
+            null,
+            136,
+            56
+          ]
+        ],
+        "expensesNotDisclosed": false,
+        "missingExpenseRows": 0,
+        "explicitZeroExpenseRows": 0,
+        "totalRemuneration": 96500,
+        "knownExpenses": 1987,
+        "heldKnownExpenses": 1157,
+        "allNamedKnownExpenses": 3144,
+        "rowInclusiveTotalResiduals": [],
+        "sourceOriginalEvidenceSha256": "5859c3fc8067a1c36a099551f10d32623b42ac8345d7b67c91b2597f22e022a7",
+        "sourcePhysicalPages": 218,
+        "schedulePhysicalPages": [
+          56
+        ],
+        "compiledPartitionRetained": true,
+        "compiledPartitionRetentionReason": "Full-copy equivalence with retained compiled observations has not been established; no identity or reporting-period equivalence is assumed.",
+        "nativeVisibilityDiagnostics": {
+          "file": "visibility/gap-health-boards-providence-2022-23.json.gzip",
+          "sha256": "6adb57c0a5be99e389921d076c82dc1aabfc8850d7dc0fffee05cb5c210a7212",
+          "method": "Original PDF paint trace, glyph-overlap, field-edge and200dpi dark-ink diagnostics; no assertion that paired native text proves pixel accuracy.",
+          "reviewFieldEdgeCrossings": 0,
+          "ignoredOrLowOpacityCharacters": 0,
+          "nearWhiteCharacters": 0,
+          "identicalGlyphOverprints": 0,
+          "conflictingGlyphOverprints": 0,
+          "nativeWordsWithoutDarkRenderedInk": 0
+        },
+        "printedRemunerationControl": 96500,
+        "remunerationControlResidual": 0,
+        "printedExpensesControl": 3144,
+        "allNamedExpenseControlResidual": 0,
+        "independentSourceReview": {
+          "path": "research/salaries/gap-fill-2026-11-02/reviews/root-health-board-histories-source-review.json",
+          "sha256": "27e04745f489c0e3171f9b99b908c263d5be9869f027cb1cdbfc2d3d08c76af9"
+        }
+      },
+      "publicWarning": "Board payment disclosures are not annual salary rates or an employee roster. The named remuneration column is remuneration; the expenses column is separate. The source name cell, including any Chair suffix, is retained literally; no separate position column is published. Source expense blanks and dashes stay unknown (null); no printed amount is adjusted to balance a subtotal. 6 named board observation(s) with nonnumeric remuneration are held as supporting evidence rather than assigned zero pay. Imported numeric-pay rows carry 1987 CAD in known expenses; excluded nonnumeric-pay rows carry 1157 CAD. The full named-board expense control includes both subsets. The Legislative Library archival copy includes an added catalogue cover. All dash-only remuneration observations remain supporting research, with their expenses retained for the full Board control; no zero remuneration is invented. The source notes that remuneration excludes fees paid in the next fiscal year. Existing compiled observations are retained and may overlap this official schedule; no identity or reporting-period equivalence is assumed.",
+      "notes": [
+        "The named remuneration column is remuneration; the expenses column is separate. The source name cell, including any Chair suffix, is retained literally; no separate position column is published.",
+        "Names retain the source spelling; adjacent footnote markers are separately preserved in row provenance.",
+        "Source footnotes may describe payments for meetings or travel from earlier years; observations retain the internally stated payment disclosure year."
+      ],
+      "verifiedOn": "2026-11-02"
+    }
+  ]
+}

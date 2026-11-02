@@ -1,0 +1,343 @@
+{
+  "schemaVersion": 1,
+  "scope": "Exactly nine PHSA earlier catalogued ORIGINAL salary assets under existing lead034",
+  "inventory": {
+    "path": "research/salaries/gap-fill-2026-11-02/phsa_history/source-inventory.json",
+    "sha256": "b0fde04b8c96fc3abe3f278faefcf1db5305cbc238cf90d7c98a61a6fbc7e362"
+  },
+  "sourceContextAcceptance": {
+    "path": "research/salaries/gap-fill-2026-11-02/reviews/phsa-context-root/root-nine-source-context-acceptance.json",
+    "sha256": "e486351a8851756d83dfcea2a3a1f40968b49bc69513209c7bb5d8347018dda9"
+  },
+  "pendingPeerScopes": [],
+  "sources": [
+    {
+      "key": "phsa-2006-07",
+      "inputKind": "native",
+      "selectedInput": {
+        "path": "research/salaries/gap-fill-2026-11-02/phsa_history/phsa-2006-07-native-candidate-v2.json.gzip",
+        "sha256": "02a3c1824bd5d0a2a02a52e53d9de32b1beb9e990eaf062bab1f1790c0146c91"
+      },
+      "actualNamedRows": 1267,
+      "periodStart": "2006-04-01",
+      "periodEnd": "2007-03-31",
+      "printedNamedControls": {
+        "remuneration": 151608222,
+        "expenses": 4448009,
+        "physicalPage": 41,
+        "label": "Printed named-employee remuneration/expense totals"
+      },
+      "printedEmployeeNarrativeCount": 1280,
+      "conflictingNarrativeCount": null,
+      "conflictingNarrativeCountPeriodEnd": null,
+      "peerReviews": [
+        {
+          "path": "research/salaries/gap-fill-2026-11-02/municipal/reviews/phsa-history/native-v2-producer-comparison.json",
+          "sha256": "34a027299a867ada5470a78eabd1897d9d43d955a4428ec6765a5781c72f66b3"
+        }
+      ],
+      "pageCensusEvidence": [
+        {
+          "path": "research/salaries/gap-fill-2026-11-02/municipal/reviews/phsa-history/native-complete-independent-source-audit.json",
+          "sha256": "873c1179dbba3aee46e288e9782c6a52db7ea5dac7d95f0cbd5b2adfe2257577"
+        }
+      ]
+    },
+    {
+      "key": "phsa-2007-08",
+      "inputKind": "native",
+      "selectedInput": {
+        "path": "research/salaries/gap-fill-2026-11-02/phsa_history/phsa-2007-08-native-candidate-v2.json.gzip",
+        "sha256": "8ff3d870b49c36880e40a4ffbefea06e17c280de1f31104fc6fc7a249588cdc9"
+      },
+      "actualNamedRows": 1271,
+      "periodStart": "2007-04-01",
+      "periodEnd": "2008-03-31",
+      "printedNamedControls": {
+        "remuneration": 154793761,
+        "expenses": 4014218,
+        "physicalPage": 33,
+        "label": "Printed named-employee remuneration/expense totals"
+      },
+      "printedEmployeeNarrativeCount": 1271,
+      "conflictingNarrativeCount": null,
+      "conflictingNarrativeCountPeriodEnd": null,
+      "peerReviews": [
+        {
+          "path": "research/salaries/gap-fill-2026-11-02/municipal/reviews/phsa-history/native-v2-producer-comparison.json",
+          "sha256": "34a027299a867ada5470a78eabd1897d9d43d955a4428ec6765a5781c72f66b3"
+        }
+      ],
+      "pageCensusEvidence": [
+        {
+          "path": "research/salaries/gap-fill-2026-11-02/municipal/reviews/phsa-history/native-complete-independent-source-audit.json",
+          "sha256": "873c1179dbba3aee46e288e9782c6a52db7ea5dac7d95f0cbd5b2adfe2257577"
+        }
+      ]
+    },
+    {
+      "key": "phsa-2008-09",
+      "inputKind": "native",
+      "selectedInput": {
+        "path": "research/salaries/gap-fill-2026-11-02/phsa_history/phsa-2008-09-native-candidate-v2.json.gzip",
+        "sha256": "532ad4ef05816892cb35821ee1069f2a2f9fd30dbd3e30fc0d711e1e36ba9127"
+      },
+      "actualNamedRows": 1544,
+      "periodStart": "2008-04-01",
+      "periodEnd": "2009-03-31",
+      "printedNamedControls": {
+        "remuneration": 185412331,
+        "expenses": 5289671,
+        "physicalPage": 47,
+        "label": "Printed named-employee remuneration/expense totals"
+      },
+      "printedEmployeeNarrativeCount": 1544,
+      "conflictingNarrativeCount": null,
+      "conflictingNarrativeCountPeriodEnd": null,
+      "peerReviews": [
+        {
+          "path": "research/salaries/gap-fill-2026-11-02/municipal/reviews/phsa-history/native-v2-producer-comparison.json",
+          "sha256": "34a027299a867ada5470a78eabd1897d9d43d955a4428ec6765a5781c72f66b3"
+        }
+      ],
+      "pageCensusEvidence": [
+        {
+          "path": "research/salaries/gap-fill-2026-11-02/municipal/reviews/phsa-history/native-complete-independent-source-audit.json",
+          "sha256": "873c1179dbba3aee46e288e9782c6a52db7ea5dac7d95f0cbd5b2adfe2257577"
+        }
+      ],
+      "sourceFootnotes": [
+        "Cranston,Lynda has a separately retained source * footnote: higher08/09expenses are explained by one-time professional-development courses and travel associated with Chair duties for health-care-related organizations. No expense amount is moved into remuneration."
+      ]
+    },
+    {
+      "key": "phsa-2009-10",
+      "inputKind": "scan",
+      "selectedInput": {
+        "path": "research/salaries/gap-fill-2026-11-02/phsa_history/phsa-2009-10-scan-selected-v4.json.gzip",
+        "sha256": "0b06d193c0e484e9e28edc541bdde447ede83d8d53696ba6db146c87dff420b0"
+      },
+      "actualNamedRows": 1800,
+      "periodStart": "2009-04-01",
+      "periodEnd": "2010-03-31",
+      "printedNamedControls": {
+        "remuneration": 217818830,
+        "expenses": 4433493,
+        "physicalPage": 53,
+        "label": "Printed named-employee remuneration/expense totals"
+      },
+      "printedEmployeeNarrativeCount": null,
+      "conflictingNarrativeCount": 1800,
+      "conflictingNarrativeCountPeriodEnd": "2009-03-31",
+      "peerReviews": [
+        {
+          "path": "research/salaries/gap-fill-2026-11-02/health_boards/peer-phsa-history/independent-first-two-scans-source-review.json",
+          "sha256": "5e2c6f79a811df61dd3c96020e883443a71ba379b4fc3d5329d82e9e4d4d0767"
+        }
+      ],
+      "pageCensusEvidence": [
+        {
+          "path": "research/salaries/gap-fill-2026-11-02/health_boards/peer-phsa-history/independent-first-two-scans-source-review.json",
+          "sha256": "5e2c6f79a811df61dd3c96020e883443a71ba379b4fc3d5329d82e9e4d4d0767"
+        }
+      ]
+    },
+    {
+      "key": "phsa-2010-11",
+      "inputKind": "scan",
+      "selectedInput": {
+        "path": "research/salaries/gap-fill-2026-11-02/phsa_history/phsa-2010-11-scan-selected-v4.json.gzip",
+        "sha256": "e302c794676f87a3ee70daf693a780bb765f99ad8a30abcd764fcd72742703c5"
+      },
+      "actualNamedRows": 2004,
+      "periodStart": "2010-04-01",
+      "periodEnd": "2011-03-31",
+      "printedNamedControls": {
+        "remuneration": 237473281,
+        "expenses": 5486042,
+        "physicalPage": 52,
+        "label": "Printed named-employee remuneration/expense totals"
+      },
+      "printedEmployeeNarrativeCount": 2004,
+      "conflictingNarrativeCount": null,
+      "conflictingNarrativeCountPeriodEnd": null,
+      "peerReviews": [
+        {
+          "path": "research/salaries/gap-fill-2026-11-02/health_boards/peer-phsa-history/independent-first-two-scans-source-review.json",
+          "sha256": "5e2c6f79a811df61dd3c96020e883443a71ba379b4fc3d5329d82e9e4d4d0767"
+        }
+      ],
+      "pageCensusEvidence": [
+        {
+          "path": "research/salaries/gap-fill-2026-11-02/health_boards/peer-phsa-history/independent-first-two-scans-source-review.json",
+          "sha256": "5e2c6f79a811df61dd3c96020e883443a71ba379b4fc3d5329d82e9e4d4d0767"
+        }
+      ]
+    },
+    {
+      "key": "phsa-2011-12",
+      "inputKind": "scan",
+      "selectedInput": {
+        "path": "research/salaries/gap-fill-2026-11-02/phsa_history/phsa-2011-12-scan-selected-v4.json.gzip",
+        "sha256": "f523d4da9f7abbbdab1f26a2de8e0eac84ca693c32ebaedbe1e342d12122db18"
+      },
+      "actualNamedRows": 3423,
+      "periodStart": "2011-04-01",
+      "periodEnd": "2012-03-31",
+      "printedNamedControls": {
+        "remuneration": 369888459,
+        "expenses": 8500874,
+        "physicalPage": 90,
+        "label": "Printed named-employee remuneration/expense totals"
+      },
+      "printedEmployeeNarrativeCount": 3423,
+      "conflictingNarrativeCount": null,
+      "conflictingNarrativeCountPeriodEnd": null,
+      "peerReviews": [
+        {
+          "path": "research/salaries/gap-fill-2026-11-02/school_north/reviews/phsa-history/phsa-2011-12-independent-bounded-source-review.json",
+          "sha256": "e1c5f627f38659e62019e622b70c3f81bbfd6b82009b2a4eb7d9bae0af3348b3"
+        },
+        {
+          "path": "research/salaries/gap-fill-2026-11-02/school_north/reviews/phsa-history/integration/adaptive-surname-guard/final-v4-selection-addendum.json",
+          "sha256": "619456cdac8bbaa7ffca94ab29c92846b0a1df807255ade4952f040bafee29fd"
+        }
+      ],
+      "pageCensusEvidence": [
+        {
+          "path": "research/salaries/gap-fill-2026-11-02/school_north/reviews/phsa-history/phsa-2011-12-independent-bounded-source-review.json",
+          "sha256": "e1c5f627f38659e62019e622b70c3f81bbfd6b82009b2a4eb7d9bae0af3348b3"
+        },
+        {
+          "path": "research/salaries/gap-fill-2026-11-02/school_north/reviews/phsa-history/integration/adaptive-surname-guard/final-v4-selection-addendum.json",
+          "sha256": "619456cdac8bbaa7ffca94ab29c92846b0a1df807255ade4952f040bafee29fd"
+        }
+      ]
+    },
+    {
+      "key": "phsa-2012-13",
+      "inputKind": "scan",
+      "selectedInput": {
+        "path": "research/salaries/gap-fill-2026-11-02/phsa_history/phsa-2012-13-scan-selected-v4.json.gzip",
+        "sha256": "fc88ec372908b84b898440179d99de756e9075e876c2ce48b3ff8be545ee6296"
+      },
+      "actualNamedRows": 3351,
+      "periodStart": "2012-04-01",
+      "periodEnd": "2013-03-31",
+      "printedNamedControls": {
+        "remuneration": 369114727,
+        "expenses": 8792836,
+        "physicalPage": 86,
+        "label": "Printed named-employee remuneration/expense totals"
+      },
+      "printedEmployeeNarrativeCount": 3351,
+      "conflictingNarrativeCount": null,
+      "conflictingNarrativeCountPeriodEnd": null,
+      "peerReviews": [
+        {
+          "path": "research/salaries/gap-fill-2026-11-02/school_north/reviews/phsa-history/phsa-2012-13-independent-bounded-source-review.json",
+          "sha256": "0b38bc9de3783573e4a9408053025600a7473f93dea17756767f41aab8a96210"
+        },
+        {
+          "path": "research/salaries/gap-fill-2026-11-02/school_north/reviews/phsa-history/integration/adaptive-surname-guard/final-v4-selection-addendum.json",
+          "sha256": "619456cdac8bbaa7ffca94ab29c92846b0a1df807255ade4952f040bafee29fd"
+        }
+      ],
+      "pageCensusEvidence": [
+        {
+          "path": "research/salaries/gap-fill-2026-11-02/school_north/reviews/phsa-history/phsa-2012-13-independent-bounded-source-review.json",
+          "sha256": "0b38bc9de3783573e4a9408053025600a7473f93dea17756767f41aab8a96210"
+        },
+        {
+          "path": "research/salaries/gap-fill-2026-11-02/school_north/reviews/phsa-history/integration/adaptive-surname-guard/final-v4-selection-addendum.json",
+          "sha256": "619456cdac8bbaa7ffca94ab29c92846b0a1df807255ade4952f040bafee29fd"
+        }
+      ]
+    },
+    {
+      "key": "phsa-2013-14",
+      "inputKind": "scan",
+      "selectedInput": {
+        "path": "research/salaries/gap-fill-2026-11-02/phsa_history/phsa-2013-14-scan-selected-v2.json.gzip",
+        "sha256": "2c3b5fc5bd716113644f6d811da71b5beb24e4d8bad4d29faff90f596888eec9"
+      },
+      "actualNamedRows": 3991,
+      "periodStart": "2013-04-01",
+      "periodEnd": "2014-03-31",
+      "printedNamedControls": {
+        "remuneration": 425632576,
+        "expenses": 8642235,
+        "physicalPage": 93,
+        "label": "Printed named-employee remuneration/expense totals"
+      },
+      "printedEmployeeNarrativeCount": 3991,
+      "conflictingNarrativeCount": null,
+      "conflictingNarrativeCountPeriodEnd": null,
+      "peerReviews": [
+        {
+          "path": "research/salaries/gap-fill-2026-11-02/municipal/reviews/phsa-history/phsa-2013-14-selected-v2-complete-source-replay.json",
+          "sha256": "a00ed9f85b28a3b2ff1bfa1daf228d48a7aa6cae3216eb3fb6a7dc0262dab753"
+        },
+        {
+          "path": "research/salaries/gap-fill-2026-11-02/municipal/reviews/phsa-history/phsa-latest-two-source-peer-acceptance.json",
+          "sha256": "9e586c2963f70e11a2144ba326107e3f1253b16115f527f1914fe9cfff3001ad"
+        },
+        {
+          "path": "research/salaries/gap-fill-2026-11-02/municipal/reviews/phsa-history/phsa-2013-14-final-source-peer-acceptance-addendum.json",
+          "sha256": "8e9ddddce79814150d735ed49f954833743ef3d68d4a8d9a813d73817dad6501"
+        }
+      ],
+      "pageCensusEvidence": [
+        {
+          "path": "research/salaries/gap-fill-2026-11-02/municipal/reviews/phsa-history/phsa-2013-14-selected-v2-complete-source-replay.json",
+          "sha256": "a00ed9f85b28a3b2ff1bfa1daf228d48a7aa6cae3216eb3fb6a7dc0262dab753"
+        },
+        {
+          "path": "research/salaries/gap-fill-2026-11-02/municipal/reviews/phsa-history/phsa-latest-two-source-peer-acceptance.json",
+          "sha256": "9e586c2963f70e11a2144ba326107e3f1253b16115f527f1914fe9cfff3001ad"
+        }
+      ]
+    },
+    {
+      "key": "phsa-2014-15",
+      "inputKind": "scan",
+      "selectedInput": {
+        "path": "research/salaries/gap-fill-2026-11-02/phsa_history/phsa-2014-15-scan-selected-v2.json.gzip",
+        "sha256": "68cb906a8500278cb031ff1098c6c699605f611e9ac1d4db04a382b8d5eb1b32"
+      },
+      "actualNamedRows": 4145,
+      "periodStart": "2014-04-01",
+      "periodEnd": "2015-03-31",
+      "printedNamedControls": {
+        "remuneration": 438199947,
+        "expenses": 9051748,
+        "physicalPage": 106,
+        "label": "Printed named-employee remuneration/expense totals"
+      },
+      "printedEmployeeNarrativeCount": 4145,
+      "conflictingNarrativeCount": null,
+      "conflictingNarrativeCountPeriodEnd": null,
+      "peerReviews": [
+        {
+          "path": "research/salaries/gap-fill-2026-11-02/municipal/reviews/phsa-history/phsa-2014-15-selected-v2-complete-source-replay.json",
+          "sha256": "50593eff6a894868ab27427680529160074161094984d21363ac0bd3f2ec3c13"
+        },
+        {
+          "path": "research/salaries/gap-fill-2026-11-02/municipal/reviews/phsa-history/phsa-latest-two-source-peer-acceptance.json",
+          "sha256": "9e586c2963f70e11a2144ba326107e3f1253b16115f527f1914fe9cfff3001ad"
+        }
+      ],
+      "pageCensusEvidence": [
+        {
+          "path": "research/salaries/gap-fill-2026-11-02/municipal/reviews/phsa-history/phsa-2014-15-selected-v2-complete-source-replay.json",
+          "sha256": "50593eff6a894868ab27427680529160074161094984d21363ac0bd3f2ec3c13"
+        },
+        {
+          "path": "research/salaries/gap-fill-2026-11-02/municipal/reviews/phsa-history/phsa-latest-two-source-peer-acceptance.json",
+          "sha256": "9e586c2963f70e11a2144ba326107e3f1253b16115f527f1914fe9cfff3001ad"
+        }
+      ]
+    }
+  ],
+  "noOutreach": true
+}

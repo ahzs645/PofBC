@@ -1,0 +1,1676 @@
+{
+  "sourceReadingFreeze": {
+    "path": "research/salaries/gap-fill-2026-11-02/health_boards/peer-phsa-history/first-two-scans-first-reading-freeze.json",
+    "sha256": "080b2a1b5749d630d871ff6f12c16e0190ada10f9442b46fa9bd20648cac7c1d"
+  },
+  "sourceReadingSelector": {
+    "path": "research/salaries/gap-fill-2026-11-02/health_boards/peer-phsa-history/current-source-reading-selection.json",
+    "sha256": "2481a744a0fe73f2cc4659decb74f41ec4038cf79a51c763090c8a08e8076836"
+  },
+  "independentCensus": {
+    "path": "research/salaries/gap-fill-2026-11-02/health_boards/peer-phsa-history/independent-complete-cell-census-v2.json.gzip",
+    "sha256": "e795595c8b778c0c4126210ac116d5a1fc28fbdd9b14997665b801531752cf93"
+  },
+  "independentCompleteCellGlyphs": {
+    "path": "research/salaries/gap-fill-2026-11-02/health_boards/peer-phsa-history/independent-source-calibrated-expense-cells-v1.json.gzip",
+    "sha256": "11ca20782fe3c9dcf3f77858a891e3650e1d614a0bd5bfe03c085a5445c177b2"
+  },
+  "candidateAccessAfterAll577PersonalReadingsLocked": true,
+  "nameComparisonNormalization": "Only collapse whitespace and spacing adjacent to comma; no letters, digits, case, punctuation or Unicode identity folding.",
+  "sources": [
+    {
+      "sourceKey": "phsa-2009-10",
+      "sourceSha256": "44b3d86ed71674e42ce6a3983642befab8f5cf5399fbf6cc17b38b7cf2d442c6",
+      "selected": {
+        "path": "research/salaries/gap-fill-2026-11-02/phsa_history/phsa-2009-10-scan-selected-v4.json.gzip",
+        "sha256": "0b06d193c0e484e9e28edc541bdde447ede83d8d53696ba6db146c87dff420b0"
+      },
+      "candidate": {
+        "path": "research/salaries/gap-fill-2026-11-02/phsa_history/phsa-2009-10-scan-candidate-v4.json.gzip",
+        "sha256": "e2498993a13352eec592e7fe637031f58921583d3591dbc02293a26b128a528a"
+      },
+      "selectedRows": 1800,
+      "personalSourceFirstFullRowsCompared": 260,
+      "allPersonallyReadNamesMoneyAndPagesAgree": true,
+      "personalSourceReadingUncertainties": [
+        {
+          "sequence": 843,
+          "uncertainty": [
+            "The final initial after Wendy is a simple vertical stroke; read as uppercase I, but uppercase I/lowercase l are not independently distinguished from this crop."
+          ]
+        },
+        {
+          "sequence": 1372,
+          "uncertainty": [
+            "Final standalone initial is a simple vertical stroke; read as uppercase I, but uppercase I/lowercase l are visually confusable in this crop."
+          ]
+        },
+        {
+          "sequence": 1768,
+          "uncertainty": [
+            "Final standalone initial is a simple vertical stroke; read as uppercase I, but uppercase I/lowercase l are visually confusable in this crop."
+          ]
+        },
+        {
+          "sequence": 1065,
+          "uncertainty": [
+            "I/l adjacent vertical strokes in surname read McIlwaine; typography confusable."
+          ]
+        }
+      ],
+      "allSelectedExpensesIndependentlyMatchEveryCompleteSourceCellClass": true,
+      "allIndependentPaymentBandCountsAgree": true,
+      "bothCompleteRawReadersReplayedExactly": true,
+      "rawReaderCounts": {
+        "tesseract": 1800,
+        "rapid": 1800
+      },
+      "pages": [
+        {
+          "physicalPage": 3,
+          "rawCapture": {
+            "path": "research/salaries/gap-fill-2026-11-02/phsa_history/raw-ocr/phsa-2009-10-p003.json.gzip",
+            "sha256": "774f8929ff9fd022abca0e593cd124128a32690838a5f129da33ea9014603ce9"
+          },
+          "sourceRasterSha256": "c71769db806a5d96f927cdd77df3fc77b31fad8ff47e3b8d6fec9589b4a6578f",
+          "bothRawReadersReplayedExactly": true,
+          "completeReaderRowsPreservedWithMultiplicity": true,
+          "rawReaderCounts": {
+            "tesseract": 35,
+            "rapid": 35
+          },
+          "independentPaymentBandCount": 35
+        },
+        {
+          "physicalPage": 4,
+          "rawCapture": {
+            "path": "research/salaries/gap-fill-2026-11-02/phsa_history/raw-ocr/phsa-2009-10-p004.json.gzip",
+            "sha256": "d4839dc0ceb6c404e8f4308286abe91ec09edf0400b1b869a487074a333504cf"
+          },
+          "sourceRasterSha256": "18f4ffe1da8d52001a7ae1cb73c2f390a880bc90245cfb64555dd8d7c68daa17",
+          "bothRawReadersReplayedExactly": true,
+          "completeReaderRowsPreservedWithMultiplicity": true,
+          "rawReaderCounts": {
+            "tesseract": 36,
+            "rapid": 36
+          },
+          "independentPaymentBandCount": 36
+        },
+        {
+          "physicalPage": 5,
+          "rawCapture": {
+            "path": "research/salaries/gap-fill-2026-11-02/phsa_history/raw-ocr/phsa-2009-10-p005.json.gzip",
+            "sha256": "bcce21ed22ff5e5e90324f5154112ef1d36d8ae7c0f74fe09c4ae0b65907dc18"
+          },
+          "sourceRasterSha256": "6a5fb402ca7d933feed811d0d06c1d5e2b6c17da1d5c2b994a30dda4e951b3b1",
+          "bothRawReadersReplayedExactly": true,
+          "completeReaderRowsPreservedWithMultiplicity": true,
+          "rawReaderCounts": {
+            "tesseract": 36,
+            "rapid": 36
+          },
+          "independentPaymentBandCount": 36
+        },
+        {
+          "physicalPage": 6,
+          "rawCapture": {
+            "path": "research/salaries/gap-fill-2026-11-02/phsa_history/raw-ocr/phsa-2009-10-p006.json.gzip",
+            "sha256": "7c258a4061e5e3053c0e47ec2cc54be32a6ee102bbe1b26b52b34ecf02435848"
+          },
+          "sourceRasterSha256": "dbe67368400b13b425fa51bcdf5f41bad3bedfbbd7160ca40b4735e2b23d4fe1",
+          "bothRawReadersReplayedExactly": true,
+          "completeReaderRowsPreservedWithMultiplicity": true,
+          "rawReaderCounts": {
+            "tesseract": 36,
+            "rapid": 36
+          },
+          "independentPaymentBandCount": 36
+        },
+        {
+          "physicalPage": 7,
+          "rawCapture": {
+            "path": "research/salaries/gap-fill-2026-11-02/phsa_history/raw-ocr/phsa-2009-10-p007.json.gzip",
+            "sha256": "0c22456d8c0cc141ab54c310a74ee89115f6c27e5b3e426552e2ed8b5466c74f"
+          },
+          "sourceRasterSha256": "4b587e99b4eabc36615b0365acee7550a2c9528cd4b363888156b736ed88e106",
+          "bothRawReadersReplayedExactly": true,
+          "completeReaderRowsPreservedWithMultiplicity": true,
+          "rawReaderCounts": {
+            "tesseract": 36,
+            "rapid": 36
+          },
+          "independentPaymentBandCount": 36
+        },
+        {
+          "physicalPage": 8,
+          "rawCapture": {
+            "path": "research/salaries/gap-fill-2026-11-02/phsa_history/raw-ocr/phsa-2009-10-p008.json.gzip",
+            "sha256": "5d77586d984ae9897d08e4abdce03febcf90627c5b7c036049531b34a83f6fd8"
+          },
+          "sourceRasterSha256": "27120b2beec04e3dd72dbf6841a3c467ab6818d1510b23886f0bb75b01478de0",
+          "bothRawReadersReplayedExactly": true,
+          "completeReaderRowsPreservedWithMultiplicity": true,
+          "rawReaderCounts": {
+            "tesseract": 36,
+            "rapid": 36
+          },
+          "independentPaymentBandCount": 36
+        },
+        {
+          "physicalPage": 9,
+          "rawCapture": {
+            "path": "research/salaries/gap-fill-2026-11-02/phsa_history/raw-ocr/phsa-2009-10-p009.json.gzip",
+            "sha256": "3e9ca6524108ff86b709521ea5049bdf254197d781663252d976c16acbb0f64a"
+          },
+          "sourceRasterSha256": "b24fddb0f6f3c9208962cdeaff554881dff23ad53b1d3d79279670aad46b2e53",
+          "bothRawReadersReplayedExactly": true,
+          "completeReaderRowsPreservedWithMultiplicity": true,
+          "rawReaderCounts": {
+            "tesseract": 36,
+            "rapid": 36
+          },
+          "independentPaymentBandCount": 36
+        },
+        {
+          "physicalPage": 10,
+          "rawCapture": {
+            "path": "research/salaries/gap-fill-2026-11-02/phsa_history/raw-ocr/phsa-2009-10-p010.json.gzip",
+            "sha256": "e1171d86cb8331309077866e57de66ba76b269396dbf10d9143100eebeef5bba"
+          },
+          "sourceRasterSha256": "eb11c027b6919f9c99a68cdb56fadec92c2c012e3fc2621ddf9bf89b887e9414",
+          "bothRawReadersReplayedExactly": true,
+          "completeReaderRowsPreservedWithMultiplicity": true,
+          "rawReaderCounts": {
+            "tesseract": 36,
+            "rapid": 36
+          },
+          "independentPaymentBandCount": 36
+        },
+        {
+          "physicalPage": 11,
+          "rawCapture": {
+            "path": "research/salaries/gap-fill-2026-11-02/phsa_history/raw-ocr/phsa-2009-10-p011.json.gzip",
+            "sha256": "1cffb340db68c639467f51e19d1155cadafa1dbea7657a073ba450f6ee460b3e"
+          },
+          "sourceRasterSha256": "0da4b665703d32d4c1b15585e0d87025d1a76dde10a077764c8a28e1bc3e8238",
+          "bothRawReadersReplayedExactly": true,
+          "completeReaderRowsPreservedWithMultiplicity": true,
+          "rawReaderCounts": {
+            "tesseract": 36,
+            "rapid": 36
+          },
+          "independentPaymentBandCount": 36
+        },
+        {
+          "physicalPage": 12,
+          "rawCapture": {
+            "path": "research/salaries/gap-fill-2026-11-02/phsa_history/raw-ocr/phsa-2009-10-p012.json.gzip",
+            "sha256": "5035d90f91789f2632c7bc37274638000e9acfcb47a72f5ab41d97ecc5a20aea"
+          },
+          "sourceRasterSha256": "d4d558ca121ed4ce8a81963c9105aad98cc3fca26e1a793e20121973ac4d9687",
+          "bothRawReadersReplayedExactly": true,
+          "completeReaderRowsPreservedWithMultiplicity": true,
+          "rawReaderCounts": {
+            "tesseract": 36,
+            "rapid": 36
+          },
+          "independentPaymentBandCount": 36
+        },
+        {
+          "physicalPage": 13,
+          "rawCapture": {
+            "path": "research/salaries/gap-fill-2026-11-02/phsa_history/raw-ocr/phsa-2009-10-p013.json.gzip",
+            "sha256": "86bc72eadcbbe7d27df0254066e366ac84465f29a792bb8e16121414696c3268"
+          },
+          "sourceRasterSha256": "79722417b6fd25bfcd2f5515f653629b93037b82cd6a0a8de467ce416b61d65f",
+          "bothRawReadersReplayedExactly": true,
+          "completeReaderRowsPreservedWithMultiplicity": true,
+          "rawReaderCounts": {
+            "tesseract": 36,
+            "rapid": 36
+          },
+          "independentPaymentBandCount": 36
+        },
+        {
+          "physicalPage": 14,
+          "rawCapture": {
+            "path": "research/salaries/gap-fill-2026-11-02/phsa_history/raw-ocr/phsa-2009-10-p014.json.gzip",
+            "sha256": "bd12207e0ba3a78aef39a5da43f7b83282963ee3303648d2798ac594ccd9ded5"
+          },
+          "sourceRasterSha256": "c79878ba2b0e5a879b42d3abfd08c87173650b625a79edf2e4a9a234c46acb08",
+          "bothRawReadersReplayedExactly": true,
+          "completeReaderRowsPreservedWithMultiplicity": true,
+          "rawReaderCounts": {
+            "tesseract": 36,
+            "rapid": 36
+          },
+          "independentPaymentBandCount": 36
+        },
+        {
+          "physicalPage": 15,
+          "rawCapture": {
+            "path": "research/salaries/gap-fill-2026-11-02/phsa_history/raw-ocr/phsa-2009-10-p015.json.gzip",
+            "sha256": "b2f8183414d99fafd33a77ecba6da89f652edf2631ab48de1a530fc229bbbaf6"
+          },
+          "sourceRasterSha256": "fbd2ffac637205b09198bf9dc5a3a487e4ca46c53d755daf217bb17d672a2f44",
+          "bothRawReadersReplayedExactly": true,
+          "completeReaderRowsPreservedWithMultiplicity": true,
+          "rawReaderCounts": {
+            "tesseract": 36,
+            "rapid": 36
+          },
+          "independentPaymentBandCount": 36
+        },
+        {
+          "physicalPage": 16,
+          "rawCapture": {
+            "path": "research/salaries/gap-fill-2026-11-02/phsa_history/raw-ocr/phsa-2009-10-p016.json.gzip",
+            "sha256": "7dd2607ab4be809fe9b27196180425a5b8179c4a0e3fde47c422b28e6ad3bd25"
+          },
+          "sourceRasterSha256": "00128bc5e513b5b7c9518148594e812270cb5ccb70941d036c3e3c6e24ad9c56",
+          "bothRawReadersReplayedExactly": true,
+          "completeReaderRowsPreservedWithMultiplicity": true,
+          "rawReaderCounts": {
+            "tesseract": 36,
+            "rapid": 36
+          },
+          "independentPaymentBandCount": 36
+        },
+        {
+          "physicalPage": 17,
+          "rawCapture": {
+            "path": "research/salaries/gap-fill-2026-11-02/phsa_history/raw-ocr/phsa-2009-10-p017.json.gzip",
+            "sha256": "916e79d5bc731f47220a1e0b2dc421f68560fd24d0db94c04e375997552d5689"
+          },
+          "sourceRasterSha256": "b7d1da156381c32476ca6a66c375b970b714eb1057878f20ff550de6a2605ce5",
+          "bothRawReadersReplayedExactly": true,
+          "completeReaderRowsPreservedWithMultiplicity": true,
+          "rawReaderCounts": {
+            "tesseract": 36,
+            "rapid": 36
+          },
+          "independentPaymentBandCount": 36
+        },
+        {
+          "physicalPage": 18,
+          "rawCapture": {
+            "path": "research/salaries/gap-fill-2026-11-02/phsa_history/raw-ocr/phsa-2009-10-p018.json.gzip",
+            "sha256": "5abde451f02d95a745be533b124234803fb6da68ded57510daa651d71a6539dd"
+          },
+          "sourceRasterSha256": "84beac4af79aed4c94178b1a372210942bdb3b90c5469c82b7d3ea2378207d22",
+          "bothRawReadersReplayedExactly": true,
+          "completeReaderRowsPreservedWithMultiplicity": true,
+          "rawReaderCounts": {
+            "tesseract": 36,
+            "rapid": 36
+          },
+          "independentPaymentBandCount": 36
+        },
+        {
+          "physicalPage": 19,
+          "rawCapture": {
+            "path": "research/salaries/gap-fill-2026-11-02/phsa_history/raw-ocr/phsa-2009-10-p019.json.gzip",
+            "sha256": "4bbce8aabbff05b0f25dad38d6bc56da9bc909fce957bdf21355c47c8a5db1f3"
+          },
+          "sourceRasterSha256": "18edcc9409108ae7376d848cb5602baeb3af891a2b57c7bc6c5397c3cedee969",
+          "bothRawReadersReplayedExactly": true,
+          "completeReaderRowsPreservedWithMultiplicity": true,
+          "rawReaderCounts": {
+            "tesseract": 36,
+            "rapid": 36
+          },
+          "independentPaymentBandCount": 36
+        },
+        {
+          "physicalPage": 20,
+          "rawCapture": {
+            "path": "research/salaries/gap-fill-2026-11-02/phsa_history/raw-ocr/phsa-2009-10-p020.json.gzip",
+            "sha256": "4ec13cbed8013fde1cf8aba7e4e2d05c9768b50130405fdf27ed4a758bbb2343"
+          },
+          "sourceRasterSha256": "3f0dbe735c136e4fcb63b6e634daf916d19e58e843b8c349c8a0edc8c799d7d6",
+          "bothRawReadersReplayedExactly": true,
+          "completeReaderRowsPreservedWithMultiplicity": true,
+          "rawReaderCounts": {
+            "tesseract": 36,
+            "rapid": 36
+          },
+          "independentPaymentBandCount": 36
+        },
+        {
+          "physicalPage": 21,
+          "rawCapture": {
+            "path": "research/salaries/gap-fill-2026-11-02/phsa_history/raw-ocr/phsa-2009-10-p021.json.gzip",
+            "sha256": "d5495bac708433f41eb29b515c93e1d02a791fb9f245c2af6f374b5c665bdab9"
+          },
+          "sourceRasterSha256": "aef2566381b522d1c29c04bdffb4deae0a92ceb93c009401cedbcfce208ac621",
+          "bothRawReadersReplayedExactly": true,
+          "completeReaderRowsPreservedWithMultiplicity": true,
+          "rawReaderCounts": {
+            "tesseract": 36,
+            "rapid": 36
+          },
+          "independentPaymentBandCount": 36
+        },
+        {
+          "physicalPage": 22,
+          "rawCapture": {
+            "path": "research/salaries/gap-fill-2026-11-02/phsa_history/raw-ocr/phsa-2009-10-p022.json.gzip",
+            "sha256": "179e446ed1cad7d33202d5bf0463027add11955d963771224a28a92684a5bd55"
+          },
+          "sourceRasterSha256": "f88d6f5dba33fe5ee37c53724776f50fac3ece0bc3650ef94077856181fd413c",
+          "bothRawReadersReplayedExactly": true,
+          "completeReaderRowsPreservedWithMultiplicity": true,
+          "rawReaderCounts": {
+            "tesseract": 36,
+            "rapid": 36
+          },
+          "independentPaymentBandCount": 36
+        },
+        {
+          "physicalPage": 23,
+          "rawCapture": {
+            "path": "research/salaries/gap-fill-2026-11-02/phsa_history/raw-ocr/phsa-2009-10-p023.json.gzip",
+            "sha256": "c0a06320b1a5b7596232e8f871069e0d815399e8fcd65b53511a19c128fa4aed"
+          },
+          "sourceRasterSha256": "9b6e2245d7cd5d97386e4db815925cee8514560407ed77ceda6d2d25481c1856",
+          "bothRawReadersReplayedExactly": true,
+          "completeReaderRowsPreservedWithMultiplicity": true,
+          "rawReaderCounts": {
+            "tesseract": 36,
+            "rapid": 36
+          },
+          "independentPaymentBandCount": 36
+        },
+        {
+          "physicalPage": 24,
+          "rawCapture": {
+            "path": "research/salaries/gap-fill-2026-11-02/phsa_history/raw-ocr/phsa-2009-10-p024.json.gzip",
+            "sha256": "4e8b302e541965b8b0e720c553e1707d38b5927d08970073fef099a5b72605af"
+          },
+          "sourceRasterSha256": "49e038a6613abd1e301a9014628d1e0afa8ab76334a6cfb5b5c1955470cac8db",
+          "bothRawReadersReplayedExactly": true,
+          "completeReaderRowsPreservedWithMultiplicity": true,
+          "rawReaderCounts": {
+            "tesseract": 36,
+            "rapid": 36
+          },
+          "independentPaymentBandCount": 36
+        },
+        {
+          "physicalPage": 25,
+          "rawCapture": {
+            "path": "research/salaries/gap-fill-2026-11-02/phsa_history/raw-ocr/phsa-2009-10-p025.json.gzip",
+            "sha256": "4da4455014abbc38c9f5ebe22d97bb4e3047439ba5db3d7c5d35a5d59cd928d8"
+          },
+          "sourceRasterSha256": "78e50ec68f1ec4716fd780da7e45bd54a734816080d4fe67a1fb7d839c048c98",
+          "bothRawReadersReplayedExactly": true,
+          "completeReaderRowsPreservedWithMultiplicity": true,
+          "rawReaderCounts": {
+            "tesseract": 36,
+            "rapid": 36
+          },
+          "independentPaymentBandCount": 36
+        },
+        {
+          "physicalPage": 26,
+          "rawCapture": {
+            "path": "research/salaries/gap-fill-2026-11-02/phsa_history/raw-ocr/phsa-2009-10-p026.json.gzip",
+            "sha256": "bd95153305594bfb6b7fdb8f3da253ff0270f52f4fc590a34f90f80c537a7e62"
+          },
+          "sourceRasterSha256": "3d7663c2a07e7a013023624d97c4a46278f1b4d348a86e0d0a53cf8585a47c8b",
+          "bothRawReadersReplayedExactly": true,
+          "completeReaderRowsPreservedWithMultiplicity": true,
+          "rawReaderCounts": {
+            "tesseract": 36,
+            "rapid": 36
+          },
+          "independentPaymentBandCount": 36
+        },
+        {
+          "physicalPage": 27,
+          "rawCapture": {
+            "path": "research/salaries/gap-fill-2026-11-02/phsa_history/raw-ocr/phsa-2009-10-p027.json.gzip",
+            "sha256": "d8b8aab8eb0dd9058a18f6502b11dbde401a2772abc1de032307367b87488ab3"
+          },
+          "sourceRasterSha256": "bd54634a9ca51eb134fd1496105d39500f8d21a18c7d994596273032e658aa5a",
+          "bothRawReadersReplayedExactly": true,
+          "completeReaderRowsPreservedWithMultiplicity": true,
+          "rawReaderCounts": {
+            "tesseract": 36,
+            "rapid": 36
+          },
+          "independentPaymentBandCount": 36
+        },
+        {
+          "physicalPage": 28,
+          "rawCapture": {
+            "path": "research/salaries/gap-fill-2026-11-02/phsa_history/raw-ocr/phsa-2009-10-p028.json.gzip",
+            "sha256": "2736a57e2cb287f1abe53a5eda3b400dd1b82fd12ec6085d4891cd82d6ed89ae"
+          },
+          "sourceRasterSha256": "77864338d47e683c7c81346fe19015f16b89b890bae2f1efbd7ca9224b61b90d",
+          "bothRawReadersReplayedExactly": true,
+          "completeReaderRowsPreservedWithMultiplicity": true,
+          "rawReaderCounts": {
+            "tesseract": 36,
+            "rapid": 36
+          },
+          "independentPaymentBandCount": 36
+        },
+        {
+          "physicalPage": 29,
+          "rawCapture": {
+            "path": "research/salaries/gap-fill-2026-11-02/phsa_history/raw-ocr/phsa-2009-10-p029.json.gzip",
+            "sha256": "bff4020ef7ad6a179e645ac1c45559adccf7b5f25ee1ee8b8ed16b494449bffb"
+          },
+          "sourceRasterSha256": "f2f588c1a892f742402e3b7a2bdd7e1770fe0a311a1e590e4bfc529162b77ee6",
+          "bothRawReadersReplayedExactly": true,
+          "completeReaderRowsPreservedWithMultiplicity": true,
+          "rawReaderCounts": {
+            "tesseract": 36,
+            "rapid": 36
+          },
+          "independentPaymentBandCount": 36
+        },
+        {
+          "physicalPage": 30,
+          "rawCapture": {
+            "path": "research/salaries/gap-fill-2026-11-02/phsa_history/raw-ocr/phsa-2009-10-p030.json.gzip",
+            "sha256": "74b7d0a6ca45c796ae4df95de42bc5230769392f2095e643baa752daa919f053"
+          },
+          "sourceRasterSha256": "532d5ee3ca1ce401cdc038299da190c274b6e92674edcf2e30c4d7d114e7c20a",
+          "bothRawReadersReplayedExactly": true,
+          "completeReaderRowsPreservedWithMultiplicity": true,
+          "rawReaderCounts": {
+            "tesseract": 36,
+            "rapid": 36
+          },
+          "independentPaymentBandCount": 36
+        },
+        {
+          "physicalPage": 31,
+          "rawCapture": {
+            "path": "research/salaries/gap-fill-2026-11-02/phsa_history/raw-ocr/phsa-2009-10-p031.json.gzip",
+            "sha256": "2eed4c767a751be3f816927b329c11e1133e3e0b39b6fa4b0a3abdec7a3db640"
+          },
+          "sourceRasterSha256": "6c7d963af1f25fdf10309ad7aedb6fd967617d00cfc6b5afec72bc007e7718c7",
+          "bothRawReadersReplayedExactly": true,
+          "completeReaderRowsPreservedWithMultiplicity": true,
+          "rawReaderCounts": {
+            "tesseract": 36,
+            "rapid": 36
+          },
+          "independentPaymentBandCount": 36
+        },
+        {
+          "physicalPage": 32,
+          "rawCapture": {
+            "path": "research/salaries/gap-fill-2026-11-02/phsa_history/raw-ocr/phsa-2009-10-p032.json.gzip",
+            "sha256": "baf1591afdcd0f6de95844d3a890e83e33e03e24d5416b4455f85abe52c136a2"
+          },
+          "sourceRasterSha256": "40d313446352c8b3715748c0ba15a4211cc6d64bbd3da9b1c77bd4d37000049c",
+          "bothRawReadersReplayedExactly": true,
+          "completeReaderRowsPreservedWithMultiplicity": true,
+          "rawReaderCounts": {
+            "tesseract": 36,
+            "rapid": 36
+          },
+          "independentPaymentBandCount": 36
+        },
+        {
+          "physicalPage": 33,
+          "rawCapture": {
+            "path": "research/salaries/gap-fill-2026-11-02/phsa_history/raw-ocr/phsa-2009-10-p033.json.gzip",
+            "sha256": "6b3bf2c8bec2cb6f86911746376bd67fc779b4dcd788a887efd7117c5e2240d3"
+          },
+          "sourceRasterSha256": "d51874d96887023ebf44c7c5390c89c8e6fa99315c9d815427abd2d6f334c2f6",
+          "bothRawReadersReplayedExactly": true,
+          "completeReaderRowsPreservedWithMultiplicity": true,
+          "rawReaderCounts": {
+            "tesseract": 36,
+            "rapid": 36
+          },
+          "independentPaymentBandCount": 36
+        },
+        {
+          "physicalPage": 34,
+          "rawCapture": {
+            "path": "research/salaries/gap-fill-2026-11-02/phsa_history/raw-ocr/phsa-2009-10-p034.json.gzip",
+            "sha256": "e155e9701f5c8c314c56263946109434c1a41cfc72d7121ec518651f41b26a86"
+          },
+          "sourceRasterSha256": "ab8630ef7ff5eb1854b0558837e4aac437e2ff7a44c846f9056ef435d73696df",
+          "bothRawReadersReplayedExactly": true,
+          "completeReaderRowsPreservedWithMultiplicity": true,
+          "rawReaderCounts": {
+            "tesseract": 36,
+            "rapid": 36
+          },
+          "independentPaymentBandCount": 36
+        },
+        {
+          "physicalPage": 35,
+          "rawCapture": {
+            "path": "research/salaries/gap-fill-2026-11-02/phsa_history/raw-ocr/phsa-2009-10-p035.json.gzip",
+            "sha256": "1c647ac1c51556e450f429b4553f61465b6e7ee58210a45f3e0242cd4eb3b35f"
+          },
+          "sourceRasterSha256": "c38683d56afb73e7300157ecdd1539491c2cba0d9cc576b332291210ce7a81a5",
+          "bothRawReadersReplayedExactly": true,
+          "completeReaderRowsPreservedWithMultiplicity": true,
+          "rawReaderCounts": {
+            "tesseract": 36,
+            "rapid": 36
+          },
+          "independentPaymentBandCount": 36
+        },
+        {
+          "physicalPage": 36,
+          "rawCapture": {
+            "path": "research/salaries/gap-fill-2026-11-02/phsa_history/raw-ocr/phsa-2009-10-p036.json.gzip",
+            "sha256": "c6a14c9c58513e79eb96d94cf1a39f22a3f80c729a46a77a11fde78726ecb614"
+          },
+          "sourceRasterSha256": "e02672e9f38b56875f1c7651455fb312b93ffeb4dd1bd89270768ad48aa9c90c",
+          "bothRawReadersReplayedExactly": true,
+          "completeReaderRowsPreservedWithMultiplicity": true,
+          "rawReaderCounts": {
+            "tesseract": 36,
+            "rapid": 36
+          },
+          "independentPaymentBandCount": 36
+        },
+        {
+          "physicalPage": 37,
+          "rawCapture": {
+            "path": "research/salaries/gap-fill-2026-11-02/phsa_history/raw-ocr/phsa-2009-10-p037.json.gzip",
+            "sha256": "7e2ae00d3e76e6d0548e0a96dd1ff8b701a481ea4372b82e6dc5f4a72b513424"
+          },
+          "sourceRasterSha256": "d2083c09be8cc54e9645e6058b5786585b8558ea2be207aaa24d886a07fcfcbc",
+          "bothRawReadersReplayedExactly": true,
+          "completeReaderRowsPreservedWithMultiplicity": true,
+          "rawReaderCounts": {
+            "tesseract": 36,
+            "rapid": 36
+          },
+          "independentPaymentBandCount": 36
+        },
+        {
+          "physicalPage": 38,
+          "rawCapture": {
+            "path": "research/salaries/gap-fill-2026-11-02/phsa_history/raw-ocr/phsa-2009-10-p038.json.gzip",
+            "sha256": "a39c0fa75fc4d322d7e15df42b051a13aef3d3e9d2ce2bd4af3f5ef3dc82a215"
+          },
+          "sourceRasterSha256": "221f41368a82e92868ddcf56566f3cafb583fddeac74295395c65cdf63dfac85",
+          "bothRawReadersReplayedExactly": true,
+          "completeReaderRowsPreservedWithMultiplicity": true,
+          "rawReaderCounts": {
+            "tesseract": 36,
+            "rapid": 36
+          },
+          "independentPaymentBandCount": 36
+        },
+        {
+          "physicalPage": 39,
+          "rawCapture": {
+            "path": "research/salaries/gap-fill-2026-11-02/phsa_history/raw-ocr/phsa-2009-10-p039.json.gzip",
+            "sha256": "2d97a62c55dbebeb6d2a0a05272c5e6f47bf79da90e7cd1c9c8ce3ea07181462"
+          },
+          "sourceRasterSha256": "ad7b7c01e12ae1e4871756ff80219e336329371cf4aeafb82e44be20c1bf2d1e",
+          "bothRawReadersReplayedExactly": true,
+          "completeReaderRowsPreservedWithMultiplicity": true,
+          "rawReaderCounts": {
+            "tesseract": 36,
+            "rapid": 36
+          },
+          "independentPaymentBandCount": 36
+        },
+        {
+          "physicalPage": 40,
+          "rawCapture": {
+            "path": "research/salaries/gap-fill-2026-11-02/phsa_history/raw-ocr/phsa-2009-10-p040.json.gzip",
+            "sha256": "25d4bf6ab47d727792cc16c1e7de465f24de925b9d0d63b84deb2d93d9f689cc"
+          },
+          "sourceRasterSha256": "6ae276aa86cad5101c0ee21a8e9bebcce7e6171888add132af667c36769b1ee9",
+          "bothRawReadersReplayedExactly": true,
+          "completeReaderRowsPreservedWithMultiplicity": true,
+          "rawReaderCounts": {
+            "tesseract": 36,
+            "rapid": 36
+          },
+          "independentPaymentBandCount": 36
+        },
+        {
+          "physicalPage": 41,
+          "rawCapture": {
+            "path": "research/salaries/gap-fill-2026-11-02/phsa_history/raw-ocr/phsa-2009-10-p041.json.gzip",
+            "sha256": "0603aa3e8dca45e561ab761931d5d6f7126378c2b1888664f75e6608edb09f8e"
+          },
+          "sourceRasterSha256": "6fff8fca74d28c008cf2aa634dddd14fe7c43ae779f17561d51f6f9fbb3dcc5f",
+          "bothRawReadersReplayedExactly": true,
+          "completeReaderRowsPreservedWithMultiplicity": true,
+          "rawReaderCounts": {
+            "tesseract": 36,
+            "rapid": 36
+          },
+          "independentPaymentBandCount": 36
+        },
+        {
+          "physicalPage": 42,
+          "rawCapture": {
+            "path": "research/salaries/gap-fill-2026-11-02/phsa_history/raw-ocr/phsa-2009-10-p042.json.gzip",
+            "sha256": "e28682471c9f7ec165c37e87b8a7bc4e43b43565dd9684f3a0009d5c4f21afb3"
+          },
+          "sourceRasterSha256": "4001619045e7cc03cc494d09b438ff221d438acd802cac529332ada55674b537",
+          "bothRawReadersReplayedExactly": true,
+          "completeReaderRowsPreservedWithMultiplicity": true,
+          "rawReaderCounts": {
+            "tesseract": 36,
+            "rapid": 36
+          },
+          "independentPaymentBandCount": 36
+        },
+        {
+          "physicalPage": 43,
+          "rawCapture": {
+            "path": "research/salaries/gap-fill-2026-11-02/phsa_history/raw-ocr/phsa-2009-10-p043.json.gzip",
+            "sha256": "aac66dbafa57580273ca4eb8a6ae142a1e9fec2eab1479e482df230e963796c6"
+          },
+          "sourceRasterSha256": "7a9fac9f0501b54eb2bd1f9c1f24f17aba5772c02686efb17c17ee17a019fe78",
+          "bothRawReadersReplayedExactly": true,
+          "completeReaderRowsPreservedWithMultiplicity": true,
+          "rawReaderCounts": {
+            "tesseract": 36,
+            "rapid": 36
+          },
+          "independentPaymentBandCount": 36
+        },
+        {
+          "physicalPage": 44,
+          "rawCapture": {
+            "path": "research/salaries/gap-fill-2026-11-02/phsa_history/raw-ocr/phsa-2009-10-p044.json.gzip",
+            "sha256": "c64e21cb3254763e54360f99b5de4893cf0fe11750b42173d51391014e05a8ad"
+          },
+          "sourceRasterSha256": "30812877e56415955da70de8f8410cea6e395d2a067b3dc715b3b75c7aed4cd8",
+          "bothRawReadersReplayedExactly": true,
+          "completeReaderRowsPreservedWithMultiplicity": true,
+          "rawReaderCounts": {
+            "tesseract": 36,
+            "rapid": 36
+          },
+          "independentPaymentBandCount": 36
+        },
+        {
+          "physicalPage": 45,
+          "rawCapture": {
+            "path": "research/salaries/gap-fill-2026-11-02/phsa_history/raw-ocr/phsa-2009-10-p045.json.gzip",
+            "sha256": "d603221be009df0835009cf0554e4c8a5a82100983f72f82509a6a4df74db27d"
+          },
+          "sourceRasterSha256": "68ca8d18ae0dcc09ae53bc239512980fbd7ebc5b5688c967a63be77a80c1817f",
+          "bothRawReadersReplayedExactly": true,
+          "completeReaderRowsPreservedWithMultiplicity": true,
+          "rawReaderCounts": {
+            "tesseract": 36,
+            "rapid": 36
+          },
+          "independentPaymentBandCount": 36
+        },
+        {
+          "physicalPage": 46,
+          "rawCapture": {
+            "path": "research/salaries/gap-fill-2026-11-02/phsa_history/raw-ocr/phsa-2009-10-p046.json.gzip",
+            "sha256": "024391fe534295fb4f686986f44237b5e95bc5857e9a49fe28255ae98d49aed4"
+          },
+          "sourceRasterSha256": "964a45241dea9f2b02adad318fdccd78bc74936fa5992abc7403e15bebcdad99",
+          "bothRawReadersReplayedExactly": true,
+          "completeReaderRowsPreservedWithMultiplicity": true,
+          "rawReaderCounts": {
+            "tesseract": 36,
+            "rapid": 36
+          },
+          "independentPaymentBandCount": 36
+        },
+        {
+          "physicalPage": 47,
+          "rawCapture": {
+            "path": "research/salaries/gap-fill-2026-11-02/phsa_history/raw-ocr/phsa-2009-10-p047.json.gzip",
+            "sha256": "69b6f74c1adb5034540b80b44da03dcefaa609005b9de70cca302c02cec74dda"
+          },
+          "sourceRasterSha256": "567ecb1f0f9f1ef405bd1377b32f9dfd909fa7c81c9cff2cac8696fae0a88fa5",
+          "bothRawReadersReplayedExactly": true,
+          "completeReaderRowsPreservedWithMultiplicity": true,
+          "rawReaderCounts": {
+            "tesseract": 36,
+            "rapid": 36
+          },
+          "independentPaymentBandCount": 36
+        },
+        {
+          "physicalPage": 48,
+          "rawCapture": {
+            "path": "research/salaries/gap-fill-2026-11-02/phsa_history/raw-ocr/phsa-2009-10-p048.json.gzip",
+            "sha256": "b6fc4976962151d6a23a2a31db89875420b8bac16dab851494e69684234942cd"
+          },
+          "sourceRasterSha256": "8a2a302ac03366709db655b2153392495e99b79a99b7ec1ebaaf681edf078550",
+          "bothRawReadersReplayedExactly": true,
+          "completeReaderRowsPreservedWithMultiplicity": true,
+          "rawReaderCounts": {
+            "tesseract": 36,
+            "rapid": 36
+          },
+          "independentPaymentBandCount": 36
+        },
+        {
+          "physicalPage": 49,
+          "rawCapture": {
+            "path": "research/salaries/gap-fill-2026-11-02/phsa_history/raw-ocr/phsa-2009-10-p049.json.gzip",
+            "sha256": "17d99dd6fdf97160d1ad5d144c8d3de676cecc16d92ce7f1e15ae82dd10206bd"
+          },
+          "sourceRasterSha256": "e3131fe013e07a538e7e441fd2628bf94da718e00b366c78be8b9059f1127633",
+          "bothRawReadersReplayedExactly": true,
+          "completeReaderRowsPreservedWithMultiplicity": true,
+          "rawReaderCounts": {
+            "tesseract": 36,
+            "rapid": 36
+          },
+          "independentPaymentBandCount": 36
+        },
+        {
+          "physicalPage": 50,
+          "rawCapture": {
+            "path": "research/salaries/gap-fill-2026-11-02/phsa_history/raw-ocr/phsa-2009-10-p050.json.gzip",
+            "sha256": "44696908bb14264ef17e4896323549ae5c2d752464617cb82a450afd58202416"
+          },
+          "sourceRasterSha256": "d74d0ad80c99df3c7a8ec5c7008546cf1a6f408528f4c536d9998fd094f6ec7d",
+          "bothRawReadersReplayedExactly": true,
+          "completeReaderRowsPreservedWithMultiplicity": true,
+          "rawReaderCounts": {
+            "tesseract": 36,
+            "rapid": 36
+          },
+          "independentPaymentBandCount": 36
+        },
+        {
+          "physicalPage": 51,
+          "rawCapture": {
+            "path": "research/salaries/gap-fill-2026-11-02/phsa_history/raw-ocr/phsa-2009-10-p051.json.gzip",
+            "sha256": "4449fae8efa4f7a73f933532573565cb67c17209fe71cc56bb1d82f378969bdc"
+          },
+          "sourceRasterSha256": "1d8e872fbf3a60acdfa7d27272a2047e632d30131352d8e03001c42933841ea2",
+          "bothRawReadersReplayedExactly": true,
+          "completeReaderRowsPreservedWithMultiplicity": true,
+          "rawReaderCounts": {
+            "tesseract": 36,
+            "rapid": 36
+          },
+          "independentPaymentBandCount": 36
+        },
+        {
+          "physicalPage": 52,
+          "rawCapture": {
+            "path": "research/salaries/gap-fill-2026-11-02/phsa_history/raw-ocr/phsa-2009-10-p052.json.gzip",
+            "sha256": "b2da6a36e19a7d8e10b0b98cce5e35e2846129e6e6399a5a7f9e7287ef710c82"
+          },
+          "sourceRasterSha256": "fcf79ac94fbf81bc3979882a8b27c12925d1f7ae9b623a183f465a42b5b8b6e0",
+          "bothRawReadersReplayedExactly": true,
+          "completeReaderRowsPreservedWithMultiplicity": true,
+          "rawReaderCounts": {
+            "tesseract": 36,
+            "rapid": 36
+          },
+          "independentPaymentBandCount": 36
+        },
+        {
+          "physicalPage": 53,
+          "rawCapture": {
+            "path": "research/salaries/gap-fill-2026-11-02/phsa_history/raw-ocr/phsa-2009-10-p053.json.gzip",
+            "sha256": "64652582e6c3ed23f8dc434065934476d0fc7128ae8578164f7fe8bcc32b941c"
+          },
+          "sourceRasterSha256": "82185281766a744896ea2d9403da9a499c29909b31d4ed5ce65e1ea3c63d4acb",
+          "bothRawReadersReplayedExactly": true,
+          "completeReaderRowsPreservedWithMultiplicity": true,
+          "rawReaderCounts": {
+            "tesseract": 1,
+            "rapid": 1
+          },
+          "independentPaymentBandCount": 1
+        }
+      ],
+      "literalComputedTotals": {
+        "remuneration": 217818851,
+        "expenses": 4396581
+      },
+      "personallySourceReadPrintedTotals": {
+        "remuneration": 217818830,
+        "expenses": 4433493
+      },
+      "residuals": {
+        "remuneration": 21,
+        "expenses": -36912
+      },
+      "qualification": "Paired complete independent OCR/raster capture with complete original payment-band/expense-cell census and finite image-first personal flag/holdout/calibration review. This does not claim complete personal monetary transcription, exact printed-total reconciliation, infallible OCR, inferred missing amount or a source-error cause. Literal discrepancies remain public warnings; no amount adjusted to balance."
+    },
+    {
+      "sourceKey": "phsa-2010-11",
+      "sourceSha256": "085883ae7c1375807eaaf57c0e8f19ffd415bb42176efe4cb9325f7362f6fc4d",
+      "selected": {
+        "path": "research/salaries/gap-fill-2026-11-02/phsa_history/phsa-2010-11-scan-selected-v4.json.gzip",
+        "sha256": "e302c794676f87a3ee70daf693a780bb765f99ad8a30abcd764fcd72742703c5"
+      },
+      "candidate": {
+        "path": "research/salaries/gap-fill-2026-11-02/phsa_history/phsa-2010-11-scan-candidate-v4.json.gzip",
+        "sha256": "a00817fc2e0f231a24ea99ba2f8bf573e10df5ae93b301d09cee749c93833df8"
+      },
+      "selectedRows": 2004,
+      "personalSourceFirstFullRowsCompared": 317,
+      "allPersonallyReadNamesMoneyAndPagesAgree": true,
+      "personalSourceReadingUncertainties": [
+        {
+          "sequence": 252,
+          "uncertainty": [
+            "Final standalone vertical-stroke initial read I; I/l case visually confusable."
+          ]
+        },
+        {
+          "sequence": 946,
+          "uncertainty": [
+            "Final standalone vertical-stroke initial read I; I/l case visually confusable."
+          ]
+        },
+        {
+          "sequence": 1528,
+          "uncertainty": [
+            "Final standalone vertical-stroke initial read I; I/l case visually confusable."
+          ]
+        },
+        {
+          "sequence": 1548,
+          "uncertainty": [
+            "Final vertical-stroke initial before period read I; I/l case visually confusable."
+          ]
+        },
+        {
+          "sequence": 1189,
+          "uncertainty": [
+            "I/l adjacent vertical strokes in surname read McIlwaine; typography confusable."
+          ]
+        },
+        {
+          "sequence": 1193,
+          "uncertainty": [
+            "I/l vertical stroke after Mc read I; typography confusable."
+          ]
+        }
+      ],
+      "allSelectedExpensesIndependentlyMatchEveryCompleteSourceCellClass": true,
+      "allIndependentPaymentBandCountsAgree": true,
+      "bothCompleteRawReadersReplayedExactly": true,
+      "rawReaderCounts": {
+        "tesseract": 2004,
+        "rapid": 2004
+      },
+      "pages": [
+        {
+          "physicalPage": 3,
+          "rawCapture": {
+            "path": "research/salaries/gap-fill-2026-11-02/phsa_history/raw-ocr/phsa-2010-11-p003.json.gzip",
+            "sha256": "813c4676e13989544dc6831a5bb7441c08c76b7258f2052b0924f5c6ce7e2c5e"
+          },
+          "sourceRasterSha256": "da628582fb3174becdf88809973145c3a7aa5cddffbd84d0371d5f57ebdf0ce5",
+          "bothRawReadersReplayedExactly": true,
+          "completeReaderRowsPreservedWithMultiplicity": true,
+          "rawReaderCounts": {
+            "tesseract": 38,
+            "rapid": 38
+          },
+          "independentPaymentBandCount": 38
+        },
+        {
+          "physicalPage": 4,
+          "rawCapture": {
+            "path": "research/salaries/gap-fill-2026-11-02/phsa_history/raw-ocr/phsa-2010-11-p004.json.gzip",
+            "sha256": "fc6686bd002514c36322ee899f0c7cff5b46c73249fecc60712d5691083e1f8d"
+          },
+          "sourceRasterSha256": "43581e243a46ac8770ea00a39c7112f3efd0472515c580e2b688c4a3b81f0a4f",
+          "bothRawReadersReplayedExactly": true,
+          "completeReaderRowsPreservedWithMultiplicity": true,
+          "rawReaderCounts": {
+            "tesseract": 39,
+            "rapid": 39
+          },
+          "independentPaymentBandCount": 39
+        },
+        {
+          "physicalPage": 5,
+          "rawCapture": {
+            "path": "research/salaries/gap-fill-2026-11-02/phsa_history/raw-ocr/phsa-2010-11-p005.json.gzip",
+            "sha256": "d51d105a0a0cb59b1fee2d5f184bc8d48e4d63d702c51d9db0cfe1c18a878d76"
+          },
+          "sourceRasterSha256": "7d9fb015b50449c68349af3c7e2987d7f91fae6ca464ee4e8fc83f5d871a2b10",
+          "bothRawReadersReplayedExactly": true,
+          "completeReaderRowsPreservedWithMultiplicity": true,
+          "rawReaderCounts": {
+            "tesseract": 39,
+            "rapid": 39
+          },
+          "independentPaymentBandCount": 39
+        },
+        {
+          "physicalPage": 6,
+          "rawCapture": {
+            "path": "research/salaries/gap-fill-2026-11-02/phsa_history/raw-ocr/phsa-2010-11-p006.json.gzip",
+            "sha256": "850a7566debc9d4e91c9b1611e94e42a4e4da703c239a364ab72f503b82aa472"
+          },
+          "sourceRasterSha256": "8d2a20b6c4144a8cf8a58adf10bc07144da9a045cdd7f1e02aaf90328d97d65e",
+          "bothRawReadersReplayedExactly": true,
+          "completeReaderRowsPreservedWithMultiplicity": true,
+          "rawReaderCounts": {
+            "tesseract": 39,
+            "rapid": 39
+          },
+          "independentPaymentBandCount": 39
+        },
+        {
+          "physicalPage": 7,
+          "rawCapture": {
+            "path": "research/salaries/gap-fill-2026-11-02/phsa_history/raw-ocr/phsa-2010-11-p007.json.gzip",
+            "sha256": "2388391c963f2ed614fbc7efe45dd6bc400490905ed46aa11725748a88fa0ddc"
+          },
+          "sourceRasterSha256": "de61427b116202e72410dfbaae89001edec6bc70526fd2a9dea6a5ab1249a1d8",
+          "bothRawReadersReplayedExactly": true,
+          "completeReaderRowsPreservedWithMultiplicity": true,
+          "rawReaderCounts": {
+            "tesseract": 39,
+            "rapid": 39
+          },
+          "independentPaymentBandCount": 39
+        },
+        {
+          "physicalPage": 8,
+          "rawCapture": {
+            "path": "research/salaries/gap-fill-2026-11-02/phsa_history/raw-ocr/phsa-2010-11-p008.json.gzip",
+            "sha256": "04e19d7fa546e3bdad3f0e478827d3bb1340c884ae551e0d024013524a3ce549"
+          },
+          "sourceRasterSha256": "1d0fb282c95bdbace7694a3556145543d0d53da5ff9ead3e26bbccee858b5d6b",
+          "bothRawReadersReplayedExactly": true,
+          "completeReaderRowsPreservedWithMultiplicity": true,
+          "rawReaderCounts": {
+            "tesseract": 39,
+            "rapid": 39
+          },
+          "independentPaymentBandCount": 39
+        },
+        {
+          "physicalPage": 9,
+          "rawCapture": {
+            "path": "research/salaries/gap-fill-2026-11-02/phsa_history/raw-ocr/phsa-2010-11-p009.json.gzip",
+            "sha256": "be5c542dff652cd2b859d39b4196c939cd1f78ed3371b1271b4b6bd9afa0c0db"
+          },
+          "sourceRasterSha256": "19d9c341ec642bf265f2c38042fa363643e62124eaf4158acdd47fa7ebb1d792",
+          "bothRawReadersReplayedExactly": true,
+          "completeReaderRowsPreservedWithMultiplicity": true,
+          "rawReaderCounts": {
+            "tesseract": 39,
+            "rapid": 39
+          },
+          "independentPaymentBandCount": 39
+        },
+        {
+          "physicalPage": 10,
+          "rawCapture": {
+            "path": "research/salaries/gap-fill-2026-11-02/phsa_history/raw-ocr/phsa-2010-11-p010.json.gzip",
+            "sha256": "0c1dc794b26ce0d33a80abaa71e2d2a79d12f195bd91f49da9b342dc1a2e18a3"
+          },
+          "sourceRasterSha256": "ef81c6e1daaaf978d4d70612b1ef06d26af14888e8ecac8d351e418fa4a999be",
+          "bothRawReadersReplayedExactly": true,
+          "completeReaderRowsPreservedWithMultiplicity": true,
+          "rawReaderCounts": {
+            "tesseract": 39,
+            "rapid": 39
+          },
+          "independentPaymentBandCount": 39
+        },
+        {
+          "physicalPage": 11,
+          "rawCapture": {
+            "path": "research/salaries/gap-fill-2026-11-02/phsa_history/raw-ocr/phsa-2010-11-p011.json.gzip",
+            "sha256": "bf11431f5c7304ec525612b9643c65f7fde20997356c02354876de76334c3a24"
+          },
+          "sourceRasterSha256": "2a8eedb0c7f5db0efc8c307705659a8d6c22b13582f9362d4f04260281bf77a9",
+          "bothRawReadersReplayedExactly": true,
+          "completeReaderRowsPreservedWithMultiplicity": true,
+          "rawReaderCounts": {
+            "tesseract": 39,
+            "rapid": 39
+          },
+          "independentPaymentBandCount": 39
+        },
+        {
+          "physicalPage": 12,
+          "rawCapture": {
+            "path": "research/salaries/gap-fill-2026-11-02/phsa_history/raw-ocr/phsa-2010-11-p012.json.gzip",
+            "sha256": "0b191795e49da6ecd24e43b30ac7296d5b342ee8003626e88f2b30408f35b8ea"
+          },
+          "sourceRasterSha256": "ddec53fc0fc17638d177f835ac2634a42246e7f7f48474b14b2afef51c2b28a1",
+          "bothRawReadersReplayedExactly": true,
+          "completeReaderRowsPreservedWithMultiplicity": true,
+          "rawReaderCounts": {
+            "tesseract": 39,
+            "rapid": 39
+          },
+          "independentPaymentBandCount": 39
+        },
+        {
+          "physicalPage": 13,
+          "rawCapture": {
+            "path": "research/salaries/gap-fill-2026-11-02/phsa_history/raw-ocr/phsa-2010-11-p013.json.gzip",
+            "sha256": "9d3d91b73ab1392fb958a16b54546af8f50ac6b5915aedf4fe570be73e3a88f7"
+          },
+          "sourceRasterSha256": "92ed360bb4696165a81fc2fc837df2e67a99dcf3d27060b009c87dc6f17b6fa2",
+          "bothRawReadersReplayedExactly": true,
+          "completeReaderRowsPreservedWithMultiplicity": true,
+          "rawReaderCounts": {
+            "tesseract": 39,
+            "rapid": 39
+          },
+          "independentPaymentBandCount": 39
+        },
+        {
+          "physicalPage": 14,
+          "rawCapture": {
+            "path": "research/salaries/gap-fill-2026-11-02/phsa_history/raw-ocr/phsa-2010-11-p014.json.gzip",
+            "sha256": "29e7ca7cf0ebab67615ebf4dcf1286346c7c663f2449da826397cbc368393d2e"
+          },
+          "sourceRasterSha256": "b90b010f9b9ba0a35c84c4acd8584c59f7d440741ee951c79457322ac80c4e2f",
+          "bothRawReadersReplayedExactly": true,
+          "completeReaderRowsPreservedWithMultiplicity": true,
+          "rawReaderCounts": {
+            "tesseract": 39,
+            "rapid": 39
+          },
+          "independentPaymentBandCount": 39
+        },
+        {
+          "physicalPage": 15,
+          "rawCapture": {
+            "path": "research/salaries/gap-fill-2026-11-02/phsa_history/raw-ocr/phsa-2010-11-p015.json.gzip",
+            "sha256": "023da48f772d37ba9826e818f84df1e14c8fd86a03559beab70474ecf0d95159"
+          },
+          "sourceRasterSha256": "6c4c1a27c877f08750a533faee574dddb90ec5dbf9143356bf4ec6cb1e1d0ea2",
+          "bothRawReadersReplayedExactly": true,
+          "completeReaderRowsPreservedWithMultiplicity": true,
+          "rawReaderCounts": {
+            "tesseract": 39,
+            "rapid": 39
+          },
+          "independentPaymentBandCount": 39
+        },
+        {
+          "physicalPage": 16,
+          "rawCapture": {
+            "path": "research/salaries/gap-fill-2026-11-02/phsa_history/raw-ocr/phsa-2010-11-p016.json.gzip",
+            "sha256": "eaacf92691de25bf2ab10c1bc2e9eacdd4373a7d0cd314a73f174735ca43ca7f"
+          },
+          "sourceRasterSha256": "a4bb72f9543b585402de56939acc28fa247eb86c29f99a71a2790b0b76590772",
+          "bothRawReadersReplayedExactly": true,
+          "completeReaderRowsPreservedWithMultiplicity": true,
+          "rawReaderCounts": {
+            "tesseract": 39,
+            "rapid": 39
+          },
+          "independentPaymentBandCount": 39
+        },
+        {
+          "physicalPage": 17,
+          "rawCapture": {
+            "path": "research/salaries/gap-fill-2026-11-02/phsa_history/raw-ocr/phsa-2010-11-p017.json.gzip",
+            "sha256": "71672b21c4da567d6d95b4b386d7b729192b14880317c7c9460dc3935fdc7bf4"
+          },
+          "sourceRasterSha256": "64c4e8d7a8acd51d11fd0257c06a8fa89621d0b77f465236bb603d0388053157",
+          "bothRawReadersReplayedExactly": true,
+          "completeReaderRowsPreservedWithMultiplicity": true,
+          "rawReaderCounts": {
+            "tesseract": 39,
+            "rapid": 39
+          },
+          "independentPaymentBandCount": 39
+        },
+        {
+          "physicalPage": 18,
+          "rawCapture": {
+            "path": "research/salaries/gap-fill-2026-11-02/phsa_history/raw-ocr/phsa-2010-11-p018.json.gzip",
+            "sha256": "00c7130bc77d10a6bf51fa34e27738b9acef648c1c69f1da7d60e9434084306e"
+          },
+          "sourceRasterSha256": "36aab0f9ef20e750beb08febaed4845e444cdf92e893eaae0a029078e5815652",
+          "bothRawReadersReplayedExactly": true,
+          "completeReaderRowsPreservedWithMultiplicity": true,
+          "rawReaderCounts": {
+            "tesseract": 39,
+            "rapid": 39
+          },
+          "independentPaymentBandCount": 39
+        },
+        {
+          "physicalPage": 19,
+          "rawCapture": {
+            "path": "research/salaries/gap-fill-2026-11-02/phsa_history/raw-ocr/phsa-2010-11-p019.json.gzip",
+            "sha256": "111448c8200352915d32ef7709672e36758897501575670ded696faebf5d145b"
+          },
+          "sourceRasterSha256": "e0b871662973d899d49583e474132471706dcd07441b5b6481089010c47afdd8",
+          "bothRawReadersReplayedExactly": true,
+          "completeReaderRowsPreservedWithMultiplicity": true,
+          "rawReaderCounts": {
+            "tesseract": 39,
+            "rapid": 39
+          },
+          "independentPaymentBandCount": 39
+        },
+        {
+          "physicalPage": 20,
+          "rawCapture": {
+            "path": "research/salaries/gap-fill-2026-11-02/phsa_history/raw-ocr/phsa-2010-11-p020.json.gzip",
+            "sha256": "138434726524c3cf01de3d17b17dd1edd7b2dc949e719e1bcbd28f1105cae6af"
+          },
+          "sourceRasterSha256": "459a6c1fe72f8edffa2025082ea9a38b52e2ffa330d79d96c983544dedbea9e7",
+          "bothRawReadersReplayedExactly": true,
+          "completeReaderRowsPreservedWithMultiplicity": true,
+          "rawReaderCounts": {
+            "tesseract": 39,
+            "rapid": 39
+          },
+          "independentPaymentBandCount": 39
+        },
+        {
+          "physicalPage": 21,
+          "rawCapture": {
+            "path": "research/salaries/gap-fill-2026-11-02/phsa_history/raw-ocr/phsa-2010-11-p021.json.gzip",
+            "sha256": "d182a582571974d33e215ed889e699970f1867cccf3b9abc56d65d28441ad490"
+          },
+          "sourceRasterSha256": "224adf172f6a2f3b280d79693a879ac77a618231bef4b3af070b2f72581e23a3",
+          "bothRawReadersReplayedExactly": true,
+          "completeReaderRowsPreservedWithMultiplicity": true,
+          "rawReaderCounts": {
+            "tesseract": 39,
+            "rapid": 39
+          },
+          "independentPaymentBandCount": 39
+        },
+        {
+          "physicalPage": 22,
+          "rawCapture": {
+            "path": "research/salaries/gap-fill-2026-11-02/phsa_history/raw-ocr/phsa-2010-11-p022.json.gzip",
+            "sha256": "5ae3d36b0c8babe79a80aa407a056f02cfbb21e0caf1f45828c2fa91272af516"
+          },
+          "sourceRasterSha256": "3ba3133cb64bc61fa128af4ba65548c171b3c967fd6b8c826af9abf16a31fd4a",
+          "bothRawReadersReplayedExactly": true,
+          "completeReaderRowsPreservedWithMultiplicity": true,
+          "rawReaderCounts": {
+            "tesseract": 39,
+            "rapid": 39
+          },
+          "independentPaymentBandCount": 39
+        },
+        {
+          "physicalPage": 23,
+          "rawCapture": {
+            "path": "research/salaries/gap-fill-2026-11-02/phsa_history/raw-ocr/phsa-2010-11-p023.json.gzip",
+            "sha256": "e58e0035746dcb686bb0ab374a4300e16fd93e62d805d1a8add7475f9c028b7f"
+          },
+          "sourceRasterSha256": "1f1a31672ec64aaaec5b723e3ea04ca8853d34075de5975b06dd12e3d20b9668",
+          "bothRawReadersReplayedExactly": true,
+          "completeReaderRowsPreservedWithMultiplicity": true,
+          "rawReaderCounts": {
+            "tesseract": 39,
+            "rapid": 39
+          },
+          "independentPaymentBandCount": 39
+        },
+        {
+          "physicalPage": 24,
+          "rawCapture": {
+            "path": "research/salaries/gap-fill-2026-11-02/phsa_history/raw-ocr/phsa-2010-11-p024.json.gzip",
+            "sha256": "b2987a7575b396049d6e65517bcc859b538f186b69cb87da552b04a8be808b7b"
+          },
+          "sourceRasterSha256": "f4bdf3907bebd6ec3ac79fe9e991d0bd31d35a57d51ad47ba5efae1dfafacc60",
+          "bothRawReadersReplayedExactly": true,
+          "completeReaderRowsPreservedWithMultiplicity": true,
+          "rawReaderCounts": {
+            "tesseract": 39,
+            "rapid": 39
+          },
+          "independentPaymentBandCount": 39
+        },
+        {
+          "physicalPage": 25,
+          "rawCapture": {
+            "path": "research/salaries/gap-fill-2026-11-02/phsa_history/raw-ocr/phsa-2010-11-p025.json.gzip",
+            "sha256": "6f3577c8727855d60d067fef49d68b0fe26bcee0379e2613ed526db2ccf360ca"
+          },
+          "sourceRasterSha256": "58e05db04606687042343dbefb4c52128419693725507af9c4a68f53ea88ab60",
+          "bothRawReadersReplayedExactly": true,
+          "completeReaderRowsPreservedWithMultiplicity": true,
+          "rawReaderCounts": {
+            "tesseract": 39,
+            "rapid": 39
+          },
+          "independentPaymentBandCount": 39
+        },
+        {
+          "physicalPage": 26,
+          "rawCapture": {
+            "path": "research/salaries/gap-fill-2026-11-02/phsa_history/raw-ocr/phsa-2010-11-p026.json.gzip",
+            "sha256": "d75d1453a8961035c0d05b7d4ec6e14da997166b7b60a99d8ae05ee85fb9b4a4"
+          },
+          "sourceRasterSha256": "53e96275799e742cf828f3e6703ea4da8e5cc11a7a1a986b9e2efdc90069a67f",
+          "bothRawReadersReplayedExactly": true,
+          "completeReaderRowsPreservedWithMultiplicity": true,
+          "rawReaderCounts": {
+            "tesseract": 39,
+            "rapid": 39
+          },
+          "independentPaymentBandCount": 39
+        },
+        {
+          "physicalPage": 27,
+          "rawCapture": {
+            "path": "research/salaries/gap-fill-2026-11-02/phsa_history/raw-ocr/phsa-2010-11-p027.json.gzip",
+            "sha256": "a98e6fb7b616db91a24701d7a6dea1ae5d65fa26379376405aa25e8bc72acd03"
+          },
+          "sourceRasterSha256": "99201a0d2f831dc127b6837e1712720589532c2b8b7209dc97e30bdce7f5b029",
+          "bothRawReadersReplayedExactly": true,
+          "completeReaderRowsPreservedWithMultiplicity": true,
+          "rawReaderCounts": {
+            "tesseract": 39,
+            "rapid": 39
+          },
+          "independentPaymentBandCount": 39
+        },
+        {
+          "physicalPage": 28,
+          "rawCapture": {
+            "path": "research/salaries/gap-fill-2026-11-02/phsa_history/raw-ocr/phsa-2010-11-p028.json.gzip",
+            "sha256": "e2a4cf523ca8f53be410a8f0b4809940fd4fb82842ba5d971acdc45ba36f878e"
+          },
+          "sourceRasterSha256": "bdfb28b5ee5a32404876abe59695f6f5dbf1f058525cc452650dc0a284631622",
+          "bothRawReadersReplayedExactly": true,
+          "completeReaderRowsPreservedWithMultiplicity": true,
+          "rawReaderCounts": {
+            "tesseract": 39,
+            "rapid": 39
+          },
+          "independentPaymentBandCount": 39
+        },
+        {
+          "physicalPage": 29,
+          "rawCapture": {
+            "path": "research/salaries/gap-fill-2026-11-02/phsa_history/raw-ocr/phsa-2010-11-p029.json.gzip",
+            "sha256": "fca9a5cde470b1580a120536c6dc7ec8d0df1492c7f1b2f1c08d75a789e37bad"
+          },
+          "sourceRasterSha256": "2dc64d95a9b4ef12de3aaf063f7cbff8e9f14b7491f0310a4f46b86a3ad70575",
+          "bothRawReadersReplayedExactly": true,
+          "completeReaderRowsPreservedWithMultiplicity": true,
+          "rawReaderCounts": {
+            "tesseract": 39,
+            "rapid": 39
+          },
+          "independentPaymentBandCount": 39
+        },
+        {
+          "physicalPage": 30,
+          "rawCapture": {
+            "path": "research/salaries/gap-fill-2026-11-02/phsa_history/raw-ocr/phsa-2010-11-p030.json.gzip",
+            "sha256": "955ea372e40c98e73fc3e5598fe3d77a03cb2f49ab16b42985635ba4d4c1d5f0"
+          },
+          "sourceRasterSha256": "9e6e545f8c0464cf8fea2e5d43e9b7119aee2c20dab902c395ae80e859fa8c60",
+          "bothRawReadersReplayedExactly": true,
+          "completeReaderRowsPreservedWithMultiplicity": true,
+          "rawReaderCounts": {
+            "tesseract": 39,
+            "rapid": 39
+          },
+          "independentPaymentBandCount": 39
+        },
+        {
+          "physicalPage": 31,
+          "rawCapture": {
+            "path": "research/salaries/gap-fill-2026-11-02/phsa_history/raw-ocr/phsa-2010-11-p031.json.gzip",
+            "sha256": "30fe6ea4eb3493e03c2663e22ba6b5ad49868318b7257e319c21c06a163cb0a7"
+          },
+          "sourceRasterSha256": "4ec83d027f45f32b41711b7a2feabeade57dedd5f1138d610d3239b75933b71a",
+          "bothRawReadersReplayedExactly": true,
+          "completeReaderRowsPreservedWithMultiplicity": true,
+          "rawReaderCounts": {
+            "tesseract": 39,
+            "rapid": 39
+          },
+          "independentPaymentBandCount": 39
+        },
+        {
+          "physicalPage": 32,
+          "rawCapture": {
+            "path": "research/salaries/gap-fill-2026-11-02/phsa_history/raw-ocr/phsa-2010-11-p032.json.gzip",
+            "sha256": "72a2b1e73d8b0bdb6aa3c56294a3f7087f5f17c80d61464ec78ac5305c9be028"
+          },
+          "sourceRasterSha256": "013a3f6eca51cb2bf2debd01cee0878ef654405d1ec69a75b51fdebdb2686e1b",
+          "bothRawReadersReplayedExactly": true,
+          "completeReaderRowsPreservedWithMultiplicity": true,
+          "rawReaderCounts": {
+            "tesseract": 39,
+            "rapid": 39
+          },
+          "independentPaymentBandCount": 39
+        },
+        {
+          "physicalPage": 33,
+          "rawCapture": {
+            "path": "research/salaries/gap-fill-2026-11-02/phsa_history/raw-ocr/phsa-2010-11-p033.json.gzip",
+            "sha256": "40b696e05fce30014335bfd9c802847a5e9d7b93aff92b28b8b8364a16e56303"
+          },
+          "sourceRasterSha256": "52df25d5445587c44986f3b25791094a32254e5621fef53bdd395047b9b3a67b",
+          "bothRawReadersReplayedExactly": true,
+          "completeReaderRowsPreservedWithMultiplicity": true,
+          "rawReaderCounts": {
+            "tesseract": 39,
+            "rapid": 39
+          },
+          "independentPaymentBandCount": 39
+        },
+        {
+          "physicalPage": 34,
+          "rawCapture": {
+            "path": "research/salaries/gap-fill-2026-11-02/phsa_history/raw-ocr/phsa-2010-11-p034.json.gzip",
+            "sha256": "4b5e15b9b79564d7f50422914402fee8d61e0364dd482e219f3fdb0f4b4dd642"
+          },
+          "sourceRasterSha256": "1a369c24950a99874336fbf7c372ea8036af7730239b2ad2e1962a9267280405",
+          "bothRawReadersReplayedExactly": true,
+          "completeReaderRowsPreservedWithMultiplicity": true,
+          "rawReaderCounts": {
+            "tesseract": 39,
+            "rapid": 39
+          },
+          "independentPaymentBandCount": 39
+        },
+        {
+          "physicalPage": 35,
+          "rawCapture": {
+            "path": "research/salaries/gap-fill-2026-11-02/phsa_history/raw-ocr/phsa-2010-11-p035.json.gzip",
+            "sha256": "fc92dbda9530dc747c46ca7a3903de78522636eb330d637c4e3bbad57032e03f"
+          },
+          "sourceRasterSha256": "dce3c32ef6fc582b34beeae05a9a228f9fad2ec3ad4508773b874f772e4dd0c6",
+          "bothRawReadersReplayedExactly": true,
+          "completeReaderRowsPreservedWithMultiplicity": true,
+          "rawReaderCounts": {
+            "tesseract": 39,
+            "rapid": 39
+          },
+          "independentPaymentBandCount": 39
+        },
+        {
+          "physicalPage": 36,
+          "rawCapture": {
+            "path": "research/salaries/gap-fill-2026-11-02/phsa_history/raw-ocr/phsa-2010-11-p036.json.gzip",
+            "sha256": "8e962f8a9da933bd21a43900c78578aea457b10b2dbfd0cee82cce0045ac2edf"
+          },
+          "sourceRasterSha256": "2e885e4fbb66b56128a8333770bb2bd809c1a27bfce854dee0d87fb29229883d",
+          "bothRawReadersReplayedExactly": true,
+          "completeReaderRowsPreservedWithMultiplicity": true,
+          "rawReaderCounts": {
+            "tesseract": 39,
+            "rapid": 39
+          },
+          "independentPaymentBandCount": 39
+        },
+        {
+          "physicalPage": 37,
+          "rawCapture": {
+            "path": "research/salaries/gap-fill-2026-11-02/phsa_history/raw-ocr/phsa-2010-11-p037.json.gzip",
+            "sha256": "fc932052eef2406f5e04529db827081357417268c03f722d01b16701cabc8aae"
+          },
+          "sourceRasterSha256": "1c415a358218fc55c1057957493c5e4dcc72dabaeb9e970a5a2c8c478eb73970",
+          "bothRawReadersReplayedExactly": true,
+          "completeReaderRowsPreservedWithMultiplicity": true,
+          "rawReaderCounts": {
+            "tesseract": 39,
+            "rapid": 39
+          },
+          "independentPaymentBandCount": 39
+        },
+        {
+          "physicalPage": 38,
+          "rawCapture": {
+            "path": "research/salaries/gap-fill-2026-11-02/phsa_history/raw-ocr/phsa-2010-11-p038.json.gzip",
+            "sha256": "d7de13b00344bf6d03293a945c54ade41037c2e71421c9038d80c30b233ba7ad"
+          },
+          "sourceRasterSha256": "276b58c1aea781b27cdeca72d543a9325f551882cf22d13645db16e04aae820c",
+          "bothRawReadersReplayedExactly": true,
+          "completeReaderRowsPreservedWithMultiplicity": true,
+          "rawReaderCounts": {
+            "tesseract": 39,
+            "rapid": 39
+          },
+          "independentPaymentBandCount": 39
+        },
+        {
+          "physicalPage": 39,
+          "rawCapture": {
+            "path": "research/salaries/gap-fill-2026-11-02/phsa_history/raw-ocr/phsa-2010-11-p039.json.gzip",
+            "sha256": "2a02313fb5354a0c32277dcdd915222bfe512400e0568bdca726f9cb7cc75696"
+          },
+          "sourceRasterSha256": "1a312b92985c703724d6be95ca3c8d6e5cae0fec47befba63c6bd85a6b2cc5af",
+          "bothRawReadersReplayedExactly": true,
+          "completeReaderRowsPreservedWithMultiplicity": true,
+          "rawReaderCounts": {
+            "tesseract": 39,
+            "rapid": 39
+          },
+          "independentPaymentBandCount": 39
+        },
+        {
+          "physicalPage": 40,
+          "rawCapture": {
+            "path": "research/salaries/gap-fill-2026-11-02/phsa_history/raw-ocr/phsa-2010-11-p040.json.gzip",
+            "sha256": "6bd20174bf475cb396c16277c22c7fc3f9822111daffb4e74fa0bb9b98990c42"
+          },
+          "sourceRasterSha256": "a9e1b10d58ac9e640ce2b15048f708bb684ff7f36fccf172e9ebf985b6281cc7",
+          "bothRawReadersReplayedExactly": true,
+          "completeReaderRowsPreservedWithMultiplicity": true,
+          "rawReaderCounts": {
+            "tesseract": 39,
+            "rapid": 39
+          },
+          "independentPaymentBandCount": 39
+        },
+        {
+          "physicalPage": 41,
+          "rawCapture": {
+            "path": "research/salaries/gap-fill-2026-11-02/phsa_history/raw-ocr/phsa-2010-11-p041.json.gzip",
+            "sha256": "71cfe56b84e3a2bb465a74b52a4a981103b638e51a20f2f96c163e2cbdba9c09"
+          },
+          "sourceRasterSha256": "6e73b2e31e0d28a1fb380c30a66d5a7be2103b45aa7bbc2a809d4e0c291c8188",
+          "bothRawReadersReplayedExactly": true,
+          "completeReaderRowsPreservedWithMultiplicity": true,
+          "rawReaderCounts": {
+            "tesseract": 40,
+            "rapid": 40
+          },
+          "independentPaymentBandCount": 40
+        },
+        {
+          "physicalPage": 42,
+          "rawCapture": {
+            "path": "research/salaries/gap-fill-2026-11-02/phsa_history/raw-ocr/phsa-2010-11-p042.json.gzip",
+            "sha256": "4dce15cc6b62c89b954cf7513f68c0beb62fbd28beb3018db84b474a7a5c2d06"
+          },
+          "sourceRasterSha256": "2a0bd8f13a5310c482f4c462cca5174565cdf143f7be5225846b5a34f43eed3e",
+          "bothRawReadersReplayedExactly": true,
+          "completeReaderRowsPreservedWithMultiplicity": true,
+          "rawReaderCounts": {
+            "tesseract": 44,
+            "rapid": 44
+          },
+          "independentPaymentBandCount": 44
+        },
+        {
+          "physicalPage": 43,
+          "rawCapture": {
+            "path": "research/salaries/gap-fill-2026-11-02/phsa_history/raw-ocr/phsa-2010-11-p043.json.gzip",
+            "sha256": "aa90e6785689d2bfc69c1d0ded1a904239834fd674bc8a07f48df77c141312d1"
+          },
+          "sourceRasterSha256": "8fc3da1bcb9d8ffce020ade53ab34a82c53128186244b3e14190fb6e90408b10",
+          "bothRawReadersReplayedExactly": true,
+          "completeReaderRowsPreservedWithMultiplicity": true,
+          "rawReaderCounts": {
+            "tesseract": 44,
+            "rapid": 44
+          },
+          "independentPaymentBandCount": 44
+        },
+        {
+          "physicalPage": 44,
+          "rawCapture": {
+            "path": "research/salaries/gap-fill-2026-11-02/phsa_history/raw-ocr/phsa-2010-11-p044.json.gzip",
+            "sha256": "778aee73c50a6d0cfb3d9ccee31a7156bdb1e37d515127cc2f1eb8ce09e678ea"
+          },
+          "sourceRasterSha256": "dbea8ac61368bbeeb1ed036285fef8562c4f41771be415a6e68af839f921e90a",
+          "bothRawReadersReplayedExactly": true,
+          "completeReaderRowsPreservedWithMultiplicity": true,
+          "rawReaderCounts": {
+            "tesseract": 44,
+            "rapid": 44
+          },
+          "independentPaymentBandCount": 44
+        },
+        {
+          "physicalPage": 45,
+          "rawCapture": {
+            "path": "research/salaries/gap-fill-2026-11-02/phsa_history/raw-ocr/phsa-2010-11-p045.json.gzip",
+            "sha256": "e4846c6fd1421c45a5a69c4f35014487be7d60b0ed110340b4fec7d9475e97e4"
+          },
+          "sourceRasterSha256": "f94c3f18e595b9a07382f62cc3f2b668f63322df9840e52b6312dd0c35c4530b",
+          "bothRawReadersReplayedExactly": true,
+          "completeReaderRowsPreservedWithMultiplicity": true,
+          "rawReaderCounts": {
+            "tesseract": 44,
+            "rapid": 44
+          },
+          "independentPaymentBandCount": 44
+        },
+        {
+          "physicalPage": 46,
+          "rawCapture": {
+            "path": "research/salaries/gap-fill-2026-11-02/phsa_history/raw-ocr/phsa-2010-11-p046.json.gzip",
+            "sha256": "f27165c76ad69b53120e142456a3ec4535e7d978048807b3926cc5fef254e010"
+          },
+          "sourceRasterSha256": "b81404bef4f0d4f11dc8a204c3a4df36e9456ef21b8401abcf39d8a6e2a4dd23",
+          "bothRawReadersReplayedExactly": true,
+          "completeReaderRowsPreservedWithMultiplicity": true,
+          "rawReaderCounts": {
+            "tesseract": 44,
+            "rapid": 44
+          },
+          "independentPaymentBandCount": 44
+        },
+        {
+          "physicalPage": 47,
+          "rawCapture": {
+            "path": "research/salaries/gap-fill-2026-11-02/phsa_history/raw-ocr/phsa-2010-11-p047.json.gzip",
+            "sha256": "24df1f33b7d9b4e0fdb85017125508a6f276227f32034d566c9235f3a2332d34"
+          },
+          "sourceRasterSha256": "0efc99c29d14a909088c7ef08e4da0e8bdc2ee990bf9cf4c4163cd923e46fa1b",
+          "bothRawReadersReplayedExactly": true,
+          "completeReaderRowsPreservedWithMultiplicity": true,
+          "rawReaderCounts": {
+            "tesseract": 44,
+            "rapid": 44
+          },
+          "independentPaymentBandCount": 44
+        },
+        {
+          "physicalPage": 48,
+          "rawCapture": {
+            "path": "research/salaries/gap-fill-2026-11-02/phsa_history/raw-ocr/phsa-2010-11-p048.json.gzip",
+            "sha256": "cd23d32e512c4c1808581389f409393b41b1a9d14d8b605352b632bc385e22cb"
+          },
+          "sourceRasterSha256": "1959cb89f539b82b1ad47c6da709c7865d2cd4552728a83576cf48822f2e4760",
+          "bothRawReadersReplayedExactly": true,
+          "completeReaderRowsPreservedWithMultiplicity": true,
+          "rawReaderCounts": {
+            "tesseract": 44,
+            "rapid": 44
+          },
+          "independentPaymentBandCount": 44
+        },
+        {
+          "physicalPage": 49,
+          "rawCapture": {
+            "path": "research/salaries/gap-fill-2026-11-02/phsa_history/raw-ocr/phsa-2010-11-p049.json.gzip",
+            "sha256": "bb30eeec64430fbf963fe8d2ba0cdd535b2d8c9de2b2afd0ff3eda3950d16c45"
+          },
+          "sourceRasterSha256": "ccf3619f4e7a1eaa2159c8dc26b1633244fa6d6d0ac3b98a17661043c87da76d",
+          "bothRawReadersReplayedExactly": true,
+          "completeReaderRowsPreservedWithMultiplicity": true,
+          "rawReaderCounts": {
+            "tesseract": 44,
+            "rapid": 44
+          },
+          "independentPaymentBandCount": 44
+        },
+        {
+          "physicalPage": 50,
+          "rawCapture": {
+            "path": "research/salaries/gap-fill-2026-11-02/phsa_history/raw-ocr/phsa-2010-11-p050.json.gzip",
+            "sha256": "9507a6979ed706e4bee614c2ebe9ee2e505315c1c741bf7ef0515b1583f2a8d6"
+          },
+          "sourceRasterSha256": "83ece88d9fabc89ba4c0087a6171ee88a9904c6f3e27485ee2ea3bcd39c0a4ab",
+          "bothRawReadersReplayedExactly": true,
+          "completeReaderRowsPreservedWithMultiplicity": true,
+          "rawReaderCounts": {
+            "tesseract": 44,
+            "rapid": 44
+          },
+          "independentPaymentBandCount": 44
+        },
+        {
+          "physicalPage": 51,
+          "rawCapture": {
+            "path": "research/salaries/gap-fill-2026-11-02/phsa_history/raw-ocr/phsa-2010-11-p051.json.gzip",
+            "sha256": "87c248b39d49481ded3b90d51fb8d52b966caa508faee2dab43ca906f26f140c"
+          },
+          "sourceRasterSha256": "141b5aee352fb7a7bb2e5826e61125b7ba1aa15b78bf42ae179a722647981f9f",
+          "bothRawReadersReplayedExactly": true,
+          "completeReaderRowsPreservedWithMultiplicity": true,
+          "rawReaderCounts": {
+            "tesseract": 44,
+            "rapid": 44
+          },
+          "independentPaymentBandCount": 44
+        },
+        {
+          "physicalPage": 52,
+          "rawCapture": {
+            "path": "research/salaries/gap-fill-2026-11-02/phsa_history/raw-ocr/phsa-2010-11-p052.json.gzip",
+            "sha256": "16b351a3f00b0b112f81fc1142c430d6174a14b83aa51376b07d4048e0743ae1"
+          },
+          "sourceRasterSha256": "d04df23a4d9b66e6794d80a02396a51b1814c38c4c81af88c05ecc11442c3ce8",
+          "bothRawReadersReplayedExactly": true,
+          "completeReaderRowsPreservedWithMultiplicity": true,
+          "rawReaderCounts": {
+            "tesseract": 43,
+            "rapid": 43
+          },
+          "independentPaymentBandCount": 43
+        }
+      ],
+      "literalComputedTotals": {
+        "remuneration": 237473291,
+        "expenses": 5486077
+      },
+      "personallySourceReadPrintedTotals": {
+        "remuneration": 237473281,
+        "expenses": 5486042
+      },
+      "residuals": {
+        "remuneration": 10,
+        "expenses": 35
+      },
+      "qualification": "Paired complete independent OCR/raster capture with complete original payment-band/expense-cell census and finite image-first personal flag/holdout/calibration review. This does not claim complete personal monetary transcription, exact printed-total reconciliation, infallible OCR, inferred missing amount or a source-error cause. Literal discrepancies remain public warnings; no amount adjusted to balance."
+    }
+  ],
+  "noOutreach": true
+}

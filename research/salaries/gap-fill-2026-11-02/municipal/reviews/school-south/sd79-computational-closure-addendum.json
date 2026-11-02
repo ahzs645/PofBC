@@ -1,0 +1,59 @@
+{
+  "reviewerAgent": "/root/gap_municipal",
+  "status": "pass-additive-computational-source-closure",
+  "retainedPersonalSourceReview": {
+    "path": "research/salaries/gap-fill-2026-11-02/municipal/reviews/school-south/sd79-peer-source-review.json",
+    "sha256": "a9987b468270eb93924a74d62e0fce2c8fdcc48d2fdb63383bac5c94b00dea66"
+  },
+  "computationalAudit": {
+    "path": "research/salaries/gap-fill-2026-11-02/municipal/reviews/school-south/sd79-computational-whole-source-audit.json",
+    "sha256": "e184b75363d40d388a83c0522ae36e93e4f8892ec24494bfd6cd74dc98ef4dd0"
+  },
+  "auditCode": {
+    "path": "research/salaries/gap-fill-2026-11-02/municipal/reviews/school-south/sd79-computational-audit.py",
+    "sha256": "aec8c18d0f3fbe01b0847991e89b319444806f7ae617ac8146ee537cfb1d7088"
+  },
+  "initialBroadNumericDiscoveryPreserved": {
+    "path": "research/salaries/gap-fill-2026-11-02/municipal/reviews/school-south/sd79-initial-full-page-metadata-discovery.json",
+    "sha256": "92af5544545fc3864f3c9ec45c7ff072dfd6ddaf0793ff523ea067ca02b79a80"
+  },
+  "selectedCandidate": {
+    "path": "research/salaries/gap-fill-2026-11-02/school_south/sd79-scan-reviewed-candidate-v14.json.gzip",
+    "sha256": "f658928ea0ea464a943382a925e0778ca37eea1161cefc3c9510b4421bb1847b"
+  },
+  "wholeOriginalSalaryPageRasterHashesReplayed": 11,
+  "independentRawReaderRowsReplayed": [
+    560,
+    560
+  ],
+  "all560SelectedRowsReplayedFromExplicitPinnedReceiptsOrGuardedReaderAgreement": true,
+  "allLowModelScoreRowsHavePinnedPersonalSourceReceipts": true,
+  "unreviewedNameOrTitleWordBoundaryDifferences": 0,
+  "fullPageSalaryColumnMoneyAnchorsClassified": 1127,
+  "outsideWindowAnyMoneyRows": [
+    {
+      "reader": "tesseract",
+      "physicalPage": 69,
+      "name": "Prepared as required",
+      "remuneration": "UNRESOLVED:chedule 1, section",
+      "expenses": "6",
+      "sourceY300dpi": 1671.2272727272727,
+      "disposition": "statutory Schedule1section6 reference, personally read sourcefooter, not money"
+    },
+    {
+      "reader": "rapidocr",
+      "physicalPage": 69,
+      "name": "Receiver General of Canada",
+      "remuneration": "9",
+      "expenses": "5396794.95",
+      "sourceY300dpi": 1381.5,
+      "disposition": "explicitly labelled employer CPP/EI aggregate, personally read on sourcepage69"
+    }
+  ],
+  "unexplainedOutsideWindowFinancialRows": 0,
+  "personalSourceImageRowCountUnchanged": 112,
+  "scopeLimit": "This is a computational rerun of the two preserved raw OCR row readers plus independent selection/score/pay-anchor checks. It does not rerun OCR recognition models, nor expand the112-row personal original-image transcription scope. Full-page raster hashes were independently regenerated from the exact PDF.",
+  "noProducerFilesChanged": true,
+  "noSalaryFieldsChanged": true,
+  "noOutreach": true
+}

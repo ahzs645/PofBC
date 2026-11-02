@@ -1,0 +1,10 @@
+{
+  "initialReplayCommand": "OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 /tmp/held-health-ocr/venv/bin/python scripts/gap_school_north_peer_phsa_replay.py",
+  "firstExitCode": 1,
+  "firstFailure": "Overly strict pure-white pixel assertion on terminal2012 physical87; all preceding original raster/raw reader checks passed.",
+  "freshPersonalOriginalRead": "Full original canonical300dpi p87 personally viewed. No text, numbers, table, heading or payment rows. Exactly one isolated black original scan speck atpixel883,1993 on2550x3300canvas; visible source noise retained, not erased.",
+  "originalRasterPath": "/workspace/gap-phsa-history-cache/images/phsa-2012-13-p087.png",
+  "originalRasterSha256": "4604443c605743a87574444b5e0782db3c34447a2a34579bfec2e41ebdb140b3",
+  "replayAmendment": "Require exact retained scan-speck coordinate and personal blank-page disposition rather than an untrue pure-white assertion.",
+  "noOutreach": true
+}

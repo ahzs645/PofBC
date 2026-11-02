@@ -1,0 +1,1924 @@
+{
+  "schema": "gap-school-north-producer-freeze-v1",
+  "baselineCommit": "de42c55e98e42b8001f07e4ecbd210f892ab2716",
+  "noOutreach": true,
+  "scope": "Only north producer research, normalization and explicitly listed producer scripts/tests. Other agents own their independent source receipts, which are hash-referenced rather than frozen by this worker. Future reviews/ files and later north peer scripts are outside this producer freeze.",
+  "files": [
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/README.md",
+      "sha256": "a6244b9cbcf70378c0e1bec2117b8a91357ab580d1f92b78aff15fd5460c2557"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/additional-images/sd28-sequence097-source.png",
+      "sha256": "f8d80e87fdfffbadb8e5de1943103e575967382825f6864d8a5f5ee07b966c1d"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/additional-images/sd58-district-seq128-actual600.png",
+      "sha256": "13a3bb01e362aeb9555d947bb674d0a5a4b4daa1424d9ac5030ec3d68eb1af30"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/additional-images/sd58-district-seq60-actual600.png",
+      "sha256": "63afe457f260c8744ebdada74eed9f4c2f16e08ee88c9d70a93efa4aa8c0e4f8"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/additional-images/sd58-seq128-actual600.png",
+      "sha256": "9129753848177ba8cfac332d13f6cf0fb9c9ce9d04c633d8d40985e87125c892"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/additional-images/sd58-seq60-actual600.png",
+      "sha256": "69de482fb85e44218ec53b5aff7b21f7ca9f6d14afe1656831451a82e632fef7"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/additional-images/sd59-seq027-source.png",
+      "sha256": "faf093230d9f81bded8087a4ad436a9b10fd4d3056c4149ecc3830dae7773cd8"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/additional-images/sd59-seq030-source.png",
+      "sha256": "355217a577c315e07ebb3c01ba8da4d51d288d2314b566d83c5380c560aa1004"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/additional-images/sd59-seq143-source.png",
+      "sha256": "86662a919ce1424a9eec404904f8c160c9f9fb9c3f6e55e0c98a1b0e1892a97a"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/additional-images/sd59-seq178-source.png",
+      "sha256": "c984670a5b3f02b51331989b3eeb1671483dbd49193661bae2c3c162d9ce7bf5"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/additional-images/sd59-seq207-source.png",
+      "sha256": "ec5526d4ff863cead84b206b655e9acb770ae8bac1845c68aa9e2d90670ccd16"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/additional-images/sd59-seq214-source.png",
+      "sha256": "47d61332da8a64f830a27eecfafc0c82b21ab6bb363b8ec22d41b3d28c2fd743"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/additional-issuer-original-retrievals.json",
+      "sha256": "10282b6d1ae2ddd350469c71134add14ff9ea33836531c0e31f77df299cb051d"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/additional-source-image-targets.json",
+      "sha256": "0d115692b95a86f24711a66237c84fc341f2f718ec627515b6fdf2a657ebebfe"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/assigned-leads.json",
+      "sha256": "cef4fc8f91b971611478eb23abc8674a2a98ff79c9f5279da569fa725729398b"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/candidate-handoff.json",
+      "sha256": "a057baa4b51161963236e65c5094328c77e7bbb6517e12e7829c363a027fb3d9"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/context-images/sd08-physical003.png",
+      "sha256": "f8a8ce542c37b161e6785552f4d08b351a2cabe7fa78e5fb9c4d8754d6ddcd81"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/context-images/sd08-physical051.png",
+      "sha256": "526b18f43fbf8e745ed97f918e3b51a2bee1dcfc18442b6c3af717f2b5a497dc"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/context-images/sd08-physical059.png",
+      "sha256": "f8a9b141dbe48d45a62220d62f4bc0e827007cc98a1ac240a7323810d5e03411"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/context-images/sd28-physical002.png",
+      "sha256": "a3eb8bf18b55a06ec70c2e767594beb67a03815eb759c02e25ca4c42b1172a30"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/context-images/sd28-physical049.png",
+      "sha256": "58e0c0cede105f7ebd1be56ef8dd81883d2afe4bf7bab186f3d9897e7d2a654f"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/context-images/sd28-physical053.png",
+      "sha256": "e17df7278a798b9bbe10d49ef15bdd2c31a8f52bef4b15ec3e816aee6ae4b60d"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/context-images/sd54-physical001.png",
+      "sha256": "75cdb3a2c5fcbf461cde4186b32c75a55c94ab90e2142419ee2aef88d4f9e3de"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/context-images/sd54-physical048.png",
+      "sha256": "68f537025213eb42946c4b20100470d00625b66e2c20d9ebd8bd80ccd19ffd46"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/context-images/sd54-physical051.png",
+      "sha256": "1e9c1a6460408f3a6494ae517cbf0bed96dac52bbe64123cc0117f73fc1115eb"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/context-images/sd58-physical003.png",
+      "sha256": "725bccf22aa452ead06c218e7c6653cfb2b7fb777e297208fc2ec25fb05b92cd"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/context-images/sd58-physical050.png",
+      "sha256": "6d6c593a75ee2b57f1c51241d1f8d9fae8cedf75033ae29e44166ee9002a4ff1"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/context-images/sd58-physical052.png",
+      "sha256": "e6bc8c4d7363d2f554287090dce80845ae25bf104d33dc51fa7d017330899460"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/context-images/sd59-physical003.png",
+      "sha256": "cb84ed8aec070b18be7ee0463e030edc84111fb9468b56678f1d1dcc567672b2"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/context-images/sd59-physical052.png",
+      "sha256": "d057714a95ef1ea97e0a5c69977a07e7d229048e15a23c53184b24b3286febb6"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/context-images/sd59-physical059.png",
+      "sha256": "3a7cbbecba6008876a6c4fe0ca63aa6b646b36d662c99fb8bd3644719e22bde6"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/context-images/sd60-physical003.png",
+      "sha256": "fdcab253477dfc999a836446518557c2e1fb02ad27051820338391d6829719a4"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/context-images/sd60-physical053.png",
+      "sha256": "7f19be94310839eae2b4575840ffb8beff56fd164e7719d1112edd308e1697aa"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/context-images/sd60-physical061.png",
+      "sha256": "eb0d2b87a2fa7c92b792e5a6613299455eae90609a8e22997b46affc8d14f433"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/context-images/sd81-physical001.png",
+      "sha256": "8095412ad798b531034bdec5b8141f6a8252e99d5d6ffc9156145ab0309fb953"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/context-images/sd81-physical050.png",
+      "sha256": "ad2d892f36ff3330859e23a1853c69c857a7295829be559ac5c84942791e81b4"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/context-images/sd81-physical051.png",
+      "sha256": "7cba59f4759e4d4ea93f05454f47a7520832a2a3a200013fc660c710325aabb2"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/context-images/sd82-physical001.png",
+      "sha256": "dda90ad5d4d68f10cd23db6eee9767ca98e28ef199228e15c04873165600af86"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/context-images/sd82-physical052.png",
+      "sha256": "ee57341999f96c3e8fb2d875f63820cbcf6800c4ff2d6166781198866d351c20"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/context-images/sd82-physical058.png",
+      "sha256": "b7bcf70d86ef085d52ef3f77a601991c0be266c51120f04ea5672b7556e86dcf"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/extra-tesseract/sd28-p049.json.gzip",
+      "sha256": "9bcefa06c227e6ec61bcf1aeed43d9777979afed58449bb48bf2fa6c90248e19"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/extra-tesseract/sd28-p050.json.gzip",
+      "sha256": "64b8a066862cc717a5e4dd4c12260c7a87559bf5faf0f43a239abd92681b851c"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/extra-tesseract/sd28-p051.json.gzip",
+      "sha256": "3053e5abb5e45904900362f163ed2891f0d441bfa6996bc721281f4d115444f0"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/extra-tesseract/sd28-p052.json.gzip",
+      "sha256": "5118caa0b6e89ab937f689db75e0685caa295f0e8af33aadcc15eba5cb3644bf"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/extra-tesseract/sd28-p053.json.gzip",
+      "sha256": "5b5a153d0031ee23f54c1de0978cd9d29422382e9b86e5547c76358e5f215114"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/image-packets/sd08-sheet-01.png",
+      "sha256": "41d8b55a6ea1c29c36318f0ab9b9469ccafa0fc416aea6f6c623513a24eb0daa"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/image-packets/sd08-sheet-02.png",
+      "sha256": "89c408ebf40a12018dc671fa54a63b0ba1b952ebe908b97e3f871e471683c410"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/image-packets/sd28-sheet-01.png",
+      "sha256": "bfde76c15eab279eea1bca66efaf309b225a1adc73bb13b9ea523f0174c3f1a8"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/image-packets/sd28-sheet-02.png",
+      "sha256": "8310a1bc6b5c9c2c104cf78a44ad80e84d7ac66499c7d0c71289c69a8e9e46ab"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/image-packets/sd28-sheet-03.png",
+      "sha256": "6248125d396391903989109fce578f4c5124776948d1e1bd0e7893cd4cee73fb"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/image-packets/sd54-sheet-01.png",
+      "sha256": "77a78dda8e63c076a483d211f5f13cf7c9737395e92d1cd9ec842054a076aa55"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/image-packets/sd54-sheet-02.png",
+      "sha256": "7330f6a14420c763c834050188717fbee272bd3819e47c342310f95bfe8cc8e5"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/image-packets/sd58-sheet-01.png",
+      "sha256": "86a24213035c8b10b0a3b4b6a1e35ac4cd5458086138d919770ba6d31015e1a8"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/image-packets/sd58-sheet-02.png",
+      "sha256": "b14042270f54fb3ea0621877f7ede402e73011146722eafc3487c54e305cf9d5"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/image-packets/sd58-sheet-03.png",
+      "sha256": "ce0f8942fba559397c7d9b69c7f3bdb56d12a9364984cc008440995f4259075f"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/image-packets/sd59-sheet-01.png",
+      "sha256": "2a20b65fde45501633d19d6f87f8aaa2a9dfe7bb014d30d1b0f53c9e50c70da9"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/image-packets/sd59-sheet-02.png",
+      "sha256": "027134efaff590ecdafd195ebd99e7904b61ad61bdd08158b2fd54d89f45bf32"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/image-packets/sd59-sheet-03.png",
+      "sha256": "884e5e2b17b7617bef49fdc95559f5c545fb54c844a98d69272d2b93b6fb6ed4"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/image-packets/sd60-sheet-01.png",
+      "sha256": "15782bac0e8b8ac83e18b78952fbb609edc2190abc2fb33e937d7a7a1a9b1e6f"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/image-packets/sd60-sheet-02.png",
+      "sha256": "9190e6e299400c6cf8d04c8e7ff179842dd00c289284a932f928c1b5ab5421b6"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/image-packets/sd60-sheet-03.png",
+      "sha256": "c9889c7027b666a7c25dcbd1f505eb008df6325dabadc5cb63abf8f0c1945446"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/image-packets/sd60-sheet-04.png",
+      "sha256": "b82da5a4f73d80a7d3f0890150863bb304b0f1052c282aa4ef01546bf820195b"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/image-packets/sd81-sheet-01.png",
+      "sha256": "a1e2fd037f8d9398864d4fa43a55aa6a04841a24569a12ad32ba0cf4a0315858"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/image-packets/sd81-sheet-02.png",
+      "sha256": "586390cdeb6e3ff22b76c0cbb39c6535eb352bd6e39ee60852d922f0faf63cdf"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/image-packets/sd82-sheet-01.png",
+      "sha256": "8872f788704a3968829480f914202e2c4b582f198e5b9d6f83ea1228fd28db6b"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/image-packets/sd82-sheet-02.png",
+      "sha256": "d3bb1d063297f6dabe70091a65a025d98489934058f7e5d3c70b06cab7dc5405"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/image-packets/sd82-sheet-03.png",
+      "sha256": "37e5078dc4f24aba57e36b215ebac54f7992b86364f7bbe9539697a811084f8b"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/image-packets/sd82-sheet-04.png",
+      "sha256": "e0c22e8ef166bbe5d5a3d12672b0774115d3ebb3f20aede8c64492fe5c0d60f0"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/image-packets/sd82-sheet-05.png",
+      "sha256": "428036b3e0e90d23833746ca25327a098bf8a747ca385f3da69fcab3a354a70b"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/image-packets/sd82-sheet-06.png",
+      "sha256": "0d2db722778ea06752f1bbb31a7147da9fb64b0159555936af8284d6e550c95b"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/image-packets/sd82-sheet-07.png",
+      "sha256": "871026137c388945615f2c24cfce1c17322950de5dcb9f9e57fa91c612817f84"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/image-packets/sd82-sheet-08.png",
+      "sha256": "aca68f9df9407465de43d54be323dfb654cc09f56949903ef6f840346ff8f986"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/image-packets/sd82-sheet-09.png",
+      "sha256": "e57a6b54f68d8ad7dcc5571b7a6e8bf53bd811f7fe6ed0370e5c6e4bcc3abdd4"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/image-packets/sd82-sheet-10.png",
+      "sha256": "7a26a82880c99f3e8e03b54a814cb6c686a717446f8eeced2727495435531888"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/image-packets/sd82-sheet-11.png",
+      "sha256": "153372f8cfcf57a402bcc02d747f3905faee7552adfd35bfc3ea399c59258e90"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/image-packets/sd82-sheet-12.png",
+      "sha256": "48185a66f5b945029513df6bb7b9db2c7262daff2172d7e8ace01b86186f27f1"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/image-packets-sd82-v2/sd82-fields-01.png",
+      "sha256": "3c7ef43907225505642dea00010a35e93b7c3f36f92e4678efe321720656459b"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/image-packets-sd82-v2/sd82-fields-02.png",
+      "sha256": "7820dca66e592c178bc14a6cae9f0954f0cf4784af1f7a03a7c1963cb7ad608c"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/image-packets-sd82-v2/sd82-fields-03.png",
+      "sha256": "fa8e1b15b6e0ee186103ae4c01690a6cecf70e4879f72c9592ee22432aef396f"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/image-packets-sd82-v2/sd82-fields-04.png",
+      "sha256": "bccee0bb835f0a8f6d81cdfb5bcdfae2b601cebfd3b1708c3ffc489dd10114d2"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/image-packets-sd82-v2/sd82-fields-05.png",
+      "sha256": "bdf67357a2fd6676c5913255b5446d75e9a6a7496918807ed62a0fec12859cb3"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/image-packets-sd82-v2/sd82-fields-06.png",
+      "sha256": "910c822817702b92091d2abbb92ee39803958e266e815c6d3502ab78a969534c"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/image-packets-sd82-v2/sd82-fields-07.png",
+      "sha256": "978429779ae04cf07029ee791270bcfb1a59d151c847f4149e87aedb5f78d774"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/image-packets-sd82-v2/sd82-fields-08.png",
+      "sha256": "7c0b7a7e16178f49e6096a92f5c6088f3413276d67bdfb3ec99375ec0406b31b"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/image-packets-sd82-v2/sd82-fields-09.png",
+      "sha256": "e2ef8d9ed9c47eb373d7ae0ce19cdb48300f8f342430cb7bf5b2db0dff2b3d98"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/image-packets-sd82-v2/sd82-fields-10.png",
+      "sha256": "dd31bcde947f114100c0cd02020028a075d6de35ba1cef093799c1cb68f0abea"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/image-packets-sd82-v2/sd82-fields-11.png",
+      "sha256": "de3489d6fe6da743290e1cc3fafc1a92fdf4beadedb446ec82787b537c6fce3e"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/image-packets-sd82-v2/sd82-fields-12.png",
+      "sha256": "a43dc3639de91d00789e3912b662b3b1593a196a2dc2d2b986a3d093799ae1a5"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/issuer-ministry-page-comparison.json",
+      "sha256": "fdbf2f11f852c8ca0f95b6df9f6f3765434e02ba499c9a199dd0ace6ef2af7a8"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/name-spacing-audit-targets.json",
+      "sha256": "bea95f3432c6eb8a4132ed75bab1c401ab202bbf6e01e1e75c3d6424fc5f7e8f"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/name-spacing-image-index.json",
+      "sha256": "f9d82d5987ae9d723ec36923eaa6caf14ce64c79db20ce0cf3a05da1d0300581"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/name-spacing-images/name-spacing-01.png",
+      "sha256": "37d7dddff2914c7af89c7f6aceb21fd00113ac4b53af972f3195b321cc1c2e9e"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/name-spacing-images/name-spacing-02.png",
+      "sha256": "7ba1dd4147ee17ec89c898f50ab4ff3c47c2a04ae121c7b1519adeb4fef8354e"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/name-spacing-images/name-spacing-03.png",
+      "sha256": "028895b9e1635950613d6fe0ae384dd35e854fc2d7234543f7fa51aa7837083e"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/name-spacing-images/name-spacing-04.png",
+      "sha256": "69644e13541ce887b10230a1af4f5107f43ac6eddd03d4143cec8817bc7ae1e9"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/name-spacing-images/name-spacing-05.png",
+      "sha256": "62459677298e1e6f8bf97b18212b1c8f664dd25e1114e1fc8e7bc30f1cec37b6"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/name-spacing-images/name-spacing-06.png",
+      "sha256": "14d906bf01f0e86879944f086b10d69f4e7fc77e68d1e146d38946a34a119315"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/ocr-plan-sd08.json",
+      "sha256": "a136cd0cba48ecc82783196dfe02d7aa09a1824a4f4df55b9d8ea9674c0791b5"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/ocr-plan.json",
+      "sha256": "953401a356d885e3d89ae6f58ebbd4e78ed9a67fe9aa2a39a38ea6461b187a29"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/ocr-runtime.json",
+      "sha256": "f9d6e18d1d080113b3b1f8f3d118d2d48f1957026d6ed7f8cd040b8957711952"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/original-expense-cell-pixels.json.gzip",
+      "sha256": "f523816fe7f783f69b8a7582500f8731b839dd589a4f068019f74f1c6d69d8e1"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/own-image-review.json",
+      "sha256": "c25656f1f8f90d3444d1e1a35295c9e1e458f61075ae4a582ea544e4e2e8f312"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/raw-ocr/sd08-p051.json.gzip",
+      "sha256": "341e931e897447af784638b6c16d97c4008f9b099092fa0f9f41b775381fe318"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/raw-ocr/sd08-p052.json.gzip",
+      "sha256": "bccd11ca5196ed59b3940d7b6c12829a13fade53efe4663519e108c0711dd9f4"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/raw-ocr/sd08-p053.json.gzip",
+      "sha256": "4ff4bbf814f76152a88aee7fe02b15fc25d8cbd42908b8d01ce6ae1187bdd357"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/raw-ocr/sd08-p054.json.gzip",
+      "sha256": "315bb21076e0a5bb974f61ebb0a9540d014a08671e8d84470d8fbb757590e89a"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/raw-ocr/sd08-p055.json.gzip",
+      "sha256": "8119e082c3dca2a03298d848285c3ceb7bd40711a1eec9b02c2eb7209886b9c2"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/raw-ocr/sd08-p056.json.gzip",
+      "sha256": "6c35886418eacf25c673da0c6f7f26e454dd381944e1745914709d6b4c2f2463"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/raw-ocr/sd08-p057.json.gzip",
+      "sha256": "2a19d1c3f4daed8d7fd544e205008fac2da64da84e853996366f8a7bc760ad72"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/raw-ocr/sd08-p058.json.gzip",
+      "sha256": "7a93454718d4541b3b18d90f6bf904ca57da89c4eae8ff72803a5d89b7f9ec41"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/raw-ocr/sd08-p059.json.gzip",
+      "sha256": "675cba4f42ef9345fe4698570c9570b0d1663e0826e97918f01425f9a6b88d3c"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/raw-ocr/sd28-p049.json.gzip",
+      "sha256": "fbab7f2c39af92408ba11ae3b0361e88bf913eba1e96c48c4ada5bd11e4678dc"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/raw-ocr/sd28-p050.json.gzip",
+      "sha256": "79ad403e5705ff77c2513da686fcaa43ecc0781e16eab208ba3a9b9491e43b03"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/raw-ocr/sd28-p051.json.gzip",
+      "sha256": "3abbdd60c93acd26089e042a76b0f1b6a91e077f29e262dc22bbb70bf286968b"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/raw-ocr/sd28-p052.json.gzip",
+      "sha256": "7e97e95978625dcf75ae25f189b9f35c3041b5b07c8fb3fb2cb4b74eb5009309"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/raw-ocr/sd28-p053.json.gzip",
+      "sha256": "81723da5a3b01d4c95bff819d7a15542aecf75031f4f969ada902d1eac58b00f"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/raw-ocr/sd54-p048.json.gzip",
+      "sha256": "ecac81d74d7a53e911385b6ee61a06261cdbe38b239145b7fedb0d18daa057ba"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/raw-ocr/sd54-p049.json.gzip",
+      "sha256": "2d8a160c96f876a5fb81ef1d2728afeaa034bd4d416dc30425020291cb604d4e"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/raw-ocr/sd54-p050.json.gzip",
+      "sha256": "f30dacc86268379c505892d7d6b843e36741b10559663355105281b5e344fbdc"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/raw-ocr/sd54-p051.json.gzip",
+      "sha256": "5db14d3ad91a06af9a433fd1b779d9374a36b25c266d9d9574135ac753001bf4"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/raw-ocr/sd58-p050.json.gzip",
+      "sha256": "4a36c6827d99c86703c7cc5917324ce59c9159c4fce82f0a64c121bc214ddbcd"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/raw-ocr/sd58-p051.json.gzip",
+      "sha256": "95a4e681fdef1a620517ac34a90fe71800ff1372e9ae98178ed74dfcb3c3aa64"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/raw-ocr/sd58-p052.json.gzip",
+      "sha256": "aa4943df3eb32948d925fa3e823c99caa480e2b8602030fecd1d581269d34726"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/raw-ocr/sd59-p052.json.gzip",
+      "sha256": "87004c7c45279fb51bce74422ab5cea3e94482977b1c68e69fcb49f058db6c92"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/raw-ocr/sd59-p053.json.gzip",
+      "sha256": "1c0984305fe9ee715e1a7df13b4863879c07fea66f429a14e371bd4b7badac62"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/raw-ocr/sd59-p054.json.gzip",
+      "sha256": "a658ec952a3e7f79b14d10c552f350100a6a2ed598bc2a4e16cd0f43cbc69bf4"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/raw-ocr/sd59-p055.json.gzip",
+      "sha256": "a7cd229e097ad334c86a41ceb6282ba58b570653581c43a44b581a476a6ab9c9"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/raw-ocr/sd59-p056.json.gzip",
+      "sha256": "3ee4f392055032f22b54bc75cb781f1842bc548bb465cb1eeb69a0a44748a371"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/raw-ocr/sd59-p057.json.gzip",
+      "sha256": "a047dbd2e9236c916e0011d01151489b76e675c1cde726a63ac5f66f2a051d10"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/raw-ocr/sd59-p058.json.gzip",
+      "sha256": "e8db1c61790941c2076cb70a0d261f2c2eae082de01f70d185fbea27bbaf85d3"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/raw-ocr/sd59-p059.json.gzip",
+      "sha256": "1fa6cfd83974362191980986adb5f61999df030e5b6c0d09e732924a717c9533"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/raw-ocr/sd60-p053.json.gzip",
+      "sha256": "0d9ee6e94bf13ecba2d85de80fa0e4aada8a6c5f06f91f4387d2469cec664369"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/raw-ocr/sd60-p054.json.gzip",
+      "sha256": "54ce3f4562c9c6719443e0c0aa21390d6be7a4be3cc094414de0da5035313c49"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/raw-ocr/sd60-p055.json.gzip",
+      "sha256": "dbc207bab439dbdbe2297687c0fa030cb6748188fcce683e2ee60088caf29bc0"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/raw-ocr/sd60-p056.json.gzip",
+      "sha256": "f9ad79002fcd660abdefd20453d96aa1f7657d0fefbdb5930496536c1d410c6d"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/raw-ocr/sd60-p057.json.gzip",
+      "sha256": "42847b1e77797ec3f815629bd41f119dca6983a37e62baa6e6e9c59884571ba8"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/raw-ocr/sd60-p058.json.gzip",
+      "sha256": "e1787bb1867e117440823a449d2b5402c207f4559f0da9eb640aa3ba1e2cc48c"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/raw-ocr/sd60-p059.json.gzip",
+      "sha256": "adb19a3d523236cc8c6a58806b400cfdb0c7f034178b6644de385d56b129dadf"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/raw-ocr/sd60-p060.json.gzip",
+      "sha256": "d42c3abfbfef670d24fa695314902d2cbb8856e65e1c4b01f910daacac758a5e"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/raw-ocr/sd60-p061.json.gzip",
+      "sha256": "0b22f9884eab0514a516d25cb0f16cef1495aabdf5fdda4d4ed11cd72ac4c8e3"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/raw-ocr/sd81-p050.json.gzip",
+      "sha256": "bde7294dada23d9ad80e88186c562fb0de7a1f6b131d63129d775e614a0c916f"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/raw-ocr/sd81-p051.json.gzip",
+      "sha256": "96b6e045d44402d536599a62826ae0186bb9d2e5c5c78d6cd967af6ca7bc06a3"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/raw-ocr/sd82-p052.json.gzip",
+      "sha256": "81b68fbc58400900ebc917415468d292d42c9b3013459ed7773a126c6fd57b07"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/raw-ocr/sd82-p053.json.gzip",
+      "sha256": "5abf02ec0cdea27c8f957a6f0ded18c7a6d8151993cc82c09539f25e3db6e10e"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/raw-ocr/sd82-p054.json.gzip",
+      "sha256": "34ac2621b44c46644f4e4d5d331da905d5acd659a6ea22dc8317636293d067be"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/raw-ocr/sd82-p055.json.gzip",
+      "sha256": "8a2edc5f7652593635454c2ed77b5394584cdf82b79b4e51ca4764b02843b79e"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/raw-ocr/sd82-p056.json.gzip",
+      "sha256": "b901d9762608db755f9db1c3f52b37aa237409895f1de35db933f67feb856d8e"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/raw-ocr/sd82-p057.json.gzip",
+      "sha256": "7e94bf8f8e087084acd121a21ea345795d949d7fddd90ed9110faa4d99f697ff"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/raw-ocr/sd82-p058.json.gzip",
+      "sha256": "75c827e3e1ae69a3bdd004e54a38651304b441e81d46fc29ff1d6638cc256e1f"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/refreshed-originals.json",
+      "sha256": "f1136cb4000eb8a99505f866bcb483ddfc81266b6e730942fccc9d5e8efc1a8e"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/review-adoption.json",
+      "sha256": "c04619a38f04c9289aab496981ddc328af2e26758a6255c5c08a3207643d502f"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/sd08-image-reviewed-candidate.json.gzip",
+      "sha256": "10a02ef970ac9944528a964b4f8e27d4ed981ed87e0883767ff5498ce40ca01c"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/sd08-pixel-candidate.json.gzip",
+      "sha256": "ea370b552f979bab9bccf4e20b3774e4ab987765509bdd40cf5ff55a846fbcc6"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/sd08-raw-reader-rows.json.gzip",
+      "sha256": "b12a3b3465e35014c112552a79eb6a527b9bdd8839bdb0597842afaf75b0d8b1"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/sd08-sofi-2025-discovery-p001.json.gzip",
+      "sha256": "dd0e02534527f1bc45c1d6bf14022c918b0d36403b8ae9465b5e02941cf06537"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/sd08-sofi-2025-discovery-p002.json.gzip",
+      "sha256": "1cb09a0385101108b584c0d06c755481f8e6b400f8142e5e7adcba3d91697585"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/sd08-sofi-2025-discovery-p003.json.gzip",
+      "sha256": "ae999fd9b96c00fd2f58e16ec6e6ea8fe3a789525b2a9c8c2280a22041d4f7db"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/sd08-sofi-2025-discovery-p004.json.gzip",
+      "sha256": "38d637cd637992795bab7e80fa4576a11f8b1b27bc71691376bca4ace5275940"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/sd08-sofi-2025-discovery-p041.json.gzip",
+      "sha256": "1b9fd2e53ad7e939e34b120c2f5a057ad2482f8b6f56e65fdb73958ba222ee7c"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/sd08-sofi-2025-discovery-p042.json.gzip",
+      "sha256": "03ff1517d6c9cfc78d3f34d9127d91984ce2d69a5148471061e3fca74a866aef"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/sd08-sofi-2025-discovery-p043.json.gzip",
+      "sha256": "25f7940ab2297f348f6b6a6efb7cb6a8b7f757c4635f95e7771b96f5da04ac5d"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/sd08-sofi-2025-discovery-p044.json.gzip",
+      "sha256": "9d3b986a2aa186df90d9b5c7ce4c28cd2d865659aa988377726f81cb6093f762"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/sd08-sofi-2025-discovery-p045.json.gzip",
+      "sha256": "f2ee124bd3ec5913b0b472407d3d818bddfebe2ba46ecae64ac5dc5b7b36df0a"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/sd08-sofi-2025-discovery-p046.json.gzip",
+      "sha256": "101f81a45842d640541c18e3e21dc2a28ccde768a5ccd68ca099119fd993e782"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/sd08-sofi-2025-discovery-p047.json.gzip",
+      "sha256": "fcb6d5b0dd1cd3e66652bf74abe3114c1f731bb54871299d5ff1905474c96797"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/sd08-sofi-2025-discovery-p048.json.gzip",
+      "sha256": "635854bd891a9a17b2ca4448a8e52765041cdd3c0255719af99015b90559f114"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/sd08-sofi-2025-discovery-p049.json.gzip",
+      "sha256": "675cb8846ce9c8ecc958584cbf010b521f517b8e234212f3792e339eab545d4d"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/sd08-sofi-2025-discovery-p050.json.gzip",
+      "sha256": "d182babb34842450eeaca72e2904c32e6726cceb3ffadef426622ba1973c32c0"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/sd08-sofi-2025-discovery-p051.json.gzip",
+      "sha256": "847d43b7b6750b71b206fb360efc9effcc60bf3398676473eb1201bdaa5a36ad"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/sd08-sofi-2025-discovery-p052.json.gzip",
+      "sha256": "b17e9c2deccd0baf932da40b9b15ccdb7853454a79e5baf61cf94bb7e800c428"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/sd08-sofi-2025-discovery-p053.json.gzip",
+      "sha256": "1e7f523553f1f426cf8f6d7894b30ca92494665c7f76efe546a64298d914fbd6"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/sd08-sofi-2025-discovery-p054.json.gzip",
+      "sha256": "a03731d15c147b0719215aed35d078070a34d7a53011fb7bd04c4026bba81d4c"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/sd08-sofi-2025-discovery-p055.json.gzip",
+      "sha256": "3ad9756e8e32bcf84a49cfdbb9691f63b46ed0dd2b2df09c6e563df91de63fec"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/sd08-sofi-2025-discovery-p056.json.gzip",
+      "sha256": "91ab5c755c7e9526501a3419f66926ac6c4b6be904397498b188b74c3b0938ea"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/sd08-sofi-2025-discovery-p057.json.gzip",
+      "sha256": "d6c861d6eee700f428fcb29bdb9eaac74359d08c5a102008440f9e6730397696"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/sd08-sofi-2025-discovery-p058.json.gzip",
+      "sha256": "854bd0c2222cd70f1536e48c057b37a332ce8b47775a0d0c5be88e007149dba3"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/sd08-sofi-2025-discovery-p059.json.gzip",
+      "sha256": "fee13247889127ebe988e7aa29c570e2253ceb085e82806ec4793c1b445cc064"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/sd08-sofi-2025-discovery-p060.json.gzip",
+      "sha256": "53fde96645fd3202990e7d201fd59fe6e21da48291ca7ec8697cbc797caac2e7"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/sd08-sofi-2025-discovery-p061.json.gzip",
+      "sha256": "cd3282a818b2fce506ff9d81c570a28c371b9ba8193b6fae9a850e27cdff4cf4"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/sd08-sofi-2025-discovery-p062.json.gzip",
+      "sha256": "2bc9cf94a9d37c9b5a58660397be8e28cd999f09dc32c7c36ebd907edf704eb5"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/sd08-sofi-2025-discovery-p063.json.gzip",
+      "sha256": "09675d1876c7a9fa560e68bd794374d9841621279136522a30ee672dd8c8a1b3"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/sd08-sofi-2025-discovery-p064.json.gzip",
+      "sha256": "319d54852d64b034828ff20603caef70acae21d3df8c8bff7754a628ab7a83b4"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/sd08-sofi-2025-discovery-p065.json.gzip",
+      "sha256": "1ac69fc7f9474fc2448e2b981980e8237575c5d0e241543e8b976fd700723d68"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/sd28-image-reviewed-candidate.json.gzip",
+      "sha256": "fef7e59df50b6d0a31fcd4d374d5fb9e5bb0af3805e46c1fe1e042c41b3a77f7"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/sd28-pixel-candidate.json.gzip",
+      "sha256": "c56f7fe11517d9bdc0d77fe2beb693adf2877f845406003904bd64eb67454494"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/sd28-raw-reader-rows.json.gzip",
+      "sha256": "a9ae4fe7c30840ca85617000574b1e0155fa5bf86ed8bf7ccfe7d0d727fce9d2"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/sd28-sofi-2025-discovery-p001.json.gzip",
+      "sha256": "d62ae8b17d1e103a107130a221cebc3a8a0682a194cbb276d1d1a655e3db3dc4"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/sd28-sofi-2025-discovery-p002.json.gzip",
+      "sha256": "7e214fb9b9b99fd4777fb7770f6cab41feb7b75f449ed3ff85284ef01629f709"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/sd28-sofi-2025-discovery-p003.json.gzip",
+      "sha256": "620032dc6401b24528ad5a35b99c5cc00f23f43bae3fb5519c009bac6a7d2826"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/sd28-sofi-2025-discovery-p004.json.gzip",
+      "sha256": "c2bfd8fb1b7695bb2030e19cc492ecb1898df322167df32eee21e3692f64bdfe"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/sd28-sofi-2025-discovery-p035.json.gzip",
+      "sha256": "f6010f2e1cd3fabbc3d3aba69dec6a5372871aa014eddfd5c3de6bcaac92886f"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/sd28-sofi-2025-discovery-p036.json.gzip",
+      "sha256": "a2f52786851059aa076a1ba38ec9b5051b9c9c81286e26f140e0444ceedf6cd9"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/sd28-sofi-2025-discovery-p037.json.gzip",
+      "sha256": "fa9a989ddf26257555189ec106ff43051dc0aafce06f683f56f94789bef1eb60"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/sd28-sofi-2025-discovery-p038.json.gzip",
+      "sha256": "4527a777f3839273f4a180f90cbb9965884db2f6a5fb9fa41675ad6fbef6db60"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/sd28-sofi-2025-discovery-p039.json.gzip",
+      "sha256": "2d62ccf32a1fee45cba707ec131c4a614d21e05bbe1e8a59db8f032b8b02bf1f"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/sd28-sofi-2025-discovery-p040.json.gzip",
+      "sha256": "4f03b6bf6244dbf04f28c10f5da2b79e609c3419bffac85c1c37da7d710f72a4"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/sd28-sofi-2025-discovery-p041.json.gzip",
+      "sha256": "5cd8a326403cb17ff9dd8c17c3254a4608f4dfc65dfeec2f2061b42f6f655189"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/sd28-sofi-2025-discovery-p042.json.gzip",
+      "sha256": "bbb9188f2c371b380c42840ac353b00d5edf80612d9cc347da3f52e1b1ba4f96"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/sd28-sofi-2025-discovery-p043.json.gzip",
+      "sha256": "2d74daeae399a003e16fcdd2b23521a9506eb8dac0c85adb8a2738191ac80725"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/sd28-sofi-2025-discovery-p044.json.gzip",
+      "sha256": "8db8eac5fe9e5a61168346ce4bf9812733b807845ebc0f650b32d4f1d3e01203"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/sd28-sofi-2025-discovery-p045.json.gzip",
+      "sha256": "06dcd90cda1735b164012a82fc10fca700857a7bc17fb26d87a0f537df433fda"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/sd28-sofi-2025-discovery-p046.json.gzip",
+      "sha256": "97e79d1984ed71a63021d7761d7b42f052e8b298f393ef9ac2dba3f3e4fd0006"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/sd28-sofi-2025-discovery-p047.json.gzip",
+      "sha256": "12295dbd55c8044c58517c23cb853fd63f4b0df172c3b64caca8af65e177da48"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/sd28-sofi-2025-discovery-p048.json.gzip",
+      "sha256": "094f75b1438d80c7c1be3803a27a8ee40edb8b9d7beaa05a07274aadf739c5d8"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/sd28-sofi-2025-discovery-p049.json.gzip",
+      "sha256": "0a6dfa54028dbeb13d5b0b7dde03d0f9a0bac987d12ab505bf90d71f325b0c34"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/sd28-sofi-2025-discovery-p050.json.gzip",
+      "sha256": "474f62f6370af55cd5fcf57e07c73f92452f5455ceb3b5f2a48817c0d9a52fd4"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/sd28-sofi-2025-discovery-p051.json.gzip",
+      "sha256": "ad4a408811b0edd1728f9851ce01d94b3c6877fcf24b40a2f7039f634e0baae2"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/sd28-sofi-2025-discovery-p052.json.gzip",
+      "sha256": "41f2b14d74a461950a6bd263123cb450b4ad3ff5143efdf04ef25ce731532f93"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/sd28-sofi-2025-discovery-p053.json.gzip",
+      "sha256": "e2f365ed07285140e7191b8445326c18be02751e5e7d578d48dc87979d1b1147"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/sd28-sofi-2025-discovery-p054.json.gzip",
+      "sha256": "9c919ca9add93622a3ae1aac8bc7537d98f5935dbe009ec60ac5901bc401ca99"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/sd28-sofi-2025-discovery-p055.json.gzip",
+      "sha256": "dca9c20e32719f8a18f80252bc262c50a05fa8fc32a631da35db52be23fb0b75"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/sd28-sofi-2025-discovery-p056.json.gzip",
+      "sha256": "d5e718ada5d815529fd16abeeb3b3dd8b95f46dcb97fa97c8fb4f7871f0f64ce"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/sd28-sofi-2025-discovery-p057.json.gzip",
+      "sha256": "9083b8ff397fd99296b19cbf3470fab774c9c6cff8817cc523b733029ca312b4"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/sd28-sofi-2025-discovery-p058.json.gzip",
+      "sha256": "82bd0c3ed31af1a43b29720f6d81ebef277f550b67269b0b265c16e5d743a369"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/sd28-sofi-2025-discovery-p059.json.gzip",
+      "sha256": "64fbdcb1d837ea6a621c2f6ccea6a2a277a312c3eac876957364d53f5c970b1d"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/sd54-image-reviewed-candidate.json.gzip",
+      "sha256": "713d2fd1bf5f4e455d9822d0e4cb642cdb98f0adfd642c5cf655388c86851f63"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/sd54-pixel-candidate.json.gzip",
+      "sha256": "236ab8ba4870939d684f4c3be0db7b66bc3275d64333d8b9b20738514c5cf7e9"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/sd54-raw-reader-rows.json.gzip",
+      "sha256": "4ffcc9fafdc59364de73ac3788553396e521c483c3de38a022fee6c853971756"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/sd54-sofi-2025-discovery-p001.json.gzip",
+      "sha256": "d5055de9d34bed91e06a170988da408deb92d668c715322acbf559ca7d53336d"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/sd54-sofi-2025-discovery-p002.json.gzip",
+      "sha256": "eae808d05fdda4539d850aaf3eed7510c5e5645ffc64d5c54170f7a640361142"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/sd54-sofi-2025-discovery-p003.json.gzip",
+      "sha256": "ec1a9088e38f329ddbacc0207b4a61c2003161f360823cbb28f9c2e890867133"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/sd54-sofi-2025-discovery-p004.json.gzip",
+      "sha256": "2712602397920d799d18b2cabc14fb074eb172368aad934c1c3bc20873cd09d3"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/sd54-sofi-2025-discovery-p027.json.gzip",
+      "sha256": "5d7356744e73975bfdda1a3a356c99988ed895a3525159cd6e1e24a8a618e38d"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/sd54-sofi-2025-discovery-p028.json.gzip",
+      "sha256": "d61b1cf2b658f16d5c1bc61301fe783eff595c3d748c1be3fe449f117cbcff54"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/sd54-sofi-2025-discovery-p029.json.gzip",
+      "sha256": "f152f81d4e0e9b9b9165a9544fe7f38483a2fefdf186df5f85f47cd957c52c1e"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/sd54-sofi-2025-discovery-p030.json.gzip",
+      "sha256": "a0ca392109a3b8f9a2b99f2db0bb3065c0d7e8cfa617a4c41c511bbf1bf5ead7"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/sd54-sofi-2025-discovery-p031.json.gzip",
+      "sha256": "8bed8c34f8675c7383c11c351b2c881bb31437f2dc6b17539e95f5c307cc0325"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/sd54-sofi-2025-discovery-p032.json.gzip",
+      "sha256": "404c157c616cd3af4f98a4b9304d683ee3d083bd508bcd5c6f2858296e075146"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/sd54-sofi-2025-discovery-p033.json.gzip",
+      "sha256": "6aee1d9d4715e2c7c82edc5b052e193af234c5602cf56cad0d9fa09b61ba89a7"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/sd54-sofi-2025-discovery-p034.json.gzip",
+      "sha256": "e0ad1f76640fdd70bb73ff81d674e7957655df3ee9f6b9eb3c02e547208ad318"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/sd54-sofi-2025-discovery-p035.json.gzip",
+      "sha256": "7624f3a14870e4b71c1d4fe66cf20eaf6f8d2389288d2d4899b48693fd9eda20"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/sd54-sofi-2025-discovery-p036.json.gzip",
+      "sha256": "02a22626d19d1a0eda2415733fe36a62d470a338340be9b2e5c93ac2828ffc98"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/sd54-sofi-2025-discovery-p037.json.gzip",
+      "sha256": "ba4e935dc7bec4125249ac747998291ce6a908987a781bb1d8386db17abecbde"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/sd54-sofi-2025-discovery-p038.json.gzip",
+      "sha256": "c86e69ffa1bb955f4033209c4fd9e2f301ec97e6d2bf98656c3375724d880f7c"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/sd54-sofi-2025-discovery-p039.json.gzip",
+      "sha256": "4a7700a38749c1792a60b1c2bed62cbd66e79422bd301985fa96f49393ab2d97"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/sd54-sofi-2025-discovery-p040.json.gzip",
+      "sha256": "6bcfaf7c32293fd82093d4cf7aa9b393f8ac087dc346656464a863e38f800279"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/sd54-sofi-2025-discovery-p041.json.gzip",
+      "sha256": "0cfccb38d1fe82c39a3067ecc55e3cf4d20e5973eb7a2f21facb130984b85d3f"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/sd54-sofi-2025-discovery-p042.json.gzip",
+      "sha256": "1659c5758a63293c959a3cc78b49df14818ca9bbfa1b3b81a5d4cc710338a84f"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/sd54-sofi-2025-discovery-p043.json.gzip",
+      "sha256": "a2660729997c28296fa322c4d5e03c0befc4e5a721b4b37143c217e54450fd49"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/sd54-sofi-2025-discovery-p044.json.gzip",
+      "sha256": "01ec702ddb407f026ee111b8136600b4267aabac4d2682616966e5582b5727da"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/sd54-sofi-2025-discovery-p045.json.gzip",
+      "sha256": "9bfa08193731c93aef5a3a61b438bcb2b772b0b1e8e2614f165fe7227060f65c"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/sd54-sofi-2025-discovery-p046.json.gzip",
+      "sha256": "08071c7fd4efa5be3d5e5c8123b2c955b2b7eb4848e7fcc0b6b6d326e6e3c886"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/sd54-sofi-2025-discovery-p047.json.gzip",
+      "sha256": "602574f24dc0511652a94fe747f8017f913d2de847008f0d6e72aec0ae05a294"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/sd54-sofi-2025-discovery-p048.json.gzip",
+      "sha256": "9f74c66249c65f13899734c303179795d38456ee79fe3be55989339ffaecce30"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/sd54-sofi-2025-discovery-p049.json.gzip",
+      "sha256": "3c527070acc38031a9254ba2c866c42afee2004aebe217d3d133dbf333bd58e5"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/sd54-sofi-2025-discovery-p050.json.gzip",
+      "sha256": "4453d26521d255e98d54f94f1abe97a1986a94790655e2b18ac541c008c50ede"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/sd54-sofi-2025-discovery-p051.json.gzip",
+      "sha256": "71f45048400c8e1d57ad268c09b6c204778f62085880b3fc8474f9c8a6f339b7"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/sd58-district-original-retrieval.json",
+      "sha256": "35bad48bd15c5ce3defa803d0ebbdc1a362ff8b84a186312da1b59c9183392a7"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/sd58-image-reviewed-candidate.json.gzip",
+      "sha256": "59f207aa76054e72673ad680a89d71c41fc0d3b1ced5e563a8bce19e91a7b22d"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/sd58-pixel-candidate.json.gzip",
+      "sha256": "af367dc0fd55e3ae75406d723097bb0225e088d41ca86ccdd2e9e41b846c87ad"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/sd58-raw-reader-rows.json.gzip",
+      "sha256": "769600101deb19053d03dec9ed3f46cd0e8e2dd3026b59adec207b96efc101e0"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/sd58-sofi-2025-discovery-p001.json.gzip",
+      "sha256": "e5b3b7e33d863dc5f19b36d6c9fecc16708c4fdca2e20b14e3793e3a0bf88dc0"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/sd58-sofi-2025-discovery-p002.json.gzip",
+      "sha256": "9f3032194be9407cb06e40657b858f5cc6255cc641139942cee91684fc8d9173"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/sd58-sofi-2025-discovery-p003.json.gzip",
+      "sha256": "1f41d2dfb8b1a02b83cd7cf42c50d9302a0e6342c86efa59b3f793302b957708"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/sd58-sofi-2025-discovery-p004.json.gzip",
+      "sha256": "d6046796b9e0f4452d87405773ec66a98742d88716e565e9f6ac66c74c4c65cc"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/sd58-sofi-2025-discovery-p032.json.gzip",
+      "sha256": "80cdd0902c14067193232689ca8ced1ac243065f60e1042b2b9a2e2d6c688738"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/sd58-sofi-2025-discovery-p033.json.gzip",
+      "sha256": "4ddcfbb1de14ae9e02d060935c6fd562d2757cd46e7423a8016dd25aa9e77225"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/sd58-sofi-2025-discovery-p034.json.gzip",
+      "sha256": "91a5fa049f070533261d1e8b264584636fda345f6915d6a21ea75e7e7f914b6d"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/sd58-sofi-2025-discovery-p035.json.gzip",
+      "sha256": "ffe51c5003648f69f8856ba2a50c2f36acffb7fee2acbf7acd06084c842a8bfa"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/sd58-sofi-2025-discovery-p036.json.gzip",
+      "sha256": "dc24c47347ec663183ce73f080613735eaaa52341092d5b4542a452c6a5db5a9"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/sd58-sofi-2025-discovery-p037.json.gzip",
+      "sha256": "1a63638d7c8ac3fba17abc29b28366d96241640aee786d653693db36ca45a2a8"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/sd58-sofi-2025-discovery-p038.json.gzip",
+      "sha256": "1c7103c1e98b5cecc696dd05444d1c545004f34e9289a3f93b51c8d47f26f4e3"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/sd58-sofi-2025-discovery-p039.json.gzip",
+      "sha256": "89d7d7a2152c7e4c93ef8a29310d37b8396eda81591c7e86bda27cad51d41d19"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/sd58-sofi-2025-discovery-p040.json.gzip",
+      "sha256": "87f7faad488730409b7acf1b924d8baa261d123942df23519c1d739d7379001d"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/sd58-sofi-2025-discovery-p041.json.gzip",
+      "sha256": "6e4442b4d096904a9b95a82081c4798badad5493fb447c8c31dacfd997a70df3"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/sd58-sofi-2025-discovery-p042.json.gzip",
+      "sha256": "bcb89a48c1c3780bf15b800ab9dba05733a8b2a8ac6bd87413c1e635359dbbf9"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/sd58-sofi-2025-discovery-p043.json.gzip",
+      "sha256": "02fe0954339528a32c3252daf177c87036d9a96bb072e8ae03a2c8cd2fd3465a"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/sd58-sofi-2025-discovery-p044.json.gzip",
+      "sha256": "d157e1fae93f0f5ebf03497c75c73cca6019819b263aeacc41ad69c25b7a7bf6"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/sd58-sofi-2025-discovery-p045.json.gzip",
+      "sha256": "5e41364fb4265155df598d16815b12298dcba29ac646929ba48c4f4afe3e40f1"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/sd58-sofi-2025-discovery-p046.json.gzip",
+      "sha256": "2fc4b9d25d3841de2a92ef9fd3d3d4b00712e73b1424f2a962436c02f2067273"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/sd58-sofi-2025-discovery-p047.json.gzip",
+      "sha256": "52498279a5fd9b8344a86eec4b70b857e0cb0d8dd79030d5d7dd60a4eb4b3f46"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/sd58-sofi-2025-discovery-p048.json.gzip",
+      "sha256": "06f230c721ffd664949c44e9860376df91d8565343ca930f2c24b59d1f45389a"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/sd58-sofi-2025-discovery-p049.json.gzip",
+      "sha256": "3830be0c7515e3ea3d4e653827360fc1cb270289dc2b4c0b89692e5e19444124"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/sd58-sofi-2025-discovery-p050.json.gzip",
+      "sha256": "21ffe5e6160ac6a68a73f96ec44cc22e1b903937739b9e3d672675faff94ab0d"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/sd58-sofi-2025-discovery-p051.json.gzip",
+      "sha256": "44a92244fa3af747a2ed50c991c0641dc06cc03a6479395e35fa65d519ecc8ef"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/sd58-sofi-2025-discovery-p052.json.gzip",
+      "sha256": "0eea3af922a1edad056aac28bedd50865ee4a1da17dd40db57a842c33f751ef7"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/sd58-sofi-2025-discovery-p053.json.gzip",
+      "sha256": "d85cbd9390405ca5cc24dc8dfd43e7357dc0824dfed682119d3c5db1385820d1"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/sd58-sofi-2025-discovery-p054.json.gzip",
+      "sha256": "94f303470c06175617bebf0321ff6432ad9cbdedd57ee0e8bed738fa7e805c15"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/sd58-sofi-2025-discovery-p055.json.gzip",
+      "sha256": "9cccf941dcfe4ce1d78f2a9b5ebdb44760296318a47ce26f9a36d2109f95dffb"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/sd58-sofi-2025-discovery-p056.json.gzip",
+      "sha256": "2ae3fc7908df9cff32a2f96ffed60b4b35064fd697c8f944e2ce58270d0ec01c"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/sd59-image-reviewed-candidate.json.gzip",
+      "sha256": "8ed0f45a14a0443870338aea6f8b233442df0e5244adc8cad61eca3475e47ec4"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/sd59-pixel-candidate.json.gzip",
+      "sha256": "66a2c14c811272f076c5e80689652fb478c32eb2bc020700e4ad3d42b5976d19"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/sd59-raw-reader-rows.json.gzip",
+      "sha256": "25dc0a4ffa001b69996b577168debda3ae9120252a9079cc833f89c07f1bc8c5"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/sd59-sofi-2025-discovery-p001.json.gzip",
+      "sha256": "ddb10dc9e1ac836d9f159232ef283aa80b4a9ecaf8acd0e55a3da52b1145a251"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/sd59-sofi-2025-discovery-p002.json.gzip",
+      "sha256": "4f8a9c4cb5d1c7a008f7b0f25dcbb7bf6ee6ac7619d2e5f04cf62c6f226510e0"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/sd59-sofi-2025-discovery-p003.json.gzip",
+      "sha256": "f2b5a88571ff24f33bcd889b0883aacbc2a3cfdd445b40e955a0f95a09ab8f95"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/sd59-sofi-2025-discovery-p004.json.gzip",
+      "sha256": "de8921a9f38d75c6cb4ba84093bc5462729240a293ab7caa9ed37867d2ddbac4"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/sd59-sofi-2025-discovery-p041.json.gzip",
+      "sha256": "b71c580dced0744bf1ce6629853136cca6620e06b01797b101811f9d03a78a8c"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/sd59-sofi-2025-discovery-p042.json.gzip",
+      "sha256": "964124ddb9cc2010c0164d5fe4d9597ff48c54beb8dbb084111b2676c2518766"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/sd59-sofi-2025-discovery-p043.json.gzip",
+      "sha256": "3096875f7fd144c484196b25398ff2f3960d998ddb0bca4bbe7ca41ea82420dc"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/sd59-sofi-2025-discovery-p044.json.gzip",
+      "sha256": "c88075dec30ee7ca12e17950ee63289b36f52715a8b6f711f56dd1928d5dd455"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/sd59-sofi-2025-discovery-p045.json.gzip",
+      "sha256": "e1aa277ee981feef6dd66c8c20283f71448df2ba2513087f35dc51b2089b3ceb"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/sd59-sofi-2025-discovery-p046.json.gzip",
+      "sha256": "dc050c8d534f3bfd147c1fe297724986598f7eb3a4684cfbe52437ab789e6ae1"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/sd59-sofi-2025-discovery-p047.json.gzip",
+      "sha256": "d9771e85c81f10072ed6e59c73843e6d2fedb6e67a790272d7e37578962e067a"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/sd59-sofi-2025-discovery-p048.json.gzip",
+      "sha256": "e1625244e7bd6c4c6ecb4ef01b09784e73ab908e3b77804f24dae495c10d4b52"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/sd59-sofi-2025-discovery-p049.json.gzip",
+      "sha256": "026b6cc6f3b620af1124f406ed30c931559c2fe7070526d1c61987f82a5007a3"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/sd59-sofi-2025-discovery-p050.json.gzip",
+      "sha256": "fd5d8c2d9385e23664b12236ea55519f57d52f0bccd694c8f4d8e629372277f5"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/sd59-sofi-2025-discovery-p051.json.gzip",
+      "sha256": "bf5c873e0cbbbc5cffc4349381aab6662a2f4a24bcbde9557b15422e5255672b"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/sd59-sofi-2025-discovery-p052.json.gzip",
+      "sha256": "412ea87a7d117eed06cd2f07d17ac18e58daef82fc4e0bd1e9be4f554b65bedd"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/sd59-sofi-2025-discovery-p053.json.gzip",
+      "sha256": "e31dad88abbe91fd3c9529393357d32aacb6957b469bf82790ea2edd1f41bc08"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/sd59-sofi-2025-discovery-p054.json.gzip",
+      "sha256": "9785b651d16de1dff7276511c278df1ceb0a365d9181cfe61fcd97d5651b5373"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/sd59-sofi-2025-discovery-p055.json.gzip",
+      "sha256": "04919006287c33de89d46c57395b7b92c9265256e013e8d57f7bdc8292f2eebf"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/sd59-sofi-2025-discovery-p056.json.gzip",
+      "sha256": "904ce26656b803167fdb321fe31aaabf3dedd88750248d79b8c2639163cf0cb6"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/sd59-sofi-2025-discovery-p057.json.gzip",
+      "sha256": "e56030e15b148744904acc9139b64c893638fbdd1af4694081e8982591a12f86"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/sd59-sofi-2025-discovery-p058.json.gzip",
+      "sha256": "ffb11e3de21bc20930e9d065d57071e6fc4c40dc989ee3fac4b34aff710c8214"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/sd59-sofi-2025-discovery-p059.json.gzip",
+      "sha256": "401939632349b56e30f8a846eacd82338545920ea14b337f707f616350058c61"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/sd59-sofi-2025-discovery-p060.json.gzip",
+      "sha256": "4a963b4180a9f8ddaca83adaa63352c57ad86433a3ec9be0df38a4e75bc958ca"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/sd59-sofi-2025-discovery-p061.json.gzip",
+      "sha256": "1675205eaea9484bf6dd29e552808a738e27e70964b6c48df48f5ae164de302a"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/sd59-sofi-2025-discovery-p062.json.gzip",
+      "sha256": "24dc08f6b12fa4f27b0bdd70a4a5cc647c837eab1948d01453b0610754afb376"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/sd59-sofi-2025-discovery-p063.json.gzip",
+      "sha256": "3cbdbb8ba7c80aeb4d698e443c2f63532905422abb43da2e343c9f2bafe97963"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/sd59-sofi-2025-discovery-p064.json.gzip",
+      "sha256": "fd63a7409b3e1849bc38698197905b96b612d7855a3daf9774a753e0ff630529"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/sd59-sofi-2025-discovery-p065.json.gzip",
+      "sha256": "a4d3cf821bc2bb52288cd5bc442a3bcfb48b9546de7fafbfed505ecdedaf2875"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/sd60-image-reviewed-candidate.json.gzip",
+      "sha256": "d9c464f3aa95345c3fcee6b1335e4033e908381945427efbce0a33f9fa9929b1"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/sd60-pixel-candidate.json.gzip",
+      "sha256": "9428f41ddfee3c6f2a2e48235fbccaab5fbb8bc22aa702937e01806f162f4fd7"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/sd60-raw-reader-rows.json.gzip",
+      "sha256": "8c22f6b2474d17832f6238266ab7c679b8a28ac2c80bf2d3962c12b826545379"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/sd60-sofi-2025-discovery-p001.json.gzip",
+      "sha256": "50439c24ee0c3e168d9d03778a5172aa2a3c18f26bdd3945d785192543ff52d7"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/sd60-sofi-2025-discovery-p002.json.gzip",
+      "sha256": "620a1778f56910dd3df11a3e602e85ce93f39545d714d21d8dd5b866e9b6af33"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/sd60-sofi-2025-discovery-p003.json.gzip",
+      "sha256": "f4a525298a76cb127095b29947ea2e106fa61aad87a0e6c186cd90ce88b454d0"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/sd60-sofi-2025-discovery-p004.json.gzip",
+      "sha256": "4d88dc1cf93cf38361c995d2eff8dcf7da06271bdccd7dac2b2a96ba12609d05"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/sd60-sofi-2025-discovery-p043.json.gzip",
+      "sha256": "e159a93920eddc3a01a093e92e2446657955ac4aec88cd69cf9a60c748cfaed2"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/sd60-sofi-2025-discovery-p044.json.gzip",
+      "sha256": "68b9e38e832c5b3d91145c6bf8e76b82096c47f0d8f13fe8e491554775bf6766"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/sd60-sofi-2025-discovery-p045.json.gzip",
+      "sha256": "a44274a249df32fcf12c8b22e35f4fde0a66f8ae49c18fe319273e3a289d4ead"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/sd60-sofi-2025-discovery-p046.json.gzip",
+      "sha256": "80dcd63b53704a2debff5bea0c53d152dead733b68cd7d873334a7e447832989"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/sd60-sofi-2025-discovery-p047.json.gzip",
+      "sha256": "4bdcdb3039d70803426eb303be437a878a118666b4b1f5464b620329cad1a934"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/sd60-sofi-2025-discovery-p048.json.gzip",
+      "sha256": "1c8022b7cee38f74cf6866799829580ccb71f208fd86c26aa7ccbb93fce64d48"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/sd60-sofi-2025-discovery-p049.json.gzip",
+      "sha256": "9629b3e056ae53ee3c9ff7217dc09ce17bbc528fb09af80e9d092b00ec73c225"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/sd60-sofi-2025-discovery-p050.json.gzip",
+      "sha256": "4172dda0ae08c04f648354e4957aa453a7fff67980c765d0cbfd89f0f8d6364e"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/sd60-sofi-2025-discovery-p051.json.gzip",
+      "sha256": "5cc3258c0536f31c32dc12d9a7e1e27ff952926a4b6a14a0f34d2c194e34b6c4"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/sd60-sofi-2025-discovery-p052.json.gzip",
+      "sha256": "e5b45514628e15bb7b1db0ff3ad0e94ee413066d45958c83528efcf8374e9876"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/sd60-sofi-2025-discovery-p053.json.gzip",
+      "sha256": "882d973e55a50b8022dc7cc6d7b3148d90bbea1725f11a0686d2142c2eceecb5"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/sd60-sofi-2025-discovery-p054.json.gzip",
+      "sha256": "a405d1293de99862f3b1175596ed539262a384a1ba3f2834b57ca18865bc2585"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/sd60-sofi-2025-discovery-p055.json.gzip",
+      "sha256": "c9d8a0a0e9a2c6be218aa51463a374b62e750cd77ed9fa5365edc15da877eb24"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/sd60-sofi-2025-discovery-p056.json.gzip",
+      "sha256": "e2cd225814a88f19f9936c27924f5df1f79bbfc5d8f937679f0ec113f6401060"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/sd60-sofi-2025-discovery-p057.json.gzip",
+      "sha256": "a243d3c85c41431adfcef483747422715649fdefae311ac2b4d06436806d5361"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/sd60-sofi-2025-discovery-p058.json.gzip",
+      "sha256": "9a40fe4326df3e6831a05d8b5f47c7eceabfbaca64b902a6fc1d1c28477abf8f"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/sd60-sofi-2025-discovery-p059.json.gzip",
+      "sha256": "1c23b8034062304b18695aa2f887e2e1c95c00ea09dc68df4154d4d0af462325"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/sd60-sofi-2025-discovery-p060.json.gzip",
+      "sha256": "9c02ea25071ecb29f488bb063b7e5c026ddb6eed924ac9b1008732c97784793a"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/sd60-sofi-2025-discovery-p061.json.gzip",
+      "sha256": "f81dbb746f7bc87439f1b94b8b048e45de3df25934bc78a46dc02df64e58b150"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/sd60-sofi-2025-discovery-p062.json.gzip",
+      "sha256": "c6097864b0373c4874cb69f0c70e999deb7c9c90c98b33f58a38cbf1b6c84a08"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/sd60-sofi-2025-discovery-p063.json.gzip",
+      "sha256": "5cd87edaf716cafde10222f78b59e8fa4d1bb953c7ef1eb369d72f703069daf2"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/sd60-sofi-2025-discovery-p064.json.gzip",
+      "sha256": "dec59605093133840b8a6be645e244b06e5517916db65330067a1a6bd45cdc57"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/sd60-sofi-2025-discovery-p065.json.gzip",
+      "sha256": "ea714debc2287b9bc1bf91609f3592b4c9f5763f87a74ecb1b5b7b0413fe00e7"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/sd60-sofi-2025-discovery-p066.json.gzip",
+      "sha256": "cd76f186ad7fd11a02637fc5b6aba108fae893e6c459a0945ce6af59d0305fd2"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/sd60-sofi-2025-discovery-p067.json.gzip",
+      "sha256": "a86a31a3b1af4ec804fd8eae11f338f8ece7780358699cf64ec11eac6c9e3ae3"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/sd81-image-reviewed-candidate.json.gzip",
+      "sha256": "e667324415526e6be31f49a41cbf51b366a4a2e1da8538b48ac3dd5fe03cd7ca"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/sd81-pixel-candidate.json.gzip",
+      "sha256": "2e5720fe022671b26f17b4ddc0802e8924598e1cebb05dcd1cf7b3f85edb2567"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/sd81-raw-reader-rows.json.gzip",
+      "sha256": "21d07662a1d8ac7a567df39272f554df52862804ee043589707b80903e048b89"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/sd81-sofi-2025-discovery-p001.json.gzip",
+      "sha256": "f5db203480dca9eaa0cb6857012d5be76e4355fb4a489d9dc62f37506411be53"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/sd81-sofi-2025-discovery-p002.json.gzip",
+      "sha256": "90f321cd331c878b7800571784e7187e7f1a48f11723099cedeb4c5f1383df48"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/sd81-sofi-2025-discovery-p003.json.gzip",
+      "sha256": "6eacfa0e33fcc1fc1096cb4820968ab2a3a8bb30a07950ecf9e7532ef1aa2e91"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/sd81-sofi-2025-discovery-p004.json.gzip",
+      "sha256": "52cf62760675b3a6938850ed89d5bf68e06fc7574303f9c62e4da76fa93e0178"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/sd81-sofi-2025-discovery-p029.json.gzip",
+      "sha256": "62efa9737a1e1b7d5adcaa7a2800be08a7fea8974d455b483d49c07a2c606b63"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/sd81-sofi-2025-discovery-p030.json.gzip",
+      "sha256": "b42742dce5c93e2f4b898826be44217ae76408d2a20f3ca4ea13475dbd0ffc58"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/sd81-sofi-2025-discovery-p031.json.gzip",
+      "sha256": "e6eafbf6c939edf22b50a00270479c30c30a91b229cce7d54455f9dc45fd0859"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/sd81-sofi-2025-discovery-p032.json.gzip",
+      "sha256": "f0a7150e32f9d43716ae5bcac28ddf15e1f4f0aa66965d0a9f1581d35bc72408"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/sd81-sofi-2025-discovery-p033.json.gzip",
+      "sha256": "5eceb7de8f0d60f3147b5542fbe3d21d2c31f84e691f1e8741fe376e4b17c7c5"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/sd81-sofi-2025-discovery-p034.json.gzip",
+      "sha256": "01adb0f59ec2a815117ef2d0fdf9dc69350ac12606643e206d9d545a1097eea1"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/sd81-sofi-2025-discovery-p035.json.gzip",
+      "sha256": "ffab808490eddba7d6678c17fb0d0a8d9642d48906e3c81c79a57831e494b065"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/sd81-sofi-2025-discovery-p036.json.gzip",
+      "sha256": "3c2eb77e732f01ab030e5a1209079bd40862ec73f80b5e3e69ca6d828c7442df"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/sd81-sofi-2025-discovery-p037.json.gzip",
+      "sha256": "3cf6c61eb0c08a08109083c08cf669ce4ae606f93eed3c6de3cd08dbf89bd2ef"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/sd81-sofi-2025-discovery-p038.json.gzip",
+      "sha256": "35230590698591978d4702e0a2aea8d7079559d694ea71104c6c953b08e9150d"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/sd81-sofi-2025-discovery-p039.json.gzip",
+      "sha256": "4e1a6b4da17db423c8a33dc5feb86a9d89dc13fc08f18967061481f5fb073480"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/sd81-sofi-2025-discovery-p040.json.gzip",
+      "sha256": "51960fd53c223b31c31ead3e574f0a7d485f3bbcd078ab8e224b69b482dfea14"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/sd81-sofi-2025-discovery-p041.json.gzip",
+      "sha256": "adf8b9008562bb7fa0215a63e0e52f943f0773f53f53aa3dd0b02a871d0c7902"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/sd81-sofi-2025-discovery-p042.json.gzip",
+      "sha256": "9a7db811dfbd93fa23d53de3c07b4d221dab6a2cb5389d23e202bf8a19b44079"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/sd81-sofi-2025-discovery-p043.json.gzip",
+      "sha256": "7b8075b0f009ec8c29e5bf1a01a9961ca60655fa13db3f19ca1cc4fe23e86780"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/sd81-sofi-2025-discovery-p044.json.gzip",
+      "sha256": "0f4c22d5f7dad5d19eb2a23c56d3b3e20474145aee0c59e58011df7eba5d6459"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/sd81-sofi-2025-discovery-p045.json.gzip",
+      "sha256": "a63db0379183499337d96367f4b83daaa757de74b83c0fe838a62bf6dd110a4d"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/sd81-sofi-2025-discovery-p046.json.gzip",
+      "sha256": "e9ea2727027ba48246c0d79839c06349c1632fb4b9524c5fe6405ab3980a3c1f"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/sd81-sofi-2025-discovery-p047.json.gzip",
+      "sha256": "501154af8d07f4d9adf32d309e693deb8b0d0cc43cccfa93e94f0d5b87f08596"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/sd81-sofi-2025-discovery-p048.json.gzip",
+      "sha256": "927d3c08c858afcac4c3adf210b68b6e8b0e2f65d6aea607ffb1a538dff49556"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/sd81-sofi-2025-discovery-p049.json.gzip",
+      "sha256": "a28ddb98a0710e05dc5157961d5309e8f8f62e392ec3f0834452ac330490a9b7"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/sd81-sofi-2025-discovery-p050.json.gzip",
+      "sha256": "fea6c24980ee05572a968fd201d608ad5f918e614611e0daf77036b7a970ab84"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/sd81-sofi-2025-discovery-p051.json.gzip",
+      "sha256": "fce4a43968aa02b510ca8b0d5ac050cd03ea574ec536b8f2c95d7f43e20fb975"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/sd81-sofi-2025-discovery-p052.json.gzip",
+      "sha256": "0bd71364796952f8fb11f351ae547f3d36d6b92eb2d1c7bf23dab1392934063a"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/sd81-sofi-2025-discovery-p053.json.gzip",
+      "sha256": "30dbe27ee726a7618e018c33e8d72e01cdbb5de18a4fc38993a1a505f1a0bc48"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/sd82-image-reviewed-candidate.json.gzip",
+      "sha256": "52ea4be9c60d89a40dedefb3060d0387ff1ee395e91d9ff6caa1453d84e3b9d3"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/sd82-pixel-candidate.json.gzip",
+      "sha256": "b13e72aa893029159fb8c0719c2ed46268d29d7463081959cb233b87af463dc7"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/sd82-raw-reader-rows.json.gzip",
+      "sha256": "ae41926552754bfb085483d3a71dbb8f3a27b2a206117f9ad3491bba385a042b"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/sd82-sofi-2025-discovery-p001.json.gzip",
+      "sha256": "d1ae4a91d975a46d2cfbfe6da7f26f09dace7f7b23816ceb4f6ce8975878c06d"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/sd82-sofi-2025-discovery-p002.json.gzip",
+      "sha256": "2f9f700f56e67046308695203639c90c20b95735effea6ec91162ac68900ea44"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/sd82-sofi-2025-discovery-p003.json.gzip",
+      "sha256": "d17ef3842326f2dba12fae4eac57f859544062f008e041293388514ad3310a62"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/sd82-sofi-2025-discovery-p004.json.gzip",
+      "sha256": "8125c70330af7c4a272895b60002259b5735b7f46b1737c9bde1c085aed93e35"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/sd82-sofi-2025-discovery-p037.json.gzip",
+      "sha256": "12aee7059968fc5e80b6a56092d481ac5d1dd0062effa40b05f05418c65ac87d"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/sd82-sofi-2025-discovery-p038.json.gzip",
+      "sha256": "909b97f6295c6a0228714e2bc84303c5b418eddf6818c1aea764aa7660bb4d71"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/sd82-sofi-2025-discovery-p039.json.gzip",
+      "sha256": "f54eba6c9c9ddf841bb260a1e42e76f50438404cab45f32b9e71aca9d876ae0b"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/sd82-sofi-2025-discovery-p040.json.gzip",
+      "sha256": "e45abe9774b73a9ca00eb6c91648c9de26b680f62dfca842c47df8d55c0cc6e6"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/sd82-sofi-2025-discovery-p041.json.gzip",
+      "sha256": "12ba860450b03228a0037cab6132ca2dc632e1a2cd9e039af3c0a5580c90a626"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/sd82-sofi-2025-discovery-p042.json.gzip",
+      "sha256": "e1fd4295b038c1dc0a9882cbfee99f480d227a88429e933dc47f15850f2c7911"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/sd82-sofi-2025-discovery-p043.json.gzip",
+      "sha256": "1ffcccd04a3d0bf14bc8e56d1597242a86b3050671926e62fe6ba6bef5789ca4"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/sd82-sofi-2025-discovery-p044.json.gzip",
+      "sha256": "f2eb0e3f8ad8173fdc32ec4df9ead4b492b440045c4be57830f2603934805c4a"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/sd82-sofi-2025-discovery-p045.json.gzip",
+      "sha256": "7bda38cabf6132b8538cb05a1881032403910b92ed25f233f3c0deb78bae5b6d"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/sd82-sofi-2025-discovery-p046.json.gzip",
+      "sha256": "056aa5fe7513b1d35b3470752535b75e2f2fd84721947e090028fc3f1ce803ef"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/sd82-sofi-2025-discovery-p047.json.gzip",
+      "sha256": "62c36d83d23b4e514343d186e0baa4d999b227fc54fe319ae1741b557eeb86d3"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/sd82-sofi-2025-discovery-p048.json.gzip",
+      "sha256": "55c137522a85e5c7e6c2fbfcd6c28671be150c8da2c55fbee9b1c2a5f284aa4b"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/sd82-sofi-2025-discovery-p049.json.gzip",
+      "sha256": "5a70a74153a6ec9497882e18305dbf7a437f74ddb4db31b4d81e24f92c267b4c"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/sd82-sofi-2025-discovery-p050.json.gzip",
+      "sha256": "607511533ebe0c6fc2626a5726ce5c69ea472cfb267cfe2a1d7f2e62a5db1b87"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/sd82-sofi-2025-discovery-p051.json.gzip",
+      "sha256": "2225d8ab85ed12d4639a7b3f7521219bc280d2ed9bfe9688ebcf86cd5ce57e93"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/sd82-sofi-2025-discovery-p052.json.gzip",
+      "sha256": "58e3a0ed72ab142ac090830070d1158c0e79e2a3c1914de54b2f3fbff381f3b1"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/sd82-sofi-2025-discovery-p053.json.gzip",
+      "sha256": "b39aaaf32f699ecca12a6cfaab9db466a21f2e771bcd6a4c9505c757e4dd0fbb"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/sd82-sofi-2025-discovery-p054.json.gzip",
+      "sha256": "f21f13bdbf9ef7d997ae6d44dbaab53e4b3823fe39ce960b43186d3735f1ace6"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/sd82-sofi-2025-discovery-p055.json.gzip",
+      "sha256": "744407acc1e3161635995ce5c594f5a1b8468865c71655734c4daee39017af92"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/sd82-sofi-2025-discovery-p056.json.gzip",
+      "sha256": "ca35482fa57283092d27f1363e6ea3a96dfaa60942718eb98bd436d5b926125e"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/sd82-sofi-2025-discovery-p057.json.gzip",
+      "sha256": "a449ca3d59be6de47bffde0ccacff87185f9b3ef9e4f4805a6f4cc599547c6ec"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/sd82-sofi-2025-discovery-p058.json.gzip",
+      "sha256": "72859f4e26e06ab80e17dabad32aba898f0c3c14243134452f15f8d8e0a41d0b"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/sd82-sofi-2025-discovery-p059.json.gzip",
+      "sha256": "a611bcf965c4a3506fd59d95663e1b66112fb3515719df4258ffd9577f7b5675"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/sd82-sofi-2025-discovery-p060.json.gzip",
+      "sha256": "cef925a10bc86c67de07b3d47878f742e8e9e453ec94bd71c13cec87aa915ca7"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/sd82-sofi-2025-discovery-p061.json.gzip",
+      "sha256": "433ac1544479c2ab246711f2443c40a83fcabda7cc14b44ed815c6b44e1d052b"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/sd82-source-field-packet-index-v2.json",
+      "sha256": "3b323691c50cf021c78955bce7c67cdd48f438204ef8f59447eb357ec3c3c28e"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/source-context-image-index.json",
+      "sha256": "5184063acd83b173badd3da39e1bf850001bf16d95d201083b5ae4f70c663fc4"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/source-context-review.json",
+      "sha256": "b70c655429107b77d447395a4d600fd8acba673b82ffee869cee09e80f4b801c"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/source-image-packet-index.json",
+      "sha256": "d6da6a453c926939745acc3a7bc93957d463c74cbb9efa70457715d5ef4ec987"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/source-image-targets.json",
+      "sha256": "f2aa7c3effe0c6aaa6d513b438acbe697f76a752de38e6c7a2601282422217c4"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/uppercase-names-image-index.json",
+      "sha256": "f2020d7c02a9ca1d3f4a1cb338abc8429d85051e5be99803191895950451bd9a"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/uppercase-names-images/uppercase-names-01.png",
+      "sha256": "1d7341630a243a6931cf929d0d856f01473fc17d13986e3f85e3ba4c23da2892"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/uppercase-names-images/uppercase-names-02.png",
+      "sha256": "3f11639ec963697afb5c9222fb63476034398ad45edf88cabba34a44f9f623b9"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/uppercase-names-images/uppercase-names-03.png",
+      "sha256": "1c85f29acf8b843369e6355cb506d7f87c65857f68e69f6ab29085c0da12dea4"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/uppercase-names-images/uppercase-names-04.png",
+      "sha256": "9d6fb8335f8ab18f0cd47165930505148616d876872b9f73aa51514f98504f12"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/uppercase-names-images/uppercase-names-05.png",
+      "sha256": "e664b01ff88aff1a14ae680a61d2a8613f3e3d8d2b03f8807c0a21f32115f22c"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/uppercase-names-images/uppercase-names-06.png",
+      "sha256": "1f0084cc85b862c74f094e4ee5781cbb3b68fda58763d4936ebe1ef84ee3316b"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/uppercase-names-images/uppercase-names-07.png",
+      "sha256": "efff6bdd100400c6fcc714ea72371e8f7d966563a17e921f461c7c60ac9957df"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/uppercase-names-images/uppercase-names-08.png",
+      "sha256": "5513ab9636ed1e76194d6147386bdd26ac9c15c98e842124f85ca1d7b8d05144"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/uppercase-names-images/uppercase-names-09.png",
+      "sha256": "df825ae2d3f38bc54f97abab93866976f81c72072aa621bd0ef956ddf1a6be3f"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/uppercase-names-images/uppercase-names-10.png",
+      "sha256": "2fb2d07f7e2138977161bf6ad2d1ff05cb667ee9d480ca26a9045289038185eb"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/uppercase-names-images/uppercase-names-11.png",
+      "sha256": "9900719399db6381452fcf8c3450ff17ce4aa8b7955a644e492267fd48a335b2"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/uppercase-names-images/uppercase-names-12.png",
+      "sha256": "ef3b171556f6a7e5d80b53699f22b8903c599dc6eb8e04ba91e11aa1708155c4"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/uppercase-names-images/uppercase-names-13.png",
+      "sha256": "749210c3b0df4f862fb5cd1b3ee2e531d86b7e18b1a34f799641eeecc95d7478"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/uppercase-names-images/uppercase-names-14.png",
+      "sha256": "89f6a61d05c9b02958cecf079d592bf22afec25e0296a8f8e92a1fc3f551cc50"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/uppercase-names-images/uppercase-names-15.png",
+      "sha256": "ea8e2c5f8bf2c78f8802da4c7439af3de2596616837c342f8d928e2fdffc4a1f"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/uppercase-names-images/uppercase-names-16.png",
+      "sha256": "12463feab18a1c7cfcfa0f37c7f0b7758630c63cca999679d95b178759bc3d25"
+    },
+    {
+      "file": "research/salaries/gap-fill-2026-11-02/school_north/uppercase-names-images/uppercase-names-17.png",
+      "sha256": "e00ff997efce49a250dd91f294200f45736ad0255debb22e356acb09fbf18e47"
+    },
+    {
+      "file": "research/salaries/gap-fill-school-north/README.md",
+      "sha256": "1f78cb980b70b371a8486bd3d038df75826e56b571d152d99d13dd700739a734"
+    },
+    {
+      "file": "research/salaries/gap-fill-school-north/sd08-2024-25-employees-evidence.json.gzip",
+      "sha256": "192afd3603b844bb371b21b328c92f92174728108514649ec24ff9ace7b9243a"
+    },
+    {
+      "file": "research/salaries/gap-fill-school-north/sd08-2024-25-employees.json.gzip",
+      "sha256": "2afd0fac155541193dbf3a2df4adbab7c7f70008cc51a2b60c79987bafe4c5d2"
+    },
+    {
+      "file": "research/salaries/gap-fill-school-north/sd08-2024-25-trustees-evidence.json.gzip",
+      "sha256": "bc5417feb426ba08ef7c1f726bfc8567df07bca20e7549cac05598a9bd5406d9"
+    },
+    {
+      "file": "research/salaries/gap-fill-school-north/sd08-2024-25-trustees.json.gzip",
+      "sha256": "55715f551fb79614acba00a4f2e4f31743a044c7dc9e2ae4c8c514390907c95d"
+    },
+    {
+      "file": "research/salaries/gap-fill-school-north/sd28-2024-25-employees-evidence.json.gzip",
+      "sha256": "412a5a6aff3c8faded53587db2e5430be98237a9a312b09917ead9acce562361"
+    },
+    {
+      "file": "research/salaries/gap-fill-school-north/sd28-2024-25-employees.json.gzip",
+      "sha256": "9ad0affebd29fd4e3416199674f09fc525377377ae82d5d483b5e6614585c29d"
+    },
+    {
+      "file": "research/salaries/gap-fill-school-north/sd28-2024-25-trustees-evidence.json.gzip",
+      "sha256": "7a51f845ef056daa4ee66264d9458bfe62d90c21ca93da30ef4dcc0cd12a241a"
+    },
+    {
+      "file": "research/salaries/gap-fill-school-north/sd28-2024-25-trustees.json.gzip",
+      "sha256": "d5bcfbdeddf487450a952da0422ed50f933536d4edd5b4861194530d074038d4"
+    },
+    {
+      "file": "research/salaries/gap-fill-school-north/sd54-2024-25-employees-evidence.json.gzip",
+      "sha256": "0ca31d681db6daec4c82b243c1db0222e7a1e1e8f8b575426a554dd13beea928"
+    },
+    {
+      "file": "research/salaries/gap-fill-school-north/sd54-2024-25-employees.json.gzip",
+      "sha256": "97062434fb52a1d1833a759152ec5882aa6340aee2969c5a5b9b97c8a4d46820"
+    },
+    {
+      "file": "research/salaries/gap-fill-school-north/sd54-2024-25-trustees-evidence.json.gzip",
+      "sha256": "f7544192a325e7f0c9df52ef617337a0712a6e8b081d9866251ac64e4f8db641"
+    },
+    {
+      "file": "research/salaries/gap-fill-school-north/sd54-2024-25-trustees.json.gzip",
+      "sha256": "3f4da60c0c526bafc21ac5f15cfcc7de216131a7a6845ff8b6d534957e0a04eb"
+    },
+    {
+      "file": "research/salaries/gap-fill-school-north/sd58-2024-25-employees-evidence.json.gzip",
+      "sha256": "c754a681e419700e5de90471539f8cc618820e17aead82ff29a1885fd03c16eb"
+    },
+    {
+      "file": "research/salaries/gap-fill-school-north/sd58-2024-25-employees.json.gzip",
+      "sha256": "d1fde6ee94a98f50b25ef39135b4a8271ff02efdff0bb7e4f2b9837b49071233"
+    },
+    {
+      "file": "research/salaries/gap-fill-school-north/sd58-2024-25-trustees-evidence.json.gzip",
+      "sha256": "5b47f4172e58245181d2f9ae3c50230e08ca80ed76d976fbd56911fb5d5e1966"
+    },
+    {
+      "file": "research/salaries/gap-fill-school-north/sd58-2024-25-trustees.json.gzip",
+      "sha256": "a5a20dfa2194e82bf2d7088c04a26203392809604ff60dd42564e1dbe66f6a80"
+    },
+    {
+      "file": "research/salaries/gap-fill-school-north/sd59-2024-25-employees-evidence.json.gzip",
+      "sha256": "cfb4f5c84c9f92c5897124c14f00d665615543000a3ea6c0f93169d53661f64c"
+    },
+    {
+      "file": "research/salaries/gap-fill-school-north/sd59-2024-25-employees.json.gzip",
+      "sha256": "0eed43ece8a35780983821b51b862d0bfcef99327dbfe3110c2bd338b1f2214a"
+    },
+    {
+      "file": "research/salaries/gap-fill-school-north/sd59-2024-25-trustees-evidence.json.gzip",
+      "sha256": "91b8529611a20bc0bf72ca7d164b50aa9cb7b590ae2f7ab7c4b3f4667c698eca"
+    },
+    {
+      "file": "research/salaries/gap-fill-school-north/sd59-2024-25-trustees.json.gzip",
+      "sha256": "7e64c77e580b07343dcae117ccf235304d3418f1a28c986662a333a9e86a84b0"
+    },
+    {
+      "file": "research/salaries/gap-fill-school-north/sd60-2024-25-employees-evidence.json.gzip",
+      "sha256": "40302faaa2f6dc3f18b78db6390ddca0a6a76d6c4ba93193af91d08e31678522"
+    },
+    {
+      "file": "research/salaries/gap-fill-school-north/sd60-2024-25-employees.json.gzip",
+      "sha256": "d2bb40a1221be3903809646e839175459a5697a31dccdd9a94ca4d520cfe77e3"
+    },
+    {
+      "file": "research/salaries/gap-fill-school-north/sd60-2024-25-trustees-evidence.json.gzip",
+      "sha256": "4a5434798e349315d8754d7a566daded42088c7d5b29d6e2add565714813eaee"
+    },
+    {
+      "file": "research/salaries/gap-fill-school-north/sd60-2024-25-trustees.json.gzip",
+      "sha256": "49f3f67bf3a30160636c38db0378543318141fdc4577ab15a88551ce75c11b85"
+    },
+    {
+      "file": "research/salaries/gap-fill-school-north/sd81-2024-25-employees-evidence.json.gzip",
+      "sha256": "e1a6cfa7c3ce1ec7d606bc9101a15958ff30ecfe12fe648feb9ce43b115ba964"
+    },
+    {
+      "file": "research/salaries/gap-fill-school-north/sd81-2024-25-employees.json.gzip",
+      "sha256": "7ce0137831724784df83aa3431a3289ed2b54916af180c03db0ffc9f4c9945ff"
+    },
+    {
+      "file": "research/salaries/gap-fill-school-north/sd81-2024-25-trustees-evidence.json.gzip",
+      "sha256": "a6797094d77f37523847edf0e0b79851a6cc6063924e5bb10e51fceed8474a40"
+    },
+    {
+      "file": "research/salaries/gap-fill-school-north/sd81-2024-25-trustees.json.gzip",
+      "sha256": "fc356e9196d05ab13e9ef95a10e72486754ce9520854a027941ad13dc0316c91"
+    },
+    {
+      "file": "research/salaries/gap-fill-school-north/sd82-2024-25-employees-evidence.json.gzip",
+      "sha256": "db6e44bea7a8db4564b30a30991f619dfa76277c182454817d3c3442b221ffc4"
+    },
+    {
+      "file": "research/salaries/gap-fill-school-north/sd82-2024-25-employees.json.gzip",
+      "sha256": "f6b926fc688a8914957360baac6734c9719d884d5ef6d479d49f9ba8e004eb26"
+    },
+    {
+      "file": "research/salaries/gap-fill-school-north/sd82-2024-25-trustees-evidence.json.gzip",
+      "sha256": "f45218671a49ea6ef3880756ea11f0cc5ae468ba05ac08e6dcfd8e1368468e00"
+    },
+    {
+      "file": "research/salaries/gap-fill-school-north/sd82-2024-25-trustees.json.gzip",
+      "sha256": "b1c3e9fe72a32152415961c129a7ef8ff1b072e8c1303ef18004870b8352f72b"
+    },
+    {
+      "file": "research/salaries/gap-fill-school-north/sources.json",
+      "sha256": "adc460b612249318e3f87d585621575e9c25370862c010dfade47f15b794d4b0"
+    },
+    {
+      "file": "scripts/gap_school_north_accept.py",
+      "sha256": "2e5a5ad36e412b94c9fd49e3df3dc9e81d08b9bedd60d26338a140985d12a940"
+    },
+    {
+      "file": "scripts/gap_school_north_candidates.py",
+      "sha256": "9cd1b177e19796250f6639c7df2b1f2611068aa88a2c2a4c5e1de6d1a0a91858"
+    },
+    {
+      "file": "scripts/gap_school_north_context.py",
+      "sha256": "0ce1b1df2730ee2f0c2716d09e181ff181eb00dfbfe5556b00cbaa4a41039705"
+    },
+    {
+      "file": "scripts/gap_school_north_discovery.py",
+      "sha256": "03798ccdc795b41d89b48736f0a1d8e818c6251d2ace1e6bc5e270dda5f7a139"
+    },
+    {
+      "file": "scripts/gap_school_north_extra_tess.py",
+      "sha256": "8069d84bb5109dfc099dc826b3e911d38384a52ad52635096dfbb9c4c5aa16d2"
+    },
+    {
+      "file": "scripts/gap_school_north_finalize.py",
+      "sha256": "2f0187e9811551ceb0f184ec4a60ad9a95ba3ef8a7ffbcaefe13a4333e17e9d1"
+    },
+    {
+      "file": "scripts/gap_school_north_handoff.py",
+      "sha256": "9a7645b3984e81de76577d6605ccc717fd9c891265fd0ba9701ee29270d73b45"
+    },
+    {
+      "file": "scripts/gap_school_north_ocr.py",
+      "sha256": "77b2ed58149d7b915878071946d0f31a36c013db0b096566d609e93b2219c782"
+    },
+    {
+      "file": "scripts/gap_school_north_packets.py",
+      "sha256": "e9e85b6e07aad677426ce75bcdfcc000c6010eec505a6cd820b5bf5ff8fcb87a"
+    },
+    {
+      "file": "scripts/gap_school_north_parse.py",
+      "sha256": "fca3bd2f06362edccf0955bd25f073b4f369f45ba8b811e9e4f57d08dfa91711"
+    },
+    {
+      "file": "scripts/gap_school_north_pixels.py",
+      "sha256": "92c602fd14bb66f902ea07ae3c259bd5ceb08a4a7126d2305d590cf38d24c456"
+    },
+    {
+      "file": "scripts/gap_school_north_sd82_packets.py",
+      "sha256": "cfcfe1089044bc9e65a97c6fd49f9748632575da8833e1c03d1f08c59a6aae58"
+    },
+    {
+      "file": "scripts/gap_school_north_spacing.py",
+      "sha256": "aa7455f078d264285ba422f969e37ffdb72924bbdd7e1079053e2d9a82c2f5e0"
+    },
+    {
+      "file": "scripts/test_gap_school_north.py",
+      "sha256": "67a11e473d0e574983532fa3ba30d51507d38d1f67fb435312ae01c3eac36a01"
+    }
+  ]
+}

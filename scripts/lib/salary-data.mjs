@@ -183,6 +183,54 @@ export const validateRow = (row, context) => {
 }
 
 /** A small executive/deputy cohort must never silently replace an employee partition. */
+/** Adopt reviewed retention without rewriting a frozen source manifest or payment. */
+export const applyCompiledRetentionDecisions = (sources, review) => {
+  if (review == null) return
+  if (review.accepted !== true || review.noOutreach !== true || !Array.isArray(review.decisions)) throw new Error('Compiled retention requires an explicit reviewed decision')
+  const seen = new Set()
+  for (const decision of review.decisions) {
+    const source = sources[decision.sourceId]
+    if (!source || seen.has(decision.sourceId)) throw new Error(`Compiled retention: missing or repeated source ${decision.sourceId}`)
+    seen.add(decision.sourceId)
+    if (decision.approvedBy !== 'root' || decision.retainCompiledPartition !== true || !decision.reason?.trim() ||
+      !/^[a-f0-9]{64}$/.test(decision.sourceSha256 ?? '') || !/^[a-f0-9]{64}$/.test(decision.dataSha256 ?? '') ||
+      source.sha256 !== decision.sourceSha256 || source.dataSha256 !== decision.dataSha256) throw new Error(`${decision.sourceId}: compiled retention source fingerprint changed or approval missing`)
+    const validation = source.validation ?? {}
+    if (!source.sourceKind?.startsWith('official') || !source.publicWarning?.trim() ||
+      validation.compiledPartitionRetained !== true || !validation.compiledPartitionRetentionReason?.trim() ||
+      typeof source.completeEmployeeSchedule !== 'boolean' || decision.completeEmployeeSchedule !== source.completeEmployeeSchedule ||
+      (validation.completeEmployeeSchedule != null && validation.completeEmployeeSchedule !== source.completeEmployeeSchedule)) throw new Error(`${decision.sourceId}: compiled retention requires an explicit scope qualification and consistent completeness guards`)
+    source.retainCompiledPartition = true
+    source.validation = { ...validation, completeEmployeeSchedule: source.completeEmployeeSchedule }
+  }
+}
+
+/** Keep precisely the published compiled multiset; a new board scope cannot revive retired rows. */
+export const preservePublishedCompiledRows = (rows, baseline) => {
+  if (baseline?.schema !== 'salary-gap-fill-baseline-v1') throw new Error('Published compiled baseline schema is invalid')
+  const key = (slug, year, sourceId) => JSON.stringify([slug, year, sourceId])
+  const wanted = new Map()
+  for (const group of baseline.groups) {
+    if (baseline.sourceMetadata[group.sourceId]?.sourceKind !== 'compiled') continue
+    const id = key(group.employerSlug, group.year, group.sourceId)
+    if (wanted.has(id)) throw new Error('Published compiled baseline repeats a group')
+    wanted.set(id, { ...group, rowsFound: [] })
+  }
+  const selected = []
+  for (const row of rows) {
+    const group = wanted.get(key(row.slug, row.year, row.sourceId))
+    if (!group) continue
+    group.rowsFound.push(JSON.stringify([row.name ?? null, row.position ?? null, cents(row.pay), row.expenses == null ? null : cents(row.expenses), row.page ?? null]))
+    selected.push(row)
+  }
+  for (const group of wanted.values()) {
+    const serial = group.rowsFound.sort((a, b) => Buffer.compare(Buffer.from(a), Buffer.from(b))).join('\n')
+    if (group.rowsFound.length !== group.rows || sha256(serial) !== group.rowMultisetSha256) throw new Error(`Published compiled observations changed: ${group.employerSlug} ${group.year} ${group.sourceId}`)
+  }
+  if (selected.length !== baseline.overall.compiledRecords) throw new Error('Published compiled baseline count differs')
+  return selected
+}
+
 /** Qualified sources can coexist with a compiled partition whose broader scope is unresolved. */
 export const compiledPartitionsToRetain = (official, sources) => {
   const retained = new Set()

@@ -1,0 +1,93 @@
+{
+  "status": "candidate-ready-for-independent-source-review",
+  "noOutreach": true,
+  "baselineCommit": "de42c55e98e42b8001f07e4ecbd210f892ab2716",
+  "allEightAssignedLeadsPublicSourcesProcessed": true,
+  "acceptedForPublication": false,
+  "candidateSources": 52,
+  "candidateOriginals": 28,
+  "candidateRows": 411,
+  "candidateEmployeeRows": 212,
+  "candidateCouncilRows": 199,
+  "normalizedCollection": "research/salaries/gap-fill-municipal",
+  "candidateManifest": {
+    "path": "research/salaries/gap-fill-municipal/sources.json",
+    "sha256": "80da1f8c5d050b95ff5d6b77252a1acd8ca278bbf4473d94eecc3c0aba8a6142"
+  },
+  "workerInputs": [
+    {
+      "path": "research/salaries/gap-fill-2026-11-02/municipal/assigned-leads.json",
+      "sha256": "0b6e056fb03cd841dcccf77aca52e27fadda4dfac5622ef12d936fa923116dc0"
+    },
+    {
+      "path": "research/salaries/gap-fill-2026-11-02/municipal/refreshed-originals.json",
+      "sha256": "1d394447251ae0b03dc81750621df21d4a244ee5267036ee29f1dba4b3902042"
+    },
+    {
+      "path": "research/salaries/gap-fill-2026-11-02/municipal/candidate-summary.json",
+      "sha256": "3b21597b65e976077fddc34d4af4cd6c08e3e466c72212dd4a72bce26c8d3a56"
+    },
+    {
+      "path": "research/salaries/gap-fill-2026-11-02/municipal/lead-dispositions-candidate.json",
+      "sha256": "f3ec835890adedbb73f7da82e40fdaa93309d9a69402ba028714dab834423a81"
+    },
+    {
+      "path": "research/salaries/gap-fill-2026-11-02/municipal/independent-review-packet.json",
+      "sha256": "bb889d84061f1da693f9c50b6cb59fb771b24e52bf160e01f6e7b20f6b60d7e6"
+    },
+    {
+      "path": "research/salaries/gap-fill-2026-11-02/municipal/independent-review-packet-earliest-12.json",
+      "sha256": "da3575db26f90984cf342ba2f3eea29a57e02605dc2e0bce05a50bf3b8b66896"
+    },
+    {
+      "path": "research/salaries/gap-fill-2026-11-02/municipal/aggregate-only-barriere-2020.json",
+      "sha256": "9188e06eb3c57a62d72797a2bb6070b7739efa7ccce8f814a126f2f5e11fd17d"
+    },
+    {
+      "path": "research/salaries/gap-fill-2026-11-02/municipal/abbotsford-known-column-supplement.json",
+      "sha256": "dc9497938220b1f38bbec897028b92d59e973f01ee05fdd69ef75d1533a02ee7"
+    },
+    {
+      "path": "research/salaries/gap-fill-2026-11-02/municipal/abbotsford-fresh-native-readers.json.gzip",
+      "sha256": "2612a035b4ded9a1cec096568448ca9afb9e3631f3a18ad6e887f825ac32e096"
+    },
+    {
+      "path": "research/salaries/gap-fill-2026-11-02/municipal/rossland-search-api-summary.json",
+      "sha256": "38c1a1743883aa2241c3278db1b68c78183c2a592b1fd04ea951f2f052e1f4d0"
+    },
+    {
+      "path": "research/salaries/gap-fill-2026-11-02/municipal/rossland-2014-council-search-all-results.json",
+      "sha256": "a8b26f17c64d28e49d2cbfe65f74df6736a8b6ae00ce798c9f45d5e2e8e1f4c1"
+    },
+    {
+      "path": "research/salaries/gap-fill-2026-11-02/municipal/annual2014-ocr-discovery-summary.json",
+      "sha256": "5c34b5a9d8d900cfc8f53e4460c45604b5970384fb02082b53f6b9b092a6e75e"
+    },
+    {
+      "path": "research/salaries/gap-fill-2026-11-02/municipal/independent-review-packet-remaining-16.json",
+      "sha256": "b85fd3919ab1086f9f2e71d41a1d526838b208669611c9402a7e92229c7c46d3"
+    },
+    {
+      "path": "research/salaries/gap-fill-2026-11-02/municipal/acceptance-template.json",
+      "sha256": "a3856658ea3c663316e25b466ab614c6d09fcfeca67631c9713e70759ae58144"
+    }
+  ],
+  "validationCommands": [
+    "python3 scripts/gap_municipal_emit.py --check",
+    "python3 -m unittest discover -s scripts -p test_gap_municipal.py -v"
+  ],
+  "regressionTestsPassed": 13,
+  "remainingIssuerQuestions": [
+    "Rossland 2011 named employee schedule",
+    "Rossland 2014 named council schedule",
+    "Abbotsford 2023 complete taxable-benefit components for the eleven previously held observations"
+  ],
+  "peerReviewPending": true,
+  "freezePending": true,
+  "globalRegistryEdited": false,
+  "publishedOutputsEdited": false,
+  "allExistingOfficialDataAndMetadataUnchanged": true,
+  "compiledDeletions": 0,
+  "acceptanceOverlayPrepared": true,
+  "acceptanceDecisionExists": false
+}

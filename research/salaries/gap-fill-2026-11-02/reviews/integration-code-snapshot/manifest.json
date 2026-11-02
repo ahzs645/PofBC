@@ -1,0 +1,110 @@
+{
+  "scope": "Exact shared integration and interface versions reviewed for this release, plus unchanged upstream name-link decisions. Immutable snapshots preserve the release review while allowing later interface/CI maintenance in the ordinary shared files. Source payloads, parsers and proof decisions have separate immutable freezes.",
+  "noOutreach": true,
+  "files": [
+    {
+      "originalPath": ".github/workflows/salaries.yml",
+      "sourceSha256AtReview": "578e94773565629c496ec795977e0180cedc386e0e0b853a6d98633cd98ef1e2",
+      "archivedSnapshot": {
+        "path": "research/salaries/gap-fill-2026-11-02/reviews/integration-code-snapshot/.github__workflows__salaries.yml.snapshot",
+        "sha256": "578e94773565629c496ec795977e0180cedc386e0e0b853a6d98633cd98ef1e2"
+      }
+    },
+    {
+      "originalPath": "package.json",
+      "sourceSha256AtReview": "0acc476558ee6b4382317d0556ad03709353da46334e1330e4c89e5b099f3747",
+      "archivedSnapshot": {
+        "path": "research/salaries/gap-fill-2026-11-02/reviews/integration-code-snapshot/package.json.snapshot",
+        "sha256": "0acc476558ee6b4382317d0556ad03709353da46334e1330e4c89e5b099f3747"
+      }
+    },
+    {
+      "originalPath": "scripts/build-salaries.mjs",
+      "sourceSha256AtReview": "2f68acd438b9a0455ce215dda2e914c72ea64606c34d90962f12cc768992f1f5",
+      "archivedSnapshot": {
+        "path": "research/salaries/gap-fill-2026-11-02/reviews/integration-code-snapshot/scripts__build-salaries.mjs.snapshot",
+        "sha256": "2f68acd438b9a0455ce215dda2e914c72ea64606c34d90962f12cc768992f1f5"
+      }
+    },
+    {
+      "originalPath": "scripts/lib/salary-data.mjs",
+      "sourceSha256AtReview": "c8c39f0f2b3d3f8d75dc9f6b58ead979d111d6a0cda7b210fd95768623812179",
+      "archivedSnapshot": {
+        "path": "research/salaries/gap-fill-2026-11-02/reviews/integration-code-snapshot/scripts__lib__salary-data.mjs.snapshot",
+        "sha256": "c8c39f0f2b3d3f8d75dc9f6b58ead979d111d6a0cda7b210fd95768623812179"
+      }
+    },
+    {
+      "originalPath": "scripts/salary-data.test.mjs",
+      "sourceSha256AtReview": "c99fcc6f9d9c90961cbd1c8fee25f8c1445aea41263e1b104f20e48fc1161ec2",
+      "archivedSnapshot": {
+        "path": "research/salaries/gap-fill-2026-11-02/reviews/integration-code-snapshot/scripts__salary-data.test.mjs.snapshot",
+        "sha256": "c99fcc6f9d9c90961cbd1c8fee25f8c1445aea41263e1b104f20e48fc1161ec2"
+      }
+    },
+    {
+      "originalPath": "scripts/build-name-links.mjs",
+      "sourceSha256AtReview": "787b2867ca967f597615701439674ed69074a1d253bc6440051f3dc3170dbedd",
+      "archivedSnapshot": {
+        "path": "research/salaries/gap-fill-2026-11-02/reviews/integration-code-snapshot/scripts__build-name-links.mjs.snapshot",
+        "sha256": "787b2867ca967f597615701439674ed69074a1d253bc6440051f3dc3170dbedd"
+      }
+    },
+    {
+      "originalPath": "src/government/Salaries.jsx",
+      "sourceSha256AtReview": "19c781a85c6ef17fabd9080d9509c9b47d6d6c0a6c0a600383aec37de38822aa",
+      "archivedSnapshot": {
+        "path": "research/salaries/gap-fill-2026-11-02/reviews/integration-code-snapshot/src__government__Salaries.jsx.snapshot",
+        "sha256": "19c781a85c6ef17fabd9080d9509c9b47d6d6c0a6c0a600383aec37de38822aa"
+      }
+    },
+    {
+      "originalPath": "src/salaries/EmployerPage.jsx",
+      "sourceSha256AtReview": "135db021c5c5dcd3ea326ba95ab2ae59a7262bd34ce0b21f3f3c0055cb44d366",
+      "archivedSnapshot": {
+        "path": "research/salaries/gap-fill-2026-11-02/reviews/integration-code-snapshot/src__salaries__EmployerPage.jsx.snapshot",
+        "sha256": "135db021c5c5dcd3ea326ba95ab2ae59a7262bd34ce0b21f3f3c0055cb44d366"
+      }
+    },
+    {
+      "originalPath": "src/salaries/PersonPage.jsx",
+      "sourceSha256AtReview": "e1ef022c21f3ad5ddec52568668d6248a71135cf21f82369225844a104447098",
+      "archivedSnapshot": {
+        "path": "research/salaries/gap-fill-2026-11-02/reviews/integration-code-snapshot/src__salaries__PersonPage.jsx.snapshot",
+        "sha256": "e1ef022c21f3ad5ddec52568668d6248a71135cf21f82369225844a104447098"
+      }
+    },
+    {
+      "originalPath": "src/salaries/common.jsx",
+      "sourceSha256AtReview": "1214466f115f239a83caa801347fa2d20381bfce1ba394b080940d395045dbaa",
+      "archivedSnapshot": {
+        "path": "research/salaries/gap-fill-2026-11-02/reviews/integration-code-snapshot/src__salaries__common.jsx.snapshot",
+        "sha256": "1214466f115f239a83caa801347fa2d20381bfce1ba394b080940d395045dbaa"
+      }
+    },
+    {
+      "originalPath": "src/salaries/coverage.js",
+      "sourceSha256AtReview": "09bd9179b3573257292270d5011a54f4224433d9b7ae781d587bf408a3331774",
+      "archivedSnapshot": {
+        "path": "research/salaries/gap-fill-2026-11-02/reviews/integration-code-snapshot/src__salaries__coverage.js.snapshot",
+        "sha256": "09bd9179b3573257292270d5011a54f4224433d9b7ae781d587bf408a3331774"
+      }
+    },
+    {
+      "originalPath": "src/salaries/coverage.test.js",
+      "sourceSha256AtReview": "4b4587d6a2f4d56043a69d060151fce97a160c0c9136ca4ee762a055949bfddf",
+      "archivedSnapshot": {
+        "path": "research/salaries/gap-fill-2026-11-02/reviews/integration-code-snapshot/src__salaries__coverage.test.js.snapshot",
+        "sha256": "4b4587d6a2f4d56043a69d060151fce97a160c0c9136ca4ee762a055949bfddf"
+      }
+    },
+    {
+      "originalPath": "research/salaries/name-links/reviewed.json",
+      "sourceSha256AtReview": "d6bddc0fd5aa74363dac425b268f73582740ec5b70bbd06c263f699f414d2b34",
+      "archivedSnapshot": {
+        "path": "research/salaries/gap-fill-2026-11-02/reviews/integration-code-snapshot/research__salaries__name-links__reviewed.json.snapshot",
+        "sha256": "d6bddc0fd5aa74363dac425b268f73582740ec5b70bbd06c263f699f414d2b34"
+      }
+    }
+  ]
+}

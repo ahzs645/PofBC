@@ -1,0 +1,282 @@
+{
+  "schema": "gap-fill-school-native-worker-handoff-v1",
+  "complete": true,
+  "baselineCommit": "de42c55e98e42b8001f07e4ecbd210f892ab2716",
+  "noOutreach": true,
+  "collection": "gap-fill-school-native",
+  "manifest": {
+    "path": "research/salaries/gap-fill-school-native/sources.json",
+    "sha256": "d6a32eef5f0fc2d96d948651d2ab88d5d8ca38716dead6b5b937bce38025e5fb"
+  },
+  "candidateFreeze": {
+    "path": "research/salaries/gap-fill-2026-11-02/school_native/candidate-freeze.json",
+    "sha256": "7c6f32098de50aebe06f7c4c9b812a9bc677a3b7c76872bb2a8bc8ffc72bafce"
+  },
+  "reports": 7,
+  "sourceCohorts": 14,
+  "rowsAdded": 5476,
+  "employeeRowsAdded": 5429,
+  "trusteeRowsAdded": 47,
+  "compiledRowsRemoved": 0,
+  "remainingPublicProcessingTasks": 0,
+  "dispositions": [
+    {
+      "leadId": "lead-003",
+      "status": "completed-with-published-source-qualifications",
+      "sourceIds": [
+        "gap-fill-school-native-sd34-2025-trustees",
+        "gap-fill-school-native-sd34-2025-employees"
+      ],
+      "officialRowsAdded": 1215,
+      "remainingPublicProcessingTasks": 0,
+      "issuerRequestSent": false,
+      "notes": "Literal source definitions, source control residuals, clipping and bounded OCR qualifications remain public; no inferred individual or compiled-copy deletion."
+    },
+    {
+      "leadId": "lead-008",
+      "status": "completed-verified-public-original",
+      "sourceIds": [
+        "gap-fill-school-native-sd40-2025-trustees",
+        "gap-fill-school-native-sd40-2025-employees"
+      ],
+      "officialRowsAdded": 489,
+      "remainingPublicProcessingTasks": 0,
+      "issuerRequestSent": false,
+      "notes": "Literal source definitions, source control residuals, clipping and bounded OCR qualifications remain public; no inferred individual or compiled-copy deletion."
+    },
+    {
+      "leadId": "lead-009",
+      "status": "completed-verified-public-original",
+      "sourceIds": [
+        "gap-fill-school-native-sd41-2025-trustees",
+        "gap-fill-school-native-sd41-2025-employees"
+      ],
+      "officialRowsAdded": 1778,
+      "remainingPublicProcessingTasks": 0,
+      "issuerRequestSent": false,
+      "notes": "Literal source definitions, source control residuals, clipping and bounded OCR qualifications remain public; no inferred individual or compiled-copy deletion."
+    },
+    {
+      "leadId": "lead-011",
+      "status": "completed-with-published-source-qualifications",
+      "sourceIds": [
+        "gap-fill-school-native-sd53-2025-trustees",
+        "gap-fill-school-native-sd53-2025-employees"
+      ],
+      "officialRowsAdded": 191,
+      "remainingPublicProcessingTasks": 0,
+      "issuerRequestSent": false,
+      "notes": "Literal source definitions, source control residuals, clipping and bounded OCR qualifications remain public; no inferred individual or compiled-copy deletion."
+    },
+    {
+      "leadId": "lead-013",
+      "status": "completed-verified-public-original",
+      "sourceIds": [
+        "gap-fill-school-native-sd57-2025-trustees",
+        "gap-fill-school-native-sd57-2025-employees"
+      ],
+      "officialRowsAdded": 848,
+      "remainingPublicProcessingTasks": 0,
+      "issuerRequestSent": false,
+      "notes": "Literal source definitions, source control residuals, clipping and bounded OCR qualifications remain public; no inferred individual or compiled-copy deletion."
+    },
+    {
+      "leadId": "lead-017",
+      "status": "completed-with-published-source-qualifications",
+      "sourceIds": [
+        "gap-fill-school-native-sd62-2025-trustees",
+        "gap-fill-school-native-sd62-2025-employees"
+      ],
+      "officialRowsAdded": 909,
+      "remainingPublicProcessingTasks": 0,
+      "issuerRequestSent": false,
+      "notes": "Literal source definitions, source control residuals, clipping and bounded OCR qualifications remain public; no inferred individual or compiled-copy deletion."
+    },
+    {
+      "leadId": "lead-025",
+      "status": "completed-with-published-source-qualifications",
+      "sourceIds": [
+        "gap-fill-school-native-sd84-2025-trustees",
+        "gap-fill-school-native-sd84-2025-employees"
+      ],
+      "officialRowsAdded": 46,
+      "remainingPublicProcessingTasks": 0,
+      "issuerRequestSent": false,
+      "notes": "Literal source definitions, source control residuals, clipping and bounded OCR qualifications remain public; no inferred individual or compiled-copy deletion."
+    }
+  ],
+  "sourcePayloads": [
+    {
+      "sourceId": "gap-fill-school-native-sd34-2025-trustees",
+      "sourceSha256": "fb1093eda4d6f80b1408b1892b72abde97de1cb52a5e34872172539abded5cf3",
+      "file": "sd34-2025-trustees.json.gzip",
+      "dataSha256": "8048135f3ce269d592bef8533343eb226d0e123f1ef2f4800b1a6984c522eca6",
+      "provenanceFile": "sd34-2025-trustees-evidence.json.gzip",
+      "provenanceSha256": "9773e155bf4caf8b5f3cfa1b0012c8fe1037e66be38b5837fa72207c45535945",
+      "rows": 7,
+      "sourceUrl": "https://www2.gov.bc.ca/assets/gov/education/administration/resource-management/school-district-financial-reporting/financial-information/sd34-sofi-2025.pdf",
+      "status": "verified"
+    },
+    {
+      "sourceId": "gap-fill-school-native-sd34-2025-employees",
+      "sourceSha256": "fb1093eda4d6f80b1408b1892b72abde97de1cb52a5e34872172539abded5cf3",
+      "file": "sd34-2025-employees.json.gzip",
+      "dataSha256": "8ab60d18900e4eaaebb122565174ff839ddadb2d2834b6b150484fcd4c7c807a",
+      "provenanceFile": "sd34-2025-employees-evidence.json.gzip",
+      "provenanceSha256": "e82cd78542adf413c69fd935a2d8f087177d1d3be0f5b14f61a95fb6e9a42b65",
+      "rows": 1208,
+      "sourceUrl": "https://www2.gov.bc.ca/assets/gov/education/administration/resource-management/school-district-financial-reporting/financial-information/sd34-sofi-2025.pdf",
+      "status": "verified"
+    },
+    {
+      "sourceId": "gap-fill-school-native-sd40-2025-trustees",
+      "sourceSha256": "474d92e3b084c522b39aa1b50702f9c7c7cd49a5e0ca6b4d3afa5ca0bcd85118",
+      "file": "sd40-2025-trustees.json.gzip",
+      "dataSha256": "07821029036bd1fd8336a162cac3a402779bda81a8284fce2c5d91e2ca64beb4",
+      "provenanceFile": "sd40-2025-trustees-evidence.json.gzip",
+      "provenanceSha256": "9978ddb08c39cef1ce8eb30b76b17f9b1afdc9fdcd183c068b51b52b162bb198",
+      "rows": 7,
+      "sourceUrl": "https://www2.gov.bc.ca/assets/gov/education/administration/resource-management/school-district-financial-reporting/financial-information/sd40-sofi-2025.pdf",
+      "status": "verified"
+    },
+    {
+      "sourceId": "gap-fill-school-native-sd40-2025-employees",
+      "sourceSha256": "474d92e3b084c522b39aa1b50702f9c7c7cd49a5e0ca6b4d3afa5ca0bcd85118",
+      "file": "sd40-2025-employees.json.gzip",
+      "dataSha256": "a6d0dfb1af4eb48cc80ff8556160abdda891c1ff0b09a56d6bcd41f18e0452b2",
+      "provenanceFile": "sd40-2025-employees-evidence.json.gzip",
+      "provenanceSha256": "44bcf4301f61de3fa12135c1fba01978de68947ac8befd4ae770c828d28650e0",
+      "rows": 482,
+      "sourceUrl": "https://www2.gov.bc.ca/assets/gov/education/administration/resource-management/school-district-financial-reporting/financial-information/sd40-sofi-2025.pdf",
+      "status": "verified"
+    },
+    {
+      "sourceId": "gap-fill-school-native-sd41-2025-trustees",
+      "sourceSha256": "eef59c3fe978c8319414319c59d74031b3256451eb817c37e7222d69e619aad9",
+      "file": "sd41-2025-trustees.json.gzip",
+      "dataSha256": "0a5f576ba8fa706c3c68a2aa927b8bff9ccabef878e464883cb25374f1ca49d6",
+      "provenanceFile": "sd41-2025-trustees-evidence.json.gzip",
+      "provenanceSha256": "8b7b766c491bca8f2746ab1e5d5515033ad862b0d9a76e56579b0234a7e1a70a",
+      "rows": 7,
+      "sourceUrl": "https://burnabyschools.ca/wp-content/uploads/2025/12/SOFI-2025-webcopy.pdf",
+      "status": "verified"
+    },
+    {
+      "sourceId": "gap-fill-school-native-sd41-2025-employees",
+      "sourceSha256": "eef59c3fe978c8319414319c59d74031b3256451eb817c37e7222d69e619aad9",
+      "file": "sd41-2025-employees.json.gzip",
+      "dataSha256": "2de1b7f2353e8f30579e7f7e88249de79a9782a243dcbf18c583edb30be4eeee",
+      "provenanceFile": "sd41-2025-employees-evidence.json.gzip",
+      "provenanceSha256": "897a585cb99a4830f4a9e4d315039b1754d3afe182fe2d156f82079bead7e31d",
+      "rows": 1771,
+      "sourceUrl": "https://burnabyschools.ca/wp-content/uploads/2025/12/SOFI-2025-webcopy.pdf",
+      "status": "verified"
+    },
+    {
+      "sourceId": "gap-fill-school-native-sd53-2025-trustees",
+      "sourceSha256": "20814186083c6161a86069ae98950253f40e920585be951d03ebe470c17b39a1",
+      "file": "sd53-2025-trustees.json.gzip",
+      "dataSha256": "fe82be962a04b2c98fc69710a870ec1297305f0591e1aeee5bcb839ba252572b",
+      "provenanceFile": "sd53-2025-trustees-evidence.json.gzip",
+      "provenanceSha256": "8742858ff4c8ce534f994d0293265b51fee2e03cb53452743972c36dab78fd11",
+      "rows": 7,
+      "sourceUrl": "https://www.sd53.bc.ca/documents/7b512f7a-1680-4d32-b68a-c4b3bfc58a86/Signed-SOFI-Report_Redacted.pdf?fingerprint=ppb20260428202658",
+      "status": "verified"
+    },
+    {
+      "sourceId": "gap-fill-school-native-sd53-2025-employees",
+      "sourceSha256": "20814186083c6161a86069ae98950253f40e920585be951d03ebe470c17b39a1",
+      "file": "sd53-2025-employees.json.gzip",
+      "dataSha256": "6801a37c5f7680e90c4c107ee9bb6386d79f3b780eeacebe13d60202492b551f",
+      "provenanceFile": "sd53-2025-employees-evidence.json.gzip",
+      "provenanceSha256": "b602f85ac3d1dd0e253d624bfb48b6a6c4db0d4e7a183ec8ec476908847c786a",
+      "rows": 184,
+      "sourceUrl": "https://www.sd53.bc.ca/documents/7b512f7a-1680-4d32-b68a-c4b3bfc58a86/Signed-SOFI-Report_Redacted.pdf?fingerprint=ppb20260428202658",
+      "status": "verified"
+    },
+    {
+      "sourceId": "gap-fill-school-native-sd57-2025-trustees",
+      "sourceSha256": "437f2b156d5b9567285761998f8cdbab65ac3d47454f70131888881e27115dc0",
+      "file": "sd57-2025-trustees.json.gzip",
+      "dataSha256": "4621c7068bcbb7eeaeedc026ef59000d137a098c3d8ccf08316ae5a14863a619",
+      "provenanceFile": "sd57-2025-trustees-evidence.json.gzip",
+      "provenanceSha256": "1d9090f764d255d05255d69b3ba635727e3d5184f68da30b03a0f51814e1d986",
+      "rows": 7,
+      "sourceUrl": "https://www2.gov.bc.ca/assets/gov/education/administration/resource-management/school-district-financial-reporting/financial-information/sd57-sofi-2025.pdf",
+      "status": "verified"
+    },
+    {
+      "sourceId": "gap-fill-school-native-sd57-2025-employees",
+      "sourceSha256": "437f2b156d5b9567285761998f8cdbab65ac3d47454f70131888881e27115dc0",
+      "file": "sd57-2025-employees.json.gzip",
+      "dataSha256": "10634e3d941a2667ae2271cc1346bb73f40280d96db4e69efce7e52c35125d8b",
+      "provenanceFile": "sd57-2025-employees-evidence.json.gzip",
+      "provenanceSha256": "cd26eb2e83e40ec3d3df70d6902b7f2efd981f38a42fd0188ed4a4e8e4c9e47d",
+      "rows": 841,
+      "sourceUrl": "https://www2.gov.bc.ca/assets/gov/education/administration/resource-management/school-district-financial-reporting/financial-information/sd57-sofi-2025.pdf",
+      "status": "verified"
+    },
+    {
+      "sourceId": "gap-fill-school-native-sd62-2025-trustees",
+      "sourceSha256": "da8f772c4e019698956624dfb6d055575ea0f5c8c253516ffe707f334600bbbd",
+      "file": "sd62-2025-trustees.json.gzip",
+      "dataSha256": "fe4928416f60298734f01526daf169caea02b31fc9aa5d43cd5c4cc9adc01821",
+      "provenanceFile": "sd62-2025-trustees-evidence.json.gzip",
+      "provenanceSha256": "47f75462c1229f3e602b6d1ccdf173b6a9dfb30d1518a29c83de437c6ac0c847",
+      "rows": 7,
+      "sourceUrl": "https://www2.gov.bc.ca/assets/gov/education/administration/resource-management/school-district-financial-reporting/financial-information/sd62-sofi-2025.pdf",
+      "status": "verified"
+    },
+    {
+      "sourceId": "gap-fill-school-native-sd62-2025-employees",
+      "sourceSha256": "da8f772c4e019698956624dfb6d055575ea0f5c8c253516ffe707f334600bbbd",
+      "file": "sd62-2025-employees.json.gzip",
+      "dataSha256": "9cf8ee401c553dc7bf24b6a25bebc554c486c43da9265cb3f1b157eea521e10a",
+      "provenanceFile": "sd62-2025-employees-evidence.json.gzip",
+      "provenanceSha256": "e135ef0ec9f46f5bd879340fa11ac617b1f0046d7eea0e50e0fb4189451de11d",
+      "rows": 902,
+      "sourceUrl": "https://www2.gov.bc.ca/assets/gov/education/administration/resource-management/school-district-financial-reporting/financial-information/sd62-sofi-2025.pdf",
+      "status": "verified"
+    },
+    {
+      "sourceId": "gap-fill-school-native-sd84-2025-trustees",
+      "sourceSha256": "bb341d3b8ba62c0aaf314d9d66d57422c2cac8d0f1414225c4846580b4371d2e",
+      "file": "sd84-2025-trustees.json.gzip",
+      "dataSha256": "8d89a1b09575ef65fcf0033c37933c23a24ca564255645a6e1489b515b5848bd",
+      "provenanceFile": "sd84-2025-trustees-evidence.json.gzip",
+      "provenanceSha256": "dbeb688ab67d4999567cb80386d613723f8e82485d9f010d2c4293b5b4d63197",
+      "rows": 5,
+      "sourceUrl": "https://sd84.bc.ca/wp-content/uploads/2025/12/SOFI-2024-2025-SOFI-signed_Redacted.pdf",
+      "status": "verified"
+    },
+    {
+      "sourceId": "gap-fill-school-native-sd84-2025-employees",
+      "sourceSha256": "bb341d3b8ba62c0aaf314d9d66d57422c2cac8d0f1414225c4846580b4371d2e",
+      "file": "sd84-2025-employees.json.gzip",
+      "dataSha256": "de62d94180a515380d162569cdab7501b259af39063a9a67e13a316a0d98dff4",
+      "provenanceFile": "sd84-2025-employees-evidence.json.gzip",
+      "provenanceSha256": "a4677115329d4b460de1d6e75ab8f4cac2dd1b7f91ce1532505faa2bbe9b7ec8",
+      "rows": 41,
+      "sourceUrl": "https://sd84.bc.ca/wp-content/uploads/2025/12/SOFI-2024-2025-SOFI-signed_Redacted.pdf",
+      "status": "verified"
+    }
+  ],
+  "reviewSelection": {
+    "path": "research/salaries/gap-fill-2026-11-02/school_native/peer-selection.json",
+    "sha256": "e53c7e8e144c7de07daea57d6550a655f5f2c012b5704558f268c02c99c8b35e"
+  },
+  "verificationCommands": [
+    "python3 scripts/gap_school_native_build.py --check",
+    "python3 scripts/gap_school_native_coverage.py",
+    "python3 -m unittest discover -s scripts -p test_gap_school_native.py",
+    "python3 scripts/gap_school_native_handoff.py --check"
+  ],
+  "regressionTests": 16,
+  "sourceProcessingQualifications": [
+    "SD53/84 originally mislabeled native leads but salary tables need OCR; complete two-reader processing and bounded source image reviews are preserved.",
+    "SD41 district original used instead of Ministry hidden OCR; source representations and differences preserved.",
+    "SD34tenclipped positions retain only exact independently adopted visible prefixes.",
+    "All source residuals remain literal and qualified; no cause or balancing value inferred.",
+    "All prior compiled observations retained without identity or period equivalence."
+  ]
+}

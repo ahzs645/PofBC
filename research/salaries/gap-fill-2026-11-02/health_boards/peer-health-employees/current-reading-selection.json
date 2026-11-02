@@ -1,0 +1,39 @@
+{
+  "schema": "independent-health-employee-explicit-reading-selection-v1",
+  "firstTranscriptIndex": {
+    "path": "research/salaries/gap-fill-2026-11-02/health_boards/peer-health-employees/first-transcript-index.json",
+    "sha256": "539fec65b1c7095b4b656ae8dec12f10ef1c30b12a979a35970f6898b1c0662c"
+  },
+  "additiveReceipts": [
+    {
+      "path": "research/salaries/gap-fill-2026-11-02/health_boards/peer-health-employees/additive-reread-001.json",
+      "sha256": "c414982b6cc108452c38f6d3dd38f928e319478b6bcffee08ea31673b547aab7"
+    }
+  ],
+  "supersededFields": [
+    {
+      "id": "health-reader-001-011",
+      "sourceSha256": "4f2b52f9505b3271197eac5d4d9e060129cd47824090cca7a35d74260ef5b55d",
+      "field": "remuneration",
+      "firstValue": 83564,
+      "selectedFreshLiteral": 88564
+    },
+    {
+      "id": "health-reader-001-051",
+      "sourceSha256": "4f2b52f9505b3271197eac5d4d9e060129cd47824090cca7a35d74260ef5b55d",
+      "field": "remuneration",
+      "firstValue": 14745,
+      "selectedFreshLiteral": 114745
+    },
+    {
+      "id": "health-reader-001-062",
+      "sourceSha256": "4f2b52f9505b3271197eac5d4d9e060129cd47824090cca7a35d74260ef5b55d",
+      "field": "remuneration",
+      "firstValue": 82551,
+      "selectedFreshLiteral": 82651
+    }
+  ],
+  "allOtherFirstTranscriptFieldsRemainSelected": true,
+  "noLatestFileFallback": true,
+  "noOutreach": true
+}

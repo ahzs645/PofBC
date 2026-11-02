@@ -1,0 +1,28 @@
+#!/usr/bin/env python3
+"""Source-image municipal transcripts; original literals remain separate from OCR."""
+from pathlib import Path
+import json
+ROOT=Path(__file__).resolve().parents[1];AREA=ROOT/'research/salaries/gap-fill-2026-11-02/municipal'
+def entry(sha,year,page,scope,rows,control,*,components=False,notes=None,unknownReason=None):
+ fields=['name','position','remunerationComponent']+(['taxableBenefits'] if components else [])+['expenses','expenseInclusiveTotal']
+ return {'sourceShaPrefix':sha,'year':str(year),'physicalPage':page,'scope':scope,'authorActualOriginalImageReview':True,'rowFields':fields,'rows':[dict(zip(fields,r)) for r in rows],'printedControls':control,'payIsSumOfRemunerationAndTaxableBenefits':components,'sourceNotes':notes or [],'unknownExpenseMeaning':unknownReason or 'Original blank or dash expense cells remain unknown; they are not imputed zero.'}
+def initial():
+ out=[]
+ out.append(entry('83056ad7d4ca',2010,40,'elected-officials',[
+ ['Mr. Greg Granstrom','Mayor','11284.00','3059.63',None],['Mr. Laurie Charlton','Councillor','5753.80','2501.75',None],['Ms. Jill Spearn','Councillor','5753.80','3260.16',None],['Mr. Andy Stradling','Councillor','5753.80','0.00',None],['Ms. Kathy Moore','Councillor','5753.80','1613.80',None],['Ms. Hanne Smith','Councillor','5753.80','255.69',None],['Ms. Kathy Wallace','Councillor','5753.80','2953.56',None]
+ ],{'remunerationComponent':'45806.80','expenses':'13644.59'},notes=['The schedule explicitly labels ELECTED OFFICIALS2010. Memorandum date May16,2011 is the later submission date.']))
+ out.append(entry('83056ad7d4ca',2010,41,'employee-remuneration',[
+ ['Victor Kumar',None,'150004.40','6988.97','156993.37'],['Darrin Albo',None,'81819.40','514.60','82334.00'],['Mike Maturo',None,'89535.76','4322.10','93857.86'],['Debra Timm',None,'78684.06','5326.85','84010.91'],['Mike Thomas',None,'96885.15','1449.34','98334.49'],['Tracey Butler',None,'81801.28','6028.14','87829.42']
+ ],{'allEmployees':{'remunerationComponent':'1983457.56','expenses':'37766.10','expenseInclusiveTotal':'2021223.66'},'unnamedEmployees':{'remunerationComponent':'1404727.54','expenses':'13136.10','expenseInclusiveTotal':'1417863.64'}},notes=['The schedule expressly says For the year2010. No positions are printed. All six named observations are retained; aggregate unnamed payroll is not an individual record.']))
+ out.append(entry('f779bc15d6c5',2011,40,'elected-officials',[
+ ['Mr. Greg Granstrom','Mayor','11530.39','4312.01',None],['Mr. Laurie Charlton','Councillor','5427.36','2041.05',None],['Ms. Jill Spearn','Councillor','5879.72','1670.46',None],['Mr. Andy Stradling','Councillor','5427.36','0.00',None],['Ms. Kathy Moore','Councillor','5879.72','0.00',None],['Ms. Hanne Smith','Councillor','5427.36','0.00',None],['Ms. Kathy Wallace','Councillor','5879.72','2989.72',None],['Mr. Tim Thatcher','Councillor','452.36','0.00',None],['Ms. Jody Blomme','Councillor','452.36','0.00',None],['Mr. Cary Fisher','Councillor','452.36','0.00',None]
+ ],{'remunerationComponent':'46808.71','expenses':'11013.24'},notes=['The complete named council table explicitly labels ELECTED OFFICIALS2011; it includes outgoing and incoming councillor observations. The downloaded44-page report omits a named employee remuneration schedule; no claim is made that employee coverage is complete.']))
+ out.append(entry('963a9c8569e7',2013,43,'elected-officials',[
+ ['Mr. Greg Granstrom','Mayor','11797.23','5500.90',None],['Ms. Jill Spearn','Councillor','6016.14','1571.48',None],['Ms. Kathy Moore','Councillor','6016.14','948.62',None],['Ms. Kathy Wallace','Councillor','6016.14','1304.65',None],['Mr. Tim Thatcher','Councillor','6016.14','Nil',None],['Ms. Jody Blomme','Councillor','6016.14','4777.44',None],['Mr. Cary Fisher','Councillor','6016.14','Nil',None]
+ ],{'remunerationComponent':'47894.07','expenses':'14103.09'},notes=['Literal schedule heading ELECTED OFFICIALS2013 establishes the accepted label; its memorandum is dated June20,2013. Archive labels2013 and2014 retrieve this same exact original, so it supplies no separate2014 record. The word Nil is an explicit statement of no expense, preserved as numericzero with the literal token in evidence.']))
+ out.append(entry('963a9c8569e7',2013,45,'employee-remuneration',[
+ ['Cecile Arnott',None,'137112.37','3386.62','140498.99'],['Darrin Albo',None,'123184.61','5359.90','128544.51'],['Tracey Butler',None,'131919.38','3914.99','135834.37'],['Tony Jenkins',None,'88877.79','90.00','89967.79'],['Parry Lafond',None,'77481.12','4681.96','82163.08'],['Mike Maturo',None,'110359.77','2455.72','112815.49']
+ ],{'allEmployees':{'remunerationComponent':'2169510.88','expenses':'38052.58','expenseInclusiveTotal':'2207563.46'},'unnamedEmployees':{'remunerationComponent':'1500575.84','expenses':'18163.39','expenseInclusiveTotal':'1518739.23'}},notes=['Literal schedule says For the year2013 although its memorandum is dated May12,2013; both original date and reporting-year text remain disclosed without claiming2014. Tony Jenkins prints88877.79 remuneration and90.00 expenses, but a separate89967.79 expense-inclusive Total (1000higher than the two components). The source total is retained in evidence; no amount is changed to balance. Cecile Arnott carries a source footnote that an employee reimburses the municipality15000 for benefit participation; no15000 amount is added or subtracted from the disclosed payment.']))
+ return out
+if __name__=='__main__':
+ p=AREA/'transcripts-initial.json';p.write_text(json.dumps({'status':'candidate-awaiting-independent-peer','scope':'Complete actual-original page image author transcripts, with raw OCR kept separate','sections':initial()},ensure_ascii=False,indent=2)+'\n');print(p)

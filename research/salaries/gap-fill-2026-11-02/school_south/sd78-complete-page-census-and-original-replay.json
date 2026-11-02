@@ -1,0 +1,130 @@
+{
+  "district": 78,
+  "sourceSha256": "35e3dd525d788dd8ecc7e11c01dad53d9ae11ba1a93f5437ab7bd9f9af52517f",
+  "method": "Sequential fresh complete original300dpi raster replay for every salarypage, plus each independent reader rerun over the whole page without its table Y window. All monetary candidate rows outside selected windows explicitly classified. Control-label recognition stays separate from named payment rows. Agreement and this finite census do not establish infallibility.",
+  "pages": [
+    {
+      "physicalPage": 52,
+      "originalCompletePagePngSha256": "3f7bfc571b09411a0bac69bbdba917cd1774a69574d0c9afef952d039e484942",
+      "rawProofSha256": "18367d18f7a0d946657d62585036b485aff40f0f0a23018c5dc27fddcc48515c",
+      "readers": [
+        {
+          "reader": "tesseractRows",
+          "selectedRows": 7,
+          "fullPageCandidateRows": 7,
+          "outsideMoneyRows": 0
+        },
+        {
+          "reader": "paddleRows",
+          "selectedRows": 7,
+          "fullPageCandidateRows": 8,
+          "outsideMoneyRows": 0
+        }
+      ],
+      "outsideWindowMoneyRowDecisions": []
+    },
+    {
+      "physicalPage": 53,
+      "originalCompletePagePngSha256": "607297b9e9746d6509552161f849103c4c1aea729a0205f7023b22cd4614bec2",
+      "rawProofSha256": "0ec5b3f5c9cb4d00aff2a877cb40e025fa4094d2c2b58329a1d157198ffebce9",
+      "readers": [
+        {
+          "reader": "tesseractRows",
+          "selectedRows": 36,
+          "fullPageCandidateRows": 37,
+          "outsideMoneyRows": 0
+        },
+        {
+          "reader": "paddleRows",
+          "selectedRows": 36,
+          "fullPageCandidateRows": 36,
+          "outsideMoneyRows": 0
+        }
+      ],
+      "outsideWindowMoneyRowDecisions": []
+    },
+    {
+      "physicalPage": 54,
+      "originalCompletePagePngSha256": "d9450e6f7452a1c092939a7cc231807fd33e7d0bb78a8e195f6fb2d3af61bbff",
+      "rawProofSha256": "97fb0a9b09af2fe8e70e5dfaebfaf697be04f835368358f78ee85187b004003d",
+      "readers": [
+        {
+          "reader": "tesseractRows",
+          "selectedRows": 43,
+          "fullPageCandidateRows": 43,
+          "outsideMoneyRows": 0
+        },
+        {
+          "reader": "paddleRows",
+          "selectedRows": 43,
+          "fullPageCandidateRows": 43,
+          "outsideMoneyRows": 0
+        }
+      ],
+      "outsideWindowMoneyRowDecisions": []
+    },
+    {
+      "physicalPage": 55,
+      "originalCompletePagePngSha256": "8b44525f3d3038afb8ce8b3cd27c698158230714939851986e747cde5ebf007d",
+      "rawProofSha256": "b1d1724ce2822b743e3c91948193ab73faf10023959c5704c6a8fe770087c216",
+      "readers": [
+        {
+          "reader": "tesseractRows",
+          "selectedRows": 43,
+          "fullPageCandidateRows": 43,
+          "outsideMoneyRows": 0
+        },
+        {
+          "reader": "paddleRows",
+          "selectedRows": 43,
+          "fullPageCandidateRows": 44,
+          "outsideMoneyRows": 0
+        }
+      ],
+      "outsideWindowMoneyRowDecisions": []
+    },
+    {
+      "physicalPage": 56,
+      "originalCompletePagePngSha256": "cf37472f68a45612992367f18699f421674722d07397cab6c3a887538a9f2fa1",
+      "rawProofSha256": "7169fe0af832748e46e4ae265773b4ee574f36c05313ebf72280418a1fa3afa7",
+      "readers": [
+        {
+          "reader": "tesseractRows",
+          "selectedRows": 15,
+          "fullPageCandidateRows": 21,
+          "outsideMoneyRows": 1
+        },
+        {
+          "reader": "paddleRows",
+          "selectedRows": 15,
+          "fullPageCandidateRows": 19,
+          "outsideMoneyRows": 1
+        }
+      ],
+      "outsideWindowMoneyRowDecisions": [
+        {
+          "reader": "tesseractRows",
+          "physicalPage": 56,
+          "sourceY300dpi": 1658.15,
+          "name": "Paid to each employee was $75,000.00 or less:",
+          "remuneration": "9513201.61",
+          "expenses": "74425.44",
+          "disposition": "source-labelled-below-threshold-aggregate-excluded"
+        },
+        {
+          "reader": "paddleRows",
+          "physicalPage": 56,
+          "sourceY300dpi": 1657.5,
+          "name": "Paid to each employee was $75,000.00 or less:",
+          "remuneration": "9513201.61",
+          "expenses": "74425.44",
+          "disposition": "source-labelled-below-threshold-aggregate-excluded"
+        }
+      ]
+    }
+  ],
+  "unexplainedMoneyRows": [],
+  "pass": true,
+  "sixRecoveredRowsHistory": "SD78 four payment rows and SD79 two payment rows were found outside previous v7 windows, recovered from full original pages, and retained in v9/v12. Earlier candidates stay preserved.",
+  "noOutreach": true
+}

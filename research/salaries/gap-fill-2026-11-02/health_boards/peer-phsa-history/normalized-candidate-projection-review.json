@@ -1,0 +1,356 @@
+{
+  "accepted": true,
+  "scope": "Independent read-only exact final normalized projection of two previously source-reviewed PHSA scans; no new source acceptance or producer mutation.",
+  "manifest": {
+    "path": "research/salaries/gap-fill-phsa-history/sources-candidate.json",
+    "sha256": "069f8c7b8add887dba2d2bccbe33b8327b0b332308b7a7f6dd994decfcc26b7e"
+  },
+  "originalSourcePeerAcceptance": {
+    "path": "research/salaries/gap-fill-2026-11-02/health_boards/peer-phsa-history/independent-first-two-scans-source-review.json",
+    "sha256": "5e2c6f79a811df61dd3c96020e883443a71ba379b4fc3d5329d82e9e4d4d0767"
+  },
+  "rootNineSourceAcceptance": {
+    "path": "research/salaries/gap-fill-2026-11-02/reviews/root-nine-phsa-history-source-acceptance.json",
+    "sha256": "0ac2f26bd907c1d46fd93fed52a35ab4ccd4d7e895bb98a47e2c6b5fadf7481a"
+  },
+  "sources": [
+    {
+      "sourceId": "gap-phsa-history-phsa-2009-10",
+      "sourceSha256": "44b3d86ed71674e42ce6a3983642befab8f5cf5399fbf6cc17b38b7cf2d442c6",
+      "selected": {
+        "path": "research/salaries/gap-fill-2026-11-02/phsa_history/phsa-2009-10-scan-selected-v4.json.gzip",
+        "sha256": "0b06d193c0e484e9e28edc541bdde447ede83d8d53696ba6db146c87dff420b0"
+      },
+      "data": {
+        "path": "research/salaries/gap-fill-phsa-history/phsa-2009-10-employees.json.gzip",
+        "sha256": "52704f8a80e93b45d67426b4e95f27630330d11c355c6bd48be2b5dd00bf0568"
+      },
+      "provenance": {
+        "path": "research/salaries/gap-fill-phsa-history/phsa-2009-10-provenance.json.gzip",
+        "sha256": "19e0672be978dbb9a711786650dde1e75e78bb6a2adb830fec768359fbaec1d2"
+      },
+      "sourceMetadata": {
+        "id": "gap-phsa-history-phsa-2009-10",
+        "employerSlug": "provincial-health-services-authority",
+        "employerName": "Provincial Health Services Authority",
+        "sector": "Health authorities",
+        "year": "2009/10",
+        "periodType": "fiscal",
+        "periodStart": "2009-04-01",
+        "periodEnd": "2010-03-31",
+        "periodEvidence": "Actual internally printed March 31 year-end on the original salary schedule, independently image-reviewed. April 1 is the conventional twelve-month fiscal start; catalogue dates are discovery evidence only.",
+        "title": "Provincial Health Services Authority employee remuneration 2009/10 (official Legislative Library copy)",
+        "sourceUrl": "https://digitalcollectionsrepository.llbc.leg.bc.ca/server/api/core/bitstreams/9abd3f14-9d2e-46b9-afb6-ab9ed9f5097e/content",
+        "indexUrl": "https://digitalcollections.llbc.leg.bc.ca/handle/123456789/304669",
+        "sha256": "44b3d86ed71674e42ce6a3983642befab8f5cf5399fbf6cc17b38b7cf2d442c6",
+        "pdfBytes": 10065905,
+        "file": "phsa-2009-10-employees.json.gzip",
+        "dataSha256": "52704f8a80e93b45d67426b4e95f27630330d11c355c6bd48be2b5dd00bf0568",
+        "rowCount": 1800,
+        "status": "source-reviewed-awaiting-root-adoption",
+        "sourceKind": "official",
+        "category": "employee-remuneration",
+        "scope": "employee-remuneration",
+        "currency": "CAD",
+        "threshold": 75000,
+        "thresholdComparison": "as-published",
+        "completeEmployeeSchedule": true,
+        "retainCompiledPartition": true,
+        "notes": [
+          "No job titles are published in this salary schedule; position remains null.",
+          "Disclosed names are literal source strings, not resolved identities. Every printed observation is retained in source order, including repeats.",
+          "Remuneration covers physical payments to or on behalf of the employee, including salaries/wages, taxable benefits, bonuses, stipends and applicable on-call/sessionals. Expenses may be direct or through third parties."
+        ],
+        "publicWarning": "Official Legislative Library archival download includes an added catalogue cover at physical page 1; citations identify this delivered copy. The delivered SHA-256 is recorded separately from the catalogue stored-bitstream checksum and byte count; no byte identity is claimed. These are threshold payment disclosures, not annual base salary rates or a complete workforce roster. Published remuneration includes actual payments and taxable compensation; separate expenses may be paid directly or through third parties. Printed expense dashes remain unknown, explicit numeric zero remains zero, and no missing value is supplied from a total. Literal named observations differ from the printed named controls by 21 dollars remuneration and -36912 dollars known expenses. No cell is adjusted and no cause is established. The definition-page narrative says March 31, 2009, conflicting with its own heading and the repeated salary-table year-end March 31, 2010. This cohort follows the actual repeated salary-table period; the contradictory narrative is retained without an assumed cause. Its 1,800 employee narrative count is not adopted as a 2010 table count control. Existing compiled observations are retained and may overlap this official schedule; no complete-copy, reporting-period or identity equivalence is assumed.",
+        "provenanceFile": "phsa-2009-10-provenance.json.gzip",
+        "provenanceSha256": "19e0672be978dbb9a711786650dde1e75e78bb6a2adb830fec768359fbaec1d2",
+        "validation": {
+          "candidateOnly": true,
+          "completeEmployeeSchedule": true,
+          "completePrintedNamedScope": true,
+          "compiledPartitionRetained": true,
+          "compiledPartitionRetentionReason": "No separate complete-copy comparison proves that this official cohort replaces a retained compiled partition. Preserve all compiled observations.",
+          "actualNamedObservations": 1800,
+          "printedEmployeeNarrativeCount": null,
+          "printedNarrativeCountIsReportingPeriodControl": false,
+          "conflictingNarrativeCount": 1800,
+          "conflictingNarrativeCountPeriodEnd": "2009-03-31",
+          "literalRemunerationSum": "217818851",
+          "literalKnownExpenseSum": "4396581",
+          "printedNamedControls": {
+            "remuneration": 217818830,
+            "expenses": 4433493,
+            "physicalPage": 53,
+            "label": "Printed named-employee remuneration/expense totals"
+          },
+          "literalNamedControlResiduals": [
+            "21",
+            "-36912"
+          ],
+          "residualCauseEstablished": false,
+          "allKnownSalaryAmountsRemainLiteral": true,
+          "initialAndSupersededReaderEvidenceRetained": true,
+          "independentPeerReviews": [
+            {
+              "path": "research/salaries/gap-fill-2026-11-02/health_boards/peer-phsa-history/independent-first-two-scans-source-review.json",
+              "sha256": "5e2c6f79a811df61dd3c96020e883443a71ba379b4fc3d5329d82e9e4d4d0767"
+            }
+          ],
+          "sourceContextAcceptance": {
+            "path": "research/salaries/gap-fill-2026-11-02/reviews/phsa-context-root/root-nine-source-context-acceptance.json",
+            "sha256": "e486351a8851756d83dfcea2a3a1f40968b49bc69513209c7bb5d8347018dda9"
+          },
+          "sourceSelection": {
+            "path": "research/salaries/gap-fill-2026-11-02/phsa_history/phsa-2009-10-scan-selected-v4.json.gzip",
+            "sha256": "0b06d193c0e484e9e28edc541bdde447ede83d8d53696ba6db146c87dff420b0"
+          },
+          "fullOriginalPageCensusEvidence": [
+            {
+              "path": "research/salaries/gap-fill-2026-11-02/health_boards/peer-phsa-history/independent-first-two-scans-source-review.json",
+              "sha256": "5e2c6f79a811df61dd3c96020e883443a71ba379b4fc3d5329d82e9e4d4d0767"
+            }
+          ],
+          "pendingGates": [
+            "root final normalized reconstruction and adoption",
+            "producer freeze"
+          ]
+        }
+      },
+      "everyNormalizedRowReconstructedExactly": true,
+      "everyRowProvenanceReconstructedExactly": true,
+      "allSourceProvenanceInputPinsMatchExactSelectedV4": true,
+      "sourceOrderAndMultiplicityPreserved": true,
+      "nullNumericAndDigitCharactersPreserved": true,
+      "positionAlwaysNull": true,
+      "literalTotals": {
+        "remuneration": 217818851,
+        "knownExpenses": 4396581
+      },
+      "nullExpenseCount": 632,
+      "explicitZeroExpenseCount": 0,
+      "namedRowsByPhysicalPage": {
+        "3": 35,
+        "4": 36,
+        "5": 36,
+        "6": 36,
+        "7": 36,
+        "8": 36,
+        "9": 36,
+        "10": 36,
+        "11": 36,
+        "12": 36,
+        "13": 36,
+        "14": 36,
+        "15": 36,
+        "16": 36,
+        "17": 36,
+        "18": 36,
+        "19": 36,
+        "20": 36,
+        "21": 36,
+        "22": 36,
+        "23": 36,
+        "24": 36,
+        "25": 36,
+        "26": 36,
+        "27": 36,
+        "28": 36,
+        "29": 36,
+        "30": 36,
+        "31": 36,
+        "32": 36,
+        "33": 36,
+        "34": 36,
+        "35": 36,
+        "36": 36,
+        "37": 36,
+        "38": 36,
+        "39": 36,
+        "40": 36,
+        "41": 36,
+        "42": 36,
+        "43": 36,
+        "44": 36,
+        "45": 36,
+        "46": 36,
+        "47": 36,
+        "48": 36,
+        "49": 36,
+        "50": 36,
+        "51": 36,
+        "52": 36,
+        "53": 1
+      },
+      "financialResidualsPeriodNarrativeAndCompiledRetentionQualificationsPresent": true
+    },
+    {
+      "sourceId": "gap-phsa-history-phsa-2010-11",
+      "sourceSha256": "085883ae7c1375807eaaf57c0e8f19ffd415bb42176efe4cb9325f7362f6fc4d",
+      "selected": {
+        "path": "research/salaries/gap-fill-2026-11-02/phsa_history/phsa-2010-11-scan-selected-v4.json.gzip",
+        "sha256": "e302c794676f87a3ee70daf693a780bb765f99ad8a30abcd764fcd72742703c5"
+      },
+      "data": {
+        "path": "research/salaries/gap-fill-phsa-history/phsa-2010-11-employees.json.gzip",
+        "sha256": "0e0253c1e831d6f5871e1c160ac661e2344fbc66d5a48fa6aeb10f8e816ef1d8"
+      },
+      "provenance": {
+        "path": "research/salaries/gap-fill-phsa-history/phsa-2010-11-provenance.json.gzip",
+        "sha256": "09d6e37191aa0ce932f88722d615a99b262924c7d4bf631faf7fe2ae6b237920"
+      },
+      "sourceMetadata": {
+        "id": "gap-phsa-history-phsa-2010-11",
+        "employerSlug": "provincial-health-services-authority",
+        "employerName": "Provincial Health Services Authority",
+        "sector": "Health authorities",
+        "year": "2010/11",
+        "periodType": "fiscal",
+        "periodStart": "2010-04-01",
+        "periodEnd": "2011-03-31",
+        "periodEvidence": "Actual internally printed March 31 year-end on the original salary schedule, independently image-reviewed. April 1 is the conventional twelve-month fiscal start; catalogue dates are discovery evidence only.",
+        "title": "Provincial Health Services Authority employee remuneration 2010/11 (official Legislative Library copy)",
+        "sourceUrl": "https://digitalcollectionsrepository.llbc.leg.bc.ca/server/api/core/bitstreams/5d68c13a-1e19-4eff-80bf-bd4d3cb5db9c/content",
+        "indexUrl": "https://digitalcollections.llbc.leg.bc.ca/handle/123456789/304723",
+        "sha256": "085883ae7c1375807eaaf57c0e8f19ffd415bb42176efe4cb9325f7362f6fc4d",
+        "pdfBytes": 8891635,
+        "file": "phsa-2010-11-employees.json.gzip",
+        "dataSha256": "0e0253c1e831d6f5871e1c160ac661e2344fbc66d5a48fa6aeb10f8e816ef1d8",
+        "rowCount": 2004,
+        "status": "source-reviewed-awaiting-root-adoption",
+        "sourceKind": "official",
+        "category": "employee-remuneration",
+        "scope": "employee-remuneration",
+        "currency": "CAD",
+        "threshold": 75000,
+        "thresholdComparison": "as-published",
+        "completeEmployeeSchedule": true,
+        "retainCompiledPartition": true,
+        "notes": [
+          "No job titles are published in this salary schedule; position remains null.",
+          "Disclosed names are literal source strings, not resolved identities. Every printed observation is retained in source order, including repeats.",
+          "Remuneration covers physical payments to or on behalf of the employee, including salaries/wages, taxable benefits, bonuses, stipends and applicable on-call/sessionals. Expenses may be direct or through third parties."
+        ],
+        "publicWarning": "Official Legislative Library archival download includes an added catalogue cover at physical page 1; citations identify this delivered copy. The delivered SHA-256 is recorded separately from the catalogue stored-bitstream checksum and byte count; no byte identity is claimed. These are threshold payment disclosures, not annual base salary rates or a complete workforce roster. Published remuneration includes actual payments and taxable compensation; separate expenses may be paid directly or through third parties. Printed expense dashes remain unknown, explicit numeric zero remains zero, and no missing value is supplied from a total. Literal named observations differ from the printed named controls by 10 dollars remuneration and 35 dollars known expenses. No cell is adjusted and no cause is established. Existing compiled observations are retained and may overlap this official schedule; no complete-copy, reporting-period or identity equivalence is assumed.",
+        "provenanceFile": "phsa-2010-11-provenance.json.gzip",
+        "provenanceSha256": "09d6e37191aa0ce932f88722d615a99b262924c7d4bf631faf7fe2ae6b237920",
+        "validation": {
+          "candidateOnly": true,
+          "completeEmployeeSchedule": true,
+          "completePrintedNamedScope": true,
+          "compiledPartitionRetained": true,
+          "compiledPartitionRetentionReason": "No separate complete-copy comparison proves that this official cohort replaces a retained compiled partition. Preserve all compiled observations.",
+          "actualNamedObservations": 2004,
+          "printedEmployeeNarrativeCount": 2004,
+          "printedNarrativeCountIsReportingPeriodControl": true,
+          "conflictingNarrativeCount": null,
+          "conflictingNarrativeCountPeriodEnd": null,
+          "literalRemunerationSum": "237473291",
+          "literalKnownExpenseSum": "5486077",
+          "printedNamedControls": {
+            "remuneration": 237473281,
+            "expenses": 5486042,
+            "physicalPage": 52,
+            "label": "Printed named-employee remuneration/expense totals"
+          },
+          "literalNamedControlResiduals": [
+            "10",
+            "35"
+          ],
+          "residualCauseEstablished": false,
+          "allKnownSalaryAmountsRemainLiteral": true,
+          "initialAndSupersededReaderEvidenceRetained": true,
+          "independentPeerReviews": [
+            {
+              "path": "research/salaries/gap-fill-2026-11-02/health_boards/peer-phsa-history/independent-first-two-scans-source-review.json",
+              "sha256": "5e2c6f79a811df61dd3c96020e883443a71ba379b4fc3d5329d82e9e4d4d0767"
+            }
+          ],
+          "sourceContextAcceptance": {
+            "path": "research/salaries/gap-fill-2026-11-02/reviews/phsa-context-root/root-nine-source-context-acceptance.json",
+            "sha256": "e486351a8851756d83dfcea2a3a1f40968b49bc69513209c7bb5d8347018dda9"
+          },
+          "sourceSelection": {
+            "path": "research/salaries/gap-fill-2026-11-02/phsa_history/phsa-2010-11-scan-selected-v4.json.gzip",
+            "sha256": "e302c794676f87a3ee70daf693a780bb765f99ad8a30abcd764fcd72742703c5"
+          },
+          "fullOriginalPageCensusEvidence": [
+            {
+              "path": "research/salaries/gap-fill-2026-11-02/health_boards/peer-phsa-history/independent-first-two-scans-source-review.json",
+              "sha256": "5e2c6f79a811df61dd3c96020e883443a71ba379b4fc3d5329d82e9e4d4d0767"
+            }
+          ],
+          "pendingGates": [
+            "root final normalized reconstruction and adoption",
+            "producer freeze"
+          ]
+        }
+      },
+      "everyNormalizedRowReconstructedExactly": true,
+      "everyRowProvenanceReconstructedExactly": true,
+      "allSourceProvenanceInputPinsMatchExactSelectedV4": true,
+      "sourceOrderAndMultiplicityPreserved": true,
+      "nullNumericAndDigitCharactersPreserved": true,
+      "positionAlwaysNull": true,
+      "literalTotals": {
+        "remuneration": 237473291,
+        "knownExpenses": 5486077
+      },
+      "nullExpenseCount": 623,
+      "explicitZeroExpenseCount": 0,
+      "namedRowsByPhysicalPage": {
+        "3": 38,
+        "4": 39,
+        "5": 39,
+        "6": 39,
+        "7": 39,
+        "8": 39,
+        "9": 39,
+        "10": 39,
+        "11": 39,
+        "12": 39,
+        "13": 39,
+        "14": 39,
+        "15": 39,
+        "16": 39,
+        "17": 39,
+        "18": 39,
+        "19": 39,
+        "20": 39,
+        "21": 39,
+        "22": 39,
+        "23": 39,
+        "24": 39,
+        "25": 39,
+        "26": 39,
+        "27": 39,
+        "28": 39,
+        "29": 39,
+        "30": 39,
+        "31": 39,
+        "32": 39,
+        "33": 39,
+        "34": 39,
+        "35": 39,
+        "36": 39,
+        "37": 39,
+        "38": 39,
+        "39": 39,
+        "40": 39,
+        "41": 40,
+        "42": 44,
+        "43": 44,
+        "44": 44,
+        "45": 44,
+        "46": 44,
+        "47": 44,
+        "48": 44,
+        "49": 44,
+        "50": 44,
+        "51": 44,
+        "52": 43
+      },
+      "financialResidualsPeriodNarrativeAndCompiledRetentionQualificationsPresent": true
+    }
+  ],
+  "noOutreach": true
+}

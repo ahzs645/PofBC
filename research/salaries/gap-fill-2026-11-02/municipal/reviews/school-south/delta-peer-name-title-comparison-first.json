@@ -1,0 +1,67 @@
+{
+  "reviewerAgent": "/root/gap_municipal",
+  "phase": "independent-source-read-then-primary-comparison",
+  "status": "pending-partial-glyph-name-qualification",
+  "firstSourceTranscript": {
+    "path": "research/salaries/gap-fill-2026-11-02/municipal/reviews/school-south/delta-first-source-eight-cases.json",
+    "sha256": "5425f6e743fd4277f89ac3e7bc6a110d0da7bbad764c4dc9365e8c29a81decec"
+  },
+  "additiveSourceReread": {
+    "path": "research/salaries/gap-fill-2026-11-02/municipal/reviews/school-south/delta-additive-narrow-source-reread.json",
+    "sha256": "75466149e820e4a04a4fc9a2251a7acae5e454aa2cb0c4e9c61195148410231d"
+  },
+  "primary": {
+    "path": "research/salaries/gap-fill-2026-11-02/school_south/sd37-primary-crowded-name-title-readings.json",
+    "sha256": "27fd5845ea1aaa8323d14d595907150485d8b566657960e5a73f20d1e6c9504b"
+  },
+  "rows": [
+    {
+      "sequence": 122,
+      "nameAndPositionAgree": true,
+      "differences": []
+    },
+    {
+      "sequence": 185,
+      "nameAndPositionAgree": true,
+      "differences": []
+    },
+    {
+      "sequence": 199,
+      "nameAndPositionAgree": true,
+      "differences": []
+    },
+    {
+      "sequence": 625,
+      "nameAndPositionAgree": true,
+      "differences": []
+    },
+    {
+      "sequence": 794,
+      "nameAndPositionAgree": true,
+      "differences": []
+    },
+    {
+      "sequence": 921,
+      "nameAndPositionAgree": true,
+      "differences": []
+    },
+    {
+      "sequence": 926,
+      "nameAndPositionAgree": false,
+      "differences": [
+        {
+          "field": "name",
+          "peerVisibleSourceRead": "STEWART-HIBBELN, BRIANN",
+          "primary": "STEWART-HIBBELN, BRIANNA"
+        }
+      ]
+    },
+    {
+      "sequence": 1019,
+      "nameAndPositionAgree": true,
+      "differences": []
+    }
+  ],
+  "scopeLimit": "8crowded names and job-title boundary cases, not fullsource payroll or money verification.",
+  "noOutreach": true
+}

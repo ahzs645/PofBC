@@ -1,0 +1,1381 @@
+{
+  "status": "all-eight-assigned-municipal-leads-processed",
+  "acceptedForPublication": true,
+  "acceptedSourceCohorts": 52,
+  "acceptedOriginals": 28,
+  "acceptedRowsAdded": 411,
+  "employeeRowsAdded": 212,
+  "councilRowsAdded": 199,
+  "noOutreach": true,
+  "allExistingCompiledRowsRetained": true,
+  "allPreviousAcceptedDataAndMetadataPreserved": true,
+  "acceptedManifest": {
+    "path": "research/salaries/gap-fill-municipal/sources.json",
+    "sha256": "08fa4d263981e3bd325cd28d9dd9645698f0ea3fdfd7f1a3cdd15f30b94875da"
+  },
+  "remainingExistingRecordQuestions": [
+    {
+      "id": "municipal-rossland-2011-employees",
+      "employer": "City of Rossland",
+      "period": "2011",
+      "scope": "named employee remuneration schedule",
+      "status": "documented-only-no-sending-authorized",
+      "existingRecordNeeded": "A complete existing 2011 named employee remuneration and expense schedule, or its original spreadsheet.",
+      "evidence": "The 44-page SOFI extract and containing 128-page June 25, 2012 agenda omit this named schedule; council observations are independently accepted.",
+      "officialIndexUrl": "https://rossland.ca/departments/financial-services/financial-budgets-plans-reports/"
+    },
+    {
+      "id": "municipal-rossland-2014-council",
+      "employer": "City of Rossland",
+      "period": "2014",
+      "scope": "named council remuneration schedule added to the approved 2014 SOFI",
+      "status": "documented-only-no-sending-authorized",
+      "existingRecordNeeded": "The council remuneration table added to the 2014 SOFI package under the carried June 22, 2015 Council resolution, or a complete filed/adopted copy containing it.",
+      "evidence": "Distinct agenda 4297 supplies six verified employee observations but no council table. Certified-correct final minutes 4114, physical page 3, expressly require the council-table addition. The direct archive 2014 alias supplies 2013 instead.",
+      "officialIndexUrl": "https://rossland.civicweb.net/filepro/documents/18251/",
+      "adoptionEvidenceUrl": "https://rossland.civicweb.net/document/4114/"
+    },
+    {
+      "id": "municipal-abbotsford-2023-benefit-components",
+      "employer": "City of Abbotsford",
+      "period": "2023",
+      "scope": "eleven separately unknown taxable-benefit components",
+      "status": "documented-only-no-sending-authorized",
+      "existingRecordNeeded": "An existing original spreadsheet or explicit taxable-benefit dash/blank legend covering the exact eleven previously held source observations.",
+      "evidence": "All eleven literal Remuneration & Payouts payments are accepted under a separately qualified known-column definition. Unknown benefits remain unknown; the prior 449 data rows and metadata remain byte-identical. This question concerns complete compensation components, not whether those known payments can be shown.",
+      "officialIndexUrl": "https://www.abbotsford.ca/city-hall/finance"
+    }
+  ],
+  "records": [
+    {
+      "id": "lead-026",
+      "employer": "City of Abbotsford",
+      "employerSlug": "city-of-abbotsford",
+      "status": "accepted-official-sources-with-documented-existing-record-questions",
+      "noOutreach": true,
+      "previousAcceptedScopes": [
+        {
+          "sourceId": "wave-lower-mainland-city-of-abbotsford-2023-elected-officials",
+          "year": "2023",
+          "rows": 9,
+          "rowMultisetSha256": "df8d1709c37c71ab28755c46f5432e8eaa7fb980e516d92d15eb44f2701f1826",
+          "sourceSha256": "8cce0bc7013f866085cd7a301d406c2ce0438d2a6de5e20bf133b458c44db5ff",
+          "scope": "elected-officials"
+        },
+        {
+          "sourceId": "wave-lower-mainland-city-of-abbotsford-2023-employee-remuneration",
+          "year": "2023",
+          "rows": 449,
+          "rowMultisetSha256": "1aace100f8f7976a1bb3aa886fa8c64ba577d35edce18f27c33ec4ad63f8981f",
+          "sourceSha256": "8cce0bc7013f866085cd7a301d406c2ce0438d2a6de5e20bf133b458c44db5ff",
+          "scope": "employee-remuneration"
+        },
+        {
+          "sourceId": "wave-lower-mainland-city-of-abbotsford-2024-report-elected-officials",
+          "year": "2024",
+          "rows": 9,
+          "rowMultisetSha256": "de8200c45418fc00d8d748bbf8bd6a8e4540ad9882ad8f2eefef4e9a736f32da",
+          "sourceSha256": "4d8a45fbf4c2987262036a223ea4c09b8b4c1a35a1fa7edc77daaf541a878639",
+          "scope": "elected-officials"
+        },
+        {
+          "sourceId": "wave-lower-mainland-city-of-abbotsford-2024-report-employee-remuneration",
+          "year": "2024",
+          "rows": 501,
+          "rowMultisetSha256": "db6227eb81eda12ccc60c3be3b48a56ac3614d07617f6d46eb4d47b2fccd5e97",
+          "sourceSha256": "4d8a45fbf4c2987262036a223ea4c09b8b4c1a35a1fa7edc77daaf541a878639",
+          "scope": "employee-remuneration"
+        }
+      ],
+      "refreshedSources": [
+        {
+          "url": "https://abbotsford.civicweb.net/document/57862/",
+          "sha256": "8cce0bc7013f866085cd7a301d406c2ce0438d2a6de5e20bf133b458c44db5ff",
+          "physicalPages": 32
+        }
+      ],
+      "publicWorkRemaining": [],
+      "issuerDependentQuestions": [
+        "An existing original spreadsheet or explicit taxable-benefit dash/blank legend covering the exact eleven previously held source observations."
+      ],
+      "nextAction": "Integrate the accepted pinned collection; keep the documented existing-record questions on hold without sending.",
+      "sourceWorkCompleteForAssignedLead": true,
+      "allLocatedOriginalsProcessed": true,
+      "independentOriginalReviewComplete": true,
+      "acceptedSourceIds": [
+        "gap-fill-municipal-city-of-abbotsford-2023-employee-remuneration"
+      ],
+      "acceptedSourceCohorts": [
+        {
+          "sourceId": "gap-fill-municipal-city-of-abbotsford-2023-employee-remuneration",
+          "year": "2023",
+          "scope": "employee-remuneration",
+          "rows": 11,
+          "sourceSha256": "8cce0bc7013f866085cd7a301d406c2ce0438d2a6de5e20bf133b458c44db5ff",
+          "dataSha256": "c59c03633f55bc431ab68bace5e3b167ba036ba1c787986c18d5e43218e6fe31",
+          "provenanceSha256": "caedd48a91e8668eec044ffffacbdf0d02c6f7ae79708f4e76c727d1abb7f495"
+        }
+      ],
+      "acceptedRowsAdded": 11,
+      "acceptedEmployeeRowsAdded": 11,
+      "acceptedCouncilRowsAdded": 0,
+      "acceptedForPublication": true
+    },
+    {
+      "id": "lead-027",
+      "employer": "City of Port Moody",
+      "employerSlug": "city-of-port-moody",
+      "status": "already-covered-exact-original",
+      "noOutreach": true,
+      "previousAcceptedScopes": [
+        {
+          "sourceId": "history-lower-mainland-city-of-port-moody-2019-employee-remuneration",
+          "year": "2019",
+          "rows": 144,
+          "rowMultisetSha256": "bb44d663595ccf0b46f71125fed2e7a4f77a00bc0a861014ec9b2877328c6496",
+          "sourceSha256": "ac869ee0ca29ea645446098811801236dfa43135d2afac871f1abf9ee676797f",
+          "scope": "employee-remuneration"
+        },
+        {
+          "sourceId": "history-lower-mainland-city-of-port-moody-2020-elected-officials",
+          "year": "2020",
+          "rows": 7,
+          "rowMultisetSha256": "cce81075fbcf3c8be479c5c02e47d4c2032529d28da85a7cf146f11a8b5ac9fb",
+          "sourceSha256": "4961985206232fcbfd33fb85282248103fc056d2bc348381b3c658b6aaeb38cb",
+          "scope": "elected-officials"
+        },
+        {
+          "sourceId": "history-lower-mainland-city-of-port-moody-2020-employee-remuneration",
+          "year": "2020",
+          "rows": 150,
+          "rowMultisetSha256": "1ea6f9fd75856c0a463a3095873049848400d1de7f72f347ad4f39a133e332a1",
+          "sourceSha256": "4961985206232fcbfd33fb85282248103fc056d2bc348381b3c658b6aaeb38cb",
+          "scope": "employee-remuneration"
+        },
+        {
+          "sourceId": "history-lower-mainland-city-of-port-moody-2021-elected-officials",
+          "year": "2021",
+          "rows": 7,
+          "rowMultisetSha256": "8946940732406be1dfada91ba1fc2137d61e0fcd5cab08d2895210310816b6bc",
+          "sourceSha256": "3b8bc27b7131b7550cf73ca3cebfb2ba60f0e7ed48aaeae6ade124fbe57388da",
+          "scope": "elected-officials"
+        },
+        {
+          "sourceId": "history-lower-mainland-city-of-port-moody-2021-employee-remuneration",
+          "year": "2021",
+          "rows": 163,
+          "rowMultisetSha256": "8c3e8f6c2a0c0923ebf6b9ba54cb695235abb5a309f2ff6fccec6d69b8670d3f",
+          "sourceSha256": "3b8bc27b7131b7550cf73ca3cebfb2ba60f0e7ed48aaeae6ade124fbe57388da",
+          "scope": "employee-remuneration"
+        },
+        {
+          "sourceId": "history-lower-mainland-city-of-port-moody-2022-elected-officials",
+          "year": "2022",
+          "rows": 12,
+          "rowMultisetSha256": "06efa5cb7983378974b9612a42fac2fa52a9277529b6bed7d830f0e60a28ed61",
+          "sourceSha256": "329dfd3600c4c3ba90cb996995a1137220f384ea0ff89ead5f39cff2b7d90a7a",
+          "scope": "elected-officials"
+        },
+        {
+          "sourceId": "history-lower-mainland-city-of-port-moody-2022-employee-remuneration",
+          "year": "2022",
+          "rows": 163,
+          "rowMultisetSha256": "02e18b7696592d597a9da2fe5f20f6be278a93a818445418e986bc58ed544dfb",
+          "sourceSha256": "329dfd3600c4c3ba90cb996995a1137220f384ea0ff89ead5f39cff2b7d90a7a",
+          "scope": "employee-remuneration"
+        },
+        {
+          "sourceId": "history-lower-mainland-city-of-port-moody-2023-elected-officials",
+          "year": "2023",
+          "rows": 7,
+          "rowMultisetSha256": "96043a8b2a2a937412f54f08758cd720254b457f6772100e82549f49ff52afe2",
+          "sourceSha256": "31d3c09905e8318507a8eeb7ad8ef61f0c19b4aa5c7969885e0d044670e41ea1",
+          "scope": "elected-officials"
+        },
+        {
+          "sourceId": "history-lower-mainland-city-of-port-moody-2023-employee-remuneration",
+          "year": "2023",
+          "rows": 163,
+          "rowMultisetSha256": "933ad029102110c36356148bf7bcf6c0fb4ef838d9ea502156c043da526b6423",
+          "sourceSha256": "31d3c09905e8318507a8eeb7ad8ef61f0c19b4aa5c7969885e0d044670e41ea1",
+          "scope": "employee-remuneration"
+        },
+        {
+          "sourceId": "history-lower-mainland-city-of-port-moody-2024-employee-remuneration",
+          "year": "2024",
+          "rows": 238,
+          "rowMultisetSha256": "2d00e02ffc758eacbef1997b1922d16493fb425bbe54682da4243e7a3739e1c8",
+          "sourceSha256": "8ca6ab1a4662257e8efd8f27d96ce169bc15e534ce3b5363789ba90f1064a6d0",
+          "scope": "employee-remuneration"
+        },
+        {
+          "sourceId": "wave-lower-mainland-city-of-port-moody-2024-elected-officials",
+          "year": "2024",
+          "rows": 7,
+          "rowMultisetSha256": "076a05c3f9d6d3c1b2d18b7b5220eca8b56855d46c1a734b4cb69f8659ccabbb",
+          "sourceSha256": "8ca6ab1a4662257e8efd8f27d96ce169bc15e534ce3b5363789ba90f1064a6d0",
+          "scope": "elected-officials"
+        },
+        {
+          "sourceId": "history-lower-mainland-city-of-port-moody-2025-employee-remuneration",
+          "year": "2025",
+          "rows": 216,
+          "rowMultisetSha256": "c2f64745e06e6b4b0629057e88b67412df031a84d87eb2616d45c63fb50fb0cd",
+          "sourceSha256": "2be6c71b4a1a12bf447fb363f8d3633acec16a55d4072631fb0cc973f8fdc44b",
+          "scope": "employee-remuneration"
+        },
+        {
+          "sourceId": "wave-lower-mainland-city-of-port-moody-2025-elected-officials",
+          "year": "2025",
+          "rows": 7,
+          "rowMultisetSha256": "389974c95490e6289e652c0fc2a0a520c9f14c4dd6c5d6d838efac8ca10bd518",
+          "sourceSha256": "2be6c71b4a1a12bf447fb363f8d3633acec16a55d4072631fb0cc973f8fdc44b",
+          "scope": "elected-officials"
+        }
+      ],
+      "refreshedSources": [
+        {
+          "url": "https://www.portmoody.ca/eDocs/get?docnumber=584992",
+          "sha256": "3b8bc27b7131b7550cf73ca3cebfb2ba60f0e7ed48aaeae6ade124fbe57388da",
+          "physicalPages": 20
+        }
+      ],
+      "publicWorkRemaining": [],
+      "issuerDependentQuestions": [],
+      "nextAction": "No repeated import; preserve the pinned existing accepted scopes.",
+      "sourceWorkCompleteForAssignedLead": true,
+      "allLocatedOriginalsProcessed": true,
+      "independentOriginalReviewComplete": true,
+      "acceptedSourceIds": [],
+      "acceptedSourceCohorts": [],
+      "acceptedRowsAdded": 0,
+      "acceptedEmployeeRowsAdded": 0,
+      "acceptedCouncilRowsAdded": 0,
+      "acceptedForPublication": true,
+      "reviewBasis": "Already accepted exact source hashes and row-multiset pins; no new extraction or repeated import."
+    },
+    {
+      "id": "lead-028",
+      "employer": "City of Rossland",
+      "employerSlug": "city-of-rossland",
+      "status": "accepted-official-sources-with-documented-existing-record-questions",
+      "noOutreach": true,
+      "previousAcceptedScopes": [
+        {
+          "sourceId": "history-interior-city-of-rossland-2015-elected-officials",
+          "year": "2015",
+          "rows": 7,
+          "rowMultisetSha256": "bb50c79888b503d7ef471ebfeeffd9df5f703948d0edca0b29c5a9b0b04f0ca8",
+          "sourceSha256": "c9600b788c909a3246d1d095505936249387daa524ca0c5328b36913f88a360c",
+          "scope": "elected-officials"
+        },
+        {
+          "sourceId": "history-interior-city-of-rossland-2015-employee-remuneration",
+          "year": "2015",
+          "rows": 5,
+          "rowMultisetSha256": "2115d22478206354b3f12130274b44abb6db9a75f298713cb39000b08c79dd06",
+          "sourceSha256": "c9600b788c909a3246d1d095505936249387daa524ca0c5328b36913f88a360c",
+          "scope": "employee-remuneration"
+        },
+        {
+          "sourceId": "history-interior-city-of-rossland-2021-elected-officials",
+          "year": "2021",
+          "rows": 7,
+          "rowMultisetSha256": "0f1cf77a5677efdc532bb4d70d690e1405d2d8326637061bcac1ba26589888a6",
+          "sourceSha256": "abd851dea348424911a9d5b78a1834a9265c0ae33f902224a4bd7c6caba04c1c",
+          "scope": "elected-officials"
+        },
+        {
+          "sourceId": "history-interior-city-of-rossland-2021-employee-remuneration",
+          "year": "2021",
+          "rows": 17,
+          "rowMultisetSha256": "dab71acb01831db28a41edbbc23814029da5fbb3a35c7de3131001dd3977651c",
+          "sourceSha256": "abd851dea348424911a9d5b78a1834a9265c0ae33f902224a4bd7c6caba04c1c",
+          "scope": "employee-remuneration"
+        },
+        {
+          "sourceId": "history-interior-city-of-rossland-2022-elected-officials",
+          "year": "2022",
+          "rows": 12,
+          "rowMultisetSha256": "c58d5a5a87ff475dae5a35556ad30f7ad572ccf829f80ff37e20e3b07ad0e266",
+          "sourceSha256": "b9ca337284cb3e9158148c226a6face87fa14b9d8caefedfb7a1b4f1f46be6ab",
+          "scope": "elected-officials"
+        },
+        {
+          "sourceId": "history-interior-city-of-rossland-2022-employee-remuneration",
+          "year": "2022",
+          "rows": 20,
+          "rowMultisetSha256": "1801ac3e8e0559f8b5da9fa59a179b5250b498752cbe9a0d06ea1aac83682a50",
+          "sourceSha256": "b9ca337284cb3e9158148c226a6face87fa14b9d8caefedfb7a1b4f1f46be6ab",
+          "scope": "employee-remuneration"
+        },
+        {
+          "sourceId": "history-interior-city-of-rossland-2024-elected-officials",
+          "year": "2024",
+          "rows": 7,
+          "rowMultisetSha256": "56a0c400471c9194ef5bc9e70e03e40d5aaffb08c256906b8b5d91be7ea1a579",
+          "sourceSha256": "8aee94ae1927117c2c7be04d402f88fb1bccf5aaac611017698444ceb49bd862",
+          "scope": "elected-officials"
+        },
+        {
+          "sourceId": "history-interior-city-of-rossland-2024-employee-remuneration",
+          "year": "2024",
+          "rows": 31,
+          "rowMultisetSha256": "f3c61dc157e0b0b946adaeaf8ee48522327ba5ae0549dde071d51400d021e0cd",
+          "sourceSha256": "8aee94ae1927117c2c7be04d402f88fb1bccf5aaac611017698444ceb49bd862",
+          "scope": "employee-remuneration"
+        },
+        {
+          "sourceId": "wave-interior-city-of-rossland-2025-elected-officials",
+          "year": "2025",
+          "rows": 7,
+          "rowMultisetSha256": "5805cc4fe783bf04673f1bfd68f91e64fea00520df23fbfa06726228e099ab6c",
+          "sourceSha256": "2c22b2dd6dcbe258469192400c14c6e6a94e8e0dff93ee823f343408b63d98a0",
+          "scope": "elected-officials"
+        },
+        {
+          "sourceId": "wave-interior-city-of-rossland-2025-employee-remuneration",
+          "year": "2025",
+          "rows": 33,
+          "rowMultisetSha256": "93f8071613fd712754c8bd7a311d32cc4a19d49ba517cc3cac16ce7348e0d3cd",
+          "sourceSha256": "2c22b2dd6dcbe258469192400c14c6e6a94e8e0dff93ee823f343408b63d98a0",
+          "scope": "employee-remuneration"
+        }
+      ],
+      "refreshedSources": [
+        {
+          "url": "https://rossland.civicweb.net/document/47078",
+          "sha256": "8aee94ae1927117c2c7be04d402f88fb1bccf5aaac611017698444ceb49bd862",
+          "physicalPages": 50
+        },
+        {
+          "url": "https://rossland.civicweb.net/document/55626",
+          "sha256": "2c22b2dd6dcbe258469192400c14c6e6a94e8e0dff93ee823f343408b63d98a0",
+          "physicalPages": 45
+        },
+        {
+          "url": "https://rossland.civicweb.net/document/38506",
+          "sha256": "ffa3b5b7e017cdbd96482c7152e468f8f11e718d028e69041f64ce85806cdec2",
+          "physicalPages": 50
+        },
+        {
+          "url": "https://rossland.civicweb.net/document/29583",
+          "sha256": "b9ca337284cb3e9158148c226a6face87fa14b9d8caefedfb7a1b4f1f46be6ab",
+          "physicalPages": 43
+        },
+        {
+          "url": "https://rossland.civicweb.net/document/23216",
+          "sha256": "abd851dea348424911a9d5b78a1834a9265c0ae33f902224a4bd7c6caba04c1c",
+          "physicalPages": 10
+        },
+        {
+          "url": "https://rossland.civicweb.net/document/19597",
+          "sha256": "7e75b21642517a81e1d0ef4eb2f4f3d568eb0b8ed0f772182ecec121cd25e0ad",
+          "physicalPages": 44
+        },
+        {
+          "url": "https://rossland.civicweb.net/document/7063",
+          "sha256": "698458fdc4ba3869b76224ee7b6ef22e5deba47fcb7c4a685b0b1d5241cd226b",
+          "physicalPages": 42
+        },
+        {
+          "url": "https://rossland.civicweb.net/document/7045",
+          "sha256": "11dd025d45a198122f5aa590ea963655e8f72cf5970bb935ab33825871d223cf",
+          "physicalPages": 42
+        },
+        {
+          "url": "https://rossland.civicweb.net/document/7047",
+          "sha256": "fd093bc75659a0fe4364e05500897265fcc3f9707c7dbb0969d11f0e04baa59a",
+          "physicalPages": 41
+        },
+        {
+          "url": "https://rossland.civicweb.net/document/7043",
+          "sha256": "31dadfc3ccf66e6f408df9ee3e428e21ed1ea45cf7c945bec6763d92311e9b1e",
+          "physicalPages": 40
+        },
+        {
+          "url": "https://rossland.civicweb.net/document/7064",
+          "sha256": "c9600b788c909a3246d1d095505936249387daa524ca0c5328b36913f88a360c",
+          "physicalPages": 47
+        },
+        {
+          "url": "https://rossland.civicweb.net/document/23217",
+          "sha256": "963a9c8569e74f351e87c088e4f63cb1d5d9aeeec616201df799eddd66a2bab9",
+          "physicalPages": 48
+        },
+        {
+          "url": "https://rossland.civicweb.net/document/7046",
+          "sha256": "963a9c8569e74f351e87c088e4f63cb1d5d9aeeec616201df799eddd66a2bab9",
+          "physicalPages": 48
+        },
+        {
+          "url": "https://rossland.civicweb.net/document/7082",
+          "sha256": "2c30435db6cd05bbcee257ce8a8db60121e44216e8f78208693e1ba3421a214a",
+          "physicalPages": 44
+        },
+        {
+          "url": "https://rossland.civicweb.net/document/7066",
+          "sha256": "f779bc15d6c5b3709853067c42a9db68e29c68794167adaa5134e465f73f3f0e",
+          "physicalPages": 44
+        },
+        {
+          "url": "https://rossland.civicweb.net/document/7065",
+          "sha256": "83056ad7d4ca96ed5d28b3bb6ec1cd50db1bcd6f19a1459d275989cfa1ec20fa",
+          "physicalPages": 45
+        },
+        {
+          "url": "https://rossland.civicweb.net/document/4297/",
+          "sha256": "5c8e8ff1f8c0f9d6c5d4152e22fbf8ed547ac33562cc363d049da4dfbb422ba0",
+          "physicalPages": 153
+        }
+      ],
+      "publicWorkRemaining": [],
+      "issuerDependentQuestions": [
+        "A complete existing 2011 named employee remuneration and expense schedule, or its original spreadsheet.",
+        "The council remuneration table added to the 2014 SOFI package under the carried June 22, 2015 Council resolution, or a complete filed/adopted copy containing it."
+      ],
+      "nextAction": "Integrate the accepted pinned collection; keep the documented existing-record questions on hold without sending.",
+      "sourceWorkCompleteForAssignedLead": true,
+      "allLocatedOriginalsProcessed": true,
+      "independentOriginalReviewComplete": true,
+      "acceptedSourceIds": [
+        "gap-fill-municipal-city-of-rossland-2010-elected-officials",
+        "gap-fill-municipal-city-of-rossland-2010-employee-remuneration",
+        "gap-fill-municipal-city-of-rossland-2011-elected-officials",
+        "gap-fill-municipal-city-of-rossland-2013-elected-officials",
+        "gap-fill-municipal-city-of-rossland-2013-employee-remuneration",
+        "gap-fill-municipal-city-of-rossland-2016-elected-officials",
+        "gap-fill-municipal-city-of-rossland-2016-employee-remuneration",
+        "gap-fill-municipal-city-of-rossland-2018-elected-officials",
+        "gap-fill-municipal-city-of-rossland-2018-employee-remuneration",
+        "gap-fill-municipal-city-of-rossland-2019-elected-officials",
+        "gap-fill-municipal-city-of-rossland-2019-employee-remuneration",
+        "gap-fill-municipal-city-of-rossland-2020-elected-officials",
+        "gap-fill-municipal-city-of-rossland-2020-employee-remuneration",
+        "gap-fill-municipal-city-of-rossland-2012-elected-officials",
+        "gap-fill-municipal-city-of-rossland-2012-employee-remuneration",
+        "gap-fill-municipal-city-of-rossland-2017-elected-officials",
+        "gap-fill-municipal-city-of-rossland-2017-employee-remuneration",
+        "gap-fill-municipal-city-of-rossland-2023-elected-officials",
+        "gap-fill-municipal-city-of-rossland-2023-employee-remuneration",
+        "gap-fill-municipal-city-of-rossland-2014-employee-remuneration"
+      ],
+      "acceptedSourceCohorts": [
+        {
+          "sourceId": "gap-fill-municipal-city-of-rossland-2010-elected-officials",
+          "year": "2010",
+          "scope": "elected-officials",
+          "rows": 7,
+          "sourceSha256": "83056ad7d4ca96ed5d28b3bb6ec1cd50db1bcd6f19a1459d275989cfa1ec20fa",
+          "dataSha256": "5dc1d89399827f03db2fb3a3e5aba579055adda4c4abe111ab82eb5c90c60af1",
+          "provenanceSha256": "9b6c8292ea8877f8b075bd67d836eac5f44ba29d55310e56fa9b6c044f304924"
+        },
+        {
+          "sourceId": "gap-fill-municipal-city-of-rossland-2010-employee-remuneration",
+          "year": "2010",
+          "scope": "employee-remuneration",
+          "rows": 6,
+          "sourceSha256": "83056ad7d4ca96ed5d28b3bb6ec1cd50db1bcd6f19a1459d275989cfa1ec20fa",
+          "dataSha256": "bf61a7683e086d7513b6ae8d040e144527aebffff066d77ee20586e0c118dfde",
+          "provenanceSha256": "b7af2d97c75a14c7ebde0186055635523c1fc0b91bdb699c42ed8fab546f2ea7"
+        },
+        {
+          "sourceId": "gap-fill-municipal-city-of-rossland-2011-elected-officials",
+          "year": "2011",
+          "scope": "elected-officials",
+          "rows": 10,
+          "sourceSha256": "f779bc15d6c5b3709853067c42a9db68e29c68794167adaa5134e465f73f3f0e",
+          "dataSha256": "e7aed342b5844e735d8b33f39706dc71844669206632202d206f170e28df5c54",
+          "provenanceSha256": "8a818c6d379239b00c63843b6c61ada7085dd29979affb721ce9286927adf6bc"
+        },
+        {
+          "sourceId": "gap-fill-municipal-city-of-rossland-2013-elected-officials",
+          "year": "2013",
+          "scope": "elected-officials",
+          "rows": 7,
+          "sourceSha256": "963a9c8569e74f351e87c088e4f63cb1d5d9aeeec616201df799eddd66a2bab9",
+          "dataSha256": "3905751ad5e28ab4f68c96c12b463baaa17832d9707cae6a733be651f44b088a",
+          "provenanceSha256": "0d99ecc9999836ae487666818624ad3450f204c8e2f824eea45e3b05dfa4c6f2"
+        },
+        {
+          "sourceId": "gap-fill-municipal-city-of-rossland-2013-employee-remuneration",
+          "year": "2013",
+          "scope": "employee-remuneration",
+          "rows": 6,
+          "sourceSha256": "963a9c8569e74f351e87c088e4f63cb1d5d9aeeec616201df799eddd66a2bab9",
+          "dataSha256": "ae8dc97456b2ffe431414ae143debc08047dcbeef0b8316897c22f49d04b4f6e",
+          "provenanceSha256": "c0fd5af3a70ed3554615c42542924531b8be962fd383541ce610734ee86321e9"
+        },
+        {
+          "sourceId": "gap-fill-municipal-city-of-rossland-2016-elected-officials",
+          "year": "2016",
+          "scope": "elected-officials",
+          "rows": 7,
+          "sourceSha256": "31dadfc3ccf66e6f408df9ee3e428e21ed1ea45cf7c945bec6763d92311e9b1e",
+          "dataSha256": "b79a5099c0b2c8983274fe8b91860fb63375df39384d0083c7eade8907a07d5a",
+          "provenanceSha256": "c78d6253fdf8bf7526b2da03a65bde78e54e081cf64a235803a47282459524de"
+        },
+        {
+          "sourceId": "gap-fill-municipal-city-of-rossland-2016-employee-remuneration",
+          "year": "2016",
+          "scope": "employee-remuneration",
+          "rows": 12,
+          "sourceSha256": "31dadfc3ccf66e6f408df9ee3e428e21ed1ea45cf7c945bec6763d92311e9b1e",
+          "dataSha256": "61f38e9d15e70845eac0b4deeec84f8d3431faddbaa45b4c70d768f3bfb39932",
+          "provenanceSha256": "956cc94e1485269469f1c33266de60e5f6dcf90885d9eac3ebbbd9c9dfb16fdd"
+        },
+        {
+          "sourceId": "gap-fill-municipal-city-of-rossland-2018-elected-officials",
+          "year": "2018",
+          "scope": "elected-officials",
+          "rows": 12,
+          "sourceSha256": "11dd025d45a198122f5aa590ea963655e8f72cf5970bb935ab33825871d223cf",
+          "dataSha256": "8c69730f0d93afd7f0647fcc10199bfb097215e3f5c7621bf6200a5f4c59e004",
+          "provenanceSha256": "790d28c5ac797ee7885020035a9e253e95d26d3a6043185633f4b5c7991f5de0"
+        },
+        {
+          "sourceId": "gap-fill-municipal-city-of-rossland-2018-employee-remuneration",
+          "year": "2018",
+          "scope": "employee-remuneration",
+          "rows": 15,
+          "sourceSha256": "11dd025d45a198122f5aa590ea963655e8f72cf5970bb935ab33825871d223cf",
+          "dataSha256": "cfb9f70ec25be696f4ad5ae862f6134e92999dbce4db3c01dde34dd1a2dfbfd5",
+          "provenanceSha256": "a0b684499fed11e00f640416ca10297499f9c1b071701aee64687cb3a4c52851"
+        },
+        {
+          "sourceId": "gap-fill-municipal-city-of-rossland-2019-elected-officials",
+          "year": "2019",
+          "scope": "elected-officials",
+          "rows": 7,
+          "sourceSha256": "698458fdc4ba3869b76224ee7b6ef22e5deba47fcb7c4a685b0b1d5241cd226b",
+          "dataSha256": "b74d4be068359b1bc161f516f7b8e7f116bee35f1958b8e20b58ac07ecc9cbcf",
+          "provenanceSha256": "e105a44dcfb566ceb6009b46645c4f7b3ec18944d9a88fb00cddc06e302ad2fb"
+        },
+        {
+          "sourceId": "gap-fill-municipal-city-of-rossland-2019-employee-remuneration",
+          "year": "2019",
+          "scope": "employee-remuneration",
+          "rows": 16,
+          "sourceSha256": "698458fdc4ba3869b76224ee7b6ef22e5deba47fcb7c4a685b0b1d5241cd226b",
+          "dataSha256": "e81dea21a1f70a7b974bb4a3e8248a8b9fd4fa7c823fed819b7407597f3e651b",
+          "provenanceSha256": "8019ac73f931d5dbe8ce7b3d24d1c5b2a143cbbc7b12521911190befe3b00cfe"
+        },
+        {
+          "sourceId": "gap-fill-municipal-city-of-rossland-2020-elected-officials",
+          "year": "2020",
+          "scope": "elected-officials",
+          "rows": 8,
+          "sourceSha256": "7e75b21642517a81e1d0ef4eb2f4f3d568eb0b8ed0f772182ecec121cd25e0ad",
+          "dataSha256": "991d431ed22ca7e769c813cf5a702dcca222e635f54202861ed5f3e108678608",
+          "provenanceSha256": "814e32869f8687efeb7b14a79af2827cf886825fe897acb61efdc144c79a032a"
+        },
+        {
+          "sourceId": "gap-fill-municipal-city-of-rossland-2020-employee-remuneration",
+          "year": "2020",
+          "scope": "employee-remuneration",
+          "rows": 17,
+          "sourceSha256": "7e75b21642517a81e1d0ef4eb2f4f3d568eb0b8ed0f772182ecec121cd25e0ad",
+          "dataSha256": "a0e95a852cd8009e1ebb3e92cfe93097a114dc6f7afbbae0f7feb10d3aafe874",
+          "provenanceSha256": "099f4b98114fc0f965e681f6bcb2084aa466816da16e71d3a77293d500cda6eb"
+        },
+        {
+          "sourceId": "gap-fill-municipal-city-of-rossland-2012-elected-officials",
+          "year": "2012",
+          "scope": "elected-officials",
+          "rows": 7,
+          "sourceSha256": "2c30435db6cd05bbcee257ce8a8db60121e44216e8f78208693e1ba3421a214a",
+          "dataSha256": "12a5db8d85095336523f5feb20a4deda11328c005f675c2bbd76b9faf5605445",
+          "provenanceSha256": "eaa21be59708267aa5ba8763e2b8c87d8569fd467b622da81e61034134e94c7c"
+        },
+        {
+          "sourceId": "gap-fill-municipal-city-of-rossland-2012-employee-remuneration",
+          "year": "2012",
+          "scope": "employee-remuneration",
+          "rows": 7,
+          "sourceSha256": "2c30435db6cd05bbcee257ce8a8db60121e44216e8f78208693e1ba3421a214a",
+          "dataSha256": "b2211d30f6235fb2055dd4bdd9d3f1b01d00750ade96958a124ef7df1e761564",
+          "provenanceSha256": "57b1ff3be0850c9af48c63c4e7c7e958bbbe63d71eef7a1d67e26852cbbfd0d9"
+        },
+        {
+          "sourceId": "gap-fill-municipal-city-of-rossland-2017-elected-officials",
+          "year": "2017",
+          "scope": "elected-officials",
+          "rows": 7,
+          "sourceSha256": "fd093bc75659a0fe4364e05500897265fcc3f9707c7dbb0969d11f0e04baa59a",
+          "dataSha256": "c2e612496a821eb6d260567354bd39cdded8dc3eea5ba99b32dd18460b1e94d1",
+          "provenanceSha256": "13a9bbf255a64e6a2c939245e2966bac34f0ff3fe68decf66c54cd06d3177bce"
+        },
+        {
+          "sourceId": "gap-fill-municipal-city-of-rossland-2017-employee-remuneration",
+          "year": "2017",
+          "scope": "employee-remuneration",
+          "rows": 11,
+          "sourceSha256": "fd093bc75659a0fe4364e05500897265fcc3f9707c7dbb0969d11f0e04baa59a",
+          "dataSha256": "cf9f458127f5b557054a78ee9d7a8ae9d1209ca9d65027203eaf9ae1d3da03cb",
+          "provenanceSha256": "528f9025f2d5f40f877b015b2b8f424527738fa1dc950e6a8ec7580f9750a48b"
+        },
+        {
+          "sourceId": "gap-fill-municipal-city-of-rossland-2023-elected-officials",
+          "year": "2023",
+          "scope": "elected-officials",
+          "rows": 7,
+          "sourceSha256": "ffa3b5b7e017cdbd96482c7152e468f8f11e718d028e69041f64ce85806cdec2",
+          "dataSha256": "ddf2f16d486ea0d9a4f1b44ec7d180572eb793a59f3cc1092ed33a4a75f47860",
+          "provenanceSha256": "2b7e84f9bd38948db6e4ab8827bacf47d0f8c25f13ae8be6591e38bfe48ca8ed"
+        },
+        {
+          "sourceId": "gap-fill-municipal-city-of-rossland-2023-employee-remuneration",
+          "year": "2023",
+          "scope": "employee-remuneration",
+          "rows": 25,
+          "sourceSha256": "ffa3b5b7e017cdbd96482c7152e468f8f11e718d028e69041f64ce85806cdec2",
+          "dataSha256": "ab1e5740519e0cee7a913f1b7b7e2f753370826f6ab9c06854533104097af9a2",
+          "provenanceSha256": "4848a9d6f74ed4e8a4d84bead85b0c3f6191ac018d36bc32179732f77824a7fa"
+        },
+        {
+          "sourceId": "gap-fill-municipal-city-of-rossland-2014-employee-remuneration",
+          "year": "2014",
+          "scope": "employee-remuneration",
+          "rows": 6,
+          "sourceSha256": "5c8e8ff1f8c0f9d6c5d4152e22fbf8ed547ac33562cc363d049da4dfbb422ba0",
+          "dataSha256": "17a9117f7e49162b916971b6736d94df7a735f25ac9fe5a135a3ce49a46fdd86",
+          "provenanceSha256": "a9d286c214b3d27371f120e272cbadd7d846505446cf45c9ab29d9bba0b9a1bf"
+        }
+      ],
+      "acceptedRowsAdded": 200,
+      "acceptedEmployeeRowsAdded": 121,
+      "acceptedCouncilRowsAdded": 79,
+      "acceptedForPublication": true
+    },
+    {
+      "id": "lead-029",
+      "employer": "City of Trail",
+      "employerSlug": "city-of-trail",
+      "status": "already-covered-exact-original",
+      "noOutreach": true,
+      "previousAcceptedScopes": [
+        {
+          "sourceId": "history-interior-city-of-trail-2022-elected-officials",
+          "year": "2022",
+          "rows": 12,
+          "rowMultisetSha256": "f24fa3003e42d07994fc690a8f665fa363ad80bd3ea0ac09b007e22ea3ae69b1",
+          "sourceSha256": "01fc098f4a3c0ecf38136a7849e52e2b94994e839c3237a866012bae111116c8",
+          "scope": "elected-officials"
+        },
+        {
+          "sourceId": "history-interior-city-of-trail-2022-employee-remuneration",
+          "year": "2022",
+          "rows": 38,
+          "rowMultisetSha256": "2ea110fdd431632c2585cf9ed24756ccccda492799b9d5cc54ebd529a57e9e5c",
+          "sourceSha256": "01fc098f4a3c0ecf38136a7849e52e2b94994e839c3237a866012bae111116c8",
+          "scope": "employee-remuneration"
+        },
+        {
+          "sourceId": "history-interior-city-of-trail-2023-elected-officials",
+          "year": "2023",
+          "rows": 7,
+          "rowMultisetSha256": "92da8b04a04b48373361c43b2fac42525122b0deca9a2ec94e34ca81303e38df",
+          "sourceSha256": "21bc7671ceef428b4632f90712c63f1b00ab541f684dff90ddeae2b6e119e253",
+          "scope": "elected-officials"
+        },
+        {
+          "sourceId": "history-interior-city-of-trail-2023-employee-remuneration",
+          "year": "2023",
+          "rows": 44,
+          "rowMultisetSha256": "a3a5d414cc0fd2fe1e4adf17f68e2b3eb59a7a9ee5adaa140a0c29da6c393590",
+          "sourceSha256": "21bc7671ceef428b4632f90712c63f1b00ab541f684dff90ddeae2b6e119e253",
+          "scope": "employee-remuneration"
+        },
+        {
+          "sourceId": "history-interior-city-of-trail-2024-elected-officials",
+          "year": "2024",
+          "rows": 7,
+          "rowMultisetSha256": "979ece36adb5b765e38ddadab1a5f5e5c4b672c7cec68fd1137dcd72d39b5ef5",
+          "sourceSha256": "650ef014a0f2dac7108fd1fc1b62dc1a227693bde4a164b004979f10279a720f",
+          "scope": "elected-officials"
+        },
+        {
+          "sourceId": "history-interior-city-of-trail-2024-employee-remuneration",
+          "year": "2024",
+          "rows": 49,
+          "rowMultisetSha256": "6617bc5c288f27574c3a2f287b3b4e7f91a5d6f3c5d4ee88a54b14d2a63a7ef7",
+          "sourceSha256": "650ef014a0f2dac7108fd1fc1b62dc1a227693bde4a164b004979f10279a720f",
+          "scope": "employee-remuneration"
+        }
+      ],
+      "refreshedSources": [
+        {
+          "url": "https://trail.ca/wp-content/uploads/2026/06/2022-STATEMENT-OF-FINANCIAL-INFORMATION.pdf",
+          "sha256": "01fc098f4a3c0ecf38136a7849e52e2b94994e839c3237a866012bae111116c8",
+          "physicalPages": 37
+        },
+        {
+          "url": "https://trail.ca/wp-content/uploads/2026/06/2023_Statement-of-Financial-Information.pdf",
+          "sha256": "21bc7671ceef428b4632f90712c63f1b00ab541f684dff90ddeae2b6e119e253",
+          "physicalPages": 40
+        },
+        {
+          "url": "https://trail.ca/wp-content/uploads/2026/06/2024-City-of-Trail-Statement-of-Financial-Information.pdf",
+          "sha256": "650ef014a0f2dac7108fd1fc1b62dc1a227693bde4a164b004979f10279a720f",
+          "physicalPages": 42
+        }
+      ],
+      "publicWorkRemaining": [],
+      "issuerDependentQuestions": [],
+      "nextAction": "No repeated import; preserve the pinned existing accepted scopes.",
+      "sourceWorkCompleteForAssignedLead": true,
+      "allLocatedOriginalsProcessed": true,
+      "independentOriginalReviewComplete": true,
+      "acceptedSourceIds": [],
+      "acceptedSourceCohorts": [],
+      "acceptedRowsAdded": 0,
+      "acceptedEmployeeRowsAdded": 0,
+      "acceptedCouncilRowsAdded": 0,
+      "acceptedForPublication": true,
+      "reviewBasis": "Already accepted exact source hashes and row-multiset pins; no new extraction or repeated import."
+    },
+    {
+      "id": "lead-030",
+      "employer": "District of 100 Mile House",
+      "employerSlug": "district-of-100-mile-house",
+      "status": "accepted-official-sources",
+      "noOutreach": true,
+      "previousAcceptedScopes": [],
+      "refreshedSources": [
+        {
+          "url": "https://www.100milehouse.com/sites/default/files/2025-11/2023%20SOFI%20Report.pdf",
+          "sha256": "04d85b3245151d0a647c69ed369634f557ec1adec7be83a0c4c12981182ab9e3",
+          "physicalPages": 12
+        }
+      ],
+      "publicWorkRemaining": [],
+      "issuerDependentQuestions": [],
+      "sourceWorkCompleteForAssignedLead": true,
+      "allLocatedOriginalsProcessed": true,
+      "independentOriginalReviewComplete": true,
+      "acceptedSourceIds": [
+        "gap-fill-municipal-district-of-100-mile-house-2023-elected-officials",
+        "gap-fill-municipal-district-of-100-mile-house-2023-employee-remuneration"
+      ],
+      "acceptedSourceCohorts": [
+        {
+          "sourceId": "gap-fill-municipal-district-of-100-mile-house-2023-elected-officials",
+          "year": "2023",
+          "scope": "elected-officials",
+          "rows": 5,
+          "sourceSha256": "04d85b3245151d0a647c69ed369634f557ec1adec7be83a0c4c12981182ab9e3",
+          "dataSha256": "854196d5807edfd4b1ef927228e679b85b866e08a831caab44c547a113ff78e7",
+          "provenanceSha256": "7f5d24ef7e8b72ecc3f35a138da0610f8270320feee681ed9760d8c612e3c472"
+        },
+        {
+          "sourceId": "gap-fill-municipal-district-of-100-mile-house-2023-employee-remuneration",
+          "year": "2023",
+          "scope": "employee-remuneration",
+          "rows": 8,
+          "sourceSha256": "04d85b3245151d0a647c69ed369634f557ec1adec7be83a0c4c12981182ab9e3",
+          "dataSha256": "3ca5187d1d31f6fac72c108dd5bbfba572e4534a7c6b214d928a7f512456cada",
+          "provenanceSha256": "47f6808ecc579579de2ca914885fc150fe03510f2134b59783f9660a1ad48a8c"
+        }
+      ],
+      "acceptedRowsAdded": 13,
+      "acceptedEmployeeRowsAdded": 8,
+      "acceptedCouncilRowsAdded": 5,
+      "acceptedForPublication": true,
+      "nextAction": "Integrate the accepted pinned collection."
+    },
+    {
+      "id": "lead-031",
+      "employer": "District of Barriere",
+      "employerSlug": "district-of-barriere",
+      "status": "accepted-official-sources",
+      "noOutreach": true,
+      "previousAcceptedScopes": [
+        {
+          "sourceId": "wave-interior-district-of-barriere-2023-elected-officials",
+          "year": "2023",
+          "rows": 7,
+          "rowMultisetSha256": "20ea34e81fbe96191117a76fcb2a51a1498b62ef2a016c0f308523313898caf2",
+          "sourceSha256": "b3063b1fe32631c5712a975d7b22ba4bb2d075d0e0ae3ff8dde6aade6870b36e",
+          "scope": "elected-officials"
+        },
+        {
+          "sourceId": "wave-interior-district-of-barriere-2023-employee-remuneration",
+          "year": "2023",
+          "rows": 5,
+          "rowMultisetSha256": "5719172d0ef002ef3e6d32f8ff7dda5fb5867e475533c9438ed1e2eb66a7c0f8",
+          "sourceSha256": "b3063b1fe32631c5712a975d7b22ba4bb2d075d0e0ae3ff8dde6aade6870b36e",
+          "scope": "employee-remuneration"
+        }
+      ],
+      "refreshedSources": [
+        {
+          "url": "https://barriere.municipalwebsites.ca/ckfinder/connector?command=Proxy&lang=en&type=Files&currentFolder=%2F&hash=c245c263ce0eced480effe66bbede6b4d46c15ae&fileName=COMPLETE%202020%20SOFI.pdf",
+          "sha256": "781bf4c10df9209fb19f6719718fdca882b4c2752a7ce9bb835e8ccf060571b5",
+          "physicalPages": 13
+        },
+        {
+          "url": "https://barriere.municipalwebsites.ca/ckfinder/connector?command=Proxy&lang=en&type=Files&currentFolder=%2FFinancial%20Reports%2F&hash=c245c263ce0eced480effe66bbede6b4d46c15ae&fileName=5b%202023%20SOFI%20Report.pdf",
+          "sha256": "b3063b1fe32631c5712a975d7b22ba4bb2d075d0e0ae3ff8dde6aade6870b36e",
+          "physicalPages": 44
+        },
+        {
+          "url": "https://barriere.municipalwebsites.ca/ckfinder/connector?command=Proxy&lang=en&type=Files&currentFolder=%2FFinancial%20Reports%2F&hash=c245c263ce0eced480effe66bbede6b4d46c15ae&fileName=Signed%202024%20SOFI%20Complete.pdf",
+          "sha256": "6433575e105cecacd29b9c10fc5aa0e920e1c654c0c11bb6482870bc9e9a567a",
+          "physicalPages": 11
+        }
+      ],
+      "publicWorkRemaining": [],
+      "issuerDependentQuestions": [],
+      "zeroNamedEmployeeScopeEvidence": "aggregate-only-barriere-2020.json",
+      "nextAction": "Integrate the accepted pinned collection.",
+      "sourceWorkCompleteForAssignedLead": true,
+      "allLocatedOriginalsProcessed": true,
+      "independentOriginalReviewComplete": true,
+      "acceptedSourceIds": [
+        "gap-fill-municipal-district-of-barriere-2020-elected-officials",
+        "gap-fill-municipal-district-of-barriere-2024-elected-officials",
+        "gap-fill-municipal-district-of-barriere-2024-employee-remuneration"
+      ],
+      "acceptedSourceCohorts": [
+        {
+          "sourceId": "gap-fill-municipal-district-of-barriere-2020-elected-officials",
+          "year": "2020",
+          "scope": "elected-officials",
+          "rows": 7,
+          "sourceSha256": "781bf4c10df9209fb19f6719718fdca882b4c2752a7ce9bb835e8ccf060571b5",
+          "dataSha256": "2e74a08898e64294305b4ed6e4555390f7ccefeb6a8411546358b81ae0244f53",
+          "provenanceSha256": "985bbc95172070468d5519ef9556110cfe2ba3c61eb8654ddefc84c1980bab27"
+        },
+        {
+          "sourceId": "gap-fill-municipal-district-of-barriere-2024-elected-officials",
+          "year": "2024",
+          "scope": "elected-officials",
+          "rows": 7,
+          "sourceSha256": "6433575e105cecacd29b9c10fc5aa0e920e1c654c0c11bb6482870bc9e9a567a",
+          "dataSha256": "95ae2e7fc2fa54123578234ffad7de19ee8525f96382679cf6a0c96ebcbe97e7",
+          "provenanceSha256": "a43ce93314b6a007c314c4455f19a27787160edf5753ead6c2ce1612756bde54"
+        },
+        {
+          "sourceId": "gap-fill-municipal-district-of-barriere-2024-employee-remuneration",
+          "year": "2024",
+          "scope": "employee-remuneration",
+          "rows": 3,
+          "sourceSha256": "6433575e105cecacd29b9c10fc5aa0e920e1c654c0c11bb6482870bc9e9a567a",
+          "dataSha256": "069f79a19ba8630b0578b4bcd6aacff2ad4194b0e5c3e8f86d75edac23fd4170",
+          "provenanceSha256": "e2a9476cf3c757b441dcea1bfae48d427eda656f20769ce5dc4dc4014b1f7350"
+        }
+      ],
+      "acceptedRowsAdded": 17,
+      "acceptedEmployeeRowsAdded": 3,
+      "acceptedCouncilRowsAdded": 14,
+      "acceptedForPublication": true
+    },
+    {
+      "id": "lead-032",
+      "employer": "District of Clearwater",
+      "employerSlug": "district-of-clearwater",
+      "status": "accepted-official-sources",
+      "noOutreach": true,
+      "previousAcceptedScopes": [
+        {
+          "sourceId": "wave-interior-district-of-clearwater-2023-elected-officials",
+          "year": "2023",
+          "rows": 7,
+          "rowMultisetSha256": "e0871fc5de29ef76033dea2edfb0d4c8d32049fd8938a3fdd568be8adbe4ac3e",
+          "sourceSha256": "3bb679eaa53ce3f819e57ddd1a6499c83781d22be3fb67257d18fd3117f28e49",
+          "scope": "elected-officials"
+        },
+        {
+          "sourceId": "wave-interior-district-of-clearwater-2023-employee-remuneration",
+          "year": "2023",
+          "rows": 9,
+          "rowMultisetSha256": "78ffeb9ba541aa0ac6b3a8cef0032cea800c3bf3bb823e9e0915e2ffb7ce1936",
+          "sourceSha256": "3bb679eaa53ce3f819e57ddd1a6499c83781d22be3fb67257d18fd3117f28e49",
+          "scope": "employee-remuneration"
+        },
+        {
+          "sourceId": "history-interior-district-of-clearwater-2024-elected-officials",
+          "year": "2024",
+          "rows": 7,
+          "rowMultisetSha256": "d7b188874ab3c23e4754cfdd25d68b987776e907dd69993156b15dbdc5f9bc6f",
+          "sourceSha256": "72177a1c281da5514a8f885359073ab382d8ffbbabc58757b5aa223e9cac4b5f",
+          "scope": "elected-officials"
+        },
+        {
+          "sourceId": "history-interior-district-of-clearwater-2024-employee-remuneration",
+          "year": "2024",
+          "rows": 10,
+          "rowMultisetSha256": "46073888e8a086282169f53f149b32ba2edb6c0b4bc49dfb3d01aab636d255f9",
+          "sourceSha256": "72177a1c281da5514a8f885359073ab382d8ffbbabc58757b5aa223e9cac4b5f",
+          "scope": "employee-remuneration"
+        },
+        {
+          "sourceId": "wave-interior-district-of-clearwater-2025-elected-officials",
+          "year": "2025",
+          "rows": 7,
+          "rowMultisetSha256": "b03c8a66133d1d0a0cb03e605e60b211442cb7fbdd47611be149666fefcafb8a",
+          "sourceSha256": "29c5bda80e7dcc390a2392f28927c6bfc503ab38b8c422c77777627ae097da2f",
+          "scope": "elected-officials"
+        },
+        {
+          "sourceId": "wave-interior-district-of-clearwater-2025-employee-remuneration",
+          "year": "2025",
+          "rows": 11,
+          "rowMultisetSha256": "f6518f2ba8c4ad148f30af50a21be005b893df5e54af9d7409c79b3b9bdbad08",
+          "sourceSha256": "29c5bda80e7dcc390a2392f28927c6bfc503ab38b8c422c77777627ae097da2f",
+          "scope": "employee-remuneration"
+        }
+      ],
+      "refreshedSources": [
+        {
+          "url": "https://districtofclearwater.civicweb.net/document/6230",
+          "sha256": "0403cd1b4359f2d2dd9e187231c3c18675b3b377a2bbb83fb2b245928109c773",
+          "physicalPages": 13
+        },
+        {
+          "url": "https://districtofclearwater.civicweb.net/document/106358",
+          "sha256": "29c5bda80e7dcc390a2392f28927c6bfc503ab38b8c422c77777627ae097da2f",
+          "physicalPages": 48
+        },
+        {
+          "url": "https://districtofclearwater.civicweb.net/document/6229",
+          "sha256": "74b9c233c0814d10f2e10198b0460134d6c84feb8e4591fa4981f5cb433f4f09",
+          "physicalPages": 6
+        },
+        {
+          "url": "https://districtofclearwater.civicweb.net/document/6228",
+          "sha256": "98e145752fb7cc9a4df5e7c171f40811cad730782c4ff6e958d4b63561d8e495",
+          "physicalPages": 6
+        },
+        {
+          "url": "https://districtofclearwater.civicweb.net/document/6227",
+          "sha256": "a4791023258978262f24b62b3638eca8069b593869f5dee91df1acef6633d001",
+          "physicalPages": 6
+        },
+        {
+          "url": "https://districtofclearwater.civicweb.net/document/6226",
+          "sha256": "7ef7d7b46337b1e33f4996e4d7bb28806f58532911b55297249cf7a460717049",
+          "physicalPages": 6
+        },
+        {
+          "url": "https://districtofclearwater.civicweb.net/document/6061",
+          "sha256": "1040cf980005fe2f1a138e549fdd952188fd268260fcdf7811b8eb578e326721",
+          "physicalPages": 44
+        },
+        {
+          "url": "https://districtofclearwater.civicweb.net/document/13454",
+          "sha256": "db8642b32d6f999e9ff00ec1ff9b78d1cc763109e16235528542563ea8719316",
+          "physicalPages": 38
+        },
+        {
+          "url": "https://districtofclearwater.civicweb.net/document/23506",
+          "sha256": "7c2f7c934eb96e524dcf098c68b11a63dba6a46affb3c150827d23bee5c59c85",
+          "physicalPages": 36
+        },
+        {
+          "url": "https://districtofclearwater.civicweb.net/document/35207",
+          "sha256": "5795f93d951382b0b4db3cba65f6a475c2f4428b03df18c653fdbea689366573",
+          "physicalPages": 31
+        },
+        {
+          "url": "https://districtofclearwater.civicweb.net/document/44958",
+          "sha256": "92a491e9872edbf1c5dbad1fdee747441fd6b8f19cbb53185a3ff00a0ece025c",
+          "physicalPages": 37
+        },
+        {
+          "url": "https://districtofclearwater.civicweb.net/document/61408",
+          "sha256": "93428c2dc0567313ffad0d67c835ce2277d3635a3dcf310e1594ff883542eb44",
+          "physicalPages": 37
+        },
+        {
+          "url": "https://districtofclearwater.civicweb.net/document/78166",
+          "sha256": "4433fd96ccd15c28d03ba25b8591e31f6b5b37e2d9689e667c0a581aef39d0c5",
+          "physicalPages": 38
+        },
+        {
+          "url": "https://districtofclearwater.civicweb.net/document/85147",
+          "sha256": "3bb679eaa53ce3f819e57ddd1a6499c83781d22be3fb67257d18fd3117f28e49",
+          "physicalPages": 44
+        },
+        {
+          "url": "https://districtofclearwater.civicweb.net/document/98886",
+          "sha256": "72177a1c281da5514a8f885359073ab382d8ffbbabc58757b5aa223e9cac4b5f",
+          "physicalPages": 47
+        }
+      ],
+      "publicWorkRemaining": [],
+      "issuerDependentQuestions": [],
+      "sourceWorkCompleteForAssignedLead": true,
+      "allLocatedOriginalsProcessed": true,
+      "independentOriginalReviewComplete": true,
+      "acceptedSourceIds": [
+        "gap-fill-municipal-district-of-clearwater-2012-elected-officials",
+        "gap-fill-municipal-district-of-clearwater-2012-employee-remuneration",
+        "gap-fill-municipal-district-of-clearwater-2013-elected-officials",
+        "gap-fill-municipal-district-of-clearwater-2013-employee-remuneration",
+        "gap-fill-municipal-district-of-clearwater-2014-elected-officials",
+        "gap-fill-municipal-district-of-clearwater-2014-employee-remuneration",
+        "gap-fill-municipal-district-of-clearwater-2015-elected-officials",
+        "gap-fill-municipal-district-of-clearwater-2015-employee-remuneration",
+        "gap-fill-municipal-district-of-clearwater-2016-elected-officials",
+        "gap-fill-municipal-district-of-clearwater-2016-employee-remuneration",
+        "gap-fill-municipal-district-of-clearwater-2011-elected-officials",
+        "gap-fill-municipal-district-of-clearwater-2011-employee-remuneration",
+        "gap-fill-municipal-district-of-clearwater-2017-elected-officials",
+        "gap-fill-municipal-district-of-clearwater-2017-employee-remuneration",
+        "gap-fill-municipal-district-of-clearwater-2018-elected-officials",
+        "gap-fill-municipal-district-of-clearwater-2018-employee-remuneration",
+        "gap-fill-municipal-district-of-clearwater-2019-elected-officials",
+        "gap-fill-municipal-district-of-clearwater-2019-employee-remuneration",
+        "gap-fill-municipal-district-of-clearwater-2020-elected-officials",
+        "gap-fill-municipal-district-of-clearwater-2020-employee-remuneration",
+        "gap-fill-municipal-district-of-clearwater-2021-elected-officials",
+        "gap-fill-municipal-district-of-clearwater-2021-employee-remuneration",
+        "gap-fill-municipal-district-of-clearwater-2022-elected-officials",
+        "gap-fill-municipal-district-of-clearwater-2022-employee-remuneration"
+      ],
+      "acceptedSourceCohorts": [
+        {
+          "sourceId": "gap-fill-municipal-district-of-clearwater-2012-elected-officials",
+          "year": "2012",
+          "scope": "elected-officials",
+          "rows": 7,
+          "sourceSha256": "74b9c233c0814d10f2e10198b0460134d6c84feb8e4591fa4981f5cb433f4f09",
+          "dataSha256": "8cc6f33f7e3dc876a798c2df7ea0d4a7e70c502c6aa56a89d3a1b62bc4a1fd7d",
+          "provenanceSha256": "54d190511b41a6251eb73648498cb459783fb70ea4363320962071c649b47d6e"
+        },
+        {
+          "sourceId": "gap-fill-municipal-district-of-clearwater-2012-employee-remuneration",
+          "year": "2012",
+          "scope": "employee-remuneration",
+          "rows": 3,
+          "sourceSha256": "74b9c233c0814d10f2e10198b0460134d6c84feb8e4591fa4981f5cb433f4f09",
+          "dataSha256": "b51bc0948f8b6563f67880bb1796daa197275f79d74b69e8efea38135381611d",
+          "provenanceSha256": "ed83ec0da1003a75c46cc5d1a0bbd4c00172cfca77e4eef251464062a27f3e23"
+        },
+        {
+          "sourceId": "gap-fill-municipal-district-of-clearwater-2013-elected-officials",
+          "year": "2013",
+          "scope": "elected-officials",
+          "rows": 7,
+          "sourceSha256": "98e145752fb7cc9a4df5e7c171f40811cad730782c4ff6e958d4b63561d8e495",
+          "dataSha256": "28b62ea12f0e130f42de99e86ae038046930d55e432f1d9e6e2bb6450ecf0459",
+          "provenanceSha256": "359baacef2e2cd5dd884532e2d319795d756b03fb0d6ec448ab224f2d913e8f3"
+        },
+        {
+          "sourceId": "gap-fill-municipal-district-of-clearwater-2013-employee-remuneration",
+          "year": "2013",
+          "scope": "employee-remuneration",
+          "rows": 4,
+          "sourceSha256": "98e145752fb7cc9a4df5e7c171f40811cad730782c4ff6e958d4b63561d8e495",
+          "dataSha256": "9e1aee0cf99c1422c548cf0314b21ab131fcf0d71498e1d016928bec765f1bcc",
+          "provenanceSha256": "d943760cb6b61b528cb5a8c15b8ec2461e5c5a3f220c843a816a78c61abdb891"
+        },
+        {
+          "sourceId": "gap-fill-municipal-district-of-clearwater-2014-elected-officials",
+          "year": "2014",
+          "scope": "elected-officials",
+          "rows": 8,
+          "sourceSha256": "a4791023258978262f24b62b3638eca8069b593869f5dee91df1acef6633d001",
+          "dataSha256": "b82bf9dfa327265f1dfc30227826bfff24a2cf01cfde607773a6b9fad97fda26",
+          "provenanceSha256": "3b8c90abcdc990d18a3d7b45d5f18af6ff9f662748ea19fd1fc50f0d48da5638"
+        },
+        {
+          "sourceId": "gap-fill-municipal-district-of-clearwater-2014-employee-remuneration",
+          "year": "2014",
+          "scope": "employee-remuneration",
+          "rows": 5,
+          "sourceSha256": "a4791023258978262f24b62b3638eca8069b593869f5dee91df1acef6633d001",
+          "dataSha256": "ac41fb2d1236af489295fb1a58d8e0ea162be87005747e5d41d9d1f9899691e4",
+          "provenanceSha256": "0b7737d5f939e40daf0142fdb25e6953246cafada77b1a92e2f4506c99bd9df7"
+        },
+        {
+          "sourceId": "gap-fill-municipal-district-of-clearwater-2015-elected-officials",
+          "year": "2015",
+          "scope": "elected-officials",
+          "rows": 7,
+          "sourceSha256": "7ef7d7b46337b1e33f4996e4d7bb28806f58532911b55297249cf7a460717049",
+          "dataSha256": "bdb68fc36034553b2f822edb1abfd7b970db3a08cc6a38bb6206468c12034746",
+          "provenanceSha256": "7ef5c9833dba90c74bee0eb32e0680d60a2ad5304f910e5248bdc27c619c8ae4"
+        },
+        {
+          "sourceId": "gap-fill-municipal-district-of-clearwater-2015-employee-remuneration",
+          "year": "2015",
+          "scope": "employee-remuneration",
+          "rows": 6,
+          "sourceSha256": "7ef7d7b46337b1e33f4996e4d7bb28806f58532911b55297249cf7a460717049",
+          "dataSha256": "836259bc9a8ed94a1909728a5a34048dffc6ed0b138d1d9e3c390c93261e3044",
+          "provenanceSha256": "6a31160fdf72f748ee990267d896c8b0a10bdbdec62cd25166bde4e3ce62f8b9"
+        },
+        {
+          "sourceId": "gap-fill-municipal-district-of-clearwater-2016-elected-officials",
+          "year": "2016",
+          "scope": "elected-officials",
+          "rows": 7,
+          "sourceSha256": "1040cf980005fe2f1a138e549fdd952188fd268260fcdf7811b8eb578e326721",
+          "dataSha256": "5fbfaf2c17ef5c991e618f93feeff54ffe5e7448a83dba84f0d79414172ec09b",
+          "provenanceSha256": "fea6e38160267a501d460d301e4222e7ddb0449cca899b633d6d17c92731b263"
+        },
+        {
+          "sourceId": "gap-fill-municipal-district-of-clearwater-2016-employee-remuneration",
+          "year": "2016",
+          "scope": "employee-remuneration",
+          "rows": 5,
+          "sourceSha256": "1040cf980005fe2f1a138e549fdd952188fd268260fcdf7811b8eb578e326721",
+          "dataSha256": "f6601794162d5024c00b429f9dfc343552d848e4622faf4b4acae3489d7b16f5",
+          "provenanceSha256": "5605732557c70cd101e336c08e639ed3a4c93ae771c50dad01860060350602d0"
+        },
+        {
+          "sourceId": "gap-fill-municipal-district-of-clearwater-2011-elected-officials",
+          "year": "2011",
+          "scope": "elected-officials",
+          "rows": 12,
+          "sourceSha256": "0403cd1b4359f2d2dd9e187231c3c18675b3b377a2bbb83fb2b245928109c773",
+          "dataSha256": "824610b1863be50f15b7beef3da41fa76e74c80a072f85e457071dc44a5ed70c",
+          "provenanceSha256": "50a35671fa8422a7aa22f752fdf980cba2442578c76bbfa3926204a507539c57"
+        },
+        {
+          "sourceId": "gap-fill-municipal-district-of-clearwater-2011-employee-remuneration",
+          "year": "2011",
+          "scope": "employee-remuneration",
+          "rows": 3,
+          "sourceSha256": "0403cd1b4359f2d2dd9e187231c3c18675b3b377a2bbb83fb2b245928109c773",
+          "dataSha256": "5186a5b0f13b46f520c42461845e2f0433ed42948a151e854ecedef85c3d68dc",
+          "provenanceSha256": "c22e55f15383198db1c0f228293fe88f23800c9f141566558b15afbf910bdb2d"
+        },
+        {
+          "sourceId": "gap-fill-municipal-district-of-clearwater-2017-elected-officials",
+          "year": "2017",
+          "scope": "elected-officials",
+          "rows": 7,
+          "sourceSha256": "db8642b32d6f999e9ff00ec1ff9b78d1cc763109e16235528542563ea8719316",
+          "dataSha256": "e7263e38103f896f6ee7a1521887dfe6afd7fa23d1052c622330d190d115887c",
+          "provenanceSha256": "f156284d23b3a347998791de78272d74ec525fc0d6c91e6d07a7aee9a63b53b8"
+        },
+        {
+          "sourceId": "gap-fill-municipal-district-of-clearwater-2017-employee-remuneration",
+          "year": "2017",
+          "scope": "employee-remuneration",
+          "rows": 5,
+          "sourceSha256": "db8642b32d6f999e9ff00ec1ff9b78d1cc763109e16235528542563ea8719316",
+          "dataSha256": "f07a9c1ec1f77173a4b0602c6f31e4ffc3cbbcc2c9d9dc9a699cf3e8fb253478",
+          "provenanceSha256": "18d4c1be095291663606545786db4b4a8cf024d678b7300cea1c28fd4d20d477"
+        },
+        {
+          "sourceId": "gap-fill-municipal-district-of-clearwater-2018-elected-officials",
+          "year": "2018",
+          "scope": "elected-officials",
+          "rows": 11,
+          "sourceSha256": "7c2f7c934eb96e524dcf098c68b11a63dba6a46affb3c150827d23bee5c59c85",
+          "dataSha256": "92bbc737adf4b3f6805ba6f56a18be76b10fd6c9a6c7321869610275c40620b8",
+          "provenanceSha256": "f7bd9547c03831c629ac347102c6394ff2bcca5b5dea6e92144b7ba86e455aac"
+        },
+        {
+          "sourceId": "gap-fill-municipal-district-of-clearwater-2018-employee-remuneration",
+          "year": "2018",
+          "scope": "employee-remuneration",
+          "rows": 5,
+          "sourceSha256": "7c2f7c934eb96e524dcf098c68b11a63dba6a46affb3c150827d23bee5c59c85",
+          "dataSha256": "405ce5f97dafccbedc24cc1ca98645760086ab7f73275a73d4ac135c98db0a1d",
+          "provenanceSha256": "f64332964f39048ecd718d70ec5b7d4db64ba9e6cdfac667bf3d581199015eda"
+        },
+        {
+          "sourceId": "gap-fill-municipal-district-of-clearwater-2019-elected-officials",
+          "year": "2019",
+          "scope": "elected-officials",
+          "rows": 7,
+          "sourceSha256": "5795f93d951382b0b4db3cba65f6a475c2f4428b03df18c653fdbea689366573",
+          "dataSha256": "0fd4aa97637e314dcdc4d0680b48a83cf8d54bad7af72037c0d9a33847b71f4f",
+          "provenanceSha256": "bddd7ab92dd9b170b171cb2485f87053b1bb85669b51fa8d391e3686808de1ad"
+        },
+        {
+          "sourceId": "gap-fill-municipal-district-of-clearwater-2019-employee-remuneration",
+          "year": "2019",
+          "scope": "employee-remuneration",
+          "rows": 6,
+          "sourceSha256": "5795f93d951382b0b4db3cba65f6a475c2f4428b03df18c653fdbea689366573",
+          "dataSha256": "0729bdcb367d656f2b3c2ac2bbd47036443aa67abf38c601d5f48805f212aeab",
+          "provenanceSha256": "133f5cb61292973b98991846657ad25f58b83da4d2bcac86348d466b20ef33f8"
+        },
+        {
+          "sourceId": "gap-fill-municipal-district-of-clearwater-2020-elected-officials",
+          "year": "2020",
+          "scope": "elected-officials",
+          "rows": 7,
+          "sourceSha256": "92a491e9872edbf1c5dbad1fdee747441fd6b8f19cbb53185a3ff00a0ece025c",
+          "dataSha256": "95f738dc37fffc4b1581187f9d9933164e400619645eb813cac4c683b87fbeb6",
+          "provenanceSha256": "612f3a071f708c53db86c5e1c6221c89c6929330983591679caf88b656ac5d9e"
+        },
+        {
+          "sourceId": "gap-fill-municipal-district-of-clearwater-2020-employee-remuneration",
+          "year": "2020",
+          "scope": "employee-remuneration",
+          "rows": 6,
+          "sourceSha256": "92a491e9872edbf1c5dbad1fdee747441fd6b8f19cbb53185a3ff00a0ece025c",
+          "dataSha256": "81660de929bb44ea50126cd18c74ca8c188180e5dfe1aa5c0ea22231d1b13589",
+          "provenanceSha256": "c239e04236fdabae515789b81e1705ef704fde213728c2caa355638c1c3f601a"
+        },
+        {
+          "sourceId": "gap-fill-municipal-district-of-clearwater-2021-elected-officials",
+          "year": "2021",
+          "scope": "elected-officials",
+          "rows": 7,
+          "sourceSha256": "93428c2dc0567313ffad0d67c835ce2277d3635a3dcf310e1594ff883542eb44",
+          "dataSha256": "7a0787e5d8848e17ee77e4db3558bd48365621a1d8d5c9814f482db665937604",
+          "provenanceSha256": "fafdbf0d57815b07efeda7a2e64e5b6781a762a342d83331e3ea8f57eb5a3f03"
+        },
+        {
+          "sourceId": "gap-fill-municipal-district-of-clearwater-2021-employee-remuneration",
+          "year": "2021",
+          "scope": "employee-remuneration",
+          "rows": 6,
+          "sourceSha256": "93428c2dc0567313ffad0d67c835ce2277d3635a3dcf310e1594ff883542eb44",
+          "dataSha256": "a3c37de8f12c509eab69d9961988af162f46e8931d6b06403579243873908783",
+          "provenanceSha256": "b2f2962ae1d1fd9293b7e19a9c51f2b99a475b425a8c7d52c51de1a89a671078"
+        },
+        {
+          "sourceId": "gap-fill-municipal-district-of-clearwater-2022-elected-officials",
+          "year": "2022",
+          "scope": "elected-officials",
+          "rows": 9,
+          "sourceSha256": "4433fd96ccd15c28d03ba25b8591e31f6b5b37e2d9689e667c0a581aef39d0c5",
+          "dataSha256": "b9e5736c4d2c75e9a2372d4b2427ac2ce0c46d60769b38def724fc0eadc212cb",
+          "provenanceSha256": "074b9d8ec69337c4ebd048346c7ec4fa8eba0a727f4a784989d818db1de55ce9"
+        },
+        {
+          "sourceId": "gap-fill-municipal-district-of-clearwater-2022-employee-remuneration",
+          "year": "2022",
+          "scope": "employee-remuneration",
+          "rows": 6,
+          "sourceSha256": "4433fd96ccd15c28d03ba25b8591e31f6b5b37e2d9689e667c0a581aef39d0c5",
+          "dataSha256": "410bde6a1197dd532d4123cda8859cfb018565e5fb73414f4a73f17e5ead2bbb",
+          "provenanceSha256": "0408c514b2eaabe214e511daf89039d224c13ef4f94e9ea90c0c7ba21fb38240"
+        }
+      ],
+      "acceptedRowsAdded": 156,
+      "acceptedEmployeeRowsAdded": 60,
+      "acceptedCouncilRowsAdded": 96,
+      "acceptedForPublication": true,
+      "nextAction": "Integrate the accepted pinned collection."
+    },
+    {
+      "id": "lead-033",
+      "employer": "District of Lantzville",
+      "employerSlug": "district-of-lantzville",
+      "status": "accepted-official-sources",
+      "noOutreach": true,
+      "previousAcceptedScopes": [
+        {
+          "sourceId": "history-island-district-of-lantzville-2018-council",
+          "year": "2018",
+          "rows": 10,
+          "rowMultisetSha256": "3bacc34157790b16b65efaca4cd67c036efcaa2967db399cabd2ca7896344be3",
+          "sourceSha256": "91e9e5da581299c127177bc9f26a7e1da7712ff277f11d530d5e8604eba86ff6",
+          "scope": "elected-officials"
+        },
+        {
+          "sourceId": "history-island-district-of-lantzville-2018-employees",
+          "year": "2018",
+          "rows": 4,
+          "rowMultisetSha256": "05a4f02082f17f1a24ba54415506e0c393554b577892ed91380c10eec15b3134",
+          "sourceSha256": "91e9e5da581299c127177bc9f26a7e1da7712ff277f11d530d5e8604eba86ff6",
+          "scope": "employee-remuneration"
+        },
+        {
+          "sourceId": "history-island-district-of-lantzville-2019-council",
+          "year": "2019",
+          "rows": 5,
+          "rowMultisetSha256": "6bc02eab950ed7097a68981bf1ac54b47fbed81923fe14e5a1ab54557432ec6a",
+          "sourceSha256": "91191d2c57b8af155da13fa0b7449555ebb3971f17d8305a10ba752bd1fb8f26",
+          "scope": "elected-officials"
+        },
+        {
+          "sourceId": "history-island-district-of-lantzville-2019-employees",
+          "year": "2019",
+          "rows": 5,
+          "rowMultisetSha256": "b2bfbae54606c1da6b51c239c459f62715521d7685bf846cf74dbc107f5afd4c",
+          "sourceSha256": "91191d2c57b8af155da13fa0b7449555ebb3971f17d8305a10ba752bd1fb8f26",
+          "scope": "employee-remuneration"
+        },
+        {
+          "sourceId": "history-island-district-of-lantzville-2020-council",
+          "year": "2020",
+          "rows": 5,
+          "rowMultisetSha256": "9ff93f77454c599b8362e69457b5dcd210da3cbf662a7225737b98223b1ecd63",
+          "sourceSha256": "74c2d684accc87aa5a1f8a7f8aac4093c8ebc3661ae036b93d1b59c9a39fe7f8",
+          "scope": "elected-officials"
+        },
+        {
+          "sourceId": "history-island-district-of-lantzville-2020-employees",
+          "year": "2020",
+          "rows": 5,
+          "rowMultisetSha256": "9ddf3f06b5a92756f7654831f2bb2a6fcdb8393901dd5cd51d1869e6d5c81ade",
+          "sourceSha256": "74c2d684accc87aa5a1f8a7f8aac4093c8ebc3661ae036b93d1b59c9a39fe7f8",
+          "scope": "employee-remuneration"
+        },
+        {
+          "sourceId": "history-island-district-of-lantzville-2025-council",
+          "year": "2025",
+          "rows": 5,
+          "rowMultisetSha256": "7b8c3ee724867f9c38f33624948a4801748f14379fb52bfe31758f271668541e",
+          "sourceSha256": "9b49ae1c58e98255e3c464946dc2bc129f2b58d90fecc3a01536c703f8809f33",
+          "scope": "elected-officials"
+        },
+        {
+          "sourceId": "history-island-district-of-lantzville-2025-employees",
+          "year": "2025",
+          "rows": 11,
+          "rowMultisetSha256": "94a62e71d8129563dfb94a00f161893e5033d50b696603e01ab93b63128048c2",
+          "sourceSha256": "9b49ae1c58e98255e3c464946dc2bc129f2b58d90fecc3a01536c703f8809f33",
+          "scope": "employee-remuneration"
+        }
+      ],
+      "refreshedSources": [
+        {
+          "url": "https://www.lantzville.ca/cms/wpattachments/wpID485atID7293.pdf",
+          "sha256": "9b49ae1c58e98255e3c464946dc2bc129f2b58d90fecc3a01536c703f8809f33",
+          "physicalPages": 8
+        },
+        {
+          "url": "https://www.lantzville.ca/cms/wpattachments/wpID485atID7134.pdf",
+          "sha256": "a8459d11923535960bc8a780791b17a2f4bedca613200668b9c4153e5f73428a",
+          "physicalPages": 9
+        }
+      ],
+      "publicWorkRemaining": [],
+      "issuerDependentQuestions": [],
+      "nextAction": "Integrate the accepted pinned collection.",
+      "sourceWorkCompleteForAssignedLead": true,
+      "allLocatedOriginalsProcessed": true,
+      "independentOriginalReviewComplete": true,
+      "acceptedSourceIds": [
+        "gap-fill-municipal-district-of-lantzville-2024-elected-officials",
+        "gap-fill-municipal-district-of-lantzville-2024-employee-remuneration"
+      ],
+      "acceptedSourceCohorts": [
+        {
+          "sourceId": "gap-fill-municipal-district-of-lantzville-2024-elected-officials",
+          "year": "2024",
+          "scope": "elected-officials",
+          "rows": 5,
+          "sourceSha256": "a8459d11923535960bc8a780791b17a2f4bedca613200668b9c4153e5f73428a",
+          "dataSha256": "fcbbecf64ecd1d21d7739a6a598d400bd9e9539ccae6787cd62925f4dd53d5fd",
+          "provenanceSha256": "8700ba13a9342159faf8842da93da2f097fae8157456013fe6d62bb8ef32fadc"
+        },
+        {
+          "sourceId": "gap-fill-municipal-district-of-lantzville-2024-employee-remuneration",
+          "year": "2024",
+          "scope": "employee-remuneration",
+          "rows": 9,
+          "sourceSha256": "a8459d11923535960bc8a780791b17a2f4bedca613200668b9c4153e5f73428a",
+          "dataSha256": "a2c2032c7704ff9f23c1b8f17ea9d6e2766c841df6c7bfead1b4fba328fee479",
+          "provenanceSha256": "44ba55b7ab9841479fdeb626f2af8e0dd2784085c55eb0a2c208953122a79776"
+        }
+      ],
+      "acceptedRowsAdded": 14,
+      "acceptedEmployeeRowsAdded": 9,
+      "acceptedCouncilRowsAdded": 5,
+      "acceptedForPublication": true
+    }
+  ]
+}

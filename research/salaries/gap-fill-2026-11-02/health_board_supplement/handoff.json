@@ -1,0 +1,82 @@
+{
+  "status": "reviewed-accepted-frozen-ready-for-root-integration",
+  "collection": "gap-fill-health-board-supplement",
+  "manifest": {
+    "path": "research/salaries/gap-fill-health-board-supplement/sources.json",
+    "sha256": "2588846870a3d21eff78c133cb43e3ef8dd25d33f75bcde75e001cd1a2f40553"
+  },
+  "ownedFreeze": {
+    "path": "research/salaries/gap-fill-2026-11-02/health_board_supplement/candidate-freeze.json",
+    "sha256": "2257b0b38612322df5372aa3aed4fdb58d3107d637d22b2eeba059e1c73a6162"
+  },
+  "sourceLeadDispositions": {
+    "path": "research/salaries/gap-fill-2026-11-02/health_board_supplement/source-lead-dispositions.json",
+    "sha256": "3bdbc6269574249d77fae4d757c38dd2fb3120b4c66d05fe0030eda7727c2319"
+  },
+  "sourceScopeSubtraction": {
+    "path": "research/salaries/gap-fill-2026-11-02/health_board_supplement/discovered-board-scope-subtraction.json",
+    "sha256": "a5f355c598b12fd6a8ef6417f08761f5c0942b3b731985bd4b819f3845b03a29"
+  },
+  "sourceOnlyPeerPacket": {
+    "path": "research/salaries/gap-fill-2026-11-02/health_board_supplement/independent-source-review-packet.json",
+    "sha256": "cd04f3b322950f71e6d16e3680150b01acc9c6064d0992f18af99b4868ba5c75"
+  },
+  "rootAcceptance": {
+    "path": "research/salaries/gap-fill-2026-11-02/reviews/root-health-board-supplement-acceptance.json",
+    "sha256": "657345887859e30e0f114f00881fdf77536a66cc3a963f9f8a21abab5f9e8f53"
+  },
+  "independentCompleteImageFirstReview": {
+    "path": "research/salaries/gap-fill-2026-11-02/school_north/reviews/health-board-supplement/independent-complete-board-source-review.json",
+    "sha256": "946e002020702bf81f102694ab1cfe609c9d9f1339b9e70ca1f199df5b22cb02"
+  },
+  "preservedPrePromotionEvidence": {
+    "path": "research/salaries/gap-fill-2026-11-02/health_board_supplement/pre-adoption/preserved-candidate-pins.json",
+    "sha256": "70e87f3c78d6c01b775ca11795fd790596208ab3bd87f02dd7e6bdeaa6f75bbc"
+  },
+  "sourceFiles": 19,
+  "acceptedCohorts": 19,
+  "allNamedBoardObservationsRead": 194,
+  "numericPayRowsAdded": 186,
+  "supportingOnlyNonnumericPayRows": 8,
+  "supportingOnlyKnownExpenses": 1801.71,
+  "employeeRowsAdded": 0,
+  "compiledRowsRemoved": 0,
+  "remainingNewPublicProcessingTasks": 0,
+  "noOutreach": true,
+  "heldIssuerRequests": [
+    "NIC",
+    "McBride",
+    "SD8",
+    "SD10"
+  ],
+  "publicQualifications": [
+    "Board payments are not employee salary rates or rosters. Separate inclusive totals/expenses are excluded from pay; blank/dash expenses remain null.",
+    "VCH2023/24 literal known expense and inclusive grand controls each differ by+2CAD; VCH2018/19 expense control differs by+1CAD withgrand0. Independent literal source review confirmed all rows; no balancing or cause claim.",
+    "Eight nonnumeric-pay rows remain supporting evidence including known expenses194,18,1589.71; no inventedzero pay.",
+    "Fraser2004/05 source says three quarters of retainer payments after a July2004 policy change; no annualization.",
+    "Compiled possible overlaps retained."
+  ],
+  "verification": [
+    {
+      "command": "python3 scripts/gap_health_board_supplement.py --check",
+      "passed": true
+    },
+    {
+      "command": "python3 -m unittest discover -s scripts -p test_gap_health_board_supplement.py -q",
+      "passed": true,
+      "tests": 10
+    },
+    {
+      "command": "python3 scripts/gap_health_board_supplement_freeze.py --check",
+      "passed": true,
+      "ownedFiles": 261
+    },
+    {
+      "command": "python3 scripts/gap_health_boards_freeze.py --check",
+      "passed": true,
+      "originalOwnedFiles": 238
+    }
+  ],
+  "frozenOriginalBoardInputsUnchanged": true,
+  "sourceDataPinsUnchangedAcrossPromotion": true
+}

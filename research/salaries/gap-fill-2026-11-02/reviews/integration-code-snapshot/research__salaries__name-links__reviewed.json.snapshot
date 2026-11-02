@@ -1,0 +1,29 @@
+{
+  "note": "Decisions made by reading the records, overriding the rules in src/salaries/nameLinks.js. decision: verified joins the two spellings; reject keeps them apart. Each names the employer slug and both names as disclosed.",
+  "decisions": [
+    {
+      "employer": "bc-investment-management-corporation",
+      "names": ["Garant, D.", "Garant, Daniel"],
+      "decision": "verified",
+      "note": "confirmed by the site owner; Senior Vice President, Public Markets in 2017/18 and Executive Vice President in 2023/24"
+    },
+    {
+      "employer": "provincial-health-services-authority",
+      "names": ["Wong, Jason Lany", "Wong, Jason Larry"],
+      "decision": "verified",
+      "note": "“Lany” is “Larry” misread: the two alternate year to year (2017/18 Lany, 2020/21 Larry, 2023/24 Lany, 2024/25 Larry) and never appear together"
+    },
+    {
+      "employer": "public-service",
+      "names": ["COHEN, J GRAY", "COHEN, J GARY"],
+      "decision": "verified",
+      "note": "“Gray” is a typing slip for “Gary”: the 2004/05 appointee record pays $160,698, the same as “J G” in 2003/04 and “J GARY” in 2005/06"
+    },
+    {
+      "employer": "public-service",
+      "names": ["Cohen, J G", "COHEN, J GARY"],
+      "decision": "verified",
+      "note": "the same appointee payment, $160,698, in 2003/04 as “J G” and in 2005/06 as “J GARY”"
+    }
+  ]
+}

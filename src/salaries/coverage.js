@@ -36,6 +36,13 @@ export const rowCoverage = (coverage, sourceId, sources = {}) => {
 
 export const expenseLabel = (sourceId, sources = {}) => sources[sourceId]?.travelSource ? 'Travel expenses' : 'Expenses'
 
+/** A compiled edition label cannot establish when its payment was made. */
+export const recordPeriodLabel = (label, source) => {
+  if (source?.sourceKind === 'compiled' || source?.scope === 'compiled-unverified') return { label: `${label} · compiled edition`, kind: 'compiled' }
+  if (!['calendar', 'fiscal'].includes(source?.periodType)) return { label: `${label} · period unverified`, kind: 'unverified' }
+  return { label, kind: 'verified' }
+}
+
 /** These qualifications affect interpretation of published values, so show them with the records. */
 export const sourceWarnings = (sourceIds = [], sources = {}) => [...new Set(sourceIds
   .map((id) => sources[id]?.publicWarning).filter(Boolean))]

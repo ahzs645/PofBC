@@ -9,7 +9,7 @@ import { surnameShard } from '../src/salaries/people.js'
 import { titleKey, titleShard } from '../src/salaries/positions.js'
 import { pooledGrowth, stayerRaises, typicalRaise } from '../src/salaries/growth.js'
 import { BODIES, EMPLOYER_ALIASES, canonicalSlug, employerSector, employerSlug, sectorOf } from './lib/salary-employers.mjs'
-import { periodMean, TOP_PER_PERIOD, topRecords, csvRows, money, median, sha256, yearSlug, reportingPeriodType, applyCompiledReplacements, applyTravelJoinCorrections, sumMoney, duplicateStats, repeatedCandidates, validateRow, validateReplacementScopes, compiledPartitionsToRetain } from './lib/salary-data.mjs'
+import { periodMean, TOP_PER_PERIOD, topRecords, csvRows, money, median, sha256, yearSlug, reportingPeriodType, applyCompiledReplacements, applyTravelJoinCorrections, applyCompiledRetentionDecisions, preservePublishedCompiledRows, sumMoney, duplicateStats, repeatedCandidates, validateRow, validateReplacementScopes, compiledPartitionsToRetain } from './lib/salary-data.mjs'
 import { sourceCatalog, sourceLeadsFor, hasLocatedSource } from './lib/salary-sources.mjs'
 
 const root = resolve(dirname(fileURLToPath(import.meta.url)), '..')
@@ -207,12 +207,23 @@ for (const correction of travelRecovery.corrections) {
   source.notes = [...source.notes, 'An inferred travel match was withheld after a recovered appointee schedule made that disclosed name non-unique. The original travel schedule remains cited; the amount is not reassigned.']
   source.validation = { ...source.validation, invalidatedTravelJoins: travelRecovery.corrections.filter((entry) => entry.employeeSourceId === correction.employeeSourceId) }
 }
+const retentionPath = join(research, 'compiled-retention-decisions.json')
+const retentionReview = existsSync(retentionPath) ? readJson(retentionPath) : null
+applyCompiledRetentionDecisions(sources, retentionReview)
 validateReplacementScopes(baseline, official, sources, reviewed)
 const retainedCompiledPartitions = compiledPartitionsToRetain(official, sources)
 const compiledRecovery = applyCompiledReplacements(baseline, official, sources, manifests.flatMap(({ manifest }) => manifest.compiledReplacements ?? []))
 const backlogPath = join(research, 'source-backlog.json')
 const catalog = sourceCatalog(existsSync(backlogPath) ? readJson(backlogPath) : {}, manifests)
-const legacyRetained = compiledRecovery.rows.filter((row) => (!importedPartitions.has(`${row.slug}|${row.year}`) || retainedCompiledPartitions.has(`${row.slug}|${row.year}`)) && !excluded.has(`${row.slug}|${row.year}`))
+let legacyRetained = compiledRecovery.rows.filter((row) => (!importedPartitions.has(`${row.slug}|${row.year}`) || retainedCompiledPartitions.has(`${row.slug}|${row.year}`)) && !excluded.has(`${row.slug}|${row.year}`))
+if (retentionReview?.publishedCompiledBaseline) {
+  const reference = retentionReview.publishedCompiledBaseline
+  const path = resolve(research, reference.file)
+  if (relative(research, path).startsWith(`..${sep}`) || !/^[a-f0-9]{64}$/.test(reference.sha256 ?? '')) throw new Error('Published compiled baseline reference is invalid')
+  const bytes = readFileSync(path)
+  if (sha256(bytes) !== reference.sha256) throw new Error('Published compiled baseline fingerprint changed')
+  legacyRetained = preservePublishedCompiledRows(legacyRetained, JSON.parse(gunzipSync(bytes)))
+}
 const rows = [...legacyRetained, ...official]
 if (!rows.length) throw new Error('No salary rows; refusing to replace the published data')
 const labels = [...new Set([...LEGACY.map(({ label }) => label), ...rows.map((row) => row.year), ...catalog.map((entry) => entry.year).filter(Boolean)])].sort()

@@ -1,0 +1,165 @@
+{
+  "schema": "independent-health-employee-source-reread-v1",
+  "supersedesOnlySpecifiedRemunerationFields": true,
+  "firstTranscriptIndex": {
+    "path": "research/salaries/gap-fill-2026-11-02/health_boards/peer-health-employees/first-transcript-index.json",
+    "sha256": "539fec65b1c7095b4b656ae8dec12f10ef1c30b12a979a35970f6898b1c0662c"
+  },
+  "sourceViewManifest": {
+    "path": "research/salaries/gap-fill-2026-11-02/health_boards/peer-health-employees/fresh-reread-source-views-001.json",
+    "sha256": "01b26a396d86ccc6f455143904d0b95a5bbc8a3bb44372d82677c89aa635cbc0"
+  },
+  "candidateAmountsSeenBeforeFreshReading": false,
+  "method": "Fresh576dpi complete original pages rendered, then integer context/pay crops; personally reread exact target name, remuneration and expense field. No balancing/subtotal/threshold inference and no renderer-defect claim.",
+  "corrections": [
+    {
+      "id": "health-reader-001-011",
+      "sourceKey": "island-health-2012-13",
+      "sourceSha256": "4f2b52f9505b3271197eac5d4d9e060129cd47824090cca7a35d74260ef5b55d",
+      "physicalPage": 5,
+      "nameLiteral": "BENSON,JULIE D",
+      "oldRemuneration": 83564,
+      "freshRemuneration": 88564,
+      "expenses": null,
+      "uncertainty": [],
+      "reason": "The first reading83,564 misread an8 as3; the fresh original clearly reads88,564.",
+      "candidateValuesSeenBeforeFreshReading": false,
+      "sourceViews": [
+        {
+          "id": "health-reader-001-011",
+          "sourceKey": "island-health-2012-13",
+          "sourceSha256": "4f2b52f9505b3271197eac5d4d9e060129cd47824090cca7a35d74260ef5b55d",
+          "physicalPage": 5,
+          "dpi": 576,
+          "wholePagePixelSha256": "32172f625f7353bf0816a8fadea75f94d1e88e9238c0ec6b99f3b1a459fdce08",
+          "integerCropPixelBox": [
+            0,
+            3628,
+            4896,
+            3916
+          ],
+          "path": "research/salaries/gap-fill-2026-11-02/health_boards/peer-health-employees/target-011-fresh-576-context.png",
+          "sha256": "a93e491a9f35b63b6100b7500b03dc6b4b1dec43fcdf7aac66fe3df014873929",
+          "view": "context"
+        },
+        {
+          "id": "health-reader-001-011",
+          "sourceKey": "island-health-2012-13",
+          "sourceSha256": "4f2b52f9505b3271197eac5d4d9e060129cd47824090cca7a35d74260ef5b55d",
+          "physicalPage": 5,
+          "dpi": 576,
+          "wholePagePixelSha256": "32172f625f7353bf0816a8fadea75f94d1e88e9238c0ec6b99f3b1a459fdce08",
+          "integerCropPixelBox": [
+            2400,
+            3628,
+            3900,
+            3916
+          ],
+          "path": "research/salaries/gap-fill-2026-11-02/health_boards/peer-health-employees/target-011-fresh-576-pay.png",
+          "sha256": "9b8534ab304ebfcdc55782d0ea6ff280fa2c653aacf22070ed395f4e122cc1e7",
+          "view": "pay"
+        }
+      ]
+    },
+    {
+      "id": "health-reader-001-051",
+      "sourceKey": "island-health-2012-13",
+      "sourceSha256": "4f2b52f9505b3271197eac5d4d9e060129cd47824090cca7a35d74260ef5b55d",
+      "physicalPage": 45,
+      "nameLiteral": "RAND,KRISTINA L",
+      "oldRemuneration": 14745,
+      "freshRemuneration": 114745,
+      "expenses": null,
+      "uncertainty": [],
+      "reason": "The first reading14,745 omitted a leading1; the fresh original clearly reads114,745. This is a transcription correction, not a genuine source under-threshold exception.",
+      "candidateValuesSeenBeforeFreshReading": false,
+      "sourceViews": [
+        {
+          "id": "health-reader-001-051",
+          "sourceKey": "island-health-2012-13",
+          "sourceSha256": "4f2b52f9505b3271197eac5d4d9e060129cd47824090cca7a35d74260ef5b55d",
+          "physicalPage": 45,
+          "dpi": 576,
+          "wholePagePixelSha256": "a2d523b60f7accde09c1a977e0618f0c6cbf5f46ca4d5155b664f63db6823639",
+          "integerCropPixelBox": [
+            0,
+            3628,
+            4896,
+            3916
+          ],
+          "path": "research/salaries/gap-fill-2026-11-02/health_boards/peer-health-employees/target-051-fresh-576-context.png",
+          "sha256": "9358b055fae495fc1203658f727393c05a7683418ed5652e7b81f930df4a5a9b",
+          "view": "context"
+        },
+        {
+          "id": "health-reader-001-051",
+          "sourceKey": "island-health-2012-13",
+          "sourceSha256": "4f2b52f9505b3271197eac5d4d9e060129cd47824090cca7a35d74260ef5b55d",
+          "physicalPage": 45,
+          "dpi": 576,
+          "wholePagePixelSha256": "a2d523b60f7accde09c1a977e0618f0c6cbf5f46ca4d5155b664f63db6823639",
+          "integerCropPixelBox": [
+            2400,
+            3628,
+            3900,
+            3916
+          ],
+          "path": "research/salaries/gap-fill-2026-11-02/health_boards/peer-health-employees/target-051-fresh-576-pay.png",
+          "sha256": "c1f9309c93a2d658c59b01379068a598193057570095ef895f14aaf2b0f761e6",
+          "view": "pay"
+        }
+      ]
+    },
+    {
+      "id": "health-reader-001-062",
+      "sourceKey": "island-health-2012-13",
+      "sourceSha256": "4f2b52f9505b3271197eac5d4d9e060129cd47824090cca7a35d74260ef5b55d",
+      "physicalPage": 56,
+      "nameLiteral": "VINTILA,IULIAN",
+      "oldRemuneration": 82551,
+      "freshRemuneration": 82651,
+      "expenses": null,
+      "uncertainty": [],
+      "reason": "The first reading82,551 misread6 as5; the fresh original clearly reads82,651.",
+      "candidateValuesSeenBeforeFreshReading": false,
+      "sourceViews": [
+        {
+          "id": "health-reader-001-062",
+          "sourceKey": "island-health-2012-13",
+          "sourceSha256": "4f2b52f9505b3271197eac5d4d9e060129cd47824090cca7a35d74260ef5b55d",
+          "physicalPage": 56,
+          "dpi": 576,
+          "wholePagePixelSha256": "e2f41c308cd3c4ed73522dc73fdafa89083d27813e66f11cc56a273793281dc6",
+          "integerCropPixelBox": [
+            0,
+            3628,
+            4896,
+            3916
+          ],
+          "path": "research/salaries/gap-fill-2026-11-02/health_boards/peer-health-employees/target-062-fresh-576-context.png",
+          "sha256": "f94790103f9418aacc49d3cc02e5d662264fb078cebd0ef457e4dd5643dfa8b5",
+          "view": "context"
+        },
+        {
+          "id": "health-reader-001-062",
+          "sourceKey": "island-health-2012-13",
+          "sourceSha256": "4f2b52f9505b3271197eac5d4d9e060129cd47824090cca7a35d74260ef5b55d",
+          "physicalPage": 56,
+          "dpi": 576,
+          "wholePagePixelSha256": "e2f41c308cd3c4ed73522dc73fdafa89083d27813e66f11cc56a273793281dc6",
+          "integerCropPixelBox": [
+            2400,
+            3628,
+            3900,
+            3916
+          ],
+          "path": "research/salaries/gap-fill-2026-11-02/health_boards/peer-health-employees/target-062-fresh-576-pay.png",
+          "sha256": "8690e39548c9283c346274270a2b57b1dd8284340ed4a88251039818020ce7fc",
+          "view": "pay"
+        }
+      ]
+    }
+  ],
+  "firstTranscriptsPreserved": true,
+  "noOutreach": true
+}

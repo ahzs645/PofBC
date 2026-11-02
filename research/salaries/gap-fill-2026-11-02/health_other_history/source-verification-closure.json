@@ -1,0 +1,278 @@
+{
+  "status": "nine employee source extractions and bounded Fraser context comparison complete; root normalized adoption pending",
+  "employeeOriginals": 9,
+  "supportingContextOriginals": 1,
+  "employeeCohorts": 9,
+  "numericRows": 11471,
+  "initialNativeRows": 11470,
+  "additionalLiteralObservation": {
+    "name": "WILSON. TOM",
+    "pay": 77451,
+    "expenses": 0,
+    "physicalPage": 47,
+    "source": "island-health-2009-10"
+  },
+  "all247ImageTargetsClosed": true,
+  "allTwoReaderFlagsClosed": true,
+  "physicalPagesCensused": 230,
+  "employeeTablePages": 221,
+  "allSourcePaymentAnchorsAccountedFor": true,
+  "unmatchedAnchorDecisions": [
+    {
+      "sourceKey": "northern-health-2007-08",
+      "physicalPage": 16,
+      "rawMonetaryToken": "62,688,121",
+      "leftLiteral": "TOTAL EMPLOYEES > $75,000",
+      "decision": "Printed aggregate control retained; not an employee row."
+    },
+    {
+      "sourceKey": "northern-health-2007-08",
+      "physicalPage": 16,
+      "rawMonetaryToken": "217,872,117",
+      "leftLiteral": "TOTAL EMPLOYEES = OR < $75,000",
+      "decision": "Printed aggregate control retained; not an employee row."
+    },
+    {
+      "sourceKey": "northern-health-2007-08",
+      "physicalPage": 16,
+      "rawMonetaryToken": "280,560,238",
+      "leftLiteral": "GRAND TOTAL",
+      "decision": "Printed aggregate control retained; not an employee row."
+    },
+    {
+      "sourceKey": "northern-health-2006-07",
+      "physicalPage": 16,
+      "rawMonetaryToken": "64,013,211",
+      "leftLiteral": "TOTAL EMPLOYEES > $75,000",
+      "decision": "Printed aggregate control retained; not an employee row."
+    },
+    {
+      "sourceKey": "northern-health-2006-07",
+      "physicalPage": 16,
+      "rawMonetaryToken": "215,302,167",
+      "leftLiteral": "TOTAL EMPLOYEES = OR < $75,000",
+      "decision": "Printed aggregate control retained; not an employee row."
+    },
+    {
+      "sourceKey": "northern-health-2006-07",
+      "physicalPage": 16,
+      "rawMonetaryToken": "279,315,378",
+      "leftLiteral": "GRAND TOTAL",
+      "decision": "Printed aggregate control retained; not an employee row."
+    },
+    {
+      "sourceKey": "northern-health-2005-06",
+      "physicalPage": 10,
+      "rawMonetaryToken": "36,592,603",
+      "leftLiteral": "TOTAL EMPLOYEES > $75,000",
+      "decision": "Printed aggregate control retained; not an employee row."
+    },
+    {
+      "sourceKey": "northern-health-2005-06",
+      "physicalPage": 10,
+      "rawMonetaryToken": "203,126,071",
+      "leftLiteral": "TOTAL EMPLOYEES = OR < $75,000",
+      "decision": "Printed aggregate control retained; not an employee row."
+    },
+    {
+      "sourceKey": "northern-health-2005-06",
+      "physicalPage": 10,
+      "rawMonetaryToken": "239,718,674",
+      "leftLiteral": "GRAND TOTAL",
+      "decision": "Printed aggregate control retained; not an employee row."
+    },
+    {
+      "sourceKey": "northern-health-2004-05",
+      "physicalPage": 10,
+      "rawMonetaryToken": "33,863,906",
+      "leftLiteral": "TOTAL EMPLOYEES > $75,000",
+      "decision": "Printed aggregate control retained; not an employee row."
+    },
+    {
+      "sourceKey": "northern-health-2004-05",
+      "physicalPage": 10,
+      "rawMonetaryToken": "195,364,416",
+      "leftLiteral": "TOTAL EMPLOYEES = OR < $75,000",
+      "decision": "Printed aggregate control retained; not an employee row."
+    },
+    {
+      "sourceKey": "northern-health-2004-05",
+      "physicalPage": 10,
+      "rawMonetaryToken": "229,228,322",
+      "leftLiteral": "GRAND TOTAL",
+      "decision": "Printed aggregate control retained; not an employee row."
+    },
+    {
+      "sourceKey": "northern-health-2003-04",
+      "physicalPage": 2,
+      "rawMonetaryToken": "8",
+      "leftLiteral": "Page 1 of",
+      "decision": "PageNof8 footer, not an employee salary."
+    },
+    {
+      "sourceKey": "northern-health-2003-04",
+      "physicalPage": 3,
+      "rawMonetaryToken": "8",
+      "leftLiteral": "Page 2 of",
+      "decision": "PageNof8 footer, not an employee salary."
+    },
+    {
+      "sourceKey": "northern-health-2003-04",
+      "physicalPage": 4,
+      "rawMonetaryToken": "8",
+      "leftLiteral": "Page 3 of",
+      "decision": "PageNof8 footer, not an employee salary."
+    },
+    {
+      "sourceKey": "northern-health-2003-04",
+      "physicalPage": 5,
+      "rawMonetaryToken": "8",
+      "leftLiteral": "Page 4 of",
+      "decision": "PageNof8 footer, not an employee salary."
+    },
+    {
+      "sourceKey": "northern-health-2003-04",
+      "physicalPage": 6,
+      "rawMonetaryToken": "8",
+      "leftLiteral": "Page 5 of",
+      "decision": "PageNof8 footer, not an employee salary."
+    },
+    {
+      "sourceKey": "northern-health-2003-04",
+      "physicalPage": 7,
+      "rawMonetaryToken": "8",
+      "leftLiteral": "Page 6 of",
+      "decision": "PageNof8 footer, not an employee salary."
+    },
+    {
+      "sourceKey": "northern-health-2003-04",
+      "physicalPage": 8,
+      "rawMonetaryToken": "8",
+      "leftLiteral": "Page 7 of",
+      "decision": "PageNof8 footer, not an employee salary."
+    },
+    {
+      "sourceKey": "northern-health-2003-04",
+      "physicalPage": 9,
+      "rawMonetaryToken": "32,074,705",
+      "leftLiteral": "TOTAL EMPLOYEES > $75,000",
+      "decision": "Printed aggregate control retained; not an employee row."
+    },
+    {
+      "sourceKey": "northern-health-2003-04",
+      "physicalPage": 9,
+      "rawMonetaryToken": "8",
+      "leftLiteral": "Page 8 of",
+      "decision": "PageNof8 footer, not an employee salary."
+    },
+    {
+      "sourceKey": "island-health-2011-12",
+      "physicalPage": 53,
+      "rawMonetaryToken": "253,010,877",
+      "leftLiteral": "Total over $75,000",
+      "decision": "Printed aggregate control retained; not an employee row."
+    },
+    {
+      "sourceKey": "island-health-2011-12",
+      "physicalPage": 53,
+      "rawMonetaryToken": "546,387,518",
+      "leftLiteral": "Total under $75,000",
+      "decision": "Printed aggregate control retained; not an employee row."
+    },
+    {
+      "sourceKey": "island-health-2009-10",
+      "physicalPage": 47,
+      "rawMonetaryToken": "77,451",
+      "leftLiteral": "WILSON. TOM",
+      "decision": "Exact independently image-read WILSON. TOM row added with literal expense zero."
+    },
+    {
+      "sourceKey": "northern-health-2014-15",
+      "physicalPage": 26,
+      "rawMonetaryToken": "116,974,826",
+      "leftLiteral": "TOTAL EMPLOYEES > $75,000",
+      "decision": "Printed aggregate control retained; not an employee row."
+    },
+    {
+      "sourceKey": "northern-health-2014-15",
+      "physicalPage": 26,
+      "rawMonetaryToken": "228,627,703",
+      "leftLiteral": "TOTAL EMPLOYEES = OR < $75,000",
+      "decision": "Printed aggregate control retained; not an employee row."
+    },
+    {
+      "sourceKey": "northern-health-2014-15",
+      "physicalPage": 26,
+      "rawMonetaryToken": "345,602,529",
+      "leftLiteral": "GRAND TOTAL",
+      "decision": "Printed aggregate control retained; not an employee row."
+    }
+  ],
+  "visibilityDiagnostics": 0,
+  "compiledRowsRemoved": 0,
+  "allTopRetentionAndScopeFlagsValid": true,
+  "northern2014Summary1255ActualTable1254Explicit": true,
+  "firstPeerCorrections": [
+    [
+      "health-other-source-001-048",
+      "expenses",
+      "428.87",
+      "423.87"
+    ],
+    [
+      "health-other-source-001-218",
+      "literalName",
+      "RIEMAN, MICHAEL A",
+      "RIEFMAN, MICHAEL A"
+    ],
+    [
+      "health-other-source-001-228",
+      "literalName",
+      "SIMONS, LISA A",
+      "SIMMONS, LISA A"
+    ]
+  ],
+  "proofs": [
+    {
+      "path": "research/salaries/gap-fill-2026-11-02/health_other_history/source-context-review-packet.json",
+      "sha256": "ad1fe579d850fa3f32ac5fd442d2aa3cc54d29957471d6837f26d4dee8c466cb"
+    },
+    {
+      "path": "research/salaries/gap-fill-2026-11-02/health_other_history/source-context-image-index.json",
+      "sha256": "26aa1cd7b25d60e9e761881fc8b5b954de19b72a4ceae6fc90af26f0c0a9af7a"
+    },
+    {
+      "path": "research/salaries/gap-fill-2026-11-02/health_other_history/native-census-index-v3.json",
+      "sha256": "454a78b72c87923a881e56ef499e8391217018b2f56d489c2d4c0f6e9f56bfcd"
+    },
+    {
+      "path": "research/salaries/gap-fill-2026-11-02/health_other_history/complete-monetary-column-census.json",
+      "sha256": "a4c891f1b0a4d601a9b3fbf6847c7d47a9eb33c51cee5434cc0190ccb94dc78f"
+    },
+    {
+      "path": "research/salaries/gap-fill-2026-11-02/health_other_history/native-image-scope-audit.json",
+      "sha256": "f8e75897de6e09e58b06e2e4504670b1ac5b72d6a1b7618fb72a94e95734fecb"
+    },
+    {
+      "path": "research/salaries/gap-fill-2026-11-02/health_other_history/fraser-contract-context/supporting-source-disposition.json",
+      "sha256": "83594ad522af331807635b87ea4ada5629d16a7d86b1f048d4c1ebdd49e7c6e9"
+    },
+    {
+      "path": "research/salaries/gap-fill-2026-11-02/reviews/health-other-context-root/root-nine-source-context-acceptance.json",
+      "sha256": "637ee861ba71716949d5e72e73bcda78e1ac6772f952cc4017270dba04d025f8"
+    },
+    {
+      "path": "research/salaries/gap-fill-2026-11-02/school_native/reviews/health-other-history/independent247-source-exception-review.json",
+      "sha256": "48d870b7820a1e8b20c2d5528b6d99244313434f778e4951e210f5f92e15610b"
+    },
+    {
+      "path": "research/salaries/gap-fill-2026-11-02/school_native/reviews/health-other-history/final-normalized247-source-review-overlay.json",
+      "sha256": "9d097ada643ed3ab0f4d818163f1bb69e59b1aeb8a7979d158d50373bf5caae2"
+    }
+  ],
+  "manifest": {
+    "path": "research/salaries/gap-fill-health-other-history/sources-candidate.json",
+    "sha256": "ab974e2780ef9fc3706b0d2d64b8fafd188644ca556a6763a4cf22ce4e8e8a22"
+  },
+  "noOutreach": true
+}

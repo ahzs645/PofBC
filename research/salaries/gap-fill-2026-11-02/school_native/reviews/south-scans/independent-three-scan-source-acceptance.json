@@ -1,0 +1,483 @@
+{
+  "reviewer": "/root/gap_school_native",
+  "acceptedOriginals": 3,
+  "acceptedCohorts": 6,
+  "acceptedRows": 750,
+  "acceptedEmployees": 731,
+  "acceptedTrustees": 19,
+  "completePersonalSourceReadUniqueRows": 105,
+  "sourceFirstTargetRows": 83,
+  "completePersonalTrusteeRows": 19,
+  "sourceExpenseCalibrationCellsPersonallyRead": 30,
+  "sourceContextPagesPersonallyRead": 15,
+  "method": "All83 source-only initial flags/recovered rows/holdouts/confidence rows were personally transcribed as complete name/title/pay/expense observations before opening any candidate values. All19 trustee rows and30 entire expense calibration cells were also source-read before comparison. Seven additional internal word-space alternative targets were adaptively rerendered and personally read after comparison; one overlaps the first83, giving105 unique complete observations. Full original rasters and all750 raw OCR row outputs were replayed. A separate whole-page raw-digit pay-column census bypassed the shared named-row predicate and table windows;54 outside anchors are explicitly classified as source totals/aggregates/letterheads/footers. Every372 null expense cell was independently replayed as actual source ink, with370 single-component calibrated glyphs and2 explicit personally source-read dash exceptions. Neither OCR absence nor financial balancing establishes a value. This is not a claim of a second personal transcription of all750 observations.",
+  "all105PersonalFourFieldSourceReadingsExactlyAgreeWithSelectedV14": true,
+  "all30ExpenseCalibrationReadingsAgreeAfterOneAdditivePeerLocatorCorrection": true,
+  "allCurrentLowScoreRowsPersonallyRead": true,
+  "firstSourceReadingsFreeze": {
+    "file": "research/salaries/gap-fill-2026-11-02/school_native/reviews/south-scans/all-first-source-readings-freeze.json",
+    "sha256": "2654145e5dd30953980ebd4a89e22d792b4f024f270f16d956fe481fc429e6a7"
+  },
+  "firstV10AndV12Comparison": {
+    "file": "research/salaries/gap-fill-2026-11-02/school_native/reviews/south-scans/initial-v10-and-v12-source-comparison.json",
+    "sha256": "7574118cc85956e48b2c9d8dddb4688b9dc1a0d6b8d28ba8f5bf2c442b040a28"
+  },
+  "originalReplay": {
+    "file": "research/salaries/gap-fill-2026-11-02/school_native/reviews/south-scans/first-original-pixel-replay.json",
+    "sha256": "1556555cc99e14ebe09eda90727b616a4704b95b1db4874f2e2ae768617f3dcf"
+  },
+  "full750RawReaderAndSourceGeometryAudit": {
+    "file": "research/salaries/gap-fill-2026-11-02/school_native/reviews/south-scans/full-source-coverage-and-guard-audit-v14.json",
+    "sha256": "ebf670e86ab0ccf506d849257448eb6f63ee2ffc162815e8bb88a8002dfb2621"
+  },
+  "broaderSharedSkipCensus": {
+    "file": "research/salaries/gap-fill-2026-11-02/school_native/reviews/south-scans/broad-outside-payment-anchor-classifications.json",
+    "sha256": "a41975223f8f72d1f801caa79b5fe8feaaa3a32ebd06497689c5d3cf9fc740ed"
+  },
+  "adaptiveSourceTargets": {
+    "file": "research/salaries/gap-fill-2026-11-02/school_native/reviews/south-scans/adaptive-internal-word-spacing-targets.json",
+    "sha256": "e808417738c9ecf0748090916e82e9e44d1cf6131af20b5d3cf74af72659765e"
+  },
+  "adaptiveActualSourceReadings": {
+    "file": "research/salaries/gap-fill-2026-11-02/school_native/reviews/south-scans/adaptive-full-source-row-rereadings.txt",
+    "sha256": "b7e0046ea3c4bf35b6856003a184666ecf70512b78ead677ce433f2de3078404"
+  },
+  "sourceContextAndLiteralControls": {
+    "file": "research/salaries/gap-fill-2026-11-02/school_native/reviews/south-scans/first-personal-source-context-and-controls.json",
+    "sha256": "bebc7b64291ade27df5ccf4371f76062ecdc402de5f2e8a126dfc3c77202d4ce"
+  },
+  "expenseCalibrationReread": {
+    "file": "research/salaries/gap-fill-2026-11-02/school_native/reviews/south-scans/expense-glyph-transcript-source-reread-v2.json",
+    "sha256": "365f76b1206ea4c20bdea0418b29d1fd384cf5a65caddb1a0d0db23f2b572700"
+  },
+  "additiveCorrectionsPreservingFirstReadings": [
+    {
+      "district": 69,
+      "sequence": 33,
+      "v10": "BRAVO, ELIAM",
+      "v12AndV14": "BRAVO, ELIA M",
+      "sourceBasis": "Original source visibly has internal word space; primary confidence review and independent source-first target agree."
+    },
+    {
+      "district": 69,
+      "sequence": 29,
+      "v12": "BOQUIST, TRIONAA",
+      "v14": "BOQUIST, TRIONA A",
+      "sourceBasis": "Adaptive independent original source reread plus separate primary original confirmation."
+    },
+    {
+      "district": 78,
+      "sequence": 19,
+      "v12": "Carpenter, CatinaA",
+      "v14": "Carpenter, Catina A",
+      "sourceBasis": "Adaptive independent original source reread plus separate primary original confirmation."
+    },
+    {
+      "district": 78,
+      "sequence": 136,
+      "v12": "Watchorn, WitA",
+      "v14": "Watchorn, Wil A",
+      "sourceBasis": "Fresh600dpi actual original name crop shows lower-case l with baseline foot and no t crossbar; independent primary source comparison with same-page l confirms shared OCR letter error and missing space."
+    },
+    {
+      "district": 78,
+      "sequence": 139,
+      "v12": "Weber, AmandaL",
+      "v14": "Weber, Amanda L",
+      "sourceBasis": "Adaptive independent original source reread plus separate primary original confirmation."
+    },
+    {
+      "type": "peer locator transcription error; no candidate data error",
+      "firstPeerGlyphLabel": "SD70seq97",
+      "actualSourcePacketLocator": "SD70seq90",
+      "printedValue": "50.00",
+      "sourceBasis": "The first peer calibration transcript miscopied the sheet seq90 label as97. Original packet/crop locator and fresh full original row prove Dyer,Jelena seq90. First calibration transcript is preserved; candidate seq90 already matches."
+    }
+  ],
+  "reports": [
+    {
+      "district": 69,
+      "sourceIdPrefix": "gap-school-south-sd69-2024-25",
+      "sourceSha256": "a5afb62a710909a8512aedca6ce5217e5e555bd44e9f7a7bb15f9a1be5eaf18f",
+      "sourcePdf": "/workspace/gap-school-south-cache/sd69-sofi-2025.pdf",
+      "selectedCandidate": {
+        "file": "research/salaries/gap-fill-2026-11-02/school_south/sd69-scan-reviewed-candidate-v14.json.gzip",
+        "sha256": "f9f8b366923500cfb9a3eaa9ae71815383be0dee128c39c6bafb908e382a7b0c"
+      },
+      "v10InitialCandidate": {
+        "file": "research/salaries/gap-fill-2026-11-02/school_south/sd69-scan-reviewed-candidate-v10.json.gzip",
+        "sha256": "5678688e61290973c495561742735ebb2e3930bbc9d730a60edb1c1f82bf7649"
+      },
+      "v12PreservedCandidate": {
+        "file": "research/salaries/gap-fill-2026-11-02/school_south/sd69-scan-reviewed-candidate-v12.json.gzip",
+        "sha256": "8f4b864d9d8297dafc09d6568edc7a67e3d53d5438c62e2d22ded0c447a13b38"
+      },
+      "rawReaders": {
+        "file": "research/salaries/gap-fill-2026-11-02/school_south/sd69-scan-parsed-v9.json.gzip",
+        "sha256": "f38618d71222c9c10803eafde354b0cfd8f6b7b3a3fcfbaebbe3a4ace22bf318"
+      },
+      "acceptedRows": 309,
+      "acceptedScopes": {
+        "employee-remuneration": {
+          "rows": 304,
+          "printedPayControl": "32130920.92",
+          "computedPaySum": "32130920.92",
+          "payResidual": "0.00",
+          "printedExpenseControl": "164942.12",
+          "computedKnownExpenseSum": "164942.12",
+          "knownExpenseSumMinusPrintedControl": "0.00",
+          "unknownExpenseCells": 160,
+          "expenseControlDoesNotImputeUnknownCellsZero": true,
+          "fullyKnownExpenseCells": false
+        },
+        "school-trustees": {
+          "rows": 5,
+          "printedPayControl": "103830.85",
+          "computedPaySum": "103830.85",
+          "payResidual": "0.00",
+          "printedExpenseControl": "6583.78",
+          "computedKnownExpenseSum": "6583.78",
+          "knownExpenseSumMinusPrintedControl": "0.00",
+          "unknownExpenseCells": 0,
+          "expenseControlDoesNotImputeUnknownCellsZero": true,
+          "fullyKnownExpenseCells": true
+        }
+      },
+      "personalCompleteFourFieldSourceReadSequences": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        18,
+        29,
+        33,
+        41,
+        45,
+        49,
+        50,
+        53,
+        72,
+        75,
+        99,
+        100,
+        105,
+        112,
+        117,
+        121,
+        146,
+        147,
+        155,
+        162,
+        164,
+        177,
+        183,
+        189,
+        196,
+        203,
+        205,
+        236,
+        243,
+        256,
+        260,
+        270,
+        277,
+        280,
+        291,
+        295,
+        301
+      ],
+      "originalTargetKindsCounts": {
+        "initial-true-field-flag": 19,
+        "confidence-only-primary-image-audit": 12,
+        "withheld-guarded-agreement-benchmark": 10
+      },
+      "allLowScoreSourceRowsPersonallyRead": 12,
+      "fullSourceNullExpenseInkProofCells": 160,
+      "calibratedSingleHorizontalGlyphCells": 159,
+      "personallyReadDashExceptions": [
+        {
+          "sequence": 18,
+          "physicalPage": 46,
+          "legacySequence": 18,
+          "fullExpenseCellBox300Dpi": [
+            2010,
+            1163,
+            2300,
+            1204
+          ],
+          "completeCellBlackPixels": 24,
+          "oneConnectedHorizontalGlyph": false,
+          "independentPersonalSourceDashReading": true,
+          "connectedInkComponents": 2,
+          "blankRejected": true
+        }
+      ],
+      "manualSourceReadingsPins": [
+        {
+          "path": "/workspace/PofBC/research/salaries/gap-fill-2026-11-02/school_south/sd69-primary-flag-source-readings.json",
+          "sha256": "b94f04175c2831193823436f111daf5605650faeaaf58b2e18653f0b186eabf1"
+        },
+        {
+          "path": "/workspace/PofBC/research/salaries/gap-fill-2026-11-02/school_south/sd69-primary-confidence-and-recovered-source-readings.json",
+          "sha256": "712557822e2c98b1a1c23092056ce04995e40b1a45ad181ced8886d454c00b91"
+        },
+        {
+          "path": "/workspace/PofBC/research/salaries/gap-fill-2026-11-02/school_south/adaptive-all13-low-expense-primary-readings.json",
+          "sha256": "37d02a782035b9fa593a549b9d89b1a020b5734f79e39e58659b30a497b29584"
+        },
+        {
+          "path": "/workspace/PofBC/research/salaries/gap-fill-2026-11-02/school_south/adaptive-four-name-space-primary-readings.json",
+          "sha256": "a2fa29393223f9871a672705207ece0df3fb2117c3bf223e8e41907f351c024a"
+        }
+      ],
+      "noRemainingFlags": true
+    },
+    {
+      "district": 70,
+      "sourceIdPrefix": "gap-school-south-sd70-2024-25",
+      "sourceSha256": "460d9ffe988b4223030d777c7f6eea375ff3305032156108f3b58e820ac83223",
+      "sourcePdf": "/workspace/gap-school-south-cache/sd70-sofi-2025.pdf",
+      "selectedCandidate": {
+        "file": "research/salaries/gap-fill-2026-11-02/school_south/sd70-scan-reviewed-candidate-v14.json.gzip",
+        "sha256": "9ced8074311eb4f2394afb4e1d5dac7bfda7b6d9be2351bca421b2d222ae6759"
+      },
+      "v10InitialCandidate": {
+        "file": "research/salaries/gap-fill-2026-11-02/school_south/sd70-scan-reviewed-candidate-v10.json.gzip",
+        "sha256": "1977847d251f11acdc936ef12237d5c65128b55384d49064683ee1a446831a12"
+      },
+      "v12PreservedCandidate": {
+        "file": "research/salaries/gap-fill-2026-11-02/school_south/sd70-scan-reviewed-candidate-v12.json.gzip",
+        "sha256": "1977847d251f11acdc936ef12237d5c65128b55384d49064683ee1a446831a12"
+      },
+      "rawReaders": {
+        "file": "research/salaries/gap-fill-2026-11-02/school_south/sd70-scan-parsed-v9.json.gzip",
+        "sha256": "1b53b792c74e4218b59a2507c2c92b519a8a07c35c70a6757039a05c62f1be70"
+      },
+      "acceptedRows": 297,
+      "acceptedScopes": {
+        "employee-remuneration": {
+          "rows": 290,
+          "printedPayControl": "30296137.71",
+          "computedPaySum": "30296137.71",
+          "payResidual": "0.00",
+          "printedExpenseControl": "252872.22",
+          "computedKnownExpenseSum": "252872.22",
+          "knownExpenseSumMinusPrintedControl": "0.00",
+          "unknownExpenseCells": 212,
+          "expenseControlDoesNotImputeUnknownCellsZero": true,
+          "fullyKnownExpenseCells": false
+        },
+        "school-trustees": {
+          "rows": 7,
+          "printedPayControl": "114152.16",
+          "computedPaySum": "114152.16",
+          "payResidual": "0.00",
+          "printedExpenseControl": "14884.92",
+          "computedKnownExpenseSum": "14884.92",
+          "knownExpenseSumMinusPrintedControl": "0.00",
+          "unknownExpenseCells": 0,
+          "expenseControlDoesNotImputeUnknownCellsZero": true,
+          "fullyKnownExpenseCells": true
+        }
+      },
+      "personalCompleteFourFieldSourceReadSequences": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        25,
+        30,
+        45,
+        87,
+        88,
+        93,
+        98,
+        103,
+        104,
+        113,
+        119,
+        126,
+        128,
+        130,
+        134,
+        136,
+        149,
+        161,
+        173,
+        174,
+        202,
+        218,
+        219,
+        224,
+        227,
+        247,
+        249,
+        256,
+        262,
+        287
+      ],
+      "originalTargetKindsCounts": {
+        "withheld-guarded-agreement-benchmark": 10,
+        "initial-true-field-flag": 19
+      },
+      "allLowScoreSourceRowsPersonallyRead": 1,
+      "fullSourceNullExpenseInkProofCells": 212,
+      "calibratedSingleHorizontalGlyphCells": 211,
+      "personallyReadDashExceptions": [
+        {
+          "sequence": 88,
+          "physicalPage": 56,
+          "legacySequence": 88,
+          "fullExpenseCellBox300Dpi": [
+            2190,
+            334,
+            2450,
+            381
+          ],
+          "completeCellBlackPixels": 36,
+          "oneConnectedHorizontalGlyph": false,
+          "independentPersonalSourceDashReading": true,
+          "connectedInkComponents": 2,
+          "blankRejected": true
+        }
+      ],
+      "manualSourceReadingsPins": [
+        {
+          "path": "/workspace/PofBC/research/salaries/gap-fill-2026-11-02/school_south/sd70-primary-flag-source-readings.json",
+          "sha256": "45fedaa97aeee297b03439c8c72eb00ec007037654ed2c75177f79e99934ec4a"
+        },
+        {
+          "path": "/workspace/PofBC/research/salaries/gap-fill-2026-11-02/school_south/adaptive-all13-low-expense-primary-readings.json",
+          "sha256": "37d02a782035b9fa593a549b9d89b1a020b5734f79e39e58659b30a497b29584"
+        },
+        {
+          "path": "/workspace/PofBC/research/salaries/gap-fill-2026-11-02/school_south/adaptive-four-name-space-primary-readings.json",
+          "sha256": "a2fa29393223f9871a672705207ece0df3fb2117c3bf223e8e41907f351c024a"
+        }
+      ],
+      "noRemainingFlags": true
+    },
+    {
+      "district": 78,
+      "sourceIdPrefix": "gap-school-south-sd78-2024-25",
+      "sourceSha256": "35e3dd525d788dd8ecc7e11c01dad53d9ae11ba1a93f5437ab7bd9f9af52517f",
+      "sourcePdf": "/workspace/gap-school-south-cache/sd78-sofi-2025.pdf",
+      "selectedCandidate": {
+        "file": "research/salaries/gap-fill-2026-11-02/school_south/sd78-scan-reviewed-candidate-v14.json.gzip",
+        "sha256": "75908112be3dc8cf97451d07ef29c522028eb1c7c57b02dbf73bd3e11b0267d3"
+      },
+      "v10InitialCandidate": {
+        "file": "research/salaries/gap-fill-2026-11-02/school_south/sd78-scan-reviewed-candidate-v10.json.gzip",
+        "sha256": "6c35c8d29945684c45923bcd6b6cc82a1ddd87d2cbed993285ddc54aef52ff3e"
+      },
+      "v12PreservedCandidate": {
+        "file": "research/salaries/gap-fill-2026-11-02/school_south/sd78-scan-reviewed-candidate-v12.json.gzip",
+        "sha256": "3bfc04df76b65b3a19c622fcabeecb30cf62b01b48abb8f7ceb87cd23530c922"
+      },
+      "rawReaders": {
+        "file": "research/salaries/gap-fill-2026-11-02/school_south/sd78-scan-parsed-v9.json.gzip",
+        "sha256": "143dc0824b19cef7e027b9877b9813e5bccd419a1820262253381ce3f6cde2a2"
+      },
+      "acceptedRows": 144,
+      "acceptedScopes": {
+        "employee-remuneration": {
+          "rows": 137,
+          "printedPayControl": "15064017.60",
+          "computedPaySum": "15064017.60",
+          "payResidual": "0.00",
+          "printedExpenseControl": "155972.29",
+          "computedKnownExpenseSum": "155972.29",
+          "knownExpenseSumMinusPrintedControl": "0.00",
+          "unknownExpenseCells": 0,
+          "expenseControlDoesNotImputeUnknownCellsZero": true,
+          "fullyKnownExpenseCells": true
+        },
+        "school-trustees": {
+          "rows": 7,
+          "printedPayControl": "183841.37",
+          "computedPaySum": "183841.37",
+          "payResidual": "0.00",
+          "printedExpenseControl": "17565.34",
+          "computedKnownExpenseSum": "17565.34",
+          "knownExpenseSumMinusPrintedControl": "0.00",
+          "unknownExpenseCells": 0,
+          "expenseControlDoesNotImputeUnknownCellsZero": true,
+          "fullyKnownExpenseCells": true
+        }
+      },
+      "personalCompleteFourFieldSourceReadSequences": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        18,
+        19,
+        25,
+        29,
+        43,
+        52,
+        66,
+        68,
+        74,
+        75,
+        81,
+        86,
+        87,
+        96,
+        99,
+        129,
+        132,
+        136,
+        139
+      ],
+      "originalTargetKindsCounts": {
+        "confidence-only-primary-image-audit": 6,
+        "withheld-guarded-agreement-benchmark": 10,
+        "complete-page-census-recovered-row": 4,
+        "initial-true-field-flag": 3
+      },
+      "allLowScoreSourceRowsPersonallyRead": 7,
+      "fullSourceNullExpenseInkProofCells": 0,
+      "calibratedSingleHorizontalGlyphCells": 0,
+      "personallyReadDashExceptions": [],
+      "manualSourceReadingsPins": [
+        {
+          "path": "/workspace/PofBC/research/salaries/gap-fill-2026-11-02/school_south/sd78-primary-flag-source-readings.json",
+          "sha256": "4f2bfbd57e267771f2aed630f026de62cd4a5cb598e4cd0e7769194cac36604d"
+        },
+        {
+          "path": "/workspace/PofBC/research/salaries/gap-fill-2026-11-02/school_south/sd78-primary-confidence-and-recovered-source-readings.json",
+          "sha256": "486b852a337335906595dd3e604f7543b66bbfa45bfe67f0be4b249140f4bcf2"
+        },
+        {
+          "path": "/workspace/PofBC/research/salaries/gap-fill-2026-11-02/school_south/adaptive-all13-low-expense-primary-readings.json",
+          "sha256": "37d02a782035b9fa593a549b9d89b1a020b5734f79e39e58659b30a497b29584"
+        },
+        {
+          "path": "/workspace/PofBC/research/salaries/gap-fill-2026-11-02/school_south/adaptive-four-name-space-primary-readings.json",
+          "sha256": "a2fa29393223f9871a672705207ece0df3fb2117c3bf223e8e41907f351c024a"
+        }
+      ],
+      "noRemainingFlags": true
+    }
+  ],
+  "requiredPublicQualifications": [
+    "Disclosed payments are not annual base salary rates or complete workforce rosters.",
+    "SD69 andSD70 printed expense dashes remain null/unknown; source control agreement of known cells does not imply zero in unknown cells.",
+    "SD70 visibly truncates some multi-component position classifications; retain only printed visible prefixes and disclose incomplete title text. No missing words expanded.",
+    "SD70 trustee titles andSD78 employee titles are not supplied; fields remain null.",
+    "Separate expenses, aggregate employer CPP/EI and unnamed payroll are not individual remuneration.",
+    "Existing compiled groups remain retained unless complete copy equivalence and reporting-period equivalence are separately proved."
+  ],
+  "guardDurability": "The finalizer was strengthened after review to flag any low Tesseract<0.30/Rapid<0.70 signal lacking a pinned personal source receipt, and numeric expenses contradicting calibrated complete-source-cell dash ink. Final source-specific code snapshots are retained under replayed-processing-code-final-v14. Exact raw/candidate/source hashes must remain pinned for any later build.",
+  "noOutreach": true,
+  "noCompiledRowsDeleted": true,
+  "acceptance": "Accept the six FY2024/25 source cohorts,750 literal observations, subject to the stated published source definitions and null/clipped-title qualifications. Preserve all raw OCR alternatives and earlier selected candidates."
+}

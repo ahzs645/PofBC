@@ -1,0 +1,67 @@
+{
+  "scope": "Finite latest-two PHSA source review only. Complete computational verification and bounded human image transcription are explicitly distinguished in receipts.",
+  "sources": [
+    {
+      "sourceKey": "phsa-2013-14",
+      "status": "source-peer-review-complete; final normalized/root adoption pending",
+      "originalSha256": "2ec6e1491b9686cebad8a350c2229d9b1eddd1a5180052292a4adf662053cd98",
+      "rows": 3991,
+      "boundedPersonallyTranscribedUniqueRows": 453,
+      "selectedInput": {
+        "path": "research/salaries/gap-fill-2026-11-02/phsa_history/phsa-2013-14-scan-selected-v2.json.gzip",
+        "sha256": "2c3b5fc5bd716113644f6d811da71b5beb24e4d8bad4d29faff90f596888eec9"
+      },
+      "completeIndependentSourceReplay": {
+        "path": "research/salaries/gap-fill-2026-11-02/municipal/reviews/phsa-history/phsa-2013-14-selected-v2-complete-source-replay.json",
+        "sha256": "a00ed9f85b28a3b2ff1bfa1daf228d48a7aa6cae3216eb3fb6a7dc0262dab753"
+      },
+      "humanFinalReading": {
+        "path": "research/salaries/gap-fill-2026-11-02/municipal/reviews/phsa-history/phsa-2013-14-selected-v2-final-personal-source-readings.json",
+        "sha256": "b76656f49a6cedc18a3e8c82b0e79653bd98307b0a54473a1f02b207291a6f96"
+      },
+      "literalControlResiduals": [
+        0,
+        0
+      ],
+      "allFinalHumanFieldsAgree": true,
+      "allOriginalPayRowsAndExpenseGlyphClassesAgree": true,
+      "allOriginalPageRGBAndRawReaderChoicesReplayed": true,
+      "unresolvedCandidateFields": []
+    },
+    {
+      "sourceKey": "phsa-2014-15",
+      "status": "source-peer-review-complete; final normalized/root adoption pending",
+      "originalSha256": "0fdd33edf78515e486e8ec35e85c57c4f848ef6863301dc0dfe70dba90e5dc0f",
+      "rows": 4145,
+      "boundedPersonallyTranscribedUniqueRows": 614,
+      "selectedInput": {
+        "path": "research/salaries/gap-fill-2026-11-02/phsa_history/phsa-2014-15-scan-selected-v2.json.gzip",
+        "sha256": "68cb906a8500278cb031ff1098c6c699605f611e9ac1d4db04a382b8d5eb1b32"
+      },
+      "completeIndependentSourceReplay": {
+        "path": "research/salaries/gap-fill-2026-11-02/municipal/reviews/phsa-history/phsa-2014-15-selected-v2-complete-source-replay.json",
+        "sha256": "50593eff6a894868ab27427680529160074161094984d21363ac0bd3f2ec3c13"
+      },
+      "humanFinalReading": {
+        "path": "research/salaries/gap-fill-2026-11-02/municipal/reviews/phsa-history/phsa-2014-15-selected-v2-final-personal-source-readings.json",
+        "sha256": "0ef2f51d9c88f7b62265333344d7fc6baf43a26b53e50d095b0a292c71943b73"
+      },
+      "literalControlResiduals": [
+        48,
+        7
+      ],
+      "allFinalHumanFieldsAgree": true,
+      "allOriginalPayRowsAndExpenseGlyphClassesAgree": true,
+      "allOriginalPageRGBAndRawReaderChoicesReplayed": true,
+      "unresolvedCandidateFields": []
+    }
+  ],
+  "noAllRowHumanTranscriptionClaim": true,
+  "noImputationOrBalancing": true,
+  "allFirstSourceReadingsAndErrorsRetainedAdditively": true,
+  "remainingGates": [
+    "final normalized byte projection and provenance pins",
+    "root release adoption"
+  ],
+  "noOutreach": true
+}
