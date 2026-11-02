@@ -173,13 +173,20 @@ export const GAP_LABELS = {
   'not-found': 'Not in that year’s disclosure'
 }
 
-/** Consecutive years sharing a reason, as runs: [{ from, to, reason }], from and to inclusive. */
-export const gapRuns = (years, reasonOf) => {
+/**
+ * Consecutive years sharing a reason, as runs: [{ from, to, reason }], from and to inclusive.
+ * `periods`, the year indexes in order that a name could appear in, says what consecutive means:
+ * fiscal and calendar labels interleave in the index, so 2020/21 follows 2019/20 in a fiscal history
+ * though 2020 sits between them. Without it, consecutive indexes.
+ */
+export const gapRuns = (years, reasonOf, periods = null) => {
+  const next = periods ? new Map(periods.map((at, position) => [at, periods[position + 1]])) : null
   const runs = []
   for (const year of years) {
     const reason = reasonOf(year)
     const last = runs.at(-1)
-    if (last && last.to === year - 1 && last.reason === reason) last.to = year
+    const follows = last && (next ? next.get(last.to) === year : last.to === year - 1)
+    if (follows && last.reason === reason) last.to = year
     else runs.push({ from: year, to: year, reason })
   }
   return runs

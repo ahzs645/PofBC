@@ -23,7 +23,9 @@ export const PersonPage = ({ chosen, joins = [], joinedElsewhere = [], all, scop
     const [name, , body, slug] = employerOf(row)
     return [slug, { name, body, slug }]
   })).values()]
-  const near = all.filter((row) => !chosen.rows.includes(row))
+  // A name this spelling is joined to is linked above, not offered again as a possible match.
+  const joinedTo = new Set(joinedElsewhere.map((join) => `${join.employer}|${join.key}`))
+  const near = all.filter((row) => !chosen.rows.includes(row) && !joinedTo.has(`${row[4]}|${personKey(row[0])}`))
     .map((row) => ({ row, link: nameMatch(row[0], chosen.name) }))
     .filter(({ link }) => link === 'initial' || link === 'partial')
     .map(({ row }) => row)
@@ -34,8 +36,9 @@ export const PersonPage = ({ chosen, joins = [], joinedElsewhere = [], all, scop
   const points = chosen.years.map((at) => ({ year: at, pay: Math.max(...chosen.rows.filter((row) => row[5] === at).map((row) => row[2])) }))
   // Gaps are counted only among periods of the kinds the name appears in: a name in calendar-year
   // reports has no gap at every fiscal label.
-  const missing = samePeriodKinds(index.years, chosen.years).filter((at) => !chosen.years.includes(at))
-  const runs = gapRuns(missing, (at) => gapReason(index.coverage, associated, at))
+  const periods = samePeriodKinds(index.years, chosen.years)
+  const missing = periods.filter((at) => !chosen.years.includes(at))
+  const runs = gapRuns(missing, (at) => gapReason(index.coverage, associated, at), periods)
   const lines = [
     ...chosen.years.map((at) => ({ at, rows: chosen.rows.filter((row) => row[5] === at).sort((a, b) => b[2] - a[2]) })),
     ...runs.map((run) => ({ at: run.from, run }))
@@ -82,10 +85,12 @@ export const PersonPage = ({ chosen, joins = [], joinedElsewhere = [], all, scop
           <span key={employer.slug}>
             {at > 0 ? ', ' : ''}
             <button type="button" className="salaries__link" onClick={() => onEmployer(employer.slug)}>{employer.name}</button>
-            {employer.body && onOpenGovernment && <> (<button type="button" className="salaries__link" onClick={() => onOpenGovernment(employer.body, Number(index.years[chosen.latest[5]].slice(0, 4)))}>in Government</button>)</>}
+            {employer.body && onOpenGovernment && <span className="salaries__nowrap"> (<button type="button" className="salaries__link" onClick={() => onOpenGovernment(employer.body, Number(index.years[chosen.latest[5]].slice(0, 4)))}>in Government</button>)</span>}
           </span>
         ))}
-        {' '}· {yearLabels.length} {yearLabels.length === 1 ? 'disclosure period' : 'disclosure periods'}, {yearSpan(yearLabels)} · disclosed as “{chosen.name}”
+      </p>
+      <p className="salaries__note">
+        {yearLabels.length} {yearLabels.length === 1 ? 'disclosure period' : 'disclosure periods'}, {yearSpan(yearLabels)} · disclosed as “{nameOnly(chosen.name)}”
       </p>
       {scope && (
         <p className="salaries__hint salaries__hint--small">
@@ -105,7 +110,7 @@ export const PersonPage = ({ chosen, joins = [], joinedElsewhere = [], all, scop
           <ul className="salaries__joins">
             {joins.map((join) => (
               <li key={`${join.employer}|${join.name}`}>
-                “{nameOnly(join.name)}” at {index.employers[join.employer][0]}, {sureness(join.status)}: {join.reason}
+                “{nameOnly(join.name)}” at {index.employers[join.employer][0]}, {/^Reviewed: /.test(join.reason) ? `verified on review: ${join.reason.replace(/^Reviewed: /, '')}` : `${sureness(join.status)}: ${join.reason}`}
               </li>
             ))}
           </ul>
@@ -120,10 +125,10 @@ export const PersonPage = ({ chosen, joins = [], joinedElsewhere = [], all, scop
       ))}
 
       <SourceWarnings sourceIds={chosen.rows.map((row) => row[6])} sources={index.sources} />
-      <dl className="salaries__tiles salaries__tiles--three">
+      <dl className="salaries__tiles salaries__tiles--three salaries__tiles--person">
         <div><dt>Latest</dt><dd>{money(chosen.latest[2])}</dd><dd className="salaries__line">{index.years[chosen.latest[5]]}</dd></div>
         <div><dt>Highest</dt><dd>{money(Math.max(...points.map((point) => point.pay)))}</dd><dd className="salaries__line">{index.years[points.reduce((best, point) => (point.pay > best.pay ? point : best)).year]}</dd></div>
-        <div><dt>Periods</dt><dd>{yearLabels.length}</dd><dd className="salaries__line">of {samePeriodKinds(index.years, chosen.years).length} corresponding periods</dd></div>
+        <div><dt>Periods</dt><dd>{yearLabels.length}</dd><dd className="salaries__line">of {periods.length} corresponding periods</dd></div>
       </dl>
 
       {points.length > 1 && <PayChart years={index.years} points={points} multiple={chosen.shared} />}

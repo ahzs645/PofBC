@@ -1770,7 +1770,8 @@ button.gallery__collecting-status, .gallery__collecting-graph {
 .salaries__back { margin: 0 0 8px; }
 .salaries__person { display: grid; gap: 8px; padding: 20px; border-radius: var(--radius); background: var(--surface); }
 .salaries__person .salaries__card { background: var(--surface); }
-.salaries__link { padding: 0; border: 0; background: none; color: inherit; font: inherit; text-decoration: underline; text-underline-offset: 2px; cursor: pointer; }
+.salaries__link { padding: 0; border: 0; background: none; color: inherit; font: inherit; text-align: inherit; text-decoration: underline; text-underline-offset: 2px; cursor: pointer; }
+.salaries__nowrap { white-space: nowrap; }
 .salaries__source { margin: 0; font-size: 12px; line-height: 1.5; color: var(--ink-faint); max-width: 80ch; }
 .salaries__source p { margin: 0.35em 0; }
 .salaries__name[data-missing] { color: var(--ink-faint); font-style: italic; }
@@ -1786,6 +1787,16 @@ button.gallery__collecting-status, .gallery__collecting-graph {
   .salaries__tiles--three { grid-template-columns: repeat(3, minmax(0, 1fr)); }
   .salaries__tiles--three div { padding: 8px 10px; }
   .salaries__tiles--three dd { font-size: 15px; }
+}
+/* On a phone three tiles leave a payment no room: the two payments side by side, the count under them
+   on one line. */
+@media (max-width: 480px) {
+  .salaries__tiles--person { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .salaries__tiles--person div { padding: 10px 12px; }
+  .salaries__tiles--person dd { font-size: 17px; }
+  .salaries__tiles--person div:nth-child(3) { grid-column: 1 / -1; display: flex; flex-wrap: wrap; align-items: baseline; gap: 2px 8px; }
+  .salaries__tiles--person div:nth-child(3) dt { flex-basis: 100%; }
+  .salaries__tiles--person div:nth-child(3) dd { margin: 0; }
 }
 .salaries__tiles dd.salaries__line { margin: 0; font-size: 12px; font-weight: 400; color: var(--ink-faint); }
 .salaries__hint--small { font-size: 13px; }
