@@ -20,7 +20,7 @@ export const scopeLabel = (scope) => ({
   'oic-appointees': 'Order in Council appointee remuneration',
   'appointee-remuneration': 'Order in Council appointee remuneration',
   'mixed-disclosure': 'Combined disclosure categories; individual sources identify their scope',
-  'compiled-unverified': 'Compiled records; disclosure scope not yet verified'
+  'compiled-unverified': 'Other records'
 }[scope] ?? 'Disclosure scope not yet verified')
 
 /** A row's cited document narrows an employer-year that may combine several disclosure categories. */
@@ -46,6 +46,31 @@ export const recordPeriodLabel = (label, source) => {
 /** These qualifications affect interpretation of published values, so show them with the records. */
 export const sourceWarnings = (sourceIds = [], sources = {}) => [...new Set(sourceIds
   .map((id) => sources[id]?.publicWarning).filter(Boolean))]
+
+// A source's caveat mixes notes that change how a reader takes a number (a partial year, an
+// unaudited or unsigned report, a 15-month period, what expenses include, a name or title the source
+// cut short) with notes on how it was transcribed and checked: dashes kept as unknown, control totals,
+// checksums, compiled overlaps. Only the first kind is shown on the page; the full text stays with the
+// source and in its link's title.
+const READER_NOTE = [
+  /asterisk|starred|part(ial)? (of )?year/i,
+  /unaudited|unsigned|\bdraft\b/i,
+  /fifteen months|15-month|\b\d+ ?pay periods\b|transition period/i,
+  /expenses (may )?include|includes? (travel|vacation)|third part|taxable (benefits|compensation)|RRSP|severance/i,
+  /^(board remuneration|executive-only|salary-only|surname-only|appointee)|separate disclosure|without employee names|no given names/i,
+  /truncated|clipped/i
+]
+const HOUSEKEEPING_NOTE = /compiled|cohort|partition|provenance|evidence|retained|preserved|inferred|assumed|established|claimed|\(p\d+\)|\bCAD\b|transcribed|control|bytes|\bnull\b|remains? (missing|unknown|literal)|not used as|exact sum|aggregate|memo|agenda|differs from|not marked draft\.$|^neither|not expanded|are added as/i
+
+/** The sentences of a source caveat a reader needs, as separate notes. */
+export const readerNoteSentences = (warning = '') => String(warning)
+  .split(/(?<=[.;])\s+(?=[A-Za-z0-9])/)
+  .map((part) => part.trim().replace(/;$/, '.'))
+  .map((part) => part.charAt(0).toUpperCase() + part.slice(1))
+  .filter((part) => READER_NOTE.some((pattern) => pattern.test(part)) && !HOUSEKEEPING_NOTE.test(part))
+
+/** The reader notes of several sources, each sentence once. */
+export const readerNotes = (sourceIds = [], sources = {}) => [...new Set(sourceWarnings(sourceIds, sources).flatMap(readerNoteSentences))]
 
 /** Do not change an inclusive threshold into a strict one, or infer an unstated comparison. */
 export const thresholdLabel = (coverage) => {

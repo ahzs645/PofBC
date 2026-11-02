@@ -1802,6 +1802,7 @@ button.gallery__collecting-status, .gallery__collecting-graph {
 .salaries__hint--small { font-size: 13px; }
 .salaries__joins { margin: 4px 0 0; padding-left: 1.2em; display: grid; gap: 2px; }
 .salaries__caveats > summary { cursor: pointer; width: fit-content; }
+.salaries__matches + .salaries__about { margin-top: 0; }
 .salaries__about { margin-top: 24px; padding-top: 12px; border-top: 1px solid var(--border); }
 .salaries__about > summary { cursor: pointer; width: fit-content; }
 .salaries__about[open] { display: grid; gap: 8px; }
@@ -2023,6 +2024,7 @@ button.gallery__collecting-status, .gallery__collecting-graph {
 .salaries-years { display: grid; margin: 0; padding: 0; list-style: none; }
 .salaries-years > li { display: grid; grid-template-columns: 9em minmax(0, 1fr); gap: 12px; padding: 10px 0; border-bottom: 1px solid var(--hover); }
 .salaries-years__label { font-size: 13px; font-weight: 600; color: var(--ink); font-variant-numeric: tabular-nums; }
+.salaries-years__change { display: block; font-size: 12px; font-weight: 400; color: var(--ink-faint); }
 .salaries-years__gap .salaries-years__label { font-weight: 400; color: var(--ink-faint); }
 .salaries-years__gap { padding: 6px 0; }
 .salaries-years__records { display: grid; gap: 8px; }
