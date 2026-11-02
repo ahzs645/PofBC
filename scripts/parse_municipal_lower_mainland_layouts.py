@@ -133,6 +133,11 @@ def parse_base(path):
                     errors.append(['position-split', at + 1, prefix])
                     continue
                 name, position = parts
+            elif slug == 'west-vancouver':
+                # 2019 and 2022-2024 print a position column after the name, set off by a run of
+                # spaces; 2025 prints names alone. The source prefix is kept in the audit rows.
+                name = parts[0]
+                position = ' '.join(parts[1:]) or None
             else:
                 name = prefix
                 position = None
