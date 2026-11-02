@@ -273,7 +273,7 @@ export const EmployerPage = ({ entry, years, sources, year: wantedYear, show, ro
           {view === 'people' && layout === 'cards' && (
             <Paged list={matchingPeople} size={50} reset={`${year}|${filter}|${chosenCategory}`}>
               {(page) => (
-                <ol className="salaries-rows">
+                <ol className="salaries__grid salaries__grid--list">
                   {page.map((row) => (
                     <RecordRow
                       key={`${row[0]}-${row[2]}-${ranked.indexOf(row)}`}
@@ -430,7 +430,7 @@ const RolePage = ({ entry, years, sources, rows, failed, roleKey, wantedYear, ba
           </div>
           <Paged list={ranked} size={50} reset={year}>
             {(page) => (
-              <ol className="salaries-rows">
+              <ol className="salaries__grid salaries__grid--list">
                 {page.map((row) => (
                   <RecordRow
                     key={`${row[0]}-${row[2]}-${ranked.indexOf(row)}`}

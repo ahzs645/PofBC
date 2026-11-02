@@ -1924,8 +1924,10 @@ button.gallery__collecting-status, .gallery__collecting-graph {
 
 /* One mark a year, filled where there are records. */
 .salaries-strip { display: flex; flex-wrap: wrap; align-items: center; gap: 2px 8px; margin-top: 4px; min-width: 0; }
-.salaries-strip__marks { display: inline-flex; gap: 2px; flex: none; }
-.salaries-strip__marks span { width: 5px; height: 12px; border-radius: 2px; background: var(--sp-hover); box-shadow: inset 0 0 0 1px var(--sp-mid); }
+/* The marks shrink to fit their card: an employer with both calendar and fiscal years can have
+   fifty, wider than a phone's card at full size. */
+.salaries-strip__marks { display: flex; gap: 2px; flex: 0 1 auto; min-width: 0; max-width: 100%; }
+.salaries-strip__marks span { flex: 0 1 auto; width: 5px; min-width: 2px; height: 12px; border-radius: 2px; background: var(--sp-hover); box-shadow: inset 0 0 0 1px var(--sp-mid); }
 .salaries-strip__marks span[data-seen] { background: var(--sp-ink); box-shadow: none; }
 .salaries-strip__text { font-size: 12px; color: var(--sp-faint); font-variant-numeric: tabular-nums; }
 
@@ -1984,14 +1986,15 @@ button.gallery__collecting-status, .gallery__collecting-graph {
 .salaries-disclosure__line strong { color: var(--sp-text); font-weight: 600; }
 .salaries-disclosure a { color: inherit; }
 
-/* Records as rows: rank, who, and pay with its expenses and source under it. */
-.salaries-rows { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 340px), 1fr)); gap: 0 24px; margin: 0; padding: 0; list-style: none; }
-@media (max-width: 400px) { .salaries-rows { grid-template-columns: 1fr; } }
-.salaries-rows--inner { padding: 4px 12px 10px 30px; }
-.salaries__more--inner { margin: 0 0 8px 30px; }
-.salaries-row { display: flex; flex-wrap: wrap; align-items: baseline; gap: 2px 10px; padding: 7px 0; border-bottom: 1px solid var(--hover); font-size: 14px; }
-.salaries-row__rank { flex: none; min-width: 2.2em; font-size: 12px; color: var(--ink-faint); font-variant-numeric: tabular-nums; }
-.salaries-row__who { flex: 1 1 9em; display: grid; gap: 1px; min-width: 0; }
+/* Records as cards in a list: the name opens the person, stretched over the whole card; the source
+   link sits above that so it still opens the document. */
+.salaries__grid--list { margin: 0; padding: 0; list-style: none; }
+.salaries-record-card { position: relative; }
+.salaries-record-card__open { justify-self: start; padding: 0; border: 0; background: none; font: inherit; text-align: left; cursor: pointer; }
+.salaries-record-card__open::after { content: ''; position: absolute; inset: 0; border-radius: 12px; }
+.salaries-record-card__open:focus-visible { outline: none; }
+.salaries-record-card:has(.salaries-record-card__open:focus-visible) { outline: 2px solid var(--salaries-ink, currentColor); outline-offset: 2px; }
+.salaries-record-card .salaries__line a { position: relative; z-index: 1; color: inherit; }
 .salaries-row__name { justify-self: start; text-align: left; color: var(--ink); overflow-wrap: anywhere; }
 /* Who or what keeps at least 9em: where the pay beside it would leave less, the pay drops under it,
    still at the row's end, and its notes (expenses, the source) wrap rather than squeeze either. */
