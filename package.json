@@ -56,6 +56,7 @@
     "audit:sunshine": "node scripts/audit-sunshine-lists.mjs",
     "test:sunshine": "node --test scripts/sunshine-lists.test.mjs scripts/sunshine-coverage.test.mjs scripts/sunshine-compare.test.mjs",
     "preview:salaries": "node scripts/preview-salaries.mjs",
+    "shots:salaries": "node scripts/salary-shots.mjs",
     "check:salaries": "node scripts/check-salary-exports.mjs --write-inventory",
     "build:crest": "python3 scripts/build_crest.py",
     "build:ministry-history": "node scripts/build-ministry-history.mjs",

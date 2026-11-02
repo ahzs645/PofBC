@@ -13,6 +13,11 @@ npm run dev
 
 Already cloned without `--recurse-submodules`? `git submodule update --init --recursive`.
 
+Without a licensed Helvetica (macOS ships one; elsewhere set `FONT_SOURCE`), `npm run dev` still
+starts: the font step writes a stand-in, so lockups show in a system sans and exports embed no font.
+Builds with `CI` or `FONT_REQUIRED` set still stop. `npm run shots:salaries` screenshots the salary
+pages at phone and desktop widths and counts their words (needs Playwright with Chromium).
+
 ## Salary data and coverage
 
 The salary search (`?view=salaries`) combines verified official remuneration schedules with

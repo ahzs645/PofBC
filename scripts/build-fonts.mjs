@@ -52,13 +52,46 @@ function range (from, to) {
 }
 
 if (!existsSync(SOURCE)) {
-  console.error(
+  const message =
     `\nCould not find Helvetica at ${SOURCE}.\n` +
     'This project embeds the real Helvetica the source artwork was set in. On macOS it ships at\n' +
     '/System/Library/Fonts/Helvetica.ttc. Elsewhere, point FONT_SOURCE at a licensed copy:\n\n' +
     '    FONT_SOURCE=/path/to/Helvetica.ttc npm run build:fonts\n'
-  )
-  process.exit(1)
+  // A build that will be published (CI) or asked to be exact (FONT_REQUIRED) still stops here.
+  if (process.env.CI || process.env.FONT_REQUIRED) {
+    console.error(message)
+    process.exit(1)
+  }
+  writeFallback()
+  console.warn(message +
+    '\nContinuing with a stand-in: the site runs and the committed metrics still lay text out, but\n' +
+    'lockups show in a system sans, outlined exports keep live text and exports embed no font.\n')
+  process.exit(0)
+}
+
+/**
+ * Without Helvetica, write only what the app imports so it can start: a stylesheet that maps the
+ * brand family to a local sans, and an empty outline table (exports then keep their text live).
+ * Real generated files from an earlier build are never replaced, and no font file is invented.
+ */
+function writeFallback () {
+  const generated = resolve(root, 'src/fonts/generated')
+  mkdirSync(generated, { recursive: true })
+  const outlinesPath = resolve(generated, 'outlines.js')
+  if (!existsSync(outlinesPath)) {
+    writeFileSync(outlinesPath, '// Stand-in written by scripts/build-fonts.mjs because Helvetica was not found.\nexport default null\n')
+  }
+  const cssPath = resolve(root, 'src/fonts.css')
+  if (!existsSync(cssPath)) {
+    writeFileSync(cssPath, `/* Stand-in written by scripts/build-fonts.mjs because Helvetica was not found. */
+${FACES.map((face) => `@font-face {
+  font-family: '${EMBEDDED_FAMILY}';
+  src: local('Helvetica Neue'), local('Helvetica'), local('Arial'), local('Liberation Sans');
+  font-weight: ${face.weight};
+  font-style: normal;
+}`).join('\n\n')}
+`)
+  }
 }
 
 const source = readFileSync(SOURCE)
