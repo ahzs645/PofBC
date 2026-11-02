@@ -1,8 +1,12 @@
 import { assetUrl } from './collectedCollections.js'
+import { collectedDisplay } from './tileArt.js'
+import { useSiteTheme } from '../site/useTheme.js'
 
 /** A recovered mark is displayed in its source format; raster files stay raster. */
 export const CollectedMarkView = ({ entry }) => {
   const { asset } = entry
+  const { name: theme } = useSiteTheme()
+  const display = collectedDisplay(asset, theme)
   return (
     <section className="gallery__recovered">
       <header className="gallery__head">
@@ -12,9 +16,15 @@ export const CollectedMarkView = ({ entry }) => {
         </div>
         <span className="gallery__asset-format">{asset.format.toUpperCase()} · {asset.isVector ? 'Vector artwork' : asset.format === 'svg' ? 'Contains bitmap artwork' : 'Image'}</span>
       </header>
-      <div className="gallery__recovered-preview" data-dark={asset.darkBackground || undefined}>
-        <img src={assetUrl(asset.preview || asset.file)} alt={entry.label} />
-      </div>
+      {display ? (
+        <div className="gallery__recovered-preview gallery__recovered-preview--clean">
+          <img src={assetUrl(display.file)} alt={entry.label} data-plate={display.plate || undefined} />
+        </div>
+      ) : (
+        <div className="gallery__recovered-preview" data-dark={asset.darkBackground || undefined}>
+          <img src={assetUrl(asset.preview || asset.file)} alt={entry.label} />
+        </div>
+      )}
       <p>{asset.notes}</p>
       <div className="row gallery__asset-downloads">
         <a className="button" href={assetUrl(asset.file)} download>Download {asset.format.toUpperCase()}</a>
@@ -29,6 +39,13 @@ export const CollectedMarkView = ({ entry }) => {
         {asset.creator && <div><dt>Credit</dt><dd>{asset.creator}</dd></div>}
         {asset.license && <div><dt>Source licence</dt><dd>{asset.license_url ? <a href={asset.license_url} target="_blank" rel="noreferrer">{asset.license}</a> : asset.license}</dd></div>}
         {asset.previewNote && <div><dt>Preview</dt><dd>{asset.previewNote}</dd></div>}
+        {display && (
+          <div><dt>Shown</dt><dd>{display.recoloured
+            ? `Trimmed to the logo and, for the ${theme === 'dark' ? 'dark' : 'light'} page, with ink that would disappear into it reversed or ${theme === 'dark' ? 'lightened' : 'darkened'}. The download is the file as published.`
+            : display.plate
+              ? 'Trimmed to the logo and shown in its own colours on a plate, as its overlapping parts cannot be recoloured apart. The download is the file as published.'
+              : 'Trimmed to the logo, in its own colours. The download is the file as published.'}</dd></div>
+        )}
         {asset.sourcePage && <div><dt>Publication</dt><dd><a href={asset.sourcePage} target="_blank" rel="noreferrer">View source publication or page</a>{asset.sourceLocator ? ` · ${asset.sourceLocator}` : ''}</dd></div>}
         {asset.sourceUrl && asset.sourceUrl !== asset.sourcePage && <div><dt>Original file</dt><dd><a href={asset.sourceUrl} target="_blank" rel="noreferrer">View the source file</a></dd></div>}
       </dl>

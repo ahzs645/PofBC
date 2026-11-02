@@ -6,8 +6,11 @@ const dollarsAndCents = new Intl.NumberFormat('en-CA', {
   style: 'currency', currency: 'CAD', minimumFractionDigits: 2, maximumFractionDigits: 2
 })
 
-export const formatMoney = (value, missing = '—') => {
+export const formatMoney = (value, missing = '—', currency = 'CAD') => {
   if (value === null || value === undefined || !Number.isFinite(value)) return missing
+  if (currency === 'unverified') return `${value.toLocaleString('en-CA')} (currency unverified)`
+  if (currency !== 'CAD') return new Intl.NumberFormat('en-CA', { style: 'currency', currency,
+    currencyDisplay: 'symbol', minimumFractionDigits: Number.isInteger(value) ? 0 : 2, maximumFractionDigits: Number.isInteger(value) ? 0 : 2 }).format(value)
   return (Number.isInteger(value) ? wholeDollars : dollarsAndCents).format(value)
 }
 

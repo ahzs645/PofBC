@@ -180,17 +180,24 @@ export const displayName = (name, nameDisclosure) => {
 export const positionKey = (position) => String(position ?? '').toLowerCase().replace(/[^a-z0-9&/+ ]+/g, ' ').replace(/\s+/g, ' ').trim()
 
 /**
- * A name's records for display: a compiled-edition row that repeats another record of the same
- * label — the same payment and expenses — is the same disclosure seen twice, so only one is shown,
- * preferring the original source. Differing compiled payments are kept.
+ * Fold a compiled observation only when one primary row has the same employer, reporting label,
+ * payment and disclosed expenses. Unknown expenses and compiled-only repetitions stay visible.
+ * This display grouping does not establish the compiled observation's reporting year.
  */
-export const withoutCompiledRepeats = (rows, sources = {}) => {
+export const withoutCompiledRepeats = (rows, sources = {}, currencyOfRow = () => 'CAD') => {
   const compiled = (row) => sources[row[6]]?.sourceKind === 'compiled' || sources[row[6]]?.scope === 'compiled-unverified'
-  const seen = new Set()
-  return [...rows].sort((a, b) => Number(compiled(a)) - Number(compiled(b))).filter((row) => {
-    const key = `${row[5]}|${row[2]}|${row[3] ?? ''}`
-    if (compiled(row) && seen.has(key)) return false
-    seen.add(key)
-    return true
-  }).sort((a, b) => rows.indexOf(a) - rows.indexOf(b))
+  const key = (row) => `${row[4]}|${row[5]}|${row[2]}|${row[3]}|${currencyOfRow(row)}`
+  const primary = new Map()
+  for (const row of rows) {
+    const source = sources[row[6]]
+    if (compiled(row) || !source?.url || !source.sha256 || row[3] == null) continue
+    const signature = key(row)
+    if (!primary.has(signature)) primary.set(signature, [])
+    primary.get(signature).push(row)
+  }
+  return rows.filter((row) => {
+    if (!compiled(row) || row[3] == null) return true
+    const matches = primary.get(key(row)) ?? []
+    return matches.length !== 1 || Boolean(row[1] && matches[0][1] && positionKey(row[1]) !== positionKey(matches[0][1]))
+  })
 }

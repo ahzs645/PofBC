@@ -117,6 +117,20 @@ test('the disclosed preferred spelling must belong to the reviewed pair', () => 
     preferredName: 'Ionescu, Diane', decision: 'verified', note: 'wrong preferred name' }]), /disclosed spellings/)
 })
 
+test('a reviewed punctuation correction preserves an older extraction-split connection', () => {
+  const rows = [['Alden, C olin MC', null, 99432, 4824, 0, 0, 'compiled'],
+    ['Alden,Colin MC', null, 80000, null, 0, 1, 'older'], ['Alden,Colin M.C.', null, 99432, 4824, 0, 0, 'official']]
+  const reviewed = [{ employer: employers[0][3], names: [rows[0][0], rows[2][0]], preferredName: rows[2][0], decision: 'verified', note: 'Original row reviewed' }]
+  const result = run(rows, reviewed)
+  assert.equal(result.links.length, 1)
+  assert.equal(result.links[0].name, rows[2][0])
+  assert.deepEqual(new Set(result.links[0].aliases.map((a) => a.name)), new Set(rows.slice(0, 2).map((r) => r[0])))
+  assert.ok(result.links[0].aliases.every((a) => a.status === 'verified'))
+  const conflicting = rows.map((r) => [...r]); conflicting[1][5] = 0
+  assert.equal(run(conflicting, reviewed).links[0].aliases.length, 1)
+  assert.equal(run(rows, [...reviewed, { employer: employers[0][3], names: rows.slice(0, 2).map((r) => r[0]), decision: 'reject', note: 'Explicitly kept apart' }]).links[0].aliases.length, 1)
+})
+
 test('person pages request every surname shard behind a canonical name, without unrelated rows', () => {
   const published = { links: [
     ['bci', 'ionescu|diana', 'Ionescu, Diana', [['lonescu|diana', 'lonescu, Diana', 'verified', 'source']]],
@@ -128,4 +142,49 @@ test('person pages request every surname shard behind a canonical name, without 
   const lookup = linkLookup(published, employers)
   assert.equal(lookup.get('0|lonescu|diana').key, 'ionescu|diana')
   assert.equal(lookup.get('1|lonescu|diana'), undefined)
+})
+
+test('a likely surname bridge never promotes a locally verified spelling into a verified global identity', () => {
+  const rows = [['Murtby, Srinivasa', null, 100, 0, 0, 0, 's'], ['Murthy, Srinivasa', null, 100, 0, 0, 0, 's'], ['Murthy, Srinivasa Kumar', null, 110, 0, 0, 1, 's']]
+  const result = run(rows, [
+    { employer: 'bci', names: [rows[0][0], rows[1][0]], decision: 'verified', preferredName: rows[1][0], note: 'Printed row' },
+    { employer: 'bci', names: [rows[1][0], rows[2][0]], decision: 'likely', note: 'Professional continuity assumption' }
+  ])
+  assert.equal(result.links.length, 1)
+  assert.equal(result.links[0].name, rows[1][0])
+  assert.equal(result.links[0].aliases.find((a) => a.key === 'murtby|srinivasa').status, 'verified')
+  assert.equal(result.links[0].aliases.find((a) => a.key === 'murthy|srinivasa kumar').status, 'likely')
+})
+
+test('a professional reviewed full name is separate metadata; every original disclosed spelling remains an alias', () => {
+  const rows = [['Pittman, J.', 'SVP Private Equity', 1512762, 19531, 0, 0, 's'], ['Pittmsn, Jim', 'EVP', 3902330, 0, 0, 4, 's']]
+  const result = run(rows, [{ employer: 'bci', names: rows.map((r) => r[0]), decision: 'verified', preferredName: rows[0][0], canonicalName: 'Pittman, Jim', note: 'Primary executive disclosure and currency reviewed', evidence: [{ url: 'https://example.test/bci.pdf', pdfPage: 67 }] }])
+  const [group] = result.links
+  assert.equal(group.key, 'pittman|jim')
+  assert.equal(group.reviewedName, true)
+  assert.deepEqual(new Set(group.aliases.map((a) => a.name)), new Set(rows.map((r) => r[0])))
+  const published = { links: [[group.employer, group.key, group.name, group.aliases.map((a) => [a.key, a.name, a.status, a.reason])]], reviewedNames: ['bci|pittman|jim'] }
+  assert.equal(linkLookup(published, employers).get('0|pittmsn|jim').reviewedName, true)
+  assert.deepEqual(personRecordShards(published, 'pittman|jim'), ['pi'])
+  assert.equal(rows[1][0], 'Pittmsn, Jim')
+})
+
+test('unseparated initial spellings are only connected by explicit reviewed formatting', () => {
+  const rows = [['LEONG P.', null, 100, 0, 0, 0, 's'], ['Leong, P.', null, 100, 0, 0, 0, 's']]
+  assert.equal(run(rows).links.length, 0)
+  const result = run(rows, [{ employer: 'bci', names: rows.map((r) => r[0]), decision: 'verified', preferredName: rows[1][0], note: 'Same ordered letters; separator reviewed' }])
+  assert.equal(result.links.length, 1)
+  assert.equal(result.links[0].name, 'Leong, P.')
+})
+
+test('a verified local typo remains a likely alias when its path to the fuller canonical name crosses an inference', () => {
+  const rows = [['Murtby, Srinivasa', null, 100, 0, 0, 0, 's'], ['Murthy, Srinivasa', null, 100, 0, 0, 0, 's'], ['Murthyy, Srinivasa Kumar', null, 110, 0, 0, 1, 's']]
+  const result = run(rows, [
+    { employer: 'bci', names: rows.slice(0, 2).map((r) => r[0]), decision: 'verified', note: 'Local printed spelling' },
+    { employer: 'bci', names: [rows[1][0], rows[2][0]], decision: 'likely', note: 'Qualified professional assumption' }
+  ])
+  assert.equal(result.links[0].name, 'Murthyy, Srinivasa Kumar')
+  assert.equal(result.links[0].aliases.find((a) => a.key === 'murtby|srinivasa').status, 'likely')
+  assert.match(result.links[0].aliases.find((a) => a.key === 'murtby|srinivasa').reason, /includes an unverified surname inference/)
+  assert.equal(result.decisions.find((d) => d.status === 'verified').status, 'verified', 'the original local evidence survives independently')
 })

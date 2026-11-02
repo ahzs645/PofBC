@@ -12,6 +12,7 @@ import { gunzipSync, gzipSync } from 'node:zlib'
 import { findNameLinks, LINK_RULES } from '../src/salaries/nameLinks.js'
 import { personKey, surnameShard } from '../src/salaries/people.js'
 import { validateReviewedNameConnections } from './lib/reviewed-name-connections.mjs'
+import { validateHeldNameConnections } from './lib/held-name-connections.mjs'
 
 const root = resolve(dirname(fileURLToPath(import.meta.url)), '..')
 const people = join(root, 'public/salaries/people')
@@ -23,6 +24,10 @@ const reviewed = JSON.parse(readFileSync(join(research, 'reviewed.json'), 'utf8'
 const rows = Object.keys(index.shards).flatMap((shard) => gzip(join(people, `${shard}.json.gzip`)))
 const sourceReviewed = JSON.parse(readFileSync(join(research, 'source-reviewed.json'), 'utf8'))
 reviewed.push(...validateReviewedNameConnections(sourceReviewed, rows, index))
+const continuedReview = JSON.parse(readFileSync(join(research, 'continuation-reviewed.json'), 'utf8'))
+reviewed.push(...validateReviewedNameConnections(continuedReview, rows, index))
+const completedReview = JSON.parse(readFileSync(join(research, 'held-completion-reviewed.json'), 'utf8'))
+reviewed.push(...validateHeldNameConnections(completedReview, rows, index, root))
 const { links, decisions } = findNameLinks(rows, { years: index.years, employers: index.employers, reviewed })
 
 const note = 'Spellings of one name at one employer joined as one person. verified: the records establish it (an extraction split, a distinctive position under both spellings, or a reviewed decision). likely: the only fuller name at the employer that agrees, never in the same period, close in time and pay. Never across employers. Each row: [employer slug, name key, disclosed name, [[alias key, disclosed alias, status, reason]]].'
@@ -33,7 +38,8 @@ rmSync(out, { recursive: true, force: true })
 mkdirSync(out, { recursive: true })
 const packed = (list) => gzipSync(JSON.stringify({
   note, rules: LINK_RULES,
-  links: list.map((link) => [link.employer, link.key, link.name, link.aliases.map((alias) => [alias.key, alias.name, alias.status, alias.reason, ...(alias.evidence?.length ? [alias.evidence] : [])])])
+  links: list.map((link) => [link.employer, link.key, link.name, link.aliases.map((alias) => [alias.key, alias.name, alias.status, alias.reason, ...(alias.evidence?.length ? [alias.evidence] : [])])]),
+  ...(list.some((link) => link.reviewedName) ? { reviewedNames: list.filter((link) => link.reviewedName).map((link) => `${link.employer}|${link.key}`) } : {})
 }), { level: 9, mtime: 0 })
 const byShard = new Map()
 for (const link of links) {
@@ -45,7 +51,8 @@ for (const link of links) {
 }
 for (const [shard, list] of byShard) writeFileSync(join(out, `${shard}.json.gzip`), packed(list))
 const slugOf = (at) => index.employers[at][3]
-const topKeys = new Set(gzip(join(people, 'top.json.gzip')).rows.filter((row) => row[0]).map((row) => `${slugOf(row[4])}|${personKey(row[0])}`))
+const top = gzip(join(people, 'top.json.gzip'))
+const topKeys = new Set([...top.rows, ...(top.unrankedRows ?? [])].filter((row) => row[0]).map((row) => `${slugOf(row[4])}|${personKey(row[0])}`))
 writeFileSync(join(out, 'top.json.gzip'), packed(links.filter((link) => [link.key, ...link.aliases.map((alias) => alias.key)].some((key) => topKeys.has(`${link.employer}|${key}`)))))
 
 const csv = (value) => (/[",\n]/.test(String(value ?? '')) ? `"${String(value).replace(/"/g, '""')}"` : String(value ?? ''))

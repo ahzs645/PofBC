@@ -491,6 +491,54 @@ The print recipes — CMYK for coated and uncoated stock, and the non-process nu
 each SVG's metadata. They do not change the screen colours, which are sampled from the scan and are
 approximations. None of this is current BC Hydro brand guidance.
 
+### Collected logos, as the page shows them
+
+The collected files under `public/identity-collected/` are kept exactly as found, and they are what
+the gallery offers for download. For the collected **SVGs**, the gallery shows display copies from
+`npm run build:collected-display` (Python with numpy, scipy and Pillow, and the pre-installed
+Playwright Chromium). These copies are written to `public/identity-display/` and listed in
+`src/gallery/collectedDisplay.js`. Each copy is:
+
+- trimmed to the logo by its viewBox, so tiles size every logo by its own extent;
+- redrawn for the light and dark pages where its ink would vanish into them. Neutral ink is
+  reversed, and on the dark page coloured ink is lightened only as far as it needs to be.
+
+Only ink that meets the page is changed. The decision is made for each place the file sets a colour,
+so white lettering inside a badge keeps its colour. Per-logo exceptions are in
+`scripts/collected-display-overrides.json`. Raster files (PNG, JPEG, GIF and EPS previews) still sit
+on a plate of their own.
+
+Where the government history records one body carrying on as another under a new name, the gallery
+shows a single collection with an era for each name. These are:
+
+- the Oil and Gas Commission, then the BC Energy Regulator;
+- PGE, then BC Rail;
+- BC Assets and Land, then Land and Water BC;
+- BC Enterprise Corporation, then PavCo;
+- Partnerships BC, then Infrastructure BC.
+
+BC Ferries' and BC Transit's earlier bodies sit in eras of their own histories instead: the Toll
+Highways and Bridges Authority's ferry system and the BC Ferry Authority, and the Urban Transit
+Authority. Old `?logos=collected-…` links still open the merged collection, and the collecting list
+opens it at the body's era.
+
+**Only one-to-one lines are merged.** A timeline of names claims a single lineage, so a body is folded
+into another only when the history records it becoming that body and nothing else shares the link:
+
+- no other body with logos here became the same one (that would be an amalgamation, many to one);
+- no other body took its work over (a split, one to many).
+
+So these keep a collection each, with their links left to the government diagram:
+
+- the 2001 health regions, boards and councils that became Fraser, Interior, Northern, Vancouver
+  Coastal and Island Health;
+- the BC Power Commission and the BC Transmission Corporation, which became part of BC Hydro;
+- BC Place Ltd. and the BC Development Corporation, which together became the BC Enterprise
+  Corporation.
+
+The list is `CONTINUATIONS` in `src/gallery/collectedCollections.js`, and
+`collectedCollections.test.js` checks each fold against `src/government/historyData.js`.
+
 ---
 
 ## Signs

@@ -49,7 +49,7 @@ export const compatibleNames = (a, b) => {
   })
 }
 
-const shown = (spelling) => spelling.names[0]
+const shown = (spelling) => spelling.reviewedSpelling ?? spelling.names[0]
 const matchable = (spelling) => nameOnly(spelling.names[0])
 
 /**
@@ -60,6 +60,9 @@ const matchable = (spelling) => nameOnly(spelling.names[0])
  * Returns { links: [{ employer, key, name, aliases: [{ key, name, status, reason }] }], decisions }.
  */
 export const findNameLinks = (rows, { years, employers, reviewed = [] }) => {
+  const employerAt = new Map(employers.map((entry, at) => [entry[3], at]))
+  const explicitlyReviewed = new Set(reviewed.filter((entry) => entry.decision === 'verified').flatMap((entry) =>
+    entry.names.map((name) => `${employerAt.get(entry.employer)}|${personKey(nameOnly(name))}`)))
   const spellings = new Map()
   for (const row of rows) {
     if (!row[0]) continue
@@ -67,7 +70,7 @@ export const findNameLinks = (rows, { years, employers, reviewed = [] }) => {
     const id = `${row[4]}|${key}`
     if (!spellings.has(id)) {
       const { surname, given } = nameParts(nameOnly(row[0]))
-      if (!surname || !given.length) continue
+      if (!surname || (!given.length && !explicitlyReviewed.has(id))) continue
       spellings.set(id, { id, employer: row[4], key, surname, given, raw: new Map(), nameCounts: new Map(), periods: new Map(), titles: new Set() })
     }
     const spelling = spellings.get(id)
@@ -83,6 +86,12 @@ export const findNameLinks = (rows, { years, employers, reviewed = [] }) => {
     spelling.names = [...spelling.nameCounts].sort((a, b) => Number(nameOnly(b[0]) === b[0]) - Number(nameOnly(a[0]) === a[0]) || b[1] - a[1]).map(([name]) => name)
     spelling.info = information(spelling.given)
     spelling.count = [...spelling.nameCounts.values()].reduce((sum, value) => sum + value, 0)
+  }
+  for (const entry of reviewed) {
+    if (!entry.displaySpelling) continue
+    const spelling = spellings.get(`${employerAt.get(entry.employer)}|${personKey(nameOnly(entry.displaySpelling))}`)
+    if (!spelling?.nameCounts.has(entry.displaySpelling)) throw new Error('A reviewed display spelling must exist in the original observations')
+    spelling.reviewedSpelling = entry.displaySpelling
   }
 
   // How many spellings at an employer held each title: a title few people hold says more.
@@ -113,7 +122,6 @@ export const findNameLinks = (rows, { years, employers, reviewed = [] }) => {
   }
   const membersOf = new Map()
   const members = (root) => membersOf.get(root.id) ?? [root]
-  const employerAt = new Map(employers.map((entry, at) => [entry[3], at]))
   const preferred = new Set(reviewed.filter((entry) => entry.decision === 'verified' && entry.preferredName)
     .map((entry) => `${employerAt.get(entry.employer)}|${personKey(nameOnly(entry.preferredName))}`))
   const fuller = (a, b) => (preferred.has(a.id) !== preferred.has(b.id)
@@ -155,6 +163,23 @@ export const findNameLinks = (rows, { years, employers, reviewed = [] }) => {
   for (const bucket of buckets.values()) {
     if (bucket.length < 2) continue
     const slug = employers[bucket[0].employer]?.[3]
+    // A reviewed correction can move a split spelling out of its old family. Preserve its
+    // deterministic rejoining edge as well, without treating other compatible names as verified.
+    for (const spelling of bucket.filter((each) => placed.has(each.id))) {
+      const split = rejoined(spelling.given)
+      const other = split && bucket.find((each) => each !== spelling && each.given.join(' ') === split.join(' '))
+      if (!other || placed.has(other.id) || find(other) === find(spelling)) continue
+      const review = reviewOf.get(`${slug}|${[spelling.key, other.key].sort().join('~')}`)
+      if (review?.decision === 'reject') continue
+      const shared = [...spelling.periods.keys()].filter((at) => other.periods.has(at))
+      if (shared.some((at) => spelling.periods.get(at) !== other.periods.get(at))) continue
+      const target = bestOf(spelling)
+      decisions.push({ employer: slug, name: shown(other), key: other.key, target: shown(target), targetKey: target.key,
+        status: 'verified', reason: `Extraction split the given name: “${shown(spelling)}” is “${shown(other)}”; its reviewed source spelling is “${shown(target)}”`,
+        pay: Math.max(...other.periods.values(), ...spelling.periods.values()) })
+      join(other, spelling)
+      placed.add(other.id)
+    }
     for (const spelling of [...bucket].sort((a, b) => a.info - b.info).reverse()) {
       if (placed.has(spelling.id)) continue
       const split = rejoined(spelling.given)
@@ -207,6 +232,32 @@ export const findNameLinks = (rows, { years, employers, reviewed = [] }) => {
     }
   }
 
+  // Apply explicit, qualified inferences after the ordinary rules. They cannot supply new
+  // evidence to an automatic rule or turn another spelling correction into a verified identity.
+  const inferredMembers = new Set()
+  for (const review of reviewed.filter((entry) => entry.decision === 'likely')) {
+    const at = employerAt.get(review.employer)
+    const pair = review.names.map((name) => spellings.get(`${at}|${personKey(nameOnly(name))}`))
+    if (pair.some((spelling) => !spelling) || find(pair[0]) === find(pair[1])) continue
+    const other = pair.reduce(fuller)
+    const spelling = pair.find((each) => each !== other)
+    decisions.push({ employer: review.employer, name: shown(spelling), key: spelling.key,
+      target: shown(other), targetKey: other.key, status: 'likely', reason: `Assumption on review: ${review.note}`,
+      evidence: review.evidence ?? [], pay: Math.max(...spelling.periods.values(), ...other.periods.values()) })
+    join(spelling, other)
+    inferredMembers.add(spelling.id)
+    inferredMembers.add(other.id)
+  }
+
+  const verifiedEdges = new Map()
+  for (const entry of decisions.filter((entry) => entry.status === 'verified')) {
+    const a = `${employerAt.get(entry.employer)}|${entry.key}`
+    const b = `${employerAt.get(entry.employer)}|${entry.targetKey}`
+    if (!verifiedEdges.has(a)) verifiedEdges.set(a, new Set())
+    if (!verifiedEdges.has(b)) verifiedEdges.set(b, new Set())
+    verifiedEdges.get(a).add(b); verifiedEdges.get(b).add(a)
+  }
+
   // Every disclosed spelling in a group, the fullest first; a group is published once it holds two.
   const clusters = new Map()
   for (const spelling of spellings.values()) {
@@ -216,19 +267,36 @@ export const findNameLinks = (rows, { years, employers, reviewed = [] }) => {
   const decisionOf = new Map(decisions.filter((entry) => entry.status !== 'apart').map((entry) => [`${entry.employer}|${entry.key}`, entry]))
   const joinedTo = new Map(decisions.filter((entry) => entry.status !== 'apart').map((entry) => [`${entry.employer}|${entry.targetKey}`, entry]))
   const result = []
+  const canonicalReviews = reviewed.filter((entry) => entry.decision === 'verified' && entry.canonicalName)
   for (const cluster of clusters.values()) {
     const employer = employers[cluster[0].employer]?.[3]
     const best = cluster.reduce(fuller)
-    const rawOf = (spelling) => [...spelling.raw].map(([key, names]) => ({ key, name: [...names].sort((a, b) => b[1] - a[1])[0][0] }))
-    const own = rawOf(best).find((each) => each.name === shown(best)) ?? rawOf(best)[0]
+    const hasInference = cluster.some((each) => inferredMembers.has(each.id))
+    const verifiedFromBest = new Set([best.id])
+    const todo = [best.id]
+    if (hasInference) for (let at = 0; at < todo.length; at += 1) {
+      for (const neighbor of verifiedEdges.get(todo[at]) ?? []) {
+        if (!verifiedFromBest.has(neighbor)) { verifiedFromBest.add(neighbor); todo.push(neighbor) }
+      }
+    }
+    const rawOf = (spelling) => [...spelling.raw].map(([key, names]) => ({ key,
+      name: spelling.reviewedSpelling && names.has(spelling.reviewedSpelling) ? spelling.reviewedSpelling : [...names].sort((a, b) => b[1] - a[1])[0][0] }))
+    const canonicalReview = canonicalReviews.find((entry) => entry.employer === employer
+      && entry.names.every((name) => cluster.some((spelling) => spelling.key === personKey(nameOnly(name)))))
+    const own = canonicalReview ? { key: personKey(canonicalReview.canonicalName), name: canonicalReview.canonicalName }
+      : rawOf(best).find((each) => each.name === shown(best)) ?? rawOf(best)[0]
     const aliases = cluster.flatMap((spelling) => rawOf(spelling).filter((each) => each.key !== own.key).map((each) => {
-      if (spelling === best) return { ...each, status: 'verified', reason: 'The same name with a position written into it' }
+      if (spelling === best) return canonicalReview
+        ? { ...each, status: 'verified', reason: `Reviewed: ${canonicalReview.note}`, evidence: canonicalReview.evidence }
+        : { ...each, status: 'verified', reason: 'The same name with a position written into it' }
       // A reviewed pair may name either spelling first: the decision is the join's, either way.
       const decision = decisionOf.get(`${employer}|${spelling.key}`) ?? joinedTo.get(`${employer}|${spelling.key}`)
-      return { ...each, status: decision.status, reason: decision.reason,
+      const inferredPath = hasInference && !verifiedFromBest.has(spelling.id)
+      return { ...each, status: inferredPath ? 'likely' : decision.status,
+        reason: inferredPath && decision.status === 'verified' ? `The connection to this history includes an unverified surname inference. Local source evidence: ${decision.reason}` : decision.reason,
         ...(decision.evidence?.length ? { evidence: decision.evidence } : {}) }
     }))
-    if (aliases.length) result.push({ employer, key: own.key, name: own.name, aliases })
+    if (aliases.length) result.push({ employer, key: own.key, name: own.name, aliases, ...(canonicalReview ? { reviewedName: true } : {}) })
   }
   return { links: result, decisions }
 }
@@ -240,13 +308,15 @@ export const findNameLinks = (rows, { years, employers, reviewed = [] }) => {
 export const linkLookup = (published, employers) => {
   const lookup = new Map()
   if (!published) return lookup
+  const reviewedNames = new Set(published.reviewedNames ?? [])
   const indexOf = new Map(employers.map((entry, at) => [entry[3], at]))
   for (const [slug, key, name, aliases] of published.links) {
     const at = indexOf.get(slug)
     if (at === undefined) continue
-    lookup.set(`${at}|${key}`, { key, name, status: null, reason: null })
+    const reviewedName = reviewedNames.has(`${slug}|${key}`)
+    lookup.set(`${at}|${key}`, { key, name, status: null, reason: null, ...(reviewedName ? { reviewedName } : {}) })
     for (const [aliasKey, aliasName, status, reason, evidence] of aliases) lookup.set(`${at}|${aliasKey}`, {
-      key, name, aliasName, status, reason, ...(evidence?.length ? { evidence } : {})
+      key, name, aliasName, status, reason, ...(reviewedName ? { reviewedName } : {}), ...(evidence?.length ? { evidence } : {})
     })
   }
   return lookup

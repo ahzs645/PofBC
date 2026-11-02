@@ -29,9 +29,11 @@ import { EmployerPage } from './EmployerPage.jsx'
 import { PersonPage } from './PersonPage.jsx'
 import { linkLookup, personRecordShards } from './nameLinks.js'
 import { TitleCard, TitlePage } from './TitlePage.jsx'
+import { personAnnotation, personCurrency } from './recordAnnotations.js'
 
-const describeNameGroup = (key, list, name) => {
-  const latest = list.reduce((best, row) => (row[5] > best[5] || (row[5] === best[5] && row[2] > best[2]) ? row : best))
+const describeNameGroup = (key, list, name, index) => {
+  const latest = list.reduce((best, row) => (row[5] > best[5] || (row[5] === best[5] && (
+    personCurrency(row, index) !== personCurrency(best, index) ? personCurrency(row, index) === 'CAD' : row[2] > best[2])) ? row : best))
   const years = [...new Set(list.map((row) => row[5]))].sort((a, b) => a - b)
   const shared = years.some((each) => list.filter((row) => row[5] === each).length > 1)
   return { key, name: name ?? latest[0], latest, years, rows: list, shared }
@@ -52,7 +54,7 @@ const PersonCard = ({ each, index, onOpen }) => (
       <span className="salaries__line">{[each.latest[1], index.employers[each.latest[4]][0]].filter(Boolean).join(' · ')}</span>
       <YearStrip years={index.years} seen={each.years} />
     </span>
-    <span className="salaries__aside">{money(each.latest[2])}<span className="salaries__line">{index.years[each.latest[5]]}</span></span>
+    <span className="salaries__aside">{money(each.latest[2], '—', personCurrency(each.latest, index))}<span className="salaries__line">{index.years[each.latest[5]]}{personAnnotation(each.latest, index) && ' · executive total compensation'}</span></span>
   </button>
 )
 
@@ -113,14 +115,18 @@ export const SalariesView = ({ onOpenGovernment }) => {
 
   // A name's page joins the spellings the link list connects; a slice with no links has no file.
   const linkShard = place.person ? shardOfKey(place.person) : null
+  const neededLinks = useMemo(() => [...new Set([...(linkShard ? [linkShard] : []), ...readings.map(shardOf)])], [linkShard, readings])
   useEffect(() => {
-    if (!linkShard || linkShards[linkShard]) return
-    loadJson(`salaries/links/${linkShard}.json.gzip`).then(
-      (list) => setLinkShards((current) => ({ ...current, [linkShard]: list })),
-      () => setLinkShards((current) => ({ ...current, [linkShard]: { links: [] } }))
-    )
-  }, [linkShard]) // eslint-disable-line react-hooks/exhaustive-deps
+    for (const shard of neededLinks) {
+      if (linkShards[shard]) continue
+      loadJson(`salaries/links/${shard}.json.gzip`).then(
+        (list) => setLinkShards((current) => ({ ...current, [shard]: list })),
+        () => setLinkShards((current) => ({ ...current, [shard]: { links: [] } }))
+      )
+    }
+  }, [neededLinks]) // eslint-disable-line react-hooks/exhaustive-deps
   const personLinks = useMemo(() => (index && linkShard && linkShards[linkShard] ? linkLookup(linkShards[linkShard], index.employers) : null), [index, linkShard, linkShards])
+  const searchLinks = useMemo(() => new Map(index ? Object.values(linkShards).flatMap((published) => [...linkLookup(published, index.employers)]) : []), [index, linkShards])
 
   // Position titles are searched once three letters are typed, and browsed under Positions; their
   // index is loaded then.
@@ -142,21 +148,23 @@ export const SalariesView = ({ onOpenGovernment }) => {
       if (list === 'failed') return { reading: each, loading: false, failed: true, groups: [], full: 0 }
       const groups = new Map()
       for (const row of list) {
-        const tier = nameQueryTier(row[0], each.typed, index.sources?.[row[6]]?.nameDisclosure)
-        if (tier === null) continue
+        const link = searchLinks.get(`${row[4]}|${personKey(row[0])}`)
+        const tiers = [row[0], ...(link ? [link.name] : [])].map((name) => nameQueryTier(name, each.typed, index.sources?.[row[6]]?.nameDisclosure)).filter((tier) => tier !== null)
+        if (!tiers.length) continue
+        const tier = Math.min(...tiers)
         if (!within(row[5])) continue
         if (sector !== 'all' && index.employers[row[4]][1] !== sector) continue
-        const key = personKey(row[0])
-        if (!groups.has(key)) groups.set(key, { tier, rows: [] })
+        const key = link?.key ?? personKey(row[0])
+        if (!groups.has(key)) groups.set(key, { tier, name: link?.name, rows: [] })
         const group = groups.get(key)
         group.tier = Math.min(group.tier, tier)
         group.rows.push(row)
       }
-      const described = [...groups].map(([key, group]) => ({ ...describeNameGroup(key, group.rows), tier: group.tier }))
-        .sort((a, b) => a.tier - b.tier || b.years.length - a.years.length || b.latest[2] - a.latest[2])
+      const described = [...groups].map(([key, group]) => ({ ...describeNameGroup(key, group.rows, group.name, index), tier: group.tier }))
+        .sort((a, b) => a.tier - b.tier || b.years.length - a.years.length || personCurrency(a.latest, index).localeCompare(personCurrency(b.latest, index)) || b.latest[2] - a.latest[2])
       return { reading: each, loading: false, groups: described, full: described.filter((group) => group.tier < 2).length }
     })
-  }, [readings, shards, place.year, sector, index]) // eslint-disable-line react-hooks/exhaustive-deps
+  }, [readings, shards, place.year, sector, index, searchLinks]) // eslint-disable-line react-hooks/exhaustive-deps
   const nameSearchFailed = found.some((each) => each.failed)
   const retryNames = () => { setShards((current) => Object.fromEntries(Object.entries(current).filter(([, list]) => list !== 'failed'))); setLoadVersion((value) => value + 1) }
   const settled = found.findIndex((each) => each.loading)
@@ -309,7 +317,7 @@ export const SalariesView = ({ onOpenGovernment }) => {
     .map((row) => [`${row[4]}|${linkOf(row).key}`, { employer: row[4], key: linkOf(row).key, name: linkOf(row).name, status: linkOf(row).status }])).values()]
   const atEmployer = place.personAt ? personList.filter((row) => index.employers[row[4]][3] === place.personAt) : []
   const scoped = atEmployer.length > 0 && atEmployer.length < personList.length
-  const chosen = personList.length ? describeNameGroup(place.person, scoped ? atEmployer : personList, linkedName) : null
+  const chosen = personList.length ? { ...describeNameGroup(place.person, scoped ? atEmployer : personList, linkedName, index), reviewedName: personList.some((row) => linkOf(row)?.reviewedName) } : null
   const scope = scoped ? {
     employer: index.employers[atEmployer[0][4]][0],
     others: new Set(personList.filter((row) => !atEmployer.includes(row)).map((row) => row[4])).size,

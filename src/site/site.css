@@ -1177,6 +1177,24 @@ input.share__url {
 }
 .gallery__collected-image[data-dark="true"] { background: #243449; }
 .gallery__art--cover .gallery__collected-image { height: 120px; }
+/* A display copy is trimmed to the logo and drawn for the page, so it needs no ground of its own.
+   Its height is its share (--logo-scale, from its proportions) of the tile's. */
+.gallery__collected-image--clean {
+  --logo-max: 110px;
+  width: auto;
+  max-width: 100%;
+  height: calc(var(--logo-max) * var(--logo-scale, 1));
+  padding: 0;
+  background: none;
+  border-radius: 0;
+}
+.gallery__art--cover .gallery__collected-image--clean { --logo-max: 112px; height: calc(var(--logo-max) * var(--logo-scale, 1)); }
+.gallery__collected-image--clean[data-plate], .gallery__recovered-preview--clean img[data-plate] {
+  box-sizing: content-box;
+  padding: 10px 14px;
+  background: #f4f2ee;
+  border-radius: var(--radius-sm);
+}
 .gallery__recovered { display: grid; gap: 16px; }
 .gallery__recovered h2, .gallery__recovered p { margin: 0; }
 .gallery__recovered-preview {
@@ -1189,6 +1207,8 @@ input.share__url {
   border-radius: var(--radius);
 }
 .gallery__recovered-preview[data-dark] { background: #243449; }
+.gallery__recovered-preview--clean { background: var(--page); }
+.gallery__recovered-preview--clean img { width: auto; height: min(300px, 40vw); max-height: none; }
 .gallery__recovered-preview img { max-width: 100%; width: auto; max-height: 420px; object-fit: contain; }
 .gallery__asset-format { font-size: 13px; color: var(--ink-muted); }
 .gallery__asset-downloads { flex-wrap: wrap; }

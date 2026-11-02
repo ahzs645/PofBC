@@ -4,13 +4,24 @@ The [2 November 2026 connection review](connection-review-2026-11-02/README.md)
 adds a repeatable scan of every published named observation, a queue of possible
 surname variants, and original-source findings for BCI. It distinguishes the
 existing heuristic `verified` status from independent source review. The Pittman
-connection is supported by primary evidence but held from new application joins
+connection was supported by primary evidence but held from new application joins
 pending treatment of the later USD executive-compensation amount. This research
 pass did not change the links applied by the site. The
 [subsequent source-verification pass](source-verification-2026-11-02/README.md)
 checks every candidate against primary observations and adds 251 individually
 reviewed source-spelling corrections, with original-row evidence and safeguards
 against reusing a decision after its rows or sources change.
+The [continued review](continuation-2026-11-02/README.md) adds 43 more source-spelling
+corrections after 112 original-row readings and reconciles the entire 3,268-pair
+held queue: 35 pairs were connected by verified evidence, 60 stayed separate under
+their original schedules, and 3,173 remained held at that stage. Ten of those held pairs already
+have a likely application link; that confidence has not been upgraded.
+
+The [completion review](held-completion-2026-11-02/README.md) assesses all 3,173 of
+those pairs, adopts 167 additional reviewed decisions (151 verified and 16 explicitly
+likely), and completes Pittman's USD treatment. Of the original pairs, 130 are now
+verified and 25 likely, including the 10 existing likely links. The other 3,018 stay
+unconfirmed with a blocker and source follow-up. Every salary observation is retained.
 
 Employers write the same person's name differently from year to year ("Garant, D." in 2017/18,
 "Garant, Daniel" in 2023/24), sources disagree, and extraction splits letters off ("Nevill, T homas").
@@ -29,6 +40,11 @@ Run `npm run build:name-links` (also run by `npm run build:salaries`). The rules
 - `reviewed.json` — decisions made by reading the records. They override the rules either way: add
   `"decision": "verified"` to join two spellings the rules miss, or `"reject"` to keep apart two the
   rules join.
+- `source-reviewed.json` — the previous 251 original-row spelling corrections, preserved.
+- `continuation-reviewed.json` — the additional 43 source-spelling corrections, checked against
+  their complete alias observations, exact source hashes, original pages and visual-review receipts.
+- `held-completion-reviewed.json` — 167 additional source-spelling, separator, professional
+  identity and qualified inference decisions, with pinned individual evidence receipts.
 - `public/salaries/links/` — the joins the site loads, sliced by surname like the people index, plus
   `top.json.gzip` for the highest-paid browse.
 
@@ -54,8 +70,8 @@ A spelling joins a fuller one when **all** of these hold:
    does not disagree.
 3. It is the **only** fuller name at the employer that agrees. "Jones, D" at Surrey, with both David J
    and Donna L. there, is kept apart.
-4. The two never appear in the same period. Two records in one period are two people ("Canning, S" and
-   "Canning, SE" at BC Hydro, every year 2012/13–2023/24).
+4. The two never appear in the same period. Multiple records in one period are retained as separate
+   observations; they may describe different people or multiple payments.
 5. They are within 6 years of each other.
 6. Between neighbouring years (a year or less apart), pay does not change more than 3×. Over longer
    gaps a jump is as often a promotion as a different person — "Rayes, R.", a director at $406,722 in
@@ -65,6 +81,10 @@ A spelling joins a fuller one when **all** of these hold:
 Most likely joins are a whole employer changing how it writes names: SFU used initials through
 2018/19, UBC added middle names in 2025/26, Surrey switched to initials in 2022, and the public service's earliest
 records (1999/00–2002/03) often give initials only.
+
+Explicitly reviewed surname inferences use the stricter conditions documented in the completion
+review. They run after ordinary matching, remain labelled likely, and cannot turn a locally verified
+spelling correction into a verified connection across an uncertain identity bridge.
 
 ## Kept apart
 

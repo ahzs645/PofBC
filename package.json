@@ -50,6 +50,7 @@
     "build:crown-marks": "node scripts/build-crown-marks.mjs",
     "build:collecting": "node scripts/build-collecting.mjs",
     "build:collected-marks": "node scripts/build-collected-marks.mjs",
+    "build:collected-display": "python3 scripts/build_collected_display.py",
     "build:salaries": "node scripts/build-salaries.mjs && node scripts/build-name-links.mjs",
     "build:name-links": "node scripts/build-name-links.mjs",
     "import:sunshine": "node scripts/import-sunshine-snapshot.mjs",
