@@ -60,4 +60,4 @@ To reproduce images with PyMuPDF 1.26.6 and Pillow, place exact-hash PDFs in a s
 python3 scripts/render_held_name_evidence.py --cache /path/to/originals --out /tmp/held-review-reproduced
 ```
 
-The renderer verifies every crop and contact-sheet hash and will not overwrite this reviewed evidence folder. The [validation receipt](validation.json) records 824 Python tests, 115 salary Node tests, all 15 reconciliation checks and 37 mobile/desktop browser checks. The PR records publication status.
+The renderer verifies every crop and contact-sheet hash and will not overwrite this reviewed evidence folder. The [validation receipt](validation.json) records 824 Python tests, 115 salary Node tests, all 16 reconciliation checks and 37 mobile/desktop browser checks. The PR records publication status.
