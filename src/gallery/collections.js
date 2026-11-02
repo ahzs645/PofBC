@@ -18,7 +18,7 @@
 import { BCTS_ENTRIES, ONE_OFFS } from './oneOffs.js'
 import { COLLECTION_ERAS, TIMELINES, timelineKeyOf } from './timelines.js'
 import { CURRENT_VARIANT_ORDER, CURRENT_VARIANTS } from '../hydro/hydroMarks.js'
-import { COLLECTED_COLLECTIONS, SPECIMEN_COLLECTIONS } from './collectedCollections.js'
+import { COLLECTED_COLLECTIONS, SPECIMEN_COLLECTIONS, collectedEntriesOf, nodesOf } from './collectedCollections.js'
 
 // ── The identity record ──────────────────────────────────────────────────────────────────────────
 
@@ -787,6 +787,13 @@ const provincial = (entry) => withTimeline(withIdentity(withNode(entry)))
 const withMarks = (eras, marks) => eras.map((each) => ({ ...each, entries: marks[each.id] ?? [] }))
 
 /**
+ * Marks with, added to an era, the files collected for a body the collection's own body once was —
+ * the name it went by then, which the government history records it becoming this one under.
+ */
+const withCollected = (marks, earlier) => Object.fromEntries([...new Set([...Object.keys(marks), ...Object.keys(earlier)])]
+  .map((era) => [era, [...(marks[era] ?? []), ...(earlier[era] ?? []).flatMap(collectedEntriesOf)]]))
+
+/**
  * The gallery in two shelves.
  *
  * The first is public bodies with identities of their own — a Crown corporation, a program, an
@@ -950,13 +957,21 @@ export const GALLERY_COLLECTIONS = [
     // The diagram has the Crown corporation, which ended in 2003; the company that followed it is not
     // a public body, so the link goes to the years it was one.
     graphNode: 'bc-ferry-corporation',
+    // The bodies it was before 1977, whose collected files are in its first two eras.
+    graphNodes: ['bc-ferry-corporation', 'bc-ferry-authority', 'bc-toll-highways-and-bridges-authority'],
+    aliases: ['collected-bc-ferry-authority', 'collected-bc-toll-highways-and-bridges-authority'],
     cover: 'bcf-wave',
     intro: 'BC Ferries from its start in 1960, when it sailed as the British Columbia Toll Authority Ferry ' +
       'System under that name’s wordmark, until 1964, when its authority was renamed. Then its two symbols: ' +
       'the dogwood, first an outlined flower on a waving flag and later redrawn in geometric petals beside a ' +
       'squared wordmark, and the wave, introduced on 2 April 2003 with the company that replaced the Crown ' +
-      'corporation. The wordmarks and dogwoods are reconstructions; the wave is supplied paths, shown as they came.',
-    eras: withMarks(COLLECTION_ERAS['bc-ferries'], BCF_ENTRIES)
+      'corporation. The wordmarks and dogwoods are reconstructions; the wave is supplied paths, shown as they came. ' +
+      'Beside the reconstructions are newspaper specimens as found: the Toll Authority ferry system’s emblem in ' +
+      '1960, and the British Columbia Ferry Authority’s signature and dogwood flag in 1964.',
+    eras: withMarks(COLLECTION_ERAS['bc-ferries'], withCollected(BCF_ENTRIES, {
+      'bcf-toll-authority': ['bc-toll-highways-and-bridges-authority'],
+      'bcf-early-dogwood': ['bc-ferry-authority']
+    }))
   },
   {
     id: 'worksafebc',
@@ -977,13 +992,18 @@ export const GALLERY_COLLECTIONS = [
     shelf: 'bodies',
     label: 'BC Transit',
     body: 'Crown corporation · Ministry of Transportation and Transit',
-    years: '1982–present',
+    years: '1979–present',
     graphNode: 'bc-transit',
+    graphNodes: ['bc-transit', 'urban-transit-authority'],
+    aliases: ['collected-urban-transit-authority'],
     cover: 'bct-loop-colour',
-    intro: 'BC Transit’s two families of mark since it took the name in 1982: the provincial flag with the ' +
+    intro: 'BC Transit began as the Urban Transit Authority, whose lettering and double-arrow device are here from ' +
+      'newspaper advertisements of 1979 and 1980. Then its two families of mark since it took the name in 1982: the provincial flag with the ' +
       'name, seen in two arrangements — the one above the name is here, from a service plan’s cover — then by ' +
       '2009 the blue-and-green loop, which it still uses. Its bus liveries changed in 2007 and 2024; neither is a new logo.',
-    eras: withMarks(COLLECTION_ERAS['bc-transit'], BCT_ENTRIES)
+    eras: withMarks(COLLECTION_ERAS['bc-transit'], withCollected(BCT_ENTRIES, {
+      'bct-urban-transit-authority': ['urban-transit-authority']
+    }))
   },
   {
     id: 'bc-parks',
@@ -1021,9 +1041,22 @@ export const GALLERY_COLLECTIONS = [
 // Collections recovered by the acquisition pass use source files directly. Existing researched
 // histories remain authoritative for bodies that already have a collection.
 GALLERY_COLLECTIONS.push(...COLLECTED_COLLECTIONS.filter((candidate) =>
-  !GALLERY_COLLECTIONS.some((held) => held.graphNode === candidate.graphNode)))
+  !GALLERY_COLLECTIONS.some((held) => nodesOf(held).includes(candidate.graphNode))))
 // The one-off programs' published specimens, reached from their timelines' eras.
 GALLERY_COLLECTIONS.push(...SPECIMEN_COLLECTIONS)
+
+/** The collection holding a body's logos — its own, or one it carried on as under a later name. */
+export const collectionOfNode = (node) => GALLERY_COLLECTIONS.find((collection) => nodesOf(collection).includes(node))
+
+/** The collection a link names: by its id, or by the id one of its earlier names had on its own. */
+export const collectionById = (id) => GALLERY_COLLECTIONS.find((collection) => collection.id === id || collection.aliases?.includes(id))
+
+/**
+ * A body's own logos in a collection that holds several names: the files collected under that name,
+ * or for the collection's own body, those and every mark not collected for another.
+ */
+export const entriesOfNode = (collection, node) => entriesOf(collection)
+  .filter((entry) => (entry.owner ?? collection.graphNode) === node)
 
 export const COLLECTIONS_ON_SHELF = (shelf) => GALLERY_COLLECTIONS.filter((collection) => collection.shelf === shelf)
 

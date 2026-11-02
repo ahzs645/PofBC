@@ -15,11 +15,15 @@ const coverOf = (assets) =>
 export const assetUrl = (path, base = import.meta.env?.BASE_URL ?? '/') =>
   `${base.replace(/\/?$/, '/')}${path.replace(/^\//, '')}`
 
-/** A collected file as a gallery entry; `timeline` places a program's specimen on its timeline. */
-const collectedEntry = (asset, timeline) => ({
+/**
+ * A collected file as a gallery entry; `timeline` places a program's specimen on its timeline, and
+ * `owner` is the body it was collected for, kept when its collection holds a body's successors too.
+ */
+const collectedEntry = (asset, timeline, owner) => ({
   id: asset.id,
   kind: 'collected',
   ...(timeline ? { timeline } : {}),
+  ...(owner ? { owner } : {}),
   label: asset.label,
   note: asset.notes,
   years: asset.sourceDate ? `Seen ${asset.sourceDate}` : 'Logo dates unestablished',
@@ -42,19 +46,109 @@ const collectedEntry = (asset, timeline) => ({
   },
 })
 
-export const COLLECTED_COLLECTIONS = COLLECTED_BODIES.filter((body) => body.assets.length).map((body) => ({
+const BODIES = new Map(COLLECTED_BODIES.map((body) => [body.id, body]))
+const kindOf = (body) => body.kind === 'health-authority' ? 'health organization' : 'Crown corporation'
+
+/** A body's collected files as gallery entries. */
+export const collectedEntriesOf = (bodyId) => (BODIES.get(bodyId)?.assets ?? []).map((asset) => collectedEntry(asset, undefined, bodyId))
+
+const collectionOf = (body) => ({
   id: `collected-${body.id}`,
   shelf: 'bodies',
   graphNode: body.id,
   fileCollection: true,
   label: body.shortName || body.name,
-  body: `${body.current ? 'Current' : 'Former'} ${body.kind === 'health-authority' ? 'health organization' : 'Crown corporation'}`,
+  body: `${body.current ? 'Current' : 'Former'} ${kindOf(body)}`,
   years: `${body.from ?? '?'}–${body.current ? 'present' : body.to ?? '?'}`,
   intro: 'Collected artwork with its source recorded for each file. The organization’s dates above are not the dates of its logo. ' +
     (body.notes || ''),
   cover: coverOf(body.assets),
-  entries: body.assets.map((asset) => collectedEntry(asset)),
-}))
+  entries: collectedEntriesOf(body.id),
+})
+
+/**
+ * Bodies that carried on as another under a new name, each with the body it became, as the
+ * government history records them (historyData.js: the body's `became`, with no other body holding
+ * logos here becoming the same one). Each line is shown as one collection — the last body's, under
+ * which the earlier ones are an era each — rather than as a collection per name. Amalgamations,
+ * where several bodies became one, keep a collection each. BC Ferries' and BC Transit's earlier
+ * names are eras of their researched histories instead (collections.js).
+ */
+export const CONTINUATIONS = [
+  ['pacific-great-eastern-railway', 'bc-railway-company'],
+  ['bc-enterprise-corporation', 'bc-pavilion-corporation'],
+  ['bc-assets-and-land-corporation', 'land-and-water-bc'],
+  ['oil-and-gas-commission', 'bc-energy-regulator'],
+  ['partnerships-bc', 'infrastructure-bc']
+]
+
+const nameOf = (body) => body.shortName && body.shortName !== body.name ? `${body.name} (${body.shortName})` : body.name
+
+/** A body's years under its own name, as an era of the line it belongs to. */
+const nameEra = (body, from, to, next) => {
+  const years = `${from ?? '?'}–${to ?? 'present'}`
+  const sources = [...new Map(body.assets
+    .filter((asset) => /^https:\/\//.test(asset.sourcePage || asset.sourceUrl || ''))
+    .map((asset) => [asset.sourcePage || asset.sourceUrl, { title: asset.publisher, url: asset.sourcePage || asset.sourceUrl }])).values()]
+  return {
+    id: `name-${body.id}`,
+    status: 'held',
+    years,
+    label: nameOf(body),
+    note: next
+      ? `The body under this name, until it became ${next.name} in ${to}. Its files are below, each with its own source and date.`
+      : `The body under its present name. Its files are below, each with its own source and date.`,
+    applicability: {
+      kind: 'unknown',
+      years,
+      note: 'These are the body’s years under this name, not the dates of its logos: each file gives when it was seen.'
+    },
+    sources,
+    entries: collectedEntriesOf(body.id)
+  }
+}
+
+/** One collection for a line of names: the last body's, with an era for each name, oldest first. */
+const lineCollection = (line) => {
+  const bodies = line.map((id) => BODIES.get(id))
+  const last = bodies.at(-1)
+  const eras = bodies.map((body, at) => nameEra(body, at ? bodies[at - 1].to : body.from, at < bodies.length - 1 ? body.to : last.current ? null : last.to, bodies[at + 1]))
+  const earlier = bodies.slice(0, -1)
+  return {
+    ...collectionOf(last),
+    graphNodes: [last.id, ...earlier.map((body) => body.id)],
+    aliases: earlier.map((body) => `collected-${body.id}`),
+    body: `${last.current ? 'Current' : 'Former'} ${kindOf(last)} · formerly ${earlier.map((body) => body.name).join(', then ')}`,
+    years: `${bodies[0].from ?? '?'}–${last.current ? 'present' : last.to ?? '?'}`,
+    intro: `One body under ${['', 'one', 'two', 'three', 'four'][bodies.length] ?? bodies.length} names: ${bodies.map((body) => body.name).join(', then ')}. ` +
+      'Each name is an era below, with the artwork collected under it and its source recorded for each file. ' +
+      'The years are the body’s, not its logos’.',
+    cover: coverOf(bodies.flatMap((body) => body.assets).reverse()) ?? last.assets[0]?.id,
+    entries: undefined,
+    eras
+  }
+}
+
+/** Each body's line of names, oldest first, built from the links above. */
+const LINES = (() => {
+  const nextOf = new Map(CONTINUATIONS)
+  const starts = CONTINUATIONS.map(([from]) => from).filter((id) => !CONTINUATIONS.some(([, to]) => to === id))
+  return starts.map((start) => {
+    const line = [start]
+    while (nextOf.has(line.at(-1))) line.push(nextOf.get(line.at(-1)))
+    return line
+  })
+})()
+const HELD_LINES = LINES.filter((line) => line.every((id) => BODIES.get(id)?.assets.length))
+const IN_A_LINE = new Set(HELD_LINES.flat())
+
+export const COLLECTED_COLLECTIONS = [
+  ...COLLECTED_BODIES.filter((body) => body.assets.length && !IN_A_LINE.has(body.id)).map(collectionOf),
+  ...HELD_LINES.map(lineCollection)
+].sort((a, b) => COLLECTED_BODIES.findIndex((body) => body.id === a.graphNode) - COLLECTED_BODIES.findIndex((body) => body.id === b.graphNode))
+
+/** The bodies a collection holds the logos of: its own, and those of any names it went by before. */
+export const nodesOf = (collection) => collection.graphNodes ?? (collection.graphNode ? [collection.graphNode] : [])
 
 // The one-off programs' published specimens (WorkBC, WelcomeBC, StrongerBC, Canada Starts Here, Where
 // ideas work). They are not bodies of the inventory: each program's collection is not shelved, and

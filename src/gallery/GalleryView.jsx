@@ -11,14 +11,14 @@
 // whose marks have not been obtained get a shelf of their own, while there are any, so a gap reads
 // as a gap rather than as a body with no mark.
 
-import { useEffect, useState } from 'react'
+import { useEffect, useLayoutEffect, useRef, useState } from 'react'
 import { ColourField } from '../site/ColourField.jsx'
 import { Segmented } from '../site/Segmented.jsx'
 import { renderFlagSvg } from '../flag/renderFlagSvg.js'
 import { FLAG_PALETTE_HINTS, FLAG_PALETTE_LABELS, FLAG_PALETTE_ORDER, FLAG_SWATCHES } from '../flag/flagPalettes.js'
 import {
-  APPLICABILITY, COLLECTIONS_ON_SHELF, FIDELITY, GALLERY_COLLECTIONS, PROVENANCE, RIGHTS, entriesOf, eraStatus,
-  findGalleryEntry, timelineOf
+  APPLICABILITY, COLLECTIONS_ON_SHELF, FIDELITY, GALLERY_COLLECTIONS, PROVENANCE, RIGHTS, collectionById, entriesOf,
+  entriesOfNode, eraStatus, findGalleryEntry, timelineOf
 } from './collections.js'
 import { ASSET_STATUS, WANTED, WANTED_AS_OF } from './wanted.js'
 import { COLLECTING } from './collectingData.js'
@@ -29,7 +29,7 @@ import { useSiteTheme } from '../site/useTheme.js'
 import { BCTS_FOREST, BCTS_TEAL } from './oneOffs.js'
 import { SuppliedMarkView } from './SuppliedMarkView.jsx'
 import { CollectedMarkView } from './CollectedMarkView.jsx'
-import { COLLECTION_RESEARCH, researchLabel } from './collectedCollections.js'
+import { COLLECTION_RESEARCH, nodesOf, researchLabel } from './collectedCollections.js'
 import { onPage, tileArt } from './tileArt.js'
 
 const PALETTE_OPTIONS = FLAG_PALETTE_ORDER.map((value) => ({
@@ -441,7 +441,7 @@ const CollectionCard = ({ collection, onOpen, theme }) => {
   const cover = findGalleryEntry(collection.cover) ?? entriesOf(collection)[0]
   const count = entriesOf(collection).length
   return (
-    <button type="button" className="gallery__collection" onClick={onOpen} aria-label={`Open ${collection.label}`}>
+    <button type="button" id={`collection-card-${collection.id}`} className="gallery__collection" onClick={onOpen} aria-label={`Open ${collection.label}`}>
       <span
         className="gallery__art gallery__art--cover"
         data-ground="page"
@@ -631,7 +631,12 @@ const GraphLink = ({ node, onOpenGovernment }) => node && onOpenGovernment && (
  * are a hundred and forty of them, most the health system's boards and councils of the 1990s.
  */
 const CollectingShelf = ({ onChoose, onOpenGovernment }) => {
-  const held = new Map(GALLERY_COLLECTIONS.filter((collection) => collection.graphNode).map((collection) => [collection.graphNode, collection]))
+  // A body is held by its own collection, or by the one it carried on as under a later name.
+  const held = new Map(GALLERY_COLLECTIONS.flatMap((collection) => nodesOf(collection).map((node) => [node, collection])))
+  // A name a body went by before opens at its era of the collection that holds it.
+  const eraOf = (collection, node) => node === collection.graphNode
+    ? undefined
+    : collection.eras?.find((era) => era.entries.some((entry) => entry.owner === node))?.id
   const groups = [
     { id: 'crowns-today', label: 'Crown corporations today', bodies: COLLECTING.filter((body) => body.current && body.kind === 'crown-corporation') },
     { id: 'health-today', label: 'Health authorities today', bodies: COLLECTING.filter((body) => body.current && body.kind === 'health-authority') },
@@ -646,7 +651,9 @@ const CollectingShelf = ({ onChoose, onOpenGovernment }) => {
       {bodies.map((body) => {
         const collection = held.get(body.id)
         const research = COLLECTION_RESEARCH.get(body.id)
-        const marks = collection ? entriesOf(collection).length : 0
+        const own = collection ? entriesOfNode(collection, body.id) : []
+        const marks = own.length
+        const files = collection && (collection.fileCollection || own.every((entry) => entry.kind === 'collected'))
         return (
           <li key={body.id} className="gallery__collecting-row" data-held={collection ? true : undefined}>
             <span className="gallery__collecting-name">
@@ -654,7 +661,7 @@ const CollectingShelf = ({ onChoose, onOpenGovernment }) => {
               <span className="gallery__collecting-years">{body.shortName ? `${body.shortName} · ` : ''}{years(body)}{body.untraced ? ', end not traced' : ''}</span>
             </span>
             {collection
-              ? <button type="button" className="gallery__collecting-status" onClick={() => onChoose(collection.id)}>{marks} {collection.fileCollection ? (marks === 1 ? 'file' : 'files') : (marks === 1 ? 'mark' : 'marks')} <span aria-hidden="true">→</span></button>
+              ? <button type="button" className="gallery__collecting-status" onClick={() => onChoose(collection.id, eraOf(collection, body.id))}>{marks} {files ? (marks === 1 ? 'file' : 'files') : (marks === 1 ? 'mark' : 'marks')} <span aria-hidden="true">→</span></button>
               : <span className="gallery__collecting-status" title={research?.notes}>{researchLabel(research)}</span>}
             {onOpenGovernment && (
               <button type="button" className="gallery__collecting-graph" onClick={() => onOpenGovernment(body.id, yearIn(body))} title={`${body.name} in the government graph`}>
@@ -724,8 +731,9 @@ const readParam = (key) => new URLSearchParams(globalThis.location?.search ?? ''
 
 /** The collection in the address bar — or, for a link to a mark alone, the one that holds it. */
 const readCollection = () => {
-  const id = readParam('logos')
-  if (GALLERY_COLLECTIONS.some((collection) => collection.id === id)) return id
+  // A link to a body's collection from before it was folded into a later name's still opens there.
+  const named = collectionById(readParam('logos'))
+  if (named) return named.id
   const mark = readParam('mark')
   return GALLERY_COLLECTIONS.find((collection) => entriesOf(collection).some((entry) => entry.id === mark))?.id ?? null
 }
@@ -788,19 +796,35 @@ export const GalleryView = ({ onOpenGovernment, onOpenInGenerator }) => {
   const [collectionId, setCollectionId] = useState(readCollection)
   const [openId, setOpenId] = useState(readMark)
   const open = openId && findGalleryEntry(openId)
-  const collection = GALLERY_COLLECTIONS.find((candidate) => candidate.id === collectionId)
+  const collection = collectionById(collectionId)
 
+  // Going back — to all the logos, or from a mark to its collection — returns to where that page was
+  // scrolled to when it was left, so the card just opened is where it was. A page not yet seen this
+  // visit (one reached by a link) opens at its top, or for all the logos, at the card come back from.
+  const scrolled = useRef(new Map())
+  const [arrival, setArrival] = useState(null)
   const go = (nextCollection, nextMark) => {
+    scrolled.current.set(`${collectionId ?? ''}/${openId ?? ''}`, globalThis.scrollY ?? 0)
     setCollectionId(nextCollection)
     setOpenId(nextMark)
     writePlace(nextCollection, nextMark)
-    globalThis.scrollTo?.({ top: 0 })
+    setArrival({ from: collectionId, key: `${nextCollection ?? ''}/${nextMark ?? ''}` })
   }
+  useLayoutEffect(() => {
+    if (!arrival) return
+    const saved = scrolled.current.get(arrival.key)
+    const card = arrival.key === '/' && arrival.from ? document.getElementById(`collection-card-${arrival.from}`) : null
+    if (saved !== undefined) globalThis.scrollTo?.({ top: saved })
+    else if (card) card.scrollIntoView({ block: 'center' })
+    else globalThis.scrollTo?.({ top: 0 })
+    setArrival(null)
+  }, [arrival])
   // A collection of one mark and no history opens straight to it: there is nothing to choose between.
-  const choose = (id) => {
+  const choose = (id, era) => {
     const chosen = GALLERY_COLLECTIONS.find((candidate) => candidate.id === id)
     const only = chosen && !hasPage(chosen) ? entriesOf(chosen)[0].id : null
     go(id, only)
+    if (era) setEraTarget(era)
   }
   const openMark = (id) => {
     const entry = findGalleryEntry(id)

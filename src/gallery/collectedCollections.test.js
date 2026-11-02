@@ -4,8 +4,9 @@ import { readFileSync, existsSync } from 'node:fs'
 import { createHash } from 'node:crypto'
 import { COLLECTING } from './collectingData.js'
 import { COLLECTED_BODIES } from './collectedData.js'
-import { COLLECTED_COLLECTIONS, assetUrl, researchLabel } from './collectedCollections.js'
-import { GALLERY_COLLECTIONS, entriesOf } from './collections.js'
+import { COLLECTED_COLLECTIONS, CONTINUATIONS, assetUrl, nodesOf, researchLabel } from './collectedCollections.js'
+import { GALLERY_COLLECTIONS, collectionById, collectionOfNode, entriesOf, entriesOfNode } from './collections.js'
+import { HISTORICAL_BODIES } from '../government/historyData.js'
 
 const root = new URL('../../', import.meta.url)
 
@@ -14,7 +15,13 @@ test('every requested body is accounted for without inventing collected artwork'
   assert.equal(new Set(COLLECTED_BODIES.map((body) => body.id)).size, COLLECTED_BODIES.length)
   for (const body of COLLECTED_BODIES) {
     if (body.status !== 'asset-collected') assert.equal(body.assets.length, 0, body.id)
-    if (body.assets.length) assert.ok(GALLERY_COLLECTIONS.some((collection) => collection.graphNode === body.id), body.id)
+    if (body.assets.length) {
+      const collection = collectionOfNode(body.id)
+      assert.ok(collection, body.id)
+      // Every file of the body is in the collection that holds it, under that body.
+      const shown = new Set(entriesOfNode(collection, body.id).map((entry) => entry.id))
+      for (const asset of body.assets) assert.ok(shown.has(asset.id), `${body.id}: ${asset.id}`)
+    }
   }
 })
 
@@ -56,4 +63,29 @@ test('asset links respect both root and project deployments; leads stay uncollec
   assert.equal(researchLabel({ status: 'source-found' }), 'Source located · artwork wanted')
   assert.equal(researchLabel({ status: 'unresolved' }), 'Wanted · searched')
   assert.equal(researchLabel({ status: 'not-searched' }), 'Wanted')
+})
+
+test('a body folded into a later name is one the government history records becoming it, alone', () => {
+  const history = new Map(HISTORICAL_BODIES.map((body) => [body.id, body]))
+  const held = new Set(COLLECTED_BODIES.filter((body) => body.assets.length).map((body) => body.id))
+  const folded = [...CONTINUATIONS, ...GALLERY_COLLECTIONS.filter((collection) => collection.eras && collection.graphNodes)
+    .flatMap((collection) => collection.graphNodes.slice(1).map((node) => [node, null]))]
+  for (const [from, to] of folded) {
+    const became = history.get(from)?.became
+    assert.ok(became, `${from} became something`)
+    if (to) assert.equal(became, to, from)
+    // No other body with logos here became the same one: that would be an amalgamation.
+    const others = HISTORICAL_BODIES.filter((body) => body.became === became && body.id !== from && held.has(body.id))
+    assert.deepEqual(others.map((body) => body.id), [], from)
+  }
+})
+
+test('a link to a folded body’s old collection opens the collection that holds it now', () => {
+  for (const collection of GALLERY_COLLECTIONS) for (const alias of collection.aliases ?? []) {
+    assert.equal(collectionById(alias), collection, alias)
+    assert.ok(!GALLERY_COLLECTIONS.some((other) => other.id === alias), alias)
+  }
+  for (const collection of GALLERY_COLLECTIONS) assert.equal(new Set(nodesOf(collection)).size, nodesOf(collection).length)
+  const nodes = GALLERY_COLLECTIONS.flatMap(nodesOf)
+  assert.equal(new Set(nodes).size, nodes.length, 'each body is held by one collection')
 })
