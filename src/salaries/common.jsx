@@ -64,30 +64,34 @@ export const RoleIcon = () => (
 )
 
 /**
- * A record as a row: who or what on the left, the pay on the right, and its source under the pay —
- * opening at the record's page where the parser recorded one. A disclosed $0 expense is shown.
+ * A record as a card, like the other cards: who on the left, the pay and rank on the right, and the
+ * expenses and source under the name — the source opening at the record's page where the parser
+ * recorded one. The whole card opens the name; the source link sits above that. A disclosed $0
+ * expense is shown.
  */
-export const RecordRow = ({ rank, name, position, pay, expenses, expenseText, sourceId, sources, pdfPage, onPerson, nameDisclosure }) => (
-  <li className="salaries-row">
-    {rank != null && <span className="salaries-row__rank">{rank}</span>}
-    <span className="salaries-row__who">
-      {name !== undefined && (name
-        ? <button type="button" className="salaries__link salaries-row__name" onClick={() => onPerson(name)}>{displayName(name, nameDisclosure)}</button>
-        : <span className="salaries-row__name salaries__line">Name not given</span>)}
-      {position && <span className="salaries__line">{position}</span>}
-    </span>
-    <span className="salaries-row__pay">
-      {money(pay)}
-      {(hasExpenseAmount(expenses) || sourceHref(sources?.[sourceId], pdfPage)) && (
-        <span className="salaries__line">
-          {hasExpenseAmount(expenses) ? `${expenseText} ${money(expenses)}` : ''}
-          {hasExpenseAmount(expenses) && sourceHref(sources?.[sourceId], pdfPage) ? ' · ' : ''}
-          {sourceId && <SourceLink sourceId={sourceId} sources={sources} pdfPage={pdfPage} />}
-        </span>
-      )}
-    </span>
-  </li>
-)
+export const RecordRow = ({ rank, name, position, pay, expenses, expenseText, sourceId, sources, pdfPage, onPerson, nameDisclosure }) => {
+  const href = sourceHref(sources?.[sourceId], pdfPage)
+  const expense = hasExpenseAmount(expenses)
+  return (
+    <li className={`salaries__card salaries-record-card${name ? '' : ' salaries__card--still'}`}>
+      <span className="salaries__lead"><PersonIcon /></span>
+      <span className="salaries__text">
+        {name !== undefined && (name
+          ? <button type="button" className="salaries__name salaries-record-card__open" onClick={() => onPerson(name)}>{displayName(name, nameDisclosure)}</button>
+          : <span className="salaries__name" data-missing>Name not given</span>)}
+        {position && <span className="salaries__line">{position}</span>}
+        {(expense || href) && (
+          <span className="salaries__line">
+            {expense ? `${expenseText} ${money(expenses)}` : ''}
+            {expense && href ? ' · ' : ''}
+            {sourceId && <SourceLink sourceId={sourceId} sources={sources} pdfPage={pdfPage} />}
+          </span>
+        )}
+      </span>
+      <span className="salaries__aside">{money(pay)}{rank != null && <span className="salaries__line">No. {rank}</span>}</span>
+    </li>
+  )
+}
 
 /**
  * A list in pages: `items` is the page on screen, `pager` the control under it (none for one page).
