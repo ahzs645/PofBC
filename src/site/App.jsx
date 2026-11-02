@@ -15,6 +15,8 @@ const PostersView = lazy(() => import('../posters/PostersView.jsx').then((module
 const SignsView = lazy(() => import('../signs/SignsView.jsx').then((module) => ({ default: module.SignsView })))
 // The patch library and digitizer come from the Patcher submodule (vendor/patcher).
 const PatchesView = lazy(() => import('../patches/PatchesView.jsx').then((module) => ({ default: module.PatchesView })))
+// Licence plates are drawn by PlateForge (vendor/plateforge), with its B.C. region data and fonts.
+const PlatesView = lazy(() => import('../plates/PlatesView.jsx').then((module) => ({ default: module.PlatesView })))
 const GuidesView = lazy(() => import('../guides/GuidesView.jsx').then((module) => ({ default: module.GuidesView })))
 // The stationery brings brandkit's template engine and studio (vendor/brandkit).
 const StationeryView = lazy(() => import('../stationery/StationeryView.jsx').then((module) => ({ default: module.StationeryView })))
@@ -259,6 +261,12 @@ export const App = () => {
       {view === 'badges' && (
         <Suspense fallback={<p className="gallery__intro" role="status">Loading the badges…</p>}>
           <PatchesView key={visit} collection="badges" />
+        </Suspense>
+      )}
+
+      {view === 'plates' && (
+        <Suspense fallback={<p className="gallery__intro" role="status">Loading the licence plates…</p>}>
+          <PlatesView key={visit} />
         </Suspense>
       )}
 
