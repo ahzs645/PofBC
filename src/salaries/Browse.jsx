@@ -92,13 +92,14 @@ export const EmployerBrowse = ({ employers, years, sector, range, layout, onOpen
 const TopRecordCard = ({ group, rank, index, onPerson }) => {
   const { row, records, years } = group
   return (
-    <button type="button" className="salaries__card" onClick={() => onPerson(row[0], index.employers[row[4]][3])}>
+    <button type="button" className="salaries__card" onClick={() => onPerson(group.name, index.employers[row[4]][3])}>
       <span className="salaries__lead"><PersonIcon /></span>
       <span className="salaries__text">
-        <span className="salaries__name">{displayName(row[0], index.sources?.[row[6]]?.nameDisclosure)}</span>
+        <span className="salaries__name">{displayName(group.name, index.sources?.[row[6]]?.nameDisclosure)}</span>
         {row[1] && <span className="salaries__line">{row[1]}</span>}
         <span className="salaries__line">{index.employers[row[4]][0]}</span>
         {records.length > 1 && <span className="salaries__line">{count(records.length, 'ranked record', 'ranked records')} · {count(years.length, 'period', 'periods')}</span>}
+        {group.aliases.length > 0 && <span className="salaries__line">Also disclosed as {group.aliases.map((name) => displayName(name, index.sources?.[records.find((row) => row[0] === name)?.[6]]?.nameDisclosure)).join(', ')}</span>}
       </span>
       <span className="salaries__aside">{money(row[2])}<span className="salaries__line">No. {rank} · {index.years[row[5]]}</span></span>
     </button>
@@ -112,7 +113,7 @@ export const PeopleBrowse = ({ index, sector, range, layout, onPerson, onEmploye
   useEffect(() => { loadJson('salaries/people/top.json.gzip').then(setTop, () => setFailed(true)) }, [])
   const rows = useMemo(() => top ? groupHighestPaidRecords(top.rows, { employers: index.employers, sources: index.sources, sector, range }) : [], [top, index, sector, range])
   const columns = useMemo(() => [
-    { id: 'name', header: 'Name', accessorFn: ({ row }) => displayName(row[0], index.sources?.[row[6]]?.nameDisclosure), cell: ({ row: { original }, getValue }) => <button type="button" className="salaries__link salaries-row__name" onClick={() => onPerson(original.row[0], index.employers[original.row[4]][3])}>{getValue()}</button> },
+    { id: 'name', header: 'Name', accessorFn: ({ name, row }) => displayName(name, index.sources?.[row[6]]?.nameDisclosure), cell: ({ row: { original }, getValue }) => <button type="button" className="salaries__link salaries-row__name" onClick={() => onPerson(original.name, index.employers[original.row[4]][3])}>{getValue()}</button> },
     { id: 'position', header: 'Position', accessorFn: ({ row }) => row[1] ?? '' },
     { id: 'employer', header: 'Employer', accessorFn: ({ row }) => index.employers[row[4]][0], cell: ({ row: { original }, getValue }) => <button type="button" className="salaries__link" onClick={() => onEmployer(index.employers[original.row[4]][3])}>{getValue()}</button> },
     { id: 'period', header: 'Payment period', accessorFn: ({ row }) => index.years[row[5]] },

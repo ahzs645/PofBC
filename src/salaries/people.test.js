@@ -208,3 +208,38 @@ test('employer coverage distinguishes excluded compiled years from verified repl
     assert.ok(hydro.repeated.includes('2020/21'))
   }
 })
+
+test('people browse joins an initial to the one full name it agrees with at the same employer', () => {
+  const rows = [
+    ['Garant, D.', 'Senior Vice President', 1961537, 15299, 0, 0, 'official'],
+    ['Garant, Daniel', 'Executive Vice President', 3686064, 0, 0, 1, 'official'],
+    ['Garant, D.', null, 100, null, 1, 0, 'official']
+  ]
+  const groups = groupHighestPaidRecords(rows, browseIndex)
+  assert.equal(groups.length, 2, 'another employer stays apart')
+  const joined = groups.find((group) => group.row[0] === 'Garant, Daniel')
+  assert.deepEqual(joined.records, [rows[1], rows[0]])
+  assert.deepEqual(joined.years, [0, 1])
+  assert.deepEqual(joined.aliases, ['Garant, D.'])
+  const shownFull = groupHighestPaidRecords([['Lalonde, V', null, 300, null, 0, 0, 'official'], ['Lalonde, Vincent A.', null, 200, null, 0, 1, 'official']], browseIndex)
+  assert.equal(shownFull.length, 1)
+  assert.equal(shownFull[0].name, 'Lalonde, Vincent A.', 'shown by the full name')
+  assert.equal(shownFull[0].row[2], 300)
+  assert.deepEqual(shownFull[0].aliases, ['Lalonde, V'])
+  assert.equal(joined.row[2], 3686064, 'display the highest payment, never the sum')
+})
+
+test('people browse keeps an initial apart when several full names fit or a period is shared', () => {
+  const ambiguous = groupHighestPaidRecords([
+    ['Garant, D.', null, 100, null, 0, 0, 'official'],
+    ['Garant, Daniel', null, 200, null, 0, 1, 'official'],
+    ['Garant, Diane', null, 300, null, 0, 1, 'official']
+  ], browseIndex)
+  assert.equal(ambiguous.length, 3)
+  const samePeriod = groupHighestPaidRecords([
+    ['Garant, D.', null, 100, null, 0, 1, 'official'],
+    ['Garant, Daniel', null, 200, null, 0, 1, 'official']
+  ], browseIndex)
+  assert.equal(samePeriod.length, 2)
+  assert.ok(samePeriod.every((group) => group.aliases.length === 0))
+})
