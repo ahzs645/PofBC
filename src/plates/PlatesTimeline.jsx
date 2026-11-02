@@ -9,7 +9,7 @@
 // FamilyStrip is the viewer's: the open plate's family in lanes, the open plate marked, and any
 // other bar a click away.
 
-import { useEffect, useMemo, useRef } from 'react'
+import { useMemo, useRef } from 'react'
 import { changeYears, inUse, lanesOf, spanOf } from './timeline.js'
 
 const WIDTH = 1000
@@ -174,11 +174,8 @@ export const FamilyStrip = ({ formats, current, onOpen }) => {
   const x = useMemo(() => axis(span), [span])
   const LANE = 10
   const height = lanes.length * LANE + 2
-  const strip = useRef(null)
-  // The open plate's bar stays in view when the strip scrolls (a phone, a long family).
-  useEffect(() => { strip.current?.querySelector('[data-current]')?.scrollIntoView?.({ block: 'nearest', inline: 'center' }) }, [current])
   return (
-    <div className="plates-strip" ref={strip}>
+    <div className="plates-strip">
       <div className="plates-strip__track">
         <svg viewBox={`0 0 ${WIDTH} ${height}`} preserveAspectRatio="none" style={{ height }} aria-hidden="true">
           {lanes.map((lane, index) => lane.map((format) => (
