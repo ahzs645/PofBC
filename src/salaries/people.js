@@ -180,9 +180,12 @@ export const displayName = (name, nameDisclosure) => {
 export const positionKey = (position) => String(position ?? '').toLowerCase().replace(/[^a-z0-9&/+ ]+/g, ' ').replace(/\s+/g, ' ').trim()
 
 /**
- * Fold a compiled observation only when one primary row has the same employer, reporting label,
- * payment and disclosed expenses. Unknown expenses and compiled-only repetitions stay visible.
- * This display grouping does not establish the compiled observation's reporting year.
+ * Fold a compiled observation only when one primary row has the same employer, reporting label and
+ * payment, and expenses that do not disagree: the same amount, or none printed in the employer's
+ * report (a compiled figure cannot contradict an expense the report left blank). Two different
+ * printed amounts, a compiled copy with no expenses beside a printed one, and compiled-only
+ * repetitions stay visible. This display grouping does not establish the compiled observation's
+ * reporting year, nor make a blank expense a disclosed one.
  *
  * `layout` gives the column of each field: the people index's rows by default, or an employer
  * file's ([name, position, pay, expenses, year, source, page], no employer column). `nameKey`, when
@@ -194,18 +197,22 @@ export const EMPLOYER_LAYOUT = { position: 1, pay: 2, expenses: 3, employer: nul
 export const withoutCompiledRepeats = (rows, sources = {}, currencyOfRow = () => 'CAD', { layout = PEOPLE_LAYOUT, nameKey = null } = {}) => {
   const at = layout
   const compiled = (row) => sources[row[at.source]]?.sourceKind === 'compiled' || sources[row[at.source]]?.scope === 'compiled-unverified'
-  const key = (row) => [nameKey ? nameKey(row) : '', at.employer === null ? '' : row[at.employer], row[at.year], row[at.pay], row[at.expenses], currencyOfRow(row)].join('|')
+  const key = (row) => [nameKey ? nameKey(row) : '', at.employer === null ? '' : row[at.employer], row[at.year], row[at.pay], currencyOfRow(row)].join('|')
   const primary = new Map()
   for (const row of rows) {
     const source = sources[row[at.source]]
-    if (compiled(row) || !source?.url || !source.sha256 || row[at.expenses] == null) continue
+    if (compiled(row) || !source?.url || !source.sha256) continue
     const signature = key(row)
     if (!primary.has(signature)) primary.set(signature, [])
     primary.get(signature).push(row)
   }
   return rows.filter((row) => {
-    if (!compiled(row) || row[at.expenses] == null) return true
+    if (!compiled(row)) return true
     const matches = primary.get(key(row)) ?? []
-    return matches.length !== 1 || Boolean(row[at.position] && matches[0][at.position] && positionKey(row[at.position]) !== positionKey(matches[0][at.position]))
+    if (matches.length !== 1) return true
+    const [match] = matches
+    const expensesAgree = match[at.expenses] == null || match[at.expenses] === row[at.expenses]
+    const positionsDisagree = Boolean(row[at.position] && match[at.position] && positionKey(row[at.position]) !== positionKey(match[at.position]))
+    return !expensesAgree || positionsDisagree
   })
 }

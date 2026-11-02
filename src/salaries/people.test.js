@@ -243,12 +243,16 @@ test('only a complete compiled match at the same employer and label is folded un
   assert.deepEqual(withoutCompiledRepeats([repeat, original, [...original]], sources), [repeat, original, original], 'multiple primary rows do not establish a unique witness')
 })
 
-test('unknown expenses, absent original provenance, or conflicting positions cannot hide a compiled observation', () => {
+test('disagreeing expenses, absent original provenance, or conflicting positions cannot hide a compiled observation', () => {
   const sources = { official: { url: 'https://example.test/report.pdf', sha256: 'original-hash' }, compiled: { sourceKind: 'compiled' } }
   const row = (source, expense, position = null) => ['Smith, Alex', position, 100000, expense, 0, 0, source]
-  for (const rows of [[row('official', null), row('compiled', null)], [row('official', 0), row('compiled', null)],
-    [row('official', null), row('compiled', 0)], [row('official', 0, 'Manager'), row('compiled', 0, 'Director')]]) {
+  for (const rows of [[row('official', 0), row('compiled', null)], [row('official', 120), row('compiled', 0)],
+    [row('official', 0, 'Manager'), row('compiled', 0, 'Director')], [row('official', null), row('official', 50), row('compiled', 0)]]) {
     assert.deepEqual(withoutCompiledRepeats(rows, sources), rows)
+  }
+  // An expense the employer's report left blank does not contradict the compiled figure.
+  for (const rows of [[row('official', null), row('compiled', 0)], [row('official', null), row('compiled', 812)], [row('official', null), row('compiled', null)]]) {
+    assert.deepEqual(withoutCompiledRepeats(rows, sources), [rows[0]])
   }
   const rows = [row('official', 0), row('compiled', 0)]
   assert.deepEqual(withoutCompiledRepeats(rows, sources), [rows[0]])
