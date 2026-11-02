@@ -1,0 +1,39 @@
+{
+  "accepted": true,
+  "approvedBy": "root",
+  "noOutreach": true,
+  "reason": "GitHub checks out the repository outside the original /workspace/PofBC capture path. One immutable Other-history replay helper imports that historical absolute path. A bounded in-memory path adapter makes the same pinned replay work from the actual checkout.",
+  "sourceEvidenceAndFinancialRulesChanged": false,
+  "originalFrozenFilesPreserved": 13375,
+  "originalRootFreeze": {
+    "path": "research/salaries/gap-fill-2026-11-02/root-freeze.json",
+    "sha256": "2055ce360d297f6ca12a10b674940c189b7c7910ed1854be736b0e7ddb782b10"
+  },
+  "priorParentAcceptance": {
+    "path": "research/salaries/gap-fill-2026-11-02/reviews/ci-portability-amendment/parent-before-path-adapter.json",
+    "sha256": "a9e0452de8c87a970f61368ad9c03ac8a241e7d5a1780c6121c9c7876b26cd0b"
+  },
+  "pathAdapter": {
+    "path": "scripts/gap_fill_repository_paths.py",
+    "sha256": "cba89e25f9481c44d4eb7548222a46446646d801552cc5d21924b05148c65083"
+  },
+  "regressionTests": {
+    "path": "scripts/test_gap_fill_repository_paths.py",
+    "sha256": "b9977adb2be7108f50ad48b3dff84d68dcc9e639bc8c2c74f8ebfb9ff0d54dee"
+  },
+  "workflowVersionAtReview": {
+    "path": "research/salaries/gap-fill-2026-11-02/reviews/ci-portability-amendment/salaries-workflow.yml.snapshot",
+    "sha256": "368e3597072d90664cab0c8d5c62f80e00b4bbb1f7344a889939562ea27aca7e"
+  },
+  "variablesReboundOnly": [
+    "gap_health_other_history.ROOT",
+    "gap_health_other_history.AREA",
+    "gap_health_other_history.OLD",
+    "gap_health_other_history_export.ROOT",
+    "gap_health_other_history_export.AREA",
+    "gap_health_other_history_export.COLLECTION"
+  ],
+  "externalPdfAndCacheLocationsChanged": false,
+  "validation": "Full806-test parser suite passed in the separate /workspace/gap-fill-ci-checkout detached checkout, asserting that the helper resolves that checkout instead of /workspace/PofBC. Six new tests cover copied-helper default relocation, cached/future imports, actual247-row pinned reads, stale hashes, unapproved amount edits and failure before mutation. All original source bytes, hashes and financial assertions remain unchanged.",
+  "salaryRecordsAddedByThisAmendment": 0
+}

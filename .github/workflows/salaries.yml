@@ -59,6 +59,10 @@ jobs:
           import unittest
           from pathlib import Path
           sys.path.insert(0, 'scripts')
+          # Rebind immutable historical replayers to this checkout, without
+          # changing their source evidence, financial rules or pinned files.
+          from gap_fill_repository_paths import bind_frozen_checkout
+          bind_frozen_checkout()
           tests = sorted(path.stem for path in Path('scripts').glob('test_*.py')
                          if not path.stem.startswith('test_health_')
                          and path.stem != 'test_rectify_health_maps')

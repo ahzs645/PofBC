@@ -256,6 +256,10 @@
     {
       "path": "research/salaries/gap-fill-2026-11-02/school_north/reviews/phsa-history/phsa-2012-13-independent-bounded-source-review.json",
       "sha256": "0b38bc9de3783573e4a9408053025600a7473f93dea17756767f41aab8a96210"
+    },
+    {
+      "path": "research/salaries/gap-fill-2026-11-02/reviews/ci-portability-amendment/acceptance.json",
+      "sha256": "73d520b0c8845398aadd197c345fe6ce9747a0debc1e889531de2e3772fd1b37"
     }
   ],
   "compiledRetentionAdoptions": {
@@ -271,8 +275,8 @@
     "sha256": "cd35fdffad8e0d060be6ae8901bb5dc92f2a099416830e5822345ddd2bd7ee23"
   },
   "rootFreeze": {
-    "path": "research/salaries/gap-fill-2026-11-02/root-freeze.json",
-    "sha256": "2055ce360d297f6ca12a10b674940c189b7c7910ed1854be736b0e7ddb782b10"
+    "path": "research/salaries/gap-fill-2026-11-02/root-freeze-portable-ci.json",
+    "sha256": "a2a1d22c0d056efb2a868c83bb2d8e5e6d2d6c899b85c8686104c3dbe91f0318"
   },
   "integrationInputs": {
     "path": "research/salaries/gap-fill-2026-11-02/integration-inputs.json",
@@ -288,5 +292,11 @@
   },
   "scope": "All65 exact research leads have substantive evidence-backed outcomes; all located assigned public salary sources are fully processed and accepted or explicitly support-only. Unlocated schedules, source clarifications and ten availability-unestablished historical questions are documented separately. This does not claim complete BC historical coverage, unique-person resolution or annual base pay.",
   "outreachDirection": "No messages, forms or FOI applications sent. NIC,McBride,SD8andSD10 requests remain on hold. All27 acquisition/availability items are repo notes only.",
-  "compiledPreservation": "Every228364 previously published compiled observation and every earlier official observation/metadata definition is preserved exactly. Existing retired compiled groups cannot be resurrected; no new source authorizes deleting old compiled rows."
+  "compiledPreservation": "Every228364 previously published compiled observation and every earlier official observation/metadata definition is preserved exactly. Existing retired compiled groups cannot be resurrected; no new source authorizes deleting old compiled rows.",
+  "integrationAmendments": [
+    {
+      "path": "research/salaries/gap-fill-2026-11-02/reviews/ci-portability-amendment/acceptance.json",
+      "sha256": "73d520b0c8845398aadd197c345fe6ce9747a0debc1e889531de2e3772fd1b37"
+    }
+  ]
 }
