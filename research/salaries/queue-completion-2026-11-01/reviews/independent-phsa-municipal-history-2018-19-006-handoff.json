@@ -1,0 +1,88 @@
+{
+  "frozen": true,
+  "reviewer": "/root/recovery_municipal",
+  "reviewedOn": "2026-11-01",
+  "sourceId": "phsa-2018-19",
+  "sourceSha256": "ddeba470b875451f6180eb442ed921f7902cc910d62a026c11ab298ca3d0440f",
+  "batch": "phsa-2018-19-006",
+  "status": "complete-bounded400-row454-field-original-image-review",
+  "resolutions": {
+    "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-municipal-history-2018-19-006-resolutions.json",
+    "sha256": "5a850917629b7f501f0a1f3185b1f74b28cd83006cd3970bf00ed7e9b1c416e4"
+  },
+  "derivedOverlay": {
+    "path": "research/salaries/queue-completion-2026-11-01/phsa/overlays/phsa-2018-19-manual-overlay-006.json",
+    "sha256": "721daed9af98ab1a0e6d40d636c08313d84feaa689c3ccb07d8c0e5e9e934003"
+  },
+  "verification": {
+    "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-municipal-history-2018-19-006-verification.json",
+    "sha256": "62b570eb7401a1d8c4bd580012d212c6235268907a996fbc1aac665b46f41d15"
+  },
+  "rawImageFirstTranscript": {
+    "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-municipal-history-2018-19-006-original-transcript.json",
+    "sha256": "faea16ef243dee5eadd634f0df432046dfc79528226e912698266fbbe60c3bc2"
+  },
+  "sourceFidelity": {
+    "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-municipal-history-2018-19-006-source-fidelity.json",
+    "sha256": "ea6911f352fcbeb6b45a6fd0e40a743d3d5438aad167c41eb2cd1e6cc559dcce"
+  },
+  "precomparisonSourceRereads": {
+    "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-municipal-history-2018-19-006-precomparison-source-rereads.json",
+    "sha256": "1f3a0d78ba7dd90d1cd5172084e61082e9a74912bd63a8117ca07975bda905d1"
+  },
+  "postcomparisonSourceRereads": {
+    "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-municipal-history-2018-19-006-postcomparison-original-rereads.json",
+    "sha256": "799618a2a9ce0099307258cde4f936b61b1116813e996303723da3e0f5a61cc5"
+  },
+  "allFieldCandidateComparison": {
+    "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-municipal-history-2018-19-006-full-candidate-comparison.json.gzip",
+    "sha256": "7090b0441c4cff89ff059b0c971e9159292b58ab0cc145d5d034b002c483af87"
+  },
+  "independentTwentyThreeNamePeerClosure": {
+    "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-municipal-history-2018-19-006-twenty-three-name-peer-closure.json",
+    "sha256": "1b732f1ce7a3ac90f349542a70cab33818750854827a3cd25a1285814d049bb6"
+  },
+  "independentPeerComparison": {
+    "path": "research/salaries/queue-completion-2026-11-01/reviews/author-phsa-history-2018-19-006-23-name-peer-comparison.json",
+    "sha256": "7a0b703d4d5a59e158a5b477399905eb3159ec6b399ed49883bbd096986b501a"
+  },
+  "freshThirdFourNamePeerComparison": {
+    "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-history-batches-peer-2018-19-006-four-comparison.json",
+    "sha256": "771ae03310ec3c0150bb3836b2ac935044591292abcb46d20caaff0ec9fc6059"
+  },
+  "assignedRows": 400,
+  "requestedFields": 454,
+  "fieldCounts": {
+    "name": 345,
+    "expenses": 47,
+    "remuneration": 62
+  },
+  "qualifiedCases": 0,
+  "unresolvedRows": [],
+  "sourceReadScope": "All345names62pay47expenses personally read from47native sheets before candidate.20actual300dpi sourcePDFpages/400fullrowcrops/454fieldviews/47sheetpixel regions independently reproduced. Sixteen capital-I source600names and23marked names at600/1200 personally source-read. Separate freshblindpeer read23names; freshthird reader source-read4actual disagreements. Final all23 names/crops exact with0qualifiers after honest original-glyph rereads. No second400-row/moneyreview claim, no dictionary/case convention/prior-year inference.",
+  "expenseMeaning": "26literal printed dashes=null,21positive numbers,0explicitzeros; OCRmissingnull is not parsed-dash corroboration.",
+  "ownFirstPassCorrections": {
+    "beforeCandidate": [],
+    "afterCandidate": [
+      {
+        "sequence": 365,
+        "initial": "Venediktova,Inna",
+        "final": "Venediktova,Irina"
+      }
+    ],
+    "moneyChanges": 0,
+    "originalRawAndAllEarlierReceiptsUnchanged": true
+  },
+  "peerReadingHistory": "First23-name peer had five unique own first-pass errors plus intermediate210/225 proposals; final actual2400 current-source rereads correct them transparently. Freshfour-name third peer matched210/225 first, then corrected its own221/340 reading errors on actual2400. All prior originals/amendments remain pinned, no false first-pass unanimity or author23value correction claim.",
+  "candidateDifferences": {
+    "fields": 390,
+    "rows": 365,
+    "name": 307,
+    "expenses": 21,
+    "remuneration": 62
+  },
+  "derivedOverlayByteIdenticalReplayPassed": true,
+  "sourceAcceptanceClaim": false,
+  "noOldOrGlobalFilesChanged": true,
+  "nextAction": "Health may consume bounded pinned overlay. Whole-year acceptance still requires full-period controls/approvals/holdouts/other batch ledgers to close."
+}

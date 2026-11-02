@@ -1,0 +1,68 @@
+{
+  "reviewer": "/root/recovery_review",
+  "decision": "PASS for the pinned implementation and root integration gates, conditional on completion of each source field ledger and independent whole-source closure. No nine-source acceptance or publication is asserted.",
+  "scope": "Independent code reading, negative-gate replays and actual complete held-source validation. Prior independently blind original-image benchmarks/holdouts/source peers remain separately pinned.",
+  "evidenceInputs": [
+    {
+      "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-history-batches-final-gates-audit-001.json",
+      "sha256": "b80d24994ff1201d8040d4e1f3479686bf519867e7b77af0104ff6ad5fa78f27"
+    },
+    {
+      "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-history-batches-holdout-selection-audit-003-all90.json",
+      "sha256": "bc1679991152aa1cc5e5ac8b79ce7cb3843b1bc6597a71fc4e348a728a116698"
+    },
+    {
+      "path": "research/salaries/queue-completion-2026-11-01/reviews/root-phsa-history-all-nine-holdouts-closure.json",
+      "sha256": "b4c75367ef1e75ab20c48e6fe5fece38e7fd92d1e276a2d6dacdf90abb0d4f24"
+    },
+    {
+      "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-history-batches-integration-gates-review-001.json",
+      "sha256": "b10f847369f4938fef5c5376ec07ea36bd0bd60a0fe1c487b0a85b9f528cd9f1"
+    }
+  ],
+  "fieldPolicy": {
+    "path": "research/salaries/queue-completion-2026-11-01/phsa/paired-reader-field-policy-002.json",
+    "sha256": "0fafb3763ea5a1ebf8f2d7310e748cb4d24247428f544056e1427d2e6ecc77fe"
+  },
+  "producerStdlibTests": {
+    "command": "python -m unittest discover -s scripts -p 'test_finish_salary_phsa.py'",
+    "passed": 18,
+    "file": {
+      "path": "scripts/test_finish_salary_phsa.py",
+      "sha256": "85446a595c3c392b2e00d37dc0317c4dcb73c0dd1d08a8fa5cd57467703a802a"
+    }
+  },
+  "rootIntegrationTests": {
+    "command": "python -m unittest discover -s scripts -p 'test_salary_queue_completion.py'",
+    "passed": 16,
+    "file": {
+      "path": "scripts/test_salary_queue_completion.py",
+      "sha256": "640201b03194ef4f3dd6dd276cee45e6cb2b1389e8b0a7904b55285fe36e0923"
+    }
+  },
+  "independentAdversarialFinalGateCases": 46,
+  "failedIndependentCases": 0,
+  "reviewedGuards": [
+    "Retain all original flags, frozen packets and raw reader values. Only exact field-specific confidence-only flags, independent parsed agreement, strictly positive integer money, source-render/date/row proof and absence of hard/name guards permit automatic corroboration; that route cannot change a value.",
+    "Every complete fiscal-source materialization requires actual source identity, contiguous physical pages, contiguous source-row keys, no pending fields and all nine distinct10row source-layout holdouts. Holdout source/candidate/header/row/field pins and strict typed amounts are checked.",
+    "Unknown/dash/zero/negative money cannot be silently inferred from missing OCR. Source-specific explicit dash geometry remains a distinct evidence route; null is never converted to0. Manual amounts matching neither parsed original reader require independently image-read source confirmation bound to the effective overlay/value/row/field.",
+    "I/l and finite rn/m qualifications are name-only, retain exact visible alternatives and honest nonunique-glyph limits, require exact independent peer/root case adoption, and appear in mandatory public warnings. Eight closed finite exceptional cases are restricted to exact policy/source/year/batch/row/crop/primary/alternative/root pins; they cannot grant broad replacement authority.",
+    "Immutable overlay revisions preserve every old byte and original requested field/row/source/crop scope, reject conflicts/cycles and select only the explicit effective revision. Derived monetary confirmation ledgers byte-replay their pinned original peer adapters; an edited amount cannot silently pass while the pinned peer remains fixed.",
+    "Final metadata distinguishes personally image-reviewed fields, baseline independent-reader agreement, calibrated confidence-only corroboration and source-dash geometry. Literal source control residuals/cover roster-count differences/2015prior-year correction are reported without balancing or annualizing. All source candidates remain held until independent/root acceptance.",
+    "Root integration preserves805387prior official observations and their metadata exactly; only separately whole-copy-proved3289Providencecompiled observations may be removed. Four exact issuer requests remain honestly unsent with no fees/forms authorized. New PHSA provenance is checked against actual rows, closed routes, field counts, page keys, controls/residuals and source-specific holdouts."
+  ],
+  "resolvedDefensiveFindings": [
+    "Field-specific confidence allowlist and strict integer checks for both readers and candidate.",
+    "Exact nine source IDs, ten aligned unique holdout rows/source and packet/candidate identity checks.",
+    "Finalizer source ID/SHA/page-count and contiguous-row guards.",
+    "Derived monetary confirmation byte replay and exact complete source-only target-set scope."
+  ],
+  "holdoutAndCalibrationLimits": "All90root source-first rows/222fields passed; four honest root first-reading corrections were additively source/fresh-peer corrected with no machine-data changes. This reviewer independently replayed deterministic selection/source pixels/provenance, not personally all222literal fields. The finite benchmark/calibration sample does not establish a universal error rate; confidence values are not probabilities.",
+  "stillRequiredBeforeWholeQueueAcceptance": [
+    "Every outstanding assigned/manual field and supplemental name-quality reservation must close for all9cohorts.",
+    "Every exact qualified case/root adoption and every neither-reader money confirmation must bind the current effective overlay.",
+    "Independent original-page geometry/fidelity/control closures must cover all1480physicalpages/1474salarypages/64912observations.",
+    "Final actual candidate/provenance/freeze hashes and warnings must be reviewed; changes after this snapshot require a new bounded addendum."
+  ],
+  "noOldFrozenFilesModified": true
+}

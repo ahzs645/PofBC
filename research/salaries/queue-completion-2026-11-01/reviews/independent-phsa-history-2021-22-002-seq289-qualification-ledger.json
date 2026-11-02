@@ -1,0 +1,91 @@
+{
+  "reviewer": "/root/held_health_review",
+  "sourceId": "phsa-2021-22",
+  "sourceSha256": "944c99fa7b7ede643cb4c426a5e9ab30aa906d8f81fda379f0206e4b0cdcd25c",
+  "batch": "phsa-2021-22-002",
+  "originalImageFirstTranscript": {
+    "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-history-2021-22-batch-002-image-transcript.tsv",
+    "sha256": "4b15fc8fd09df7a57c717d7e497235806243e91994a07d31af5b83b4edd42b3a"
+  },
+  "sourceRereadAmendments": {
+    "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-history-2021-22-batch-002-source-reread-amendments.json",
+    "sha256": "493accffc717f0e159a519f4cca9416c05c52d88c36cf0044ed5c991982c4b44"
+  },
+  "imageOnlyPeerPacket": {
+    "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-history-2021-22-002-seq289-source-only-peer.json",
+    "sha256": "2e3e57a15e8539a5e425b16b569e814fbc149ffbe58cfb92650fd2a2e26e2dec"
+  },
+  "cases": [
+    {
+      "sourceId": "phsa-2021-22",
+      "sourceSha256": "944c99fa7b7ede643cb4c426a5e9ab30aa906d8f81fda379f0206e4b0cdcd25c",
+      "batch": "phsa-2021-22-002",
+      "sequence": 289,
+      "physicalPage": 43,
+      "sourceRowOnPage": 2,
+      "proposedName": "Dirner,Katerine Zsuzsi",
+      "visibleAlternatives": [
+        "Dirner,Katerine Zsuzsi",
+        "Dimer,Katerine Zsuzsi"
+      ],
+      "ambiguityKind": "rn-m-source-segmentation",
+      "qualificationPolicy": {
+        "path": "research/salaries/queue-completion-2026-11-01/phsa/source-name-segmentation-review-policy-002.json",
+        "sha256": "fcfc11b7872b8c111018dd5b74494ea25391d14e1e905aa327f6a435c6e1e40c"
+      },
+      "assumptionBasis": "Original600dpi reread supports Dirner. Actual source surname order afterDirksen and beforeDishaw supports that provisional rn reading overDimer; finite compressed-join ambiguity remains explicit, not dictionary/identity or unique-pixel proof.",
+      "cropSha256": "e0059c318caba0f659e084adaef24c0af555e164baef967e49ecd2874baf3cc1",
+      "actualSourceEvidence": {
+        "sourceId": "phsa-2021-22",
+        "sourceSha256": "944c99fa7b7ede643cb4c426a5e9ab30aa906d8f81fda379f0206e4b0cdcd25c",
+        "batch": "phsa-2021-22-002",
+        "sequence": 289,
+        "physicalPage": 43,
+        "sourceRowOnPage": 2,
+        "reviewTargetFields": [
+          "name"
+        ],
+        "cropPath": "/tmp/queue-completion-phsa/phsa-2021-22/review-images/batch-002/p043-r02.png",
+        "cropSha256": "e0059c318caba0f659e084adaef24c0af555e164baef967e49ecd2874baf3cc1",
+        "actualSourceImagePath": "/tmp/queue-completion-phsa/phsa-2021-22/images/p043.png",
+        "actualSourceImageSha256": "a5760775eff49f758d0f29ef4abb3fa70f739ede95d7d3cd84feaabd8ebc5c04",
+        "actual600Name": {
+          "path": "/tmp/queue-completion-phsa/independent-2021-002-post-comparison-600/0289-name.png",
+          "sha256": "78d76841e886d50e6fbb11e51f064c1332d67e9fa55b4c8750ec3ac12ed97bd9",
+          "original300DpiPixelBox": [
+            202,
+            807,
+            1783,
+            856
+          ]
+        },
+        "actualAdjacentContext": {
+          "path": "/tmp/queue-completion-phsa/independent-2021-002-post-comparison-600/0289-context300.png",
+          "sha256": "76bd140cdd67b816168d2c8113eb8ee8ef572a62dbde68476b83e8474eba5528",
+          "original300DpiPixelBox": [
+            202,
+            737,
+            1783,
+            926
+          ]
+        },
+        "pageEvidence": {
+          "path": "research/salaries/queue-completion-phsa/evidence/phsa-2021-22-rows-p043.json.gzip",
+          "sha256": "91f8a759772f29bfaea59104c49dd1983ac4d6d7976fbc11435637229be68093"
+        },
+        "rawPageEvidence": {
+          "path": "research/salaries/queue-completion-phsa/evidence/phsa-2021-22-raw-p043.json.gzip",
+          "sha256": "bd02a4260145afcc4cc0810bc801472657eb6561b9cabaec30bc870631291442"
+        },
+        "noExpectedNamesCandidateOrPrimariesSupplied": true
+      },
+      "caseProvenByPixels": false,
+      "status": "proposed-qualified-source-segmentation-pending-second-source-reader-exact-root-adoption"
+    }
+  ],
+  "qualificationCaseCount": 1,
+  "limits": [
+    "One exactnamefield only; no amount/year waiver.",
+    "First-pass reviewerDiner reading corrected transparently from original; no false first-pass agreement or pixel-uniqueness claim."
+  ]
+}

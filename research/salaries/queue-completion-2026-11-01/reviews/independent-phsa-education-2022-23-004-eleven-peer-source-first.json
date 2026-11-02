@@ -1,0 +1,166 @@
+{
+  "frozen": true,
+  "reviewedOn": "2026-11-02",
+  "reviewer": "recovery_education",
+  "sourceSha256": "6046bb7be6944bc729926adba20a826486820a2a3b9b38090c60d400b2bc72a1",
+  "batch": "phsa-2022-23-004",
+  "input": {
+    "path": "research/salaries/queue-completion-2026-11-01/reviews/root-phsa-history-2022-23-batch-004-eleven-triangulation-source-only-peer.json",
+    "sha256": "3e3cf49e775d95f9c61db92cbcd223fe09b4133261e2cea9b4ea5a5b04cc9079"
+  },
+  "scope": "Ten names and one remuneration field only; no full400-row batch, othermoney, or source acceptance claim.",
+  "blindness": {
+    "rootExpectedValuesOpened": false,
+    "ocrCandidateOpened": false,
+    "priorExposure": "Many disjoint other-year PHSA sources and current FY2022 source fields from prior tiny peer packets have been read. No identities or prior-year names are spelling authority."
+  },
+  "method": "Personally read all11 actual600 source fields as unchanged RGB white-margin crops, then all11 original300 field views; current actualPDF300 adjacent source contexts for281 and285 independently rendered and read before this freeze. No OCR/dictionary/balancing. Two genuine finite rn/m ambiguities retained.",
+  "rows": [
+    {
+      "sequence": 9,
+      "field": "name",
+      "value": "Ramirez,Jeniffer",
+      "visibleAlternatives": [
+        "Ramirez,Jeniffer"
+      ],
+      "uncertain": false,
+      "basis": "Personally read actual600 native ink crop and original300 field. One n and two f in Jeniffer; no common-name spelling expansion.",
+      "physicalPage": 159,
+      "sourceRowOnPage": 32,
+      "cropSha256": "751cdd30b4c3f0194a124f6d1b8631c5c0cd57938d66d1bb7396315b69403c4d"
+    },
+    {
+      "sequence": 21,
+      "field": "name",
+      "value": "Reedijk,Jill",
+      "visibleAlternatives": [
+        "Reedijk,Jill"
+      ],
+      "uncertain": false,
+      "basis": "Actual600 native ink crop and original300 field read. Literal e-e-d-i-j-k visible, Jill has two l.",
+      "physicalPage": 161,
+      "sourceRowOnPage": 23,
+      "cropSha256": "1ba8f0a99d0f860321d5106ea67a5d49b47732293581dbb461641337e477d0f8"
+    },
+    {
+      "sequence": 89,
+      "field": "name",
+      "value": "Schleppe,Daryl",
+      "visibleAlternatives": [
+        "Schleppe,Daryl"
+      ],
+      "uncertain": false,
+      "basis": "Actual600 native ink crop and original300 field read; doubled p and Daryl visible.",
+      "physicalPage": 171,
+      "sourceRowOnPage": 21,
+      "cropSha256": "99a7b3e63852c8b159260ff5afd083591240fa5ab39cf27dcda0571c18a555ee"
+    },
+    {
+      "sequence": 174,
+      "field": "name",
+      "value": "Stancec,Megan",
+      "visibleAlternatives": [
+        "Stancec,Megan"
+      ],
+      "uncertain": false,
+      "basis": "Actual600 native ink crop and original300 field read. Literal surname c-e-c suffix retained.",
+      "physicalPage": 182,
+      "sourceRowOnPage": 38,
+      "cropSha256": "3e63e5001f311696c49c7934a79b3c44d492483293f677f954ff27dfe300251b"
+    },
+    {
+      "sequence": 220,
+      "field": "name",
+      "value": "Taruc,Jeffrey",
+      "visibleAlternatives": [
+        "Taruc,Jeffrey"
+      ],
+      "uncertain": false,
+      "basis": "Actual600 native ink crop and original300 field read. Two f and literal surname u-c visible.",
+      "physicalPage": 188,
+      "sourceRowOnPage": 41,
+      "cropSha256": "5ec8b6582057611d68a48287571d9f95f3f4af663fd0b7e84372aabd709793ed"
+    },
+    {
+      "sequence": 236,
+      "field": "remuneration",
+      "value": 103415,
+      "visibleAlternatives": [
+        103415
+      ],
+      "uncertain": false,
+      "basis": "Actual600 native ink crop and original300 source monetary field read; printed103,415, no balancing or engine values.",
+      "physicalPage": 191,
+      "sourceRowOnPage": 20,
+      "cropSha256": "c1365de83f631b1ef1b753d22f7b4f04e753857cf46592f09270a45828c7446d"
+    },
+    {
+      "sequence": 281,
+      "field": "name",
+      "value": "Urnaza,Jenylyn",
+      "visibleAlternatives": [
+        "Urnaza,Jenylyn",
+        "Umaza,Jenylyn"
+      ],
+      "uncertain": true,
+      "basis": "Actual600 native ink crop, original300 field and independently rendered actual300 current context read. Primary first visual impression is rn after U, but joined m is genuinely plausible at scan resolution. Current following Urquhart/Ursu is compatible with either; no unique glyph or dictionary claim.",
+      "physicalPage": 197,
+      "sourceRowOnPage": 1,
+      "cropSha256": "bbe34bbc0d26318cd57cb544c1774df3943a9160f3a536b6f7b07f11b9f687e7"
+    },
+    {
+      "sequence": 285,
+      "field": "name",
+      "value": "van der Watt,Sharne",
+      "visibleAlternatives": [
+        "van der Watt,Sharne",
+        "van der Watt,Shame"
+      ],
+      "uncertain": true,
+      "basis": "Actual600 native ink crop, original300 field and independently rendered current context read. Given-name rn may join to m. Source lowercase van der and double t retained. Given-name segmentation is not proved by surname order.",
+      "physicalPage": 197,
+      "sourceRowOnPage": 34,
+      "cropSha256": "cf97e519f329c4337ec34121a42debb8d7a49f5d26c77bd6e909b470e594842b"
+    },
+    {
+      "sequence": 294,
+      "field": "name",
+      "value": "Vangenderen,Brandon",
+      "visibleAlternatives": [
+        "Vangenderen,Brandon"
+      ],
+      "uncertain": false,
+      "basis": "Actual600 native ink crop and original300 field read; literal Vangenderen and Brandon retained.",
+      "physicalPage": 198,
+      "sourceRowOnPage": 32,
+      "cropSha256": "4739241f2c33d979b1bb7a30be324b30feff3af352a64dc4058eadfb8977ebb0"
+    },
+    {
+      "sequence": 310,
+      "field": "name",
+      "value": "Walker,Geoffrey Alan",
+      "visibleAlternatives": [
+        "Walker,Geoffrey Alan"
+      ],
+      "uncertain": false,
+      "basis": "Actual600 native ink crop read; double f and single l in Alan visible.",
+      "physicalPage": 201,
+      "sourceRowOnPage": 29,
+      "cropSha256": "ea66d682492a1b67ba897621df38a335c8932ed059228ff33b53119bf6051797"
+    },
+    {
+      "sequence": 377,
+      "field": "name",
+      "value": "Yacucha,Jennica Elizabeth",
+      "visibleAlternatives": [
+        "Yacucha,Jennica Elizabeth"
+      ],
+      "uncertain": false,
+      "basis": "Actual600 native ink crop read. Given-name double n and single c retained.",
+      "physicalPage": 211,
+      "sourceRowOnPage": 34,
+      "cropSha256": "08bc144cb40fa8074f5a68a229a81a09dcc7a740e61a33ccc75f786985e4315f"
+    }
+  ]
+}
+

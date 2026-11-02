@@ -1,0 +1,346 @@
+{
+  "frozen": true,
+  "reviewedOn": "2026-11-02",
+  "frozenAtUtc": "2026-11-02T04:59:53.471176+00:00",
+  "reviewer": "/root/recovery_education",
+  "scope": "Only NEW independent ordered-financial parser support for exact frozen ledgers002/003/008/010. No v7 or producer-helper edit/import, no new image interpretation/data/source acceptance.",
+  "helperCode": {
+    "path": "scripts/finish_salary_phsa_review_money_ordered_v7.py",
+    "sha256": "0f5811fdcf6fa108e5c9b7ac73127eef0472bdf921c69ac93b95b30e6bd379ab"
+  },
+  "actualSchemaChecks": {
+    "path": "scripts/finish_salary_phsa_review_money_ordered_v7_checks.py",
+    "sha256": "8dedccb465436ef5a0b58f9724836d4b24ddd910b1fff7df4896862b94b4c9f8"
+  },
+  "api": {
+    "function": "verify(confirmation, source_id, source_sha, load)",
+    "confirmation": "Flat original canonical member plus confirmationLedger reference; current rebases/confirmationSupersession are normalized by H before this call.",
+    "loadContract": "Hash-checking repo JSON reader; parse=False returns exact bytes including H-selected archived image aliases.",
+    "success": "None/PASS; unsupported original/ledger SHA/schema/scope/values fail closed.",
+    "cache": "Entire concrete ledger independently replayed once for an immutable SHA and stable load function; every supplied member still checked exactly."
+  },
+  "inputLedgers": [
+    {
+      "originalLedger": {
+        "path": "research/salaries/queue-completion-2026-11-01/phsa/triangulation/money-peer-confirmations-002.json",
+        "sha256": "1d0b4d5d43fe9c950fc043d48deaf22e0d9db3e6c68b1aead68e4085524b3a99"
+      },
+      "originalBatch": "phsa-2019-20-002",
+      "receiptMode": "legacy002-no-adapter",
+      "fieldCount": 12,
+      "literalFieldPartition": {
+        "expenses": 6,
+        "remuneration": 6
+      },
+      "originalAuthorSourceErrorsPreserved": 1,
+      "originalPeerSourceErrorsPreserved": 0,
+      "exactPeerInputs": [
+        {
+          "path": "research/salaries/queue-completion-2026-11-01/reviews/root-phsa-history-2019-20-batch-002-money-peer-comparison.json",
+          "sha256": "72b3adaf1a7b07369f2a6d584ac998f207f5d4782ee04286911dc4e5169271ac"
+        },
+        {
+          "path": "research/salaries/queue-completion-2026-11-01/reviews/root-phsa-history-2019-20-batch-002-money-peer-image-first.json",
+          "sha256": "20fb94886ee454d140221fe84f9c1bf1aadb8d7c8b926c054eebd4a2cc476490"
+        },
+        {
+          "path": "research/salaries/queue-completion-2026-11-01/reviews/author-phsa-history-2019-20-002-money-peer-source-only.json",
+          "sha256": "0c8515a1c8378cd4aa88aca4f60e0fd253098fb6e2a3e99425b6e216e18e6ec2"
+        },
+        {
+          "path": "research/salaries/queue-completion-2026-11-01/reviews/author-phsa-history-2019-20-002-money-author-choices.json",
+          "sha256": "9265d2c282d92406f842f3d47f48ae624f9856c9bfa114dfe27aa39102c71a9b"
+        }
+      ]
+    },
+    {
+      "originalLedger": {
+        "path": "research/salaries/queue-completion-2026-11-01/phsa/triangulation/money-peer-confirmations-003.json",
+        "sha256": "1c33c726f92ca493f2eb0a75d26c4431c64191a27446704800ba83d8304a4e44"
+      },
+      "originalBatch": "phsa-2019-20-003",
+      "receiptMode": "separate-frozen-source-readers-v1",
+      "fieldCount": 38,
+      "literalFieldPartition": {
+        "expenses": 18,
+        "remuneration": 20
+      },
+      "originalAuthorSourceErrorsPreserved": 1,
+      "originalPeerSourceErrorsPreserved": 1,
+      "exactPeerInputs": [
+        {
+          "path": "research/salaries/queue-completion-2026-11-01/reviews/root-phsa-history-2019-20-batch-003-money-peer-comparison.json",
+          "sha256": "67b66e174ea54d2c3425447db8a9756e7986b485dfa805083b1ec8a8bf032887"
+        },
+        {
+          "path": "research/salaries/queue-completion-2026-11-01/reviews/root-phsa-history-2019-20-batch-003-money-peer-image-first.json",
+          "sha256": "0f87487c5ce27363fc9df239b1d06bf5b63a6982c1a196a1295c8f751ebefe7e"
+        },
+        {
+          "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-history-batches-2019-20-003-money-author-choices.json",
+          "sha256": "6dd9baf8896c43200a8312f54c370c8ef21f7f71f1357ba51288fd684378e212"
+        },
+        {
+          "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-history-batches-2019-20-003-money-source-only-peer.json",
+          "sha256": "a4ef76be277b6a0bd270a86fd5c65a72eea4a7f1109467cb8e3fb77cdc1d0242"
+        },
+        {
+          "path": "research/salaries/queue-completion-2026-11-01/reviews/root-phsa-history-2019-20-batch-003-money-source-pixel-proof.json",
+          "sha256": "e61a7f1965211d3e152eaf91fd192609a31b846084f5b971e9e1334f50911600"
+        },
+        {
+          "path": "research/salaries/queue-completion-2026-11-01/reviews/root-phsa-history-2019-20-batch-003-money-peer-own-reading-amendment.json",
+          "sha256": "348529fcc870cf2cfdf2f50dc7b45e267a976e25700d72c21ffbbb8b9b830f1a"
+        },
+        {
+          "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-history-batches-2019-20-003-original-transcript-v2.json",
+          "sha256": "91d611ebe883a2e1c2a24fcba8eb7c2d363cd0a22ad74bad927b394e5dc12156"
+        },
+        {
+          "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-history-batches-2019-20-003-postcomparison-own-money-source-reread.json",
+          "sha256": "9ac89d911570eafff5b9c8c350e6755b4d63f3e4865c27e1ce457c475c22ee4e"
+        }
+      ]
+    },
+    {
+      "originalLedger": {
+        "path": "research/salaries/queue-completion-2026-11-01/phsa/triangulation/money-peer-confirmations-008.json",
+        "sha256": "d169d7d6e0d9a767742ad1e82d8bca992db986553f5c942bde58a11f9ffac5d3"
+      },
+      "originalBatch": "phsa-2019-20-008",
+      "receiptMode": "ordered-peer-and-explicit-post-choice-money-source-amendment-v1",
+      "fieldCount": 14,
+      "literalFieldPartition": {
+        "remuneration": 6,
+        "expenses": 8
+      },
+      "originalAuthorSourceErrorsPreserved": 2,
+      "originalPeerSourceErrorsPreserved": 0,
+      "exactPeerInputs": [
+        {
+          "path": "research/salaries/queue-completion-2026-11-01/reviews/root-phsa-history-2019-20-batch-008-fourteen-money-peer-comparison.json",
+          "sha256": "8ab1654ade91a405b95b316800ec0009cc2241b548e7c256df1a49421e833e00"
+        },
+        {
+          "path": "research/salaries/queue-completion-2026-11-01/reviews/root-phsa-history-2019-20-batch-008-fourteen-money-peer-image-first.json",
+          "sha256": "ba2368b43eae7a626a1b07c0df6c7f1692944740a74522067681b2cc014960a8"
+        },
+        {
+          "path": "research/salaries/queue-completion-2026-11-01/reviews/author-phsa-history-2019-20-008-fourteen-money-source-only-peer.json",
+          "sha256": "de8bb5bf85d19f4da65b90deaf6bea3a5a406fc1732792cd32ec3deaaa98d40b"
+        },
+        {
+          "path": "research/salaries/queue-completion-2026-11-01/reviews/author-phsa-history-2019-20-008-fourteen-money-author-choices.json",
+          "sha256": "a4546796fbcd3638090f424f36e5d6d29c21a9d1a9c777c1eb0ff0ee3171558e"
+        },
+        {
+          "path": "research/salaries/queue-completion-2026-11-01/reviews/author-phsa-history-2019-20-008-image-first-transcript.json",
+          "sha256": "8a45a522410a65c9a27d9b0c7a7683982377a401cd433652b1963d1d48622ac6"
+        },
+        {
+          "path": "research/salaries/queue-completion-2026-11-01/reviews/author-phsa-history-2019-20-008-postcomparison-source-reread-amendments.json",
+          "sha256": "076cb89a9ba1161ad673a998b3fdefc51759d976beceeac76cdb17ee7db5e80b"
+        },
+        {
+          "path": "research/salaries/queue-completion-2026-11-01/reviews/author-phsa-history-2019-20-008-money89-post-peer-source-correction.json",
+          "sha256": "13bbda9fc18e01b78af0bdd94c15b596fe2eb1ea148806ef52888191daf2c7f9"
+        },
+        {
+          "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-education-2019-20-008-money89-source-first.json",
+          "sha256": "69cf715228956d78ec8ef25f3ccff05f0be1c4a0eba0d6e0ce4f474bc71723b2"
+        },
+        {
+          "path": "research/salaries/queue-completion-2026-11-01/reviews/root-phsa-history-2019-20-batch-008-fourteen-money-source-pixel-proof.json",
+          "sha256": "b04da362bc9a039fd8a297366cded3aa406663242d0de4764a01ccb97d2276d6"
+        }
+      ]
+    },
+    {
+      "originalLedger": {
+        "path": "research/salaries/queue-completion-2026-11-01/phsa/triangulation/money-peer-confirmations-010.json",
+        "sha256": "53ddc8db3f1d26e36a0efbade0e871348bdfacb71d9045c6eb47c057a1b2b102"
+      },
+      "originalBatch": "phsa-2019-20-007",
+      "receiptMode": "ordered-root-peer-with-exact-tuple-author-joins-v1",
+      "fieldCount": 52,
+      "literalFieldPartition": {
+        "expenses": 24,
+        "remuneration": 28
+      },
+      "originalAuthorSourceErrorsPreserved": 7,
+      "originalPeerSourceErrorsPreserved": 0,
+      "exactPeerInputs": [
+        {
+          "path": "research/salaries/queue-completion-2026-11-01/reviews/root-phsa-history-2019-20-batch-007-fiftytwo-money-peer-comparison.json",
+          "sha256": "d1c1e0bdc8f328c3cd4686744dbd6334af5c4df75de76d45d419695cdd25cefb"
+        },
+        {
+          "path": "research/salaries/queue-completion-2026-11-01/reviews/root-phsa-history-2019-20-batch-007-fiftytwo-money-peer-image-first.json",
+          "sha256": "96f573d2cd3e57288f8a72a834892144961914f7912e2c6a811aa3dad6ee62ab"
+        },
+        {
+          "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-history-batches-2019-20-007-fiftytwo-money-source-only-peer.json",
+          "sha256": "8d4f88bfff57ab9cebd235b0a6c8d702b2bfa04c3ae04898fedf2f7f3b53a9f3"
+        },
+        {
+          "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-history-batches-2019-20-007-fiftytwo-money-author-choices.json",
+          "sha256": "5e73445f32b097bd2c6f59457d0a53a35ffce6f861880a4064a73fd72eec45c1"
+        },
+        {
+          "path": "research/salaries/queue-completion-2026-11-01/reviews/root-phsa-history-2019-20-batch-007-fiftytwo-money-source-pixel-proof.json",
+          "sha256": "5f8ece9bda07b6168b8755cd99927c21b6f775bb3bb6f4ced85e66f73949eae3"
+        },
+        {
+          "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-history-batches-2019-20-007-postcomparison-money-source-rereads.json",
+          "sha256": "bdb4884587d12161cf2153be6754d96cfe625c63504108983cf21ee87f77d4da"
+        },
+        {
+          "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-history-batches-2019-20-007-original-transcript.json",
+          "sha256": "bc93f96272e6e89a435c1d8b5c012941c2b04086b942d2e4741e11cc0ccb98e7"
+        }
+      ]
+    }
+  ],
+  "testCommand": "python scripts/finish_salary_phsa_review_money_ordered_v7_checks.py",
+  "testResult": {
+    "unittestMethods": 39,
+    "passed": 39,
+    "failures": 0,
+    "errors": 0,
+    "seconds": 5.32,
+    "actualConfirmationEntriesIndependentlyChecked": 116,
+    "actualRemunerationFields": 60,
+    "actualExpenseFields": 56,
+    "positiveExactTupleAuthorPermutationCheckPassed": true
+  },
+  "independentGuardCoverage": [
+    "All exact packet/first-peer/author/current field tuple partitions, ordered raw arrays and tuple-joined differing author order.",
+    "Strict positive literal integers; bool,float,string,null/zero inference and numerical qualification rejected.",
+    "Frozen full-author raw and requested overlay/review scope/crop/value bindings; precise source/year and original overlay pins.",
+    "Actual per-field author/peer first/current amendment sets, intermediate wrong89 value, source-first role/timing and preserved correction totals, not aggregate flags alone.",
+    "Whole-derived confirmation ledger equality and exact supplied-member identity, unknown SHA/mode and extra authority rejected.",
+    "Actual original PDF whole300 native field PNG SHA for all116; original whole600 RGB for113; exact separately declared historical600 phase derivatives for3."
+  ],
+  "actualSourceRendering": {
+    "sourceId": "phsa-2019-20",
+    "sourceSha256": "0e31ac2054f0c2d4ef78797185dddd96cc0cdf2eab94bd6841fa24e1c38e7d02",
+    "sourcePdfShaVerified": true,
+    "pymupdfVersion": "1.26.6",
+    "pillowVersion": "12.3.0",
+    "whole300NativePngByteHashesReproduced": 116,
+    "whole600IntegerCropRgbExact": 113,
+    "explicitHistoricalPartial600RgbExactWithIndependentWhole300Sha": 3,
+    "historicalPartialCases": [
+      {
+        "sequence": 132,
+        "physicalPage": 16,
+        "sourceRowOnPage": 30,
+        "field": "remuneration",
+        "exactHistoricalImage": {
+          "path": "/tmp/independent-phsa-history-2019-003-money-peer/seq132-remuneration-600.png",
+          "sha256": "ecc06a79e9ae56c7c5920ef193d0ee769fd56879ef515b829b7ee20469f2d87e"
+        },
+        "canonicalNative300": {
+          "field": "remuneration",
+          "path": "/tmp/queue-completion-phsa/phsa-2019-20/review-images/phsa-2019-20-003-target-views/0132-remuneration.png",
+          "sha256": "06acc2de5a353303aa4cae1f9e0a626fe58724cd4717e99a308f910869807ec3",
+          "originalPdf300DpiPixelBox": [
+            1735,
+            1865,
+            2068,
+            1904
+          ],
+          "noResamplingOrGlyphAlteration": true
+        },
+        "recordedHistorical600PdfClip": [
+          416.4,
+          447.6,
+          496.32,
+          456.96
+        ],
+        "whole600RgbEqualityClaimed": false,
+        "recordedPartial600RgbIndependentlyReproduced": true,
+        "canonicalWhole300NativePngByteShaIndependentlyReproduced": true
+      },
+      {
+        "sequence": 275,
+        "physicalPage": 19,
+        "sourceRowOnPage": 23,
+        "field": "remuneration",
+        "exactHistoricalImage": {
+          "path": "/tmp/independent-phsa-history-2019-003-money-peer/seq275-remuneration-600.png",
+          "sha256": "87ee71f9cf14a3e3b4acf23226e3f55ae1522d45b659396bbd8eecb5ef0fb1bb"
+        },
+        "canonicalNative300": {
+          "field": "remuneration",
+          "path": "/tmp/queue-completion-phsa/phsa-2019-20/review-images/phsa-2019-20-003-target-views/0275-remuneration.png",
+          "sha256": "a730119ac1332bfaa312b1236848b073cbb92435c6ca403a6b4cf4d28766b925",
+          "originalPdf300DpiPixelBox": [
+            1735,
+            1578,
+            2068,
+            1616
+          ],
+          "noResamplingOrGlyphAlteration": true
+        },
+        "recordedHistorical600PdfClip": [
+          416.4,
+          378.72,
+          496.32,
+          387.84
+        ],
+        "whole600RgbEqualityClaimed": false,
+        "recordedPartial600RgbIndependentlyReproduced": true,
+        "canonicalWhole300NativePngByteShaIndependentlyReproduced": true
+      },
+      {
+        "sequence": 294,
+        "physicalPage": 19,
+        "sourceRowOnPage": 51,
+        "field": "remuneration",
+        "exactHistoricalImage": {
+          "path": "/tmp/independent-phsa-history-2019-003-money-peer/seq294-remuneration-600.png",
+          "sha256": "ed17eeeadd6e11ca41b39bd36a380c05190401b486c3dc9c7ccda6fd6fff0c91"
+        },
+        "canonicalNative300": {
+          "field": "remuneration",
+          "path": "/tmp/queue-completion-phsa/phsa-2019-20/review-images/phsa-2019-20-003-target-views/0294-remuneration.png",
+          "sha256": "d59928abbb902659bc4be6cd2dd01ed050ca4537a9a0a2646025f66aa03a18e3",
+          "originalPdf300DpiPixelBox": [
+            1735,
+            2721,
+            2068,
+            2760
+          ],
+          "noResamplingOrGlyphAlteration": true
+        },
+        "recordedHistorical600PdfClip": [
+          416.4,
+          653.04,
+          496.32,
+          662.4
+        ],
+        "whole600RgbEqualityClaimed": false,
+        "recordedPartial600RgbIndependentlyReproduced": true,
+        "canonicalWhole300NativePngByteShaIndependentlyReproduced": true
+      }
+    ],
+    "unknown600MismatchAccepted": false,
+    "unregisteredExternalNativeImageReads": false,
+    "numericOrGlyphDecisionsMadeByCode": false
+  },
+  "moduleImports": [
+    "PIL",
+    "collections",
+    "decimal",
+    "fitz",
+    "hashlib",
+    "io",
+    "json",
+    "pathlib",
+    "re"
+  ],
+  "noProducerOrV7ImplementationImports": true,
+  "priorWorkOrFrozenSourceArtifactsChanged": false,
+  "integrationOwner": "held_health_review reviews/integrates and pins this helper in v7; no v7/global/promotion outputs were edited or written by education."
+}

@@ -1,0 +1,74 @@
+{
+  "frozen": true,
+  "reviewedOn": "2026-11-02",
+  "reviewer": "recovery_education",
+  "sourceSha256": "6046bb7be6944bc729926adba20a826486820a2a3b9b38090c60d400b2bc72a1",
+  "batch": "phsa-2022-23-004",
+  "scope": "One literal name only, sequence281 physical197 row1. No othername/money/full400-row/sourceacceptanceclaim.",
+  "preservedSourceFirstRaw": {
+    "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-education-2022-23-004-eleven-peer-source-first.json",
+    "sha256": "d69cd6f723ae76483f3cfbe0cdf413e85febbf9a84dba5e1d7c148279dccf20e"
+  },
+  "sourceOnlyInput": {
+    "path": "research/salaries/queue-completion-2026-11-01/reviews/root-phsa-history-2022-23-batch-004-eleven-triangulation-source-only-peer.json",
+    "sha256": "3e3cf49e775d95f9c61db92cbcd223fe09b4133261e2cea9b4ea5a5b04cc9079"
+  },
+  "postfreezeExposure": "Root supplied its intermediate Urmaza after my source-first raw freeze. This is an explicit own post-exposure source reread, not a claim of initial blind agreement.",
+  "ownSourceReadingCorrection": {
+    "sequence": 281,
+    "physicalPage": 197,
+    "sourceRowOnPage": 1,
+    "field": "name",
+    "before": "Urnaza,Jenylyn",
+    "withdrawnOldAlternatives": [
+      "Urnaza,Jenylyn",
+      "Umaza,Jenylyn"
+    ],
+    "after": "Urmaza,Jenylyn",
+    "visibleAlternatives": [
+      "Urmaza,Jenylyn",
+      "Urrnaza,Jenylyn"
+    ],
+    "zeroBasedPrimarySegmentationSpan": {
+      "start": 2,
+      "primaryText": "m",
+      "visibleAlternative": "rn"
+    },
+    "ambiguityKind": "rn-m-source-segmentation",
+    "caseProvenByPixels": false,
+    "basis": "Actual independently rendered1200 native-pixel source clearly shows U then r then m: previous Urnaza/Umaza omitted a stem and are invalid hypotheses. Residual exact m/rn segmentation is Urmaza/Urrnaza. Current following Urquhart/Ursu supports the m contextual primary; finite alternative remains and ordering is not glyph proof. No dictionary, prior-year or identity authority.",
+    "cropSha256": "bbe34bbc0d26318cd57cb544c1774df3943a9160f3a536b6f7b07f11b9f687e7",
+    "qualificationPolicy": {
+      "path": "research/salaries/queue-completion-2026-11-01/phsa/source-name-segmentation-review-policy-002.json",
+      "sha256": "fcfc11b7872b8c111018dd5b74494ea25391d14e1e905aa327f6a435c6e1e40c"
+    },
+    "rootExactAdoptionRequired": true
+  },
+  "currentOriginal1200Evidence": {
+    "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-education-2022-23-004-281-name-current-original1200.png",
+    "sha256": "0b4c71f39a0227ecfbea473a987ff1a56abf43b90051043019c7f9e74dde99ce",
+    "width": 986,
+    "height": 146,
+    "method": "Actual PDF page.get_pixmap(dpi=1200,alpha=False,clip=Rect([c*72/300 for c in original300box])); then unchanged RGB white-margin-only crop, no resize.",
+    "original300DpiPixelBox": [
+      202,
+      743,
+      1701,
+      794
+    ],
+    "cropBoxWithinActual1200": [
+      67,
+      31,
+      1053,
+      177
+    ],
+    "personallyReadAtNativePixels": true
+  },
+  "currentActual300AdjacentContext": {
+    "path": "/workspace/salary-review-education-temp/root2022-004-peer11/0281-context300.png",
+    "sha256": "4d8f991d064f2ea3466a47450a94b543721943266ae6c80a5b03fcaa5919a38e",
+    "method": "Full-page actualPDF300 RGB cut spanning original fieldbox plus120px above/below, no resize.",
+    "personallyRead": true
+  },
+  "originalRawAndOtherTenValuesUnchanged": true
+}

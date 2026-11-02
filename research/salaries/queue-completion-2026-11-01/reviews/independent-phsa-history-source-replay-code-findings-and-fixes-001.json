@@ -1,0 +1,87 @@
+{
+  "reviewer": "/root/held_health_review",
+  "scope": "Read-only finalizer/ledger review prompted by independently implemented firsttwo-source replay. No source/data/code edits by reviewer outside own new audit scripts.",
+  "findings": [
+    {
+      "issue": "Strict acceptedQualifiedCases boolean regression skipped one exact frozen root2015batch001 adoption whose legacy schema supplies decision/cases/warning.",
+      "originalRootReceipt": {
+        "path": "research/salaries/queue-completion-2026-11-01/reviews/root-phsa-history-2015-16-batch-001-typography-adoption.json",
+        "sha256": "41410273e366a0cee07268d8d2af077fa95daef4edd9a5bfef9c00be35b3448c"
+      },
+      "resolution": "Author added a closed exactSHA/decision/14-case legacy adapter; old root receipt unchanged."
+    },
+    {
+      "issue": "Per-source rootHoldoutComparisons filename-substring filter excluded every root-phsa-history-YYYY-YY receipt because phsa-YYYY-YY is not contiguous in that filename.",
+      "resolution": "Author selected pinned receipts by parsed sourceId and emitted versioned corrected provenance/metadata; original artifacts unchanged.",
+      "independentExactByteSemanticCorrectionChecks": [
+        {
+          "sourceId": "phsa-2015-16",
+          "oldProvenance": {
+            "path": "research/salaries/queue-completion-phsa/evidence/phsa-2015-16-provenance.json.gzip",
+            "sha256": "4c70699c0a45d443a22e9e4c4b637697aec542ba6a0bcea8d6a8030601063d3c"
+          },
+          "correctedV2Provenance": {
+            "path": "research/salaries/queue-completion-phsa/evidence/phsa-2015-16-provenance-v2.json.gzip",
+            "sha256": "c3f6435e855932eb162fdb7ac4329e1b6c9a1e2f210d909af270aa5c68c94822"
+          },
+          "exactOnlyProvenanceFieldChanged": "rootHoldoutComparisons",
+          "oldValue": [],
+          "newValue": [
+            {
+              "path": "research/salaries/queue-completion-2026-11-01/reviews/root-phsa-history-2015-16-holdout-source-comparison.json",
+              "sha256": "b54ffc90e7802ea51be804e6ec2ffacfb0056d6c8ae90a3841b8273ffb50e86b"
+            }
+          ],
+          "allSalaryRowsAndPerFieldValuesRoutesUnchanged": true
+        },
+        {
+          "sourceId": "phsa-2016-17",
+          "oldProvenance": {
+            "path": "research/salaries/queue-completion-phsa/evidence/phsa-2016-17-provenance.json.gzip",
+            "sha256": "7ab80fdd5a24e0e2015737045fba1f8e0e0e044682128341f0871683cd807a7d"
+          },
+          "correctedV2Provenance": {
+            "path": "research/salaries/queue-completion-phsa/evidence/phsa-2016-17-provenance-v2.json.gzip",
+            "sha256": "7cf0aed3b7f940dcba4d22b53fcaed17e6c54c3dea9ddeeee324c5773b6ed4a1"
+          },
+          "exactOnlyProvenanceFieldChanged": "rootHoldoutComparisons",
+          "oldValue": [],
+          "newValue": [
+            {
+              "path": "research/salaries/queue-completion-2026-11-01/reviews/root-phsa-history-2016-17-holdout-source-comparison.json",
+              "sha256": "3bc26ef539583647d853c15e2a5803fe4bd2ab07fb7e5acbf6cf0dc0a2f27e2b"
+            }
+          ],
+          "allSalaryRowsAndPerFieldValuesRoutesUnchanged": true
+        }
+      ]
+    }
+  ],
+  "independentReplayReceipts": [
+    {
+      "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-history-2015-16-raw-overlay-replay.json",
+      "sha256": "6bdd2a275610c3ffc11156c4ac035b2f313e90c91da58493d4a712ea0d41bd08"
+    },
+    {
+      "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-history-2016-17-raw-overlay-replay.json",
+      "sha256": "3ffa5c062cb8b5f92f57acb6c594ee85e86b5a46fb3e7a99b2a077b716155e82"
+    }
+  ],
+  "independentlyCheckedMaterializedRows": 9663,
+  "sourceControlResiduals": {
+    "phsa-2015-16": [
+      31,
+      28
+    ],
+    "phsa-2016-17": [
+      0,
+      -5
+    ]
+  },
+  "limits": [
+    "The additional16-name Mac-prefix quality gate was discovered after these candidate replays, so full source acceptance remains held pending that additive review and new revisions.",
+    "This reviewer ran the independent replay assertions; the author reports15regression tests, which are not represented as personally rerun here.",
+    "Neither reconstruction equality nor source residual magnitude proves every glyph or establishes a residual cause.",
+    "All nine complete employee cohorts and final integrated baseline preservation still require closure."
+  ]
+}

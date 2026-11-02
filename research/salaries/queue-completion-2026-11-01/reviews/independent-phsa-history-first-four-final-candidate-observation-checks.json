@@ -1,0 +1,70 @@
+{
+  "reviewer": "/root/held_health_review",
+  "reviewedOn": "2026-11-01",
+  "finalCandidateReplays": [
+    {
+      "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-history-2015-16-final-v3-raw-overlay-replay.json",
+      "sha256": "74e204b8ecec3e1ad36f11f05f3ac5915d84026bc9936833c836fceb9b6af0b8"
+    },
+    {
+      "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-history-2016-17-final-v3-raw-overlay-replay.json",
+      "sha256": "f9092f5790a2013e1ea11da05b32870e08752b166a5d8b2426ab852289f896bc"
+    },
+    {
+      "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-history-2017-18-final-v3-raw-overlay-replay.json",
+      "sha256": "c7bc2e164a8f868b9a3238c093f214b69f3d6a491c1bd5d81e697f40bdadd4ba"
+    },
+    {
+      "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-history-2023-24-final-v3-raw-overlay-replay.json",
+      "sha256": "3b3e8017ded60f8ea6a26e793d4328547ca4598f9c5b8ac975d9e099dcb6dbb8"
+    }
+  ],
+  "sourceSpecificNotes": {
+    "phsa-2015-16": {
+      "literalResidual": [
+        31,
+        28
+      ],
+      "residualAndExactTotalsPubliclyDisclosed": true,
+      "zulfiqarFootnoteAmountsAndFiscalContextPreserved": true,
+      "archivedV2ToV3OnlyOneNameChanged": true
+    },
+    "phsa-2016-17": {
+      "literalResidual": [
+        0,
+        -5
+      ],
+      "residualAndExactExpenseTotalsPubliclyDisclosed": true,
+      "freshMoneyPeers": 10,
+      "archivedV2ToV3OnlyOneNameChanged": true
+    },
+    "phsa-2017-18": {
+      "literalResidual": [
+        0,
+        0
+      ],
+      "printedCategory5073VersusHeadlineAndRows5072PubliclyDisclosed": true
+    },
+    "phsa-2023-24": {
+      "literalResidual": [
+        0,
+        0
+      ],
+      "twoLeeCassandraPhysical142ObservationsPreserved": [
+        [
+          119035,
+          null
+        ],
+        [
+          89739,
+          577
+        ]
+      ],
+      "allFiveMacLowercaseNamesSourceImagePeerConfirmed": true
+    }
+  },
+  "allFourPayloadsZeroExplicitZeroOrNegativeExpenseRows": true,
+  "unexplainedSourceResidualsNeverBalancedOrExplainedByInference": true,
+  "wholeNineCohortAcceptance": false,
+  "limits": "Four final held candidate revisions independently replayed. Remaining five sources still require their exact final metadata/payload/provenance closures and final integrated baseline preservation."
+}

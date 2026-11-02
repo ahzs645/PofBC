@@ -1,0 +1,87 @@
+{
+  "frozen": true,
+  "createdOn": "2026-11-02",
+  "sourceId": "phsa-2018-19",
+  "sourceSha256": "ddeba470b875451f6180eb442ed921f7902cc910d62a026c11ab298ca3d0440f",
+  "finalV3Provenance": {
+    "path": "research/salaries/queue-completion-phsa/evidence/phsa-2018-19-provenance-v3.json.gzip",
+    "sha256": "7654a108bd5a6e6a45f38914ccbe0455829db3098c693ea094293043297a190b"
+  },
+  "processingProfile": {
+    "path": "research/salaries/queue-completion-2026-11-01/phsa/phsa-2018-19-processing-profile-001.json",
+    "sha256": "21e3a38373cdd29bcddeb9db20bb2fecd15be001bf055b324a9cc5dfe36452f0"
+  },
+  "positiveMonetaryFields": 1,
+  "candidateValuesWithheld": true,
+  "method": "Actual full physical-page PyMuPDF1.26.6 RGB300/600 render, THEN integer source pixel crops. Native300 fullpage pixels independently exactly reproduce frozen capture. No partial clip rendering.",
+  "limits": "Bounded post-exposure canonical leaf recheck of positive manual fields matched by neither strict parsed engine. All already have raw/source/fresh-peer evidence; this packet does not allege missing source proof, change amounts or include source-null dashes. Explicit canonical-leaf semantic confirmation under this new gate remains pending.",
+  "pages": [
+    {
+      "physicalPage": 38,
+      "sourcePageEvidence": {
+        "path": "research/salaries/queue-completion-phsa/evidence/phsa-2018-19-rows-p038.json.gzip",
+        "sha256": "372a30844a72ce4e4871fd874bb38e5e33db64e33c05589edfb8bc2237028285"
+      },
+      "actualNative300Page": {
+        "path": "/tmp/queue-completion-phsa/phsa-2018-19/images/p038.png",
+        "sha256": "191603943e450e410dd008b2f4f9ae032e00cf69942432014612fc8c1cd07a6c"
+      },
+      "wholePage600RgbSha256": "5e93f6cacbf40e4c2d0469e28bf24b3f753a65c000c64d830cf24dc2a2e7a79b"
+    }
+  ],
+  "rows": [
+    {
+      "sourceId": "phsa-2018-19",
+      "sourceSha256": "ddeba470b875451f6180eb442ed921f7902cc910d62a026c11ab298ca3d0440f",
+      "physicalPage": 38,
+      "sourceRowOnPage": 51,
+      "field": "expenses",
+      "sourcePageEvidence": {
+        "path": "research/salaries/queue-completion-phsa/evidence/phsa-2018-19-rows-p038.json.gzip",
+        "sha256": "372a30844a72ce4e4871fd874bb38e5e33db64e33c05589edfb8bc2237028285"
+      },
+      "views": {
+        "native300Field": {
+          "path": "research/salaries/queue-completion-2026-11-01/phsa/canonical-review/phsa-2018-19-money/p038-r51-expenses-native300-field.png",
+          "sha256": "afd63037c0d0f68ffc7edc9a1731f27479864ae9ccfaa2385dab6e98a268a00b",
+          "sourcePixelBox": [
+            1982,
+            2850,
+            2550,
+            2898
+          ]
+        },
+        "wholePage600Field": {
+          "path": "research/salaries/queue-completion-2026-11-01/phsa/canonical-review/phsa-2018-19-money/p038-r51-expenses-wholePage600-field.png",
+          "sha256": "58fb2888a66352decf309c0197434bb42bc3778997124a421a631eb62a1927de",
+          "sourcePixelBox": [
+            3964,
+            5700,
+            5100,
+            5796
+          ]
+        },
+        "native300FullRow": {
+          "path": "research/salaries/queue-completion-2026-11-01/phsa/canonical-review/phsa-2018-19-money/p038-r51-expenses-native300-fullrow.png",
+          "sha256": "d61fd307976a9ab362969ed8839e9d3f5d0cf6f34e193daa37854d944844fcb3",
+          "sourcePixelBox": [
+            0,
+            2850,
+            2550,
+            2898
+          ]
+        },
+        "wholePage600FullRow": {
+          "path": "research/salaries/queue-completion-2026-11-01/phsa/canonical-review/phsa-2018-19-money/p038-r51-expenses-wholePage600-fullrow.png",
+          "sha256": "020bfc9e5e6b585d62ecc91a2a399be2fc0ba5f9dd1e9ea94fc50a7222b2c903",
+          "sourcePixelBox": [
+            0,
+            5700,
+            5100,
+            5796
+          ]
+        }
+      }
+    }
+  ]
+}

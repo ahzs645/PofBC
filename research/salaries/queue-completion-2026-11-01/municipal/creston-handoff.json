@@ -1,0 +1,30 @@
+{
+  "date": "2026-11-01",
+  "status": "qualified-accepted-by-root-complete-employee-scope",
+  "sourceSpec": "research/salaries/queue-completion-2026-11-01/municipal/creston-source-spec.json",
+  "sourceSpecSha256": "a3b8a9276b4f502dfa6630408fa57e71092359f6ff06555350ee3cd3c517818b",
+  "collectionDirectory": "research/salaries/queue-completion-municipal",
+  "manifestStatus": "Creston source spec is final; combined new collection sources.json will be emitted after remaining Mission/Vernon sources close. No global registry edited.",
+  "dataFile": "research/salaries/queue-completion-municipal/creston-2024-employee-remuneration.json.gzip",
+  "dataSha256": "e71de303545fbf4f668a240b11128a2e106b979b3c817be543a36be311c2fce9",
+  "evidenceFile": "research/salaries/queue-completion-municipal/evidence/creston-2024-employee-remuneration.json.gzip",
+  "evidenceSha256": "1cd4e37de49685eb585e17a9606f5c9d4144c9a709d3d5364aab08fa5ac6b427",
+  "acceptedEmployeeRows": 27,
+  "newCouncilRows": 0,
+  "nullExpenses": 0,
+  "explicitZeroExpenses": 13,
+  "period": "calendar2024; original table and corporate calendar-year-end both explicit",
+  "approval": "Physical9 signedJune30,2025 for all SOFI statements and schedules; independently visually verified.",
+  "qualification": "Named rows minus printed named controls: pay-12, expenses-10. Separately printed named+below expense controls are1 below all-employee expense control, and final statement-included remuneration reconciliation is10 below its printed elected+all-employee subtotal. Exact publicWarning in source spec; no cause inferred, no balancing.",
+  "compiledPartition": "retained explicitly pending root full exact-period comparison",
+  "validation": "Both raw OCR engines27 rows,216 machine fields independently image-adjudicated; peer image-first final27 rows/all162 normalized fields exact; source render/period/approval/controls personally and independently reviewed. Five actual-error tests pass.",
+  "reproduction": [
+    "python scripts/finish_salary_municipal_creston.py",
+    "python -m unittest discover -s scripts -p test_finish_salary_municipal.py"
+  ],
+  "notes": [
+    "Initial author and peer transcripts stay immutable; reviewer reading mistakes recorded in separate additive ledgers.",
+    "Old frozen official council scope and all old source files untouched.",
+    "Remaining Mission/Vernon835-row staging includes this27-row scope but is not a claim that the other808 observations are accepted."
+  ]
+}

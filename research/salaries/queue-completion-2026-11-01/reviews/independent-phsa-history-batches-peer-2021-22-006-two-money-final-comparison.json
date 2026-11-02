@@ -1,0 +1,88 @@
+{
+  "frozen": true,
+  "reviewedOn": "2026-11-02",
+  "reviewer": "/root/recovery_review",
+  "sourceId": "phsa-2021-22",
+  "sourceSha256": "944c99fa7b7ede643cb4c426a5e9ab30aa906d8f81fda379f0206e4b0cdcd25c",
+  "sourceOnlyPacket": {
+    "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-history-2021-22-006-two-money-source-only-peer.json",
+    "sha256": "df8115240e507d1dcd45993e803e96fb0444b58b0cc495c65acbf4c257eed8d7"
+  },
+  "peerRawSourceFirst": {
+    "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-history-batches-peer-2021-22-006-two-money-source-first.json",
+    "sha256": "77e38cc2202709560841bd3196bf8597328c2d62af17c10f2ddff311995c46cd"
+  },
+  "authorScopedChoicesOpenedAfterRaw": {
+    "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-history-2021-22-006-two-money-author-choices-before-peer.json",
+    "sha256": "ec6da0a72378f512a419fe66d83da554d0ba2ff0088e98bf038eac8ee4304e13"
+  },
+  "method": "Personally image-read all assigned actual original fields before scoped author choices, froze raw, then exact tuple-key comparison. Independently rerendered every corresponding PDF field and verified RGB pixels exactly; no recognized OCR values used as source authority.",
+  "rows": [
+    {
+      "sequence": 237,
+      "physicalPage": 134,
+      "sourceRowOnPage": 31,
+      "field": "remuneration",
+      "peerInitialImageFirstValue": 98949,
+      "peerFinalValue": 98949,
+      "authorFinalValue": 98949,
+      "sourceImage": {
+        "path": "/workspace/salary-review-held-health-temp/2021-006-source-recheck/0237-remuneration-actual1200-ink.png",
+        "sha256": "6f20b324cd58595d6670a98bb90aef5f7fb881c0dec6ebeb41718a4e7a99398e",
+        "actualPdfPointClip": [
+          426.0,
+          554.4,
+          513.6,
+          569.04
+        ],
+        "dpi": 1200,
+        "whiteBoundaryCrop": [
+          692,
+          80,
+          1092,
+          200
+        ],
+        "noResamplingOrGlyphAlteration": true
+      },
+      "independentActualPdfPixelsMatch": true,
+      "status": "confirmed-exact-from-original-image"
+    },
+    {
+      "sequence": 355,
+      "physicalPage": 144,
+      "sourceRowOnPage": 29,
+      "field": "remuneration",
+      "peerInitialImageFirstValue": 89537,
+      "peerFinalValue": 89537,
+      "authorFinalValue": 89537,
+      "sourceImage": {
+        "path": "/workspace/salary-review-held-health-temp/2021-006-source-recheck/0355-remuneration-actual1200-ink.png",
+        "sha256": "4cc2d266b243255939732e534b52aedc311966aa9440f89bcaf315d707248790",
+        "actualPdfPointClip": [
+          426.0,
+          529.4399999999999,
+          513.6,
+          544.0799999999999
+        ],
+        "dpi": 1200,
+        "whiteBoundaryCrop": [
+          692,
+          80,
+          1092,
+          200
+        ],
+        "noResamplingOrGlyphAlteration": true
+      },
+      "independentActualPdfPixelsMatch": true,
+      "status": "confirmed-exact-from-original-image"
+    }
+  ],
+  "counts": {
+    "sourceFields": 2,
+    "positiveIntegerFields": 2,
+    "firstValuesMatchingAuthor": 2,
+    "ownSourceCorrections": 0,
+    "unresolved": 0
+  },
+  "scopeLimit": "Only named monetary fields; no full employee source/name/control acceptance."
+}

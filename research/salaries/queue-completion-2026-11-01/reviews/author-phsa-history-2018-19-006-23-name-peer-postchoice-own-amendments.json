@@ -1,0 +1,58 @@
+{
+  "frozen": true,
+  "reviewer": "/root/recovery_health",
+  "originalFirstPass": {
+    "path": "research/salaries/queue-completion-2026-11-01/reviews/author-phsa-history-2018-19-006-23-name-peer-first-transcript.json",
+    "sha256": "82319f5c30d28ce54eb1edad65d5998a73306443a5257154175894b9d5fd8c63"
+  },
+  "afterAuthorChoiceComparison": true,
+  "corrections": [
+    {
+      "sequence": 221,
+      "firstPass": "Steil,Michael",
+      "actualSourceReading": "Steil,MIchael",
+      "actual1200SourceView": {
+        "path": "/tmp/independent-phsa-municipal-2018-19-006/seq221-name-actual1200.png",
+        "sha256": "d1268ab1d66bad46f784bcf7b3b978cd28f9302deeefe6da5b241f6782a27f8e",
+        "original300DpiPixelBox": [
+          205,
+          831,
+          1250,
+          872
+        ]
+      },
+      "reason": "The source has a full uppercase I with serifs inside the given name; my first pass incorrectly regularized this unexpected literal case."
+    },
+    {
+      "sequence": 340,
+      "firstPass": "Turner,Ashley Sharon Anne",
+      "actualSourceReading": "Turner,Ashley Sharron Anne",
+      "actual1200SourceView": {
+        "path": "/tmp/independent-phsa-municipal-2018-19-006/seq340-name-actual1200.png",
+        "sha256": "c756f34bdc66299ee6f426a120bcb50fcd817bfe598dea9b7beae464c30ace60",
+        "original300DpiPixelBox": [
+          205,
+          1867,
+          1250,
+          1908
+        ]
+      },
+      "reason": "The source shows two r stems; my first pass omitted one."
+    }
+  ],
+  "unresolvedProvisionalDifferences": [
+    {
+      "sequence": 210,
+      "peerPreferred": "Staniford-Terralle,Lydia",
+      "authorPreferred": "Staniford-Terrahe,Lydia"
+    },
+    {
+      "sequence": 225,
+      "peerPreferred": "Stephan,Eduardo Berninger",
+      "authorPreferred": "Stephan,Eduardo Berringer"
+    }
+  ],
+  "freshThirdSourcePeerPendingForTwoDifferences": true,
+  "oldRawAndAuthorFilesUnchanged": true,
+  "noMoneyAuthority": true
+}

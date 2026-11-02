@@ -1,0 +1,133 @@
+{
+  "preparedOn": "2026-11-01",
+  "owner": "recovery_education",
+  "status": "frozen-reviewed-qualified-sources-ready-for-root-integration; four issuer-dependent drafts unsent",
+  "collectionManifest": {
+    "path": "research/salaries/queue-completion-acquisition/sources.json",
+    "sha256": "4b06e21e635220ab88ae0346ced441f515be3c4a8635c8d0651ce2874b25b570"
+  },
+  "normalizedRows": 11049,
+  "sources": [
+    {
+      "id": "queue-completion-providence-2023-24-employees",
+      "rows": 3289,
+      "originalSha256": "521472f784463bf42626b9c74aeb72252167346b65b8a123031ca59e46ecb5f3",
+      "data": {
+        "path": "research/salaries/queue-completion-acquisition/providence-2023-24-employees.json.gzip",
+        "sha256": "b9f4367622d685d0fbc5a6fc468ec87bde18191b5c5df9ba95ed9161de19ebe0"
+      },
+      "completeEmployeeSchedule": true,
+      "retainCompiledPartition": true,
+      "publicWarning": "Official Legislative Library archival download with an added catalogue cover at physical page 1; PDF-page references identify this downloaded copy. This official fiscal-year scope coexists with retained compiled observations; equivalent periods or matching identities are not assumed."
+    },
+    {
+      "id": "queue-completion-providence-2023-24-board-numeric-pay",
+      "rows": 10,
+      "originalSha256": "521472f784463bf42626b9c74aeb72252167346b65b8a123031ca59e46ecb5f3",
+      "data": {
+        "path": "research/salaries/queue-completion-acquisition/providence-2023-24-board-numeric-pay.json.gzip",
+        "sha256": "b62155c1cefb484610320842b511fac496a837eb889d1b739c22f6db1479827c"
+      },
+      "completeEmployeeSchedule": false,
+      "retainCompiledPartition": true,
+      "publicWarning": "Official Legislative Library archival download with an added catalogue cover at physical page 1; PDF-page references identify this downloaded copy. Only the 10 of 15 Board observations with numeric remuneration enter salary data. Five remuneration-dash observations remain nonnumeric in supporting research. The full Board expense control is $6,566; these 10 numeric-pay observations have $5,455 known expenses, and the excluded five have $1,111 known expenses. This is a scope difference. This official fiscal-year scope coexists with retained compiled observations; equivalent periods or matching identities are not assumed."
+    },
+    {
+      "id": "queue-completion-vch-2020-21-employees",
+      "rows": 7740,
+      "originalSha256": "8d2d85205f0c4de6557e39cd8ee21ac2a38c90aa70611f1ca5bfb7c9f030d7ad",
+      "data": {
+        "path": "research/salaries/queue-completion-acquisition/vch-2020-21-employees.json.gzip",
+        "sha256": "483bd77198c4380dfd6f679a34dbad933b28a300a1a30b61b1c629cc9293e1ce"
+      },
+      "completeEmployeeSchedule": true,
+      "retainCompiledPartition": true,
+      "publicWarning": "Official Legislative Library archival download with an added catalogue cover at physical page 1; PDF-page references identify this downloaded copy. The complete named rows sum to $771,928,026 remuneration and $3,773,912 expenses, exceeding the printed over-$75,000 controls of $771,927,987 and $3,773,890 by $39 and $22. All values remain literal; no cause is asserted. This official fiscal-year scope coexists with retained compiled observations; equivalent periods or matching identities are not assumed."
+    },
+    {
+      "id": "queue-completion-vch-2020-21-board-numeric-pay",
+      "rows": 10,
+      "originalSha256": "8d2d85205f0c4de6557e39cd8ee21ac2a38c90aa70611f1ca5bfb7c9f030d7ad",
+      "data": {
+        "path": "research/salaries/queue-completion-acquisition/vch-2020-21-board-numeric-pay.json.gzip",
+        "sha256": "935e90a9c69b0f2e9f74fcd98588abf5faf2543efbb98f6483f02cca1dbd41fa"
+      },
+      "completeEmployeeSchedule": false,
+      "retainCompiledPartition": true,
+      "publicWarning": "Official Legislative Library archival download with an added catalogue cover at physical page 1; PDF-page references identify this downloaded copy. This official fiscal-year scope coexists with retained compiled observations; equivalent periods or matching identities are not assumed."
+    }
+  ],
+  "independentRootPeer": {
+    "path": "research/salaries/queue-completion-2026-11-01/reviews/root-acquisition-native-peer-decision.json",
+    "sha256": "808778aab69ccfded1f583728d24cf33cf476f26d41589fc5ea1f840ac8202d7"
+  },
+  "fullOriginalReplayAndNineTests": {
+    "path": "research/salaries/queue-completion-2026-11-01/acquisition/offline-original-replay.json",
+    "sha256": "83ba757da379ebc7d8dc4033707c9a74c4f60bf726ffc49a44bf294b747d1a89"
+  },
+  "originalsAndPeriod": {
+    "path": "research/salaries/queue-completion-2026-11-01/acquisition/original-provenance-and-period.json",
+    "sha256": "7fca02c7adb90a61c622e035c4260b35fa0da0695ee47f7c42fe52a508721441"
+  },
+  "renderedFidelity319Pages": {
+    "path": "research/salaries/queue-completion-2026-11-01/acquisition/actual-pdf-native-fidelity.json",
+    "sha256": "b27dcbe2e15d903b70279a37941aae3622027f6ce32d401bce658954b8325e24"
+  },
+  "personalVisualReview13FullContextPages": {
+    "path": "research/salaries/queue-completion-2026-11-01/acquisition/personal-source-image-review.json",
+    "sha256": "09943858072e2260bb48b9f218b889081ac9081cc0d3e6fdaaa9eec3727fb73a"
+  },
+  "separateRawResearchProvidenceUnknownPay5": {
+    "path": "research/salaries/queue-completion-2026-11-01/acquisition/providence-2023-24-board-nonnumeric-pay-research.json",
+    "sha256": "dfebf5f721c2a686f158971617fcacc425961f19c412384cba4b532044b3947a"
+  },
+  "boundedPublicRouteClosure": {
+    "path": "research/salaries/queue-completion-2026-11-01/acquisition/bounded-public-route-closure.json",
+    "sha256": "b436fe1476d5cef4214dc38d9685eeb6e49acd872fc4232b0ac3bb8612e7b553"
+  },
+  "queueExact11Keys7ChangedDispositions": {
+    "path": "research/salaries/queue-completion-2026-11-01/acquisition/work-queue.json",
+    "sha256": "264fa81c3e5518065a95a8fa77298bd11eb896bf1c46fc82ae728bfff55b7dda"
+  },
+  "outbox": {
+    "path": "research/salaries/queue-completion-2026-11-01/acquisition/outbox/outbox.json",
+    "sha256": "f5eb84c68fa1fbfb5cc301437e86ff24dd7b2faf50ffde4293345227ee471cc3"
+  },
+  "outboxFreeze": {
+    "path": "research/salaries/queue-completion-2026-11-01/acquisition/outbox/outbox-freeze.json",
+    "sha256": "e59a4ed742e91fe3c9d9a81d8ee83807b246f1e9ee5a18919f31ba7605b255de"
+  },
+  "additiveOutboxRouteSupport": [
+    {
+      "path": "research/salaries/queue-completion-2026-11-01/acquisition/outbox/outbox-school-public-route-support.json",
+      "sha256": "50199b293acdc679096dec6e1bbde36130b9d2e71606b40a0d68990d4b1f9e1d"
+    },
+    {
+      "path": "research/salaries/queue-completion-2026-11-01/acquisition/outbox/outbox-municipal-public-route-support.json",
+      "sha256": "c1811f24ff488b434674e5de6b43acc2728c3f8be2792e0dd4df876bc0aed6a3"
+    }
+  ],
+  "externalBlockers": [
+    "NIC complete preservable original package, despite already accepted151salary observations",
+    "McBride exact council-expense reporting period",
+    "SD10 declaration/management date and SOFI-specific approval clarification",
+    "SD8 single-page year heading, literal aggregate differences and SOFI-specific adoption evidence"
+  ],
+  "unnecessarySending": [
+    "Providence and VCH copy requests superseded by recovered official originals",
+    "PHSA format-only email unnecessary; nine already recovered public scans processing, supersede action when all complete"
+  ],
+  "contactSent": false,
+  "feesAuthorized": false,
+  "senderName": null,
+  "returnEmail": null,
+  "sendingCapability": "No email-sending connector currently available. SD10 public form requires a sender name and return email; explicit sending authorization and sender details remain with root/user.",
+  "integrationOwner": "root; no global files changed",
+  "compiledPartitionDecision": "Keep all four current retainCompiledPartition flags true. Root separately owns any full hash-pinned duplicate-copy replacement.",
+  "metadataOnlyAmendment": {
+    "path": "research/salaries/queue-completion-2026-11-01/acquisition/manifest-public-warning-schema-amendment.json",
+    "sha256": "d216d85e0ddb5f24eab47481f511ed90a6816cdc202ec3d31ef99d9d2cedafd2"
+  },
+  "oldFrozenFilesModified": false,
+  "notes": "No source names expanded, no source absence inferred as zero, no balancing, no identity links. School native extension audit and PHSA image batches are separate review artifacts, outside this acquisition freeze."
+}

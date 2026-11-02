@@ -1,0 +1,154 @@
+{
+  "frozen": true,
+  "reviewedOn": "2026-11-02",
+  "reviewer": "/root/recovery_review",
+  "scope": "Bounded canonical validator/rootpromoter integration review with concrete3 normalized sourceclosures. No all9promotion or source-semantic authorization.",
+  "previousReviewUnchanged": {
+    "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-history-batches-canonical-promoter-code-review-001.json",
+    "sha256": "001cb9dcae6597082ff949ac941ff9a02fa2a8699c1271c1784d290bb555382b"
+  },
+  "codePins": [
+    {
+      "path": "scripts/finish_salary_phsa_canonical.py",
+      "sha256": "4357588455e95989e1384ad90d8d23fe2a751823578e0ea5ec07b627abe08360"
+    },
+    {
+      "path": "scripts/test_salary_phsa_canonical.py",
+      "sha256": "ef598b07490b3cb7ec6eb6ef51aa4a01d6bcdf38aa0ff67856dd60dfe30a17bb"
+    },
+    {
+      "path": "scripts/finish_salary_phsa_promote.py",
+      "sha256": "cc68a5e0ee7799e5024da401d4c3e11307071ff283e311e4ca623d0cd62ffc70"
+    },
+    {
+      "path": "scripts/test_salary_queue_completion.py",
+      "sha256": "191a95dd01e78630e4f42bec4f3276ed472e15af3acda6f122110dec839862f1"
+    },
+    {
+      "path": "scripts/review-salary-queue-completion.py",
+      "sha256": "42363979fc3403464d4366debcd1c7a800c9b6623638885938dfefa87dc521d8"
+    }
+  ],
+  "checks": [
+    {
+      "command": "python scripts/test_salary_phsa_canonical.py",
+      "passed": 25,
+      "failed": 0
+    },
+    {
+      "command": "python scripts/test_salary_queue_completion.py",
+      "passed": 19,
+      "failed": 0
+    }
+  ],
+  "realClosuresReplayed": [
+    {
+      "sourceId": "phsa-2020-21",
+      "selectedCandidate": {
+        "path": "research/salaries/queue-completion-2026-11-01/phsa/candidates/phsa-2020-21-source-v3.json",
+        "sha256": "b51a9dc32ecfaa3e9ac400c4430f873e7fe8e4a54c9e6a6ebe072f9d56880eb9"
+      },
+      "rootClosure": {
+        "path": "research/salaries/queue-completion-2026-11-01/reviews/root-phsa-history-2020-21-canonical-source-closure.json",
+        "sha256": "c4c6c4852548b52acc008623b36c329db7b415bbcbedeb2b81b3d2ba0ca443e8"
+      },
+      "physicalRows": 7941,
+      "moduleAndPromoterReadOnlyReplayPassed": true,
+      "facts": {
+        "sourceId": "phsa-2020-21",
+        "sourceSha256": "87ea680c3e2b9bb940d911a198e41b85068535964ee61b6992e651271bd72b60",
+        "scopeKind": "prior-eight-three-packets",
+        "rootCanonicalClosure": {
+          "path": "research/salaries/queue-completion-2026-11-01/reviews/root-phsa-history-2020-21-canonical-source-closure.json",
+          "sha256": "c4c6c4852548b52acc008623b36c329db7b415bbcbedeb2b81b3d2ba0ca443e8"
+        },
+        "targets": 146,
+        "nameTargets": 36,
+        "positiveMoneyTargets": 110,
+        "qualifiedNameTargets": 26
+      }
+    },
+    {
+      "sourceId": "phsa-2021-22",
+      "selectedCandidate": {
+        "path": "research/salaries/queue-completion-2026-11-01/phsa/candidates/phsa-2021-22-source-v4.json",
+        "sha256": "249cfcf1aed6cc6ecef30ff00912a7dd37fa024a99098b4eef6c9c812da65237"
+      },
+      "rootClosure": {
+        "path": "research/salaries/queue-completion-2026-11-01/reviews/root-phsa-history-2021-22-canonical-source-closure.json",
+        "sha256": "790da0972b230b9f9c03175d7d9b3f4446b751c1456a23faec31581810fd518e"
+      },
+      "physicalRows": 8270,
+      "moduleAndPromoterReadOnlyReplayPassed": true,
+      "facts": {
+        "sourceId": "phsa-2021-22",
+        "sourceSha256": "944c99fa7b7ede643cb4c426a5e9ab30aa906d8f81fda379f0206e4b0cdcd25c",
+        "scopeKind": "prior-eight-three-packets",
+        "rootCanonicalClosure": {
+          "path": "research/salaries/queue-completion-2026-11-01/reviews/root-phsa-history-2021-22-canonical-source-closure.json",
+          "sha256": "790da0972b230b9f9c03175d7d9b3f4446b751c1456a23faec31581810fd518e"
+        },
+        "targets": 99,
+        "nameTargets": 84,
+        "positiveMoneyTargets": 15,
+        "qualifiedNameTargets": 71
+      }
+    },
+    {
+      "sourceId": "phsa-2023-24",
+      "selectedCandidate": {
+        "path": "research/salaries/queue-completion-2026-11-01/phsa/candidates/phsa-2023-24-source-v3.json",
+        "sha256": "a43cf0aaf39f80ac0a3f99e17227b7b56cab704d8c87a49fc39a6c0bae9a27db"
+      },
+      "rootClosure": {
+        "path": "research/salaries/queue-completion-2026-11-01/reviews/root-phsa-history-2023-24-canonical-source-closure.json",
+        "sha256": "9da6cb9101fa90304b58299647a1f5b3f9156aa5a60b5070ae25b6ad702dbc70"
+      },
+      "physicalRows": 11908,
+      "moduleAndPromoterReadOnlyReplayPassed": true,
+      "facts": {
+        "sourceId": "phsa-2023-24",
+        "sourceSha256": "89cf82dd1701081e4073408fc38006a08b5033e151d5a0cb2a4ff0c096594ab7",
+        "scopeKind": "prior-eight-three-packets",
+        "rootCanonicalClosure": {
+          "path": "research/salaries/queue-completion-2026-11-01/reviews/root-phsa-history-2023-24-canonical-source-closure.json",
+          "sha256": "9da6cb9101fa90304b58299647a1f5b3f9156aa5a60b5070ae25b6ad702dbc70"
+        },
+        "targets": 0,
+        "nameTargets": 0,
+        "positiveMoneyTargets": 0,
+        "qualifiedNameTargets": 0
+      }
+    }
+  ],
+  "inMemoryActualV4Mutations": [
+    {
+      "probe": "actualMundi humanrecord rejects consistently wrongroot+selectedMundl with empty supplementalcorrections",
+      "rejected": true,
+      "reason": "Root outcome literal differs from its pinned final human decision"
+    },
+    {
+      "probe": "actualv4 pendingfields countzero cannot replace explicit emptylist",
+      "rejected": true,
+      "reason": "Selected provenance retains pending fields"
+    },
+    {
+      "probe": "actual99scope consistently shrunkroot outcomes/counts",
+      "rejected": true,
+      "reason": "Canonical closure omits requested source fields"
+    },
+    {
+      "probe": "actualv4 rootclosure explicitlyopen",
+      "rejected": true,
+      "reason": "Root canonical source closure is missing identity or has an open gate"
+    }
+  ],
+  "subsequentConcreteFixes": [
+    "Cross-packet target overlaps now rejected rather than silently collapsed; held independentreader caught this bounded fail-closed gap.",
+    "Actual selected-source pendingFields schema is exactlyemptyLIST; initial count0assumption caught byroot firstrealclosurefactory before anyacceptancewrite.25tests include actualimmutablev3 provenance smoke and reject0/False/nonemptylist."
+  ],
+  "codeReviewPassed": true,
+  "allNineSourceAcceptance": false,
+  "exposureAndImplementationOwnership": "I authored canonicalmodule/tests and subsequently NEWmoney_exhaustive producerbranch for016athealthrequest; those implementation tests are not an independentfinancialacceptance. Parentpromoter/rootgate read-only here. H/root independently ownfinalreplay; no producerimports there.",
+  "limits": "Only concreteFY20v3/FY21v4/FY23v3 normalized semanticclosures currently tested in thisreceipt. Eachcase uses explicit sourcehumanrecord pointers and exact selectedprovenance target coverage. Remaining current-source semantic families, metadata revisions, FY19risknames/money andall9finalreplays remaingates. Userholdall4issuerrequests persists; nooutreach."
+}

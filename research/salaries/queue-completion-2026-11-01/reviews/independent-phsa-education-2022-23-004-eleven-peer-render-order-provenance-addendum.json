@@ -1,0 +1,82 @@
+{
+  "frozen": true,
+  "reviewedOn": "2026-11-02",
+  "scope": "11originalsourcefields only;10names/1pay, no full400claim.",
+  "sourceSha256": "6046bb7be6944bc729926adba20a826486820a2a3b9b38090c60d400b2bc72a1",
+  "priorPreservedVerification": {
+    "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-education-2022-23-004-eleven-peer-actual-pdf-verification.json",
+    "sha256": "f2a7dee91cf0cc34960c536c7e8b9713df8a20fb418819b7220b1602b63a385a"
+  },
+  "method": "A fresh Python process opens originalPDF once and sequentially performs only the11 actual600partialclipped renders in the supplied packet order, with page.get_pixmap(dpi=600,clip=Rect([c*72/300 for c in original300fieldbox]),alpha=False). This exactly reproduces the authorhelper method. No earlier300/fullpage600render is made in that process.",
+  "allElevenFreshActual600RendersPixelExact": true,
+  "priorDifferenceExplainedByReproduction": "Prior verification rendered a fullpage300 before each clipped600. One monetary field600 then differed slightly in antialias pixels; names remained exact. This fresh clip-only sequence reproduces every supplied600fieldRGBexact, including236, without inferring bytefidelity from value agreement. No source/glyph/composition difference is claimed. PriorFalse remains unchanged.",
+  "native300Evidence": "All11native300fields already reproduce actualPDFfullpageRGBcuts in priorreceipt.",
+  "rows": [
+    {
+      "sequence": 9,
+      "field": "name",
+      "actual600FileSha256": "4841a4b4367eaa010551b20c4353fcae626a7de72f9fb3d2b1e9d55f35ed08a4",
+      "freshOriginal600RenderPixelExact": true
+    },
+    {
+      "sequence": 21,
+      "field": "name",
+      "actual600FileSha256": "5cd9398555553fc91057a7203e3b307c7de613d17b5565af8c14ce1ca0890591",
+      "freshOriginal600RenderPixelExact": true
+    },
+    {
+      "sequence": 89,
+      "field": "name",
+      "actual600FileSha256": "de7ddd35bc444974c64b935c7c3b5995bf526a2dee1d56ecff116ebc634940e8",
+      "freshOriginal600RenderPixelExact": true
+    },
+    {
+      "sequence": 174,
+      "field": "name",
+      "actual600FileSha256": "93bfa2a13ead533c73eeacb7bee0c08b1c2895ae329224a3729a0d47cc4b7d90",
+      "freshOriginal600RenderPixelExact": true
+    },
+    {
+      "sequence": 220,
+      "field": "name",
+      "actual600FileSha256": "b84cbc8277e5aa4ff4829de1dd96b17e5cbd6d2d6ead1c8ccfd747d09c09db62",
+      "freshOriginal600RenderPixelExact": true
+    },
+    {
+      "sequence": 236,
+      "field": "remuneration",
+      "actual600FileSha256": "9cba21609f373b2f45626c9bf6215ebf13943f2555131691a4fe29ac401b6bfb",
+      "freshOriginal600RenderPixelExact": true
+    },
+    {
+      "sequence": 281,
+      "field": "name",
+      "actual600FileSha256": "86638d2767a8b0f37dbfc8a1cfbd1a2a90cd4a7666c1e36f6757924e5857fc43",
+      "freshOriginal600RenderPixelExact": true
+    },
+    {
+      "sequence": 285,
+      "field": "name",
+      "actual600FileSha256": "9e8f765c01ab9f8af97db314a0ae9511e3ce2eaa4202dbd9a237ec90c908fe91",
+      "freshOriginal600RenderPixelExact": true
+    },
+    {
+      "sequence": 294,
+      "field": "name",
+      "actual600FileSha256": "987f55e9cad41c1136529498dcea7e00b83f07ace7dd52060d8dfe5ecc99d715",
+      "freshOriginal600RenderPixelExact": true
+    },
+    {
+      "sequence": 310,
+      "field": "name",
+      "actual600FileSha256": "1a42d64a6cef9754380488dbf673ef099d9a0d96c62c9995f2230d2e37cc0b50",
+      "freshOriginal600RenderPixelExact": true
+    },
+    {
+      "sequence": 377,
+      "field": "name",
+      "actual600FileSha256": "b28018183d7c1205684482ef5c13b540fb610e34158d7aaa0fe083d43bfcc42a",
+      "freshOriginal600RenderPixelExact": true
+    }
+  ]
+}

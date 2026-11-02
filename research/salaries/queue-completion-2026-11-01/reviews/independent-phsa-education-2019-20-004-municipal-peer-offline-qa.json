@@ -1,0 +1,25 @@
+{
+  "frozen": true,
+  "reviewedOn": "2026-11-02",
+  "scope": "Offline exact49namefieldpeer replay; no monetary/full400/sourceacceptanceclaim.",
+  "finalComparison": {
+    "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-education-2019-20-004-municipal-peer-final-comparison-v2.json",
+    "sha256": "c971b2a513abd2efe4b5491837620acfe4faebb7e8118f02829a8f453a5e3df2"
+  },
+  "exactAuthorFiniteConfirmation": {
+    "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-municipal-history-2019-20-004-finite-name-source-confirmation.json",
+    "sha256": "33efbccf357ca2102b6c78e53f802774133721bdb910d6d5984e8b831d83d1fe"
+  },
+  "checks": {
+    "all49UniqueKeys": true,
+    "all49EffectiveOwnAuthorPrimariesExact": true,
+    "all15FiniteCaseAuthorFieldsExact": true,
+    "all15SpansAndFullAlternativeSetsExact": true,
+    "ownNineCorrectionsPreserved": true,
+    "authorTwoCorrectionsPreserved": true,
+    "noFalseBlindFirstAgreementClaim": true,
+    "allSourceAndPeerRawPinsSha256Valid": true,
+    "qualifiedRootAuthorityStillRequired": true
+  },
+  "oldFilesUnchanged": true
+}

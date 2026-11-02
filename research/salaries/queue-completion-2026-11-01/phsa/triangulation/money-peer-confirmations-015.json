@@ -1,0 +1,1272 @@
+{
+  "frozen": true,
+  "adapter": "count-independent-source-money-peer-v1",
+  "sourceReceiptSchema": "two-independent-source-money-readers-with-additive-rereads-v1",
+  "peerInputs": [
+    {
+      "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-history-batches-peer-2019-20-010-fortyone-money-final-comparison.json",
+      "sha256": "eceba9b343ac7a348af2faf619064c03cf818edda3a1add0a4f28a24cc2b777b"
+    },
+    {
+      "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-history-batches-peer-2019-20-010-fortyone-money-source-first.json",
+      "sha256": "b68c4f2d7a4e99d3a3daf3349805668fe290be1bb5f987f4573c32a0c9322c3c"
+    },
+    {
+      "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-history-2019-20-010-forty-one-money-source-only-peer.json",
+      "sha256": "5abe1aa67c4a649b0fbfbf149120242c923483e9bedf2592f9c70b1ac6e51bcb"
+    },
+    {
+      "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-history-batches-peer-2019-20-010-money-source-fidelity.json",
+      "sha256": "885ed493649e8f8b983c0ac5659ec69ad3ce88deb95e578cf2b28d4e2937c8df"
+    },
+    {
+      "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-history-batches-peer-2019-20-010-fortyone-money-own-source-reread-addendum.json",
+      "sha256": "5080c570b044f6f1aaae0ed25163f809219184665f660bcf287d6e5fcdb1e971"
+    },
+    {
+      "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-history-2019-20-010-forty-one-money-author-choices.json",
+      "sha256": "3b99080b19b0c29138f05bb6a65c67e0f40eafa55dd884be474c0293b6e969e2"
+    },
+    {
+      "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-history-2019-20-batch-010-image-transcript.tsv",
+      "sha256": "94b525e4a69a628980e16e31069f119c2d6cb3f81d3b5b877f251a4ed5503be9"
+    }
+  ],
+  "confirmations": [
+    {
+      "sourceId": "phsa-2019-20",
+      "sourceSha256": "0e31ac2054f0c2d4ef78797185dddd96cc0cdf2eab94bd6841fa24e1c38e7d02",
+      "physicalPage": 64,
+      "sourceRowOnPage": 3,
+      "field": "expenses",
+      "confirmedValue": 14919,
+      "effectiveAuthorOverlay": {
+        "path": "research/salaries/queue-completion-2026-11-01/phsa/overlays/phsa-2019-20-manual-overlay-010.json",
+        "sha256": "162bc6c35de79622aaf47fe727a459433f88b6c39ada3273b127d5c18c6b830a"
+      },
+      "peerComparison": {
+        "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-history-batches-peer-2019-20-010-fortyone-money-final-comparison.json",
+        "sha256": "eceba9b343ac7a348af2faf619064c03cf818edda3a1add0a4f28a24cc2b777b"
+      },
+      "freshSourceImage": {
+        "path": "/workspace/salary-review-held-health-temp/2019-010-postfreeze/0026-expenses-actual600.png",
+        "sha256": "cb3f6c3657273220a2994585fe8dff6151f72f04bc711bbc47c35c27a4c51de0",
+        "original300DpiPixelBox": [
+          2052,
+          756,
+          2422,
+          795
+        ]
+      },
+      "imageFirstTranscript": {
+        "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-history-batches-peer-2019-20-010-fortyone-money-source-first.json",
+        "sha256": "b68c4f2d7a4e99d3a3daf3349805668fe290be1bb5f987f4573c32a0c9322c3c"
+      }
+    },
+    {
+      "sourceId": "phsa-2019-20",
+      "sourceSha256": "0e31ac2054f0c2d4ef78797185dddd96cc0cdf2eab94bd6841fa24e1c38e7d02",
+      "physicalPage": 64,
+      "sourceRowOnPage": 9,
+      "field": "expenses",
+      "confirmedValue": 3522,
+      "effectiveAuthorOverlay": {
+        "path": "research/salaries/queue-completion-2026-11-01/phsa/overlays/phsa-2019-20-manual-overlay-010.json",
+        "sha256": "162bc6c35de79622aaf47fe727a459433f88b6c39ada3273b127d5c18c6b830a"
+      },
+      "peerComparison": {
+        "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-history-batches-peer-2019-20-010-fortyone-money-final-comparison.json",
+        "sha256": "eceba9b343ac7a348af2faf619064c03cf818edda3a1add0a4f28a24cc2b777b"
+      },
+      "freshSourceImage": {
+        "path": "/workspace/salary-review-held-health-temp/2019-010-postfreeze/0031-expenses-actual600.png",
+        "sha256": "4118c5b4b01eea4ae40139fd5d969f6b86da6f676f63d1f906493eba3416c441",
+        "original300DpiPixelBox": [
+          2052,
+          1000,
+          2422,
+          1039
+        ]
+      },
+      "imageFirstTranscript": {
+        "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-history-batches-peer-2019-20-010-fortyone-money-source-first.json",
+        "sha256": "b68c4f2d7a4e99d3a3daf3349805668fe290be1bb5f987f4573c32a0c9322c3c"
+      }
+    },
+    {
+      "sourceId": "phsa-2019-20",
+      "sourceSha256": "0e31ac2054f0c2d4ef78797185dddd96cc0cdf2eab94bd6841fa24e1c38e7d02",
+      "physicalPage": 64,
+      "sourceRowOnPage": 25,
+      "field": "remuneration",
+      "confirmedValue": 142944,
+      "effectiveAuthorOverlay": {
+        "path": "research/salaries/queue-completion-2026-11-01/phsa/overlays/phsa-2019-20-manual-overlay-010.json",
+        "sha256": "162bc6c35de79622aaf47fe727a459433f88b6c39ada3273b127d5c18c6b830a"
+      },
+      "peerComparison": {
+        "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-history-batches-peer-2019-20-010-fortyone-money-final-comparison.json",
+        "sha256": "eceba9b343ac7a348af2faf619064c03cf818edda3a1add0a4f28a24cc2b777b"
+      },
+      "freshSourceImage": {
+        "path": "/workspace/salary-review-held-health-temp/2019-010-postfreeze/0045-remuneration-actual600.png",
+        "sha256": "7511e50336f7ed275f945f5256f37b5830e6cf5ea04925ee971bea294492ae10",
+        "original300DpiPixelBox": [
+          1735,
+          1656,
+          2068,
+          1695
+        ]
+      },
+      "imageFirstTranscript": {
+        "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-history-batches-peer-2019-20-010-fortyone-money-source-first.json",
+        "sha256": "b68c4f2d7a4e99d3a3daf3349805668fe290be1bb5f987f4573c32a0c9322c3c"
+      }
+    },
+    {
+      "sourceId": "phsa-2019-20",
+      "sourceSha256": "0e31ac2054f0c2d4ef78797185dddd96cc0cdf2eab94bd6841fa24e1c38e7d02",
+      "physicalPage": 64,
+      "sourceRowOnPage": 28,
+      "field": "expenses",
+      "confirmedValue": 1005,
+      "effectiveAuthorOverlay": {
+        "path": "research/salaries/queue-completion-2026-11-01/phsa/overlays/phsa-2019-20-manual-overlay-010.json",
+        "sha256": "162bc6c35de79622aaf47fe727a459433f88b6c39ada3273b127d5c18c6b830a"
+      },
+      "peerComparison": {
+        "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-history-batches-peer-2019-20-010-fortyone-money-final-comparison.json",
+        "sha256": "eceba9b343ac7a348af2faf619064c03cf818edda3a1add0a4f28a24cc2b777b"
+      },
+      "freshSourceImage": {
+        "path": "/workspace/salary-review-held-health-temp/2019-010-postfreeze/0048-expenses-actual600.png",
+        "sha256": "e6e43f8b2bbb8043d285b3a1220532f8bc37899da44fbb2ef2fcab81a48f0bcc",
+        "original300DpiPixelBox": [
+          2052,
+          1782,
+          2422,
+          1821
+        ]
+      },
+      "imageFirstTranscript": {
+        "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-history-batches-peer-2019-20-010-fortyone-money-source-first.json",
+        "sha256": "b68c4f2d7a4e99d3a3daf3349805668fe290be1bb5f987f4573c32a0c9322c3c"
+      }
+    },
+    {
+      "sourceId": "phsa-2019-20",
+      "sourceSha256": "0e31ac2054f0c2d4ef78797185dddd96cc0cdf2eab94bd6841fa24e1c38e7d02",
+      "physicalPage": 64,
+      "sourceRowOnPage": 37,
+      "field": "expenses",
+      "confirmedValue": 4910,
+      "effectiveAuthorOverlay": {
+        "path": "research/salaries/queue-completion-2026-11-01/phsa/overlays/phsa-2019-20-manual-overlay-010.json",
+        "sha256": "162bc6c35de79622aaf47fe727a459433f88b6c39ada3273b127d5c18c6b830a"
+      },
+      "peerComparison": {
+        "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-history-batches-peer-2019-20-010-fortyone-money-final-comparison.json",
+        "sha256": "eceba9b343ac7a348af2faf619064c03cf818edda3a1add0a4f28a24cc2b777b"
+      },
+      "freshSourceImage": {
+        "path": "/workspace/salary-review-held-health-temp/2019-010-postfreeze/0055-expenses-actual600.png",
+        "sha256": "dec2bb2bfddad84e865390a9c3ee0efb42ca74dcc99b83765f78b759fe3d83de",
+        "original300DpiPixelBox": [
+          2052,
+          2151,
+          2422,
+          2191
+        ]
+      },
+      "imageFirstTranscript": {
+        "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-history-batches-peer-2019-20-010-fortyone-money-source-first.json",
+        "sha256": "b68c4f2d7a4e99d3a3daf3349805668fe290be1bb5f987f4573c32a0c9322c3c"
+      }
+    },
+    {
+      "sourceId": "phsa-2019-20",
+      "sourceSha256": "0e31ac2054f0c2d4ef78797185dddd96cc0cdf2eab94bd6841fa24e1c38e7d02",
+      "physicalPage": 64,
+      "sourceRowOnPage": 43,
+      "field": "expenses",
+      "confirmedValue": 1870,
+      "effectiveAuthorOverlay": {
+        "path": "research/salaries/queue-completion-2026-11-01/phsa/overlays/phsa-2019-20-manual-overlay-010.json",
+        "sha256": "162bc6c35de79622aaf47fe727a459433f88b6c39ada3273b127d5c18c6b830a"
+      },
+      "peerComparison": {
+        "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-history-batches-peer-2019-20-010-fortyone-money-final-comparison.json",
+        "sha256": "eceba9b343ac7a348af2faf619064c03cf818edda3a1add0a4f28a24cc2b777b"
+      },
+      "freshSourceImage": {
+        "path": "/workspace/salary-review-held-health-temp/2019-010-postfreeze/0060-expenses-actual600.png",
+        "sha256": "7c44153849b876e5e8b23cac050f84a974389142643e1acaa6ed2201e7d3fbab",
+        "original300DpiPixelBox": [
+          2052,
+          2394,
+          2422,
+          2433
+        ]
+      },
+      "imageFirstTranscript": {
+        "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-history-batches-peer-2019-20-010-fortyone-money-source-first.json",
+        "sha256": "b68c4f2d7a4e99d3a3daf3349805668fe290be1bb5f987f4573c32a0c9322c3c"
+      }
+    },
+    {
+      "sourceId": "phsa-2019-20",
+      "sourceSha256": "0e31ac2054f0c2d4ef78797185dddd96cc0cdf2eab94bd6841fa24e1c38e7d02",
+      "physicalPage": 65,
+      "sourceRowOnPage": 18,
+      "field": "remuneration",
+      "confirmedValue": 85518,
+      "effectiveAuthorOverlay": {
+        "path": "research/salaries/queue-completion-2026-11-01/phsa/overlays/phsa-2019-20-manual-overlay-010.json",
+        "sha256": "162bc6c35de79622aaf47fe727a459433f88b6c39ada3273b127d5c18c6b830a"
+      },
+      "peerComparison": {
+        "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-history-batches-peer-2019-20-010-fortyone-money-final-comparison.json",
+        "sha256": "eceba9b343ac7a348af2faf619064c03cf818edda3a1add0a4f28a24cc2b777b"
+      },
+      "freshSourceImage": {
+        "path": "/workspace/salary-review-held-health-temp/2019-010-postfreeze/0087-remuneration-actual600.png",
+        "sha256": "b2af0f19fbb178adb7043d86bc6a51506460b9910b2fb75c827e786421e9c68a",
+        "original300DpiPixelBox": [
+          1735,
+          1370,
+          2068,
+          1408
+        ]
+      },
+      "imageFirstTranscript": {
+        "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-history-batches-peer-2019-20-010-fortyone-money-source-first.json",
+        "sha256": "b68c4f2d7a4e99d3a3daf3349805668fe290be1bb5f987f4573c32a0c9322c3c"
+      }
+    },
+    {
+      "sourceId": "phsa-2019-20",
+      "sourceSha256": "0e31ac2054f0c2d4ef78797185dddd96cc0cdf2eab94bd6841fa24e1c38e7d02",
+      "physicalPage": 65,
+      "sourceRowOnPage": 18,
+      "field": "expenses",
+      "confirmedValue": 2398,
+      "effectiveAuthorOverlay": {
+        "path": "research/salaries/queue-completion-2026-11-01/phsa/overlays/phsa-2019-20-manual-overlay-010.json",
+        "sha256": "162bc6c35de79622aaf47fe727a459433f88b6c39ada3273b127d5c18c6b830a"
+      },
+      "peerComparison": {
+        "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-history-batches-peer-2019-20-010-fortyone-money-final-comparison.json",
+        "sha256": "eceba9b343ac7a348af2faf619064c03cf818edda3a1add0a4f28a24cc2b777b"
+      },
+      "freshSourceImage": {
+        "path": "/workspace/salary-review-held-health-temp/2019-010-postfreeze/0087-expenses-actual600.png",
+        "sha256": "0b79376c6c77a26dc3599bc200348dd547ebe689d715c02e3938d13534cf0640",
+        "original300DpiPixelBox": [
+          2052,
+          1370,
+          2422,
+          1408
+        ]
+      },
+      "imageFirstTranscript": {
+        "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-history-batches-peer-2019-20-010-fortyone-money-source-first.json",
+        "sha256": "b68c4f2d7a4e99d3a3daf3349805668fe290be1bb5f987f4573c32a0c9322c3c"
+      }
+    },
+    {
+      "sourceId": "phsa-2019-20",
+      "sourceSha256": "0e31ac2054f0c2d4ef78797185dddd96cc0cdf2eab94bd6841fa24e1c38e7d02",
+      "physicalPage": 65,
+      "sourceRowOnPage": 25,
+      "field": "expenses",
+      "confirmedValue": 6760,
+      "effectiveAuthorOverlay": {
+        "path": "research/salaries/queue-completion-2026-11-01/phsa/overlays/phsa-2019-20-manual-overlay-010.json",
+        "sha256": "162bc6c35de79622aaf47fe727a459433f88b6c39ada3273b127d5c18c6b830a"
+      },
+      "peerComparison": {
+        "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-history-batches-peer-2019-20-010-fortyone-money-final-comparison.json",
+        "sha256": "eceba9b343ac7a348af2faf619064c03cf818edda3a1add0a4f28a24cc2b777b"
+      },
+      "freshSourceImage": {
+        "path": "/workspace/salary-review-held-health-temp/2019-010-postfreeze/0093-expenses-actual600.png",
+        "sha256": "4abb30c0a827376c0f820a5a8a28929125ef5b14b42d15be87d04a0c5640e7fd",
+        "original300DpiPixelBox": [
+          2052,
+          1659,
+          2422,
+          1698
+        ]
+      },
+      "imageFirstTranscript": {
+        "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-history-batches-peer-2019-20-010-fortyone-money-source-first.json",
+        "sha256": "b68c4f2d7a4e99d3a3daf3349805668fe290be1bb5f987f4573c32a0c9322c3c"
+      }
+    },
+    {
+      "sourceId": "phsa-2019-20",
+      "sourceSha256": "0e31ac2054f0c2d4ef78797185dddd96cc0cdf2eab94bd6841fa24e1c38e7d02",
+      "physicalPage": 65,
+      "sourceRowOnPage": 49,
+      "field": "expenses",
+      "confirmedValue": 1510,
+      "effectiveAuthorOverlay": {
+        "path": "research/salaries/queue-completion-2026-11-01/phsa/overlays/phsa-2019-20-manual-overlay-010.json",
+        "sha256": "162bc6c35de79622aaf47fe727a459433f88b6c39ada3273b127d5c18c6b830a"
+      },
+      "peerComparison": {
+        "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-history-batches-peer-2019-20-010-fortyone-money-final-comparison.json",
+        "sha256": "eceba9b343ac7a348af2faf619064c03cf818edda3a1add0a4f28a24cc2b777b"
+      },
+      "freshSourceImage": {
+        "path": "/workspace/salary-review-held-health-temp/2019-010-postfreeze/0115-expenses-actual600.png",
+        "sha256": "023a41bbd4f7afceb281fea6686e9d71c9414363d70beb5a1230bfb2a9022e84",
+        "original300DpiPixelBox": [
+          2052,
+          2640,
+          2422,
+          2679
+        ]
+      },
+      "imageFirstTranscript": {
+        "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-history-batches-peer-2019-20-010-fortyone-money-source-first.json",
+        "sha256": "b68c4f2d7a4e99d3a3daf3349805668fe290be1bb5f987f4573c32a0c9322c3c"
+      }
+    },
+    {
+      "sourceId": "phsa-2019-20",
+      "sourceSha256": "0e31ac2054f0c2d4ef78797185dddd96cc0cdf2eab94bd6841fa24e1c38e7d02",
+      "physicalPage": 66,
+      "sourceRowOnPage": 16,
+      "field": "remuneration",
+      "confirmedValue": 87538,
+      "effectiveAuthorOverlay": {
+        "path": "research/salaries/queue-completion-2026-11-01/phsa/overlays/phsa-2019-20-manual-overlay-010.json",
+        "sha256": "162bc6c35de79622aaf47fe727a459433f88b6c39ada3273b127d5c18c6b830a"
+      },
+      "peerComparison": {
+        "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-history-batches-peer-2019-20-010-fortyone-money-final-comparison.json",
+        "sha256": "eceba9b343ac7a348af2faf619064c03cf818edda3a1add0a4f28a24cc2b777b"
+      },
+      "freshSourceImage": {
+        "path": "/workspace/salary-review-held-health-temp/2019-010-postfreeze/0134-remuneration-actual600.png",
+        "sha256": "69a0b8f959edc4d3069a150a750fb7de1b534b311a838ff035b07fafa1f5c3f9",
+        "original300DpiPixelBox": [
+          1735,
+          1291,
+          2068,
+          1330
+        ]
+      },
+      "imageFirstTranscript": {
+        "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-history-batches-peer-2019-20-010-fortyone-money-source-first.json",
+        "sha256": "b68c4f2d7a4e99d3a3daf3349805668fe290be1bb5f987f4573c32a0c9322c3c"
+      }
+    },
+    {
+      "sourceId": "phsa-2019-20",
+      "sourceSha256": "0e31ac2054f0c2d4ef78797185dddd96cc0cdf2eab94bd6841fa24e1c38e7d02",
+      "physicalPage": 66,
+      "sourceRowOnPage": 35,
+      "field": "remuneration",
+      "confirmedValue": 83344,
+      "effectiveAuthorOverlay": {
+        "path": "research/salaries/queue-completion-2026-11-01/phsa/overlays/phsa-2019-20-manual-overlay-010.json",
+        "sha256": "162bc6c35de79622aaf47fe727a459433f88b6c39ada3273b127d5c18c6b830a"
+      },
+      "peerComparison": {
+        "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-history-batches-peer-2019-20-010-fortyone-money-final-comparison.json",
+        "sha256": "eceba9b343ac7a348af2faf619064c03cf818edda3a1add0a4f28a24cc2b777b"
+      },
+      "freshSourceImage": {
+        "path": "/workspace/salary-review-held-health-temp/2019-010-postfreeze/0152-remuneration-actual600.png",
+        "sha256": "7ee81ed08d704e59db2800b3bb277b1960b37c63530ae62496519ae785fea3c3",
+        "original300DpiPixelBox": [
+          1735,
+          2071,
+          2068,
+          2110
+        ]
+      },
+      "imageFirstTranscript": {
+        "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-history-batches-peer-2019-20-010-fortyone-money-source-first.json",
+        "sha256": "b68c4f2d7a4e99d3a3daf3349805668fe290be1bb5f987f4573c32a0c9322c3c"
+      }
+    },
+    {
+      "sourceId": "phsa-2019-20",
+      "sourceSha256": "0e31ac2054f0c2d4ef78797185dddd96cc0cdf2eab94bd6841fa24e1c38e7d02",
+      "physicalPage": 67,
+      "sourceRowOnPage": 3,
+      "field": "remuneration",
+      "confirmedValue": 77536,
+      "effectiveAuthorOverlay": {
+        "path": "research/salaries/queue-completion-2026-11-01/phsa/overlays/phsa-2019-20-manual-overlay-010.json",
+        "sha256": "162bc6c35de79622aaf47fe727a459433f88b6c39ada3273b127d5c18c6b830a"
+      },
+      "peerComparison": {
+        "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-history-batches-peer-2019-20-010-fortyone-money-final-comparison.json",
+        "sha256": "eceba9b343ac7a348af2faf619064c03cf818edda3a1add0a4f28a24cc2b777b"
+      },
+      "freshSourceImage": {
+        "path": "/workspace/salary-review-held-health-temp/2019-010-postfreeze/0169-remuneration-actual600.png",
+        "sha256": "306227a5822f276912482c4d7010ab8951d5c375e53885c847867dd85b5584d7",
+        "original300DpiPixelBox": [
+          1735,
+          755,
+          2068,
+          796
+        ]
+      },
+      "imageFirstTranscript": {
+        "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-history-batches-peer-2019-20-010-fortyone-money-source-first.json",
+        "sha256": "b68c4f2d7a4e99d3a3daf3349805668fe290be1bb5f987f4573c32a0c9322c3c"
+      }
+    },
+    {
+      "sourceId": "phsa-2019-20",
+      "sourceSha256": "0e31ac2054f0c2d4ef78797185dddd96cc0cdf2eab94bd6841fa24e1c38e7d02",
+      "physicalPage": 67,
+      "sourceRowOnPage": 7,
+      "field": "expenses",
+      "confirmedValue": 1582,
+      "effectiveAuthorOverlay": {
+        "path": "research/salaries/queue-completion-2026-11-01/phsa/overlays/phsa-2019-20-manual-overlay-010.json",
+        "sha256": "162bc6c35de79622aaf47fe727a459433f88b6c39ada3273b127d5c18c6b830a"
+      },
+      "peerComparison": {
+        "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-history-batches-peer-2019-20-010-fortyone-money-final-comparison.json",
+        "sha256": "eceba9b343ac7a348af2faf619064c03cf818edda3a1add0a4f28a24cc2b777b"
+      },
+      "freshSourceImage": {
+        "path": "/workspace/salary-review-held-health-temp/2019-010-postfreeze/0172-expenses-actual600.png",
+        "sha256": "b3e60625fdd67ce890040a0293d376e58938523dd0e931671af981c7520d9422",
+        "original300DpiPixelBox": [
+          2052,
+          918,
+          2422,
+          959
+        ]
+      },
+      "imageFirstTranscript": {
+        "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-history-batches-peer-2019-20-010-fortyone-money-source-first.json",
+        "sha256": "b68c4f2d7a4e99d3a3daf3349805668fe290be1bb5f987f4573c32a0c9322c3c"
+      }
+    },
+    {
+      "sourceId": "phsa-2019-20",
+      "sourceSha256": "0e31ac2054f0c2d4ef78797185dddd96cc0cdf2eab94bd6841fa24e1c38e7d02",
+      "physicalPage": 67,
+      "sourceRowOnPage": 20,
+      "field": "expenses",
+      "confirmedValue": 7876,
+      "effectiveAuthorOverlay": {
+        "path": "research/salaries/queue-completion-2026-11-01/phsa/overlays/phsa-2019-20-manual-overlay-010.json",
+        "sha256": "162bc6c35de79622aaf47fe727a459433f88b6c39ada3273b127d5c18c6b830a"
+      },
+      "peerComparison": {
+        "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-history-batches-peer-2019-20-010-fortyone-money-final-comparison.json",
+        "sha256": "eceba9b343ac7a348af2faf619064c03cf818edda3a1add0a4f28a24cc2b777b"
+      },
+      "freshSourceImage": {
+        "path": "/workspace/salary-review-held-health-temp/2019-010-postfreeze/0182-expenses-actual600.png",
+        "sha256": "9a9339123a0cd29cf136932db4029926913ea2139fdfe3d319621fcea1ce5e39",
+        "original300DpiPixelBox": [
+          2052,
+          1453,
+          2422,
+          1494
+        ]
+      },
+      "imageFirstTranscript": {
+        "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-history-batches-peer-2019-20-010-fortyone-money-source-first.json",
+        "sha256": "b68c4f2d7a4e99d3a3daf3349805668fe290be1bb5f987f4573c32a0c9322c3c"
+      }
+    },
+    {
+      "sourceId": "phsa-2019-20",
+      "sourceSha256": "0e31ac2054f0c2d4ef78797185dddd96cc0cdf2eab94bd6841fa24e1c38e7d02",
+      "physicalPage": 67,
+      "sourceRowOnPage": 25,
+      "field": "expenses",
+      "confirmedValue": 1561,
+      "effectiveAuthorOverlay": {
+        "path": "research/salaries/queue-completion-2026-11-01/phsa/overlays/phsa-2019-20-manual-overlay-010.json",
+        "sha256": "162bc6c35de79622aaf47fe727a459433f88b6c39ada3273b127d5c18c6b830a"
+      },
+      "peerComparison": {
+        "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-history-batches-peer-2019-20-010-fortyone-money-final-comparison.json",
+        "sha256": "eceba9b343ac7a348af2faf619064c03cf818edda3a1add0a4f28a24cc2b777b"
+      },
+      "freshSourceImage": {
+        "path": "/workspace/salary-review-held-health-temp/2019-010-postfreeze/0186-expenses-actual600.png",
+        "sha256": "159e9f1c9a8e4722b49ee6ded3e58fa0301aa9c00b6f58042f7df565f22dde29",
+        "original300DpiPixelBox": [
+          2052,
+          1655,
+          2422,
+          1696
+        ]
+      },
+      "imageFirstTranscript": {
+        "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-history-batches-peer-2019-20-010-fortyone-money-source-first.json",
+        "sha256": "b68c4f2d7a4e99d3a3daf3349805668fe290be1bb5f987f4573c32a0c9322c3c"
+      }
+    },
+    {
+      "sourceId": "phsa-2019-20",
+      "sourceSha256": "0e31ac2054f0c2d4ef78797185dddd96cc0cdf2eab94bd6841fa24e1c38e7d02",
+      "physicalPage": 68,
+      "sourceRowOnPage": 7,
+      "field": "remuneration",
+      "confirmedValue": 92237,
+      "effectiveAuthorOverlay": {
+        "path": "research/salaries/queue-completion-2026-11-01/phsa/overlays/phsa-2019-20-manual-overlay-010.json",
+        "sha256": "162bc6c35de79622aaf47fe727a459433f88b6c39ada3273b127d5c18c6b830a"
+      },
+      "peerComparison": {
+        "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-history-batches-peer-2019-20-010-fortyone-money-final-comparison.json",
+        "sha256": "eceba9b343ac7a348af2faf619064c03cf818edda3a1add0a4f28a24cc2b777b"
+      },
+      "freshSourceImage": {
+        "path": "/workspace/salary-review-held-health-temp/2019-010-postfreeze/0216-remuneration-actual600.png",
+        "sha256": "bb27530991ee6bb53584f8aab2f03fb4be791c0017b09c458273aeafdf0e4ca3",
+        "original300DpiPixelBox": [
+          1735,
+          922,
+          2068,
+          961
+        ]
+      },
+      "imageFirstTranscript": {
+        "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-history-batches-peer-2019-20-010-fortyone-money-source-first.json",
+        "sha256": "b68c4f2d7a4e99d3a3daf3349805668fe290be1bb5f987f4573c32a0c9322c3c"
+      }
+    },
+    {
+      "sourceId": "phsa-2019-20",
+      "sourceSha256": "0e31ac2054f0c2d4ef78797185dddd96cc0cdf2eab94bd6841fa24e1c38e7d02",
+      "physicalPage": 68,
+      "sourceRowOnPage": 12,
+      "field": "expenses",
+      "confirmedValue": 15588,
+      "effectiveAuthorOverlay": {
+        "path": "research/salaries/queue-completion-2026-11-01/phsa/overlays/phsa-2019-20-manual-overlay-010.json",
+        "sha256": "162bc6c35de79622aaf47fe727a459433f88b6c39ada3273b127d5c18c6b830a"
+      },
+      "peerComparison": {
+        "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-history-batches-peer-2019-20-010-fortyone-money-final-comparison.json",
+        "sha256": "eceba9b343ac7a348af2faf619064c03cf818edda3a1add0a4f28a24cc2b777b"
+      },
+      "freshSourceImage": {
+        "path": "/workspace/salary-review-held-health-temp/2019-010-postfreeze/0218-expenses-actual600.png",
+        "sha256": "6d95e6d781a65b69495fc8c34b871e5d20fd561cd004a1732daeef400f7e8480",
+        "original300DpiPixelBox": [
+          2052,
+          1128,
+          2422,
+          1166
+        ]
+      },
+      "imageFirstTranscript": {
+        "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-history-batches-peer-2019-20-010-fortyone-money-source-first.json",
+        "sha256": "b68c4f2d7a4e99d3a3daf3349805668fe290be1bb5f987f4573c32a0c9322c3c"
+      }
+    },
+    {
+      "sourceId": "phsa-2019-20",
+      "sourceSha256": "0e31ac2054f0c2d4ef78797185dddd96cc0cdf2eab94bd6841fa24e1c38e7d02",
+      "physicalPage": 68,
+      "sourceRowOnPage": 34,
+      "field": "expenses",
+      "confirmedValue": 2909,
+      "effectiveAuthorOverlay": {
+        "path": "research/salaries/queue-completion-2026-11-01/phsa/overlays/phsa-2019-20-manual-overlay-010.json",
+        "sha256": "162bc6c35de79622aaf47fe727a459433f88b6c39ada3273b127d5c18c6b830a"
+      },
+      "peerComparison": {
+        "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-history-batches-peer-2019-20-010-fortyone-money-final-comparison.json",
+        "sha256": "eceba9b343ac7a348af2faf619064c03cf818edda3a1add0a4f28a24cc2b777b"
+      },
+      "freshSourceImage": {
+        "path": "/workspace/salary-review-held-health-temp/2019-010-postfreeze/0236-expenses-actual600.png",
+        "sha256": "ea146b862ad7f723d773d03cd7dd0898d2b2a79f78ac0bdabc8efd2cbf17faab",
+        "original300DpiPixelBox": [
+          2052,
+          2029,
+          2422,
+          2068
+        ]
+      },
+      "imageFirstTranscript": {
+        "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-history-batches-peer-2019-20-010-fortyone-money-source-first.json",
+        "sha256": "b68c4f2d7a4e99d3a3daf3349805668fe290be1bb5f987f4573c32a0c9322c3c"
+      }
+    },
+    {
+      "sourceId": "phsa-2019-20",
+      "sourceSha256": "0e31ac2054f0c2d4ef78797185dddd96cc0cdf2eab94bd6841fa24e1c38e7d02",
+      "physicalPage": 68,
+      "sourceRowOnPage": 37,
+      "field": "expenses",
+      "confirmedValue": 1588,
+      "effectiveAuthorOverlay": {
+        "path": "research/salaries/queue-completion-2026-11-01/phsa/overlays/phsa-2019-20-manual-overlay-010.json",
+        "sha256": "162bc6c35de79622aaf47fe727a459433f88b6c39ada3273b127d5c18c6b830a"
+      },
+      "peerComparison": {
+        "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-history-batches-peer-2019-20-010-fortyone-money-final-comparison.json",
+        "sha256": "eceba9b343ac7a348af2faf619064c03cf818edda3a1add0a4f28a24cc2b777b"
+      },
+      "freshSourceImage": {
+        "path": "/workspace/salary-review-held-health-temp/2019-010-postfreeze/0238-expenses-actual600.png",
+        "sha256": "5e21cdd5b00aa4699bead28b03137e369d5601fee9e9705fe6d6bebb4a7f5c0c",
+        "original300DpiPixelBox": [
+          2052,
+          2149,
+          2422,
+          2187
+        ]
+      },
+      "imageFirstTranscript": {
+        "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-history-batches-peer-2019-20-010-fortyone-money-source-first.json",
+        "sha256": "b68c4f2d7a4e99d3a3daf3349805668fe290be1bb5f987f4573c32a0c9322c3c"
+      }
+    },
+    {
+      "sourceId": "phsa-2019-20",
+      "sourceSha256": "0e31ac2054f0c2d4ef78797185dddd96cc0cdf2eab94bd6841fa24e1c38e7d02",
+      "physicalPage": 69,
+      "sourceRowOnPage": 6,
+      "field": "remuneration",
+      "confirmedValue": 75806,
+      "effectiveAuthorOverlay": {
+        "path": "research/salaries/queue-completion-2026-11-01/phsa/overlays/phsa-2019-20-manual-overlay-010.json",
+        "sha256": "162bc6c35de79622aaf47fe727a459433f88b6c39ada3273b127d5c18c6b830a"
+      },
+      "peerComparison": {
+        "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-history-batches-peer-2019-20-010-fortyone-money-final-comparison.json",
+        "sha256": "eceba9b343ac7a348af2faf619064c03cf818edda3a1add0a4f28a24cc2b777b"
+      },
+      "freshSourceImage": {
+        "path": "/workspace/salary-review-held-health-temp/2019-010-postfreeze/0258-remuneration-actual600.png",
+        "sha256": "5325149f0672729b79e4e6a22c93a1f721b03b1268880c0e94e6a52d942d684c",
+        "original300DpiPixelBox": [
+          1735,
+          882,
+          2068,
+          921
+        ]
+      },
+      "imageFirstTranscript": {
+        "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-history-batches-peer-2019-20-010-fortyone-money-source-first.json",
+        "sha256": "b68c4f2d7a4e99d3a3daf3349805668fe290be1bb5f987f4573c32a0c9322c3c"
+      }
+    },
+    {
+      "sourceId": "phsa-2019-20",
+      "sourceSha256": "0e31ac2054f0c2d4ef78797185dddd96cc0cdf2eab94bd6841fa24e1c38e7d02",
+      "physicalPage": 69,
+      "sourceRowOnPage": 10,
+      "field": "remuneration",
+      "confirmedValue": 83825,
+      "effectiveAuthorOverlay": {
+        "path": "research/salaries/queue-completion-2026-11-01/phsa/overlays/phsa-2019-20-manual-overlay-010.json",
+        "sha256": "162bc6c35de79622aaf47fe727a459433f88b6c39ada3273b127d5c18c6b830a"
+      },
+      "peerComparison": {
+        "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-history-batches-peer-2019-20-010-fortyone-money-final-comparison.json",
+        "sha256": "eceba9b343ac7a348af2faf619064c03cf818edda3a1add0a4f28a24cc2b777b"
+      },
+      "freshSourceImage": {
+        "path": "/workspace/salary-review-held-health-temp/2019-010-postfreeze/0261-remuneration-actual600.png",
+        "sha256": "3b58f6e4a7bdacaa010baa89eb8ea429b2edf35ba11754f5ef51c3bc9bf516b8",
+        "original300DpiPixelBox": [
+          1735,
+          1042,
+          2068,
+          1081
+        ]
+      },
+      "imageFirstTranscript": {
+        "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-history-batches-peer-2019-20-010-fortyone-money-source-first.json",
+        "sha256": "b68c4f2d7a4e99d3a3daf3349805668fe290be1bb5f987f4573c32a0c9322c3c"
+      }
+    },
+    {
+      "sourceId": "phsa-2019-20",
+      "sourceSha256": "0e31ac2054f0c2d4ef78797185dddd96cc0cdf2eab94bd6841fa24e1c38e7d02",
+      "physicalPage": 69,
+      "sourceRowOnPage": 13,
+      "field": "remuneration",
+      "confirmedValue": 84258,
+      "effectiveAuthorOverlay": {
+        "path": "research/salaries/queue-completion-2026-11-01/phsa/overlays/phsa-2019-20-manual-overlay-010.json",
+        "sha256": "162bc6c35de79622aaf47fe727a459433f88b6c39ada3273b127d5c18c6b830a"
+      },
+      "peerComparison": {
+        "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-history-batches-peer-2019-20-010-fortyone-money-final-comparison.json",
+        "sha256": "eceba9b343ac7a348af2faf619064c03cf818edda3a1add0a4f28a24cc2b777b"
+      },
+      "freshSourceImage": {
+        "path": "/workspace/salary-review-held-health-temp/2019-010-postfreeze/0264-remuneration-actual600.png",
+        "sha256": "23d1d2f6b87019dfc7b896a090e59488d9a58154141e54b29e2323c50ac2d219",
+        "original300DpiPixelBox": [
+          1735,
+          1165,
+          2068,
+          1204
+        ]
+      },
+      "imageFirstTranscript": {
+        "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-history-batches-peer-2019-20-010-fortyone-money-source-first.json",
+        "sha256": "b68c4f2d7a4e99d3a3daf3349805668fe290be1bb5f987f4573c32a0c9322c3c"
+      }
+    },
+    {
+      "sourceId": "phsa-2019-20",
+      "sourceSha256": "0e31ac2054f0c2d4ef78797185dddd96cc0cdf2eab94bd6841fa24e1c38e7d02",
+      "physicalPage": 69,
+      "sourceRowOnPage": 28,
+      "field": "expenses",
+      "confirmedValue": 11,
+      "effectiveAuthorOverlay": {
+        "path": "research/salaries/queue-completion-2026-11-01/phsa/overlays/phsa-2019-20-manual-overlay-010.json",
+        "sha256": "162bc6c35de79622aaf47fe727a459433f88b6c39ada3273b127d5c18c6b830a"
+      },
+      "peerComparison": {
+        "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-history-batches-peer-2019-20-010-fortyone-money-final-comparison.json",
+        "sha256": "eceba9b343ac7a348af2faf619064c03cf818edda3a1add0a4f28a24cc2b777b"
+      },
+      "freshSourceImage": {
+        "path": "/workspace/salary-review-held-health-temp/2019-010-postfreeze/0277-expenses-actual600.png",
+        "sha256": "f73ba8e0bdb3773ae41988c82268c7ca1b5be8b06934293c325343b35a303b00",
+        "original300DpiPixelBox": [
+          2052,
+          1779,
+          2422,
+          1818
+        ]
+      },
+      "imageFirstTranscript": {
+        "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-history-batches-peer-2019-20-010-fortyone-money-source-first.json",
+        "sha256": "b68c4f2d7a4e99d3a3daf3349805668fe290be1bb5f987f4573c32a0c9322c3c"
+      }
+    },
+    {
+      "sourceId": "phsa-2019-20",
+      "sourceSha256": "0e31ac2054f0c2d4ef78797185dddd96cc0cdf2eab94bd6841fa24e1c38e7d02",
+      "physicalPage": 69,
+      "sourceRowOnPage": 41,
+      "field": "expenses",
+      "confirmedValue": 1881,
+      "effectiveAuthorOverlay": {
+        "path": "research/salaries/queue-completion-2026-11-01/phsa/overlays/phsa-2019-20-manual-overlay-010.json",
+        "sha256": "162bc6c35de79622aaf47fe727a459433f88b6c39ada3273b127d5c18c6b830a"
+      },
+      "peerComparison": {
+        "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-history-batches-peer-2019-20-010-fortyone-money-final-comparison.json",
+        "sha256": "eceba9b343ac7a348af2faf619064c03cf818edda3a1add0a4f28a24cc2b777b"
+      },
+      "freshSourceImage": {
+        "path": "/workspace/salary-review-held-health-temp/2019-010-postfreeze/0286-expenses-actual600.png",
+        "sha256": "2ffa4daabd46973fd259ac9d726c6878923bf755aa45ca082984c1ea77fabd34",
+        "original300DpiPixelBox": [
+          2052,
+          2312,
+          2422,
+          2352
+        ]
+      },
+      "imageFirstTranscript": {
+        "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-history-batches-peer-2019-20-010-fortyone-money-source-first.json",
+        "sha256": "b68c4f2d7a4e99d3a3daf3349805668fe290be1bb5f987f4573c32a0c9322c3c"
+      }
+    },
+    {
+      "sourceId": "phsa-2019-20",
+      "sourceSha256": "0e31ac2054f0c2d4ef78797185dddd96cc0cdf2eab94bd6841fa24e1c38e7d02",
+      "physicalPage": 69,
+      "sourceRowOnPage": 47,
+      "field": "expenses",
+      "confirmedValue": 1913,
+      "effectiveAuthorOverlay": {
+        "path": "research/salaries/queue-completion-2026-11-01/phsa/overlays/phsa-2019-20-manual-overlay-010.json",
+        "sha256": "162bc6c35de79622aaf47fe727a459433f88b6c39ada3273b127d5c18c6b830a"
+      },
+      "peerComparison": {
+        "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-history-batches-peer-2019-20-010-fortyone-money-final-comparison.json",
+        "sha256": "eceba9b343ac7a348af2faf619064c03cf818edda3a1add0a4f28a24cc2b777b"
+      },
+      "freshSourceImage": {
+        "path": "/workspace/salary-review-held-health-temp/2019-010-postfreeze/0292-expenses-actual600.png",
+        "sha256": "56538c7a6c4476e60aeb0e9ee54d7e8287fc270cd10278adacfdaf2041952b92",
+        "original300DpiPixelBox": [
+          2052,
+          2557,
+          2422,
+          2597
+        ]
+      },
+      "imageFirstTranscript": {
+        "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-history-batches-peer-2019-20-010-fortyone-money-source-first.json",
+        "sha256": "b68c4f2d7a4e99d3a3daf3349805668fe290be1bb5f987f4573c32a0c9322c3c"
+      }
+    },
+    {
+      "sourceId": "phsa-2019-20",
+      "sourceSha256": "0e31ac2054f0c2d4ef78797185dddd96cc0cdf2eab94bd6841fa24e1c38e7d02",
+      "physicalPage": 69,
+      "sourceRowOnPage": 50,
+      "field": "remuneration",
+      "confirmedValue": 83311,
+      "effectiveAuthorOverlay": {
+        "path": "research/salaries/queue-completion-2026-11-01/phsa/overlays/phsa-2019-20-manual-overlay-010.json",
+        "sha256": "162bc6c35de79622aaf47fe727a459433f88b6c39ada3273b127d5c18c6b830a"
+      },
+      "peerComparison": {
+        "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-history-batches-peer-2019-20-010-fortyone-money-final-comparison.json",
+        "sha256": "eceba9b343ac7a348af2faf619064c03cf818edda3a1add0a4f28a24cc2b777b"
+      },
+      "freshSourceImage": {
+        "path": "/workspace/salary-review-held-health-temp/2019-010-postfreeze/0295-remuneration-actual600.png",
+        "sha256": "4580c07f8f8d0c20462645fbef85da19269a4476cc4c48a004089701b53ca898",
+        "original300DpiPixelBox": [
+          1735,
+          2679,
+          2068,
+          2718
+        ]
+      },
+      "imageFirstTranscript": {
+        "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-history-batches-peer-2019-20-010-fortyone-money-source-first.json",
+        "sha256": "b68c4f2d7a4e99d3a3daf3349805668fe290be1bb5f987f4573c32a0c9322c3c"
+      }
+    },
+    {
+      "sourceId": "phsa-2019-20",
+      "sourceSha256": "0e31ac2054f0c2d4ef78797185dddd96cc0cdf2eab94bd6841fa24e1c38e7d02",
+      "physicalPage": 69,
+      "sourceRowOnPage": 52,
+      "field": "expenses",
+      "confirmedValue": 4806,
+      "effectiveAuthorOverlay": {
+        "path": "research/salaries/queue-completion-2026-11-01/phsa/overlays/phsa-2019-20-manual-overlay-010.json",
+        "sha256": "162bc6c35de79622aaf47fe727a459433f88b6c39ada3273b127d5c18c6b830a"
+      },
+      "peerComparison": {
+        "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-history-batches-peer-2019-20-010-fortyone-money-final-comparison.json",
+        "sha256": "eceba9b343ac7a348af2faf619064c03cf818edda3a1add0a4f28a24cc2b777b"
+      },
+      "freshSourceImage": {
+        "path": "/workspace/salary-review-held-health-temp/2019-010-postfreeze/0297-expenses-actual600.png",
+        "sha256": "741d6fd3164ae8e96864335203eb9880e53fff03d472e8ca992782168c744f67",
+        "original300DpiPixelBox": [
+          2052,
+          2763,
+          2422,
+          2803
+        ]
+      },
+      "imageFirstTranscript": {
+        "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-history-batches-peer-2019-20-010-fortyone-money-source-first.json",
+        "sha256": "b68c4f2d7a4e99d3a3daf3349805668fe290be1bb5f987f4573c32a0c9322c3c"
+      }
+    },
+    {
+      "sourceId": "phsa-2019-20",
+      "sourceSha256": "0e31ac2054f0c2d4ef78797185dddd96cc0cdf2eab94bd6841fa24e1c38e7d02",
+      "physicalPage": 70,
+      "sourceRowOnPage": 5,
+      "field": "expenses",
+      "confirmedValue": 3355,
+      "effectiveAuthorOverlay": {
+        "path": "research/salaries/queue-completion-2026-11-01/phsa/overlays/phsa-2019-20-manual-overlay-010.json",
+        "sha256": "162bc6c35de79622aaf47fe727a459433f88b6c39ada3273b127d5c18c6b830a"
+      },
+      "peerComparison": {
+        "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-history-batches-peer-2019-20-010-fortyone-money-final-comparison.json",
+        "sha256": "eceba9b343ac7a348af2faf619064c03cf818edda3a1add0a4f28a24cc2b777b"
+      },
+      "freshSourceImage": {
+        "path": "/workspace/salary-review-held-health-temp/2019-010-postfreeze/0306-expenses-actual600.png",
+        "sha256": "8e9bda2481db019ba65e8dfa712455bfd1b1ec0f6db6762c555550de5a8ec705",
+        "original300DpiPixelBox": [
+          2052,
+          840,
+          2422,
+          879
+        ]
+      },
+      "imageFirstTranscript": {
+        "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-history-batches-peer-2019-20-010-fortyone-money-source-first.json",
+        "sha256": "b68c4f2d7a4e99d3a3daf3349805668fe290be1bb5f987f4573c32a0c9322c3c"
+      }
+    },
+    {
+      "sourceId": "phsa-2019-20",
+      "sourceSha256": "0e31ac2054f0c2d4ef78797185dddd96cc0cdf2eab94bd6841fa24e1c38e7d02",
+      "physicalPage": 70,
+      "sourceRowOnPage": 13,
+      "field": "expenses",
+      "confirmedValue": 2883,
+      "effectiveAuthorOverlay": {
+        "path": "research/salaries/queue-completion-2026-11-01/phsa/overlays/phsa-2019-20-manual-overlay-010.json",
+        "sha256": "162bc6c35de79622aaf47fe727a459433f88b6c39ada3273b127d5c18c6b830a"
+      },
+      "peerComparison": {
+        "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-history-batches-peer-2019-20-010-fortyone-money-final-comparison.json",
+        "sha256": "eceba9b343ac7a348af2faf619064c03cf818edda3a1add0a4f28a24cc2b777b"
+      },
+      "freshSourceImage": {
+        "path": "/workspace/salary-review-held-health-temp/2019-010-postfreeze/0314-expenses-actual600.png",
+        "sha256": "ac83d2f639b6b3f5051690786cf069084e4139d194bbc78ba4fbdd182d736ff5",
+        "original300DpiPixelBox": [
+          2052,
+          1165,
+          2422,
+          1204
+        ]
+      },
+      "imageFirstTranscript": {
+        "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-history-batches-peer-2019-20-010-fortyone-money-source-first.json",
+        "sha256": "b68c4f2d7a4e99d3a3daf3349805668fe290be1bb5f987f4573c32a0c9322c3c"
+      }
+    },
+    {
+      "sourceId": "phsa-2019-20",
+      "sourceSha256": "0e31ac2054f0c2d4ef78797185dddd96cc0cdf2eab94bd6841fa24e1c38e7d02",
+      "physicalPage": 70,
+      "sourceRowOnPage": 40,
+      "field": "remuneration",
+      "confirmedValue": 233503,
+      "effectiveAuthorOverlay": {
+        "path": "research/salaries/queue-completion-2026-11-01/phsa/overlays/phsa-2019-20-manual-overlay-010.json",
+        "sha256": "162bc6c35de79622aaf47fe727a459433f88b6c39ada3273b127d5c18c6b830a"
+      },
+      "peerComparison": {
+        "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-history-batches-peer-2019-20-010-fortyone-money-final-comparison.json",
+        "sha256": "eceba9b343ac7a348af2faf619064c03cf818edda3a1add0a4f28a24cc2b777b"
+      },
+      "freshSourceImage": {
+        "path": "/workspace/salary-review-held-health-temp/2019-010-postfreeze/0335-remuneration-actual600.png",
+        "sha256": "2b469c49ba8b52211d57d9a8423209f943af251de0c380baf94c1dd2631d3be3",
+        "original300DpiPixelBox": [
+          1735,
+          2275,
+          2068,
+          2313
+        ]
+      },
+      "imageFirstTranscript": {
+        "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-history-batches-peer-2019-20-010-fortyone-money-source-first.json",
+        "sha256": "b68c4f2d7a4e99d3a3daf3349805668fe290be1bb5f987f4573c32a0c9322c3c"
+      }
+    },
+    {
+      "sourceId": "phsa-2019-20",
+      "sourceSha256": "0e31ac2054f0c2d4ef78797185dddd96cc0cdf2eab94bd6841fa24e1c38e7d02",
+      "physicalPage": 70,
+      "sourceRowOnPage": 44,
+      "field": "remuneration",
+      "confirmedValue": 137381,
+      "effectiveAuthorOverlay": {
+        "path": "research/salaries/queue-completion-2026-11-01/phsa/overlays/phsa-2019-20-manual-overlay-010.json",
+        "sha256": "162bc6c35de79622aaf47fe727a459433f88b6c39ada3273b127d5c18c6b830a"
+      },
+      "peerComparison": {
+        "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-history-batches-peer-2019-20-010-fortyone-money-final-comparison.json",
+        "sha256": "eceba9b343ac7a348af2faf619064c03cf818edda3a1add0a4f28a24cc2b777b"
+      },
+      "freshSourceImage": {
+        "path": "/workspace/salary-review-held-health-temp/2019-010-postfreeze/0339-remuneration-actual600.png",
+        "sha256": "16afafafd1f110a3d653bb402122d565ed05d81cfc3b58362fd6207bbd036e5a",
+        "original300DpiPixelBox": [
+          1735,
+          2439,
+          2068,
+          2478
+        ]
+      },
+      "imageFirstTranscript": {
+        "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-history-batches-peer-2019-20-010-fortyone-money-source-first.json",
+        "sha256": "b68c4f2d7a4e99d3a3daf3349805668fe290be1bb5f987f4573c32a0c9322c3c"
+      }
+    },
+    {
+      "sourceId": "phsa-2019-20",
+      "sourceSha256": "0e31ac2054f0c2d4ef78797185dddd96cc0cdf2eab94bd6841fa24e1c38e7d02",
+      "physicalPage": 70,
+      "sourceRowOnPage": 45,
+      "field": "expenses",
+      "confirmedValue": 6293,
+      "effectiveAuthorOverlay": {
+        "path": "research/salaries/queue-completion-2026-11-01/phsa/overlays/phsa-2019-20-manual-overlay-010.json",
+        "sha256": "162bc6c35de79622aaf47fe727a459433f88b6c39ada3273b127d5c18c6b830a"
+      },
+      "peerComparison": {
+        "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-history-batches-peer-2019-20-010-fortyone-money-final-comparison.json",
+        "sha256": "eceba9b343ac7a348af2faf619064c03cf818edda3a1add0a4f28a24cc2b777b"
+      },
+      "freshSourceImage": {
+        "path": "/workspace/salary-review-held-health-temp/2019-010-postfreeze/0340-expenses-actual600.png",
+        "sha256": "fe27144a35d1fbe29f9899cb781f6d1803c400afba24d074c4c4c01bde34179f",
+        "original300DpiPixelBox": [
+          2052,
+          2481,
+          2422,
+          2520
+        ]
+      },
+      "imageFirstTranscript": {
+        "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-history-batches-peer-2019-20-010-fortyone-money-source-first.json",
+        "sha256": "b68c4f2d7a4e99d3a3daf3349805668fe290be1bb5f987f4573c32a0c9322c3c"
+      }
+    },
+    {
+      "sourceId": "phsa-2019-20",
+      "sourceSha256": "0e31ac2054f0c2d4ef78797185dddd96cc0cdf2eab94bd6841fa24e1c38e7d02",
+      "physicalPage": 71,
+      "sourceRowOnPage": 3,
+      "field": "expenses",
+      "confirmedValue": 2968,
+      "effectiveAuthorOverlay": {
+        "path": "research/salaries/queue-completion-2026-11-01/phsa/overlays/phsa-2019-20-manual-overlay-010.json",
+        "sha256": "162bc6c35de79622aaf47fe727a459433f88b6c39ada3273b127d5c18c6b830a"
+      },
+      "peerComparison": {
+        "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-history-batches-peer-2019-20-010-fortyone-money-final-comparison.json",
+        "sha256": "eceba9b343ac7a348af2faf619064c03cf818edda3a1add0a4f28a24cc2b777b"
+      },
+      "freshSourceImage": {
+        "path": "/workspace/salary-review-held-health-temp/2019-010-postfreeze/0355-expenses-actual600.png",
+        "sha256": "32e71a7d7bbdc464ba62892071b3fabb60e072e18e9a2a1b118d7caeec6276e3",
+        "original300DpiPixelBox": [
+          2052,
+          759,
+          2422,
+          798
+        ]
+      },
+      "imageFirstTranscript": {
+        "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-history-batches-peer-2019-20-010-fortyone-money-source-first.json",
+        "sha256": "b68c4f2d7a4e99d3a3daf3349805668fe290be1bb5f987f4573c32a0c9322c3c"
+      }
+    },
+    {
+      "sourceId": "phsa-2019-20",
+      "sourceSha256": "0e31ac2054f0c2d4ef78797185dddd96cc0cdf2eab94bd6841fa24e1c38e7d02",
+      "physicalPage": 71,
+      "sourceRowOnPage": 5,
+      "field": "expenses",
+      "confirmedValue": 1570,
+      "effectiveAuthorOverlay": {
+        "path": "research/salaries/queue-completion-2026-11-01/phsa/overlays/phsa-2019-20-manual-overlay-010.json",
+        "sha256": "162bc6c35de79622aaf47fe727a459433f88b6c39ada3273b127d5c18c6b830a"
+      },
+      "peerComparison": {
+        "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-history-batches-peer-2019-20-010-fortyone-money-final-comparison.json",
+        "sha256": "eceba9b343ac7a348af2faf619064c03cf818edda3a1add0a4f28a24cc2b777b"
+      },
+      "freshSourceImage": {
+        "path": "/workspace/salary-review-held-health-temp/2019-010-postfreeze/0356-expenses-actual600.png",
+        "sha256": "3146fbbcb606152740342baa79fc0e6213e7b3aabe2f3956775ef38b2447d72f",
+        "original300DpiPixelBox": [
+          2052,
+          840,
+          2422,
+          879
+        ]
+      },
+      "imageFirstTranscript": {
+        "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-history-batches-peer-2019-20-010-fortyone-money-source-first.json",
+        "sha256": "b68c4f2d7a4e99d3a3daf3349805668fe290be1bb5f987f4573c32a0c9322c3c"
+      }
+    },
+    {
+      "sourceId": "phsa-2019-20",
+      "sourceSha256": "0e31ac2054f0c2d4ef78797185dddd96cc0cdf2eab94bd6841fa24e1c38e7d02",
+      "physicalPage": 71,
+      "sourceRowOnPage": 13,
+      "field": "expenses",
+      "confirmedValue": 1031,
+      "effectiveAuthorOverlay": {
+        "path": "research/salaries/queue-completion-2026-11-01/phsa/overlays/phsa-2019-20-manual-overlay-010.json",
+        "sha256": "162bc6c35de79622aaf47fe727a459433f88b6c39ada3273b127d5c18c6b830a"
+      },
+      "peerComparison": {
+        "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-history-batches-peer-2019-20-010-fortyone-money-final-comparison.json",
+        "sha256": "eceba9b343ac7a348af2faf619064c03cf818edda3a1add0a4f28a24cc2b777b"
+      },
+      "freshSourceImage": {
+        "path": "/workspace/salary-review-held-health-temp/2019-010-postfreeze/0363-expenses-actual600.png",
+        "sha256": "e18a338df5eafe8eb97f516315d411207e24773bbe4e6a702898ab6c5a34707d",
+        "original300DpiPixelBox": [
+          2052,
+          1168,
+          2422,
+          1207
+        ]
+      },
+      "imageFirstTranscript": {
+        "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-history-batches-peer-2019-20-010-fortyone-money-source-first.json",
+        "sha256": "b68c4f2d7a4e99d3a3daf3349805668fe290be1bb5f987f4573c32a0c9322c3c"
+      }
+    },
+    {
+      "sourceId": "phsa-2019-20",
+      "sourceSha256": "0e31ac2054f0c2d4ef78797185dddd96cc0cdf2eab94bd6841fa24e1c38e7d02",
+      "physicalPage": 71,
+      "sourceRowOnPage": 16,
+      "field": "expenses",
+      "confirmedValue": 1993,
+      "effectiveAuthorOverlay": {
+        "path": "research/salaries/queue-completion-2026-11-01/phsa/overlays/phsa-2019-20-manual-overlay-010.json",
+        "sha256": "162bc6c35de79622aaf47fe727a459433f88b6c39ada3273b127d5c18c6b830a"
+      },
+      "peerComparison": {
+        "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-history-batches-peer-2019-20-010-fortyone-money-final-comparison.json",
+        "sha256": "eceba9b343ac7a348af2faf619064c03cf818edda3a1add0a4f28a24cc2b777b"
+      },
+      "freshSourceImage": {
+        "path": "/workspace/salary-review-held-health-temp/2019-010-postfreeze/0366-expenses-actual600.png",
+        "sha256": "0c2c1c05f7ab8ff8b9e8dd0cb502d0a803658fbe3cecccbebeb486d7dc302f1a",
+        "original300DpiPixelBox": [
+          2052,
+          1288,
+          2422,
+          1327
+        ]
+      },
+      "imageFirstTranscript": {
+        "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-history-batches-peer-2019-20-010-fortyone-money-source-first.json",
+        "sha256": "b68c4f2d7a4e99d3a3daf3349805668fe290be1bb5f987f4573c32a0c9322c3c"
+      }
+    },
+    {
+      "sourceId": "phsa-2019-20",
+      "sourceSha256": "0e31ac2054f0c2d4ef78797185dddd96cc0cdf2eab94bd6841fa24e1c38e7d02",
+      "physicalPage": 71,
+      "sourceRowOnPage": 22,
+      "field": "expenses",
+      "confirmedValue": 3713,
+      "effectiveAuthorOverlay": {
+        "path": "research/salaries/queue-completion-2026-11-01/phsa/overlays/phsa-2019-20-manual-overlay-010.json",
+        "sha256": "162bc6c35de79622aaf47fe727a459433f88b6c39ada3273b127d5c18c6b830a"
+      },
+      "peerComparison": {
+        "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-history-batches-peer-2019-20-010-fortyone-money-final-comparison.json",
+        "sha256": "eceba9b343ac7a348af2faf619064c03cf818edda3a1add0a4f28a24cc2b777b"
+      },
+      "freshSourceImage": {
+        "path": "/workspace/salary-review-held-health-temp/2019-010-postfreeze/0372-expenses-actual600.png",
+        "sha256": "a3c680445be0c268281ee6c6fbcd8f6e377ba94653d7222f5a7f7c681d006488",
+        "original300DpiPixelBox": [
+          2052,
+          1537,
+          2422,
+          1576
+        ]
+      },
+      "imageFirstTranscript": {
+        "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-history-batches-peer-2019-20-010-fortyone-money-source-first.json",
+        "sha256": "b68c4f2d7a4e99d3a3daf3349805668fe290be1bb5f987f4573c32a0c9322c3c"
+      }
+    },
+    {
+      "sourceId": "phsa-2019-20",
+      "sourceSha256": "0e31ac2054f0c2d4ef78797185dddd96cc0cdf2eab94bd6841fa24e1c38e7d02",
+      "physicalPage": 71,
+      "sourceRowOnPage": 36,
+      "field": "expenses",
+      "confirmedValue": 964,
+      "effectiveAuthorOverlay": {
+        "path": "research/salaries/queue-completion-2026-11-01/phsa/overlays/phsa-2019-20-manual-overlay-010.json",
+        "sha256": "162bc6c35de79622aaf47fe727a459433f88b6c39ada3273b127d5c18c6b830a"
+      },
+      "peerComparison": {
+        "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-history-batches-peer-2019-20-010-fortyone-money-final-comparison.json",
+        "sha256": "eceba9b343ac7a348af2faf619064c03cf818edda3a1add0a4f28a24cc2b777b"
+      },
+      "freshSourceImage": {
+        "path": "/workspace/salary-review-held-health-temp/2019-010-postfreeze/0383-expenses-actual600.png",
+        "sha256": "b29c43d7a099b472f17c07c4be8d9ebb1aacc54212986d3178057fafb4c8b90a",
+        "original300DpiPixelBox": [
+          2052,
+          2108,
+          2422,
+          2147
+        ]
+      },
+      "imageFirstTranscript": {
+        "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-history-batches-peer-2019-20-010-fortyone-money-source-first.json",
+        "sha256": "b68c4f2d7a4e99d3a3daf3349805668fe290be1bb5f987f4573c32a0c9322c3c"
+      }
+    },
+    {
+      "sourceId": "phsa-2019-20",
+      "sourceSha256": "0e31ac2054f0c2d4ef78797185dddd96cc0cdf2eab94bd6841fa24e1c38e7d02",
+      "physicalPage": 71,
+      "sourceRowOnPage": 45,
+      "field": "expenses",
+      "confirmedValue": 2399,
+      "effectiveAuthorOverlay": {
+        "path": "research/salaries/queue-completion-2026-11-01/phsa/overlays/phsa-2019-20-manual-overlay-010.json",
+        "sha256": "162bc6c35de79622aaf47fe727a459433f88b6c39ada3273b127d5c18c6b830a"
+      },
+      "peerComparison": {
+        "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-history-batches-peer-2019-20-010-fortyone-money-final-comparison.json",
+        "sha256": "eceba9b343ac7a348af2faf619064c03cf818edda3a1add0a4f28a24cc2b777b"
+      },
+      "freshSourceImage": {
+        "path": "/workspace/salary-review-held-health-temp/2019-010-postfreeze/0392-expenses-actual600.png",
+        "sha256": "395d96388f181ac78e6f5f9241f5770b28b11d736e8613a8f7511d94100b7c06",
+        "original300DpiPixelBox": [
+          2052,
+          2478,
+          2422,
+          2517
+        ]
+      },
+      "imageFirstTranscript": {
+        "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-history-batches-peer-2019-20-010-fortyone-money-source-first.json",
+        "sha256": "b68c4f2d7a4e99d3a3daf3349805668fe290be1bb5f987f4573c32a0c9322c3c"
+      }
+    },
+    {
+      "sourceId": "phsa-2019-20",
+      "sourceSha256": "0e31ac2054f0c2d4ef78797185dddd96cc0cdf2eab94bd6841fa24e1c38e7d02",
+      "physicalPage": 71,
+      "sourceRowOnPage": 54,
+      "field": "expenses",
+      "confirmedValue": 2463,
+      "effectiveAuthorOverlay": {
+        "path": "research/salaries/queue-completion-2026-11-01/phsa/overlays/phsa-2019-20-manual-overlay-010.json",
+        "sha256": "162bc6c35de79622aaf47fe727a459433f88b6c39ada3273b127d5c18c6b830a"
+      },
+      "peerComparison": {
+        "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-history-batches-peer-2019-20-010-fortyone-money-final-comparison.json",
+        "sha256": "eceba9b343ac7a348af2faf619064c03cf818edda3a1add0a4f28a24cc2b777b"
+      },
+      "freshSourceImage": {
+        "path": "/workspace/salary-review-held-health-temp/2019-010-postfreeze/0400-expenses-actual600.png",
+        "sha256": "5dec84c4d6fd979d2cb7323b7f90838173c9afed8cf300a8050cf29b266d459d",
+        "original300DpiPixelBox": [
+          2052,
+          2845,
+          2422,
+          2884
+        ]
+      },
+      "imageFirstTranscript": {
+        "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-history-batches-peer-2019-20-010-fortyone-money-source-first.json",
+        "sha256": "b68c4f2d7a4e99d3a3daf3349805668fe290be1bb5f987f4573c32a0c9322c3c"
+      }
+    }
+  ],
+  "completeFrozenSourceTargetFields": 41,
+  "confirmedMonetaryFields": 41,
+  "originalAuthorOwnSourceCorrections": 0,
+  "originalPeerOwnSourceCorrections": 4,
+  "scope": "Exact source-money fields only. Original first-pass disagreements/corrections are retained; no balancing, name or unrelated field authority."
+}

@@ -1,0 +1,13 @@
+{
+  "schema": "salary-queue-parent-selection-v1",
+  "selectedVersion": 2,
+  "effectiveParentAcceptance": {
+    "path": "research/salaries/queue-completion-2026-11-01/parent-acceptance-v2.json",
+    "sha256": "acaec2c248bffdc4f7f4189e5103da89a24f570f199fdf774e785bc53d04df5e"
+  },
+  "supersededPrepublicationParentAcceptance": {
+    "path": "research/salaries/queue-completion-2026-11-01/parent-acceptance.json",
+    "sha256": "4a023f923d4a9d2974ced8ad468eb489beba57e3d7470ae97e9ad3fca45dc90a"
+  },
+  "reason": "Original root draft preceded the first app build. The app guard required explicit PHSA compiled-partition retention metadata. Only the exact27 reviewed metadata fields change; all child/candidate/source/data/provenance bytes and earlier root draft bytes are preserved. The original base active manifest is archived byte-for-byte; no source row or compiled deletion scope changes."
+}

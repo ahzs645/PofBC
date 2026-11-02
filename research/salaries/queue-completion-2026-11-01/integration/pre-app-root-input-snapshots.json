@@ -1,0 +1,33 @@
+{
+  "frozen": true,
+  "schema": "salary-queue-pre-app-root-input-snapshots-v1",
+  "supersededBeforePublication": true,
+  "supersededRootFreeze": {
+    "path": "research/salaries/queue-completion-2026-11-01/integration/candidate-freeze.json",
+    "sha256": "bcf0d7d972f03a5a77c70874f6e9040ae738bb5494a3804e132e6fc6e957da8a"
+  },
+  "supersededParentAcceptance": {
+    "path": "research/salaries/queue-completion-2026-11-01/parent-acceptance.json",
+    "sha256": "4a023f923d4a9d2974ced8ad468eb489beba57e3d7470ae97e9ad3fca45dc90a"
+  },
+  "archivedMutableInputs": [
+    {
+      "originalPath": "research/salaries/queue-completion-2026-11-01/README.md",
+      "originalSha256": "f9e9205a52ac415f4a639bd19742eebb7ed7860497b06088ae1c1582ab86a639",
+      "preservedSnapshot": {
+        "path": "research/salaries/queue-completion-2026-11-01/integration/pre-app-root-README.md",
+        "sha256": "f9e9205a52ac415f4a639bd19742eebb7ed7860497b06088ae1c1582ab86a639"
+      }
+    },
+    {
+      "originalPath": "research/salaries/queue-completion-phsa/sources.json",
+      "originalSha256": "c510c1375723288e174f2ea28232a7f4ba460cf491d73c168b4e9af6d2f04e8a",
+      "preservedSnapshot": {
+        "path": "research/salaries/queue-completion-2026-11-01/integration/phsa-base-promoted-sources.json",
+        "sha256": "c510c1375723288e174f2ea28232a7f4ba460cf491d73c168b4e9af6d2f04e8a"
+      }
+    }
+  ],
+  "allOtherOriginalRootInputsRemainExact": true,
+  "reason": "The first app build correctly rejected missing PHSA compiled-retention metadata. Preserve the exact base promoted manifest and first root README here while the explicit second root integration snapshot adopts only the reviewed27 source metadata changes. All four child freezes, candidates, reviewed rows/provenance and old root draft documents remain unchanged. Current parent authority is selected explicitly by parent-acceptance-selection.json."
+}

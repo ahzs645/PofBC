@@ -1,0 +1,33 @@
+{
+  "version": 2,
+  "id": "phsa-history-paired-reader-field-policy-002",
+  "status": "root-approved-implementation-pending-independent-code-and-90-row-holdout-gates",
+  "date": "2026-11-01",
+  "rootAuthorization": "Root explicitly approved implementation of this guarded policy on2026-11-01, conditioned on independent code review and deterministic90row actual-source holdout before source acceptance.",
+  "empiricalCalibration": {
+    "path": "research/salaries/queue-completion-2026-11-01/phsa/confidence-calibration-analysis-002.json",
+    "sha256": "38da42f2e0149ed8116bcaea39ee3470e50df0d752f2b71f486c7a7bcae7ea9f"
+  },
+  "processingProfiles": {
+    "path": "research/salaries/queue-completion-2026-11-01/phsa/processing-profile-index-001.json",
+    "sha256": "5da19351100e8410e680113599c6990fb9f6b2bfe060348992795b1eaa44e4bc"
+  },
+  "independentSourceFidelity": {
+    "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-history-source-fidelity-geometry-review.json",
+    "sha256": "2e286a3b7e9ca4a59a9477b67849fc375e3813bfb9b2d28e2e317ffe55e25ae2"
+  },
+  "scope": "No salary value is changed. Only unreserved fields whose complete original uncertainty is confidence-only may be corroborated by exact independent reader agreement and source evidence.",
+  "requirements": [
+    "Preserve every original raw field, confidence score, flag, page evidence and frozen packet without alteration. Do not revoke or auto-resolve any field already reserved for manual review or reviewed by the first-table fixture.",
+    "Require both independent reader field values to be present, well parsed and exactly equal; names allow only existing-comma/line-whitespace comparison. Candidate value must already equal that agreement.",
+    "Require actual-PDF source render hash and row geometry to match the complete independent raster ledger, with no date or geometry uncertainty.",
+    "Never resolve any reader disagreement, missing/unparsed field, questionable source glyph, date/geometry issue, name artifact or type ambiguity by this policy.",
+    "For money, require a strictly positive integer, not a boolean; no confidence-only zero, negative, noninteger, blank, dash or detector omission is eligible. The actual expense region must contain numeric ink and must not match dash geometry.",
+    "Retain every existing source-name quality guard; additionally send word-initial capitalI, mixed I/l or Mc-prefix ambiguity and unexplained name artifacts to image review even on otherwise agreeing high-confidence names. No casing substitution, full-name expansion or identity inference.",
+    "Qualified I/l interpretations remain separate manual peer/root-adopted cases with visible alternatives and mandatory sourcepublicWarning.",
+    "Require all90 deterministic independent holdout rows to match every requested field or halt/revise this policy; require an independent implementation review and full final source controls/field closure.",
+    "Public validation separately counts calibrated paired-reader corroboration and actual manual-image review; never claim all original flags were manually read."
+  ],
+  "originalConfidenceThresholdsRemainRecordedNotProbabilities": true,
+  "noCurrentSourceAcceptanceClaim": true
+}

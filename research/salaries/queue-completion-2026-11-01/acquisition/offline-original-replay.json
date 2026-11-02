@@ -1,0 +1,53 @@
+{
+  "reviewedOn": "2026-11-01",
+  "method": "Offline replay from both recovered exact original PDF cache files with full independently implemented MuPDF and Poppler readers, export and final metadata; no network and no frozen-byte mutation. Existing fidelity audit and independent root PDFMiner peer receipt retained without rerunning expensive image audit.",
+  "executed": [
+    {
+      "script": "scripts/finish_salary_acquisition_native.py",
+      "exitCode": 0,
+      "stdoutSha256": "c3be8698cbaa446d7d2b2f7aad61d32ca2c021e2e5548ffecb8f4b3042d478ec",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdoutTail": "ation\": 771928026,\n    \"employeeExpenses\": 3773912,\n    \"expenseNulls\": 4644,\n    \"expenseZeros\": 0,\n    \"negativeExpenseRows\": 0,\n    \"nativeControls\": [\n      {\n        \"physicalPage\": 155,\n        \"label\": \"TOTAL REMUNERATION OVER $75,000\",\n        \"pay\": \"771,927,987\",\n        \"expenseWords\": \"3,773,890\"\n      },\n      {\n        \"physicalPage\": 155,\n        \"label\": \"TOTAL REMUNERATION UNDER $75,000\",\n        \"pay\": \"578,583,458\",\n        \"expenseWords\": \"6,999,904\"\n      },\n      {\n        \"physicalPage\": 3,\n        \"label\": null,\n        \"pay\": \"217,405\",\n        \"expenseWords\": \"2,749\",\n        \"basis\": \"Unlabelled printed board total row; not a named observation\"\n      }\n    ]\n  }\n]\n",
+      "stderrTail": ""
+    },
+    {
+      "script": "scripts/finish_salary_acquisition_poppler.py",
+      "exitCode": 0,
+      "stdoutSha256": "0bc05234089d8761e2a7db9dfda32fc0d35bfe635bf63fb82d22024a031f1ec5",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdoutTail": "[\n  {\n    \"id\": \"providence-2023-24\",\n    \"employees\": 3289,\n    \"boardAll\": 15,\n    \"employeeRemuneration\": 380612829,\n    \"employeeExpenses\": 3560383,\n    \"path\": \"research/salaries/queue-completion-2026-11-01/acquisition/providence-2023-24-poppler-raw.json.gzip\",\n    \"sha256\": \"2c5705ff2964f621517fac0f7047ab1626598f9bd2754265108614c42c0870d2\"\n  },\n  {\n    \"id\": \"vch-2020-21\",\n    \"employees\": 7740,\n    \"boardAll\": 10,\n    \"employeeRemuneration\": 771928026,\n    \"employeeExpenses\": 3773912,\n    \"path\": \"research/salaries/queue-completion-2026-11-01/acquisition/vch-2020-21-poppler-raw.json.gzip\",\n    \"sha256\": \"bd2103317d8b846154755419bf60752a649bc520cf0390381b3b10f6636c0294\"\n  }\n]\n",
+      "stderrTail": ""
+    },
+    {
+      "script": "scripts/finish_salary_acquisition_export.py",
+      "exitCode": 0,
+      "stdoutSha256": "a0fa1048f802a29eae204dffb1a8804aacb883ee99742683259a013894809842",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdoutTail": "      \"sha256\": \"b62155c1cefb484610320842b511fac496a837eb889d1b739c22f6db1479827c\"\n    },\n    {\n      \"id\": \"vch-2020-21-employees\",\n      \"rowCount\": 7740,\n      \"remuneration\": 771928026,\n      \"knownExpenses\": 3773912,\n      \"nullExpenses\": 4644,\n      \"zeroExpenses\": 0,\n      \"negativeExpenses\": 0,\n      \"sha256\": \"483bd77198c4380dfd6f679a34dbad933b28a300a1a30b61b1c629cc9293e1ce\"\n    },\n    {\n      \"id\": \"vch-2020-21-board-numeric-pay\",\n      \"rowCount\": 10,\n      \"remuneration\": 217405,\n      \"knownExpenses\": 2749,\n      \"nullExpenses\": 4,\n      \"zeroExpenses\": 0,\n      \"negativeExpenses\": 0,\n      \"sha256\": \"935e90a9c69b0f2e9f74fcd98588abf5faf2543efbb98f6483f02cca1dbd41fa\"\n    }\n  ]\n}\n",
+      "stderrTail": ""
+    },
+    {
+      "script": "scripts/finish_salary_acquisition_finalize.py",
+      "exitCode": 0,
+      "stdoutSha256": "6f1cf4ac5e43a4dc5a0085bc6083c06799820e89cc9aace97d49436fd72b224b",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdoutTail": "56\": \"4b06e21e635220ab88ae0346ced441f515be3c4a8635c8d0651ce2874b25b570\"\n  },\n  \"queue\": {\n    \"path\": \"research/salaries/queue-completion-2026-11-01/acquisition/work-queue.json\",\n    \"sha256\": \"264fa81c3e5518065a95a8fa77298bd11eb896bf1c46fc82ae728bfff55b7dda\"\n  },\n  \"originalProvenance\": {\n    \"path\": \"research/salaries/queue-completion-2026-11-01/acquisition/original-provenance-and-period.json\",\n    \"sha256\": \"7fca02c7adb90a61c622e035c4260b35fa0da0695ee47f7c42fe52a508721441\"\n  },\n  \"visualReview\": {\n    \"path\": \"research/salaries/queue-completion-2026-11-01/acquisition/personal-source-image-review.json\",\n    \"sha256\": \"09943858072e2260bb48b9f218b889081ac9081cc0d3e6fdaaa9eec3727fb73a\"\n  }\n}\n",
+      "stderrTail": ""
+    },
+    {
+      "script": "scripts/test_finish_salary_acquisition.py",
+      "exitCode": 0,
+      "stdoutSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderrSha256": "8a2ac46889bc1a5b5ed7b28608dfc51eb974c008b48da8f075174b42ac73b68b",
+      "stdoutTail": "",
+      "stderrTail": ".........\n----------------------------------------------------------------------\nRan 9 tests in 0.361s\n\nOK\n"
+    }
+  ],
+  "unchangedPreexistingFrozenFiles": 91,
+  "allPreexistingHashesUnchanged": true,
+  "sourceManifestSha256": "4b06e21e635220ab88ae0346ced441f515be3c4a8635c8d0651ce2874b25b570",
+  "publicWarningAndRetentionGuardTestPassed": true,
+  "normalizedRows": 11049,
+  "originalRowsIncludingUnknownPayResearch": 11054,
+  "replayedAtUtc": "2026-11-01T21:48:51.288655+00:00"
+}

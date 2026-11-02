@@ -22,28 +22,28 @@
     "pendingJurisdictions": 1,
     "auditedJurisdictions": 162,
     "withAnySalaryRecordsBefore": 30,
-    "withAnySalaryRecordsAfter": 116,
+    "withAnySalaryRecordsAfter": 117,
     "withOfficialRecordsBefore": 2,
-    "withOfficialRecordsAfter": 113,
-    "withOfficialEmployeeRecords": 110,
-    "withOfficialCouncilRecords": 81,
-    "withNoOfficialRecords": 48,
-    "withNoSalaryRecords": 45,
+    "withOfficialRecordsAfter": 115,
+    "withOfficialEmployeeRecords": 113,
+    "withOfficialCouncilRecords": 83,
+    "withNoOfficialRecords": 46,
+    "withNoSalaryRecords": 44,
     "newlyAcceptedSourceCohorts": 559,
     "newlyAcceptedReportYears": 343,
     "municipalitiesInAddedCollections": 112,
     "newlyAcceptedRecords": 59716,
     "newEmployeeRecords": 58202,
     "newCouncilRecords": 1514,
-    "municipalOfficialRecords": 111936,
+    "municipalOfficialRecords": 112771,
     "municipalCompiledUnverifiedRecords": 24054,
     "municipalitiesWithExplicitSalarySourceLeads": 132,
     "distinctSourceLeadUrls": 3858,
     "allRecordsBefore": 832864,
-    "allRecordsAfter": 1037040,
-    "allRecordsNetChange": 204176,
+    "allRecordsAfter": 1125685,
+    "allRecordsNetChange": 292821,
     "allEmployersBefore": 133,
-    "allEmployersAfter": 246,
+    "allEmployersAfter": 254,
     "replacedCompiledRecords": 1028
   },
   "collections": [
@@ -16404,13 +16404,15 @@
       "website": "http://www.creston.ca",
       "directoryUrl": "https://www.civicinfo.bc.ca/municipalities?id=23",
       "status": "current",
-      "salaryStatus": "official-council-only",
-      "nextAction": "Resolve the held employee schedule; council records do not establish employee coverage.",
+      "salaryStatus": "official-employee-records-imported",
+      "nextAction": "Review remaining report years and council schedules; accepted employee years are not a claim of complete employment or historical coverage.",
       "archiveUrl": "https://www.creston.ca",
-      "records": 7,
-      "officialRecords": 7,
+      "records": 34,
+      "officialRecords": 34,
       "compiledUnverifiedRecords": 0,
-      "officialEmployeeYears": [],
+      "officialEmployeeYears": [
+        "2024"
+      ],
       "officialCouncilYears": [
         "2024"
       ],
@@ -16615,29 +16617,123 @@
             "evidenceFile": "evidence/municipal-small-town-of-creston-2024-ocr-p037.json.gzip",
             "evidenceSha256": "305b0a0b769b11568d7d025a9118123aba96cae924ed3ad10db210f36e4b5442"
           }
-        }
-      ],
-      "heldOrUnparsedSources": [
+        },
         {
-          "id": "municipal-small-town-of-creston-2024-ocr",
+          "collection": "queue-completion-municipal",
+          "id": "queue-completion-municipal-creston-2024-employee-remuneration",
           "employerSlug": "town-of-creston",
           "year": "2024",
-          "title": "town-of-creston scanned SOFI requiring transcription",
-          "url": "https://www.creston.ca/sites/default/files/2025-07/Statement%20of%20Financial%20Information%202024.pdf",
-          "indexUrl": "https://www.creston.ca/statement-financial-information",
-          "status": "held-for-review",
-          "scope": "employee-remuneration",
-          "reason": "Council is now accepted separately. Candidate employee transcription totals $2,685,206 remuneration and $61,034 expenses versus printed $2,685,008 / $61,044. These are not established issuer discrepancies: remaining ambiguous monetary/name glyphs still need resolution from the original or an electronic file.",
-          "nextAction": "Obtain an existing employee spreadsheet or higher-quality scan, resolve ambiguous glyphs, and independently recheck every named employee field and control. Do not infer a cell from the difference to a total.",
+          "category": "employee-remuneration",
+          "rows": 27,
+          "namedRows": 27,
+          "sourceUrl": "https://www.creston.ca/sites/default/files/2025-07/Statement%20of%20Financial%20Information%202024.pdf",
+          "sourceIndexUrl": "https://www.creston.ca/statement-financial-information",
+          "sourceSha256": "24a6cd0394f42596859f15cb4a1ec811c28c5a5c09e004a3766aa78130396ac6",
+          "dataSha256": "e71de303545fbf4f668a240b11128a2e106b979b3c817be543a36be311c2fce9",
           "notes": [
-            "The first page was rendered and visually reviewed on 2026-10-31. No named records from this PDF are imported.",
-            "The cover/checklist says year ended December 31, 2024; upload-path years are not used.",
-            "Original audit blocker: Council is now accepted separately. Candidate employee transcription totals $2,685,206 remuneration and $61,034 expenses versus printed $2,685,008 / $61,044. These are not established issuer discrepancies: remaining ambiguous monetary/name glyphs still need resolution from the original or an electronic file.",
-            "OCR evidence: research/salaries/municipal-ocr/staging/municipal-small-town-of-creston-2024-ocr.json.gzip"
+            "Only the complete 27-person employee scope is new; already accepted 2024 council observations are excluded.",
+            "Published names, initials, literal spellings, word order and positions remain as visibly printed, including Jeff Webb and Waste Water Treatment Plan Operator.",
+            "Remuneration is the separate published REMUNERATION column. Expenses remain separate; employer EI and CPP are excluded from employee remuneration under the checked source schedule policy (physical 4).",
+            "All 13 printed zero expense cells remain 0; no expense dashes, missing expense values, imputation or annualization.",
+            "Two independent OCR engines (Tesseract and Paddle via RapidOCR) read all 27 rows; every machine difference and all original employee fields were checked against actual PDF-painted images. A peer independently transcribed all 27 original-image rows before comparing the frozen candidate.",
+            "Original physical 9 signed June 30,2025 approves all SOFI statements and schedules. Printed employee schedule heading is 2024; whole-report calendar end December 31,2024 is separately printed on physical 1.",
+            "Retain the compiled partition until root reviews exact-year full-cohort comparison; no compiled calendar mapping or deletion inferred."
           ],
-          "collection": "municipal-small"
+          "publicWarning": "The 27 named employee rows total CAD 2,684,996 remuneration and 61,034 expenses, compared with printed named-employee subtotals 2,685,008 and 61,044: row sums minus printed controls are -12 and -10. Separately, printed named plus below-threshold employee expense controls 61,044 + 67,341 equal 128,385, while the all-employee expense control is 128,386 (1 higher). The separate remuneration reconciliation shows elected 164,518 plus all employees 4,268,181, with printed subtotal 4,432,699, but the final amount included in the Statement of Revenue and Expenditure is 4,432,689 (10 lower). Published individual cells are retained unchanged; causes remain unresolved. Retain the compiled partition: no compatible same-calendar-year compiled cohort has been established. Root owns any future period mapping or deletion; full strict multiset comparison is pinned separately.",
+          "validation": {
+            "method": "Independent Tesseract and Paddle OCR geometry readers; complete author original-image review; independent peer image-first full 27-row transcription and exact 162-field normalized comparison.",
+            "allRowFieldsAgreeWithFinalOriginalImageReview": true,
+            "rawOcrReadersAgree": false,
+            "allRawMachineDifferencesOriginalImageResolved": true,
+            "evidenceFile": "evidence/creston-2024-employee-remuneration.json.gzip",
+            "evidenceSha256": "1cd4e37de49685eb585e17a9606f5c9d4144c9a709d3d5364aab08fa5ac6b427",
+            "controls": {
+              "printedNamed": {
+                "remuneration": 2685008,
+                "expenses": 61044
+              },
+              "knownNamedRows": {
+                "remuneration": 2684996,
+                "expenses": 61034
+              },
+              "namedRowSumMinusPrinted": {
+                "remuneration": -12,
+                "expenses": -10
+              },
+              "printedBelowThreshold": {
+                "remuneration": 1583173,
+                "expenses": 67341
+              },
+              "printedAllEmployees": {
+                "remuneration": 4268181,
+                "expenses": 128386
+              },
+              "printedNamedPlusBelowExpenses": 128385,
+              "printedAllEmployeeExpensesMinusPrintedNamedPlusBelow": 1,
+              "separateRemunerationReconciliation": {
+                "printedElected": 164518,
+                "printedAllEmployees": 4268181,
+                "printedSubtotal": 4432699,
+                "printedIncludedStatementOfRevenueAndExpenditure": 4432689,
+                "finalMinusSubtotal": -10
+              }
+            },
+            "physicalPagesVisuallyReviewed": [
+              1,
+              3,
+              4,
+              5,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12,
+              36,
+              37,
+              38,
+              39,
+              41,
+              42
+            ],
+            "salaryPagesReviewedInFull": [
+              37
+            ],
+            "periodEvidence": [
+              {
+                "page": 37,
+                "text": "SCHEDULE SHOWING REMUNERATION AND EXPENSES PAID FOR 2024"
+              },
+              {
+                "page": 1,
+                "text": "Fiscal Year End: 31 December, 2024"
+              }
+            ],
+            "independentPeerReview": {
+              "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-creston-queue-final-payload-comparison.json",
+              "sha256": "10d2b1579e743510f1341967021ae0feeb064e2e09d2720af11d4c2b83ce9664",
+              "allRowsExact": true,
+              "rows": 27,
+              "fields": 162
+            },
+            "independentTwoEngineAdjudication": {
+              "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-creston-queue-two-engine-source-comparison.json",
+              "sha256": "8fa329f360e3c1417b551d653f2320aa42344fcd3ed4265323754220fafbff3d",
+              "machineFieldsCompared": 216
+            },
+            "nullExpenses": 0,
+            "explicitZeroExpenses": 13,
+            "signedApproval": {
+              "physicalPage": 9,
+              "date": "2025-06-30"
+            },
+            "compiledPartitionRetained": true,
+            "compiledPartitionRetentionReason": "Retain the compiled partition: no compatible same-calendar-year compiled cohort has been established. Root owns any future period mapping or deletion; full strict multiset comparison is pinned separately.",
+            "completeEmployeeSchedule": true
+          }
         }
       ],
+      "heldOrUnparsedSources": [],
       "sourceLeadCount": 27,
       "explicitSalaryLeadCount": 7,
       "pagesChecked": 7,
@@ -16912,7 +17008,7 @@
         },
         {
           "url": "https://www.creston.ca/sites/default/files/2025-07/Statement%20of%20Financial%20Information%202024.pdf",
-          "label": "Town of Creston 2024 elected-officials",
+          "label": "Town of Creston 2024 employee-remuneration",
           "status": "imported",
           "kind": "report-linked-unreviewed",
           "yearsMentioned": [
@@ -16924,15 +17020,6 @@
             "https://www.creston.ca/statement-financial-information"
           ],
           "discoveryFile": "discovery/town-of-creston.json",
-          "indexedYear": "2024",
-          "reason": "Council is now accepted separately. Candidate employee transcription totals $2,685,206 remuneration and $61,034 expenses versus printed $2,685,008 / $61,044. These are not established issuer discrepancies: remaining ambiguous monetary/name glyphs still need resolution from the original or an electronic file.",
-          "nextAction": "Obtain an existing employee spreadsheet or higher-quality scan, resolve ambiguous glyphs, and independently recheck every named employee field and control. Do not infer a cell from the difference to a total.",
-          "notes": [
-            "The first page was rendered and visually reviewed on 2026-10-31. No named records from this PDF are imported.",
-            "The cover/checklist says year ended December 31, 2024; upload-path years are not used.",
-            "Original audit blocker: Council is now accepted separately. Candidate employee transcription totals $2,685,206 remuneration and $61,034 expenses versus printed $2,685,008 / $61,044. These are not established issuer discrepancies: remaining ambiguous monetary/name glyphs still need resolution from the original or an electronic file.",
-            "OCR evidence: research/salaries/municipal-ocr/staging/municipal-small-town-of-creston-2024-ocr.json.gzip"
-          ],
           "calendarYear": "2024"
         },
         {
@@ -50455,63 +50542,651 @@
       "website": "http://www.mission.ca",
       "directoryUrl": "https://www.civicinfo.bc.ca/municipalities?id=75",
       "status": "current",
-      "salaryStatus": "source-held-or-awaiting-extraction",
-      "nextAction": "Official report located; employee extraction remains unreviewed.",
+      "salaryStatus": "official-employee-records-imported",
+      "nextAction": "Review remaining report years and council schedules; accepted employee years are not a claim of complete employment or historical coverage.",
       "archiveUrl": "https://www.mission.ca/council-government/budget-finance/financial-reporting",
-      "records": 207,
-      "officialRecords": 0,
+      "records": 744,
+      "officialRecords": 537,
       "compiledUnverifiedRecords": 207,
-      "officialEmployeeYears": [],
-      "officialCouncilYears": [],
+      "officialEmployeeYears": [
+        "2023",
+        "2024",
+        "2025"
+      ],
+      "officialCouncilYears": [
+        "2023",
+        "2024",
+        "2025"
+      ],
       "compiledUnverifiedEditionLabels": [
         "2017/18",
         "2020/21"
       ],
-      "acceptedSources": [],
-      "heldOrUnparsedSources": [
+      "acceptedSources": [
         {
-          "id": "district-of-mission-2023",
+          "collection": "queue-completion-municipal",
+          "id": "queue-completion-municipal-mission-2023-employee-remuneration",
           "employerSlug": "city-of-mission",
           "year": "2023",
-          "title": "City of Mission 2023 disclosure",
-          "url": "https://www.mission.ca/media/file/2023-sofi-report",
-          "indexUrl": "https://www.mission.ca/council-government/budget-finance/financial-reporting",
-          "status": "held-unparsed",
-          "scope": null,
-          "reason": "Official report located; employee extraction remains unreviewed.",
-          "nextAction": "Official report located; employee extraction remains unreviewed.",
-          "notes": [],
-          "collection": "municipal-lower-mainland"
+          "category": "employee-remuneration",
+          "rows": 148,
+          "namedRows": 148,
+          "sourceUrl": "https://www.mission.ca/media/file/2023-sofi-report",
+          "sourceIndexUrl": "https://www.mission.ca/council-government/budget-finance/financial-reporting",
+          "sourceSha256": "82e0ab886a7e8a1e464e3afa25127be7176de79881b93b7602c5a101c8f4d6ac",
+          "dataSha256": "2472408946cb5c02aa9daa797fc883658bdcc28b3e0d3090bc8b7ae276114836",
+          "notes": [
+            "Every published name, title where present, separate remuneration and expense cell was checked on actual PDF-painted source images; independent Tesseract and Paddle OCR outputs and their source-reviewed corrections remain separate.",
+            "An independent peer transcribed the complete source-image scope before full candidate comparison. Prior context disclosures and reviewer-only rereads remain in the immutable peer receipts.",
+            "Repeated names or initials remain distinct literal observations; no identity merging, full-name enrichment, annualization or redistribution of aggregate amounts.",
+            "The separate source expense-inclusive Total column, when printed, is retained only in supporting evidence and is never substituted for remuneration.",
+            "Printed schedule year and signed approval are independently recorded; URL/upload dates are not used as reporting-year evidence.",
+            "Published remuneration meaning: Includes any form of salary, wage, gratuities and taxable benefits, including applicable vehicle allowances paid to the employee or on behalf of an employee.",
+            "Published expense meaning: Includes travel expenses, memberships, tuition, relocation, vehicle reimbursements, and registration fees paid directly to an employee or to a third party on behalf of an employee.",
+            "Published relation to financial statements: Schedule is based on actual payments made during the year; financial statements are prepared on an accrual basis."
+          ],
+          "publicWarning": "The 148 named employee rows total CAD 16,445,762 remuneration and 318,887 known expenses. The printed named-employee remuneration subtotal is 16,445,765, 3 higher; its expense subtotal agrees. Physical 6 employee rows total 4,050,146 remuneration versus printed page subtotal 4,050,149, also 3 higher. Blaschuk, S visibly prints 93,271 remuneration and 1,718 expenses (sum 94,989), while its separate printed expense-inclusive Total is 94,992, 3 higher. Every individual cell is retained as visibly printed; no cause is inferred and no amount is balanced. Nine printed expense dashes remain null. The source uses a combined remuneration-and-expenses named-selection label; the below-75,000 remuneration rows remain as published. Retain the compiled partition: no compatible same-calendar-year compiled cohort has been established. Root owns any future period mapping or deletion; full strict multiset comparison is pinned separately.",
+          "validation": {
+            "method": "Complete independent Tesseract and Paddle OCR geometry readers, complete author actual-original image review, and independent full-scope image-first peer transcription with final candidate comparison.",
+            "allFinalRowFieldsOriginalImageVerified": true,
+            "rawOcrReadersAgree": false,
+            "allRawMachineDifferencesOriginalImageResolved": true,
+            "completeEmployeeSchedule": true,
+            "compiledPartitionRetained": true,
+            "compiledPartitionRetentionReason": "Retain the compiled partition: no compatible same-calendar-year compiled cohort has been established. Root owns any future period mapping or deletion; full strict multiset comparison is pinned separately.",
+            "evidenceFile": "evidence/mission-2023-complete-source.json.gzip",
+            "evidenceSha256": "b0644c1daf38a0d99379776bf28a4b423ca0b50693356d2b947d8b8fbce951ad",
+            "sourceContextReview": {
+              "path": "research/salaries/queue-completion-2026-11-01/municipal/mission-2023-context-review-v2.json",
+              "sha256": "8e2bd6d852c93db4b5f3112fdb7124a1a14ad242996dab6dd39062b4c772bd99"
+            },
+            "independentPeerReview": {
+              "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-mission-queue-2023-final-source-closure.json",
+              "sha256": "832131a2fa57d85f58bc8279c3a5504f2b74e643794913a5fedd8c0d015af662"
+            },
+            "salaryPagesReviewedInFull": [
+              6,
+              7,
+              8,
+              9
+            ],
+            "periodEvidence": [
+              {
+                "physicalPage": 6,
+                "text": "for the year ended December 31, 2023"
+              },
+              {
+                "physicalPage": 7,
+                "text": "for the year ended December 31, 2023"
+              },
+              {
+                "physicalPage": 8,
+                "text": "for the year ended December 31, 2023"
+              },
+              {
+                "physicalPage": 9,
+                "text": "for the year ended December 31, 2023"
+              }
+            ],
+            "signedApproval": {
+              "physicalPage": 1,
+              "statement": "Approves all statements and schedules included in this Statement of Financial Information.",
+              "signatories": [
+                {
+                  "name": "Doug Stewart, CPA, CGA",
+                  "position": "Director of Finance",
+                  "signedDate": "2024-06-17"
+                },
+                {
+                  "name": "Paul Horn",
+                  "position": "MAYOR on behalf of Council",
+                  "signedDate": "2024-06-17"
+                }
+              ],
+              "visuallySigned": true
+            },
+            "nullExpenses": 9,
+            "explicitZeroExpenses": 0,
+            "nullPositions": 0,
+            "controls": {
+              "printed": {
+                "rows": 148,
+                "remuneration": 16445765,
+                "expenses": 318887,
+                "total": 16764652
+              },
+              "observed": {
+                "remuneration": 16445762,
+                "knownExpenses": 318887
+              },
+              "sourceDiscrepancies": {
+                "namedEmployeeRows": {
+                  "remuneration": 16445762,
+                  "expenses": 318887
+                },
+                "printedNamedEmployees": {
+                  "remuneration": 16445765,
+                  "expenses": 318887
+                },
+                "namedRowSumMinusPrinted": {
+                  "remuneration": -3,
+                  "expenses": 0
+                },
+                "page6EmployeeRows": {
+                  "remuneration": 4050146,
+                  "expenses": 97830,
+                  "printedTotalColumnSum": 4147979
+                },
+                "printedPage6EmployeeSubtotal": {
+                  "remuneration": 4050149,
+                  "expenses": 97830,
+                  "total": 4147979
+                },
+                "specificRow": {
+                  "literalRemuneration": 93271,
+                  "literalExpenses": 1718,
+                  "sum": 94989,
+                  "printedExpenseInclusiveTotal": 94992,
+                  "printedTotalMinusLiteralPayAndExpenses": 3
+                }
+              }
+            }
+          }
         },
         {
-          "id": "district-of-mission-2024",
+          "collection": "queue-completion-municipal",
+          "id": "queue-completion-municipal-mission-2023-elected-officials",
+          "employerSlug": "city-of-mission",
+          "year": "2023",
+          "category": "elected-officials",
+          "rows": 7,
+          "namedRows": 7,
+          "sourceUrl": "https://www.mission.ca/media/file/2023-sofi-report",
+          "sourceIndexUrl": "https://www.mission.ca/council-government/budget-finance/financial-reporting",
+          "sourceSha256": "82e0ab886a7e8a1e464e3afa25127be7176de79881b93b7602c5a101c8f4d6ac",
+          "dataSha256": "f71a43a4c8836faaa49fd5999b938822debd015cdeb7d2f10d09fd995fd527c4",
+          "notes": [
+            "Every published name, title where present, separate remuneration and expense cell was checked on actual PDF-painted source images; independent Tesseract and Paddle OCR outputs and their source-reviewed corrections remain separate.",
+            "An independent peer transcribed the complete source-image scope before full candidate comparison. Prior context disclosures and reviewer-only rereads remain in the immutable peer receipts.",
+            "Repeated names or initials remain distinct literal observations; no identity merging, full-name enrichment, annualization or redistribution of aggregate amounts.",
+            "The separate source expense-inclusive Total column, when printed, is retained only in supporting evidence and is never substituted for remuneration.",
+            "Printed schedule year and signed approval are independently recorded; URL/upload dates are not used as reporting-year evidence.",
+            "Published remuneration meaning: Includes any form of salary, wage, gratuities and taxable benefits, including applicable vehicle allowances paid to the employee or on behalf of an employee.",
+            "Published expense meaning: Includes travel expenses, memberships, tuition, relocation, vehicle reimbursements, and registration fees paid directly to an employee or to a third party on behalf of an employee.",
+            "Published relation to financial statements: Schedule is based on actual payments made during the year; financial statements are prepared on an accrual basis."
+          ],
+          "publicWarning": "This source contains the complete seven-person elected-official scope only; employee observations are a separate source. Retain the compiled partition: no compatible same-calendar-year compiled cohort has been established. Root owns any future period mapping or deletion; full strict multiset comparison is pinned separately.",
+          "validation": {
+            "method": "Complete independent Tesseract and Paddle OCR geometry readers, complete author actual-original image review, and independent full-scope image-first peer transcription with final candidate comparison.",
+            "allFinalRowFieldsOriginalImageVerified": true,
+            "rawOcrReadersAgree": false,
+            "allRawMachineDifferencesOriginalImageResolved": true,
+            "completeEmployeeSchedule": false,
+            "compiledPartitionRetained": true,
+            "compiledPartitionRetentionReason": "Retain the compiled partition: no compatible same-calendar-year compiled cohort has been established. Root owns any future period mapping or deletion; full strict multiset comparison is pinned separately.",
+            "evidenceFile": "evidence/mission-2023-complete-source.json.gzip",
+            "evidenceSha256": "b0644c1daf38a0d99379776bf28a4b423ca0b50693356d2b947d8b8fbce951ad",
+            "sourceContextReview": {
+              "path": "research/salaries/queue-completion-2026-11-01/municipal/mission-2023-context-review-v2.json",
+              "sha256": "8e2bd6d852c93db4b5f3112fdb7124a1a14ad242996dab6dd39062b4c772bd99"
+            },
+            "independentPeerReview": {
+              "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-mission-queue-2023-final-source-closure.json",
+              "sha256": "832131a2fa57d85f58bc8279c3a5504f2b74e643794913a5fedd8c0d015af662"
+            },
+            "salaryPagesReviewedInFull": [
+              6
+            ],
+            "periodEvidence": [
+              {
+                "physicalPage": 6,
+                "text": "for the year ended December 31, 2023"
+              },
+              {
+                "physicalPage": 7,
+                "text": "for the year ended December 31, 2023"
+              },
+              {
+                "physicalPage": 8,
+                "text": "for the year ended December 31, 2023"
+              },
+              {
+                "physicalPage": 9,
+                "text": "for the year ended December 31, 2023"
+              }
+            ],
+            "signedApproval": {
+              "physicalPage": 1,
+              "statement": "Approves all statements and schedules included in this Statement of Financial Information.",
+              "signatories": [
+                {
+                  "name": "Doug Stewart, CPA, CGA",
+                  "position": "Director of Finance",
+                  "signedDate": "2024-06-17"
+                },
+                {
+                  "name": "Paul Horn",
+                  "position": "MAYOR on behalf of Council",
+                  "signedDate": "2024-06-17"
+                }
+              ],
+              "visuallySigned": true
+            },
+            "nullExpenses": 0,
+            "explicitZeroExpenses": 0,
+            "nullPositions": 0,
+            "controls": {
+              "printed": {
+                "rows": 7,
+                "remuneration": 384911,
+                "expenses": 28443,
+                "total": 413354
+              },
+              "observed": {
+                "remuneration": 384911,
+                "knownExpenses": 28443
+              }
+            }
+          }
+        },
+        {
+          "collection": "queue-completion-municipal",
+          "id": "queue-completion-municipal-mission-2024-employee-remuneration",
           "employerSlug": "city-of-mission",
           "year": "2024",
-          "title": "City of Mission 2024 disclosure",
-          "url": "https://www.mission.ca/media/file/2024-sofi-report",
-          "indexUrl": "https://www.mission.ca/council-government/budget-finance/financial-reporting",
-          "status": "held-unparsed",
-          "scope": null,
-          "reason": "Official report located; employee extraction remains unreviewed.",
-          "nextAction": "Official report located; employee extraction remains unreviewed.",
-          "notes": [],
-          "collection": "municipal-lower-mainland"
+          "category": "employee-remuneration",
+          "rows": 162,
+          "namedRows": 162,
+          "sourceUrl": "https://www.mission.ca/media/file/2024-sofi-report",
+          "sourceIndexUrl": "https://www.mission.ca/council-government/budget-finance/financial-reporting",
+          "sourceSha256": "a4fa12aba963169e276fcd69680887ff788f731fd3ac5260135b88705db4e5a9",
+          "dataSha256": "95d15249968a07a89d6122cfe8eb9c06c79d333f089eeeee2ebc33555e0c69d6",
+          "notes": [
+            "Every published name, title where present, separate remuneration and expense cell was checked on actual PDF-painted source images; independent Tesseract and Paddle OCR outputs and their source-reviewed corrections remain separate.",
+            "An independent peer transcribed the complete source-image scope before full candidate comparison. Prior context disclosures and reviewer-only rereads remain in the immutable peer receipts.",
+            "Repeated names or initials remain distinct literal observations; no identity merging, full-name enrichment, annualization or redistribution of aggregate amounts.",
+            "The separate source expense-inclusive Total column, when printed, is retained only in supporting evidence and is never substituted for remuneration.",
+            "Printed schedule year and signed approval are independently recorded; URL/upload dates are not used as reporting-year evidence.",
+            "The separate CAD 5,370 corporate-paid-expense footnote is aggregate supporting evidence only. City-paid wages/expenses for corporate-assigned work remain in their source rows.",
+            "Published remuneration meaning: Includes any form of salary, wage, gratuities and taxable benefits, including applicable vehicle allowances paid to the employee.",
+            "Published expense meaning: Includes travel expenses, memberships, tuition, relocation, vehicle reimbursements, and registration fees paid directly to an employee or to a third party on behalf of an employee.",
+            "Published relation to financial statements: Schedule is based on actual payments made during the year; financial statements are prepared on an accrual basis."
+          ],
+          "publicWarning": "The source labels its named selection as employees with remuneration and expenses exceeding CAD 75,000; this is preserved without silently imposing a pay-only rule. Eighteen printed expense dashes remain null. A separate footnote discloses CAD 5,370 of Mission Bridgehead Investment Corporation expenses outside the table; that aggregate is not assigned or added to individual observations. Source footnote markers on Crawford, S* and DeSousa, K* remain literal. Retain the compiled partition: no compatible same-calendar-year compiled cohort has been established. Root owns any future period mapping or deletion; full strict multiset comparison is pinned separately.",
+          "validation": {
+            "method": "Complete independent Tesseract and Paddle OCR geometry readers, complete author actual-original image review, and independent full-scope image-first peer transcription with final candidate comparison.",
+            "allFinalRowFieldsOriginalImageVerified": true,
+            "rawOcrReadersAgree": false,
+            "allRawMachineDifferencesOriginalImageResolved": true,
+            "completeEmployeeSchedule": true,
+            "compiledPartitionRetained": true,
+            "compiledPartitionRetentionReason": "Retain the compiled partition: no compatible same-calendar-year compiled cohort has been established. Root owns any future period mapping or deletion; full strict multiset comparison is pinned separately.",
+            "evidenceFile": "evidence/mission-2024-complete-source.json.gzip",
+            "evidenceSha256": "f4ab459039e315979d328f8ca4ee9affc3cf8d80f28a5d14ca41c247da1daf91",
+            "sourceContextReview": {
+              "path": "research/salaries/queue-completion-2026-11-01/municipal/mission-2024-context-review.json",
+              "sha256": "cdec6ce285e35df2551c8ba2b57121b4e3ff15577eea76502001b97ebaf1315b"
+            },
+            "independentPeerReview": {
+              "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-mission-queue-2024-final-source-closure.json",
+              "sha256": "87270deb92164fbcb1007821baafc7f9a64ea70d44705a286996fbe52ccb2997"
+            },
+            "salaryPagesReviewedInFull": [
+              6,
+              7,
+              8,
+              9
+            ],
+            "periodEvidence": [
+              {
+                "physicalPage": 6,
+                "text": "for the year ended December 31, 2024"
+              },
+              {
+                "physicalPage": 7,
+                "text": "for the year ended December 31, 2024"
+              },
+              {
+                "physicalPage": 8,
+                "text": "for the year ended December 31, 2024"
+              },
+              {
+                "physicalPage": 9,
+                "text": "for the year ended December 31, 2024"
+              }
+            ],
+            "signedApproval": {
+              "physicalPage": 1,
+              "statement": "Approves all statements and schedules included in this Statement of Financial Information.",
+              "signatories": [
+                {
+                  "name": "Doug Stewart, CPA, CGA",
+                  "position": "Director of Finance",
+                  "signedDate": "2025-06-16"
+                },
+                {
+                  "name": "Paul Horn",
+                  "position": "MAYOR on behalf of Council",
+                  "signedDate": "2025-06-16"
+                }
+              ],
+              "visuallySigned": true
+            },
+            "nullExpenses": 18,
+            "explicitZeroExpenses": 0,
+            "nullPositions": 0,
+            "controls": {
+              "printed": {
+                "remuneration": 18876982,
+                "expenses": 278656,
+                "rows": 162
+              },
+              "observed": {
+                "remuneration": 18876982,
+                "knownExpenses": 278656
+              }
+            }
+          }
         },
         {
-          "id": "district-of-mission-2025",
+          "collection": "queue-completion-municipal",
+          "id": "queue-completion-municipal-mission-2024-elected-officials",
+          "employerSlug": "city-of-mission",
+          "year": "2024",
+          "category": "elected-officials",
+          "rows": 7,
+          "namedRows": 7,
+          "sourceUrl": "https://www.mission.ca/media/file/2024-sofi-report",
+          "sourceIndexUrl": "https://www.mission.ca/council-government/budget-finance/financial-reporting",
+          "sourceSha256": "a4fa12aba963169e276fcd69680887ff788f731fd3ac5260135b88705db4e5a9",
+          "dataSha256": "594a793f060c144561e7df3c069c4ec9e4b5fd9aae979444cbb0f426f9435453",
+          "notes": [
+            "Every published name, title where present, separate remuneration and expense cell was checked on actual PDF-painted source images; independent Tesseract and Paddle OCR outputs and their source-reviewed corrections remain separate.",
+            "An independent peer transcribed the complete source-image scope before full candidate comparison. Prior context disclosures and reviewer-only rereads remain in the immutable peer receipts.",
+            "Repeated names or initials remain distinct literal observations; no identity merging, full-name enrichment, annualization or redistribution of aggregate amounts.",
+            "The separate source expense-inclusive Total column, when printed, is retained only in supporting evidence and is never substituted for remuneration.",
+            "Printed schedule year and signed approval are independently recorded; URL/upload dates are not used as reporting-year evidence.",
+            "Published remuneration meaning: Includes any form of salary, wage, gratuities and taxable benefits, including applicable vehicle allowances paid to the employee.",
+            "Published expense meaning: Includes travel expenses, memberships, tuition, relocation, vehicle reimbursements, and registration fees paid directly to an employee or to a third party on behalf of an employee.",
+            "Published relation to financial statements: Schedule is based on actual payments made during the year; financial statements are prepared on an accrual basis."
+          ],
+          "publicWarning": "This source contains the complete seven-person elected-official scope only; employee observations are a separate source. Retain the compiled partition: no compatible same-calendar-year compiled cohort has been established. Root owns any future period mapping or deletion; full strict multiset comparison is pinned separately.",
+          "validation": {
+            "method": "Complete independent Tesseract and Paddle OCR geometry readers, complete author actual-original image review, and independent full-scope image-first peer transcription with final candidate comparison.",
+            "allFinalRowFieldsOriginalImageVerified": true,
+            "rawOcrReadersAgree": false,
+            "allRawMachineDifferencesOriginalImageResolved": true,
+            "completeEmployeeSchedule": false,
+            "compiledPartitionRetained": true,
+            "compiledPartitionRetentionReason": "Retain the compiled partition: no compatible same-calendar-year compiled cohort has been established. Root owns any future period mapping or deletion; full strict multiset comparison is pinned separately.",
+            "evidenceFile": "evidence/mission-2024-complete-source.json.gzip",
+            "evidenceSha256": "f4ab459039e315979d328f8ca4ee9affc3cf8d80f28a5d14ca41c247da1daf91",
+            "sourceContextReview": {
+              "path": "research/salaries/queue-completion-2026-11-01/municipal/mission-2024-context-review.json",
+              "sha256": "cdec6ce285e35df2551c8ba2b57121b4e3ff15577eea76502001b97ebaf1315b"
+            },
+            "independentPeerReview": {
+              "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-mission-queue-2024-final-source-closure.json",
+              "sha256": "87270deb92164fbcb1007821baafc7f9a64ea70d44705a286996fbe52ccb2997"
+            },
+            "salaryPagesReviewedInFull": [
+              6
+            ],
+            "periodEvidence": [
+              {
+                "physicalPage": 6,
+                "text": "for the year ended December 31, 2024"
+              },
+              {
+                "physicalPage": 7,
+                "text": "for the year ended December 31, 2024"
+              },
+              {
+                "physicalPage": 8,
+                "text": "for the year ended December 31, 2024"
+              },
+              {
+                "physicalPage": 9,
+                "text": "for the year ended December 31, 2024"
+              }
+            ],
+            "signedApproval": {
+              "physicalPage": 1,
+              "statement": "Approves all statements and schedules included in this Statement of Financial Information.",
+              "signatories": [
+                {
+                  "name": "Doug Stewart, CPA, CGA",
+                  "position": "Director of Finance",
+                  "signedDate": "2025-06-16"
+                },
+                {
+                  "name": "Paul Horn",
+                  "position": "MAYOR on behalf of Council",
+                  "signedDate": "2025-06-16"
+                }
+              ],
+              "visuallySigned": true
+            },
+            "nullExpenses": 0,
+            "explicitZeroExpenses": 0,
+            "nullPositions": 0,
+            "controls": {
+              "printed": {
+                "remuneration": 402615,
+                "expenses": 24111,
+                "rows": 7
+              },
+              "observed": {
+                "remuneration": 402615,
+                "knownExpenses": 24111
+              }
+            }
+          }
+        },
+        {
+          "collection": "queue-completion-municipal",
+          "id": "queue-completion-municipal-mission-2025-employee-remuneration",
           "employerSlug": "city-of-mission",
           "year": "2025",
-          "title": "City of Mission 2025 disclosure",
-          "url": "https://www.mission.ca/media/file/2025-sofi-reportpdf",
-          "indexUrl": "https://www.mission.ca/council-government/budget-finance/financial-reporting",
-          "status": "held-unparsed",
-          "scope": null,
-          "reason": "Official report located; employee extraction remains unreviewed.",
-          "nextAction": "Official report located; employee extraction remains unreviewed.",
-          "notes": [],
-          "collection": "municipal-lower-mainland"
+          "category": "employee-remuneration",
+          "rows": 206,
+          "namedRows": 206,
+          "sourceUrl": "https://www.mission.ca/media/file/2025-sofi-reportpdf",
+          "sourceIndexUrl": "https://www.mission.ca/council-government/budget-finance/financial-reporting",
+          "sourceSha256": "23864d9e618e6ceaab92a67e06d38f43d7433e00b747ae53785d8f39f8822624",
+          "dataSha256": "cb23de6618da846b99adf2d540ddcb4b6009ac57afc0120f0e46aaf958dab709",
+          "notes": [
+            "Every published name, title where present, separate remuneration and expense cell was checked on actual PDF-painted source images; independent Tesseract and Paddle OCR outputs and their source-reviewed corrections remain separate.",
+            "An independent peer transcribed the complete source-image scope before full candidate comparison. Prior context disclosures and reviewer-only rereads remain in the immutable peer receipts.",
+            "Repeated names or initials remain distinct literal observations; no identity merging, full-name enrichment, annualization or redistribution of aggregate amounts.",
+            "The separate source expense-inclusive Total column, when printed, is retained only in supporting evidence and is never substituted for remuneration.",
+            "Printed schedule year and signed approval are independently recorded; URL/upload dates are not used as reporting-year evidence.",
+            "Published remuneration meaning: Includes any form of salary, wage, gratuities and taxable benefits, including applicable vehicle allowances paid to the employee.",
+            "Published expense meaning: Includes travel expenses, memberships, tuition, relocation, vehicle reimbursements, and registration fees paid directly to an employee or to a third party on behalf of an employee.",
+            "Published relation to financial statements: Schedule is based on actual payments made during the year; financial statements are prepared on an accrual basis."
+          ],
+          "publicWarning": "The source labels its named selection as employees with remuneration and expenses exceeding CAD 75,000; this is preserved without silently imposing a pay-only rule. Thirty-one printed expense dashes remain null. Source footnote markers identify City-paid work assigned to Mission Bridgehead Investment Corporation; no outside amount is assigned or added to individual observations. Retain the compiled partition: no compatible same-calendar-year compiled cohort has been established. Root owns any future period mapping or deletion; full strict multiset comparison is pinned separately.",
+          "validation": {
+            "method": "Complete independent Tesseract and Paddle OCR geometry readers, complete author actual-original image review, and independent full-scope image-first peer transcription with final candidate comparison.",
+            "allFinalRowFieldsOriginalImageVerified": true,
+            "rawOcrReadersAgree": false,
+            "allRawMachineDifferencesOriginalImageResolved": true,
+            "completeEmployeeSchedule": true,
+            "compiledPartitionRetained": true,
+            "compiledPartitionRetentionReason": "Retain the compiled partition: no compatible same-calendar-year compiled cohort has been established. Root owns any future period mapping or deletion; full strict multiset comparison is pinned separately.",
+            "evidenceFile": "evidence/mission-2025-complete-source.json.gzip",
+            "evidenceSha256": "601a0943cbeb203bc1666eda91e2ade94bc25925744bd0e9e03c596e582780df",
+            "sourceContextReview": {
+              "path": "research/salaries/queue-completion-2026-11-01/municipal/mission-2025-context-review.json",
+              "sha256": "73b7ef06cb8e0de73f0a8fdcbb312a3bda639901b74a8c2665dec5bfd632fb57"
+            },
+            "independentPeerReview": {
+              "path": "research/salaries/queue-completion-2026-11-01/reviews/root-mission-2025-final-source-closure.json",
+              "sha256": "5af33206bc806e0bc74a609bed145681bb4de6c82a6c96e295cda4d0659a4dfc"
+            },
+            "salaryPagesReviewedInFull": [
+              6,
+              7,
+              8,
+              9,
+              10
+            ],
+            "periodEvidence": [
+              {
+                "physicalPage": 6,
+                "text": "For the year ended December 31, 2025"
+              },
+              {
+                "physicalPage": 7,
+                "text": "For the year ended December 31, 2025"
+              },
+              {
+                "physicalPage": 8,
+                "text": "For the year ended December 31, 2025"
+              },
+              {
+                "physicalPage": 9,
+                "text": "For the year ended December 31, 2025"
+              },
+              {
+                "physicalPage": 10,
+                "text": "For the year ended December 31, 2025"
+              }
+            ],
+            "signedApproval": {
+              "physicalPage": 1,
+              "statement": "Approves all statements and schedules included in this Statement of Financial Information.",
+              "signatories": [
+                {
+                  "name": "Doug Stewart, CPA, CGA",
+                  "position": "General Manager - Finance",
+                  "signedDate": "2026-06-15"
+                },
+                {
+                  "name": "Paul Horn",
+                  "position": "MAYOR on behalf of Council",
+                  "signedDate": "2026-06-15"
+                }
+              ],
+              "visuallySigned": true
+            },
+            "nullExpenses": 31,
+            "explicitZeroExpenses": 0,
+            "nullPositions": 0,
+            "controls": {
+              "printed": {
+                "remuneration": 23523355,
+                "expenses": 281919,
+                "rows": 206
+              },
+              "observed": {
+                "remuneration": 23523355,
+                "knownExpenses": 281919
+              }
+            }
+          }
+        },
+        {
+          "collection": "queue-completion-municipal",
+          "id": "queue-completion-municipal-mission-2025-elected-officials",
+          "employerSlug": "city-of-mission",
+          "year": "2025",
+          "category": "elected-officials",
+          "rows": 7,
+          "namedRows": 7,
+          "sourceUrl": "https://www.mission.ca/media/file/2025-sofi-reportpdf",
+          "sourceIndexUrl": "https://www.mission.ca/council-government/budget-finance/financial-reporting",
+          "sourceSha256": "23864d9e618e6ceaab92a67e06d38f43d7433e00b747ae53785d8f39f8822624",
+          "dataSha256": "ba4cf5785fca75af0ecf525c018a3e8068028cdecd90a187dd33d42d26817eb9",
+          "notes": [
+            "Every published name, title where present, separate remuneration and expense cell was checked on actual PDF-painted source images; independent Tesseract and Paddle OCR outputs and their source-reviewed corrections remain separate.",
+            "An independent peer transcribed the complete source-image scope before full candidate comparison. Prior context disclosures and reviewer-only rereads remain in the immutable peer receipts.",
+            "Repeated names or initials remain distinct literal observations; no identity merging, full-name enrichment, annualization or redistribution of aggregate amounts.",
+            "The separate source expense-inclusive Total column, when printed, is retained only in supporting evidence and is never substituted for remuneration.",
+            "Printed schedule year and signed approval are independently recorded; URL/upload dates are not used as reporting-year evidence.",
+            "Published remuneration meaning: Includes any form of salary, wage, gratuities and taxable benefits, including applicable vehicle allowances paid to the employee.",
+            "Published expense meaning: Includes travel expenses, memberships, tuition, relocation, vehicle reimbursements, and registration fees paid directly to an employee or to a third party on behalf of an employee.",
+            "Published relation to financial statements: Schedule is based on actual payments made during the year; financial statements are prepared on an accrual basis."
+          ],
+          "publicWarning": "This source contains the complete seven-person elected-official scope only; employee observations are a separate source. Two printed expense dashes remain null; known-expense sums do not impute those dashes as zero. Retain the compiled partition: no compatible same-calendar-year compiled cohort has been established. Root owns any future period mapping or deletion; full strict multiset comparison is pinned separately.",
+          "validation": {
+            "method": "Complete independent Tesseract and Paddle OCR geometry readers, complete author actual-original image review, and independent full-scope image-first peer transcription with final candidate comparison.",
+            "allFinalRowFieldsOriginalImageVerified": true,
+            "rawOcrReadersAgree": false,
+            "allRawMachineDifferencesOriginalImageResolved": true,
+            "completeEmployeeSchedule": false,
+            "compiledPartitionRetained": true,
+            "compiledPartitionRetentionReason": "Retain the compiled partition: no compatible same-calendar-year compiled cohort has been established. Root owns any future period mapping or deletion; full strict multiset comparison is pinned separately.",
+            "evidenceFile": "evidence/mission-2025-complete-source.json.gzip",
+            "evidenceSha256": "601a0943cbeb203bc1666eda91e2ade94bc25925744bd0e9e03c596e582780df",
+            "sourceContextReview": {
+              "path": "research/salaries/queue-completion-2026-11-01/municipal/mission-2025-context-review.json",
+              "sha256": "73b7ef06cb8e0de73f0a8fdcbb312a3bda639901b74a8c2665dec5bfd632fb57"
+            },
+            "independentPeerReview": {
+              "path": "research/salaries/queue-completion-2026-11-01/reviews/root-mission-2025-final-source-closure.json",
+              "sha256": "5af33206bc806e0bc74a609bed145681bb4de6c82a6c96e295cda4d0659a4dfc"
+            },
+            "salaryPagesReviewedInFull": [
+              6
+            ],
+            "periodEvidence": [
+              {
+                "physicalPage": 6,
+                "text": "For the year ended December 31, 2025"
+              },
+              {
+                "physicalPage": 7,
+                "text": "For the year ended December 31, 2025"
+              },
+              {
+                "physicalPage": 8,
+                "text": "For the year ended December 31, 2025"
+              },
+              {
+                "physicalPage": 9,
+                "text": "For the year ended December 31, 2025"
+              },
+              {
+                "physicalPage": 10,
+                "text": "For the year ended December 31, 2025"
+              }
+            ],
+            "signedApproval": {
+              "physicalPage": 1,
+              "statement": "Approves all statements and schedules included in this Statement of Financial Information.",
+              "signatories": [
+                {
+                  "name": "Doug Stewart, CPA, CGA",
+                  "position": "General Manager - Finance",
+                  "signedDate": "2026-06-15"
+                },
+                {
+                  "name": "Paul Horn",
+                  "position": "MAYOR on behalf of Council",
+                  "signedDate": "2026-06-15"
+                }
+              ],
+              "visuallySigned": true
+            },
+            "nullExpenses": 2,
+            "explicitZeroExpenses": 0,
+            "nullPositions": 0,
+            "controls": {
+              "printed": {
+                "remuneration": 418097,
+                "expenses": 15263,
+                "rows": 7
+              },
+              "observed": {
+                "remuneration": 418097,
+                "knownExpenses": 15263
+              }
+            }
+          }
         }
       ],
+      "heldOrUnparsedSources": [],
       "sourceLeadCount": 17,
       "explicitSalaryLeadCount": 3,
       "pagesChecked": 9,
@@ -50562,51 +51237,51 @@
         },
         {
           "url": "https://www.mission.ca/media/file/2023-sofi-report",
-          "label": "2023 SOFI Report [PDF/475KB]",
-          "status": "linked-unreviewed",
+          "label": "City of Mission 2023 elected-officials",
+          "status": "imported",
           "kind": "report-linked-unreviewed",
           "yearsMentioned": [
             "2023",
             "2023"
           ],
-          "periodVerified": false,
+          "periodVerified": true,
           "foundOn": [
-            "https://www.mission.ca/council-government/budget-finance/financial-reporting",
-            "https://www.mission.ca/media/file/2023-sofi-report"
+            "https://www.mission.ca/council-government/budget-finance/financial-reporting"
           ],
-          "discoveryFile": "discovery/city-of-mission.json"
+          "discoveryFile": "discovery/city-of-mission.json",
+          "calendarYear": "2023"
         },
         {
           "url": "https://www.mission.ca/media/file/2024-sofi-report",
-          "label": "2024 SOFI Report [PDF/510KB]",
-          "status": "linked-unreviewed",
+          "label": "City of Mission 2024 elected-officials",
+          "status": "imported",
           "kind": "report-linked-unreviewed",
           "yearsMentioned": [
             "2024",
             "2024"
           ],
-          "periodVerified": false,
+          "periodVerified": true,
           "foundOn": [
-            "https://www.mission.ca/council-government/budget-finance/financial-reporting",
-            "https://www.mission.ca/media/file/2024-sofi-report"
+            "https://www.mission.ca/council-government/budget-finance/financial-reporting"
           ],
-          "discoveryFile": "discovery/city-of-mission.json"
+          "discoveryFile": "discovery/city-of-mission.json",
+          "calendarYear": "2024"
         },
         {
           "url": "https://www.mission.ca/media/file/2025-sofi-reportpdf",
-          "label": "2025 SOFI Report [PDF/571KB]",
-          "status": "linked-unreviewed",
+          "label": "City of Mission 2025 elected-officials",
+          "status": "imported",
           "kind": "report-linked-unreviewed",
           "yearsMentioned": [
             "2025",
             "2025"
           ],
-          "periodVerified": false,
+          "periodVerified": true,
           "foundOn": [
-            "https://www.mission.ca/council-government/budget-finance/financial-reporting",
-            "https://www.mission.ca/media/file/2025-sofi-reportpdf"
+            "https://www.mission.ca/council-government/budget-finance/financial-reporting"
           ],
-          "discoveryFile": "discovery/city-of-mission.json"
+          "discoveryFile": "discovery/city-of-mission.json",
+          "calendarYear": "2025"
         },
         {
           "url": "https://www.mission.ca/media/file/annual-report-2024",
@@ -99879,16 +100554,219 @@
       "website": "http://www.vernon.ca",
       "directoryUrl": "https://www.civicinfo.bc.ca/municipalities?id=141",
       "status": "current",
-      "salaryStatus": "source-held-or-awaiting-extraction",
-      "nextAction": "Review retained OCR and original page images field by field, verify the reporting period and compensation columns, and reconcile the complete named controls; obtain an existing spreadsheet or clearer original if glyphs remain ambiguous.",
+      "salaryStatus": "official-employee-records-imported",
+      "nextAction": "Review remaining report years and council schedules; accepted employee years are not a claim of complete employment or historical coverage.",
       "archiveUrl": "https://www.vernon.ca/government-services/departments/financial-services/financial-statements-annual-reports",
-      "records": 0,
-      "officialRecords": 0,
+      "records": 271,
+      "officialRecords": 271,
       "compiledUnverifiedRecords": 0,
-      "officialEmployeeYears": [],
-      "officialCouncilYears": [],
+      "officialEmployeeYears": [
+        "2025"
+      ],
+      "officialCouncilYears": [
+        "2025"
+      ],
       "compiledUnverifiedEditionLabels": [],
-      "acceptedSources": [],
+      "acceptedSources": [
+        {
+          "collection": "queue-completion-municipal",
+          "id": "queue-completion-municipal-vernon-2025-employee-remuneration",
+          "employerSlug": "city-of-vernon",
+          "year": "2025",
+          "category": "employee-remuneration",
+          "rows": 264,
+          "namedRows": 264,
+          "sourceUrl": "https://www.vernon.ca/sites/default/files/2026-08/SOFI%20Signed%20-%20CORRECTED.pdf",
+          "sourceIndexUrl": "https://www.vernon.ca/government-services/departments/financial-services/financial-statements-annual-reports",
+          "sourceSha256": "83a9e5a60b67e1df5016762ab5e8bd9cc3fc054e55ddc28b1a4c1a8cff7d0197",
+          "dataSha256": "b04ebd02e091b7df43c9324ff38ed26a3e37d8080a85d66c5ada331b2398940e",
+          "notes": [
+            "Every published name, title where present, separate remuneration and expense cell was checked on actual PDF-painted source images; independent Tesseract and Paddle OCR outputs and their source-reviewed corrections remain separate.",
+            "An independent peer transcribed the complete source-image scope before full candidate comparison. Prior context disclosures and reviewer-only rereads remain in the immutable peer receipts.",
+            "Repeated names or initials remain distinct literal observations; no identity merging, full-name enrichment, annualization or redistribution of aggregate amounts.",
+            "The separate source expense-inclusive Total column, when printed, is retained only in supporting evidence and is never substituted for remuneration.",
+            "Printed schedule year and signed approval are independently recorded; URL/upload dates are not used as reporting-year evidence.",
+            "The official index links the corrected signed original. The cover labels SOFI unaudited; the signed approval page approves the statements and schedules. No audited-compensation claim is made.",
+            "Published remuneration meaning: Employee column: 2025 Gross Earnings. Council column: 2025 Remuneration.",
+            "Published expense meaning: Employee column: Expenses (Net of Tax). Council column: Expenses.",
+            "Published relation to financial statements: Total gross earnings differ from total wages included in the City's Consolidated Statement of Operations due to the employer portion of benefit costs."
+          ],
+          "publicWarning": "The 264 named employee rows total CAD 28,678,528 gross earnings and 380,683 expenses net of tax. Gross earnings agree with the printed named subtotal; the printed named-expense subtotal is 381,690, so literal row expenses minus that control are -1,007. Printed named expenses 381,690 plus below-threshold expenses 100,126 equal the printed all-employee expense total 481,816. Individual cells remain as printed, without balancing or a cause inferred. All 25 literal zero expenses remain 0. Employee job titles are not published and remain null. Retain the compiled partition: no compatible same-calendar-year compiled cohort has been established. Root owns any future period mapping or deletion; full strict multiset comparison is pinned separately.",
+          "validation": {
+            "method": "Complete independent Tesseract and Paddle OCR geometry readers, complete author actual-original image review, and independent full-scope image-first peer transcription with final candidate comparison.",
+            "allFinalRowFieldsOriginalImageVerified": true,
+            "rawOcrReadersAgree": false,
+            "allRawMachineDifferencesOriginalImageResolved": true,
+            "completeEmployeeSchedule": true,
+            "compiledPartitionRetained": true,
+            "compiledPartitionRetentionReason": "Retain the compiled partition: no compatible same-calendar-year compiled cohort has been established. Root owns any future period mapping or deletion; full strict multiset comparison is pinned separately.",
+            "evidenceFile": "evidence/vernon-2025-complete-source.json.gzip",
+            "evidenceSha256": "fd162efcc2844b6a4876c9c660fa4ac7b9c0e413864108b354f927efe4f83c52",
+            "sourceContextReview": {
+              "path": "research/salaries/queue-completion-2026-11-01/municipal/vernon-2025-context-review.json",
+              "sha256": "1e76b757683a24a93f9b3d45aac6234b577cf54724f2ad5da5369c8ce691c2cf"
+            },
+            "independentPeerReview": {
+              "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-vernon-queue-2025-final-source-closure.json",
+              "sha256": "80e277e477673e2840dcf861c7432415a39fd261febb52a651f9b520edd5a89f"
+            },
+            "salaryPagesReviewedInFull": [
+              5,
+              6,
+              7
+            ],
+            "periodEvidence": [
+              {
+                "physicalPage": 4,
+                "text": "2025 Remuneration"
+              },
+              {
+                "physicalPage": 5,
+                "text": "2025 Gross Earnings"
+              },
+              {
+                "physicalPage": 6,
+                "text": "2025 Gross Earnings"
+              },
+              {
+                "physicalPage": 7,
+                "text": "2025 Gross Earnings"
+              }
+            ],
+            "signedApproval": {
+              "physicalPage": 3,
+              "visuallySigned": true,
+              "statement": "Approves all the statements and schedules included in the Statement of Financial Information.",
+              "signatories": [
+                {
+                  "name": "Elma Hamming, CPA, CMA",
+                  "position": "Director, Financial Services",
+                  "signedDate": "2026-05-13"
+                },
+                {
+                  "name": "Victor I Cumming",
+                  "position": "Mayor",
+                  "signedDate": "2026-05-13"
+                }
+              ]
+            },
+            "nullExpenses": 0,
+            "explicitZeroExpenses": 25,
+            "nullPositions": 264,
+            "controls": {
+              "printed": {
+                "rows": 264,
+                "remuneration": 28678528,
+                "expenses": 381690
+              },
+              "observed": {
+                "remuneration": 28678528,
+                "knownExpenses": 380683
+              },
+              "namedRowsMinusPrinted": {
+                "remuneration": 0,
+                "expenses": -1007
+              }
+            }
+          }
+        },
+        {
+          "collection": "queue-completion-municipal",
+          "id": "queue-completion-municipal-vernon-2025-elected-officials",
+          "employerSlug": "city-of-vernon",
+          "year": "2025",
+          "category": "elected-officials",
+          "rows": 7,
+          "namedRows": 7,
+          "sourceUrl": "https://www.vernon.ca/sites/default/files/2026-08/SOFI%20Signed%20-%20CORRECTED.pdf",
+          "sourceIndexUrl": "https://www.vernon.ca/government-services/departments/financial-services/financial-statements-annual-reports",
+          "sourceSha256": "83a9e5a60b67e1df5016762ab5e8bd9cc3fc054e55ddc28b1a4c1a8cff7d0197",
+          "dataSha256": "d550c53fe7afff15491e97c93807d5fce0c1e4533e715bb848a972d5034f7a80",
+          "notes": [
+            "Every published name, title where present, separate remuneration and expense cell was checked on actual PDF-painted source images; independent Tesseract and Paddle OCR outputs and their source-reviewed corrections remain separate.",
+            "An independent peer transcribed the complete source-image scope before full candidate comparison. Prior context disclosures and reviewer-only rereads remain in the immutable peer receipts.",
+            "Repeated names or initials remain distinct literal observations; no identity merging, full-name enrichment, annualization or redistribution of aggregate amounts.",
+            "The separate source expense-inclusive Total column, when printed, is retained only in supporting evidence and is never substituted for remuneration.",
+            "Printed schedule year and signed approval are independently recorded; URL/upload dates are not used as reporting-year evidence.",
+            "The official index links the corrected signed original. The cover labels SOFI unaudited; the signed approval page approves the statements and schedules. No audited-compensation claim is made.",
+            "Published remuneration meaning: Employee column: 2025 Gross Earnings. Council column: 2025 Remuneration.",
+            "Published expense meaning: Employee column: Expenses (Net of Tax). Council column: Expenses.",
+            "Published relation to financial statements: Total gross earnings differ from total wages included in the City's Consolidated Statement of Operations due to the employer portion of benefit costs."
+          ],
+          "publicWarning": "This source contains the complete seven-person elected-official scope only; employee observations are a separate source. Retain the compiled partition: no compatible same-calendar-year compiled cohort has been established. Root owns any future period mapping or deletion; full strict multiset comparison is pinned separately.",
+          "validation": {
+            "method": "Complete independent Tesseract and Paddle OCR geometry readers, complete author actual-original image review, and independent full-scope image-first peer transcription with final candidate comparison.",
+            "allFinalRowFieldsOriginalImageVerified": true,
+            "rawOcrReadersAgree": false,
+            "allRawMachineDifferencesOriginalImageResolved": true,
+            "completeEmployeeSchedule": false,
+            "compiledPartitionRetained": true,
+            "compiledPartitionRetentionReason": "Retain the compiled partition: no compatible same-calendar-year compiled cohort has been established. Root owns any future period mapping or deletion; full strict multiset comparison is pinned separately.",
+            "evidenceFile": "evidence/vernon-2025-complete-source.json.gzip",
+            "evidenceSha256": "fd162efcc2844b6a4876c9c660fa4ac7b9c0e413864108b354f927efe4f83c52",
+            "sourceContextReview": {
+              "path": "research/salaries/queue-completion-2026-11-01/municipal/vernon-2025-context-review.json",
+              "sha256": "1e76b757683a24a93f9b3d45aac6234b577cf54724f2ad5da5369c8ce691c2cf"
+            },
+            "independentPeerReview": {
+              "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-vernon-queue-2025-final-source-closure.json",
+              "sha256": "80e277e477673e2840dcf861c7432415a39fd261febb52a651f9b520edd5a89f"
+            },
+            "salaryPagesReviewedInFull": [
+              4
+            ],
+            "periodEvidence": [
+              {
+                "physicalPage": 4,
+                "text": "2025 Remuneration"
+              },
+              {
+                "physicalPage": 5,
+                "text": "2025 Gross Earnings"
+              },
+              {
+                "physicalPage": 6,
+                "text": "2025 Gross Earnings"
+              },
+              {
+                "physicalPage": 7,
+                "text": "2025 Gross Earnings"
+              }
+            ],
+            "signedApproval": {
+              "physicalPage": 3,
+              "visuallySigned": true,
+              "statement": "Approves all the statements and schedules included in the Statement of Financial Information.",
+              "signatories": [
+                {
+                  "name": "Elma Hamming, CPA, CMA",
+                  "position": "Director, Financial Services",
+                  "signedDate": "2026-05-13"
+                },
+                {
+                  "name": "Victor I Cumming",
+                  "position": "Mayor",
+                  "signedDate": "2026-05-13"
+                }
+              ]
+            },
+            "nullExpenses": 0,
+            "explicitZeroExpenses": 0,
+            "nullPositions": 0,
+            "controls": {
+              "printed": {
+                "rows": 7,
+                "remuneration": 395681,
+                "expenses": 31191
+              },
+              "observed": {
+                "remuneration": 395681,
+                "knownExpenses": 31191
+              }
+            }
+          }
+        }
+      ],
       "heldOrUnparsedSources": [
         {
           "id": "vernon-sofi-2025",
@@ -100004,14 +100882,14 @@
         },
         {
           "url": "https://www.vernon.ca/sites/default/files/2026-08/SOFI%20Signed%20-%20CORRECTED.pdf",
-          "label": "City of Vernon 2025 disclosure",
-          "status": "held-for-review",
+          "label": "City of Vernon 2025 elected-officials",
+          "status": "imported",
           "kind": "report-linked-unreviewed",
           "yearsMentioned": [
             "2025",
             "2026"
           ],
-          "periodVerified": false,
+          "periodVerified": true,
           "foundOn": [
             "https://www.vernon.ca/government-services/departments/financial-services/financial-statements-annual-reports"
           ],
@@ -100023,7 +100901,8 @@
             "Archive label alone does not establish the reporting period.",
             "Original audit blocker: Corrected signed report obtained; named employee tables are image-based (physical page 5 visually checked) and are absent from text extraction. OCR with row and subtotal verification is required.",
             "OCR evidence: research/salaries/municipal-ocr/staging/vernon-sofi-2025.json.gzip"
-          ]
+          ],
+          "calendarYear": "2025"
         },
         {
           "url": "https://www.vernon.ca/sites/default/files/docs/financial/annual_reports/2017_annual_report.pdf",

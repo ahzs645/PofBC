@@ -1,0 +1,21 @@
+{
+  "active": false,
+  "reason": "Builder correctly rejected data paths outside a source collection before replacing any published outputs. Preserve the failed prototype; release v2 uses byte-identical payload copies within its own collection. The source-path security guard remains unchanged.",
+  "files": [
+    {
+      "originalPath": "scripts/finish_salary_queue_release_inputs.py",
+      "archivedPath": "research/salaries/queue-completion-2026-11-01/integration/release-inputs-v1/finish_salary_queue_release_inputs.py",
+      "sha256": "2447657547fda2ba463276ded3bed3d5ca267e2cadd6aed3dcd44c3a16eba29d"
+    },
+    {
+      "originalPath": "research/salaries/queue-completion-acquisition-release/sources.json",
+      "archivedPath": "research/salaries/queue-completion-2026-11-01/integration/release-inputs-v1/sources.json",
+      "sha256": "b4ff241522118fb82661c6530ccebf00783cb61f427184fdbb0a5e07a446ce32"
+    },
+    {
+      "originalPath": "research/salaries/queue-completion-2026-11-01/integration/acquisition-metadata-adoption.json",
+      "archivedPath": "research/salaries/queue-completion-2026-11-01/integration/release-inputs-v1/acquisition-metadata-adoption.json",
+      "sha256": "6b9dd584d68384708bf4310f84fd7d4476b135fa8805477f09e07282c31eaa3a"
+    }
+  ]
+}

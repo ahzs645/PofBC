@@ -1,0 +1,958 @@
+{
+  "frozen": true,
+  "adapter": "count-independent-source-money-peer-v1",
+  "sourceReceiptSchema": "separate-frozen-source-readers-v1",
+  "peerInputs": [
+    {
+      "path": "research/salaries/queue-completion-2026-11-01/reviews/root-phsa-history-2019-20-batch-003-money-peer-comparison.json",
+      "sha256": "67b66e174ea54d2c3425447db8a9756e7986b485dfa805083b1ec8a8bf032887"
+    },
+    {
+      "path": "research/salaries/queue-completion-2026-11-01/reviews/root-phsa-history-2019-20-batch-003-money-peer-image-first.json",
+      "sha256": "0f87487c5ce27363fc9df239b1d06bf5b63a6982c1a196a1295c8f751ebefe7e"
+    },
+    {
+      "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-history-batches-2019-20-003-money-author-choices.json",
+      "sha256": "6dd9baf8896c43200a8312f54c370c8ef21f7f71f1357ba51288fd684378e212"
+    },
+    {
+      "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-history-batches-2019-20-003-money-source-only-peer.json",
+      "sha256": "a4ef76be277b6a0bd270a86fd5c65a72eea4a7f1109467cb8e3fb77cdc1d0242"
+    },
+    {
+      "path": "research/salaries/queue-completion-2026-11-01/reviews/root-phsa-history-2019-20-batch-003-money-source-pixel-proof.json",
+      "sha256": "e61a7f1965211d3e152eaf91fd192609a31b846084f5b971e9e1334f50911600"
+    },
+    {
+      "path": "research/salaries/queue-completion-2026-11-01/reviews/root-phsa-history-2019-20-batch-003-money-peer-own-reading-amendment.json",
+      "sha256": "348529fcc870cf2cfdf2f50dc7b45e267a976e25700d72c21ffbbb8b9b830f1a"
+    },
+    {
+      "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-history-batches-2019-20-003-original-transcript-v2.json",
+      "sha256": "91d611ebe883a2e1c2a24fcba8eb7c2d363cd0a22ad74bad927b394e5dc12156"
+    },
+    {
+      "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-history-batches-2019-20-003-postcomparison-own-money-source-reread.json",
+      "sha256": "9ac89d911570eafff5b9c8c350e6755b4d63f3e4865c27e1ce457c475c22ee4e"
+    }
+  ],
+  "confirmations": [
+    {
+      "sourceId": "phsa-2019-20",
+      "sourceSha256": "0e31ac2054f0c2d4ef78797185dddd96cc0cdf2eab94bd6841fa24e1c38e7d02",
+      "physicalPage": 13,
+      "sourceRowOnPage": 41,
+      "field": "expenses",
+      "confirmedValue": 4301,
+      "effectiveAuthorOverlay": {
+        "path": "research/salaries/queue-completion-2026-11-01/phsa/overlays/phsa-2019-20-manual-overlay-003.json",
+        "sha256": "53b8c2190bde3f6fd02d72776566f81f1277363a1ce062703b7878f9d5fe10de"
+      },
+      "peerComparison": {
+        "path": "research/salaries/queue-completion-2026-11-01/reviews/root-phsa-history-2019-20-batch-003-money-peer-comparison.json",
+        "sha256": "67b66e174ea54d2c3425447db8a9756e7986b485dfa805083b1ec8a8bf032887"
+      },
+      "freshSourceImage": {
+        "path": "/tmp/independent-phsa-history-2019-003-money-peer/seq001-expenses-600.png",
+        "sha256": "0aca5757e0f18359fe25e14107bea04f1d3b550ba9df4d4b0bf4f2fd020f4c21"
+      },
+      "imageFirstTranscript": {
+        "path": "research/salaries/queue-completion-2026-11-01/reviews/root-phsa-history-2019-20-batch-003-money-peer-image-first.json",
+        "sha256": "0f87487c5ce27363fc9df239b1d06bf5b63a6982c1a196a1295c8f751ebefe7e"
+      }
+    },
+    {
+      "sourceId": "phsa-2019-20",
+      "sourceSha256": "0e31ac2054f0c2d4ef78797185dddd96cc0cdf2eab94bd6841fa24e1c38e7d02",
+      "physicalPage": 13,
+      "sourceRowOnPage": 44,
+      "field": "remuneration",
+      "confirmedValue": 179893,
+      "effectiveAuthorOverlay": {
+        "path": "research/salaries/queue-completion-2026-11-01/phsa/overlays/phsa-2019-20-manual-overlay-003.json",
+        "sha256": "53b8c2190bde3f6fd02d72776566f81f1277363a1ce062703b7878f9d5fe10de"
+      },
+      "peerComparison": {
+        "path": "research/salaries/queue-completion-2026-11-01/reviews/root-phsa-history-2019-20-batch-003-money-peer-comparison.json",
+        "sha256": "67b66e174ea54d2c3425447db8a9756e7986b485dfa805083b1ec8a8bf032887"
+      },
+      "freshSourceImage": {
+        "path": "/tmp/independent-phsa-history-2019-003-money-peer/seq003-remuneration-600.png",
+        "sha256": "25b2f9a56d484fe0b02e85a5a0797951befbd6ffef176b9e4c0db918f94b35ee"
+      },
+      "imageFirstTranscript": {
+        "path": "research/salaries/queue-completion-2026-11-01/reviews/root-phsa-history-2019-20-batch-003-money-peer-image-first.json",
+        "sha256": "0f87487c5ce27363fc9df239b1d06bf5b63a6982c1a196a1295c8f751ebefe7e"
+      }
+    },
+    {
+      "sourceId": "phsa-2019-20",
+      "sourceSha256": "0e31ac2054f0c2d4ef78797185dddd96cc0cdf2eab94bd6841fa24e1c38e7d02",
+      "physicalPage": 13,
+      "sourceRowOnPage": 44,
+      "field": "expenses",
+      "confirmedValue": 5252,
+      "effectiveAuthorOverlay": {
+        "path": "research/salaries/queue-completion-2026-11-01/phsa/overlays/phsa-2019-20-manual-overlay-003.json",
+        "sha256": "53b8c2190bde3f6fd02d72776566f81f1277363a1ce062703b7878f9d5fe10de"
+      },
+      "peerComparison": {
+        "path": "research/salaries/queue-completion-2026-11-01/reviews/root-phsa-history-2019-20-batch-003-money-peer-comparison.json",
+        "sha256": "67b66e174ea54d2c3425447db8a9756e7986b485dfa805083b1ec8a8bf032887"
+      },
+      "freshSourceImage": {
+        "path": "/tmp/independent-phsa-history-2019-003-money-peer/seq003-expenses-600.png",
+        "sha256": "4052e70250625c2cab56cd9e55ca9fc5a9fee623d1aed31195e3b2bf3f91cca7"
+      },
+      "imageFirstTranscript": {
+        "path": "research/salaries/queue-completion-2026-11-01/reviews/root-phsa-history-2019-20-batch-003-money-peer-image-first.json",
+        "sha256": "0f87487c5ce27363fc9df239b1d06bf5b63a6982c1a196a1295c8f751ebefe7e"
+      }
+    },
+    {
+      "sourceId": "phsa-2019-20",
+      "sourceSha256": "0e31ac2054f0c2d4ef78797185dddd96cc0cdf2eab94bd6841fa24e1c38e7d02",
+      "physicalPage": 13,
+      "sourceRowOnPage": 57,
+      "field": "remuneration",
+      "confirmedValue": 81243,
+      "effectiveAuthorOverlay": {
+        "path": "research/salaries/queue-completion-2026-11-01/phsa/overlays/phsa-2019-20-manual-overlay-003.json",
+        "sha256": "53b8c2190bde3f6fd02d72776566f81f1277363a1ce062703b7878f9d5fe10de"
+      },
+      "peerComparison": {
+        "path": "research/salaries/queue-completion-2026-11-01/reviews/root-phsa-history-2019-20-batch-003-money-peer-comparison.json",
+        "sha256": "67b66e174ea54d2c3425447db8a9756e7986b485dfa805083b1ec8a8bf032887"
+      },
+      "freshSourceImage": {
+        "path": "/tmp/independent-phsa-history-2019-003-money-peer/seq012-remuneration-600.png",
+        "sha256": "f81173a318ba62b7a9e30a0d6a47530b133952eafe2a6e84afd6d2b4a71ff4d7"
+      },
+      "imageFirstTranscript": {
+        "path": "research/salaries/queue-completion-2026-11-01/reviews/root-phsa-history-2019-20-batch-003-money-peer-image-first.json",
+        "sha256": "0f87487c5ce27363fc9df239b1d06bf5b63a6982c1a196a1295c8f751ebefe7e"
+      }
+    },
+    {
+      "sourceId": "phsa-2019-20",
+      "sourceSha256": "0e31ac2054f0c2d4ef78797185dddd96cc0cdf2eab94bd6841fa24e1c38e7d02",
+      "physicalPage": 14,
+      "sourceRowOnPage": 10,
+      "field": "remuneration",
+      "confirmedValue": 84299,
+      "effectiveAuthorOverlay": {
+        "path": "research/salaries/queue-completion-2026-11-01/phsa/overlays/phsa-2019-20-manual-overlay-003.json",
+        "sha256": "53b8c2190bde3f6fd02d72776566f81f1277363a1ce062703b7878f9d5fe10de"
+      },
+      "peerComparison": {
+        "path": "research/salaries/queue-completion-2026-11-01/reviews/root-phsa-history-2019-20-batch-003-money-peer-comparison.json",
+        "sha256": "67b66e174ea54d2c3425447db8a9756e7986b485dfa805083b1ec8a8bf032887"
+      },
+      "freshSourceImage": {
+        "path": "/tmp/independent-phsa-history-2019-003-money-peer/seq022-remuneration-600.png",
+        "sha256": "8eb66cd5021e0a466bc57a7eca2664fdeba1681669c5a9726cd4459e7f8ee6af"
+      },
+      "imageFirstTranscript": {
+        "path": "research/salaries/queue-completion-2026-11-01/reviews/root-phsa-history-2019-20-batch-003-money-peer-image-first.json",
+        "sha256": "0f87487c5ce27363fc9df239b1d06bf5b63a6982c1a196a1295c8f751ebefe7e"
+      }
+    },
+    {
+      "sourceId": "phsa-2019-20",
+      "sourceSha256": "0e31ac2054f0c2d4ef78797185dddd96cc0cdf2eab94bd6841fa24e1c38e7d02",
+      "physicalPage": 14,
+      "sourceRowOnPage": 53,
+      "field": "remuneration",
+      "confirmedValue": 82884,
+      "effectiveAuthorOverlay": {
+        "path": "research/salaries/queue-completion-2026-11-01/phsa/overlays/phsa-2019-20-manual-overlay-003.json",
+        "sha256": "53b8c2190bde3f6fd02d72776566f81f1277363a1ce062703b7878f9d5fe10de"
+      },
+      "peerComparison": {
+        "path": "research/salaries/queue-completion-2026-11-01/reviews/root-phsa-history-2019-20-batch-003-money-peer-comparison.json",
+        "sha256": "67b66e174ea54d2c3425447db8a9756e7986b485dfa805083b1ec8a8bf032887"
+      },
+      "freshSourceImage": {
+        "path": "/tmp/independent-phsa-history-2019-003-money-peer/seq055-remuneration-600.png",
+        "sha256": "acb1eb756519c28d59012ab1edb168dbc68469d0ba95c1ec0c8f600122b82448"
+      },
+      "imageFirstTranscript": {
+        "path": "research/salaries/queue-completion-2026-11-01/reviews/root-phsa-history-2019-20-batch-003-money-peer-image-first.json",
+        "sha256": "0f87487c5ce27363fc9df239b1d06bf5b63a6982c1a196a1295c8f751ebefe7e"
+      }
+    },
+    {
+      "sourceId": "phsa-2019-20",
+      "sourceSha256": "0e31ac2054f0c2d4ef78797185dddd96cc0cdf2eab94bd6841fa24e1c38e7d02",
+      "physicalPage": 15,
+      "sourceRowOnPage": 5,
+      "field": "remuneration",
+      "confirmedValue": 89327,
+      "effectiveAuthorOverlay": {
+        "path": "research/salaries/queue-completion-2026-11-01/phsa/overlays/phsa-2019-20-manual-overlay-003.json",
+        "sha256": "53b8c2190bde3f6fd02d72776566f81f1277363a1ce062703b7878f9d5fe10de"
+      },
+      "peerComparison": {
+        "path": "research/salaries/queue-completion-2026-11-01/reviews/root-phsa-history-2019-20-batch-003-money-peer-comparison.json",
+        "sha256": "67b66e174ea54d2c3425447db8a9756e7986b485dfa805083b1ec8a8bf032887"
+      },
+      "freshSourceImage": {
+        "path": "/tmp/independent-phsa-history-2019-003-money-peer/seq062-remuneration-600.png",
+        "sha256": "4d4ebb05c3a3af1ae50bff3b03b7d0628291018426d6a415d7d9a24c1e539390"
+      },
+      "imageFirstTranscript": {
+        "path": "research/salaries/queue-completion-2026-11-01/reviews/root-phsa-history-2019-20-batch-003-money-peer-image-first.json",
+        "sha256": "0f87487c5ce27363fc9df239b1d06bf5b63a6982c1a196a1295c8f751ebefe7e"
+      }
+    },
+    {
+      "sourceId": "phsa-2019-20",
+      "sourceSha256": "0e31ac2054f0c2d4ef78797185dddd96cc0cdf2eab94bd6841fa24e1c38e7d02",
+      "physicalPage": 15,
+      "sourceRowOnPage": 6,
+      "field": "expenses",
+      "confirmedValue": 8306,
+      "effectiveAuthorOverlay": {
+        "path": "research/salaries/queue-completion-2026-11-01/phsa/overlays/phsa-2019-20-manual-overlay-003.json",
+        "sha256": "53b8c2190bde3f6fd02d72776566f81f1277363a1ce062703b7878f9d5fe10de"
+      },
+      "peerComparison": {
+        "path": "research/salaries/queue-completion-2026-11-01/reviews/root-phsa-history-2019-20-batch-003-money-peer-comparison.json",
+        "sha256": "67b66e174ea54d2c3425447db8a9756e7986b485dfa805083b1ec8a8bf032887"
+      },
+      "freshSourceImage": {
+        "path": "/tmp/independent-phsa-history-2019-003-money-peer/seq063-expenses-600.png",
+        "sha256": "dbc72f814cfc27d7dde22ea0ce987d7025913d7147076513e335e06fa307da5c"
+      },
+      "imageFirstTranscript": {
+        "path": "research/salaries/queue-completion-2026-11-01/reviews/root-phsa-history-2019-20-batch-003-money-peer-image-first.json",
+        "sha256": "0f87487c5ce27363fc9df239b1d06bf5b63a6982c1a196a1295c8f751ebefe7e"
+      }
+    },
+    {
+      "sourceId": "phsa-2019-20",
+      "sourceSha256": "0e31ac2054f0c2d4ef78797185dddd96cc0cdf2eab94bd6841fa24e1c38e7d02",
+      "physicalPage": 15,
+      "sourceRowOnPage": 10,
+      "field": "remuneration",
+      "confirmedValue": 84941,
+      "effectiveAuthorOverlay": {
+        "path": "research/salaries/queue-completion-2026-11-01/phsa/overlays/phsa-2019-20-manual-overlay-003.json",
+        "sha256": "53b8c2190bde3f6fd02d72776566f81f1277363a1ce062703b7878f9d5fe10de"
+      },
+      "peerComparison": {
+        "path": "research/salaries/queue-completion-2026-11-01/reviews/root-phsa-history-2019-20-batch-003-money-peer-comparison.json",
+        "sha256": "67b66e174ea54d2c3425447db8a9756e7986b485dfa805083b1ec8a8bf032887"
+      },
+      "freshSourceImage": {
+        "path": "/tmp/independent-phsa-history-2019-003-money-peer/seq067-remuneration-600.png",
+        "sha256": "4e05fbeb3f4f0313d9404716bbfa3d46c055c3e0f554297e88815a9d0435321f"
+      },
+      "imageFirstTranscript": {
+        "path": "research/salaries/queue-completion-2026-11-01/reviews/root-phsa-history-2019-20-batch-003-money-peer-image-first.json",
+        "sha256": "0f87487c5ce27363fc9df239b1d06bf5b63a6982c1a196a1295c8f751ebefe7e"
+      }
+    },
+    {
+      "sourceId": "phsa-2019-20",
+      "sourceSha256": "0e31ac2054f0c2d4ef78797185dddd96cc0cdf2eab94bd6841fa24e1c38e7d02",
+      "physicalPage": 15,
+      "sourceRowOnPage": 31,
+      "field": "remuneration",
+      "confirmedValue": 79812,
+      "effectiveAuthorOverlay": {
+        "path": "research/salaries/queue-completion-2026-11-01/phsa/overlays/phsa-2019-20-manual-overlay-003.json",
+        "sha256": "53b8c2190bde3f6fd02d72776566f81f1277363a1ce062703b7878f9d5fe10de"
+      },
+      "peerComparison": {
+        "path": "research/salaries/queue-completion-2026-11-01/reviews/root-phsa-history-2019-20-batch-003-money-peer-comparison.json",
+        "sha256": "67b66e174ea54d2c3425447db8a9756e7986b485dfa805083b1ec8a8bf032887"
+      },
+      "freshSourceImage": {
+        "path": "/tmp/independent-phsa-history-2019-003-money-peer/seq083-remuneration-600.png",
+        "sha256": "960724c29287c74e2da9bfbc190eb6f11392ea281e5631e02800731ba7d53ef5"
+      },
+      "imageFirstTranscript": {
+        "path": "research/salaries/queue-completion-2026-11-01/reviews/root-phsa-history-2019-20-batch-003-money-peer-image-first.json",
+        "sha256": "0f87487c5ce27363fc9df239b1d06bf5b63a6982c1a196a1295c8f751ebefe7e"
+      }
+    },
+    {
+      "sourceId": "phsa-2019-20",
+      "sourceSha256": "0e31ac2054f0c2d4ef78797185dddd96cc0cdf2eab94bd6841fa24e1c38e7d02",
+      "physicalPage": 15,
+      "sourceRowOnPage": 41,
+      "field": "expenses",
+      "confirmedValue": 7289,
+      "effectiveAuthorOverlay": {
+        "path": "research/salaries/queue-completion-2026-11-01/phsa/overlays/phsa-2019-20-manual-overlay-003.json",
+        "sha256": "53b8c2190bde3f6fd02d72776566f81f1277363a1ce062703b7878f9d5fe10de"
+      },
+      "peerComparison": {
+        "path": "research/salaries/queue-completion-2026-11-01/reviews/root-phsa-history-2019-20-batch-003-money-peer-comparison.json",
+        "sha256": "67b66e174ea54d2c3425447db8a9756e7986b485dfa805083b1ec8a8bf032887"
+      },
+      "freshSourceImage": {
+        "path": "/tmp/independent-phsa-history-2019-003-money-peer/seq091-expenses-600.png",
+        "sha256": "5414b83a0f70b72e3acf043406a0459aed57c1ac94569acef37b6e084c2ae2c5"
+      },
+      "imageFirstTranscript": {
+        "path": "research/salaries/queue-completion-2026-11-01/reviews/root-phsa-history-2019-20-batch-003-money-peer-image-first.json",
+        "sha256": "0f87487c5ce27363fc9df239b1d06bf5b63a6982c1a196a1295c8f751ebefe7e"
+      }
+    },
+    {
+      "sourceId": "phsa-2019-20",
+      "sourceSha256": "0e31ac2054f0c2d4ef78797185dddd96cc0cdf2eab94bd6841fa24e1c38e7d02",
+      "physicalPage": 15,
+      "sourceRowOnPage": 47,
+      "field": "expenses",
+      "confirmedValue": 2506,
+      "effectiveAuthorOverlay": {
+        "path": "research/salaries/queue-completion-2026-11-01/phsa/overlays/phsa-2019-20-manual-overlay-003.json",
+        "sha256": "53b8c2190bde3f6fd02d72776566f81f1277363a1ce062703b7878f9d5fe10de"
+      },
+      "peerComparison": {
+        "path": "research/salaries/queue-completion-2026-11-01/reviews/root-phsa-history-2019-20-batch-003-money-peer-comparison.json",
+        "sha256": "67b66e174ea54d2c3425447db8a9756e7986b485dfa805083b1ec8a8bf032887"
+      },
+      "freshSourceImage": {
+        "path": "/tmp/independent-phsa-history-2019-003-money-peer/seq096-expenses-600.png",
+        "sha256": "55cd393bc50704aa4ab2f430480b091409187e2ff9f49a98230c1c604bbf8ee0"
+      },
+      "imageFirstTranscript": {
+        "path": "research/salaries/queue-completion-2026-11-01/reviews/root-phsa-history-2019-20-batch-003-money-peer-image-first.json",
+        "sha256": "0f87487c5ce27363fc9df239b1d06bf5b63a6982c1a196a1295c8f751ebefe7e"
+      }
+    },
+    {
+      "sourceId": "phsa-2019-20",
+      "sourceSha256": "0e31ac2054f0c2d4ef78797185dddd96cc0cdf2eab94bd6841fa24e1c38e7d02",
+      "physicalPage": 15,
+      "sourceRowOnPage": 50,
+      "field": "remuneration",
+      "confirmedValue": 87023,
+      "effectiveAuthorOverlay": {
+        "path": "research/salaries/queue-completion-2026-11-01/phsa/overlays/phsa-2019-20-manual-overlay-003.json",
+        "sha256": "53b8c2190bde3f6fd02d72776566f81f1277363a1ce062703b7878f9d5fe10de"
+      },
+      "peerComparison": {
+        "path": "research/salaries/queue-completion-2026-11-01/reviews/root-phsa-history-2019-20-batch-003-money-peer-comparison.json",
+        "sha256": "67b66e174ea54d2c3425447db8a9756e7986b485dfa805083b1ec8a8bf032887"
+      },
+      "freshSourceImage": {
+        "path": "/tmp/independent-phsa-history-2019-003-money-peer/seq099-remuneration-600.png",
+        "sha256": "6c806eba53e24cca95e5c1c80e3398e2a2f0e8755588078669bc17f6ee7a16ba"
+      },
+      "imageFirstTranscript": {
+        "path": "research/salaries/queue-completion-2026-11-01/reviews/root-phsa-history-2019-20-batch-003-money-peer-image-first.json",
+        "sha256": "0f87487c5ce27363fc9df239b1d06bf5b63a6982c1a196a1295c8f751ebefe7e"
+      }
+    },
+    {
+      "sourceId": "phsa-2019-20",
+      "sourceSha256": "0e31ac2054f0c2d4ef78797185dddd96cc0cdf2eab94bd6841fa24e1c38e7d02",
+      "physicalPage": 16,
+      "sourceRowOnPage": 2,
+      "field": "expenses",
+      "confirmedValue": 5235,
+      "effectiveAuthorOverlay": {
+        "path": "research/salaries/queue-completion-2026-11-01/phsa/overlays/phsa-2019-20-manual-overlay-003.json",
+        "sha256": "53b8c2190bde3f6fd02d72776566f81f1277363a1ce062703b7878f9d5fe10de"
+      },
+      "peerComparison": {
+        "path": "research/salaries/queue-completion-2026-11-01/reviews/root-phsa-history-2019-20-batch-003-money-peer-comparison.json",
+        "sha256": "67b66e174ea54d2c3425447db8a9756e7986b485dfa805083b1ec8a8bf032887"
+      },
+      "freshSourceImage": {
+        "path": "/tmp/independent-phsa-history-2019-003-money-peer/seq107-expenses-600.png",
+        "sha256": "3fc121f469ba2f1dc717f2b4353d65d9ff40441c1514ba5e937f078f645e3de8"
+      },
+      "imageFirstTranscript": {
+        "path": "research/salaries/queue-completion-2026-11-01/reviews/root-phsa-history-2019-20-batch-003-money-peer-image-first.json",
+        "sha256": "0f87487c5ce27363fc9df239b1d06bf5b63a6982c1a196a1295c8f751ebefe7e"
+      }
+    },
+    {
+      "sourceId": "phsa-2019-20",
+      "sourceSha256": "0e31ac2054f0c2d4ef78797185dddd96cc0cdf2eab94bd6841fa24e1c38e7d02",
+      "physicalPage": 16,
+      "sourceRowOnPage": 6,
+      "field": "remuneration",
+      "confirmedValue": 89836,
+      "effectiveAuthorOverlay": {
+        "path": "research/salaries/queue-completion-2026-11-01/phsa/overlays/phsa-2019-20-manual-overlay-003.json",
+        "sha256": "53b8c2190bde3f6fd02d72776566f81f1277363a1ce062703b7878f9d5fe10de"
+      },
+      "peerComparison": {
+        "path": "research/salaries/queue-completion-2026-11-01/reviews/root-phsa-history-2019-20-batch-003-money-peer-comparison.json",
+        "sha256": "67b66e174ea54d2c3425447db8a9756e7986b485dfa805083b1ec8a8bf032887"
+      },
+      "freshSourceImage": {
+        "path": "/tmp/independent-phsa-history-2019-003-money-peer/seq111-remuneration-600.png",
+        "sha256": "39f2c4d36e5d2cb3380b57ced9fd0762d809d844357e391318b8f426312d00d3"
+      },
+      "imageFirstTranscript": {
+        "path": "research/salaries/queue-completion-2026-11-01/reviews/root-phsa-history-2019-20-batch-003-money-peer-image-first.json",
+        "sha256": "0f87487c5ce27363fc9df239b1d06bf5b63a6982c1a196a1295c8f751ebefe7e"
+      }
+    },
+    {
+      "sourceId": "phsa-2019-20",
+      "sourceSha256": "0e31ac2054f0c2d4ef78797185dddd96cc0cdf2eab94bd6841fa24e1c38e7d02",
+      "physicalPage": 16,
+      "sourceRowOnPage": 13,
+      "field": "expenses",
+      "confirmedValue": 7235,
+      "effectiveAuthorOverlay": {
+        "path": "research/salaries/queue-completion-2026-11-01/phsa/overlays/phsa-2019-20-manual-overlay-003.json",
+        "sha256": "53b8c2190bde3f6fd02d72776566f81f1277363a1ce062703b7878f9d5fe10de"
+      },
+      "peerComparison": {
+        "path": "research/salaries/queue-completion-2026-11-01/reviews/root-phsa-history-2019-20-batch-003-money-peer-comparison.json",
+        "sha256": "67b66e174ea54d2c3425447db8a9756e7986b485dfa805083b1ec8a8bf032887"
+      },
+      "freshSourceImage": {
+        "path": "/tmp/independent-phsa-history-2019-003-money-peer/seq117-expenses-600.png",
+        "sha256": "fb0bcfaf40c5b4be4b3c32c620d1332bb5e0e47dd11fcac96d9263c26f0acea4"
+      },
+      "imageFirstTranscript": {
+        "path": "research/salaries/queue-completion-2026-11-01/reviews/root-phsa-history-2019-20-batch-003-money-peer-image-first.json",
+        "sha256": "0f87487c5ce27363fc9df239b1d06bf5b63a6982c1a196a1295c8f751ebefe7e"
+      }
+    },
+    {
+      "sourceId": "phsa-2019-20",
+      "sourceSha256": "0e31ac2054f0c2d4ef78797185dddd96cc0cdf2eab94bd6841fa24e1c38e7d02",
+      "physicalPage": 16,
+      "sourceRowOnPage": 22,
+      "field": "expenses",
+      "confirmedValue": 7021,
+      "effectiveAuthorOverlay": {
+        "path": "research/salaries/queue-completion-2026-11-01/phsa/overlays/phsa-2019-20-manual-overlay-003.json",
+        "sha256": "53b8c2190bde3f6fd02d72776566f81f1277363a1ce062703b7878f9d5fe10de"
+      },
+      "peerComparison": {
+        "path": "research/salaries/queue-completion-2026-11-01/reviews/root-phsa-history-2019-20-batch-003-money-peer-comparison.json",
+        "sha256": "67b66e174ea54d2c3425447db8a9756e7986b485dfa805083b1ec8a8bf032887"
+      },
+      "freshSourceImage": {
+        "path": "/tmp/independent-phsa-history-2019-003-money-peer/seq124-expenses-600.png",
+        "sha256": "b389cfcf2a664a5180886cb38a5a8403866c3d7472a5e207fd177ea18daa440b"
+      },
+      "imageFirstTranscript": {
+        "path": "research/salaries/queue-completion-2026-11-01/reviews/root-phsa-history-2019-20-batch-003-money-peer-image-first.json",
+        "sha256": "0f87487c5ce27363fc9df239b1d06bf5b63a6982c1a196a1295c8f751ebefe7e"
+      }
+    },
+    {
+      "sourceId": "phsa-2019-20",
+      "sourceSha256": "0e31ac2054f0c2d4ef78797185dddd96cc0cdf2eab94bd6841fa24e1c38e7d02",
+      "physicalPage": 16,
+      "sourceRowOnPage": 27,
+      "field": "remuneration",
+      "confirmedValue": 98353,
+      "effectiveAuthorOverlay": {
+        "path": "research/salaries/queue-completion-2026-11-01/phsa/overlays/phsa-2019-20-manual-overlay-003.json",
+        "sha256": "53b8c2190bde3f6fd02d72776566f81f1277363a1ce062703b7878f9d5fe10de"
+      },
+      "peerComparison": {
+        "path": "research/salaries/queue-completion-2026-11-01/reviews/root-phsa-history-2019-20-batch-003-money-peer-comparison.json",
+        "sha256": "67b66e174ea54d2c3425447db8a9756e7986b485dfa805083b1ec8a8bf032887"
+      },
+      "freshSourceImage": {
+        "path": "/tmp/independent-phsa-history-2019-003-money-peer/seq129-remuneration-600.png",
+        "sha256": "1189f99d2fb22603646365c883a10023b7c796e3151c9dd8be440d3122636f70"
+      },
+      "imageFirstTranscript": {
+        "path": "research/salaries/queue-completion-2026-11-01/reviews/root-phsa-history-2019-20-batch-003-money-peer-image-first.json",
+        "sha256": "0f87487c5ce27363fc9df239b1d06bf5b63a6982c1a196a1295c8f751ebefe7e"
+      }
+    },
+    {
+      "sourceId": "phsa-2019-20",
+      "sourceSha256": "0e31ac2054f0c2d4ef78797185dddd96cc0cdf2eab94bd6841fa24e1c38e7d02",
+      "physicalPage": 16,
+      "sourceRowOnPage": 30,
+      "field": "remuneration",
+      "confirmedValue": 85543,
+      "effectiveAuthorOverlay": {
+        "path": "research/salaries/queue-completion-2026-11-01/phsa/overlays/phsa-2019-20-manual-overlay-003.json",
+        "sha256": "53b8c2190bde3f6fd02d72776566f81f1277363a1ce062703b7878f9d5fe10de"
+      },
+      "peerComparison": {
+        "path": "research/salaries/queue-completion-2026-11-01/reviews/root-phsa-history-2019-20-batch-003-money-peer-comparison.json",
+        "sha256": "67b66e174ea54d2c3425447db8a9756e7986b485dfa805083b1ec8a8bf032887"
+      },
+      "freshSourceImage": {
+        "path": "/tmp/independent-phsa-history-2019-003-money-peer/seq132-remuneration-600.png",
+        "sha256": "ecc06a79e9ae56c7c5920ef193d0ee769fd56879ef515b829b7ee20469f2d87e"
+      },
+      "imageFirstTranscript": {
+        "path": "research/salaries/queue-completion-2026-11-01/reviews/root-phsa-history-2019-20-batch-003-money-peer-image-first.json",
+        "sha256": "0f87487c5ce27363fc9df239b1d06bf5b63a6982c1a196a1295c8f751ebefe7e"
+      }
+    },
+    {
+      "sourceId": "phsa-2019-20",
+      "sourceSha256": "0e31ac2054f0c2d4ef78797185dddd96cc0cdf2eab94bd6841fa24e1c38e7d02",
+      "physicalPage": 16,
+      "sourceRowOnPage": 39,
+      "field": "expenses",
+      "confirmedValue": 3066,
+      "effectiveAuthorOverlay": {
+        "path": "research/salaries/queue-completion-2026-11-01/phsa/overlays/phsa-2019-20-manual-overlay-003.json",
+        "sha256": "53b8c2190bde3f6fd02d72776566f81f1277363a1ce062703b7878f9d5fe10de"
+      },
+      "peerComparison": {
+        "path": "research/salaries/queue-completion-2026-11-01/reviews/root-phsa-history-2019-20-batch-003-money-peer-comparison.json",
+        "sha256": "67b66e174ea54d2c3425447db8a9756e7986b485dfa805083b1ec8a8bf032887"
+      },
+      "freshSourceImage": {
+        "path": "/tmp/independent-phsa-history-2019-003-money-peer/seq140-expenses-600.png",
+        "sha256": "6e314654cb17df64f68e05f1c0d1e1d6c0db8539b7bb4c2fd6df25a47bf16be7"
+      },
+      "imageFirstTranscript": {
+        "path": "research/salaries/queue-completion-2026-11-01/reviews/root-phsa-history-2019-20-batch-003-money-peer-image-first.json",
+        "sha256": "0f87487c5ce27363fc9df239b1d06bf5b63a6982c1a196a1295c8f751ebefe7e"
+      }
+    },
+    {
+      "sourceId": "phsa-2019-20",
+      "sourceSha256": "0e31ac2054f0c2d4ef78797185dddd96cc0cdf2eab94bd6841fa24e1c38e7d02",
+      "physicalPage": 16,
+      "sourceRowOnPage": 43,
+      "field": "expenses",
+      "confirmedValue": 5945,
+      "effectiveAuthorOverlay": {
+        "path": "research/salaries/queue-completion-2026-11-01/phsa/overlays/phsa-2019-20-manual-overlay-003.json",
+        "sha256": "53b8c2190bde3f6fd02d72776566f81f1277363a1ce062703b7878f9d5fe10de"
+      },
+      "peerComparison": {
+        "path": "research/salaries/queue-completion-2026-11-01/reviews/root-phsa-history-2019-20-batch-003-money-peer-comparison.json",
+        "sha256": "67b66e174ea54d2c3425447db8a9756e7986b485dfa805083b1ec8a8bf032887"
+      },
+      "freshSourceImage": {
+        "path": "/tmp/independent-phsa-history-2019-003-money-peer/seq143-expenses-600.png",
+        "sha256": "da0f4614a59e452cd16f4a188a0195ee451b828ae1fe0f72f8b0455ccfe98443"
+      },
+      "imageFirstTranscript": {
+        "path": "research/salaries/queue-completion-2026-11-01/reviews/root-phsa-history-2019-20-batch-003-money-peer-image-first.json",
+        "sha256": "0f87487c5ce27363fc9df239b1d06bf5b63a6982c1a196a1295c8f751ebefe7e"
+      }
+    },
+    {
+      "sourceId": "phsa-2019-20",
+      "sourceSha256": "0e31ac2054f0c2d4ef78797185dddd96cc0cdf2eab94bd6841fa24e1c38e7d02",
+      "physicalPage": 17,
+      "sourceRowOnPage": 3,
+      "field": "expenses",
+      "confirmedValue": 884,
+      "effectiveAuthorOverlay": {
+        "path": "research/salaries/queue-completion-2026-11-01/phsa/overlays/phsa-2019-20-manual-overlay-003.json",
+        "sha256": "53b8c2190bde3f6fd02d72776566f81f1277363a1ce062703b7878f9d5fe10de"
+      },
+      "peerComparison": {
+        "path": "research/salaries/queue-completion-2026-11-01/reviews/root-phsa-history-2019-20-batch-003-money-peer-comparison.json",
+        "sha256": "67b66e174ea54d2c3425447db8a9756e7986b485dfa805083b1ec8a8bf032887"
+      },
+      "freshSourceImage": {
+        "path": "/tmp/independent-phsa-history-2019-003-money-peer/seq158-expenses-600.png",
+        "sha256": "73ed5f35c9c8e35a65fde49985a1cc1f198f4009e302c3aaa0e17ec1d895c80e"
+      },
+      "imageFirstTranscript": {
+        "path": "research/salaries/queue-completion-2026-11-01/reviews/root-phsa-history-2019-20-batch-003-money-peer-image-first.json",
+        "sha256": "0f87487c5ce27363fc9df239b1d06bf5b63a6982c1a196a1295c8f751ebefe7e"
+      }
+    },
+    {
+      "sourceId": "phsa-2019-20",
+      "sourceSha256": "0e31ac2054f0c2d4ef78797185dddd96cc0cdf2eab94bd6841fa24e1c38e7d02",
+      "physicalPage": 17,
+      "sourceRowOnPage": 5,
+      "field": "expenses",
+      "confirmedValue": 3854,
+      "effectiveAuthorOverlay": {
+        "path": "research/salaries/queue-completion-2026-11-01/phsa/overlays/phsa-2019-20-manual-overlay-003.json",
+        "sha256": "53b8c2190bde3f6fd02d72776566f81f1277363a1ce062703b7878f9d5fe10de"
+      },
+      "peerComparison": {
+        "path": "research/salaries/queue-completion-2026-11-01/reviews/root-phsa-history-2019-20-batch-003-money-peer-comparison.json",
+        "sha256": "67b66e174ea54d2c3425447db8a9756e7986b485dfa805083b1ec8a8bf032887"
+      },
+      "freshSourceImage": {
+        "path": "/tmp/independent-phsa-history-2019-003-money-peer/seq160-expenses-600.png",
+        "sha256": "ddcccc626965dd6f50d53db1efdb34f17410f5c6665c4ab96628c4174b2766c2"
+      },
+      "imageFirstTranscript": {
+        "path": "research/salaries/queue-completion-2026-11-01/reviews/root-phsa-history-2019-20-batch-003-money-peer-image-first.json",
+        "sha256": "0f87487c5ce27363fc9df239b1d06bf5b63a6982c1a196a1295c8f751ebefe7e"
+      }
+    },
+    {
+      "sourceId": "phsa-2019-20",
+      "sourceSha256": "0e31ac2054f0c2d4ef78797185dddd96cc0cdf2eab94bd6841fa24e1c38e7d02",
+      "physicalPage": 17,
+      "sourceRowOnPage": 7,
+      "field": "remuneration",
+      "confirmedValue": 94875,
+      "effectiveAuthorOverlay": {
+        "path": "research/salaries/queue-completion-2026-11-01/phsa/overlays/phsa-2019-20-manual-overlay-003.json",
+        "sha256": "53b8c2190bde3f6fd02d72776566f81f1277363a1ce062703b7878f9d5fe10de"
+      },
+      "peerComparison": {
+        "path": "research/salaries/queue-completion-2026-11-01/reviews/root-phsa-history-2019-20-batch-003-money-peer-comparison.json",
+        "sha256": "67b66e174ea54d2c3425447db8a9756e7986b485dfa805083b1ec8a8bf032887"
+      },
+      "freshSourceImage": {
+        "path": "/tmp/independent-phsa-history-2019-003-money-peer/seq162-remuneration-600.png",
+        "sha256": "dd70263cd710511e822ba941223c183771a98f9f0f182b3ae3b0207b42d56a9a"
+      },
+      "imageFirstTranscript": {
+        "path": "research/salaries/queue-completion-2026-11-01/reviews/root-phsa-history-2019-20-batch-003-money-peer-image-first.json",
+        "sha256": "0f87487c5ce27363fc9df239b1d06bf5b63a6982c1a196a1295c8f751ebefe7e"
+      }
+    },
+    {
+      "sourceId": "phsa-2019-20",
+      "sourceSha256": "0e31ac2054f0c2d4ef78797185dddd96cc0cdf2eab94bd6841fa24e1c38e7d02",
+      "physicalPage": 17,
+      "sourceRowOnPage": 13,
+      "field": "expenses",
+      "confirmedValue": 1684,
+      "effectiveAuthorOverlay": {
+        "path": "research/salaries/queue-completion-2026-11-01/phsa/overlays/phsa-2019-20-manual-overlay-003.json",
+        "sha256": "53b8c2190bde3f6fd02d72776566f81f1277363a1ce062703b7878f9d5fe10de"
+      },
+      "peerComparison": {
+        "path": "research/salaries/queue-completion-2026-11-01/reviews/root-phsa-history-2019-20-batch-003-money-peer-comparison.json",
+        "sha256": "67b66e174ea54d2c3425447db8a9756e7986b485dfa805083b1ec8a8bf032887"
+      },
+      "freshSourceImage": {
+        "path": "/tmp/independent-phsa-history-2019-003-money-peer/seq166-expenses-600.png",
+        "sha256": "22c58787eed07387bdf63ca8d5f9ee82f29a93e0a27ba468656ee6ccd36518bd"
+      },
+      "imageFirstTranscript": {
+        "path": "research/salaries/queue-completion-2026-11-01/reviews/root-phsa-history-2019-20-batch-003-money-peer-image-first.json",
+        "sha256": "0f87487c5ce27363fc9df239b1d06bf5b63a6982c1a196a1295c8f751ebefe7e"
+      }
+    },
+    {
+      "sourceId": "phsa-2019-20",
+      "sourceSha256": "0e31ac2054f0c2d4ef78797185dddd96cc0cdf2eab94bd6841fa24e1c38e7d02",
+      "physicalPage": 17,
+      "sourceRowOnPage": 19,
+      "field": "remuneration",
+      "confirmedValue": 85935,
+      "effectiveAuthorOverlay": {
+        "path": "research/salaries/queue-completion-2026-11-01/phsa/overlays/phsa-2019-20-manual-overlay-003.json",
+        "sha256": "53b8c2190bde3f6fd02d72776566f81f1277363a1ce062703b7878f9d5fe10de"
+      },
+      "peerComparison": {
+        "path": "research/salaries/queue-completion-2026-11-01/reviews/root-phsa-history-2019-20-batch-003-money-peer-comparison.json",
+        "sha256": "67b66e174ea54d2c3425447db8a9756e7986b485dfa805083b1ec8a8bf032887"
+      },
+      "freshSourceImage": {
+        "path": "/tmp/independent-phsa-history-2019-003-money-peer/seq172-remuneration-600.png",
+        "sha256": "91ee54e3da9d0be601b2e1bf68f74d03ca5fd4495626cd768f7f70dcf0126535"
+      },
+      "imageFirstTranscript": {
+        "path": "research/salaries/queue-completion-2026-11-01/reviews/root-phsa-history-2019-20-batch-003-money-peer-image-first.json",
+        "sha256": "0f87487c5ce27363fc9df239b1d06bf5b63a6982c1a196a1295c8f751ebefe7e"
+      }
+    },
+    {
+      "sourceId": "phsa-2019-20",
+      "sourceSha256": "0e31ac2054f0c2d4ef78797185dddd96cc0cdf2eab94bd6841fa24e1c38e7d02",
+      "physicalPage": 17,
+      "sourceRowOnPage": 28,
+      "field": "remuneration",
+      "confirmedValue": 82506,
+      "effectiveAuthorOverlay": {
+        "path": "research/salaries/queue-completion-2026-11-01/phsa/overlays/phsa-2019-20-manual-overlay-003.json",
+        "sha256": "53b8c2190bde3f6fd02d72776566f81f1277363a1ce062703b7878f9d5fe10de"
+      },
+      "peerComparison": {
+        "path": "research/salaries/queue-completion-2026-11-01/reviews/root-phsa-history-2019-20-batch-003-money-peer-comparison.json",
+        "sha256": "67b66e174ea54d2c3425447db8a9756e7986b485dfa805083b1ec8a8bf032887"
+      },
+      "freshSourceImage": {
+        "path": "/tmp/independent-phsa-history-2019-003-money-peer/seq180-remuneration-600.png",
+        "sha256": "5e9302ca474ae9786c8c8bd116d2e8bda451bfa539486763f52452e639fd53a4"
+      },
+      "imageFirstTranscript": {
+        "path": "research/salaries/queue-completion-2026-11-01/reviews/root-phsa-history-2019-20-batch-003-money-peer-image-first.json",
+        "sha256": "0f87487c5ce27363fc9df239b1d06bf5b63a6982c1a196a1295c8f751ebefe7e"
+      }
+    },
+    {
+      "sourceId": "phsa-2019-20",
+      "sourceSha256": "0e31ac2054f0c2d4ef78797185dddd96cc0cdf2eab94bd6841fa24e1c38e7d02",
+      "physicalPage": 17,
+      "sourceRowOnPage": 32,
+      "field": "remuneration",
+      "confirmedValue": 88500,
+      "effectiveAuthorOverlay": {
+        "path": "research/salaries/queue-completion-2026-11-01/phsa/overlays/phsa-2019-20-manual-overlay-003.json",
+        "sha256": "53b8c2190bde3f6fd02d72776566f81f1277363a1ce062703b7878f9d5fe10de"
+      },
+      "peerComparison": {
+        "path": "research/salaries/queue-completion-2026-11-01/reviews/root-phsa-history-2019-20-batch-003-money-peer-comparison.json",
+        "sha256": "67b66e174ea54d2c3425447db8a9756e7986b485dfa805083b1ec8a8bf032887"
+      },
+      "freshSourceImage": {
+        "path": "/tmp/independent-phsa-history-2019-003-money-peer/seq184-remuneration-600.png",
+        "sha256": "eb84c42afd8517cdf176a8aa5bdc9010c44afca15ac080bb7cd2ebf520f36824"
+      },
+      "imageFirstTranscript": {
+        "path": "research/salaries/queue-completion-2026-11-01/reviews/root-phsa-history-2019-20-batch-003-money-peer-image-first.json",
+        "sha256": "0f87487c5ce27363fc9df239b1d06bf5b63a6982c1a196a1295c8f751ebefe7e"
+      }
+    },
+    {
+      "sourceId": "phsa-2019-20",
+      "sourceSha256": "0e31ac2054f0c2d4ef78797185dddd96cc0cdf2eab94bd6841fa24e1c38e7d02",
+      "physicalPage": 18,
+      "sourceRowOnPage": 13,
+      "field": "expenses",
+      "confirmedValue": 1671,
+      "effectiveAuthorOverlay": {
+        "path": "research/salaries/queue-completion-2026-11-01/phsa/overlays/phsa-2019-20-manual-overlay-003.json",
+        "sha256": "53b8c2190bde3f6fd02d72776566f81f1277363a1ce062703b7878f9d5fe10de"
+      },
+      "peerComparison": {
+        "path": "research/salaries/queue-completion-2026-11-01/reviews/root-phsa-history-2019-20-batch-003-money-peer-comparison.json",
+        "sha256": "67b66e174ea54d2c3425447db8a9756e7986b485dfa805083b1ec8a8bf032887"
+      },
+      "freshSourceImage": {
+        "path": "/tmp/independent-phsa-history-2019-003-money-peer/seq217-expenses-600.png",
+        "sha256": "528706e253090831fa9cdfe5dce21e19c13558afa87036e2aa74e83a633f6f19"
+      },
+      "imageFirstTranscript": {
+        "path": "research/salaries/queue-completion-2026-11-01/reviews/root-phsa-history-2019-20-batch-003-money-peer-image-first.json",
+        "sha256": "0f87487c5ce27363fc9df239b1d06bf5b63a6982c1a196a1295c8f751ebefe7e"
+      }
+    },
+    {
+      "sourceId": "phsa-2019-20",
+      "sourceSha256": "0e31ac2054f0c2d4ef78797185dddd96cc0cdf2eab94bd6841fa24e1c38e7d02",
+      "physicalPage": 18,
+      "sourceRowOnPage": 25,
+      "field": "expenses",
+      "confirmedValue": 1583,
+      "effectiveAuthorOverlay": {
+        "path": "research/salaries/queue-completion-2026-11-01/phsa/overlays/phsa-2019-20-manual-overlay-003.json",
+        "sha256": "53b8c2190bde3f6fd02d72776566f81f1277363a1ce062703b7878f9d5fe10de"
+      },
+      "peerComparison": {
+        "path": "research/salaries/queue-completion-2026-11-01/reviews/root-phsa-history-2019-20-batch-003-money-peer-comparison.json",
+        "sha256": "67b66e174ea54d2c3425447db8a9756e7986b485dfa805083b1ec8a8bf032887"
+      },
+      "freshSourceImage": {
+        "path": "/tmp/independent-phsa-history-2019-003-money-peer/seq229-expenses-600.png",
+        "sha256": "927e33f25a2798197b70f42846c97aef89b793e2cde617dbf416ee0be58e601d"
+      },
+      "imageFirstTranscript": {
+        "path": "research/salaries/queue-completion-2026-11-01/reviews/root-phsa-history-2019-20-batch-003-money-peer-image-first.json",
+        "sha256": "0f87487c5ce27363fc9df239b1d06bf5b63a6982c1a196a1295c8f751ebefe7e"
+      }
+    },
+    {
+      "sourceId": "phsa-2019-20",
+      "sourceSha256": "0e31ac2054f0c2d4ef78797185dddd96cc0cdf2eab94bd6841fa24e1c38e7d02",
+      "physicalPage": 19,
+      "sourceRowOnPage": 16,
+      "field": "expenses",
+      "confirmedValue": 1547,
+      "effectiveAuthorOverlay": {
+        "path": "research/salaries/queue-completion-2026-11-01/phsa/overlays/phsa-2019-20-manual-overlay-003.json",
+        "sha256": "53b8c2190bde3f6fd02d72776566f81f1277363a1ce062703b7878f9d5fe10de"
+      },
+      "peerComparison": {
+        "path": "research/salaries/queue-completion-2026-11-01/reviews/root-phsa-history-2019-20-batch-003-money-peer-comparison.json",
+        "sha256": "67b66e174ea54d2c3425447db8a9756e7986b485dfa805083b1ec8a8bf032887"
+      },
+      "freshSourceImage": {
+        "path": "/tmp/independent-phsa-history-2019-003-money-peer/seq268-expenses-600.png",
+        "sha256": "681bb5ed8ac91bf2517e3a4be87cc03a22b0903089c8a4c17050b51ae13827e3"
+      },
+      "imageFirstTranscript": {
+        "path": "research/salaries/queue-completion-2026-11-01/reviews/root-phsa-history-2019-20-batch-003-money-peer-image-first.json",
+        "sha256": "0f87487c5ce27363fc9df239b1d06bf5b63a6982c1a196a1295c8f751ebefe7e"
+      }
+    },
+    {
+      "sourceId": "phsa-2019-20",
+      "sourceSha256": "0e31ac2054f0c2d4ef78797185dddd96cc0cdf2eab94bd6841fa24e1c38e7d02",
+      "physicalPage": 19,
+      "sourceRowOnPage": 18,
+      "field": "expenses",
+      "confirmedValue": 9628,
+      "effectiveAuthorOverlay": {
+        "path": "research/salaries/queue-completion-2026-11-01/phsa/overlays/phsa-2019-20-manual-overlay-003.json",
+        "sha256": "53b8c2190bde3f6fd02d72776566f81f1277363a1ce062703b7878f9d5fe10de"
+      },
+      "peerComparison": {
+        "path": "research/salaries/queue-completion-2026-11-01/reviews/root-phsa-history-2019-20-batch-003-money-peer-comparison.json",
+        "sha256": "67b66e174ea54d2c3425447db8a9756e7986b485dfa805083b1ec8a8bf032887"
+      },
+      "freshSourceImage": {
+        "path": "/tmp/independent-phsa-history-2019-003-money-peer/seq270-expenses-600.png",
+        "sha256": "e3c3a86b3b520e29ab6cbdc91a21b28a19314602b4166885d10b5254ac6dc1ad"
+      },
+      "imageFirstTranscript": {
+        "path": "research/salaries/queue-completion-2026-11-01/reviews/root-phsa-history-2019-20-batch-003-money-peer-image-first.json",
+        "sha256": "0f87487c5ce27363fc9df239b1d06bf5b63a6982c1a196a1295c8f751ebefe7e"
+      }
+    },
+    {
+      "sourceId": "phsa-2019-20",
+      "sourceSha256": "0e31ac2054f0c2d4ef78797185dddd96cc0cdf2eab94bd6841fa24e1c38e7d02",
+      "physicalPage": 19,
+      "sourceRowOnPage": 23,
+      "field": "remuneration",
+      "confirmedValue": 105544,
+      "effectiveAuthorOverlay": {
+        "path": "research/salaries/queue-completion-2026-11-01/phsa/overlays/phsa-2019-20-manual-overlay-003.json",
+        "sha256": "53b8c2190bde3f6fd02d72776566f81f1277363a1ce062703b7878f9d5fe10de"
+      },
+      "peerComparison": {
+        "path": "research/salaries/queue-completion-2026-11-01/reviews/root-phsa-history-2019-20-batch-003-money-peer-comparison.json",
+        "sha256": "67b66e174ea54d2c3425447db8a9756e7986b485dfa805083b1ec8a8bf032887"
+      },
+      "freshSourceImage": {
+        "path": "/tmp/independent-phsa-history-2019-003-money-peer/seq275-remuneration-600.png",
+        "sha256": "87ee71f9cf14a3e3b4acf23226e3f55ae1522d45b659396bbd8eecb5ef0fb1bb"
+      },
+      "imageFirstTranscript": {
+        "path": "research/salaries/queue-completion-2026-11-01/reviews/root-phsa-history-2019-20-batch-003-money-peer-image-first.json",
+        "sha256": "0f87487c5ce27363fc9df239b1d06bf5b63a6982c1a196a1295c8f751ebefe7e"
+      }
+    },
+    {
+      "sourceId": "phsa-2019-20",
+      "sourceSha256": "0e31ac2054f0c2d4ef78797185dddd96cc0cdf2eab94bd6841fa24e1c38e7d02",
+      "physicalPage": 19,
+      "sourceRowOnPage": 28,
+      "field": "remuneration",
+      "confirmedValue": 84858,
+      "effectiveAuthorOverlay": {
+        "path": "research/salaries/queue-completion-2026-11-01/phsa/overlays/phsa-2019-20-manual-overlay-003.json",
+        "sha256": "53b8c2190bde3f6fd02d72776566f81f1277363a1ce062703b7878f9d5fe10de"
+      },
+      "peerComparison": {
+        "path": "research/salaries/queue-completion-2026-11-01/reviews/root-phsa-history-2019-20-batch-003-money-peer-comparison.json",
+        "sha256": "67b66e174ea54d2c3425447db8a9756e7986b485dfa805083b1ec8a8bf032887"
+      },
+      "freshSourceImage": {
+        "path": "/tmp/independent-phsa-history-2019-003-money-peer/seq279-remuneration-600.png",
+        "sha256": "cc505b3b41f8553d13f768a18cb9327c1a1832352b540397db66988ae52cb8de"
+      },
+      "imageFirstTranscript": {
+        "path": "research/salaries/queue-completion-2026-11-01/reviews/root-phsa-history-2019-20-batch-003-money-peer-image-first.json",
+        "sha256": "0f87487c5ce27363fc9df239b1d06bf5b63a6982c1a196a1295c8f751ebefe7e"
+      }
+    },
+    {
+      "sourceId": "phsa-2019-20",
+      "sourceSha256": "0e31ac2054f0c2d4ef78797185dddd96cc0cdf2eab94bd6841fa24e1c38e7d02",
+      "physicalPage": 19,
+      "sourceRowOnPage": 31,
+      "field": "remuneration",
+      "confirmedValue": 98881,
+      "effectiveAuthorOverlay": {
+        "path": "research/salaries/queue-completion-2026-11-01/phsa/overlays/phsa-2019-20-manual-overlay-003.json",
+        "sha256": "53b8c2190bde3f6fd02d72776566f81f1277363a1ce062703b7878f9d5fe10de"
+      },
+      "peerComparison": {
+        "path": "research/salaries/queue-completion-2026-11-01/reviews/root-phsa-history-2019-20-batch-003-money-peer-comparison.json",
+        "sha256": "67b66e174ea54d2c3425447db8a9756e7986b485dfa805083b1ec8a8bf032887"
+      },
+      "freshSourceImage": {
+        "path": "/tmp/independent-phsa-history-2019-003-money-peer/seq281-remuneration-600.png",
+        "sha256": "6d626c1ba184c76fac6bcd192888f87d27e2118d08456f60e0953fe1887e4e08"
+      },
+      "imageFirstTranscript": {
+        "path": "research/salaries/queue-completion-2026-11-01/reviews/root-phsa-history-2019-20-batch-003-money-peer-image-first.json",
+        "sha256": "0f87487c5ce27363fc9df239b1d06bf5b63a6982c1a196a1295c8f751ebefe7e"
+      }
+    },
+    {
+      "sourceId": "phsa-2019-20",
+      "sourceSha256": "0e31ac2054f0c2d4ef78797185dddd96cc0cdf2eab94bd6841fa24e1c38e7d02",
+      "physicalPage": 19,
+      "sourceRowOnPage": 34,
+      "field": "remuneration",
+      "confirmedValue": 87981,
+      "effectiveAuthorOverlay": {
+        "path": "research/salaries/queue-completion-2026-11-01/phsa/overlays/phsa-2019-20-manual-overlay-003.json",
+        "sha256": "53b8c2190bde3f6fd02d72776566f81f1277363a1ce062703b7878f9d5fe10de"
+      },
+      "peerComparison": {
+        "path": "research/salaries/queue-completion-2026-11-01/reviews/root-phsa-history-2019-20-batch-003-money-peer-comparison.json",
+        "sha256": "67b66e174ea54d2c3425447db8a9756e7986b485dfa805083b1ec8a8bf032887"
+      },
+      "freshSourceImage": {
+        "path": "/tmp/independent-phsa-history-2019-003-money-peer/seq283-remuneration-600.png",
+        "sha256": "ce6a27a5bfb6d8fadf179e902428e22516d3105bab82e9ab77d0e3eb4fc1dd05"
+      },
+      "imageFirstTranscript": {
+        "path": "research/salaries/queue-completion-2026-11-01/reviews/root-phsa-history-2019-20-batch-003-money-peer-image-first.json",
+        "sha256": "0f87487c5ce27363fc9df239b1d06bf5b63a6982c1a196a1295c8f751ebefe7e"
+      }
+    },
+    {
+      "sourceId": "phsa-2019-20",
+      "sourceSha256": "0e31ac2054f0c2d4ef78797185dddd96cc0cdf2eab94bd6841fa24e1c38e7d02",
+      "physicalPage": 19,
+      "sourceRowOnPage": 34,
+      "field": "expenses",
+      "confirmedValue": 2905,
+      "effectiveAuthorOverlay": {
+        "path": "research/salaries/queue-completion-2026-11-01/phsa/overlays/phsa-2019-20-manual-overlay-003.json",
+        "sha256": "53b8c2190bde3f6fd02d72776566f81f1277363a1ce062703b7878f9d5fe10de"
+      },
+      "peerComparison": {
+        "path": "research/salaries/queue-completion-2026-11-01/reviews/root-phsa-history-2019-20-batch-003-money-peer-comparison.json",
+        "sha256": "67b66e174ea54d2c3425447db8a9756e7986b485dfa805083b1ec8a8bf032887"
+      },
+      "freshSourceImage": {
+        "path": "/tmp/independent-phsa-history-2019-003-money-peer/seq283-expenses-600.png",
+        "sha256": "e5fac412a12345878d3dc8972906c7dc0b51babd02f36f056f4681e0b50a1719"
+      },
+      "imageFirstTranscript": {
+        "path": "research/salaries/queue-completion-2026-11-01/reviews/root-phsa-history-2019-20-batch-003-money-peer-image-first.json",
+        "sha256": "0f87487c5ce27363fc9df239b1d06bf5b63a6982c1a196a1295c8f751ebefe7e"
+      }
+    },
+    {
+      "sourceId": "phsa-2019-20",
+      "sourceSha256": "0e31ac2054f0c2d4ef78797185dddd96cc0cdf2eab94bd6841fa24e1c38e7d02",
+      "physicalPage": 19,
+      "sourceRowOnPage": 51,
+      "field": "remuneration",
+      "confirmedValue": 122545,
+      "effectiveAuthorOverlay": {
+        "path": "research/salaries/queue-completion-2026-11-01/phsa/overlays/phsa-2019-20-manual-overlay-003.json",
+        "sha256": "53b8c2190bde3f6fd02d72776566f81f1277363a1ce062703b7878f9d5fe10de"
+      },
+      "peerComparison": {
+        "path": "research/salaries/queue-completion-2026-11-01/reviews/root-phsa-history-2019-20-batch-003-money-peer-comparison.json",
+        "sha256": "67b66e174ea54d2c3425447db8a9756e7986b485dfa805083b1ec8a8bf032887"
+      },
+      "freshSourceImage": {
+        "path": "/tmp/independent-phsa-history-2019-003-money-peer/seq294-remuneration-600.png",
+        "sha256": "ed17eeeadd6e11ca41b39bd36a380c05190401b486c3dc9c7ccda6fd6fff0c91"
+      },
+      "imageFirstTranscript": {
+        "path": "research/salaries/queue-completion-2026-11-01/reviews/root-phsa-history-2019-20-batch-003-money-peer-image-first.json",
+        "sha256": "0f87487c5ce27363fc9df239b1d06bf5b63a6982c1a196a1295c8f751ebefe7e"
+      }
+    }
+  ],
+  "completeFrozenSourceTargetFields": 38,
+  "confirmedMonetaryFields": 38,
+  "originalAuthorOwnSourceCorrections": 1,
+  "originalPeerOwnSourceCorrections": 1,
+  "scope": "Exact source-money fields only. Original first-pass disagreements/corrections are retained; no balancing, name or unrelated field authority."
+}

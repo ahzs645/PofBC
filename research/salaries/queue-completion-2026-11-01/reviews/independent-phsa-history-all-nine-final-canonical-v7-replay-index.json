@@ -1,0 +1,327 @@
+{
+  "frozen": true,
+  "reviewedOn": "2026-11-02",
+  "frozenAtUtc": "2026-11-02T05:38:14.526598+00:00",
+  "reviewer": "/root/held_health_review",
+  "scope": "Explicit selected v3/v4 final source replay for ALL NINE PHSA employee cohorts2015/16\u20132023/24. All source/candidate/data/provenance bytes remain immutable.",
+  "script": {
+    "path": "scripts/finish_salary_phsa_review_final_replay_v7.py",
+    "sha256": "62079b7577f5c137fcaa3909bb2299240f7fcca6207253fa5507157d0f2b6595"
+  },
+  "coreMutationChecks": {
+    "path": "scripts/finish_salary_phsa_review_v7_checks.py",
+    "sha256": "427c5370cc4a7fc0cb68c2b900e506a32fbd5784526e19c77af72b082768df41"
+  },
+  "currentMoneyReader": {
+    "path": "scripts/finish_salary_phsa_review_money_current_v7.py",
+    "sha256": "43813f6e5ef322d64cee995d07e6530362242a73c9780aa462ab5e31933f459a"
+  },
+  "currentMoneyChecks": {
+    "path": "scripts/finish_salary_phsa_review_money_current_v7_checks.py",
+    "sha256": "78fa98da4a0b1301657a93e1863f0cc4b1212fd9f0e40040a550ad2c97c32749"
+  },
+  "boundedCurrentMoneyCodePeer": {
+    "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-history-batches-current-money-v7-code-peer-review.json",
+    "sha256": "abcec5bc55cec7d2aa55bb1b4830342931bcf7e4dd144d08d2fea0ca8744f62e"
+  },
+  "externalFourHelperIntegrationReview": {
+    "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-history-v7-four-financial-helper-integration-review.json",
+    "sha256": "d1f39365450e78e5bea3019152fad7cc8c0df150c52c07a0cbd182143bd354c8"
+  },
+  "sources": [
+    {
+      "sourceId": "phsa-2015-16",
+      "selectedRevision": 4,
+      "independentSourceClosure": {
+        "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-history-2015-16-final-v4-canonical-v7-raw-overlay-replay.json",
+        "sha256": "3c881723dcf691283d3f59028332df194b91b499704af44c0a147a6b1d3c2e6c"
+      },
+      "candidateMetadata": {
+        "path": "research/salaries/queue-completion-2026-11-01/phsa/candidates/phsa-2015-16-source-v4.json",
+        "sha256": "f2e6863eb18efc44db8eb0796d15ea996539b271f99d2337a0343205d0c13c2d"
+      },
+      "payload": {
+        "path": "research/salaries/queue-completion-phsa/phsa-2015-16-employees-v4.json.gzip",
+        "sha256": "260fc03a6297aa15036898380d79e379d98906a3277327cf9b624db967b0986b"
+      },
+      "provenance": {
+        "path": "research/salaries/queue-completion-phsa/evidence/phsa-2015-16-provenance-v4.json.gzip",
+        "sha256": "b8eb484b2d44677283e084a0776729f3a5b3676b1ec730e63b8afe5146b68d9b"
+      },
+      "literalRows": 4545,
+      "physicalPages": 128,
+      "qualifiedNames": 85,
+      "canonicalTargetFields": 85,
+      "freshMonetaryConfirmationFields": 0,
+      "literalControlResiduals": [
+        31,
+        28
+      ]
+    },
+    {
+      "sourceId": "phsa-2016-17",
+      "selectedRevision": 4,
+      "independentSourceClosure": {
+        "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-history-2016-17-final-v4-canonical-v7-raw-overlay-replay.json",
+        "sha256": "dfad28a1c734512aab42455259366a16efdb64de621218d249be11c28466a36f"
+      },
+      "candidateMetadata": {
+        "path": "research/salaries/queue-completion-2026-11-01/phsa/candidates/phsa-2016-17-source-v4.json",
+        "sha256": "f96de3674d11e6200967747ffb0714571b333eeb3b57afb34675ce9ecb86a8c6"
+      },
+      "payload": {
+        "path": "research/salaries/queue-completion-phsa/phsa-2016-17-employees-v4.json.gzip",
+        "sha256": "b36aa7869ff6bd2278ea28503d6a6344c0b088e426c07a9c600d9d77a733ef0d"
+      },
+      "provenance": {
+        "path": "research/salaries/queue-completion-phsa/evidence/phsa-2016-17-provenance-v4.json.gzip",
+        "sha256": "13ff80adb739b88f572939e8c5b90e19171a7c44707e01e51cb27c50da151d92"
+      },
+      "literalRows": 5118,
+      "physicalPages": 144,
+      "qualifiedNames": 108,
+      "canonicalTargetFields": 119,
+      "freshMonetaryConfirmationFields": 10,
+      "literalControlResiduals": [
+        0,
+        -5
+      ]
+    },
+    {
+      "sourceId": "phsa-2017-18",
+      "selectedRevision": 3,
+      "independentSourceClosure": {
+        "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-history-2017-18-final-v3-canonical-v7-raw-overlay-replay.json",
+        "sha256": "291d7c86612e1f384c970bd5a41f62dfe7afb4e1fb2cf9de60156344fd0e84ba"
+      },
+      "candidateMetadata": {
+        "path": "research/salaries/queue-completion-2026-11-01/phsa/candidates/phsa-2017-18-source-v3.json",
+        "sha256": "de640aa1eb3ae2455e0c488eea00df07c5cfe2c6e2c79aac134c6caef185229e"
+      },
+      "payload": {
+        "path": "research/salaries/queue-completion-phsa/phsa-2017-18-employees-v3.json.gzip",
+        "sha256": "b03b555b9b81140f5492026f165ebf42da8b691667b579db9384c0efe11c65bf"
+      },
+      "provenance": {
+        "path": "research/salaries/queue-completion-phsa/evidence/phsa-2017-18-provenance-v3.json.gzip",
+        "sha256": "f511aae44e161de7d44f2a213eda8d9dbba5795107ecfd419dcb0b35238abd2e"
+      },
+      "literalRows": 5072,
+      "physicalPages": 139,
+      "qualifiedNames": 0,
+      "canonicalTargetFields": 1,
+      "freshMonetaryConfirmationFields": 0,
+      "literalControlResiduals": [
+        0,
+        0
+      ]
+    },
+    {
+      "sourceId": "phsa-2018-19",
+      "selectedRevision": 4,
+      "independentSourceClosure": {
+        "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-history-2018-19-final-v4-canonical-v7-raw-overlay-replay.json",
+        "sha256": "b1563f16d93fb1ae6a6f6f408de9e562fdbd5fe869348b4a9f55c00bb9035fb9"
+      },
+      "candidateMetadata": {
+        "path": "research/salaries/queue-completion-2026-11-01/phsa/candidates/phsa-2018-19-source-v4.json",
+        "sha256": "685e0f81bd399c621a8d286f88be3115bda93193d5fae967a139f49e19833648"
+      },
+      "payload": {
+        "path": "research/salaries/queue-completion-phsa/phsa-2018-19-employees-v4.json.gzip",
+        "sha256": "fd0a38671b71c691313a4edface7696c828a3501dc97218720d9de2de9eabf03"
+      },
+      "provenance": {
+        "path": "research/salaries/queue-completion-phsa/evidence/phsa-2018-19-provenance-v4.json.gzip",
+        "sha256": "cde7bdadb905295b2a97ce809adad54d260e5ecf180e2cdc79612c926488be6b"
+      },
+      "literalRows": 6041,
+      "physicalPages": 111,
+      "qualifiedNames": 19,
+      "canonicalTargetFields": 28,
+      "freshMonetaryConfirmationFields": 1,
+      "literalControlResiduals": [
+        0,
+        0
+      ]
+    },
+    {
+      "sourceId": "phsa-2019-20",
+      "selectedRevision": 4,
+      "independentSourceClosure": {
+        "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-history-2019-20-final-v4-canonical-v7-raw-overlay-replay.json",
+        "sha256": "b8c17ac947acf4f8a8e4909f86201d53c2af239c72b05973fb83fabbc2ace3d5"
+      },
+      "candidateMetadata": {
+        "path": "research/salaries/queue-completion-2026-11-01/phsa/candidates/phsa-2019-20-source-v4.json",
+        "sha256": "6f487f2db6e099abe4d2736dd90bc155e30118c84b00373829efa19aef1c81b0"
+      },
+      "payload": {
+        "path": "research/salaries/queue-completion-phsa/phsa-2019-20-employees-v4.json.gzip",
+        "sha256": "282c438b92e2e93c95854147f230361db60394bf2676df35308c5102e87f4a19"
+      },
+      "provenance": {
+        "path": "research/salaries/queue-completion-phsa/evidence/phsa-2019-20-provenance-v4.json.gzip",
+        "sha256": "348fea051d4d599f80614755d3bd175419347f796365afb8c6328e4483b14df8"
+      },
+      "literalRows": 6913,
+      "physicalPages": 121,
+      "qualifiedNames": 652,
+      "canonicalTargetFields": 201,
+      "freshMonetaryConfirmationFields": 650,
+      "literalControlResiduals": [
+        5220,
+        0
+      ]
+    },
+    {
+      "sourceId": "phsa-2020-21",
+      "selectedRevision": 4,
+      "independentSourceClosure": {
+        "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-history-2020-21-final-v4-canonical-v7-raw-overlay-replay.json",
+        "sha256": "5d829c7c35453597c61bedfe91f3b0f1ad76c95c7b848803b6f579ea8fbbd3cc"
+      },
+      "candidateMetadata": {
+        "path": "research/salaries/queue-completion-2026-11-01/phsa/candidates/phsa-2020-21-source-v4.json",
+        "sha256": "e292aa11f5e0642ca3de8d3627ed37889d433c012912e91e69600678c652822d"
+      },
+      "payload": {
+        "path": "research/salaries/queue-completion-phsa/phsa-2020-21-employees-v4.json.gzip",
+        "sha256": "828aa8e9fb327300a6dcf1717dadf8cc58829b65b7180959b42025cf4d4a2340"
+      },
+      "provenance": {
+        "path": "research/salaries/queue-completion-phsa/evidence/phsa-2020-21-provenance-v4.json.gzip",
+        "sha256": "5e4687c80428a498be483be55f5ff350606fdf40b8fd60e3e01d89af827a2c76"
+      },
+      "literalRows": 7941,
+      "physicalPages": 148,
+      "qualifiedNames": 26,
+      "canonicalTargetFields": 146,
+      "freshMonetaryConfirmationFields": 110,
+      "literalControlResiduals": [
+        0,
+        0
+      ]
+    },
+    {
+      "sourceId": "phsa-2021-22",
+      "selectedRevision": 4,
+      "independentSourceClosure": {
+        "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-history-2021-22-final-v4-canonical-v7-raw-overlay-replay.json",
+        "sha256": "0542fcba384b45bd67d57bcd4a4069ffb29787407d5720a245795b14676837d0"
+      },
+      "candidateMetadata": {
+        "path": "research/salaries/queue-completion-2026-11-01/phsa/candidates/phsa-2021-22-source-v4.json",
+        "sha256": "249cfcf1aed6cc6ecef30ff00912a7dd37fa024a99098b4eef6c9c812da65237"
+      },
+      "payload": {
+        "path": "research/salaries/queue-completion-phsa/phsa-2021-22-employees-v4.json.gzip",
+        "sha256": "a15bc0ef8f83d5e3849dbd014a354d12e4bdd9d201633399f2ef2f59b56f6f94"
+      },
+      "provenance": {
+        "path": "research/salaries/queue-completion-phsa/evidence/phsa-2021-22-provenance-v4.json.gzip",
+        "sha256": "dcd5a8a01d36ef57109f970630ba1018e9318bb80e68c6327fe74beeb658efd2"
+      },
+      "literalRows": 8270,
+      "physicalPages": 188,
+      "qualifiedNames": 71,
+      "canonicalTargetFields": 99,
+      "freshMonetaryConfirmationFields": 15,
+      "literalControlResiduals": [
+        0,
+        0
+      ]
+    },
+    {
+      "sourceId": "phsa-2022-23",
+      "selectedRevision": 4,
+      "independentSourceClosure": {
+        "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-history-2022-23-final-v4-canonical-v7-raw-overlay-replay.json",
+        "sha256": "aff9f916039ba052867b9921cb64a9f318c26c2e6f4dcd6113f6ec6e1a5743ba"
+      },
+      "candidateMetadata": {
+        "path": "research/salaries/queue-completion-2026-11-01/phsa/candidates/phsa-2022-23-source-v4.json",
+        "sha256": "e3002f94aac0f9ef49af3133034632a61efecc605135c75ecba4b26ecc9414c5"
+      },
+      "payload": {
+        "path": "research/salaries/queue-completion-phsa/phsa-2022-23-employees-v4.json.gzip",
+        "sha256": "2499b07bb37c25e92394c1a0fa29e6fec1d1684cdf61b7abd28257903d4195e9"
+      },
+      "provenance": {
+        "path": "research/salaries/queue-completion-phsa/evidence/phsa-2022-23-provenance-v4.json.gzip",
+        "sha256": "89ce63662ee63b42be138c81cebdde3524317846fdd7a0254261729342f120cf"
+      },
+      "literalRows": 9104,
+      "physicalPages": 217,
+      "qualifiedNames": 63,
+      "canonicalTargetFields": 68,
+      "freshMonetaryConfirmationFields": 2,
+      "literalControlResiduals": [
+        0,
+        0
+      ]
+    },
+    {
+      "sourceId": "phsa-2023-24",
+      "selectedRevision": 3,
+      "independentSourceClosure": {
+        "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-history-2023-24-final-v3-canonical-v7-raw-overlay-replay.json",
+        "sha256": "3f072c47191b1e78c27d17e8fffef6929d2140ec02cef012a5cce4820e3c8348"
+      },
+      "candidateMetadata": {
+        "path": "research/salaries/queue-completion-2026-11-01/phsa/candidates/phsa-2023-24-source-v3.json",
+        "sha256": "a43cf0aaf39f80ac0a3f99e17227b7b56cab704d8c87a49fc39a6c0bae9a27db"
+      },
+      "payload": {
+        "path": "research/salaries/queue-completion-phsa/phsa-2023-24-employees-v3.json.gzip",
+        "sha256": "a2a47d23b74c5ea8c37f425055ec2ad5c8a1a2c578a713414440e8a1b9e31761"
+      },
+      "provenance": {
+        "path": "research/salaries/queue-completion-phsa/evidence/phsa-2023-24-provenance-v3.json.gzip",
+        "sha256": "f7c016984520694009bb02021edadc6ab1684e504167c7799a44e8f2264fa380"
+      },
+      "literalRows": 11908,
+      "physicalPages": 284,
+      "qualifiedNames": 0,
+      "canonicalTargetFields": 0,
+      "freshMonetaryConfirmationFields": 0,
+      "literalControlResiduals": [
+        0,
+        0
+      ]
+    }
+  ],
+  "totals": {
+    "sources": 9,
+    "physicalPages": 1480,
+    "literalRows": 64912,
+    "qualifiedNames": 1024,
+    "canonicalTargetFields": 747,
+    "freshMonetaryConfirmationFields": 788
+  },
+  "verification": {
+    "allNineExactRawRowsPlusOnlyPinnedReviewedOverlaysEqualFinalPayload": true,
+    "allNineCurrentHumanCanonicalClosuresExactlyReplayed": true,
+    "everyRequestedReviewScopeAndNonreviewedFieldPreserved": true,
+    "allOriginalOrderAndMultiplicityRetained": true,
+    "allNineOriginalPdfHashesFreshlyChecked": true,
+    "allNineHoldoutReceiptsAnd222FieldsPass": true,
+    "all27CurrentFinancialLedgerSchemasAnd1072PositiveProofsReplayStrictly": true,
+    "printedDashNeverConvertedToZero": true,
+    "noSourceFinancialCellChangedToBalanceAControl": true
+  },
+  "checksPassed": {
+    "coreActualSchemaAndMutationChecks": 61,
+    "currentFinancialActualSchemaAndMutationChecks": 32,
+    "fourIndependentlyAuthoredHelperChecks": 83,
+    "additionalCurrentFinancialCodePeerChecks": 29
+  },
+  "supplementaryHistoricalArchiveForFY2019": "The FY2019 source receipt explicitly pins existing archive003 omitted from its immutable original provenance list; final candidate/data/provenance remain unchanged and all crop loads stay exact archived-byte checks.",
+  "remainingAcceptanceOwner": "Root owns semantic/control-qualification acceptance, source status, integration, publication and baseline release verification; per-source replay alone does not perform these actions.",
+  "limits": [
+    "Machine agreement is distinguished from personal image transcription; individual source-reading receipts retain exact visual scope.",
+    "Contextual glyph qualifications preserve full finite source alternatives, honest preference splits and mandatory source warnings.",
+    "Literal residuals remain2015+31pay/+28expense,2016\u22125expense,2019+5220pay, without an invented cause or balancing.",
+    "The prior raw transcripts/initial reviewer mistakes/old overlays/old source-v3/v4 archives and v1\u2013v6 review code were not rewritten."
+  ]
+}

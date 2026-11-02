@@ -1,0 +1,376 @@
+{
+  "frozen": true,
+  "reviewer": "/root/recovery_municipal",
+  "reviewedOn": "2026-11-02",
+  "sourceId": "phsa-2016-17",
+  "sourceSha256": "31f7a1af80186bf81139fd693b36e733333a06c2ab1a4c5191bd6ee9b3623a53",
+  "priorCompleteSourceFreeze": {
+    "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-municipal-canonical-2016-17-107-source-only-conclusions.json",
+    "sha256": "48f5e561634fde8ebaec0f3004638d8efb9305b212b66e35268bf3d8393f47fd"
+  },
+  "expectedThinChoicesOpenedAfterFreeze": {
+    "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-history-batches-routing-canonical-2016-17-qualified-name-thin-choices.json",
+    "sha256": "af019c1f6f79e89dbf635d7f455b38e5a62fa426a2f5135e60a7773eab00e371"
+  },
+  "postExpectedOriginalSourceReread": true,
+  "corrections": [
+    {
+      "physicalPage": 39,
+      "sourceRowOnPage": 36,
+      "field": "name",
+      "firstCanonicalReading": "Feldman,Irma",
+      "currentCanonicalReading": "Feldman,Irina",
+      "basis": "Actual unchanged whole600/native300 shows a separate dotted i and following n after r; my prior Irma missed that i/n structure. Prior claim no dot was my own reading error, withdrawn.",
+      "sourceViews": {
+        "native300Name": {
+          "path": "research/salaries/queue-completion-2026-11-01/phsa/canonical-review/phsa-2016-17/p039-r36-native300-name.png",
+          "sha256": "dbd4adebba4b873f78f23e37b9963dab089f479938bc04088d9c19ddfb326717",
+          "sourcePixelBox": [
+            205,
+            3006,
+            1510,
+            3062
+          ]
+        },
+        "wholePage600Name": {
+          "path": "research/salaries/queue-completion-2026-11-01/phsa/canonical-review/phsa-2016-17/p039-r36-whole600-name.png",
+          "sha256": "fd4633513d731656a5ab61df38806dae873f877ab0c987377043fa66060f66a5",
+          "sourcePixelBox": [
+            410,
+            6012,
+            3020,
+            6124
+          ]
+        },
+        "native300Context": {
+          "path": "research/salaries/queue-completion-2026-11-01/phsa/canonical-review/phsa-2016-17/p039-r36-native300-context.png",
+          "sha256": "2ff7e8d33cded85642663159214052a2044ee99bf1d881e7f4f0d0684dc771ec",
+          "sourcePixelBox": [
+            205,
+            2906,
+            1510,
+            3162
+          ]
+        },
+        "wholePage600Context": {
+          "path": "research/salaries/queue-completion-2026-11-01/phsa/canonical-review/phsa-2016-17/p039-r36-whole600-context.png",
+          "sha256": "17e87f7cee23e0712a82ee6438273986f5f07a0cdeb55c9d81c1c1e19c075ac4",
+          "sourcePixelBox": [
+            410,
+            5812,
+            3020,
+            6324
+          ]
+        },
+        "native300FullRow": {
+          "path": "research/salaries/queue-completion-2026-11-01/phsa/canonical-review/phsa-2016-17/p039-r36-native300-fullrow.png",
+          "sha256": "453783aea912d437615c9a963b1e7e923b324e4ea7298c5269df7ae7784996f0",
+          "sourcePixelBox": [
+            0,
+            3006,
+            2550,
+            3062
+          ]
+        },
+        "wholePage600FullRow": {
+          "path": "research/salaries/queue-completion-2026-11-01/phsa/canonical-review/phsa-2016-17/p039-r36-whole600-fullrow.png",
+          "sha256": "10affffa70f738ca6e009a5f4597fe1259377b8bd8beead0450b36d03aa937d9",
+          "sourcePixelBox": [
+            0,
+            6012,
+            5100,
+            6124
+          ]
+        }
+      },
+      "actualSourceProof": {
+        "physicalPage": 39,
+        "sourceRowOnPage": 36,
+        "sourceSha256": "31f7a1af80186bf81139fd693b36e733333a06c2ab1a4c5191bd6ee9b3623a53",
+        "views": {
+          "native300Name": {
+            "originalPinnedView": {
+              "path": "research/salaries/queue-completion-2026-11-01/phsa/canonical-review/phsa-2016-17/p039-r36-native300-name.png",
+              "sha256": "dbd4adebba4b873f78f23e37b9963dab089f479938bc04088d9c19ddfb326717",
+              "sourcePixelBox": [
+                205,
+                3006,
+                1510,
+                3062
+              ]
+            },
+            "currentIndependentWholePageRgbExact": true,
+            "unchangedInkView": {
+              "path": "/workspace/salary-review-municipal-tmp/canonical-phsa-2016-17-107/p039-r36-native300Name-ink.png",
+              "sha256": "f27e17a519f1cfb6ac27eecd2e21f578f8e61e9192348be957edc5f0d5d0b665",
+              "whiteMarginOnlyBox": [
+                0,
+                0,
+                275,
+                50
+              ]
+            }
+          },
+          "wholePage600Name": {
+            "originalPinnedView": {
+              "path": "research/salaries/queue-completion-2026-11-01/phsa/canonical-review/phsa-2016-17/p039-r36-whole600-name.png",
+              "sha256": "fd4633513d731656a5ab61df38806dae873f877ab0c987377043fa66060f66a5",
+              "sourcePixelBox": [
+                410,
+                6012,
+                3020,
+                6124
+              ]
+            },
+            "currentIndependentWholePageRgbExact": true,
+            "unchangedInkView": {
+              "path": "/workspace/salary-review-municipal-tmp/canonical-phsa-2016-17-107/p039-r36-wholePage600Name-ink.png",
+              "sha256": "466dfb0f343aed38145c29316b621071f470a43bff8cc4871b509fccda88ba57",
+              "whiteMarginOnlyBox": [
+                0,
+                0,
+                550,
+                98
+              ]
+            }
+          },
+          "native300Context": {
+            "originalPinnedView": {
+              "path": "research/salaries/queue-completion-2026-11-01/phsa/canonical-review/phsa-2016-17/p039-r36-native300-context.png",
+              "sha256": "2ff7e8d33cded85642663159214052a2044ee99bf1d881e7f4f0d0684dc771ec",
+              "sourcePixelBox": [
+                205,
+                2906,
+                1510,
+                3162
+              ]
+            },
+            "currentIndependentWholePageRgbExact": true
+          },
+          "wholePage600Context": {
+            "originalPinnedView": {
+              "path": "research/salaries/queue-completion-2026-11-01/phsa/canonical-review/phsa-2016-17/p039-r36-whole600-context.png",
+              "sha256": "17e87f7cee23e0712a82ee6438273986f5f07a0cdeb55c9d81c1c1e19c075ac4",
+              "sourcePixelBox": [
+                410,
+                5812,
+                3020,
+                6324
+              ]
+            },
+            "currentIndependentWholePageRgbExact": true
+          },
+          "native300FullRow": {
+            "originalPinnedView": {
+              "path": "research/salaries/queue-completion-2026-11-01/phsa/canonical-review/phsa-2016-17/p039-r36-native300-fullrow.png",
+              "sha256": "453783aea912d437615c9a963b1e7e923b324e4ea7298c5269df7ae7784996f0",
+              "sourcePixelBox": [
+                0,
+                3006,
+                2550,
+                3062
+              ]
+            },
+            "currentIndependentWholePageRgbExact": true
+          },
+          "wholePage600FullRow": {
+            "originalPinnedView": {
+              "path": "research/salaries/queue-completion-2026-11-01/phsa/canonical-review/phsa-2016-17/p039-r36-whole600-fullrow.png",
+              "sha256": "10affffa70f738ca6e009a5f4597fe1259377b8bd8beead0450b36d03aa937d9",
+              "sourcePixelBox": [
+                0,
+                6012,
+                5100,
+                6124
+              ]
+            },
+            "currentIndependentWholePageRgbExact": true
+          }
+        }
+      },
+      "notHeldV3DataCorrection": true
+    },
+    {
+      "physicalPage": 125,
+      "sourceRowOnPage": 27,
+      "field": "name",
+      "firstCanonicalReading": "Taj,Isaac",
+      "currentCanonicalReading": "Tai,Isaac",
+      "basis": "Actual unchanged whole600/native300 shows dotted i ending at the normal baseline, without the j descender. My prior Taj was my own reading error.",
+      "sourceViews": {
+        "native300Name": {
+          "path": "research/salaries/queue-completion-2026-11-01/phsa/canonical-review/phsa-2016-17/p125-r27-native300-name.png",
+          "sha256": "12683cb469b405c77909efaf86d6049eb633def2ca11f94669b31cfc46862324",
+          "sourcePixelBox": [
+            205,
+            2462,
+            1510,
+            2522
+          ]
+        },
+        "wholePage600Name": {
+          "path": "research/salaries/queue-completion-2026-11-01/phsa/canonical-review/phsa-2016-17/p125-r27-whole600-name.png",
+          "sha256": "56ea5c99db44cdd382e718c50738acf050156324280cac2d5ce9860eb0632faa",
+          "sourcePixelBox": [
+            410,
+            4924,
+            3020,
+            5044
+          ]
+        },
+        "native300Context": {
+          "path": "research/salaries/queue-completion-2026-11-01/phsa/canonical-review/phsa-2016-17/p125-r27-native300-context.png",
+          "sha256": "7565c2c352742b558338d8769b45c68a1b17744841c5e5337596983925091316",
+          "sourcePixelBox": [
+            205,
+            2362,
+            1510,
+            2622
+          ]
+        },
+        "wholePage600Context": {
+          "path": "research/salaries/queue-completion-2026-11-01/phsa/canonical-review/phsa-2016-17/p125-r27-whole600-context.png",
+          "sha256": "0992e5eecde3fd2d176991c8a8cbb81e552a6506087c4582a6ce9fedfd7abeaa",
+          "sourcePixelBox": [
+            410,
+            4724,
+            3020,
+            5244
+          ]
+        },
+        "native300FullRow": {
+          "path": "research/salaries/queue-completion-2026-11-01/phsa/canonical-review/phsa-2016-17/p125-r27-native300-fullrow.png",
+          "sha256": "01a85b455072363f10c21f0262fab3ca02f1e104299ae567ec730f9e5032abaa",
+          "sourcePixelBox": [
+            0,
+            2462,
+            2550,
+            2522
+          ]
+        },
+        "wholePage600FullRow": {
+          "path": "research/salaries/queue-completion-2026-11-01/phsa/canonical-review/phsa-2016-17/p125-r27-whole600-fullrow.png",
+          "sha256": "53b62bd95621c07af88f815215659d9f2bccfcc51e8ab9add147fe8be4a8c145",
+          "sourcePixelBox": [
+            0,
+            4924,
+            5100,
+            5044
+          ]
+        }
+      },
+      "actualSourceProof": {
+        "physicalPage": 125,
+        "sourceRowOnPage": 27,
+        "sourceSha256": "31f7a1af80186bf81139fd693b36e733333a06c2ab1a4c5191bd6ee9b3623a53",
+        "views": {
+          "native300Name": {
+            "originalPinnedView": {
+              "path": "research/salaries/queue-completion-2026-11-01/phsa/canonical-review/phsa-2016-17/p125-r27-native300-name.png",
+              "sha256": "12683cb469b405c77909efaf86d6049eb633def2ca11f94669b31cfc46862324",
+              "sourcePixelBox": [
+                205,
+                2462,
+                1510,
+                2522
+              ]
+            },
+            "currentIndependentWholePageRgbExact": true,
+            "unchangedInkView": {
+              "path": "/workspace/salary-review-municipal-tmp/canonical-phsa-2016-17-107/p125-r27-native300Name-ink.png",
+              "sha256": "9132b598bb52d957641dd9668df08d9209aad07582ec87c929867cd1e1d01dd5",
+              "whiteMarginOnlyBox": [
+                0,
+                0,
+                203,
+                60
+              ]
+            }
+          },
+          "wholePage600Name": {
+            "originalPinnedView": {
+              "path": "research/salaries/queue-completion-2026-11-01/phsa/canonical-review/phsa-2016-17/p125-r27-whole600-name.png",
+              "sha256": "56ea5c99db44cdd382e718c50738acf050156324280cac2d5ce9860eb0632faa",
+              "sourcePixelBox": [
+                410,
+                4924,
+                3020,
+                5044
+              ]
+            },
+            "currentIndependentWholePageRgbExact": true,
+            "unchangedInkView": {
+              "path": "/workspace/salary-review-municipal-tmp/canonical-phsa-2016-17-107/p125-r27-wholePage600Name-ink.png",
+              "sha256": "516159c2d84ce954e58c2db9fba0e7335e4b42bad4b51b8da1ab86cc5bdc76d9",
+              "whiteMarginOnlyBox": [
+                0,
+                0,
+                406,
+                120
+              ]
+            }
+          },
+          "native300Context": {
+            "originalPinnedView": {
+              "path": "research/salaries/queue-completion-2026-11-01/phsa/canonical-review/phsa-2016-17/p125-r27-native300-context.png",
+              "sha256": "7565c2c352742b558338d8769b45c68a1b17744841c5e5337596983925091316",
+              "sourcePixelBox": [
+                205,
+                2362,
+                1510,
+                2622
+              ]
+            },
+            "currentIndependentWholePageRgbExact": true
+          },
+          "wholePage600Context": {
+            "originalPinnedView": {
+              "path": "research/salaries/queue-completion-2026-11-01/phsa/canonical-review/phsa-2016-17/p125-r27-whole600-context.png",
+              "sha256": "0992e5eecde3fd2d176991c8a8cbb81e552a6506087c4582a6ce9fedfd7abeaa",
+              "sourcePixelBox": [
+                410,
+                4724,
+                3020,
+                5244
+              ]
+            },
+            "currentIndependentWholePageRgbExact": true
+          },
+          "native300FullRow": {
+            "originalPinnedView": {
+              "path": "research/salaries/queue-completion-2026-11-01/phsa/canonical-review/phsa-2016-17/p125-r27-native300-fullrow.png",
+              "sha256": "01a85b455072363f10c21f0262fab3ca02f1e104299ae567ec730f9e5032abaa",
+              "sourcePixelBox": [
+                0,
+                2462,
+                2550,
+                2522
+              ]
+            },
+            "currentIndependentWholePageRgbExact": true
+          },
+          "wholePage600FullRow": {
+            "originalPinnedView": {
+              "path": "research/salaries/queue-completion-2026-11-01/phsa/canonical-review/phsa-2016-17/p125-r27-whole600-fullrow.png",
+              "sha256": "53b62bd95621c07af88f815215659d9f2bccfcc51e8ab9add147fe8be4a8c145",
+              "sourcePixelBox": [
+                0,
+                4924,
+                5100,
+                5044
+              ]
+            },
+            "currentIndependentWholePageRgbExact": true
+          }
+        }
+      },
+      "notHeldV3DataCorrection": true
+    }
+  ],
+  "counts": {
+    "ownFirstReadingCorrections": 2,
+    "heldV3DataCorrections": 0
+  },
+  "allPriorBytesUnchanged": true,
+  "scope": "Only two reviewer own name corrections, no amounts or additional source fields."
+}

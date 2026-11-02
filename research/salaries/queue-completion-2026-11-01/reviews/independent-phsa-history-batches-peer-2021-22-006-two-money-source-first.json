@@ -1,0 +1,95 @@
+{
+  "frozen": true,
+  "reviewedOn": "2026-11-02",
+  "reviewer": "/root/recovery_review",
+  "sourceId": "phsa-2021-22",
+  "sourceSha256": "944c99fa7b7ede643cb4c426a5e9ab30aa906d8f81fda379f0206e4b0cdcd25c",
+  "batch": "phsa-2021-22-006",
+  "sourceOnlyPacket": {
+    "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-history-2021-22-006-two-money-source-only-peer.json",
+    "sha256": "df8115240e507d1dcd45993e803e96fb0444b58b0cc495c65acbf4c257eed8d7"
+  },
+  "method": "Personally read both actual original-PDF1200 ink monetary fields before corresponding author/OCR choices. Numeric literals only; no inference or balancing.",
+  "correspondingChoicesOpened": false,
+  "rows": [
+    {
+      "sequence": 237,
+      "field": "remuneration",
+      "physicalPage": 134,
+      "sourceRowOnPage": 31,
+      "cropSha256": "8f47171f7d00d70daef6bbb6490fc83f9b0d25f4ceba7ff428d2e1cb44110eb1",
+      "source": {
+        "path": "/workspace/salary-review-held-health-temp/2021-006-source-recheck/0237-remuneration-actual600.png",
+        "sha256": "2fa0d5de47cd7ba9bf4ee7387009ef6d0afe5449e85ebcf1414765d6f73a7160",
+        "actualPdfPointClip": [
+          426,
+          554.4,
+          513.6,
+          569.04
+        ],
+        "dpi": 600
+      },
+      "actual1200Source": {
+        "path": "/workspace/salary-review-held-health-temp/2021-006-source-recheck/0237-remuneration-actual1200-ink.png",
+        "sha256": "6f20b324cd58595d6670a98bb90aef5f7fb881c0dec6ebeb41718a4e7a99398e",
+        "actualPdfPointClip": [
+          426,
+          554.4,
+          513.6,
+          569.04
+        ],
+        "dpi": 1200,
+        "whiteBoundaryCrop": [
+          692,
+          80,
+          1092,
+          200
+        ],
+        "noResamplingOrGlyphAlteration": true
+      },
+      "literalImageValue": 98949,
+      "literalImageText": "98,949",
+      "uncertainty": null
+    },
+    {
+      "sequence": 355,
+      "field": "remuneration",
+      "physicalPage": 144,
+      "sourceRowOnPage": 29,
+      "cropSha256": "05110c300cfe2a3259be02a9f0300d1171e99bea2614991e8d3004dc420c691e",
+      "source": {
+        "path": "/workspace/salary-review-held-health-temp/2021-006-source-recheck/0355-remuneration-actual600.png",
+        "sha256": "031f6532fae6c3ac43425a8af6011f2c53a1cbea76773b2a0b9852a638f2d727",
+        "actualPdfPointClip": [
+          426,
+          529.4399999999999,
+          513.6,
+          544.0799999999999
+        ],
+        "dpi": 600
+      },
+      "actual1200Source": {
+        "path": "/workspace/salary-review-held-health-temp/2021-006-source-recheck/0355-remuneration-actual1200-ink.png",
+        "sha256": "4cc2d266b243255939732e534b52aedc311966aa9440f89bcaf315d707248790",
+        "actualPdfPointClip": [
+          426,
+          529.4399999999999,
+          513.6,
+          544.0799999999999
+        ],
+        "dpi": 1200,
+        "whiteBoundaryCrop": [
+          692,
+          80,
+          1092,
+          200
+        ],
+        "noResamplingOrGlyphAlteration": true
+      },
+      "literalImageValue": 89537,
+      "literalImageText": "89,537",
+      "uncertainty": null
+    }
+  ],
+  "scopeLimit": "Only two remuneration fields; no name/full400/cohort/control acceptance."
+}

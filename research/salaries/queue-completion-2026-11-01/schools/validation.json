@@ -1,0 +1,51 @@
+{
+  "reviewedOn": "2026-11-01",
+  "allChecksPassed": true,
+  "checks": [
+    {
+      "command": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python -m unittest discover -s scripts -p test_finish_salary_schools.py -v",
+      "exitCode": 0,
+      "stdout": "",
+      "stderr": "test_all_four_leading_footnote_staff_remain_named_observations (test_finish_salary_schools.SchoolCompletionChecks.test_all_four_leading_footnote_staff_remain_named_observations) ... ok\ntest_clipped_name_title_boundary_preserves_both_raw_and_image_amended_fields (test_finish_salary_schools.SchoolCompletionChecks.test_clipped_name_title_boundary_preserves_both_raw_and_image_amended_fields) ... ok\ntest_every_actual_sd61_footer_is_separate_from_employee_position (test_finish_salary_schools.SchoolCompletionChecks.test_every_actual_sd61_footer_is_separate_from_employee_position) ... ok\ntest_every_complete_native_scope_replays_from_original_poppler_text (test_finish_salary_schools.SchoolCompletionChecks.test_every_complete_native_scope_replays_from_original_poppler_text) ... ok\ntest_expense_only_tax_authority_is_not_imported_as_employee (test_finish_salary_schools.SchoolCompletionChecks.test_expense_only_tax_authority_is_not_imported_as_employee) ... ok\ntest_low_paid_elected_person_is_not_lost_by_employee_threshold (test_finish_salary_schools.SchoolCompletionChecks.test_low_paid_elected_person_is_not_lost_by_employee_threshold) ... ok\ntest_manifest_rows_precision_period_and_compiled_partitions (test_finish_salary_schools.SchoolCompletionChecks.test_manifest_rows_precision_period_and_compiled_partitions) ... ok\ntest_negative_expense_currency_is_not_a_dash_or_absolute_value (test_finish_salary_schools.SchoolCompletionChecks.test_negative_expense_currency_is_not_a_dash_or_absolute_value) ... ok\ntest_reordered_surrey_position_column_is_kept_after_money (test_finish_salary_schools.SchoolCompletionChecks.test_reordered_surrey_position_column_is_kept_after_money) ... ok\ntest_shared_ocr_capital_i_error_is_explicit_and_old_bytes_unchanged (test_finish_salary_schools.SchoolCompletionChecks.test_shared_ocr_capital_i_error_is_explicit_and_old_bytes_unchanged) ... ok\ntest_undetected_ocr_cell_stays_unresolved_until_source_dash_review (test_finish_salary_schools.SchoolCompletionChecks.test_undetected_ocr_cell_stays_unresolved_until_source_dash_review) ... ok\n\n----------------------------------------------------------------------\nRan 11 tests in 0.751s\n\nOK\n"
+    },
+    {
+      "command": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python scripts/finish_salary_schools_native.py --check",
+      "exitCode": 0,
+      "stdout": "{\"source\": \"sd27-2025\", \"popplerRows\": 297, \"mupdfRows\": 297, \"differences\": 0, \"summaries\": {\"school-trustees\": {\"rows\": 8, \"computedTotals\": [\"147241\", \"95529\"], \"nullExpenseRows\": 0, \"zeroExpenseRows\": 0}, \"employee-remuneration\": {\"rows\": 289, \"computedTotals\": [\"30206219\", \"422635\"], \"nullExpenseRows\": 0, \"zeroExpenseRows\": 89}}, \"proofSha256\": \"b946da903c1a394f4f36b8c38e52c1288d24f72ad8bd2a75eddd12f4f1b6db22\"}\n{\"source\": \"sd22-2025\", \"popplerRows\": 614, \"mupdfRows\": 614, \"differences\": 0, \"summaries\": {\"school-trustees\": {\"rows\": 7, \"computedTotals\": [\"151441\", \"40508\"], \"nullExpenseRows\": 0, \"zeroExpenseRows\": 0}, \"employee-remuneration\": {\"rows\": 607, \"computedTotals\": [\"64157041\", \"442707\"], \"nullExpenseRows\": 488, \"zeroExpenseRows\": 0}}, \"proofSha256\": \"89aa310a078a39536081f46e27612c547841fd56d83c4c40625e33ec021bab0f\"}\n{\"source\": \"sd44-2025\", \"popplerRows\": 1017, \"mupdfRows\": 1017, \"differences\": 0, \"summaries\": {\"school-trustees\": {\"rows\": 7, \"computedTotals\": [\"219939\", \"11063\"], \"nullExpenseRows\": 0, \"zeroExpenseRows\": 0}, \"employee-remuneration\": {\"rows\": 1010, \"computedTotals\": [\"107244306\", \"1046925\"], \"nullExpenseRows\": 328, \"zeroExpenseRows\": 0}}, \"proofSha256\": \"a4eb351944a2f2e5222d5e23de2da62e50077fabada0e930d7105345b3fff047\"}\n{\"source\": \"sd23-2025\", \"popplerRows\": 1633, \"mupdfRows\": 1633, \"differences\": 0, \"summaries\": {\"school-trustees\": {\"rows\": 7, \"computedTotals\": [\"179392\", \"118845\"], \"nullExpenseRows\": 0, \"zeroExpenseRows\": 0}, \"employee-remuneration\": {\"rows\": 1626, \"computedTotals\": [\"168883510\", \"1277207\"], \"nullExpenseRows\": 47, \"zeroExpenseRows\": 0}}, \"proofSha256\": \"f37ecd2623e514bf933bc92295f6cccf21c445e17d29a2a71bf1a3cab53a7f6a\"}\n{\"source\": \"sd33-2025\", \"popplerRows\": 1018, \"mupdfRows\": 1018, \"differences\": 0, \"summaries\": {\"school-trustees\": {\"rows\": 8, \"computedTotals\": [\"176445.89\", \"15454.54\"], \"nullExpenseRows\": 0, \"zeroExpenseRows\": 0}, \"employee-remuneration\": {\"rows\": 1010, \"computedTotals\": [\"105111247\", \"1185398\"], \"nullExpenseRows\": 216, \"zeroExpenseRows\": 0}}, \"proofSha256\": \"74d95a29a40efaaecc003844e1d9416f59d339263ad919113c32d3646274dcb0\"}\n{\"source\": \"sd36-2025\", \"popplerRows\": 4830, \"mupdfRows\": 4830, \"differences\": 0, \"summaries\": {\"school-trustees\": {\"rows\": 7, \"computedTotals\": [\"402462\", \"36914\"], \"nullExpenseRows\": 0, \"zeroExpenseRows\": 0}, \"employee-remuneration\": {\"rows\": 4823, \"computedTotals\": [\"507041341\", \"1451515\"], \"nullExpenseRows\": 0, \"zeroExpenseRows\": 3893}}, \"proofSha256\": \"72fe38d43115ed6e04f869d68a22acac6fd01ddbfe45babd47b02e85701812e0\"}\n{\"source\": \"sd43-2025\", \"popplerRows\": 2203, \"mupdfRows\": 2203, \"differences\": 0, \"summaries\": {\"school-trustees\": {\"rows\": 10, \"computedTotals\": [\"530585.19\", \"36490.61\"], \"nullExpenseRows\": 0, \"zeroExpenseRows\": 1}, \"employee-remuneration\": {\"rows\": 2193, \"computedTotals\": [\"235489243.16\", \"775448.89\"], \"nullExpenseRows\": 0, \"zeroExpenseRows\": 1852}}, \"proofSha256\": \"0e80fb66517b258180ef21d4c029133dcc34844bec1d7dadbab5fa8b09d8f28b\"}\n{\"source\": \"sd61-2025\", \"popplerRows\": 1380, \"mupdfRows\": 1380, \"differences\": 0, \"summaries\": {\"school-trustees\": {\"rows\": 10, \"computedTotals\": [\"244144.59\", \"6251.31\"], \"nullExpenseRows\": 0, \"zeroExpenseRows\": 1}, \"employee-remuneration\": {\"rows\": 1370, \"computedTotals\": [\"143280208.11\", \"608455.92\"], \"nullExpenseRows\": 0, \"zeroExpenseRows\": 839}}, \"proofSha256\": \"81656dd314e2013d666d390d75bd39ed9e312b63c5f7f1c4c0a1c94213e3e7e3\"}\n{\"source\": \"sd68-2025\", \"popplerRows\": 1012, \"mupdfRows\": 1012, \"differences\": 0, \"summaries\": {\"school-trustees\": {\"rows\": 9, \"computedTotals\": [\"249305\", \"52034\"], \"nullExpenseRows\": 0, \"zeroExpenseRows\": 0}, \"employee-remuneration\": {\"rows\": 1003, \"computedTotals\": [\"103832656\", \"423778\"], \"nullExpenseRows\": 695, \"zeroExpenseRows\": 0}}, \"proofSha256\": \"95079b9e8422f1da7477014ba04442406212d2e2180e60b73c6122002fd2a1e4\"}\n{\"source\": \"sd73-2025\", \"popplerRows\": 1076, \"mupdfRows\": 1076, \"differences\": 0, \"summaries\": {\"school-trustees\": {\"rows\": 9, \"computedTotals\": [\"265975\", \"41304\"], \"nullExpenseRows\": 0, \"zeroExpenseRows\": 0}, \"employee-remuneration\": {\"rows\": 1067, \"computedTotals\": [\"112948428\", \"624040\"], \"nullExpenseRows\": 512, \"zeroExpenseRows\": 0}}, \"proofSha256\": \"f2b7fd8765fec269147623ab03ebfa6c54e2eb09136860ad5e207a2536ad04da\"}\n",
+      "stderr": "Syntax Error: Expected the optional content group list, but wasn't able to find it, or it isn't an Array\n"
+    },
+    {
+      "command": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python scripts/finish_salary_schools_scan.py --check-amendments",
+      "exitCode": 0,
+      "stdout": "{\"rows\": [58, 58], \"rawReaderFieldDisagreements\": 4, \"originalImageAmendmentReplay\": \"PASS\", \"allFinalAmendedFieldsAgree\": true}\n",
+      "stderr": ""
+    },
+    {
+      "command": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python scripts/finish_salary_schools_revisions.py --check",
+      "exitCode": 0,
+      "stdout": "{\"source\": \"sd61-2025\", \"revisedPositionFields\": 20, \"proofSha256\": \"4ef6ed7632d9d421c9eacb0391cb768271c80d23cc8b25037777c621727be357\", \"dataSha256\": \"4ef497c0aecb94b4857868df4ffc1b34ee2147b8570973721ed3957f0f67eedb\", \"frozenV1Unchanged\": true}\n",
+      "stderr": ""
+    },
+    {
+      "command": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python scripts/finish_salary_schools.py --check",
+      "exitCode": 0,
+      "stdout": "{\"scopes\": 22, \"rows\": 15138, \"reviewed\": true}\n",
+      "stderr": ""
+    },
+    {
+      "command": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python scripts/finish_salary_schools_clarifications.py --check",
+      "exitCode": 0,
+      "stdout": "{\"file\": \"research/salaries/queue-completion-2026-11-01/schools/clarification-public-route-closure.json\", \"sha256\": \"bc305164d1ecf857f826d81175a8699ef19e25dac0afce8155549bf4b562cc63\", \"externalIssuerItemsUnresolved\": 2, \"newRows\": 0}\n",
+      "stderr": ""
+    },
+    {
+      "command": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python scripts/finish_salary_schools_discover.py --verify-receipts",
+      "exitCode": 0,
+      "stdout": "{\"publicReceiptsFingerprintReplay\": \"PASS\", \"receipts\": 31, \"networkRequests\": 0}\n",
+      "stderr": ""
+    }
+  ],
+  "sourceManifestSha256": "b86fb29e39e7639d167853c1f393a5d15fd2b9a858f807c2e8547b36dc43c7be",
+  "newScopes": 22,
+  "newRows": 15138
+}

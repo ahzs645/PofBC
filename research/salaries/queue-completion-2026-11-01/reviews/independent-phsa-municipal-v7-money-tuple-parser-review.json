@@ -1,0 +1,196 @@
+{
+  "frozen": true,
+  "createdAtUtc": "2026-11-02T05:02:38.057512+00:00",
+  "reviewer": "recovery_municipal",
+  "task": "Independent v7 tuple-peer financial parser for exact original confirmation ledgers 009/013/015/018 only.",
+  "status": "PASS; ready for held_health_review dispatcher integration and independent review.",
+  "code": {
+    "path": "scripts/finish_salary_phsa_review_money_tuple_v7.py",
+    "sha256": "ea3cbe16fb1e48e9950187677eb9c11993497e444b0712124c62894d9af5c2dc"
+  },
+  "actualSchemaChecks": {
+    "path": "scripts/finish_salary_phsa_review_money_tuple_v7_checks.py",
+    "sha256": "11e2fed5457a73c2544e09548d4395046ebcab744369c8161121c5ef4b2620c2"
+  },
+  "testLog": {
+    "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-municipal-v7-money-tuple-parser-test-log.txt",
+    "sha256": "3121fe26e4847ffd6024de664fddcc8478bd3d0392a7626fbb30058855f465a4"
+  },
+  "liveReconstructionAudit": {
+    "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-municipal-v7-money-tuple-parser-live-audit.json",
+    "sha256": "843bf8f2d5ac4d79032c9e463bc138703cd7dffe394095b38a4a0a07e9893c9f"
+  },
+  "api": {
+    "entryPoint": "verify(confirmation, source_id, source_sha, load)",
+    "input": "Original flat confirmation-ledger member plus exact confirmationLedger {path,sha256}; caller removes/safely rebases supersession first.",
+    "loader": "load(reference, parse=True); helper uses parse=False, recomputes every referenced SHA and parses duplicate-key-rejecting JSON itself. External exact-byte image aliases may be supplied by caller.",
+    "result": "None on PASS; raises on any failed identity/type/byte/scope/history/image/member check.",
+    "cache": "Complete independently reconstructed matrix cached once per exact sealed ledger SHA. Every call still compares the complete supplied original member and literal positive integer type."
+  },
+  "independence": {
+    "producerOrV7InterpretationImports": false,
+    "imports": [
+      "PIL",
+      "csv",
+      "fitz",
+      "hashlib",
+      "io",
+      "json",
+      "math",
+      "pathlib",
+      "re"
+    ],
+    "values": "Derived independently from pinned source target tuples, raw peer/author transcripts and explicitly pinned correction histories; ledger values and final-peer flags are checked against this reconstruction.",
+    "semanticScope": "Replays existing frozen readings. Makes no new semantic glyph decisions or claim to a fresh image-first human transcription.",
+    "previousAuthorExposure": "Reviewer authored some original bounded records; this new module is an independent parser implementation, not a new blind reader."
+  },
+  "source": {
+    "sourceId": "phsa-2019-20",
+    "sha256": "0e31ac2054f0c2d4ef78797185dddd96cc0cdf2eab94bd6841fa24e1c38e7d02",
+    "localOriginal": "/tmp/queue-completion-phsa/originals/phsa-2019-20.pdf",
+    "reproduction": "Original PDF bytes must match SHA before rendering. Every native300 field and original fullrow is rendered from the whole actual PDF page and compared as visible RGB. Fresh600 first attempts whole600 integer cropping; otherwise the exact declared PDF clip is independently rendered. Fresh1200 remains declared partial-clip reproduction, never labeled whole-page parity. Alpha is composited over white before visible comparison."
+  },
+  "fixtures": [
+    {
+      "mode": "009",
+      "ordinaryBatch": "phsa-2019-20-009",
+      "originalConfirmationLedger": {
+        "path": "research/salaries/queue-completion-2026-11-01/phsa/triangulation/money-peer-confirmations-009.json",
+        "sha256": "deba98fe20ef290dcfb90de021123c8ee2b36134fd85382ec9e33fe8b3422c31"
+      },
+      "originalFinalPeer": {
+        "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-history-batches-peer-2019-20-009-fiftyone-money-final-comparison.json",
+        "sha256": "2f7c126ff272c6a53df49da49df3fa6eb8f8cfb74f6229ab89477bd79ef0edf9"
+      },
+      "sourceReceiptSchema": "two-independent-source-money-readers-with-additive-rereads-v1",
+      "replay": {
+        "authorFirstCorrections": 5,
+        "authorRejectedSecondaryReadings": 1,
+        "dashFields": 1,
+        "freshDeclaredClipRgbExact": 51,
+        "freshWhole600RgbExact": 0,
+        "native300RgbExact": 51,
+        "oldFullRow300RgbExact": 51,
+        "peerCorrections": 7,
+        "positiveFields": 50,
+        "sourceTargets": 51
+      }
+    },
+    {
+      "mode": "013",
+      "ordinaryBatch": "phsa-2019-20-011",
+      "originalConfirmationLedger": {
+        "path": "research/salaries/queue-completion-2026-11-01/phsa/triangulation/money-peer-confirmations-013.json",
+        "sha256": "f21bb7b9d9d4e8016ff503562594667f32534047668db119da43168af198c572"
+      },
+      "originalFinalPeer": {
+        "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-history-batches-peer-2019-20-011-fortyfour-money-final-comparison.json",
+        "sha256": "cf9ac0ca05233a77e5aa66c13a0a18da8b593d1e94313850929a404e4b0b457f"
+      },
+      "sourceReceiptSchema": "two-independent-source-money-readers-with-additive-rereads-v1",
+      "replay": {
+        "authorFirstCorrections": 1,
+        "authorRejectedSecondaryReadings": 0,
+        "dashFields": 0,
+        "freshDeclaredClipRgbExact": 1,
+        "freshWhole600RgbExact": 43,
+        "native300RgbExact": 44,
+        "oldFullRow300RgbExact": 44,
+        "peerCorrections": 2,
+        "positiveFields": 44,
+        "sourceTargets": 44
+      }
+    },
+    {
+      "mode": "015",
+      "ordinaryBatch": "phsa-2019-20-010",
+      "originalConfirmationLedger": {
+        "path": "research/salaries/queue-completion-2026-11-01/phsa/triangulation/money-peer-confirmations-015.json",
+        "sha256": "c090f1011cc772ddd01604ba4dcb1d48e6cf2bd0aa8849e26012568096edca0d"
+      },
+      "originalFinalPeer": {
+        "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-history-batches-peer-2019-20-010-fortyone-money-final-comparison.json",
+        "sha256": "eceba9b343ac7a348af2faf619064c03cf818edda3a1add0a4f28a24cc2b777b"
+      },
+      "sourceReceiptSchema": "two-independent-source-money-readers-with-additive-rereads-v1",
+      "replay": {
+        "authorFirstCorrections": 0,
+        "authorRejectedSecondaryReadings": 0,
+        "dashFields": 0,
+        "freshDeclaredClipRgbExact": 1,
+        "freshWhole600RgbExact": 40,
+        "native300RgbExact": 41,
+        "oldFullRow300RgbExact": 41,
+        "peerCorrections": 4,
+        "positiveFields": 41,
+        "sourceTargets": 41
+      }
+    },
+    {
+      "mode": "018",
+      "ordinaryBatch": "phsa-2019-20-013",
+      "originalConfirmationLedger": {
+        "path": "research/salaries/queue-completion-2026-11-01/phsa/triangulation/money-peer-confirmations-018.json",
+        "sha256": "94405abc9cb349a597854d1fa6b50d95dd30655996894d2d71e4484b55900ee0"
+      },
+      "originalFinalPeer": {
+        "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-history-batches-peer-2019-20-013-forty-money-final-comparison.json",
+        "sha256": "971443bb8c16f926ecc538636f7986ac8bbd14ee8ddb55d1f5ac34010f760081"
+      },
+      "sourceReceiptSchema": "image-first-literal-tuple-peer-with-additive-source-rereads-v1",
+      "replay": {
+        "authorFirstCorrections": 0,
+        "authorRejectedSecondaryReadings": 0,
+        "dashFields": 0,
+        "freshDeclaredClipRgbExact": 40,
+        "freshWhole600RgbExact": 0,
+        "native300RgbExact": 40,
+        "oldFullRow300RgbExact": 40,
+        "peerCorrections": 5,
+        "positiveFields": 40,
+        "sourceTargets": 40
+      }
+    }
+  ],
+  "total": {
+    "positiveConfirmations": 175,
+    "sourceTargetFields": 176,
+    "separatelyPreservedPrintedDash": 1,
+    "native300FieldRgbReproductions": 176,
+    "originalFullrow300RgbReproductions": 176,
+    "freshWhole600RgbReproductions": 83,
+    "freshDeclaredClipRgbReproductions": 93,
+    "peerFirstReadingCorrections": 18,
+    "authorFirstReadingCorrections": 6,
+    "authorRejectedSecondaryReadings": 1
+  },
+  "historyQualifications": [
+    "009 retains the correct original 4558, rejected secondary 4538, restored final 4558; five genuine author-first corrections remain five.",
+    "009 physical61 row41 expenses is a printed dash represented as null only in separately validated dash evidence, never a numeric-money confirmation.",
+    "013 exact older raw has no batch header; its sealed bytes, source identity and exact native-target-manifest SHA bind the original batch without inventing a header.",
+    "015 sparse TSV blank cells are absence of events; requested nonempty (sequence,field) events are unique positive integer literals.",
+    "018 earlier author source-reread scope and pre-peer timing are pinned separately; tuple schema uses literalImageValue rather than another format's value member."
+  ],
+  "checks": {
+    "command": "OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 python scripts/finish_salary_phsa_review_money_tuple_v7_checks.py",
+    "testsPassed": 16,
+    "livePositiveConfirmationsReplayed": 175,
+    "mutations": [
+      "Boolean/float/null/zero/negative/string amounts",
+      "Foreign source/batch/physical-field tuple",
+      "Unknown/mismatched sealed ledger pin",
+      "Overlay/image/geometry/extra original-member changes",
+      "Duplicate raw tuples and JSON members",
+      "Byte mismatch despite caller loader",
+      "Peer amendment wrong initial value/scope/type/duplicates",
+      "Author raw timing and missing target field",
+      "Legacy no-batch exact target-manifest SHA",
+      "Actual source native crop geometry",
+      "Printed dash excluded from positive confirmation",
+      "Rejected secondary restored without inflating first-error count",
+      "Modified member rejected after immutable matrix cache",
+      "Transparent unpainted RGB excluded from visible source comparison"
+    ]
+  },
+  "ownership": "Only the two NEW helper/check scripts and three NEW review outputs written for this task. Existing producer/v7/frozen evidence and global salary outputs unchanged; integration belongs to held_health_review."
+}

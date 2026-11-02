@@ -1,0 +1,103 @@
+{
+  "reviewer": "/root/recovery_review",
+  "sourceOnlyTranscript": {
+    "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-history-batches-hyphen-i-supplement-001-original-transcript.json",
+    "sha256": "8eb5da6422ea368811f827fd3269e569919bb823dd8912353c4dacd0f5212129"
+  },
+  "scope": "Three newly targeted hyphen-initial namefields only; source-dependent case review, no casing substitution. All originalsource/evidence/batchfiles unchanged.",
+  "resolutions": [
+    {
+      "sourceId": "phsa-2015-16",
+      "sourceSha256": "f8bc28af7e87f57c51973f5ed581e50fe414f00486659551ad5c8171b98f73a3",
+      "physicalPage": 40,
+      "sourceRowOnPage": 15,
+      "reviewTargetFields": [
+        "name"
+      ],
+      "resolvedValues": {
+        "name": "Gfeller-Ingledew,Paris-Ann PA"
+      },
+      "literalImageName": "Gfeller-Ingledew,Paris-Ann PA",
+      "status": "resolved-with-source-typography-qualification",
+      "cropSha256": "111da134214ec5dbf52c33e773b616e881c52094721fca992352573451e6c026",
+      "candidateName": "Gfeller-Ingledew,Paris-Ann PA",
+      "tesseractName": "Gfeller-Ingledew,Paris-Ann PA",
+      "rapidName": "Gfeller-Ingledew,Paris-Ann PA",
+      "candidateExact": true,
+      "newDataCorrectionRequired": false,
+      "caseQualification": {
+        "visibleAlternatives": [
+          "Gfeller-Ingledew,Paris-Ann PA",
+          "Gfeller-lngledew,Paris-Ann PA"
+        ],
+        "characterPositionsZeroBased": [
+          8
+        ],
+        "assumptionBasis": "Sans-serif source capitalI/l after hyphen has the same simple vertical form. CapitalI primary uses an explicitly qualified hyphenated-name component initial-capital convention, also shown by Paris-Ann on this same line; pixels do not establish case.",
+        "caseProvenByPixels": false,
+        "requiresExactPeerAndRootAdoptionAndPublicWarning": true
+      }
+    },
+    {
+      "sourceId": "phsa-2017-18",
+      "sourceSha256": "1971861d325c81e48083e56e45edbb62c6446fa2c387ce786a2b4e0aa5cdc006",
+      "physicalPage": 43,
+      "sourceRowOnPage": 14,
+      "reviewTargetFields": [
+        "name"
+      ],
+      "resolvedValues": {
+        "name": "Gfeller-Ingledew,Paris-Ann PA"
+      },
+      "literalImageName": "Gfeller-Ingledew,Paris-Ann PA",
+      "status": "resolved-from-original-image",
+      "cropSha256": "64f85ef9168ca1a9d40d3b048ffc4964f0fa228524c178130d02d4c7ed9a1200",
+      "candidateName": "Gfeller-Ingledew,Paris-Ann PA",
+      "tesseractName": "Gfeller-Ingledew,Paris-Ann PA",
+      "rapidName": "Gfeller-Ingledew,Paris-Ann PA",
+      "candidateExact": true,
+      "newDataCorrectionRequired": false,
+      "caseQualification": {
+        "visibleAlternatives": [],
+        "characterPositionsZeroBased": [],
+        "assumptionBasis": "Actual source serif capitalI after hyphen has full top/bottom horizontal serifs, visibly distinct from lowercase l in the same source row. Checked direct600dpi originalPDF clip.",
+        "caseProvenByPixels": true,
+        "requiresExactPeerAndRootAdoptionAndPublicWarning": false
+      }
+    },
+    {
+      "sourceId": "phsa-2017-18",
+      "sourceSha256": "1971861d325c81e48083e56e45edbb62c6446fa2c387ce786a2b4e0aa5cdc006",
+      "physicalPage": 122,
+      "sourceRowOnPage": 16,
+      "reviewTargetFields": [
+        "name"
+      ],
+      "resolvedValues": {
+        "name": "Tay,Siu-Imm"
+      },
+      "literalImageName": "Tay,Siu-Imm",
+      "status": "resolved-from-original-image",
+      "cropSha256": "b9af09ebecc7c90ee37760ce004049267b9fac0ba60b2e265bcf037be5f21e7b",
+      "candidateName": "Tay,Siu-Imm",
+      "tesseractName": "Tay,Siu-Imm",
+      "rapidName": "Tay,Siu-Imm",
+      "candidateExact": true,
+      "newDataCorrectionRequired": false,
+      "caseQualification": {
+        "visibleAlternatives": [],
+        "characterPositionsZeroBased": [],
+        "assumptionBasis": "Actual source serif capitalI after hyphen has full top/bottom horizontal serifs, visibly distinct from lowercase l in the same source row. Checked direct600dpi originalPDF clip.",
+        "caseProvenByPixels": true,
+        "requiresExactPeerAndRootAdoptionAndPublicWarning": false
+      }
+    }
+  ],
+  "candidateDifferences": 0,
+  "exactImageRows": 2,
+  "qualifiedTypographyRows": 1,
+  "unresolvedExactGlyphCases": 1,
+  "moneyFieldsReviewed": 0,
+  "doesNotAcceptWholeCohort": true,
+  "finalQualifiedAcceptancePendingExactPeerAndRootAdoptionAndSourcePublicWarning": true
+}

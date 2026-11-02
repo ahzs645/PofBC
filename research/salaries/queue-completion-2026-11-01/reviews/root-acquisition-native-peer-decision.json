@@ -1,0 +1,70 @@
+{
+  "reviewedOn": "2026-11-01",
+  "reviewer": "root",
+  "decision": "Accept full literal employee scopes, VCHBoard and Providence numeric-pay Board subset with exact source/scope qualifications; no balancing or invented zero.",
+  "scopes": [
+    {
+      "scope": "providence-employees",
+      "rows": 3289,
+      "candidatePath": "research/salaries/queue-completion-acquisition/providence-2023-24-employees.json.gzip",
+      "candidateSha256": "b9f4367622d685d0fbc5a6fc468ec87bde18191b5c5df9ba95ed9161de19ebe0",
+      "allSixFieldsAndOrderExactUnderWhitespaceOnlyNameComparison": true,
+      "computedRemuneration": 380612829,
+      "computedKnownExpenses": 3560383
+    },
+    {
+      "scope": "providence-numeric-pay-board",
+      "rows": 10,
+      "candidatePath": "research/salaries/queue-completion-acquisition/providence-2023-24-board-numeric-pay.json.gzip",
+      "candidateSha256": "b62155c1cefb484610320842b511fac496a837eb889d1b739c22f6db1479827c",
+      "allSixFieldsAndOrderExactUnderWhitespaceOnlyNameComparison": true,
+      "computedRemuneration": 113500,
+      "computedKnownExpenses": 5455
+    },
+    {
+      "scope": "vch-employees",
+      "rows": 7740,
+      "candidatePath": "research/salaries/queue-completion-acquisition/vch-2020-21-employees.json.gzip",
+      "candidateSha256": "483bd77198c4380dfd6f679a34dbad933b28a300a1a30b61b1c629cc9293e1ce",
+      "allSixFieldsAndOrderExactUnderWhitespaceOnlyNameComparison": true,
+      "computedRemuneration": 771928026,
+      "computedKnownExpenses": 3773912
+    },
+    {
+      "scope": "vch-board",
+      "rows": 10,
+      "candidatePath": "research/salaries/queue-completion-acquisition/vch-2020-21-board-numeric-pay.json.gzip",
+      "candidateSha256": "935e90a9c69b0f2e9f74fcd98588abf5faf2543efbb98f6483f02cca1dbd41fa",
+      "allSixFieldsAndOrderExactUnderWhitespaceOnlyNameComparison": true,
+      "computedRemuneration": 217405,
+      "computedKnownExpenses": 2749
+    }
+  ],
+  "employeeRowsReviewedByIndependentNativeReader": 11029,
+  "numericPayBoardRows": 20,
+  "providenceRawBoardRowsAlsoRead": 15,
+  "providenceExpenseOnlyRowsExcludedFromSalaryData": 5,
+  "independentReaders": [
+    "Root PDFMiner all_texts True and independently specified geometry",
+    "Author MuPDF",
+    "Author Poppler"
+  ],
+  "rootSourceTranscripts": {
+    "root-providence-pdfminer-second-read.json.gzip": "a18656d4945d9cf1256d39842538af2ac19e7547a24526628aa86b4b3fc2f81e",
+    "root-vch-pdfminer-first-read.json.gzip": "15d5df1d2f9a800dae6891baa8ae693eff27fce5615753af0271de16434637d5"
+  },
+  "independentVisibilityScanSha256": "d7e899145d1238e21ee2ebcb5db97110bd768298be5da9c506c6a956f02ecc79",
+  "qualifications": [
+    "VCH literal employee sums exceed named printed controls by39remuneration/22expenses; all three native readers agree on every sourcefield and order, sourcepaint/geometry checks complete. No discrepancy cause asserted or amount adjusted.",
+    "VCH standalonePartFcopy contains noapprovalpage; no adoption/signatureclaim made. BlankBoardexpenses remainnull even where inclusiveTotal equalsremuneration.",
+    "Providence completeemployee3289namedcount and moneycontrols exact. FiveBoardpaydashes remainunknown in raw supporting research; only10Boardobservations with numericpay enter salarydata. FullBoard knownpay113500/knownexpenses6566; paid10knownexpenses5455, additional1111expenses belong to5excludednon-numericpayrows. This is a scope difference, not an unexplained subtotal residual.",
+    "Providence fiscal2024fees paid fiscal2025 are excluded by the source. Payments are cash disclosures, not annual basesalary. Employee '--' atphysical153 Mckinnon,Patricia is an actual displayed nonnumeric marker and remainsnull.",
+    "Providencephysical5 contains actualJamesGorman/NelsonKwan signatures datedSept26,2024 coveringallSOFIschedules FY2023/24.",
+    "Libraryrepresentation addscover/pages; exact responseSHA is pinned and not claimed identical to inaccessible origin URLs or storedfilechecksum."
+  ],
+  "actualImageReviewLimits": "Root personally viewed Providence approval and the Mckinnon source row. Full2employee/2Board native readers compared for every field; author independently rendered every319salary/Board pages and original-source wordink/geometry, including allblankBoard cells. Additional images are not falsely claimed personally read by root.",
+  "independentReaderOnlyRevisions": "V1 incomplete raw transcript preserved; v2 separately corrects Board multi-column geometry and explicit double-hyphen handling before author candidate comparison. No author payload corrections.",
+  "oldFrozenSourcesChanged": false,
+  "rootDataOrMetadataChanges": false,
+  "contactsSent": false
+}

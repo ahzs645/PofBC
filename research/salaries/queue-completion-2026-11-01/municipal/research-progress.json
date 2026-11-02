@@ -1,0 +1,119 @@
+{
+  "date": "2026-11-01",
+  "status": "raw-ocr-captured-acceptance-in-progress",
+  "sourceInventory": [
+    {
+      "key": "mission-2023",
+      "url": "https://www.mission.ca/media/file/2023-sofi-report",
+      "finalUrl": "https://www.mission.ca/media/file/2023-sofi-report",
+      "status": 200,
+      "contentType": "application/pdf",
+      "bytes": 486250,
+      "sha256": "82e0ab886a7e8a1e464e3afa25127be7176de79881b93b7602c5a101c8f4d6ac",
+      "cachePath": "/tmp/queue-completion-municipal/mission-2023.pdf"
+    },
+    {
+      "key": "mission-2024",
+      "url": "https://www.mission.ca/media/file/2024-sofi-report",
+      "finalUrl": "https://www.mission.ca/media/file/2024-sofi-report",
+      "status": 200,
+      "contentType": "application/pdf",
+      "bytes": 522117,
+      "sha256": "a4fa12aba963169e276fcd69680887ff788f731fd3ac5260135b88705db4e5a9",
+      "cachePath": "/tmp/queue-completion-municipal/mission-2024.pdf"
+    },
+    {
+      "key": "mission-2025",
+      "url": "https://www.mission.ca/media/file/2025-sofi-reportpdf",
+      "finalUrl": "https://www.mission.ca/media/file/2025-sofi-reportpdf",
+      "status": 200,
+      "contentType": "application/pdf",
+      "bytes": 584620,
+      "sha256": "23864d9e618e6ceaab92a67e06d38f43d7433e00b747ae53785d8f39f8822624",
+      "cachePath": "/tmp/queue-completion-municipal/mission-2025.pdf"
+    },
+    {
+      "key": "vernon-2025",
+      "url": "https://www.vernon.ca/sites/default/files/2026-08/SOFI%20Signed%20-%20CORRECTED.pdf",
+      "finalUrl": "https://www.vernon.ca/sites/default/files/2026-08/SOFI%20Signed%20-%20CORRECTED.pdf",
+      "status": 200,
+      "contentType": "application/pdf",
+      "bytes": 530550,
+      "sha256": "83a9e5a60b67e1df5016762ab5e8bd9cc3fc054e55ddc28b1a4c1a8cff7d0197",
+      "cachePath": "/tmp/queue-completion-municipal/vernon-2025.pdf"
+    }
+  ],
+  "additionalSource": {
+    "url": "https://www.creston.ca/sites/default/files/2025-07/Statement%20of%20Financial%20Information%202024.pdf",
+    "finalUrl": "https://www.creston.ca/sites/default/files/2025-07/Statement%20of%20Financial%20Information%202024.pdf",
+    "sha256": "24a6cd0394f42596859f15cb4a1ec811c28c5a5c09e004a3766aa78130396ac6",
+    "cachePath": "/tmp/queue-completion-municipal/creston-2024.pdf"
+  },
+  "plannedScopes": "Mission2023/2024/2025 employee+council complete scopes; Vernon2025 employee+council complete scopes; Creston2024 employee only (council already accepted). No new source accepted yet. All new source metadata must set retainCompiledPartition:true.",
+  "sourcePageSpecs": {
+    "mission-2023": {
+      "salary": [
+        6,
+        7,
+        8,
+        9
+      ],
+      "approval": [
+        1,
+        2
+      ]
+    },
+    "mission-2024": {
+      "salary": [
+        6,
+        7,
+        8,
+        9
+      ],
+      "approval": [
+        1,
+        2
+      ]
+    },
+    "mission-2025": {
+      "salary": [
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "approval": [
+        1,
+        2
+      ]
+    },
+    "vernon-2025": {
+      "salary": [
+        4,
+        5,
+        6,
+        7
+      ],
+      "approval": [
+        1,
+        2,
+        3
+      ]
+    },
+    "creston-2024": {
+      "salary": [
+        37
+      ],
+      "approval": [
+        1,
+        3,
+        4
+      ]
+    }
+  },
+  "ocrRuntime": "/tmp/held-health-ocr/venv/bin/python scripts/finish_salary_municipal_ocr.py; one reserved worker; raw evidence in municipal/ocr; actualPDF300dpi images in /tmp/queue-completion-municipal/images",
+  "mcbride": "Period remains held; exact request and task IDs sent to recovery_education for recipient-verified unsent outbox. Current finance still links document45990. Public policies root109 has17 policies,no travel/remuneration. Bylaws root108 has25 bylaws,no council remuneration bylaw. Council page no expense schedule. Terrace finance current earliestSOFI2017 (alreadyaccepted); available2015/16annual reports lack named salary schedules on nativekeyword search; guessed2015/16SOFI paths404. New retrieval receipts in /tmp/queue-completion-municipal; not yet all pinned. Continue bounded independent McBride expense/policy/financial note public route, not generic cover relabelling.",
+  "oldFrozenFilesChanged": false,
+  "contactsSent": false
+}

@@ -1,0 +1,38 @@
+{
+  "frozen": true,
+  "reviewedOn": "2026-11-02",
+  "reviewer": "/root/held_health_review",
+  "script": {
+    "path": "scripts/finish_salary_phsa_review_final_replay_v6.py",
+    "sha256": "2901b62ada2b65de4ee03f31d58d26f80708c01f06da4f4969fbb540411d127e"
+  },
+  "finalSourceReplay": {
+    "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-history-2021-22-final-v3-raw-overlay-replay.json",
+    "sha256": "af1c591c112574f8550a4f9da538af291586931f9070d43fe0c03094c17fa622"
+  },
+  "positiveExactFiveMoneyLedgerSchemas": [
+    "32481670b7c7d7cdba333795d41d6906a27daea9b31ad0a6508b8584874714c6",
+    "b2f9eb63ad0aaaa38c47adff5e18ed01e11da815727150ce9c257c21d58c51d9",
+    "ba7e5902ad5a8240d90fb7ef78c6a6ef539c533e1ca7ab1a0570ad88c7db3817",
+    "6ea7b9126af181f5572a716b1237f08cce62f63f6aad381b18c64237ca08d143",
+    "7512fd0d496e1f7674a1bc1bc17814b58ff838710d74d0d7c97f388e411859f1"
+  ],
+  "positiveMoneyFieldCount": 17,
+  "allExactSourceScopeFieldsIncludingSixNameContextViews": 23,
+  "independentActualPdfPixelReplay": true,
+  "rejections": [
+    "wrong literal value",
+    "unrequested name-field authority",
+    "wrong physical row",
+    "wrong source ID",
+    "wrong source-image pin",
+    "unknown ledger hash",
+    "unregistered external image alias",
+    "external parsed evidence"
+  ],
+  "oldV5Unchanged": {
+    "path": "scripts/finish_salary_phsa_review_final_replay_v5.py",
+    "sha256": "bac4962028b05d2af1766f48eaf02a612bf286243efb41678ecf483b8a73ea42"
+  },
+  "limits": "Independent code/raw-row/pinned-review/pixel replay; no author helper imports, newhuman transcription or sourceacceptance claim. Eightnegative in-memory corruption cases allrejected, exactfiveclosedledgerhashes only. Externalimagealiases allowed solely from hash-pinnedexact-byte provenance archives, binaryonly; parsedexternal evidence rejected. No oldfrozenfile edits."
+}

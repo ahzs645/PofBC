@@ -1,0 +1,336 @@
+{
+  "schema": "queue-phsa-release-metadata-adoption-v1",
+  "frozen": true,
+  "reviewedOn": "2026-11-02",
+  "metadataOnly": true,
+  "baseRootAcceptance": {
+    "path": "research/salaries/queue-completion-2026-11-01/reviews/root-phsa-history-all-nine-source-acceptance.json",
+    "sha256": "89272a31d2898741efbced563cf577788f8537170a1279096813c1c13b7cf447"
+  },
+  "frozenPromoter": {
+    "path": "scripts/finish_salary_phsa_promote.py",
+    "sha256": "cc68a5e0ee7799e5024da401d4c3e11307071ff283e311e4ca623d0cd62ffc70"
+  },
+  "baseManifest": {
+    "path": "research/salaries/queue-completion-phsa/sources.json",
+    "sha256": "c510c1375723288e174f2ea28232a7f4ba460cf491d73c168b4e9af6d2f04e8a"
+  },
+  "baseManifestArchive": {
+    "path": "research/salaries/queue-completion-2026-11-01/integration/phsa-base-promoted-sources.json",
+    "sha256": "c510c1375723288e174f2ea28232a7f4ba460cf491d73c168b4e9af6d2f04e8a"
+  },
+  "releaseManifestPath": "research/salaries/queue-completion-phsa/sources.json",
+  "releaseManifestSHA": "21166461aad61dc59ccc941dd606549d81d8c86a2ecf4343822935fb85acc749",
+  "sourceCount": 9,
+  "changedFieldCount": 27,
+  "changes": [
+    {
+      "sourceId": "queue-completion-phsa-2015-16-employees",
+      "path": "/sources/0/validation/compiledPartitionRetained",
+      "before": {
+        "present": false
+      },
+      "after": {
+        "present": true,
+        "value": true
+      }
+    },
+    {
+      "sourceId": "queue-completion-phsa-2015-16-employees",
+      "path": "/sources/0/validation/compiledPartitionRetentionReason",
+      "before": {
+        "present": false
+      },
+      "after": {
+        "present": true,
+        "value": "Complete-copy equivalence with the existing compiled partition has not been proved; the compiled observations are retained without assuming identity or reporting-period equivalence."
+      }
+    },
+    {
+      "sourceId": "queue-completion-phsa-2015-16-employees",
+      "path": "/sources/0/publicWarning",
+      "before": {
+        "present": true,
+        "value": "Fiscal-year remuneration above the disclosure threshold is not an annual salary rate or a workforce census. Expenses may include third-party supplier payments; original expense dashes remain unknown (null). The published standalone schedule is unsigned and does not establish board approval. 85 source-name readings have an explicit contextual capital-I/lowercase-l qualification. Their exact affected rows, primary readings, visible alternatives and independently reviewed/root-adopted context are retained in provenance; glyph case is not claimed to be proved by pixels. Zulfiqar,Muhammad* retains the printed $481,982 current-period payment. The source footnote reports $333,272 salary, $19,724 MOCAP/retroactive pay and a $128,986 correction of 2014/15 unpaid-leave coding reported in 2015/16; no amount was subtracted, annualized or moved to another year. Literal row sums are remuneration $482,734,247 and known expenses $10,397,074, differing from printed controls $482,734,216/$10,397,046 by +31/+28. No source cell was adjusted to balance; the cause is not established."
+      },
+      "after": {
+        "present": true,
+        "value": "Fiscal-year remuneration above the disclosure threshold is not an annual salary rate or a workforce census. Expenses may include third-party supplier payments; original expense dashes remain unknown (null). The published standalone schedule is unsigned and does not establish board approval. 85 source-name readings have an explicit contextual capital-I/lowercase-l qualification. Their exact affected rows, primary readings, visible alternatives and independently reviewed/root-adopted context are retained in provenance; glyph case is not claimed to be proved by pixels. Zulfiqar,Muhammad* retains the printed $481,982 current-period payment. The source footnote reports $333,272 salary, $19,724 MOCAP/retroactive pay and a $128,986 correction of 2014/15 unpaid-leave coding reported in 2015/16; no amount was subtracted, annualized or moved to another year. Literal row sums are remuneration $482,734,247 and known expenses $10,397,074, differing from printed controls $482,734,216/$10,397,046 by +31/+28. No source cell was adjusted to balance; the cause is not established. Existing compiled observations are retained and may overlap this official schedule; no identity or reporting-period equivalence is assumed."
+      }
+    },
+    {
+      "sourceId": "queue-completion-phsa-2016-17-employees",
+      "path": "/sources/1/validation/compiledPartitionRetained",
+      "before": {
+        "present": false
+      },
+      "after": {
+        "present": true,
+        "value": true
+      }
+    },
+    {
+      "sourceId": "queue-completion-phsa-2016-17-employees",
+      "path": "/sources/1/validation/compiledPartitionRetentionReason",
+      "before": {
+        "present": false
+      },
+      "after": {
+        "present": true,
+        "value": "Complete-copy equivalence with the existing compiled partition has not been proved; the compiled observations are retained without assuming identity or reporting-period equivalence."
+      }
+    },
+    {
+      "sourceId": "queue-completion-phsa-2016-17-employees",
+      "path": "/sources/1/publicWarning",
+      "before": {
+        "present": true,
+        "value": "Fiscal-year remuneration above the disclosure threshold is not an annual salary rate or a workforce census. Expenses may include third-party supplier payments; original expense dashes remain unknown (null). The published standalone schedule is unsigned and does not establish board approval. Qualified source-name interpretations include 107 contextual capital-I/lowercase-l readings, 1 visually ambiguous rn/m segmentations. Their exact affected rows, primary readings, finite visible alternatives and independently reviewed/root-adopted context are retained in provenance; a unique glyph interpretation is not claimed. Literal row sums are remuneration $561,207,243 and known expenses $10,803,695, differing from printed controls $561,207,243/$10,803,700 by +0/-5. No source cell was adjusted to balance; the cause is not established."
+      },
+      "after": {
+        "present": true,
+        "value": "Fiscal-year remuneration above the disclosure threshold is not an annual salary rate or a workforce census. Expenses may include third-party supplier payments; original expense dashes remain unknown (null). The published standalone schedule is unsigned and does not establish board approval. Qualified source-name interpretations include 107 contextual capital-I/lowercase-l readings, 1 visually ambiguous rn/m segmentations. Their exact affected rows, primary readings, finite visible alternatives and independently reviewed/root-adopted context are retained in provenance; a unique glyph interpretation is not claimed. Literal row sums are remuneration $561,207,243 and known expenses $10,803,695, differing from printed controls $561,207,243/$10,803,700 by +0/-5. No source cell was adjusted to balance; the cause is not established. Existing compiled observations are retained and may overlap this official schedule; no identity or reporting-period equivalence is assumed."
+      }
+    },
+    {
+      "sourceId": "queue-completion-phsa-2017-18-employees",
+      "path": "/sources/2/validation/compiledPartitionRetained",
+      "before": {
+        "present": false
+      },
+      "after": {
+        "present": true,
+        "value": true
+      }
+    },
+    {
+      "sourceId": "queue-completion-phsa-2017-18-employees",
+      "path": "/sources/2/validation/compiledPartitionRetentionReason",
+      "before": {
+        "present": false
+      },
+      "after": {
+        "present": true,
+        "value": "Complete-copy equivalence with the existing compiled partition has not been proved; the compiled observations are retained without assuming identity or reporting-period equivalence."
+      }
+    },
+    {
+      "sourceId": "queue-completion-phsa-2017-18-employees",
+      "path": "/sources/2/publicWarning",
+      "before": {
+        "present": true,
+        "value": "Fiscal-year remuneration above the disclosure threshold is not an annual salary rate or a workforce census. Expenses may include third-party supplier payments; original expense dashes remain unknown (null). The published standalone schedule is unsigned and does not establish board approval. The cover category counts sum to 5,073, while its named headline and the complete original salary schedule contain 5,072 observations. The discrepancy is preserved without an inferred cause."
+      },
+      "after": {
+        "present": true,
+        "value": "Fiscal-year remuneration above the disclosure threshold is not an annual salary rate or a workforce census. Expenses may include third-party supplier payments; original expense dashes remain unknown (null). The published standalone schedule is unsigned and does not establish board approval. The cover category counts sum to 5,073, while its named headline and the complete original salary schedule contain 5,072 observations. The discrepancy is preserved without an inferred cause. Existing compiled observations are retained and may overlap this official schedule; no identity or reporting-period equivalence is assumed."
+      }
+    },
+    {
+      "sourceId": "queue-completion-phsa-2018-19-employees",
+      "path": "/sources/3/validation/compiledPartitionRetained",
+      "before": {
+        "present": false
+      },
+      "after": {
+        "present": true,
+        "value": true
+      }
+    },
+    {
+      "sourceId": "queue-completion-phsa-2018-19-employees",
+      "path": "/sources/3/validation/compiledPartitionRetentionReason",
+      "before": {
+        "present": false
+      },
+      "after": {
+        "present": true,
+        "value": "Complete-copy equivalence with the existing compiled partition has not been proved; the compiled observations are retained without assuming identity or reporting-period equivalence."
+      }
+    },
+    {
+      "sourceId": "queue-completion-phsa-2018-19-employees",
+      "path": "/sources/3/publicWarning",
+      "before": {
+        "present": true,
+        "value": "Fiscal-year remuneration above the disclosure threshold is not an annual salary rate or a workforce census. Expenses may include third-party supplier payments; original expense dashes remain unknown (null). The published standalone schedule is unsigned and does not establish board approval. Qualified source-name interpretations include 18 visually ambiguous rn/m segmentations, 1 separately root-adopted exact finite source-name alternatives. Their exact affected rows, primary readings, finite visible alternatives and independently reviewed/root-adopted context are retained in provenance; a unique glyph interpretation is not claimed. The complete original salary schedule contains 6,041 observations, while the cover headline states 6,042 and its category counts sum to 6,025 (17 below the headline). No missing observation was manufactured."
+      },
+      "after": {
+        "present": true,
+        "value": "Fiscal-year remuneration above the disclosure threshold is not an annual salary rate or a workforce census. Expenses may include third-party supplier payments; original expense dashes remain unknown (null). The published standalone schedule is unsigned and does not establish board approval. Qualified source-name interpretations include 18 visually ambiguous rn/m segmentations, 1 separately root-adopted exact finite source-name alternatives. Their exact affected rows, primary readings, finite visible alternatives and independently reviewed/root-adopted context are retained in provenance; a unique glyph interpretation is not claimed. The complete original salary schedule contains 6,041 observations, while the cover headline states 6,042 and its category counts sum to 6,025 (17 below the headline). No missing observation was manufactured. Existing compiled observations are retained and may overlap this official schedule; no identity or reporting-period equivalence is assumed."
+      }
+    },
+    {
+      "sourceId": "queue-completion-phsa-2019-20-employees",
+      "path": "/sources/4/validation/compiledPartitionRetained",
+      "before": {
+        "present": false
+      },
+      "after": {
+        "present": true,
+        "value": true
+      }
+    },
+    {
+      "sourceId": "queue-completion-phsa-2019-20-employees",
+      "path": "/sources/4/validation/compiledPartitionRetentionReason",
+      "before": {
+        "present": false
+      },
+      "after": {
+        "present": true,
+        "value": "Complete-copy equivalence with the existing compiled partition has not been proved; the compiled observations are retained without assuming identity or reporting-period equivalence."
+      }
+    },
+    {
+      "sourceId": "queue-completion-phsa-2019-20-employees",
+      "path": "/sources/4/publicWarning",
+      "before": {
+        "present": true,
+        "value": "Fiscal-year remuneration above the disclosure threshold is not an annual salary rate or a workforce census. Expenses may include third-party supplier payments; original expense dashes remain unknown (null). The published standalone schedule is unsigned and does not establish board approval. Qualified source-name interpretations include 613 visually ambiguous rn/m segmentations, 39 separately root-adopted exact finite source-name alternatives. Their exact affected rows, primary readings, finite visible alternatives and independently reviewed/root-adopted context are retained in provenance; a unique glyph interpretation is not claimed. Literal row sums are remuneration $738,395,602 and known expenses $10,936,046, differing from printed controls $738,390,382/$10,936,046 by +5,220/+0. No source cell was adjusted to balance; the cause is not established."
+      },
+      "after": {
+        "present": true,
+        "value": "Fiscal-year remuneration above the disclosure threshold is not an annual salary rate or a workforce census. Expenses may include third-party supplier payments; original expense dashes remain unknown (null). The published standalone schedule is unsigned and does not establish board approval. Qualified source-name interpretations include 613 visually ambiguous rn/m segmentations, 39 separately root-adopted exact finite source-name alternatives. Their exact affected rows, primary readings, finite visible alternatives and independently reviewed/root-adopted context are retained in provenance; a unique glyph interpretation is not claimed. Literal row sums are remuneration $738,395,602 and known expenses $10,936,046, differing from printed controls $738,390,382/$10,936,046 by +5,220/+0. No source cell was adjusted to balance; the cause is not established. Existing compiled observations are retained and may overlap this official schedule; no identity or reporting-period equivalence is assumed."
+      }
+    },
+    {
+      "sourceId": "queue-completion-phsa-2020-21-employees",
+      "path": "/sources/5/validation/compiledPartitionRetained",
+      "before": {
+        "present": false
+      },
+      "after": {
+        "present": true,
+        "value": true
+      }
+    },
+    {
+      "sourceId": "queue-completion-phsa-2020-21-employees",
+      "path": "/sources/5/validation/compiledPartitionRetentionReason",
+      "before": {
+        "present": false
+      },
+      "after": {
+        "present": true,
+        "value": "Complete-copy equivalence with the existing compiled partition has not been proved; the compiled observations are retained without assuming identity or reporting-period equivalence."
+      }
+    },
+    {
+      "sourceId": "queue-completion-phsa-2020-21-employees",
+      "path": "/sources/5/publicWarning",
+      "before": {
+        "present": true,
+        "value": "Fiscal-year remuneration above the disclosure threshold is not an annual salary rate or a workforce census. Expenses may include third-party supplier payments; original expense dashes remain unknown (null). The published standalone schedule is unsigned and does not establish board approval. Qualified source-name interpretations include 25 visually ambiguous rn/m segmentations, 1 separately root-adopted exact finite source-name alternatives. Their exact affected rows, primary readings, finite visible alternatives and independently reviewed/root-adopted context are retained in provenance; a unique glyph interpretation is not claimed."
+      },
+      "after": {
+        "present": true,
+        "value": "Fiscal-year remuneration above the disclosure threshold is not an annual salary rate or a workforce census. Expenses may include third-party supplier payments; original expense dashes remain unknown (null). The published standalone schedule is unsigned and does not establish board approval. Qualified source-name interpretations include 25 visually ambiguous rn/m segmentations, 1 separately root-adopted exact finite source-name alternatives. Their exact affected rows, primary readings, finite visible alternatives and independently reviewed/root-adopted context are retained in provenance; a unique glyph interpretation is not claimed. Existing compiled observations are retained and may overlap this official schedule; no identity or reporting-period equivalence is assumed."
+      }
+    },
+    {
+      "sourceId": "queue-completion-phsa-2021-22-employees",
+      "path": "/sources/6/validation/compiledPartitionRetained",
+      "before": {
+        "present": false
+      },
+      "after": {
+        "present": true,
+        "value": true
+      }
+    },
+    {
+      "sourceId": "queue-completion-phsa-2021-22-employees",
+      "path": "/sources/6/validation/compiledPartitionRetentionReason",
+      "before": {
+        "present": false
+      },
+      "after": {
+        "present": true,
+        "value": "Complete-copy equivalence with the existing compiled partition has not been proved; the compiled observations are retained without assuming identity or reporting-period equivalence."
+      }
+    },
+    {
+      "sourceId": "queue-completion-phsa-2021-22-employees",
+      "path": "/sources/6/publicWarning",
+      "before": {
+        "present": true,
+        "value": "Fiscal-year remuneration above the disclosure threshold is not an annual salary rate or a workforce census. Expenses may include third-party supplier payments; original expense dashes remain unknown (null). The published standalone schedule is unsigned and does not establish board approval. Qualified source-name interpretations include 71 visually ambiguous rn/m segmentations. Their exact affected rows, primary readings, finite visible alternatives and independently reviewed/root-adopted context are retained in provenance; a unique glyph interpretation is not claimed."
+      },
+      "after": {
+        "present": true,
+        "value": "Fiscal-year remuneration above the disclosure threshold is not an annual salary rate or a workforce census. Expenses may include third-party supplier payments; original expense dashes remain unknown (null). The published standalone schedule is unsigned and does not establish board approval. Qualified source-name interpretations include 71 visually ambiguous rn/m segmentations. Their exact affected rows, primary readings, finite visible alternatives and independently reviewed/root-adopted context are retained in provenance; a unique glyph interpretation is not claimed. Existing compiled observations are retained and may overlap this official schedule; no identity or reporting-period equivalence is assumed."
+      }
+    },
+    {
+      "sourceId": "queue-completion-phsa-2022-23-employees",
+      "path": "/sources/7/validation/compiledPartitionRetained",
+      "before": {
+        "present": false
+      },
+      "after": {
+        "present": true,
+        "value": true
+      }
+    },
+    {
+      "sourceId": "queue-completion-phsa-2022-23-employees",
+      "path": "/sources/7/validation/compiledPartitionRetentionReason",
+      "before": {
+        "present": false
+      },
+      "after": {
+        "present": true,
+        "value": "Complete-copy equivalence with the existing compiled partition has not been proved; the compiled observations are retained without assuming identity or reporting-period equivalence."
+      }
+    },
+    {
+      "sourceId": "queue-completion-phsa-2022-23-employees",
+      "path": "/sources/7/publicWarning",
+      "before": {
+        "present": true,
+        "value": "Fiscal-year remuneration above the disclosure threshold is not an annual salary rate or a workforce census. Expenses may include third-party supplier payments; original expense dashes remain unknown (null). The published standalone schedule is unsigned and does not establish board approval. Qualified source-name interpretations include 62 visually ambiguous rn/m segmentations, 1 separately root-adopted exact finite source-name alternatives. Their exact affected rows, primary readings, finite visible alternatives and independently reviewed/root-adopted context are retained in provenance; a unique glyph interpretation is not claimed."
+      },
+      "after": {
+        "present": true,
+        "value": "Fiscal-year remuneration above the disclosure threshold is not an annual salary rate or a workforce census. Expenses may include third-party supplier payments; original expense dashes remain unknown (null). The published standalone schedule is unsigned and does not establish board approval. Qualified source-name interpretations include 62 visually ambiguous rn/m segmentations, 1 separately root-adopted exact finite source-name alternatives. Their exact affected rows, primary readings, finite visible alternatives and independently reviewed/root-adopted context are retained in provenance; a unique glyph interpretation is not claimed. Existing compiled observations are retained and may overlap this official schedule; no identity or reporting-period equivalence is assumed."
+      }
+    },
+    {
+      "sourceId": "queue-completion-phsa-2023-24-employees",
+      "path": "/sources/8/validation/compiledPartitionRetained",
+      "before": {
+        "present": false
+      },
+      "after": {
+        "present": true,
+        "value": true
+      }
+    },
+    {
+      "sourceId": "queue-completion-phsa-2023-24-employees",
+      "path": "/sources/8/validation/compiledPartitionRetentionReason",
+      "before": {
+        "present": false
+      },
+      "after": {
+        "present": true,
+        "value": "Complete-copy equivalence with the existing compiled partition has not been proved; the compiled observations are retained without assuming identity or reporting-period equivalence."
+      }
+    },
+    {
+      "sourceId": "queue-completion-phsa-2023-24-employees",
+      "path": "/sources/8/publicWarning",
+      "before": {
+        "present": true,
+        "value": "Fiscal-year remuneration above the disclosure threshold is not an annual salary rate or a workforce census. Expenses may include third-party supplier payments; original expense dashes remain unknown (null). The published standalone schedule is unsigned and does not establish board approval."
+      },
+      "after": {
+        "present": true,
+        "value": "Fiscal-year remuneration above the disclosure threshold is not an annual salary rate or a workforce census. Expenses may include third-party supplier payments; original expense dashes remain unknown (null). The published standalone schedule is unsigned and does not establish board approval. Existing compiled observations are retained and may overlap this official schedule; no identity or reporting-period equivalence is assumed."
+      }
+    }
+  ],
+  "decision": "Retain the existing compiled observations because complete-copy equivalence has not been proved. Add only the two explicit validation retention guards and the public overlap/identity/period qualification to each of the nine already verified official source entries.",
+  "preserved": "All salary data and provenance files/bytes/hashes, source identities, reporting periods/years, definitions, original root/peer pins, source control amounts, existing warnings and all other manifest metadata are unchanged. No identity or reporting-period equivalence is inferred."
+}

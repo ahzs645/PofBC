@@ -1,0 +1,41 @@
+{
+  "version": 3,
+  "frozen": true,
+  "id": "phsa-history-exact-source-name-exception-003",
+  "date": "2026-11-01",
+  "scope": "One exact root-adopted compressed-stroke name only; not a general letter-substitution or rn/m grammar.",
+  "approvedCases": [
+    {
+      "sourceId": "phsa-2019-20",
+      "sourceSha256": "0e31ac2054f0c2d4ef78797185dddd96cc0cdf2eab94bd6841fa24e1c38e7d02",
+      "batch": "phsa-2019-20-001",
+      "physicalPage": 7,
+      "sourceRowOnPage": 7,
+      "rootAdoption": {
+        "path": "research/salaries/queue-completion-2026-11-01/reviews/root-phsa-history-2019-20-batch-001-seq203-exact-name-adoption.json",
+        "sha256": "b0e0b7f4f0627b91d708d2a9b14cd6f28b6618bfda16db90688d67482cff42cd"
+      },
+      "exactCaseLedger": {
+        "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-history-2019-20-001-seq203-exact-source-ambiguity-ledger.json",
+        "sha256": "f781f5c14be0a38a56a8888f7c73d26bfbef68eae63190ddbdd38a61427c1e2c"
+      },
+      "primary": "Bangham,Tanni Debora",
+      "completeVisibleAlternatives": [
+        "Bangham,Tanni Debora",
+        "Bangham,Tamni Debora",
+        "Bangham,Tamri Debora",
+        "Bangham,Tanri Debora",
+        "Bangham,Tarni Debora"
+      ],
+      "originalFullRowCropSha256": "b033f7ff9b3241968092a610ca3305984d9e8aa15847e4a032b4bb416095bbaf"
+    }
+  ],
+  "requirements": [
+    "Root adoption is required before overlay creation, not merely before final source acceptance.",
+    "All source/batch/page/row/crop/primary and the complete finite alternative set must match every pin exactly; reject extra alternatives or unknown cases.",
+    "Only the expressly requested name field is authorized. No other name letters, identity, compensation, expense, page, title, employer, period or row multiplicity authority.",
+    "Retain two independent frozen original-image primaries, source context, exact root adoption and source public warning; do not claim pixel-unique interpretation.",
+    "Any other source case requires a fresh explicit root decision and separately pinned versioned authority."
+  ],
+  "noGenericRule": true
+}

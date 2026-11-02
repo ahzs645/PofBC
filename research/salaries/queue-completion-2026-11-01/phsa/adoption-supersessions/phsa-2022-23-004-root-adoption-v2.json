@@ -1,0 +1,44 @@
+{
+  "frozen": true,
+  "sourceId": "phsa-2022-23",
+  "sourceSha256": "6046bb7be6944bc729926adba20a826486820a2a3b9b38090c60d400b2bc72a1",
+  "batch": "phsa-2022-23-004",
+  "supersededRootAdoption": {
+    "path": "research/salaries/queue-completion-2026-11-01/reviews/root-phsa-history-2022-23-batch-004-segmentation-adoption.json",
+    "sha256": "56574db2564ee9e384756c75b0b0d6dfff2fb5288e0107805422f7a33e35082b"
+  },
+  "effectiveRootAdoption": {
+    "path": "research/salaries/queue-completion-2026-11-01/reviews/root-phsa-history-2022-23-batch-004-segmentation-adoption-v2.json",
+    "sha256": "e8714d25b6e0d9fd3d1f1f98fcafe2174141a98b1521218a4a218ccb74ddf9c4"
+  },
+  "supersededCaseLedger": {
+    "path": "research/salaries/queue-completion-2026-11-01/reviews/root-phsa-history-2022-23-batch-004-source-segmentation-qualifications.json",
+    "sha256": "ab365ad0172d249b81abe1d8f29d5721b15bc12488aa861be16f4e58e024130b"
+  },
+  "effectiveCaseLedger": {
+    "path": "research/salaries/queue-completion-2026-11-01/reviews/root-phsa-history-2022-23-batch-004-source-segmentation-qualifications-v2.json",
+    "sha256": "d2565ad29a0798ef322fe98bbf46773d1b78cc67a25fa31ef1f43adc4aa879d4"
+  },
+  "authorizedChangedNameCases": [
+    {
+      "physicalPage": 197,
+      "sourceRowOnPage": 1,
+      "allowedFields": [
+        "name"
+      ],
+      "oldPrimary": "Urnaza,Jenylyn",
+      "newPrimary": "Urmaza,Jenylyn",
+      "oldVisibleAlternatives": [
+        "Urnaza,Jenylyn",
+        "Umaza,Jenylyn"
+      ],
+      "newVisibleAlternatives": [
+        "Urmaza,Jenylyn",
+        "Urrnaza,Jenylyn"
+      ],
+      "originalFullRowCropSha256": "bbe34bbc0d26318cd57cb544c1774df3943a9160f3a536b6f7b07f11b9f687e7"
+    }
+  ],
+  "reason": "Exact new root source1200/independentpeer corrections select Urmaza/Urrnaza finite source-name interpretation at281 only. Allother19cases and400fieldscopes unchanged; no v1overlay was emitted.",
+  "oldFrozenFilesRemainUnchanged": true
+}

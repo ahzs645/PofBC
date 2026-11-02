@@ -1,0 +1,78 @@
+{
+  "frozen": true,
+  "sourceId": "phsa-2018-19",
+  "sourceSha256": "ddeba470b875451f6180eb442ed921f7902cc910d62a026c11ab298ca3d0440f",
+  "sourceOnlyPacket": {
+    "path": "research/salaries/queue-completion-2026-11-01/phsa/canonical-review/phsa-2018-19-positive-neither-money-source-only.json",
+    "sha256": "d71c33b9f259a1f10554e6e236eef541ffaa4f8c9dd9811415486a15e389730b"
+  },
+  "doNotOpenUntilCanonicalReadingsFrozen": true,
+  "rows": [
+    {
+      "sourceId": "phsa-2018-19",
+      "sourceSha256": "ddeba470b875451f6180eb442ed921f7902cc910d62a026c11ab298ca3d0440f",
+      "physicalPage": 38,
+      "sourceRowOnPage": 51,
+      "field": "expenses",
+      "heldV3ChosenValue": 1,
+      "heldV3FieldResolutionEvidence": {
+        "status": "manual-original-image",
+        "evidence": {
+          "value": 1,
+          "rawCandidateRow": [
+            "provincial-health-services-authority",
+            "Hack Jamie",
+            null,
+            null,
+            null,
+            38
+          ],
+          "status": "resolved-from-original-image",
+          "nameTypographyQualification": null,
+          "overlay": {
+            "path": "research/salaries/queue-completion-2026-11-01/phsa/overlays/phsa-2018-19-manual-overlay-003.json",
+            "sha256": "c38628a40558e81d5f26cafe178e00618035db038d99e0cfd8a28bfb2bf10111"
+          },
+          "sourceReview": {
+            "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-education-2018-19-003-resolutions.json",
+            "sha256": "89f8b6897bf8d31f230fb0e64a740cb51c3fea82a616c62a00ce1f29491a2af0"
+          },
+          "pageEvidenceSha256": "372a30844a72ce4e4871fd874bb38e5e33db64e33c05589edfb8bc2237028285",
+          "freshIndependentSourceMoneyPeer": {
+            "sourceId": "phsa-2018-19",
+            "sourceSha256": "ddeba470b875451f6180eb442ed921f7902cc910d62a026c11ab298ca3d0440f",
+            "physicalPage": 38,
+            "sourceRowOnPage": 51,
+            "field": "expenses",
+            "confirmedValue": 1,
+            "effectiveAuthorOverlay": {
+              "path": "research/salaries/queue-completion-2026-11-01/phsa/overlays/phsa-2018-19-manual-overlay-003.json",
+              "sha256": "c38628a40558e81d5f26cafe178e00618035db038d99e0cfd8a28bfb2bf10111"
+            },
+            "peerComparison": {
+              "path": "research/salaries/queue-completion-2026-11-01/reviews/root-phsa-history-money-triangulation-001-peer-comparison.json",
+              "sha256": "abe14c42290f3a95a43cd495c00db3389e2d55e01f8621381d78246eb7b74acf"
+            },
+            "freshSourceImage": {
+              "path": "research/salaries/queue-completion-2026-11-01/phsa/triangulation/assets/money-001-011-actual600.png",
+              "sha256": "836918269dd123a698a6b2967254ae47e6de5f73d72c2e30a6a1d2f83b16811f"
+            },
+            "imageFirstTranscript": {
+              "path": "research/salaries/queue-completion-2026-11-01/reviews/root-phsa-history-money-triangulation-001-image-first.json",
+              "sha256": "9c6f421f91e642278b5bb50bbdbd628e73fac325310a102a667a34c4282a9d30"
+            },
+            "confirmationLedger": {
+              "path": "research/salaries/queue-completion-2026-11-01/phsa/triangulation/money-peer-confirmations-001.json",
+              "sha256": "b83bc5c079cc0611537cb8f1a15d4721df1eb3ee66bdfa131d44339fba35cba5"
+            }
+          }
+        },
+        "originalRawFlags": [
+          "independent-expense-disagreement-or-unproved-glyph",
+          "tesseract-expense-confidence-below-90",
+          "rapid-expense-confidence-below-0.98"
+        ]
+      }
+    }
+  ]
+}

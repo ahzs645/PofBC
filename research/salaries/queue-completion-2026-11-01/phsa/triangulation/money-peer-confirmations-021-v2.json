@@ -1,0 +1,58 @@
+{
+  "frozen": true,
+  "adapter": "count-independent-source-money-peer-v1",
+  "sourceReceiptSchema": "one-exact-root-source-field-with-unchanged-author-first-v1",
+  "peerInputs": [
+    {
+      "path": "research/salaries/queue-completion-2026-11-01/reviews/root-phsa-history-2021-22-batch-005-one-money-final-source-comparison.json",
+      "sha256": "8023bbf8336a95865fdcfc7c03c3c5b13d1ce0f61c451c6e2b37d235730cf4da"
+    },
+    {
+      "path": "research/salaries/queue-completion-2026-11-01/reviews/root-phsa-history-2021-22-batch-005-one-money-image-first.json",
+      "sha256": "ba973d69a9078d44c7589ad6605c46c31daee45c6b7d22dfaaae7ab12f0a14e7"
+    },
+    {
+      "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-education-2021-22-005-one-money-source-only-peer.json",
+      "sha256": "e2aef08d4af3b437271c6d5f75c596d7234707ad2563abaf8062326f3a92d491"
+    },
+    {
+      "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-education-2021-22-005-one-money-author-choice.json",
+      "sha256": "a85eb94c904b930f26a8ef7d095638e94aa60919ee5ee2452955d2dc035726c2"
+    },
+    {
+      "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-education-2021-22-005-image-first-transcript.json",
+      "sha256": "fbf3799725b8d489c802877fa85060db6b312b8146d45eb5072b5e3de1543a65"
+    }
+  ],
+  "confirmations": [
+    {
+      "sourceId": "phsa-2021-22",
+      "sourceSha256": "944c99fa7b7ede643cb4c426a5e9ab30aa906d8f81fda379f0206e4b0cdcd25c",
+      "physicalPage": 119,
+      "sourceRowOnPage": 25,
+      "field": "remuneration",
+      "confirmedValue": 78316,
+      "effectiveAuthorOverlay": {
+        "path": "research/salaries/queue-completion-2026-11-01/phsa/overlays/phsa-2021-22-manual-overlay-005-v2.json",
+        "sha256": "d4d22737930c5c5c62180777b7ac45b5c0b106b5f3b06a99e3242cd216fdffb7"
+      },
+      "peerComparison": {
+        "path": "research/salaries/queue-completion-2026-11-01/reviews/root-phsa-history-2021-22-batch-005-one-money-final-source-comparison.json",
+        "sha256": "8023bbf8336a95865fdcfc7c03c3c5b13d1ce0f61c451c6e2b37d235730cf4da"
+      },
+      "freshSourceImage": {
+        "path": "research/salaries/queue-completion-2026-11-01/reviews/root-phsa-history-2021-22-batch-005-one-pay281-actual1200.png",
+        "sha256": "3bc5352afaea7a4ed39028e39e6b71a89a53b5c0e8d3a89fb65027ae41b78359"
+      },
+      "imageFirstTranscript": {
+        "path": "research/salaries/queue-completion-2026-11-01/reviews/root-phsa-history-2021-22-batch-005-one-money-image-first.json",
+        "sha256": "ba973d69a9078d44c7589ad6605c46c31daee45c6b7d22dfaaae7ab12f0a14e7"
+      }
+    }
+  ],
+  "completeFrozenSourceTargetFields": 1,
+  "confirmedMonetaryFields": 1,
+  "originalAuthorOwnSourceCorrections": 0,
+  "originalPeerOwnSourceCorrections": 0,
+  "scope": "Exact source-money fields only. Original first-pass disagreements/corrections are retained; no balancing, name or unrelated field authority."
+}

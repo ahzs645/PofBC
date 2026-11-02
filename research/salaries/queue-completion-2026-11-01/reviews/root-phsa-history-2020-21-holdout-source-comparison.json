@@ -1,0 +1,55 @@
+{
+  "frozen": true,
+  "reviewer": "/root",
+  "reviewedOn": "2026-11-01",
+  "sourceId": "phsa-2020-21",
+  "sourceSha256": "87ea680c3e2b9bb940d911a198e41b85068535964ee61b6992e651271bd72b60",
+  "imageFirstTranscript": {
+    "path": "research/salaries/queue-completion-2026-11-01/reviews/root-phsa-history-2020-21-holdout-image-transcript.json",
+    "sha256": "c3f4bc18c01f5b140b558e31a9846d6e9ab451b1f274ba0864c29446f22fa6de"
+  },
+  "sourceOnlyPacket": {
+    "path": "research/salaries/queue-completion-2026-11-01/phsa/holdouts/phsa-2020-21-source-only.json",
+    "sha256": "a08031d5ce01f94ef5e939ae68911817ad1e68ac3f29edfc1b30a460e4ec9bdf"
+  },
+  "candidate": {
+    "path": "research/salaries/queue-completion-2026-11-01/phsa/holdouts/phsa-2020-21-candidate.json",
+    "sha256": "fae14ab709d13b1c66a176d0e88b2d608cbab6d2f4fb2bcee25731b312895183"
+  },
+  "fieldPolicy": {
+    "path": "research/salaries/queue-completion-2026-11-01/phsa/paired-reader-field-policy-002.json",
+    "sha256": "0fafb3763ea5a1ebf8f2d7310e748cb4d24247428f544056e1427d2e6ecc77fe"
+  },
+  "selectionConfiguration": {
+    "path": "research/salaries/queue-completion-2026-11-01/phsa/holdout-selection-config-001.json",
+    "sha256": "fa3689b3b361f5c431707e7ed517ebdff4080499c96d1af7ec1d2aa6a46e8627"
+  },
+  "sourceThirdAllocation": [
+    3,
+    4,
+    3
+  ],
+  "rows": 10,
+  "personallyImageTranscribedFields": 24,
+  "allRequestedFieldsMatchExactly": true,
+  "reviewerReadingCorrections": 0,
+  "candidateChanges": 0,
+  "unresolvedFields": 0,
+  "actualPdf300DpiPagesIndependentlyRegenerated": [
+    5,
+    36,
+    40,
+    78,
+    92,
+    93,
+    96,
+    103,
+    110,
+    127
+  ],
+  "everyActualSourceRenderShaMatched": true,
+  "allNativeFieldCropsIndependentlyRegeneratedPixelExact": 24,
+  "selectionLimitation": "Unreserved confidence-only eligible rows were deterministically selected3/4/3 across actual source page thirds; benchmark/manual/reserved rows excluded.",
+  "decision": "Pass this finite source-layout holdout. Whole-source acceptance still requires every real disagreement and source-quality target resolved, exact source controls or qualified literal residuals, independent final closure and all nine source holdouts. This is not personal image transcription or proof of every whole-source cell.",
+  "wholeSourceAccepted": false
+}

@@ -1,0 +1,142 @@
+{
+  "id": "queue-completion-municipal-mission-2025-employee-remuneration",
+  "employerSlug": "city-of-mission",
+  "employerName": "City of Mission",
+  "sector": "Municipalities",
+  "year": "2025",
+  "periodType": "calendar",
+  "periodStart": "2025-01-01",
+  "periodEnd": "2025-12-31",
+  "sourceUrl": "https://www.mission.ca/media/file/2025-sofi-reportpdf",
+  "sourceIndexUrl": "https://www.mission.ca/council-government/budget-finance/financial-reporting",
+  "sha256": "23864d9e618e6ceaab92a67e06d38f43d7433e00b747ae53785d8f39f8822624",
+  "file": "mission-2025-employee-remuneration.json.gzip",
+  "category": "employee-remuneration",
+  "scope": "employee-remuneration",
+  "title": "City of Mission 2025 SOFI: complete named employee remuneration and expenses",
+  "status": "accepted",
+  "verified": true,
+  "verifiedOn": "2026-11-01",
+  "sourceKind": "official-scanned-pdf",
+  "rowCount": 206,
+  "totalRemuneration": 23523355,
+  "totalExpenses": 281919,
+  "pages": [
+    6,
+    7,
+    8,
+    9,
+    10
+  ],
+  "currency": "CAD",
+  "amountUnit": "dollars",
+  "threshold": null,
+  "completeEmployeeSchedule": true,
+  "retainCompiledPartition": true,
+  "dataSha256": "cb23de6618da846b99adf2d540ddcb4b6009ac57afc0120f0e46aaf958dab709",
+  "notes": [
+    "Every published name, title where present, separate remuneration and expense cell was checked on actual PDF-painted source images; independent Tesseract and Paddle OCR outputs and their source-reviewed corrections remain separate.",
+    "An independent peer transcribed the complete source-image scope before full candidate comparison. Prior context disclosures and reviewer-only rereads remain in the immutable peer receipts.",
+    "Repeated names or initials remain distinct literal observations; no identity merging, full-name enrichment, annualization or redistribution of aggregate amounts.",
+    "The separate source expense-inclusive Total column, when printed, is retained only in supporting evidence and is never substituted for remuneration.",
+    "Printed schedule year and signed approval are independently recorded; URL/upload dates are not used as reporting-year evidence."
+  ],
+  "definitions": {
+    "remuneration": "Includes any form of salary, wage, gratuities and taxable benefits, including applicable vehicle allowances paid to the employee.",
+    "expenses": "Includes travel expenses, memberships, tuition, relocation, vehicle reimbursements, and registration fees paid directly to an employee or to a third party on behalf of an employee.",
+    "financialStatementRelation": "Schedule is based on actual payments made during the year; financial statements are prepared on an accrual basis.",
+    "sourceNamedSubtotalLabel": "Subtotal - employees with remuneration and expenses exceeding $75,000",
+    "thresholdMeaning": "Retain every printed named row, including individual remuneration below$75,000. Do not silently convert this combined source label into a salary-only selection rule.",
+    "physicalPage": 10,
+    "starredNames": {
+      "physicalPages": [
+        6,
+        7
+      ],
+      "text": "The wages and expenses shown for this individual were paid by the City of Mission for their assigned work at Mission Bridgehead Investment Corporation.",
+      "treatment": "Source asterisks retained on Crawford, S * and DeSousa, K *; no outside amounts assigned."
+    }
+  },
+  "publicWarning": "The source labels its named selection as employees with remuneration and expenses exceeding CAD 75,000; this is preserved without silently imposing a pay-only rule. Thirty-one printed expense dashes remain null. Source footnote markers identify City-paid work assigned to Mission Bridgehead Investment Corporation; no outside amount is assigned or added to individual observations. Retain the compiled partition: no compatible same-calendar-year compiled cohort has been established. Root owns any future period mapping or deletion; full strict multiset comparison is pinned separately.",
+  "validation": {
+    "method": "Complete independent Tesseract and Paddle OCR geometry readers, complete author actual-original image review, and independent full-scope image-first peer transcription with final candidate comparison.",
+    "allFinalRowFieldsOriginalImageVerified": true,
+    "rawOcrReadersAgree": false,
+    "allRawMachineDifferencesOriginalImageResolved": true,
+    "completeEmployeeSchedule": true,
+    "compiledPartitionRetained": true,
+    "compiledPartitionRetentionReason": "Retain the compiled partition: no compatible same-calendar-year compiled cohort has been established. Root owns any future period mapping or deletion; full strict multiset comparison is pinned separately.",
+    "evidenceFile": "evidence/mission-2025-complete-source.json.gzip",
+    "evidenceSha256": "601a0943cbeb203bc1666eda91e2ade94bc25925744bd0e9e03c596e582780df",
+    "sourceContextReview": {
+      "path": "research/salaries/queue-completion-2026-11-01/municipal/mission-2025-context-review.json",
+      "sha256": "73b7ef06cb8e0de73f0a8fdcbb312a3bda639901b74a8c2665dec5bfd632fb57"
+    },
+    "independentPeerReview": {
+      "path": "research/salaries/queue-completion-2026-11-01/reviews/root-mission-2025-final-source-closure.json",
+      "sha256": "5af33206bc806e0bc74a609bed145681bb4de6c82a6c96e295cda4d0659a4dfc"
+    },
+    "salaryPagesReviewedInFull": [
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "periodEvidence": [
+      {
+        "physicalPage": 6,
+        "text": "For the year ended December 31, 2025"
+      },
+      {
+        "physicalPage": 7,
+        "text": "For the year ended December 31, 2025"
+      },
+      {
+        "physicalPage": 8,
+        "text": "For the year ended December 31, 2025"
+      },
+      {
+        "physicalPage": 9,
+        "text": "For the year ended December 31, 2025"
+      },
+      {
+        "physicalPage": 10,
+        "text": "For the year ended December 31, 2025"
+      }
+    ],
+    "signedApproval": {
+      "physicalPage": 1,
+      "statement": "Approves all statements and schedules included in this Statement of Financial Information.",
+      "signatories": [
+        {
+          "name": "Doug Stewart, CPA, CGA",
+          "position": "General Manager - Finance",
+          "signedDate": "2026-06-15"
+        },
+        {
+          "name": "Paul Horn",
+          "position": "MAYOR on behalf of Council",
+          "signedDate": "2026-06-15"
+        }
+      ],
+      "visuallySigned": true
+    },
+    "nullExpenses": 31,
+    "explicitZeroExpenses": 0,
+    "nullPositions": 0,
+    "controls": {
+      "printed": {
+        "remuneration": 23523355,
+        "expenses": 281919,
+        "rows": 206
+      },
+      "observed": {
+        "remuneration": 23523355,
+        "knownExpenses": 281919
+      }
+    }
+  },
+  "publishedSelectionCriterion": "Subtotal - employees with remuneration and expenses exceeding $75,000",
+  "thresholdBasis": "combined remuneration and expenses as the literal source named-subtotal label"
+}

@@ -1,0 +1,75 @@
+{
+  "reviewer": "/root/held_health_review",
+  "frozenAtUtc": "2026-11-01T22:35:18.257747+00:00",
+  "sourceId": "phsa-2019-20",
+  "sourceSha256": "0e31ac2054f0c2d4ef78797185dddd96cc0cdf2eab94bd6841fa24e1c38e7d02",
+  "batch": "phsa-2019-20-001",
+  "imageManifestSha256": "75fcf6efe1b093704f72967d2a62065c04ebab109f474df3623fc242e4135783",
+  "nativeTargetViewsManifestSha256": "57e5e26a7f29e0760d61f356d148c9a00c746c412ccee891eb6b316bb13bb1d1",
+  "rawTranscriptPath": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-history-2019-20-batch-001-image-transcript.tsv",
+  "rawTranscriptSha256": "e2cfb21c17a3d0a5603653477019479654aa4d8229157aec7d1f487259ae2d77",
+  "completeDistinctRequestedRows": 400,
+  "requestedFieldsByType": {
+    "expenses": 87,
+    "name": 333,
+    "remuneration": 196
+  },
+  "requestedFieldCount": 616,
+  "allRequestedFieldsPersonallyReadFromActualPdfSourceImages": true,
+  "fullCandidateAndRawOcrAlternativesNotOpenedBeforeThisFreeze": true,
+  "sourceViewHashesAllChecked": true,
+  "onlyRequestedFieldsTranscribed": true,
+  "sparseEventTsvFormat": "Repeated sequence IDs append different field readings; empty cells are not transcribed in that event, never source null. Literal dash is explicit source dash.",
+  "preFreezeActual600DpiRereads": {
+    "0357-name-ink.png": "a3f58828f681cb975f26d6b07d670d7741f91439654a23cfc91a4d38ee840dce",
+    "0332-name-ink.png": "a881c4c9677240370e7e07af99db50915a4200dd13ccc804379331bd6a836f5e",
+    "0203-name-ink.png": "fc8b2e9eb8104c83e81f32df697f79ee147dd92933496bdde8e3bc1db2cb8abd",
+    "0112-name-ink.png": "f2a98977a96bcbc517d08b643f2ab95faaaa30b8d8e6d26b200e12098b1bae77",
+    "0110-name-ink.png": "261b6da5e0c2a3e99f302f266f8e42914ca01917225876168068c4c78fb03bd2",
+    "0015-name-ink.png": "d7a8fe799e483e1c1fcdd288c9ade838786cc22cc8a5c060177e28cd34a44633",
+    "0400-name.png": "088d6bb0277706039b808e79c719d732be29020db604b24d3451cee0ae8be96d",
+    "0357-name.png": "92647d1f9477664eee77488fc5b4fd36dc38963947cee11aaab31c18ba4f8f33",
+    "0355-name.png": "220b06356fdc4edf51bbac9343eedf9be29e71fda44927f96e4d0b8becd85f11",
+    "0332-name.png": "df310ea34332ad19631452e8c5c4dd4c9fb237c631e4caba3d8194a590cb1a69",
+    "0296-name.png": "8b9a924eef52dac0c27573e46fcf067716e41c77911ef2461f02a67fd30e07d5",
+    "0219-name.png": "90c32a5a447ee732528b625e8d2c97ac46dc77ac012c45b338059131599bf320",
+    "0218-name.png": "d450402b58769cbd78ae029acc9f2dc28b18bf14ce0e045aa4f1c52c00d6ef97",
+    "0203-name.png": "6bfe5ba95e98fdc6a8ba7f6d439d6624d934b7d6c44ea47d7210bf66ff0d942c",
+    "0163-name.png": "b2fcc8bbb4f48bfe406ce8d7a6475595ae8b97a60510a6f3088098460f9ea43a",
+    "0142-name.png": "4a209668245a188aab79307efbbff833f3a1c8e9c63da78a09503176073bb7e9",
+    "0112-name.png": "f3c1b622e88e211df8dff26071456e54a21c71bd0a9a3f40cce4ec80d2642c99",
+    "0110-name.png": "adfe73cc42e5a0aa751feaf71441d280a4143a2c08a7a3b79713ee2bcc344a91",
+    "0103-name.png": "f55710cccfae89b9dc67af061410865138c29176f5f0cf37e7367b6a2719b884",
+    "0031-name.png": "650c84795838a821226a2a66ded53526f7cd00f72d9ee5f8ff4009e43e851631",
+    "0015-name.png": "672526f67de0fd010ba787854b92167669a0555ea2b7b77af00cc2b85bb700dd"
+  },
+  "uncertainInitialSourceReadingsPendingDisjointBlindPeer": [
+    {
+      "sequence": 203,
+      "field": "name",
+      "frozenInitialPrimaryReading": "Bangham,Tanni Debora",
+      "visibleAlternatives": [
+        "Bangham,Tanni Debora",
+        "Bangham,Tamni Debora",
+        "Bangham,Tamri Debora",
+        "Bangham,Tanri Debora"
+      ],
+      "reason": "Joined low-resolution serif middle glyphs require a second original-source reading; no dictionary/context name substitution permitted."
+    },
+    {
+      "sequence": 357,
+      "field": "name",
+      "frozenInitialPrimaryReading": "Bjornson,Bruce",
+      "visibleAlternatives": [
+        "Bjornson,Bruce",
+        "Bjomson,Bruce"
+      ],
+      "reason": "Joined serif rn/m boundary requires second original-source reading; primary is not a proof."
+    }
+  ],
+  "limits": [
+    "Freezes an original-image transcription before candidate alternatives, not final resolutions or cohort acceptance.",
+    "Two explicit source-letter uncertainties remain pending a blind original-source peer; this receipt does not resolve them by convention.",
+    "Only assigned fields can be amended. No controls/common-name spelling supplies missing glyphs."
+  ]
+}

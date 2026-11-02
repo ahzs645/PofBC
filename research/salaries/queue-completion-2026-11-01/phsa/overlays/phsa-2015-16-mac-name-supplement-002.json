@@ -1,0 +1,169 @@
+{
+  "frozen": true,
+  "sourceId": "phsa-2015-16",
+  "sourceSha256": "f8bc28af7e87f57c51973f5ed581e50fe414f00486659551ad5c8171b98f73a3",
+  "kind": "complete-sixteen-case-additive-mac-prefix-name-review",
+  "reviewInput": {
+    "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-history-mac-I-quality-002-resolutions.json",
+    "sha256": "e7e9dbb35343baf591d1bc1cf968e5c12d84a998c580123d2c4acff0b6746cc3"
+  },
+  "sourceOnlyPacket": {
+    "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-history-mac-I-quality-002-source-only.json",
+    "sha256": "8fb79912e73da0b8c72611c86a5200477e95b807fec726f4fdfbc405581a6b5c"
+  },
+  "independentFreshPeer": {
+    "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-history-batches-mac-I-quality-002-peer-comparison.json",
+    "sha256": "44da96133b4f26b1f97f97c3bcf2d39b228b208f885aff0c7669cd37730b0f36"
+  },
+  "resolvedRows": 1,
+  "reviewedFieldCounts": {
+    "name": 1
+  },
+  "overlays": [
+    {
+      "physicalPage": 70,
+      "sourceRowOnPage": 36,
+      "rawCandidateRow": [
+        "provincial-health-services-authority",
+        "Maclsaac,Lynn A",
+        null,
+        89196,
+        null,
+        70
+      ],
+      "resolvedRow": [
+        "provincial-health-services-authority",
+        "MacIsaac,Lynn A",
+        null,
+        89196,
+        null,
+        70
+      ],
+      "reviewedFields": [
+        "name"
+      ],
+      "changedFields": [
+        "name"
+      ],
+      "resolutionStatus": "resolved-with-source-typography-qualification",
+      "nameTypographyQualification": {
+        "originalCaseEvidence": {
+          "sourceId": "phsa-2015-16",
+          "sourceSha256": "f8bc28af7e87f57c51973f5ed581e50fe414f00486659551ad5c8171b98f73a3",
+          "sequence": 1,
+          "physicalPage": 70,
+          "sourceRowOnPage": 36,
+          "proposedName": "MacIsaac,Lynn A",
+          "visibleAlternatives": [
+            "MacIsaac,Lynn A",
+            "Maclsaac,Lynn A"
+          ],
+          "characterPositions": [
+            3
+          ],
+          "characterIndexBase": 0,
+          "assumptionBasis": "Actual surname order afterMaciak and beforeMacK supports interiorI; the undotted vertical stroke itself is not case-distinguishing.",
+          "ambiguityKind": "I-l-source-case",
+          "caseProvenByPixels": false,
+          "cropSha256": "4d6297da74ebd45ffe69555a5be58e2f499bf8c546f1d5cfe74eb1547a19ef5b",
+          "actualSourceEvidence": {
+            "sequence": 1,
+            "sourceId": "phsa-2015-16",
+            "sourceSha256": "f8bc28af7e87f57c51973f5ed581e50fe414f00486659551ad5c8171b98f73a3",
+            "physicalPage": 70,
+            "sourceRowOnPage": 36,
+            "reviewTargetFields": [
+              "name"
+            ],
+            "sourceQualityTrigger": "Mac[Il] prefix with no existing manual or pending name route; no automatic casing.",
+            "priorRouteStatus": "baseline-independent-reader-agreement",
+            "nameOnlyOriginalImage": {
+              "path": "/tmp/queue-completion-phsa/independent-mac-I-quality-002/001-name.png",
+              "sha256": "2a5985a0544b58ba56118990e48f1cf762b9cef6400ed7ab7082a258081dca33",
+              "original300DpiPixelBox": [
+                202,
+                2992,
+                1537,
+                3052
+              ]
+            },
+            "adjacentOriginalContext": {
+              "path": "/tmp/queue-completion-phsa/independent-mac-I-quality-002/001-context.png",
+              "sha256": "2c9d7fd3f6ed3e6b66d3afaa53e5247faa96ee8a5c3b75851696c69af2c60838",
+              "original300DpiPixelBox": [
+                202,
+                2922,
+                1537,
+                3122
+              ]
+            },
+            "originalFullRowCrop": {
+              "path": "/tmp/queue-completion-phsa/independent-mac-I-quality-002/001-full-row.png",
+              "sha256": "4d6297da74ebd45ffe69555a5be58e2f499bf8c546f1d5cfe74eb1547a19ef5b",
+              "original300DpiPixelBox": [
+                202,
+                2992,
+                2422,
+                3052
+              ]
+            },
+            "actualSourceImagePath": "/tmp/queue-completion-phsa/phsa-2015-16/images/p070.png",
+            "actualSourceImageSha256": "6e01d5faef13ccdc8c1e19fc7442bfe3ccb207c8c388936bc5cc1b30fecb5a38",
+            "pageEvidence": {
+              "path": "research/salaries/queue-completion-phsa/evidence/phsa-2015-16-rows-p070.json.gzip",
+              "sha256": "4af7cf04584bad68b2e29317c1642ea367f3e05d0d7b37f2948d35f56dad5e5c"
+            },
+            "rawPageEvidence": {
+              "path": "research/salaries/queue-completion-phsa/evidence/phsa-2015-16-raw-p070.json.gzip",
+              "sha256": "32ea4a24f3c3b94dd1d055fbd6d78341d18805665fbd8d7c86b9b6ba72600902"
+            },
+            "sourceProfile": {
+              "path": "research/salaries/queue-completion-2026-11-01/phsa/phsa-2015-16-processing-profile-001.json",
+              "sha256": "ee4acd856a6fed846d786d52a42265d81ec30f9df0e734769411967195bc6575"
+            }
+          },
+          "qualificationPolicy": {
+            "path": "research/salaries/queue-completion-2026-11-01/phsa/source-typography-review-policy-001.json",
+            "sha256": "c7cb50c05284c0c897b126a2fd6f359870d4922c30ca6efe0c462267b6eec460"
+          },
+          "status": "qualified-contextual-source-name-pending-independent-peer-exact-root-adoption"
+        },
+        "chosenName": "MacIsaac,Lynn A",
+        "visibleAlternatives": [
+          "Maclsaac,Lynn A"
+        ],
+        "characterPositionsZeroBased": [
+          3
+        ],
+        "assumptionBasis": "Actual surname order afterMaciak and beforeMacK supports interiorI; the undotted vertical stroke itself is not case-distinguishing.",
+        "caseProvenByPixels": false,
+        "requiresExactPeerAndRootCaseAdoption": true,
+        "sourceCaseLedger": {
+          "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-history-mac-I-quality-002-typography-ledger.json",
+          "sha256": "33613d46ab60b905b99a501d6a519d802f88065c36b414e512178d343445c611"
+        }
+      },
+      "pageEvidencePath": "research/salaries/queue-completion-phsa/evidence/phsa-2015-16-rows-p070.json.gzip",
+      "pageEvidenceSha256": "4af7cf04584bad68b2e29317c1642ea367f3e05d0d7b37f2948d35f56dad5e5c",
+      "rawPageEvidence": {
+        "path": "research/salaries/queue-completion-phsa/evidence/phsa-2015-16-raw-p070.json.gzip",
+        "sha256": "32ea4a24f3c3b94dd1d055fbd6d78341d18805665fbd8d7c86b9b6ba72600902"
+      },
+      "cropSha256": "4d6297da74ebd45ffe69555a5be58e2f499bf8c546f1d5cfe74eb1547a19ef5b",
+      "retainedSourceNameView": {
+        "path": "research/salaries/queue-completion-2026-11-01/phsa/supplement-assets/mac-002-001-name.png",
+        "sha256": "2a5985a0544b58ba56118990e48f1cf762b9cef6400ed7ab7082a258081dca33"
+      },
+      "reviewInput": {
+        "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-history-mac-I-quality-002-resolutions.json",
+        "sha256": "e7e9dbb35343baf591d1bc1cf968e5c12d84a998c580123d2c4acff0b6746cc3"
+      },
+      "retainedOriginalSourceContext": {
+        "path": "research/salaries/queue-completion-2026-11-01/phsa/supplement-assets/mac-002-001-context.png",
+        "sha256": "2c9d7fd3f6ed3e6b66d3afaa53e5247faa96ee8a5c3b75851696c69af2c60838"
+      }
+    }
+  ],
+  "noUnrequestedFieldsChanged": true,
+  "qualifiedCasesRequireExactPerSourceRootAdoption": true
+}

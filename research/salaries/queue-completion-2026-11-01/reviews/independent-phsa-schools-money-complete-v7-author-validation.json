@@ -1,0 +1,70 @@
+{
+  "frozen": true,
+  "reviewer": "recovery_schools",
+  "frozenAtUtc": "2026-11-02T04:45:44.621692+00:00",
+  "scope": "Independent complete-author monetary schema interpreter for exact immutable receipt sets011/012 only; no producer/v7 interpretation imports, source choices, normalized data or global edits.",
+  "code": [
+    {
+      "path": "scripts/finish_salary_phsa_review_money_complete_v7.py",
+      "sha256": "97efe23719f6d6b380572fc356b02288b0db47974cd297f18dd815ff69f9a690"
+    },
+    {
+      "path": "scripts/finish_salary_phsa_review_money_complete_v7_checks.py",
+      "sha256": "93ed1152d66adc6582c6ab51b135006d8371b35a4e6a72e9d0b7088238a678d0"
+    }
+  ],
+  "fixtureLedgers": [
+    {
+      "path": "research/salaries/queue-completion-2026-11-01/phsa/triangulation/money-peer-confirmations-011.json",
+      "sha256": "af8a9fa14b37d7cf567c781b71741a1285ad82c4bedae4c3c3f13c1afeefb069"
+    },
+    {
+      "path": "research/salaries/queue-completion-2026-11-01/phsa/triangulation/money-peer-confirmations-012.json",
+      "sha256": "9ff9fc7127ee2820689dfafe96780b904d7cf149d9efe007389d92c4d70d5bce"
+    }
+  ],
+  "verification": {
+    "command": "PYTHONDONTWRITEBYTECODE=1 python scripts/finish_salary_phsa_review_money_complete_v7_checks.py",
+    "exitCode": 0,
+    "testMethodsPassed": 13,
+    "concreteConfirmationEntriesVerified": 51,
+    "separateFreshPeerScopes": [
+      4,
+      47
+    ],
+    "positiveRemunerationFields": 25,
+    "positiveExpenseFields": 26,
+    "uniqueSourceRows": 50,
+    "physicalSourcePages": 9,
+    "native300FieldAndFullRowRgbChecks": 102,
+    "actualWholePagePdfRenderDpi": 300,
+    "sourcePdfSha256": "0e31ac2054f0c2d4ef78797185dddd96cc0cdf2eab94bd6841fa24e1c38e7d02",
+    "completeAuthorRows": 400,
+    "completeAuthorRequestedFields": 628,
+    "completeAuthorRequestedMoneyFields": 284,
+    "secondarySourceMoneyScope": 51,
+    "firstAuthorSourceCorrections": 3,
+    "secondaryAuthorRestorations": 1,
+    "subsequentAdditionalExpenseCorrections": 1,
+    "unknownLedgerOrSourceRejected": true,
+    "exactTupleMembershipRequired": true,
+    "strictPositiveIntegerNoBoolZeroNullOrString": true,
+    "firstReadingAndCorrectionHistoriesRemainSeparate": true,
+    "allOriginalEvidenceBytesPreserved": true,
+    "historicPartialHighDpiImagesAreOnlyBytePinnedNotPromotedOverNativeSource": true
+  },
+  "mutationCoverage": [
+    "immutable source/ledger/member drift",
+    "bool/zero/null/negative/string/float amounts",
+    "missing/duplicate complete-author/source/peer scope",
+    "raw first-reading chronology",
+    "first and secondary correction histories",
+    "source native field/full-row crops and geometry",
+    "literal money separators and exact peer amounts",
+    "effective overlay values",
+    "unrequested monetary field preservation"
+  ],
+  "integrationReviewOwner": "held_health_review",
+  "integrationReviewStatus": "pending owner code inspection at this immutable author-validation snapshot",
+  "wholeSourceAccepted": false
+}

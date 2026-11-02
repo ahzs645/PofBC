@@ -61,6 +61,24 @@ test('a pinned calendar correction preserves council and fails closed when sourc
   assert.throws(() => applyCompiledReplacements(original, official, { ...sources(), official: { scope: 'employee-remuneration', dataSha256: sha256('changed source') } }, [rule]), /source fingerprint changed/)
   assert.throws(() => applyCompiledReplacements(original, official, sources(), [{ ...rule, sourceDataSha256: {} }]), /source fingerprint changed/)
 })
+test('same-period duplicate replacement pins the original PDF even when extracted rows stay unchanged', () => {
+  const employee = { ...row('Employee, A', 100000, '2023/24'), sourceId: 'compiled' }
+  const pdfHash = sha256('reviewed original PDF')
+  const dataHash = sha256('reviewed source rows')
+  const official = [{ ...employee, sourceId: 'official' }]
+  const sources = { official: { scope: 'employee-remuneration', sha256: pdfHash, dataSha256: dataHash } }
+  const rule = { employerSlug: 'bc-hydro', compiledYear: '2023/24', replacementYear: '2023/24', sourceIds: ['official'],
+    sourceSha256: { official: pdfHash }, sourceDataSha256: { official: dataHash },
+    expectedRows: 1, expectedRetainedRows: 0, retainPositions: [],
+    selectedRowsSha256: sha256(JSON.stringify([[employee.name, employee.position, employee.pay, employee.expenses]])),
+    kind: 'duplicate-compiled-copy', reason: 'Complete same-period employee cohort matches the dated original.' }
+  const result = applyCompiledReplacements([employee], official, sources, [rule])
+  assert.equal(result.rows.length, 0)
+  assert.equal(result.corrections[0].kind, 'duplicate-compiled-copy')
+  assert.throws(() => applyCompiledReplacements([employee], official,
+    { official: { ...sources.official, sha256: sha256('a later PDF with the same extracted rows') } }, [rule]), /original replacement source fingerprint changed/)
+  assert.throws(() => applyCompiledReplacements([employee], official, sources, [{ ...rule, sourceSha256: {} }]), /original replacement source fingerprint changed/)
+})
 test('a recovered cohort clears only an exactly reviewed ambiguous travel assignment', () => {
   const employee = { ...row('Example,Pat', 90000, '2017/18'), sourceId: 'employees', expenses: 16000 }
   const appointee = { ...row('EXAMPLE,PAT', 150000, '2017/18'), sourceId: 'appointees' }

@@ -1,0 +1,91 @@
+{
+  "frozen": true,
+  "reviewer": "/root/recovery_health",
+  "originalSourceFirstTranscript": {
+    "path": "research/salaries/queue-completion-2026-11-01/reviews/author-phsa-history-2018-19-006-23-name-peer-first-transcript.json",
+    "sha256": "82319f5c30d28ce54eb1edad65d5998a73306443a5257154175894b9d5fd8c63"
+  },
+  "beforeAuthorChoices": true,
+  "corrections": [
+    {
+      "sequence": 100,
+      "firstPass": "Sharn,Jeffery Tyler",
+      "currentSourceReading": "Sharun,Jeffery Tyler",
+      "actual1200SourceView": {
+        "path": "/tmp/independent-phsa-municipal-2018-19-006/seq100-name-actual1200.png",
+        "sha256": "3a6797f5adfdcabf3482a25a473e916fc3df2ccbe3afb2a3ca75e9e9b19d3397",
+        "original300DpiPixelBox": [
+          205,
+          1694,
+          1250,
+          1737
+        ]
+      },
+      "actual300SourceContext": {
+        "path": "/tmp/independent-phsa-municipal-2018-19-006/seq100-context300.png",
+        "sha256": "bc760a48d6e7a1f0517ad2bc0effc1acb04ead7d816d7a071b697a5289a060d1",
+        "original300DpiPixelBox": [
+          205,
+          1609,
+          1250,
+          1822
+        ]
+      },
+      "reason": "Actual1200glyphs show u before final n; original first pass omitted that source letter."
+    },
+    {
+      "sequence": 210,
+      "firstPass": "Stanford-Terrale,Lydia",
+      "currentSourceReading": "Staniford-Terralle,Lydia",
+      "actual1200SourceView": {
+        "path": "/tmp/independent-phsa-municipal-2018-19-006/seq210-name-actual1200.png",
+        "sha256": "6c7070875c88f5acca7caef0437fe05ab62462ae12245d2b3520f648044e7b7f",
+        "original300DpiPixelBox": [
+          205,
+          2513,
+          1250,
+          2554
+        ]
+      },
+      "actual300SourceContext": {
+        "path": "/tmp/independent-phsa-municipal-2018-19-006/seq210-context300.png",
+        "sha256": "44e466ca820cee9de081aa9bf294494b8c42c3a98da862e404b65c3156b53c51",
+        "original300DpiPixelBox": [
+          205,
+          2428,
+          1250,
+          2639
+        ]
+      },
+      "reason": "Actual1200shows dotted i after n and two l stems; adjacent source placement after Stang and before Stanley supports Staniford, not Stamford."
+    },
+    {
+      "sequence": 225,
+      "firstPass": "Stephan,Eduardo Beringer",
+      "currentSourceReading": "Stephan,Eduardo Berninger",
+      "actual1200SourceView": {
+        "path": "/tmp/independent-phsa-municipal-2018-19-006/seq225-name-actual1200.png",
+        "sha256": "b802f956ddd7b244840b9476ce6f73284b5a4f8a59e7abc2d22d3b2e73b48401",
+        "original300DpiPixelBox": [
+          205,
+          1051,
+          1250,
+          1092
+        ]
+      },
+      "actual300SourceContext": {
+        "path": "/tmp/independent-phsa-municipal-2018-19-006/seq225-context300.png",
+        "sha256": "14cadfdea775ae4132850a6acb3ff9646a07944d00b7a00ea7b88572bc7c77c3",
+        "original300DpiPixelBox": [
+          205,
+          966,
+          1250,
+          1177
+        ]
+      },
+      "reason": "Actual1200shows r+n before the dotted i; original first pass omitted the n."
+    }
+  ],
+  "oldFirstPassUnchanged": true,
+  "noMoneyOrWholeSourceClaim": true
+}

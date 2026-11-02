@@ -1,0 +1,91 @@
+{
+  "frozen": true,
+  "reviewer": "/root",
+  "reviewedOn": "2026-11-01",
+  "decision": "adopt-exact-single-source-name-ambiguity",
+  "sourceId": "phsa-2019-20",
+  "sourceSha256": "0e31ac2054f0c2d4ef78797185dddd96cc0cdf2eab94bd6841fa24e1c38e7d02",
+  "batch": "phsa-2019-20-002",
+  "exactCaseLedger": {
+    "path": "research/salaries/queue-completion-2026-11-01/reviews/author-phsa-history-2019-20-002-joined-name-qualifications.json",
+    "sha256": "862e02487862de78a514b456eea789e2cc9679a3be79cd08f8cee60cf734218a"
+  },
+  "independentPeer": {
+    "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-history-2019-20-002-nine-name-peer-comparison.json",
+    "sha256": "df394234b927842c35db4c25d90bcb3bb3e26e3210f7bc50d100817931fdcd49"
+  },
+  "closedCases": [
+    {
+      "sourceId": "phsa-2019-20",
+      "sourceSha256": "0e31ac2054f0c2d4ef78797185dddd96cc0cdf2eab94bd6841fa24e1c38e7d02",
+      "batch": "phsa-2019-20-002",
+      "sequence": 43,
+      "physicalPage": 12,
+      "sourceRowOnPage": 19,
+      "visibleAlternatives": [
+        "Boyle,Merrill D.",
+        "Boyle,Memill D."
+      ],
+      "cropSha256": "1d34f9c7f43d6ec97da7a0b19d85866cdcadc57855852267a80bc0db65370ca6",
+      "primary": "Boyle,Merrill D.",
+      "allowedFields": [
+        "name"
+      ],
+      "caseProvenByPixels": false,
+      "originalCaseEvidence": {
+        "sourceId": "phsa-2019-20",
+        "sourceSha256": "0e31ac2054f0c2d4ef78797185dddd96cc0cdf2eab94bd6841fa24e1c38e7d02",
+        "batch": "phsa-2019-20-002",
+        "sequence": 43,
+        "physicalPage": 12,
+        "sourceRowOnPage": 19,
+        "proposedName": "Boyle,Merrill D.",
+        "visibleAlternatives": [
+          "Boyle,Merrill D.",
+          "Boyle,Memill D."
+        ],
+        "assumptionBasis": "The primary was personally read from the original image before machine alternatives. Actual low-resolution joined strokes admit the finite alternative; no unique glyph, dictionary spelling, prior-year identity or monetary total is claimed.",
+        "cropSha256": "1d34f9c7f43d6ec97da7a0b19d85866cdcadc57855852267a80bc0db65370ca6",
+        "actual600SourceName": {
+          "sequence": 43,
+          "physicalPage": 12,
+          "sourceRowOnPage": 19,
+          "original300DpiPixelBox": [
+            312,
+            1415,
+            558,
+            1454
+          ],
+          "path": "research/salaries/queue-completion-2026-11-01/reviews/author-phsa-history-2019-20-002-precomparison-043-name600.png",
+          "sha256": "67e09a761ebcacac049a79e43c2a6359cc6dbc7331010ca91f19393a53f8f40a"
+        },
+        "pageEvidence": {
+          "path": "research/salaries/queue-completion-phsa/evidence/phsa-2019-20-rows-p012.json.gzip",
+          "sha256": "d0c8fc9eb1c9486e0d74b6494e76bfb3c6c1d88755344d73ebdf843431647d96"
+        },
+        "caseProvenByPixels": false,
+        "status": "proposed-qualified-source-name-pending-peer-and-exact-root-adoption",
+        "ambiguityKind": "exact-root-closed-rr-m-source-name-exception",
+        "requiresSeparateExactClosedRootAdoption": true,
+        "notAuthorizedByRnMPolicy": true
+      },
+      "rootPersonallyViewedActualOriginal600DpiName": true
+    }
+  ],
+  "primary": "Boyle,Merrill D.",
+  "physicalPage": 12,
+  "sourceRowOnPage": 19,
+  "visibleAlternatives": [
+    "Boyle,Merrill D.",
+    "Boyle,Memill D."
+  ],
+  "cropSha256": "1d34f9c7f43d6ec97da7a0b19d85866cdcadc57855852267a80bc0db65370ca6",
+  "acceptedQualifiedCases": true,
+  "qualifiedCases": 1,
+  "caseProvenByPixels": false,
+  "requireClosedExactCaseBoundConsumerException": true,
+  "publicSourceWarningRequired": true,
+  "noOtherNameOrMonetaryFieldAuthority": true,
+  "scope": "One exact2019/20p12r19source-name preferred reading Boyle,Merrill D. and finite Boyle,Memill D. alternative only. Both frozen blind original-image readers agree; root additionally personally viewed the actual600dpi source cell. Compressed rr/m is qualified, not pixel-unique. No rn/m grammar expansion, generic spelling rule, earlier-year identity, money, reporting-period or whole-source authority.",
+  "wholeSourceAccepted": false
+}

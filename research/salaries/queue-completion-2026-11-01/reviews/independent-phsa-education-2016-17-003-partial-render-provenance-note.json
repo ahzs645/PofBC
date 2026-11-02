@@ -1,0 +1,19 @@
+{
+  "reviewer": "recovery_education",
+  "reviewedOn": "2026-11-01",
+  "sourceSha256": "31f7a1af80186bf81139fd693b36e733333a06c2ab1a4c5191bd6ee9b3623a53",
+  "batch": "phsa-2016-17-003",
+  "renderMethod": "page.get_pixmap(dpi=300,alpha=False,clip=fitz.Rect(x0*72/300,y0*72/300,1537*72/300,y1*72/300)), with original fullrow300dpi pixel coordinates. These are direct partial-page renders, not pixel cuts from a full-page render. No source pixels were retyped or post-render resampled.",
+  "pixelIdentityClaimForPartialVsFullPageMade": false,
+  "independentPeerReproducesAll12PartialRendersExactly": {
+    "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-schools-peer-2016-17-003-partial-render-provenance-addendum.json",
+    "sha256": "30f16fc9c4e82849df6291a185a2374b0ce8d161b13ee2aaccd4061c3e67915b"
+  },
+  "authoritativeFullPageAll300CropEquality": {
+    "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-education-2016-17-003-actual-pdf-all-row-pixel-check.json",
+    "sha256": "70715af69b0c2a4b0a1aa662608115d4b5f04068538d08cc2c6862964e1e924e"
+  },
+  "twoSmallPartialVsFullRasterDifferences": "Peer documents small component differences for name views68/139. Full-page original row crops are authoritative; no source-field/glyph difference was found and no normalized name is changed.",
+  "oldEvidenceImageOrFreezeChanged": false,
+  "sourceValueChange": false
+}

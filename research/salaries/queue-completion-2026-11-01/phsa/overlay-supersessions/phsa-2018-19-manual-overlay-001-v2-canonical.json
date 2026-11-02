@@ -1,0 +1,42 @@
+{
+  "frozen": true,
+  "sourceId": "phsa-2018-19",
+  "sourceSha256": "ddeba470b875451f6180eb442ed921f7902cc910d62a026c11ab298ca3d0440f",
+  "batch": "phsa-2018-19-001",
+  "supersededOverlay": {
+    "path": "research/salaries/queue-completion-2026-11-01/phsa/overlays/phsa-2018-19-manual-overlay-001.json",
+    "sha256": "7ac03292a1af6bad72e8520136d3dc36bcdd34234a280b932584f12bca0c883f"
+  },
+  "effectiveOverlay": {
+    "path": "research/salaries/queue-completion-2026-11-01/phsa/overlays/phsa-2018-19-manual-overlay-001-v2-canonical.json",
+    "sha256": "f86ecc983c2413dd130e5ed6fe4ff09bee30843ebada7b2734033af66fd97bc7"
+  },
+  "reason": "Exact current canonical source-name families and root-accepted literal letter corrections; all money/raw/row/field scopes unchanged.",
+  "oldFrozenFilesRemainUnchanged": true,
+  "canonicalSourceAcceptance": {
+    "path": "research/salaries/queue-completion-2026-11-01/reviews/root-phsa-history-2018-19-canonical-nine-qualified-three-direct-source-acceptance.json",
+    "sha256": "7ba2b69db6967a234bb59fea3f9f33fec47f0ca20155c39b4b3b658c812e8eed"
+  },
+  "canonicalLiteralNameCorrections": [
+    {
+      "physicalPage": 6,
+      "sourceRowOnPage": 13,
+      "field": "name",
+      "currentAcceptedSourceLiteral": "Bailie,Kiera Maeghan",
+      "currentCompleteVisibleAlternatives": [
+        "Bailie,Kiera Maeghan"
+      ],
+      "currentSourceStatus": "direct"
+    },
+    {
+      "physicalPage": 9,
+      "sourceRowOnPage": 28,
+      "field": "name",
+      "currentAcceptedSourceLiteral": "Bhauruth,Delan",
+      "currentCompleteVisibleAlternatives": [
+        "Bhauruth,Delan"
+      ],
+      "currentSourceStatus": "direct"
+    }
+  ]
+}

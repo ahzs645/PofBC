@@ -1,0 +1,106 @@
+{
+  "version": 1,
+  "date": "2026-11-01",
+  "researchOnlyRuntime": "/tmp/held-health-ocr/venv",
+  "noApplicationOrCiDependencyChanges": true,
+  "independentEngines": [
+    "Tesseract5.5.0 LSTM",
+    "RapidOCR1.4.4/PaddleOCR ONNX networks, ONNX Runtime1.31.1 CPU"
+  ],
+  "sourceRender": "PyMuPDF1.26.6 page.get_pixmap(dpi=300,alpha=False),actual paintedRGB pages; no extracted tile composition",
+  "originals": 9,
+  "physicalPagesCaptured": 1480,
+  "salaryPagesStaged": 1474,
+  "salaryObservations": 64912,
+  "maximumConcurrentOcrWorkers": 3,
+  "threadCaps": {
+    "OMP_THREAD_LIMIT": "1",
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1",
+    "MKL_NUM_THREADS": "1",
+    "ORTintra_op_num_threads": 1,
+    "ORTinter_op_num_threads": 1,
+    "OpenCVthreads": 1
+  },
+  "priorEngineAcquisitionAndLicenseReceipt": {
+    "path": "research/salaries/held-resolution-2026-11-01/health/independent-ocr-engine-receipt.json",
+    "sha256": "ef6bedb7bdfe504e960ba0871fac812531a1e35eba3fa47a78a70da6df5ba389"
+  },
+  "priorTesseractRuntimeReceipt": {
+    "path": "research/salaries/held-resolution-2026-11-01/health/tesseract-runtime-receipt.json",
+    "sha256": "bd1f9301052c889aebce908ca9734baa3a823b65c3dec9d34ecefd4fe3bf7d70"
+  },
+  "models": [
+    {
+      "name": "ch_ppocr_mobile_v2.0_cls_infer.onnx",
+      "bytes": 585532,
+      "sha256": "e47acedf663230f8863ff1ab0e64dd2d82b838fceb5957146dab185a89d6215c",
+      "acquisitionUrl": "https://files.pythonhosted.org/packages/ba/12/1e5497183bdbe782dbb91bad1d0d2297dba4d2831b2652657f7517bfc6df/rapidocr_onnxruntime-1.4.4-py3-none-any.whl",
+      "archiveMember": "rapidocr_onnxruntime/models/ch_ppocr_mobile_v2.0_cls_infer.onnx",
+      "archiveSha256": "971d7d5f223a7a808662229df1ef69893809d8457d834e6373d3854bc1782cbf",
+      "license": "Apache-2.0 (RapidOCR release package and upstream PaddleOCR license)",
+      "modelFamily": "PaddleOCR PP-OCR neural ONNX model; independent of Tesseract LSTM engine"
+    },
+    {
+      "name": "ch_PP-OCRv4_rec_infer.onnx",
+      "bytes": 10857958,
+      "sha256": "48fc40f24f6d2a207a2b1091d3437eb3cc3eb6b676dc3ef9c37384005483683b",
+      "acquisitionUrl": "https://files.pythonhosted.org/packages/ba/12/1e5497183bdbe782dbb91bad1d0d2297dba4d2831b2652657f7517bfc6df/rapidocr_onnxruntime-1.4.4-py3-none-any.whl",
+      "archiveMember": "rapidocr_onnxruntime/models/ch_PP-OCRv4_rec_infer.onnx",
+      "archiveSha256": "971d7d5f223a7a808662229df1ef69893809d8457d834e6373d3854bc1782cbf",
+      "license": "Apache-2.0 (RapidOCR release package and upstream PaddleOCR license)",
+      "modelFamily": "PaddleOCR PP-OCR neural ONNX model; independent of Tesseract LSTM engine"
+    },
+    {
+      "name": "ch_PP-OCRv4_det_infer.onnx",
+      "bytes": 4745517,
+      "sha256": "d2a7720d45a54257208b1e13e36a8479894cb74155a5efe29462512d42f49da9",
+      "acquisitionUrl": "https://files.pythonhosted.org/packages/ba/12/1e5497183bdbe782dbb91bad1d0d2297dba4d2831b2652657f7517bfc6df/rapidocr_onnxruntime-1.4.4-py3-none-any.whl",
+      "archiveMember": "rapidocr_onnxruntime/models/ch_PP-OCRv4_det_infer.onnx",
+      "archiveSha256": "971d7d5f223a7a808662229df1ef69893809d8457d834e6373d3854bc1782cbf",
+      "license": "Apache-2.0 (RapidOCR release package and upstream PaddleOCR license)",
+      "modelFamily": "PaddleOCR PP-OCR neural ONNX model; independent of Tesseract LSTM engine"
+    },
+    {
+      "name": "en_PP-OCRv4_rec_mobile.onnx",
+      "bytes": 7653044,
+      "sha256": "e8770c967605983d1570cdf5352041dfb68fa0c21664f49f47b155abd3e0e318",
+      "license": "Apache-2.0 upstream PaddleOCR / RapidAI model repository",
+      "acquisitionUrl": "https://www.modelscope.cn/models/RapidAI/RapidOCR/resolve/v3.10.0/onnx/PP-OCRv4/rec/en_PP-OCRv4_rec_mobile.onnx",
+      "modelFamily": "PaddleOCR PP-OCRv4 English recognition network/character dictionary"
+    },
+    {
+      "name": "en_dict.txt",
+      "bytes": 190,
+      "sha256": "5662df9d2d03f0e8ca0d3b0649d6acbab904b6a14b3d3521463c71c37c668ce3",
+      "license": "Apache-2.0 upstream PaddleOCR / RapidAI model repository",
+      "acquisitionUrl": "https://www.modelscope.cn/models/RapidAI/RapidOCR/resolve/v3.10.0/paddle/PP-OCRv4/rec/en_PP-OCRv4_rec_mobile/en_dict.txt",
+      "modelFamily": "PaddleOCR PP-OCRv4 English recognition network/character dictionary"
+    }
+  ],
+  "perSourceExecutionProfiles": {
+    "path": "research/salaries/queue-completion-2026-11-01/phsa/processing-profile-index-001.json",
+    "sha256": "5da19351100e8410e680113599c6990fb9f6b2bfe060348992795b1eaa44e4bc"
+  },
+  "selectedPerSourceRapidConfigurations": {
+    "phsa-2015-16": "chinese-4096",
+    "phsa-2016-17": "english-4096",
+    "phsa-2017-18": "chinese-4096",
+    "phsa-2018-19": "english-4096",
+    "phsa-2019-20": "baseline-default",
+    "phsa-2020-21": "english-4096",
+    "phsa-2021-22": "chinese-4096",
+    "phsa-2022-23": "baseline-default",
+    "phsa-2023-24": "chinese-4096"
+  },
+  "tesseractConfiguration": "preinstalled eng, full original300dpi page, PSM6",
+  "rawEvidence": "Each source-page raw gzip preserves both unmodified OCR streams, source and actual-render hashes, profile/runtime/model pins. Only separate immutable overlays/field-policy ledgers can interpret a field.",
+  "confidenceScoresAreNotProbabilities": true,
+  "multipleConfigurationsRemainOneEngine": true,
+  "independence": "TesseractLSTM and PaddleOCRONNX are independent implementations; two Tesseract modes do not supply two-engine evidence.",
+  "negativeTrialsRetained": [
+    "first-table-tesseract-benchmark-trials.json",
+    "money-column-trial-001-comparison.json"
+  ],
+  "largePdfAndModelCachesRemainOutsideRepository": true
+}

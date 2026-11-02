@@ -1,0 +1,57 @@
+{
+  "frozen": true,
+  "reviewer": "recovery_schools",
+  "frozenAtUtc": "2026-11-02T04:39:20.178107+00:00",
+  "finalReview": {
+    "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-schools-canonical-risk-2019-20-first34-final-current-source-comparison.json",
+    "sha256": "fea3c28dd7b7e3c8f62357a2d1eef7180651c32c376bf4157fc9f538137b6fd0"
+  },
+  "checks": {
+    "all34RowsExactSourceFirstPrimary": true,
+    "sourceViewsAndUnderlyingSourceHashesChecked": 102,
+    "qualified": 12,
+    "direct": 22,
+    "literalRepairs": [
+      18,
+      19,
+      34
+    ],
+    "newGenericCases": [
+      13,
+      21,
+      34
+    ],
+    "originalFrozenEvidencePinsUnchanged": true,
+    "consumerGenericParserChecks": [
+      {
+        "ledger": {
+          "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-schools-canonical-risk-2019-20-first34-new-generic-001-qualification-ledger.json",
+          "sha256": "febf4a178bfef8e750e93760bb0e25dba665b635bcd8ab0a6f533668e2ae7c41"
+        },
+        "consumerExactGenericCaseCount": 1,
+        "originalBatchSequences": [
+          385
+        ]
+      },
+      {
+        "ledger": {
+          "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-schools-canonical-risk-2019-20-first34-new-generic-003-qualification-ledger.json",
+          "sha256": "6c5487e77a9e0e7c389d7703e7572fba8349544f8275e1fe3888b67b11e50635"
+        },
+        "consumerExactGenericCaseCount": 2,
+        "originalBatchSequences": [
+          28,
+          277
+        ]
+      }
+    ],
+    "rootWriterSyntaxChecked": true,
+    "rootWriterDryRunPassed": true
+  },
+  "temporaryRootWriter": {
+    "path": "/workspace/salary-review-schools-temp/write-root-school-risk34-adoptions.py",
+    "sha256": "fd8225f6b9b7f8cfc0c42bff9ebc69f9d9183fbad00eaa02c15b93c0abda9517"
+  },
+  "rootFileWritePerformedByThisAgent": false,
+  "wholeSourceAccepted": false
+}

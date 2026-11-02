@@ -1,0 +1,89 @@
+{
+  "frozen": true,
+  "reviewer": "/root/recovery_municipal",
+  "reviewedOn": "2026-11-01",
+  "sourceId": "phsa-2018-19",
+  "sourceSha256": "ddeba470b875451f6180eb442ed921f7902cc910d62a026c11ab298ca3d0440f",
+  "batch": "phsa-2018-19-005",
+  "status": "complete-bounded400-row462-field-original-image-review",
+  "resolutions": {
+    "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-municipal-history-2018-19-005-resolutions.json",
+    "sha256": "10e7cc70f903f22ddea544513b8439c009249b505d19273f541bec8ce7f88d84"
+  },
+  "derivedOverlay": {
+    "path": "research/salaries/queue-completion-2026-11-01/phsa/overlays/phsa-2018-19-manual-overlay-005.json",
+    "sha256": "0694e8e40948a9a1b4a948cea2364af1304858a8678aed57dd58205c83838d33"
+  },
+  "verification": {
+    "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-municipal-history-2018-19-005-verification.json",
+    "sha256": "6ffcd60b876cb6958c9eebf25244148d47bd4c8dbf4dbf6e87e9ed840d084e5e"
+  },
+  "rawImageFirstTranscript": {
+    "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-municipal-history-2018-19-005-original-transcript.json",
+    "sha256": "8f57eff9abf10a2e703b2d6946cc6e3fa266711de3c9479c409ec184ee610970"
+  },
+  "sourceFidelity": {
+    "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-municipal-history-2018-19-005-source-fidelity.json",
+    "sha256": "169c807ddb6add4664fcdb58cfe235bd49c404ad71c3fb93d8c1726d173c039c"
+  },
+  "precomparisonSourceRereads": {
+    "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-municipal-history-2018-19-005-precomparison-source-rereads.json",
+    "sha256": "53e50ece6dd4081a80184fb33e11deee50c549e998fa7e85624ec722d24aaf76"
+  },
+  "postcomparisonSourceRereads": {
+    "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-municipal-history-2018-19-005-postcomparison-original-rereads.json",
+    "sha256": "18e74b3e7f12ab4a7f2046f9b72703bfdba2722881aecee0314e365a80bd5466"
+  },
+  "allFieldCandidateComparison": {
+    "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-municipal-history-2018-19-005-full-candidate-comparison.json.gzip",
+    "sha256": "fdfce644128bfadea6b0405cb09ada2f7f071490d927b5b9a0b0fb5bcd492cf6"
+  },
+  "independentTenNamePeerClosure": {
+    "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-municipal-history-2018-19-005-ten-name-peer-closure.json",
+    "sha256": "421be9c6dbbf1afb55398df96116f43b26212f45a0cdd1401b979496cfe71885"
+  },
+  "independentPeerComparison": {
+    "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-schools-peer-2018-19-005-comparison.json",
+    "sha256": "a52ef9bba7f9cf2e3df8da4b971d2303c0c74208bf3626729831632310881abd"
+  },
+  "assignedRows": 400,
+  "requestedFields": 462,
+  "fieldCounts": {
+    "name": 352,
+    "expenses": 44,
+    "remuneration": 66
+  },
+  "qualifiedCases": 0,
+  "unresolvedRows": [],
+  "sourceReadScope": "All352name/66pay/44expense fields personally read from48 native source sheets before candidate comparison. Independently reproduced all19actual300dpi PDFpages/400fullrowcrops/462fieldviews/48sheet sourcepixel regions. Ten difficult names received a separate blind original-image peer; no second400-row or money peer claim. Nine distinct serif-capital-I cases individually source-read. All literal source shapes resolved without dictionary, case convention, identity inference or typography waiver.",
+  "expenseMeaning": "25 literal printed dashes remain null,19positive numbers,0explicitzeros. OCR missing/null is not parsed-dash corroboration.",
+  "ownFirstPassCorrections": {
+    "beforeCandidate": [
+      {
+        "sequence": 348,
+        "initial": "Ramzan,Bibi Ferrian",
+        "final": "Ramzan,Bibi Ferian"
+      }
+    ],
+    "afterCandidate": [
+      {
+        "sequence": 80,
+        "initial": "Moenke,Shelly M.",
+        "final": "Moerike,Shelly M."
+      }
+    ],
+    "moneyChanges": 0,
+    "originalRawAndAllEarlierReceiptsUnchanged": true
+  },
+  "candidateDifferences": {
+    "fields": 394,
+    "rows": 362,
+    "name": 310,
+    "expenses": 18,
+    "remuneration": 66
+  },
+  "derivedOverlayByteIdenticalReplayPassed": true,
+  "sourceAcceptanceClaim": false,
+  "noOldOrGlobalFilesChanged": true,
+  "nextAction": "Health may consume the pinned derived overlay as bounded field evidence. Whole-period acceptance still requires every other row/page/control/approval/holdout/batch to close."
+}

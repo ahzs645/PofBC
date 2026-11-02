@@ -1,0 +1,128 @@
+{
+  "date": "2026-11-01",
+  "reviewer": "recovery_municipal (author)",
+  "sourceKey": "mission-2024",
+  "sourceSha256": "a4fa12aba963169e276fcd69680887ff788f731fd3ac5260135b88705db4e5a9",
+  "physicalPages": 16,
+  "salaryPagesReviewedCompletely": [
+    6,
+    7,
+    8,
+    9
+  ],
+  "otherSourceReview": "Whole 16-page thumbnail survey identified all remuneration pages; every salary row and control was reviewed on actual PDF-painted 300dpi images. Physical1 signed whole-SOFI approval reviewed at300dpi. No claim that every nonsalary page was fully transcribed.",
+  "printedPeriodEvidence": [
+    {
+      "physicalPage": 6,
+      "text": "for the year ended December 31, 2024"
+    },
+    {
+      "physicalPage": 7,
+      "text": "for the year ended December 31, 2024"
+    },
+    {
+      "physicalPage": 8,
+      "text": "for the year ended December 31, 2024"
+    },
+    {
+      "physicalPage": 9,
+      "text": "for the year ended December 31, 2024"
+    }
+  ],
+  "approval": {
+    "physicalPage": 1,
+    "statement": "Approves all statements and schedules included in this Statement of Financial Information.",
+    "signatories": [
+      {
+        "name": "Doug Stewart, CPA, CGA",
+        "position": "Director of Finance",
+        "signedDate": "2025-06-16"
+      },
+      {
+        "name": "Paul Horn",
+        "position": "MAYOR on behalf of Council",
+        "signedDate": "2025-06-16"
+      }
+    ],
+    "visuallySigned": true
+  },
+  "definitions": {
+    "remuneration": "Includes any form of salary, wage, gratuities and taxable benefits, including applicable vehicle allowances paid to the employee.",
+    "expenses": "Includes travel expenses, memberships, tuition, relocation, vehicle reimbursements, and registration fees paid directly to an employee or to a third party on behalf of an employee.",
+    "financialStatementRelation": "Schedule is based on actual payments made during the year; financial statements are prepared on an accrual basis.",
+    "sourceNamedSubtotalLabel": "Subtotal - employees with remuneration and expenses exceeding $75,000",
+    "thresholdMeaning": "Retain every printed named row, including individual remuneration below$75,000. Do not silently convert this combined source label into a salary-only selection rule.",
+    "physicalPage": 9,
+    "separateAdditionalCorporateExpenses": {
+      "physicalPage": 9,
+      "amount": 5370,
+      "text": "In addition, but not reported on the table above, Mission Bridgehead Investment Corporation paid expenses for individuals assigned to work at Mission Bridgehead Investment Corporation in the amount of $5,370.",
+      "treatment": "Aggregate supporting evidence only; not allocated or added to individual expenses."
+    },
+    "starredNames": {
+      "physicalPage": 6,
+      "text": "The wages and expenses shown for these individuals was paid for by the City of Mission for their assigned work at Mission Bridgehead Investment Corporation.",
+      "treatment": "Literal source asterisks retained on Crawford, S* and DeSousa, K*."
+    }
+  },
+  "printedPageControls": [
+    {
+      "page": 6,
+      "scope": "named employees on page6 (council has separate subtotal)",
+      "rows": 39,
+      "remuneration": 4259380,
+      "expenses": 62618
+    },
+    {
+      "page": 7,
+      "scope": "named employees on page7",
+      "rows": 51,
+      "remuneration": 6079430,
+      "expenses": 100675
+    },
+    {
+      "page": 8,
+      "scope": "named employees on page8",
+      "rows": 51,
+      "remuneration": 5878205,
+      "expenses": 70698
+    },
+    {
+      "page": 9,
+      "scope": "named employees on page9",
+      "rows": 21,
+      "remuneration": 2659967,
+      "expenses": 44665
+    }
+  ],
+  "printedCohortControls": {
+    "namedEmployees": {
+      "remuneration": 18876982,
+      "expenses": 278656,
+      "rows": 162
+    },
+    "electedOfficials": {
+      "remuneration": 402615,
+      "expenses": 24111,
+      "rows": 7
+    },
+    "belowThresholdEmployees": {
+      "remuneration": 13178641,
+      "expenses": 106629
+    },
+    "allEmployees": {
+      "remuneration": 32055623,
+      "expenses": 385285
+    },
+    "allEmployeesAndElected": {
+      "remuneration": 32458238,
+      "expenses": 409396
+    }
+  },
+  "allNamedAndPageControlsAgreeExactlyAfterCompleteSourceRowReview": true,
+  "nullExpenseCells": 18,
+  "explicitZeroExpenseCells": 0,
+  "sourceDashesRemainNull": true,
+  "allRepeatedNamesAndRolesRetainedWithoutIdentityAssumptions": true,
+  "acceptedRows": 0
+}

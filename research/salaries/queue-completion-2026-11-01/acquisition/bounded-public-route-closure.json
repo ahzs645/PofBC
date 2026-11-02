@@ -1,0 +1,129 @@
+{
+  "reviewedOn": "2026-11-01",
+  "boundedSearch": true,
+  "limitations": "Search and network failures are not proof that an issuer or archive has no complete/native record. No generic success status or search title alone establishes issuer, period or salary scope.",
+  "retrievalReceipts": {
+    "path": "research/salaries/queue-completion-2026-11-01/acquisition/retrievals.json",
+    "sha256": "7b4fcb13b00540668d5a029d7f21c2b17a29ee85083ab35481a1b1c12ac369f5"
+  },
+  "searchReceipts": [
+    {
+      "path": "research/salaries/queue-completion-2026-11-01/acquisition/search-contact-and-nic-library.json",
+      "sha256": "636c179822057cd1fa73adeb71e8d28d96bc0bf4b78f8680f49d4ceb6c827a07"
+    },
+    {
+      "path": "research/salaries/queue-completion-2026-11-01/acquisition/search-contact-primary-routes.json",
+      "sha256": "e0c2551ca3647a98b1649f065354a79f0aba8ee5cc992f5e22a2c673f6851e96"
+    },
+    {
+      "path": "research/salaries/queue-completion-2026-11-01/acquisition/search-library-routes.json",
+      "sha256": "02213ce01f488ab2c81dd0ed3e3d4e3871606a91ef0fcb3792c4e094e95b1718"
+    },
+    {
+      "path": "research/salaries/queue-completion-2026-11-01/acquisition/search-nic-and-vch-final-routes.json",
+      "sha256": "025429d6b6418c7398361a391d951acc29777eeed1265bef5e7147d29f5233d4"
+    },
+    {
+      "path": "research/salaries/queue-completion-2026-11-01/acquisition/search-ordinary-copy-contacts.json",
+      "sha256": "e72ecc20888d817a89a159db2978643ebebfb3c138696c8e7cfb79bb3da6610e"
+    },
+    {
+      "path": "research/salaries/queue-completion-2026-11-01/acquisition/search-outbox-official-contacts.json",
+      "sha256": "fb9f067cd91bf47c2254097e90221abb07c87ed72a7b0367ede9ad7d14ac7945"
+    }
+  ],
+  "priorNicRetrievalReceiptReadBeforeNewWork": {
+    "path": "research/salaries/held-resolution-2026-11-01/education/retrievals.json",
+    "sha256": "21dacac8901a93c5a8729bba01a616b0ed44690d2eae26fc069f832ca2f7f8d0"
+  },
+  "priorNicReceiptEntries": 122,
+  "routes": [
+    {
+      "issuer": "Providence Health Care",
+      "result": "Recovered complete official Legislative Library delivered SOFI; direct exact institution media/file routes still 403. Internal issuer, period, all printed pages, salary scopes and approval inspected. Stored ORIGINAL metadata differs from delivered PDF, which contains added library cover; do not claim inaccessible issuer-file byte identity.",
+      "sourceSha256": "521472f784463bf42626b9c74aeb72252167346b65b8a123031ca59e46ecb5f3",
+      "salaryRowsAccepted": 3299,
+      "requestSuperseded": true
+    },
+    {
+      "issuer": "Vancouver Coastal Health",
+      "result": "Recovered complete official Legislative Library delivered Part F from true series361866; earlier search hit series167441/239042 was internally Louis Brier and was rejected. Delivered representation contains library cover and differs from stored-file metadata; no byte-identity claim. Standalone Part F contains no approval page.",
+      "sourceSha256": "8d2d85205f0c4de6557e39cd8ee21ac2a38c90aa70611f1ca5bfb7c9f030d7ad",
+      "salaryRowsAccepted": 7750,
+      "requestSuperseded": true
+    },
+    {
+      "issuer": "North Island College",
+      "result": "Already accepted151 salary observations remain unchanged. Prior official board/agenda, Ministry, Legislative Library/Arca and archive routes were inspected; this extension used exact indexed official agenda URL in four bounded alternate CommonCrawl indices, avoiding repetition of122 old guessed/public retrievals. Three504 responses are route failures; one404 reports no captures in that index. None supplies the complete3739511-byte package. Archived original remains truncated to1048576bytes with explicit Warning299/original-length evidence; no complete-package claim.",
+      "newExactUrlArchiveLookups": [
+        {
+          "url": "https://index.commoncrawl.org/CC-MAIN-2020-45-index?url=www.nic.bc.ca%2Fpdf%2Fbog%2Fagenda%2F2020-2021%2F20201022_BOG_agenda.pdf&output=json",
+          "status": 504,
+          "responseSha256": "4dfd31da49e8f63867a310d3ae57d3a0b492d5cc7ae382108f57738a8b577d4c"
+        },
+        {
+          "url": "https://index.commoncrawl.org/CC-MAIN-2021-04-index?url=www.nic.bc.ca%2Fpdf%2Fbog%2Fagenda%2F2020-2021%2F20201022_BOG_agenda.pdf&output=json",
+          "status": 404,
+          "responseSha256": "d6234089a8e68eb7bb1772d7cb3451ec3eb29590f0f8a36a288e3d56259c95f5"
+        },
+        {
+          "url": "https://index.commoncrawl.org/CC-MAIN-2022-05-index?url=www.nic.bc.ca%2Fpdf%2Fbog%2Fagenda%2F2020-2021%2F20201022_BOG_agenda.pdf&output=json",
+          "status": 504,
+          "responseSha256": "4dfd31da49e8f63867a310d3ae57d3a0b492d5cc7ae382108f57738a8b577d4c"
+        },
+        {
+          "url": "https://index.commoncrawl.org/CC-MAIN-2020-50-index?url=www.nic.bc.ca%2Fpdf%2Fbog%2Fagenda%2F2020-2021%2F20201022_BOG_agenda.pdf&output=json",
+          "status": 504,
+          "responseSha256": "4dfd31da49e8f63867a310d3ae57d3a0b492d5cc7ae382108f57738a8b577d4c"
+        }
+      ],
+      "salaryRowsAcceptedInThisTranche": 0,
+      "fullOriginalRequestUnsent": true
+    },
+    {
+      "issuer": "Provincial Health Services Authority",
+      "result": "Followed all nine historical library items ORIGINAL bundles/bitstreams. Stored size and MD5 exactly match each already recovered official public scan; no distinct public native salary table recovered. The nine complete scans are processing under the health workflow, so a format-only request is unnecessary. This does not assert no issuer-held electronic record exists. Existing same-stem XLSX/XLS/CSV404 probes were not repeated.",
+      "formatCheck": {
+        "path": "research/salaries/queue-completion-2026-11-01/acquisition/phsa-library-native-format-check.json",
+        "sha256": "e70298871ae050fb579549c3525cc208c14130c83a7bed701c171960730dc9f5"
+      },
+      "salaryRowsAcceptedInThisTranche": 0,
+      "futureAction": "Supersede old format-only action after all nine independent complete scan workflows close."
+    }
+  ],
+  "otherGapLeads": "True VCH official financial series361866 exposes salary holdings for20 fiscal years (2005/06–2024/25). Only requested2020/21 original was fully acquired and reviewed in this bounded tranche. Other catalogue hits are metadata leads, not reviewed salary scopes or verified native-format findings. School agent separately owns seven native extension sources; no duplicate acquisition/import here.",
+  "issuerDependentUnresolved": [
+    {
+      "item": "NIC full package",
+      "evidence": {
+        "path": "research/salaries/queue-completion-2026-11-01/acquisition/outbox/outbox-nic-2019-20-complete-copy.md",
+        "sha256": "01ae5699ae5f497014e92a42735346c4de28a0ad5be5474f3c7e19899ace6a26"
+      }
+    },
+    {
+      "item": "McBride exact council period",
+      "evidence": {
+        "path": "research/salaries/queue-completion-2026-11-01/acquisition/outbox/outbox-municipal-public-route-support.json",
+        "sha256": "c1811f24ff488b434674e5de6b43acc2728c3f8be2792e0dd4df876bc0aed6a3"
+      }
+    },
+    {
+      "item": "SD10 declaration/approval",
+      "evidence": {
+        "path": "research/salaries/queue-completion-2026-11-01/acquisition/outbox/outbox-school-public-route-support.json",
+        "sha256": "50199b293acdc679096dec6e1bbde36130b9d2e71606b40a0d68990d4b1f9e1d"
+      }
+    },
+    {
+      "item": "SD8 heading/aggregate/adoption",
+      "evidence": {
+        "path": "research/salaries/queue-completion-2026-11-01/acquisition/outbox/outbox-school-public-route-support.json",
+        "sha256": "50199b293acdc679096dec6e1bbde36130b9d2e71606b40a0d68990d4b1f9e1d"
+      }
+    }
+  ],
+  "outreachSent": false,
+  "feesAuthorized": false,
+  "formalApplicationsSubmitted": false,
+  "priorNicDistinctRequestedUrls": 121
+}

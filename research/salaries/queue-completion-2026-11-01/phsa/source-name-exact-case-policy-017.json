@@ -1,0 +1,53 @@
+{
+  "version": 17,
+  "frozen": true,
+  "date": "2026-11-02",
+  "scope": "Only the existing FY2022/23 physical106 row17 closed name authority gains the root-canonical source-supported Lambi/Larnbi prefix family. Historical three-name review remains replayable under policy008; new review must pin this exact six-name root ledger/adoption.",
+  "approvedCases": [
+    {
+      "sourceId": "phsa-2022-23",
+      "sourceSha256": "6046bb7be6944bc729926adba20a826486820a2a3b9b38090c60d400b2bc72a1",
+      "batch": "phsa-2022-23-002",
+      "physicalPage": 106,
+      "sourceRowOnPage": 17,
+      "primary": "Lambi-Raine,Dylan Elizabeth Kann",
+      "originalFullRowCropSha256": "9ec4d01f1cdb4ce4daa034afe9e9c7bcbdecb2850ead3009baa6e177f36420cc",
+      "rootAdoption": {
+        "path": "research/salaries/queue-completion-2026-11-01/reviews/root-phsa-history-2022-23-batch-002-name394-canonical-six-closed-source-adoption.json",
+        "sha256": "8a46f49ab4fedae34b5796454f85d665dda7b2c44b891dbf11710ecc689b3939"
+      },
+      "exactCaseLedger": {
+        "path": "research/salaries/queue-completion-2026-11-01/reviews/root-phsa-history-2022-23-batch-002-name394-canonical-six-source-ledger.json",
+        "sha256": "89de23a70eef6a59e05bb41a49430bbe4881b50054d193057778621805144581"
+      },
+      "completeVisibleAlternatives": [
+        "Lambi-Raine,Dylan Elizabeth Kann",
+        "Lambi-Raine,Dylan Elizabeth Karn",
+        "Lambi-Raine,Dylan Elizabeth Kam",
+        "Larnbi-Raine,Dylan Elizabeth Kann",
+        "Larnbi-Raine,Dylan Elizabeth Karn",
+        "Larnbi-Raine,Dylan Elizabeth Kam"
+      ],
+      "supersedesExactClosedAuthority": {
+        "policy": {
+          "path": "research/salaries/queue-completion-2026-11-01/phsa/source-name-exact-case-policy-008.json",
+          "sha256": "5eaaed01420823f117c163609c95e76f7b0e5f04821335de0f25ff2517673613"
+        },
+        "rootAdoption": {
+          "path": "research/salaries/queue-completion-2026-11-01/reviews/root-phsa-history-2022-23-batch-002-name394-exact-name-adoption.json",
+          "sha256": "604b3e6c05ebd24a7f04ebcdcf0bb9f6e99e2950e8f6c74999537123b29603ab"
+        },
+        "exactCaseLedger": {
+          "path": "research/salaries/queue-completion-2026-11-01/reviews/root-phsa-history-2022-23-batch-002-name394-exact-source-ambiguity-ledger.json",
+          "sha256": "89c4c21601fa4bad36f7b50059564dbb961becb710a05159a58485b7ba274f88"
+        }
+      }
+    }
+  ],
+  "noGenericRule": true,
+  "requirements": [
+    "Exact same source, batch, physical row, crop and primary; old3 alternatives are retained, added3 differ only by the separately root-confirmed prefix m/rn segmentation.",
+    "Select authority by exact pinned case-ledger, never by generic latest version or missing authority. Unknown duplicate authority, changed name/money/locator, or extra alternatives fail closed.",
+    "Canonical source assessment and preferred split are preserved without pixel-uniqueness or unanimous preference claims."
+  ]
+}

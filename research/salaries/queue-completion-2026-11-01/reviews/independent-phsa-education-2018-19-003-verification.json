@@ -1,0 +1,43 @@
+{
+  "reviewer": "recovery_education",
+  "reviewedOn": "2026-11-01",
+  "sourceId": "phsa-2018-19",
+  "sourceSha256": "ddeba470b875451f6180eb442ed921f7902cc910d62a026c11ab298ca3d0440f",
+  "batch": "phsa-2018-19-003",
+  "resolutionReceipt": {
+    "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-education-2018-19-003-resolutions.json",
+    "sha256": "89f8b6897bf8d31f230fb0e64a740cb51c3fea82a616c62a00ce1f29491a2af0"
+  },
+  "reviewedRows": 300,
+  "reviewedRequestedFields": 340,
+  "fieldCounts": {
+    "name": 256,
+    "remuneration": 49,
+    "expenses": 35
+  },
+  "exactGlyphResolutionRows": 295,
+  "explicitQualifiedRnMRows": 5,
+  "unresolvedOutsideExplicitQualificationRows": 0,
+  "allSevenResolutionKeysExact": true,
+  "allFrozenRequestedFieldSetsAndSourceCropHashesExact": true,
+  "allMoneyOnlyLiteralNamesNull": true,
+  "sourceExpenseDashCellsRetainedNull": 17,
+  "actualSourcePixelVerification": {
+    "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-education-2018-19-003-actual-pdf-all-row-pixel-check.json",
+    "sha256": "cceea26a63eec1f5f37691c8b9807a67507f4ed6f3f8c44396329a51a420c74c",
+    "fullPageActualPdfRenders": 15,
+    "fullRowCropMatches": 300,
+    "targetFieldCropMatches": 340
+  },
+  "strictDerivedConsumerReplay": {
+    "command": "python scripts/finish_salary_phsa_resolutions.py --review research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-education-2018-19-003-resolutions.json=89f8b6897bf8d31f230fb0e64a740cb51c3fea82a616c62a00ce1f29491a2af0 --out research/salaries/queue-completion-2026-11-01/phsa/overlays/phsa-2018-19-manual-overlay-003.json --check",
+    "exitCode": 0,
+    "output": {
+      "path": "research/salaries/queue-completion-2026-11-01/phsa/overlays/phsa-2018-19-manual-overlay-003.json",
+      "sha256": "c38628a40558e81d5f26cafe178e00618035db038d99e0cfd8a28bfb2bf10111",
+      "resolvedRows": 300
+    }
+  },
+  "wholeSourceAcceptance": false,
+  "acceptanceGate": "Five explicit finite rn/m names require independent original-image primaries and ROOT exact-case adoption. No global or dataset bytes changed."
+}

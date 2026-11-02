@@ -1,0 +1,32 @@
+{
+  "frozen": true,
+  "reviewer": "/root/recovery_review",
+  "reviewedOn": "2026-11-02",
+  "sourceId": "phsa-2019-20",
+  "sourceSha256": "0e31ac2054f0c2d4ef78797185dddd96cc0cdf2eab94bd6841fa24e1c38e7d02",
+  "batch": "phsa-2019-20-013",
+  "rawFirst": {
+    "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-history-batches-peer-2019-20-013-eight-name-source-first.json",
+    "sha256": "74f6e52c5a79db5d20cdaeca9f87300e05cc9d377ba9eac0152f816f0bafcd21"
+  },
+  "sourceOnlyBeforeChoicesAmendment": {
+    "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-history-batches-peer-2019-20-013-eight-name-prechoices-source-amendments.json",
+    "sha256": "3f46dcb3199305001778f9b3d1f293767bab6ade77e324cf3ca3ecbff60f971b"
+  },
+  "scopedEightAuthorChoicesOpenedAfterRawAndContext": {
+    "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-municipal-history-2019-20-013-eight-only-name-proposals-for-peer.json",
+    "sha256": "e824b65e9f2e1a7ed7df9179c952a954f910d819c31ec3cadd7f56a8e6fe1efd"
+  },
+  "ownPostcomparisonSourceCorrection": {
+    "sequence": 278,
+    "field": "name",
+    "first": "Sandrin,Dilna T.",
+    "final": "Sandrin,Dilma T.",
+    "sourceEvidence": {
+      "path": "/workspace/salary-review-review-temp/municipal013-fresh/seq278-own2400.png",
+      "sha256": "71915e1db13084b66bb0e0ed2f37f1d940608cff4bc33fa7dab89f4ef2ef65fb"
+    },
+    "basis": "Independently rendered actualPDF2400 shows three stems/two shoulders in m after l. My initial single-n segmentation omits a stem; Dilna is a first-reading error, not an accepted n/m waiver. Genuine m/rn split remains Dilma/Dilrna, both with source final T. period."
+  },
+  "allOldFilesUnchanged": true
+}

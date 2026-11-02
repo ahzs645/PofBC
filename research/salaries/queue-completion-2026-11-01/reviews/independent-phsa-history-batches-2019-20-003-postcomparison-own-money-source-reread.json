@@ -1,0 +1,27 @@
+{
+  "reviewer": "/root/recovery_review",
+  "sourceId": "phsa-2019-20",
+  "sourceSha256": "0e31ac2054f0c2d4ef78797185dddd96cc0cdf2eab94bd6841fa24e1c38e7d02",
+  "batch": "phsa-2019-20-003",
+  "originalFrozenFirstPass": {
+    "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-history-batches-2019-20-003-original-transcript-v2.json",
+    "sha256": "91d611ebe883a2e1c2a24fcba8eb7c2d363cd0a22ad74bad927b394e5dc12156"
+  },
+  "discoveryTiming": "After opening the full candidate alternatives; all original472first readings remain immutable. Before opening the fresh blind peer readings.",
+  "ownCorrection": {
+    "sequence": 12,
+    "physicalPage": 13,
+    "sourceRowOnPage": 57,
+    "field": "remuneration",
+    "initialReading": 81245,
+    "literalSourceReread": 81243,
+    "basis": "Actual600 current original shows the final rounded3 without the5 top bar. The initial image transcript wrongly entered5. Candidate and parsed Rapid reader were already81243; this is a reviewer-only correction, not a source-data repair.",
+    "actual600SourceField": {
+      "path": "/tmp/independent-phsa-history-2019-003-money-peer/seq012-remuneration-600.png",
+      "sha256": "f81173a318ba62b7a9e30a0d6a47530b133952eafe2a6e84afd6d2b4a71ff4d7"
+    }
+  },
+  "allOtherThirtySevenNeitherReaderTargetMoneyRereadAtActual600": true,
+  "allOtherMonetaryFirstReadingsRemainUnchanged": true,
+  "freshIndependentMoneyPeerStillRequired": true
+}

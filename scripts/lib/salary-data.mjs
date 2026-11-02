@@ -77,6 +77,9 @@ export const applyCompiledReplacements = (baseline, official, sources, rules = [
       if (rule.sourceDataSha256 && (!/^[a-f0-9]{64}$/.test(rule.sourceDataSha256[id] ?? '') || sources[id].dataSha256 !== rule.sourceDataSha256[id])) {
         throw new Error(`${employerSlug}|${compiledYear}: official replacement source fingerprint changed for ${id}`)
       }
+      if (rule.sourceSha256 && (!/^[a-f0-9]{64}$/.test(rule.sourceSha256[id] ?? '') || sources[id].sha256 !== rule.sourceSha256[id])) {
+        throw new Error(`${employerSlug}|${compiledYear}: original replacement source fingerprint changed for ${id}`)
+      }
     }
     if (!sourceIds.some((id) => ['employee-remuneration', 'named-employees-over-threshold'].includes(sources[id].scope) && sources[id].completeEmployeeSchedule !== false && sources[id].validation?.completeEmployeeSchedule !== false)) {
       throw new Error(`${employerSlug}|${compiledYear}: partial disclosure cannot replace a compiled employee cohort across periods`)
@@ -99,7 +102,7 @@ export const applyCompiledReplacements = (baseline, official, sources, rules = [
       for (const row of retained) classified.set(row, rule.retainedSource.id)
     }
     corrections.push({ employer: employerSlug, year: compiledYear, correctedYear: replacementYear, rows: selected.length,
-      retainedRows: retained.length, kind: 'wrong-reporting-year', reason: rule.reason,
+      retainedRows: retained.length, kind: rule.kind ?? 'wrong-reporting-year', reason: rule.reason,
       evidence: rule.evidence, sourceIds, status: 'replaced-from-official-source' })
   }
   return { rows: baseline.filter((row) => !removed.has(row)).map((row) => classified.has(row) ? { ...row, sourceId: classified.get(row) } : row), corrections }

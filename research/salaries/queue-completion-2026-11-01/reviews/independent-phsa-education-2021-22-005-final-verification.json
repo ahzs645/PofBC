@@ -1,0 +1,37 @@
+{
+  "frozen": true,
+  "reviewedOn": "2026-11-02",
+  "reviewer": "/root/recovery_education",
+  "sourceId": "phsa-2021-22",
+  "sourceSha256": "944c99fa7b7ede643cb4c426a5e9ab30aa906d8f81fda379f0206e4b0cdcd25c",
+  "batch": "phsa-2021-22-005",
+  "finalReview": {
+    "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-education-2021-22-005-resolutions.json",
+    "sha256": "3069627343b1a455659a805a69ccd572efb235a61867c7e08cdf4fcf8a7f46f3"
+  },
+  "canonicalOverlay": {
+    "path": "research/salaries/queue-completion-2026-11-01/phsa/overlays/phsa-2021-22-manual-overlay-005.json",
+    "sha256": "7ff115b40e6938232dc11739f6755ff8feec807f99b4426517f9255d250a1fe2"
+  },
+  "checks": {
+    "sourceRows": 300,
+    "requestedFields": 327,
+    "uniqueRows": 300,
+    "exactRows": 282,
+    "qualifiedNameRows": 18,
+    "printedDashExpenseNulls": 8,
+    "unresolvedRows": 0,
+    "strictSevenKeyResolutionSchema": true,
+    "strictConsumerReplay": true,
+    "canonicalOverlayCheck": true,
+    "hashPinnedReferencesChecked": 540,
+    "permanentNativeSourcePngCopies": 190,
+    "permanentSourceCopiesAllByteExact": true
+  },
+  "testMethod": "Unmodified strict finish_salary_phsa_resolutions.py emits exactly300rows and --check reproduces identical canonical overlay. Full source hash and every requested field/crop reservation enforced. All recursively paired path/sha256 references in own receipts rehashed; 190 permanent PNG copies verified. No code edited; no matching dedicated unit-test module is present, so no redundant implementation-mirroring tests added.",
+  "consumerUsed": {
+    "path": "scripts/finish_salary_phsa_resolutions.py",
+    "sha256": "022193ff22ab618ff144c964f74fa34e453c7c89bdfe907c0dd93600ea1b5b09"
+  },
+  "limits": "All327requested fields personally reviewed. Whole2021source control/period/scope approval remains health/root gate; this300batch alone is not whole-source acceptance."
+}

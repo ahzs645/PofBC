@@ -1,0 +1,162 @@
+{
+  "frozen": true,
+  "adapter": "count-independent-source-money-peer-v1",
+  "sourceReceiptSchema": "separate-complete-source-peer-with-author-first-and-secondary-history-v1",
+  "peerInputs": [
+    {
+      "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-history-batches-peer-2019-20-004-four-money-comparison.json",
+      "sha256": "14fbcc38297a29302791c2c6a52cbe5bca49a658fb9e405071813d1ed885f8d4"
+    },
+    {
+      "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-history-batches-peer-2019-20-004-four-money-source-first.json",
+      "sha256": "f646023bd252f3f66de2d61ab59fb741337117601143312b49aec864fed5a67b"
+    },
+    {
+      "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-municipal-history-2019-20-004-postcomparison-money-source-corrections.json",
+      "sha256": "0fb2e822259a10f28445e3186ded1f01bbc0a97cdbe8c1222fc36e9dfe1cf7ec"
+    },
+    {
+      "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-municipal-history-2019-20-004-original-transcript.json",
+      "sha256": "ec4ccffe9feeb72f320e3fce6b3ae2cb704d8bbd218688f8d95996a6be35474d"
+    },
+    {
+      "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-municipal-history-2019-20-004-postcomparison-money-reread-transcript.json",
+      "sha256": "50178e8ef3186311b3bcb169625cb0571087952d65ba9a1826514e37743859bb"
+    },
+    {
+      "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-municipal-history-2019-20-004-four-money-peer-source-only.json",
+      "sha256": "f06c76227a4ed63d888ff2c1994dd1519781686f3a49ed062d1dc2d34b22f795"
+    }
+  ],
+  "confirmations": [
+    {
+      "sourceId": "phsa-2019-20",
+      "sourceSha256": "0e31ac2054f0c2d4ef78797185dddd96cc0cdf2eab94bd6841fa24e1c38e7d02",
+      "physicalPage": 23,
+      "sourceRowOnPage": 7,
+      "field": "expenses",
+      "confirmedValue": 1912,
+      "effectiveAuthorOverlay": {
+        "path": "research/salaries/queue-completion-2026-11-01/phsa/overlays/phsa-2019-20-manual-overlay-004.json",
+        "sha256": "2dd8d3a829357da620eb2591a1eaff233208a22f5cffdfb73fc4ddabebefe4d3"
+      },
+      "peerComparison": {
+        "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-history-batches-peer-2019-20-004-four-money-comparison.json",
+        "sha256": "14fbcc38297a29302791c2c6a52cbe5bca49a658fb9e405071813d1ed885f8d4"
+      },
+      "freshSourceImage": {
+        "path": "/workspace/salary-review-municipal-tmp/phsa-2019-20-004/post-source/0141-expenses-actual1200.png",
+        "sha256": "734b542c41711bbca3cb457ab5ea6b0f8a7e100287da6ab1f26a10fcb3c4e818",
+        "original300DpiPixelBox": [
+          2052,
+          922,
+          2422,
+          961
+        ],
+        "dpi": 1200
+      },
+      "imageFirstTranscript": {
+        "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-history-batches-peer-2019-20-004-four-money-source-first.json",
+        "sha256": "f646023bd252f3f66de2d61ab59fb741337117601143312b49aec864fed5a67b"
+      }
+    },
+    {
+      "sourceId": "phsa-2019-20",
+      "sourceSha256": "0e31ac2054f0c2d4ef78797185dddd96cc0cdf2eab94bd6841fa24e1c38e7d02",
+      "physicalPage": 24,
+      "sourceRowOnPage": 45,
+      "field": "remuneration",
+      "confirmedValue": 90799,
+      "effectiveAuthorOverlay": {
+        "path": "research/salaries/queue-completion-2026-11-01/phsa/overlays/phsa-2019-20-manual-overlay-004.json",
+        "sha256": "2dd8d3a829357da620eb2591a1eaff233208a22f5cffdfb73fc4ddabebefe4d3"
+      },
+      "peerComparison": {
+        "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-history-batches-peer-2019-20-004-four-money-comparison.json",
+        "sha256": "14fbcc38297a29302791c2c6a52cbe5bca49a658fb9e405071813d1ed885f8d4"
+      },
+      "freshSourceImage": {
+        "path": "/workspace/salary-review-municipal-tmp/phsa-2019-20-004/post-source/0220-remuneration-actual1200.png",
+        "sha256": "89349c0b1c88fa0806e1c5c28d904d174639e2273ded938fa840e4e1999be5df",
+        "original300DpiPixelBox": [
+          1735,
+          2478,
+          2068,
+          2517
+        ],
+        "dpi": 1200
+      },
+      "imageFirstTranscript": {
+        "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-history-batches-peer-2019-20-004-four-money-source-first.json",
+        "sha256": "f646023bd252f3f66de2d61ab59fb741337117601143312b49aec864fed5a67b"
+      }
+    },
+    {
+      "sourceId": "phsa-2019-20",
+      "sourceSha256": "0e31ac2054f0c2d4ef78797185dddd96cc0cdf2eab94bd6841fa24e1c38e7d02",
+      "physicalPage": 24,
+      "sourceRowOnPage": 46,
+      "field": "remuneration",
+      "confirmedValue": 87902,
+      "effectiveAuthorOverlay": {
+        "path": "research/salaries/queue-completion-2026-11-01/phsa/overlays/phsa-2019-20-manual-overlay-004.json",
+        "sha256": "2dd8d3a829357da620eb2591a1eaff233208a22f5cffdfb73fc4ddabebefe4d3"
+      },
+      "peerComparison": {
+        "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-history-batches-peer-2019-20-004-four-money-comparison.json",
+        "sha256": "14fbcc38297a29302791c2c6a52cbe5bca49a658fb9e405071813d1ed885f8d4"
+      },
+      "freshSourceImage": {
+        "path": "/workspace/salary-review-municipal-tmp/phsa-2019-20-004/post-source/0221-remuneration-actual1200.png",
+        "sha256": "502c4e675cb2952d3bc5b6c1df1a6ce29298d3da0fff54196ab98d324a00c5c8",
+        "original300DpiPixelBox": [
+          1735,
+          2517,
+          2068,
+          2556
+        ],
+        "dpi": 1200
+      },
+      "imageFirstTranscript": {
+        "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-history-batches-peer-2019-20-004-four-money-source-first.json",
+        "sha256": "f646023bd252f3f66de2d61ab59fb741337117601143312b49aec864fed5a67b"
+      }
+    },
+    {
+      "sourceId": "phsa-2019-20",
+      "sourceSha256": "0e31ac2054f0c2d4ef78797185dddd96cc0cdf2eab94bd6841fa24e1c38e7d02",
+      "physicalPage": 27,
+      "sourceRowOnPage": 46,
+      "field": "remuneration",
+      "confirmedValue": 75559,
+      "effectiveAuthorOverlay": {
+        "path": "research/salaries/queue-completion-2026-11-01/phsa/overlays/phsa-2019-20-manual-overlay-004.json",
+        "sha256": "2dd8d3a829357da620eb2591a1eaff233208a22f5cffdfb73fc4ddabebefe4d3"
+      },
+      "peerComparison": {
+        "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-history-batches-peer-2019-20-004-four-money-comparison.json",
+        "sha256": "14fbcc38297a29302791c2c6a52cbe5bca49a658fb9e405071813d1ed885f8d4"
+      },
+      "freshSourceImage": {
+        "path": "/workspace/salary-review-municipal-tmp/phsa-2019-20-004/post-source/0369-remuneration-actual1200.png",
+        "sha256": "77b6f4451189150d766b4bd68c2b33993d577360b0f58a099912bab783f35abf",
+        "original300DpiPixelBox": [
+          1735,
+          2522,
+          2068,
+          2560
+        ],
+        "dpi": 1200
+      },
+      "imageFirstTranscript": {
+        "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-history-batches-peer-2019-20-004-four-money-source-first.json",
+        "sha256": "f646023bd252f3f66de2d61ab59fb741337117601143312b49aec864fed5a67b"
+      }
+    }
+  ],
+  "completeFrozenSourceTargetFields": 4,
+  "confirmedMonetaryFields": 4,
+  "originalAuthorOwnSourceCorrections": 3,
+  "originalPeerOwnSourceCorrections": 0,
+  "scope": "Exact source-money fields only. Original first-pass disagreements/corrections are retained; no balancing, name or unrelated field authority."
+}

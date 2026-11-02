@@ -1,0 +1,182 @@
+{
+  "frozen": true,
+  "reviewedOn": "2026-11-02",
+  "reviewer": "/root/recovery_review",
+  "scope": "Independent bounded technical review of the exact023 source-first transcript-pointer correction only.",
+  "previousAudit": {
+    "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-history-batches-canonical-money-gates-audit-v3.json",
+    "sha256": "cc2ba3db174e1d30523f7fc43791634771544707e525e72ed4f37be402c0dd1d"
+  },
+  "codePins": [
+    {
+      "path": "scripts/finish_salary_phsa_money_provenance.py",
+      "sha256": "4b862104e9d229aeddefe6893f9686c1c299f0242964baf4255bce50581ef56b"
+    },
+    {
+      "path": "scripts/finish_salary_phsa_money_supersessions.py",
+      "sha256": "da3ff988219f2a22b0b25170734f28a67f8d3afbda07aba0ee475c03916b186e"
+    },
+    {
+      "path": "scripts/finish_salary_phsa_triangulation.py",
+      "sha256": "dc28fbb8dbfad7dee22d3892132bb8b2699778f805d3d3553ee0683a489dedcc"
+    }
+  ],
+  "originalConfirmation": {
+    "path": "research/salaries/queue-completion-2026-11-01/phsa/triangulation/money-peer-confirmations-023.json",
+    "sha256": "34fd632d9beca3d6c5c13860dfe723ac85c6c3709d8513eed667fb8696dc542c"
+  },
+  "correctedConfirmation": {
+    "path": "research/salaries/queue-completion-2026-11-01/phsa/triangulation/money-peer-confirmations-023-v2.json",
+    "sha256": "9e436864774cc41573ace634789b386bd1ab47824587a8e3544400c269ff4494"
+  },
+  "exactSelector": {
+    "path": "research/salaries/queue-completion-2026-11-01/phsa/triangulation/confirmation-supersessions/money-peer-confirmations-023-v2.json",
+    "sha256": "9b5af42eaeee7b6eb461fb0ae3f899bf1706df8bb22a702265a327c7953ec0e5"
+  },
+  "actualRoot53SourceFirstTranscript": {
+    "path": "research/salaries/queue-completion-2026-11-01/reviews/root-phsa-history-2019-20-batch-012-fiftythree-money-image-first.json",
+    "sha256": "c034960d7a4bd42ddb176a83b91370b9b17631a9127282dbe74d2c8eaa143aee"
+  },
+  "independentCold394SourceFirstTranscript": {
+    "path": "research/salaries/queue-completion-2026-11-01/reviews/author-phsa-history-schools-2019-20-012-money394-source-first.json",
+    "sha256": "a02cd2ddc236ed7ba66b971826329d11c38f12e3ca469ca3ee4bb3dbe52618a2"
+  },
+  "confirmedFieldsUnchanged": 53,
+  "sourceFirstTranscriptPointersCorrected": 52,
+  "checks": [
+    {
+      "case": "Actual023v2 recursively replays the exact original023 and proof-only selector",
+      "expected": "accept",
+      "passed": true
+    },
+    {
+      "case": "Only52 transcript pointers change; all53 values/source/images/overlays/history and394cold role identical",
+      "expected": "accept",
+      "passed": true
+    },
+    {
+      "case": "Unknown original ledger pin",
+      "expected": "reject",
+      "passed": true,
+      "reason": "Unknown source-first pointer correction"
+    },
+    {
+      "case": "Root53 must remain frozen",
+      "expected": "reject",
+      "passed": true,
+      "reason": "Source-first pointer correction lacks complete root53/singlecold394 inputs"
+    },
+    {
+      "case": "Root53 must precede corresponding values",
+      "expected": "reject",
+      "passed": true,
+      "reason": "Source-first pointer correction lacks complete root53/singlecold394 inputs"
+    },
+    {
+      "case": "Root53 source identity must match cold394",
+      "expected": "reject",
+      "passed": true,
+      "reason": "Source-first pointer correction lacks complete root53/singlecold394 inputs"
+    },
+    {
+      "case": "Root53 missing field cannot shrink scope",
+      "expected": "reject",
+      "passed": true,
+      "reason": "Source-first pointer correction lacks complete root53/singlecold394 inputs"
+    },
+    {
+      "case": "Root53 original literal cannot be hidden",
+      "expected": "reject",
+      "passed": true,
+      "reason": "Root source-first pointer would hide an original literal reading"
+    },
+    {
+      "case": "Cold394 must remain frozen",
+      "expected": "reject",
+      "passed": true,
+      "reason": "Source-first pointer correction lacks complete root53/singlecold394 inputs"
+    },
+    {
+      "case": "Cold394 must precede corresponding amounts",
+      "expected": "reject",
+      "passed": true,
+      "reason": "Source-first pointer correction lacks complete root53/singlecold394 inputs"
+    },
+    {
+      "case": "Cold394 locator cannot change",
+      "expected": "reject",
+      "passed": true,
+      "reason": "Source-first pointer correction lacks complete root53/singlecold394 inputs"
+    },
+    {
+      "case": "Cold394 exact literal cannot change",
+      "expected": "reject",
+      "passed": true,
+      "reason": "Cold394 first literal differs"
+    },
+    {
+      "case": "Corrected ledger may not alter a confirmed amount",
+      "expected": "reject",
+      "passed": true,
+      "reason": "Source-first metadata correction differs from its exact frozen scope"
+    },
+    {
+      "case": "Corrected ledger may not alter source identity",
+      "expected": "reject",
+      "passed": true,
+      "reason": "Source-first metadata correction differs from its exact frozen scope"
+    },
+    {
+      "case": "Corrected ledger may not change an overlay",
+      "expected": "reject",
+      "passed": true,
+      "reason": "Source-first metadata correction differs from its exact frozen scope"
+    },
+    {
+      "case": "Corrected ledger may not omit a field",
+      "expected": "reject",
+      "passed": true,
+      "reason": "Source-first metadata correction differs from its exact frozen scope"
+    },
+    {
+      "case": "Corrected ledger may not change a source-image pin",
+      "expected": "reject",
+      "passed": true,
+      "reason": "Source-first metadata correction differs from its exact frozen scope"
+    },
+    {
+      "case": "Other52 may not keep the misleading cold394 pointer",
+      "expected": "reject",
+      "passed": true,
+      "reason": "Source-first metadata correction differs from its exact frozen scope"
+    },
+    {
+      "case": "Cold394 may not claim the original root53 role",
+      "expected": "reject",
+      "passed": true,
+      "reason": "Source-first metadata correction differs from its exact frozen scope"
+    },
+    {
+      "case": "Corrected ledger may not change original-error counters",
+      "expected": "reject",
+      "passed": true,
+      "reason": "Source-first metadata correction differs from its exact frozen scope"
+    },
+    {
+      "case": "Selector requires immutable old files",
+      "expected": "reject",
+      "passed": true,
+      "reason": "Source-first metadata correction differs from its exact frozen scope"
+    },
+    {
+      "case": "Selector requires a correction reason",
+      "expected": "reject",
+      "passed": true,
+      "reason": "Source-first metadata correction differs from its exact frozen scope"
+    }
+  ],
+  "checkCount": 22,
+  "failedCases": 0,
+  "conclusion": "The exact original023 proof is replayed before52 transcript pointers are rebound to their actual root53 raw;394 retains its separate genuine cold raw. Values, images, source identity, overlays, scope and all reading-error histories remain unchanged. Proof-only selection rejects unrelated edits.",
+  "limits": "Read-only code review and in-memory mutations, not new human source interpretation or approval. No producer/helper/frozen-evidence edits. The authored024 producer branch is excluded from this independent assessment; H/root own that role. No all-nine release or communication authorization is inferred; all four user requests remain on hold."
+}

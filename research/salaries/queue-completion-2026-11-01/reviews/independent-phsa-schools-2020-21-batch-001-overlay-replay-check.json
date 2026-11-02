@@ -1,0 +1,40 @@
+{
+  "reviewer": "/root/recovery_schools",
+  "reviewedOn": "2026-11-01",
+  "sourceId": "phsa-2020-21",
+  "batch": "phsa-2020-21-001",
+  "finalFrozenAuthorReceiptSha256": "9d9c78d656d37040b00e47977e54e452b753a79a52a547fa35697de55402d0ee",
+  "newDerivedOverlay": {
+    "path": "research/salaries/queue-completion-2026-11-01/phsa/overlays/phsa-2020-21-manual-overlay-001.json",
+    "sha256": "f307cd00a0ca5ed5f770e9f44622e3f5cb72bd1041fa279352ff793ca0528329"
+  },
+  "consumerScript": {
+    "path": "scripts/finish_salary_phsa_resolutions.py",
+    "sha256": "4be5f638cba264b5ac650b8535a2ba15b2ab3214557383b83a434aca015f1407"
+  },
+  "consumerEmitPass": true,
+  "consumerCheckPass": true,
+  "resolvedRows": 400,
+  "exactNameRows": 397,
+  "qualifiedFiniteNameRows": 3,
+  "rootNameAdoptions": [
+    {
+      "path": "research/salaries/queue-completion-2026-11-01/reviews/root-phsa-history-2020-21-batch-001-segmentation-adoption.json",
+      "sha256": "098a575ba5724a3d56dae3497578aa0777904f4b2ade1559ae643e9fa1e5a848"
+    },
+    {
+      "path": "research/salaries/queue-completion-2026-11-01/reviews/root-phsa-history-2020-21-batch-001-seq149-exact-name-adoption.json",
+      "sha256": "1cc3aff24f54cd66823e187ebf5d3b93bafd8cad63d45ab36c3376a897d081cf"
+    }
+  ],
+  "closedRootCasePolicy": {
+    "path": "research/salaries/queue-completion-2026-11-01/phsa/source-name-exact-case-policy-007.json",
+    "sha256": "67a4e03a01de990536f26c67f5b2980198042a10988aea7da7b8903add5c90a7"
+  },
+  "allFrozenAuthorEvidenceHashesStillMatch": true,
+  "oldAuthorReviewBytesModified": false,
+  "exactAllFour149AlternativesRemainMandatory": true,
+  "sourceSpecificPublicWarningForAllThreeRequired": true,
+  "noGenericCEAuthorityOrMonetaryPeriodIdentityWaiver": true,
+  "acceptedEmployeeRows": 0
+}

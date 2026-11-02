@@ -1,0 +1,968 @@
+{
+  "reviewer": "/root/held_health_review",
+  "date": "2026-11-01",
+  "sourceYear": 2025,
+  "sourceSha256": "83a9e5a60b67e1df5016762ab5e8bd9cc3fc054e55ddc28b1a4c1a8cff7d0197",
+  "sourcePhysicalPages": 14,
+  "verdict": "peer-source-review-passed-with-literal-source-expense-residual",
+  "sourceAcceptanceOwnedByRoot": true,
+  "completeNamedRows": 271,
+  "completeEmployeeRows": 264,
+  "completeElectedOfficialRows": 7,
+  "imageFirstTranscript": {
+    "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-vernon-queue-2025-image-transcript.tsv",
+    "sha256": "5a5457c481cc5e02893d76ca2362789b4d1a5d151dd26d8aacf07dd29b02da08",
+    "receiptPath": "research/salaries/queue-completion-2026-11-01/reviews/independent-vernon-queue-2025-image-transcript-receipt.json",
+    "receiptSha256": "c1ddaa4cd68fb166119f0eb92ac56fabe8e42a8bb7a17eb5859de1632ff95a34",
+    "candidateAlternativesOpenedOnlyAfterFreeze": true
+  },
+  "finalLiteralTranscript": {
+    "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-vernon-queue-2025-final-literal-transcript.tsv",
+    "sha256": "3262ea5d27c32477bce26db162ec31a8e43441f9d9387c8425a08e168f10aaac"
+  },
+  "reviewerSourceRereadAmendment": {
+    "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-vernon-queue-2025-source-reread-amendment.json",
+    "sha256": "1b92b20715707687d8e5f7d49d5f5d9b44813d4418dec58b707c3f7e8fb2c43f"
+  },
+  "imageOnlyManifest": {
+    "path": "research/salaries/queue-completion-2026-11-01/municipal/vernon-2025-peer-image-only.json",
+    "sha256": "d4713ac59be1c0867af85d0f3a28b6453fa660b99992254be76d67fce16f9267"
+  },
+  "allNamedNamesAndMoneyPersonallyReadFromOriginalImages": true,
+  "councilOfficesReadFromSeparateWholePageColumn": true,
+  "candidateFiles": [
+    {
+      "scope": "elected-officials",
+      "path": "research/salaries/queue-completion-municipal/vernon-2025-elected-officials.json.gzip",
+      "sha256": "d550c53fe7afff15491e97c93807d5fce0c1e4533e715bb848a972d5034f7a80",
+      "normalizedSha256": "1420f2d0507727b1ff15adc9096741eeb6322f2ca2697c873da67effa11c5362",
+      "rows": 7,
+      "allSixFieldsExactOrderedMatchIndependentSource": true,
+      "remunerationSum": 395681,
+      "expensesSum": 31191,
+      "nullExpenses": 0,
+      "explicitZeroExpenses": 0,
+      "nullPositions": 0,
+      "duplicateFullSixFieldRows": 0
+    },
+    {
+      "scope": "employee-remuneration",
+      "path": "research/salaries/queue-completion-municipal/vernon-2025-employee-remuneration.json.gzip",
+      "sha256": "b04ebd02e091b7df43c9324ff38ed26a3e37d8080a85d66c5ada331b2398940e",
+      "normalizedSha256": "57ad57e458089b1f0eb5bb4411b12c255074b75a5d9e99808163f582250de82f",
+      "rows": 264,
+      "allSixFieldsExactOrderedMatchIndependentSource": true,
+      "remunerationSum": 28678528,
+      "expensesSum": 380683,
+      "nullExpenses": 0,
+      "explicitZeroExpenses": 25,
+      "nullPositions": 264,
+      "duplicateFullSixFieldRows": 0
+    }
+  ],
+  "sourceColumnCompleteness": {
+    "page5": [
+      50,
+      50
+    ],
+    "page6": [
+      50,
+      50
+    ],
+    "page7": [
+      32,
+      32
+    ],
+    "noEmployeeJobTitlesPublished": true,
+    "all264MissingPositionsRemainNull": true
+  },
+  "independentActualPdfRenderComparison": [
+    {
+      "physicalPage": 1,
+      "actualSourceImageSha256": "a629207c07a205b3ca8f8a806d9f69fcc49cd82829aaa23211056dc20f6f0df0",
+      "independentActualRgb300DpiRenderHashExact": true
+    },
+    {
+      "physicalPage": 2,
+      "actualSourceImageSha256": "88d0d3acf2b6324a69487f168e238f8159978a758ff00ed08c47d7ddfb7fe45d",
+      "independentActualRgb300DpiRenderHashExact": true
+    },
+    {
+      "physicalPage": 3,
+      "actualSourceImageSha256": "35bbaed845544c3a4253c07a30ce74fbcd6a4d91d9ea42d75d8ad46ad1fad508",
+      "independentActualRgb300DpiRenderHashExact": true
+    },
+    {
+      "physicalPage": 4,
+      "actualSourceImageSha256": "8d8f4a0b6f7f94677e6f1c5bfdfc1e78984b87798fe760dd4425b47e03d2dec7",
+      "independentActualRgb300DpiRenderHashExact": true
+    },
+    {
+      "physicalPage": 5,
+      "actualSourceImageSha256": "44eddb5a86a4fa2faae99db07ee86c2de5c153af79b087623fa4a251d3da9943",
+      "independentActualRgb300DpiRenderHashExact": true
+    },
+    {
+      "physicalPage": 6,
+      "actualSourceImageSha256": "793d51cef091dc48d414cae88322e3596050afcb8fb941435ab8f67b1e4d33c2",
+      "independentActualRgb300DpiRenderHashExact": true
+    },
+    {
+      "physicalPage": 7,
+      "actualSourceImageSha256": "c694dc90eb55016ef03c66996b7dfb9da94a1017da60a98be8359fc945c82526",
+      "independentActualRgb300DpiRenderHashExact": true
+    }
+  ],
+  "wholeDocumentScopeSurvey": {
+    "all14PagesPersonallyViewedAt36Dpi": true,
+    "salarySchedulesOnlyPhysicalPages": [
+      4,
+      5,
+      6,
+      7
+    ],
+    "otherPagesNotFullyTranscribed": true
+  },
+  "period": {
+    "start": "2025-01-01",
+    "end": "2025-12-31",
+    "printed2025ColumnHeaderOnAllSalaryPages": true,
+    "coverAndApprovalConfirmYearEndedDecember31": true
+  },
+  "sourceDefinitionsIndependentlyConfirmed": {
+    "remuneration": "Employee column: 2025 Gross Earnings. Council column: 2025 Remuneration.",
+    "expenses": "Employee column: Expenses (Net of Tax). Council column: Expenses.",
+    "financialStatementRelation": "Total gross earnings differ from total wages included in the City's Consolidated Statement of Operations due to the employer portion of benefit costs.",
+    "publishedEmployeeSelection": "Employee Earnings >$75,000",
+    "belowThresholdLabel": "Employee Earnings <$75,000",
+    "noEmployeeJobTitlesPublished": true
+  },
+  "signedWholeSofiApprovalPersonallyViewed": {
+    "physicalPage": 3,
+    "visuallySigned": true,
+    "statement": "Approves all the statements and schedules included in the Statement of Financial Information.",
+    "signatories": [
+      {
+        "name": "Elma Hamming, CPA, CMA",
+        "position": "Director, Financial Services",
+        "signedDate": "2026-05-13"
+      },
+      {
+        "name": "Victor I Cumming",
+        "position": "Mayor",
+        "signedDate": "2026-05-13"
+      }
+    ]
+  },
+  "originalCoverLabel": "Statement of Financial Information Unaudited 2025",
+  "draftOrUnauditedDistinction": "The source is expressly unaudited and has signed whole-SOFI approval. This review does not claim external audit assurance.",
+  "printedCohortControlsIndependentlyRead": {
+    "namedEmployees": {
+      "rows": 264,
+      "remuneration": 28678528,
+      "expenses": 381690
+    },
+    "belowThresholdEmployees": {
+      "remuneration": 10280760,
+      "expenses": 100126
+    },
+    "allEmployees": {
+      "remuneration": 38959288,
+      "expenses": 481816
+    },
+    "electedOfficials": {
+      "rows": 7,
+      "remuneration": 395681,
+      "expenses": 31191
+    }
+  },
+  "independentLiteralEmployeeSums": {
+    "remuneration": 28678528,
+    "expenses": 380683
+  },
+  "literalEmployeeRowSumsMinusPrintedControls": {
+    "remuneration": 0,
+    "expenses": -1007
+  },
+  "printedNamedPlusBelowMatchesPrintedAllEmployeeControls": true,
+  "balanceAdjustmentMade": false,
+  "causeOfResidualInferred": false,
+  "nullAndZero": {
+    "all25EmployeeExpenseZerosPersonallyReadAsPrinted0": true,
+    "nullExpenses": 0,
+    "noMissingOcrMappedTo0": true,
+    "noNegativeOrExpenseDashCellsInThisScope": true
+  },
+  "multiplicity": {
+    "orderedSourceRowsPreserved": true,
+    "noCrossSourceIdentityAssumptions": true,
+    "compiledPartitionsRetained": true
+  },
+  "rawTwoEngineComparison": {
+    "path": "research/salaries/queue-completion-2026-11-01/municipal/vernon-2025-original-review.json.gzip",
+    "sha256": "07f8f2a93a3a1de2674280071be89815f5b0329500dbc19d0b7a8ddff7c84ab4",
+    "originalEvidence": [
+      {
+        "path": "research/salaries/queue-completion-2026-11-01/municipal/ocr/vernon-2025-p04.json.gzip",
+        "sha256": "a2db2ab3c94ab17ceda4590a71c053762fc0a420e1e868ad1f81c72ca773ead5"
+      },
+      {
+        "path": "research/salaries/queue-completion-2026-11-01/municipal/ocr/vernon-2025-p05.json.gzip",
+        "sha256": "5da6999a3f03d5370e396f942da535c2ca2027e4af3742b568996949836fd2bb"
+      },
+      {
+        "path": "research/salaries/queue-completion-2026-11-01/municipal/ocr/vernon-2025-p05.json.gzip",
+        "sha256": "5da6999a3f03d5370e396f942da535c2ca2027e4af3742b568996949836fd2bb"
+      },
+      {
+        "path": "research/salaries/queue-completion-2026-11-01/municipal/ocr/vernon-2025-p06.json.gzip",
+        "sha256": "a0222336c60fe0aa3f72e2db172cb80dfac0a822f2ae8fb02b8c50175c06bb5e"
+      },
+      {
+        "path": "research/salaries/queue-completion-2026-11-01/municipal/ocr/vernon-2025-p06.json.gzip",
+        "sha256": "a0222336c60fe0aa3f72e2db172cb80dfac0a822f2ae8fb02b8c50175c06bb5e"
+      },
+      {
+        "path": "research/salaries/queue-completion-2026-11-01/municipal/ocr/vernon-2025-p07.json.gzip",
+        "sha256": "cbd8fda3e26c9c7a4ae693d675a34b5cb0b2cc915199fe0e6e4c4bf653eb242f"
+      },
+      {
+        "path": "research/salaries/queue-completion-2026-11-01/municipal/ocr/vernon-2025-p07.json.gzip",
+        "sha256": "cbd8fda3e26c9c7a4ae693d675a34b5cb0b2cc915199fe0e6e4c4bf653eb242f"
+      }
+    ],
+    "all820NamedSourceFieldsComparedAgainstBothReaders": true,
+    "fieldDifferences": [
+      {
+        "sectionIndex": 16,
+        "physicalPage": 4,
+        "sourceRowOnPage": 1,
+        "engine": "tesseract",
+        "field": "name",
+        "rawValue": "Cumming, Victor Mayor",
+        "independentLiteralSourceValue": "Cumming, Victor",
+        "fullyCoveredByOriginalImageReview": true
+      },
+      {
+        "sectionIndex": 16,
+        "physicalPage": 4,
+        "sourceRowOnPage": 1,
+        "engine": "tesseract",
+        "field": "position",
+        "rawValue": "",
+        "independentLiteralSourceValue": "Mayor",
+        "fullyCoveredByOriginalImageReview": true
+      },
+      {
+        "sectionIndex": 16,
+        "physicalPage": 4,
+        "sourceRowOnPage": 1,
+        "engine": "paddle",
+        "field": "name",
+        "rawValue": "Cumming, Victor Mayor",
+        "independentLiteralSourceValue": "Cumming, Victor",
+        "fullyCoveredByOriginalImageReview": true
+      },
+      {
+        "sectionIndex": 16,
+        "physicalPage": 4,
+        "sourceRowOnPage": 1,
+        "engine": "paddle",
+        "field": "position",
+        "rawValue": "",
+        "independentLiteralSourceValue": "Mayor",
+        "fullyCoveredByOriginalImageReview": true
+      },
+      {
+        "sectionIndex": 16,
+        "physicalPage": 4,
+        "sourceRowOnPage": 2,
+        "engine": "tesseract",
+        "field": "name",
+        "rawValue": "Durning, Teresa Councillor",
+        "independentLiteralSourceValue": "Durning, Teresa",
+        "fullyCoveredByOriginalImageReview": true
+      },
+      {
+        "sectionIndex": 16,
+        "physicalPage": 4,
+        "sourceRowOnPage": 2,
+        "engine": "tesseract",
+        "field": "position",
+        "rawValue": "",
+        "independentLiteralSourceValue": "Councillor",
+        "fullyCoveredByOriginalImageReview": true
+      },
+      {
+        "sectionIndex": 16,
+        "physicalPage": 4,
+        "sourceRowOnPage": 2,
+        "engine": "paddle",
+        "field": "name",
+        "rawValue": "Durning,Teresa Councillor",
+        "independentLiteralSourceValue": "Durning, Teresa",
+        "fullyCoveredByOriginalImageReview": true
+      },
+      {
+        "sectionIndex": 16,
+        "physicalPage": 4,
+        "sourceRowOnPage": 2,
+        "engine": "paddle",
+        "field": "position",
+        "rawValue": "",
+        "independentLiteralSourceValue": "Councillor",
+        "fullyCoveredByOriginalImageReview": true
+      },
+      {
+        "sectionIndex": 16,
+        "physicalPage": 4,
+        "sourceRowOnPage": 3,
+        "engine": "tesseract",
+        "field": "name",
+        "rawValue": "Fehr, Kelly Councillor",
+        "independentLiteralSourceValue": "Fehr, Kelly",
+        "fullyCoveredByOriginalImageReview": true
+      },
+      {
+        "sectionIndex": 16,
+        "physicalPage": 4,
+        "sourceRowOnPage": 3,
+        "engine": "tesseract",
+        "field": "position",
+        "rawValue": "",
+        "independentLiteralSourceValue": "Councillor",
+        "fullyCoveredByOriginalImageReview": true
+      },
+      {
+        "sectionIndex": 16,
+        "physicalPage": 4,
+        "sourceRowOnPage": 3,
+        "engine": "paddle",
+        "field": "name",
+        "rawValue": "Fehr, Kelly Councillor",
+        "independentLiteralSourceValue": "Fehr, Kelly",
+        "fullyCoveredByOriginalImageReview": true
+      },
+      {
+        "sectionIndex": 16,
+        "physicalPage": 4,
+        "sourceRowOnPage": 3,
+        "engine": "paddle",
+        "field": "position",
+        "rawValue": "",
+        "independentLiteralSourceValue": "Councillor",
+        "fullyCoveredByOriginalImageReview": true
+      },
+      {
+        "sectionIndex": 16,
+        "physicalPage": 4,
+        "sourceRowOnPage": 4,
+        "engine": "tesseract",
+        "field": "name",
+        "rawValue": "Gares, Kari Councillor",
+        "independentLiteralSourceValue": "Gares, Kari",
+        "fullyCoveredByOriginalImageReview": true
+      },
+      {
+        "sectionIndex": 16,
+        "physicalPage": 4,
+        "sourceRowOnPage": 4,
+        "engine": "tesseract",
+        "field": "position",
+        "rawValue": "",
+        "independentLiteralSourceValue": "Councillor",
+        "fullyCoveredByOriginalImageReview": true
+      },
+      {
+        "sectionIndex": 16,
+        "physicalPage": 4,
+        "sourceRowOnPage": 4,
+        "engine": "paddle",
+        "field": "name",
+        "rawValue": "Gares, Kari Councillor",
+        "independentLiteralSourceValue": "Gares, Kari",
+        "fullyCoveredByOriginalImageReview": true
+      },
+      {
+        "sectionIndex": 16,
+        "physicalPage": 4,
+        "sourceRowOnPage": 4,
+        "engine": "paddle",
+        "field": "position",
+        "rawValue": "",
+        "independentLiteralSourceValue": "Councillor",
+        "fullyCoveredByOriginalImageReview": true
+      },
+      {
+        "sectionIndex": 16,
+        "physicalPage": 4,
+        "sourceRowOnPage": 5,
+        "engine": "tesseract",
+        "field": "name",
+        "rawValue": "Guy, Brian Councillor",
+        "independentLiteralSourceValue": "Guy, Brian",
+        "fullyCoveredByOriginalImageReview": true
+      },
+      {
+        "sectionIndex": 16,
+        "physicalPage": 4,
+        "sourceRowOnPage": 5,
+        "engine": "tesseract",
+        "field": "position",
+        "rawValue": "",
+        "independentLiteralSourceValue": "Councillor",
+        "fullyCoveredByOriginalImageReview": true
+      },
+      {
+        "sectionIndex": 16,
+        "physicalPage": 4,
+        "sourceRowOnPage": 5,
+        "engine": "paddle",
+        "field": "name",
+        "rawValue": "Guy, Brian Councillor",
+        "independentLiteralSourceValue": "Guy, Brian",
+        "fullyCoveredByOriginalImageReview": true
+      },
+      {
+        "sectionIndex": 16,
+        "physicalPage": 4,
+        "sourceRowOnPage": 5,
+        "engine": "paddle",
+        "field": "position",
+        "rawValue": "",
+        "independentLiteralSourceValue": "Councillor",
+        "fullyCoveredByOriginalImageReview": true
+      },
+      {
+        "sectionIndex": 16,
+        "physicalPage": 4,
+        "sourceRowOnPage": 6,
+        "engine": "tesseract",
+        "field": "name",
+        "rawValue": "Mund, Akbal Councillor",
+        "independentLiteralSourceValue": "Mund, Akbal",
+        "fullyCoveredByOriginalImageReview": true
+      },
+      {
+        "sectionIndex": 16,
+        "physicalPage": 4,
+        "sourceRowOnPage": 6,
+        "engine": "tesseract",
+        "field": "position",
+        "rawValue": "",
+        "independentLiteralSourceValue": "Councillor",
+        "fullyCoveredByOriginalImageReview": true
+      },
+      {
+        "sectionIndex": 16,
+        "physicalPage": 4,
+        "sourceRowOnPage": 6,
+        "engine": "paddle",
+        "field": "name",
+        "rawValue": "Mund,Akbal Councillor",
+        "independentLiteralSourceValue": "Mund, Akbal",
+        "fullyCoveredByOriginalImageReview": true
+      },
+      {
+        "sectionIndex": 16,
+        "physicalPage": 4,
+        "sourceRowOnPage": 6,
+        "engine": "paddle",
+        "field": "position",
+        "rawValue": "",
+        "independentLiteralSourceValue": "Councillor",
+        "fullyCoveredByOriginalImageReview": true
+      },
+      {
+        "sectionIndex": 16,
+        "physicalPage": 4,
+        "sourceRowOnPage": 7,
+        "engine": "tesseract",
+        "field": "name",
+        "rawValue": "Quiring, Brian F Councillor",
+        "independentLiteralSourceValue": "Quiring, Brian F",
+        "fullyCoveredByOriginalImageReview": true
+      },
+      {
+        "sectionIndex": 16,
+        "physicalPage": 4,
+        "sourceRowOnPage": 7,
+        "engine": "tesseract",
+        "field": "position",
+        "rawValue": "",
+        "independentLiteralSourceValue": "Councillor",
+        "fullyCoveredByOriginalImageReview": true
+      },
+      {
+        "sectionIndex": 16,
+        "physicalPage": 4,
+        "sourceRowOnPage": 7,
+        "engine": "paddle",
+        "field": "name",
+        "rawValue": "Quiring,Brian F Councillor",
+        "independentLiteralSourceValue": "Quiring, Brian F",
+        "fullyCoveredByOriginalImageReview": true
+      },
+      {
+        "sectionIndex": 16,
+        "physicalPage": 4,
+        "sourceRowOnPage": 7,
+        "engine": "paddle",
+        "field": "position",
+        "rawValue": "",
+        "independentLiteralSourceValue": "Councillor",
+        "fullyCoveredByOriginalImageReview": true
+      },
+      {
+        "sectionIndex": 17,
+        "physicalPage": 5,
+        "sourceRowOnPage": 1,
+        "engine": "tesseract",
+        "field": "name",
+        "rawValue": "Adkins, |",
+        "independentLiteralSourceValue": "Adkins, I",
+        "fullyCoveredByOriginalImageReview": true
+      },
+      {
+        "sectionIndex": 17,
+        "physicalPage": 5,
+        "sourceRowOnPage": 1,
+        "engine": "paddle",
+        "field": "name",
+        "rawValue": "Adkins, 1",
+        "independentLiteralSourceValue": "Adkins, I",
+        "fullyCoveredByOriginalImageReview": true
+      },
+      {
+        "sectionIndex": 17,
+        "physicalPage": 5,
+        "sourceRowOnPage": 15,
+        "engine": "paddle",
+        "field": "name",
+        "rawValue": "Bialecki,S",
+        "independentLiteralSourceValue": "Bialecki, S",
+        "fullyCoveredByOriginalImageReview": true
+      },
+      {
+        "sectionIndex": 17,
+        "physicalPage": 5,
+        "sourceRowOnPage": 17,
+        "engine": "paddle",
+        "field": "name",
+        "rawValue": "Blood,J",
+        "independentLiteralSourceValue": "Blood, J",
+        "fullyCoveredByOriginalImageReview": true
+      },
+      {
+        "sectionIndex": 17,
+        "physicalPage": 5,
+        "sourceRowOnPage": 18,
+        "engine": "paddle",
+        "field": "name",
+        "rawValue": "Bond,B",
+        "independentLiteralSourceValue": "Bond, B",
+        "fullyCoveredByOriginalImageReview": true
+      },
+      {
+        "sectionIndex": 17,
+        "physicalPage": 5,
+        "sourceRowOnPage": 23,
+        "engine": "paddle",
+        "field": "name",
+        "rawValue": "Bradley,J",
+        "independentLiteralSourceValue": "Bradley, J",
+        "fullyCoveredByOriginalImageReview": true
+      },
+      {
+        "sectionIndex": 17,
+        "physicalPage": 5,
+        "sourceRowOnPage": 31,
+        "engine": "paddle",
+        "field": "name",
+        "rawValue": "Campbell,A",
+        "independentLiteralSourceValue": "Campbell, A",
+        "fullyCoveredByOriginalImageReview": true
+      },
+      {
+        "sectionIndex": 18,
+        "physicalPage": 5,
+        "sourceRowOnPage": 1,
+        "engine": "paddle",
+        "field": "name",
+        "rawValue": "CruzSantos,E",
+        "independentLiteralSourceValue": "Cruz Santos, E",
+        "fullyCoveredByOriginalImageReview": true
+      },
+      {
+        "sectionIndex": 18,
+        "physicalPage": 5,
+        "sourceRowOnPage": 4,
+        "engine": "paddle",
+        "field": "name",
+        "rawValue": "Cyr,A",
+        "independentLiteralSourceValue": "Cyr, A",
+        "fullyCoveredByOriginalImageReview": true
+      },
+      {
+        "sectionIndex": 18,
+        "physicalPage": 5,
+        "sourceRowOnPage": 17,
+        "engine": "paddle",
+        "field": "name",
+        "rawValue": "Essex,A",
+        "independentLiteralSourceValue": "Essex, A",
+        "fullyCoveredByOriginalImageReview": true
+      },
+      {
+        "sectionIndex": 18,
+        "physicalPage": 5,
+        "sourceRowOnPage": 21,
+        "engine": "paddle",
+        "field": "name",
+        "rawValue": "Fedorova,A",
+        "independentLiteralSourceValue": "Fedorova, A",
+        "fullyCoveredByOriginalImageReview": true
+      },
+      {
+        "sectionIndex": 18,
+        "physicalPage": 5,
+        "sourceRowOnPage": 24,
+        "engine": "paddle",
+        "field": "name",
+        "rawValue": "Fletcher,R",
+        "independentLiteralSourceValue": "Fletcher, R",
+        "fullyCoveredByOriginalImageReview": true
+      },
+      {
+        "sectionIndex": 18,
+        "physicalPage": 5,
+        "sourceRowOnPage": 27,
+        "engine": "paddle",
+        "field": "name",
+        "rawValue": "Fuhr,D",
+        "independentLiteralSourceValue": "Fuhr, D",
+        "fullyCoveredByOriginalImageReview": true
+      },
+      {
+        "sectionIndex": 18,
+        "physicalPage": 5,
+        "sourceRowOnPage": 44,
+        "engine": "paddle",
+        "field": "name",
+        "rawValue": "Henry,J",
+        "independentLiteralSourceValue": "Henry, J",
+        "fullyCoveredByOriginalImageReview": true
+      },
+      {
+        "sectionIndex": 18,
+        "physicalPage": 5,
+        "sourceRowOnPage": 48,
+        "engine": "paddle",
+        "field": "name",
+        "rawValue": "Hofsink,A",
+        "independentLiteralSourceValue": "Hofsink, A",
+        "fullyCoveredByOriginalImageReview": true
+      },
+      {
+        "sectionIndex": 18,
+        "physicalPage": 5,
+        "sourceRowOnPage": 50,
+        "engine": "paddle",
+        "field": "name",
+        "rawValue": "Holtz,C",
+        "independentLiteralSourceValue": "Holtz, C",
+        "fullyCoveredByOriginalImageReview": true
+      },
+      {
+        "sectionIndex": 19,
+        "physicalPage": 6,
+        "sourceRowOnPage": 16,
+        "engine": "tesseract",
+        "field": "name",
+        "rawValue": "Johannson, |",
+        "independentLiteralSourceValue": "Johannson, I",
+        "fullyCoveredByOriginalImageReview": true
+      },
+      {
+        "sectionIndex": 19,
+        "physicalPage": 6,
+        "sourceRowOnPage": 32,
+        "engine": "paddle",
+        "field": "name",
+        "rawValue": "Lee,Q",
+        "independentLiteralSourceValue": "Lee, Q",
+        "fullyCoveredByOriginalImageReview": true
+      },
+      {
+        "sectionIndex": 19,
+        "physicalPage": 6,
+        "sourceRowOnPage": 35,
+        "engine": "paddle",
+        "field": "name",
+        "rawValue": "Leroux,T",
+        "independentLiteralSourceValue": "Leroux, T",
+        "fullyCoveredByOriginalImageReview": true
+      },
+      {
+        "sectionIndex": 20,
+        "physicalPage": 6,
+        "sourceRowOnPage": 1,
+        "engine": "paddle",
+        "field": "name",
+        "rawValue": "Martin, 0",
+        "independentLiteralSourceValue": "Martin, O",
+        "fullyCoveredByOriginalImageReview": true
+      },
+      {
+        "sectionIndex": 20,
+        "physicalPage": 6,
+        "sourceRowOnPage": 14,
+        "engine": "paddle",
+        "field": "name",
+        "rawValue": "Morris,R",
+        "independentLiteralSourceValue": "Morris, R",
+        "fullyCoveredByOriginalImageReview": true
+      },
+      {
+        "sectionIndex": 20,
+        "physicalPage": 6,
+        "sourceRowOnPage": 22,
+        "engine": "paddle",
+        "field": "name",
+        "rawValue": "Novakowski,D",
+        "independentLiteralSourceValue": "Novakowski, D",
+        "fullyCoveredByOriginalImageReview": true
+      },
+      {
+        "sectionIndex": 20,
+        "physicalPage": 6,
+        "sourceRowOnPage": 23,
+        "engine": "paddle",
+        "field": "name",
+        "rawValue": "Novakowski,R",
+        "independentLiteralSourceValue": "Novakowski, R",
+        "fullyCoveredByOriginalImageReview": true
+      },
+      {
+        "sectionIndex": 20,
+        "physicalPage": 6,
+        "sourceRowOnPage": 28,
+        "engine": "paddle",
+        "field": "name",
+        "rawValue": "Orosz,T",
+        "independentLiteralSourceValue": "Orosz, T",
+        "fullyCoveredByOriginalImageReview": true
+      },
+      {
+        "sectionIndex": 20,
+        "physicalPage": 6,
+        "sourceRowOnPage": 48,
+        "engine": "paddle",
+        "field": "name",
+        "rawValue": "Rice,J",
+        "independentLiteralSourceValue": "Rice, J",
+        "fullyCoveredByOriginalImageReview": true
+      },
+      {
+        "sectionIndex": 20,
+        "physicalPage": 6,
+        "sourceRowOnPage": 48,
+        "engine": "paddle",
+        "field": "expenses",
+        "rawValue": 606,
+        "independentLiteralSourceValue": 909,
+        "fullyCoveredByOriginalImageReview": true
+      },
+      {
+        "sectionIndex": 20,
+        "physicalPage": 6,
+        "sourceRowOnPage": 49,
+        "engine": "paddle",
+        "field": "name",
+        "rawValue": "Richenberger,B",
+        "independentLiteralSourceValue": "Richenberger, B",
+        "fullyCoveredByOriginalImageReview": true
+      },
+      {
+        "sectionIndex": 21,
+        "physicalPage": 7,
+        "sourceRowOnPage": 4,
+        "engine": "paddle",
+        "field": "name",
+        "rawValue": "Roemer,D",
+        "independentLiteralSourceValue": "Roemer, D",
+        "fullyCoveredByOriginalImageReview": true
+      },
+      {
+        "sectionIndex": 21,
+        "physicalPage": 7,
+        "sourceRowOnPage": 32,
+        "engine": "paddle",
+        "field": "name",
+        "rawValue": "Stephenson,J",
+        "independentLiteralSourceValue": "Stephenson, J",
+        "fullyCoveredByOriginalImageReview": true
+      },
+      {
+        "sectionIndex": 22,
+        "physicalPage": 7,
+        "sourceRowOnPage": 3,
+        "engine": "paddle",
+        "field": "name",
+        "rawValue": "Story,B",
+        "independentLiteralSourceValue": "Story, B",
+        "fullyCoveredByOriginalImageReview": true
+      },
+      {
+        "sectionIndex": 22,
+        "physicalPage": 7,
+        "sourceRowOnPage": 6,
+        "engine": "paddle",
+        "field": "name",
+        "rawValue": "Sykes,A",
+        "independentLiteralSourceValue": "Sykes, A",
+        "fullyCoveredByOriginalImageReview": true
+      },
+      {
+        "sectionIndex": 22,
+        "physicalPage": 7,
+        "sourceRowOnPage": 8,
+        "engine": "paddle",
+        "field": "name",
+        "rawValue": "Teichroeb,D",
+        "independentLiteralSourceValue": "Teichroeb, D",
+        "fullyCoveredByOriginalImageReview": true
+      },
+      {
+        "sectionIndex": 22,
+        "physicalPage": 7,
+        "sourceRowOnPage": 9,
+        "engine": "paddle",
+        "field": "name",
+        "rawValue": "Tewnion,A",
+        "independentLiteralSourceValue": "Tewnion, A",
+        "fullyCoveredByOriginalImageReview": true
+      },
+      {
+        "sectionIndex": 22,
+        "physicalPage": 7,
+        "sourceRowOnPage": 10,
+        "engine": "paddle",
+        "field": "name",
+        "rawValue": "Thomas,J",
+        "independentLiteralSourceValue": "Thomas, J",
+        "fullyCoveredByOriginalImageReview": true
+      },
+      {
+        "sectionIndex": 22,
+        "physicalPage": 7,
+        "sourceRowOnPage": 15,
+        "engine": "paddle",
+        "field": "name",
+        "rawValue": "Walker,D",
+        "independentLiteralSourceValue": "Walker, D",
+        "fullyCoveredByOriginalImageReview": true
+      },
+      {
+        "sectionIndex": 22,
+        "physicalPage": 7,
+        "sourceRowOnPage": 21,
+        "engine": "paddle",
+        "field": "name",
+        "rawValue": "Weeber,P",
+        "independentLiteralSourceValue": "Weeber, P",
+        "fullyCoveredByOriginalImageReview": true
+      },
+      {
+        "sectionIndex": 22,
+        "physicalPage": 7,
+        "sourceRowOnPage": 22,
+        "engine": "paddle",
+        "field": "name",
+        "rawValue": "Wellburn,R",
+        "independentLiteralSourceValue": "Wellburn, R",
+        "fullyCoveredByOriginalImageReview": true
+      },
+      {
+        "sectionIndex": 22,
+        "physicalPage": 7,
+        "sourceRowOnPage": 23,
+        "engine": "paddle",
+        "field": "name",
+        "rawValue": "Whitmore,W",
+        "independentLiteralSourceValue": "Whitmore, W",
+        "fullyCoveredByOriginalImageReview": true
+      },
+      {
+        "sectionIndex": 22,
+        "physicalPage": 7,
+        "sourceRowOnPage": 24,
+        "engine": "paddle",
+        "field": "name",
+        "rawValue": "Wiltsie,C",
+        "independentLiteralSourceValue": "Wiltsie, C",
+        "fullyCoveredByOriginalImageReview": true
+      },
+      {
+        "sectionIndex": 22,
+        "physicalPage": 7,
+        "sourceRowOnPage": 25,
+        "engine": "paddle",
+        "field": "name",
+        "rawValue": "Wood,S",
+        "independentLiteralSourceValue": "Wood, S",
+        "fullyCoveredByOriginalImageReview": true
+      },
+      {
+        "sectionIndex": 22,
+        "physicalPage": 7,
+        "sourceRowOnPage": 28,
+        "engine": "paddle",
+        "field": "name",
+        "rawValue": "Yost-Johnstone,L",
+        "independentLiteralSourceValue": "Yost-Johnstone, L",
+        "fullyCoveredByOriginalImageReview": true
+      },
+      {
+        "sectionIndex": 22,
+        "physicalPage": 7,
+        "sourceRowOnPage": 29,
+        "engine": "paddle",
+        "field": "name",
+        "rawValue": "Young,C",
+        "independentLiteralSourceValue": "Young, C",
+        "fullyCoveredByOriginalImageReview": true
+      },
+      {
+        "sectionIndex": 22,
+        "physicalPage": 7,
+        "sourceRowOnPage": 30,
+        "engine": "paddle",
+        "field": "name",
+        "rawValue": "Youngest,A",
+        "independentLiteralSourceValue": "Youngest, A",
+        "fullyCoveredByOriginalImageReview": true
+      }
+    ],
+    "differencesByEngineAndField": {
+      "tesseract:name": 9,
+      "tesseract:position": 7,
+      "paddle:name": 47,
+      "paddle:position": 7,
+      "paddle:expenses": 1
+    },
+    "allDifferencesCoveredByFullSourceImageReview": true
+  },
+  "authorContextPath": "research/salaries/queue-completion-2026-11-01/municipal/vernon-2025-context-review.json",
+  "authorContextSha256": "1e76b757683a24a93f9b3d45aac6234b577cf54724f2ad5da5369c8ce691c2cf",
+  "requiredPublicWarnings": [
+    "The264printed named employee rows sum to380,683expenses,1,007below the source printed subtotal381,690. Gross earnings reconcile exactly. The literal expenses were not changed to balance; no cause has been inferred.",
+    "Employee expenses are net of tax, employee gross earnings are payment disclosures, and no employee job titles are published.",
+    "The original SOFI cover is labelled Unaudited; signed approval does not establish external audit of these schedules."
+  ],
+  "limits": [
+    "No compiled deletion or cohort deduplication is authorized by this review.",
+    "This receipt closes complete literal source review and exact frozen candidates; root owns qualified source acceptance, registration and release reconciliation.",
+    "No employer was contacted."
+  ]
+}

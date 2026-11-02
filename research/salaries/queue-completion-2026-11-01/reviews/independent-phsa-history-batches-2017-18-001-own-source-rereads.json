@@ -1,0 +1,50 @@
+{
+  "frozen": true,
+  "reviewer": "/root/recovery_review",
+  "sourceId": "phsa-2017-18",
+  "sourceSha256": "1971861d325c81e48083e56e45edbb62c6446fa2c387ce786a2b4e0aa5cdc006",
+  "batch": "phsa-2017-18-001",
+  "unchangedOwnImageFirstRaw": {
+    "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-history-batches-2017-18-001-original-transcript.json",
+    "sha256": "4ab00b0084dc8be5d222f76198855d8a336de1c367577aebb46e8ea409965cf0"
+  },
+  "ownFirstRawRetainedUnchanged": true,
+  "sourceOnlyRereads": [
+    {
+      "sequence": 68,
+      "field": "name",
+      "frozenOwnFirstReading": "Hayer,Veena Biring",
+      "finalLiteralSourceReading": "Hayer,Veena Birring",
+      "correctionKind": "reviewer-only-initial-transcription-error",
+      "basis": "Re-read my independently rendered originalPDF600dpi source after a fresh peer separately froze a different reading. Source clearly has two r strokes in Birring and no e in Tracy. No dictionary or forced candidate match.",
+      "ownOriginal600Clip": {
+        "path": "/tmp/independent-phsa-history-2017-18-batch001-five-peer/seq068-name-actual600.png",
+        "sha256": "31363756a229d173ad9b91ef49fc04fca9209a7af9afa20dbe3ae6e823fdb14f"
+      },
+      "freshIndependentPeer": {
+        "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-education-2017-18-001-five-source-first-names.json",
+        "sha256": "714eab57ec1975e73e1298076256ea286d33a9ec7a19162ec342d953fd3dfd30"
+      }
+    },
+    {
+      "sequence": 149,
+      "field": "name",
+      "frozenOwnFirstReading": "Pressey,Tracey Lynn",
+      "finalLiteralSourceReading": "Pressey,Tracy Lynn",
+      "correctionKind": "reviewer-only-initial-transcription-error",
+      "basis": "Re-read my independently rendered originalPDF600dpi source after a fresh peer separately froze a different reading. Source clearly has two r strokes in Birring and no e in Tracy. No dictionary or forced candidate match.",
+      "ownOriginal600Clip": {
+        "path": "/tmp/independent-phsa-history-2017-18-batch001-five-peer/seq149-name-actual600.png",
+        "sha256": "975e47cd12f173737acb28c59e6026e6eb7a8c9caf156e4faaefb29e20931186"
+      },
+      "freshIndependentPeer": {
+        "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-education-2017-18-001-five-source-first-names.json",
+        "sha256": "714eab57ec1975e73e1298076256ea286d33a9ec7a19162ec342d953fd3dfd30"
+      }
+    }
+  ],
+  "moneyChangesToOwnFirstReadings": [],
+  "all43MoneyFirstReadingsMatchIndependentRapidEngineAndOriginalSource": true,
+  "remainingUnresolvedRows": [],
+  "scope": "Two own initialname-reading errors corrected only in new finalresolution; all235source-name/43moneyfirstpass values remain inspectable in raw. This doesnot change source/candidate files or claim whole5072-row acceptance."
+}

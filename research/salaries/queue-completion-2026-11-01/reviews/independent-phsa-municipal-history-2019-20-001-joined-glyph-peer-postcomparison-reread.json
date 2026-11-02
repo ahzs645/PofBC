@@ -1,0 +1,46 @@
+{
+  "frozen": true,
+  "reviewer": "/root/recovery_municipal",
+  "reviewedOn": "2026-11-01",
+  "sourceId": "phsa-2019-20",
+  "sourceSha256": "0e31ac2054f0c2d4ef78797185dddd96cc0cdf2eab94bd6841fa24e1c38e7d02",
+  "batch": "phsa-2019-20-001",
+  "rawImageFirstTranscript": {
+    "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-municipal-history-2019-20-001-joined-glyph-peer-original.json",
+    "sha256": "d2dc17e235a1ce96f958cbf74ecb79bdbed4728290719556356177194154bb64"
+  },
+  "authorDisclosureAfterBlindFreeze": "Author reported only the seq322 discrepancy as Berris/Bemis before this independent actual1200dpi reread. Full author qualification ledger not yet opened.",
+  "ownSourceImageCorrection": {
+    "sequence": 322,
+    "physicalPage": 9,
+    "sourceRowOnPage": 39,
+    "initialPrimary": "Berns,Kaitlin Ann",
+    "initialAlternatives": [
+      "Berns,Kaitlin Ann",
+      "Bems,Kaitlin Ann"
+    ],
+    "correctedPrimary": "Berris,Kaitlin Ann",
+    "correctedFiniteAlternatives": [
+      "Berris,Kaitlin Ann",
+      "Bemis,Kaitlin Ann"
+    ],
+    "basis": "The independent actual1200dpi original has a separate clear dot over the thin vertical immediately before final s, so retain a separate i in the suffix ...is. The preceding compressed pair is read as two short r shoulders, with m retained as the finite low-resolution alternative. This corrects the reviewer’s own initial missed-i/stroke-segmentation reading, not author data, and uses no dictionary or identity. rr/m remains qualified and is not covered by generic rn/m policy002.",
+    "actualOriginal1200Image": {
+      "path": "/tmp/independent-phsa-municipal-2019-20-001-joined-peer/seq322-name1200.png",
+      "sha256": "169bc33e3ab2d4347b2c5ac56cf3f883309c54fe0028c33abb37e90ad82671ba"
+    },
+    "caseProvenByPixels": false
+  },
+  "revisedCounts": {
+    "rnM": 19,
+    "rrMOutsideGenericPolicy": [
+      107,
+      170,
+      231,
+      322
+    ]
+  },
+  "freshExactRootAuthorityStillRequiredForAllFourRrMCases": true,
+  "rawOriginalUnchanged": true,
+  "notAWholeSourceAcceptance": true
+}

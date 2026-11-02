@@ -1,0 +1,140 @@
+{
+  "id": "queue-completion-municipal-mission-2024-employee-remuneration",
+  "employerSlug": "city-of-mission",
+  "employerName": "City of Mission",
+  "sector": "Municipalities",
+  "year": "2024",
+  "periodType": "calendar",
+  "periodStart": "2024-01-01",
+  "periodEnd": "2024-12-31",
+  "sourceUrl": "https://www.mission.ca/media/file/2024-sofi-report",
+  "sourceIndexUrl": "https://www.mission.ca/council-government/budget-finance/financial-reporting",
+  "sha256": "a4fa12aba963169e276fcd69680887ff788f731fd3ac5260135b88705db4e5a9",
+  "file": "mission-2024-employee-remuneration.json.gzip",
+  "category": "employee-remuneration",
+  "scope": "employee-remuneration",
+  "title": "City of Mission 2024 SOFI: complete named employee remuneration and expenses",
+  "status": "accepted",
+  "verified": true,
+  "verifiedOn": "2026-11-01",
+  "sourceKind": "official-scanned-pdf",
+  "rowCount": 162,
+  "totalRemuneration": 18876982,
+  "totalExpenses": 278656,
+  "pages": [
+    6,
+    7,
+    8,
+    9
+  ],
+  "currency": "CAD",
+  "amountUnit": "dollars",
+  "threshold": null,
+  "completeEmployeeSchedule": true,
+  "retainCompiledPartition": true,
+  "dataSha256": "95d15249968a07a89d6122cfe8eb9c06c79d333f089eeeee2ebc33555e0c69d6",
+  "notes": [
+    "Every published name, title where present, separate remuneration and expense cell was checked on actual PDF-painted source images; independent Tesseract and Paddle OCR outputs and their source-reviewed corrections remain separate.",
+    "An independent peer transcribed the complete source-image scope before full candidate comparison. Prior context disclosures and reviewer-only rereads remain in the immutable peer receipts.",
+    "Repeated names or initials remain distinct literal observations; no identity merging, full-name enrichment, annualization or redistribution of aggregate amounts.",
+    "The separate source expense-inclusive Total column, when printed, is retained only in supporting evidence and is never substituted for remuneration.",
+    "Printed schedule year and signed approval are independently recorded; URL/upload dates are not used as reporting-year evidence.",
+    "The separate CAD 5,370 corporate-paid-expense footnote is aggregate supporting evidence only. City-paid wages/expenses for corporate-assigned work remain in their source rows."
+  ],
+  "definitions": {
+    "remuneration": "Includes any form of salary, wage, gratuities and taxable benefits, including applicable vehicle allowances paid to the employee.",
+    "expenses": "Includes travel expenses, memberships, tuition, relocation, vehicle reimbursements, and registration fees paid directly to an employee or to a third party on behalf of an employee.",
+    "financialStatementRelation": "Schedule is based on actual payments made during the year; financial statements are prepared on an accrual basis.",
+    "sourceNamedSubtotalLabel": "Subtotal - employees with remuneration and expenses exceeding $75,000",
+    "thresholdMeaning": "Retain every printed named row, including individual remuneration below$75,000. Do not silently convert this combined source label into a salary-only selection rule.",
+    "physicalPage": 9,
+    "separateAdditionalCorporateExpenses": {
+      "physicalPage": 9,
+      "amount": 5370,
+      "text": "In addition, but not reported on the table above, Mission Bridgehead Investment Corporation paid expenses for individuals assigned to work at Mission Bridgehead Investment Corporation in the amount of $5,370.",
+      "treatment": "Aggregate supporting evidence only; not allocated or added to individual expenses."
+    },
+    "starredNames": {
+      "physicalPage": 6,
+      "text": "The wages and expenses shown for these individuals was paid for by the City of Mission for their assigned work at Mission Bridgehead Investment Corporation.",
+      "treatment": "Literal source asterisks retained on Crawford, S* and DeSousa, K*."
+    }
+  },
+  "publicWarning": "The source labels its named selection as employees with remuneration and expenses exceeding CAD 75,000; this is preserved without silently imposing a pay-only rule. Eighteen printed expense dashes remain null. A separate footnote discloses CAD 5,370 of Mission Bridgehead Investment Corporation expenses outside the table; that aggregate is not assigned or added to individual observations. Source footnote markers on Crawford, S* and DeSousa, K* remain literal. Retain the compiled partition: no compatible same-calendar-year compiled cohort has been established. Root owns any future period mapping or deletion; full strict multiset comparison is pinned separately.",
+  "validation": {
+    "method": "Complete independent Tesseract and Paddle OCR geometry readers, complete author actual-original image review, and independent full-scope image-first peer transcription with final candidate comparison.",
+    "allFinalRowFieldsOriginalImageVerified": true,
+    "rawOcrReadersAgree": false,
+    "allRawMachineDifferencesOriginalImageResolved": true,
+    "completeEmployeeSchedule": true,
+    "compiledPartitionRetained": true,
+    "compiledPartitionRetentionReason": "Retain the compiled partition: no compatible same-calendar-year compiled cohort has been established. Root owns any future period mapping or deletion; full strict multiset comparison is pinned separately.",
+    "evidenceFile": "evidence/mission-2024-complete-source.json.gzip",
+    "evidenceSha256": "f4ab459039e315979d328f8ca4ee9affc3cf8d80f28a5d14ca41c247da1daf91",
+    "sourceContextReview": {
+      "path": "research/salaries/queue-completion-2026-11-01/municipal/mission-2024-context-review.json",
+      "sha256": "cdec6ce285e35df2551c8ba2b57121b4e3ff15577eea76502001b97ebaf1315b"
+    },
+    "independentPeerReview": {
+      "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-mission-queue-2024-final-source-closure.json",
+      "sha256": "87270deb92164fbcb1007821baafc7f9a64ea70d44705a286996fbe52ccb2997"
+    },
+    "salaryPagesReviewedInFull": [
+      6,
+      7,
+      8,
+      9
+    ],
+    "periodEvidence": [
+      {
+        "physicalPage": 6,
+        "text": "for the year ended December 31, 2024"
+      },
+      {
+        "physicalPage": 7,
+        "text": "for the year ended December 31, 2024"
+      },
+      {
+        "physicalPage": 8,
+        "text": "for the year ended December 31, 2024"
+      },
+      {
+        "physicalPage": 9,
+        "text": "for the year ended December 31, 2024"
+      }
+    ],
+    "signedApproval": {
+      "physicalPage": 1,
+      "statement": "Approves all statements and schedules included in this Statement of Financial Information.",
+      "signatories": [
+        {
+          "name": "Doug Stewart, CPA, CGA",
+          "position": "Director of Finance",
+          "signedDate": "2025-06-16"
+        },
+        {
+          "name": "Paul Horn",
+          "position": "MAYOR on behalf of Council",
+          "signedDate": "2025-06-16"
+        }
+      ],
+      "visuallySigned": true
+    },
+    "nullExpenses": 18,
+    "explicitZeroExpenses": 0,
+    "nullPositions": 0,
+    "controls": {
+      "printed": {
+        "remuneration": 18876982,
+        "expenses": 278656,
+        "rows": 162
+      },
+      "observed": {
+        "remuneration": 18876982,
+        "knownExpenses": 278656
+      }
+    }
+  },
+  "publishedSelectionCriterion": "Subtotal - employees with remuneration and expenses exceeding $75,000",
+  "thresholdBasis": "combined remuneration and expenses as the literal source named-subtotal label"
+}

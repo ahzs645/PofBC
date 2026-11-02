@@ -1,0 +1,2307 @@
+{
+  "sourceId": "phsa-2019-20",
+  "sourceSha256": "0e31ac2054f0c2d4ef78797185dddd96cc0cdf2eab94bd6841fa24e1c38e7d02",
+  "batch": "phsa-2019-20-006",
+  "reviewer": "/root/recovery_schools",
+  "reviewedOn": "2026-11-02",
+  "frozenAtUtc": "2026-11-02T00:58:31.409851+00:00",
+  "scope": "Clean exactly88 current author field readings, released only AFTER independent88 source-first raw df449aa…32b5aa froze. No other312 rows/37-field choices or fullbatch/candidate input exposed. Every correction/provisional-retention comes from alreadyfrozen source-reread records; no peer88 transcript or comparison opened by author at this freeze.",
+  "independent88RawSha256": "df449aa93505583ccf788a6215324a7b4c2aafcba78d325c11cc4f651432b5aa",
+  "authorOriginalRawSha256": "02bc919674d5d950ea2b9360f8893aedf1e9c816ebe0a627fe95ae721bafa528",
+  "authorFrozenIndividualRecheckSha256": "541e651178090f36855de80b6d752820b3ee207dad1bb112b4e92eec4f1da6ae",
+  "sourceOnlyPacketSha256": "c01e04d53a88cb1263b4c7789fa5294fc420bbdca4295d7d9789a26498c25eae",
+  "rows": [
+    {
+      "sequence": 11,
+      "physicalPage": 37,
+      "sourceRowOnPage": 7,
+      "cropSha256": "77f0fae8b946024b35f51f78322ba734401edbb51f89a65091e1ecf9d9a787f3",
+      "reviewTargetFields": [
+        "expenses"
+      ],
+      "currentAuthorSourceReadings": {
+        "expenses": "14,374"
+      },
+      "originalFrozenRawReadings": {
+        "expenses": "14,374"
+      },
+      "scopedIndividualSourceRechecks": []
+    },
+    {
+      "sequence": 19,
+      "physicalPage": 37,
+      "sourceRowOnPage": 18,
+      "cropSha256": "20f971fc226307e414bd1189b6e15f592f616c6112dd0ceb510e42f0f63012a6",
+      "reviewTargetFields": [
+        "name"
+      ],
+      "currentAuthorSourceReadings": {
+        "name": "Gdanski,BJ"
+      },
+      "originalFrozenRawReadings": {
+        "name": "Gdanski,DJ"
+      },
+      "scopedIndividualSourceRechecks": [
+        {
+          "sequence": 19,
+          "field": "name",
+          "raw": "Gdanski,DJ",
+          "reread": "Gdanski,BJ",
+          "individualActual1200Reading": "Gdanski,BJ",
+          "differsFromFrozenRaw": true,
+          "largeSheetProvisionalRetained": true,
+          "sourceImage": {
+            "sequence": 19,
+            "physicalPage": 37,
+            "sourceRowOnPage": 18,
+            "field": "name",
+            "original300DpiPixelBox": [
+              304,
+              1370,
+              1404,
+              1408
+            ],
+            "actualPdfPointClip": [
+              72.96,
+              328.8,
+              336.96,
+              337.92
+            ],
+            "dpi": 1200,
+            "path": "/workspace/salary-review-schools-temp/2019-006-confirmations/seq019-name-actual1200.png",
+            "sha256": "cc64897b8456d2beed786b2f50c6f5ea83fab18e6758deee5db9b195af414a7d"
+          },
+          "status": "proposed-source-reading-fresh-peer-pending"
+        }
+      ]
+    },
+    {
+      "sequence": 24,
+      "physicalPage": 37,
+      "sourceRowOnPage": 25,
+      "cropSha256": "2496d7e53c2ec2885b3651a60ebf7d91bb54ae3e8a6cf91b318d082e364448ed",
+      "reviewTargetFields": [
+        "expenses"
+      ],
+      "currentAuthorSourceReadings": {
+        "expenses": "18,018"
+      },
+      "originalFrozenRawReadings": {
+        "expenses": "18,018"
+      },
+      "scopedIndividualSourceRechecks": []
+    },
+    {
+      "sequence": 26,
+      "physicalPage": 37,
+      "sourceRowOnPage": 28,
+      "cropSha256": "1128f74c6e05a3edd2fb31efb9a33520b5f0acdc37ecb4b795937932166b0d6c",
+      "reviewTargetFields": [
+        "remuneration"
+      ],
+      "currentAuthorSourceReadings": {
+        "remuneration": "82,926"
+      },
+      "originalFrozenRawReadings": {
+        "remuneration": "82,926"
+      },
+      "scopedIndividualSourceRechecks": []
+    },
+    {
+      "sequence": 32,
+      "physicalPage": 37,
+      "sourceRowOnPage": 36,
+      "cropSha256": "5292b6a32c51d3731de1930eb60a2ee27cd955a667945d83ad3be102d59f2863",
+      "reviewTargetFields": [
+        "name"
+      ],
+      "currentAuthorSourceReadings": {
+        "name": "Germain,Francois F"
+      },
+      "originalFrozenRawReadings": {
+        "name": "Germain,Francois F"
+      },
+      "scopedIndividualSourceRechecks": []
+    },
+    {
+      "sequence": 33,
+      "physicalPage": 37,
+      "sourceRowOnPage": 37,
+      "cropSha256": "7a583a3dc38bf4f762a60cc35e115d89b1a7feca20072172294679667bb8c310",
+      "reviewTargetFields": [
+        "remuneration"
+      ],
+      "currentAuthorSourceReadings": {
+        "remuneration": "93,917"
+      },
+      "originalFrozenRawReadings": {
+        "remuneration": "95,917"
+      },
+      "scopedIndividualSourceRechecks": [
+        {
+          "sequence": 33,
+          "field": "remuneration",
+          "raw": "95,917",
+          "reread": "93,917",
+          "individualActual1200Reading": "93,917",
+          "differsFromFrozenRaw": true,
+          "largeSheetProvisionalRetained": true,
+          "sourceImage": {
+            "sequence": 33,
+            "physicalPage": 37,
+            "sourceRowOnPage": 37,
+            "field": "remuneration",
+            "original300DpiPixelBox": [
+              1735,
+              2149,
+              2068,
+              2187
+            ],
+            "actualPdfPointClip": [
+              416.4,
+              515.76,
+              496.32,
+              524.88
+            ],
+            "dpi": 1200,
+            "path": "/workspace/salary-review-schools-temp/2019-006-confirmations/seq033-remuneration-actual1200.png",
+            "sha256": "8c1e319f625a7dcc9f000fc1d2657775dc3b87ac94e370f0b9052c016f8e2093"
+          },
+          "status": "proposed-source-reading-fresh-peer-pending"
+        }
+      ]
+    },
+    {
+      "sequence": 35,
+      "physicalPage": 37,
+      "sourceRowOnPage": 39,
+      "cropSha256": "da18f085221bd5e9d303abd932a437275d91a9e2bfcb4a56b1eb649426f74744",
+      "reviewTargetFields": [
+        "name"
+      ],
+      "currentAuthorSourceReadings": {
+        "name": "Gerrie,Alina"
+      },
+      "originalFrozenRawReadings": {
+        "name": "Gerrie,Alina"
+      },
+      "scopedIndividualSourceRechecks": [
+        {
+          "sequence": 35,
+          "field": "name",
+          "raw": "Gerrie,Alina",
+          "reread": "Gernie,Alina",
+          "individualActual1200Reading": "Gerrie,Alina",
+          "differsFromFrozenRaw": false,
+          "largeSheetProvisionalRetained": false,
+          "sourceImage": {
+            "sequence": 35,
+            "physicalPage": 37,
+            "sourceRowOnPage": 39,
+            "field": "name",
+            "original300DpiPixelBox": [
+              304,
+              2231,
+              1404,
+              2270
+            ],
+            "actualPdfPointClip": [
+              72.96,
+              535.44,
+              336.96,
+              544.8
+            ],
+            "dpi": 1200,
+            "path": "/workspace/salary-review-schools-temp/2019-006-confirmations/seq035-name-actual1200.png",
+            "sha256": "1c0f46a774067dab9443e18f1df403e1c63ad141844cb5cd2a1b9ab08d0d0c42"
+          },
+          "status": "frozen-raw-confirmed-larger-sheet-provisional-rejected"
+        }
+      ]
+    },
+    {
+      "sequence": 36,
+      "physicalPage": 37,
+      "sourceRowOnPage": 40,
+      "cropSha256": "484a232c305402b05321521b71f8b414a321873a8373168dbe52caafb6f974b2",
+      "reviewTargetFields": [
+        "expenses"
+      ],
+      "currentAuthorSourceReadings": {
+        "expenses": "9,549"
+      },
+      "originalFrozenRawReadings": {
+        "expenses": "9,549"
+      },
+      "scopedIndividualSourceRechecks": []
+    },
+    {
+      "sequence": 38,
+      "physicalPage": 37,
+      "sourceRowOnPage": 42,
+      "cropSha256": "8a3c44fd4fe361c6b04d47f7517b0ded27ae34bd592757eb6f092578d1d07f73",
+      "reviewTargetFields": [
+        "name"
+      ],
+      "currentAuthorSourceReadings": {
+        "name": "Gete,Ermias"
+      },
+      "originalFrozenRawReadings": {
+        "name": "Gete,Ermias"
+      },
+      "scopedIndividualSourceRechecks": []
+    },
+    {
+      "sequence": 40,
+      "physicalPage": 37,
+      "sourceRowOnPage": 44,
+      "cropSha256": "1564a6e1382f7ea70f0ad94f43a899eb92937e34493d9dc6d36bbfc7a5086450",
+      "reviewTargetFields": [
+        "name"
+      ],
+      "currentAuthorSourceReadings": {
+        "name": "Gfeller-Ingledew,Paris-Ann PA"
+      },
+      "originalFrozenRawReadings": {
+        "name": "Gfeller-Ingledew,Paris-Ann PA"
+      },
+      "scopedIndividualSourceRechecks": [
+        {
+          "sequence": 40,
+          "field": "name",
+          "raw": "Gfeller-Ingledew,Paris-Ann PA",
+          "reread": "Gfeller-Ingledew,Faris-Ann FA",
+          "individualActual1200Reading": "Gfeller-Ingledew,Paris-Ann PA",
+          "differsFromFrozenRaw": false,
+          "largeSheetProvisionalRetained": false,
+          "sourceImage": {
+            "sequence": 40,
+            "physicalPage": 37,
+            "sourceRowOnPage": 44,
+            "field": "name",
+            "original300DpiPixelBox": [
+              304,
+              2439,
+              1404,
+              2478
+            ],
+            "actualPdfPointClip": [
+              72.96,
+              585.36,
+              336.96,
+              594.72
+            ],
+            "dpi": 1200,
+            "path": "/workspace/salary-review-schools-temp/2019-006-confirmations/seq040-name-actual1200.png",
+            "sha256": "e5e0ba396d95e462ce0f1abd7701e97205eefe459b6fb88708671c1f8f9580c5"
+          },
+          "status": "frozen-raw-confirmed-larger-sheet-provisional-rejected"
+        }
+      ]
+    },
+    {
+      "sequence": 42,
+      "physicalPage": 37,
+      "sourceRowOnPage": 46,
+      "cropSha256": "c0821515de98e5d03757a727a31cde5c9d0e4e1f71272890cc4dc97afab07891",
+      "reviewTargetFields": [
+        "name",
+        "remuneration"
+      ],
+      "currentAuthorSourceReadings": {
+        "name": "Giam,Jade Peircee",
+        "remuneration": "83,624"
+      },
+      "originalFrozenRawReadings": {
+        "name": "Giam,Jade Peirce",
+        "remuneration": "83,624"
+      },
+      "scopedIndividualSourceRechecks": [
+        {
+          "sequence": 42,
+          "field": "name",
+          "raw": "Giam,Jade Peirce",
+          "reread": "Gian,Jade Peircee",
+          "individualActual1200Reading": "Giam,Jade Peircee",
+          "differsFromFrozenRaw": true,
+          "largeSheetProvisionalRetained": false,
+          "sourceImage": {
+            "sequence": 42,
+            "physicalPage": 37,
+            "sourceRowOnPage": 46,
+            "field": "name",
+            "original300DpiPixelBox": [
+              304,
+              2517,
+              1404,
+              2556
+            ],
+            "actualPdfPointClip": [
+              72.96,
+              604.08,
+              336.96,
+              613.44
+            ],
+            "dpi": 1200,
+            "path": "/workspace/salary-review-schools-temp/2019-006-confirmations/seq042-name-actual1200.png",
+            "sha256": "d5075658cdab428d129923dde1846013a9122b205400c45312def8e6766d8d94"
+          },
+          "status": "proposed-source-reading-fresh-peer-pending"
+        }
+      ]
+    },
+    {
+      "sequence": 47,
+      "physicalPage": 37,
+      "sourceRowOnPage": 55,
+      "cropSha256": "e6755fddd9594c7f79edbe716a3f5b8d5b22b12c4b6e680a5a082d67915eaecd",
+      "reviewTargetFields": [
+        "name"
+      ],
+      "currentAuthorSourceReadings": {
+        "name": "Giene,Kathryn R"
+      },
+      "originalFrozenRawReadings": {
+        "name": "Giene,Kathlyn R"
+      },
+      "scopedIndividualSourceRechecks": [
+        {
+          "sequence": 47,
+          "field": "name",
+          "raw": "Giene,Kathlyn R",
+          "reread": "Giene,Kathryn R",
+          "individualActual1200Reading": "Giene,Kathryn R",
+          "differsFromFrozenRaw": true,
+          "largeSheetProvisionalRetained": true,
+          "sourceImage": {
+            "sequence": 47,
+            "physicalPage": 37,
+            "sourceRowOnPage": 55,
+            "field": "name",
+            "original300DpiPixelBox": [
+              304,
+              2890,
+              1404,
+              2929
+            ],
+            "actualPdfPointClip": [
+              72.96,
+              693.6,
+              336.96,
+              702.96
+            ],
+            "dpi": 1200,
+            "path": "/workspace/salary-review-schools-temp/2019-006-confirmations/seq047-name-actual1200.png",
+            "sha256": "b301f46906f1417d719894d3c661f3f6c15cb4095036ceca9d20affabcbb3964"
+          },
+          "status": "proposed-source-reading-fresh-peer-pending"
+        }
+      ]
+    },
+    {
+      "sequence": 49,
+      "physicalPage": 37,
+      "sourceRowOnPage": 57,
+      "cropSha256": "2bf749a15b332a2a894807e8ff199a6b2529508b91fa139f1774f5277fca3d9d",
+      "reviewTargetFields": [
+        "remuneration"
+      ],
+      "currentAuthorSourceReadings": {
+        "remuneration": "83,394"
+      },
+      "originalFrozenRawReadings": {
+        "remuneration": "83,394"
+      },
+      "scopedIndividualSourceRechecks": []
+    },
+    {
+      "sequence": 50,
+      "physicalPage": 37,
+      "sourceRowOnPage": 58,
+      "cropSha256": "efc333331a56637d4f0a6b4c8e30c34892415042726a1a4beb371067bce33ef2",
+      "reviewTargetFields": [
+        "remuneration"
+      ],
+      "currentAuthorSourceReadings": {
+        "remuneration": "85,323"
+      },
+      "originalFrozenRawReadings": {
+        "remuneration": "85,323"
+      },
+      "scopedIndividualSourceRechecks": []
+    },
+    {
+      "sequence": 56,
+      "physicalPage": 38,
+      "sourceRowOnPage": 7,
+      "cropSha256": "41c9d04486097830e71bc2cbc817ed9ae79846d7977410c72077b29a3f0d0df3",
+      "reviewTargetFields": [
+        "name"
+      ],
+      "currentAuthorSourceReadings": {
+        "name": "Giljeson,Christy Lynn"
+      },
+      "originalFrozenRawReadings": {
+        "name": "Giligson,Christy Lynn"
+      },
+      "scopedIndividualSourceRechecks": [
+        {
+          "sequence": 56,
+          "field": "name",
+          "raw": "Giligson,Christy Lynn",
+          "reread": "Giljeson,Christy Lynn",
+          "individualActual1200Reading": "Giljeson,Christy Lynn",
+          "differsFromFrozenRaw": true,
+          "largeSheetProvisionalRetained": true,
+          "sourceImage": {
+            "sequence": 56,
+            "physicalPage": 38,
+            "sourceRowOnPage": 7,
+            "field": "name",
+            "original300DpiPixelBox": [
+              304,
+              921,
+              1404,
+              962
+            ],
+            "actualPdfPointClip": [
+              72.96,
+              221.04,
+              336.96,
+              230.88
+            ],
+            "dpi": 1200,
+            "path": "/workspace/salary-review-schools-temp/2019-006-confirmations/seq056-name-actual1200.png",
+            "sha256": "8a52ff16f11c458d0c630e966b142c849ab690648b211f085a6ede3a106beb44"
+          },
+          "status": "proposed-source-reading-fresh-peer-pending"
+        }
+      ]
+    },
+    {
+      "sequence": 57,
+      "physicalPage": 38,
+      "sourceRowOnPage": 8,
+      "cropSha256": "88736ec63d55bc8173498907515a33e45a7997ab9130ab5fea3ed764c066d986",
+      "reviewTargetFields": [
+        "name"
+      ],
+      "currentAuthorSourceReadings": {
+        "name": "Gill,Amandeep Kaur"
+      },
+      "originalFrozenRawReadings": {
+        "name": "Gill,Anandeep Kaur"
+      },
+      "scopedIndividualSourceRechecks": [
+        {
+          "sequence": 57,
+          "field": "name",
+          "raw": "Gill,Anandeep Kaur",
+          "reread": "Gill,Amandeep Kaur",
+          "individualActual1200Reading": "Gill,Amandeep Kaur",
+          "differsFromFrozenRaw": true,
+          "largeSheetProvisionalRetained": true,
+          "sourceImage": {
+            "sequence": 57,
+            "physicalPage": 38,
+            "sourceRowOnPage": 8,
+            "field": "name",
+            "original300DpiPixelBox": [
+              304,
+              962,
+              1404,
+              1002
+            ],
+            "actualPdfPointClip": [
+              72.96,
+              230.88,
+              336.96,
+              240.48
+            ],
+            "dpi": 1200,
+            "path": "/workspace/salary-review-schools-temp/2019-006-confirmations/seq057-name-actual1200.png",
+            "sha256": "cc14fbd4eeb9a7c8455e6deb8a3fe0c12dd1c24a8cc09dcef23d6de6e17e71a6"
+          },
+          "status": "proposed-source-reading-fresh-peer-pending"
+        }
+      ]
+    },
+    {
+      "sequence": 60,
+      "physicalPage": 38,
+      "sourceRowOnPage": 13,
+      "cropSha256": "ca8de5c53ed084ddf099730b7bbb013ed91841eb11364b3661e0fbfeaaec3594",
+      "reviewTargetFields": [
+        "expenses"
+      ],
+      "currentAuthorSourceReadings": {
+        "expenses": "3,446"
+      },
+      "originalFrozenRawReadings": {
+        "expenses": "3,446"
+      },
+      "scopedIndividualSourceRechecks": []
+    },
+    {
+      "sequence": 62,
+      "physicalPage": 38,
+      "sourceRowOnPage": 16,
+      "cropSha256": "e331da668b82a60d0b5c032521a586c7b00649e03fd08663be273005e11ec36f",
+      "reviewTargetFields": [
+        "expenses"
+      ],
+      "currentAuthorSourceReadings": {
+        "expenses": "8,750"
+      },
+      "originalFrozenRawReadings": {
+        "expenses": "8,750"
+      },
+      "scopedIndividualSourceRechecks": []
+    },
+    {
+      "sequence": 64,
+      "physicalPage": 38,
+      "sourceRowOnPage": 18,
+      "cropSha256": "539ba177d535e14e5342713b114ee8b1a9a3a761df097e78e8f0174de92ffded",
+      "reviewTargetFields": [
+        "remuneration"
+      ],
+      "currentAuthorSourceReadings": {
+        "remuneration": "99,914"
+      },
+      "originalFrozenRawReadings": {
+        "remuneration": "99,914"
+      },
+      "scopedIndividualSourceRechecks": []
+    },
+    {
+      "sequence": 70,
+      "physicalPage": 38,
+      "sourceRowOnPage": 25,
+      "cropSha256": "c8f4aba91295d31da2862b68e5494611aafd84e234c4e336c66be42c76b37284",
+      "reviewTargetFields": [
+        "expenses"
+      ],
+      "currentAuthorSourceReadings": {
+        "expenses": "3,563"
+      },
+      "originalFrozenRawReadings": {
+        "expenses": "3,563"
+      },
+      "scopedIndividualSourceRechecks": []
+    },
+    {
+      "sequence": 73,
+      "physicalPage": 38,
+      "sourceRowOnPage": 28,
+      "cropSha256": "834c28dd6490ca055d424fb3f50459d2f09ff79c60fb2be7173d4be7afe97190",
+      "reviewTargetFields": [
+        "remuneration"
+      ],
+      "currentAuthorSourceReadings": {
+        "remuneration": "84,336"
+      },
+      "originalFrozenRawReadings": {
+        "remuneration": "84,336"
+      },
+      "scopedIndividualSourceRechecks": []
+    },
+    {
+      "sequence": 76,
+      "physicalPage": 38,
+      "sourceRowOnPage": 31,
+      "cropSha256": "f44a443fa9d7a32fc497f26a94099b99edb9e92ae83f64b0f7e49591252081f6",
+      "reviewTargetFields": [
+        "expenses"
+      ],
+      "currentAuthorSourceReadings": {
+        "expenses": "2,916"
+      },
+      "originalFrozenRawReadings": {
+        "expenses": "2,916"
+      },
+      "scopedIndividualSourceRechecks": []
+    },
+    {
+      "sequence": 80,
+      "physicalPage": 38,
+      "sourceRowOnPage": 38,
+      "cropSha256": "120829d3d450740f1eca356c580c22ff33b55d14fb1bdf0d2c1318ce4fa3b472",
+      "reviewTargetFields": [
+        "remuneration"
+      ],
+      "currentAuthorSourceReadings": {
+        "remuneration": "108,469"
+      },
+      "originalFrozenRawReadings": {
+        "remuneration": "108,469"
+      },
+      "scopedIndividualSourceRechecks": []
+    },
+    {
+      "sequence": 81,
+      "physicalPage": 38,
+      "sourceRowOnPage": 39,
+      "cropSha256": "3eb84222ac6cfa1683bb8a00a8d7790217c791a6a786b0bb60a242c78b1fd60d",
+      "reviewTargetFields": [
+        "name"
+      ],
+      "currentAuthorSourceReadings": {
+        "name": "Gilmour,Suzana Mitrovic"
+      },
+      "originalFrozenRawReadings": {
+        "name": "Gilmour,Suzana Mitrovic"
+      },
+      "scopedIndividualSourceRechecks": [
+        {
+          "sequence": 81,
+          "field": "name",
+          "raw": "Gilmour,Suzana Mitrovic",
+          "reread": "Gilmore,Suzana Mitrovic",
+          "individualActual1200Reading": "Gilmour,Suzana Mitrovic",
+          "differsFromFrozenRaw": false,
+          "largeSheetProvisionalRetained": false,
+          "sourceImage": {
+            "sequence": 81,
+            "physicalPage": 38,
+            "sourceRowOnPage": 39,
+            "field": "name",
+            "original300DpiPixelBox": [
+              304,
+              2230,
+              1404,
+              2271
+            ],
+            "actualPdfPointClip": [
+              72.96,
+              535.2,
+              336.96,
+              545.04
+            ],
+            "dpi": 1200,
+            "path": "/workspace/salary-review-schools-temp/2019-006-confirmations/seq081-name-actual1200.png",
+            "sha256": "fc4b0a13000bf476f370848287181a3c341b42a923d104febaf3221565087d87"
+          },
+          "status": "frozen-raw-confirmed-larger-sheet-provisional-rejected"
+        }
+      ]
+    },
+    {
+      "sequence": 84,
+      "physicalPage": 38,
+      "sourceRowOnPage": 42,
+      "cropSha256": "67e95a1d17727576bd2b59e9811da5487cc4cbe06e596e4556f9fe3f04543c50",
+      "reviewTargetFields": [
+        "remuneration"
+      ],
+      "currentAuthorSourceReadings": {
+        "remuneration": "98,536"
+      },
+      "originalFrozenRawReadings": {
+        "remuneration": "98,536"
+      },
+      "scopedIndividualSourceRechecks": []
+    },
+    {
+      "sequence": 90,
+      "physicalPage": 38,
+      "sourceRowOnPage": 49,
+      "cropSha256": "3352e2c4d885c5d8bf11226b6df0768fe2809c127fd1fd14234463abd588887e",
+      "reviewTargetFields": [
+        "remuneration"
+      ],
+      "currentAuthorSourceReadings": {
+        "remuneration": "79,540"
+      },
+      "originalFrozenRawReadings": {
+        "remuneration": "79,540"
+      },
+      "scopedIndividualSourceRechecks": []
+    },
+    {
+      "sequence": 98,
+      "physicalPage": 39,
+      "sourceRowOnPage": 2,
+      "cropSha256": "52380a1139080fe0e87599d7e79f3a25c91b842a8d04dfb51fadc4669566d068",
+      "reviewTargetFields": [
+        "name"
+      ],
+      "currentAuthorSourceReadings": {
+        "name": "Goerwell,Alison"
+      },
+      "originalFrozenRawReadings": {
+        "name": "Goerwell,Alison"
+      },
+      "scopedIndividualSourceRechecks": [
+        {
+          "sequence": 98,
+          "field": "name",
+          "raw": "Goerwell,Alison",
+          "reread": "Goerwall,Alison",
+          "individualActual1200Reading": "Goerwell,Alison",
+          "differsFromFrozenRaw": false,
+          "largeSheetProvisionalRetained": false,
+          "sourceImage": {
+            "sequence": 98,
+            "physicalPage": 39,
+            "sourceRowOnPage": 2,
+            "field": "name",
+            "original300DpiPixelBox": [
+              304,
+              714,
+              1404,
+              753
+            ],
+            "actualPdfPointClip": [
+              72.96,
+              171.36,
+              336.96,
+              180.72
+            ],
+            "dpi": 1200,
+            "path": "/workspace/salary-review-schools-temp/2019-006-confirmations/seq098-name-actual1200.png",
+            "sha256": "0f2a27c4778597b3bd46193e5def41c5101792876130991456ddd39047837f78"
+          },
+          "status": "frozen-raw-confirmed-larger-sheet-provisional-rejected"
+        }
+      ]
+    },
+    {
+      "sequence": 100,
+      "physicalPage": 39,
+      "sourceRowOnPage": 4,
+      "cropSha256": "99441c6f8cf9e588cdf57de01e76171946348085397e43cf8d7976ab0ea07b9e",
+      "reviewTargetFields": [
+        "name"
+      ],
+      "currentAuthorSourceReadings": {
+        "name": "Gogal,Carmina A."
+      },
+      "originalFrozenRawReadings": {
+        "name": "Gogal,Carmina A."
+      },
+      "scopedIndividualSourceRechecks": [
+        {
+          "sequence": 100,
+          "field": "name",
+          "raw": "Gogal,Carmina A.",
+          "reread": "Gogal,Carmine A.",
+          "individualActual1200Reading": "Gogal,Carmina A.",
+          "differsFromFrozenRaw": false,
+          "largeSheetProvisionalRetained": false,
+          "sourceImage": {
+            "sequence": 100,
+            "physicalPage": 39,
+            "sourceRowOnPage": 4,
+            "field": "name",
+            "original300DpiPixelBox": [
+              304,
+              800,
+              1404,
+              838
+            ],
+            "actualPdfPointClip": [
+              72.96,
+              192.0,
+              336.96,
+              201.12
+            ],
+            "dpi": 1200,
+            "path": "/workspace/salary-review-schools-temp/2019-006-confirmations/seq100-name-actual1200.png",
+            "sha256": "4b2aefbb8c6739a4eea10e5544d1319a718cd800ef9fd84adf37da6ad0d1fdcb"
+          },
+          "status": "frozen-raw-confirmed-larger-sheet-provisional-rejected"
+        }
+      ]
+    },
+    {
+      "sequence": 105,
+      "physicalPage": 39,
+      "sourceRowOnPage": 10,
+      "cropSha256": "fe67fedef8d009441a6a94fbd76662ca0e7614d8c3906e9aceb6cb41ae253585",
+      "reviewTargetFields": [
+        "remuneration"
+      ],
+      "currentAuthorSourceReadings": {
+        "remuneration": "82,341"
+      },
+      "originalFrozenRawReadings": {
+        "remuneration": "82,341"
+      },
+      "scopedIndividualSourceRechecks": []
+    },
+    {
+      "sequence": 110,
+      "physicalPage": 39,
+      "sourceRowOnPage": 18,
+      "cropSha256": "8fecee04071770f2fb1abb35b9da85a7d5dc386b8a1168326108050d3b400165",
+      "reviewTargetFields": [
+        "remuneration"
+      ],
+      "currentAuthorSourceReadings": {
+        "remuneration": "75,311"
+      },
+      "originalFrozenRawReadings": {
+        "remuneration": "75,311"
+      },
+      "scopedIndividualSourceRechecks": []
+    },
+    {
+      "sequence": 112,
+      "physicalPage": 39,
+      "sourceRowOnPage": 20,
+      "cropSha256": "d5b49119f9376b6a9afb4df6345074d941b39f7ba251deb777c3d9a6723cf178",
+      "reviewTargetFields": [
+        "remuneration"
+      ],
+      "currentAuthorSourceReadings": {
+        "remuneration": "133,767"
+      },
+      "originalFrozenRawReadings": {
+        "remuneration": "133,767"
+      },
+      "scopedIndividualSourceRechecks": [
+        {
+          "sequence": 112,
+          "field": "remuneration",
+          "raw": "133,767",
+          "reread": "133,707",
+          "individualActual1200Reading": "133,767",
+          "differsFromFrozenRaw": false,
+          "largeSheetProvisionalRetained": false,
+          "sourceImage": {
+            "sequence": 112,
+            "physicalPage": 39,
+            "sourceRowOnPage": 20,
+            "field": "remuneration",
+            "original300DpiPixelBox": [
+              1735,
+              1454,
+              2068,
+              1493
+            ],
+            "actualPdfPointClip": [
+              416.4,
+              348.96,
+              496.32,
+              358.32
+            ],
+            "dpi": 1200,
+            "path": "/workspace/salary-review-schools-temp/2019-006-confirmations/seq112-remuneration-actual1200.png",
+            "sha256": "85989b6fd8c7e8d7830fde84832e5e2c5cc0331dcc63f923382a4981ff622848"
+          },
+          "status": "frozen-raw-confirmed-larger-sheet-provisional-rejected"
+        }
+      ]
+    },
+    {
+      "sequence": 116,
+      "physicalPage": 39,
+      "sourceRowOnPage": 24,
+      "cropSha256": "22e8271505f0ecbf1ec4d14e73fad8cc0bc97f383a45f18a7f74f13b844c0972",
+      "reviewTargetFields": [
+        "name"
+      ],
+      "currentAuthorSourceReadings": {
+        "name": "Gonzale,Joviel Korina"
+      },
+      "originalFrozenRawReadings": {
+        "name": "Gonzalo,Jovial Korina"
+      },
+      "scopedIndividualSourceRechecks": [
+        {
+          "sequence": 116,
+          "field": "name",
+          "raw": "Gonzalo,Jovial Korina",
+          "reread": "Gonzale,Joviel Korina",
+          "individualActual1200Reading": "Gonzale,Joviel Korina",
+          "differsFromFrozenRaw": true,
+          "largeSheetProvisionalRetained": true,
+          "sourceImage": {
+            "sequence": 116,
+            "physicalPage": 39,
+            "sourceRowOnPage": 24,
+            "field": "name",
+            "original300DpiPixelBox": [
+              304,
+              1615,
+              1404,
+              1654
+            ],
+            "actualPdfPointClip": [
+              72.96,
+              387.6,
+              336.96,
+              396.96
+            ],
+            "dpi": 1200,
+            "path": "/workspace/salary-review-schools-temp/2019-006-confirmations/seq116-name-actual1200.png",
+            "sha256": "262d8366154778200c6ea885fa8a2a50895c67aaa4ea56452f520267d05c85dd"
+          },
+          "status": "proposed-source-reading-fresh-peer-pending"
+        }
+      ]
+    },
+    {
+      "sequence": 117,
+      "physicalPage": 39,
+      "sourceRowOnPage": 25,
+      "cropSha256": "ad802d38e69441c465fc15f5812e255e761cd1863f8bba55e93dc480aa31c224",
+      "reviewTargetFields": [
+        "expenses"
+      ],
+      "currentAuthorSourceReadings": {
+        "expenses": "1,797"
+      },
+      "originalFrozenRawReadings": {
+        "expenses": "1,797"
+      },
+      "scopedIndividualSourceRechecks": []
+    },
+    {
+      "sequence": 119,
+      "physicalPage": 39,
+      "sourceRowOnPage": 28,
+      "cropSha256": "e432d2ecb859385b2688ea3d2a59cdd950521ba325a050821e622e6897c8909a",
+      "reviewTargetFields": [
+        "expenses"
+      ],
+      "currentAuthorSourceReadings": {
+        "expenses": "2,235"
+      },
+      "originalFrozenRawReadings": {
+        "expenses": "2,255"
+      },
+      "scopedIndividualSourceRechecks": [
+        {
+          "sequence": 119,
+          "field": "expenses",
+          "raw": "2,255",
+          "reread": "2,235",
+          "individualActual1200Reading": "2,235",
+          "differsFromFrozenRaw": true,
+          "largeSheetProvisionalRetained": true,
+          "sourceImage": {
+            "sequence": 119,
+            "physicalPage": 39,
+            "sourceRowOnPage": 28,
+            "field": "expenses",
+            "original300DpiPixelBox": [
+              2052,
+              1779,
+              2422,
+              1818
+            ],
+            "actualPdfPointClip": [
+              492.48,
+              426.96,
+              581.28,
+              436.32
+            ],
+            "dpi": 1200,
+            "path": "/workspace/salary-review-schools-temp/2019-006-confirmations/seq119-expenses-actual1200.png",
+            "sha256": "ac738ba938131138b4abae3e79950fe6bcb67fd047d6951d8f006430f7207544"
+          },
+          "status": "proposed-source-reading-fresh-peer-pending"
+        }
+      ]
+    },
+    {
+      "sequence": 120,
+      "physicalPage": 39,
+      "sourceRowOnPage": 29,
+      "cropSha256": "5b631488ec036a15a777d22cc8d8025932ef193c8678210f97fb9a18656a4bce",
+      "reviewTargetFields": [
+        "expenses"
+      ],
+      "currentAuthorSourceReadings": {
+        "expenses": "2,551"
+      },
+      "originalFrozenRawReadings": {
+        "expenses": "2,551"
+      },
+      "scopedIndividualSourceRechecks": []
+    },
+    {
+      "sequence": 125,
+      "physicalPage": 39,
+      "sourceRowOnPage": 35,
+      "cropSha256": "60abd2cf30cb2283c8eb653a77e20e5d922d701d2f867927fff977d2b7b355eb",
+      "reviewTargetFields": [
+        "remuneration"
+      ],
+      "currentAuthorSourceReadings": {
+        "remuneration": "84,361"
+      },
+      "originalFrozenRawReadings": {
+        "remuneration": "84,361"
+      },
+      "scopedIndividualSourceRechecks": []
+    },
+    {
+      "sequence": 127,
+      "physicalPage": 39,
+      "sourceRowOnPage": 37,
+      "cropSha256": "4b19e58d4a755b69b4c96245da6982d8361b94f897b95e7b21fe78c64f59704e",
+      "reviewTargetFields": [
+        "name"
+      ],
+      "currentAuthorSourceReadings": {
+        "name": "Gopuansuy,Irish C"
+      },
+      "originalFrozenRawReadings": {
+        "name": "Gopuansuy,Irish C"
+      },
+      "scopedIndividualSourceRechecks": [
+        {
+          "sequence": 127,
+          "field": "name",
+          "raw": "Gopuansuy,Irish C",
+          "reread": "Gopansuy,Irish C",
+          "individualActual1200Reading": "Gopuansuy,Irish C",
+          "differsFromFrozenRaw": false,
+          "largeSheetProvisionalRetained": false,
+          "sourceImage": {
+            "sequence": 127,
+            "physicalPage": 39,
+            "sourceRowOnPage": 37,
+            "field": "name",
+            "original300DpiPixelBox": [
+              304,
+              2152,
+              1404,
+              2190
+            ],
+            "actualPdfPointClip": [
+              72.96,
+              516.48,
+              336.96,
+              525.6
+            ],
+            "dpi": 1200,
+            "path": "/workspace/salary-review-schools-temp/2019-006-confirmations/seq127-name-actual1200.png",
+            "sha256": "e30a42ef03be9b8caa0447143da88db77531deaa7240c0aa49bb75538b0169e6"
+          },
+          "status": "frozen-raw-confirmed-larger-sheet-provisional-rejected"
+        }
+      ]
+    },
+    {
+      "sequence": 128,
+      "physicalPage": 39,
+      "sourceRowOnPage": 38,
+      "cropSha256": "bee43cb0d0352e17f6e550b93c49e9ac4a8b4620f1dc5e06642be32a9c522aac",
+      "reviewTargetFields": [
+        "remuneration"
+      ],
+      "currentAuthorSourceReadings": {
+        "remuneration": "77,949"
+      },
+      "originalFrozenRawReadings": {
+        "remuneration": "77,949"
+      },
+      "scopedIndividualSourceRechecks": []
+    },
+    {
+      "sequence": 143,
+      "physicalPage": 39,
+      "sourceRowOnPage": 54,
+      "cropSha256": "22a2459bfdfd868dc486fbbda049b2959b7d29762b3f39d382480732060673ed",
+      "reviewTargetFields": [
+        "expenses"
+      ],
+      "currentAuthorSourceReadings": {
+        "expenses": "12,943"
+      },
+      "originalFrozenRawReadings": {
+        "expenses": "12,943"
+      },
+      "scopedIndividualSourceRechecks": []
+    },
+    {
+      "sequence": 151,
+      "physicalPage": 40,
+      "sourceRowOnPage": 6,
+      "cropSha256": "b00147f8389625fa4cbb44c1df89da39142760832fe1870d15b3dae0f1a26849",
+      "reviewTargetFields": [
+        "expenses"
+      ],
+      "currentAuthorSourceReadings": {
+        "expenses": "8,456"
+      },
+      "originalFrozenRawReadings": {
+        "expenses": "8,456"
+      },
+      "scopedIndividualSourceRechecks": []
+    },
+    {
+      "sequence": 161,
+      "physicalPage": 40,
+      "sourceRowOnPage": 19,
+      "cropSha256": "a9f81c8ec197398e1806046a0e1271295d997cfff19749805c010ea5e91b3f99",
+      "reviewTargetFields": [
+        "remuneration"
+      ],
+      "currentAuthorSourceReadings": {
+        "remuneration": "85,335"
+      },
+      "originalFrozenRawReadings": {
+        "remuneration": "85,335"
+      },
+      "scopedIndividualSourceRechecks": []
+    },
+    {
+      "sequence": 166,
+      "physicalPage": 40,
+      "sourceRowOnPage": 25,
+      "cropSha256": "aa52476fce370d146066115cf78aa7e6afa1a90b74aaf2f5bf4c23eaa2de1db0",
+      "reviewTargetFields": [
+        "remuneration"
+      ],
+      "currentAuthorSourceReadings": {
+        "remuneration": "79,817"
+      },
+      "originalFrozenRawReadings": {
+        "remuneration": "79,817"
+      },
+      "scopedIndividualSourceRechecks": []
+    },
+    {
+      "sequence": 167,
+      "physicalPage": 40,
+      "sourceRowOnPage": 26,
+      "cropSha256": "c98dabc1d6ce00ebc793e742f8b625adec7c5e705d07af535802393af419e5e3",
+      "reviewTargetFields": [
+        "name"
+      ],
+      "currentAuthorSourceReadings": {
+        "name": "Greenhalgh,Nicole L."
+      },
+      "originalFrozenRawReadings": {
+        "name": "Greenhalgh,Nicole L."
+      },
+      "scopedIndividualSourceRechecks": [
+        {
+          "sequence": 167,
+          "field": "name",
+          "raw": "Greenhalgh,Nicole L.",
+          "reread": "Greenham,Nicole L.",
+          "individualActual1200Reading": "Greenhalgh,Nicole L.",
+          "differsFromFrozenRaw": false,
+          "largeSheetProvisionalRetained": false,
+          "sourceImage": {
+            "sequence": 167,
+            "physicalPage": 40,
+            "sourceRowOnPage": 26,
+            "field": "name",
+            "original300DpiPixelBox": [
+              304,
+              1695,
+              1404,
+              1734
+            ],
+            "actualPdfPointClip": [
+              72.96,
+              406.8,
+              336.96,
+              416.16
+            ],
+            "dpi": 1200,
+            "path": "/workspace/salary-review-schools-temp/2019-006-confirmations/seq167-name-actual1200.png",
+            "sha256": "ae869ea87924bbff756c828cb7f3a8f6c5416ce7a7c55326a0e86519802c80f3"
+          },
+          "status": "frozen-raw-confirmed-larger-sheet-provisional-rejected"
+        }
+      ]
+    },
+    {
+      "sequence": 168,
+      "physicalPage": 40,
+      "sourceRowOnPage": 27,
+      "cropSha256": "612ea9d11daeb10657261f0560fd24eb9253883d8ba293593d2d28ac69126cfb",
+      "reviewTargetFields": [
+        "expenses"
+      ],
+      "currentAuthorSourceReadings": {
+        "expenses": "2,767"
+      },
+      "originalFrozenRawReadings": {
+        "expenses": "2,767"
+      },
+      "scopedIndividualSourceRechecks": []
+    },
+    {
+      "sequence": 175,
+      "physicalPage": 40,
+      "sourceRowOnPage": 34,
+      "cropSha256": "cce3c570a46c5314cc6519d53d46dc4849aa35e836ba4c9f7a5472a474b088a9",
+      "reviewTargetFields": [
+        "expenses"
+      ],
+      "currentAuthorSourceReadings": {
+        "expenses": "6,577"
+      },
+      "originalFrozenRawReadings": {
+        "expenses": "6,577"
+      },
+      "scopedIndividualSourceRechecks": []
+    },
+    {
+      "sequence": 181,
+      "physicalPage": 40,
+      "sourceRowOnPage": 43,
+      "cropSha256": "dca4bbfcc4cdf0659d32cb3eb24b2637f40c34d1afa1a96fc07b3e7ce6e49167",
+      "reviewTargetFields": [
+        "remuneration"
+      ],
+      "currentAuthorSourceReadings": {
+        "remuneration": "86,363"
+      },
+      "originalFrozenRawReadings": {
+        "remuneration": "86,363"
+      },
+      "scopedIndividualSourceRechecks": []
+    },
+    {
+      "sequence": 183,
+      "physicalPage": 40,
+      "sourceRowOnPage": 45,
+      "cropSha256": "5ed4384080a1ab9ae2e3d7708db317342baf266f83fb0477a9b0bdb881f117b5",
+      "reviewTargetFields": [
+        "remuneration"
+      ],
+      "currentAuthorSourceReadings": {
+        "remuneration": "99,264"
+      },
+      "originalFrozenRawReadings": {
+        "remuneration": "99,264"
+      },
+      "scopedIndividualSourceRechecks": []
+    },
+    {
+      "sequence": 192,
+      "physicalPage": 40,
+      "sourceRowOnPage": 55,
+      "cropSha256": "30fa120b1cb20e4f5cdbc9e204489e6a45a14047bab92900fb5de9482b77b3f4",
+      "reviewTargetFields": [
+        "name"
+      ],
+      "currentAuthorSourceReadings": {
+        "name": "Gronnestad,Danielle Ashly"
+      },
+      "originalFrozenRawReadings": {
+        "name": "Gromestad,Danielle Ashly"
+      },
+      "scopedIndividualSourceRechecks": [
+        {
+          "sequence": 192,
+          "field": "name",
+          "raw": "Gromestad,Danielle Ashly",
+          "reread": "Gronnestad,Danielle Ashly",
+          "individualActual1200Reading": "Gronnestad,Danielle Ashly",
+          "differsFromFrozenRaw": true,
+          "largeSheetProvisionalRetained": true,
+          "sourceImage": {
+            "sequence": 192,
+            "physicalPage": 40,
+            "sourceRowOnPage": 55,
+            "field": "name",
+            "original300DpiPixelBox": [
+              304,
+              2890,
+              1404,
+              2929
+            ],
+            "actualPdfPointClip": [
+              72.96,
+              693.6,
+              336.96,
+              702.96
+            ],
+            "dpi": 1200,
+            "path": "/workspace/salary-review-schools-temp/2019-006-confirmations/seq192-name-actual1200.png",
+            "sha256": "5d2207d73b96d100a9fee129695155acbd873034e6075ad4f239b776c502c304"
+          },
+          "status": "proposed-source-reading-fresh-peer-pending"
+        }
+      ]
+    },
+    {
+      "sequence": 204,
+      "physicalPage": 41,
+      "sourceRowOnPage": 15,
+      "cropSha256": "cddfc905d155f5f831708852f74854c1890621c08a18023d4ea75e689c80eebb",
+      "reviewTargetFields": [
+        "name"
+      ],
+      "currentAuthorSourceReadings": {
+        "name": "Gunnboe,Piper Victoria"
+      },
+      "originalFrozenRawReadings": {
+        "name": "Gumboc,Piper Victoria"
+      },
+      "scopedIndividualSourceRechecks": [
+        {
+          "sequence": 204,
+          "field": "name",
+          "raw": "Gumboc,Piper Victoria",
+          "reread": "Gunnboe,Piper Victoria",
+          "individualActual1200Reading": "Gunnboe,Piper Victoria",
+          "differsFromFrozenRaw": true,
+          "largeSheetProvisionalRetained": true,
+          "sourceImage": {
+            "sequence": 204,
+            "physicalPage": 41,
+            "sourceRowOnPage": 15,
+            "field": "name",
+            "original300DpiPixelBox": [
+              304,
+              1251,
+              1404,
+              1289
+            ],
+            "actualPdfPointClip": [
+              72.96,
+              300.24,
+              336.96,
+              309.36
+            ],
+            "dpi": 1200,
+            "path": "/workspace/salary-review-schools-temp/2019-006-confirmations/seq204-name-actual1200.png",
+            "sha256": "0ee06cfca2e2c2ea61783f1673c61878de436b8dd2fc5370702d83c25fec1801"
+          },
+          "status": "proposed-source-reading-fresh-peer-pending"
+        }
+      ]
+    },
+    {
+      "sequence": 205,
+      "physicalPage": 41,
+      "sourceRowOnPage": 16,
+      "cropSha256": "8e4c3958bdb94a8ef9d694884293cb48b83f879004cf09449b1249d3c4be0d30",
+      "reviewTargetFields": [
+        "expenses"
+      ],
+      "currentAuthorSourceReadings": {
+        "expenses": "3,560"
+      },
+      "originalFrozenRawReadings": {
+        "expenses": "3,550"
+      },
+      "scopedIndividualSourceRechecks": [
+        {
+          "sequence": 205,
+          "field": "expenses",
+          "raw": "3,550",
+          "reread": "3,560",
+          "individualActual1200Reading": "3,560",
+          "differsFromFrozenRaw": true,
+          "largeSheetProvisionalRetained": true,
+          "sourceImage": {
+            "sequence": 205,
+            "physicalPage": 41,
+            "sourceRowOnPage": 16,
+            "field": "expenses",
+            "original300DpiPixelBox": [
+              2052,
+              1288,
+              2422,
+              1327
+            ],
+            "actualPdfPointClip": [
+              492.48,
+              309.12,
+              581.28,
+              318.48
+            ],
+            "dpi": 1200,
+            "path": "/workspace/salary-review-schools-temp/2019-006-confirmations/seq205-expenses-actual1200.png",
+            "sha256": "0d882906bbcb66e762cc1865ec874cf08204472e2f2ba1a0ba09558fb52b622b"
+          },
+          "status": "proposed-source-reading-fresh-peer-pending"
+        }
+      ]
+    },
+    {
+      "sequence": 219,
+      "physicalPage": 41,
+      "sourceRowOnPage": 34,
+      "cropSha256": "9e81b88d6b8a5bc5da0c64e4eea46cc691323d21163c2cb28555686996b9e0ef",
+      "reviewTargetFields": [
+        "expenses"
+      ],
+      "currentAuthorSourceReadings": {
+        "expenses": "4,318"
+      },
+      "originalFrozenRawReadings": {
+        "expenses": "4,318"
+      },
+      "scopedIndividualSourceRechecks": []
+    },
+    {
+      "sequence": 220,
+      "physicalPage": 41,
+      "sourceRowOnPage": 35,
+      "cropSha256": "a04bdb88d0d2a3e58eba9996641e2489dc6355681f830ba3225f3357440ef04c",
+      "reviewTargetFields": [
+        "expenses"
+      ],
+      "currentAuthorSourceReadings": {
+        "expenses": "2,273"
+      },
+      "originalFrozenRawReadings": {
+        "expenses": "2,273"
+      },
+      "scopedIndividualSourceRechecks": []
+    },
+    {
+      "sequence": 231,
+      "physicalPage": 41,
+      "sourceRowOnPage": 46,
+      "cropSha256": "27d81232935ee771a684913c38ab16b122f78b5b06b537366438733125313a3f",
+      "reviewTargetFields": [
+        "remuneration"
+      ],
+      "currentAuthorSourceReadings": {
+        "remuneration": "94,314"
+      },
+      "originalFrozenRawReadings": {
+        "remuneration": "94,314"
+      },
+      "scopedIndividualSourceRechecks": []
+    },
+    {
+      "sequence": 236,
+      "physicalPage": 41,
+      "sourceRowOnPage": 52,
+      "cropSha256": "7db887d4dac0cbf6d1b97a392eb89da96ad9982886958aecd141138e9e1bc3b5",
+      "reviewTargetFields": [
+        "remuneration"
+      ],
+      "currentAuthorSourceReadings": {
+        "remuneration": "90,005"
+      },
+      "originalFrozenRawReadings": {
+        "remuneration": "90,006"
+      },
+      "scopedIndividualSourceRechecks": [
+        {
+          "sequence": 236,
+          "field": "remuneration",
+          "raw": "90,006",
+          "reread": "90,005",
+          "individualActual1200Reading": "90,005",
+          "differsFromFrozenRaw": true,
+          "largeSheetProvisionalRetained": true,
+          "sourceImage": {
+            "sequence": 236,
+            "physicalPage": 41,
+            "sourceRowOnPage": 52,
+            "field": "remuneration",
+            "original300DpiPixelBox": [
+              1735,
+              2764,
+              2068,
+              2802
+            ],
+            "actualPdfPointClip": [
+              416.4,
+              663.36,
+              496.32,
+              672.48
+            ],
+            "dpi": 1200,
+            "path": "/workspace/salary-review-schools-temp/2019-006-confirmations/seq236-remuneration-actual1200.png",
+            "sha256": "ed0e5881eb139c84a0f1ec672a16aad247df305e70f026d51d87f2e044795d1e"
+          },
+          "status": "proposed-source-reading-fresh-peer-pending"
+        }
+      ]
+    },
+    {
+      "sequence": 239,
+      "physicalPage": 41,
+      "sourceRowOnPage": 56,
+      "cropSha256": "8ae2e428f8f5c7f9034ae022ad323cf6b2d84e752e7e0c9933c22ac28565ec32",
+      "reviewTargetFields": [
+        "expenses"
+      ],
+      "currentAuthorSourceReadings": {
+        "expenses": "1,565"
+      },
+      "originalFrozenRawReadings": {
+        "expenses": "1,535"
+      },
+      "scopedIndividualSourceRechecks": [
+        {
+          "sequence": 239,
+          "field": "expenses",
+          "raw": "1,535",
+          "reread": "1,565",
+          "individualActual1200Reading": "1,565",
+          "differsFromFrozenRaw": true,
+          "largeSheetProvisionalRetained": true,
+          "sourceImage": {
+            "sequence": 239,
+            "physicalPage": 41,
+            "sourceRowOnPage": 56,
+            "field": "expenses",
+            "original300DpiPixelBox": [
+              2052,
+              2931,
+              2422,
+              2969
+            ],
+            "actualPdfPointClip": [
+              492.48,
+              703.44,
+              581.28,
+              712.56
+            ],
+            "dpi": 1200,
+            "path": "/workspace/salary-review-schools-temp/2019-006-confirmations/seq239-expenses-actual1200.png",
+            "sha256": "7862974c77c8371e7d445a534c43d934d6bf81ed97015c71b237779e27b2c8da"
+          },
+          "status": "proposed-source-reading-fresh-peer-pending"
+        }
+      ]
+    },
+    {
+      "sequence": 246,
+      "physicalPage": 42,
+      "sourceRowOnPage": 6,
+      "cropSha256": "1945807afa8ec520b3338a2429fce2b4fcea6eeee9a6b8325964b32b69a4a3ad",
+      "reviewTargetFields": [
+        "expenses"
+      ],
+      "currentAuthorSourceReadings": {
+        "expenses": "1,238"
+      },
+      "originalFrozenRawReadings": {
+        "expenses": "1,238"
+      },
+      "scopedIndividualSourceRechecks": []
+    },
+    {
+      "sequence": 248,
+      "physicalPage": 42,
+      "sourceRowOnPage": 8,
+      "cropSha256": "3884433bba576240bea69df1cb08c698c1426371c5fcd15de143abb9a819d802",
+      "reviewTargetFields": [
+        "name"
+      ],
+      "currentAuthorSourceReadings": {
+        "name": "Hall,Kari Lynne"
+      },
+      "originalFrozenRawReadings": {
+        "name": "Hall,Kari Lynne"
+      },
+      "scopedIndividualSourceRechecks": [
+        {
+          "sequence": 248,
+          "field": "name",
+          "raw": "Hall,Kari Lynne",
+          "reread": "Hall,Karl Lynne",
+          "individualActual1200Reading": "Hall,Kari Lynne",
+          "differsFromFrozenRaw": false,
+          "largeSheetProvisionalRetained": false,
+          "sourceImage": {
+            "sequence": 248,
+            "physicalPage": 42,
+            "sourceRowOnPage": 8,
+            "field": "name",
+            "original300DpiPixelBox": [
+              304,
+              963,
+              1404,
+              1001
+            ],
+            "actualPdfPointClip": [
+              72.96,
+              231.12,
+              336.96,
+              240.24
+            ],
+            "dpi": 1200,
+            "path": "/workspace/salary-review-schools-temp/2019-006-confirmations/seq248-name-actual1200.png",
+            "sha256": "e433654b67d19e4d7549899a61ada62f3000af08ed362ceb508b66584db3e335"
+          },
+          "status": "frozen-raw-confirmed-larger-sheet-provisional-rejected"
+        }
+      ]
+    },
+    {
+      "sequence": 251,
+      "physicalPage": 42,
+      "sourceRowOnPage": 13,
+      "cropSha256": "f2fb221145e87429255dbfe1e990f770ee584896861d6c2248114b283cf18cfe",
+      "reviewTargetFields": [
+        "expenses"
+      ],
+      "currentAuthorSourceReadings": {
+        "expenses": "2,450"
+      },
+      "originalFrozenRawReadings": {
+        "expenses": "2,450"
+      },
+      "scopedIndividualSourceRechecks": []
+    },
+    {
+      "sequence": 252,
+      "physicalPage": 42,
+      "sourceRowOnPage": 16,
+      "cropSha256": "a6b9a92b8d9e7754dc90c8d7c177ce8787ac22d8f4ebe15e61647068f8900ff9",
+      "reviewTargetFields": [
+        "expenses"
+      ],
+      "currentAuthorSourceReadings": {
+        "expenses": "6,680"
+      },
+      "originalFrozenRawReadings": {
+        "expenses": "6,680"
+      },
+      "scopedIndividualSourceRechecks": []
+    },
+    {
+      "sequence": 253,
+      "physicalPage": 42,
+      "sourceRowOnPage": 18,
+      "cropSha256": "6694a293e56f1c7f6f2b335233a765f6db96ec452c96c089a4be9dab7204712a",
+      "reviewTargetFields": [
+        "remuneration"
+      ],
+      "currentAuthorSourceReadings": {
+        "remuneration": "437,321"
+      },
+      "originalFrozenRawReadings": {
+        "remuneration": "437,321"
+      },
+      "scopedIndividualSourceRechecks": []
+    },
+    {
+      "sequence": 254,
+      "physicalPage": 42,
+      "sourceRowOnPage": 20,
+      "cropSha256": "d87a57ae1016791f69a087fc66a5c1c9493f40d3239e9f78809a6aa672995472",
+      "reviewTargetFields": [
+        "remuneration"
+      ],
+      "currentAuthorSourceReadings": {
+        "remuneration": "77,574"
+      },
+      "originalFrozenRawReadings": {
+        "remuneration": "77,574"
+      },
+      "scopedIndividualSourceRechecks": []
+    },
+    {
+      "sequence": 260,
+      "physicalPage": 42,
+      "sourceRowOnPage": 28,
+      "cropSha256": "8ba8d427abc7b31d45bcdc83197513099b2f968eb95a02a1640603c180e2faad",
+      "reviewTargetFields": [
+        "expenses"
+      ],
+      "currentAuthorSourceReadings": {
+        "expenses": "9,049"
+      },
+      "originalFrozenRawReadings": {
+        "expenses": "9,049"
+      },
+      "scopedIndividualSourceRechecks": []
+    },
+    {
+      "sequence": 264,
+      "physicalPage": 42,
+      "sourceRowOnPage": 33,
+      "cropSha256": "5fd3247c5f168d2bb9cc99fab649a5a3b7d511803004baf792e247575a669b0b",
+      "reviewTargetFields": [
+        "remuneration"
+      ],
+      "currentAuthorSourceReadings": {
+        "remuneration": "87,201"
+      },
+      "originalFrozenRawReadings": {
+        "remuneration": "87,201"
+      },
+      "scopedIndividualSourceRechecks": []
+    },
+    {
+      "sequence": 268,
+      "physicalPage": 42,
+      "sourceRowOnPage": 37,
+      "cropSha256": "95e6a546300cde0f6652f906102f6786e3f1c721efbcbf13e790768b7d53624c",
+      "reviewTargetFields": [
+        "name"
+      ],
+      "currentAuthorSourceReadings": {
+        "name": "Han,Jonson"
+      },
+      "originalFrozenRawReadings": {
+        "name": "Han,Jouson"
+      },
+      "scopedIndividualSourceRechecks": [
+        {
+          "sequence": 268,
+          "field": "name",
+          "raw": "Han,Jouson",
+          "reread": "Han,Jonson",
+          "individualActual1200Reading": "Han,Jonson",
+          "differsFromFrozenRaw": true,
+          "largeSheetProvisionalRetained": true,
+          "sourceImage": {
+            "sequence": 268,
+            "physicalPage": 42,
+            "sourceRowOnPage": 37,
+            "field": "name",
+            "original300DpiPixelBox": [
+              304,
+              2149,
+              1404,
+              2187
+            ],
+            "actualPdfPointClip": [
+              72.96,
+              515.76,
+              336.96,
+              524.88
+            ],
+            "dpi": 1200,
+            "path": "/workspace/salary-review-schools-temp/2019-006-confirmations/seq268-name-actual1200.png",
+            "sha256": "eaca03c1419659b0a51aee432813984496b993d06765317360108412468c1c74"
+          },
+          "status": "proposed-source-reading-fresh-peer-pending"
+        }
+      ]
+    },
+    {
+      "sequence": 273,
+      "physicalPage": 42,
+      "sourceRowOnPage": 42,
+      "cropSha256": "d07f471933caf553514de2126f2f3fad8035abcb84367754930c6a888ed23a35",
+      "reviewTargetFields": [
+        "remuneration"
+      ],
+      "currentAuthorSourceReadings": {
+        "remuneration": "107,674"
+      },
+      "originalFrozenRawReadings": {
+        "remuneration": "107,674"
+      },
+      "scopedIndividualSourceRechecks": []
+    },
+    {
+      "sequence": 275,
+      "physicalPage": 42,
+      "sourceRowOnPage": 44,
+      "cropSha256": "3b0fe22c58987b52b71e00378991374cf0b887f4e4e06c17b9316d0b61723fa4",
+      "reviewTargetFields": [
+        "remuneration"
+      ],
+      "currentAuthorSourceReadings": {
+        "remuneration": "79,306"
+      },
+      "originalFrozenRawReadings": {
+        "remuneration": "79,306"
+      },
+      "scopedIndividualSourceRechecks": []
+    },
+    {
+      "sequence": 281,
+      "physicalPage": 42,
+      "sourceRowOnPage": 52,
+      "cropSha256": "064c0819286e320ba380e1eca714ceda54e953c914b95ba116a7d5583f2f7939",
+      "reviewTargetFields": [
+        "expenses"
+      ],
+      "currentAuthorSourceReadings": {
+        "expenses": "1,283"
+      },
+      "originalFrozenRawReadings": {
+        "expenses": "1,283"
+      },
+      "scopedIndividualSourceRechecks": []
+    },
+    {
+      "sequence": 297,
+      "physicalPage": 43,
+      "sourceRowOnPage": 16,
+      "cropSha256": "2c6c8e06c355488a6225ac6b9ab5bf682e9591752a17630cf7cb81d2d4a57515",
+      "reviewTargetFields": [
+        "remuneration"
+      ],
+      "currentAuthorSourceReadings": {
+        "remuneration": "84,340"
+      },
+      "originalFrozenRawReadings": {
+        "remuneration": "84,340"
+      },
+      "scopedIndividualSourceRechecks": []
+    },
+    {
+      "sequence": 305,
+      "physicalPage": 43,
+      "sourceRowOnPage": 25,
+      "cropSha256": "df3ba7ec533ed14c359c3cd165158fedbfdf45b5c6c45c765755b8193602cffb",
+      "reviewTargetFields": [
+        "remuneration"
+      ],
+      "currentAuthorSourceReadings": {
+        "remuneration": "94,977"
+      },
+      "originalFrozenRawReadings": {
+        "remuneration": "94,977"
+      },
+      "scopedIndividualSourceRechecks": []
+    },
+    {
+      "sequence": 306,
+      "physicalPage": 43,
+      "sourceRowOnPage": 26,
+      "cropSha256": "0c9ec52f417c7abfe5080825290c111b46d028931990008d20e802d9f1c7b278",
+      "reviewTargetFields": [
+        "name"
+      ],
+      "currentAuthorSourceReadings": {
+        "name": "Harris,Ashley Marie Christine"
+      },
+      "originalFrozenRawReadings": {
+        "name": "Harris,Ashley Marie Christina"
+      },
+      "scopedIndividualSourceRechecks": [
+        {
+          "sequence": 306,
+          "field": "name",
+          "raw": "Harris,Ashley Marie Christina",
+          "reread": "Harris,Ashley Marie Christine",
+          "individualActual1200Reading": "Harris,Ashley Marie Christine",
+          "differsFromFrozenRaw": true,
+          "largeSheetProvisionalRetained": true,
+          "sourceImage": {
+            "sequence": 306,
+            "physicalPage": 43,
+            "sourceRowOnPage": 26,
+            "field": "name",
+            "original300DpiPixelBox": [
+              304,
+              1699,
+              1404,
+              1739
+            ],
+            "actualPdfPointClip": [
+              72.96,
+              407.76,
+              336.96,
+              417.36
+            ],
+            "dpi": 1200,
+            "path": "/workspace/salary-review-schools-temp/2019-006-confirmations/seq306-name-actual1200.png",
+            "sha256": "879a65c715e52157612b4f1ff80c267c0893112a8441b7ecc5034db73ccc74be"
+          },
+          "status": "proposed-source-reading-fresh-peer-pending"
+        }
+      ]
+    },
+    {
+      "sequence": 308,
+      "physicalPage": 43,
+      "sourceRowOnPage": 28,
+      "cropSha256": "486ff959820e0d5d5b72c3bb3daedba5948397af29d94fda1b4beb62495c5bcf",
+      "reviewTargetFields": [
+        "remuneration"
+      ],
+      "currentAuthorSourceReadings": {
+        "remuneration": "85,590"
+      },
+      "originalFrozenRawReadings": {
+        "remuneration": "85,550"
+      },
+      "scopedIndividualSourceRechecks": [
+        {
+          "sequence": 308,
+          "field": "remuneration",
+          "raw": "85,550",
+          "reread": "85,590",
+          "individualActual1200Reading": "85,590",
+          "differsFromFrozenRaw": true,
+          "largeSheetProvisionalRetained": true,
+          "sourceImage": {
+            "sequence": 308,
+            "physicalPage": 43,
+            "sourceRowOnPage": 28,
+            "field": "remuneration",
+            "original300DpiPixelBox": [
+              1735,
+              1779,
+              2068,
+              1818
+            ],
+            "actualPdfPointClip": [
+              416.4,
+              426.96,
+              496.32,
+              436.32
+            ],
+            "dpi": 1200,
+            "path": "/workspace/salary-review-schools-temp/2019-006-confirmations/seq308-remuneration-actual1200.png",
+            "sha256": "e32e7a2092218d69af35f85b03a881e4fa589aeb5415a863ed2d62d053d4f018"
+          },
+          "status": "proposed-source-reading-fresh-peer-pending"
+        }
+      ]
+    },
+    {
+      "sequence": 321,
+      "physicalPage": 43,
+      "sourceRowOnPage": 44,
+      "cropSha256": "c18eaa584f4aa1c73f3352c2ef441fe2fe95e851cecfe7a8b8c6473339e7c4ae",
+      "reviewTargetFields": [
+        "remuneration"
+      ],
+      "currentAuthorSourceReadings": {
+        "remuneration": "88,888"
+      },
+      "originalFrozenRawReadings": {
+        "remuneration": "88,888"
+      },
+      "scopedIndividualSourceRechecks": []
+    },
+    {
+      "sequence": 335,
+      "physicalPage": 44,
+      "sourceRowOnPage": 5,
+      "cropSha256": "44ae7270fc71ec9312c879d98bd8f3b6c4458e4a1ac64086c6101e653cdaf48e",
+      "reviewTargetFields": [
+        "expenses"
+      ],
+      "currentAuthorSourceReadings": {
+        "expenses": "2,380"
+      },
+      "originalFrozenRawReadings": {
+        "expenses": "2,380"
+      },
+      "scopedIndividualSourceRechecks": []
+    },
+    {
+      "sequence": 337,
+      "physicalPage": 44,
+      "sourceRowOnPage": 7,
+      "cropSha256": "e603d9016023bf9cf84f3881d70dc32b22cbbd7408ddbd5bd41be8e40ea3b259",
+      "reviewTargetFields": [
+        "expenses"
+      ],
+      "currentAuthorSourceReadings": {
+        "expenses": "7,313"
+      },
+      "originalFrozenRawReadings": {
+        "expenses": "7,313"
+      },
+      "scopedIndividualSourceRechecks": []
+    },
+    {
+      "sequence": 345,
+      "physicalPage": 44,
+      "sourceRowOnPage": 16,
+      "cropSha256": "013330c7cbadc4412d15db9fbcd4bdc029b9830a354bea2315b660ff81d949e8",
+      "reviewTargetFields": [
+        "expenses"
+      ],
+      "currentAuthorSourceReadings": {
+        "expenses": "5,752"
+      },
+      "originalFrozenRawReadings": {
+        "expenses": "5,752"
+      },
+      "scopedIndividualSourceRechecks": []
+    },
+    {
+      "sequence": 346,
+      "physicalPage": 44,
+      "sourceRowOnPage": 17,
+      "cropSha256": "0abd3a762864eaf777942c941ccc2e9123ca45763872467615794e6c95c28700",
+      "reviewTargetFields": [
+        "expenses"
+      ],
+      "currentAuthorSourceReadings": {
+        "expenses": "7,935"
+      },
+      "originalFrozenRawReadings": {
+        "expenses": "7,935"
+      },
+      "scopedIndividualSourceRechecks": [
+        {
+          "sequence": 346,
+          "field": "expenses",
+          "raw": "7,935",
+          "reread": "7,955",
+          "individualActual1200Reading": "7,935",
+          "differsFromFrozenRaw": false,
+          "largeSheetProvisionalRetained": false,
+          "sourceImage": {
+            "sequence": 346,
+            "physicalPage": 44,
+            "sourceRowOnPage": 17,
+            "field": "expenses",
+            "original300DpiPixelBox": [
+              2052,
+              1332,
+              2422,
+              1370
+            ],
+            "actualPdfPointClip": [
+              492.48,
+              319.68,
+              581.28,
+              328.8
+            ],
+            "dpi": 1200,
+            "path": "/workspace/salary-review-schools-temp/2019-006-confirmations/seq346-expenses-actual1200.png",
+            "sha256": "3e694d47899311d657185f61b0d30b45d8f0130b8e2af98a77093d8fe13b5981"
+          },
+          "status": "frozen-raw-confirmed-larger-sheet-provisional-rejected"
+        }
+      ]
+    },
+    {
+      "sequence": 347,
+      "physicalPage": 44,
+      "sourceRowOnPage": 18,
+      "cropSha256": "f3ec6f2286078ae1af7186416bca4e9a403c0addddccb04dfb7bd0414073c3ee",
+      "reviewTargetFields": [
+        "expenses"
+      ],
+      "currentAuthorSourceReadings": {
+        "expenses": "2,054"
+      },
+      "originalFrozenRawReadings": {
+        "expenses": "2,054"
+      },
+      "scopedIndividualSourceRechecks": []
+    },
+    {
+      "sequence": 351,
+      "physicalPage": 44,
+      "sourceRowOnPage": 23,
+      "cropSha256": "242bd3c9358097c72640d7d7f3a383682954fa579b4308d9aeb1653b8f433fd7",
+      "reviewTargetFields": [
+        "remuneration"
+      ],
+      "currentAuthorSourceReadings": {
+        "remuneration": "79,971"
+      },
+      "originalFrozenRawReadings": {
+        "remuneration": "79,971"
+      },
+      "scopedIndividualSourceRechecks": []
+    },
+    {
+      "sequence": 352,
+      "physicalPage": 44,
+      "sourceRowOnPage": 25,
+      "cropSha256": "da0860afc9988ed50f54df3473d34d9493218a49830487a8926e1423eeb7186a",
+      "reviewTargetFields": [
+        "expenses"
+      ],
+      "currentAuthorSourceReadings": {
+        "expenses": "2,045"
+      },
+      "originalFrozenRawReadings": {
+        "expenses": "2,045"
+      },
+      "scopedIndividualSourceRechecks": []
+    },
+    {
+      "sequence": 360,
+      "physicalPage": 44,
+      "sourceRowOnPage": 34,
+      "cropSha256": "5c36461f5d2711d3a9d086ce7a2171c55d83002778a30834e7ac7bcfe799574d",
+      "reviewTargetFields": [
+        "expenses"
+      ],
+      "currentAuthorSourceReadings": {
+        "expenses": "2,801"
+      },
+      "originalFrozenRawReadings": {
+        "expenses": "2,801"
+      },
+      "scopedIndividualSourceRechecks": []
+    },
+    {
+      "sequence": 362,
+      "physicalPage": 44,
+      "sourceRowOnPage": 36,
+      "cropSha256": "d8bb365c577c2d31537fb1d200896189ffddb516d01e8890cb535cea58ef5c4e",
+      "reviewTargetFields": [
+        "expenses"
+      ],
+      "currentAuthorSourceReadings": {
+        "expenses": "1,939"
+      },
+      "originalFrozenRawReadings": {
+        "expenses": "1,939"
+      },
+      "scopedIndividualSourceRechecks": []
+    },
+    {
+      "sequence": 365,
+      "physicalPage": 44,
+      "sourceRowOnPage": 39,
+      "cropSha256": "d245767112a2b24af363a8c3ea1cc1b75a884e77b1ec43e07b934dca58248974",
+      "reviewTargetFields": [
+        "expenses"
+      ],
+      "currentAuthorSourceReadings": {
+        "expenses": "1,387"
+      },
+      "originalFrozenRawReadings": {
+        "expenses": "1,387"
+      },
+      "scopedIndividualSourceRechecks": []
+    },
+    {
+      "sequence": 370,
+      "physicalPage": 44,
+      "sourceRowOnPage": 44,
+      "cropSha256": "729f0b74b650ace40752328af90ac2c66edcd9daa881524aabc9f4603e83b56a",
+      "reviewTargetFields": [
+        "remuneration"
+      ],
+      "currentAuthorSourceReadings": {
+        "remuneration": "94,346"
+      },
+      "originalFrozenRawReadings": {
+        "remuneration": "94,346"
+      },
+      "scopedIndividualSourceRechecks": []
+    },
+    {
+      "sequence": 383,
+      "physicalPage": 45,
+      "sourceRowOnPage": 2,
+      "cropSha256": "b7c3003a21e3d6e64c725158cba54fa3bfd74456f142859bcd0146d33ae0514c",
+      "reviewTargetFields": [
+        "expenses"
+      ],
+      "currentAuthorSourceReadings": {
+        "expenses": "2,070"
+      },
+      "originalFrozenRawReadings": {
+        "expenses": "2,070"
+      },
+      "scopedIndividualSourceRechecks": []
+    },
+    {
+      "sequence": 386,
+      "physicalPage": 45,
+      "sourceRowOnPage": 5,
+      "cropSha256": "565243f054c22eee963fa42d9897fe58faa684f01e5a03d6747b15e5654817ab",
+      "reviewTargetFields": [
+        "name"
+      ],
+      "currentAuthorSourceReadings": {
+        "name": "Henry,Bonnie J."
+      },
+      "originalFrozenRawReadings": {
+        "name": "Henry,Bonnie L."
+      },
+      "scopedIndividualSourceRechecks": [
+        {
+          "sequence": 386,
+          "field": "name",
+          "raw": "Henry,Bonnie L.",
+          "reread": "Henry,Bonnie J.",
+          "individualActual1200Reading": "Henry,Bonnie J.",
+          "differsFromFrozenRaw": true,
+          "largeSheetProvisionalRetained": true,
+          "sourceImage": {
+            "sequence": 386,
+            "physicalPage": 45,
+            "sourceRowOnPage": 5,
+            "field": "name",
+            "original300DpiPixelBox": [
+              304,
+              840,
+              1404,
+              879
+            ],
+            "actualPdfPointClip": [
+              72.96,
+              201.6,
+              336.96,
+              210.96
+            ],
+            "dpi": 1200,
+            "path": "/workspace/salary-review-schools-temp/2019-006-confirmations/seq386-name-actual1200.png",
+            "sha256": "b96ca0a8060463d73f8d890d7fbc5d2ba0630258c7d53dba6c1c16070d6f7c66"
+          },
+          "status": "proposed-source-reading-fresh-peer-pending"
+        }
+      ]
+    },
+    {
+      "sequence": 396,
+      "physicalPage": 45,
+      "sourceRowOnPage": 20,
+      "cropSha256": "a2e4883eb548c8d759817c04480da5be764888924e06f1cb4aed2cd09f350a22",
+      "reviewTargetFields": [
+        "expenses"
+      ],
+      "currentAuthorSourceReadings": {
+        "expenses": "2,436"
+      },
+      "originalFrozenRawReadings": {
+        "expenses": "2,436"
+      },
+      "scopedIndividualSourceRechecks": []
+    },
+    {
+      "sequence": 400,
+      "physicalPage": 45,
+      "sourceRowOnPage": 24,
+      "cropSha256": "e47fc07be5f387347402dc18711ad75e2c7eb638ddaa848b2f3c355cd6a6f19e",
+      "reviewTargetFields": [
+        "expenses"
+      ],
+      "currentAuthorSourceReadings": {
+        "expenses": "3,591"
+      },
+      "originalFrozenRawReadings": {
+        "expenses": "3,391"
+      },
+      "scopedIndividualSourceRechecks": [
+        {
+          "sequence": 400,
+          "field": "expenses",
+          "raw": "3,391",
+          "reread": "3,591",
+          "individualActual1200Reading": "3,591",
+          "differsFromFrozenRaw": true,
+          "largeSheetProvisionalRetained": true,
+          "sourceImage": {
+            "sequence": 400,
+            "physicalPage": 45,
+            "sourceRowOnPage": 24,
+            "field": "expenses",
+            "original300DpiPixelBox": [
+              2052,
+              1615,
+              2422,
+              1654
+            ],
+            "actualPdfPointClip": [
+              492.48,
+              387.6,
+              581.28,
+              396.96
+            ],
+            "dpi": 1200,
+            "path": "/workspace/salary-review-schools-temp/2019-006-confirmations/seq400-expenses-actual1200.png",
+            "sha256": "3488ae9d1f5eb8fcc8955edb6a0c2de9f4749bc691bbc8241f1a8e454056bae4"
+          },
+          "status": "proposed-source-reading-fresh-peer-pending"
+        }
+      ]
+    }
+  ],
+  "acceptedEmployeeRows": 0
+}

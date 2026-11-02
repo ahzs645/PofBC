@@ -1,0 +1,15 @@
+{
+  "reviewer": "/root/recovery_review",
+  "originalFrozenFirstPassArtifact": {
+    "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-history-batches-2019-20-003-original-transcript.json",
+    "sha256": "4d9da44395a4182182c14de259c2d65bf61326e8f0bf9eaae1cd883272f2ed4d"
+  },
+  "validJsonSamePayloadTranscript": {
+    "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-history-batches-2019-20-003-original-transcript-v2.json",
+    "sha256": "91d611ebe883a2e1c2a24fcba8eb7c2d363cd0a22ad74bad927b394e5dc12156"
+  },
+  "reason": "The first freeze accidentally appended the literal two characters backslash-n after the complete JSON object. The immutable original is retained; v2 removes only those two trailing characters and appends a real newline.",
+  "allOriginalJsonPayloadBytesUnchanged": true,
+  "all472FirstPassValuesAndUncertaintiesUnchanged": true,
+  "fullCandidateStillUnopened": true
+}

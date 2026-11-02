@@ -1,0 +1,58 @@
+{
+  "sourceId": "phsa-2015-16",
+  "sourceSha256": "f8bc28af7e87f57c51973f5ed581e50fe414f00486659551ad5c8171b98f73a3",
+  "batch": "phsa-2015-16-007",
+  "frozenBatchSha256": "9f42f252eb86e23e9844ff75756297e56688bc4cb59e594a8feac280423523e9",
+  "rawTranscriptPath": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-schools-2015-16-batch-007-original-transcript.json",
+  "rawTranscriptSha256": "ba1af7d14f17e779bf85ff3d5884af5d50aba4c78229c5963ec4b227c6a0e7ba",
+  "typographyLedgerPath": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-schools-2015-16-batch-007-typography-ledger.json",
+  "typographyLedgerSha256": "a1804429b255d6840430f8ec398ecc6523ab76fab3b8fb0147035660a1d231eb",
+  "reviewer": "/root/recovery_schools",
+  "reviewedOn": "2026-11-01",
+  "rawFrozenBeforeCandidateOpened": true,
+  "rowsCompared": 346,
+  "requestedFieldsCompared": {
+    "name": 225,
+    "remuneration": 141,
+    "expenses": 20
+  },
+  "ordinaryRows": 340,
+  "qualifiedSourceTypographyRowsPendingExactAdoption": 6,
+  "candidateDifferences": [
+    {
+      "sequence": 119,
+      "physicalPage": 111,
+      "sourceRowOnPage": 29,
+      "field": "name",
+      "imageFirstProposedQualifiedReading": "Tait,Ian",
+      "candidate": "Tait,lan",
+      "interpretation": "Qualified source-typography I/l contextual reading; both visible alternatives retained. Not a pixel-proved glyph correction."
+    },
+    {
+      "sequence": 126,
+      "physicalPage": 112,
+      "sourceRowOnPage": 11,
+      "field": "name",
+      "imageFirstProposedQualifiedReading": "Tansey,Ira Christina",
+      "candidate": "Tansey,lra Christina",
+      "interpretation": "Qualified source-typography I/l contextual reading; both visible alternatives retained. Not a pixel-proved glyph correction."
+    }
+  ],
+  "ordinaryFieldCandidateDifferences": [],
+  "monetaryCandidateDifferences": [],
+  "reviewerOnlyCorrections": [],
+  "unresolvedNonTypographyRows": [],
+  "validation": {
+    "hashPinnedFilesVerified": 856,
+    "actualPdfSourcePagesIndependentlyRenderedAt300DpiAndPixelEqual": 27,
+    "fullRowAndRequestedFieldCropCutsPixelEqualToActualSource": 732,
+    "fieldScopeExact": true,
+    "rowMultiplicityAndOrderExact": true,
+    "originalFullRowCropHashesRetained": true
+  },
+  "actualPdfFidelityReceipt": {
+    "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-schools-2015-16-batch-007-actual-pdf-pixel-verification.json",
+    "sha256": "2c6d3d169da73d5aa166c35eef7a4e9281d38f6e883e7d9c4b2bd686fb7ac12b"
+  },
+  "acceptedEmployeeRows": 0
+}

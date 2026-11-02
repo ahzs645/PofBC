@@ -1,0 +1,69 @@
+{
+  "reviewer": "/root/held_health_review",
+  "sourceId": "phsa-2019-20",
+  "sourceSha256": "0e31ac2054f0c2d4ef78797185dddd96cc0cdf2eab94bd6841fa24e1c38e7d02",
+  "batch": "phsa-2019-20-001",
+  "qualificationCaseCount": 1,
+  "sourceNameSegmentationExceptions": [
+    {
+      "sourceId": "phsa-2019-20",
+      "sourceSha256": "0e31ac2054f0c2d4ef78797185dddd96cc0cdf2eab94bd6841fa24e1c38e7d02",
+      "batch": "phsa-2019-20-001",
+      "sequence": 203,
+      "physicalPage": 7,
+      "sourceRowOnPage": 7,
+      "proposedName": "Bangham,Tanni Debora",
+      "visibleAlternatives": [
+        "Bangham,Tanni Debora",
+        "Bangham,Tamni Debora",
+        "Bangham,Tamri Debora",
+        "Bangham,Tanri Debora",
+        "Bangham,Tarni Debora"
+      ],
+      "exactCompressedClusterPrimarySpanZeroBased": [
+        10,
+        12
+      ],
+      "actualSourceEvidence": {
+        "originalFullRowCropPath": "/tmp/queue-completion-phsa/phsa-2019-20/review-images/batch-001/p007-r07.png",
+        "originalFullRowCropSha256": "b033f7ff9b3241968092a610ca3305984d9e8aa15847e4a032b4bb416095bbaf",
+        "nameOnlyActual600DpiCropPath": "/tmp/queue-completion-phsa/independent-2019-001-pre-freeze-600/0203-name.png",
+        "nameOnlyActual600DpiCropSha256": "6bfe5ba95e98fdc6a8ba7f6d439d6624d934b7d6c44ea47d7210bf66ff0d942c",
+        "adjacentOriginal300DpiContextPath": "/tmp/queue-completion-phsa/independent-2019-001-pre-freeze-600/0203-adjacent-context-actual300.png",
+        "adjacentOriginal300DpiContextSha256": "c4bd37b89bfbe3bc800dd7d3418638cd511fc2bbbf689e5f4eacd4ba474fa7a7",
+        "pageImagePath": "/tmp/queue-completion-phsa/phsa-2019-20/images/p007.png",
+        "pageImageSha256": "0a839f5ef6ce9020a0d55450f7caeb1a75a1a0db3a2f5149eecef57f7f3eca5b",
+        "rawPageEvidence": {
+          "path": "research/salaries/queue-completion-phsa/evidence/phsa-2019-20-raw-p007.json.gzip",
+          "sha256": "c9ba8431857111035ebacffc7ed7d9b15c7485e8668f8bc5978c40dcd159889a"
+        },
+        "pageEvidencePath": "research/salaries/queue-completion-phsa/evidence/phsa-2019-20-rows-p007.json.gzip",
+        "pageEvidenceSha256": "1d1e3cdd13adc6534dd18a4079a9d105fa471cf941c42639c22b840515c062f0"
+      },
+      "primaryIndependentlyChosenByBothImageFirstReadersBeforeCandidateComparison": true,
+      "independentImageFirstTranscript": {
+        "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-history-2019-20-batch-001-image-transcript.tsv",
+        "sha256": "e2cfb21c17a3d0a5603653477019479654aa4d8229157aec7d1f487259ae2d77"
+      },
+      "independentImageFirstFreezeReceipt": {
+        "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-history-2019-20-batch-001-image-transcript-receipt.json",
+        "sha256": "0be44ca02443cba9873018f48f7c95f0dd26aff1fb0028fafd83cb9f0e109436"
+      },
+      "secondImageFirstPeer": {
+        "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-history-batches-2019-20-001-two-name-peer-original.json",
+        "sha256": "944ca44bc4af36d8939037c2a9f226392cc18187428ac3b049b7d054902b933d"
+      },
+      "caseProvenByPixels": false,
+      "notGeneralRnMOrCaseGrammar": true,
+      "assumptionBasis": "Two independent source-first readings and root actual-source inspection each provisionally read Tanni; compressed upright strokes do not prove those letters uniquely. Retain the union of finite visible alternatives and identify this one exact source-case ambiguity publicly. No dictionary, identity linkage, prior year, or monetary controls supply letters.",
+      "allUnrequestedFieldsAndNameOutsideExactClusterUnchanged": true,
+      "status": "exact-root-authorized-compressed-stroke-qualification-awaiting-file-adoption-pin"
+    }
+  ],
+  "rootExplicitAuthorizationMessage": "ROOT personally viewed actual p7r7seq203 crop; literalprimary also Bangham,Tanni Debora. I approve THAT EXACT case only as qualified compressed-stroke transcription after your2 blind sourceprimaries+this rootreview; preserve UNION finitealts Tamni/Tamri/Tanri/Tarni, sourcecrop/context, allsuffix/case/punctuation/moneyunchanged, mandatorypublicWarning. Do not stretch rn/m grammar; require CLOSED case-bound exception pin and exact rootledger.",
+  "requiresRootFileAdoptionAndPublicWarningBeforeSourceAcceptance": true,
+  "limits": [
+    "One exact name-cluster exception only; no general n/r/m replacement or money/year waiver.",
+    "The primary and the finite union remain honest source-transcription uncertainty, not pixel-unique proof or a personal-identity assertion."
+  ]
+}

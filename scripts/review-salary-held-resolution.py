@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 """Reconcile held-source resolutions and preserve every earlier salary observation."""
+import argparse
 import csv
 import gzip
 import hashlib
@@ -7,6 +8,7 @@ import json
 from collections import Counter, defaultdict
 from decimal import Decimal
 from pathlib import Path
+from salary_release_audit import verify_frozen_release
 
 ROOT = Path(__file__).resolve().parents[1]
 RESEARCH = ROOT / 'research/salaries'
@@ -74,7 +76,56 @@ def verify_review_coverage(acceptance, source_ids):
         assert all(path in receipts and path.startswith('reviews/independent-') for path in paths), identifier
 
 
-def main():
+def validate_frozen_resolution(root=ROOT):
+    """Keep PR36's accepted inputs and published rows fixed as other histories grow."""
+    root = Path(root)
+    research = root / 'research/salaries'
+    folder = research / 'held-resolution-2026-11-01'
+    release = read(folder / 'release.json')
+    acceptance = read(folder / 'parent-acceptance.json')
+    result = verify_frozen_release(folder, research)
+    verify_review_coverage(acceptance, [entry['sourceId'] for entry in release['imports']])
+    assert acceptance['accepted'] is True and acceptance['noOutreach'] is True
+    pinned(folder, 'baseline-row-fingerprints.json', acceptance['baselineRowFingerprintSha256'])
+    for relative, expected in acceptance['reviewReceiptSha256'].items():
+        pinned(folder, relative, expected)
+    for area, expected in acceptance['candidateFreezeSha256'].items():
+        pinned(folder, area + '/candidate-freeze.json', expected)
+        for file in read(folder / area / 'candidate-freeze.json')['files']:
+            pinned(root, file['path'], file['sha256'])
+    for relative, expected in release['manifestSha256'].items():
+        pinned(root, relative, expected)
+    index = read(root / 'public/salaries/employers/index.json')
+    needed = {entry['employerSlug'] for entry in release['imports']}
+    groups = defaultdict(list)
+    for employer in index['employers']:
+        if employer['slug'] not in needed:
+            continue
+        for row in decode((root / 'public/salaries/employers' / (employer['slug'] + '.json.gzip')).read_bytes()):
+            groups[(employer['slug'], index['years'][row[4]], row[5])].append([row[0], row[1], row[2], row[3], row[6]])
+    for entry in release['imports']:
+        path = research / entry['collection']
+        source = next(s for s in read(path / 'sources.json')['sources'] if s['id'] == entry['sourceId'])
+        published = index['sources'][source['id']]
+        for key in ['year', 'periodType', 'periodStart', 'periodEnd', 'notes', 'validation', 'publicWarning',
+                    'sha256', 'dataSha256', 'completeEmployeeSchedule']:
+            assert published.get(key) == source.get(key), (source['id'], key)
+        assert published['scope'] == (source.get('category') or source['scope']), source['id']
+        assert published['url'] == source['sourceUrl'], source['id']
+        rows = decode((path / source['file']).read_bytes())
+        for slug in {r[0] for r in rows}:
+            expected = [[r[1], r[2], r[3], r[4], r[5]] for r in rows if r[0] == slug]
+            actual = groups[(slug, source['year'], source['id'])]
+            assert len(expected) == len(actual) and fingerprint(expected) == fingerprint(actual), source['id']
+    return result
+
+
+def main(argv=None):
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('--frozen', action='store_true', help='Verify PR36 without rewriting its released outputs')
+    if parser.parse_args(argv).frozen:
+        print(json.dumps(validate_frozen_resolution()))
+        return
     baseline_raw = (OUT / 'baseline.json.gzip').read_bytes()
     baseline = json.loads(gzip.decompress(baseline_raw))
     before = read(OUT / 'baseline-row-fingerprints.json')

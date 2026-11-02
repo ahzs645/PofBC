@@ -1,0 +1,341 @@
+{
+  "frozen": true,
+  "reviewer": "/root/recovery_municipal",
+  "reviewedOn": "2026-11-02",
+  "sourceId": "phsa-2019-20",
+  "sourceSha256": "0e31ac2054f0c2d4ef78797185dddd96cc0cdf2eab94bd6841fa24e1c38e7d02",
+  "batch": "phsa-2019-20-004",
+  "original628FieldBlindTranscript": {
+    "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-municipal-history-2019-20-004-original-transcript.json",
+    "sha256": "ec4ccffe9feeb72f320e3fce6b3ae2cb704d8bbd218688f8d95996a6be35474d"
+  },
+  "ownSecond51FieldMoneyReread": {
+    "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-municipal-history-2019-20-004-postcomparison-money-reread-transcript.json",
+    "sha256": "50178e8ef3186311b3bcb169625cb0571087952d65ba9a1826514e37743859bb"
+  },
+  "freshFourMoneyPeerSourceFirstRaw": {
+    "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-history-batches-peer-2019-20-004-four-money-source-first.json",
+    "sha256": "f646023bd252f3f66de2d61ab59fb741337117601143312b49aec864fed5a67b"
+  },
+  "ownSecondaryProvisionalReadingCorrection": [
+    {
+      "sequence": 141,
+      "field": "expenses",
+      "firstBlindOriginalValue": 1912,
+      "intermediateOwnSecondReadProvisionalValue": 1917,
+      "finalOriginalSourceValue": 1912,
+      "originalBlindDataValueUnchanged": true,
+      "sourceProof": {
+        "sequence": 141,
+        "field": "expenses",
+        "actual2400Path": "/workspace/salary-review-municipal-tmp/phsa-2019-20-004/post-source/0141-expenses-extended-actual2400.png",
+        "actual2400Sha256": "16de3b66e625c1ce6d2aa6ab19e27dbb5ce8c54bc02ea861d187201d59d033ff",
+        "original300DpiPixelBox": [
+          2044,
+          914,
+          2430,
+          969
+        ],
+        "whiteMarginOnlyView": {
+          "path": "/workspace/salary-review-municipal-tmp/phsa-2019-20-004/post-source/0141-expenses-extended-actual2400-ink.png",
+          "sha256": "2ed1209e38779b02f8e0ad6c78978a2bd1f2fa4d4f9cbe871ed45934a80d6503",
+          "cropBoxWithinActual2400": [
+            765,
+            96,
+            1309,
+            304
+          ],
+          "originalRgbPixelsUnchanged": true
+        },
+        "includesEightExtraOriginal300DpiVerticalPixelsBeyondEachAssignedRowBoundary": true
+      },
+      "originalGlyphBasis": "Extended actual2400source shows the final2 with its sloping middle and bottom horizontal foot. No7terminal diagonal. My secondary1917 impression was wrong; source does not differ from original1912."
+    }
+  ],
+  "ownMonetaryDataCorrections": [
+    {
+      "sequence": 220,
+      "field": "remuneration",
+      "initialBlindValue": 90797,
+      "finalOriginalSourceValue": 90799,
+      "originalGlyphBasis": "Last digit has the visible upper9bowl and descending stroke, rather than a7bar; currentactual1200and independently frozenfreshsource reader agree."
+    },
+    {
+      "sequence": 221,
+      "field": "remuneration",
+      "initialBlindValue": 87900,
+      "finalOriginalSourceValue": 87902,
+      "originalGlyphBasis": "Final glyph has sloping2middle and bottom foot, rather than closed0bowl; currentactual1200and freshsource reader agree."
+    },
+    {
+      "sequence": 369,
+      "field": "remuneration",
+      "initialBlindValue": 75859,
+      "finalOriginalSourceValue": 75559,
+      "originalGlyphBasis": "First glyph after comma has the5upperbar/open upperleft and lowercurve, rather than the two closed8bowls; actual1200and freshsource reader agree."
+    }
+  ],
+  "all51FinalMoneyReadings": [
+    {
+      "sequence": 1,
+      "field": "expenses",
+      "finalOriginalSourceValue": 7983
+    },
+    {
+      "sequence": 13,
+      "field": "expenses",
+      "finalOriginalSourceValue": 4995
+    },
+    {
+      "sequence": 24,
+      "field": "expenses",
+      "finalOriginalSourceValue": 2310
+    },
+    {
+      "sequence": 27,
+      "field": "expenses",
+      "finalOriginalSourceValue": 4876
+    },
+    {
+      "sequence": 47,
+      "field": "remuneration",
+      "finalOriginalSourceValue": 82291
+    },
+    {
+      "sequence": 54,
+      "field": "remuneration",
+      "finalOriginalSourceValue": 87281
+    },
+    {
+      "sequence": 58,
+      "field": "remuneration",
+      "finalOriginalSourceValue": 97947
+    },
+    {
+      "sequence": 59,
+      "field": "expenses",
+      "finalOriginalSourceValue": 2364
+    },
+    {
+      "sequence": 68,
+      "field": "remuneration",
+      "finalOriginalSourceValue": 78874
+    },
+    {
+      "sequence": 70,
+      "field": "remuneration",
+      "finalOriginalSourceValue": 82992
+    },
+    {
+      "sequence": 81,
+      "field": "expenses",
+      "finalOriginalSourceValue": 9925
+    },
+    {
+      "sequence": 83,
+      "field": "expenses",
+      "finalOriginalSourceValue": 8500
+    },
+    {
+      "sequence": 89,
+      "field": "remuneration",
+      "finalOriginalSourceValue": 77271
+    },
+    {
+      "sequence": 94,
+      "field": "expenses",
+      "finalOriginalSourceValue": 18961
+    },
+    {
+      "sequence": 121,
+      "field": "remuneration",
+      "finalOriginalSourceValue": 89449
+    },
+    {
+      "sequence": 123,
+      "field": "remuneration",
+      "finalOriginalSourceValue": 84540
+    },
+    {
+      "sequence": 124,
+      "field": "remuneration",
+      "finalOriginalSourceValue": 113262
+    },
+    {
+      "sequence": 128,
+      "field": "expenses",
+      "finalOriginalSourceValue": 2894
+    },
+    {
+      "sequence": 141,
+      "field": "expenses",
+      "finalOriginalSourceValue": 1912
+    },
+    {
+      "sequence": 145,
+      "field": "remuneration",
+      "finalOriginalSourceValue": 77839
+    },
+    {
+      "sequence": 165,
+      "field": "remuneration",
+      "finalOriginalSourceValue": 77277
+    },
+    {
+      "sequence": 167,
+      "field": "expenses",
+      "finalOriginalSourceValue": 7985
+    },
+    {
+      "sequence": 184,
+      "field": "remuneration",
+      "finalOriginalSourceValue": 94646
+    },
+    {
+      "sequence": 189,
+      "field": "expenses",
+      "finalOriginalSourceValue": 1559
+    },
+    {
+      "sequence": 211,
+      "field": "remuneration",
+      "finalOriginalSourceValue": 87903
+    },
+    {
+      "sequence": 212,
+      "field": "expenses",
+      "finalOriginalSourceValue": 2240
+    },
+    {
+      "sequence": 214,
+      "field": "expenses",
+      "finalOriginalSourceValue": 12361
+    },
+    {
+      "sequence": 220,
+      "field": "remuneration",
+      "finalOriginalSourceValue": 90799
+    },
+    {
+      "sequence": 221,
+      "field": "remuneration",
+      "finalOriginalSourceValue": 87902
+    },
+    {
+      "sequence": 231,
+      "field": "remuneration",
+      "finalOriginalSourceValue": 93841
+    },
+    {
+      "sequence": 232,
+      "field": "expenses",
+      "finalOriginalSourceValue": 3824
+    },
+    {
+      "sequence": 262,
+      "field": "expenses",
+      "finalOriginalSourceValue": 1910
+    },
+    {
+      "sequence": 275,
+      "field": "expenses",
+      "finalOriginalSourceValue": 2261
+    },
+    {
+      "sequence": 277,
+      "field": "expenses",
+      "finalOriginalSourceValue": 1715
+    },
+    {
+      "sequence": 287,
+      "field": "expenses",
+      "finalOriginalSourceValue": 1860
+    },
+    {
+      "sequence": 289,
+      "field": "expenses",
+      "finalOriginalSourceValue": 12905
+    },
+    {
+      "sequence": 290,
+      "field": "expenses",
+      "finalOriginalSourceValue": 1300
+    },
+    {
+      "sequence": 296,
+      "field": "remuneration",
+      "finalOriginalSourceValue": 185940
+    },
+    {
+      "sequence": 307,
+      "field": "expenses",
+      "finalOriginalSourceValue": 3360
+    },
+    {
+      "sequence": 308,
+      "field": "expenses",
+      "finalOriginalSourceValue": 2510
+    },
+    {
+      "sequence": 310,
+      "field": "remuneration",
+      "finalOriginalSourceValue": 122373
+    },
+    {
+      "sequence": 310,
+      "field": "expenses",
+      "finalOriginalSourceValue": 1988
+    },
+    {
+      "sequence": 311,
+      "field": "expenses",
+      "finalOriginalSourceValue": 3551
+    },
+    {
+      "sequence": 312,
+      "field": "remuneration",
+      "finalOriginalSourceValue": 114598
+    },
+    {
+      "sequence": 318,
+      "field": "remuneration",
+      "finalOriginalSourceValue": 96366
+    },
+    {
+      "sequence": 334,
+      "field": "expenses",
+      "finalOriginalSourceValue": 2796
+    },
+    {
+      "sequence": 347,
+      "field": "remuneration",
+      "finalOriginalSourceValue": 75371
+    },
+    {
+      "sequence": 369,
+      "field": "remuneration",
+      "finalOriginalSourceValue": 75559
+    },
+    {
+      "sequence": 374,
+      "field": "remuneration",
+      "finalOriginalSourceValue": 87347
+    },
+    {
+      "sequence": 389,
+      "field": "remuneration",
+      "finalOriginalSourceValue": 138474
+    },
+    {
+      "sequence": 393,
+      "field": "remuneration",
+      "finalOriginalSourceValue": 115982
+    }
+  ],
+  "allFourFreshPeerAmountsExactlyMatchFinalOriginalReadings": true,
+  "unresolvedMonetaryFields": [],
+  "moneyQualificationOrImputationAccepted": false,
+  "noControlsUsedToSelectValues": true,
+  "allEarlierRawAndIntermediateReadingsPreserved": true,
+  "scope": "51assigned moneyfield secondreads/three actual remuneration corrections and one secondaryreviewer-only error. Freshpeerread4fields only; no all400/fullsource/whole628secondhuman claim."
+}

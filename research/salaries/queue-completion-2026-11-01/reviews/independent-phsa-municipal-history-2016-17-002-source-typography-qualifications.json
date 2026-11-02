@@ -1,0 +1,63 @@
+{
+  "frozen": true,
+  "reviewer": "/root/recovery_municipal",
+  "reviewedOn": "2026-11-01",
+  "sourceId": "phsa-2016-17",
+  "sourceSha256": "31f7a1af80186bf81139fd693b36e733333a06c2ab1a4c5191bd6ee9b3623a53",
+  "batch": "phsa-2016-17-002",
+  "rawTranscript": {
+    "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-municipal-history-2016-17-002-original-transcript.json",
+    "sha256": "9849cbbdce75ba45819093e0b29a80a1757a5bf0a2e89d3475334a3dc8a70cfa"
+  },
+  "precomparisonLedger": {
+    "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-municipal-history-2016-17-002-precomparison-source-rereads.json",
+    "sha256": "1fe3161cf6416bc16d5b39ad90904bba267332d990f6336f72dcafdf4bfb84cc"
+  },
+  "postcomparisonLedger": {
+    "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-municipal-history-2016-17-002-postcomparison-original-rereads.json",
+    "sha256": "1ced1bfc8e96da0fe553ebe344952a07b2bd0e30abae58b135d92f8ea7ff0997"
+  },
+  "qualifications": [
+    {
+      "sequence": 126,
+      "physicalPage": 51,
+      "sourceRowOnPage": 12,
+      "chosenContextualTranscription": "Hames,Ian",
+      "typographicallyPossibleAlternative": "Hames,lan",
+      "caseProvenByPixels": false,
+      "basis": "Source given-name initial-capital convention supports uppercaseI at the first given-name glyph; source glyph shape itself does not distinguish capitalI from lowercase l. No identity lookup or common-name expansion.",
+      "discoveryProvenance": "Recognized after candidate comparison; original image-first primary unchanged.",
+      "cropSha256": "db4b3c29346a515d1298d4c365b839f8958b65bee986759a4b24cbb463827e36",
+      "status": "qualified-contextual-transcription-awaiting-explicit-root-adoption"
+    },
+    {
+      "sequence": 222,
+      "physicalPage": 59,
+      "sourceRowOnPage": 9,
+      "chosenContextualTranscription": "Ilett,Simon",
+      "typographicallyPossibleAlternative": "llett,Simon",
+      "caseProvenByPixels": false,
+      "basis": "Source surname initial-capital convention and surname alphabetical I-block support capitalI in the first glyph; source glyph shape itself does not distinguish capitalI from lowercase l. No identity lookup or name expansion.",
+      "discoveryProvenance": "Recognized after candidate comparison; original image-first primary unchanged.",
+      "cropSha256": "e33e1d5187bc8309a5c219db37e5733039fe1f8dfe2b638a4988bf89308546b7",
+      "status": "qualified-contextual-transcription-awaiting-explicit-root-adoption"
+    },
+    {
+      "sequence": 333,
+      "physicalPage": 68,
+      "sourceRowOnPage": 26,
+      "chosenContextualTranscription": "Krishnaswamy,Wendy I",
+      "typographicallyPossibleAlternative": "Krishnaswamy,Wendy l",
+      "caseProvenByPixels": false,
+      "basis": "Source separate given-initial capitalization convention supports capitalI; final undotted vertical glyph itself is I/l-indistinguishable. No terminal period added; no identity inferred.",
+      "discoveryProvenance": "Marked uncertain in blind first-pass transcript and frozen before candidate comparison.",
+      "cropSha256": "4a410b791e94f45e481f96cfe076d1e9c328b292df622f108a6e31c14f83b3fb",
+      "status": "qualified-contextual-transcription-awaiting-explicit-root-adoption"
+    }
+  ],
+  "qualifiedCases": 3,
+  "caseProvenByPixels": false,
+  "rootAdoptionRequiredBeforeSourceAcceptance": true,
+  "publicWarningRequired": "In this scanned schedule, some capital I and lowercase l glyphs are visually indistinguishable. Three reviewed case choices retain contextual transcriptions supported by surname alphabetic placement or the source initial-capital convention, with their visible alternatives documented. These are typography qualifications, not pixel-proved case. No generic casing conversion or name expansion was applied.",
+  "notAWholeSourceAcceptance": true
+}

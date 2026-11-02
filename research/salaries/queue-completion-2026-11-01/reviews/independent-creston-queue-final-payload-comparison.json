@@ -1,0 +1,104 @@
+{
+  "reviewer": "held_health_review",
+  "sourceUrl": "https://www.creston.ca/sites/default/files/2025-07/Statement%20of%20Financial%20Information%202024.pdf",
+  "sourceSha256": "24a6cd0394f42596859f15cb4a1ec811c28c5a5c09e004a3766aa78130396ac6",
+  "payload": {
+    "path": "research/salaries/queue-completion-municipal/creston-2024-employee-remuneration.json.gzip",
+    "sha256": "e71de303545fbf4f668a240b11128a2e106b979b3c817be543a36be311c2fce9",
+    "uncompressedSha256": "2e68bd674f9e2ecdeaa07bcd758c455a73fcf2800a12c78da1768137919f8b0d"
+  },
+  "literalPeerTranscript": {
+    "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-creston-queue-final-literal-transcript.tsv",
+    "sha256": "59e96b9a17a0c3f8ee3716882405d32bd07a4928261a7c8158a1ca83e3e9cb71"
+  },
+  "sourceReview": {
+    "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-creston-queue-literal-source-review.json",
+    "sha256": "75100cff4c7d1070491e72ca7327ab7886135bc3395510f6e30d3a9b69c93f71"
+  },
+  "initialAuthorTranscript": {
+    "path": "research/salaries/queue-completion-2026-11-01/municipal/creston-author-manual-transcript.json",
+    "sha256": "aabd7bc29713fb5464400759428e1e2a1130fd3c2e12b904483cd87e6b444a33"
+  },
+  "authorAmendments": {
+    "path": "research/salaries/queue-completion-2026-11-01/municipal/creston-author-reviewed-amendments.json",
+    "sha256": "5e993d324baa4c1e2c0bf8a5167c4fce88c63653607ff911e9b5f83bb28ddfd6"
+  },
+  "comparison": {
+    "exactOrderedSixFieldRowEquality": true,
+    "rows": 27,
+    "fieldValuesCompared": 162,
+    "sourceDataFieldsPersonallyImageReviewed": 108,
+    "rowMultiplicityPreserved": true,
+    "allSourceRowsPhysicalPage": 37,
+    "councilRowsImported": 0,
+    "underThresholdAggregateImported": 0,
+    "nullExpenses": 0,
+    "explicitZeroExpenses": 13
+  },
+  "sourceContextAndApproval": {
+    "printedScheduleYear": 2024,
+    "periodStart": "2024-01-01",
+    "periodEnd": "2024-12-31",
+    "employeeThreshold": 75000,
+    "comparison": "exceeding",
+    "approvalPhysicalPage": 9,
+    "approvalDate": "2025-06-30",
+    "signaturesVisible": true,
+    "statementIncludesAllStatementsAndSchedules": true,
+    "readFromActualOriginalImage": true
+  },
+  "printedControls": {
+    "namedAboveThreshold": {
+      "remuneration": 2685008,
+      "expenses": 61044
+    },
+    "underOrAtThresholdAggregate": {
+      "remuneration": 1583173,
+      "expenses": 67341
+    },
+    "allEmployeesAggregate": {
+      "remuneration": 4268181,
+      "expenses": 128386
+    },
+    "reconciliationElectedOfficialsRemuneration": 164518,
+    "reconciliationSubtotal": 4432699,
+    "reconciliationFinalRevenueExpenditureTotal": 4432689
+  },
+  "literalNamedRowSums": {
+    "remuneration": 2684996,
+    "expenses": 61034
+  },
+  "residuals": {
+    "literalNamedRemunerationMinusPrintedNamed": -12,
+    "literalNamedExpensesMinusPrintedNamed": -10,
+    "printedNamedPlusBelowExpensesMinusPrintedAll": -1,
+    "printedReconciliationSubtotalMinusPrintedFinal": 10
+  },
+  "requiredQualification": "All27named employees were independently transcribed from the actual source and normalized payload equals those literal values. Their sum remains$12 below printed named remuneration and$10 below printed named expenses. Source aggregate expense totals also differ by$1 and the source remuneration reconciliation final line differs by$10 from its subtotal. No cause has been established; no amount was adjusted to balance controls. These are reported payments rather than annual salary rates or a complete staff roster. Row26 title is literally Waste Water Treatment Plan Operator; no inferred terminal t.",
+  "uncertainGlyphTargetsRemaining": 0,
+  "status": "exact-literal-payload-verified-source-control-residuals-require-explicit-root-qualification",
+  "limits": [
+    "This receipt verifies literal source rows and source context; it does not silently waive control discrepancies or set source acceptance. Root owns explicit residual qualification and registration.",
+    "Both independent raw OCR streams were acquired and author crosschecking is available; my guarantee is full manual actual-image field coverage and exact normalized equality, not a claim that both machines read every field correctly.",
+    "All original and earlier review artifacts preserved; reviewer and author reading amendments separately disclosed.",
+    "No council reimport, source totals balancing, full-name expansion, name order change, or inferred title completion."
+  ],
+  "authorDraftSections": [
+    {
+      "scope": "employee-remuneration",
+      "physicalPage": 37,
+      "tesseractRows": 27,
+      "rapidocrRows": 0,
+      "keys": [
+        "layout",
+        "evidenceFile",
+        "evidenceSha256",
+        "tesseractRows",
+        "paddleRows",
+        "equalRowCounts",
+        "disagreements",
+        "acceptedRows"
+      ]
+    }
+  ]
+}

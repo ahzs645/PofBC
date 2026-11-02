@@ -1,0 +1,87 @@
+{
+  "reviewer": "/root/recovery_review",
+  "reviewedOn": "2026-11-01",
+  "status": "classifier-regressions-pass-holdout-selector-ledger-and-source-gates-pending",
+  "policy": {
+    "path": "research/salaries/queue-completion-2026-11-01/phsa/paired-reader-field-policy-002.json",
+    "sha256": "0fafb3763ea5a1ebf8f2d7310e748cb4d24247428f544056e1427d2e6ecc77fe"
+  },
+  "calibration": {
+    "path": "research/salaries/queue-completion-2026-11-01/phsa/confidence-calibration-analysis-002.json",
+    "sha256": "38da42f2e0149ed8116bcaea39ee3470e50df0d752f2b71f486c7a7bcae7ea9f"
+  },
+  "classifier": {
+    "path": "scripts/finish_salary_phsa_policy.py",
+    "sha256": "4e3995f62c6b0672bb49fa6d94d1f0360a98b441217ccdaff62483b0e09fa93e"
+  },
+  "classifierTests": {
+    "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-history-batches-policy-classifier-adversarial-001.json",
+    "sha256": "aa741652169940844eb968fe4098cc4b8a15978754fcace9d4efa8c0e52142d0"
+  },
+  "readCoverage": [
+    "Entire current classifier and reservation/preview caller",
+    "Original row readers/stager fieldflag generation and name comparison",
+    "Calibration field summaries and all11 input hashes",
+    "Frozen holdout selection configuration only; emitter/tests/per-field ledger not yet available"
+  ],
+  "findings": [
+    {
+      "id": "strict-confidence-flags",
+      "initialIssue": "Substring classification allowed a synthetic unparsed-confidence-below-unknown flag.",
+      "resolution": "Author implemented exact field-specific confidence-flag allowlists. Independent regression passes.",
+      "observedSourceError": false
+    },
+    {
+      "id": "strict-positive-integer-types",
+      "initialIssue": "Python equality admitted rightreader/candidate boolean or float when equal to leftpositiveinteger.",
+      "resolution": "Author checks allthree amounts with exact int type and >0. Independent regression passes.",
+      "observedSourceError": false
+    },
+    {
+      "id": "hyphen-apostrophe-initial-I",
+      "issue": "Word-initial capitalI guard excluded hyphen/apostrophe word boundaries; five staged namefields affected, three originally unflagged.",
+      "state": "sent-author-guard-change-pending",
+      "sourceSupplement": {
+        "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-history-batches-hyphen-i-supplement-001-comparison.json",
+        "sha256": "249fb4812ea8fe79b87b795ae655b7d087d9a42705828863d4024c9333b24147"
+      },
+      "observedNameDataCorrection": false
+    },
+    {
+      "id": "unexplained-symbol-coverage",
+      "issue": "Guard list omits some unusual source/OCR symbols such as !,¥,§,],*. Existing flags currently catch sampled suchsymbols; broaden guard without deleting literalcharacters.",
+      "state": "author-assessment-pending"
+    },
+    {
+      "id": "scope-per-field",
+      "resolution": "Author confirms a uniquely mapped payfield may corroborate while name remains manual; holdout must exclude any row with a remaining manualfield."
+    }
+  ],
+  "calibrationAssessment": {
+    "independentlyImageTranscribedFirstTableRows": 405,
+    "ordinaryReviewedBatches": [
+      {
+        "sourceId": "phsa-2015-16",
+        "batch": "001",
+        "rows": 400
+      },
+      {
+        "sourceId": "phsa-2015-16",
+        "batch": "004",
+        "rows": 400
+      }
+    ],
+    "truthFields": 2137,
+    "proposedConfidenceOnlyFields": 1199,
+    "observedProposedWrongFields": 0,
+    "scopeLimit": "Finite selected benchmark, not an unbiased source error-rate estimate or proof of unreviewed correctness. Independent90-row source holdout and full controls remain mandatory."
+  },
+  "remainingGates": [
+    "Audit finalized emitter/ledger/caller reservation handling and tests",
+    "Independently replay deterministic selection with3/4/3 page thirds and10 rows/source",
+    "Root blindly transcribes every requested field on90source rows; investigate any difference",
+    "Full9source scope, raw/dash/date/geometry/field closure and qualifiedcase exactpeer/rootadoption withpublicwarnings"
+  ],
+  "sourceAcceptanceClaim": false,
+  "noFrozenAuthorOrReviewFilesEdited": true
+}

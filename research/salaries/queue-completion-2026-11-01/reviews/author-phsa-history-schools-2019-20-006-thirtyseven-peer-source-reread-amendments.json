@@ -1,0 +1,56 @@
+{
+  "frozen": true,
+  "reviewer": "/root/recovery_health",
+  "reviewedOn": "2026-11-02",
+  "sourceId": "phsa-2019-20",
+  "sourceSha256": "0e31ac2054f0c2d4ef78797185dddd96cc0cdf2eab94bd6841fa24e1c38e7d02",
+  "batch": "phsa-2019-20-006",
+  "originalFirstPass": {
+    "path": "research/salaries/queue-completion-2026-11-01/reviews/author-phsa-history-schools-2019-20-006-thirtyseven-peer-image-first-transcript.json",
+    "sha256": "ca2d9f171c6ed2b3d4d3d8584c05f712fa8658761ac54d12817b60a657e32ce8"
+  },
+  "sourcePixelProof": {
+    "path": "research/salaries/queue-completion-2026-11-01/reviews/author-phsa-history-schools-2019-20-006-thirtyseven-peer-source-pixel-proof.json",
+    "sha256": "054513f94da3f737504bf0ae7405607cbf89219e3f0387860e6a76c583cade60"
+  },
+  "scopedAuthorProposalStillUnopened": true,
+  "authorHintFor376AlreadyDisclosed": true,
+  "corrections": [
+    {
+      "sequence": 187,
+      "firstPass": "Grill,Fredericks Yekary Luceerito",
+      "currentSourceReading": "Grill Fredericks,Yekary Lucerito",
+      "reason": "Current1200source shows the comma AFTER the compound surname Grill Fredericks, and the final given word has one e before r. My earlier automatic-looking comma placement and extra e were wrong.",
+      "actualSourceView": {
+        "path": "/workspace/salary-review-health-temp/school2019-006-peer37/0187-name1200-ink.png",
+        "sha256": "05efd75c8399819b48f55ecfe2e897a302ef7afcad4c09e449845023abad6d35"
+      }
+    },
+    {
+      "sequence": 205,
+      "firstPass": "Guimmerson,Paula J",
+      "currentSourceReading": "Gummerson,Paula J",
+      "reason": "Current1200has no separate i dot after Gu; joined m shoulders account for the strokes. Complete rn/m alternatives remain to be compared explicitly.",
+      "actualSourceView": {
+        "path": "/workspace/salary-review-health-temp/school2019-006-peer37/0205-name1200-ink.png",
+        "sha256": "8c9375f5d725da93c9298cffd53cfe4b4069fdaf6ad5b9de9b2e06809140fb74"
+      }
+    },
+    {
+      "sequence": 376,
+      "firstPass": "Herminger,Grant A.",
+      "currentSourceReading": "Herminger,Grant A",
+      "reason": "After the author source-only hint I personally reread the current1200view; no printed period follows the A. The earlier serif/dot impression was my mistake.",
+      "actualSourceView": {
+        "path": "/workspace/salary-review-health-temp/school2019-006-peer37/0376-name1200-ink.png",
+        "sha256": "dc04c403c6a506e21ccf3a2f68a317fa3730c24eedb5227c1e66786af777cd3d"
+      }
+    }
+  ],
+  "preferred198": "Guemas-Bonell,Gawain",
+  "visible198Alternative": "Guernas-Bonell,Gawain",
+  "source198ContextLimit": "Actual order Gubbay/[target]/Guertin supports both m/rn alternatives and does not uniquely choose; preserve finite ambiguity and own primary instead of a dictionary.",
+  "noSupplemental88ChoicesOpened": true,
+  "oldFilesUnchanged": true,
+  "scope": "Only three own37scope firstpass name repairs and one qualified preference; onepay117 unchanged. No broader source or money correction."
+}

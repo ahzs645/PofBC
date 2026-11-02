@@ -1,0 +1,669 @@
+{
+  "reviewer": "recovery_education",
+  "reviewedOn": "2026-11-01",
+  "sourceId": "phsa-2021-22",
+  "sourceSha256": "944c99fa7b7ede643cb4c426a5e9ab30aa906d8f81fda379f0206e4b0cdcd25c",
+  "batch": "phsa-2021-22-001",
+  "purpose": "Exact31-name proposal subset derived from already frozen300-row author review, released only AFTER health source-first31-name raw freeze. No other author expected values or source rows forwarded.",
+  "authorFullReviewFreeze": {
+    "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-education-2021-22-001-freeze.json",
+    "sha256": "3f7cee6fd3abdb4eae5d4fad8a29ce5b4f3d2588d1935fe5916bea3fcd95a6c9"
+  },
+  "authorResolutionReceipt": {
+    "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-education-2021-22-001-resolutions.json",
+    "sha256": "2f919f031f4b0e00a876a33ef6430006df5969cd1bbd8fbfbf02558d5b833c16"
+  },
+  "authorQualifiedCaseLedger": {
+    "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-education-2021-22-001-source-segmentation-qualifications-v2.json",
+    "sha256": "b133be257a4ef75ec1c8f5c52f4db71c75f47f829a6391a500a9049d36f62c81"
+  },
+  "authorDirectSourceRereads": [
+    {
+      "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-education-2021-22-001-precomparison-source-name-recheck.json",
+      "sha256": "de2f3f60b23971bc66ef1cde8afc1d3782b2415009c7fd8b1bd9d784b8eb9046"
+    },
+    {
+      "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-education-2021-22-001-postcomparison-source-name-verification.json",
+      "sha256": "090ed9c9791a95e804389b0f57889f8b37e0e221355da8ca05a588df055a1d43"
+    }
+  ],
+  "freshPeerFirstRaw": {
+    "path": "research/salaries/queue-completion-2026-11-01/reviews/author-phsa-history-fresh-2021-31-and-2022-8-name-peer-first-transcript.json",
+    "sha256": "d1cee5adf5be49680c67e868409dca81df153ea242743c94d29e16e1a0d84f49"
+  },
+  "rows": [
+    {
+      "sequence": 9,
+      "physicalPage": 3,
+      "sourceRowOnPage": 1,
+      "reviewedFields": [
+        "name"
+      ],
+      "cropSha256": "467dbe1534f0c4ed2882478e47c8e20265f65d83324d204fdedf60ad53729ba5",
+      "primaryLiteralName": "Allaire,Jeniffer",
+      "status": "resolved-from-original-image",
+      "visibleAlternatives": [],
+      "literalReadingBasis": "Actual printed name directly rechecked; see pinned additive source-only/candidate-triggered reread trail. No generic letter rewrite or contextual identity inference."
+    },
+    {
+      "sequence": 43,
+      "physicalPage": 5,
+      "sourceRowOnPage": 11,
+      "reviewedFields": [
+        "name"
+      ],
+      "cropSha256": "562401c834f340f2882f6b2ba00e1bee89e967902b6e862673bc767608235dfb",
+      "primaryLiteralName": "Arnal,Jasmine Joy",
+      "status": "resolved-with-source-typography-qualification",
+      "visibleAlternatives": [
+        "Arnal,Jasmine Joy",
+        "Amal,Jasmine Joy"
+      ],
+      "ambiguityKind": "rn-m-source-segmentation",
+      "qualificationPolicy": {
+        "path": "research/salaries/queue-completion-2026-11-01/phsa/source-name-segmentation-review-policy-002.json",
+        "sha256": "fcfc11b7872b8c111018dd5b74494ea25391d14e1e905aa327f6a435c6e1e40c"
+      },
+      "basis": "Original source places this surname in the Arn block after Armour/Armstrong and before Arogundade/Arora. This supports the blind rn reading; m remains an explicit visible segmentation alternative. Ordering is contextual, not a unique pixel proof.",
+      "caseProvenByPixels": false
+    },
+    {
+      "sequence": 44,
+      "physicalPage": 5,
+      "sourceRowOnPage": 13,
+      "reviewedFields": [
+        "name"
+      ],
+      "cropSha256": "d1f4cc1b88aaed9a283bb684a6d8508b8531dcdd41717175a4408c1d54975284",
+      "primaryLiteralName": "Arnason,Karen M.",
+      "status": "resolved-with-source-typography-qualification",
+      "visibleAlternatives": [
+        "Arnason,Karen M.",
+        "Amason,Karen M."
+      ],
+      "ambiguityKind": "rn-m-source-segmentation",
+      "qualificationPolicy": {
+        "path": "research/salaries/queue-completion-2026-11-01/phsa/source-name-segmentation-review-policy-002.json",
+        "sha256": "fcfc11b7872b8c111018dd5b74494ea25391d14e1e905aa327f6a435c6e1e40c"
+      },
+      "basis": "Original source places this surname in the Arn block after Armour/Armstrong and before Arogundade/Arora. This supports the blind rn reading; m remains an explicit visible segmentation alternative. Ordering is contextual, not a unique pixel proof.",
+      "caseProvenByPixels": false
+    },
+    {
+      "sequence": 45,
+      "physicalPage": 5,
+      "sourceRowOnPage": 15,
+      "reviewedFields": [
+        "name"
+      ],
+      "cropSha256": "a3d06872c90f91b85df98998031b0e0118cf7bde0792932a36614885f04b91bc",
+      "primaryLiteralName": "Arnold,Jason",
+      "status": "resolved-with-source-typography-qualification",
+      "visibleAlternatives": [
+        "Arnold,Jason",
+        "Amold,Jason"
+      ],
+      "ambiguityKind": "rn-m-source-segmentation",
+      "qualificationPolicy": {
+        "path": "research/salaries/queue-completion-2026-11-01/phsa/source-name-segmentation-review-policy-002.json",
+        "sha256": "fcfc11b7872b8c111018dd5b74494ea25391d14e1e905aa327f6a435c6e1e40c"
+      },
+      "basis": "Actual source places this surname within the Arn block after Arnason and before Arnott. The blind rn primary is unchanged after actual600dpi source recheck; m remains an explicit visible join alternative. This qualification was added after candidate comparison while the original first-pass primary and source-only adjacent context predate comparison. No dictionary or prior-year identity inference; ordering is contextual, not a unique pixel proof.",
+      "caseProvenByPixels": false
+    },
+    {
+      "sequence": 46,
+      "physicalPage": 5,
+      "sourceRowOnPage": 16,
+      "reviewedFields": [
+        "name"
+      ],
+      "cropSha256": "c114e4c5c550f148445ce4a574925b2323b6da51a647be3b9426621ff5e3bfde",
+      "primaryLiteralName": "Arnold,Renata",
+      "status": "resolved-with-source-typography-qualification",
+      "visibleAlternatives": [
+        "Arnold,Renata",
+        "Amold,Renata"
+      ],
+      "ambiguityKind": "rn-m-source-segmentation",
+      "qualificationPolicy": {
+        "path": "research/salaries/queue-completion-2026-11-01/phsa/source-name-segmentation-review-policy-002.json",
+        "sha256": "fcfc11b7872b8c111018dd5b74494ea25391d14e1e905aa327f6a435c6e1e40c"
+      },
+      "basis": "Actual source places this surname within the Arn block after Arnason and before Arnott. The blind rn primary is unchanged after actual600dpi source recheck; m remains an explicit visible join alternative. This qualification was added after candidate comparison while the original first-pass primary and source-only adjacent context predate comparison. No dictionary or prior-year identity inference; ordering is contextual, not a unique pixel proof.",
+      "caseProvenByPixels": false
+    },
+    {
+      "sequence": 47,
+      "physicalPage": 5,
+      "sourceRowOnPage": 17,
+      "reviewedFields": [
+        "name"
+      ],
+      "cropSha256": "fcd09f56db76a7f3c5fe13556e646ceb1ff1875c9cc72b3904a08df733de51bf",
+      "primaryLiteralName": "Arnott,Megan",
+      "status": "resolved-with-source-typography-qualification",
+      "visibleAlternatives": [
+        "Arnott,Megan",
+        "Amott,Megan"
+      ],
+      "ambiguityKind": "rn-m-source-segmentation",
+      "qualificationPolicy": {
+        "path": "research/salaries/queue-completion-2026-11-01/phsa/source-name-segmentation-review-policy-002.json",
+        "sha256": "fcfc11b7872b8c111018dd5b74494ea25391d14e1e905aa327f6a435c6e1e40c"
+      },
+      "basis": "Original source places this surname in the Arn block after Armour/Armstrong and before Arogundade/Arora. This supports the blind rn reading; m remains an explicit visible segmentation alternative. Ordering is contextual, not a unique pixel proof.",
+      "caseProvenByPixels": false
+    },
+    {
+      "sequence": 55,
+      "physicalPage": 6,
+      "sourceRowOnPage": 18,
+      "reviewedFields": [
+        "name"
+      ],
+      "cropSha256": "646eae2a58e147e6e12dbf113d509f3093afe770970024c21470eae268cde420",
+      "primaryLiteralName": "Avey,Danea",
+      "status": "resolved-from-original-image",
+      "visibleAlternatives": [],
+      "literalReadingBasis": "Actual printed name directly rechecked; see pinned additive source-only/candidate-triggered reread trail. No generic letter rewrite or contextual identity inference."
+    },
+    {
+      "sequence": 59,
+      "physicalPage": 6,
+      "sourceRowOnPage": 33,
+      "reviewedFields": [
+        "name"
+      ],
+      "cropSha256": "55a214530cb9c04a11396026d5b6efb2b5495866073a709a4b145eea4b195462",
+      "primaryLiteralName": "Baadjes,Bjorn",
+      "status": "resolved-with-source-typography-qualification",
+      "visibleAlternatives": [
+        "Baadjes,Bjorn",
+        "Baadjes,Bjom"
+      ],
+      "ambiguityKind": "rn-m-source-segmentation",
+      "qualificationPolicy": {
+        "path": "research/salaries/queue-completion-2026-11-01/phsa/source-name-segmentation-review-policy-002.json",
+        "sha256": "fcfc11b7872b8c111018dd5b74494ea25391d14e1e905aa327f6a435c6e1e40c"
+      },
+      "basis": "The blind personal source reading retains rn in this given name after actual600dpi reinspection. Actual adjacent rows confirm the correct original row but surname ordering does not resolve given-name segmentation. The source join may also read as m, retained explicitly; no dictionary, prior-year identity or name expansion is used.",
+      "caseProvenByPixels": false
+    },
+    {
+      "sequence": 73,
+      "physicalPage": 8,
+      "sourceRowOnPage": 26,
+      "reviewedFields": [
+        "name"
+      ],
+      "cropSha256": "8a8c22cdf546ea385e2f8ca9b333134939d37278b5e6f97da4c70c5065fe3d20",
+      "primaryLiteralName": "Bally,Marcel B.",
+      "status": "resolved-from-original-image",
+      "visibleAlternatives": [],
+      "literalReadingBasis": "Actual printed name directly rechecked; see pinned additive source-only/candidate-triggered reread trail. No generic letter rewrite or contextual identity inference."
+    },
+    {
+      "sequence": 81,
+      "physicalPage": 9,
+      "sourceRowOnPage": 13,
+      "reviewedFields": [
+        "name"
+      ],
+      "cropSha256": "7315b46baca9af33c3fb707008a2cb7203915a58f8958cf186447c8c60d4c3d8",
+      "primaryLiteralName": "Barnetson,Duncan Stewart",
+      "status": "resolved-with-source-typography-qualification",
+      "visibleAlternatives": [
+        "Barnetson,Duncan Stewart",
+        "Bametson,Duncan Stewart"
+      ],
+      "ambiguityKind": "rn-m-source-segmentation",
+      "qualificationPolicy": {
+        "path": "research/salaries/queue-completion-2026-11-01/phsa/source-name-segmentation-review-policy-002.json",
+        "sha256": "fcfc11b7872b8c111018dd5b74494ea25391d14e1e905aa327f6a435c6e1e40c"
+      },
+      "basis": "Original source places this surname in the Barn block after the previously personally read Barker row4 on physical9 and before Baron. This supports the blind rn reading; m remains an explicit visible segmentation alternative. Ordering is contextual, not a unique pixel proof.",
+      "caseProvenByPixels": false
+    },
+    {
+      "sequence": 82,
+      "physicalPage": 9,
+      "sourceRowOnPage": 14,
+      "reviewedFields": [
+        "name"
+      ],
+      "cropSha256": "5d18c034a8b2abb7ba09825a67972c2b48e70c8897a747432fc5454d8706f209",
+      "primaryLiteralName": "Barnett,Julie",
+      "status": "resolved-with-source-typography-qualification",
+      "visibleAlternatives": [
+        "Barnett,Julie",
+        "Bamett,Julie"
+      ],
+      "ambiguityKind": "rn-m-source-segmentation",
+      "qualificationPolicy": {
+        "path": "research/salaries/queue-completion-2026-11-01/phsa/source-name-segmentation-review-policy-002.json",
+        "sha256": "fcfc11b7872b8c111018dd5b74494ea25391d14e1e905aa327f6a435c6e1e40c"
+      },
+      "basis": "Original source places this surname in the Barn block after the previously personally read Barker row4 on physical9 and before Baron. This supports the blind rn reading; m remains an explicit visible segmentation alternative. Ordering is contextual, not a unique pixel proof.",
+      "caseProvenByPixels": false
+    },
+    {
+      "sequence": 83,
+      "physicalPage": 9,
+      "sourceRowOnPage": 15,
+      "reviewedFields": [
+        "name"
+      ],
+      "cropSha256": "34ed86acac419889bbb5aba6fdd822f298f979fe9599134a07b257bfcb280011",
+      "primaryLiteralName": "Barney,Gertrude Lucy",
+      "status": "resolved-with-source-typography-qualification",
+      "visibleAlternatives": [
+        "Barney,Gertrude Lucy",
+        "Bamey,Gertrude Lucy"
+      ],
+      "ambiguityKind": "rn-m-source-segmentation",
+      "qualificationPolicy": {
+        "path": "research/salaries/queue-completion-2026-11-01/phsa/source-name-segmentation-review-policy-002.json",
+        "sha256": "fcfc11b7872b8c111018dd5b74494ea25391d14e1e905aa327f6a435c6e1e40c"
+      },
+      "basis": "Original source places this surname in the Barn block after the previously personally read Barker row4 on physical9 and before Baron. This supports the blind rn reading; m remains an explicit visible segmentation alternative. Ordering is contextual, not a unique pixel proof.",
+      "caseProvenByPixels": false
+    },
+    {
+      "sequence": 84,
+      "physicalPage": 9,
+      "sourceRowOnPage": 16,
+      "reviewedFields": [
+        "name"
+      ],
+      "cropSha256": "72e7aaf93da9690b67e9ce4588faa6e95ccef65255d17424da947160e0211999",
+      "primaryLiteralName": "Barnwell,Audrey",
+      "status": "resolved-with-source-typography-qualification",
+      "visibleAlternatives": [
+        "Barnwell,Audrey",
+        "Bamwell,Audrey"
+      ],
+      "ambiguityKind": "rn-m-source-segmentation",
+      "qualificationPolicy": {
+        "path": "research/salaries/queue-completion-2026-11-01/phsa/source-name-segmentation-review-policy-002.json",
+        "sha256": "fcfc11b7872b8c111018dd5b74494ea25391d14e1e905aa327f6a435c6e1e40c"
+      },
+      "basis": "Original source places this surname in the Barn block after the previously personally read Barker row4 on physical9 and before Baron. This supports the blind rn reading; m remains an explicit visible segmentation alternative. Ordering is contextual, not a unique pixel proof.",
+      "caseProvenByPixels": false
+    },
+    {
+      "sequence": 109,
+      "physicalPage": 11,
+      "sourceRowOnPage": 24,
+      "reviewedFields": [
+        "name"
+      ],
+      "cropSha256": "7a03e3b0f479597625e5b7c97777ea54011a891c67a331abfd6c9af16353af4b",
+      "primaryLiteralName": "Bell,Riteshni",
+      "status": "resolved-from-original-image",
+      "visibleAlternatives": [],
+      "literalReadingBasis": "Actual printed name directly rechecked; see pinned additive source-only/candidate-triggered reread trail. No generic letter rewrite or contextual identity inference."
+    },
+    {
+      "sequence": 123,
+      "physicalPage": 12,
+      "sourceRowOnPage": 27,
+      "reviewedFields": [
+        "name"
+      ],
+      "cropSha256": "7231d51a509ac1ab9ab199410e7c0658fd8ade3b284db122e7f84a999067e290",
+      "primaryLiteralName": "Bernard,Brandon",
+      "status": "resolved-with-source-typography-qualification",
+      "visibleAlternatives": [
+        "Bernard,Brandon",
+        "Bemard,Brandon"
+      ],
+      "ambiguityKind": "rn-m-source-segmentation",
+      "qualificationPolicy": {
+        "path": "research/salaries/queue-completion-2026-11-01/phsa/source-name-segmentation-review-policy-002.json",
+        "sha256": "fcfc11b7872b8c111018dd5b74494ea25391d14e1e905aa327f6a435c6e1e40c"
+      },
+      "basis": "Original source places this surname after Berkman/Berman and before Berrang/Berthelet. This supports the blind Bern reading rather than Bem; m remains an explicit visible segmentation alternative. Ordering is contextual, not a unique pixel proof.",
+      "caseProvenByPixels": false
+    },
+    {
+      "sequence": 124,
+      "physicalPage": 12,
+      "sourceRowOnPage": 28,
+      "reviewedFields": [
+        "name"
+      ],
+      "cropSha256": "4c40fe52fb248a0d019d2c20a0111f3e94ae1d33ea22c7ea61d94fa67f6a3e68",
+      "primaryLiteralName": "Bernier,David G.E.",
+      "status": "resolved-with-source-typography-qualification",
+      "visibleAlternatives": [
+        "Bernier,David G.E.",
+        "Bemier,David G.E."
+      ],
+      "ambiguityKind": "rn-m-source-segmentation",
+      "qualificationPolicy": {
+        "path": "research/salaries/queue-completion-2026-11-01/phsa/source-name-segmentation-review-policy-002.json",
+        "sha256": "fcfc11b7872b8c111018dd5b74494ea25391d14e1e905aa327f6a435c6e1e40c"
+      },
+      "basis": "Original source places this surname after Berkman/Berman and before Berrang/Berthelet. This supports the blind Bern reading rather than Bem; m remains an explicit visible segmentation alternative. Ordering is contextual, not a unique pixel proof.",
+      "caseProvenByPixels": false
+    },
+    {
+      "sequence": 125,
+      "physicalPage": 12,
+      "sourceRowOnPage": 29,
+      "reviewedFields": [
+        "name"
+      ],
+      "cropSha256": "f1753a92607a01c07c3fbd65f7ee93bc35bcb07553898de82e85a455a0a2f2f1",
+      "primaryLiteralName": "Bernstein,Vanessa",
+      "status": "resolved-with-source-typography-qualification",
+      "visibleAlternatives": [
+        "Bernstein,Vanessa",
+        "Bemstein,Vanessa"
+      ],
+      "ambiguityKind": "rn-m-source-segmentation",
+      "qualificationPolicy": {
+        "path": "research/salaries/queue-completion-2026-11-01/phsa/source-name-segmentation-review-policy-002.json",
+        "sha256": "fcfc11b7872b8c111018dd5b74494ea25391d14e1e905aa327f6a435c6e1e40c"
+      },
+      "basis": "Original source places this surname after Berkman/Berman and before Berrang/Berthelet. This supports the blind Bern reading rather than Bem; m remains an explicit visible segmentation alternative. Ordering is contextual, not a unique pixel proof.",
+      "caseProvenByPixels": false
+    },
+    {
+      "sequence": 141,
+      "physicalPage": 13,
+      "sourceRowOnPage": 26,
+      "reviewedFields": [
+        "name"
+      ],
+      "cropSha256": "b403a9058a60fd7a7b14b36dad36e90c0eb6362fb542c36a3e5beae9aab5bece",
+      "primaryLiteralName": "Bigras,Branden Andre",
+      "status": "resolved-from-original-image",
+      "visibleAlternatives": [],
+      "literalReadingBasis": "Actual printed name directly rechecked; see pinned additive source-only/candidate-triggered reread trail. No generic letter rewrite or contextual identity inference."
+    },
+    {
+      "sequence": 155,
+      "physicalPage": 14,
+      "sourceRowOnPage": 24,
+      "reviewedFields": [
+        "name"
+      ],
+      "cropSha256": "ad890a5ae38784adb6770fd5de7b4a2c31b5e703c55afb034afe197fee90c11e",
+      "primaryLiteralName": "Blanco,Ernest Antony",
+      "status": "resolved-with-source-typography-qualification",
+      "visibleAlternatives": [
+        "Blanco,Ernest Antony",
+        "Blanco,Emest Antony"
+      ],
+      "ambiguityKind": "rn-m-source-segmentation",
+      "qualificationPolicy": {
+        "path": "research/salaries/queue-completion-2026-11-01/phsa/source-name-segmentation-review-policy-002.json",
+        "sha256": "fcfc11b7872b8c111018dd5b74494ea25391d14e1e905aa327f6a435c6e1e40c"
+      },
+      "basis": "The blind personal source reading retains rn in this given name after actual600dpi reinspection. Actual adjacent rows confirm the correct original row but surname ordering does not resolve given-name segmentation. The source join may also read as m, retained explicitly; no dictionary, prior-year identity or name expansion is used.",
+      "caseProvenByPixels": false
+    },
+    {
+      "sequence": 157,
+      "physicalPage": 15,
+      "sourceRowOnPage": 3,
+      "reviewedFields": [
+        "name"
+      ],
+      "cropSha256": "311496bdb02c541dea4ff97dae66928013d72fcb70706d6cccb3b6ac66930895",
+      "primaryLiteralName": "Boerkoel,Cornelius",
+      "status": "resolved-with-source-typography-qualification",
+      "visibleAlternatives": [
+        "Boerkoel,Cornelius",
+        "Boerkoel,Comelius"
+      ],
+      "ambiguityKind": "rn-m-source-segmentation",
+      "qualificationPolicy": {
+        "path": "research/salaries/queue-completion-2026-11-01/phsa/source-name-segmentation-review-policy-002.json",
+        "sha256": "fcfc11b7872b8c111018dd5b74494ea25391d14e1e905aa327f6a435c6e1e40c"
+      },
+      "basis": "The blind personal source reading retains rn in this given name after actual600dpi reinspection. Actual adjacent rows confirm the correct original row but surname ordering does not resolve given-name segmentation. The source join may also read as m, retained explicitly; no dictionary, prior-year identity or name expansion is used.",
+      "caseProvenByPixels": false
+    },
+    {
+      "sequence": 168,
+      "physicalPage": 16,
+      "sourceRowOnPage": 4,
+      "reviewedFields": [
+        "name"
+      ],
+      "cropSha256": "97e86609dcd415340c76b5e4bab4b904d9f9f5f55f02142ff183051451608e98",
+      "primaryLiteralName": "Born,Jessana",
+      "status": "resolved-with-source-typography-qualification",
+      "visibleAlternatives": [
+        "Born,Jessana",
+        "Bom,Jessana"
+      ],
+      "ambiguityKind": "rn-m-source-segmentation",
+      "qualificationPolicy": {
+        "path": "research/salaries/queue-completion-2026-11-01/phsa/source-name-segmentation-review-policy-002.json",
+        "sha256": "fcfc11b7872b8c111018dd5b74494ea25391d14e1e905aa327f6a435c6e1e40c"
+      },
+      "basis": "Original source places this surname after Borle and before Bortolussi/Boruta. This supports the blind Born reading rather than Bom; m remains an explicit visible segmentation alternative. Ordering is contextual, not a unique pixel proof.",
+      "caseProvenByPixels": false
+    },
+    {
+      "sequence": 237,
+      "physicalPage": 20,
+      "sourceRowOnPage": 15,
+      "reviewedFields": [
+        "name"
+      ],
+      "cropSha256": "2471c844095da85949c625b9b6832aa8c633fe01e3075db7fc2d492391767b7c",
+      "primaryLiteralName": "Burnes,Lukas",
+      "status": "resolved-with-source-typography-qualification",
+      "visibleAlternatives": [
+        "Burnes,Lukas",
+        "Bumes,Lukas"
+      ],
+      "ambiguityKind": "rn-m-source-segmentation",
+      "qualificationPolicy": {
+        "path": "research/salaries/queue-completion-2026-11-01/phsa/source-name-segmentation-review-policy-002.json",
+        "sha256": "fcfc11b7872b8c111018dd5b74494ea25391d14e1e905aa327f6a435c6e1e40c"
+      },
+      "basis": "Original source places this surname in the Burn block after Burkholder/Burley and before Burroughs/Bursey. This supports the blind rn reading rather than Bum. Ordering is contextual, not a unique pixel proof.",
+      "caseProvenByPixels": false
+    },
+    {
+      "sequence": 238,
+      "physicalPage": 20,
+      "sourceRowOnPage": 17,
+      "reviewedFields": [
+        "name"
+      ],
+      "cropSha256": "bc1f58cf0d6268cb9fbd37f01da48cfa75b33cb2313ecaa95078ba1eb1c3a651",
+      "primaryLiteralName": "Burnett,Tanya",
+      "status": "resolved-with-source-typography-qualification",
+      "visibleAlternatives": [
+        "Burnett,Tanya",
+        "Bumett,Tanya"
+      ],
+      "ambiguityKind": "rn-m-source-segmentation",
+      "qualificationPolicy": {
+        "path": "research/salaries/queue-completion-2026-11-01/phsa/source-name-segmentation-review-policy-002.json",
+        "sha256": "fcfc11b7872b8c111018dd5b74494ea25391d14e1e905aa327f6a435c6e1e40c"
+      },
+      "basis": "Original source places this surname in the Burn block after Burkholder/Burley and before Burroughs/Bursey. This supports the blind rn reading rather than Bum. Ordering is contextual, not a unique pixel proof.",
+      "caseProvenByPixels": false
+    },
+    {
+      "sequence": 239,
+      "physicalPage": 20,
+      "sourceRowOnPage": 18,
+      "reviewedFields": [
+        "name"
+      ],
+      "cropSha256": "961b8d6b183d567affae63498dbeb3ebe998a649a25b99d28647a41a6d557b18",
+      "primaryLiteralName": "Burnham,Nicole",
+      "status": "resolved-with-source-typography-qualification",
+      "visibleAlternatives": [
+        "Burnham,Nicole",
+        "Bumham,Nicole",
+        "Burnharn,Nicole",
+        "Bumharn,Nicole"
+      ],
+      "ambiguityKind": "rn-m-source-segmentation",
+      "qualificationPolicy": {
+        "path": "research/salaries/queue-completion-2026-11-01/phsa/source-name-segmentation-review-policy-002.json",
+        "sha256": "fcfc11b7872b8c111018dd5b74494ea25391d14e1e905aa327f6a435c6e1e40c"
+      },
+      "basis": "Original source places this surname in the Burn block after Burkholder/Burley and before Burroughs/Bursey. This supports the blind rn reading rather than Bum. The final lowercase m in Burnham also retains its possible rn segmentation, with all four joint combinations; source order does not resolve that final join. Ordering is contextual, not a unique pixel proof.",
+      "caseProvenByPixels": false
+    },
+    {
+      "sequence": 240,
+      "physicalPage": 20,
+      "sourceRowOnPage": 19,
+      "reviewedFields": [
+        "name"
+      ],
+      "cropSha256": "a707e5fa465268bf5e48d8d946ad3f718a2b5a03ee22f4cd75b490540e121807",
+      "primaryLiteralName": "Burnip,Douglas",
+      "status": "resolved-with-source-typography-qualification",
+      "visibleAlternatives": [
+        "Burnip,Douglas",
+        "Bumip,Douglas"
+      ],
+      "ambiguityKind": "rn-m-source-segmentation",
+      "qualificationPolicy": {
+        "path": "research/salaries/queue-completion-2026-11-01/phsa/source-name-segmentation-review-policy-002.json",
+        "sha256": "fcfc11b7872b8c111018dd5b74494ea25391d14e1e905aa327f6a435c6e1e40c"
+      },
+      "basis": "Original source places this surname in the Burn block after Burkholder/Burley and before Burroughs/Bursey. This supports the blind rn reading rather than Bum. Ordering is contextual, not a unique pixel proof.",
+      "caseProvenByPixels": false
+    },
+    {
+      "sequence": 241,
+      "physicalPage": 20,
+      "sourceRowOnPage": 20,
+      "reviewedFields": [
+        "name"
+      ],
+      "cropSha256": "1673088dfa65b27d7d36c8ef50a17694011709d3aff2e1c679dd3b638f1a2a3c",
+      "primaryLiteralName": "Burns,Heather",
+      "status": "resolved-with-source-typography-qualification",
+      "visibleAlternatives": [
+        "Burns,Heather",
+        "Bums,Heather"
+      ],
+      "ambiguityKind": "rn-m-source-segmentation",
+      "qualificationPolicy": {
+        "path": "research/salaries/queue-completion-2026-11-01/phsa/source-name-segmentation-review-policy-002.json",
+        "sha256": "fcfc11b7872b8c111018dd5b74494ea25391d14e1e905aa327f6a435c6e1e40c"
+      },
+      "basis": "Original source places this surname in the Burn block after Burkholder/Burley and before Burroughs/Bursey. This supports the blind rn reading rather than Bum. Ordering is contextual, not a unique pixel proof.",
+      "caseProvenByPixels": false
+    },
+    {
+      "sequence": 242,
+      "physicalPage": 20,
+      "sourceRowOnPage": 21,
+      "reviewedFields": [
+        "name"
+      ],
+      "cropSha256": "544d2d2f78536935107145bab3d226cdc4914a50fc20a7d2a2584ca61c7e4fc2",
+      "primaryLiteralName": "Burns,Laura Lynne",
+      "status": "resolved-with-source-typography-qualification",
+      "visibleAlternatives": [
+        "Burns,Laura Lynne",
+        "Bums,Laura Lynne"
+      ],
+      "ambiguityKind": "rn-m-source-segmentation",
+      "qualificationPolicy": {
+        "path": "research/salaries/queue-completion-2026-11-01/phsa/source-name-segmentation-review-policy-002.json",
+        "sha256": "fcfc11b7872b8c111018dd5b74494ea25391d14e1e905aa327f6a435c6e1e40c"
+      },
+      "basis": "Original source places this surname in the Burn block after Burkholder/Burley and before Burroughs/Bursey. This supports the blind rn reading rather than Bum. Ordering is contextual, not a unique pixel proof.",
+      "caseProvenByPixels": false
+    },
+    {
+      "sequence": 243,
+      "physicalPage": 20,
+      "sourceRowOnPage": 22,
+      "reviewedFields": [
+        "name"
+      ],
+      "cropSha256": "917cbb673807339b4eaeae36827fc60e5c10655b5eebeb14d94758d62805d8ff",
+      "primaryLiteralName": "Burns,Stephen M.",
+      "status": "resolved-with-source-typography-qualification",
+      "visibleAlternatives": [
+        "Burns,Stephen M.",
+        "Bums,Stephen M."
+      ],
+      "ambiguityKind": "rn-m-source-segmentation",
+      "qualificationPolicy": {
+        "path": "research/salaries/queue-completion-2026-11-01/phsa/source-name-segmentation-review-policy-002.json",
+        "sha256": "fcfc11b7872b8c111018dd5b74494ea25391d14e1e905aa327f6a435c6e1e40c"
+      },
+      "basis": "Original source places this surname in the Burn block after Burkholder/Burley and before Burroughs/Bursey. This supports the blind rn reading rather than Bum. Ordering is contextual, not a unique pixel proof.",
+      "caseProvenByPixels": false
+    },
+    {
+      "sequence": 253,
+      "physicalPage": 21,
+      "sourceRowOnPage": 4,
+      "reviewedFields": [
+        "name"
+      ],
+      "cropSha256": "efad7489a8acc86b5b10213c4ca773c64ebc843f9f26d994429c078e92607a33",
+      "primaryLiteralName": "Cabaluna,Myrna",
+      "status": "resolved-with-source-typography-qualification",
+      "visibleAlternatives": [
+        "Cabaluna,Myrna",
+        "Cabaluna,Myma"
+      ],
+      "ambiguityKind": "rn-m-source-segmentation",
+      "qualificationPolicy": {
+        "path": "research/salaries/queue-completion-2026-11-01/phsa/source-name-segmentation-review-policy-002.json",
+        "sha256": "fcfc11b7872b8c111018dd5b74494ea25391d14e1e905aa327f6a435c6e1e40c"
+      },
+      "basis": "The blind personal source reading retains rn in this given name after actual600dpi reinspection. Actual adjacent rows confirm the correct original row but surname ordering does not resolve given-name segmentation. The source join may also read as m, retained explicitly; no dictionary, prior-year identity or name expansion is used.",
+      "caseProvenByPixels": false
+    },
+    {
+      "sequence": 258,
+      "physicalPage": 21,
+      "sourceRowOnPage": 16,
+      "reviewedFields": [
+        "name"
+      ],
+      "cropSha256": "65cb968d53eaecbabdd40dc2c9af0740aa12daa6f0fc679f575308ead357d260",
+      "primaryLiteralName": "Cairnie,Malcom Peter",
+      "status": "resolved-with-source-typography-qualification",
+      "visibleAlternatives": [
+        "Cairnie,Malcom Peter",
+        "Caimie,Malcom Peter",
+        "Cairnie,Malcorn Peter",
+        "Caimie,Malcorn Peter"
+      ],
+      "ambiguityKind": "rn-m-source-segmentation",
+      "qualificationPolicy": {
+        "path": "research/salaries/queue-completion-2026-11-01/phsa/source-name-segmentation-review-policy-002.json",
+        "sha256": "fcfc11b7872b8c111018dd5b74494ea25391d14e1e905aa327f6a435c6e1e40c"
+      },
+      "basis": "Original source places this surname after Cain/Caird and before Cairns/Caissie. This supports Cairnie rather than Caimie. The lowercase m in the given name Malcom also retains a possible rn segmentation, and all four joint combinations are explicit. Given-name source order cannot resolve that join. Ordering is contextual, not a unique pixel proof.",
+      "caseProvenByPixels": false
+    },
+    {
+      "sequence": 283,
+      "physicalPage": 22,
+      "sourceRowOnPage": 44,
+      "reviewedFields": [
+        "name"
+      ],
+      "cropSha256": "61c23e3545051a3d01b279d8336c492c95fcdd492fb122b5647f23d291dbba4b",
+      "primaryLiteralName": "Carrie,Jordan Alexander Thomas Joseph",
+      "status": "resolved-from-original-image",
+      "visibleAlternatives": [],
+      "literalReadingBasis": "Actual printed name directly rechecked; see pinned additive source-only/candidate-triggered reread trail. No generic letter rewrite or contextual identity inference."
+    }
+  ],
+  "scope": "31requested name fields only:25qualified rn/m source cases and six direct-letter source checks. No monetary field, full300-row or whole source peer claim. Peer primary pipeline-author role and any prior-source spelling exposure must remain explicit."
+}

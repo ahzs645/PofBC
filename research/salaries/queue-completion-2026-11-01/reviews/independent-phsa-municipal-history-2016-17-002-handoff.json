@@ -1,0 +1,96 @@
+{
+  "frozen": true,
+  "reviewer": "/root/recovery_municipal",
+  "reviewedOn": "2026-11-01",
+  "sourceId": "phsa-2016-17",
+  "sourceSha256": "31f7a1af80186bf81139fd693b36e733333a06c2ab1a4c5191bd6ee9b3623a53",
+  "batch": "phsa-2016-17-002",
+  "status": "complete-bounded-original-image-review-with13-peer-confirmed-contextual-case-qualifications-awaiting-root-adoption",
+  "assignedRows": 400,
+  "requestedFields": 460,
+  "fieldCounts": {
+    "name": 170,
+    "remuneration": 210,
+    "expenses": 80
+  },
+  "resolutions": {
+    "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-municipal-history-2016-17-002-resolutions-v2.json",
+    "sha256": "e5d9a752f0f2de883928f751d5cc13bfc1cce9338c79cafaaa54cc2694e4bd7b"
+  },
+  "normalizedOverlays": {
+    "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-municipal-history-2016-17-002-normalized-overlays-v2.json",
+    "sha256": "5290b83144f99204c6ac6f38003b13f46fd095b91e50f82ce7c78a949cee3723"
+  },
+  "verification": {
+    "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-municipal-history-2016-17-002-verification.json",
+    "sha256": "d028840893f650a17fbd95a13f2ec681430aa8b1cfbd0fa163a2e73157e30466"
+  },
+  "rawImageFirstTranscript": {
+    "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-municipal-history-2016-17-002-original-transcript.json",
+    "sha256": "9849cbbdce75ba45819093e0b29a80a1757a5bf0a2e89d3475334a3dc8a70cfa"
+  },
+  "sourceFidelity": {
+    "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-municipal-history-2016-17-002-source-fidelity.json",
+    "sha256": "d38b46d9d3e375792f3ab261e7aef2abb4ddd15a1b8a5a6cc6d26002b1c9fe05"
+  },
+  "precomparisonOriginalRereads": {
+    "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-municipal-history-2016-17-002-precomparison-source-rereads.json",
+    "sha256": "1fe3161cf6416bc16d5b39ad90904bba267332d990f6336f72dcafdf4bfb84cc"
+  },
+  "postcomparisonOriginalRereads": {
+    "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-municipal-history-2016-17-002-postcomparison-original-rereads.json",
+    "sha256": "1ced1bfc8e96da0fe553ebe344952a07b2bd0e30abae58b135d92f8ea7ff0997"
+  },
+  "allFieldCandidateComparison": {
+    "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-municipal-history-2016-17-002-full-candidate-comparison.json.gzip",
+    "sha256": "4305b069c76d6dc450d50d6207a2b962f37e6170301b89097b551afd2161d744"
+  },
+  "candidateComparisonResolutionReference": "The comparison artifact references the staged3-case resolution because it was frozen before a systematic case scan. All400 final resolved values are independently checked identical in v2; only10 additional qualified statuses/metadata were added. Both earlier files remain immutable.",
+  "typographyCaseLedger": {
+    "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-municipal-history-2016-17-002-source-typography-qualifications-v2.json",
+    "sha256": "a16b6d8ea2af2f59dc54728583f134372a178bf6d4fba559f519de61136636c1"
+  },
+  "exact13CaseIndependentPeer": {
+    "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-history-batches-2016-17-002-expanded-typography-peer-comparison.json",
+    "sha256": "593765ef5abfe66fc0668fa6d6e024cbcc131fe4de65eb2d7ff22380158478ce"
+  },
+  "publicWarningRequiredBeforeWholeSourceAcceptance": "In this scanned schedule, capital I and lowercase l glyphs in 13 reviewed names are visually indistinguishable. Contextual case transcriptions follow the source initial-capital convention or surname alphabetical placement; exact visible alternatives are preserved in review evidence. These case choices are qualified, not pixel-proved. No generic casing conversion or name expansion was applied.",
+  "rootDecisionStillRequiredAtFreeze": true,
+  "sourceAcceptanceClaim": false,
+  "scopeAndIndependence": "Reviewer manually transcribed all400 original source row images before opening candidate alternatives. All36 originalPDF300dpi renders,400rowcrops,40contact sheets and460native fieldviews pixel-verified. A separate source-only reviewer independently checked13 typography names plus the separate Gosal joined-m name; that is a limited-name peer review, not a second400-row or money transcription. All exact source glyph/context assumptions and disclosed prior exposure are retained in the peer originals.",
+  "firstPassCorrections": {
+    "precomparison": [
+      {
+        "sequence": 58,
+        "name": "Gernack,Trevor→Germack,Trevor"
+      },
+      {
+        "sequence": 92,
+        "name": "Gosal,Jaskirn Kaur→Gosal,Jaskim Kaur"
+      }
+    ],
+    "postcomparison": [
+      {
+        "sequence": 175,
+        "expenses": "2664→2654"
+      },
+      {
+        "sequence": 176,
+        "remuneration": "76542→75542"
+      }
+    ],
+    "originalBlindTranscriptUnchanged": true,
+    "noBalancingOrIdentityExpansion": true
+  },
+  "reviewedTargetDifferencesFromRawCandidate": {
+    "fieldChanges": 402,
+    "rowsWithChanges": 361,
+    "name": 114,
+    "remuneration": 209,
+    "expenses": 79
+  },
+  "unrequestedFieldsNotAmended": true,
+  "newFilesOnly": true,
+  "noGlobalRegistryOrAuthorFrozenEvidenceChanges": true,
+  "nextAction": "Root may adopt exactly the13 contextual case choices/visible alternatives with source warning. Health may replay the pinned final400-row overlay as bounded field evidence; whole-period acceptance still requires all-page/control/holdout/other-batch closure."
+}

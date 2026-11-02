@@ -1,0 +1,31 @@
+{
+  "frozen": true,
+  "reviewer": "/root",
+  "sourceId": "phsa-2018-19",
+  "sourceSha256": "ddeba470b875451f6180eb442ed921f7902cc910d62a026c11ab298ca3d0440f",
+  "originalImageFirstTranscript": {
+    "path": "research/salaries/queue-completion-2026-11-01/reviews/root-phsa-history-2018-19-holdout-image-transcript.json",
+    "sha256": "6dea78d23e7b3298b981a57271c981264ceea96409e095174bda7c78706f8ce1"
+  },
+  "independentSourceOnlyPeer": {
+    "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-history-batches-holdout-four-name-recheck-original.json",
+    "sha256": "6cf7588d5704a0ea03953084a7c2ddec6eae62a24219815e41fb6b6891a42c2b"
+  },
+  "changes": [
+    {
+      "sequence": 7,
+      "physicalPage": 73,
+      "sourceRowOnPage": 15,
+      "field": "name",
+      "firstRootReading": "Narayanan,Sujatha",
+      "confirmedSourceReading": "Narayanan,Sujaatha",
+      "actualPdf600DpiImage": {
+        "path": "/tmp/root-phsa-holdout-2018-19-7-name-600.png",
+        "sha256": "21a03ae0a9d162a6e95b37bb25b2684b310a874483752de5e7976a69897b9877"
+      }
+    }
+  ],
+  "rootPersonallyRereadAllActualPdf600DpiClips": true,
+  "decision": "Correct only these root first-pass transcription mistakes after separately rereading actual source clips and matching a fresh independent peer who saw neither root nor machine alternatives before freezing. Original raw transcript stays unchanged. No machine/source payload correction, forced agreement or financial-value change.",
+  "candidateValuesChanged": false
+}

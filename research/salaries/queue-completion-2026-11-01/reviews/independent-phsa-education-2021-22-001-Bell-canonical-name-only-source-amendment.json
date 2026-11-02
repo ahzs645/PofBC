@@ -1,0 +1,144 @@
+{
+  "frozen": true,
+  "reviewedOn": "2026-11-02",
+  "frozenAtUtc": "2026-11-02T03:08:34.552868+00:00",
+  "reviewer": "recovery_education",
+  "sourceId": "phsa-2021-22",
+  "sourceSha256": "944c99fa7b7ede643cb4c426a5e9ab30aa906d8f81fda379f0206e4b0cdcd25c",
+  "batch": "phsa-2021-22-001",
+  "scope": "Only one direct name at physical11 row24; no monetary, title, period, page, multiplicity or source-control change.",
+  "originalAuthorReview": {
+    "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-education-2021-22-001-resolutions.json",
+    "sha256": "2f919f031f4b0e00a876a33ef6430006df5969cd1bbd8fbfbf02558d5b833c16"
+  },
+  "rootCanonical84Decision": {
+    "path": "research/salaries/queue-completion-2026-11-01/reviews/root-phsa-history-2021-22-canonical-eightyfour-final-source-comparison.json",
+    "sha256": "9d0a2c03ef35fefa2622834eba9c8273607b824bc006719758bf5705054cffbd"
+  },
+  "freshIndependentOneNamePeer": {
+    "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-history-peer-root-2021-22-p011-r24-canonical-final-comparison.json",
+    "sha256": "b534161dd57cb8003ff358f549e8bf5b16717970fb27514d48e0c1c929fea708"
+  },
+  "actualSourceOnlyOneNamePacket": {
+    "path": "research/salaries/queue-completion-2026-11-01/reviews/root-phsa-history-2021-22-p011-r24-one-canonical-source-only-peer.json",
+    "sha256": "196608b2d3ea643ff5690fa4f73241d31fbe2c09ee5ab590bb97a4446e565a8d"
+  },
+  "chronology": "Original author300/328 source-first raw/review remain immutable. Root canonical audit found missing second t and a separate cold source peer independently confirmed Ritteshni before root choices. This author personally inspected current native300 context and whole600 name AFTER those exact readings were disclosed; explicitly postexposure, no fresh-cold claim.",
+  "ownOriginalReviewerError": "Original Riteshni omitted a visibly printed second t. Canonical source shows two t stems/crossbars; this is a direct name correction, not a letter-count waiver or inferred spelling.",
+  "before": {
+    "physicalPage": 11,
+    "sourceRowOnPage": 24,
+    "reviewTargetFields": [
+      "name"
+    ],
+    "resolvedValues": {
+      "name": "Bell,Riteshni"
+    },
+    "literalImageName": "Bell,Riteshni",
+    "status": "resolved-from-original-image",
+    "cropSha256": "7a03e3b0f479597625e5b7c97777ea54011a891c67a331abfd6c9af16353af4b"
+  },
+  "after": {
+    "physicalPage": 11,
+    "sourceRowOnPage": 24,
+    "reviewTargetFields": [
+      "name"
+    ],
+    "resolvedValues": {
+      "name": "Bell,Ritteshni"
+    },
+    "literalImageName": "Bell,Ritteshni",
+    "status": "resolved-from-original-image",
+    "cropSha256": "7a03e3b0f479597625e5b7c97777ea54011a891c67a331abfd6c9af16353af4b"
+  },
+  "actualSourceRgbChecks": [
+    {
+      "view": "native300Name",
+      "reference": {
+        "path": "research/salaries/queue-completion-2026-11-01/phsa/canonical-review/phsa-2021-22-direct-neither/p011-r24-native300-name.png",
+        "sha256": "42ba3dc03ebbfe84041a75c034c5477020157ee3cef2cbc18e334807943bc041",
+        "sourcePixelBox": [
+          202,
+          1951,
+          1778,
+          2001
+        ]
+      },
+      "independentWholePageIntegerCropRgbExact": true
+    },
+    {
+      "view": "wholePage600Name",
+      "reference": {
+        "path": "research/salaries/queue-completion-2026-11-01/phsa/canonical-review/phsa-2021-22-direct-neither/p011-r24-whole600-name.png",
+        "sha256": "9c430f7481fe1b94ebeaa46f7f50efad5d64ae25aa263f55c2e9172454d929d7",
+        "sourcePixelBox": [
+          404,
+          3902,
+          3556,
+          4002
+        ]
+      },
+      "independentWholePageIntegerCropRgbExact": true
+    },
+    {
+      "view": "native300Context",
+      "reference": {
+        "path": "research/salaries/queue-completion-2026-11-01/phsa/canonical-review/phsa-2021-22-direct-neither/p011-r24-native300-context.png",
+        "sha256": "06905133456ffe7f4e855eaa51aeb512900d421582748d66c0f8255ccd83985f",
+        "sourcePixelBox": [
+          202,
+          1851,
+          1778,
+          2101
+        ]
+      },
+      "independentWholePageIntegerCropRgbExact": true
+    },
+    {
+      "view": "wholePage600Context",
+      "reference": {
+        "path": "research/salaries/queue-completion-2026-11-01/phsa/canonical-review/phsa-2021-22-direct-neither/p011-r24-whole600-context.png",
+        "sha256": "a83c8cec63a1843a125f9618b6ee7deab6c15f962cff723c73871aba2b1cffc9",
+        "sourcePixelBox": [
+          404,
+          3702,
+          3556,
+          4202
+        ]
+      },
+      "independentWholePageIntegerCropRgbExact": true
+    },
+    {
+      "view": "native300FullRow",
+      "reference": {
+        "path": "research/salaries/queue-completion-2026-11-01/phsa/canonical-review/phsa-2021-22-direct-neither/p011-r24-native300-fullrow.png",
+        "sha256": "3e121aec3c34200975f2aefc0800096944245376da659b3e682775e4e0833ac6",
+        "sourcePixelBox": [
+          0,
+          1951,
+          2550,
+          2001
+        ]
+      },
+      "independentWholePageIntegerCropRgbExact": true
+    },
+    {
+      "view": "wholePage600FullRow",
+      "reference": {
+        "path": "research/salaries/queue-completion-2026-11-01/phsa/canonical-review/phsa-2021-22-direct-neither/p011-r24-whole600-fullrow.png",
+        "sha256": "1f91b5100689934940f5dd473b0b39b210e44dedba76adce2f675d2d604fab80",
+        "sourcePixelBox": [
+          0,
+          3902,
+          5100,
+          4002
+        ]
+      },
+      "independentWholePageIntegerCropRgbExact": true
+    }
+  ],
+  "allSixViewsExact": true,
+  "moneyUnchanged": true,
+  "existing25QualificationCasesUnchanged": true,
+  "oldBytesUnchanged": true
+}

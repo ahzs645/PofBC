@@ -1,0 +1,3481 @@
+{
+  "id": "queue-completion-phsa-2020-21-employees",
+  "employerSlug": "provincial-health-services-authority",
+  "employerName": "Provincial Health Services Authority",
+  "sector": "Health authorities",
+  "title": "Provincial Health Services Authority employee remuneration and expenses 2020/21",
+  "year": "2020/21",
+  "periodType": "fiscal",
+  "periodStart": "2020-04-01",
+  "periodEnd": "2021-03-31",
+  "sourceUrl": "https://www.phsa.ca/about-site/Documents/Employee%20remuneration%20greater%20than%20$75%2c000%20%28PHSA%29.pdf",
+  "sourceIndexUrl": "https://www.phsa.ca/about/accountability/budget-financials",
+  "sha256": "87ea680c3e2b9bb940d911a198e41b85068535964ee61b6992e651271bd72b60",
+  "pdfBytes": 14669502,
+  "sourceKind": "official",
+  "file": "phsa-2020-21-employees-v4.json.gzip",
+  "dataSha256": "828aa8e9fb327300a6dcf1717dadf8cc58829b65b7180959b42025cf4d4a2340",
+  "rowCount": 7941,
+  "totalRemuneration": 857491236,
+  "totalExpenses": 6822673,
+  "totalDisclosedExpenses": 6822673,
+  "status": "held-for-peer-review",
+  "category": "employee-remuneration",
+  "scope": "employee-remuneration",
+  "threshold": 75000,
+  "thresholdComparison": ">",
+  "currency": "CAD",
+  "nameDisclosure": "named",
+  "completeEmployeeSchedule": true,
+  "publicationStatus": "official-published-unsigned-standalone-schedule",
+  "retainCompiledPartition": true,
+  "notes": [
+    "Alphabetical list of employees who received remuneration exceeding$75000 for the year ended March31 and their expenses paid during the period. Expenses may be reimbursed directly to employees and/or paid to a third party supplier.",
+    "The literal remuneration column is retained. No annual salary rate or missing compensation component is inferred; nothing is annualized.",
+    "No job titles are published: all positions are null. The reporting entity remains the printed Provincial Health Services Authority; no unit assignment or cross-year identity is inferred.",
+    "Two independent OCR engines read every original salary page. Actual PDF-painted RGB 300-dpi source bytes and all original row boundaries have independent complete-source checks.",
+    "Original reader streams/confidences/flags and all frozen review packets remain immutable. Every true disagreement, missing/unparsed field and source-name artifact is image resolved. A separately calibrated policy corroborates eligible unreserved confidence-only fields by exact independent agreement and source guards; these are not labelled personal image transcription.",
+    "Ninety deterministic source-only holdout rows (222 fields across all nine layouts) independently matched the final source readings. Four reviewer-only first-pass name errors are preserved transparently in additive reread evidence; no machine data was changed by the holdout.",
+    "Expense dashes require source-specific actual-image geometry or literal image review; blank regions or absent OCR detections never imply a dash or zero.",
+    "Original physical pages, repeated names/observations and source order are preserved. No deduplication or generic name casing is performed.",
+    "Compiled observations remain retained until root independently proves and adopts exact replacement scope.",
+    "No component enumeration seen on the reviewed source context; do not silently carry earlier source definitions forward."
+  ],
+  "publicWarning": "Fiscal-year remuneration above the disclosure threshold is not an annual salary rate or a workforce census. Expenses may include third-party supplier payments; original expense dashes remain unknown (null). The published standalone schedule is unsigned and does not establish board approval. Qualified source-name interpretations include 25 visually ambiguous rn/m segmentations, 1 separately root-adopted exact finite source-name alternatives. Their exact affected rows, primary readings, finite visible alternatives and independently reviewed/root-adopted context are retained in provenance; a unique glyph interpretation is not claimed.",
+  "validation": {
+    "completeEmployeeSchedule": true,
+    "independentlyComparedRows": 7941,
+    "physicalPdfPages": 148,
+    "salaryPhysicalPages": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45,
+      46,
+      47,
+      48,
+      49,
+      50,
+      51,
+      52,
+      53,
+      54,
+      55,
+      56,
+      57,
+      58,
+      59,
+      60,
+      61,
+      62,
+      63,
+      64,
+      65,
+      66,
+      67,
+      68,
+      69,
+      70,
+      71,
+      72,
+      73,
+      74,
+      75,
+      76,
+      77,
+      78,
+      79,
+      80,
+      81,
+      82,
+      83,
+      84,
+      85,
+      86,
+      87,
+      88,
+      89,
+      90,
+      91,
+      92,
+      93,
+      94,
+      95,
+      96,
+      97,
+      98,
+      99,
+      100,
+      101,
+      102,
+      103,
+      104,
+      105,
+      106,
+      107,
+      108,
+      109,
+      110,
+      111,
+      112,
+      113,
+      114,
+      115,
+      116,
+      117,
+      118,
+      119,
+      120,
+      121,
+      122,
+      123,
+      124,
+      125,
+      126,
+      127,
+      128,
+      129,
+      130,
+      131,
+      132,
+      133,
+      134,
+      135,
+      136,
+      137,
+      138,
+      139,
+      140,
+      141,
+      142,
+      143,
+      144,
+      145,
+      146,
+      147,
+      148
+    ],
+    "originalNamedRows": 7941,
+    "originalPrintedNamedCount": 7941,
+    "printedActiveEmployeeCountIsSeparateFromNamedRoster": 19992,
+    "fieldResolutionCounts": {
+      "name": {
+        "manual-original-image": 794,
+        "baseline-independent-reader-agreement": 3171,
+        "calibrated-paired-reader-confidence-corroboration": 3940,
+        "manual-blind-source-holdout": 10,
+        "manual-qualified-source-typography": 26
+      },
+      "remuneration": {
+        "manual-original-image": 542,
+        "baseline-independent-reader-agreement": 2270,
+        "calibrated-paired-reader-confidence-corroboration": 5119,
+        "manual-blind-source-holdout": 10
+      },
+      "expenses": {
+        "manual-original-image": 171,
+        "original-source-explicit-dash-geometry": 4914,
+        "baseline-independent-reader-agreement": 2043,
+        "calibrated-paired-reader-confidence-corroboration": 809,
+        "manual-blind-source-holdout": 4
+      }
+    },
+    "resolutionRouteCounts": {
+      "manual-original-image": 1507,
+      "baseline-independent-reader-agreement": 7484,
+      "calibrated-paired-reader-confidence-corroboration": 9868,
+      "manual-blind-source-holdout": 24,
+      "manual-qualified-source-typography": 26,
+      "original-source-explicit-dash-geometry": 4914
+    },
+    "personallyImageReviewedFieldCount": 1557,
+    "calibratedPairedReaderConfidenceOnlyFieldCount": 9868,
+    "sourceExplicitDashGeometryFieldCount": 4914,
+    "rootAdoptedQualifiedNameCases": [
+      {
+        "physicalPage": 24,
+        "sourceRowOnPage": 19,
+        "chosenName": "Chomcy,Kevin Daniel",
+        "sourceSha256": "87ea680c3e2b9bb940d911a198e41b85068535964ee61b6992e651271bd72b60",
+        "qualificationKind": "exact-root-bound-source-name-alternatives",
+        "rootAdoption": {
+          "path": "research/salaries/queue-completion-2026-11-01/reviews/root-phsa-history-2020-21-batch-001-seq149-exact-name-adoption.json",
+          "sha256": "1cc3aff24f54cd66823e187ebf5d3b93bafd8cad63d45ab36c3376a897d081cf"
+        },
+        "completeAdoptionEvidence": {
+          "frozen": true,
+          "reviewer": "/root",
+          "reviewedOn": "2026-11-01",
+          "sourceId": "phsa-2020-21",
+          "sourceSha256": "87ea680c3e2b9bb940d911a198e41b85068535964ee61b6992e651271bd72b60",
+          "batch": "phsa-2020-21-001",
+          "exactCaseLedger": {
+            "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-schools-2020-21-batch-001-source-name-qualifications.json",
+            "sha256": "043b0720f48c11385bf05541c17861da728f692185620dd1cdd506f26cfe9e84"
+          },
+          "independentPeer": {
+            "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-municipal-peer-2020-21-001-three-name-comparison.json",
+            "sha256": "652f4f793d391cda0261c0629c4042e902eb298f38fcac763396c7987ce3b633"
+          },
+          "secondIndependentPeer": {
+            "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-education-2020-21-001-three-peer-comparison.json",
+            "sha256": "0e6680aabc411e1c52cbb1c60efd04d1540a1c1cb6b8c1b0072f67fdb557a1f2"
+          },
+          "independentPeerBinding": {
+            "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-schools-2020-21-batch-001-source-name-peer-binding.json",
+            "sha256": "b74612c1338262a3714074dae5d214da765fe5dc1811f820fdf2c3025223df57"
+          },
+          "acceptedQualifiedCases": true,
+          "caseProvenByPixels": false,
+          "wholeSourceAccepted": false,
+          "decision": "adopt-exact-single-source-name-ambiguity",
+          "qualifiedCases": 1,
+          "closedCases": [
+            {
+              "sourceId": "phsa-2020-21",
+              "sourceSha256": "87ea680c3e2b9bb940d911a198e41b85068535964ee61b6992e651271bd72b60",
+              "batch": "phsa-2020-21-001",
+              "sequence": 149,
+              "physicalPage": 24,
+              "sourceRowOnPage": 19,
+              "visibleAlternatives": [
+                "Chomcy,Kevin Daniel",
+                "Chorncy,Kevin Daniel",
+                "Chomey,Kevin Daniel",
+                "Chorney,Kevin Daniel"
+              ],
+              "cropSha256": "09f8a4179baa448f84c9ce59e04339fdcbd9503f71e0aaa23f79212bfb3a949c",
+              "primary": "Chomcy,Kevin Daniel",
+              "allowedFields": [
+                "name"
+              ],
+              "caseProvenByPixels": false,
+              "originalCaseEvidence": {
+                "sourceId": "phsa-2020-21",
+                "sourceSha256": "87ea680c3e2b9bb940d911a198e41b85068535964ee61b6992e651271bd72b60",
+                "batch": "phsa-2020-21-001",
+                "sequence": 149,
+                "physicalPage": 24,
+                "sourceRowOnPage": 19,
+                "proposedName": "Chomcy,Kevin Daniel",
+                "visibleAlternatives": [
+                  "Chomcy,Kevin Daniel",
+                  "Chorncy,Kevin Daniel",
+                  "Chomey,Kevin Daniel",
+                  "Chorney,Kevin Daniel"
+                ],
+                "caseProvenByPixels": false,
+                "assumptionBasis": "Two independently frozen original-image first primaries are the m-like cluster and open c-like bowl. Actual source placement after Chokaria and before Chong supports preferred m segmentation; it does not uniquely determine c/e. Retain all four finite rn/m by c/e combinations. No dictionary, name identity, prior-year source or arbitrary spelling repair; the c/e component requires exact root closed-case authority for this source/page/row only.",
+                "allowedFields": [
+                  "name"
+                ],
+                "cropSha256": "09f8a4179baa448f84c9ce59e04339fdcbd9503f71e0aaa23f79212bfb3a949c",
+                "actualSourceEvidence": {
+                  "originalFullRowCropPath": "/tmp/queue-completion-phsa/phsa-2020-21/review-images/batch-001/p024-r19.png",
+                  "originalFullRowCropSha256": "09f8a4179baa448f84c9ce59e04339fdcbd9503f71e0aaa23f79212bfb3a949c",
+                  "original300DpiSourcePagePath": "/tmp/queue-completion-phsa/phsa-2020-21/images/p024.png",
+                  "original300DpiSourcePageSha256": "a771ccc54d91e54fc75ede14d136011625d40164b6caffb7b6e23d969b244e41",
+                  "originalNativeNameView": {
+                    "field": "name",
+                    "path": "/tmp/queue-completion-phsa/phsa-2020-21/review-images/phsa-2020-21-001-target-views/0149-name.png",
+                    "sha256": "98ba1b6e5af00e36c96974397302521731b5bf5b0a741419c2020798f42e4b2d",
+                    "originalPdf300DpiPixelBox": [
+                      280,
+                      1453,
+                      1753,
+                      1494
+                    ],
+                    "noResamplingOrGlyphAlteration": true
+                  },
+                  "actual600DpiOriginalName": {
+                    "sequence": 149,
+                    "physicalPage": 24,
+                    "sourceRowOnPage": 19,
+                    "original300DpiPixelBox": [
+                      280,
+                      1449,
+                      1180,
+                      1498
+                    ],
+                    "actualPdfPointClip": [
+                      67.2,
+                      347.76,
+                      283.2,
+                      359.52
+                    ],
+                    "dpi": 600,
+                    "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-schools-2020-21-batch-001-precomparison-seq149-actual600.png",
+                    "sha256": "f0a86486c91f215cc82ab3a865412d36a7b33089b6c9c6253981e9f8abb7a2cd"
+                  },
+                  "actual1200DpiOriginalName": {
+                    "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-schools-2020-21-batch-001-peer-seq149-actual1200.png",
+                    "sha256": "fa3e4ce11e1d1bb358fdaa5c8c394312407bba82968981d9dd019ebb7b0130e8",
+                    "original300DpiPixelBox": [
+                      280,
+                      1449,
+                      780,
+                      1498
+                    ],
+                    "actualPdfPointClip": [
+                      67.2,
+                      347.76,
+                      187.2,
+                      359.52
+                    ],
+                    "dpi": 1200
+                  },
+                  "actualAdjacentSourceContext": {
+                    "sequence": 149,
+                    "physicalPage": 24,
+                    "sourceRowOnPage": 19,
+                    "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-schools-2020-21-batch-001-qualified-seq149-source-context600.png",
+                    "sha256": "398eb09eae1351507f8b21bd2e130ead0e16e94389797273623aca35ce0895dc",
+                    "dpi": 600,
+                    "original300DpiPixelBox": [
+                      280,
+                      1333,
+                      1180,
+                      1614
+                    ],
+                    "actualPdfPointClip": [
+                      67.2,
+                      319.92,
+                      283.2,
+                      387.36
+                    ]
+                  },
+                  "independentPeer2400OriginalViews": [
+                    {
+                      "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-schools-2020-21-batch-001-qualified-seq149-peer2400-1.png",
+                      "sha256": "a89c45d6f28871375e8496d5255e5a17370ce9fe1661714ee04e0f74c927a289",
+                      "dpi": 2400,
+                      "copiedUnchangedFromIndependentlyFrozenPeerEvidence": true
+                    }
+                  ]
+                },
+                "firstImagePrimaryUnchangedFromFrozenAuthorRaw": true,
+                "firstIndependentPeerPrimaryExactlyMatches": true,
+                "manualMoneyBinding": {
+                  "requestedMonetaryValuesFromFrozenRaw": {},
+                  "qualificationChangesNoMonetaryField": true,
+                  "noMoneyOutsideOriginallyAssignedFieldsReviewedByThisCase": true
+                },
+                "status": "proposed-qualified-finite-source-reading-awaiting-exact-two-peer-and-root-adoption",
+                "ambiguityKind": "closed-exact-rn-m-plus-c-e-source-case-only"
+              },
+              "rootPersonallyViewedActualOriginal600DpiNameAndContext": true
+            }
+          ],
+          "primary": "Chomcy,Kevin Daniel",
+          "physicalPage": 24,
+          "sourceRowOnPage": 19,
+          "visibleAlternatives": [
+            "Chomcy,Kevin Daniel",
+            "Chorncy,Kevin Daniel",
+            "Chomey,Kevin Daniel",
+            "Chorney,Kevin Daniel"
+          ],
+          "cropSha256": "09f8a4179baa448f84c9ce59e04339fdcbd9503f71e0aaa23f79212bfb3a949c",
+          "requireClosedExactCaseBoundConsumerException": true,
+          "publicSourceWarningRequired": true,
+          "noOtherNameOrMonetaryFieldAuthority": true,
+          "scope": "Only exact2020/21p24r19 preferred Chomcy,Kevin Daniel and the complete four-way Chomcy/Chorncy/Chomey/Chorney alternatives with the identical given names. Author plus two independent external blinded source readers agree; root additionally personally viewed original600dpi field/context. Source placement between Chokaria and Chong supports m contextually; c/e remains ambiguous. No unique pixel proof, generic c/e transformation, earlier-year identity, amount or other-row authority."
+        },
+        "originalCaseEvidence": {
+          "sourceId": "phsa-2020-21",
+          "sourceSha256": "87ea680c3e2b9bb940d911a198e41b85068535964ee61b6992e651271bd72b60",
+          "batch": "phsa-2020-21-001",
+          "sequence": 149,
+          "physicalPage": 24,
+          "sourceRowOnPage": 19,
+          "proposedName": "Chomcy,Kevin Daniel",
+          "visibleAlternatives": [
+            "Chomcy,Kevin Daniel",
+            "Chorncy,Kevin Daniel",
+            "Chomey,Kevin Daniel",
+            "Chorney,Kevin Daniel"
+          ],
+          "caseProvenByPixels": false,
+          "assumptionBasis": "Two independently frozen original-image first primaries are the m-like cluster and open c-like bowl. Actual source placement after Chokaria and before Chong supports preferred m segmentation; it does not uniquely determine c/e. Retain all four finite rn/m by c/e combinations. No dictionary, name identity, prior-year source or arbitrary spelling repair; the c/e component requires exact root closed-case authority for this source/page/row only.",
+          "allowedFields": [
+            "name"
+          ],
+          "cropSha256": "09f8a4179baa448f84c9ce59e04339fdcbd9503f71e0aaa23f79212bfb3a949c",
+          "actualSourceEvidence": {
+            "originalFullRowCropPath": "/tmp/queue-completion-phsa/phsa-2020-21/review-images/batch-001/p024-r19.png",
+            "originalFullRowCropSha256": "09f8a4179baa448f84c9ce59e04339fdcbd9503f71e0aaa23f79212bfb3a949c",
+            "original300DpiSourcePagePath": "/tmp/queue-completion-phsa/phsa-2020-21/images/p024.png",
+            "original300DpiSourcePageSha256": "a771ccc54d91e54fc75ede14d136011625d40164b6caffb7b6e23d969b244e41",
+            "originalNativeNameView": {
+              "field": "name",
+              "path": "/tmp/queue-completion-phsa/phsa-2020-21/review-images/phsa-2020-21-001-target-views/0149-name.png",
+              "sha256": "98ba1b6e5af00e36c96974397302521731b5bf5b0a741419c2020798f42e4b2d",
+              "originalPdf300DpiPixelBox": [
+                280,
+                1453,
+                1753,
+                1494
+              ],
+              "noResamplingOrGlyphAlteration": true
+            },
+            "actual600DpiOriginalName": {
+              "sequence": 149,
+              "physicalPage": 24,
+              "sourceRowOnPage": 19,
+              "original300DpiPixelBox": [
+                280,
+                1449,
+                1180,
+                1498
+              ],
+              "actualPdfPointClip": [
+                67.2,
+                347.76,
+                283.2,
+                359.52
+              ],
+              "dpi": 600,
+              "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-schools-2020-21-batch-001-precomparison-seq149-actual600.png",
+              "sha256": "f0a86486c91f215cc82ab3a865412d36a7b33089b6c9c6253981e9f8abb7a2cd"
+            },
+            "actual1200DpiOriginalName": {
+              "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-schools-2020-21-batch-001-peer-seq149-actual1200.png",
+              "sha256": "fa3e4ce11e1d1bb358fdaa5c8c394312407bba82968981d9dd019ebb7b0130e8",
+              "original300DpiPixelBox": [
+                280,
+                1449,
+                780,
+                1498
+              ],
+              "actualPdfPointClip": [
+                67.2,
+                347.76,
+                187.2,
+                359.52
+              ],
+              "dpi": 1200
+            },
+            "actualAdjacentSourceContext": {
+              "sequence": 149,
+              "physicalPage": 24,
+              "sourceRowOnPage": 19,
+              "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-schools-2020-21-batch-001-qualified-seq149-source-context600.png",
+              "sha256": "398eb09eae1351507f8b21bd2e130ead0e16e94389797273623aca35ce0895dc",
+              "dpi": 600,
+              "original300DpiPixelBox": [
+                280,
+                1333,
+                1180,
+                1614
+              ],
+              "actualPdfPointClip": [
+                67.2,
+                319.92,
+                283.2,
+                387.36
+              ]
+            },
+            "independentPeer2400OriginalViews": [
+              {
+                "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-schools-2020-21-batch-001-qualified-seq149-peer2400-1.png",
+                "sha256": "a89c45d6f28871375e8496d5255e5a17370ce9fe1661714ee04e0f74c927a289",
+                "dpi": 2400,
+                "copiedUnchangedFromIndependentlyFrozenPeerEvidence": true
+              }
+            ]
+          },
+          "firstImagePrimaryUnchangedFromFrozenAuthorRaw": true,
+          "firstIndependentPeerPrimaryExactlyMatches": true,
+          "manualMoneyBinding": {
+            "requestedMonetaryValuesFromFrozenRaw": {},
+            "qualificationChangesNoMonetaryField": true,
+            "noMoneyOutsideOriginallyAssignedFieldsReviewedByThisCase": true
+          },
+          "status": "proposed-qualified-finite-source-reading-awaiting-exact-two-peer-and-root-adoption",
+          "ambiguityKind": "closed-exact-rn-m-plus-c-e-source-case-only"
+        },
+        "closedCasePolicy": {
+          "path": "research/salaries/queue-completion-2026-11-01/phsa/source-name-exact-case-policy-007.json",
+          "sha256": "67a4e03a01de990536f26c67f5b2980198042a10988aea7da7b8903add5c90a7"
+        },
+        "allAdditionalRootAlternativesRetained": true,
+        "caseProvenByPixels": false,
+        "sourcePublicWarningRequired": true
+      },
+      {
+        "physicalPage": 34,
+        "sourceRowOnPage": 11,
+        "chosenName": "Dirner,Katerine Zsuzsi",
+        "sourceSha256": "87ea680c3e2b9bb940d911a198e41b85068535964ee61b6992e651271bd72b60",
+        "qualificationKind": "rn-m-source-segmentation",
+        "rootAdoption": {
+          "path": "research/salaries/queue-completion-2026-11-01/reviews/root-phsa-history-2020-21-batch-001-segmentation-adoption.json",
+          "sha256": "098a575ba5724a3d56dae3497578aa0777904f4b2ade1559ae643e9fa1e5a848"
+        },
+        "completeAdoptionEvidence": {
+          "frozen": true,
+          "reviewer": "/root",
+          "reviewedOn": "2026-11-01",
+          "sourceId": "phsa-2020-21",
+          "sourceSha256": "87ea680c3e2b9bb940d911a198e41b85068535964ee61b6992e651271bd72b60",
+          "batch": "phsa-2020-21-001",
+          "exactCaseLedger": {
+            "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-schools-2020-21-batch-001-source-name-qualifications.json",
+            "sha256": "043b0720f48c11385bf05541c17861da728f692185620dd1cdd506f26cfe9e84"
+          },
+          "independentPeer": {
+            "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-municipal-peer-2020-21-001-three-name-comparison.json",
+            "sha256": "652f4f793d391cda0261c0629c4042e902eb298f38fcac763396c7987ce3b633"
+          },
+          "secondIndependentPeer": {
+            "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-education-2020-21-001-three-peer-comparison.json",
+            "sha256": "0e6680aabc411e1c52cbb1c60efd04d1540a1c1cb6b8c1b0072f67fdb557a1f2"
+          },
+          "independentPeerBinding": {
+            "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-schools-2020-21-batch-001-source-name-peer-binding.json",
+            "sha256": "b74612c1338262a3714074dae5d214da765fe5dc1811f820fdf2c3025223df57"
+          },
+          "acceptedQualifiedCases": true,
+          "caseProvenByPixels": false,
+          "wholeSourceAccepted": false,
+          "qualifiedCases": 2,
+          "decision": "Adopt exactly the two rn/m qualifications in the qualifications array (215,223), with both independent external source-first primary/finite-alternative comparisons agreeing. Root relies on those actual-source readers; no personal root transcription claim of these two cases. All source contextual limitations and alternatives stay explicit. Case149 is excluded here and requires its separate closed exact authority. No spelling dictionary, prior-year identity, financial or period inference.",
+          "publicWarningRequired": true
+        },
+        "originalCaseEvidence": {
+          "sourceId": "phsa-2020-21",
+          "sourceSha256": "87ea680c3e2b9bb940d911a198e41b85068535964ee61b6992e651271bd72b60",
+          "batch": "phsa-2020-21-001",
+          "sequence": 215,
+          "physicalPage": 34,
+          "sourceRowOnPage": 11,
+          "proposedName": "Dirner,Katerine Zsuzsi",
+          "visibleAlternatives": [
+            "Dirner,Katerine Zsuzsi",
+            "Dimer,Katerine Zsuzsi"
+          ],
+          "caseProvenByPixels": false,
+          "assumptionBasis": "Original short-r shoulder plus following n arch is preferred; actual source placement after Dirks/Dirksen and before Dishaw supports rn rather than m under the source alphabetical arrangement. Pixels remain non-unique, and Dimer remains explicit. Katerine has an observed i dot/stem; do not add h or change the remaining printed name.",
+          "allowedFields": [
+            "name"
+          ],
+          "cropSha256": "9195cf3501c90629bd23f1e0b9a20e990a93ac758afe0b6402c0e12f7240e7b5",
+          "actualSourceEvidence": {
+            "originalFullRowCropPath": "/tmp/queue-completion-phsa/phsa-2020-21/review-images/batch-001/p034-r11.png",
+            "originalFullRowCropSha256": "9195cf3501c90629bd23f1e0b9a20e990a93ac758afe0b6402c0e12f7240e7b5",
+            "original300DpiSourcePagePath": "/tmp/queue-completion-phsa/phsa-2020-21/images/p034.png",
+            "original300DpiSourcePageSha256": "828f78b85d8dd25b6ebcee134956c584011976e129e1116d1940892274196fa4",
+            "originalNativeNameView": {
+              "field": "name",
+              "path": "/tmp/queue-completion-phsa/phsa-2020-21/review-images/phsa-2020-21-001-target-views/0215-name.png",
+              "sha256": "bd3fb34efb5f4e3264bd691d57a9b869c0a31681ac76dba91581dabda9c1228d",
+              "originalPdf300DpiPixelBox": [
+                280,
+                1105,
+                1753,
+                1147
+              ],
+              "noResamplingOrGlyphAlteration": true
+            },
+            "actual600DpiOriginalName": {
+              "sequence": 215,
+              "physicalPage": 34,
+              "sourceRowOnPage": 11,
+              "original300DpiPixelBox": [
+                280,
+                1101,
+                1180,
+                1151
+              ],
+              "actualPdfPointClip": [
+                67.2,
+                264.24,
+                283.2,
+                276.24
+              ],
+              "dpi": 600,
+              "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-schools-2020-21-batch-001-precomparison-seq215-actual600.png",
+              "sha256": "be537a8c81811c8bf5397d6bb5f712abffe56335c3141f792071ee44b809e70e"
+            },
+            "actual1200DpiOriginalName": {
+              "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-schools-2020-21-batch-001-peer-seq215-actual1200.png",
+              "sha256": "3b60dfc54ee55d4bcf5c5af25160ffc5cf006db3a488bc6df7109c5c4911b12b",
+              "original300DpiPixelBox": [
+                280,
+                1101,
+                780,
+                1151
+              ],
+              "actualPdfPointClip": [
+                67.2,
+                264.24,
+                187.2,
+                276.24
+              ],
+              "dpi": 1200
+            },
+            "actualAdjacentSourceContext": {
+              "sequence": 215,
+              "physicalPage": 34,
+              "sourceRowOnPage": 11,
+              "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-schools-2020-21-batch-001-qualified-seq215-source-context600.png",
+              "sha256": "a1400a28c36b51ab9134ec5f4871522e5728be053495f45f1299a8861cc31a93",
+              "dpi": 600,
+              "original300DpiPixelBox": [
+                280,
+                985,
+                1180,
+                1267
+              ],
+              "actualPdfPointClip": [
+                67.2,
+                236.4,
+                283.2,
+                304.08
+              ]
+            },
+            "independentPeer2400OriginalViews": [
+              {
+                "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-schools-2020-21-batch-001-qualified-seq215-peer2400-1.png",
+                "sha256": "29d2e214ec61661b9707d2d5fdeb9bf224fcbebe85390c73866afcaf1409e421",
+                "dpi": 2400,
+                "copiedUnchangedFromIndependentlyFrozenPeerEvidence": true
+              },
+              {
+                "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-schools-2020-21-batch-001-qualified-seq215-peer2400-2.png",
+                "sha256": "b9d893f6a8c7f9d7e118bc83459b3c25ecfde929b5543da5026d4dddb5d8160f",
+                "dpi": 2400,
+                "copiedUnchangedFromIndependentlyFrozenPeerEvidence": true
+              }
+            ]
+          },
+          "firstImagePrimaryUnchangedFromFrozenAuthorRaw": true,
+          "firstIndependentPeerPrimaryExactlyMatches": true,
+          "manualMoneyBinding": {
+            "requestedMonetaryValuesFromFrozenRaw": {},
+            "qualificationChangesNoMonetaryField": true,
+            "noMoneyOutsideOriginallyAssignedFieldsReviewedByThisCase": true
+          },
+          "status": "proposed-qualified-finite-source-reading-awaiting-exact-two-peer-and-root-adoption",
+          "ambiguityKind": "rn-m-source-segmentation",
+          "qualificationPolicy": {
+            "path": "research/salaries/queue-completion-2026-11-01/phsa/source-name-segmentation-review-policy-002.json",
+            "sha256": "fcfc11b7872b8c111018dd5b74494ea25391d14e1e905aa327f6a435c6e1e40c"
+          }
+        },
+        "allAdditionalRootAlternativesRetained": true,
+        "caseProvenByPixels": false,
+        "sourcePublicWarningRequired": true
+      },
+      {
+        "physicalPage": 35,
+        "sourceRowOnPage": 29,
+        "chosenName": "Dublan,Jorne Michael Epis",
+        "sourceSha256": "87ea680c3e2b9bb940d911a198e41b85068535964ee61b6992e651271bd72b60",
+        "qualificationKind": "rn-m-source-segmentation",
+        "rootAdoption": {
+          "path": "research/salaries/queue-completion-2026-11-01/reviews/root-phsa-history-2020-21-batch-001-segmentation-adoption.json",
+          "sha256": "098a575ba5724a3d56dae3497578aa0777904f4b2ade1559ae643e9fa1e5a848"
+        },
+        "completeAdoptionEvidence": {
+          "frozen": true,
+          "reviewer": "/root",
+          "reviewedOn": "2026-11-01",
+          "sourceId": "phsa-2020-21",
+          "sourceSha256": "87ea680c3e2b9bb940d911a198e41b85068535964ee61b6992e651271bd72b60",
+          "batch": "phsa-2020-21-001",
+          "exactCaseLedger": {
+            "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-schools-2020-21-batch-001-source-name-qualifications.json",
+            "sha256": "043b0720f48c11385bf05541c17861da728f692185620dd1cdd506f26cfe9e84"
+          },
+          "independentPeer": {
+            "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-municipal-peer-2020-21-001-three-name-comparison.json",
+            "sha256": "652f4f793d391cda0261c0629c4042e902eb298f38fcac763396c7987ce3b633"
+          },
+          "secondIndependentPeer": {
+            "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-education-2020-21-001-three-peer-comparison.json",
+            "sha256": "0e6680aabc411e1c52cbb1c60efd04d1540a1c1cb6b8c1b0072f67fdb557a1f2"
+          },
+          "independentPeerBinding": {
+            "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-schools-2020-21-batch-001-source-name-peer-binding.json",
+            "sha256": "b74612c1338262a3714074dae5d214da765fe5dc1811f820fdf2c3025223df57"
+          },
+          "acceptedQualifiedCases": true,
+          "caseProvenByPixels": false,
+          "wholeSourceAccepted": false,
+          "qualifiedCases": 2,
+          "decision": "Adopt exactly the two rn/m qualifications in the qualifications array (215,223), with both independent external source-first primary/finite-alternative comparisons agreeing. Root relies on those actual-source readers; no personal root transcription claim of these two cases. All source contextual limitations and alternatives stay explicit. Case149 is excluded here and requires its separate closed exact authority. No spelling dictionary, prior-year identity, financial or period inference.",
+          "publicWarningRequired": true
+        },
+        "originalCaseEvidence": {
+          "sourceId": "phsa-2020-21",
+          "sourceSha256": "87ea680c3e2b9bb940d911a198e41b85068535964ee61b6992e651271bd72b60",
+          "batch": "phsa-2020-21-001",
+          "sequence": 223,
+          "physicalPage": 35,
+          "sourceRowOnPage": 29,
+          "proposedName": "Dublan,Jorne Michael Epis",
+          "visibleAlternatives": [
+            "Dublan,Jorne Michael Epis",
+            "Dublan,Jome Michael Epis"
+          ],
+          "caseProvenByPixels": false,
+          "assumptionBasis": "Two independent source-image primaries read the given-name short-r shoulder plus n arch as rn, with joined m still possible. Other printed letters/word breaks remain literal; alphabetical surname context does not prove the given cluster. No name frequency, dictionary or identity linkage. Preserve both finite readings.",
+          "allowedFields": [
+            "name"
+          ],
+          "cropSha256": "b86864618cd21a1877d5f1d064556a70f6828dd31be096a287c01639f770fdb3",
+          "actualSourceEvidence": {
+            "originalFullRowCropPath": "/tmp/queue-completion-phsa/phsa-2020-21/review-images/batch-001/p035-r29.png",
+            "originalFullRowCropSha256": "b86864618cd21a1877d5f1d064556a70f6828dd31be096a287c01639f770fdb3",
+            "original300DpiSourcePagePath": "/tmp/queue-completion-phsa/phsa-2020-21/images/p035.png",
+            "original300DpiSourcePageSha256": "dd20c22bad24d880ce883b971809c243f8e91ff8495cd107d2bf4ad1f507b589",
+            "originalNativeNameView": {
+              "field": "name",
+              "path": "/tmp/queue-completion-phsa/phsa-2020-21/review-images/phsa-2020-21-001-target-views/0223-name.png",
+              "sha256": "bea878030e29ad9e1810dbb952b0cfbb84cbbfcc7dd3d38fcbf49170cec0a4be",
+              "originalPdf300DpiPixelBox": [
+                280,
+                1882,
+                1753,
+                1924
+              ],
+              "noResamplingOrGlyphAlteration": true
+            },
+            "actual600DpiOriginalName": {
+              "sequence": 223,
+              "physicalPage": 35,
+              "sourceRowOnPage": 29,
+              "original300DpiPixelBox": [
+                280,
+                1878,
+                1180,
+                1928
+              ],
+              "actualPdfPointClip": [
+                67.2,
+                450.72,
+                283.2,
+                462.72
+              ],
+              "dpi": 600,
+              "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-schools-2020-21-batch-001-precomparison-seq223-actual600.png",
+              "sha256": "063afdc7b609d44f746a06abd8706b3ca766431e78863311f3282f00195782b8"
+            },
+            "actual1200DpiOriginalName": {
+              "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-schools-2020-21-batch-001-peer-seq223-actual1200.png",
+              "sha256": "23a3a2cd630b07f730445ed13e7a755f8825f4789b3e6c126c5df3518933788a",
+              "original300DpiPixelBox": [
+                280,
+                1878,
+                780,
+                1928
+              ],
+              "actualPdfPointClip": [
+                67.2,
+                450.72,
+                187.2,
+                462.72
+              ],
+              "dpi": 1200
+            },
+            "actualAdjacentSourceContext": {
+              "sequence": 223,
+              "physicalPage": 35,
+              "sourceRowOnPage": 29,
+              "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-schools-2020-21-batch-001-qualified-seq223-source-context600.png",
+              "sha256": "9fd733460dc363c95459407ee8efc3b47a394dde459b8a3acc003b2ef3f769c4",
+              "dpi": 600,
+              "original300DpiPixelBox": [
+                280,
+                1762,
+                1180,
+                2044
+              ],
+              "actualPdfPointClip": [
+                67.2,
+                422.88,
+                283.2,
+                490.56
+              ]
+            },
+            "independentPeer2400OriginalViews": [
+              {
+                "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-schools-2020-21-batch-001-qualified-seq223-peer2400-1.png",
+                "sha256": "bcf4b5a1635203f3954e9b3c09ade77b26c6e56ab40e4282216ff79a1ac5ce55",
+                "dpi": 2400,
+                "copiedUnchangedFromIndependentlyFrozenPeerEvidence": true
+              }
+            ]
+          },
+          "firstImagePrimaryUnchangedFromFrozenAuthorRaw": true,
+          "firstIndependentPeerPrimaryExactlyMatches": true,
+          "manualMoneyBinding": {
+            "requestedMonetaryValuesFromFrozenRaw": {
+              "remuneration": 80778
+            },
+            "qualificationChangesNoMonetaryField": true,
+            "noMoneyOutsideOriginallyAssignedFieldsReviewedByThisCase": true
+          },
+          "status": "proposed-qualified-finite-source-reading-awaiting-exact-two-peer-and-root-adoption",
+          "ambiguityKind": "rn-m-source-segmentation",
+          "qualificationPolicy": {
+            "path": "research/salaries/queue-completion-2026-11-01/phsa/source-name-segmentation-review-policy-002.json",
+            "sha256": "fcfc11b7872b8c111018dd5b74494ea25391d14e1e905aa327f6a435c6e1e40c"
+          }
+        },
+        "allAdditionalRootAlternativesRetained": true,
+        "caseProvenByPixels": false,
+        "sourcePublicWarningRequired": true
+      },
+      {
+        "physicalPage": 36,
+        "sourceRowOnPage": 9,
+        "chosenName": "Durning,Ian",
+        "sourceSha256": "87ea680c3e2b9bb940d911a198e41b85068535964ee61b6992e651271bd72b60",
+        "qualificationKind": "rn-m-source-segmentation",
+        "rootAdoption": {
+          "path": "research/salaries/queue-completion-2026-11-01/reviews/root-phsa-history-2020-21-batch-003-segmentation-adoption.json",
+          "sha256": "c134959df1d2dae7fcbff513193973bb25ae9d4215cea9371b6d13bae9d414ae"
+        },
+        "completeAdoptionEvidence": {
+          "frozen": true,
+          "reviewer": "/root",
+          "reviewedOn": "2026-11-02",
+          "sourceId": "phsa-2020-21",
+          "sourceSha256": "87ea680c3e2b9bb940d911a198e41b85068535964ee61b6992e651271bd72b60",
+          "batch": "phsa-2020-21-003",
+          "acceptedQualifiedCases": true,
+          "qualifiedCases": 17,
+          "exactCaseLedger": {
+            "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-schools-2020-21-batch-003-source-name-qualifications-v3.json",
+            "sha256": "800f935212d8242b9a590f634b5cd84ac22ac5ebda0a232e8f73757c0da99364"
+          },
+          "independentPeer": {
+            "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-history-2020-21-003-seventeen-name-peer-comparison.json",
+            "sha256": "f39a6f61ca99373bc9810b145ce270c61f1ec5414ad281fa5dcbe3a59843356b"
+          },
+          "caseProvenByPixels": false,
+          "differentIndependentPreferredPrimary": {
+            "sequence": 45,
+            "adoptedAuthorPreferred": "Sidhu,Hemoor Kaur",
+            "independentPeerPreferred": "Sidhu,Hernoor Kaur",
+            "fullFiniteVisibleSet": [
+              "Sidhu,Hemoor Kaur",
+              "Sidhu,Hernoor Kaur"
+            ],
+            "basis": "Root additionally inspected the current original1200dpi source fragment. Compact rn/m is genuinely ambiguous. Preserve the authorfirstpreferredHemoor with the peerpreferredHernoor alternative explicitly qualified; no dictionary, identity or uniqueglyph assertion."
+          },
+          "decision": "Adopt exactly these17finite source-row rn/m qualifications under policy002 after two independently frozen original-image humans confirm all full finite sets.16preferredprimariesmatch; the one honest Hemoor/Hernoor preferred split remains explicit, with authorpreferredHemoor retained. All three two-join names retain full four-combination sets. The peers own first-pass extra-r error and later source reread are transparently preserved. Root reviews the exact two-reader evidence and personally inspected source45; no third independent transcript of all17names is claimed. No amount, period, identity, dictionary or whole-source inference.",
+          "publicWarningRequired": true,
+          "wholeSourceAccepted": false
+        },
+        "originalCaseEvidence": {
+          "sourceId": "phsa-2020-21",
+          "sourceSha256": "87ea680c3e2b9bb940d911a198e41b85068535964ee61b6992e651271bd72b60",
+          "batch": "phsa-2020-21-003",
+          "sequence": 303,
+          "physicalPage": 36,
+          "sourceRowOnPage": 9,
+          "proposedName": "Durning,Ian",
+          "visibleAlternatives": [
+            "Durning,Ian",
+            "Duming,Ian"
+          ],
+          "caseProvenByPixels": false,
+          "assumptionBasis": "Author first source-image literal preferred reading retained after direct actual600dpi rerender; joined shoulder/arch structure supports the preferred reading but rn/m segmentation remains finite. Both alternatives explicit. No dictionary, identity, prior-year or expected-spelling inference. Fresh peer source-only check and exact root adoption required.",
+          "allowedFields": [
+            "name"
+          ],
+          "cropSha256": "3ec656dce8ba172a6a8a7b55f4ff44405103d7e3da9c2159db26888c063a2b24",
+          "actual600DpiSourceName": {
+            "sequence": 303,
+            "physicalPage": 36,
+            "sourceRowOnPage": 9,
+            "original300DpiPixelBox": [
+              280,
+              1024,
+              1250,
+              1065
+            ],
+            "actualPdfPointClip": [
+              67.2,
+              245.76,
+              300.0,
+              255.6
+            ],
+            "dpi": 600,
+            "path": "/workspace/salary-review-schools-temp/2020-003-prechecks/seq303-name-actual600.png",
+            "sha256": "199b7cfa1b4607f761a764b61f7a636a010d1799a414a76dd7ccf37f0554f528"
+          },
+          "firstImagePrimaryUnchangedFromFrozenAuthorRaw": true,
+          "manualMoneyBinding": {
+            "requestedMonetaryValuesFromFrozenRaw": {},
+            "qualificationChangesNoMonetaryField": true,
+            "noMoneyOutsideOriginallyAssignedFieldsReviewedByThisCase": true
+          },
+          "status": "proposed-qualified-finite-source-reading-awaiting-fresh-peer-and-exact-root-adoption",
+          "ambiguityKind": "rn-m-source-segmentation",
+          "qualificationPolicy": {
+            "path": "research/salaries/queue-completion-2026-11-01/phsa/source-name-segmentation-review-policy-002.json",
+            "sha256": "fcfc11b7872b8c111018dd5b74494ea25391d14e1e905aa327f6a435c6e1e40c"
+          }
+        },
+        "allAdditionalRootAlternativesRetained": true,
+        "caseProvenByPixels": false,
+        "sourcePublicWarningRequired": true
+      },
+      {
+        "physicalPage": 68,
+        "sourceRowOnPage": 20,
+        "chosenName": "Kompelien,Jill",
+        "sourceSha256": "87ea680c3e2b9bb940d911a198e41b85068535964ee61b6992e651271bd72b60",
+        "qualificationKind": "rn-m-source-segmentation",
+        "rootAdoption": {
+          "path": "research/salaries/queue-completion-2026-11-01/reviews/root-phsa-history-2020-21-batch-002-segmentation-adoption.json",
+          "sha256": "fe0e7f063e26596d96bc44fea8d5deddc95806f81bc4122645bdb71a8c8edbd5"
+        },
+        "completeAdoptionEvidence": {
+          "frozen": true,
+          "reviewer": "/root",
+          "reviewedOn": "2026-11-01",
+          "sourceId": "phsa-2020-21",
+          "sourceSha256": "87ea680c3e2b9bb940d911a198e41b85068535964ee61b6992e651271bd72b60",
+          "batch": "phsa-2020-21-002",
+          "acceptedQualifiedCases": true,
+          "qualifiedCases": 6,
+          "exactCaseLedger": {
+            "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-schools-2020-21-batch-002-source-name-qualifications-v2.json",
+            "sha256": "d54e4533fc31ef317e79427e0870952b5f44d30618817990ec68cfec043e38c6"
+          },
+          "independentPeer": {
+            "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-history-2020-21-002-six-name-peer-comparison.json",
+            "sha256": "a42f327596d5994df0941d660132d24a5cef110d1433e67cb5f63b2afe229ce6"
+          },
+          "caseProvenByPixels": false,
+          "decision": "Adopt exactly these6finite source-row rn/m qualifications after separately frozen author and fresh original-image peer agree on all final preferred names and complete alternative sets. Retain the extra m/rn surname uncertainty independently identified at two rows, including the full four-combination name, without changing any literal amounts or names. Preserve original contexts, source rereads and disclosure of prior-source exposure. Root reviews this exact two-reader evidence and does not claim a third independent transcription. No identity/dictionary, amount, reporting-period or whole-source inference.",
+          "publicWarningRequired": true,
+          "wholeSourceAccepted": false
+        },
+        "originalCaseEvidence": {
+          "sourceId": "phsa-2020-21",
+          "sourceSha256": "87ea680c3e2b9bb940d911a198e41b85068535964ee61b6992e651271bd72b60",
+          "batch": "phsa-2020-21-002",
+          "sequence": 62,
+          "physicalPage": 68,
+          "sourceRowOnPage": 20,
+          "proposedName": "Kompelien,Jill",
+          "visibleAlternatives": [
+            "Kompelien,Jill",
+            "Kornpelien,Jill"
+          ],
+          "caseProvenByPixels": false,
+          "assumptionBasis": "Author original-image primary reading retained from raw source transcript. Joined m/r+n cluster remains a finite segmentation qualification; visible shoulder/arch structure favors the proposed reading, without unique-glyph, dictionary, identity or prior-year proof. Every alternative remains explicit. This proposal was frozen before any fresh-peer transcript/choices were opened.",
+          "allowedFields": [
+            "name"
+          ],
+          "cropSha256": "522291620fdb42ad3d41537403dfdc2244ecb3ba371ad6e03a0bddf4dd1b458f",
+          "actualSourceEvidence": {
+            "sequence": 62,
+            "physicalPage": 68,
+            "sourceRowOnPage": 20,
+            "cropPath": "/tmp/queue-completion-phsa/phsa-2020-21/review-images/batch-002/p068-r20.png",
+            "cropSha256": "522291620fdb42ad3d41537403dfdc2244ecb3ba371ad6e03a0bddf4dd1b458f",
+            "cropRectOriginal300DpiPixels": [
+              280,
+              1495,
+              2422,
+              1537
+            ],
+            "actualSourceImagePath": "/tmp/queue-completion-phsa/phsa-2020-21/images/p068.png",
+            "actualSourceImageSha256": "0c02b7b9bb1255eb6a42e29827aab5759f30eb29f1a047f68e3afbffa2f2383c",
+            "nativeNameView": {
+              "field": "name",
+              "path": "/tmp/queue-completion-phsa/phsa-2020-21/review-images/phsa-2020-21-002-target-views/0062-name.png",
+              "sha256": "b0e10732fa69c92c0e82faf0e42649089daad24a212dca9540b4c734454b7d6b",
+              "originalPdf300DpiPixelBox": [
+                280,
+                1495,
+                1753,
+                1537
+              ],
+              "noResamplingOrGlyphAlteration": true
+            },
+            "actualSourceLargerNameRenders": [
+              {
+                "sequence": 62,
+                "physicalPage": 68,
+                "sourceRowOnPage": 20,
+                "original300DpiPixelBox": [
+                  280,
+                  1495,
+                  1300,
+                  1537
+                ],
+                "actualPdfPointClip": [
+                  67.2,
+                  358.8,
+                  312.0,
+                  368.88
+                ],
+                "dpi": 600,
+                "path": "/tmp/independent-phsa-schools-2020-002-rechecks/seq062-name-actual600.png",
+                "sha256": "0aac4ed3d7ad453ffc4a65ae775e26c360a335ef08f69d0ece3ae4e92127d5db"
+              },
+              {
+                "sequence": 62,
+                "physicalPage": 68,
+                "sourceRowOnPage": 20,
+                "original300DpiPixelBox": [
+                  280,
+                  1495,
+                  1000,
+                  1537
+                ],
+                "actualPdfPointClip": [
+                  67.2,
+                  358.8,
+                  240.0,
+                  368.88
+                ],
+                "dpi": 1200,
+                "path": "/tmp/independent-phsa-schools-2020-002-rechecks/seq062-name-actual1200.png",
+                "sha256": "5f019cc1155219506ec8278c82c3f73adef72d0964b4241cae0af585f93a354d"
+              }
+            ],
+            "adjacentOriginal300DpiContext": {
+              "path": "/tmp/independent-phsa-schools-2020-002-rechecks/seq062-adjacent-context300.png",
+              "sha256": "124333576013d8203013ca3c6b218c24d79b61bac29385249c4bbddaad20901f",
+              "original300DpiPixelBox": [
+                280,
+                1345,
+                2422,
+                1687
+              ]
+            }
+          },
+          "firstImagePrimaryUnchangedFromFrozenAuthorRaw": true,
+          "manualMoneyBinding": {
+            "requestedMonetaryValuesFromFrozenRaw": {},
+            "qualificationChangesNoMonetaryField": true,
+            "noMoneyOutsideOriginallyAssignedFieldsReviewedByThisCase": true
+          },
+          "status": "proposed-qualified-finite-source-reading-awaiting-fresh-peer-and-exact-root-adoption",
+          "ambiguityKind": "rn-m-source-segmentation",
+          "qualificationPolicy": {
+            "path": "research/salaries/queue-completion-2026-11-01/phsa/source-name-segmentation-review-policy-002.json",
+            "sha256": "fcfc11b7872b8c111018dd5b74494ea25391d14e1e905aa327f6a435c6e1e40c"
+          }
+        },
+        "allAdditionalRootAlternativesRetained": true,
+        "caseProvenByPixels": false,
+        "sourcePublicWarningRequired": true
+      },
+      {
+        "physicalPage": 69,
+        "sourceRowOnPage": 21,
+        "chosenName": "Krishnaswamy,Wendy I.",
+        "sourceSha256": "87ea680c3e2b9bb940d911a198e41b85068535964ee61b6992e651271bd72b60",
+        "qualificationKind": "rn-m-source-segmentation",
+        "rootAdoption": {
+          "path": "research/salaries/queue-completion-2026-11-01/reviews/root-phsa-history-2020-21-batch-002-segmentation-adoption.json",
+          "sha256": "fe0e7f063e26596d96bc44fea8d5deddc95806f81bc4122645bdb71a8c8edbd5"
+        },
+        "completeAdoptionEvidence": {
+          "frozen": true,
+          "reviewer": "/root",
+          "reviewedOn": "2026-11-01",
+          "sourceId": "phsa-2020-21",
+          "sourceSha256": "87ea680c3e2b9bb940d911a198e41b85068535964ee61b6992e651271bd72b60",
+          "batch": "phsa-2020-21-002",
+          "acceptedQualifiedCases": true,
+          "qualifiedCases": 6,
+          "exactCaseLedger": {
+            "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-schools-2020-21-batch-002-source-name-qualifications-v2.json",
+            "sha256": "d54e4533fc31ef317e79427e0870952b5f44d30618817990ec68cfec043e38c6"
+          },
+          "independentPeer": {
+            "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-history-2020-21-002-six-name-peer-comparison.json",
+            "sha256": "a42f327596d5994df0941d660132d24a5cef110d1433e67cb5f63b2afe229ce6"
+          },
+          "caseProvenByPixels": false,
+          "decision": "Adopt exactly these6finite source-row rn/m qualifications after separately frozen author and fresh original-image peer agree on all final preferred names and complete alternative sets. Retain the extra m/rn surname uncertainty independently identified at two rows, including the full four-combination name, without changing any literal amounts or names. Preserve original contexts, source rereads and disclosure of prior-source exposure. Root reviews this exact two-reader evidence and does not claim a third independent transcription. No identity/dictionary, amount, reporting-period or whole-source inference.",
+          "publicWarningRequired": true,
+          "wholeSourceAccepted": false
+        },
+        "originalCaseEvidence": {
+          "sourceId": "phsa-2020-21",
+          "sourceSha256": "87ea680c3e2b9bb940d911a198e41b85068535964ee61b6992e651271bd72b60",
+          "batch": "phsa-2020-21-002",
+          "sequence": 70,
+          "physicalPage": 69,
+          "sourceRowOnPage": 21,
+          "proposedName": "Krishnaswamy,Wendy I.",
+          "visibleAlternatives": [
+            "Krishnaswamy,Wendy I.",
+            "Krishnaswarny,Wendy I."
+          ],
+          "caseProvenByPixels": false,
+          "assumptionBasis": "Original serif capital I is directly visible and unchanged; surname m/rn remains finite. Author preferred m primary matches first fresh blind reading, but compressed source does not establish unique segmentation. Both surname alternatives retained; no casing/dictionary/identity inference.",
+          "allowedFields": [
+            "name"
+          ],
+          "cropSha256": "a02e9ec312c14934e488e3e8f9e68e41f8f313cdc6438952a8d1564d07f30928",
+          "actualSourceEvidence": {
+            "sequence": 70,
+            "physicalPage": 69,
+            "sourceRowOnPage": 21,
+            "cropPath": "/tmp/queue-completion-phsa/phsa-2020-21/review-images/batch-002/p069-r21.png",
+            "cropSha256": "a02e9ec312c14934e488e3e8f9e68e41f8f313cdc6438952a8d1564d07f30928",
+            "cropRectOriginal300DpiPixels": [
+              280,
+              1538,
+              2422,
+              1579
+            ],
+            "actualSourceImagePath": "/tmp/queue-completion-phsa/phsa-2020-21/images/p069.png",
+            "actualSourceImageSha256": "9dcd5852e391c240de6f438411ca31caa82af7db42050165c2bba7058487f6a6",
+            "nativeNameView": {
+              "field": "name",
+              "path": "/tmp/queue-completion-phsa/phsa-2020-21/review-images/phsa-2020-21-002-target-views/0070-name.png",
+              "sha256": "d56afd97185c490d70f6cc2826fd9ecddbe42bb613a1d7626c31ecf016bef146",
+              "originalPdf300DpiPixelBox": [
+                280,
+                1538,
+                1753,
+                1579
+              ],
+              "noResamplingOrGlyphAlteration": true
+            },
+            "actualSourceLargerNameRender": {
+              "path": "/tmp/independent-phsa-schools-2020-002-rechecks/seq070-supplement-name-actual1200.png",
+              "sha256": "4bea79b1450a3ff83eda5266795bd5a7647f437ab2275d30c3eeb1317b0d3646",
+              "dpi": 1200,
+              "actualPdfPointClip": [
+                67.2,
+                369.12,
+                300.0,
+                378.96
+              ],
+              "original300DpiPixelBox": [
+                280,
+                1538,
+                1250,
+                1579
+              ]
+            },
+            "adjacentOriginal300DpiContext": {
+              "path": "/tmp/independent-phsa-schools-2020-002-rechecks/seq070-supplement-context300.png",
+              "sha256": "44ff64445bfd62985fdb8007b4dae92074ad448010ac88feeb04f34faaefc212",
+              "original300DpiPixelBox": [
+                280,
+                1388,
+                2422,
+                1729
+              ]
+            }
+          },
+          "firstImagePrimaryUnchangedFromFrozenAuthorRaw": false,
+          "manualMoneyBinding": {
+            "requestedMonetaryValuesFromFrozenRaw": {},
+            "qualificationChangesNoMonetaryField": true,
+            "noMoneyOutsideOriginallyAssignedFieldsReviewedByThisCase": true
+          },
+          "status": "proposed-qualified-finite-source-reading-awaiting-fresh-peer-and-exact-root-adoption",
+          "ambiguityKind": "rn-m-source-segmentation",
+          "qualificationPolicy": {
+            "path": "research/salaries/queue-completion-2026-11-01/phsa/source-name-segmentation-review-policy-002.json",
+            "sha256": "fcfc11b7872b8c111018dd5b74494ea25391d14e1e905aa327f6a435c6e1e40c"
+          },
+          "primaryMatchesPinnedAuthorSourceRereadCorrection": true,
+          "additionalSourceSurnameOriginal1200Dpi": {
+            "sequence": 70,
+            "physicalPage": 69,
+            "sourceRowOnPage": 21,
+            "original300DpiPixelBox": [
+              280,
+              1538,
+              630,
+              1579
+            ],
+            "actualPdfPointClip": [
+              67.2,
+              369.12,
+              151.2,
+              378.96
+            ],
+            "dpi": 1200,
+            "path": "/tmp/independent-phsa-schools-2020-002-postcomparison/seq070-surname-segmentation-actual1200.png",
+            "sha256": "90c6a61a272b06d92b503f8424f8f33326852c96ce90cc1c58cb5e6dd8dab899"
+          }
+        },
+        "allAdditionalRootAlternativesRetained": true,
+        "caseProvenByPixels": false,
+        "sourcePublicWarningRequired": true
+      },
+      {
+        "physicalPage": 82,
+        "sourceRowOnPage": 45,
+        "chosenName": "Malek,Mehrnoush",
+        "sourceSha256": "87ea680c3e2b9bb940d911a198e41b85068535964ee61b6992e651271bd72b60",
+        "qualificationKind": "rn-m-source-segmentation",
+        "rootAdoption": {
+          "path": "research/salaries/queue-completion-2026-11-01/reviews/root-phsa-history-2020-21-batch-002-segmentation-adoption.json",
+          "sha256": "fe0e7f063e26596d96bc44fea8d5deddc95806f81bc4122645bdb71a8c8edbd5"
+        },
+        "completeAdoptionEvidence": {
+          "frozen": true,
+          "reviewer": "/root",
+          "reviewedOn": "2026-11-01",
+          "sourceId": "phsa-2020-21",
+          "sourceSha256": "87ea680c3e2b9bb940d911a198e41b85068535964ee61b6992e651271bd72b60",
+          "batch": "phsa-2020-21-002",
+          "acceptedQualifiedCases": true,
+          "qualifiedCases": 6,
+          "exactCaseLedger": {
+            "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-schools-2020-21-batch-002-source-name-qualifications-v2.json",
+            "sha256": "d54e4533fc31ef317e79427e0870952b5f44d30618817990ec68cfec043e38c6"
+          },
+          "independentPeer": {
+            "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-history-2020-21-002-six-name-peer-comparison.json",
+            "sha256": "a42f327596d5994df0941d660132d24a5cef110d1433e67cb5f63b2afe229ce6"
+          },
+          "caseProvenByPixels": false,
+          "decision": "Adopt exactly these6finite source-row rn/m qualifications after separately frozen author and fresh original-image peer agree on all final preferred names and complete alternative sets. Retain the extra m/rn surname uncertainty independently identified at two rows, including the full four-combination name, without changing any literal amounts or names. Preserve original contexts, source rereads and disclosure of prior-source exposure. Root reviews this exact two-reader evidence and does not claim a third independent transcription. No identity/dictionary, amount, reporting-period or whole-source inference.",
+          "publicWarningRequired": true,
+          "wholeSourceAccepted": false
+        },
+        "originalCaseEvidence": {
+          "sourceId": "phsa-2020-21",
+          "sourceSha256": "87ea680c3e2b9bb940d911a198e41b85068535964ee61b6992e651271bd72b60",
+          "batch": "phsa-2020-21-002",
+          "sequence": 165,
+          "physicalPage": 82,
+          "sourceRowOnPage": 45,
+          "proposedName": "Malek,Mehrnoush",
+          "visibleAlternatives": [
+            "Malek,Mehrnoush",
+            "Malek,Mehmoush"
+          ],
+          "caseProvenByPixels": false,
+          "assumptionBasis": "Author original-image primary reading retained from raw source transcript. Joined m/r+n cluster remains a finite segmentation qualification; visible shoulder/arch structure favors the proposed reading, without unique-glyph, dictionary, identity or prior-year proof. Every alternative remains explicit. This proposal was frozen before any fresh-peer transcript/choices were opened.",
+          "allowedFields": [
+            "name"
+          ],
+          "cropSha256": "d2956fa2e3a788f314b4d1dd206693ad15e98234d16d8b9995ea5f27f93f9240",
+          "actualSourceEvidence": {
+            "sequence": 165,
+            "physicalPage": 82,
+            "sourceRowOnPage": 45,
+            "cropPath": "/tmp/queue-completion-phsa/phsa-2020-21/review-images/batch-002/p082-r45.png",
+            "cropSha256": "d2956fa2e3a788f314b4d1dd206693ad15e98234d16d8b9995ea5f27f93f9240",
+            "cropRectOriginal300DpiPixels": [
+              280,
+              2568,
+              2422,
+              2609
+            ],
+            "actualSourceImagePath": "/tmp/queue-completion-phsa/phsa-2020-21/images/p082.png",
+            "actualSourceImageSha256": "4e970863b9d48e728f47612503b8c7cdc644f4340325933b6b0427a31c9ca7ca",
+            "nativeNameView": {
+              "field": "name",
+              "path": "/tmp/queue-completion-phsa/phsa-2020-21/review-images/phsa-2020-21-002-target-views/0165-name.png",
+              "sha256": "e3fe47d21de8b6e6044e3a1cdb5a35b053a408fdd070950bded74d6c28fb6225",
+              "originalPdf300DpiPixelBox": [
+                280,
+                2568,
+                1753,
+                2609
+              ],
+              "noResamplingOrGlyphAlteration": true
+            },
+            "actualSourceLargerNameRenders": [
+              {
+                "sequence": 165,
+                "physicalPage": 82,
+                "sourceRowOnPage": 45,
+                "original300DpiPixelBox": [
+                  280,
+                  2568,
+                  1300,
+                  2609
+                ],
+                "actualPdfPointClip": [
+                  67.2,
+                  616.32,
+                  312.0,
+                  626.16
+                ],
+                "dpi": 600,
+                "path": "/tmp/independent-phsa-schools-2020-002-rechecks/seq165-name-actual600.png",
+                "sha256": "a3ea67ad9cff3708e3e3291dfc209ed71bffb50638553788b37636267bd96b4f"
+              },
+              {
+                "sequence": 165,
+                "physicalPage": 82,
+                "sourceRowOnPage": 45,
+                "original300DpiPixelBox": [
+                  280,
+                  2568,
+                  1000,
+                  2609
+                ],
+                "actualPdfPointClip": [
+                  67.2,
+                  616.32,
+                  240.0,
+                  626.16
+                ],
+                "dpi": 1200,
+                "path": "/tmp/independent-phsa-schools-2020-002-rechecks/seq165-name-actual1200.png",
+                "sha256": "a2a990bf47516b99ecf4329675a672dfb3c53750faa82ee3993f5e637f9477f3"
+              }
+            ],
+            "adjacentOriginal300DpiContext": {
+              "path": "/tmp/independent-phsa-schools-2020-002-rechecks/seq165-adjacent-context300.png",
+              "sha256": "7f89c76d53cbbf82fe07946170960fdde3bb6c9b5bb6618141e7ab8ee2c7f538",
+              "original300DpiPixelBox": [
+                280,
+                2418,
+                2422,
+                2759
+              ]
+            }
+          },
+          "firstImagePrimaryUnchangedFromFrozenAuthorRaw": true,
+          "manualMoneyBinding": {
+            "requestedMonetaryValuesFromFrozenRaw": {
+              "remuneration": 95071
+            },
+            "qualificationChangesNoMonetaryField": true,
+            "noMoneyOutsideOriginallyAssignedFieldsReviewedByThisCase": true
+          },
+          "status": "proposed-qualified-finite-source-reading-awaiting-fresh-peer-and-exact-root-adoption",
+          "ambiguityKind": "rn-m-source-segmentation",
+          "qualificationPolicy": {
+            "path": "research/salaries/queue-completion-2026-11-01/phsa/source-name-segmentation-review-policy-002.json",
+            "sha256": "fcfc11b7872b8c111018dd5b74494ea25391d14e1e905aa327f6a435c6e1e40c"
+          }
+        },
+        "allAdditionalRootAlternativesRetained": true,
+        "caseProvenByPixels": false,
+        "sourcePublicWarningRequired": true
+      },
+      {
+        "physicalPage": 83,
+        "sourceRowOnPage": 44,
+        "chosenName": "Marcelino,Berna",
+        "sourceSha256": "87ea680c3e2b9bb940d911a198e41b85068535964ee61b6992e651271bd72b60",
+        "qualificationKind": "rn-m-source-segmentation",
+        "rootAdoption": {
+          "path": "research/salaries/queue-completion-2026-11-01/reviews/root-phsa-history-2020-21-batch-002-segmentation-adoption.json",
+          "sha256": "fe0e7f063e26596d96bc44fea8d5deddc95806f81bc4122645bdb71a8c8edbd5"
+        },
+        "completeAdoptionEvidence": {
+          "frozen": true,
+          "reviewer": "/root",
+          "reviewedOn": "2026-11-01",
+          "sourceId": "phsa-2020-21",
+          "sourceSha256": "87ea680c3e2b9bb940d911a198e41b85068535964ee61b6992e651271bd72b60",
+          "batch": "phsa-2020-21-002",
+          "acceptedQualifiedCases": true,
+          "qualifiedCases": 6,
+          "exactCaseLedger": {
+            "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-schools-2020-21-batch-002-source-name-qualifications-v2.json",
+            "sha256": "d54e4533fc31ef317e79427e0870952b5f44d30618817990ec68cfec043e38c6"
+          },
+          "independentPeer": {
+            "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-history-2020-21-002-six-name-peer-comparison.json",
+            "sha256": "a42f327596d5994df0941d660132d24a5cef110d1433e67cb5f63b2afe229ce6"
+          },
+          "caseProvenByPixels": false,
+          "decision": "Adopt exactly these6finite source-row rn/m qualifications after separately frozen author and fresh original-image peer agree on all final preferred names and complete alternative sets. Retain the extra m/rn surname uncertainty independently identified at two rows, including the full four-combination name, without changing any literal amounts or names. Preserve original contexts, source rereads and disclosure of prior-source exposure. Root reviews this exact two-reader evidence and does not claim a third independent transcription. No identity/dictionary, amount, reporting-period or whole-source inference.",
+          "publicWarningRequired": true,
+          "wholeSourceAccepted": false
+        },
+        "originalCaseEvidence": {
+          "sourceId": "phsa-2020-21",
+          "sourceSha256": "87ea680c3e2b9bb940d911a198e41b85068535964ee61b6992e651271bd72b60",
+          "batch": "phsa-2020-21-002",
+          "sequence": 175,
+          "physicalPage": 83,
+          "sourceRowOnPage": 44,
+          "proposedName": "Marcelino,Berna",
+          "visibleAlternatives": [
+            "Marcelino,Berna",
+            "Marcelino,Bema"
+          ],
+          "caseProvenByPixels": false,
+          "assumptionBasis": "Author original-image primary reading retained from raw source transcript. Joined m/r+n cluster remains a finite segmentation qualification; visible shoulder/arch structure favors the proposed reading, without unique-glyph, dictionary, identity or prior-year proof. Every alternative remains explicit. This proposal was frozen before any fresh-peer transcript/choices were opened.",
+          "allowedFields": [
+            "name"
+          ],
+          "cropSha256": "d56dddf8952d6b2bae97cb01834d89e2b63109c0b24f2b70acf7b71f3ec6860e",
+          "actualSourceEvidence": {
+            "sequence": 175,
+            "physicalPage": 83,
+            "sourceRowOnPage": 44,
+            "cropPath": "/tmp/queue-completion-phsa/phsa-2020-21/review-images/batch-002/p083-r44.png",
+            "cropSha256": "d56dddf8952d6b2bae97cb01834d89e2b63109c0b24f2b70acf7b71f3ec6860e",
+            "cropRectOriginal300DpiPixels": [
+              280,
+              2525,
+              2422,
+              2567
+            ],
+            "actualSourceImagePath": "/tmp/queue-completion-phsa/phsa-2020-21/images/p083.png",
+            "actualSourceImageSha256": "1be9293e00e6fccd75e63a399fc83a96884b074cb82367a258e9abd8f94506c1",
+            "nativeNameView": {
+              "field": "name",
+              "path": "/tmp/queue-completion-phsa/phsa-2020-21/review-images/phsa-2020-21-002-target-views/0175-name.png",
+              "sha256": "6b0e2812c08a64d1d18e874c3b193c8b9aee30a1cd54a60e3ffa6d65510c87d7",
+              "originalPdf300DpiPixelBox": [
+                280,
+                2525,
+                1753,
+                2567
+              ],
+              "noResamplingOrGlyphAlteration": true
+            },
+            "actualSourceLargerNameRenders": [
+              {
+                "sequence": 175,
+                "physicalPage": 83,
+                "sourceRowOnPage": 44,
+                "original300DpiPixelBox": [
+                  280,
+                  2525,
+                  1300,
+                  2567
+                ],
+                "actualPdfPointClip": [
+                  67.2,
+                  606.0,
+                  312.0,
+                  616.08
+                ],
+                "dpi": 600,
+                "path": "/tmp/independent-phsa-schools-2020-002-rechecks/seq175-name-actual600.png",
+                "sha256": "a953405065e36349a37b70557a33df27cd8327dcc17e63b3ed158907d566c760"
+              },
+              {
+                "sequence": 175,
+                "physicalPage": 83,
+                "sourceRowOnPage": 44,
+                "original300DpiPixelBox": [
+                  280,
+                  2525,
+                  1000,
+                  2567
+                ],
+                "actualPdfPointClip": [
+                  67.2,
+                  606.0,
+                  240.0,
+                  616.08
+                ],
+                "dpi": 1200,
+                "path": "/tmp/independent-phsa-schools-2020-002-rechecks/seq175-name-actual1200.png",
+                "sha256": "84989ccbdf10b6053cc3b3d223a58e0effde080d0d0fdc8b30f3408f27caf21d"
+              }
+            ],
+            "adjacentOriginal300DpiContext": {
+              "path": "/tmp/independent-phsa-schools-2020-002-rechecks/seq175-adjacent-context300.png",
+              "sha256": "9457e28f3782e906672d1ba66c431e8aca861f9a098940c2d9f3dca096b87000",
+              "original300DpiPixelBox": [
+                280,
+                2375,
+                2422,
+                2717
+              ]
+            }
+          },
+          "firstImagePrimaryUnchangedFromFrozenAuthorRaw": true,
+          "manualMoneyBinding": {
+            "requestedMonetaryValuesFromFrozenRaw": {},
+            "qualificationChangesNoMonetaryField": true,
+            "noMoneyOutsideOriginallyAssignedFieldsReviewedByThisCase": true
+          },
+          "status": "proposed-qualified-finite-source-reading-awaiting-fresh-peer-and-exact-root-adoption",
+          "ambiguityKind": "rn-m-source-segmentation",
+          "qualificationPolicy": {
+            "path": "research/salaries/queue-completion-2026-11-01/phsa/source-name-segmentation-review-policy-002.json",
+            "sha256": "fcfc11b7872b8c111018dd5b74494ea25391d14e1e905aa327f6a435c6e1e40c"
+          }
+        },
+        "allAdditionalRootAlternativesRetained": true,
+        "caseProvenByPixels": false,
+        "sourcePublicWarningRequired": true
+      },
+      {
+        "physicalPage": 88,
+        "sourceRowOnPage": 22,
+        "chosenName": "Mehlhorn,Sindey G.",
+        "sourceSha256": "87ea680c3e2b9bb940d911a198e41b85068535964ee61b6992e651271bd72b60",
+        "qualificationKind": "rn-m-source-segmentation",
+        "rootAdoption": {
+          "path": "research/salaries/queue-completion-2026-11-01/reviews/root-phsa-history-2020-21-batch-002-segmentation-adoption.json",
+          "sha256": "fe0e7f063e26596d96bc44fea8d5deddc95806f81bc4122645bdb71a8c8edbd5"
+        },
+        "completeAdoptionEvidence": {
+          "frozen": true,
+          "reviewer": "/root",
+          "reviewedOn": "2026-11-01",
+          "sourceId": "phsa-2020-21",
+          "sourceSha256": "87ea680c3e2b9bb940d911a198e41b85068535964ee61b6992e651271bd72b60",
+          "batch": "phsa-2020-21-002",
+          "acceptedQualifiedCases": true,
+          "qualifiedCases": 6,
+          "exactCaseLedger": {
+            "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-schools-2020-21-batch-002-source-name-qualifications-v2.json",
+            "sha256": "d54e4533fc31ef317e79427e0870952b5f44d30618817990ec68cfec043e38c6"
+          },
+          "independentPeer": {
+            "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-history-2020-21-002-six-name-peer-comparison.json",
+            "sha256": "a42f327596d5994df0941d660132d24a5cef110d1433e67cb5f63b2afe229ce6"
+          },
+          "caseProvenByPixels": false,
+          "decision": "Adopt exactly these6finite source-row rn/m qualifications after separately frozen author and fresh original-image peer agree on all final preferred names and complete alternative sets. Retain the extra m/rn surname uncertainty independently identified at two rows, including the full four-combination name, without changing any literal amounts or names. Preserve original contexts, source rereads and disclosure of prior-source exposure. Root reviews this exact two-reader evidence and does not claim a third independent transcription. No identity/dictionary, amount, reporting-period or whole-source inference.",
+          "publicWarningRequired": true,
+          "wholeSourceAccepted": false
+        },
+        "originalCaseEvidence": {
+          "sourceId": "phsa-2020-21",
+          "sourceSha256": "87ea680c3e2b9bb940d911a198e41b85068535964ee61b6992e651271bd72b60",
+          "batch": "phsa-2020-21-002",
+          "sequence": 226,
+          "physicalPage": 88,
+          "sourceRowOnPage": 22,
+          "proposedName": "Mehlhorn,Sindey G.",
+          "visibleAlternatives": [
+            "Mehlhorn,Sindey G.",
+            "Mehlhom,Sindey G."
+          ],
+          "caseProvenByPixels": false,
+          "assumptionBasis": "Author original-image primary reading retained from raw source transcript. Joined m/r+n cluster remains a finite segmentation qualification; visible shoulder/arch structure favors the proposed reading, without unique-glyph, dictionary, identity or prior-year proof. Every alternative remains explicit. This proposal was frozen before any fresh-peer transcript/choices were opened.",
+          "allowedFields": [
+            "name"
+          ],
+          "cropSha256": "0155091b12d9c44d69fc14ed047d42fdaa5cc6c6f98e30775d10f97202af4e6b",
+          "actualSourceEvidence": {
+            "sequence": 226,
+            "physicalPage": 88,
+            "sourceRowOnPage": 22,
+            "cropPath": "/tmp/queue-completion-phsa/phsa-2020-21/review-images/batch-002/p088-r22.png",
+            "cropSha256": "0155091b12d9c44d69fc14ed047d42fdaa5cc6c6f98e30775d10f97202af4e6b",
+            "cropRectOriginal300DpiPixels": [
+              280,
+              1581,
+              2422,
+              1623
+            ],
+            "actualSourceImagePath": "/tmp/queue-completion-phsa/phsa-2020-21/images/p088.png",
+            "actualSourceImageSha256": "a900ea9e29aee62c3ace2d14f1cbc8937856c2f3f994495083188684e10be597",
+            "nativeNameView": {
+              "field": "name",
+              "path": "/tmp/queue-completion-phsa/phsa-2020-21/review-images/phsa-2020-21-002-target-views/0226-name.png",
+              "sha256": "bf5ce2ae48318f93ce08f4ee5c74b623559626a4d57331673c668f96c188ec30",
+              "originalPdf300DpiPixelBox": [
+                280,
+                1581,
+                1753,
+                1623
+              ],
+              "noResamplingOrGlyphAlteration": true
+            },
+            "actualSourceLargerNameRenders": [
+              {
+                "sequence": 226,
+                "physicalPage": 88,
+                "sourceRowOnPage": 22,
+                "original300DpiPixelBox": [
+                  280,
+                  1581,
+                  1300,
+                  1623
+                ],
+                "actualPdfPointClip": [
+                  67.2,
+                  379.44,
+                  312.0,
+                  389.52
+                ],
+                "dpi": 600,
+                "path": "/tmp/independent-phsa-schools-2020-002-rechecks/seq226-name-actual600.png",
+                "sha256": "c234a3c4f5ab20ea67569c56591787eb07d07bd50ed5389ecab5dfea9a25f915"
+              },
+              {
+                "sequence": 226,
+                "physicalPage": 88,
+                "sourceRowOnPage": 22,
+                "original300DpiPixelBox": [
+                  280,
+                  1581,
+                  1000,
+                  1623
+                ],
+                "actualPdfPointClip": [
+                  67.2,
+                  379.44,
+                  240.0,
+                  389.52
+                ],
+                "dpi": 1200,
+                "path": "/tmp/independent-phsa-schools-2020-002-rechecks/seq226-name-actual1200.png",
+                "sha256": "2ec9617a795d5f134dab63d127b3f7d1452d0e9e33a737df635097dd9d16fb7b"
+              }
+            ],
+            "adjacentOriginal300DpiContext": {
+              "path": "/tmp/independent-phsa-schools-2020-002-rechecks/seq226-adjacent-context300.png",
+              "sha256": "8ac299ff94ab054343c02511a1d7a52f54be725322fec0b31a14244e301a9a8d",
+              "original300DpiPixelBox": [
+                280,
+                1431,
+                2422,
+                1773
+              ]
+            }
+          },
+          "firstImagePrimaryUnchangedFromFrozenAuthorRaw": true,
+          "manualMoneyBinding": {
+            "requestedMonetaryValuesFromFrozenRaw": {},
+            "qualificationChangesNoMonetaryField": true,
+            "noMoneyOutsideOriginallyAssignedFieldsReviewedByThisCase": true
+          },
+          "status": "proposed-qualified-finite-source-reading-awaiting-fresh-peer-and-exact-root-adoption",
+          "ambiguityKind": "rn-m-source-segmentation",
+          "qualificationPolicy": {
+            "path": "research/salaries/queue-completion-2026-11-01/phsa/source-name-segmentation-review-policy-002.json",
+            "sha256": "fcfc11b7872b8c111018dd5b74494ea25391d14e1e905aa327f6a435c6e1e40c"
+          }
+        },
+        "allAdditionalRootAlternativesRetained": true,
+        "caseProvenByPixels": false,
+        "sourcePublicWarningRequired": true
+      },
+      {
+        "physicalPage": 107,
+        "sourceRowOnPage": 11,
+        "chosenName": "Rahnama,Mehrnoush",
+        "sourceSha256": "87ea680c3e2b9bb940d911a198e41b85068535964ee61b6992e651271bd72b60",
+        "qualificationKind": "rn-m-source-segmentation",
+        "rootAdoption": {
+          "path": "research/salaries/queue-completion-2026-11-01/reviews/root-phsa-history-2020-21-batch-002-segmentation-adoption.json",
+          "sha256": "fe0e7f063e26596d96bc44fea8d5deddc95806f81bc4122645bdb71a8c8edbd5"
+        },
+        "completeAdoptionEvidence": {
+          "frozen": true,
+          "reviewer": "/root",
+          "reviewedOn": "2026-11-01",
+          "sourceId": "phsa-2020-21",
+          "sourceSha256": "87ea680c3e2b9bb940d911a198e41b85068535964ee61b6992e651271bd72b60",
+          "batch": "phsa-2020-21-002",
+          "acceptedQualifiedCases": true,
+          "qualifiedCases": 6,
+          "exactCaseLedger": {
+            "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-schools-2020-21-batch-002-source-name-qualifications-v2.json",
+            "sha256": "d54e4533fc31ef317e79427e0870952b5f44d30618817990ec68cfec043e38c6"
+          },
+          "independentPeer": {
+            "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-history-2020-21-002-six-name-peer-comparison.json",
+            "sha256": "a42f327596d5994df0941d660132d24a5cef110d1433e67cb5f63b2afe229ce6"
+          },
+          "caseProvenByPixels": false,
+          "decision": "Adopt exactly these6finite source-row rn/m qualifications after separately frozen author and fresh original-image peer agree on all final preferred names and complete alternative sets. Retain the extra m/rn surname uncertainty independently identified at two rows, including the full four-combination name, without changing any literal amounts or names. Preserve original contexts, source rereads and disclosure of prior-source exposure. Root reviews this exact two-reader evidence and does not claim a third independent transcription. No identity/dictionary, amount, reporting-period or whole-source inference.",
+          "publicWarningRequired": true,
+          "wholeSourceAccepted": false
+        },
+        "originalCaseEvidence": {
+          "sourceId": "phsa-2020-21",
+          "sourceSha256": "87ea680c3e2b9bb940d911a198e41b85068535964ee61b6992e651271bd72b60",
+          "batch": "phsa-2020-21-002",
+          "sequence": 354,
+          "physicalPage": 107,
+          "sourceRowOnPage": 11,
+          "proposedName": "Rahnama,Mehrnoush",
+          "visibleAlternatives": [
+            "Rahnama,Mehrnoush",
+            "Rahnama,Mehmoush",
+            "Rahnarna,Mehrnoush",
+            "Rahnarna,Mehmoush"
+          ],
+          "caseProvenByPixels": false,
+          "assumptionBasis": "Author primary Rahnama,Mehrnoush unchanged and matches fresh source-first peer. Both surname m/rn and given-name rn/m joins remain finite; all four combinations are retained after original1200reread. No dictionary, identity or cross-year name evidence.",
+          "allowedFields": [
+            "name"
+          ],
+          "cropSha256": "4812e313e32f455a8665a91891bfdde4e4c8414c5249b140bc931d6e5e5e0bf0",
+          "actualSourceEvidence": {
+            "sequence": 354,
+            "physicalPage": 107,
+            "sourceRowOnPage": 11,
+            "cropPath": "/tmp/queue-completion-phsa/phsa-2020-21/review-images/batch-002/p107-r11.png",
+            "cropSha256": "4812e313e32f455a8665a91891bfdde4e4c8414c5249b140bc931d6e5e5e0bf0",
+            "cropRectOriginal300DpiPixels": [
+              280,
+              1105,
+              2422,
+              1147
+            ],
+            "actualSourceImagePath": "/tmp/queue-completion-phsa/phsa-2020-21/images/p107.png",
+            "actualSourceImageSha256": "3b26c1647858d4ad83a2b2839151dd21f12e06040215df9be9dc6916d27fbe56",
+            "nativeNameView": {
+              "field": "name",
+              "path": "/tmp/queue-completion-phsa/phsa-2020-21/review-images/phsa-2020-21-002-target-views/0354-name.png",
+              "sha256": "1b1615122bf2470a2862c7a77ea76a92b72869477d395900fb23761d5de9deea",
+              "originalPdf300DpiPixelBox": [
+                280,
+                1105,
+                1753,
+                1147
+              ],
+              "noResamplingOrGlyphAlteration": true
+            },
+            "actualSourceLargerNameRender": {
+              "path": "/tmp/independent-phsa-schools-2020-002-rechecks/seq354-supplement-name-actual1200.png",
+              "sha256": "845a9b095e5e36ea88c2ef6b69d3e6118ff505275693f27beeb17cb924505cda",
+              "dpi": 1200,
+              "actualPdfPointClip": [
+                67.2,
+                265.2,
+                300.0,
+                275.28
+              ],
+              "original300DpiPixelBox": [
+                280,
+                1105,
+                1250,
+                1147
+              ]
+            },
+            "adjacentOriginal300DpiContext": {
+              "path": "/tmp/independent-phsa-schools-2020-002-rechecks/seq354-supplement-context300.png",
+              "sha256": "2dce7bf9cad817068e7ed7e456ac1ed7a321e2dd6c1373dfa907e2b18dbe0e82",
+              "original300DpiPixelBox": [
+                280,
+                955,
+                2422,
+                1297
+              ]
+            }
+          },
+          "firstImagePrimaryUnchangedFromFrozenAuthorRaw": true,
+          "manualMoneyBinding": {
+            "requestedMonetaryValuesFromFrozenRaw": {},
+            "qualificationChangesNoMonetaryField": true,
+            "noMoneyOutsideOriginallyAssignedFieldsReviewedByThisCase": true
+          },
+          "status": "proposed-qualified-finite-source-reading-awaiting-fresh-peer-and-exact-root-adoption",
+          "ambiguityKind": "rn-m-source-segmentation",
+          "qualificationPolicy": {
+            "path": "research/salaries/queue-completion-2026-11-01/phsa/source-name-segmentation-review-policy-002.json",
+            "sha256": "fcfc11b7872b8c111018dd5b74494ea25391d14e1e905aa327f6a435c6e1e40c"
+          },
+          "additionalSourceSurnameOriginal1200Dpi": {
+            "sequence": 354,
+            "physicalPage": 107,
+            "sourceRowOnPage": 11,
+            "original300DpiPixelBox": [
+              280,
+              1105,
+              630,
+              1147
+            ],
+            "actualPdfPointClip": [
+              67.2,
+              265.2,
+              151.2,
+              275.28
+            ],
+            "dpi": 1200,
+            "path": "/tmp/independent-phsa-schools-2020-002-postcomparison/seq354-surname-segmentation-actual1200.png",
+            "sha256": "df0f0d82eeabd4cfe85661fc12619eb766ecd32b502a740ea8e25bdd1bdd332a"
+          }
+        },
+        "allAdditionalRootAlternativesRetained": true,
+        "caseProvenByPixels": false,
+        "sourcePublicWarningRequired": true
+      },
+      {
+        "physicalPage": 113,
+        "sourceRowOnPage": 38,
+        "chosenName": "Sandher,Tarndeep Kaur",
+        "sourceSha256": "87ea680c3e2b9bb940d911a198e41b85068535964ee61b6992e651271bd72b60",
+        "qualificationKind": "rn-m-source-segmentation",
+        "rootAdoption": {
+          "path": "research/salaries/queue-completion-2026-11-01/reviews/root-phsa-history-2020-21-batch-003-segmentation-adoption.json",
+          "sha256": "c134959df1d2dae7fcbff513193973bb25ae9d4215cea9371b6d13bae9d414ae"
+        },
+        "completeAdoptionEvidence": {
+          "frozen": true,
+          "reviewer": "/root",
+          "reviewedOn": "2026-11-02",
+          "sourceId": "phsa-2020-21",
+          "sourceSha256": "87ea680c3e2b9bb940d911a198e41b85068535964ee61b6992e651271bd72b60",
+          "batch": "phsa-2020-21-003",
+          "acceptedQualifiedCases": true,
+          "qualifiedCases": 17,
+          "exactCaseLedger": {
+            "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-schools-2020-21-batch-003-source-name-qualifications-v3.json",
+            "sha256": "800f935212d8242b9a590f634b5cd84ac22ac5ebda0a232e8f73757c0da99364"
+          },
+          "independentPeer": {
+            "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-history-2020-21-003-seventeen-name-peer-comparison.json",
+            "sha256": "f39a6f61ca99373bc9810b145ce270c61f1ec5414ad281fa5dcbe3a59843356b"
+          },
+          "caseProvenByPixels": false,
+          "differentIndependentPreferredPrimary": {
+            "sequence": 45,
+            "adoptedAuthorPreferred": "Sidhu,Hemoor Kaur",
+            "independentPeerPreferred": "Sidhu,Hernoor Kaur",
+            "fullFiniteVisibleSet": [
+              "Sidhu,Hemoor Kaur",
+              "Sidhu,Hernoor Kaur"
+            ],
+            "basis": "Root additionally inspected the current original1200dpi source fragment. Compact rn/m is genuinely ambiguous. Preserve the authorfirstpreferredHemoor with the peerpreferredHernoor alternative explicitly qualified; no dictionary, identity or uniqueglyph assertion."
+          },
+          "decision": "Adopt exactly these17finite source-row rn/m qualifications under policy002 after two independently frozen original-image humans confirm all full finite sets.16preferredprimariesmatch; the one honest Hemoor/Hernoor preferred split remains explicit, with authorpreferredHemoor retained. All three two-join names retain full four-combination sets. The peers own first-pass extra-r error and later source reread are transparently preserved. Root reviews the exact two-reader evidence and personally inspected source45; no third independent transcript of all17names is claimed. No amount, period, identity, dictionary or whole-source inference.",
+          "publicWarningRequired": true,
+          "wholeSourceAccepted": false
+        },
+        "originalCaseEvidence": {
+          "sourceId": "phsa-2020-21",
+          "sourceSha256": "87ea680c3e2b9bb940d911a198e41b85068535964ee61b6992e651271bd72b60",
+          "batch": "phsa-2020-21-003",
+          "sequence": 1,
+          "physicalPage": 113,
+          "sourceRowOnPage": 38,
+          "proposedName": "Sandher,Tarndeep Kaur",
+          "visibleAlternatives": [
+            "Sandher,Tarndeep Kaur",
+            "Sandher,Tamdeep Kaur"
+          ],
+          "caseProvenByPixels": false,
+          "assumptionBasis": "Author first source-image literal preferred reading retained after direct actual600dpi rerender; joined shoulder/arch structure supports the preferred reading but rn/m segmentation remains finite. Both alternatives explicit. No dictionary, identity, prior-year or expected-spelling inference. Fresh peer source-only check and exact root adoption required.",
+          "allowedFields": [
+            "name"
+          ],
+          "cropSha256": "b6d89a6afb19824cf8a1a797a76b6653bfa96ce68f5417c1e3b5537105df4184",
+          "actual600DpiSourceName": {
+            "sequence": 1,
+            "physicalPage": 113,
+            "sourceRowOnPage": 38,
+            "original300DpiPixelBox": [
+              280,
+              2270,
+              1250,
+              2312
+            ],
+            "actualPdfPointClip": [
+              67.2,
+              544.8,
+              300.0,
+              554.88
+            ],
+            "dpi": 600,
+            "path": "/workspace/salary-review-schools-temp/2020-003-prechecks/seq001-name-actual600.png",
+            "sha256": "fd87a50681cd452bd7e3893f3bb11542826c4b67222dd53ed448936500c0c72a"
+          },
+          "firstImagePrimaryUnchangedFromFrozenAuthorRaw": true,
+          "manualMoneyBinding": {
+            "requestedMonetaryValuesFromFrozenRaw": {},
+            "qualificationChangesNoMonetaryField": true,
+            "noMoneyOutsideOriginallyAssignedFieldsReviewedByThisCase": true
+          },
+          "status": "proposed-qualified-finite-source-reading-awaiting-fresh-peer-and-exact-root-adoption",
+          "ambiguityKind": "rn-m-source-segmentation",
+          "qualificationPolicy": {
+            "path": "research/salaries/queue-completion-2026-11-01/phsa/source-name-segmentation-review-policy-002.json",
+            "sha256": "fcfc11b7872b8c111018dd5b74494ea25391d14e1e905aa327f6a435c6e1e40c"
+          }
+        },
+        "allAdditionalRootAlternativesRetained": true,
+        "caseProvenByPixels": false,
+        "sourcePublicWarningRequired": true
+      },
+      {
+        "physicalPage": 118,
+        "sourceRowOnPage": 38,
+        "chosenName": "Sidhu,Hemoor Kaur",
+        "sourceSha256": "87ea680c3e2b9bb940d911a198e41b85068535964ee61b6992e651271bd72b60",
+        "qualificationKind": "rn-m-source-segmentation",
+        "rootAdoption": {
+          "path": "research/salaries/queue-completion-2026-11-01/reviews/root-phsa-history-2020-21-batch-003-segmentation-adoption.json",
+          "sha256": "c134959df1d2dae7fcbff513193973bb25ae9d4215cea9371b6d13bae9d414ae"
+        },
+        "completeAdoptionEvidence": {
+          "frozen": true,
+          "reviewer": "/root",
+          "reviewedOn": "2026-11-02",
+          "sourceId": "phsa-2020-21",
+          "sourceSha256": "87ea680c3e2b9bb940d911a198e41b85068535964ee61b6992e651271bd72b60",
+          "batch": "phsa-2020-21-003",
+          "acceptedQualifiedCases": true,
+          "qualifiedCases": 17,
+          "exactCaseLedger": {
+            "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-schools-2020-21-batch-003-source-name-qualifications-v3.json",
+            "sha256": "800f935212d8242b9a590f634b5cd84ac22ac5ebda0a232e8f73757c0da99364"
+          },
+          "independentPeer": {
+            "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-history-2020-21-003-seventeen-name-peer-comparison.json",
+            "sha256": "f39a6f61ca99373bc9810b145ce270c61f1ec5414ad281fa5dcbe3a59843356b"
+          },
+          "caseProvenByPixels": false,
+          "differentIndependentPreferredPrimary": {
+            "sequence": 45,
+            "adoptedAuthorPreferred": "Sidhu,Hemoor Kaur",
+            "independentPeerPreferred": "Sidhu,Hernoor Kaur",
+            "fullFiniteVisibleSet": [
+              "Sidhu,Hemoor Kaur",
+              "Sidhu,Hernoor Kaur"
+            ],
+            "basis": "Root additionally inspected the current original1200dpi source fragment. Compact rn/m is genuinely ambiguous. Preserve the authorfirstpreferredHemoor with the peerpreferredHernoor alternative explicitly qualified; no dictionary, identity or uniqueglyph assertion."
+          },
+          "decision": "Adopt exactly these17finite source-row rn/m qualifications under policy002 after two independently frozen original-image humans confirm all full finite sets.16preferredprimariesmatch; the one honest Hemoor/Hernoor preferred split remains explicit, with authorpreferredHemoor retained. All three two-join names retain full four-combination sets. The peers own first-pass extra-r error and later source reread are transparently preserved. Root reviews the exact two-reader evidence and personally inspected source45; no third independent transcript of all17names is claimed. No amount, period, identity, dictionary or whole-source inference.",
+          "publicWarningRequired": true,
+          "wholeSourceAccepted": false
+        },
+        "originalCaseEvidence": {
+          "sourceId": "phsa-2020-21",
+          "sourceSha256": "87ea680c3e2b9bb940d911a198e41b85068535964ee61b6992e651271bd72b60",
+          "batch": "phsa-2020-21-003",
+          "sequence": 45,
+          "physicalPage": 118,
+          "sourceRowOnPage": 38,
+          "proposedName": "Sidhu,Hemoor Kaur",
+          "visibleAlternatives": [
+            "Sidhu,Hemoor Kaur",
+            "Sidhu,Hernoor Kaur"
+          ],
+          "caseProvenByPixels": false,
+          "assumptionBasis": "Author first source-image literal preferred reading retained after direct actual600dpi rerender; joined shoulder/arch structure supports the preferred reading but rn/m segmentation remains finite. Both alternatives explicit. No dictionary, identity, prior-year or expected-spelling inference. Fresh peer source-only check and exact root adoption required.",
+          "allowedFields": [
+            "name"
+          ],
+          "cropSha256": "b79c05651a1dede642da05ebb7519fbdb3edb8942de39069b1afa182f40fa381",
+          "actual600DpiSourceName": {
+            "sequence": 45,
+            "physicalPage": 118,
+            "sourceRowOnPage": 38,
+            "original300DpiPixelBox": [
+              280,
+              2266,
+              1250,
+              2308
+            ],
+            "actualPdfPointClip": [
+              67.2,
+              543.84,
+              300.0,
+              553.92
+            ],
+            "dpi": 600,
+            "path": "/workspace/salary-review-schools-temp/2020-003-prechecks/seq045-name-actual600.png",
+            "sha256": "f4790e73830484cadbb126180133e10a1dde3e1b23184224f47c1db0b5ee3b92"
+          },
+          "firstImagePrimaryUnchangedFromFrozenAuthorRaw": true,
+          "manualMoneyBinding": {
+            "requestedMonetaryValuesFromFrozenRaw": {},
+            "qualificationChangesNoMonetaryField": true,
+            "noMoneyOutsideOriginallyAssignedFieldsReviewedByThisCase": true
+          },
+          "status": "proposed-qualified-finite-source-reading-awaiting-fresh-peer-and-exact-root-adoption",
+          "ambiguityKind": "rn-m-source-segmentation",
+          "qualificationPolicy": {
+            "path": "research/salaries/queue-completion-2026-11-01/phsa/source-name-segmentation-review-policy-002.json",
+            "sha256": "fcfc11b7872b8c111018dd5b74494ea25391d14e1e905aa327f6a435c6e1e40c"
+          }
+        },
+        "allAdditionalRootAlternativesRetained": true,
+        "caseProvenByPixels": false,
+        "sourcePublicWarningRequired": true
+      },
+      {
+        "physicalPage": 118,
+        "sourceRowOnPage": 54,
+        "chosenName": "Siedschlag,Anthony Arno Emil",
+        "sourceSha256": "87ea680c3e2b9bb940d911a198e41b85068535964ee61b6992e651271bd72b60",
+        "qualificationKind": "rn-m-source-segmentation",
+        "rootAdoption": {
+          "path": "research/salaries/queue-completion-2026-11-01/reviews/root-phsa-history-2020-21-batch-003-segmentation-adoption.json",
+          "sha256": "c134959df1d2dae7fcbff513193973bb25ae9d4215cea9371b6d13bae9d414ae"
+        },
+        "completeAdoptionEvidence": {
+          "frozen": true,
+          "reviewer": "/root",
+          "reviewedOn": "2026-11-02",
+          "sourceId": "phsa-2020-21",
+          "sourceSha256": "87ea680c3e2b9bb940d911a198e41b85068535964ee61b6992e651271bd72b60",
+          "batch": "phsa-2020-21-003",
+          "acceptedQualifiedCases": true,
+          "qualifiedCases": 17,
+          "exactCaseLedger": {
+            "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-schools-2020-21-batch-003-source-name-qualifications-v3.json",
+            "sha256": "800f935212d8242b9a590f634b5cd84ac22ac5ebda0a232e8f73757c0da99364"
+          },
+          "independentPeer": {
+            "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-history-2020-21-003-seventeen-name-peer-comparison.json",
+            "sha256": "f39a6f61ca99373bc9810b145ce270c61f1ec5414ad281fa5dcbe3a59843356b"
+          },
+          "caseProvenByPixels": false,
+          "differentIndependentPreferredPrimary": {
+            "sequence": 45,
+            "adoptedAuthorPreferred": "Sidhu,Hemoor Kaur",
+            "independentPeerPreferred": "Sidhu,Hernoor Kaur",
+            "fullFiniteVisibleSet": [
+              "Sidhu,Hemoor Kaur",
+              "Sidhu,Hernoor Kaur"
+            ],
+            "basis": "Root additionally inspected the current original1200dpi source fragment. Compact rn/m is genuinely ambiguous. Preserve the authorfirstpreferredHemoor with the peerpreferredHernoor alternative explicitly qualified; no dictionary, identity or uniqueglyph assertion."
+          },
+          "decision": "Adopt exactly these17finite source-row rn/m qualifications under policy002 after two independently frozen original-image humans confirm all full finite sets.16preferredprimariesmatch; the one honest Hemoor/Hernoor preferred split remains explicit, with authorpreferredHemoor retained. All three two-join names retain full four-combination sets. The peers own first-pass extra-r error and later source reread are transparently preserved. Root reviews the exact two-reader evidence and personally inspected source45; no third independent transcript of all17names is claimed. No amount, period, identity, dictionary or whole-source inference.",
+          "publicWarningRequired": true,
+          "wholeSourceAccepted": false
+        },
+        "originalCaseEvidence": {
+          "sourceId": "phsa-2020-21",
+          "sourceSha256": "87ea680c3e2b9bb940d911a198e41b85068535964ee61b6992e651271bd72b60",
+          "batch": "phsa-2020-21-003",
+          "sequence": 49,
+          "physicalPage": 118,
+          "sourceRowOnPage": 54,
+          "proposedName": "Siedschlag,Anthony Arno Emil",
+          "visibleAlternatives": [
+            "Siedschlag,Anthony Arno Emil",
+            "Siedschlag,Anthony Amo Emil",
+            "Siedschlag,Anthony Arno Ernil",
+            "Siedschlag,Anthony Amo Ernil"
+          ],
+          "caseProvenByPixels": false,
+          "assumptionBasis": "Author first source-image literal preferred reading retained after direct actual600dpi rerender; joined shoulder/arch structure supports the preferred reading but rn/m segmentation remains finite. Both alternatives explicit. No dictionary, identity, prior-year or expected-spelling inference. Fresh peer source-only check and exact root adoption required. An additional given-name m/rn join is retained after fresh blind peer and separate author original1200reread, producing all four alternatives. Preferred primary remains unchanged.",
+          "allowedFields": [
+            "name"
+          ],
+          "cropSha256": "dd4b6e28aaa556f520ddec991391ffe97bf0213b473cf6e54038a2b7ca8ceec3",
+          "actual600DpiSourceName": {
+            "sequence": 49,
+            "physicalPage": 118,
+            "sourceRowOnPage": 54,
+            "original300DpiPixelBox": [
+              280,
+              2958,
+              1250,
+              3000
+            ],
+            "actualPdfPointClip": [
+              67.2,
+              709.92,
+              300.0,
+              720.0
+            ],
+            "dpi": 600,
+            "path": "/workspace/salary-review-schools-temp/2020-003-prechecks/seq049-name-actual600.png",
+            "sha256": "197f941c4c745e175741a06e5600f7ecd795ed7f71a064e37e9e35702604ac6e"
+          },
+          "firstImagePrimaryUnchangedFromFrozenAuthorRaw": true,
+          "manualMoneyBinding": {
+            "requestedMonetaryValuesFromFrozenRaw": {},
+            "qualificationChangesNoMonetaryField": true,
+            "noMoneyOutsideOriginallyAssignedFieldsReviewedByThisCase": true
+          },
+          "status": "proposed-qualified-finite-source-reading-awaiting-fresh-peer-and-exact-root-adoption",
+          "ambiguityKind": "rn-m-source-segmentation",
+          "qualificationPolicy": {
+            "path": "research/salaries/queue-completion-2026-11-01/phsa/source-name-segmentation-review-policy-002.json",
+            "sha256": "fcfc11b7872b8c111018dd5b74494ea25391d14e1e905aa327f6a435c6e1e40c"
+          },
+          "additionalOriginal1200GivenNameProof": {
+            "sequence": 49,
+            "physicalPage": 118,
+            "sourceRowOnPage": 54,
+            "dpi": 1200,
+            "original300DpiPixelBox": [
+              280,
+              2958,
+              980,
+              3000
+            ],
+            "actualPdfPointClip": [
+              67.2,
+              709.92,
+              235.2,
+              720.0
+            ],
+            "path": "/workspace/salary-review-schools-temp/2020-003-peer-followups/seq049-name-actual1200.png",
+            "sha256": "ee86dbae7d745294c516487ed8a7445a5c499fc3d5d72b97bfdad4da2274c27f"
+          }
+        },
+        "allAdditionalRootAlternativesRetained": true,
+        "caseProvenByPixels": false,
+        "sourcePublicWarningRequired": true
+      },
+      {
+        "physicalPage": 123,
+        "sourceRowOnPage": 16,
+        "chosenName": "Stearn,Jodi",
+        "sourceSha256": "87ea680c3e2b9bb940d911a198e41b85068535964ee61b6992e651271bd72b60",
+        "qualificationKind": "rn-m-source-segmentation",
+        "rootAdoption": {
+          "path": "research/salaries/queue-completion-2026-11-01/reviews/root-phsa-history-2020-21-batch-003-segmentation-adoption.json",
+          "sha256": "c134959df1d2dae7fcbff513193973bb25ae9d4215cea9371b6d13bae9d414ae"
+        },
+        "completeAdoptionEvidence": {
+          "frozen": true,
+          "reviewer": "/root",
+          "reviewedOn": "2026-11-02",
+          "sourceId": "phsa-2020-21",
+          "sourceSha256": "87ea680c3e2b9bb940d911a198e41b85068535964ee61b6992e651271bd72b60",
+          "batch": "phsa-2020-21-003",
+          "acceptedQualifiedCases": true,
+          "qualifiedCases": 17,
+          "exactCaseLedger": {
+            "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-schools-2020-21-batch-003-source-name-qualifications-v3.json",
+            "sha256": "800f935212d8242b9a590f634b5cd84ac22ac5ebda0a232e8f73757c0da99364"
+          },
+          "independentPeer": {
+            "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-history-2020-21-003-seventeen-name-peer-comparison.json",
+            "sha256": "f39a6f61ca99373bc9810b145ce270c61f1ec5414ad281fa5dcbe3a59843356b"
+          },
+          "caseProvenByPixels": false,
+          "differentIndependentPreferredPrimary": {
+            "sequence": 45,
+            "adoptedAuthorPreferred": "Sidhu,Hemoor Kaur",
+            "independentPeerPreferred": "Sidhu,Hernoor Kaur",
+            "fullFiniteVisibleSet": [
+              "Sidhu,Hemoor Kaur",
+              "Sidhu,Hernoor Kaur"
+            ],
+            "basis": "Root additionally inspected the current original1200dpi source fragment. Compact rn/m is genuinely ambiguous. Preserve the authorfirstpreferredHemoor with the peerpreferredHernoor alternative explicitly qualified; no dictionary, identity or uniqueglyph assertion."
+          },
+          "decision": "Adopt exactly these17finite source-row rn/m qualifications under policy002 after two independently frozen original-image humans confirm all full finite sets.16preferredprimariesmatch; the one honest Hemoor/Hernoor preferred split remains explicit, with authorpreferredHemoor retained. All three two-join names retain full four-combination sets. The peers own first-pass extra-r error and later source reread are transparently preserved. Root reviews the exact two-reader evidence and personally inspected source45; no third independent transcript of all17names is claimed. No amount, period, identity, dictionary or whole-source inference.",
+          "publicWarningRequired": true,
+          "wholeSourceAccepted": false
+        },
+        "originalCaseEvidence": {
+          "sourceId": "phsa-2020-21",
+          "sourceSha256": "87ea680c3e2b9bb940d911a198e41b85068535964ee61b6992e651271bd72b60",
+          "batch": "phsa-2020-21-003",
+          "sequence": 89,
+          "physicalPage": 123,
+          "sourceRowOnPage": 16,
+          "proposedName": "Stearn,Jodi",
+          "visibleAlternatives": [
+            "Stearn,Jodi",
+            "Steam,Jodi"
+          ],
+          "caseProvenByPixels": false,
+          "assumptionBasis": "Author first source-image literal preferred reading retained after direct actual600dpi rerender; joined shoulder/arch structure supports the preferred reading but rn/m segmentation remains finite. Both alternatives explicit. No dictionary, identity, prior-year or expected-spelling inference. Fresh peer source-only check and exact root adoption required.",
+          "allowedFields": [
+            "name"
+          ],
+          "cropSha256": "4f489eb90b10900631f84f026cf0fc1e9838231efad127c7c8e3f415c7424d53",
+          "actual600DpiSourceName": {
+            "sequence": 89,
+            "physicalPage": 123,
+            "sourceRowOnPage": 16,
+            "original300DpiPixelBox": [
+              280,
+              1320,
+              1250,
+              1361
+            ],
+            "actualPdfPointClip": [
+              67.2,
+              316.8,
+              300.0,
+              326.64
+            ],
+            "dpi": 600,
+            "path": "/workspace/salary-review-schools-temp/2020-003-prechecks/seq089-name-actual600.png",
+            "sha256": "bff24355d806069dd9f4b77d0ea49e12353eb2d533cae39f4d7775c9c7d5edaf"
+          },
+          "firstImagePrimaryUnchangedFromFrozenAuthorRaw": true,
+          "manualMoneyBinding": {
+            "requestedMonetaryValuesFromFrozenRaw": {},
+            "qualificationChangesNoMonetaryField": true,
+            "noMoneyOutsideOriginallyAssignedFieldsReviewedByThisCase": true
+          },
+          "status": "proposed-qualified-finite-source-reading-awaiting-fresh-peer-and-exact-root-adoption",
+          "ambiguityKind": "rn-m-source-segmentation",
+          "qualificationPolicy": {
+            "path": "research/salaries/queue-completion-2026-11-01/phsa/source-name-segmentation-review-policy-002.json",
+            "sha256": "fcfc11b7872b8c111018dd5b74494ea25391d14e1e905aa327f6a435c6e1e40c"
+          }
+        },
+        "allAdditionalRootAlternativesRetained": true,
+        "caseProvenByPixels": false,
+        "sourcePublicWarningRequired": true
+      },
+      {
+        "physicalPage": 125,
+        "sourceRowOnPage": 39,
+        "chosenName": "Swarna,Susmitha",
+        "sourceSha256": "87ea680c3e2b9bb940d911a198e41b85068535964ee61b6992e651271bd72b60",
+        "qualificationKind": "rn-m-source-segmentation",
+        "rootAdoption": {
+          "path": "research/salaries/queue-completion-2026-11-01/reviews/root-phsa-history-2020-21-batch-003-segmentation-adoption.json",
+          "sha256": "c134959df1d2dae7fcbff513193973bb25ae9d4215cea9371b6d13bae9d414ae"
+        },
+        "completeAdoptionEvidence": {
+          "frozen": true,
+          "reviewer": "/root",
+          "reviewedOn": "2026-11-02",
+          "sourceId": "phsa-2020-21",
+          "sourceSha256": "87ea680c3e2b9bb940d911a198e41b85068535964ee61b6992e651271bd72b60",
+          "batch": "phsa-2020-21-003",
+          "acceptedQualifiedCases": true,
+          "qualifiedCases": 17,
+          "exactCaseLedger": {
+            "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-schools-2020-21-batch-003-source-name-qualifications-v3.json",
+            "sha256": "800f935212d8242b9a590f634b5cd84ac22ac5ebda0a232e8f73757c0da99364"
+          },
+          "independentPeer": {
+            "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-history-2020-21-003-seventeen-name-peer-comparison.json",
+            "sha256": "f39a6f61ca99373bc9810b145ce270c61f1ec5414ad281fa5dcbe3a59843356b"
+          },
+          "caseProvenByPixels": false,
+          "differentIndependentPreferredPrimary": {
+            "sequence": 45,
+            "adoptedAuthorPreferred": "Sidhu,Hemoor Kaur",
+            "independentPeerPreferred": "Sidhu,Hernoor Kaur",
+            "fullFiniteVisibleSet": [
+              "Sidhu,Hemoor Kaur",
+              "Sidhu,Hernoor Kaur"
+            ],
+            "basis": "Root additionally inspected the current original1200dpi source fragment. Compact rn/m is genuinely ambiguous. Preserve the authorfirstpreferredHemoor with the peerpreferredHernoor alternative explicitly qualified; no dictionary, identity or uniqueglyph assertion."
+          },
+          "decision": "Adopt exactly these17finite source-row rn/m qualifications under policy002 after two independently frozen original-image humans confirm all full finite sets.16preferredprimariesmatch; the one honest Hemoor/Hernoor preferred split remains explicit, with authorpreferredHemoor retained. All three two-join names retain full four-combination sets. The peers own first-pass extra-r error and later source reread are transparently preserved. Root reviews the exact two-reader evidence and personally inspected source45; no third independent transcript of all17names is claimed. No amount, period, identity, dictionary or whole-source inference.",
+          "publicWarningRequired": true,
+          "wholeSourceAccepted": false
+        },
+        "originalCaseEvidence": {
+          "sourceId": "phsa-2020-21",
+          "sourceSha256": "87ea680c3e2b9bb940d911a198e41b85068535964ee61b6992e651271bd72b60",
+          "batch": "phsa-2020-21-003",
+          "sequence": 110,
+          "physicalPage": 125,
+          "sourceRowOnPage": 39,
+          "proposedName": "Swarna,Susmitha",
+          "visibleAlternatives": [
+            "Swarna,Susmitha",
+            "Swama,Susmitha",
+            "Swarna,Susrnitha",
+            "Swama,Susrnitha"
+          ],
+          "caseProvenByPixels": false,
+          "assumptionBasis": "Author first source-image literal preferred reading retained after direct actual600dpi rerender; joined shoulder/arch structure supports the preferred reading but rn/m segmentation remains finite. Both alternatives explicit. No dictionary, identity, prior-year or expected-spelling inference. Fresh peer source-only check and exact root adoption required. An additional given-name m/rn join is retained after fresh blind peer and separate author original1200reread, producing all four alternatives. Preferred primary remains unchanged.",
+          "allowedFields": [
+            "name"
+          ],
+          "cropSha256": "e07ab48d62169258c80103f54802347fb624437b69722a1e5084be56d2f30a45",
+          "actual600DpiSourceName": {
+            "sequence": 110,
+            "physicalPage": 125,
+            "sourceRowOnPage": 39,
+            "original300DpiPixelBox": [
+              280,
+              2310,
+              1250,
+              2352
+            ],
+            "actualPdfPointClip": [
+              67.2,
+              554.4,
+              300.0,
+              564.48
+            ],
+            "dpi": 600,
+            "path": "/workspace/salary-review-schools-temp/2020-003-prechecks/seq110-name-actual600.png",
+            "sha256": "a11bbad6d86630795759302c4cb535a77d10cdc8f52ab09794bfc4e6dcf558e6"
+          },
+          "firstImagePrimaryUnchangedFromFrozenAuthorRaw": true,
+          "manualMoneyBinding": {
+            "requestedMonetaryValuesFromFrozenRaw": {},
+            "qualificationChangesNoMonetaryField": true,
+            "noMoneyOutsideOriginallyAssignedFieldsReviewedByThisCase": true
+          },
+          "status": "proposed-qualified-finite-source-reading-awaiting-fresh-peer-and-exact-root-adoption",
+          "ambiguityKind": "rn-m-source-segmentation",
+          "qualificationPolicy": {
+            "path": "research/salaries/queue-completion-2026-11-01/phsa/source-name-segmentation-review-policy-002.json",
+            "sha256": "fcfc11b7872b8c111018dd5b74494ea25391d14e1e905aa327f6a435c6e1e40c"
+          },
+          "additionalOriginal1200GivenNameProof": {
+            "sequence": 110,
+            "physicalPage": 125,
+            "sourceRowOnPage": 39,
+            "dpi": 1200,
+            "original300DpiPixelBox": [
+              280,
+              2310,
+              980,
+              2352
+            ],
+            "actualPdfPointClip": [
+              67.2,
+              554.4,
+              235.2,
+              564.48
+            ],
+            "path": "/workspace/salary-review-schools-temp/2020-003-peer-followups/seq110-name-actual1200.png",
+            "sha256": "21e6c10e82bc8dec06205b181cb85f8ffae1433ee41c32b5fcd4243a2de5740a"
+          }
+        },
+        "allAdditionalRootAlternativesRetained": true,
+        "caseProvenByPixels": false,
+        "sourcePublicWarningRequired": true
+      },
+      {
+        "physicalPage": 129,
+        "sourceRowOnPage": 21,
+        "chosenName": "Thornton,Kimberly R.",
+        "sourceSha256": "87ea680c3e2b9bb940d911a198e41b85068535964ee61b6992e651271bd72b60",
+        "qualificationKind": "rn-m-source-segmentation",
+        "rootAdoption": {
+          "path": "research/salaries/queue-completion-2026-11-01/reviews/root-phsa-history-2020-21-batch-003-segmentation-adoption.json",
+          "sha256": "c134959df1d2dae7fcbff513193973bb25ae9d4215cea9371b6d13bae9d414ae"
+        },
+        "completeAdoptionEvidence": {
+          "frozen": true,
+          "reviewer": "/root",
+          "reviewedOn": "2026-11-02",
+          "sourceId": "phsa-2020-21",
+          "sourceSha256": "87ea680c3e2b9bb940d911a198e41b85068535964ee61b6992e651271bd72b60",
+          "batch": "phsa-2020-21-003",
+          "acceptedQualifiedCases": true,
+          "qualifiedCases": 17,
+          "exactCaseLedger": {
+            "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-schools-2020-21-batch-003-source-name-qualifications-v3.json",
+            "sha256": "800f935212d8242b9a590f634b5cd84ac22ac5ebda0a232e8f73757c0da99364"
+          },
+          "independentPeer": {
+            "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-history-2020-21-003-seventeen-name-peer-comparison.json",
+            "sha256": "f39a6f61ca99373bc9810b145ce270c61f1ec5414ad281fa5dcbe3a59843356b"
+          },
+          "caseProvenByPixels": false,
+          "differentIndependentPreferredPrimary": {
+            "sequence": 45,
+            "adoptedAuthorPreferred": "Sidhu,Hemoor Kaur",
+            "independentPeerPreferred": "Sidhu,Hernoor Kaur",
+            "fullFiniteVisibleSet": [
+              "Sidhu,Hemoor Kaur",
+              "Sidhu,Hernoor Kaur"
+            ],
+            "basis": "Root additionally inspected the current original1200dpi source fragment. Compact rn/m is genuinely ambiguous. Preserve the authorfirstpreferredHemoor with the peerpreferredHernoor alternative explicitly qualified; no dictionary, identity or uniqueglyph assertion."
+          },
+          "decision": "Adopt exactly these17finite source-row rn/m qualifications under policy002 after two independently frozen original-image humans confirm all full finite sets.16preferredprimariesmatch; the one honest Hemoor/Hernoor preferred split remains explicit, with authorpreferredHemoor retained. All three two-join names retain full four-combination sets. The peers own first-pass extra-r error and later source reread are transparently preserved. Root reviews the exact two-reader evidence and personally inspected source45; no third independent transcript of all17names is claimed. No amount, period, identity, dictionary or whole-source inference.",
+          "publicWarningRequired": true,
+          "wholeSourceAccepted": false
+        },
+        "originalCaseEvidence": {
+          "sourceId": "phsa-2020-21",
+          "sourceSha256": "87ea680c3e2b9bb940d911a198e41b85068535964ee61b6992e651271bd72b60",
+          "batch": "phsa-2020-21-003",
+          "sequence": 137,
+          "physicalPage": 129,
+          "sourceRowOnPage": 21,
+          "proposedName": "Thornton,Kimberly R.",
+          "visibleAlternatives": [
+            "Thornton,Kimberly R.",
+            "Thomton,Kimberly R.",
+            "Thornton,Kirnberly R.",
+            "Thomton,Kirnberly R."
+          ],
+          "caseProvenByPixels": false,
+          "assumptionBasis": "Original preferred source reading Thornton remains unchanged from precomparison frozen raw. Direct actual600dpi reread after candidate comparison identifies finite rn/m surname join, with Thomton explicit; no dictionary, identity or unique-pixel claim. Declared before fresh peer choices opened. An additional given-name m/rn join is retained after fresh blind peer and separate author original1200reread, producing all four alternatives. Preferred primary remains unchanged.",
+          "allowedFields": [
+            "name"
+          ],
+          "cropSha256": "ecac56f2f45a0a6f76a3b06445aa0400488fdccaf4e6e8eeb73fdfdc8f2a903e",
+          "actual600DpiSourceName": {
+            "sequence": 137,
+            "physicalPage": 129,
+            "sourceRowOnPage": 21,
+            "original300DpiPixelBox": [
+              280,
+              1652,
+              1250,
+              1699
+            ],
+            "actualPdfPointClip": [
+              67.2,
+              396.48,
+              300.0,
+              407.76
+            ],
+            "dpi": 600,
+            "path": "/workspace/salary-review-schools-temp/2020-003-postcomparison/seq137-name-actual600.png",
+            "sha256": "6a37550678630ca430750717c8c682d2b32321122cb1fa58fca015a27fe8d194"
+          },
+          "firstImagePrimaryUnchangedFromFrozenAuthorRaw": true,
+          "manualMoneyBinding": {
+            "requestedMonetaryValuesFromFrozenRaw": {},
+            "qualificationChangesNoMonetaryField": true,
+            "noMoneyOutsideOriginallyAssignedFieldsReviewedByThisCase": true
+          },
+          "status": "proposed-qualified-finite-source-reading-awaiting-fresh-peer-and-exact-root-adoption",
+          "ambiguityKind": "rn-m-source-segmentation",
+          "qualificationPolicy": {
+            "path": "research/salaries/queue-completion-2026-11-01/phsa/source-name-segmentation-review-policy-002.json",
+            "sha256": "fcfc11b7872b8c111018dd5b74494ea25391d14e1e905aa327f6a435c6e1e40c"
+          },
+          "qualificationAddedAfterCandidateComparison": true,
+          "additionalOriginal1200GivenNameProof": {
+            "sequence": 137,
+            "physicalPage": 129,
+            "sourceRowOnPage": 21,
+            "dpi": 1200,
+            "original300DpiPixelBox": [
+              280,
+              1652,
+              980,
+              1699
+            ],
+            "actualPdfPointClip": [
+              67.2,
+              396.48,
+              235.2,
+              407.76
+            ],
+            "path": "/workspace/salary-review-schools-temp/2020-003-peer-followups/seq137-name-actual1200.png",
+            "sha256": "c46be8659710ac61ab1f0ad697a5c4ee5fb05d17647474acd399a5012da55219"
+          }
+        },
+        "allAdditionalRootAlternativesRetained": true,
+        "caseProvenByPixels": false,
+        "sourcePublicWarningRequired": true
+      },
+      {
+        "physicalPage": 132,
+        "sourceRowOnPage": 13,
+        "chosenName": "Turnbull,Ruth",
+        "sourceSha256": "87ea680c3e2b9bb940d911a198e41b85068535964ee61b6992e651271bd72b60",
+        "qualificationKind": "rn-m-source-segmentation",
+        "rootAdoption": {
+          "path": "research/salaries/queue-completion-2026-11-01/reviews/root-phsa-history-2020-21-batch-003-segmentation-adoption.json",
+          "sha256": "c134959df1d2dae7fcbff513193973bb25ae9d4215cea9371b6d13bae9d414ae"
+        },
+        "completeAdoptionEvidence": {
+          "frozen": true,
+          "reviewer": "/root",
+          "reviewedOn": "2026-11-02",
+          "sourceId": "phsa-2020-21",
+          "sourceSha256": "87ea680c3e2b9bb940d911a198e41b85068535964ee61b6992e651271bd72b60",
+          "batch": "phsa-2020-21-003",
+          "acceptedQualifiedCases": true,
+          "qualifiedCases": 17,
+          "exactCaseLedger": {
+            "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-schools-2020-21-batch-003-source-name-qualifications-v3.json",
+            "sha256": "800f935212d8242b9a590f634b5cd84ac22ac5ebda0a232e8f73757c0da99364"
+          },
+          "independentPeer": {
+            "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-history-2020-21-003-seventeen-name-peer-comparison.json",
+            "sha256": "f39a6f61ca99373bc9810b145ce270c61f1ec5414ad281fa5dcbe3a59843356b"
+          },
+          "caseProvenByPixels": false,
+          "differentIndependentPreferredPrimary": {
+            "sequence": 45,
+            "adoptedAuthorPreferred": "Sidhu,Hemoor Kaur",
+            "independentPeerPreferred": "Sidhu,Hernoor Kaur",
+            "fullFiniteVisibleSet": [
+              "Sidhu,Hemoor Kaur",
+              "Sidhu,Hernoor Kaur"
+            ],
+            "basis": "Root additionally inspected the current original1200dpi source fragment. Compact rn/m is genuinely ambiguous. Preserve the authorfirstpreferredHemoor with the peerpreferredHernoor alternative explicitly qualified; no dictionary, identity or uniqueglyph assertion."
+          },
+          "decision": "Adopt exactly these17finite source-row rn/m qualifications under policy002 after two independently frozen original-image humans confirm all full finite sets.16preferredprimariesmatch; the one honest Hemoor/Hernoor preferred split remains explicit, with authorpreferredHemoor retained. All three two-join names retain full four-combination sets. The peers own first-pass extra-r error and later source reread are transparently preserved. Root reviews the exact two-reader evidence and personally inspected source45; no third independent transcript of all17names is claimed. No amount, period, identity, dictionary or whole-source inference.",
+          "publicWarningRequired": true,
+          "wholeSourceAccepted": false
+        },
+        "originalCaseEvidence": {
+          "sourceId": "phsa-2020-21",
+          "sourceSha256": "87ea680c3e2b9bb940d911a198e41b85068535964ee61b6992e651271bd72b60",
+          "batch": "phsa-2020-21-003",
+          "sequence": 157,
+          "physicalPage": 132,
+          "sourceRowOnPage": 13,
+          "proposedName": "Turnbull,Ruth",
+          "visibleAlternatives": [
+            "Turnbull,Ruth",
+            "Tumbull,Ruth"
+          ],
+          "caseProvenByPixels": false,
+          "assumptionBasis": "Author first source-image literal preferred reading retained after direct actual600dpi rerender; joined shoulder/arch structure supports the preferred reading but rn/m segmentation remains finite. Both alternatives explicit. No dictionary, identity, prior-year or expected-spelling inference. Fresh peer source-only check and exact root adoption required.",
+          "allowedFields": [
+            "name"
+          ],
+          "cropSha256": "183013404ac6624019b3a9884e73ccc27dde8205a019605ecd932a1acaa7af5b",
+          "actual600DpiSourceName": {
+            "sequence": 157,
+            "physicalPage": 132,
+            "sourceRowOnPage": 13,
+            "original300DpiPixelBox": [
+              280,
+              1261,
+              1250,
+              1308
+            ],
+            "actualPdfPointClip": [
+              67.2,
+              302.64,
+              300.0,
+              313.92
+            ],
+            "dpi": 600,
+            "path": "/workspace/salary-review-schools-temp/2020-003-prechecks/seq157-name-actual600.png",
+            "sha256": "4b0a9a99eaee4ad8eb279e179b5e23d0358c00a8adcfb706f00ad51095a1d2f2"
+          },
+          "firstImagePrimaryUnchangedFromFrozenAuthorRaw": true,
+          "manualMoneyBinding": {
+            "requestedMonetaryValuesFromFrozenRaw": {},
+            "qualificationChangesNoMonetaryField": true,
+            "noMoneyOutsideOriginallyAssignedFieldsReviewedByThisCase": true
+          },
+          "status": "proposed-qualified-finite-source-reading-awaiting-fresh-peer-and-exact-root-adoption",
+          "ambiguityKind": "rn-m-source-segmentation",
+          "qualificationPolicy": {
+            "path": "research/salaries/queue-completion-2026-11-01/phsa/source-name-segmentation-review-policy-002.json",
+            "sha256": "fcfc11b7872b8c111018dd5b74494ea25391d14e1e905aa327f6a435c6e1e40c"
+          }
+        },
+        "allAdditionalRootAlternativesRetained": true,
+        "caseProvenByPixels": false,
+        "sourcePublicWarningRequired": true
+      },
+      {
+        "physicalPage": 132,
+        "sourceRowOnPage": 14,
+        "chosenName": "Turnbull,Sonja",
+        "sourceSha256": "87ea680c3e2b9bb940d911a198e41b85068535964ee61b6992e651271bd72b60",
+        "qualificationKind": "rn-m-source-segmentation",
+        "rootAdoption": {
+          "path": "research/salaries/queue-completion-2026-11-01/reviews/root-phsa-history-2020-21-batch-003-segmentation-adoption.json",
+          "sha256": "c134959df1d2dae7fcbff513193973bb25ae9d4215cea9371b6d13bae9d414ae"
+        },
+        "completeAdoptionEvidence": {
+          "frozen": true,
+          "reviewer": "/root",
+          "reviewedOn": "2026-11-02",
+          "sourceId": "phsa-2020-21",
+          "sourceSha256": "87ea680c3e2b9bb940d911a198e41b85068535964ee61b6992e651271bd72b60",
+          "batch": "phsa-2020-21-003",
+          "acceptedQualifiedCases": true,
+          "qualifiedCases": 17,
+          "exactCaseLedger": {
+            "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-schools-2020-21-batch-003-source-name-qualifications-v3.json",
+            "sha256": "800f935212d8242b9a590f634b5cd84ac22ac5ebda0a232e8f73757c0da99364"
+          },
+          "independentPeer": {
+            "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-history-2020-21-003-seventeen-name-peer-comparison.json",
+            "sha256": "f39a6f61ca99373bc9810b145ce270c61f1ec5414ad281fa5dcbe3a59843356b"
+          },
+          "caseProvenByPixels": false,
+          "differentIndependentPreferredPrimary": {
+            "sequence": 45,
+            "adoptedAuthorPreferred": "Sidhu,Hemoor Kaur",
+            "independentPeerPreferred": "Sidhu,Hernoor Kaur",
+            "fullFiniteVisibleSet": [
+              "Sidhu,Hemoor Kaur",
+              "Sidhu,Hernoor Kaur"
+            ],
+            "basis": "Root additionally inspected the current original1200dpi source fragment. Compact rn/m is genuinely ambiguous. Preserve the authorfirstpreferredHemoor with the peerpreferredHernoor alternative explicitly qualified; no dictionary, identity or uniqueglyph assertion."
+          },
+          "decision": "Adopt exactly these17finite source-row rn/m qualifications under policy002 after two independently frozen original-image humans confirm all full finite sets.16preferredprimariesmatch; the one honest Hemoor/Hernoor preferred split remains explicit, with authorpreferredHemoor retained. All three two-join names retain full four-combination sets. The peers own first-pass extra-r error and later source reread are transparently preserved. Root reviews the exact two-reader evidence and personally inspected source45; no third independent transcript of all17names is claimed. No amount, period, identity, dictionary or whole-source inference.",
+          "publicWarningRequired": true,
+          "wholeSourceAccepted": false
+        },
+        "originalCaseEvidence": {
+          "sourceId": "phsa-2020-21",
+          "sourceSha256": "87ea680c3e2b9bb940d911a198e41b85068535964ee61b6992e651271bd72b60",
+          "batch": "phsa-2020-21-003",
+          "sequence": 158,
+          "physicalPage": 132,
+          "sourceRowOnPage": 14,
+          "proposedName": "Turnbull,Sonja",
+          "visibleAlternatives": [
+            "Turnbull,Sonja",
+            "Tumbull,Sonja"
+          ],
+          "caseProvenByPixels": false,
+          "assumptionBasis": "Author first source-image literal preferred reading retained after direct actual600dpi rerender; joined shoulder/arch structure supports the preferred reading but rn/m segmentation remains finite. Both alternatives explicit. No dictionary, identity, prior-year or expected-spelling inference. Fresh peer source-only check and exact root adoption required.",
+          "allowedFields": [
+            "name"
+          ],
+          "cropSha256": "2a4ed5adef304929cabc9ad56236f62c32df176507956849a3a65e338090872a",
+          "actual600DpiSourceName": {
+            "sequence": 158,
+            "physicalPage": 132,
+            "sourceRowOnPage": 14,
+            "original300DpiPixelBox": [
+              280,
+              1312,
+              1250,
+              1359
+            ],
+            "actualPdfPointClip": [
+              67.2,
+              314.88,
+              300.0,
+              326.16
+            ],
+            "dpi": 600,
+            "path": "/workspace/salary-review-schools-temp/2020-003-prechecks/seq158-name-actual600.png",
+            "sha256": "6d46fa02489f45a077438c2eb671e75119f44b60bef73ecbcdb3748b003c3ef3"
+          },
+          "firstImagePrimaryUnchangedFromFrozenAuthorRaw": true,
+          "manualMoneyBinding": {
+            "requestedMonetaryValuesFromFrozenRaw": {},
+            "qualificationChangesNoMonetaryField": true,
+            "noMoneyOutsideOriginallyAssignedFieldsReviewedByThisCase": true
+          },
+          "status": "proposed-qualified-finite-source-reading-awaiting-fresh-peer-and-exact-root-adoption",
+          "ambiguityKind": "rn-m-source-segmentation",
+          "qualificationPolicy": {
+            "path": "research/salaries/queue-completion-2026-11-01/phsa/source-name-segmentation-review-policy-002.json",
+            "sha256": "fcfc11b7872b8c111018dd5b74494ea25391d14e1e905aa327f6a435c6e1e40c"
+          }
+        },
+        "allAdditionalRootAlternativesRetained": true,
+        "caseProvenByPixels": false,
+        "sourcePublicWarningRequired": true
+      },
+      {
+        "physicalPage": 132,
+        "sourceRowOnPage": 15,
+        "chosenName": "Turner,Ashley Sharron Anne",
+        "sourceSha256": "87ea680c3e2b9bb940d911a198e41b85068535964ee61b6992e651271bd72b60",
+        "qualificationKind": "rn-m-source-segmentation",
+        "rootAdoption": {
+          "path": "research/salaries/queue-completion-2026-11-01/reviews/root-phsa-history-2020-21-batch-003-segmentation-adoption.json",
+          "sha256": "c134959df1d2dae7fcbff513193973bb25ae9d4215cea9371b6d13bae9d414ae"
+        },
+        "completeAdoptionEvidence": {
+          "frozen": true,
+          "reviewer": "/root",
+          "reviewedOn": "2026-11-02",
+          "sourceId": "phsa-2020-21",
+          "sourceSha256": "87ea680c3e2b9bb940d911a198e41b85068535964ee61b6992e651271bd72b60",
+          "batch": "phsa-2020-21-003",
+          "acceptedQualifiedCases": true,
+          "qualifiedCases": 17,
+          "exactCaseLedger": {
+            "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-schools-2020-21-batch-003-source-name-qualifications-v3.json",
+            "sha256": "800f935212d8242b9a590f634b5cd84ac22ac5ebda0a232e8f73757c0da99364"
+          },
+          "independentPeer": {
+            "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-history-2020-21-003-seventeen-name-peer-comparison.json",
+            "sha256": "f39a6f61ca99373bc9810b145ce270c61f1ec5414ad281fa5dcbe3a59843356b"
+          },
+          "caseProvenByPixels": false,
+          "differentIndependentPreferredPrimary": {
+            "sequence": 45,
+            "adoptedAuthorPreferred": "Sidhu,Hemoor Kaur",
+            "independentPeerPreferred": "Sidhu,Hernoor Kaur",
+            "fullFiniteVisibleSet": [
+              "Sidhu,Hemoor Kaur",
+              "Sidhu,Hernoor Kaur"
+            ],
+            "basis": "Root additionally inspected the current original1200dpi source fragment. Compact rn/m is genuinely ambiguous. Preserve the authorfirstpreferredHemoor with the peerpreferredHernoor alternative explicitly qualified; no dictionary, identity or uniqueglyph assertion."
+          },
+          "decision": "Adopt exactly these17finite source-row rn/m qualifications under policy002 after two independently frozen original-image humans confirm all full finite sets.16preferredprimariesmatch; the one honest Hemoor/Hernoor preferred split remains explicit, with authorpreferredHemoor retained. All three two-join names retain full four-combination sets. The peers own first-pass extra-r error and later source reread are transparently preserved. Root reviews the exact two-reader evidence and personally inspected source45; no third independent transcript of all17names is claimed. No amount, period, identity, dictionary or whole-source inference.",
+          "publicWarningRequired": true,
+          "wholeSourceAccepted": false
+        },
+        "originalCaseEvidence": {
+          "sourceId": "phsa-2020-21",
+          "sourceSha256": "87ea680c3e2b9bb940d911a198e41b85068535964ee61b6992e651271bd72b60",
+          "batch": "phsa-2020-21-003",
+          "sequence": 159,
+          "physicalPage": 132,
+          "sourceRowOnPage": 15,
+          "proposedName": "Turner,Ashley Sharron Anne",
+          "visibleAlternatives": [
+            "Turner,Ashley Sharron Anne",
+            "Tumer,Ashley Sharron Anne"
+          ],
+          "caseProvenByPixels": false,
+          "assumptionBasis": "Author first source-image literal preferred reading retained after direct actual600dpi rerender; joined shoulder/arch structure supports the preferred reading but rn/m segmentation remains finite. Both alternatives explicit. No dictionary, identity, prior-year or expected-spelling inference. Fresh peer source-only check and exact root adoption required.",
+          "allowedFields": [
+            "name"
+          ],
+          "cropSha256": "7fd01576f77e918484ba37e215fcc91a98165fc6b773d45960c30f6cc6eab64b",
+          "actual600DpiSourceName": {
+            "sequence": 159,
+            "physicalPage": 132,
+            "sourceRowOnPage": 15,
+            "original300DpiPixelBox": [
+              280,
+              1360,
+              1250,
+              1407
+            ],
+            "actualPdfPointClip": [
+              67.2,
+              326.4,
+              300.0,
+              337.68
+            ],
+            "dpi": 600,
+            "path": "/workspace/salary-review-schools-temp/2020-003-prechecks/seq159-name-actual600.png",
+            "sha256": "253b52ae9faf444eaa9b6587e6deade9988e8898d8f35bda91148796a56fbcc9"
+          },
+          "firstImagePrimaryUnchangedFromFrozenAuthorRaw": true,
+          "manualMoneyBinding": {
+            "requestedMonetaryValuesFromFrozenRaw": {},
+            "qualificationChangesNoMonetaryField": true,
+            "noMoneyOutsideOriginallyAssignedFieldsReviewedByThisCase": true
+          },
+          "status": "proposed-qualified-finite-source-reading-awaiting-fresh-peer-and-exact-root-adoption",
+          "ambiguityKind": "rn-m-source-segmentation",
+          "qualificationPolicy": {
+            "path": "research/salaries/queue-completion-2026-11-01/phsa/source-name-segmentation-review-policy-002.json",
+            "sha256": "fcfc11b7872b8c111018dd5b74494ea25391d14e1e905aa327f6a435c6e1e40c"
+          }
+        },
+        "allAdditionalRootAlternativesRetained": true,
+        "caseProvenByPixels": false,
+        "sourcePublicWarningRequired": true
+      },
+      {
+        "physicalPage": 132,
+        "sourceRowOnPage": 16,
+        "chosenName": "Turner,Jessica Anne",
+        "sourceSha256": "87ea680c3e2b9bb940d911a198e41b85068535964ee61b6992e651271bd72b60",
+        "qualificationKind": "rn-m-source-segmentation",
+        "rootAdoption": {
+          "path": "research/salaries/queue-completion-2026-11-01/reviews/root-phsa-history-2020-21-batch-003-segmentation-adoption.json",
+          "sha256": "c134959df1d2dae7fcbff513193973bb25ae9d4215cea9371b6d13bae9d414ae"
+        },
+        "completeAdoptionEvidence": {
+          "frozen": true,
+          "reviewer": "/root",
+          "reviewedOn": "2026-11-02",
+          "sourceId": "phsa-2020-21",
+          "sourceSha256": "87ea680c3e2b9bb940d911a198e41b85068535964ee61b6992e651271bd72b60",
+          "batch": "phsa-2020-21-003",
+          "acceptedQualifiedCases": true,
+          "qualifiedCases": 17,
+          "exactCaseLedger": {
+            "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-schools-2020-21-batch-003-source-name-qualifications-v3.json",
+            "sha256": "800f935212d8242b9a590f634b5cd84ac22ac5ebda0a232e8f73757c0da99364"
+          },
+          "independentPeer": {
+            "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-history-2020-21-003-seventeen-name-peer-comparison.json",
+            "sha256": "f39a6f61ca99373bc9810b145ce270c61f1ec5414ad281fa5dcbe3a59843356b"
+          },
+          "caseProvenByPixels": false,
+          "differentIndependentPreferredPrimary": {
+            "sequence": 45,
+            "adoptedAuthorPreferred": "Sidhu,Hemoor Kaur",
+            "independentPeerPreferred": "Sidhu,Hernoor Kaur",
+            "fullFiniteVisibleSet": [
+              "Sidhu,Hemoor Kaur",
+              "Sidhu,Hernoor Kaur"
+            ],
+            "basis": "Root additionally inspected the current original1200dpi source fragment. Compact rn/m is genuinely ambiguous. Preserve the authorfirstpreferredHemoor with the peerpreferredHernoor alternative explicitly qualified; no dictionary, identity or uniqueglyph assertion."
+          },
+          "decision": "Adopt exactly these17finite source-row rn/m qualifications under policy002 after two independently frozen original-image humans confirm all full finite sets.16preferredprimariesmatch; the one honest Hemoor/Hernoor preferred split remains explicit, with authorpreferredHemoor retained. All three two-join names retain full four-combination sets. The peers own first-pass extra-r error and later source reread are transparently preserved. Root reviews the exact two-reader evidence and personally inspected source45; no third independent transcript of all17names is claimed. No amount, period, identity, dictionary or whole-source inference.",
+          "publicWarningRequired": true,
+          "wholeSourceAccepted": false
+        },
+        "originalCaseEvidence": {
+          "sourceId": "phsa-2020-21",
+          "sourceSha256": "87ea680c3e2b9bb940d911a198e41b85068535964ee61b6992e651271bd72b60",
+          "batch": "phsa-2020-21-003",
+          "sequence": 160,
+          "physicalPage": 132,
+          "sourceRowOnPage": 16,
+          "proposedName": "Turner,Jessica Anne",
+          "visibleAlternatives": [
+            "Turner,Jessica Anne",
+            "Tumer,Jessica Anne"
+          ],
+          "caseProvenByPixels": false,
+          "assumptionBasis": "Author first source-image literal preferred reading retained after direct actual600dpi rerender; joined shoulder/arch structure supports the preferred reading but rn/m segmentation remains finite. Both alternatives explicit. No dictionary, identity, prior-year or expected-spelling inference. Fresh peer source-only check and exact root adoption required.",
+          "allowedFields": [
+            "name"
+          ],
+          "cropSha256": "ac56895225469ec0a1d45443b29a8cbd4724d66ad2b5f3881c5d1688a5f41544",
+          "actual600DpiSourceName": {
+            "sequence": 160,
+            "physicalPage": 132,
+            "sourceRowOnPage": 16,
+            "original300DpiPixelBox": [
+              280,
+              1407,
+              1250,
+              1454
+            ],
+            "actualPdfPointClip": [
+              67.2,
+              337.68,
+              300.0,
+              348.96
+            ],
+            "dpi": 600,
+            "path": "/workspace/salary-review-schools-temp/2020-003-prechecks/seq160-name-actual600.png",
+            "sha256": "22781e0adf9ab6bc3d5b5e7b03b7bc539967451be68748e130bb57970d6d24f6"
+          },
+          "firstImagePrimaryUnchangedFromFrozenAuthorRaw": true,
+          "manualMoneyBinding": {
+            "requestedMonetaryValuesFromFrozenRaw": {},
+            "qualificationChangesNoMonetaryField": true,
+            "noMoneyOutsideOriginallyAssignedFieldsReviewedByThisCase": true
+          },
+          "status": "proposed-qualified-finite-source-reading-awaiting-fresh-peer-and-exact-root-adoption",
+          "ambiguityKind": "rn-m-source-segmentation",
+          "qualificationPolicy": {
+            "path": "research/salaries/queue-completion-2026-11-01/phsa/source-name-segmentation-review-policy-002.json",
+            "sha256": "fcfc11b7872b8c111018dd5b74494ea25391d14e1e905aa327f6a435c6e1e40c"
+          }
+        },
+        "allAdditionalRootAlternativesRetained": true,
+        "caseProvenByPixels": false,
+        "sourcePublicWarningRequired": true
+      },
+      {
+        "physicalPage": 132,
+        "sourceRowOnPage": 18,
+        "chosenName": "Turner,Wayne",
+        "sourceSha256": "87ea680c3e2b9bb940d911a198e41b85068535964ee61b6992e651271bd72b60",
+        "qualificationKind": "rn-m-source-segmentation",
+        "rootAdoption": {
+          "path": "research/salaries/queue-completion-2026-11-01/reviews/root-phsa-history-2020-21-batch-003-segmentation-adoption.json",
+          "sha256": "c134959df1d2dae7fcbff513193973bb25ae9d4215cea9371b6d13bae9d414ae"
+        },
+        "completeAdoptionEvidence": {
+          "frozen": true,
+          "reviewer": "/root",
+          "reviewedOn": "2026-11-02",
+          "sourceId": "phsa-2020-21",
+          "sourceSha256": "87ea680c3e2b9bb940d911a198e41b85068535964ee61b6992e651271bd72b60",
+          "batch": "phsa-2020-21-003",
+          "acceptedQualifiedCases": true,
+          "qualifiedCases": 17,
+          "exactCaseLedger": {
+            "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-schools-2020-21-batch-003-source-name-qualifications-v3.json",
+            "sha256": "800f935212d8242b9a590f634b5cd84ac22ac5ebda0a232e8f73757c0da99364"
+          },
+          "independentPeer": {
+            "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-history-2020-21-003-seventeen-name-peer-comparison.json",
+            "sha256": "f39a6f61ca99373bc9810b145ce270c61f1ec5414ad281fa5dcbe3a59843356b"
+          },
+          "caseProvenByPixels": false,
+          "differentIndependentPreferredPrimary": {
+            "sequence": 45,
+            "adoptedAuthorPreferred": "Sidhu,Hemoor Kaur",
+            "independentPeerPreferred": "Sidhu,Hernoor Kaur",
+            "fullFiniteVisibleSet": [
+              "Sidhu,Hemoor Kaur",
+              "Sidhu,Hernoor Kaur"
+            ],
+            "basis": "Root additionally inspected the current original1200dpi source fragment. Compact rn/m is genuinely ambiguous. Preserve the authorfirstpreferredHemoor with the peerpreferredHernoor alternative explicitly qualified; no dictionary, identity or uniqueglyph assertion."
+          },
+          "decision": "Adopt exactly these17finite source-row rn/m qualifications under policy002 after two independently frozen original-image humans confirm all full finite sets.16preferredprimariesmatch; the one honest Hemoor/Hernoor preferred split remains explicit, with authorpreferredHemoor retained. All three two-join names retain full four-combination sets. The peers own first-pass extra-r error and later source reread are transparently preserved. Root reviews the exact two-reader evidence and personally inspected source45; no third independent transcript of all17names is claimed. No amount, period, identity, dictionary or whole-source inference.",
+          "publicWarningRequired": true,
+          "wholeSourceAccepted": false
+        },
+        "originalCaseEvidence": {
+          "sourceId": "phsa-2020-21",
+          "sourceSha256": "87ea680c3e2b9bb940d911a198e41b85068535964ee61b6992e651271bd72b60",
+          "batch": "phsa-2020-21-003",
+          "sequence": 161,
+          "physicalPage": 132,
+          "sourceRowOnPage": 18,
+          "proposedName": "Turner,Wayne",
+          "visibleAlternatives": [
+            "Turner,Wayne",
+            "Tumer,Wayne"
+          ],
+          "caseProvenByPixels": false,
+          "assumptionBasis": "Author first source-image literal preferred reading retained after direct actual600dpi rerender; joined shoulder/arch structure supports the preferred reading but rn/m segmentation remains finite. Both alternatives explicit. No dictionary, identity, prior-year or expected-spelling inference. Fresh peer source-only check and exact root adoption required.",
+          "allowedFields": [
+            "name"
+          ],
+          "cropSha256": "8d8ef6e676d6ddd9ea9fd4e0800280902e11cc75b7cce1375780f1a4af534e5a",
+          "actual600DpiSourceName": {
+            "sequence": 161,
+            "physicalPage": 132,
+            "sourceRowOnPage": 18,
+            "original300DpiPixelBox": [
+              280,
+              1506,
+              1250,
+              1553
+            ],
+            "actualPdfPointClip": [
+              67.2,
+              361.44,
+              300.0,
+              372.72
+            ],
+            "dpi": 600,
+            "path": "/workspace/salary-review-schools-temp/2020-003-prechecks/seq161-name-actual600.png",
+            "sha256": "e55726cd26b74c89ca480af0cda2b49edf0cef2205f24a534dcfaa9be5847ad9"
+          },
+          "firstImagePrimaryUnchangedFromFrozenAuthorRaw": true,
+          "manualMoneyBinding": {
+            "requestedMonetaryValuesFromFrozenRaw": {},
+            "qualificationChangesNoMonetaryField": true,
+            "noMoneyOutsideOriginallyAssignedFieldsReviewedByThisCase": true
+          },
+          "status": "proposed-qualified-finite-source-reading-awaiting-fresh-peer-and-exact-root-adoption",
+          "ambiguityKind": "rn-m-source-segmentation",
+          "qualificationPolicy": {
+            "path": "research/salaries/queue-completion-2026-11-01/phsa/source-name-segmentation-review-policy-002.json",
+            "sha256": "fcfc11b7872b8c111018dd5b74494ea25391d14e1e905aa327f6a435c6e1e40c"
+          }
+        },
+        "allAdditionalRootAlternativesRetained": true,
+        "caseProvenByPixels": false,
+        "sourcePublicWarningRequired": true
+      },
+      {
+        "physicalPage": 133,
+        "sourceRowOnPage": 26,
+        "chosenName": "Van Horn,Sara Catherine",
+        "sourceSha256": "87ea680c3e2b9bb940d911a198e41b85068535964ee61b6992e651271bd72b60",
+        "qualificationKind": "rn-m-source-segmentation",
+        "rootAdoption": {
+          "path": "research/salaries/queue-completion-2026-11-01/reviews/root-phsa-history-2020-21-batch-003-segmentation-adoption.json",
+          "sha256": "c134959df1d2dae7fcbff513193973bb25ae9d4215cea9371b6d13bae9d414ae"
+        },
+        "completeAdoptionEvidence": {
+          "frozen": true,
+          "reviewer": "/root",
+          "reviewedOn": "2026-11-02",
+          "sourceId": "phsa-2020-21",
+          "sourceSha256": "87ea680c3e2b9bb940d911a198e41b85068535964ee61b6992e651271bd72b60",
+          "batch": "phsa-2020-21-003",
+          "acceptedQualifiedCases": true,
+          "qualifiedCases": 17,
+          "exactCaseLedger": {
+            "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-schools-2020-21-batch-003-source-name-qualifications-v3.json",
+            "sha256": "800f935212d8242b9a590f634b5cd84ac22ac5ebda0a232e8f73757c0da99364"
+          },
+          "independentPeer": {
+            "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-history-2020-21-003-seventeen-name-peer-comparison.json",
+            "sha256": "f39a6f61ca99373bc9810b145ce270c61f1ec5414ad281fa5dcbe3a59843356b"
+          },
+          "caseProvenByPixels": false,
+          "differentIndependentPreferredPrimary": {
+            "sequence": 45,
+            "adoptedAuthorPreferred": "Sidhu,Hemoor Kaur",
+            "independentPeerPreferred": "Sidhu,Hernoor Kaur",
+            "fullFiniteVisibleSet": [
+              "Sidhu,Hemoor Kaur",
+              "Sidhu,Hernoor Kaur"
+            ],
+            "basis": "Root additionally inspected the current original1200dpi source fragment. Compact rn/m is genuinely ambiguous. Preserve the authorfirstpreferredHemoor with the peerpreferredHernoor alternative explicitly qualified; no dictionary, identity or uniqueglyph assertion."
+          },
+          "decision": "Adopt exactly these17finite source-row rn/m qualifications under policy002 after two independently frozen original-image humans confirm all full finite sets.16preferredprimariesmatch; the one honest Hemoor/Hernoor preferred split remains explicit, with authorpreferredHemoor retained. All three two-join names retain full four-combination sets. The peers own first-pass extra-r error and later source reread are transparently preserved. Root reviews the exact two-reader evidence and personally inspected source45; no third independent transcript of all17names is claimed. No amount, period, identity, dictionary or whole-source inference.",
+          "publicWarningRequired": true,
+          "wholeSourceAccepted": false
+        },
+        "originalCaseEvidence": {
+          "sourceId": "phsa-2020-21",
+          "sourceSha256": "87ea680c3e2b9bb940d911a198e41b85068535964ee61b6992e651271bd72b60",
+          "batch": "phsa-2020-21-003",
+          "sequence": 173,
+          "physicalPage": 133,
+          "sourceRowOnPage": 26,
+          "proposedName": "Van Horn,Sara Catherine",
+          "visibleAlternatives": [
+            "Van Horn,Sara Catherine",
+            "Van Hom,Sara Catherine"
+          ],
+          "caseProvenByPixels": false,
+          "assumptionBasis": "Author first source-image literal preferred reading retained after direct actual600dpi rerender; joined shoulder/arch structure supports the preferred reading but rn/m segmentation remains finite. Both alternatives explicit. No dictionary, identity, prior-year or expected-spelling inference. Fresh peer source-only check and exact root adoption required.",
+          "allowedFields": [
+            "name"
+          ],
+          "cropSha256": "bda5ac4cefc3494872324313dc22dc5363a1b465d086a13cc936127036fefd5f",
+          "actual600DpiSourceName": {
+            "sequence": 173,
+            "physicalPage": 133,
+            "sourceRowOnPage": 26,
+            "original300DpiPixelBox": [
+              280,
+              1892,
+              1250,
+              1938
+            ],
+            "actualPdfPointClip": [
+              67.2,
+              454.08,
+              300.0,
+              465.12
+            ],
+            "dpi": 600,
+            "path": "/workspace/salary-review-schools-temp/2020-003-prechecks/seq173-name-actual600.png",
+            "sha256": "e9a162d118f573ea04b4cf57da4cf757e9f1292f691c9aa9f91f9d8eed543d00"
+          },
+          "firstImagePrimaryUnchangedFromFrozenAuthorRaw": true,
+          "manualMoneyBinding": {
+            "requestedMonetaryValuesFromFrozenRaw": {},
+            "qualificationChangesNoMonetaryField": true,
+            "noMoneyOutsideOriginallyAssignedFieldsReviewedByThisCase": true
+          },
+          "status": "proposed-qualified-finite-source-reading-awaiting-fresh-peer-and-exact-root-adoption",
+          "ambiguityKind": "rn-m-source-segmentation",
+          "qualificationPolicy": {
+            "path": "research/salaries/queue-completion-2026-11-01/phsa/source-name-segmentation-review-policy-002.json",
+            "sha256": "fcfc11b7872b8c111018dd5b74494ea25391d14e1e905aa327f6a435c6e1e40c"
+          }
+        },
+        "allAdditionalRootAlternativesRetained": true,
+        "caseProvenByPixels": false,
+        "sourcePublicWarningRequired": true
+      },
+      {
+        "physicalPage": 137,
+        "sourceRowOnPage": 38,
+        "chosenName": "Warner,Leslie",
+        "sourceSha256": "87ea680c3e2b9bb940d911a198e41b85068535964ee61b6992e651271bd72b60",
+        "qualificationKind": "rn-m-source-segmentation",
+        "rootAdoption": {
+          "path": "research/salaries/queue-completion-2026-11-01/reviews/root-phsa-history-2020-21-batch-003-segmentation-adoption.json",
+          "sha256": "c134959df1d2dae7fcbff513193973bb25ae9d4215cea9371b6d13bae9d414ae"
+        },
+        "completeAdoptionEvidence": {
+          "frozen": true,
+          "reviewer": "/root",
+          "reviewedOn": "2026-11-02",
+          "sourceId": "phsa-2020-21",
+          "sourceSha256": "87ea680c3e2b9bb940d911a198e41b85068535964ee61b6992e651271bd72b60",
+          "batch": "phsa-2020-21-003",
+          "acceptedQualifiedCases": true,
+          "qualifiedCases": 17,
+          "exactCaseLedger": {
+            "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-schools-2020-21-batch-003-source-name-qualifications-v3.json",
+            "sha256": "800f935212d8242b9a590f634b5cd84ac22ac5ebda0a232e8f73757c0da99364"
+          },
+          "independentPeer": {
+            "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-history-2020-21-003-seventeen-name-peer-comparison.json",
+            "sha256": "f39a6f61ca99373bc9810b145ce270c61f1ec5414ad281fa5dcbe3a59843356b"
+          },
+          "caseProvenByPixels": false,
+          "differentIndependentPreferredPrimary": {
+            "sequence": 45,
+            "adoptedAuthorPreferred": "Sidhu,Hemoor Kaur",
+            "independentPeerPreferred": "Sidhu,Hernoor Kaur",
+            "fullFiniteVisibleSet": [
+              "Sidhu,Hemoor Kaur",
+              "Sidhu,Hernoor Kaur"
+            ],
+            "basis": "Root additionally inspected the current original1200dpi source fragment. Compact rn/m is genuinely ambiguous. Preserve the authorfirstpreferredHemoor with the peerpreferredHernoor alternative explicitly qualified; no dictionary, identity or uniqueglyph assertion."
+          },
+          "decision": "Adopt exactly these17finite source-row rn/m qualifications under policy002 after two independently frozen original-image humans confirm all full finite sets.16preferredprimariesmatch; the one honest Hemoor/Hernoor preferred split remains explicit, with authorpreferredHemoor retained. All three two-join names retain full four-combination sets. The peers own first-pass extra-r error and later source reread are transparently preserved. Root reviews the exact two-reader evidence and personally inspected source45; no third independent transcript of all17names is claimed. No amount, period, identity, dictionary or whole-source inference.",
+          "publicWarningRequired": true,
+          "wholeSourceAccepted": false
+        },
+        "originalCaseEvidence": {
+          "sourceId": "phsa-2020-21",
+          "sourceSha256": "87ea680c3e2b9bb940d911a198e41b85068535964ee61b6992e651271bd72b60",
+          "batch": "phsa-2020-21-003",
+          "sequence": 199,
+          "physicalPage": 137,
+          "sourceRowOnPage": 38,
+          "proposedName": "Warner,Leslie",
+          "visibleAlternatives": [
+            "Warner,Leslie",
+            "Wamer,Leslie"
+          ],
+          "caseProvenByPixels": false,
+          "assumptionBasis": "Author first source-image literal preferred reading retained after direct actual600dpi rerender; joined shoulder/arch structure supports the preferred reading but rn/m segmentation remains finite. Both alternatives explicit. No dictionary, identity, prior-year or expected-spelling inference. Fresh peer source-only check and exact root adoption required.",
+          "allowedFields": [
+            "name"
+          ],
+          "cropSha256": "09e7a21e6f465d4590d756165a84847e9e6a314d905c8f18f56aae2402956ec6",
+          "actual600DpiSourceName": {
+            "sequence": 199,
+            "physicalPage": 137,
+            "sourceRowOnPage": 38,
+            "original300DpiPixelBox": [
+              280,
+              2474,
+              1250,
+              2521
+            ],
+            "actualPdfPointClip": [
+              67.2,
+              593.76,
+              300.0,
+              605.04
+            ],
+            "dpi": 600,
+            "path": "/workspace/salary-review-schools-temp/2020-003-prechecks/seq199-name-actual600.png",
+            "sha256": "b15540c34c8077d06e8261784ac0926254b1a557a539dd9d52a6f8f8425986ce"
+          },
+          "firstImagePrimaryUnchangedFromFrozenAuthorRaw": true,
+          "manualMoneyBinding": {
+            "requestedMonetaryValuesFromFrozenRaw": {},
+            "qualificationChangesNoMonetaryField": true,
+            "noMoneyOutsideOriginallyAssignedFieldsReviewedByThisCase": true
+          },
+          "status": "proposed-qualified-finite-source-reading-awaiting-fresh-peer-and-exact-root-adoption",
+          "ambiguityKind": "rn-m-source-segmentation",
+          "qualificationPolicy": {
+            "path": "research/salaries/queue-completion-2026-11-01/phsa/source-name-segmentation-review-policy-002.json",
+            "sha256": "fcfc11b7872b8c111018dd5b74494ea25391d14e1e905aa327f6a435c6e1e40c"
+          }
+        },
+        "allAdditionalRootAlternativesRetained": true,
+        "caseProvenByPixels": false,
+        "sourcePublicWarningRequired": true
+      },
+      {
+        "physicalPage": 137,
+        "sourceRowOnPage": 39,
+        "chosenName": "Warner,Liane",
+        "sourceSha256": "87ea680c3e2b9bb940d911a198e41b85068535964ee61b6992e651271bd72b60",
+        "qualificationKind": "rn-m-source-segmentation",
+        "rootAdoption": {
+          "path": "research/salaries/queue-completion-2026-11-01/reviews/root-phsa-history-2020-21-batch-003-segmentation-adoption.json",
+          "sha256": "c134959df1d2dae7fcbff513193973bb25ae9d4215cea9371b6d13bae9d414ae"
+        },
+        "completeAdoptionEvidence": {
+          "frozen": true,
+          "reviewer": "/root",
+          "reviewedOn": "2026-11-02",
+          "sourceId": "phsa-2020-21",
+          "sourceSha256": "87ea680c3e2b9bb940d911a198e41b85068535964ee61b6992e651271bd72b60",
+          "batch": "phsa-2020-21-003",
+          "acceptedQualifiedCases": true,
+          "qualifiedCases": 17,
+          "exactCaseLedger": {
+            "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-schools-2020-21-batch-003-source-name-qualifications-v3.json",
+            "sha256": "800f935212d8242b9a590f634b5cd84ac22ac5ebda0a232e8f73757c0da99364"
+          },
+          "independentPeer": {
+            "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-history-2020-21-003-seventeen-name-peer-comparison.json",
+            "sha256": "f39a6f61ca99373bc9810b145ce270c61f1ec5414ad281fa5dcbe3a59843356b"
+          },
+          "caseProvenByPixels": false,
+          "differentIndependentPreferredPrimary": {
+            "sequence": 45,
+            "adoptedAuthorPreferred": "Sidhu,Hemoor Kaur",
+            "independentPeerPreferred": "Sidhu,Hernoor Kaur",
+            "fullFiniteVisibleSet": [
+              "Sidhu,Hemoor Kaur",
+              "Sidhu,Hernoor Kaur"
+            ],
+            "basis": "Root additionally inspected the current original1200dpi source fragment. Compact rn/m is genuinely ambiguous. Preserve the authorfirstpreferredHemoor with the peerpreferredHernoor alternative explicitly qualified; no dictionary, identity or uniqueglyph assertion."
+          },
+          "decision": "Adopt exactly these17finite source-row rn/m qualifications under policy002 after two independently frozen original-image humans confirm all full finite sets.16preferredprimariesmatch; the one honest Hemoor/Hernoor preferred split remains explicit, with authorpreferredHemoor retained. All three two-join names retain full four-combination sets. The peers own first-pass extra-r error and later source reread are transparently preserved. Root reviews the exact two-reader evidence and personally inspected source45; no third independent transcript of all17names is claimed. No amount, period, identity, dictionary or whole-source inference.",
+          "publicWarningRequired": true,
+          "wholeSourceAccepted": false
+        },
+        "originalCaseEvidence": {
+          "sourceId": "phsa-2020-21",
+          "sourceSha256": "87ea680c3e2b9bb940d911a198e41b85068535964ee61b6992e651271bd72b60",
+          "batch": "phsa-2020-21-003",
+          "sequence": 200,
+          "physicalPage": 137,
+          "sourceRowOnPage": 39,
+          "proposedName": "Warner,Liane",
+          "visibleAlternatives": [
+            "Warner,Liane",
+            "Wamer,Liane"
+          ],
+          "caseProvenByPixels": false,
+          "assumptionBasis": "Author first source-image literal preferred reading retained after direct actual600dpi rerender; joined shoulder/arch structure supports the preferred reading but rn/m segmentation remains finite. Both alternatives explicit. No dictionary, identity, prior-year or expected-spelling inference. Fresh peer source-only check and exact root adoption required.",
+          "allowedFields": [
+            "name"
+          ],
+          "cropSha256": "7c90d124c02d147f7c5529fa6fb38247d20eac24527bbc2ac4d01f0be1dc94b4",
+          "actual600DpiSourceName": {
+            "sequence": 200,
+            "physicalPage": 137,
+            "sourceRowOnPage": 39,
+            "original300DpiPixelBox": [
+              280,
+              2523,
+              1250,
+              2569
+            ],
+            "actualPdfPointClip": [
+              67.2,
+              605.52,
+              300.0,
+              616.56
+            ],
+            "dpi": 600,
+            "path": "/workspace/salary-review-schools-temp/2020-003-prechecks/seq200-name-actual600.png",
+            "sha256": "4c8b3546e77e7956489de9c323e6bb04d0107a11c79e90e7041a1a183c9e5c90"
+          },
+          "firstImagePrimaryUnchangedFromFrozenAuthorRaw": true,
+          "manualMoneyBinding": {
+            "requestedMonetaryValuesFromFrozenRaw": {},
+            "qualificationChangesNoMonetaryField": true,
+            "noMoneyOutsideOriginallyAssignedFieldsReviewedByThisCase": true
+          },
+          "status": "proposed-qualified-finite-source-reading-awaiting-fresh-peer-and-exact-root-adoption",
+          "ambiguityKind": "rn-m-source-segmentation",
+          "qualificationPolicy": {
+            "path": "research/salaries/queue-completion-2026-11-01/phsa/source-name-segmentation-review-policy-002.json",
+            "sha256": "fcfc11b7872b8c111018dd5b74494ea25391d14e1e905aa327f6a435c6e1e40c"
+          }
+        },
+        "allAdditionalRootAlternativesRetained": true,
+        "caseProvenByPixels": false,
+        "sourcePublicWarningRequired": true
+      },
+      {
+        "physicalPage": 139,
+        "sourceRowOnPage": 24,
+        "chosenName": "White,Adrian Ernest",
+        "sourceSha256": "87ea680c3e2b9bb940d911a198e41b85068535964ee61b6992e651271bd72b60",
+        "qualificationKind": "rn-m-source-segmentation",
+        "rootAdoption": {
+          "path": "research/salaries/queue-completion-2026-11-01/reviews/root-phsa-history-2020-21-batch-003-segmentation-adoption.json",
+          "sha256": "c134959df1d2dae7fcbff513193973bb25ae9d4215cea9371b6d13bae9d414ae"
+        },
+        "completeAdoptionEvidence": {
+          "frozen": true,
+          "reviewer": "/root",
+          "reviewedOn": "2026-11-02",
+          "sourceId": "phsa-2020-21",
+          "sourceSha256": "87ea680c3e2b9bb940d911a198e41b85068535964ee61b6992e651271bd72b60",
+          "batch": "phsa-2020-21-003",
+          "acceptedQualifiedCases": true,
+          "qualifiedCases": 17,
+          "exactCaseLedger": {
+            "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-schools-2020-21-batch-003-source-name-qualifications-v3.json",
+            "sha256": "800f935212d8242b9a590f634b5cd84ac22ac5ebda0a232e8f73757c0da99364"
+          },
+          "independentPeer": {
+            "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-history-2020-21-003-seventeen-name-peer-comparison.json",
+            "sha256": "f39a6f61ca99373bc9810b145ce270c61f1ec5414ad281fa5dcbe3a59843356b"
+          },
+          "caseProvenByPixels": false,
+          "differentIndependentPreferredPrimary": {
+            "sequence": 45,
+            "adoptedAuthorPreferred": "Sidhu,Hemoor Kaur",
+            "independentPeerPreferred": "Sidhu,Hernoor Kaur",
+            "fullFiniteVisibleSet": [
+              "Sidhu,Hemoor Kaur",
+              "Sidhu,Hernoor Kaur"
+            ],
+            "basis": "Root additionally inspected the current original1200dpi source fragment. Compact rn/m is genuinely ambiguous. Preserve the authorfirstpreferredHemoor with the peerpreferredHernoor alternative explicitly qualified; no dictionary, identity or uniqueglyph assertion."
+          },
+          "decision": "Adopt exactly these17finite source-row rn/m qualifications under policy002 after two independently frozen original-image humans confirm all full finite sets.16preferredprimariesmatch; the one honest Hemoor/Hernoor preferred split remains explicit, with authorpreferredHemoor retained. All three two-join names retain full four-combination sets. The peers own first-pass extra-r error and later source reread are transparently preserved. Root reviews the exact two-reader evidence and personally inspected source45; no third independent transcript of all17names is claimed. No amount, period, identity, dictionary or whole-source inference.",
+          "publicWarningRequired": true,
+          "wholeSourceAccepted": false
+        },
+        "originalCaseEvidence": {
+          "sourceId": "phsa-2020-21",
+          "sourceSha256": "87ea680c3e2b9bb940d911a198e41b85068535964ee61b6992e651271bd72b60",
+          "batch": "phsa-2020-21-003",
+          "sequence": 214,
+          "physicalPage": 139,
+          "sourceRowOnPage": 24,
+          "proposedName": "White,Adrian Ernest",
+          "visibleAlternatives": [
+            "White,Adrian Ernest",
+            "White,Adrian Emest"
+          ],
+          "caseProvenByPixels": false,
+          "assumptionBasis": "Author first source-image literal preferred reading retained after direct actual600dpi rerender; joined shoulder/arch structure supports the preferred reading but rn/m segmentation remains finite. Both alternatives explicit. No dictionary, identity, prior-year or expected-spelling inference. Fresh peer source-only check and exact root adoption required.",
+          "allowedFields": [
+            "name"
+          ],
+          "cropSha256": "9a92ef70ee6b580ab5359ab297e1d6c3358ba88a2a569eee04b0bf0671ea04c6",
+          "actual600DpiSourceName": {
+            "sequence": 214,
+            "physicalPage": 139,
+            "sourceRowOnPage": 24,
+            "original300DpiPixelBox": [
+              280,
+              1795,
+              1250,
+              1841
+            ],
+            "actualPdfPointClip": [
+              67.2,
+              430.8,
+              300.0,
+              441.84
+            ],
+            "dpi": 600,
+            "path": "/workspace/salary-review-schools-temp/2020-003-prechecks/seq214-name-actual600.png",
+            "sha256": "235299bdcb9478e651683dc1d7ee74e2ab2326826d97b05ea92fab4658475215"
+          },
+          "firstImagePrimaryUnchangedFromFrozenAuthorRaw": true,
+          "manualMoneyBinding": {
+            "requestedMonetaryValuesFromFrozenRaw": {},
+            "qualificationChangesNoMonetaryField": true,
+            "noMoneyOutsideOriginallyAssignedFieldsReviewedByThisCase": true
+          },
+          "status": "proposed-qualified-finite-source-reading-awaiting-fresh-peer-and-exact-root-adoption",
+          "ambiguityKind": "rn-m-source-segmentation",
+          "qualificationPolicy": {
+            "path": "research/salaries/queue-completion-2026-11-01/phsa/source-name-segmentation-review-policy-002.json",
+            "sha256": "fcfc11b7872b8c111018dd5b74494ea25391d14e1e905aa327f6a435c6e1e40c"
+          }
+        },
+        "allAdditionalRootAlternativesRetained": true,
+        "caseProvenByPixels": false,
+        "sourcePublicWarningRequired": true
+      },
+      {
+        "physicalPage": 148,
+        "sourceRowOnPage": 26,
+        "chosenName": "Zorn,Niki",
+        "sourceSha256": "87ea680c3e2b9bb940d911a198e41b85068535964ee61b6992e651271bd72b60",
+        "qualificationKind": "rn-m-source-segmentation",
+        "rootAdoption": {
+          "path": "research/salaries/queue-completion-2026-11-01/reviews/root-phsa-history-2020-21-batch-003-segmentation-adoption.json",
+          "sha256": "c134959df1d2dae7fcbff513193973bb25ae9d4215cea9371b6d13bae9d414ae"
+        },
+        "completeAdoptionEvidence": {
+          "frozen": true,
+          "reviewer": "/root",
+          "reviewedOn": "2026-11-02",
+          "sourceId": "phsa-2020-21",
+          "sourceSha256": "87ea680c3e2b9bb940d911a198e41b85068535964ee61b6992e651271bd72b60",
+          "batch": "phsa-2020-21-003",
+          "acceptedQualifiedCases": true,
+          "qualifiedCases": 17,
+          "exactCaseLedger": {
+            "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-schools-2020-21-batch-003-source-name-qualifications-v3.json",
+            "sha256": "800f935212d8242b9a590f634b5cd84ac22ac5ebda0a232e8f73757c0da99364"
+          },
+          "independentPeer": {
+            "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-history-2020-21-003-seventeen-name-peer-comparison.json",
+            "sha256": "f39a6f61ca99373bc9810b145ce270c61f1ec5414ad281fa5dcbe3a59843356b"
+          },
+          "caseProvenByPixels": false,
+          "differentIndependentPreferredPrimary": {
+            "sequence": 45,
+            "adoptedAuthorPreferred": "Sidhu,Hemoor Kaur",
+            "independentPeerPreferred": "Sidhu,Hernoor Kaur",
+            "fullFiniteVisibleSet": [
+              "Sidhu,Hemoor Kaur",
+              "Sidhu,Hernoor Kaur"
+            ],
+            "basis": "Root additionally inspected the current original1200dpi source fragment. Compact rn/m is genuinely ambiguous. Preserve the authorfirstpreferredHemoor with the peerpreferredHernoor alternative explicitly qualified; no dictionary, identity or uniqueglyph assertion."
+          },
+          "decision": "Adopt exactly these17finite source-row rn/m qualifications under policy002 after two independently frozen original-image humans confirm all full finite sets.16preferredprimariesmatch; the one honest Hemoor/Hernoor preferred split remains explicit, with authorpreferredHemoor retained. All three two-join names retain full four-combination sets. The peers own first-pass extra-r error and later source reread are transparently preserved. Root reviews the exact two-reader evidence and personally inspected source45; no third independent transcript of all17names is claimed. No amount, period, identity, dictionary or whole-source inference.",
+          "publicWarningRequired": true,
+          "wholeSourceAccepted": false
+        },
+        "originalCaseEvidence": {
+          "sourceId": "phsa-2020-21",
+          "sourceSha256": "87ea680c3e2b9bb940d911a198e41b85068535964ee61b6992e651271bd72b60",
+          "batch": "phsa-2020-21-003",
+          "sequence": 275,
+          "physicalPage": 148,
+          "sourceRowOnPage": 26,
+          "proposedName": "Zorn,Niki",
+          "visibleAlternatives": [
+            "Zorn,Niki",
+            "Zom,Niki"
+          ],
+          "caseProvenByPixels": false,
+          "assumptionBasis": "Author first source-image literal preferred reading retained after direct actual600dpi rerender; joined shoulder/arch structure supports the preferred reading but rn/m segmentation remains finite. Both alternatives explicit. No dictionary, identity, prior-year or expected-spelling inference. Fresh peer source-only check and exact root adoption required.",
+          "allowedFields": [
+            "name"
+          ],
+          "cropSha256": "84714b62e3db5664d109541dceb58bac393e551ec34ea3f3e41d93b5d053c736",
+          "actual600DpiSourceName": {
+            "sequence": 275,
+            "physicalPage": 148,
+            "sourceRowOnPage": 26,
+            "original300DpiPixelBox": [
+              281,
+              1892,
+              1250,
+              1938
+            ],
+            "actualPdfPointClip": [
+              67.44,
+              454.08,
+              300.0,
+              465.12
+            ],
+            "dpi": 600,
+            "path": "/workspace/salary-review-schools-temp/2020-003-prechecks/seq275-name-actual600.png",
+            "sha256": "8f8726f43cd60ca2f97a9769d53b9c0a7bf7ea83eb725e82dbc281a41e38c56e"
+          },
+          "firstImagePrimaryUnchangedFromFrozenAuthorRaw": true,
+          "manualMoneyBinding": {
+            "requestedMonetaryValuesFromFrozenRaw": {},
+            "qualificationChangesNoMonetaryField": true,
+            "noMoneyOutsideOriginallyAssignedFieldsReviewedByThisCase": true
+          },
+          "status": "proposed-qualified-finite-source-reading-awaiting-fresh-peer-and-exact-root-adoption",
+          "ambiguityKind": "rn-m-source-segmentation",
+          "qualificationPolicy": {
+            "path": "research/salaries/queue-completion-2026-11-01/phsa/source-name-segmentation-review-policy-002.json",
+            "sha256": "fcfc11b7872b8c111018dd5b74494ea25391d14e1e905aa327f6a435c6e1e40c"
+          }
+        },
+        "allAdditionalRootAlternativesRetained": true,
+        "caseProvenByPixels": false,
+        "sourcePublicWarningRequired": true
+      }
+    ],
+    "sourcePrintedControls": {
+      "remuneration": 857491236,
+      "expenses": 6822673
+    },
+    "sourceControlResiduals": [
+      0,
+      0
+    ],
+    "unknownExpenseRows": 4993,
+    "explicitZeroExpenseRows": 0,
+    "negativeExpenseRows": 0,
+    "allNineSourceHoldoutsPassed": true,
+    "holdoutReviewerReadingCorrectionsAcrossNineSources": 4,
+    "allOriginalRawFlagsPreserved": true,
+    "allActualImageDisagreementsResolved": true,
+    "personalImageTranscriptionNotClaimedForEveryCell": true,
+    "finalIndependentSourceClosureAndRootAcceptanceStillRequired": true
+  },
+  "evidenceFile": "evidence/phsa-2020-21-validation-v4.json",
+  "evidenceSha256": "af8be5aa9ed0987d6f9188ba1a47fe30d420e5ebe93e0f33ec03ae3ccfcd2988",
+  "provenanceFile": "evidence/phsa-2020-21-provenance-v4.json.gzip",
+  "provenanceSha256": "5e4687c80428a498be483be55f5ff350606fdf40b8fd60e3e01d89af827a2c76"
+}

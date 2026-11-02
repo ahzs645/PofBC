@@ -1,0 +1,350 @@
+{
+  "reviewer": "recovery_education",
+  "reviewedOn": "2026-11-01",
+  "sourceId": "phsa-2021-22",
+  "sourceSha256": "944c99fa7b7ede643cb4c426a5e9ab30aa906d8f81fda379f0206e4b0cdcd25c",
+  "batch": "phsa-2021-22-003",
+  "rawImageTranscriptSha256": "101c86ec9c5eb822e44cafb886f8ec4041ff64e3b57204067e5792c6762933f7",
+  "sourceOnlyRecheck": {
+    "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-education-2021-22-003-precomparison-source-name-recheck.json",
+    "sha256": "468a3c6405d64bcd22c76deaf1c1ca3793d1341a211cca8a55d94853b563197c"
+  },
+  "frozenBeforeCandidateComparison": true,
+  "fullCandidateOpened": false,
+  "qualifiedCases": 8,
+  "cases": [
+    {
+      "sequence": 2,
+      "physicalPage": 49,
+      "sourceRowOnPage": 27,
+      "reviewTargetFields": [
+        "name"
+      ],
+      "ambiguityKind": "rn-m-source-segmentation",
+      "qualificationPolicy": {
+        "path": "research/salaries/queue-completion-2026-11-01/phsa/source-name-segmentation-review-policy-002.json",
+        "sha256": "fcfc11b7872b8c111018dd5b74494ea25391d14e1e905aa327f6a435c6e1e40c"
+      },
+      "chosenContextualTranscription": "Farnalls,Sarah",
+      "visibleAlternatives": [
+        "Farnalls,Sarah",
+        "Famalls,Sarah"
+      ],
+      "basis": "Actual source places the surname after Farinha/Farkas and before Farquhar/Farrant, favoring Farnalls rather than Famalls. Finite m segmentation remains visible; ordering is contextual and not a unique pixel proof.",
+      "cropSha256": "71dcfd2a9cd6afb5bdae27fbdd027ba402916ad4d1320d9771a03879f9fba50b",
+      "caseProvenByPixels": false,
+      "actual600SourceName": {
+        "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-education-2021-22-003-source-name-0002-600.png",
+        "sha256": "9a810073b8e8d38ed0587449c134fd9a81e3b6b53802b03c06e5c6df85fd55f5",
+        "clipPdfPoints": [
+          48.48,
+          505.92,
+          228.48,
+          517.68
+        ]
+      },
+      "adjacentActualSourceContext": {
+        "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-education-2021-22-003-source-context-0002-300.png",
+        "sha256": "7a42e82684a8e46dfb399f361b433c0e4083950554106fc1aadb78689af59a47",
+        "pixelBox": [
+          202,
+          1978,
+          1783,
+          2287
+        ]
+      }
+    },
+    {
+      "sequence": 11,
+      "physicalPage": 50,
+      "sourceRowOnPage": 9,
+      "reviewTargetFields": [
+        "name"
+      ],
+      "ambiguityKind": "rn-m-source-segmentation",
+      "qualificationPolicy": {
+        "path": "research/salaries/queue-completion-2026-11-01/phsa/source-name-segmentation-review-policy-002.json",
+        "sha256": "fcfc11b7872b8c111018dd5b74494ea25391d14e1e905aa327f6a435c6e1e40c"
+      },
+      "chosenContextualTranscription": "Fend,Catherine Vernice",
+      "visibleAlternatives": [
+        "Fend,Catherine Vernice",
+        "Fend,Catherine Vemice"
+      ],
+      "basis": "The blind first source reading retains rn in given name Vernice after actual600dpi reinspection; m remains a finite visible segmentation. Actual surname context confirms the row but does not determine the given-name join. No dictionary or prior-year identity authority.",
+      "cropSha256": "85b310259c0d36eac2d14b26b44a4b16b69259b38e5fef02229d4d60930e18e3",
+      "caseProvenByPixels": false,
+      "actual600SourceName": {
+        "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-education-2021-22-003-source-name-0011-600.png",
+        "sha256": "7d86212bbeeb747594ad8ab7bc4d11edef8f7ba6bb75054ee9b5d456c5ff5e6d",
+        "clipPdfPoints": [
+          48.48,
+          281.04,
+          228.48,
+          292.8
+        ]
+      },
+      "adjacentActualSourceContext": {
+        "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-education-2021-22-003-source-context-0011-300.png",
+        "sha256": "cc5becb121d58ec17c3a169bbcb5d9571cede7612308e62660454c7c68139821",
+        "pixelBox": [
+          202,
+          1041,
+          1783,
+          1350
+        ]
+      }
+    },
+    {
+      "sequence": 15,
+      "physicalPage": 50,
+      "sourceRowOnPage": 22,
+      "reviewTargetFields": [
+        "name"
+      ],
+      "ambiguityKind": "rn-m-source-segmentation",
+      "qualificationPolicy": {
+        "path": "research/salaries/queue-completion-2026-11-01/phsa/source-name-segmentation-review-policy-002.json",
+        "sha256": "fcfc11b7872b8c111018dd5b74494ea25391d14e1e905aa327f6a435c6e1e40c"
+      },
+      "chosenContextualTranscription": "Fernandez,Ariadna",
+      "visibleAlternatives": [
+        "Fernandez,Ariadna",
+        "Femandez,Ariadna"
+      ],
+      "basis": "Actual source places these surnames after Ferguson/Fergusson and before Ferre/Ferreira, favoring Fern rather than Fem. Finite m alternatives remain visible; ordering is contextual and not a unique pixel proof.",
+      "cropSha256": "74815d16bb8381cae71818e38623d6049c02d60d48c89063661e2ae05674a9aa",
+      "caseProvenByPixels": false,
+      "actual600SourceName": {
+        "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-education-2021-22-003-source-name-0015-600.png",
+        "sha256": "d013358482f1b8935a0f28ddfedc523cf14491170f2058a11676f77b57886af5",
+        "clipPdfPoints": [
+          48.48,
+          443.28,
+          228.48,
+          455.04
+        ]
+      },
+      "adjacentActualSourceContext": {
+        "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-education-2021-22-003-source-context-0015-300.png",
+        "sha256": "458cd444e0e587ada8b9c70c78df968ce63489fc6a4add45ed8c833c2ecce3c5",
+        "pixelBox": [
+          202,
+          1717,
+          1783,
+          2026
+        ]
+      }
+    },
+    {
+      "sequence": 16,
+      "physicalPage": 50,
+      "sourceRowOnPage": 23,
+      "reviewTargetFields": [
+        "name",
+        "remuneration"
+      ],
+      "ambiguityKind": "rn-m-source-segmentation",
+      "qualificationPolicy": {
+        "path": "research/salaries/queue-completion-2026-11-01/phsa/source-name-segmentation-review-policy-002.json",
+        "sha256": "fcfc11b7872b8c111018dd5b74494ea25391d14e1e905aa327f6a435c6e1e40c"
+      },
+      "chosenContextualTranscription": "Fernandez,Gustavo",
+      "visibleAlternatives": [
+        "Fernandez,Gustavo",
+        "Femandez,Gustavo"
+      ],
+      "basis": "Actual source places these surnames after Ferguson/Fergusson and before Ferre/Ferreira, favoring Fern rather than Fem. Finite m alternatives remain visible; ordering is contextual and not a unique pixel proof.",
+      "cropSha256": "6dd126b7ec68bd2f03fbbc65352ffbf7f5ab64ab8a8ea1b864377589a4fbe037",
+      "caseProvenByPixels": false,
+      "actual600SourceName": {
+        "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-education-2021-22-003-source-name-0016-600.png",
+        "sha256": "3e0a4b18632c0fe0f0c9d5960ecf5a3f9ca7958ad45e6085f911a84e2bf5c532",
+        "clipPdfPoints": [
+          48.48,
+          456.0,
+          228.48,
+          467.76
+        ]
+      },
+      "adjacentActualSourceContext": {
+        "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-education-2021-22-003-source-context-0016-300.png",
+        "sha256": "c5ad67fb31d0d2812b18fd4e2c0a5682c4ff859f0b40dcb41d3518011ccd7ce7",
+        "pixelBox": [
+          202,
+          1770,
+          1783,
+          2079
+        ]
+      }
+    },
+    {
+      "sequence": 17,
+      "physicalPage": 50,
+      "sourceRowOnPage": 24,
+      "reviewTargetFields": [
+        "name",
+        "remuneration"
+      ],
+      "ambiguityKind": "rn-m-source-segmentation",
+      "qualificationPolicy": {
+        "path": "research/salaries/queue-completion-2026-11-01/phsa/source-name-segmentation-review-policy-002.json",
+        "sha256": "fcfc11b7872b8c111018dd5b74494ea25391d14e1e905aa327f6a435c6e1e40c"
+      },
+      "chosenContextualTranscription": "Fernando,Joanne",
+      "visibleAlternatives": [
+        "Fernando,Joanne",
+        "Femando,Joanne"
+      ],
+      "basis": "Actual source places these surnames after Ferguson/Fergusson and before Ferre/Ferreira, favoring Fern rather than Fem. Finite m alternatives remain visible; ordering is contextual and not a unique pixel proof.",
+      "cropSha256": "2462157f38f3aa08ab753fde40fee59de5e1d9ac4e40b3b5ca8c49dcfea8ae84",
+      "caseProvenByPixels": false,
+      "actual600SourceName": {
+        "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-education-2021-22-003-source-name-0017-600.png",
+        "sha256": "f0c8aa8491b32f31937b968f9da5263542560472a787a1c0a2d3572400c02a37",
+        "clipPdfPoints": [
+          48.48,
+          468.48,
+          228.48,
+          480.24
+        ]
+      },
+      "adjacentActualSourceContext": {
+        "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-education-2021-22-003-source-context-0017-300.png",
+        "sha256": "c408c1c64a51edcbc548585d06c56415dd3bfa9d669db0a992ffbe5fb4b6e0cb",
+        "pixelBox": [
+          202,
+          1822,
+          1783,
+          2131
+        ]
+      }
+    },
+    {
+      "sequence": 45,
+      "physicalPage": 52,
+      "sourceRowOnPage": 14,
+      "reviewTargetFields": [
+        "name"
+      ],
+      "ambiguityKind": "rn-m-source-segmentation",
+      "qualificationPolicy": {
+        "path": "research/salaries/queue-completion-2026-11-01/phsa/source-name-segmentation-review-policy-002.json",
+        "sha256": "fcfc11b7872b8c111018dd5b74494ea25391d14e1e905aa327f6a435c6e1e40c"
+      },
+      "chosenContextualTranscription": "Fornika,Daniel John",
+      "visibleAlternatives": [
+        "Fornika,Daniel John",
+        "Fomika,Daniel John"
+      ],
+      "basis": "Actual source places the surname after Forer and before Forsyth, favoring Fornika rather than Fomika. The short-r shoulder/n join is not uniquely separable; m remains explicit. No other letters are changed or manufactured.",
+      "cropSha256": "1a3bad39c5ea9c20a9aba748a09baec3ce66a069130a75465af6282f32f31f95",
+      "caseProvenByPixels": false,
+      "actual600SourceName": {
+        "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-education-2021-22-003-source-name-0045-600.png",
+        "sha256": "4e69123891d2fab2d63780987d4ed07a4cf7b3e5e10f4a850f95815fd550f068",
+        "clipPdfPoints": [
+          48.48,
+          343.68,
+          228.48,
+          355.44
+        ]
+      },
+      "adjacentActualSourceContext": {
+        "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-education-2021-22-003-source-context-0045-300.png",
+        "sha256": "282666ad548699713aa2daaade21bfbebc7166471eb5c7edd7abd1056c39a549",
+        "pixelBox": [
+          202,
+          1302,
+          1783,
+          1611
+        ]
+      }
+    },
+    {
+      "sequence": 231,
+      "physicalPage": 66,
+      "sourceRowOnPage": 2,
+      "reviewTargetFields": [
+        "name"
+      ],
+      "ambiguityKind": "rn-m-source-segmentation",
+      "qualificationPolicy": {
+        "path": "research/salaries/queue-completion-2026-11-01/phsa/source-name-segmentation-review-policy-002.json",
+        "sha256": "fcfc11b7872b8c111018dd5b74494ea25391d14e1e905aa327f6a435c6e1e40c"
+      },
+      "chosenContextualTranscription": "Harnett,Deanna Marie",
+      "visibleAlternatives": [
+        "Harnett,Deanna Marie",
+        "Hamett,Deanna Marie"
+      ],
+      "basis": "Actual source places this surname after the personally read Harman on preceding physical65 and before Harrington on66, favoring Harnett rather than Hamett. Finite m remains visible; ordering is contextual and not a unique pixel proof.",
+      "cropSha256": "fa4b0c73e670343919b75d8604c23e5b5de03ab9760ec8dcaf2bea03cf573a74",
+      "caseProvenByPixels": false,
+      "actual600SourceName": {
+        "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-education-2021-22-003-source-name-0231-600.png",
+        "sha256": "85a50123f3ff682ec9e234ef9d37690c8f7b3d7dcd1c1b6ea7dc71860bc4064a",
+        "clipPdfPoints": [
+          48.48,
+          193.92,
+          228.48,
+          205.68
+        ]
+      },
+      "adjacentActualSourceContext": {
+        "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-education-2021-22-003-source-context-0231-300.png",
+        "sha256": "1d16e7e81b100e5c8bc157a88dad297bbf1c31e496054b4549a3c486b53b8e9b",
+        "pixelBox": [
+          202,
+          678,
+          1783,
+          987
+        ]
+      }
+    },
+    {
+      "sequence": 282,
+      "physicalPage": 68,
+      "sourceRowOnPage": 20,
+      "reviewTargetFields": [
+        "name"
+      ],
+      "ambiguityKind": "rn-m-source-segmentation",
+      "qualificationPolicy": {
+        "path": "research/salaries/queue-completion-2026-11-01/phsa/source-name-segmentation-review-policy-002.json",
+        "sha256": "fcfc11b7872b8c111018dd5b74494ea25391d14e1e905aa327f6a435c6e1e40c"
+      },
+      "chosenContextualTranscription": "Hepburn,Kathryn",
+      "visibleAlternatives": [
+        "Hepburn,Kathryn",
+        "Hepbum,Kathryn"
+      ],
+      "basis": "The blind source reading retains rn in Hepburn after actual600dpi reinspection; m remains a finite visible segmentation. Actual neighbors Heon-Wade and Hepplewhite do not resolve the join. Earlier other-year source exposure is disclosed, not identity/spelling authority; no dictionary or normalization used.",
+      "cropSha256": "40423be6b74a97bae8f96bb6304e0a708fe449f70e6a66105a9ec97989fc83cb",
+      "caseProvenByPixels": false,
+      "actual600SourceName": {
+        "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-education-2021-22-003-source-name-0282-600.png",
+        "sha256": "b4bea613564a8d5b94b33a0fb2e41e7a7ba47acf38559b892e533796dc1403ba",
+        "clipPdfPoints": [
+          48.48,
+          419.28,
+          228.48,
+          431.04
+        ]
+      },
+      "adjacentActualSourceContext": {
+        "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-education-2021-22-003-source-context-0282-300.png",
+        "sha256": "b27a865c4a83977d7d8e6bf328a1d9dde13c185762a16bf4b207b141419c8c13",
+        "pixelBox": [
+          202,
+          1617,
+          1783,
+          1926
+        ]
+      }
+    }
+  ],
+  "caseProvenByPixels": false,
+  "requiredPublicWarning": "Eight requested names retain contextual readings of visibly ambiguous rn/m source joins, with finite full-name alternatives retained in evidence; no unique glyph spelling proof is claimed.",
+  "status": "staged-pending-fresh-original-image-peer-and-root-exact-case-adoption"
+}
