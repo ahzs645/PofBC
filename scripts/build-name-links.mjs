@@ -23,6 +23,8 @@ const reviewed = JSON.parse(readFileSync(join(research, 'reviewed.json'), 'utf8'
 const rows = Object.keys(index.shards).flatMap((shard) => gzip(join(people, `${shard}.json.gzip`)))
 const sourceReviewed = JSON.parse(readFileSync(join(research, 'source-reviewed.json'), 'utf8'))
 reviewed.push(...validateReviewedNameConnections(sourceReviewed, rows, index))
+const continuedReview = JSON.parse(readFileSync(join(research, 'continuation-reviewed.json'), 'utf8'))
+reviewed.push(...validateReviewedNameConnections(continuedReview, rows, index))
 const { links, decisions } = findNameLinks(rows, { years: index.years, employers: index.employers, reviewed })
 
 const note = 'Spellings of one name at one employer joined as one person. verified: the records establish it (an extraction split, a distinctive position under both spellings, or a reviewed decision). likely: the only fuller name at the employer that agrees, never in the same period, close in time and pay. Never across employers. Each row: [employer slug, name key, disclosed name, [[alias key, disclosed alias, status, reason]]].'
