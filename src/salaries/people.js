@@ -8,14 +8,18 @@
 const plain = (text) => String(text ?? '').normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase()
 const letters = (text) => plain(text).replace(/[^a-z]/g, '')
 
-const partsOf = (name) => {
+/** Some disclosures run the position into the name ("Moller, J      Director, Engineering"): the name alone. */
+export const nameOnly = (name) => String(name ?? '').split(/\s{3,}|\t/)[0].trim()
+
+/** A disclosed name as { surname, given: [each given name or initial] }, letters only. */
+export const nameParts = (name) => {
   const [surname = '', ...rest] = String(name ?? '').split(',')
   return { surname: letters(surname), given: rest.join(' ').trim().split(/[\s.]+/).map(letters).filter(Boolean) }
 }
 
 /** { surname, given, initial } of a disclosed name. */
 export const readName = (name) => {
-  const { surname, given } = partsOf(name)
+  const { surname, given } = nameParts(name)
   const first = given[0] ?? ''
   return { surname, given: first, initial: first.slice(0, 1) }
 }
@@ -29,8 +33,8 @@ export const surnameShard = (name) => readName(name).surname.slice(0, 2).padEnd(
  * Conflicting disclosed middle names/initials do not match. Unseparated names are not guessed.
  */
 export const nameMatch = (a, b) => {
-  const x = partsOf(a)
-  const y = partsOf(b)
+  const x = nameParts(a)
+  const y = nameParts(b)
   if (!x.surname || x.surname !== y.surname || !x.given.length || !y.given.length) return null
   for (let at = 0; at < Math.min(x.given.length, y.given.length); at += 1) {
     const left = x.given[at]
@@ -43,7 +47,7 @@ export const nameMatch = (a, b) => {
 
 /** Group identical normalized disclosed names, preserving every given name and initial. */
 export const personKey = (name) => {
-  const { surname, given } = partsOf(name)
+  const { surname, given } = nameParts(name)
   return `${surname}|${given.join(' ')}`
 }
 
@@ -52,13 +56,12 @@ export const personKey = (name) => {
  * This groups disclosed names, not verified people or proved duplicate payments. Filter before
  * grouping, never sum payments, and prefer an original source when equal payments tie.
  *
- * A name disclosed with only an initial ("Garant, D.") joins a full name at the same employer
- * ("Garant, Daniel") when that is the only full name there it agrees with, and the two never appear
- * in the same period — two records in one period are two people. Anything less certain stays apart.
- * The group is shown by its full `name` even where an initial's payment is the highest, and the
- * joined spellings are kept as `aliases` so the card can say so.
+ * `links` (nameLinks.js linkLookup) joins the spellings of one name at one employer that the link
+ * list connects — "Garant, D." with "Garant, Daniel". The group is shown by the list's `name` even
+ * where another spelling's payment is the highest, and its other spellings are kept as `aliases`,
+ * each with how sure the join is ({ name, status }), so the card can say so.
  */
-export const groupHighestPaidRecords = (rows, { employers, sources = {}, sector = 'all', range = null }) => {
+export const groupHighestPaidRecords = (rows, { employers, sources = {}, sector = 'all', range = null, links = new Map() }) => {
   const groups = new Map()
   const original = (row) => {
     const source = sources[row[6]]
@@ -70,37 +73,27 @@ export const groupHighestPaidRecords = (rows, { employers, sources = {}, sector 
   for (const row of rows) {
     if (!row[0] || (range && (row[5] < range[0] || row[5] > range[1]))) continue
     if (sector !== 'all' && employers[row[4]]?.[1] !== sector) continue
-    const key = `${personKey(row[0])}|${row[4]}`
-    if (!groups.has(key)) groups.set(key, { key, row, records: [], years: [] })
+    const link = links.get(`${row[4]}|${personKey(row[0])}`)
+    const key = `${link?.key ?? personKey(row[0])}|${row[4]}`
+    if (!groups.has(key)) groups.set(key, { key, row, name: link?.name, records: [], years: [] })
     const group = groups.get(key)
     group.records.push(row)
     if (better(row, group.row)) group.row = row
   }
-  const periods = (group) => new Set(group.records.map((row) => row[5]))
-  const initialOnly = (group) => partsOf(group.row[0]).given[0]?.length === 1
-  const list = [...groups.values()]
-  for (const short of list.filter(initialOnly)) {
-    const own = periods(short)
-    const fits = list.filter((full) => full !== short && !full.merged && !initialOnly(full) && full.row[4] === short.row[4] && nameMatch(short.row[0], full.row[0]))
-    if (fits.length !== 1 || [...periods(fits[0])].some((at) => own.has(at))) continue
-    const [full] = fits
-    full.name ??= full.row[0]
-    full.records.push(...short.records)
-    if (better(short.row, full.row)) full.row = short.row
-    short.merged = true
-  }
-  return list.filter((group) => !group.merged).map(({ merged, name, ...group }) => {
-    name ??= group.row[0]
-    const shown = personKey(name)
-    const aliases = [...new Map(group.records.filter((row) => personKey(row[0]) !== shown).map((row) => [personKey(row[0]), row[0]])).values()]
-    return { ...group, name, aliases, years: [...new Set(group.records.map((row) => row[5]))].sort((a, b) => a - b) }
+  return [...groups.values()].map(({ name, ...group }) => {
+    const shown = name ?? group.row[0]
+    const aliases = [...new Map(group.records.filter((row) => personKey(nameOnly(row[0])) !== personKey(nameOnly(shown))).map((row) => {
+      const link = links.get(`${row[4]}|${personKey(row[0])}`)
+      return [personKey(nameOnly(row[0])), { name: nameOnly(row[0]), status: link?.status ?? null }]
+    })).values()]
+    return { ...group, name: shown, aliases, years: [...new Set(group.records.map((row) => row[5]))].sort((a, b) => a - b) }
   }).sort((a, b) => b.row[2] - a.row[2] || a.key.localeCompare(b.key))
 }
 
 /** A prefix search supports several given names without discarding or concatenating their tokens. */
 export const matchesNameQuery = (name, query, nameDisclosure) => {
-  const candidate = partsOf(name)
-  const wanted = partsOf(query)
+  const candidate = nameParts(name)
+  const wanted = nameParts(query)
   if (nameDisclosure === 'surname-and-initials') {
     return candidate.surname.startsWith(wanted.surname) && candidate.given.join('').startsWith(wanted.given.join(''))
   }
@@ -114,8 +107,8 @@ export const matchesNameQuery = (name, query, nameDisclosure) => {
  * or may not be the person meant. null where it does not answer.
  */
 export const nameQueryTier = (name, query, nameDisclosure) => {
-  const candidate = partsOf(name)
-  const wanted = partsOf(query)
+  const candidate = nameParts(name)
+  const wanted = nameParts(query)
   if (!wanted.surname || !candidate.surname.startsWith(wanted.surname)) return null
   const sameSurname = candidate.surname === wanted.surname
   if (matchesNameQuery(name, query, nameDisclosure)) {

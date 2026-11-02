@@ -153,7 +153,7 @@ for (const [body, periods] of Object.entries(atlas.bodies)) {
 assert.equal(bodyRows.size, 0, 'Employer rows are absent from the atlas')
 const actualAtlasPaths = new Set()
 for (const entry of readdirSync(published, { withFileTypes: true })) {
-  if (!entry.isDirectory() || ['employers', 'people', 'positions'].includes(entry.name)) continue
+  if (!entry.isDirectory() || ['employers', 'people', 'positions', 'links'].includes(entry.name)) continue
   assert.match(entry.name, /^\d{4}(?:-\d{2})?$/, 'Unexpected published salary directory')
   for (const file of readdirSync(join(published, entry.name))) actualAtlasPaths.add(`${entry.name}/${file}`)
 }
