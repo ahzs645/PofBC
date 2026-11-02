@@ -564,6 +564,52 @@ git add vendor/patcher && git commit -m "Patcher: …"
 
 ---
 
+## Licence plates
+
+**Licence Plates** in the title menu (`?view=plates`) shows British Columbia's licence plates from
+[PlateForge](https://github.com/ahzs645/plateforge), a git submodule at `vendor/plateforge`: 447
+designs in 16 families (passenger, commercial, farm, trailer, motorcycle, trade, industrial,
+carrier, specialty, consular, amateur radio, official, events, municipal, bicycle and samples), each
+family laid out era by era from 1904 to today. Periods PlateForge documents but has not drawn are
+kept in their place. Every plate is drawn live as SVG by PlateForge's renderer, with no images, and
+the thumbnails are drawn only as they near the screen. A family or a plate is linked by its
+address: `?view=plates&family=commercial`, `?view=plates&plate=1953`.
+
+A plate opens with the same serial its card shows, and its fields can be edited: serial, renewal
+tab, decal, finish, lettering and whatever else the format offers. **New serial** draws another
+valid serial, keeping the appearance choices. The viewer shows the plate's era, PlateForge's
+description and caveats, and its sources (BCpl8s chapters, mostly). It downloads the plate as SVG
+or PNG, with its fonts embedded, and links to the same design in the full PlateForge editor.
+**Research lettering** switches between the letters traced from source photographs and
+PlateForge's earlier dies, as PlateForge's own inspector does. These are research reconstructions,
+not issued registrations. PlateForge marks samples, prototypes, souvenirs and uncertain designs,
+and the cards carry those labels.
+
+The view (`src/plates/`) is only the site's chrome. Everything else comes from PlateForge's embed
+entry points, documented in its [`docs/embed.md`](vendor/plateforge/docs/embed.md):
+`plateforge/bc` registers the B.C. region alone, and `plateforge` provides the renderer, the seeded
+samples, export, and the family → era grouping PlateForge's own gallery uses. Both are aliased
+in `vite.config.js` to the submodule's TypeScript source, which Vite compiles as it does Patcher's.
+The plates' fonts (Barlow Condensed, Noto Sans and Serif, Pinyon Script, Noto Sans Canadian
+Aboriginal) are `@fontsource` dependencies here, pinned to the versions PlateForge's font manifest
+records, since its export checks each face against that manifest. PlateForge keeps its Chinese,
+Japanese and Korean subsets in a separate list the embed never imports, so the build carries about
+2 MB of plate fonts rather than about 94 MB. `src/plates/plates.test.js` checks that the submodule is
+checked out, that the aliases reach it, and that every font it imports is installed here at the
+pinned version.
+
+To take a newer PlateForge:
+
+```
+git -C vendor/plateforge fetch && git -C vendor/plateforge checkout origin/main
+git add vendor/plateforge && git commit -m "PlateForge: …"
+```
+
+If PlateForge changes a font package version, change it in `package.json` too. The test above says
+which one.
+
+---
+
 ## Visual guides
 
 **Visual Guides** in the title menu (`?view=guides`) holds identity manuals rebuilt page by page as
@@ -716,7 +762,7 @@ The boundary research script is documented in
 
 ## Requirements
 
-**Node 20.19+ or 22.12+**, **a copy of Helvetica**, and three git submodules. A copy of **Adobe
+**Node 20.19+ or 22.12+**, **a copy of Helvetica**, and five git submodules. A copy of **Adobe
 Garamond Pro** is optional and widens the current era's alphabet.
 
 ### The submodules
@@ -725,6 +771,11 @@ Garamond Pro** is optional and widens the current era's alphabet.
 story's sidecar, chapter navigation and responsive workspace context. It is pinned to PGMaps's
 `e186e12005afb97c0b4470899bd2713c98336f36` revision. Vite imports the required source entry points
 directly; the toolkit's optional mapping dependencies and separate build toolchain are not installed.
+
+[`vendor/plateforge`](https://github.com/ahzs645/plateforge) is the licence-plate renderer and
+B.C. plate data behind **Licence Plates** (above). Like Patcher, it needs no build step; it is
+marked `shallow` in `.gitmodules`, since its history carries large review images the site never
+uses.
 
 [`vendor/patcher`](https://github.com/ahzs645/patcher) is the patch library and embroidery
 digitizer behind **Patches** (above). It needs no build step: Vite compiles its source directly.
@@ -814,6 +865,7 @@ vendor/json-url/             submodule — compresses a configuration into a sha
 vendor/brandkit/             submodule — the manual library and BC manual pages, and the template
                              engine and studio the stationery is drawn with
 vendor/patcher/              submodule — the patch library and embroidery digitizer
+vendor/plateforge/           submodule — licence plates: the B.C. region data and its SVG renderer
 src/
   assets/                    generated artwork: the mark, the flag, the arms, the Parks frame
   logo/                      the framework-free core: layouts, measurement, colour, rendering
