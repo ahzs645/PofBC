@@ -3,7 +3,8 @@
 // runner, so these check the joins rather than render: that the submodule is checked out with the
 // files the aliases point at, and that every font it imports is installed here at the version its
 // font manifest recorded, since the export checks each face's bytes against that manifest.
-// PlateForge's own tests (src/embed/embed.test.ts) cover the region data and the layout.
+// PlateForge's own tests (src/embed/embed.test.ts) cover the region data and the layout; the last
+// test here checks this view's timeline arithmetic (timeline.js).
 
 import { test } from 'node:test'
 import assert from 'node:assert/strict'
@@ -41,4 +42,17 @@ test('the embed never imports the CJK font subsets', { skip: !checkedOut }, () =
   const fonts = readFileSync(new URL('src/templates/fonts.ts', PLATEFORGE), 'utf8')
   assert.doesNotMatch(fonts, /from '\.\/font-assets'/)
   assert.doesNotMatch(readFileSync(new URL('src/templates/font-assets-core.ts', PLATEFORGE), 'utf8'), /noto-sans-(sc|jp|kr)/)
+})
+
+test('the timeline packs a family into lanes that never overlap, and steps between changes', async () => {
+  const { changeYears, inUse, lanesOf, spanOf } = await import('./timeline.js')
+  const design = (id, from, to) => ({ id, period: [from, to] })
+  const formats = [design('a', 1913, 1917), design('b', 1915, 1915), design('c', 1918, 1923), design('d', 1916, 1930), design('e', 1924, 1924)]
+  assert.deepEqual(spanOf(formats), [1913, 1930])
+  const lanes = lanesOf(formats)
+  assert.deepEqual(lanes.map((lane) => lane.map((f) => f.id)), [['a', 'c', 'e'], ['b', 'd']])
+  for (const lane of lanes) for (let i = 1; i < lane.length; i += 1) assert.ok(lane[i - 1].period[1] < lane[i].period[0])
+  assert.ok(inUse(formats[0], 1913) && inUse(formats[0], 1917) && !inUse(formats[0], 1918))
+  // A design's first year, and the year after its last, within the span.
+  assert.deepEqual(changeYears(formats, [1913, 1930]), [1913, 1915, 1916, 1918, 1924, 1925])
 })

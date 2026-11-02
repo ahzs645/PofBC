@@ -575,6 +575,18 @@ kept in their place. Every plate is drawn live as SVG by PlateForge's renderer, 
 the thumbnails are drawn only as they near the screen. A family or a plate is linked by its
 address: `?view=plates&family=commercial`, `?view=plates&plate=1953`.
 
+**By year** turns the index into a timeline, after the government view's year bar: one strip per
+family on a shared axis from 1901 to today, each design a bar across the years it was issued or
+valid. The year is scrubbed, played, stepped from one change to the next (a design beginning or
+ending), or reset to today. The plates in use that year are listed under it, grouped by family.
+Choosing a family, from the menu or its strip's label, spreads its designs out so each has its own
+bar. The year is in the address too: `?view=plates&year=1953&family=trailer`. An open plate shows
+its family the same way under the drawing, the plate marked, with any other design a click away.
+The timelines are drawn in the site's own greys and inks, with the masthead's sun as the cursor,
+so they follow the light and dark themes like the rest of the page. The plates themselves are
+artwork and keep their own colours. On a phone the introduction is hidden so the controls come
+first.
+
 A plate opens with the same serial its card shows, and its fields can be edited: serial, renewal
 tab, decal, finish, lettering and whatever else the format offers. **New serial** draws another
 valid serial, keeping the appearance choices. The viewer shows the plate's era, PlateForge's

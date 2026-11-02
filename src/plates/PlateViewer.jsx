@@ -7,6 +7,8 @@ import {
   PlateView, createRng, download, exportName, exportPlate, formatPeriod, makePlate, plateforgeLink,
   researchDiesEnabled, samplePlate, setResearchDiesEnabled, statusBadge, useResearchDiesVersion
 } from 'plateforge'
+import { FamilyStrip } from './PlatesTimeline.jsx'
+import { spanOf } from './timeline.js'
 
 /** A fresh serial, keeping the fields a format marks as appearance (finish, decal, palette…). */
 const regenerate = (format, parts) => {
@@ -64,7 +66,7 @@ const Field = ({ field, value, onChange }) => {
  * @param {object} props
  * @param {object} props.region     The PlateForge region (British Columbia).
  * @param {object} props.format     The design on screen.
- * @param {object} props.family     Its family ({ id, label, summary }).
+ * @param {object} props.family     Its family ({ id, label, summary, formats }).
  * @param {object} [props.section]  Its era, as a gallery section ({ label, period, summary }).
  * @param {{ index: number, count: number }} props.position  Where it sits in its family.
  * @param {object|null} props.previous
@@ -127,6 +129,13 @@ export const PlateViewer = ({ region, format, family, section, position, previou
           <div ref={stage} className="plate__art-frame" role="img" aria-label={`${format.label}${plate.text ? `, ${plate.text}` : ''}`}>
             <PlateView plate={plate} className="plate__art" />
           </div>
+          {/* The family on its own axis: this plate marked, the others a click away. */}
+          <figcaption className="plate__timeline">
+            <span className="plate__timeline-label">
+              {family.label} · {spanOf(family.formats).join('–')} · {family.formats.length} designs
+            </span>
+            <FamilyStrip formats={family.formats} current={format} onOpen={onOpen} />
+          </figcaption>
         </figure>
 
         <aside className="plate__panel">

@@ -4,19 +4,33 @@
 // (vendor/plateforge/docs/embed.md), which lays them out with the same grouping PlateForge's own
 // gallery uses.
 //
-// The place is kept in the address bar (`?view=plates&family=commercial`, `?view=plates&plate=1953`),
-// so a link to a family or to one plate opens it there.
+// Two ways in, as the government view has a graph and a timeline: By family lists every design
+// family by family and era by era; By year is a timeline of the families on one axis (PlatesTimeline),
+// scrubbed or played like the government's, with the plates in use in the chosen year under it.
+//
+// The place is kept in the address bar (`?view=plates&family=commercial`, `?view=plates&plate=1953`,
+// `?view=plates&year=1953`), so a link to a family, a year or one plate opens it there.
 
 import { useCallback, useDeferredValue, useEffect, useMemo, useRef, useState } from 'react'
 import { BRITISH_COLUMBIA } from 'plateforge/bc'
 import { PlateView, plateforgeLink, regionFamilies, regionSections, samplePlate, setupPlates, statusBadge } from 'plateforge'
 import { searchFor } from '../site/navigation.jsx'
+import { Segmented } from '../site/Segmented.jsx'
 import { PlateViewer } from './PlateViewer.jsx'
+import { YearTimeline } from './PlatesTimeline.jsx'
+import { inUse, lanesOf, spanOf } from './timeline.js'
 import './plates.css'
 
 const REGION = BRITISH_COLUMBIA
 const FAMILIES = regionFamilies(REGION)
 const TOTAL = FAMILIES.reduce((n, family) => n + family.formats.length, 0)
+const SPAN = spanOf(REGION.formats)
+const familyOf = (format) => FAMILIES.find((family) => family.formats.includes(format))
+
+const MODES = [
+  { value: 'family', label: 'By family', title: 'Every design, family by family and era by era' },
+  { value: 'year', label: 'By year', title: 'A timeline of the families, and the plates in use in any year' }
+]
 
 /** Every design of a family in its timeline's order, with the era it sits in, for stepping. */
 const orderOf = (familyId) => regionSections(REGION, { family: familyId })
@@ -26,14 +40,15 @@ const read = () => {
   const params = new URLSearchParams(globalThis.location?.search ?? '')
   const family = FAMILIES.some((f) => f.id === params.get('family')) ? params.get('family') : null
   const plate = REGION.formats.some((f) => f.id === params.get('plate')) ? params.get('plate') : null
-  return { family, plate }
+  const year = Number(params.get('year'))
+  return { family, plate, year: Number.isInteger(year) && year >= SPAN[0] && year <= SPAN[1] ? year : null }
 }
 
-const write = ({ family, plate }) => {
+const write = ({ family, plate, year }) => {
   if (!globalThis.history?.replaceState) return
   const url = new URL(globalThis.location.href)
   url.searchParams.set('view', 'plates')
-  for (const [key, value] of Object.entries({ family, plate })) {
+  for (const [key, value] of Object.entries({ family, plate, year })) {
     if (value) url.searchParams.set(key, value)
     else url.searchParams.delete(key)
   }
@@ -64,11 +79,34 @@ const LazyPlate = ({ format }) => {
   )
 }
 
+/** A design's card: its drawn sample, name, period or era, and any status PlateForge gives it. */
+const PlateCard = ({ format, meta, href, onOpen, cardRef }) => (
+  <a
+    ref={cardRef}
+    className="plates__card"
+    href={href}
+    onClick={(event) => { if (isPlainClick(event)) { event.preventDefault(); onOpen() } }}
+  >
+    <LazyPlate format={format} />
+    <span className="plates__card-text">
+      <span className="plates__title">{format.label}</span>
+      <span className="plates__meta">
+        {meta && meta !== format.label && meta}
+        {statusBadge(format) && <span className="plates__status">{statusBadge(format)}</span>}
+      </span>
+    </span>
+  </a>
+)
+
+const periodText = ([from, to]) => (from === to ? String(from) : `${from}–${to}`)
+
 export const PlatesView = () => {
   const [place, setPlace] = useState(read)
   const [query, setQuery] = useState('')
+  const [playing, setPlaying] = useState(false)
   const deferredQuery = useDeferredValue(query)
   const cards = useRef({})
+  const mode = place.year === null ? 'family' : 'year'
 
   useEffect(() => { setupPlates() }, [])
 
@@ -76,6 +114,25 @@ export const PlatesView = () => {
     setPlace(next)
     write(next)
   }, [])
+
+  // Playing steps a year at a time to today, from the start again if it is already there.
+  const placeRef = useRef(place)
+  placeRef.current = place
+  useEffect(() => {
+    if (!playing) return undefined
+    const timer = setInterval(() => {
+      const current = placeRef.current
+      if (current.year === null || current.year >= SPAN[1]) { setPlaying(false); return }
+      go({ ...current, year: current.year + 1 })
+    }, 280)
+    return () => clearInterval(timer)
+  }, [playing, go])
+  const play = () => {
+    if (playing) { setPlaying(false); return }
+    if (place.year >= SPAN[1]) go({ ...place, year: SPAN[0] })
+    setPlaying(true)
+  }
+  const setYear = (year) => { setPlaying(false); go({ ...place, year }) }
 
   const families = useMemo(() => FAMILIES
     .filter((family) => !place.family || family.id === place.family)
@@ -85,15 +142,36 @@ export const PlatesView = () => {
   const shown = families.reduce((n, { sections }) => n + sections.reduce((m, s) => m + s.cards.length, 0), 0)
 
   const open = place.plate ? REGION.formats.find((f) => f.id === place.plate) : null
-  const openFamily = open ? FAMILIES.find((f) => f.formats.includes(open)) : null
+  const openFamily = open ? familyOf(open) : null
   const order = useMemo(() => (openFamily ? orderOf(openFamily.id) : []), [openFamily])
+
+  // The year timeline: a strip per family, or, with one family chosen, a lane per design.
+  const chosen = FAMILIES.find((family) => family.id === place.family)
+  const rows = useMemo(() => (chosen
+    ? lanesOf(chosen.formats).map((formats, index) => ({ id: `lane-${index}`, label: '', formats }))
+    : FAMILIES.map((family) => ({ id: family.id, label: family.label, formats: family.formats }))), [chosen])
+  const using = useMemo(() => {
+    if (mode !== 'year') return []
+    const words = deferredQuery.toLowerCase().split(/\s+/).filter(Boolean)
+    return FAMILIES
+      .filter((family) => !chosen || family === chosen)
+      .map((family) => ({
+        family,
+        formats: family.formats
+          .filter((format) => inUse(format, place.year))
+          .filter((format) => words.every((word) => `${format.label} ${format.id} ${family.label}`.toLowerCase().includes(word)))
+          .sort((a, b) => a.period[0] - b.period[0] || a.period[1] - b.period[1])
+      }))
+      .filter(({ formats }) => formats.length)
+  }, [mode, chosen, place.year, deferredQuery])
+  const usingCount = using.reduce((n, { formats }) => n + formats.length, 0)
 
   // Back from a plate lands on its card.
   const close = useCallback(() => {
     const id = place.plate
-    go({ family: place.family, plate: null })
+    go({ ...place, plate: null })
     requestAnimationFrame(() => cards.current[id]?.focus())
-  }, [go, place.family, place.plate])
+  }, [go, place])
 
   useEffect(() => { if (!open) return; globalThis.scrollTo?.({ top: 0 }) }, [open])
 
@@ -109,7 +187,7 @@ export const PlatesView = () => {
         position={{ index: at, count: order.length }}
         previous={order[at - 1]?.format ?? null}
         next={order[at + 1]?.format ?? null}
-        onOpen={(format) => go({ family: place.family, plate: format.id })}
+        onOpen={(format) => go({ ...place, plate: format.id })}
         onClose={close}
       />
     )
@@ -119,7 +197,8 @@ export const PlatesView = () => {
     <section className="plates" aria-label="Licence plates">
       <div className="plates__intro">
         <h2>Licence plates <span className="plates__count">{TOTAL}</span></h2>
-        <p>
+        {/* Hidden on a phone, where it would push the controls below the fold. */}
+        <p className="plates__lede">
           British Columbia’s plates from the leather plates of 1904 to the flag base of today, in {FAMILIES.length} families:
           passenger, commercial, farm, motorcycle, official, municipal and the rest. Each is a research reconstruction
           from <a href={plateforgeLink(REGION)} target="_blank" rel="noreferrer">PlateForge</a>, redrawn as SVG from
@@ -128,7 +207,7 @@ export const PlatesView = () => {
         <div className="plates__filters">
           <label className="plates__filter">
             <span>Family</span>
-            <select value={place.family ?? ''} onChange={(event) => go({ family: event.target.value || null, plate: null })}>
+            <select value={place.family ?? ''} onChange={(event) => go({ ...place, family: event.target.value || null, plate: null })}>
               <option value="">All {FAMILIES.length} families</option>
               {FAMILIES.map((family) => <option key={family.id} value={family.id}>{family.label} ({family.formats.length})</option>)}
             </select>
@@ -137,18 +216,76 @@ export const PlatesView = () => {
             <span>Search</span>
             <input type="search" value={query} placeholder="1953, flag, totem, Expo…" onChange={(event) => setQuery(event.target.value)} />
           </label>
+          <div className="plates__mode">
+            <Segmented
+              ariaLabel="Arrange the plates"
+              options={MODES}
+              value={mode}
+              onChange={(next) => { setPlaying(false); go({ ...place, year: next === 'year' ? SPAN[1] : null }) }}
+            />
+          </div>
         </div>
       </div>
 
-      {shown === 0 && <p className="plates__empty" role="status">No plates match “{query}”.</p>}
+      {mode === 'year' && (
+        <>
+          <section className="plates__family plates__timeline" aria-label="Timeline">
+            <YearTimeline
+              rows={rows}
+              span={SPAN}
+              year={place.year}
+              onYear={setYear}
+              playing={playing}
+              onPlay={play}
+              onRow={chosen ? undefined : (id) => go({ ...place, family: id })}
+              note={chosen
+                ? `${chosen.label}: each bar is one design, across the years it was issued or valid; those in use in ${place.year} are highlighted. Choose “All families” above to see every family again.`
+                : `Each bar is a design, across the years it was issued or valid; those in use in ${place.year} are highlighted. Choose a family to see its designs one by one.`}
+            />
+          </section>
+          <section className="plates__family" aria-labelledby="plates-in-use">
+            <header className="plates__family-head">
+              <h3 id="plates-in-use">In use in {place.year}</h3>
+              <span className="plates__count">{usingCount}</span>
+              <p>
+                {usingCount === 0
+                  ? (deferredQuery ? `No plates in use in ${place.year} match “${deferredQuery}”.` : `PlateForge has no ${chosen ? chosen.label.toLowerCase() + ' ' : ''}plates dated to ${place.year}.`)
+                  : 'Issued that year, or still valid from an earlier issue: a multi-year base renewed with tabs or decals counts in every year it was on the road.'}
+              </p>
+            </header>
+            {using.map(({ family, formats }) => (
+              <section key={family.id} className="plates__era" aria-label={family.label}>
+                <div className="plates__era-head">
+                  <h4>{family.label}</h4>
+                  <span className="plates__count">{formats.length}</span>
+                </div>
+                <div className="plates__grid">
+                  {formats.map((format) => (
+                    <PlateCard
+                      key={format.id}
+                      format={format}
+                      meta={periodText(format.period)}
+                      href={searchFor({ view: 'plates', family: place.family, year: place.year, plate: format.id })}
+                      onOpen={() => { setPlaying(false); go({ ...place, plate: format.id }) }}
+                      cardRef={(element) => { cards.current[format.id] = element }}
+                    />
+                  ))}
+                </div>
+              </section>
+            ))}
+          </section>
+        </>
+      )}
 
-      {families.map(({ family, sections }) => (
+      {mode === 'family' && shown === 0 && <p className="plates__empty" role="status">No plates match “{query}”.</p>}
+
+      {mode === 'family' && families.map(({ family, sections }) => (
         <section key={family.id} className="plates__family" aria-labelledby={`plates-${family.id}`}>
           <header className="plates__family-head">
             <h3 id={`plates-${family.id}`}>
               <a
                 href={searchFor({ view: 'plates', family: family.id })}
-                onClick={(event) => { if (isPlainClick(event)) { event.preventDefault(); go({ family: family.id, plate: null }) } }}
+                onClick={(event) => { if (isPlainClick(event)) { event.preventDefault(); go({ ...place, family: family.id, plate: null }) } }}
               >
                 {family.label}
               </a>
@@ -173,22 +310,14 @@ export const PlatesView = () => {
               ) : (
                 <div className="plates__grid">
                   {section.cards.map(({ format, meta }) => (
-                    <a
+                    <PlateCard
                       key={format.id}
-                      ref={(element) => { cards.current[format.id] = element }}
-                      className="plates__card"
+                      format={format}
+                      meta={meta}
                       href={searchFor({ view: 'plates', family: place.family, plate: format.id })}
-                      onClick={(event) => { if (isPlainClick(event)) { event.preventDefault(); go({ family: place.family, plate: format.id }) } }}
-                    >
-                      <LazyPlate format={format} />
-                      <span className="plates__card-text">
-                        <span className="plates__title">{format.label}</span>
-                        <span className="plates__meta">
-                          {meta !== format.label && meta}
-                          {statusBadge(format) && <span className="plates__status">{statusBadge(format)}</span>}
-                        </span>
-                      </span>
-                    </a>
+                      onOpen={() => go({ ...place, plate: format.id })}
+                      cardRef={(element) => { cards.current[format.id] = element }}
+                    />
                   ))}
                 </div>
               )}
