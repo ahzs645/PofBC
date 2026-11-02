@@ -1,0 +1,184 @@
+{
+  "reviewedDate": "2026-11-02",
+  "employer": "bc-investment-management-corporation",
+  "employerExport": {
+    "path": "public/salaries/employers/bc-investment-management-corporation.json.gzip",
+    "sha256": "e2142bc72b20c36fd5df79a0ca786b0e1c23db801dac80cf99947b8383f0cd78"
+  },
+  "productionRowsAdded": 0,
+  "productionRowsRemoved": 0,
+  "newApplicationJoins": 0,
+  "reportedCase": {
+    "names": [
+      "Pittman, J.",
+      "Pittmsn, Jim"
+    ],
+    "proposedReviewedName": "Pittman, Jim",
+    "identityFinding": "strong-primary-source-support-for-one-person",
+    "applicationDecision": "held-pending-currency-aware-record-treatment",
+    "publishedObservations": [
+      {
+        "originalRow": [
+          "Pittman, J.",
+          "Senior Vice President, Private Equity · Private Equity",
+          1512762,
+          19531,
+          34,
+          "pssdb-2026-10-22",
+          null
+        ],
+        "compiledLabel": "2017/18",
+        "sourceId": "pssdb-2026-10-22"
+      },
+      {
+        "originalRow": [
+          "Pittmsn, Jim",
+          "Executive Vice President",
+          3902330,
+          0,
+          46,
+          "pssdb-2026-10-22",
+          null
+        ],
+        "compiledLabel": "2023/24",
+        "sourceId": "pssdb-2026-10-22"
+      }
+    ],
+    "findings": [
+      "The 2017/18 primary report names Jim Pittman as Senior Vice President, Private Equity; the executive roster also names him.",
+      "The 2023/24 primary report spells the name Jim Pittman and gives the exact 3902330 compiled amount as USD total compensation, not CAD annual base salary.",
+      "The 2023/24 footnote explicitly identifies US-dollar compensation after relocation to New York.",
+      "The 2017/18 primary total compensation is 1563196; this does not verify or replace the different 1512762 compiled observation.",
+      "Identity evidence does not establish comparable currency, paid-year scope, base salary or duplicate payments."
+    ],
+    "primaryEvidence": [
+      {
+        "path": "evidence/bci-2017-18.json",
+        "physicalPages": [
+          46,
+          78
+        ]
+      },
+      {
+        "path": "evidence/bci-2023-24.json",
+        "physicalPages": [
+          67,
+          92
+        ]
+      }
+    ],
+    "publicCorroboration": [
+      {
+        "url": "https://www.bci.ca/insights/article/jim-pittman-outlook-on-the-private-equity-market/",
+        "role": "Employer confirms full name and executive private-equity role; dated September 11, 2024."
+      },
+      {
+        "url": "https://www.bci.ca/news/article/bci-appoints-jon-salon-as-global-head-of-private-equity/",
+        "role": "Employer succession announcement states that Pittman led the program since 2016; dated January 22, 2026."
+      },
+      {
+        "url": "https://www.linkedin.com/posts/jim-pittman-83979615_nyc-privateequity-activity-7054556811785371648-6p9X",
+        "role": "Public post corroborates BCI Private Equity leadership and relocation. Compensation is not verified by LinkedIn."
+      }
+    ],
+    "linkedinProfileRetrieval": {
+      "url": "https://www.linkedin.com/in/jim-pittman-83979615/",
+      "status": 999,
+      "usableAsEvidence": false
+    },
+    "implementationRequirements": [
+      "Exact-observation currency and definition annotations with primary-source links.",
+      "Currency-aware display across cards, tables and details.",
+      "Exclude USD from CAD rankings, averages and growth absent an explicit conversion policy.",
+      "Evidence-backed reviewed surname exception and canonical name without changing original observations.",
+      "Preserve compiled period caveats; do not draw a mixed-currency compensation-growth chart."
+    ]
+  },
+  "otherBciCases": [
+    {
+      "names": [
+        "Fyfe, G.",
+        "Fyfe, Gordon"
+      ],
+      "existingApplicationStatus": "verified",
+      "identityFinding": "primary-source-corroborated",
+      "evidence": "The original reports identify Gordon J. Fyfe as CEO/CIO in both periods.",
+      "applicationChanged": false,
+      "payPeriodAndDefinitionsVerified": false,
+      "sourceReferences": [
+        {
+          "url": "https://www.bci.ca/wp-content/uploads/2018/01/17-18-corporate-annual-report-2018.pdf",
+          "physicalPage": 46
+        },
+        {
+          "url": "https://www.bci.ca/wp-content/uploads/2018/01/2023-2024-corporate-annual-report_financial-statements-1.pdf",
+          "physicalPage": 67
+        }
+      ]
+    },
+    {
+      "names": [
+        "Garant, D.",
+        "Garant, Daniel"
+      ],
+      "existingApplicationStatus": "verified",
+      "identityFinding": "primary-source-corroborated",
+      "evidence": "Both original reports identify Daniel Garant, initially Senior Vice President, Public Markets, later Executive Vice President & Global Head, Public Markets.",
+      "applicationChanged": false,
+      "payPeriodAndDefinitionsVerified": false,
+      "sourceReferences": [
+        {
+          "url": "https://www.bci.ca/wp-content/uploads/2018/01/17-18-corporate-annual-report-2018.pdf",
+          "physicalPage": 46
+        },
+        {
+          "url": "https://www.bci.ca/wp-content/uploads/2018/01/2023-2024-corporate-annual-report_financial-statements-1.pdf",
+          "physicalPage": 67
+        }
+      ]
+    },
+    {
+      "names": [
+        "Webb, L.",
+        "Webb, Lincoln"
+      ],
+      "existingApplicationStatus": "likely",
+      "identityFinding": "primary-source-corroborated",
+      "evidence": "Both original reports identify Lincoln Webb leading Infrastructure & Renewable Resources, initially Senior Vice President and later Executive Vice President & Global Head.",
+      "applicationChanged": false,
+      "payPeriodAndDefinitionsVerified": false,
+      "sourceReferences": [
+        {
+          "url": "https://www.bci.ca/wp-content/uploads/2018/01/17-18-corporate-annual-report-2018.pdf",
+          "physicalPage": 46
+        },
+        {
+          "url": "https://www.bci.ca/wp-content/uploads/2018/01/2023-2024-corporate-annual-report_financial-statements-1.pdf",
+          "physicalPage": 67
+        }
+      ]
+    },
+    {
+      "names": [
+        "Rayes, R.",
+        "Rayes, Ramy"
+      ],
+      "existingApplicationStatus": "likely",
+      "identityFinding": "corroborated-full-name-earlier-initial-still-needs-source",
+      "evidence": "The 2023/24 report and official appointment announcement establish Ramy Rayes, his role and employment from 2016. The exact 2017/18 initial-only schedule is not independently matched here.",
+      "applicationChanged": false,
+      "payPeriodAndDefinitionsVerified": false,
+      "sourceReferences": [
+        {
+          "url": "https://www.bci.ca/wp-content/uploads/2018/01/2023-2024-corporate-annual-report_financial-statements-1.pdf",
+          "physicalPage": 67
+        },
+        {
+          "url": "https://www.bci.ca/news/article/ramy-rayes-appointed-as-bcis-executive-vice-president-of-investment-strategy-risk/"
+        }
+      ]
+    }
+  ],
+  "outreachSent": false,
+  "allExternalIdentityReviewsComplete": false
+}

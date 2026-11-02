@@ -1,0 +1,26 @@
+{
+  "schemaVersion": 1,
+  "purpose": "Research prioritization; no new identity merges or pay corrections are applied.",
+  "namedRowsScanned": 1379680,
+  "employersInPeopleIndex": 270,
+  "normalizedNamesWithinEmployers": 368224,
+  "existingDecisions": {
+    "apart": 4275,
+    "likely": 21859,
+    "verified": 1136
+  },
+  "reviewedOverrides": 4,
+  "heuristicVerifiedDecisions": 1132,
+  "additionalOneEditSurnameCandidates": 4445,
+  "candidateCautions": {
+    "no-shared-label": 2896,
+    "shared-label": 1549
+  },
+  "limits": [
+    "This scans every published named row; unnamed observations cannot be linked by name.",
+    "One-edit surname candidates require surnames at least five letters long and compatible given names at one employer. Other spelling changes, nicknames and cross-employer careers are outside this detector.",
+    "Verified is the existing application status; it includes heuristics and must not be read as an independently sourced human identity verification.",
+    "Amounts prioritize review only. They can have different currencies, definitions and unverified period labels; they are not comparable compensation rankings.",
+    "No new identity inference, deletion, currency conversion or salary observation is published by this audit."
+  ]
+}

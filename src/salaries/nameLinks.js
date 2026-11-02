@@ -16,7 +16,7 @@
 // Everything else — several fuller names fit, both spellings in one period, a long gap, a pay jump,
 // a reviewed rejection — is kept apart, and listed with its reason.
 
-import { nameOnly, nameParts, personKey } from './people.js'
+import { nameOnly, nameParts, personKey, surnameShard } from './people.js'
 import { titleKey } from './positions.js'
 
 export const LINK_RULES = { maxGapYears: 6, maxPayRatio: 3, distinctiveTitle: 3 }
@@ -92,7 +92,7 @@ export const findNameLinks = (rows, { years, employers, reviewed = [] }) => {
   }
   const reviewOf = new Map()
   for (const entry of reviewed) {
-    const [a, b] = entry.names.map(personKey)
+    const [a, b] = entry.names.map((name) => personKey(nameOnly(name)))
     reviewOf.set(`${entry.employer}|${[a, b].sort().join('~')}`, entry)
   }
 
@@ -113,7 +113,12 @@ export const findNameLinks = (rows, { years, employers, reviewed = [] }) => {
   }
   const membersOf = new Map()
   const members = (root) => membersOf.get(root.id) ?? [root]
-  const fuller = (a, b) => (b.info > a.info || (b.info === a.info && b.count > a.count) ? b : a)
+  const employerAt = new Map(employers.map((entry, at) => [entry[3], at]))
+  const preferred = new Set(reviewed.filter((entry) => entry.decision === 'verified' && entry.preferredName)
+    .map((entry) => `${employerAt.get(entry.employer)}|${personKey(nameOnly(entry.preferredName))}`))
+  const fuller = (a, b) => (preferred.has(a.id) !== preferred.has(b.id)
+    ? (preferred.has(b.id) ? b : a)
+    : (b.info > a.info || (b.info === a.info && b.count > a.count) ? b : a))
   const bestOf = (root) => members(find(root)).reduce(fuller)
   const join = (spelling, other) => {
     const [from, to] = [find(spelling), find(other)]
@@ -123,20 +128,33 @@ export const findNameLinks = (rows, { years, employers, reviewed = [] }) => {
     membersOf.delete(from.id)
   }
 
+  // An explicit source review can correct a surname. Automatic candidates remain surname-bound.
+  for (const review of reviewed) {
+    if (review.decision !== 'verified') continue
+    const at = employerAt.get(review.employer)
+    const pair = review.names.map((name) => spellings.get(`${at}|${personKey(nameOnly(name))}`))
+    if (pair.some((spelling) => !spelling) || pair[0] === pair[1]) continue
+    if (review.preferredName && !pair.some((spelling) => spelling.key === personKey(nameOnly(review.preferredName)))) {
+      throw new Error('A reviewed preferred name must be one of the disclosed spellings')
+    }
+    const other = review.preferredName ? pair.reduce(fuller) : pair.reduce((a, b) => (
+      b.info > a.info || (b.info === a.info && b.id > a.id) ? b : a
+    ))
+    const spelling = pair.find((each) => each !== other)
+    decisions.push({ employer: review.employer, name: shown(spelling), key: spelling.key,
+      target: shown(other), targetKey: other.key, status: 'verified', reason: `Reviewed: ${review.note}`,
+      ...(review.evidence?.length ? { evidence: review.evidence } : {}),
+      pay: Math.max(...spelling.periods.values(), ...other.periods.values()) })
+    join(spelling, other)
+    placed.add(spelling.id)
+    // A corrected source spelling may still have an existing fuller, likely variant.
+    // Keep that separate confidence level; a reviewed typo must not erase its old link.
+    if (!review.preferredName) placed.add(other.id)
+  }
+
   for (const bucket of buckets.values()) {
     if (bucket.length < 2) continue
     const slug = employers[bucket[0].employer]?.[3]
-    // Fuller spellings first, so a short one is weighed against everything its fuller fits joined.
-    // Reviewed joins first, whatever the rules would say.
-    for (const spelling of bucket) {
-      for (const other of bucket) {
-        const review = other !== spelling && reviewOf.get(`${slug}|${[spelling.key, other.key].sort().join('~')}`)
-        if (review?.decision !== 'verified' || spelling.info > other.info || (spelling.info === other.info && spelling.id > other.id)) continue
-        decisions.push({ employer: slug, name: shown(spelling), key: spelling.key, target: shown(other), targetKey: other.key, status: 'verified', reason: `Reviewed: ${review.note}`, pay: Math.max(...spelling.periods.values(), ...other.periods.values()) })
-        join(spelling, other)
-        placed.add(spelling.id).add(other.id)
-      }
-    }
     for (const spelling of [...bucket].sort((a, b) => a.info - b.info).reverse()) {
       if (placed.has(spelling.id)) continue
       const split = rejoined(spelling.given)
@@ -158,7 +176,7 @@ export const findNameLinks = (rows, { years, employers, reviewed = [] }) => {
       const review = cluster.map((each) => reviewOf.get(`${slug}|${[spelling.key, each.key].sort().join('~')}`)).find(Boolean)
       if (review?.decision === 'reject') { decide('apart', `Reviewed: ${review.note}`); continue }
       if (review?.decision === 'verified') { decide('verified', `Reviewed: ${review.note}`, root); continue }
-      const conflicting = cluster.find((each) => !splitFit && !compatibleNames(matchable(spelling), matchable(each)))
+      const conflicting = cluster.find((each) => each.surname === spelling.surname && !splitFit && !compatibleNames(matchable(spelling), matchable(each)))
       if (conflicting) { decide('apart', `Disagrees with “${shown(conflicting)}”, already joined to “${shown(bestOf(root))}”`); continue }
       const theirs = new Map(cluster.flatMap((each) => [...each.periods]))
       const shared = [...spelling.periods.keys()].filter((at) => theirs.has(at))
@@ -207,7 +225,8 @@ export const findNameLinks = (rows, { years, employers, reviewed = [] }) => {
       if (spelling === best) return { ...each, status: 'verified', reason: 'The same name with a position written into it' }
       // A reviewed pair may name either spelling first: the decision is the join's, either way.
       const decision = decisionOf.get(`${employer}|${spelling.key}`) ?? joinedTo.get(`${employer}|${spelling.key}`)
-      return { ...each, status: decision.status, reason: decision.reason }
+      return { ...each, status: decision.status, reason: decision.reason,
+        ...(decision.evidence?.length ? { evidence: decision.evidence } : {}) }
     }))
     if (aliases.length) result.push({ employer, key: own.key, name: own.name, aliases })
   }
@@ -226,7 +245,20 @@ export const linkLookup = (published, employers) => {
     const at = indexOf.get(slug)
     if (at === undefined) continue
     lookup.set(`${at}|${key}`, { key, name, status: null, reason: null })
-    for (const [aliasKey, aliasName, status, reason] of aliases) lookup.set(`${at}|${aliasKey}`, { key, name, aliasName, status, reason })
+    for (const [aliasKey, aliasName, status, reason, evidence] of aliases) lookup.set(`${at}|${aliasKey}`, {
+      key, name, aliasName, status, reason, ...(evidence?.length ? { evidence } : {})
+    })
   }
   return lookup
+}
+
+/** A reviewed surname correction can refer to a different people-index slice. */
+export const personRecordShards = (published, key) => {
+  const keys = new Set([key])
+  for (const [, canonical, , aliases] of published?.links ?? []) {
+    if (canonical !== key) continue
+    keys.add(canonical)
+    for (const [alias] of aliases) keys.add(alias)
+  }
+  return [...new Set([...keys].map((nameKey) => surnameShard(`${nameKey.split('|')[0]},`)))].sort()
 }
