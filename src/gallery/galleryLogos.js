@@ -31,7 +31,7 @@ export const logosFor = (nodeId, theme = 'light', limit = 4) => {
       id: entry.id,
       label: entry.label,
       ground: onPage(entry) ? 'page' : 'own',
-      image: entry.kind === 'collected',
+      image: entry.kind === 'collected' && !onPage(entry),
       html: tileArt(entry, theme)
     }))
   }

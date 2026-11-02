@@ -1,6 +1,16 @@
 // Downloaded artwork and supplied originals retain their own format and source.
 // A date on a report is a sighting, never an inferred logo adoption date.
 import { COLLECTED_BODIES, COLLECTED_SPECIMENS } from './collectedData.js'
+import { COLLECTED_DISPLAY } from './collectedDisplay.js'
+
+/**
+ * The file a body's card shows: one with a display copy that keeps its own colours on the light
+ * page, else any with a display copy, else the first file. A display copy is drawn for the page
+ * in both themes, where a raster file still sits on a plate of its own.
+ */
+const coverOf = (assets) =>
+  (assets.find((asset) => COLLECTED_DISPLAY[asset.id] && !COLLECTED_DISPLAY[asset.id].light.recoloured) ??
+    assets.find((asset) => COLLECTED_DISPLAY[asset.id]) ?? assets[0])?.id
 
 export const assetUrl = (path, base = import.meta.env?.BASE_URL ?? '/') =>
   `${base.replace(/\/?$/, '/')}${path.replace(/^\//, '')}`
@@ -42,6 +52,7 @@ export const COLLECTED_COLLECTIONS = COLLECTED_BODIES.filter((body) => body.asse
   years: `${body.from ?? '?'}–${body.current ? 'present' : body.to ?? '?'}`,
   intro: 'Collected artwork with its source recorded for each file. The organization’s dates above are not the dates of its logo. ' +
     (body.notes || ''),
+  cover: coverOf(body.assets),
   entries: body.assets.map((asset) => collectedEntry(asset)),
 }))
 

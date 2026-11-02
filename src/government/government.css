@@ -1360,3 +1360,4 @@ details.gov-list__section[open] { padding-bottom: 12px; }
 /* A collected file keeps the ground it was drawn for, filling the tile. */
 .gov-logos__art.gallery__art[data-image] { padding: 0; }
 .gov-logos__art .gallery__collected-image { height: 96px; padding: 10px; border-radius: 0; }
+.gov-logos__art .gallery__collected-image--clean { --logo-max: 76px; height: calc(var(--logo-max) * var(--logo-scale, 1)); padding: 0; }

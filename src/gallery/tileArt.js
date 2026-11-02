@@ -13,6 +13,21 @@ import { TRANSPARENT } from '../logo/logoColors.js'
 import { renderCurrentSvg } from '../current/currentMarks.js'
 import { darkPageInks, renderSuppliedSvg } from './renderSupplied.js'
 import { assetUrl } from './collectedCollections.js'
+import { COLLECTED_DISPLAY } from './collectedDisplay.js'
+
+/**
+ * A collected file's display copy for a theme (see scripts/build_collected_display.py): its ground
+ * taken out, trimmed to the logo, and redrawn where its ink would vanish into the page. Null for a
+ * file that has none yet — raster files are still shown as found, on a plate.
+ */
+export const collectedDisplay = (asset, theme = 'light') => COLLECTED_DISPLAY[asset.id]?.[theme === 'dark' ? 'dark' : 'light'] ?? null
+
+/**
+ * How tall a trimmed logo is drawn, as a share of its tile's height, so that a long wordmark and a
+ * square emblem look about the same size: equal area, rather than equal height, with a floor so a
+ * very long one stays legible. Logos up to a little over twice as wide as tall fill the height.
+ */
+export const logoScale = (aspect) => Math.round(Math.min(1, Math.max(0.42, Math.sqrt(2.4 / aspect))) * 1000) / 1000
 
 /**
  * What a card shows: the entry drawn for the page it sits on — no ground of its own, in the version
@@ -24,6 +39,11 @@ import { assetUrl } from './collectedCollections.js'
 export const tileArt = (entry, theme = 'light', { cover = false } = {}) => {
   if (entry.kind === 'collected') {
     const escape = (value) => String(value).replace(/&/g, '&amp;').replace(/"/g, '&quot;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
+    const display = collectedDisplay(entry.asset, theme)
+    if (display) {
+      return `<img class="gallery__collected-image gallery__collected-image--clean" src="${escape(assetUrl(display.file))}" alt="${escape(entry.label)}" loading="lazy"` +
+        ` style="--logo-scale: ${logoScale(display.aspect)}"${display.plate ? ' data-plate="true"' : ''} />`
+    }
     return `<img class="gallery__collected-image" src="${escape(assetUrl(entry.asset.preview || entry.asset.file))}" alt="${escape(entry.label)}" loading="lazy" data-dark="${entry.asset.darkBackground ? 'true' : 'false'}" />`
   }
   if (entry.kind === 'artwork') {
@@ -65,5 +85,5 @@ export const tileArt = (entry, theme = 'light', { cover = false } = {}) => {
 }
 
 /** Whether a card draws on the page's ground, or keeps a ground of its own. */
-export const onPage = (entry) => entry.kind === 'artwork' || entry.kind === 'current' || entry.kind === 'flag' || entry.kind === 'supplied' || entry.mark === '1990' ||
+export const onPage = (entry) => (entry.kind === 'collected' && Boolean(COLLECTED_DISPLAY[entry.asset.id])) || entry.kind === 'artwork' || entry.kind === 'current' || entry.kind === 'flag' || entry.kind === 'supplied' || entry.mark === '1990' ||
   (entry.kind === 'hydro' && HYDRO_PRESETS[entry.preset]?.group === 'signature')
