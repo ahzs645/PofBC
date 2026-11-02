@@ -108,7 +108,8 @@
 }
 
 /* ── One plate ── */
-.plate { background: var(--surface); border-radius: var(--radius); overflow: hidden; }
+/* clip, not hidden: hidden would make the card a scroll container and stop the stage sticking. */
+.plate { background: var(--surface); border-radius: var(--radius); overflow: clip; }
 .plate__bar {
   display: flex;
   align-items: center;
@@ -121,14 +122,20 @@
 .plate__steps { display: flex; gap: 8px; margin-left: auto; }
 
 .plate__body { display: grid; grid-template-columns: minmax(0, 1fr) 360px; }
+/* The stage stretches to the panel's height for its backdrop. The plate is not centred in that
+   height (a format with many fields and a long description would push it below the fold): it sits in
+   a block at the top that sticks while the panel scrolls, centred in at most a screen's height. */
 .plate__stage {
+  background: radial-gradient(circle at 50% 30vh, var(--surface) 0, var(--page) 100%);
+}
+.plate__stage-inner {
+  position: sticky;
+  top: 0;
   display: grid;
   place-items: center;
   align-content: center;
   min-height: min(62vh, 560px);
-  margin: 0;
   padding: 40px 32px;
-  background: radial-gradient(circle at 50% 40%, var(--surface) 0, var(--page) 100%);
 }
 .plate__art-frame { width: min(100%, 620px); }
 .plate__art svg { filter: drop-shadow(0 10px 22px rgba(0, 0, 0, 0.2)); }
@@ -161,7 +168,7 @@
   .plate__panel { border-left: 0; border-top: 1px solid var(--outline); }
 }
 @media (max-width: 600px) {
-  .plate__stage { min-height: 240px; padding: 28px 16px; }
+  .plate__stage-inner { min-height: 240px; padding: 28px 16px; }
   .plate__bar { flex-wrap: nowrap; }
   .plate__step-label { display: none; }
   .plate__steps .button { min-width: 40px; justify-content: center; font-size: 18px; line-height: 1; }
@@ -247,7 +254,7 @@
 .plates-timeline__note { margin: 0; font-size: 12.5px; color: var(--ink-faint); }
 
 /* ── The open plate's family strip ── */
-.plate__timeline { display: grid; gap: 6px; width: min(100%, 620px); margin-top: 22px; }
+.plate__timeline { display: grid; gap: 6px; width: min(100%, 620px); margin-top: 22px; min-width: 0; }
 .plate__timeline-label { font-size: 12px; font-weight: 600; color: var(--ink-muted); font-variant-numeric: tabular-nums; }
 .plates-strip__track { position: relative; padding-bottom: 18px; }
 .plates-strip__track svg { display: block; width: 100%; }

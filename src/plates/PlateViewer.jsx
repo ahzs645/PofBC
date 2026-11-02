@@ -125,18 +125,22 @@ export const PlateViewer = ({ region, format, family, section, position, previou
       </nav>
 
       <div className="plate__body">
-        <figure className="plate__stage">
-          <div ref={stage} className="plate__art-frame" role="img" aria-label={`${format.label}${plate.text ? `, ${plate.text}` : ''}`}>
-            <PlateView plate={plate} className="plate__art" />
+        {/* The stage fills its column, as tall as the panel beside it; the plate sits at the top of
+            it and stays in view while the panel's fields and sources are scrolled (plates.css). */}
+        <div className="plate__stage">
+          <div className="plate__stage-inner">
+            <div ref={stage} className="plate__art-frame" role="img" aria-label={`${format.label}${plate.text ? `, ${plate.text}` : ''}`}>
+              <PlateView plate={plate} className="plate__art" />
+            </div>
+            {/* The family on its own axis: this plate marked, the others a click away. */}
+            <div className="plate__timeline">
+              <span className="plate__timeline-label">
+                {family.label} · {spanOf(family.formats).join('–')} · {family.formats.length} designs
+              </span>
+              <FamilyStrip formats={family.formats} current={format} onOpen={onOpen} />
+            </div>
           </div>
-          {/* The family on its own axis: this plate marked, the others a click away. */}
-          <figcaption className="plate__timeline">
-            <span className="plate__timeline-label">
-              {family.label} · {spanOf(family.formats).join('–')} · {family.formats.length} designs
-            </span>
-            <FamilyStrip formats={family.formats} current={format} onOpen={onOpen} />
-          </figcaption>
-        </figure>
+        </div>
 
         <aside className="plate__panel">
           <h2>{format.label}</h2>
