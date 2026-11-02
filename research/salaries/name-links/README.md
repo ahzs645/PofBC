@@ -6,7 +6,11 @@ surname variants, and original-source findings for BCI. It distinguishes the
 existing heuristic `verified` status from independent source review. The Pittman
 connection is supported by primary evidence but held from new application joins
 pending treatment of the later USD executive-compensation amount. This research
-pass does not change the links applied by the site.
+pass did not change the links applied by the site. The
+[subsequent source-verification pass](source-verification-2026-11-02/README.md)
+checks every candidate against primary observations and adds 251 individually
+reviewed source-spelling corrections, with original-row evidence and safeguards
+against reusing a decision after its rows or sources change.
 
 Employers write the same person's name differently from year to year ("Garant, D." in 2017/18,
 "Garant, Daniel" in 2023/24), sources disagree, and extraction splits letters off ("Nevill, T homas").

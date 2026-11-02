@@ -27,7 +27,7 @@ import { EmployerBrowse, EmployerCard, PeopleBrowse, PositionBrowse } from './Br
 import { count, LAYOUTS, loadJson, Paged, PersonIcon, readPlace, toTop, wordsOf, writePlace } from './common.jsx'
 import { EmployerPage } from './EmployerPage.jsx'
 import { PersonPage } from './PersonPage.jsx'
-import { linkLookup } from './nameLinks.js'
+import { linkLookup, personRecordShards } from './nameLinks.js'
 import { TitleCard, TitlePage } from './TitlePage.jsx'
 
 const describeNameGroup = (key, list, name) => {
@@ -95,7 +95,9 @@ export const SalariesView = ({ onOpenGovernment }) => {
 
   // The ways what was typed can be read as a name, and the index slices they need.
   const readings = useMemo(() => nameReadings(query), [query])
-  const needed = useMemo(() => [...new Set([...readings.map(shardOf), ...(place.person ? [shardOfKey(place.person)] : [])])], [readings, place.person])
+  const selectedLinks = place.person ? linkShards[shardOfKey(place.person)] : null
+  const personShards = useMemo(() => place.person ? personRecordShards(selectedLinks, place.person) : [], [place.person, selectedLinks])
+  const needed = useMemo(() => [...new Set([...readings.map(shardOf), ...personShards])], [readings, personShards])
 
   useEffect(() => {
     if (!index) return undefined
@@ -290,7 +292,8 @@ export const SalariesView = ({ onOpenGovernment }) => {
   }
 
   // Filters narrow the search results, not the history of a name opened from one of those results.
-  const personRows = place.person ? shards[shardOfKey(place.person)] : null
+  const personRows = place.person && personShards.every((shard) => Array.isArray(shards[shard]))
+    ? personShards.flatMap((shard) => shards[shard]) : null
   // Opened from an employer's page, the name is limited to that employer's records, unless it has none
   // there (a stale link), when every record under the name is shown.
   // The name's own records, and those under other spellings the link list joins to it at their employer.
@@ -299,7 +302,7 @@ export const SalariesView = ({ onOpenGovernment }) => {
   const linkedName = personList.map(linkOf).find((link) => link?.key === place.person)?.name
   const joins = [...new Map(personList.filter((row) => personKey(row[0]) !== place.person).map((row) => {
     const link = linkOf(row)
-    return [`${row[4]}|${personKey(row[0])}`, { name: row[0], employer: row[4], status: link.status, reason: link.reason }]
+    return [`${row[4]}|${personKey(row[0])}`, { name: row[0], employer: row[4], status: link.status, reason: link.reason, evidence: link.evidence }]
   })).values()]
   // Where this spelling is itself joined to a fuller name at an employer, that name's page is the whole of it.
   const joinedElsewhere = [...new Map(personList.filter((row) => personKey(row[0]) === place.person && linkOf(row) && linkOf(row).key !== place.person)
@@ -313,6 +316,7 @@ export const SalariesView = ({ onOpenGovernment }) => {
     hidden: personList.length - atEmployer.length,
     onShowAll: () => setPlace((current) => ({ ...current, personAt: null }))
   } : null
+  if (place.person && personShards.some((shard) => shards[shard] === 'failed')) return <p className="gallery__intro" role="alert">The name’s records could not all be loaded. <button type="button" onClick={retryNames}>Retry</button></p>
   if (place.person && (!personRows || !personLinks)) return <p className="gallery__intro" role="status">Loading the name…</p>
   if (chosen) {
     return (

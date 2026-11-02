@@ -4,6 +4,11 @@ Reviewed 2 November 2026. This is an identity research pass, separate from the
 completed 65-lead source-acquisition pass. It adds no salary observations, deletes
 no records and applies no new application joins or currency conversions.
 
+The [subsequent source-verification pass](../source-verification-2026-11-02/README.md)
+now records evidence for all 4,445 candidates and adopts 251 individually reviewed
+source-spelling corrections. The files here remain the original candidate
+snapshot; the follow-up contains current decisions and application changes.
+
 ## The reported Pittman example
 
 The evidence strongly supports one BCI executive behind **“Pittman, J.”** and
@@ -124,8 +129,7 @@ From the repository root:
 
 ```sh
 python3 -m unittest discover -s scripts -p test_name_connection_review.py -v
-python3 scripts/build_name_connection_review.py
-python3 scripts/build_name_connection_review.py --check
+python3 scripts/build_name_connection_review.py --snapshot-ref 1a814359a0b74bbbc4620ba7ac3e5d2846ee1284 --check
 ```
 
 [inputs.json](inputs.json) pins every people shard, link shard and input ledger

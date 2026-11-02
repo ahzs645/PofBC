@@ -129,6 +129,7 @@ export const PersonPage = ({ chosen, joins = [], joinedElsewhere = [], all, scop
             {joins.map((join) => (
               <li key={`${join.employer}|${join.name}`}>
                 “{nameOnly(join.name)}” at {index.employers[join.employer][0]}, {/^Reviewed: /.test(join.reason) ? `verified on review: ${join.reason.replace(/^Reviewed: /, '')}` : `${sureness(join.status)}: ${join.reason}`}
+                {join.evidence?.map((evidence, at) => <span key={`${evidence.sourceId}|${evidence.pdfPage}`}>{' · '}<SourceLink sourceId={evidence.sourceId} sources={index.sources} pdfPage={evidence.pdfPage} label={join.evidence.length > 1 ? `Evidence ${at + 1} · p. ${evidence.pdfPage}` : `Evidence · p. ${evidence.pdfPage}`} /></span>)}
               </li>
             ))}
           </ul>

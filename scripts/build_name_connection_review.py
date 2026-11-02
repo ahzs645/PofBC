@@ -9,6 +9,7 @@ import io
 import json
 from pathlib import Path
 import re
+import subprocess
 import unicodedata
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -99,15 +100,23 @@ def candidates(groups, joined):
     return sorted(output, key=lambda row: (-row['highest_raw_amount'], row['employer'], row['name_a'], row['name_b']))
 
 
-def build():
+def build(snapshot_ref=None):
+    if snapshot_ref:
+        snapshot_ref = subprocess.check_output(['git', 'rev-parse', '--verify', f'{snapshot_ref}^{{commit}}'], cwd=ROOT, text=True).strip()
+
+    def read(path):
+        if snapshot_ref:
+            return subprocess.check_output(['git', 'show', f'{snapshot_ref}:{path.relative_to(ROOT)}'], cwd=ROOT)
+        return path.read_bytes()
+
     index_path = ROOT / 'public/salaries/people/index.json'
-    index = json.loads(index_path.read_text())
+    index = json.loads(read(index_path))
     groups = {}
     pins = []
     scanned = 0
 
     def pin(path):
-        raw = path.read_bytes()
+        raw = read(path)
         pins.append({'path': str(path.relative_to(ROOT)), 'sha256': hashlib.sha256(raw).hexdigest()})
         return raw
 
@@ -130,7 +139,10 @@ def build():
 
     employer_at = {entry[3]: at for at, entry in enumerate(index['employers'])}
     joined = {}
-    for path in sorted((ROOT / 'public/salaries/links').glob('*.json.gzip')):
+    link_paths = (ROOT / 'public/salaries/links').glob('*.json.gzip')
+    if snapshot_ref:
+        link_paths = [ROOT / path for path in subprocess.check_output(['git', 'ls-tree', '-r', '--name-only', snapshot_ref, 'public/salaries/links'], cwd=ROOT, text=True).splitlines() if path.endswith('.json.gzip')]
+    for path in sorted(link_paths):
         if path.name == 'top.json.gzip':
             continue
         for slug, key, _name, aliases in json.loads(gzip.decompress(pin(path)))['links']:
@@ -166,8 +178,9 @@ def build():
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--check', action='store_true', help='Compare regenerated research outputs without writing.')
+    parser.add_argument('--snapshot-ref', help='Read a committed publication snapshot, preserving the original dated candidate queue after new aliases are adopted.')
     args = parser.parse_args()
-    summary, queue, pins = build()
+    summary, queue, pins = build(args.snapshot_ref)
     outputs = {'summary.json': summary, 'surname-candidates.json': queue, 'inputs.json': pins}
     csv_buffer = io.StringIO(newline='')
     fields = ['employer', 'name_a', 'name_b', 'highest_raw_amount', 'periods_a', 'periods_b',

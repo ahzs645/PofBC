@@ -1,6 +1,6 @@
 import test from 'node:test'
 import assert from 'node:assert/strict'
-import { compatibleNames, findNameLinks, linkLookup, nameOnly } from './nameLinks.js'
+import { compatibleNames, findNameLinks, linkLookup, nameOnly, personRecordShards } from './nameLinks.js'
 
 const years = ['2017/18', '2018/19', '2019/20', '2020/21', '2023/24', '2030/31']
 const employers = [['BCI', 'Crown corporations', null, 'bci'], ['Other', 'Crown corporations', null, 'other']]
@@ -70,4 +70,62 @@ test('the published links read back as a lookup by employer index and name key',
   const lookup = linkLookup({ links: [['other', 'garant|daniel', 'Garant, Daniel', [['garant|d', 'Garant, D.', 'likely', 'why']]]] }, employers)
   assert.deepEqual(lookup.get('1|garant|d'), { key: 'garant|daniel', name: 'Garant, Daniel', aliasName: 'Garant, D.', status: 'likely', reason: 'why' })
   assert.equal(lookup.get('0|garant|d'), undefined, 'never across employers')
+})
+
+test('only an explicit source review can connect different surnames, with its evidence', () => {
+  const rows = [
+    ['Ionescu, Diana', null, 480016, 6085, 0, 4, 'official', 113],
+    ['lonescu, Diana', null, 480016, 6085, 0, 4, 'compiled'],
+    ['lonescu, Diana', null, 480016, 6085, 1, 4, 'compiled']
+  ]
+  assert.equal(run(rows).links.length, 0)
+  const evidence = [{ sourceId: 'official', pdfPage: 113 }]
+  const result = run(rows, [{ employer: 'bci', names: ['lonescu, Diana', 'Ionescu, Diana'],
+    preferredName: 'Ionescu, Diana', decision: 'verified', note: 'Source spelling and complete row reviewed', evidence }])
+  assert.equal(result.links.length, 1)
+  assert.equal(result.links[0].key, 'ionescu|diana')
+  assert.equal(result.links[0].aliases[0].key, 'lonescu|diana')
+  assert.deepEqual(result.links[0].aliases[0].evidence, evidence)
+  assert.deepEqual(rows[1], ['lonescu, Diana', null, 480016, 6085, 0, 4, 'compiled'])
+})
+
+test('reviewed surname links do not obstruct existing compatible given-name variants', () => {
+  const rows = [
+    ['Germain, Francois F', null, 334706, 9658, 0, 0, 'official'],
+    ['Getmain, Francois F', null, 334706, 9658, 0, 0, 'compiled'],
+    ['Germain, Francois', null, 462234, 11048, 0, 4, 'official']
+  ]
+  const result = run(rows, [{ employer: 'bci', names: ['Getmain, Francois F', 'Germain, Francois F'],
+    preferredName: 'Germain, Francois F', decision: 'verified', note: 'Original row' }])
+  assert.equal(result.links.length, 1)
+  assert.equal(result.links[0].aliases.length, 2)
+  assert.equal(result.links[0].aliases.find((entry) => entry.key === 'germain|francois').status, 'likely')
+  const fuller = run([
+    ['Lavely, W illiam', null, 100, 10, 0, 0, 'compiled'],
+    ['Lavery, William', null, 100, 10, 0, 0, 'official'],
+    ['Lavery, William John', null, 200, 20, 0, 4, 'official']
+  ], [{ employer: 'bci', names: ['Lavely, W illiam', 'Lavery, William'],
+    preferredName: 'Lavery, William', decision: 'verified', note: 'Original row' }])
+  assert.equal(fuller.links.length, 1)
+  assert.equal(fuller.links[0].aliases.find((entry) => entry.key === 'lavery|william john').status, 'likely', 'The fuller name keeps its existing uncertainty')
+})
+
+test('the disclosed preferred spelling must belong to the reviewed pair', () => {
+  assert.throws(() => run([
+    ['Ionescu, Diana', null, 100, 0, 0, 0, 's'], ['lonescu, Diana', null, 100, 0, 0, 0, 's']
+  ], [{ employer: 'bci', names: ['Ionescu, Diana', 'lonescu, Diana'],
+    preferredName: 'Ionescu, Diane', decision: 'verified', note: 'wrong preferred name' }]), /disclosed spellings/)
+})
+
+test('person pages request every surname shard behind a canonical name, without unrelated rows', () => {
+  const published = { links: [
+    ['bci', 'ionescu|diana', 'Ionescu, Diana', [['lonescu|diana', 'lonescu, Diana', 'verified', 'source']]],
+    ['bci', 'smith|jane', 'Smith, Jane', [['smyth|jane', 'Smyth, Jane', 'verified', 'source']]]
+  ] }
+  assert.deepEqual(personRecordShards(published, 'ionescu|diana'), ['io', 'lo'])
+  assert.deepEqual(personRecordShards(published, 'lonescu|diana'), ['lo'])
+  assert.deepEqual(personRecordShards(null, 'ionescu|diana'), ['io'])
+  const lookup = linkLookup(published, employers)
+  assert.equal(lookup.get('0|lonescu|diana').key, 'ionescu|diana')
+  assert.equal(lookup.get('1|lonescu|diana'), undefined)
 })

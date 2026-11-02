@@ -11,6 +11,7 @@ import { fileURLToPath } from 'node:url'
 import { gunzipSync, gzipSync } from 'node:zlib'
 import { findNameLinks, LINK_RULES } from '../src/salaries/nameLinks.js'
 import { personKey, surnameShard } from '../src/salaries/people.js'
+import { validateReviewedNameConnections } from './lib/reviewed-name-connections.mjs'
 
 const root = resolve(dirname(fileURLToPath(import.meta.url)), '..')
 const people = join(root, 'public/salaries/people')
@@ -20,6 +21,8 @@ const index = JSON.parse(readFileSync(join(people, 'index.json'), 'utf8'))
 const reviewed = JSON.parse(readFileSync(join(research, 'reviewed.json'), 'utf8')).decisions
 
 const rows = Object.keys(index.shards).flatMap((shard) => gzip(join(people, `${shard}.json.gzip`)))
+const sourceReviewed = JSON.parse(readFileSync(join(research, 'source-reviewed.json'), 'utf8'))
+reviewed.push(...validateReviewedNameConnections(sourceReviewed, rows, index))
 const { links, decisions } = findNameLinks(rows, { years: index.years, employers: index.employers, reviewed })
 
 const note = 'Spellings of one name at one employer joined as one person. verified: the records establish it (an extraction split, a distinctive position under both spellings, or a reviewed decision). likely: the only fuller name at the employer that agrees, never in the same period, close in time and pay. Never across employers. Each row: [employer slug, name key, disclosed name, [[alias key, disclosed alias, status, reason]]].'
@@ -30,13 +33,15 @@ rmSync(out, { recursive: true, force: true })
 mkdirSync(out, { recursive: true })
 const packed = (list) => gzipSync(JSON.stringify({
   note, rules: LINK_RULES,
-  links: list.map((link) => [link.employer, link.key, link.name, link.aliases.map((alias) => [alias.key, alias.name, alias.status, alias.reason])])
+  links: list.map((link) => [link.employer, link.key, link.name, link.aliases.map((alias) => [alias.key, alias.name, alias.status, alias.reason, ...(alias.evidence?.length ? [alias.evidence] : [])])])
 }), { level: 9, mtime: 0 })
 const byShard = new Map()
 for (const link of links) {
-  const shard = surnameShard(link.name)
-  if (!byShard.has(shard)) byShard.set(shard, [])
-  byShard.get(shard).push(link)
+  // Include the group in alias slices too, so an old misspelled URL still finds its reviewed name.
+  for (const shard of new Set([link.name, ...link.aliases.map((alias) => alias.name)].map(surnameShard))) {
+    if (!byShard.has(shard)) byShard.set(shard, [])
+    byShard.get(shard).push(link)
+  }
 }
 for (const [shard, list] of byShard) writeFileSync(join(out, `${shard}.json.gzip`), packed(list))
 const slugOf = (at) => index.employers[at][3]

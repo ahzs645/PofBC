@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "candidates": 4445,
+  "frozenCandidateFileSha256": "ea26a1b0668aacfbc4b8ae85453dba0094dae081c684b62280f2f525e467080a",
+  "sourceBaselineCommit": "c76141a55",
+  "statuses": {
+    "hold-financial-row-not-established": 436,
+    "hold-primary-source-needed": 224,
+    "hold-two-primary-spellings": 2607,
+    "identity-supported-currency-treatment-held": 1,
+    "keep-apart-distinct-names-in-one-primary-schedule": 926,
+    "ready-for-rendered-source-review": 251
+  },
+  "rules": [
+    "Exact remuneration cents and disclosed expense cents; null is not zero.",
+    "Every compiled-only observation under the proposed alias must have a witness.",
+    "The monetary tuple must be unique to one official normalized name at this employer and year-label prefix.",
+    "Financial agreement is a source-row lead, not an identity decision; rendered originals must be reviewed before adoption.",
+    "No deletions, amount edits, date relabeling or currency conversion."
+  ],
+  "finalStatuses": {
+    "hold-financial-row-not-established": 436,
+    "hold-primary-source-needed": 224,
+    "hold-two-primary-spellings": 2607,
+    "identity-supported-currency-treatment-held": 1,
+    "keep-apart-distinct-names-in-one-primary-schedule": 926,
+    "verified-source-spelling-connection": 251
+  },
+  "visuallyReviewedCorrections": 251
+}
