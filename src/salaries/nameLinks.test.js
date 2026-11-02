@@ -117,6 +117,20 @@ test('the disclosed preferred spelling must belong to the reviewed pair', () => 
     preferredName: 'Ionescu, Diane', decision: 'verified', note: 'wrong preferred name' }]), /disclosed spellings/)
 })
 
+test('a reviewed punctuation correction preserves an older extraction-split connection', () => {
+  const rows = [['Alden, C olin MC', null, 99432, 4824, 0, 0, 'compiled'],
+    ['Alden,Colin MC', null, 80000, null, 0, 1, 'older'], ['Alden,Colin M.C.', null, 99432, 4824, 0, 0, 'official']]
+  const reviewed = [{ employer: employers[0][3], names: [rows[0][0], rows[2][0]], preferredName: rows[2][0], decision: 'verified', note: 'Original row reviewed' }]
+  const result = run(rows, reviewed)
+  assert.equal(result.links.length, 1)
+  assert.equal(result.links[0].name, rows[2][0])
+  assert.deepEqual(new Set(result.links[0].aliases.map((a) => a.name)), new Set(rows.slice(0, 2).map((r) => r[0])))
+  assert.ok(result.links[0].aliases.every((a) => a.status === 'verified'))
+  const conflicting = rows.map((r) => [...r]); conflicting[1][5] = 0
+  assert.equal(run(conflicting, reviewed).links[0].aliases.length, 1)
+  assert.equal(run(rows, [...reviewed, { employer: employers[0][3], names: rows.slice(0, 2).map((r) => r[0]), decision: 'reject', note: 'Explicitly kept apart' }]).links[0].aliases.length, 1)
+})
+
 test('person pages request every surname shard behind a canonical name, without unrelated rows', () => {
   const published = { links: [
     ['bci', 'ionescu|diana', 'Ionescu, Diana', [['lonescu|diana', 'lonescu, Diana', 'verified', 'source']]],

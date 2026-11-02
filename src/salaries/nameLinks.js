@@ -155,6 +155,23 @@ export const findNameLinks = (rows, { years, employers, reviewed = [] }) => {
   for (const bucket of buckets.values()) {
     if (bucket.length < 2) continue
     const slug = employers[bucket[0].employer]?.[3]
+    // A reviewed correction can move a split spelling out of its old family. Preserve its
+    // deterministic rejoining edge as well, without treating other compatible names as verified.
+    for (const spelling of bucket.filter((each) => placed.has(each.id))) {
+      const split = rejoined(spelling.given)
+      const other = split && bucket.find((each) => each !== spelling && each.given.join(' ') === split.join(' '))
+      if (!other || placed.has(other.id) || find(other) === find(spelling)) continue
+      const review = reviewOf.get(`${slug}|${[spelling.key, other.key].sort().join('~')}`)
+      if (review?.decision === 'reject') continue
+      const shared = [...spelling.periods.keys()].filter((at) => other.periods.has(at))
+      if (shared.some((at) => spelling.periods.get(at) !== other.periods.get(at))) continue
+      const target = bestOf(spelling)
+      decisions.push({ employer: slug, name: shown(other), key: other.key, target: shown(target), targetKey: target.key,
+        status: 'verified', reason: `Extraction split the given name: “${shown(spelling)}” is “${shown(other)}”; its reviewed source spelling is “${shown(target)}”`,
+        pay: Math.max(...other.periods.values(), ...spelling.periods.values()) })
+      join(other, spelling)
+      placed.add(other.id)
+    }
     for (const spelling of [...bucket].sort((a, b) => a.info - b.info).reverse()) {
       if (placed.has(spelling.id)) continue
       const split = rejoined(spelling.given)

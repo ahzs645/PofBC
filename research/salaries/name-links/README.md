@@ -11,6 +11,11 @@ pass did not change the links applied by the site. The
 checks every candidate against primary observations and adds 251 individually
 reviewed source-spelling corrections, with original-row evidence and safeguards
 against reusing a decision after its rows or sources change.
+The [continued review](continuation-2026-11-02/README.md) adds 43 more source-spelling
+corrections after 112 original-row readings and reconciles the entire 3,268-pair
+held queue: 35 pairs are connected by verified evidence, 60 stay separate under
+their original schedules, and 3,173 remain held. Ten of those held pairs already
+have a likely application link; that confidence has not been upgraded.
 
 Employers write the same person's name differently from year to year ("Garant, D." in 2017/18,
 "Garant, Daniel" in 2023/24), sources disagree, and extraction splits letters off ("Nevill, T homas").
@@ -29,6 +34,9 @@ Run `npm run build:name-links` (also run by `npm run build:salaries`). The rules
 - `reviewed.json` — decisions made by reading the records. They override the rules either way: add
   `"decision": "verified"` to join two spellings the rules miss, or `"reject"` to keep apart two the
   rules join.
+- `source-reviewed.json` — the previous 251 original-row spelling corrections, preserved.
+- `continuation-reviewed.json` — the additional 43 source-spelling corrections, checked against
+  their complete alias observations, exact source hashes, original pages and visual-review receipts.
 - `public/salaries/links/` — the joins the site loads, sliced by surname like the people index, plus
   `top.json.gzip` for the highest-paid browse.
 

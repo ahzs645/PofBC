@@ -37,27 +37,39 @@ export const validateReviewedNameConnections = (payload, rows, index) => {
     if (entry.decision !== 'verified' || entry.names?.length !== 2 || !entry.evidence?.length || !entry.proof?.witnesses?.length) throw new Error('Incomplete reviewed name evidence')
     const at = employers.get(entry.employer)
     if (at === undefined) throw new Error('Reviewed employer is absent')
-    const from = `${at}|${entry.proof.compiledNameKey}`
+    const sourceSpelling = entry.proof.kind === 'rendered-source-spelling'
+    if (entry.proof.kind && !sourceSpelling) throw new Error('Unknown reviewed name proof')
+    const from = `${at}|${sourceSpelling ? entry.proof.aliasNameKey : entry.proof.compiledNameKey}`
     const target = `${at}|${personKey(nameOnly(entry.preferredName))}`
+    const supportedNames = sourceSpelling ? [from, target] : [target]
     if (from === target || !entry.names.some((name) => `${at}|${personKey(nameOnly(name))}` === from)
       || !entry.names.some((name) => `${at}|${personKey(nameOnly(name))}` === target)) throw new Error('Reviewed names disagree with their proof')
-    if (seen.has(from)) throw new Error('A compiled spelling has conflicting reviewed targets')
+    if (seen.has(from)) throw new Error('A source spelling has conflicting reviewed targets')
     seen.add(from)
     const originals = byName.get(from) ?? []
-    if (!originals.length || originals.some((row) => !compiled(index.sources[row[6]])) || nameRowsFingerprint(originals, index) !== entry.proof.compiledRowsSha256) throw new Error('Compiled alias observations changed; review again')
+    if (!originals.length || (!sourceSpelling && originals.some((row) => !compiled(index.sources[row[6]])))
+      || nameRowsFingerprint(originals, index) !== (sourceSpelling ? entry.proof.aliasRowsSha256 : entry.proof.compiledRowsSha256)) throw new Error('Compiled or source alias observations changed; review again')
     const witnesses = entry.proof.witnesses.map((evidence) => {
       const row = byHash.get(evidence.rowSha256)
       const source = index.sources[evidence.sourceId]
       if (!row || compiled(source) || !source?.url || source.sha256 !== evidence.pdfSha256
         || row[6] !== evidence.sourceId || row[7] !== evidence.pdfPage
-        || `${row[4]}|${personKey(nameOnly(row[0]))}` !== target
+        || !supportedNames.includes(`${row[4]}|${personKey(nameOnly(row[0]))}`)
+        || (sourceSpelling && evidence.printedNameKey !== personKey(nameOnly(entry.preferredName)))
         || !entry.evidence.some((link) => link.sourceId === evidence.sourceId && link.pdfPage === evidence.pdfPage)) throw new Error('Original name witness changed; review again')
       return row
     })
+    if (sourceSpelling) {
+      const officialAliases = originals.filter((row) => !compiled(index.sources[row[6]]))
+      if (!officialAliases.length || !witnesses.some((row) => `${row[4]}|${personKey(nameOnly(row[0]))}` === target)
+        || officialAliases.some((row) => !witnesses.some((witness) => nameRecordFingerprint(witness, index) === nameRecordFingerprint(row, index)))) throw new Error('Every official alias row requires its own rendered spelling review and an existing target name')
+    }
     for (const row of originals) {
+      if (sourceSpelling && !compiled(index.sources[row[6]])) continue
       const key = signature(row, index.years)
       const names = officialByMoney.get(key)
-      if (row[3] == null || !names || names.size !== 1 || !names.has(target) || !witnesses.some((witness) => signature(witness, index.years) === key)) throw new Error('The source row no longer uniquely supports the spelling correction')
+      if (row[3] == null || !names || names.size !== 1 || !supportedNames.some((name) => names.has(name))
+        || !witnesses.some((witness) => signature(witness, index.years) === key)) throw new Error('The source row no longer uniquely supports the spelling correction')
     }
   }
   return payload.decisions

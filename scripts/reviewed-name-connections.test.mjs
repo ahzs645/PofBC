@@ -54,3 +54,36 @@ test('the employer, preferred name and candidate pair cannot drift or acquire co
   const duplicate = payload(); duplicate.decisions.push(structuredClone(duplicate.decisions[0]))
   assert.throws(() => validateReviewedNameConnections(duplicate, [original, retained], index), /conflicting/)
 })
+
+const parsedAlias = ['Murtby,Srinivasa', null, 351290, 11382, 0, 0, 'official', 180]
+const laterCorrectName = ['Murthy,Srinivasa', null, 360000, null, 0, 1, 'later', 20]
+const renderedIndex = { ...index, years: ['2023/24', '2024/25'], sources: { ...index.sources,
+  later: { url: 'https://example.test/later.pdf', sourceKind: 'official-pdf', sha256: 'later-hash' } } }
+const renderedPayload = () => ({ schemaVersion: 1, decisions: [{ employer: 'phsa', names: [parsedAlias[0], laterCorrectName[0]],
+  preferredName: laterCorrectName[0], decision: 'verified', evidence: [{ sourceId: 'official', pdfPage: 180 }, { sourceId: 'later', pdfPage: 20 }],
+  proof: { kind: 'rendered-source-spelling', aliasNameKey: 'murtby|srinivasa', aliasRowsSha256: nameRowsFingerprint([parsedAlias, retained], renderedIndex),
+    witnesses: [parsedAlias, laterCorrectName].map((row) => ({ rowSha256: nameRecordFingerprint(row, renderedIndex), sourceId: row[6],
+      pdfSha256: renderedIndex.sources[row[6]].sha256, pdfPage: row[7], printedNameKey: 'murthy|srinivasa' })) } }] })
+
+test('a parsed official typo needs every original row reviewed; a compiled alias still needs a unique complete financial witness', () => {
+  const rows = [parsedAlias, laterCorrectName, retained].map((row) => Object.freeze([...row]))
+  assert.equal(validateReviewedNameConnections(renderedPayload(), rows, renderedIndex).length, 1)
+  assert.deepEqual(rows, [parsedAlias, laterCorrectName, retained])
+  const missing = renderedPayload(); missing.decisions[0].proof.witnesses.shift()
+  assert.throws(() => validateReviewedNameConnections(missing, rows, renderedIndex), /Every official alias row/)
+  const unchecked = [...parsedAlias]; unchecked[7] = 181
+  const added = renderedPayload(); added.decisions[0].proof.aliasRowsSha256 = nameRowsFingerprint([parsedAlias, retained, unchecked], renderedIndex)
+  assert.throws(() => validateReviewedNameConnections(added, [...rows, unchecked], renderedIndex), /Every official alias row/)
+  const different = [...parsedAlias]; different[0] = 'Murthy,Sriram'
+  assert.throws(() => validateReviewedNameConnections(renderedPayload(), [...rows, different], renderedIndex), /no longer uniquely/)
+})
+
+test('a source spelling review cannot stand in for missing target rows, source pages, or a different printed name', () => {
+  const rows = [parsedAlias, laterCorrectName, retained]
+  const noTarget = renderedPayload(); noTarget.decisions[0].proof.witnesses.pop()
+  assert.throws(() => validateReviewedNameConnections(noTarget, rows, renderedIndex), /existing target/)
+  const differentPrint = renderedPayload(); differentPrint.decisions[0].proof.witnesses[0].printedNameKey = 'murtby|srinivasa'
+  assert.throws(() => validateReviewedNameConnections(differentPrint, rows, renderedIndex), /witness changed/)
+  const changedSource = structuredClone(renderedIndex); changedSource.sources.official.sha256 = 'new-pdf'
+  assert.throws(() => validateReviewedNameConnections(renderedPayload(), rows, changedSource), /witness changed/)
+})
