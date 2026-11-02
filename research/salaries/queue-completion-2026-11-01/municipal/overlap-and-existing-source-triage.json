@@ -1,0 +1,62 @@
+{
+  "date": "2026-11-01",
+  "newSourcePeriodScopeOverlaps": [],
+  "existingTargetJurisdictionOfficialScopesRetained": [
+    {
+      "manifest": {
+        "path": "research/salaries/municipal-ocr/sources.json",
+        "sha256": "7eb505e72f1c93d517beb37795da8a4aeaa427f48c24d22e1a991074fae1e6cd"
+      },
+      "sourceId": "municipal-ocr-town-of-creston-2024-elected-officials-p37",
+      "employerSlug": "town-of-creston",
+      "year": "2024",
+      "scope": "elected-officials",
+      "rows": 7
+    }
+  ],
+  "rootSuggestedAdditionalSourcesAlreadyAccepted": [
+    {
+      "sourceId": "lower-mainland-surrey-2025-employees",
+      "manifest": {
+        "path": "research/salaries/municipal-lower-mainland/sources.json",
+        "sha256": "53dab7a0f83adda87f1acdb062a3e0b935fc6bd8d1cf9706a4618fd44ee39adc"
+      },
+      "data": {
+        "path": "research/salaries/municipal-lower-mainland/surrey-2025-employees.json.gzip",
+        "sha256": "b55916668fe8cd58578ea99c64fa800c97c1e3dc2c70c35995297b1b96441ca8"
+      },
+      "status": "accepted",
+      "rows": 1543,
+      "finding": "Already accepted in the current baseline; no new rows or changes proposed."
+    },
+    {
+      "sourceId": "lower-mainland-north-vancouver-city-2022-employees",
+      "manifest": {
+        "path": "research/salaries/municipal-lower-mainland/sources.json",
+        "sha256": "53dab7a0f83adda87f1acdb062a3e0b935fc6bd8d1cf9706a4618fd44ee39adc"
+      },
+      "data": {
+        "path": "research/salaries/municipal-lower-mainland/north-vancouver-city-2022-employees.json.gzip",
+        "sha256": "dab7f3248968d789ddac5dce857ae3bbd56978edc93757847b3ec4ae176c20fa"
+      },
+      "status": "accepted",
+      "rows": 275,
+      "finding": "Already accepted in the current baseline; no new rows or changes proposed."
+    },
+    {
+      "sourceId": "municipal-small-village-of-montrose-2023-employee-remuneration",
+      "manifest": {
+        "path": "research/salaries/municipal-small/sources.json",
+        "sha256": "0fe6c0a282a9dda9785115f1ed7bb08314859e2cdb252a088b4bc4caac2e0eea"
+      },
+      "data": {
+        "path": "research/salaries/municipal-small/village-of-montrose-2023-employee-remuneration.json.gzip",
+        "sha256": "931654b1aad4a1fda5c31bb691c8d60623645aba3c0dee0893b3830bdc712ed2"
+      },
+      "status": "accepted",
+      "rows": 3,
+      "finding": "Already accepted in the current baseline; no new rows or changes proposed."
+    }
+  ],
+  "oldFilesModified": false
+}

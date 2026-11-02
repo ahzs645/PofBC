@@ -1,0 +1,49 @@
+{
+  "frozen": true,
+  "reviewer": "/root/recovery_health",
+  "originalFirstPass": {
+    "path": "research/salaries/queue-completion-2026-11-01/reviews/author-phsa-history-2018-19-006-23-name-peer-first-transcript.json",
+    "sha256": "82319f5c30d28ce54eb1edad65d5998a73306443a5257154175894b9d5fd8c63"
+  },
+  "earlierSourceAmendments": [
+    {
+      "path": "research/salaries/queue-completion-2026-11-01/reviews/author-phsa-history-2018-19-006-23-name-peer-precomparison-amendments.json",
+      "sha256": "7cfd74b4f4698bfd632cf53852e749642c71e7fef840cbf3bfa14fe80bb46a6d"
+    },
+    {
+      "path": "research/salaries/queue-completion-2026-11-01/reviews/author-phsa-history-2018-19-006-23-name-peer-postchoice-own-amendments.json",
+      "sha256": "f30f2570676e1fb07c77ba99fae9fdcd3c028d390d1f91f5a1dcd5132f4257a9"
+    }
+  ],
+  "freshThirdSourcePeer": {
+    "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-history-batches-peer-2018-19-006-four-comparison.json",
+    "sha256": "771ae03310ec3c0150bb3836b2ac935044591292abcb46d20caaff0ec9fc6059"
+  },
+  "afterChoicesAndThirdPeerOpened": true,
+  "corrections": [
+    {
+      "sequence": 210,
+      "firstPass": "Stanford-Terrale,Lydia",
+      "intermediatePeerReading": "Staniford-Terralle,Lydia",
+      "actualSourceFinal": "Staniford-Terrahe,Lydia",
+      "sourceView": {
+        "path": "/tmp/independent-phsa-municipal-2018-19-006/seq210-disagreement-actual2400.png",
+        "sha256": "6a1a43f971db8c5e96c15c0de42f2333116c9efcf93a669861e0f9f8db5487ce"
+      },
+      "reason": "Personally reread current original narrow source glyph: h has one ascending left stem with a joined right arch; my double-l segmentation was wrong. The dotted i in Staniford is separately visible."
+    },
+    {
+      "sequence": 225,
+      "firstPass": "Stephan,Eduardo Beringer",
+      "intermediatePeerReading": "Stephan,Eduardo Berninger",
+      "actualSourceFinal": "Stephan,Eduardo Berringer",
+      "sourceView": {
+        "path": "/tmp/independent-phsa-municipal-2018-19-006/seq225-disagreement-actual2400.png",
+        "sha256": "598ee0223525a14feb371070a37c70738abb1c9b8d2515ff64f0965f637cd81a"
+      },
+      "reason": "Personally reread original narrow source: two short r strokes precede the dotted i. My intermediate n arch was an erroneous joined reading."
+    }
+  ],
+  "oldFilesUnchanged": true,
+  "noMoneyOrWhole400Authority": true
+}

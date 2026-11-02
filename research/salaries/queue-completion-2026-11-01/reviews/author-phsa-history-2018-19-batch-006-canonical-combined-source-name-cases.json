@@ -1,0 +1,129 @@
+{
+  "frozen": true,
+  "sourceId": "phsa-2018-19",
+  "sourceSha256": "ddeba470b875451f6180eb442ed921f7902cc910d62a026c11ab298ca3d0440f",
+  "batch": "phsa-2018-19-006",
+  "cases": [
+    {
+      "physicalPage": 94,
+      "sourceRowOnPage": 2,
+      "sourceId": "phsa-2018-19",
+      "sourceSha256": "ddeba470b875451f6180eb442ed921f7902cc910d62a026c11ab298ca3d0440f",
+      "proposedName": "Sorensen,Michael Bjorn",
+      "chosenContextualTranscription": "Sorensen,Michael Bjorn",
+      "visibleAlternatives": [
+        "Sorensen,Michael Bjorn",
+        "Sorensen,Michael Bjom"
+      ],
+      "ambiguityKind": "rn-m-source-segmentation",
+      "qualificationPolicy": {
+        "path": "research/salaries/queue-completion-2026-11-01/phsa/source-name-segmentation-review-policy-002.json",
+        "sha256": "fcfc11b7872b8c111018dd5b74494ea25391d14e1e905aa327f6a435c6e1e40c"
+      },
+      "caseProvenByPixels": false,
+      "cropSha256": "31bff141ef2ae379cf2270380fd98980c6c6cdb1996558ca3ef975b2a6337e35",
+      "observedSourceSpans": [
+        {
+          "start": 20,
+          "end": 22,
+          "primary": "rn",
+          "other": "m"
+        }
+      ],
+      "actualSourceEvidence": {
+        "native300Name": {
+          "path": "research/salaries/queue-completion-2026-11-01/phsa/canonical-review/phsa-2018-19-direct-neither/p094-r02-native300-name.png",
+          "sha256": "afbb5c04375df7b84b5165263c8806f995949d0d6ae74255d3e90c004b5cf8a5",
+          "sourcePixelBox": [
+            202,
+            742,
+            1658,
+            798
+          ]
+        },
+        "wholePage600Name": {
+          "path": "research/salaries/queue-completion-2026-11-01/phsa/canonical-review/phsa-2018-19-direct-neither/p094-r02-whole600-name.png",
+          "sha256": "b916e605c6f743fd02660bbb4560fdac968eb4e68ea20414e0b11600b2c76f47",
+          "sourcePixelBox": [
+            404,
+            1484,
+            3316,
+            1596
+          ]
+        },
+        "native300Context": {
+          "path": "research/salaries/queue-completion-2026-11-01/phsa/canonical-review/phsa-2018-19-direct-neither/p094-r02-native300-context.png",
+          "sha256": "a5fffb8cba609bd9fa3381937455d404248cd8b53f81bd62147377a66ea9eb00",
+          "sourcePixelBox": [
+            202,
+            642,
+            1658,
+            898
+          ]
+        },
+        "wholePage600Context": {
+          "path": "research/salaries/queue-completion-2026-11-01/phsa/canonical-review/phsa-2018-19-direct-neither/p094-r02-whole600-context.png",
+          "sha256": "4f9bd1f98e6d4e80b875bc64faf5e6e292cf13da43d56168ee72faf79cafb1af",
+          "sourcePixelBox": [
+            404,
+            1284,
+            3316,
+            1796
+          ]
+        },
+        "native300FullRow": {
+          "path": "research/salaries/queue-completion-2026-11-01/phsa/canonical-review/phsa-2018-19-direct-neither/p094-r02-native300-fullrow.png",
+          "sha256": "32c56535f721b5d7cdd7d548b99c0e28c063ab40f55a6f6b3ff9ff2a8d3a45c3",
+          "sourcePixelBox": [
+            0,
+            742,
+            2550,
+            798
+          ]
+        },
+        "wholePage600FullRow": {
+          "path": "research/salaries/queue-completion-2026-11-01/phsa/canonical-review/phsa-2018-19-direct-neither/p094-r02-whole600-fullrow.png",
+          "sha256": "60904dca86863c21ceea12b803632193557aaa3634a3dd9389ce075c51a7a341",
+          "sourcePixelBox": [
+            0,
+            1484,
+            5100,
+            1596
+          ]
+        }
+      },
+      "priorEffectiveOverlay": {
+        "path": "research/salaries/queue-completion-2026-11-01/phsa/overlays/phsa-2018-19-manual-overlay-006.json",
+        "sha256": "721daed9af98ab1a0e6d40d636c08313d84feaa689c3ccb07d8c0e5e9e934003"
+      },
+      "assumptionBasis": "Current actual native300 and whole600 source fields personally read. Genuine low-resolution lowercase shoulder segmentation retained where explicitly marked, with current source alphabetical/context basis stated where used; no dictionary/prior-year identity authority. No arbitrary letter-family expansion.",
+      "heldV3ChosenNameUnchanged": true,
+      "heldV3CompleteVisibleAlternatives": [
+        "Sorensen,Michael Bjorn"
+      ],
+      "revisionKind": "new-explicit-source-join-qualification",
+      "independentCurrentSourcePeer": {
+        "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-education-2018-19-canonical-twelve-final-current-source-comparison.json",
+        "sha256": "feef3bba0d24086dfdc026b4e23bcd40480149710858f014a048a59efa087e82"
+      },
+      "batch": "phsa-2018-19-006",
+      "rootActualSourceAcceptance": {
+        "path": "research/salaries/queue-completion-2026-11-01/reviews/root-phsa-history-2018-19-canonical-nine-qualified-three-direct-source-acceptance.json",
+        "sha256": "7ba2b69db6967a234bb59fea3f9f33fec47f0ca20155c39b4b3b658c812e8eed"
+      }
+    }
+  ],
+  "canonicalSourceAcceptance": {
+    "path": "research/salaries/queue-completion-2026-11-01/reviews/root-phsa-history-2018-19-canonical-nine-qualified-three-direct-source-acceptance.json",
+    "sha256": "7ba2b69db6967a234bb59fea3f9f33fec47f0ca20155c39b4b3b658c812e8eed"
+  },
+  "underlyingOriginalReview": {
+    "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-municipal-history-2018-19-006-resolutions.json",
+    "sha256": "5a850917629b7f501f0a1f3185b1f74b28cd83006cd3970bf00ed7e9b1c416e4"
+  },
+  "newRootCaseLedger": {
+    "path": "research/salaries/queue-completion-2026-11-01/reviews/root-phsa-history-2018-19-batch-006-canonical-new-join-cases.json",
+    "sha256": "d95bf35c3aa33e81f52419ae8fe4e00e8498cde967a4252531226a51b0c470ee"
+  },
+  "oldCaseDictionariesRetainedExceptExplicitRootCanonicalExpansions": true
+}

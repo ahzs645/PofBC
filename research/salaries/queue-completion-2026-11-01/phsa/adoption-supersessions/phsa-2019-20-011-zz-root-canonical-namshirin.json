@@ -1,0 +1,57 @@
+{
+  "frozen": true,
+  "reviewedOn": "2026-11-02",
+  "sourceId": "phsa-2019-20",
+  "sourceSha256": "0e31ac2054f0c2d4ef78797185dddd96cc0cdf2eab94bd6841fa24e1c38e7d02",
+  "batch": "phsa-2019-20-011",
+  "supersededRootAdoption": {
+    "path": "research/salaries/queue-completion-2026-11-01/reviews/root-phsa-history-2019-20-batch-011-segmentation-adoption-canonical-retired.json",
+    "sha256": "bbf9d8e0d20d39b008188eb1ca39a86b38f2b1fd87db870dbd59487a0db66889"
+  },
+  "effectiveRootAdoption": {
+    "path": "research/salaries/queue-completion-2026-11-01/reviews/root-phsa-history-2019-20-batch-011-canonical-namshirin-segmentation-adoption.json",
+    "sha256": "3457d0a5f385e832edcbc3913b093fc1ee246e977b44c312f16923804373b68a"
+  },
+  "supersededCaseLedger": {
+    "path": "research/salaries/queue-completion-2026-11-01/reviews/root-phsa-history-2019-20-batch-011-source-segmentation-qualifications-canonical-retired.json",
+    "sha256": "5072fbc8144b239c3d9217d1b3e82a7e81ed4f0e8fa8a53d92f7079507c08e5e"
+  },
+  "effectiveCaseLedger": {
+    "path": "research/salaries/queue-completion-2026-11-01/reviews/root-phsa-history-2019-20-batch-011-canonical-namshirin-source-cases.json",
+    "sha256": "f89ec23be91f07f7aa0216cc00dc8177b0d629f5a4c5a73e06a3bfa124ba8659"
+  },
+  "authorizedChangedNameCases": [
+    {
+      "physicalPage": 78,
+      "sourceRowOnPage": 20,
+      "allowedFields": [
+        "name"
+      ],
+      "oldPrimary": "Namshim,Peyman",
+      "newPrimary": "Namshirin,Peyman",
+      "oldVisibleAlternatives": [
+        "Namshim,Peyman",
+        "Namshim,Peyrnan",
+        "Namshirn,Peyman",
+        "Namshirn,Peyrnan",
+        "Narnshim,Peyman",
+        "Narnshim,Peyrnan",
+        "Narnshirn,Peyman",
+        "Narnshirn,Peyrnan"
+      ],
+      "newVisibleAlternatives": [
+        "Namshirin,Peyman",
+        "Namshirin,Peyrnan",
+        "Narnshirin,Peyman",
+        "Narnshirin,Peyrnan"
+      ],
+      "originalFullRowCropSha256": "1f2061193752311137bd704ad13175107372afbf7e9314624ae0ce2ec2b16312"
+    }
+  ],
+  "oldFrozenFilesRemainUnchanged": true,
+  "canonicalExactSourceAcceptance": {
+    "path": "research/salaries/queue-completion-2026-11-01/reviews/root-phsa-history-2019-20-canonical-risk-last33-final-current-source-comparison.json",
+    "sha256": "9645235cc6b35463e23999597125dcc6b941e319385efac750d920c736f6d818"
+  },
+  "reason": "Exact scalar source correction plus narrower actual-source rn/m family at only78r20; preserve current19case scope, everyother18case dictionary and both earlierdirect retirement histories."
+}

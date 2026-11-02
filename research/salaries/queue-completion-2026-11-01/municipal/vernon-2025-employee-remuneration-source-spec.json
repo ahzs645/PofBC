@@ -1,0 +1,132 @@
+{
+  "id": "queue-completion-municipal-vernon-2025-employee-remuneration",
+  "employerSlug": "city-of-vernon",
+  "employerName": "City of Vernon",
+  "sector": "Municipalities",
+  "year": "2025",
+  "periodType": "calendar",
+  "periodStart": "2025-01-01",
+  "periodEnd": "2025-12-31",
+  "sourceUrl": "https://www.vernon.ca/sites/default/files/2026-08/SOFI%20Signed%20-%20CORRECTED.pdf",
+  "sourceIndexUrl": "https://www.vernon.ca/government-services/departments/financial-services/financial-statements-annual-reports",
+  "sha256": "83a9e5a60b67e1df5016762ab5e8bd9cc3fc054e55ddc28b1a4c1a8cff7d0197",
+  "file": "vernon-2025-employee-remuneration.json.gzip",
+  "category": "employee-remuneration",
+  "scope": "employee-remuneration",
+  "title": "City of Vernon 2025 SOFI: complete named employee remuneration and expenses",
+  "status": "accepted",
+  "verified": true,
+  "verifiedOn": "2026-11-01",
+  "sourceKind": "official-scanned-pdf",
+  "rowCount": 264,
+  "totalRemuneration": 28678528,
+  "totalExpenses": 380683,
+  "pages": [
+    5,
+    6,
+    7
+  ],
+  "currency": "CAD",
+  "amountUnit": "dollars",
+  "threshold": 75000,
+  "completeEmployeeSchedule": true,
+  "retainCompiledPartition": true,
+  "dataSha256": "b04ebd02e091b7df43c9324ff38ed26a3e37d8080a85d66c5ada331b2398940e",
+  "notes": [
+    "Every published name, title where present, separate remuneration and expense cell was checked on actual PDF-painted source images; independent Tesseract and Paddle OCR outputs and their source-reviewed corrections remain separate.",
+    "An independent peer transcribed the complete source-image scope before full candidate comparison. Prior context disclosures and reviewer-only rereads remain in the immutable peer receipts.",
+    "Repeated names or initials remain distinct literal observations; no identity merging, full-name enrichment, annualization or redistribution of aggregate amounts.",
+    "The separate source expense-inclusive Total column, when printed, is retained only in supporting evidence and is never substituted for remuneration.",
+    "Printed schedule year and signed approval are independently recorded; URL/upload dates are not used as reporting-year evidence.",
+    "The official index links the corrected signed original. The cover labels SOFI unaudited; the signed approval page approves the statements and schedules. No audited-compensation claim is made."
+  ],
+  "definitions": {
+    "remuneration": "Employee column: 2025 Gross Earnings. Council column: 2025 Remuneration.",
+    "expenses": "Employee column: Expenses (Net of Tax). Council column: Expenses.",
+    "financialStatementRelation": "Total gross earnings differ from total wages included in the City's Consolidated Statement of Operations due to the employer portion of benefit costs.",
+    "publishedEmployeeSelection": "Employee Earnings >$75,000",
+    "belowThresholdLabel": "Employee Earnings <$75,000",
+    "noEmployeeJobTitlesPublished": true
+  },
+  "publicWarning": "The 264 named employee rows total CAD 28,678,528 gross earnings and 380,683 expenses net of tax. Gross earnings agree with the printed named subtotal; the printed named-expense subtotal is 381,690, so literal row expenses minus that control are -1,007. Printed named expenses 381,690 plus below-threshold expenses 100,126 equal the printed all-employee expense total 481,816. Individual cells remain as printed, without balancing or a cause inferred. All 25 literal zero expenses remain 0. Employee job titles are not published and remain null. Retain the compiled partition: no compatible same-calendar-year compiled cohort has been established. Root owns any future period mapping or deletion; full strict multiset comparison is pinned separately.",
+  "validation": {
+    "method": "Complete independent Tesseract and Paddle OCR geometry readers, complete author actual-original image review, and independent full-scope image-first peer transcription with final candidate comparison.",
+    "allFinalRowFieldsOriginalImageVerified": true,
+    "rawOcrReadersAgree": false,
+    "allRawMachineDifferencesOriginalImageResolved": true,
+    "completeEmployeeSchedule": true,
+    "compiledPartitionRetained": true,
+    "compiledPartitionRetentionReason": "Retain the compiled partition: no compatible same-calendar-year compiled cohort has been established. Root owns any future period mapping or deletion; full strict multiset comparison is pinned separately.",
+    "evidenceFile": "evidence/vernon-2025-complete-source.json.gzip",
+    "evidenceSha256": "fd162efcc2844b6a4876c9c660fa4ac7b9c0e413864108b354f927efe4f83c52",
+    "sourceContextReview": {
+      "path": "research/salaries/queue-completion-2026-11-01/municipal/vernon-2025-context-review.json",
+      "sha256": "1e76b757683a24a93f9b3d45aac6234b577cf54724f2ad5da5369c8ce691c2cf"
+    },
+    "independentPeerReview": {
+      "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-vernon-queue-2025-final-source-closure.json",
+      "sha256": "80e277e477673e2840dcf861c7432415a39fd261febb52a651f9b520edd5a89f"
+    },
+    "salaryPagesReviewedInFull": [
+      5,
+      6,
+      7
+    ],
+    "periodEvidence": [
+      {
+        "physicalPage": 4,
+        "text": "2025 Remuneration"
+      },
+      {
+        "physicalPage": 5,
+        "text": "2025 Gross Earnings"
+      },
+      {
+        "physicalPage": 6,
+        "text": "2025 Gross Earnings"
+      },
+      {
+        "physicalPage": 7,
+        "text": "2025 Gross Earnings"
+      }
+    ],
+    "signedApproval": {
+      "physicalPage": 3,
+      "visuallySigned": true,
+      "statement": "Approves all the statements and schedules included in the Statement of Financial Information.",
+      "signatories": [
+        {
+          "name": "Elma Hamming, CPA, CMA",
+          "position": "Director, Financial Services",
+          "signedDate": "2026-05-13"
+        },
+        {
+          "name": "Victor I Cumming",
+          "position": "Mayor",
+          "signedDate": "2026-05-13"
+        }
+      ]
+    },
+    "nullExpenses": 0,
+    "explicitZeroExpenses": 25,
+    "nullPositions": 264,
+    "controls": {
+      "printed": {
+        "rows": 264,
+        "remuneration": 28678528,
+        "expenses": 381690
+      },
+      "observed": {
+        "remuneration": 28678528,
+        "knownExpenses": 380683
+      },
+      "namedRowsMinusPrinted": {
+        "remuneration": 0,
+        "expenses": -1007
+      }
+    }
+  },
+  "publishedSelectionCriterion": "Employee Earnings >$75,000",
+  "thresholdBasis": "employee gross earnings",
+  "thresholdComparison": ">"
+}

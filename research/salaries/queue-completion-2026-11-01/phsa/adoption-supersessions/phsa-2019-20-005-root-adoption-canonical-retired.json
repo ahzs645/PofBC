@@ -1,0 +1,65 @@
+{
+  "frozen": true,
+  "sourceId": "phsa-2019-20",
+  "sourceSha256": "0e31ac2054f0c2d4ef78797185dddd96cc0cdf2eab94bd6841fa24e1c38e7d02",
+  "batch": "phsa-2019-20-005",
+  "supersededRootAdoption": {
+    "path": "research/salaries/queue-completion-2026-11-01/reviews/root-phsa-history-2019-20-batch-005-closed-three-canonical-exact-name-adoption.json",
+    "sha256": "bbaf0a990b33c503acaaa3c075e5fba33ddbd19d2f394fe1cc11046b44fc56c5"
+  },
+  "effectiveRootAdoption": {
+    "path": "research/salaries/queue-completion-2026-11-01/reviews/root-phsa-history-2019-20-005-segmentation-adoption-canonical-retired.json",
+    "sha256": "31459b033b17b5e906a9f8bb6a4a2d882372aafd784a0592669e39fb4cb816c2"
+  },
+  "supersededCaseLedger": {
+    "path": "research/salaries/queue-completion-2026-11-01/reviews/root-phsa-history-2019-20-batch-005-closed-three-canonical-source-cases.json",
+    "sha256": "54334c9e9e4897df27ebdec8289fc5328183fbcf924fff6c6a68ba3b04957eef"
+  },
+  "effectiveCaseLedger": {
+    "path": "research/salaries/queue-completion-2026-11-01/reviews/root-phsa-history-2019-20-005-source-segmentation-qualifications-canonical-retired.json",
+    "sha256": "4c56a2a6263acf13d3e742c7bec63e11643ab0af409dea27b2a7349a12521d54"
+  },
+  "authorizedChangedNameCases": [],
+  "authorizedRetiredNameCases": [
+    {
+      "sourceId": "phsa-2019-20",
+      "sourceSha256": "0e31ac2054f0c2d4ef78797185dddd96cc0cdf2eab94bd6841fa24e1c38e7d02",
+      "batch": "phsa-2019-20-005",
+      "physicalPage": 34,
+      "sourceRowOnPage": 17,
+      "allowedFields": [
+        "name"
+      ],
+      "originalFullRowCropSha256": "41cbb029d31d2712b371fb8ed9c06d5d37556ac56ad6b523c6a2ee4006d59467",
+      "oldPrimary": "Foley,Terri Lynn Marie",
+      "oldVisibleAlternatives": [
+        "Foley,Terri Lynn Marie",
+        "Foley,Temi Lynn Marie"
+      ],
+      "currentDirectLiteral": "Foley,Terri Lynn Marie",
+      "requiresDirectLiteral": true,
+      "originalRootAdoption": {
+        "path": "research/salaries/queue-completion-2026-11-01/reviews/root-phsa-history-2019-20-batch-005-closed-three-canonical-exact-name-adoption.json",
+        "sha256": "bbaf0a990b33c503acaaa3c075e5fba33ddbd19d2f394fe1cc11046b44fc56c5"
+      },
+      "originalCaseLedger": {
+        "path": "research/salaries/queue-completion-2026-11-01/reviews/root-phsa-history-2019-20-batch-005-closed-three-canonical-source-cases.json",
+        "sha256": "54334c9e9e4897df27ebdec8289fc5328183fbcf924fff6c6a68ba3b04957eef"
+      },
+      "currentSourceDecision": {
+        "path": "research/salaries/queue-completion-2026-11-01/reviews/root-phsa-history-2019-20-education-risk-ten-current-source-acceptance.json",
+        "sha256": "3193e3f131029e797fba672924e979694163dd392a47718e8aec177060ecf72b"
+      },
+      "independentSourcePeer": {
+        "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-education-2019-20-canonical-risk34-final-current-source-observations-for-root-adjudication.json",
+        "sha256": "8c7fb9ac977bb006a05130db16b5f87ffa29ca536ccdf7a790d727d8edf1e0eb"
+      }
+    }
+  ],
+  "retirementImplementationPolicy": {
+    "path": "research/salaries/queue-completion-2026-11-01/phsa/source-name-exact-retirement-policy-002.json",
+    "sha256": "34aeabd2a62d30f28a64bc5bb4821ed209664b7dc422cb1b55346bf4a94e47a3"
+  },
+  "oldFrozenFilesRemainUnchanged": true,
+  "reason": "Exact current original-image human/root decisions retire only the two listed wrong source-name families; no financial/row/other-case scope change."
+}

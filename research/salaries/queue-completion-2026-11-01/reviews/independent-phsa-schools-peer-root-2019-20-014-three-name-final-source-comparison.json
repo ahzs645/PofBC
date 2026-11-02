@@ -1,0 +1,90 @@
+{
+  "sourceId": "phsa-2019-20",
+  "sourceSha256": "0e31ac2054f0c2d4ef78797185dddd96cc0cdf2eab94bd6841fa24e1c38e7d02",
+  "batch": "phsa-2019-20-014",
+  "reviewedOn": "2026-11-02",
+  "frozenAtUtc": "2026-11-02T02:57:15.030377+00:00",
+  "scope": "Exactly3 source names45/116/120 only, no broader60/300/money/whole-source acceptance.",
+  "coldPeerRaw": {
+    "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-schools-peer-root-2019-20-014-three-name-source-first.json",
+    "sha256": "d31f0b097872416012dc220733e4cbf5a75d34f4e8dbc6a2a9f652261879efc7"
+  },
+  "scopedAuthorRootChoices": {
+    "path": "research/salaries/queue-completion-2026-11-01/reviews/root-phsa-history-2019-20-batch-014-three-scoped-choices-after-fresh-raw.json",
+    "sha256": "b4e5feec03cc1d7dfb553b2f15647f74fdf045a0cb2a3f64202db816b6ef7954"
+  },
+  "sourcePixelVerification": {
+    "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-schools-peer-root-2019-20-014-three-source-pixel-verification.json",
+    "sha256": "0198534e8182bdf22409e96b7a09c0e9dc7049a61db01e6bbd256280e87a2b80"
+  },
+  "own120Correction": {
+    "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-schools-peer-root-2019-20-014-own120-final-n-source-correction.json",
+    "sha256": "e93a6c8ba6e823c9cc7246e4d80010109769a85b6939a7381dec1e631fe36f69"
+  },
+  "rows": [
+    {
+      "sequence": 45,
+      "physicalPage": 98,
+      "sourceRowOnPage": 4,
+      "cropSha256": "8d7af7543ecefd97df16618739b8bf8cb9fe854bcb641fefdd846a99e6805fd6",
+      "field": "name",
+      "peerColdPrimary": "Shih,Kuei Han",
+      "currentPersonalSourcePrimary": "Shih,Kuei Han",
+      "rootFirstAndCurrentPrimary": "Shih,Kuei Han",
+      "authorFirstPrimary": "Shih,Kuei Hsin",
+      "authorCurrentBeforeCorrections": "Shih,Kuei Hsin",
+      "matchesRoot": true,
+      "authorCorrectionNeeded": true,
+      "sourceUniqueLiteral": true,
+      "finiteAlternatives": [
+        "Shih,Kuei Han"
+      ],
+      "peerOwnPostChoiceCorrection": false
+    },
+    {
+      "sequence": 116,
+      "physicalPage": 99,
+      "sourceRowOnPage": 37,
+      "cropSha256": "030625c748f35d6d70a521cd013e4d919bff34f9cb95be918d29a0a7d191a7cc",
+      "field": "name",
+      "peerColdPrimary": "Sinosich,Breanne Marie",
+      "currentPersonalSourcePrimary": "Sinosich,Breanne Marie",
+      "rootFirstAndCurrentPrimary": "Sinosich,Breanne Marie",
+      "authorFirstPrimary": "Sirosich,Breanne Marie",
+      "authorCurrentBeforeCorrections": "Sirosich,Breanne Marie",
+      "matchesRoot": true,
+      "authorCorrectionNeeded": true,
+      "sourceUniqueLiteral": true,
+      "finiteAlternatives": [
+        "Sinosich,Breanne Marie"
+      ],
+      "peerOwnPostChoiceCorrection": false
+    },
+    {
+      "sequence": 120,
+      "physicalPage": 99,
+      "sourceRowOnPage": 41,
+      "cropSha256": "d0f6f5efa75c2a96fda8f03669aec3d252c6383ee00d9e479abe5f37657dbe6d",
+      "field": "name",
+      "peerColdPrimary": "Sitter,Meaghan",
+      "currentPersonalSourcePrimary": "Sitter,Meaghann",
+      "rootFirstAndCurrentPrimary": "Sitter,Meaghann",
+      "authorFirstPrimary": "Sitter,Meerghann",
+      "authorCurrentBeforeCorrections": "Sitter,Meeghann",
+      "matchesRoot": true,
+      "authorCorrectionNeeded": true,
+      "sourceUniqueLiteral": true,
+      "finiteAlternatives": [
+        "Sitter,Meaghann"
+      ],
+      "peerOwnPostChoiceCorrection": true
+    }
+  ],
+  "count": 3,
+  "peerColdMatchesFinal": 2,
+  "rootColdMatchesFinal": 3,
+  "peerOwnPostChoiceCorrections": 1,
+  "authorCanonicalCorrectionsRequested": 3,
+  "result": "All3 final unique literal source names match root first/current; author canonical names require additive corrections. Earlier false hypotheses withdrawn as reading errors, not qualified variants.",
+  "acceptedEmployeeRows": 0
+}

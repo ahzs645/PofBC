@@ -1,0 +1,202 @@
+{
+  "reviewer": "/root/recovery_review",
+  "reviewedOn": "2026-11-01",
+  "verdict": "PASS-reviewed-current-integration-code-and-acquisition-v2-inputs; final-nine-source-release-remains-gated",
+  "codeAndCiPins": [
+    {
+      "path": "scripts/review-salary-queue-completion.py",
+      "sha256": "90c3376d01f721c740b7bdf2ce0c19c54fc9e9efdf7e18cbd93e9c729abf250a"
+    },
+    {
+      "path": "scripts/finish_salary_queue_release_inputs.py",
+      "sha256": "98c76663e2d88918ac01c083be58aa0569a923c78ccecbf347b4a151c74beeeb"
+    },
+    {
+      "path": "scripts/finish_salary_queue_overlap.py",
+      "sha256": "29b4a456fc19715f9af236c560376044b2c359f28b99b088c00330de5a73d83e"
+    },
+    {
+      "path": "scripts/test_salary_queue_completion.py",
+      "sha256": "055c85cae5e32011f0db4c7085d06a895c6f13e8af08291173920a029653c77d"
+    },
+    {
+      "path": "scripts/review-salary-held-resolution.py",
+      "sha256": "69fcd76a50be653596f996b58ede98e9ca30e794b9c7b84910afa650aef938b5"
+    },
+    {
+      "path": "scripts/test_salary_held_resolution.py",
+      "sha256": "2727b2025de1b43f024e08f72fc9f4d076bd92bc33ba3acc3f8ec6f6adb9b7bc"
+    },
+    {
+      "path": "scripts/salary_release_audit.py",
+      "sha256": "386415db12a7f433804ed5498c9f4bbeebc0cccbc41bda46d2e57b9da5c9950b"
+    },
+    {
+      "path": ".github/workflows/salaries.yml",
+      "sha256": "a31b031826c5824d5531527f2420ae335fa8e900062a1a96eae8c98637d61b16"
+    },
+    {
+      "path": "package.json",
+      "sha256": "ce7cc503711fe8b4541a0d3d4149bcce0e2daff8ebedecfdf9502f40a22b5ca5"
+    },
+    {
+      "path": "scripts/build-salaries.mjs",
+      "sha256": "800aaa62f2c0fa68ce12928013b95592d1f4e93a765f79ad0235707b9b96dd58"
+    }
+  ],
+  "scope": [
+    "All current queue gate/helper/overlap code and tests read in full; exact changed frozen-PR36 validation and its generic audit helper reviewed.",
+    "CI/package changes checked: PR36 command uses --frozen; new queue command runs in salary reconciliation and queue outputs must replay without gitdiff.",
+    "No holdout candidate files opened. No production/global/author/frozen files edited."
+  ],
+  "baseline": {
+    "pin": {
+      "path": "research/salaries/queue-completion-2026-11-01/baseline.json.gzip",
+      "sha256": "6d562bee00a8a2ca73f3f54f80e3b9dbd9a27627d96ffc83f2c6e8b5fab839cc"
+    },
+    "repositoryCommit": "8a30db0af112875abddac793b144af75f11d7339",
+    "canonicalIndexSha256": "581794b441444b186cec9d84de6c11ace3684af44ae75bbd4577a46e57b85d54",
+    "metadataYearsEmployerIndexAndCountsMatchCanonicalCommit": true,
+    "allBaselineSourceMetadataEntries": 1015,
+    "priorOfficialRecords": 805387,
+    "baselineTotalRows": 1037040,
+    "currentPriorSourceMetadataAllExact": true,
+    "fullPublishedBaselineRowMultisetComparisonIsEnforcedByReleaseGateNotClaimedAsNewManualImageReview": true
+  },
+  "failClosedFindingsClosed": [
+    {
+      "finding": "Baseline metadata/count snapshot lacked a direct required hashpin.",
+      "closure": "Gate now requires acceptance.baselineFileSha256 and pins baseline.json.gzip before using metadata/counts."
+    },
+    {
+      "finding": "Nine PHSA years alone did not establish employee/full-schedule scope.",
+      "closure": "verify_historical_phsa enforces exact9years, PHSA employer, employee-remuneration, completeEmployeeSchedule True both top-level and validation."
+    },
+    {
+      "finding": "Unsent outbox status depended only on a hashpin/parentclaim.",
+      "closure": "verify_outbox requires four unique exact remaining tasklinks, matching employer/period, sent/submitted false, no authorizedfees/formalFOI and all four actual-contact/form/fee counters integerzero."
+    },
+    {
+      "finding": "Cents fingerprint silently truncated synthetic fractionalcent drift.",
+      "closure": "Both queuefingerprint and overlap money parsing now require finite actualnumeric JSON amounts with exactcent representation; bool/string/nonfinite/subcentfail. Actual3289proof replays unchanged."
+    },
+    {
+      "finding": "V1 cross-collection data paths violated existing importer boundary.",
+      "closure": "V2 copies four byte-identical payloads into active releasecollection. Existingbuilder is byte-identical to canonical baseline, including pathguard. Rejectedprototype preserved under integration/release-inputs-v1."
+    }
+  ],
+  "acquisitionV2": {
+    "originalFrozen105FileSet": {
+      "path": "research/salaries/queue-completion-2026-11-01/acquisition/candidate-freeze.json",
+      "sha256": "681f0bf71ba2a8cb5aeead32f89f5698f920c930acb2c22bde437a982ae7d5cf"
+    },
+    "all105FilesHashExact": true,
+    "originalManifest": {
+      "path": "research/salaries/queue-completion-acquisition/sources.json",
+      "sha256": "4b06e21e635220ab88ae0346ced441f515be3c4a8635c8d0651ce2874b25b570"
+    },
+    "activeManifest": {
+      "path": "research/salaries/queue-completion-acquisition-release/sources.json",
+      "sha256": "61f7b2f5c04b2c63fe28a647e419d482ec24ef51831c5f8f54b88c0ca5ccff44"
+    },
+    "adoption": {
+      "path": "research/salaries/queue-completion-2026-11-01/integration/acquisition-metadata-adoption.json",
+      "sha256": "fa8fe824186e651510652c152f362bf214be562a4b06c3e52b9e5ebca8a2b0ca"
+    },
+    "localCopies": [
+      {
+        "sourceId": "queue-completion-providence-2023-24-employees",
+        "original": {
+          "path": "research/salaries/queue-completion-acquisition/providence-2023-24-employees.json.gzip",
+          "sha256": "b9f4367622d685d0fbc5a6fc468ec87bde18191b5c5df9ba95ed9161de19ebe0"
+        },
+        "activeLocalCopy": {
+          "path": "research/salaries/queue-completion-acquisition-release/providence-2023-24-employees.json.gzip",
+          "sha256": "b9f4367622d685d0fbc5a6fc468ec87bde18191b5c5df9ba95ed9161de19ebe0"
+        }
+      },
+      {
+        "sourceId": "queue-completion-providence-2023-24-board-numeric-pay",
+        "original": {
+          "path": "research/salaries/queue-completion-acquisition/providence-2023-24-board-numeric-pay.json.gzip",
+          "sha256": "b62155c1cefb484610320842b511fac496a837eb889d1b739c22f6db1479827c"
+        },
+        "activeLocalCopy": {
+          "path": "research/salaries/queue-completion-acquisition-release/providence-2023-24-board-numeric-pay.json.gzip",
+          "sha256": "b62155c1cefb484610320842b511fac496a837eb889d1b739c22f6db1479827c"
+        }
+      },
+      {
+        "sourceId": "queue-completion-vch-2020-21-employees",
+        "original": {
+          "path": "research/salaries/queue-completion-acquisition/vch-2020-21-employees.json.gzip",
+          "sha256": "483bd77198c4380dfd6f679a34dbad933b28a300a1a30b61b1c629cc9293e1ce"
+        },
+        "activeLocalCopy": {
+          "path": "research/salaries/queue-completion-acquisition-release/vch-2020-21-employees.json.gzip",
+          "sha256": "483bd77198c4380dfd6f679a34dbad933b28a300a1a30b61b1c629cc9293e1ce"
+        }
+      },
+      {
+        "sourceId": "queue-completion-vch-2020-21-board-numeric-pay",
+        "original": {
+          "path": "research/salaries/queue-completion-acquisition/vch-2020-21-board-numeric-pay.json.gzip",
+          "sha256": "935e90a9c69b0f2e9f74fcd98588abf5faf2543efbb98f6483f02cca1dbd41fa"
+        },
+        "activeLocalCopy": {
+          "path": "research/salaries/queue-completion-acquisition-release/vch-2020-21-board-numeric-pay.json.gzip",
+          "sha256": "935e90a9c69b0f2e9f74fcd98588abf5faf2543efbb98f6483f02cca1dbd41fa"
+        }
+      }
+    ],
+    "onlyMetadataAmendments": "TwoProvidence publicWarnings and their two validation.compiledPartitionRetentionReason strings; bothVCH sourceobjects otherwise exact, allpayment/source/data/scope/periodfields unchanged.",
+    "onlyActiveAcquisitionReleaseCollectionRegistered": true,
+    "replacementManifest": {
+      "path": "research/salaries/queue-completion-replacements/sources.json",
+      "sha256": "3013319d5dc25ee84bf8fb0d3f49d4ca307b039d67aa9602a859b5b19b81f6dc"
+    },
+    "comparison": {
+      "path": "research/salaries/queue-completion-2026-11-01/integration/compiled-comparison.json",
+      "sha256": "379b60c0db4d709158f131b2d52195c52d71c4cd5c2213e705b0ab3f02095418"
+    },
+    "independentReplacementPeer": {
+      "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-queue-compiled-replacement-review.json",
+      "sha256": "1adbad00cefa3a2a927a476d2d7064b785b51d7cd0771822fff79876a8d1b6a8"
+    },
+    "compiledScope": "Exactly3289completeProvidence employee copies selected;588officialdashes remainnull; all7742VCHcompiledrows retained despite7734matches and8titledrows. No partialoverlap deletion.",
+    "immutablePrototypeDiscardRecord": {
+      "path": "research/salaries/queue-completion-2026-11-01/integration/release-inputs-v1/discarded-prototype.json",
+      "sha256": "909c2102595367efecdb88af099c61d5dadeaf575566144f27a47c50dcd3cd4c"
+    }
+  },
+  "independentReplays": [
+    {
+      "command": "python -m unittest discover -s scripts -p test_salary_queue_completion.py -v",
+      "result": "PASS12tests after finalgate fixes"
+    },
+    {
+      "command": "python scripts/finish_salary_queue_release_inputs.py --check",
+      "result": "PASS fourlocalidenticaldatafiles/fourmetadatafields/3289replacement"
+    },
+    {
+      "command": "python scripts/finish_salary_queue_overlap.py --check",
+      "result": "PASS exactexisting frozencomparison/pairing bytes; two sources,3289replacements"
+    },
+    {
+      "command": "python scripts/review-salary-held-resolution.py --frozen",
+      "result": "PASS immutablePR36records1037040/sourceInputsVerified6/noamendments"
+    },
+    {
+      "command": "python -m unittest discover -s scripts -p test_salary_held_resolution.py -v",
+      "result": "PASS14tests including laterunrelatedtotals,warning,period,scope and rowremoval failures"
+    }
+  ],
+  "limits": [
+    "Full queue build_report was not invoked: parentacceptance/finalnine-sourcePHSA freezes are not yet available, and this independent audit must not regenerate releaseoutputs.",
+    "Final release still requires allfourworker/rootfreezes, every newsource explicitpeerreceipt/hashcoverage, allnineliteralholdouts andpolicygates, whole-sourcefield/control closure and exactcaseadoptions/publicwarnings.",
+    "This code/datafingerprint review is not personalsourceimagetranscription of805387olderpayments; no such coverage is claimed.",
+    "Node suite not repeated by thisreviewer; parent reports its22tests passed."
+  ],
+  "sourceReleaseAcceptanceClaim": false,
+  "allRequestedCodeAuditFindingsAddressedAtPinnedVersion": true
+}

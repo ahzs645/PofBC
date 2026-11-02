@@ -1,0 +1,67 @@
+{
+  "frozen": true,
+  "reviewedOn": "2026-11-02",
+  "frozenAtUtc": "2026-11-02T03:11:00.824743+00:00",
+  "sourceId": "phsa-2021-22",
+  "sourceSha256": "944c99fa7b7ede643cb4c426a5e9ab30aa906d8f81fda379f0206e4b0cdcd25c",
+  "batch": "phsa-2021-22-001",
+  "scope": "Additive one-direct-name canonical v2 amendment within the existing300-row review; no other current source, global data or frozen original edits.",
+  "originalReview": {
+    "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-education-2021-22-001-resolutions.json",
+    "sha256": "2f919f031f4b0e00a876a33ef6430006df5969cd1bbd8fbfbf02558d5b833c16"
+  },
+  "currentV2Review": {
+    "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-education-2021-22-001-resolutions-v2.json",
+    "sha256": "2ca81132e00f92bce27464861234e8ffaffe72c29aec8be7213497c5d187b498"
+  },
+  "originalOverlay": {
+    "path": "research/salaries/queue-completion-2026-11-01/phsa/overlays/phsa-2021-22-manual-overlay-001.json",
+    "sha256": "2438e1871f687b4c19d4597dc55a49b86d0c49532d63d872ace7342971753afd"
+  },
+  "currentV2Overlay": {
+    "path": "research/salaries/queue-completion-2026-11-01/phsa/overlays/phsa-2021-22-manual-overlay-001-v2.json",
+    "sha256": "9fa257efcb8355a75f48de56d6073a4db325703cb916c62de16a8379c1580723"
+  },
+  "canonicalSourceAmendment": {
+    "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-education-2021-22-001-Bell-canonical-name-only-source-amendment.json",
+    "sha256": "f3804485d63f71fe6e21bd0a9aced54e8b032b5ead060e6fba0bbd05ceff62f1"
+  },
+  "exactPayloadChanges": [
+    {
+      "physicalPage": 11,
+      "sourceRowOnPage": 24,
+      "before": "Bell,Riteshni",
+      "after": "Bell,Ritteshni"
+    }
+  ],
+  "assertions": {
+    "other299ResolvedRowsIdentical": true,
+    "allMonetaryTitleEmployerAndPageFieldsIdentical": true,
+    "all25QualificationCaseMetadataInReviewIdentical": true,
+    "allOriginal107FrozenFilesHashVerifiedUnchanged": true,
+    "oldFreeze": {
+      "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-education-2021-22-001-freeze.json",
+      "sha256": "3f7cee6fd3abdb4eae5d4fad8a29ce5b4f3d2588d1935fe5916bea3fcd95a6c9"
+    }
+  },
+  "replay": {
+    "consumer": "scripts/finish_salary_phsa_resolutions.py",
+    "consumerSha256AtVerification": "6722c0c73a52c233bd4ac9807a78769765bb5aa5259a0b9e7447e4215fdf4973",
+    "emit300Rows": "PASS",
+    "offlineCheck": "PASS",
+    "reviewedFieldCounts": {
+      "name": 253,
+      "expenses": 23,
+      "remuneration": 52
+    },
+    "exactGlyphRows": 275,
+    "qualifiedTypographyRows": 25
+  },
+  "tests": {
+    "command": "python scripts/test_finish_salary_phsa.py",
+    "result": "PASS",
+    "tests": 38,
+    "durationSeconds": 10.028
+  },
+  "limits": "Name correction is current-source backed and direct. Original author misspelling and all previous evidence remain immutable; no author fresh-cold claim. Root full-source acceptance and financial adapters remain separate."
+}

@@ -1,0 +1,111 @@
+{
+  "frozen": true,
+  "accepted": true,
+  "closed": true,
+  "unresolved": [],
+  "reviewer": "/root",
+  "reviewedOn": "2026-11-02",
+  "sourceId": "phsa-2016-17",
+  "sourceSha256": "31f7a1af80186bf81139fd693b36e733333a06c2ab1a4c5191bd6ee9b3623a53",
+  "batch": "phsa-2016-17-002",
+  "cases": [
+    {
+      "sourceId": "phsa-2016-17",
+      "sourceSha256": "31f7a1af80186bf81139fd693b36e733333a06c2ab1a4c5191bd6ee9b3623a53",
+      "batch": "phsa-2016-17-002",
+      "physicalPage": 45,
+      "sourceRowOnPage": 13,
+      "cropSha256": "8e86f440beaf3c37f8856a76a0ef0f480a32bdcc7129faf0864fd33dcd29828e",
+      "allowedFields": [
+        "name"
+      ],
+      "chosenContextualTranscription": "Gernack,Trevor",
+      "proposedName": "Gernack,Trevor",
+      "visibleAlternatives": [
+        "Gernack,Trevor",
+        "Gemack,Trevor"
+      ],
+      "ambiguityKind": "rn-m-source-segmentation",
+      "qualificationPolicy": {
+        "path": "research/salaries/queue-completion-2026-11-01/phsa/source-name-segmentation-review-policy-002.json",
+        "sha256": "fcfc11b7872b8c111018dd5b74494ea25391d14e1e905aa327f6a435c6e1e40c"
+      },
+      "sourceSpans": [
+        {
+          "zeroBasedPrimaryIndex": 2,
+          "primaryVisibleSegment": "rn",
+          "visibleAlternative": "m"
+        }
+      ],
+      "caseProvenByPixels": false,
+      "assumptionBasis": "Current native300/wholepage600 originalsource compact rn/m join supports only these2 source spellings. Fresh currentFY16 source reader and municipal currentoriginal views agree onpreferredGernack/exactGemack; differentFY18name exposure explicitly disclosed. Root postexpectedsource inspection confirms finitepair, not a unique glyph/identity/dictionary proof; oldGermack extra stem is a literalerror.",
+      "actualSourceEvidence": {
+        "native300Name": {
+          "path": "research/salaries/queue-completion-2026-11-01/phsa/canonical-review/phsa-2016-17-direct-neither/p045-r13-native300-name.png",
+          "sha256": "41af5aad5f2e0987e778dddb28a6dce5be977150e786a4616eb9e817e805ad94",
+          "sourcePixelBox": [
+            205,
+            1614,
+            1510,
+            1670
+          ]
+        },
+        "wholePage600Name": {
+          "path": "research/salaries/queue-completion-2026-11-01/phsa/canonical-review/phsa-2016-17-direct-neither/p045-r13-whole600-name.png",
+          "sha256": "6dfca1547d77b51d9fe07bf62271128ba504ec07c8de0d3e5f9d8ac83e3ea1e3",
+          "sourcePixelBox": [
+            410,
+            3228,
+            3020,
+            3340
+          ]
+        },
+        "native300Context": {
+          "path": "research/salaries/queue-completion-2026-11-01/phsa/canonical-review/phsa-2016-17-direct-neither/p045-r13-native300-context.png",
+          "sha256": "bea6b7c9e3c170a063630c5eebdb8e155b98bc0d1e6b24aed889f4e88e93c771",
+          "sourcePixelBox": [
+            205,
+            1514,
+            1510,
+            1770
+          ]
+        },
+        "wholePage600Context": {
+          "path": "research/salaries/queue-completion-2026-11-01/phsa/canonical-review/phsa-2016-17-direct-neither/p045-r13-whole600-context.png",
+          "sha256": "3b9c7fea6dbf37ef0eda57c85e33e73afb5d5edd49c8168a49edf125adbfde98",
+          "sourcePixelBox": [
+            410,
+            3028,
+            3020,
+            3540
+          ]
+        },
+        "native300FullRow": {
+          "path": "research/salaries/queue-completion-2026-11-01/phsa/canonical-review/phsa-2016-17-direct-neither/p045-r13-native300-fullrow.png",
+          "sha256": "eed6329e657d11dcbf6c01c217f029e533a38f45b5747671d0954119b962bdd2",
+          "sourcePixelBox": [
+            0,
+            1614,
+            2550,
+            1670
+          ]
+        },
+        "wholePage600FullRow": {
+          "path": "research/salaries/queue-completion-2026-11-01/phsa/canonical-review/phsa-2016-17-direct-neither/p045-r13-whole600-fullrow.png",
+          "sha256": "96369e1de22c62f0727b269954673cfb96734f3f4d4b4e8dbd729827911a054d",
+          "sourcePixelBox": [
+            0,
+            3228,
+            5100,
+            3340
+          ]
+        }
+      },
+      "canonicalSourceAcceptance": {
+        "path": "research/salaries/queue-completion-2026-11-01/reviews/root-phsa-history-2016-17-canonical-direct-two-source-acceptance.json",
+        "sha256": "8c96ee347feb74a92773b500aa69bb3025ef7ccc6b853bebd8a678b9a6ccb6ee"
+      }
+    }
+  ],
+  "publicWarningRequired": true
+}

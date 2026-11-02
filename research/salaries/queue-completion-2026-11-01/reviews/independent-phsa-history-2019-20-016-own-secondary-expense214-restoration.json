@@ -1,0 +1,33 @@
+{
+  "frozen": true,
+  "reviewedOn": "2026-11-02",
+  "reviewer": "/root/held_health_review",
+  "sourceId": "phsa-2019-20",
+  "sourceSha256": "0e31ac2054f0c2d4ef78797185dddd96cc0cdf2eab94bd6841fa24e1c38e7d02",
+  "batch": "phsa-2019-20-016",
+  "priorFrozenCurrent": {
+    "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-history-2019-20-016-all282-money-own-whole600-reread.json",
+    "sha256": "9114d281feb8f4f0b20095bec6e98cec50679362c1f1b2d7f1525ae58d6a2049"
+  },
+  "sequence": 214,
+  "physicalPage": 116,
+  "sourceRowOnPage": 29,
+  "field": "expenses",
+  "cropSha256": "01cf98e4847e488e936f2b3fb9f9d75ac819889357be565a7287434ed562ab9f",
+  "coldFirstLiteral": 502,
+  "ownIncorrectSecondaryWhole600Reading": 902,
+  "correctedCurrentLiteral": 502,
+  "uncertainty": null,
+  "sourceProof": [
+    {
+      "path": "/tmp/queue-completion-phsa/phsa-2019-20/review-images/phsa-2019-20-016-target-views/0214-expenses.png",
+      "sha256": "bb3a80c345dd71814f9d87b4a63d32ec57354b6791dc40467e30b8050c0f0f78"
+    },
+    {
+      "path": "/workspace/salary-review-municipal-tmp/peer-held-2019-20-016-last99-money/independent/0214-expenses-own-wholepage600.png",
+      "sha256": "1e9dddada9bb3dc36dad91376aeaaab89883ed32fc9d8e577b79125651686a72"
+    }
+  ],
+  "basis": "After fresh municipal99 discrepancy, personally reopened unchanged native300 and independent originalwholePDF600 source crop. First digit has horizontal top/left upright and open lower-left appropriate5, not9 closed upper counter. Literal502 restores correct frozen coldfirst; ownsecondary902 was reviewer error. Do not allege sourceimage change.",
+  "limits": "Oneexpensefieldonly; oldraw/current282/scoped99bytes immutable. No new pay/name authority, numericqualification or broaderfieldacceptance."
+}

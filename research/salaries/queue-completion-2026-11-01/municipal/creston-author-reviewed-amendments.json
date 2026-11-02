@@ -1,0 +1,34 @@
+{
+  "date": "2026-11-01",
+  "sourceSha256": "24a6cd0394f42596859f15cb4a1ec811c28c5a5c09e004a3766aa78130396ac6",
+  "initialAuthorTranscriptSha256": "aabd7bc29713fb5464400759428e1e2a1130fd3c2e12b904483cd87e6b444a33",
+  "basis": "After both author and peer had independently frozen complete image transcriptions, compared exact disagreements and reread unchanged actualPDF1200dpi narrow source renders. These are author reading corrections; no cell is set from a printed subtotal, public name lookup, or common-name inference.",
+  "corrections": [
+    {
+      "sourceRow": 12,
+      "field": "remuneration",
+      "before": 77595,
+      "after": 77585,
+      "sourceCrop": "/tmp/queue-completion-municipal/independent/creston-grant-actual1200.png",
+      "reason": "Disputed source digit has two enclosed counters; actual printed amount77,585."
+    },
+    {
+      "sourceRow": 11,
+      "field": "name",
+      "before": "Fuller, C. Terrance",
+      "after": "Fuller, C. Terrence",
+      "sourceCrop": "/tmp/queue-completion-municipal/independent/creston-fuller-actual1200.png",
+      "reason": "Actual source middle vowel is e; literalTerrence retained."
+    },
+    {
+      "sourceRow": 27,
+      "field": "name",
+      "before": "Ziefflie, Brad",
+      "after": "Zieffle, Brad",
+      "sourceCrop": "/tmp/queue-completion-municipal/independent/creston-ziefflie-actual1200.png",
+      "reason": "No additional i visible between l and e; actual printed surnameZieffle retained without enrichment."
+    }
+  ],
+  "reviewerReadingCorrectionsNotIssuerCorrections": true,
+  "acceptedRows": 0
+}

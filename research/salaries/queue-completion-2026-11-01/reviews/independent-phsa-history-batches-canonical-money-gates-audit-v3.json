@@ -1,0 +1,985 @@
+{
+  "frozen": true,
+  "reviewedOn": "2026-11-02",
+  "reviewer": "/root/recovery_review",
+  "scope": "Additive technical audit of canonical0176,01253/394,01442,01536, exact source archive fallback and one actual unchanged-money rebase. No source-data acceptance.",
+  "script": {
+    "path": "scripts/finish_salary_phsa_quality_final_gates_v3.py",
+    "sha256": "a19daabfd2c9f10ff1f40631c2227eec17a323573e96c3ccc6b372d46ad2903c"
+  },
+  "codePins": [
+    {
+      "path": "scripts/finish_salary_phsa_money_peer.py",
+      "sha256": "f541b5785bb79665923acbc7c8ec29e7b8dbf40aac28e54977dc48451d38299f"
+    },
+    {
+      "path": "scripts/finish_salary_phsa_money_canonical.py",
+      "sha256": "9ae14266f382abb38dc0257c2e773d1722113214548a98f3b9d4f014a294b2a9"
+    },
+    {
+      "path": "scripts/finish_salary_phsa_money_standard.py",
+      "sha256": "044b79c4c18d2786b354e06f82d0afb1487506f8e9b62ab09b3bea64ae5ea268"
+    },
+    {
+      "path": "scripts/finish_salary_phsa_money_supersessions.py",
+      "sha256": "3ac02ddb0c6fcd6b34f5821fc948934811e0d0f9b3d7d8db873cca84fddf634f"
+    },
+    {
+      "path": "scripts/finish_salary_phsa_triangulation.py",
+      "sha256": "243eb2e4c23e8d4f9b029f01303d9c2d9765eee16d1ee404176aaa98105c7a61"
+    },
+    {
+      "path": "scripts/test_finish_salary_phsa.py",
+      "sha256": "8f4a274c2d03f65b9a1851608665387b56c3ac5fa0566eee8d8ad7c1abd52f91"
+    }
+  ],
+  "earlierAuditsRemainImmutable": [
+    {
+      "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-history-batches-canonical-promoter-code-review-002-real-closures.json",
+      "sha256": "6d8b1db8f5bc05daeefcc92ef0c25978724df2b85e9fbcaf5ce155536d2fc1f4"
+    }
+  ],
+  "actualMoneyDerivationReplays": [
+    {
+      "confirmation": {
+        "path": "research/salaries/queue-completion-2026-11-01/phsa/triangulation/money-peer-confirmations-022.json",
+        "sha256": "6e649bf527469dafd60ddfcaf17dd53d93a4bc49de9f55b1f7b85a6166ecd7c0"
+      },
+      "fields": 6,
+      "sourceReceiptSchema": "canonical-mixed-source-peer-with-unchanged-positive-money-v1"
+    },
+    {
+      "confirmation": {
+        "path": "research/salaries/queue-completion-2026-11-01/phsa/triangulation/money-peer-confirmations-023.json",
+        "sha256": "34fd632d9beca3d6c5c13860dfe723ac85c6c3709d8513eed667fb8696dc542c"
+      },
+      "fields": 53,
+      "sourceReceiptSchema": "complete-root-positive-table-with-one-independent-canonical-correction-v1"
+    },
+    {
+      "confirmation": {
+        "path": "research/salaries/queue-completion-2026-11-01/phsa/triangulation/money-peer-confirmations-025.json",
+        "sha256": "97c998ec16fb28746f76b5fd450f0d7f966b24109b432d68ef6b0db41328626c"
+      },
+      "fields": 42,
+      "sourceReceiptSchema": "complete-root-canonical-money-table-with-first-secondary-and-fresh-third-history-v1"
+    },
+    {
+      "confirmation": {
+        "path": "research/salaries/queue-completion-2026-11-01/phsa/triangulation/money-peer-confirmations-026.json",
+        "sha256": "90b60335597f5a791d613307a4c819440702903a0ea319abf61c575df383e525"
+      },
+      "fields": 36,
+      "sourceReceiptSchema": "canonical-wholepage-literal-tuple-money-peer-v1"
+    }
+  ],
+  "moneyEvidenceInputs": [
+    {
+      "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-history-peer-health-2019-20-017-thirtyone-final-source-comparison.json",
+      "sha256": "3cbf6740231f0f1e5eb1952dc3d4891e0d3a34a3153260a3a7ccc15c57c4b9e0"
+    },
+    {
+      "path": "research/salaries/queue-completion-2026-11-01/phsa/overlays/phsa-2019-20-manual-overlay-017.json",
+      "sha256": "eafac9ef9c9cd65ff59171cb3e223e3b48200b348a2e492a26f0541eec16e0ae"
+    },
+    {
+      "path": "research/salaries/queue-completion-2026-11-01/reviews/root-phsa-history-2019-20-batch-012-fiftythree-money-final-source-comparison-v2.json",
+      "sha256": "3b66fbc847ceb77368066ebcb5e5de66a1874fe13623108750af9cdedda42ef9"
+    },
+    {
+      "path": "research/salaries/queue-completion-2026-11-01/phsa/overlays/phsa-2019-20-manual-overlay-012.json",
+      "sha256": "e58fc630c7cbeb82fcd3e7bd8434f064ae16d24aa7d486df61d1db0efbe936fb"
+    },
+    {
+      "path": "research/salaries/queue-completion-2026-11-01/reviews/root-phsa-history-2019-20-batch-014-fortytwo-money-final-source-comparison.json",
+      "sha256": "94e891612e607e9f5edcdb9a9432d587f37b92acb7a0484110aafe90f2264841"
+    },
+    {
+      "path": "research/salaries/queue-completion-2026-11-01/phsa/overlays/phsa-2019-20-manual-overlay-014.json",
+      "sha256": "7d3c3e90349fc612a7727e5feab595c5381d2bc2aef2c3b885522190b9f3d04b"
+    },
+    {
+      "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-history-batches-peer-municipal-2019-20-015-thirtysix-money-final-comparison.json",
+      "sha256": "c39a3a72d0ba99f7b9dc0e38afc58b9f1f71cb3ad3c8dbb4ae2d10d4639f540e"
+    },
+    {
+      "path": "research/salaries/queue-completion-2026-11-01/phsa/overlays/phsa-2019-20-manual-overlay-015.json",
+      "sha256": "f33a994f727b7572d36bcea4ce2219bab2e4e44f2a0307d67810460c9bbc157f"
+    }
+  ],
+  "checks": [
+    {
+      "case": "money-peer-confirmations-022.json exact pinned derivation bytes",
+      "expected": "accept",
+      "passed": true
+    },
+    {
+      "case": "money-peer-confirmations-022.json wrong effective source",
+      "expected": "reject",
+      "passed": true,
+      "errorType": "ValueError",
+      "reason": "Source-money peer and overlay identities differ"
+    },
+    {
+      "case": "money-peer-confirmations-022.json missing effective requested money field",
+      "expected": "reject",
+      "passed": true,
+      "errorType": "ValueError",
+      "reason": "Effective source overlay differs from the fresh peer money/crop"
+    },
+    {
+      "case": "017 six money actual first literal",
+      "expected": "reject",
+      "passed": true,
+      "errorType": "ValueError",
+      "reason": "Canonical mixed raw/first/current/source facts differ"
+    },
+    {
+      "case": "017 raw explicitly unfrozen",
+      "expected": "reject",
+      "passed": true,
+      "errorType": "ValueError",
+      "reason": "Canonical mixed source-first chronology differs"
+    },
+    {
+      "case": "017 complete mixed31 target shrink",
+      "expected": "reject",
+      "passed": true,
+      "errorType": "ValueError",
+      "reason": "Canonical mixed source/first/proof field scope differs"
+    },
+    {
+      "case": "017 false independent source pixel evidence",
+      "expected": "reject",
+      "passed": true,
+      "errorType": "ValueError",
+      "reason": "Canonical mixed raw/first/current/source facts differ"
+    },
+    {
+      "case": "money-peer-confirmations-023.json exact pinned derivation bytes",
+      "expected": "accept",
+      "passed": true
+    },
+    {
+      "case": "money-peer-confirmations-023.json wrong effective source",
+      "expected": "reject",
+      "passed": true,
+      "errorType": "ValueError",
+      "reason": "Source-money peer and overlay identities differ"
+    },
+    {
+      "case": "money-peer-confirmations-023.json missing effective requested money field",
+      "expected": "reject",
+      "passed": true,
+      "errorType": "ValueError",
+      "reason": "Effective source overlay differs from the fresh peer money/crop"
+    },
+    {
+      "case": "012394 actual cold value differs",
+      "expected": "reject",
+      "passed": true,
+      "errorType": "ValueError",
+      "reason": "Canonical394 fresh cold reading/source/old error facts differ"
+    },
+    {
+      "case": "012394 raw explicitly unfrozen",
+      "expected": "reject",
+      "passed": true,
+      "errorType": "ValueError",
+      "reason": "Canonical394 additive correction hides its original order or scope"
+    },
+    {
+      "case": "012394 source-only target missing",
+      "expected": "reject",
+      "passed": true,
+      "errorType": "ValueError",
+      "reason": "Canonical394 complete53/single-correction scope differs"
+    },
+    {
+      "case": "012394 numeric boolean alias",
+      "expected": "reject",
+      "passed": true,
+      "errorType": "ValueError",
+      "reason": "Canonical394 fresh cold reading/source/old error facts differ"
+    },
+    {
+      "case": "money-peer-confirmations-023.json archived bytes replay absent workspace (80, 13, 'expenses')",
+      "expected": "accept",
+      "passed": true
+    },
+    {
+      "case": "money-peer-confirmations-023.json archived bytes replay absent workspace (80, 18, 'remuneration')",
+      "expected": "accept",
+      "passed": true
+    },
+    {
+      "case": "money-peer-confirmations-023.json archived bytes replay absent workspace (80, 20, 'expenses')",
+      "expected": "accept",
+      "passed": true
+    },
+    {
+      "case": "money-peer-confirmations-023.json archived bytes replay absent workspace (80, 28, 'expenses')",
+      "expected": "accept",
+      "passed": true
+    },
+    {
+      "case": "money-peer-confirmations-023.json archived bytes replay absent workspace (80, 38, 'remuneration')",
+      "expected": "accept",
+      "passed": true
+    },
+    {
+      "case": "money-peer-confirmations-023.json archived bytes replay absent workspace (80, 42, 'expenses')",
+      "expected": "accept",
+      "passed": true
+    },
+    {
+      "case": "money-peer-confirmations-023.json archived bytes replay absent workspace (80, 44, 'remuneration')",
+      "expected": "accept",
+      "passed": true
+    },
+    {
+      "case": "money-peer-confirmations-023.json archived bytes replay absent workspace (80, 50, 'expenses')",
+      "expected": "accept",
+      "passed": true
+    },
+    {
+      "case": "money-peer-confirmations-023.json archived bytes replay absent workspace (80, 58, 'expenses')",
+      "expected": "accept",
+      "passed": true
+    },
+    {
+      "case": "money-peer-confirmations-023.json archived bytes replay absent workspace (81, 5, 'expenses')",
+      "expected": "accept",
+      "passed": true
+    },
+    {
+      "case": "money-peer-confirmations-023.json archived bytes replay absent workspace (81, 6, 'expenses')",
+      "expected": "accept",
+      "passed": true
+    },
+    {
+      "case": "money-peer-confirmations-023.json archived bytes replay absent workspace (81, 24, 'remuneration')",
+      "expected": "accept",
+      "passed": true
+    },
+    {
+      "case": "money-peer-confirmations-023.json archived bytes replay absent workspace (81, 28, 'expenses')",
+      "expected": "accept",
+      "passed": true
+    },
+    {
+      "case": "money-peer-confirmations-023.json archived bytes replay absent workspace (81, 36, 'expenses')",
+      "expected": "accept",
+      "passed": true
+    },
+    {
+      "case": "money-peer-confirmations-023.json archived bytes replay absent workspace (81, 45, 'remuneration')",
+      "expected": "accept",
+      "passed": true
+    },
+    {
+      "case": "money-peer-confirmations-023.json archived bytes replay absent workspace (81, 52, 'expenses')",
+      "expected": "accept",
+      "passed": true
+    },
+    {
+      "case": "money-peer-confirmations-023.json archived bytes replay absent workspace (82, 7, 'expenses')",
+      "expected": "accept",
+      "passed": true
+    },
+    {
+      "case": "money-peer-confirmations-023.json archived bytes replay absent workspace (82, 10, 'remuneration')",
+      "expected": "accept",
+      "passed": true
+    },
+    {
+      "case": "money-peer-confirmations-023.json archived bytes replay absent workspace (82, 34, 'remuneration')",
+      "expected": "accept",
+      "passed": true
+    },
+    {
+      "case": "money-peer-confirmations-023.json archived bytes replay absent workspace (82, 38, 'remuneration')",
+      "expected": "accept",
+      "passed": true
+    },
+    {
+      "case": "money-peer-confirmations-023.json archived bytes replay absent workspace (82, 41, 'expenses')",
+      "expected": "accept",
+      "passed": true
+    },
+    {
+      "case": "money-peer-confirmations-023.json archived bytes replay absent workspace (82, 42, 'remuneration')",
+      "expected": "accept",
+      "passed": true
+    },
+    {
+      "case": "money-peer-confirmations-023.json archived bytes replay absent workspace (82, 56, 'expenses')",
+      "expected": "accept",
+      "passed": true
+    },
+    {
+      "case": "money-peer-confirmations-023.json archived bytes replay absent workspace (83, 22, 'expenses')",
+      "expected": "accept",
+      "passed": true
+    },
+    {
+      "case": "money-peer-confirmations-023.json archived bytes replay absent workspace (83, 28, 'remuneration')",
+      "expected": "accept",
+      "passed": true
+    },
+    {
+      "case": "money-peer-confirmations-023.json archived bytes replay absent workspace (83, 38, 'remuneration')",
+      "expected": "accept",
+      "passed": true
+    },
+    {
+      "case": "money-peer-confirmations-023.json archived bytes replay absent workspace (83, 54, 'expenses')",
+      "expected": "accept",
+      "passed": true
+    },
+    {
+      "case": "money-peer-confirmations-023.json archived bytes replay absent workspace (84, 25, 'remuneration')",
+      "expected": "accept",
+      "passed": true
+    },
+    {
+      "case": "money-peer-confirmations-023.json archived bytes replay absent workspace (84, 38, 'remuneration')",
+      "expected": "accept",
+      "passed": true
+    },
+    {
+      "case": "money-peer-confirmations-023.json archived bytes replay absent workspace (84, 42, 'remuneration')",
+      "expected": "accept",
+      "passed": true
+    },
+    {
+      "case": "money-peer-confirmations-023.json archived bytes replay absent workspace (84, 42, 'expenses')",
+      "expected": "accept",
+      "passed": true
+    },
+    {
+      "case": "money-peer-confirmations-023.json archived bytes replay absent workspace (84, 43, 'remuneration')",
+      "expected": "accept",
+      "passed": true
+    },
+    {
+      "case": "money-peer-confirmations-023.json archived bytes replay absent workspace (84, 50, 'remuneration')",
+      "expected": "accept",
+      "passed": true
+    },
+    {
+      "case": "money-peer-confirmations-023.json archived bytes replay absent workspace (84, 53, 'remuneration')",
+      "expected": "accept",
+      "passed": true
+    },
+    {
+      "case": "money-peer-confirmations-023.json archived bytes replay absent workspace (85, 3, 'expenses')",
+      "expected": "accept",
+      "passed": true
+    },
+    {
+      "case": "money-peer-confirmations-023.json archived bytes replay absent workspace (85, 6, 'remuneration')",
+      "expected": "accept",
+      "passed": true
+    },
+    {
+      "case": "money-peer-confirmations-023.json archived bytes replay absent workspace (85, 25, 'remuneration')",
+      "expected": "accept",
+      "passed": true
+    },
+    {
+      "case": "money-peer-confirmations-023.json archived bytes replay absent workspace (85, 36, 'expenses')",
+      "expected": "accept",
+      "passed": true
+    },
+    {
+      "case": "money-peer-confirmations-023.json archived bytes replay absent workspace (86, 7, 'remuneration')",
+      "expected": "accept",
+      "passed": true
+    },
+    {
+      "case": "money-peer-confirmations-023.json archived bytes replay absent workspace (86, 22, 'expenses')",
+      "expected": "accept",
+      "passed": true
+    },
+    {
+      "case": "money-peer-confirmations-023.json archived bytes replay absent workspace (86, 30, 'expenses')",
+      "expected": "accept",
+      "passed": true
+    },
+    {
+      "case": "money-peer-confirmations-023.json archived bytes replay absent workspace (86, 32, 'expenses')",
+      "expected": "accept",
+      "passed": true
+    },
+    {
+      "case": "money-peer-confirmations-023.json archived bytes replay absent workspace (86, 39, 'remuneration')",
+      "expected": "accept",
+      "passed": true
+    },
+    {
+      "case": "money-peer-confirmations-023.json archived bytes replay absent workspace (87, 3, 'remuneration')",
+      "expected": "accept",
+      "passed": true
+    },
+    {
+      "case": "money-peer-confirmations-023.json archived bytes replay absent workspace (87, 7, 'remuneration')",
+      "expected": "accept",
+      "passed": true
+    },
+    {
+      "case": "money-peer-confirmations-023.json archived bytes replay absent workspace (87, 11, 'remuneration')",
+      "expected": "accept",
+      "passed": true
+    },
+    {
+      "case": "money-peer-confirmations-023.json archived bytes replay absent workspace (87, 13, 'expenses')",
+      "expected": "accept",
+      "passed": true
+    },
+    {
+      "case": "money-peer-confirmations-023.json archived bytes replay absent workspace (87, 52, 'expenses')",
+      "expected": "accept",
+      "passed": true
+    },
+    {
+      "case": "money-peer-confirmations-023.json archived bytes replay absent workspace (88, 7, 'remuneration')",
+      "expected": "accept",
+      "passed": true
+    },
+    {
+      "case": "money-peer-confirmations-023.json archived bytes replay absent workspace (88, 9, 'remuneration')",
+      "expected": "accept",
+      "passed": true
+    },
+    {
+      "case": "money-peer-confirmations-023.json archived bytes replay absent workspace (88, 13, 'remuneration')",
+      "expected": "accept",
+      "passed": true
+    },
+    {
+      "case": "money-peer-confirmations-023.json archived bytes replay absent workspace (88, 13, 'expenses')",
+      "expected": "accept",
+      "passed": true
+    },
+    {
+      "case": "money-peer-confirmations-023.json archived bytes replay absent workspace (88, 15, 'expenses')",
+      "expected": "accept",
+      "passed": true
+    },
+    {
+      "case": "money-peer-confirmations-025.json exact pinned derivation bytes",
+      "expected": "accept",
+      "passed": true
+    },
+    {
+      "case": "money-peer-confirmations-025.json wrong effective source",
+      "expected": "reject",
+      "passed": true,
+      "errorType": "ValueError",
+      "reason": "Source-money peer and overlay identities differ"
+    },
+    {
+      "case": "money-peer-confirmations-025.json missing effective requested money field",
+      "expected": "reject",
+      "passed": true,
+      "errorType": "ValueError",
+      "reason": "Effective source overlay differs from the fresh peer money/crop"
+    },
+    {
+      "case": "014 root actual cold value differs",
+      "expected": "reject",
+      "passed": true,
+      "errorType": "ValueError",
+      "reason": "Root canonical table first/secondary/final/source facts differ"
+    },
+    {
+      "case": "014 third raw explicitly unfrozen",
+      "expected": "reject",
+      "passed": true,
+      "errorType": "ValueError",
+      "reason": "Root canonical table chronology/source-only authority differs"
+    },
+    {
+      "case": "014 third raw and final both shrink against unchanged13packet",
+      "expected": "reject",
+      "passed": true,
+      "errorType": "ValueError",
+      "reason": "Root canonical table target/first/secondary/current scope differs"
+    },
+    {
+      "case": "014 third235 first visual error must remain explicit",
+      "expected": "reject",
+      "passed": true,
+      "errorType": "ValueError",
+      "reason": "Fresh third source-only correction hides its first value"
+    },
+    {
+      "case": "money-peer-confirmations-025.json archived bytes replay absent workspace (97, 20, 'expenses')",
+      "expected": "accept",
+      "passed": true
+    },
+    {
+      "case": "money-peer-confirmations-025.json archived bytes replay absent workspace (97, 25, 'remuneration')",
+      "expected": "accept",
+      "passed": true
+    },
+    {
+      "case": "money-peer-confirmations-025.json archived bytes replay absent workspace (97, 44, 'expenses')",
+      "expected": "accept",
+      "passed": true
+    },
+    {
+      "case": "money-peer-confirmations-025.json archived bytes replay absent workspace (97, 50, 'remuneration')",
+      "expected": "accept",
+      "passed": true
+    },
+    {
+      "case": "money-peer-confirmations-025.json archived bytes replay absent workspace (97, 53, 'remuneration')",
+      "expected": "accept",
+      "passed": true
+    },
+    {
+      "case": "money-peer-confirmations-025.json archived bytes replay absent workspace (98, 25, 'expenses')",
+      "expected": "accept",
+      "passed": true
+    },
+    {
+      "case": "money-peer-confirmations-025.json archived bytes replay absent workspace (98, 41, 'remuneration')",
+      "expected": "accept",
+      "passed": true
+    },
+    {
+      "case": "money-peer-confirmations-025.json archived bytes replay absent workspace (98, 45, 'remuneration')",
+      "expected": "accept",
+      "passed": true
+    },
+    {
+      "case": "money-peer-confirmations-025.json archived bytes replay absent workspace (98, 55, 'expenses')",
+      "expected": "accept",
+      "passed": true
+    },
+    {
+      "case": "money-peer-confirmations-025.json archived bytes replay absent workspace (99, 10, 'remuneration')",
+      "expected": "accept",
+      "passed": true
+    },
+    {
+      "case": "money-peer-confirmations-025.json archived bytes replay absent workspace (99, 13, 'expenses')",
+      "expected": "accept",
+      "passed": true
+    },
+    {
+      "case": "money-peer-confirmations-025.json archived bytes replay absent workspace (99, 16, 'expenses')",
+      "expected": "accept",
+      "passed": true
+    },
+    {
+      "case": "money-peer-confirmations-025.json archived bytes replay absent workspace (99, 18, 'expenses')",
+      "expected": "accept",
+      "passed": true
+    },
+    {
+      "case": "money-peer-confirmations-025.json archived bytes replay absent workspace (99, 25, 'remuneration')",
+      "expected": "accept",
+      "passed": true
+    },
+    {
+      "case": "money-peer-confirmations-025.json archived bytes replay absent workspace (99, 36, 'expenses')",
+      "expected": "accept",
+      "passed": true
+    },
+    {
+      "case": "money-peer-confirmations-025.json archived bytes replay absent workspace (99, 43, 'remuneration')",
+      "expected": "accept",
+      "passed": true
+    },
+    {
+      "case": "money-peer-confirmations-025.json archived bytes replay absent workspace (99, 45, 'remuneration')",
+      "expected": "accept",
+      "passed": true
+    },
+    {
+      "case": "money-peer-confirmations-025.json archived bytes replay absent workspace (100, 3, 'expenses')",
+      "expected": "accept",
+      "passed": true
+    },
+    {
+      "case": "money-peer-confirmations-025.json archived bytes replay absent workspace (100, 10, 'remuneration')",
+      "expected": "accept",
+      "passed": true
+    },
+    {
+      "case": "money-peer-confirmations-025.json archived bytes replay absent workspace (100, 16, 'remuneration')",
+      "expected": "accept",
+      "passed": true
+    },
+    {
+      "case": "money-peer-confirmations-025.json archived bytes replay absent workspace (100, 22, 'remuneration')",
+      "expected": "accept",
+      "passed": true
+    },
+    {
+      "case": "money-peer-confirmations-025.json archived bytes replay absent workspace (100, 25, 'remuneration')",
+      "expected": "accept",
+      "passed": true
+    },
+    {
+      "case": "money-peer-confirmations-025.json archived bytes replay absent workspace (100, 26, 'expenses')",
+      "expected": "accept",
+      "passed": true
+    },
+    {
+      "case": "money-peer-confirmations-025.json archived bytes replay absent workspace (100, 27, 'expenses')",
+      "expected": "accept",
+      "passed": true
+    },
+    {
+      "case": "money-peer-confirmations-025.json archived bytes replay absent workspace (100, 28, 'remuneration')",
+      "expected": "accept",
+      "passed": true
+    },
+    {
+      "case": "money-peer-confirmations-025.json archived bytes replay absent workspace (100, 36, 'expenses')",
+      "expected": "accept",
+      "passed": true
+    },
+    {
+      "case": "money-peer-confirmations-025.json archived bytes replay absent workspace (100, 40, 'remuneration')",
+      "expected": "accept",
+      "passed": true
+    },
+    {
+      "case": "money-peer-confirmations-025.json archived bytes replay absent workspace (100, 45, 'remuneration')",
+      "expected": "accept",
+      "passed": true
+    },
+    {
+      "case": "money-peer-confirmations-025.json archived bytes replay absent workspace (101, 25, 'expenses')",
+      "expected": "accept",
+      "passed": true
+    },
+    {
+      "case": "money-peer-confirmations-025.json archived bytes replay absent workspace (101, 35, 'remuneration')",
+      "expected": "accept",
+      "passed": true
+    },
+    {
+      "case": "money-peer-confirmations-025.json archived bytes replay absent workspace (101, 37, 'remuneration')",
+      "expected": "accept",
+      "passed": true
+    },
+    {
+      "case": "money-peer-confirmations-025.json archived bytes replay absent workspace (102, 7, 'expenses')",
+      "expected": "accept",
+      "passed": true
+    },
+    {
+      "case": "money-peer-confirmations-025.json archived bytes replay absent workspace (102, 20, 'expenses')",
+      "expected": "accept",
+      "passed": true
+    },
+    {
+      "case": "money-peer-confirmations-025.json archived bytes replay absent workspace (102, 29, 'expenses')",
+      "expected": "accept",
+      "passed": true
+    },
+    {
+      "case": "money-peer-confirmations-025.json archived bytes replay absent workspace (102, 41, 'expenses')",
+      "expected": "accept",
+      "passed": true
+    },
+    {
+      "case": "money-peer-confirmations-025.json archived bytes replay absent workspace (102, 42, 'remuneration')",
+      "expected": "accept",
+      "passed": true
+    },
+    {
+      "case": "money-peer-confirmations-025.json archived bytes replay absent workspace (102, 55, 'expenses')",
+      "expected": "accept",
+      "passed": true
+    },
+    {
+      "case": "money-peer-confirmations-025.json archived bytes replay absent workspace (103, 16, 'expenses')",
+      "expected": "accept",
+      "passed": true
+    },
+    {
+      "case": "money-peer-confirmations-025.json archived bytes replay absent workspace (103, 18, 'remuneration')",
+      "expected": "accept",
+      "passed": true
+    },
+    {
+      "case": "money-peer-confirmations-025.json archived bytes replay absent workspace (103, 18, 'expenses')",
+      "expected": "accept",
+      "passed": true
+    },
+    {
+      "case": "money-peer-confirmations-025.json archived bytes replay absent workspace (103, 22, 'expenses')",
+      "expected": "accept",
+      "passed": true
+    },
+    {
+      "case": "money-peer-confirmations-025.json archived bytes replay absent workspace (103, 26, 'expenses')",
+      "expected": "accept",
+      "passed": true
+    },
+    {
+      "case": "money-peer-confirmations-026.json exact pinned derivation bytes",
+      "expected": "accept",
+      "passed": true
+    },
+    {
+      "case": "money-peer-confirmations-026.json wrong effective source",
+      "expected": "reject",
+      "passed": true,
+      "errorType": "ValueError",
+      "reason": "Source-money peer and overlay identities differ"
+    },
+    {
+      "case": "money-peer-confirmations-026.json missing effective requested money field",
+      "expected": "reject",
+      "passed": true,
+      "errorType": "ValueError",
+      "reason": "Effective source overlay differs from the fresh peer money/crop"
+    },
+    {
+      "case": "01536 peer actual first value differs",
+      "expected": "reject",
+      "passed": true,
+      "errorType": "ValueError",
+      "reason": "Whole-page literal source/first/current/pixel facts differ"
+    },
+    {
+      "case": "01536 author choice exposure before peer release",
+      "expected": "reject",
+      "passed": true,
+      "errorType": "ValueError",
+      "reason": "Whole-page literal source-first chronology differs"
+    },
+    {
+      "case": "01536 author189 original first error hidden",
+      "expected": "reject",
+      "passed": true,
+      "errorType": "ValueError",
+      "reason": "Whole-page author correction hides first/intermediate source evidence"
+    },
+    {
+      "case": "01536 source whole600 proof false",
+      "expected": "reject",
+      "passed": true,
+      "errorType": "ValueError",
+      "reason": "Whole-page literal source/first/current/pixel facts differ"
+    },
+    {
+      "case": "money-peer-confirmations-026.json archived bytes replay absent workspace (103, 37, 'remuneration')",
+      "expected": "accept",
+      "passed": true
+    },
+    {
+      "case": "money-peer-confirmations-026.json archived bytes replay absent workspace (103, 38, 'expenses')",
+      "expected": "accept",
+      "passed": true
+    },
+    {
+      "case": "money-peer-confirmations-026.json archived bytes replay absent workspace (103, 52, 'expenses')",
+      "expected": "accept",
+      "passed": true
+    },
+    {
+      "case": "money-peer-confirmations-026.json archived bytes replay absent workspace (104, 7, 'expenses')",
+      "expected": "accept",
+      "passed": true
+    },
+    {
+      "case": "money-peer-confirmations-026.json archived bytes replay absent workspace (104, 13, 'expenses')",
+      "expected": "accept",
+      "passed": true
+    },
+    {
+      "case": "money-peer-confirmations-026.json archived bytes replay absent workspace (104, 41, 'remuneration')",
+      "expected": "accept",
+      "passed": true
+    },
+    {
+      "case": "money-peer-confirmations-026.json archived bytes replay absent workspace (104, 41, 'expenses')",
+      "expected": "accept",
+      "passed": true
+    },
+    {
+      "case": "money-peer-confirmations-026.json archived bytes replay absent workspace (104, 44, 'expenses')",
+      "expected": "accept",
+      "passed": true
+    },
+    {
+      "case": "money-peer-confirmations-026.json archived bytes replay absent workspace (104, 45, 'remuneration')",
+      "expected": "accept",
+      "passed": true
+    },
+    {
+      "case": "money-peer-confirmations-026.json archived bytes replay absent workspace (105, 7, 'expenses')",
+      "expected": "accept",
+      "passed": true
+    },
+    {
+      "case": "money-peer-confirmations-026.json archived bytes replay absent workspace (105, 13, 'remuneration')",
+      "expected": "accept",
+      "passed": true
+    },
+    {
+      "case": "money-peer-confirmations-026.json archived bytes replay absent workspace (105, 20, 'expenses')",
+      "expected": "accept",
+      "passed": true
+    },
+    {
+      "case": "money-peer-confirmations-026.json archived bytes replay absent workspace (105, 25, 'expenses')",
+      "expected": "accept",
+      "passed": true
+    },
+    {
+      "case": "money-peer-confirmations-026.json archived bytes replay absent workspace (105, 49, 'expenses')",
+      "expected": "accept",
+      "passed": true
+    },
+    {
+      "case": "money-peer-confirmations-026.json archived bytes replay absent workspace (106, 6, 'remuneration')",
+      "expected": "accept",
+      "passed": true
+    },
+    {
+      "case": "money-peer-confirmations-026.json archived bytes replay absent workspace (106, 20, 'expenses')",
+      "expected": "accept",
+      "passed": true
+    },
+    {
+      "case": "money-peer-confirmations-026.json archived bytes replay absent workspace (106, 22, 'remuneration')",
+      "expected": "accept",
+      "passed": true
+    },
+    {
+      "case": "money-peer-confirmations-026.json archived bytes replay absent workspace (106, 32, 'remuneration')",
+      "expected": "accept",
+      "passed": true
+    },
+    {
+      "case": "money-peer-confirmations-026.json archived bytes replay absent workspace (106, 42, 'remuneration')",
+      "expected": "accept",
+      "passed": true
+    },
+    {
+      "case": "money-peer-confirmations-026.json archived bytes replay absent workspace (107, 13, 'expenses')",
+      "expected": "accept",
+      "passed": true
+    },
+    {
+      "case": "money-peer-confirmations-026.json archived bytes replay absent workspace (107, 27, 'remuneration')",
+      "expected": "accept",
+      "passed": true
+    },
+    {
+      "case": "money-peer-confirmations-026.json archived bytes replay absent workspace (107, 39, 'expenses')",
+      "expected": "accept",
+      "passed": true
+    },
+    {
+      "case": "money-peer-confirmations-026.json archived bytes replay absent workspace (108, 25, 'remuneration')",
+      "expected": "accept",
+      "passed": true
+    },
+    {
+      "case": "money-peer-confirmations-026.json archived bytes replay absent workspace (108, 38, 'remuneration')",
+      "expected": "accept",
+      "passed": true
+    },
+    {
+      "case": "money-peer-confirmations-026.json archived bytes replay absent workspace (108, 49, 'expenses')",
+      "expected": "accept",
+      "passed": true
+    },
+    {
+      "case": "money-peer-confirmations-026.json archived bytes replay absent workspace (109, 10, 'remuneration')",
+      "expected": "accept",
+      "passed": true
+    },
+    {
+      "case": "money-peer-confirmations-026.json archived bytes replay absent workspace (109, 28, 'expenses')",
+      "expected": "accept",
+      "passed": true
+    },
+    {
+      "case": "money-peer-confirmations-026.json archived bytes replay absent workspace (109, 32, 'expenses')",
+      "expected": "accept",
+      "passed": true
+    },
+    {
+      "case": "money-peer-confirmations-026.json archived bytes replay absent workspace (110, 10, 'expenses')",
+      "expected": "accept",
+      "passed": true
+    },
+    {
+      "case": "money-peer-confirmations-026.json archived bytes replay absent workspace (110, 16, 'expenses')",
+      "expected": "accept",
+      "passed": true
+    },
+    {
+      "case": "money-peer-confirmations-026.json archived bytes replay absent workspace (110, 32, 'expenses')",
+      "expected": "accept",
+      "passed": true
+    },
+    {
+      "case": "money-peer-confirmations-026.json archived bytes replay absent workspace (110, 34, 'expenses')",
+      "expected": "accept",
+      "passed": true
+    },
+    {
+      "case": "money-peer-confirmations-026.json archived bytes replay absent workspace (110, 39, 'remuneration')",
+      "expected": "accept",
+      "passed": true
+    },
+    {
+      "case": "money-peer-confirmations-026.json archived bytes replay absent workspace (110, 44, 'remuneration')",
+      "expected": "accept",
+      "passed": true
+    },
+    {
+      "case": "money-peer-confirmations-026.json archived bytes replay absent workspace (111, 10, 'remuneration')",
+      "expected": "accept",
+      "passed": true
+    },
+    {
+      "case": "money-peer-confirmations-026.json archived bytes replay absent workspace (111, 45, 'remuneration')",
+      "expected": "accept",
+      "passed": true
+    },
+    {
+      "case": "actual unchanged-money revision selector validates",
+      "expected": "accept",
+      "passed": true
+    },
+    {
+      "case": "unchanged-money rebase rejects a changed original confirmed amount",
+      "expected": "reject",
+      "passed": true,
+      "errorType": "ValueError",
+      "reason": "Fresh-confirmed money changed in the revised ordinary overlay"
+    }
+  ],
+  "checkCount": 161,
+  "failedCases": 0,
+  "initialConcreteFindings": [
+    "014 helper initially accepted an explicitly unfrozen third raw and consistent shrinking of raw/final13 against unchanged source-only13 target packet.",
+    "012394 helper initially accepted an explicitly unfrozen fresh source-first raw."
+  ],
+  "authoredProducerExcluded": {
+    "path": "scripts/finish_salary_phsa_money_exhaustive.py",
+    "independentFinancialAssessment": false,
+    "independentAssessmentOwner": "/root/held_health_review and /root",
+    "implementationVerificationOnly": "Actual281positive+1dash replay,44author/4frozenpeer errors;13 original-fixture mutations and health dedicated actual-source regression set separately reported."
+  },
+  "limits": [
+    "Technical code/mutation tests are not another human source transcription or source semantic acceptance.",
+    "Only named implementation pins and exact frozen input receipts are covered; later versions need their own bounded review.",
+    "All mutations and missing-workspace simulations are in memory; no source/review/overlay/archive bytes changed.",
+    "Final nine-source independent provenance/control closure and explicit root promotion remain separate. All four issuer requests remain user-held; no outreach."
+  ]
+}

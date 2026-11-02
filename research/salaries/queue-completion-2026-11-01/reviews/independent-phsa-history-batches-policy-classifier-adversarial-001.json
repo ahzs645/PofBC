@@ -1,0 +1,717 @@
+{
+  "reviewer": "/root/recovery_review",
+  "method": "Read-only synthetic adversarial regression tests on an already independently image-reviewed schema fixture; no new source reading or holdout candidate inspection.",
+  "script": {
+    "path": "scripts/finish_salary_phsa_quality_policy_audit.py",
+    "sha256": "006b750e36ae905808690a53a0e92b0025d2f63c7c931f512faaa597ca2fc947"
+  },
+  "classifier": {
+    "path": "scripts/finish_salary_phsa_policy.py",
+    "sha256": "4eaf45a71ea4aa264ec4a0cb1b9e1a9c9619fc94d2c4b646610912f5c820fe07"
+  },
+  "fixture": {
+    "path": "research/salaries/queue-completion-phsa/evidence/phsa-2015-16-rows-p002.json.gzip",
+    "sha256": "ab7f90e22b2fdc52dc56815142f2c8c7299ddd5f13cebd1a8c42aee68f6d1e07"
+  },
+  "policy": {
+    "path": "research/salaries/queue-completion-2026-11-01/phsa/paired-reader-field-policy-002.json",
+    "sha256": "0fafb3763ea5a1ebf8f2d7310e748cb4d24247428f544056e1427d2e6ecc77fe"
+  },
+  "cases": [
+    {
+      "case": "confidence-only exact agreement: name",
+      "field": "name",
+      "expectedEligible": true,
+      "actualEligible": true,
+      "passes": true,
+      "inputUnchanged": true,
+      "exclusions": []
+    },
+    {
+      "case": "unknown confidence-like flag: name",
+      "field": "name",
+      "expectedEligible": false,
+      "actualEligible": false,
+      "passes": true,
+      "inputUnchanged": true,
+      "exclusions": [
+        "unparsed-confidence-below-unknown"
+      ]
+    },
+    {
+      "case": "hard original flag: name",
+      "field": "name",
+      "expectedEligible": false,
+      "actualEligible": false,
+      "passes": true,
+      "inputUnchanged": true,
+      "exclusions": [
+        "independent-disagreement"
+      ]
+    },
+    {
+      "case": "reader missing: name",
+      "field": "name",
+      "expectedEligible": false,
+      "actualEligible": false,
+      "passes": true,
+      "inputUnchanged": true,
+      "exclusions": [
+        "independent-reader-missing-or-ambiguous",
+        "no-exact-independent-parsed-field-agreement",
+        "candidate-does-not-already-equal-both-independent-readers"
+      ]
+    },
+    {
+      "case": "no original flags is not a confidence resolution: name",
+      "field": "name",
+      "expectedEligible": false,
+      "actualEligible": false,
+      "passes": true,
+      "inputUnchanged": true,
+      "exclusions": []
+    },
+    {
+      "case": "invalid date: name",
+      "field": "name",
+      "expectedEligible": false,
+      "actualEligible": false,
+      "passes": true,
+      "inputUnchanged": true,
+      "exclusions": [
+        "source-raster-date-or-row-geometry-gate-not-satisfied"
+      ]
+    },
+    {
+      "case": "invalid geometry: name",
+      "field": "name",
+      "expectedEligible": false,
+      "actualEligible": false,
+      "passes": true,
+      "inputUnchanged": true,
+      "exclusions": [
+        "source-raster-date-or-row-geometry-gate-not-satisfied"
+      ]
+    },
+    {
+      "case": "render hash mismatch: name",
+      "field": "name",
+      "expectedEligible": false,
+      "actualEligible": false,
+      "passes": true,
+      "inputUnchanged": true,
+      "exclusions": [
+        "source-raster-date-or-row-geometry-gate-not-satisfied"
+      ]
+    },
+    {
+      "case": "original hash mismatch: name",
+      "field": "name",
+      "expectedEligible": false,
+      "actualEligible": false,
+      "passes": true,
+      "inputUnchanged": true,
+      "exclusions": [
+        "source-raster-date-or-row-geometry-gate-not-satisfied"
+      ]
+    },
+    {
+      "case": "confidence-only exact agreement: remuneration",
+      "field": "remuneration",
+      "expectedEligible": true,
+      "actualEligible": true,
+      "passes": true,
+      "inputUnchanged": true,
+      "exclusions": []
+    },
+    {
+      "case": "unknown confidence-like flag: remuneration",
+      "field": "remuneration",
+      "expectedEligible": false,
+      "actualEligible": false,
+      "passes": true,
+      "inputUnchanged": true,
+      "exclusions": [
+        "unparsed-confidence-below-unknown"
+      ]
+    },
+    {
+      "case": "hard original flag: remuneration",
+      "field": "remuneration",
+      "expectedEligible": false,
+      "actualEligible": false,
+      "passes": true,
+      "inputUnchanged": true,
+      "exclusions": [
+        "independent-disagreement"
+      ]
+    },
+    {
+      "case": "reader missing: remuneration",
+      "field": "remuneration",
+      "expectedEligible": false,
+      "actualEligible": false,
+      "passes": true,
+      "inputUnchanged": true,
+      "exclusions": [
+        "independent-reader-missing-or-ambiguous",
+        "no-exact-independent-parsed-field-agreement",
+        "candidate-does-not-already-equal-both-independent-readers"
+      ]
+    },
+    {
+      "case": "no original flags is not a confidence resolution: remuneration",
+      "field": "remuneration",
+      "expectedEligible": false,
+      "actualEligible": false,
+      "passes": true,
+      "inputUnchanged": true,
+      "exclusions": []
+    },
+    {
+      "case": "invalid date: remuneration",
+      "field": "remuneration",
+      "expectedEligible": false,
+      "actualEligible": false,
+      "passes": true,
+      "inputUnchanged": true,
+      "exclusions": [
+        "source-raster-date-or-row-geometry-gate-not-satisfied"
+      ]
+    },
+    {
+      "case": "invalid geometry: remuneration",
+      "field": "remuneration",
+      "expectedEligible": false,
+      "actualEligible": false,
+      "passes": true,
+      "inputUnchanged": true,
+      "exclusions": [
+        "source-raster-date-or-row-geometry-gate-not-satisfied"
+      ]
+    },
+    {
+      "case": "render hash mismatch: remuneration",
+      "field": "remuneration",
+      "expectedEligible": false,
+      "actualEligible": false,
+      "passes": true,
+      "inputUnchanged": true,
+      "exclusions": [
+        "source-raster-date-or-row-geometry-gate-not-satisfied"
+      ]
+    },
+    {
+      "case": "original hash mismatch: remuneration",
+      "field": "remuneration",
+      "expectedEligible": false,
+      "actualEligible": false,
+      "passes": true,
+      "inputUnchanged": true,
+      "exclusions": [
+        "source-raster-date-or-row-geometry-gate-not-satisfied"
+      ]
+    },
+    {
+      "case": "confidence-only exact agreement: expenses",
+      "field": "expenses",
+      "expectedEligible": true,
+      "actualEligible": true,
+      "passes": true,
+      "inputUnchanged": true,
+      "exclusions": []
+    },
+    {
+      "case": "unknown confidence-like flag: expenses",
+      "field": "expenses",
+      "expectedEligible": false,
+      "actualEligible": false,
+      "passes": true,
+      "inputUnchanged": true,
+      "exclusions": [
+        "unparsed-confidence-below-unknown"
+      ]
+    },
+    {
+      "case": "hard original flag: expenses",
+      "field": "expenses",
+      "expectedEligible": false,
+      "actualEligible": false,
+      "passes": true,
+      "inputUnchanged": true,
+      "exclusions": [
+        "independent-disagreement"
+      ]
+    },
+    {
+      "case": "reader missing: expenses",
+      "field": "expenses",
+      "expectedEligible": false,
+      "actualEligible": false,
+      "passes": true,
+      "inputUnchanged": true,
+      "exclusions": [
+        "independent-reader-missing-or-ambiguous",
+        "no-exact-independent-parsed-field-agreement",
+        "candidate-does-not-already-equal-both-independent-readers"
+      ]
+    },
+    {
+      "case": "no original flags is not a confidence resolution: expenses",
+      "field": "expenses",
+      "expectedEligible": false,
+      "actualEligible": false,
+      "passes": true,
+      "inputUnchanged": true,
+      "exclusions": []
+    },
+    {
+      "case": "invalid date: expenses",
+      "field": "expenses",
+      "expectedEligible": false,
+      "actualEligible": false,
+      "passes": true,
+      "inputUnchanged": true,
+      "exclusions": [
+        "source-raster-date-or-row-geometry-gate-not-satisfied"
+      ]
+    },
+    {
+      "case": "invalid geometry: expenses",
+      "field": "expenses",
+      "expectedEligible": false,
+      "actualEligible": false,
+      "passes": true,
+      "inputUnchanged": true,
+      "exclusions": [
+        "source-raster-date-or-row-geometry-gate-not-satisfied"
+      ]
+    },
+    {
+      "case": "render hash mismatch: expenses",
+      "field": "expenses",
+      "expectedEligible": false,
+      "actualEligible": false,
+      "passes": true,
+      "inputUnchanged": true,
+      "exclusions": [
+        "source-raster-date-or-row-geometry-gate-not-satisfied"
+      ]
+    },
+    {
+      "case": "original hash mismatch: expenses",
+      "field": "expenses",
+      "expectedEligible": false,
+      "actualEligible": false,
+      "passes": true,
+      "inputUnchanged": true,
+      "exclusions": [
+        "source-raster-date-or-row-geometry-gate-not-satisfied"
+      ]
+    },
+    {
+      "case": "nonpositive/noninteger both pay: 0",
+      "field": "remuneration",
+      "expectedEligible": false,
+      "actualEligible": false,
+      "passes": true,
+      "inputUnchanged": true,
+      "exclusions": [
+        "zero-negative-noninteger-blank-dash-or-unparsed-not-eligible"
+      ]
+    },
+    {
+      "case": "nonpositive/noninteger both pay: -1",
+      "field": "remuneration",
+      "expectedEligible": false,
+      "actualEligible": false,
+      "passes": true,
+      "inputUnchanged": true,
+      "exclusions": [
+        "zero-negative-noninteger-blank-dash-or-unparsed-not-eligible"
+      ]
+    },
+    {
+      "case": "nonpositive/noninteger both pay: 1.5",
+      "field": "remuneration",
+      "expectedEligible": false,
+      "actualEligible": false,
+      "passes": true,
+      "inputUnchanged": true,
+      "exclusions": [
+        "zero-negative-noninteger-blank-dash-or-unparsed-not-eligible"
+      ]
+    },
+    {
+      "case": "nonpositive/noninteger both pay: True",
+      "field": "remuneration",
+      "expectedEligible": false,
+      "actualEligible": false,
+      "passes": true,
+      "inputUnchanged": true,
+      "exclusions": [
+        "zero-negative-noninteger-blank-dash-or-unparsed-not-eligible"
+      ]
+    },
+    {
+      "case": "right numeric type must be strict integer: pay: True",
+      "field": "remuneration",
+      "expectedEligible": false,
+      "actualEligible": false,
+      "passes": true,
+      "inputUnchanged": true,
+      "exclusions": [
+        "zero-negative-noninteger-blank-dash-or-unparsed-not-eligible"
+      ]
+    },
+    {
+      "case": "candidate numeric type must be strict integer: pay: True",
+      "field": "remuneration",
+      "expectedEligible": false,
+      "actualEligible": false,
+      "passes": true,
+      "inputUnchanged": true,
+      "exclusions": [
+        "zero-negative-noninteger-blank-dash-or-unparsed-not-eligible"
+      ]
+    },
+    {
+      "case": "right numeric type must be strict integer: pay: 1.0",
+      "field": "remuneration",
+      "expectedEligible": false,
+      "actualEligible": false,
+      "passes": true,
+      "inputUnchanged": true,
+      "exclusions": [
+        "zero-negative-noninteger-blank-dash-or-unparsed-not-eligible"
+      ]
+    },
+    {
+      "case": "candidate numeric type must be strict integer: pay: 1.0",
+      "field": "remuneration",
+      "expectedEligible": false,
+      "actualEligible": false,
+      "passes": true,
+      "inputUnchanged": true,
+      "exclusions": [
+        "zero-negative-noninteger-blank-dash-or-unparsed-not-eligible"
+      ]
+    },
+    {
+      "case": "independent value disagreement: pay",
+      "field": "remuneration",
+      "expectedEligible": false,
+      "actualEligible": false,
+      "passes": true,
+      "inputUnchanged": true,
+      "exclusions": [
+        "no-exact-independent-parsed-field-agreement"
+      ]
+    },
+    {
+      "case": "candidate differs: pay",
+      "field": "remuneration",
+      "expectedEligible": false,
+      "actualEligible": false,
+      "passes": true,
+      "inputUnchanged": true,
+      "exclusions": [
+        "candidate-does-not-already-equal-both-independent-readers"
+      ]
+    },
+    {
+      "case": "unparsed independent amount: pay",
+      "field": "remuneration",
+      "expectedEligible": false,
+      "actualEligible": false,
+      "passes": true,
+      "inputUnchanged": true,
+      "exclusions": [
+        "no-exact-independent-parsed-field-agreement"
+      ]
+    },
+    {
+      "case": "nonpositive/noninteger both expense: 0",
+      "field": "expenses",
+      "expectedEligible": false,
+      "actualEligible": false,
+      "passes": true,
+      "inputUnchanged": true,
+      "exclusions": [
+        "zero-negative-noninteger-blank-dash-or-unparsed-not-eligible"
+      ]
+    },
+    {
+      "case": "nonpositive/noninteger both expense: -1",
+      "field": "expenses",
+      "expectedEligible": false,
+      "actualEligible": false,
+      "passes": true,
+      "inputUnchanged": true,
+      "exclusions": [
+        "zero-negative-noninteger-blank-dash-or-unparsed-not-eligible"
+      ]
+    },
+    {
+      "case": "nonpositive/noninteger both expense: 1.5",
+      "field": "expenses",
+      "expectedEligible": false,
+      "actualEligible": false,
+      "passes": true,
+      "inputUnchanged": true,
+      "exclusions": [
+        "zero-negative-noninteger-blank-dash-or-unparsed-not-eligible"
+      ]
+    },
+    {
+      "case": "nonpositive/noninteger both expense: True",
+      "field": "expenses",
+      "expectedEligible": false,
+      "actualEligible": false,
+      "passes": true,
+      "inputUnchanged": true,
+      "exclusions": [
+        "zero-negative-noninteger-blank-dash-or-unparsed-not-eligible"
+      ]
+    },
+    {
+      "case": "right numeric type must be strict integer: expense: True",
+      "field": "expenses",
+      "expectedEligible": false,
+      "actualEligible": false,
+      "passes": true,
+      "inputUnchanged": true,
+      "exclusions": [
+        "zero-negative-noninteger-blank-dash-or-unparsed-not-eligible"
+      ]
+    },
+    {
+      "case": "candidate numeric type must be strict integer: expense: True",
+      "field": "expenses",
+      "expectedEligible": false,
+      "actualEligible": false,
+      "passes": true,
+      "inputUnchanged": true,
+      "exclusions": [
+        "zero-negative-noninteger-blank-dash-or-unparsed-not-eligible"
+      ]
+    },
+    {
+      "case": "right numeric type must be strict integer: expense: 1.0",
+      "field": "expenses",
+      "expectedEligible": false,
+      "actualEligible": false,
+      "passes": true,
+      "inputUnchanged": true,
+      "exclusions": [
+        "zero-negative-noninteger-blank-dash-or-unparsed-not-eligible"
+      ]
+    },
+    {
+      "case": "candidate numeric type must be strict integer: expense: 1.0",
+      "field": "expenses",
+      "expectedEligible": false,
+      "actualEligible": false,
+      "passes": true,
+      "inputUnchanged": true,
+      "exclusions": [
+        "zero-negative-noninteger-blank-dash-or-unparsed-not-eligible"
+      ]
+    },
+    {
+      "case": "independent value disagreement: expense",
+      "field": "expenses",
+      "expectedEligible": false,
+      "actualEligible": false,
+      "passes": true,
+      "inputUnchanged": true,
+      "exclusions": [
+        "no-exact-independent-parsed-field-agreement"
+      ]
+    },
+    {
+      "case": "candidate differs: expense",
+      "field": "expenses",
+      "expectedEligible": false,
+      "actualEligible": false,
+      "passes": true,
+      "inputUnchanged": true,
+      "exclusions": [
+        "candidate-does-not-already-equal-both-independent-readers"
+      ]
+    },
+    {
+      "case": "unparsed independent amount: expense",
+      "field": "expenses",
+      "expectedEligible": false,
+      "actualEligible": false,
+      "passes": true,
+      "inputUnchanged": true,
+      "exclusions": [
+        "no-exact-independent-parsed-field-agreement"
+      ]
+    },
+    {
+      "case": "expense region blank",
+      "field": "expenses",
+      "expectedEligible": false,
+      "actualEligible": false,
+      "passes": true,
+      "inputUnchanged": true,
+      "exclusions": [
+        "not-an-unambiguous-positive-numeric-source-expense-region"
+      ]
+    },
+    {
+      "case": "expense region calibrated dash",
+      "field": "expenses",
+      "expectedEligible": false,
+      "actualEligible": false,
+      "passes": true,
+      "inputUnchanged": true,
+      "exclusions": [
+        "not-an-unambiguous-positive-numeric-source-expense-region"
+      ]
+    },
+    {
+      "case": "additional name guard: Example,Ian",
+      "field": "name",
+      "expectedEligible": false,
+      "actualEligible": false,
+      "passes": true,
+      "inputUnchanged": true,
+      "exclusions": [
+        "word-initial-capital-I-requires-source-case-check"
+      ]
+    },
+    {
+      "case": "additional name guard: Example,John I.",
+      "field": "name",
+      "expectedEligible": false,
+      "actualEligible": false,
+      "passes": true,
+      "inputUnchanged": true,
+      "exclusions": [
+        "word-initial-capital-I-requires-source-case-check"
+      ]
+    },
+    {
+      "case": "additional name guard: McIlhargey,John",
+      "field": "name",
+      "expectedEligible": false,
+      "actualEligible": false,
+      "passes": true,
+      "inputUnchanged": true,
+      "exclusions": [
+        "mixed-I-l-or-Mc-prefix-case-requires-source-check"
+      ]
+    },
+    {
+      "case": "additional name guard: Example,AIl",
+      "field": "name",
+      "expectedEligible": false,
+      "actualEligible": false,
+      "passes": true,
+      "inputUnchanged": true,
+      "exclusions": [
+        "mixed-I-l-or-Mc-prefix-case-requires-source-check"
+      ]
+    },
+    {
+      "case": "additional name guard: Example,John^",
+      "field": "name",
+      "expectedEligible": false,
+      "actualEligible": false,
+      "passes": true,
+      "inputUnchanged": true,
+      "exclusions": [
+        "unexplained-name-artifact-requires-source-check"
+      ]
+    },
+    {
+      "case": "retained original name guard: deHaan,John",
+      "field": "name",
+      "expectedEligible": false,
+      "actualEligible": false,
+      "passes": true,
+      "inputUnchanged": true,
+      "exclusions": [
+        "source-name-lowercase-word-initial-needs-image-review"
+      ]
+    },
+    {
+      "case": "retained original name guard: Example,lan",
+      "field": "name",
+      "expectedEligible": false,
+      "actualEligible": false,
+      "passes": true,
+      "inputUnchanged": true,
+      "exclusions": [
+        "source-name-lowercase-word-initial-needs-image-review"
+      ]
+    },
+    {
+      "case": "retained original name guard: Example,Jo|hn",
+      "field": "name",
+      "expectedEligible": false,
+      "actualEligible": false,
+      "passes": true,
+      "inputUnchanged": true,
+      "exclusions": [
+        "source-name-pipe-or-digit-needs-image-review"
+      ]
+    },
+    {
+      "case": "retained original name guard: Example,John2",
+      "field": "name",
+      "expectedEligible": false,
+      "actualEligible": false,
+      "passes": true,
+      "inputUnchanged": true,
+      "exclusions": [
+        "source-name-pipe-or-digit-needs-image-review"
+      ]
+    },
+    {
+      "case": "retained original name guard: Example.John",
+      "field": "name",
+      "expectedEligible": false,
+      "actualEligible": false,
+      "passes": true,
+      "inputUnchanged": true,
+      "exclusions": [
+        "source-name-separator-needs-image-review"
+      ]
+    },
+    {
+      "case": "retained original name guard: Example,JohnPaul",
+      "field": "name",
+      "expectedEligible": false,
+      "actualEligible": false,
+      "passes": true,
+      "inputUnchanged": true,
+      "exclusions": [
+        "source-given-name-word-spacing-needs-image-review"
+      ]
+    },
+    {
+      "case": "existing comma/whitespace comparison allowed",
+      "field": "name",
+      "expectedEligible": true,
+      "actualEligible": true,
+      "passes": true,
+      "inputUnchanged": true,
+      "exclusions": []
+    }
+  ],
+  "caseCount": 63,
+  "failedCases": 0,
+  "allInputsUnchanged": true,
+  "reservedFieldCountAtAudit": 3343,
+  "reservedRowCountAtAudit": 2251,
+  "limits": [
+    "Synthetic parser-type/unknown-flag cases are defensive tests, not observed source errors.",
+    "Classifier tests do not establish that its caller enforces reservation, ledger closure, or source acceptance gates.",
+    "Independent holdout selection/integration and ninety original-image rows remain separate gates."
+  ]
+}

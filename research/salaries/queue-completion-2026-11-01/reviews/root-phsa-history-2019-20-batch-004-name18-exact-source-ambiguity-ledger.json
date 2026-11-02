@@ -1,0 +1,111 @@
+{
+  "frozen": true,
+  "reviewer": "/root",
+  "reviewedOn": "2026-11-02",
+  "sourceId": "phsa-2019-20",
+  "sourceSha256": "0e31ac2054f0c2d4ef78797185dddd96cc0cdf2eab94bd6841fa24e1c38e7d02",
+  "batch": "phsa-2019-20-004",
+  "qualificationCaseCount": 1,
+  "sourceNameSegmentationExceptions": [
+    {
+      "sourceId": "phsa-2019-20",
+      "sourceSha256": "0e31ac2054f0c2d4ef78797185dddd96cc0cdf2eab94bd6841fa24e1c38e7d02",
+      "batch": "phsa-2019-20-004",
+      "sequence": 18,
+      "physicalPage": 20,
+      "sourceRowOnPage": 26,
+      "field": "name",
+      "chosenContextualTranscription": "Chomcy,Kevin Daniel",
+      "visibleAlternatives": [
+        "Chomcy,Kevin Daniel",
+        "Chorncy,Kevin Daniel",
+        "Chomey,Kevin Daniel",
+        "Chorney,Kevin Daniel"
+      ],
+      "caseProvenByPixels": false,
+      "cropSha256": "6f0aea5a4d5bcd42da05da0251aa584c5c6a00767ccfe80f2e1ec083758de528",
+      "sourceSpans": [
+        {
+          "zeroBasedPrimaryIndex": 3,
+          "primaryText": "m",
+          "visibleAlternative": "rn"
+        },
+        {
+          "zeroBasedPrimaryIndex": 4,
+          "primaryText": "c",
+          "visibleAlternative": "e"
+        }
+      ],
+      "ambiguityKind": "rn-m-and-c-e-closed-source-case",
+      "qualificationPolicy": null,
+      "ownActualSourceImageRead": {
+        "path": "/tmp/independent-phsa-municipal-2019-20-004/seq018-name-actual1200.png",
+        "sha256": "aca060293b7ed28d0ee75a4c6462e2afb1fc0d235286dd4bd100cdb013a69687",
+        "original300DpiPixelBox": [
+          205,
+          1700,
+          1250,
+          1738
+        ]
+      },
+      "ownWhiteOnlyDisplayCropBox": [
+        468,
+        7,
+        1696,
+        152
+      ],
+      "ownSourceObservation": "The source shoulders can segment m/rn and the following open c may be e at original scan resolution; four combinations remain finite. Current primary is Chomcy, without identity or other-year inference.",
+      "scope": "name only; no monetary field alteration",
+      "rootExactAdoptionRequired": true,
+      "publicWarningRequired": true,
+      "proposedName": "Chomcy,Kevin Daniel",
+      "allowedFields": [
+        "name"
+      ],
+      "actualSourceEvidence": {
+        "actualOriginal1200SourceView": {
+          "path": "/tmp/independent-phsa-municipal-2019-20-004/seq018-name-actual1200.png",
+          "sha256": "aca060293b7ed28d0ee75a4c6462e2afb1fc0d235286dd4bd100cdb013a69687",
+          "original300DpiPixelBox": [
+            205,
+            1700,
+            1250,
+            1738
+          ]
+        },
+        "whiteOnlyInspectionBox": [
+          468,
+          7,
+          1696,
+          152
+        ]
+      },
+      "allImageReadingEvidence": [
+        {
+          "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-municipal-history-2019-20-004-finite-name-source-confirmation.json",
+          "sha256": "33efbccf357ca2102b6c78e53f802774133721bdb910d6d5984e8b831d83d1fe"
+        },
+        {
+          "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-education-2019-20-004-municipal-peer-finite-name-cases-v2.json",
+          "sha256": "46780e792e68156ee9ed4dc690816608eaca1c783bf81ca46346454cd02839ab"
+        },
+        {
+          "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-education-2019-20-004-municipal-peer-final-comparison-v2.json",
+          "sha256": "c971b2a513abd2efe4b5491837620acfe4faebb7e8118f02829a8f453a5e3df2"
+        },
+        {
+          "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-history-peer-municipal-2019-20-004-eleven-comparison.json",
+          "sha256": "ef92b4fdb3d5af995d94d389611cfecda999c56eb620efd3bc05f3cd8a0c5539"
+        }
+      ],
+      "basis": "Two independently frozen source readers and bounded third peer corroborate this exact finite4 m/rn by c/e set from current fiscal source. Root personally inspected current-original1200 name crop: preferredChomcy, retainChorncy/Chomey/Chorney. Root recognizes a separately reviewed other-year name but that other-year decision supplies no spelling or authority here. Exact current source/hash/page20row26/crop only, no unique glyph or dictionary claim.",
+      "notAuthorizedByRnMPolicy": true,
+      "requiresSeparateExactClosedRootAdoption": true
+    }
+  ],
+  "requiresRootFileAdoptionAndPublicWarningBeforeSourceAcceptance": true,
+  "limits": [
+    "Only source18name. No generalc/e,m/rn-cross rule.",
+    "No identity, amount or reporting-year inference."
+  ]
+}

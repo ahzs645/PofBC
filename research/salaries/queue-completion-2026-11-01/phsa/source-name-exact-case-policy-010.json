@@ -1,0 +1,57 @@
+{
+  "version": 10,
+  "frozen": true,
+  "date": "2026-11-02",
+  "scope": "Exactlytwo2019batch009source-name cases:146p57r54and266p60r39; no general rr/m or a/e substitution authority.",
+  "approvedCases": [
+    {
+      "sourceId": "phsa-2019-20",
+      "sourceSha256": "0e31ac2054f0c2d4ef78797185dddd96cc0cdf2eab94bd6841fa24e1c38e7d02",
+      "batch": "phsa-2019-20-009",
+      "physicalPage": 57,
+      "sourceRowOnPage": 54,
+      "primary": "Kung,Carrie Szu Ya",
+      "rootAdoption": {
+        "path": "research/salaries/queue-completion-2026-11-01/reviews/root-phsa-history-2019-20-batch-009-two-name-exact-adoption.json",
+        "sha256": "dbdefe83d5f8937f362c912c7f7933fb89d245e7daef5242decd019239f69f4b"
+      },
+      "exactCaseLedger": {
+        "path": "research/salaries/queue-completion-2026-11-01/reviews/root-phsa-history-2019-20-batch-009-two-name-exact-source-ambiguity-ledger.json",
+        "sha256": "d8332f9b4606a7ac8ecc65a008df83e3acbabe94fec79f9a5a9bad25e0357767"
+      },
+      "completeVisibleAlternatives": [
+        "Kung,Carrie Szu Ya",
+        "Kung,Camie Szu Ya"
+      ],
+      "originalFullRowCropSha256": "4832a8e8bba5fac9e881dc6deaabbb7452137f18676502b9108684f18f6a9b69"
+    },
+    {
+      "sourceId": "phsa-2019-20",
+      "sourceSha256": "0e31ac2054f0c2d4ef78797185dddd96cc0cdf2eab94bd6841fa24e1c38e7d02",
+      "batch": "phsa-2019-20-009",
+      "physicalPage": 60,
+      "sourceRowOnPage": 39,
+      "primary": "Lazaro,Rochallene",
+      "rootAdoption": {
+        "path": "research/salaries/queue-completion-2026-11-01/reviews/root-phsa-history-2019-20-batch-009-two-name-exact-adoption.json",
+        "sha256": "dbdefe83d5f8937f362c912c7f7933fb89d245e7daef5242decd019239f69f4b"
+      },
+      "exactCaseLedger": {
+        "path": "research/salaries/queue-completion-2026-11-01/reviews/root-phsa-history-2019-20-batch-009-two-name-exact-source-ambiguity-ledger.json",
+        "sha256": "d8332f9b4606a7ac8ecc65a008df83e3acbabe94fec79f9a5a9bad25e0357767"
+      },
+      "completeVisibleAlternatives": [
+        "Lazaro,Rochallene",
+        "Lazaro,Rochellene"
+      ],
+      "originalFullRowCropSha256": "dfb9d72dffa01c6887ca050260b6400ee7283fcdd277344b0d6dc16ddc626931"
+    }
+  ],
+  "noGenericRule": true,
+  "requirements": [
+    "Exact root/sourceSHA/batch/page/row/crop/primary/fullfiniteset pins beforeoverlay.",
+    "Retain both source-image readers, allfirstpass/reread differences, actualcontext and exactrootcurrent-source review. No dictionary/prior-year identity or unique-pixel claim.",
+    "Name only; no money/period/title/employer/multiplicity authority.",
+    "Unknownrow/extraalternative/changedprimary needs fresh exactrootauthority/newpolicy."
+  ]
+}

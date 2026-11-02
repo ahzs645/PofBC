@@ -1,0 +1,165 @@
+{
+  "reviewer": "recovery_education",
+  "reviewedOn": "2026-11-01",
+  "sourceId": "phsa-2021-22",
+  "sourceSha256": "944c99fa7b7ede643cb4c426a5e9ab30aa906d8f81fda379f0206e4b0cdcd25c",
+  "batch": "phsa-2021-22-003",
+  "rawImageTranscriptSha256": "101c86ec9c5eb822e44cafb886f8ec4041ff64e3b57204067e5792c6762933f7",
+  "timing": "After source-first raw/33-name source-only recheck/77-money second reading froze and full candidate comparison opened. All old raw transcripts and source images preserved.",
+  "method": "All13 non-surname-separator candidate/source name differences personally rechecked in current original source: six already in the33-name actual600dpi source recheck, seven additional actual600dpi name crops. Re-opened unchanged original source contact sheet002 for20/23. Five own first-pass literal name mistakes are corrected explicitly; no OCR agreement, dictionary, identity inference or arbitrary letter substitution is used.",
+  "all13NonSeparatorDisagreementSequences": [
+    11,
+    15,
+    20,
+    23,
+    46,
+    81,
+    89,
+    105,
+    188,
+    202,
+    221,
+    250,
+    282
+  ],
+  "newSourceNameReadings": [
+    {
+      "sequence": 20,
+      "physicalPage": 50,
+      "sourceRowOnPage": 30,
+      "literalSourceName": "Ferris,Robynn",
+      "actual600DpiSourceName": {
+        "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-education-2021-22-003-comparison-name-0020-600.png",
+        "sha256": "dec4089a3c9a75453a605d1a7f9974df0c39b15d3986929bedc4521329bcb74e"
+      }
+    },
+    {
+      "sequence": 23,
+      "physicalPage": 51,
+      "sourceRowOnPage": 2,
+      "literalSourceName": "Fingler,Debra F.",
+      "actual600DpiSourceName": {
+        "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-education-2021-22-003-comparison-name-0023-600.png",
+        "sha256": "bb6de1f3046f3951964efd2b166ccf66efa3691a67657ab922a33c2b7d0c929a"
+      }
+    },
+    {
+      "sequence": 81,
+      "physicalPage": 55,
+      "sourceRowOnPage": 6,
+      "literalSourceName": "Gaffney,Helene",
+      "actual600DpiSourceName": {
+        "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-education-2021-22-003-comparison-name-0081-600.png",
+        "sha256": "c02e699dbc21bb4d349bca14d8729e62a7996f98b9b167150773562fba9e320c"
+      }
+    },
+    {
+      "sequence": 89,
+      "physicalPage": 55,
+      "sourceRowOnPage": 30,
+      "literalSourceName": "Gan,Wenqi",
+      "actual600DpiSourceName": {
+        "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-education-2021-22-003-comparison-name-0089-600.png",
+        "sha256": "a7d5270bd3cb74ad8efbdb8c58417ab8c809fad994df2aa31b07cb92c9c547d5"
+      }
+    },
+    {
+      "sequence": 105,
+      "physicalPage": 57,
+      "sourceRowOnPage": 6,
+      "literalSourceName": "Gessaroli,Marc-Andre",
+      "actual600DpiSourceName": {
+        "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-education-2021-22-003-comparison-name-0105-600.png",
+        "sha256": "271e5098db93a8bea25a7e0e7b36ded99542412dace7febf16d66bebdfea968c"
+      }
+    },
+    {
+      "sequence": 188,
+      "physicalPage": 62,
+      "sourceRowOnPage": 36,
+      "literalSourceName": "Gulbransen,Erik",
+      "actual600DpiSourceName": {
+        "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-education-2021-22-003-comparison-name-0188-600.png",
+        "sha256": "c91737c5850eb3408a5cbd3b31d4896572b3451076660089709a3574cc8060ae"
+      }
+    },
+    {
+      "sequence": 221,
+      "physicalPage": 65,
+      "sourceRowOnPage": 16,
+      "literalSourceName": "Hansen,Kathryn D.",
+      "actual600DpiSourceName": {
+        "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-education-2021-22-003-comparison-name-0221-600.png",
+        "sha256": "7b1dbbbed4ddcb6f933be9dfcf39c9212cc3746b1d02521b1ac1365eec2b799e"
+      }
+    }
+  ],
+  "reviewerOnlyCorrections": [
+    {
+      "sequence": 20,
+      "physicalPage": 50,
+      "sourceRowOnPage": 30,
+      "field": "name",
+      "firstPass": "Ferris,Robyn",
+      "sourceRecheck": "Ferris,Robynn",
+      "reason": "Original enlarged source shows two final n strokes in Robynn; frozen source-first omitted one. Candidate already had the correct printed given-name letters.",
+      "actual600DpiSourceName": {
+        "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-education-2021-22-003-comparison-name-0020-600.png",
+        "sha256": "dec4089a3c9a75453a605d1a7f9974df0c39b15d3986929bedc4521329bcb74e"
+      }
+    },
+    {
+      "sequence": 23,
+      "physicalPage": 51,
+      "sourceRowOnPage": 2,
+      "field": "name",
+      "firstPass": "Fingler,Ting Yee Debra F.",
+      "sourceRecheck": "Fingler,Debra F.",
+      "reason": "Original enlarged name and re-opened unchanged contact sheet show only Debra F. after the surname. The frozen source-first added Ting Yee, which is absent from the source; no composition/rendering difference is claimed. Remove that reviewer-only invented prefix, keeping literal printed fields.",
+      "actual600DpiSourceName": {
+        "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-education-2021-22-003-comparison-name-0023-600.png",
+        "sha256": "bb6de1f3046f3951964efd2b166ccf66efa3691a67657ab922a33c2b7d0c929a"
+      }
+    },
+    {
+      "sequence": 105,
+      "physicalPage": 57,
+      "sourceRowOnPage": 6,
+      "field": "name",
+      "firstPass": "Gessaroli,Marco-Andre",
+      "sourceRecheck": "Gessaroli,Marc-Andre",
+      "reason": "Original enlarged source ends the given word Marc before the hyphen; no o is printed. Frozen reviewer Marco and candidate Mare each differed from the visible literal source Marc.",
+      "actual600DpiSourceName": {
+        "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-education-2021-22-003-comparison-name-0105-600.png",
+        "sha256": "271e5098db93a8bea25a7e0e7b36ded99542412dace7febf16d66bebdfea968c"
+      }
+    },
+    {
+      "sequence": 188,
+      "physicalPage": 62,
+      "sourceRowOnPage": 36,
+      "field": "name",
+      "firstPass": "Gullbransen,Erik",
+      "sourceRecheck": "Gulbransen,Erik",
+      "reason": "Original enlarged source shows a single l before b in Gulbransen. Frozen reviewer inserted an extra l; given word Erik remains the original source reading, distinct from candidate Enik.",
+      "actual600DpiSourceName": {
+        "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-education-2021-22-003-comparison-name-0188-600.png",
+        "sha256": "c91737c5850eb3408a5cbd3b31d4896572b3451076660089709a3574cc8060ae"
+      }
+    },
+    {
+      "sequence": 221,
+      "physicalPage": 65,
+      "sourceRowOnPage": 16,
+      "field": "name",
+      "firstPass": "Hansen,Kathryn D",
+      "sourceRecheck": "Hansen,Kathryn D.",
+      "reason": "Original enlarged source shows the final period after D. Frozen reviewer omitted it; retain the literal dot.",
+      "actual600DpiSourceName": {
+        "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-education-2021-22-003-comparison-name-0221-600.png",
+        "sha256": "7b1dbbbed4ddcb6f933be9dfcf39c9212cc3746b1d02521b1ac1365eec2b799e"
+      }
+    }
+  ],
+  "sourceImageCompositionDefectClaimed": false
+}

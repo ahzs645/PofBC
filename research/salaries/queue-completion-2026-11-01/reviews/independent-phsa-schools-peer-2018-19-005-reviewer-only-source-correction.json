@@ -1,0 +1,49 @@
+{
+  "reviewer": "/root/recovery_schools",
+  "sourceId": "phsa-2018-19",
+  "sourceSha256": "ddeba470b875451f6180eb442ed921f7902cc910d62a026c11ab298ca3d0440f",
+  "batch": "phsa-2018-19-005",
+  "rawIndependentTranscript": {
+    "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-schools-peer-2018-19-005-original-transcript.json",
+    "sha256": "cefeab74138653d70a051c266ab84e7e57dccf8e1c110d2b43001c52eea8c88d"
+  },
+  "municipalSourceConclusionsOpened": {
+    "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-municipal-history-2018-19-005-ten-name-source-conclusions.json",
+    "sha256": "c3662f9aab42b072dda2a0ab33c9319f9d171e24920bad7f4b485698e0974958"
+  },
+  "reviewerOnlyCorrections": [
+    {
+      "sequence": 348,
+      "physicalPage": 82,
+      "sourceRowOnPage": 39,
+      "field": "name",
+      "rawIndependentReading": "Ramzan,Bibi Ferial",
+      "correctedLiteralSourceReading": "Ramzan,Bibi Ferian",
+      "zeroBasedCharacterPosition": 17,
+      "rawCharacter": "l",
+      "actualSourceCharacter": "n",
+      "timing": "After opening municipal ten-name source conclusions, before any municipal full candidate. Raw independent transcript is preserved.",
+      "sourceGlyphBasis": "Terminal glyph has an x-height arch and two stems, rather than the tall ascender of lowercase l. The unchanged native-source ending crop shows Ferian. This is literal source-letter evidence, not dictionary/identity/case-policy inference.",
+      "sourceImage": {
+        "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-schools-peer-2018-19-005-seq348-source-actual1200.png",
+        "sha256": "5a5f042a077e7d8ec72d654a41a473fd783e47c063307302af8c0fe830384eb6",
+        "dpi": 1200
+      },
+      "unchangedNativeSourceEndingCrop": {
+        "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-schools-peer-2018-19-005-seq348-native-ending-source-check.png",
+        "sha256": "58b803afdf3824518c5368f74e5a1391665794a3ce7b060846f52ba96881eb71",
+        "originalNamePngPixelRectangle": [
+          650,
+          0,
+          1450,
+          164
+        ],
+        "noResampling": true
+      },
+      "authorSourceDataChanged": false
+    }
+  ],
+  "rawBytesUnchanged": true,
+  "authorDataCorrections": [],
+  "fullCandidateOpened": false
+}

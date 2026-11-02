@@ -1,0 +1,93 @@
+{
+  "frozen": true,
+  "reviewer": "/root/recovery_municipal",
+  "reviewedOn": "2026-11-01",
+  "sourceId": "phsa-2016-17",
+  "sourceSha256": "31f7a1af80186bf81139fd693b36e733333a06c2ab1a4c5191bd6ee9b3623a53",
+  "batch": "phsa-2016-17-002",
+  "checks": {
+    "rows": 400,
+    "requestedFields": 460,
+    "requestedFieldCounts": {
+      "name": 170,
+      "remuneration": 210,
+      "expenses": 80
+    },
+    "sevenApprovedKeysExactlyOnAllRows": true,
+    "resolvedValueKeysExactlyRequestedOnAllRows": true,
+    "uniqueSourcePageRowKeys": 400,
+    "allFullRowCropSha256PinsMatchOriginalManifest": true,
+    "allInitialFrozenTranscriptAndSourceFidelityPinsUnchanged": true,
+    "all400ResolvedRowsEqualStagedResolutionValues": true,
+    "exactGlyphRows": 387,
+    "explicitQualifiedTypographyRows": 13,
+    "rawCandidateFieldDifferences": 402,
+    "rawCandidateRowsWithAtLeastOneFieldDifference": 361,
+    "normalizedOverlayCheckReplayByteIdentical": true
+  },
+  "ownReadingCorrections": {
+    "beforeCandidate": {
+      "names": 2,
+      "money": 0
+    },
+    "afterCandidate": {
+      "names": 0,
+      "money": 2
+    },
+    "allInitialReadingsRemainImmutable": true
+  },
+  "sourcePixelReview": {
+    "independentActualPdf300DpiRenders": 36,
+    "verifiedOriginalFullRowCrops": 400,
+    "personallyReadOriginalSourceContactSheets": 40,
+    "mechanicallyVerifiedNarrowFieldViews": 460,
+    "noEmbeddedBitmapStitchingUsed": true
+  },
+  "replayScript": {
+    "path": "scripts/finish_salary_phsa_resolutions.py",
+    "sha256": "7670792c8e7c84a4b3d6c69cd20b165ffd572307e12dde82e22b37d50d6e13f0"
+  },
+  "replayArguments": [
+    "--review",
+    "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-municipal-history-2016-17-002-resolutions-v2.json=e5d9a752f0f2de883928f751d5cc13bfc1cce9338c79cafaaa54cc2694e4bd7b",
+    "--out",
+    "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-municipal-history-2016-17-002-normalized-overlays-v2.json",
+    "--check"
+  ],
+  "inputs": [
+    {
+      "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-municipal-history-2016-17-002-original-transcript.json",
+      "sha256": "9849cbbdce75ba45819093e0b29a80a1757a5bf0a2e89d3475334a3dc8a70cfa"
+    },
+    {
+      "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-municipal-history-2016-17-002-source-fidelity.json",
+      "sha256": "d38b46d9d3e375792f3ab261e7aef2abb4ddd15a1b8a5a6cc6d26002b1c9fe05"
+    },
+    {
+      "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-municipal-history-2016-17-002-precomparison-source-rereads.json",
+      "sha256": "1fe3161cf6416bc16d5b39ad90904bba267332d990f6336f72dcafdf4bfb84cc"
+    },
+    {
+      "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-municipal-history-2016-17-002-postcomparison-original-rereads.json",
+      "sha256": "1ced1bfc8e96da0fe553ebe344952a07b2bd0e30abae58b135d92f8ea7ff0997"
+    },
+    {
+      "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-municipal-history-2016-17-002-source-typography-qualifications-v2.json",
+      "sha256": "a16b6d8ea2af2f59dc54728583f134372a178bf6d4fba559f519de61136636c1"
+    },
+    {
+      "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-municipal-history-2016-17-002-resolutions-v2.json",
+      "sha256": "e5d9a752f0f2de883928f751d5cc13bfc1cce9338c79cafaaa54cc2694e4bd7b"
+    },
+    {
+      "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-municipal-history-2016-17-002-normalized-overlays-v2.json",
+      "sha256": "5290b83144f99204c6ac6f38003b13f46fd095b91e50f82ce7c78a949cee3723"
+    },
+    {
+      "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-municipal-history-2016-17-002-full-candidate-comparison.json.gzip",
+      "sha256": "4305b069c76d6dc450d50d6207a2b962f37e6170301b89097b551afd2161d744"
+    }
+  ],
+  "pendingAtFreeze": "Exact peer comparison and root adoption of all13 typography cases remain prerequisites for whole-source acceptance. This verification does not adopt the source or claim an additional400-row blind peer.",
+  "noGlobalOrAuthorFrozenFilesChanged": true
+}

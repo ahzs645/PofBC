@@ -1,0 +1,145 @@
+{
+  "reviewedOn": "2026-11-02",
+  "allChecksPassed": true,
+  "checks": [
+    {
+      "command": "python -m unittest discover -s scripts -p test_finish_salary_phsa.py",
+      "exitCode": 0,
+      "testsRun": 56,
+      "failures": 0,
+      "errors": 0
+    },
+    {
+      "method": "One shared ledger.build(verify_overlays=True), then finalize.make(check=True) for each explicit final revision. All derived overlays, field routes, holdouts, money peers and exact selected data/provenance/validation bytes are replayed.",
+      "exitCode": 0,
+      "result": {
+        "allNineSelectedCandidatesByteReplay": true,
+        "sources": [
+          {
+            "sourceId": "phsa-2015-16",
+            "revision": 4,
+            "rows": 4545,
+            "residuals": [
+              31,
+              28
+            ],
+            "pendingFields": 0
+          },
+          {
+            "sourceId": "phsa-2016-17",
+            "revision": 4,
+            "rows": 5118,
+            "residuals": [
+              0,
+              -5
+            ],
+            "pendingFields": 0
+          },
+          {
+            "sourceId": "phsa-2017-18",
+            "revision": 3,
+            "rows": 5072,
+            "residuals": [
+              0,
+              0
+            ],
+            "pendingFields": 0
+          },
+          {
+            "sourceId": "phsa-2018-19",
+            "revision": 4,
+            "rows": 6041,
+            "residuals": [
+              0,
+              0
+            ],
+            "pendingFields": 0
+          },
+          {
+            "sourceId": "phsa-2019-20",
+            "revision": 4,
+            "rows": 6913,
+            "residuals": [
+              5220,
+              0
+            ],
+            "pendingFields": 0
+          },
+          {
+            "sourceId": "phsa-2020-21",
+            "revision": 4,
+            "rows": 7941,
+            "residuals": [
+              0,
+              0
+            ],
+            "pendingFields": 0
+          },
+          {
+            "sourceId": "phsa-2021-22",
+            "revision": 4,
+            "rows": 8270,
+            "residuals": [
+              0,
+              0
+            ],
+            "pendingFields": 0
+          },
+          {
+            "sourceId": "phsa-2022-23",
+            "revision": 4,
+            "rows": 9104,
+            "residuals": [
+              0,
+              0
+            ],
+            "pendingFields": 0
+          },
+          {
+            "sourceId": "phsa-2023-24",
+            "revision": 3,
+            "rows": 11908,
+            "residuals": [
+              0,
+              0
+            ],
+            "pendingFields": 0
+          }
+        ],
+        "totalRows": 64912,
+        "allNineSourceHoldoutsPassed": true
+      }
+    },
+    {
+      "command": "git diff --check",
+      "exitCode": 0
+    }
+  ],
+  "scope": "Producer deterministic checks. Independent source closures and root acceptance are separate inputs.",
+  "codeInputs": [
+    {
+      "path": "scripts/finish_salary_phsa_ledger.py",
+      "sha256": "807ce20f0c500a4e323767ac2329617bd13de6d5f740b9591744d05c7effee38"
+    },
+    {
+      "path": "scripts/finish_salary_phsa_resolutions.py",
+      "sha256": "9b5625024d995baf271a63a9905d8a7019f83194843ec3bd6cb0a69502efab30"
+    },
+    {
+      "path": "scripts/finish_salary_phsa_finalize.py",
+      "sha256": "a2aab1294205c72ca30c2625d0f04972de9c40bd7f1ba3c80f6dac495790c9ea"
+    },
+    {
+      "path": "scripts/finish_salary_phsa_money_sparse_current.py",
+      "sha256": "f88b41542ddd8408b487f60a099fe93d5a383ee43d8cd5a6d2ba156945c8d1b8"
+    },
+    {
+      "path": "scripts/finish_salary_phsa_money_peer.py",
+      "sha256": "ad1aca423c2c50648032297a59982184adef8f24f6c7a10c9208770872c54796"
+    },
+    {
+      "path": "scripts/test_finish_salary_phsa.py",
+      "sha256": "5ef00f36e0b8a8659ab243d366d046058df0c0dd22deaa29a642c75c3604ae5b"
+    }
+  ]
+}

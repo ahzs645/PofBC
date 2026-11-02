@@ -1,0 +1,707 @@
+{
+  "sourceId": "phsa-2022-23",
+  "sourceSha256": "6046bb7be6944bc729926adba20a826486820a2a3b9b38090c60d400b2bc72a1",
+  "year": "2022/23",
+  "imageDimensions": [
+    2550,
+    3300
+  ],
+  "firstSalaryPhysicalPage": 1,
+  "firstSalaryRowCount": 42,
+  "firstTableHeaders": {
+    "Name": {
+      "text": "Name",
+      "box": [
+        222,
+        696,
+        315,
+        736
+      ],
+      "x": 268.5,
+      "y": 716.0,
+      "confidence": 96.867935,
+      "line": [
+        "1",
+        "1",
+        "3",
+        "1"
+      ]
+    },
+    "Remuneration": {
+      "text": "Remuneration",
+      "box": [
+        1731,
+        696,
+        1960,
+        736
+      ],
+      "x": 1845.5,
+      "y": 716.0,
+      "confidence": 96.209763,
+      "line": [
+        "1",
+        "1",
+        "3",
+        "1"
+      ]
+    },
+    "Expenses": {
+      "text": "Expenses",
+      "box": [
+        2136,
+        700,
+        2282,
+        732
+      ],
+      "x": 2209.0,
+      "y": 716.0,
+      "confidence": 94.602173,
+      "line": [
+        "1",
+        "1",
+        "3",
+        "1"
+      ]
+    }
+  },
+  "namePayBoundary": 1701,
+  "payExpenseBoundary": 2106,
+  "sourceFirstTableRowPitchPixels": 54.33333333333326,
+  "sourceLegalFooterTop": 3108,
+  "sourceFirstTableLegalFooterWords": [
+    {
+      "text": "This",
+      "box": [
+        442,
+        3108,
+        510,
+        3136
+      ],
+      "x": 476.0,
+      "y": 3122.0,
+      "confidence": 96.263916,
+      "line": [
+        "1",
+        "1",
+        "4",
+        "1"
+      ]
+    },
+    {
+      "text": "statement",
+      "box": [
+        520,
+        3110,
+        693,
+        3136
+      ],
+      "x": 606.5,
+      "y": 3123.0,
+      "confidence": 96.144005,
+      "line": [
+        "1",
+        "1",
+        "4",
+        "1"
+      ]
+    }
+  ],
+  "tableBodyBottomFraction": 0.94,
+  "tableHeaderSearchBottomFraction": 0.4,
+  "initialUncalibratedConfidenceRules": {
+    "rapidName": 0.98,
+    "tesseractName": 85,
+    "rapidMoney": 0.98,
+    "tesseractMoney": 90
+  },
+  "geometryDefinition": "Original per-source printed columns anchored by the independently image-transcribed first table. Each page header and final Total are located separately. No universal row count, footer count or dash template.",
+  "dashCalibration": {
+    "sourceSha256": "6046bb7be6944bc729926adba20a826486820a2a3b9b38090c60d400b2bc72a1",
+    "fixturePhysicalPage": 1,
+    "actualSourceImageSha256": "fefd32a92931c85c3181db0ff89d0cb4994830581a5bff23904171cf3c8190d9",
+    "allImageVerifiedNullExamples": [
+      {
+        "sourceRowOnPage": 2,
+        "sourceExpenseCellBox": [
+          2106,
+          792,
+          2422,
+          845
+        ],
+        "blackPixels": 40,
+        "blank": false,
+        "glyphBox": [
+          2234,
+          819,
+          2244,
+          823
+        ],
+        "glyphWidth": 10,
+        "glyphHeight": 4,
+        "inkFill": 1.0,
+        "aspectRatio": 2.5,
+        "connectedInkComponents": 1,
+        "packedMask": "ffffffffff",
+        "maskSha256": "8f0b3718528fd1b2189919987cbbe38d0a17e39dd87172a332610317f9ee571f"
+      },
+      {
+        "sourceRowOnPage": 3,
+        "sourceExpenseCellBox": [
+          2106,
+          845,
+          2422,
+          898
+        ],
+        "blackPixels": 40,
+        "blank": false,
+        "glyphBox": [
+          2234,
+          873,
+          2244,
+          877
+        ],
+        "glyphWidth": 10,
+        "glyphHeight": 4,
+        "inkFill": 1.0,
+        "aspectRatio": 2.5,
+        "connectedInkComponents": 1,
+        "packedMask": "ffffffffff",
+        "maskSha256": "8f0b3718528fd1b2189919987cbbe38d0a17e39dd87172a332610317f9ee571f"
+      },
+      {
+        "sourceRowOnPage": 5,
+        "sourceExpenseCellBox": [
+          2106,
+          954,
+          2422,
+          1008
+        ],
+        "blackPixels": 40,
+        "blank": false,
+        "glyphBox": [
+          2234,
+          983,
+          2244,
+          987
+        ],
+        "glyphWidth": 10,
+        "glyphHeight": 4,
+        "inkFill": 1.0,
+        "aspectRatio": 2.5,
+        "connectedInkComponents": 1,
+        "packedMask": "ffffffffff",
+        "maskSha256": "8f0b3718528fd1b2189919987cbbe38d0a17e39dd87172a332610317f9ee571f"
+      },
+      {
+        "sourceRowOnPage": 7,
+        "sourceExpenseCellBox": [
+          2106,
+          1062,
+          2422,
+          1118
+        ],
+        "blackPixels": 40,
+        "blank": false,
+        "glyphBox": [
+          2234,
+          1091,
+          2244,
+          1095
+        ],
+        "glyphWidth": 10,
+        "glyphHeight": 4,
+        "inkFill": 1.0,
+        "aspectRatio": 2.5,
+        "connectedInkComponents": 1,
+        "packedMask": "ffffffffff",
+        "maskSha256": "8f0b3718528fd1b2189919987cbbe38d0a17e39dd87172a332610317f9ee571f"
+      },
+      {
+        "sourceRowOnPage": 8,
+        "sourceExpenseCellBox": [
+          2106,
+          1118,
+          2422,
+          1176
+        ],
+        "blackPixels": 40,
+        "blank": false,
+        "glyphBox": [
+          2234,
+          1145,
+          2244,
+          1149
+        ],
+        "glyphWidth": 10,
+        "glyphHeight": 4,
+        "inkFill": 1.0,
+        "aspectRatio": 2.5,
+        "connectedInkComponents": 1,
+        "packedMask": "ffffffffff",
+        "maskSha256": "8f0b3718528fd1b2189919987cbbe38d0a17e39dd87172a332610317f9ee571f"
+      },
+      {
+        "sourceRowOnPage": 10,
+        "sourceExpenseCellBox": [
+          2106,
+          1229,
+          2422,
+          1284
+        ],
+        "blackPixels": 40,
+        "blank": false,
+        "glyphBox": [
+          2234,
+          1256,
+          2244,
+          1260
+        ],
+        "glyphWidth": 10,
+        "glyphHeight": 4,
+        "inkFill": 1.0,
+        "aspectRatio": 2.5,
+        "connectedInkComponents": 1,
+        "packedMask": "ffffffffff",
+        "maskSha256": "8f0b3718528fd1b2189919987cbbe38d0a17e39dd87172a332610317f9ee571f"
+      },
+      {
+        "sourceRowOnPage": 11,
+        "sourceExpenseCellBox": [
+          2106,
+          1284,
+          2422,
+          1338
+        ],
+        "blackPixels": 40,
+        "blank": false,
+        "glyphBox": [
+          2234,
+          1310,
+          2244,
+          1314
+        ],
+        "glyphWidth": 10,
+        "glyphHeight": 4,
+        "inkFill": 1.0,
+        "aspectRatio": 2.5,
+        "connectedInkComponents": 1,
+        "packedMask": "ffffffffff",
+        "maskSha256": "8f0b3718528fd1b2189919987cbbe38d0a17e39dd87172a332610317f9ee571f"
+      },
+      {
+        "sourceRowOnPage": 16,
+        "sourceExpenseCellBox": [
+          2106,
+          1556,
+          2422,
+          1610
+        ],
+        "blackPixels": 40,
+        "blank": false,
+        "glyphBox": [
+          2234,
+          1582,
+          2244,
+          1586
+        ],
+        "glyphWidth": 10,
+        "glyphHeight": 4,
+        "inkFill": 1.0,
+        "aspectRatio": 2.5,
+        "connectedInkComponents": 1,
+        "packedMask": "ffffffffff",
+        "maskSha256": "8f0b3718528fd1b2189919987cbbe38d0a17e39dd87172a332610317f9ee571f"
+      },
+      {
+        "sourceRowOnPage": 17,
+        "sourceExpenseCellBox": [
+          2106,
+          1610,
+          2422,
+          1665
+        ],
+        "blackPixels": 40,
+        "blank": false,
+        "glyphBox": [
+          2234,
+          1638,
+          2244,
+          1642
+        ],
+        "glyphWidth": 10,
+        "glyphHeight": 4,
+        "inkFill": 1.0,
+        "aspectRatio": 2.5,
+        "connectedInkComponents": 1,
+        "packedMask": "ffffffffff",
+        "maskSha256": "8f0b3718528fd1b2189919987cbbe38d0a17e39dd87172a332610317f9ee571f"
+      },
+      {
+        "sourceRowOnPage": 18,
+        "sourceExpenseCellBox": [
+          2106,
+          1665,
+          2422,
+          1718
+        ],
+        "blackPixels": 40,
+        "blank": false,
+        "glyphBox": [
+          2234,
+          1692,
+          2244,
+          1696
+        ],
+        "glyphWidth": 10,
+        "glyphHeight": 4,
+        "inkFill": 1.0,
+        "aspectRatio": 2.5,
+        "connectedInkComponents": 1,
+        "packedMask": "ffffffffff",
+        "maskSha256": "8f0b3718528fd1b2189919987cbbe38d0a17e39dd87172a332610317f9ee571f"
+      },
+      {
+        "sourceRowOnPage": 19,
+        "sourceExpenseCellBox": [
+          2106,
+          1718,
+          2422,
+          1772
+        ],
+        "blackPixels": 40,
+        "blank": false,
+        "glyphBox": [
+          2234,
+          1746,
+          2244,
+          1750
+        ],
+        "glyphWidth": 10,
+        "glyphHeight": 4,
+        "inkFill": 1.0,
+        "aspectRatio": 2.5,
+        "connectedInkComponents": 1,
+        "packedMask": "ffffffffff",
+        "maskSha256": "8f0b3718528fd1b2189919987cbbe38d0a17e39dd87172a332610317f9ee571f"
+      },
+      {
+        "sourceRowOnPage": 23,
+        "sourceExpenseCellBox": [
+          2106,
+          1936,
+          2422,
+          1990
+        ],
+        "blackPixels": 40,
+        "blank": false,
+        "glyphBox": [
+          2234,
+          1964,
+          2244,
+          1968
+        ],
+        "glyphWidth": 10,
+        "glyphHeight": 4,
+        "inkFill": 1.0,
+        "aspectRatio": 2.5,
+        "connectedInkComponents": 1,
+        "packedMask": "ffffffffff",
+        "maskSha256": "8f0b3718528fd1b2189919987cbbe38d0a17e39dd87172a332610317f9ee571f"
+      },
+      {
+        "sourceRowOnPage": 24,
+        "sourceExpenseCellBox": [
+          2106,
+          1990,
+          2422,
+          2044
+        ],
+        "blackPixels": 40,
+        "blank": false,
+        "glyphBox": [
+          2234,
+          2018,
+          2244,
+          2022
+        ],
+        "glyphWidth": 10,
+        "glyphHeight": 4,
+        "inkFill": 1.0,
+        "aspectRatio": 2.5,
+        "connectedInkComponents": 1,
+        "packedMask": "ffffffffff",
+        "maskSha256": "8f0b3718528fd1b2189919987cbbe38d0a17e39dd87172a332610317f9ee571f"
+      },
+      {
+        "sourceRowOnPage": 25,
+        "sourceExpenseCellBox": [
+          2106,
+          2044,
+          2422,
+          2102
+        ],
+        "blackPixels": 40,
+        "blank": false,
+        "glyphBox": [
+          2234,
+          2074,
+          2244,
+          2078
+        ],
+        "glyphWidth": 10,
+        "glyphHeight": 4,
+        "inkFill": 1.0,
+        "aspectRatio": 2.5,
+        "connectedInkComponents": 1,
+        "packedMask": "ffffffffff",
+        "maskSha256": "8f0b3718528fd1b2189919987cbbe38d0a17e39dd87172a332610317f9ee571f"
+      },
+      {
+        "sourceRowOnPage": 28,
+        "sourceExpenseCellBox": [
+          2106,
+          2210,
+          2422,
+          2262
+        ],
+        "blackPixels": 40,
+        "blank": false,
+        "glyphBox": [
+          2234,
+          2236,
+          2244,
+          2240
+        ],
+        "glyphWidth": 10,
+        "glyphHeight": 4,
+        "inkFill": 1.0,
+        "aspectRatio": 2.5,
+        "connectedInkComponents": 1,
+        "packedMask": "ffffffffff",
+        "maskSha256": "8f0b3718528fd1b2189919987cbbe38d0a17e39dd87172a332610317f9ee571f"
+      },
+      {
+        "sourceRowOnPage": 29,
+        "sourceExpenseCellBox": [
+          2106,
+          2262,
+          2422,
+          2320
+        ],
+        "blackPixels": 40,
+        "blank": false,
+        "glyphBox": [
+          2234,
+          2292,
+          2244,
+          2296
+        ],
+        "glyphWidth": 10,
+        "glyphHeight": 4,
+        "inkFill": 1.0,
+        "aspectRatio": 2.5,
+        "connectedInkComponents": 1,
+        "packedMask": "ffffffffff",
+        "maskSha256": "8f0b3718528fd1b2189919987cbbe38d0a17e39dd87172a332610317f9ee571f"
+      },
+      {
+        "sourceRowOnPage": 30,
+        "sourceExpenseCellBox": [
+          2106,
+          2320,
+          2422,
+          2374
+        ],
+        "blackPixels": 40,
+        "blank": false,
+        "glyphBox": [
+          2234,
+          2346,
+          2244,
+          2350
+        ],
+        "glyphWidth": 10,
+        "glyphHeight": 4,
+        "inkFill": 1.0,
+        "aspectRatio": 2.5,
+        "connectedInkComponents": 1,
+        "packedMask": "ffffffffff",
+        "maskSha256": "8f0b3718528fd1b2189919987cbbe38d0a17e39dd87172a332610317f9ee571f"
+      },
+      {
+        "sourceRowOnPage": 32,
+        "sourceExpenseCellBox": [
+          2106,
+          2426,
+          2422,
+          2480
+        ],
+        "blackPixels": 40,
+        "blank": false,
+        "glyphBox": [
+          2234,
+          2454,
+          2244,
+          2458
+        ],
+        "glyphWidth": 10,
+        "glyphHeight": 4,
+        "inkFill": 1.0,
+        "aspectRatio": 2.5,
+        "connectedInkComponents": 1,
+        "packedMask": "ffffffffff",
+        "maskSha256": "8f0b3718528fd1b2189919987cbbe38d0a17e39dd87172a332610317f9ee571f"
+      },
+      {
+        "sourceRowOnPage": 35,
+        "sourceExpenseCellBox": [
+          2106,
+          2592,
+          2422,
+          2646
+        ],
+        "blackPixels": 40,
+        "blank": false,
+        "glyphBox": [
+          2234,
+          2618,
+          2244,
+          2622
+        ],
+        "glyphWidth": 10,
+        "glyphHeight": 4,
+        "inkFill": 1.0,
+        "aspectRatio": 2.5,
+        "connectedInkComponents": 1,
+        "packedMask": "ffffffffff",
+        "maskSha256": "8f0b3718528fd1b2189919987cbbe38d0a17e39dd87172a332610317f9ee571f"
+      },
+      {
+        "sourceRowOnPage": 36,
+        "sourceExpenseCellBox": [
+          2106,
+          2646,
+          2422,
+          2698
+        ],
+        "blackPixels": 40,
+        "blank": false,
+        "glyphBox": [
+          2234,
+          2672,
+          2244,
+          2676
+        ],
+        "glyphWidth": 10,
+        "glyphHeight": 4,
+        "inkFill": 1.0,
+        "aspectRatio": 2.5,
+        "connectedInkComponents": 1,
+        "packedMask": "ffffffffff",
+        "maskSha256": "8f0b3718528fd1b2189919987cbbe38d0a17e39dd87172a332610317f9ee571f"
+      },
+      {
+        "sourceRowOnPage": 38,
+        "sourceExpenseCellBox": [
+          2106,
+          2754,
+          2422,
+          2808
+        ],
+        "blackPixels": 40,
+        "blank": false,
+        "glyphBox": [
+          2234,
+          2782,
+          2244,
+          2786
+        ],
+        "glyphWidth": 10,
+        "glyphHeight": 4,
+        "inkFill": 1.0,
+        "aspectRatio": 2.5,
+        "connectedInkComponents": 1,
+        "packedMask": "ffffffffff",
+        "maskSha256": "8f0b3718528fd1b2189919987cbbe38d0a17e39dd87172a332610317f9ee571f"
+      },
+      {
+        "sourceRowOnPage": 41,
+        "sourceExpenseCellBox": [
+          2106,
+          2920,
+          2422,
+          2974
+        ],
+        "blackPixels": 40,
+        "blank": false,
+        "glyphBox": [
+          2234,
+          2946,
+          2244,
+          2950
+        ],
+        "glyphWidth": 10,
+        "glyphHeight": 4,
+        "inkFill": 1.0,
+        "aspectRatio": 2.5,
+        "connectedInkComponents": 1,
+        "packedMask": "ffffffffff",
+        "maskSha256": "8f0b3718528fd1b2189919987cbbe38d0a17e39dd87172a332610317f9ee571f"
+      },
+      {
+        "sourceRowOnPage": 42,
+        "sourceExpenseCellBox": [
+          2106,
+          2974,
+          2422,
+          3026
+        ],
+        "blackPixels": 40,
+        "blank": false,
+        "glyphBox": [
+          2234,
+          3000,
+          2244,
+          3004
+        ],
+        "glyphWidth": 10,
+        "glyphHeight": 4,
+        "inkFill": 1.0,
+        "aspectRatio": 2.5,
+        "connectedInkComponents": 1,
+        "packedMask": "ffffffffff",
+        "maskSha256": "8f0b3718528fd1b2189919987cbbe38d0a17e39dd87172a332610317f9ee571f"
+      }
+    ],
+    "knownMaskSha256": [
+      "8f0b3718528fd1b2189919987cbbe38d0a17e39dd87172a332610317f9ee571f"
+    ],
+    "widthRange": [
+      9,
+      11
+    ],
+    "heightRange": [
+      1,
+      5
+    ],
+    "minimumAspectRatio": 2.0,
+    "minimumInkFill": 0.92,
+    "connectedInkComponents": 1,
+    "requiresAllCellInkWithinTheSingleShortHorizontalGlyph": true,
+    "neverDetectorAbsenceBlankDotOrMinusAttachedToNumbers": true,
+    "geometryDerivation": "Per-source actual image examples establish a one-pixel raster tolerance and horizontal shape bounds. Every source expense cell is checked independently; explicit zeros/negative numbers and any other ink fail dash geometry."
+  },
+  "chosenRapidConfiguration": "baseline-default",
+  "chosenTesseractConfiguration": "preinstalled-eng-full-300-psm6",
+  "fixture": {
+    "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-history-batches-benchmark-2022-23-original-transcript.tsv",
+    "sha256": "da913fa3b01006e80acd2ed25adcfd67855a5b07f0ab2f44c1d9d99525ea8b93"
+  },
+  "benchmarkComparisonReceipt": {
+    "path": "research/salaries/queue-completion-2026-11-01/phsa/first-table-ocr-benchmark-trials-003.json",
+    "sha256": "8bcac47a3247d109bf14e6d108973e6bcc4f617555e345c14b9e36886c0d9bd9"
+  },
+  "profileStatus": "source-image-calibrated-structural-profile-pending-independent-full-source-closure",
+  "rendering": "Actual PDF page.get_pixmap(dpi=300,alpha=False), RGB; no native tile stitching",
+  "retainCompiledPartition": true
+}

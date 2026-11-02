@@ -1,0 +1,215 @@
+{
+  "frozen": true,
+  "reviewedOn": "2026-11-02",
+  "reviewer": "recovery_education",
+  "sourceSha256": "0e31ac2054f0c2d4ef78797185dddd96cc0cdf2eab94bd6841fa24e1c38e7d02",
+  "batch": "phsa-2019-20-011",
+  "scope": "Sixexact m/rn namefields only within strict41peer, no financial/full400/sourceacceptance.",
+  "sourceFirstRaw": {
+    "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-education-2019-20-011-fortyone-peer-source-first.json",
+    "sha256": "393703adfbbb11d3a11b79da5ca75982f2bea2e3bc11da73243d41abdbdc199b"
+  },
+  "rootCurrentScopedSourceConclusions": {
+    "path": "research/salaries/queue-completion-2026-11-01/reviews/root-phsa-history-2019-20-batch-011-new-fortyone-current-source-conclusions.json",
+    "sha256": "5b04f0c458cb65b7b11bc4badb7cef99099567fbe2f37cefd9e2c9bbadc28654"
+  },
+  "actualPdfSourceVerification": {
+    "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-education-2019-20-011-fortyone-actual-pdf-verification.json",
+    "sha256": "9473feb1d4ee9cfd7ea6849ba94fa52c581d3aae647ef92cec7b70c6762dca8d"
+  },
+  "allSixFiniteSetsIdenticalToPeerSourceFirstRaw": true,
+  "fivePreferredPrimariesMatchAnd219PreferredSplitPreserved": true,
+  "case313AllEightFiniteCombinations": true,
+  "cases": [
+    {
+      "sequence": 88,
+      "physicalPage": 73,
+      "sourceRowOnPage": 34,
+      "field": "name",
+      "cropSha256": "00b2a7af69378d14140c7781fb19116f3034066abae17a2b13ae40fbaf9dc0a6",
+      "ambiguityKind": "rn-m-source-segmentation",
+      "qualificationPolicy": {
+        "path": "research/salaries/queue-completion-2026-11-01/phsa/source-name-segmentation-review-policy-002.json",
+        "sha256": "fcfc11b7872b8c111018dd5b74494ea25391d14e1e905aa327f6a435c6e1e40c"
+      },
+      "chosenContextualTranscription": "Melney,Bernice",
+      "peerFrozenPreferredTranscription": "Melney,Bernice",
+      "preferredPrimariesMatch": true,
+      "visibleAlternatives": [
+        "Melney,Bernice",
+        "Melney,Bemice"
+      ],
+      "caseProvenByPixels": false,
+      "sourceSpans": [
+        {
+          "zeroBasedChosenPrimaryIndex": 9,
+          "primaryText": "rn",
+          "visibleAlternative": "m"
+        }
+      ],
+      "basis": "Both independent current-source readings retain this exact finite m/rn set. Case219has an honest preferred m/rn split; root selects rn while peer m remains in the same set. No identity, arbitrary character expansion, surname rr/m, n/m or generic capitalization rule.",
+      "rootExactPolicy002AdoptionAndPublicWarningRequired": true
+    },
+    {
+      "sequence": 219,
+      "physicalPage": 76,
+      "sourceRowOnPage": 18,
+      "field": "name",
+      "cropSha256": "76fb23d4d37a65a5e303853cd3d6df1088d813b76cc6eeaa6da00cd227b9d165",
+      "ambiguityKind": "rn-m-source-segmentation",
+      "qualificationPolicy": {
+        "path": "research/salaries/queue-completion-2026-11-01/phsa/source-name-segmentation-review-policy-002.json",
+        "sha256": "fcfc11b7872b8c111018dd5b74494ea25391d14e1e905aa327f6a435c6e1e40c"
+      },
+      "chosenContextualTranscription": "Morales,Gino Arnelito M.",
+      "peerFrozenPreferredTranscription": "Morales,Gino Amelito M.",
+      "preferredPrimariesMatch": false,
+      "visibleAlternatives": [
+        "Morales,Gino Amelito M.",
+        "Morales,Gino Arnelito M."
+      ],
+      "caseProvenByPixels": false,
+      "sourceSpans": [
+        {
+          "zeroBasedChosenPrimaryIndex": 14,
+          "primaryText": "rn",
+          "visibleAlternative": "m"
+        }
+      ],
+      "basis": "Both independent current-source readings retain this exact finite m/rn set. Case219has an honest preferred m/rn split; root selects rn while peer m remains in the same set. No identity, arbitrary character expansion, surname rr/m, n/m or generic capitalization rule.",
+      "rootExactPolicy002AdoptionAndPublicWarningRequired": true
+    },
+    {
+      "sequence": 238,
+      "physicalPage": 76,
+      "sourceRowOnPage": 40,
+      "field": "name",
+      "cropSha256": "4324e740b58f1e0c09b792b41cdc72a48b392bb54aa4ac69a660b11e68e546e5",
+      "ambiguityKind": "rn-m-source-segmentation",
+      "qualificationPolicy": {
+        "path": "research/salaries/queue-completion-2026-11-01/phsa/source-name-segmentation-review-policy-002.json",
+        "sha256": "fcfc11b7872b8c111018dd5b74494ea25391d14e1e905aa327f6a435c6e1e40c"
+      },
+      "chosenContextualTranscription": "Morris,David James",
+      "peerFrozenPreferredTranscription": "Morris,David James",
+      "preferredPrimariesMatch": true,
+      "visibleAlternatives": [
+        "Morris,David James",
+        "Morris,David Jarnes"
+      ],
+      "caseProvenByPixels": false,
+      "sourceSpans": [
+        {
+          "zeroBasedChosenPrimaryIndex": 15,
+          "primaryText": "m",
+          "visibleAlternative": "rn"
+        }
+      ],
+      "basis": "Both independent current-source readings retain this exact finite m/rn set. Case219has an honest preferred m/rn split; root selects rn while peer m remains in the same set. No identity, arbitrary character expansion, surname rr/m, n/m or generic capitalization rule.",
+      "rootExactPolicy002AdoptionAndPublicWarningRequired": true
+    },
+    {
+      "sequence": 242,
+      "physicalPage": 76,
+      "sourceRowOnPage": 44,
+      "field": "name",
+      "cropSha256": "7642f4466b9988a42a232d0ebf71826a769155e79df0e2725ab2293ee9b0cd5b",
+      "ambiguityKind": "rn-m-source-segmentation",
+      "qualificationPolicy": {
+        "path": "research/salaries/queue-completion-2026-11-01/phsa/source-name-segmentation-review-policy-002.json",
+        "sha256": "fcfc11b7872b8c111018dd5b74494ea25391d14e1e905aa327f6a435c6e1e40c"
+      },
+      "chosenContextualTranscription": "Morrison,Earl James",
+      "peerFrozenPreferredTranscription": "Morrison,Earl James",
+      "preferredPrimariesMatch": true,
+      "visibleAlternatives": [
+        "Morrison,Earl James",
+        "Morrison,Earl Jarnes"
+      ],
+      "caseProvenByPixels": false,
+      "sourceSpans": [
+        {
+          "zeroBasedChosenPrimaryIndex": 16,
+          "primaryText": "m",
+          "visibleAlternative": "rn"
+        }
+      ],
+      "basis": "Both independent current-source readings retain this exact finite m/rn set. Case219has an honest preferred m/rn split; root selects rn while peer m remains in the same set. No identity, arbitrary character expansion, surname rr/m, n/m or generic capitalization rule.",
+      "rootExactPolicy002AdoptionAndPublicWarningRequired": true
+    },
+    {
+      "sequence": 296,
+      "physicalPage": 77,
+      "sourceRowOnPage": 57,
+      "field": "name",
+      "cropSha256": "f5c3a709b5e9b0b557ca052f6ca2363f8dc955357ca71c830dda660db6b926a8",
+      "ambiguityKind": "rn-m-source-segmentation",
+      "qualificationPolicy": {
+        "path": "research/salaries/queue-completion-2026-11-01/phsa/source-name-segmentation-review-policy-002.json",
+        "sha256": "fcfc11b7872b8c111018dd5b74494ea25391d14e1e905aa327f6a435c6e1e40c"
+      },
+      "chosenContextualTranscription": "Nadeem,Janine",
+      "peerFrozenPreferredTranscription": "Nadeem,Janine",
+      "preferredPrimariesMatch": true,
+      "visibleAlternatives": [
+        "Nadeem,Janine",
+        "Nadeern,Janine"
+      ],
+      "caseProvenByPixels": false,
+      "sourceSpans": [
+        {
+          "zeroBasedChosenPrimaryIndex": 5,
+          "primaryText": "m",
+          "visibleAlternative": "rn"
+        }
+      ],
+      "basis": "Both independent current-source readings retain this exact finite m/rn set. Case219has an honest preferred m/rn split; root selects rn while peer m remains in the same set. No identity, arbitrary character expansion, surname rr/m, n/m or generic capitalization rule.",
+      "rootExactPolicy002AdoptionAndPublicWarningRequired": true
+    },
+    {
+      "sequence": 313,
+      "physicalPage": 78,
+      "sourceRowOnPage": 20,
+      "field": "name",
+      "cropSha256": "1f2061193752311137bd704ad13175107372afbf7e9314624ae0ce2ec2b16312",
+      "ambiguityKind": "rn-m-source-segmentation",
+      "qualificationPolicy": {
+        "path": "research/salaries/queue-completion-2026-11-01/phsa/source-name-segmentation-review-policy-002.json",
+        "sha256": "fcfc11b7872b8c111018dd5b74494ea25391d14e1e905aa327f6a435c6e1e40c"
+      },
+      "chosenContextualTranscription": "Namshim,Peyman",
+      "peerFrozenPreferredTranscription": "Namshim,Peyman",
+      "preferredPrimariesMatch": true,
+      "visibleAlternatives": [
+        "Namshim,Peyman",
+        "Namshim,Peyrnan",
+        "Namshirn,Peyman",
+        "Namshirn,Peyrnan",
+        "Narnshim,Peyman",
+        "Narnshim,Peyrnan",
+        "Narnshirn,Peyman",
+        "Narnshirn,Peyrnan"
+      ],
+      "caseProvenByPixels": false,
+      "sourceSpans": [
+        {
+          "zeroBasedChosenPrimaryIndex": 2,
+          "primaryText": "m",
+          "visibleAlternative": "rn"
+        },
+        {
+          "zeroBasedChosenPrimaryIndex": 6,
+          "primaryText": "m",
+          "visibleAlternative": "rn"
+        },
+        {
+          "zeroBasedChosenPrimaryIndex": 11,
+          "primaryText": "m",
+          "visibleAlternative": "rn"
+        }
+      ],
+      "basis": "Both independent current-source readings retain this exact finite m/rn set. Case219has an honest preferred m/rn split; root selects rn while peer m remains in the same set. No identity, arbitrary character expansion, surname rr/m, n/m or generic capitalization rule.",
+      "rootExactPolicy002AdoptionAndPublicWarningRequired": true
+    }
+  ]
+}

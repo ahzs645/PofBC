@@ -1,0 +1,67 @@
+{
+  "frozen": true,
+  "sourceId": "phsa-2018-19",
+  "sourceSha256": "ddeba470b875451f6180eb442ed921f7902cc910d62a026c11ab298ca3d0440f",
+  "kind": "complete-sixteen-case-additive-mac-prefix-name-review",
+  "reviewInput": {
+    "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-history-mac-I-quality-002-resolutions.json",
+    "sha256": "e7e9dbb35343baf591d1bc1cf968e5c12d84a998c580123d2c4acff0b6746cc3"
+  },
+  "sourceOnlyPacket": {
+    "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-history-mac-I-quality-002-source-only.json",
+    "sha256": "8fb79912e73da0b8c72611c86a5200477e95b807fec726f4fdfbc405581a6b5c"
+  },
+  "independentFreshPeer": {
+    "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-history-batches-mac-I-quality-002-peer-comparison.json",
+    "sha256": "44da96133b4f26b1f97f97c3bcf2d39b228b208f885aff0c7669cd37730b0f36"
+  },
+  "resolvedRows": 1,
+  "reviewedFieldCounts": {
+    "name": 1
+  },
+  "overlays": [
+    {
+      "physicalPage": 62,
+      "sourceRowOnPage": 36,
+      "rawCandidateRow": [
+        "provincial-health-services-authority",
+        "MacInnes,Glen",
+        null,
+        115787,
+        1351,
+        62
+      ],
+      "resolvedRow": [
+        "provincial-health-services-authority",
+        "MacInnes,Glen",
+        null,
+        115787,
+        1351,
+        62
+      ],
+      "reviewedFields": [
+        "name"
+      ],
+      "changedFields": [],
+      "resolutionStatus": "resolved-from-original-image",
+      "nameTypographyQualification": null,
+      "pageEvidencePath": "research/salaries/queue-completion-phsa/evidence/phsa-2018-19-rows-p062.json.gzip",
+      "pageEvidenceSha256": "712adff558c637cbc0f133366151153b5005d15f5ff1e456df0587cc6aece8d3",
+      "rawPageEvidence": {
+        "path": "research/salaries/queue-completion-phsa/evidence/phsa-2018-19-raw-p062.json.gzip",
+        "sha256": "67ac16b31c01f41ce37f8494547b59fc94cfdbd6cfd094943e8a7ea82b492b0b"
+      },
+      "cropSha256": "445dc668c60181399bf98ac5adbc063862ef369efb35ea1a3af99492779a02a4",
+      "retainedSourceNameView": {
+        "path": "research/salaries/queue-completion-2026-11-01/phsa/supplement-assets/mac-002-004-name.png",
+        "sha256": "144b868e3b866d9282cb2e488a60f47a8e0a9d1f29af012abcc4d8c2a814684f"
+      },
+      "reviewInput": {
+        "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-history-mac-I-quality-002-resolutions.json",
+        "sha256": "e7e9dbb35343baf591d1bc1cf968e5c12d84a998c580123d2c4acff0b6746cc3"
+      }
+    }
+  ],
+  "noUnrequestedFieldsChanged": true,
+  "qualifiedCasesRequireExactPerSourceRootAdoption": false
+}

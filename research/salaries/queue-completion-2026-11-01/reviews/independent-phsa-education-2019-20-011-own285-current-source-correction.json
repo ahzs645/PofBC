@@ -1,0 +1,53 @@
+{
+  "frozen": true,
+  "reviewedOn": "2026-11-02",
+  "reviewer": "recovery_education",
+  "sourceSha256": "0e31ac2054f0c2d4ef78797185dddd96cc0cdf2eab94bd6841fa24e1c38e7d02",
+  "scope": "One own postcomparison name correction, sequence285 only. No money/full400/sourceacceptance.",
+  "preservedOwnSourceFirstRaw": {
+    "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-education-2019-20-011-fortyone-peer-source-first.json",
+    "sha256": "393703adfbbb11d3a11b79da5ca75982f2bea2e3bc11da73243d41abdbdc199b"
+  },
+  "exposureTiming": "Root proposed Dereck after my source-first raw was frozen; I then independently reopened current original PDF2400. This is an explicit own post-exposure source correction, not false first-pass agreement.",
+  "correction": {
+    "sequence": 285,
+    "physicalPage": 77,
+    "sourceRowOnPage": 43,
+    "field": "name",
+    "cropSha256": "48c93f1ac5fcd8cd3da2a1579d2c7dd0a2f65843aaad465ad550e85fd365dea2",
+    "before": "Murray-Rosel,Jason Derek",
+    "after": "Murray-Rosel,Jason Dereck",
+    "basis": "Actual current original2400 ending shows an additional separate open c before the tall k. My first Derek omitted a printed glyph. Surname Rosel remains unchanged with one s. No name expansion, generic letter waiver, or identity authority."
+  },
+  "boundedOriginalEvidence": {
+    "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-education-2019-20-011-285-current-original2400.png",
+    "sha256": "cb764149c69e10d3c7862f9695a73a218f8399954ff326b8bc7df9c3fcf82ad3",
+    "width": 1400,
+    "height": 304,
+    "method": "Current actual PDF page.get_pixmap(dpi=2400,alpha=False,clip=Rect(actualPdf1200Clip)); one horizontal crop by the supplied whiteOnlyHorizontalCropBox multiplied by2, then final1400nativepixels of3036×304nameimage. No resizing or embedded bitmap stitching.",
+    "actualPdfClip": [
+      72.96,
+      575.76,
+      418.32,
+      584.88
+    ],
+    "horizontalCropBoxAt1200": [
+      77,
+      0,
+      1595,
+      152
+    ],
+    "actual2400MarginImageSize": [
+      3036,
+      304
+    ],
+    "endingCropBox": [
+      1636,
+      0,
+      3036,
+      304
+    ],
+    "personallyReadAtNativePixels": true
+  },
+  "otherFortyFrozenLiteralPreferencesUnchanged": true
+}

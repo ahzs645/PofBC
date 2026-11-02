@@ -1,0 +1,55 @@
+{
+  "frozen": true,
+  "reviewer": "/root",
+  "sourceId": "phsa-2019-20",
+  "sourceSha256": "0e31ac2054f0c2d4ef78797185dddd96cc0cdf2eab94bd6841fa24e1c38e7d02",
+  "originalImageFirstTranscript": {
+    "path": "research/salaries/queue-completion-2026-11-01/reviews/root-phsa-history-2019-20-holdout-image-transcript.json",
+    "sha256": "56c99207ffae5331b3004c572c8489a509f550ca6fe0730390c7b1ce0f888a2a"
+  },
+  "independentSourceOnlyPeer": {
+    "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-history-batches-holdout-four-name-recheck-original.json",
+    "sha256": "6cf7588d5704a0ea03953084a7c2ddec6eae62a24219815e41fb6b6891a42c2b"
+  },
+  "changes": [
+    {
+      "sequence": 6,
+      "physicalPage": 50,
+      "sourceRowOnPage": 37,
+      "field": "name",
+      "firstRootReading": "Jeffery Yaochi Masu,Rosemarie",
+      "confirmedSourceReading": "Jeffery Yaochi Masau,Rosemarie",
+      "actualPdf600DpiImage": {
+        "path": "/tmp/root-phsa-holdout-2019-20-6-name-600.png",
+        "sha256": "48fc042442ca7ee4b51b68cf44882523297e0ae06c3660047e157ee5599fced7"
+      }
+    },
+    {
+      "sequence": 7,
+      "physicalPage": 58,
+      "sourceRowOnPage": 27,
+      "field": "name",
+      "firstRootReading": "Ladhar,Rav",
+      "confirmedSourceReading": "Lachar,Rav",
+      "actualPdf600DpiImage": {
+        "path": "/tmp/root-phsa-holdout-2019-20-7-name-600.png",
+        "sha256": "45c1f46c541058c8cee9d0218b09cda3b4e7468f03d23329006c6f76af4dc770"
+      }
+    },
+    {
+      "sequence": 8,
+      "physicalPage": 88,
+      "sourceRowOnPage": 14,
+      "field": "name",
+      "firstRootReading": "Pyint,Thinn Pyint",
+      "confirmedSourceReading": "Pwint,Thinn Pwint",
+      "actualPdf600DpiImage": {
+        "path": "/tmp/root-phsa-holdout-2019-20-8-name-600.png",
+        "sha256": "887e523bcafae1c9b6e963b8079b01f2f0ecd3ce46290e2b540f5bc3d5d6504b"
+      }
+    }
+  ],
+  "rootPersonallyRereadAllActualPdf600DpiClips": true,
+  "decision": "Correct only these root first-pass transcription mistakes after separately rereading actual source clips and matching a fresh independent peer who saw neither root nor machine alternatives before freezing. Original raw transcript stays unchanged. No machine/source payload correction, forced agreement or financial-value change.",
+  "candidateValuesChanged": false
+}

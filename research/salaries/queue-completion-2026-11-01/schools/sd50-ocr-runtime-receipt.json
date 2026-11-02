@@ -1,0 +1,29 @@
+{
+  "capturedOn": "2026-11-01",
+  "runtime": "/tmp/held-health-ocr/venv/bin/python",
+  "packages": {
+    "rapidocr_onnxruntime": "1.4.4",
+    "onnxruntime": "1.31.1"
+  },
+  "tesseractVersion": "tesseract 5.5.0",
+  "modelFiles": [
+    {
+      "name": "ch_PP-OCRv4_det_infer.onnx",
+      "sha256": "d2a7720d45a54257208b1e13e36a8479894cb74155a5efe29462512d42f49da9",
+      "bytes": 4745517
+    },
+    {
+      "name": "ch_PP-OCRv4_rec_infer.onnx",
+      "sha256": "48fc40f24f6d2a207a2b1091d3437eb3cc3eb6b676dc3ef9c37384005483683b",
+      "bytes": 10857958
+    },
+    {
+      "name": "ch_ppocr_mobile_v2.0_cls_infer.onnx",
+      "sha256": "e47acedf663230f8863ff1ab0e64dd2d82b838fceb5957146dab185a89d6215c",
+      "bytes": 585532
+    }
+  ],
+  "selection": "RapidOCR defaults, no external English recognizer override; max_side_len4096 and intra/interthreads1. Raw text/boxes/confidence and all image amendments retained.",
+  "scope": "Only SD50 physical salary8\u20139. Tesseract discovery also covered declaration2 and12later SD10 board-minute pages.",
+  "acceptedRowsWithoutPeerImageReview": 0
+}

@@ -1,0 +1,73 @@
+{
+  "frozen": true,
+  "reviewer": "/root",
+  "reviewedOn": "2026-11-02",
+  "sourceId": "phsa-2022-23",
+  "sourceSha256": "6046bb7be6944bc729926adba20a826486820a2a3b9b38090c60d400b2bc72a1",
+  "batch": "phsa-2022-23-002",
+  "qualificationCaseCount": 1,
+  "sourceNameSegmentationExceptions": [
+    {
+      "sourceId": "phsa-2022-23",
+      "sourceSha256": "6046bb7be6944bc729926adba20a826486820a2a3b9b38090c60d400b2bc72a1",
+      "batch": "phsa-2022-23-002",
+      "sequence": 394,
+      "physicalPage": 106,
+      "sourceRowOnPage": 17,
+      "cropSha256": "9ec4d01f1cdb4ce4daa034afe9e9c7bcbdecb2850ead3009baa6e177f36420cc",
+      "proposedName": "Lambi-Raine,Dylan Elizabeth Kann",
+      "visibleAlternatives": [
+        "Lambi-Raine,Dylan Elizabeth Kann",
+        "Lambi-Raine,Dylan Elizabeth Karn",
+        "Lambi-Raine,Dylan Elizabeth Kam"
+      ],
+      "allowedFields": [
+        "name"
+      ],
+      "actualSourceEvidence": {
+        "originalFullRowCropPath": "/tmp/queue-completion-phsa/phsa-2022-23/review-images/batch-002/p106-r17.png",
+        "originalFullRowCropSha256": "9ec4d01f1cdb4ce4daa034afe9e9c7bcbdecb2850ead3009baa6e177f36420cc",
+        "actualOriginal600DpiView": {
+          "path": "research/salaries/queue-completion-2026-11-01/reviews/root-phsa-history-2022-23-batch-002-precomparison-0394-name-600.png",
+          "sha256": "07e5e7b2d6b107b10619717fb3156ff1b903eb60e367c343450e05321478e6ba"
+        },
+        "actualOriginal300Context": {
+          "path": "research/salaries/queue-completion-2026-11-01/reviews/root-phsa-history-2022-23-batch-002-precomparison-0394-context-300.png",
+          "sha256": "bd7de24ea0d1f223bb638105c4054bd29fd55baee15cce72bd7e5ba367fa5de2"
+        },
+        "pageEvidence": {
+          "path": "research/salaries/queue-completion-phsa/evidence/phsa-2022-23-rows-p106.json.gzip",
+          "sha256": "bc4392b340fabeb5059857eb33d13211e0793bfa0c6807f55cfc4ed45c38766e"
+        }
+      },
+      "allImageReadingEvidence": [
+        {
+          "path": "research/salaries/queue-completion-2026-11-01/reviews/root-phsa-history-2022-23-batch-002-image-transcript.json",
+          "sha256": "bebf1d3bd69c79587885d1bf63f4427cc567a129004246398eea4c544130cfaf"
+        },
+        {
+          "path": "research/salaries/queue-completion-2026-11-01/reviews/root-phsa-history-2022-23-batch-002-precomparison-source-rereads-and-uncertainties.json",
+          "sha256": "25d4a64190d393eb79e52ff94c6a96925a1f15973e57ecec91584a1d6981519d"
+        },
+        {
+          "path": "research/salaries/queue-completion-2026-11-01/reviews/root-phsa-history-2022-23-batch-002-33-name-author-choices-before-peer.json",
+          "sha256": "bc815fde5b585358675bdee9f2623c845cfd1479faaec4aaf95e644e0a9673fa"
+        },
+        {
+          "path": "research/salaries/queue-completion-2026-11-01/reviews/author-phsa-history-2022-23-002-33-name-peer-comparison.json",
+          "sha256": "a5ccf1b718987172baad4f91b604441a0a5a896330656ef508ad1783905c2e19"
+        }
+      ],
+      "basis": "Root first read Karn, then preferred Kann on a source-only actual600 reread frozen before candidate opening; the fresh independent source-image peer preferred Kam and corroborated the complete Kann/Karn/Kam finite set. Preserve both raw readings and the preferred disagreement. Root adopts Kann as an explicitly qualified source transcription, without claiming unique pixels, unanimous preference, dictionary evidence, or identity from any other year. This exact n/r plus rn/m case is not covered by the generic rn/m rule.",
+      "caseProvenByPixels": false,
+      "requiresSeparateExactClosedRootAdoption": true,
+      "notAuthorizedByRnMPolicy": true
+    }
+  ],
+  "requiresRootFileAdoptionAndPublicWarningBeforeSourceAcceptance": true,
+  "limits": [
+    "Only this exact name field and complete finite set. No generic letter substitution.",
+    "Preferred source readings honestly differ.",
+    "No monetary, employer or period authority."
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "reviewedOn": "2026-11-02",
+  "allChecksPassed": true,
+  "command": "python -m unittest discover -s scripts -p test_salary_phsa_canonical.py",
+  "exitCode": 0,
+  "testsRun": 25,
+  "failures": 0,
+  "errors": 0,
+  "codeInputs": [
+    {
+      "path": "scripts/test_salary_phsa_canonical.py",
+      "sha256": "ef598b07490b3cb7ec6eb6ef51aa4a01d6bcdf38aa0ff67856dd60dfe30a17bb"
+    },
+    {
+      "path": "scripts/finish_salary_phsa_promote.py",
+      "sha256": "cc68a5e0ee7799e5024da401d4c3e11307071ff283e311e4ca623d0cd62ffc70"
+    }
+  ],
+  "scope": "Canonical source closure and promotion guards; no active source manifest or root adoption created by this check."
+}

@@ -1,0 +1,51 @@
+{
+  "frozen": true,
+  "reviewer": "/root/recovery_review",
+  "sourceId": "phsa-2019-20",
+  "sourceSha256": "0e31ac2054f0c2d4ef78797185dddd96cc0cdf2eab94bd6841fa24e1c38e7d02",
+  "batch": "phsa-2019-20-012",
+  "sourceOnlyPacket": {
+    "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-education-2019-20-012-two-canonical-source-letter-adjudication-source-only.json",
+    "sha256": "2c0f7be2b553aef79052617ecca7df1a7b508a6e5249aafa44745cc5df37ee65"
+  },
+  "method": "Independently render actual complete original PDF pages300/600/1200 then integer crop exact field/context and supplied white-margin-only views; no filters/resizing/partial get_pixmap clipping.",
+  "rows": [
+    {
+      "sequence": 150,
+      "physicalPage": 82,
+      "sourceRowOnPage": 58,
+      "field": "name",
+      "cropSha256": "4cdf98d385305d882c754ba0288cf10a9b333b27a08b8448e22ba7485b37253a",
+      "checks": {
+        "nativeOriginal300NameField": true,
+        "adjacentOriginal300NameContext": true,
+        "whole600Cell": true,
+        "whole1200Cell": true,
+        "whole600View": true,
+        "whole1200View": true
+      }
+    },
+    {
+      "sequence": 156,
+      "physicalPage": 83,
+      "sourceRowOnPage": 9,
+      "field": "name",
+      "cropSha256": "283062f3f994b0baf9dcd27be0d61ef61ed5db64cccea5943c266b2911bdff4a",
+      "checks": {
+        "nativeOriginal300NameField": true,
+        "adjacentOriginal300NameContext": true,
+        "whole600Cell": true,
+        "whole1200Cell": true,
+        "whole600View": true,
+        "whole1200View": true
+      }
+    }
+  ],
+  "counts": {
+    "fields": 2,
+    "physicalPages": 2,
+    "views": 12,
+    "allRgbExact": true
+  },
+  "limits": "Pixel provenance only, no semantic uniqueness proof."
+}

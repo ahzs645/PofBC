@@ -1,0 +1,59 @@
+{
+  "frozen": true,
+  "reviewedOn": "2026-11-02",
+  "reviewer": "/root/recovery_review",
+  "role": "Authored producer implementation and implementation tests only; not independent financialsource acceptance.",
+  "ownedNewHelper": {
+    "path": "scripts/finish_salary_phsa_money_exhaustive.py",
+    "sha256": "44170b5278308ca5ecb17613e5b0e61f0f12596e10a545016f2ee3f3dbde783e"
+  },
+  "actualCanonicalAuthorOverlay": {
+    "path": "research/salaries/queue-completion-2026-11-01/phsa/overlays/phsa-2019-20-manual-overlay-016.json",
+    "sha256": "d5adb17a95d6fd80b9e958ab7253e8b86539d2984763218f5b254db1416189d9"
+  },
+  "actualCompleteFinancialClosure": {
+    "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-history-2019-20-016-all282-financial-source-closure.json",
+    "sha256": "b59c4f4a3e18dc04797d2971445dcd023accb3c1b6a49a2c1b4250bd971ad825"
+  },
+  "prospectiveAndDispatcherReplay": {
+    "positiveFields": 281,
+    "separateExplicitDashNull": 1,
+    "authorColdToFinalCorrections": 44,
+    "peerFrozenToFinalCorrections": 4,
+    "independentPeerTranscripts": 3,
+    "authorRawRequestedFields": 633,
+    "moneyTargets": 282,
+    "peerPartition": [
+      84,
+      99,
+      99
+    ]
+  },
+  "currentTargetedTest": {
+    "command": "PYTHONPATH=scripts python -m unittest test_finish_salary_phsa.PhsaHistorical.test_exhaustive282_money_exact_peer_partition_and_explicit_dash",
+    "passedMethods": 1,
+    "meaningfulActualFixtureNegativeCases": [
+      "finalcurrentvalue",
+      "coldfirstvalue",
+      "dashreplacedbyzero",
+      "missingtuple",
+      "duplicatepeerpartition",
+      "wrongsourceSHA"
+    ],
+    "testFile": {
+      "path": "scripts/test_finish_salary_phsa.py",
+      "sha256": "8f4a274c2d03f65b9a1851608665387b56c3ac5fa0566eee8d8ad7c1abd52f91"
+    }
+  },
+  "earlierThirteenActualFixtureMutations": {
+    "helperVersion": "22b2add3154332f3591db5845cc8e727f642d0c26957887926a59e3eb4c2d6dd",
+    "rejected": 13,
+    "limits": "Earlier helper version before additionalfailclosedmoney-null-scope/strictworkingliteral guards. Current helper actual281+1replay and namedtargetedtest above rerun after finalguards; do not label earlier13 as new independentfinancialinterpretations."
+  },
+  "independentFinancialAcceptanceOwner": [
+    "/root/held_health_review",
+    "/root"
+  ],
+  "healthOwnsDispatcherArchiveAndEmission": true,
+  "limits": "No source/overlay/globalmoneychanges bythis implementation. Distinct source transcripts, originalfirst/secondary/peererrors/dash remain explicit. Canonical ordinary ledger and finalsource acceptance are independent latergates."
+}

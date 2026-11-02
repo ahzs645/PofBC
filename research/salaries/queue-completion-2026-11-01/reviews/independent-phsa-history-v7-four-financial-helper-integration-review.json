@@ -1,0 +1,81 @@
+{
+  "frozen": true,
+  "reviewedOn": "2026-11-02",
+  "frozenAtUtc": "2026-11-02T05:14:53.995521+00:00",
+  "reviewer": "/root/held_health_review",
+  "scope": "Read-only inspection and independent reproduction of four separately authored final financial readers; this receipt does not freeze the still-developing v7 dispatcher/current-mode reader or accept a source.",
+  "reviewedCodeAndChecks": [
+    {
+      "path": "scripts/finish_salary_phsa_review_money_ordered_v7.py",
+      "sha256": "0f5811fdcf6fa108e5c9b7ac73127eef0472bdf921c69ac93b95b30e6bd379ab"
+    },
+    {
+      "path": "scripts/finish_salary_phsa_review_money_ordered_v7_checks.py",
+      "sha256": "8dedccb465436ef5a0b58f9724836d4b24ddd910b1fff7df4896862b94b4c9f8"
+    },
+    {
+      "path": "scripts/finish_salary_phsa_review_money_tuple_v7.py",
+      "sha256": "ea3cbe16fb1e48e9950187677eb9c11993497e444b0712124c62894d9af5c2dc"
+    },
+    {
+      "path": "scripts/finish_salary_phsa_review_money_tuple_v7_checks.py",
+      "sha256": "11e2fed5457a73c2544e09548d4395046ebcab744369c8161121c5ef4b2620c2"
+    },
+    {
+      "path": "scripts/finish_salary_phsa_review_money_complete_v7.py",
+      "sha256": "97efe23719f6d6b380572fc356b02288b0db47974cd297f18dd815ff69f9a690"
+    },
+    {
+      "path": "scripts/finish_salary_phsa_review_money_complete_v7_checks.py",
+      "sha256": "93ed1152d66adc6582c6ab51b135006d8371b35a4e6a72e9d0b7088238a678d0"
+    },
+    {
+      "path": "scripts/finish_salary_phsa_review_money_scoped_v7.py",
+      "sha256": "07d149efdb942421302cefec2457dc64a24d7bd1eed9391aec255f2b3c59624b"
+    },
+    {
+      "path": "scripts/finish_salary_phsa_review_money_scoped_v7_checks.py",
+      "sha256": "0e0ee861386d43ad54ba6d6c47a716680c42dbee4604d89db1810f87f1b03523"
+    }
+  ],
+  "checksIndependentlyRun": [
+    {
+      "command": "python scripts/finish_salary_phsa_review_money_ordered_v7_checks.py",
+      "passed": 39
+    },
+    {
+      "command": "python scripts/finish_salary_phsa_review_money_tuple_v7_checks.py",
+      "passed": 16
+    },
+    {
+      "command": "python scripts/finish_salary_phsa_review_money_complete_v7_checks.py",
+      "passed": 13
+    },
+    {
+      "command": "python scripts/finish_salary_phsa_review_money_scoped_v7_checks.py",
+      "passed": 15
+    }
+  ],
+  "totalFocusedChecksPassed": 83,
+  "concreteReconstructedPositiveFields": {
+    "ordered002_003_008_010": 116,
+    "tuple009_013_015_018": 175,
+    "complete011_012": 51,
+    "scoped007_020": 110
+  },
+  "printedDashFieldsConfirmedSeparately": 1,
+  "inspection": [
+    "No producer, finalizer, promotion or v7 interpretation import in the four reader modules.",
+    "Each fixed ledger/source identity reconstructs its complete scope from original first/current author and independent peer tuples before exact caller membership is checked.",
+    "Numeric literals reject booleans, nulls, zero, negative and malformed values; printed dash is separately typed and never a positive confirmation.",
+    "Prior wrong first/intermediate values and rejected secondary readings remain pinned, including the sparse nonempty(sequence,field) event rule.",
+    "Native/source-field/full-row geometry is bound to the SHA-gated original PDF. The ordered113 whole600 and three exact historical partial600 views are distinguished. Tuple83 whole600 versus93 historical partial renders are distinguished. Complete51 uses whole300/native/full-row RGB as final pixel authority. Scoped131 declared historical clip RGB checks are expressly not whole-page600 claims.",
+    "All separately authored checks reproduce successfully against real immutable artifacts."
+  ],
+  "integrationFinding": "The final strict dispatcher requires archive aliases for520 additional historical observer/native/full-row leaves (2,320,898bytes). Health is preparing NEW index011; diagnostic local fallback is not final acceptance. Original PDF binary access is separately limited to inventory-verified exact cachePath/hash.",
+  "limits": [
+    "This reviewer authored the v7 dispatcher/current-mode/exhaustive024 independent reader, not these four helper implementations.",
+    "83 mutation/actual-schema checks plus read-only inspection do not constitute a third personal visual transcription of452 financial source fields.",
+    "The current final all-nine source replay remains blocked until final source001 money55 correction/proof and finalFY2019 materialization/canonical closure/archive index are incorporated."
+  ]
+}

@@ -1,0 +1,272 @@
+{
+  "frozen": true,
+  "reviewedOn": "2026-11-02",
+  "reviewer": "/root/recovery_review",
+  "scope": "Read-only independent code peer of only the new current-money verifier for fixed ledgers022/023-v2/025/026/027 and its focused checks. No producer interpretation imports or source-choice expansion.",
+  "codePins": [
+    {
+      "path": "scripts/finish_salary_phsa_review_money_current_v7.py",
+      "sha256": "43813f6e5ef322d64cee995d07e6530362242a73c9780aa462ab5e31933f459a"
+    },
+    {
+      "path": "scripts/finish_salary_phsa_review_money_current_v7_checks.py",
+      "sha256": "78fa98da4a0b1301657a93e1863f0cc4b1212fd9f0e40040a550ad2c97c32749"
+    }
+  ],
+  "currentFixedLedgers": [
+    {
+      "path": "research/salaries/queue-completion-2026-11-01/phsa/triangulation/money-peer-confirmations-022.json",
+      "sha256": "6e649bf527469dafd60ddfcaf17dd53d93a4bc49de9f55b1f7b85a6166ecd7c0"
+    },
+    {
+      "path": "research/salaries/queue-completion-2026-11-01/phsa/triangulation/money-peer-confirmations-023-v2.json",
+      "sha256": "9e436864774cc41573ace634789b386bd1ab47824587a8e3544400c269ff4494"
+    },
+    {
+      "path": "research/salaries/queue-completion-2026-11-01/phsa/triangulation/money-peer-confirmations-025.json",
+      "sha256": "97c998ec16fb28746f76b5fd450f0d7f966b24109b432d68ef6b0db41328626c"
+    },
+    {
+      "path": "research/salaries/queue-completion-2026-11-01/phsa/triangulation/money-peer-confirmations-026.json",
+      "sha256": "90b60335597f5a791d613307a4c819440702903a0ea319abf61c575df383e525"
+    },
+    {
+      "path": "research/salaries/queue-completion-2026-11-01/phsa/triangulation/money-peer-confirmations-027.json",
+      "sha256": "6dd8ce0d759d5b07b0b5d5d28591f9e05dccfd9ae5119206d32084cf1f47523e"
+    }
+  ],
+  "archiveIndexPinsUsedByIndependentTestLoader": [
+    {
+      "path": "research/salaries/queue-completion-2026-11-01/phsa/triangulation/archived-source-money-views-001.json",
+      "sha256": "70289c64eea30ad9b04e7e404fc9f955611531a67a7e43e84c17e5b803d94b79"
+    },
+    {
+      "path": "research/salaries/queue-completion-2026-11-01/phsa/triangulation/archived-source-money-views-002.json",
+      "sha256": "cf25dad5a4c25d1431585c86fb433027cbc08734094ada992b226583487b2ee7"
+    },
+    {
+      "path": "research/salaries/queue-completion-2026-11-01/phsa/triangulation/archived-source-money-views-003.json",
+      "sha256": "5d1dd4210cc7a5f0a41dcd263e771200b8491fb58e39dafa61f95d9c6a110414"
+    },
+    {
+      "path": "research/salaries/queue-completion-2026-11-01/phsa/triangulation/archived-source-money-views-004.json",
+      "sha256": "744d528a2419bc236bfc57939f938a9f5885660a5e56c31a75236428f31cc6a9"
+    },
+    {
+      "path": "research/salaries/queue-completion-2026-11-01/phsa/triangulation/archived-source-money-views-005.json",
+      "sha256": "14268e5a7d656b26af987aecc949144a3b6e06d9536379d89536801b0daf62da"
+    },
+    {
+      "path": "research/salaries/queue-completion-2026-11-01/phsa/triangulation/archived-source-money-views-006.json",
+      "sha256": "f19657877519883181588fc174f5dc27e3ede743a038fb562b749f4a9eb0cbb6"
+    },
+    {
+      "path": "research/salaries/queue-completion-2026-11-01/phsa/triangulation/archived-source-money-views-007.json",
+      "sha256": "d26a9d99e7babcded0de8ca4df0cdb05dbe78971fb82c5bd32d1d8455f25c43d"
+    },
+    {
+      "path": "research/salaries/queue-completion-2026-11-01/phsa/triangulation/archived-source-money-views-008.json",
+      "sha256": "85dacdb1afca8a27314870d9073f89aeb4bc04fd71dde9444924bf0024d534fe"
+    },
+    {
+      "path": "research/salaries/queue-completion-2026-11-01/phsa/triangulation/archived-source-money-views-009.json",
+      "sha256": "cd8412cdec8632ca06a114014b3041c64112efa4b6e39c10bc141942428166e2"
+    },
+    {
+      "path": "research/salaries/queue-completion-2026-11-01/phsa/triangulation/archived-source-money-views-010.json",
+      "sha256": "57fa0768f905959dfd9685b9a6c6d2ca3ac6eea6219c430f32916d070697f9d6"
+    },
+    {
+      "path": "research/salaries/queue-completion-2026-11-01/phsa/triangulation/archived-source-money-views-011.json",
+      "sha256": "ca31b50869ca3ced50803611179c8c177cf8bf2b52808456d2970c15d9d5280c"
+    }
+  ],
+  "reconstructedPositiveFields": 192,
+  "canonicalOriginalSourceViewComparisons": 384,
+  "sourceId": "phsa-2019-20",
+  "sourceSha256": "0e31ac2054f0c2d4ef78797185dddd96cc0cdf2eab94bd6841fa24e1c38e7d02",
+  "checks": [
+    {
+      "case": "All192actual members reconstruct using archived external leaves and originalPDF RGB checks",
+      "expected": "accept",
+      "passed": true
+    },
+    {
+      "case": "Mode22 author original raw pointer cannot be unrelated",
+      "expected": "reject",
+      "passed": true,
+      "reason": "[Errno 2] No such file or directory: '/workspace/PofBC/unrelated.json'"
+    },
+    {
+      "case": "Mode22 final source literal must remain strict integer",
+      "expected": "reject",
+      "passed": true,
+      "reason": "('Expected strict positive source integer', 'literalSourceValue')"
+    },
+    {
+      "case": "Mode25 third raw prechoice235 mistake cannot be erased in final",
+      "expected": "reject",
+      "passed": true,
+      "reason": ""
+    },
+    {
+      "case": "Mode25 third final must remain frozen",
+      "expected": "reject",
+      "passed": true,
+      "reason": ""
+    },
+    {
+      "case": "Mode25 third raw must remain frozen",
+      "expected": "reject",
+      "passed": true,
+      "reason": ""
+    },
+    {
+      "case": "Mode25 third source packet may not omit a field",
+      "expected": "reject",
+      "passed": true,
+      "reason": ""
+    },
+    {
+      "case": "Mode27 root first literal must remain strict integer",
+      "expected": "reject",
+      "passed": true,
+      "reason": "('Expected strict positive source integer', 'literalImageValue')"
+    },
+    {
+      "case": "Mode27 three-correction summary binds oldValue",
+      "expected": "reject",
+      "passed": true,
+      "reason": ""
+    },
+    {
+      "case": "Mode27 three-correction summary binds currentLiteralValue",
+      "expected": "reject",
+      "passed": true,
+      "reason": ""
+    },
+    {
+      "case": "Mode27 three-correction summary binds sequence",
+      "expected": "reject",
+      "passed": true,
+      "reason": ""
+    },
+    {
+      "case": "Confirmed positive amount rejects type/value True",
+      "expected": "reject",
+      "passed": true,
+      "reason": ""
+    },
+    {
+      "case": "Confirmed positive amount rejects type/value False",
+      "expected": "reject",
+      "passed": true,
+      "reason": ""
+    },
+    {
+      "case": "Confirmed positive amount rejects type/value None",
+      "expected": "reject",
+      "passed": true,
+      "reason": ""
+    },
+    {
+      "case": "Confirmed positive amount rejects type/value 0",
+      "expected": "reject",
+      "passed": true,
+      "reason": ""
+    },
+    {
+      "case": "Confirmed positive amount rejects type/value -1",
+      "expected": "reject",
+      "passed": true,
+      "reason": ""
+    },
+    {
+      "case": "Confirmed positive amount rejects type/value 1.0",
+      "expected": "reject",
+      "passed": true,
+      "reason": ""
+    },
+    {
+      "case": "Confirmed positive amount rejects type/value '5065'",
+      "expected": "reject",
+      "passed": true,
+      "reason": ""
+    },
+    {
+      "case": "Unknown ledger digest cannot reuse a cached valid mode",
+      "expected": "reject",
+      "passed": true,
+      "reason": ""
+    },
+    {
+      "case": "Wrong source cannot reuse a cached valid mode",
+      "expected": "reject",
+      "passed": true,
+      "reason": ""
+    },
+    {
+      "case": "Altered cached field locator is not an exact ledger member",
+      "expected": "reject",
+      "passed": true,
+      "reason": ""
+    },
+    {
+      "case": "023v2 exact member cannot point back to misleading394 raw",
+      "expected": "reject",
+      "passed": true,
+      "reason": ""
+    },
+    {
+      "case": "OriginalPDF image geometry cannot shift by one pixel",
+      "expected": "reject",
+      "passed": true,
+      "reason": ""
+    },
+    {
+      "case": "Image geometry cannot contain a float",
+      "expected": "reject",
+      "passed": true,
+      "reason": ""
+    },
+    {
+      "case": "OriginalPDF source SHA cannot change",
+      "expected": "reject",
+      "passed": true,
+      "reason": ""
+    },
+    {
+      "case": "OriginalPDF RGB comparison rejects RGBA",
+      "expected": "reject",
+      "passed": true,
+      "reason": "Source fields must retain visible RGB ink, not alpha-hidden bytes"
+    },
+    {
+      "case": "OriginalPDF RGB comparison rejects L",
+      "expected": "reject",
+      "passed": true,
+      "reason": "Source fields must retain visible RGB ink, not alpha-hidden bytes"
+    },
+    {
+      "case": "OriginalPDF RGB comparison rejects changed-RGB",
+      "expected": "reject",
+      "passed": true,
+      "reason": ""
+    },
+    {
+      "case": "Owner focused actual-schema/mutation tests reproduced on final code snapshot",
+      "expected": "accept",
+      "passed": true,
+      "output": "................................\n----------------------------------------------------------------------\nRan 32 tests in 8.751s\n\nOK"
+    }
+  ],
+  "checkCount": 29,
+  "failedCases": 0,
+  "observedAndResolvedCodeGaps": [
+    "Mode22 original author226 raw first-value/source/freeze linkage was added after reviewer showed the prior code ignored that raw pin.",
+    "Mode25 exact third13 raw/source-only/freeze/own235 prechoice history was added after reviewer showed the prior code accepted erased first history and an unfrozen third final.",
+    "Mode27 three correction-summary value/sequence linkage and concrete integer type checks were added after reviewer reproduced ignored summary fields and float equality acceptance."
+  ],
+  "conclusion": "The fixed current-ledger inputs, exact member comparison and independent source-specific reconstruction bind source identity, complete field tuples, positive integer literals, original/secondary/current/error chronology,023 pointer-only roles and original whole-page RGB geometry. Actual fixed fixtures and targeted semantic/hash/type/pointer/pixel mutations pass with archive-only external-leaf loading.",
+  "limits": "Technical independent code peer only, not a new blind source read, control balancing, whole-source acceptance or publication authorization. No producer/helper or evidence edits by this reviewer. The authored producer024 branch remains excluded; H owns its independent assessment. All four user requests remain on hold."
+}

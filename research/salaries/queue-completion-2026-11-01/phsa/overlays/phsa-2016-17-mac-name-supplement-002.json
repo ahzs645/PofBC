@@ -1,0 +1,310 @@
+{
+  "frozen": true,
+  "sourceId": "phsa-2016-17",
+  "sourceSha256": "31f7a1af80186bf81139fd693b36e733333a06c2ab1a4c5191bd6ee9b3623a53",
+  "kind": "complete-sixteen-case-additive-mac-prefix-name-review",
+  "reviewInput": {
+    "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-history-mac-I-quality-002-resolutions.json",
+    "sha256": "e7e9dbb35343baf591d1bc1cf968e5c12d84a998c580123d2c4acff0b6746cc3"
+  },
+  "sourceOnlyPacket": {
+    "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-history-mac-I-quality-002-source-only.json",
+    "sha256": "8fb79912e73da0b8c72611c86a5200477e95b807fec726f4fdfbc405581a6b5c"
+  },
+  "independentFreshPeer": {
+    "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-history-batches-mac-I-quality-002-peer-comparison.json",
+    "sha256": "44da96133b4f26b1f97f97c3bcf2d39b228b208f885aff0c7669cd37730b0f36"
+  },
+  "resolvedRows": 2,
+  "reviewedFieldCounts": {
+    "name": 2
+  },
+  "overlays": [
+    {
+      "physicalPage": 80,
+      "sourceRowOnPage": 26,
+      "rawCandidateRow": [
+        "provincial-health-services-authority",
+        "Maclsaac,Lynn A",
+        null,
+        69247,
+        null,
+        80
+      ],
+      "resolvedRow": [
+        "provincial-health-services-authority",
+        "MacIsaac,Lynn A",
+        null,
+        69247,
+        null,
+        80
+      ],
+      "reviewedFields": [
+        "name"
+      ],
+      "changedFields": [
+        "name"
+      ],
+      "resolutionStatus": "resolved-with-source-typography-qualification",
+      "nameTypographyQualification": {
+        "originalCaseEvidence": {
+          "sourceId": "phsa-2016-17",
+          "sourceSha256": "31f7a1af80186bf81139fd693b36e733333a06c2ab1a4c5191bd6ee9b3623a53",
+          "sequence": 2,
+          "physicalPage": 80,
+          "sourceRowOnPage": 26,
+          "proposedName": "MacIsaac,Lynn A",
+          "visibleAlternatives": [
+            "MacIsaac,Lynn A",
+            "Maclsaac,Lynn A"
+          ],
+          "characterPositions": [
+            3
+          ],
+          "characterIndexBase": 0,
+          "assumptionBasis": "Actual surname order afterMacInnes and beforeMacKay supports interiorI; verticalstroke is not pixel-case proof.",
+          "ambiguityKind": "I-l-source-case",
+          "caseProvenByPixels": false,
+          "cropSha256": "2fb522e1155ac226e829ff417a8d6245cf121d945ffd5f8cd9eb23cabacd96cd",
+          "actualSourceEvidence": {
+            "sequence": 2,
+            "sourceId": "phsa-2016-17",
+            "sourceSha256": "31f7a1af80186bf81139fd693b36e733333a06c2ab1a4c5191bd6ee9b3623a53",
+            "physicalPage": 80,
+            "sourceRowOnPage": 26,
+            "reviewTargetFields": [
+              "name"
+            ],
+            "sourceQualityTrigger": "Mac[Il] prefix with no existing manual or pending name route; no automatic casing.",
+            "priorRouteStatus": "calibrated-paired-reader-confidence-corroboration",
+            "nameOnlyOriginalImage": {
+              "path": "/tmp/queue-completion-phsa/independent-mac-I-quality-002/002-name.png",
+              "sha256": "c1ef2cb17d4dd70e90316f1fab50390c91a64ec41484e6b6a9dee4bb4237162b",
+              "original300DpiPixelBox": [
+                202,
+                2402,
+                1515,
+                2463
+              ]
+            },
+            "adjacentOriginalContext": {
+              "path": "/tmp/queue-completion-phsa/independent-mac-I-quality-002/002-context.png",
+              "sha256": "fedf0319ee2f519cccb0f7c67b28f854019355129147a410a8447e7136ed6ae3",
+              "original300DpiPixelBox": [
+                202,
+                2332,
+                1515,
+                2533
+              ]
+            },
+            "originalFullRowCrop": {
+              "path": "/tmp/queue-completion-phsa/independent-mac-I-quality-002/002-full-row.png",
+              "sha256": "2fb522e1155ac226e829ff417a8d6245cf121d945ffd5f8cd9eb23cabacd96cd",
+              "original300DpiPixelBox": [
+                202,
+                2402,
+                2422,
+                2463
+              ]
+            },
+            "actualSourceImagePath": "/tmp/queue-completion-phsa/phsa-2016-17/images/p080.png",
+            "actualSourceImageSha256": "7c2021c644081641c7e8680f59df57a4f7d99a696a33b2e16bb85c2469f7df95",
+            "pageEvidence": {
+              "path": "research/salaries/queue-completion-phsa/evidence/phsa-2016-17-rows-p080.json.gzip",
+              "sha256": "358740638751c9c9a8a0f650b1d01c4ef66797af98d99c906c44674c3b6b786e"
+            },
+            "rawPageEvidence": {
+              "path": "research/salaries/queue-completion-phsa/evidence/phsa-2016-17-raw-p080.json.gzip",
+              "sha256": "a5f204b5533cb96d9e485371ca14cd153eef70b538de9af2495280d37df66c0e"
+            },
+            "sourceProfile": {
+              "path": "research/salaries/queue-completion-2026-11-01/phsa/phsa-2016-17-processing-profile-001.json",
+              "sha256": "befbc617f9532bb4559046d3dfa3b196800318f07e52a5d83d9dde0854d29ad7"
+            }
+          },
+          "qualificationPolicy": {
+            "path": "research/salaries/queue-completion-2026-11-01/phsa/source-typography-review-policy-001.json",
+            "sha256": "c7cb50c05284c0c897b126a2fd6f359870d4922c30ca6efe0c462267b6eec460"
+          },
+          "status": "qualified-contextual-source-name-pending-independent-peer-exact-root-adoption"
+        },
+        "chosenName": "MacIsaac,Lynn A",
+        "visibleAlternatives": [
+          "Maclsaac,Lynn A"
+        ],
+        "characterPositionsZeroBased": [
+          3
+        ],
+        "assumptionBasis": "Actual surname order afterMacInnes and beforeMacKay supports interiorI; verticalstroke is not pixel-case proof.",
+        "caseProvenByPixels": false,
+        "requiresExactPeerAndRootCaseAdoption": true,
+        "sourceCaseLedger": {
+          "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-history-mac-I-quality-002-typography-ledger.json",
+          "sha256": "33613d46ab60b905b99a501d6a519d802f88065c36b414e512178d343445c611"
+        }
+      },
+      "pageEvidencePath": "research/salaries/queue-completion-phsa/evidence/phsa-2016-17-rows-p080.json.gzip",
+      "pageEvidenceSha256": "358740638751c9c9a8a0f650b1d01c4ef66797af98d99c906c44674c3b6b786e",
+      "rawPageEvidence": {
+        "path": "research/salaries/queue-completion-phsa/evidence/phsa-2016-17-raw-p080.json.gzip",
+        "sha256": "a5f204b5533cb96d9e485371ca14cd153eef70b538de9af2495280d37df66c0e"
+      },
+      "cropSha256": "2fb522e1155ac226e829ff417a8d6245cf121d945ffd5f8cd9eb23cabacd96cd",
+      "retainedSourceNameView": {
+        "path": "research/salaries/queue-completion-2026-11-01/phsa/supplement-assets/mac-002-002-name.png",
+        "sha256": "c1ef2cb17d4dd70e90316f1fab50390c91a64ec41484e6b6a9dee4bb4237162b"
+      },
+      "reviewInput": {
+        "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-history-mac-I-quality-002-resolutions.json",
+        "sha256": "e7e9dbb35343baf591d1bc1cf968e5c12d84a998c580123d2c4acff0b6746cc3"
+      },
+      "retainedOriginalSourceContext": {
+        "path": "research/salaries/queue-completion-2026-11-01/phsa/supplement-assets/mac-002-002-context.png",
+        "sha256": "fedf0319ee2f519cccb0f7c67b28f854019355129147a410a8447e7136ed6ae3"
+      }
+    },
+    {
+      "physicalPage": 81,
+      "sourceRowOnPage": 6,
+      "rawCandidateRow": [
+        "provincial-health-services-authority",
+        "Macleod,Laurie Jo",
+        null,
+        97281,
+        null,
+        81
+      ],
+      "resolvedRow": [
+        "provincial-health-services-authority",
+        "Macleod,Laurie Jo",
+        null,
+        97281,
+        null,
+        81
+      ],
+      "reviewedFields": [
+        "name"
+      ],
+      "changedFields": [],
+      "resolutionStatus": "resolved-with-source-typography-qualification",
+      "nameTypographyQualification": {
+        "originalCaseEvidence": {
+          "sourceId": "phsa-2016-17",
+          "sourceSha256": "31f7a1af80186bf81139fd693b36e733333a06c2ab1a4c5191bd6ee9b3623a53",
+          "sequence": 3,
+          "physicalPage": 81,
+          "sourceRowOnPage": 6,
+          "proposedName": "Macleod,Laurie Jo",
+          "visibleAlternatives": [
+            "Macleod,Laurie Jo",
+            "MacIeod,Laurie Jo"
+          ],
+          "characterPositions": [
+            3
+          ],
+          "characterIndexBase": 0,
+          "assumptionBasis": "The visible source lacks the distinct uppercaseL foot seen in adjacentMacLeod,Gerald. Context afterthatMacLeod group and beforeMacMahon supports retaining primary lowercasel, preserving capitalI possibility. No automatic surname casing.",
+          "ambiguityKind": "I-l-source-case",
+          "caseProvenByPixels": false,
+          "cropSha256": "2c2b71bfa1903a9043075b8f2c64ab0d68db982b2824801048c5105714d96d07",
+          "actualSourceEvidence": {
+            "sequence": 3,
+            "sourceId": "phsa-2016-17",
+            "sourceSha256": "31f7a1af80186bf81139fd693b36e733333a06c2ab1a4c5191bd6ee9b3623a53",
+            "physicalPage": 81,
+            "sourceRowOnPage": 6,
+            "reviewTargetFields": [
+              "name"
+            ],
+            "sourceQualityTrigger": "Mac[Il] prefix with no existing manual or pending name route; no automatic casing.",
+            "priorRouteStatus": "calibrated-paired-reader-confidence-corroboration",
+            "nameOnlyOriginalImage": {
+              "path": "/tmp/queue-completion-phsa/independent-mac-I-quality-002/003-name.png",
+              "sha256": "a48a5e47dd0026019c7fc18c2e30d82c8445fb1f62da271ecf9a3616eaf18609",
+              "original300DpiPixelBox": [
+                202,
+                1190,
+                1515,
+                1250
+              ]
+            },
+            "adjacentOriginalContext": {
+              "path": "/tmp/queue-completion-phsa/independent-mac-I-quality-002/003-context.png",
+              "sha256": "399e10b6da89f81c37031304f914bcd731b73d8b023fb30e569429f42dc8ffb7",
+              "original300DpiPixelBox": [
+                202,
+                1120,
+                1515,
+                1320
+              ]
+            },
+            "originalFullRowCrop": {
+              "path": "/tmp/queue-completion-phsa/independent-mac-I-quality-002/003-full-row.png",
+              "sha256": "2c2b71bfa1903a9043075b8f2c64ab0d68db982b2824801048c5105714d96d07",
+              "original300DpiPixelBox": [
+                202,
+                1190,
+                2422,
+                1250
+              ]
+            },
+            "actualSourceImagePath": "/tmp/queue-completion-phsa/phsa-2016-17/images/p081.png",
+            "actualSourceImageSha256": "f6f31a3835d85d7def6319caf43cd04b2ad725c5552a92bec1618b2dd3f7c226",
+            "pageEvidence": {
+              "path": "research/salaries/queue-completion-phsa/evidence/phsa-2016-17-rows-p081.json.gzip",
+              "sha256": "d96a1e663a1a6c9c8f9100e8af5e16d78d2421a25386e1480478a06e801b69b7"
+            },
+            "rawPageEvidence": {
+              "path": "research/salaries/queue-completion-phsa/evidence/phsa-2016-17-raw-p081.json.gzip",
+              "sha256": "6382fb1dc66dc88a106c8ef617c9c5388d61abcb203af1cedd099c2d192b0f7c"
+            },
+            "sourceProfile": {
+              "path": "research/salaries/queue-completion-2026-11-01/phsa/phsa-2016-17-processing-profile-001.json",
+              "sha256": "befbc617f9532bb4559046d3dfa3b196800318f07e52a5d83d9dde0854d29ad7"
+            }
+          },
+          "qualificationPolicy": {
+            "path": "research/salaries/queue-completion-2026-11-01/phsa/source-typography-review-policy-001.json",
+            "sha256": "c7cb50c05284c0c897b126a2fd6f359870d4922c30ca6efe0c462267b6eec460"
+          },
+          "status": "qualified-contextual-source-name-pending-independent-peer-exact-root-adoption"
+        },
+        "chosenName": "Macleod,Laurie Jo",
+        "visibleAlternatives": [
+          "MacIeod,Laurie Jo"
+        ],
+        "characterPositionsZeroBased": [
+          3
+        ],
+        "assumptionBasis": "The visible source lacks the distinct uppercaseL foot seen in adjacentMacLeod,Gerald. Context afterthatMacLeod group and beforeMacMahon supports retaining primary lowercasel, preserving capitalI possibility. No automatic surname casing.",
+        "caseProvenByPixels": false,
+        "requiresExactPeerAndRootCaseAdoption": true,
+        "sourceCaseLedger": {
+          "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-history-mac-I-quality-002-typography-ledger.json",
+          "sha256": "33613d46ab60b905b99a501d6a519d802f88065c36b414e512178d343445c611"
+        }
+      },
+      "pageEvidencePath": "research/salaries/queue-completion-phsa/evidence/phsa-2016-17-rows-p081.json.gzip",
+      "pageEvidenceSha256": "d96a1e663a1a6c9c8f9100e8af5e16d78d2421a25386e1480478a06e801b69b7",
+      "rawPageEvidence": {
+        "path": "research/salaries/queue-completion-phsa/evidence/phsa-2016-17-raw-p081.json.gzip",
+        "sha256": "6382fb1dc66dc88a106c8ef617c9c5388d61abcb203af1cedd099c2d192b0f7c"
+      },
+      "cropSha256": "2c2b71bfa1903a9043075b8f2c64ab0d68db982b2824801048c5105714d96d07",
+      "retainedSourceNameView": {
+        "path": "research/salaries/queue-completion-2026-11-01/phsa/supplement-assets/mac-002-003-name.png",
+        "sha256": "a48a5e47dd0026019c7fc18c2e30d82c8445fb1f62da271ecf9a3616eaf18609"
+      },
+      "reviewInput": {
+        "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-history-mac-I-quality-002-resolutions.json",
+        "sha256": "e7e9dbb35343baf591d1bc1cf968e5c12d84a998c580123d2c4acff0b6746cc3"
+      },
+      "retainedOriginalSourceContext": {
+        "path": "research/salaries/queue-completion-2026-11-01/phsa/supplement-assets/mac-002-003-context.png",
+        "sha256": "399e10b6da89f81c37031304f914bcd731b73d8b023fb30e569429f42dc8ffb7"
+      }
+    }
+  ],
+  "noUnrequestedFieldsChanged": true,
+  "qualifiedCasesRequireExactPerSourceRootAdoption": true
+}

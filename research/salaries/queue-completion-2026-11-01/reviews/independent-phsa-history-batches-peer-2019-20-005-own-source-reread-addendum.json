@@ -1,0 +1,35 @@
+{
+  "reviewer": "/root/recovery_review",
+  "sourceId": "phsa-2019-20",
+  "sourceSha256": "0e31ac2054f0c2d4ef78797185dddd96cc0cdf2eab94bd6841fa24e1c38e7d02",
+  "batch": "phsa-2019-20-005",
+  "originalFrozenSourceFirst": {
+    "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-history-batches-peer-2019-20-005-nineteen-source-first.json",
+    "sha256": "dc82b81705b71678a06a52174f454d494c6e65e005ba0a6736a29091966f9b36"
+  },
+  "timing": "After both original-image first transcripts and limited19authorproposals were frozen/released; source1200reread, no raw file edit.",
+  "ownSourceReadingCorrections": [
+    {
+      "sequence": 230,
+      "initialPeerPrimary": "Fernandez,Paulie",
+      "currentLiteralPrimary": "Fernandez,Perlie",
+      "basis": "Current actual1200 shows open-bar e followed by short r shoulder, rather than enclosed a and u bowl. All other letters/source punctuation remain literal.",
+      "actual1200Source": {
+        "path": "/workspace/salary-review-review-temp/held2019-005peer/reread230-actual1200.png",
+        "sha256": "5df2845b9ad483da2fbeb9c0fd666a2d825de7c57615c652f6037b51e83e25b2"
+      }
+    },
+    {
+      "sequence": 398,
+      "initialPeerPrimary": "Gartner,Armin Jordan",
+      "currentLiteralPrimary": "Gantner,Armin Jordan",
+      "basis": "Current actual1200 has an n arch after Ga; first pass incorrectly read r. Same current source Ganshorn\u2192target\u2192Gao supports Gant rather than Gart. The separate given-word Armin/Arrnin finite m/rn possibility remains qualified, not pixel-proved.",
+      "actual1200Source": {
+        "path": "/workspace/salary-review-review-temp/held2019-005peer/reread398-actual1200.png",
+        "sha256": "810c3dfb77d311e92688b5b3ff2d8790f79513323aad1d90f8f55e0166a29cf7"
+      }
+    }
+  ],
+  "otherSeventeenPrimaryReadingsUnchangedPendingSeparateLetterAssessment92And175": true,
+  "noMoneyClaim": true
+}

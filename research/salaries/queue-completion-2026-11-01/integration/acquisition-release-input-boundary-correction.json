@@ -1,0 +1,23 @@
+{
+  "version": 2,
+  "frozen": true,
+  "reviewedOn": "2026-11-01",
+  "discardedPrototype": "research/salaries/queue-completion-2026-11-01/integration/release-inputs-v1/discarded-prototype.json",
+  "reason": "The builder correctly rejected cross-collection payload paths before replacing generated outputs. The release now contains byte-identical copies of all four frozen payloads inside its own source collection; the original source-path boundary guard is unchanged. Source IDs, bytes, counts and qualifications other than the separately reviewed Providence retention text remain identical.",
+  "activeInputs": [
+    {
+      "path": "scripts/finish_salary_queue_release_inputs.py",
+      "sha256": "98c76663e2d88918ac01c083be58aa0569a923c78ccecbf347b4a151c74beeeb"
+    },
+    {
+      "path": "research/salaries/queue-completion-acquisition-release/sources.json",
+      "sha256": "61f7b2f5c04b2c63fe28a647e419d482ec24ef51831c5f8f54b88c0ca5ccff44"
+    },
+    {
+      "path": "research/salaries/queue-completion-2026-11-01/integration/acquisition-metadata-adoption.json",
+      "sha256": "fa8fe824186e651510652c152f362bf214be562a4b06c3e52b9e5ebca8a2b0ca"
+    }
+  ],
+  "original105WorkerFilesUnchanged": true,
+  "offlineMetadataAndReplacementReplaysPass": true
+}

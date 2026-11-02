@@ -1,0 +1,86 @@
+{
+  "date": "2026-11-01",
+  "status": "held-period-conflict-unresolved",
+  "newAcceptedMcBrideRows": 0,
+  "priorFrozenDecision": {
+    "path": "research/salaries/held-resolution-2026-11-01/municipal/decision-and-year-comparison.json",
+    "sha256": "f691e7e382e8379873bba6bc3496affd0d813c9ebe8bccdad547584fa97a28c3"
+  },
+  "priorFindingRetained": "The five council rows are reproduced consistently, but every examined council heading explicitly says2024. Approval of the 2025 SOFI package establishes package adoption and does not resolve the council-specific period.",
+  "printedCouncilYear": "2024",
+  "enclosingReportYear": "2025",
+  "heldRows": 5,
+  "proposedInferredYear": null,
+  "heldControls": {
+    "remuneration": 45600,
+    "expenses": 42578.05,
+    "combined": 88178.05
+  },
+  "currentPublicRouteFindings": [
+    "The current official finance page still links SOFI45990 and audited financial statements45694; no corrected council-specific original linked there.",
+    "The public policies folder109 lists17 policies; no council travel, remuneration or annual individual-expense disclosure appeared among the exposed entries.",
+    "The public bylaws folder108 lists25 entries; no council-remuneration bylaw appeared among the exposed entries. A generic rate or entitlement would not independently date these exact five expense amounts.",
+    "The current council page exposes no annual individual-expense disclosure.",
+    "The35-page2025 audited statements have no literal held names or exact expense cells in either complete native-text extraction. Generic2025 financial statement headings and council approval do not date the separate council table.",
+    "Six new bounded indexed web queries produced no specifically dated exact five-row council disclosure. Search limitations are preserved; no exhaustive archive-absence claim."
+  ],
+  "snapshots": [
+    {
+      "key": "mcbride-finance",
+      "bodySha256": "2c2b3899152bd6ffd79a7ba1a9df6907a43653081df76858c0b59742c4bb0fd4",
+      "snapshot": "research/salaries/queue-completion-2026-11-01/municipal/route-snapshots/mcbride-finance.html.gzip",
+      "snapshotSha256": "f8299644610cebc0309e627488526ea7ae476f69bc44065eb6594bdcd950bd97"
+    },
+    {
+      "key": "mcbride-policies",
+      "bodySha256": "f69872f3da036e59465444a679b2954abd9130f406ed127635c25a45abc2ffea",
+      "snapshot": "research/salaries/queue-completion-2026-11-01/municipal/route-snapshots/mcbride-policies.html.gzip",
+      "snapshotSha256": "5635cd1b1802e61f83eacec2dbed28c1c91aa118a50fd3950a33adbdcb7c2ea2"
+    },
+    {
+      "key": "mcbride-council",
+      "bodySha256": "8916e938cb4e3f87a25aff815935b6556113a43f6215afc115b2fbe0408e9b19",
+      "snapshot": "research/salaries/queue-completion-2026-11-01/municipal/route-snapshots/mcbride-council.html.gzip",
+      "snapshotSha256": "9ef2367d6d24aa17aca0a2f957519186b942178141e3e5de182a93bcc852f2cb"
+    },
+    {
+      "key": "mcbride-bylaws",
+      "bodySha256": "7beff030fb2dd40ec95fbb3a3e1818b49d5e77c635716c8b6754fc40c70676ec",
+      "snapshot": "research/salaries/queue-completion-2026-11-01/municipal/route-snapshots/mcbride-bylaws.html.gzip",
+      "snapshotSha256": "fae7ea1f24cfeae7e38436deb301776970de2113a540ce62ad0b4226e193d4f5"
+    },
+    {
+      "key": "terrace-finance",
+      "bodySha256": "6ac5bef124e213dc059ce5cc3bdea69413fc248d416ffbed6cded6a067891088",
+      "snapshot": "research/salaries/queue-completion-2026-11-01/municipal/route-snapshots/terrace-finance.html.gzip",
+      "snapshotSha256": "c266bf6df0cff038f63b8ded906e1c119b35a5b0a1f83e91245a8c2fe8773094"
+    }
+  ],
+  "retrievalReceipts": [
+    {
+      "path": "research/salaries/queue-completion-2026-11-01/municipal/route-snapshots/retrievals-initial.json",
+      "sha256": "b044c18ad8acca20b196dc292ceb8ce5c807bedd243e1c47fc02e6bee3588f1e"
+    },
+    {
+      "path": "research/salaries/queue-completion-2026-11-01/municipal/route-snapshots/mcbride-route-retrievals.json",
+      "sha256": "d1c4f49de578d24e1cb1b34492354c0dc50bceab0132d3fd6da9e544d9ff8d3b"
+    },
+    {
+      "path": "research/salaries/queue-completion-2026-11-01/municipal/route-snapshots/terrace-historical-retrievals.json",
+      "sha256": "1c8226c96fe20c7cb738e496ec9d0397d0dafa6b0fdc8d8d2d9132408924fae8"
+    }
+  ],
+  "auditedNativeEvidence": {
+    "path": "research/salaries/queue-completion-2026-11-01/municipal/mcbride-audited-native-research.json.gzip",
+    "sha256": "311fec901920708a874e0974a4986101619ab833edb470470538bb412c398305",
+    "originalSha256": "fefdddcd4e49402f49097a6eb7affc7b6f9fff692bdc94c04a09436b178346eb"
+  },
+  "publicSearchReceipt": "research/salaries/queue-completion-2026-11-01/municipal/mcbride-current-web-search.json",
+  "externalNeed": "An existing corrected official council schedule or an issuer clarification that specifically dates these five names/pay/expense cells. Adoption of the2025 package alone remains insufficient.",
+  "requestDraft": "research/salaries/held-resolution-2026-11-01/municipal/existing-record-period-clarification-draft.md",
+  "outboxOwner": "recovery_education; freshly verified mcbride@mcbride.ca ordinary administrative routing",
+  "messagesSent": false,
+  "formsSubmitted": false,
+  "feesIncurred": false,
+  "terraceHistoricalTriage": "Current finance index earliest linked SOFI2017; all2017–2025 salary scopes already accepted. Two guessed2015/2016 SOFI paths returned404. The linked2015/2016 annual reports were downloaded and native-keyword checked without finding named remuneration schedules; no assertion that those years never had a public schedule. No new Terrace rows proposed."
+}

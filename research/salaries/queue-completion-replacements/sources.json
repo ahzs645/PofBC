@@ -1,0 +1,27 @@
+{
+  "version": 1,
+  "sources": [],
+  "compiledReplacements": [
+    {
+      "employerSlug": "providence-health-care",
+      "compiledYear": "2023/24",
+      "replacementYear": "2023/24",
+      "sourceIds": [
+        "queue-completion-providence-2023-24-employees"
+      ],
+      "sourceSha256": {
+        "queue-completion-providence-2023-24-employees": "521472f784463bf42626b9c74aeb72252167346b65b8a123031ca59e46ecb5f3"
+      },
+      "sourceDataSha256": {
+        "queue-completion-providence-2023-24-employees": "b9f4367622d685d0fbc5a6fc468ec87bde18191b5c5df9ba95ed9161de19ebe0"
+      },
+      "expectedRows": 3289,
+      "expectedRetainedRows": 0,
+      "selectedRowsSha256": "30818d02354445ba5d6cef95d80ddcbe644904ecfbe5f53d8027e3ff2939d55b",
+      "retainPositions": [],
+      "kind": "duplicate-compiled-copy",
+      "reason": "The complete3289-row compiled employee cohort matches the complete internally dated2023/24 official employee schedule on all name letters/digits, exact remuneration and every known expense, preserving multiplicity. Case/punctuation/whitespace are comparison-only;588source expense dashes replace compiled zeros as unknown, never as source zeros. No job title, board or elected observation is selected.",
+      "evidence": "research/salaries/queue-completion-2026-11-01/integration/compiled-comparison.json"
+    }
+  ]
+}

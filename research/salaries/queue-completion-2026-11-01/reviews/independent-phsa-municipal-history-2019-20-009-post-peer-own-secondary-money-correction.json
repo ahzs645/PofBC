@@ -1,0 +1,47 @@
+{
+  "frozen": true,
+  "reviewedOn": "2026-11-02",
+  "reviewer": "recovery_municipal",
+  "sourceId": "phsa-2019-20",
+  "sourceSha256": "0e31ac2054f0c2d4ef78797185dddd96cc0cdf2eab94bd6841fa24e1c38e7d02",
+  "batch": "phsa-2019-20-009",
+  "sequence": 92,
+  "physicalPage": 56,
+  "sourceRowOnPage": 51,
+  "field": "expenses",
+  "originalBlindFirstReading": 4558,
+  "intermediateOwnSecondSourceReading": 4538,
+  "finalCurrentOriginalSourceReading": 4558,
+  "originalDataValueUnchanged": true,
+  "basis": "I personally inspected my independent actual2400 source render: each of the two middle5digits has a top-left descending stroke and top/middle bars. The second digit is5, not3. My secondary4538 source read was wrong; the original4558 is retained. No source total balancing/OCR voting or numeric ambiguity waiver.",
+  "sourceEvidence": {
+    "sequence": 92,
+    "physicalPage": 56,
+    "sourceRowOnPage": 51,
+    "field": "expenses",
+    "path": "/workspace/salary-review-municipal-tmp/phsa-2019-20-009/post-source/0092-expenses-own-actual2400.png",
+    "sha256": "d2af89a03b21dfb2c3f9187e312f14b7546f1ab007dc39c81700523789ddc0cb",
+    "original300DpiPixelBox": [
+      2110,
+      2717,
+      2230,
+      2773
+    ],
+    "dpi": 2400,
+    "originalFullRowCropSha256": "ea293e018132ad5b5e91c59b207896ed82a7f16453f19dc44b0ab3fc921d6742"
+  },
+  "originalFirstTranscript": {
+    "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-municipal-history-2019-20-009-original-transcript.json",
+    "sha256": "20515d68f9c058bbc8b2946efdebf9289ad4bbede09c90e735167dc49e0a1426"
+  },
+  "ownIntermediateSourceReread": {
+    "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-municipal-history-2019-20-009-postcomparison-money-reread-transcript.json",
+    "sha256": "d2fe3569e2cedd3be89b24be35803382977d943a95cab6e790716f738908430f"
+  },
+  "freshPeerSourceFirstBeforeChoices": {
+    "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-history-batches-peer-2019-20-009-fiftyone-money-source-first.json",
+    "sha256": "e898bf822c677d60911bd25313afd701a36018b873388d1fd51e785c8c1fcebc"
+  },
+  "allEarlierFrozenBytesUnchanged": true,
+  "scope": "One rejected secondary own source reading only; final51money comparison must keep4558 and record all first/intermediate readings. No name/full400peer claim."
+}

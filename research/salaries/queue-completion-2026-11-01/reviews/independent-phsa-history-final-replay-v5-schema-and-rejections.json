@@ -1,0 +1,49 @@
+{
+  "frozen": true,
+  "reviewedOn": "2026-11-02",
+  "reviewer": "held_health_review",
+  "script": {
+    "path": "scripts/finish_salary_phsa_review_final_replay_v5.py",
+    "sha256": "bac4962028b05d2af1766f48eaf02a612bf286243efb41678ecf483b8a73ea42"
+  },
+  "unchangedFrozenPreviousScript": {
+    "path": "scripts/finish_salary_phsa_review_final_replay_v4.py",
+    "sha256": "439b02914c113a18b1535108ef1a4ee6e5ec92787e4835f92da53b0b19d367d5"
+  },
+  "successfulCompleteSourceReplay": {
+    "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-history-2022-23-final-v3-raw-overlay-replay.json",
+    "sha256": "97f4e58e1cc0983275067213aa7e4d0b509416aadca591aa14bba1794b745a00"
+  },
+  "explicitSupportedAdditionalMoneyLedgerHashes": [
+    "1438b41ecb02f464e1af7e7f8149a86ae003aa887b3077a92cada8566389a44b",
+    "e457c434b39b590ecf922c4dc7e38ae6c0f930ce88e7850f90969434cb4db0bb"
+  ],
+  "completeMixedSourceFieldsCompared": 12,
+  "completeDirectSourceFieldsCompared": 4,
+  "independentActualOriginal600RgbReplayMonetaryFields": 6,
+  "independentActualOriginal600RgbReplayContextOnlyNames": 2,
+  "negativeMutations": [
+    {
+      "mutation": "wrong-value",
+      "rejected": true
+    },
+    {
+      "mutation": "unrequested-name-field",
+      "rejected": true
+    },
+    {
+      "mutation": "wrong-source-row",
+      "rejected": true
+    },
+    {
+      "mutation": "wrong-source-image-pin",
+      "rejected": true
+    },
+    {
+      "mutation": "unknown-ledger-sha",
+      "rejected": true
+    }
+  ],
+  "finding": "Originalauditv4 assumed prior confirmation ledger noSalaryValuesChanged plus prior peer-row schema. New two exact-pinned FY22 schemas instead transparently preserve author own reading corrections, complete mixed/direct source-first literal fields and exact original source-pixel mappings. NEWv5 independently verifies these scopes/crops/values without asserting unchanged author first readings or importing producer code. Fullraw+onlypinnedoverlays still equals final data.",
+  "limits": "Auditcompatibility update only; no source/raw/oldreceipt mutations, no general schema fallback. Literal source context/qualified decisions are separately pinned; sourcecontrol acceptance is not inferred from monetary totals alone."
+}

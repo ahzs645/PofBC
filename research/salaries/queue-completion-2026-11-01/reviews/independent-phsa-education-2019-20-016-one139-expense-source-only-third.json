@@ -1,0 +1,103 @@
+{
+  "frozen": true,
+  "sourceId": "phsa-2019-20",
+  "sourceSha256": "0e31ac2054f0c2d4ef78797185dddd96cc0cdf2eab94bd6841fa24e1c38e7d02",
+  "batch": "phsa-2019-20-016",
+  "sourceOnly": true,
+  "scope": "Exactly one expenses cell. Two independently frozen readings differ, exact values withheld. Personally read literal integer and real uncertainty before asking choices. No money balancing/qualification.",
+  "sourceField": {
+    "sequence": 139,
+    "field": "expenses",
+    "physicalPage": 114,
+    "sourceRowOnPage": 50,
+    "cropSha256": "f876c9602581a4f9da340dbbd9926d79bb6753977db74d0799d678f99c2efc30",
+    "nativeOriginal300SourceView": {
+      "field": "expenses",
+      "path": "/tmp/queue-completion-phsa/phsa-2019-20/review-images/phsa-2019-20-016-target-views/0139-expenses.png",
+      "sha256": "ee1077f877efa0186cfb100b80b75846ad54ff3489eb6f210eeb2614f373166e",
+      "originalPdf300DpiPixelBox": [
+        2052,
+        2679,
+        2422,
+        2718
+      ],
+      "noResamplingOrGlyphAlteration": true
+    },
+    "actualWholePage600SourceView": {
+      "path": "/workspace/salary-review-held-health-temp/2019-016-allmoney-source600/0139-expenses-wholepage600-crop.png",
+      "sha256": "ce1e6b868ba40b9c7d297919bb81a3d289d99e7e4bf20d676e228af730e51c40",
+      "dpi": 600,
+      "actualPdfWholePageRenderer": "PyMuPDF get_pixmap(dpi=600,alpha=False), then exactinteger pixel crop",
+      "actual600PixelCropBox": [
+        4104,
+        5350,
+        4844,
+        5444
+      ],
+      "noResamplingEnhancementOrRetypedGlyphs": true
+    },
+    "priorIndependentActual1200SourceView": {
+      "sequence": 139,
+      "field": "expenses",
+      "physicalPage": 114,
+      "sourceRowOnPage": 50,
+      "originalFullRowCropSha256": "f876c9602581a4f9da340dbbd9926d79bb6753977db74d0799d678f99c2efc30",
+      "path": "/workspace/salary-review-held-health-temp/2019-016-money-source-first/0139-expenses-source1200.png",
+      "sha256": "418643c414d50f947f16810985cc501c068958cb75414cb67da98ac867dc5ff3",
+      "dpi": 1200,
+      "actualPdfPointClip": [
+        492.47999999999996,
+        642.9599999999999,
+        581.28,
+        652.3199999999999
+      ],
+      "whiteBoundaryCrop": [
+        330,
+        35,
+        642,
+        155
+      ],
+      "sourceNativeFieldView": {
+        "field": "expenses",
+        "path": "/tmp/queue-completion-phsa/phsa-2019-20/review-images/phsa-2019-20-016-target-views/0139-expenses.png",
+        "sha256": "ee1077f877efa0186cfb100b80b75846ad54ff3489eb6f210eeb2614f373166e",
+        "originalPdf300DpiPixelBox": [
+          2052,
+          2679,
+          2422,
+          2718
+        ],
+        "noResamplingOrGlyphAlteration": true
+      }
+    }
+  },
+  "wholepage600InkOnly": {
+    "path": "/workspace/salary-review-education-temp/2019-016-peer99/139-expenses-whole600-native-ink.png",
+    "sha256": "27ddc87b96ad018091904b66612fb5f0181f53014c5468128106814cc707c9f7",
+    "originalFieldWhiteOnlyCropBox": [
+      157,
+      0,
+      329,
+      94
+    ],
+    "noResampling": true
+  },
+  "actualCurrentOriginal2400": {
+    "path": "/workspace/salary-review-education-temp/2019-016-peer99/139-expenses-current-original2400.png",
+    "sha256": "d14af7e47c05dddc0e80c7f7d4c81d46b991b502e287b5e1017f380a8bdca930",
+    "clipPoints": [
+      492.48,
+      642.96,
+      581.28,
+      652.32
+    ],
+    "whiteOnlyHorizontalCropBox": [
+      653,
+      0,
+      1293,
+      312
+    ],
+    "noResampling": true
+  },
+  "originalPdfPath": "/tmp/queue-completion-phsa/originals/phsa-2019-20.pdf"
+}

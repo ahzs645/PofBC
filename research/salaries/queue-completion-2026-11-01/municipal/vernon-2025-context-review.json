@@ -1,0 +1,92 @@
+{
+  "date": "2026-11-01",
+  "reviewer": "recovery_municipal (author)",
+  "sourceKey": "vernon-2025",
+  "sourceSha256": "83a9e5a60b67e1df5016762ab5e8bd9cc3fc054e55ddc28b1a4c1a8cff7d0197",
+  "physicalPages": 14,
+  "salaryPagesReviewedCompletely": [
+    4,
+    5,
+    6,
+    7
+  ],
+  "otherSourceReview": "Whole 14-page actual-PDF thumbnail survey identified salary pages4–7; all271 published rows personally image-checked at300dpi, including complete separate council Name/Office columns in whole-page context. Approval3, salary headings and final controls7 visually reviewed. No claim that all nonsalary pages were fully transcribed.",
+  "printedPeriodEvidence": [
+    {
+      "physicalPage": 4,
+      "text": "2025 Remuneration"
+    },
+    {
+      "physicalPage": 5,
+      "text": "2025 Gross Earnings"
+    },
+    {
+      "physicalPage": 6,
+      "text": "2025 Gross Earnings"
+    },
+    {
+      "physicalPage": 7,
+      "text": "2025 Gross Earnings"
+    }
+  ],
+  "approval": {
+    "physicalPage": 3,
+    "visuallySigned": true,
+    "statement": "Approves all the statements and schedules included in the Statement of Financial Information.",
+    "signatories": [
+      {
+        "name": "Elma Hamming, CPA, CMA",
+        "position": "Director, Financial Services",
+        "signedDate": "2026-05-13"
+      },
+      {
+        "name": "Victor I Cumming",
+        "position": "Mayor",
+        "signedDate": "2026-05-13"
+      }
+    ]
+  },
+  "definitions": {
+    "remuneration": "Employee column: 2025 Gross Earnings. Council column: 2025 Remuneration.",
+    "expenses": "Employee column: Expenses (Net of Tax). Council column: Expenses.",
+    "financialStatementRelation": "Total gross earnings differ from total wages included in the City's Consolidated Statement of Operations due to the employer portion of benefit costs.",
+    "publishedEmployeeSelection": "Employee Earnings >$75,000",
+    "belowThresholdLabel": "Employee Earnings <$75,000",
+    "noEmployeeJobTitlesPublished": true
+  },
+  "printedCohortControls": {
+    "namedEmployees": {
+      "rows": 264,
+      "remuneration": 28678528,
+      "expenses": 381690
+    },
+    "belowThresholdEmployees": {
+      "remuneration": 10280760,
+      "expenses": 100126
+    },
+    "allEmployees": {
+      "remuneration": 38959288,
+      "expenses": 481816
+    },
+    "electedOfficials": {
+      "rows": 7,
+      "remuneration": 395681,
+      "expenses": 31191
+    }
+  },
+  "observedNamedRowSums": {
+    "remuneration": 28678528,
+    "expenses": 380683
+  },
+  "namedRowSumsMinusPrinted": {
+    "remuneration": 0,
+    "expenses": -1007
+  },
+  "printedNamedPlusBelowEqualsPrintedAllEmployees": true,
+  "explicitZeroExpenseCells": 25,
+  "nullExpenseCells": 0,
+  "nullEmployeePositions": 264,
+  "noBalancingOrCauseInference": true,
+  "allRepeatedNamesAndRolesRetainedWithoutIdentityAssumptions": true,
+  "acceptedRows": 0
+}

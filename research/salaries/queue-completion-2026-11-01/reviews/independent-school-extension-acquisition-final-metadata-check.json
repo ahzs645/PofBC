@@ -1,0 +1,42 @@
+{
+  "reviewer": "recovery_education",
+  "reviewedOn": "2026-11-01",
+  "finalSourceManifest": {
+    "path": "research/salaries/queue-completion-schools/sources.json",
+    "sha256": "b86fb29e39e7639d167853c1f393a5d15fd2b9a858f807c2e8547b36dc43c7be"
+  },
+  "reviewedNativeExtensionSources": 14,
+  "reviewedOriginals": 7,
+  "reviewedRows": 13152,
+  "selectedSourceIds": [
+    "queue-completion-schools-sd23-2025-trustees",
+    "queue-completion-schools-sd23-2025-employees",
+    "queue-completion-schools-sd33-2025-trustees",
+    "queue-completion-schools-sd33-2025-employees",
+    "queue-completion-schools-sd36-2025-trustees",
+    "queue-completion-schools-sd36-2025-employees",
+    "queue-completion-schools-sd43-2025-trustees",
+    "queue-completion-schools-sd43-2025-employees",
+    "queue-completion-schools-sd61-2025-trustees",
+    "queue-completion-schools-sd61-2025-employees",
+    "queue-completion-schools-sd68-2025-trustees",
+    "queue-completion-schools-sd68-2025-employees",
+    "queue-completion-schools-sd73-2025-trustees",
+    "queue-completion-schools-sd73-2025-employees"
+  ],
+  "allPayloadHashesMatchFinalMetadata": true,
+  "publicWarningsAndRetentionGuardsPresent": true,
+  "onlyNativeExtensionReviewed": "Other eight source entries in this22-entry manifest belong to separate author/peer work, not this seven-original review.",
+  "sd61AcceptedRevision": "Only20literalTEACHERposition fixes; additivev2andoldv1retained.",
+  "sd73MetadataCorrection": {
+    "path": "research/salaries/queue-completion-2026-11-01/schools/sd73-footnote-metadata-correction.json",
+    "sha256": "69dea21b3f3a068413ad5d2b8ada260a69f718df52ce6cfcb6825fb1bb1282ed"
+  },
+  "actualFootnoteContextRead": {
+    "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-school-extension-acquisition-context-sd73-2025-p072.png",
+    "sha256": "6898fa8ebd1928af18cb3625020d999023dcb3ec3ada53b2d6b0e11cab79010d"
+  },
+  "sourceValuesOrMoneyChangedForMetadata": false,
+  "revisionsCheckCommand": "python scripts/finish_salary_schools_revisions.py --check",
+  "revisionsCheckExitCode": 0
+}

@@ -1,0 +1,185 @@
+{
+  "frozen": true,
+  "reviewer": "/root",
+  "reviewedOn": "2026-11-02",
+  "sourceId": "phsa-2019-20",
+  "sourceSha256": "0e31ac2054f0c2d4ef78797185dddd96cc0cdf2eab94bd6841fa24e1c38e7d02",
+  "batch": "phsa-2019-20-004",
+  "qualificationCaseCount": 1,
+  "sourceNameSegmentationExceptions": [
+    {
+      "sourceId": "phsa-2019-20",
+      "sourceSha256": "0e31ac2054f0c2d4ef78797185dddd96cc0cdf2eab94bd6841fa24e1c38e7d02",
+      "batch": "phsa-2019-20-004",
+      "sequence": 18,
+      "physicalPage": 20,
+      "sourceRowOnPage": 26,
+      "field": "name",
+      "chosenContextualTranscription": "Chomcy,Kevin Daniel",
+      "visibleAlternatives": [
+        "Chomcy,Kevin Daniel",
+        "Chorncy,Kevin Daniel"
+      ],
+      "caseProvenByPixels": false,
+      "cropSha256": "6f0aea5a4d5bcd42da05da0251aa584c5c6a00767ccfe80f2e1ec083758de528",
+      "sourceSpans": [
+        {
+          "zeroBasedPrimaryIndex": 3,
+          "primaryText": "m",
+          "visibleAlternative": "rn"
+        }
+      ],
+      "ambiguityKind": "rn-m-and-c-e-closed-source-case",
+      "qualificationPolicy": null,
+      "ownActualSourceImageRead": {
+        "path": "/tmp/independent-phsa-municipal-2019-20-004/seq018-name-actual1200.png",
+        "sha256": "aca060293b7ed28d0ee75a4c6462e2afb1fc0d235286dd4bd100cdb013a69687",
+        "original300DpiPixelBox": [
+          205,
+          1700,
+          1250,
+          1738
+        ]
+      },
+      "ownWhiteOnlyDisplayCropBox": [
+        468,
+        7,
+        1696,
+        152
+      ],
+      "ownSourceObservation": "The source shoulders can segment m/rn and the following open c may be e at original scan resolution; four combinations remain finite. Current primary is Chomcy, without identity or other-year inference.",
+      "scope": "name only; no monetary field alteration",
+      "rootExactAdoptionRequired": true,
+      "publicWarningRequired": true,
+      "proposedName": "Chomcy,Kevin Daniel",
+      "allowedFields": [
+        "name"
+      ],
+      "actualSourceEvidence": {
+        "actualOriginal1200SourceView": {
+          "path": "/tmp/independent-phsa-municipal-2019-20-004/seq018-name-actual1200.png",
+          "sha256": "aca060293b7ed28d0ee75a4c6462e2afb1fc0d235286dd4bd100cdb013a69687",
+          "original300DpiPixelBox": [
+            205,
+            1700,
+            1250,
+            1738
+          ]
+        },
+        "whiteOnlyInspectionBox": [
+          468,
+          7,
+          1696,
+          152
+        ]
+      },
+      "allImageReadingEvidence": [
+        {
+          "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-municipal-history-2019-20-004-finite-name-source-confirmation.json",
+          "sha256": "33efbccf357ca2102b6c78e53f802774133721bdb910d6d5984e8b831d83d1fe"
+        },
+        {
+          "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-education-2019-20-004-municipal-peer-finite-name-cases-v2.json",
+          "sha256": "46780e792e68156ee9ed4dc690816608eaca1c783bf81ca46346454cd02839ab"
+        },
+        {
+          "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-education-2019-20-004-municipal-peer-final-comparison-v2.json",
+          "sha256": "c971b2a513abd2efe4b5491837620acfe4faebb7e8118f02829a8f453a5e3df2"
+        },
+        {
+          "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-history-peer-municipal-2019-20-004-eleven-comparison.json",
+          "sha256": "ef92b4fdb3d5af995d94d389611cfecda999c56eb620efd3bc05f3cd8a0c5539"
+        }
+      ],
+      "basis": "Current canonical c has an open right-side gap before y without the middle e crossbar. Earlier partial-source c/e family exposure is known but no current source e support is retained. Specific m/rn pair only; root may independently assess this reduction.",
+      "notAuthorizedByRnMPolicy": true,
+      "requiresSeparateExactClosedRootAdoption": true,
+      "canonicalWholePageSourceViews": {
+        "native300Name": {
+          "path": "research/salaries/queue-completion-2026-11-01/phsa/canonical-review/phsa-2019-20-earlier-current-risk/036-p020-r26-whole300-name.png",
+          "sha256": "a682fac89d2d4da5d8a68123ef0ea6ac83bc6b3bdf60ff2cf4cb8bd0922a5c10",
+          "sourcePixelBox": [
+            304,
+            1691,
+            1738,
+            1748
+          ]
+        },
+        "wholePage600Name": {
+          "path": "research/salaries/queue-completion-2026-11-01/phsa/canonical-review/phsa-2019-20-earlier-current-risk/036-p020-r26-whole600-name.png",
+          "sha256": "ed2977c832789de3c20b55f2c35872e2c88e021aecc1745b6c29328e5b14c5c6",
+          "sourcePixelBox": [
+            608,
+            3382,
+            3476,
+            3496
+          ]
+        },
+        "native300Context": {
+          "path": "research/salaries/queue-completion-2026-11-01/phsa/canonical-review/phsa-2019-20-earlier-current-risk/036-p020-r26-whole300-context.png",
+          "sha256": "f5577c5a0475c3dae20fcf31d9a2f0836c29bdef28b4b67fea21110a3f363ff4",
+          "sourcePixelBox": [
+            304,
+            1591,
+            1738,
+            1848
+          ]
+        },
+        "wholePage600Context": {
+          "path": "research/salaries/queue-completion-2026-11-01/phsa/canonical-review/phsa-2019-20-earlier-current-risk/036-p020-r26-whole600-context.png",
+          "sha256": "2318219c328988fd4b3a93b76b4a0116a11edd0064083098626c4524f754468e",
+          "sourcePixelBox": [
+            608,
+            3182,
+            3476,
+            3696
+          ]
+        },
+        "native300FullRow": {
+          "path": "research/salaries/queue-completion-2026-11-01/phsa/canonical-review/phsa-2019-20-earlier-current-risk/036-p020-r26-whole300-fullrow.png",
+          "sha256": "9829cef51b2e6fb380bc08da6c8f39558cbd215cf1bd890e1342c8d4219da490",
+          "sourcePixelBox": [
+            0,
+            1691,
+            2550,
+            1748
+          ]
+        },
+        "wholePage600FullRow": {
+          "path": "research/salaries/queue-completion-2026-11-01/phsa/canonical-review/phsa-2019-20-earlier-current-risk/036-p020-r26-whole600-fullrow.png",
+          "sha256": "2fc69219a191c245e5c4c4fa13e93ddde35d10f018587ab4409c18f470814acd",
+          "sourcePixelBox": [
+            0,
+            3382,
+            5100,
+            3496
+          ]
+        }
+      },
+      "canonicalExactRootAcceptance": {
+        "path": "research/salaries/queue-completion-2026-11-01/reviews/root-phsa-history-2019-20-education-risk-ten-current-source-acceptance.json",
+        "sha256": "3193e3f131029e797fba672924e979694163dd392a47718e8aec177060ecf72b"
+      },
+      "canonicalHistoricalSourceAnnotationsSuperseded": true
+    }
+  ],
+  "requiresRootFileAdoptionAndPublicWarningBeforeSourceAcceptance": true,
+  "limits": [
+    "Only source18name. No generalc/e,m/rn-cross rule.",
+    "No identity, amount or reporting-year inference."
+  ],
+  "supersededExactCaseLedger": {
+    "path": "research/salaries/queue-completion-2026-11-01/reviews/root-phsa-history-2019-20-batch-004-name18-exact-source-ambiguity-ledger.json",
+    "sha256": "f7c70e22ac9f10c5d7dab738b1aff4a5e0c78329b619f212d2985d809fbec75b"
+  },
+  "originalRootAdoption": {
+    "path": "research/salaries/queue-completion-2026-11-01/reviews/root-phsa-history-2019-20-batch-004-name18-exact-name-adoption.json",
+    "sha256": "857d3b17482563bc4c3b03f31f81adebb8a2b20ee0c4a69edacb5705e720b408"
+  },
+  "canonicalExactSourceAcceptance": {
+    "path": "research/salaries/queue-completion-2026-11-01/reviews/root-phsa-history-2019-20-education-risk-ten-current-source-acceptance.json",
+    "sha256": "3193e3f131029e797fba672924e979694163dd392a47718e8aec177060ecf72b"
+  },
+  "unlistedCaseDictionariesUnchanged": true,
+  "canonicalRevisionScope": "Only declared36/52/57 current finite source families/basis. Full original case dictionary scope preserved; old supporting image annotations are historical where canonical source evidence supersedes them. Direct60 retirement is a SEPARATE Health step from effective new005 authority."
+}

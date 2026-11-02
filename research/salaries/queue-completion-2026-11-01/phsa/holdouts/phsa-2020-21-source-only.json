@@ -1,0 +1,676 @@
+{
+  "frozen": true,
+  "date": "2026-11-01",
+  "sourceId": "phsa-2020-21",
+  "sourceSha256": "87ea680c3e2b9bb940d911a198e41b85068535964ee61b6992e651271bd72b60",
+  "sourceUrl": "https://www.phsa.ca/about-site/Documents/Employee%20remuneration%20greater%20than%20$75%2c000%20%28PHSA%29.pdf",
+  "originalPdfCachePath": "/tmp/queue-completion-phsa/originals/phsa-2020-21.pdf",
+  "selectionConfiguration": {
+    "path": "research/salaries/queue-completion-2026-11-01/phsa/holdout-selection-config-001.json",
+    "sha256": "fa3689b3b361f5c431707e7ed517ebdff4080499c96d1af7ec1d2aa6a46e8627"
+  },
+  "fieldPolicy": {
+    "path": "research/salaries/queue-completion-2026-11-01/phsa/paired-reader-field-policy-002.json",
+    "sha256": "0fafb3763ea5a1ebf8f2d7310e748cb4d24247428f544056e1427d2e6ecc77fe"
+  },
+  "completeSourcePagesAtSelection": 148,
+  "sourceThirdAllocation": [
+    3,
+    4,
+    3
+  ],
+  "benchmarkReservedAndManualRowsExcluded": true,
+  "holdoutRootTranscriptionMustPrecedeCandidateOpening": true,
+  "rows": [
+    {
+      "sequence": 1,
+      "sourceId": "phsa-2020-21",
+      "physicalPage": 5,
+      "sourceRowOnPage": 9,
+      "salaryPageThird": "early",
+      "selectionClass": "unreserved-confidence-only-paired-row",
+      "selectionRankSha256": "00403c4a2ff5a33d3853504794dbf4ec035ab303b11875451a6239e3aea551c5",
+      "reviewTargetFields": [
+        "name",
+        "remuneration"
+      ],
+      "sourceNativeFieldViews": [
+        {
+          "field": "name",
+          "path": "research/salaries/queue-completion-2026-11-01/phsa/holdouts/field-crops/phsa-2020-21-01-name.png",
+          "sha256": "962f158b64853341b06b6127082cd038dfaee49ff4eafa4d5ad4400438ee0217",
+          "originalPdf300DpiPixelBox": [
+            280,
+            1019,
+            1753,
+            1061
+          ],
+          "noResamplingOrGlyphAlteration": true
+        },
+        {
+          "field": "remuneration",
+          "path": "research/salaries/queue-completion-2026-11-01/phsa/holdouts/field-crops/phsa-2020-21-01-remuneration.png",
+          "sha256": "e49bad75bba81de6cdd07a4b85e263e4323e8ee98e07bbd2d6d462e37baacbb1",
+          "originalPdf300DpiPixelBox": [
+            1745,
+            1019,
+            2083,
+            1061
+          ],
+          "noResamplingOrGlyphAlteration": true
+        }
+      ],
+      "actualSourceImagePath": "/tmp/queue-completion-phsa/phsa-2020-21/images/p005.png",
+      "actualSourceImageSha256": "72bc8a5afbb13f9cc4203ea3b4767cff62a4f7beba43678935052224cb7aac65",
+      "fullRowContextPath": "/tmp/queue-completion-phsa/holdout-context/phsa-2020-21-p005-r09.png",
+      "fullRowContextSha256": "c646b14e6e5dfeabc44ac27e90dbdce8d6d961dfa373dad39a7d83faecc02864",
+      "fullRowOriginalPixelBox": [
+        280,
+        1019,
+        2422,
+        1061
+      ],
+      "pageEvidence": {
+        "path": "research/salaries/queue-completion-phsa/evidence/phsa-2020-21-rows-p005.json.gzip",
+        "sha256": "0c05a2a972c1444077fd2966b074793846355d92150a295ddcf827ae55789c30"
+      },
+      "rawPageEvidence": {
+        "path": "research/salaries/queue-completion-phsa/evidence/phsa-2020-21-raw-p005.json.gzip",
+        "sha256": "1c0b043961d6cd7c2f2412084ac14d3d3170d27252df57d9a239629930477359"
+      }
+    },
+    {
+      "sequence": 2,
+      "sourceId": "phsa-2020-21",
+      "physicalPage": 36,
+      "sourceRowOnPage": 20,
+      "salaryPageThird": "early",
+      "selectionClass": "unreserved-confidence-only-paired-row",
+      "selectionRankSha256": "0060c7b9ebe8dc1e6e3f5f9263bbd6fe67c494bcb84c8d280f44cde19c0c1ca7",
+      "reviewTargetFields": [
+        "name",
+        "remuneration",
+        "expenses"
+      ],
+      "sourceNativeFieldViews": [
+        {
+          "field": "name",
+          "path": "research/salaries/queue-completion-2026-11-01/phsa/holdouts/field-crops/phsa-2020-21-02-name.png",
+          "sha256": "98d59c9aebf5b1857098efb306049a1e8859ff8750ef7a595d113648d29b3eaf",
+          "originalPdf300DpiPixelBox": [
+            280,
+            1492,
+            1753,
+            1534
+          ],
+          "noResamplingOrGlyphAlteration": true
+        },
+        {
+          "field": "remuneration",
+          "path": "research/salaries/queue-completion-2026-11-01/phsa/holdouts/field-crops/phsa-2020-21-02-remuneration.png",
+          "sha256": "bdc9c87333a9a2d18c4b9e6ea7e8d0c7ddaa59d0fdc6c22427919aaa99225112",
+          "originalPdf300DpiPixelBox": [
+            1745,
+            1492,
+            2083,
+            1534
+          ],
+          "noResamplingOrGlyphAlteration": true
+        },
+        {
+          "field": "expenses",
+          "path": "research/salaries/queue-completion-2026-11-01/phsa/holdouts/field-crops/phsa-2020-21-02-expenses.png",
+          "sha256": "2a148c4b738d3aa05e1d705e5f67aec87a68604a0e97bce232c981b597ee3eaa",
+          "originalPdf300DpiPixelBox": [
+            2067,
+            1492,
+            2422,
+            1534
+          ],
+          "noResamplingOrGlyphAlteration": true
+        }
+      ],
+      "actualSourceImagePath": "/tmp/queue-completion-phsa/phsa-2020-21/images/p036.png",
+      "actualSourceImageSha256": "7f17cc57a85b0c8f531348d05074dffcf50b531171ad9403fb745bff55cd10c3",
+      "fullRowContextPath": "/tmp/queue-completion-phsa/holdout-context/phsa-2020-21-p036-r20.png",
+      "fullRowContextSha256": "38e581aa8d44c49c01577da81d10567f1e8fedd03c148b97e7cfe50ab9d75e46",
+      "fullRowOriginalPixelBox": [
+        280,
+        1492,
+        2422,
+        1534
+      ],
+      "pageEvidence": {
+        "path": "research/salaries/queue-completion-phsa/evidence/phsa-2020-21-rows-p036.json.gzip",
+        "sha256": "428ab019d901e6222b910385f3b24324cbfc6d9c41d471896b4a442d60528e21"
+      },
+      "rawPageEvidence": {
+        "path": "research/salaries/queue-completion-phsa/evidence/phsa-2020-21-raw-p036.json.gzip",
+        "sha256": "69d11b409f7a374a3885efcd45ad403013dc9c7c5c5de4577c52196403072746"
+      }
+    },
+    {
+      "sequence": 3,
+      "sourceId": "phsa-2020-21",
+      "physicalPage": 40,
+      "sourceRowOnPage": 8,
+      "salaryPageThird": "early",
+      "selectionClass": "unreserved-confidence-only-paired-row",
+      "selectionRankSha256": "01254f190ae9f06b25b5150e6c00ace79247b5a0d12096a7aa58f32e6e8355de",
+      "reviewTargetFields": [
+        "name",
+        "remuneration"
+      ],
+      "sourceNativeFieldViews": [
+        {
+          "field": "name",
+          "path": "research/salaries/queue-completion-2026-11-01/phsa/holdouts/field-crops/phsa-2020-21-03-name.png",
+          "sha256": "d0cb92e82878f3d5f67e23c42599abf78b750db07621ddaa86b2257fce486df9",
+          "originalPdf300DpiPixelBox": [
+            280,
+            980,
+            1753,
+            1021
+          ],
+          "noResamplingOrGlyphAlteration": true
+        },
+        {
+          "field": "remuneration",
+          "path": "research/salaries/queue-completion-2026-11-01/phsa/holdouts/field-crops/phsa-2020-21-03-remuneration.png",
+          "sha256": "516300ec72bdf279be1437ab167df110e482df0b0b924d312a6e64e473bb1282",
+          "originalPdf300DpiPixelBox": [
+            1745,
+            980,
+            2083,
+            1021
+          ],
+          "noResamplingOrGlyphAlteration": true
+        }
+      ],
+      "actualSourceImagePath": "/tmp/queue-completion-phsa/phsa-2020-21/images/p040.png",
+      "actualSourceImageSha256": "057661d5c78d487c0a20e0214af06a94abb84573e81874a9a03a87a0de95919d",
+      "fullRowContextPath": "/tmp/queue-completion-phsa/holdout-context/phsa-2020-21-p040-r08.png",
+      "fullRowContextSha256": "ab2fe94013fb286dcdeba8b1637b5dd6fbd0b2f6df54f17b5e7f95bf1b953844",
+      "fullRowOriginalPixelBox": [
+        280,
+        980,
+        2422,
+        1021
+      ],
+      "pageEvidence": {
+        "path": "research/salaries/queue-completion-phsa/evidence/phsa-2020-21-rows-p040.json.gzip",
+        "sha256": "5eff56fdb03c7cf1da0e18eaf3405f5619c9d4c3aa806d8c17e4e3a7f6613c9e"
+      },
+      "rawPageEvidence": {
+        "path": "research/salaries/queue-completion-phsa/evidence/phsa-2020-21-raw-p040.json.gzip",
+        "sha256": "7d8c3c1af92da9005b3eb22c40968983c460620097fb8650bf19665795f97912"
+      }
+    },
+    {
+      "sequence": 4,
+      "sourceId": "phsa-2020-21",
+      "physicalPage": 78,
+      "sourceRowOnPage": 33,
+      "salaryPageThird": "middle",
+      "selectionClass": "unreserved-confidence-only-paired-row",
+      "selectionRankSha256": "000b26b7bc6510b46735dee887c47d7c45160b2990754b85adeedbe4ae5490c3",
+      "reviewTargetFields": [
+        "name",
+        "remuneration"
+      ],
+      "sourceNativeFieldViews": [
+        {
+          "field": "name",
+          "path": "research/salaries/queue-completion-2026-11-01/phsa/holdouts/field-crops/phsa-2020-21-04-name.png",
+          "sha256": "cf7aeaa257902bd471eeb7ce4ae774e522ea2090a136302aeab455e1937b6cfa",
+          "originalPdf300DpiPixelBox": [
+            280,
+            2055,
+            1753,
+            2096
+          ],
+          "noResamplingOrGlyphAlteration": true
+        },
+        {
+          "field": "remuneration",
+          "path": "research/salaries/queue-completion-2026-11-01/phsa/holdouts/field-crops/phsa-2020-21-04-remuneration.png",
+          "sha256": "bf3fcb8058e3e3cd25ade60607bd3f2529bad99771abc52fb1908f82ce56ab4e",
+          "originalPdf300DpiPixelBox": [
+            1745,
+            2055,
+            2083,
+            2096
+          ],
+          "noResamplingOrGlyphAlteration": true
+        }
+      ],
+      "actualSourceImagePath": "/tmp/queue-completion-phsa/phsa-2020-21/images/p078.png",
+      "actualSourceImageSha256": "fbe469fa531e519cbd764dcad15b09facbb8faee59a56759a6a8658096d0107d",
+      "fullRowContextPath": "/tmp/queue-completion-phsa/holdout-context/phsa-2020-21-p078-r33.png",
+      "fullRowContextSha256": "0a8559d2ed43a640e57e4f6993c10b2c05639ea295fa7e0182f59b9f05982538",
+      "fullRowOriginalPixelBox": [
+        280,
+        2055,
+        2422,
+        2096
+      ],
+      "pageEvidence": {
+        "path": "research/salaries/queue-completion-phsa/evidence/phsa-2020-21-rows-p078.json.gzip",
+        "sha256": "dd77012109533a36e65e715c7be5562b29f7a7c10134e8c45029dae2eb6a7ea7"
+      },
+      "rawPageEvidence": {
+        "path": "research/salaries/queue-completion-phsa/evidence/phsa-2020-21-raw-p078.json.gzip",
+        "sha256": "d1f2172ff0d927dd7b07a988d18ae8cb0ebe1398f518c89724f6a41c8404cee0"
+      }
+    },
+    {
+      "sequence": 5,
+      "sourceId": "phsa-2020-21",
+      "physicalPage": 93,
+      "sourceRowOnPage": 48,
+      "salaryPageThird": "middle",
+      "selectionClass": "unreserved-confidence-only-paired-row",
+      "selectionRankSha256": "0052d1f8c3b141b48c40e72e7425a32a8bf42d59723c399555e5a114951e2018",
+      "reviewTargetFields": [
+        "name",
+        "remuneration",
+        "expenses"
+      ],
+      "sourceNativeFieldViews": [
+        {
+          "field": "name",
+          "path": "research/salaries/queue-completion-2026-11-01/phsa/holdouts/field-crops/phsa-2020-21-05-name.png",
+          "sha256": "f033fe1fd24d6c5bb48007b74aee687c691b8a2702923bc839114aa2a4b957eb",
+          "originalPdf300DpiPixelBox": [
+            280,
+            2699,
+            1753,
+            2741
+          ],
+          "noResamplingOrGlyphAlteration": true
+        },
+        {
+          "field": "remuneration",
+          "path": "research/salaries/queue-completion-2026-11-01/phsa/holdouts/field-crops/phsa-2020-21-05-remuneration.png",
+          "sha256": "427497b55d58217813326bf81d34287cfec134d42cf2ed0a34a248b151544bdc",
+          "originalPdf300DpiPixelBox": [
+            1745,
+            2699,
+            2083,
+            2741
+          ],
+          "noResamplingOrGlyphAlteration": true
+        },
+        {
+          "field": "expenses",
+          "path": "research/salaries/queue-completion-2026-11-01/phsa/holdouts/field-crops/phsa-2020-21-05-expenses.png",
+          "sha256": "c87e66f8cad7dd75e9fd9793c37061501894aa20ba2f7364b3a9672ca8c5d8b2",
+          "originalPdf300DpiPixelBox": [
+            2067,
+            2699,
+            2422,
+            2741
+          ],
+          "noResamplingOrGlyphAlteration": true
+        }
+      ],
+      "actualSourceImagePath": "/tmp/queue-completion-phsa/phsa-2020-21/images/p093.png",
+      "actualSourceImageSha256": "bd1e3e835a683db07b469115f6088b8a1aaa061de79631dee918db1d9886f6bb",
+      "fullRowContextPath": "/tmp/queue-completion-phsa/holdout-context/phsa-2020-21-p093-r48.png",
+      "fullRowContextSha256": "02ad92a77a6ea2c5c5d14f4975a35f41bf6a2465bebea1ac34ff96f45cf06b01",
+      "fullRowOriginalPixelBox": [
+        280,
+        2699,
+        2422,
+        2741
+      ],
+      "pageEvidence": {
+        "path": "research/salaries/queue-completion-phsa/evidence/phsa-2020-21-rows-p093.json.gzip",
+        "sha256": "945b6887e462fa2da30f6dfb30d0d3ef75445d4e762344032a83193ba6dcb8ec"
+      },
+      "rawPageEvidence": {
+        "path": "research/salaries/queue-completion-phsa/evidence/phsa-2020-21-raw-p093.json.gzip",
+        "sha256": "6beabe90c3c9ebe5e31b0285dd8cedbec24ae417c8167a818319424d5377886d"
+      }
+    },
+    {
+      "sequence": 6,
+      "sourceId": "phsa-2020-21",
+      "physicalPage": 96,
+      "sourceRowOnPage": 13,
+      "salaryPageThird": "middle",
+      "selectionClass": "unreserved-confidence-only-paired-row",
+      "selectionRankSha256": "005eca5de599ac6b06dda9b097a75beb4f0c99f5bb3e2046894064f6bb061c75",
+      "reviewTargetFields": [
+        "name",
+        "remuneration",
+        "expenses"
+      ],
+      "sourceNativeFieldViews": [
+        {
+          "field": "name",
+          "path": "research/salaries/queue-completion-2026-11-01/phsa/holdouts/field-crops/phsa-2020-21-06-name.png",
+          "sha256": "ba3a105afaa64077c91a0b31be337632a56be82037d168c082057853a79fb2ae",
+          "originalPdf300DpiPixelBox": [
+            280,
+            1194,
+            1753,
+            1236
+          ],
+          "noResamplingOrGlyphAlteration": true
+        },
+        {
+          "field": "remuneration",
+          "path": "research/salaries/queue-completion-2026-11-01/phsa/holdouts/field-crops/phsa-2020-21-06-remuneration.png",
+          "sha256": "79b3aa8007a5db4398c159cb0c18192e2c3d9f7d0ed33f4ca3e736d877f0e37e",
+          "originalPdf300DpiPixelBox": [
+            1745,
+            1194,
+            2083,
+            1236
+          ],
+          "noResamplingOrGlyphAlteration": true
+        },
+        {
+          "field": "expenses",
+          "path": "research/salaries/queue-completion-2026-11-01/phsa/holdouts/field-crops/phsa-2020-21-06-expenses.png",
+          "sha256": "83fba81463cf776615572b402220c2829e348585702fcac395449d4b1090fc3b",
+          "originalPdf300DpiPixelBox": [
+            2067,
+            1194,
+            2422,
+            1236
+          ],
+          "noResamplingOrGlyphAlteration": true
+        }
+      ],
+      "actualSourceImagePath": "/tmp/queue-completion-phsa/phsa-2020-21/images/p096.png",
+      "actualSourceImageSha256": "2e4d4b7e55d2a9f2886a40299ff03e43c106c73f663230ba42d96f988d7c5064",
+      "fullRowContextPath": "/tmp/queue-completion-phsa/holdout-context/phsa-2020-21-p096-r13.png",
+      "fullRowContextSha256": "905f877dca8254748d5e5d7ee92f12ad3ee4450097daee864d86ca605b26d008",
+      "fullRowOriginalPixelBox": [
+        280,
+        1194,
+        2422,
+        1236
+      ],
+      "pageEvidence": {
+        "path": "research/salaries/queue-completion-phsa/evidence/phsa-2020-21-rows-p096.json.gzip",
+        "sha256": "52fadc24b0dfbe00dd0e21a901386a7b7575dc91a34ee310622fbd17bc9b9c9a"
+      },
+      "rawPageEvidence": {
+        "path": "research/salaries/queue-completion-phsa/evidence/phsa-2020-21-raw-p096.json.gzip",
+        "sha256": "e3a3878d9c26111a30cd79399ad3e5b9deda18b83a3a822b05040cf7a94eafa2"
+      }
+    },
+    {
+      "sequence": 7,
+      "sourceId": "phsa-2020-21",
+      "physicalPage": 92,
+      "sourceRowOnPage": 5,
+      "salaryPageThird": "middle",
+      "selectionClass": "unreserved-confidence-only-paired-row",
+      "selectionRankSha256": "007b618b755f870235d8326d4ad1540c6aac111a4700467cc2f06bb8425f4e92",
+      "reviewTargetFields": [
+        "name",
+        "remuneration",
+        "expenses"
+      ],
+      "sourceNativeFieldViews": [
+        {
+          "field": "name",
+          "path": "research/salaries/queue-completion-2026-11-01/phsa/holdouts/field-crops/phsa-2020-21-07-name.png",
+          "sha256": "bcb01a90d7d7f3579581d94ed5041e1a97c911a305ab6f00cce502d8d5a2cb42",
+          "originalPdf300DpiPixelBox": [
+            280,
+            850,
+            1753,
+            892
+          ],
+          "noResamplingOrGlyphAlteration": true
+        },
+        {
+          "field": "remuneration",
+          "path": "research/salaries/queue-completion-2026-11-01/phsa/holdouts/field-crops/phsa-2020-21-07-remuneration.png",
+          "sha256": "a755c75b67b5bf3c1969f5b56cde10a8390f77d9c385bd7e2bb9ac684d47f69c",
+          "originalPdf300DpiPixelBox": [
+            1745,
+            850,
+            2083,
+            892
+          ],
+          "noResamplingOrGlyphAlteration": true
+        },
+        {
+          "field": "expenses",
+          "path": "research/salaries/queue-completion-2026-11-01/phsa/holdouts/field-crops/phsa-2020-21-07-expenses.png",
+          "sha256": "9cf840b7b1bf27ed15e857dc76ac8d83c8c471be9d1846dc288d747d66bfd703",
+          "originalPdf300DpiPixelBox": [
+            2067,
+            850,
+            2422,
+            892
+          ],
+          "noResamplingOrGlyphAlteration": true
+        }
+      ],
+      "actualSourceImagePath": "/tmp/queue-completion-phsa/phsa-2020-21/images/p092.png",
+      "actualSourceImageSha256": "984d63b49df2ed51a1988c58e90286c41f299d1475d7415d5a2a0ae8520a4816",
+      "fullRowContextPath": "/tmp/queue-completion-phsa/holdout-context/phsa-2020-21-p092-r05.png",
+      "fullRowContextSha256": "b36de19951393539c96a0d29f664fe748d2ddaafa788fd8b82274d8d12bc418c",
+      "fullRowOriginalPixelBox": [
+        280,
+        850,
+        2422,
+        892
+      ],
+      "pageEvidence": {
+        "path": "research/salaries/queue-completion-phsa/evidence/phsa-2020-21-rows-p092.json.gzip",
+        "sha256": "ffe60066456a1ad6a89192ac2b3f1f472c00f305197b64d5876bd62a539fdfdc"
+      },
+      "rawPageEvidence": {
+        "path": "research/salaries/queue-completion-phsa/evidence/phsa-2020-21-raw-p092.json.gzip",
+        "sha256": "bf333c2b735190398b5f6e7818222920eab836928ebc530fce61804055f46edf"
+      }
+    },
+    {
+      "sequence": 8,
+      "sourceId": "phsa-2020-21",
+      "physicalPage": 103,
+      "sourceRowOnPage": 9,
+      "salaryPageThird": "late",
+      "selectionClass": "unreserved-confidence-only-paired-row",
+      "selectionRankSha256": "00215aacafd3dedff588d826cad3fba11cc86392f60d12c1cd935f286bd6371f",
+      "reviewTargetFields": [
+        "name",
+        "remuneration"
+      ],
+      "sourceNativeFieldViews": [
+        {
+          "field": "name",
+          "path": "research/salaries/queue-completion-2026-11-01/phsa/holdouts/field-crops/phsa-2020-21-08-name.png",
+          "sha256": "db91f043d65a02d6a91f803352235e5dd4b32dbfc943fe03dbb3c59792be8e3d",
+          "originalPdf300DpiPixelBox": [
+            280,
+            1019,
+            1753,
+            1061
+          ],
+          "noResamplingOrGlyphAlteration": true
+        },
+        {
+          "field": "remuneration",
+          "path": "research/salaries/queue-completion-2026-11-01/phsa/holdouts/field-crops/phsa-2020-21-08-remuneration.png",
+          "sha256": "ecd90f3b02dad547040a4bdc237e4dd61e6a210bc9cde05be7271defbd0a3c0c",
+          "originalPdf300DpiPixelBox": [
+            1745,
+            1019,
+            2083,
+            1061
+          ],
+          "noResamplingOrGlyphAlteration": true
+        }
+      ],
+      "actualSourceImagePath": "/tmp/queue-completion-phsa/phsa-2020-21/images/p103.png",
+      "actualSourceImageSha256": "73c7ede0a14099a0633054ff6a1bce8ca0ee5a45001be32b18e5f5eb66920ad3",
+      "fullRowContextPath": "/tmp/queue-completion-phsa/holdout-context/phsa-2020-21-p103-r09.png",
+      "fullRowContextSha256": "12684fbbc8333136b634fffcb61f7dfa7ab11a6e2d9e16ee8a6141d8bcf31ffb",
+      "fullRowOriginalPixelBox": [
+        280,
+        1019,
+        2422,
+        1061
+      ],
+      "pageEvidence": {
+        "path": "research/salaries/queue-completion-phsa/evidence/phsa-2020-21-rows-p103.json.gzip",
+        "sha256": "c61dd5a3351fc85c71bec3d62ca19764243f1741d36c65437127596f849e48b1"
+      },
+      "rawPageEvidence": {
+        "path": "research/salaries/queue-completion-phsa/evidence/phsa-2020-21-raw-p103.json.gzip",
+        "sha256": "c3bb4fb5c00a76e577abdf99ac1085b7e33bce68e7411fb07e9f8a03d29f65ea"
+      }
+    },
+    {
+      "sequence": 9,
+      "sourceId": "phsa-2020-21",
+      "physicalPage": 127,
+      "sourceRowOnPage": 43,
+      "salaryPageThird": "late",
+      "selectionClass": "unreserved-confidence-only-paired-row",
+      "selectionRankSha256": "00282d3cd7a06833cff4012e723c9aae72dacf75216ec8b3cfdc3c1ca093a835",
+      "reviewTargetFields": [
+        "name",
+        "remuneration"
+      ],
+      "sourceNativeFieldViews": [
+        {
+          "field": "name",
+          "path": "research/salaries/queue-completion-2026-11-01/phsa/holdouts/field-crops/phsa-2020-21-09-name.png",
+          "sha256": "8a009dfa3131db7295864acf98450bc4dd972109966b1088c091aeaaccc7dbcc",
+          "originalPdf300DpiPixelBox": [
+            280,
+            2499,
+            1753,
+            2540
+          ],
+          "noResamplingOrGlyphAlteration": true
+        },
+        {
+          "field": "remuneration",
+          "path": "research/salaries/queue-completion-2026-11-01/phsa/holdouts/field-crops/phsa-2020-21-09-remuneration.png",
+          "sha256": "7a5ee8887e35402d941e3c4b6a75e76051a8618959022ea0efcb31184237ee30",
+          "originalPdf300DpiPixelBox": [
+            1745,
+            2499,
+            2083,
+            2540
+          ],
+          "noResamplingOrGlyphAlteration": true
+        }
+      ],
+      "actualSourceImagePath": "/tmp/queue-completion-phsa/phsa-2020-21/images/p127.png",
+      "actualSourceImageSha256": "e8fc5a8236c71ed022d908e6d72d8b1ece26e7debcf9788f655bef4e23cf5d51",
+      "fullRowContextPath": "/tmp/queue-completion-phsa/holdout-context/phsa-2020-21-p127-r43.png",
+      "fullRowContextSha256": "2c5acef20a92de5d41704190acb54a07a131c7bc17fc8d087f98d5992d721123",
+      "fullRowOriginalPixelBox": [
+        280,
+        2499,
+        2422,
+        2540
+      ],
+      "pageEvidence": {
+        "path": "research/salaries/queue-completion-phsa/evidence/phsa-2020-21-rows-p127.json.gzip",
+        "sha256": "0e36dc8ebb0ec0b0a171bf6f082d54dd559d03e5119ebed0e585936f715a6cd5"
+      },
+      "rawPageEvidence": {
+        "path": "research/salaries/queue-completion-phsa/evidence/phsa-2020-21-raw-p127.json.gzip",
+        "sha256": "62cc1cd565a3107a44bab65398654862726b81812cc76f8013b3053ee9d1f301"
+      }
+    },
+    {
+      "sequence": 10,
+      "sourceId": "phsa-2020-21",
+      "physicalPage": 110,
+      "sourceRowOnPage": 16,
+      "salaryPageThird": "late",
+      "selectionClass": "unreserved-confidence-only-paired-row",
+      "selectionRankSha256": "0040b592dcc1f51961cbf4f607f6b57316efaebcc16c041556ec0a618d0b3dd6",
+      "reviewTargetFields": [
+        "name",
+        "remuneration"
+      ],
+      "sourceNativeFieldViews": [
+        {
+          "field": "name",
+          "path": "research/salaries/queue-completion-2026-11-01/phsa/holdouts/field-crops/phsa-2020-21-10-name.png",
+          "sha256": "0295f548ece4e46acf8fb117383014b79dad8b8daf298f5fa7efeea9e2e7114d",
+          "originalPdf300DpiPixelBox": [
+            280,
+            1320,
+            1753,
+            1361
+          ],
+          "noResamplingOrGlyphAlteration": true
+        },
+        {
+          "field": "remuneration",
+          "path": "research/salaries/queue-completion-2026-11-01/phsa/holdouts/field-crops/phsa-2020-21-10-remuneration.png",
+          "sha256": "fdb4a1812fbc98c12008359d48ac4e3d47436d940d4f637aa2bb4c2199e587eb",
+          "originalPdf300DpiPixelBox": [
+            1745,
+            1320,
+            2083,
+            1361
+          ],
+          "noResamplingOrGlyphAlteration": true
+        }
+      ],
+      "actualSourceImagePath": "/tmp/queue-completion-phsa/phsa-2020-21/images/p110.png",
+      "actualSourceImageSha256": "30c7effb72f469caedaee3a0033a7930b6e9a4632bed50274d46b00e87b3ca62",
+      "fullRowContextPath": "/tmp/queue-completion-phsa/holdout-context/phsa-2020-21-p110-r16.png",
+      "fullRowContextSha256": "cc42ee9f93e96375a3cf2fc18bb152418dd2a27255e4c6ba34697bb609fda75a",
+      "fullRowOriginalPixelBox": [
+        280,
+        1320,
+        2422,
+        1361
+      ],
+      "pageEvidence": {
+        "path": "research/salaries/queue-completion-phsa/evidence/phsa-2020-21-rows-p110.json.gzip",
+        "sha256": "2a339f712ff50289942844a0709559f1c3843f0091371ed69047f641764fa1ee"
+      },
+      "rawPageEvidence": {
+        "path": "research/salaries/queue-completion-phsa/evidence/phsa-2020-21-raw-p110.json.gzip",
+        "sha256": "a38c2eb79ae200936261de7d55a44652c9d8ea715a241622419546c734a018c7"
+      }
+    }
+  ],
+  "contactSheets": [
+    {
+      "field": "name",
+      "path": "research/salaries/queue-completion-2026-11-01/phsa/holdouts/sheets/phsa-2020-21-name.png",
+      "sha256": "9e8b0fdc34eb3857472d39c95e6cc4e1d27cbd1034c63351a217fba5e0597b2f"
+    },
+    {
+      "field": "remuneration",
+      "path": "research/salaries/queue-completion-2026-11-01/phsa/holdouts/sheets/phsa-2020-21-remuneration.png",
+      "sha256": "1152e66dad9777951e780f6f69abbdce45bfe964cc325e8e138bb64b72d541c8"
+    },
+    {
+      "field": "expenses",
+      "path": "research/salaries/queue-completion-2026-11-01/phsa/holdouts/sheets/phsa-2020-21-expenses.png",
+      "sha256": "2dcb5ca28a0bd227a583f2c6eff2607be6b42f11e58b433ce496447baf4956f6"
+    }
+  ],
+  "fullCandidate": {
+    "path": "research/salaries/queue-completion-2026-11-01/phsa/holdouts/phsa-2020-21-candidate.json",
+    "sha256": "fae14ab709d13b1c66a176d0e88b2d608cbab6d2f4fb2bcee25731b312895183"
+  },
+  "instructions": [
+    "Read every requested field directly from unchanged actual-PDF native-pixel views, before opening the full candidate file.",
+    "Freeze source-only literal transcript and SHA256 first; use full source PDF/context for uncertain glyphs.",
+    "This is the deterministic source-specific policy holdout. Any true requested-field mismatch halts/revises policy acceptance; do not silently correct the holdout result to agree with the machine.",
+    "Report exact source/page/row/field and literal source value. Dashes/zero/negative/type ambiguity were excluded from paired policy eligibility, not converted into positive amounts.",
+    "FY2015/16 already has all original flagged rows reserved, so its holdout uses otherwise unflagged rows passing the same guards; this approved limitation is recorded in the selection config."
+  ]
+}

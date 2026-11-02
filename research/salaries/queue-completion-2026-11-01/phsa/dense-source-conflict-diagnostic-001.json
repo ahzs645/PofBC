@@ -1,0 +1,398 @@
+{
+  "purpose": "Requested per-field/reason true-conflict inventory; classifications are diagnostic only and never suppress any punctuation or word-spacing disagreement.",
+  "countsExcludeCurrentReservedFields": true,
+  "sources": {
+    "phsa-2018-19": {
+      "manualRows": 2309,
+      "fields": {
+        "expenses": 430,
+        "name": 1857,
+        "remuneration": 306
+      },
+      "nameDisagreementKinds": {
+        "readers-agree-but-source-name-guard-requires-image": 64,
+        "punctuation-or-punctuation-plus-spacing-difference-still-requires-image": 1567,
+        "letter-or-case-difference": 121,
+        "word-spacing-difference-still-requires-literal-image-review": 105
+      },
+      "reasons": {
+        "expenses": {
+          "numeric-ocr-conflicts-with-original-dash-geometry": 337,
+          "independent-expense-disagreement-or-unproved-glyph": 93,
+          "tesseract-expense-confidence-below-90": 91,
+          "rapid-expense-confidence-below-0.98": 60
+        },
+        "name": {
+          "rapid-name-confidence-below-0.98": 827,
+          "source-name-separator-needs-image-review": 3050,
+          "independent-name-disagreement": 1793,
+          "tesseract-name-confidence-below-85": 1157,
+          "source-name-lowercase-word-initial-needs-image-review": 32,
+          "word-initial-capital-I-requires-source-case-check": 82,
+          "unexplained-or-nonstandard-name-symbol-requires-source-check": 38,
+          "source-given-name-word-spacing-needs-image-review": 6,
+          "mixed-I-l-or-Mc-prefix-case-requires-source-check": 13,
+          "source-name-pipe-or-digit-needs-image-review": 2
+        },
+        "remuneration": {
+          "independent-pay-disagreement-or-unparsed": 306,
+          "tesseract-pay-confidence-below-90": 268,
+          "rapid-pay-confidence-below-0.98": 239,
+          "source-pay-threshold-or-unparsed-needs-image-review": 302
+        }
+      }
+    },
+    "phsa-2019-20": {
+      "manualRows": 5748,
+      "fields": {
+        "expenses": 1306,
+        "name": 4928,
+        "remuneration": 2759
+      },
+      "nameDisagreementKinds": {
+        "punctuation-or-punctuation-plus-spacing-difference-still-requires-image": 2551,
+        "letter-or-case-difference": 1764,
+        "word-spacing-difference-still-requires-literal-image-review": 244,
+        "readers-agree-but-source-name-guard-requires-image": 364,
+        "missing-or-ambiguous-independent-name-row": 5
+      },
+      "reasons": {
+        "expenses": {
+          "independent-expense-disagreement-or-unproved-glyph": 1301,
+          "tesseract-expense-confidence-below-90": 1216,
+          "rapid-expense-confidence-below-0.98": 755,
+          "tesseract-missing-or-ambiguous-source-row": 2,
+          "rapid-missing-or-ambiguous-source-row": 3
+        },
+        "name": {
+          "independent-name-disagreement": 4559,
+          "tesseract-name-confidence-below-85": 4571,
+          "source-name-separator-needs-image-review": 7600,
+          "rapid-name-confidence-below-0.98": 3245,
+          "source-name-pipe-or-digit-needs-image-review": 46,
+          "unexplained-or-nonstandard-name-symbol-requires-source-check": 129,
+          "source-name-lowercase-word-initial-needs-image-review": 116,
+          "word-initial-capital-I-requires-source-case-check": 92,
+          "tesseract-missing-or-ambiguous-source-row": 2,
+          "source-given-name-word-spacing-needs-image-review": 4,
+          "mixed-I-l-or-Mc-prefix-case-requires-source-check": 2,
+          "rapid-missing-or-ambiguous-source-row": 3
+        },
+        "remuneration": {
+          "independent-pay-disagreement-or-unparsed": 2754,
+          "tesseract-pay-confidence-below-90": 2562,
+          "rapid-pay-confidence-below-0.98": 1854,
+          "source-pay-threshold-or-unparsed-needs-image-review": 1982,
+          "tesseract-missing-or-ambiguous-source-row": 2,
+          "rapid-missing-or-ambiguous-source-row": 3
+        }
+      }
+    }
+  },
+  "existingNameColumnTrial": {
+    "sourceId": "phsa-2019-20",
+    "trial": "PREEXISTING uniform preinstalled-Tesseract300dpi name-column-only trial; no new OCR or per-row reader choice",
+    "rawTrialPath": "/tmp/queue-completion-phsa/phsa-2019-20/fast-column-300.json",
+    "rawTrialSha256": "c47dcb9a6daa72a5db5fc4b19b0b8ba5fcfd407aed6cdcc797fd6e348099d8e0",
+    "fixturePath": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-history-batches-benchmark-2019-20-original-transcript.tsv",
+    "fixtureSha256": "bfb34bf52adc28eadc39efcf9511e63c4c98f3753ed768e7584f46b8ec5e5845",
+    "rows": 58,
+    "nonemptyRows": 54,
+    "exactCanonicalNameMatchesAfterIndependentPayRowAlignment": 18,
+    "defaultFullPageNameMatches": 24,
+    "originalNaiveLineIndexColumnMatches": 6,
+    "sourceRowGeometry": "Actual original remuneration-ink row bounds, fixed for every source row; no Paddle output used to select a Tesseract variant.",
+    "perRowMatchOnlyNoCandidateNames": [
+      {
+        "sourceRowOnPage": 1,
+        "matched": false,
+        "nonempty": true
+      },
+      {
+        "sourceRowOnPage": 2,
+        "matched": false,
+        "nonempty": true
+      },
+      {
+        "sourceRowOnPage": 3,
+        "matched": false,
+        "nonempty": true
+      },
+      {
+        "sourceRowOnPage": 4,
+        "matched": false,
+        "nonempty": true
+      },
+      {
+        "sourceRowOnPage": 5,
+        "matched": false,
+        "nonempty": true
+      },
+      {
+        "sourceRowOnPage": 6,
+        "matched": true,
+        "nonempty": true
+      },
+      {
+        "sourceRowOnPage": 7,
+        "matched": false,
+        "nonempty": true
+      },
+      {
+        "sourceRowOnPage": 8,
+        "matched": false,
+        "nonempty": true
+      },
+      {
+        "sourceRowOnPage": 9,
+        "matched": true,
+        "nonempty": true
+      },
+      {
+        "sourceRowOnPage": 10,
+        "matched": true,
+        "nonempty": true
+      },
+      {
+        "sourceRowOnPage": 11,
+        "matched": false,
+        "nonempty": true
+      },
+      {
+        "sourceRowOnPage": 12,
+        "matched": false,
+        "nonempty": true
+      },
+      {
+        "sourceRowOnPage": 13,
+        "matched": true,
+        "nonempty": true
+      },
+      {
+        "sourceRowOnPage": 14,
+        "matched": true,
+        "nonempty": true
+      },
+      {
+        "sourceRowOnPage": 15,
+        "matched": true,
+        "nonempty": true
+      },
+      {
+        "sourceRowOnPage": 16,
+        "matched": false,
+        "nonempty": true
+      },
+      {
+        "sourceRowOnPage": 17,
+        "matched": false,
+        "nonempty": true
+      },
+      {
+        "sourceRowOnPage": 18,
+        "matched": false,
+        "nonempty": false
+      },
+      {
+        "sourceRowOnPage": 19,
+        "matched": true,
+        "nonempty": true
+      },
+      {
+        "sourceRowOnPage": 20,
+        "matched": false,
+        "nonempty": true
+      },
+      {
+        "sourceRowOnPage": 21,
+        "matched": true,
+        "nonempty": true
+      },
+      {
+        "sourceRowOnPage": 22,
+        "matched": false,
+        "nonempty": true
+      },
+      {
+        "sourceRowOnPage": 23,
+        "matched": false,
+        "nonempty": true
+      },
+      {
+        "sourceRowOnPage": 24,
+        "matched": true,
+        "nonempty": true
+      },
+      {
+        "sourceRowOnPage": 25,
+        "matched": true,
+        "nonempty": true
+      },
+      {
+        "sourceRowOnPage": 26,
+        "matched": true,
+        "nonempty": true
+      },
+      {
+        "sourceRowOnPage": 27,
+        "matched": true,
+        "nonempty": true
+      },
+      {
+        "sourceRowOnPage": 28,
+        "matched": false,
+        "nonempty": true
+      },
+      {
+        "sourceRowOnPage": 29,
+        "matched": false,
+        "nonempty": true
+      },
+      {
+        "sourceRowOnPage": 30,
+        "matched": false,
+        "nonempty": true
+      },
+      {
+        "sourceRowOnPage": 31,
+        "matched": false,
+        "nonempty": true
+      },
+      {
+        "sourceRowOnPage": 32,
+        "matched": true,
+        "nonempty": true
+      },
+      {
+        "sourceRowOnPage": 33,
+        "matched": true,
+        "nonempty": true
+      },
+      {
+        "sourceRowOnPage": 34,
+        "matched": false,
+        "nonempty": true
+      },
+      {
+        "sourceRowOnPage": 35,
+        "matched": true,
+        "nonempty": true
+      },
+      {
+        "sourceRowOnPage": 36,
+        "matched": false,
+        "nonempty": true
+      },
+      {
+        "sourceRowOnPage": 37,
+        "matched": false,
+        "nonempty": true
+      },
+      {
+        "sourceRowOnPage": 38,
+        "matched": false,
+        "nonempty": true
+      },
+      {
+        "sourceRowOnPage": 39,
+        "matched": false,
+        "nonempty": true
+      },
+      {
+        "sourceRowOnPage": 40,
+        "matched": false,
+        "nonempty": true
+      },
+      {
+        "sourceRowOnPage": 41,
+        "matched": false,
+        "nonempty": true
+      },
+      {
+        "sourceRowOnPage": 42,
+        "matched": false,
+        "nonempty": true
+      },
+      {
+        "sourceRowOnPage": 43,
+        "matched": true,
+        "nonempty": true
+      },
+      {
+        "sourceRowOnPage": 44,
+        "matched": false,
+        "nonempty": true
+      },
+      {
+        "sourceRowOnPage": 45,
+        "matched": true,
+        "nonempty": true
+      },
+      {
+        "sourceRowOnPage": 46,
+        "matched": false,
+        "nonempty": false
+      },
+      {
+        "sourceRowOnPage": 47,
+        "matched": true,
+        "nonempty": true
+      },
+      {
+        "sourceRowOnPage": 48,
+        "matched": false,
+        "nonempty": true
+      },
+      {
+        "sourceRowOnPage": 49,
+        "matched": false,
+        "nonempty": false
+      },
+      {
+        "sourceRowOnPage": 50,
+        "matched": false,
+        "nonempty": true
+      },
+      {
+        "sourceRowOnPage": 51,
+        "matched": false,
+        "nonempty": true
+      },
+      {
+        "sourceRowOnPage": 52,
+        "matched": false,
+        "nonempty": true
+      },
+      {
+        "sourceRowOnPage": 53,
+        "matched": false,
+        "nonempty": true
+      },
+      {
+        "sourceRowOnPage": 54,
+        "matched": false,
+        "nonempty": true
+      },
+      {
+        "sourceRowOnPage": 55,
+        "matched": false,
+        "nonempty": true
+      },
+      {
+        "sourceRowOnPage": 56,
+        "matched": false,
+        "nonempty": false
+      },
+      {
+        "sourceRowOnPage": 57,
+        "matched": false,
+        "nonempty": true
+      },
+      {
+        "sourceRowOnPage": 58,
+        "matched": false,
+        "nonempty": true
+      }
+    ]
+  }
+}

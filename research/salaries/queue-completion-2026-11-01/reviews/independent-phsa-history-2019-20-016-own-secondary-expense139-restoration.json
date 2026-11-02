@@ -1,0 +1,48 @@
+{
+  "frozen": true,
+  "reviewedOn": "2026-11-02",
+  "reviewer": "/root/held_health_review",
+  "sourceId": "phsa-2019-20",
+  "sourceSha256": "0e31ac2054f0c2d4ef78797185dddd96cc0cdf2eab94bd6841fa24e1c38e7d02",
+  "batch": "phsa-2019-20-016",
+  "priorFrozenCurrent": {
+    "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-history-2019-20-016-all282-money-own-whole600-reread.json",
+    "sha256": "9114d281feb8f4f0b20095bec6e98cec50679362c1f1b2d7f1525ae58d6a2049"
+  },
+  "sequence": 139,
+  "physicalPage": 114,
+  "sourceRowOnPage": 50,
+  "field": "expenses",
+  "cropSha256": "f876c9602581a4f9da340dbbd9926d79bb6753977db74d0799d678f99c2efc30",
+  "coldFirstLiteral": 8838,
+  "ownIncorrectSecondaryWhole600Reading": 8888,
+  "correctedCurrentLiteral": 8838,
+  "uncertainty": null,
+  "nativeOriginal300SourceView": {
+    "field": "expenses",
+    "path": "/tmp/queue-completion-phsa/phsa-2019-20/review-images/phsa-2019-20-016-target-views/0139-expenses.png",
+    "sha256": "ee1077f877efa0186cfb100b80b75846ad54ff3489eb6f210eeb2614f373166e",
+    "originalPdf300DpiPixelBox": [
+      2052,
+      2679,
+      2422,
+      2718
+    ],
+    "noResamplingOrGlyphAlteration": true
+  },
+  "actualWholePage600SourceView": {
+    "path": "/workspace/salary-review-held-health-temp/2019-016-allmoney-source600/0139-expenses-wholepage600-crop.png",
+    "sha256": "ce1e6b868ba40b9c7d297919bb81a3d289d99e7e4bf20d676e228af730e51c40",
+    "dpi": 600,
+    "actualPdfWholePageRenderer": "PyMuPDF get_pixmap(dpi=600,alpha=False), then exactinteger pixel crop",
+    "actual600PixelCropBox": [
+      4104,
+      5350,
+      4844,
+      5444
+    ],
+    "noResamplingEnhancementOrRetypedGlyphs": true
+  },
+  "basis": "After fresh education99 discrepancy, personally reopened unchanged native300 and actualwholePDF600 source crop. Literal third digit3 has open left facing arches, unlike complete loop8. Literal8,838 restores correct frozen coldfirst; ownsecondary8,888 was reviewer error, source unchanged.",
+  "limits": "Oneexpensefieldonly; oldraw/current282/scoped99bytes immutable. No moneyqualification, sourcecontrol balancing or broaderfieldclaim. Rootfreshthird source reading inprogress; do not claim it before its freeze."
+}

@@ -1,0 +1,286 @@
+{
+  "reviewer": "/root/held_health_review",
+  "independentCompleteOriginalGeometryReceipt": {
+    "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-history-staged-row-geometry-complete-final.json",
+    "sha256": "1da94b6497df0e8f103f81a5e4da6f8bba49da49672ea3207526a023b6f53e8d"
+  },
+  "sixActualSourcePageExceptions": [
+    {
+      "sourceId": "phsa-2019-20",
+      "sourceSha256": "0e31ac2054f0c2d4ef78797185dddd96cc0cdf2eab94bd6841fa24e1c38e7d02",
+      "physicalPage": 61,
+      "pageEvidence": {
+        "path": "research/salaries/queue-completion-phsa/evidence/phsa-2019-20-rows-p061.json.gzip",
+        "sha256": "bd1635a6fe90a0e54c7cee474c37c6e2a291b6236f6251691da676abdbd9e240"
+      },
+      "sourceImageSha256": "49633a188c392b6ed1bed8088563023198c0cb9ad6befb48b998345f2a122aa9",
+      "actualOriginalRasterAndStagedRowCountsEqual": true,
+      "actualSourceRows": 58,
+      "readerMatchAccounting": {
+        "tesseract": {
+          "parsedNamedRows": 57,
+          "sourceRowsWithExactlyOneReaderMatch": 57,
+          "sourceRowsWithoutReaderMatch": 1,
+          "sourceRowsWithMultipleReaderMatches": 0,
+          "totalReaderMatchesWithinOriginalRowBands": 57
+        },
+        "rapidocr": {
+          "parsedNamedRows": 58,
+          "sourceRowsWithExactlyOneReaderMatch": 58,
+          "sourceRowsWithoutReaderMatch": 0,
+          "sourceRowsWithMultipleReaderMatches": 0,
+          "totalReaderMatchesWithinOriginalRowBands": 58
+        }
+      },
+      "actualRowsWithMissingOrAmbiguousReader": [
+        {
+          "sourceRowOnPage": 41,
+          "reader": "tesseract",
+          "readerMatchCount": 0,
+          "originalRequestedFields": [
+            "name",
+            "remuneration",
+            "expenses"
+          ],
+          "explicitExpenseDashGeometry": true
+        }
+      ],
+      "dateAndOriginalGeometryGatesPass": true,
+      "originalReaderCountWarningsRetained": [
+        "tesseract-name-count-differs-from-source-ink-bands"
+      ]
+    },
+    {
+      "sourceId": "phsa-2019-20",
+      "sourceSha256": "0e31ac2054f0c2d4ef78797185dddd96cc0cdf2eab94bd6841fa24e1c38e7d02",
+      "physicalPage": 74,
+      "pageEvidence": {
+        "path": "research/salaries/queue-completion-phsa/evidence/phsa-2019-20-rows-p074.json.gzip",
+        "sha256": "7f05470a3b4467d102dee5166d451adbb372aefe8854d93b4ddd0f6da608964f"
+      },
+      "sourceImageSha256": "1f7f43abfe1358639951b9ae014f96ca69c66f58db9ac3b04dad81558912e901",
+      "actualOriginalRasterAndStagedRowCountsEqual": true,
+      "actualSourceRows": 58,
+      "readerMatchAccounting": {
+        "tesseract": {
+          "parsedNamedRows": 57,
+          "sourceRowsWithExactlyOneReaderMatch": 57,
+          "sourceRowsWithoutReaderMatch": 1,
+          "sourceRowsWithMultipleReaderMatches": 0,
+          "totalReaderMatchesWithinOriginalRowBands": 57
+        },
+        "rapidocr": {
+          "parsedNamedRows": 58,
+          "sourceRowsWithExactlyOneReaderMatch": 58,
+          "sourceRowsWithoutReaderMatch": 0,
+          "sourceRowsWithMultipleReaderMatches": 0,
+          "totalReaderMatchesWithinOriginalRowBands": 58
+        }
+      },
+      "actualRowsWithMissingOrAmbiguousReader": [
+        {
+          "sourceRowOnPage": 13,
+          "reader": "tesseract",
+          "readerMatchCount": 0,
+          "originalRequestedFields": [
+            "name",
+            "remuneration",
+            "expenses"
+          ],
+          "explicitExpenseDashGeometry": false
+        }
+      ],
+      "dateAndOriginalGeometryGatesPass": true,
+      "originalReaderCountWarningsRetained": [
+        "tesseract-name-count-differs-from-source-ink-bands"
+      ]
+    },
+    {
+      "sourceId": "phsa-2019-20",
+      "sourceSha256": "0e31ac2054f0c2d4ef78797185dddd96cc0cdf2eab94bd6841fa24e1c38e7d02",
+      "physicalPage": 81,
+      "pageEvidence": {
+        "path": "research/salaries/queue-completion-phsa/evidence/phsa-2019-20-rows-p081.json.gzip",
+        "sha256": "4c05d22e7856a7364c602de5a024821be6fb3305f09d9db9edad5542dee199c6"
+      },
+      "sourceImageSha256": "cdc8337c76da71676a2f11760cfcffe583bcb475fd6282ad6ddf32d02b3b7643",
+      "actualOriginalRasterAndStagedRowCountsEqual": true,
+      "actualSourceRows": 58,
+      "readerMatchAccounting": {
+        "tesseract": {
+          "parsedNamedRows": 58,
+          "sourceRowsWithExactlyOneReaderMatch": 58,
+          "sourceRowsWithoutReaderMatch": 0,
+          "sourceRowsWithMultipleReaderMatches": 0,
+          "totalReaderMatchesWithinOriginalRowBands": 58
+        },
+        "rapidocr": {
+          "parsedNamedRows": 57,
+          "sourceRowsWithExactlyOneReaderMatch": 57,
+          "sourceRowsWithoutReaderMatch": 1,
+          "sourceRowsWithMultipleReaderMatches": 0,
+          "totalReaderMatchesWithinOriginalRowBands": 57
+        }
+      },
+      "actualRowsWithMissingOrAmbiguousReader": [
+        {
+          "sourceRowOnPage": 35,
+          "reader": "rapidocr",
+          "readerMatchCount": 0,
+          "originalRequestedFields": [
+            "name",
+            "remuneration",
+            "expenses"
+          ],
+          "explicitExpenseDashGeometry": false
+        }
+      ],
+      "dateAndOriginalGeometryGatesPass": true,
+      "originalReaderCountWarningsRetained": [
+        "rapid-name-count-differs-from-source-ink-bands"
+      ]
+    },
+    {
+      "sourceId": "phsa-2019-20",
+      "sourceSha256": "0e31ac2054f0c2d4ef78797185dddd96cc0cdf2eab94bd6841fa24e1c38e7d02",
+      "physicalPage": 118,
+      "pageEvidence": {
+        "path": "research/salaries/queue-completion-phsa/evidence/phsa-2019-20-rows-p118.json.gzip",
+        "sha256": "9f249481f2c8b1b0fe127ca4958eec4227c3d091f268eb32a42b11dfe102bcfe"
+      },
+      "sourceImageSha256": "0e8255fcaaa4df2f53d8c04b95ad87888d383687093f580bc6c477e77be9c96d",
+      "actualOriginalRasterAndStagedRowCountsEqual": true,
+      "actualSourceRows": 58,
+      "readerMatchAccounting": {
+        "tesseract": {
+          "parsedNamedRows": 58,
+          "sourceRowsWithExactlyOneReaderMatch": 58,
+          "sourceRowsWithoutReaderMatch": 0,
+          "sourceRowsWithMultipleReaderMatches": 0,
+          "totalReaderMatchesWithinOriginalRowBands": 58
+        },
+        "rapidocr": {
+          "parsedNamedRows": 57,
+          "sourceRowsWithExactlyOneReaderMatch": 57,
+          "sourceRowsWithoutReaderMatch": 1,
+          "sourceRowsWithMultipleReaderMatches": 0,
+          "totalReaderMatchesWithinOriginalRowBands": 57
+        }
+      },
+      "actualRowsWithMissingOrAmbiguousReader": [
+        {
+          "sourceRowOnPage": 41,
+          "reader": "rapidocr",
+          "readerMatchCount": 0,
+          "originalRequestedFields": [
+            "name",
+            "remuneration",
+            "expenses"
+          ],
+          "explicitExpenseDashGeometry": false
+        }
+      ],
+      "dateAndOriginalGeometryGatesPass": true,
+      "originalReaderCountWarningsRetained": [
+        "rapid-name-count-differs-from-source-ink-bands"
+      ]
+    },
+    {
+      "sourceId": "phsa-2019-20",
+      "sourceSha256": "0e31ac2054f0c2d4ef78797185dddd96cc0cdf2eab94bd6841fa24e1c38e7d02",
+      "physicalPage": 119,
+      "pageEvidence": {
+        "path": "research/salaries/queue-completion-phsa/evidence/phsa-2019-20-rows-p119.json.gzip",
+        "sha256": "9ef88167121c05b3ca4380be9b23918f22b38d6401462d06a919c2ffaf7f0669"
+      },
+      "sourceImageSha256": "273668d63e3bea44a11aeea487b9ea39bd2272ec76f386295836bcdbc27ef746",
+      "actualOriginalRasterAndStagedRowCountsEqual": true,
+      "actualSourceRows": 58,
+      "readerMatchAccounting": {
+        "tesseract": {
+          "parsedNamedRows": 58,
+          "sourceRowsWithExactlyOneReaderMatch": 58,
+          "sourceRowsWithoutReaderMatch": 0,
+          "sourceRowsWithMultipleReaderMatches": 0,
+          "totalReaderMatchesWithinOriginalRowBands": 58
+        },
+        "rapidocr": {
+          "parsedNamedRows": 57,
+          "sourceRowsWithExactlyOneReaderMatch": 57,
+          "sourceRowsWithoutReaderMatch": 1,
+          "sourceRowsWithMultipleReaderMatches": 0,
+          "totalReaderMatchesWithinOriginalRowBands": 57
+        }
+      },
+      "actualRowsWithMissingOrAmbiguousReader": [
+        {
+          "sourceRowOnPage": 42,
+          "reader": "rapidocr",
+          "readerMatchCount": 0,
+          "originalRequestedFields": [
+            "name",
+            "remuneration",
+            "expenses"
+          ],
+          "explicitExpenseDashGeometry": true
+        }
+      ],
+      "dateAndOriginalGeometryGatesPass": true,
+      "originalReaderCountWarningsRetained": [
+        "rapid-name-count-differs-from-source-ink-bands"
+      ]
+    },
+    {
+      "sourceId": "phsa-2022-23",
+      "sourceSha256": "6046bb7be6944bc729926adba20a826486820a2a3b9b38090c60d400b2bc72a1",
+      "physicalPage": 91,
+      "pageEvidence": {
+        "path": "research/salaries/queue-completion-phsa/evidence/phsa-2022-23-rows-p091.json.gzip",
+        "sha256": "cd6ff0420335e2bd73834098936483da34706fddfc92c66cfeea5732a6770e43"
+      },
+      "sourceImageSha256": "0ac24cbbd87398435c3989f7d1d68f96ccd048e39a3f0058d09af11dfa154882",
+      "actualOriginalRasterAndStagedRowCountsEqual": true,
+      "actualSourceRows": 42,
+      "readerMatchAccounting": {
+        "tesseract": {
+          "parsedNamedRows": 42,
+          "sourceRowsWithExactlyOneReaderMatch": 42,
+          "sourceRowsWithoutReaderMatch": 0,
+          "sourceRowsWithMultipleReaderMatches": 0,
+          "totalReaderMatchesWithinOriginalRowBands": 42
+        },
+        "rapidocr": {
+          "parsedNamedRows": 41,
+          "sourceRowsWithExactlyOneReaderMatch": 41,
+          "sourceRowsWithoutReaderMatch": 1,
+          "sourceRowsWithMultipleReaderMatches": 0,
+          "totalReaderMatchesWithinOriginalRowBands": 41
+        }
+      },
+      "actualRowsWithMissingOrAmbiguousReader": [
+        {
+          "sourceRowOnPage": 21,
+          "reader": "rapidocr",
+          "readerMatchCount": 0,
+          "originalRequestedFields": [
+            "name",
+            "remuneration",
+            "expenses"
+          ],
+          "explicitExpenseDashGeometry": true
+        }
+      ],
+      "dateAndOriginalGeometryGatesPass": true,
+      "originalReaderCountWarningsRetained": [
+        "rapid-name-count-differs-from-source-ink-bands"
+      ]
+    }
+  ],
+  "allMissingOrAmbiguousReaderRowsRetainOriginalManualNameAndPayTargets": true,
+  "limits": [
+    "This metadata-only audit emits no candidate names or monetary values and does not resolve semantic fields.",
+    "Independent original ink geometry covers every actual named/pay row; reader counts need not equal actual rows when OCR misses or invents fragments.",
+    "Every missing/ambiguous real reader row retains explicit original manual name/pay flags; final source closure must prove those exact target fields have independent source-image resolutions.",
+    "A source-explicit expense dash still requires its separately validated original-pixel route; reader absence alone never determines null/zero."
+  ]
+}

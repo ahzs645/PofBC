@@ -1,0 +1,60 @@
+{
+  "frozen": true,
+  "reviewedOn": "2026-11-01",
+  "reviewer": "/root",
+  "originalFrozenManifest": {
+    "path": "research/salaries/queue-completion-acquisition/sources.json",
+    "sha256": "4b06e21e635220ab88ae0346ced441f515be3c4a8635c8d0651ce2874b25b570"
+  },
+  "releasedManifest": {
+    "path": "research/salaries/queue-completion-acquisition-release/sources.json",
+    "sha256": "61f7b2f5c04b2c63fe28a647e419d482ec24ef51831c5f8f54b88c0ca5ccff44"
+  },
+  "replacementManifest": {
+    "path": "research/salaries/queue-completion-replacements/sources.json",
+    "sha256": "3013319d5dc25ee84bf8fb0d3f49d4ca307b039d67aa9602a859b5b19b81f6dc"
+  },
+  "compiledComparison": {
+    "path": "research/salaries/queue-completion-2026-11-01/integration/compiled-comparison.json",
+    "sha256": "379b60c0db4d709158f131b2d52195c52d71c4cd5c2213e705b0ab3f02095418"
+  },
+  "independentReplacementPeer": {
+    "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-queue-compiled-replacement-review.json",
+    "sha256": "1adbad00cefa3a2a927a476d2d7064b785b51d7cd0771822fff79876a8d1b6a8"
+  },
+  "unchangedData": {
+    "research/salaries/queue-completion-acquisition/providence-2023-24-employees.json.gzip": "b9f4367622d685d0fbc5a6fc468ec87bde18191b5c5df9ba95ed9161de19ebe0",
+    "research/salaries/queue-completion-acquisition/providence-2023-24-board-numeric-pay.json.gzip": "b62155c1cefb484610320842b511fac496a837eb889d1b739c22f6db1479827c",
+    "research/salaries/queue-completion-acquisition/vch-2020-21-employees.json.gzip": "483bd77198c4380dfd6f679a34dbad933b28a300a1a30b61b1c629cc9293e1ce",
+    "research/salaries/queue-completion-acquisition/vch-2020-21-board-numeric-pay.json.gzip": "935e90a9c69b0f2e9f74fcd98588abf5faf2543efbb98f6483f02cca1dbd41fa"
+  },
+  "sourceMetadataChanges": [
+    {
+      "sourceId": "queue-completion-providence-2023-24-employees",
+      "field": "publicWarning",
+      "before": "Official Legislative Library archival download with an added catalogue cover at physical page 1; PDF-page references identify this downloaded copy. This official fiscal-year scope coexists with retained compiled observations; equivalent periods or matching identities are not assumed.",
+      "after": "Official Legislative Library archival download with an added catalogue cover at physical page 1; PDF-page references identify this downloaded copy. A complete comparison replaced the 3,289-row compiled employee copy with the official employee schedule. This does not establish identities across different periods or turn unknown source expenses into zero."
+    },
+    {
+      "sourceId": "queue-completion-providence-2023-24-employees",
+      "field": "validation.compiledPartitionRetentionReason",
+      "before": "Complete same-period official-versus-compiled multiset review remains separate; retain the existing compiled partition without removing observations.",
+      "after": "Retain any compiled observations outside an exact separately reviewed replacement. The complete 3,289-row employee copy is selected only by the separately source- and data-hash-pinned root comparison."
+    },
+    {
+      "sourceId": "queue-completion-providence-2023-24-board-numeric-pay",
+      "field": "publicWarning",
+      "before": "Official Legislative Library archival download with an added catalogue cover at physical page 1; PDF-page references identify this downloaded copy. Only the 10 of 15 Board observations with numeric remuneration enter salary data. Five remuneration-dash observations remain nonnumeric in supporting research. The full Board expense control is $6,566; these 10 numeric-pay observations have $5,455 known expenses, and the excluded five have $1,111 known expenses. This is a scope difference. This official fiscal-year scope coexists with retained compiled observations; equivalent periods or matching identities are not assumed.",
+      "after": "Official Legislative Library archival download with an added catalogue cover at physical page 1; PDF-page references identify this downloaded copy. Only the 10 of 15 Board observations with numeric remuneration enter salary data. Five remuneration-dash observations remain nonnumeric in supporting research. The full Board expense control is $6,566; these 10 numeric-pay observations have $5,455 known expenses, and the excluded five have $1,111 known expenses. This is a scope difference. A complete comparison replaced the 3,289-row compiled employee copy with the official employee schedule. This does not establish identities across different periods or turn unknown source expenses into zero."
+    },
+    {
+      "sourceId": "queue-completion-providence-2023-24-board-numeric-pay",
+      "field": "validation.compiledPartitionRetentionReason",
+      "before": "Board-only scope does not replace a complete employee partition; retain the existing compiled partition without removing observations.",
+      "after": "Retain any compiled observations outside an exact separately reviewed replacement. The complete 3,289-row employee copy is selected only by the separately source- and data-hash-pinned root comparison. This Board scope removes no additional observations."
+    }
+  ],
+  "dataCopying": "All four active payloads are byte-identical copies of the frozen worker payloads within the release collection. The builder source-path boundary guard remains unchanged. Only the released collection is registered; source IDs and observations are not duplicated.",
+  "decision": "Adopt the complete independently proved Providence employee-copy replacement. Correct the two public retention descriptions and their default-retention explanations so they do not falsely claim the removed employee copy still coexists. Preserve every original worker handoff byte, all source/data hashes, payment amounts, names, scope, periods, definitions, evidence, and all VCH partial-overlap qualifications.",
+  "requiresWholeFrozenWorkerAndSeparateRootReleaseFreeze": true
+}

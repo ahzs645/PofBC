@@ -1,0 +1,67 @@
+{
+  "frozen": true,
+  "asOf": "2026-11-01",
+  "baselineCommit": "8a30db0af112875abddac793b144af75f11d7339",
+  "baselinePublicSha256": "6d562bee00a8a2ca73f3f54f80e3b9dbd9a27627d96ffc83f2c6e8b5fab839cc",
+  "baselineSnapshotSha256": "410bcae27c9755e387c473ab44d62081a50b46e7330f4d6d5c0b74979d392760",
+  "policy": "Only whole-cohort multiset proof authorizes deletion. Unicode letters/digits and exact cents are mandatory. Case, punctuation and whitespace changes are comparison-only. A source null may compare to a compiled zero, but the published official expense remains null. No alias, initial expansion, dictionary correction, rounding, cross-employer identity or partial-overlap deletion.",
+  "comparisons": [
+    {
+      "officialRows": 3289,
+      "compiledRows": 3289,
+      "matchedRows": 3289,
+      "officialOnly": 0,
+      "compiledOnly": 0,
+      "completeMultisetMatch": true,
+      "compiledTitledRows": 0,
+      "sourceId": "queue-completion-providence-2023-24-employees",
+      "sourceSha256": "521472f784463bf42626b9c74aeb72252167346b65b8a123031ca59e46ecb5f3",
+      "sourceDataSha256": "b9f4367622d685d0fbc5a6fc468ec87bde18191b5c5df9ba95ed9161de19ebe0",
+      "compiledYear": "2023/24",
+      "officialYear": "2023/24",
+      "decision": "replace-complete-compiled-employee-copy",
+      "sourceDashReplacingCompiledZero": 588,
+      "pairedEvidenceFile": "research/salaries/queue-completion-2026-11-01/integration/providence-complete-compiled-pairing.json.gzip",
+      "pairedEvidenceSha256": "769ac85c0b712954c1d8f87ebf042f59b762009750839613a16b217bcfd040a4",
+      "selectedRowsSha256": "30818d02354445ba5d6cef95d80ddcbe644904ecfbe5f53d8027e3ff2939d55b"
+    },
+    {
+      "officialRows": 7740,
+      "compiledRows": 7742,
+      "matchedRows": 7734,
+      "officialOnly": 6,
+      "compiledOnly": 8,
+      "completeMultisetMatch": false,
+      "compiledTitledRows": 8,
+      "sourceId": "queue-completion-vch-2020-21-employees",
+      "sourceSha256": "8d2d85205f0c4de6557e39cd8ee21ac2a38c90aa70611f1ca5bfb7c9f030d7ad",
+      "sourceDataSha256": "483bd77198c4380dfd6f679a34dbad933b28a300a1a30b61b1c629cc9293e1ce",
+      "compiledYear": "2020/21",
+      "officialYear": "2020/21",
+      "decision": "retain-entire-partial-overlap"
+    }
+  ],
+  "compiledReplacements": [
+    {
+      "employerSlug": "providence-health-care",
+      "compiledYear": "2023/24",
+      "replacementYear": "2023/24",
+      "sourceIds": [
+        "queue-completion-providence-2023-24-employees"
+      ],
+      "sourceSha256": {
+        "queue-completion-providence-2023-24-employees": "521472f784463bf42626b9c74aeb72252167346b65b8a123031ca59e46ecb5f3"
+      },
+      "sourceDataSha256": {
+        "queue-completion-providence-2023-24-employees": "b9f4367622d685d0fbc5a6fc468ec87bde18191b5c5df9ba95ed9161de19ebe0"
+      },
+      "expectedRows": 3289,
+      "expectedRetainedRows": 0,
+      "selectedRowsSha256": "30818d02354445ba5d6cef95d80ddcbe644904ecfbe5f53d8027e3ff2939d55b",
+      "retainPositions": [],
+      "kind": "duplicate-compiled-copy",
+      "reason": "The complete3289-row compiled employee cohort matches the complete internally dated2023/24 official employee schedule on all name letters/digits, exact remuneration and every known expense, preserving multiplicity. Case/punctuation/whitespace are comparison-only;588source expense dashes replace compiled zeros as unknown, never as source zeros. No job title, board or elected observation is selected.",
+      "evidence": "research/salaries/queue-completion-2026-11-01/integration/compiled-comparison.json"
+    }
+  ]
+}

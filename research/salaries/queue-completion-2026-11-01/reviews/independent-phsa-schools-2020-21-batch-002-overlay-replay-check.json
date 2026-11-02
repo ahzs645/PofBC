@@ -1,0 +1,34 @@
+{
+  "sourceId": "phsa-2020-21",
+  "batch": "phsa-2020-21-002",
+  "reviewer": "/root/recovery_schools",
+  "finalAuthorReview": {
+    "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-schools-2020-21-batch-002-resolutions.json",
+    "sha256": "ce3af89ca792d22257a574d4180f4c08192a824851e4b11823b103e908df4376"
+  },
+  "rootExactSixCaseAdoption": {
+    "path": "research/salaries/queue-completion-2026-11-01/reviews/root-phsa-history-2020-21-batch-002-segmentation-adoption.json",
+    "sha256": "fe0e7f063e26596d96bc44fea8d5deddc95806f81bc4122645bdb71a8c8edbd5"
+  },
+  "overlay": {
+    "path": "research/salaries/queue-completion-2026-11-01/phsa/overlays/phsa-2020-21-manual-overlay-002.json",
+    "sha256": "ad8f71eb246e09f8c676744813277266629289523c1f01380f8d8ff8a5695a13"
+  },
+  "consumer": {
+    "path": "scripts/finish_salary_phsa_resolutions.py",
+    "sha256": "4be5f638cba264b5ac650b8535a2ba15b2ab3214557383b83a434aca015f1407"
+  },
+  "emitExitCode": 0,
+  "checkExitCode": 0,
+  "resolvedRows": 400,
+  "ordinaryExactRows": 394,
+  "qualifiedSourceNameRows": 6,
+  "requestedFields": 454,
+  "all14FrozenAuthorFilesHashUnchangedAfterReplay": true,
+  "authorFreeze": {
+    "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-schools-2020-21-batch-002-freeze.json",
+    "sha256": "b72d5e90b0e58cb6654f6e4682d84b71a47ba6bf74426e28ab49c53093bd2841"
+  },
+  "sourcePublicWarningAndFiniteAlternativesRequired": true,
+  "acceptedEmployeeRows": 0
+}

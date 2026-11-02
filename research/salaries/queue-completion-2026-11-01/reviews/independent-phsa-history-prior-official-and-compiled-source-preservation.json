@@ -1,0 +1,134 @@
+{
+  "reviewer": "/root/held_health_review",
+  "baselineCommit": "8a30db0af112875abddac793b144af75f11d7339",
+  "exactTrackedOriginalFileChecks": [
+    {
+      "path": "research/salaries/baseline-manifest.json",
+      "sha256": "57d5444065bc037147368c4e6642b5f880dc10c784d7b390168a01145822a49b",
+      "bytes": 1187,
+      "exactBaselineBlobEquality": true
+    },
+    {
+      "path": "research/salaries/bccss/sources.json",
+      "sha256": "1d58375fa894292a3d721d0a96ce77b25370db235c20126747bd46fed73a263a",
+      "bytes": 3358,
+      "exactBaselineBlobEquality": true
+    },
+    {
+      "path": "research/salaries/compiled-baseline.json.gzip",
+      "sha256": "410bcae27c9755e387c473ab44d62081a50b46e7330f4d6d5c0b74979d392760",
+      "bytes": 5526065,
+      "exactBaselineBlobEquality": true
+    },
+    {
+      "path": "research/salaries/continuation-health/phsa-board-2024-25.json.gzip",
+      "sha256": "924d7dbf9a525ee28fb48fd5256df9513c7213f7fe33bf65abb2edf409e5d99f",
+      "bytes": 502,
+      "exactBaselineBlobEquality": true
+    },
+    {
+      "path": "research/salaries/continuation-health/phsa-board-2025-26.json.gzip",
+      "sha256": "14bb4edcd3cfcfa1ae85c4f54db845d1ea1e168c9a5eec62c0402b808a82509d",
+      "bytes": 448,
+      "exactBaselineBlobEquality": true
+    },
+    {
+      "path": "research/salaries/continuation-health/sources.json",
+      "sha256": "f912d0eb3bc8ee765b8f93b55c311b132b57cdb7f5a38b4e840f68d453798152",
+      "bytes": 68797,
+      "exactBaselineBlobEquality": true
+    },
+    {
+      "path": "research/salaries/held-resolution-health/phsa-2024-25-employees.json.gzip",
+      "sha256": "bc7db053d30ce206ecce66b02b87dae30fb431858c4b4bf438908282eb8168a8",
+      "bytes": 205843,
+      "exactBaselineBlobEquality": true
+    },
+    {
+      "path": "research/salaries/held-resolution-health/sources.json",
+      "sha256": "52fc22377fe336acfc78ebf5d7a5c52e84fbf93f3d325b2e377941e49c7b5d93",
+      "bytes": 27614,
+      "exactBaselineBlobEquality": true
+    }
+  ],
+  "priorAcceptedPhsaSources": [
+    {
+      "id": "phsa-board-2025-26",
+      "year": "2025/26",
+      "rowCount": 14,
+      "collection": "continuation-health"
+    },
+    {
+      "id": "phsa-board-2024-25",
+      "year": "2024/25",
+      "rowCount": 13,
+      "collection": "continuation-health"
+    },
+    {
+      "id": "held-resolution-phsa-2024-25-employees",
+      "year": "2024/25",
+      "rowCount": 13906,
+      "collection": "held-resolution-health"
+    }
+  ],
+  "compiledSnapshotManifestAndAllOriginalSnapshotBytesUnchanged": true,
+  "originalPhsaPublishedGroupFingerprints": [
+    {
+      "employerSlug": "provincial-health-services-authority",
+      "year": "2017/18",
+      "sourceId": "pssdb-2026-10-22",
+      "sourceKind": "compiled",
+      "rows": 5072,
+      "rowMultisetSha256": "d39651a61214b69eebc354c4f1ac3101bd9ccbc5a7f0e308a90ae03bfe7cb891"
+    },
+    {
+      "employerSlug": "provincial-health-services-authority",
+      "year": "2020/21",
+      "sourceId": "pssdb-2026-10-22",
+      "sourceKind": "compiled",
+      "rows": 7943,
+      "rowMultisetSha256": "d2d4b82295aa4f02e13eafd7c12b47a9be240d84c85b0c0c996c481718d94e6a"
+    },
+    {
+      "employerSlug": "provincial-health-services-authority",
+      "year": "2023/24",
+      "sourceId": "pssdb-2026-10-22",
+      "sourceKind": "compiled",
+      "rows": 11908,
+      "rowMultisetSha256": "c3149327aa1737c7f98c6d8173c590d127893b8e5ff0ddcc7eb6a4d0996322d9"
+    },
+    {
+      "employerSlug": "provincial-health-services-authority",
+      "year": "2024/25",
+      "sourceId": "held-resolution-phsa-2024-25-employees",
+      "sourceKind": "official",
+      "rows": 13906,
+      "rowMultisetSha256": "4b9dbf6d6a6a530bd2b7e159d1a7e047e00fd1acdc7d0d91f406a5b272ecccbf"
+    },
+    {
+      "employerSlug": "provincial-health-services-authority",
+      "year": "2024/25",
+      "sourceId": "phsa-board-2024-25",
+      "sourceKind": "official",
+      "rows": 13,
+      "rowMultisetSha256": "02f798da45dab7925d45f95f30b81c92f6864c8847718bcdd489d84232d01773"
+    },
+    {
+      "employerSlug": "provincial-health-services-authority",
+      "year": "2025/26",
+      "sourceId": "phsa-board-2025-26",
+      "sourceKind": "official",
+      "rows": 14,
+      "rowMultisetSha256": "d35759c5f679baa64ec3f016af5a317ae1e3597df412f86e9f2fe8cb59cc841f"
+    }
+  ],
+  "baselineFingerprintsPin": {
+    "path": "research/salaries/queue-completion-2026-11-01/baseline-row-fingerprints.json",
+    "sha256": "719d1a95287e8c56ac8a67770366f7f583a604e7f76d39b29a14598d478996dc"
+  },
+  "limits": [
+    "This checks old normalized PHSA official data/metadata and the complete original compiled snapshot bytes against exact baseline Git blobs.",
+    "Final integrated generated row multisets and source registry must still be reconciled after the full nine-cohort import; source candidates must retain compiled partitions.",
+    "New source rows are not merged into old files by this review."
+  ]
+}

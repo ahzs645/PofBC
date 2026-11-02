@@ -1,0 +1,714 @@
+{
+  "frozenOn": "2026-11-01",
+  "collection": "queue-completion-schools",
+  "scope": "22 complete published named scopes across11 additional official district employers; all observation periods explicitly2024/25.",
+  "sourceManifest": {
+    "file": "research/salaries/queue-completion-schools/sources.json",
+    "sha256": "b86fb29e39e7639d167853c1f393a5d15fd2b9a858f807c2e8547b36dc43c7be"
+  },
+  "newRows": 15138,
+  "newEmployeeRows": 15051,
+  "newTrusteeRows": 87,
+  "nullExpenseRows": 2290,
+  "explicitZeroExpenseRows": 6675,
+  "allCompiledPartitionsRetained": true,
+  "compiledReplacementOrCalendarRelabellingAuthorized": false,
+  "priorAccepted398SchoolObservationsUnchanged": true,
+  "sourceScopes": [
+    {
+      "id": "queue-completion-schools-sd27-2025-trustees",
+      "rows": 8,
+      "sourceSha256": "bb4215a005b063956cbb5cca9d6da73379dad5d470e6a0346f3eebcfe3a9fe61",
+      "file": "sd27-2025-trustees.json.gzip",
+      "dataSha256": "221e419ec5156d989ae584fe76cdeb7265322ae4a7262294e8b9a3b31ea1b441",
+      "normalizedSha256": "2fac92c34931aac57dcd6098d1fc7f417127079273d37c20b1ab2ff0108cd4cf",
+      "provenanceFile": "sd27-2025-trustees-evidence.json.gzip",
+      "provenanceSha256": "90b764592fd9d359f812fa1b587d3b53544477f0f3723d4a63c4e30de298b16f",
+      "computedTotals": [
+        "147241",
+        "95529"
+      ],
+      "printedControls": [
+        "147241",
+        "95531"
+      ],
+      "residuals": [
+        "0",
+        "-2"
+      ],
+      "independentPeerReview": {
+        "file": "research/salaries/queue-completion-2026-11-01/reviews/independent-school-queue-native-comparison.json",
+        "sha256": "b28f1cbf3f3265f152b371060a09c75a537050dba267998b51b31d08f9f91ce4"
+      }
+    },
+    {
+      "id": "queue-completion-schools-sd27-2025-employees",
+      "rows": 289,
+      "sourceSha256": "bb4215a005b063956cbb5cca9d6da73379dad5d470e6a0346f3eebcfe3a9fe61",
+      "file": "sd27-2025-employees.json.gzip",
+      "dataSha256": "619d25b9d522409c9cd9c71663fdd58899f75a96f9f117d72d3c255e6f79be9a",
+      "normalizedSha256": "db5687035d455c68174b11a5b9b423a7ed7be218a44f0e400228f34f187dace9",
+      "provenanceFile": "sd27-2025-employees-evidence.json.gzip",
+      "provenanceSha256": "ab552eeb7b7daf1a6202710741695d5938a1101ff1897977a11f9658472fb637",
+      "computedTotals": [
+        "30206219",
+        "422635"
+      ],
+      "printedControls": [
+        "30206208",
+        "422630"
+      ],
+      "residuals": [
+        "11",
+        "5"
+      ],
+      "independentPeerReview": {
+        "file": "research/salaries/queue-completion-2026-11-01/reviews/independent-school-queue-native-comparison.json",
+        "sha256": "b28f1cbf3f3265f152b371060a09c75a537050dba267998b51b31d08f9f91ce4"
+      }
+    },
+    {
+      "id": "queue-completion-schools-sd22-2025-trustees",
+      "rows": 7,
+      "sourceSha256": "4657c26f966659bc5bf0de5a6e65818538f588dcbc154d7b23748b7cfe5415a6",
+      "file": "sd22-2025-trustees.json.gzip",
+      "dataSha256": "e2776bec0d86d9adfc91300be4ab5ae6f553695840b1b092b1ff40c3ffe3fb74",
+      "normalizedSha256": "567a6e5143904b5c2e260a1cfa04a887bf7ea787d534008736892623f3ff500c",
+      "provenanceFile": "sd22-2025-trustees-evidence.json.gzip",
+      "provenanceSha256": "c5b7b38f1f57661bd8174094fa2f17b6b1fe24d4e07101b680c19d901c86a17d",
+      "computedTotals": [
+        "151441",
+        "40508"
+      ],
+      "printedControls": [
+        null,
+        null
+      ],
+      "residuals": [
+        null,
+        null
+      ],
+      "independentPeerReview": {
+        "file": "research/salaries/queue-completion-2026-11-01/reviews/independent-school-queue-native-comparison.json",
+        "sha256": "b28f1cbf3f3265f152b371060a09c75a537050dba267998b51b31d08f9f91ce4"
+      }
+    },
+    {
+      "id": "queue-completion-schools-sd22-2025-employees",
+      "rows": 607,
+      "sourceSha256": "4657c26f966659bc5bf0de5a6e65818538f588dcbc154d7b23748b7cfe5415a6",
+      "file": "sd22-2025-employees.json.gzip",
+      "dataSha256": "701de4b61ae22d8033888fdb4f0b43bdd804c37bf4510bbc75563c842a4c7978",
+      "normalizedSha256": "67e054be580e9e1457cade486b3a4ee36feeda9258e6e9498d760f29410b51a3",
+      "provenanceFile": "sd22-2025-employees-evidence.json.gzip",
+      "provenanceSha256": "62e103dd9a5dea39374af8843c34f6524de941ff130035c4ee5e58c2c02b5f7a",
+      "computedTotals": [
+        "64157041",
+        "442707"
+      ],
+      "printedControls": [
+        null,
+        null
+      ],
+      "residuals": [
+        null,
+        null
+      ],
+      "independentPeerReview": {
+        "file": "research/salaries/queue-completion-2026-11-01/reviews/independent-school-queue-native-comparison.json",
+        "sha256": "b28f1cbf3f3265f152b371060a09c75a537050dba267998b51b31d08f9f91ce4"
+      }
+    },
+    {
+      "id": "queue-completion-schools-sd44-2025-trustees",
+      "rows": 7,
+      "sourceSha256": "24312eed671fe2077c259aa534451dfd881cef89d14bac02eadc801f07a08b42",
+      "file": "sd44-2025-trustees.json.gzip",
+      "dataSha256": "9b382c830215d2e2243e53923ef8c347c18237a70927416265c4247288fbe4e0",
+      "normalizedSha256": "270221cf9751967de0e60303b336c2d273ec0f94817d2e9568ceb1094407f262",
+      "provenanceFile": "sd44-2025-trustees-evidence.json.gzip",
+      "provenanceSha256": "b94699b3c06a647f98ed90e900b646fc24eec36e130e8cae84126448001e1e8e",
+      "computedTotals": [
+        "219939",
+        "11063"
+      ],
+      "printedControls": [
+        "219939",
+        "11062"
+      ],
+      "residuals": [
+        "0",
+        "1"
+      ],
+      "independentPeerReview": {
+        "file": "research/salaries/queue-completion-2026-11-01/reviews/independent-school-queue-native-comparison.json",
+        "sha256": "b28f1cbf3f3265f152b371060a09c75a537050dba267998b51b31d08f9f91ce4"
+      }
+    },
+    {
+      "id": "queue-completion-schools-sd44-2025-employees",
+      "rows": 1010,
+      "sourceSha256": "24312eed671fe2077c259aa534451dfd881cef89d14bac02eadc801f07a08b42",
+      "file": "sd44-2025-employees.json.gzip",
+      "dataSha256": "ed2a0b870518650f6eb294db2ab0a2c096630bb19fd92fe8715220f85d5af721",
+      "normalizedSha256": "2940ff3a686dfbf620c93f258cf4c42fc9bee04811d7fda87e731e7fbf83513b",
+      "provenanceFile": "sd44-2025-employees-evidence.json.gzip",
+      "provenanceSha256": "f490b056868dbf826315b9ad640f04c93a5c6963a89fdd6115b38985f397cf99",
+      "computedTotals": [
+        "107244306",
+        "1046925"
+      ],
+      "printedControls": [
+        "107244313",
+        "1046933"
+      ],
+      "residuals": [
+        "-7",
+        "-8"
+      ],
+      "independentPeerReview": {
+        "file": "research/salaries/queue-completion-2026-11-01/reviews/independent-school-queue-native-comparison.json",
+        "sha256": "b28f1cbf3f3265f152b371060a09c75a537050dba267998b51b31d08f9f91ce4"
+      }
+    },
+    {
+      "id": "queue-completion-schools-sd23-2025-trustees",
+      "rows": 7,
+      "sourceSha256": "d758ecad8b34d2ba29793b5db995d1bac4d1b592265732f56222ee79fe8e592b",
+      "file": "sd23-2025-trustees.json.gzip",
+      "dataSha256": "e9a2ae81bfa1a3a008895104cf321037ead357648ee845b7038b4b2b2a8de0c7",
+      "normalizedSha256": "b8f3642b42937c53220f04efdb72c4746b69d3df53e0cdd059aaf093cc4659c8",
+      "provenanceFile": "sd23-2025-trustees-evidence.json.gzip",
+      "provenanceSha256": "90e83b8738278e3689f52d8cba7306afe1f765cbc20b42b5c40575191c9389f0",
+      "computedTotals": [
+        "179392",
+        "118845"
+      ],
+      "printedControls": [
+        "179392",
+        "118845"
+      ],
+      "residuals": [
+        "0",
+        "0"
+      ],
+      "independentPeerReview": {
+        "file": "research/salaries/queue-completion-2026-11-01/reviews/independent-school-extension-acquisition-final-row-comparison.json",
+        "sha256": "ee818a4838770d13c23cfd3d2e24842c48eeee3395c3bb837645acba9c893a7b",
+        "originalContextReview": {
+          "file": "research/salaries/queue-completion-2026-11-01/reviews/independent-school-extension-acquisition-control-period-visual-review.json",
+          "sha256": "605300a61dfb759a11e51e363acdfa132144a5a800a0115468fe5c890b509787"
+        }
+      }
+    },
+    {
+      "id": "queue-completion-schools-sd23-2025-employees",
+      "rows": 1626,
+      "sourceSha256": "d758ecad8b34d2ba29793b5db995d1bac4d1b592265732f56222ee79fe8e592b",
+      "file": "sd23-2025-employees.json.gzip",
+      "dataSha256": "1279da985d0bcc44888182ef96866b1e87133007e177e69007b3e35f0cc19681",
+      "normalizedSha256": "1cb8ab6aeb4b30b63be790be032d371fbcd2a0af6ec821e3d0c9f760a7d36ad1",
+      "provenanceFile": "sd23-2025-employees-evidence.json.gzip",
+      "provenanceSha256": "2cfe2baf31b06894abed3a02d7761a45a13c7474755e93025907da4f0c668332",
+      "computedTotals": [
+        "168883510",
+        "1277207"
+      ],
+      "printedControls": [
+        "168883439",
+        null
+      ],
+      "residuals": [
+        "71",
+        null
+      ],
+      "independentPeerReview": {
+        "file": "research/salaries/queue-completion-2026-11-01/reviews/independent-school-extension-acquisition-final-row-comparison.json",
+        "sha256": "ee818a4838770d13c23cfd3d2e24842c48eeee3395c3bb837645acba9c893a7b",
+        "originalContextReview": {
+          "file": "research/salaries/queue-completion-2026-11-01/reviews/independent-school-extension-acquisition-control-period-visual-review.json",
+          "sha256": "605300a61dfb759a11e51e363acdfa132144a5a800a0115468fe5c890b509787"
+        }
+      }
+    },
+    {
+      "id": "queue-completion-schools-sd33-2025-trustees",
+      "rows": 8,
+      "sourceSha256": "54081f46322e58e7f9a3a77f51105e65e705a0bffc63812bab135390f5b3a485",
+      "file": "sd33-2025-trustees.json.gzip",
+      "dataSha256": "99c237349b8941b0293eb7d16a7204bde3c48f5d0b68c25f6c0102960ef1e402",
+      "normalizedSha256": "6dd6a38cdeaf0551594d7fccaf324888713b6532f2707cebf1d22f6594be2ffb",
+      "provenanceFile": "sd33-2025-trustees-evidence.json.gzip",
+      "provenanceSha256": "a65e1c50c4f385823a267fe5b94d5b220fe9c3cb33bbd60ba67fece836e739a0",
+      "computedTotals": [
+        "176445.89",
+        "15454.54"
+      ],
+      "printedControls": [
+        "176445.89",
+        "15454.54"
+      ],
+      "residuals": [
+        "0.00",
+        "0.00"
+      ],
+      "independentPeerReview": {
+        "file": "research/salaries/queue-completion-2026-11-01/reviews/independent-school-extension-acquisition-final-row-comparison.json",
+        "sha256": "ee818a4838770d13c23cfd3d2e24842c48eeee3395c3bb837645acba9c893a7b",
+        "originalContextReview": {
+          "file": "research/salaries/queue-completion-2026-11-01/reviews/independent-school-extension-acquisition-control-period-visual-review.json",
+          "sha256": "605300a61dfb759a11e51e363acdfa132144a5a800a0115468fe5c890b509787"
+        }
+      }
+    },
+    {
+      "id": "queue-completion-schools-sd33-2025-employees",
+      "rows": 1010,
+      "sourceSha256": "54081f46322e58e7f9a3a77f51105e65e705a0bffc63812bab135390f5b3a485",
+      "file": "sd33-2025-employees.json.gzip",
+      "dataSha256": "4a7bc1fac0122d2e601e9dd626a6dd45d19f2b5c476c705f1fb7ae07d955e175",
+      "normalizedSha256": "fb5c38fe57588366b3e3abad45549240df8ca34991e2237b63aff9a193c7b391",
+      "provenanceFile": "sd33-2025-employees-evidence.json.gzip",
+      "provenanceSha256": "1eda66354975de76c1782089d6062b660853701060a56b454e8924d691bba398",
+      "computedTotals": [
+        "105111247",
+        "1185398"
+      ],
+      "printedControls": [
+        "105111247",
+        "1185404"
+      ],
+      "residuals": [
+        "0",
+        "-6"
+      ],
+      "independentPeerReview": {
+        "file": "research/salaries/queue-completion-2026-11-01/reviews/independent-school-extension-acquisition-final-row-comparison.json",
+        "sha256": "ee818a4838770d13c23cfd3d2e24842c48eeee3395c3bb837645acba9c893a7b",
+        "originalContextReview": {
+          "file": "research/salaries/queue-completion-2026-11-01/reviews/independent-school-extension-acquisition-control-period-visual-review.json",
+          "sha256": "605300a61dfb759a11e51e363acdfa132144a5a800a0115468fe5c890b509787"
+        }
+      }
+    },
+    {
+      "id": "queue-completion-schools-sd36-2025-trustees",
+      "rows": 7,
+      "sourceSha256": "54a0085e389890c6b5f4d4bce9336cf05fad3c73c9469105d7bdb7bcdf43785f",
+      "file": "sd36-2025-trustees.json.gzip",
+      "dataSha256": "bbc17a11b5b7335a7603fe3860c8876dbf6a352e7ee9950cbf5e7e6b441f9aa5",
+      "normalizedSha256": "8cdc8a7b616e35df99d3af49ccfd7ef5bac6a8ccb7d503742c2ffb986f0840ac",
+      "provenanceFile": "sd36-2025-trustees-evidence.json.gzip",
+      "provenanceSha256": "e42abab5317b0f0c46e400299bfd74ef8beb4e903906fae92fb15984a7e7d21a",
+      "computedTotals": [
+        "402462",
+        "36914"
+      ],
+      "printedControls": [
+        "402462",
+        "36914"
+      ],
+      "residuals": [
+        "0",
+        "0"
+      ],
+      "independentPeerReview": {
+        "file": "research/salaries/queue-completion-2026-11-01/reviews/independent-school-extension-acquisition-final-row-comparison.json",
+        "sha256": "ee818a4838770d13c23cfd3d2e24842c48eeee3395c3bb837645acba9c893a7b",
+        "originalContextReview": {
+          "file": "research/salaries/queue-completion-2026-11-01/reviews/independent-school-extension-acquisition-control-period-visual-review.json",
+          "sha256": "605300a61dfb759a11e51e363acdfa132144a5a800a0115468fe5c890b509787"
+        }
+      }
+    },
+    {
+      "id": "queue-completion-schools-sd36-2025-employees",
+      "rows": 4823,
+      "sourceSha256": "54a0085e389890c6b5f4d4bce9336cf05fad3c73c9469105d7bdb7bcdf43785f",
+      "file": "sd36-2025-employees.json.gzip",
+      "dataSha256": "419dff5bf4eaf82bff9633b7e61cd8615a1b97378b04b37c820d2e3d3019336b",
+      "normalizedSha256": "c8a09ebee610d7671447910069ab57011025d9cd7ba9406c37ab906a358712dc",
+      "provenanceFile": "sd36-2025-employees-evidence.json.gzip",
+      "provenanceSha256": "e1710221134341b8c02ad925acd64384021f00d84a6b5cba61ba7557ae9c663e",
+      "computedTotals": [
+        "507041341",
+        "1451515"
+      ],
+      "printedControls": [
+        "507041297",
+        "1451506"
+      ],
+      "residuals": [
+        "44",
+        "9"
+      ],
+      "independentPeerReview": {
+        "file": "research/salaries/queue-completion-2026-11-01/reviews/independent-school-extension-acquisition-final-row-comparison.json",
+        "sha256": "ee818a4838770d13c23cfd3d2e24842c48eeee3395c3bb837645acba9c893a7b",
+        "originalContextReview": {
+          "file": "research/salaries/queue-completion-2026-11-01/reviews/independent-school-extension-acquisition-control-period-visual-review.json",
+          "sha256": "605300a61dfb759a11e51e363acdfa132144a5a800a0115468fe5c890b509787"
+        }
+      }
+    },
+    {
+      "id": "queue-completion-schools-sd43-2025-trustees",
+      "rows": 10,
+      "sourceSha256": "72150984c5e74fcc89fcf9cdee311d25e18cf49862db608f28337b98471b45ad",
+      "file": "sd43-2025-trustees.json.gzip",
+      "dataSha256": "b8cc42cb5a974bb9986c1b4eb0d644b1d2efd921c735975eb8aeac7c7f257399",
+      "normalizedSha256": "92a71d64f16dcdff3f1b711e58bdeac3ab88c403319f679193a7a195c6d384cc",
+      "provenanceFile": "sd43-2025-trustees-evidence.json.gzip",
+      "provenanceSha256": "962b121cf356e19e215fedf5fad995227055680f2030307f638c557b423675d0",
+      "computedTotals": [
+        "530585.19",
+        "36490.61"
+      ],
+      "printedControls": [
+        "530585.19",
+        "36490.61"
+      ],
+      "residuals": [
+        "0.00",
+        "0.00"
+      ],
+      "independentPeerReview": {
+        "file": "research/salaries/queue-completion-2026-11-01/reviews/independent-school-extension-acquisition-final-row-comparison.json",
+        "sha256": "ee818a4838770d13c23cfd3d2e24842c48eeee3395c3bb837645acba9c893a7b",
+        "originalContextReview": {
+          "file": "research/salaries/queue-completion-2026-11-01/reviews/independent-school-extension-acquisition-control-period-visual-review.json",
+          "sha256": "605300a61dfb759a11e51e363acdfa132144a5a800a0115468fe5c890b509787"
+        }
+      }
+    },
+    {
+      "id": "queue-completion-schools-sd43-2025-employees",
+      "rows": 2193,
+      "sourceSha256": "72150984c5e74fcc89fcf9cdee311d25e18cf49862db608f28337b98471b45ad",
+      "file": "sd43-2025-employees.json.gzip",
+      "dataSha256": "641abbe86d8349b35f7d16be5747a4b79f3f68eb4851bbf21d9f2d11cceccbdd",
+      "normalizedSha256": "990bbce3263d5addcc181eed86685645210caec182e7dd5962df10c7036d5afe",
+      "provenanceFile": "sd43-2025-employees-evidence.json.gzip",
+      "provenanceSha256": "cb9673e9c478632e5daa940313152aa04888c412ac1e2f73d5793b25c3e63279",
+      "computedTotals": [
+        "235489243.16",
+        "775448.89"
+      ],
+      "printedControls": [
+        "235489243.16",
+        "775448.89"
+      ],
+      "residuals": [
+        "0.00",
+        "0.00"
+      ],
+      "independentPeerReview": {
+        "file": "research/salaries/queue-completion-2026-11-01/reviews/independent-school-extension-acquisition-final-row-comparison.json",
+        "sha256": "ee818a4838770d13c23cfd3d2e24842c48eeee3395c3bb837645acba9c893a7b",
+        "originalContextReview": {
+          "file": "research/salaries/queue-completion-2026-11-01/reviews/independent-school-extension-acquisition-control-period-visual-review.json",
+          "sha256": "605300a61dfb759a11e51e363acdfa132144a5a800a0115468fe5c890b509787"
+        }
+      }
+    },
+    {
+      "id": "queue-completion-schools-sd61-2025-trustees",
+      "rows": 10,
+      "sourceSha256": "d8d3437d612c52705a5b898b13755544ab4eefd023d9eeb06b1d7a054751a260",
+      "file": "sd61-2025-trustees.json.gzip",
+      "dataSha256": "58929f734c7a5fe759c678e405e320b884b2a0126ed0aa12949d49c7c6df34d9",
+      "normalizedSha256": "cf0474194390520925880b1a5877e9211b4a3b1f54c659eeaa04ff61356844f3",
+      "provenanceFile": "sd61-2025-trustees-evidence.json.gzip",
+      "provenanceSha256": "e0d57b9a769d46bf497903c581a969443d884ded86a0a9372a6b9c5d147a8070",
+      "computedTotals": [
+        "244144.59",
+        "6251.31"
+      ],
+      "printedControls": [
+        "244144.59",
+        "6251.31"
+      ],
+      "residuals": [
+        "0.00",
+        "0.00"
+      ],
+      "independentPeerReview": {
+        "file": "research/salaries/queue-completion-2026-11-01/reviews/independent-school-extension-acquisition-final-row-comparison.json",
+        "sha256": "ee818a4838770d13c23cfd3d2e24842c48eeee3395c3bb837645acba9c893a7b",
+        "originalContextReview": {
+          "file": "research/salaries/queue-completion-2026-11-01/reviews/independent-school-extension-acquisition-control-period-visual-review.json",
+          "sha256": "605300a61dfb759a11e51e363acdfa132144a5a800a0115468fe5c890b509787"
+        }
+      }
+    },
+    {
+      "id": "queue-completion-schools-sd61-2025-employees",
+      "rows": 1370,
+      "sourceSha256": "d8d3437d612c52705a5b898b13755544ab4eefd023d9eeb06b1d7a054751a260",
+      "file": "sd61-2025-employees-v2.json.gzip",
+      "dataSha256": "4ef497c0aecb94b4857868df4ffc1b34ee2147b8570973721ed3957f0f67eedb",
+      "normalizedSha256": "62f9b324a67a44b91023f5375c6cc2cfdfc537d7ef219e480905d76745004160",
+      "provenanceFile": "sd61-2025-employees-v2-evidence.json.gzip",
+      "provenanceSha256": "765d9c530909b55dcfe13b1d15e329378d911c52038b9d1ea6bfb9238bf03088",
+      "computedTotals": [
+        "143280208.11",
+        "608455.92"
+      ],
+      "printedControls": [
+        "143280208.11",
+        "608455.92"
+      ],
+      "residuals": [
+        "0.00",
+        "0.00"
+      ],
+      "independentPeerReview": {
+        "file": "research/salaries/queue-completion-2026-11-01/reviews/independent-school-extension-acquisition-final-row-comparison.json",
+        "sha256": "ee818a4838770d13c23cfd3d2e24842c48eeee3395c3bb837645acba9c893a7b",
+        "originalContextReview": {
+          "file": "research/salaries/queue-completion-2026-11-01/reviews/independent-school-extension-acquisition-control-period-visual-review.json",
+          "sha256": "605300a61dfb759a11e51e363acdfa132144a5a800a0115468fe5c890b509787"
+        }
+      }
+    },
+    {
+      "id": "queue-completion-schools-sd68-2025-trustees",
+      "rows": 9,
+      "sourceSha256": "213c8db392c8ab77b498de59ba1004d4e8775a5e4dc9549fb61bec214bf438bf",
+      "file": "sd68-2025-trustees.json.gzip",
+      "dataSha256": "42497499e41d558e8d9cc45213ce4228ef7d72103bac8bc0a8bd0823937d892a",
+      "normalizedSha256": "8a734de403eb639dc9069cfa4227d0511df527dc58b8f059dda57403e107ef18",
+      "provenanceFile": "sd68-2025-trustees-evidence.json.gzip",
+      "provenanceSha256": "f1823ea51b491789d0eae7dfa04d37450f72215f6c1718e76bac97a9db3fe16e",
+      "computedTotals": [
+        "249305",
+        "52034"
+      ],
+      "printedControls": [
+        "249308",
+        "52036"
+      ],
+      "residuals": [
+        "-3",
+        "-2"
+      ],
+      "independentPeerReview": {
+        "file": "research/salaries/queue-completion-2026-11-01/reviews/independent-school-extension-acquisition-final-row-comparison.json",
+        "sha256": "ee818a4838770d13c23cfd3d2e24842c48eeee3395c3bb837645acba9c893a7b",
+        "originalContextReview": {
+          "file": "research/salaries/queue-completion-2026-11-01/reviews/independent-school-extension-acquisition-control-period-visual-review.json",
+          "sha256": "605300a61dfb759a11e51e363acdfa132144a5a800a0115468fe5c890b509787"
+        }
+      }
+    },
+    {
+      "id": "queue-completion-schools-sd68-2025-employees",
+      "rows": 1003,
+      "sourceSha256": "213c8db392c8ab77b498de59ba1004d4e8775a5e4dc9549fb61bec214bf438bf",
+      "file": "sd68-2025-employees.json.gzip",
+      "dataSha256": "86ca14b0e44807d03375571900bd88afab387c705feb0cb6e54b11af33d83240",
+      "normalizedSha256": "649a685278d8b66713075c5db3994129ac04e5dd83654ad6164ac55c194fefdf",
+      "provenanceFile": "sd68-2025-employees-evidence.json.gzip",
+      "provenanceSha256": "07635a15529fcc488e14839930b252c6d40b14bb2b618eff3053f50c978eaae4",
+      "computedTotals": [
+        "103832656",
+        "423778"
+      ],
+      "printedControls": [
+        "103832665",
+        "423777"
+      ],
+      "residuals": [
+        "-9",
+        "1"
+      ],
+      "independentPeerReview": {
+        "file": "research/salaries/queue-completion-2026-11-01/reviews/independent-school-extension-acquisition-final-row-comparison.json",
+        "sha256": "ee818a4838770d13c23cfd3d2e24842c48eeee3395c3bb837645acba9c893a7b",
+        "originalContextReview": {
+          "file": "research/salaries/queue-completion-2026-11-01/reviews/independent-school-extension-acquisition-control-period-visual-review.json",
+          "sha256": "605300a61dfb759a11e51e363acdfa132144a5a800a0115468fe5c890b509787"
+        }
+      }
+    },
+    {
+      "id": "queue-completion-schools-sd73-2025-trustees",
+      "rows": 9,
+      "sourceSha256": "2ef6c4a829c0e6531562ff1ac155e2fef74a3bed9abd2f1fbe0d9371d0e326a2",
+      "file": "sd73-2025-trustees.json.gzip",
+      "dataSha256": "11eaee448c711d5eaa6408cb3f3d1116361c5644ae392a06d8969994f3f6c379",
+      "normalizedSha256": "c5bc602ddb3af014ddc7f049766a0c383a10a4f4296ff0521b8b6c80b7783898",
+      "provenanceFile": "sd73-2025-trustees-evidence.json.gzip",
+      "provenanceSha256": "cbb0900336e9b9531d39d9feaf131cdf31b1062278bee629c07646611afb62e1",
+      "computedTotals": [
+        "265975",
+        "41304"
+      ],
+      "printedControls": [
+        "265975",
+        "41304"
+      ],
+      "residuals": [
+        "0",
+        "0"
+      ],
+      "independentPeerReview": {
+        "file": "research/salaries/queue-completion-2026-11-01/reviews/independent-school-extension-acquisition-final-row-comparison.json",
+        "sha256": "ee818a4838770d13c23cfd3d2e24842c48eeee3395c3bb837645acba9c893a7b",
+        "originalContextReview": {
+          "file": "research/salaries/queue-completion-2026-11-01/reviews/independent-school-extension-acquisition-control-period-visual-review.json",
+          "sha256": "605300a61dfb759a11e51e363acdfa132144a5a800a0115468fe5c890b509787"
+        }
+      }
+    },
+    {
+      "id": "queue-completion-schools-sd73-2025-employees",
+      "rows": 1067,
+      "sourceSha256": "2ef6c4a829c0e6531562ff1ac155e2fef74a3bed9abd2f1fbe0d9371d0e326a2",
+      "file": "sd73-2025-employees.json.gzip",
+      "dataSha256": "fd461c01f18cbe74e8c036c06ec72fe97220f67af4e28f0650759eba7e00fa27",
+      "normalizedSha256": "ff319acddbd601b99bc572700a004428d6e1eaa9e66192e846c53e3fba313e43",
+      "provenanceFile": "sd73-2025-employees-evidence.json.gzip",
+      "provenanceSha256": "3ad05670ad102e6dd128aaa4122c7a1e16139667dfa4e1f1037b3eeba2d09624",
+      "computedTotals": [
+        "112948428",
+        "624040"
+      ],
+      "printedControls": [
+        "112948430",
+        "624050"
+      ],
+      "residuals": [
+        "-2",
+        "-10"
+      ],
+      "independentPeerReview": {
+        "file": "research/salaries/queue-completion-2026-11-01/reviews/independent-school-extension-acquisition-final-row-comparison.json",
+        "sha256": "ee818a4838770d13c23cfd3d2e24842c48eeee3395c3bb837645acba9c893a7b",
+        "originalContextReview": {
+          "file": "research/salaries/queue-completion-2026-11-01/reviews/independent-school-extension-acquisition-control-period-visual-review.json",
+          "sha256": "605300a61dfb759a11e51e363acdfa132144a5a800a0115468fe5c890b509787"
+        }
+      }
+    },
+    {
+      "id": "queue-completion-schools-sd50-2025-trustees",
+      "rows": 5,
+      "sourceSha256": "7a45c601bc2edf00849d090f24394d032e84424ea7c42804ae188b74780973a4",
+      "file": "sd50-2025-trustees.json.gzip",
+      "dataSha256": "339ca4af50d3138e3a52293259785ca2f0272945ceaaeadcb1d8501fbd0db290",
+      "normalizedSha256": "53434b4b091c7162c9fcb0682c29fc173d743a61c38d2ab57da0af3353562f70",
+      "provenanceFile": "sd50-2025-trustees-evidence.json.gzip",
+      "provenanceSha256": "745a79f91c10e065117b4b6a5e3f13d3f284e5be64c955dc3c09b4546477ddcf",
+      "computedTotals": [
+        "87369.00",
+        "17287.14"
+      ],
+      "printedControls": [
+        "87369.00",
+        "17287.14"
+      ],
+      "residuals": [
+        "0.00",
+        "0.00"
+      ],
+      "independentPeerReview": {
+        "file": "research/salaries/queue-completion-2026-11-01/reviews/independent-school-queue-sd50-final-comparison.json",
+        "sha256": "d5c7da02b3508004dde35c28a672550a75793629d4f21e2aeecfffde1097e610"
+      }
+    },
+    {
+      "id": "queue-completion-schools-sd50-2025-employees",
+      "rows": 53,
+      "sourceSha256": "7a45c601bc2edf00849d090f24394d032e84424ea7c42804ae188b74780973a4",
+      "file": "sd50-2025-employees-v2.json.gzip",
+      "dataSha256": "0e21b24b559974668171a77e7f0e2cfe6c2d01c3929cd097ca8c3abf01a67502",
+      "normalizedSha256": "0ba91b4632f919c6e9f62ea627adfa686546e6c250a2dcefd80bf52cae3a9f5c",
+      "provenanceFile": "sd50-2025-employees-v2-evidence.json.gzip",
+      "provenanceSha256": "4770faa1331f8acef618b359fd68ca1dcb6320d19fc50438eb9c97f1f966030f",
+      "computedTotals": [
+        "5985964.64",
+        "149170.57"
+      ],
+      "printedControls": [
+        "5985964.64",
+        "149170.57"
+      ],
+      "residuals": [
+        "0.00",
+        "0.00"
+      ],
+      "independentPeerReview": {
+        "file": "research/salaries/queue-completion-2026-11-01/reviews/independent-school-queue-sd50-final-comparison.json",
+        "sha256": "d5c7da02b3508004dde35c28a672550a75793629d4f21e2aeecfffde1097e610"
+      }
+    }
+  ],
+  "literalControlsAndDefinitions": {
+    "file": "research/salaries/queue-completion-2026-11-01/schools/native-controls-and-context.json",
+    "sha256": "be0a83ace1c8de650ef41073279bae3f5ff9bd18440231f68995a9ad1103a250"
+  },
+  "publicClarificationClosure": {
+    "file": "research/salaries/queue-completion-2026-11-01/schools/clarification-public-route-closure.json",
+    "sha256": "bc305164d1ecf857f826d81175a8699ef19e25dac0afce8155549bf4b562cc63",
+    "issuerItemsStillUnresolved": 2,
+    "outboxDrafts": [
+      {
+        "file": "research/salaries/queue-completion-2026-11-01/acquisition/outbox/outbox-sd10-declaration-approval.md",
+        "sha256": "911c77da5fe7652f02d8d45b4abf007ce420c305bb461961bef75f9a11ade130"
+      },
+      {
+        "file": "research/salaries/queue-completion-2026-11-01/acquisition/outbox/outbox-sd08-heading-controls-approval.md",
+        "sha256": "b32b22c9fe60b3f7efc3722d3a056d467f3968f444e25b234a95e8582d9fe10a"
+      }
+    ],
+    "outreachSent": false
+  },
+  "revisionHistory": {
+    "sd50FirstEmployeeDataSha256": "8ef567c55c22e061658f7eaca221edba46f73277d4aa2f2dfc139c88ef6ef161",
+    "sd50AcceptedEmployeeV2Sha256": "0e21b24b559974668171a77e7f0e2cfe6c2d01c3929cd097ca8c3abf01a67502",
+    "sd50NameAmendment": "Exactly one shared OCR I/l error, Keir, lan J. → Keir, Ian J.; old proof/data/raw bytes remain unchanged. No generic capitalization.",
+    "sd61AcceptedEmployeeV2Sha256": "4ef497c0aecb94b4857868df4ffc1b34ee2147b8570973721ed3957f0f67eedb",
+    "sd61PositionAmendments": "Exactly20 page-final TEACHER position fields exclude separate centred printed footer numbers5–24, as independently image-verified. All v1 bytes and all money/name/page/multiplicity fields remain unchanged.",
+    "sd61ProvenanceWordingCorrection": "Supporting native crop Matrix3 is216dpi, not the erroneous300dpi-equivalent phrase in its frozen amendment reason. Additive bounded-source-image-receipts.json qualifies that wording; no source/proof/data bytes changed."
+  },
+  "coverageLimits": {
+    "baselineAllPeriodOfficialSchoolEmployers": 25,
+    "additionalOfficialEmployers": 11,
+    "prospectiveAllPeriodOfficialEmployers": 36,
+    "baselineCurrent2024_25EmployeeDistricts": 24,
+    "prospectiveCurrent2024_25EmployeeDistricts": 35,
+    "locatedCurrentEmployeeGapsRemaining": 25,
+    "remainingScope": "The25 remaining current district gaps and earlier historical runs are not claimed accepted or complete. Located scan/native processing is not treated as a procurement/FOI blocker. Two additionally retrieved SD10 historical attachments remain discovery-only; no historical observations imported."
+  },
+  "specialChecks": [
+    "All10 complete native originals replay from exact PDF bytes through independent Poppler and MuPDF readers; third-reader/source-context peer receipts pin all15,080 native rows.",
+    "SD50 actual-PDF-rendered complete image transcript independently checked against both OCR engines and final58rows. Four source dashes are null; missing OCR detection was unresolved until image review.",
+    "The SD23 Canada Revenue Agency expense-only organization row is excluded from individual observations and retained as a printed aggregate component.",
+    "All four leading-asterisk source-footnoted SD73 staff are included: three explicit reimbursement notes and one role definition. The literal negative expense−$590 is retained.",
+    "Low-paid elected official638 is retained; no employee disclosure threshold was applied to trustees.",
+    "No board adoption motion or visible signature authentication is inferred. Explicit Unaudited labels and all source-control residuals remain literal."
+  ],
+  "validation": {
+    "file": "research/salaries/queue-completion-2026-11-01/schools/validation.json",
+    "sha256": "afd2552c80361051af69a66a77cc56260daf24cf2c575c8afdc796246ad42883"
+  },
+  "finalPeerSnapshots": [
+    {
+      "file": "research/salaries/queue-completion-2026-11-01/reviews/independent-school-extension-acquisition-review-handoff.json",
+      "sha256": "822591d8395247f17b0f5c750633d05db1a58608b9cc7fd8c041994dd498bc0a"
+    },
+    {
+      "file": "research/salaries/queue-completion-2026-11-01/reviews/independent-school-extension-acquisition-review-freeze.json",
+      "sha256": "97dce77fafef6c0f8537ba1ae07cd7d4f4717a79426a5b99ac0b7c0fa7240a96"
+    },
+    {
+      "file": "research/salaries/queue-completion-2026-11-01/reviews/independent-school-extension-acquisition-final-metadata-check.json",
+      "sha256": "06ebd4f961ab7b10f16824ceaf6792bdf2c6190ba039341d0abb757c9d70beb8"
+    }
+  ],
+  "globalFilesChangedByWorker": [],
+  "oldFrozenFilesChangedByWorker": [],
+  "branchActions": [],
+  "institutionContacts": []
+}

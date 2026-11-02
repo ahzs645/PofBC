@@ -1,0 +1,53 @@
+{
+  "frozen": true,
+  "reviewer": "/root",
+  "reviewedOn": "2026-11-01",
+  "sourceId": "phsa-2015-16",
+  "sourceSha256": "f8bc28af7e87f57c51973f5ed581e50fe414f00486659551ad5c8171b98f73a3",
+  "batch": "phsa-2015-16-003",
+  "acceptedQualifiedCases": true,
+  "qualifiedCases": 21,
+  "exactCaseLedger": {
+    "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-education-2015-16-003-source-typography-qualifications.json",
+    "sha256": "b728eab44ed32cf9f0047e1f69e1cc664ea5d3029cc5a2a4099c7e81d5e6c909"
+  },
+  "independentImageFirstTranscript": {
+    "path": "research/salaries/queue-completion-2026-11-01/reviews/root-phsa-history-2015-16-batch-003-typography-peer-image-transcript.json",
+    "sha256": "37b4cbadb4c51f461351d76e9c979aaedf5b9fa0b659499da79b7fc67ee527d9"
+  },
+  "primaryReadingsMatchExactly": 21,
+  "reviewerCorrections": 0,
+  "unresolvedPeerDisagreements": 0,
+  "sourceContextImagesPersonallyRead": [
+    {
+      "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-education-2015-16-003-actual-context-p076.png",
+      "sha256": "8b2a6a72d7755c86451be43dd432f04729bfbf92105cb3d13489bd77bed305d7"
+    },
+    {
+      "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-education-2015-16-003-actual-context-p077.png",
+      "sha256": "4c0b9646f6c521daea4fa936a233653c907781d17a8cddfb26d20131e161518a"
+    },
+    {
+      "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-education-2015-16-003-actual-context-p117.png",
+      "sha256": "fbc8a13369f4e01526f5180d971f244d2e2c235f76ccbb2c227d377916bb3589"
+    },
+    {
+      "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-education-2015-16-003-actual-context-p119.png",
+      "sha256": "6b85932a02b4084374a8051c94e5baacb3114fdf3b5b6bcd7c67e194bfc4c90f"
+    }
+  ],
+  "caseProvenByPixels": false,
+  "additionalCombinedVisibleAlternatives": [
+    {
+      "sequence": 5,
+      "physicalPage": 76,
+      "sourceRowOnPage": 18,
+      "primary": "McIntosh,Gwyneth Irene",
+      "visibleAlternative": "Mclntosh,Gwyneth lrene",
+      "reason": "Both individually declared indistinguishableI/l strokes may jointly use the alternative glyph reading; retain this additional combination alongside the two original single-position alternatives."
+    }
+  ],
+  "decision": "Adopt these21exact qualified primaries after independently reading every actual-PDF name crop before opening the proposed ledger, then checking four original adjacent-context images. McI surname position before McK/McL and separate given-word/initial capitalization support declared primaries. Uhlman uses an explicit lower-interior wordcase assumption, while Vlahovic has source-order support; neither is pixel case proof. Preserve all original alternatives plus the combined sequence5alternative. No dictionary expansion, identity linkage, monetary/year waiver or whole300-row/source acceptance.",
+  "publicWarningRequired": "In this scanned schedule, some capital I and lowercase l glyphs are visually indistinguishable. Reviewed choices retain contextual transcriptions supported by source alphabetical placement or capitalization conventions, with visible alternatives documented. These are typography qualifications, not pixel-proved case. No generic casing conversion or name expansion was applied.",
+  "wholeSourceAccepted": false
+}

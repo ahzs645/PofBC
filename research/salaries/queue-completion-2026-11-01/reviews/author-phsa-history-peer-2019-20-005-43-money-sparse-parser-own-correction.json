@@ -1,0 +1,57 @@
+{
+  "frozen": true,
+  "reviewer": "/root/recovery_health",
+  "originalSourceTranscript": {
+    "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-history-2019-20-batch-005-image-transcript.tsv",
+    "sha256": "34785c39cd6bf3f641d46a368620fbe60ba19bbee24b17538fa2d3e6db5e7271"
+  },
+  "reviewerOnlyCheckerError": "My initial read-only checker incorrectly collapsed sparse per-field TSV events by sequence alone. A later blank name/expense event overwrote a legitimate earlier pay event. This was a checker error, not missing original source transcriptions or a source-author defect.",
+  "correctedMethod": "Aggregate nonempty(sequence,field), reject any duplicate NONEMPTYfield, never treat blank event cells as source-null. All639requested tuples exist once before original raw freeze.",
+  "previousFalseConcernSixSequences": [
+    85,
+    131,
+    192,
+    233,
+    282,
+    304
+  ],
+  "originalPayLineEvidence": [
+    {
+      "sequence": 85,
+      "field": "remuneration",
+      "rawLine": 384,
+      "literal": "82822"
+    },
+    {
+      "sequence": 131,
+      "field": "remuneration",
+      "rawLine": 406,
+      "literal": "81667"
+    },
+    {
+      "sequence": 192,
+      "field": "remuneration",
+      "rawLine": 437,
+      "literal": "87870"
+    },
+    {
+      "sequence": 233,
+      "field": "remuneration",
+      "rawLine": 458,
+      "literal": "142348"
+    },
+    {
+      "sequence": 282,
+      "field": "remuneration",
+      "rawLine": 480,
+      "literal": "82309"
+    },
+    {
+      "sequence": 304,
+      "field": "remuneration",
+      "rawLine": 490,
+      "literal": "82310"
+    }
+  ],
+  "salaryAndReviewSourceBytesUnchanged": true
+}

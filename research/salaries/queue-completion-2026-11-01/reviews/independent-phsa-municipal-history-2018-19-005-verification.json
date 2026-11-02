@@ -1,0 +1,90 @@
+{
+  "frozen": true,
+  "reviewer": "/root/recovery_municipal",
+  "reviewedOn": "2026-11-01",
+  "sourceId": "phsa-2018-19",
+  "sourceSha256": "ddeba470b875451f6180eb442ed921f7902cc910d62a026c11ab298ca3d0440f",
+  "batch": "phsa-2018-19-005",
+  "rows": 400,
+  "requestedFields": 462,
+  "fieldCounts": {
+    "name": 352,
+    "expenses": 44,
+    "remuneration": 66
+  },
+  "sevenApprovedKeysExactly": true,
+  "resolvedValueKeysExactlyRequested": true,
+  "uniqueSourceRows": 400,
+  "allFullRowCropHashesMatchOriginalManifest": true,
+  "exactGlyphRows": 400,
+  "qualifiedTypographyRows": 0,
+  "unresolvedRows": [],
+  "candidateFieldDifferences": 394,
+  "candidateRowsWithChanges": 362,
+  "overlayByteIdenticalCheckReplayPassed": true,
+  "sourcePixelProof": {
+    "actualPdf300DpiPages": 19,
+    "originalRowCrops": 400,
+    "nativeFieldViews": 462,
+    "nativeFieldContactSheetsPersonallyRead": 48
+  },
+  "expenseLiteralScope": {
+    "requestedCells": 44,
+    "printedDashNulls": 25,
+    "positiveNumericCells": 19,
+    "explicitZeros": 0,
+    "ocrOmissionIsNotDashCorroboration": true
+  },
+  "ownFirstPassCorrections": {
+    "namesBeforeCandidate": 1,
+    "namesAfterCandidate": 1,
+    "moneyChanges": 0,
+    "allInitialReadingsPreserved": true
+  },
+  "limitedIndependentPeerNames": 10,
+  "sourceCaseAndJoinedLettersResolvedFromVisibleGlyphsWithoutConvention": true,
+  "inputs": [
+    {
+      "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-municipal-history-2018-19-005-original-transcript.json",
+      "sha256": "8f57eff9abf10a2e703b2d6946cc6e3fa266711de3c9479c409ec184ee610970"
+    },
+    {
+      "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-municipal-history-2018-19-005-source-fidelity.json",
+      "sha256": "169c807ddb6add4664fcdb58cfe235bd49c404ad71c3fb93d8c1726d173c039c"
+    },
+    {
+      "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-municipal-history-2018-19-005-precomparison-source-rereads.json",
+      "sha256": "53e50ece6dd4081a80184fb33e11deee50c549e998fa7e85624ec722d24aaf76"
+    },
+    {
+      "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-municipal-history-2018-19-005-postcomparison-original-rereads.json",
+      "sha256": "18e74b3e7f12ab4a7f2046f9b72703bfdba2722881aecee0314e365a80bd5466"
+    },
+    {
+      "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-municipal-history-2018-19-005-ten-name-source-conclusions.json",
+      "sha256": "c3662f9aab42b072dda2a0ab33c9319f9d171e24920bad7f4b485698e0974958"
+    },
+    {
+      "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-municipal-history-2018-19-005-ten-name-peer-closure.json",
+      "sha256": "421be9c6dbbf1afb55398df96116f43b26212f45a0cdd1401b979496cfe71885"
+    },
+    {
+      "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-municipal-history-2018-19-005-resolutions.json",
+      "sha256": "10e7cc70f903f22ddea544513b8439c009249b505d19273f541bec8ce7f88d84"
+    },
+    {
+      "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-municipal-history-2018-19-005-full-candidate-comparison.json.gzip",
+      "sha256": "fdfce644128bfadea6b0405cb09ada2f7f071490d927b5b9a0b0fb5bcd492cf6"
+    },
+    {
+      "path": "research/salaries/queue-completion-2026-11-01/phsa/overlays/phsa-2018-19-manual-overlay-005.json",
+      "sha256": "0694e8e40948a9a1b4a948cea2364af1304858a8678aed57dd58205c83838d33"
+    }
+  ],
+  "replayScript": {
+    "path": "scripts/finish_salary_phsa_resolutions.py",
+    "sha256": "766faa95510d136431e28639336b7dbeb01d73cac4c86b43cf1bbdd4df63e242"
+  },
+  "noOldOrGlobalFilesChanged": true,
+  "sourceAcceptanceClaim": false
+}

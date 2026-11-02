@@ -1,0 +1,52 @@
+{
+  "frozen": true,
+  "reviewer": "/root/recovery_municipal",
+  "reviewedOn": "2026-11-01",
+  "sourceId": "phsa-2016-17",
+  "sourceSha256": "31f7a1af80186bf81139fd693b36e733333a06c2ab1a4c5191bd6ee9b3623a53",
+  "batch": "phsa-2016-17-005",
+  "rawImageFirstTranscript": {
+    "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-municipal-history-2016-17-005-typography-peer-original.json",
+    "sha256": "78a3e43b09f04b77c8b384762991d5db6b452cd5a35267580f788893af3c6697"
+  },
+  "authorLedgerOrCandidatesOpened": false,
+  "ownSourceOnlyCorrection": [
+    {
+      "sequence": 105,
+      "physicalPage": 36,
+      "sourceRowOnPage": 32,
+      "initialUncertainReading": "Durning,Iar",
+      "finalContextualReading": "Durning,Ian",
+      "basis": "Actual original1200dpi crop and source-only adjacent-row view show a right descending vertical completing n, not an r. This corrects an own first-pass joined-glyph reading, before author ledger/candidates. Initial I/l case remains qualified.",
+      "actual1200SourceImage": {
+        "path": "/tmp/independent-phsa-municipal-2016-17-005-typography-peer/seq105-name1200.png",
+        "sha256": "0ac76abe92d195bdd93baede8c766884c377724563108b37d6a3259b20bd9a46"
+      },
+      "finalVisibleIOrLowerLAlternatives": [
+        "Durning,Ian",
+        "Durning,lan"
+      ]
+    }
+  ],
+  "surnameIlettQualificationClarified": {
+    "sequence": 114,
+    "primary": "Ilett,Kathleen",
+    "visibleAlternatives": [
+      "Ilett,Kathleen",
+      "IIett,Kathleen",
+      "lIett,Kathleen",
+      "llett,Kathleen"
+    ],
+    "characterPositionsZeroBased": [
+      0,
+      1
+    ],
+    "basis": "Actual source context has Ikeda,Christine Ann immediately above Ilett,Kathleen and Ilett,Simon immediately below, supporting contextual I+l. Both first vertical glyphs remain indistinguishable by pixels.",
+    "caseProvenByPixels": false
+  },
+  "all20SourceNameReadingsNowComplete": true,
+  "unresolvedSourceLetters": [],
+  "rootExactCaseAdoptionAndPublicWarningRequired": true,
+  "rawOriginalUnchanged": true,
+  "scope": "Only20 source-name typography cases, no ordinary166-row/money/source acceptance claim."
+}

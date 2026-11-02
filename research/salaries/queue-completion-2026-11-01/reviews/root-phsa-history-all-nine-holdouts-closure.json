@@ -1,0 +1,131 @@
+{
+  "frozen": true,
+  "reviewer": "/root",
+  "reviewedOn": "2026-11-01",
+  "sourceCount": 9,
+  "sourceFiscalPeriods": [
+    "2015-16",
+    "2016-17",
+    "2017-18",
+    "2018-19",
+    "2019-20",
+    "2020-21",
+    "2021-22",
+    "2022-23",
+    "2023-24"
+  ],
+  "rowsPersonallyReadFromSourceImages": 90,
+  "requestedSourceImageFieldsPersonallyRead": 222,
+  "allFinalLiteralSourceFieldsMatchCandidateExactly": true,
+  "candidateDataChanges": 0,
+  "rootOwnFirstPassNameReadingCorrections": 4,
+  "ownCorrectionEvidence": "Four first-pass name omissions/substitutions in 2018/19 and2019/20 were corrected additively only after actual-source rereads and a fresh blinded original-image peer; raw first transcripts stay unchanged. Monetary first-pass readings were unchanged.",
+  "sources": [
+    {
+      "sourceId": "phsa-2015-16",
+      "receipt": {
+        "path": "research/salaries/queue-completion-2026-11-01/reviews/root-phsa-history-2015-16-holdout-source-comparison.json",
+        "sha256": "b54ffc90e7802ea51be804e6ec2ffacfb0056d6c8ae90a3841b8273ffb50e86b"
+      },
+      "rows": 10,
+      "fields": 24,
+      "rootOwnFirstPassReadingCorrections": 0
+    },
+    {
+      "sourceId": "phsa-2016-17",
+      "receipt": {
+        "path": "research/salaries/queue-completion-2026-11-01/reviews/root-phsa-history-2016-17-holdout-source-comparison.json",
+        "sha256": "3bc26ef539583647d853c15e2a5803fe4bd2ab07fb7e5acbf6cf0dc0a2f27e2b"
+      },
+      "rows": 10,
+      "fields": 26,
+      "rootOwnFirstPassReadingCorrections": 0
+    },
+    {
+      "sourceId": "phsa-2017-18",
+      "receipt": {
+        "path": "research/salaries/queue-completion-2026-11-01/reviews/root-phsa-history-2017-18-holdout-source-comparison.json",
+        "sha256": "009373d2eb66cbdeab32c377aba104c38feed42f2bd208c2f4022e6f15d3f021"
+      },
+      "rows": 10,
+      "fields": 26,
+      "rootOwnFirstPassReadingCorrections": 0
+    },
+    {
+      "sourceId": "phsa-2018-19",
+      "receipt": {
+        "path": "research/salaries/queue-completion-2026-11-01/reviews/root-phsa-history-2018-19-holdout-source-comparison.json",
+        "sha256": "ed5f4d90749bd0c0a455a40b17aaa0d9359b5fb1fe0157926010495aaee33433"
+      },
+      "rows": 10,
+      "fields": 26,
+      "rootOwnFirstPassReadingCorrections": 1
+    },
+    {
+      "sourceId": "phsa-2019-20",
+      "receipt": {
+        "path": "research/salaries/queue-completion-2026-11-01/reviews/root-phsa-history-2019-20-holdout-source-comparison.json",
+        "sha256": "6df47bcd1811a189a73ca6f21197c9bed8442324eabf3c4295956fec9f7a3d5d"
+      },
+      "rows": 10,
+      "fields": 22,
+      "rootOwnFirstPassReadingCorrections": 3
+    },
+    {
+      "sourceId": "phsa-2020-21",
+      "receipt": {
+        "path": "research/salaries/queue-completion-2026-11-01/reviews/root-phsa-history-2020-21-holdout-source-comparison.json",
+        "sha256": "a34ca3c2815b4743abf594242976ab0be0ae3f8a088040e2413f35d98a6d83d5"
+      },
+      "rows": 10,
+      "fields": 24,
+      "rootOwnFirstPassReadingCorrections": 0
+    },
+    {
+      "sourceId": "phsa-2021-22",
+      "receipt": {
+        "path": "research/salaries/queue-completion-2026-11-01/reviews/root-phsa-history-2021-22-holdout-source-comparison.json",
+        "sha256": "3548544eeb27944497d0960429e0cebab38274ecd4787b4c09391fb000f6d8de"
+      },
+      "rows": 10,
+      "fields": 24,
+      "rootOwnFirstPassReadingCorrections": 0
+    },
+    {
+      "sourceId": "phsa-2022-23",
+      "receipt": {
+        "path": "research/salaries/queue-completion-2026-11-01/reviews/root-phsa-history-2022-23-holdout-source-comparison.json",
+        "sha256": "3e00373a8eb17d3ac664920c6d0c48f0ff9bec7638f2215cae22e68f58a0e29b"
+      },
+      "rows": 10,
+      "fields": 25,
+      "rootOwnFirstPassReadingCorrections": 0
+    },
+    {
+      "sourceId": "phsa-2023-24",
+      "receipt": {
+        "path": "research/salaries/queue-completion-2026-11-01/reviews/root-phsa-history-2023-24-holdout-source-comparison.json",
+        "sha256": "1873d20107c308cb05e6c3b4d6bdcdb60ad9407b78d7b1f7d1c6cbe3eba807fc"
+      },
+      "rows": 10,
+      "fields": 25,
+      "rootOwnFirstPassReadingCorrections": 0
+    }
+  ],
+  "selectionConfiguration": {
+    "path": "research/salaries/queue-completion-2026-11-01/phsa/holdout-selection-config-001.json",
+    "sha256": "fa3689b3b361f5c431707e7ed517ebdff4080499c96d1af7ec1d2aa6a46e8627"
+  },
+  "fieldPolicy": {
+    "path": "research/salaries/queue-completion-2026-11-01/phsa/paired-reader-field-policy-002.json",
+    "sha256": "0fafb3763ea5a1ebf8f2d7310e748cb4d24247428f544056e1427d2e6ecc77fe"
+  },
+  "decision": "All nine finite deterministic layout-spread holdouts pass with all requested final fields agreeing literally. Actual original PDFs were independently rendered at300dpi; every field crop was pixel-exact. This closes the holdout gate only. Every genuine OCR disagreement and name-quality flag still needs exact manual field coverage, typography qualifications need exact peer/root adoption and public warnings, and source controls need complete reconciliation or explicitly adopted literal residuals.",
+  "limitations": [
+    "These90 selected rows are a finite source/layout check, not an estimate or proof of universal OCR accuracy.",
+    "2015/16 flagged rows were all already reserved for manual review; its ten additional otherwise-unflagged guarded rows provide layout coverage rather than replacing any manual review.",
+    "The policy may resolve only declared positive-integer exact-reader-agreement confidence flags, with full geometry/source/year and guarded-name conditions; raw readings/scores/flags remain retained.",
+    "No personal image-transcription claim for all64912 source rows; whole-source evidence must distinguish automatic corroboration, targeted manual reading, and independent finite holdouts."
+  ],
+  "wholeSourcesAccepted": false
+}

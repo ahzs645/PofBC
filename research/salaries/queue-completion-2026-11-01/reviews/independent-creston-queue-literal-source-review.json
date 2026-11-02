@@ -1,0 +1,126 @@
+{
+  "reviewer": "held_health_review",
+  "sourceSha256": "24a6cd0394f42596859f15cb4a1ec811c28c5a5c09e004a3766aa78130396ac6",
+  "physicalPage": 37,
+  "sourceRows": 27,
+  "fieldCount": 108,
+  "transcriptPath": "research/salaries/queue-completion-2026-11-01/reviews/independent-creston-queue-final-literal-transcript.tsv",
+  "transcriptSha256": "59e96b9a17a0c3f8ee3716882405d32bd07a4928261a7c8158a1ca83e3e9cb71",
+  "previousFrozenTranscript": {
+    "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-creston-queue-actual600-transcript.tsv",
+    "sha256": "12ee02cb0c2fdb8859408184088b2cb6bcecd8ddd6e02fd8d00d86621adc5c1c"
+  },
+  "reviewerSourceReReadCorrectionsAfterPeerComparison": [
+    {
+      "sourceRowOnPage": 10,
+      "field": "name",
+      "before": "Farymowski, Colin",
+      "after": "Farynowski, Colin",
+      "reason": "Author comparison identified exact glyph discrepancy; reviewer personally regenerated/inspected actual1200dpi source crop and corrected own first-pass reading. Other disputed source glyphs preserved according to visible original, not author defaults."
+    },
+    {
+      "sourceRowOnPage": 15,
+      "field": "name",
+      "before": "Klaassen, Steffan",
+      "after": "Klassen, Steffan",
+      "reason": "Author comparison identified exact glyph discrepancy; reviewer personally regenerated/inspected actual1200dpi source crop and corrected own first-pass reading. Other disputed source glyphs preserved according to visible original, not author defaults."
+    },
+    {
+      "sourceRowOnPage": 19,
+      "field": "expenses",
+      "before": "13853",
+      "after": "13653",
+      "reason": "Author comparison identified exact glyph discrepancy; reviewer personally regenerated/inspected actual1200dpi source crop and corrected own first-pass reading. Other disputed source glyphs preserved according to visible original, not author defaults."
+    }
+  ],
+  "remainingDifferencesWithInitialAuthorTranscript": [
+    {
+      "sourceRowOnPage": 11,
+      "field": "name",
+      "reviewerLiteral": "Fuller, C. Terrence",
+      "initialAuthorLiteral": "Fuller, C. Terrance",
+      "status": "Exact source vowel e confirmed in independent1200dpi crop; author confirmation pending."
+    },
+    {
+      "sourceRowOnPage": 12,
+      "field": "remuneration",
+      "reviewerLiteral": 77585,
+      "initialAuthorLiteral": 77595,
+      "status": "Source8 has two closed counters; author independently confirmed correction to77585."
+    },
+    {
+      "sourceRowOnPage": 27,
+      "field": "name",
+      "reviewerLiteral": "Zieffle, Brad",
+      "initialAuthorLiteral": "Ziefflie, Brad",
+      "status": "No additional i dot/stem after l visible in independent1200dpi source; author confirmation pending."
+    }
+  ],
+  "computedLiteralTotals": {
+    "remuneration": 2684996,
+    "expenses": 61034
+  },
+  "printedEmployeeControls": {
+    "remuneration": 2685008,
+    "expenses": 61044
+  },
+  "residualLiteralMinusPrinted": {
+    "remuneration": -12,
+    "expenses": -10
+  },
+  "nullExpenses": 0,
+  "explicitZeroExpenses": 13,
+  "period": {
+    "start": "2024-01-01",
+    "end": "2024-12-31",
+    "type": "calendar",
+    "sourceContext": "Fiscal year end31December2024 onphysical1; named remuneration source table2024 physical37."
+  },
+  "scope": "27individual employees exceeding75000 only; council alreadyaccepted and excluded; underthreshold aggregate excluded.",
+  "definition": "Separate source remuneration and expense columns; employer EI/CPP is supplier payment scope perphysical4 checklist and is not added to remuneration. No annualization or complete-employee-roster inference.",
+  "approvalContext": {
+    "physicalPage": 9,
+    "heading": "STATEMENT OF FINANCIAL INFORMATION APPROVAL",
+    "statement": "Approves all statements and schedules included in the Statement of Financial Information.",
+    "signed": true,
+    "signatories": [
+      "Steffan Klassen CA, Director of Finance & Corporate Services",
+      "Acting Mayor Carolyn Hawton, Council Member on behalf of Council"
+    ],
+    "printedDate": "2025-06-30"
+  },
+  "sourceTitleQualification": "Row26 literally Waste Water Treatment Plan Operator; no unsupported t completion. Jeff Webb remains source name order.",
+  "actualSourceFidelitySamples": [
+    {
+      "physicalPage": 1,
+      "actualRenderedPngSha256": "4aba3893afe6020cb23c1d7cb8907a0fd42d5b0bfb8316c33c0b96efcbe99700",
+      "independentlyRegeneratedActualPdf300dpi": true
+    },
+    {
+      "physicalPage": 3,
+      "actualRenderedPngSha256": "4076a8eeb5d2b5828e3012eb528819cfd8a2cc7c2e08620f793b441b1e296933",
+      "independentlyRegeneratedActualPdf300dpi": true
+    },
+    {
+      "physicalPage": 4,
+      "actualRenderedPngSha256": "1c322574921b1ebe13f115a0ec760b82662cf4ebff9cccd6b5ecc3fb996e6b0a",
+      "independentlyRegeneratedActualPdf300dpi": true
+    },
+    {
+      "physicalPage": 9,
+      "actualRenderedPngSha256": "388bcb5391b1592944e5fe7488f801d7af171b9da531f4b8ba6e965ec27f71ec",
+      "independentlyRegeneratedActualPdf300dpi": true
+    },
+    {
+      "physicalPage": 37,
+      "actualRenderedPngSha256": "7e19981e433c15015add5eced5755a7dd68fedf6b9d34a73517bca9d6a3d06c0",
+      "independentlyRegeneratedActualPdf300dpi": true
+    }
+  ],
+  "limits": [
+    "Literal rows verified from original images, not adjusted to make controls agree.",
+    "Exact remaining author-name disagreement must close before normalized payload acceptance.",
+    "Printed controls retain small literal residuals; cause not established. Root must explicitly decide source residual qualification after final independent row agreement; do not claim reconciliation or rounding explanation.",
+    "No institution contact or request sent."
+  ]
+}

@@ -1,0 +1,76 @@
+{
+  "frozen": true,
+  "adapter": "direct-scoped-source-peer-v2",
+  "peerInputs": [
+    {
+      "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-education-2021-22-007-eight-peer-source-first.json",
+      "sha256": "41c4ac4cf81207fd92b4c1b688ff3e0a3527c46442aa2740260ae57d7b84e12a"
+    },
+    {
+      "path": "research/salaries/queue-completion-2026-11-01/reviews/author-phsa-history-2021-22-007-eight-source-only-rechecks.json",
+      "sha256": "66856dbd8f57d611e2a17e8cefaecaffdbe41ac643bf4f850692f0066d3250f8"
+    },
+    {
+      "path": "research/salaries/queue-completion-2026-11-01/phsa/triangulation/direct-source-money-pixel-proof-007.json",
+      "sha256": "f3aba5bd6a41a812230f3e4ee8c1231eb4276922e6875c5aadf25d737a931c9e"
+    }
+  ],
+  "pixelProof": {
+    "path": "research/salaries/queue-completion-2026-11-01/phsa/triangulation/direct-source-money-pixel-proof-007.json",
+    "sha256": "f3aba5bd6a41a812230f3e4ee8c1231eb4276922e6875c5aadf25d737a931c9e"
+  },
+  "confirmations": [
+    {
+      "sourceId": "phsa-2021-22",
+      "sourceSha256": "944c99fa7b7ede643cb4c426a5e9ab30aa906d8f81fda379f0206e4b0cdcd25c",
+      "physicalPage": 149,
+      "sourceRowOnPage": 36,
+      "field": "remuneration",
+      "confirmedValue": 99974,
+      "effectiveAuthorOverlay": {
+        "path": "research/salaries/queue-completion-2026-11-01/phsa/overlays/phsa-2021-22-manual-overlay-007.json",
+        "sha256": "d5e7c0f1ee9efe50134b505b4e916eaad11fcc454680598e906ab9621d4a088a"
+      },
+      "peerComparison": {
+        "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-education-2021-22-007-eight-peer-source-first.json",
+        "sha256": "41c4ac4cf81207fd92b4c1b688ff3e0a3527c46442aa2740260ae57d7b84e12a"
+      },
+      "freshSourceImage": {
+        "path": "research/salaries/queue-completion-2026-11-01/reviews/author-phsa-history-2021-22-007-source-recheck-assets/019-remuneration-actual1200.png",
+        "sha256": "0fa425272908cf41a57531230f4d5eb261964b30fae86c778f05957900096da0"
+      },
+      "imageFirstTranscript": {
+        "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-education-2021-22-007-eight-peer-source-first.json",
+        "sha256": "41c4ac4cf81207fd92b4c1b688ff3e0a3527c46442aa2740260ae57d7b84e12a"
+      }
+    },
+    {
+      "sourceId": "phsa-2021-22",
+      "sourceSha256": "944c99fa7b7ede643cb4c426a5e9ab30aa906d8f81fda379f0206e4b0cdcd25c",
+      "physicalPage": 161,
+      "sourceRowOnPage": 4,
+      "field": "remuneration",
+      "confirmedValue": 78677,
+      "effectiveAuthorOverlay": {
+        "path": "research/salaries/queue-completion-2026-11-01/phsa/overlays/phsa-2021-22-manual-overlay-007.json",
+        "sha256": "d5e7c0f1ee9efe50134b505b4e916eaad11fcc454680598e906ab9621d4a088a"
+      },
+      "peerComparison": {
+        "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-education-2021-22-007-eight-peer-source-first.json",
+        "sha256": "41c4ac4cf81207fd92b4c1b688ff3e0a3527c46442aa2740260ae57d7b84e12a"
+      },
+      "freshSourceImage": {
+        "path": "research/salaries/queue-completion-2026-11-01/reviews/author-phsa-history-2021-22-007-source-recheck-assets/148-remuneration-actual1200.png",
+        "sha256": "ad5f2df3c693a262ba757eb607d652ea64d7b6d503c7ffc9403ac0245d8505b9"
+      },
+      "imageFirstTranscript": {
+        "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-education-2021-22-007-eight-peer-source-first.json",
+        "sha256": "41c4ac4cf81207fd92b4c1b688ff3e0a3527c46442aa2740260ae57d7b84e12a"
+      }
+    }
+  ],
+  "completeFrozenSourcePeerFields": 8,
+  "confirmedMonetaryFields": 2,
+  "originalAuthorFirstReadingAgreementNotAsserted": true,
+  "scope": "Exact positive source-money fields only; unrelated source names/qualifications remain with their own reviews."
+}

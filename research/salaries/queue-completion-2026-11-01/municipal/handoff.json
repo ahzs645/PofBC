@@ -1,0 +1,246 @@
+{
+  "date": "2026-11-01",
+  "owner": "recovery_municipal",
+  "status": "complete-bounded-municipal-tranche-ready-for-root-integration",
+  "summary": {
+    "sources": 9,
+    "originals": 5,
+    "rows": 835,
+    "employeeRows": 807,
+    "electedRows": 28,
+    "totalRemuneration": 91810927,
+    "knownExpenses": 1420187,
+    "nullExpenses": 60,
+    "explicitZeroExpenses": 38,
+    "nullPositions": 264
+  },
+  "manifest": {
+    "path": "research/salaries/queue-completion-municipal/sources.json",
+    "sha256": "00b416e9cff3007cd43e98b81f2f02438306016681af1c20f8f0c41fe8fc9e90"
+  },
+  "sourceSummaries": [
+    {
+      "id": "queue-completion-municipal-mission-2023-employee-remuneration",
+      "employerSlug": "city-of-mission",
+      "year": "2023",
+      "scope": "employee-remuneration",
+      "rowCount": 148,
+      "sourceUrl": "https://www.mission.ca/media/file/2023-sofi-report",
+      "sha256": "82e0ab886a7e8a1e464e3afa25127be7176de79881b93b7602c5a101c8f4d6ac",
+      "file": "mission-2023-employee-remuneration-v2.json.gzip",
+      "dataSha256": "2472408946cb5c02aa9daa797fc883658bdcc28b3e0d3090bc8b7ae276114836",
+      "retainCompiledPartition": true,
+      "publicWarning": "The 148 named employee rows total CAD 16,445,762 remuneration and 318,887 known expenses. The printed named-employee remuneration subtotal is 16,445,765, 3 higher; its expense subtotal agrees. Physical 6 employee rows total 4,050,146 remuneration versus printed page subtotal 4,050,149, also 3 higher. Blaschuk, S visibly prints 93,271 remuneration and 1,718 expenses (sum 94,989), while its separate printed expense-inclusive Total is 94,992, 3 higher. Every individual cell is retained as visibly printed; no cause is inferred and no amount is balanced. Nine printed expense dashes remain null. The source uses a combined remuneration-and-expenses named-selection label; the below-75,000 remuneration rows remain as published. Retain the compiled partition: no compatible same-calendar-year compiled cohort has been established. Root owns any future period mapping or deletion; full strict multiset comparison is pinned separately."
+    },
+    {
+      "id": "queue-completion-municipal-mission-2023-elected-officials",
+      "employerSlug": "city-of-mission",
+      "year": "2023",
+      "scope": "elected-officials",
+      "rowCount": 7,
+      "sourceUrl": "https://www.mission.ca/media/file/2023-sofi-report",
+      "sha256": "82e0ab886a7e8a1e464e3afa25127be7176de79881b93b7602c5a101c8f4d6ac",
+      "file": "mission-2023-elected-officials.json.gzip",
+      "dataSha256": "f71a43a4c8836faaa49fd5999b938822debd015cdeb7d2f10d09fd995fd527c4",
+      "retainCompiledPartition": true,
+      "publicWarning": "This source contains the complete seven-person elected-official scope only; employee observations are a separate source. Retain the compiled partition: no compatible same-calendar-year compiled cohort has been established. Root owns any future period mapping or deletion; full strict multiset comparison is pinned separately."
+    },
+    {
+      "id": "queue-completion-municipal-mission-2024-employee-remuneration",
+      "employerSlug": "city-of-mission",
+      "year": "2024",
+      "scope": "employee-remuneration",
+      "rowCount": 162,
+      "sourceUrl": "https://www.mission.ca/media/file/2024-sofi-report",
+      "sha256": "a4fa12aba963169e276fcd69680887ff788f731fd3ac5260135b88705db4e5a9",
+      "file": "mission-2024-employee-remuneration.json.gzip",
+      "dataSha256": "95d15249968a07a89d6122cfe8eb9c06c79d333f089eeeee2ebc33555e0c69d6",
+      "retainCompiledPartition": true,
+      "publicWarning": "The source labels its named selection as employees with remuneration and expenses exceeding CAD 75,000; this is preserved without silently imposing a pay-only rule. Eighteen printed expense dashes remain null. A separate footnote discloses CAD 5,370 of Mission Bridgehead Investment Corporation expenses outside the table; that aggregate is not assigned or added to individual observations. Source footnote markers on Crawford, S* and DeSousa, K* remain literal. Retain the compiled partition: no compatible same-calendar-year compiled cohort has been established. Root owns any future period mapping or deletion; full strict multiset comparison is pinned separately."
+    },
+    {
+      "id": "queue-completion-municipal-mission-2024-elected-officials",
+      "employerSlug": "city-of-mission",
+      "year": "2024",
+      "scope": "elected-officials",
+      "rowCount": 7,
+      "sourceUrl": "https://www.mission.ca/media/file/2024-sofi-report",
+      "sha256": "a4fa12aba963169e276fcd69680887ff788f731fd3ac5260135b88705db4e5a9",
+      "file": "mission-2024-elected-officials.json.gzip",
+      "dataSha256": "594a793f060c144561e7df3c069c4ec9e4b5fd9aae979444cbb0f426f9435453",
+      "retainCompiledPartition": true,
+      "publicWarning": "This source contains the complete seven-person elected-official scope only; employee observations are a separate source. Retain the compiled partition: no compatible same-calendar-year compiled cohort has been established. Root owns any future period mapping or deletion; full strict multiset comparison is pinned separately."
+    },
+    {
+      "id": "queue-completion-municipal-mission-2025-employee-remuneration",
+      "employerSlug": "city-of-mission",
+      "year": "2025",
+      "scope": "employee-remuneration",
+      "rowCount": 206,
+      "sourceUrl": "https://www.mission.ca/media/file/2025-sofi-reportpdf",
+      "sha256": "23864d9e618e6ceaab92a67e06d38f43d7433e00b747ae53785d8f39f8822624",
+      "file": "mission-2025-employee-remuneration.json.gzip",
+      "dataSha256": "cb23de6618da846b99adf2d540ddcb4b6009ac57afc0120f0e46aaf958dab709",
+      "retainCompiledPartition": true,
+      "publicWarning": "The source labels its named selection as employees with remuneration and expenses exceeding CAD 75,000; this is preserved without silently imposing a pay-only rule. Thirty-one printed expense dashes remain null. Source footnote markers identify City-paid work assigned to Mission Bridgehead Investment Corporation; no outside amount is assigned or added to individual observations. Retain the compiled partition: no compatible same-calendar-year compiled cohort has been established. Root owns any future period mapping or deletion; full strict multiset comparison is pinned separately."
+    },
+    {
+      "id": "queue-completion-municipal-mission-2025-elected-officials",
+      "employerSlug": "city-of-mission",
+      "year": "2025",
+      "scope": "elected-officials",
+      "rowCount": 7,
+      "sourceUrl": "https://www.mission.ca/media/file/2025-sofi-reportpdf",
+      "sha256": "23864d9e618e6ceaab92a67e06d38f43d7433e00b747ae53785d8f39f8822624",
+      "file": "mission-2025-elected-officials.json.gzip",
+      "dataSha256": "ba4cf5785fca75af0ecf525c018a3e8068028cdecd90a187dd33d42d26817eb9",
+      "retainCompiledPartition": true,
+      "publicWarning": "This source contains the complete seven-person elected-official scope only; employee observations are a separate source. Two printed expense dashes remain null; known-expense sums do not impute those dashes as zero. Retain the compiled partition: no compatible same-calendar-year compiled cohort has been established. Root owns any future period mapping or deletion; full strict multiset comparison is pinned separately."
+    },
+    {
+      "id": "queue-completion-municipal-vernon-2025-employee-remuneration",
+      "employerSlug": "city-of-vernon",
+      "year": "2025",
+      "scope": "employee-remuneration",
+      "rowCount": 264,
+      "sourceUrl": "https://www.vernon.ca/sites/default/files/2026-08/SOFI%20Signed%20-%20CORRECTED.pdf",
+      "sha256": "83a9e5a60b67e1df5016762ab5e8bd9cc3fc054e55ddc28b1a4c1a8cff7d0197",
+      "file": "vernon-2025-employee-remuneration.json.gzip",
+      "dataSha256": "b04ebd02e091b7df43c9324ff38ed26a3e37d8080a85d66c5ada331b2398940e",
+      "retainCompiledPartition": true,
+      "publicWarning": "The 264 named employee rows total CAD 28,678,528 gross earnings and 380,683 expenses net of tax. Gross earnings agree with the printed named subtotal; the printed named-expense subtotal is 381,690, so literal row expenses minus that control are -1,007. Printed named expenses 381,690 plus below-threshold expenses 100,126 equal the printed all-employee expense total 481,816. Individual cells remain as printed, without balancing or a cause inferred. All 25 literal zero expenses remain 0. Employee job titles are not published and remain null. Retain the compiled partition: no compatible same-calendar-year compiled cohort has been established. Root owns any future period mapping or deletion; full strict multiset comparison is pinned separately."
+    },
+    {
+      "id": "queue-completion-municipal-vernon-2025-elected-officials",
+      "employerSlug": "city-of-vernon",
+      "year": "2025",
+      "scope": "elected-officials",
+      "rowCount": 7,
+      "sourceUrl": "https://www.vernon.ca/sites/default/files/2026-08/SOFI%20Signed%20-%20CORRECTED.pdf",
+      "sha256": "83a9e5a60b67e1df5016762ab5e8bd9cc3fc054e55ddc28b1a4c1a8cff7d0197",
+      "file": "vernon-2025-elected-officials.json.gzip",
+      "dataSha256": "d550c53fe7afff15491e97c93807d5fce0c1e4533e715bb848a972d5034f7a80",
+      "retainCompiledPartition": true,
+      "publicWarning": "This source contains the complete seven-person elected-official scope only; employee observations are a separate source. Retain the compiled partition: no compatible same-calendar-year compiled cohort has been established. Root owns any future period mapping or deletion; full strict multiset comparison is pinned separately."
+    },
+    {
+      "id": "queue-completion-municipal-creston-2024-employee-remuneration",
+      "employerSlug": "town-of-creston",
+      "year": "2024",
+      "scope": "employee-remuneration",
+      "rowCount": 27,
+      "sourceUrl": "https://www.creston.ca/sites/default/files/2025-07/Statement%20of%20Financial%20Information%202024.pdf",
+      "sha256": "24a6cd0394f42596859f15cb4a1ec811c28c5a5c09e004a3766aa78130396ac6",
+      "file": "creston-2024-employee-remuneration.json.gzip",
+      "dataSha256": "e71de303545fbf4f668a240b11128a2e106b979b3c817be543a36be311c2fce9",
+      "retainCompiledPartition": true,
+      "publicWarning": "The 27 named employee rows total CAD 2,684,996 remuneration and 61,034 expenses, compared with printed named-employee subtotals 2,685,008 and 61,044: row sums minus printed controls are -12 and -10. Separately, printed named plus below-threshold employee expense controls 61,044 + 67,341 equal 128,385, while the all-employee expense control is 128,386 (1 higher). The separate remuneration reconciliation shows elected 164,518 plus all employees 4,268,181, with printed subtotal 4,432,699, but the final amount included in the Statement of Revenue and Expenditure is 4,432,689 (10 lower). Published individual cells are retained unchanged; causes remain unresolved. Retain the compiled partition: no compatible same-calendar-year compiled cohort has been established. Root owns any future period mapping or deletion; full strict multiset comparison is pinned separately."
+    }
+  ],
+  "originalInventory": [
+    {
+      "key": "mission-2023",
+      "url": "https://www.mission.ca/media/file/2023-sofi-report",
+      "finalUrl": "https://www.mission.ca/media/file/2023-sofi-report",
+      "status": 200,
+      "contentType": "application/pdf",
+      "bytes": 486250,
+      "sha256": "82e0ab886a7e8a1e464e3afa25127be7176de79881b93b7602c5a101c8f4d6ac",
+      "cachePath": "/tmp/queue-completion-municipal/mission-2023.pdf"
+    },
+    {
+      "key": "mission-2024",
+      "url": "https://www.mission.ca/media/file/2024-sofi-report",
+      "finalUrl": "https://www.mission.ca/media/file/2024-sofi-report",
+      "status": 200,
+      "contentType": "application/pdf",
+      "bytes": 522117,
+      "sha256": "a4fa12aba963169e276fcd69680887ff788f731fd3ac5260135b88705db4e5a9",
+      "cachePath": "/tmp/queue-completion-municipal/mission-2024.pdf"
+    },
+    {
+      "key": "mission-2025",
+      "url": "https://www.mission.ca/media/file/2025-sofi-reportpdf",
+      "finalUrl": "https://www.mission.ca/media/file/2025-sofi-reportpdf",
+      "status": 200,
+      "contentType": "application/pdf",
+      "bytes": 584620,
+      "sha256": "23864d9e618e6ceaab92a67e06d38f43d7433e00b747ae53785d8f39f8822624",
+      "cachePath": "/tmp/queue-completion-municipal/mission-2025.pdf"
+    },
+    {
+      "key": "vernon-2025",
+      "url": "https://www.vernon.ca/sites/default/files/2026-08/SOFI%20Signed%20-%20CORRECTED.pdf",
+      "finalUrl": "https://www.vernon.ca/sites/default/files/2026-08/SOFI%20Signed%20-%20CORRECTED.pdf",
+      "status": 200,
+      "contentType": "application/pdf",
+      "bytes": 530550,
+      "sha256": "83a9e5a60b67e1df5016762ab5e8bd9cc3fc054e55ddc28b1a4c1a8cff7d0197",
+      "cachePath": "/tmp/queue-completion-municipal/vernon-2025.pdf"
+    },
+    {
+      "url": "https://www.creston.ca/sites/default/files/2025-07/Statement%20of%20Financial%20Information%202024.pdf",
+      "finalUrl": "https://www.creston.ca/sites/default/files/2025-07/Statement%20of%20Financial%20Information%202024.pdf",
+      "sha256": "24a6cd0394f42596859f15cb4a1ec811c28c5a5c09e004a3766aa78130396ac6",
+      "cachePath": "/tmp/queue-completion-municipal/creston-2024.pdf"
+    }
+  ],
+  "independentPeerClosures": [
+    {
+      "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-mission-queue-2023-final-source-closure.json",
+      "sha256": "832131a2fa57d85f58bc8279c3a5504f2b74e643794913a5fedd8c0d015af662"
+    },
+    {
+      "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-mission-queue-2024-final-source-closure.json",
+      "sha256": "87270deb92164fbcb1007821baafc7f9a64ea70d44705a286996fbe52ccb2997"
+    },
+    {
+      "path": "research/salaries/queue-completion-2026-11-01/reviews/root-mission-2025-final-source-closure.json",
+      "sha256": "5af33206bc806e0bc74a609bed145681bb4de6c82a6c96e295cda4d0659a4dfc"
+    },
+    {
+      "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-vernon-queue-2025-final-source-closure.json",
+      "sha256": "80e277e477673e2840dcf861c7432415a39fd261febb52a651f9b520edd5a89f"
+    },
+    {
+      "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-creston-queue-final-payload-comparison.json",
+      "sha256": "10d2b1579e743510f1341967021ae0feeb064e2e09d2720af11d4c2b83ce9664"
+    },
+    {
+      "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-creston-queue-two-engine-source-comparison.json",
+      "sha256": "8fa329f360e3c1417b551d653f2320aa42344fcd3ed4265323754220fafbff3d"
+    }
+  ],
+  "originalReplay": {
+    "path": "research/salaries/queue-completion-2026-11-01/municipal/original-replay-verification.json",
+    "sha256": "91b2022da74ce70a9f5dba909f48b483bd9af3344b6a86517d53caabb5aa7e5d"
+  },
+  "offlineReplay": {
+    "path": "research/salaries/queue-completion-2026-11-01/municipal/offline-replay-verification.json",
+    "sha256": "b61a64292642a78fd7285b20b89f103d9d5aad761cb5fe9d83bd3be52f9fdeda"
+  },
+  "compiledComparison": {
+    "path": "research/salaries/queue-completion-2026-11-01/municipal/compiled-comparison.json.gzip",
+    "sha256": "92d1a71132c0a8546226be4fde4e6353f98ce1402df49810639c4ebef8b1fcac"
+  },
+  "overlapCheck": {
+    "path": "research/salaries/queue-completion-2026-11-01/municipal/overlap-and-existing-source-triage.json",
+    "sha256": "5716a9e7d1d6e2f673178f764b4fad409e2dc1b562aa459454668eb97c908dbd"
+  },
+  "workQueue": {
+    "path": "research/salaries/queue-completion-2026-11-01/municipal/work-queue.json",
+    "sha256": "524184b3191279de57ee4d5b3da9e04649137f71558c061003c8feb65ab7f7e0"
+  },
+  "mcbrideUnresolvedPublicRoute": {
+    "path": "research/salaries/queue-completion-2026-11-01/municipal/mcbride-current-public-route-review.json",
+    "sha256": "d2e7b299828d7eede48f5d81e3636caaa5d7ec4f7ad40540ec5eca743702cdcd"
+  },
+  "unsentMcBrideDraft": "research/salaries/queue-completion-2026-11-01/acquisition/outbox/outbox-mcbride-council-period.md",
+  "outboxRecipientVerification": "research/salaries/queue-completion-2026-11-01/acquisition/outbox/contact-verification.json",
+  "messagesSent": false,
+  "feesIncurred": false,
+  "oldFrozenFilesModified": false,
+  "globalFilesModifiedByThisWorker": false,
+  "compiledDeletionAuthorized": false,
+  "nextTeamWork": "After this municipal handoff, join PHSA historical image batches coordinated by recovery_review. This handoff does not claim that issuer-dependent McBride clarification has been resolved."
+}

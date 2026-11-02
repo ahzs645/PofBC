@@ -1,0 +1,70 @@
+{
+  "reviewer": "/root/recovery_review",
+  "reviewedOn": "2026-11-02",
+  "sourceId": "phsa-2019-20",
+  "sourceSha256": "0e31ac2054f0c2d4ef78797185dddd96cc0cdf2eab94bd6841fa24e1c38e7d02",
+  "batch": "phsa-2019-20-007",
+  "originalFrozenFirstPass": {
+    "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-history-batches-2019-20-007-original-transcript.json",
+    "sha256": "bc93f96272e6e89a435c1d8b5c012941c2b04086b942d2e4741e11cc0ccb98e7"
+  },
+  "previousScopedProposal": {
+    "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-history-batches-2019-20-007-source-name-proposals-before-peer-choices.json",
+    "sha256": "c98e5b8ecfdf9f88c1a1f782bd940028a8c138f8da0f9f67e8ac87aa8a601568"
+  },
+  "timing": "After both fresh peer42+11 raw transcripts froze and were compared; direct unchanged actualPDF2400 source reread, not dictionary or OCR authority.",
+  "ownNameCorrection": {
+    "sequence": 94,
+    "initialFrozenName": "Hreczky,Peter",
+    "firstSourceRereadName": "Hreczky,Peter",
+    "finalLiteralSourceName": "Hraczky,Peter",
+    "basis": "The third letter has the closed a bowl/right stem rather than the open e crossbar. My original and intermediate e readings were wrong; source peer initial a was correct.",
+    "actual2400Source": {
+      "path": "/workspace/salary-review-review-temp/own2019-007-disagreements/seq094-whole-name-source2400.png",
+      "sha256": "ba267a5445d92f0e6f67de8583e2e2ca85c559e56793767ca70174effc82cb39"
+    }
+  },
+  "retainedDirectLiteralSource": {
+    "sequence": 229,
+    "currentName": "Janmohamed-Velani,Taslin",
+    "peerFirstName": "Janmohamed-Velani,Taslim",
+    "basis": "Unchanged final source word has one n arch/two stems following dotted i, rather than the two arches/three stems of m. Source final n retained pending peer source recheck.",
+    "actual2400WholeName": {
+      "path": "/workspace/salary-review-review-temp/own2019-007-disagreements/seq229-whole-name-source2400.png",
+      "sha256": "69662e52e670cce9060f7a0990cd01d7028e04170ba4033fbf7cc5fb04f1ffc9"
+    },
+    "unchangedInkFinalWord": {
+      "path": "/workspace/salary-review-review-temp/own2019-007-disagreements/seq229-final-word-source2400.png",
+      "sha256": "44ec22127e7e9df6533944af78411c6333a7416867e161ddb7a482721ef16d57"
+    }
+  },
+  "remainingConservativeOtherLetterCase": {
+    "sequence": 217,
+    "frozenAuthorPrimary": "Jakkavannangsri,Simon",
+    "frozenPeerPrimary": "Jakkavanrangsri,Simon",
+    "finiteVisibleAlternatives": [
+      "Jakkavannangsri,Simon",
+      "Jakkavanrangsri,Simon"
+    ],
+    "basis": "Compressed joined middle n/r cluster remains conservatively non-unique on current original. Primary preference split is preserved; this is outside generic rn/m grammar and requires separate exact root authority/public warning or actual unique-source resolution.",
+    "actual2400WholeName": {
+      "path": "/workspace/salary-review-review-temp/own2019-007-disagreements/seq217-whole-name-source2400.png",
+      "sha256": "9e2716e3b5525a6adccec0d6dbdf045bf389137c0e464c268e2c6cdce2051cab"
+    },
+    "unchangedInkMiddleLetters": {
+      "path": "/workspace/salary-review-review-temp/own2019-007-disagreements/seq217-middle-letter-source2400.png",
+      "sha256": "2c83e4e7c613ca3f0a2fcba3efadc9975621f7f24a05cac0d9dbae355a207afe"
+    }
+  },
+  "metadataQualificationAddition": {
+    "sequence": 16,
+    "primaryUnchanged": "Hillier,Sherman",
+    "finiteVisibleAlternatives": [
+      "Hillier,Sherman",
+      "Hillier,Sherrnan"
+    ],
+    "basis": "Fresh source-first peer independently marked this finite m/rn join; my first raw question16 already flagged given-word r/m but my initial finite-case proposal omitted it. Proposed metadata addition only, no primary change."
+  },
+  "allEarlierFrozenBytesUnchanged": true,
+  "noSourceMoneyOrWhole300AcceptanceClaim": true
+}

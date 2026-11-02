@@ -1,0 +1,1335 @@
+{
+  "reviewer": "/root/held_health_review",
+  "date": "2026-11-01",
+  "sourceYear": 2023,
+  "sourceSha256": "82e0ab886a7e8a1e464e3afa25127be7176de79881b93b7602c5a101c8f4d6ac",
+  "sourcePhysicalPages": 14,
+  "sourceSalaryPhysicalPages": [
+    6,
+    7,
+    8,
+    9
+  ],
+  "verdict": "peer-source-review-passed-with-literal-source-pay-residual",
+  "sourceAcceptanceOwnedByRoot": true,
+  "imageFirstTranscript": {
+    "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-mission-queue-2023-image-transcript.tsv",
+    "sha256": "e35e2d98b8ac5fb2dbfa8e71bab7ea0b9c9a719cafac2fb26df8688c975085b9",
+    "receiptPath": "research/salaries/queue-completion-2026-11-01/reviews/independent-mission-queue-2023-image-transcript-receipt.json",
+    "receiptSha256": "ed3ed8c85dbfcaa6390bad6eb6990967f06c7c2882812cced4841ebac2bedc6d",
+    "candidateAlternativesOpenedOnlyAfterFreeze": true
+  },
+  "finalLiteralTranscript": {
+    "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-mission-queue-2023-final-literal-transcript.tsv",
+    "sha256": "67c4d8c107505e339dae13ca07136e2ab39fbc3a30691c5d13a8b7f9247e1fe0"
+  },
+  "candidateFiles": [
+    {
+      "scope": "elected-officials",
+      "path": "research/salaries/queue-completion-municipal/mission-2023-elected-officials.json.gzip",
+      "sha256": "f71a43a4c8836faaa49fd5999b938822debd015cdeb7d2f10d09fd995fd527c4",
+      "normalizedSha256": "95b4b0a025f672699ba4cac773a2a3a3e28e61e454939dbe353baccf8a71f1f6",
+      "rows": 7,
+      "allSixFieldsExactOrderedMatchIndependentSource": true,
+      "remunerationSum": 384911,
+      "expensesKnownSum": 28443,
+      "nullExpenseDashes": 0,
+      "explicitZeroExpenses": 0,
+      "duplicateFullSixFieldRows": 0
+    },
+    {
+      "scope": "employee-remuneration",
+      "path": "research/salaries/queue-completion-municipal/mission-2023-employee-remuneration-v2.json.gzip",
+      "sha256": "2472408946cb5c02aa9daa797fc883658bdcc28b3e0d3090bc8b7ae276114836",
+      "normalizedSha256": "72be979ec187a63afc9be3b4dc8f543764e0169deeafd5a0504c2fe98647a57d",
+      "rows": 148,
+      "allSixFieldsExactOrderedMatchIndependentSource": true,
+      "remunerationSum": 16445762,
+      "expensesKnownSum": 318887,
+      "nullExpenseDashes": 9,
+      "explicitZeroExpenses": 0,
+      "duplicateFullSixFieldRows": 0
+    }
+  ],
+  "independentActualPdfRenderComparison": [
+    {
+      "sourceYear": 2023,
+      "physicalPage": 1,
+      "actualRgb300DpiPageSha256": "71863d3d892c04a56b3b7caaf92197e2161f7234ce6ba1112317ccb3cc743c08",
+      "independentRenderMatchesAuthorByteForByte": true
+    },
+    {
+      "sourceYear": 2023,
+      "physicalPage": 2,
+      "actualRgb300DpiPageSha256": "6842b0142968dbeaeb09627b6d159ab1839dae483a9e25196a503aaa9f191cee",
+      "independentRenderMatchesAuthorByteForByte": true
+    },
+    {
+      "sourceYear": 2023,
+      "physicalPage": 6,
+      "actualRgb300DpiPageSha256": "86982aed8c46923386b37e7e41efdff9dc5f3d64a5f0a0d4a05ab0cc08044ad7",
+      "independentRenderMatchesAuthorByteForByte": true
+    },
+    {
+      "sourceYear": 2023,
+      "physicalPage": 7,
+      "actualRgb300DpiPageSha256": "4353dcc8cf9149dbd3cd9d72ee5f48f180c7ee534084d98a11dee5ceac3f77b2",
+      "independentRenderMatchesAuthorByteForByte": true
+    },
+    {
+      "sourceYear": 2023,
+      "physicalPage": 8,
+      "actualRgb300DpiPageSha256": "560cc01ad518137e2993d8f566264b1a77ae0a4403875572bb28b88af3096985",
+      "independentRenderMatchesAuthorByteForByte": true
+    },
+    {
+      "sourceYear": 2023,
+      "physicalPage": 9,
+      "actualRgb300DpiPageSha256": "e5b949dccf74ef8c5e66e9db8584e4aea484b5aca00016ca5c31e4475e9ac1b5",
+      "independentRenderMatchesAuthorByteForByte": true
+    }
+  ],
+  "fullDocumentThumbnailSurvey": {
+    "allPagesPersonallyViewed": true,
+    "dpi": 36,
+    "namedSalarySchedulesOnlyPhysicalPages": [
+      6,
+      7,
+      8,
+      9
+    ],
+    "limits": "Other pages surveyed for scope; nonsalary statements and suppliers were not fully transcribed."
+  },
+  "all324RowsNamesTitlesPayExpensePersonallyViewed": true,
+  "sourceSpecificFieldsPersonallyRead": 775,
+  "supporting2023TotalIsExpenseInclusiveNotPay": true,
+  "sourceDefinitionsIndependentlyConfirmed": {
+    "remuneration": "Includes any form of salary, wage, gratuities and taxable benefits, including applicable vehicle allowances paid to the employee or on behalf of an employee.",
+    "expenses": "Includes travel expenses, memberships, tuition, relocation, vehicle reimbursements, and registration fees paid directly to an employee or to a third party on behalf of an employee.",
+    "financialStatementRelation": "Schedule is based on actual payments made during the year; financial statements are prepared on an accrual basis.",
+    "sourceNamedSubtotalLabel": "Subtotal - employees with remuneration and expenses exceeding $75,000",
+    "thresholdMeaning": "Retain every printed named row, including individual remuneration below$75,000. Do not silently convert this combined source label into a salary-only selection rule.",
+    "physicalPage": 9
+  },
+  "signedWholeSofiApprovalPersonallyViewed": {
+    "physicalPage": 1,
+    "statement": "Approves all statements and schedules included in this Statement of Financial Information.",
+    "signatories": [
+      {
+        "name": "Doug Stewart, CPA, CGA",
+        "position": "Director of Finance",
+        "signedDate": "2024-06-17"
+      },
+      {
+        "name": "Paul Horn",
+        "position": "MAYOR on behalf of Council",
+        "signedDate": "2024-06-17"
+      }
+    ],
+    "visuallySigned": true
+  },
+  "managementStatementLimit": "External audit is of financial statements, not the other SOFI schedules; signed source approval is not an audit guarantee.",
+  "period": {
+    "type": "calendar-year",
+    "start": "2023-01-01",
+    "end": "2023-12-31",
+    "allSalaryPageHeadersConfirmYear": true
+  },
+  "independentPrintedPageControlComparison": [
+    {
+      "physicalPage": 6,
+      "namedEmployeeRows": 39,
+      "printedControl": [
+        4050149,
+        97830,
+        4147979
+      ],
+      "literalRowSums": [
+        4050146,
+        97830,
+        4147979
+      ],
+      "literalMinusPrintedResiduals": [
+        -3,
+        0,
+        0
+      ]
+    },
+    {
+      "physicalPage": 7,
+      "namedEmployeeRows": 51,
+      "printedControl": [
+        5673866,
+        109375,
+        5783241
+      ],
+      "literalRowSums": [
+        5673866,
+        109375,
+        5783241
+      ],
+      "literalMinusPrintedResiduals": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "physicalPage": 8,
+      "namedEmployeeRows": 51,
+      "printedControl": [
+        5718042,
+        95786,
+        5813828
+      ],
+      "literalRowSums": [
+        5718042,
+        95786,
+        5813828
+      ],
+      "literalMinusPrintedResiduals": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "physicalPage": 9,
+      "namedEmployeeRows": 7,
+      "printedControl": [
+        1003708,
+        15896,
+        1019604
+      ],
+      "literalRowSums": [
+        1003708,
+        15896,
+        1019604
+      ],
+      "literalMinusPrintedResiduals": [
+        0,
+        0,
+        0
+      ]
+    }
+  ],
+  "printedCohortControlsIndependentlyRead": {
+    "namedEmployees": {
+      "rows": 148,
+      "remuneration": 16445765,
+      "expenses": 318887,
+      "total": 16764652
+    },
+    "electedOfficials": {
+      "rows": 7,
+      "remuneration": 384911,
+      "expenses": 28443,
+      "total": 413354
+    },
+    "belowThresholdEmployees": {
+      "remuneration": 12403217,
+      "expenses": 119350,
+      "total": 12522567
+    },
+    "allEmployees": {
+      "remuneration": 28848982,
+      "expenses": 438237,
+      "total": 29287219
+    },
+    "allEmployeesAndElected": {
+      "remuneration": 29233893,
+      "expenses": 466680,
+      "total": 29700573
+    }
+  },
+  "multiplicity": {
+    "sourceRowsPreservedExactly": true,
+    "repeatedNameDifferentRolesPreserved": true,
+    "noIdentityOrCrossPeriodMergeAssumed": true,
+    "compiledPartitionsRetained": true
+  },
+  "missingAndZero": {
+    "sourceExpenseDashesRemainNull": true,
+    "blankOrMissingOcrNotConvertedToDashOrZero": true,
+    "explicitZeroExpenses": 0,
+    "noNegativeExpenseOrPayCellsInThisReviewedScope": true
+  },
+  "rawTwoEngineComparison": {
+    "allRowsAndFieldsComparedAgainstIndependentImageReadings": true,
+    "rawEvidenceReviewPath": "research/salaries/queue-completion-2026-11-01/municipal/mission-2023-original-review.json.gzip",
+    "rawEvidenceReviewSha256": "5ffbfb2cf61dd1ece941c3407a14d42e95d899d9cf32b84be72832a5ef390201",
+    "sourceEvidencePaths": [
+      {
+        "path": "research/salaries/queue-completion-2026-11-01/municipal/ocr/mission-2023-p06.json.gzip",
+        "sha256": "9e8268c73e3ea9b86681ff6fcfd39b24aa09dda0ecc18b8d11a61dc598fe79de"
+      },
+      {
+        "path": "research/salaries/queue-completion-2026-11-01/municipal/ocr/mission-2023-p06.json.gzip",
+        "sha256": "9e8268c73e3ea9b86681ff6fcfd39b24aa09dda0ecc18b8d11a61dc598fe79de"
+      },
+      {
+        "path": "research/salaries/queue-completion-2026-11-01/municipal/ocr/mission-2023-p07.json.gzip",
+        "sha256": "30177fdcad7848d0f2fa3442c2957151623357b2118115b2d2a489d082315f81"
+      },
+      {
+        "path": "research/salaries/queue-completion-2026-11-01/municipal/ocr/mission-2023-p08.json.gzip",
+        "sha256": "953ef80162471d097e98a24fe50fdb20671379a6e3f90eee67e6322496e0e4a9"
+      },
+      {
+        "path": "research/salaries/queue-completion-2026-11-01/municipal/ocr/mission-2023-p09.json.gzip",
+        "sha256": "53348d95e7ca742942f09ad11d2377a9670a31d16f98b00deda2a1ff28f37834"
+      }
+    ],
+    "fieldDifferences": [
+      {
+        "physicalPage": 6,
+        "scope": "elected-officials",
+        "sourceRowOnPage": 1,
+        "field": "total",
+        "engine": "tesseract",
+        "rawReading": null,
+        "independentLiteralReading": 51312,
+        "originalFullyImageReviewed": true
+      },
+      {
+        "physicalPage": 6,
+        "scope": "elected-officials",
+        "sourceRowOnPage": 2,
+        "field": "name",
+        "engine": "paddle",
+        "rawReading": "Elias,A",
+        "independentLiteralReading": "Elias, A",
+        "originalFullyImageReviewed": true
+      },
+      {
+        "physicalPage": 6,
+        "scope": "employee-remuneration",
+        "sourceRowOnPage": 2,
+        "field": "position",
+        "engine": "paddle",
+        "rawReading": "PublicWorks Supervisor-Utilities Assets",
+        "independentLiteralReading": "Public Works Supervisor - Utilities Assets",
+        "originalFullyImageReviewed": true
+      },
+      {
+        "physicalPage": 6,
+        "scope": "employee-remuneration",
+        "sourceRowOnPage": 4,
+        "field": "position",
+        "engine": "paddle",
+        "rawReading": "EngineeringTechnologist2-Development",
+        "independentLiteralReading": "Engineering Technologist 2 - Development",
+        "originalFullyImageReviewed": true
+      },
+      {
+        "physicalPage": 6,
+        "scope": "employee-remuneration",
+        "sourceRowOnPage": 4,
+        "field": "expenses",
+        "engine": "paddle",
+        "rawReading": null,
+        "independentLiteralReading": 1388,
+        "originalFullyImageReviewed": true
+      },
+      {
+        "physicalPage": 6,
+        "scope": "employee-remuneration",
+        "sourceRowOnPage": 5,
+        "field": "total",
+        "engine": "tesseract",
+        "rawReading": 96395,
+        "independentLiteralReading": 96895,
+        "originalFullyImageReviewed": true
+      },
+      {
+        "physicalPage": 6,
+        "scope": "employee-remuneration",
+        "sourceRowOnPage": 5,
+        "field": "position",
+        "engine": "paddle",
+        "rawReading": "Planner 1-Land Use",
+        "independentLiteralReading": "Planner 1 - Land Use",
+        "originalFullyImageReviewed": true
+      },
+      {
+        "physicalPage": 6,
+        "scope": "employee-remuneration",
+        "sourceRowOnPage": 8,
+        "field": "position",
+        "engine": "paddle",
+        "rawReading": "StreetSweeper",
+        "independentLiteralReading": "Street Sweeper",
+        "originalFullyImageReviewed": true
+      },
+      {
+        "physicalPage": 6,
+        "scope": "employee-remuneration",
+        "sourceRowOnPage": 8,
+        "field": "expenses",
+        "engine": "paddle",
+        "rawReading": 66,
+        "independentLiteralReading": 990,
+        "originalFullyImageReviewed": true
+      },
+      {
+        "physicalPage": 6,
+        "scope": "employee-remuneration",
+        "sourceRowOnPage": 9,
+        "field": "position",
+        "engine": "paddle",
+        "rawReading": "ManagerofRCMPAdministration",
+        "independentLiteralReading": "Manager of RCMP Administration",
+        "originalFullyImageReviewed": true
+      },
+      {
+        "physicalPage": 6,
+        "scope": "employee-remuneration",
+        "sourceRowOnPage": 10,
+        "field": "position",
+        "engine": "paddle",
+        "rawReading": "ManagerofEnvironmentalServices",
+        "independentLiteralReading": "Manager of Environmental Services",
+        "originalFullyImageReviewed": true
+      },
+      {
+        "physicalPage": 6,
+        "scope": "employee-remuneration",
+        "sourceRowOnPage": 11,
+        "field": "remuneration",
+        "engine": "tesseract",
+        "rawReading": 93274,
+        "independentLiteralReading": 93271,
+        "originalFullyImageReviewed": true
+      },
+      {
+        "physicalPage": 6,
+        "scope": "employee-remuneration",
+        "sourceRowOnPage": 11,
+        "field": "remuneration",
+        "engine": "paddle",
+        "rawReading": 93274,
+        "independentLiteralReading": 93271,
+        "originalFullyImageReviewed": true
+      },
+      {
+        "physicalPage": 6,
+        "scope": "employee-remuneration",
+        "sourceRowOnPage": 12,
+        "field": "position",
+        "engine": "paddle",
+        "rawReading": "FacilitiesMaintenanceWorker3",
+        "independentLiteralReading": "Facilities Maintenance Worker 3",
+        "originalFullyImageReviewed": true
+      },
+      {
+        "physicalPage": 6,
+        "scope": "employee-remuneration",
+        "sourceRowOnPage": 14,
+        "field": "position",
+        "engine": "paddle",
+        "rawReading": "Planner3-Land Use",
+        "independentLiteralReading": "Planner 3 - Land Use",
+        "originalFullyImageReviewed": true
+      },
+      {
+        "physicalPage": 6,
+        "scope": "employee-remuneration",
+        "sourceRowOnPage": 16,
+        "field": "position",
+        "engine": "paddle",
+        "rawReading": "ExecutiveAssistant",
+        "independentLiteralReading": "Executive Assistant",
+        "originalFullyImageReviewed": true
+      },
+      {
+        "physicalPage": 6,
+        "scope": "employee-remuneration",
+        "sourceRowOnPage": 19,
+        "field": "position",
+        "engine": "paddle",
+        "rawReading": "Water/SewerOperator&WaterQualityTechnician",
+        "independentLiteralReading": "Water/Sewer Operator & Water Quality Technician",
+        "originalFullyImageReviewed": true
+      },
+      {
+        "physicalPage": 6,
+        "scope": "employee-remuneration",
+        "sourceRowOnPage": 21,
+        "field": "position",
+        "engine": "paddle",
+        "rawReading": "OperationsManager-Fleet",
+        "independentLiteralReading": "Operations Manager - Fleet",
+        "originalFullyImageReviewed": true
+      },
+      {
+        "physicalPage": 6,
+        "scope": "employee-remuneration",
+        "sourceRowOnPage": 24,
+        "field": "position",
+        "engine": "paddle",
+        "rawReading": "Directorof Parks,Recreation&Culture",
+        "independentLiteralReading": "Director of Parks, Recreation & Culture",
+        "originalFullyImageReviewed": true
+      },
+      {
+        "physicalPage": 6,
+        "scope": "employee-remuneration",
+        "sourceRowOnPage": 25,
+        "field": "position",
+        "engine": "paddle",
+        "rawReading": "OperationsManager-ClarkeTheatre",
+        "independentLiteralReading": "Operations Manager - Clarke Theatre",
+        "originalFullyImageReviewed": true
+      },
+      {
+        "physicalPage": 6,
+        "scope": "employee-remuneration",
+        "sourceRowOnPage": 27,
+        "field": "position",
+        "engine": "paddle",
+        "rawReading": "BylawEnforcementSupervisor",
+        "independentLiteralReading": "Bylaw Enforcement Supervisor",
+        "originalFullyImageReviewed": true
+      },
+      {
+        "physicalPage": 6,
+        "scope": "employee-remuneration",
+        "sourceRowOnPage": 28,
+        "field": "position",
+        "engine": "paddle",
+        "rawReading": "Managerof Long-RangePlanning&Special Projects",
+        "independentLiteralReading": "Manager of Long-Range Planning & Special Projects",
+        "originalFullyImageReviewed": true
+      },
+      {
+        "physicalPage": 6,
+        "scope": "employee-remuneration",
+        "sourceRowOnPage": 31,
+        "field": "name",
+        "engine": "paddle",
+        "rawReading": "Everitt,R",
+        "independentLiteralReading": "Everitt, R",
+        "originalFullyImageReviewed": true
+      },
+      {
+        "physicalPage": 6,
+        "scope": "employee-remuneration",
+        "sourceRowOnPage": 31,
+        "field": "position",
+        "engine": "paddle",
+        "rawReading": "Court Liason/Firearms Officer",
+        "independentLiteralReading": "Court Liason / Firearms Officer",
+        "originalFullyImageReviewed": true
+      },
+      {
+        "physicalPage": 6,
+        "scope": "employee-remuneration",
+        "sourceRowOnPage": 33,
+        "field": "name",
+        "engine": "tesseract",
+        "rawReading": "Foster, |",
+        "independentLiteralReading": "Foster, I",
+        "originalFullyImageReviewed": true
+      },
+      {
+        "physicalPage": 6,
+        "scope": "employee-remuneration",
+        "sourceRowOnPage": 34,
+        "field": "name",
+        "engine": "tesseract",
+        "rawReading": "Fry,R",
+        "independentLiteralReading": "Fry, R",
+        "originalFullyImageReviewed": true
+      },
+      {
+        "physicalPage": 6,
+        "scope": "employee-remuneration",
+        "sourceRowOnPage": 34,
+        "field": "position",
+        "engine": "paddle",
+        "rawReading": "Water/SewerOperator",
+        "independentLiteralReading": "Water/Sewer Operator",
+        "originalFullyImageReviewed": true
+      },
+      {
+        "physicalPage": 6,
+        "scope": "employee-remuneration",
+        "sourceRowOnPage": 35,
+        "field": "position",
+        "engine": "paddle",
+        "rawReading": "Director ofHuman Resources",
+        "independentLiteralReading": "Director of Human Resources",
+        "originalFullyImageReviewed": true
+      },
+      {
+        "physicalPage": 6,
+        "scope": "employee-remuneration",
+        "sourceRowOnPage": 36,
+        "field": "position",
+        "engine": "paddle",
+        "rawReading": "Planner 1-Land Use",
+        "independentLiteralReading": "Planner 1 - Land Use",
+        "originalFullyImageReviewed": true
+      },
+      {
+        "physicalPage": 6,
+        "scope": "employee-remuneration",
+        "sourceRowOnPage": 37,
+        "field": "position",
+        "engine": "paddle",
+        "rawReading": "SeniorBylawEnforcementOfficer",
+        "independentLiteralReading": "Senior Bylaw Enforcement Officer",
+        "originalFullyImageReviewed": true
+      },
+      {
+        "physicalPage": 6,
+        "scope": "employee-remuneration",
+        "sourceRowOnPage": 38,
+        "field": "position",
+        "engine": "paddle",
+        "rawReading": "Planner 2-Land Use",
+        "independentLiteralReading": "Planner 2 - Land Use",
+        "originalFullyImageReviewed": true
+      },
+      {
+        "physicalPage": 6,
+        "scope": "employee-remuneration",
+        "sourceRowOnPage": 39,
+        "field": "position",
+        "engine": "paddle",
+        "rawReading": "Managerof InspectionServices",
+        "independentLiteralReading": "Manager of Inspection Services",
+        "originalFullyImageReviewed": true
+      },
+      {
+        "physicalPage": 7,
+        "scope": "employee-remuneration",
+        "sourceRowOnPage": 3,
+        "field": "name",
+        "engine": "tesseract",
+        "rawReading": "Glasgow, |",
+        "independentLiteralReading": "Glasgow, I",
+        "originalFullyImageReviewed": true
+      },
+      {
+        "physicalPage": 7,
+        "scope": "employee-remuneration",
+        "sourceRowOnPage": 6,
+        "field": "name",
+        "engine": "tesseract",
+        "rawReading": "Goosen, \u00a7",
+        "independentLiteralReading": "Goosen, S",
+        "originalFullyImageReviewed": true
+      },
+      {
+        "physicalPage": 7,
+        "scope": "employee-remuneration",
+        "sourceRowOnPage": 6,
+        "field": "name",
+        "engine": "paddle",
+        "rawReading": "Goosen,S",
+        "independentLiteralReading": "Goosen, S",
+        "originalFullyImageReviewed": true
+      },
+      {
+        "physicalPage": 7,
+        "scope": "employee-remuneration",
+        "sourceRowOnPage": 6,
+        "field": "position",
+        "engine": "paddle",
+        "rawReading": "Water/SewerOperator&WaterQualityTechnician",
+        "independentLiteralReading": "Water/Sewer Operator & Water Quality Technician",
+        "originalFullyImageReviewed": true
+      },
+      {
+        "physicalPage": 7,
+        "scope": "employee-remuneration",
+        "sourceRowOnPage": 7,
+        "field": "name",
+        "engine": "paddle",
+        "rawReading": "Greene,S",
+        "independentLiteralReading": "Greene, S",
+        "originalFullyImageReviewed": true
+      },
+      {
+        "physicalPage": 7,
+        "scope": "employee-remuneration",
+        "sourceRowOnPage": 11,
+        "field": "name",
+        "engine": "paddle",
+        "rawReading": "Haney. M",
+        "independentLiteralReading": "Haney, M",
+        "originalFullyImageReviewed": true
+      },
+      {
+        "physicalPage": 7,
+        "scope": "employee-remuneration",
+        "sourceRowOnPage": 11,
+        "field": "position",
+        "engine": "paddle",
+        "rawReading": "ManagerofArtsandCulture",
+        "independentLiteralReading": "Manager of Arts and Culture",
+        "originalFullyImageReviewed": true
+      },
+      {
+        "physicalPage": 7,
+        "scope": "employee-remuneration",
+        "sourceRowOnPage": 11,
+        "field": "expenses",
+        "engine": "paddle",
+        "rawReading": 6,
+        "independentLiteralReading": 900,
+        "originalFullyImageReviewed": true
+      },
+      {
+        "physicalPage": 7,
+        "scope": "employee-remuneration",
+        "sourceRowOnPage": 13,
+        "field": "position",
+        "engine": "paddle",
+        "rawReading": "Public Works Supervisor- Roads/Drainage",
+        "independentLiteralReading": "Public Works Supervisor - Roads/Drainage",
+        "originalFullyImageReviewed": true
+      },
+      {
+        "physicalPage": 7,
+        "scope": "employee-remuneration",
+        "sourceRowOnPage": 16,
+        "field": "position",
+        "engine": "paddle",
+        "rawReading": "Manager of Parks &Facilities",
+        "independentLiteralReading": "Manager of Parks & Facilities",
+        "originalFullyImageReviewed": true
+      },
+      {
+        "physicalPage": 7,
+        "scope": "employee-remuneration",
+        "sourceRowOnPage": 17,
+        "field": "position",
+        "engine": "paddle",
+        "rawReading": "ManagerofCommunicationsandPublicEngagement",
+        "independentLiteralReading": "Manager of Communications and Public Engagement",
+        "originalFullyImageReviewed": true
+      },
+      {
+        "physicalPage": 7,
+        "scope": "employee-remuneration",
+        "sourceRowOnPage": 19,
+        "field": "position",
+        "engine": "paddle",
+        "rawReading": "Health&SafetyAdvisor",
+        "independentLiteralReading": "Health & Safety Advisor",
+        "originalFullyImageReviewed": true
+      },
+      {
+        "physicalPage": 7,
+        "scope": "employee-remuneration",
+        "sourceRowOnPage": 22,
+        "field": "position",
+        "engine": "paddle",
+        "rawReading": "Planner3",
+        "independentLiteralReading": "Planner 3",
+        "originalFullyImageReviewed": true
+      },
+      {
+        "physicalPage": 7,
+        "scope": "employee-remuneration",
+        "sourceRowOnPage": 23,
+        "field": "position",
+        "engine": "paddle",
+        "rawReading": "ManagerofDevelopmentEngineering,ProjectsandDesign",
+        "independentLiteralReading": "Manager of Development Engineering , Projects and Design",
+        "originalFullyImageReviewed": true
+      },
+      {
+        "physicalPage": 7,
+        "scope": "employee-remuneration",
+        "sourceRowOnPage": 25,
+        "field": "name",
+        "engine": "paddle",
+        "rawReading": "Kang,A",
+        "independentLiteralReading": "Kang, A",
+        "originalFullyImageReviewed": true
+      },
+      {
+        "physicalPage": 7,
+        "scope": "employee-remuneration",
+        "sourceRowOnPage": 26,
+        "field": "position",
+        "engine": "paddle",
+        "rawReading": "SeniorInfrastructurePlanning Engineer",
+        "independentLiteralReading": "Senior Infrastructure Planning Engineer",
+        "originalFullyImageReviewed": true
+      },
+      {
+        "physicalPage": 7,
+        "scope": "employee-remuneration",
+        "sourceRowOnPage": 27,
+        "field": "position",
+        "engine": "paddle",
+        "rawReading": "EngineeringTechnologist3-AssetManagement",
+        "independentLiteralReading": "Engineering Technologist 3 - Asset Management",
+        "originalFullyImageReviewed": true
+      },
+      {
+        "physicalPage": 7,
+        "scope": "employee-remuneration",
+        "sourceRowOnPage": 33,
+        "field": "position",
+        "engine": "paddle",
+        "rawReading": "Director of InformationTechnology",
+        "independentLiteralReading": "Director of Information Technology",
+        "originalFullyImageReviewed": true
+      },
+      {
+        "physicalPage": 7,
+        "scope": "employee-remuneration",
+        "sourceRowOnPage": 34,
+        "field": "name",
+        "engine": "paddle",
+        "rawReading": "Krox, A",
+        "independentLiteralReading": "Knox, A",
+        "originalFullyImageReviewed": true
+      },
+      {
+        "physicalPage": 7,
+        "scope": "employee-remuneration",
+        "sourceRowOnPage": 35,
+        "field": "position",
+        "engine": "paddle",
+        "rawReading": "DirectorofEngineering&PublicWorks",
+        "independentLiteralReading": "Director of Engineering & Public Works",
+        "originalFullyImageReviewed": true
+      },
+      {
+        "physicalPage": 7,
+        "scope": "employee-remuneration",
+        "sourceRowOnPage": 37,
+        "field": "position",
+        "engine": "paddle",
+        "rawReading": "ForestryOperationsSupervisor",
+        "independentLiteralReading": "Forestry Operations Supervisor",
+        "originalFullyImageReviewed": true
+      },
+      {
+        "physicalPage": 7,
+        "scope": "employee-remuneration",
+        "sourceRowOnPage": 38,
+        "field": "name",
+        "engine": "paddle",
+        "rawReading": "Leeder,E",
+        "independentLiteralReading": "Leeder, E",
+        "originalFullyImageReviewed": true
+      },
+      {
+        "physicalPage": 7,
+        "scope": "employee-remuneration",
+        "sourceRowOnPage": 38,
+        "field": "position",
+        "engine": "paddle",
+        "rawReading": "Planner 1-Land Use",
+        "independentLiteralReading": "Planner 1 - Land Use",
+        "originalFullyImageReviewed": true
+      },
+      {
+        "physicalPage": 7,
+        "scope": "employee-remuneration",
+        "sourceRowOnPage": 46,
+        "field": "position",
+        "engine": "paddle",
+        "rawReading": "FacilitiesMaintenanceWorker3",
+        "independentLiteralReading": "Facilities Maintenance Worker 3",
+        "originalFullyImageReviewed": true
+      },
+      {
+        "physicalPage": 7,
+        "scope": "employee-remuneration",
+        "sourceRowOnPage": 51,
+        "field": "position",
+        "engine": "paddle",
+        "rawReading": "Program Coordinator-Aquatic",
+        "independentLiteralReading": "Program Coordinator - Aquatic",
+        "originalFullyImageReviewed": true
+      },
+      {
+        "physicalPage": 8,
+        "scope": "employee-remuneration",
+        "sourceRowOnPage": 2,
+        "field": "position",
+        "engine": "paddle",
+        "rawReading": "FirePreventionOfficer",
+        "independentLiteralReading": "Fire Prevention Officer",
+        "originalFullyImageReviewed": true
+      },
+      {
+        "physicalPage": 8,
+        "scope": "employee-remuneration",
+        "sourceRowOnPage": 3,
+        "field": "position",
+        "engine": "paddle",
+        "rawReading": "BuildingMaintenanceSupervisor",
+        "independentLiteralReading": "Building Maintenance Supervisor",
+        "originalFullyImageReviewed": true
+      },
+      {
+        "physicalPage": 8,
+        "scope": "employee-remuneration",
+        "sourceRowOnPage": 7,
+        "field": "name",
+        "engine": "paddle",
+        "rawReading": "Onken,K",
+        "independentLiteralReading": "Onken, K",
+        "originalFullyImageReviewed": true
+      },
+      {
+        "physicalPage": 8,
+        "scope": "employee-remuneration",
+        "sourceRowOnPage": 7,
+        "field": "position",
+        "engine": "paddle",
+        "rawReading": "DeputyTreasurer/ Collector",
+        "independentLiteralReading": "Deputy Treasurer / Collector",
+        "originalFullyImageReviewed": true
+      },
+      {
+        "physicalPage": 8,
+        "scope": "employee-remuneration",
+        "sourceRowOnPage": 8,
+        "field": "position",
+        "engine": "paddle",
+        "rawReading": "EnviromentalCoordinator",
+        "independentLiteralReading": "Enviromental Coordinator",
+        "originalFullyImageReviewed": true
+      },
+      {
+        "physicalPage": 8,
+        "scope": "employee-remuneration",
+        "sourceRowOnPage": 9,
+        "field": "position",
+        "engine": "paddle",
+        "rawReading": "Mechanical/ElectricalServicesSupervisor",
+        "independentLiteralReading": "Mechanical / Electrical Services Supervisor",
+        "originalFullyImageReviewed": true
+      },
+      {
+        "physicalPage": 8,
+        "scope": "employee-remuneration",
+        "sourceRowOnPage": 10,
+        "field": "name",
+        "engine": "paddle",
+        "rawReading": "Pickens,C",
+        "independentLiteralReading": "Pickens, C",
+        "originalFullyImageReviewed": true
+      },
+      {
+        "physicalPage": 8,
+        "scope": "employee-remuneration",
+        "sourceRowOnPage": 12,
+        "field": "remuneration",
+        "engine": "tesseract",
+        "rawReading": 456722,
+        "independentLiteralReading": 156722,
+        "originalFullyImageReviewed": true
+      },
+      {
+        "physicalPage": 8,
+        "scope": "employee-remuneration",
+        "sourceRowOnPage": 12,
+        "field": "position",
+        "engine": "paddle",
+        "rawReading": "Manager ofPlanning",
+        "independentLiteralReading": "Manager of Planning",
+        "originalFullyImageReviewed": true
+      },
+      {
+        "physicalPage": 8,
+        "scope": "employee-remuneration",
+        "sourceRowOnPage": 13,
+        "field": "position",
+        "engine": "paddle",
+        "rawReading": "CrimePrevention Coordinator",
+        "independentLiteralReading": "Crime Prevention Coordinator",
+        "originalFullyImageReviewed": true
+      },
+      {
+        "physicalPage": 8,
+        "scope": "employee-remuneration",
+        "sourceRowOnPage": 14,
+        "field": "name",
+        "engine": "paddle",
+        "rawReading": "Racine,R",
+        "independentLiteralReading": "Racine, R",
+        "originalFullyImageReviewed": true
+      },
+      {
+        "physicalPage": 8,
+        "scope": "employee-remuneration",
+        "sourceRowOnPage": 14,
+        "field": "position",
+        "engine": "paddle",
+        "rawReading": "ManagerofCapitalProjects",
+        "independentLiteralReading": "Manager of Capital Projects",
+        "originalFullyImageReviewed": true
+      },
+      {
+        "physicalPage": 8,
+        "scope": "employee-remuneration",
+        "sourceRowOnPage": 15,
+        "field": "name",
+        "engine": "tesseract",
+        "rawReading": "Raman, $",
+        "independentLiteralReading": "Raman, S",
+        "originalFullyImageReviewed": true
+      },
+      {
+        "physicalPage": 8,
+        "scope": "employee-remuneration",
+        "sourceRowOnPage": 15,
+        "field": "position",
+        "engine": "paddle",
+        "rawReading": "CrewSupervisor-Facilities",
+        "independentLiteralReading": "Crew Supervisor - Facilities",
+        "originalFullyImageReviewed": true
+      },
+      {
+        "physicalPage": 8,
+        "scope": "employee-remuneration",
+        "sourceRowOnPage": 19,
+        "field": "name",
+        "engine": "paddle",
+        "rawReading": "Rohde,K",
+        "independentLiteralReading": "Rohde, K",
+        "originalFullyImageReviewed": true
+      },
+      {
+        "physicalPage": 8,
+        "scope": "employee-remuneration",
+        "sourceRowOnPage": 21,
+        "field": "position",
+        "engine": "paddle",
+        "rawReading": "BuildingInspection Supervisor",
+        "independentLiteralReading": "Building Inspection Supervisor",
+        "originalFullyImageReviewed": true
+      },
+      {
+        "physicalPage": 8,
+        "scope": "employee-remuneration",
+        "sourceRowOnPage": 22,
+        "field": "name",
+        "engine": "tesseract",
+        "rawReading": "Ross, S$",
+        "independentLiteralReading": "Ross, S",
+        "originalFullyImageReviewed": true
+      },
+      {
+        "physicalPage": 8,
+        "scope": "employee-remuneration",
+        "sourceRowOnPage": 22,
+        "field": "position",
+        "engine": "paddle",
+        "rawReading": "ManagerofFinancialPlanning&Analysis",
+        "independentLiteralReading": "Manager of Financial Planning & Analysis",
+        "originalFullyImageReviewed": true
+      },
+      {
+        "physicalPage": 8,
+        "scope": "employee-remuneration",
+        "sourceRowOnPage": 23,
+        "field": "position",
+        "engine": "paddle",
+        "rawReading": "Business Analyst-Recreation",
+        "independentLiteralReading": "Business Analyst - Recreation",
+        "originalFullyImageReviewed": true
+      },
+      {
+        "physicalPage": 8,
+        "scope": "employee-remuneration",
+        "sourceRowOnPage": 26,
+        "field": "position",
+        "engine": "paddle",
+        "rawReading": "AssistantFire Chief",
+        "independentLiteralReading": "Assistant Fire Chief",
+        "originalFullyImageReviewed": true
+      },
+      {
+        "physicalPage": 8,
+        "scope": "employee-remuneration",
+        "sourceRowOnPage": 28,
+        "field": "position",
+        "engine": "paddle",
+        "rawReading": "ImplementationManager-WaterfrontMasterplan",
+        "independentLiteralReading": "Implementation Manager - Waterfront Masterplan",
+        "originalFullyImageReviewed": true
+      },
+      {
+        "physicalPage": 8,
+        "scope": "employee-remuneration",
+        "sourceRowOnPage": 29,
+        "field": "name",
+        "engine": "paddle",
+        "rawReading": "Schneeberger,B",
+        "independentLiteralReading": "Schneeberger, B",
+        "originalFullyImageReviewed": true
+      },
+      {
+        "physicalPage": 8,
+        "scope": "employee-remuneration",
+        "sourceRowOnPage": 30,
+        "field": "position",
+        "engine": "paddle",
+        "rawReading": "Managerof Tourism",
+        "independentLiteralReading": "Manager of Tourism",
+        "originalFullyImageReviewed": true
+      },
+      {
+        "physicalPage": 8,
+        "scope": "employee-remuneration",
+        "sourceRowOnPage": 33,
+        "field": "position",
+        "engine": "paddle",
+        "rawReading": "GIS Supervisor/Draftsperson",
+        "independentLiteralReading": "GIS Supervisor / Draftsperson",
+        "originalFullyImageReviewed": true
+      },
+      {
+        "physicalPage": 8,
+        "scope": "employee-remuneration",
+        "sourceRowOnPage": 34,
+        "field": "position",
+        "engine": "tesseract",
+        "rawReading": "Building inspector 3",
+        "independentLiteralReading": "Building Inspector 3",
+        "originalFullyImageReviewed": true
+      },
+      {
+        "physicalPage": 8,
+        "scope": "employee-remuneration",
+        "sourceRowOnPage": 34,
+        "field": "position",
+        "engine": "paddle",
+        "rawReading": "Building Inspector3",
+        "independentLiteralReading": "Building Inspector 3",
+        "originalFullyImageReviewed": true
+      },
+      {
+        "physicalPage": 8,
+        "scope": "employee-remuneration",
+        "sourceRowOnPage": 35,
+        "field": "position",
+        "engine": "paddle",
+        "rawReading": "DirectorofDevelopmentServices",
+        "independentLiteralReading": "Director of Development Services",
+        "originalFullyImageReviewed": true
+      },
+      {
+        "physicalPage": 8,
+        "scope": "employee-remuneration",
+        "sourceRowOnPage": 36,
+        "field": "position",
+        "engine": "paddle",
+        "rawReading": "EngineeringTechnologist1-Projects",
+        "independentLiteralReading": "Engineering Technologist 1 - Projects",
+        "originalFullyImageReviewed": true
+      },
+      {
+        "physicalPage": 8,
+        "scope": "employee-remuneration",
+        "sourceRowOnPage": 37,
+        "field": "position",
+        "engine": "paddle",
+        "rawReading": "DirectorofFinance",
+        "independentLiteralReading": "Director of Finance",
+        "originalFullyImageReviewed": true
+      },
+      {
+        "physicalPage": 8,
+        "scope": "employee-remuneration",
+        "sourceRowOnPage": 38,
+        "field": "position",
+        "engine": "paddle",
+        "rawReading": "OperationsManager-Roads&Drainage",
+        "independentLiteralReading": "Operations Manager - Roads & Drainage",
+        "originalFullyImageReviewed": true
+      },
+      {
+        "physicalPage": 8,
+        "scope": "employee-remuneration",
+        "sourceRowOnPage": 39,
+        "field": "position",
+        "engine": "paddle",
+        "rawReading": "Program Coordinator-Fitness",
+        "independentLiteralReading": "Program Coordinator - Fitness",
+        "originalFullyImageReviewed": true
+      },
+      {
+        "physicalPage": 8,
+        "scope": "employee-remuneration",
+        "sourceRowOnPage": 44,
+        "field": "position",
+        "engine": "paddle",
+        "rawReading": "Crew Supervisor-Parks Operations",
+        "independentLiteralReading": "Crew Supervisor - Parks Operations",
+        "originalFullyImageReviewed": true
+      },
+      {
+        "physicalPage": 8,
+        "scope": "employee-remuneration",
+        "sourceRowOnPage": 46,
+        "field": "position",
+        "engine": "paddle",
+        "rawReading": "Fire Inspector/ Educator",
+        "independentLiteralReading": "Fire Inspector / Educator",
+        "originalFullyImageReviewed": true
+      },
+      {
+        "physicalPage": 8,
+        "scope": "employee-remuneration",
+        "sourceRowOnPage": 47,
+        "field": "position",
+        "engine": "paddle",
+        "rawReading": "EngineeringTechnologist 2",
+        "independentLiteralReading": "Engineering Technologist 2",
+        "originalFullyImageReviewed": true
+      },
+      {
+        "physicalPage": 8,
+        "scope": "employee-remuneration",
+        "sourceRowOnPage": 48,
+        "field": "name",
+        "engine": "paddle",
+        "rawReading": "Vuong,S",
+        "independentLiteralReading": "Vuong, S",
+        "originalFullyImageReviewed": true
+      },
+      {
+        "physicalPage": 8,
+        "scope": "employee-remuneration",
+        "sourceRowOnPage": 49,
+        "field": "name",
+        "engine": "paddle",
+        "rawReading": "Wales,R",
+        "independentLiteralReading": "Wales, R",
+        "originalFullyImageReviewed": true
+      },
+      {
+        "physicalPage": 8,
+        "scope": "employee-remuneration",
+        "sourceRowOnPage": 50,
+        "field": "name",
+        "engine": "paddle",
+        "rawReading": "Watson,B",
+        "independentLiteralReading": "Watson, B",
+        "originalFullyImageReviewed": true
+      },
+      {
+        "physicalPage": 8,
+        "scope": "employee-remuneration",
+        "sourceRowOnPage": 50,
+        "field": "position",
+        "engine": "paddle",
+        "rawReading": "Public Works Supervisor-Utilities",
+        "independentLiteralReading": "Public Works Supervisor - Utilities",
+        "originalFullyImageReviewed": true
+      },
+      {
+        "physicalPage": 8,
+        "scope": "employee-remuneration",
+        "sourceRowOnPage": 51,
+        "field": "position",
+        "engine": "paddle",
+        "rawReading": "EmergencyProgramManager",
+        "independentLiteralReading": "Emergency Program Manager",
+        "originalFullyImageReviewed": true
+      },
+      {
+        "physicalPage": 9,
+        "scope": "employee-remuneration",
+        "sourceRowOnPage": 2,
+        "field": "position",
+        "engine": "paddle",
+        "rawReading": "Coastal ForestryRoadsBuilder",
+        "independentLiteralReading": "Coastal Forestry Roads Builder",
+        "originalFullyImageReviewed": true
+      },
+      {
+        "physicalPage": 9,
+        "scope": "employee-remuneration",
+        "sourceRowOnPage": 3,
+        "field": "position",
+        "engine": "paddle",
+        "rawReading": "Managerof EngineeringPlanning&Assets",
+        "independentLiteralReading": "Manager of Engineering Planning & Assets",
+        "originalFullyImageReviewed": true
+      },
+      {
+        "physicalPage": 9,
+        "scope": "employee-remuneration",
+        "sourceRowOnPage": 4,
+        "field": "position",
+        "engine": "paddle",
+        "rawReading": "ChiefAdminstrativeOfficer",
+        "independentLiteralReading": "Chief Adminstrative Officer",
+        "originalFullyImageReviewed": true
+      },
+      {
+        "physicalPage": 9,
+        "scope": "employee-remuneration",
+        "sourceRowOnPage": 5,
+        "field": "position",
+        "engine": "paddle",
+        "rawReading": "Water/SewerOperator&WaterQualityTechnician",
+        "independentLiteralReading": "Water/Sewer Operator & Water Quality Technician",
+        "originalFullyImageReviewed": true
+      },
+      {
+        "physicalPage": 9,
+        "scope": "employee-remuneration",
+        "sourceRowOnPage": 6,
+        "field": "name",
+        "engine": "paddle",
+        "rawReading": "Zieffie, B",
+        "independentLiteralReading": "Ziefflie, B",
+        "originalFullyImageReviewed": true
+      }
+    ],
+    "differencesByEngineAndField": {
+      "tesseract:total": 2,
+      "paddle:name": 17,
+      "paddle:position": 69,
+      "paddle:expenses": 3,
+      "tesseract:remuneration": 2,
+      "paddle:remuneration": 1,
+      "tesseract:name": 6,
+      "tesseract:position": 1
+    },
+    "allDifferencesCoveredByFullOriginalImageReview": true
+  },
+  "authorContextPath": "research/salaries/queue-completion-2026-11-01/municipal/mission-2023-context-review-v2.json",
+  "authorContextSha256": "8e2bd6d852c93db4b5f3112fdb7124a1a14ad242996dab6dd39062b4c772bd99",
+  "sourceWarningsRequired": [
+    "Printed2023 employee remuneration controls exceed the literal named employee rows by$3; Blaschuk,S prints93,271 remuneration and1,718 expenses but94,992 expense-inclusive Total. Literal amounts were not altered to balance."
+  ],
+  "reviewLimits": [
+    "This receipt reviews the complete named source cohorts and the exact frozen candidates; final registry promotion and release reconciliation remain root responsibilities.",
+    "Payment disclosure definitions and source threshold label are preserved; these are not base salary rates or complete employee rosters.",
+    "No compiled record removal is authorized by this review.",
+    "No institution was contacted."
+  ],
+  "additiveReviewerSourceReread": {
+    "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-mission-queue-2023-source-reread-amendments.json",
+    "sha256": "0d217b57297168778e6be46c271b2f9d9baa809fd48cd07510823e930052560d"
+  },
+  "authorPostPeerAmendment": {
+    "path": "research/salaries/queue-completion-2026-11-01/municipal/mission-2023-post-peer-source-amendment.json",
+    "sha256": "7dcd7062a93daf17b84c5613dd1d8a69861d194c2fb34fa56b0fa9cac1e74115"
+  },
+  "literalNamedPayResidual": -3,
+  "literalNamedExpenseResidual": 0,
+  "exactV1ToV2Change": {
+    "oneBasedRow": 11,
+    "zeroBasedField": 3,
+    "before": 93274,
+    "after": 93271,
+    "otherRowsAndFieldsUnchanged": true
+  }
+}

@@ -1,0 +1,194 @@
+{
+  "reviewedOn": "2026-11-01",
+  "reviewer": "/root/recovery_review",
+  "sourcePath": "/tmp/pofbc-schools/ministry-sd50-2025.pdf",
+  "sourceSha256": "7a45c601bc2edf00849d090f24394d032e84424ea7c42804ae188b74780973a4",
+  "sourceUrl": "https://www2.gov.bc.ca/assets/gov/education/administration/resource-management/school-district-financial-reporting/financial-information/sd50-sofi-2025.pdf",
+  "rawIndependentTranscript": {
+    "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-school-queue-sd50-original-transcript.tsv",
+    "sha256": "08494691f5e30a48ed2f74fa7df6de1fc5a846509c8203d41e5cbf74156b2304"
+  },
+  "rawIndependentReceipt": {
+    "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-school-queue-sd50-original-receipt.json",
+    "sha256": "a8f393b5241707f01141c3b5a2647bb687ae45888ad88bd3c8fc1faeacc87b0a"
+  },
+  "candidateOpenedBeforeRawTranscript": false,
+  "reviewScope": "All58named source rows,5trustees+53employees, literal name/position/pay/expense and physicalpage checked independently from actual PDF images before opening both OCR-engine alternatives. Complete source schedule physical8–9, with every printed control read. Full normalized v2 ordered six-field/multiset comparisons and amended independent OCR arrays pass.",
+  "inputs": {
+    "oldEmployee": {
+      "path": "research/salaries/queue-completion-schools/sd50-2025-employees.json.gzip",
+      "sha256": "8ef567c55c22e061658f7eaca221edba46f73277d4aa2f2dfc139c88ef6ef161"
+    },
+    "newEmployee": {
+      "path": "research/salaries/queue-completion-schools/sd50-2025-employees-v2.json.gzip",
+      "sha256": "0e21b24b559974668171a77e7f0e2cfe6c2d01c3929cd097ca8c3abf01a67502"
+    },
+    "newTrustees": {
+      "path": "research/salaries/queue-completion-schools/sd50-2025-trustees.json.gzip",
+      "sha256": "339ca4af50d3138e3a52293259785ca2f0272945ceaaeadcb1d8501fbd0db290"
+    },
+    "oldProof": {
+      "path": "research/salaries/queue-completion-2026-11-01/schools/sd50-2025-image-checked-candidate.json.gzip",
+      "sha256": "2592f8b85af62cd2ae8b1fbe2cd13bed5ff4c48e4952ec60c1f1eed1d60c0871"
+    },
+    "newProof": {
+      "path": "research/salaries/queue-completion-2026-11-01/schools/sd50-2025-image-checked-candidate-v2.json.gzip",
+      "sha256": "7d5be03adf0d1b1819711861146712788b6ceb76548cfa4388f12078ada57226"
+    },
+    "rawEngineFields": {
+      "path": "research/salaries/queue-completion-2026-11-01/schools/sd50-2025-both-reader-fields.json.gzip",
+      "sha256": "5271204bc71e967fadb25509dbfb3f346777b1101e5ebd087d0fbb8e92140c17"
+    },
+    "rawEngineCapture": {
+      "path": "research/salaries/queue-completion-2026-11-01/schools/bounded-original-ocr.json.gzip",
+      "sha256": "b7484e78b4619df486ad22629c4172096ca07991acfe6b2b7a6fcdef5743440d"
+    }
+  },
+  "sourceFieldCorrections": [
+    {
+      "employeeSequence": 26,
+      "beforeRow": [
+        "school-district-50",
+        "Keir, lan J.",
+        "ADMINISTRATIVE OFFIC",
+        168665.31,
+        1944.31,
+        8
+      ],
+      "afterRow": [
+        "school-district-50",
+        "Keir, Ian J.",
+        "ADMINISTRATIVE OFFIC",
+        168665.31,
+        1944.31,
+        8
+      ],
+      "changedColumns": [
+        1
+      ]
+    }
+  ],
+  "reviewerOnlyCorrections": [],
+  "criticalNameConfirmation": {
+    "physicalPage": 8,
+    "sourceRowOnPage": 31,
+    "employeeSequence": 26,
+    "literalName": "Keir, Ian J.",
+    "bothRawOcrEnginesAgreedOnIncorrectName": "Keir, lan J.",
+    "basis": "Image-first transcript already read capitalI before either OCR alternative was opened. Actual-PDF600dpi crop recheck confirms the flat capital-I glyph at cap height; no name dictionary or expansion was used.",
+    "cropPath": "/tmp/independent-school-queue/sd50-p8-keir-name-actual600.png",
+    "cropSha256": "a990790310100887b75485616b547a079e61fe87e1dde6b48cb75f669263cc17",
+    "renderMethod": "PyMuPDF original physical8 page.get_pixmap(dpi=600,alpha=False,clip=Rect(42,650,210,668))",
+    "clipRect": [
+      42,
+      650,
+      210,
+      668
+    ]
+  },
+  "normalizedComparisons": [
+    {
+      "cohort": "trustees",
+      "rows": 5,
+      "orderedSixFieldDifferences": 0,
+      "multisetSixFieldDifferences": 0,
+      "remunerationSum": "87369.00",
+      "expenseSum": "17287.14",
+      "expenseNulls": 0,
+      "explicitExpenseZeros": 0
+    },
+    {
+      "cohort": "employees",
+      "rows": 53,
+      "orderedSixFieldDifferences": 0,
+      "multisetSixFieldDifferences": 0,
+      "remunerationSum": "5985964.64",
+      "expenseSum": "149170.57",
+      "expenseNulls": 4,
+      "explicitExpenseZeros": 0
+    }
+  ],
+  "printedControls": [
+    {
+      "physicalPage": 8,
+      "label": "TOTAL ELECTED OFFICIALS",
+      "remunerationLiteral": "87,369.00",
+      "expensesLiteral": "17,287.14"
+    },
+    {
+      "physicalPage": 9,
+      "label": "unlabelled subtotal after named employee list",
+      "remunerationLiteral": "5,985,964.64",
+      "expensesLiteral": "149,170.57"
+    },
+    {
+      "physicalPage": 9,
+      "label": "TOTAL EMPLOYEES <= 75,000.00",
+      "remunerationLiteral": "4,684,779.23",
+      "expensesLiteral": "102,447.03"
+    },
+    {
+      "physicalPage": 9,
+      "label": "TOTAL",
+      "remunerationLiteral": "10,758,112.87",
+      "expensesLiteral": "268,904.74"
+    },
+    {
+      "physicalPage": 9,
+      "label": "TOTAL EMPLOYER PREMIUM FOR CPP/EI",
+      "amountLiteral": "641,333.26"
+    }
+  ],
+  "namedRowsExactlyMatchPrintedControls": true,
+  "grandPrintedComponentsReconcileExactly": true,
+  "allSourceRowsAndNullsResolved": true,
+  "period": {
+    "periodType": "fiscal",
+    "start": "2024-07-01",
+    "end": "2025-06-30",
+    "basis": "Both salary table headings explicitly FOR THE YEAR ENDED JUNE30,2025; declarationphysical2 year2025/bodyJune30,2025; content/management fiscal2025."
+  },
+  "sourceApproval": {
+    "declarationPhysicalPage": 2,
+    "dateFields": [
+      "November19,2025",
+      "November19,2025",
+      "November19,2025"
+    ],
+    "signatures": "redacted",
+    "managementPhysicalPage": 4,
+    "management": "Lisa Bernoties andKevin Black are visibly typed as signoffs, both datedNovember19,2025. No handwritten management signatures or adoption motion claimed."
+  },
+  "publicSourceQualifications": [
+    "Several source position cells literally print ADMINISTRATIVE OFFIC; the missing suffix is not inferred. Gates, Autum M is retained literally, with no n added.",
+    "Named expense dashes are null (four employee cells), not numericzero. Employer CPP/EI premium641333.26 and under-threshold totals are separate aggregate controls, not person observations.",
+    "No DRAFT mark visible on the checked salary/declaration/management pages. Signatures are redacted and are not asserted visible."
+  ],
+  "actualSourceViews": [
+    {
+      "path": "/tmp/independent-school-queue/sd50-p1.png",
+      "sha256": "36030ae28e02ff9f2843e542b81e22f1c07d20b5fce59eb9313733dbb9c96962"
+    },
+    {
+      "path": "/tmp/independent-school-queue/sd50-p2.png",
+      "sha256": "dfb28b464eb631cf4c30f3152d66a162ee3e3c9ac18a8fb35ece9d9f29e42c35"
+    },
+    {
+      "path": "/tmp/independent-school-queue/sd50-p4.png",
+      "sha256": "86efaa3b58f865221ccdee8c02f78fd6efa2b75c9a2231ab0a42ebc3b907b5d6"
+    },
+    {
+      "path": "/tmp/independent-school-queue/sd50-p8.png",
+      "sha256": "7e56d8aae60eb6527c5e21abef8dcb70513972805dd585208d3b14237ec93298"
+    },
+    {
+      "path": "/tmp/independent-school-queue/sd50-p9.png",
+      "sha256": "e7ad63ab97997fadc5fa123406f3c9989191d9c678a8af550e47610b61834897"
+    },
+    {
+      "path": "/tmp/independent-school-queue/sd50-p10.png",
+      "sha256": "9cc5785fd9e05f4ec7badef10b9e95f7c86e56b7f2f2774a96b16ea57029fc8a"
+    }
+  ],
+  "reviewAcceptedRows": 58
+}

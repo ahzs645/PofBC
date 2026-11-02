@@ -3,6 +3,7 @@ import importlib.util
 import copy
 from pathlib import Path
 import unittest
+from unittest.mock import patch
 
 SPEC = importlib.util.spec_from_file_location('held_review', Path(__file__).with_name('review-salary-held-resolution.py'))
 REVIEW = importlib.util.module_from_spec(SPEC)
@@ -73,6 +74,57 @@ class RequiredReviewCoverageTests(unittest.TestCase):
     def test_unrelated_peer_receipt_cannot_cover_an_added_source_implicitly(self):
         with self.assertRaises(AssertionError):
             REVIEW.verify_review_coverage(self.acceptance, ['new-source', 'another-source'])
+
+
+class FrozenHeldResolutionTests(unittest.TestCase):
+    def check_index_change(self, change):
+        original = REVIEW.read
+        def read(path):
+            value = original(path)
+            if Path(path).as_posix().endswith('public/salaries/employers/index.json'):
+                value = copy.deepcopy(value)
+                change(value)
+            return value
+        with patch.object(REVIEW, 'read', side_effect=read):
+            return REVIEW.validate_frozen_resolution()
+
+    def test_later_unrelated_totals_do_not_rewrite_pr36(self):
+        path = REVIEW.OUT / 'release.json'
+        before = path.read_bytes()
+        result = self.check_index_change(lambda value: value.update(recordCounts={'official': 9999999, 'compiled': 0}))
+        self.assertEqual(result['records'], 1037040)
+        self.assertEqual(result['sourceInputsVerified'], 6)
+        self.assertEqual(path.read_bytes(), before)
+
+    def test_qualified_declaration_warning_cannot_disappear(self):
+        def change(value):
+            value['sources']['held-resolution-schools-sd10-2025-employees']['publicWarning'] = None
+        with self.assertRaises(AssertionError):
+            self.check_index_change(change)
+
+    def test_verified_reporting_period_cannot_drift(self):
+        def change(value):
+            value['sources']['held-resolution-phsa-2024-25-employees']['periodEnd'] = '2024-03-31'
+        with self.assertRaises(AssertionError):
+            self.check_index_change(change)
+
+    def test_employee_scope_cannot_become_aggregate(self):
+        def change(value):
+            value['sources']['held-resolution-phsa-2024-25-employees']['scope'] = 'aggregate-only'
+        with self.assertRaises(AssertionError):
+            self.check_index_change(change)
+
+    def test_one_published_source_row_cannot_disappear(self):
+        original = REVIEW.decode
+        def decode(raw):
+            rows = original(raw)
+            if rows and len(rows[0]) == 7:
+                for index, row in enumerate(rows):
+                    if row[5] == 'held-resolution-phsa-2024-25-employees':
+                        return rows[:index] + rows[index + 1:]
+            return rows
+        with patch.object(REVIEW, 'decode', side_effect=decode), self.assertRaises(AssertionError):
+            REVIEW.validate_frozen_resolution()
 
 
 if __name__ == '__main__':

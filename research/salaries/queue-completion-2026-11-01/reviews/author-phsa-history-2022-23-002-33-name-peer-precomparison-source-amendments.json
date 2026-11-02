@@ -1,0 +1,38 @@
+{
+  "frozen": true,
+  "reviewer": "/root/recovery_health",
+  "originalFirstPass": {
+    "path": "research/salaries/queue-completion-2026-11-01/reviews/author-phsa-history-2022-23-002-33-name-peer-first-transcript.json",
+    "sha256": "db2c0275efd45322602fdc37b3ca3212de2a2eedd3df53894e9c0ddd616d075c"
+  },
+  "sourcePixelCheck": {
+    "path": "research/salaries/queue-completion-2026-11-01/reviews/author-phsa-history-2022-23-002-33-name-peer-source-pixel-check.json",
+    "sha256": "780464b0244fd11eddff916834bd796cbdc651c29fb77de51f63633baea83060"
+  },
+  "authorChoiceLedgerStillUnopened": true,
+  "corrections": [
+    {
+      "sequence": 152,
+      "firstPass": "Hamdel,Nathan Charles",
+      "actual1200SourcePrimary": "Handel,Nathan Charles",
+      "reason": "Actual source shows distinct n then d; the first-pass m joined reading was wrong.",
+      "sourceImage": {
+        "path": "/tmp/queue-completion-phsa/author-peer-2022-002-33/seq152-1200.png",
+        "sha256": "816c2294ac88d953a36fb88593e9d6e4510f60a96d885770e1bdeefba2506b01"
+      }
+    },
+    {
+      "sequence": 303,
+      "firstPass": "Kamarn,Jonathan",
+      "actual1200SourcePrimary": "Kamarm,Jonathan",
+      "reason": "Current-source larger view supports final m rather than first-pass rn. Other visible rn/m alternatives will be compared explicitly, with no cross-year identity basis.",
+      "sourceImage": {
+        "path": "/tmp/queue-completion-phsa/author-peer-2022-002-33/seq303-1200.png",
+        "sha256": "67c08db4cd6d42878df0585603e05a5e792c6fc2316d419bba4b848298883f4f"
+      }
+    }
+  ],
+  "sequence24LiteralFerreriaRetained": true,
+  "noMoneyOrWhole400Authority": true,
+  "oldFilesUnchanged": true
+}

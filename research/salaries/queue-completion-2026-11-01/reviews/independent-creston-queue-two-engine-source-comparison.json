@@ -1,0 +1,560 @@
+{
+  "reviewer": "held_health_review",
+  "correctsMetadataMetricIn": {
+    "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-creston-queue-final-payload-comparison.json",
+    "sha256": "10d2b1579e743510f1341967021ae0feeb064e2e09d2720af11d4c2b83ce9664",
+    "detail": "authorDraftSections[0].rapidocrRows=0 was a reviewer key-name reporting error, not missing OCR rows. The actual draft key is paddleRows; both streams contain27rows. This additive receipt supplies exact correct full comparison."
+  },
+  "readerDraft": {
+    "path": "research/salaries/queue-completion-2026-11-01/municipal/reader-draft.json.gzip",
+    "sha256": "a04c72bd59e717c2c71951ecac18ae768d2893462aa49908e9fff07f5fbe06f6"
+  },
+  "rawEvidence": {
+    "path": "research/salaries/queue-completion-2026-11-01/municipal/ocr/creston-2024-p37.json.gzip",
+    "sha256": "6251c37e5229818d21c8ec6e480fda273a89ee952a2928c305ce53e73c36cf57"
+  },
+  "sourceSha256": "24a6cd0394f42596859f15cb4a1ec811c28c5a5c09e004a3766aa78130396ac6",
+  "literalTranscript": {
+    "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-creston-queue-final-literal-transcript.tsv",
+    "sha256": "59e96b9a17a0c3f8ee3716882405d32bd07a4928261a7c8158a1ca83e3e9cb71"
+  },
+  "engines": {
+    "tesseract": {
+      "rowCount": 27,
+      "fieldsCompared": 108,
+      "fieldDifferences": [
+        {
+          "sourceRowOnPage": 1,
+          "field": "name",
+          "engineValue": "Bergman, Robart A.",
+          "engineRaw": "Bergman, Robart A.",
+          "literalImageValue": "Bergman, Robert A.",
+          "resolvedBy": "Full actual-source image transcription; normalized payload equals exact literal independent transcript."
+        },
+        {
+          "sourceRowOnPage": 2,
+          "field": "position",
+          "engineValue": "Parks and Cametaries Operator",
+          "engineRaw": "Parks and Cametaries Operator",
+          "literalImageValue": "Parks and Cemeteries Operator",
+          "resolvedBy": "Full actual-source image transcription; normalized payload equals exact literal independent transcript."
+        },
+        {
+          "sourceRowOnPage": 3,
+          "field": "name",
+          "engineValue": "Coliins, Jesse",
+          "engineRaw": "Coliins, Jesse",
+          "literalImageValue": "Collins, Jesse",
+          "resolvedBy": "Full actual-source image transcription; normalized payload equals exact literal independent transcript."
+        },
+        {
+          "sourceRowOnPage": 4,
+          "field": "name",
+          "engineValue": "Comer, Jost",
+          "engineRaw": "Comer, Jost",
+          "literalImageValue": "Comer, Joel",
+          "resolvedBy": "Full actual-source image transcription; normalized payload equals exact literal independent transcript."
+        },
+        {
+          "sourceRowOnPage": 4,
+          "field": "remuneration",
+          "engineValue": 106865,
+          "engineRaw": "106,865",
+          "literalImageValue": 106665,
+          "resolvedBy": "Full actual-source image transcription; normalized payload equals exact literal independent transcript."
+        },
+        {
+          "sourceRowOnPage": 4,
+          "field": "expenses",
+          "engineValue": 6695,
+          "engineRaw": "6,695",
+          "literalImageValue": 5695,
+          "resolvedBy": "Full actual-source image transcription; normalized payload equals exact literal independent transcript."
+        },
+        {
+          "sourceRowOnPage": 6,
+          "field": "expenses",
+          "engineValue": 6197,
+          "engineRaw": "6,197",
+          "literalImageValue": 5197,
+          "resolvedBy": "Full actual-source image transcription; normalized payload equals exact literal independent transcript."
+        },
+        {
+          "sourceRowOnPage": 7,
+          "field": "name",
+          "engineValue": "Dyar, Brandy",
+          "engineRaw": "Dyar, Brandy",
+          "literalImageValue": "Dyer, Brandy",
+          "resolvedBy": "Full actual-source image transcription; normalized payload equals exact literal independent transcript."
+        },
+        {
+          "sourceRowOnPage": 10,
+          "field": "position",
+          "engineValue": "Manger of Engineering",
+          "engineRaw": "Manger of Engineering",
+          "literalImageValue": "Manager of Engineering",
+          "resolvedBy": "Full actual-source image transcription; normalized payload equals exact literal independent transcript."
+        },
+        {
+          "sourceRowOnPage": 10,
+          "field": "remuneration",
+          "engineValue": null,
+          "engineRaw": "1§3,029",
+          "literalImageValue": 153029,
+          "resolvedBy": "Full actual-source image transcription; normalized payload equals exact literal independent transcript."
+        },
+        {
+          "sourceRowOnPage": 11,
+          "field": "name",
+          "engineValue": "Fuller, C. Terrance",
+          "engineRaw": "Fuller, C. Terrance",
+          "literalImageValue": "Fuller, C. Terrence",
+          "resolvedBy": "Full actual-source image transcription; normalized payload equals exact literal independent transcript."
+        },
+        {
+          "sourceRowOnPage": 12,
+          "field": "remuneration",
+          "engineValue": 77895,
+          "engineRaw": "77,895",
+          "literalImageValue": 77585,
+          "resolvedBy": "Full actual-source image transcription; normalized payload equals exact literal independent transcript."
+        },
+        {
+          "sourceRowOnPage": 13,
+          "field": "name",
+          "engineValue": "Hiftermann, Michael",
+          "engineRaw": "Hiftermann, Michael",
+          "literalImageValue": "Hiltermann, Michael",
+          "resolvedBy": "Full actual-source image transcription; normalized payload equals exact literal independent transcript."
+        },
+        {
+          "sourceRowOnPage": 13,
+          "field": "expenses",
+          "engineValue": null,
+          "engineRaw": "°",
+          "literalImageValue": 0,
+          "resolvedBy": "Full actual-source image transcription; normalized payload equals exact literal independent transcript."
+        },
+        {
+          "sourceRowOnPage": 14,
+          "field": "position",
+          "engineValue": "Utilitias Chargahand",
+          "engineRaw": "Utilitias Chargahand",
+          "literalImageValue": "Utilities Chargehand",
+          "resolvedBy": "Full actual-source image transcription; normalized payload equals exact literal independent transcript."
+        },
+        {
+          "sourceRowOnPage": 16,
+          "field": "name",
+          "engineValue": "Andrew Lam,",
+          "engineRaw": "Andrew Lam,",
+          "literalImageValue": "Lam, Andrew",
+          "resolvedBy": "Full actual-source image transcription; normalized payload equals exact literal independent transcript."
+        },
+        {
+          "sourceRowOnPage": 16,
+          "field": "position",
+          "engineValue": "Operator2",
+          "engineRaw": "Operator2",
+          "literalImageValue": "Operator 2",
+          "resolvedBy": "Full actual-source image transcription; normalized payload equals exact literal independent transcript."
+        },
+        {
+          "sourceRowOnPage": 18,
+          "field": "name",
+          "engineValue": "Massingar, Ron",
+          "engineRaw": "Massingar, Ron",
+          "literalImageValue": "Massinger, Ron",
+          "resolvedBy": "Full actual-source image transcription; normalized payload equals exact literal independent transcript."
+        },
+        {
+          "sourceRowOnPage": 19,
+          "field": "name",
+          "engineValue": "Michael Moore,",
+          "engineRaw": "Michael Moore,",
+          "literalImageValue": "Moore, Michael",
+          "resolvedBy": "Full actual-source image transcription; normalized payload equals exact literal independent transcript."
+        },
+        {
+          "sourceRowOnPage": 19,
+          "field": "remuneration",
+          "engineValue": 202632,
+          "engineRaw": "202,632",
+          "literalImageValue": 202832,
+          "resolvedBy": "Full actual-source image transcription; normalized payload equals exact literal independent transcript."
+        },
+        {
+          "sourceRowOnPage": 20,
+          "field": "name",
+          "engineValue": "Neuield, Marsha",
+          "engineRaw": "Neuield, Marsha",
+          "literalImageValue": "Neufeld, Marsha",
+          "resolvedBy": "Full actual-source image transcription; normalized payload equals exact literal independent transcript."
+        },
+        {
+          "sourceRowOnPage": 22,
+          "field": "position",
+          "engineValue": "Directar of infrastructure Services",
+          "engineRaw": "Directar of infrastructure Services",
+          "literalImageValue": "Director of Infrastructure Services",
+          "resolvedBy": "Full actual-source image transcription; normalized payload equals exact literal independent transcript."
+        },
+        {
+          "sourceRowOnPage": 23,
+          "field": "position",
+          "engineValue": "Utiltias - Chief Oparator",
+          "engineRaw": "Utiltias - Chief Oparator",
+          "literalImageValue": "Utilities - Chief Operator",
+          "resolvedBy": "Full actual-source image transcription; normalized payload equals exact literal independent transcript."
+        },
+        {
+          "sourceRowOnPage": 24,
+          "field": "name",
+          "engineValue": "Valar, Brant",
+          "engineRaw": "Valar, Brant",
+          "literalImageValue": "Valer, Brent",
+          "resolvedBy": "Full actual-source image transcription; normalized payload equals exact literal independent transcript."
+        },
+        {
+          "sourceRowOnPage": 24,
+          "field": "remuneration",
+          "engineValue": 94344,
+          "engineRaw": "94,344",
+          "literalImageValue": 94341,
+          "resolvedBy": "Full actual-source image transcription; normalized payload equals exact literal independent transcript."
+        },
+        {
+          "sourceRowOnPage": 27,
+          "field": "name",
+          "engineValue": "Zisffie, Brad",
+          "engineRaw": "Zisffie, Brad",
+          "literalImageValue": "Zieffle, Brad",
+          "resolvedBy": "Full actual-source image transcription; normalized payload equals exact literal independent transcript."
+        }
+      ],
+      "differenceCount": 26
+    },
+    "paddle": {
+      "rowCount": 27,
+      "fieldsCompared": 108,
+      "fieldDifferences": [
+        {
+          "sourceRowOnPage": 2,
+          "field": "name",
+          "engineValue": "Cassel, Tlm",
+          "engineRaw": "Cassel, Tlm",
+          "literalImageValue": "Cassel, Tim",
+          "resolvedBy": "Full actual-source image transcription; normalized payload equals exact literal independent transcript."
+        },
+        {
+          "sourceRowOnPage": 2,
+          "field": "position",
+          "engineValue": "Parks and CameterlesOporator",
+          "engineRaw": "Parks and CameterlesOporator",
+          "literalImageValue": "Parks and Cemeteries Operator",
+          "resolvedBy": "Full actual-source image transcription; normalized payload equals exact literal independent transcript."
+        },
+        {
+          "sourceRowOnPage": 3,
+          "field": "name",
+          "engineValue": "Coins, Jesse",
+          "engineRaw": "Coins, Jesse",
+          "literalImageValue": "Collins, Jesse",
+          "resolvedBy": "Full actual-source image transcription; normalized payload equals exact literal independent transcript."
+        },
+        {
+          "sourceRowOnPage": 4,
+          "field": "position",
+          "engineValue": "Managero!CommunityPlanning&Development",
+          "engineRaw": "Managero!CommunityPlanning&Development",
+          "literalImageValue": "Manager of Community Planning & Development",
+          "resolvedBy": "Full actual-source image transcription; normalized payload equals exact literal independent transcript."
+        },
+        {
+          "sourceRowOnPage": 5,
+          "field": "position",
+          "engineValue": "Assistant Fike Chief",
+          "engineRaw": "Assistant Fike Chief",
+          "literalImageValue": "Assistant Fire Chief",
+          "resolvedBy": "Full actual-source image transcription; normalized payload equals exact literal independent transcript."
+        },
+        {
+          "sourceRowOnPage": 6,
+          "field": "name",
+          "engineValue": "Dunber, Klrsten",
+          "engineRaw": "Dunber, Klrsten",
+          "literalImageValue": "Dunbar, Kirsten",
+          "resolvedBy": "Full actual-source image transcription; normalized payload equals exact literal independent transcript."
+        },
+        {
+          "sourceRowOnPage": 9,
+          "field": "name",
+          "engineValue": "Fabbro, Randal T.",
+          "engineRaw": "Fabbro, Randal T.",
+          "literalImageValue": "Fabbro, Randall T.",
+          "resolvedBy": "Full actual-source image transcription; normalized payload equals exact literal independent transcript."
+        },
+        {
+          "sourceRowOnPage": 9,
+          "field": "position",
+          "engineValue": "Flre Captain",
+          "engineRaw": "Flre Captain",
+          "literalImageValue": "Fire Captain",
+          "resolvedBy": "Full actual-source image transcription; normalized payload equals exact literal independent transcript."
+        },
+        {
+          "sourceRowOnPage": 9,
+          "field": "expenses",
+          "engineValue": null,
+          "engineRaw": "2.188",
+          "literalImageValue": 2188,
+          "resolvedBy": "Full actual-source image transcription; normalized payload equals exact literal independent transcript."
+        },
+        {
+          "sourceRowOnPage": 10,
+          "field": "name",
+          "engineValue": "Farynowski, Coln",
+          "engineRaw": "Farynowski, Coln",
+          "literalImageValue": "Farynowski, Colin",
+          "resolvedBy": "Full actual-source image transcription; normalized payload equals exact literal independent transcript."
+        },
+        {
+          "sourceRowOnPage": 10,
+          "field": "position",
+          "engineValue": "Manger ot Engineering",
+          "engineRaw": "Manger ot Engineering",
+          "literalImageValue": "Manager of Engineering",
+          "resolvedBy": "Full actual-source image transcription; normalized payload equals exact literal independent transcript."
+        },
+        {
+          "sourceRowOnPage": 11,
+          "field": "name",
+          "engineValue": "Fuber, C. Terrenca",
+          "engineRaw": "Fuber, C. Terrenca",
+          "literalImageValue": "Fuller, C. Terrence",
+          "resolvedBy": "Full actual-source image transcription; normalized payload equals exact literal independent transcript."
+        },
+        {
+          "sourceRowOnPage": 11,
+          "field": "expenses",
+          "engineValue": null,
+          "engineRaw": "",
+          "literalImageValue": 0,
+          "resolvedBy": "Full actual-source image transcription; normalized payload equals exact literal independent transcript."
+        },
+        {
+          "sourceRowOnPage": 12,
+          "field": "name",
+          "engineValue": "Grant, Tylar",
+          "engineRaw": "Grant, Tylar",
+          "literalImageValue": "Grant, Tyler",
+          "resolvedBy": "Full actual-source image transcription; normalized payload equals exact literal independent transcript."
+        },
+        {
+          "sourceRowOnPage": 12,
+          "field": "remuneration",
+          "engineValue": null,
+          "engineRaw": "77.595",
+          "literalImageValue": 77585,
+          "resolvedBy": "Full actual-source image transcription; normalized payload equals exact literal independent transcript."
+        },
+        {
+          "sourceRowOnPage": 12,
+          "field": "expenses",
+          "engineValue": null,
+          "engineRaw": "。",
+          "literalImageValue": 0,
+          "resolvedBy": "Full actual-source image transcription; normalized payload equals exact literal independent transcript."
+        },
+        {
+          "sourceRowOnPage": 13,
+          "field": "name",
+          "engineValue": "Hitermann, Michael",
+          "engineRaw": "Hitermann, Michael",
+          "literalImageValue": "Hiltermann, Michael",
+          "resolvedBy": "Full actual-source image transcription; normalized payload equals exact literal independent transcript."
+        },
+        {
+          "sourceRowOnPage": 14,
+          "field": "name",
+          "engineValue": "Johnslon, L, Trent",
+          "engineRaw": "Johnslon, L, Trent",
+          "literalImageValue": "Johnston, L. Trent",
+          "resolvedBy": "Full actual-source image transcription; normalized payload equals exact literal independent transcript."
+        },
+        {
+          "sourceRowOnPage": 14,
+          "field": "position",
+          "engineValue": "Uities Chargehand",
+          "engineRaw": "Uities Chargehand",
+          "literalImageValue": "Utilities Chargehand",
+          "resolvedBy": "Full actual-source image transcription; normalized payload equals exact literal independent transcript."
+        },
+        {
+          "sourceRowOnPage": 15,
+          "field": "position",
+          "engineValue": "Dlreclor of Finance & Corporale Services",
+          "engineRaw": "Dlreclor of Finance & Corporale Services",
+          "literalImageValue": "Director of Finance & Corporate Services",
+          "resolvedBy": "Full actual-source image transcription; normalized payload equals exact literal independent transcript."
+        },
+        {
+          "sourceRowOnPage": 16,
+          "field": "name",
+          "engineValue": "Lam, Ardrew",
+          "engineRaw": "Lam, Ardrew",
+          "literalImageValue": "Lam, Andrew",
+          "resolvedBy": "Full actual-source image transcription; normalized payload equals exact literal independent transcript."
+        },
+        {
+          "sourceRowOnPage": 16,
+          "field": "expenses",
+          "engineValue": null,
+          "engineRaw": "",
+          "literalImageValue": 0,
+          "resolvedBy": "Full actual-source image transcription; normalized payload equals exact literal independent transcript."
+        },
+        {
+          "sourceRowOnPage": 17,
+          "field": "name",
+          "engineValue": "Mendoza, Hllario",
+          "engineRaw": "Mendoza, Hllario",
+          "literalImageValue": "Mendoza, Hilario",
+          "resolvedBy": "Full actual-source image transcription; normalized payload equals exact literal independent transcript."
+        },
+        {
+          "sourceRowOnPage": 17,
+          "field": "position",
+          "engineValue": "Uulities - Operator",
+          "engineRaw": "Uulities - Operator",
+          "literalImageValue": "Utilities - Operator",
+          "resolvedBy": "Full actual-source image transcription; normalized payload equals exact literal independent transcript."
+        },
+        {
+          "sourceRowOnPage": 17,
+          "field": "expenses",
+          "engineValue": null,
+          "engineRaw": "",
+          "literalImageValue": 0,
+          "resolvedBy": "Full actual-source image transcription; normalized payload equals exact literal independent transcript."
+        },
+        {
+          "sourceRowOnPage": 18,
+          "field": "position",
+          "engineValue": "Operator3",
+          "engineRaw": "Operator3",
+          "literalImageValue": "Operator 3",
+          "resolvedBy": "Full actual-source image transcription; normalized payload equals exact literal independent transcript."
+        },
+        {
+          "sourceRowOnPage": 19,
+          "field": "position",
+          "engineValue": "ChlefAdministrative Oflicer",
+          "engineRaw": "ChlefAdministrative Oflicer",
+          "literalImageValue": "Chief Administrative Officer",
+          "resolvedBy": "Full actual-source image transcription; normalized payload equals exact literal independent transcript."
+        },
+        {
+          "sourceRowOnPage": 20,
+          "field": "name",
+          "engineValue": "Naufeld, Marsha",
+          "engineRaw": "Naufeld, Marsha",
+          "literalImageValue": "Neufeld, Marsha",
+          "resolvedBy": "Full actual-source image transcription; normalized payload equals exact literal independent transcript."
+        },
+        {
+          "sourceRowOnPage": 20,
+          "field": "position",
+          "engineValue": "Executive Asslstant",
+          "engineRaw": "Executive Asslstant",
+          "literalImageValue": "Executive Assistant",
+          "resolvedBy": "Full actual-source image transcription; normalized payload equals exact literal independent transcript."
+        },
+        {
+          "sourceRowOnPage": 20,
+          "field": "expenses",
+          "engineValue": null,
+          "engineRaw": "4.514",
+          "literalImageValue": 4514,
+          "resolvedBy": "Full actual-source image transcription; normalized payload equals exact literal independent transcript."
+        },
+        {
+          "sourceRowOnPage": 21,
+          "field": "remuneration",
+          "engineValue": null,
+          "engineRaw": "113.006",
+          "literalImageValue": 113006,
+          "resolvedBy": "Full actual-source image transcription; normalized payload equals exact literal independent transcript."
+        },
+        {
+          "sourceRowOnPage": 23,
+          "field": "position",
+          "engineValue": "Utiltles - Chief Oparator",
+          "engineRaw": "Utiltles - Chief Oparator",
+          "literalImageValue": "Utilities - Chief Operator",
+          "resolvedBy": "Full actual-source image transcription; normalized payload equals exact literal independent transcript."
+        },
+        {
+          "sourceRowOnPage": 24,
+          "field": "position",
+          "engineValue": "Chlef Mechanlc",
+          "engineRaw": "Chlef Mechanlc",
+          "literalImageValue": "Chief Mechanic",
+          "resolvedBy": "Full actual-source image transcription; normalized payload equals exact literal independent transcript."
+        },
+        {
+          "sourceRowOnPage": 24,
+          "field": "expenses",
+          "engineValue": null,
+          "engineRaw": "。",
+          "literalImageValue": 0,
+          "resolvedBy": "Full actual-source image transcription; normalized payload equals exact literal independent transcript."
+        },
+        {
+          "sourceRowOnPage": 25,
+          "field": "position",
+          "engineValue": "ManagerofBuildingServicesandBylawServices",
+          "engineRaw": "ManagerofBuildingServicesandBylawServices",
+          "literalImageValue": "Manager of Building Services and Bylaw Services",
+          "resolvedBy": "Full actual-source image transcription; normalized payload equals exact literal independent transcript."
+        },
+        {
+          "sourceRowOnPage": 26,
+          "field": "name",
+          "engineValue": "JeftWebb",
+          "engineRaw": "JeftWebb",
+          "literalImageValue": "Jeff Webb",
+          "resolvedBy": "Full actual-source image transcription; normalized payload equals exact literal independent transcript."
+        },
+        {
+          "sourceRowOnPage": 26,
+          "field": "position",
+          "engineValue": "WasteWater TreatmentPlan Operalor",
+          "engineRaw": "WasteWater TreatmentPlan Operalor",
+          "literalImageValue": "Waste Water Treatment Plan Operator",
+          "resolvedBy": "Full actual-source image transcription; normalized payload equals exact literal independent transcript."
+        },
+        {
+          "sourceRowOnPage": 26,
+          "field": "expenses",
+          "engineValue": null,
+          "engineRaw": "",
+          "literalImageValue": 0,
+          "resolvedBy": "Full actual-source image transcription; normalized payload equals exact literal independent transcript."
+        },
+        {
+          "sourceRowOnPage": 27,
+          "field": "name",
+          "engineValue": "Zieffie, Brad",
+          "engineRaw": "Zieffie, Brad",
+          "literalImageValue": "Zieffle, Brad",
+          "resolvedBy": "Full actual-source image transcription; normalized payload equals exact literal independent transcript."
+        }
+      ],
+      "differenceCount": 39
+    }
+  },
+  "allMachineDifferencesPersonallySourceReviewed": true,
+  "totalIndependentEngineFieldsCompared": 216,
+  "limits": "Exact machine comparison follows prior blind full original-image transcript; it does not alter raw evidence. All27rows/108source data fields personally image-reviewed, including shared machine agreements. Source monetary control residuals remain literal and unresolved as described in final-payload-comparison."
+}

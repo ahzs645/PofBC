@@ -1,0 +1,3227 @@
+{
+  "frozen": true,
+  "reviewedOn": "2026-11-02",
+  "reviewer": "/root/recovery_municipal",
+  "sourceId": "phsa-2019-20",
+  "sourceSha256": "0e31ac2054f0c2d4ef78797185dddd96cc0cdf2eab94bd6841fa24e1c38e7d02",
+  "batch": "phsa-2019-20-016",
+  "scope": "Exactly reserved last99 money fields:74 remuneration/25expenses,98literal positive amounts plus sequence372 expense printed dash/null. No other183 amounts, names, full400/source controls or period acceptance.",
+  "status": "PASS-after-one-explicit-peer-only-correction-and-author-secondary-restoration",
+  "imageFirstTranscript": {
+    "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-municipal-peer-held-2019-20-016-last99-money-image-first.json",
+    "sha256": "b5f6f6216b94a1ebf29cc371e1b76a1ff4e2ae905c2f0250132057d5ac07c2ed"
+  },
+  "sourceOnlyPacket": {
+    "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-history-batches-routing-2019-20-016-municipal-last99-money-source-only.json",
+    "sha256": "788d98ac532970c782e218d3f6be216768161d4e772dcfcf8f0b08570e256c03"
+  },
+  "pixelVerification": {
+    "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-municipal-peer-held-2019-20-016-last99-money-source-pixels.json",
+    "sha256": "e8f987e697a985f9567badd0b53cd6552214b97f4547544178b5417808e0dd58"
+  },
+  "authorScopedProposals": {
+    "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-history-2019-20-016-last99-money-scoped-own-choices.json",
+    "sha256": "aab8700ceb6f12ba30d59e6a9bfa1be65efc9f94ebeb0e282b3f205e40f41cdd"
+  },
+  "ownPostcomparisonSourceCorrection": {
+    "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-municipal-peer-held-2019-20-016-seq331-own-money-source-correction.json",
+    "sha256": "f5445c4d3ca056c03c1a744079f258288b7fd11e361b1cb5f86f7cf0b1d6fa3d"
+  },
+  "authorOwnSecondaryReadingRestoration": {
+    "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-history-2019-20-016-own-secondary-expense214-restoration.json",
+    "sha256": "797b33eea4aac4833ef7abe6fce76c6f40de1be43d09555549b5ce74ff09bd07"
+  },
+  "chronology": "All99 own source values froze before only exact99 author choices were opened. Initial97/99 matched author secondary values. Own331 pay82609 was wrong; original600/native300 confirms82699, corrected additively here. Own214expense502 was correct and matched author original first value; author secondary902 was wrong and explicitly restored502 in NEW797b receipt after independently reopening source. Old raw, all282 reread and scoped99 remain immutable. No false first-pass/current unanimity or money uncertainty waiver.",
+  "fieldCount": 99,
+  "exactFinalMatches": 99,
+  "numericPositiveConfirmationCount": 98,
+  "separateLiteralDashNullEvidenceCount": 1,
+  "peerCorrections": [
+    {
+      "sequence": 331,
+      "field": "remuneration",
+      "first": 82609,
+      "current": 82699
+    }
+  ],
+  "authorScopedFirstToSecondaryCorrections": 2,
+  "authorRejectedSecondary": {
+    "sequence": 214,
+    "field": "expenses",
+    "authorOriginal": 502,
+    "rejectedSecondary": 902,
+    "restoredLiteral": 502
+  },
+  "unresolvedFields": [],
+  "rows": [
+    {
+      "sequence": 192,
+      "physicalPage": 115,
+      "sourceRowOnPage": 55,
+      "field": "expenses",
+      "cropSha256": "56c84494e66ce766443a23e52996b9b738db798c6bc4ba5b54e4a5b9fdfc8398",
+      "peerFirstSourceValue": 27620,
+      "literalSourceAmount": "27,620",
+      "value": 27620,
+      "uncertainty": null,
+      "sourceNativeField": {
+        "field": "expenses",
+        "path": "/tmp/queue-completion-phsa/phsa-2019-20/review-images/phsa-2019-20-016-target-views/0192-expenses.png",
+        "sha256": "a6eebe642552016e48bf9d9aa19723ce3b1e814e499f68b4d79223a99fd118b8",
+        "originalPdf300DpiPixelBox": [
+          2052,
+          2889,
+          2422,
+          2930
+        ],
+        "noResamplingOrGlyphAlteration": true
+      },
+      "actualWholePage600SourceField": {
+        "path": "/workspace/salary-review-municipal-tmp/peer-held-2019-20-016-last99-money/independent/0192-expenses-own-wholepage600.png",
+        "sha256": "5b8f7db3ed06fba557f337a6d77752c43b5bc7847b4242fc803f45cb10eb8505"
+      },
+      "authorFirstFrozenValue": 27620,
+      "authorScopedSecondaryValue": 27620,
+      "authorEffectiveSourceValue": 27620,
+      "exactMatch": true,
+      "literalPrintedDashEvidence": false
+    },
+    {
+      "sequence": 193,
+      "physicalPage": 115,
+      "sourceRowOnPage": 56,
+      "field": "remuneration",
+      "cropSha256": "ba24f73ce29839268790ada61d13ea82748bc67077da612f6b3dd1215a97facd",
+      "peerFirstSourceValue": 98933,
+      "literalSourceAmount": "98,933",
+      "value": 98933,
+      "uncertainty": null,
+      "sourceNativeField": {
+        "field": "remuneration",
+        "path": "/tmp/queue-completion-phsa/phsa-2019-20/review-images/phsa-2019-20-016-target-views/0193-remuneration.png",
+        "sha256": "82e281c4b25716f5ef6954ba0c35a6f363322a1b827ce36aea7eab96abe1f038",
+        "originalPdf300DpiPixelBox": [
+          1735,
+          2930,
+          2068,
+          2970
+        ],
+        "noResamplingOrGlyphAlteration": true
+      },
+      "actualWholePage600SourceField": {
+        "path": "/workspace/salary-review-municipal-tmp/peer-held-2019-20-016-last99-money/independent/0193-remuneration-own-wholepage600.png",
+        "sha256": "e34c0755a2b942a09d6e54c2ba4c50b87a1c41a9eea9f998ffbea146e98159f3"
+      },
+      "authorFirstFrozenValue": 98933,
+      "authorScopedSecondaryValue": 98933,
+      "authorEffectiveSourceValue": 98933,
+      "exactMatch": true,
+      "literalPrintedDashEvidence": false
+    },
+    {
+      "sequence": 194,
+      "physicalPage": 116,
+      "sourceRowOnPage": 1,
+      "field": "remuneration",
+      "cropSha256": "147ff6377bb35bc726d13e147aecee021e81a259d391394923c5e31ff9c0c365",
+      "peerFirstSourceValue": 84345,
+      "literalSourceAmount": "84,345",
+      "value": 84345,
+      "uncertainty": null,
+      "sourceNativeField": {
+        "field": "remuneration",
+        "path": "/tmp/queue-completion-phsa/phsa-2019-20/review-images/phsa-2019-20-016-target-views/0194-remuneration.png",
+        "sha256": "b36a282d1a1bab104c189b217a7ad460ee36df329fa9e92fc62121fdcb03628d",
+        "originalPdf300DpiPixelBox": [
+          1735,
+          671,
+          2068,
+          711
+        ],
+        "noResamplingOrGlyphAlteration": true
+      },
+      "actualWholePage600SourceField": {
+        "path": "/workspace/salary-review-municipal-tmp/peer-held-2019-20-016-last99-money/independent/0194-remuneration-own-wholepage600.png",
+        "sha256": "102078a0905617ae9a2351ad81feca4eb10077985be39bf306907f079b25cb89"
+      },
+      "authorFirstFrozenValue": 84345,
+      "authorScopedSecondaryValue": 84345,
+      "authorEffectiveSourceValue": 84345,
+      "exactMatch": true,
+      "literalPrintedDashEvidence": false
+    },
+    {
+      "sequence": 200,
+      "physicalPage": 116,
+      "sourceRowOnPage": 7,
+      "field": "remuneration",
+      "cropSha256": "24a320f3127d2f83e77a1bea05e3579dfcd2466c74cf42860ac766912d035036",
+      "peerFirstSourceValue": 124783,
+      "literalSourceAmount": "124,783",
+      "value": 124783,
+      "uncertainty": null,
+      "sourceNativeField": {
+        "field": "remuneration",
+        "path": "/tmp/queue-completion-phsa/phsa-2019-20/review-images/phsa-2019-20-016-target-views/0200-remuneration.png",
+        "sha256": "629d3464ed607ff5d50652e947157a5cd6ac912a5e30e3f9b5f81ffd9a985226",
+        "originalPdf300DpiPixelBox": [
+          1735,
+          922,
+          2068,
+          961
+        ],
+        "noResamplingOrGlyphAlteration": true
+      },
+      "actualWholePage600SourceField": {
+        "path": "/workspace/salary-review-municipal-tmp/peer-held-2019-20-016-last99-money/independent/0200-remuneration-own-wholepage600.png",
+        "sha256": "f794d3c6c41d4fc3bfd255ff16afe40bcba0bb154498b4b06a634a7ee50402c0"
+      },
+      "authorFirstFrozenValue": 124783,
+      "authorScopedSecondaryValue": 124783,
+      "authorEffectiveSourceValue": 124783,
+      "exactMatch": true,
+      "literalPrintedDashEvidence": false
+    },
+    {
+      "sequence": 200,
+      "physicalPage": 116,
+      "sourceRowOnPage": 7,
+      "field": "expenses",
+      "cropSha256": "24a320f3127d2f83e77a1bea05e3579dfcd2466c74cf42860ac766912d035036",
+      "peerFirstSourceValue": 1715,
+      "literalSourceAmount": "1,715",
+      "value": 1715,
+      "uncertainty": null,
+      "sourceNativeField": {
+        "field": "expenses",
+        "path": "/tmp/queue-completion-phsa/phsa-2019-20/review-images/phsa-2019-20-016-target-views/0200-expenses.png",
+        "sha256": "c7c4ff45c29a858e7fc77fee40d8966648afdf9214735812a27c26108f3401ac",
+        "originalPdf300DpiPixelBox": [
+          2052,
+          922,
+          2422,
+          961
+        ],
+        "noResamplingOrGlyphAlteration": true
+      },
+      "actualWholePage600SourceField": {
+        "path": "/workspace/salary-review-municipal-tmp/peer-held-2019-20-016-last99-money/independent/0200-expenses-own-wholepage600.png",
+        "sha256": "757c9cb3c1a13dfc115173f80f6adc1e4898373e779c5384c5b7271eae5d7912"
+      },
+      "authorFirstFrozenValue": 1715,
+      "authorScopedSecondaryValue": 1715,
+      "authorEffectiveSourceValue": 1715,
+      "exactMatch": true,
+      "literalPrintedDashEvidence": false
+    },
+    {
+      "sequence": 202,
+      "physicalPage": 116,
+      "sourceRowOnPage": 10,
+      "field": "remuneration",
+      "cropSha256": "6c1fd7cd26bba350365a22bfb1438615e41451de239274a51614e6bc0f1f5f60",
+      "peerFirstSourceValue": 88254,
+      "literalSourceAmount": "88,254",
+      "value": 88254,
+      "uncertainty": null,
+      "sourceNativeField": {
+        "field": "remuneration",
+        "path": "/tmp/queue-completion-phsa/phsa-2019-20/review-images/phsa-2019-20-016-target-views/0202-remuneration.png",
+        "sha256": "afa155ac62d29631c89ded8806896da624e5f1f502d87cac137edf0d8586ab11",
+        "originalPdf300DpiPixelBox": [
+          1735,
+          1042,
+          2068,
+          1081
+        ],
+        "noResamplingOrGlyphAlteration": true
+      },
+      "actualWholePage600SourceField": {
+        "path": "/workspace/salary-review-municipal-tmp/peer-held-2019-20-016-last99-money/independent/0202-remuneration-own-wholepage600.png",
+        "sha256": "e4904f53b2c546f67513339c3f2ebf3aa189c1b27f4fb7d74dced3a747b24917"
+      },
+      "authorFirstFrozenValue": 88254,
+      "authorScopedSecondaryValue": 88254,
+      "authorEffectiveSourceValue": 88254,
+      "exactMatch": true,
+      "literalPrintedDashEvidence": false
+    },
+    {
+      "sequence": 205,
+      "physicalPage": 116,
+      "sourceRowOnPage": 16,
+      "field": "remuneration",
+      "cropSha256": "23b6e3b3485786d0b27b99500b19d6fecca0e73ffa0baca6276e7d50138bd966",
+      "peerFirstSourceValue": 82390,
+      "literalSourceAmount": "82,390",
+      "value": 82390,
+      "uncertainty": null,
+      "sourceNativeField": {
+        "field": "remuneration",
+        "path": "/tmp/queue-completion-phsa/phsa-2019-20/review-images/phsa-2019-20-016-target-views/0205-remuneration.png",
+        "sha256": "4d38a4cb67ce9b1a09248d279bc037bd2ab17f689fe6b4a882cba491b3d7581c",
+        "originalPdf300DpiPixelBox": [
+          1735,
+          1291,
+          2068,
+          1330
+        ],
+        "noResamplingOrGlyphAlteration": true
+      },
+      "actualWholePage600SourceField": {
+        "path": "/workspace/salary-review-municipal-tmp/peer-held-2019-20-016-last99-money/independent/0205-remuneration-own-wholepage600.png",
+        "sha256": "cd63bd6597ddfe4f23e38b51ffeb3d2f9d0e7d9858daad2cff72863e7060f1ff"
+      },
+      "authorFirstFrozenValue": 82390,
+      "authorScopedSecondaryValue": 82390,
+      "authorEffectiveSourceValue": 82390,
+      "exactMatch": true,
+      "literalPrintedDashEvidence": false
+    },
+    {
+      "sequence": 207,
+      "physicalPage": 116,
+      "sourceRowOnPage": 19,
+      "field": "expenses",
+      "cropSha256": "39fbe11255cbbf84d4b1af17dcad7777b1f530d3e24d571c2409d0053cde306b",
+      "peerFirstSourceValue": 165,
+      "literalSourceAmount": "165",
+      "value": 165,
+      "uncertainty": null,
+      "sourceNativeField": {
+        "field": "expenses",
+        "path": "/tmp/queue-completion-phsa/phsa-2019-20/review-images/phsa-2019-20-016-target-views/0207-expenses.png",
+        "sha256": "e40437cd87aa91a1065b80f6366041903cf21dbfd1d46d563be1beeff5e8ed27",
+        "originalPdf300DpiPixelBox": [
+          2052,
+          1413,
+          2422,
+          1453
+        ],
+        "noResamplingOrGlyphAlteration": true
+      },
+      "actualWholePage600SourceField": {
+        "path": "/workspace/salary-review-municipal-tmp/peer-held-2019-20-016-last99-money/independent/0207-expenses-own-wholepage600.png",
+        "sha256": "9b4f484688d7631c0c7f9aac097c96176a86e564d4941c5ab610c45a3507e442"
+      },
+      "authorFirstFrozenValue": 165,
+      "authorScopedSecondaryValue": 165,
+      "authorEffectiveSourceValue": 165,
+      "exactMatch": true,
+      "literalPrintedDashEvidence": false
+    },
+    {
+      "sequence": 208,
+      "physicalPage": 116,
+      "sourceRowOnPage": 20,
+      "field": "remuneration",
+      "cropSha256": "1b04b53a900e04823930161e227e625ddfbe3464705dcb29c85a26770ff5c5fb",
+      "peerFirstSourceValue": 98989,
+      "literalSourceAmount": "98,989",
+      "value": 98989,
+      "uncertainty": null,
+      "sourceNativeField": {
+        "field": "remuneration",
+        "path": "/tmp/queue-completion-phsa/phsa-2019-20/review-images/phsa-2019-20-016-target-views/0208-remuneration.png",
+        "sha256": "31d280b7730d03ed7496a38eff09258e76ac14ba421ca088307671a15a5615d1",
+        "originalPdf300DpiPixelBox": [
+          1735,
+          1454,
+          2068,
+          1493
+        ],
+        "noResamplingOrGlyphAlteration": true
+      },
+      "actualWholePage600SourceField": {
+        "path": "/workspace/salary-review-municipal-tmp/peer-held-2019-20-016-last99-money/independent/0208-remuneration-own-wholepage600.png",
+        "sha256": "804efa17c953cf393538e79d4a54ae6141509adaa6734f53c13c65b4453c5175"
+      },
+      "authorFirstFrozenValue": 98989,
+      "authorScopedSecondaryValue": 98989,
+      "authorEffectiveSourceValue": 98989,
+      "exactMatch": true,
+      "literalPrintedDashEvidence": false
+    },
+    {
+      "sequence": 210,
+      "physicalPage": 116,
+      "sourceRowOnPage": 23,
+      "field": "expenses",
+      "cropSha256": "4ed74c5ea29f79d5fc79a3889e8de76dd77d96e5d3d3f1e1a2a6015053817f74",
+      "peerFirstSourceValue": 12566,
+      "literalSourceAmount": "12,566",
+      "value": 12566,
+      "uncertainty": null,
+      "sourceNativeField": {
+        "field": "expenses",
+        "path": "/tmp/queue-completion-phsa/phsa-2019-20/review-images/phsa-2019-20-016-target-views/0210-expenses.png",
+        "sha256": "4a9f931e3e95ab00b3c48c21ef1159f9f9d9d46e49c6d556428a753286c5e82c",
+        "originalPdf300DpiPixelBox": [
+          2052,
+          1579,
+          2422,
+          1618
+        ],
+        "noResamplingOrGlyphAlteration": true
+      },
+      "actualWholePage600SourceField": {
+        "path": "/workspace/salary-review-municipal-tmp/peer-held-2019-20-016-last99-money/independent/0210-expenses-own-wholepage600.png",
+        "sha256": "9dc4bb2d60d99d5241ff6000d2f3e2156ceb08d9d9c2b98a8b6315c11639ec60"
+      },
+      "authorFirstFrozenValue": 12566,
+      "authorScopedSecondaryValue": 12566,
+      "authorEffectiveSourceValue": 12566,
+      "exactMatch": true,
+      "literalPrintedDashEvidence": false
+    },
+    {
+      "sequence": 213,
+      "physicalPage": 116,
+      "sourceRowOnPage": 27,
+      "field": "expenses",
+      "cropSha256": "4aa650af0a813ad2ee71d07a8e9e86f75796f231ce931a83b9f9b0caa69d91fe",
+      "peerFirstSourceValue": 5741,
+      "literalSourceAmount": "5,741",
+      "value": 5741,
+      "uncertainty": null,
+      "sourceNativeField": {
+        "field": "expenses",
+        "path": "/tmp/queue-completion-phsa/phsa-2019-20/review-images/phsa-2019-20-016-target-views/0213-expenses.png",
+        "sha256": "3546cd316534af5fe481b73e5a86988e30c4e882d8af6b43f5c97b52d6b09a00",
+        "originalPdf300DpiPixelBox": [
+          2052,
+          1743,
+          2422,
+          1782
+        ],
+        "noResamplingOrGlyphAlteration": true
+      },
+      "actualWholePage600SourceField": {
+        "path": "/workspace/salary-review-municipal-tmp/peer-held-2019-20-016-last99-money/independent/0213-expenses-own-wholepage600.png",
+        "sha256": "6cd8aeda795a61e92b27da7f37f36265626a3929197d519086271e13c1cb8452"
+      },
+      "authorFirstFrozenValue": 5741,
+      "authorScopedSecondaryValue": 5741,
+      "authorEffectiveSourceValue": 5741,
+      "exactMatch": true,
+      "literalPrintedDashEvidence": false
+    },
+    {
+      "sequence": 214,
+      "physicalPage": 116,
+      "sourceRowOnPage": 29,
+      "field": "expenses",
+      "cropSha256": "01cf98e4847e488e936f2b3fb9f9d75ac819889357be565a7287434ed562ab9f",
+      "peerFirstSourceValue": 502,
+      "literalSourceAmount": "502",
+      "value": 502,
+      "uncertainty": null,
+      "sourceNativeField": {
+        "field": "expenses",
+        "path": "/tmp/queue-completion-phsa/phsa-2019-20/review-images/phsa-2019-20-016-target-views/0214-expenses.png",
+        "sha256": "bb3a80c345dd71814f9d87b4a63d32ec57354b6791dc40467e30b8050c0f0f78",
+        "originalPdf300DpiPixelBox": [
+          2052,
+          1824,
+          2422,
+          1863
+        ],
+        "noResamplingOrGlyphAlteration": true
+      },
+      "actualWholePage600SourceField": {
+        "path": "/workspace/salary-review-municipal-tmp/peer-held-2019-20-016-last99-money/independent/0214-expenses-own-wholepage600.png",
+        "sha256": "1e9dddada9bb3dc36dad91376aeaaab89883ed32fc9d8e577b79125651686a72"
+      },
+      "authorFirstFrozenValue": 502,
+      "authorScopedSecondaryValue": 902,
+      "authorEffectiveSourceValue": 502,
+      "exactMatch": true,
+      "literalPrintedDashEvidence": false
+    },
+    {
+      "sequence": 216,
+      "physicalPage": 116,
+      "sourceRowOnPage": 31,
+      "field": "remuneration",
+      "cropSha256": "f653ac660abbdfe72820cca4b44e9b85cdfe3cf3806d3e9e487b7492d448c187",
+      "peerFirstSourceValue": 75367,
+      "literalSourceAmount": "75,367",
+      "value": 75367,
+      "uncertainty": null,
+      "sourceNativeField": {
+        "field": "remuneration",
+        "path": "/tmp/queue-completion-phsa/phsa-2019-20/review-images/phsa-2019-20-016-target-views/0216-remuneration.png",
+        "sha256": "c01815dc4caa321937b2e06cc15acf78939bd2f1b95942e0451610df4b25971a",
+        "originalPdf300DpiPixelBox": [
+          1735,
+          1906,
+          2068,
+          1945
+        ],
+        "noResamplingOrGlyphAlteration": true
+      },
+      "actualWholePage600SourceField": {
+        "path": "/workspace/salary-review-municipal-tmp/peer-held-2019-20-016-last99-money/independent/0216-remuneration-own-wholepage600.png",
+        "sha256": "79b5b8ec8771d1221508289ec388b5825b608e0192d16cb55e2a2fe9e4c438d2"
+      },
+      "authorFirstFrozenValue": 75367,
+      "authorScopedSecondaryValue": 75367,
+      "authorEffectiveSourceValue": 75367,
+      "exactMatch": true,
+      "literalPrintedDashEvidence": false
+    },
+    {
+      "sequence": 219,
+      "physicalPage": 116,
+      "sourceRowOnPage": 34,
+      "field": "remuneration",
+      "cropSha256": "fba2511ca7626577108c710370c11f81b3cdaba16bb77a62ca2ea1fb4cd5c93a",
+      "peerFirstSourceValue": 88433,
+      "literalSourceAmount": "88,433",
+      "value": 88433,
+      "uncertainty": null,
+      "sourceNativeField": {
+        "field": "remuneration",
+        "path": "/tmp/queue-completion-phsa/phsa-2019-20/review-images/phsa-2019-20-016-target-views/0219-remuneration.png",
+        "sha256": "c538b189180bfc30aafb6ef3ed8656126fcf1f593ee1ec04dad8774c1e372ca5",
+        "originalPdf300DpiPixelBox": [
+          1735,
+          2029,
+          2068,
+          2068
+        ],
+        "noResamplingOrGlyphAlteration": true
+      },
+      "actualWholePage600SourceField": {
+        "path": "/workspace/salary-review-municipal-tmp/peer-held-2019-20-016-last99-money/independent/0219-remuneration-own-wholepage600.png",
+        "sha256": "e55287148c885606b498d24d3918b6617044409030bd3e8a580143d7ae4ab571"
+      },
+      "authorFirstFrozenValue": 88433,
+      "authorScopedSecondaryValue": 88433,
+      "authorEffectiveSourceValue": 88433,
+      "exactMatch": true,
+      "literalPrintedDashEvidence": false
+    },
+    {
+      "sequence": 220,
+      "physicalPage": 116,
+      "sourceRowOnPage": 35,
+      "field": "remuneration",
+      "cropSha256": "290dce4d2ae74c1aa109d4a19934a7aef5e8356728564d8708c039601a8db97b",
+      "peerFirstSourceValue": 85654,
+      "literalSourceAmount": "85,654",
+      "value": 85654,
+      "uncertainty": null,
+      "sourceNativeField": {
+        "field": "remuneration",
+        "path": "/tmp/queue-completion-phsa/phsa-2019-20/review-images/phsa-2019-20-016-target-views/0220-remuneration.png",
+        "sha256": "cdd51e438a59522623cf64ab9338d798f1fda8df4bdbf17ca1543be5fd6fe27b",
+        "originalPdf300DpiPixelBox": [
+          1735,
+          2071,
+          2068,
+          2110
+        ],
+        "noResamplingOrGlyphAlteration": true
+      },
+      "actualWholePage600SourceField": {
+        "path": "/workspace/salary-review-municipal-tmp/peer-held-2019-20-016-last99-money/independent/0220-remuneration-own-wholepage600.png",
+        "sha256": "1abef8c14f9626ee59767f222b39c1123f3218b3f0f0bac204e8a4301bffb285"
+      },
+      "authorFirstFrozenValue": 85654,
+      "authorScopedSecondaryValue": 85654,
+      "authorEffectiveSourceValue": 85654,
+      "exactMatch": true,
+      "literalPrintedDashEvidence": false
+    },
+    {
+      "sequence": 222,
+      "physicalPage": 116,
+      "sourceRowOnPage": 38,
+      "field": "remuneration",
+      "cropSha256": "a8f1e37d4c87c94d4bf2c5cdc70e0e292f8b461236a2d2212c8ce61ebf9f786f",
+      "peerFirstSourceValue": 76200,
+      "literalSourceAmount": "76,200",
+      "value": 76200,
+      "uncertainty": null,
+      "sourceNativeField": {
+        "field": "remuneration",
+        "path": "/tmp/queue-completion-phsa/phsa-2019-20/review-images/phsa-2019-20-016-target-views/0222-remuneration.png",
+        "sha256": "677452924a8ba38f95f25b4990d4340450f84a18929f154518e79780db8bcac4",
+        "originalPdf300DpiPixelBox": [
+          1735,
+          2192,
+          2068,
+          2231
+        ],
+        "noResamplingOrGlyphAlteration": true
+      },
+      "actualWholePage600SourceField": {
+        "path": "/workspace/salary-review-municipal-tmp/peer-held-2019-20-016-last99-money/independent/0222-remuneration-own-wholepage600.png",
+        "sha256": "80a206e173568f3008718b63e5e68e6fe683b0ba0057e1679543c5e86391cdf9"
+      },
+      "authorFirstFrozenValue": 76200,
+      "authorScopedSecondaryValue": 76200,
+      "authorEffectiveSourceValue": 76200,
+      "exactMatch": true,
+      "literalPrintedDashEvidence": false
+    },
+    {
+      "sequence": 223,
+      "physicalPage": 116,
+      "sourceRowOnPage": 40,
+      "field": "remuneration",
+      "cropSha256": "b94527d53e96c142c87596b16ff1c295a7e26c4677ff1abd6c0096c74da5cbb8",
+      "peerFirstSourceValue": 77136,
+      "literalSourceAmount": "77,136",
+      "value": 77136,
+      "uncertainty": null,
+      "sourceNativeField": {
+        "field": "remuneration",
+        "path": "/tmp/queue-completion-phsa/phsa-2019-20/review-images/phsa-2019-20-016-target-views/0223-remuneration.png",
+        "sha256": "8060233c43c71a0f0599a9532a86cb552fbdf7139ae1843bbd72055cfb095377",
+        "originalPdf300DpiPixelBox": [
+          1735,
+          2274,
+          2068,
+          2314
+        ],
+        "noResamplingOrGlyphAlteration": true
+      },
+      "actualWholePage600SourceField": {
+        "path": "/workspace/salary-review-municipal-tmp/peer-held-2019-20-016-last99-money/independent/0223-remuneration-own-wholepage600.png",
+        "sha256": "e74b0256ca105d205f591cf1759b441485228702c0e6ce16142ba2ae02d6c34b"
+      },
+      "authorFirstFrozenValue": 77136,
+      "authorScopedSecondaryValue": 77136,
+      "authorEffectiveSourceValue": 77136,
+      "exactMatch": true,
+      "literalPrintedDashEvidence": false
+    },
+    {
+      "sequence": 224,
+      "physicalPage": 116,
+      "sourceRowOnPage": 42,
+      "field": "remuneration",
+      "cropSha256": "85092906466c7c94b22c10dc794a251826b6f1bd0801248e91bfb35624abc86c",
+      "peerFirstSourceValue": 87655,
+      "literalSourceAmount": "87,655",
+      "value": 87655,
+      "uncertainty": null,
+      "sourceNativeField": {
+        "field": "remuneration",
+        "path": "/tmp/queue-completion-phsa/phsa-2019-20/review-images/phsa-2019-20-016-target-views/0224-remuneration.png",
+        "sha256": "9e8e4ff3d23d9744da81dbae997cc298d0b4e2c75c7a9d5fd63ac652ac0b09c0",
+        "originalPdf300DpiPixelBox": [
+          1735,
+          2358,
+          2068,
+          2397
+        ],
+        "noResamplingOrGlyphAlteration": true
+      },
+      "actualWholePage600SourceField": {
+        "path": "/workspace/salary-review-municipal-tmp/peer-held-2019-20-016-last99-money/independent/0224-remuneration-own-wholepage600.png",
+        "sha256": "072650b827fbae4948c3ab12184ff988954b113c379409738fd3cfe7919d8017"
+      },
+      "authorFirstFrozenValue": 87655,
+      "authorScopedSecondaryValue": 87655,
+      "authorEffectiveSourceValue": 87655,
+      "exactMatch": true,
+      "literalPrintedDashEvidence": false
+    },
+    {
+      "sequence": 228,
+      "physicalPage": 116,
+      "sourceRowOnPage": 47,
+      "field": "remuneration",
+      "cropSha256": "5f085784ea55461d5333c7ae82c68dace50b0c43f3d72041ec8e6389625946eb",
+      "peerFirstSourceValue": 85920,
+      "literalSourceAmount": "85,920",
+      "value": 85920,
+      "uncertainty": null,
+      "sourceNativeField": {
+        "field": "remuneration",
+        "path": "/tmp/queue-completion-phsa/phsa-2019-20/review-images/phsa-2019-20-016-target-views/0228-remuneration.png",
+        "sha256": "898dd7ac5434272e9e4ab018dc929a5e7591ae7aae2e8e4b661f9854bfd86d29",
+        "originalPdf300DpiPixelBox": [
+          1735,
+          2562,
+          2068,
+          2601
+        ],
+        "noResamplingOrGlyphAlteration": true
+      },
+      "actualWholePage600SourceField": {
+        "path": "/workspace/salary-review-municipal-tmp/peer-held-2019-20-016-last99-money/independent/0228-remuneration-own-wholepage600.png",
+        "sha256": "4e5c30394bde562ea06b21162d4744d4d270e1cdaa00ed3c2f27f2c8c8198323"
+      },
+      "authorFirstFrozenValue": 85920,
+      "authorScopedSecondaryValue": 85920,
+      "authorEffectiveSourceValue": 85920,
+      "exactMatch": true,
+      "literalPrintedDashEvidence": false
+    },
+    {
+      "sequence": 236,
+      "physicalPage": 116,
+      "sourceRowOnPage": 56,
+      "field": "remuneration",
+      "cropSha256": "853fff8d617511fd389abfd60288b603453c2c9dbeda98f93df8027834b09543",
+      "peerFirstSourceValue": 96191,
+      "literalSourceAmount": "96,191",
+      "value": 96191,
+      "uncertainty": null,
+      "sourceNativeField": {
+        "field": "remuneration",
+        "path": "/tmp/queue-completion-phsa/phsa-2019-20/review-images/phsa-2019-20-016-target-views/0236-remuneration.png",
+        "sha256": "e2fded897b2d120385f4432621967828b2d84083c2f08ae807a81d7d0044f65d",
+        "originalPdf300DpiPixelBox": [
+          1735,
+          2930,
+          2068,
+          2970
+        ],
+        "noResamplingOrGlyphAlteration": true
+      },
+      "actualWholePage600SourceField": {
+        "path": "/workspace/salary-review-municipal-tmp/peer-held-2019-20-016-last99-money/independent/0236-remuneration-own-wholepage600.png",
+        "sha256": "fd0b8a9ac3c9cc09baf5d5165db6c5ec35e5cbaa41940bccab7458eb337b431d"
+      },
+      "authorFirstFrozenValue": 96191,
+      "authorScopedSecondaryValue": 96191,
+      "authorEffectiveSourceValue": 96191,
+      "exactMatch": true,
+      "literalPrintedDashEvidence": false
+    },
+    {
+      "sequence": 239,
+      "physicalPage": 117,
+      "sourceRowOnPage": 1,
+      "field": "remuneration",
+      "cropSha256": "09523c419a93c0d955ec10498ebd34fc4f9f487acce45856b7ff2edbd050a559",
+      "peerFirstSourceValue": 86000,
+      "literalSourceAmount": "86,000",
+      "value": 86000,
+      "uncertainty": null,
+      "sourceNativeField": {
+        "field": "remuneration",
+        "path": "/tmp/queue-completion-phsa/phsa-2019-20/review-images/phsa-2019-20-016-target-views/0239-remuneration.png",
+        "sha256": "ff9bf6c571b9e8e143b3db277ee21e42350fb1bae01c71827d64358dee18cebf",
+        "originalPdf300DpiPixelBox": [
+          1735,
+          676,
+          2068,
+          715
+        ],
+        "noResamplingOrGlyphAlteration": true
+      },
+      "actualWholePage600SourceField": {
+        "path": "/workspace/salary-review-municipal-tmp/peer-held-2019-20-016-last99-money/independent/0239-remuneration-own-wholepage600.png",
+        "sha256": "213a2eddbc840d949fca05946b98ee3799fe4d74e097d641418e3f1ab6dabf01"
+      },
+      "authorFirstFrozenValue": 86000,
+      "authorScopedSecondaryValue": 86000,
+      "authorEffectiveSourceValue": 86000,
+      "exactMatch": true,
+      "literalPrintedDashEvidence": false
+    },
+    {
+      "sequence": 241,
+      "physicalPage": 117,
+      "sourceRowOnPage": 4,
+      "field": "remuneration",
+      "cropSha256": "d6503efd5aadbc48d12c4cd024aea227866c83dd37fd833465470d3cc14ddaad",
+      "peerFirstSourceValue": 78413,
+      "literalSourceAmount": "78,413",
+      "value": 78413,
+      "uncertainty": null,
+      "sourceNativeField": {
+        "field": "remuneration",
+        "path": "/tmp/queue-completion-phsa/phsa-2019-20/review-images/phsa-2019-20-016-target-views/0241-remuneration.png",
+        "sha256": "d2d64452c2857e9c759fdb5eb030eb52468f1e790d9de7d328a97f7f17a53a7d",
+        "originalPdf300DpiPixelBox": [
+          1735,
+          800,
+          2068,
+          838
+        ],
+        "noResamplingOrGlyphAlteration": true
+      },
+      "actualWholePage600SourceField": {
+        "path": "/workspace/salary-review-municipal-tmp/peer-held-2019-20-016-last99-money/independent/0241-remuneration-own-wholepage600.png",
+        "sha256": "acfcc2f5bdb3b835a35b50d85b71eca464fbf246177f58f5e9d8b4897e12f53d"
+      },
+      "authorFirstFrozenValue": 78413,
+      "authorScopedSecondaryValue": 78413,
+      "authorEffectiveSourceValue": 78413,
+      "exactMatch": true,
+      "literalPrintedDashEvidence": false
+    },
+    {
+      "sequence": 242,
+      "physicalPage": 117,
+      "sourceRowOnPage": 5,
+      "field": "remuneration",
+      "cropSha256": "49e8e49aa541e1019709660689f99dbe31e035381e5260f466f2c3546eca87bc",
+      "peerFirstSourceValue": 80947,
+      "literalSourceAmount": "80,947",
+      "value": 80947,
+      "uncertainty": null,
+      "sourceNativeField": {
+        "field": "remuneration",
+        "path": "/tmp/queue-completion-phsa/phsa-2019-20/review-images/phsa-2019-20-016-target-views/0242-remuneration.png",
+        "sha256": "4eced014d716bf7ef7a7c28671b81d4c47f995a90c206b89e7fa99476172bd98",
+        "originalPdf300DpiPixelBox": [
+          1735,
+          840,
+          2068,
+          879
+        ],
+        "noResamplingOrGlyphAlteration": true
+      },
+      "actualWholePage600SourceField": {
+        "path": "/workspace/salary-review-municipal-tmp/peer-held-2019-20-016-last99-money/independent/0242-remuneration-own-wholepage600.png",
+        "sha256": "5969cf578c2b79ef35a8ce0974512dbfe09336d3faeb71fd5f0ffeff39d6bef9"
+      },
+      "authorFirstFrozenValue": 80947,
+      "authorScopedSecondaryValue": 80947,
+      "authorEffectiveSourceValue": 80947,
+      "exactMatch": true,
+      "literalPrintedDashEvidence": false
+    },
+    {
+      "sequence": 247,
+      "physicalPage": 117,
+      "sourceRowOnPage": 12,
+      "field": "remuneration",
+      "cropSha256": "64370fc3a0a8c664ba377d2bb3265e48e0106f40bd495d7ea45ac3715f664eaa",
+      "peerFirstSourceValue": 203885,
+      "literalSourceAmount": "203,885",
+      "value": 203885,
+      "uncertainty": null,
+      "sourceNativeField": {
+        "field": "remuneration",
+        "path": "/tmp/queue-completion-phsa/phsa-2019-20/review-images/phsa-2019-20-016-target-views/0247-remuneration.png",
+        "sha256": "a5ad15c42bb00141eda52fef61251d39fb9e6777c8d433d9d0d733c47366d7b0",
+        "originalPdf300DpiPixelBox": [
+          1735,
+          1128,
+          2068,
+          1166
+        ],
+        "noResamplingOrGlyphAlteration": true
+      },
+      "actualWholePage600SourceField": {
+        "path": "/workspace/salary-review-municipal-tmp/peer-held-2019-20-016-last99-money/independent/0247-remuneration-own-wholepage600.png",
+        "sha256": "d33a01f52726098332e59f6648d5272c0fd66478fb4299b8e8dbf5de48f76478"
+      },
+      "authorFirstFrozenValue": 203885,
+      "authorScopedSecondaryValue": 203885,
+      "authorEffectiveSourceValue": 203885,
+      "exactMatch": true,
+      "literalPrintedDashEvidence": false
+    },
+    {
+      "sequence": 251,
+      "physicalPage": 117,
+      "sourceRowOnPage": 17,
+      "field": "remuneration",
+      "cropSha256": "9159b91a4b6d85d5abb6253899cc5a65b1dc68ba4dfd18f4f55767417578d68d",
+      "peerFirstSourceValue": 78966,
+      "literalSourceAmount": "78,966",
+      "value": 78966,
+      "uncertainty": null,
+      "sourceNativeField": {
+        "field": "remuneration",
+        "path": "/tmp/queue-completion-phsa/phsa-2019-20/review-images/phsa-2019-20-016-target-views/0251-remuneration.png",
+        "sha256": "6b0c194964c7347623b174fc0ce1bb6e222260fc070d48369d4549c1f2096aed",
+        "originalPdf300DpiPixelBox": [
+          1735,
+          1327,
+          2068,
+          1366
+        ],
+        "noResamplingOrGlyphAlteration": true
+      },
+      "actualWholePage600SourceField": {
+        "path": "/workspace/salary-review-municipal-tmp/peer-held-2019-20-016-last99-money/independent/0251-remuneration-own-wholepage600.png",
+        "sha256": "33c4a60182635d869588746b6a806b62c1afbe6ff6efdb4c937d0b9339356df4"
+      },
+      "authorFirstFrozenValue": 78966,
+      "authorScopedSecondaryValue": 78966,
+      "authorEffectiveSourceValue": 78966,
+      "exactMatch": true,
+      "literalPrintedDashEvidence": false
+    },
+    {
+      "sequence": 252,
+      "physicalPage": 117,
+      "sourceRowOnPage": 18,
+      "field": "remuneration",
+      "cropSha256": "a33bea64ea7f9ddd9866f5a85f090c7e82af155ad288a6b0877fd0b570d6e64e",
+      "peerFirstSourceValue": 84795,
+      "literalSourceAmount": "84,795",
+      "value": 84795,
+      "uncertainty": null,
+      "sourceNativeField": {
+        "field": "remuneration",
+        "path": "/tmp/queue-completion-phsa/phsa-2019-20/review-images/phsa-2019-20-016-target-views/0252-remuneration.png",
+        "sha256": "d17210f5a34b4525f5bc9ed5bb605dc249989a69c00a272eafddf9903c19abf2",
+        "originalPdf300DpiPixelBox": [
+          1735,
+          1370,
+          2068,
+          1408
+        ],
+        "noResamplingOrGlyphAlteration": true
+      },
+      "actualWholePage600SourceField": {
+        "path": "/workspace/salary-review-municipal-tmp/peer-held-2019-20-016-last99-money/independent/0252-remuneration-own-wholepage600.png",
+        "sha256": "13b52ea1de0c0e1636cee0b0825c141463bdee0415485e2b5fb59776aaf7da27"
+      },
+      "authorFirstFrozenValue": 84795,
+      "authorScopedSecondaryValue": 84795,
+      "authorEffectiveSourceValue": 84795,
+      "exactMatch": true,
+      "literalPrintedDashEvidence": false
+    },
+    {
+      "sequence": 254,
+      "physicalPage": 117,
+      "sourceRowOnPage": 20,
+      "field": "remuneration",
+      "cropSha256": "308ea592003426a020090174c56844057db990b195c344a499f037acf2cdc404",
+      "peerFirstSourceValue": 92841,
+      "literalSourceAmount": "92,841",
+      "value": 92841,
+      "uncertainty": null,
+      "sourceNativeField": {
+        "field": "remuneration",
+        "path": "/tmp/queue-completion-phsa/phsa-2019-20/review-images/phsa-2019-20-016-target-views/0254-remuneration.png",
+        "sha256": "74c8bb304880ea1f5838c59f4c368c1223912e49303b2bf72953057ca19a057a",
+        "originalPdf300DpiPixelBox": [
+          1735,
+          1454,
+          2068,
+          1493
+        ],
+        "noResamplingOrGlyphAlteration": true
+      },
+      "actualWholePage600SourceField": {
+        "path": "/workspace/salary-review-municipal-tmp/peer-held-2019-20-016-last99-money/independent/0254-remuneration-own-wholepage600.png",
+        "sha256": "8f1d63d3beed70c9a1184c87fe5da27de3401531faaf87d31ce0aabdea5efc15"
+      },
+      "authorFirstFrozenValue": 92841,
+      "authorScopedSecondaryValue": 92841,
+      "authorEffectiveSourceValue": 92841,
+      "exactMatch": true,
+      "literalPrintedDashEvidence": false
+    },
+    {
+      "sequence": 256,
+      "physicalPage": 117,
+      "sourceRowOnPage": 22,
+      "field": "remuneration",
+      "cropSha256": "3e6e520ed37c36144a3621a5ed86a0672c43a637bd372ffca507c7cafcbd82c1",
+      "peerFirstSourceValue": 106620,
+      "literalSourceAmount": "106,620",
+      "value": 106620,
+      "uncertainty": null,
+      "sourceNativeField": {
+        "field": "remuneration",
+        "path": "/tmp/queue-completion-phsa/phsa-2019-20/review-images/phsa-2019-20-016-target-views/0256-remuneration.png",
+        "sha256": "15a737a893498be7063c6f17505b0f70841ce4866837f0c921d98ddeee7e2e6d",
+        "originalPdf300DpiPixelBox": [
+          1735,
+          1537,
+          2068,
+          1576
+        ],
+        "noResamplingOrGlyphAlteration": true
+      },
+      "actualWholePage600SourceField": {
+        "path": "/workspace/salary-review-municipal-tmp/peer-held-2019-20-016-last99-money/independent/0256-remuneration-own-wholepage600.png",
+        "sha256": "d63490bee34e2462e48a170d28080e3c673ead6aafe684a5f8a087459644748a"
+      },
+      "authorFirstFrozenValue": 106620,
+      "authorScopedSecondaryValue": 106620,
+      "authorEffectiveSourceValue": 106620,
+      "exactMatch": true,
+      "literalPrintedDashEvidence": false
+    },
+    {
+      "sequence": 257,
+      "physicalPage": 117,
+      "sourceRowOnPage": 24,
+      "field": "expenses",
+      "cropSha256": "1c947095d8d85cf41e95625503f8ef4d6c995b777170691f409cba2950dcdaa3",
+      "peerFirstSourceValue": 3174,
+      "literalSourceAmount": "3,174",
+      "value": 3174,
+      "uncertainty": null,
+      "sourceNativeField": {
+        "field": "expenses",
+        "path": "/tmp/queue-completion-phsa/phsa-2019-20/review-images/phsa-2019-20-016-target-views/0257-expenses.png",
+        "sha256": "362f0b5889e3b52a6fb135c9e3ee058a7c0a072cd317dbcb78a4970fd36d7c79",
+        "originalPdf300DpiPixelBox": [
+          2052,
+          1619,
+          2422,
+          1658
+        ],
+        "noResamplingOrGlyphAlteration": true
+      },
+      "actualWholePage600SourceField": {
+        "path": "/workspace/salary-review-municipal-tmp/peer-held-2019-20-016-last99-money/independent/0257-expenses-own-wholepage600.png",
+        "sha256": "20e0a80d8623eb3807a15ece5fa660020b3c64b90d7d741caa27da395d5ca3b2"
+      },
+      "authorFirstFrozenValue": 3174,
+      "authorScopedSecondaryValue": 3174,
+      "authorEffectiveSourceValue": 3174,
+      "exactMatch": true,
+      "literalPrintedDashEvidence": false
+    },
+    {
+      "sequence": 261,
+      "physicalPage": 117,
+      "sourceRowOnPage": 28,
+      "field": "expenses",
+      "cropSha256": "e8fffe52cc4f48a45241e58f7dab219cd783b00095ebdb07950b99db1d9a8795",
+      "peerFirstSourceValue": 2588,
+      "literalSourceAmount": "2,588",
+      "value": 2588,
+      "uncertainty": null,
+      "sourceNativeField": {
+        "field": "expenses",
+        "path": "/tmp/queue-completion-phsa/phsa-2019-20/review-images/phsa-2019-20-016-target-views/0261-expenses.png",
+        "sha256": "c29084602f10a207c66beb4572916582111e6cede05cd854c3e13f875bcedee5",
+        "originalPdf300DpiPixelBox": [
+          2052,
+          1779,
+          2422,
+          1818
+        ],
+        "noResamplingOrGlyphAlteration": true
+      },
+      "actualWholePage600SourceField": {
+        "path": "/workspace/salary-review-municipal-tmp/peer-held-2019-20-016-last99-money/independent/0261-expenses-own-wholepage600.png",
+        "sha256": "e348abbc0eb4e0a8fc406bd11e3b7a65dc6647a47855b1355d4bb986e8d33446"
+      },
+      "authorFirstFrozenValue": 2588,
+      "authorScopedSecondaryValue": 2588,
+      "authorEffectiveSourceValue": 2588,
+      "exactMatch": true,
+      "literalPrintedDashEvidence": false
+    },
+    {
+      "sequence": 264,
+      "physicalPage": 117,
+      "sourceRowOnPage": 31,
+      "field": "remuneration",
+      "cropSha256": "933dde04ff657fd2c29b71e14081860ca7f10b09dea6a8b5e4c7e3de1235e3f3",
+      "peerFirstSourceValue": 125678,
+      "literalSourceAmount": "125,678",
+      "value": 125678,
+      "uncertainty": null,
+      "sourceNativeField": {
+        "field": "remuneration",
+        "path": "/tmp/queue-completion-phsa/phsa-2019-20/review-images/phsa-2019-20-016-target-views/0264-remuneration.png",
+        "sha256": "2e7672b0a53f3815b382bc7c691ba23330931d6ae5fd7633e3093815c6c37966",
+        "originalPdf300DpiPixelBox": [
+          1735,
+          1903,
+          2068,
+          1942
+        ],
+        "noResamplingOrGlyphAlteration": true
+      },
+      "actualWholePage600SourceField": {
+        "path": "/workspace/salary-review-municipal-tmp/peer-held-2019-20-016-last99-money/independent/0264-remuneration-own-wholepage600.png",
+        "sha256": "efc04bd5208de435ae1c0c0048230c600c8354fbbe49ce5e2d7516d554d14a2b"
+      },
+      "authorFirstFrozenValue": 125678,
+      "authorScopedSecondaryValue": 125678,
+      "authorEffectiveSourceValue": 125678,
+      "exactMatch": true,
+      "literalPrintedDashEvidence": false
+    },
+    {
+      "sequence": 266,
+      "physicalPage": 117,
+      "sourceRowOnPage": 33,
+      "field": "remuneration",
+      "cropSha256": "df2cf15ddc95c85eea9f84129d8daf8ff86683ee49ce88848bb24456c6b7996c",
+      "peerFirstSourceValue": 90929,
+      "literalSourceAmount": "90,929",
+      "value": 90929,
+      "uncertainty": null,
+      "sourceNativeField": {
+        "field": "remuneration",
+        "path": "/tmp/queue-completion-phsa/phsa-2019-20/review-images/phsa-2019-20-016-target-views/0266-remuneration.png",
+        "sha256": "6285c97982632020ac0a5f7c345c1fb10a01e358554eff11231444daf3ca0000",
+        "originalPdf300DpiPixelBox": [
+          1735,
+          1984,
+          2068,
+          2023
+        ],
+        "noResamplingOrGlyphAlteration": true
+      },
+      "actualWholePage600SourceField": {
+        "path": "/workspace/salary-review-municipal-tmp/peer-held-2019-20-016-last99-money/independent/0266-remuneration-own-wholepage600.png",
+        "sha256": "7ead8e04b810ea3d8a31662ac3c198dfa88871f7d00384b2b2c9158aafafdb35"
+      },
+      "authorFirstFrozenValue": 90929,
+      "authorScopedSecondaryValue": 90929,
+      "authorEffectiveSourceValue": 90929,
+      "exactMatch": true,
+      "literalPrintedDashEvidence": false
+    },
+    {
+      "sequence": 267,
+      "physicalPage": 117,
+      "sourceRowOnPage": 34,
+      "field": "expenses",
+      "cropSha256": "2c3035c688c065ec3760cee6720d59bf3cb2e9eca63e68534d1b71b650ae04db",
+      "peerFirstSourceValue": 4121,
+      "literalSourceAmount": "4,121",
+      "value": 4121,
+      "uncertainty": null,
+      "sourceNativeField": {
+        "field": "expenses",
+        "path": "/tmp/queue-completion-phsa/phsa-2019-20/review-images/phsa-2019-20-016-target-views/0267-expenses.png",
+        "sha256": "5ef0ffbd0cfa970674415357fdea7c8a94b796f2742924c2ba8a962e58e04484",
+        "originalPdf300DpiPixelBox": [
+          2052,
+          2026,
+          2422,
+          2065
+        ],
+        "noResamplingOrGlyphAlteration": true
+      },
+      "actualWholePage600SourceField": {
+        "path": "/workspace/salary-review-municipal-tmp/peer-held-2019-20-016-last99-money/independent/0267-expenses-own-wholepage600.png",
+        "sha256": "5d4317aeda52b8f32d0fcccd6a8e0cb735046b3b54a4fed8c0bc988a97a28306"
+      },
+      "authorFirstFrozenValue": 4121,
+      "authorScopedSecondaryValue": 4121,
+      "authorEffectiveSourceValue": 4121,
+      "exactMatch": true,
+      "literalPrintedDashEvidence": false
+    },
+    {
+      "sequence": 269,
+      "physicalPage": 117,
+      "sourceRowOnPage": 36,
+      "field": "remuneration",
+      "cropSha256": "ffebaa14cd3165aab2e1c23468b0543514475013a06d56098bf4b1a8f0f9d332",
+      "peerFirstSourceValue": 138202,
+      "literalSourceAmount": "138,202",
+      "value": 138202,
+      "uncertainty": null,
+      "sourceNativeField": {
+        "field": "remuneration",
+        "path": "/tmp/queue-completion-phsa/phsa-2019-20/review-images/phsa-2019-20-016-target-views/0269-remuneration.png",
+        "sha256": "1b0897f4f7ee8c2dc75f26f15f6bd21b4134d654c4ed36cd7cec4c9f308e2b58",
+        "originalPdf300DpiPixelBox": [
+          1735,
+          2111,
+          2068,
+          2150
+        ],
+        "noResamplingOrGlyphAlteration": true
+      },
+      "actualWholePage600SourceField": {
+        "path": "/workspace/salary-review-municipal-tmp/peer-held-2019-20-016-last99-money/independent/0269-remuneration-own-wholepage600.png",
+        "sha256": "7a9e14fb6e824e2a7821a46fb9e6e7fd7bfca0dd3757ba1f33203a76575c8ef5"
+      },
+      "authorFirstFrozenValue": 138202,
+      "authorScopedSecondaryValue": 138202,
+      "authorEffectiveSourceValue": 138202,
+      "exactMatch": true,
+      "literalPrintedDashEvidence": false
+    },
+    {
+      "sequence": 272,
+      "physicalPage": 117,
+      "sourceRowOnPage": 39,
+      "field": "remuneration",
+      "cropSha256": "79c73902d7a35702ddfb640c2c5ce0b6fbf66c9bf4a882ae4f4ede0d914bd91b",
+      "peerFirstSourceValue": 77508,
+      "literalSourceAmount": "77,508",
+      "value": 77508,
+      "uncertainty": null,
+      "sourceNativeField": {
+        "field": "remuneration",
+        "path": "/tmp/queue-completion-phsa/phsa-2019-20/review-images/phsa-2019-20-016-target-views/0272-remuneration.png",
+        "sha256": "e39497ae6fde32b612313a1e45a52f2d850229714b4e18ec3c9baf117371948b",
+        "originalPdf300DpiPixelBox": [
+          1735,
+          2234,
+          2068,
+          2273
+        ],
+        "noResamplingOrGlyphAlteration": true
+      },
+      "actualWholePage600SourceField": {
+        "path": "/workspace/salary-review-municipal-tmp/peer-held-2019-20-016-last99-money/independent/0272-remuneration-own-wholepage600.png",
+        "sha256": "e4e64cae7b20b23ccc474b190a6e0b2d9f626243f88c9ca68704e8229dfb4d0b"
+      },
+      "authorFirstFrozenValue": 77508,
+      "authorScopedSecondaryValue": 77508,
+      "authorEffectiveSourceValue": 77508,
+      "exactMatch": true,
+      "literalPrintedDashEvidence": false
+    },
+    {
+      "sequence": 274,
+      "physicalPage": 117,
+      "sourceRowOnPage": 41,
+      "field": "remuneration",
+      "cropSha256": "3de229609916348f45a77cf7942207e47b4471d827118703e4fc521b1f2a0f46",
+      "peerFirstSourceValue": 88656,
+      "literalSourceAmount": "88,656",
+      "value": 88656,
+      "uncertainty": null,
+      "sourceNativeField": {
+        "field": "remuneration",
+        "path": "/tmp/queue-completion-phsa/phsa-2019-20/review-images/phsa-2019-20-016-target-views/0274-remuneration.png",
+        "sha256": "14e8ef1275c8d7c4f779898ba56854e8100a87913b2b8afd1a1057e71500199e",
+        "originalPdf300DpiPixelBox": [
+          1735,
+          2316,
+          2068,
+          2354
+        ],
+        "noResamplingOrGlyphAlteration": true
+      },
+      "actualWholePage600SourceField": {
+        "path": "/workspace/salary-review-municipal-tmp/peer-held-2019-20-016-last99-money/independent/0274-remuneration-own-wholepage600.png",
+        "sha256": "a97d858b33542b681a02d137fec7173d80064296893a17acd5b8d063e59fab0b"
+      },
+      "authorFirstFrozenValue": 88656,
+      "authorScopedSecondaryValue": 88656,
+      "authorEffectiveSourceValue": 88656,
+      "exactMatch": true,
+      "literalPrintedDashEvidence": false
+    },
+    {
+      "sequence": 277,
+      "physicalPage": 117,
+      "sourceRowOnPage": 44,
+      "field": "remuneration",
+      "cropSha256": "c55e5f2d9402ef49b892d00d3d4095402a6320ca8058280bfbfa0ef50be2cc5c",
+      "peerFirstSourceValue": 79493,
+      "literalSourceAmount": "79,493",
+      "value": 79493,
+      "uncertainty": null,
+      "sourceNativeField": {
+        "field": "remuneration",
+        "path": "/tmp/queue-completion-phsa/phsa-2019-20/review-images/phsa-2019-20-016-target-views/0277-remuneration.png",
+        "sha256": "cce4e16734e98fce7993376b83bcd8fb3494fe520d69ecbd6cfa6146eba38579",
+        "originalPdf300DpiPixelBox": [
+          1735,
+          2436,
+          2068,
+          2475
+        ],
+        "noResamplingOrGlyphAlteration": true
+      },
+      "actualWholePage600SourceField": {
+        "path": "/workspace/salary-review-municipal-tmp/peer-held-2019-20-016-last99-money/independent/0277-remuneration-own-wholepage600.png",
+        "sha256": "fb6e9e1a9c8b68d653a6b012691ef428801be7171f3446d3230b9401cea43620"
+      },
+      "authorFirstFrozenValue": 79493,
+      "authorScopedSecondaryValue": 79493,
+      "authorEffectiveSourceValue": 79493,
+      "exactMatch": true,
+      "literalPrintedDashEvidence": false
+    },
+    {
+      "sequence": 278,
+      "physicalPage": 117,
+      "sourceRowOnPage": 45,
+      "field": "remuneration",
+      "cropSha256": "2ae469bbbc1c8a247f4a2f398ab29c3a7091561aeeebc8fd87bbf71cf467e62e",
+      "peerFirstSourceValue": 130017,
+      "literalSourceAmount": "130,017",
+      "value": 130017,
+      "uncertainty": null,
+      "sourceNativeField": {
+        "field": "remuneration",
+        "path": "/tmp/queue-completion-phsa/phsa-2019-20/review-images/phsa-2019-20-016-target-views/0278-remuneration.png",
+        "sha256": "1e3c58fbdc939f70f2e03a68ef650b66088008f599c484ce2a66890ce5673526",
+        "originalPdf300DpiPixelBox": [
+          1735,
+          2478,
+          2068,
+          2517
+        ],
+        "noResamplingOrGlyphAlteration": true
+      },
+      "actualWholePage600SourceField": {
+        "path": "/workspace/salary-review-municipal-tmp/peer-held-2019-20-016-last99-money/independent/0278-remuneration-own-wholepage600.png",
+        "sha256": "844159e70828d8897ddd3294981ebcc32de97394c2b29b3002f555c69c0fe5ff"
+      },
+      "authorFirstFrozenValue": 130017,
+      "authorScopedSecondaryValue": 130017,
+      "authorEffectiveSourceValue": 130017,
+      "exactMatch": true,
+      "literalPrintedDashEvidence": false
+    },
+    {
+      "sequence": 280,
+      "physicalPage": 117,
+      "sourceRowOnPage": 49,
+      "field": "remuneration",
+      "cropSha256": "49e247e4608549d12895106723045a48a8a2dab25bb37598181e3b7db8e11802",
+      "peerFirstSourceValue": 83510,
+      "literalSourceAmount": "83,510",
+      "value": 83510,
+      "uncertainty": null,
+      "sourceNativeField": {
+        "field": "remuneration",
+        "path": "/tmp/queue-completion-phsa/phsa-2019-20/review-images/phsa-2019-20-016-target-views/0280-remuneration.png",
+        "sha256": "3a3eaef2979211ceacb5207e1cad50c9361290cd182166e28b534fe0a565fe34",
+        "originalPdf300DpiPixelBox": [
+          1735,
+          2640,
+          2068,
+          2679
+        ],
+        "noResamplingOrGlyphAlteration": true
+      },
+      "actualWholePage600SourceField": {
+        "path": "/workspace/salary-review-municipal-tmp/peer-held-2019-20-016-last99-money/independent/0280-remuneration-own-wholepage600.png",
+        "sha256": "08024ad16ff53c56c056c44829095bbf9da0100aa30705d9e5300b414e8f5aa4"
+      },
+      "authorFirstFrozenValue": 83310,
+      "authorScopedSecondaryValue": 83510,
+      "authorEffectiveSourceValue": 83510,
+      "exactMatch": true,
+      "literalPrintedDashEvidence": false
+    },
+    {
+      "sequence": 280,
+      "physicalPage": 117,
+      "sourceRowOnPage": 49,
+      "field": "expenses",
+      "cropSha256": "49e247e4608549d12895106723045a48a8a2dab25bb37598181e3b7db8e11802",
+      "peerFirstSourceValue": 356,
+      "literalSourceAmount": "356",
+      "value": 356,
+      "uncertainty": null,
+      "sourceNativeField": {
+        "field": "expenses",
+        "path": "/tmp/queue-completion-phsa/phsa-2019-20/review-images/phsa-2019-20-016-target-views/0280-expenses.png",
+        "sha256": "984aaaf03239bd7116f1ad3a2b167bed81b3f45c646f1a060d7989c8b5c4ba44",
+        "originalPdf300DpiPixelBox": [
+          2052,
+          2640,
+          2422,
+          2679
+        ],
+        "noResamplingOrGlyphAlteration": true
+      },
+      "actualWholePage600SourceField": {
+        "path": "/workspace/salary-review-municipal-tmp/peer-held-2019-20-016-last99-money/independent/0280-expenses-own-wholepage600.png",
+        "sha256": "1e13fffdd0ef732bda168ad913bdd1ee130b5bafa16680edf195a0bfd9f16451"
+      },
+      "authorFirstFrozenValue": 356,
+      "authorScopedSecondaryValue": 356,
+      "authorEffectiveSourceValue": 356,
+      "exactMatch": true,
+      "literalPrintedDashEvidence": false
+    },
+    {
+      "sequence": 281,
+      "physicalPage": 117,
+      "sourceRowOnPage": 50,
+      "field": "expenses",
+      "cropSha256": "b224f744cee78752fa185932e86c2f5765f6b5425198b4058e2939a0c4267985",
+      "peerFirstSourceValue": 225,
+      "literalSourceAmount": "225",
+      "value": 225,
+      "uncertainty": null,
+      "sourceNativeField": {
+        "field": "expenses",
+        "path": "/tmp/queue-completion-phsa/phsa-2019-20/review-images/phsa-2019-20-016-target-views/0281-expenses.png",
+        "sha256": "d370a183b11c999f8339dce25b74d925ae3e414d77f737b076645eb2e5ebb27f",
+        "originalPdf300DpiPixelBox": [
+          2052,
+          2681,
+          2422,
+          2719
+        ],
+        "noResamplingOrGlyphAlteration": true
+      },
+      "actualWholePage600SourceField": {
+        "path": "/workspace/salary-review-municipal-tmp/peer-held-2019-20-016-last99-money/independent/0281-expenses-own-wholepage600.png",
+        "sha256": "3ecc7b2b6cc500465e4769f62d0c0aa04aac9f19a1fc129470cb876b475af8ae"
+      },
+      "authorFirstFrozenValue": 225,
+      "authorScopedSecondaryValue": 225,
+      "authorEffectiveSourceValue": 225,
+      "exactMatch": true,
+      "literalPrintedDashEvidence": false
+    },
+    {
+      "sequence": 284,
+      "physicalPage": 117,
+      "sourceRowOnPage": 53,
+      "field": "expenses",
+      "cropSha256": "78b23e295beb99954ddbf249deb3c591b5bd4fb19e3bf0b8953db6b2dd8bfa32",
+      "peerFirstSourceValue": 5565,
+      "literalSourceAmount": "5,565",
+      "value": 5565,
+      "uncertainty": null,
+      "sourceNativeField": {
+        "field": "expenses",
+        "path": "/tmp/queue-completion-phsa/phsa-2019-20/review-images/phsa-2019-20-016-target-views/0284-expenses.png",
+        "sha256": "668766aac4d7c265efc58e651fc899bc3cc29ce284112a9a942c7c962029c473",
+        "originalPdf300DpiPixelBox": [
+          2052,
+          2808,
+          2422,
+          2846
+        ],
+        "noResamplingOrGlyphAlteration": true
+      },
+      "actualWholePage600SourceField": {
+        "path": "/workspace/salary-review-municipal-tmp/peer-held-2019-20-016-last99-money/independent/0284-expenses-own-wholepage600.png",
+        "sha256": "c32345def257ec34eea9c92d16ef57bba4af7a5e997ff32bcec6f00c8da2b26e"
+      },
+      "authorFirstFrozenValue": 5565,
+      "authorScopedSecondaryValue": 5565,
+      "authorEffectiveSourceValue": 5565,
+      "exactMatch": true,
+      "literalPrintedDashEvidence": false
+    },
+    {
+      "sequence": 285,
+      "physicalPage": 117,
+      "sourceRowOnPage": 54,
+      "field": "expenses",
+      "cropSha256": "ea4a4990311bb86184ee6d249270cfed5cced4d0cb08a1fa75d484f4e51b3d19",
+      "peerFirstSourceValue": 154,
+      "literalSourceAmount": "154",
+      "value": 154,
+      "uncertainty": null,
+      "sourceNativeField": {
+        "field": "expenses",
+        "path": "/tmp/queue-completion-phsa/phsa-2019-20/review-images/phsa-2019-20-016-target-views/0285-expenses.png",
+        "sha256": "ac9b3eed134aff00d9f3afb96c152c279b828fdbdde306ae3ecace260c2aaa1a",
+        "originalPdf300DpiPixelBox": [
+          2052,
+          2845,
+          2422,
+          2884
+        ],
+        "noResamplingOrGlyphAlteration": true
+      },
+      "actualWholePage600SourceField": {
+        "path": "/workspace/salary-review-municipal-tmp/peer-held-2019-20-016-last99-money/independent/0285-expenses-own-wholepage600.png",
+        "sha256": "c6325ea752254d72f4b736445746c327d5bb4c269c8a2e5a2773b9e6759f3f8f"
+      },
+      "authorFirstFrozenValue": 154,
+      "authorScopedSecondaryValue": 154,
+      "authorEffectiveSourceValue": 154,
+      "exactMatch": true,
+      "literalPrintedDashEvidence": false
+    },
+    {
+      "sequence": 286,
+      "physicalPage": 117,
+      "sourceRowOnPage": 55,
+      "field": "remuneration",
+      "cropSha256": "79ab42f8eed7575a9ec2767a298deebe700142417139a371892199cad004cc99",
+      "peerFirstSourceValue": 77425,
+      "literalSourceAmount": "77,425",
+      "value": 77425,
+      "uncertainty": null,
+      "sourceNativeField": {
+        "field": "remuneration",
+        "path": "/tmp/queue-completion-phsa/phsa-2019-20/review-images/phsa-2019-20-016-target-views/0286-remuneration.png",
+        "sha256": "88b1fe84b534756d7d63c188aaa70ae87a9ecd4c94d4ed6e21e8fa86024ca754",
+        "originalPdf300DpiPixelBox": [
+          1735,
+          2890,
+          2068,
+          2929
+        ],
+        "noResamplingOrGlyphAlteration": true
+      },
+      "actualWholePage600SourceField": {
+        "path": "/workspace/salary-review-municipal-tmp/peer-held-2019-20-016-last99-money/independent/0286-remuneration-own-wholepage600.png",
+        "sha256": "98c3ab3ad05ec21158fe3c33c27ba3f9e7998af06cd92c1e7433f8c5fc65351d"
+      },
+      "authorFirstFrozenValue": 77425,
+      "authorScopedSecondaryValue": 77425,
+      "authorEffectiveSourceValue": 77425,
+      "exactMatch": true,
+      "literalPrintedDashEvidence": false
+    },
+    {
+      "sequence": 287,
+      "physicalPage": 117,
+      "sourceRowOnPage": 56,
+      "field": "expenses",
+      "cropSha256": "46357ed2cbc6c2ac94db3e0432d859b7d6238fba9eafc8e05842dd91849667fe",
+      "peerFirstSourceValue": 1019,
+      "literalSourceAmount": "1,019",
+      "value": 1019,
+      "uncertainty": null,
+      "sourceNativeField": {
+        "field": "expenses",
+        "path": "/tmp/queue-completion-phsa/phsa-2019-20/review-images/phsa-2019-20-016-target-views/0287-expenses.png",
+        "sha256": "efc51635e4a1de63cf7dcc0b6a44668139030614001a69031ce2dabc4e064039",
+        "originalPdf300DpiPixelBox": [
+          2052,
+          2931,
+          2422,
+          2969
+        ],
+        "noResamplingOrGlyphAlteration": true
+      },
+      "actualWholePage600SourceField": {
+        "path": "/workspace/salary-review-municipal-tmp/peer-held-2019-20-016-last99-money/independent/0287-expenses-own-wholepage600.png",
+        "sha256": "269a3312f33c599cd4eeacf8ffed50bfe9ec4c2a6a20661f82540aaf7d7a7ba7"
+      },
+      "authorFirstFrozenValue": 1019,
+      "authorScopedSecondaryValue": 1019,
+      "authorEffectiveSourceValue": 1019,
+      "exactMatch": true,
+      "literalPrintedDashEvidence": false
+    },
+    {
+      "sequence": 288,
+      "physicalPage": 117,
+      "sourceRowOnPage": 57,
+      "field": "remuneration",
+      "cropSha256": "992baf9b498f175a08957394b78af42725b67f9ca372fe7a93b4ff3edb591ef7",
+      "peerFirstSourceValue": 77327,
+      "literalSourceAmount": "77,327",
+      "value": 77327,
+      "uncertainty": null,
+      "sourceNativeField": {
+        "field": "remuneration",
+        "path": "/tmp/queue-completion-phsa/phsa-2019-20/review-images/phsa-2019-20-016-target-views/0288-remuneration.png",
+        "sha256": "5ce7bf7ae8beebb0911646bd90d0e7de49ec49181b3b347355009a8ab2a5ab32",
+        "originalPdf300DpiPixelBox": [
+          1735,
+          2973,
+          2068,
+          3011
+        ],
+        "noResamplingOrGlyphAlteration": true
+      },
+      "actualWholePage600SourceField": {
+        "path": "/workspace/salary-review-municipal-tmp/peer-held-2019-20-016-last99-money/independent/0288-remuneration-own-wholepage600.png",
+        "sha256": "9b50dbd7b81cb5bd8f6f2a24db666ab5c258cd21fc3c768a94ab3727f94bf009"
+      },
+      "authorFirstFrozenValue": 77327,
+      "authorScopedSecondaryValue": 77327,
+      "authorEffectiveSourceValue": 77327,
+      "exactMatch": true,
+      "literalPrintedDashEvidence": false
+    },
+    {
+      "sequence": 289,
+      "physicalPage": 117,
+      "sourceRowOnPage": 58,
+      "field": "remuneration",
+      "cropSha256": "3e7e668d4f95c7b89c2dcb85cb989c7bd1634f75fa5bf06c0aaef5fc6a9a7fbf",
+      "peerFirstSourceValue": 75268,
+      "literalSourceAmount": "75,268",
+      "value": 75268,
+      "uncertainty": null,
+      "sourceNativeField": {
+        "field": "remuneration",
+        "path": "/tmp/queue-completion-phsa/phsa-2019-20/review-images/phsa-2019-20-016-target-views/0289-remuneration.png",
+        "sha256": "80cc1567c49c500e226f3fd34c0616fa139bb53965a84827ba67fd4b78c3e289",
+        "originalPdf300DpiPixelBox": [
+          1735,
+          3009,
+          2068,
+          3048
+        ],
+        "noResamplingOrGlyphAlteration": true
+      },
+      "actualWholePage600SourceField": {
+        "path": "/workspace/salary-review-municipal-tmp/peer-held-2019-20-016-last99-money/independent/0289-remuneration-own-wholepage600.png",
+        "sha256": "25edf7f8b69a7c532d6d0c2e2c0f11228215a03fb80af32ac685176a038f662a"
+      },
+      "authorFirstFrozenValue": 75268,
+      "authorScopedSecondaryValue": 75268,
+      "authorEffectiveSourceValue": 75268,
+      "exactMatch": true,
+      "literalPrintedDashEvidence": false
+    },
+    {
+      "sequence": 289,
+      "physicalPage": 117,
+      "sourceRowOnPage": 58,
+      "field": "expenses",
+      "cropSha256": "3e7e668d4f95c7b89c2dcb85cb989c7bd1634f75fa5bf06c0aaef5fc6a9a7fbf",
+      "peerFirstSourceValue": 4565,
+      "literalSourceAmount": "4,565",
+      "value": 4565,
+      "uncertainty": null,
+      "sourceNativeField": {
+        "field": "expenses",
+        "path": "/tmp/queue-completion-phsa/phsa-2019-20/review-images/phsa-2019-20-016-target-views/0289-expenses.png",
+        "sha256": "eacddfa15eebddde8f43510995edea4db2b2dd53afdbee08a21e0cbaeaddef0d",
+        "originalPdf300DpiPixelBox": [
+          2052,
+          3009,
+          2422,
+          3048
+        ],
+        "noResamplingOrGlyphAlteration": true
+      },
+      "actualWholePage600SourceField": {
+        "path": "/workspace/salary-review-municipal-tmp/peer-held-2019-20-016-last99-money/independent/0289-expenses-own-wholepage600.png",
+        "sha256": "878e92e6b7a1a3e920bc78889e06057bd98a0cf4ce4a8b4719d036884df95f39"
+      },
+      "authorFirstFrozenValue": 4565,
+      "authorScopedSecondaryValue": 4565,
+      "authorEffectiveSourceValue": 4565,
+      "exactMatch": true,
+      "literalPrintedDashEvidence": false
+    },
+    {
+      "sequence": 290,
+      "physicalPage": 118,
+      "sourceRowOnPage": 1,
+      "field": "remuneration",
+      "cropSha256": "a4eeb992a7d4835f506f1a44e17825f0a599df9ea665d0a191db768d820957bd",
+      "peerFirstSourceValue": 91549,
+      "literalSourceAmount": "91,549",
+      "value": 91549,
+      "uncertainty": null,
+      "sourceNativeField": {
+        "field": "remuneration",
+        "path": "/tmp/queue-completion-phsa/phsa-2019-20/review-images/phsa-2019-20-016-target-views/0290-remuneration.png",
+        "sha256": "4142d70284dbb5f4e424ae9b8da858e5f1ac222cec5641500a08c3e98094c21b",
+        "originalPdf300DpiPixelBox": [
+          1735,
+          671,
+          2068,
+          711
+        ],
+        "noResamplingOrGlyphAlteration": true
+      },
+      "actualWholePage600SourceField": {
+        "path": "/workspace/salary-review-municipal-tmp/peer-held-2019-20-016-last99-money/independent/0290-remuneration-own-wholepage600.png",
+        "sha256": "68186e096bc6f88bb270d4386dbaa13c47b966ecbde8c7ee0103e302e356b9fa"
+      },
+      "authorFirstFrozenValue": 91549,
+      "authorScopedSecondaryValue": 91549,
+      "authorEffectiveSourceValue": 91549,
+      "exactMatch": true,
+      "literalPrintedDashEvidence": false
+    },
+    {
+      "sequence": 293,
+      "physicalPage": 118,
+      "sourceRowOnPage": 5,
+      "field": "expenses",
+      "cropSha256": "9703d34d10ce069fbfa194855325edbfff5e5fc14650b694bc20198d4afd762b",
+      "peerFirstSourceValue": 13446,
+      "literalSourceAmount": "13,446",
+      "value": 13446,
+      "uncertainty": null,
+      "sourceNativeField": {
+        "field": "expenses",
+        "path": "/tmp/queue-completion-phsa/phsa-2019-20/review-images/phsa-2019-20-016-target-views/0293-expenses.png",
+        "sha256": "a615c7a0fdeace683587c03ce94ca341703d14e86c21ef40a34f8e0956bd0da8",
+        "originalPdf300DpiPixelBox": [
+          2052,
+          840,
+          2422,
+          879
+        ],
+        "noResamplingOrGlyphAlteration": true
+      },
+      "actualWholePage600SourceField": {
+        "path": "/workspace/salary-review-municipal-tmp/peer-held-2019-20-016-last99-money/independent/0293-expenses-own-wholepage600.png",
+        "sha256": "1d28809a55bcd71c64293671a86f848a8ae1b58ed2ac4f0ea02b72a5792b2f0e"
+      },
+      "authorFirstFrozenValue": 13446,
+      "authorScopedSecondaryValue": 13446,
+      "authorEffectiveSourceValue": 13446,
+      "exactMatch": true,
+      "literalPrintedDashEvidence": false
+    },
+    {
+      "sequence": 294,
+      "physicalPage": 118,
+      "sourceRowOnPage": 6,
+      "field": "remuneration",
+      "cropSha256": "89d0bc5c36eedd7fd83dc4abc0b93d73d0e808bf6b22c77587d4e46333b81ba2",
+      "peerFirstSourceValue": 78414,
+      "literalSourceAmount": "78,414",
+      "value": 78414,
+      "uncertainty": null,
+      "sourceNativeField": {
+        "field": "remuneration",
+        "path": "/tmp/queue-completion-phsa/phsa-2019-20/review-images/phsa-2019-20-016-target-views/0294-remuneration.png",
+        "sha256": "cf6c1ee64cb00b47080299d2c32905e1f5b4379dc52936510b4018762ca69735",
+        "originalPdf300DpiPixelBox": [
+          1735,
+          882,
+          2068,
+          921
+        ],
+        "noResamplingOrGlyphAlteration": true
+      },
+      "actualWholePage600SourceField": {
+        "path": "/workspace/salary-review-municipal-tmp/peer-held-2019-20-016-last99-money/independent/0294-remuneration-own-wholepage600.png",
+        "sha256": "532d867d7cb480206c0da051c1640dc9cc5e2679ab1f860b7e1e16737fc0755b"
+      },
+      "authorFirstFrozenValue": 78414,
+      "authorScopedSecondaryValue": 78414,
+      "authorEffectiveSourceValue": 78414,
+      "exactMatch": true,
+      "literalPrintedDashEvidence": false
+    },
+    {
+      "sequence": 296,
+      "physicalPage": 118,
+      "sourceRowOnPage": 10,
+      "field": "remuneration",
+      "cropSha256": "5173414cb77a4f1ff2c8943fabc66fbd660368d7f6258625f51f5305763ca43a",
+      "peerFirstSourceValue": 76552,
+      "literalSourceAmount": "76,552",
+      "value": 76552,
+      "uncertainty": null,
+      "sourceNativeField": {
+        "field": "remuneration",
+        "path": "/tmp/queue-completion-phsa/phsa-2019-20/review-images/phsa-2019-20-016-target-views/0296-remuneration.png",
+        "sha256": "0dcb57b5aa57f333f698f39a1a78c15a133cc8ccabf697ff0fb60d33f44475ba",
+        "originalPdf300DpiPixelBox": [
+          1735,
+          1045,
+          2068,
+          1084
+        ],
+        "noResamplingOrGlyphAlteration": true
+      },
+      "actualWholePage600SourceField": {
+        "path": "/workspace/salary-review-municipal-tmp/peer-held-2019-20-016-last99-money/independent/0296-remuneration-own-wholepage600.png",
+        "sha256": "f7ea07ee2d2826c427b11fa0236be2f6da9b6b886e7e6aaec289b6a257d6d4b5"
+      },
+      "authorFirstFrozenValue": 76552,
+      "authorScopedSecondaryValue": 76552,
+      "authorEffectiveSourceValue": 76552,
+      "exactMatch": true,
+      "literalPrintedDashEvidence": false
+    },
+    {
+      "sequence": 297,
+      "physicalPage": 118,
+      "sourceRowOnPage": 11,
+      "field": "remuneration",
+      "cropSha256": "f9a0f004c439de30c384f77921c875e35728d06b7d6adf45ecc663858e6f6102",
+      "peerFirstSourceValue": 75155,
+      "literalSourceAmount": "75,155",
+      "value": 75155,
+      "uncertainty": null,
+      "sourceNativeField": {
+        "field": "remuneration",
+        "path": "/tmp/queue-completion-phsa/phsa-2019-20/review-images/phsa-2019-20-016-target-views/0297-remuneration.png",
+        "sha256": "7cf20e85b132173cd638996635f8287638a0032e5717713243ef9f0d5b70c63e",
+        "originalPdf300DpiPixelBox": [
+          1735,
+          1082,
+          2068,
+          1122
+        ],
+        "noResamplingOrGlyphAlteration": true
+      },
+      "actualWholePage600SourceField": {
+        "path": "/workspace/salary-review-municipal-tmp/peer-held-2019-20-016-last99-money/independent/0297-remuneration-own-wholepage600.png",
+        "sha256": "7baa76771739a7fbdd307204b4e1634af30107449bbacdb2442f3490f5bacfe7"
+      },
+      "authorFirstFrozenValue": 75155,
+      "authorScopedSecondaryValue": 75155,
+      "authorEffectiveSourceValue": 75155,
+      "exactMatch": true,
+      "literalPrintedDashEvidence": false
+    },
+    {
+      "sequence": 298,
+      "physicalPage": 118,
+      "sourceRowOnPage": 12,
+      "field": "remuneration",
+      "cropSha256": "d5422b72f7501e5d18fd44a510b2a89e674c76a847c6b986e01b6ec96997844f",
+      "peerFirstSourceValue": 86216,
+      "literalSourceAmount": "86,216",
+      "value": 86216,
+      "uncertainty": null,
+      "sourceNativeField": {
+        "field": "remuneration",
+        "path": "/tmp/queue-completion-phsa/phsa-2019-20/review-images/phsa-2019-20-016-target-views/0298-remuneration.png",
+        "sha256": "a4669c46e1f005c1e48cf112a72606b2e846ab7069329c2e8dc63dc0a6018848",
+        "originalPdf300DpiPixelBox": [
+          1735,
+          1127,
+          2068,
+          1167
+        ],
+        "noResamplingOrGlyphAlteration": true
+      },
+      "actualWholePage600SourceField": {
+        "path": "/workspace/salary-review-municipal-tmp/peer-held-2019-20-016-last99-money/independent/0298-remuneration-own-wholepage600.png",
+        "sha256": "81d8cb4aa3cbde4cb450f0d5210e3dd3e1aaddca7adff696b603c509593168aa"
+      },
+      "authorFirstFrozenValue": 86216,
+      "authorScopedSecondaryValue": 86216,
+      "authorEffectiveSourceValue": 86216,
+      "exactMatch": true,
+      "literalPrintedDashEvidence": false
+    },
+    {
+      "sequence": 300,
+      "physicalPage": 118,
+      "sourceRowOnPage": 14,
+      "field": "remuneration",
+      "cropSha256": "125c0e8edf77ecd9a44b48c098fa40e3a9c1ed0b926a413470b29b84678e4eaa",
+      "peerFirstSourceValue": 85618,
+      "literalSourceAmount": "85,618",
+      "value": 85618,
+      "uncertainty": null,
+      "sourceNativeField": {
+        "field": "remuneration",
+        "path": "/tmp/queue-completion-phsa/phsa-2019-20/review-images/phsa-2019-20-016-target-views/0300-remuneration.png",
+        "sha256": "9f1a45a048334a147d5beb7adf20ffe6b26614473e1bbca59689c13b711ee972",
+        "originalPdf300DpiPixelBox": [
+          1735,
+          1204,
+          2068,
+          1243
+        ],
+        "noResamplingOrGlyphAlteration": true
+      },
+      "actualWholePage600SourceField": {
+        "path": "/workspace/salary-review-municipal-tmp/peer-held-2019-20-016-last99-money/independent/0300-remuneration-own-wholepage600.png",
+        "sha256": "1908032badfa801906f68f6d093dbf84082b3d944e6d2fe3ba7fef3f9b250895"
+      },
+      "authorFirstFrozenValue": 85618,
+      "authorScopedSecondaryValue": 85618,
+      "authorEffectiveSourceValue": 85618,
+      "exactMatch": true,
+      "literalPrintedDashEvidence": false
+    },
+    {
+      "sequence": 303,
+      "physicalPage": 118,
+      "sourceRowOnPage": 18,
+      "field": "remuneration",
+      "cropSha256": "e14b6e5008cbd84bdb26f1dd54ff94a400357ef1ced27a738b5104e032ab9d72",
+      "peerFirstSourceValue": 87741,
+      "literalSourceAmount": "87,741",
+      "value": 87741,
+      "uncertainty": null,
+      "sourceNativeField": {
+        "field": "remuneration",
+        "path": "/tmp/queue-completion-phsa/phsa-2019-20/review-images/phsa-2019-20-016-target-views/0303-remuneration.png",
+        "sha256": "ec9e900d556e0c6bb360858cf6fb3d538b87ea252766cc046ea41a1331e031d4",
+        "originalPdf300DpiPixelBox": [
+          1735,
+          1372,
+          2068,
+          1412
+        ],
+        "noResamplingOrGlyphAlteration": true
+      },
+      "actualWholePage600SourceField": {
+        "path": "/workspace/salary-review-municipal-tmp/peer-held-2019-20-016-last99-money/independent/0303-remuneration-own-wholepage600.png",
+        "sha256": "0c89182536eabdf051364b4016e81b7e6b6689875062ec31a19ce1a7eb2077a2"
+      },
+      "authorFirstFrozenValue": 87741,
+      "authorScopedSecondaryValue": 87741,
+      "authorEffectiveSourceValue": 87741,
+      "exactMatch": true,
+      "literalPrintedDashEvidence": false
+    },
+    {
+      "sequence": 305,
+      "physicalPage": 118,
+      "sourceRowOnPage": 20,
+      "field": "expenses",
+      "cropSha256": "eff462c1f5cd39c888b997b3c3fb9daa23acc122f12206ad7098eaf9095c061e",
+      "peerFirstSourceValue": 821,
+      "literalSourceAmount": "821",
+      "value": 821,
+      "uncertainty": null,
+      "sourceNativeField": {
+        "field": "expenses",
+        "path": "/tmp/queue-completion-phsa/phsa-2019-20/review-images/phsa-2019-20-016-target-views/0305-expenses.png",
+        "sha256": "83f52b23ca05e705674942e94f8b7a3768071540b95fb38ad05d88cf4d2ed798",
+        "originalPdf300DpiPixelBox": [
+          2052,
+          1454,
+          2422,
+          1493
+        ],
+        "noResamplingOrGlyphAlteration": true
+      },
+      "actualWholePage600SourceField": {
+        "path": "/workspace/salary-review-municipal-tmp/peer-held-2019-20-016-last99-money/independent/0305-expenses-own-wholepage600.png",
+        "sha256": "a33d2840b3817abd1fd11e473d8052fdd08ab503e22fddb8aeb3149df20d96b2"
+      },
+      "authorFirstFrozenValue": 821,
+      "authorScopedSecondaryValue": 821,
+      "authorEffectiveSourceValue": 821,
+      "exactMatch": true,
+      "literalPrintedDashEvidence": false
+    },
+    {
+      "sequence": 307,
+      "physicalPage": 118,
+      "sourceRowOnPage": 24,
+      "field": "expenses",
+      "cropSha256": "0d4c0d7bb94547718a8d9e40a27c64f82973840753302e5b0ee0486203466121",
+      "peerFirstSourceValue": 1469,
+      "literalSourceAmount": "1,469",
+      "value": 1469,
+      "uncertainty": null,
+      "sourceNativeField": {
+        "field": "expenses",
+        "path": "/tmp/queue-completion-phsa/phsa-2019-20/review-images/phsa-2019-20-016-target-views/0307-expenses.png",
+        "sha256": "ba0980f2ebc280be6c9e02343cba8dc2cd51bafba0b0813020f89ffc8df9dcd7",
+        "originalPdf300DpiPixelBox": [
+          2052,
+          1619,
+          2422,
+          1658
+        ],
+        "noResamplingOrGlyphAlteration": true
+      },
+      "actualWholePage600SourceField": {
+        "path": "/workspace/salary-review-municipal-tmp/peer-held-2019-20-016-last99-money/independent/0307-expenses-own-wholepage600.png",
+        "sha256": "44ca92d82ae48adecdce061227e1fef63adcf2ba0b07e9b6ac4bdd8fb1010c3d"
+      },
+      "authorFirstFrozenValue": 1469,
+      "authorScopedSecondaryValue": 1469,
+      "authorEffectiveSourceValue": 1469,
+      "exactMatch": true,
+      "literalPrintedDashEvidence": false
+    },
+    {
+      "sequence": 311,
+      "physicalPage": 118,
+      "sourceRowOnPage": 28,
+      "field": "remuneration",
+      "cropSha256": "f6a003cea13220c06a916ffe9a03d7c1df45b38fa4882cafa7e16428f919dc8b",
+      "peerFirstSourceValue": 117799,
+      "literalSourceAmount": "117,799",
+      "value": 117799,
+      "uncertainty": null,
+      "sourceNativeField": {
+        "field": "remuneration",
+        "path": "/tmp/queue-completion-phsa/phsa-2019-20/review-images/phsa-2019-20-016-target-views/0311-remuneration.png",
+        "sha256": "060961681601af6a6c2ccad75e315d1e41cb2921acfb3628440982a14db69d58",
+        "originalPdf300DpiPixelBox": [
+          1735,
+          1782,
+          2068,
+          1821
+        ],
+        "noResamplingOrGlyphAlteration": true
+      },
+      "actualWholePage600SourceField": {
+        "path": "/workspace/salary-review-municipal-tmp/peer-held-2019-20-016-last99-money/independent/0311-remuneration-own-wholepage600.png",
+        "sha256": "717a3a93c5923ca52161596c2681257707633aaac9099f3fbc741a7ab6a0a72d"
+      },
+      "authorFirstFrozenValue": 117799,
+      "authorScopedSecondaryValue": 117799,
+      "authorEffectiveSourceValue": 117799,
+      "exactMatch": true,
+      "literalPrintedDashEvidence": false
+    },
+    {
+      "sequence": 314,
+      "physicalPage": 118,
+      "sourceRowOnPage": 32,
+      "field": "remuneration",
+      "cropSha256": "eeb01f80284230d2a07290b19b581eb91044fb021a7ed769912f296e8e7363a6",
+      "peerFirstSourceValue": 77101,
+      "literalSourceAmount": "77,101",
+      "value": 77101,
+      "uncertainty": null,
+      "sourceNativeField": {
+        "field": "remuneration",
+        "path": "/tmp/queue-completion-phsa/phsa-2019-20/review-images/phsa-2019-20-016-target-views/0314-remuneration.png",
+        "sha256": "4a42d45e3355959ed6ff811cc95053ac7934e760d6d063a804f851cf89f9fb50",
+        "originalPdf300DpiPixelBox": [
+          1735,
+          1942,
+          2068,
+          1981
+        ],
+        "noResamplingOrGlyphAlteration": true
+      },
+      "actualWholePage600SourceField": {
+        "path": "/workspace/salary-review-municipal-tmp/peer-held-2019-20-016-last99-money/independent/0314-remuneration-own-wholepage600.png",
+        "sha256": "29284692da066c63c46038f4930ce4b81c2c3cf2e65f758fbc90a6f886897e41"
+      },
+      "authorFirstFrozenValue": 77101,
+      "authorScopedSecondaryValue": 77101,
+      "authorEffectiveSourceValue": 77101,
+      "exactMatch": true,
+      "literalPrintedDashEvidence": false
+    },
+    {
+      "sequence": 316,
+      "physicalPage": 118,
+      "sourceRowOnPage": 34,
+      "field": "remuneration",
+      "cropSha256": "0bea5dae0bd47d1fbdbb92dd207306198841c37a08bcb70c8cd26bec0734e95d",
+      "peerFirstSourceValue": 131063,
+      "literalSourceAmount": "131,063",
+      "value": 131063,
+      "uncertainty": null,
+      "sourceNativeField": {
+        "field": "remuneration",
+        "path": "/tmp/queue-completion-phsa/phsa-2019-20/review-images/phsa-2019-20-016-target-views/0316-remuneration.png",
+        "sha256": "bd8221b85b2c8e140df353265dabbc950730211436b46a9c4460988793d4d19e",
+        "originalPdf300DpiPixelBox": [
+          1735,
+          2026,
+          2068,
+          2065
+        ],
+        "noResamplingOrGlyphAlteration": true
+      },
+      "actualWholePage600SourceField": {
+        "path": "/workspace/salary-review-municipal-tmp/peer-held-2019-20-016-last99-money/independent/0316-remuneration-own-wholepage600.png",
+        "sha256": "6712b9c8578682ed9dc1b7729924543ff9ebb71b66d639d1d12a0bb5d7d838f2"
+      },
+      "authorFirstFrozenValue": 131063,
+      "authorScopedSecondaryValue": 131063,
+      "authorEffectiveSourceValue": 131063,
+      "exactMatch": true,
+      "literalPrintedDashEvidence": false
+    },
+    {
+      "sequence": 317,
+      "physicalPage": 118,
+      "sourceRowOnPage": 35,
+      "field": "remuneration",
+      "cropSha256": "5a59c65fe6202c60229c3c1b1731fd16e636f8415a4ad3dee7dfc60edb6bba1d",
+      "peerFirstSourceValue": 85582,
+      "literalSourceAmount": "85,582",
+      "value": 85582,
+      "uncertainty": null,
+      "sourceNativeField": {
+        "field": "remuneration",
+        "path": "/tmp/queue-completion-phsa/phsa-2019-20/review-images/phsa-2019-20-016-target-views/0317-remuneration.png",
+        "sha256": "655b7962d84dfd740b12256fe565cb5f2daab53798acc64099ab09a8766fcba3",
+        "originalPdf300DpiPixelBox": [
+          1735,
+          2069,
+          2068,
+          2109
+        ],
+        "noResamplingOrGlyphAlteration": true
+      },
+      "actualWholePage600SourceField": {
+        "path": "/workspace/salary-review-municipal-tmp/peer-held-2019-20-016-last99-money/independent/0317-remuneration-own-wholepage600.png",
+        "sha256": "6bd6f66ae82ff3845292c45f2ebecd1768714dec8c9ab214a7d2ffa7869fc00a"
+      },
+      "authorFirstFrozenValue": 85582,
+      "authorScopedSecondaryValue": 85582,
+      "authorEffectiveSourceValue": 85582,
+      "exactMatch": true,
+      "literalPrintedDashEvidence": false
+    },
+    {
+      "sequence": 320,
+      "physicalPage": 118,
+      "sourceRowOnPage": 38,
+      "field": "remuneration",
+      "cropSha256": "7d77cce31449160e984029f5a78d66be61b5d163442aa57080be5d27c0b840b3",
+      "peerFirstSourceValue": 142609,
+      "literalSourceAmount": "142,609",
+      "value": 142609,
+      "uncertainty": null,
+      "sourceNativeField": {
+        "field": "remuneration",
+        "path": "/tmp/queue-completion-phsa/phsa-2019-20/review-images/phsa-2019-20-016-target-views/0320-remuneration.png",
+        "sha256": "0cf73ed23f10ef314c1d2ba762e17caa788b0e9b08bd5ef7694be5354fd578a7",
+        "originalPdf300DpiPixelBox": [
+          1735,
+          2189,
+          2068,
+          2228
+        ],
+        "noResamplingOrGlyphAlteration": true
+      },
+      "actualWholePage600SourceField": {
+        "path": "/workspace/salary-review-municipal-tmp/peer-held-2019-20-016-last99-money/independent/0320-remuneration-own-wholepage600.png",
+        "sha256": "17d4620c6e6d93f7f5d90bebfc8afea54b0e36234aaa44fc157bb59bff9dafde"
+      },
+      "authorFirstFrozenValue": 142609,
+      "authorScopedSecondaryValue": 142609,
+      "authorEffectiveSourceValue": 142609,
+      "exactMatch": true,
+      "literalPrintedDashEvidence": false
+    },
+    {
+      "sequence": 322,
+      "physicalPage": 118,
+      "sourceRowOnPage": 40,
+      "field": "remuneration",
+      "cropSha256": "8b0bffd07b303319211974c513d848da7847b8416cda6111a45263572298ba3c",
+      "peerFirstSourceValue": 96069,
+      "literalSourceAmount": "96,069",
+      "value": 96069,
+      "uncertainty": null,
+      "sourceNativeField": {
+        "field": "remuneration",
+        "path": "/tmp/queue-completion-phsa/phsa-2019-20/review-images/phsa-2019-20-016-target-views/0322-remuneration.png",
+        "sha256": "f22778a19c701d50db23c3676dec1ce5f852882204ac059b8ddd9a97071ad948",
+        "originalPdf300DpiPixelBox": [
+          1735,
+          2274,
+          2068,
+          2314
+        ],
+        "noResamplingOrGlyphAlteration": true
+      },
+      "actualWholePage600SourceField": {
+        "path": "/workspace/salary-review-municipal-tmp/peer-held-2019-20-016-last99-money/independent/0322-remuneration-own-wholepage600.png",
+        "sha256": "5faa42cb547dd87462b66f3501bd4e1acbc8adf00e5b79071b093f5e7a5ae328"
+      },
+      "authorFirstFrozenValue": 96069,
+      "authorScopedSecondaryValue": 96069,
+      "authorEffectiveSourceValue": 96069,
+      "exactMatch": true,
+      "literalPrintedDashEvidence": false
+    },
+    {
+      "sequence": 323,
+      "physicalPage": 118,
+      "sourceRowOnPage": 41,
+      "field": "remuneration",
+      "cropSha256": "ffc13f0dae42a42105e898129396eeb5f6d40aa590e7c8bbdb251a8b7a49a712",
+      "peerFirstSourceValue": 131704,
+      "literalSourceAmount": "131,704",
+      "value": 131704,
+      "uncertainty": null,
+      "sourceNativeField": {
+        "field": "remuneration",
+        "path": "/tmp/queue-completion-phsa/phsa-2019-20/review-images/phsa-2019-20-016-target-views/0323-remuneration.png",
+        "sha256": "4d8cbe31826c5539a2f8f6fc11564a6c7f21f769f5f31c46ab4302f94de572d0",
+        "originalPdf300DpiPixelBox": [
+          1735,
+          2312,
+          2068,
+          2352
+        ],
+        "noResamplingOrGlyphAlteration": true
+      },
+      "actualWholePage600SourceField": {
+        "path": "/workspace/salary-review-municipal-tmp/peer-held-2019-20-016-last99-money/independent/0323-remuneration-own-wholepage600.png",
+        "sha256": "d3fe8eeb0582b3fe877723a795756f45c24972b3d5dd3681724fce4c85ae10c5"
+      },
+      "authorFirstFrozenValue": 131704,
+      "authorScopedSecondaryValue": 131704,
+      "authorEffectiveSourceValue": 131704,
+      "exactMatch": true,
+      "literalPrintedDashEvidence": false
+    },
+    {
+      "sequence": 326,
+      "physicalPage": 118,
+      "sourceRowOnPage": 44,
+      "field": "remuneration",
+      "cropSha256": "8fe7bece7c1b64a233b4a8844f658cdde7a8b3f20ccc5c6a9ec12c798575b362",
+      "peerFirstSourceValue": 98967,
+      "literalSourceAmount": "98,967",
+      "value": 98967,
+      "uncertainty": null,
+      "sourceNativeField": {
+        "field": "remuneration",
+        "path": "/tmp/queue-completion-phsa/phsa-2019-20/review-images/phsa-2019-20-016-target-views/0326-remuneration.png",
+        "sha256": "4a4ce74baf9e5ad6351de85d7a51dd2b075764c759693cc2ede625cff199823f",
+        "originalPdf300DpiPixelBox": [
+          1735,
+          2439,
+          2068,
+          2478
+        ],
+        "noResamplingOrGlyphAlteration": true
+      },
+      "actualWholePage600SourceField": {
+        "path": "/workspace/salary-review-municipal-tmp/peer-held-2019-20-016-last99-money/independent/0326-remuneration-own-wholepage600.png",
+        "sha256": "9da3b938747a0c3590d4ba96605a5f272047e5ff14aca5d57c448f0906b382d4"
+      },
+      "authorFirstFrozenValue": 98967,
+      "authorScopedSecondaryValue": 98967,
+      "authorEffectiveSourceValue": 98967,
+      "exactMatch": true,
+      "literalPrintedDashEvidence": false
+    },
+    {
+      "sequence": 331,
+      "physicalPage": 118,
+      "sourceRowOnPage": 49,
+      "field": "remuneration",
+      "cropSha256": "8cc9f7a57f3b921a83b812032cacc34b1d17f874d437c54f3cdffac5c387b227",
+      "peerFirstSourceValue": 82609,
+      "literalSourceAmount": "82,699",
+      "value": 82699,
+      "uncertainty": null,
+      "sourceNativeField": {
+        "field": "remuneration",
+        "path": "/tmp/queue-completion-phsa/phsa-2019-20/review-images/phsa-2019-20-016-target-views/0331-remuneration.png",
+        "sha256": "d54a96b0fa373edd96e27ba2f38e6cb519c265767d19f67bb1ac9609574d02c4",
+        "originalPdf300DpiPixelBox": [
+          1735,
+          2643,
+          2068,
+          2682
+        ],
+        "noResamplingOrGlyphAlteration": true
+      },
+      "actualWholePage600SourceField": {
+        "path": "/workspace/salary-review-municipal-tmp/peer-held-2019-20-016-last99-money/independent/0331-remuneration-own-wholepage600.png",
+        "sha256": "a398114402e1a304c509044abcdad0b43f664e8d53685f4faaf4313b72886d34"
+      },
+      "authorFirstFrozenValue": 82699,
+      "authorScopedSecondaryValue": 82699,
+      "authorEffectiveSourceValue": 82699,
+      "exactMatch": true,
+      "literalPrintedDashEvidence": false
+    },
+    {
+      "sequence": 332,
+      "physicalPage": 118,
+      "sourceRowOnPage": 50,
+      "field": "remuneration",
+      "cropSha256": "4262e949eaa7ef8ae8e3392b5d97f9d0f66485d381c02c75cd58385394d8fd2f",
+      "peerFirstSourceValue": 75813,
+      "literalSourceAmount": "75,813",
+      "value": 75813,
+      "uncertainty": null,
+      "sourceNativeField": {
+        "field": "remuneration",
+        "path": "/tmp/queue-completion-phsa/phsa-2019-20/review-images/phsa-2019-20-016-target-views/0332-remuneration.png",
+        "sha256": "a0e0b738f448a76215c2b21b6fcd90b2937bd50728eff9791ebe7d310087d56f",
+        "originalPdf300DpiPixelBox": [
+          1735,
+          2683,
+          2068,
+          2723
+        ],
+        "noResamplingOrGlyphAlteration": true
+      },
+      "actualWholePage600SourceField": {
+        "path": "/workspace/salary-review-municipal-tmp/peer-held-2019-20-016-last99-money/independent/0332-remuneration-own-wholepage600.png",
+        "sha256": "a4420f685b8eef222c51aaf99ff27321070540ebc06e2729370b28aa427919f2"
+      },
+      "authorFirstFrozenValue": 75813,
+      "authorScopedSecondaryValue": 75813,
+      "authorEffectiveSourceValue": 75813,
+      "exactMatch": true,
+      "literalPrintedDashEvidence": false
+    },
+    {
+      "sequence": 334,
+      "physicalPage": 118,
+      "sourceRowOnPage": 53,
+      "field": "remuneration",
+      "cropSha256": "e17973b555d0e1e087ee1991e871ed49d263001a217a2744d192ac8d692d5bcd",
+      "peerFirstSourceValue": 86764,
+      "literalSourceAmount": "86,764",
+      "value": 86764,
+      "uncertainty": null,
+      "sourceNativeField": {
+        "field": "remuneration",
+        "path": "/tmp/queue-completion-phsa/phsa-2019-20/review-images/phsa-2019-20-016-target-views/0334-remuneration.png",
+        "sha256": "2caf662c25613338dedcab3c9937371eead6639fb8e2e29121c0ff487eab0647",
+        "originalPdf300DpiPixelBox": [
+          1735,
+          2807,
+          2068,
+          2847
+        ],
+        "noResamplingOrGlyphAlteration": true
+      },
+      "actualWholePage600SourceField": {
+        "path": "/workspace/salary-review-municipal-tmp/peer-held-2019-20-016-last99-money/independent/0334-remuneration-own-wholepage600.png",
+        "sha256": "69da0aeef183510772294d41be056a9b3a022a661e52a835fa8604607d03643b"
+      },
+      "authorFirstFrozenValue": 86764,
+      "authorScopedSecondaryValue": 86764,
+      "authorEffectiveSourceValue": 86764,
+      "exactMatch": true,
+      "literalPrintedDashEvidence": false
+    },
+    {
+      "sequence": 341,
+      "physicalPage": 119,
+      "sourceRowOnPage": 2,
+      "field": "remuneration",
+      "cropSha256": "a9c0dc52bc74f7a2e24637a81987d05acfc5ac8a67dd81e6608a620125526d97",
+      "peerFirstSourceValue": 92689,
+      "literalSourceAmount": "92,689",
+      "value": 92689,
+      "uncertainty": null,
+      "sourceNativeField": {
+        "field": "remuneration",
+        "path": "/tmp/queue-completion-phsa/phsa-2019-20/review-images/phsa-2019-20-016-target-views/0341-remuneration.png",
+        "sha256": "6b09f9d13adec960e27673ca735391dad33238456d8b5dfe959a58307ecc9890",
+        "originalPdf300DpiPixelBox": [
+          1735,
+          717,
+          2068,
+          756
+        ],
+        "noResamplingOrGlyphAlteration": true
+      },
+      "actualWholePage600SourceField": {
+        "path": "/workspace/salary-review-municipal-tmp/peer-held-2019-20-016-last99-money/independent/0341-remuneration-own-wholepage600.png",
+        "sha256": "8558aed5fe8eb132af438f684f8d7a68310ac9521c47ba64b78dbe2aa1f6aadf"
+      },
+      "authorFirstFrozenValue": 92689,
+      "authorScopedSecondaryValue": 92689,
+      "authorEffectiveSourceValue": 92689,
+      "exactMatch": true,
+      "literalPrintedDashEvidence": false
+    },
+    {
+      "sequence": 344,
+      "physicalPage": 119,
+      "sourceRowOnPage": 7,
+      "field": "remuneration",
+      "cropSha256": "2a3b698d8bc0aa3b82cfa50b95f749f2f7ddf9b58886c7dcd02405d03e0a7fc8",
+      "peerFirstSourceValue": 107488,
+      "literalSourceAmount": "107,488",
+      "value": 107488,
+      "uncertainty": null,
+      "sourceNativeField": {
+        "field": "remuneration",
+        "path": "/tmp/queue-completion-phsa/phsa-2019-20/review-images/phsa-2019-20-016-target-views/0344-remuneration.png",
+        "sha256": "4a65a52fd25c564fb3368e7a79437c111982e6f6ec6e276a796bd3981ccd5e0d",
+        "originalPdf300DpiPixelBox": [
+          1735,
+          922,
+          2068,
+          961
+        ],
+        "noResamplingOrGlyphAlteration": true
+      },
+      "actualWholePage600SourceField": {
+        "path": "/workspace/salary-review-municipal-tmp/peer-held-2019-20-016-last99-money/independent/0344-remuneration-own-wholepage600.png",
+        "sha256": "1a7af271f25e9d26938e15e483b69c0812b270312a53208d9015f2d1f4edc7a5"
+      },
+      "authorFirstFrozenValue": 107488,
+      "authorScopedSecondaryValue": 107488,
+      "authorEffectiveSourceValue": 107488,
+      "exactMatch": true,
+      "literalPrintedDashEvidence": false
+    },
+    {
+      "sequence": 348,
+      "physicalPage": 119,
+      "sourceRowOnPage": 14,
+      "field": "expenses",
+      "cropSha256": "e5345dc73a7c3dfa0a71e39aa23317e01481ac5878b1c9c99c7d126e31a354ca",
+      "peerFirstSourceValue": 1381,
+      "literalSourceAmount": "1,381",
+      "value": 1381,
+      "uncertainty": null,
+      "sourceNativeField": {
+        "field": "expenses",
+        "path": "/tmp/queue-completion-phsa/phsa-2019-20/review-images/phsa-2019-20-016-target-views/0348-expenses.png",
+        "sha256": "4bb7b98599551c7a13634fe482cf4ae9b0d32dbe532364e190a2998ff38b1b26",
+        "originalPdf300DpiPixelBox": [
+          2052,
+          1209,
+          2422,
+          1247
+        ],
+        "noResamplingOrGlyphAlteration": true
+      },
+      "actualWholePage600SourceField": {
+        "path": "/workspace/salary-review-municipal-tmp/peer-held-2019-20-016-last99-money/independent/0348-expenses-own-wholepage600.png",
+        "sha256": "c6ea1cf63f8a4479b5b4e74d08814fcff3eb76a64f4d5a18a6eed2665919f30a"
+      },
+      "authorFirstFrozenValue": 1381,
+      "authorScopedSecondaryValue": 1381,
+      "authorEffectiveSourceValue": 1381,
+      "exactMatch": true,
+      "literalPrintedDashEvidence": false
+    },
+    {
+      "sequence": 351,
+      "physicalPage": 119,
+      "sourceRowOnPage": 18,
+      "field": "remuneration",
+      "cropSha256": "3ede594a399bbc8873b75f30b5b64cc086555fc20e4b2fcd0661fcd44a7d13c5",
+      "peerFirstSourceValue": 81560,
+      "literalSourceAmount": "81,560",
+      "value": 81560,
+      "uncertainty": null,
+      "sourceNativeField": {
+        "field": "remuneration",
+        "path": "/tmp/queue-completion-phsa/phsa-2019-20/review-images/phsa-2019-20-016-target-views/0351-remuneration.png",
+        "sha256": "cba22be3dc84a2771f40837e620a1ee28bbfc0e2e930aad228b9a3351f763139",
+        "originalPdf300DpiPixelBox": [
+          1735,
+          1373,
+          2068,
+          1411
+        ],
+        "noResamplingOrGlyphAlteration": true
+      },
+      "actualWholePage600SourceField": {
+        "path": "/workspace/salary-review-municipal-tmp/peer-held-2019-20-016-last99-money/independent/0351-remuneration-own-wholepage600.png",
+        "sha256": "c7b5d7afcc337826dcfd0de1df6cd444d45bdc0475ace094d9b7decdac61a1b9"
+      },
+      "authorFirstFrozenValue": 81560,
+      "authorScopedSecondaryValue": 81560,
+      "authorEffectiveSourceValue": 81560,
+      "exactMatch": true,
+      "literalPrintedDashEvidence": false
+    },
+    {
+      "sequence": 352,
+      "physicalPage": 119,
+      "sourceRowOnPage": 19,
+      "field": "remuneration",
+      "cropSha256": "9e0239b7139bb91f2df99cbb86411d22a883483e8ee08f0703aa63dd87c036bc",
+      "peerFirstSourceValue": 77432,
+      "literalSourceAmount": "77,432",
+      "value": 77432,
+      "uncertainty": null,
+      "sourceNativeField": {
+        "field": "remuneration",
+        "path": "/tmp/queue-completion-phsa/phsa-2019-20/review-images/phsa-2019-20-016-target-views/0352-remuneration.png",
+        "sha256": "7f42d67e2e75ff25f90d5427791e47abf52043c9fa1cab6b6e78a204b724b9b6",
+        "originalPdf300DpiPixelBox": [
+          1735,
+          1415,
+          2068,
+          1454
+        ],
+        "noResamplingOrGlyphAlteration": true
+      },
+      "actualWholePage600SourceField": {
+        "path": "/workspace/salary-review-municipal-tmp/peer-held-2019-20-016-last99-money/independent/0352-remuneration-own-wholepage600.png",
+        "sha256": "dd1f9a93f57e64ad3ae9d59e55f9c8f2d2f6d47f4f84da3d798eb0283d1ad599"
+      },
+      "authorFirstFrozenValue": 77432,
+      "authorScopedSecondaryValue": 77432,
+      "authorEffectiveSourceValue": 77432,
+      "exactMatch": true,
+      "literalPrintedDashEvidence": false
+    },
+    {
+      "sequence": 354,
+      "physicalPage": 119,
+      "sourceRowOnPage": 23,
+      "field": "remuneration",
+      "cropSha256": "4d6a2051b76389479496cf2d72e3e5964b164525ec5f5e3ce225ad2fe422067f",
+      "peerFirstSourceValue": 78492,
+      "literalSourceAmount": "78,492",
+      "value": 78492,
+      "uncertainty": null,
+      "sourceNativeField": {
+        "field": "remuneration",
+        "path": "/tmp/queue-completion-phsa/phsa-2019-20/review-images/phsa-2019-20-016-target-views/0354-remuneration.png",
+        "sha256": "c6a7d6643e715b60abd503a846eb574f8d35772f1d8c24bf0e875fc465f1dbd1",
+        "originalPdf300DpiPixelBox": [
+          1735,
+          1578,
+          2068,
+          1616
+        ],
+        "noResamplingOrGlyphAlteration": true
+      },
+      "actualWholePage600SourceField": {
+        "path": "/workspace/salary-review-municipal-tmp/peer-held-2019-20-016-last99-money/independent/0354-remuneration-own-wholepage600.png",
+        "sha256": "a42e9f181baea8e953716a51879cf56549fe43efec2b21ef21617d08caf65512"
+      },
+      "authorFirstFrozenValue": 78492,
+      "authorScopedSecondaryValue": 78492,
+      "authorEffectiveSourceValue": 78492,
+      "exactMatch": true,
+      "literalPrintedDashEvidence": false
+    },
+    {
+      "sequence": 358,
+      "physicalPage": 119,
+      "sourceRowOnPage": 27,
+      "field": "remuneration",
+      "cropSha256": "c0bbc818cc985c037e25dc2ae518fc5b9926198177db5254b98ea5072f725deb",
+      "peerFirstSourceValue": 88157,
+      "literalSourceAmount": "88,157",
+      "value": 88157,
+      "uncertainty": null,
+      "sourceNativeField": {
+        "field": "remuneration",
+        "path": "/tmp/queue-completion-phsa/phsa-2019-20/review-images/phsa-2019-20-016-target-views/0358-remuneration.png",
+        "sha256": "0bba4ddfaca0497cdf63812a0341ba3a982de2d86b0889dfb690621d4756d74f",
+        "originalPdf300DpiPixelBox": [
+          1735,
+          1743,
+          2068,
+          1782
+        ],
+        "noResamplingOrGlyphAlteration": true
+      },
+      "actualWholePage600SourceField": {
+        "path": "/workspace/salary-review-municipal-tmp/peer-held-2019-20-016-last99-money/independent/0358-remuneration-own-wholepage600.png",
+        "sha256": "ca3fd02e02dc53cc697be4159b5d9c01bab137fa5e8c3df7f4b395995239e76c"
+      },
+      "authorFirstFrozenValue": 88157,
+      "authorScopedSecondaryValue": 88157,
+      "authorEffectiveSourceValue": 88157,
+      "exactMatch": true,
+      "literalPrintedDashEvidence": false
+    },
+    {
+      "sequence": 359,
+      "physicalPage": 119,
+      "sourceRowOnPage": 28,
+      "field": "remuneration",
+      "cropSha256": "920bbe3e564a99fb6467bd81b988bc41fe81ffb84beefc52d70127e8af926fd4",
+      "peerFirstSourceValue": 77100,
+      "literalSourceAmount": "77,100",
+      "value": 77100,
+      "uncertainty": null,
+      "sourceNativeField": {
+        "field": "remuneration",
+        "path": "/tmp/queue-completion-phsa/phsa-2019-20/review-images/phsa-2019-20-016-target-views/0359-remuneration.png",
+        "sha256": "7074316e14bc8797bb6806fe61b5abeb6e890cfc3d431eb70a068b1b4f08456f",
+        "originalPdf300DpiPixelBox": [
+          1735,
+          1782,
+          2068,
+          1821
+        ],
+        "noResamplingOrGlyphAlteration": true
+      },
+      "actualWholePage600SourceField": {
+        "path": "/workspace/salary-review-municipal-tmp/peer-held-2019-20-016-last99-money/independent/0359-remuneration-own-wholepage600.png",
+        "sha256": "e1ba04e67d7410ff0fd0458a7ae44ca4562700dd1472a9885134c18964d69146"
+      },
+      "authorFirstFrozenValue": 77100,
+      "authorScopedSecondaryValue": 77100,
+      "authorEffectiveSourceValue": 77100,
+      "exactMatch": true,
+      "literalPrintedDashEvidence": false
+    },
+    {
+      "sequence": 362,
+      "physicalPage": 119,
+      "sourceRowOnPage": 31,
+      "field": "remuneration",
+      "cropSha256": "07da392ac1954acf9c15aa2a053183d70b1810ce2589dee7c2181e20f50c6518",
+      "peerFirstSourceValue": 98515,
+      "literalSourceAmount": "98,515",
+      "value": 98515,
+      "uncertainty": null,
+      "sourceNativeField": {
+        "field": "remuneration",
+        "path": "/tmp/queue-completion-phsa/phsa-2019-20/review-images/phsa-2019-20-016-target-views/0362-remuneration.png",
+        "sha256": "c7c61228f39bf534f6ccd16beea7b24dfe3c55cb8dab0fccd91fb5e252b2f9b7",
+        "originalPdf300DpiPixelBox": [
+          1735,
+          1906,
+          2068,
+          1945
+        ],
+        "noResamplingOrGlyphAlteration": true
+      },
+      "actualWholePage600SourceField": {
+        "path": "/workspace/salary-review-municipal-tmp/peer-held-2019-20-016-last99-money/independent/0362-remuneration-own-wholepage600.png",
+        "sha256": "71157100198a5e97b48c3ab7b545af85e520ae477566cbaa01cdb88e952db83c"
+      },
+      "authorFirstFrozenValue": 98515,
+      "authorScopedSecondaryValue": 98515,
+      "authorEffectiveSourceValue": 98515,
+      "exactMatch": true,
+      "literalPrintedDashEvidence": false
+    },
+    {
+      "sequence": 362,
+      "physicalPage": 119,
+      "sourceRowOnPage": 31,
+      "field": "expenses",
+      "cropSha256": "07da392ac1954acf9c15aa2a053183d70b1810ce2589dee7c2181e20f50c6518",
+      "peerFirstSourceValue": 1244,
+      "literalSourceAmount": "1,244",
+      "value": 1244,
+      "uncertainty": null,
+      "sourceNativeField": {
+        "field": "expenses",
+        "path": "/tmp/queue-completion-phsa/phsa-2019-20/review-images/phsa-2019-20-016-target-views/0362-expenses.png",
+        "sha256": "2c015590d0dfedb72c985d277b5cc7718fc2d3df6f2601b63c3f10692a82d951",
+        "originalPdf300DpiPixelBox": [
+          2052,
+          1906,
+          2422,
+          1945
+        ],
+        "noResamplingOrGlyphAlteration": true
+      },
+      "actualWholePage600SourceField": {
+        "path": "/workspace/salary-review-municipal-tmp/peer-held-2019-20-016-last99-money/independent/0362-expenses-own-wholepage600.png",
+        "sha256": "7b9064273ab1a3882a91797811847682878a30169b44b8df9925c727f83604b1"
+      },
+      "authorFirstFrozenValue": 1244,
+      "authorScopedSecondaryValue": 1244,
+      "authorEffectiveSourceValue": 1244,
+      "exactMatch": true,
+      "literalPrintedDashEvidence": false
+    },
+    {
+      "sequence": 364,
+      "physicalPage": 119,
+      "sourceRowOnPage": 33,
+      "field": "expenses",
+      "cropSha256": "8fe779cc6366fc6aa9bcb76c8e4e789ec384e056cd1d015993c25f2769470fbe",
+      "peerFirstSourceValue": 858,
+      "literalSourceAmount": "858",
+      "value": 858,
+      "uncertainty": null,
+      "sourceNativeField": {
+        "field": "expenses",
+        "path": "/tmp/queue-completion-phsa/phsa-2019-20/review-images/phsa-2019-20-016-target-views/0364-expenses.png",
+        "sha256": "0dd047c7c745147b9e4e4b31af5a44f45ca626526a39fe6311bfc3dc708695e9",
+        "originalPdf300DpiPixelBox": [
+          2052,
+          1986,
+          2422,
+          2024
+        ],
+        "noResamplingOrGlyphAlteration": true
+      },
+      "actualWholePage600SourceField": {
+        "path": "/workspace/salary-review-municipal-tmp/peer-held-2019-20-016-last99-money/independent/0364-expenses-own-wholepage600.png",
+        "sha256": "a828d52050ff21040fe9bba177a9da4bf4b4bb4ba847b440f819a2f805f96f9d"
+      },
+      "authorFirstFrozenValue": 858,
+      "authorScopedSecondaryValue": 858,
+      "authorEffectiveSourceValue": 858,
+      "exactMatch": true,
+      "literalPrintedDashEvidence": false
+    },
+    {
+      "sequence": 365,
+      "physicalPage": 119,
+      "sourceRowOnPage": 34,
+      "field": "remuneration",
+      "cropSha256": "f9d2ffd64fdeca62acf0e101b6435daf351d2c511cc50ec286fc23d269e374f2",
+      "peerFirstSourceValue": 91682,
+      "literalSourceAmount": "91,682",
+      "value": 91682,
+      "uncertainty": null,
+      "sourceNativeField": {
+        "field": "remuneration",
+        "path": "/tmp/queue-completion-phsa/phsa-2019-20/review-images/phsa-2019-20-016-target-views/0365-remuneration.png",
+        "sha256": "035b93c7e21827ef855eda9fc73854bca0442bd48670b01ceb59a74ce616b59a",
+        "originalPdf300DpiPixelBox": [
+          1735,
+          2026,
+          2068,
+          2065
+        ],
+        "noResamplingOrGlyphAlteration": true
+      },
+      "actualWholePage600SourceField": {
+        "path": "/workspace/salary-review-municipal-tmp/peer-held-2019-20-016-last99-money/independent/0365-remuneration-own-wholepage600.png",
+        "sha256": "a5738fb00a2e9465fa500ac8ec35cb3b4b8bbe6b3dfcda5b3e26fe6bb5a45847"
+      },
+      "authorFirstFrozenValue": 91682,
+      "authorScopedSecondaryValue": 91682,
+      "authorEffectiveSourceValue": 91682,
+      "exactMatch": true,
+      "literalPrintedDashEvidence": false
+    },
+    {
+      "sequence": 367,
+      "physicalPage": 119,
+      "sourceRowOnPage": 36,
+      "field": "remuneration",
+      "cropSha256": "8246185d820f3fc5d7239920f427e6608651021a8e27659574a2b4020081b82b",
+      "peerFirstSourceValue": 84962,
+      "literalSourceAmount": "84,962",
+      "value": 84962,
+      "uncertainty": null,
+      "sourceNativeField": {
+        "field": "remuneration",
+        "path": "/tmp/queue-completion-phsa/phsa-2019-20/review-images/phsa-2019-20-016-target-views/0367-remuneration.png",
+        "sha256": "afc608c43b7ca7e92c8f555429dffce19bfbc11913480ecb58e58d969ca29475",
+        "originalPdf300DpiPixelBox": [
+          1735,
+          2108,
+          2068,
+          2147
+        ],
+        "noResamplingOrGlyphAlteration": true
+      },
+      "actualWholePage600SourceField": {
+        "path": "/workspace/salary-review-municipal-tmp/peer-held-2019-20-016-last99-money/independent/0367-remuneration-own-wholepage600.png",
+        "sha256": "1c034bf50807bcb577b13f9680608fea72eeb1627255bb525bdbbebf54a2b220"
+      },
+      "authorFirstFrozenValue": 84962,
+      "authorScopedSecondaryValue": 84962,
+      "authorEffectiveSourceValue": 84962,
+      "exactMatch": true,
+      "literalPrintedDashEvidence": false
+    },
+    {
+      "sequence": 368,
+      "physicalPage": 119,
+      "sourceRowOnPage": 37,
+      "field": "remuneration",
+      "cropSha256": "8ae21197b8f65625c3f5bc6b1d9203b1976769d37d9dbb001f0e9800bb368300",
+      "peerFirstSourceValue": 89173,
+      "literalSourceAmount": "89,173",
+      "value": 89173,
+      "uncertainty": null,
+      "sourceNativeField": {
+        "field": "remuneration",
+        "path": "/tmp/queue-completion-phsa/phsa-2019-20/review-images/phsa-2019-20-016-target-views/0368-remuneration.png",
+        "sha256": "77acb8b60d7eb99090766d70f0a31a83a0015e773b7cf78321322209bb9ab00c",
+        "originalPdf300DpiPixelBox": [
+          1735,
+          2152,
+          2068,
+          2190
+        ],
+        "noResamplingOrGlyphAlteration": true
+      },
+      "actualWholePage600SourceField": {
+        "path": "/workspace/salary-review-municipal-tmp/peer-held-2019-20-016-last99-money/independent/0368-remuneration-own-wholepage600.png",
+        "sha256": "4fe0a49a75dbc6c8ace49f21a2dec3a50cfddfc29979234bc8eff6e0b7681f42"
+      },
+      "authorFirstFrozenValue": 89173,
+      "authorScopedSecondaryValue": 89173,
+      "authorEffectiveSourceValue": 89173,
+      "exactMatch": true,
+      "literalPrintedDashEvidence": false
+    },
+    {
+      "sequence": 369,
+      "physicalPage": 119,
+      "sourceRowOnPage": 38,
+      "field": "remuneration",
+      "cropSha256": "705dfc20cb053c91f7632745a8865cdeb2a17af455cf12ef55adaf6183b2facd",
+      "peerFirstSourceValue": 87946,
+      "literalSourceAmount": "87,946",
+      "value": 87946,
+      "uncertainty": null,
+      "sourceNativeField": {
+        "field": "remuneration",
+        "path": "/tmp/queue-completion-phsa/phsa-2019-20/review-images/phsa-2019-20-016-target-views/0369-remuneration.png",
+        "sha256": "ed8c0cbc409c857b02276b98da31f6d29dbc22afa3fd274f59334509acabd46e",
+        "originalPdf300DpiPixelBox": [
+          1735,
+          2189,
+          2068,
+          2228
+        ],
+        "noResamplingOrGlyphAlteration": true
+      },
+      "actualWholePage600SourceField": {
+        "path": "/workspace/salary-review-municipal-tmp/peer-held-2019-20-016-last99-money/independent/0369-remuneration-own-wholepage600.png",
+        "sha256": "73cbd23a25118268e2c62d7d1db028e3b1528131e6067c91e1d7abf932068481"
+      },
+      "authorFirstFrozenValue": 87946,
+      "authorScopedSecondaryValue": 87946,
+      "authorEffectiveSourceValue": 87946,
+      "exactMatch": true,
+      "literalPrintedDashEvidence": false
+    },
+    {
+      "sequence": 371,
+      "physicalPage": 119,
+      "sourceRowOnPage": 41,
+      "field": "remuneration",
+      "cropSha256": "4e74cbe575c1107fb20a1845ee21d7018d89a879a94edb1e7f4eeb5f5c78409e",
+      "peerFirstSourceValue": 83704,
+      "literalSourceAmount": "83,704",
+      "value": 83704,
+      "uncertainty": null,
+      "sourceNativeField": {
+        "field": "remuneration",
+        "path": "/tmp/queue-completion-phsa/phsa-2019-20/review-images/phsa-2019-20-016-target-views/0371-remuneration.png",
+        "sha256": "364666458d93a84cff8d36a038abffacab21b7dbfca60587500d5a4a25ead3e9",
+        "originalPdf300DpiPixelBox": [
+          1735,
+          2316,
+          2068,
+          2354
+        ],
+        "noResamplingOrGlyphAlteration": true
+      },
+      "actualWholePage600SourceField": {
+        "path": "/workspace/salary-review-municipal-tmp/peer-held-2019-20-016-last99-money/independent/0371-remuneration-own-wholepage600.png",
+        "sha256": "594a4da8abe55f271797e125b7c1c7671c81284fb18605fcf9cd36604928fb39"
+      },
+      "authorFirstFrozenValue": 83704,
+      "authorScopedSecondaryValue": 83704,
+      "authorEffectiveSourceValue": 83704,
+      "exactMatch": true,
+      "literalPrintedDashEvidence": false
+    },
+    {
+      "sequence": 372,
+      "physicalPage": 119,
+      "sourceRowOnPage": 42,
+      "field": "expenses",
+      "cropSha256": "cf76dac489b9c16eee31cbb2006807f5b90ee9a8d1feb5aed9d0e2c9f12def39",
+      "peerFirstSourceValue": null,
+      "literalSourceAmount": "-",
+      "value": null,
+      "uncertainty": null,
+      "sourceNativeField": {
+        "field": "expenses",
+        "path": "/tmp/queue-completion-phsa/phsa-2019-20/review-images/phsa-2019-20-016-target-views/0372-expenses.png",
+        "sha256": "3e34a206e5dfe1dabaf6caad417374bc9940bde736c4a69552b3b233e6312331",
+        "originalPdf300DpiPixelBox": [
+          2052,
+          2355,
+          2422,
+          2394
+        ],
+        "noResamplingOrGlyphAlteration": true
+      },
+      "actualWholePage600SourceField": {
+        "path": "/workspace/salary-review-municipal-tmp/peer-held-2019-20-016-last99-money/independent/0372-expenses-own-wholepage600.png",
+        "sha256": "25dd4a13956b538df1228c917a0c8d8c0aee39123a4e4bd89445c508f38bf1ce"
+      },
+      "authorFirstFrozenValue": null,
+      "authorScopedSecondaryValue": null,
+      "authorEffectiveSourceValue": null,
+      "exactMatch": true,
+      "literalPrintedDashEvidence": true
+    },
+    {
+      "sequence": 374,
+      "physicalPage": 119,
+      "sourceRowOnPage": 44,
+      "field": "remuneration",
+      "cropSha256": "03f5e476a632ac0dfe2c2fd852149ef571cfea8a8ed14c061d486a62f79e2b71",
+      "peerFirstSourceValue": 78980,
+      "literalSourceAmount": "78,980",
+      "value": 78980,
+      "uncertainty": null,
+      "sourceNativeField": {
+        "field": "remuneration",
+        "path": "/tmp/queue-completion-phsa/phsa-2019-20/review-images/phsa-2019-20-016-target-views/0374-remuneration.png",
+        "sha256": "9873926279169214488b32b00e700073126b6c02e94c90666ceef19dcb251e0a",
+        "originalPdf300DpiPixelBox": [
+          1735,
+          2436,
+          2068,
+          2475
+        ],
+        "noResamplingOrGlyphAlteration": true
+      },
+      "actualWholePage600SourceField": {
+        "path": "/workspace/salary-review-municipal-tmp/peer-held-2019-20-016-last99-money/independent/0374-remuneration-own-wholepage600.png",
+        "sha256": "1a8fc2db689b7d1eddd4aeab1167203dc758edf4fbcb3bab94dd1daea59ce831"
+      },
+      "authorFirstFrozenValue": 78980,
+      "authorScopedSecondaryValue": 78980,
+      "authorEffectiveSourceValue": 78980,
+      "exactMatch": true,
+      "literalPrintedDashEvidence": false
+    },
+    {
+      "sequence": 377,
+      "physicalPage": 119,
+      "sourceRowOnPage": 47,
+      "field": "remuneration",
+      "cropSha256": "d6f04c2d8c1e786ab82ba59c9c76dfa829fae5260e3cfd6defe1994b7b4b5f9b",
+      "peerFirstSourceValue": 94554,
+      "literalSourceAmount": "94,554",
+      "value": 94554,
+      "uncertainty": null,
+      "sourceNativeField": {
+        "field": "remuneration",
+        "path": "/tmp/queue-completion-phsa/phsa-2019-20/review-images/phsa-2019-20-016-target-views/0377-remuneration.png",
+        "sha256": "a7f96a4371964665fc4d711e2edb8c486e23e74058cb5bb78ac83808bfffa895",
+        "originalPdf300DpiPixelBox": [
+          1735,
+          2558,
+          2068,
+          2596
+        ],
+        "noResamplingOrGlyphAlteration": true
+      },
+      "actualWholePage600SourceField": {
+        "path": "/workspace/salary-review-municipal-tmp/peer-held-2019-20-016-last99-money/independent/0377-remuneration-own-wholepage600.png",
+        "sha256": "ca862376753a8ba9afacc855ebdb84c7b56e69af1c00567fc135e7c08fa3ad1e"
+      },
+      "authorFirstFrozenValue": 94554,
+      "authorScopedSecondaryValue": 94554,
+      "authorEffectiveSourceValue": 94554,
+      "exactMatch": true,
+      "literalPrintedDashEvidence": false
+    },
+    {
+      "sequence": 378,
+      "physicalPage": 119,
+      "sourceRowOnPage": 48,
+      "field": "remuneration",
+      "cropSha256": "6d34c41969ffb984fc3e9e647a6dc34c8e35ab4624f35095f6df2fe14b263329",
+      "peerFirstSourceValue": 151409,
+      "literalSourceAmount": "151,409",
+      "value": 151409,
+      "uncertainty": null,
+      "sourceNativeField": {
+        "field": "remuneration",
+        "path": "/tmp/queue-completion-phsa/phsa-2019-20/review-images/phsa-2019-20-016-target-views/0378-remuneration.png",
+        "sha256": "bd461e6e27a4968e6efde6ca35bf11bfb4c3a0c889d617acf675e1d634c786c6",
+        "originalPdf300DpiPixelBox": [
+          1735,
+          2598,
+          2068,
+          2637
+        ],
+        "noResamplingOrGlyphAlteration": true
+      },
+      "actualWholePage600SourceField": {
+        "path": "/workspace/salary-review-municipal-tmp/peer-held-2019-20-016-last99-money/independent/0378-remuneration-own-wholepage600.png",
+        "sha256": "929d0eb1c0f6e9cbfb3a4942179ed705607b2c440cb3cf04fbc369102289e462"
+      },
+      "authorFirstFrozenValue": 151409,
+      "authorScopedSecondaryValue": 151409,
+      "authorEffectiveSourceValue": 151409,
+      "exactMatch": true,
+      "literalPrintedDashEvidence": false
+    },
+    {
+      "sequence": 380,
+      "physicalPage": 119,
+      "sourceRowOnPage": 50,
+      "field": "remuneration",
+      "cropSha256": "a5a7288401c1b3f9b07b514102059188ddc467fbd6954004fee14973c2addb31",
+      "peerFirstSourceValue": 77390,
+      "literalSourceAmount": "77,390",
+      "value": 77390,
+      "uncertainty": null,
+      "sourceNativeField": {
+        "field": "remuneration",
+        "path": "/tmp/queue-completion-phsa/phsa-2019-20/review-images/phsa-2019-20-016-target-views/0380-remuneration.png",
+        "sha256": "da258c4e83d979a51f5226c56313e5590eae08b43deaa773c5d1d056cf92df45",
+        "originalPdf300DpiPixelBox": [
+          1735,
+          2685,
+          2068,
+          2724
+        ],
+        "noResamplingOrGlyphAlteration": true
+      },
+      "actualWholePage600SourceField": {
+        "path": "/workspace/salary-review-municipal-tmp/peer-held-2019-20-016-last99-money/independent/0380-remuneration-own-wholepage600.png",
+        "sha256": "9458af865c1362e4efc45f299272d96200fb7717e50890d47c4065abc03b7545"
+      },
+      "authorFirstFrozenValue": 77390,
+      "authorScopedSecondaryValue": 77390,
+      "authorEffectiveSourceValue": 77390,
+      "exactMatch": true,
+      "literalPrintedDashEvidence": false
+    },
+    {
+      "sequence": 385,
+      "physicalPage": 119,
+      "sourceRowOnPage": 55,
+      "field": "remuneration",
+      "cropSha256": "38dd10d8d1d67ba90613c9da21959ab6b972e50f771e1939dffed8e9b77fb4a6",
+      "peerFirstSourceValue": 91424,
+      "literalSourceAmount": "91,424",
+      "value": 91424,
+      "uncertainty": null,
+      "sourceNativeField": {
+        "field": "remuneration",
+        "path": "/tmp/queue-completion-phsa/phsa-2019-20/review-images/phsa-2019-20-016-target-views/0385-remuneration.png",
+        "sha256": "3f07e8369302af0879a8540588621ff80d6883de68d537b2e0f1a4f5b9dcfba0",
+        "originalPdf300DpiPixelBox": [
+          1735,
+          2887,
+          2068,
+          2926
+        ],
+        "noResamplingOrGlyphAlteration": true
+      },
+      "actualWholePage600SourceField": {
+        "path": "/workspace/salary-review-municipal-tmp/peer-held-2019-20-016-last99-money/independent/0385-remuneration-own-wholepage600.png",
+        "sha256": "844672ea08c858f2299208dabfb4291124bd89aedd61c08f412c7df4358d6759"
+      },
+      "authorFirstFrozenValue": 91424,
+      "authorScopedSecondaryValue": 91424,
+      "authorEffectiveSourceValue": 91424,
+      "exactMatch": true,
+      "literalPrintedDashEvidence": false
+    },
+    {
+      "sequence": 390,
+      "physicalPage": 120,
+      "sourceRowOnPage": 3,
+      "field": "remuneration",
+      "cropSha256": "8057ce15d72a8344acb3a3d1872425fd63545ddd3bee2dfee76e901bc70bb39f",
+      "peerFirstSourceValue": 121607,
+      "literalSourceAmount": "121,607",
+      "value": 121607,
+      "uncertainty": null,
+      "sourceNativeField": {
+        "field": "remuneration",
+        "path": "/tmp/queue-completion-phsa/phsa-2019-20/review-images/phsa-2019-20-016-target-views/0390-remuneration.png",
+        "sha256": "1470ca534668a4c1dc387338c03a2ef2d88f0135376ce8b67fb4862ef4aebd1b",
+        "originalPdf300DpiPixelBox": [
+          1735,
+          756,
+          2068,
+          795
+        ],
+        "noResamplingOrGlyphAlteration": true
+      },
+      "actualWholePage600SourceField": {
+        "path": "/workspace/salary-review-municipal-tmp/peer-held-2019-20-016-last99-money/independent/0390-remuneration-own-wholepage600.png",
+        "sha256": "c36f57e707ddde8f3f0a5315b5050f71ccbd0cdec9a25b3b59588236b9a6b230"
+      },
+      "authorFirstFrozenValue": 121607,
+      "authorScopedSecondaryValue": 121607,
+      "authorEffectiveSourceValue": 121607,
+      "exactMatch": true,
+      "literalPrintedDashEvidence": false
+    },
+    {
+      "sequence": 390,
+      "physicalPage": 120,
+      "sourceRowOnPage": 3,
+      "field": "expenses",
+      "cropSha256": "8057ce15d72a8344acb3a3d1872425fd63545ddd3bee2dfee76e901bc70bb39f",
+      "peerFirstSourceValue": 1465,
+      "literalSourceAmount": "1,465",
+      "value": 1465,
+      "uncertainty": null,
+      "sourceNativeField": {
+        "field": "expenses",
+        "path": "/tmp/queue-completion-phsa/phsa-2019-20/review-images/phsa-2019-20-016-target-views/0390-expenses.png",
+        "sha256": "7c9fe9e3d2af1ff819ff59647407fa2aeb22f1a855a1d3bf0dc943d20add167f",
+        "originalPdf300DpiPixelBox": [
+          2052,
+          756,
+          2422,
+          795
+        ],
+        "noResamplingOrGlyphAlteration": true
+      },
+      "actualWholePage600SourceField": {
+        "path": "/workspace/salary-review-municipal-tmp/peer-held-2019-20-016-last99-money/independent/0390-expenses-own-wholepage600.png",
+        "sha256": "ab98aa93b454774bcfa120b81e461fbb48aec9d449cee32b3f90b4898a001ec9"
+      },
+      "authorFirstFrozenValue": 1465,
+      "authorScopedSecondaryValue": 1465,
+      "authorEffectiveSourceValue": 1465,
+      "exactMatch": true,
+      "literalPrintedDashEvidence": false
+    },
+    {
+      "sequence": 391,
+      "physicalPage": 120,
+      "sourceRowOnPage": 4,
+      "field": "remuneration",
+      "cropSha256": "9b1b40d619ee5bf40675afc8da4612460d0b0852e69fc3f1443f7d697493c60c",
+      "peerFirstSourceValue": 77112,
+      "literalSourceAmount": "77,112",
+      "value": 77112,
+      "uncertainty": null,
+      "sourceNativeField": {
+        "field": "remuneration",
+        "path": "/tmp/queue-completion-phsa/phsa-2019-20/review-images/phsa-2019-20-016-target-views/0391-remuneration.png",
+        "sha256": "6763fd67ce1ded124d78887fe46288f17091bf4f39d008e0133f37e09f95cb00",
+        "originalPdf300DpiPixelBox": [
+          1735,
+          795,
+          2068,
+          834
+        ],
+        "noResamplingOrGlyphAlteration": true
+      },
+      "actualWholePage600SourceField": {
+        "path": "/workspace/salary-review-municipal-tmp/peer-held-2019-20-016-last99-money/independent/0391-remuneration-own-wholepage600.png",
+        "sha256": "a5d99c47bd9b2e2fada3c20cd167fc2a409ff4635be8b1cb0af6d1935d12bb8f"
+      },
+      "authorFirstFrozenValue": 77112,
+      "authorScopedSecondaryValue": 77112,
+      "authorEffectiveSourceValue": 77112,
+      "exactMatch": true,
+      "literalPrintedDashEvidence": false
+    },
+    {
+      "sequence": 393,
+      "physicalPage": 120,
+      "sourceRowOnPage": 6,
+      "field": "remuneration",
+      "cropSha256": "b68d6ea6e35c8a508cc4a6b3e1e21501a5f67952fa7ef64098ba3efed9440695",
+      "peerFirstSourceValue": 117904,
+      "literalSourceAmount": "117,904",
+      "value": 117904,
+      "uncertainty": null,
+      "sourceNativeField": {
+        "field": "remuneration",
+        "path": "/tmp/queue-completion-phsa/phsa-2019-20/review-images/phsa-2019-20-016-target-views/0393-remuneration.png",
+        "sha256": "50286f9d776224dc5c8678c64c0110f302deb86167a215be177821ca5d29b2e8",
+        "originalPdf300DpiPixelBox": [
+          1735,
+          879,
+          2068,
+          918
+        ],
+        "noResamplingOrGlyphAlteration": true
+      },
+      "actualWholePage600SourceField": {
+        "path": "/workspace/salary-review-municipal-tmp/peer-held-2019-20-016-last99-money/independent/0393-remuneration-own-wholepage600.png",
+        "sha256": "bdb2a83f2aecc0be596bdabf6d76a1e6f6b89a8bc15573803abc0f070c74bbc2"
+      },
+      "authorFirstFrozenValue": 117904,
+      "authorScopedSecondaryValue": 117904,
+      "authorEffectiveSourceValue": 117904,
+      "exactMatch": true,
+      "literalPrintedDashEvidence": false
+    },
+    {
+      "sequence": 396,
+      "physicalPage": 120,
+      "sourceRowOnPage": 9,
+      "field": "remuneration",
+      "cropSha256": "38f0391cbe7056884da387c8ab1a4355d1277ac4c9ebae1507441b7067f731cd",
+      "peerFirstSourceValue": 90023,
+      "literalSourceAmount": "90,023",
+      "value": 90023,
+      "uncertainty": null,
+      "sourceNativeField": {
+        "field": "remuneration",
+        "path": "/tmp/queue-completion-phsa/phsa-2019-20/review-images/phsa-2019-20-016-target-views/0396-remuneration.png",
+        "sha256": "cd04feda580a06b0aa219e8d0db5e6bd5c48e63e6bba082d1583f181aa753bc0",
+        "originalPdf300DpiPixelBox": [
+          1735,
+          1000,
+          2068,
+          1039
+        ],
+        "noResamplingOrGlyphAlteration": true
+      },
+      "actualWholePage600SourceField": {
+        "path": "/workspace/salary-review-municipal-tmp/peer-held-2019-20-016-last99-money/independent/0396-remuneration-own-wholepage600.png",
+        "sha256": "bf60668161896e0e9e6e6f73d6fb0c0dc675e79da5f7b0b98d4677342c6ff5c5"
+      },
+      "authorFirstFrozenValue": 90023,
+      "authorScopedSecondaryValue": 90023,
+      "authorEffectiveSourceValue": 90023,
+      "exactMatch": true,
+      "literalPrintedDashEvidence": false
+    },
+    {
+      "sequence": 397,
+      "physicalPage": 120,
+      "sourceRowOnPage": 10,
+      "field": "expenses",
+      "cropSha256": "e1355c38752aa73c68b9b8685e3ac85241a43fbc5583cb8b19420b1a59216caa",
+      "peerFirstSourceValue": 815,
+      "literalSourceAmount": "815",
+      "value": 815,
+      "uncertainty": null,
+      "sourceNativeField": {
+        "field": "expenses",
+        "path": "/tmp/queue-completion-phsa/phsa-2019-20/review-images/phsa-2019-20-016-target-views/0397-expenses.png",
+        "sha256": "31132820d988cba80ff3bd11d2d8a95d34ee89cf04857900b9032fca5cc0dad7",
+        "originalPdf300DpiPixelBox": [
+          2052,
+          1045,
+          2422,
+          1084
+        ],
+        "noResamplingOrGlyphAlteration": true
+      },
+      "actualWholePage600SourceField": {
+        "path": "/workspace/salary-review-municipal-tmp/peer-held-2019-20-016-last99-money/independent/0397-expenses-own-wholepage600.png",
+        "sha256": "79b3ed750ad04eaf515f6d7881206ed7ec04e6ec615f65ed3f7e19dfb2aac0e0"
+      },
+      "authorFirstFrozenValue": 815,
+      "authorScopedSecondaryValue": 815,
+      "authorEffectiveSourceValue": 815,
+      "exactMatch": true,
+      "literalPrintedDashEvidence": false
+    },
+    {
+      "sequence": 398,
+      "physicalPage": 120,
+      "sourceRowOnPage": 11,
+      "field": "remuneration",
+      "cropSha256": "e42cf0051fce1d60233c969e8fc68179f36bbc408ec3894aaa79a417a9624930",
+      "peerFirstSourceValue": 106806,
+      "literalSourceAmount": "106,806",
+      "value": 106806,
+      "uncertainty": null,
+      "sourceNativeField": {
+        "field": "remuneration",
+        "path": "/tmp/queue-completion-phsa/phsa-2019-20/review-images/phsa-2019-20-016-target-views/0398-remuneration.png",
+        "sha256": "87f01a8feaf5e1e68caf23c208323147e8751e8fc81b626dc5f1fd06272f55ee",
+        "originalPdf300DpiPixelBox": [
+          1735,
+          1086,
+          2068,
+          1124
+        ],
+        "noResamplingOrGlyphAlteration": true
+      },
+      "actualWholePage600SourceField": {
+        "path": "/workspace/salary-review-municipal-tmp/peer-held-2019-20-016-last99-money/independent/0398-remuneration-own-wholepage600.png",
+        "sha256": "31ef6b8c60cf341ad85aab37c3582ca3558b904035ed55c735292970b7dea5a1"
+      },
+      "authorFirstFrozenValue": 106806,
+      "authorScopedSecondaryValue": 106806,
+      "authorEffectiveSourceValue": 106806,
+      "exactMatch": true,
+      "literalPrintedDashEvidence": false
+    },
+    {
+      "sequence": 400,
+      "physicalPage": 120,
+      "sourceRowOnPage": 13,
+      "field": "expenses",
+      "cropSha256": "d01e83d14d30e47d1377b3287b3af7a1304a3a1a1c675a65087afa8460dc0907",
+      "peerFirstSourceValue": 5267,
+      "literalSourceAmount": "5,267",
+      "value": 5267,
+      "uncertainty": null,
+      "sourceNativeField": {
+        "field": "expenses",
+        "path": "/tmp/queue-completion-phsa/phsa-2019-20/review-images/phsa-2019-20-016-target-views/0400-expenses.png",
+        "sha256": "088cc54386874dbf76c42d54b45699b04779401ebe041b1269389c22d80c2c20",
+        "originalPdf300DpiPixelBox": [
+          2052,
+          1168,
+          2422,
+          1207
+        ],
+        "noResamplingOrGlyphAlteration": true
+      },
+      "actualWholePage600SourceField": {
+        "path": "/workspace/salary-review-municipal-tmp/peer-held-2019-20-016-last99-money/independent/0400-expenses-own-wholepage600.png",
+        "sha256": "38e184a0aec7553f62b261121526b54438b25cd3daf815b808414e5a93dbfa00"
+      },
+      "authorFirstFrozenValue": 5267,
+      "authorScopedSecondaryValue": 5267,
+      "authorEffectiveSourceValue": 5267,
+      "exactMatch": true,
+      "literalPrintedDashEvidence": false
+    }
+  ],
+  "oldFrozenFilesUnchanged": true
+}

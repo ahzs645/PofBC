@@ -1,0 +1,1266 @@
+{
+  "reviewer": "/root/held_health_review",
+  "reviewedOn": "2026-11-01",
+  "method": "Independent bidirectional original-ink coverage check: for each1474salary page, match every remuneration ink-band vertical center to exactly one independent original name-ink band, permitting3pixels above/below the name-band bounds. Require every one of64814name-ink bands to have at least one pay anchor. Original joined name regions may cover2or3pay rows; those94regions were already personally viewed and resolved in the pinned prior geometry receipt. No OCR text, names, money values or published employee count is used to create anchors.",
+  "verticalTolerancePixelsAt300Dpi": 3,
+  "primaryOriginalNameInkLedger": {
+    "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-history-all-pages-raster-ledger.json.gzip",
+    "sha256": "62cd3ade90a8bf8e945638edeb5f8f37d88625842bc9b911f0cc57c5305b2000"
+  },
+  "independentOriginalPayInkLedger": {
+    "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-history-all-pages-raster-pay-anchors.json.gzip",
+    "sha256": "76e604b4d14031c2361e2fbf01ff15a547d677822c09472c28519aa008253c79"
+  },
+  "priorPersonalImageReviewOfAllJoinedRegions": {
+    "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-history-source-fidelity-geometry-review.json",
+    "sha256": "2e286a3b7e9ca4a59a9477b67849fc375e3813bfb9b2d28e2e317ffe55e25ae2"
+  },
+  "completeSalaryPages": 1474,
+  "completePhysicalPdfPages": 1480,
+  "primaryNameInkBands": 64814,
+  "independentPayAnchorsAndNamedRows": 64912,
+  "joinedNameRegions": 94,
+  "joinedNameRegionsByPayRows": {
+    "2": 90,
+    "3": 4
+  },
+  "allPayAnchorsMatchExactlyOneNameInkBand": true,
+  "allNameInkBandsContainAtLeastOnePayAnchor": true,
+  "unmatchedNameBands": 0,
+  "missingOrMultiplyMappedPayAnchors": 0,
+  "exceptions": [],
+  "joinedRegionMappings": [
+    {
+      "sourceId": "phsa-2018-19",
+      "page": 5,
+      "nameBand": 27,
+      "band": [
+        1831,
+        1903
+      ],
+      "payRows": [
+        27,
+        28
+      ]
+    },
+    {
+      "sourceId": "phsa-2018-19",
+      "page": 9,
+      "nameBand": 33,
+      "band": [
+        2089,
+        2153
+      ],
+      "payRows": [
+        33,
+        34
+      ]
+    },
+    {
+      "sourceId": "phsa-2018-19",
+      "page": 9,
+      "nameBand": 40,
+      "band": [
+        2432,
+        2497
+      ],
+      "payRows": [
+        41,
+        42
+      ]
+    },
+    {
+      "sourceId": "phsa-2018-19",
+      "page": 11,
+      "nameBand": 33,
+      "band": [
+        2090,
+        2153
+      ],
+      "payRows": [
+        33,
+        34
+      ]
+    },
+    {
+      "sourceId": "phsa-2018-19",
+      "page": 16,
+      "nameBand": 51,
+      "band": [
+        2864,
+        2927
+      ],
+      "payRows": [
+        51,
+        52
+      ]
+    },
+    {
+      "sourceId": "phsa-2018-19",
+      "page": 23,
+      "nameBand": 27,
+      "band": [
+        1831,
+        1895
+      ],
+      "payRows": [
+        27,
+        28
+      ]
+    },
+    {
+      "sourceId": "phsa-2018-19",
+      "page": 26,
+      "nameBand": 51,
+      "band": [
+        2864,
+        2935
+      ],
+      "payRows": [
+        51,
+        52
+      ]
+    },
+    {
+      "sourceId": "phsa-2018-19",
+      "page": 31,
+      "nameBand": 17,
+      "band": [
+        1402,
+        1465
+      ],
+      "payRows": [
+        17,
+        18
+      ]
+    },
+    {
+      "sourceId": "phsa-2018-19",
+      "page": 31,
+      "nameBand": 22,
+      "band": [
+        1659,
+        1723
+      ],
+      "payRows": [
+        23,
+        24
+      ]
+    },
+    {
+      "sourceId": "phsa-2018-19",
+      "page": 35,
+      "nameBand": 29,
+      "band": [
+        1917,
+        1981
+      ],
+      "payRows": [
+        29,
+        30
+      ]
+    },
+    {
+      "sourceId": "phsa-2018-19",
+      "page": 35,
+      "nameBand": 50,
+      "band": [
+        2862,
+        2927
+      ],
+      "payRows": [
+        51,
+        52
+      ]
+    },
+    {
+      "sourceId": "phsa-2018-19",
+      "page": 35,
+      "nameBand": 51,
+      "band": [
+        2949,
+        3013
+      ],
+      "payRows": [
+        53,
+        54
+      ]
+    },
+    {
+      "sourceId": "phsa-2018-19",
+      "page": 42,
+      "nameBand": 21,
+      "band": [
+        1574,
+        1637
+      ],
+      "payRows": [
+        21,
+        22
+      ]
+    },
+    {
+      "sourceId": "phsa-2018-19",
+      "page": 43,
+      "nameBand": 9,
+      "band": [
+        1058,
+        1121
+      ],
+      "payRows": [
+        9,
+        10
+      ]
+    },
+    {
+      "sourceId": "phsa-2018-19",
+      "page": 46,
+      "nameBand": 29,
+      "band": [
+        1918,
+        1981
+      ],
+      "payRows": [
+        29,
+        30
+      ]
+    },
+    {
+      "sourceId": "phsa-2018-19",
+      "page": 60,
+      "nameBand": 9,
+      "band": [
+        1058,
+        1121
+      ],
+      "payRows": [
+        9,
+        10
+      ]
+    },
+    {
+      "sourceId": "phsa-2018-19",
+      "page": 63,
+      "nameBand": 4,
+      "band": [
+        840,
+        905
+      ],
+      "payRows": [
+        4,
+        5
+      ]
+    },
+    {
+      "sourceId": "phsa-2018-19",
+      "page": 76,
+      "nameBand": 6,
+      "band": [
+        928,
+        991
+      ],
+      "payRows": [
+        6,
+        7
+      ]
+    },
+    {
+      "sourceId": "phsa-2018-19",
+      "page": 83,
+      "nameBand": 19,
+      "band": [
+        1487,
+        1551
+      ],
+      "payRows": [
+        19,
+        20
+      ]
+    },
+    {
+      "sourceId": "phsa-2018-19",
+      "page": 85,
+      "nameBand": 21,
+      "band": [
+        1572,
+        1637
+      ],
+      "payRows": [
+        21,
+        22
+      ]
+    },
+    {
+      "sourceId": "phsa-2018-19",
+      "page": 90,
+      "nameBand": 53,
+      "band": [
+        2949,
+        3013
+      ],
+      "payRows": [
+        53,
+        54
+      ]
+    },
+    {
+      "sourceId": "phsa-2018-19",
+      "page": 91,
+      "nameBand": 53,
+      "band": [
+        2950,
+        3021
+      ],
+      "payRows": [
+        53,
+        54
+      ]
+    },
+    {
+      "sourceId": "phsa-2018-19",
+      "page": 94,
+      "nameBand": 17,
+      "band": [
+        1402,
+        1465
+      ],
+      "payRows": [
+        17,
+        18
+      ]
+    },
+    {
+      "sourceId": "phsa-2018-19",
+      "page": 98,
+      "nameBand": 29,
+      "band": [
+        1918,
+        1981
+      ],
+      "payRows": [
+        29,
+        30
+      ]
+    },
+    {
+      "sourceId": "phsa-2018-19",
+      "page": 106,
+      "nameBand": 27,
+      "band": [
+        1830,
+        1895
+      ],
+      "payRows": [
+        27,
+        28
+      ]
+    },
+    {
+      "sourceId": "phsa-2019-20",
+      "page": 4,
+      "nameBand": 30,
+      "band": [
+        1872,
+        1982
+      ],
+      "payRows": [
+        30,
+        31,
+        32
+      ]
+    },
+    {
+      "sourceId": "phsa-2019-20",
+      "page": 4,
+      "nameBand": 31,
+      "band": [
+        1995,
+        2063
+      ],
+      "payRows": [
+        33,
+        34
+      ]
+    },
+    {
+      "sourceId": "phsa-2019-20",
+      "page": 4,
+      "nameBand": 32,
+      "band": [
+        2076,
+        2139
+      ],
+      "payRows": [
+        35,
+        36
+      ]
+    },
+    {
+      "sourceId": "phsa-2019-20",
+      "page": 4,
+      "nameBand": 53,
+      "band": [
+        2979,
+        3039
+      ],
+      "payRows": [
+        57,
+        58
+      ]
+    },
+    {
+      "sourceId": "phsa-2019-20",
+      "page": 6,
+      "nameBand": 19,
+      "band": [
+        1420,
+        1482
+      ],
+      "payRows": [
+        19,
+        20
+      ]
+    },
+    {
+      "sourceId": "phsa-2019-20",
+      "page": 6,
+      "nameBand": 28,
+      "band": [
+        1826,
+        1892
+      ],
+      "payRows": [
+        29,
+        30
+      ]
+    },
+    {
+      "sourceId": "phsa-2019-20",
+      "page": 8,
+      "nameBand": 12,
+      "band": [
+        1134,
+        1196
+      ],
+      "payRows": [
+        12,
+        13
+      ]
+    },
+    {
+      "sourceId": "phsa-2019-20",
+      "page": 8,
+      "nameBand": 32,
+      "band": [
+        1995,
+        2057
+      ],
+      "payRows": [
+        33,
+        34
+      ]
+    },
+    {
+      "sourceId": "phsa-2019-20",
+      "page": 9,
+      "nameBand": 21,
+      "band": [
+        1501,
+        1565
+      ],
+      "payRows": [
+        21,
+        22
+      ]
+    },
+    {
+      "sourceId": "phsa-2019-20",
+      "page": 9,
+      "nameBand": 50,
+      "band": [
+        2729,
+        2795
+      ],
+      "payRows": [
+        51,
+        52
+      ]
+    },
+    {
+      "sourceId": "phsa-2019-20",
+      "page": 12,
+      "nameBand": 1,
+      "band": [
+        683,
+        745
+      ],
+      "payRows": [
+        1,
+        2
+      ]
+    },
+    {
+      "sourceId": "phsa-2019-20",
+      "page": 12,
+      "nameBand": 26,
+      "band": [
+        1745,
+        1810
+      ],
+      "payRows": [
+        27,
+        28
+      ]
+    },
+    {
+      "sourceId": "phsa-2019-20",
+      "page": 18,
+      "nameBand": 24,
+      "band": [
+        1623,
+        1687
+      ],
+      "payRows": [
+        24,
+        25
+      ]
+    },
+    {
+      "sourceId": "phsa-2019-20",
+      "page": 19,
+      "nameBand": 6,
+      "band": [
+        887,
+        956
+      ],
+      "payRows": [
+        6,
+        7
+      ]
+    },
+    {
+      "sourceId": "phsa-2019-20",
+      "page": 20,
+      "nameBand": 9,
+      "band": [
+        1011,
+        1073
+      ],
+      "payRows": [
+        9,
+        10
+      ]
+    },
+    {
+      "sourceId": "phsa-2019-20",
+      "page": 22,
+      "nameBand": 18,
+      "band": [
+        1380,
+        1440
+      ],
+      "payRows": [
+        18,
+        19
+      ]
+    },
+    {
+      "sourceId": "phsa-2019-20",
+      "page": 22,
+      "nameBand": 42,
+      "band": [
+        2402,
+        2467
+      ],
+      "payRows": [
+        43,
+        44
+      ]
+    },
+    {
+      "sourceId": "phsa-2019-20",
+      "page": 27,
+      "nameBand": 9,
+      "band": [
+        1011,
+        1073
+      ],
+      "payRows": [
+        9,
+        10
+      ]
+    },
+    {
+      "sourceId": "phsa-2019-20",
+      "page": 29,
+      "nameBand": 54,
+      "band": [
+        2856,
+        2918
+      ],
+      "payRows": [
+        54,
+        55
+      ]
+    },
+    {
+      "sourceId": "phsa-2019-20",
+      "page": 31,
+      "nameBand": 3,
+      "band": [
+        764,
+        826
+      ],
+      "payRows": [
+        3,
+        4
+      ]
+    },
+    {
+      "sourceId": "phsa-2019-20",
+      "page": 31,
+      "nameBand": 10,
+      "band": [
+        1092,
+        1154
+      ],
+      "payRows": [
+        11,
+        12
+      ]
+    },
+    {
+      "sourceId": "phsa-2019-20",
+      "page": 31,
+      "nameBand": 33,
+      "band": [
+        2076,
+        2139
+      ],
+      "payRows": [
+        35,
+        36
+      ]
+    },
+    {
+      "sourceId": "phsa-2019-20",
+      "page": 31,
+      "nameBand": 45,
+      "band": [
+        2609,
+        2671
+      ],
+      "payRows": [
+        48,
+        49
+      ]
+    },
+    {
+      "sourceId": "phsa-2019-20",
+      "page": 32,
+      "nameBand": 54,
+      "band": [
+        2856,
+        2918
+      ],
+      "payRows": [
+        54,
+        55
+      ]
+    },
+    {
+      "sourceId": "phsa-2019-20",
+      "page": 33,
+      "nameBand": 36,
+      "band": [
+        2116,
+        2178
+      ],
+      "payRows": [
+        36,
+        37
+      ]
+    },
+    {
+      "sourceId": "phsa-2019-20",
+      "page": 34,
+      "nameBand": 15,
+      "band": [
+        1257,
+        1319
+      ],
+      "payRows": [
+        15,
+        16
+      ]
+    },
+    {
+      "sourceId": "phsa-2019-20",
+      "page": 38,
+      "nameBand": 7,
+      "band": [
+        927,
+        989
+      ],
+      "payRows": [
+        7,
+        8
+      ]
+    },
+    {
+      "sourceId": "phsa-2019-20",
+      "page": 40,
+      "nameBand": 40,
+      "band": [
+        2281,
+        2344
+      ],
+      "payRows": [
+        40,
+        41
+      ]
+    },
+    {
+      "sourceId": "phsa-2019-20",
+      "page": 41,
+      "nameBand": 27,
+      "band": [
+        1748,
+        1810
+      ],
+      "payRows": [
+        27,
+        28
+      ]
+    },
+    {
+      "sourceId": "phsa-2019-20",
+      "page": 41,
+      "nameBand": 55,
+      "band": [
+        2937,
+        3039
+      ],
+      "payRows": [
+        56,
+        57,
+        58
+      ]
+    },
+    {
+      "sourceId": "phsa-2019-20",
+      "page": 48,
+      "nameBand": 6,
+      "band": [
+        887,
+        989
+      ],
+      "payRows": [
+        6,
+        7,
+        8
+      ]
+    },
+    {
+      "sourceId": "phsa-2019-20",
+      "page": 48,
+      "nameBand": 41,
+      "band": [
+        2405,
+        2467
+      ],
+      "payRows": [
+        43,
+        44
+      ]
+    },
+    {
+      "sourceId": "phsa-2019-20",
+      "page": 51,
+      "nameBand": 40,
+      "band": [
+        2281,
+        2344
+      ],
+      "payRows": [
+        40,
+        41
+      ]
+    },
+    {
+      "sourceId": "phsa-2019-20",
+      "page": 55,
+      "nameBand": 6,
+      "band": [
+        887,
+        950
+      ],
+      "payRows": [
+        6,
+        7
+      ]
+    },
+    {
+      "sourceId": "phsa-2019-20",
+      "page": 55,
+      "nameBand": 53,
+      "band": [
+        2856,
+        2918
+      ],
+      "payRows": [
+        54,
+        55
+      ]
+    },
+    {
+      "sourceId": "phsa-2019-20",
+      "page": 57,
+      "nameBand": 35,
+      "band": [
+        2073,
+        2139
+      ],
+      "payRows": [
+        35,
+        36
+      ]
+    },
+    {
+      "sourceId": "phsa-2019-20",
+      "page": 58,
+      "nameBand": 19,
+      "band": [
+        1420,
+        1482
+      ],
+      "payRows": [
+        19,
+        20
+      ]
+    },
+    {
+      "sourceId": "phsa-2019-20",
+      "page": 58,
+      "nameBand": 24,
+      "band": [
+        1664,
+        1726
+      ],
+      "payRows": [
+        25,
+        26
+      ]
+    },
+    {
+      "sourceId": "phsa-2019-20",
+      "page": 62,
+      "nameBand": 15,
+      "band": [
+        1257,
+        1319
+      ],
+      "payRows": [
+        15,
+        16
+      ]
+    },
+    {
+      "sourceId": "phsa-2019-20",
+      "page": 66,
+      "nameBand": 51,
+      "band": [
+        2732,
+        2795
+      ],
+      "payRows": [
+        51,
+        52
+      ]
+    },
+    {
+      "sourceId": "phsa-2019-20",
+      "page": 68,
+      "nameBand": 27,
+      "band": [
+        1748,
+        1810
+      ],
+      "payRows": [
+        27,
+        28
+      ]
+    },
+    {
+      "sourceId": "phsa-2019-20",
+      "page": 70,
+      "nameBand": 33,
+      "band": [
+        1995,
+        2057
+      ],
+      "payRows": [
+        33,
+        34
+      ]
+    },
+    {
+      "sourceId": "phsa-2019-20",
+      "page": 74,
+      "nameBand": 18,
+      "band": [
+        1380,
+        1440
+      ],
+      "payRows": [
+        18,
+        19
+      ]
+    },
+    {
+      "sourceId": "phsa-2019-20",
+      "page": 77,
+      "nameBand": 26,
+      "band": [
+        1706,
+        1816
+      ],
+      "payRows": [
+        26,
+        27,
+        28
+      ]
+    },
+    {
+      "sourceId": "phsa-2019-20",
+      "page": 78,
+      "nameBand": 9,
+      "band": [
+        1011,
+        1073
+      ],
+      "payRows": [
+        9,
+        10
+      ]
+    },
+    {
+      "sourceId": "phsa-2019-20",
+      "page": 79,
+      "nameBand": 48,
+      "band": [
+        2609,
+        2677
+      ],
+      "payRows": [
+        48,
+        49
+      ]
+    },
+    {
+      "sourceId": "phsa-2019-20",
+      "page": 82,
+      "nameBand": 1,
+      "band": [
+        683,
+        745
+      ],
+      "payRows": [
+        1,
+        2
+      ]
+    },
+    {
+      "sourceId": "phsa-2019-20",
+      "page": 87,
+      "nameBand": 35,
+      "band": [
+        2076,
+        2139
+      ],
+      "payRows": [
+        35,
+        36
+      ]
+    },
+    {
+      "sourceId": "phsa-2019-20",
+      "page": 87,
+      "nameBand": 48,
+      "band": [
+        2648,
+        2710
+      ],
+      "payRows": [
+        49,
+        50
+      ]
+    },
+    {
+      "sourceId": "phsa-2019-20",
+      "page": 88,
+      "nameBand": 35,
+      "band": [
+        2076,
+        2139
+      ],
+      "payRows": [
+        35,
+        36
+      ]
+    },
+    {
+      "sourceId": "phsa-2019-20",
+      "page": 89,
+      "nameBand": 54,
+      "band": [
+        2853,
+        2918
+      ],
+      "payRows": [
+        54,
+        55
+      ]
+    },
+    {
+      "sourceId": "phsa-2019-20",
+      "page": 90,
+      "nameBand": 19,
+      "band": [
+        1420,
+        1482
+      ],
+      "payRows": [
+        19,
+        20
+      ]
+    },
+    {
+      "sourceId": "phsa-2019-20",
+      "page": 93,
+      "nameBand": 21,
+      "band": [
+        1501,
+        1565
+      ],
+      "payRows": [
+        21,
+        22
+      ]
+    },
+    {
+      "sourceId": "phsa-2019-20",
+      "page": 93,
+      "nameBand": 36,
+      "band": [
+        2158,
+        2220
+      ],
+      "payRows": [
+        37,
+        38
+      ]
+    },
+    {
+      "sourceId": "phsa-2019-20",
+      "page": 93,
+      "nameBand": 44,
+      "band": [
+        2528,
+        2587
+      ],
+      "payRows": [
+        46,
+        47
+      ]
+    },
+    {
+      "sourceId": "phsa-2019-20",
+      "page": 96,
+      "nameBand": 48,
+      "band": [
+        2609,
+        2671
+      ],
+      "payRows": [
+        48,
+        49
+      ]
+    },
+    {
+      "sourceId": "phsa-2019-20",
+      "page": 97,
+      "nameBand": 33,
+      "band": [
+        1995,
+        2057
+      ],
+      "payRows": [
+        33,
+        34
+      ]
+    },
+    {
+      "sourceId": "phsa-2019-20",
+      "page": 97,
+      "nameBand": 34,
+      "band": [
+        2073,
+        2139
+      ],
+      "payRows": [
+        35,
+        36
+      ]
+    },
+    {
+      "sourceId": "phsa-2019-20",
+      "page": 97,
+      "nameBand": 50,
+      "band": [
+        2771,
+        2834
+      ],
+      "payRows": [
+        52,
+        53
+      ]
+    },
+    {
+      "sourceId": "phsa-2019-20",
+      "page": 100,
+      "nameBand": 18,
+      "band": [
+        1377,
+        1440
+      ],
+      "payRows": [
+        18,
+        19
+      ]
+    },
+    {
+      "sourceId": "phsa-2019-20",
+      "page": 104,
+      "nameBand": 7,
+      "band": [
+        927,
+        989
+      ],
+      "payRows": [
+        7,
+        8
+      ]
+    },
+    {
+      "sourceId": "phsa-2019-20",
+      "page": 106,
+      "nameBand": 30,
+      "band": [
+        1872,
+        1934
+      ],
+      "payRows": [
+        30,
+        31
+      ]
+    },
+    {
+      "sourceId": "phsa-2019-20",
+      "page": 107,
+      "nameBand": 19,
+      "band": [
+        1420,
+        1482
+      ],
+      "payRows": [
+        19,
+        20
+      ]
+    },
+    {
+      "sourceId": "phsa-2019-20",
+      "page": 107,
+      "nameBand": 53,
+      "band": [
+        2853,
+        2918
+      ],
+      "payRows": [
+        54,
+        55
+      ]
+    },
+    {
+      "sourceId": "phsa-2019-20",
+      "page": 108,
+      "nameBand": 40,
+      "band": [
+        2281,
+        2344
+      ],
+      "payRows": [
+        40,
+        41
+      ]
+    },
+    {
+      "sourceId": "phsa-2019-20",
+      "page": 109,
+      "nameBand": 6,
+      "band": [
+        887,
+        950
+      ],
+      "payRows": [
+        6,
+        7
+      ]
+    },
+    {
+      "sourceId": "phsa-2019-20",
+      "page": 109,
+      "nameBand": 45,
+      "band": [
+        2528,
+        2587
+      ],
+      "payRows": [
+        46,
+        47
+      ]
+    },
+    {
+      "sourceId": "phsa-2019-20",
+      "page": 119,
+      "nameBand": 25,
+      "band": [
+        1664,
+        1726
+      ],
+      "payRows": [
+        25,
+        26
+      ]
+    },
+    {
+      "sourceId": "phsa-2019-20",
+      "page": 120,
+      "nameBand": 11,
+      "band": [
+        1092,
+        1154
+      ],
+      "payRows": [
+        11,
+        12
+      ]
+    }
+  ],
+  "sourceCoverageImplication": "No independent original name-ink band is dropped for lack of a corresponding pay-row anchor. This strengthens complete original schedule row coverage, including the2018/19source whose cover headline6042differs from6041visible salary rows. It does not create a missing employee row or explain the cover discrepancy.",
+  "limits": [
+    "This is an original-painted-pixel row-coverage gate, separate from semantic name/money interpretation and source controls.",
+    "No automatic data acceptance, source metadata change, invented name or balance adjustment is authorized.",
+    "Final staged row geometry and capture provenance must still cover every page before final cohort acceptance."
+  ]
+}

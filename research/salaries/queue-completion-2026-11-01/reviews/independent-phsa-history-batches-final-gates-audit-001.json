@@ -1,0 +1,360 @@
+{
+  "reviewer": "/root/recovery_review",
+  "method": "Independent read-only implementation assessment with actual held/source artifacts and synthetic in-memory negative cases.",
+  "script": {
+    "path": "scripts/finish_salary_phsa_quality_final_gates.py",
+    "sha256": "aab0b4990021635bdd59a5c24c812048f1dd038e92fe7490fa0f3bfc16d0bbe6"
+  },
+  "codeInputs": [
+    {
+      "path": "scripts/finish_salary_phsa_policy.py",
+      "sha256": "f6d366bfeeab16659eaa8ab4cfaf068e7c4ce0ed32d6b8b3ca4020b677e2862f"
+    },
+    {
+      "path": "scripts/finish_salary_phsa_ledger.py",
+      "sha256": "c88531ae7554fce13de4e9c7f6d430465e3fec05f89599150564d94e49fa7b83"
+    },
+    {
+      "path": "scripts/finish_salary_phsa_finalize.py",
+      "sha256": "8f620be78ddbe5b41055f58dcf3c72087687dc0adcc636c5356084e5dd8e019c"
+    },
+    {
+      "path": "scripts/finish_salary_phsa_resolutions.py",
+      "sha256": "4be5f638cba264b5ac650b8535a2ba15b2ab3214557383b83a434aca015f1407"
+    },
+    {
+      "path": "scripts/finish_salary_phsa_supersessions.py",
+      "sha256": "7c67d971fdfa1d2b47b8cde928e85673c4ac90e26a3e3acbcd9f9463f34fcd46"
+    },
+    {
+      "path": "scripts/finish_salary_phsa_triangulation.py",
+      "sha256": "e2103e85ac6bab48e2290e4fec53b0f5deae13ad31cd91655cbfe8104e59ce1d"
+    },
+    {
+      "path": "scripts/review-salary-queue-completion.py",
+      "sha256": "0fd9be22c01b49a3aab2f817a9c64820aaf8bcb9f357e489e949fa6685d7f84a"
+    }
+  ],
+  "actualHeldSourceMetadata": {
+    "path": "research/salaries/queue-completion-2026-11-01/phsa/candidates/phsa-2015-16-source-v3.json",
+    "sha256": "11d9d3d6107f8f2b0ac942d2c4aad091c4ab34a13d8dabb2ae59e43263ed4b3d"
+  },
+  "actualHeldSourceProvenance": {
+    "path": "research/salaries/queue-completion-phsa/evidence/phsa-2015-16-provenance-v3.json.gzip",
+    "sha256": "714f7f1ddb989ad5269da58e1b65e2ae9632dc433ae82a2427cf1664747d9b00"
+  },
+  "cases": [
+    {
+      "case": "complete actual FY2015/16 held source validates",
+      "expected": "accept",
+      "passed": true
+    },
+    {
+      "case": "finalizer: wrong source id",
+      "expected": "reject",
+      "passed": true,
+      "errorType": "ValueError",
+      "reason": "Candidate source identity differs from pinned inventory"
+    },
+    {
+      "case": "finalizer: wrong original SHA",
+      "expected": "reject",
+      "passed": true,
+      "errorType": "ValueError",
+      "reason": "Candidate source identity differs from pinned inventory"
+    },
+    {
+      "case": "finalizer: pending source field",
+      "expected": "reject",
+      "passed": true,
+      "errorType": "ValueError",
+      "reason": "Source is incomplete or still has unresolved fields: phsa-2015-16"
+    },
+    {
+      "case": "finalizer: missing physical page",
+      "expected": "reject",
+      "passed": true,
+      "errorType": "ValueError",
+      "reason": "Incomplete/duplicate/reordered physical source pages"
+    },
+    {
+      "case": "finalizer: duplicate physical page",
+      "expected": "reject",
+      "passed": true,
+      "errorType": "ValueError",
+      "reason": "Incomplete/duplicate/reordered physical source pages"
+    },
+    {
+      "case": "finalizer: missing payload row",
+      "expected": "reject",
+      "passed": true,
+      "errorType": "ValueError",
+      "reason": "Missing literal salary scope"
+    },
+    {
+      "case": "finalizer: wrong row number",
+      "expected": "reject",
+      "passed": true,
+      "errorType": "ValueError",
+      "reason": "Source row order/multiplicity changed"
+    },
+    {
+      "case": "finalizer: invented job title",
+      "expected": "reject",
+      "passed": true,
+      "errorType": "ValueError",
+      "reason": "Invalid PHSA employer/title/page scope"
+    },
+    {
+      "case": "finalizer: boolean remuneration",
+      "expected": "reject",
+      "passed": true,
+      "errorType": "ValueError",
+      "reason": "Unparsed/noninteger/boolean money remains held"
+    },
+    {
+      "case": "finalizer: floating remuneration",
+      "expected": "reject",
+      "passed": true,
+      "errorType": "ValueError",
+      "reason": "Unparsed/noninteger/boolean money remains held"
+    },
+    {
+      "case": "finalizer: unparsed remuneration",
+      "expected": "reject",
+      "passed": true,
+      "errorType": "ValueError",
+      "reason": "Unparsed/noninteger/boolean money remains held"
+    },
+    {
+      "case": "finalizer: qualified money route",
+      "expected": "reject",
+      "passed": true,
+      "errorType": "ValueError",
+      "reason": "Typography cannot waive money"
+    },
+    {
+      "case": "finalizer: unknown route",
+      "expected": "reject",
+      "passed": true,
+      "errorType": "ValueError",
+      "reason": "Unclosed field evidence route"
+    },
+    {
+      "case": "actual held source passes separate root provenance gate",
+      "expected": "accept",
+      "passed": true
+    },
+    {
+      "case": "root provenance: pending route",
+      "expected": "reject",
+      "passed": true,
+      "errorType": "AssertionError",
+      "reason": "A pending or unknown field route cannot be published"
+    },
+    {
+      "case": "root provenance: printed residual silently changed",
+      "expected": "reject",
+      "passed": true,
+      "errorType": "AssertionError",
+      "reason": ""
+    },
+    {
+      "case": "root provenance: field route counts incomplete",
+      "expected": "reject",
+      "passed": true,
+      "errorType": "AssertionError",
+      "reason": ""
+    },
+    {
+      "case": "root provenance: missing fiscal layout holdout",
+      "expected": "reject",
+      "passed": true,
+      "errorType": "AssertionError",
+      "reason": "Each historical layout requires its own passed holdout"
+    },
+    {
+      "case": "nine actual closed holdouts /222 fields /four reviewer rereads",
+      "expected": "accept",
+      "passed": true
+    },
+    {
+      "case": "holdout: packet source mismatch",
+      "expected": "reject",
+      "passed": true,
+      "errorType": "ValueError",
+      "reason": "Holdout source/candidate pin differs from the frozen source-only packet"
+    },
+    {
+      "case": "holdout: candidate source mismatch",
+      "expected": "reject",
+      "passed": true,
+      "errorType": "ValueError",
+      "reason": "Holdout source/candidate pin differs from the frozen source-only packet"
+    },
+    {
+      "case": "holdout: candidate outside declared packet",
+      "expected": "reject",
+      "passed": true,
+      "errorType": "ValueError",
+      "reason": "Holdout source/candidate pin differs from the frozen source-only packet"
+    },
+    {
+      "case": "holdout: only nine selected rows",
+      "expected": "reject",
+      "passed": true,
+      "errorType": "ValueError",
+      "reason": "Every source-layout holdout requires all ten complete selected rows"
+    },
+    {
+      "case": "holdout: duplicate selected row",
+      "expected": "reject",
+      "passed": true,
+      "errorType": "ValueError",
+      "reason": "Duplicate/mislabelled/misaligned source holdout row"
+    },
+    {
+      "case": "holdout: widen requested field scope",
+      "expected": "reject",
+      "passed": true,
+      "errorType": "ValueError",
+      "reason": "Frozen source holdout field scope differs"
+    },
+    {
+      "case": "holdout: eight layouts cannot imply all-nine pass",
+      "expected": "reject",
+      "passed": true,
+      "errorType": "ValueError",
+      "reason": "All nine distinct source-layout holdouts must close"
+    },
+    {
+      "case": "exact closed authority: phsa-2019-20:7:7",
+      "expected": "accept",
+      "passed": true
+    },
+    {
+      "case": "closed exception cannot move fiscal batch",
+      "expected": "reject",
+      "passed": true,
+      "errorType": "ValueError",
+      "reason": "Closed exception source/year/batch scope differs"
+    },
+    {
+      "case": "exact closed authority: phsa-2019-20:5:10",
+      "expected": "accept",
+      "passed": true
+    },
+    {
+      "case": "closed exception cannot move fiscal batch",
+      "expected": "reject",
+      "passed": true,
+      "errorType": "ValueError",
+      "reason": "Closed exception source/year/batch scope differs"
+    },
+    {
+      "case": "exact closed authority: phsa-2019-20:6:25",
+      "expected": "accept",
+      "passed": true
+    },
+    {
+      "case": "closed exception cannot move fiscal batch",
+      "expected": "reject",
+      "passed": true,
+      "errorType": "ValueError",
+      "reason": "Closed exception source/year/batch scope differs"
+    },
+    {
+      "case": "exact closed authority: phsa-2019-20:7:41",
+      "expected": "accept",
+      "passed": true
+    },
+    {
+      "case": "closed exception cannot move fiscal batch",
+      "expected": "reject",
+      "passed": true,
+      "errorType": "ValueError",
+      "reason": "Closed exception source/year/batch scope differs"
+    },
+    {
+      "case": "exact closed authority: phsa-2019-20:9:39",
+      "expected": "accept",
+      "passed": true
+    },
+    {
+      "case": "closed exception cannot move fiscal batch",
+      "expected": "reject",
+      "passed": true,
+      "errorType": "ValueError",
+      "reason": "Closed exception source/year/batch scope differs"
+    },
+    {
+      "case": "exact closed authority: phsa-2018-19:28:6",
+      "expected": "accept",
+      "passed": true
+    },
+    {
+      "case": "closed exception cannot move fiscal batch",
+      "expected": "reject",
+      "passed": true,
+      "errorType": "ValueError",
+      "reason": "Closed exception source/year/batch scope differs"
+    },
+    {
+      "case": "exact closed authority: phsa-2019-20:12:19",
+      "expected": "accept",
+      "passed": true
+    },
+    {
+      "case": "closed exception cannot move fiscal batch",
+      "expected": "reject",
+      "passed": true,
+      "errorType": "ValueError",
+      "reason": "Closed exception source/year/batch scope differs"
+    },
+    {
+      "case": "exact closed authority: phsa-2020-21:24:19",
+      "expected": "accept",
+      "passed": true
+    },
+    {
+      "case": "closed exception cannot move fiscal batch",
+      "expected": "reject",
+      "passed": true,
+      "errorType": "ValueError",
+      "reason": "Closed exception source/year/batch scope differs"
+    },
+    {
+      "case": "old corrected overlay remains archived and effective v2 selected",
+      "expected": "accept",
+      "passed": true
+    },
+    {
+      "case": "every existing monetary confirmation byte-replays pinned peer evidence",
+      "expected": "accept",
+      "passed": true
+    },
+    {
+      "case": "derived confirmation cannot change money while pinned original peer stays fixed",
+      "expected": "reject",
+      "passed": true,
+      "errorType": "ValueError",
+      "reason": "Derived monetary confirmation does not replay its pinned source peer evidence"
+    }
+  ],
+  "caseCount": 46,
+  "failedCases": 0,
+  "exactClosedCaseAuthoritiesChecked": 8,
+  "effectiveOverlayRevisionSelections": [
+    {
+      "path": "research/salaries/queue-completion-2026-11-01/phsa/overlay-supersessions/phsa-2018-19-manual-overlay-002-v2.json",
+      "sha256": "a65c4e875a1dc8e16cc57d4571910af16771dd8a636833549e606dffc9359906"
+    }
+  ],
+  "monetaryConfirmationFieldsReplayedAtAudit": 27,
+  "limits": [
+    "No new literal original-image transcription or whole-source acceptance is claimed by code tests.",
+    "The consumers read pinned holdout data internally for validation; no literal holdout names or amounts are output or used for new blind readings.",
+    "All nine scopes still require complete manual/qualification/financial/source-control closures and root acceptance.",
+    "This snapshot does not certify later unreviewed implementation changes."
+  ]
+}

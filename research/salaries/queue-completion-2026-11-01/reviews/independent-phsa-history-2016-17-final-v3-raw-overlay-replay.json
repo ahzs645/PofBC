@@ -1,0 +1,123 @@
+{
+  "reviewer": "/root/held_health_review",
+  "sourceId": "phsa-2016-17",
+  "sourceSha256": "31f7a1af80186bf81139fd693b36e733333a06c2ab1a4c5191bd6ee9b3623a53",
+  "script": {
+    "path": "scripts/finish_salary_phsa_review_final_replay_v2.py",
+    "sha256": "8d24b385a33a01fa71dd2118d3be2da1fa840a43d6976b777eaa5b0f6583b806"
+  },
+  "candidateMetadata": {
+    "path": "research/salaries/queue-completion-2026-11-01/phsa/candidates/phsa-2016-17-source-v3.json",
+    "sha256": "94efd81b59daf294cf121dd9f228a3696eaadbd9e5fd490d7ff4fa4268c72d85"
+  },
+  "payload": {
+    "path": "research/salaries/queue-completion-phsa/phsa-2016-17-employees-v3.json.gzip",
+    "sha256": "35d820118ce1c958dd013032ae39ab5cd6c7d0d3393c305bb669e5d7956f3a29"
+  },
+  "provenance": {
+    "path": "research/salaries/queue-completion-phsa/evidence/phsa-2016-17-provenance-v3.json.gzip",
+    "sha256": "abebb2900458ca05d6a5a73195de7797e0a67b16e4ae9e3e45d3b97dadde3887"
+  },
+  "checkedCompletePhysicalPages": 144,
+  "checkedLiteralNamedRows": 5118,
+  "independentRawPlusOnlyExactPinnedOverlayReconstructionEqualsPayload": true,
+  "allOriginalRowOrderMultiplicityAndNonreviewedFieldsPreserved": true,
+  "everyFieldHasExactlyOneClosedEvidenceRoute": true,
+  "qualifiedNameCases": 107,
+  "rootHoldoutFields": 26,
+  "manualImageFields": 2011,
+  "allNineExactSourceHoldoutReceipts": [
+    {
+      "path": "research/salaries/queue-completion-2026-11-01/reviews/root-phsa-history-2015-16-holdout-source-comparison.json",
+      "sha256": "b54ffc90e7802ea51be804e6ec2ffacfb0056d6c8ae90a3841b8273ffb50e86b"
+    },
+    {
+      "path": "research/salaries/queue-completion-2026-11-01/reviews/root-phsa-history-2016-17-holdout-source-comparison.json",
+      "sha256": "3bc26ef539583647d853c15e2a5803fe4bd2ab07fb7e5acbf6cf0dc0a2f27e2b"
+    },
+    {
+      "path": "research/salaries/queue-completion-2026-11-01/reviews/root-phsa-history-2017-18-holdout-source-comparison.json",
+      "sha256": "009373d2eb66cbdeab32c377aba104c38feed42f2bd208c2f4022e6f15d3f021"
+    },
+    {
+      "path": "research/salaries/queue-completion-2026-11-01/reviews/root-phsa-history-2018-19-holdout-source-comparison.json",
+      "sha256": "ed5f4d90749bd0c0a455a40b17aaa0d9359b5fb1fe0157926010495aaee33433"
+    },
+    {
+      "path": "research/salaries/queue-completion-2026-11-01/reviews/root-phsa-history-2019-20-holdout-source-comparison.json",
+      "sha256": "6df47bcd1811a189a73ca6f21197c9bed8442324eabf3c4295956fec9f7a3d5d"
+    },
+    {
+      "path": "research/salaries/queue-completion-2026-11-01/reviews/root-phsa-history-2020-21-holdout-source-comparison.json",
+      "sha256": "a34ca3c2815b4743abf594242976ab0be0ae3f8a088040e2413f35d98a6d83d5"
+    },
+    {
+      "path": "research/salaries/queue-completion-2026-11-01/reviews/root-phsa-history-2021-22-holdout-source-comparison.json",
+      "sha256": "3548544eeb27944497d0960429e0cebab38274ecd4787b4c09391fb000f6d8de"
+    },
+    {
+      "path": "research/salaries/queue-completion-2026-11-01/reviews/root-phsa-history-2022-23-holdout-source-comparison.json",
+      "sha256": "3e00373a8eb17d3ac664920c6d0c48f0ff9bec7638f2215cae22e68f58a0e29b"
+    },
+    {
+      "path": "research/salaries/queue-completion-2026-11-01/reviews/root-phsa-history-2023-24-holdout-source-comparison.json",
+      "sha256": "1873d20107c308cb05e6c3b4d6bdcdb60ad9407b78d7b1f7d1c6cbe3eba807fc"
+    }
+  ],
+  "allNineBlindHoldoutFields": 222,
+  "sourceSpecificHoldoutReceipts": [
+    {
+      "path": "research/salaries/queue-completion-2026-11-01/reviews/root-phsa-history-2016-17-holdout-source-comparison.json",
+      "sha256": "3bc26ef539583647d853c15e2a5803fe4bd2ab07fb7e5acbf6cf0dc0a2f27e2b"
+    }
+  ],
+  "freshIndependentMonetaryConfirmationFields": 10,
+  "fieldRouteCounts": {
+    "name": {
+      "manual-original-image": 689,
+      "calibrated-paired-reader-confidence-corroboration": 3383,
+      "manual-qualified-source-typography": 107,
+      "baseline-independent-reader-agreement": 929,
+      "manual-blind-source-holdout": 10
+    },
+    "remuneration": {
+      "manual-original-image": 852,
+      "calibrated-paired-reader-confidence-corroboration": 4060,
+      "baseline-independent-reader-agreement": 196,
+      "manual-blind-source-holdout": 10
+    },
+    "expenses": {
+      "manual-original-image": 363,
+      "original-source-explicit-dash-geometry": 2426,
+      "calibrated-paired-reader-confidence-corroboration": 1431,
+      "baseline-independent-reader-agreement": 892,
+      "manual-blind-source-holdout": 6
+    }
+  },
+  "changedFieldsFromRaw": {
+    "remuneration": 819,
+    "expenses": 319,
+    "name": 498
+  },
+  "remunerationSum": 561207243,
+  "knownExpenseSum": 10803695,
+  "sourcePrintedControls": {
+    "remuneration": 561207243,
+    "expenses": 10803700
+  },
+  "literalSourceControlResiduals": [
+    0,
+    -5
+  ],
+  "expenseNullRows": 2453,
+  "expenseExplicitZeroRows": 0,
+  "expenseNegativeRows": 0,
+  "semanticAndMonetaryControlAcceptanceNotClaimedByReplayAlone": true,
+  "limits": [
+    "Independent implementation reads raw pages, explicit requested-field reviews and original geometry without importing author ledger/finalizer code.",
+    "Personally image-reviewed cells are limited to this reviewer's separately frozen source receipts; machine agreement is not represented as personal image transcription.",
+    "Pinned peer/root decisions are verified as provenance, not relabelled independent visual proof for every field.",
+    "Exact source control residuals are diagnostics; this replay does not explain them or change a cell to balance.",
+    "This per-source candidate replay does not accept the complete nine-cohort tranche or promote a source status."
+  ]
+}

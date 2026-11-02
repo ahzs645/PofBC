@@ -27,7 +27,7 @@
   "fingerprints": {
     "snapshotSha256": "5955544e5deef4dcc72fcb201137dd943053ef78deeca303026c4a4bc19124f1",
     "aliasesSha256": "f8fbabcea76dfaab15fcfcea12aac2eee5ba2e56203b89d7cb890ec4eec81b4d",
-    "repositoryInputsSha256": "f11664b82bd8632758da6f24f3d800ecd7bf6c479caa82b38e39653d39f15ebb"
+    "repositoryInputsSha256": "c08cf752cc70c753deb257c9686a63a5b2fa685c5dc8cccc906749092847336c"
   },
   "summary": {
     "referenceEmployers": 3,
@@ -41,17 +41,17 @@
     "annualSeriesCompletenessEstablished": false,
     "recordLevelParityChecked": false,
     "repository": {
-      "employers": 246,
-      "rows": 1037040,
-      "namedRows": 1031709,
-      "officialRows": 805387,
-      "compiledRows": 231653,
-      "employeeRows": 775754,
-      "availableEmployerYears": 962
+      "employers": 254,
+      "rows": 1125685,
+      "namedRows": 1120354,
+      "officialRows": 897321,
+      "compiledRows": 228364,
+      "employeeRows": 867553,
+      "availableEmployerYears": 983
     },
-    "repositoryEmployersWithOfficial": 177,
-    "repositoryCompiledOnlyEmployers": 69,
-    "repositorySourceTasks": 222,
+    "repositoryEmployersWithOfficial": 192,
+    "repositoryCompiledOnlyEmployers": 62,
+    "repositorySourceTasks": 209,
     "externalReferenceTasks": 3
   },
   "employers": [
@@ -265,16 +265,34 @@
           "Provincial Health Services Authority (PHSA)"
         ],
         "sector": "Health authorities",
-        "rows": 38856,
-        "namedRows": 38856,
-        "officialRows": 13933,
+        "rows": 103768,
+        "namedRows": 103768,
+        "officialRows": 78845,
         "compiledRows": 24923,
-        "employeeRows": 13906,
+        "employeeRows": 78818,
         "officialPeriods": [
+          "2015/16",
+          "2016/17",
+          "2017/18",
+          "2018/19",
+          "2019/20",
+          "2020/21",
+          "2021/22",
+          "2022/23",
+          "2023/24",
           "2024/25",
           "2025/26"
         ],
         "officialEmployeePeriods": [
+          "2015/16",
+          "2016/17",
+          "2017/18",
+          "2018/19",
+          "2019/20",
+          "2020/21",
+          "2021/22",
+          "2022/23",
+          "2023/24",
           "2024/25"
         ],
         "compiledEditionLabels": [
@@ -282,11 +300,20 @@
           "2020/21",
           "2023/24"
         ],
-        "acceptedPeriodCount": 2,
-        "sourceLeadCount": 9,
+        "acceptedPeriodCount": 11,
+        "sourceLeadCount": 0,
         "partialSources": [
           "phsa-board-2024-25",
-          "phsa-board-2025-26"
+          "phsa-board-2025-26",
+          "queue-completion-phsa-2015-16-employees",
+          "queue-completion-phsa-2016-17-employees",
+          "queue-completion-phsa-2017-18-employees",
+          "queue-completion-phsa-2018-19-employees",
+          "queue-completion-phsa-2019-20-employees",
+          "queue-completion-phsa-2020-21-employees",
+          "queue-completion-phsa-2021-22-employees",
+          "queue-completion-phsa-2022-23-employees",
+          "queue-completion-phsa-2023-24-employees"
         ]
       },
       "years": []
@@ -1139,21 +1166,28 @@
         "Chilliwack school district"
       ],
       "sector": "School districts",
-      "rows": 2104,
-      "namedRows": 2104,
-      "officialRows": 0,
+      "rows": 3122,
+      "namedRows": 3122,
+      "officialRows": 1018,
       "compiledRows": 2104,
-      "employeeRows": 0,
-      "officialPeriods": [],
-      "officialEmployeePeriods": [],
+      "employeeRows": 1010,
+      "officialPeriods": [
+        "2024/25"
+      ],
+      "officialEmployeePeriods": [
+        "2024/25"
+      ],
       "compiledEditionLabels": [
         "2017/18",
         "2020/21",
         "2023/24"
       ],
-      "acceptedPeriodCount": 0,
+      "acceptedPeriodCount": 1,
       "sourceLeadCount": 0,
-      "partialSources": []
+      "partialSources": [
+        "queue-completion-schools-sd33-2025-employees",
+        "queue-completion-schools-sd33-2025-trustees"
+      ]
     },
     {
       "slug": "city-of-abbotsford",
@@ -1796,20 +1830,35 @@
         "District of Mission"
       ],
       "sector": "Municipalities",
-      "rows": 207,
-      "namedRows": 207,
-      "officialRows": 0,
+      "rows": 744,
+      "namedRows": 744,
+      "officialRows": 537,
       "compiledRows": 207,
-      "employeeRows": 0,
-      "officialPeriods": [],
-      "officialEmployeePeriods": [],
+      "employeeRows": 516,
+      "officialPeriods": [
+        "2023",
+        "2024",
+        "2025"
+      ],
+      "officialEmployeePeriods": [
+        "2023",
+        "2024",
+        "2025"
+      ],
       "compiledEditionLabels": [
         "2017/18",
         "2020/21"
       ],
-      "acceptedPeriodCount": 0,
-      "sourceLeadCount": 3,
-      "partialSources": []
+      "acceptedPeriodCount": 3,
+      "sourceLeadCount": 0,
+      "partialSources": [
+        "queue-completion-municipal-mission-2023-elected-officials",
+        "queue-completion-municipal-mission-2023-employee-remuneration",
+        "queue-completion-municipal-mission-2024-elected-officials",
+        "queue-completion-municipal-mission-2024-employee-remuneration",
+        "queue-completion-municipal-mission-2025-elected-officials",
+        "queue-completion-municipal-mission-2025-employee-remuneration"
+      ]
     },
     {
       "slug": "city-of-nanaimo",
@@ -2486,6 +2535,32 @@
       "partialSources": []
     },
     {
+      "slug": "city-of-vernon",
+      "name": "City of Vernon",
+      "names": [
+        "City of Vernon"
+      ],
+      "sector": "Municipalities",
+      "rows": 271,
+      "namedRows": 271,
+      "officialRows": 271,
+      "compiledRows": 0,
+      "employeeRows": 264,
+      "officialPeriods": [
+        "2025"
+      ],
+      "officialEmployeePeriods": [
+        "2025"
+      ],
+      "compiledEditionLabels": [],
+      "acceptedPeriodCount": 1,
+      "sourceLeadCount": 1,
+      "partialSources": [
+        "queue-completion-municipal-vernon-2025-elected-officials",
+        "queue-completion-municipal-vernon-2025-employee-remuneration"
+      ]
+    },
+    {
       "slug": "city-of-victoria",
       "name": "City of Victoria",
       "names": [
@@ -2794,21 +2869,28 @@
         "Coquitlam school district"
       ],
       "sector": "School districts",
-      "rows": 4545,
-      "namedRows": 4545,
-      "officialRows": 0,
+      "rows": 6748,
+      "namedRows": 6748,
+      "officialRows": 2203,
       "compiledRows": 4545,
-      "employeeRows": 0,
-      "officialPeriods": [],
-      "officialEmployeePeriods": [],
+      "employeeRows": 2193,
+      "officialPeriods": [
+        "2024/25"
+      ],
+      "officialEmployeePeriods": [
+        "2024/25"
+      ],
       "compiledEditionLabels": [
         "2017/18",
         "2020/21",
         "2023/24"
       ],
-      "acceptedPeriodCount": 0,
+      "acceptedPeriodCount": 1,
       "sourceLeadCount": 0,
-      "partialSources": []
+      "partialSources": [
+        "queue-completion-schools-sd43-2025-employees",
+        "queue-completion-schools-sd43-2025-trustees"
+      ]
     },
     {
       "slug": "delta-police",
@@ -3886,6 +3968,32 @@
       ]
     },
     {
+      "slug": "greater-victoria-school-district",
+      "name": "School District No. 61 (Greater Victoria)",
+      "names": [
+        "School District No. 61 (Greater Victoria)"
+      ],
+      "sector": "School districts",
+      "rows": 1380,
+      "namedRows": 1380,
+      "officialRows": 1380,
+      "compiledRows": 0,
+      "employeeRows": 1370,
+      "officialPeriods": [
+        "2024/25"
+      ],
+      "officialEmployeePeriods": [
+        "2024/25"
+      ],
+      "compiledEditionLabels": [],
+      "acceptedPeriodCount": 1,
+      "sourceLeadCount": 0,
+      "partialSources": [
+        "queue-completion-schools-sd61-2025-employees",
+        "queue-completion-schools-sd61-2025-trustees"
+      ]
+    },
+    {
       "slug": "gulf-islands-school-district",
       "name": "School District No. 64 (Gulf Islands)",
       "names": [
@@ -4202,6 +4310,32 @@
       "partialSources": []
     },
     {
+      "slug": "kamloops-thompson-school-district",
+      "name": "School District No. 73 (Kamloops-Thompson)",
+      "names": [
+        "School District No. 73 (Kamloops-Thompson)"
+      ],
+      "sector": "School districts",
+      "rows": 1076,
+      "namedRows": 1076,
+      "officialRows": 1076,
+      "compiledRows": 0,
+      "employeeRows": 1067,
+      "officialPeriods": [
+        "2024/25"
+      ],
+      "officialEmployeePeriods": [
+        "2024/25"
+      ],
+      "compiledEditionLabels": [],
+      "acceptedPeriodCount": 1,
+      "sourceLeadCount": 0,
+      "partialSources": [
+        "queue-completion-schools-sd73-2025-employees",
+        "queue-completion-schools-sd73-2025-trustees"
+      ]
+    },
+    {
       "slug": "knowledge-network",
       "name": "Knowledge Network",
       "names": [
@@ -4508,6 +4642,32 @@
       "partialSources": []
     },
     {
+      "slug": "nanaimo-ladysmith-school-district",
+      "name": "School District No. 68 (Nanaimo-Ladysmith)",
+      "names": [
+        "School District No. 68 (Nanaimo-Ladysmith)"
+      ],
+      "sector": "School districts",
+      "rows": 1012,
+      "namedRows": 1012,
+      "officialRows": 1012,
+      "compiledRows": 0,
+      "employeeRows": 1003,
+      "officialPeriods": [
+        "2024/25"
+      ],
+      "officialEmployeePeriods": [
+        "2024/25"
+      ],
+      "compiledEditionLabels": [],
+      "acceptedPeriodCount": 1,
+      "sourceLeadCount": 0,
+      "partialSources": [
+        "queue-completion-schools-sd68-2025-employees",
+        "queue-completion-schools-sd68-2025-trustees"
+      ]
+    },
+    {
       "slug": "nelson-police",
       "name": "Nelson Police",
       "names": [
@@ -4624,21 +4784,28 @@
         "North Vancouver school district"
       ],
       "sector": "School districts",
-      "rows": 2258,
-      "namedRows": 2258,
-      "officialRows": 0,
+      "rows": 3275,
+      "namedRows": 3275,
+      "officialRows": 1017,
       "compiledRows": 2258,
-      "employeeRows": 0,
-      "officialPeriods": [],
-      "officialEmployeePeriods": [],
+      "employeeRows": 1010,
+      "officialPeriods": [
+        "2024/25"
+      ],
+      "officialEmployeePeriods": [
+        "2024/25"
+      ],
       "compiledEditionLabels": [
         "2017/18",
         "2020/21",
         "2023/24"
       ],
-      "acceptedPeriodCount": 0,
+      "acceptedPeriodCount": 1,
       "sourceLeadCount": 0,
-      "partialSources": []
+      "partialSources": [
+        "queue-completion-schools-sd44-2025-employees",
+        "queue-completion-schools-sd44-2025-trustees"
+      ]
     },
     {
       "slug": "northern-health",
@@ -4869,21 +5036,27 @@
         "Providence Health Care"
       ],
       "sector": "Health authorities",
-      "rows": 7408,
-      "namedRows": 7408,
-      "officialRows": 0,
-      "compiledRows": 7408,
-      "employeeRows": 0,
-      "officialPeriods": [],
-      "officialEmployeePeriods": [],
-      "compiledEditionLabels": [
-        "2017/18",
-        "2020/21",
+      "rows": 7418,
+      "namedRows": 7418,
+      "officialRows": 3299,
+      "compiledRows": 4119,
+      "employeeRows": 3289,
+      "officialPeriods": [
         "2023/24"
       ],
-      "acceptedPeriodCount": 0,
+      "officialEmployeePeriods": [
+        "2023/24"
+      ],
+      "compiledEditionLabels": [
+        "2017/18",
+        "2020/21"
+      ],
+      "acceptedPeriodCount": 1,
       "sourceLeadCount": 0,
-      "partialSources": []
+      "partialSources": [
+        "queue-completion-providence-2023-24-board-numeric-pay",
+        "queue-completion-providence-2023-24-employees"
+      ]
     },
     {
       "slug": "provincial-health-services-authority",
@@ -4893,16 +5066,34 @@
         "Provincial Health Services Authority (PHSA)"
       ],
       "sector": "Health authorities",
-      "rows": 38856,
-      "namedRows": 38856,
-      "officialRows": 13933,
+      "rows": 103768,
+      "namedRows": 103768,
+      "officialRows": 78845,
       "compiledRows": 24923,
-      "employeeRows": 13906,
+      "employeeRows": 78818,
       "officialPeriods": [
+        "2015/16",
+        "2016/17",
+        "2017/18",
+        "2018/19",
+        "2019/20",
+        "2020/21",
+        "2021/22",
+        "2022/23",
+        "2023/24",
         "2024/25",
         "2025/26"
       ],
       "officialEmployeePeriods": [
+        "2015/16",
+        "2016/17",
+        "2017/18",
+        "2018/19",
+        "2019/20",
+        "2020/21",
+        "2021/22",
+        "2022/23",
+        "2023/24",
         "2024/25"
       ],
       "compiledEditionLabels": [
@@ -4910,11 +5101,20 @@
         "2020/21",
         "2023/24"
       ],
-      "acceptedPeriodCount": 2,
-      "sourceLeadCount": 9,
+      "acceptedPeriodCount": 11,
+      "sourceLeadCount": 0,
       "partialSources": [
         "phsa-board-2024-25",
-        "phsa-board-2025-26"
+        "phsa-board-2025-26",
+        "queue-completion-phsa-2015-16-employees",
+        "queue-completion-phsa-2016-17-employees",
+        "queue-completion-phsa-2017-18-employees",
+        "queue-completion-phsa-2018-19-employees",
+        "queue-completion-phsa-2019-20-employees",
+        "queue-completion-phsa-2020-21-employees",
+        "queue-completion-phsa-2021-22-employees",
+        "queue-completion-phsa-2022-23-employees",
+        "queue-completion-phsa-2023-24-employees"
       ]
     },
     {
@@ -5309,6 +5509,84 @@
       "partialSources": []
     },
     {
+      "slug": "school-district-22",
+      "name": "School District No. 22 (Vernon)",
+      "names": [
+        "School District No. 22 (Vernon)"
+      ],
+      "sector": "School districts",
+      "rows": 614,
+      "namedRows": 614,
+      "officialRows": 614,
+      "compiledRows": 0,
+      "employeeRows": 607,
+      "officialPeriods": [
+        "2024/25"
+      ],
+      "officialEmployeePeriods": [
+        "2024/25"
+      ],
+      "compiledEditionLabels": [],
+      "acceptedPeriodCount": 1,
+      "sourceLeadCount": 0,
+      "partialSources": [
+        "queue-completion-schools-sd22-2025-employees",
+        "queue-completion-schools-sd22-2025-trustees"
+      ]
+    },
+    {
+      "slug": "school-district-23",
+      "name": "School District No. 23 (Central Okanagan)",
+      "names": [
+        "School District No. 23 (Central Okanagan)"
+      ],
+      "sector": "School districts",
+      "rows": 1633,
+      "namedRows": 1633,
+      "officialRows": 1633,
+      "compiledRows": 0,
+      "employeeRows": 1626,
+      "officialPeriods": [
+        "2024/25"
+      ],
+      "officialEmployeePeriods": [
+        "2024/25"
+      ],
+      "compiledEditionLabels": [],
+      "acceptedPeriodCount": 1,
+      "sourceLeadCount": 0,
+      "partialSources": [
+        "queue-completion-schools-sd23-2025-employees",
+        "queue-completion-schools-sd23-2025-trustees"
+      ]
+    },
+    {
+      "slug": "school-district-27",
+      "name": "School District No. 27 (Cariboo-Chilcotin)",
+      "names": [
+        "School District No. 27 (Cariboo-Chilcotin)"
+      ],
+      "sector": "School districts",
+      "rows": 297,
+      "namedRows": 297,
+      "officialRows": 297,
+      "compiledRows": 0,
+      "employeeRows": 289,
+      "officialPeriods": [
+        "2024/25"
+      ],
+      "officialEmployeePeriods": [
+        "2024/25"
+      ],
+      "compiledEditionLabels": [],
+      "acceptedPeriodCount": 1,
+      "sourceLeadCount": 0,
+      "partialSources": [
+        "queue-completion-schools-sd27-2025-employees",
+        "queue-completion-schools-sd27-2025-trustees"
+      ]
+    },
+    {
       "slug": "school-district-46",
       "name": "School District No. 46 (Sunshine Coast)",
       "names": [
@@ -5405,6 +5683,32 @@
       "sourceLeadCount": 0,
       "partialSources": [
         "recovery-schools-sd49-2025-trustees"
+      ]
+    },
+    {
+      "slug": "school-district-50",
+      "name": "School District No. 50 (Haida Gwaii)",
+      "names": [
+        "School District No. 50 (Haida Gwaii)"
+      ],
+      "sector": "School districts",
+      "rows": 58,
+      "namedRows": 58,
+      "officialRows": 58,
+      "compiledRows": 0,
+      "employeeRows": 53,
+      "officialPeriods": [
+        "2024/25"
+      ],
+      "officialEmployeePeriods": [
+        "2024/25"
+      ],
+      "compiledEditionLabels": [],
+      "acceptedPeriodCount": 1,
+      "sourceLeadCount": 0,
+      "partialSources": [
+        "queue-completion-schools-sd50-2025-employees",
+        "queue-completion-schools-sd50-2025-trustees"
       ]
     },
     {
@@ -6030,21 +6334,28 @@
         "Surrey school district"
       ],
       "sector": "School districts",
-      "rows": 10514,
-      "namedRows": 10514,
-      "officialRows": 0,
+      "rows": 15344,
+      "namedRows": 15344,
+      "officialRows": 4830,
       "compiledRows": 10514,
-      "employeeRows": 0,
-      "officialPeriods": [],
-      "officialEmployeePeriods": [],
+      "employeeRows": 4823,
+      "officialPeriods": [
+        "2024/25"
+      ],
+      "officialEmployeePeriods": [
+        "2024/25"
+      ],
       "compiledEditionLabels": [
         "2017/18",
         "2020/21",
         "2023/24"
       ],
-      "acceptedPeriodCount": 0,
+      "acceptedPeriodCount": 1,
       "sourceLeadCount": 0,
-      "partialSources": []
+      "partialSources": [
+        "queue-completion-schools-sd36-2025-employees",
+        "queue-completion-schools-sd36-2025-trustees"
+      ]
     },
     {
       "slug": "technical-safety-bc",
@@ -6130,20 +6441,23 @@
         "Town of Creston"
       ],
       "sector": "Municipalities",
-      "rows": 7,
-      "namedRows": 7,
-      "officialRows": 7,
+      "rows": 34,
+      "namedRows": 34,
+      "officialRows": 34,
       "compiledRows": 0,
-      "employeeRows": 0,
+      "employeeRows": 27,
       "officialPeriods": [
         "2024"
       ],
-      "officialEmployeePeriods": [],
+      "officialEmployeePeriods": [
+        "2024"
+      ],
       "compiledEditionLabels": [],
       "acceptedPeriodCount": 1,
-      "sourceLeadCount": 1,
+      "sourceLeadCount": 0,
       "partialSources": [
-        "municipal-ocr-town-of-creston-2024-elected-officials-p37"
+        "municipal-ocr-town-of-creston-2024-elected-officials-p37",
+        "queue-completion-municipal-creston-2024-employee-remuneration"
       ]
     },
     {
@@ -6631,21 +6945,28 @@
         "Vancouver Coastal Health"
       ],
       "sector": "Health authorities",
-      "rows": 24206,
-      "namedRows": 24206,
-      "officialRows": 0,
+      "rows": 31956,
+      "namedRows": 31956,
+      "officialRows": 7750,
       "compiledRows": 24206,
-      "employeeRows": 0,
-      "officialPeriods": [],
-      "officialEmployeePeriods": [],
+      "employeeRows": 7740,
+      "officialPeriods": [
+        "2020/21"
+      ],
+      "officialEmployeePeriods": [
+        "2020/21"
+      ],
       "compiledEditionLabels": [
         "2017/18",
         "2020/21",
         "2023/24"
       ],
-      "acceptedPeriodCount": 0,
+      "acceptedPeriodCount": 1,
       "sourceLeadCount": 0,
-      "partialSources": []
+      "partialSources": [
+        "queue-completion-vch-2020-21-board-numeric-pay",
+        "queue-completion-vch-2020-21-employees"
+      ]
     },
     {
       "slug": "vancouver-community-college",
@@ -7567,11 +7888,11 @@
     {
       "sector": "Health authorities",
       "employers": 8,
-      "employersWithOfficial": 6,
-      "compiledOnlyEmployers": 2,
-      "officialRows": 258097,
-      "compiledRows": 68658,
-      "rows": 326755
+      "employersWithOfficial": 8,
+      "compiledOnlyEmployers": 0,
+      "officialRows": 334058,
+      "compiledRows": 65369,
+      "rows": 399427
     },
     {
       "sector": "Municipal police",
@@ -7584,21 +7905,21 @@
     },
     {
       "sector": "Municipalities",
-      "employers": 119,
-      "employersWithOfficial": 116,
-      "compiledOnlyEmployers": 3,
-      "officialRows": 118708,
+      "employers": 120,
+      "employersWithOfficial": 118,
+      "compiledOnlyEmployers": 2,
+      "officialRows": 119543,
       "compiledRows": 28211,
-      "rows": 146919
+      "rows": 147754
     },
     {
       "sector": "School districts",
-      "employers": 38,
-      "employersWithOfficial": 25,
-      "compiledOnlyEmployers": 13,
-      "officialRows": 21864,
+      "employers": 45,
+      "employersWithOfficial": 36,
+      "compiledOnlyEmployers": 9,
+      "officialRows": 37002,
       "compiledRows": 45385,
-      "rows": 67249
+      "rows": 82387
     },
     {
       "sector": "Universities and colleges",
@@ -8768,57 +9089,6 @@
       "reason": "Held: employee extraction has unresolved layout, independent-reader or printed subtotal differences."
     },
     {
-      "id": "source-f056941588298166",
-      "origin": "repository-source-catalog",
-      "priority": 1,
-      "employerSlug": "city-of-mission",
-      "employerName": "City of Mission",
-      "referenceEmployer": null,
-      "year": "2023",
-      "status": "held-unparsed",
-      "sourceUrl": "https://www.mission.ca/media/file/2023-sofi-report",
-      "sourceId": "district-of-mission-2023",
-      "scope": null,
-      "repositoryRows": 0,
-      "referenceRecords": null,
-      "nextAction": "Official report located; employee extraction remains unreviewed.",
-      "reason": "Official report located; employee extraction remains unreviewed."
-    },
-    {
-      "id": "source-ec0f4d9d2ec7fba9",
-      "origin": "repository-source-catalog",
-      "priority": 1,
-      "employerSlug": "city-of-mission",
-      "employerName": "City of Mission",
-      "referenceEmployer": null,
-      "year": "2024",
-      "status": "held-unparsed",
-      "sourceUrl": "https://www.mission.ca/media/file/2024-sofi-report",
-      "sourceId": "district-of-mission-2024",
-      "scope": null,
-      "repositoryRows": 0,
-      "referenceRecords": null,
-      "nextAction": "Official report located; employee extraction remains unreviewed.",
-      "reason": "Official report located; employee extraction remains unreviewed."
-    },
-    {
-      "id": "source-298559485a255c3a",
-      "origin": "repository-source-catalog",
-      "priority": 1,
-      "employerSlug": "city-of-mission",
-      "employerName": "City of Mission",
-      "referenceEmployer": null,
-      "year": "2025",
-      "status": "held-unparsed",
-      "sourceUrl": "https://www.mission.ca/media/file/2025-sofi-reportpdf",
-      "sourceId": "district-of-mission-2025",
-      "scope": null,
-      "repositoryRows": 0,
-      "referenceRecords": null,
-      "nextAction": "Official report located; employee extraction remains unreviewed.",
-      "reason": "Official report located; employee extraction remains unreviewed."
-    },
-    {
       "id": "source-e11b8d72cb1ffc42",
       "origin": "repository-source-catalog",
       "priority": 1,
@@ -9856,23 +10126,6 @@
       "reason": "Held: employee extraction has unresolved layout, independent-reader or printed subtotal differences."
     },
     {
-      "id": "source-0aace8efd5dbbc9c",
-      "origin": "repository-source-catalog",
-      "priority": 1,
-      "employerSlug": "city-of-vernon",
-      "employerName": "city-of-vernon",
-      "referenceEmployer": null,
-      "year": "2025",
-      "status": "held-for-review",
-      "sourceUrl": "https://www.vernon.ca/sites/default/files/2026-08/SOFI%20Signed%20-%20CORRECTED.pdf",
-      "sourceId": "vernon-sofi-2025",
-      "scope": null,
-      "repositoryRows": 0,
-      "referenceRecords": null,
-      "nextAction": "Review retained OCR and original page images field by field, verify the reporting period and compensation columns, and reconcile the complete named controls; obtain an existing spreadsheet or clearer original if glyphs remain ambiguous.",
-      "reason": "Earlier audit: Corrected signed report obtained; named employee tables are image-based (physical page 5 visually checked) and are absent from text extraction. OCR with row and subtotal verification is required. Follow-up: OCR discovery is complete on all 14 physical pages, with 7 two-pass candidate pages retained. Source-specific row, period and control acceptance is still unfinished; no OCR candidate rows are imported."
-    },
-    {
       "id": "source-f4bc4716a1c8744c",
       "origin": "repository-source-catalog",
       "priority": 1,
@@ -10451,159 +10704,6 @@
       "reason": "Both PDF engines confirm 10,884 employee rows, matching the declared count, but displayed expenses sum $14,592,431 versus printed named subtotal $14,638,203 (shortfall $45,772), beyond whole-dollar rounding. Obtain corrected source or issuer reconciliation before acceptance; do not alter individual amounts to fit the total."
     },
     {
-      "id": "source-a775f17dbb8fb62d",
-      "origin": "repository-source-catalog",
-      "priority": 1,
-      "employerSlug": "provincial-health-services-authority",
-      "employerName": "PHSA",
-      "referenceEmployer": null,
-      "year": "2015/16",
-      "status": "requires-ocr",
-      "sourceUrl": "https://www.phsa.ca/about-site/Documents/2016%20Employee%20Salary%20and%20Expenses%20exceeding%2075%2c000%20FINAL.pdf",
-      "sourceId": "provincial-health-services-authority-2015-16-employee-source",
-      "scope": "employee-remuneration",
-      "repositoryRows": 0,
-      "referenceRecords": null,
-      "nextAction": "Request the existing electronic employee schedule using requests/source-requests-2026-10-30.md. All original pages are downloaded and scanned; if no spreadsheet is available, perform page-complete OCR and row/control review before acceptance.",
-      "reason": null
-    },
-    {
-      "id": "source-0c04f7199d0f8f02",
-      "origin": "repository-source-catalog",
-      "priority": 1,
-      "employerSlug": "provincial-health-services-authority",
-      "employerName": "PHSA",
-      "referenceEmployer": null,
-      "year": "2016/17",
-      "status": "requires-ocr",
-      "sourceUrl": "https://www.phsa.ca/about-site/Documents/2017%20Employee%20Salary%20and%20Expenses%20exceeding%2075%2c000.pdf",
-      "sourceId": "provincial-health-services-authority-2016-17-employee-source",
-      "scope": "employee-remuneration",
-      "repositoryRows": 0,
-      "referenceRecords": null,
-      "nextAction": "Request the existing electronic employee schedule using requests/source-requests-2026-10-30.md. All original pages are downloaded and scanned; if no spreadsheet is available, perform page-complete OCR and row/control review before acceptance.",
-      "reason": null
-    },
-    {
-      "id": "source-cc5b3c2d575b4e5a",
-      "origin": "repository-source-catalog",
-      "priority": 1,
-      "employerSlug": "provincial-health-services-authority",
-      "employerName": "PHSA",
-      "referenceEmployer": null,
-      "year": "2017/18",
-      "status": "requires-ocr",
-      "sourceUrl": "https://www.phsa.ca/about-site/Documents/2017%2018%20PHSA%20Employee%20Salary%20and%20Expenses%20exceeding%2075%2c000.pdf",
-      "sourceId": "provincial-health-services-authority-2017-18-employee-source",
-      "scope": "employee-remuneration",
-      "repositoryRows": 5072,
-      "referenceRecords": null,
-      "nextAction": "Request the existing electronic employee schedule using requests/source-requests-2026-10-30.md. All original pages are downloaded and scanned; if no spreadsheet is available, perform page-complete OCR and row/control review before acceptance.",
-      "reason": null
-    },
-    {
-      "id": "source-bc349c266ae43c0f",
-      "origin": "repository-source-catalog",
-      "priority": 1,
-      "employerSlug": "provincial-health-services-authority",
-      "employerName": "PHSA",
-      "referenceEmployer": null,
-      "year": "2018/19",
-      "status": "requires-ocr",
-      "sourceUrl": "https://www.phsa.ca/about-site/Documents/Employee%20Salary%20and%20Expenses%20exceeding%2075%2c000_2019.pdf",
-      "sourceId": "provincial-health-services-authority-2018-19-employee-source",
-      "scope": "employee-remuneration",
-      "repositoryRows": 0,
-      "referenceRecords": null,
-      "nextAction": "Request the existing electronic employee schedule using requests/source-requests-2026-10-30.md. All original pages are downloaded and scanned; if no spreadsheet is available, perform page-complete OCR and row/control review before acceptance.",
-      "reason": null
-    },
-    {
-      "id": "source-326338c085c152b0",
-      "origin": "repository-source-catalog",
-      "priority": 1,
-      "employerSlug": "provincial-health-services-authority",
-      "employerName": "PHSA",
-      "referenceEmployer": null,
-      "year": "2019/20",
-      "status": "requires-ocr",
-      "sourceUrl": "https://www.phsa.ca/about-site/Documents/Employee%20Salary%20and%20Expenses%20exceeding%2075%2c000_2020.PDF",
-      "sourceId": "provincial-health-services-authority-2019-20-employee-source",
-      "scope": "employee-remuneration",
-      "repositoryRows": 0,
-      "referenceRecords": null,
-      "nextAction": "Request the existing electronic employee schedule using requests/source-requests-2026-10-30.md. All original pages are downloaded and scanned; if no spreadsheet is available, perform page-complete OCR and row/control review before acceptance.",
-      "reason": null
-    },
-    {
-      "id": "source-0a54f1612b0fa5c0",
-      "origin": "repository-source-catalog",
-      "priority": 1,
-      "employerSlug": "provincial-health-services-authority",
-      "employerName": "PHSA",
-      "referenceEmployer": null,
-      "year": "2020/21",
-      "status": "requires-ocr",
-      "sourceUrl": "https://www.phsa.ca/about-site/Documents/Employee%20remuneration%20greater%20than%20$75%2c000%20%28PHSA%29.pdf",
-      "sourceId": "provincial-health-services-authority-2020-21-employee-source",
-      "scope": "employee-remuneration",
-      "repositoryRows": 7943,
-      "referenceRecords": null,
-      "nextAction": "Request the existing electronic employee schedule using requests/source-requests-2026-10-30.md. All original pages are downloaded and scanned; if no spreadsheet is available, perform page-complete OCR and row/control review before acceptance.",
-      "reason": null
-    },
-    {
-      "id": "source-163dc9f3e3ca81a5",
-      "origin": "repository-source-catalog",
-      "priority": 1,
-      "employerSlug": "provincial-health-services-authority",
-      "employerName": "PHSA",
-      "referenceEmployer": null,
-      "year": "2021/22",
-      "status": "requires-ocr",
-      "sourceUrl": "https://www.phsa.ca/about-site/Documents/FY2022%20Employee%20Salary%20and%20Expenses%20exceeding%2075%2c000.pdf",
-      "sourceId": "provincial-health-services-authority-2021-22-employee-source",
-      "scope": "employee-remuneration",
-      "repositoryRows": 0,
-      "referenceRecords": null,
-      "nextAction": "Request the existing electronic employee schedule using requests/source-requests-2026-10-30.md. All original pages are downloaded and scanned; if no spreadsheet is available, perform page-complete OCR and row/control review before acceptance.",
-      "reason": null
-    },
-    {
-      "id": "source-a0afa8ae37674f0d",
-      "origin": "repository-source-catalog",
-      "priority": 1,
-      "employerSlug": "provincial-health-services-authority",
-      "employerName": "PHSA",
-      "referenceEmployer": null,
-      "year": "2022/23",
-      "status": "requires-ocr",
-      "sourceUrl": "https://www.phsa.ca/about-site/Documents/FY2023-Employee-Salary-and-Expenses-Exceeding-75000.pdf",
-      "sourceId": "provincial-health-services-authority-2022-23-employee-source",
-      "scope": "employee-remuneration",
-      "repositoryRows": 0,
-      "referenceRecords": null,
-      "nextAction": "Request the existing electronic employee schedule using requests/source-requests-2026-10-30.md. All original pages are downloaded and scanned; if no spreadsheet is available, perform page-complete OCR and row/control review before acceptance.",
-      "reason": null
-    },
-    {
-      "id": "source-a8831e198ce11afd",
-      "origin": "repository-source-catalog",
-      "priority": 1,
-      "employerSlug": "provincial-health-services-authority",
-      "employerName": "PHSA",
-      "referenceEmployer": null,
-      "year": "2023/24",
-      "status": "requires-ocr",
-      "sourceUrl": "https://www.phsa.ca/about-site/Documents/FY2024-Employee-Salary-and-Expenses-Exceeding-75000.pdf",
-      "sourceId": "provincial-health-services-authority-2023-24-employee-source",
-      "scope": "employee-remuneration",
-      "repositoryRows": 11908,
-      "referenceRecords": null,
-      "nextAction": "Request the existing electronic employee schedule using requests/source-requests-2026-10-30.md. All original pages are downloaded and scanned; if no spreadsheet is available, perform page-complete OCR and row/control review before acceptance.",
-      "reason": null
-    },
-    {
       "id": "source-20e4f3a77da03e95",
       "origin": "repository-source-catalog",
       "priority": 1,
@@ -10687,23 +10787,6 @@
       "referenceRecords": null,
       "nextAction": "Review retained OCR and original page images field by field, verify the reporting period and compensation columns, and reconcile the complete named controls; obtain an existing spreadsheet or clearer original if glyphs remain ambiguous.",
       "reason": "Earlier audit: Report retrieved, but the reviewed employee layout is absent (scan, font extraction issue or unsupported format); no rows imported. Follow-up: OCR discovery is complete on all 50 physical pages, with 10 two-pass candidate pages retained. Source-specific row, period and control acceptance is still unfinished; no OCR candidate rows are imported."
-    },
-    {
-      "id": "source-41a4a146ea046e35",
-      "origin": "repository-source-catalog",
-      "priority": 1,
-      "employerSlug": "town-of-creston",
-      "employerName": "Town of Creston",
-      "referenceEmployer": null,
-      "year": "2024",
-      "status": "held-for-review",
-      "sourceUrl": "https://www.creston.ca/sites/default/files/2025-07/Statement%20of%20Financial%20Information%202024.pdf",
-      "sourceId": "municipal-small-town-of-creston-2024-ocr",
-      "scope": "employee-remuneration",
-      "repositoryRows": 7,
-      "referenceRecords": null,
-      "nextAction": "Obtain an existing employee spreadsheet or higher-quality scan, resolve ambiguous glyphs, and independently recheck every named employee field and control. Do not infer a cell from the difference to a total.",
-      "reason": "Council is now accepted separately. Candidate employee transcription totals $2,685,206 remuneration and $61,034 expenses versus printed $2,685,008 / $61,044. These are not established issuer discrepancies: remaining ambiguous monetary/name glyphs still need resolution from the original or an electronic file."
     },
     {
       "id": "source-76f65e9ef5b1e84b",
@@ -11250,6 +11333,23 @@
       "reason": "Employee schedule imported; elected-official schedule has not yet completed extraction and validation."
     },
     {
+      "id": "source-0aace8efd5dbbc9c",
+      "origin": "repository-source-catalog",
+      "priority": 2,
+      "employerSlug": "city-of-vernon",
+      "employerName": "City of Vernon",
+      "referenceEmployer": null,
+      "year": "2025",
+      "status": "held-for-review",
+      "sourceUrl": "https://www.vernon.ca/sites/default/files/2026-08/SOFI%20Signed%20-%20CORRECTED.pdf",
+      "sourceId": "vernon-sofi-2025",
+      "scope": null,
+      "repositoryRows": 271,
+      "referenceRecords": null,
+      "nextAction": "Review retained OCR and original page images field by field, verify the reporting period and compensation columns, and reconcile the complete named controls; obtain an existing spreadsheet or clearer original if glyphs remain ambiguous.",
+      "reason": "Earlier audit: Corrected signed report obtained; named employee tables are image-based (physical page 5 visually checked) and are absent from text extraction. OCR with row and subtotal verification is required. Follow-up: OCR discovery is complete on all 14 physical pages, with 7 two-pass candidate pages retained. Source-specific row, period and control acceptance is still unfinished; no OCR candidate rows are imported."
+    },
+    {
       "id": "external-c30d8d0d2a74b246",
       "origin": "external-reference",
       "priority": 2,
@@ -11440,8 +11540,8 @@
   "inputs": [
     {
       "path": "public/salaries/coverage.json",
-      "bytes": 6155477,
-      "sha256": "fabf13a9ea3406b9dacc38889cd50f4d2d9d1f769e95e53e6ea576819cd47c97"
+      "bytes": 6377045,
+      "sha256": "fe5857f0ee41c10d1c584f5e63736c8117c58f9b18fafaecf3dcdf246a3bf53d"
     },
     {
       "path": "public/salaries/employers/abbotsford-police.json.gzip",
@@ -11580,8 +11680,8 @@
     },
     {
       "path": "public/salaries/employers/chilliwack-school-district.json.gzip",
-      "bytes": 29107,
-      "sha256": "18fc3fb0736dfbee6041a88f8dfb5b3da4cc37516705a34bcbf797d4c149732e"
+      "bytes": 46258,
+      "sha256": "4f1a4d3e49f3f1ce5dd55205a70c88512dce96729b35296993a9ea8fb6446207"
     },
     {
       "path": "public/salaries/employers/city-of-abbotsford.json.gzip",
@@ -11685,8 +11785,8 @@
     },
     {
       "path": "public/salaries/employers/city-of-mission.json.gzip",
-      "bytes": 4285,
-      "sha256": "03d4d279967ff902c97750f951d35012c03f132d22a975656f23c9c01a3ce827"
+      "bytes": 12140,
+      "sha256": "3a5412f561e647cd871b8559aba022e01539160096fd7fcd89fb8a5c815a41ff"
     },
     {
       "path": "public/salaries/employers/city-of-nanaimo.json.gzip",
@@ -11789,6 +11889,11 @@
       "sha256": "3489d3963e7e0a84710f5feaa3a6fb1c3e058921e5f041ff85b0778d94bf5dd2"
     },
     {
+      "path": "public/salaries/employers/city-of-vernon.json.gzip",
+      "bytes": 3974,
+      "sha256": "56d5f42ae43114f2c060c8c493baf979d793abd1d8397956c10b28d16e5f870a"
+    },
+    {
       "path": "public/salaries/employers/city-of-victoria.json.gzip",
       "bytes": 129047,
       "sha256": "fc9e812f232ae70f9fc073149c73ccf0195a7b87f6907c19dd866b1f3a3644c5"
@@ -11835,8 +11940,8 @@
     },
     {
       "path": "public/salaries/employers/coquitlam-school-district.json.gzip",
-      "bytes": 60123,
-      "sha256": "3060326199920dfa2dd234b5a93b7760e3b5aada8cffe705918650b1e829dcda"
+      "bytes": 97624,
+      "sha256": "11ff157e1a32f29f39c00af6577c52cb2a16204e04beb2bec86bc6328e0ee41f"
     },
     {
       "path": "public/salaries/employers/delta-police.json.gzip",
@@ -12034,6 +12139,11 @@
       "sha256": "191df9d48fd0bba4b2c625b260b532111af90bbd0f2c24ca65796508bcd7f379"
     },
     {
+      "path": "public/salaries/employers/greater-victoria-school-district.json.gzip",
+      "bytes": 23917,
+      "sha256": "2c0a0afa032d3c976ec86c98198ffd1b282ef18774270fe112dfa9954f748868"
+    },
+    {
       "path": "public/salaries/employers/gulf-islands-school-district.json.gzip",
       "bytes": 2317,
       "sha256": "0175a934fe27436396bbc42520f416e7f81fb7f8f8e41f7bf99336c3e0f028e1"
@@ -12082,6 +12192,11 @@
       "path": "public/salaries/employers/justice-institute-of-bc.json.gzip",
       "bytes": 6449,
       "sha256": "90bddbdb67e30c35682e874739f6bda0e67305b79dc7cb3dc63a7056875daa5b"
+    },
+    {
+      "path": "public/salaries/employers/kamloops-thompson-school-district.json.gzip",
+      "bytes": 18448,
+      "sha256": "4df744271322e1dde8f25ecaaded7baf7134723fa3517c3cc415f8aa84893cc8"
     },
     {
       "path": "public/salaries/employers/knowledge-network.json.gzip",
@@ -12139,6 +12254,11 @@
       "sha256": "f13420ac7beb1e7c9a6a7742068eaea46ae0e03f6c7c25a9793fc2f7537ac4ee"
     },
     {
+      "path": "public/salaries/employers/nanaimo-ladysmith-school-district.json.gzip",
+      "bytes": 16862,
+      "sha256": "01da47ee81ebfb458aec6b3042474ad8c898b7de6be6b2720111a589ec8644d8"
+    },
+    {
       "path": "public/salaries/employers/nelson-police.json.gzip",
       "bytes": 560,
       "sha256": "516ba0a23ec16d49c2ca0762c59d30294cd06604c592021a02a1bc43c4ba678a"
@@ -12160,8 +12280,8 @@
     },
     {
       "path": "public/salaries/employers/north-vancouver-school-district.json.gzip",
-      "bytes": 36850,
-      "sha256": "3b1b4344cc3807062b7349915d94702be117d217745cf278dc48c3e7ed210139"
+      "bytes": 55717,
+      "sha256": "2d39ab922071a5457f51665b7133c212cdf8c37f21e404e55e2164915330f815"
     },
     {
       "path": "public/salaries/employers/northern-health.json.gzip",
@@ -12200,13 +12320,13 @@
     },
     {
       "path": "public/salaries/employers/providence-health-care.json.gzip",
-      "bytes": 101544,
-      "sha256": "dd43e7db1a67b9f8222023c194ff60a52db9bdbcee07edfbe1a50f388976cb90"
+      "bytes": 109886,
+      "sha256": "d1884280d5d794eb5a0b29220bb104d1f4a6b4fadf7edee94f0b73d81e4e5032"
     },
     {
       "path": "public/salaries/employers/provincial-health-services-authority.json.gzip",
-      "bytes": 605168,
-      "sha256": "9f3b07250c0994dd97910bc65abf14b57d5c8a397996f1ff2f1d8ee9a3869534"
+      "bytes": 1504045,
+      "sha256": "e65ffa05cfc5e6ee21a060b704604af470f1f05e6f2bd078cfcd2531657af993"
     },
     {
       "path": "public/salaries/employers/public-service.json.gzip",
@@ -12269,6 +12389,21 @@
       "sha256": "8b88f1e5d64a5f9962e59b4c7cd478d81e82210cd759cfefb3f0feae048bd1d8"
     },
     {
+      "path": "public/salaries/employers/school-district-22.json.gzip",
+      "bytes": 9743,
+      "sha256": "259037d78504a91f23edbb468f6714567cc382593b175add01571d5f202ee67b"
+    },
+    {
+      "path": "public/salaries/employers/school-district-23.json.gzip",
+      "bytes": 21774,
+      "sha256": "c746aa21f419734aa4a8f666df3b1eb82220326e8c72d3c8ca588c52e5488e8a"
+    },
+    {
+      "path": "public/salaries/employers/school-district-27.json.gzip",
+      "bytes": 3997,
+      "sha256": "4c87d31ce6fee2d97907ef5bcbec4e89f4bed67576538c670bf1af3b8b5fb369"
+    },
+    {
       "path": "public/salaries/employers/school-district-46.json.gzip",
       "bytes": 5054,
       "sha256": "d95311cb1ac4daa624041feec1bb1b6c406b6528fa5e167acd2ab095957591b2"
@@ -12287,6 +12422,11 @@
       "path": "public/salaries/employers/school-district-49.json.gzip",
       "bytes": 700,
       "sha256": "ee4891cc58f0bc52fc34cb36def1a0d9990e320f605d44db7be8b9da1035b72b"
+    },
+    {
+      "path": "public/salaries/employers/school-district-50.json.gzip",
+      "bytes": 1472,
+      "sha256": "ea0a61e7ee2d86c63024759c7db5b63a1691bc01d0aeb2429e66768e392bd010"
     },
     {
       "path": "public/salaries/employers/school-district-51.json.gzip",
@@ -12400,8 +12540,8 @@
     },
     {
       "path": "public/salaries/employers/surrey-school-district.json.gzip",
-      "bytes": 147934,
-      "sha256": "9eff0c0eea985b9bce16aeaf3b4da96e1f8d057f9279c91eb5e5beb30a45f8dc"
+      "bytes": 226280,
+      "sha256": "fdc58ff165540590d73b549a6c528facfd827272695de7bce38b2a382f50c544"
     },
     {
       "path": "public/salaries/employers/technical-safety-bc.json.gzip",
@@ -12420,8 +12560,8 @@
     },
     {
       "path": "public/salaries/employers/town-of-creston.json.gzip",
-      "bytes": 252,
-      "sha256": "b68a6519d45826e33a081dbb8af48e2cd247be9e46c2c2f3c41edcef975244fd"
+      "bytes": 1070,
+      "sha256": "a7c7e1e94aba9f76203620d847a1a129ce6695910373cc96a5c149cb1c295bd4"
     },
     {
       "path": "public/salaries/employers/town-of-gibsons.json.gzip",
@@ -12510,8 +12650,8 @@
     },
     {
       "path": "public/salaries/employers/vancouver-coastal-health.json.gzip",
-      "bytes": 393267,
-      "sha256": "386a299967617d797d877f43bba72611c7b489a81d17b6641e54941c5dda8d13"
+      "bytes": 522053,
+      "sha256": "b08143c8f6124d3e7459cfe5fb8f9f806407e16eb8b813241e8c38dc69458a52"
     },
     {
       "path": "public/salaries/employers/vancouver-community-college.json.gzip",
@@ -12675,8 +12815,8 @@
     },
     {
       "path": "public/salaries/index.json",
-      "bytes": 4130495,
-      "sha256": "aaabb438ec5827f003dd08f7c17da3291e05c2d7fe16fc255cb57272405b1f59"
+      "bytes": 9748952,
+      "sha256": "c01f5ba6a7201dfdc5fb04eb3da3e95da2e184d2783814f99894d784e039044f"
     }
   ]
 }

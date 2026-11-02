@@ -1,0 +1,53 @@
+{
+  "frozen": true,
+  "reviewer": "held_health_review",
+  "reviewedOn": "2026-11-02",
+  "sourceId": "phsa-2019-20",
+  "sourceSha256": "0e31ac2054f0c2d4ef78797185dddd96cc0cdf2eab94bd6841fa24e1c38e7d02",
+  "batch": "phsa-2019-20-010",
+  "rawTranscriptSha256": "94b525e4a69a628980e16e31069f119c2d6cb3f81d3b5b877f251a4ed5503be9",
+  "all43NeitherReaderPositiveMoneyFieldsPersonallyRecheckedOriginal600": true,
+  "ownPaySourceReadingCorrections": [
+    {
+      "sequence": 12,
+      "physicalPage": 63,
+      "sourceRowOnPage": 41,
+      "field": "remuneration",
+      "ownFrozenFirstLiteral": 95417,
+      "sourceRereadLiteral": 93417,
+      "actual600OriginalField": {
+        "path": "/workspace/salary-review-held-health-temp/2019-010-postfreeze/0012-remuneration-actual600.png",
+        "sha256": "2f85da33c7ed9fdc0c4a067a46b6a98c9d3daaa426389d3111b9ae5094ffa8aa",
+        "original300DpiPixelBox": [
+          1735,
+          2313,
+          2068,
+          2351
+        ]
+      },
+      "reason": "Own first-pass digit3 was misread5; actual original600source recheck corrects it. Candidate had opened after full image-first raw freeze; original raw remains unchanged. No control balancing."
+    },
+    {
+      "sequence": 345,
+      "physicalPage": 70,
+      "sourceRowOnPage": 50,
+      "field": "remuneration",
+      "ownFrozenFirstLiteral": 85669,
+      "sourceRereadLiteral": 83669,
+      "actual600OriginalField": {
+        "path": "/workspace/salary-review-held-health-temp/2019-010-postfreeze/0345-remuneration-actual600.png",
+        "sha256": "f2f005de00971b377e01f3269c8cecd3fd2c7ccd5bdf87a41891e6902d94f4b4",
+        "original300DpiPixelBox": [
+          1735,
+          2679,
+          2068,
+          2718
+        ]
+      },
+      "reason": "Own first-pass digit3 was misread5; actual original600source recheck corrects it. Candidate had opened after full image-first raw freeze; original raw remains unchanged. No control balancing."
+    }
+  ],
+  "ownExpenseReadingCorrections": 0,
+  "remaining41PositiveMoneyValuesUnchangedFromImageFirstRaw": true,
+  "limits": "Source-based own literal corrections only, no salary-source/financial-control acceptance. All other first-pass money stays exact; fresh independent confirmation required for remaining41positive fields matching neither strict reader."
+}

@@ -1,0 +1,98 @@
+{
+  "reviewer": "/root/recovery_review",
+  "sourceId": "phsa-2016-17",
+  "sourceSha256": "31f7a1af80186bf81139fd693b36e733333a06c2ab1a4c5191bd6ee9b3623a53",
+  "batch": "phsa-2016-17-002",
+  "imageOnlyManifest": {
+    "path": "research/salaries/queue-completion-2026-11-01/phsa/batches/phsa-2016-17-batch-002-images.json",
+    "sha256": "9a4b3d9236201813f89ca812e767c5ad908fd236d87e1000de8bea5d9e90b88e"
+  },
+  "readings": [
+    {
+      "sequence": 92,
+      "physicalPage": 48,
+      "sourceRowOnPage": 2,
+      "sourceNameCrop600": {
+        "path": "/tmp/independent-phsa-municipal-2016-17-002/seq092-name-actual600.png",
+        "sha256": "93393596e7f18b797d397662ebbca40fdad141b12018fe7f0e3fcba4c914acb4"
+      },
+      "originalFrozenRow": {
+        "sequence": 92,
+        "physicalPage": 48,
+        "sourceRowOnPage": 2,
+        "reviewTargetFields": [
+          "name",
+          "remuneration"
+        ],
+        "cropPath": "/tmp/queue-completion-phsa/phsa-2016-17/review-images/batch-002/p048-r02.png",
+        "cropSha256": "c3d47c05d1b40848b09f0e0ab2c3d2508acb0aa1cdd683358d14dc6a93829c51",
+        "cropRectOriginal300DpiPixels": [
+          205,
+          950,
+          2422,
+          1008
+        ],
+        "actualSourceImagePath": "/tmp/queue-completion-phsa/phsa-2016-17/images/p048.png",
+        "actualSourceImageSha256": "86215eac43e4b7e7780f580a34b8acd8f1ca6e7862d17277d6073ce04d19c71a",
+        "pageEvidencePath": "research/salaries/queue-completion-phsa/evidence/phsa-2016-17-rows-p048.json.gzip",
+        "pageEvidenceSha256": "5671c4618a0203acac2d785d3bdc2c16890af097e3b96f299513a9a8ac6c780b",
+        "rawPageEvidence": {
+          "path": "research/salaries/queue-completion-phsa/evidence/phsa-2016-17-raw-p048.json.gzip",
+          "sha256": "df681bf637ded746258578f61c646c0f1c78bb5ee66bc90d47c77135dca218e3"
+        }
+      },
+      "literalPrimaryName": "Gosal,Jaskim Kaur",
+      "status": "resolved-from-original-image",
+      "visibleAlternatives": [],
+      "caseProvenByPixels": null,
+      "basis": "Read literal Jaskim from the source glyphs, including final m with joined shoulders; no common-name expansion or rn substitution.",
+      "uncertainExactCase": false
+    },
+    {
+      "sequence": 333,
+      "physicalPage": 68,
+      "sourceRowOnPage": 26,
+      "sourceNameCrop600": {
+        "path": "/tmp/independent-phsa-municipal-2016-17-002/seq333-name-actual600.png",
+        "sha256": "49400a408e66bfd91dddf2bceeade5382c449c9c7b99de9b91ea9dc848302f8d"
+      },
+      "originalFrozenRow": {
+        "sequence": 333,
+        "physicalPage": 68,
+        "sourceRowOnPage": 26,
+        "reviewTargetFields": [
+          "name"
+        ],
+        "cropPath": "/tmp/queue-completion-phsa/phsa-2016-17/review-images/batch-002/p068-r26.png",
+        "cropSha256": "4a410b791e94f45e481f96cfe076d1e9c328b292df622f108a6e31c14f83b3fb",
+        "cropRectOriginal300DpiPixels": [
+          205,
+          2404,
+          2422,
+          2462
+        ],
+        "actualSourceImagePath": "/tmp/queue-completion-phsa/phsa-2016-17/images/p068.png",
+        "actualSourceImageSha256": "bf1f6a8c57ce26860e3552b1e63c7d8829cb65c6f1b3035da6e831128aedfb51",
+        "pageEvidencePath": "research/salaries/queue-completion-phsa/evidence/phsa-2016-17-rows-p068.json.gzip",
+        "pageEvidenceSha256": "4050e9b74da996e71e7fe5e6c7dba9b5473706a2297d4a81d2b6c628ca70e80c",
+        "rawPageEvidence": {
+          "path": "research/salaries/queue-completion-phsa/evidence/phsa-2016-17-raw-p068.json.gzip",
+          "sha256": "f637590d1c5ea73076dd77f599fe071dc6d7501faf901d47aef680925b2060a2"
+        }
+      },
+      "literalPrimaryName": "Krishnaswamy,Wendy I",
+      "status": "resolved-with-source-typography-qualification",
+      "visibleAlternatives": [
+        "Krishnaswamy,Wendy I",
+        "Krishnaswamy,Wendy l"
+      ],
+      "caseProvenByPixels": false,
+      "basis": "The final undotted initial is a simple vertical. Primary capitalI follows the explicit initial-capital convention, with lowercase-l alternative retained; no period added.",
+      "uncertainExactCase": true
+    }
+  ],
+  "frozenBeforePeerTranscriptOrMachineAlternatives": true,
+  "scope": "Two source names only; no fullordinarybatch or monetaryfieldreview.",
+  "priorExposure": "Only the two imagepaths/sourcekeys; no expected names supplied.",
+  "qualifiedCaseRequiresExactPeerRootAdoptionAndSourceWarning": true
+}

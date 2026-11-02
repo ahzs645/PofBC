@@ -1,0 +1,46 @@
+{
+  "frozen": true,
+  "sourceId": "phsa-2019-20",
+  "sourceSha256": "0e31ac2054f0c2d4ef78797185dddd96cc0cdf2eab94bd6841fa24e1c38e7d02",
+  "batch": "phsa-2019-20-001",
+  "supersededOverlay": {
+    "path": "research/salaries/queue-completion-2026-11-01/phsa/overlays/phsa-2019-20-manual-overlay-001-v2-canonical.json",
+    "sha256": "63a9ab2239abb0bf3956701f9e62e8c82b1669f9a1772d8a492e3b513789658a"
+  },
+  "effectiveOverlay": {
+    "path": "research/salaries/queue-completion-2026-11-01/phsa/overlays/phsa-2019-20-manual-overlay-001-v3-canonical-money.json",
+    "sha256": "302d92b4b59079c3048e4f7fc519ed35dce48467b08423858aea54d6e2e37c54"
+  },
+  "reason": "Apply exactly three independently original-source-confirmed monetary corrections after complete55-field fresh peer closure; preserve every name, qualification, other amount and original requested source field/crop. Original first/intermediate reading errors remain frozen.",
+  "oldFrozenFilesRemainUnchanged": true,
+  "freshCurrentSourcePeer": {
+    "path": "research/salaries/queue-completion-2026-11-01/reviews/root-phsa-history-2019-20-001-fiftyfive-money-final-source-comparison.json",
+    "sha256": "0a35a780c169fde908d49a4ac653971fadaa3a398a36c7ef9a33db15027c7621"
+  },
+  "exactSourceCorrections": [
+    {
+      "sequence": 231,
+      "physicalPage": 7,
+      "sourceRowOnPage": 41,
+      "field": "remuneration",
+      "oldValue": 85208,
+      "currentLiteralValue": 85205
+    },
+    {
+      "sequence": 280,
+      "physicalPage": 8,
+      "sourceRowOnPage": 44,
+      "field": "remuneration",
+      "oldValue": 78360,
+      "currentLiteralValue": 75360
+    },
+    {
+      "sequence": 353,
+      "physicalPage": 10,
+      "sourceRowOnPage": 22,
+      "field": "expenses",
+      "oldValue": 3085,
+      "currentLiteralValue": 3035
+    }
+  ]
+}

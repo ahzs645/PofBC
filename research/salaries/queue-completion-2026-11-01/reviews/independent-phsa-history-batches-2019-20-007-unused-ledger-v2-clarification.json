@@ -1,0 +1,14 @@
+{
+  "reviewer": "/root/recovery_review",
+  "effectiveLedger": {
+    "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-history-batches-2019-20-007-effective-twentyfour-plus-four-name-ledger.json",
+    "sha256": "a212235b907c713a44d4cfe96d42a810ecbdbadca62a4b11ef47917d7ee505b8"
+  },
+  "unusedMetadataDraft": {
+    "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-history-batches-2019-20-007-effective-twentyfour-plus-four-name-ledger-v2.json",
+    "sha256": "eaed6dab8554cf579c11fa847bec22bb0b8caffe68d751524b5a7b81bcb672ec"
+  },
+  "correction": "The v2 metadata-only reason incorrectly claimed the original ledger had a SHA-only peer locator. Inspection confirms the original already had the exact valid peer path+hash. That v2 reason is a reviewer documentation error. Neither artifact was sent for adoption before this correction; use the original ledger a212\u2026 with its already-valid locator.",
+  "all53NamesAnd28FiniteSetsIdentical": true,
+  "noSourceReviewOrDataValueChange": true
+}

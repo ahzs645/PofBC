@@ -1,0 +1,34 @@
+{
+  "frozen": true,
+  "version": 1,
+  "date": "2026-11-01",
+  "purpose": "Deterministic blind actual-source holdout for root-approved paired-reader field policy",
+  "policy": {
+    "path": "research/salaries/queue-completion-2026-11-01/phsa/paired-reader-field-policy-002.json",
+    "sha256": "0fafb3763ea5a1ebf8f2d7310e748cb4d24247428f544056e1427d2e6ecc77fe"
+  },
+  "sourceInventory": {
+    "path": "research/salaries/queue-completion-2026-11-01/phsa/source-inventory.json",
+    "sha256": "ec7c48b1f9f0b592c3910eb9691378de6cbca11b2cabc015f15307f28b71eed3"
+  },
+  "seed": "PofBC|PHSA-history|2026-11-01|paired-reader-policy-002|holdout-v1",
+  "rankDigest": "SHA256 of compact UTF-8 JSON [seed,originalSourceSHA,physicalPage,sourceRowOnPage]",
+  "perSourceRows": 10,
+  "salaryPageThirds": {
+    "early": 3,
+    "middle": 4,
+    "late": 3
+  },
+  "thirdDefinition": "min(2, (physicalPage-firstSalaryPage)*3//salaryPageCount)",
+  "exclude": [
+    "all first-table benchmark rows",
+    "every frozen ordinary/manual batch row",
+    "every row requiring remaining actual-image review under the new field policy"
+  ],
+  "prefer": "Rows with at least one otherwise eligible original confidence-only field; if a third has no such unreserved rows, use other fully corroborated unflagged rows and disclose that exact selection class. FY2015/16 has no unreserved original flagged rows because its complete ordinary queue is already frozen.",
+  "requestedFields": "All fields on the selected row eligible for guarded paired-reader corroboration; no candidate values in the blind source packet.",
+  "freezeCompleteSourceBeforeSelection": true,
+  "rootHoldsMachineAlternativesUntilImageTranscriptFrozen": true,
+  "acceptanceCondition": "All90rows/allrequestedfields match the independent source readings; any mismatch halts policy acceptance pending investigation/new version.",
+  "configurationWrittenBeforeAnyHoldoutRowsSelected": true
+}

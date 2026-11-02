@@ -1,0 +1,26 @@
+{
+  "date": "2026-11-01",
+  "request": {
+    "open": [
+      {
+        "ref_id": "https://www.phsa.ca/about/contact-us"
+      },
+      {
+        "ref_id": "https://www.vch.ca/en/contact-us"
+      },
+      {
+        "ref_id": "https://www.providencehealthcare.org/en/contact"
+      }
+    ],
+    "response_length": "long"
+  },
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "Internal Error ()\n【turn125795view0】 [wordlim: 200] Source: open({\"ref_id\":\"https://www.phsa.ca/about/contact-us\",\"lineno\":null}); \nURL https://www.phsa.ca/about/contact-us is not accessible via this tool.\n--------------------------------------------------------------------------------\nInternal Error ()\n【turn125795view1】 [wordlim: 200] Source: open({\"ref_id\":\"https://www.vch.ca/en/contact-us\",\"lineno\":null}); \nFailed to fetch https://www.vch.ca/en/contact-us: (403) Forbidden\n--------------------------------------------------------------------------------\nInternal Error ()\n【turn125795view2】 [wordlim: 200] Source: open({\"ref_id\":\"https://www.providencehealthcare.org/en/contact\",\"lineno\":null}); \nURL https://www.providencehealthcare.org/en/contact is not accessible via this tool."
+      }
+    ],
+    "isError": false
+  }
+}

@@ -1,0 +1,702 @@
+{
+  "frozen": true,
+  "date": "2026-11-01",
+  "sourceId": "phsa-2017-18",
+  "sourceSha256": "1971861d325c81e48083e56e45edbb62c6446fa2c387ce786a2b4e0aa5cdc006",
+  "sourceUrl": "https://www.phsa.ca/about-site/Documents/2017%2018%20PHSA%20Employee%20Salary%20and%20Expenses%20exceeding%2075%2c000.pdf",
+  "originalPdfCachePath": "/tmp/queue-completion-phsa/originals/phsa-2017-18.pdf",
+  "selectionConfiguration": {
+    "path": "research/salaries/queue-completion-2026-11-01/phsa/holdout-selection-config-001.json",
+    "sha256": "fa3689b3b361f5c431707e7ed517ebdff4080499c96d1af7ec1d2aa6a46e8627"
+  },
+  "fieldPolicy": {
+    "path": "research/salaries/queue-completion-2026-11-01/phsa/paired-reader-field-policy-002.json",
+    "sha256": "0fafb3763ea5a1ebf8f2d7310e748cb4d24247428f544056e1427d2e6ecc77fe"
+  },
+  "completeSourcePagesAtSelection": 139,
+  "sourceThirdAllocation": [
+    3,
+    4,
+    3
+  ],
+  "benchmarkReservedAndManualRowsExcluded": true,
+  "holdoutRootTranscriptionMustPrecedeCandidateOpening": true,
+  "rows": [
+    {
+      "sequence": 1,
+      "sourceId": "phsa-2017-18",
+      "physicalPage": 4,
+      "sourceRowOnPage": 11,
+      "salaryPageThird": "early",
+      "selectionClass": "unreserved-confidence-only-paired-row",
+      "selectionRankSha256": "002de9cfa94fa5dfa5dd4ce9a9fdc90691692e10785a7ea0016b1efa3212d18d",
+      "reviewTargetFields": [
+        "name",
+        "remuneration"
+      ],
+      "sourceNativeFieldViews": [
+        {
+          "field": "name",
+          "path": "research/salaries/queue-completion-2026-11-01/phsa/holdouts/field-crops/phsa-2017-18-01-name.png",
+          "sha256": "0ad2f33feaa33161cf570976d29b3dd47b029c1d582c8d16a5b593d3692401e0",
+          "originalPdf300DpiPixelBox": [
+            202,
+            1402,
+            1485,
+            1459
+          ],
+          "noResamplingOrGlyphAlteration": true
+        },
+        {
+          "field": "remuneration",
+          "path": "research/salaries/queue-completion-2026-11-01/phsa/holdouts/field-crops/phsa-2017-18-01-remuneration.png",
+          "sha256": "de52c7c3e577ddaf7b94727eb86e12e368074e8e34065995a9f06215e187aef2",
+          "originalPdf300DpiPixelBox": [
+            1477,
+            1402,
+            1888,
+            1459
+          ],
+          "noResamplingOrGlyphAlteration": true
+        }
+      ],
+      "actualSourceImagePath": "/tmp/queue-completion-phsa/phsa-2017-18/images/p004.png",
+      "actualSourceImageSha256": "4dd59a9a0ea653269624b38eab93f23d4aeef6acc2d9410c44c11aad0dcdc4b3",
+      "fullRowContextPath": "/tmp/queue-completion-phsa/holdout-context/phsa-2017-18-p004-r11.png",
+      "fullRowContextSha256": "be3da075c537db63d4a48548ad6e13a90bae2617de70be925d77aa7584e623e6",
+      "fullRowOriginalPixelBox": [
+        202,
+        1402,
+        2422,
+        1459
+      ],
+      "pageEvidence": {
+        "path": "research/salaries/queue-completion-phsa/evidence/phsa-2017-18-rows-p004.json.gzip",
+        "sha256": "9e0377a705f71b212360972e4c20c6023c79a3880cb8c4a977b0ee0a3fae95ff"
+      },
+      "rawPageEvidence": {
+        "path": "research/salaries/queue-completion-phsa/evidence/phsa-2017-18-raw-p004.json.gzip",
+        "sha256": "9d20d4a51041f2ff00eb0f95967af910480c3521f5c090dd3253bf4fea2ff3b9"
+      }
+    },
+    {
+      "sequence": 2,
+      "sourceId": "phsa-2017-18",
+      "physicalPage": 8,
+      "sourceRowOnPage": 11,
+      "salaryPageThird": "early",
+      "selectionClass": "unreserved-confidence-only-paired-row",
+      "selectionRankSha256": "005142ee7aa704e27f8d2dc0e2f7bb6c020c6a65b3bfeacf5430338273155719",
+      "reviewTargetFields": [
+        "name",
+        "remuneration",
+        "expenses"
+      ],
+      "sourceNativeFieldViews": [
+        {
+          "field": "name",
+          "path": "research/salaries/queue-completion-2026-11-01/phsa/holdouts/field-crops/phsa-2017-18-02-name.png",
+          "sha256": "d6351129a947763e373c15be8e4a179ddbd4236a740d03a78fd9fd1128876eb6",
+          "originalPdf300DpiPixelBox": [
+            202,
+            1402,
+            1485,
+            1459
+          ],
+          "noResamplingOrGlyphAlteration": true
+        },
+        {
+          "field": "remuneration",
+          "path": "research/salaries/queue-completion-2026-11-01/phsa/holdouts/field-crops/phsa-2017-18-02-remuneration.png",
+          "sha256": "9aa70b4d406255c6782b0e3fdd34f6ef585bde1469953474c250f7a7f87ab1d3",
+          "originalPdf300DpiPixelBox": [
+            1477,
+            1402,
+            1888,
+            1459
+          ],
+          "noResamplingOrGlyphAlteration": true
+        },
+        {
+          "field": "expenses",
+          "path": "research/salaries/queue-completion-2026-11-01/phsa/holdouts/field-crops/phsa-2017-18-02-expenses.png",
+          "sha256": "9d7ccd2ccc8c45a77c43a512e1ed1839eb696be37692c1d78e8152134de8340d",
+          "originalPdf300DpiPixelBox": [
+            1872,
+            1402,
+            2422,
+            1459
+          ],
+          "noResamplingOrGlyphAlteration": true
+        }
+      ],
+      "actualSourceImagePath": "/tmp/queue-completion-phsa/phsa-2017-18/images/p008.png",
+      "actualSourceImageSha256": "404056b42fb83feb0a174f67b568ac93a1fc7a3a96dd266389c3c6aea0e7802e",
+      "fullRowContextPath": "/tmp/queue-completion-phsa/holdout-context/phsa-2017-18-p008-r11.png",
+      "fullRowContextSha256": "aa16021a9dd00bb10252bcdf76a7ef19a284da1e68c9a919d27761b5e9ed7ab5",
+      "fullRowOriginalPixelBox": [
+        202,
+        1402,
+        2422,
+        1459
+      ],
+      "pageEvidence": {
+        "path": "research/salaries/queue-completion-phsa/evidence/phsa-2017-18-rows-p008.json.gzip",
+        "sha256": "71b39bbcdc560be48a0323fe6c262f9b908d5e0bc9b99f7ebf73cc1932f39797"
+      },
+      "rawPageEvidence": {
+        "path": "research/salaries/queue-completion-phsa/evidence/phsa-2017-18-raw-p008.json.gzip",
+        "sha256": "7cf8da4acb55b5505f8a57bb870b97dbb816322452c4ce147bbc641a51d7b377"
+      }
+    },
+    {
+      "sequence": 3,
+      "sourceId": "phsa-2017-18",
+      "physicalPage": 4,
+      "sourceRowOnPage": 18,
+      "salaryPageThird": "early",
+      "selectionClass": "unreserved-confidence-only-paired-row",
+      "selectionRankSha256": "00eda0a491d1ef50c2e9eea52e8e201efadaf2a07e3cc0cd376be5254b5c9976",
+      "reviewTargetFields": [
+        "name",
+        "remuneration"
+      ],
+      "sourceNativeFieldViews": [
+        {
+          "field": "name",
+          "path": "research/salaries/queue-completion-2026-11-01/phsa/holdouts/field-crops/phsa-2017-18-03-name.png",
+          "sha256": "2575e05ff5d4d5ed2563f5794d9b2848284e075afbe443170aede9f1a0eab98e",
+          "originalPdf300DpiPixelBox": [
+            202,
+            1829,
+            1485,
+            1887
+          ],
+          "noResamplingOrGlyphAlteration": true
+        },
+        {
+          "field": "remuneration",
+          "path": "research/salaries/queue-completion-2026-11-01/phsa/holdouts/field-crops/phsa-2017-18-03-remuneration.png",
+          "sha256": "263cfa57b01911a67dbf69852190994c0c9fcceea32a0ee591414c7e7069e719",
+          "originalPdf300DpiPixelBox": [
+            1477,
+            1829,
+            1888,
+            1887
+          ],
+          "noResamplingOrGlyphAlteration": true
+        }
+      ],
+      "actualSourceImagePath": "/tmp/queue-completion-phsa/phsa-2017-18/images/p004.png",
+      "actualSourceImageSha256": "4dd59a9a0ea653269624b38eab93f23d4aeef6acc2d9410c44c11aad0dcdc4b3",
+      "fullRowContextPath": "/tmp/queue-completion-phsa/holdout-context/phsa-2017-18-p004-r18.png",
+      "fullRowContextSha256": "7665dc82955b798bce25ea9c2f6c8de394cd6f086ed8a032927232137288cd04",
+      "fullRowOriginalPixelBox": [
+        202,
+        1829,
+        2422,
+        1887
+      ],
+      "pageEvidence": {
+        "path": "research/salaries/queue-completion-phsa/evidence/phsa-2017-18-rows-p004.json.gzip",
+        "sha256": "9e0377a705f71b212360972e4c20c6023c79a3880cb8c4a977b0ee0a3fae95ff"
+      },
+      "rawPageEvidence": {
+        "path": "research/salaries/queue-completion-phsa/evidence/phsa-2017-18-raw-p004.json.gzip",
+        "sha256": "9d20d4a51041f2ff00eb0f95967af910480c3521f5c090dd3253bf4fea2ff3b9"
+      }
+    },
+    {
+      "sequence": 4,
+      "sourceId": "phsa-2017-18",
+      "physicalPage": 92,
+      "sourceRowOnPage": 29,
+      "salaryPageThird": "middle",
+      "selectionClass": "unreserved-confidence-only-paired-row",
+      "selectionRankSha256": "0026c1af8ea7e384fadefa635ab2f18f4437224ae8b95db0b697908909aa50f7",
+      "reviewTargetFields": [
+        "name",
+        "remuneration"
+      ],
+      "sourceNativeFieldViews": [
+        {
+          "field": "name",
+          "path": "research/salaries/queue-completion-2026-11-01/phsa/holdouts/field-crops/phsa-2017-18-04-name.png",
+          "sha256": "7776bcce4046b79fe3646a773dec0d7a7efe2069849c893f81723ff4313507de",
+          "originalPdf300DpiPixelBox": [
+            202,
+            2489,
+            1485,
+            2548
+          ],
+          "noResamplingOrGlyphAlteration": true
+        },
+        {
+          "field": "remuneration",
+          "path": "research/salaries/queue-completion-2026-11-01/phsa/holdouts/field-crops/phsa-2017-18-04-remuneration.png",
+          "sha256": "d2d306767585db608802a59cc0186f18ff0ec8da8693200142cd38fb1cfb0afa",
+          "originalPdf300DpiPixelBox": [
+            1477,
+            2489,
+            1888,
+            2548
+          ],
+          "noResamplingOrGlyphAlteration": true
+        }
+      ],
+      "actualSourceImagePath": "/tmp/queue-completion-phsa/phsa-2017-18/images/p092.png",
+      "actualSourceImageSha256": "0b58e52ef32cb6c437163d0a8cef5122c1d8f172c5ffd04bd22e0edf74a3c15b",
+      "fullRowContextPath": "/tmp/queue-completion-phsa/holdout-context/phsa-2017-18-p092-r29.png",
+      "fullRowContextSha256": "c95f48f50ba2a37495d1a345332c9ca74931300e631869c909851b39914488ab",
+      "fullRowOriginalPixelBox": [
+        202,
+        2489,
+        2422,
+        2548
+      ],
+      "pageEvidence": {
+        "path": "research/salaries/queue-completion-phsa/evidence/phsa-2017-18-rows-p092.json.gzip",
+        "sha256": "1bfbbac782f9c74ad778902717622da51c0f19ceabf6d5995d1f385d6c691de0"
+      },
+      "rawPageEvidence": {
+        "path": "research/salaries/queue-completion-phsa/evidence/phsa-2017-18-raw-p092.json.gzip",
+        "sha256": "61b1552297a36b01c8106fb70b5593ba75bbd63499fbcef2ee7c6f9114b9d4c4"
+      }
+    },
+    {
+      "sequence": 5,
+      "sourceId": "phsa-2017-18",
+      "physicalPage": 71,
+      "sourceRowOnPage": 19,
+      "salaryPageThird": "middle",
+      "selectionClass": "unreserved-confidence-only-paired-row",
+      "selectionRankSha256": "005c52bd24a2883aaf31daf40f7fdfa0d02d6a66d0b0ac10330f190a262d10c7",
+      "reviewTargetFields": [
+        "name",
+        "remuneration",
+        "expenses"
+      ],
+      "sourceNativeFieldViews": [
+        {
+          "field": "name",
+          "path": "research/salaries/queue-completion-2026-11-01/phsa/holdouts/field-crops/phsa-2017-18-05-name.png",
+          "sha256": "8ec169c45b419f750a35e7806f781987bdbb15b4edfd75d742fbd55f329741e3",
+          "originalPdf300DpiPixelBox": [
+            202,
+            1888,
+            1485,
+            1947
+          ],
+          "noResamplingOrGlyphAlteration": true
+        },
+        {
+          "field": "remuneration",
+          "path": "research/salaries/queue-completion-2026-11-01/phsa/holdouts/field-crops/phsa-2017-18-05-remuneration.png",
+          "sha256": "5ad2a6692783412d8a9e9be90f3e7a8f8de0d63b9ddfe8b2737f337a633839ed",
+          "originalPdf300DpiPixelBox": [
+            1477,
+            1888,
+            1888,
+            1947
+          ],
+          "noResamplingOrGlyphAlteration": true
+        },
+        {
+          "field": "expenses",
+          "path": "research/salaries/queue-completion-2026-11-01/phsa/holdouts/field-crops/phsa-2017-18-05-expenses.png",
+          "sha256": "fd6807651c6e4a5994813bcf932ec6cead6beffc3e9bfe8177a0e364a92b5b17",
+          "originalPdf300DpiPixelBox": [
+            1872,
+            1888,
+            2422,
+            1947
+          ],
+          "noResamplingOrGlyphAlteration": true
+        }
+      ],
+      "actualSourceImagePath": "/tmp/queue-completion-phsa/phsa-2017-18/images/p071.png",
+      "actualSourceImageSha256": "0cb6a5d6c59ebdc27a8cdd08f38048d90da50926f39bf6dfd226661184d249a9",
+      "fullRowContextPath": "/tmp/queue-completion-phsa/holdout-context/phsa-2017-18-p071-r19.png",
+      "fullRowContextSha256": "490bb56025e741164bbbc91d776408ecaa01ce922793e8423740b4eee1989385",
+      "fullRowOriginalPixelBox": [
+        202,
+        1888,
+        2422,
+        1947
+      ],
+      "pageEvidence": {
+        "path": "research/salaries/queue-completion-phsa/evidence/phsa-2017-18-rows-p071.json.gzip",
+        "sha256": "785a80fe1d1c97f590c003de6e5e1aeff551185b5b5e459a6e3bfb9e4fde94a1"
+      },
+      "rawPageEvidence": {
+        "path": "research/salaries/queue-completion-phsa/evidence/phsa-2017-18-raw-p071.json.gzip",
+        "sha256": "a5e781fc8d92c3f5124740f802a3b84382c8557472a2e442a8fae711f49c8d60"
+      }
+    },
+    {
+      "sequence": 6,
+      "sourceId": "phsa-2017-18",
+      "physicalPage": 90,
+      "sourceRowOnPage": 9,
+      "salaryPageThird": "middle",
+      "selectionClass": "unreserved-confidence-only-paired-row",
+      "selectionRankSha256": "00ce6f8d70324189c902e6c2e663977bacbe978840f9bd266fde5cf935ec3eb2",
+      "reviewTargetFields": [
+        "name",
+        "remuneration"
+      ],
+      "sourceNativeFieldViews": [
+        {
+          "field": "name",
+          "path": "research/salaries/queue-completion-2026-11-01/phsa/holdouts/field-crops/phsa-2017-18-06-name.png",
+          "sha256": "f423d757f0f3517c958086345be82c59ed0438f2a472feb81e10603a311be810",
+          "originalPdf300DpiPixelBox": [
+            202,
+            1285,
+            1485,
+            1343
+          ],
+          "noResamplingOrGlyphAlteration": true
+        },
+        {
+          "field": "remuneration",
+          "path": "research/salaries/queue-completion-2026-11-01/phsa/holdouts/field-crops/phsa-2017-18-06-remuneration.png",
+          "sha256": "417b9478e80e2528181800c58c5cfce725847881cf233f58defb2aaf22c651a9",
+          "originalPdf300DpiPixelBox": [
+            1477,
+            1285,
+            1888,
+            1343
+          ],
+          "noResamplingOrGlyphAlteration": true
+        }
+      ],
+      "actualSourceImagePath": "/tmp/queue-completion-phsa/phsa-2017-18/images/p090.png",
+      "actualSourceImageSha256": "be7f8fbd00604fee61db52197798ecaf054dfaa1a9f4b4cb629948c9d300f1c4",
+      "fullRowContextPath": "/tmp/queue-completion-phsa/holdout-context/phsa-2017-18-p090-r09.png",
+      "fullRowContextSha256": "1c82126393b28a3cef6ae738ee12fab9576117121940899431bac3e18a5ccd6e",
+      "fullRowOriginalPixelBox": [
+        202,
+        1285,
+        2422,
+        1343
+      ],
+      "pageEvidence": {
+        "path": "research/salaries/queue-completion-phsa/evidence/phsa-2017-18-rows-p090.json.gzip",
+        "sha256": "3a613a17d692544b1c17aa3bc93ec99d8b87a486f9780155eefc100428fb4d86"
+      },
+      "rawPageEvidence": {
+        "path": "research/salaries/queue-completion-phsa/evidence/phsa-2017-18-raw-p090.json.gzip",
+        "sha256": "452b81b3aec009c04f6a3f84c87d106710cb4cca7e654e0c1986fb001720d764"
+      }
+    },
+    {
+      "sequence": 7,
+      "sourceId": "phsa-2017-18",
+      "physicalPage": 92,
+      "sourceRowOnPage": 11,
+      "salaryPageThird": "middle",
+      "selectionClass": "unreserved-confidence-only-paired-row",
+      "selectionRankSha256": "022683336deaf5690c6f38214e3dcec352c0f85069fcc42e3630ecf87199b57c",
+      "reviewTargetFields": [
+        "name",
+        "remuneration",
+        "expenses"
+      ],
+      "sourceNativeFieldViews": [
+        {
+          "field": "name",
+          "path": "research/salaries/queue-completion-2026-11-01/phsa/holdouts/field-crops/phsa-2017-18-07-name.png",
+          "sha256": "82e13aa36cacccef74a4642ed68105fb2fd3440afc003c0f2b74d829714f61b8",
+          "originalPdf300DpiPixelBox": [
+            202,
+            1406,
+            1485,
+            1464
+          ],
+          "noResamplingOrGlyphAlteration": true
+        },
+        {
+          "field": "remuneration",
+          "path": "research/salaries/queue-completion-2026-11-01/phsa/holdouts/field-crops/phsa-2017-18-07-remuneration.png",
+          "sha256": "eca032684750a672aa39111f814735c0a0dfa0c3094ab38c09c6c781e75f0865",
+          "originalPdf300DpiPixelBox": [
+            1477,
+            1406,
+            1888,
+            1464
+          ],
+          "noResamplingOrGlyphAlteration": true
+        },
+        {
+          "field": "expenses",
+          "path": "research/salaries/queue-completion-2026-11-01/phsa/holdouts/field-crops/phsa-2017-18-07-expenses.png",
+          "sha256": "3893899c6d24d8b5b551b6c891ec355e068fb804a9bcea1d57d3564601dfb575",
+          "originalPdf300DpiPixelBox": [
+            1872,
+            1406,
+            2422,
+            1464
+          ],
+          "noResamplingOrGlyphAlteration": true
+        }
+      ],
+      "actualSourceImagePath": "/tmp/queue-completion-phsa/phsa-2017-18/images/p092.png",
+      "actualSourceImageSha256": "0b58e52ef32cb6c437163d0a8cef5122c1d8f172c5ffd04bd22e0edf74a3c15b",
+      "fullRowContextPath": "/tmp/queue-completion-phsa/holdout-context/phsa-2017-18-p092-r11.png",
+      "fullRowContextSha256": "053e1d0e05d730b030d320cca8327c83a2cd5e329ce44430eab7ca1e2c8ab888",
+      "fullRowOriginalPixelBox": [
+        202,
+        1406,
+        2422,
+        1464
+      ],
+      "pageEvidence": {
+        "path": "research/salaries/queue-completion-phsa/evidence/phsa-2017-18-rows-p092.json.gzip",
+        "sha256": "1bfbbac782f9c74ad778902717622da51c0f19ceabf6d5995d1f385d6c691de0"
+      },
+      "rawPageEvidence": {
+        "path": "research/salaries/queue-completion-phsa/evidence/phsa-2017-18-raw-p092.json.gzip",
+        "sha256": "61b1552297a36b01c8106fb70b5593ba75bbd63499fbcef2ee7c6f9114b9d4c4"
+      }
+    },
+    {
+      "sequence": 8,
+      "sourceId": "phsa-2017-18",
+      "physicalPage": 123,
+      "sourceRowOnPage": 35,
+      "salaryPageThird": "late",
+      "selectionClass": "unreserved-confidence-only-paired-row",
+      "selectionRankSha256": "0021f6245af337e7f9470cd9d811a54bb08c3bd4d528db8df329949d001753cc",
+      "reviewTargetFields": [
+        "name",
+        "remuneration",
+        "expenses"
+      ],
+      "sourceNativeFieldViews": [
+        {
+          "field": "name",
+          "path": "research/salaries/queue-completion-2026-11-01/phsa/holdouts/field-crops/phsa-2017-18-08-name.png",
+          "sha256": "7121260ba8ac96e92bccf4647a535942dbdb5fff12e449b698159d7022d3a6ce",
+          "originalPdf300DpiPixelBox": [
+            202,
+            2852,
+            1485,
+            2910
+          ],
+          "noResamplingOrGlyphAlteration": true
+        },
+        {
+          "field": "remuneration",
+          "path": "research/salaries/queue-completion-2026-11-01/phsa/holdouts/field-crops/phsa-2017-18-08-remuneration.png",
+          "sha256": "3cf2d50d7a4c6852cf5ad9fe47ef26de898d95f22337240306ac0b1d1705c0ab",
+          "originalPdf300DpiPixelBox": [
+            1477,
+            2852,
+            1888,
+            2910
+          ],
+          "noResamplingOrGlyphAlteration": true
+        },
+        {
+          "field": "expenses",
+          "path": "research/salaries/queue-completion-2026-11-01/phsa/holdouts/field-crops/phsa-2017-18-08-expenses.png",
+          "sha256": "de4034f7e22da92042b64a92b6201cc713a8ab5fd93dcf47f5825446c72ac3d5",
+          "originalPdf300DpiPixelBox": [
+            1872,
+            2852,
+            2422,
+            2910
+          ],
+          "noResamplingOrGlyphAlteration": true
+        }
+      ],
+      "actualSourceImagePath": "/tmp/queue-completion-phsa/phsa-2017-18/images/p123.png",
+      "actualSourceImageSha256": "935e92559987c0df85b08e31b3739b6e3d7448a1903241619e4defcdf8365f85",
+      "fullRowContextPath": "/tmp/queue-completion-phsa/holdout-context/phsa-2017-18-p123-r35.png",
+      "fullRowContextSha256": "1644b6adfab460b00114cebf5d8a36dfafbb6c9d948bfbaf1398ba92c35de5bf",
+      "fullRowOriginalPixelBox": [
+        202,
+        2852,
+        2422,
+        2910
+      ],
+      "pageEvidence": {
+        "path": "research/salaries/queue-completion-phsa/evidence/phsa-2017-18-rows-p123.json.gzip",
+        "sha256": "66cc8026fec144c303da4773e7f7dc1ecb5e7df1782ebf6fdbf4c9f9e7d42aba"
+      },
+      "rawPageEvidence": {
+        "path": "research/salaries/queue-completion-phsa/evidence/phsa-2017-18-raw-p123.json.gzip",
+        "sha256": "5c3cae54bab334ef0aa2f1c2c2cd69b6f645e97200b05bb4155b9ce1ed889281"
+      }
+    },
+    {
+      "sequence": 9,
+      "sourceId": "phsa-2017-18",
+      "physicalPage": 117,
+      "sourceRowOnPage": 29,
+      "salaryPageThird": "late",
+      "selectionClass": "unreserved-confidence-only-paired-row",
+      "selectionRankSha256": "01f8fb767110e1e587b9ac30ae4688d48126744c5cb9709ceb2d9bdffa14aa81",
+      "reviewTargetFields": [
+        "name",
+        "remuneration",
+        "expenses"
+      ],
+      "sourceNativeFieldViews": [
+        {
+          "field": "name",
+          "path": "research/salaries/queue-completion-2026-11-01/phsa/holdouts/field-crops/phsa-2017-18-09-name.png",
+          "sha256": "ddfb243c1a38be5137aaf27795cf8e38b340f753162aa9b7f4d80960fa114699",
+          "originalPdf300DpiPixelBox": [
+            202,
+            2493,
+            1485,
+            2552
+          ],
+          "noResamplingOrGlyphAlteration": true
+        },
+        {
+          "field": "remuneration",
+          "path": "research/salaries/queue-completion-2026-11-01/phsa/holdouts/field-crops/phsa-2017-18-09-remuneration.png",
+          "sha256": "431ea3d534b5bc39059dbcf09a5236bc46655dce520880869eecbcd1547c2a48",
+          "originalPdf300DpiPixelBox": [
+            1477,
+            2493,
+            1888,
+            2552
+          ],
+          "noResamplingOrGlyphAlteration": true
+        },
+        {
+          "field": "expenses",
+          "path": "research/salaries/queue-completion-2026-11-01/phsa/holdouts/field-crops/phsa-2017-18-09-expenses.png",
+          "sha256": "84ea3f46d56764f2886bfa561be961238fe18c860085b053dca7d956c0450d3b",
+          "originalPdf300DpiPixelBox": [
+            1872,
+            2493,
+            2422,
+            2552
+          ],
+          "noResamplingOrGlyphAlteration": true
+        }
+      ],
+      "actualSourceImagePath": "/tmp/queue-completion-phsa/phsa-2017-18/images/p117.png",
+      "actualSourceImageSha256": "e8a529d7e259ff7f92272f907daf2458fe3677a4efdd52acabbb0f9daf684d89",
+      "fullRowContextPath": "/tmp/queue-completion-phsa/holdout-context/phsa-2017-18-p117-r29.png",
+      "fullRowContextSha256": "cfff6f6130d8163eb6fbc3f67986973813fd2e3bbf4de7caeb34c32efe704ace",
+      "fullRowOriginalPixelBox": [
+        202,
+        2493,
+        2422,
+        2552
+      ],
+      "pageEvidence": {
+        "path": "research/salaries/queue-completion-phsa/evidence/phsa-2017-18-rows-p117.json.gzip",
+        "sha256": "609211eb74cdfcd50630cfc1b0b4571a33312ab3eb40e86856e7f8090884c4c6"
+      },
+      "rawPageEvidence": {
+        "path": "research/salaries/queue-completion-phsa/evidence/phsa-2017-18-raw-p117.json.gzip",
+        "sha256": "708356920a17728cb4b97cf0a6db2e6cb7075153e3efed223765726bd9fb7926"
+      }
+    },
+    {
+      "sequence": 10,
+      "sourceId": "phsa-2017-18",
+      "physicalPage": 136,
+      "sourceRowOnPage": 34,
+      "salaryPageThird": "late",
+      "selectionClass": "unreserved-confidence-only-paired-row",
+      "selectionRankSha256": "02ebbc1b24e3dc10da81314a0780f02c441da2f138ef273515388df8cac27e85",
+      "reviewTargetFields": [
+        "name",
+        "remuneration",
+        "expenses"
+      ],
+      "sourceNativeFieldViews": [
+        {
+          "field": "name",
+          "path": "research/salaries/queue-completion-2026-11-01/phsa/holdouts/field-crops/phsa-2017-18-10-name.png",
+          "sha256": "070ea931b493dd4157d1d3bda6a48745b810980b5cbd59d47f6346fe2f0fead3",
+          "originalPdf300DpiPixelBox": [
+            202,
+            2797,
+            1485,
+            2856
+          ],
+          "noResamplingOrGlyphAlteration": true
+        },
+        {
+          "field": "remuneration",
+          "path": "research/salaries/queue-completion-2026-11-01/phsa/holdouts/field-crops/phsa-2017-18-10-remuneration.png",
+          "sha256": "1d101e21516dbd6968bf29f8ee13d2bc9c17946804fd7b24a5ba5f18053bf02b",
+          "originalPdf300DpiPixelBox": [
+            1477,
+            2797,
+            1888,
+            2856
+          ],
+          "noResamplingOrGlyphAlteration": true
+        },
+        {
+          "field": "expenses",
+          "path": "research/salaries/queue-completion-2026-11-01/phsa/holdouts/field-crops/phsa-2017-18-10-expenses.png",
+          "sha256": "3851e9ef357f805eff7a7ca4ebe0c51ec468348d0d89fcabef1ab528568ad722",
+          "originalPdf300DpiPixelBox": [
+            1872,
+            2797,
+            2422,
+            2856
+          ],
+          "noResamplingOrGlyphAlteration": true
+        }
+      ],
+      "actualSourceImagePath": "/tmp/queue-completion-phsa/phsa-2017-18/images/p136.png",
+      "actualSourceImageSha256": "b9d9fc55e7bfc7d5e961fb0300264b6364fb461bfb77a5edae82f11385966195",
+      "fullRowContextPath": "/tmp/queue-completion-phsa/holdout-context/phsa-2017-18-p136-r34.png",
+      "fullRowContextSha256": "5a3850867c846f4a636a1fc10826f043a671475b3e2eaf810b60aadb98a6db09",
+      "fullRowOriginalPixelBox": [
+        202,
+        2797,
+        2422,
+        2856
+      ],
+      "pageEvidence": {
+        "path": "research/salaries/queue-completion-phsa/evidence/phsa-2017-18-rows-p136.json.gzip",
+        "sha256": "ae4192b4d5b601cb731c8aaf5ca0bf66117c1a9ff9989f83d6885b23a2a21cdb"
+      },
+      "rawPageEvidence": {
+        "path": "research/salaries/queue-completion-phsa/evidence/phsa-2017-18-raw-p136.json.gzip",
+        "sha256": "543028b692258d7ab4860e8947453580b53c3757cfa58d6ab26cedf5f8865da7"
+      }
+    }
+  ],
+  "contactSheets": [
+    {
+      "field": "name",
+      "path": "research/salaries/queue-completion-2026-11-01/phsa/holdouts/sheets/phsa-2017-18-name.png",
+      "sha256": "df0341695545b7545d7a59d85bc4f2745d5e2327ce928191388435e96d28d87e"
+    },
+    {
+      "field": "remuneration",
+      "path": "research/salaries/queue-completion-2026-11-01/phsa/holdouts/sheets/phsa-2017-18-remuneration.png",
+      "sha256": "c27cd345fdf04c9164806a6feb04ec23db36ce9a58ba400cd30d1673c62e1248"
+    },
+    {
+      "field": "expenses",
+      "path": "research/salaries/queue-completion-2026-11-01/phsa/holdouts/sheets/phsa-2017-18-expenses.png",
+      "sha256": "e02f5283a788031a1ab0dad8790799b443fa3bb788fd2c18fb2d26a613d3a517"
+    }
+  ],
+  "fullCandidate": {
+    "path": "research/salaries/queue-completion-2026-11-01/phsa/holdouts/phsa-2017-18-candidate.json",
+    "sha256": "fb569014ef5b04e3af3e5a5c2b97dfb0226d24be5ac0ebe7ccbe3181e6a46ee1"
+  },
+  "instructions": [
+    "Read every requested field directly from unchanged actual-PDF native-pixel views, before opening the full candidate file.",
+    "Freeze source-only literal transcript and SHA256 first; use full source PDF/context for uncertain glyphs.",
+    "This is the deterministic source-specific policy holdout. Any true requested-field mismatch halts/revises policy acceptance; do not silently correct the holdout result to agree with the machine.",
+    "Report exact source/page/row/field and literal source value. Dashes/zero/negative/type ambiguity were excluded from paired policy eligibility, not converted into positive amounts.",
+    "FY2015/16 already has all original flagged rows reserved, so its holdout uses otherwise unflagged rows passing the same guards; this approved limitation is recorded in the selection config."
+  ]
+}

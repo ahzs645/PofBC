@@ -1,0 +1,91 @@
+{
+  "date": "2026-11-01",
+  "reviewer": "/root/recovery_municipal",
+  "batch": "phsa-2016-17-002",
+  "sourceSha256": "31f7a1af80186bf81139fd693b36e733333a06c2ab1a4c5191bd6ee9b3623a53",
+  "rawTranscript": {
+    "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-municipal-history-2016-17-002-original-transcript.json",
+    "sha256": "9849cbbdce75ba45819093e0b29a80a1757a5bf0a2e89d3475334a3dc8a70cfa"
+  },
+  "candidateAlternativesOpened": false,
+  "sourceOnlyOwnReadingCorrections": [
+    {
+      "sequence": 58,
+      "physicalPage": 45,
+      "sourceRowOnPage": 13,
+      "field": "name",
+      "initialUncertainReading": "Gernack,Trevor",
+      "finalLiteralReading": "Germack,Trevor",
+      "basis": "Independent actualPDF600dpi source rerender shows m, with two joined shoulders. No candidate opened."
+    },
+    {
+      "sequence": 92,
+      "physicalPage": 48,
+      "sourceRowOnPage": 2,
+      "field": "name",
+      "initialUncertainReading": "Gosal,Jaskirn Kaur",
+      "finalLiteralReading": "Gosal,Jaskim Kaur",
+      "basis": "Independent actualPDF600/1200dpi source rerenders show joined m shoulders. A second peer independently froze the same m reading before opening this reviewer transcript or any candidates. No common-name expansion or outside identity lookup."
+    }
+  ],
+  "confirmedInitialReading": [
+    {
+      "sequence": 8,
+      "name": "Feveile,Steve",
+      "basis": "Independent actualPDF600dpi confirms source surname; no amendment."
+    }
+  ],
+  "sourceTypographyQualifications": [
+    {
+      "sequence": 333,
+      "physicalPage": 68,
+      "sourceRowOnPage": 26,
+      "field": "name",
+      "primaryReading": "Krishnaswamy,Wendy I",
+      "visibleAlternative": "Krishnaswamy,Wendy l",
+      "exactVerticalGlyphCaseDistinguishable": false,
+      "periodAdded": false,
+      "basis": "The final undotted vertical glyph is rendered I/l-indistinguishably in this scan. Uppercase I is the convention-based primary for a separate initial; lowercase l remains an explicitly visible alternative. No full name or identity is inferred. Qualified adoption and a source publicWarning remain root decisions.",
+      "status": "awaiting-explicit-root-typography-adoption"
+    }
+  ],
+  "twoNameBlindPeer": {
+    "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-history-batches-2016-17-002-two-name-peer-original.json",
+    "sha256": "cea7dc5ca912db38b57894884fa9f3c6ba8d037397c4b9864c1d1056acaa1640",
+    "scope": "Only seq92 and333 names, not a400-row peer claim."
+  },
+  "originalRerenders": [
+    {
+      "sequence": 8,
+      "dpi": 600,
+      "path": "/tmp/independent-phsa-municipal-2016-17-002/seq008-name-actual600.png",
+      "sha256": "6d99a421321b14ba8c3f0b2af6939c3fbaa8fb3fc9b4b51c2f80ea0ffd4dfb66"
+    },
+    {
+      "sequence": 58,
+      "dpi": 600,
+      "path": "/tmp/independent-phsa-municipal-2016-17-002/seq058-name-actual600.png",
+      "sha256": "4db5566f0bba7a19b6aa3372fc2654afbb8e670f2acf9962141934b19f3b2efd"
+    },
+    {
+      "sequence": 92,
+      "dpi": 600,
+      "path": "/tmp/independent-phsa-municipal-2016-17-002/seq092-name-actual600.png",
+      "sha256": "93393596e7f18b797d397662ebbca40fdad141b12018fe7f0e3fcba4c914acb4"
+    },
+    {
+      "sequence": 92,
+      "dpi": 1200,
+      "path": "/tmp/independent-phsa-municipal-2016-17-002/seq092-name-actual1200.png",
+      "sha256": "d3950ab697517e5c2fa8e5dc67bf7e8d0968d0050f9862ee596b46677ee19de2"
+    },
+    {
+      "sequence": 333,
+      "dpi": 600,
+      "path": "/tmp/independent-phsa-municipal-2016-17-002/seq333-name-actual600.png",
+      "sha256": "49400a408e66bfd91dddf2bceeade5382c449c9c7b99de9b91ea9dc848302f8d"
+    }
+  ],
+  "rawTranscriptImmutable": true,
+  "allOther460RequestedFieldValuesUnchangedExceptTwoNameReadings": true
+}

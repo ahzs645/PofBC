@@ -1,0 +1,47 @@
+{
+  "reviewer": "/root/held_health_review",
+  "frozenAtUtc": "2026-11-01T22:02:13.631994+00:00",
+  "sourceId": "phsa-2016-17",
+  "sourceSha256": "31f7a1af80186bf81139fd693b36e733333a06c2ab1a4c5191bd6ee9b3623a53",
+  "batch": "phsa-2016-17-001",
+  "imageManifestSha256": "2bff47cd473a83b3d61e67ae47b29b9b584fb514b629e53c32ccc1443c3979cc",
+  "nativeTargetViewsManifestSha256": "be7b2988ca098ef732be55d739d95e3a132e4bd2e042127f5ca5ebdf6d73396d",
+  "rawTranscriptPath": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-history-2016-17-batch-001-image-transcript.tsv",
+  "rawTranscriptSha256": "7d3123bc221eb78c2e634076ec4690294e90c55b4d24c48c54567e1d31cabf54",
+  "completeDistinctRequestedRows": 400,
+  "requestedFieldsByType": {
+    "expenses": 92,
+    "name": 142,
+    "remuneration": 224
+  },
+  "all468RequestedFieldsPersonallyReadFromActualPdfSourceImages": true,
+  "fullCandidateAndRawOcrAlternativesNotOpenedBeforeThisFreeze": true,
+  "sourceViewHashesAllChecked": true,
+  "first20RowsFullContextAlsoRead": true,
+  "remainingRowsOnlyRequestedFieldsTranscribed": true,
+  "sparseEventTsvFormat": "Repeated sequence IDs append different field readings. Empty cells mean not transcribed in that event, never source null. Merge only nonempty values; duplicate same-field events must agree. A literal dash is explicit source dash.",
+  "unrequestedContextDoesNotAuthorizeAmendments": true,
+  "sourceTypographyQualificationSequences": [
+    4,
+    125,
+    164,
+    183,
+    341
+  ],
+  "literalLowercaseParticlesPreserved": [
+    "de Mendonca,Benjamin"
+  ],
+  "preFreezeFocused600DpiRereads": {
+    "0087-name.png": "63adc2f179031387d40596c0888f1bbaab479851609ef15337c86170f94d0743",
+    "0124-remuneration.png": "8b26a5436c304b0579f4b672eb37d6ffc977fb4d95f4303e33ffff828717e14f",
+    "0210-name.png": "919437f75f024c26891150612b82ddf3e089b0ac6e9d7daec67d8893fc8a0e5b",
+    "0282-name.png": "79c58afd71bcaea7072def719c362ad921a4817456797828a371ba9ae41b5530",
+    "0371-remuneration.png": "1dc2c9092ca08138b8b9fcf4b5b667be37cc40559d2e9a1791ea3e09aa08b749"
+  },
+  "limits": [
+    "This freezes an independent literal source transcription before alternatives; it does not accept an employee cohort.",
+    "Only the exact assigned fields may be resolved; all other fields require a separate source-derived supplemental review.",
+    "Five given-word/initial I/l case readings require explicit source-typography alternatives, independent peer/root adoption and a public source warning.",
+    "No money glyph was inferred from controls, ranges, names or common usage."
+  ]
+}

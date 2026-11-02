@@ -1,0 +1,1193 @@
+{
+  "reviewedOn": "2026-11-01",
+  "reviewer": "/root/recovery_review",
+  "kind": "independent-image-label-confidence-diagnostic",
+  "inputs": [
+    {
+      "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-history-batches-benchmark-index.json",
+      "sha256": "3d3de244f7fcf1eff6db7aaf5776117c817ead58f338624ecb23063dc7c9d753"
+    },
+    {
+      "path": "research/salaries/queue-completion-2026-11-01/phsa/first-table-ocr-benchmark-trials-003.json",
+      "sha256": "8bcac47a3247d109bf14e6d108973e6bcc4f617555e345c14b9e36886c0d9bd9"
+    },
+    {
+      "path": "research/salaries/queue-completion-2026-11-01/phsa/processing-profile-index-001.json",
+      "sha256": "5da19351100e8410e680113599c6990fb9f6b2bfe060348992795b1eaa44e4bc"
+    },
+    {
+      "path": "research/salaries/queue-completion-2026-11-01/phsa/phsa-2015-16-processing-profile-001.json",
+      "sha256": "ee4acd856a6fed846d786d52a42265d81ec30f9df0e734769411967195bc6575"
+    },
+    {
+      "path": "research/salaries/queue-completion-2026-11-01/phsa/phsa-2016-17-processing-profile-001.json",
+      "sha256": "befbc617f9532bb4559046d3dfa3b196800318f07e52a5d83d9dde0854d29ad7"
+    },
+    {
+      "path": "research/salaries/queue-completion-2026-11-01/phsa/phsa-2017-18-processing-profile-001.json",
+      "sha256": "5ff565c11b94c6c97ee4ab551815fa3d3de562a4d7ba8fdd5277fd23a628d21a"
+    },
+    {
+      "path": "research/salaries/queue-completion-2026-11-01/phsa/phsa-2018-19-processing-profile-001.json",
+      "sha256": "21e3a38373cdd29bcddeb9db20bb2fecd15be001bf055b324a9cc5dfe36452f0"
+    },
+    {
+      "path": "research/salaries/queue-completion-2026-11-01/phsa/phsa-2019-20-processing-profile-001.json",
+      "sha256": "a81601f1ecd2cfd99c121f784a59eb61eac2e504826e9c1c8c069c9f43f71ef2"
+    },
+    {
+      "path": "research/salaries/queue-completion-2026-11-01/phsa/phsa-2020-21-processing-profile-001.json",
+      "sha256": "e1fc8fa93c530cc0afbe58aa301e3cd3b732fbec3c3de3db020930956ee30158"
+    },
+    {
+      "path": "research/salaries/queue-completion-2026-11-01/phsa/phsa-2021-22-processing-profile-001.json",
+      "sha256": "b5bb03c4690f4964551d49b69b9bb50e3212fda971c0705109df288d35cab206"
+    },
+    {
+      "path": "research/salaries/queue-completion-2026-11-01/phsa/phsa-2022-23-processing-profile-001.json",
+      "sha256": "c9b58c5eac0a0212a92149eec224386ff7ccc5e6f22cd9e6413890955ce945e6"
+    },
+    {
+      "path": "research/salaries/queue-completion-2026-11-01/phsa/phsa-2023-24-processing-profile-001.json",
+      "sha256": "493090b711a10b527b1ccd29fabf265ba97746f831139aa35775261a00f23547"
+    },
+    {
+      "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-history-batches-2015-16-002-original-transcript.json",
+      "sha256": "1b2a9a8068a3166ddfaa9c15f0c5678f67f21ccf478e248a2b9710396bd89fc5"
+    },
+    {
+      "path": "research/salaries/queue-completion-2026-11-01/phsa/batches/phsa-2015-16-batch-002.json",
+      "sha256": "e96ae4c71c65d0c055c7f80fb8281612053726e04c5104de0ae952a9512da13c"
+    }
+  ],
+  "sourceFirstTableFixtures": [
+    {
+      "sourceId": "phsa-2015-16",
+      "sourceSha256": "f8bc28af7e87f57c51973f5ed581e50fe414f00486659551ad5c8171b98f73a3",
+      "selectedRapidConfiguration": "chinese-4096",
+      "fixture": {
+        "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-history-batches-benchmark-2015-16-original-transcript.tsv",
+        "sha256": "08005d912476c2aa705e7e3abba554074f46dd0c1dcd14aa6d6f03ff77f2f6d8"
+      },
+      "fixtureRows": 36,
+      "rapidLiteralNameMismatches": 0,
+      "tesseractLiteralNameMismatches": 1,
+      "rapidNameConfidenceDiagnostic": [
+        {
+          "threshold": 0.9,
+          "labels": 36,
+          "belowThreshold": 0,
+          "literalMismatchesBelowThreshold": 0,
+          "literalMismatchesAtOrAboveThreshold": 0,
+          "matchingReadingsBelowThreshold": 0
+        },
+        {
+          "threshold": 0.95,
+          "labels": 36,
+          "belowThreshold": 0,
+          "literalMismatchesBelowThreshold": 0,
+          "literalMismatchesAtOrAboveThreshold": 0,
+          "matchingReadingsBelowThreshold": 0
+        },
+        {
+          "threshold": 0.98,
+          "labels": 36,
+          "belowThreshold": 2,
+          "literalMismatchesBelowThreshold": 0,
+          "literalMismatchesAtOrAboveThreshold": 0,
+          "matchingReadingsBelowThreshold": 2
+        },
+        {
+          "threshold": 0.99,
+          "labels": 36,
+          "belowThreshold": 4,
+          "literalMismatchesBelowThreshold": 0,
+          "literalMismatchesAtOrAboveThreshold": 0,
+          "matchingReadingsBelowThreshold": 4
+        }
+      ],
+      "sourceImageRecheckCandidates": [
+        {
+          "sourceRowOnPage": 33,
+          "independentLiteral": "Ahmad,Waqar",
+          "rapidName": "Ahmad,Waqar",
+          "tesseractName": "Ahmad,Wagar",
+          "rapidNameConfidence": 0.9992581876841459
+        }
+      ]
+    },
+    {
+      "sourceId": "phsa-2016-17",
+      "sourceSha256": "31f7a1af80186bf81139fd693b36e733333a06c2ab1a4c5191bd6ee9b3623a53",
+      "selectedRapidConfiguration": "english-4096",
+      "fixture": {
+        "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-history-batches-benchmark-2016-17-original-transcript.tsv",
+        "sha256": "865b53f8dfa6ac81ac35cd71744e92b1f1b6a4b29005908e4ece8a4a81b907ba"
+      },
+      "fixtureRows": 36,
+      "rapidLiteralNameMismatches": 2,
+      "tesseractLiteralNameMismatches": 1,
+      "rapidNameConfidenceDiagnostic": [
+        {
+          "threshold": 0.9,
+          "labels": 36,
+          "belowThreshold": 0,
+          "literalMismatchesBelowThreshold": 0,
+          "literalMismatchesAtOrAboveThreshold": 2,
+          "matchingReadingsBelowThreshold": 0
+        },
+        {
+          "threshold": 0.95,
+          "labels": 36,
+          "belowThreshold": 5,
+          "literalMismatchesBelowThreshold": 0,
+          "literalMismatchesAtOrAboveThreshold": 2,
+          "matchingReadingsBelowThreshold": 5
+        },
+        {
+          "threshold": 0.98,
+          "labels": 36,
+          "belowThreshold": 24,
+          "literalMismatchesBelowThreshold": 2,
+          "literalMismatchesAtOrAboveThreshold": 0,
+          "matchingReadingsBelowThreshold": 22
+        },
+        {
+          "threshold": 0.99,
+          "labels": 36,
+          "belowThreshold": 36,
+          "literalMismatchesBelowThreshold": 2,
+          "literalMismatchesAtOrAboveThreshold": 0,
+          "matchingReadingsBelowThreshold": 34
+        }
+      ],
+      "sourceImageRecheckCandidates": [
+        {
+          "sourceRowOnPage": 16,
+          "independentLiteral": "Acosta,Andrea",
+          "rapidName": "Acosta,Andrea",
+          "tesseractName": "Acosta Andrea",
+          "rapidNameConfidence": 0.971588304409614
+        },
+        {
+          "sourceRowOnPage": 26,
+          "independentLiteral": "Aficionado,Mary Grace P.",
+          "rapidName": "Aficionado,Mary Grace P",
+          "tesseractName": "Aficionado,Mary Grace P.",
+          "rapidNameConfidence": 0.9618798649829366
+        },
+        {
+          "sourceRowOnPage": 30,
+          "independentLiteral": "Ah Yong,Peggy Yin Lam",
+          "rapidName": "Ah YongPeggy Yin Lam",
+          "tesseractName": "Ah Yong,Peggy Yin Lam",
+          "rapidNameConfidence": 0.9536236435174942
+        }
+      ]
+    },
+    {
+      "sourceId": "phsa-2017-18",
+      "sourceSha256": "1971861d325c81e48083e56e45edbb62c6446fa2c387ce786a2b4e0aa5cdc006",
+      "selectedRapidConfiguration": "chinese-4096",
+      "fixture": {
+        "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-history-batches-benchmark-2017-18-original-transcript.tsv",
+        "sha256": "03c0481f4716e85dfb401786a3e906c1c6182270903233c5596179ad0cd6a7f1"
+      },
+      "fixtureRows": 37,
+      "rapidLiteralNameMismatches": 0,
+      "tesseractLiteralNameMismatches": 3,
+      "rapidNameConfidenceDiagnostic": [
+        {
+          "threshold": 0.9,
+          "labels": 37,
+          "belowThreshold": 0,
+          "literalMismatchesBelowThreshold": 0,
+          "literalMismatchesAtOrAboveThreshold": 0,
+          "matchingReadingsBelowThreshold": 0
+        },
+        {
+          "threshold": 0.95,
+          "labels": 37,
+          "belowThreshold": 0,
+          "literalMismatchesBelowThreshold": 0,
+          "literalMismatchesAtOrAboveThreshold": 0,
+          "matchingReadingsBelowThreshold": 0
+        },
+        {
+          "threshold": 0.98,
+          "labels": 37,
+          "belowThreshold": 1,
+          "literalMismatchesBelowThreshold": 0,
+          "literalMismatchesAtOrAboveThreshold": 0,
+          "matchingReadingsBelowThreshold": 1
+        },
+        {
+          "threshold": 0.99,
+          "labels": 37,
+          "belowThreshold": 4,
+          "literalMismatchesBelowThreshold": 0,
+          "literalMismatchesAtOrAboveThreshold": 0,
+          "matchingReadingsBelowThreshold": 4
+        }
+      ],
+      "sourceImageRecheckCandidates": [
+        {
+          "sourceRowOnPage": 4,
+          "independentLiteral": "Abbasnejad,Majid",
+          "rapidName": "Abbasnejad,Majid",
+          "tesseractName": "Abbasnejad,Mayjid",
+          "rapidNameConfidence": 0.999115314334631
+        },
+        {
+          "sourceRowOnPage": 29,
+          "independentLiteral": "Ahking,Denise",
+          "rapidName": "Ahking,Denise",
+          "tesseractName": "Abking, Denise",
+          "rapidNameConfidence": 0.9994400785519526
+        },
+        {
+          "sourceRowOnPage": 31,
+          "independentLiteral": "Ahn,Joseph",
+          "rapidName": "Ahn,Joseph",
+          "tesseractName": "Ahn. Joseph",
+          "rapidNameConfidence": 0.9991360485553742
+        }
+      ]
+    },
+    {
+      "sourceId": "phsa-2018-19",
+      "sourceSha256": "ddeba470b875451f6180eb442ed921f7902cc910d62a026c11ab298ca3d0440f",
+      "selectedRapidConfiguration": "english-4096",
+      "fixture": {
+        "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-history-batches-benchmark-2018-19-original-transcript.tsv",
+        "sha256": "3d6161b2f081b00a881c3bd8ffa45f0713661b7c2cf7d1734abdeebf598cac6a"
+      },
+      "fixtureRows": 55,
+      "rapidLiteralNameMismatches": 6,
+      "tesseractLiteralNameMismatches": 21,
+      "rapidNameConfidenceDiagnostic": [
+        {
+          "threshold": 0.9,
+          "labels": 55,
+          "belowThreshold": 0,
+          "literalMismatchesBelowThreshold": 0,
+          "literalMismatchesAtOrAboveThreshold": 6,
+          "matchingReadingsBelowThreshold": 0
+        },
+        {
+          "threshold": 0.95,
+          "labels": 55,
+          "belowThreshold": 4,
+          "literalMismatchesBelowThreshold": 1,
+          "literalMismatchesAtOrAboveThreshold": 5,
+          "matchingReadingsBelowThreshold": 3
+        },
+        {
+          "threshold": 0.98,
+          "labels": 55,
+          "belowThreshold": 19,
+          "literalMismatchesBelowThreshold": 3,
+          "literalMismatchesAtOrAboveThreshold": 3,
+          "matchingReadingsBelowThreshold": 16
+        },
+        {
+          "threshold": 0.99,
+          "labels": 55,
+          "belowThreshold": 38,
+          "literalMismatchesBelowThreshold": 4,
+          "literalMismatchesAtOrAboveThreshold": 2,
+          "matchingReadingsBelowThreshold": 34
+        }
+      ],
+      "sourceImageRecheckCandidates": [
+        {
+          "sourceRowOnPage": 3,
+          "independentLiteral": "Abadi,Shirin",
+          "rapidName": "Abadi,Shirin",
+          "tesseractName": "Abadi Shirin",
+          "rapidNameConfidence": 0.9875177542368571
+        },
+        {
+          "sourceRowOnPage": 9,
+          "independentLiteral": "Abdulmenan,Jalud",
+          "rapidName": "Abdulmenan,Jalud",
+          "tesseractName": "Abdulmenan Jalud",
+          "rapidNameConfidence": 0.9915518946945667
+        },
+        {
+          "sourceRowOnPage": 11,
+          "independentLiteral": "Abia,Jo-Ann",
+          "rapidName": "Abia,Jo-Ann",
+          "tesseractName": "AbiaJo-Ann",
+          "rapidNameConfidence": 0.948376021601937
+        },
+        {
+          "sourceRowOnPage": 13,
+          "independentLiteral": "Abrahams,Bethina",
+          "rapidName": "Abrahams,Bethina",
+          "tesseractName": "Abrahams Bethina",
+          "rapidNameConfidence": 0.9885399900376797
+        },
+        {
+          "sourceRowOnPage": 16,
+          "independentLiteral": "Abustan,Priscilla",
+          "rapidName": "Abustan,Priscilla",
+          "tesseractName": "Abustan Priscilla",
+          "rapidNameConfidence": 0.9769321574884302
+        },
+        {
+          "sourceRowOnPage": 17,
+          "independentLiteral": "Acker,Joe",
+          "rapidName": "Acker,Joe",
+          "tesseractName": "Acker Joe",
+          "rapidNameConfidence": 0.9956957366731432
+        },
+        {
+          "sourceRowOnPage": 18,
+          "independentLiteral": "Ackerman,Jacob",
+          "rapidName": "Ackerman,Jacob",
+          "tesseractName": "Ackerman Jacob",
+          "rapidNameConfidence": 0.99461287685803
+        },
+        {
+          "sourceRowOnPage": 20,
+          "independentLiteral": "Adam,Catherine",
+          "rapidName": "Adam,Catherine",
+          "tesseractName": "Adam Catherine",
+          "rapidNameConfidence": 0.9889545866421291
+        },
+        {
+          "sourceRowOnPage": 21,
+          "independentLiteral": "Adamack,Nick",
+          "rapidName": "Adamack,Nick",
+          "tesseractName": "Adamack Nick",
+          "rapidNameConfidence": 0.9889340698719025
+        },
+        {
+          "sourceRowOnPage": 22,
+          "independentLiteral": "Adamack,Richard",
+          "rapidName": "Adamack,Richard",
+          "tesseractName": "Adamack Richard",
+          "rapidNameConfidence": 0.9897200584411621
+        },
+        {
+          "sourceRowOnPage": 27,
+          "independentLiteral": "Adams,Shelley",
+          "rapidName": "Adams,Shelley",
+          "tesseractName": "Adams Shelley",
+          "rapidNameConfidence": 0.9803102933443509
+        },
+        {
+          "sourceRowOnPage": 29,
+          "independentLiteral": "Aeichele,Deborah Eileen",
+          "rapidName": "Aeichele,Deborah Eileen",
+          "tesseractName": "Aeichele Deborah Eileen",
+          "rapidNameConfidence": 0.9632708404375159
+        },
+        {
+          "sourceRowOnPage": 30,
+          "independentLiteral": "Aficionado,Mary Grace P.",
+          "rapidName": "Aficionado,Mary GraceP.",
+          "tesseractName": "Aficionado,Mary Grace P.",
+          "rapidNameConfidence": 0.9633906302244767
+        },
+        {
+          "sourceRowOnPage": 32,
+          "independentLiteral": "Agustin,Kristina",
+          "rapidName": "Agustin,Kristina",
+          "tesseractName": "Agustin Kristina",
+          "rapidNameConfidence": 0.9790954999625683
+        },
+        {
+          "sourceRowOnPage": 33,
+          "independentLiteral": "Ahadzadeh,Farzad",
+          "rapidName": "Ahadzadeh,Farzad",
+          "tesseractName": "Ahadzadeh Farzad",
+          "rapidNameConfidence": 0.9766821041703224
+        },
+        {
+          "sourceRowOnPage": 34,
+          "independentLiteral": "Ahmad,Waqar",
+          "rapidName": "Ahmad,Waqar",
+          "tesseractName": "Ahmad, Wagar",
+          "rapidNameConfidence": 0.9889418211850253
+        },
+        {
+          "sourceRowOnPage": 36,
+          "independentLiteral": "Ahn,Joseph",
+          "rapidName": "Ahn,Joseph",
+          "tesseractName": "Ahn Joseph",
+          "rapidNameConfidence": 0.9820831000804902
+        },
+        {
+          "sourceRowOnPage": 38,
+          "independentLiteral": "Ahuja,Jagvinder K.",
+          "rapidName": "Ahuja,JagvinderK",
+          "tesseractName": "Ahuja, Jagvinder K.",
+          "rapidNameConfidence": 0.9853110648691654
+        },
+        {
+          "sourceRowOnPage": 40,
+          "independentLiteral": "Aikins,Tracy",
+          "rapidName": "Aikins,Tracy",
+          "tesseractName": "Aikins Tracy",
+          "rapidNameConfidence": 0.9969076067209244
+        },
+        {
+          "sourceRowOnPage": 43,
+          "independentLiteral": "Aladi,Jude Ikechukwu",
+          "rapidName": "Aladi,Jude Ikechukwu",
+          "tesseractName": "Aladi Jude Ikechukwu",
+          "rapidNameConfidence": 0.974788150191307
+        },
+        {
+          "sourceRowOnPage": 45,
+          "independentLiteral": "Albersheim,Susan G.",
+          "rapidName": "Albersheim Susan G.",
+          "tesseractName": "Albersheim,Susan G.",
+          "rapidNameConfidence": 0.9479081175829235
+        },
+        {
+          "sourceRowOnPage": 46,
+          "independentLiteral": "Alcock,Rebecca",
+          "rapidName": "Alcock,Rebecca",
+          "tesseractName": "Alcock Rebecca",
+          "rapidNameConfidence": 0.9924258504595075
+        },
+        {
+          "sourceRowOnPage": 49,
+          "independentLiteral": "Alden,Tina Marguerita",
+          "rapidName": "Alden Tina Marguerita",
+          "tesseractName": "Alden,Tina Marguerita",
+          "rapidNameConfidence": 0.9540772906371525
+        },
+        {
+          "sourceRowOnPage": 51,
+          "independentLiteral": "Aldoff,Nancy",
+          "rapidName": "Aldoff,Nancy",
+          "tesseractName": "Aldoff.Nancy",
+          "rapidNameConfidence": 0.9928580472866694
+        },
+        {
+          "sourceRowOnPage": 52,
+          "independentLiteral": "Aldridge,Stephanie A.",
+          "rapidName": "Aldridge,StephanieA",
+          "tesseractName": "Aldridge Stephanie A.",
+          "rapidNameConfidence": 0.9954657021321749
+        },
+        {
+          "sourceRowOnPage": 54,
+          "independentLiteral": "Alexander,Abraham A",
+          "rapidName": "Alexander,AbrahamA",
+          "tesseractName": "Alexander,Abraham A",
+          "rapidNameConfidence": 0.995708684126536
+        }
+      ]
+    },
+    {
+      "sourceId": "phsa-2019-20",
+      "sourceSha256": "0e31ac2054f0c2d4ef78797185dddd96cc0cdf2eab94bd6841fa24e1c38e7d02",
+      "selectedRapidConfiguration": "baseline-default",
+      "fixture": {
+        "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-history-batches-benchmark-2019-20-original-transcript.tsv",
+        "sha256": "bfb34bf52adc28eadc39efcf9511e63c4c98f3753ed768e7584f46b8ec5e5845"
+      },
+      "fixtureRows": 58,
+      "rapidLiteralNameMismatches": 5,
+      "tesseractLiteralNameMismatches": 34,
+      "rapidNameConfidenceDiagnostic": [
+        {
+          "threshold": 0.9,
+          "labels": 58,
+          "belowThreshold": 0,
+          "literalMismatchesBelowThreshold": 0,
+          "literalMismatchesAtOrAboveThreshold": 5,
+          "matchingReadingsBelowThreshold": 0
+        },
+        {
+          "threshold": 0.95,
+          "labels": 58,
+          "belowThreshold": 10,
+          "literalMismatchesBelowThreshold": 1,
+          "literalMismatchesAtOrAboveThreshold": 4,
+          "matchingReadingsBelowThreshold": 9
+        },
+        {
+          "threshold": 0.98,
+          "labels": 58,
+          "belowThreshold": 37,
+          "literalMismatchesBelowThreshold": 4,
+          "literalMismatchesAtOrAboveThreshold": 1,
+          "matchingReadingsBelowThreshold": 33
+        },
+        {
+          "threshold": 0.99,
+          "labels": 58,
+          "belowThreshold": 49,
+          "literalMismatchesBelowThreshold": 4,
+          "literalMismatchesAtOrAboveThreshold": 1,
+          "matchingReadingsBelowThreshold": 45
+        }
+      ],
+      "sourceImageRecheckCandidates": [
+        {
+          "sourceRowOnPage": 2,
+          "independentLiteral": "Abadi,Shirin",
+          "rapidName": "AbadiShirin",
+          "tesseractName": "Abadi. Shirin",
+          "rapidNameConfidence": 0.9948899637569081
+        },
+        {
+          "sourceRowOnPage": 3,
+          "independentLiteral": "Abbott,Matthew James William",
+          "rapidName": "Abbott,Matthew James William",
+          "tesseractName": "Abbott Matthew James William",
+          "rapidNameConfidence": 0.9371887062277112
+        },
+        {
+          "sourceRowOnPage": 5,
+          "independentLiteral": "Abbott,Stephen John",
+          "rapidName": "Abbott,Stephen John",
+          "tesseractName": "Abbott Stephen John",
+          "rapidNameConfidence": 0.9527700417920163
+        },
+        {
+          "sourceRowOnPage": 7,
+          "independentLiteral": "Abdjalieva,Feruza",
+          "rapidName": "Abdjalieva,Feruza",
+          "tesseractName": "Abdjalieva,Feniza",
+          "rapidNameConfidence": 0.9272628847290488
+        },
+        {
+          "sourceRowOnPage": 8,
+          "independentLiteral": "Abdulmenan,Jalud",
+          "rapidName": "Abdulmenan,Jalud",
+          "tesseractName": "Abdulmenan Jalud",
+          "rapidNameConfidence": 0.9912686049938202
+        },
+        {
+          "sourceRowOnPage": 11,
+          "independentLiteral": "Abia,Jo-Ann",
+          "rapidName": "Abia,Jo-Ann",
+          "tesseractName": "Abia Jo-Ann",
+          "rapidNameConfidence": 0.9716445370153948
+        },
+        {
+          "sourceRowOnPage": 16,
+          "independentLiteral": "Absolon,Nancy",
+          "rapidName": "Absolon,Nancy",
+          "tesseractName": "Absolon.Nancy",
+          "rapidNameConfidence": 0.9872852884806119
+        },
+        {
+          "sourceRowOnPage": 18,
+          "independentLiteral": "Abustan,Priscilla",
+          "rapidName": "Abustan,Priscilla",
+          "tesseractName": "Abustan.Priscilla",
+          "rapidNameConfidence": 0.993523895740509
+        },
+        {
+          "sourceRowOnPage": 20,
+          "independentLiteral": "Acker,Joe",
+          "rapidName": "Acker,Joe",
+          "tesseractName": "Acker Joe",
+          "rapidNameConfidence": 0.9270272983445061
+        },
+        {
+          "sourceRowOnPage": 21,
+          "independentLiteral": "Ackerley,Christine",
+          "rapidName": "Ackerley.Christine",
+          "tesseractName": "Ackerley, Christine",
+          "rapidNameConfidence": 0.9757801824145846
+        },
+        {
+          "sourceRowOnPage": 22,
+          "independentLiteral": "Ackerman,Jacob",
+          "rapidName": "Ackerman,Jacob",
+          "tesseractName": "Ackerman Jacob",
+          "rapidNameConfidence": 0.9477229778255735
+        },
+        {
+          "sourceRowOnPage": 23,
+          "independentLiteral": "Aclan,Ranahra",
+          "rapidName": "Aclan,Ranahra",
+          "tesseractName": "Aclan.Ranalira",
+          "rapidNameConfidence": 0.9609747391480666
+        },
+        {
+          "sourceRowOnPage": 26,
+          "independentLiteral": "Adam,Catherine",
+          "rapidName": "Adam,Catherine",
+          "tesseractName": "Adam Catherine",
+          "rapidNameConfidence": 0.984864605324609
+        },
+        {
+          "sourceRowOnPage": 28,
+          "independentLiteral": "Adams,Brandon",
+          "rapidName": "Adams,Brandon",
+          "tesseractName": "Adams.Brandon",
+          "rapidNameConfidence": 0.965272857592656
+        },
+        {
+          "sourceRowOnPage": 30,
+          "independentLiteral": "Adams,Jana Marie",
+          "rapidName": "Adams,Jana Marie",
+          "tesseractName": "Adams Jana Marie",
+          "rapidNameConfidence": 0.9835195392370224
+        },
+        {
+          "sourceRowOnPage": 31,
+          "independentLiteral": "Adams,Michael",
+          "rapidName": "Adams.Michael",
+          "tesseractName": "Adams.Michael",
+          "rapidNameConfidence": 0.9420589896348807
+        },
+        {
+          "sourceRowOnPage": 33,
+          "independentLiteral": "Adamy,Ali",
+          "rapidName": "Adamy,Ali",
+          "tesseractName": "Adamy.Ali",
+          "rapidNameConfidence": 0.9486359490288628
+        },
+        {
+          "sourceRowOnPage": 34,
+          "independentLiteral": "Aeichele,Deborah Eileen",
+          "rapidName": "Aeichele,Deborah Eileen",
+          "tesseractName": "Aeichele Deborah Eileen",
+          "rapidNameConfidence": 0.95898771804312
+        },
+        {
+          "sourceRowOnPage": 36,
+          "independentLiteral": "Aggarwal,Siddharth",
+          "rapidName": "Aggarwal.Siddharth",
+          "tesseractName": "Aggarwal, Siddharth",
+          "rapidNameConfidence": 0.9655400150352054
+        },
+        {
+          "sourceRowOnPage": 37,
+          "independentLiteral": "Ahmed,Shukri",
+          "rapidName": "Ahmed,Shukri",
+          "tesseractName": "Abmed Shukn",
+          "rapidNameConfidence": 0.9867383589347204
+        },
+        {
+          "sourceRowOnPage": 38,
+          "independentLiteral": "Ahn,Chris Sung Ho",
+          "rapidName": "Ahn,Chris Sung Ho",
+          "tesseractName": "Almn.Chris Sung Ho",
+          "rapidNameConfidence": 0.9594111582812141
+        },
+        {
+          "sourceRowOnPage": 39,
+          "independentLiteral": "Ahn,Joseph",
+          "rapidName": "Ahn,Joseph",
+          "tesseractName": "Aln.Joseph",
+          "rapidNameConfidence": 0.9944793581962585
+        },
+        {
+          "sourceRowOnPage": 40,
+          "independentLiteral": "Ahsan,Muhammad",
+          "rapidName": "Ahsan,Muhammad",
+          "tesseractName": "Ahsan.Muhammad",
+          "rapidNameConfidence": 0.9871509500912258
+        },
+        {
+          "sourceRowOnPage": 41,
+          "independentLiteral": "Ahuja,Jagvinder K.",
+          "rapidName": "Ahuja,Jagvinder K.",
+          "tesseractName": "AlmjaJagvinder K.",
+          "rapidNameConfidence": 0.9569688472482893
+        },
+        {
+          "sourceRowOnPage": 42,
+          "independentLiteral": "Aiken,Ciaran Thomas",
+          "rapidName": "Aiken,Ciaran Thomas",
+          "tesseractName": "Aiken Ciaran Thomas",
+          "rapidNameConfidence": 0.9701513899000067
+        },
+        {
+          "sourceRowOnPage": 44,
+          "independentLiteral": "Aimar,Karen",
+          "rapidName": "Aimar,Karen",
+          "tesseractName": "Aimar.Raren",
+          "rapidNameConfidence": 0.9556771841916171
+        },
+        {
+          "sourceRowOnPage": 48,
+          "independentLiteral": "Akhavien,Azarm",
+          "rapidName": "Akhavien,Azarm",
+          "tesseractName": "Akhavien Azann",
+          "rapidNameConfidence": 0.9514593694891248
+        },
+        {
+          "sourceRowOnPage": 49,
+          "independentLiteral": "Akinyemi,Morenike",
+          "rapidName": "Akinyemi,Morenike",
+          "tesseractName": "Akinyemi.Morenike",
+          "rapidNameConfidence": 0.9651505123166477
+        },
+        {
+          "sourceRowOnPage": 50,
+          "independentLiteral": "Aladi,Jude Ikechukwu",
+          "rapidName": "Aladi,Jude Ikechukwu",
+          "tesseractName": "Aladi Jude kechukwu",
+          "rapidNameConfidence": 0.9945549756288529
+        },
+        {
+          "sourceRowOnPage": 51,
+          "independentLiteral": "Albersheim,Susan G.",
+          "rapidName": "Albersheim,Susan G.",
+          "tesseractName": "Albersheim, Susan G,",
+          "rapidNameConfidence": 0.9933421141222903
+        },
+        {
+          "sourceRowOnPage": 52,
+          "independentLiteral": "Alberts,Paul Glen",
+          "rapidName": "Alberts,Paul Glen",
+          "tesseractName": "Alberts.Paul Glen",
+          "rapidNameConfidence": 0.9790429683292613
+        },
+        {
+          "sourceRowOnPage": 53,
+          "independentLiteral": "Alcock,Rebecca",
+          "rapidName": "Alcock,Rebecca",
+          "tesseractName": "Alcock Rebecca",
+          "rapidNameConfidence": 0.9264705436570304
+        },
+        {
+          "sourceRowOnPage": 54,
+          "independentLiteral": "Alden,Colin M.C.",
+          "rapidName": "Alden,Colin M.C.",
+          "tesseractName": "Alden, Colin MLC,",
+          "rapidNameConfidence": 0.989865243434906
+        },
+        {
+          "sourceRowOnPage": 55,
+          "independentLiteral": "Alden,Tina Marguerita",
+          "rapidName": "Alden.Tina Marguerita",
+          "tesseractName": "Alden. Tina Marewenita",
+          "rapidNameConfidence": 0.9653477924210685
+        },
+        {
+          "sourceRowOnPage": 57,
+          "independentLiteral": "Aldoff,Nancy",
+          "rapidName": "Aldoff,Nancy",
+          "tesseractName": "Aldoff. Nancy",
+          "rapidNameConfidence": 0.9312071253856024
+        },
+        {
+          "sourceRowOnPage": 58,
+          "independentLiteral": "Aldridge,Stephanie A.",
+          "rapidName": "Aldridge,Stephanie A.",
+          "tesseractName": "Aldridge,Stephanie A,",
+          "rapidNameConfidence": 0.9593946252550397
+        }
+      ]
+    },
+    {
+      "sourceId": "phsa-2020-21",
+      "sourceSha256": "87ea680c3e2b9bb940d911a198e41b85068535964ee61b6992e651271bd72b60",
+      "selectedRapidConfiguration": "english-4096",
+      "fixture": {
+        "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-history-batches-benchmark-2020-21-original-transcript.tsv",
+        "sha256": "1722bd99c76d095908a17e119e47dffec75432113cb7638e2796fdd18cdc5354"
+      },
+      "fixtureRows": 55,
+      "rapidLiteralNameMismatches": 2,
+      "tesseractLiteralNameMismatches": 3,
+      "rapidNameConfidenceDiagnostic": [
+        {
+          "threshold": 0.9,
+          "labels": 55,
+          "belowThreshold": 0,
+          "literalMismatchesBelowThreshold": 0,
+          "literalMismatchesAtOrAboveThreshold": 2,
+          "matchingReadingsBelowThreshold": 0
+        },
+        {
+          "threshold": 0.95,
+          "labels": 55,
+          "belowThreshold": 0,
+          "literalMismatchesBelowThreshold": 0,
+          "literalMismatchesAtOrAboveThreshold": 2,
+          "matchingReadingsBelowThreshold": 0
+        },
+        {
+          "threshold": 0.98,
+          "labels": 55,
+          "belowThreshold": 22,
+          "literalMismatchesBelowThreshold": 1,
+          "literalMismatchesAtOrAboveThreshold": 1,
+          "matchingReadingsBelowThreshold": 21
+        },
+        {
+          "threshold": 0.99,
+          "labels": 55,
+          "belowThreshold": 37,
+          "literalMismatchesBelowThreshold": 1,
+          "literalMismatchesAtOrAboveThreshold": 1,
+          "matchingReadingsBelowThreshold": 36
+        }
+      ],
+      "sourceImageRecheckCandidates": [
+        {
+          "sourceRowOnPage": 23,
+          "independentLiteral": "Achen,Melanie Wynne",
+          "rapidName": "Achen,MelanieWynne",
+          "tesseractName": "Achen,Melanie Wynne",
+          "rapidNameConfidence": 0.9932295050885942
+        },
+        {
+          "sourceRowOnPage": 29,
+          "independentLiteral": "Adagbonyin,Maurice",
+          "rapidName": "Adagbonyin.Maurice",
+          "tesseractName": "Adagbonyin.Maurice",
+          "rapidNameConfidence": 0.9742094443904029
+        },
+        {
+          "sourceRowOnPage": 34,
+          "independentLiteral": "Adams,Jana Marie",
+          "rapidName": "Adams,Jana Marie",
+          "tesseractName": "Adams Jana Marie",
+          "rapidNameConfidence": 0.972952350974083
+        },
+        {
+          "sourceRowOnPage": 48,
+          "independentLiteral": "Ahmad,Waqar",
+          "rapidName": "Ahmad,Waqar",
+          "tesseractName": "Ahmad,Wagar",
+          "rapidNameConfidence": 0.9952880902723833
+        }
+      ]
+    },
+    {
+      "sourceId": "phsa-2021-22",
+      "sourceSha256": "944c99fa7b7ede643cb4c426a5e9ab30aa906d8f81fda379f0206e4b0cdcd25c",
+      "selectedRapidConfiguration": "chinese-4096",
+      "fixture": {
+        "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-history-batches-benchmark-2021-22-original-transcript.tsv",
+        "sha256": "2dccc1a131eccce4fee878beb13dab1d38811dbc987e42ce9904013cc338e7c6"
+      },
+      "fixtureRows": 44,
+      "rapidLiteralNameMismatches": 3,
+      "tesseractLiteralNameMismatches": 3,
+      "rapidNameConfidenceDiagnostic": [
+        {
+          "threshold": 0.9,
+          "labels": 44,
+          "belowThreshold": 0,
+          "literalMismatchesBelowThreshold": 0,
+          "literalMismatchesAtOrAboveThreshold": 3,
+          "matchingReadingsBelowThreshold": 0
+        },
+        {
+          "threshold": 0.95,
+          "labels": 44,
+          "belowThreshold": 0,
+          "literalMismatchesBelowThreshold": 0,
+          "literalMismatchesAtOrAboveThreshold": 3,
+          "matchingReadingsBelowThreshold": 0
+        },
+        {
+          "threshold": 0.98,
+          "labels": 44,
+          "belowThreshold": 6,
+          "literalMismatchesBelowThreshold": 1,
+          "literalMismatchesAtOrAboveThreshold": 2,
+          "matchingReadingsBelowThreshold": 5
+        },
+        {
+          "threshold": 0.99,
+          "labels": 44,
+          "belowThreshold": 20,
+          "literalMismatchesBelowThreshold": 3,
+          "literalMismatchesAtOrAboveThreshold": 0,
+          "matchingReadingsBelowThreshold": 17
+        }
+      ],
+      "sourceImageRecheckCandidates": [
+        {
+          "sourceRowOnPage": 4,
+          "independentLiteral": "Abbott,Matthew James William",
+          "rapidName": "Abbott.Matthew James William",
+          "tesseractName": "Abbott,Matthew James William",
+          "rapidNameConfidence": 0.978498603616442
+        },
+        {
+          "sourceRowOnPage": 5,
+          "independentLiteral": "Abbott,Robb James Prosser",
+          "rapidName": "Abbott.Robb James Prosser",
+          "tesseractName": "Abbott,Robb James Prosser",
+          "rapidNameConfidence": 0.9814500951766968
+        },
+        {
+          "sourceRowOnPage": 11,
+          "independentLiteral": "Abdjalieva,Feruza",
+          "rapidName": "Abdjalieva,Feruza",
+          "tesseractName": "Abdjalieva.Feruza",
+          "rapidNameConfidence": 0.9899236384560081
+        },
+        {
+          "sourceRowOnPage": 18,
+          "independentLiteral": "Abou Mourad,Yasser Rifaat",
+          "rapidName": "Abou Mourad, Yasser Rifaat",
+          "tesseractName": "Abou Mourad. Yasser Rifaat",
+          "rapidNameConfidence": 0.9827154806027045
+        },
+        {
+          "sourceRowOnPage": 21,
+          "independentLiteral": "Abrahamse,Bree-Anna",
+          "rapidName": "Abrahamse,Bree-Anna",
+          "tesseractName": "Abrahamse.Bree-Anna",
+          "rapidNameConfidence": 0.9806982937612032
+        },
+        {
+          "sourceRowOnPage": 28,
+          "independentLiteral": "Achen,Melanie Wynne",
+          "rapidName": "Achen,Melanie Wymne",
+          "tesseractName": "Achen,Melanie Wynne",
+          "rapidNameConfidence": 0.9851736332240858
+        }
+      ]
+    },
+    {
+      "sourceId": "phsa-2022-23",
+      "sourceSha256": "6046bb7be6944bc729926adba20a826486820a2a3b9b38090c60d400b2bc72a1",
+      "selectedRapidConfiguration": "baseline-default",
+      "fixture": {
+        "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-history-batches-benchmark-2022-23-original-transcript.tsv",
+        "sha256": "da913fa3b01006e80acd2ed25adcfd67855a5b07f0ab2f44c1d9d99525ea8b93"
+      },
+      "fixtureRows": 42,
+      "rapidLiteralNameMismatches": 1,
+      "tesseractLiteralNameMismatches": 4,
+      "rapidNameConfidenceDiagnostic": [
+        {
+          "threshold": 0.9,
+          "labels": 42,
+          "belowThreshold": 0,
+          "literalMismatchesBelowThreshold": 0,
+          "literalMismatchesAtOrAboveThreshold": 1,
+          "matchingReadingsBelowThreshold": 0
+        },
+        {
+          "threshold": 0.95,
+          "labels": 42,
+          "belowThreshold": 0,
+          "literalMismatchesBelowThreshold": 0,
+          "literalMismatchesAtOrAboveThreshold": 1,
+          "matchingReadingsBelowThreshold": 0
+        },
+        {
+          "threshold": 0.98,
+          "labels": 42,
+          "belowThreshold": 4,
+          "literalMismatchesBelowThreshold": 1,
+          "literalMismatchesAtOrAboveThreshold": 0,
+          "matchingReadingsBelowThreshold": 3
+        },
+        {
+          "threshold": 0.99,
+          "labels": 42,
+          "belowThreshold": 12,
+          "literalMismatchesBelowThreshold": 1,
+          "literalMismatchesAtOrAboveThreshold": 0,
+          "matchingReadingsBelowThreshold": 11
+        }
+      ],
+      "sourceImageRecheckCandidates": [
+        {
+          "sourceRowOnPage": 25,
+          "independentLiteral": "Abro,Manzoor Hussain",
+          "rapidName": "Abro,Manzoor Hussain",
+          "tesseractName": "Abro.Manzoor Hussain",
+          "rapidNameConfidence": 0.9704964369535446
+        },
+        {
+          "sourceRowOnPage": 28,
+          "independentLiteral": "Abubakar,Ibrahim",
+          "rapidName": "Abubakar,Ibrahim",
+          "tesseractName": "Abubakar. Ibrahim",
+          "rapidNameConfidence": 0.9988120459020138
+        },
+        {
+          "sourceRowOnPage": 31,
+          "independentLiteral": "Ackerman,Jacob",
+          "rapidName": "Ackerman,Jacob",
+          "tesseractName": "Ackerman.Jacob",
+          "rapidNameConfidence": 0.9991698179926191
+        },
+        {
+          "sourceRowOnPage": 38,
+          "independentLiteral": "Adams,Jana Marie",
+          "rapidName": "Adams,JanaMarie",
+          "tesseractName": "Adams,Jana Marie",
+          "rapidNameConfidence": 0.9682588617006938
+        },
+        {
+          "sourceRowOnPage": 42,
+          "independentLiteral": "Adamson,Christine",
+          "rapidName": "Adamson,Christine",
+          "tesseractName": "Adamson.Christine",
+          "rapidNameConfidence": 0.9845490350442774
+        }
+      ]
+    },
+    {
+      "sourceId": "phsa-2023-24",
+      "sourceSha256": "89cf82dd1701081e4073408fc38006a08b5033e151d5a0cb2a4ff0c096594ab7",
+      "selectedRapidConfiguration": "chinese-4096",
+      "fixture": {
+        "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-history-batches-benchmark-2023-24-original-transcript.tsv",
+        "sha256": "a264af85a9fefbbbaf9129c94f0612531a55ef8ddea11e692c91829092983f7d"
+      },
+      "fixtureRows": 42,
+      "rapidLiteralNameMismatches": 0,
+      "tesseractLiteralNameMismatches": 0,
+      "rapidNameConfidenceDiagnostic": [
+        {
+          "threshold": 0.9,
+          "labels": 42,
+          "belowThreshold": 0,
+          "literalMismatchesBelowThreshold": 0,
+          "literalMismatchesAtOrAboveThreshold": 0,
+          "matchingReadingsBelowThreshold": 0
+        },
+        {
+          "threshold": 0.95,
+          "labels": 42,
+          "belowThreshold": 0,
+          "literalMismatchesBelowThreshold": 0,
+          "literalMismatchesAtOrAboveThreshold": 0,
+          "matchingReadingsBelowThreshold": 0
+        },
+        {
+          "threshold": 0.98,
+          "labels": 42,
+          "belowThreshold": 4,
+          "literalMismatchesBelowThreshold": 0,
+          "literalMismatchesAtOrAboveThreshold": 0,
+          "matchingReadingsBelowThreshold": 4
+        },
+        {
+          "threshold": 0.99,
+          "labels": 42,
+          "belowThreshold": 5,
+          "literalMismatchesBelowThreshold": 0,
+          "literalMismatchesAtOrAboveThreshold": 0,
+          "matchingReadingsBelowThreshold": 5
+        }
+      ],
+      "sourceImageRecheckCandidates": []
+    }
+  ],
+  "firstTableImageLabeledRows": 405,
+  "firstTableLiteralMoneyFieldsAvailable": 810,
+  "additional2015BatchDiagnostic": {
+    "batch": "phsa-2015-16-002",
+    "imageReadRows": 400,
+    "requestedFieldCounts": {
+      "name": 260,
+      "remuneration": 156,
+      "expenses": 44
+    },
+    "bothEngineMoneyMatches": 200,
+    "definiteMoneyMismatches": 0,
+    "recordedFlagReasons": {
+      "rapid-name-confidence-below-0.98": 100,
+      "tesseract-pay-confidence-below-90": 155,
+      "tesseract-name-confidence-below-85": 177,
+      "tesseract-expense-confidence-below-90": 39,
+      "source-name-lowercase-word-initial-needs-image-review": 14,
+      "source-given-name-word-spacing-needs-image-review": 1,
+      "rapid-pay-confidence-below-0.98": 2,
+      "rapid-expense-confidence-below-0.98": 5
+    },
+    "tesseractNameDiagnostic": [
+      {
+        "threshold": 50,
+        "labels": 260,
+        "belowThreshold": 100,
+        "literalMismatchesBelowThreshold": 1,
+        "literalMismatchesAtOrAboveThreshold": 5,
+        "matchingReadingsBelowThreshold": 99
+      },
+      {
+        "threshold": 70,
+        "labels": 260,
+        "belowThreshold": 133,
+        "literalMismatchesBelowThreshold": 1,
+        "literalMismatchesAtOrAboveThreshold": 5,
+        "matchingReadingsBelowThreshold": 132
+      },
+      {
+        "threshold": 80,
+        "labels": 260,
+        "belowThreshold": 148,
+        "literalMismatchesBelowThreshold": 1,
+        "literalMismatchesAtOrAboveThreshold": 5,
+        "matchingReadingsBelowThreshold": 147
+      },
+      {
+        "threshold": 85,
+        "labels": 260,
+        "belowThreshold": 177,
+        "literalMismatchesBelowThreshold": 1,
+        "literalMismatchesAtOrAboveThreshold": 5,
+        "matchingReadingsBelowThreshold": 176
+      },
+      {
+        "threshold": 90,
+        "labels": 260,
+        "belowThreshold": 189,
+        "literalMismatchesBelowThreshold": 3,
+        "literalMismatchesAtOrAboveThreshold": 3,
+        "matchingReadingsBelowThreshold": 186
+      }
+    ],
+    "paddleNameDiagnostic": [
+      {
+        "threshold": 0.9,
+        "labels": 260,
+        "belowThreshold": 0,
+        "literalMismatchesBelowThreshold": 0,
+        "literalMismatchesAtOrAboveThreshold": 6,
+        "matchingReadingsBelowThreshold": 0
+      },
+      {
+        "threshold": 0.95,
+        "labels": 260,
+        "belowThreshold": 5,
+        "literalMismatchesBelowThreshold": 0,
+        "literalMismatchesAtOrAboveThreshold": 6,
+        "matchingReadingsBelowThreshold": 5
+      },
+      {
+        "threshold": 0.98,
+        "labels": 260,
+        "belowThreshold": 100,
+        "literalMismatchesBelowThreshold": 1,
+        "literalMismatchesAtOrAboveThreshold": 5,
+        "matchingReadingsBelowThreshold": 99
+      },
+      {
+        "threshold": 0.99,
+        "labels": 260,
+        "belowThreshold": 114,
+        "literalMismatchesBelowThreshold": 1,
+        "literalMismatchesAtOrAboveThreshold": 5,
+        "matchingReadingsBelowThreshold": 113
+      }
+    ],
+    "nameMismatchInterpretation": "Six differences per engine concern contextual I/l typography choices, not pixel-proved glyph errors. Exact qualified ledger and peer/root adoption apply separately."
+  },
+  "methodLimits": [
+    "The400-row batch is selected from low-confidence/name-quality flags after disagreement-priority allocation. It is not an unbiased source error-rate estimate or proof that unreviewed rows are correct.",
+    "Literal fixture mismatches are source-image recheck candidates; a manual fixture can also contain reviewer error. Frozen fixtures must not be rewritten in response to machine output.",
+    "Matching numeric values in155tesseract-pay-below90 and39tesseract-expense-below90 targets demonstrate many confidence-only flags in this bounded sample. They do not waive missing detections, reader disagreement, source glyph ambiguity or geometry/period controls.",
+    "First-table source-specific font/density fixtures and this independently image-read held-out batch can inform future field-specific confidence calibration. Any calibration change needs a new versioned profile and retained original outputs/flags; this script changes none.",
+    "High-confidence agreed-name I/l, pipes and spacing checks remain necessary. No generic uppercase or name-dictionary replacement is performed."
+  ],
+  "acceptedEmployeeRows": 0,
+  "mutatedSourceRowsOrFlags": false
+}

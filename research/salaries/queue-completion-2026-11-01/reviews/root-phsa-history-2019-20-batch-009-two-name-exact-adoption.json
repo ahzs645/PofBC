@@ -1,0 +1,107 @@
+{
+  "frozen": true,
+  "reviewer": "/root",
+  "reviewedOn": "2026-11-02",
+  "decision": "adopt-exact-two-source-name-ambiguities",
+  "sourceId": "phsa-2019-20",
+  "sourceSha256": "0e31ac2054f0c2d4ef78797185dddd96cc0cdf2eab94bd6841fa24e1c38e7d02",
+  "batch": "phsa-2019-20-009",
+  "exactCaseLedger": {
+    "path": "research/salaries/queue-completion-2026-11-01/reviews/root-phsa-history-2019-20-batch-009-two-name-exact-source-ambiguity-ledger.json",
+    "sha256": "d8332f9b4606a7ac8ecc65a008df83e3acbabe94fec79f9a5a9bad25e0357767"
+  },
+  "independentPeer": {
+    "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-history-peer-municipal-2019-20-009-thirtyfive-final-comparison.json",
+    "sha256": "d93390e7785bd9caa7135cf15725ab7cfd1196df2c34fc0ca2200d9eeb1f56b8"
+  },
+  "exactCases": [
+    {
+      "sequence": 146,
+      "physicalPage": 57,
+      "sourceRowOnPage": 54,
+      "cropSha256": "4832a8e8bba5fac9e881dc6deaabbb7452137f18676502b9108684f18f6a9b69",
+      "primary": "Kung,Carrie Szu Ya",
+      "visibleAlternatives": [
+        "Kung,Carrie Szu Ya",
+        "Kung,Camie Szu Ya"
+      ],
+      "allowedFields": [
+        "name"
+      ],
+      "caseProvenByPixels": false,
+      "actualOriginal1200SourceView": {
+        "path": "/workspace/salary-review-municipal-tmp/phsa-2019-20-009/post-source/0146-name-actual1200-ink.png",
+        "sha256": "929567dd609d94cfa1e9d179e401e833c453645a6a3089b32be618cee39277c4",
+        "cropBoxWithinActual1200": [
+          480,
+          12,
+          1564,
+          112
+        ],
+        "originalRgbPixelsUnchanged": true
+      },
+      "actualCurrent300Context": {
+        "path": "/workspace/salary-review-municipal-tmp/phsa-2019-20-009/post-source/0146-native-fullpage-context300.png",
+        "sha256": "71e3ce9929e44421bb86857ecc714335cbcdc55b9009bedcb297c52828aabe27",
+        "original300DpiPixelBox": [
+          205,
+          2766,
+          1250,
+          2975
+        ],
+        "sourceFullpageSha256": "0421d4ac64b1b82ab8229305004323c0a7eafd0b4a80a53f8235590fa3744d86",
+        "unmodifiedRgbCrop": true
+      }
+    },
+    {
+      "sequence": 266,
+      "physicalPage": 60,
+      "sourceRowOnPage": 39,
+      "cropSha256": "dfb9d72dffa01c6887ca050260b6400ee7283fcdd277344b0d6dc16ddc626931",
+      "primary": "Lazaro,Rochallene",
+      "visibleAlternatives": [
+        "Lazaro,Rochallene",
+        "Lazaro,Rochellene"
+      ],
+      "allowedFields": [
+        "name"
+      ],
+      "caseProvenByPixels": false,
+      "actualOriginal1200SourceView": {
+        "path": "/workspace/salary-review-municipal-tmp/phsa-2019-20-009/source-rereads/0266-name-actual1200-ink.png",
+        "sha256": "32295a88784e76785a5f9ca0110c97afa7836e69f22acd6c93e2ed29ed505a07",
+        "cropBoxWithin1200": [
+          456,
+          0,
+          1492,
+          194
+        ]
+      },
+      "actualCurrent300Context": {
+        "path": "/workspace/salary-review-municipal-tmp/phsa-2019-20-009/source-rereads/0266-native-fullpage-context300.png",
+        "sha256": "766773cbdcc138734a4fcb8a8a55b91631202992724282fe13336af8386061a0",
+        "original300DpiPixelBox": [
+          205,
+          2146,
+          1250,
+          2355
+        ],
+        "sourceFullpageSha256": "1dfd9babff8fabf005424d81738318ee3a8dbe100cb3764e79e08cb593a54e97",
+        "sourceFullpagePath": "/workspace/salary-review-municipal-tmp/phsa-2019-20-009/actual300/p060.png",
+        "unmodifiedRgbCrop": true
+      }
+    }
+  ],
+  "rootPersonallyInspectedCurrentOriginalNames": [
+    146,
+    266
+  ],
+  "caseProvenByPixels": false,
+  "requireClosedExactCaseBoundConsumerException": true,
+  "publicSourceWarningRequired": true,
+  "noOtherNameOrMonetaryFieldAuthority": true,
+  "acceptedQualifiedCases": true,
+  "qualifiedCases": 2,
+  "wholeSourceAccepted": false,
+  "reviewScope": "Root personally read both current actual1200 crops and300adjacent source contexts after the two independently frozen source readers. Adopt preferredCarrie with Camie finite rr/m alternative only146; preferredRochallene with Rochellene finitea/e alternative only266. Context orders surnames and supplies no given-name identity proof. No pixelunique, dictionary, prior-year, general spelling substitution or money claim."
+}

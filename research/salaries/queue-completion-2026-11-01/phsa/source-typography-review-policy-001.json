@@ -1,0 +1,18 @@
+{
+  "date": "2026-11-01",
+  "authority": "Root coordinator, acting on the user instruction to use reasonable processing assumptions, explicitly permits qualified contextual I/l transcription where actual source glyphs are visually identical.",
+  "exactGlyphStatus": "resolved-from-original-image",
+  "qualifiedStatus": "resolved-with-source-typography-qualification",
+  "qualifiedStatusAlias": "resolved-qualified-typography",
+  "requirements": [
+    "Preserve the actual visible glyph form and all plausible I/l alternatives; do not claim pixel case discrimination when none exists.",
+    "Record the exact sourceId, physicalPage, sourceRowOnPage, character position(s), proposed literal display name and interpretation basis for every qualified field.",
+    "Surname alphabetical placement or demonstrated source initial-capital convention may support an explicit contextual transcription. Do not infer a full name, use dictionary expansion or substitute an unrelated letter.",
+    "Qualified values remain distinct from exact-glyph resolutions and require peer review plus root adoption of the exact case ledger.",
+    "Every affected source must carry a publicWarning identifying the qualified name observations and linking their exact evidence/alternative ledger.",
+    "Only the name field can receive a typography qualification. Monetary, date, employer, position, page and multiplicity uncertainty is not waived.",
+    "Existing frozen raw outputs, benchmark transcripts, ordinary batches and the earlier accepted FY2024/25 workflow remain unchanged."
+  ],
+  "receiptShape": "Keep the ordinary seven resolution keys. A qualified row uses the qualified status and a top-level sourceTypographyQualifications list (or a separately pinned exact case ledger) keyed by physicalPage/sourceRowOnPage. Record proposedName, visibleAlternatives, characterPositions, assumptionBasis and actualSourceEvidence/crop hashes. Do not silently broaden unrequested fields.",
+  "oldFrozenBatchInstructionsAmendedByThisNewExplicitPolicy": true
+}

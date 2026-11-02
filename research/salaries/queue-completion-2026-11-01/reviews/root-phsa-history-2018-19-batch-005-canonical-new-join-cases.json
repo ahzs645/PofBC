@@ -1,0 +1,132 @@
+{
+  "frozen": true,
+  "reviewer": "/root",
+  "reviewedOn": "2026-11-02",
+  "sourceId": "phsa-2018-19",
+  "sourceSha256": "ddeba470b875451f6180eb442ed921f7902cc910d62a026c11ab298ca3d0440f",
+  "independentPeer": {
+    "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-history-batches-canonical-own-2018-19-and-2017-18-final-name28-source-comparison.json",
+    "sha256": "7e9004398b573d494905e7ec08ea8b086af52941ed69a2dff26425d055c67f60"
+  },
+  "additionalIndependentPeer": {
+    "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-education-2018-19-canonical-twelve-final-current-source-comparison.json",
+    "sha256": "feef3bba0d24086dfdc026b4e23bcd40480149710858f014a048a59efa087e82"
+  },
+  "batch": "phsa-2018-19-005",
+  "cases": [
+    {
+      "physicalPage": 73,
+      "sourceRowOnPage": 52,
+      "sourceId": "phsa-2018-19",
+      "sourceSha256": "ddeba470b875451f6180eb442ed921f7902cc910d62a026c11ab298ca3d0440f",
+      "proposedName": "Ng,Bernard",
+      "chosenContextualTranscription": "Ng,Bernard",
+      "visibleAlternatives": [
+        "Ng,Bernard",
+        "Ng,Bemard"
+      ],
+      "ambiguityKind": "rn-m-source-segmentation",
+      "qualificationPolicy": {
+        "path": "research/salaries/queue-completion-2026-11-01/phsa/source-name-segmentation-review-policy-002.json",
+        "sha256": "fcfc11b7872b8c111018dd5b74494ea25391d14e1e905aa327f6a435c6e1e40c"
+      },
+      "caseProvenByPixels": false,
+      "cropSha256": "99fc031b87ea20ca256116e006bbea9db625ebaf9575da253220b72d1d4fdcc6",
+      "observedSourceSpans": [
+        {
+          "start": 5,
+          "end": 7,
+          "primary": "rn",
+          "other": "m"
+        }
+      ],
+      "actualSourceEvidence": {
+        "native300Name": {
+          "path": "research/salaries/queue-completion-2026-11-01/phsa/canonical-review/phsa-2018-19-direct-neither/p073-r52-native300-name.png",
+          "sha256": "05e7331f83362a0eab9a1156bfb14469dbe645c0d02159b9f2ffd98c0b390158",
+          "sourcePixelBox": [
+            202,
+            2892,
+            1658,
+            2948
+          ]
+        },
+        "wholePage600Name": {
+          "path": "research/salaries/queue-completion-2026-11-01/phsa/canonical-review/phsa-2018-19-direct-neither/p073-r52-whole600-name.png",
+          "sha256": "b6f0312dc71b32809d25b9c44f0b89f54b3c77496131942c3d1acba9bf785bda",
+          "sourcePixelBox": [
+            404,
+            5784,
+            3316,
+            5896
+          ]
+        },
+        "native300Context": {
+          "path": "research/salaries/queue-completion-2026-11-01/phsa/canonical-review/phsa-2018-19-direct-neither/p073-r52-native300-context.png",
+          "sha256": "6d38b047d414e4c5b54043765f252a74d8f0e89d61143b60c8c5a66cabe0cd89",
+          "sourcePixelBox": [
+            202,
+            2792,
+            1658,
+            3048
+          ]
+        },
+        "wholePage600Context": {
+          "path": "research/salaries/queue-completion-2026-11-01/phsa/canonical-review/phsa-2018-19-direct-neither/p073-r52-whole600-context.png",
+          "sha256": "0ae5ca4d8f83700e5ad16ad7098dfb83ebd737314fa54a23646eec9185d5629c",
+          "sourcePixelBox": [
+            404,
+            5584,
+            3316,
+            6096
+          ]
+        },
+        "native300FullRow": {
+          "path": "research/salaries/queue-completion-2026-11-01/phsa/canonical-review/phsa-2018-19-direct-neither/p073-r52-native300-fullrow.png",
+          "sha256": "17ca4f69cc1ab5746b6ce4dbe6a6ec03ae8603a46bac6e5133d28d3abda78d5a",
+          "sourcePixelBox": [
+            0,
+            2892,
+            2550,
+            2948
+          ]
+        },
+        "wholePage600FullRow": {
+          "path": "research/salaries/queue-completion-2026-11-01/phsa/canonical-review/phsa-2018-19-direct-neither/p073-r52-whole600-fullrow.png",
+          "sha256": "dcdb0e08f8a907e8b25747142a563fb89005945e3517c048220747672c2475ce",
+          "sourcePixelBox": [
+            0,
+            5784,
+            5100,
+            5896
+          ]
+        }
+      },
+      "priorEffectiveOverlay": {
+        "path": "research/salaries/queue-completion-2026-11-01/phsa/overlays/phsa-2018-19-manual-overlay-005.json",
+        "sha256": "0694e8e40948a9a1b4a948cea2364af1304858a8678aed57dd58205c83838d33"
+      },
+      "assumptionBasis": "Current actual native300 and whole600 source fields personally read. Genuine low-resolution lowercase shoulder segmentation retained where explicitly marked, with current source alphabetical/context basis stated where used; no dictionary/prior-year identity authority. No arbitrary letter-family expansion.",
+      "heldV3ChosenNameUnchanged": true,
+      "heldV3CompleteVisibleAlternatives": [
+        "Ng,Bernard"
+      ],
+      "revisionKind": "new-explicit-source-join-qualification",
+      "independentCurrentSourcePeer": {
+        "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-education-2018-19-canonical-twelve-final-current-source-comparison.json",
+        "sha256": "feef3bba0d24086dfdc026b4e23bcd40480149710858f014a048a59efa087e82"
+      },
+      "batch": "phsa-2018-19-005",
+      "rootActualSourceAcceptance": {
+        "path": "research/salaries/queue-completion-2026-11-01/reviews/root-phsa-history-2018-19-canonical-nine-qualified-three-direct-source-acceptance.json",
+        "sha256": "7ba2b69db6967a234bb59fea3f9f33fec47f0ca20155c39b4b3b658c812e8eed"
+      }
+    }
+  ],
+  "canonicalActualSourceAcceptance": {
+    "path": "research/salaries/queue-completion-2026-11-01/reviews/root-phsa-history-2018-19-canonical-nine-qualified-three-direct-source-acceptance.json",
+    "sha256": "7ba2b69db6967a234bb59fea3f9f33fec47f0ca20155c39b4b3b658c812e8eed"
+  },
+  "publicWarningRequired": true,
+  "caseProvenByPixels": false
+}

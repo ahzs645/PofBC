@@ -1,0 +1,90 @@
+{
+  "frozen": true,
+  "reviewedOn": "2026-11-02",
+  "reviewer": "/root/held_health_review",
+  "sourceId": "phsa-2019-20",
+  "sourceSha256": "0e31ac2054f0c2d4ef78797185dddd96cc0cdf2eab94bd6841fa24e1c38e7d02",
+  "batch": "phsa-2019-20-016",
+  "priorFrozenCurrent": {
+    "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-history-2019-20-016-all282-money-own-whole600-reread.json",
+    "sha256": "9114d281feb8f4f0b20095bec6e98cec50679362c1f1b2d7f1525ae58d6a2049"
+  },
+  "rows": [
+    {
+      "sequence": 174,
+      "field": "expenses",
+      "physicalPage": 115,
+      "sourceRowOnPage": 34,
+      "cropSha256": "0553cd73e827831e841eed32118d48221698f959279cd4e5df680a725b427071",
+      "coldFirstLiteral": 2240,
+      "ownIncorrectSecondaryWhole600Reading": 2340,
+      "correctedCurrentLiteral": 2240,
+      "uncertainty": null,
+      "nativeOriginal300SourceView": {
+        "field": "expenses",
+        "path": "/tmp/queue-completion-phsa/phsa-2019-20/review-images/phsa-2019-20-016-target-views/0174-expenses.png",
+        "sha256": "e26a364caace86381242543c69f54ea476608135e9a33432acfcf04f7c60b589",
+        "originalPdf300DpiPixelBox": [
+          2052,
+          2028,
+          2422,
+          2069
+        ],
+        "noResamplingOrGlyphAlteration": true
+      },
+      "actualWholePage600SourceView": {
+        "path": "/workspace/salary-review-held-health-temp/2019-016-allmoney-source600/0174-expenses-wholepage600-crop.png",
+        "sha256": "1062bd549c48884441749c92e60950a7744f091c91a0692a138f9e37c3d0cdf5",
+        "dpi": 600,
+        "actualPdfWholePageRenderer": "PyMuPDF get_pixmap(dpi=600,alpha=False), then exactinteger pixel crop",
+        "actual600PixelCropBox": [
+          4104,
+          4048,
+          4844,
+          4146
+        ],
+        "noResamplingEnhancementOrRetypedGlyphs": true
+      },
+      "basis": "Second digit2 has diagonal descending into flat baseline, not3doublearches. Literal2,240 restores correctcold."
+    },
+    {
+      "sequence": 203,
+      "field": "remuneration",
+      "physicalPage": 116,
+      "sourceRowOnPage": 12,
+      "cropSha256": "b98daeea95a9277b1dd03c15badba0cd7f97bd444d4c1a23fa7bf659ade2b7a8",
+      "coldFirstLiteral": 88380,
+      "ownIncorrectSecondaryWhole600Reading": 88980,
+      "correctedCurrentLiteral": 88880,
+      "uncertainty": null,
+      "nativeOriginal300SourceView": {
+        "field": "remuneration",
+        "path": "/tmp/queue-completion-phsa/phsa-2019-20/review-images/phsa-2019-20-016-target-views/0203-remuneration.png",
+        "sha256": "2d8a2ca6be294ae868c63bf10d7f9a16da8d8a8f59780b3153a9ad6f57088657",
+        "originalPdf300DpiPixelBox": [
+          1735,
+          1129,
+          2068,
+          1168
+        ],
+        "noResamplingOrGlyphAlteration": true
+      },
+      "actualWholePage600SourceView": {
+        "path": "/workspace/salary-review-held-health-temp/2019-016-allmoney-source600/0203-remuneration-wholepage600-crop.png",
+        "sha256": "bf795a0143df969a33a485b8cf769d24e2d771b1b341ab9dcddafcc7db59d423",
+        "dpi": 600,
+        "actualPdfWholePageRenderer": "PyMuPDF get_pixmap(dpi=600,alpha=False), then exactinteger pixel crop",
+        "actual600PixelCropBox": [
+          3470,
+          2250,
+          4136,
+          2344
+        ],
+        "noResamplingEnhancementOrRetypedGlyphs": true
+      },
+      "basis": "Third and fourthdigits each have two complete loops of8. Literal88,880 differs fromboth owncold88,380 and ownsecondary88,980; no inferredbalancing."
+    }
+  ],
+  "method": "Afterfreshschools84discrepancies, personally reopened unchanged actualnative300 +wholePDF600 originalsourcefields. Unique literal sourcevalues control; no numericqualification/moneyinference or sourcevaluechanges. Originalraw/current/scoped84bytes remainimmutable.",
+  "limits": "Onlytwofields174expense/203pay; ownsecondaryerrors transparently corrected. No other282field/sourcecontrol/cohortclaim; schoolsfinalpositive84peerstillmustbind currentvalues and itsown3corrections."
+}

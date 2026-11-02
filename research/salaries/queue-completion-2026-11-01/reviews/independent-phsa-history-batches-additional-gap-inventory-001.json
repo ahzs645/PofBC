@@ -1,0 +1,1010 @@
+{
+  "reviewer": "/root/recovery_review",
+  "date": "2026-11-01",
+  "scope": "Read-only additional-gap inventory from existing catalogs. No new acquisition, ingestion, outreach, current-availability claim or workqueue expansion. The original9task queue remains distinct.",
+  "inputs": [
+    {
+      "path": "research/salaries/queue-completion-2026-11-01/schools/registered-gap-inventory.json",
+      "sha256": "8f76f189b4100a13d2f2671b597472da83e43d26f4c9c633990b736d088a47b1"
+    },
+    {
+      "path": "research/salaries/queue-completion-schools/sources.json",
+      "sha256": "b86fb29e39e7639d167853c1f393a5d15fd2b9a858f807c2e8547b36dc43c7be"
+    },
+    {
+      "path": "research/salaries/municipal-next-pass/work-queue.json",
+      "sha256": "a170fc5addf2f7ef52b75b87e2305db90754795cf2e097fd38cc301eac1bd714"
+    },
+    {
+      "path": "research/salaries/queue-completion-2026-11-01/municipal/work-queue.json",
+      "sha256": "524184b3191279de57ee4d5b3da9e04649137f71558c061003c8feb65ab7f7e0"
+    },
+    {
+      "path": "research/salaries/continuation-2026-11-01/health/work-queue.json",
+      "sha256": "9429d3ae918847f7dcd8957aad71bbf2165cc1676f9692d3b9163f3f2770f1c0"
+    },
+    {
+      "path": "research/salaries/queue-completion-2026-11-01/acquisition/outbox/outbox.json",
+      "sha256": "f5eb84c68fa1fbfb5cc301437e86ff24dd7b2faf50ffde4293345227ee471cc3"
+    }
+  ],
+  "schoolCurrentScopeDelta": {
+    "inventoryDistricts": 60,
+    "priorCurrentYearCompleteDistricts": 24,
+    "priorMissingBothScopesDistricts": 36,
+    "newIndependentSchoolTrancheClosesDistricts": [
+      22,
+      23,
+      27,
+      33,
+      36,
+      43,
+      44,
+      50,
+      61,
+      68,
+      73
+    ],
+    "afterThatTrancheCurrentYearCompleteDistricts": 35,
+    "afterThatTrancheMissingDistricts": 25,
+    "afterThatTrancheMissingEmployeeAndTrusteeScopes": 50,
+    "periodCaution": "SD8FY2025/26 corroborated-source acceptance does not fill the separate FY2024/25 gap. Employer representation or compiled rows do not prove original source coverage.",
+    "remaining": [
+      {
+        "districtNumber": 8,
+        "employerSlug": "school-district-08",
+        "employerName": "School District No. 8 (Kootenay Lake)",
+        "year": "2024/25",
+        "missingCompleteOriginalScopesAfterNewSchoolTranche": [
+          "employee-remuneration",
+          "school-trustees"
+        ],
+        "previouslyLocatedOriginal": {
+          "sourceUrl": "https://www2.gov.bc.ca/assets/gov/education/administration/resource-management/school-district-financial-reporting/financial-information/sd08-sofi-2025.pdf",
+          "sourceIndexUrl": "https://www2.gov.bc.ca/gov/content/education-training/k-12/administration/financial-management/school-district-financial-reporting/statement-of-financial-information",
+          "sourceSha256": "23ba2672545a6d144847a99939f966436ba92df6b5f508b0f83fd709dd71de4c",
+          "previousTextStatus": "scan-or-native-text-unavailable-ocr-needed",
+          "previousDiscoveryStatus": "retrieved-scan-ocr-needed"
+        },
+        "nextAction": "Refresh the previously located original, confirm actual salary period/definitions/final status, then verify both complete named scopes and controls with independent readers. These discovery entries are not accepted salary rows."
+      },
+      {
+        "districtNumber": 28,
+        "employerSlug": "school-district-28",
+        "employerName": "School District No. 28 (Quesnel)",
+        "year": "2024/25",
+        "missingCompleteOriginalScopesAfterNewSchoolTranche": [
+          "employee-remuneration",
+          "school-trustees"
+        ],
+        "previouslyLocatedOriginal": {
+          "sourceUrl": "https://www2.gov.bc.ca/assets/gov/education/administration/resource-management/school-district-financial-reporting/financial-information/sd28-sofi-2025.pdf",
+          "sourceIndexUrl": "https://www2.gov.bc.ca/gov/content/education-training/k-12/administration/financial-management/school-district-financial-reporting/statement-of-financial-information",
+          "sourceSha256": "af0ac0df99e819730a6a48c63ac00e1d3a38b624f44e6b4c1a4738beb560e640",
+          "previousTextStatus": "scan-or-native-text-unavailable-ocr-needed",
+          "previousDiscoveryStatus": "retrieved-scan-ocr-needed"
+        },
+        "nextAction": "Refresh the previously located original, confirm actual salary period/definitions/final status, then verify both complete named scopes and controls with independent readers. These discovery entries are not accepted salary rows."
+      },
+      {
+        "districtNumber": 34,
+        "employerSlug": "abbotsford-school-district",
+        "employerName": "School District No. 34 (Abbotsford)",
+        "year": "2024/25",
+        "missingCompleteOriginalScopesAfterNewSchoolTranche": [
+          "employee-remuneration",
+          "school-trustees"
+        ],
+        "previouslyLocatedOriginal": {
+          "sourceUrl": "https://www2.gov.bc.ca/assets/gov/education/administration/resource-management/school-district-financial-reporting/financial-information/sd34-sofi-2025.pdf",
+          "sourceIndexUrl": "https://www2.gov.bc.ca/gov/content/education-training/k-12/administration/financial-management/school-district-financial-reporting/statement-of-financial-information",
+          "sourceSha256": "fb1093eda4d6f80b1408b1892b72abde97de1cb52a5e34872172539abded5cf3",
+          "previousTextStatus": "native-text-present-table-review-needed",
+          "previousDiscoveryStatus": "retrieved-native-text-processing-needed"
+        },
+        "nextAction": "Refresh the previously located original, confirm actual salary period/definitions/final status, then verify both complete named scopes and controls with independent readers. These discovery entries are not accepted salary rows."
+      },
+      {
+        "districtNumber": 35,
+        "employerSlug": "langley-school-district",
+        "employerName": "School District No. 35 (Langley)",
+        "year": "2024/25",
+        "missingCompleteOriginalScopesAfterNewSchoolTranche": [
+          "employee-remuneration",
+          "school-trustees"
+        ],
+        "previouslyLocatedOriginal": {
+          "sourceUrl": "https://www2.gov.bc.ca/assets/gov/education/administration/resource-management/school-district-financial-reporting/financial-information/sd35-sofi-2025.pdf",
+          "sourceIndexUrl": "https://www2.gov.bc.ca/gov/content/education-training/k-12/administration/financial-management/school-district-financial-reporting/statement-of-financial-information",
+          "sourceSha256": "a448738bfef377585942516cbcae91c61dfe2ddab7069d9868c062ce1e9a5e77",
+          "previousTextStatus": "scan-or-native-text-unavailable-ocr-needed",
+          "previousDiscoveryStatus": "retrieved-scan-ocr-needed"
+        },
+        "nextAction": "Refresh the previously located original, confirm actual salary period/definitions/final status, then verify both complete named scopes and controls with independent readers. These discovery entries are not accepted salary rows."
+      },
+      {
+        "districtNumber": 37,
+        "employerSlug": "delta-school-district",
+        "employerName": "School District No. 37 (Delta)",
+        "year": "2024/25",
+        "missingCompleteOriginalScopesAfterNewSchoolTranche": [
+          "employee-remuneration",
+          "school-trustees"
+        ],
+        "previouslyLocatedOriginal": {
+          "sourceUrl": "https://www2.gov.bc.ca/assets/gov/education/administration/resource-management/school-district-financial-reporting/financial-information/sd37-sofi-2025.pdf",
+          "sourceIndexUrl": "https://www2.gov.bc.ca/gov/content/education-training/k-12/administration/financial-management/school-district-financial-reporting/statement-of-financial-information",
+          "sourceSha256": "0b3f637081f7f5d8d3c2cd4197747cb71aef4666c00472a6458c871c9fb746a1",
+          "previousTextStatus": "scan-or-native-text-unavailable-ocr-needed",
+          "previousDiscoveryStatus": "retrieved-scan-ocr-needed"
+        },
+        "nextAction": "Refresh the previously located original, confirm actual salary period/definitions/final status, then verify both complete named scopes and controls with independent readers. These discovery entries are not accepted salary rows."
+      },
+      {
+        "districtNumber": 38,
+        "employerSlug": "richmond-school-district",
+        "employerName": "School District No. 38 (Richmond)",
+        "year": "2024/25",
+        "missingCompleteOriginalScopesAfterNewSchoolTranche": [
+          "employee-remuneration",
+          "school-trustees"
+        ],
+        "previouslyLocatedOriginal": {
+          "sourceUrl": "https://www2.gov.bc.ca/assets/gov/education/administration/resource-management/school-district-financial-reporting/financial-information/sd38-sofi-2025.pdf",
+          "sourceIndexUrl": "https://www2.gov.bc.ca/gov/content/education-training/k-12/administration/financial-management/school-district-financial-reporting/statement-of-financial-information",
+          "sourceSha256": "eb69468875190cc01f29da395ce5c8e43d5d8784642dfd17d41477fe2bb2eff4",
+          "previousTextStatus": "scan-or-native-text-unavailable-ocr-needed",
+          "previousDiscoveryStatus": "retrieved-scan-ocr-needed"
+        },
+        "nextAction": "Refresh the previously located original, confirm actual salary period/definitions/final status, then verify both complete named scopes and controls with independent readers. These discovery entries are not accepted salary rows."
+      },
+      {
+        "districtNumber": 39,
+        "employerSlug": "vancouver-school-district",
+        "employerName": "School District No. 39 (Vancouver)",
+        "year": "2024/25",
+        "missingCompleteOriginalScopesAfterNewSchoolTranche": [
+          "employee-remuneration",
+          "school-trustees"
+        ],
+        "previouslyLocatedOriginal": {
+          "sourceUrl": "https://www2.gov.bc.ca/assets/gov/education/administration/resource-management/school-district-financial-reporting/financial-information/sd39-sofi-2025.pdf",
+          "sourceIndexUrl": "https://www2.gov.bc.ca/gov/content/education-training/k-12/administration/financial-management/school-district-financial-reporting/statement-of-financial-information",
+          "sourceSha256": "be555a200df2414d0ef1a1c6ef341d987c97f460c13eeb42d43c4c66f3017ac3",
+          "previousTextStatus": "scan-or-native-text-unavailable-ocr-needed",
+          "previousDiscoveryStatus": "retrieved-scan-ocr-needed"
+        },
+        "nextAction": "Refresh the previously located original, confirm actual salary period/definitions/final status, then verify both complete named scopes and controls with independent readers. These discovery entries are not accepted salary rows."
+      },
+      {
+        "districtNumber": 40,
+        "employerSlug": "new-westminster-school-district",
+        "employerName": "School District No. 40 (New Westminster)",
+        "year": "2024/25",
+        "missingCompleteOriginalScopesAfterNewSchoolTranche": [
+          "employee-remuneration",
+          "school-trustees"
+        ],
+        "previouslyLocatedOriginal": {
+          "sourceUrl": "https://www2.gov.bc.ca/assets/gov/education/administration/resource-management/school-district-financial-reporting/financial-information/sd40-sofi-2025.pdf",
+          "sourceIndexUrl": "https://www2.gov.bc.ca/gov/content/education-training/k-12/administration/financial-management/school-district-financial-reporting/statement-of-financial-information",
+          "sourceSha256": "474d92e3b084c522b39aa1b50702f9c7c7cd49a5e0ca6b4d3afa5ca0bcd85118",
+          "previousTextStatus": "native-text-present-table-review-needed",
+          "previousDiscoveryStatus": "retrieved-native-text-processing-needed"
+        },
+        "nextAction": "Refresh the previously located original, confirm actual salary period/definitions/final status, then verify both complete named scopes and controls with independent readers. These discovery entries are not accepted salary rows."
+      },
+      {
+        "districtNumber": 41,
+        "employerSlug": "burnaby-school-district",
+        "employerName": "School District No. 41 (Burnaby)",
+        "year": "2024/25",
+        "missingCompleteOriginalScopesAfterNewSchoolTranche": [
+          "employee-remuneration",
+          "school-trustees"
+        ],
+        "previouslyLocatedOriginal": {
+          "sourceUrl": "https://www2.gov.bc.ca/assets/gov/education/administration/resource-management/school-district-financial-reporting/financial-information/sd41-sofi-2025.pdf",
+          "sourceIndexUrl": "https://www2.gov.bc.ca/gov/content/education-training/k-12/administration/financial-management/school-district-financial-reporting/statement-of-financial-information",
+          "sourceSha256": "4ed0425b4956d7264870c1eeee6019ddf9f476fa7971f966ea0b594394d0dda5",
+          "previousTextStatus": "native-text-present-table-review-needed",
+          "previousDiscoveryStatus": "retrieved-native-text-processing-needed"
+        },
+        "nextAction": "Refresh the previously located original, confirm actual salary period/definitions/final status, then verify both complete named scopes and controls with independent readers. These discovery entries are not accepted salary rows."
+      },
+      {
+        "districtNumber": 45,
+        "employerSlug": "west-vancouver-school-district",
+        "employerName": "School District No. 45 (West Vancouver)",
+        "year": "2024/25",
+        "missingCompleteOriginalScopesAfterNewSchoolTranche": [
+          "employee-remuneration",
+          "school-trustees"
+        ],
+        "previouslyLocatedOriginal": {
+          "sourceUrl": "https://www2.gov.bc.ca/assets/gov/education/administration/resource-management/school-district-financial-reporting/financial-information/sd45-sofi-2025.pdf",
+          "sourceIndexUrl": "https://www2.gov.bc.ca/gov/content/education-training/k-12/administration/financial-management/school-district-financial-reporting/statement-of-financial-information",
+          "sourceSha256": "035d26da9e554a21b003ee8c03cc9172d1ee8d3cb7edafd58cc74ba5b469e709",
+          "previousTextStatus": "scan-or-native-text-unavailable-ocr-needed",
+          "previousDiscoveryStatus": "retrieved-scan-ocr-needed"
+        },
+        "nextAction": "Refresh the previously located original, confirm actual salary period/definitions/final status, then verify both complete named scopes and controls with independent readers. These discovery entries are not accepted salary rows."
+      },
+      {
+        "districtNumber": 53,
+        "employerSlug": "school-district-53",
+        "employerName": "School District No. 53 (Okanagan Similkameen)",
+        "year": "2024/25",
+        "missingCompleteOriginalScopesAfterNewSchoolTranche": [
+          "employee-remuneration",
+          "school-trustees"
+        ],
+        "previouslyLocatedOriginal": {
+          "sourceUrl": "https://www2.gov.bc.ca/assets/gov/education/administration/resource-management/school-district-financial-reporting/financial-information/sd53-sofi-2025.pdf",
+          "sourceIndexUrl": "https://www2.gov.bc.ca/gov/content/education-training/k-12/administration/financial-management/school-district-financial-reporting/statement-of-financial-information",
+          "sourceSha256": "bc200895de67c55cf597347be97b8cfeb88f84c45e83a7dded15333664e66eed",
+          "previousTextStatus": "native-text-present-table-review-needed",
+          "previousDiscoveryStatus": "retrieved-native-text-processing-needed"
+        },
+        "nextAction": "Refresh the previously located original, confirm actual salary period/definitions/final status, then verify both complete named scopes and controls with independent readers. These discovery entries are not accepted salary rows."
+      },
+      {
+        "districtNumber": 54,
+        "employerSlug": "school-district-54",
+        "employerName": "School District No. 54 (Bulkley Valley)",
+        "year": "2024/25",
+        "missingCompleteOriginalScopesAfterNewSchoolTranche": [
+          "employee-remuneration",
+          "school-trustees"
+        ],
+        "previouslyLocatedOriginal": {
+          "sourceUrl": "https://www2.gov.bc.ca/assets/gov/education/administration/resource-management/school-district-financial-reporting/financial-information/sd54-sofi-2025.pdf",
+          "sourceIndexUrl": "https://www2.gov.bc.ca/gov/content/education-training/k-12/administration/financial-management/school-district-financial-reporting/statement-of-financial-information",
+          "sourceSha256": "1e9b2010dbe293ae99909e4eae1ffe598e513860e308e073258e622c5d29a70d",
+          "previousTextStatus": "scan-or-native-text-unavailable-ocr-needed",
+          "previousDiscoveryStatus": "retrieved-scan-ocr-needed"
+        },
+        "nextAction": "Refresh the previously located original, confirm actual salary period/definitions/final status, then verify both complete named scopes and controls with independent readers. These discovery entries are not accepted salary rows."
+      },
+      {
+        "districtNumber": 57,
+        "employerSlug": "school-district-57",
+        "employerName": "School District No. 57 (Prince George)",
+        "year": "2024/25",
+        "missingCompleteOriginalScopesAfterNewSchoolTranche": [
+          "employee-remuneration",
+          "school-trustees"
+        ],
+        "previouslyLocatedOriginal": {
+          "sourceUrl": "https://www2.gov.bc.ca/assets/gov/education/administration/resource-management/school-district-financial-reporting/financial-information/sd57-sofi-2025.pdf",
+          "sourceIndexUrl": "https://www2.gov.bc.ca/gov/content/education-training/k-12/administration/financial-management/school-district-financial-reporting/statement-of-financial-information",
+          "sourceSha256": "437f2b156d5b9567285761998f8cdbab65ac3d47454f70131888881e27115dc0",
+          "previousTextStatus": "native-text-present-table-review-needed",
+          "previousDiscoveryStatus": "retrieved-native-text-processing-needed"
+        },
+        "nextAction": "Refresh the previously located original, confirm actual salary period/definitions/final status, then verify both complete named scopes and controls with independent readers. These discovery entries are not accepted salary rows."
+      },
+      {
+        "districtNumber": 58,
+        "employerSlug": "school-district-58",
+        "employerName": "School District No. 58 (Nicola-Similkameen)",
+        "year": "2024/25",
+        "missingCompleteOriginalScopesAfterNewSchoolTranche": [
+          "employee-remuneration",
+          "school-trustees"
+        ],
+        "previouslyLocatedOriginal": {
+          "sourceUrl": "https://www2.gov.bc.ca/assets/gov/education/administration/resource-management/school-district-financial-reporting/financial-information/sd58-sofi-2025.pdf",
+          "sourceIndexUrl": "https://www2.gov.bc.ca/gov/content/education-training/k-12/administration/financial-management/school-district-financial-reporting/statement-of-financial-information",
+          "sourceSha256": "76bdb4e77fa9fdedda5544bf253d615fc3e4681f132eaf9d172cfbb161e25b9b",
+          "previousTextStatus": "scan-or-native-text-unavailable-ocr-needed",
+          "previousDiscoveryStatus": "retrieved-scan-ocr-needed"
+        },
+        "nextAction": "Refresh the previously located original, confirm actual salary period/definitions/final status, then verify both complete named scopes and controls with independent readers. These discovery entries are not accepted salary rows."
+      },
+      {
+        "districtNumber": 59,
+        "employerSlug": "school-district-59",
+        "employerName": "School District No. 59 (Peace River South)",
+        "year": "2024/25",
+        "missingCompleteOriginalScopesAfterNewSchoolTranche": [
+          "employee-remuneration",
+          "school-trustees"
+        ],
+        "previouslyLocatedOriginal": {
+          "sourceUrl": "https://www2.gov.bc.ca/assets/gov/education/administration/resource-management/school-district-financial-reporting/financial-information/sd59-sofi-2025.pdf",
+          "sourceIndexUrl": "https://www2.gov.bc.ca/gov/content/education-training/k-12/administration/financial-management/school-district-financial-reporting/statement-of-financial-information",
+          "sourceSha256": "86d5a636ddddd3fc4e30886f61b5b18e63d512c30b851abea42d8298d5b05b4d",
+          "previousTextStatus": "scan-or-native-text-unavailable-ocr-needed",
+          "previousDiscoveryStatus": "retrieved-scan-ocr-needed"
+        },
+        "nextAction": "Refresh the previously located original, confirm actual salary period/definitions/final status, then verify both complete named scopes and controls with independent readers. These discovery entries are not accepted salary rows."
+      },
+      {
+        "districtNumber": 60,
+        "employerSlug": "school-district-60",
+        "employerName": "School District No. 60 (Peace River North)",
+        "year": "2024/25",
+        "missingCompleteOriginalScopesAfterNewSchoolTranche": [
+          "employee-remuneration",
+          "school-trustees"
+        ],
+        "previouslyLocatedOriginal": {
+          "sourceUrl": "https://www2.gov.bc.ca/assets/gov/education/administration/resource-management/school-district-financial-reporting/financial-information/sd60-sofi-2025.pdf",
+          "sourceIndexUrl": "https://www2.gov.bc.ca/gov/content/education-training/k-12/administration/financial-management/school-district-financial-reporting/statement-of-financial-information",
+          "sourceSha256": "eeb3c4fcec226958513371c8853b0172c112eb7af92ed7f327ab9a6f176c920d",
+          "previousTextStatus": "scan-or-native-text-unavailable-ocr-needed",
+          "previousDiscoveryStatus": "retrieved-scan-ocr-needed"
+        },
+        "nextAction": "Refresh the previously located original, confirm actual salary period/definitions/final status, then verify both complete named scopes and controls with independent readers. These discovery entries are not accepted salary rows."
+      },
+      {
+        "districtNumber": 62,
+        "employerSlug": "sooke-school-district",
+        "employerName": "School District No. 62 (Sooke)",
+        "year": "2024/25",
+        "missingCompleteOriginalScopesAfterNewSchoolTranche": [
+          "employee-remuneration",
+          "school-trustees"
+        ],
+        "previouslyLocatedOriginal": {
+          "sourceUrl": "https://www2.gov.bc.ca/assets/gov/education/administration/resource-management/school-district-financial-reporting/financial-information/sd62-sofi-2025.pdf",
+          "sourceIndexUrl": "https://www2.gov.bc.ca/gov/content/education-training/k-12/administration/financial-management/school-district-financial-reporting/statement-of-financial-information",
+          "sourceSha256": "da8f772c4e019698956624dfb6d055575ea0f5c8c253516ffe707f334600bbbd",
+          "previousTextStatus": "native-text-present-table-review-needed",
+          "previousDiscoveryStatus": "retrieved-native-text-processing-needed"
+        },
+        "nextAction": "Refresh the previously located original, confirm actual salary period/definitions/final status, then verify both complete named scopes and controls with independent readers. These discovery entries are not accepted salary rows."
+      },
+      {
+        "districtNumber": 69,
+        "employerSlug": "school-district-69",
+        "employerName": "School District No. 69 (Qualicum)",
+        "year": "2024/25",
+        "missingCompleteOriginalScopesAfterNewSchoolTranche": [
+          "employee-remuneration",
+          "school-trustees"
+        ],
+        "previouslyLocatedOriginal": {
+          "sourceUrl": "https://www2.gov.bc.ca/assets/gov/education/administration/resource-management/school-district-financial-reporting/financial-information/sd69-sofi-2025.pdf",
+          "sourceIndexUrl": "https://www2.gov.bc.ca/gov/content/education-training/k-12/administration/financial-management/school-district-financial-reporting/statement-of-financial-information",
+          "sourceSha256": "a5afb62a710909a8512aedca6ce5217e5e555bd44e9f7a7bb15f9a1be5eaf18f",
+          "previousTextStatus": "scan-or-native-text-unavailable-ocr-needed",
+          "previousDiscoveryStatus": "retrieved-scan-ocr-needed"
+        },
+        "nextAction": "Refresh the previously located original, confirm actual salary period/definitions/final status, then verify both complete named scopes and controls with independent readers. These discovery entries are not accepted salary rows."
+      },
+      {
+        "districtNumber": 70,
+        "employerSlug": "school-district-70",
+        "employerName": "School District No. 70 (Pacific Rim)",
+        "year": "2024/25",
+        "missingCompleteOriginalScopesAfterNewSchoolTranche": [
+          "employee-remuneration",
+          "school-trustees"
+        ],
+        "previouslyLocatedOriginal": {
+          "sourceUrl": "https://www2.gov.bc.ca/assets/gov/education/administration/resource-management/school-district-financial-reporting/financial-information/sd70-sofi-2025.pdf",
+          "sourceIndexUrl": "https://www2.gov.bc.ca/gov/content/education-training/k-12/administration/financial-management/school-district-financial-reporting/statement-of-financial-information",
+          "sourceSha256": "460d9ffe988b4223030d777c7f6eea375ff3305032156108f3b58e820ac83223",
+          "previousTextStatus": "scan-or-native-text-unavailable-ocr-needed",
+          "previousDiscoveryStatus": "retrieved-scan-ocr-needed"
+        },
+        "nextAction": "Refresh the previously located original, confirm actual salary period/definitions/final status, then verify both complete named scopes and controls with independent readers. These discovery entries are not accepted salary rows."
+      },
+      {
+        "districtNumber": 75,
+        "employerSlug": "mission-school-district",
+        "employerName": "School District No. 75 (Mission)",
+        "year": "2024/25",
+        "missingCompleteOriginalScopesAfterNewSchoolTranche": [
+          "employee-remuneration",
+          "school-trustees"
+        ],
+        "previouslyLocatedOriginal": {
+          "sourceUrl": "https://www2.gov.bc.ca/assets/gov/education/administration/resource-management/school-district-financial-reporting/financial-information/sd75-sofi-2025.pdf",
+          "sourceIndexUrl": "https://www2.gov.bc.ca/gov/content/education-training/k-12/administration/financial-management/school-district-financial-reporting/statement-of-financial-information",
+          "sourceSha256": "521339d28645972563ee9700c9d79c366425750970950d1d978b4f8f9895ff39",
+          "previousTextStatus": "scan-or-native-text-unavailable-ocr-needed",
+          "previousDiscoveryStatus": "retrieved-scan-ocr-needed"
+        },
+        "nextAction": "Refresh the previously located original, confirm actual salary period/definitions/final status, then verify both complete named scopes and controls with independent readers. These discovery entries are not accepted salary rows."
+      },
+      {
+        "districtNumber": 78,
+        "employerSlug": "school-district-78",
+        "employerName": "School District No. 78 (Fraser-Cascade)",
+        "year": "2024/25",
+        "missingCompleteOriginalScopesAfterNewSchoolTranche": [
+          "employee-remuneration",
+          "school-trustees"
+        ],
+        "previouslyLocatedOriginal": {
+          "sourceUrl": "https://www2.gov.bc.ca/assets/gov/education/administration/resource-management/school-district-financial-reporting/financial-information/sd78-sofi-2025.pdf",
+          "sourceIndexUrl": "https://www2.gov.bc.ca/gov/content/education-training/k-12/administration/financial-management/school-district-financial-reporting/statement-of-financial-information",
+          "sourceSha256": "35e3dd525d788dd8ecc7e11c01dad53d9ae11ba1a93f5437ab7bd9f9af52517f",
+          "previousTextStatus": "scan-or-native-text-unavailable-ocr-needed",
+          "previousDiscoveryStatus": "retrieved-scan-ocr-needed"
+        },
+        "nextAction": "Refresh the previously located original, confirm actual salary period/definitions/final status, then verify both complete named scopes and controls with independent readers. These discovery entries are not accepted salary rows."
+      },
+      {
+        "districtNumber": 79,
+        "employerSlug": "school-district-79",
+        "employerName": "School District No. 79 (Cowichan Valley)",
+        "year": "2024/25",
+        "missingCompleteOriginalScopesAfterNewSchoolTranche": [
+          "employee-remuneration",
+          "school-trustees"
+        ],
+        "previouslyLocatedOriginal": {
+          "sourceUrl": "https://www2.gov.bc.ca/assets/gov/education/administration/resource-management/school-district-financial-reporting/financial-information/sd79-sofi-2025.pdf",
+          "sourceIndexUrl": "https://www2.gov.bc.ca/gov/content/education-training/k-12/administration/financial-management/school-district-financial-reporting/statement-of-financial-information",
+          "sourceSha256": "a46b4157713d5351996d98fedbb3530d029a6747e9ece90d330b37f4f9ea2b32",
+          "previousTextStatus": "scan-or-native-text-unavailable-ocr-needed",
+          "previousDiscoveryStatus": "retrieved-scan-ocr-needed"
+        },
+        "nextAction": "Refresh the previously located original, confirm actual salary period/definitions/final status, then verify both complete named scopes and controls with independent readers. These discovery entries are not accepted salary rows."
+      },
+      {
+        "districtNumber": 81,
+        "employerSlug": "school-district-81",
+        "employerName": "School District No. 81 (Fort Nelson)",
+        "year": "2024/25",
+        "missingCompleteOriginalScopesAfterNewSchoolTranche": [
+          "employee-remuneration",
+          "school-trustees"
+        ],
+        "previouslyLocatedOriginal": {
+          "sourceUrl": "https://www2.gov.bc.ca/assets/gov/education/administration/resource-management/school-district-financial-reporting/financial-information/sd81-sofi-2025.pdf",
+          "sourceIndexUrl": "https://www2.gov.bc.ca/gov/content/education-training/k-12/administration/financial-management/school-district-financial-reporting/statement-of-financial-information",
+          "sourceSha256": "4623c38a2e1d4b709ea2d20ea46b428607695949f2aca799cc3066d815f7456a",
+          "previousTextStatus": "scan-or-native-text-unavailable-ocr-needed",
+          "previousDiscoveryStatus": "retrieved-scan-ocr-needed"
+        },
+        "nextAction": "Refresh the previously located original, confirm actual salary period/definitions/final status, then verify both complete named scopes and controls with independent readers. These discovery entries are not accepted salary rows."
+      },
+      {
+        "districtNumber": 82,
+        "employerSlug": "school-district-82",
+        "employerName": "School District No. 82 (Coast Mountains)",
+        "year": "2024/25",
+        "missingCompleteOriginalScopesAfterNewSchoolTranche": [
+          "employee-remuneration",
+          "school-trustees"
+        ],
+        "previouslyLocatedOriginal": {
+          "sourceUrl": "https://www2.gov.bc.ca/assets/gov/education/administration/resource-management/school-district-financial-reporting/financial-information/sd82-sofi-2025.pdf",
+          "sourceIndexUrl": "https://www2.gov.bc.ca/gov/content/education-training/k-12/administration/financial-management/school-district-financial-reporting/statement-of-financial-information",
+          "sourceSha256": "8e37754ca43a21901aa09506a08017f15d24e0fe89f487a7d32082016dcb6e0a",
+          "previousTextStatus": "scan-or-native-text-unavailable-ocr-needed",
+          "previousDiscoveryStatus": "retrieved-scan-ocr-needed"
+        },
+        "nextAction": "Refresh the previously located original, confirm actual salary period/definitions/final status, then verify both complete named scopes and controls with independent readers. These discovery entries are not accepted salary rows."
+      },
+      {
+        "districtNumber": 84,
+        "employerSlug": "school-district-84",
+        "employerName": "School District No. 84 (Vancouver Island West)",
+        "year": "2024/25",
+        "missingCompleteOriginalScopesAfterNewSchoolTranche": [
+          "employee-remuneration",
+          "school-trustees"
+        ],
+        "previouslyLocatedOriginal": {
+          "sourceUrl": "https://www2.gov.bc.ca/assets/gov/education/administration/resource-management/school-district-financial-reporting/financial-information/sd84-sofi-2025.pdf",
+          "sourceIndexUrl": "https://www2.gov.bc.ca/gov/content/education-training/k-12/administration/financial-management/school-district-financial-reporting/statement-of-financial-information",
+          "sourceSha256": "c14a60b66aa184420f7e16118aa8d6342bc6a861cc3f2d3cfb668e4003210304",
+          "previousTextStatus": "native-text-present-table-review-needed",
+          "previousDiscoveryStatus": "retrieved-native-text-processing-needed"
+        },
+        "nextAction": "Refresh the previously located original, confirm actual salary period/definitions/final status, then verify both complete named scopes and controls with independent readers. These discovery entries are not accepted salary rows."
+      }
+    ]
+  },
+  "municipalPreviouslyCataloguedLeads": {
+    "oldNextPassEntries": 166,
+    "notUniqueMissingReportCount": true,
+    "excludeCurrentTrancheExactSourceUrls": true,
+    "sampleFurtherPublicProcessingAndComponentLeads": [
+      {
+        "id": "wave-lower-components-wave-lower-mainland-city-of-abbotsford-2023-employee-remuneration",
+        "employerSlug": "city-of-abbotsford",
+        "employerName": "City of Abbotsford",
+        "reportingPeriods": [
+          "2023"
+        ],
+        "status": "partial-cohort-component-clarification",
+        "sourceUrl": "https://abbotsford.civicweb.net/document/57862/",
+        "sourceIndexUrl": "https://www.abbotsford.ca/city-hall/finance",
+        "nextAction": "Find an original spreadsheet or explicit issuer legend establishing each dash/blank taxable-benefit cell; if absent from the public archive, request that existing record or clarification routinely. Do not infer zero from a subtotal match."
+      },
+      {
+        "id": "wave-lower-process-city-of-port-moody-2021",
+        "employerSlug": "city-of-port-moody",
+        "employerName": "City of Port Moody",
+        "reportingPeriods": [],
+        "status": "public-original-awaiting-ocr-or-layout-review",
+        "sourceUrl": "https://www.portmoody.ca/eDocs/get?docnumber=584992",
+        "sourceIndexUrl": "https://www.portmoody.ca/city-government/plans-reports-and-publications/",
+        "nextAction": "Review named schedule pages, actual period, row fields and source controls; OCR only the relevant scanned pages when needed."
+      },
+      {
+        "id": "wave-interior-city-of-rossland-located-history-processing",
+        "employerSlug": "city-of-rossland",
+        "employerName": "City of Rossland",
+        "reportingPeriods": [
+          "2010",
+          "2011",
+          "2012",
+          "2013",
+          "2014",
+          "2015",
+          "2016",
+          "2017",
+          "2018",
+          "2019",
+          "2020",
+          "2021",
+          "2022",
+          "2023",
+          "2024"
+        ],
+        "status": "official-originals-retrieved-not-yet-accepted",
+        "sourceUrl": "https://rossland.civicweb.net/document/47078",
+        "sourceIndexUrl": "https://rossland.ca/departments/financial-services/financial-budgets-plans-reports/",
+        "nextAction": "Process each exact original listed in source-inventory.json, validating calendar periods, complete employee/council scope, all row fields and printed controls. Prefer native text or useful text layers before OCR; correct text recognition only from rendered originals."
+      },
+      {
+        "id": "wave-interior-city-of-trail-located-history-processing",
+        "employerSlug": "city-of-trail",
+        "employerName": "City of Trail",
+        "reportingPeriods": [
+          "Located reports; actual periods await original heading review"
+        ],
+        "status": "official-originals-retrieved-not-yet-accepted",
+        "sourceUrl": "https://trail.ca/wp-content/uploads/2026/06/2022-STATEMENT-OF-FINANCIAL-INFORMATION.pdf",
+        "sourceIndexUrl": "https://trail.ca/city-hall/forms-documents/reports-plans/",
+        "nextAction": "Process each exact original listed in source-inventory.json, validating calendar periods, complete employee/council scope, all row fields and printed controls. Prefer native text or useful text layers before OCR; correct text recognition only from rendered originals."
+      },
+      {
+        "id": "north-district-of-100-mile-house",
+        "employerSlug": "district-of-100-mile-house",
+        "employerName": "District of 100 Mile House",
+        "reportingPeriods": [
+          "2023"
+        ],
+        "status": "image-only-original-ocr-needed",
+        "sourceUrl": "https://www.100milehouse.com/sites/default/files/2025-11/2023%20SOFI%20Report.pdf",
+        "sourceIndexUrl": "https://www.100milehouse.com/government-bylaws/reports-documents/statement-financial-information-0",
+        "nextAction": "Locate remuneration pages and internal reporting date in the scanned original, OCR and independently check every named employee row and source controls before import."
+      },
+      {
+        "id": "wave-interior-district-of-barriere-located-history-processing",
+        "employerSlug": "district-of-barriere",
+        "employerName": "District of Barriere",
+        "reportingPeriods": [
+          "Located reports; actual periods await original heading review"
+        ],
+        "status": "official-originals-retrieved-not-yet-accepted",
+        "sourceUrl": "https://barriere.municipalwebsites.ca/ckfinder/connector?command=Proxy&lang=en&type=Files&currentFolder=%2F&hash=c245c263ce0eced480effe66bbede6b4d46c15ae&fileName=COMPLETE%202020%20SOFI.pdf",
+        "sourceIndexUrl": "https://www.barriere.ca/p/finance",
+        "nextAction": "Process each exact original listed in source-inventory.json, validating calendar periods, complete employee/council scope, all row fields and printed controls. Prefer native text or useful text layers before OCR; correct text recognition only from rendered originals."
+      },
+      {
+        "id": "wave-interior-district-of-clearwater-located-history-processing",
+        "employerSlug": "district-of-clearwater",
+        "employerName": "District of Clearwater",
+        "reportingPeriods": [
+          "2011",
+          "2012",
+          "2013",
+          "2014",
+          "2015",
+          "2016",
+          "2017",
+          "2018",
+          "2019",
+          "2020",
+          "2021",
+          "2022",
+          "2024"
+        ],
+        "status": "official-originals-retrieved-not-yet-accepted",
+        "sourceUrl": "https://districtofclearwater.civicweb.net/document/6230",
+        "sourceIndexUrl": "https://www.districtofclearwater.com/municipal-hall/finance-services/",
+        "nextAction": "Process each exact original listed in source-inventory.json, validating calendar periods, complete employee/council scope, all row fields and printed controls. Prefer native text or useful text layers before OCR; correct text recognition only from rendered originals."
+      },
+      {
+        "id": "island-district-of-lantzville-public-originals",
+        "employerSlug": "district-of-lantzville",
+        "employerName": "District of Lantzville",
+        "reportingPeriods": [
+          "unknown"
+        ],
+        "status": "downloaded-native-original-awaiting-source-layout-review",
+        "sourceUrl": "https://www.lantzville.ca/cms/wpattachments/wpID485atID7293.pdf",
+        "sourceIndexUrl": "https://www.lantzville.ca/cms.asp?wpID=485",
+        "nextAction": "Verify the internally printed period and final/adopted source status, then extract the complete named employee cohort and compare every field with a second PDF reader; inspect rendered boundaries, names, titles and controls."
+      }
+    ],
+    "limits": "Historical catalogs include duplicate document links, unverified periods and issues later resolved by other tranches. Refresh exact source/period/scope against accepted manifests before promoting any lead to a new task."
+  },
+  "healthPreviouslyCataloguedLeads": {
+    "oldContinuationEntries": 37,
+    "knownResolvedOrCurrentQueueIdsExcluded": [
+      "continuation-health-interior-health-native-board-originals-downloaded-awaiting-extraction",
+      "continuation-health-phsa-electronic-tables",
+      "continuation-health-phsa-ocr-complete",
+      "continuation-health-providence-2023-24",
+      "continuation-health-vch-2020-21"
+    ],
+    "otherLeads": [
+      {
+        "id": "continuation-health-phsa-earlier-archives",
+        "employerSlug": "provincial-health-services-authority",
+        "reportingPeriods": [
+          "unknown"
+        ],
+        "status": "earlier-history-not-located",
+        "route": "public-archive-research",
+        "sourceUrl": "https://www.phsa.ca/about/accountability/budget-financials"
+      },
+      {
+        "id": "continuation-health-phsa-2025-26-employee",
+        "employerSlug": "provincial-health-services-authority",
+        "reportingPeriods": [
+          "2025/26"
+        ],
+        "status": "employee-schedule-not-located-on-current-index",
+        "route": "public-archive-research",
+        "sourceUrl": "https://www.phsa.ca/about/accountability/budget-financials"
+      },
+      {
+        "id": "continuation-health-island-2022-23-controls",
+        "employerSlug": "island-health",
+        "reportingPeriods": [
+          "2022/23"
+        ],
+        "status": "accepted-with-source-warning-clarification-open",
+        "route": "clarification-request",
+        "sourceUrl": "https://www.islandhealth.ca/sites/default/files/accountability/documents/financial-statement-info-22-23.pdf"
+      },
+      {
+        "id": "continuation-health-island-2023-24-controls",
+        "employerSlug": "island-health",
+        "reportingPeriods": [
+          "2023/24"
+        ],
+        "status": "accepted-with-source-warning-clarification-open",
+        "route": "clarification-request",
+        "sourceUrl": "https://www.islandhealth.ca/sites/default/files/accountability/documents/financial-statement-info-23-24.pdf"
+      },
+      {
+        "id": "continuation-health-island-earlier-archives",
+        "employerSlug": "island-health",
+        "reportingPeriods": [
+          "unknown"
+        ],
+        "status": "earlier-history-not-located",
+        "route": "public-archive-research",
+        "sourceUrl": "https://www.islandhealth.ca/about-us/plans-reports-and-policies/financial-reports"
+      },
+      {
+        "id": "continuation-health-island-2025-26-employee",
+        "employerSlug": "island-health",
+        "reportingPeriods": [
+          "2025/26"
+        ],
+        "status": "employee-schedule-not-located-on-current-index",
+        "route": "public-archive-research",
+        "sourceUrl": "https://www.islandhealth.ca/about-us/plans-reports-and-policies/financial-reports"
+      },
+      {
+        "id": "continuation-health-northern-2017-20-official",
+        "employerSlug": "northern-health",
+        "reportingPeriods": [
+          "2017/18",
+          "2018/19",
+          "2019/20"
+        ],
+        "status": "historical-employee-originals-not-located",
+        "route": "public-archive-research",
+        "sourceUrl": "https://www.northernhealth.ca/about-us/accountability/reports/financial-accountability"
+      },
+      {
+        "id": "continuation-health-northern-earlier-archives",
+        "employerSlug": "northern-health",
+        "reportingPeriods": [
+          "unknown"
+        ],
+        "status": "earlier-history-not-located",
+        "route": "public-archive-research",
+        "sourceUrl": "https://www.northernhealth.ca/about-us/accountability/reports/financial-accountability"
+      },
+      {
+        "id": "continuation-health-northern-2025-26-employee",
+        "employerSlug": "northern-health",
+        "reportingPeriods": [
+          "2025/26"
+        ],
+        "status": "employee-schedule-not-located-on-current-index",
+        "route": "public-archive-research",
+        "sourceUrl": "https://www.northernhealth.ca/about-us/accountability/reports/financial-accountability"
+      },
+      {
+        "id": "continuation-health-interior-2013-14-original",
+        "employerSlug": "interior-health",
+        "reportingPeriods": [
+          "2013/14"
+        ],
+        "status": "historical-employee-original-not-located",
+        "route": "public-archive-research",
+        "sourceUrl": "https://www.interiorhealth.ca/about-ih/accountability/financial-reporting"
+      },
+      {
+        "id": "continuation-health-interior-earlier-archives",
+        "employerSlug": "interior-health",
+        "reportingPeriods": [
+          "unknown"
+        ],
+        "status": "earlier-history-not-located",
+        "route": "public-archive-research",
+        "sourceUrl": "https://www.interiorhealth.ca/about-ih/accountability/financial-reporting"
+      },
+      {
+        "id": "continuation-health-interior-2025-26-employee",
+        "employerSlug": "interior-health",
+        "reportingPeriods": [
+          "2025/26"
+        ],
+        "status": "employee-schedule-not-located-on-current-index",
+        "route": "public-archive-research",
+        "sourceUrl": "https://www.interiorhealth.ca/about-ih/accountability/financial-reporting"
+      },
+      {
+        "id": "continuation-health-fraser-earlier-archives",
+        "employerSlug": "fraser-health",
+        "reportingPeriods": [
+          "2012/13",
+          "unknown"
+        ],
+        "status": "earlier-history-not-located",
+        "route": "public-archive-research",
+        "sourceUrl": "https://www.fraserhealth.ca/about-us/accountability/financial-reporting"
+      },
+      {
+        "id": "continuation-health-fraser-2025-26-employee",
+        "employerSlug": "fraser-health",
+        "reportingPeriods": [
+          "2025/26"
+        ],
+        "status": "employee-schedule-not-located-on-current-index",
+        "route": "public-archive-research",
+        "sourceUrl": "https://www.fraserhealth.ca/about-us/accountability/financial-reporting"
+      },
+      {
+        "id": "continuation-health-providence-2017-18",
+        "employerSlug": "providence-health-care",
+        "reportingPeriods": [
+          "2017/18"
+        ],
+        "status": "official-pdf-retrieval-blocked",
+        "route": "processing",
+        "sourceUrl": "https://www.providencehealthcare.org/en/media/3706"
+      },
+      {
+        "id": "continuation-health-providence-2018-19",
+        "employerSlug": "providence-health-care",
+        "reportingPeriods": [
+          "2018/19"
+        ],
+        "status": "employee-section-unconfirmed",
+        "route": "processing",
+        "sourceUrl": "https://www.providencehealthcare.org/en/media/3676"
+      },
+      {
+        "id": "continuation-health-providence-2019-20",
+        "employerSlug": "providence-health-care",
+        "reportingPeriods": [
+          "2019/20"
+        ],
+        "status": "official-pdf-retrieval-blocked",
+        "route": "processing",
+        "sourceUrl": "https://www.providencehealthcare.org/en/media/3661"
+      },
+      {
+        "id": "continuation-health-providence-2020-21",
+        "employerSlug": "providence-health-care",
+        "reportingPeriods": [
+          "2020/21"
+        ],
+        "status": "official-pdf-retrieval-blocked",
+        "route": "processing",
+        "sourceUrl": "https://www.providencehealthcare.org/en/media/3656"
+      },
+      {
+        "id": "continuation-health-providence-2021-22",
+        "employerSlug": "providence-health-care",
+        "reportingPeriods": [
+          "2021/22"
+        ],
+        "status": "official-pdf-retrieval-blocked",
+        "route": "processing",
+        "sourceUrl": "https://www.providencehealthcare.org/en/media/3276"
+      },
+      {
+        "id": "continuation-health-providence-2022-23",
+        "employerSlug": "providence-health-care",
+        "reportingPeriods": [
+          "2022/23"
+        ],
+        "status": "official-pdf-retrieval-blocked",
+        "route": "processing",
+        "sourceUrl": "https://www.providencehealthcare.org/en/media/3261"
+      },
+      {
+        "id": "continuation-health-providence-2024-25",
+        "employerSlug": "providence-health-care",
+        "reportingPeriods": [
+          "2024/25"
+        ],
+        "status": "official-pdf-retrieval-blocked",
+        "route": "processing",
+        "sourceUrl": "https://www.providencehealthcare.org/sites/default/files/2025-11/Schedule%20of%20Remuneration%2C%20Expenses%2C%20%26%20Supplies%20Payments%2020242025.pdf"
+      },
+      {
+        "id": "continuation-health-providence-earlier-and-current-index",
+        "employerSlug": "providence-health-care",
+        "reportingPeriods": [
+          "unknown"
+        ],
+        "status": "current-index-and-earlier-history-not-located",
+        "route": "public-archive-research",
+        "sourceUrl": "https://www.providencehealthcare.org/"
+      },
+      {
+        "id": "continuation-health-vch-2018-19",
+        "employerSlug": "vancouver-coastal-health",
+        "reportingPeriods": [
+          "2018/19"
+        ],
+        "status": "official-pdf-retrieval-blocked",
+        "route": "processing",
+        "sourceUrl": "https://www.vch.ca/sites/default/files/import/documents/Schedule-of-Remuneration-and-Expenses-2019.pdf"
+      },
+      {
+        "id": "continuation-health-vch-2019-20",
+        "employerSlug": "vancouver-coastal-health",
+        "reportingPeriods": [
+          "2019/20"
+        ],
+        "status": "official-pdf-retrieval-blocked",
+        "route": "processing",
+        "sourceUrl": "https://www.vch.ca/Documents/Schedule-of-remuneration-and-expenses-2020.pdf"
+      },
+      {
+        "id": "continuation-health-vch-2021-22",
+        "employerSlug": "vancouver-coastal-health",
+        "reportingPeriods": [
+          "2021/22"
+        ],
+        "status": "employee-scope-or-period-unconfirmed",
+        "route": "processing",
+        "sourceUrl": "https://www.vch.ca/en/media/15051"
+      },
+      {
+        "id": "continuation-health-vch-2023-24",
+        "employerSlug": "vancouver-coastal-health",
+        "reportingPeriods": [
+          "2023/24"
+        ],
+        "status": "employee-scope-or-period-unconfirmed",
+        "route": "processing",
+        "sourceUrl": "https://www.vch.ca/en/media/29876"
+      },
+      {
+        "id": "continuation-health-vch-current-and-missing-periods",
+        "employerSlug": "vancouver-coastal-health",
+        "reportingPeriods": [
+          "2022/23",
+          "2024/25",
+          "2025/26",
+          "unknown"
+        ],
+        "status": "current-index-and-additional-employee-originals-not-located",
+        "route": "public-archive-research",
+        "sourceUrl": "https://www.vch.ca/"
+      },
+      {
+        "id": "continuation-health-providence-health-care-draft-existing-public-copies-needed",
+        "employerSlug": "providence-health-care",
+        "reportingPeriods": [
+          "2017/18",
+          "2018/19",
+          "2019/20",
+          "2020/21",
+          "2021/22",
+          "2022/23",
+          "2023/24",
+          "2024/25"
+        ],
+        "status": "draft-existing-public-copies-needed",
+        "route": "ordinary-records-request",
+        "sourceUrl": "https://www.providencehealthcare.org/en/media/3706"
+      },
+      {
+        "id": "continuation-health-vancouver-coastal-health-draft-existing-public-copies-needed",
+        "employerSlug": "vancouver-coastal-health",
+        "reportingPeriods": [
+          "2018/19",
+          "2019/20",
+          "2020/21",
+          "2021/22",
+          "2023/24"
+        ],
+        "status": "draft-existing-public-copies-needed",
+        "route": "ordinary-records-request",
+        "sourceUrl": "https://www.vch.ca/en/media/12116"
+      },
+      {
+        "id": "continuation-health-vancouver-coastal-health-new-board-original-indexed-employee-scope-unconfirmed",
+        "employerSlug": "vancouver-coastal-health",
+        "reportingPeriods": [
+          "2022/23"
+        ],
+        "status": "new-board-original-indexed-employee-scope-unconfirmed",
+        "route": "processing",
+        "sourceUrl": "https://www.vch.ca/en/media/23716"
+      },
+      {
+        "id": "continuation-health-island-health-board-history-originals-downloaded-two-link-gaps",
+        "employerSlug": "island-health",
+        "reportingPeriods": [
+          "2015/16",
+          "2016/17",
+          "2017/18",
+          "2018/19",
+          "2019/20",
+          "2020/21",
+          "2021/22",
+          "2022/23",
+          "2023/24",
+          "2024/25",
+          "2025/26"
+        ],
+        "status": "board-history-originals-downloaded-two-link-gaps",
+        "route": "processing",
+        "sourceUrl": "https://www.islandhealth.ca/about-us/plans-reports-and-policies/financial-reports"
+      },
+      {
+        "id": "continuation-health-provincial-health-services-authority-native-board-history-downloaded-awaiting-extraction",
+        "employerSlug": "provincial-health-services-authority",
+        "reportingPeriods": [
+          "2015/16",
+          "2016/17",
+          "2017/18",
+          "2018/19",
+          "2019/20",
+          "2020/21",
+          "2021/22",
+          "2022/23",
+          "2023/24"
+        ],
+        "status": "native-board-history-downloaded-awaiting-extraction",
+        "route": "processing",
+        "sourceUrl": "https://www.phsa.ca/about/accountability/budget-financials"
+      }
+    ],
+    "limits": "Prior retrieval failures/statuses are historical observations, not fresh403/no-public-copy findings. Providence2023/24,VCH2020/21 and the nine PHSAhistorical cohorts are handled by the current queue; do not open duplicate issuer requests. Broader grouped requests may contain already-resolved periods and require exact scope subtraction."
+  },
+  "fourOriginalIssuerRequestsRemainUnsent": {
+    "requestCount": 4,
+    "contactsSent": 0,
+    "formsSubmitted": 0,
+    "formalFoiApplicationsSubmitted": 0,
+    "feesAuthorizedOrPaid": 0,
+    "noAdditionalRequestPreparedOrSent": true
+  },
+  "recommendedNextPass": "After the current9task queue closes, prioritize the25remaining located-current school gaps, then refresh exact downloaded native municipal scopes and narrower missing historical health employee periods. Keep source-control clarification issues distinct from genuinely unlocated complete schedules."
+}

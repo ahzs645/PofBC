@@ -1,0 +1,121 @@
+{
+  "id": "queue-completion-municipal-mission-2023-elected-officials",
+  "employerSlug": "city-of-mission",
+  "employerName": "City of Mission",
+  "sector": "Municipalities",
+  "year": "2023",
+  "periodType": "calendar",
+  "periodStart": "2023-01-01",
+  "periodEnd": "2023-12-31",
+  "sourceUrl": "https://www.mission.ca/media/file/2023-sofi-report",
+  "sourceIndexUrl": "https://www.mission.ca/council-government/budget-finance/financial-reporting",
+  "sha256": "82e0ab886a7e8a1e464e3afa25127be7176de79881b93b7602c5a101c8f4d6ac",
+  "file": "mission-2023-elected-officials.json.gzip",
+  "category": "elected-officials",
+  "scope": "elected-officials",
+  "title": "City of Mission 2023 SOFI: complete named elected-official remuneration and expenses",
+  "status": "accepted",
+  "verified": true,
+  "verifiedOn": "2026-11-01",
+  "sourceKind": "official-scanned-pdf",
+  "rowCount": 7,
+  "totalRemuneration": 384911,
+  "totalExpenses": 28443,
+  "pages": [
+    6
+  ],
+  "currency": "CAD",
+  "amountUnit": "dollars",
+  "threshold": null,
+  "completeEmployeeSchedule": false,
+  "retainCompiledPartition": true,
+  "dataSha256": "f71a43a4c8836faaa49fd5999b938822debd015cdeb7d2f10d09fd995fd527c4",
+  "notes": [
+    "Every published name, title where present, separate remuneration and expense cell was checked on actual PDF-painted source images; independent Tesseract and Paddle OCR outputs and their source-reviewed corrections remain separate.",
+    "An independent peer transcribed the complete source-image scope before full candidate comparison. Prior context disclosures and reviewer-only rereads remain in the immutable peer receipts.",
+    "Repeated names or initials remain distinct literal observations; no identity merging, full-name enrichment, annualization or redistribution of aggregate amounts.",
+    "The separate source expense-inclusive Total column, when printed, is retained only in supporting evidence and is never substituted for remuneration.",
+    "Printed schedule year and signed approval are independently recorded; URL/upload dates are not used as reporting-year evidence."
+  ],
+  "definitions": {
+    "remuneration": "Includes any form of salary, wage, gratuities and taxable benefits, including applicable vehicle allowances paid to the employee or on behalf of an employee.",
+    "expenses": "Includes travel expenses, memberships, tuition, relocation, vehicle reimbursements, and registration fees paid directly to an employee or to a third party on behalf of an employee.",
+    "financialStatementRelation": "Schedule is based on actual payments made during the year; financial statements are prepared on an accrual basis.",
+    "sourceNamedSubtotalLabel": "Subtotal - employees with remuneration and expenses exceeding $75,000",
+    "thresholdMeaning": "Retain every printed named row, including individual remuneration below$75,000. Do not silently convert this combined source label into a salary-only selection rule.",
+    "physicalPage": 9
+  },
+  "publicWarning": "This source contains the complete seven-person elected-official scope only; employee observations are a separate source. Retain the compiled partition: no compatible same-calendar-year compiled cohort has been established. Root owns any future period mapping or deletion; full strict multiset comparison is pinned separately.",
+  "validation": {
+    "method": "Complete independent Tesseract and Paddle OCR geometry readers, complete author actual-original image review, and independent full-scope image-first peer transcription with final candidate comparison.",
+    "allFinalRowFieldsOriginalImageVerified": true,
+    "rawOcrReadersAgree": false,
+    "allRawMachineDifferencesOriginalImageResolved": true,
+    "completeEmployeeSchedule": false,
+    "compiledPartitionRetained": true,
+    "compiledPartitionRetentionReason": "Retain the compiled partition: no compatible same-calendar-year compiled cohort has been established. Root owns any future period mapping or deletion; full strict multiset comparison is pinned separately.",
+    "evidenceFile": "evidence/mission-2023-complete-source.json.gzip",
+    "evidenceSha256": "b0644c1daf38a0d99379776bf28a4b423ca0b50693356d2b947d8b8fbce951ad",
+    "sourceContextReview": {
+      "path": "research/salaries/queue-completion-2026-11-01/municipal/mission-2023-context-review-v2.json",
+      "sha256": "8e2bd6d852c93db4b5f3112fdb7124a1a14ad242996dab6dd39062b4c772bd99"
+    },
+    "independentPeerReview": {
+      "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-mission-queue-2023-final-source-closure.json",
+      "sha256": "832131a2fa57d85f58bc8279c3a5504f2b74e643794913a5fedd8c0d015af662"
+    },
+    "salaryPagesReviewedInFull": [
+      6
+    ],
+    "periodEvidence": [
+      {
+        "physicalPage": 6,
+        "text": "for the year ended December 31, 2023"
+      },
+      {
+        "physicalPage": 7,
+        "text": "for the year ended December 31, 2023"
+      },
+      {
+        "physicalPage": 8,
+        "text": "for the year ended December 31, 2023"
+      },
+      {
+        "physicalPage": 9,
+        "text": "for the year ended December 31, 2023"
+      }
+    ],
+    "signedApproval": {
+      "physicalPage": 1,
+      "statement": "Approves all statements and schedules included in this Statement of Financial Information.",
+      "signatories": [
+        {
+          "name": "Doug Stewart, CPA, CGA",
+          "position": "Director of Finance",
+          "signedDate": "2024-06-17"
+        },
+        {
+          "name": "Paul Horn",
+          "position": "MAYOR on behalf of Council",
+          "signedDate": "2024-06-17"
+        }
+      ],
+      "visuallySigned": true
+    },
+    "nullExpenses": 0,
+    "explicitZeroExpenses": 0,
+    "nullPositions": 0,
+    "controls": {
+      "printed": {
+        "rows": 7,
+        "remuneration": 384911,
+        "expenses": 28443,
+        "total": 413354
+      },
+      "observed": {
+        "remuneration": 384911,
+        "knownExpenses": 28443
+      }
+    }
+  }
+}

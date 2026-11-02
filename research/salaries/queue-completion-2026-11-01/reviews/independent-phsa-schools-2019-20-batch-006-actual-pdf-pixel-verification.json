@@ -1,0 +1,910 @@
+{
+  "sourceId": "phsa-2019-20",
+  "sourceSha256": "0e31ac2054f0c2d4ef78797185dddd96cc0cdf2eab94bd6841fa24e1c38e7d02",
+  "batch": "phsa-2019-20-006",
+  "reviewer": "/root/recovery_schools",
+  "reviewedOn": "2026-11-02",
+  "method": "Independently render actual PDF with PyMuPDF page.get_pixmap(dpi=300,alpha=False), compare every RGB pixel to supplied pages, each original fullrow/native field crop and extra adjacent context. Independently regenerate all recorded600/1200 source partials at exact PDF-point clips. No extracted-tile composition or resampling.",
+  "allSourcePagesPixelEqual": true,
+  "sourcePageCount": 10,
+  "sourceNativeCutsByKind": {
+    "fullrow": 400,
+    "field": 635
+  },
+  "nativeSourceCutsCompared": 1035,
+  "additionalAdjacentContextsPixelExact": 37,
+  "pages": [
+    {
+      "physicalPage": 36,
+      "actualSourceImageSha256": "3131d05ea7245fc27a89bb3a202664d6743fd82dac3a4aa74300aad42876688c",
+      "allPixelsEqualIndependentActualPdf300DpiRender": true,
+      "nativeCutsCompared": 11,
+      "additionalContextsCompared": 0
+    },
+    {
+      "physicalPage": 37,
+      "actualSourceImageSha256": "b3ac8797fef1034b52d7929afdf56f425eb88114647987fdcdccbd35c53f26d3",
+      "allPixelsEqualIndependentActualPdf300DpiRender": true,
+      "nativeCutsCompared": 114,
+      "additionalContextsCompared": 0
+    },
+    {
+      "physicalPage": 38,
+      "actualSourceImageSha256": "cdcea1ecbc43a408f6ae398dc21f66e8afac89e3caa5abc292fd419f0a184267",
+      "allPixelsEqualIndependentActualPdf300DpiRender": true,
+      "nativeCutsCompared": 121,
+      "additionalContextsCompared": 5
+    },
+    {
+      "physicalPage": 39,
+      "actualSourceImageSha256": "b781c796fb3e0a74799f7c24f720ebd26872ac7a9f9ca850c76a82f01c0c768d",
+      "allPixelsEqualIndependentActualPdf300DpiRender": true,
+      "nativeCutsCompared": 136,
+      "additionalContextsCompared": 4
+    },
+    {
+      "physicalPage": 40,
+      "actualSourceImageSha256": "8459089775a20ad2fc9eb63e5d3fea6ea3ee9ef1885ea0ba438f30ee263c32f0",
+      "allPixelsEqualIndependentActualPdf300DpiRender": true,
+      "nativeCutsCompared": 124,
+      "additionalContextsCompared": 6
+    },
+    {
+      "physicalPage": 41,
+      "actualSourceImageSha256": "9ab526e5815aaae4b2fc99845e7278836a113bda8eabc235908ded35acad61ea",
+      "allPixelsEqualIndependentActualPdf300DpiRender": true,
+      "nativeCutsCompared": 120,
+      "additionalContextsCompared": 4
+    },
+    {
+      "physicalPage": 42,
+      "actualSourceImageSha256": "65f9e9e7cf8226e84ef4c9f52e5355a0623c6ad58166c24da1012c7c2d0c3c56",
+      "allPixelsEqualIndependentActualPdf300DpiRender": true,
+      "nativeCutsCompared": 112,
+      "additionalContextsCompared": 4
+    },
+    {
+      "physicalPage": 43,
+      "actualSourceImageSha256": "6bdbf10c2b8ecd826e8ed79d515187dbfab3e207941361dc44d931756c58827a",
+      "allPixelsEqualIndependentActualPdf300DpiRender": true,
+      "nativeCutsCompared": 115,
+      "additionalContextsCompared": 5
+    },
+    {
+      "physicalPage": 44,
+      "actualSourceImageSha256": "655ae0f2d2f42cd2e248d05ef763a1a7e551ea7b0dfa40f727eef7308a61d1a5",
+      "allPixelsEqualIndependentActualPdf300DpiRender": true,
+      "nativeCutsCompared": 136,
+      "additionalContextsCompared": 7
+    },
+    {
+      "physicalPage": 45,
+      "actualSourceImageSha256": "2aa0efd8f4f203c5ed3410cc4d04238844b5a54881e191cbb81e1f375ed2c8dd",
+      "allPixelsEqualIndependentActualPdf300DpiRender": true,
+      "nativeCutsCompared": 46,
+      "additionalContextsCompared": 2
+    }
+  ],
+  "additionalDirectActualPdfPartialRendersVerified": [
+    {
+      "sequence": 1,
+      "field": "name",
+      "dpi": 600,
+      "sourceImageSha256": "f6b71fc26f1d02c879327d3b7f688a3c27dcca2bf5e87b10c2f3e192bf5954d8",
+      "exactIndependentActualPdfPartialReproduction": true
+    },
+    {
+      "sequence": 6,
+      "field": "name",
+      "dpi": 600,
+      "sourceImageSha256": "973d2c7c0c82d6099518d3442e2ce86f0d8ea6833d6b7e240f2cbd2fe1a689c3",
+      "exactIndependentActualPdfPartialReproduction": true
+    },
+    {
+      "sequence": 13,
+      "field": "name",
+      "dpi": 600,
+      "sourceImageSha256": "9332b24c266c55d77593facf0ffed68ad2ee672cb572e9a2368cab633490cb9f",
+      "exactIndependentActualPdfPartialReproduction": true
+    },
+    {
+      "sequence": 32,
+      "field": "name",
+      "dpi": 600,
+      "sourceImageSha256": "1a0c9e0450d98c52f82b58d547f89a24367843930a7d19aa4f913e88f8b5cd47",
+      "exactIndependentActualPdfPartialReproduction": true
+    },
+    {
+      "sequence": 37,
+      "field": "name",
+      "dpi": 600,
+      "sourceImageSha256": "fdbf833cc8583144a2985903ccf84e2a5bd3730d7713d251104ee2263e90436f",
+      "exactIndependentActualPdfPartialReproduction": true
+    },
+    {
+      "sequence": 47,
+      "field": "name",
+      "dpi": 600,
+      "sourceImageSha256": "ac0b12f4336589c65cd415b726d05105e1b04308c179793e1372cd3c4552990f",
+      "exactIndependentActualPdfPartialReproduction": true
+    },
+    {
+      "sequence": 51,
+      "field": "name",
+      "dpi": 600,
+      "sourceImageSha256": "7553860577c70c037b09e3c5faa289bcafaf6ccb3ddf15d0043fa1c45f1c4249",
+      "exactIndependentActualPdfPartialReproduction": true
+    },
+    {
+      "sequence": 56,
+      "field": "name",
+      "dpi": 600,
+      "sourceImageSha256": "449092eed9bd8f5daba3ed2d2d1afe824b987a988138ace183267ae3ce319fd4",
+      "exactIndependentActualPdfPartialReproduction": true
+    },
+    {
+      "sequence": 66,
+      "field": "name",
+      "dpi": 600,
+      "sourceImageSha256": "f874400852d531967111f7610be9cda2b576ec982eadb64f89edef0ce25c3ff7",
+      "exactIndependentActualPdfPartialReproduction": true
+    },
+    {
+      "sequence": 68,
+      "field": "name",
+      "dpi": 600,
+      "sourceImageSha256": "aafb6dea4c75281381b0881a0bc760c1d4a9583cbaa8ab085789dba2608b331d",
+      "exactIndependentActualPdfPartialReproduction": true
+    },
+    {
+      "sequence": 72,
+      "field": "name",
+      "dpi": 600,
+      "sourceImageSha256": "8121476a39b76d371e212c0d0c99abcc0a2f9ca25128d7a7f810eeabaabe59ac",
+      "exactIndependentActualPdfPartialReproduction": true
+    },
+    {
+      "sequence": 77,
+      "field": "name",
+      "dpi": 600,
+      "sourceImageSha256": "7754f990e8dda41509e09d23413089fd1ff65ec633d2f3bd4d09e570e93ab0a5",
+      "exactIndependentActualPdfPartialReproduction": true
+    },
+    {
+      "sequence": 82,
+      "field": "name",
+      "dpi": 600,
+      "sourceImageSha256": "cea49e28c80d4f2f714941254ccd303b68a42e794934678e2224600b01bfe4c6",
+      "exactIndependentActualPdfPartialReproduction": true
+    },
+    {
+      "sequence": 85,
+      "field": "name",
+      "dpi": 600,
+      "sourceImageSha256": "af5bd15f4e7935271f6ca79f5e365b6dd0f0d6a047b51847533e67c6f498a2ee",
+      "exactIndependentActualPdfPartialReproduction": true
+    },
+    {
+      "sequence": 86,
+      "field": "name",
+      "dpi": 600,
+      "sourceImageSha256": "c25b161633018bfe8c2dfa52d8042fb0f3f526d686f3f27f0755493a26bb2421",
+      "exactIndependentActualPdfPartialReproduction": true
+    },
+    {
+      "sequence": 98,
+      "field": "name",
+      "dpi": 600,
+      "sourceImageSha256": "7a1c47ee035c99df3bded79f0fec518bcb32ee59b05e1381804fbc5cc2dfe400",
+      "exactIndependentActualPdfPartialReproduction": true
+    },
+    {
+      "sequence": 99,
+      "field": "name",
+      "dpi": 600,
+      "sourceImageSha256": "73d125eb4265697ace463729be025afef5ff10ee7bbf76cee93597b9762906d7",
+      "exactIndependentActualPdfPartialReproduction": true
+    },
+    {
+      "sequence": 108,
+      "field": "name",
+      "dpi": 600,
+      "sourceImageSha256": "28747a625aa49cf728b2b3c440cb3912c8b4a26be0a9448ee1c9a6b87d7c81da",
+      "exactIndependentActualPdfPartialReproduction": true
+    },
+    {
+      "sequence": 111,
+      "field": "name",
+      "dpi": 600,
+      "sourceImageSha256": "91b643c4885e771bae9b39129e1780fb1a0b51bee489a596bb546ca1d02a771c",
+      "exactIndependentActualPdfPartialReproduction": true
+    },
+    {
+      "sequence": 112,
+      "field": "name",
+      "dpi": 600,
+      "sourceImageSha256": "fda12c78226e187eb9c7cc71fb9837c1284bb9d296fe5b493cc87c2ae4ce86d2",
+      "exactIndependentActualPdfPartialReproduction": true
+    },
+    {
+      "sequence": 117,
+      "field": "remuneration",
+      "dpi": 1200,
+      "sourceImageSha256": "025693e03c1ab5b34a369c75cd6a0e66eb7cbe2acc414e7270538b43f058d785",
+      "exactIndependentActualPdfPartialReproduction": true
+    },
+    {
+      "sequence": 118,
+      "field": "name",
+      "dpi": 600,
+      "sourceImageSha256": "43b4f91238d33748bd8376eb1083d65cae48cd537fc725541c1c24a9ebc699ba",
+      "exactIndependentActualPdfPartialReproduction": true
+    },
+    {
+      "sequence": 124,
+      "field": "name",
+      "dpi": 600,
+      "sourceImageSha256": "de6912ceaecf1172fe5a6e3dbbf9327448d5047dc944f1246a4134221e31f594",
+      "exactIndependentActualPdfPartialReproduction": true
+    },
+    {
+      "sequence": 127,
+      "field": "name",
+      "dpi": 600,
+      "sourceImageSha256": "66e1277c1dfa1e4ae63e55f55e74103c07e710b7fc1c1036069c0097686f7fc8",
+      "exactIndependentActualPdfPartialReproduction": true
+    },
+    {
+      "sequence": 133,
+      "field": "name",
+      "dpi": 600,
+      "sourceImageSha256": "416ba4b833ab05cce62d78d3319ba92d13d03407dd8c9cbb1c1781995ace2a64",
+      "exactIndependentActualPdfPartialReproduction": true
+    },
+    {
+      "sequence": 135,
+      "field": "name",
+      "dpi": 600,
+      "sourceImageSha256": "19021a59d7a6b295fe0d3ac53484508eeadfecd6f76b934957a92964172db980",
+      "exactIndependentActualPdfPartialReproduction": true
+    },
+    {
+      "sequence": 138,
+      "field": "name",
+      "dpi": 600,
+      "sourceImageSha256": "cf1b6126b73196da67bccda6af7dc819ceeec4c71e64208f0e8e65ef3d6e3b5d",
+      "exactIndependentActualPdfPartialReproduction": true
+    },
+    {
+      "sequence": 146,
+      "field": "name",
+      "dpi": 600,
+      "sourceImageSha256": "05e5a225cebd2dd32202b083d451e76b5d162650d59a97b6e2f1da63f81dbd64",
+      "exactIndependentActualPdfPartialReproduction": true
+    },
+    {
+      "sequence": 159,
+      "field": "name",
+      "dpi": 600,
+      "sourceImageSha256": "544afb040d5c041b511abdeec76013b524ee9e4a56de5b6eee70e0122e999fc1",
+      "exactIndependentActualPdfPartialReproduction": true
+    },
+    {
+      "sequence": 175,
+      "field": "name",
+      "dpi": 600,
+      "sourceImageSha256": "4acc5084e9caf36f694f2a457c27b094bf157073f620953ca1383c47a89e05c4",
+      "exactIndependentActualPdfPartialReproduction": true
+    },
+    {
+      "sequence": 176,
+      "field": "name",
+      "dpi": 600,
+      "sourceImageSha256": "6c71902dd6ff6c362c04dd9c917848462881c6725ac164a6f493582d77d28af3",
+      "exactIndependentActualPdfPartialReproduction": true
+    },
+    {
+      "sequence": 178,
+      "field": "name",
+      "dpi": 600,
+      "sourceImageSha256": "c227ec2e12c46ebd2d79136d1fd3addfe5d7ee486f10c3215130096319051ba8",
+      "exactIndependentActualPdfPartialReproduction": true
+    },
+    {
+      "sequence": 187,
+      "field": "name",
+      "dpi": 600,
+      "sourceImageSha256": "07453fa9a0a701b7dec0d4a5a79dc67e8315492f1a32b704e0f8e2b8dbfaf2d7",
+      "exactIndependentActualPdfPartialReproduction": true
+    },
+    {
+      "sequence": 188,
+      "field": "name",
+      "dpi": 600,
+      "sourceImageSha256": "3fe367f1ac273d555eb88d3bfe6d8bc96d1871e16890068401f246f459744470",
+      "exactIndependentActualPdfPartialReproduction": true
+    },
+    {
+      "sequence": 189,
+      "field": "name",
+      "dpi": 600,
+      "sourceImageSha256": "b5b0a6ee587d08e4975a857c9669ee87dd4e8755bbae34e72140911d0aee9ff4",
+      "exactIndependentActualPdfPartialReproduction": true
+    },
+    {
+      "sequence": 190,
+      "field": "name",
+      "dpi": 600,
+      "sourceImageSha256": "f5cbfe4bc4d787c77038a38b87034ccb1846413034dd334ab7744887763b2f68",
+      "exactIndependentActualPdfPartialReproduction": true
+    },
+    {
+      "sequence": 196,
+      "field": "name",
+      "dpi": 600,
+      "sourceImageSha256": "c827a316e56a686b4e8dfc6bce53cb4729a648ac88ae22893039473642dc5829",
+      "exactIndependentActualPdfPartialReproduction": true
+    },
+    {
+      "sequence": 198,
+      "field": "name",
+      "dpi": 600,
+      "sourceImageSha256": "b4a0ed3f0435a330d34ebb6a200405a8f377fd19399e111be099eaca2f31b7f5",
+      "exactIndependentActualPdfPartialReproduction": true
+    },
+    {
+      "sequence": 202,
+      "field": "name",
+      "dpi": 600,
+      "sourceImageSha256": "604020d810113f2f40cf8a24b06ce2e2ed84bbfc1b26631619c02f2ce9e1252c",
+      "exactIndependentActualPdfPartialReproduction": true
+    },
+    {
+      "sequence": 205,
+      "field": "name",
+      "dpi": 600,
+      "sourceImageSha256": "c27ea55618051c534aff0d32fff9d28f3f37355bbc8fcb59bc76498d0091dc63",
+      "exactIndependentActualPdfPartialReproduction": true
+    },
+    {
+      "sequence": 211,
+      "field": "name",
+      "dpi": 600,
+      "sourceImageSha256": "eb7706625e1aa45a7f2a0ba4988249b92934f57cbc09f0c380512842198ba420",
+      "exactIndependentActualPdfPartialReproduction": true
+    },
+    {
+      "sequence": 213,
+      "field": "name",
+      "dpi": 600,
+      "sourceImageSha256": "53ca2320db48f401573b1e3d74c69173c9e6f3e88adae88429c81f6fcb242603",
+      "exactIndependentActualPdfPartialReproduction": true
+    },
+    {
+      "sequence": 218,
+      "field": "name",
+      "dpi": 600,
+      "sourceImageSha256": "5774d38110191f99021a82794850972df6b40843ab216a96e952d29d8c517277",
+      "exactIndependentActualPdfPartialReproduction": true
+    },
+    {
+      "sequence": 223,
+      "field": "name",
+      "dpi": 600,
+      "sourceImageSha256": "147b45a9f02969ceb05669ec943221e9923afeea4380cb01315a72345680e2d4",
+      "exactIndependentActualPdfPartialReproduction": true
+    },
+    {
+      "sequence": 229,
+      "field": "name",
+      "dpi": 600,
+      "sourceImageSha256": "c9259d7ca0de50a7805b5f8a1b81266555915b63c6076df0b05f65a9c75d7720",
+      "exactIndependentActualPdfPartialReproduction": true
+    },
+    {
+      "sequence": 230,
+      "field": "name",
+      "dpi": 600,
+      "sourceImageSha256": "ce1c5e6dbefe8b9b4da99c38a26ed06b14aface733559c1d300c56914db27027",
+      "exactIndependentActualPdfPartialReproduction": true
+    },
+    {
+      "sequence": 236,
+      "field": "name",
+      "dpi": 600,
+      "sourceImageSha256": "dc3319c29eb7731fb4ec66cd01a8261961e981fd04ef9d3295d29687171e3175",
+      "exactIndependentActualPdfPartialReproduction": true
+    },
+    {
+      "sequence": 239,
+      "field": "name",
+      "dpi": 600,
+      "sourceImageSha256": "f0524c9321b46806e57565eca2b843fbf83194c76c3f49b8d7d0e30481b30223",
+      "exactIndependentActualPdfPartialReproduction": true
+    },
+    {
+      "sequence": 252,
+      "field": "name",
+      "dpi": 600,
+      "sourceImageSha256": "4fe0c4b9177c007b3fcab0b8679db84566dd707e011e9916a2eb2ff22b288fdb",
+      "exactIndependentActualPdfPartialReproduction": true
+    },
+    {
+      "sequence": 263,
+      "field": "name",
+      "dpi": 600,
+      "sourceImageSha256": "a429bcdd2794c0ce289e986935dad60fa407a5ed020abac518d5bb199a0dcd03",
+      "exactIndependentActualPdfPartialReproduction": true
+    },
+    {
+      "sequence": 265,
+      "field": "name",
+      "dpi": 600,
+      "sourceImageSha256": "2f983c3553d187b6edcd5513e8056f025dcbf1d51cd0bc61af9797c3d389c500",
+      "exactIndependentActualPdfPartialReproduction": true
+    },
+    {
+      "sequence": 266,
+      "field": "name",
+      "dpi": 600,
+      "sourceImageSha256": "e441a8d95002157a95c863c71e88dceb9b67ea27c9f4e9b7624e6838a03ac27a",
+      "exactIndependentActualPdfPartialReproduction": true
+    },
+    {
+      "sequence": 268,
+      "field": "name",
+      "dpi": 600,
+      "sourceImageSha256": "a27e3146e150bbcf955dd93100594f6164c2467065f586897945ac77b8c487a8",
+      "exactIndependentActualPdfPartialReproduction": true
+    },
+    {
+      "sequence": 287,
+      "field": "name",
+      "dpi": 600,
+      "sourceImageSha256": "5d2b0ff432d82d2b2452a80e6112cce08007c297c6d9b40aeba6055686bd7603",
+      "exactIndependentActualPdfPartialReproduction": true
+    },
+    {
+      "sequence": 300,
+      "field": "name",
+      "dpi": 600,
+      "sourceImageSha256": "4b824377f06fab5c26809d901a0b6eca0c4b0673b2ae80d08302f5d61a3c600f",
+      "exactIndependentActualPdfPartialReproduction": true
+    },
+    {
+      "sequence": 301,
+      "field": "name",
+      "dpi": 600,
+      "sourceImageSha256": "0d932e3810e0701d1ff1ddeb80e52a159ec73a510c454b2ef245d41a81f771c6",
+      "exactIndependentActualPdfPartialReproduction": true
+    },
+    {
+      "sequence": 302,
+      "field": "name",
+      "dpi": 600,
+      "sourceImageSha256": "b8bf6cd6c27a62f64591ef97c3093ede5054b51eaa64c581720ad71d0a5efe2e",
+      "exactIndependentActualPdfPartialReproduction": true
+    },
+    {
+      "sequence": 303,
+      "field": "name",
+      "dpi": 600,
+      "sourceImageSha256": "de4c4af6b4d6939d282800064a64a030ae60b242b36322d5e9a3b029f4e7e437",
+      "exactIndependentActualPdfPartialReproduction": true
+    },
+    {
+      "sequence": 317,
+      "field": "name",
+      "dpi": 600,
+      "sourceImageSha256": "f6d4ae2b5bf26dcfe0be0fa22cce6d76280c060dd6665eeea44c92c81b98f7e9",
+      "exactIndependentActualPdfPartialReproduction": true
+    },
+    {
+      "sequence": 322,
+      "field": "name",
+      "dpi": 600,
+      "sourceImageSha256": "f909602be46ebc26f820ba41ae445bdee315e8429e1213f302aa9cd729c2901a",
+      "exactIndependentActualPdfPartialReproduction": true
+    },
+    {
+      "sequence": 328,
+      "field": "name",
+      "dpi": 600,
+      "sourceImageSha256": "5e6ea884bc5e70ddab5ddaf7747f90145bcb644d0593cddd25487987c96b8b2c",
+      "exactIndependentActualPdfPartialReproduction": true
+    },
+    {
+      "sequence": 329,
+      "field": "name",
+      "dpi": 600,
+      "sourceImageSha256": "f7463ba3715ddaedfa8013bf07f0c6bacceb353ad05353e27b946f02148a8890",
+      "exactIndependentActualPdfPartialReproduction": true
+    },
+    {
+      "sequence": 333,
+      "field": "name",
+      "dpi": 600,
+      "sourceImageSha256": "617e3192c551d652f2b1dcdfa0ebed1f95f3c8b209eaf7d8e4dfe535b5d55e25",
+      "exactIndependentActualPdfPartialReproduction": true
+    },
+    {
+      "sequence": 334,
+      "field": "name",
+      "dpi": 600,
+      "sourceImageSha256": "03eb1538c12519a5085df6a7a7929768e685925291bdab00f0145043d7cd2792",
+      "exactIndependentActualPdfPartialReproduction": true
+    },
+    {
+      "sequence": 340,
+      "field": "name",
+      "dpi": 600,
+      "sourceImageSha256": "175ba5ae71d9267ebbac3e1c0e835caad8f317eb3ab5faea09c3d066078090b0",
+      "exactIndependentActualPdfPartialReproduction": true
+    },
+    {
+      "sequence": 347,
+      "field": "name",
+      "dpi": 600,
+      "sourceImageSha256": "cb905392a6f49305ecd71bbdd74df9a9c9345680dc107f3ff9e64a1611090ba7",
+      "exactIndependentActualPdfPartialReproduction": true
+    },
+    {
+      "sequence": 351,
+      "field": "name",
+      "dpi": 600,
+      "sourceImageSha256": "e40f74af06791e78d886cbb3f79688ea09e3bbd72dd5a362854042bd33fb00b0",
+      "exactIndependentActualPdfPartialReproduction": true
+    },
+    {
+      "sequence": 364,
+      "field": "name",
+      "dpi": 600,
+      "sourceImageSha256": "6d65f34b2820aefe95e79e82233ec50f949e08041750ab27d6cf1b6ecb6d8705",
+      "exactIndependentActualPdfPartialReproduction": true
+    },
+    {
+      "sequence": 373,
+      "field": "name",
+      "dpi": 600,
+      "sourceImageSha256": "4986a85552c60e6ffb5e56a6fbb83aaf5ac2abdc54f691378787df82e76a2ac9",
+      "exactIndependentActualPdfPartialReproduction": true
+    },
+    {
+      "sequence": 375,
+      "field": "name",
+      "dpi": 600,
+      "sourceImageSha256": "4332ead727e0e9f793f2e1e459bf7d751f4cb98594ece0b8ee97f9c84a7e66e9",
+      "exactIndependentActualPdfPartialReproduction": true
+    },
+    {
+      "sequence": 376,
+      "field": "name",
+      "dpi": 600,
+      "sourceImageSha256": "b12a65599d877241a16d7f5a182ca30126a2a1ffce32004f1011e488410d6a47",
+      "exactIndependentActualPdfPartialReproduction": true
+    },
+    {
+      "sequence": 377,
+      "field": "name",
+      "dpi": 600,
+      "sourceImageSha256": "d65f2253337a897b22e8039cec05d6cde151c0dff397ea0100001ebc844d637b",
+      "exactIndependentActualPdfPartialReproduction": true
+    },
+    {
+      "sequence": 390,
+      "field": "name",
+      "dpi": 600,
+      "sourceImageSha256": "6f06aee30fb1b37348620a08a1730c20d7aeee17f3efd0713b44b4cc64fc8479",
+      "exactIndependentActualPdfPartialReproduction": true
+    },
+    {
+      "sequence": 395,
+      "field": "name",
+      "dpi": 600,
+      "sourceImageSha256": "0ff2ab1d8ecc5240182c7bbf31a7b85d538b904df5beec72cbc367c06463720d",
+      "exactIndependentActualPdfPartialReproduction": true
+    },
+    {
+      "sequence": 398,
+      "field": "name",
+      "dpi": 600,
+      "sourceImageSha256": "236aee132879c7378500c461045e6c69a907cce2ff118cd3a3c1d640e625505b",
+      "exactIndependentActualPdfPartialReproduction": true
+    },
+    {
+      "sequence": 51,
+      "field": "name",
+      "dpi": 1200,
+      "sourceImageSha256": "3e668cb980a34d4de904f367c55190f2834b29405fc28150b360da8d3fd3461c",
+      "exactIndependentActualPdfPartialReproduction": true
+    },
+    {
+      "sequence": 187,
+      "field": "name",
+      "dpi": 1200,
+      "sourceImageSha256": "7c134558fece8b7e0519989f6593e4f3d397e6335785adacf8769f08ee30354d",
+      "exactIndependentActualPdfPartialReproduction": true
+    },
+    {
+      "sequence": 266,
+      "field": "name",
+      "dpi": 1200,
+      "sourceImageSha256": "b370edddec044a485a0ac46df93cb4601c2996da9d576c1ee77f0be39535c09c",
+      "exactIndependentActualPdfPartialReproduction": true
+    },
+    {
+      "sequence": 300,
+      "field": "name",
+      "dpi": 1200,
+      "sourceImageSha256": "f8920d2f3629e0cfae1fac7e00df8b44b020183126e4ec39fa7a8edd4892bb56",
+      "exactIndependentActualPdfPartialReproduction": true
+    },
+    {
+      "sequence": 364,
+      "field": "name",
+      "dpi": 1200,
+      "sourceImageSha256": "316a942bf29bd887c1e34dbf2e2d85d5959665f80b2eea459db49dd3a04a0e7f",
+      "exactIndependentActualPdfPartialReproduction": true
+    },
+    {
+      "sequence": 51,
+      "field": "name",
+      "dpi": 1200,
+      "sourceImageSha256": "50172b5426c1a00e1e6a56cd5e61d644c753ff345c0b03b5f0f31a4d8da21289",
+      "exactIndependentActualPdfPartialReproduction": true
+    },
+    {
+      "sequence": 68,
+      "field": "name",
+      "dpi": 1200,
+      "sourceImageSha256": "4512411a36c9ce2b40da5c539f800b313e1616ecab28d4ea931522565e9fddc5",
+      "exactIndependentActualPdfPartialReproduction": true
+    },
+    {
+      "sequence": 72,
+      "field": "name",
+      "dpi": 1200,
+      "sourceImageSha256": "645681fc6462f99201ac5ba44d8202091490097a0906e2fb91bd15b3e7ac21f7",
+      "exactIndependentActualPdfPartialReproduction": true
+    },
+    {
+      "sequence": 85,
+      "field": "name",
+      "dpi": 1200,
+      "sourceImageSha256": "add8511cf38b03bb7b96463ae4bd015713f070831ee669eb098f73e86052fbad",
+      "exactIndependentActualPdfPartialReproduction": true
+    },
+    {
+      "sequence": 86,
+      "field": "name",
+      "dpi": 1200,
+      "sourceImageSha256": "14b95e1bb07405e05f6f8a3e9c644df5f574ec64418975eb690130f13d27bf35",
+      "exactIndependentActualPdfPartialReproduction": true
+    },
+    {
+      "sequence": 117,
+      "field": "remuneration",
+      "dpi": 1200,
+      "sourceImageSha256": "025693e03c1ab5b34a369c75cd6a0e66eb7cbe2acc414e7270538b43f058d785",
+      "exactIndependentActualPdfPartialReproduction": true
+    },
+    {
+      "sequence": 124,
+      "field": "name",
+      "dpi": 1200,
+      "sourceImageSha256": "67c4adc1ec8e6dc5b056f93efe4c809f1d6cd1b57c059dbf3a03b3d72f2824e1",
+      "exactIndependentActualPdfPartialReproduction": true
+    },
+    {
+      "sequence": 133,
+      "field": "name",
+      "dpi": 1200,
+      "sourceImageSha256": "d1bba10f3eb152ecf3d85468b6a70b346b1ea79590889f7dd8920e10faaee782",
+      "exactIndependentActualPdfPartialReproduction": true
+    },
+    {
+      "sequence": 135,
+      "field": "name",
+      "dpi": 1200,
+      "sourceImageSha256": "1173286d298f0d3e47521fca70f05fc3615377cc4225c37a5617ffb0475ba266",
+      "exactIndependentActualPdfPartialReproduction": true
+    },
+    {
+      "sequence": 175,
+      "field": "name",
+      "dpi": 1200,
+      "sourceImageSha256": "28b1261c1ddd2846fc5fd581a54a6c38fb6a9e1806593b41b1dd29261c2ba6e2",
+      "exactIndependentActualPdfPartialReproduction": true
+    },
+    {
+      "sequence": 176,
+      "field": "name",
+      "dpi": 1200,
+      "sourceImageSha256": "ec33d9509dad3186a7c9f8d8dac26ab12c673a4c211cb9bd4735949b81b9de6d",
+      "exactIndependentActualPdfPartialReproduction": true
+    },
+    {
+      "sequence": 187,
+      "field": "name",
+      "dpi": 1200,
+      "sourceImageSha256": "1a657428f49bc014ae5bf7814b0f694d9ee7190f1879a8633876d771868343ba",
+      "exactIndependentActualPdfPartialReproduction": true
+    },
+    {
+      "sequence": 188,
+      "field": "name",
+      "dpi": 1200,
+      "sourceImageSha256": "91a4a7bf250d3670b4dcc94890adb8149713392ff90d1b42300a7f9e364f295c",
+      "exactIndependentActualPdfPartialReproduction": true
+    },
+    {
+      "sequence": 189,
+      "field": "name",
+      "dpi": 1200,
+      "sourceImageSha256": "47ff486d5e5ef24e81cc691061e7cceef95f159841757fc2e0a5b1711470296c",
+      "exactIndependentActualPdfPartialReproduction": true
+    },
+    {
+      "sequence": 190,
+      "field": "name",
+      "dpi": 1200,
+      "sourceImageSha256": "7f3d6e79aedc4203397ffea3cdcc4a511b7a4eba1e60c59b958705a6cb76821b",
+      "exactIndependentActualPdfPartialReproduction": true
+    },
+    {
+      "sequence": 198,
+      "field": "name",
+      "dpi": 1200,
+      "sourceImageSha256": "f4855971514a32aa0f6620059db2c439c8eb4d954450fd6c97c5d7a96fd6c9d4",
+      "exactIndependentActualPdfPartialReproduction": true
+    },
+    {
+      "sequence": 202,
+      "field": "name",
+      "dpi": 1200,
+      "sourceImageSha256": "a013a10964d92247b8efa6b868d3d727d9392810de2c44470792daa6e339d8b4",
+      "exactIndependentActualPdfPartialReproduction": true
+    },
+    {
+      "sequence": 205,
+      "field": "name",
+      "dpi": 1200,
+      "sourceImageSha256": "95b30920386de7a9c2c0d763126c7cd4554f83c608f6c6cb5d88a3b5a11fd3b5",
+      "exactIndependentActualPdfPartialReproduction": true
+    },
+    {
+      "sequence": 223,
+      "field": "name",
+      "dpi": 1200,
+      "sourceImageSha256": "817ac99433b83b2a70ca781b92ce003fc252272b5561acc9f7927b9b271afa30",
+      "exactIndependentActualPdfPartialReproduction": true
+    },
+    {
+      "sequence": 252,
+      "field": "name",
+      "dpi": 1200,
+      "sourceImageSha256": "230a9f1cb8ac856059379c4b7b805e5ae8728e7a79b3ba67ed148002ed664677",
+      "exactIndependentActualPdfPartialReproduction": true
+    },
+    {
+      "sequence": 263,
+      "field": "name",
+      "dpi": 1200,
+      "sourceImageSha256": "c77e118da599bd0b05003f8fb33ddb638516c235cfa8b86746cf74ae64809140",
+      "exactIndependentActualPdfPartialReproduction": true
+    },
+    {
+      "sequence": 265,
+      "field": "name",
+      "dpi": 1200,
+      "sourceImageSha256": "0e374c99a27fdab6672d787eabfe7da16f2363a423654ecc8761d792cea7bb64",
+      "exactIndependentActualPdfPartialReproduction": true
+    },
+    {
+      "sequence": 266,
+      "field": "name",
+      "dpi": 1200,
+      "sourceImageSha256": "c88457b8c3023bfda059b87d73219aa6265eb7fb1ea3615f1ca1b82195308da8",
+      "exactIndependentActualPdfPartialReproduction": true
+    },
+    {
+      "sequence": 300,
+      "field": "name",
+      "dpi": 1200,
+      "sourceImageSha256": "f655055af80bf997490d47264eb5cc1cb22a70d5112110b8d5177d706b874e64",
+      "exactIndependentActualPdfPartialReproduction": true
+    },
+    {
+      "sequence": 301,
+      "field": "name",
+      "dpi": 1200,
+      "sourceImageSha256": "605526f0bd0290b19603a43624f7f0f9f228adcb4a05754cc259aab1993e2dbd",
+      "exactIndependentActualPdfPartialReproduction": true
+    },
+    {
+      "sequence": 302,
+      "field": "name",
+      "dpi": 1200,
+      "sourceImageSha256": "92d6b5e5326caad11ef5c8f37a25c3fe9a1093d859c5abb7e4b11fde8c3a97e0",
+      "exactIndependentActualPdfPartialReproduction": true
+    },
+    {
+      "sequence": 328,
+      "field": "name",
+      "dpi": 1200,
+      "sourceImageSha256": "0e3bea039fc6294262548add195f1264e9d14d03ca1f1b952368f411c45e9135",
+      "exactIndependentActualPdfPartialReproduction": true
+    },
+    {
+      "sequence": 329,
+      "field": "name",
+      "dpi": 1200,
+      "sourceImageSha256": "f4417d769328fb2d013ac9c285feb899b1120c70b406c64d0b1bcbeaa9ac55cc",
+      "exactIndependentActualPdfPartialReproduction": true
+    },
+    {
+      "sequence": 334,
+      "field": "name",
+      "dpi": 1200,
+      "sourceImageSha256": "fa19ca947adfe7ba13d4f9d0e41c8dd32107480044edfaf84edeaf7cd76b83d9",
+      "exactIndependentActualPdfPartialReproduction": true
+    },
+    {
+      "sequence": 347,
+      "field": "name",
+      "dpi": 1200,
+      "sourceImageSha256": "2613db6ca1ead5033d4e6d9254e1c2fd8e16accdd38e4137e92725f5775dbdd3",
+      "exactIndependentActualPdfPartialReproduction": true
+    },
+    {
+      "sequence": 364,
+      "field": "name",
+      "dpi": 1200,
+      "sourceImageSha256": "c02e7b8dd1e9a9cd319ec191c8d45d53602882c2422cf916c26a6c020e2583f3",
+      "exactIndependentActualPdfPartialReproduction": true
+    },
+    {
+      "sequence": 373,
+      "field": "name",
+      "dpi": 1200,
+      "sourceImageSha256": "11273e835790ea81f92c35b0fb3e8503374e9fb2c0cba9e1816b10f0e8219eb7",
+      "exactIndependentActualPdfPartialReproduction": true
+    },
+    {
+      "sequence": 375,
+      "field": "name",
+      "dpi": 1200,
+      "sourceImageSha256": "51a6d0c8c5ba828e7fc9647e02db806d464a8d9af5dcc3ee313ca3c828208ece",
+      "exactIndependentActualPdfPartialReproduction": true
+    },
+    {
+      "sequence": 376,
+      "field": "name",
+      "dpi": 1200,
+      "sourceImageSha256": "7e1c5533b3a2b642727e2488ab95a315919d060588df6865692775330f7c7941",
+      "exactIndependentActualPdfPartialReproduction": true
+    },
+    {
+      "sequence": 377,
+      "field": "name",
+      "dpi": 1200,
+      "sourceImageSha256": "9207867a1b50d39f36c32521f4d4d108c43b5b1bd47253b23a2173b2c2323581",
+      "exactIndependentActualPdfPartialReproduction": true
+    },
+    {
+      "sequence": 390,
+      "field": "name",
+      "dpi": 1200,
+      "sourceImageSha256": "ea5e3b05ee120361692b9c291e051f4e7d6f334754045268ba08d54e06f488a4",
+      "exactIndependentActualPdfPartialReproduction": true
+    },
+    {
+      "sequence": 395,
+      "field": "name",
+      "dpi": 1200,
+      "sourceImageSha256": "51dc1606af3d851342b70c8962e8d0ff8f16e7f60b6a642aead6de7faf6c59de",
+      "exactIndependentActualPdfPartialReproduction": true
+    }
+  ],
+  "acceptedEmployeeRows": 0
+}

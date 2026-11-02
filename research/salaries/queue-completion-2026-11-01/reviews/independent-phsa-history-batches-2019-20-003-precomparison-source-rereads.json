@@ -1,0 +1,37 @@
+{
+  "reviewer": "/root/recovery_review",
+  "sourceId": "phsa-2019-20",
+  "sourceSha256": "0e31ac2054f0c2d4ef78797185dddd96cc0cdf2eab94bd6841fa24e1c38e7d02",
+  "batch": "phsa-2019-20-003",
+  "imageFirstRawUnchanged": {
+    "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-history-batches-2019-20-003-original-transcript-v2.json",
+    "sha256": "91d611ebe883a2e1c2a24fcba8eb7c2d363cd0a22ad74bad927b394e5dc12156"
+  },
+  "fullCandidateStillUnopened": true,
+  "ownSourceRereads": [
+    {
+      "sequence": 158,
+      "field": "name",
+      "firstPass": "Celik,Ozhay Ahsen",
+      "sourceReread": "Celik,Ozbay Ahsen",
+      "basis": "Actual600dpi current-source b has ascender plus enclosed lower bowl; first pass wrongly read h. No dictionary/prior-year lookup.",
+      "actualSource600": {
+        "path": "/tmp/independent-phsa-history-2019-003-source600/seq158-name.png",
+        "sha256": "b6566645372227b18fba4ad361e2d742c35b50b0dec3e40bb8f9051c41351e39"
+      }
+    },
+    {
+      "sequence": 272,
+      "field": "name",
+      "firstPass": "Cheung,Duanco Ka Chun",
+      "sourceReread": "Cheung,Branco Ka Chun",
+      "basis": "Actual600dpi current-source initial B has two bowls; following r has shoulder then distinct a. First native-sheet pass misread the initial cluster. No inferred common name.",
+      "actualSource600": {
+        "path": "/tmp/independent-phsa-history-2019-003-source600/seq272-name.png",
+        "sha256": "0618e5bef3fb238291acc0ad939641dc08e458364ebc050441435a3ec7ea3ff4"
+      }
+    }
+  ],
+  "everyMonetaryFirstReadingUnchanged": true,
+  "sourceOnlyReadsNotCandidateCorrections": true
+}

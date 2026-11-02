@@ -1,0 +1,58 @@
+{
+  "reviewer": "held_health_review",
+  "sourceSha256": "24a6cd0394f42596859f15cb4a1ec811c28c5a5c09e004a3766aa78130396ac6",
+  "physicalPage": 37,
+  "supersedesForComparison": {
+    "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-creston-queue-original-transcript.tsv",
+    "sha256": "a537cb6ee39b67e4849d7dc2cdcc8204d3efc2af66797c3fdff3d896788125ac"
+  },
+  "transcript": {
+    "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-creston-queue-actual600-transcript.tsv",
+    "sha256": "12ee02cb0c2fdb8859408184088b2cb6bcecd8ddd6e02fd8d00d86621adc5c1c"
+  },
+  "reviewerOnlySourceReReadCorrections": [
+    {
+      "sourceRowOnPage": 8,
+      "field": "expenses",
+      "before": "2099",
+      "after": "2090",
+      "reason": "Reviewer-only300dpi first-pass reading corrected from personally viewed600dpi actual PDF money column, before opening OCR or candidate."
+    },
+    {
+      "sourceRowOnPage": 12,
+      "field": "remuneration",
+      "before": "77595",
+      "after": "77585",
+      "reason": "Reviewer-only300dpi first-pass reading corrected from personally viewed600dpi actual PDF money column, before opening OCR or candidate."
+    },
+    {
+      "sourceRowOnPage": 14,
+      "field": "remuneration",
+      "before": "85038",
+      "after": "85039",
+      "reason": "Reviewer-only300dpi first-pass reading corrected from personally viewed600dpi actual PDF money column, before opening OCR or candidate."
+    },
+    {
+      "sourceRowOnPage": 21,
+      "field": "expenses",
+      "before": "6894",
+      "after": "6884",
+      "reason": "Reviewer-only300dpi first-pass reading corrected from personally viewed600dpi actual PDF money column, before opening OCR or candidate."
+    }
+  ],
+  "sourceMoneyImageSha256": "19853e2799bcb8edb1b8bb3d4f9bcea2dd2e315bdbe2c96450cb78f4d5cee971",
+  "sourceMoneyImageBox600dpi": [
+    3330,
+    2300,
+    4010,
+    4580
+  ],
+  "computedRemunerationSum": 2684996,
+  "computedExpenseSum": 61234,
+  "printedSubtotal": {
+    "remuneration": 2685008,
+    "expenses": 61044
+  },
+  "status": "source-first-transcript-frozen-with-unresolved-controls",
+  "note": "No candidate/engine alternatives opened. Residuals are not permission to change source values; full second independent comparison required. Author source transcriber must separately read these fields."
+}

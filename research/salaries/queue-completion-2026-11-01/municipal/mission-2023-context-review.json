@@ -1,0 +1,126 @@
+{
+  "date": "2026-11-01",
+  "reviewer": "recovery_municipal (author)",
+  "sourceKey": "mission-2023",
+  "sourceSha256": "82e0ab886a7e8a1e464e3afa25127be7176de79881b93b7602c5a101c8f4d6ac",
+  "physicalPages": 14,
+  "salaryPagesReviewedCompletely": [
+    6,
+    7,
+    8,
+    9
+  ],
+  "otherSourceReview": "Whole14-page thumbnail survey identified all remuneration pages; actual full salary rows and controls were reviewed at300dpi. Physical1 signed whole-SOFI approval reviewed at300dpi. No claim that every nonsalary page was fully transcribed.",
+  "printedPeriodEvidence": [
+    {
+      "physicalPage": 6,
+      "text": "for the year ended December 31, 2023"
+    },
+    {
+      "physicalPage": 7,
+      "text": "for the year ended December 31, 2023"
+    },
+    {
+      "physicalPage": 8,
+      "text": "for the year ended December 31, 2023"
+    },
+    {
+      "physicalPage": 9,
+      "text": "for the year ended December 31, 2023"
+    }
+  ],
+  "approval": {
+    "physicalPage": 1,
+    "statement": "Approves all statements and schedules included in this Statement of Financial Information.",
+    "signatories": [
+      {
+        "name": "Doug Stewart, CPA, CGA",
+        "position": "Director of Finance",
+        "signedDate": "2024-06-17"
+      },
+      {
+        "name": "Paul Horn",
+        "position": "MAYOR on behalf of Council",
+        "signedDate": "2024-06-17"
+      }
+    ],
+    "visuallySigned": true
+  },
+  "definitions": {
+    "remuneration": "Includes any form of salary, wage, gratuities and taxable benefits, including applicable vehicle allowances paid to the employee or on behalf of an employee.",
+    "expenses": "Includes travel expenses, memberships, tuition, relocation, vehicle reimbursements, and registration fees paid directly to an employee or to a third party on behalf of an employee.",
+    "financialStatementRelation": "Schedule is based on actual payments made during the year; financial statements are prepared on an accrual basis.",
+    "sourceNamedSubtotalLabel": "Subtotal - employees with remuneration and expenses exceeding $75,000",
+    "thresholdMeaning": "Retain every printed named row, including individual remuneration below$75,000. Do not silently convert this combined source label into a salary-only selection rule.",
+    "physicalPage": 9
+  },
+  "printedPageControls": [
+    {
+      "page": 6,
+      "scope": "named employees on page6 (council has separate subtotal)",
+      "rows": 39,
+      "remuneration": 4050149,
+      "expenses": 97830,
+      "total": 4147979
+    },
+    {
+      "page": 7,
+      "scope": "named employees on page7",
+      "rows": 51,
+      "remuneration": 5673866,
+      "expenses": 109375,
+      "total": 5783241
+    },
+    {
+      "page": 8,
+      "scope": "named employees on page8",
+      "rows": 51,
+      "remuneration": 5718042,
+      "expenses": 95786,
+      "total": 5813828
+    },
+    {
+      "page": 9,
+      "scope": "named employees on page9",
+      "rows": 7,
+      "remuneration": 1003708,
+      "expenses": 15896,
+      "total": 1019604
+    }
+  ],
+  "printedCohortControls": {
+    "namedEmployees": {
+      "rows": 148,
+      "remuneration": 16445765,
+      "expenses": 318887,
+      "total": 16764652
+    },
+    "electedOfficials": {
+      "rows": 7,
+      "remuneration": 384911,
+      "expenses": 28443,
+      "total": 413354
+    },
+    "belowThresholdEmployees": {
+      "remuneration": 12403217,
+      "expenses": 119350,
+      "total": 12522567
+    },
+    "allEmployees": {
+      "remuneration": 28848982,
+      "expenses": 438237,
+      "total": 29287219
+    },
+    "allEmployeesAndElected": {
+      "remuneration": 29233893,
+      "expenses": 466680,
+      "total": 29700573
+    }
+  },
+  "allNamedAndPageControlsAgreeExactlyAfterCompleteSourceRowReview": true,
+  "nullExpenseCells": 9,
+  "explicitZeroExpenseCells": 0,
+  "sourceDashesRemainNull": true,
+  "allRepeatedNamesAndRolesRetainedWithoutIdentityAssumptions": true,
+  "acceptedRows": 0
+}

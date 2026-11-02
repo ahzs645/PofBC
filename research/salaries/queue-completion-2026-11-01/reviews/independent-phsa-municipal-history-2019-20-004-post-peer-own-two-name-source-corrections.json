@@ -1,0 +1,101 @@
+{
+  "frozen": true,
+  "reviewer": "/root/recovery_municipal",
+  "reviewedOn": "2026-11-02",
+  "sourceSha256": "0e31ac2054f0c2d4ef78797185dddd96cc0cdf2eab94bd6841fa24e1c38e7d02",
+  "batch": "phsa-2019-20-004",
+  "rawSourceFirstTranscript": {
+    "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-municipal-history-2019-20-004-original-transcript.json",
+    "sha256": "ec4ccffe9feeb72f320e3fce6b3ae2cb704d8bbd218688f8d95996a6be35474d"
+  },
+  "ownPreviousPostcomparisonReread": {
+    "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-municipal-history-2019-20-004-postcomparison-name-reread-transcript.json",
+    "sha256": "38c89cd1447d7a54f75044d07b36d7c5a07604738b9aa4495a05b0e582a9775f"
+  },
+  "freshPeer18RawFrozenBeforeOwnChoices": {
+    "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-education-2019-20-004-municipal-extra18-source-first.json",
+    "sha256": "180cba2c59b225693ddb01048b9d2715cd1ca2520967f69fa067f2681a0e1eca"
+  },
+  "exactOriginalFocusedEvidence": {
+    "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-municipal-history-2019-20-004-two-focused-original2400-source-only.json",
+    "sha256": "5bf2bbac3096327960302cf5fca2245eeccbfd19f1a1dcb5ac77adba9a7683b4"
+  },
+  "ownPersonallyViewedActual2400SourceAfterPeerDisagreement": true,
+  "corrections": [
+    {
+      "sequence": 96,
+      "field": "name",
+      "firstBlindAndEarlierOwnSourceReading": "Coates,Kaitlyn Dawn",
+      "finalOriginalSourceReading": "Coates,Katlyn Dawn",
+      "sourceProof": {
+        "sequence": 96,
+        "physicalPage": 22,
+        "sourceRowOnPage": 9,
+        "originalFullRowCropSha256": "054f352b83f2ec00e719e0628c6cc16ae89f54c59bad0c8d2d91f97a35d7599c",
+        "actual2400OriginalSource": {
+          "path": "/workspace/salary-review-municipal-tmp/phsa-2019-20-004/post-source/0096-focused-extended-actual2400.png",
+          "sha256": "ad13740cd7e140733d6764c55c2fbc476641cb4571aa6ffaf005c03571b24c00",
+          "original300DpiPixelBox": [
+            400,
+            996,
+            620,
+            1052
+          ],
+          "dpi": 2400
+        },
+        "whiteMarginOnlyView": {
+          "path": "/workspace/salary-review-municipal-tmp/phsa-2019-20-004/post-source/0096-focused-extended-actual2400-ink.png",
+          "sha256": "c1baca2bdf7775bc08f249cb0ff3929312d7c1a8007d4aac58e13d5ff0a5539f",
+          "cropBoxWithinActual2400": [
+            56,
+            112,
+            1682,
+            448
+          ],
+          "originalRgbPixelsUnchanged": true
+        }
+      },
+      "sourceGlyphBasis": "The actual2400currentsource has K-a-t-l-y-n. Two tall stems are t then l, with no independently dotted i or extra i stem between a and t. My inserted i was an own source-reading error; no dictionary choice."
+    },
+    {
+      "sequence": 189,
+      "field": "name",
+      "firstBlindAndEarlierOwnSourceReading": "Cowhick,Jill",
+      "finalOriginalSourceReading": "Cowlrick,Jill",
+      "sourceProof": {
+        "sequence": 189,
+        "physicalPage": 24,
+        "sourceRowOnPage": 6,
+        "originalFullRowCropSha256": "14ffa89bf81629d5b2fd076f7c49a435da387000e89d0182b4a54ff6294e047e",
+        "actual2400OriginalSource": {
+          "path": "/workspace/salary-review-municipal-tmp/phsa-2019-20-004/post-source/0189-focused-extended-actual2400.png",
+          "sha256": "5816e8270927a15e9ef9fea4122e789791341de1f4bdafa4a30dd113babe38cc",
+          "original300DpiPixelBox": [
+            325,
+            871,
+            550,
+            926
+          ],
+          "dpi": 2400
+        },
+        "whiteMarginOnlyView": {
+          "path": "/workspace/salary-review-municipal-tmp/phsa-2019-20-004/post-source/0189-focused-extended-actual2400-ink.png",
+          "sha256": "48a3d6a957643428046576365bdecedada835c02ea2c26bc8b6cdec548256733",
+          "cropBoxWithinActual2400": [
+            8,
+            0,
+            1369,
+            324
+          ],
+          "originalRgbPixelsUnchanged": true
+        }
+      },
+      "sourceGlyphBasis": "Actual2400shows separate tall l and short r with a white break before dotted i, rather than one connected h arch. Current Cowley/target/Cownden ordering supports the same current-source literal, but the correction rests on observed separate glyphs."
+    }
+  ],
+  "qualifiedNameWaiverNeededForTheseTwo": false,
+  "oldPrimaryAndFiniteHypothesesNotSilentlyDeleted": true,
+  "noFirstPassAgreementClaim": true,
+  "freshThird11PeerStillReservedAndChoicesWithheld": true,
+  "scope": "Two actual author reading corrections only; no monetary data changes/full400secondhuman or whole-source acceptance claim."
+}

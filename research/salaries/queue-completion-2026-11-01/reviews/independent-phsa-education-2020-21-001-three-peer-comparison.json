@@ -1,0 +1,85 @@
+{
+  "reviewer": "recovery_education",
+  "reviewedOn": "2026-11-01",
+  "sourceId": "phsa-2020-21",
+  "sourceSha256": "87ea680c3e2b9bb940d911a198e41b85068535964ee61b6992e651271bd72b60",
+  "batch": "phsa-2020-21-001",
+  "status": "PASS-three-exact-literal-primaries-complete-finite-alternatives-and-source-bases",
+  "independentBlindSourceFirst": {
+    "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-education-2020-21-001-three-peer-source-first.json",
+    "sha256": "6231d1121d5040cc2b25413cea583118f8d421baf097f564f91b7368108ab638"
+  },
+  "authorCaseLedger": {
+    "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-schools-2020-21-batch-001-source-name-qualifications.json",
+    "sha256": "043b0720f48c11385bf05541c17861da728f692185620dd1cdd506f26cfe9e84"
+  },
+  "rows": [
+    {
+      "sequence": 149,
+      "physicalPage": 24,
+      "sourceRowOnPage": 19,
+      "cropSha256": "09f8a4179baa448f84c9ce59e04339fdcbd9503f71e0aaa23f79212bfb3a949c",
+      "independentBlindPrimary": "Chomcy,Kevin Daniel",
+      "authorPrimary": "Chomcy,Kevin Daniel",
+      "visibleAlternatives": [
+        "Chomcy,Kevin Daniel",
+        "Chorncy,Kevin Daniel",
+        "Chomey,Kevin Daniel",
+        "Chorney,Kevin Daniel"
+      ],
+      "primaryMatch": true,
+      "allFiniteAlternativesMatch": true,
+      "basisCompatible": true,
+      "caseProvenByPixels": false,
+      "ambiguityKind": "closed-exact-rn-m-plus-c-e-source-case-only"
+    },
+    {
+      "sequence": 215,
+      "physicalPage": 34,
+      "sourceRowOnPage": 11,
+      "cropSha256": "9195cf3501c90629bd23f1e0b9a20e990a93ac758afe0b6402c0e12f7240e7b5",
+      "independentBlindPrimary": "Dirner,Katerine Zsuzsi",
+      "authorPrimary": "Dirner,Katerine Zsuzsi",
+      "visibleAlternatives": [
+        "Dirner,Katerine Zsuzsi",
+        "Dimer,Katerine Zsuzsi"
+      ],
+      "primaryMatch": true,
+      "allFiniteAlternativesMatch": true,
+      "basisCompatible": true,
+      "caseProvenByPixels": false,
+      "ambiguityKind": "rn-m-source-segmentation"
+    },
+    {
+      "sequence": 223,
+      "physicalPage": 35,
+      "sourceRowOnPage": 29,
+      "cropSha256": "b86864618cd21a1877d5f1d064556a70f6828dd31be096a287c01639f770fdb3",
+      "independentBlindPrimary": "Dublan,Jorne Michael Epis",
+      "authorPrimary": "Dublan,Jorne Michael Epis",
+      "visibleAlternatives": [
+        "Dublan,Jorne Michael Epis",
+        "Dublan,Jome Michael Epis"
+      ],
+      "primaryMatch": true,
+      "allFiniteAlternativesMatch": true,
+      "basisCompatible": true,
+      "caseProvenByPixels": false,
+      "ambiguityKind": "rn-m-source-segmentation"
+    }
+  ],
+  "reviewerOnlyCorrections": [],
+  "authorPrimaryCorrectionsRequired": [],
+  "unresolvedComparisonDisagreements": [],
+  "sourceUncertaintyPreserved": true,
+  "requiresExactRootAdoption": true,
+  "closedExactCaseOutsideGenericPolicy": [
+    149
+  ],
+  "genericRnMExactCases": [
+    215,
+    223
+  ],
+  "method": "All three literal primaries and full finite alternative sets were personally read/frozen before author or other peer choices; they match the later author ledger exactly. Original300/600/1200 source image reproduction and full-row/name/context checks are pinned in the independent raw receipt. Open-bowl c/e ambiguity in149 remains an exact-source closed case requiring root authority; this comparison grants no generic c/e rewriting.",
+  "scope": "Three requested name fields only. No manual money comparison, full400-row review or entire source acceptance. Source uncertainty is qualified, not uniquely pixel-proved."
+}

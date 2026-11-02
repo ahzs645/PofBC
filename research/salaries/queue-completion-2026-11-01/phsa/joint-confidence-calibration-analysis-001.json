@@ -1,0 +1,165 @@
+{
+  "proposedRuleNotYetAdopted": true,
+  "analysis": [
+    {
+      "source": "phsa-2015-16",
+      "rows": 36,
+      "currentFlagRows": 10,
+      "jointLowConfidenceOnlyRows": 2,
+      "dangerousAgreedWrong": [
+        [
+          25,
+          "name",
+          "Advincula, Tessie",
+          "Advincula,Tessie",
+          []
+        ]
+      ],
+      "rapidNameMedian": 0.9994292396765488
+    },
+    {
+      "source": "phsa-2016-17",
+      "rows": 36,
+      "currentFlagRows": 36,
+      "jointLowConfidenceOnlyRows": 29,
+      "dangerousAgreedWrong": [],
+      "rapidNameMedian": 0.97103756494247
+    },
+    {
+      "source": "phsa-2017-18",
+      "rows": 37,
+      "currentFlagRows": 24,
+      "jointLowConfidenceOnlyRows": 3,
+      "dangerousAgreedWrong": [
+        [
+          10,
+          "name",
+          "Abou Mourad, Yasser Rifaat",
+          "Abou Mourad,Yasser Rifaat",
+          []
+        ],
+        [
+          34,
+          "name",
+          "Aikins, Tracy",
+          "Aikins,Tracy",
+          []
+        ]
+      ],
+      "rapidNameMedian": 0.9993954263627529
+    },
+    {
+      "source": "phsa-2018-19",
+      "rows": 55,
+      "currentFlagRows": 55,
+      "jointLowConfidenceOnlyRows": 37,
+      "dangerousAgreedWrong": [],
+      "rapidNameMedian": 0.9875284758481112
+    },
+    {
+      "source": "phsa-2019-20",
+      "rows": 58,
+      "currentFlagRows": 57,
+      "jointLowConfidenceOnlyRows": 54,
+      "dangerousAgreedWrong": [
+        [
+          31,
+          "name",
+          "Adams.Michael",
+          "Adams,Michael",
+          [
+            "name",
+            "remuneration"
+          ]
+        ]
+      ],
+      "rapidNameMedian": 0.9708979634577007
+    },
+    {
+      "source": "phsa-2020-21",
+      "rows": 55,
+      "currentFlagRows": 49,
+      "jointLowConfidenceOnlyRows": 17,
+      "dangerousAgreedWrong": [
+        [
+          29,
+          "name",
+          "Adagbonyin.Maurice",
+          "Adagbonyin,Maurice",
+          [
+            "name",
+            "remuneration"
+          ]
+        ]
+      ],
+      "rapidNameMedian": 0.9862222763208243
+    },
+    {
+      "source": "phsa-2021-22",
+      "rows": 44,
+      "currentFlagRows": 39,
+      "jointLowConfidenceOnlyRows": 13,
+      "dangerousAgreedWrong": [
+        [
+          14,
+          "name",
+          "Abed, Vladlena",
+          "Abed,Vladlena",
+          [
+            "name"
+          ]
+        ],
+        [
+          25,
+          "name",
+          "Abu Salim, Wael",
+          "Abu Salim,Wael",
+          []
+        ]
+      ],
+      "rapidNameMedian": 0.9914874665084339
+    },
+    {
+      "source": "phsa-2022-23",
+      "rows": 42,
+      "currentFlagRows": 26,
+      "jointLowConfidenceOnlyRows": 9,
+      "dangerousAgreedWrong": [
+        [
+          21,
+          "name",
+          "Abou Mourad, Yasser Rifaat",
+          "Abou Mourad,Yasser Rifaat",
+          []
+        ]
+      ],
+      "rapidNameMedian": 0.9975825703551626
+    },
+    {
+      "source": "phsa-2023-24",
+      "rows": 42,
+      "currentFlagRows": 16,
+      "jointLowConfidenceOnlyRows": 2,
+      "dangerousAgreedWrong": [
+        [
+          24,
+          "name",
+          "Abed, Vladlena",
+          "Abed,Vladlena",
+          [
+            "name"
+          ]
+        ],
+        [
+          38,
+          "name",
+          "Abu Salim, Wael",
+          "Abu Salim,Wael",
+          []
+        ]
+      ],
+      "rapidNameMedian": 0.9995532914996147
+    }
+  ],
+  "purpose": "Determine whether confidence thresholds mean the same thing across neural recognition models. Every disagreement/unparsed cell/source glyph and name-quality flag remains required."
+}

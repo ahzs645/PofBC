@@ -1,0 +1,42 @@
+{
+  "frozen": true,
+  "reviewedOn": "2026-11-02",
+  "reviewer": "/root/held_health_review",
+  "sourceId": "phsa-2019-20",
+  "sourceSha256": "0e31ac2054f0c2d4ef78797185dddd96cc0cdf2eab94bd6841fa24e1c38e7d02",
+  "batch": "phsa-2019-20-016",
+  "moneyTranscript": {
+    "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-history-2019-20-batch-016-money-image-first.tsv",
+    "sha256": "a15e8eecf17dfafb5e9cf002cedf7f986fd543200638e6ad99068d377f6ae7c2"
+  },
+  "actualOriginal1200SourceManifest": {
+    "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-history-2019-20-batch-016-money-original1200-source-manifest.json",
+    "sha256": "ef8637c192bc257a8d889a453f83bc34d98cb8e518c84bf8e63e714e69b30c1c"
+  },
+  "all29Actual1200MoneySheetsPersonallyRead": true,
+  "correspondingFullCandidateOrOcrOpenedBeforeFreeze": false,
+  "nameFieldsNotYetFullyReviewed": true,
+  "counts": {
+    "moneyFields": 282,
+    "remuneration": 198,
+    "expenses": 84,
+    "positiveNumericFields": 281,
+    "sourcePrintedDashNulls": 1,
+    "explicitZeros": 0,
+    "negativeMoney": 0
+  },
+  "literalDashField": {
+    "sequence": 372,
+    "field": "expenses",
+    "physicalPage": 119,
+    "sourceRowOnPage": 42,
+    "literalSource": "short horizontal dash",
+    "normalizedValue": null
+  },
+  "limits": [
+    "This freezes ONLY282money source-first values; all351names must still freeze before fullcandidate comparison.",
+    "Actual originalPDF1200 painted clips with white boundary cropping only, no resampling/enhancement/retyped amounts. All282 source/crop/clip hashes in source-onlymanifest.",
+    "Seq372explicitdash separately verified using originalnativeexpense/fullrow, never inferred from blank/OCR. Tiny above-row artifacts atfirstrows12/388 separately checked againstfullsource rows: positive870/2942, not negative prefixes.",
+    "Prior disjoint same-source reviews disclosed; no money values copied from them and no source controls used to balance any literal."
+  ]
+}

@@ -1,0 +1,71 @@
+{
+  "reviewer": "/root/recovery_review",
+  "script": {
+    "path": "scripts/finish_salary_phsa_quality_batch_pixels.py",
+    "sha256": "7630b0b8ac304522046481006f47f1f63cbcfc2ceab166e34ede0c0697802b0b"
+  },
+  "sourceId": "phsa-2019-20",
+  "sourceSha256": "0e31ac2054f0c2d4ef78797185dddd96cc0cdf2eab94bd6841fa24e1c38e7d02",
+  "batch": "phsa-2019-20-003",
+  "sourceOnlyImages": {
+    "path": "research/salaries/queue-completion-2026-11-01/phsa/batches/phsa-2019-20-batch-003-images.json",
+    "sha256": "8a798ed8e26c57b37e91fb1e0c6c8073b772a3a86efd51cf273cd8f92719a632"
+  },
+  "sourceOnlyViews": {
+    "path": "research/salaries/queue-completion-2026-11-01/phsa/batches/phsa-2019-20-batch-003-target-views.json",
+    "sha256": "6df656e2d026f05307281a41a5c2d58e0664efa143553c3f376487d1e744ea87"
+  },
+  "originalPdfCachePath": "/tmp/queue-completion-phsa/originals/phsa-2019-20.pdf",
+  "physicalPagesIndependentlyRendered": 8,
+  "originalRowCropsVerified": 300,
+  "sourceNativeFieldViewsVerified": 472,
+  "contactSheetSourceBodiesVerified": 49,
+  "pages": [
+    {
+      "physicalPage": 13,
+      "independentActual300PngSha256": "1fc52a95a864ba8fdec10ad10c588d480e3d47c2c8bed71a1ac373a195d33543",
+      "rowCrops": 13
+    },
+    {
+      "physicalPage": 14,
+      "independentActual300PngSha256": "1b06383daf2bc3c57366be9213b289c010e6cb07d24f8b663ccf65716824cbd1",
+      "rowCrops": 45
+    },
+    {
+      "physicalPage": 15,
+      "independentActual300PngSha256": "9b437ef55aeb2d438cfbf1cefeb4d76894ffc4a320fcc408f16bbd6ad9c15b19",
+      "rowCrops": 48
+    },
+    {
+      "physicalPage": 16,
+      "independentActual300PngSha256": "69b505ceb85e3a7a2cfd3c6e58f3dc790a8b45a346bf8513c12d8f6c4ee34de5",
+      "rowCrops": 50
+    },
+    {
+      "physicalPage": 17,
+      "independentActual300PngSha256": "1ea13923881e2afe6dfe7f4981bbe390b500207492698139241bb2c5380d1a02",
+      "rowCrops": 51
+    },
+    {
+      "physicalPage": 18,
+      "independentActual300PngSha256": "57d83c3632566ab6f16e45012b0720080059f3e1897dac4d8d4966e16f28a5ff",
+      "rowCrops": 48
+    },
+    {
+      "physicalPage": 19,
+      "independentActual300PngSha256": "cd404fa393ca240cf3a06b8eb8339de282dc7d7152f17c04678af03c4b851167",
+      "rowCrops": 42
+    },
+    {
+      "physicalPage": 20,
+      "independentActual300PngSha256": "218137f485c9130e30c744b8a1f8851a1663902730d090c97f7fc6aff53236fa",
+      "rowCrops": 3
+    }
+  ],
+  "allActualSourcePngCropViewAndSheetSourcePixelsExact": true,
+  "method": "Independently render the original PDF with MuPDF at300dpi, verify complete sourcePNG hashes and every fullrow/field/sheetbody against unaltered original pixels. Verify raw/page evidence hashes. No candidate file opened.",
+  "limits": [
+    "Mechanical source fidelity validates pixel provenance, not the correctness of personal glyph transcription.",
+    "Only the packet's requested fields are reviewed; no whole-source acceptance is implied."
+  ]
+}

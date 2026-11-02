@@ -1,0 +1,1162 @@
+{
+  "frozen": true,
+  "adapter": "count-independent-source-money-peer-v1",
+  "sourceReceiptSchema": "canonical-wholepage-literal-tuple-money-peer-v1",
+  "peerInputs": [
+    {
+      "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-history-batches-peer-municipal-2019-20-015-thirtysix-money-final-comparison.json",
+      "sha256": "c39a3a72d0ba99f7b9dc0e38afc58b9f1f71cb3ad3c8dbb4ae2d10d4639f540e"
+    },
+    {
+      "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-history-batches-peer-municipal-2019-20-015-thirtysix-money-source-first.json",
+      "sha256": "007af5b9d98cd06cefef7e882b1358889686ddce3e17b0e8f6dfbadd86048ff4"
+    },
+    {
+      "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-municipal-history-2019-20-015-money-additional-source-only-peer.json",
+      "sha256": "87bc9ebd1e7c70fd83a55735dbdbe53b14263c36d82ee3462b930d052229f1fc"
+    },
+    {
+      "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-history-batches-peer-municipal-2019-20-015-thirtysix-money-source-pixel-proof.json",
+      "sha256": "2f2ee9ec13b59f78b8a7204321cf95941e6e2b63f2bfe9bbb0b70e9f75a4de67"
+    },
+    {
+      "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-history-batches-peer-municipal-2019-20-015-thirtysix-money-prechoice-uncertainty-resolution.json",
+      "sha256": "07169f8d5f7998c8a0fd0824d01b576a503a38802649c206863703a1e2aa0bbe"
+    },
+    {
+      "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-municipal-history-2019-20-015-postcomparison-thirtysix-money-source-rereads.json",
+      "sha256": "b1c8b9c546c1fb9e3fb8c20e66566729012d0f0102f2b85f0aa8114d5c1a1dbe"
+    },
+    {
+      "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-municipal-history-2019-20-015-original-transcript.json",
+      "sha256": "483c733e537a9fa080bc0969ab27fa1c3b96e887adca1b03989cd150dd0756d8"
+    },
+    {
+      "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-municipal-history-2019-20-015-post-peer-remuneration189-own-source-correction.json",
+      "sha256": "8a0b0304594ad45f287d13ca1b20f9251709998044e58b2716ce339e4775a8cf"
+    }
+  ],
+  "confirmations": [
+    {
+      "sourceId": "phsa-2019-20",
+      "sourceSha256": "0e31ac2054f0c2d4ef78797185dddd96cc0cdf2eab94bd6841fa24e1c38e7d02",
+      "physicalPage": 103,
+      "sourceRowOnPage": 37,
+      "field": "remuneration",
+      "confirmedValue": 78576,
+      "effectiveAuthorOverlay": {
+        "path": "research/salaries/queue-completion-2026-11-01/phsa/overlays/phsa-2019-20-manual-overlay-015.json",
+        "sha256": "f33a994f727b7572d36bcea4ce2219bab2e4e44f2a0307d67810460c9bbc157f"
+      },
+      "peerComparison": {
+        "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-history-batches-peer-municipal-2019-20-015-thirtysix-money-final-comparison.json",
+        "sha256": "c39a3a72d0ba99f7b9dc0e38afc58b9f1f71cb3ad3c8dbb4ae2d10d4639f540e"
+      },
+      "freshSourceImage": {
+        "path": "/workspace/salary-review-municipal-tmp/phsa-2019-20-015/post-whole600-source-only/0005-remuneration-whole600.png",
+        "sha256": "18d432d151d9b8142688c6c04ed3f11e0cbba44f37018a1f1cc8c4f07728c6a8",
+        "actual600PixelCropBox": [
+          3470,
+          4294,
+          4136,
+          4372
+        ],
+        "noResamplingEnhancementOrRetypedGlyphs": true
+      },
+      "imageFirstTranscript": {
+        "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-history-batches-peer-municipal-2019-20-015-thirtysix-money-source-first.json",
+        "sha256": "007af5b9d98cd06cefef7e882b1358889686ddce3e17b0e8f6dfbadd86048ff4"
+      }
+    },
+    {
+      "sourceId": "phsa-2019-20",
+      "sourceSha256": "0e31ac2054f0c2d4ef78797185dddd96cc0cdf2eab94bd6841fa24e1c38e7d02",
+      "physicalPage": 103,
+      "sourceRowOnPage": 38,
+      "field": "expenses",
+      "confirmedValue": 6704,
+      "effectiveAuthorOverlay": {
+        "path": "research/salaries/queue-completion-2026-11-01/phsa/overlays/phsa-2019-20-manual-overlay-015.json",
+        "sha256": "f33a994f727b7572d36bcea4ce2219bab2e4e44f2a0307d67810460c9bbc157f"
+      },
+      "peerComparison": {
+        "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-history-batches-peer-municipal-2019-20-015-thirtysix-money-final-comparison.json",
+        "sha256": "c39a3a72d0ba99f7b9dc0e38afc58b9f1f71cb3ad3c8dbb4ae2d10d4639f540e"
+      },
+      "freshSourceImage": {
+        "path": "/workspace/salary-review-municipal-tmp/phsa-2019-20-015/post-whole600-source-only/0006-expenses-whole600.png",
+        "sha256": "d2dde629cba2ead82e2d5f69dd0829cb4f6caf89bfd6ef38c0733e2962f8e463",
+        "actual600PixelCropBox": [
+          4104,
+          4384,
+          4844,
+          4462
+        ],
+        "noResamplingEnhancementOrRetypedGlyphs": true
+      },
+      "imageFirstTranscript": {
+        "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-history-batches-peer-municipal-2019-20-015-thirtysix-money-source-first.json",
+        "sha256": "007af5b9d98cd06cefef7e882b1358889686ddce3e17b0e8f6dfbadd86048ff4"
+      }
+    },
+    {
+      "sourceId": "phsa-2019-20",
+      "sourceSha256": "0e31ac2054f0c2d4ef78797185dddd96cc0cdf2eab94bd6841fa24e1c38e7d02",
+      "physicalPage": 103,
+      "sourceRowOnPage": 52,
+      "field": "expenses",
+      "confirmedValue": 7631,
+      "effectiveAuthorOverlay": {
+        "path": "research/salaries/queue-completion-2026-11-01/phsa/overlays/phsa-2019-20-manual-overlay-015.json",
+        "sha256": "f33a994f727b7572d36bcea4ce2219bab2e4e44f2a0307d67810460c9bbc157f"
+      },
+      "peerComparison": {
+        "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-history-batches-peer-municipal-2019-20-015-thirtysix-money-final-comparison.json",
+        "sha256": "c39a3a72d0ba99f7b9dc0e38afc58b9f1f71cb3ad3c8dbb4ae2d10d4639f540e"
+      },
+      "freshSourceImage": {
+        "path": "/workspace/salary-review-municipal-tmp/phsa-2019-20-015/post-whole600-source-only/0017-expenses-whole600.png",
+        "sha256": "10e45a5ae75d81335b3b59249bc5f45ee83d4718ab68e2cbade1fca840de5e77",
+        "actual600PixelCropBox": [
+          4104,
+          5532,
+          4844,
+          5612
+        ],
+        "noResamplingEnhancementOrRetypedGlyphs": true
+      },
+      "imageFirstTranscript": {
+        "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-history-batches-peer-municipal-2019-20-015-thirtysix-money-source-first.json",
+        "sha256": "007af5b9d98cd06cefef7e882b1358889686ddce3e17b0e8f6dfbadd86048ff4"
+      }
+    },
+    {
+      "sourceId": "phsa-2019-20",
+      "sourceSha256": "0e31ac2054f0c2d4ef78797185dddd96cc0cdf2eab94bd6841fa24e1c38e7d02",
+      "physicalPage": 104,
+      "sourceRowOnPage": 7,
+      "field": "expenses",
+      "confirmedValue": 9343,
+      "effectiveAuthorOverlay": {
+        "path": "research/salaries/queue-completion-2026-11-01/phsa/overlays/phsa-2019-20-manual-overlay-015.json",
+        "sha256": "f33a994f727b7572d36bcea4ce2219bab2e4e44f2a0307d67810460c9bbc157f"
+      },
+      "peerComparison": {
+        "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-history-batches-peer-municipal-2019-20-015-thirtysix-money-final-comparison.json",
+        "sha256": "c39a3a72d0ba99f7b9dc0e38afc58b9f1f71cb3ad3c8dbb4ae2d10d4639f540e"
+      },
+      "freshSourceImage": {
+        "path": "/workspace/salary-review-municipal-tmp/phsa-2019-20-015/post-whole600-source-only/0026-expenses-whole600.png",
+        "sha256": "d66787145055c8a0b5a377123b63828c3b8f1a2468de80a8aecdc843af66d28b",
+        "actual600PixelCropBox": [
+          4104,
+          1844,
+          4844,
+          1922
+        ],
+        "noResamplingEnhancementOrRetypedGlyphs": true
+      },
+      "imageFirstTranscript": {
+        "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-history-batches-peer-municipal-2019-20-015-thirtysix-money-source-first.json",
+        "sha256": "007af5b9d98cd06cefef7e882b1358889686ddce3e17b0e8f6dfbadd86048ff4"
+      }
+    },
+    {
+      "sourceId": "phsa-2019-20",
+      "sourceSha256": "0e31ac2054f0c2d4ef78797185dddd96cc0cdf2eab94bd6841fa24e1c38e7d02",
+      "physicalPage": 104,
+      "sourceRowOnPage": 13,
+      "field": "expenses",
+      "confirmedValue": 8589,
+      "effectiveAuthorOverlay": {
+        "path": "research/salaries/queue-completion-2026-11-01/phsa/overlays/phsa-2019-20-manual-overlay-015.json",
+        "sha256": "f33a994f727b7572d36bcea4ce2219bab2e4e44f2a0307d67810460c9bbc157f"
+      },
+      "peerComparison": {
+        "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-history-batches-peer-municipal-2019-20-015-thirtysix-money-final-comparison.json",
+        "sha256": "c39a3a72d0ba99f7b9dc0e38afc58b9f1f71cb3ad3c8dbb4ae2d10d4639f540e"
+      },
+      "freshSourceImage": {
+        "path": "/workspace/salary-review-municipal-tmp/phsa-2019-20-015/post-whole600-source-only/0031-expenses-whole600.png",
+        "sha256": "02b7662890ef1f36f06a6c2d36843945ce23ff7a2db7328f602c3c441e58aef0",
+        "actual600PixelCropBox": [
+          4104,
+          2336,
+          4844,
+          2414
+        ],
+        "noResamplingEnhancementOrRetypedGlyphs": true
+      },
+      "imageFirstTranscript": {
+        "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-history-batches-peer-municipal-2019-20-015-thirtysix-money-source-first.json",
+        "sha256": "007af5b9d98cd06cefef7e882b1358889686ddce3e17b0e8f6dfbadd86048ff4"
+      }
+    },
+    {
+      "sourceId": "phsa-2019-20",
+      "sourceSha256": "0e31ac2054f0c2d4ef78797185dddd96cc0cdf2eab94bd6841fa24e1c38e7d02",
+      "physicalPage": 104,
+      "sourceRowOnPage": 41,
+      "field": "remuneration",
+      "confirmedValue": 82010,
+      "effectiveAuthorOverlay": {
+        "path": "research/salaries/queue-completion-2026-11-01/phsa/overlays/phsa-2019-20-manual-overlay-015.json",
+        "sha256": "f33a994f727b7572d36bcea4ce2219bab2e4e44f2a0307d67810460c9bbc157f"
+      },
+      "peerComparison": {
+        "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-history-batches-peer-municipal-2019-20-015-thirtysix-money-final-comparison.json",
+        "sha256": "c39a3a72d0ba99f7b9dc0e38afc58b9f1f71cb3ad3c8dbb4ae2d10d4639f540e"
+      },
+      "freshSourceImage": {
+        "path": "/workspace/salary-review-municipal-tmp/phsa-2019-20-015/post-whole600-source-only/0054-remuneration-whole600.png",
+        "sha256": "ccf4357b40a6b0cfa1cba3cb15030978ae6c7dca6e9b8107be40d65e917c6ca6",
+        "actual600PixelCropBox": [
+          3470,
+          4626,
+          4136,
+          4702
+        ],
+        "noResamplingEnhancementOrRetypedGlyphs": true
+      },
+      "imageFirstTranscript": {
+        "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-history-batches-peer-municipal-2019-20-015-thirtysix-money-source-first.json",
+        "sha256": "007af5b9d98cd06cefef7e882b1358889686ddce3e17b0e8f6dfbadd86048ff4"
+      }
+    },
+    {
+      "sourceId": "phsa-2019-20",
+      "sourceSha256": "0e31ac2054f0c2d4ef78797185dddd96cc0cdf2eab94bd6841fa24e1c38e7d02",
+      "physicalPage": 104,
+      "sourceRowOnPage": 41,
+      "field": "expenses",
+      "confirmedValue": 1032,
+      "effectiveAuthorOverlay": {
+        "path": "research/salaries/queue-completion-2026-11-01/phsa/overlays/phsa-2019-20-manual-overlay-015.json",
+        "sha256": "f33a994f727b7572d36bcea4ce2219bab2e4e44f2a0307d67810460c9bbc157f"
+      },
+      "peerComparison": {
+        "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-history-batches-peer-municipal-2019-20-015-thirtysix-money-final-comparison.json",
+        "sha256": "c39a3a72d0ba99f7b9dc0e38afc58b9f1f71cb3ad3c8dbb4ae2d10d4639f540e"
+      },
+      "freshSourceImage": {
+        "path": "/workspace/salary-review-municipal-tmp/phsa-2019-20-015/post-whole600-source-only/0054-expenses-whole600.png",
+        "sha256": "11df0dba7fae7e5f1fbbe50a3938d53d805a4635ed9c74e0ec3ee7857914e9aa",
+        "actual600PixelCropBox": [
+          4104,
+          4626,
+          4844,
+          4702
+        ],
+        "noResamplingEnhancementOrRetypedGlyphs": true
+      },
+      "imageFirstTranscript": {
+        "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-history-batches-peer-municipal-2019-20-015-thirtysix-money-source-first.json",
+        "sha256": "007af5b9d98cd06cefef7e882b1358889686ddce3e17b0e8f6dfbadd86048ff4"
+      }
+    },
+    {
+      "sourceId": "phsa-2019-20",
+      "sourceSha256": "0e31ac2054f0c2d4ef78797185dddd96cc0cdf2eab94bd6841fa24e1c38e7d02",
+      "physicalPage": 104,
+      "sourceRowOnPage": 44,
+      "field": "expenses",
+      "confirmedValue": 3369,
+      "effectiveAuthorOverlay": {
+        "path": "research/salaries/queue-completion-2026-11-01/phsa/overlays/phsa-2019-20-manual-overlay-015.json",
+        "sha256": "f33a994f727b7572d36bcea4ce2219bab2e4e44f2a0307d67810460c9bbc157f"
+      },
+      "peerComparison": {
+        "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-history-batches-peer-municipal-2019-20-015-thirtysix-money-final-comparison.json",
+        "sha256": "c39a3a72d0ba99f7b9dc0e38afc58b9f1f71cb3ad3c8dbb4ae2d10d4639f540e"
+      },
+      "freshSourceImage": {
+        "path": "/workspace/salary-review-municipal-tmp/phsa-2019-20-015/post-whole600-source-only/0057-expenses-whole600.png",
+        "sha256": "eeb0e39d42ef2e75e7680946567477127ce326759905caa820b43f7fb79869d6",
+        "actual600PixelCropBox": [
+          4104,
+          4878,
+          4844,
+          4956
+        ],
+        "noResamplingEnhancementOrRetypedGlyphs": true
+      },
+      "imageFirstTranscript": {
+        "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-history-batches-peer-municipal-2019-20-015-thirtysix-money-source-first.json",
+        "sha256": "007af5b9d98cd06cefef7e882b1358889686ddce3e17b0e8f6dfbadd86048ff4"
+      }
+    },
+    {
+      "sourceId": "phsa-2019-20",
+      "sourceSha256": "0e31ac2054f0c2d4ef78797185dddd96cc0cdf2eab94bd6841fa24e1c38e7d02",
+      "physicalPage": 104,
+      "sourceRowOnPage": 45,
+      "field": "remuneration",
+      "confirmedValue": 79377,
+      "effectiveAuthorOverlay": {
+        "path": "research/salaries/queue-completion-2026-11-01/phsa/overlays/phsa-2019-20-manual-overlay-015.json",
+        "sha256": "f33a994f727b7572d36bcea4ce2219bab2e4e44f2a0307d67810460c9bbc157f"
+      },
+      "peerComparison": {
+        "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-history-batches-peer-municipal-2019-20-015-thirtysix-money-final-comparison.json",
+        "sha256": "c39a3a72d0ba99f7b9dc0e38afc58b9f1f71cb3ad3c8dbb4ae2d10d4639f540e"
+      },
+      "freshSourceImage": {
+        "path": "/workspace/salary-review-municipal-tmp/phsa-2019-20-015/post-whole600-source-only/0058-remuneration-whole600.png",
+        "sha256": "9deca2f6a44d12310e13c8dbf6e5fb432a9ac9ab65679a597d95ccc54d915f68",
+        "actual600PixelCropBox": [
+          3470,
+          4962,
+          4136,
+          5040
+        ],
+        "noResamplingEnhancementOrRetypedGlyphs": true
+      },
+      "imageFirstTranscript": {
+        "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-history-batches-peer-municipal-2019-20-015-thirtysix-money-source-first.json",
+        "sha256": "007af5b9d98cd06cefef7e882b1358889686ddce3e17b0e8f6dfbadd86048ff4"
+      }
+    },
+    {
+      "sourceId": "phsa-2019-20",
+      "sourceSha256": "0e31ac2054f0c2d4ef78797185dddd96cc0cdf2eab94bd6841fa24e1c38e7d02",
+      "physicalPage": 105,
+      "sourceRowOnPage": 7,
+      "field": "expenses",
+      "confirmedValue": 2105,
+      "effectiveAuthorOverlay": {
+        "path": "research/salaries/queue-completion-2026-11-01/phsa/overlays/phsa-2019-20-manual-overlay-015.json",
+        "sha256": "f33a994f727b7572d36bcea4ce2219bab2e4e44f2a0307d67810460c9bbc157f"
+      },
+      "peerComparison": {
+        "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-history-batches-peer-municipal-2019-20-015-thirtysix-money-final-comparison.json",
+        "sha256": "c39a3a72d0ba99f7b9dc0e38afc58b9f1f71cb3ad3c8dbb4ae2d10d4639f540e"
+      },
+      "freshSourceImage": {
+        "path": "/workspace/salary-review-municipal-tmp/phsa-2019-20-015/post-whole600-source-only/0076-expenses-whole600.png",
+        "sha256": "b154c89deac12d58ee34e847be3c1b5c8da2cd02dfb8850f59bc913ab0a0d3ff",
+        "actual600PixelCropBox": [
+          4104,
+          1844,
+          4844,
+          1922
+        ],
+        "noResamplingEnhancementOrRetypedGlyphs": true
+      },
+      "imageFirstTranscript": {
+        "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-history-batches-peer-municipal-2019-20-015-thirtysix-money-source-first.json",
+        "sha256": "007af5b9d98cd06cefef7e882b1358889686ddce3e17b0e8f6dfbadd86048ff4"
+      }
+    },
+    {
+      "sourceId": "phsa-2019-20",
+      "sourceSha256": "0e31ac2054f0c2d4ef78797185dddd96cc0cdf2eab94bd6841fa24e1c38e7d02",
+      "physicalPage": 105,
+      "sourceRowOnPage": 13,
+      "field": "remuneration",
+      "confirmedValue": 77538,
+      "effectiveAuthorOverlay": {
+        "path": "research/salaries/queue-completion-2026-11-01/phsa/overlays/phsa-2019-20-manual-overlay-015.json",
+        "sha256": "f33a994f727b7572d36bcea4ce2219bab2e4e44f2a0307d67810460c9bbc157f"
+      },
+      "peerComparison": {
+        "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-history-batches-peer-municipal-2019-20-015-thirtysix-money-final-comparison.json",
+        "sha256": "c39a3a72d0ba99f7b9dc0e38afc58b9f1f71cb3ad3c8dbb4ae2d10d4639f540e"
+      },
+      "freshSourceImage": {
+        "path": "/workspace/salary-review-municipal-tmp/phsa-2019-20-015/post-whole600-source-only/0081-remuneration-whole600.png",
+        "sha256": "993e30d18ec35ee21776645e5293ff14c196e8c162379715dbfb0ddf157c35de",
+        "actual600PixelCropBox": [
+          3470,
+          2330,
+          4136,
+          2408
+        ],
+        "noResamplingEnhancementOrRetypedGlyphs": true
+      },
+      "imageFirstTranscript": {
+        "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-history-batches-peer-municipal-2019-20-015-thirtysix-money-source-first.json",
+        "sha256": "007af5b9d98cd06cefef7e882b1358889686ddce3e17b0e8f6dfbadd86048ff4"
+      }
+    },
+    {
+      "sourceId": "phsa-2019-20",
+      "sourceSha256": "0e31ac2054f0c2d4ef78797185dddd96cc0cdf2eab94bd6841fa24e1c38e7d02",
+      "physicalPage": 105,
+      "sourceRowOnPage": 20,
+      "field": "expenses",
+      "confirmedValue": 3613,
+      "effectiveAuthorOverlay": {
+        "path": "research/salaries/queue-completion-2026-11-01/phsa/overlays/phsa-2019-20-manual-overlay-015.json",
+        "sha256": "f33a994f727b7572d36bcea4ce2219bab2e4e44f2a0307d67810460c9bbc157f"
+      },
+      "peerComparison": {
+        "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-history-batches-peer-municipal-2019-20-015-thirtysix-money-final-comparison.json",
+        "sha256": "c39a3a72d0ba99f7b9dc0e38afc58b9f1f71cb3ad3c8dbb4ae2d10d4639f540e"
+      },
+      "freshSourceImage": {
+        "path": "/workspace/salary-review-municipal-tmp/phsa-2019-20-015/post-whole600-source-only/0088-expenses-whole600.png",
+        "sha256": "74f31cc99906de94698a7317731f201cac0620af100c2744cd25fe26a5245ba5",
+        "actual600PixelCropBox": [
+          4104,
+          2902,
+          4844,
+          2980
+        ],
+        "noResamplingEnhancementOrRetypedGlyphs": true
+      },
+      "imageFirstTranscript": {
+        "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-history-batches-peer-municipal-2019-20-015-thirtysix-money-source-first.json",
+        "sha256": "007af5b9d98cd06cefef7e882b1358889686ddce3e17b0e8f6dfbadd86048ff4"
+      }
+    },
+    {
+      "sourceId": "phsa-2019-20",
+      "sourceSha256": "0e31ac2054f0c2d4ef78797185dddd96cc0cdf2eab94bd6841fa24e1c38e7d02",
+      "physicalPage": 105,
+      "sourceRowOnPage": 25,
+      "field": "expenses",
+      "confirmedValue": 1935,
+      "effectiveAuthorOverlay": {
+        "path": "research/salaries/queue-completion-2026-11-01/phsa/overlays/phsa-2019-20-manual-overlay-015.json",
+        "sha256": "f33a994f727b7572d36bcea4ce2219bab2e4e44f2a0307d67810460c9bbc157f"
+      },
+      "peerComparison": {
+        "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-history-batches-peer-municipal-2019-20-015-thirtysix-money-final-comparison.json",
+        "sha256": "c39a3a72d0ba99f7b9dc0e38afc58b9f1f71cb3ad3c8dbb4ae2d10d4639f540e"
+      },
+      "freshSourceImage": {
+        "path": "/workspace/salary-review-municipal-tmp/phsa-2019-20-015/post-whole600-source-only/0092-expenses-whole600.png",
+        "sha256": "5b3228246cb934d8ad89d2081c8919bdbb958342a7516523d3fa63475bfe6a33",
+        "actual600PixelCropBox": [
+          4104,
+          3318,
+          4844,
+          3396
+        ],
+        "noResamplingEnhancementOrRetypedGlyphs": true
+      },
+      "imageFirstTranscript": {
+        "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-history-batches-peer-municipal-2019-20-015-thirtysix-money-source-first.json",
+        "sha256": "007af5b9d98cd06cefef7e882b1358889686ddce3e17b0e8f6dfbadd86048ff4"
+      }
+    },
+    {
+      "sourceId": "phsa-2019-20",
+      "sourceSha256": "0e31ac2054f0c2d4ef78797185dddd96cc0cdf2eab94bd6841fa24e1c38e7d02",
+      "physicalPage": 105,
+      "sourceRowOnPage": 49,
+      "field": "expenses",
+      "confirmedValue": 2700,
+      "effectiveAuthorOverlay": {
+        "path": "research/salaries/queue-completion-2026-11-01/phsa/overlays/phsa-2019-20-manual-overlay-015.json",
+        "sha256": "f33a994f727b7572d36bcea4ce2219bab2e4e44f2a0307d67810460c9bbc157f"
+      },
+      "peerComparison": {
+        "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-history-batches-peer-municipal-2019-20-015-thirtysix-money-final-comparison.json",
+        "sha256": "c39a3a72d0ba99f7b9dc0e38afc58b9f1f71cb3ad3c8dbb4ae2d10d4639f540e"
+      },
+      "freshSourceImage": {
+        "path": "/workspace/salary-review-municipal-tmp/phsa-2019-20-015/post-whole600-source-only/0114-expenses-whole600.png",
+        "sha256": "7a289854c2a733c24d879e96fce59e576cd3fe8a3c657b739c9994c36d8ccefd",
+        "actual600PixelCropBox": [
+          4104,
+          5280,
+          4844,
+          5358
+        ],
+        "noResamplingEnhancementOrRetypedGlyphs": true
+      },
+      "imageFirstTranscript": {
+        "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-history-batches-peer-municipal-2019-20-015-thirtysix-money-source-first.json",
+        "sha256": "007af5b9d98cd06cefef7e882b1358889686ddce3e17b0e8f6dfbadd86048ff4"
+      }
+    },
+    {
+      "sourceId": "phsa-2019-20",
+      "sourceSha256": "0e31ac2054f0c2d4ef78797185dddd96cc0cdf2eab94bd6841fa24e1c38e7d02",
+      "physicalPage": 106,
+      "sourceRowOnPage": 6,
+      "field": "remuneration",
+      "confirmedValue": 92510,
+      "effectiveAuthorOverlay": {
+        "path": "research/salaries/queue-completion-2026-11-01/phsa/overlays/phsa-2019-20-manual-overlay-015.json",
+        "sha256": "f33a994f727b7572d36bcea4ce2219bab2e4e44f2a0307d67810460c9bbc157f"
+      },
+      "peerComparison": {
+        "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-history-batches-peer-municipal-2019-20-015-thirtysix-money-final-comparison.json",
+        "sha256": "c39a3a72d0ba99f7b9dc0e38afc58b9f1f71cb3ad3c8dbb4ae2d10d4639f540e"
+      },
+      "freshSourceImage": {
+        "path": "/workspace/salary-review-municipal-tmp/phsa-2019-20-015/post-whole600-source-only/0129-remuneration-whole600.png",
+        "sha256": "70990ab716c553a5998b4c8454ed5504d183e48c1f5fb1f6de56657c5c308619",
+        "actual600PixelCropBox": [
+          3470,
+          1764,
+          4136,
+          1842
+        ],
+        "noResamplingEnhancementOrRetypedGlyphs": true
+      },
+      "imageFirstTranscript": {
+        "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-history-batches-peer-municipal-2019-20-015-thirtysix-money-source-first.json",
+        "sha256": "007af5b9d98cd06cefef7e882b1358889686ddce3e17b0e8f6dfbadd86048ff4"
+      }
+    },
+    {
+      "sourceId": "phsa-2019-20",
+      "sourceSha256": "0e31ac2054f0c2d4ef78797185dddd96cc0cdf2eab94bd6841fa24e1c38e7d02",
+      "physicalPage": 106,
+      "sourceRowOnPage": 20,
+      "field": "expenses",
+      "confirmedValue": 1383,
+      "effectiveAuthorOverlay": {
+        "path": "research/salaries/queue-completion-2026-11-01/phsa/overlays/phsa-2019-20-manual-overlay-015.json",
+        "sha256": "f33a994f727b7572d36bcea4ce2219bab2e4e44f2a0307d67810460c9bbc157f"
+      },
+      "peerComparison": {
+        "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-history-batches-peer-municipal-2019-20-015-thirtysix-money-final-comparison.json",
+        "sha256": "c39a3a72d0ba99f7b9dc0e38afc58b9f1f71cb3ad3c8dbb4ae2d10d4639f540e"
+      },
+      "freshSourceImage": {
+        "path": "/workspace/salary-review-municipal-tmp/phsa-2019-20-015/post-whole600-source-only/0140-expenses-whole600.png",
+        "sha256": "21b1b1a1f1224aef7ef52fc4828d1493f468662a2e022e437f354490306e5d11",
+        "actual600PixelCropBox": [
+          4104,
+          2902,
+          4844,
+          2980
+        ],
+        "noResamplingEnhancementOrRetypedGlyphs": true
+      },
+      "imageFirstTranscript": {
+        "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-history-batches-peer-municipal-2019-20-015-thirtysix-money-source-first.json",
+        "sha256": "007af5b9d98cd06cefef7e882b1358889686ddce3e17b0e8f6dfbadd86048ff4"
+      }
+    },
+    {
+      "sourceId": "phsa-2019-20",
+      "sourceSha256": "0e31ac2054f0c2d4ef78797185dddd96cc0cdf2eab94bd6841fa24e1c38e7d02",
+      "physicalPage": 106,
+      "sourceRowOnPage": 22,
+      "field": "remuneration",
+      "confirmedValue": 82348,
+      "effectiveAuthorOverlay": {
+        "path": "research/salaries/queue-completion-2026-11-01/phsa/overlays/phsa-2019-20-manual-overlay-015.json",
+        "sha256": "f33a994f727b7572d36bcea4ce2219bab2e4e44f2a0307d67810460c9bbc157f"
+      },
+      "peerComparison": {
+        "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-history-batches-peer-municipal-2019-20-015-thirtysix-money-final-comparison.json",
+        "sha256": "c39a3a72d0ba99f7b9dc0e38afc58b9f1f71cb3ad3c8dbb4ae2d10d4639f540e"
+      },
+      "freshSourceImage": {
+        "path": "/workspace/salary-review-municipal-tmp/phsa-2019-20-015/post-whole600-source-only/0142-remuneration-whole600.png",
+        "sha256": "b1a15b01b7ed0af7b7677a2af1b5acef2d99a251b59b8cf87076e947d2657568",
+        "actual600PixelCropBox": [
+          3470,
+          3074,
+          4136,
+          3152
+        ],
+        "noResamplingEnhancementOrRetypedGlyphs": true
+      },
+      "imageFirstTranscript": {
+        "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-history-batches-peer-municipal-2019-20-015-thirtysix-money-source-first.json",
+        "sha256": "007af5b9d98cd06cefef7e882b1358889686ddce3e17b0e8f6dfbadd86048ff4"
+      }
+    },
+    {
+      "sourceId": "phsa-2019-20",
+      "sourceSha256": "0e31ac2054f0c2d4ef78797185dddd96cc0cdf2eab94bd6841fa24e1c38e7d02",
+      "physicalPage": 106,
+      "sourceRowOnPage": 32,
+      "field": "remuneration",
+      "confirmedValue": 82986,
+      "effectiveAuthorOverlay": {
+        "path": "research/salaries/queue-completion-2026-11-01/phsa/overlays/phsa-2019-20-manual-overlay-015.json",
+        "sha256": "f33a994f727b7572d36bcea4ce2219bab2e4e44f2a0307d67810460c9bbc157f"
+      },
+      "peerComparison": {
+        "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-history-batches-peer-municipal-2019-20-015-thirtysix-money-final-comparison.json",
+        "sha256": "c39a3a72d0ba99f7b9dc0e38afc58b9f1f71cb3ad3c8dbb4ae2d10d4639f540e"
+      },
+      "freshSourceImage": {
+        "path": "/workspace/salary-review-municipal-tmp/phsa-2019-20-015/post-whole600-source-only/0151-remuneration-whole600.png",
+        "sha256": "7bf72ea36492fe4de2b773e5b6830eed4d60ed73ef702a7f9899d9580444e28c",
+        "actual600PixelCropBox": [
+          3470,
+          3884,
+          4136,
+          3962
+        ],
+        "noResamplingEnhancementOrRetypedGlyphs": true
+      },
+      "imageFirstTranscript": {
+        "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-history-batches-peer-municipal-2019-20-015-thirtysix-money-source-first.json",
+        "sha256": "007af5b9d98cd06cefef7e882b1358889686ddce3e17b0e8f6dfbadd86048ff4"
+      }
+    },
+    {
+      "sourceId": "phsa-2019-20",
+      "sourceSha256": "0e31ac2054f0c2d4ef78797185dddd96cc0cdf2eab94bd6841fa24e1c38e7d02",
+      "physicalPage": 106,
+      "sourceRowOnPage": 42,
+      "field": "remuneration",
+      "confirmedValue": 79874,
+      "effectiveAuthorOverlay": {
+        "path": "research/salaries/queue-completion-2026-11-01/phsa/overlays/phsa-2019-20-manual-overlay-015.json",
+        "sha256": "f33a994f727b7572d36bcea4ce2219bab2e4e44f2a0307d67810460c9bbc157f"
+      },
+      "peerComparison": {
+        "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-history-batches-peer-municipal-2019-20-015-thirtysix-money-final-comparison.json",
+        "sha256": "c39a3a72d0ba99f7b9dc0e38afc58b9f1f71cb3ad3c8dbb4ae2d10d4639f540e"
+      },
+      "freshSourceImage": {
+        "path": "/workspace/salary-review-municipal-tmp/phsa-2019-20-015/post-whole600-source-only/0161-remuneration-whole600.png",
+        "sha256": "1e2ac7a147fb732917d307490abd47afbc3914a7e5b7b689ec5b8c4bd3790862",
+        "actual600PixelCropBox": [
+          3470,
+          4716,
+          4136,
+          4794
+        ],
+        "noResamplingEnhancementOrRetypedGlyphs": true
+      },
+      "imageFirstTranscript": {
+        "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-history-batches-peer-municipal-2019-20-015-thirtysix-money-source-first.json",
+        "sha256": "007af5b9d98cd06cefef7e882b1358889686ddce3e17b0e8f6dfbadd86048ff4"
+      }
+    },
+    {
+      "sourceId": "phsa-2019-20",
+      "sourceSha256": "0e31ac2054f0c2d4ef78797185dddd96cc0cdf2eab94bd6841fa24e1c38e7d02",
+      "physicalPage": 107,
+      "sourceRowOnPage": 13,
+      "field": "expenses",
+      "confirmedValue": 1882,
+      "effectiveAuthorOverlay": {
+        "path": "research/salaries/queue-completion-2026-11-01/phsa/overlays/phsa-2019-20-manual-overlay-015.json",
+        "sha256": "f33a994f727b7572d36bcea4ce2219bab2e4e44f2a0307d67810460c9bbc157f"
+      },
+      "peerComparison": {
+        "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-history-batches-peer-municipal-2019-20-015-thirtysix-money-final-comparison.json",
+        "sha256": "c39a3a72d0ba99f7b9dc0e38afc58b9f1f71cb3ad3c8dbb4ae2d10d4639f540e"
+      },
+      "freshSourceImage": {
+        "path": "/workspace/salary-review-municipal-tmp/phsa-2019-20-015/post-whole600-source-only/0182-expenses-whole600.png",
+        "sha256": "8fc79a58fc2d50c709700145f17be1cafcd40383303b834e69f6f4b2f64fadf2",
+        "actual600PixelCropBox": [
+          4104,
+          2336,
+          4844,
+          2414
+        ],
+        "noResamplingEnhancementOrRetypedGlyphs": true
+      },
+      "imageFirstTranscript": {
+        "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-history-batches-peer-municipal-2019-20-015-thirtysix-money-source-first.json",
+        "sha256": "007af5b9d98cd06cefef7e882b1358889686ddce3e17b0e8f6dfbadd86048ff4"
+      }
+    },
+    {
+      "sourceId": "phsa-2019-20",
+      "sourceSha256": "0e31ac2054f0c2d4ef78797185dddd96cc0cdf2eab94bd6841fa24e1c38e7d02",
+      "physicalPage": 107,
+      "sourceRowOnPage": 27,
+      "field": "remuneration",
+      "confirmedValue": 99883,
+      "effectiveAuthorOverlay": {
+        "path": "research/salaries/queue-completion-2026-11-01/phsa/overlays/phsa-2019-20-manual-overlay-015.json",
+        "sha256": "f33a994f727b7572d36bcea4ce2219bab2e4e44f2a0307d67810460c9bbc157f"
+      },
+      "peerComparison": {
+        "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-history-batches-peer-municipal-2019-20-015-thirtysix-money-final-comparison.json",
+        "sha256": "c39a3a72d0ba99f7b9dc0e38afc58b9f1f71cb3ad3c8dbb4ae2d10d4639f540e"
+      },
+      "freshSourceImage": {
+        "path": "/workspace/salary-review-municipal-tmp/phsa-2019-20-015/post-whole600-source-only/0189-remuneration-whole600.png",
+        "sha256": "e23ddff73c8ddb895b15dce1343353116148adce2b53c417bf17b6e09298d533",
+        "actual600PixelCropBox": [
+          3470,
+          3482,
+          4136,
+          3562
+        ],
+        "noResamplingEnhancementOrRetypedGlyphs": true
+      },
+      "imageFirstTranscript": {
+        "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-history-batches-peer-municipal-2019-20-015-thirtysix-money-source-first.json",
+        "sha256": "007af5b9d98cd06cefef7e882b1358889686ddce3e17b0e8f6dfbadd86048ff4"
+      }
+    },
+    {
+      "sourceId": "phsa-2019-20",
+      "sourceSha256": "0e31ac2054f0c2d4ef78797185dddd96cc0cdf2eab94bd6841fa24e1c38e7d02",
+      "physicalPage": 107,
+      "sourceRowOnPage": 39,
+      "field": "expenses",
+      "confirmedValue": 9014,
+      "effectiveAuthorOverlay": {
+        "path": "research/salaries/queue-completion-2026-11-01/phsa/overlays/phsa-2019-20-manual-overlay-015.json",
+        "sha256": "f33a994f727b7572d36bcea4ce2219bab2e4e44f2a0307d67810460c9bbc157f"
+      },
+      "peerComparison": {
+        "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-history-batches-peer-municipal-2019-20-015-thirtysix-money-final-comparison.json",
+        "sha256": "c39a3a72d0ba99f7b9dc0e38afc58b9f1f71cb3ad3c8dbb4ae2d10d4639f540e"
+      },
+      "freshSourceImage": {
+        "path": "/workspace/salary-review-municipal-tmp/phsa-2019-20-015/post-whole600-source-only/0200-expenses-whole600.png",
+        "sha256": "1f6a90e1083c1fe2e69e861f910374ce6d8af5218ab61b7b7fd9eeec4e46b8cf",
+        "actual600PixelCropBox": [
+          4104,
+          4468,
+          4844,
+          4546
+        ],
+        "noResamplingEnhancementOrRetypedGlyphs": true
+      },
+      "imageFirstTranscript": {
+        "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-history-batches-peer-municipal-2019-20-015-thirtysix-money-source-first.json",
+        "sha256": "007af5b9d98cd06cefef7e882b1358889686ddce3e17b0e8f6dfbadd86048ff4"
+      }
+    },
+    {
+      "sourceId": "phsa-2019-20",
+      "sourceSha256": "0e31ac2054f0c2d4ef78797185dddd96cc0cdf2eab94bd6841fa24e1c38e7d02",
+      "physicalPage": 108,
+      "sourceRowOnPage": 25,
+      "field": "remuneration",
+      "confirmedValue": 89817,
+      "effectiveAuthorOverlay": {
+        "path": "research/salaries/queue-completion-2026-11-01/phsa/overlays/phsa-2019-20-manual-overlay-015.json",
+        "sha256": "f33a994f727b7572d36bcea4ce2219bab2e4e44f2a0307d67810460c9bbc157f"
+      },
+      "peerComparison": {
+        "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-history-batches-peer-municipal-2019-20-015-thirtysix-money-final-comparison.json",
+        "sha256": "c39a3a72d0ba99f7b9dc0e38afc58b9f1f71cb3ad3c8dbb4ae2d10d4639f540e"
+      },
+      "freshSourceImage": {
+        "path": "/workspace/salary-review-municipal-tmp/phsa-2019-20-015/post-whole600-source-only/0233-remuneration-whole600.png",
+        "sha256": "f487bddae235db8a6474e397860c7d1648cc38f799d3109431b00fbd7d6178d2",
+        "actual600PixelCropBox": [
+          3470,
+          3318,
+          4136,
+          3396
+        ],
+        "noResamplingEnhancementOrRetypedGlyphs": true
+      },
+      "imageFirstTranscript": {
+        "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-history-batches-peer-municipal-2019-20-015-thirtysix-money-source-first.json",
+        "sha256": "007af5b9d98cd06cefef7e882b1358889686ddce3e17b0e8f6dfbadd86048ff4"
+      }
+    },
+    {
+      "sourceId": "phsa-2019-20",
+      "sourceSha256": "0e31ac2054f0c2d4ef78797185dddd96cc0cdf2eab94bd6841fa24e1c38e7d02",
+      "physicalPage": 108,
+      "sourceRowOnPage": 38,
+      "field": "remuneration",
+      "confirmedValue": 101515,
+      "effectiveAuthorOverlay": {
+        "path": "research/salaries/queue-completion-2026-11-01/phsa/overlays/phsa-2019-20-manual-overlay-015.json",
+        "sha256": "f33a994f727b7572d36bcea4ce2219bab2e4e44f2a0307d67810460c9bbc157f"
+      },
+      "peerComparison": {
+        "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-history-batches-peer-municipal-2019-20-015-thirtysix-money-final-comparison.json",
+        "sha256": "c39a3a72d0ba99f7b9dc0e38afc58b9f1f71cb3ad3c8dbb4ae2d10d4639f540e"
+      },
+      "freshSourceImage": {
+        "path": "/workspace/salary-review-municipal-tmp/phsa-2019-20-015/post-whole600-source-only/0244-remuneration-whole600.png",
+        "sha256": "28400e1d3b96af991967247827a22b6dc7c306c2f6411f05c328c2c85c5289a6",
+        "actual600PixelCropBox": [
+          3470,
+          4384,
+          4136,
+          4462
+        ],
+        "noResamplingEnhancementOrRetypedGlyphs": true
+      },
+      "imageFirstTranscript": {
+        "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-history-batches-peer-municipal-2019-20-015-thirtysix-money-source-first.json",
+        "sha256": "007af5b9d98cd06cefef7e882b1358889686ddce3e17b0e8f6dfbadd86048ff4"
+      }
+    },
+    {
+      "sourceId": "phsa-2019-20",
+      "sourceSha256": "0e31ac2054f0c2d4ef78797185dddd96cc0cdf2eab94bd6841fa24e1c38e7d02",
+      "physicalPage": 108,
+      "sourceRowOnPage": 49,
+      "field": "expenses",
+      "confirmedValue": 4256,
+      "effectiveAuthorOverlay": {
+        "path": "research/salaries/queue-completion-2026-11-01/phsa/overlays/phsa-2019-20-manual-overlay-015.json",
+        "sha256": "f33a994f727b7572d36bcea4ce2219bab2e4e44f2a0307d67810460c9bbc157f"
+      },
+      "peerComparison": {
+        "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-history-batches-peer-municipal-2019-20-015-thirtysix-money-final-comparison.json",
+        "sha256": "c39a3a72d0ba99f7b9dc0e38afc58b9f1f71cb3ad3c8dbb4ae2d10d4639f540e"
+      },
+      "freshSourceImage": {
+        "path": "/workspace/salary-review-municipal-tmp/phsa-2019-20-015/post-whole600-source-only/0253-expenses-whole600.png",
+        "sha256": "dc06974c61c7daf0823a7ad5178955a1502c5c2cbf55d13083297b135329522a",
+        "actual600PixelCropBox": [
+          4104,
+          5280,
+          4844,
+          5358
+        ],
+        "noResamplingEnhancementOrRetypedGlyphs": true
+      },
+      "imageFirstTranscript": {
+        "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-history-batches-peer-municipal-2019-20-015-thirtysix-money-source-first.json",
+        "sha256": "007af5b9d98cd06cefef7e882b1358889686ddce3e17b0e8f6dfbadd86048ff4"
+      }
+    },
+    {
+      "sourceId": "phsa-2019-20",
+      "sourceSha256": "0e31ac2054f0c2d4ef78797185dddd96cc0cdf2eab94bd6841fa24e1c38e7d02",
+      "physicalPage": 109,
+      "sourceRowOnPage": 10,
+      "field": "remuneration",
+      "confirmedValue": 86314,
+      "effectiveAuthorOverlay": {
+        "path": "research/salaries/queue-completion-2026-11-01/phsa/overlays/phsa-2019-20-manual-overlay-015.json",
+        "sha256": "f33a994f727b7572d36bcea4ce2219bab2e4e44f2a0307d67810460c9bbc157f"
+      },
+      "peerComparison": {
+        "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-history-batches-peer-municipal-2019-20-015-thirtysix-money-final-comparison.json",
+        "sha256": "c39a3a72d0ba99f7b9dc0e38afc58b9f1f71cb3ad3c8dbb4ae2d10d4639f540e"
+      },
+      "freshSourceImage": {
+        "path": "/workspace/salary-review-municipal-tmp/phsa-2019-20-015/post-whole600-source-only/0270-remuneration-whole600.png",
+        "sha256": "17095ca9a781ee288137b73249bee640a345781e4903063b758bbc1795f3f1be",
+        "actual600PixelCropBox": [
+          3470,
+          2090,
+          4136,
+          2168
+        ],
+        "noResamplingEnhancementOrRetypedGlyphs": true
+      },
+      "imageFirstTranscript": {
+        "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-history-batches-peer-municipal-2019-20-015-thirtysix-money-source-first.json",
+        "sha256": "007af5b9d98cd06cefef7e882b1358889686ddce3e17b0e8f6dfbadd86048ff4"
+      }
+    },
+    {
+      "sourceId": "phsa-2019-20",
+      "sourceSha256": "0e31ac2054f0c2d4ef78797185dddd96cc0cdf2eab94bd6841fa24e1c38e7d02",
+      "physicalPage": 109,
+      "sourceRowOnPage": 28,
+      "field": "expenses",
+      "confirmedValue": 4473,
+      "effectiveAuthorOverlay": {
+        "path": "research/salaries/queue-completion-2026-11-01/phsa/overlays/phsa-2019-20-manual-overlay-015.json",
+        "sha256": "f33a994f727b7572d36bcea4ce2219bab2e4e44f2a0307d67810460c9bbc157f"
+      },
+      "peerComparison": {
+        "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-history-batches-peer-municipal-2019-20-015-thirtysix-money-final-comparison.json",
+        "sha256": "c39a3a72d0ba99f7b9dc0e38afc58b9f1f71cb3ad3c8dbb4ae2d10d4639f540e"
+      },
+      "freshSourceImage": {
+        "path": "/workspace/salary-review-municipal-tmp/phsa-2019-20-015/post-whole600-source-only/0283-expenses-whole600.png",
+        "sha256": "6ee0e76ec830181324702e8aa4a2277c5e907183ac5343f26983785db512edc0",
+        "actual600PixelCropBox": [
+          4104,
+          3564,
+          4844,
+          3642
+        ],
+        "noResamplingEnhancementOrRetypedGlyphs": true
+      },
+      "imageFirstTranscript": {
+        "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-history-batches-peer-municipal-2019-20-015-thirtysix-money-source-first.json",
+        "sha256": "007af5b9d98cd06cefef7e882b1358889686ddce3e17b0e8f6dfbadd86048ff4"
+      }
+    },
+    {
+      "sourceId": "phsa-2019-20",
+      "sourceSha256": "0e31ac2054f0c2d4ef78797185dddd96cc0cdf2eab94bd6841fa24e1c38e7d02",
+      "physicalPage": 109,
+      "sourceRowOnPage": 32,
+      "field": "expenses",
+      "confirmedValue": 2963,
+      "effectiveAuthorOverlay": {
+        "path": "research/salaries/queue-completion-2026-11-01/phsa/overlays/phsa-2019-20-manual-overlay-015.json",
+        "sha256": "f33a994f727b7572d36bcea4ce2219bab2e4e44f2a0307d67810460c9bbc157f"
+      },
+      "peerComparison": {
+        "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-history-batches-peer-municipal-2019-20-015-thirtysix-money-final-comparison.json",
+        "sha256": "c39a3a72d0ba99f7b9dc0e38afc58b9f1f71cb3ad3c8dbb4ae2d10d4639f540e"
+      },
+      "freshSourceImage": {
+        "path": "/workspace/salary-review-municipal-tmp/phsa-2019-20-015/post-whole600-source-only/0287-expenses-whole600.png",
+        "sha256": "0e67235d1ee749018704ef11f4ef6035a151031ba221bf3900e2704b4fc376c4",
+        "actual600PixelCropBox": [
+          4104,
+          3884,
+          4844,
+          3962
+        ],
+        "noResamplingEnhancementOrRetypedGlyphs": true
+      },
+      "imageFirstTranscript": {
+        "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-history-batches-peer-municipal-2019-20-015-thirtysix-money-source-first.json",
+        "sha256": "007af5b9d98cd06cefef7e882b1358889686ddce3e17b0e8f6dfbadd86048ff4"
+      }
+    },
+    {
+      "sourceId": "phsa-2019-20",
+      "sourceSha256": "0e31ac2054f0c2d4ef78797185dddd96cc0cdf2eab94bd6841fa24e1c38e7d02",
+      "physicalPage": 110,
+      "sourceRowOnPage": 10,
+      "field": "expenses",
+      "confirmedValue": 5447,
+      "effectiveAuthorOverlay": {
+        "path": "research/salaries/queue-completion-2026-11-01/phsa/overlays/phsa-2019-20-manual-overlay-015.json",
+        "sha256": "f33a994f727b7572d36bcea4ce2219bab2e4e44f2a0307d67810460c9bbc157f"
+      },
+      "peerComparison": {
+        "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-history-batches-peer-municipal-2019-20-015-thirtysix-money-final-comparison.json",
+        "sha256": "c39a3a72d0ba99f7b9dc0e38afc58b9f1f71cb3ad3c8dbb4ae2d10d4639f540e"
+      },
+      "freshSourceImage": {
+        "path": "/workspace/salary-review-municipal-tmp/phsa-2019-20-015/post-whole600-source-only/0319-expenses-whole600.png",
+        "sha256": "8d1e64eed9a231dcc165b5122005234035769b22040fef7b09d5d940e088de15",
+        "actual600PixelCropBox": [
+          4104,
+          2090,
+          4844,
+          2168
+        ],
+        "noResamplingEnhancementOrRetypedGlyphs": true
+      },
+      "imageFirstTranscript": {
+        "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-history-batches-peer-municipal-2019-20-015-thirtysix-money-source-first.json",
+        "sha256": "007af5b9d98cd06cefef7e882b1358889686ddce3e17b0e8f6dfbadd86048ff4"
+      }
+    },
+    {
+      "sourceId": "phsa-2019-20",
+      "sourceSha256": "0e31ac2054f0c2d4ef78797185dddd96cc0cdf2eab94bd6841fa24e1c38e7d02",
+      "physicalPage": 110,
+      "sourceRowOnPage": 16,
+      "field": "expenses",
+      "confirmedValue": 7788,
+      "effectiveAuthorOverlay": {
+        "path": "research/salaries/queue-completion-2026-11-01/phsa/overlays/phsa-2019-20-manual-overlay-015.json",
+        "sha256": "f33a994f727b7572d36bcea4ce2219bab2e4e44f2a0307d67810460c9bbc157f"
+      },
+      "peerComparison": {
+        "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-history-batches-peer-municipal-2019-20-015-thirtysix-money-final-comparison.json",
+        "sha256": "c39a3a72d0ba99f7b9dc0e38afc58b9f1f71cb3ad3c8dbb4ae2d10d4639f540e"
+      },
+      "freshSourceImage": {
+        "path": "/workspace/salary-review-municipal-tmp/phsa-2019-20-015/post-whole600-source-only/0325-expenses-whole600.png",
+        "sha256": "8ad8f41c7552c58f3e4c01e0b4f45e2632127482757d5f2bd39831382920784b",
+        "actual600PixelCropBox": [
+          4104,
+          2576,
+          4844,
+          2654
+        ],
+        "noResamplingEnhancementOrRetypedGlyphs": true
+      },
+      "imageFirstTranscript": {
+        "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-history-batches-peer-municipal-2019-20-015-thirtysix-money-source-first.json",
+        "sha256": "007af5b9d98cd06cefef7e882b1358889686ddce3e17b0e8f6dfbadd86048ff4"
+      }
+    },
+    {
+      "sourceId": "phsa-2019-20",
+      "sourceSha256": "0e31ac2054f0c2d4ef78797185dddd96cc0cdf2eab94bd6841fa24e1c38e7d02",
+      "physicalPage": 110,
+      "sourceRowOnPage": 32,
+      "field": "expenses",
+      "confirmedValue": 5976,
+      "effectiveAuthorOverlay": {
+        "path": "research/salaries/queue-completion-2026-11-01/phsa/overlays/phsa-2019-20-manual-overlay-015.json",
+        "sha256": "f33a994f727b7572d36bcea4ce2219bab2e4e44f2a0307d67810460c9bbc157f"
+      },
+      "peerComparison": {
+        "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-history-batches-peer-municipal-2019-20-015-thirtysix-money-final-comparison.json",
+        "sha256": "c39a3a72d0ba99f7b9dc0e38afc58b9f1f71cb3ad3c8dbb4ae2d10d4639f540e"
+      },
+      "freshSourceImage": {
+        "path": "/workspace/salary-review-municipal-tmp/phsa-2019-20-015/post-whole600-source-only/0337-expenses-whole600.png",
+        "sha256": "55ecf06b43f814dfba4c80938de83f234916499a4a3d39a05a05feaaf61d16bc",
+        "actual600PixelCropBox": [
+          4104,
+          3884,
+          4844,
+          3962
+        ],
+        "noResamplingEnhancementOrRetypedGlyphs": true
+      },
+      "imageFirstTranscript": {
+        "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-history-batches-peer-municipal-2019-20-015-thirtysix-money-source-first.json",
+        "sha256": "007af5b9d98cd06cefef7e882b1358889686ddce3e17b0e8f6dfbadd86048ff4"
+      }
+    },
+    {
+      "sourceId": "phsa-2019-20",
+      "sourceSha256": "0e31ac2054f0c2d4ef78797185dddd96cc0cdf2eab94bd6841fa24e1c38e7d02",
+      "physicalPage": 110,
+      "sourceRowOnPage": 34,
+      "field": "expenses",
+      "confirmedValue": 2430,
+      "effectiveAuthorOverlay": {
+        "path": "research/salaries/queue-completion-2026-11-01/phsa/overlays/phsa-2019-20-manual-overlay-015.json",
+        "sha256": "f33a994f727b7572d36bcea4ce2219bab2e4e44f2a0307d67810460c9bbc157f"
+      },
+      "peerComparison": {
+        "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-history-batches-peer-municipal-2019-20-015-thirtysix-money-final-comparison.json",
+        "sha256": "c39a3a72d0ba99f7b9dc0e38afc58b9f1f71cb3ad3c8dbb4ae2d10d4639f540e"
+      },
+      "freshSourceImage": {
+        "path": "/workspace/salary-review-municipal-tmp/phsa-2019-20-015/post-whole600-source-only/0339-expenses-whole600.png",
+        "sha256": "a2493b2035e7952e4f8ef78c72eb5dc2c5e2f7011611026e241a2a0dbffc3319",
+        "actual600PixelCropBox": [
+          4104,
+          4052,
+          4844,
+          4130
+        ],
+        "noResamplingEnhancementOrRetypedGlyphs": true
+      },
+      "imageFirstTranscript": {
+        "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-history-batches-peer-municipal-2019-20-015-thirtysix-money-source-first.json",
+        "sha256": "007af5b9d98cd06cefef7e882b1358889686ddce3e17b0e8f6dfbadd86048ff4"
+      }
+    },
+    {
+      "sourceId": "phsa-2019-20",
+      "sourceSha256": "0e31ac2054f0c2d4ef78797185dddd96cc0cdf2eab94bd6841fa24e1c38e7d02",
+      "physicalPage": 110,
+      "sourceRowOnPage": 39,
+      "field": "remuneration",
+      "confirmedValue": 77825,
+      "effectiveAuthorOverlay": {
+        "path": "research/salaries/queue-completion-2026-11-01/phsa/overlays/phsa-2019-20-manual-overlay-015.json",
+        "sha256": "f33a994f727b7572d36bcea4ce2219bab2e4e44f2a0307d67810460c9bbc157f"
+      },
+      "peerComparison": {
+        "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-history-batches-peer-municipal-2019-20-015-thirtysix-money-final-comparison.json",
+        "sha256": "c39a3a72d0ba99f7b9dc0e38afc58b9f1f71cb3ad3c8dbb4ae2d10d4639f540e"
+      },
+      "freshSourceImage": {
+        "path": "/workspace/salary-review-municipal-tmp/phsa-2019-20-015/post-whole600-source-only/0343-remuneration-whole600.png",
+        "sha256": "1a35c43d5c52bbc0854ce9d78911aa530665765291c8dbcf52254ba4e052a254",
+        "actual600PixelCropBox": [
+          3470,
+          4462,
+          4136,
+          4540
+        ],
+        "noResamplingEnhancementOrRetypedGlyphs": true
+      },
+      "imageFirstTranscript": {
+        "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-history-batches-peer-municipal-2019-20-015-thirtysix-money-source-first.json",
+        "sha256": "007af5b9d98cd06cefef7e882b1358889686ddce3e17b0e8f6dfbadd86048ff4"
+      }
+    },
+    {
+      "sourceId": "phsa-2019-20",
+      "sourceSha256": "0e31ac2054f0c2d4ef78797185dddd96cc0cdf2eab94bd6841fa24e1c38e7d02",
+      "physicalPage": 110,
+      "sourceRowOnPage": 44,
+      "field": "remuneration",
+      "confirmedValue": 77229,
+      "effectiveAuthorOverlay": {
+        "path": "research/salaries/queue-completion-2026-11-01/phsa/overlays/phsa-2019-20-manual-overlay-015.json",
+        "sha256": "f33a994f727b7572d36bcea4ce2219bab2e4e44f2a0307d67810460c9bbc157f"
+      },
+      "peerComparison": {
+        "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-history-batches-peer-municipal-2019-20-015-thirtysix-money-final-comparison.json",
+        "sha256": "c39a3a72d0ba99f7b9dc0e38afc58b9f1f71cb3ad3c8dbb4ae2d10d4639f540e"
+      },
+      "freshSourceImage": {
+        "path": "/workspace/salary-review-municipal-tmp/phsa-2019-20-015/post-whole600-source-only/0347-remuneration-whole600.png",
+        "sha256": "ee8c9b0a7a744ce59b0c75d10db5d62430db0e9fad93d7cfac355cd5153b104f",
+        "actual600PixelCropBox": [
+          3470,
+          4872,
+          4136,
+          4950
+        ],
+        "noResamplingEnhancementOrRetypedGlyphs": true
+      },
+      "imageFirstTranscript": {
+        "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-history-batches-peer-municipal-2019-20-015-thirtysix-money-source-first.json",
+        "sha256": "007af5b9d98cd06cefef7e882b1358889686ddce3e17b0e8f6dfbadd86048ff4"
+      }
+    },
+    {
+      "sourceId": "phsa-2019-20",
+      "sourceSha256": "0e31ac2054f0c2d4ef78797185dddd96cc0cdf2eab94bd6841fa24e1c38e7d02",
+      "physicalPage": 111,
+      "sourceRowOnPage": 10,
+      "field": "remuneration",
+      "confirmedValue": 84355,
+      "effectiveAuthorOverlay": {
+        "path": "research/salaries/queue-completion-2026-11-01/phsa/overlays/phsa-2019-20-manual-overlay-015.json",
+        "sha256": "f33a994f727b7572d36bcea4ce2219bab2e4e44f2a0307d67810460c9bbc157f"
+      },
+      "peerComparison": {
+        "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-history-batches-peer-municipal-2019-20-015-thirtysix-money-final-comparison.json",
+        "sha256": "c39a3a72d0ba99f7b9dc0e38afc58b9f1f71cb3ad3c8dbb4ae2d10d4639f540e"
+      },
+      "freshSourceImage": {
+        "path": "/workspace/salary-review-municipal-tmp/phsa-2019-20-015/post-whole600-source-only/0367-remuneration-whole600.png",
+        "sha256": "9eab2e4fcdfd99c7d195940b948e9cc5cda28c99700e8bfe953f300eaac3c4bc",
+        "actual600PixelCropBox": [
+          3470,
+          2090,
+          4136,
+          2168
+        ],
+        "noResamplingEnhancementOrRetypedGlyphs": true
+      },
+      "imageFirstTranscript": {
+        "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-history-batches-peer-municipal-2019-20-015-thirtysix-money-source-first.json",
+        "sha256": "007af5b9d98cd06cefef7e882b1358889686ddce3e17b0e8f6dfbadd86048ff4"
+      }
+    },
+    {
+      "sourceId": "phsa-2019-20",
+      "sourceSha256": "0e31ac2054f0c2d4ef78797185dddd96cc0cdf2eab94bd6841fa24e1c38e7d02",
+      "physicalPage": 111,
+      "sourceRowOnPage": 45,
+      "field": "remuneration",
+      "confirmedValue": 84584,
+      "effectiveAuthorOverlay": {
+        "path": "research/salaries/queue-completion-2026-11-01/phsa/overlays/phsa-2019-20-manual-overlay-015.json",
+        "sha256": "f33a994f727b7572d36bcea4ce2219bab2e4e44f2a0307d67810460c9bbc157f"
+      },
+      "peerComparison": {
+        "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-history-batches-peer-municipal-2019-20-015-thirtysix-money-final-comparison.json",
+        "sha256": "c39a3a72d0ba99f7b9dc0e38afc58b9f1f71cb3ad3c8dbb4ae2d10d4639f540e"
+      },
+      "freshSourceImage": {
+        "path": "/workspace/salary-review-municipal-tmp/phsa-2019-20-015/post-whole600-source-only/0399-remuneration-whole600.png",
+        "sha256": "436ea50faf2011816169e397e5bdfa766cb7f0734b9c33dc20c60b46ba6c5424",
+        "actual600PixelCropBox": [
+          3470,
+          4962,
+          4136,
+          5040
+        ],
+        "noResamplingEnhancementOrRetypedGlyphs": true
+      },
+      "imageFirstTranscript": {
+        "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-history-batches-peer-municipal-2019-20-015-thirtysix-money-source-first.json",
+        "sha256": "007af5b9d98cd06cefef7e882b1358889686ddce3e17b0e8f6dfbadd86048ff4"
+      }
+    }
+  ],
+  "completeFrozenSourceTargetFields": 36,
+  "confirmedMonetaryFields": 36,
+  "originalAuthorOwnSourceCorrections": 3,
+  "originalPeerOwnSourceCorrections": 0,
+  "scope": "Exact source-money fields only. Original first-pass disagreements/corrections are retained; no balancing, name or unrelated field authority."
+}

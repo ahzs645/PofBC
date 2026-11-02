@@ -1,0 +1,125 @@
+{
+  "frozen": true,
+  "reviewer": "/root",
+  "reviewedOn": "2026-11-01",
+  "sourceSha256": "23864d9e618e6ceaab92a67e06d38f43d7433e00b747ae53785d8f39f8822624",
+  "imageFirstRawTranscript": {
+    "path": "research/salaries/queue-completion-2026-11-01/reviews/root-mission-2025-image-transcript.tsv",
+    "sha256": "09dae6c4d02aedee2169a6eda04057d4985cc4c251264ba215f0a493e4497bce"
+  },
+  "correctedSourceTranscript": {
+    "path": "research/salaries/queue-completion-2026-11-01/reviews/root-mission-2025-corrected-image-transcript.json",
+    "sha256": "36b680acdf5b018ccb07caca344ec58240631aadb5296787deb9e72251ddf37d"
+  },
+  "sourceOnlyPacket": {
+    "path": "research/salaries/queue-completion-2026-11-01/municipal/mission-2025-peer-image-only.json",
+    "sha256": "7b366c4b7d1d90c915ff0279fd6f504a5479ddb603ddf32a277f2d6df1edcf49"
+  },
+  "independentRegeneratedActualRenders": {
+    "path": "research/salaries/queue-completion-2026-11-01/reviews/root-mission-2025-regenerated-renders.json",
+    "sha256": "4b943255fd6d09c0d6df058406c8c4447901b3e703068415467d988778fd5591"
+  },
+  "reviewerOwnFirstPassCorrections": 4,
+  "candidateCorrectionsRequired": 0,
+  "independentlyImageReviewedRows": 213,
+  "reviewMethod": "All213 names, positions, remuneration and expenses personally image-first transcribed from native-pixel source row crops, before candidate values opened. Seven actual full-PDF pages independently rendered hash-exact; approval, management statement, all five salary headers/footers, scope, definitions and footnotes personally inspected. Four reviewer reading errors corrected from independently rerendered600dpi source clips in an additive transcript.",
+  "scopes": [
+    {
+      "scope": "employee-remuneration",
+      "candidateFile": "research/salaries/queue-completion-municipal/mission-2025-employee-remuneration.json.gzip",
+      "candidateSha256": "cb23de6618da846b99adf2d540ddcb4b6009ac57afc0120f0e46aaf958dab709",
+      "rows": 206,
+      "allSixFieldsAndSourceOrderMatch": true,
+      "computedRemuneration": 23523355,
+      "computedKnownExpenses": 281919,
+      "nullExpenseRows": 31,
+      "explicitZeroExpenseRows": 0
+    },
+    {
+      "scope": "elected-officials",
+      "candidateFile": "research/salaries/queue-completion-municipal/mission-2025-elected-officials.json.gzip",
+      "candidateSha256": "ba4cf5785fca75af0ecf525c018a3e8068028cdecd90a187dd33d42d26817eb9",
+      "rows": 7,
+      "allSixFieldsAndSourceOrderMatch": true,
+      "computedRemuneration": 418097,
+      "computedKnownExpenses": 15263,
+      "nullExpenseRows": 2,
+      "explicitZeroExpenseRows": 0
+    }
+  ],
+  "sourceContext": {
+    "period": {
+      "label": "2025",
+      "periodType": "calendar",
+      "start": "2025-01-01",
+      "end": "2025-12-31",
+      "evidence": "All five source salary-page headings explicitly say year ended December31,2025."
+    },
+    "approval": {
+      "physicalPage": 1,
+      "actualSignaturesPresent": true,
+      "date": "2026-06-15",
+      "signers": [
+        "Doug Stewart, General Manager - Finance",
+        "Paul Horn, Mayor on behalf of Council"
+      ],
+      "scope": "Explicit approval of all statements and schedules included in this SOFI."
+    },
+    "definitionPage": 10,
+    "remunerationDefinition": "Salary, wages, gratuities and taxable benefits, including applicable vehicle allowances paid to the employee. Actual payments during the year; not annualized salary rates.",
+    "expensesDefinition": "Travel, memberships, tuition, relocation, vehicle reimbursements and registration fees paid directly to the employee or to a third party on their behalf.",
+    "selection": "Printed named subtotal says employees with remuneration and expenses exceeding75000. Do not infer a salary-only threshold.",
+    "corporateWorkFootnotes": {
+      "physicalPages": [
+        6,
+        7
+      ],
+      "names": [
+        "Crawford, S *",
+        "DeSousa, K *"
+      ],
+      "literalMeaning": "Wages and expenses paid by City of Mission for assigned work at Mission Bridgehead Investment Corporation; preserve published employer and asterisk notes, do not duplicate observations under another employer."
+    },
+    "aggregateOnlyNotIndividualRows": {
+      "belowThresholdRemuneration": 11122532,
+      "belowThresholdExpenses": 69095,
+      "allEmployeeRemuneration": 34645887,
+      "allEmployeeExpenses": 351014,
+      "allEmployeeAndCouncilRemuneration": 35063984,
+      "allEmployeeAndCouncilExpenses": 366277
+    },
+    "sourceMisspellingRetained": "Cemetary Caretaker",
+    "repeatedNamesPreserved": "Gill,H; Murray,D; Rohde,M; Stewart,D; Thomasson,R each retain separately printed observations without identity inference.",
+    "pageNamedControls": [
+      [
+        6,
+        4348405,
+        51818
+      ],
+      [
+        7,
+        5643662,
+        83982
+      ],
+      [
+        8,
+        5422386,
+        60555
+      ],
+      [
+        9,
+        6365923,
+        61797
+      ],
+      [
+        10,
+        1742979,
+        23767
+      ]
+    ],
+    "controlsAgreeExactly": true
+  },
+  "decision": "Accept complete literal206employee and7council observations; preserve dashes as null, all repeat observations, printed spelling and source-specific payment/selection definitions. Every row and all named controls agree.",
+  "unresolvedSourceFields": 0,
+  "rawCandidateAndPeerTranscriptBytesPreserved": true
+}

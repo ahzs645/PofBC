@@ -1,0 +1,1315 @@
+{
+  "reviewedOn": "2026-11-01",
+  "reviewer": "/root/recovery_review",
+  "reviewScope": "Complete named employee and trustee schedules for SD27,SD22,SD44 fiscal2024/25. Independent PDFMiner LTChar extraction frozen before author candidate comparison, followed by exact ordered six-field and multiset comparisons to both native readers and all six normalized payloads.",
+  "totalRows": 1928,
+  "totalSalaryPages": 42,
+  "sourceResults": [
+    {
+      "id": "sd27",
+      "sourceUrl": "https://www.sd27.bc.ca/documents/f5ae6642-5fe5-4724-9073-acf8a6b1a114/School-District-27-SOFI-Final-2025_Redacted.pdf?fingerprint=ppb20251231162656",
+      "sourceIndexUrl": "https://www.sd27.bc.ca/reports-and-publications-1738864389343",
+      "sourcePath": "/tmp/continuation-schools/district-sd27-bb4215a005b0.pdf",
+      "sourceSha256": "bb4215a005b063956cbb5cca9d6da73379dad5d470e6a0346f3eebcfe3a9fe61",
+      "firstReaderRaw": {
+        "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-school-queue-sd27-pdfminer-original-extraction.json",
+        "sha256": "6ca7f1026fa76f7642b9b69f5e261d0ebf38143caf3c883de6c9f918f4b78641"
+      },
+      "completeIndependentExtraction": {
+        "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-school-queue-sd27-pdfminer-original-extraction-v2.json",
+        "sha256": "368e0813e9eefd6b07d0fe66da1ef4dc7e9fcff32f86b9364b3de126003e4cd7",
+        "candidateOpenedBeforeThisFreeze": false
+      },
+      "authorNativeProof": {
+        "path": "research/salaries/queue-completion-2026-11-01/schools/sd27-2025-native-candidate.json.gzip",
+        "sha256": "b946da903c1a394f4f36b8c38e52c1288d24f72ad8bd2a75eddd12f4f1b6db22"
+      },
+      "canonicalEmployerSlug": "school-district-27",
+      "normalizedComparisons": [
+        {
+          "cohort": "trustees",
+          "dataPath": "research/salaries/queue-completion-schools/sd27-2025-trustees.json.gzip",
+          "dataSha256": "221e419ec5156d989ae584fe76cdeb7265322ae4a7262294e8b9a3b31ea1b441",
+          "rowCount": 8,
+          "orderedSixFieldDifferences": 0,
+          "multisetSixFieldDifferences": 0,
+          "remunerationSum": 147241,
+          "publishedExpenseSum": 95529,
+          "nullExpenses": 0,
+          "explicitZeroExpenses": 0,
+          "nullPositions": 0
+        },
+        {
+          "cohort": "employees",
+          "dataPath": "research/salaries/queue-completion-schools/sd27-2025-employees.json.gzip",
+          "dataSha256": "619d25b9d522409c9cd9c71663fdd58899f75a96f9f117d72d3c255e6f79be9a",
+          "rowCount": 289,
+          "orderedSixFieldDifferences": 0,
+          "multisetSixFieldDifferences": 0,
+          "remunerationSum": 30206219,
+          "publishedExpenseSum": 422635,
+          "nullExpenses": 0,
+          "explicitZeroExpenses": 89,
+          "nullPositions": 289
+        }
+      ],
+      "originalContext": {
+        "actualRenderedPhysicalPages": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          55,
+          60,
+          61,
+          62
+        ],
+        "declarationPhysicalPage": 3,
+        "declaration": "Year2024-2025 and body year endedJune30,2025; three date fields25.12.15. Signature areas partially redacted.",
+        "management": "Physical5 datedDecember15,2025 with signature portions redacted.",
+        "definition": "Physical62 states remuneration includes taxable benefits and is paid on a cash basis; financial-statement salary expenses are accrual based and include recoveries. Physical60 reports employer E.I./C.P.P. separately.",
+        "employeeScope": "Employees whose remuneration exceeds$75,000; no employee position column. Initials remain literal. Printed expense0 is numeric0.",
+        "printedControls": {
+          "trustees": {
+            "physicalPage": 55,
+            "remuneration": 147241,
+            "expenses": 95531
+          },
+          "namedEmployees": {
+            "physicalPage": 60,
+            "remuneration": 30206208,
+            "expenses": 422630
+          },
+          "underOrEqual75000": {
+            "physicalPage": 60,
+            "remuneration": 19296813,
+            "expenses": 102075
+          },
+          "consolidated": {
+            "physicalPage": 60,
+            "remuneration": 49650262,
+            "expenses": 620236
+          },
+          "employerEiCpp": {
+            "physicalPage": 60,
+            "amount": 3040903
+          }
+        },
+        "qualifications": [
+          "Named trustee expense sum95529 is2 below printed95531. Named employee sums30206219/422635 exceed printed30206208/422630 by11/5. Literal source values and all named rows remain unchanged.",
+          "Trustee source spells PATENAUDECIEL with no intervening space; no name enrichment. All289 employee position values remain null because the source publishes none.",
+          "Physical61 is a statement of no severance agreements, not additional named salary rows. Physical62 financial-statement remuneration48753473 differs from paid49650262 under the stated basis/taxable-benefit/recovery explanations."
+        ]
+      },
+      "actualFullPageViews": [
+        {
+          "physicalPage": 1,
+          "path": "/tmp/independent-school-queue/sd27-p1.png",
+          "sha256": "51b82311534fddad635162a7f1ce26b87a6be4780dac5de2fcce372800c28611"
+        },
+        {
+          "physicalPage": 2,
+          "path": "/tmp/independent-school-queue/sd27-p2.png",
+          "sha256": "e6c046e8973ceb6f7633595ab08a3dfa973ed6c54695028217bb245538018231"
+        },
+        {
+          "physicalPage": 3,
+          "path": "/tmp/independent-school-queue/sd27-p3.png",
+          "sha256": "5c6b4b2584ebc9f5a05d847dd7c8ca5f18b448b08f07dacb6339b735182411d7"
+        },
+        {
+          "physicalPage": 4,
+          "path": "/tmp/independent-school-queue/sd27-p4.png",
+          "sha256": "4f68b3399d51d374b7704da67c55bb3a04c96af42d19a2e599973d18d4b66109"
+        },
+        {
+          "physicalPage": 5,
+          "path": "/tmp/independent-school-queue/sd27-p5.png",
+          "sha256": "f95a48ef003e4646acbac7a2aa726537584cb2085618d906f488bd055dbf9c67"
+        },
+        {
+          "physicalPage": 55,
+          "path": "/tmp/independent-school-queue/sd27-p55.png",
+          "sha256": "8160fd790eade70184f6a8351b54e0baf231fbc246db71cca3a161cdd0f1a153"
+        },
+        {
+          "physicalPage": 60,
+          "path": "/tmp/independent-school-queue/sd27-p60.png",
+          "sha256": "106acae1bba97a3fb7affa1dbd82c1b8776c1ecb94d17fbca22d924e03db6f37"
+        },
+        {
+          "physicalPage": 61,
+          "path": "/tmp/independent-school-queue/sd27-p61.png",
+          "sha256": "e927c67e31ae6a82ca1f84ce1e2b7795ffca3cf8e23eb265d5623c0ce9274619"
+        },
+        {
+          "physicalPage": 62,
+          "path": "/tmp/independent-school-queue/sd27-p62.png",
+          "sha256": "284156ca5a5761bf7a62f51f87efa066c7a5ea57057bb25d04564143f8bba470"
+        }
+      ],
+      "paintAndLayoutChecks": {
+        "id": "sd27",
+        "sourceSha256": "bb4215a005b063956cbb5cca9d6da73379dad5d470e6a0346f3eebcfe3a9fe61",
+        "pages": [
+          {
+            "physicalPage": 55,
+            "textTraceRuns": 92,
+            "invisibleTransparentOrWhiteTextRuns": [],
+            "pdfminerWhiteCharacterCount": 0,
+            "pageRect": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ]
+          },
+          {
+            "physicalPage": 56,
+            "textTraceRuns": 25,
+            "invisibleTransparentOrWhiteTextRuns": [],
+            "pdfminerWhiteCharacterCount": 0,
+            "pageRect": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ]
+          },
+          {
+            "physicalPage": 57,
+            "textTraceRuns": 27,
+            "invisibleTransparentOrWhiteTextRuns": [],
+            "pdfminerWhiteCharacterCount": 0,
+            "pageRect": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ]
+          },
+          {
+            "physicalPage": 58,
+            "textTraceRuns": 27,
+            "invisibleTransparentOrWhiteTextRuns": [],
+            "pdfminerWhiteCharacterCount": 0,
+            "pageRect": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ]
+          },
+          {
+            "physicalPage": 59,
+            "textTraceRuns": 29,
+            "invisibleTransparentOrWhiteTextRuns": [],
+            "pdfminerWhiteCharacterCount": 0,
+            "pageRect": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ]
+          },
+          {
+            "physicalPage": 60,
+            "textTraceRuns": 146,
+            "invisibleTransparentOrWhiteTextRuns": [],
+            "pdfminerWhiteCharacterCount": 0,
+            "pageRect": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ]
+          }
+        ],
+        "layoutRiskCases": [
+          {
+            "physicalPage": 55,
+            "y": 588.372,
+            "name": "MACDONALD CAMILLE R (WILLOW)",
+            "nameRightEdge": 184.5086245199999,
+            "columnBoundary": 250,
+            "gap": 65.4913754800001,
+            "cohort": "trustees",
+            "path": "/tmp/independent-school-queue/sd27-layout-case-01.png",
+            "sha256": "ff89ebbeba77be116162011a7806494114db22f2d2fbcb357c2cd12f8dc7726c",
+            "clipRect": [
+              40.0,
+              186.62800000000004,
+              570.0,
+              224.62800000000004
+            ]
+          },
+          {
+            "physicalPage": 55,
+            "y": 576.853,
+            "name": "MARTENS USCHI L (LINDA)",
+            "nameRightEdge": 151.30589519999987,
+            "columnBoundary": 250,
+            "gap": 98.69410480000013,
+            "cohort": "trustees",
+            "path": "/tmp/independent-school-queue/sd27-layout-case-02.png",
+            "sha256": "6ea13144afda3435fbbe48f5d6219d5f989d6a6ae2b3ceee914fee73c00118fd",
+            "clipRect": [
+              40.0,
+              198.14700000000005,
+              570.0,
+              236.14700000000005
+            ]
+          },
+          {
+            "physicalPage": 58,
+            "y": 196.748,
+            "name": "NEWMAN‐BOAFO,M",
+            "nameRightEdge": 129.6349352400005,
+            "columnBoundary": 250,
+            "gap": 120.36506475999951,
+            "cohort": "employees",
+            "path": "/tmp/independent-school-queue/sd27-layout-case-03.png",
+            "sha256": "b9af4a1513fcb5f26876e8f6564feed4054ebde0bf0d896ecec0d57a8f50deb4",
+            "clipRect": [
+              40.0,
+              578.252,
+              570.0,
+              616.252
+            ]
+          },
+          {
+            "physicalPage": 59,
+            "y": 231.303,
+            "name": "SINDELAR‐BABICKY,I",
+            "nameRightEdge": 128.20177644000063,
+            "columnBoundary": 250,
+            "gap": 121.79822355999937,
+            "cohort": "employees",
+            "path": "/tmp/independent-school-queue/sd27-layout-case-04.png",
+            "sha256": "3d64ff6ce3d5f1c14805afe2fc2be1f4a85a6d5a2db14a0eca69507032c93ee3",
+            "clipRect": [
+              40.0,
+              543.697,
+              570.0,
+              581.697
+            ]
+          },
+          {
+            "physicalPage": 57,
+            "y": 93.081,
+            "name": "LEHMANN‐BERRY,M",
+            "nameRightEdge": 128.1780426000003,
+            "columnBoundary": 250,
+            "gap": 121.82195739999969,
+            "cohort": "employees",
+            "path": "/tmp/independent-school-queue/sd27-layout-case-05.png",
+            "sha256": "4c6a63f0b96f099a1a05e4a88c22608ca3744fed1b76b0ac5a72093d957498ea",
+            "clipRect": [
+              40.0,
+              681.919,
+              570.0,
+              719.919
+            ]
+          },
+          {
+            "physicalPage": 55,
+            "y": 611.409,
+            "name": "FRANKLIN MICHAEL",
+            "nameRightEdge": 126.16536875999996,
+            "columnBoundary": 250,
+            "gap": 123.83463124000004,
+            "cohort": "trustees",
+            "path": "/tmp/independent-school-queue/sd27-layout-case-06.png",
+            "sha256": "b1298bb409fbb0d9ef33a155e1c00f9aa65869caf80ba308134cb0af633b441b",
+            "clipRect": [
+              40.0,
+              163.591,
+              570.0,
+              201.591
+            ]
+          }
+        ],
+        "nameRowsChecked": 297
+      }
+    },
+    {
+      "id": "sd22",
+      "sourceUrl": "https://www2.gov.bc.ca/assets/gov/education/administration/resource-management/school-district-financial-reporting/financial-information/sd22-sofi-2025.pdf",
+      "sourceIndexUrl": "https://www2.gov.bc.ca/gov/content/education-training/k-12/administration/financial-management/school-district-financial-reporting/statement-of-financial-information",
+      "sourcePath": "/tmp/pofbc-schools/ministry-sd22-2025.pdf",
+      "sourceSha256": "4657c26f966659bc5bf0de5a6e65818538f588dcbc154d7b23748b7cfe5415a6",
+      "firstReaderRaw": {
+        "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-school-queue-sd22-pdfminer-original-extraction.json",
+        "sha256": "9c14275d89a3fac5d7f67b3e4e56d3696afeae9560d4d37f7304ec51880a710c"
+      },
+      "completeIndependentExtraction": {
+        "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-school-queue-sd22-pdfminer-original-extraction-v2.json",
+        "sha256": "4d0f2c53df69eba39ba83a30f7b7a3dfd646d4b1f19defcba8103137e15aac4e",
+        "candidateOpenedBeforeThisFreeze": false
+      },
+      "authorNativeProof": {
+        "path": "research/salaries/queue-completion-2026-11-01/schools/sd22-2025-native-candidate.json.gzip",
+        "sha256": "89aa310a078a39536081f46e27612c547841fd56d83c4c40625e33ec021bab0f"
+      },
+      "canonicalEmployerSlug": "school-district-22",
+      "normalizedComparisons": [
+        {
+          "cohort": "trustees",
+          "dataPath": "research/salaries/queue-completion-schools/sd22-2025-trustees.json.gzip",
+          "dataSha256": "e2776bec0d86d9adfc91300be4ab5ae6f553695840b1b092b1ff40c3ffe3fb74",
+          "rowCount": 7,
+          "orderedSixFieldDifferences": 0,
+          "multisetSixFieldDifferences": 0,
+          "remunerationSum": 151441,
+          "publishedExpenseSum": 40508,
+          "nullExpenses": 0,
+          "explicitZeroExpenses": 0,
+          "nullPositions": 0
+        },
+        {
+          "cohort": "employees",
+          "dataPath": "research/salaries/queue-completion-schools/sd22-2025-employees.json.gzip",
+          "dataSha256": "701de4b61ae22d8033888fdb4f0b43bdd804c37bf4510bbc75563c842a4c7978",
+          "rowCount": 607,
+          "orderedSixFieldDifferences": 0,
+          "multisetSixFieldDifferences": 0,
+          "remunerationSum": 64157041,
+          "publishedExpenseSum": 442707,
+          "nullExpenses": 488,
+          "explicitZeroExpenses": 0,
+          "nullPositions": 0
+        }
+      ],
+      "originalContext": {
+        "actualRenderedPhysicalPages": [
+          1,
+          3,
+          5,
+          54,
+          71
+        ],
+        "declarationPhysicalPage": 3,
+        "declaration": "Year2024/25 and body year endedJune30,2025; three date fieldsDecember15,2025. Signature areas redacted.",
+        "management": "Physical5 datesDecember15,2025 with signature areas redacted.",
+        "definition": "Salary pages state remuneration includes regular salary, taxable benefits and taxable one-time retirement allowances, retroactive pay and vacation pay. Expenses are paid to/on behalf of employees for approved district travel, professional development and association business expenses. Physical71 distinguishes this schedule from financial-statement benefits and third-party recoveries.",
+        "employeeScope": "Employees earning remuneration of$75,000 or more; blank expense cells remain null.",
+        "printedControls": {
+          "employeesLessThan75000": {
+            "physicalPage": 71,
+            "remuneration": 30781279
+          },
+          "literalTotalWithUnstatedNamedScope": {
+            "physicalPage": 71,
+            "label": "Total",
+            "remuneration": 95010658,
+            "expenses": 498211
+          }
+        },
+        "qualifications": [
+          "Physical71 labels the control only Total and gives no separate under-threshold expense amount. No employee-only or combined-trustee scope is silently assigned.",
+          "Named employees64157041 plus printed under-threshold30781279 gives94938320,72338 below printed95010658. Adding named trustees151441 gives95089761,79103 above that control. Neither interpretation is forced to reconcile.",
+          "Named employee expenses442707 plus trustee expenses40508 gives483215,14996 below printed498211; under-threshold expenses are not separately published. All607 employee and7 trustee rows independently match both author native readers.",
+          "Actual source images confirm wrapped trustee titles for Mindnich and Sullivan and the employee international-program titles/expenses for Godfrey and White."
+        ]
+      },
+      "actualFullPageViews": [
+        {
+          "physicalPage": 1,
+          "path": "/tmp/independent-school-queue/sd22-p1.png",
+          "sha256": "2ec0f6cb8bc1d7cf0fb37526c7897ad759ac70663f25d7903eef74817dbc5662"
+        },
+        {
+          "physicalPage": 3,
+          "path": "/tmp/independent-school-queue/sd22-p3.png",
+          "sha256": "adb6ea08d90496def90fcbae1566b3c885b98ca62c076096748feb8ee9b97a4d"
+        },
+        {
+          "physicalPage": 5,
+          "path": "/tmp/independent-school-queue/sd22-p5.png",
+          "sha256": "fbf742eab8ddc89814f0d47dfbf9e84087fbb627b0d6a89ee215dd1bd7c23f84"
+        },
+        {
+          "physicalPage": 54,
+          "path": "/tmp/independent-school-queue/sd22-p54.png",
+          "sha256": "4af922671c49a0b85a6d1beff678aeb00d991848109397cf03c42653ac908932"
+        },
+        {
+          "physicalPage": 71,
+          "path": "/tmp/independent-school-queue/sd22-p71.png",
+          "sha256": "01368f2d98887b9cb08bcea847f7d7e26c025495f324007a251248a0f6454a76"
+        }
+      ],
+      "paintAndLayoutChecks": {
+        "id": "sd22",
+        "sourceSha256": "4657c26f966659bc5bf0de5a6e65818538f588dcbc154d7b23748b7cfe5415a6",
+        "pages": [
+          {
+            "physicalPage": 54,
+            "textTraceRuns": 20,
+            "invisibleTransparentOrWhiteTextRuns": [],
+            "pdfminerWhiteCharacterCount": 0,
+            "pageRect": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ]
+          },
+          {
+            "physicalPage": 55,
+            "textTraceRuns": 3,
+            "invisibleTransparentOrWhiteTextRuns": [],
+            "pdfminerWhiteCharacterCount": 0,
+            "pageRect": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ]
+          },
+          {
+            "physicalPage": 56,
+            "textTraceRuns": 3,
+            "invisibleTransparentOrWhiteTextRuns": [],
+            "pdfminerWhiteCharacterCount": 0,
+            "pageRect": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ]
+          },
+          {
+            "physicalPage": 57,
+            "textTraceRuns": 3,
+            "invisibleTransparentOrWhiteTextRuns": [],
+            "pdfminerWhiteCharacterCount": 0,
+            "pageRect": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ]
+          },
+          {
+            "physicalPage": 58,
+            "textTraceRuns": 3,
+            "invisibleTransparentOrWhiteTextRuns": [],
+            "pdfminerWhiteCharacterCount": 0,
+            "pageRect": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ]
+          },
+          {
+            "physicalPage": 59,
+            "textTraceRuns": 5,
+            "invisibleTransparentOrWhiteTextRuns": [],
+            "pdfminerWhiteCharacterCount": 0,
+            "pageRect": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ]
+          },
+          {
+            "physicalPage": 60,
+            "textTraceRuns": 3,
+            "invisibleTransparentOrWhiteTextRuns": [],
+            "pdfminerWhiteCharacterCount": 0,
+            "pageRect": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ]
+          },
+          {
+            "physicalPage": 61,
+            "textTraceRuns": 3,
+            "invisibleTransparentOrWhiteTextRuns": [],
+            "pdfminerWhiteCharacterCount": 0,
+            "pageRect": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ]
+          },
+          {
+            "physicalPage": 62,
+            "textTraceRuns": 3,
+            "invisibleTransparentOrWhiteTextRuns": [],
+            "pdfminerWhiteCharacterCount": 0,
+            "pageRect": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ]
+          },
+          {
+            "physicalPage": 63,
+            "textTraceRuns": 3,
+            "invisibleTransparentOrWhiteTextRuns": [],
+            "pdfminerWhiteCharacterCount": 0,
+            "pageRect": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ]
+          },
+          {
+            "physicalPage": 64,
+            "textTraceRuns": 3,
+            "invisibleTransparentOrWhiteTextRuns": [],
+            "pdfminerWhiteCharacterCount": 0,
+            "pageRect": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ]
+          },
+          {
+            "physicalPage": 65,
+            "textTraceRuns": 5,
+            "invisibleTransparentOrWhiteTextRuns": [],
+            "pdfminerWhiteCharacterCount": 0,
+            "pageRect": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ]
+          },
+          {
+            "physicalPage": 66,
+            "textTraceRuns": 7,
+            "invisibleTransparentOrWhiteTextRuns": [],
+            "pdfminerWhiteCharacterCount": 0,
+            "pageRect": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ]
+          },
+          {
+            "physicalPage": 67,
+            "textTraceRuns": 3,
+            "invisibleTransparentOrWhiteTextRuns": [],
+            "pdfminerWhiteCharacterCount": 0,
+            "pageRect": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ]
+          },
+          {
+            "physicalPage": 68,
+            "textTraceRuns": 3,
+            "invisibleTransparentOrWhiteTextRuns": [],
+            "pdfminerWhiteCharacterCount": 0,
+            "pageRect": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ]
+          },
+          {
+            "physicalPage": 69,
+            "textTraceRuns": 3,
+            "invisibleTransparentOrWhiteTextRuns": [],
+            "pdfminerWhiteCharacterCount": 0,
+            "pageRect": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ]
+          },
+          {
+            "physicalPage": 70,
+            "textTraceRuns": 5,
+            "invisibleTransparentOrWhiteTextRuns": [],
+            "pdfminerWhiteCharacterCount": 0,
+            "pageRect": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ]
+          },
+          {
+            "physicalPage": 71,
+            "textTraceRuns": 25,
+            "invisibleTransparentOrWhiteTextRuns": [],
+            "pdfminerWhiteCharacterCount": 0,
+            "pageRect": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ]
+          }
+        ],
+        "layoutRiskCases": [
+          {
+            "physicalPage": 59,
+            "y": 332.088,
+            "name": "Haiworonsky, Genevieve",
+            "nameRightEdge": 199.35360000000003,
+            "columnBoundary": 201,
+            "gap": 1.6463999999999714,
+            "cohort": "employees",
+            "path": "/tmp/independent-school-queue/sd22-layout-case-01.png",
+            "sha256": "76801e5657e7834fdb4a7f0ebd1617ca1d82e86c9ed71af2d425bdda2b5a2315",
+            "clipRect": [
+              40.0,
+              442.912,
+              570.0,
+              480.912
+            ]
+          },
+          {
+            "physicalPage": 68,
+            "y": 154.968,
+            "name": "Storms-Blanchard, Sarah",
+            "nameRightEdge": 198.04800000000006,
+            "columnBoundary": 201,
+            "gap": 2.9519999999999413,
+            "cohort": "employees",
+            "path": "/tmp/independent-school-queue/sd22-layout-case-02.png",
+            "sha256": "6240071ec21a1ed85b4d27d4f57e781b7831d18396e697fd2f718c8400b96bde",
+            "clipRect": [
+              40.0,
+              620.032,
+              570.0,
+              658.032
+            ]
+          },
+          {
+            "physicalPage": 70,
+            "y": 316.368,
+            "name": "Williamson, Christopher",
+            "nameRightEdge": 196.00800000000004,
+            "columnBoundary": 201,
+            "gap": 4.991999999999962,
+            "cohort": "employees",
+            "path": "/tmp/independent-school-queue/sd22-layout-case-03.png",
+            "sha256": "eaa86a23efe3c4f324c3d19948fc8cfe529d3fcee5d1580f5cd3d4f28fc6e6e6",
+            "clipRect": [
+              40.0,
+              458.632,
+              570.0,
+              496.632
+            ]
+          },
+          {
+            "physicalPage": 58,
+            "y": 580.188,
+            "name": "Digness, Stephanie-Ann",
+            "nameRightEdge": 194.10000000000002,
+            "columnBoundary": 201,
+            "gap": 6.899999999999977,
+            "cohort": "employees",
+            "path": "/tmp/independent-school-queue/sd22-layout-case-04.png",
+            "sha256": "dd212194a3d6548e739a6ad40ac64f29d46ff20c148026404d60d769ead37e2f",
+            "clipRect": [
+              40.0,
+              194.812,
+              570.0,
+              232.812
+            ]
+          },
+          {
+            "physicalPage": 59,
+            "y": 190.368,
+            "name": "Harwood-Jones, Andrea",
+            "nameRightEdge": 194.05079999999998,
+            "columnBoundary": 201,
+            "gap": 6.949200000000019,
+            "cohort": "employees",
+            "path": "/tmp/independent-school-queue/sd22-layout-case-05.png",
+            "sha256": "706ebeb66acdf64ad12c40bbf02915d9bcf0cad1aa8f3ff944ca315261c7a65a",
+            "clipRect": [
+              40.0,
+              584.6320000000001,
+              570.0,
+              622.6320000000001
+            ]
+          },
+          {
+            "physicalPage": 61,
+            "y": 265.188,
+            "name": "Knjaschewitsch, Sascha",
+            "nameRightEdge": 192.732,
+            "columnBoundary": 201,
+            "gap": 8.268,
+            "cohort": "employees",
+            "path": "/tmp/independent-school-queue/sd22-layout-case-06.png",
+            "sha256": "bfe0c533540674ed8e77308b3d87d7d24eb9addcfb2d09e97b3a4e14a1ebeec0",
+            "clipRect": [
+              40.0,
+              509.812,
+              570.0,
+              547.812
+            ]
+          },
+          {
+            "physicalPage": 54,
+            "y": 481.728,
+            "name": "Mindnich, Lori",
+            "nameRightEdge": 150.72240000000005,
+            "columnBoundary": 201,
+            "gap": 50.27759999999995,
+            "cohort": "trustees",
+            "path": "/tmp/independent-school-queue/sd22-layout-case-07.png",
+            "sha256": "6a03a67a1d28343c91f6d5b751de8e7cb09ca7b556e41ac4763475bd68fff263",
+            "clipRect": [
+              40.0,
+              293.272,
+              570.0,
+              331.272
+            ]
+          },
+          {
+            "physicalPage": 54,
+            "y": 422.448,
+            "name": "Sullivan, Kelli",
+            "nameRightEdge": 147.44160000000002,
+            "columnBoundary": 201,
+            "gap": 53.55839999999998,
+            "cohort": "trustees",
+            "path": "/tmp/independent-school-queue/sd22-layout-case-08.png",
+            "sha256": "1b29110ad2dba4646e484d9bc95b0e496521b64e4d5d2604279b13600127018a",
+            "clipRect": [
+              40.0,
+              352.552,
+              570.0,
+              390.552
+            ]
+          },
+          {
+            "physicalPage": 59,
+            "y": 517.188,
+            "name": "Godfrey, Tracy",
+            "nameRightEdge": 151.41120000000004,
+            "columnBoundary": 201,
+            "gap": 49.588799999999964,
+            "cohort": "employees",
+            "path": "/tmp/independent-school-queue/sd22-layout-case-09.png",
+            "sha256": "a899e46aed2f8d72eea7d1279b1a83258e78da78b3b86c521baa2ee992be404d",
+            "clipRect": [
+              40.0,
+              257.812,
+              570.0,
+              295.812
+            ]
+          },
+          {
+            "physicalPage": 70,
+            "y": 406.968,
+            "name": "White, Andrew",
+            "nameRightEdge": 151.39319999999998,
+            "columnBoundary": 201,
+            "gap": 49.60680000000002,
+            "cohort": "employees",
+            "path": "/tmp/independent-school-queue/sd22-layout-case-10.png",
+            "sha256": "aed82a059ff1d30d3d53edf7b6e53f7f5d22a9d95f2f602f0c99f88385b60896",
+            "clipRect": [
+              40.0,
+              368.032,
+              570.0,
+              406.032
+            ]
+          }
+        ],
+        "nameRowsChecked": 614
+      }
+    },
+    {
+      "id": "sd44",
+      "sourceUrl": "https://www2.gov.bc.ca/assets/gov/education/administration/resource-management/school-district-financial-reporting/financial-information/sd44-sofi-2025.pdf",
+      "sourceIndexUrl": "https://www2.gov.bc.ca/gov/content/education-training/k-12/administration/financial-management/school-district-financial-reporting/statement-of-financial-information",
+      "sourcePath": "/tmp/pofbc-schools/ministry-sd44-2025.pdf",
+      "sourceSha256": "24312eed671fe2077c259aa534451dfd881cef89d14bac02eadc801f07a08b42",
+      "firstReaderRaw": {
+        "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-school-queue-sd44-pdfminer-original-extraction.json",
+        "sha256": "9ee1b2ade67221efd60c5f246fbc7160f19fcc1f338d6b22b50ae3ab8d496302"
+      },
+      "completeIndependentExtraction": {
+        "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-school-queue-sd44-pdfminer-original-extraction-v2.json",
+        "sha256": "23c28511ab9f8fb0f22d158da05f79f619d84a4fbd26542cb7aea0dd94a6f39a",
+        "candidateOpenedBeforeThisFreeze": false
+      },
+      "authorNativeProof": {
+        "path": "research/salaries/queue-completion-2026-11-01/schools/sd44-2025-native-candidate.json.gzip",
+        "sha256": "a4eb351944a2f2e5222d5e23de2da62e50077fabada0e930d7105345b3fff047"
+      },
+      "canonicalEmployerSlug": "north-vancouver-school-district",
+      "normalizedComparisons": [
+        {
+          "cohort": "trustees",
+          "dataPath": "research/salaries/queue-completion-schools/sd44-2025-trustees.json.gzip",
+          "dataSha256": "9b382c830215d2e2243e53923ef8c347c18237a70927416265c4247288fbe4e0",
+          "rowCount": 7,
+          "orderedSixFieldDifferences": 0,
+          "multisetSixFieldDifferences": 0,
+          "remunerationSum": 219939,
+          "publishedExpenseSum": 11063,
+          "nullExpenses": 0,
+          "explicitZeroExpenses": 0,
+          "nullPositions": 0
+        },
+        {
+          "cohort": "employees",
+          "dataPath": "research/salaries/queue-completion-schools/sd44-2025-employees.json.gzip",
+          "dataSha256": "ed2a0b870518650f6eb294db2ab0a2c096630bb19fd92fe8715220f85d5af721",
+          "rowCount": 1010,
+          "orderedSixFieldDifferences": 0,
+          "multisetSixFieldDifferences": 0,
+          "remunerationSum": 107244306,
+          "publishedExpenseSum": 1046925,
+          "nullExpenses": 328,
+          "explicitZeroExpenses": 0,
+          "nullPositions": 0
+        }
+      ],
+      "originalContext": {
+        "actualRenderedPhysicalPages": [
+          1,
+          2,
+          4,
+          51,
+          68,
+          70
+        ],
+        "declarationPhysicalPage": 2,
+        "declaration": "Year2024-25 and body year endedJune30,2025; three handwritten date fieldsDecember15,2025. Signature areas redacted.",
+        "management": "Physical4 fiscal2025 heading; lower signoff area is redacted, so no visible management signature/date is asserted.",
+        "definition": "Physical70 says cash basis; includes payments to seconded employees recovered from other organizations, capital-project remuneration and employee expenses; excludes severance-agreement payments. Employer E.I./C.P.P. appears separately on physical68.",
+        "employeeScope": "Other employees; physical68 identifies the named scope as employees paid more than$75,000. Printed expense dashes remain null.",
+        "printedControls": {
+          "trustees": {
+            "physicalPage": 51,
+            "remuneration": 219939,
+            "expenses": 11062
+          },
+          "namedEmployees": {
+            "physicalPage": 68,
+            "remuneration": 107244313,
+            "expenses": 1046933
+          },
+          "underOrEqual75000": {
+            "physicalPage": 68,
+            "remuneration": 66541556,
+            "expenses": 323030
+          },
+          "grandTotal": {
+            "physicalPage": 68,
+            "remuneration": 174005807,
+            "expenses": 1381025
+          },
+          "employerEiCpp": {
+            "physicalPage": 68,
+            "amount": 10540815
+          }
+        },
+        "qualifications": [
+          "Trustee row expense sum11063 is1 above printed11062. Named employee sums107244306/1046925 are7/8 below printed107244313/1046933. Literal named fields and printed controls are preserved without balancing.",
+          "Printed component remuneration107244313+66541556+219939=174005808 is1 above printed grand174005807; printed expense components reconcile exactly.",
+          "Physical68 separately notes travel for Provincial Schools Outreach and travel/marketing for International Student Recruitment. Those notes do not change literal monetary fields."
+        ]
+      },
+      "actualFullPageViews": [
+        {
+          "physicalPage": 1,
+          "path": "/tmp/independent-school-queue/sd44-p1.png",
+          "sha256": "169f02c74c7487da9f00e02cd2d9409be4f3e2b4f8c89546399c52aa4c7234d1"
+        },
+        {
+          "physicalPage": 2,
+          "path": "/tmp/independent-school-queue/sd44-p2.png",
+          "sha256": "306c6d77408e2f3f93dd29a24cf1ddc97a1e692fa9eab2c36eb1695abfc9436b"
+        },
+        {
+          "physicalPage": 4,
+          "path": "/tmp/independent-school-queue/sd44-p4.png",
+          "sha256": "d9f30cde45508709c8e34e46d97adc46f8c8a55dab4844deec932ed1cca72f2a"
+        },
+        {
+          "physicalPage": 51,
+          "path": "/tmp/independent-school-queue/sd44-p51.png",
+          "sha256": "430bac0f5c40db39e9cb9ce7733ba71582c1632ab6e2a92866152ea0ba2084da"
+        },
+        {
+          "physicalPage": 68,
+          "path": "/tmp/independent-school-queue/sd44-p68.png",
+          "sha256": "f59ebeabb38d50d81cb8f52e2259d522298c6ed6b985248f8b011e8d9e5481e6"
+        },
+        {
+          "physicalPage": 70,
+          "path": "/tmp/independent-school-queue/sd44-p70.png",
+          "sha256": "1e9d8da0eac81d3c5104724adf9d3f990920666dfdf5109b2a358b475ea3c3ea"
+        }
+      ],
+      "paintAndLayoutChecks": {
+        "id": "sd44",
+        "sourceSha256": "24312eed671fe2077c259aa534451dfd881cef89d14bac02eadc801f07a08b42",
+        "pages": [
+          {
+            "physicalPage": 51,
+            "textTraceRuns": 423,
+            "invisibleTransparentOrWhiteTextRuns": [],
+            "pdfminerWhiteCharacterCount": 0,
+            "pageRect": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ]
+          },
+          {
+            "physicalPage": 52,
+            "textTraceRuns": 478,
+            "invisibleTransparentOrWhiteTextRuns": [],
+            "pdfminerWhiteCharacterCount": 0,
+            "pageRect": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ]
+          },
+          {
+            "physicalPage": 53,
+            "textTraceRuns": 478,
+            "invisibleTransparentOrWhiteTextRuns": [],
+            "pdfminerWhiteCharacterCount": 0,
+            "pageRect": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ]
+          },
+          {
+            "physicalPage": 54,
+            "textTraceRuns": 478,
+            "invisibleTransparentOrWhiteTextRuns": [],
+            "pdfminerWhiteCharacterCount": 0,
+            "pageRect": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ]
+          },
+          {
+            "physicalPage": 55,
+            "textTraceRuns": 478,
+            "invisibleTransparentOrWhiteTextRuns": [],
+            "pdfminerWhiteCharacterCount": 0,
+            "pageRect": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ]
+          },
+          {
+            "physicalPage": 56,
+            "textTraceRuns": 478,
+            "invisibleTransparentOrWhiteTextRuns": [],
+            "pdfminerWhiteCharacterCount": 0,
+            "pageRect": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ]
+          },
+          {
+            "physicalPage": 57,
+            "textTraceRuns": 478,
+            "invisibleTransparentOrWhiteTextRuns": [],
+            "pdfminerWhiteCharacterCount": 0,
+            "pageRect": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ]
+          },
+          {
+            "physicalPage": 58,
+            "textTraceRuns": 478,
+            "invisibleTransparentOrWhiteTextRuns": [],
+            "pdfminerWhiteCharacterCount": 0,
+            "pageRect": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ]
+          },
+          {
+            "physicalPage": 59,
+            "textTraceRuns": 478,
+            "invisibleTransparentOrWhiteTextRuns": [],
+            "pdfminerWhiteCharacterCount": 0,
+            "pageRect": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ]
+          },
+          {
+            "physicalPage": 60,
+            "textTraceRuns": 478,
+            "invisibleTransparentOrWhiteTextRuns": [],
+            "pdfminerWhiteCharacterCount": 0,
+            "pageRect": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ]
+          },
+          {
+            "physicalPage": 61,
+            "textTraceRuns": 478,
+            "invisibleTransparentOrWhiteTextRuns": [],
+            "pdfminerWhiteCharacterCount": 0,
+            "pageRect": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ]
+          },
+          {
+            "physicalPage": 62,
+            "textTraceRuns": 478,
+            "invisibleTransparentOrWhiteTextRuns": [],
+            "pdfminerWhiteCharacterCount": 0,
+            "pageRect": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ]
+          },
+          {
+            "physicalPage": 63,
+            "textTraceRuns": 478,
+            "invisibleTransparentOrWhiteTextRuns": [],
+            "pdfminerWhiteCharacterCount": 0,
+            "pageRect": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ]
+          },
+          {
+            "physicalPage": 64,
+            "textTraceRuns": 478,
+            "invisibleTransparentOrWhiteTextRuns": [],
+            "pdfminerWhiteCharacterCount": 0,
+            "pageRect": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ]
+          },
+          {
+            "physicalPage": 65,
+            "textTraceRuns": 478,
+            "invisibleTransparentOrWhiteTextRuns": [],
+            "pdfminerWhiteCharacterCount": 0,
+            "pageRect": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ]
+          },
+          {
+            "physicalPage": 66,
+            "textTraceRuns": 478,
+            "invisibleTransparentOrWhiteTextRuns": [],
+            "pdfminerWhiteCharacterCount": 0,
+            "pageRect": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ]
+          },
+          {
+            "physicalPage": 67,
+            "textTraceRuns": 478,
+            "invisibleTransparentOrWhiteTextRuns": [],
+            "pdfminerWhiteCharacterCount": 0,
+            "pageRect": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ]
+          },
+          {
+            "physicalPage": 68,
+            "textTraceRuns": 217,
+            "invisibleTransparentOrWhiteTextRuns": [],
+            "pdfminerWhiteCharacterCount": 0,
+            "pageRect": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ]
+          }
+        ],
+        "layoutRiskCases": [
+          {
+            "physicalPage": 64,
+            "y": 483.656,
+            "name": "RODRIGUEZ SCHNACKENBERG, NAZEN",
+            "nameRightEdge": 209.68199999999996,
+            "columnBoundary": 225,
+            "gap": 15.31800000000004,
+            "cohort": "employees",
+            "path": "/tmp/independent-school-queue/sd44-layout-case-01.png",
+            "sha256": "c7d7d54f76d3dd662ebfe0a6fe5bcad736cb0430b4164741f35fe49f42cf77d2",
+            "clipRect": [
+              40.0,
+              291.344,
+              570.0,
+              329.344
+            ]
+          },
+          {
+            "physicalPage": 66,
+            "y": 416.696,
+            "name": "THOMSON, KATHERINE MARGARET N",
+            "nameRightEdge": 204.0624,
+            "columnBoundary": 225,
+            "gap": 20.937600000000003,
+            "cohort": "employees",
+            "path": "/tmp/independent-school-queue/sd44-layout-case-02.png",
+            "sha256": "86c423a94b918854138685fd1fe48f3cebef7f82164b9eecd9d3c2d94e609c1a",
+            "clipRect": [
+              40.0,
+              358.304,
+              570.0,
+              396.304
+            ]
+          },
+          {
+            "physicalPage": 66,
+            "y": 372.036,
+            "name": "THORNHILL, ELIZABETH CATHERINE",
+            "nameRightEdge": 200.72760000000002,
+            "columnBoundary": 225,
+            "gap": 24.272399999999976,
+            "cohort": "employees",
+            "path": "/tmp/independent-school-queue/sd44-layout-case-03.png",
+            "sha256": "0e4841870d502ae00e4dd48485e4f203016d1548e2faaa2ecc4ba36963aca72b",
+            "clipRect": [
+              40.0,
+              402.964,
+              570.0,
+              440.964
+            ]
+          },
+          {
+            "physicalPage": 57,
+            "y": 450.176,
+            "name": "HERNANDEZ FISHER, CRISTINA ALE",
+            "nameRightEdge": 196.6284,
+            "columnBoundary": 225,
+            "gap": 28.3716,
+            "cohort": "employees",
+            "path": "/tmp/independent-school-queue/sd44-layout-case-04.png",
+            "sha256": "90b4f16dacc5c515d7ddeb552d46b8b39c8dcfd722a78ebaecd214eec68d5a95",
+            "clipRect": [
+              40.0,
+              324.824,
+              570.0,
+              362.824
+            ]
+          },
+          {
+            "physicalPage": 54,
+            "y": 662.246,
+            "name": "CHORNEY-WILSON, AMBER DYANE",
+            "nameRightEdge": 194.98199999999997,
+            "columnBoundary": 225,
+            "gap": 30.01800000000003,
+            "cohort": "employees",
+            "path": "/tmp/independent-school-queue/sd44-layout-case-05.png",
+            "sha256": "7dc4bc08acb7321b892cfcbd140a3afa8fe135e462e570862b6b16190425c851",
+            "clipRect": [
+              40.0,
+              112.75400000000002,
+              570.0,
+              150.75400000000002
+            ]
+          },
+          {
+            "physicalPage": 57,
+            "y": 483.656,
+            "name": "HEBERT-WONG, JESSAMINE CAROL",
+            "nameRightEdge": 194.61240000000004,
+            "columnBoundary": 225,
+            "gap": 30.387599999999964,
+            "cohort": "employees",
+            "path": "/tmp/independent-school-queue/sd44-layout-case-06.png",
+            "sha256": "02b69ccb64a7699c021f196acbfd012755dd79faffa050387cafa91b0c148665",
+            "clipRect": [
+              40.0,
+              291.344,
+              570.0,
+              329.344
+            ]
+          }
+        ],
+        "nameRowsChecked": 1017
+      }
+    }
+  ],
+  "sourceFieldCorrections": [],
+  "reviewerOnlyCorrections": [
+    {
+      "kind": "source-geometry parsing refinements before candidate opening",
+      "details": "Frozen first reader missed SD27 first-page names because an incorrect PDF-y threshold excluded17 real lines and included2 final control lines; source-only v2 fixes the table boundary. First reader also accidentally rejected the real SD44 surname/name SCHAFER, JODIE ANNAMEIKA because name was tested as a substring. The source-only v2 anchored heading filter retains that row. All original outputs remain immutable."
+    },
+    {
+      "kind": "canonical entity mapping after candidate opening",
+      "before": "school-district-44",
+      "after": "north-vancouver-school-district",
+      "details": "The independent raw reader initially used a local district-number tag. Canonical registry mapping is applied explicitly to every SD44 row for normalized comparison. This changes no source name,title,remuneration,expense,page or multiplicity; author source/data values were already correct."
+    }
+  ],
+  "sourcePeriodStart": "2024-07-01",
+  "sourcePeriodEnd": "2025-06-30",
+  "noDraftNativeMentionsInOriginals": true,
+  "approvalScope": "The visible fiscal-year declarations/date fields and management context were checked; redacted signatures are not claimed visible and no board adoption motion is inferred.",
+  "paintScope": "All42salarypages inspected programmatically through independent PDFMiner glyph color and original PDF text paint trace metadata: no white,invisible,transparent text detected. Personally viewed all listed first/final/context pages plus22actual-PDF-rendered highest-boundary/wrapped-title cases. This does not claim every one of1928rows was visually transcribed.",
+  "completeNativeComparisonPassed": true,
+  "allPrintedResidualsQualified": true,
+  "reviewAcceptedRows": 1928
+}

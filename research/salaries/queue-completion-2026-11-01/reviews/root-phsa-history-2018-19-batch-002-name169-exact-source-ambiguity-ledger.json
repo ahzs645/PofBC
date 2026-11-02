@@ -1,0 +1,65 @@
+{
+  "frozen": true,
+  "reviewer": "/root",
+  "reviewedOn": "2026-11-01",
+  "sourceId": "phsa-2018-19",
+  "sourceSha256": "ddeba470b875451f6180eb442ed921f7902cc910d62a026c11ab298ca3d0440f",
+  "batch": "phsa-2018-19-002",
+  "qualificationCaseCount": 1,
+  "sourceNameSegmentationExceptions": [
+    {
+      "sourceId": "phsa-2018-19",
+      "sourceSha256": "ddeba470b875451f6180eb442ed921f7902cc910d62a026c11ab298ca3d0440f",
+      "batch": "phsa-2018-19-002",
+      "sequence": 169,
+      "physicalPage": 28,
+      "sourceRowOnPage": 6,
+      "proposedName": "Durning,Ian",
+      "visibleAlternatives": [
+        "Durning,Ian",
+        "Duming,Ian",
+        "Dunning,Ian"
+      ],
+      "cropSha256": "b18729845d8d2b33874c5a89a16e2dd2dcba8e0910533d4f39b325c0e74e2e73",
+      "allowedFields": [
+        "name"
+      ],
+      "actualSourceEvidence": {
+        "originalFullRowCropPath": "/tmp/queue-completion-phsa/phsa-2018-19/review-images/batch-002/p028-r06.png",
+        "originalFullRowCropSha256": "b18729845d8d2b33874c5a89a16e2dd2dcba8e0910533d4f39b325c0e74e2e73",
+        "actualOriginal600DpiView": {
+          "path": "research/salaries/queue-completion-2026-11-01/reviews/root-phsa-history-2018-19-batch-002-triangulation-0169-name-600.png",
+          "sha256": "b2cdc4f92f436cac09ac9d9e4740a27088aca0d47c11e1d4c591c4a18abe0c45"
+        },
+        "pageEvidence": {
+          "path": "research/salaries/queue-completion-phsa/evidence/phsa-2018-19-rows-p028.json.gzip",
+          "sha256": "043c6caf9b096556b0ca6b6f1ca2281482f6feaee64b8be2e099783bcb096797"
+        }
+      },
+      "allImageReadingEvidence": [
+        {
+          "path": "research/salaries/queue-completion-2026-11-01/reviews/root-phsa-history-2018-19-batch-002-image-transcript.json",
+          "sha256": "3c5c2610d3e293ca44239a887f7347c3eaeabe87d569c4caa06828c68cc6d8d2"
+        },
+        {
+          "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-education-2018-19-002-triangulation-source-first.json",
+          "sha256": "10fb7d8558c44db148a504b2e1f741244e7b3f99827c0a9c7b545c7a61e2b829"
+        },
+        {
+          "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-history-batches-2018-19-002-name169-peer-original.json",
+          "sha256": "578ca9c717b9ac1bcc560e06c1452497750fe37d46343adc49e3f3c7b9730c66"
+        }
+      ],
+      "caseProvenByPixels": false,
+      "basis": "The first blind root and education readings were Dunning; both raw transcripts remain unchanged. Root subsequently reread the actual600dpi source and preferred Durning before the fresh third source-image result arrived; that third reader independently preferred Durning and retained Duming as an rn/m alternative. Root now adopts the finite preferred source transcription Durning with ALL three explicit readings retained, without claiming unique source glyph proof or unanimity. The third reviewer disclosed apparent prior-other-year exposure and explicitly did not use it as identity/spelling authority. No dictionary, previous-year record, total or inferred employee identity supplies letters.",
+      "requiresSeparateExactClosedRootAdoption": true,
+      "notAuthorizedByRnMPolicy": true
+    }
+  ],
+  "requiresRootFileAdoptionAndPublicWarningBeforeSourceAcceptance": true,
+  "limits": [
+    "One exact name field only; no general n/r or other spelling transformation.",
+    "Earlier two blind readings differ from the later independently supported preferred reading; that disagreement remains explicit rather than being relabelled unanimous.",
+    "No monetary or period change."
+  ]
+}

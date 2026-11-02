@@ -1,0 +1,76 @@
+{
+  "reviewer": "/root/held_health_review",
+  "reviewedOn": "2026-11-02",
+  "sourceId": "phsa-2018-19",
+  "sourceSha256": "ddeba470b875451f6180eb442ed921f7902cc910d62a026c11ab298ca3d0440f",
+  "candidateMetadata": {
+    "path": "research/salaries/queue-completion-2026-11-01/phsa/candidates/phsa-2018-19-source-v3.json",
+    "sha256": "ecef98f992cd56da07877d80fb431167f9574c34bad9c46a6a7de73850aab9ff"
+  },
+  "finalCompleteSourceReplay": {
+    "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-history-2018-19-final-v3-raw-overlay-replay.json",
+    "sha256": "dc55cf0173235c394887ed62fa88edf6525bf28085852b98791752370e642cad"
+  },
+  "supersessionReceipt": {
+    "path": "research/salaries/queue-completion-2026-11-01/phsa/overlay-supersessions/phsa-2018-19-manual-overlay-002-v2.json",
+    "sha256": "a65c4e875a1dc8e16cc57d4571910af16771dd8a636833549e606dffc9359906"
+  },
+  "supersededOverlay": {
+    "path": "research/salaries/queue-completion-2026-11-01/phsa/overlays/phsa-2018-19-manual-overlay-002.json",
+    "sha256": "45ad19a776b57a39c1bee555b213cd7f973dc93988b1e7045c18e07180fcabe5"
+  },
+  "effectiveOverlay": {
+    "path": "research/salaries/queue-completion-2026-11-01/phsa/overlays/phsa-2018-19-manual-overlay-002-v2.json",
+    "sha256": "c6d21e7d5ffe577caf9b93ad9c20cc1a29779b9d9a8498099bb5924646e7235f"
+  },
+  "bothArchivedAndEffectiveHashesVerified": true,
+  "exactSame400RowsRawCandidatesRequestedFieldScopesAndCropPins": true,
+  "changedExactlyFivePreviouslyRequestedLiteralSourceFields": [
+    {
+      "physicalPage": 21,
+      "sourceRowOnPage": 54,
+      "field": "remuneration",
+      "supersededValue": 89517,
+      "effectiveValue": 89917
+    },
+    {
+      "physicalPage": 24,
+      "sourceRowOnPage": 30,
+      "field": "expenses",
+      "supersededValue": 2439,
+      "effectiveValue": 2489
+    },
+    {
+      "physicalPage": 24,
+      "sourceRowOnPage": 51,
+      "field": "remuneration",
+      "supersededValue": 83998,
+      "effectiveValue": 88998
+    },
+    {
+      "physicalPage": 28,
+      "sourceRowOnPage": 6,
+      "field": "name",
+      "supersededValue": "Dunning,Ian",
+      "effectiveValue": "Durning,Ian"
+    },
+    {
+      "physicalPage": 37,
+      "sourceRowOnPage": 44,
+      "field": "name",
+      "supersededValue": "Greetham,Nicole L.",
+      "effectiveValue": "Greenham,Nicole L."
+    }
+  ],
+  "allNonreviewedFieldsUnchanged": true,
+  "effectiveOnlyOverlaySelectedInFinalProvenance": true,
+  "sourceCountQualifications": {
+    "actualOriginalNamedRows": 6041,
+    "coverNamedHeadline": 6042,
+    "coverCategorySum": 6025,
+    "allThreePubliclyDisclosedWithoutInventedRows": true
+  },
+  "bothFinancialControlsExactlyReconcile": true,
+  "noMutationOfOldFrozenInputs": true,
+  "limits": "Independent raw replay and exact version/scope selection check. This receipt does not claim personal source-image transcription of root002five repaired fields; their hash-pinned delegated original-source reviews remain distinct. No whole-nine-cohort acceptance."
+}

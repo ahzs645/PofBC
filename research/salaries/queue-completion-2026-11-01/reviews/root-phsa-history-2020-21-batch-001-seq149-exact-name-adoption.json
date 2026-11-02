@@ -1,0 +1,179 @@
+{
+  "frozen": true,
+  "reviewer": "/root",
+  "reviewedOn": "2026-11-01",
+  "sourceId": "phsa-2020-21",
+  "sourceSha256": "87ea680c3e2b9bb940d911a198e41b85068535964ee61b6992e651271bd72b60",
+  "batch": "phsa-2020-21-001",
+  "exactCaseLedger": {
+    "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-schools-2020-21-batch-001-source-name-qualifications.json",
+    "sha256": "043b0720f48c11385bf05541c17861da728f692185620dd1cdd506f26cfe9e84"
+  },
+  "independentPeer": {
+    "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-municipal-peer-2020-21-001-three-name-comparison.json",
+    "sha256": "652f4f793d391cda0261c0629c4042e902eb298f38fcac763396c7987ce3b633"
+  },
+  "secondIndependentPeer": {
+    "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-education-2020-21-001-three-peer-comparison.json",
+    "sha256": "0e6680aabc411e1c52cbb1c60efd04d1540a1c1cb6b8c1b0072f67fdb557a1f2"
+  },
+  "independentPeerBinding": {
+    "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-schools-2020-21-batch-001-source-name-peer-binding.json",
+    "sha256": "b74612c1338262a3714074dae5d214da765fe5dc1811f820fdf2c3025223df57"
+  },
+  "acceptedQualifiedCases": true,
+  "caseProvenByPixels": false,
+  "wholeSourceAccepted": false,
+  "decision": "adopt-exact-single-source-name-ambiguity",
+  "qualifiedCases": 1,
+  "closedCases": [
+    {
+      "sourceId": "phsa-2020-21",
+      "sourceSha256": "87ea680c3e2b9bb940d911a198e41b85068535964ee61b6992e651271bd72b60",
+      "batch": "phsa-2020-21-001",
+      "sequence": 149,
+      "physicalPage": 24,
+      "sourceRowOnPage": 19,
+      "visibleAlternatives": [
+        "Chomcy,Kevin Daniel",
+        "Chorncy,Kevin Daniel",
+        "Chomey,Kevin Daniel",
+        "Chorney,Kevin Daniel"
+      ],
+      "cropSha256": "09f8a4179baa448f84c9ce59e04339fdcbd9503f71e0aaa23f79212bfb3a949c",
+      "primary": "Chomcy,Kevin Daniel",
+      "allowedFields": [
+        "name"
+      ],
+      "caseProvenByPixels": false,
+      "originalCaseEvidence": {
+        "sourceId": "phsa-2020-21",
+        "sourceSha256": "87ea680c3e2b9bb940d911a198e41b85068535964ee61b6992e651271bd72b60",
+        "batch": "phsa-2020-21-001",
+        "sequence": 149,
+        "physicalPage": 24,
+        "sourceRowOnPage": 19,
+        "proposedName": "Chomcy,Kevin Daniel",
+        "visibleAlternatives": [
+          "Chomcy,Kevin Daniel",
+          "Chorncy,Kevin Daniel",
+          "Chomey,Kevin Daniel",
+          "Chorney,Kevin Daniel"
+        ],
+        "caseProvenByPixels": false,
+        "assumptionBasis": "Two independently frozen original-image first primaries are the m-like cluster and open c-like bowl. Actual source placement after Chokaria and before Chong supports preferred m segmentation; it does not uniquely determine c/e. Retain all four finite rn/m by c/e combinations. No dictionary, name identity, prior-year source or arbitrary spelling repair; the c/e component requires exact root closed-case authority for this source/page/row only.",
+        "allowedFields": [
+          "name"
+        ],
+        "cropSha256": "09f8a4179baa448f84c9ce59e04339fdcbd9503f71e0aaa23f79212bfb3a949c",
+        "actualSourceEvidence": {
+          "originalFullRowCropPath": "/tmp/queue-completion-phsa/phsa-2020-21/review-images/batch-001/p024-r19.png",
+          "originalFullRowCropSha256": "09f8a4179baa448f84c9ce59e04339fdcbd9503f71e0aaa23f79212bfb3a949c",
+          "original300DpiSourcePagePath": "/tmp/queue-completion-phsa/phsa-2020-21/images/p024.png",
+          "original300DpiSourcePageSha256": "a771ccc54d91e54fc75ede14d136011625d40164b6caffb7b6e23d969b244e41",
+          "originalNativeNameView": {
+            "field": "name",
+            "path": "/tmp/queue-completion-phsa/phsa-2020-21/review-images/phsa-2020-21-001-target-views/0149-name.png",
+            "sha256": "98ba1b6e5af00e36c96974397302521731b5bf5b0a741419c2020798f42e4b2d",
+            "originalPdf300DpiPixelBox": [
+              280,
+              1453,
+              1753,
+              1494
+            ],
+            "noResamplingOrGlyphAlteration": true
+          },
+          "actual600DpiOriginalName": {
+            "sequence": 149,
+            "physicalPage": 24,
+            "sourceRowOnPage": 19,
+            "original300DpiPixelBox": [
+              280,
+              1449,
+              1180,
+              1498
+            ],
+            "actualPdfPointClip": [
+              67.2,
+              347.76,
+              283.2,
+              359.52
+            ],
+            "dpi": 600,
+            "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-schools-2020-21-batch-001-precomparison-seq149-actual600.png",
+            "sha256": "f0a86486c91f215cc82ab3a865412d36a7b33089b6c9c6253981e9f8abb7a2cd"
+          },
+          "actual1200DpiOriginalName": {
+            "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-schools-2020-21-batch-001-peer-seq149-actual1200.png",
+            "sha256": "fa3e4ce11e1d1bb358fdaa5c8c394312407bba82968981d9dd019ebb7b0130e8",
+            "original300DpiPixelBox": [
+              280,
+              1449,
+              780,
+              1498
+            ],
+            "actualPdfPointClip": [
+              67.2,
+              347.76,
+              187.2,
+              359.52
+            ],
+            "dpi": 1200
+          },
+          "actualAdjacentSourceContext": {
+            "sequence": 149,
+            "physicalPage": 24,
+            "sourceRowOnPage": 19,
+            "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-schools-2020-21-batch-001-qualified-seq149-source-context600.png",
+            "sha256": "398eb09eae1351507f8b21bd2e130ead0e16e94389797273623aca35ce0895dc",
+            "dpi": 600,
+            "original300DpiPixelBox": [
+              280,
+              1333,
+              1180,
+              1614
+            ],
+            "actualPdfPointClip": [
+              67.2,
+              319.92,
+              283.2,
+              387.36
+            ]
+          },
+          "independentPeer2400OriginalViews": [
+            {
+              "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-schools-2020-21-batch-001-qualified-seq149-peer2400-1.png",
+              "sha256": "a89c45d6f28871375e8496d5255e5a17370ce9fe1661714ee04e0f74c927a289",
+              "dpi": 2400,
+              "copiedUnchangedFromIndependentlyFrozenPeerEvidence": true
+            }
+          ]
+        },
+        "firstImagePrimaryUnchangedFromFrozenAuthorRaw": true,
+        "firstIndependentPeerPrimaryExactlyMatches": true,
+        "manualMoneyBinding": {
+          "requestedMonetaryValuesFromFrozenRaw": {},
+          "qualificationChangesNoMonetaryField": true,
+          "noMoneyOutsideOriginallyAssignedFieldsReviewedByThisCase": true
+        },
+        "status": "proposed-qualified-finite-source-reading-awaiting-exact-two-peer-and-root-adoption",
+        "ambiguityKind": "closed-exact-rn-m-plus-c-e-source-case-only"
+      },
+      "rootPersonallyViewedActualOriginal600DpiNameAndContext": true
+    }
+  ],
+  "primary": "Chomcy,Kevin Daniel",
+  "physicalPage": 24,
+  "sourceRowOnPage": 19,
+  "visibleAlternatives": [
+    "Chomcy,Kevin Daniel",
+    "Chorncy,Kevin Daniel",
+    "Chomey,Kevin Daniel",
+    "Chorney,Kevin Daniel"
+  ],
+  "cropSha256": "09f8a4179baa448f84c9ce59e04339fdcbd9503f71e0aaa23f79212bfb3a949c",
+  "requireClosedExactCaseBoundConsumerException": true,
+  "publicSourceWarningRequired": true,
+  "noOtherNameOrMonetaryFieldAuthority": true,
+  "scope": "Only exact2020/21p24r19 preferred Chomcy,Kevin Daniel and the complete four-way Chomcy/Chorncy/Chomey/Chorney alternatives with the identical given names. Author plus two independent external blinded source readers agree; root additionally personally viewed original600dpi field/context. Source placement between Chokaria and Chong supports m contextually; c/e remains ambiguous. No unique pixel proof, generic c/e transformation, earlier-year identity, amount or other-row authority."
+}

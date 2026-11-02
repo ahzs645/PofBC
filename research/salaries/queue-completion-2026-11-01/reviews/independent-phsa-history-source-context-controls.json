@@ -1,0 +1,713 @@
+{
+  "reviewer": "held_health_review",
+  "reviewDate": "2026-11-01",
+  "method": "Personally inspected all9 originals actual300dpi first/middle/final source images, with tighter actual-source final-body/control and cover-count crops where necessary. Exact control amounts and definitions transcribed from visible source before final candidate comparison. Distinguish personally read sample context from all-page machine/fidelity processing and peer first-table benchmarks.",
+  "sourceInventorySha256": "ec7c48b1f9f0b592c3910eb9691378de6cbca11b2cabc015f15307f28b71eed3",
+  "benchmarkIndex": {
+    "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-history-batches-benchmark-index.json",
+    "sha256": "3d3de244f7fcf1eff6db7aaf5776117c817ead58f338624ecb23063dc7c9d753"
+  },
+  "sources": [
+    {
+      "sourceId": "phsa-2015-16",
+      "yearFromPrintedPeriod": "2015/16",
+      "sourceUrl": "https://www.phsa.ca/about-site/Documents/2016%20Employee%20Salary%20and%20Expenses%20exceeding%2075%2c000%20FINAL.pdf",
+      "sourceIndexUrl": "https://www.phsa.ca/about/accountability/budget-financials",
+      "sourceSha256": "f8bc28af7e87f57c51973f5ed581e50fe414f00486659551ad5c8171b98f73a3",
+      "pdfPages": 128,
+      "nativeTextChars": 0,
+      "actualPageSamplesPersonallyViewed": [
+        {
+          "physicalPage": 1,
+          "actual300dpiImageSha256": "5b94d510dc122d795b1886efcf8c2af6f4b87b36cee776029ca58b356de15d57",
+          "cachePath": "/tmp/queue-completion-phsa/inventory-images/phsa-2015-16-p001-actual300.png",
+          "dimensions": [
+            2550,
+            3300
+          ]
+        },
+        {
+          "physicalPage": 64,
+          "actual300dpiImageSha256": "5e35a50bf29b46339386b95e15ee611c1d2573907a43e62a39424c61850c09b2",
+          "cachePath": "/tmp/queue-completion-phsa/inventory-images/phsa-2015-16-p064-actual300.png",
+          "dimensions": [
+            2550,
+            3300
+          ]
+        },
+        {
+          "physicalPage": 128,
+          "actual300dpiImageSha256": "6f351fb89112db545029ba454f87c6dbc3ef6de577212bcb84a5982de99cfa2d",
+          "cachePath": "/tmp/queue-completion-phsa/inventory-images/phsa-2015-16-p128-actual300.png",
+          "dimensions": [
+            2550,
+            3300
+          ]
+        }
+      ],
+      "firstSalaryPhysicalPage": 2,
+      "lastSalaryPhysicalPage": 128,
+      "noNarrativeCover": false,
+      "printedYearEnd": "2016-03-31",
+      "literalScope": "Alphabetical list of employees who received remuneration exceeding$75000 for the year ended March31 and their expenses paid during the period. Expenses may be reimbursed directly to employees and/or paid to a third party supplier.",
+      "threshold": 75000,
+      "thresholdOperator": "exceeding",
+      "columns": [
+        "Name",
+        "Remuneration",
+        "Expenses"
+      ],
+      "jobTitleColumnPresent": false,
+      "cashRemunerationComponentDefinitionPersonallySeenOnCover": true,
+      "cashComponentDefinition": "Amounts physically received by or paid on behalf of an employee for the fiscal year; includes but not limited to salaries and wages,taxable benefits,bonuses,stipends,MOCAP and sessional fees.",
+      "componentDefinitionLimit": "Read on this source cover; do not annualize.",
+      "printedNamedAboveThresholdCount": 4545,
+      "printedActiveEmployeeCountNotNamedRoster": 18788,
+      "firstTableBenchmarkRowCountFromSeparatePeer": 36,
+      "personallyCountedFinalNamedRows": 9,
+      "finalPagePrintedControls": {
+        "remuneration": 482734216,
+        "expenses": 10397046
+      },
+      "dashPolicy": "Personally viewed single printed expense dashes in source samples; retain null, not0. A blank/missing OCR token is not evidence of a dash. Explicit0 and signed values require literal preservation if encountered.",
+      "excludedFromNamedScope": [
+        "narrative cover",
+        "column headers",
+        "Total control row",
+        "Financial Information Regulation footer",
+        "page number"
+      ],
+      "sourceNotes": [
+        {
+          "kind": "literal-current-period-payment-with-prior-year-correction",
+          "physicalPage": 128,
+          "sourceRowOnPage": 6,
+          "literalNameWithMarker": "Zulfiqar,Muhammad*",
+          "remuneration": 481982,
+          "expenses": 10352,
+          "literalFootnote": "* Dr. Zulfiqar’s salary for 2015/16 was $333,272. He received $19,724 in MOCAP and retroactive pay. In 2014/15, $128,986 was incorrectly coded as unpaid leave – this was corrected and reported in 2015/16.",
+          "decision": "Keep the printed481982 current-period payment; no annualization, subtraction or prior-year relabeling. Preserve footnote marker in raw evidence and disclose qualification; normalized name handling must be explicit."
+        }
+      ],
+      "reviewStatus": "context-controls-and-sample-geometry-only-full-source-closure-pending"
+    },
+    {
+      "sourceId": "phsa-2016-17",
+      "yearFromPrintedPeriod": "2016/17",
+      "sourceUrl": "https://www.phsa.ca/about-site/Documents/2017%20Employee%20Salary%20and%20Expenses%20exceeding%2075%2c000.pdf",
+      "sourceIndexUrl": "https://www.phsa.ca/about/accountability/budget-financials",
+      "sourceSha256": "31f7a1af80186bf81139fd693b36e733333a06c2ab1a4c5191bd6ee9b3623a53",
+      "pdfPages": 144,
+      "nativeTextChars": 0,
+      "actualPageSamplesPersonallyViewed": [
+        {
+          "physicalPage": 1,
+          "actual300dpiImageSha256": "90a7348b028787975b115ade554ef06ccc96fa445e9250384197733b59be88bf",
+          "cachePath": "/tmp/queue-completion-phsa/inventory-images/phsa-2016-17-p001-actual300.png",
+          "dimensions": [
+            2550,
+            3300
+          ]
+        },
+        {
+          "physicalPage": 72,
+          "actual300dpiImageSha256": "51357f9d1c8fcd6545b43b1bdc0cc16e346262d2db65a30c5461b5d89f0366b4",
+          "cachePath": "/tmp/queue-completion-phsa/inventory-images/phsa-2016-17-p072-actual300.png",
+          "dimensions": [
+            2550,
+            3300
+          ]
+        },
+        {
+          "physicalPage": 144,
+          "actual300dpiImageSha256": "32fc8c67efb08abeaeb6bf43aae918cd1ee720df39dd409e6b71a8223f908a0b",
+          "cachePath": "/tmp/queue-completion-phsa/inventory-images/phsa-2016-17-p144-actual300.png",
+          "dimensions": [
+            2550,
+            3300
+          ]
+        }
+      ],
+      "firstSalaryPhysicalPage": 2,
+      "lastSalaryPhysicalPage": 144,
+      "noNarrativeCover": false,
+      "printedYearEnd": "2017-03-31",
+      "literalScope": "Alphabetical list of employees who received remuneration exceeding$75000 for the year ended March31 and their expenses paid during the period. Expenses may be reimbursed directly to employees and/or paid to a third party supplier.",
+      "threshold": 75000,
+      "thresholdOperator": "exceeding",
+      "columns": [
+        "Name",
+        "Remuneration",
+        "Expenses"
+      ],
+      "jobTitleColumnPresent": false,
+      "cashRemunerationComponentDefinitionPersonallySeenOnCover": true,
+      "cashComponentDefinition": "Amounts physically received by or paid on behalf of an employee for the fiscal year; includes but not limited to salaries and wages,taxable benefits,bonuses,stipends,MOCAP and sessional fees.",
+      "componentDefinitionLimit": "Read on this source cover; do not annualize.",
+      "printedNamedAboveThresholdCount": 5118,
+      "printedActiveEmployeeCountNotNamedRoster": 17217,
+      "firstTableBenchmarkRowCountFromSeparatePeer": 36,
+      "personallyCountedFinalNamedRows": 6,
+      "finalPagePrintedControls": {
+        "remuneration": 561207243,
+        "expenses": 10803700
+      },
+      "dashPolicy": "Personally viewed single printed expense dashes in source samples; retain null, not0. A blank/missing OCR token is not evidence of a dash. Explicit0 and signed values require literal preservation if encountered.",
+      "excludedFromNamedScope": [
+        "narrative cover",
+        "column headers",
+        "Total control row",
+        "Financial Information Regulation footer",
+        "page number"
+      ],
+      "sourceNotes": [],
+      "reviewStatus": "context-controls-and-sample-geometry-only-full-source-closure-pending"
+    },
+    {
+      "sourceId": "phsa-2017-18",
+      "yearFromPrintedPeriod": "2017/18",
+      "sourceUrl": "https://www.phsa.ca/about-site/Documents/2017%2018%20PHSA%20Employee%20Salary%20and%20Expenses%20exceeding%2075%2c000.pdf",
+      "sourceIndexUrl": "https://www.phsa.ca/about/accountability/budget-financials",
+      "sourceSha256": "1971861d325c81e48083e56e45edbb62c6446fa2c387ce786a2b4e0aa5cdc006",
+      "pdfPages": 139,
+      "nativeTextChars": 0,
+      "actualPageSamplesPersonallyViewed": [
+        {
+          "physicalPage": 1,
+          "actual300dpiImageSha256": "67736e7b39b3a5bc751eed939f06112badcff3f5eae431f27f9443fc6f505fc6",
+          "cachePath": "/tmp/queue-completion-phsa/inventory-images/phsa-2017-18-p001-actual300.png",
+          "dimensions": [
+            2550,
+            3300
+          ]
+        },
+        {
+          "physicalPage": 69,
+          "actual300dpiImageSha256": "e411fed2323506927072eec7d3aa00bb1e9e35ed26d2aede243633894bdb4796",
+          "cachePath": "/tmp/queue-completion-phsa/inventory-images/phsa-2017-18-p069-actual300.png",
+          "dimensions": [
+            2550,
+            3300
+          ]
+        },
+        {
+          "physicalPage": 139,
+          "actual300dpiImageSha256": "a171eb2c25794fc40593574201349169f7d39a8015daaa04ff2418d28181e24c",
+          "cachePath": "/tmp/queue-completion-phsa/inventory-images/phsa-2017-18-p139-actual300.png",
+          "dimensions": [
+            2550,
+            3300
+          ]
+        }
+      ],
+      "firstSalaryPhysicalPage": 2,
+      "lastSalaryPhysicalPage": 139,
+      "noNarrativeCover": false,
+      "printedYearEnd": "2018-03-31",
+      "literalScope": "Alphabetical list of employees who received remuneration exceeding$75000 for the year ended March31 and their expenses paid during the period. Expenses may be reimbursed directly to employees and/or paid to a third party supplier.",
+      "threshold": 75000,
+      "thresholdOperator": "exceeding",
+      "columns": [
+        "Name",
+        "Remuneration",
+        "Expenses"
+      ],
+      "jobTitleColumnPresent": false,
+      "cashRemunerationComponentDefinitionPersonallySeenOnCover": true,
+      "cashComponentDefinition": "Amounts physically received by or paid on behalf of an employee for the fiscal year; includes but not limited to salaries and wages,taxable benefits,bonuses,stipends,MOCAP and sessional fees.",
+      "componentDefinitionLimit": "Read on this source cover; do not annualize.",
+      "printedNamedAboveThresholdCount": 5072,
+      "printedActiveEmployeeCountNotNamedRoster": 17483,
+      "firstTableBenchmarkRowCountFromSeparatePeer": 37,
+      "personallyCountedFinalNamedRows": 3,
+      "finalPagePrintedControls": {
+        "remuneration": 543720549,
+        "expenses": 11189738
+      },
+      "dashPolicy": "Personally viewed single printed expense dashes in source samples; retain null, not0. A blank/missing OCR token is not evidence of a dash. Explicit0 and signed values require literal preservation if encountered.",
+      "excludedFromNamedScope": [
+        "narrative cover",
+        "column headers",
+        "Total control row",
+        "Financial Information Regulation footer",
+        "page number"
+      ],
+      "sourceNotes": [],
+      "reviewStatus": "context-controls-and-sample-geometry-only-full-source-closure-pending"
+    },
+    {
+      "sourceId": "phsa-2018-19",
+      "yearFromPrintedPeriod": "2018/19",
+      "sourceUrl": "https://www.phsa.ca/about-site/Documents/Employee%20Salary%20and%20Expenses%20exceeding%2075%2c000_2019.pdf",
+      "sourceIndexUrl": "https://www.phsa.ca/about/accountability/budget-financials",
+      "sourceSha256": "ddeba470b875451f6180eb442ed921f7902cc910d62a026c11ab298ca3d0440f",
+      "pdfPages": 111,
+      "nativeTextChars": 0,
+      "actualPageSamplesPersonallyViewed": [
+        {
+          "physicalPage": 1,
+          "actual300dpiImageSha256": "2deae2c373c986750b9708853b9bf67e1bb591790088608e9fcd9a3d6a5a3133",
+          "cachePath": "/tmp/queue-completion-phsa/inventory-images/phsa-2018-19-p001-actual300.png",
+          "dimensions": [
+            2550,
+            3300
+          ]
+        },
+        {
+          "physicalPage": 55,
+          "actual300dpiImageSha256": "8738d84234fc8f3ab08a91ba09e73c15575e279ccbefdcf69010510cc433e33a",
+          "cachePath": "/tmp/queue-completion-phsa/inventory-images/phsa-2018-19-p055-actual300.png",
+          "dimensions": [
+            2550,
+            3300
+          ]
+        },
+        {
+          "physicalPage": 111,
+          "actual300dpiImageSha256": "75d05cffb33aa6a13456b3e534c0a3d7bad25fd033b0f1567e9b2ca34d0dc623",
+          "cachePath": "/tmp/queue-completion-phsa/inventory-images/phsa-2018-19-p111-actual300.png",
+          "dimensions": [
+            2550,
+            3300
+          ]
+        }
+      ],
+      "firstSalaryPhysicalPage": 2,
+      "lastSalaryPhysicalPage": 111,
+      "noNarrativeCover": false,
+      "printedYearEnd": "2019-03-31",
+      "literalScope": "Alphabetical list of employees who received remuneration exceeding$75000 for the year ended March31 and their expenses paid during the period. Expenses may be reimbursed directly to employees and/or paid to a third party supplier.",
+      "threshold": 75000,
+      "thresholdOperator": "exceeding",
+      "columns": [
+        "Name",
+        "Remuneration",
+        "Expenses"
+      ],
+      "jobTitleColumnPresent": false,
+      "cashRemunerationComponentDefinitionPersonallySeenOnCover": true,
+      "cashComponentDefinition": "Amounts physically received by or paid on behalf of an employee for the fiscal year; includes but not limited to salaries and wages,taxable benefits,bonuses,stipends,MOCAP and sessional fees.",
+      "componentDefinitionLimit": "Read on this source cover; do not annualize.",
+      "printedNamedAboveThresholdCount": 6042,
+      "printedActiveEmployeeCountNotNamedRoster": 19387,
+      "firstTableBenchmarkRowCountFromSeparatePeer": 55,
+      "personallyCountedFinalNamedRows": 46,
+      "finalPagePrintedControls": {
+        "remuneration": 643364482,
+        "expenses": 13085167
+      },
+      "dashPolicy": "Personally viewed single printed expense dashes in source samples; retain null, not0. A blank/missing OCR token is not evidence of a dash. Explicit0 and signed values require literal preservation if encountered.",
+      "excludedFromNamedScope": [
+        "narrative cover",
+        "column headers",
+        "Total control row",
+        "Financial Information Regulation footer",
+        "page number"
+      ],
+      "sourceNotes": [
+        {
+          "kind": "printed-cover-category-inconsistency",
+          "physicalPage": 1,
+          "printedCategoryCounts": [
+            1308,
+            1654,
+            420,
+            1082,
+            1366,
+            195
+          ],
+          "categoryCountSum": 6025,
+          "printedAboveThresholdHeadline": 6042,
+          "differenceCategoryMinusHeadline": -17,
+          "decision": "Do not infer cause or adjust named observations. Complete all-page named count and source controls still required. Sample uniform-row arithmetic is not a full source count."
+        }
+      ],
+      "reviewStatus": "context-controls-and-sample-geometry-only-full-source-closure-pending"
+    },
+    {
+      "sourceId": "phsa-2019-20",
+      "yearFromPrintedPeriod": "2019/20",
+      "sourceUrl": "https://www.phsa.ca/about-site/Documents/Employee%20Salary%20and%20Expenses%20exceeding%2075%2c000_2020.PDF",
+      "sourceIndexUrl": "https://www.phsa.ca/about/accountability/budget-financials",
+      "sourceSha256": "0e31ac2054f0c2d4ef78797185dddd96cc0cdf2eab94bd6841fa24e1c38e7d02",
+      "pdfPages": 121,
+      "nativeTextChars": 0,
+      "actualPageSamplesPersonallyViewed": [
+        {
+          "physicalPage": 1,
+          "actual300dpiImageSha256": "c77b4b80331e094eaf1d41cfe43e724a107cf3a1d6eb43de0e993933a3b288ef",
+          "cachePath": "/tmp/queue-completion-phsa/inventory-images/phsa-2019-20-p001-actual300.png",
+          "dimensions": [
+            2550,
+            3300
+          ]
+        },
+        {
+          "physicalPage": 60,
+          "actual300dpiImageSha256": "1dfd9babff8fabf005424d81738318ee3a8dbe100cb3764e79e08cb593a54e97",
+          "cachePath": "/tmp/queue-completion-phsa/inventory-images/phsa-2019-20-p060-actual300.png",
+          "dimensions": [
+            2550,
+            3300
+          ]
+        },
+        {
+          "physicalPage": 121,
+          "actual300dpiImageSha256": "d974105067e62803f6e8fed0506e090724d446b88f14a7984b6d0d622baca88a",
+          "cachePath": "/tmp/queue-completion-phsa/inventory-images/phsa-2019-20-p121-actual300.png",
+          "dimensions": [
+            2550,
+            3300
+          ]
+        }
+      ],
+      "firstSalaryPhysicalPage": 2,
+      "lastSalaryPhysicalPage": 121,
+      "noNarrativeCover": false,
+      "printedYearEnd": "2020-03-31",
+      "literalScope": "Alphabetical list of employees who received remuneration exceeding$75000 for the year ended March31 and their expenses paid during the period. Expenses may be reimbursed directly to employees and/or paid to a third party supplier.",
+      "threshold": 75000,
+      "thresholdOperator": "exceeding",
+      "columns": [
+        "Name",
+        "Remuneration",
+        "Expenses"
+      ],
+      "jobTitleColumnPresent": false,
+      "cashRemunerationComponentDefinitionPersonallySeenOnCover": true,
+      "cashComponentDefinition": "Amounts physically received by or paid on behalf of an employee for the fiscal year; includes but not limited to salaries and wages,taxable benefits,bonuses,stipends,MOCAP and sessional fees.",
+      "componentDefinitionLimit": "Read on this source cover; do not annualize.",
+      "printedNamedAboveThresholdCount": 6913,
+      "printedActiveEmployeeCountNotNamedRoster": 19557,
+      "firstTableBenchmarkRowCountFromSeparatePeer": 58,
+      "personallyCountedFinalNamedRows": 11,
+      "finalPagePrintedControls": {
+        "remuneration": 738390382,
+        "expenses": 10936046
+      },
+      "dashPolicy": "Personally viewed single printed expense dashes in source samples; retain null, not0. A blank/missing OCR token is not evidence of a dash. Explicit0 and signed values require literal preservation if encountered.",
+      "excludedFromNamedScope": [
+        "narrative cover",
+        "column headers",
+        "Total control row",
+        "Financial Information Regulation footer",
+        "page number"
+      ],
+      "sourceNotes": [],
+      "reviewStatus": "context-controls-and-sample-geometry-only-full-source-closure-pending"
+    },
+    {
+      "sourceId": "phsa-2020-21",
+      "yearFromPrintedPeriod": "2020/21",
+      "sourceUrl": "https://www.phsa.ca/about-site/Documents/Employee%20remuneration%20greater%20than%20$75%2c000%20%28PHSA%29.pdf",
+      "sourceIndexUrl": "https://www.phsa.ca/about/accountability/budget-financials",
+      "sourceSha256": "87ea680c3e2b9bb940d911a198e41b85068535964ee61b6992e651271bd72b60",
+      "pdfPages": 148,
+      "nativeTextChars": 0,
+      "actualPageSamplesPersonallyViewed": [
+        {
+          "physicalPage": 1,
+          "actual300dpiImageSha256": "e917c52b618b0b9100b8172205e4b5bf1fc5f4d1f8a5e5f76d5d6373caee48c2",
+          "cachePath": "/tmp/queue-completion-phsa/inventory-images/phsa-2020-21-p001-actual300.png",
+          "dimensions": [
+            2550,
+            3300
+          ]
+        },
+        {
+          "physicalPage": 74,
+          "actual300dpiImageSha256": "a8129dd5c3c6923ed4ee4046aea7fbf4be5eaf0d8651d9754edac7faceba2de6",
+          "cachePath": "/tmp/queue-completion-phsa/inventory-images/phsa-2020-21-p074-actual300.png",
+          "dimensions": [
+            2550,
+            3300
+          ]
+        },
+        {
+          "physicalPage": 148,
+          "actual300dpiImageSha256": "8429618367fcd6da75ca98fb64cefab63857367b4ab95d0f095f3e58fed9a85a",
+          "cachePath": "/tmp/queue-completion-phsa/inventory-images/phsa-2020-21-p148-actual300.png",
+          "dimensions": [
+            2550,
+            3300
+          ]
+        }
+      ],
+      "firstSalaryPhysicalPage": 2,
+      "lastSalaryPhysicalPage": 148,
+      "noNarrativeCover": false,
+      "printedYearEnd": "2021-03-31",
+      "literalScope": "Alphabetical list of employees who received remuneration exceeding$75000 for the year ended March31 and their expenses paid during the period. Expenses may be reimbursed directly to employees and/or paid to a third party supplier.",
+      "threshold": 75000,
+      "thresholdOperator": "exceeding",
+      "columns": [
+        "Name",
+        "Remuneration",
+        "Expenses"
+      ],
+      "jobTitleColumnPresent": false,
+      "cashRemunerationComponentDefinitionPersonallySeenOnCover": false,
+      "cashComponentDefinition": null,
+      "componentDefinitionLimit": "No component enumeration seen on the reviewed source context; do not silently carry earlier source definitions forward.",
+      "printedNamedAboveThresholdCount": 7941,
+      "printedActiveEmployeeCountNotNamedRoster": 19992,
+      "firstTableBenchmarkRowCountFromSeparatePeer": 55,
+      "personallyCountedFinalNamedRows": 33,
+      "finalPagePrintedControls": {
+        "remuneration": 857491236,
+        "expenses": 6822673
+      },
+      "dashPolicy": "Personally viewed single printed expense dashes in source samples; retain null, not0. A blank/missing OCR token is not evidence of a dash. Explicit0 and signed values require literal preservation if encountered.",
+      "excludedFromNamedScope": [
+        "narrative cover",
+        "column headers",
+        "Total control row",
+        "Financial Information Regulation footer",
+        "page number"
+      ],
+      "sourceNotes": [],
+      "reviewStatus": "context-controls-and-sample-geometry-only-full-source-closure-pending"
+    },
+    {
+      "sourceId": "phsa-2021-22",
+      "yearFromPrintedPeriod": "2021/22",
+      "sourceUrl": "https://www.phsa.ca/about-site/Documents/FY2022%20Employee%20Salary%20and%20Expenses%20exceeding%2075%2c000.pdf",
+      "sourceIndexUrl": "https://www.phsa.ca/about/accountability/budget-financials",
+      "sourceSha256": "944c99fa7b7ede643cb4c426a5e9ab30aa906d8f81fda379f0206e4b0cdcd25c",
+      "pdfPages": 188,
+      "nativeTextChars": 0,
+      "actualPageSamplesPersonallyViewed": [
+        {
+          "physicalPage": 1,
+          "actual300dpiImageSha256": "90f365574d435f52ac291934bf50f6c38529378a152477745912679c7960c15f",
+          "cachePath": "/tmp/queue-completion-phsa/inventory-images/phsa-2021-22-p001-actual300.png",
+          "dimensions": [
+            2550,
+            3300
+          ]
+        },
+        {
+          "physicalPage": 94,
+          "actual300dpiImageSha256": "43f3fad7643d4cd7243f01fd02d82d2dcf62efdddf930ee5b0c4a9fc9d78eaaf",
+          "cachePath": "/tmp/queue-completion-phsa/inventory-images/phsa-2021-22-p094-actual300.png",
+          "dimensions": [
+            2550,
+            3300
+          ]
+        },
+        {
+          "physicalPage": 188,
+          "actual300dpiImageSha256": "982c339e5b76b90222c6e7ceb789d10233bca911f5508db57109565969fcfa1d",
+          "cachePath": "/tmp/queue-completion-phsa/inventory-images/phsa-2021-22-p188-actual300.png",
+          "dimensions": [
+            2550,
+            3300
+          ]
+        }
+      ],
+      "firstSalaryPhysicalPage": 1,
+      "lastSalaryPhysicalPage": 188,
+      "noNarrativeCover": true,
+      "printedYearEnd": "2022-03-31",
+      "literalScope": "Alphabetical list of employees who received remuneration exceeding$75000 for the year ended March31 and their expenses paid during the period. Expenses may be reimbursed directly to employees and/or paid to a third party supplier.",
+      "threshold": 75000,
+      "thresholdOperator": "exceeding",
+      "columns": [
+        "Name",
+        "Remuneration",
+        "Expenses"
+      ],
+      "jobTitleColumnPresent": false,
+      "cashRemunerationComponentDefinitionPersonallySeenOnCover": false,
+      "cashComponentDefinition": null,
+      "componentDefinitionLimit": "No component enumeration seen on the reviewed source context; do not silently carry earlier source definitions forward.",
+      "printedNamedAboveThresholdCount": null,
+      "printedActiveEmployeeCountNotNamedRoster": null,
+      "firstTableBenchmarkRowCountFromSeparatePeer": 44,
+      "personallyCountedFinalNamedRows": 42,
+      "finalPagePrintedControls": {
+        "remuneration": 919803651,
+        "expenses": 9049468
+      },
+      "dashPolicy": "Personally viewed single printed expense dashes in source samples; retain null, not0. A blank/missing OCR token is not evidence of a dash. Explicit0 and signed values require literal preservation if encountered.",
+      "excludedFromNamedScope": [
+        "narrative cover",
+        "column headers",
+        "Total control row",
+        "Financial Information Regulation footer",
+        "page number"
+      ],
+      "sourceNotes": [],
+      "reviewStatus": "context-controls-and-sample-geometry-only-full-source-closure-pending"
+    },
+    {
+      "sourceId": "phsa-2022-23",
+      "yearFromPrintedPeriod": "2022/23",
+      "sourceUrl": "https://www.phsa.ca/about-site/Documents/FY2023-Employee-Salary-and-Expenses-Exceeding-75000.pdf",
+      "sourceIndexUrl": "https://www.phsa.ca/about/accountability/budget-financials",
+      "sourceSha256": "6046bb7be6944bc729926adba20a826486820a2a3b9b38090c60d400b2bc72a1",
+      "pdfPages": 217,
+      "nativeTextChars": 0,
+      "actualPageSamplesPersonallyViewed": [
+        {
+          "physicalPage": 1,
+          "actual300dpiImageSha256": "fefd32a92931c85c3181db0ff89d0cb4994830581a5bff23904171cf3c8190d9",
+          "cachePath": "/tmp/queue-completion-phsa/inventory-images/phsa-2022-23-p001-actual300.png",
+          "dimensions": [
+            2550,
+            3300
+          ]
+        },
+        {
+          "physicalPage": 108,
+          "actual300dpiImageSha256": "ebc0c09d69052d2755a8c050f4b0115e635f75d0b4ba63be18f4f7082854886a",
+          "cachePath": "/tmp/queue-completion-phsa/inventory-images/phsa-2022-23-p108-actual300.png",
+          "dimensions": [
+            2550,
+            3300
+          ]
+        },
+        {
+          "physicalPage": 217,
+          "actual300dpiImageSha256": "9132ddfe6df31399c223323dee30164fdb77bcf3eccafbe8c67198183e613859",
+          "cachePath": "/tmp/queue-completion-phsa/inventory-images/phsa-2022-23-p217-actual300.png",
+          "dimensions": [
+            2550,
+            3300
+          ]
+        }
+      ],
+      "firstSalaryPhysicalPage": 1,
+      "lastSalaryPhysicalPage": 217,
+      "noNarrativeCover": true,
+      "printedYearEnd": "2023-03-31",
+      "literalScope": "Alphabetical list of employees who received remuneration exceeding$75000 for the year ended March31 and their expenses paid during the period. Expenses may be reimbursed directly to employees and/or paid to a third party supplier.",
+      "threshold": 75000,
+      "thresholdOperator": "exceeding",
+      "columns": [
+        "Name",
+        "Remuneration",
+        "Expenses"
+      ],
+      "jobTitleColumnPresent": false,
+      "cashRemunerationComponentDefinitionPersonallySeenOnCover": false,
+      "cashComponentDefinition": null,
+      "componentDefinitionLimit": "No component enumeration seen on the reviewed source context; do not silently carry earlier source definitions forward.",
+      "printedNamedAboveThresholdCount": null,
+      "printedActiveEmployeeCountNotNamedRoster": null,
+      "firstTableBenchmarkRowCountFromSeparatePeer": 42,
+      "personallyCountedFinalNamedRows": 32,
+      "finalPagePrintedControls": {
+        "remuneration": 1022311575,
+        "expenses": 13228229
+      },
+      "dashPolicy": "Personally viewed single printed expense dashes in source samples; retain null, not0. A blank/missing OCR token is not evidence of a dash. Explicit0 and signed values require literal preservation if encountered.",
+      "excludedFromNamedScope": [
+        "narrative cover",
+        "column headers",
+        "Total control row",
+        "Financial Information Regulation footer",
+        "page number"
+      ],
+      "sourceNotes": [],
+      "reviewStatus": "context-controls-and-sample-geometry-only-full-source-closure-pending"
+    },
+    {
+      "sourceId": "phsa-2023-24",
+      "yearFromPrintedPeriod": "2023/24",
+      "sourceUrl": "https://www.phsa.ca/about-site/Documents/FY2024-Employee-Salary-and-Expenses-Exceeding-75000.pdf",
+      "sourceIndexUrl": "https://www.phsa.ca/about/accountability/budget-financials",
+      "sourceSha256": "89cf82dd1701081e4073408fc38006a08b5033e151d5a0cb2a4ff0c096594ab7",
+      "pdfPages": 284,
+      "nativeTextChars": 0,
+      "actualPageSamplesPersonallyViewed": [
+        {
+          "physicalPage": 1,
+          "actual300dpiImageSha256": "ce58eab0a362bcb8ea184d3d913bb13e5bb0018bc8d880112a82983afd4b48eb",
+          "cachePath": "/tmp/queue-completion-phsa/inventory-images/phsa-2023-24-p001-actual300.png",
+          "dimensions": [
+            2550,
+            3300
+          ]
+        },
+        {
+          "physicalPage": 142,
+          "actual300dpiImageSha256": "9a521be9a160d56228762a19769100d4fccb2ab95a42e643663d7501bb0de316",
+          "cachePath": "/tmp/queue-completion-phsa/inventory-images/phsa-2023-24-p142-actual300.png",
+          "dimensions": [
+            2550,
+            3300
+          ]
+        },
+        {
+          "physicalPage": 284,
+          "actual300dpiImageSha256": "e4d6faab7224eec7810748b1b8f4de4937c33922ad80f1b1410f42abdb83088c",
+          "cachePath": "/tmp/queue-completion-phsa/inventory-images/phsa-2023-24-p284-actual300.png",
+          "dimensions": [
+            2550,
+            3300
+          ]
+        }
+      ],
+      "firstSalaryPhysicalPage": 1,
+      "lastSalaryPhysicalPage": 284,
+      "noNarrativeCover": true,
+      "printedYearEnd": "2024-03-31",
+      "literalScope": "Alphabetical list of employees who received remuneration exceeding$75000 for the year ended March31 and their expenses paid during the period. Expenses may be reimbursed directly to employees and/or paid to a third party supplier.",
+      "threshold": 75000,
+      "thresholdOperator": "exceeding",
+      "columns": [
+        "Name",
+        "Remuneration",
+        "Expenses"
+      ],
+      "jobTitleColumnPresent": false,
+      "cashRemunerationComponentDefinitionPersonallySeenOnCover": false,
+      "cashComponentDefinition": null,
+      "componentDefinitionLimit": "No component enumeration seen on the reviewed source context; do not silently carry earlier source definitions forward.",
+      "printedNamedAboveThresholdCount": null,
+      "printedActiveEmployeeCountNotNamedRoster": null,
+      "firstTableBenchmarkRowCountFromSeparatePeer": 42,
+      "personallyCountedFinalNamedRows": 22,
+      "finalPagePrintedControls": {
+        "remuneration": 1460014830,
+        "expenses": 22270646
+      },
+      "dashPolicy": "Personally viewed single printed expense dashes in source samples; retain null, not0. A blank/missing OCR token is not evidence of a dash. Explicit0 and signed values require literal preservation if encountered.",
+      "excludedFromNamedScope": [
+        "narrative cover",
+        "column headers",
+        "Total control row",
+        "Financial Information Regulation footer",
+        "page number"
+      ],
+      "sourceNotes": [
+        {
+          "kind": "literal-repeated-name",
+          "physicalPage": 142,
+          "literalName": "Lee,Cassandra",
+          "observations": [
+            {
+              "remuneration": 119035,
+              "expenses": null,
+              "rawExpense": "-"
+            },
+            {
+              "remuneration": 89739,
+              "expenses": 577
+            }
+          ],
+          "decision": "Preserve both published observations; no person-identity or duplicate assumption."
+        }
+      ],
+      "reviewStatus": "context-controls-and-sample-geometry-only-full-source-closure-pending"
+    }
+  ],
+  "limits": [
+    "No source is accepted by this receipt.",
+    "Full two-engine OCR, per-page independently rendered source fidelity and row geometry, every flagged field resolution, shared-engine name guard, row equality and final control reconciliation remain required.",
+    "Printed active employees are not named schedule records. Some sample full-page images were displayed resized; tight original-pixel crops used for exact controls and unusual footnotes.",
+    "First/middle/final counts must not be extrapolated as all-page row counts.",
+    "All new sources must retain compiled partitions pending root full-cohort replacement proof."
+  ]
+}

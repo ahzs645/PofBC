@@ -1,0 +1,132 @@
+{
+  "id": "queue-completion-municipal-creston-2024-employee-remuneration",
+  "employerSlug": "town-of-creston",
+  "employerName": "Town of Creston",
+  "sector": "Municipalities",
+  "year": "2024",
+  "periodType": "calendar",
+  "periodStart": "2024-01-01",
+  "periodEnd": "2024-12-31",
+  "sourceUrl": "https://www.creston.ca/sites/default/files/2025-07/Statement%20of%20Financial%20Information%202024.pdf",
+  "sourceIndexUrl": "https://www.creston.ca/statement-financial-information",
+  "sha256": "24a6cd0394f42596859f15cb4a1ec811c28c5a5c09e004a3766aa78130396ac6",
+  "file": "creston-2024-employee-remuneration.json.gzip",
+  "category": "employee-remuneration",
+  "scope": "employee-remuneration",
+  "title": "Town of Creston 2024 SOFI: complete named employee remuneration and expenses",
+  "status": "accepted",
+  "verified": true,
+  "verifiedOn": "2026-11-01",
+  "sourceKind": "official-scanned-pdf",
+  "rowCount": 27,
+  "totalRemuneration": 2684996,
+  "totalExpenses": 61034,
+  "pages": [
+    37
+  ],
+  "currency": "CAD",
+  "amountUnit": "dollars",
+  "threshold": 75000,
+  "thresholdComparison": ">",
+  "completeEmployeeSchedule": true,
+  "retainCompiledPartition": true,
+  "dataSha256": "e71de303545fbf4f668a240b11128a2e106b979b3c817be543a36be311c2fce9",
+  "notes": [
+    "Only the complete 27-person employee scope is new; already accepted 2024 council observations are excluded.",
+    "Published names, initials, literal spellings, word order and positions remain as visibly printed, including Jeff Webb and Waste Water Treatment Plan Operator.",
+    "Remuneration is the separate published REMUNERATION column. Expenses remain separate; employer EI and CPP are excluded from employee remuneration under the checked source schedule policy (physical 4).",
+    "All 13 printed zero expense cells remain 0; no expense dashes, missing expense values, imputation or annualization.",
+    "Two independent OCR engines (Tesseract and Paddle via RapidOCR) read all 27 rows; every machine difference and all original employee fields were checked against actual PDF-painted images. A peer independently transcribed all 27 original-image rows before comparing the frozen candidate.",
+    "Original physical 9 signed June 30,2025 approves all SOFI statements and schedules. Printed employee schedule heading is 2024; whole-report calendar end December 31,2024 is separately printed on physical 1.",
+    "Retain the compiled partition until root reviews exact-year full-cohort comparison; no compiled calendar mapping or deletion inferred."
+  ],
+  "validation": {
+    "method": "Independent Tesseract and Paddle OCR geometry readers; complete author original-image review; independent peer image-first full 27-row transcription and exact 162-field normalized comparison.",
+    "allRowFieldsAgreeWithFinalOriginalImageReview": true,
+    "rawOcrReadersAgree": false,
+    "allRawMachineDifferencesOriginalImageResolved": true,
+    "evidenceFile": "evidence/creston-2024-employee-remuneration.json.gzip",
+    "evidenceSha256": "1cd4e37de49685eb585e17a9606f5c9d4144c9a709d3d5364aab08fa5ac6b427",
+    "controls": {
+      "printedNamed": {
+        "remuneration": 2685008,
+        "expenses": 61044
+      },
+      "knownNamedRows": {
+        "remuneration": 2684996,
+        "expenses": 61034
+      },
+      "namedRowSumMinusPrinted": {
+        "remuneration": -12,
+        "expenses": -10
+      },
+      "printedBelowThreshold": {
+        "remuneration": 1583173,
+        "expenses": 67341
+      },
+      "printedAllEmployees": {
+        "remuneration": 4268181,
+        "expenses": 128386
+      },
+      "printedNamedPlusBelowExpenses": 128385,
+      "printedAllEmployeeExpensesMinusPrintedNamedPlusBelow": 1,
+      "separateRemunerationReconciliation": {
+        "printedElected": 164518,
+        "printedAllEmployees": 4268181,
+        "printedSubtotal": 4432699,
+        "printedIncludedStatementOfRevenueAndExpenditure": 4432689,
+        "finalMinusSubtotal": -10
+      }
+    },
+    "physicalPagesVisuallyReviewed": [
+      1,
+      3,
+      4,
+      5,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      36,
+      37,
+      38,
+      39,
+      41,
+      42
+    ],
+    "salaryPagesReviewedInFull": [
+      37
+    ],
+    "periodEvidence": [
+      {
+        "page": 37,
+        "text": "SCHEDULE SHOWING REMUNERATION AND EXPENSES PAID FOR 2024"
+      },
+      {
+        "page": 1,
+        "text": "Fiscal Year End: 31 December, 2024"
+      }
+    ],
+    "independentPeerReview": {
+      "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-creston-queue-final-payload-comparison.json",
+      "sha256": "10d2b1579e743510f1341967021ae0feeb064e2e09d2720af11d4c2b83ce9664",
+      "allRowsExact": true,
+      "rows": 27,
+      "fields": 162
+    },
+    "independentTwoEngineAdjudication": {
+      "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-creston-queue-two-engine-source-comparison.json",
+      "sha256": "8fa329f360e3c1417b551d653f2320aa42344fcd3ed4265323754220fafbff3d",
+      "machineFieldsCompared": 216
+    },
+    "nullExpenses": 0,
+    "explicitZeroExpenses": 13,
+    "signedApproval": {
+      "physicalPage": 9,
+      "date": "2025-06-30"
+    }
+  },
+  "publicWarning": "The 27 named employee rows total CAD 2,684,996 remuneration and 61,034 expenses, compared with printed named-employee subtotals 2,685,008 and 61,044: row sums minus printed controls are -12 and -10. Separately, printed named plus below-threshold employee expense controls 61,044 + 67,341 equal 128,385, while the all-employee expense control is 128,386 (1 higher). The separate remuneration reconciliation shows elected 164,518 plus all employees 4,268,181, with printed subtotal 4,432,699, but the final amount included in the Statement of Revenue and Expenditure is 4,432,689 (10 lower). Published individual cells are retained unchanged; causes remain unresolved."
+}

@@ -1,0 +1,721 @@
+{
+  "reviewer": "/root/recovery_review",
+  "script": {
+    "path": "scripts/finish_salary_phsa_quality_holdout_audit.py",
+    "sha256": "de6b439f6cea6b6d9bd4e5c36b4468180bea65b7cadfc3bc8d6b194b5aec2010"
+  },
+  "method": "Independently reimplemented source-only eligibility/rank selection; exact raw evidence/source/raster/crop provenance and pixel replay. No candidate holdout files opened or literal names/pay/expenses emitted.",
+  "policy": {
+    "path": "research/salaries/queue-completion-2026-11-01/phsa/paired-reader-field-policy-002.json",
+    "sha256": "0fafb3763ea5a1ebf8f2d7310e748cb4d24247428f544056e1427d2e6ecc77fe"
+  },
+  "selectionConfig": {
+    "path": "research/salaries/queue-completion-2026-11-01/phsa/holdout-selection-config-001.json",
+    "sha256": "fa3689b3b361f5c431707e7ed517ebdff4080499c96d1af7ec1d2aa6a46e8627"
+  },
+  "inventory": {
+    "path": "research/salaries/queue-completion-2026-11-01/phsa/source-inventory.json",
+    "sha256": "ec7c48b1f9f0b592c3910eb9691378de6cbca11b2cabc015f15307f28b71eed3"
+  },
+  "processingProfileIndex": {
+    "path": "research/salaries/queue-completion-2026-11-01/phsa/processing-profile-index-001.json",
+    "sha256": "5da19351100e8410e680113599c6990fb9f6b2bfe060348992795b1eaa44e4bc"
+  },
+  "independentRasterLedger": {
+    "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-history-all-pages-raster-pay-anchors.json.gzip",
+    "sha256": "76e604b4d14031c2361e2fbf01ff15a547d677822c09472c28519aa008253c79"
+  },
+  "reservationInputPins": [
+    {
+      "path": "research/salaries/queue-completion-2026-11-01/phsa/batches/phsa-2015-16-batch-001.json",
+      "sha256": "b4bbaf913563c801877b270634ee497853074a0424b6b59cca04654d29d85d7e"
+    },
+    {
+      "path": "research/salaries/queue-completion-2026-11-01/phsa/batches/phsa-2015-16-batch-002.json",
+      "sha256": "e96ae4c71c65d0c055c7f80fb8281612053726e04c5104de0ae952a9512da13c"
+    },
+    {
+      "path": "research/salaries/queue-completion-2026-11-01/phsa/batches/phsa-2015-16-batch-003.json",
+      "sha256": "6ba5232fbdd90fbd2589cafe1d3840a8c4fdbd07c7b340297abfc8beb75f6468"
+    },
+    {
+      "path": "research/salaries/queue-completion-2026-11-01/phsa/batches/phsa-2015-16-batch-004.json",
+      "sha256": "96b2edd4c3ad00dbcfa9e2c82d85c4902dc7331073f26b8c278e11555e533743"
+    },
+    {
+      "path": "research/salaries/queue-completion-2026-11-01/phsa/batches/phsa-2015-16-batch-007.json",
+      "sha256": "9f42f252eb86e23e9844ff75756297e56688bc4cb59e594a8feac280423523e9"
+    },
+    {
+      "path": "research/salaries/queue-completion-2026-11-01/phsa/batches/phsa-2015-16-batch-008.json",
+      "sha256": "45fbaf6911d226bdf007b50aca7ac5bf204a2ba1ef3654e20909cd7a54663503"
+    },
+    {
+      "path": "research/salaries/queue-completion-2026-11-01/phsa/batches/phsa-2016-17-batch-001.json",
+      "sha256": "6e0b2b0c72994a05450f1a736e82e0fe9d390e8327d2b1cd3bab3845399928b0"
+    },
+    {
+      "path": "research/salaries/queue-completion-2026-11-01/phsa/batches/phsa-2016-17-batch-002.json",
+      "sha256": "c0baf8f81a97f258505ee120ccc9926d0367b47f5d2bf93c2038348c2b1c340b"
+    },
+    {
+      "path": "research/salaries/queue-completion-2026-11-01/phsa/batches/phsa-2016-17-batch-003.json",
+      "sha256": "76bd64b07f724668126cf000e5705b376070bd4395ed529385bce42ea5fb8a8b"
+    },
+    {
+      "path": "research/salaries/queue-completion-2026-11-01/phsa/batches/phsa-2016-17-batch-004.json",
+      "sha256": "4b30b5c6d25c4f5d79027f4b6f801d4af5e044aff8aed6c35adcc2ebbfb15417"
+    },
+    {
+      "path": "research/salaries/queue-completion-2026-11-01/phsa/batches/phsa-2016-17-batch-005.json",
+      "sha256": "dc0712649942c5cbdd19fcf2bdbaa73502d8c54ebaae2fbd7f533c018d699786"
+    },
+    {
+      "path": "research/salaries/queue-completion-2026-11-01/phsa/batches/phsa-2017-18-batch-001.json",
+      "sha256": "172c0579b81446171414fa457ba663c29bcac7e76b391601c185f4c3f369036e"
+    },
+    {
+      "path": "research/salaries/queue-completion-2026-11-01/phsa/batches/phsa-2018-19-batch-001.json",
+      "sha256": "e83bd0245eb6581cc5f386654b169de7f5b3dd719940ff790b48e530e6e24435"
+    },
+    {
+      "path": "research/salaries/queue-completion-2026-11-01/phsa/batches/phsa-2018-19-batch-002.json",
+      "sha256": "da3948d9269817d0a5c1a9d52ee1cca5608e08df105d5aa7c9e194abb1517458"
+    },
+    {
+      "path": "research/salaries/queue-completion-2026-11-01/phsa/batches/phsa-2018-19-batch-003.json",
+      "sha256": "62d411edc4f46271135b2b46a6a02673d6bab3aabc9f6ce119da04001e430c9d"
+    },
+    {
+      "path": "research/salaries/queue-completion-2026-11-01/phsa/batches/phsa-2018-19-batch-004.json",
+      "sha256": "0a50986d74ad8d5add61f6048f153a24378f27affcd911454cb44f1b4a14cc28"
+    },
+    {
+      "path": "research/salaries/queue-completion-2026-11-01/phsa/batches/phsa-2019-20-batch-001.json",
+      "sha256": "45abc3b2a681e1d8a5f8c32e800043f09c345335057764f102ed200fe8aec7aa"
+    },
+    {
+      "path": "research/salaries/queue-completion-2026-11-01/phsa/overlays/phsa-2015-16-first-table-image-overlay.json",
+      "sha256": "ddbbe2f0e50066ba44a6252cdc48aad73a983e6a9bb7ea6129a7676b47776cf6"
+    },
+    {
+      "path": "research/salaries/queue-completion-2026-11-01/phsa/overlays/phsa-2016-17-first-table-image-overlay.json",
+      "sha256": "c5581f22091e2215e6308b956c7adf33c6d57b1de91e02f7425d9a196ddd4c14"
+    },
+    {
+      "path": "research/salaries/queue-completion-2026-11-01/phsa/overlays/phsa-2017-18-first-table-image-overlay.json",
+      "sha256": "b6e0fbecefcff7a29fdd24a01d931a146728388a1f61eee9f8a968011ae29e9e"
+    },
+    {
+      "path": "research/salaries/queue-completion-2026-11-01/phsa/overlays/phsa-2018-19-first-table-image-overlay.json",
+      "sha256": "f1179344a7b76da0e36ef61b4e2aeb58bf7f4a9cc7f7728ca11b4be4f02428ed"
+    },
+    {
+      "path": "research/salaries/queue-completion-2026-11-01/phsa/overlays/phsa-2019-20-first-table-image-overlay.json",
+      "sha256": "4b3e07c05744e0740177eeefc5f8bcf9c7591994ca434ccbdbd7384d12ee8674"
+    },
+    {
+      "path": "research/salaries/queue-completion-2026-11-01/phsa/overlays/phsa-2020-21-first-table-image-overlay.json",
+      "sha256": "3f658bbd9e6b9af31f2b01675e655102ef1ae194b9e63d89e66d88ed27d50caa"
+    },
+    {
+      "path": "research/salaries/queue-completion-2026-11-01/phsa/overlays/phsa-2021-22-first-table-image-overlay.json",
+      "sha256": "01f4f36b481b0c9227f672a1a3b61b0a330c1b50ac6c2b119a83a168ab7d17e1"
+    },
+    {
+      "path": "research/salaries/queue-completion-2026-11-01/phsa/overlays/phsa-2022-23-first-table-image-overlay.json",
+      "sha256": "ec402783842932733216eee6b4856e2a50e07f6525e195f51437d613422ef4f2"
+    },
+    {
+      "path": "research/salaries/queue-completion-2026-11-01/phsa/overlays/phsa-2023-24-first-table-image-overlay.json",
+      "sha256": "14dbc0797bebdf9b8b620aa972de6a54d916436985d4390b3dbea8c976ba696d"
+    },
+    {
+      "path": "research/salaries/queue-completion-2026-11-01/phsa/supplemental-field-reservation-hyphen-I-001.json",
+      "sha256": "e7ad4c494f0062ecc03b927d06a891c00ef01f6be198db71879f003e4059a5aa"
+    }
+  ],
+  "sources": [
+    {
+      "sourceId": "phsa-2015-16",
+      "packet": {
+        "path": "research/salaries/queue-completion-2026-11-01/phsa/holdouts/phsa-2015-16-source-only.json",
+        "sha256": "8d0e74c0e2009d5ff3c675532506ae9a3d3fc26681b89a410dafc35001f7c638"
+      },
+      "sourceSha256": "f8bc28af7e87f57c51973f5ed581e50fe414f00486659551ad5c8171b98f73a3",
+      "sourcePages": 128,
+      "sourceRows": 4545,
+      "selectedRowKeys": [
+        [
+          44,
+          26
+        ],
+        [
+          3,
+          25
+        ],
+        [
+          31,
+          24
+        ],
+        [
+          69,
+          10
+        ],
+        [
+          79,
+          34
+        ],
+        [
+          80,
+          34
+        ],
+        [
+          69,
+          18
+        ],
+        [
+          97,
+          6
+        ],
+        [
+          95,
+          13
+        ],
+        [
+          114,
+          33
+        ]
+      ],
+      "holdoutRows": 10,
+      "sourceThirdAllocation": [
+        3,
+        4,
+        3
+      ],
+      "requestedFieldsAndExactSourcePixelCrops": 24,
+      "selectionClassCounts": {
+        "otherwise-unflagged-paired-row": 10
+      },
+      "allSelectionReservationProvenanceAndPixelAssertionsPass": true
+    },
+    {
+      "sourceId": "phsa-2016-17",
+      "packet": {
+        "path": "research/salaries/queue-completion-2026-11-01/phsa/holdouts/phsa-2016-17-source-only.json",
+        "sha256": "6d84528a6c34aba04b40361cd5ca364e59d0ac4c80f8396682deff7e2e0b6801"
+      },
+      "sourceSha256": "31f7a1af80186bf81139fd693b36e733333a06c2ab1a4c5191bd6ee9b3623a53",
+      "sourcePages": 144,
+      "sourceRows": 5118,
+      "selectedRowKeys": [
+        [
+          15,
+          11
+        ],
+        [
+          10,
+          9
+        ],
+        [
+          39,
+          15
+        ],
+        [
+          97,
+          2
+        ],
+        [
+          68,
+          13
+        ],
+        [
+          73,
+          16
+        ],
+        [
+          71,
+          29
+        ],
+        [
+          122,
+          22
+        ],
+        [
+          120,
+          18
+        ],
+        [
+          106,
+          5
+        ]
+      ],
+      "holdoutRows": 10,
+      "sourceThirdAllocation": [
+        3,
+        4,
+        3
+      ],
+      "requestedFieldsAndExactSourcePixelCrops": 26,
+      "selectionClassCounts": {
+        "unreserved-confidence-only-paired-row": 10
+      },
+      "allSelectionReservationProvenanceAndPixelAssertionsPass": true
+    },
+    {
+      "sourceId": "phsa-2017-18",
+      "packet": {
+        "path": "research/salaries/queue-completion-2026-11-01/phsa/holdouts/phsa-2017-18-source-only.json",
+        "sha256": "b601af4faa7d2635e98d42cdcb064f601888cde80e02d4dc7a5fae3508bb7667"
+      },
+      "sourceSha256": "1971861d325c81e48083e56e45edbb62c6446fa2c387ce786a2b4e0aa5cdc006",
+      "sourcePages": 139,
+      "sourceRows": 5072,
+      "selectedRowKeys": [
+        [
+          4,
+          11
+        ],
+        [
+          8,
+          11
+        ],
+        [
+          4,
+          18
+        ],
+        [
+          92,
+          29
+        ],
+        [
+          71,
+          19
+        ],
+        [
+          90,
+          9
+        ],
+        [
+          92,
+          11
+        ],
+        [
+          123,
+          35
+        ],
+        [
+          117,
+          29
+        ],
+        [
+          136,
+          34
+        ]
+      ],
+      "holdoutRows": 10,
+      "sourceThirdAllocation": [
+        3,
+        4,
+        3
+      ],
+      "requestedFieldsAndExactSourcePixelCrops": 26,
+      "selectionClassCounts": {
+        "unreserved-confidence-only-paired-row": 10
+      },
+      "allSelectionReservationProvenanceAndPixelAssertionsPass": true
+    },
+    {
+      "sourceId": "phsa-2018-19",
+      "packet": {
+        "path": "research/salaries/queue-completion-2026-11-01/phsa/holdouts/phsa-2018-19-source-only.json",
+        "sha256": "6dd8086239cd004478e78c0fc3d9c99e964e404e613dc93858b8d970e201e94f"
+      },
+      "sourceSha256": "ddeba470b875451f6180eb442ed921f7902cc910d62a026c11ab298ca3d0440f",
+      "sourcePages": 111,
+      "sourceRows": 6041,
+      "selectedRowKeys": [
+        [
+          28,
+          13
+        ],
+        [
+          11,
+          36
+        ],
+        [
+          23,
+          50
+        ],
+        [
+          65,
+          34
+        ],
+        [
+          53,
+          18
+        ],
+        [
+          60,
+          31
+        ],
+        [
+          73,
+          15
+        ],
+        [
+          100,
+          11
+        ],
+        [
+          86,
+          22
+        ],
+        [
+          89,
+          14
+        ]
+      ],
+      "holdoutRows": 10,
+      "sourceThirdAllocation": [
+        3,
+        4,
+        3
+      ],
+      "requestedFieldsAndExactSourcePixelCrops": 26,
+      "selectionClassCounts": {
+        "unreserved-confidence-only-paired-row": 10
+      },
+      "allSelectionReservationProvenanceAndPixelAssertionsPass": true
+    },
+    {
+      "sourceId": "phsa-2019-20",
+      "packet": {
+        "path": "research/salaries/queue-completion-2026-11-01/phsa/holdouts/phsa-2019-20-source-only.json",
+        "sha256": "ca2ca42f8c70e3c2e13f4430aa23b32639d4bce4afeda0bde11ddcba43f13d0d"
+      },
+      "sourceSha256": "0e31ac2054f0c2d4ef78797185dddd96cc0cdf2eab94bd6841fa24e1c38e7d02",
+      "sourcePages": 121,
+      "sourceRows": 6913,
+      "selectedRowKeys": [
+        [
+          22,
+          27
+        ],
+        [
+          35,
+          53
+        ],
+        [
+          37,
+          19
+        ],
+        [
+          60,
+          53
+        ],
+        [
+          73,
+          37
+        ],
+        [
+          50,
+          37
+        ],
+        [
+          58,
+          27
+        ],
+        [
+          88,
+          14
+        ],
+        [
+          89,
+          19
+        ],
+        [
+          92,
+          13
+        ]
+      ],
+      "holdoutRows": 10,
+      "sourceThirdAllocation": [
+        3,
+        4,
+        3
+      ],
+      "requestedFieldsAndExactSourcePixelCrops": 22,
+      "selectionClassCounts": {
+        "unreserved-confidence-only-paired-row": 10
+      },
+      "allSelectionReservationProvenanceAndPixelAssertionsPass": true
+    },
+    {
+      "sourceId": "phsa-2020-21",
+      "packet": {
+        "path": "research/salaries/queue-completion-2026-11-01/phsa/holdouts/phsa-2020-21-source-only.json",
+        "sha256": "a08031d5ce01f94ef5e939ae68911817ad1e68ac3f29edfc1b30a460e4ec9bdf"
+      },
+      "sourceSha256": "87ea680c3e2b9bb940d911a198e41b85068535964ee61b6992e651271bd72b60",
+      "sourcePages": 148,
+      "sourceRows": 7941,
+      "selectedRowKeys": [
+        [
+          5,
+          9
+        ],
+        [
+          36,
+          20
+        ],
+        [
+          40,
+          8
+        ],
+        [
+          78,
+          33
+        ],
+        [
+          93,
+          48
+        ],
+        [
+          96,
+          13
+        ],
+        [
+          92,
+          5
+        ],
+        [
+          103,
+          9
+        ],
+        [
+          127,
+          43
+        ],
+        [
+          110,
+          16
+        ]
+      ],
+      "holdoutRows": 10,
+      "sourceThirdAllocation": [
+        3,
+        4,
+        3
+      ],
+      "requestedFieldsAndExactSourcePixelCrops": 24,
+      "selectionClassCounts": {
+        "unreserved-confidence-only-paired-row": 10
+      },
+      "allSelectionReservationProvenanceAndPixelAssertionsPass": true
+    },
+    {
+      "sourceId": "phsa-2021-22",
+      "packet": {
+        "path": "research/salaries/queue-completion-2026-11-01/phsa/holdouts/phsa-2021-22-source-only.json",
+        "sha256": "2f883ef09e0eef4903d11db51b47dfc0af7b19903723924a0dd2d4e5c48cad0b"
+      },
+      "sourceSha256": "944c99fa7b7ede643cb4c426a5e9ab30aa906d8f81fda379f0206e4b0cdcd25c",
+      "sourcePages": 188,
+      "sourceRows": 8270,
+      "selectedRowKeys": [
+        [
+          31,
+          38
+        ],
+        [
+          3,
+          23
+        ],
+        [
+          42,
+          20
+        ],
+        [
+          116,
+          18
+        ],
+        [
+          116,
+          37
+        ],
+        [
+          90,
+          31
+        ],
+        [
+          118,
+          35
+        ],
+        [
+          157,
+          25
+        ],
+        [
+          136,
+          13
+        ],
+        [
+          180,
+          35
+        ]
+      ],
+      "holdoutRows": 10,
+      "sourceThirdAllocation": [
+        3,
+        4,
+        3
+      ],
+      "requestedFieldsAndExactSourcePixelCrops": 24,
+      "selectionClassCounts": {
+        "unreserved-confidence-only-paired-row": 10
+      },
+      "allSelectionReservationProvenanceAndPixelAssertionsPass": true
+    },
+    {
+      "sourceId": "phsa-2022-23",
+      "packet": {
+        "path": "research/salaries/queue-completion-2026-11-01/phsa/holdouts/phsa-2022-23-source-only.json",
+        "sha256": "001f19e9a6f8f8d3cd03ba5f1a6f32e237e18e024571e965c336a102c7db9d2f"
+      },
+      "sourceSha256": "6046bb7be6944bc729926adba20a826486820a2a3b9b38090c60d400b2bc72a1",
+      "sourcePages": 217,
+      "sourceRows": 9104,
+      "selectedRowKeys": [
+        [
+          31,
+          21
+        ],
+        [
+          6,
+          18
+        ],
+        [
+          41,
+          2
+        ],
+        [
+          135,
+          22
+        ],
+        [
+          131,
+          16
+        ],
+        [
+          139,
+          18
+        ],
+        [
+          100,
+          1
+        ],
+        [
+          193,
+          11
+        ],
+        [
+          164,
+          13
+        ],
+        [
+          168,
+          19
+        ]
+      ],
+      "holdoutRows": 10,
+      "sourceThirdAllocation": [
+        3,
+        4,
+        3
+      ],
+      "requestedFieldsAndExactSourcePixelCrops": 25,
+      "selectionClassCounts": {
+        "unreserved-confidence-only-paired-row": 10
+      },
+      "allSelectionReservationProvenanceAndPixelAssertionsPass": true
+    },
+    {
+      "sourceId": "phsa-2023-24",
+      "packet": {
+        "path": "research/salaries/queue-completion-2026-11-01/phsa/holdouts/phsa-2023-24-source-only.json",
+        "sha256": "a4227c89c37f91016a190375f10465b91ee26862cee2f345ca9cfaeb043df777"
+      },
+      "sourceSha256": "89cf82dd1701081e4073408fc38006a08b5033e151d5a0cb2a4ff0c096594ab7",
+      "sourcePages": 284,
+      "sourceRows": 11908,
+      "selectedRowKeys": [
+        [
+          21,
+          1
+        ],
+        [
+          9,
+          16
+        ],
+        [
+          10,
+          16
+        ],
+        [
+          178,
+          21
+        ],
+        [
+          150,
+          11
+        ],
+        [
+          180,
+          6
+        ],
+        [
+          118,
+          16
+        ],
+        [
+          253,
+          38
+        ],
+        [
+          203,
+          30
+        ],
+        [
+          209,
+          36
+        ]
+      ],
+      "holdoutRows": 10,
+      "sourceThirdAllocation": [
+        3,
+        4,
+        3
+      ],
+      "requestedFieldsAndExactSourcePixelCrops": 25,
+      "selectionClassCounts": {
+        "unreserved-confidence-only-paired-row": 10
+      },
+      "allSelectionReservationProvenanceAndPixelAssertionsPass": true
+    }
+  ],
+  "holdoutSourcesChecked": 9,
+  "holdoutRowsChecked": 90,
+  "allNineSourcesAvailable": true,
+  "limits": [
+    "This validates selection/provenance/pixels, not the literal source transcription of the requested fields.",
+    "Root's blind source transcription and exact comparison of all ninety rows remain mandatory before acceptance.",
+    "Final source control/field closure and qualified source cases are separate gates."
+  ],
+  "sourceAcceptanceClaim": false,
+  "rootLiteralComparisonClosure": {
+    "path": "research/salaries/queue-completion-2026-11-01/reviews/root-phsa-history-all-nine-holdouts-closure.json",
+    "sha256": "b4c75367ef1e75ab20c48e6fe5fece38e7fd92d1e276a2d6dacdf90abb0d4f24"
+  },
+  "literalComparisonResponsibility": "Root independently transcribed all90rows/222fields; four root-only first-reading errors explicitly preserved and corrected after original600dpi source rereads plus a fresh blinded peer. No machine/data change, no forced agreement. This reviewer independently validates selection/provenance/pixels, not all222literaltranscriptions."
+}

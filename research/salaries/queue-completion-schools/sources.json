@@ -1,0 +1,2924 @@
+{
+  "version": 1,
+  "reviewed": true,
+  "rowSchema": [
+    "employerSlug",
+    "name",
+    "position",
+    "remuneration",
+    "expenses",
+    "pdfPage"
+  ],
+  "sources": [
+    {
+      "id": "queue-completion-schools-sd27-2025-trustees",
+      "employerSlug": "school-district-27",
+      "employerName": "School District No. 27 (Cariboo-Chilcotin)",
+      "sector": "School districts",
+      "year": "2024/25",
+      "slug": "2024-25",
+      "periodType": "fiscal",
+      "periodStart": "2024-07-01",
+      "periodEnd": "2025-06-30",
+      "title": "School District No. 27 (Cariboo-Chilcotin), year ended June 30, 2025: trustees",
+      "sourceUrl": "https://www.sd27.bc.ca/documents/f5ae6642-5fe5-4724-9073-acf8a6b1a114/School-District-27-SOFI-Final-2025_Redacted.pdf?fingerprint=ppb20251231162656",
+      "sourceIndexUrl": "https://www.sd27.bc.ca/reports-and-publications-1738864389343",
+      "sha256": "bb4215a005b063956cbb5cca9d6da73379dad5d470e6a0346f3eebcfe3a9fe61",
+      "file": "sd27-2025-trustees.json.gzip",
+      "dataSha256": "221e419ec5156d989ae584fe76cdeb7265322ae4a7262294e8b9a3b31ea1b441",
+      "normalizedSha256": "2fac92c34931aac57dcd6098d1fc7f417127079273d37c20b1ab2ff0108cd4cf",
+      "provenanceFile": "sd27-2025-trustees-evidence.json.gzip",
+      "provenanceSha256": "90b764592fd9d359f812fa1b587d3b53544477f0f3723d4a63c4e30de298b16f",
+      "category": "school-trustees",
+      "scope": "school-trustees",
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "amountPrecision": "whole-dollars",
+      "scopeDescription": "Complete published school trustee/official table",
+      "nameDisclosure": "published-name-as-disclosed",
+      "positionDisclosure": "published-visible-text-only",
+      "pages": [
+        55
+      ],
+      "rowCount": 8,
+      "totalRemuneration": 147241,
+      "totalExpenses": 95529,
+      "status": "verified",
+      "sourceKind": "official",
+      "completeEmployeeSchedule": false,
+      "retainCompiledPartition": true,
+      "verifiedOn": "2026-11-01",
+      "publicWarning": "The eight named trustee rows total $147,241 remuneration and $95,529 expenses. The report prints $147,241 and $95,531 on physical page 55; row expenses are $2 below that printed control. These values remain literal; no cause or balancing adjustment is inferred. Compiled entries, where present, are retained while their edition labels and employee/trustee scopes await comparison with this complete original. No equivalence between a compiled edition label and this fiscal year is assumed.",
+      "notes": [
+        "Remuneration and expenses are separate literal published monetary columns; these are observations for the source period and are not annualized base salary rates.",
+        "Poppler physical text rows and independently grouped MuPDF words agree on every named row and field, in order and multiplicity. Native words, continuation lines, coordinates and source controls remain in the original proof.",
+        "Employees are disclosed as source surname/initial strings with no position column; trustees have published positions. Published joined name PATENAUDECIEL remains literal.",
+        "Only named payments are imported. Below-threshold aggregates, employer CPP/EI, suppliers and financial-statement totals remain excluded.",
+        "Published spelling, initials, name order, punctuation, footnote markers and visible titles remain literal. No identity, full name or annual rate is inferred. A blank or dash expense remains null and an explicit zero remains zero."
+      ],
+      "validation": {
+        "originalFingerprintVerified": true,
+        "independentReaders": [
+          "Poppler pdftotext physical layout lines",
+          "MuPDF independently grouped word geometry"
+        ],
+        "rowsIndependentlyChecked": 8,
+        "allSixFieldsOrderMultiplicityAgree": true,
+        "rowsByPhysicalPage": {
+          "55": 8
+        },
+        "printedControlTotals": [
+          "147241",
+          "95531"
+        ],
+        "computedComponentTotals": [
+          "147241",
+          "95529"
+        ],
+        "controlResiduals": [
+          "0",
+          "-2"
+        ],
+        "summaryReconciles": false,
+        "nullExpenseRows": 0,
+        "knownExpenseValueCount": 8,
+        "completeEmployeeSchedule": false,
+        "compiledPartitionRetained": true,
+        "compiledPartitionRetentionReason": "Full official-versus-compiled multiset comparison with exact source/data/baseline fingerprints remains for root review; compiled year labels and employee/trustee scope are not assumed equivalent.",
+        "zeroExpenseRows": 0,
+        "reportingPeriodBasis": "Cover explicitly FOR THE YEAR ENDED JUNE30,2025; complete remuneration tables physical55–60 explicitly As of June 30, 2025. Annual scope follows this package/table evidence, not upload path.",
+        "salarySchedulePrintedPeriodEnd": "2025-06-30",
+        "approvalEvidence": {
+          "status": "independent-actual-original-image-period-check-complete",
+          "declarationPhysicalPage": 3,
+          "noAdoptionClaim": true,
+          "declarationPrintedPeriodEnd": "2025-06-30",
+          "signatures": "redacted or partly redacted; no visual signature authentication claimed",
+          "declarationDateFieldsPrinted": [
+            "2025-12-15",
+            "2025-12-15",
+            "2025-12-15"
+          ]
+        },
+        "nativeProofFile": "research/salaries/queue-completion-2026-11-01/schools/sd27-2025-native-candidate.json.gzip",
+        "nativeProofSha256": "b946da903c1a394f4f36b8c38e52c1288d24f72ad8bd2a75eddd12f4f1b6db22",
+        "independentPeerReviewPending": false,
+        "independentPeerReview": {
+          "file": "research/salaries/queue-completion-2026-11-01/reviews/independent-school-queue-native-comparison.json",
+          "sha256": "b28f1cbf3f3265f152b371060a09c75a537050dba267998b51b31d08f9f91ce4"
+        }
+      }
+    },
+    {
+      "id": "queue-completion-schools-sd27-2025-employees",
+      "employerSlug": "school-district-27",
+      "employerName": "School District No. 27 (Cariboo-Chilcotin)",
+      "sector": "School districts",
+      "year": "2024/25",
+      "slug": "2024-25",
+      "periodType": "fiscal",
+      "periodStart": "2024-07-01",
+      "periodEnd": "2025-06-30",
+      "title": "School District No. 27 (Cariboo-Chilcotin), year ended June 30, 2025: employees",
+      "sourceUrl": "https://www.sd27.bc.ca/documents/f5ae6642-5fe5-4724-9073-acf8a6b1a114/School-District-27-SOFI-Final-2025_Redacted.pdf?fingerprint=ppb20251231162656",
+      "sourceIndexUrl": "https://www.sd27.bc.ca/reports-and-publications-1738864389343",
+      "sha256": "bb4215a005b063956cbb5cca9d6da73379dad5d470e6a0346f3eebcfe3a9fe61",
+      "file": "sd27-2025-employees.json.gzip",
+      "dataSha256": "619d25b9d522409c9cd9c71663fdd58899f75a96f9f117d72d3c255e6f79be9a",
+      "normalizedSha256": "db5687035d455c68174b11a5b9b423a7ed7be218a44f0e400228f34f187dace9",
+      "provenanceFile": "sd27-2025-employees-evidence.json.gzip",
+      "provenanceSha256": "ab552eeb7b7daf1a6202710741695d5938a1101ff1897977a11f9658472fb637",
+      "category": "employee-remuneration",
+      "scope": "employee-remuneration",
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "amountPrecision": "whole-dollars",
+      "scopeDescription": "Complete published named employee remuneration table at the source disclosure threshold",
+      "nameDisclosure": "published-name-as-disclosed",
+      "positionDisclosure": "published-visible-text-only",
+      "pages": [
+        55,
+        56,
+        57,
+        58,
+        59,
+        60
+      ],
+      "rowCount": 289,
+      "totalRemuneration": 30206219,
+      "totalExpenses": 422635,
+      "status": "verified",
+      "sourceKind": "official",
+      "completeEmployeeSchedule": true,
+      "retainCompiledPartition": true,
+      "verifiedOn": "2026-11-01",
+      "publicWarning": "The 289 named employee rows total $30,206,219 remuneration and $422,635 expenses. The report prints $30,206,208 and $422,630 on physical page 60; row sums exceed those printed controls by $11 and $5 respectively. Rows and controls remain literal; no cause or balancing adjustment is inferred. Employee names are disclosed as surname/initial strings and are preserved without expansion. Compiled entries, where present, are retained while their edition labels and employee/trustee scopes await comparison with this complete original. No equivalence between a compiled edition label and this fiscal year is assumed.",
+      "notes": [
+        "Remuneration and expenses are separate literal published monetary columns; these are observations for the source period and are not annualized base salary rates.",
+        "Poppler physical text rows and independently grouped MuPDF words agree on every named row and field, in order and multiplicity. Native words, continuation lines, coordinates and source controls remain in the original proof.",
+        "Employees are disclosed as source surname/initial strings with no position column; trustees have published positions. Published joined name PATENAUDECIEL remains literal.",
+        "Only named payments are imported. Below-threshold aggregates, employer CPP/EI, suppliers and financial-statement totals remain excluded.",
+        "Published spelling, initials, name order, punctuation, footnote markers and visible titles remain literal. No identity, full name or annual rate is inferred. A blank or dash expense remains null and an explicit zero remains zero."
+      ],
+      "validation": {
+        "originalFingerprintVerified": true,
+        "independentReaders": [
+          "Poppler pdftotext physical layout lines",
+          "MuPDF independently grouped word geometry"
+        ],
+        "rowsIndependentlyChecked": 289,
+        "allSixFieldsOrderMultiplicityAgree": true,
+        "rowsByPhysicalPage": {
+          "55": 38,
+          "56": 55,
+          "57": 55,
+          "58": 55,
+          "59": 55,
+          "60": 31
+        },
+        "printedControlTotals": [
+          "30206208",
+          "422630"
+        ],
+        "computedComponentTotals": [
+          "30206219",
+          "422635"
+        ],
+        "controlResiduals": [
+          "11",
+          "5"
+        ],
+        "summaryReconciles": false,
+        "nullExpenseRows": 0,
+        "knownExpenseValueCount": 289,
+        "completeEmployeeSchedule": true,
+        "compiledPartitionRetained": true,
+        "compiledPartitionRetentionReason": "Full official-versus-compiled multiset comparison with exact source/data/baseline fingerprints remains for root review; compiled year labels and employee/trustee scope are not assumed equivalent.",
+        "zeroExpenseRows": 89,
+        "reportingPeriodBasis": "Cover explicitly FOR THE YEAR ENDED JUNE30,2025; complete remuneration tables physical55–60 explicitly As of June 30, 2025. Annual scope follows this package/table evidence, not upload path.",
+        "salarySchedulePrintedPeriodEnd": "2025-06-30",
+        "approvalEvidence": {
+          "status": "independent-actual-original-image-period-check-complete",
+          "declarationPhysicalPage": 3,
+          "noAdoptionClaim": true,
+          "declarationPrintedPeriodEnd": "2025-06-30",
+          "signatures": "redacted or partly redacted; no visual signature authentication claimed",
+          "declarationDateFieldsPrinted": [
+            "2025-12-15",
+            "2025-12-15",
+            "2025-12-15"
+          ]
+        },
+        "nativeProofFile": "research/salaries/queue-completion-2026-11-01/schools/sd27-2025-native-candidate.json.gzip",
+        "nativeProofSha256": "b946da903c1a394f4f36b8c38e52c1288d24f72ad8bd2a75eddd12f4f1b6db22",
+        "independentPeerReviewPending": false,
+        "independentPeerReview": {
+          "file": "research/salaries/queue-completion-2026-11-01/reviews/independent-school-queue-native-comparison.json",
+          "sha256": "b28f1cbf3f3265f152b371060a09c75a537050dba267998b51b31d08f9f91ce4"
+        }
+      }
+    },
+    {
+      "id": "queue-completion-schools-sd22-2025-trustees",
+      "employerSlug": "school-district-22",
+      "employerName": "School District No. 22 (Vernon)",
+      "sector": "School districts",
+      "year": "2024/25",
+      "slug": "2024-25",
+      "periodType": "fiscal",
+      "periodStart": "2024-07-01",
+      "periodEnd": "2025-06-30",
+      "title": "School District No. 22 (Vernon), year ended June 30, 2025: trustees",
+      "sourceUrl": "https://www2.gov.bc.ca/assets/gov/education/administration/resource-management/school-district-financial-reporting/financial-information/sd22-sofi-2025.pdf",
+      "sourceIndexUrl": "https://www2.gov.bc.ca/gov/content/education-training/k-12/administration/financial-management/school-district-financial-reporting/statement-of-financial-information",
+      "sha256": "4657c26f966659bc5bf0de5a6e65818538f588dcbc154d7b23748b7cfe5415a6",
+      "file": "sd22-2025-trustees.json.gzip",
+      "dataSha256": "e2776bec0d86d9adfc91300be4ab5ae6f553695840b1b092b1ff40c3ffe3fb74",
+      "normalizedSha256": "567a6e5143904b5c2e260a1cfa04a887bf7ea787d534008736892623f3ff500c",
+      "provenanceFile": "sd22-2025-trustees-evidence.json.gzip",
+      "provenanceSha256": "c5b7b38f1f57661bd8174094fa2f17b6b1fe24d4e07101b680c19d901c86a17d",
+      "category": "school-trustees",
+      "scope": "school-trustees",
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "amountPrecision": "whole-dollars",
+      "scopeDescription": "Complete published school trustee/official table",
+      "nameDisclosure": "published-name-as-disclosed",
+      "positionDisclosure": "published-visible-text-only",
+      "pages": [
+        54
+      ],
+      "rowCount": 7,
+      "totalRemuneration": 151441,
+      "totalExpenses": 40508,
+      "status": "verified",
+      "sourceKind": "official",
+      "completeEmployeeSchedule": false,
+      "retainCompiledPartition": true,
+      "verifiedOn": "2026-11-01",
+      "publicWarning": "No separate trustee total is printed. The seven named trustees total $151,441 remuneration and $40,508 expenses. Physical page 71 prints a single Total of $95,010,658 remuneration and $498,211 expenses plus $30,781,279 remuneration for employees below $75,000, with no amount in that aggregate expense cell. The boundaries of the single Total are not further specified; no missing expense amount or balancing allocation is inferred. Compiled entries, where present, are retained while their edition labels and employee/trustee scopes await comparison with this complete original. No equivalence between a compiled edition label and this fiscal year is assumed.",
+      "notes": [
+        "Remuneration and expenses are separate literal published monetary columns; these are observations for the source period and are not annualized base salary rates.",
+        "Poppler physical text rows and independently grouped MuPDF words agree on every named row and field, in order and multiplicity. Native words, continuation lines, coordinates and source controls remain in the original proof.",
+        "The source defines remuneration as regular salary, taxable benefits and taxable one-time payments including retirement allowances, retroactive pay and vacation pay. Expenses include approved district business payments to/on behalf of employees, including travel, professional development and association memberships.",
+        "Source trustee positions wrapping onto the following physical line are joined only where both native readers identify the same continuation cells. Blank expense cells remain unknown/null.",
+        "Only named payments are imported. Below-threshold aggregates, employer CPP/EI, suppliers and financial-statement totals remain excluded.",
+        "Published spelling, initials, name order, punctuation, footnote markers and visible titles remain literal. No identity, full name or annual rate is inferred. A blank or dash expense remains null and an explicit zero remains zero."
+      ],
+      "validation": {
+        "originalFingerprintVerified": true,
+        "independentReaders": [
+          "Poppler pdftotext physical layout lines",
+          "MuPDF independently grouped word geometry"
+        ],
+        "rowsIndependentlyChecked": 7,
+        "allSixFieldsOrderMultiplicityAgree": true,
+        "rowsByPhysicalPage": {
+          "54": 7
+        },
+        "printedControlTotals": [
+          null,
+          null
+        ],
+        "computedComponentTotals": [
+          "151441",
+          "40508"
+        ],
+        "controlResiduals": [
+          null,
+          null
+        ],
+        "summaryReconciles": null,
+        "nullExpenseRows": 0,
+        "knownExpenseValueCount": 7,
+        "completeEmployeeSchedule": false,
+        "compiledPartitionRetained": true,
+        "compiledPartitionRetentionReason": "Full official-versus-compiled multiset comparison with exact source/data/baseline fingerprints remains for root review; compiled year labels and employee/trustee scope are not assumed equivalent.",
+        "zeroExpenseRows": 0,
+        "reportingPeriodBasis": "Cover, declaration and remuneration schedule physical54 explicitly year ended June 30, 2025; complete table continues through71.",
+        "salarySchedulePrintedPeriodEnd": "2025-06-30",
+        "approvalEvidence": {
+          "status": "independent-actual-original-image-period-check-complete",
+          "declarationPhysicalPage": 3,
+          "declarationPrintedPeriodEnd": "2025-06-30",
+          "declarationDateFieldsPrinted": [
+            "2025-12-15",
+            "2025-12-15",
+            "2025-12-15"
+          ],
+          "noAdoptionClaim": true,
+          "signatures": "redacted or partly redacted; no visual signature authentication claimed"
+        },
+        "nativeProofFile": "research/salaries/queue-completion-2026-11-01/schools/sd22-2025-native-candidate.json.gzip",
+        "nativeProofSha256": "89aa310a078a39536081f46e27612c547841fd56d83c4c40625e33ec021bab0f",
+        "independentPeerReviewPending": false,
+        "independentPeerReview": {
+          "file": "research/salaries/queue-completion-2026-11-01/reviews/independent-school-queue-native-comparison.json",
+          "sha256": "b28f1cbf3f3265f152b371060a09c75a537050dba267998b51b31d08f9f91ce4"
+        }
+      }
+    },
+    {
+      "id": "queue-completion-schools-sd22-2025-employees",
+      "employerSlug": "school-district-22",
+      "employerName": "School District No. 22 (Vernon)",
+      "sector": "School districts",
+      "year": "2024/25",
+      "slug": "2024-25",
+      "periodType": "fiscal",
+      "periodStart": "2024-07-01",
+      "periodEnd": "2025-06-30",
+      "title": "School District No. 22 (Vernon), year ended June 30, 2025: employees",
+      "sourceUrl": "https://www2.gov.bc.ca/assets/gov/education/administration/resource-management/school-district-financial-reporting/financial-information/sd22-sofi-2025.pdf",
+      "sourceIndexUrl": "https://www2.gov.bc.ca/gov/content/education-training/k-12/administration/financial-management/school-district-financial-reporting/statement-of-financial-information",
+      "sha256": "4657c26f966659bc5bf0de5a6e65818538f588dcbc154d7b23748b7cfe5415a6",
+      "file": "sd22-2025-employees.json.gzip",
+      "dataSha256": "701de4b61ae22d8033888fdb4f0b43bdd804c37bf4510bbc75563c842a4c7978",
+      "normalizedSha256": "67e054be580e9e1457cade486b3a4ee36feeda9258e6e9498d760f29410b51a3",
+      "provenanceFile": "sd22-2025-employees-evidence.json.gzip",
+      "provenanceSha256": "62e103dd9a5dea39374af8843c34f6524de941ff130035c4ee5e58c2c02b5f7a",
+      "category": "employee-remuneration",
+      "scope": "employee-remuneration",
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "amountPrecision": "whole-dollars",
+      "scopeDescription": "Complete published named employee remuneration table at the source disclosure threshold",
+      "nameDisclosure": "published-name-as-disclosed",
+      "positionDisclosure": "published-visible-text-only",
+      "pages": [
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61,
+        62,
+        63,
+        64,
+        65,
+        66,
+        67,
+        68,
+        69,
+        70,
+        71
+      ],
+      "rowCount": 607,
+      "totalRemuneration": 64157041,
+      "totalExpenses": 442707,
+      "status": "verified",
+      "sourceKind": "official",
+      "completeEmployeeSchedule": true,
+      "retainCompiledPartition": true,
+      "verifiedOn": "2026-11-01",
+      "publicWarning": "The 607 named employee rows total $64,157,041 remuneration and $442,707 known expenses. No separate named-employee total is printed. Physical page 71 prints $30,781,279 below-threshold remuneration and a single Total of $95,010,658 remuneration and $498,211 expenses; the below-threshold expense cell is blank. The printed remuneration Total exceeds named employees plus the below-threshold amount by $72,338; including the separately listed $151,441 trustee remuneration instead puts those listed components $79,103 above Total. The Total boundary and cause remain unresolved; no component or unknown expense is invented. Compiled entries, where present, are retained while their edition labels and employee/trustee scopes await comparison with this complete original. No equivalence between a compiled edition label and this fiscal year is assumed.",
+      "notes": [
+        "Remuneration and expenses are separate literal published monetary columns; these are observations for the source period and are not annualized base salary rates.",
+        "Poppler physical text rows and independently grouped MuPDF words agree on every named row and field, in order and multiplicity. Native words, continuation lines, coordinates and source controls remain in the original proof.",
+        "The source defines remuneration as regular salary, taxable benefits and taxable one-time payments including retirement allowances, retroactive pay and vacation pay. Expenses include approved district business payments to/on behalf of employees, including travel, professional development and association memberships.",
+        "Source trustee positions wrapping onto the following physical line are joined only where both native readers identify the same continuation cells. Blank expense cells remain unknown/null.",
+        "Only named payments are imported. Below-threshold aggregates, employer CPP/EI, suppliers and financial-statement totals remain excluded.",
+        "Published spelling, initials, name order, punctuation, footnote markers and visible titles remain literal. No identity, full name or annual rate is inferred. A blank or dash expense remains null and an explicit zero remains zero."
+      ],
+      "validation": {
+        "originalFingerprintVerified": true,
+        "independentReaders": [
+          "Poppler pdftotext physical layout lines",
+          "MuPDF independently grouped word geometry"
+        ],
+        "rowsIndependentlyChecked": 607,
+        "allSixFieldsOrderMultiplicityAgree": true,
+        "rowsByPhysicalPage": {
+          "54": 13,
+          "55": 37,
+          "56": 37,
+          "57": 37,
+          "58": 37,
+          "59": 36,
+          "60": 37,
+          "61": 37,
+          "62": 37,
+          "63": 37,
+          "64": 37,
+          "65": 36,
+          "66": 36,
+          "67": 36,
+          "68": 37,
+          "69": 37,
+          "70": 36,
+          "71": 7
+        },
+        "printedControlTotals": [
+          null,
+          null
+        ],
+        "computedComponentTotals": [
+          "64157041",
+          "442707"
+        ],
+        "controlResiduals": [
+          null,
+          null
+        ],
+        "summaryReconciles": null,
+        "nullExpenseRows": 488,
+        "knownExpenseValueCount": 119,
+        "completeEmployeeSchedule": true,
+        "compiledPartitionRetained": true,
+        "compiledPartitionRetentionReason": "Full official-versus-compiled multiset comparison with exact source/data/baseline fingerprints remains for root review; compiled year labels and employee/trustee scope are not assumed equivalent.",
+        "zeroExpenseRows": 0,
+        "reportingPeriodBasis": "Cover, declaration and remuneration schedule physical54 explicitly year ended June 30, 2025; complete table continues through71.",
+        "salarySchedulePrintedPeriodEnd": "2025-06-30",
+        "approvalEvidence": {
+          "status": "independent-actual-original-image-period-check-complete",
+          "declarationPhysicalPage": 3,
+          "declarationPrintedPeriodEnd": "2025-06-30",
+          "declarationDateFieldsPrinted": [
+            "2025-12-15",
+            "2025-12-15",
+            "2025-12-15"
+          ],
+          "noAdoptionClaim": true,
+          "signatures": "redacted or partly redacted; no visual signature authentication claimed"
+        },
+        "nativeProofFile": "research/salaries/queue-completion-2026-11-01/schools/sd22-2025-native-candidate.json.gzip",
+        "nativeProofSha256": "89aa310a078a39536081f46e27612c547841fd56d83c4c40625e33ec021bab0f",
+        "independentPeerReviewPending": false,
+        "independentPeerReview": {
+          "file": "research/salaries/queue-completion-2026-11-01/reviews/independent-school-queue-native-comparison.json",
+          "sha256": "b28f1cbf3f3265f152b371060a09c75a537050dba267998b51b31d08f9f91ce4"
+        }
+      }
+    },
+    {
+      "id": "queue-completion-schools-sd44-2025-trustees",
+      "employerSlug": "north-vancouver-school-district",
+      "employerName": "School District No. 44 (North Vancouver)",
+      "sector": "School districts",
+      "year": "2024/25",
+      "slug": "2024-25",
+      "periodType": "fiscal",
+      "periodStart": "2024-07-01",
+      "periodEnd": "2025-06-30",
+      "title": "School District No. 44 (North Vancouver), year ended June 30, 2025: trustees",
+      "sourceUrl": "https://www2.gov.bc.ca/assets/gov/education/administration/resource-management/school-district-financial-reporting/financial-information/sd44-sofi-2025.pdf",
+      "sourceIndexUrl": "https://www2.gov.bc.ca/gov/content/education-training/k-12/administration/financial-management/school-district-financial-reporting/statement-of-financial-information",
+      "sha256": "24312eed671fe2077c259aa534451dfd881cef89d14bac02eadc801f07a08b42",
+      "file": "sd44-2025-trustees.json.gzip",
+      "dataSha256": "9b382c830215d2e2243e53923ef8c347c18237a70927416265c4247288fbe4e0",
+      "normalizedSha256": "270221cf9751967de0e60303b336c2d273ec0f94817d2e9568ceb1094407f262",
+      "provenanceFile": "sd44-2025-trustees-evidence.json.gzip",
+      "provenanceSha256": "b94699b3c06a647f98ed90e900b646fc24eec36e130e8cae84126448001e1e8e",
+      "category": "school-trustees",
+      "scope": "school-trustees",
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "amountPrecision": "whole-dollars",
+      "scopeDescription": "Complete published school trustee/official table",
+      "nameDisclosure": "published-name-as-disclosed",
+      "positionDisclosure": "published-visible-text-only",
+      "pages": [
+        51
+      ],
+      "rowCount": 7,
+      "totalRemuneration": 219939,
+      "totalExpenses": 11063,
+      "status": "verified",
+      "sourceKind": "official",
+      "completeEmployeeSchedule": false,
+      "retainCompiledPartition": true,
+      "verifiedOn": "2026-11-01",
+      "publicWarning": "The seven named trustee rows total $219,939 remuneration and $11,063 expenses. Physical page 51 prints $219,939 and $11,062; row expenses exceed that printed control by $1. Rows and controls remain literal. Printed remuneration components on page 68 also sum to $174,005,808 versus the $174,005,807 Grand Total, a $1 difference; no cause is inferred. Compiled entries, where present, are retained while their edition labels and employee/trustee scopes await comparison with this complete original. No equivalence between a compiled edition label and this fiscal year is assumed.",
+      "notes": [
+        "Remuneration and expenses are separate literal published monetary columns; these are observations for the source period and are not annualized base salary rates.",
+        "Poppler physical text rows and independently grouped MuPDF words agree on every named row and field, in order and multiplicity. Native words, continuation lines, coordinates and source controls remain in the original proof.",
+        "The source reconciliation physical70 states cash-basis remuneration versus accrual-basis financial-statement salaries/benefits, includes seconded employee amounts and some capital-project payments and employee expenses, and excludes severance agreement payments.",
+        "Source footnotes identify * Provincial Schools Outreach Program travel and ** International Student Recruitment travel/marketing; literal markers remain attached to published names.",
+        "Only named payments are imported. Below-threshold aggregates, employer CPP/EI, suppliers and financial-statement totals remain excluded.",
+        "Published spelling, initials, name order, punctuation, footnote markers and visible titles remain literal. No identity, full name or annual rate is inferred. A blank or dash expense remains null and an explicit zero remains zero."
+      ],
+      "validation": {
+        "originalFingerprintVerified": true,
+        "independentReaders": [
+          "Poppler pdftotext physical layout lines",
+          "MuPDF independently grouped word geometry"
+        ],
+        "rowsIndependentlyChecked": 7,
+        "allSixFieldsOrderMultiplicityAgree": true,
+        "rowsByPhysicalPage": {
+          "51": 7
+        },
+        "printedControlTotals": [
+          "219939",
+          "11062"
+        ],
+        "computedComponentTotals": [
+          "219939",
+          "11063"
+        ],
+        "controlResiduals": [
+          "0",
+          "1"
+        ],
+        "summaryReconciles": false,
+        "nullExpenseRows": 0,
+        "knownExpenseValueCount": 7,
+        "completeEmployeeSchedule": false,
+        "compiledPartitionRetained": true,
+        "compiledPartitionRetentionReason": "Full official-versus-compiled multiset comparison with exact source/data/baseline fingerprints remains for root review; compiled year labels and employee/trustee scope are not assumed equivalent.",
+        "zeroExpenseRows": 0,
+        "reportingPeriodBasis": "Complete remuneration schedule physical51 explicitly FISCAL YEAR ENDED JUNE30,2025; table continues through68.",
+        "salarySchedulePrintedPeriodEnd": "2025-06-30",
+        "approvalEvidence": {
+          "status": "independent-actual-original-image-period-check-complete",
+          "declarationPhysicalPage": 2,
+          "noAdoptionClaim": true,
+          "declarationPrintedPeriodEnd": "2025-06-30",
+          "signatures": "redacted or partly redacted; no visual signature authentication claimed"
+        },
+        "nativeProofFile": "research/salaries/queue-completion-2026-11-01/schools/sd44-2025-native-candidate.json.gzip",
+        "nativeProofSha256": "a4eb351944a2f2e5222d5e23de2da62e50077fabada0e930d7105345b3fff047",
+        "independentPeerReviewPending": false,
+        "independentPeerReview": {
+          "file": "research/salaries/queue-completion-2026-11-01/reviews/independent-school-queue-native-comparison.json",
+          "sha256": "b28f1cbf3f3265f152b371060a09c75a537050dba267998b51b31d08f9f91ce4"
+        }
+      }
+    },
+    {
+      "id": "queue-completion-schools-sd44-2025-employees",
+      "employerSlug": "north-vancouver-school-district",
+      "employerName": "School District No. 44 (North Vancouver)",
+      "sector": "School districts",
+      "year": "2024/25",
+      "slug": "2024-25",
+      "periodType": "fiscal",
+      "periodStart": "2024-07-01",
+      "periodEnd": "2025-06-30",
+      "title": "School District No. 44 (North Vancouver), year ended June 30, 2025: employees",
+      "sourceUrl": "https://www2.gov.bc.ca/assets/gov/education/administration/resource-management/school-district-financial-reporting/financial-information/sd44-sofi-2025.pdf",
+      "sourceIndexUrl": "https://www2.gov.bc.ca/gov/content/education-training/k-12/administration/financial-management/school-district-financial-reporting/statement-of-financial-information",
+      "sha256": "24312eed671fe2077c259aa534451dfd881cef89d14bac02eadc801f07a08b42",
+      "file": "sd44-2025-employees.json.gzip",
+      "dataSha256": "ed2a0b870518650f6eb294db2ab0a2c096630bb19fd92fe8715220f85d5af721",
+      "normalizedSha256": "2940ff3a686dfbf620c93f258cf4c42fc9bee04811d7fda87e731e7fbf83513b",
+      "provenanceFile": "sd44-2025-employees-evidence.json.gzip",
+      "provenanceSha256": "f490b056868dbf826315b9ad640f04c93a5c6963a89fdd6115b38985f397cf99",
+      "category": "employee-remuneration",
+      "scope": "employee-remuneration",
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "amountPrecision": "whole-dollars",
+      "scopeDescription": "Complete published named employee remuneration table at the source disclosure threshold",
+      "nameDisclosure": "published-name-as-disclosed",
+      "positionDisclosure": "published-visible-text-only",
+      "pages": [
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61,
+        62,
+        63,
+        64,
+        65,
+        66,
+        67,
+        68
+      ],
+      "rowCount": 1010,
+      "totalRemuneration": 107244306,
+      "totalExpenses": 1046925,
+      "status": "verified",
+      "sourceKind": "official",
+      "completeEmployeeSchedule": true,
+      "retainCompiledPartition": true,
+      "verifiedOn": "2026-11-01",
+      "publicWarning": "The 1,010 named employee rows total $107,244,306 remuneration and $1,046,925 expenses. Physical page 68 prints $107,244,313 and $1,046,933; row sums are $7 and $8 below those controls. The printed remuneration components including trustees total $174,005,808 versus $174,005,807 Grand Total, a $1 difference. All values remain literal; no cause or balancing adjustment is inferred. Compiled entries, where present, are retained while their edition labels and employee/trustee scopes await comparison with this complete original. No equivalence between a compiled edition label and this fiscal year is assumed.",
+      "notes": [
+        "Remuneration and expenses are separate literal published monetary columns; these are observations for the source period and are not annualized base salary rates.",
+        "Poppler physical text rows and independently grouped MuPDF words agree on every named row and field, in order and multiplicity. Native words, continuation lines, coordinates and source controls remain in the original proof.",
+        "The source reconciliation physical70 states cash-basis remuneration versus accrual-basis financial-statement salaries/benefits, includes seconded employee amounts and some capital-project payments and employee expenses, and excludes severance agreement payments.",
+        "Source footnotes identify * Provincial Schools Outreach Program travel and ** International Student Recruitment travel/marketing; literal markers remain attached to published names.",
+        "Only named payments are imported. Below-threshold aggregates, employer CPP/EI, suppliers and financial-statement totals remain excluded.",
+        "Published spelling, initials, name order, punctuation, footnote markers and visible titles remain literal. No identity, full name or annual rate is inferred. A blank or dash expense remains null and an explicit zero remains zero."
+      ],
+      "validation": {
+        "originalFingerprintVerified": true,
+        "independentReaders": [
+          "Poppler pdftotext physical layout lines",
+          "MuPDF independently grouped word geometry"
+        ],
+        "rowsIndependentlyChecked": 1010,
+        "allSixFieldsOrderMultiplicityAgree": true,
+        "rowsByPhysicalPage": {
+          "51": 43,
+          "52": 59,
+          "53": 59,
+          "54": 59,
+          "55": 59,
+          "56": 59,
+          "57": 59,
+          "58": 59,
+          "59": 59,
+          "60": 59,
+          "61": 59,
+          "62": 59,
+          "63": 59,
+          "64": 59,
+          "65": 59,
+          "66": 59,
+          "67": 59,
+          "68": 23
+        },
+        "printedControlTotals": [
+          "107244313",
+          "1046933"
+        ],
+        "computedComponentTotals": [
+          "107244306",
+          "1046925"
+        ],
+        "controlResiduals": [
+          "-7",
+          "-8"
+        ],
+        "summaryReconciles": false,
+        "nullExpenseRows": 328,
+        "knownExpenseValueCount": 682,
+        "completeEmployeeSchedule": true,
+        "compiledPartitionRetained": true,
+        "compiledPartitionRetentionReason": "Full official-versus-compiled multiset comparison with exact source/data/baseline fingerprints remains for root review; compiled year labels and employee/trustee scope are not assumed equivalent.",
+        "zeroExpenseRows": 0,
+        "reportingPeriodBasis": "Complete remuneration schedule physical51 explicitly FISCAL YEAR ENDED JUNE30,2025; table continues through68.",
+        "salarySchedulePrintedPeriodEnd": "2025-06-30",
+        "approvalEvidence": {
+          "status": "independent-actual-original-image-period-check-complete",
+          "declarationPhysicalPage": 2,
+          "noAdoptionClaim": true,
+          "declarationPrintedPeriodEnd": "2025-06-30",
+          "signatures": "redacted or partly redacted; no visual signature authentication claimed"
+        },
+        "nativeProofFile": "research/salaries/queue-completion-2026-11-01/schools/sd44-2025-native-candidate.json.gzip",
+        "nativeProofSha256": "a4eb351944a2f2e5222d5e23de2da62e50077fabada0e930d7105345b3fff047",
+        "independentPeerReviewPending": false,
+        "independentPeerReview": {
+          "file": "research/salaries/queue-completion-2026-11-01/reviews/independent-school-queue-native-comparison.json",
+          "sha256": "b28f1cbf3f3265f152b371060a09c75a537050dba267998b51b31d08f9f91ce4"
+        }
+      }
+    },
+    {
+      "id": "queue-completion-schools-sd23-2025-trustees",
+      "employerSlug": "school-district-23",
+      "employerName": "School District No. 23 (Central Okanagan)",
+      "sector": "School districts",
+      "year": "2024/25",
+      "slug": "2024-25",
+      "periodType": "fiscal",
+      "periodStart": "2024-07-01",
+      "periodEnd": "2025-06-30",
+      "title": "School District No. 23 (Central Okanagan), year ended June 30, 2025: trustees",
+      "sourceUrl": "https://www2.gov.bc.ca/assets/gov/education/administration/resource-management/school-district-financial-reporting/financial-information/sd23-sofi-2025.pdf",
+      "sourceIndexUrl": "https://www2.gov.bc.ca/gov/content/education-training/k-12/administration/financial-management/school-district-financial-reporting/statement-of-financial-information",
+      "sha256": "d758ecad8b34d2ba29793b5db995d1bac4d1b592265732f56222ee79fe8e592b",
+      "file": "sd23-2025-trustees.json.gzip",
+      "dataSha256": "e9a2ae81bfa1a3a008895104cf321037ead357648ee845b7038b4b2b2a8de0c7",
+      "normalizedSha256": "b8f3642b42937c53220f04efdb72c4746b69d3df53e0cdd059aaf093cc4659c8",
+      "provenanceFile": "sd23-2025-trustees-evidence.json.gzip",
+      "provenanceSha256": "90e83b8738278e3689f52d8cba7306afe1f765cbc20b42b5c40575191c9389f0",
+      "category": "school-trustees",
+      "scope": "school-trustees",
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "amountPrecision": "whole-dollars",
+      "scopeDescription": "Complete published school trustee/official table",
+      "nameDisclosure": "published-name-as-disclosed",
+      "positionDisclosure": "published-visible-text-only",
+      "pages": [
+        55
+      ],
+      "rowCount": 7,
+      "totalRemuneration": 179392,
+      "totalExpenses": 118845,
+      "status": "verified",
+      "sourceKind": "official",
+      "completeEmployeeSchedule": false,
+      "retainCompiledPartition": true,
+      "verifiedOn": "2026-11-01",
+      "publicWarning": "Compiled entries, where present, are retained while their edition labels and employee/trustee scopes await comparison with this complete original. No equivalence between a compiled edition label and this fiscal year is assumed.",
+      "notes": [
+        "Complete named tables are preserved by source category and printed year; no full name, identity or annualization is inferred.",
+        "Raw Poppler layout lines and independently grouped MuPDF words are retained; all fields/order/multiplicity agree after explicit source-image boundary amendments, if any.",
+        "The source lists Canada Revenue Agency as a separate expense-only organization row; that $14,944,315 is not an individual salary observation and is not allocated across employees. Asterisks on expenses identify international student recruitment travel.",
+        "Only named payments are imported. Below-threshold aggregates, employer CPP/EI, suppliers and financial-statement totals remain excluded.",
+        "Published spelling, initials, name order, punctuation, footnote markers and visible titles remain literal. No identity, full name or annual rate is inferred. A blank or dash expense remains null and an explicit zero remains zero."
+      ],
+      "validation": {
+        "originalFingerprintVerified": true,
+        "independentReaders": [
+          "Poppler pdftotext physical layout lines",
+          "MuPDF independently grouped word geometry"
+        ],
+        "rowsIndependentlyChecked": 7,
+        "allSixFieldsOrderMultiplicityAgree": true,
+        "rowsByPhysicalPage": {
+          "55": 7
+        },
+        "printedControlTotals": [
+          "179392",
+          "118845"
+        ],
+        "computedComponentTotals": [
+          "179392",
+          "118845"
+        ],
+        "controlResiduals": [
+          "0",
+          "0"
+        ],
+        "summaryReconciles": true,
+        "nullExpenseRows": 0,
+        "knownExpenseValueCount": 7,
+        "completeEmployeeSchedule": false,
+        "compiledPartitionRetained": true,
+        "compiledPartitionRetentionReason": "Full official-versus-compiled multiset comparison with exact source/data/baseline fingerprints remains for root review; compiled year labels and employee/trustee scope are not assumed equivalent.",
+        "zeroExpenseRows": 0,
+        "reportingPeriodBasis": "Complete source remuneration table physical pages55–78 explicitly identifies the year/period ended June 30, 2025; continuous unheaded continuation pages use their directly connected table heading.",
+        "salarySchedulePrintedPeriodEnd": "2025-06-30",
+        "approvalEvidence": {
+          "status": "independent-actual-original-image-period-and-control-review-complete",
+          "declarationPhysicalPage": 3,
+          "declarationPrintedPeriodEnd": "2025-06-30",
+          "declarationDateFieldsLiteral": [
+            "December10,2025",
+            "December11,2025",
+            "December10,2025"
+          ],
+          "signatureAreasRedacted": true,
+          "underlyingSignatureValidityOrIdentityClaimed": false,
+          "noApprovalYearContradictionObserved": true,
+          "noAdoptionClaim": true,
+          "sourceContextReview": {
+            "file": "research/salaries/queue-completion-2026-11-01/reviews/independent-school-extension-acquisition-control-period-visual-review.json",
+            "sha256": "605300a61dfb759a11e51e363acdfa132144a5a800a0115468fe5c890b509787"
+          }
+        },
+        "nativeProofFile": "research/salaries/queue-completion-2026-11-01/schools/sd23-2025-native-candidate.json.gzip",
+        "nativeProofSha256": "f37ecd2623e514bf933bc92295f6cccf21c445e17d29a2a71bf1a3cab53a7f6a",
+        "independentPeerReviewPending": false,
+        "independentPeerReview": {
+          "file": "research/salaries/queue-completion-2026-11-01/reviews/independent-school-extension-acquisition-final-row-comparison.json",
+          "sha256": "ee818a4838770d13c23cfd3d2e24842c48eeee3395c3bb837645acba9c893a7b",
+          "originalContextReview": {
+            "file": "research/salaries/queue-completion-2026-11-01/reviews/independent-school-extension-acquisition-control-period-visual-review.json",
+            "sha256": "605300a61dfb759a11e51e363acdfa132144a5a800a0115468fe5c890b509787"
+          }
+        }
+      }
+    },
+    {
+      "id": "queue-completion-schools-sd23-2025-employees",
+      "employerSlug": "school-district-23",
+      "employerName": "School District No. 23 (Central Okanagan)",
+      "sector": "School districts",
+      "year": "2024/25",
+      "slug": "2024-25",
+      "periodType": "fiscal",
+      "periodStart": "2024-07-01",
+      "periodEnd": "2025-06-30",
+      "title": "School District No. 23 (Central Okanagan), year ended June 30, 2025: employees",
+      "sourceUrl": "https://www2.gov.bc.ca/assets/gov/education/administration/resource-management/school-district-financial-reporting/financial-information/sd23-sofi-2025.pdf",
+      "sourceIndexUrl": "https://www2.gov.bc.ca/gov/content/education-training/k-12/administration/financial-management/school-district-financial-reporting/statement-of-financial-information",
+      "sha256": "d758ecad8b34d2ba29793b5db995d1bac4d1b592265732f56222ee79fe8e592b",
+      "file": "sd23-2025-employees.json.gzip",
+      "dataSha256": "1279da985d0bcc44888182ef96866b1e87133007e177e69007b3e35f0cc19681",
+      "normalizedSha256": "1cb8ab6aeb4b30b63be790be032d371fbcd2a0af6ec821e3d0c9f760a7d36ad1",
+      "provenanceFile": "sd23-2025-employees-evidence.json.gzip",
+      "provenanceSha256": "2cfe2baf31b06894abed3a02d7761a45a13c7474755e93025907da4f0c668332",
+      "category": "employee-remuneration",
+      "scope": "employee-remuneration",
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "amountPrecision": "whole-dollars",
+      "scopeDescription": "Complete published named employee remuneration table at the source disclosure threshold",
+      "nameDisclosure": "published-name-as-disclosed",
+      "positionDisclosure": "published-visible-text-only",
+      "pages": [
+        56,
+        57,
+        58,
+        59,
+        60,
+        61,
+        62,
+        63,
+        64,
+        65,
+        66,
+        67,
+        68,
+        69,
+        70,
+        71,
+        72,
+        73,
+        74,
+        75,
+        76,
+        77,
+        78
+      ],
+      "rowCount": 1626,
+      "totalRemuneration": 168883510,
+      "totalExpenses": 1277207,
+      "status": "verified",
+      "sourceKind": "official",
+      "completeEmployeeSchedule": true,
+      "retainCompiledPartition": true,
+      "verifiedOn": "2026-11-01",
+      "publicWarning": "The 1626 named employee rows total $168,883,510.00 remuneration and $1,277,207.00 known expenses. The printed named-scope controls are $168,883,439.00, unprinted. All rows and printed controls remain literal; no cause or balancing adjustment is inferred. Physical page 78 also lists $14,944,315 expenses for Canada Revenue Agency and prints subtotal expenses $16,221,483. Named known expenses plus that non-individual amount total $16,221,522, $39 above the printed subtotal. No amount is allocated to employees or changed to balance. Employee names are disclosed as surname/initial strings and are preserved without expansion. Compiled entries, where present, are retained while their edition labels and employee/trustee scopes await comparison with this complete original. No equivalence between a compiled edition label and this fiscal year is assumed.",
+      "notes": [
+        "Complete named tables are preserved by source category and printed year; no full name, identity or annualization is inferred.",
+        "Raw Poppler layout lines and independently grouped MuPDF words are retained; all fields/order/multiplicity agree after explicit source-image boundary amendments, if any.",
+        "The source lists Canada Revenue Agency as a separate expense-only organization row; that $14,944,315 is not an individual salary observation and is not allocated across employees. Asterisks on expenses identify international student recruitment travel.",
+        "Only named payments are imported. Below-threshold aggregates, employer CPP/EI, suppliers and financial-statement totals remain excluded.",
+        "Published spelling, initials, name order, punctuation, footnote markers and visible titles remain literal. No identity, full name or annual rate is inferred. A blank or dash expense remains null and an explicit zero remains zero."
+      ],
+      "validation": {
+        "originalFingerprintVerified": true,
+        "independentReaders": [
+          "Poppler pdftotext physical layout lines",
+          "MuPDF independently grouped word geometry"
+        ],
+        "rowsIndependentlyChecked": 1626,
+        "allSixFieldsOrderMultiplicityAgree": true,
+        "rowsByPhysicalPage": {
+          "56": 66,
+          "57": 71,
+          "58": 70,
+          "59": 71,
+          "60": 70,
+          "61": 71,
+          "62": 69,
+          "63": 70,
+          "64": 71,
+          "65": 70,
+          "66": 71,
+          "67": 71,
+          "68": 71,
+          "69": 71,
+          "70": 71,
+          "71": 71,
+          "72": 71,
+          "73": 71,
+          "74": 71,
+          "75": 71,
+          "76": 70,
+          "77": 76,
+          "78": 71
+        },
+        "printedControlTotals": [
+          "168883439",
+          null
+        ],
+        "computedComponentTotals": [
+          "168883510",
+          "1277207"
+        ],
+        "controlResiduals": [
+          "71",
+          null
+        ],
+        "summaryReconciles": false,
+        "nullExpenseRows": 47,
+        "knownExpenseValueCount": 1579,
+        "completeEmployeeSchedule": true,
+        "compiledPartitionRetained": true,
+        "compiledPartitionRetentionReason": "Full official-versus-compiled multiset comparison with exact source/data/baseline fingerprints remains for root review; compiled year labels and employee/trustee scope are not assumed equivalent.",
+        "zeroExpenseRows": 0,
+        "reportingPeriodBasis": "Complete source remuneration table physical pages55–78 explicitly identifies the year/period ended June 30, 2025; continuous unheaded continuation pages use their directly connected table heading.",
+        "salarySchedulePrintedPeriodEnd": "2025-06-30",
+        "approvalEvidence": {
+          "status": "independent-actual-original-image-period-and-control-review-complete",
+          "declarationPhysicalPage": 3,
+          "declarationPrintedPeriodEnd": "2025-06-30",
+          "declarationDateFieldsLiteral": [
+            "December10,2025",
+            "December11,2025",
+            "December10,2025"
+          ],
+          "signatureAreasRedacted": true,
+          "underlyingSignatureValidityOrIdentityClaimed": false,
+          "noApprovalYearContradictionObserved": true,
+          "noAdoptionClaim": true,
+          "sourceContextReview": {
+            "file": "research/salaries/queue-completion-2026-11-01/reviews/independent-school-extension-acquisition-control-period-visual-review.json",
+            "sha256": "605300a61dfb759a11e51e363acdfa132144a5a800a0115468fe5c890b509787"
+          }
+        },
+        "nativeProofFile": "research/salaries/queue-completion-2026-11-01/schools/sd23-2025-native-candidate.json.gzip",
+        "nativeProofSha256": "f37ecd2623e514bf933bc92295f6cccf21c445e17d29a2a71bf1a3cab53a7f6a",
+        "independentPeerReviewPending": false,
+        "independentPeerReview": {
+          "file": "research/salaries/queue-completion-2026-11-01/reviews/independent-school-extension-acquisition-final-row-comparison.json",
+          "sha256": "ee818a4838770d13c23cfd3d2e24842c48eeee3395c3bb837645acba9c893a7b",
+          "originalContextReview": {
+            "file": "research/salaries/queue-completion-2026-11-01/reviews/independent-school-extension-acquisition-control-period-visual-review.json",
+            "sha256": "605300a61dfb759a11e51e363acdfa132144a5a800a0115468fe5c890b509787"
+          }
+        }
+      }
+    },
+    {
+      "id": "queue-completion-schools-sd33-2025-trustees",
+      "employerSlug": "chilliwack-school-district",
+      "employerName": "School District No. 33 (Chilliwack)",
+      "sector": "School districts",
+      "year": "2024/25",
+      "slug": "2024-25",
+      "periodType": "fiscal",
+      "periodStart": "2024-07-01",
+      "periodEnd": "2025-06-30",
+      "title": "School District No. 33 (Chilliwack), year ended June 30, 2025: trustees",
+      "sourceUrl": "https://www2.gov.bc.ca/assets/gov/education/administration/resource-management/school-district-financial-reporting/financial-information/sd33-sofi-2025.pdf",
+      "sourceIndexUrl": "https://www2.gov.bc.ca/gov/content/education-training/k-12/administration/financial-management/school-district-financial-reporting/statement-of-financial-information",
+      "sha256": "54081f46322e58e7f9a3a77f51105e65e705a0bffc63812bab135390f5b3a485",
+      "file": "sd33-2025-trustees.json.gzip",
+      "dataSha256": "99c237349b8941b0293eb7d16a7204bde3c48f5d0b68c25f6c0102960ef1e402",
+      "normalizedSha256": "6dd6a38cdeaf0551594d7fccaf324888713b6532f2707cebf1d22f6594be2ffb",
+      "provenanceFile": "sd33-2025-trustees-evidence.json.gzip",
+      "provenanceSha256": "a65e1c50c4f385823a267fe5b94d5b220fe9c3cb33bbd60ba67fece836e739a0",
+      "category": "school-trustees",
+      "scope": "school-trustees",
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "amountPrecision": "cents",
+      "scopeDescription": "Complete published school trustee/official table",
+      "nameDisclosure": "published-name-as-disclosed",
+      "positionDisclosure": "published-visible-text-only",
+      "pages": [
+        81
+      ],
+      "rowCount": 8,
+      "totalRemuneration": 176445.89,
+      "totalExpenses": 15454.54,
+      "status": "verified",
+      "sourceKind": "official",
+      "completeEmployeeSchedule": false,
+      "retainCompiledPartition": true,
+      "verifiedOn": "2026-11-01",
+      "publicWarning": "Compiled entries, where present, are retained while their edition labels and employee/trustee scopes await comparison with this complete original. No equivalence between a compiled edition label and this fiscal year is assumed.",
+      "notes": [
+        "Complete named tables are preserved by source category and printed year; no full name, identity or annualization is inferred.",
+        "Raw Poppler layout lines and independently grouped MuPDF words are retained; all fields/order/multiplicity agree after explicit source-image boundary amendments, if any.",
+        "Only named payments are imported. Below-threshold aggregates, employer CPP/EI, suppliers and financial-statement totals remain excluded.",
+        "Published spelling, initials, name order, punctuation, footnote markers and visible titles remain literal. No identity, full name or annual rate is inferred. A blank or dash expense remains null and an explicit zero remains zero."
+      ],
+      "validation": {
+        "originalFingerprintVerified": true,
+        "independentReaders": [
+          "Poppler pdftotext physical layout lines",
+          "MuPDF independently grouped word geometry"
+        ],
+        "rowsIndependentlyChecked": 8,
+        "allSixFieldsOrderMultiplicityAgree": true,
+        "rowsByPhysicalPage": {
+          "81": 8
+        },
+        "printedControlTotals": [
+          "176445.89",
+          "15454.54"
+        ],
+        "computedComponentTotals": [
+          "176445.89",
+          "15454.54"
+        ],
+        "controlResiduals": [
+          "0.00",
+          "0.00"
+        ],
+        "summaryReconciles": true,
+        "nullExpenseRows": 0,
+        "knownExpenseValueCount": 8,
+        "completeEmployeeSchedule": false,
+        "compiledPartitionRetained": true,
+        "compiledPartitionRetentionReason": "Full official-versus-compiled multiset comparison with exact source/data/baseline fingerprints remains for root review; compiled year labels and employee/trustee scope are not assumed equivalent.",
+        "zeroExpenseRows": 0,
+        "reportingPeriodBasis": "Complete source remuneration table physical pages53–81 explicitly identifies the year/period ended June 30, 2025; continuous unheaded continuation pages use their directly connected table heading.",
+        "salarySchedulePrintedPeriodEnd": "2025-06-30",
+        "approvalEvidence": {
+          "status": "independent-actual-original-image-period-and-control-review-complete",
+          "declarationPhysicalPage": 1,
+          "declarationPrintedPeriodEnd": "2025-06-30",
+          "declarationDateFieldsLiteral": [
+            "December10,2025",
+            "December10,2025",
+            "December10,2025"
+          ],
+          "signatureAreasRedacted": true,
+          "underlyingSignatureValidityOrIdentityClaimed": false,
+          "noApprovalYearContradictionObserved": true,
+          "noAdoptionClaim": true,
+          "sourceContextReview": {
+            "file": "research/salaries/queue-completion-2026-11-01/reviews/independent-school-extension-acquisition-control-period-visual-review.json",
+            "sha256": "605300a61dfb759a11e51e363acdfa132144a5a800a0115468fe5c890b509787"
+          }
+        },
+        "nativeProofFile": "research/salaries/queue-completion-2026-11-01/schools/sd33-2025-native-candidate.json.gzip",
+        "nativeProofSha256": "74d95a29a40efaaecc003844e1d9416f59d339263ad919113c32d3646274dcb0",
+        "independentPeerReviewPending": false,
+        "independentPeerReview": {
+          "file": "research/salaries/queue-completion-2026-11-01/reviews/independent-school-extension-acquisition-final-row-comparison.json",
+          "sha256": "ee818a4838770d13c23cfd3d2e24842c48eeee3395c3bb837645acba9c893a7b",
+          "originalContextReview": {
+            "file": "research/salaries/queue-completion-2026-11-01/reviews/independent-school-extension-acquisition-control-period-visual-review.json",
+            "sha256": "605300a61dfb759a11e51e363acdfa132144a5a800a0115468fe5c890b509787"
+          }
+        }
+      }
+    },
+    {
+      "id": "queue-completion-schools-sd33-2025-employees",
+      "employerSlug": "chilliwack-school-district",
+      "employerName": "School District No. 33 (Chilliwack)",
+      "sector": "School districts",
+      "year": "2024/25",
+      "slug": "2024-25",
+      "periodType": "fiscal",
+      "periodStart": "2024-07-01",
+      "periodEnd": "2025-06-30",
+      "title": "School District No. 33 (Chilliwack), year ended June 30, 2025: employees",
+      "sourceUrl": "https://www2.gov.bc.ca/assets/gov/education/administration/resource-management/school-district-financial-reporting/financial-information/sd33-sofi-2025.pdf",
+      "sourceIndexUrl": "https://www2.gov.bc.ca/gov/content/education-training/k-12/administration/financial-management/school-district-financial-reporting/statement-of-financial-information",
+      "sha256": "54081f46322e58e7f9a3a77f51105e65e705a0bffc63812bab135390f5b3a485",
+      "file": "sd33-2025-employees.json.gzip",
+      "dataSha256": "4a7bc1fac0122d2e601e9dd626a6dd45d19f2b5c476c705f1fb7ae07d955e175",
+      "normalizedSha256": "fb5c38fe57588366b3e3abad45549240df8ca34991e2237b63aff9a193c7b391",
+      "provenanceFile": "sd33-2025-employees-evidence.json.gzip",
+      "provenanceSha256": "1eda66354975de76c1782089d6062b660853701060a56b454e8924d691bba398",
+      "category": "employee-remuneration",
+      "scope": "employee-remuneration",
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "amountPrecision": "whole-dollars",
+      "scopeDescription": "Complete published named employee remuneration table at the source disclosure threshold",
+      "nameDisclosure": "published-name-as-disclosed",
+      "positionDisclosure": "published-visible-text-only",
+      "pages": [
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61,
+        62,
+        63,
+        64,
+        65,
+        66,
+        67,
+        68,
+        69,
+        70,
+        71,
+        72,
+        73,
+        74,
+        75,
+        76,
+        77,
+        78,
+        79,
+        80
+      ],
+      "rowCount": 1010,
+      "totalRemuneration": 105111247,
+      "totalExpenses": 1185398,
+      "status": "verified",
+      "sourceKind": "official",
+      "completeEmployeeSchedule": true,
+      "retainCompiledPartition": true,
+      "verifiedOn": "2026-11-01",
+      "publicWarning": "The 1010 named employee rows total $105,111,247.00 remuneration and $1,185,398.00 known expenses. The printed named-scope controls are $105,111,247.00, $1,185,404.00. All rows and printed controls remain literal; no cause or balancing adjustment is inferred. Compiled entries, where present, are retained while their edition labels and employee/trustee scopes await comparison with this complete original. No equivalence between a compiled edition label and this fiscal year is assumed.",
+      "notes": [
+        "Complete named tables are preserved by source category and printed year; no full name, identity or annualization is inferred.",
+        "Raw Poppler layout lines and independently grouped MuPDF words are retained; all fields/order/multiplicity agree after explicit source-image boundary amendments, if any.",
+        "Only named payments are imported. Below-threshold aggregates, employer CPP/EI, suppliers and financial-statement totals remain excluded.",
+        "Published spelling, initials, name order, punctuation, footnote markers and visible titles remain literal. No identity, full name or annual rate is inferred. A blank or dash expense remains null and an explicit zero remains zero."
+      ],
+      "validation": {
+        "originalFingerprintVerified": true,
+        "independentReaders": [
+          "Poppler pdftotext physical layout lines",
+          "MuPDF independently grouped word geometry"
+        ],
+        "rowsIndependentlyChecked": 1010,
+        "allSixFieldsOrderMultiplicityAgree": true,
+        "rowsByPhysicalPage": {
+          "53": 37,
+          "54": 37,
+          "55": 37,
+          "56": 37,
+          "57": 37,
+          "58": 37,
+          "59": 37,
+          "60": 37,
+          "61": 37,
+          "62": 37,
+          "63": 37,
+          "64": 37,
+          "65": 37,
+          "66": 37,
+          "67": 37,
+          "68": 37,
+          "69": 37,
+          "70": 37,
+          "71": 37,
+          "72": 37,
+          "73": 37,
+          "74": 37,
+          "75": 37,
+          "76": 37,
+          "77": 38,
+          "78": 38,
+          "79": 38,
+          "80": 8
+        },
+        "printedControlTotals": [
+          "105111247",
+          "1185404"
+        ],
+        "computedComponentTotals": [
+          "105111247",
+          "1185398"
+        ],
+        "controlResiduals": [
+          "0",
+          "-6"
+        ],
+        "summaryReconciles": false,
+        "nullExpenseRows": 216,
+        "knownExpenseValueCount": 794,
+        "completeEmployeeSchedule": true,
+        "compiledPartitionRetained": true,
+        "compiledPartitionRetentionReason": "Full official-versus-compiled multiset comparison with exact source/data/baseline fingerprints remains for root review; compiled year labels and employee/trustee scope are not assumed equivalent.",
+        "zeroExpenseRows": 0,
+        "reportingPeriodBasis": "Complete source remuneration table physical pages53–81 explicitly identifies the year/period ended June 30, 2025; continuous unheaded continuation pages use their directly connected table heading.",
+        "salarySchedulePrintedPeriodEnd": "2025-06-30",
+        "approvalEvidence": {
+          "status": "independent-actual-original-image-period-and-control-review-complete",
+          "declarationPhysicalPage": 1,
+          "declarationPrintedPeriodEnd": "2025-06-30",
+          "declarationDateFieldsLiteral": [
+            "December10,2025",
+            "December10,2025",
+            "December10,2025"
+          ],
+          "signatureAreasRedacted": true,
+          "underlyingSignatureValidityOrIdentityClaimed": false,
+          "noApprovalYearContradictionObserved": true,
+          "noAdoptionClaim": true,
+          "sourceContextReview": {
+            "file": "research/salaries/queue-completion-2026-11-01/reviews/independent-school-extension-acquisition-control-period-visual-review.json",
+            "sha256": "605300a61dfb759a11e51e363acdfa132144a5a800a0115468fe5c890b509787"
+          }
+        },
+        "nativeProofFile": "research/salaries/queue-completion-2026-11-01/schools/sd33-2025-native-candidate.json.gzip",
+        "nativeProofSha256": "74d95a29a40efaaecc003844e1d9416f59d339263ad919113c32d3646274dcb0",
+        "independentPeerReviewPending": false,
+        "independentPeerReview": {
+          "file": "research/salaries/queue-completion-2026-11-01/reviews/independent-school-extension-acquisition-final-row-comparison.json",
+          "sha256": "ee818a4838770d13c23cfd3d2e24842c48eeee3395c3bb837645acba9c893a7b",
+          "originalContextReview": {
+            "file": "research/salaries/queue-completion-2026-11-01/reviews/independent-school-extension-acquisition-control-period-visual-review.json",
+            "sha256": "605300a61dfb759a11e51e363acdfa132144a5a800a0115468fe5c890b509787"
+          }
+        }
+      }
+    },
+    {
+      "id": "queue-completion-schools-sd36-2025-trustees",
+      "employerSlug": "surrey-school-district",
+      "employerName": "School District No. 36 (Surrey)",
+      "sector": "School districts",
+      "year": "2024/25",
+      "slug": "2024-25",
+      "periodType": "fiscal",
+      "periodStart": "2024-07-01",
+      "periodEnd": "2025-06-30",
+      "title": "School District No. 36 (Surrey), year ended June 30, 2025: trustees",
+      "sourceUrl": "https://www2.gov.bc.ca/assets/gov/education/administration/resource-management/school-district-financial-reporting/financial-information/sd36-sofi-2025.pdf",
+      "sourceIndexUrl": "https://www2.gov.bc.ca/gov/content/education-training/k-12/administration/financial-management/school-district-financial-reporting/statement-of-financial-information",
+      "sha256": "54a0085e389890c6b5f4d4bce9336cf05fad3c73c9469105d7bdb7bcdf43785f",
+      "file": "sd36-2025-trustees.json.gzip",
+      "dataSha256": "bbc17a11b5b7335a7603fe3860c8876dbf6a352e7ee9950cbf5e7e6b441f9aa5",
+      "normalizedSha256": "8cdc8a7b616e35df99d3af49ccfd7ef5bac6a8ccb7d503742c2ffb986f0840ac",
+      "provenanceFile": "sd36-2025-trustees-evidence.json.gzip",
+      "provenanceSha256": "e42abab5317b0f0c46e400299bfd74ef8beb4e903906fae92fb15984a7e7d21a",
+      "category": "school-trustees",
+      "scope": "school-trustees",
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "amountPrecision": "whole-dollars",
+      "scopeDescription": "Complete published school trustee/official table",
+      "nameDisclosure": "published-name-as-disclosed",
+      "positionDisclosure": "published-visible-text-only",
+      "pages": [
+        56
+      ],
+      "rowCount": 7,
+      "totalRemuneration": 402462,
+      "totalExpenses": 36914,
+      "status": "verified",
+      "sourceKind": "official",
+      "completeEmployeeSchedule": false,
+      "retainCompiledPartition": true,
+      "verifiedOn": "2026-11-01",
+      "publicWarning": "The source explicitly marks this remuneration schedule Unaudited. Compiled entries, where present, are retained while their edition labels and employee/trustee scopes await comparison with this complete original. No equivalence between a compiled edition label and this fiscal year is assumed.",
+      "notes": [
+        "Complete named tables are preserved by source category and printed year; no full name, identity or annualization is inferred.",
+        "Raw Poppler layout lines and independently grouped MuPDF words are retained; all fields/order/multiplicity agree after explicit source-image boundary amendments, if any.",
+        "The source explicitly labels these schedules UNAUDITED. Published remuneration includes salary/wages, bonuses, gratuities, taxable benefits except MSP, and income deferrals, and excludes severance agreement payments; expenses are separately disclosed. No audit opinion on salary rows is asserted.",
+        "Only named payments are imported. Below-threshold aggregates, employer CPP/EI, suppliers and financial-statement totals remain excluded.",
+        "Published spelling, initials, name order, punctuation, footnote markers and visible titles remain literal. No identity, full name or annual rate is inferred. A blank or dash expense remains null and an explicit zero remains zero."
+      ],
+      "validation": {
+        "originalFingerprintVerified": true,
+        "independentReaders": [
+          "Poppler pdftotext physical layout lines",
+          "MuPDF independently grouped word geometry"
+        ],
+        "rowsIndependentlyChecked": 7,
+        "allSixFieldsOrderMultiplicityAgree": true,
+        "rowsByPhysicalPage": {
+          "56": 7
+        },
+        "printedControlTotals": [
+          "402462",
+          "36914"
+        ],
+        "computedComponentTotals": [
+          "402462",
+          "36914"
+        ],
+        "controlResiduals": [
+          "0",
+          "0"
+        ],
+        "summaryReconciles": true,
+        "nullExpenseRows": 0,
+        "knownExpenseValueCount": 7,
+        "completeEmployeeSchedule": false,
+        "compiledPartitionRetained": true,
+        "compiledPartitionRetentionReason": "Full official-versus-compiled multiset comparison with exact source/data/baseline fingerprints remains for root review; compiled year labels and employee/trustee scope are not assumed equivalent.",
+        "zeroExpenseRows": 0,
+        "reportingPeriodBasis": "Complete source remuneration table physical pages56–160 explicitly identifies the year/period ended June 30, 2025; continuous unheaded continuation pages use their directly connected table heading.",
+        "salarySchedulePrintedPeriodEnd": "2025-06-30",
+        "approvalEvidence": {
+          "status": "independent-actual-original-image-period-and-control-review-complete",
+          "declarationPhysicalPage": 3,
+          "declarationPrintedPeriodEnd": "2025-06-30",
+          "declarationDateFieldsLiteral": [
+            "December3,2025",
+            "December3,2025",
+            "December3,2025"
+          ],
+          "signatureAreasRedacted": true,
+          "underlyingSignatureValidityOrIdentityClaimed": false,
+          "noApprovalYearContradictionObserved": true,
+          "noAdoptionClaim": true,
+          "sourceContextReview": {
+            "file": "research/salaries/queue-completion-2026-11-01/reviews/independent-school-extension-acquisition-control-period-visual-review.json",
+            "sha256": "605300a61dfb759a11e51e363acdfa132144a5a800a0115468fe5c890b509787"
+          }
+        },
+        "nativeProofFile": "research/salaries/queue-completion-2026-11-01/schools/sd36-2025-native-candidate.json.gzip",
+        "nativeProofSha256": "72fe38d43115ed6e04f869d68a22acac6fd01ddbfe45babd47b02e85701812e0",
+        "independentPeerReviewPending": false,
+        "independentPeerReview": {
+          "file": "research/salaries/queue-completion-2026-11-01/reviews/independent-school-extension-acquisition-final-row-comparison.json",
+          "sha256": "ee818a4838770d13c23cfd3d2e24842c48eeee3395c3bb837645acba9c893a7b",
+          "originalContextReview": {
+            "file": "research/salaries/queue-completion-2026-11-01/reviews/independent-school-extension-acquisition-control-period-visual-review.json",
+            "sha256": "605300a61dfb759a11e51e363acdfa132144a5a800a0115468fe5c890b509787"
+          }
+        }
+      }
+    },
+    {
+      "id": "queue-completion-schools-sd36-2025-employees",
+      "employerSlug": "surrey-school-district",
+      "employerName": "School District No. 36 (Surrey)",
+      "sector": "School districts",
+      "year": "2024/25",
+      "slug": "2024-25",
+      "periodType": "fiscal",
+      "periodStart": "2024-07-01",
+      "periodEnd": "2025-06-30",
+      "title": "School District No. 36 (Surrey), year ended June 30, 2025: employees",
+      "sourceUrl": "https://www2.gov.bc.ca/assets/gov/education/administration/resource-management/school-district-financial-reporting/financial-information/sd36-sofi-2025.pdf",
+      "sourceIndexUrl": "https://www2.gov.bc.ca/gov/content/education-training/k-12/administration/financial-management/school-district-financial-reporting/statement-of-financial-information",
+      "sha256": "54a0085e389890c6b5f4d4bce9336cf05fad3c73c9469105d7bdb7bcdf43785f",
+      "file": "sd36-2025-employees.json.gzip",
+      "dataSha256": "419dff5bf4eaf82bff9633b7e61cd8615a1b97378b04b37c820d2e3d3019336b",
+      "normalizedSha256": "c8a09ebee610d7671447910069ab57011025d9cd7ba9406c37ab906a358712dc",
+      "provenanceFile": "sd36-2025-employees-evidence.json.gzip",
+      "provenanceSha256": "e1710221134341b8c02ad925acd64384021f00d84a6b5cba61ba7557ae9c663e",
+      "category": "employee-remuneration",
+      "scope": "employee-remuneration",
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "amountPrecision": "whole-dollars",
+      "scopeDescription": "Complete published named employee remuneration table at the source disclosure threshold",
+      "nameDisclosure": "published-name-as-disclosed",
+      "positionDisclosure": "published-visible-text-only",
+      "pages": [
+        58,
+        59,
+        60,
+        61,
+        62,
+        63,
+        64,
+        65,
+        66,
+        67,
+        68,
+        69,
+        70,
+        71,
+        72,
+        73,
+        74,
+        75,
+        76,
+        77,
+        78,
+        79,
+        80,
+        81,
+        82,
+        83,
+        84,
+        85,
+        86,
+        87,
+        88,
+        89,
+        90,
+        91,
+        92,
+        93,
+        94,
+        95,
+        96,
+        97,
+        98,
+        99,
+        100,
+        101,
+        102,
+        103,
+        104,
+        105,
+        106,
+        107,
+        108,
+        109,
+        110,
+        111,
+        112,
+        113,
+        114,
+        115,
+        116,
+        117,
+        118,
+        119,
+        120,
+        121,
+        122,
+        123,
+        124,
+        125,
+        126,
+        127,
+        128,
+        129,
+        130,
+        131,
+        132,
+        133,
+        134,
+        135,
+        136,
+        137,
+        138,
+        139,
+        140,
+        141,
+        142,
+        143,
+        144,
+        145,
+        146,
+        147,
+        148,
+        149,
+        150,
+        151,
+        152,
+        153,
+        154,
+        155,
+        156,
+        157,
+        158,
+        159,
+        160
+      ],
+      "rowCount": 4823,
+      "totalRemuneration": 507041341,
+      "totalExpenses": 1451515,
+      "status": "verified",
+      "sourceKind": "official",
+      "completeEmployeeSchedule": true,
+      "retainCompiledPartition": true,
+      "verifiedOn": "2026-11-01",
+      "publicWarning": "The 4823 named employee rows total $507,041,341.00 remuneration and $1,451,515.00 known expenses. The printed named-scope controls are $507,041,297.00, $1,451,506.00. All rows and printed controls remain literal; no cause or balancing adjustment is inferred. The source explicitly marks this remuneration schedule Unaudited. Compiled entries, where present, are retained while their edition labels and employee/trustee scopes await comparison with this complete original. No equivalence between a compiled edition label and this fiscal year is assumed.",
+      "notes": [
+        "Complete named tables are preserved by source category and printed year; no full name, identity or annualization is inferred.",
+        "Raw Poppler layout lines and independently grouped MuPDF words are retained; all fields/order/multiplicity agree after explicit source-image boundary amendments, if any.",
+        "The source explicitly labels these schedules UNAUDITED. Published remuneration includes salary/wages, bonuses, gratuities, taxable benefits except MSP, and income deferrals, and excludes severance agreement payments; expenses are separately disclosed. No audit opinion on salary rows is asserted.",
+        "Only named payments are imported. Below-threshold aggregates, employer CPP/EI, suppliers and financial-statement totals remain excluded.",
+        "Published spelling, initials, name order, punctuation, footnote markers and visible titles remain literal. No identity, full name or annual rate is inferred. A blank or dash expense remains null and an explicit zero remains zero."
+      ],
+      "validation": {
+        "originalFingerprintVerified": true,
+        "independentReaders": [
+          "Poppler pdftotext physical layout lines",
+          "MuPDF independently grouped word geometry"
+        ],
+        "rowsIndependentlyChecked": 4823,
+        "allSixFieldsOrderMultiplicityAgree": true,
+        "rowsByPhysicalPage": {
+          "58": 46,
+          "59": 47,
+          "60": 47,
+          "61": 47,
+          "62": 47,
+          "63": 47,
+          "64": 47,
+          "65": 47,
+          "66": 47,
+          "67": 47,
+          "68": 47,
+          "69": 47,
+          "70": 47,
+          "71": 47,
+          "72": 47,
+          "73": 47,
+          "74": 47,
+          "75": 47,
+          "76": 47,
+          "77": 47,
+          "78": 47,
+          "79": 47,
+          "80": 47,
+          "81": 47,
+          "82": 47,
+          "83": 47,
+          "84": 47,
+          "85": 47,
+          "86": 47,
+          "87": 47,
+          "88": 47,
+          "89": 47,
+          "90": 47,
+          "91": 47,
+          "92": 47,
+          "93": 47,
+          "94": 47,
+          "95": 47,
+          "96": 47,
+          "97": 47,
+          "98": 47,
+          "99": 47,
+          "100": 47,
+          "101": 47,
+          "102": 47,
+          "103": 47,
+          "104": 47,
+          "105": 47,
+          "106": 47,
+          "107": 47,
+          "108": 47,
+          "109": 47,
+          "110": 47,
+          "111": 47,
+          "112": 47,
+          "113": 47,
+          "114": 47,
+          "115": 47,
+          "116": 47,
+          "117": 47,
+          "118": 47,
+          "119": 47,
+          "120": 47,
+          "121": 47,
+          "122": 47,
+          "123": 47,
+          "124": 47,
+          "125": 47,
+          "126": 47,
+          "127": 47,
+          "128": 47,
+          "129": 47,
+          "130": 47,
+          "131": 47,
+          "132": 47,
+          "133": 47,
+          "134": 47,
+          "135": 47,
+          "136": 47,
+          "137": 47,
+          "138": 47,
+          "139": 47,
+          "140": 47,
+          "141": 47,
+          "142": 47,
+          "143": 47,
+          "144": 47,
+          "145": 47,
+          "146": 47,
+          "147": 47,
+          "148": 47,
+          "149": 47,
+          "150": 47,
+          "151": 47,
+          "152": 47,
+          "153": 47,
+          "154": 47,
+          "155": 47,
+          "156": 47,
+          "157": 47,
+          "158": 47,
+          "159": 47,
+          "160": 30
+        },
+        "printedControlTotals": [
+          "507041297",
+          "1451506"
+        ],
+        "computedComponentTotals": [
+          "507041341",
+          "1451515"
+        ],
+        "controlResiduals": [
+          "44",
+          "9"
+        ],
+        "summaryReconciles": false,
+        "nullExpenseRows": 0,
+        "knownExpenseValueCount": 4823,
+        "completeEmployeeSchedule": true,
+        "compiledPartitionRetained": true,
+        "compiledPartitionRetentionReason": "Full official-versus-compiled multiset comparison with exact source/data/baseline fingerprints remains for root review; compiled year labels and employee/trustee scope are not assumed equivalent.",
+        "zeroExpenseRows": 3893,
+        "reportingPeriodBasis": "Complete source remuneration table physical pages56–160 explicitly identifies the year/period ended June 30, 2025; continuous unheaded continuation pages use their directly connected table heading.",
+        "salarySchedulePrintedPeriodEnd": "2025-06-30",
+        "approvalEvidence": {
+          "status": "independent-actual-original-image-period-and-control-review-complete",
+          "declarationPhysicalPage": 3,
+          "declarationPrintedPeriodEnd": "2025-06-30",
+          "declarationDateFieldsLiteral": [
+            "December3,2025",
+            "December3,2025",
+            "December3,2025"
+          ],
+          "signatureAreasRedacted": true,
+          "underlyingSignatureValidityOrIdentityClaimed": false,
+          "noApprovalYearContradictionObserved": true,
+          "noAdoptionClaim": true,
+          "sourceContextReview": {
+            "file": "research/salaries/queue-completion-2026-11-01/reviews/independent-school-extension-acquisition-control-period-visual-review.json",
+            "sha256": "605300a61dfb759a11e51e363acdfa132144a5a800a0115468fe5c890b509787"
+          }
+        },
+        "nativeProofFile": "research/salaries/queue-completion-2026-11-01/schools/sd36-2025-native-candidate.json.gzip",
+        "nativeProofSha256": "72fe38d43115ed6e04f869d68a22acac6fd01ddbfe45babd47b02e85701812e0",
+        "independentPeerReviewPending": false,
+        "independentPeerReview": {
+          "file": "research/salaries/queue-completion-2026-11-01/reviews/independent-school-extension-acquisition-final-row-comparison.json",
+          "sha256": "ee818a4838770d13c23cfd3d2e24842c48eeee3395c3bb837645acba9c893a7b",
+          "originalContextReview": {
+            "file": "research/salaries/queue-completion-2026-11-01/reviews/independent-school-extension-acquisition-control-period-visual-review.json",
+            "sha256": "605300a61dfb759a11e51e363acdfa132144a5a800a0115468fe5c890b509787"
+          }
+        }
+      }
+    },
+    {
+      "id": "queue-completion-schools-sd43-2025-trustees",
+      "employerSlug": "coquitlam-school-district",
+      "employerName": "School District No. 43 (Coquitlam)",
+      "sector": "School districts",
+      "year": "2024/25",
+      "slug": "2024-25",
+      "periodType": "fiscal",
+      "periodStart": "2024-07-01",
+      "periodEnd": "2025-06-30",
+      "title": "School District No. 43 (Coquitlam), year ended June 30, 2025: trustees",
+      "sourceUrl": "https://www2.gov.bc.ca/assets/gov/education/administration/resource-management/school-district-financial-reporting/financial-information/sd43-sofi-2025.pdf",
+      "sourceIndexUrl": "https://www2.gov.bc.ca/gov/content/education-training/k-12/administration/financial-management/school-district-financial-reporting/statement-of-financial-information",
+      "sha256": "72150984c5e74fcc89fcf9cdee311d25e18cf49862db608f28337b98471b45ad",
+      "file": "sd43-2025-trustees.json.gzip",
+      "dataSha256": "b8cc42cb5a974bb9986c1b4eb0d644b1d2efd921c735975eb8aeac7c7f257399",
+      "normalizedSha256": "92a71d64f16dcdff3f1b711e58bdeac3ab88c403319f679193a7a195c6d384cc",
+      "provenanceFile": "sd43-2025-trustees-evidence.json.gzip",
+      "provenanceSha256": "962b121cf356e19e215fedf5fad995227055680f2030307f638c557b423675d0",
+      "category": "school-trustees",
+      "scope": "school-trustees",
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "amountPrecision": "cents",
+      "scopeDescription": "Complete published school trustee/official table",
+      "nameDisclosure": "published-name-as-disclosed",
+      "positionDisclosure": "published-visible-text-only",
+      "pages": [
+        60
+      ],
+      "rowCount": 10,
+      "totalRemuneration": 530585.19,
+      "totalExpenses": 36490.61,
+      "status": "verified",
+      "sourceKind": "official",
+      "completeEmployeeSchedule": false,
+      "retainCompiledPartition": true,
+      "verifiedOn": "2026-11-01",
+      "publicWarning": "The source explicitly marks this remuneration schedule Unaudited. Compiled entries, where present, are retained while their edition labels and employee/trustee scopes await comparison with this complete original. No equivalence between a compiled edition label and this fiscal year is assumed.",
+      "notes": [
+        "Complete named tables are preserved by source category and printed year; no full name, identity or annualization is inferred.",
+        "Raw Poppler layout lines and independently grouped MuPDF words are retained; all fields/order/multiplicity agree after explicit source-image boundary amendments, if any.",
+        "The source labels elected and employee schedules Unaudited. All explicit expense0.00 values remain zero.",
+        "Only named payments are imported. Below-threshold aggregates, employer CPP/EI, suppliers and financial-statement totals remain excluded.",
+        "Published spelling, initials, name order, punctuation, footnote markers and visible titles remain literal. No identity, full name or annual rate is inferred. A blank or dash expense remains null and an explicit zero remains zero."
+      ],
+      "validation": {
+        "originalFingerprintVerified": true,
+        "independentReaders": [
+          "Poppler pdftotext physical layout lines",
+          "MuPDF independently grouped word geometry"
+        ],
+        "rowsIndependentlyChecked": 10,
+        "allSixFieldsOrderMultiplicityAgree": true,
+        "rowsByPhysicalPage": {
+          "60": 10
+        },
+        "printedControlTotals": [
+          "530585.19",
+          "36490.61"
+        ],
+        "computedComponentTotals": [
+          "530585.19",
+          "36490.61"
+        ],
+        "controlResiduals": [
+          "0.00",
+          "0.00"
+        ],
+        "summaryReconciles": true,
+        "nullExpenseRows": 0,
+        "knownExpenseValueCount": 10,
+        "completeEmployeeSchedule": false,
+        "compiledPartitionRetained": true,
+        "compiledPartitionRetentionReason": "Full official-versus-compiled multiset comparison with exact source/data/baseline fingerprints remains for root review; compiled year labels and employee/trustee scope are not assumed equivalent.",
+        "zeroExpenseRows": 1,
+        "reportingPeriodBasis": "Complete source remuneration table physical pages60–103 explicitly identifies the year/period ended June 30, 2025; continuous unheaded continuation pages use their directly connected table heading.",
+        "salarySchedulePrintedPeriodEnd": "2025-06-30",
+        "approvalEvidence": {
+          "status": "independent-actual-original-image-period-and-control-review-complete",
+          "declarationPhysicalPage": 3,
+          "declarationPrintedPeriodEnd": "2025-06-30",
+          "declarationDateFieldsLiteral": [
+            "November25,2025",
+            "November25,2025",
+            "November25,2025"
+          ],
+          "signatureAreasRedacted": true,
+          "underlyingSignatureValidityOrIdentityClaimed": false,
+          "noApprovalYearContradictionObserved": true,
+          "noAdoptionClaim": true,
+          "sourceContextReview": {
+            "file": "research/salaries/queue-completion-2026-11-01/reviews/independent-school-extension-acquisition-control-period-visual-review.json",
+            "sha256": "605300a61dfb759a11e51e363acdfa132144a5a800a0115468fe5c890b509787"
+          }
+        },
+        "nativeProofFile": "research/salaries/queue-completion-2026-11-01/schools/sd43-2025-native-candidate.json.gzip",
+        "nativeProofSha256": "0e80fb66517b258180ef21d4c029133dcc34844bec1d7dadbab5fa8b09d8f28b",
+        "independentPeerReviewPending": false,
+        "independentPeerReview": {
+          "file": "research/salaries/queue-completion-2026-11-01/reviews/independent-school-extension-acquisition-final-row-comparison.json",
+          "sha256": "ee818a4838770d13c23cfd3d2e24842c48eeee3395c3bb837645acba9c893a7b",
+          "originalContextReview": {
+            "file": "research/salaries/queue-completion-2026-11-01/reviews/independent-school-extension-acquisition-control-period-visual-review.json",
+            "sha256": "605300a61dfb759a11e51e363acdfa132144a5a800a0115468fe5c890b509787"
+          }
+        }
+      }
+    },
+    {
+      "id": "queue-completion-schools-sd43-2025-employees",
+      "employerSlug": "coquitlam-school-district",
+      "employerName": "School District No. 43 (Coquitlam)",
+      "sector": "School districts",
+      "year": "2024/25",
+      "slug": "2024-25",
+      "periodType": "fiscal",
+      "periodStart": "2024-07-01",
+      "periodEnd": "2025-06-30",
+      "title": "School District No. 43 (Coquitlam), year ended June 30, 2025: employees",
+      "sourceUrl": "https://www2.gov.bc.ca/assets/gov/education/administration/resource-management/school-district-financial-reporting/financial-information/sd43-sofi-2025.pdf",
+      "sourceIndexUrl": "https://www2.gov.bc.ca/gov/content/education-training/k-12/administration/financial-management/school-district-financial-reporting/statement-of-financial-information",
+      "sha256": "72150984c5e74fcc89fcf9cdee311d25e18cf49862db608f28337b98471b45ad",
+      "file": "sd43-2025-employees.json.gzip",
+      "dataSha256": "641abbe86d8349b35f7d16be5747a4b79f3f68eb4851bbf21d9f2d11cceccbdd",
+      "normalizedSha256": "990bbce3263d5addcc181eed86685645210caec182e7dd5962df10c7036d5afe",
+      "provenanceFile": "sd43-2025-employees-evidence.json.gzip",
+      "provenanceSha256": "cb9673e9c478632e5daa940313152aa04888c412ac1e2f73d5793b25c3e63279",
+      "category": "employee-remuneration",
+      "scope": "employee-remuneration",
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "amountPrecision": "cents",
+      "scopeDescription": "Complete published named employee remuneration table at the source disclosure threshold",
+      "nameDisclosure": "published-name-as-disclosed",
+      "positionDisclosure": "published-visible-text-only",
+      "pages": [
+        61,
+        62,
+        63,
+        64,
+        65,
+        66,
+        67,
+        68,
+        69,
+        70,
+        71,
+        72,
+        73,
+        74,
+        75,
+        76,
+        77,
+        78,
+        79,
+        80,
+        81,
+        82,
+        83,
+        84,
+        85,
+        86,
+        87,
+        88,
+        89,
+        90,
+        91,
+        92,
+        93,
+        94,
+        95,
+        96,
+        97,
+        98,
+        99,
+        100,
+        101,
+        102,
+        103
+      ],
+      "rowCount": 2193,
+      "totalRemuneration": 235489243.16,
+      "totalExpenses": 775448.89,
+      "status": "verified",
+      "sourceKind": "official",
+      "completeEmployeeSchedule": true,
+      "retainCompiledPartition": true,
+      "verifiedOn": "2026-11-01",
+      "publicWarning": "The source explicitly marks this remuneration schedule Unaudited. Compiled entries, where present, are retained while their edition labels and employee/trustee scopes await comparison with this complete original. No equivalence between a compiled edition label and this fiscal year is assumed.",
+      "notes": [
+        "Complete named tables are preserved by source category and printed year; no full name, identity or annualization is inferred.",
+        "Raw Poppler layout lines and independently grouped MuPDF words are retained; all fields/order/multiplicity agree after explicit source-image boundary amendments, if any.",
+        "The source labels elected and employee schedules Unaudited. All explicit expense0.00 values remain zero.",
+        "Only named payments are imported. Below-threshold aggregates, employer CPP/EI, suppliers and financial-statement totals remain excluded.",
+        "Published spelling, initials, name order, punctuation, footnote markers and visible titles remain literal. No identity, full name or annual rate is inferred. A blank or dash expense remains null and an explicit zero remains zero."
+      ],
+      "validation": {
+        "originalFingerprintVerified": true,
+        "independentReaders": [
+          "Poppler pdftotext physical layout lines",
+          "MuPDF independently grouped word geometry"
+        ],
+        "rowsIndependentlyChecked": 2193,
+        "allSixFieldsOrderMultiplicityAgree": true,
+        "rowsByPhysicalPage": {
+          "61": 52,
+          "62": 52,
+          "63": 52,
+          "64": 52,
+          "65": 52,
+          "66": 52,
+          "67": 52,
+          "68": 52,
+          "69": 52,
+          "70": 52,
+          "71": 52,
+          "72": 52,
+          "73": 52,
+          "74": 52,
+          "75": 52,
+          "76": 52,
+          "77": 52,
+          "78": 52,
+          "79": 52,
+          "80": 52,
+          "81": 52,
+          "82": 52,
+          "83": 52,
+          "84": 52,
+          "85": 52,
+          "86": 52,
+          "87": 52,
+          "88": 52,
+          "89": 52,
+          "90": 52,
+          "91": 52,
+          "92": 52,
+          "93": 52,
+          "94": 52,
+          "95": 52,
+          "96": 52,
+          "97": 52,
+          "98": 52,
+          "99": 52,
+          "100": 52,
+          "101": 52,
+          "102": 52,
+          "103": 9
+        },
+        "printedControlTotals": [
+          "235489243.16",
+          "775448.89"
+        ],
+        "computedComponentTotals": [
+          "235489243.16",
+          "775448.89"
+        ],
+        "controlResiduals": [
+          "0.00",
+          "0.00"
+        ],
+        "summaryReconciles": true,
+        "nullExpenseRows": 0,
+        "knownExpenseValueCount": 2193,
+        "completeEmployeeSchedule": true,
+        "compiledPartitionRetained": true,
+        "compiledPartitionRetentionReason": "Full official-versus-compiled multiset comparison with exact source/data/baseline fingerprints remains for root review; compiled year labels and employee/trustee scope are not assumed equivalent.",
+        "zeroExpenseRows": 1852,
+        "reportingPeriodBasis": "Complete source remuneration table physical pages60–103 explicitly identifies the year/period ended June 30, 2025; continuous unheaded continuation pages use their directly connected table heading.",
+        "salarySchedulePrintedPeriodEnd": "2025-06-30",
+        "approvalEvidence": {
+          "status": "independent-actual-original-image-period-and-control-review-complete",
+          "declarationPhysicalPage": 3,
+          "declarationPrintedPeriodEnd": "2025-06-30",
+          "declarationDateFieldsLiteral": [
+            "November25,2025",
+            "November25,2025",
+            "November25,2025"
+          ],
+          "signatureAreasRedacted": true,
+          "underlyingSignatureValidityOrIdentityClaimed": false,
+          "noApprovalYearContradictionObserved": true,
+          "noAdoptionClaim": true,
+          "sourceContextReview": {
+            "file": "research/salaries/queue-completion-2026-11-01/reviews/independent-school-extension-acquisition-control-period-visual-review.json",
+            "sha256": "605300a61dfb759a11e51e363acdfa132144a5a800a0115468fe5c890b509787"
+          }
+        },
+        "nativeProofFile": "research/salaries/queue-completion-2026-11-01/schools/sd43-2025-native-candidate.json.gzip",
+        "nativeProofSha256": "0e80fb66517b258180ef21d4c029133dcc34844bec1d7dadbab5fa8b09d8f28b",
+        "independentPeerReviewPending": false,
+        "independentPeerReview": {
+          "file": "research/salaries/queue-completion-2026-11-01/reviews/independent-school-extension-acquisition-final-row-comparison.json",
+          "sha256": "ee818a4838770d13c23cfd3d2e24842c48eeee3395c3bb837645acba9c893a7b",
+          "originalContextReview": {
+            "file": "research/salaries/queue-completion-2026-11-01/reviews/independent-school-extension-acquisition-control-period-visual-review.json",
+            "sha256": "605300a61dfb759a11e51e363acdfa132144a5a800a0115468fe5c890b509787"
+          }
+        }
+      }
+    },
+    {
+      "id": "queue-completion-schools-sd61-2025-trustees",
+      "employerSlug": "greater-victoria-school-district",
+      "employerName": "School District No. 61 (Greater Victoria)",
+      "sector": "School districts",
+      "year": "2024/25",
+      "slug": "2024-25",
+      "periodType": "fiscal",
+      "periodStart": "2024-07-01",
+      "periodEnd": "2025-06-30",
+      "title": "School District No. 61 (Greater Victoria), year ended June 30, 2025: trustees",
+      "sourceUrl": "https://www2.gov.bc.ca/assets/gov/education/administration/resource-management/school-district-financial-reporting/financial-information/sd61-sofi-2025.pdf",
+      "sourceIndexUrl": "https://www2.gov.bc.ca/gov/content/education-training/k-12/administration/financial-management/school-district-financial-reporting/statement-of-financial-information",
+      "sha256": "d8d3437d612c52705a5b898b13755544ab4eefd023d9eeb06b1d7a054751a260",
+      "file": "sd61-2025-trustees.json.gzip",
+      "dataSha256": "58929f734c7a5fe759c678e405e320b884b2a0126ed0aa12949d49c7c6df34d9",
+      "normalizedSha256": "cf0474194390520925880b1a5877e9211b4a3b1f54c659eeaa04ff61356844f3",
+      "provenanceFile": "sd61-2025-trustees-evidence.json.gzip",
+      "provenanceSha256": "e0d57b9a769d46bf497903c581a969443d884ded86a0a9372a6b9c5d147a8070",
+      "category": "school-trustees",
+      "scope": "school-trustees",
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "amountPrecision": "cents",
+      "scopeDescription": "Complete published school trustee/official table",
+      "nameDisclosure": "published-name-as-disclosed",
+      "positionDisclosure": "published-visible-text-only",
+      "pages": [
+        7
+      ],
+      "rowCount": 10,
+      "totalRemuneration": 244144.59,
+      "totalExpenses": 6251.31,
+      "status": "verified",
+      "sourceKind": "official",
+      "completeEmployeeSchedule": false,
+      "retainCompiledPartition": true,
+      "verifiedOn": "2026-11-01",
+      "publicWarning": "Compiled entries, where present, are retained while their edition labels and employee/trustee scopes await comparison with this complete original. No equivalence between a compiled edition label and this fiscal year is assumed.",
+      "notes": [
+        "Complete named tables are preserved by source category and printed year; no full name, identity or annualization is inferred.",
+        "Raw Poppler layout lines and independently grouped MuPDF words are retained; all fields/order/multiplicity agree after explicit source-image boundary amendments, if any.",
+        "One source-specific native word merge at physical13 is resolved from the actual original image: the visibly clipped name ends CUAUHTE and the separate position starts INFORMATION SYSTEMS. Both raw word fields and explicit image amendments remain in evidence; no unseen name completion is added.",
+        "Twenty page-final positions were corrected from the actual original row/footer contexts in an explicit independent image ledger. Separate centred printed footer numbers 5–24 are not part of the employee position. Original v1 fields/proof/data remain as immutable evidence; accepted employee v2 changes only those 20 position strings.",
+        "Only named payments are imported. Below-threshold aggregates, employer CPP/EI, suppliers and financial-statement totals remain excluded.",
+        "Published spelling, initials, name order, punctuation, footnote markers and visible titles remain literal. No identity, full name or annual rate is inferred. A blank or dash expense remains null and an explicit zero remains zero."
+      ],
+      "validation": {
+        "originalFingerprintVerified": true,
+        "independentReaders": [
+          "Poppler pdftotext physical layout lines",
+          "MuPDF independently grouped word geometry"
+        ],
+        "rowsIndependentlyChecked": 10,
+        "allSixFieldsOrderMultiplicityAgree": true,
+        "rowsByPhysicalPage": {
+          "7": 10
+        },
+        "printedControlTotals": [
+          "244144.59",
+          "6251.31"
+        ],
+        "computedComponentTotals": [
+          "244144.59",
+          "6251.31"
+        ],
+        "controlResiduals": [
+          "0.00",
+          "0.00"
+        ],
+        "summaryReconciles": true,
+        "nullExpenseRows": 0,
+        "knownExpenseValueCount": 10,
+        "completeEmployeeSchedule": false,
+        "compiledPartitionRetained": true,
+        "compiledPartitionRetentionReason": "Full official-versus-compiled multiset comparison with exact source/data/baseline fingerprints remains for root review; compiled year labels and employee/trustee scope are not assumed equivalent.",
+        "zeroExpenseRows": 1,
+        "reportingPeriodBasis": "Complete source remuneration table physical pages7–26 explicitly identifies the year/period ended June 30, 2025; continuous unheaded continuation pages use their directly connected table heading.",
+        "salarySchedulePrintedPeriodEnd": "2025-06-30",
+        "approvalEvidence": {
+          "status": "independent-actual-original-image-period-and-control-review-complete",
+          "declarationPhysicalPage": 3,
+          "declarationPrintedPeriodEnd": "2025-06-30",
+          "declarationDateFieldsLiteral": [
+            "September15,2025",
+            "September15,2025",
+            "September15,2025"
+          ],
+          "signatureAreasRedacted": true,
+          "underlyingSignatureValidityOrIdentityClaimed": false,
+          "noApprovalYearContradictionObserved": true,
+          "noAdoptionClaim": true,
+          "sourceContextReview": {
+            "file": "research/salaries/queue-completion-2026-11-01/reviews/independent-school-extension-acquisition-control-period-visual-review.json",
+            "sha256": "605300a61dfb759a11e51e363acdfa132144a5a800a0115468fe5c890b509787"
+          }
+        },
+        "nativeProofFile": "research/salaries/queue-completion-2026-11-01/schools/sd61-2025-native-candidate-v2.json.gzip",
+        "nativeProofSha256": "4ef6ed7632d9d421c9eacb0391cb768271c80d23cc8b25037777c621727be357",
+        "independentPeerReviewPending": false,
+        "independentPeerReview": {
+          "file": "research/salaries/queue-completion-2026-11-01/reviews/independent-school-extension-acquisition-final-row-comparison.json",
+          "sha256": "ee818a4838770d13c23cfd3d2e24842c48eeee3395c3bb837645acba9c893a7b",
+          "originalContextReview": {
+            "file": "research/salaries/queue-completion-2026-11-01/reviews/independent-school-extension-acquisition-control-period-visual-review.json",
+            "sha256": "605300a61dfb759a11e51e363acdfa132144a5a800a0115468fe5c890b509787"
+          }
+        },
+        "boundedSourceImageReceipt": {
+          "file": "research/salaries/queue-completion-2026-11-01/schools/bounded-source-image-receipts.json",
+          "sha256": "439d334a1da503af4c5da7760776845b7f42c2c118334d7184896ff59db17c4f"
+        }
+      }
+    },
+    {
+      "id": "queue-completion-schools-sd61-2025-employees",
+      "employerSlug": "greater-victoria-school-district",
+      "employerName": "School District No. 61 (Greater Victoria)",
+      "sector": "School districts",
+      "year": "2024/25",
+      "slug": "2024-25",
+      "periodType": "fiscal",
+      "periodStart": "2024-07-01",
+      "periodEnd": "2025-06-30",
+      "title": "School District No. 61 (Greater Victoria), year ended June 30, 2025: employees",
+      "sourceUrl": "https://www2.gov.bc.ca/assets/gov/education/administration/resource-management/school-district-financial-reporting/financial-information/sd61-sofi-2025.pdf",
+      "sourceIndexUrl": "https://www2.gov.bc.ca/gov/content/education-training/k-12/administration/financial-management/school-district-financial-reporting/statement-of-financial-information",
+      "sha256": "d8d3437d612c52705a5b898b13755544ab4eefd023d9eeb06b1d7a054751a260",
+      "file": "sd61-2025-employees-v2.json.gzip",
+      "dataSha256": "4ef497c0aecb94b4857868df4ffc1b34ee2147b8570973721ed3957f0f67eedb",
+      "normalizedSha256": "62f9b324a67a44b91023f5375c6cc2cfdfc537d7ef219e480905d76745004160",
+      "provenanceFile": "sd61-2025-employees-v2-evidence.json.gzip",
+      "provenanceSha256": "765d9c530909b55dcfe13b1d15e329378d911c52038b9d1ea6bfb9238bf03088",
+      "category": "employee-remuneration",
+      "scope": "employee-remuneration",
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "amountPrecision": "cents",
+      "scopeDescription": "Complete published named employee remuneration table at the source disclosure threshold",
+      "nameDisclosure": "published-name-as-disclosed",
+      "positionDisclosure": "published-visible-text-only",
+      "pages": [
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26
+      ],
+      "rowCount": 1370,
+      "totalRemuneration": 143280208.11,
+      "totalExpenses": 608455.92,
+      "status": "verified",
+      "sourceKind": "official",
+      "completeEmployeeSchedule": true,
+      "retainCompiledPartition": true,
+      "verifiedOn": "2026-11-01",
+      "publicWarning": "One employee name is visibly clipped in the original: GUERRERO HERNANDEZ, CUAUHTE. This literal fragment is retained without expansion. Compiled entries, where present, are retained while their edition labels and employee/trustee scopes await comparison with this complete original. No equivalence between a compiled edition label and this fiscal year is assumed.",
+      "notes": [
+        "Complete named tables are preserved by source category and printed year; no full name, identity or annualization is inferred.",
+        "Raw Poppler layout lines and independently grouped MuPDF words are retained; all fields/order/multiplicity agree after explicit source-image boundary amendments, if any.",
+        "One source-specific native word merge at physical13 is resolved from the actual original image: the visibly clipped name ends CUAUHTE and the separate position starts INFORMATION SYSTEMS. Both raw word fields and explicit image amendments remain in evidence; no unseen name completion is added.",
+        "Twenty page-final positions were corrected from the actual original row/footer contexts in an explicit independent image ledger. Separate centred printed footer numbers 5–24 are not part of the employee position. Original v1 fields/proof/data remain as immutable evidence; accepted employee v2 changes only those 20 position strings.",
+        "Only named payments are imported. Below-threshold aggregates, employer CPP/EI, suppliers and financial-statement totals remain excluded.",
+        "Published spelling, initials, name order, punctuation, footnote markers and visible titles remain literal. No identity, full name or annual rate is inferred. A blank or dash expense remains null and an explicit zero remains zero."
+      ],
+      "validation": {
+        "originalFingerprintVerified": true,
+        "independentReaders": [
+          "Poppler pdftotext physical layout lines",
+          "MuPDF independently grouped word geometry"
+        ],
+        "rowsIndependentlyChecked": 1370,
+        "allSixFieldsOrderMultiplicityAgree": true,
+        "rowsByPhysicalPage": {
+          "7": 57,
+          "8": 72,
+          "9": 72,
+          "10": 72,
+          "11": 72,
+          "12": 72,
+          "13": 72,
+          "14": 72,
+          "15": 72,
+          "16": 72,
+          "17": 72,
+          "18": 72,
+          "19": 72,
+          "20": 72,
+          "21": 72,
+          "22": 72,
+          "23": 72,
+          "24": 72,
+          "25": 72,
+          "26": 17
+        },
+        "printedControlTotals": [
+          "143280208.11",
+          "608455.92"
+        ],
+        "computedComponentTotals": [
+          "143280208.11",
+          "608455.92"
+        ],
+        "controlResiduals": [
+          "0.00",
+          "0.00"
+        ],
+        "summaryReconciles": true,
+        "nullExpenseRows": 0,
+        "knownExpenseValueCount": 1370,
+        "completeEmployeeSchedule": true,
+        "compiledPartitionRetained": true,
+        "compiledPartitionRetentionReason": "Full official-versus-compiled multiset comparison with exact source/data/baseline fingerprints remains for root review; compiled year labels and employee/trustee scope are not assumed equivalent.",
+        "zeroExpenseRows": 839,
+        "reportingPeriodBasis": "Complete source remuneration table physical pages7–26 explicitly identifies the year/period ended June 30, 2025; continuous unheaded continuation pages use their directly connected table heading.",
+        "salarySchedulePrintedPeriodEnd": "2025-06-30",
+        "approvalEvidence": {
+          "status": "independent-actual-original-image-period-and-control-review-complete",
+          "declarationPhysicalPage": 3,
+          "declarationPrintedPeriodEnd": "2025-06-30",
+          "declarationDateFieldsLiteral": [
+            "September15,2025",
+            "September15,2025",
+            "September15,2025"
+          ],
+          "signatureAreasRedacted": true,
+          "underlyingSignatureValidityOrIdentityClaimed": false,
+          "noApprovalYearContradictionObserved": true,
+          "noAdoptionClaim": true,
+          "sourceContextReview": {
+            "file": "research/salaries/queue-completion-2026-11-01/reviews/independent-school-extension-acquisition-control-period-visual-review.json",
+            "sha256": "605300a61dfb759a11e51e363acdfa132144a5a800a0115468fe5c890b509787"
+          }
+        },
+        "nativeProofFile": "research/salaries/queue-completion-2026-11-01/schools/sd61-2025-native-candidate-v2.json.gzip",
+        "nativeProofSha256": "4ef6ed7632d9d421c9eacb0391cb768271c80d23cc8b25037777c621727be357",
+        "independentPeerReviewPending": false,
+        "independentPeerReview": {
+          "file": "research/salaries/queue-completion-2026-11-01/reviews/independent-school-extension-acquisition-final-row-comparison.json",
+          "sha256": "ee818a4838770d13c23cfd3d2e24842c48eeee3395c3bb837645acba9c893a7b",
+          "originalContextReview": {
+            "file": "research/salaries/queue-completion-2026-11-01/reviews/independent-school-extension-acquisition-control-period-visual-review.json",
+            "sha256": "605300a61dfb759a11e51e363acdfa132144a5a800a0115468fe5c890b509787"
+          }
+        },
+        "boundedSourceImageReceipt": {
+          "file": "research/salaries/queue-completion-2026-11-01/schools/bounded-source-image-receipts.json",
+          "sha256": "439d334a1da503af4c5da7760776845b7f42c2c118334d7184896ff59db17c4f"
+        }
+      }
+    },
+    {
+      "id": "queue-completion-schools-sd68-2025-trustees",
+      "employerSlug": "nanaimo-ladysmith-school-district",
+      "employerName": "School District No. 68 (Nanaimo-Ladysmith)",
+      "sector": "School districts",
+      "year": "2024/25",
+      "slug": "2024-25",
+      "periodType": "fiscal",
+      "periodStart": "2024-07-01",
+      "periodEnd": "2025-06-30",
+      "title": "School District No. 68 (Nanaimo-Ladysmith), year ended June 30, 2025: trustees",
+      "sourceUrl": "https://www2.gov.bc.ca/assets/gov/education/administration/resource-management/school-district-financial-reporting/financial-information/sd68-sofi-2025.pdf",
+      "sourceIndexUrl": "https://www2.gov.bc.ca/gov/content/education-training/k-12/administration/financial-management/school-district-financial-reporting/statement-of-financial-information",
+      "sha256": "213c8db392c8ab77b498de59ba1004d4e8775a5e4dc9549fb61bec214bf438bf",
+      "file": "sd68-2025-trustees.json.gzip",
+      "dataSha256": "42497499e41d558e8d9cc45213ce4228ef7d72103bac8bc0a8bd0823937d892a",
+      "normalizedSha256": "8a734de403eb639dc9069cfa4227d0511df527dc58b8f059dda57403e107ef18",
+      "provenanceFile": "sd68-2025-trustees-evidence.json.gzip",
+      "provenanceSha256": "f1823ea51b491789d0eae7dfa04d37450f72215f6c1718e76bac97a9db3fe16e",
+      "category": "school-trustees",
+      "scope": "school-trustees",
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "amountPrecision": "whole-dollars",
+      "scopeDescription": "Complete published school trustee/official table",
+      "nameDisclosure": "published-name-as-disclosed",
+      "positionDisclosure": "published-visible-text-only",
+      "pages": [
+        55
+      ],
+      "rowCount": 9,
+      "totalRemuneration": 249305,
+      "totalExpenses": 52034,
+      "status": "verified",
+      "sourceKind": "official",
+      "completeEmployeeSchedule": false,
+      "retainCompiledPartition": true,
+      "verifiedOn": "2026-11-01",
+      "publicWarning": "The 9 named trustee rows total $249,305.00 remuneration and $52,034.00 known expenses. The printed named-scope controls are $249,308.00, $52,036.00. All rows and printed controls remain literal; no cause or balancing adjustment is inferred. Compiled entries, where present, are retained while their edition labels and employee/trustee scopes await comparison with this complete original. No equivalence between a compiled edition label and this fiscal year is assumed.",
+      "notes": [
+        "Complete named tables are preserved by source category and printed year; no full name, identity or annualization is inferred.",
+        "Raw Poppler layout lines and independently grouped MuPDF words are retained; all fields/order/multiplicity agree after explicit source-image boundary amendments, if any.",
+        "The source position column is explicitly POSITION AT JUNE 30, 2025; the payment table covers its stated fiscal year, while the disclosed position is as of that date.",
+        "Only named payments are imported. Below-threshold aggregates, employer CPP/EI, suppliers and financial-statement totals remain excluded.",
+        "Published spelling, initials, name order, punctuation, footnote markers and visible titles remain literal. No identity, full name or annual rate is inferred. A blank or dash expense remains null and an explicit zero remains zero."
+      ],
+      "validation": {
+        "originalFingerprintVerified": true,
+        "independentReaders": [
+          "Poppler pdftotext physical layout lines",
+          "MuPDF independently grouped word geometry"
+        ],
+        "rowsIndependentlyChecked": 9,
+        "allSixFieldsOrderMultiplicityAgree": true,
+        "rowsByPhysicalPage": {
+          "55": 9
+        },
+        "printedControlTotals": [
+          "249308",
+          "52036"
+        ],
+        "computedComponentTotals": [
+          "249305",
+          "52034"
+        ],
+        "controlResiduals": [
+          "-3",
+          "-2"
+        ],
+        "summaryReconciles": false,
+        "nullExpenseRows": 0,
+        "knownExpenseValueCount": 9,
+        "completeEmployeeSchedule": false,
+        "compiledPartitionRetained": true,
+        "compiledPartitionRetentionReason": "Full official-versus-compiled multiset comparison with exact source/data/baseline fingerprints remains for root review; compiled year labels and employee/trustee scope are not assumed equivalent.",
+        "zeroExpenseRows": 0,
+        "reportingPeriodBasis": "Complete source remuneration table physical pages55–80 explicitly identifies the year/period ended June 30, 2025; continuous unheaded continuation pages use their directly connected table heading.",
+        "salarySchedulePrintedPeriodEnd": "2025-06-30",
+        "approvalEvidence": {
+          "status": "independent-actual-original-image-period-and-control-review-complete",
+          "declarationPhysicalPage": 3,
+          "declarationPrintedPeriodEnd": "2025-06-30",
+          "declarationDateFieldsLiteral": [
+            "December17,2025",
+            "December17,2025",
+            "December17,2025"
+          ],
+          "signatureAreasRedacted": true,
+          "underlyingSignatureValidityOrIdentityClaimed": false,
+          "noApprovalYearContradictionObserved": true,
+          "noAdoptionClaim": true,
+          "sourceContextReview": {
+            "file": "research/salaries/queue-completion-2026-11-01/reviews/independent-school-extension-acquisition-control-period-visual-review.json",
+            "sha256": "605300a61dfb759a11e51e363acdfa132144a5a800a0115468fe5c890b509787"
+          }
+        },
+        "nativeProofFile": "research/salaries/queue-completion-2026-11-01/schools/sd68-2025-native-candidate.json.gzip",
+        "nativeProofSha256": "95079b9e8422f1da7477014ba04442406212d2e2180e60b73c6122002fd2a1e4",
+        "independentPeerReviewPending": false,
+        "independentPeerReview": {
+          "file": "research/salaries/queue-completion-2026-11-01/reviews/independent-school-extension-acquisition-final-row-comparison.json",
+          "sha256": "ee818a4838770d13c23cfd3d2e24842c48eeee3395c3bb837645acba9c893a7b",
+          "originalContextReview": {
+            "file": "research/salaries/queue-completion-2026-11-01/reviews/independent-school-extension-acquisition-control-period-visual-review.json",
+            "sha256": "605300a61dfb759a11e51e363acdfa132144a5a800a0115468fe5c890b509787"
+          }
+        }
+      }
+    },
+    {
+      "id": "queue-completion-schools-sd68-2025-employees",
+      "employerSlug": "nanaimo-ladysmith-school-district",
+      "employerName": "School District No. 68 (Nanaimo-Ladysmith)",
+      "sector": "School districts",
+      "year": "2024/25",
+      "slug": "2024-25",
+      "periodType": "fiscal",
+      "periodStart": "2024-07-01",
+      "periodEnd": "2025-06-30",
+      "title": "School District No. 68 (Nanaimo-Ladysmith), year ended June 30, 2025: employees",
+      "sourceUrl": "https://www2.gov.bc.ca/assets/gov/education/administration/resource-management/school-district-financial-reporting/financial-information/sd68-sofi-2025.pdf",
+      "sourceIndexUrl": "https://www2.gov.bc.ca/gov/content/education-training/k-12/administration/financial-management/school-district-financial-reporting/statement-of-financial-information",
+      "sha256": "213c8db392c8ab77b498de59ba1004d4e8775a5e4dc9549fb61bec214bf438bf",
+      "file": "sd68-2025-employees.json.gzip",
+      "dataSha256": "86ca14b0e44807d03375571900bd88afab387c705feb0cb6e54b11af33d83240",
+      "normalizedSha256": "649a685278d8b66713075c5db3994129ac04e5dd83654ad6164ac55c194fefdf",
+      "provenanceFile": "sd68-2025-employees-evidence.json.gzip",
+      "provenanceSha256": "07635a15529fcc488e14839930b252c6d40b14bb2b618eff3053f50c978eaae4",
+      "category": "employee-remuneration",
+      "scope": "employee-remuneration",
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "amountPrecision": "whole-dollars",
+      "scopeDescription": "Complete published named employee remuneration table at the source disclosure threshold",
+      "nameDisclosure": "published-name-as-disclosed",
+      "positionDisclosure": "published-visible-text-only",
+      "pages": [
+        55,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61,
+        62,
+        63,
+        64,
+        65,
+        66,
+        67,
+        68,
+        69,
+        70,
+        71,
+        72,
+        73,
+        74,
+        75,
+        76,
+        77,
+        78,
+        79,
+        80
+      ],
+      "rowCount": 1003,
+      "totalRemuneration": 103832656,
+      "totalExpenses": 423778,
+      "status": "verified",
+      "sourceKind": "official",
+      "completeEmployeeSchedule": true,
+      "retainCompiledPartition": true,
+      "verifiedOn": "2026-11-01",
+      "publicWarning": "The 1003 named employee rows total $103,832,656.00 remuneration and $423,778.00 known expenses. The printed named-scope controls are $103,832,665.00, $423,777.00. All rows and printed controls remain literal; no cause or balancing adjustment is inferred. Compiled entries, where present, are retained while their edition labels and employee/trustee scopes await comparison with this complete original. No equivalence between a compiled edition label and this fiscal year is assumed.",
+      "notes": [
+        "Complete named tables are preserved by source category and printed year; no full name, identity or annualization is inferred.",
+        "Raw Poppler layout lines and independently grouped MuPDF words are retained; all fields/order/multiplicity agree after explicit source-image boundary amendments, if any.",
+        "The source position column is explicitly POSITION AT JUNE 30, 2025; the payment table covers its stated fiscal year, while the disclosed position is as of that date.",
+        "Only named payments are imported. Below-threshold aggregates, employer CPP/EI, suppliers and financial-statement totals remain excluded.",
+        "Published spelling, initials, name order, punctuation, footnote markers and visible titles remain literal. No identity, full name or annual rate is inferred. A blank or dash expense remains null and an explicit zero remains zero."
+      ],
+      "validation": {
+        "originalFingerprintVerified": true,
+        "independentReaders": [
+          "Poppler pdftotext physical layout lines",
+          "MuPDF independently grouped word geometry"
+        ],
+        "rowsIndependentlyChecked": 1003,
+        "allSixFieldsOrderMultiplicityAgree": true,
+        "rowsByPhysicalPage": {
+          "55": 22,
+          "56": 40,
+          "57": 40,
+          "58": 40,
+          "59": 40,
+          "60": 40,
+          "61": 40,
+          "62": 40,
+          "63": 40,
+          "64": 40,
+          "65": 40,
+          "66": 40,
+          "67": 40,
+          "68": 40,
+          "69": 40,
+          "70": 40,
+          "71": 40,
+          "72": 40,
+          "73": 40,
+          "74": 40,
+          "75": 40,
+          "76": 40,
+          "77": 40,
+          "78": 40,
+          "79": 40,
+          "80": 21
+        },
+        "printedControlTotals": [
+          "103832665",
+          "423777"
+        ],
+        "computedComponentTotals": [
+          "103832656",
+          "423778"
+        ],
+        "controlResiduals": [
+          "-9",
+          "1"
+        ],
+        "summaryReconciles": false,
+        "nullExpenseRows": 695,
+        "knownExpenseValueCount": 308,
+        "completeEmployeeSchedule": true,
+        "compiledPartitionRetained": true,
+        "compiledPartitionRetentionReason": "Full official-versus-compiled multiset comparison with exact source/data/baseline fingerprints remains for root review; compiled year labels and employee/trustee scope are not assumed equivalent.",
+        "zeroExpenseRows": 0,
+        "reportingPeriodBasis": "Complete source remuneration table physical pages55–80 explicitly identifies the year/period ended June 30, 2025; continuous unheaded continuation pages use their directly connected table heading.",
+        "salarySchedulePrintedPeriodEnd": "2025-06-30",
+        "approvalEvidence": {
+          "status": "independent-actual-original-image-period-and-control-review-complete",
+          "declarationPhysicalPage": 3,
+          "declarationPrintedPeriodEnd": "2025-06-30",
+          "declarationDateFieldsLiteral": [
+            "December17,2025",
+            "December17,2025",
+            "December17,2025"
+          ],
+          "signatureAreasRedacted": true,
+          "underlyingSignatureValidityOrIdentityClaimed": false,
+          "noApprovalYearContradictionObserved": true,
+          "noAdoptionClaim": true,
+          "sourceContextReview": {
+            "file": "research/salaries/queue-completion-2026-11-01/reviews/independent-school-extension-acquisition-control-period-visual-review.json",
+            "sha256": "605300a61dfb759a11e51e363acdfa132144a5a800a0115468fe5c890b509787"
+          }
+        },
+        "nativeProofFile": "research/salaries/queue-completion-2026-11-01/schools/sd68-2025-native-candidate.json.gzip",
+        "nativeProofSha256": "95079b9e8422f1da7477014ba04442406212d2e2180e60b73c6122002fd2a1e4",
+        "independentPeerReviewPending": false,
+        "independentPeerReview": {
+          "file": "research/salaries/queue-completion-2026-11-01/reviews/independent-school-extension-acquisition-final-row-comparison.json",
+          "sha256": "ee818a4838770d13c23cfd3d2e24842c48eeee3395c3bb837645acba9c893a7b",
+          "originalContextReview": {
+            "file": "research/salaries/queue-completion-2026-11-01/reviews/independent-school-extension-acquisition-control-period-visual-review.json",
+            "sha256": "605300a61dfb759a11e51e363acdfa132144a5a800a0115468fe5c890b509787"
+          }
+        }
+      }
+    },
+    {
+      "id": "queue-completion-schools-sd73-2025-trustees",
+      "employerSlug": "kamloops-thompson-school-district",
+      "employerName": "School District No. 73 (Kamloops-Thompson)",
+      "sector": "School districts",
+      "year": "2024/25",
+      "slug": "2024-25",
+      "periodType": "fiscal",
+      "periodStart": "2024-07-01",
+      "periodEnd": "2025-06-30",
+      "title": "School District No. 73 (Kamloops-Thompson), year ended June 30, 2025: trustees",
+      "sourceUrl": "https://www2.gov.bc.ca/assets/gov/education/administration/resource-management/school-district-financial-reporting/financial-information/sd73-sofi-2025.pdf",
+      "sourceIndexUrl": "https://www2.gov.bc.ca/gov/content/education-training/k-12/administration/financial-management/school-district-financial-reporting/statement-of-financial-information",
+      "sha256": "2ef6c4a829c0e6531562ff1ac155e2fef74a3bed9abd2f1fbe0d9371d0e326a2",
+      "file": "sd73-2025-trustees.json.gzip",
+      "dataSha256": "11eaee448c711d5eaa6408cb3f3d1116361c5644ae392a06d8969994f3f6c379",
+      "normalizedSha256": "c5bc602ddb3af014ddc7f049766a0c383a10a4f4296ff0521b8b6c80b7783898",
+      "provenanceFile": "sd73-2025-trustees-evidence.json.gzip",
+      "provenanceSha256": "cbb0900336e9b9531d39d9feaf131cdf31b1062278bee629c07646611afb62e1",
+      "category": "school-trustees",
+      "scope": "school-trustees",
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "amountPrecision": "whole-dollars",
+      "scopeDescription": "Complete published school trustee/official table",
+      "nameDisclosure": "published-name-as-disclosed",
+      "positionDisclosure": "published-visible-text-only",
+      "pages": [
+        73
+      ],
+      "rowCount": 9,
+      "totalRemuneration": 265975,
+      "totalExpenses": 41304,
+      "status": "verified",
+      "sourceKind": "official",
+      "completeEmployeeSchedule": false,
+      "retainCompiledPartition": true,
+      "verifiedOn": "2026-11-01",
+      "publicWarning": "Compiled entries, where present, are retained while their edition labels and employee/trustee scopes await comparison with this complete original. No equivalence between a compiled edition label and this fiscal year is assumed.",
+      "notes": [
+        "Complete named tables are preserved by source category and printed year; no full name, identity or annualization is inferred.",
+        "Raw Poppler layout lines and independently grouped MuPDF words are retained; all fields/order/multiplicity agree after explicit source-image boundary amendments, if any.",
+        "Leading source asterisk markers identify four source-footnoted staff observations; all are retained. Footnotes *, ** and **** explicitly state 100% reimbursement; *** identifies the District Principal of International Student Program. Literal negative expense −$590 is preserved. The following aggregate is labelled Total Employee Remuneration Excluding Taxable Benefits; no conversion to total compensation is made.",
+        "Only named payments are imported. Below-threshold aggregates, employer CPP/EI, suppliers and financial-statement totals remain excluded.",
+        "Published spelling, initials, name order, punctuation, footnote markers and visible titles remain literal. No identity, full name or annual rate is inferred. A blank or dash expense remains null and an explicit zero remains zero."
+      ],
+      "validation": {
+        "originalFingerprintVerified": true,
+        "independentReaders": [
+          "Poppler pdftotext physical layout lines",
+          "MuPDF independently grouped word geometry"
+        ],
+        "rowsIndependentlyChecked": 9,
+        "allSixFieldsOrderMultiplicityAgree": true,
+        "rowsByPhysicalPage": {
+          "73": 9
+        },
+        "printedControlTotals": [
+          "265975",
+          "41304"
+        ],
+        "computedComponentTotals": [
+          "265975",
+          "41304"
+        ],
+        "controlResiduals": [
+          "0",
+          "0"
+        ],
+        "summaryReconciles": true,
+        "nullExpenseRows": 0,
+        "knownExpenseValueCount": 9,
+        "completeEmployeeSchedule": false,
+        "compiledPartitionRetained": true,
+        "compiledPartitionRetentionReason": "Full official-versus-compiled multiset comparison with exact source/data/baseline fingerprints remains for root review; compiled year labels and employee/trustee scope are not assumed equivalent.",
+        "zeroExpenseRows": 0,
+        "reportingPeriodBasis": "Complete source remuneration table physical pages55–73 explicitly identifies the year/period ended June 30, 2025; continuous unheaded continuation pages use their directly connected table heading.",
+        "salarySchedulePrintedPeriodEnd": "2025-06-30",
+        "approvalEvidence": {
+          "status": "independent-actual-original-image-period-and-control-review-complete",
+          "declarationPhysicalPage": 1,
+          "declarationPrintedPeriodEnd": "2025-06-30",
+          "declarationDateFieldsLiteral": [
+            "December15,2025",
+            "December15,2025",
+            "December15,2025"
+          ],
+          "signatureAreasRedacted": true,
+          "underlyingSignatureValidityOrIdentityClaimed": false,
+          "noApprovalYearContradictionObserved": true,
+          "noAdoptionClaim": true,
+          "sourceContextReview": {
+            "file": "research/salaries/queue-completion-2026-11-01/reviews/independent-school-extension-acquisition-control-period-visual-review.json",
+            "sha256": "605300a61dfb759a11e51e363acdfa132144a5a800a0115468fe5c890b509787"
+          }
+        },
+        "nativeProofFile": "research/salaries/queue-completion-2026-11-01/schools/sd73-2025-native-candidate.json.gzip",
+        "nativeProofSha256": "f2b7fd8765fec269147623ab03ebfa6c54e2eb09136860ad5e207a2536ad04da",
+        "independentPeerReviewPending": false,
+        "independentPeerReview": {
+          "file": "research/salaries/queue-completion-2026-11-01/reviews/independent-school-extension-acquisition-final-row-comparison.json",
+          "sha256": "ee818a4838770d13c23cfd3d2e24842c48eeee3395c3bb837645acba9c893a7b",
+          "originalContextReview": {
+            "file": "research/salaries/queue-completion-2026-11-01/reviews/independent-school-extension-acquisition-control-period-visual-review.json",
+            "sha256": "605300a61dfb759a11e51e363acdfa132144a5a800a0115468fe5c890b509787"
+          }
+        }
+      }
+    },
+    {
+      "id": "queue-completion-schools-sd73-2025-employees",
+      "employerSlug": "kamloops-thompson-school-district",
+      "employerName": "School District No. 73 (Kamloops-Thompson)",
+      "sector": "School districts",
+      "year": "2024/25",
+      "slug": "2024-25",
+      "periodType": "fiscal",
+      "periodStart": "2024-07-01",
+      "periodEnd": "2025-06-30",
+      "title": "School District No. 73 (Kamloops-Thompson), year ended June 30, 2025: employees",
+      "sourceUrl": "https://www2.gov.bc.ca/assets/gov/education/administration/resource-management/school-district-financial-reporting/financial-information/sd73-sofi-2025.pdf",
+      "sourceIndexUrl": "https://www2.gov.bc.ca/gov/content/education-training/k-12/administration/financial-management/school-district-financial-reporting/statement-of-financial-information",
+      "sha256": "2ef6c4a829c0e6531562ff1ac155e2fef74a3bed9abd2f1fbe0d9371d0e326a2",
+      "file": "sd73-2025-employees.json.gzip",
+      "dataSha256": "fd461c01f18cbe74e8c036c06ec72fe97220f67af4e28f0650759eba7e00fa27",
+      "normalizedSha256": "ff319acddbd601b99bc572700a004428d6e1eaa9e66192e846c53e3fba313e43",
+      "provenanceFile": "sd73-2025-employees-evidence.json.gzip",
+      "provenanceSha256": "3ad05670ad102e6dd128aaa4122c7a1e16139667dfa4e1f1037b3eeba2d09624",
+      "category": "employee-remuneration",
+      "scope": "employee-remuneration",
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "amountPrecision": "whole-dollars",
+      "scopeDescription": "Complete published named employee remuneration table at the source disclosure threshold",
+      "nameDisclosure": "published-name-as-disclosed",
+      "positionDisclosure": "published-visible-text-only",
+      "pages": [
+        55,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61,
+        62,
+        63,
+        64,
+        65,
+        66,
+        67,
+        68,
+        69,
+        70,
+        71
+      ],
+      "rowCount": 1067,
+      "totalRemuneration": 112948428,
+      "totalExpenses": 624040,
+      "status": "verified",
+      "sourceKind": "official",
+      "completeEmployeeSchedule": true,
+      "retainCompiledPartition": true,
+      "verifiedOn": "2026-11-01",
+      "publicWarning": "The 1067 named employee rows total $112,948,428.00 remuneration and $624,040.00 known expenses. The printed named-scope controls are $112,948,430.00, $624,050.00. All rows and printed controls remain literal; no cause or balancing adjustment is inferred. The printed named remuneration control plus below-threshold remuneration $53,888,124 equals $166,836,554, whereas the following Total Employee Remuneration Excluding Taxable Benefits prints $166,836,555, a $1 difference. Source footnotes identify four staff observations, which remain included: three explicit 100% reimbursement footnotes and one International Student Program role definition. One reported expense of −$590 is preserved literally. Compiled entries, where present, are retained while their edition labels and employee/trustee scopes await comparison with this complete original. No equivalence between a compiled edition label and this fiscal year is assumed.",
+      "notes": [
+        "Complete named tables are preserved by source category and printed year; no full name, identity or annualization is inferred.",
+        "Raw Poppler layout lines and independently grouped MuPDF words are retained; all fields/order/multiplicity agree after explicit source-image boundary amendments, if any.",
+        "Leading source asterisk markers identify four source-footnoted staff observations; all are retained. Footnotes *, ** and **** explicitly state 100% reimbursement; *** identifies the District Principal of International Student Program. Literal negative expense −$590 is preserved. The following aggregate is labelled Total Employee Remuneration Excluding Taxable Benefits; no conversion to total compensation is made.",
+        "Only named payments are imported. Below-threshold aggregates, employer CPP/EI, suppliers and financial-statement totals remain excluded.",
+        "Published spelling, initials, name order, punctuation, footnote markers and visible titles remain literal. No identity, full name or annual rate is inferred. A blank or dash expense remains null and an explicit zero remains zero."
+      ],
+      "validation": {
+        "originalFingerprintVerified": true,
+        "independentReaders": [
+          "Poppler pdftotext physical layout lines",
+          "MuPDF independently grouped word geometry"
+        ],
+        "rowsIndependentlyChecked": 1067,
+        "allSixFieldsOrderMultiplicityAgree": true,
+        "rowsByPhysicalPage": {
+          "55": 63,
+          "56": 63,
+          "57": 63,
+          "58": 63,
+          "59": 63,
+          "60": 63,
+          "61": 63,
+          "62": 63,
+          "63": 63,
+          "64": 63,
+          "65": 63,
+          "66": 63,
+          "67": 63,
+          "68": 63,
+          "69": 63,
+          "70": 63,
+          "71": 59
+        },
+        "printedControlTotals": [
+          "112948430",
+          "624050"
+        ],
+        "computedComponentTotals": [
+          "112948428",
+          "624040"
+        ],
+        "controlResiduals": [
+          "-2",
+          "-10"
+        ],
+        "summaryReconciles": false,
+        "nullExpenseRows": 512,
+        "knownExpenseValueCount": 555,
+        "completeEmployeeSchedule": true,
+        "compiledPartitionRetained": true,
+        "compiledPartitionRetentionReason": "Full official-versus-compiled multiset comparison with exact source/data/baseline fingerprints remains for root review; compiled year labels and employee/trustee scope are not assumed equivalent.",
+        "zeroExpenseRows": 0,
+        "reportingPeriodBasis": "Complete source remuneration table physical pages55–73 explicitly identifies the year/period ended June 30, 2025; continuous unheaded continuation pages use their directly connected table heading.",
+        "salarySchedulePrintedPeriodEnd": "2025-06-30",
+        "approvalEvidence": {
+          "status": "independent-actual-original-image-period-and-control-review-complete",
+          "declarationPhysicalPage": 1,
+          "declarationPrintedPeriodEnd": "2025-06-30",
+          "declarationDateFieldsLiteral": [
+            "December15,2025",
+            "December15,2025",
+            "December15,2025"
+          ],
+          "signatureAreasRedacted": true,
+          "underlyingSignatureValidityOrIdentityClaimed": false,
+          "noApprovalYearContradictionObserved": true,
+          "noAdoptionClaim": true,
+          "sourceContextReview": {
+            "file": "research/salaries/queue-completion-2026-11-01/reviews/independent-school-extension-acquisition-control-period-visual-review.json",
+            "sha256": "605300a61dfb759a11e51e363acdfa132144a5a800a0115468fe5c890b509787"
+          }
+        },
+        "nativeProofFile": "research/salaries/queue-completion-2026-11-01/schools/sd73-2025-native-candidate.json.gzip",
+        "nativeProofSha256": "f2b7fd8765fec269147623ab03ebfa6c54e2eb09136860ad5e207a2536ad04da",
+        "independentPeerReviewPending": false,
+        "independentPeerReview": {
+          "file": "research/salaries/queue-completion-2026-11-01/reviews/independent-school-extension-acquisition-final-row-comparison.json",
+          "sha256": "ee818a4838770d13c23cfd3d2e24842c48eeee3395c3bb837645acba9c893a7b",
+          "originalContextReview": {
+            "file": "research/salaries/queue-completion-2026-11-01/reviews/independent-school-extension-acquisition-control-period-visual-review.json",
+            "sha256": "605300a61dfb759a11e51e363acdfa132144a5a800a0115468fe5c890b509787"
+          }
+        }
+      }
+    },
+    {
+      "id": "queue-completion-schools-sd50-2025-trustees",
+      "employerSlug": "school-district-50",
+      "employerName": "School District No. 50 (Haida Gwaii)",
+      "sector": "School districts",
+      "year": "2024/25",
+      "slug": "2024-25",
+      "periodType": "fiscal",
+      "periodStart": "2024-07-01",
+      "periodEnd": "2025-06-30",
+      "title": "School District No. 50 (Haida Gwaii), year ended June 30, 2025: trustees",
+      "sourceUrl": "https://www2.gov.bc.ca/assets/gov/education/administration/resource-management/school-district-financial-reporting/financial-information/sd50-sofi-2025.pdf",
+      "sourceIndexUrl": "https://www2.gov.bc.ca/gov/content/education-training/k-12/administration/financial-management/school-district-financial-reporting/statement-of-financial-information",
+      "sha256": "7a45c601bc2edf00849d090f24394d032e84424ea7c42804ae188b74780973a4",
+      "file": "sd50-2025-trustees.json.gzip",
+      "dataSha256": "339ca4af50d3138e3a52293259785ca2f0272945ceaaeadcb1d8501fbd0db290",
+      "normalizedSha256": "53434b4b091c7162c9fcb0682c29fc173d743a61c38d2ab57da0af3353562f70",
+      "provenanceFile": "sd50-2025-trustees-evidence.json.gzip",
+      "provenanceSha256": "745a79f91c10e065117b4b6a5e3f13d3f284e5be64c955dc3c09b4546477ddcf",
+      "category": "school-trustees",
+      "scope": "school-trustees",
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "amountPrecision": "cents",
+      "scopeDescription": "Complete published school trustee/official table",
+      "nameDisclosure": "published-name-as-disclosed",
+      "positionDisclosure": "published-visible-text-only",
+      "pages": [
+        8
+      ],
+      "rowCount": 5,
+      "totalRemuneration": 87369.0,
+      "totalExpenses": 17287.14,
+      "status": "verified",
+      "sourceKind": "official",
+      "completeEmployeeSchedule": false,
+      "retainCompiledPartition": true,
+      "verifiedOn": "2026-11-01",
+      "publicWarning": "Compiled entries, where present, are retained while their edition labels and employee/trustee scopes await comparison with this complete original. No equivalence between a compiled edition label and this fiscal year is assumed.",
+      "notes": [
+        "All 58 rows and all six fields independently transcribed from actual source PDF images, then compared with separate Tesseract and Paddle outputs and the normalized candidate.",
+        "Both OCR engines shared one capital-I/l error in Keir, Ian J.; the source-specific image amendment is explicit and earlier raw/proof/data versions remain immutable. No generic capitalization applied.",
+        "Literal truncated position ADMINISTRATIVE OFFIC and literal Gates, Autum M remain as published. All four expense dashes are image-verified nulls; zero explicit-zero expenses appear.",
+        "Only named payments are imported. Below-threshold aggregates, employer CPP/EI, suppliers and financial-statement totals remain excluded.",
+        "Published spelling, initials, name order, punctuation, footnote markers and visible titles remain literal. No identity, full name or annual rate is inferred. A blank or dash expense remains null and an explicit zero remains zero."
+      ],
+      "validation": {
+        "originalFingerprintVerified": true,
+        "independentReaders": [
+          "Tesseract5.5 PSM6",
+          "RapidOCR1.4.4 Paddle PP-OCR ONNX"
+        ],
+        "rowsIndependentlyChecked": 5,
+        "allSixFieldsOrderMultiplicityAgree": true,
+        "rowsByPhysicalPage": {
+          "8": 5
+        },
+        "printedControlTotals": [
+          "87369.00",
+          "17287.14"
+        ],
+        "computedComponentTotals": [
+          "87369.00",
+          "17287.14"
+        ],
+        "controlResiduals": [
+          "0.00",
+          "0.00"
+        ],
+        "summaryReconciles": true,
+        "nullExpenseRows": 0,
+        "knownExpenseValueCount": 5,
+        "completeEmployeeSchedule": false,
+        "compiledPartitionRetained": true,
+        "compiledPartitionRetentionReason": "Full official-versus-compiled multiset comparison with exact source/data/baseline fingerprints remains for root review; compiled year labels and employee/trustee scope are not assumed equivalent.",
+        "zeroExpenseRows": 0,
+        "reportingPeriodBasis": "Both complete remuneration pages 8–9 explicitly FOR THE YEAR ENDED JUNE30,2025; declaration2 body independently image-read as June 30, 2025.",
+        "salarySchedulePrintedPeriodEnd": "2025-06-30",
+        "approvalEvidence": {
+          "status": "independent-actual-original-image-period-check-complete",
+          "declarationPhysicalPage": 2,
+          "declarationPrintedPeriodEnd": "2025-06-30",
+          "declarationDateFieldsPrinted": [
+            "2025-11-19"
+          ],
+          "signatures": "redacted; typed management names/date are not handwritten-signature authentication",
+          "noAdoptionClaim": true
+        },
+        "nativeProofFile": "research/salaries/queue-completion-2026-11-01/schools/sd50-2025-image-checked-candidate-v2.json.gzip",
+        "nativeProofSha256": "7d5be03adf0d1b1819711861146712788b6ceb76548cfa4388f12078ada57226",
+        "independentPeerReviewPending": false,
+        "independentPeerReview": {
+          "file": "research/salaries/queue-completion-2026-11-01/reviews/independent-school-queue-sd50-final-comparison.json",
+          "sha256": "d5c7da02b3508004dde35c28a672550a75793629d4f21e2aeecfffde1097e610"
+        },
+        "boundedSourceImageReceipt": {
+          "file": "research/salaries/queue-completion-2026-11-01/schools/bounded-source-image-receipts.json",
+          "sha256": "439d334a1da503af4c5da7760776845b7f42c2c118334d7184896ff59db17c4f"
+        }
+      }
+    },
+    {
+      "id": "queue-completion-schools-sd50-2025-employees",
+      "employerSlug": "school-district-50",
+      "employerName": "School District No. 50 (Haida Gwaii)",
+      "sector": "School districts",
+      "year": "2024/25",
+      "slug": "2024-25",
+      "periodType": "fiscal",
+      "periodStart": "2024-07-01",
+      "periodEnd": "2025-06-30",
+      "title": "School District No. 50 (Haida Gwaii), year ended June 30, 2025: employees",
+      "sourceUrl": "https://www2.gov.bc.ca/assets/gov/education/administration/resource-management/school-district-financial-reporting/financial-information/sd50-sofi-2025.pdf",
+      "sourceIndexUrl": "https://www2.gov.bc.ca/gov/content/education-training/k-12/administration/financial-management/school-district-financial-reporting/statement-of-financial-information",
+      "sha256": "7a45c601bc2edf00849d090f24394d032e84424ea7c42804ae188b74780973a4",
+      "file": "sd50-2025-employees-v2.json.gzip",
+      "dataSha256": "0e21b24b559974668171a77e7f0e2cfe6c2d01c3929cd097ca8c3abf01a67502",
+      "normalizedSha256": "0ba91b4632f919c6e9f62ea627adfa686546e6c250a2dcefd80bf52cae3a9f5c",
+      "provenanceFile": "sd50-2025-employees-v2-evidence.json.gzip",
+      "provenanceSha256": "4770faa1331f8acef618b359fd68ca1dcb6320d19fc50438eb9c97f1f966030f",
+      "category": "employee-remuneration",
+      "scope": "employee-remuneration",
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "amountPrecision": "cents",
+      "scopeDescription": "Complete published named employee remuneration table at the source disclosure threshold",
+      "nameDisclosure": "published-name-as-disclosed",
+      "positionDisclosure": "published-visible-text-only",
+      "pages": [
+        8,
+        9
+      ],
+      "rowCount": 53,
+      "totalRemuneration": 5985964.64,
+      "totalExpenses": 149170.57,
+      "status": "verified",
+      "sourceKind": "official",
+      "completeEmployeeSchedule": true,
+      "retainCompiledPartition": true,
+      "verifiedOn": "2026-11-01",
+      "publicWarning": "Source position text ADMINISTRATIVE OFFIC is retained literally, without expansion to a full title. Compiled entries, where present, are retained while their edition labels and employee/trustee scopes await comparison with this complete original. No equivalence between a compiled edition label and this fiscal year is assumed.",
+      "notes": [
+        "All 58 rows and all six fields independently transcribed from actual source PDF images, then compared with separate Tesseract and Paddle outputs and the normalized candidate.",
+        "Both OCR engines shared one capital-I/l error in Keir, Ian J.; the source-specific image amendment is explicit and earlier raw/proof/data versions remain immutable. No generic capitalization applied.",
+        "Literal truncated position ADMINISTRATIVE OFFIC and literal Gates, Autum M remain as published. All four expense dashes are image-verified nulls; zero explicit-zero expenses appear.",
+        "Only named payments are imported. Below-threshold aggregates, employer CPP/EI, suppliers and financial-statement totals remain excluded.",
+        "Published spelling, initials, name order, punctuation, footnote markers and visible titles remain literal. No identity, full name or annual rate is inferred. A blank or dash expense remains null and an explicit zero remains zero."
+      ],
+      "validation": {
+        "originalFingerprintVerified": true,
+        "independentReaders": [
+          "Tesseract5.5 PSM6",
+          "RapidOCR1.4.4 Paddle PP-OCR ONNX"
+        ],
+        "rowsIndependentlyChecked": 53,
+        "allSixFieldsOrderMultiplicityAgree": true,
+        "rowsByPhysicalPage": {
+          "8": 27,
+          "9": 26
+        },
+        "printedControlTotals": [
+          "5985964.64",
+          "149170.57"
+        ],
+        "computedComponentTotals": [
+          "5985964.64",
+          "149170.57"
+        ],
+        "controlResiduals": [
+          "0.00",
+          "0.00"
+        ],
+        "summaryReconciles": true,
+        "nullExpenseRows": 4,
+        "knownExpenseValueCount": 49,
+        "completeEmployeeSchedule": true,
+        "compiledPartitionRetained": true,
+        "compiledPartitionRetentionReason": "Full official-versus-compiled multiset comparison with exact source/data/baseline fingerprints remains for root review; compiled year labels and employee/trustee scope are not assumed equivalent.",
+        "zeroExpenseRows": 0,
+        "reportingPeriodBasis": "Both complete remuneration pages 8–9 explicitly FOR THE YEAR ENDED JUNE30,2025; declaration2 body independently image-read as June 30, 2025.",
+        "salarySchedulePrintedPeriodEnd": "2025-06-30",
+        "approvalEvidence": {
+          "status": "independent-actual-original-image-period-check-complete",
+          "declarationPhysicalPage": 2,
+          "declarationPrintedPeriodEnd": "2025-06-30",
+          "declarationDateFieldsPrinted": [
+            "2025-11-19"
+          ],
+          "signatures": "redacted; typed management names/date are not handwritten-signature authentication",
+          "noAdoptionClaim": true
+        },
+        "nativeProofFile": "research/salaries/queue-completion-2026-11-01/schools/sd50-2025-image-checked-candidate-v2.json.gzip",
+        "nativeProofSha256": "7d5be03adf0d1b1819711861146712788b6ceb76548cfa4388f12078ada57226",
+        "independentPeerReviewPending": false,
+        "independentPeerReview": {
+          "file": "research/salaries/queue-completion-2026-11-01/reviews/independent-school-queue-sd50-final-comparison.json",
+          "sha256": "d5c7da02b3508004dde35c28a672550a75793629d4f21e2aeecfffde1097e610"
+        },
+        "boundedSourceImageReceipt": {
+          "file": "research/salaries/queue-completion-2026-11-01/schools/bounded-source-image-receipts.json",
+          "sha256": "439d334a1da503af4c5da7760776845b7f42c2c118334d7184896ff59db17c4f"
+        }
+      }
+    }
+  ]
+}

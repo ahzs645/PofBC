@@ -1,0 +1,55 @@
+{
+  "reviewer": "recovery_education",
+  "reviewedOn": "2026-11-02",
+  "sourceId": "phsa-2021-22",
+  "sourceSha256": "944c99fa7b7ede643cb4c426a5e9ab30aa906d8f81fda379f0206e4b0cdcd25c",
+  "batch": "phsa-2021-22-003",
+  "finalResolutionReceipt": {
+    "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-education-2021-22-003-resolutions.json",
+    "sha256": "2b8306271922fe7d25ac36a706643dce04a72c330e11a0f623f2290821a8a7f3"
+  },
+  "reviewedRows": 300,
+  "requestedFields": 329,
+  "requestedFieldCounts": {
+    "expenses": 25,
+    "name": 252,
+    "remuneration": 52
+  },
+  "exactRows": 292,
+  "rootAdoptedQualifiedRnMRows": 8,
+  "reviewerOnlyNameCorrections": 6,
+  "reviewerOnlyMoneyCorrections": 1,
+  "allRawTranscriptsPreserved": true,
+  "sourceExpenseDashCellsNull": 11,
+  "allSevenResolutionKeysExact": true,
+  "allRequestedFieldSetsAndSourceCropHashesExact": true,
+  "allMoneyOnlyLiteralNamesNull": true,
+  "actualPdfSourceFidelity": {
+    "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-education-2021-22-003-actual-pdf-all-row-pixel-check.json",
+    "sha256": "046bdce584d3a8aa162627766f63d9393facd1065bc3b39c58b408269da6d7a1",
+    "pageRenders": 22,
+    "fullRowCropsPixelExact": 300,
+    "requestedViewsPixelExact": 329
+  },
+  "freshNineNamePeer": {
+    "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-history-batches-peer-2021-22-003-nine-comparison.json",
+    "sha256": "9f4d51abe192b716d8fa980953ba66c134ff561300eef5ada7cbe6a86a7bb294"
+  },
+  "rootEightNameCaseAdoption": {
+    "path": "research/salaries/queue-completion-2026-11-01/reviews/root-phsa-history-2021-22-batch-003-segmentation-adoption.json",
+    "sha256": "1460e03797b2ae6f84be96c49d54a53e360b34d602cbfdaf32badcbe4e5ba68a"
+  },
+  "rootSingleMoneySourceComparison": {
+    "path": "research/salaries/queue-completion-2026-11-01/reviews/root-phsa-history-2021-22-batch-003-one-money-peer-comparison.json",
+    "sha256": "7b2b27b99b45947138e42a0ccf74e9e270e3e60c3063a0f5106564e3c4d1de00"
+  },
+  "strictDerivedOverlayOriginalReplay": {
+    "result": "PASS",
+    "resolvedRows": 300,
+    "path": "research/salaries/queue-completion-2026-11-01/phsa/overlays/phsa-2021-22-manual-overlay-003.json",
+    "sha256": "0c29d9306361f676326028671d5b6083d55b76af07306c6e2f71f919df3b7db7",
+    "matchesPrePeerPredictedHash": true
+  },
+  "temporaryRenderIncident": "A new unfrozen/tmp crop write failed when tmpfs filled. Originals, frozen sources and old evidence were untouched; subsequent new disposable renders used/workspace/salary-review-education-temp. No cache deletion.",
+  "wholeSourceAcceptance": false
+}

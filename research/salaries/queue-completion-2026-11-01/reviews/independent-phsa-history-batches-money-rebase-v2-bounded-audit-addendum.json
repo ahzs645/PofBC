@@ -1,0 +1,98 @@
+{
+  "frozen": true,
+  "reviewedOn": "2026-11-02",
+  "reviewer": "/root/recovery_review",
+  "scope": "Minimal independent technical review of new unchanged-money provenance rebase-v2 only. No new money source interpretation or broad repeatedfinancialaudit.",
+  "previousAudit": {
+    "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-history-batches-canonical-money-gates-audit-v3.json",
+    "sha256": "cc2ba3db174e1d30523f7fc43791634771544707e525e72ed4f37be402c0dd1d"
+  },
+  "codePins": [
+    {
+      "path": "scripts/finish_salary_phsa_money_supersessions.py",
+      "sha256": "cd6bc330bd729ac7a8041d3076fa2a90d6358c02af75253aee99213d25aa62f8"
+    },
+    {
+      "path": "scripts/finish_salary_phsa_triangulation.py",
+      "sha256": "4600ab903fd0acdc63848db4fcd580617f07a3f6213422b979c94c2fc6442d36"
+    }
+  ],
+  "actualOriginalLedger": {
+    "path": "research/salaries/queue-completion-2026-11-01/phsa/triangulation/money-peer-confirmations-001-v5.json",
+    "sha256": "74c5a51a1174ad6280930ba0c0dfd8e3d8ff3a28c107a3f049b23d9f78c36cb9"
+  },
+  "actualEffectiveLedger": {
+    "path": "research/salaries/queue-completion-2026-11-01/phsa/triangulation/money-peer-confirmations-001-v6.json",
+    "sha256": "6a9d38dfe8fa8db55f9894a046e34110ab061b6990a674faa1a5f73f3e97a11d"
+  },
+  "exactOrdinaryOverlaySelector": {
+    "path": "research/salaries/queue-completion-2026-11-01/phsa/overlay-supersessions/phsa-2018-19-manual-overlay-003-v2-canonical.json",
+    "sha256": "c7ec6156d32724b69822060418dc959ce437c28eb78d529cd59be0da884cb1d0"
+  },
+  "changedFields": [
+    {
+      "sourceId": "phsa-2018-19",
+      "physicalPage": 38,
+      "sourceRowOnPage": 51,
+      "field": "expenses"
+    }
+  ],
+  "unrelatedFieldPointersPreserved": 14,
+  "checks": [
+    {
+      "case": "actual001v6 recursively byte-replays exact immutablev5 and selector",
+      "expected": "accept",
+      "passed": true
+    },
+    {
+      "case": "explicit v2 rebase equals exact frozen001v6",
+      "expected": "accept",
+      "passed": true
+    },
+    {
+      "case": "onlyFY18p38r51 overlay pointer changes;14unrelated entries/pointers exact",
+      "expected": "accept",
+      "passed": true
+    },
+    {
+      "case": "missing preserved pointer",
+      "expected": "reject",
+      "passed": true,
+      "reason": "Derived monetary confirmation does not replay its pinned source peer evidence"
+    },
+    {
+      "case": "wrong older preserved ledger",
+      "expected": "reject",
+      "passed": true,
+      "reason": "Derived monetary confirmation does not replay its pinned source peer evidence"
+    },
+    {
+      "case": "unrelated confirmed amount drift",
+      "expected": "reject",
+      "passed": true,
+      "reason": "Derived monetary confirmation does not replay its pinned source peer evidence"
+    },
+    {
+      "case": "duplicate preserved field pointer",
+      "expected": "reject",
+      "passed": true,
+      "reason": "Derived monetary confirmation does not replay its pinned source peer evidence"
+    },
+    {
+      "case": "wrong unrelated selector pointer",
+      "expected": "reject",
+      "passed": true,
+      "reason": "Derived monetary confirmation does not replay its pinned source peer evidence"
+    },
+    {
+      "case": "existing v2 may not downgrade and discard per-field provenance",
+      "expected": "reject",
+      "passed": true,
+      "reason": "An existing per-field provenance chain must retain unrelated pointers"
+    }
+  ],
+  "checkCount": 9,
+  "failedCases": 0,
+  "conclusion": "Explicitv2 keeps unrelatedfield confirmation/selector pointers intact while only the source-specific unchanged expenseproof binds its revised name-onlyoverlay. Existing v1 implementations/receipts remain immutable; currentv2 refusesdowngrade. Exact entry equality and recursive pinnedproof prevent source/value/history/scope drift.",
+  "limits": "Read-only code and in-memory mutation assessment at exactpins, no producer/helper/evidence changes. Sourcepixels and humansemanticacceptance are separate. Own024producer branch excluded from thisindependentfinancialassessment; H/rootownthat. Finalallninepromotion remainsseparate; userholdsallfourrequests."
+}

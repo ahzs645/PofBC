@@ -1,0 +1,58 @@
+{
+  "reviewer": "/root/recovery_review",
+  "sourceId": "phsa-2016-17",
+  "sourceSha256": "31f7a1af80186bf81139fd693b36e733333a06c2ab1a4c5191bd6ee9b3623a53",
+  "batch": "phsa-2016-17-002",
+  "independentImageFirstTranscript": {
+    "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-history-batches-2016-17-002-two-name-peer-original.json",
+    "sha256": "cea7dc5ca912db38b57894884fa9f3c6ba8d037397c4b9864c1d1056acaa1640"
+  },
+  "comparedSourceOnlyRereadLedger": {
+    "path": "research/salaries/queue-completion-2026-11-01/reviews/independent-phsa-municipal-history-2016-17-002-precomparison-source-rereads.json",
+    "sha256": "1fe3161cf6416bc16d5b39ad90904bba267332d990f6336f72dcafdf4bfb84cc"
+  },
+  "cases": [
+    {
+      "sequence": 92,
+      "physicalPage": 48,
+      "sourceRowOnPage": 2,
+      "literalName": "Gosal,Jaskim Kaur",
+      "status": "resolved-from-original-image",
+      "matchesAuthorsFinalSourceReread": true,
+      "authorsInitialUncertainRereadIsPreservedNotAClaimedPayloadCorrection": true
+    },
+    {
+      "sequence": 333,
+      "physicalPage": 68,
+      "sourceRowOnPage": 26,
+      "literalPrimaryName": "Krishnaswamy,Wendy I",
+      "visibleAlternative": "Krishnaswamy,Wendy l",
+      "status": "resolved-with-source-typography-qualification",
+      "periodAdded": false,
+      "caseProvenByPixels": false,
+      "basis": "Explicit source initial-capital convention, not dictionary/identity evidence.",
+      "matchesAuthorsSourceOnlyQualifiedReading": true
+    }
+  ],
+  "independentActualSourceRenderChecks": [
+    {
+      "physicalPage": 48,
+      "sourceRowOnPage": 2,
+      "actual300SourceImageSha256": "86215eac43e4b7e7780f580a34b8acd8f1ca6e7862d17277d6073ce04d19c71a",
+      "rowCropSha256": "c3d47c05d1b40848b09f0e0ab2c3d2508acb0aa1cdd683358d14dc6a93829c51",
+      "allSourceHashesReproduced": true
+    },
+    {
+      "physicalPage": 68,
+      "sourceRowOnPage": 26,
+      "actual300SourceImageSha256": "bf1f6a8c57ce26860e3552b1e63c7d8829cb65c6f1b3035da6e831128aedfb51",
+      "rowCropSha256": "4a410b791e94f45e481f96cfe076d1e9c328b292df622f108a6e31c14f83b3fb",
+      "allSourceHashesReproduced": true
+    }
+  ],
+  "correctionsToAuthorsFinalSourceReadings": [],
+  "scope": "Two source names only; no ordinary400-row/460-field claim, no money review, no claim about seq58 or any unviewed source name.",
+  "candidateFilesOpenedByPeer": false,
+  "qualifiedCaseRequiresExactRootAdoptionAndPublicWarning": true,
+  "sourceAcceptanceClaim": false
+}
