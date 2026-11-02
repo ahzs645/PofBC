@@ -368,11 +368,14 @@ def live_link_groups(root):
     return groups
 
 
-def verify_employer_link_exports(root, groups):
-    expected = defaultdict(list)
+def verify_employer_link_exports(root, groups, known_employers):
+    expected = {slug: [] for slug in known_employers}
+    require(len(expected) == len(known_employers) and all(
+        re.fullmatch(r'[a-z0-9]+(?:-[a-z0-9]+)*', slug) is not None for slug in expected),
+        'Invalid/repeated indexed employer link export identifier')
     for group in groups:
         slug = group[0]
-        require(re.fullmatch(r'[a-z0-9]+(?:-[a-z0-9]+)*', slug) is not None, 'Invalid employer link export identifier')
+        require(slug in expected, 'Unknown employer in public name graph')
         if group[3]:expected[slug].append(group)
     folder = root / 'public/salaries/links/employers'
     require(folder.is_dir(), 'Employer link exports are missing')
@@ -742,7 +745,7 @@ def verify(root=ROOT, check_graph=True):
     if check_graph:
         groups = live_link_groups(root)
         result.update(verify_link_preservation(inputs['baseline-live-links.json.gzip']['groups'], groups))
-        result['verifiedEmployerLinkExports'] = verify_employer_link_exports(root, groups)
+        result['verifiedEmployerLinkExports'] = verify_employer_link_exports(root, groups, slugs)
         new_decisions = verify_new_name_receipts(root, inputs)
         result['validatedNewNameDecisions'] = verify_required_name_links(new_decisions, groups)
     return result

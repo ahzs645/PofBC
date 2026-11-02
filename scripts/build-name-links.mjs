@@ -66,7 +66,10 @@ writeFileSync(join(out, 'top.json.gzip'), packed(links.filter((link) => [link.ke
 // in one file let it show a payment disclosed twice under two joined spellings once.
 mkdirSync(join(out, 'employers'), { recursive: true })
 const byEmployer = Map.groupBy(links.filter((link) => link.aliases.length), (link) => link.employer)
-for (const [slug, list] of byEmployer) writeFileSync(join(out, 'employers', `${slug}.json.gzip`), packed(list))
+for (const employer of index.employers) {
+  const slug = employer[3]
+  writeFileSync(join(out, 'employers', `${slug}.json.gzip`), packed(byEmployer.get(slug) ?? []))
+}
 
 const csv = (value) => (/[",\n]/.test(String(value ?? '')) ? `"${String(value).replace(/"/g, '""')}"` : String(value ?? ''))
 const sorted = [...decisions].sort((a, b) => b.pay - a.pay || a.employer.localeCompare(b.employer) || a.key.localeCompare(b.key))

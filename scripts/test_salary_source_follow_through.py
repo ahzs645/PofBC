@@ -256,6 +256,7 @@ class EmployerLinkExportTests(unittest.TestCase):
     def setUp(self):
         self.temp = tempfile.TemporaryDirectory();self.addCleanup(self.temp.cleanup);self.root = Path(self.temp.name)
         self.folder = self.root / 'public/salaries/links/employers';self.folder.mkdir(parents=True)
+        self.employers = ['employer']
         self.groups = [['employer', 'surname|full', 'Surname, Full',
                         [['surname|f', 'Surname, F', 'verified', 'Pinned source row']]],
                        ['employer', 'other|full', 'Other, Full',
@@ -268,21 +269,38 @@ class EmployerLinkExportTests(unittest.TestCase):
 
     def test_employer_file_contains_the_exact_complete_groups_independent_of_order(self):
         self.write(list(reversed(self.groups)))
-        self.assertEqual(check.verify_employer_link_exports(self.root, self.groups), 1)
+        self.assertEqual(check.verify_employer_link_exports(self.root, self.groups, self.employers), 1)
 
     def test_missing_a_group_is_rejected_even_though_the_file_exists(self):
         self.write(self.groups[:1])
-        with self.assertRaisesRegex(ValueError, 'groups differ'):check.verify_employer_link_exports(self.root, self.groups)
+        with self.assertRaisesRegex(ValueError, 'groups differ'):check.verify_employer_link_exports(self.root, self.groups, self.employers)
 
     def test_altered_status_or_evidence_in_an_employer_file_is_rejected(self):
         changed = copy.deepcopy(self.groups);changed[0][3][0][2] = 'likely';self.write(changed)
-        with self.assertRaisesRegex(ValueError, 'groups differ'):check.verify_employer_link_exports(self.root, self.groups)
+        with self.assertRaisesRegex(ValueError, 'groups differ'):check.verify_employer_link_exports(self.root, self.groups, self.employers)
 
     def test_missing_or_unknown_employer_files_cannot_hide_behind_valid_global_groups(self):
         (self.folder / 'employer.json.gzip').unlink()
-        with self.assertRaisesRegex(ValueError, 'missing/unknown files'):check.verify_employer_link_exports(self.root, self.groups)
+        with self.assertRaisesRegex(ValueError, 'missing/unknown files'):check.verify_employer_link_exports(self.root, self.groups, self.employers)
         self.write(self.groups);(self.folder / 'unknown.json.gzip').write_bytes(gzip.compress(b'{"links":[]}'))
-        with self.assertRaisesRegex(ValueError, 'missing/unknown files'):check.verify_employer_link_exports(self.root, self.groups)
+        with self.assertRaisesRegex(ValueError, 'missing/unknown files'):check.verify_employer_link_exports(self.root, self.groups, self.employers)
+
+    def test_known_employer_without_joins_has_an_explicit_empty_link_file(self):
+        self.employers.append('no-joins')
+        (self.folder / 'no-joins.json.gzip').write_bytes(gzip.compress(b'{"links":[]}'))
+        self.assertEqual(check.verify_employer_link_exports(self.root, self.groups, self.employers), 2)
+
+    def test_a_missing_empty_employer_file_is_rejected(self):
+        self.employers.append('no-joins')
+        with self.assertRaisesRegex(ValueError, 'missing/unknown files'):
+            check.verify_employer_link_exports(self.root, self.groups, self.employers)
+
+    def test_a_known_empty_employer_cannot_acquire_an_invented_group(self):
+        self.employers.append('no-joins')
+        invented = copy.deepcopy(self.groups[0]);invented[0] = 'no-joins'
+        (self.folder / 'no-joins.json.gzip').write_bytes(gzip.compress(json.dumps({'links': [invented]}).encode()))
+        with self.assertRaisesRegex(ValueError, 'groups differ'):
+            check.verify_employer_link_exports(self.root, self.groups, self.employers)
 
 
 class GraphPreservationTests(unittest.TestCase):

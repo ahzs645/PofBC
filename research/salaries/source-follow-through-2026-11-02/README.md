@@ -63,7 +63,7 @@ Each collection guide documents original-PDF download/extraction commands and th
 
 The current release verifier checks every original observation, every new normalized observation, all 61 document dispositions, held-row exclusion, source fingerprints, missing/zero/negative values, compiled preservation, old identity graph connections and currency separation. `--write` records its successful result in [release-validation.json](release-validation.json).
 
-Two combined builds reproduce **1,909 generated files identically**, including 121 employer-specific name-link exports. The [determinism receipt](determinism.json) records the comparison. The [browser receipt](browser-validation.json) covers narrow and desktop layouts, source evidence, old name URLs, accepted/held cohorts and USD separation.
+Two combined builds reproduce **2,061 generated files identically**, including 273 employer-specific name-link exports (152 empty where no names are joined). The [determinism receipt](determinism.json) records the comparison. The [browser receipt](browser-validation.json) covers narrow and desktop layouts, source evidence, old name URLs, accepted/held cohorts and USD separation.
 
 Concurrent changes from main are preserved, including the employer-page treatment of repeated payments and the owner's separately requested Martineau spelling connection. The [concurrent-main capsule](concurrent-main.json) pins that single additional legacy review while preserving the original four decisions. The current verifier checks each employer-specific link file against the complete published graph.
 
