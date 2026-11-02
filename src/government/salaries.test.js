@@ -1,7 +1,8 @@
 import { test } from 'node:test'
 import assert from 'node:assert/strict'
 import { readFileSync } from 'node:fs'
-import { SALARY_INDEX, SALARY_YEARS } from './salaryIndex.js'
+import { SALARY_INDEX, SALARY_YEARS, SALARY_SOURCES } from './salaryIndex.js'
+import { currencyOf, governmentAnnotation } from '../salaries/recordAnnotations.js'
 import { governmentIn, PRESENT_YEAR } from './snapshot.js'
 import { salaryKeyOf } from './salaries.js'
 import { HISTORICAL_BODIES, SUB_AGENCIES } from './historyData.js'
@@ -18,8 +19,10 @@ test('each year’s file is there, and its rows add up to the index', () => {
     for (const [slug, totals] of Object.entries(years)) {
       const data = JSON.parse(readFileSync(new URL(`../../public/salaries/${slug}/${id}.json`, import.meta.url)))
       assert.equal(data.rows.length, totals.count, `${id} ${slug}`)
-      assert.equal(data.rows.reduce((sum, row) => sum + Math.round(row[2] * 100), 0), Math.round(totals.total * 100), `${id} ${slug}: exact cents`)
-      assert.equal(data.rows[0][2], totals.max)
+      const cad = data.rows.filter((row) => currencyOf(governmentAnnotation(row, id, data.year), SALARY_SOURCES[row[4]]) === 'CAD')
+      assert.equal(cad.reduce((sum, row) => sum + Math.round(row[2] * 100), 0), Math.round(totals.total * 100), `${id} ${slug}: exact CAD cents`)
+      assert.equal(cad.length ? Math.max(...cad.map((row) => row[2])) : null, totals.max)
+      assert.equal(totals.nonCadRecords ?? 0, data.rows.length - cad.length)
     }
   }
   const labels = SALARY_YEARS.map(({ label }) => label)

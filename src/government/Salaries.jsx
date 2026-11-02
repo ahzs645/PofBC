@@ -13,6 +13,7 @@ import { displayName, personKey } from '../salaries/people.js'
 import { DisclosureSummary, SourceLink } from '../salaries/DisclosureEvidence.jsx'
 import { expenseLabel } from '../salaries/coverage.js'
 import { formatMoney } from '../salaries/money.js'
+import { governmentAnnotation, currencyOf } from '../salaries/recordAnnotations.js'
 import { YearPicker } from '../salaries/parts.jsx'
 import { hasExpenseAmount } from '../salaries/viewState.js'
 import { SiteLink, searchFor, useNavigate } from '../site/navigation.jsx'
@@ -73,12 +74,14 @@ export const Salaries = ({ node, year }) => {
 
   const matches = useMemo(() => {
     const words = query.trim().toLowerCase().split(/\s+/).filter(Boolean)
-    if (!words.length) return state.rows
-    return state.rows.filter(([name, position]) => {
+    const matching = !words.length ? state.rows : state.rows.filter(([name, position]) => {
       const text = `${name ?? ''} ${position ?? ''}`.toLowerCase()
       return words.every((word) => text.includes(word))
     })
-  }, [state.rows, query])
+    const label = SALARY_YEARS.find((each) => each.slug === selectedSlug)?.label
+    const currency = (row) => currencyOf(governmentAnnotation(row, key, label), SALARY_SOURCES[row[4]])
+    return [...matching].sort((a, b) => currency(a).localeCompare(currency(b)) || b[2] - a[2])
+  }, [state.rows, query, key, selectedSlug])
 
   if (!key || !years.length) return null
   const label = SALARY_YEARS.find((each) => each.slug === selectedSlug)?.label
@@ -108,6 +111,7 @@ export const Salaries = ({ node, year }) => {
             <div><dt>Disclosed total</dt><dd>{compact(totals.total)}</dd></div>
             <div><dt>Median</dt><dd>{money(totals.median)}</dd></div>
           </dl>
+          {totals.nonCadRecords > 0 && <p className="gov-muted">Totals and medians use CAD observations only. Other currencies remain listed with their original amounts; no conversion is applied.</p>}
           <DisclosureSummary
             coverage={{ ...coverage, status: 'available', ...totals }}
             sources={SALARY_SOURCES}
@@ -125,7 +129,7 @@ export const Salaries = ({ node, year }) => {
           {state.status === 'failed' && <p className="gov-muted" role="alert">The {label} records could not be loaded. <button type="button" onClick={() => setLoadVersion((value) => value + 1)}>Retry</button></p>}
           {state.status === 'ready' && (
             <CardSection
-              title={query ? 'Matching' : 'Highest paid'}
+              title={query ? 'Matching' : totals.nonCadRecords ? 'Disclosed payments · CAD first' : 'Highest paid'}
               meta={`${matches.length.toLocaleString('en-CA')} ${matches.length === 1 ? 'record' : 'records'} · ${label}`}
               footer={matches.length > shown && (
                 <button type="button" className="gov-show-more gov-cards__more" onClick={() => setShown((count) => count + PAGE * 2)}>
@@ -134,17 +138,21 @@ export const Salaries = ({ node, year }) => {
               )}
             >
               {matches.length === 0 && <p className="gov-muted">No imported records match “{query.trim()}”. Try a surname or position.</p>}
-              {matches.slice(0, shown).map(([name, position, pay, expenses, sourceId, pdfPage], index) => (
+              {matches.slice(0, shown).map((row, index) => {
+                const [name, position, pay, expenses, sourceId, pdfPage] = row
+                const annotation = governmentAnnotation(row, key, label)
+                const currency = currencyOf(annotation, SALARY_SOURCES[sourceId])
+                return (
                 <Card
                   key={`${name}-${position}-${index}`}
                   icon={<KindIcon person branch={node.branch ?? 'executive'} />}
                   title={displayName(name, SALARY_SOURCES[sourceId]?.nameDisclosure) ?? 'Name unavailable'}
-                  lines={[position, hasExpenseAmount(expenses) ? `${expenseLabel(sourceId, SALARY_SOURCES)} ${money(expenses)}` : null, !oneSource && !pdfPage && sourceId ? SALARY_SOURCES[sourceId]?.title : null]}
-                  aside={money(pay)}
+                  lines={[position, hasExpenseAmount(expenses) ? `${expenseLabel(sourceId, SALARY_SOURCES)} ${formatMoney(expenses, null, annotation?.expenseCurrency ?? currency)}` : null, annotation ? `${currency} · ${annotation.measure} · excluded from CAD comparisons` : null, !oneSource && !pdfPage && sourceId ? SALARY_SOURCES[sourceId]?.title : null]}
+                  aside={formatMoney(pay, null, currency)}
                   onClick={name ? () => follow(name) : undefined}
-                  link={pdfPage ? <SourceLink sourceId={sourceId} sources={SALARY_SOURCES} pdfPage={pdfPage} /> : null}
+                  link={annotation ? <SourceLink url={annotation.evidence[0].url} pdfPage={annotation.evidence[0].pdfPage} label="Currency evidence" /> : pdfPage ? <SourceLink sourceId={sourceId} sources={SALARY_SOURCES} pdfPage={pdfPage} /> : null}
                 />
-              ))}
+              )})}
             </CardSection>
           )}
         </>

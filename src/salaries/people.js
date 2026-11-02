@@ -184,9 +184,9 @@ export const positionKey = (position) => String(position ?? '').toLowerCase().re
  * payment and disclosed expenses. Unknown expenses and compiled-only repetitions stay visible.
  * This display grouping does not establish the compiled observation's reporting year.
  */
-export const withoutCompiledRepeats = (rows, sources = {}) => {
+export const withoutCompiledRepeats = (rows, sources = {}, currencyOfRow = () => 'CAD') => {
   const compiled = (row) => sources[row[6]]?.sourceKind === 'compiled' || sources[row[6]]?.scope === 'compiled-unverified'
-  const key = (row) => `${row[4]}|${row[5]}|${row[2]}|${row[3]}`
+  const key = (row) => `${row[4]}|${row[5]}|${row[2]}|${row[3]}|${currencyOfRow(row)}`
   const primary = new Map()
   for (const row of rows) {
     const source = sources[row[6]]

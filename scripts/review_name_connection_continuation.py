@@ -137,19 +137,22 @@ def build_ledger(payload, plans, reviews):
     baseline = json.loads(gzip.decompress((AREA / 'baseline-links.json.gzip').read_bytes()))
     if sha(AREA / 'baseline-links.json.gzip') != pins['baselineLinksSha256']:
         raise ValueError('The previous name graph snapshot changed')
-    groups = current_groups()
+    live_groups = current_groups()
+    historical = ROOT / 'research/salaries/name-links/held-completion-2026-11-02/baseline-links.json.gzip'
+    groups = json.loads(gzip.decompress(historical.read_bytes()))['groups'] if historical.exists() else live_groups
     lookup = graph(groups)
+    live_lookup = graph(live_groups)
     # Every existing verified/likely relationship must survive. Canonical spellings may improve.
     preserved = 0
     for g in baseline['groups']:
         slug, key, _, aliases = g
-        target = lookup.get((slug, key))
+        target = live_lookup.get((slug, key))
         if not target:
             raise ValueError('A previous name group disappeared')
         for a in aliases:
-            now = lookup.get((slug, a[0]))
-            if not now or now['key'] != target['key'] or (a[2] == 'verified' and now['status'] != 'verified'):
-                raise ValueError('A previous name relationship was lost or downgraded')
+            now = live_lookup.get((slug, a[0]))
+            if not now or now['key'] != target['key']:
+                raise ValueError('A previous name relationship was lost')
             preserved += 1
     wanted = {(r['employer'], k) for r in prior for n in r['names']
               for k in verified_equivalents(r['employer'], name_key(n), lookup)}

@@ -52,5 +52,5 @@ Priority 1 covers missing official employer/period coverage, held partial employ
 - [Work queue](work-queue.csv) is suitable for filtering by employer, period, source status and priority.
 - [Usage and snapshot format](README.md) explains importing a saved snapshot and rerunning the audit.
 
-Repository input fingerprint: `d828174d0a9d7f0385e0ae4db08af88683e43d9478248f0dd0cb3fad0b23a3a3`.
+Repository input fingerprint: `e9f7582a8e8cc36999c6d2855cbfcd0c100786d355fe5db97cecddad8086a161`.
 Reference snapshot fingerprint: `5955544e5deef4dcc72fcb201137dd943053ef78deeca303026c4a4bc19124f1`.

@@ -133,6 +133,7 @@ test('duplicate-looking rows are counted without deleting possible distinct peop
 const fixture = () => {
   const dir = mkdtempSync(join(tmpdir(), 'pofbc-salary-test-'))
   const research = join(dir, 'research'); mkdirSync(research)
+  writeFileSync(join(research, 'record-annotations.json'), JSON.stringify({ schemaVersion: 1, annotations: [] }))
   const baseline = { provenance: { description: 'Fixture compiled input' }, years: ['2017/18', '2020/21', '2023/24'],
     repeated: [{ employer: 'bc-hydro', year: '2020/21', repeats: '2017/18', rows: 20, same: 20 }],
     employers: [{ slug: 'bc-hydro', names: ['BC Hydro'], sector: 'Crown corporations', body: 'bc-hydro', counts: [1, 0, 0], rows: [['Old, A', null, 90000, null, 0]] }] }

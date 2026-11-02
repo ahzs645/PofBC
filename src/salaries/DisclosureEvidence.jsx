@@ -1,7 +1,7 @@
 import { coverageStatus, disclosurePeriod, scopeLabel, sourceHref, sourceWarnings, thresholdLabel } from './coverage.js'
 
-export const SourceLink = ({ sourceId, sources = {}, pdfPage, label }) => {
-  const source = sources[sourceId]
+export const SourceLink = ({ sourceId, sources = {}, pdfPage, label, url }) => {
+  const source = sources[sourceId] ?? (url ? { url, title: 'Reviewed source evidence' } : null)
   const href = sourceHref(source, pdfPage)
   const page = Number.isInteger(pdfPage) && pdfPage > 0 && href?.includes('#page=')
   return href
