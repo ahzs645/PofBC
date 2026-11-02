@@ -13,6 +13,7 @@ import { gunzipSync, gzipSync } from 'node:zlib'
 import { findNameLinks, LINK_RULES } from '../src/salaries/nameLinks.js'
 import { personKey, surnameShard } from '../src/salaries/people.js'
 import { validateReviewedNameConnections } from './lib/reviewed-name-connections.mjs'
+import { validateRepeatNameConnections } from './lib/repeat-name-connections.mjs'
 import { validateHeldNameConnections } from './lib/held-name-connections.mjs'
 
 const root = resolve(dirname(fileURLToPath(import.meta.url)), '..')
@@ -29,6 +30,9 @@ const continuedReview = JSON.parse(readFileSync(join(research, 'continuation-rev
 reviewed.push(...validateReviewedNameConnections(continuedReview, rows, index))
 const completedReview = JSON.parse(readFileSync(join(research, 'held-completion-reviewed.json'), 'utf8'))
 reviewed.push(...validateHeldNameConnections(completedReview, rows, index, root))
+// Compiled copies of a report's record under a misread spelling, each pair read and re-checked here.
+const repeatReview = JSON.parse(readFileSync(join(research, 'repeat-reviewed.json'), 'utf8'))
+reviewed.push(...validateRepeatNameConnections(repeatReview, rows, index))
 const { links, decisions } = findNameLinks(rows, { years: index.years, employers: index.employers, reviewed })
 
 const note = 'Spellings of one name at one employer joined as one person. verified: the records establish it (an extraction split, a distinctive position under both spellings, or a reviewed decision). likely: the only fuller name at the employer that agrees, never in the same period, close in time and pay. Never across employers. Each row: [employer slug, name key, disclosed name, [[alias key, disclosed alias, status, reason]]].'
