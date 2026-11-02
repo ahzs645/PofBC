@@ -1,0 +1,101 @@
+{
+  "version": 1,
+  "sourceId": "follow-through-bcib-2019-20-employees",
+  "leadId": "additional-source-bcib-2019-20",
+  "sourceUrl": "https://bcib.ca/wp-content/uploads/2023/05/BCIB-FP-2020-SOFI-20200924-Final.pdf",
+  "sourceIndexUrl": "https://bcib.ca/reporting-resources/",
+  "checkedOn": "2026-11-02",
+  "originalSha256": "8fc45100a9731074ada394e55cf1e308b602aa53d0591329bd66034570565d2d",
+  "originalBytes": 1292294,
+  "originalPdfPageCount": 25,
+  "period": {
+    "start": "2019-04-01",
+    "end": "2020-03-31",
+    "partial": false,
+    "evidence": "Original schedule year-ended header; first BCFSA schedule explicitly gives commencement date and period end."
+  },
+  "employeePhysicalPages": [
+    20
+  ],
+  "retainedSourceEvidencePages": [
+    20,
+    21
+  ],
+  "readerNames": [
+    "PyMuPDF positioned words",
+    "Poppler pdftotext -layout"
+  ],
+  "primaryRowCount": 13,
+  "independentRowCount": 13,
+  "everyRowFieldMultisetEqual": true,
+  "primaryNormalizedSha256": "ce4a06a1abefaf736522bf4e3fd162fbd5a7afd66814afe35fd1051a2da1b6f5",
+  "independentRowMultisetSha256": "ce4a06a1abefaf736522bf4e3fd162fbd5a7afd66814afe35fd1051a2da1b6f5",
+  "pageControls": [
+    {
+      "physicalPage": 20,
+      "rowCount": 13,
+      "remuneration": 1488004,
+      "expenses": 83395
+    }
+  ],
+  "controls": {
+    "physicalPage": 20,
+    "printedTotalEmployees": [
+      3248680,
+      110228
+    ],
+    "printedBelowThreshold": [
+      1760676,
+      26833
+    ],
+    "printedDirectNamedSubtotal": null,
+    "impliedNamedControl": [
+      1488004,
+      83395
+    ],
+    "observedAllNamedRows": [
+      1488004,
+      83395
+    ],
+    "residualNamedMinusImplied": [
+      0,
+      0
+    ],
+    "residualNamedMinusDirect": null,
+    "units": "CAD whole dollars",
+    "residualCause": null
+  },
+  "physicalPagesVisuallyReviewed": [
+    20
+  ],
+  "sourceRowReview": "Every native employee row compared field-for-field between independent PDF readers; source-pixel review of printed control totals and ambiguous glyph/layout cases. Every scan employee row and control additionally visually reviewed.",
+  "explicitZeroExpenseRows": 0,
+  "nullExpenseRows": 1,
+  "negativeExpenseRows": [],
+  "repeatedDisclosedNames": {},
+  "exactDuplicateSixFieldRows": 0,
+  "excludedScopes": [
+    "board-director-remuneration",
+    "suppliers",
+    "below-threshold-aggregate",
+    "reconciliation-adjustments",
+    "employer-tax-benefit-aggregates"
+  ],
+  "remunerationDefinitionVerbatim": "Note 1: Remuneration includes base salary and other compensation for 2019/20.",
+  "severanceCompensationDefinitionContext": null,
+  "publicWarning": null,
+  "rawEvidenceFiles": [
+    {
+      "file": "evidence/bcib-2019-20.layout.txt",
+      "sha256": "147aea8454fc3611cbae329790cfa9dede0c8912a0b9a5c6bec0ef44bb8edad3"
+    },
+    {
+      "file": "evidence/bcib-2019-20.words.json.gzip",
+      "sha256": "22b20a2edcf06053fec93bf7259e0278d9b65a498272ff2aa251eb00806e46ec"
+    },
+    {
+      "file": "evidence/bcib-2019-20.controls.png",
+      "sha256": "5a1abfb91bbe7a092bde477de00fe0ce58b94568007e10027e22fe56d5e85948"
+    }
+  ]
+}

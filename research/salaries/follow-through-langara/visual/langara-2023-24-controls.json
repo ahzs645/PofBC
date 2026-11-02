@@ -1,0 +1,49 @@
+{
+  "pdfPage": 42,
+  "controls": [
+    {
+      "field": "remuneration",
+      "rowSum": 94671610,
+      "printedControl": 94671616,
+      "residual": -6,
+      "basis": "Printed Total of Employees Earning > $75,000; board, below-threshold and other financial aggregates excluded."
+    },
+    {
+      "field": "expenses",
+      "rowSum": 2754209,
+      "printedControl": 2754193,
+      "residual": 16,
+      "basis": "Printed Total of Employees Earning > $75,000; board, below-threshold and other financial aggregates excluded."
+    }
+  ],
+  "financialReconciliation": {
+    "namedEmployeeSubtotal": [
+      94671616,
+      2754193
+    ],
+    "belowThreshold": [
+      36401329,
+      760815
+    ],
+    "board": [
+      24499,
+      18075
+    ],
+    "severanceExcludedFromEarnings": [
+      135928,
+      null
+    ],
+    "otherEmployeeRemunerationAndOperatingExpenses": [
+      22002953,
+      55158169
+    ],
+    "salaryAndOperatingExpensesTotal": [
+      153236325,
+      58691252
+    ],
+    "totalExpensesPerStatementOfOperations": 211927577
+  },
+  "allFinancialReconciliationResiduals": 0,
+  "image": "visual/langara-2023-24-controls.png",
+  "imageSha256": "0dcd611bd90baf64e88f647d333b971591ec7df85cf449eb8e5e12b1b38b8b6d"
+}

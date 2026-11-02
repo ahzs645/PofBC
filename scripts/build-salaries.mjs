@@ -12,6 +12,7 @@ import { BODIES, EMPLOYER_ALIASES, canonicalSlug, employerSector, employerSlug, 
 import { periodMean, TOP_PER_PERIOD, topRecords, csvRows, money, median, sha256, yearSlug, reportingPeriodType, applyCompiledReplacements, applyTravelJoinCorrections, applyCompiledRetentionDecisions, preservePublishedCompiledRows, sumMoney, duplicateStats, repeatedCandidates, validateRow, validateReplacementScopes, compiledPartitionsToRetain } from './lib/salary-data.mjs'
 import { sourceCatalog, sourceLeadsFor, hasLocatedSource } from './lib/salary-sources.mjs'
 import { decodedCurrency, isCadPerson, validateRecordAnnotations } from '../src/salaries/recordAnnotations.js'
+import { applyFollowThroughQualifications } from './lib/follow-through-source-qualifications.mjs'
 
 const root = resolve(dirname(fileURLToPath(import.meta.url)), '..')
 const args = process.argv.slice(2)
@@ -212,6 +213,8 @@ for (const correction of travelRecovery.corrections) {
 const retentionPath = join(research, 'compiled-retention-decisions.json')
 const retentionReview = existsSync(retentionPath) ? readJson(retentionPath) : null
 applyCompiledRetentionDecisions(sources, retentionReview)
+const followThroughQualifications = join(research, 'source-follow-through-2026-11-02/source-qualifications.json')
+if (existsSync(followThroughQualifications)) applyFollowThroughQualifications(sources, readJson(followThroughQualifications), new Map(importStats.map((entry) => [entry.id, entry.employers])))
 validateReplacementScopes(baseline, official, sources, reviewed)
 const retainedCompiledPartitions = compiledPartitionsToRetain(official, sources)
 const compiledRecovery = applyCompiledReplacements(baseline, official, sources, manifests.flatMap(({ manifest }) => manifest.compiledReplacements ?? []))

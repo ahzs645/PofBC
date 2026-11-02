@@ -1,0 +1,204 @@
+{
+  "version": 1,
+  "sourceId": "follow-through-bcfsa-2020-21-employees",
+  "leadId": "additional-source-bcfsa-2020-21",
+  "sourceUrl": "https://www.bcfsa.ca/media/2657/download",
+  "sourceIndexUrl": "https://www.bcfsa.ca/about-us/what-we-do/corporate-publications",
+  "checkedOn": "2026-11-02",
+  "originalSha256": "721c59f000e3444688cd32b5baefdccf2128cdfd05b93b230697a7076c01ff01",
+  "originalBytes": 4954486,
+  "originalPdfPageCount": 12,
+  "period": {
+    "start": "2020-04-01",
+    "end": "2021-03-31",
+    "partial": false,
+    "evidence": "Original schedule year-ended header; first BCFSA schedule explicitly gives commencement date and period end."
+  },
+  "employeePhysicalPages": [
+    7,
+    8,
+    9,
+    10
+  ],
+  "retainedSourceEvidencePages": [
+    7,
+    8,
+    9,
+    10
+  ],
+  "readerNames": [
+    "Tesseract5 PSM3 full original scan",
+    "Tesseract5 PSM6 independent column crops"
+  ],
+  "primaryRowCount": 112,
+  "independentRowCount": 112,
+  "everyRowFieldMultisetEqual": true,
+  "primaryNormalizedSha256": "aa23cf9c0e318ec918cedf5c31040d61fb3b40c830471fa8022fc611195e6f73",
+  "independentRowMultisetSha256": "7539a2c49d9d2d76ad175d68bddc0ae20bd59b5f40b2a5f5e4069c36383be7e0",
+  "pageControls": [
+    {
+      "physicalPage": 7,
+      "rowCount": 21,
+      "remuneration": 2390720,
+      "expenses": 19007
+    },
+    {
+      "physicalPage": 8,
+      "rowCount": 43,
+      "remuneration": 4547710,
+      "expenses": 47967
+    },
+    {
+      "physicalPage": 9,
+      "rowCount": 43,
+      "remuneration": 5032398,
+      "expenses": 136109
+    },
+    {
+      "physicalPage": 10,
+      "rowCount": 5,
+      "remuneration": 524007,
+      "expenses": 1626
+    }
+  ],
+  "controls": {
+    "physicalPage": 10,
+    "printedTotalEmployees": [
+      16258253,
+      484058
+    ],
+    "printedBelowThreshold": [
+      3763415,
+      279346
+    ],
+    "printedDirectNamedSubtotal": null,
+    "impliedNamedControl": [
+      12494838,
+      204712
+    ],
+    "observedAllNamedRows": [
+      12494835,
+      204709
+    ],
+    "residualNamedMinusImplied": [
+      -3,
+      -3
+    ],
+    "residualNamedMinusDirect": null,
+    "units": "CAD whole dollars",
+    "residualCause": "Unknown; preserved as printed."
+  },
+  "physicalPagesVisuallyReviewed": [
+    7,
+    8,
+    9,
+    10
+  ],
+  "sourceRowReview": "Every native employee row compared field-for-field between independent PDF readers; source-pixel review of printed control totals and ambiguous glyph/layout cases. Every scan employee row and control additionally visually reviewed.",
+  "explicitZeroExpenseRows": 3,
+  "nullExpenseRows": 0,
+  "negativeExpenseRows": [
+    {
+      "rowIndex": 25,
+      "name": "Drury, Courtney",
+      "value": -298,
+      "physicalPage": 8
+    },
+    {
+      "rowIndex": 96,
+      "name": "Sherwood, David",
+      "value": -822,
+      "physicalPage": 9
+    }
+  ],
+  "repeatedDisclosedNames": {},
+  "exactDuplicateSixFieldRows": 0,
+  "excludedScopes": [
+    "board-director-remuneration",
+    "suppliers",
+    "below-threshold-aggregate",
+    "reconciliation-adjustments",
+    "employer-tax-benefit-aggregates"
+  ],
+  "remunerationDefinitionVerbatim": null,
+  "severanceCompensationDefinitionContext": "\"Compensation\" means regular salary excluding benefits.",
+  "publicWarning": "Published named rows sum to $12,494,835 remuneration and $204,709 expenses, differing from the printed total less below-threshold controls by −$3 and −$3. Original row values are retained; causes unknown. The source publishes negative expense adjustments: Drury, Courtney (−$298), Sherwood, David (−$822). These remain negative; printed numeric zeros remain 0.",
+  "rawEvidenceFiles": [
+    {
+      "file": "evidence/bcfsa-2020-21.rows.json.gzip",
+      "sha256": "8959ffb07c58b3f640066d1a113ca32c5ec9d5baf3ee4f23b99a84d72da8b539"
+    },
+    {
+      "file": "evidence/ocr-review.json",
+      "sha256": "50b4a22205512b660f4738fe77a0ef7040a11938f1a12f2e1f14147c5a34f30f"
+    },
+    {
+      "file": "evidence/ocr/p07-psm3.txt",
+      "sha256": "eb0d3ede9cae981658decc5bdcc073e5a38d3913b5cdfe245a2d895d8cc64678"
+    },
+    {
+      "file": "evidence/ocr/p07-name.txt",
+      "sha256": "09a02c559119deca6640761935cfc3b73a84e400cee19b2766ca695a7f7558e2"
+    },
+    {
+      "file": "evidence/ocr/p07-pay.txt",
+      "sha256": "11a998da1230241884cfa92376bdaa75411435b58225fa2f6bb2a5511e2beb02"
+    },
+    {
+      "file": "evidence/ocr/p07-expense.txt",
+      "sha256": "e7ad3847873d12920acec6a17d19e25b1f1529671229b24361cff2f61ca4bb91"
+    },
+    {
+      "file": "evidence/ocr/p08-psm3.txt",
+      "sha256": "474ede02eed921930d9e6db91a20e2ce82e6d348034b75fd45eec8566ba7480d"
+    },
+    {
+      "file": "evidence/ocr/p08-name.txt",
+      "sha256": "2e1c437ed41f3499fa36b78a4c8c46e1a8023ee8a6d4acd95e9332a4fc031d51"
+    },
+    {
+      "file": "evidence/ocr/p08-pay.txt",
+      "sha256": "a3763040b6716a199b6d2875d6478eb62aac49bc24a612eacc20dd3167e50775"
+    },
+    {
+      "file": "evidence/ocr/p08-expense.txt",
+      "sha256": "615202a9d74d8285eab8e48610a6714d785fd612808aab9b63a2970905ff2f58"
+    },
+    {
+      "file": "evidence/ocr/p09-psm3.txt",
+      "sha256": "e1920d0a2759ae6b3ee2b518a56a1adf7d7000801bed7a6b7b6947107bdd74d5"
+    },
+    {
+      "file": "evidence/ocr/p09-name.txt",
+      "sha256": "8a2a2e59d53d4c764cbd6632c427fc654a1830b99f926898c53c14c4472bad65"
+    },
+    {
+      "file": "evidence/ocr/p09-pay.txt",
+      "sha256": "599a89acd60e0272437304e74e31866d033ab1f39460aea2ccac15fbaefce884"
+    },
+    {
+      "file": "evidence/ocr/p09-expense.txt",
+      "sha256": "378199db1fb3f4e4b1c0425add9932dae1a0dd0d4207aca62c54d65babb4787b"
+    },
+    {
+      "file": "evidence/ocr/p10-psm3.txt",
+      "sha256": "2615c9cfc0df4962eeabab2250ef8072840903db4cff1c952093d318110b8c1b"
+    },
+    {
+      "file": "evidence/ocr/p10-name.txt",
+      "sha256": "d895547439ba7c43d9c3a8f8e4b92c66441b3fe287d653232555597ab7ad28de"
+    },
+    {
+      "file": "evidence/ocr/p10-pay.txt",
+      "sha256": "ba0af0199840e18b5f91e9b2de6248e47f6000d8f3938864714ea8ef8b57c810"
+    },
+    {
+      "file": "evidence/ocr/p10-expense.txt",
+      "sha256": "95c44a10466528aac1bb4620091778b4cfb9f2115fa8a8a6a430c67e0d7b0d53"
+    },
+    {
+      "file": "evidence/bcfsa-2020-21.controls.png",
+      "sha256": "4e1fc5ef75f04e29ff964742b1ae33f65122bf72f81c1e7e59d1bcd08aabc0f2"
+    }
+  ]
+}

@@ -1,8 +1,11 @@
 # Salary audit, source recovery and remaining gaps
 
-For the latest work, start with the [held-source resolutions](held-resolution-2026-11-01/README.md),
-the [current release reconciliation](held-resolution-2026-11-01/release.md), and
-the [unsent source-copy and clarification list](held-resolution-2026-11-01/acquisition-list.md).
+For the latest work, start with the [2 November official-source follow-through](source-follow-through-2026-11-02/README.md):
+55,477 additional observations from 61 reports, 18 source-backed name connections, and the
+[reconciled 134-entry backlog](source-follow-through-2026-11-02/backlog-reconciliation.md).
+The dataset now contains 1,440,498 observations. Earlier [held-source resolutions](held-resolution-2026-11-01/README.md),
+[release reconciliation](held-resolution-2026-11-01/release.md), and
+[unsent acquisition list](held-resolution-2026-11-01/acquisition-list.md) remain available.
 Current employer/period coverage is generated in the [coverage inventory](coverage-inventory.md)
 and the [source-catalog comparison](sunshine-lists/comparison.md).
 
@@ -11,7 +14,7 @@ cover remaining source tasks and uncovered jurisdictions. The 31 October OCR fol
 reached **881,002 records**, including [566 verified OCR observations](municipal-ocr/README.md);
 those are historical counts. Source qualifications remain visible. No records requests have been sent.
 
-Updated **1 November 2026**. Original audit baseline: commit
+The original audit below was updated **1 November 2026**. Original audit baseline: commit
 [`eabe55708952f945cf2b0733230db31d48146d88`](https://github.com/ahzs645/PofBC/commit/eabe55708952f945cf2b0733230db31d48146d88).
 
 The original salary setup contained three compiled editions, not a continuous annual history.

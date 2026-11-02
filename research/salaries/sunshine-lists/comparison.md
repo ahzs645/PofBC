@@ -4,7 +4,7 @@
 
 The supplied snapshot contains **3 employers** and **0 annual observations**. **It is not a complete Sunshine Lists employer inventory.** 3 employer entries contain summary evidence only.
 
-All **1,385,021 published PofBC observations** across **270 employers** were reconciled against the actual employer files: **1,156,657 official-source observations** and **228,364 retained compiled observations**. 217 employers have some official records; 53 have compiled records only.
+All **1,440,498 published PofBC observations** across **273 employers** were reconciled against the actual employer files: **1,212,134 official-source observations** and **228,364 retained compiled observations**. 231 employers have some official records; 42 have compiled records only.
 
 ## Observed reference employers
 
@@ -20,17 +20,17 @@ Reference totals span the source’s own reported years and definitions. The tab
 
 | Sector | Employers | With official records | Compiled only | Official observations | Compiled observations |
 | --- | ---: | ---: | ---: | ---: | ---: |
-| Crown corporations | 43 | 14 | 29 | 107,704 | 35,310 |
+| Crown corporations | 46 | 23 | 23 | 150,133 | 35,310 |
 | Government | 1 | 1 | 0 | 242,158 | 0 |
 | Health authorities | 8 | 8 | 0 | 575,778 | 65,369 |
-| Municipal police | 13 | 1 | 12 | 142 | 9,232 |
+| Municipal police | 13 | 2 | 11 | 1,582 | 9,232 |
 | Municipalities | 121 | 119 | 2 | 119,954 | 28,211 |
 | School districts | 60 | 60 | 0 | 54,207 | 45,385 |
-| Universities and colleges | 24 | 14 | 10 | 56,714 | 44,857 |
+| Universities and colleges | 24 | 18 | 6 | 68,322 | 44,857 |
 
 ## Processing queue
 
-The [work queue](work-queue.csv) contains **209 existing official-source tasks** and **3 reference-comparison tasks**. Existing leads are linked to their original report or archive and retain the recorded next action. They do not prove that additional records are available or that a report has passed validation.
+The [work queue](work-queue.csv) contains **265 existing official-source tasks** and **3 reference-comparison tasks**. Existing leads are linked to their original report or archive and retain the recorded next action. They do not prove that additional records are available or that a report has passed validation.
 
 This queue covers the published source catalog and supplied reference. The broader [six-sector processing and archive queue](../continuation-2026-11-01/work-queue.csv) remains available separately. The queues can overlap and their totals must not be added.
 
@@ -52,5 +52,5 @@ Priority 1 covers missing official employer/period coverage, held partial employ
 - [Work queue](work-queue.csv) is suitable for filtering by employer, period, source status and priority.
 - [Usage and snapshot format](README.md) explains importing a saved snapshot and rerunning the audit.
 
-Repository input fingerprint: `e9f7582a8e8cc36999c6d2855cbfcd0c100786d355fe5db97cecddad8086a161`.
+Repository input fingerprint: `ada4232006f8018ba363ff10cf51cfa98d12194629dbb2203ec7554aa743b501`.
 Reference snapshot fingerprint: `5955544e5deef4dcc72fcb201137dd943053ef78deeca303026c4a4bc19124f1`.

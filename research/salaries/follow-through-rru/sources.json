@@ -1,0 +1,546 @@
+{
+  "version": 1,
+  "rowSchema": [
+    "employerSlug",
+    "name",
+    "position",
+    "remuneration",
+    "expenses",
+    "pdfPage"
+  ],
+  "sources": [
+    {
+      "id": "rru-sofi-2021-22-employees",
+      "employerSlug": "royal-roads-university",
+      "employerName": "Royal Roads University",
+      "sector": "Post-secondary education",
+      "year": "2021/22",
+      "periodType": "fiscal",
+      "periodStart": "2021-04-01",
+      "periodEnd": "2022-03-31",
+      "title": "Royal Roads University Statement of Financial Information 2021/22 — named employee remuneration and expenses",
+      "sha256": "ca0634bec6ffece72903f8dcfb622a6b082526afaf955fadebc80d910ace2258",
+      "file": "rru-2021-22.json.gzip",
+      "pages": [
+        25,
+        26,
+        27,
+        28
+      ],
+      "sourceUrl": "https://www.royalroads.ca/sites/default/files/2023-03/SOFI-ATT1-Board-2022Jun16_FINAL-RRUWebsite.pdf",
+      "sourceIndexUrl": "https://www.royalroads.ca/about/who-we-are/administration-governance/governance/plans-reports",
+      "pdfBytes": 838761,
+      "rowCount": 223,
+      "totalRemuneration": 25258361,
+      "totalExpenses": 273994,
+      "status": "verified",
+      "verifiedOn": "2026-11-02",
+      "category": "employee-remuneration",
+      "scope": "named-employees-over-threshold",
+      "completeEmployeeSchedule": true,
+      "threshold": 75000,
+      "thresholdComparison": ">=",
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "nameDisclosure": "as-published",
+      "positionDisclosure": "as-published",
+      "sourceKind": "official-statement-of-financial-information",
+      "notes": [
+        "Employee schedule only; board, suppliers, below-threshold aggregates, severance/reconciliation lines excluded.",
+        "Published remuneration is not an inferred annual base salary. Missing or dash expense cells remain null; printed numeric zero remains zero.",
+        "All compiled observations and their original labels are retained."
+      ],
+      "validation": {
+        "originalFingerprintVerified": true,
+        "independentReaders": [
+          "PyMuPDF positioned words",
+          "Poppler layout text"
+        ],
+        "everyRowFieldAgreement": true,
+        "rowsIndependentlyChecked": 223,
+        "completeEmployeeSchedule": true,
+        "pageRowCounts": [
+          [
+            25,
+            64
+          ],
+          [
+            26,
+            75
+          ],
+          [
+            27,
+            75
+          ],
+          [
+            28,
+            9
+          ]
+        ],
+        "printedControls": [
+          {
+            "field": "remuneration",
+            "rowSum": 25258361,
+            "printedControl": 25258365,
+            "residual": -4,
+            "basis": "Printed employee combined total minus separately printed below-$75,000 employee aggregate; board expenses are a separate schedule."
+          },
+          {
+            "field": "expenses",
+            "rowSum": 273994,
+            "printedControl": 273992,
+            "residual": 2,
+            "basis": "Printed employee combined total minus separately printed below-$75,000 employee aggregate; board expenses are a separate schedule."
+          }
+        ],
+        "evidenceFile": "evidence/rru-2021-22.json.gzip",
+        "physicalPagesVisuallyReviewed": [
+          25,
+          26,
+          27,
+          28
+        ],
+        "visualReviewFile": "visual/rru-2021-22.json",
+        "visualReviewScope": "Full page rendered contact sheets inspected for reporting-period headers, complete alphabetic employee continuation, board/employee boundaries, first/last rows and separate totals/reconciliation blocks. Original controls inspected as enlarged crops. Exact six-field values for digital schedules are independently validated with PyMuPDF and Poppler; contact sheets are not claimed as a manual pixel audit of every employee cell."
+      },
+      "retainCompiledPartition": true,
+      "publicWarning": "Published employee cells differ from printed named controls by -4 CAD remuneration and 2 CAD expenses. Original cells are retained.",
+      "dataSha256": "50325afae13080cc3552e8ba9285ffee3320354f9f94f09e2b4aaa1d3ee3a547"
+    },
+    {
+      "id": "rru-sofi-2022-23-employees",
+      "employerSlug": "royal-roads-university",
+      "employerName": "Royal Roads University",
+      "sector": "Post-secondary education",
+      "year": "2022/23",
+      "periodType": "fiscal",
+      "periodStart": "2022-04-01",
+      "periodEnd": "2023-03-31",
+      "title": "Royal Roads University Statement of Financial Information 2022/23 — named employee remuneration and expenses",
+      "sha256": "8aaa5e7d38ab9f0333b4c3a7f5b3e6996da5518e8f731f3f600e736027997fd5",
+      "file": "rru-2022-23.json.gzip",
+      "pages": [
+        25,
+        26,
+        27,
+        28
+      ],
+      "sourceUrl": "https://www.royalroads.ca/sites/default/files/2023-09/2023-03-31_RRU-SOFI-FullySigned.pdf",
+      "sourceIndexUrl": "https://www.royalroads.ca/about/who-we-are/administration-governance/governance/plans-reports",
+      "pdfBytes": 4103461,
+      "rowCount": 256,
+      "totalRemuneration": 29283383,
+      "totalExpenses": 893903,
+      "status": "verified",
+      "verifiedOn": "2026-11-02",
+      "category": "employee-remuneration",
+      "scope": "named-employees-over-threshold",
+      "completeEmployeeSchedule": true,
+      "threshold": 75000,
+      "thresholdComparison": ">=",
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "nameDisclosure": "as-published",
+      "positionDisclosure": "as-published",
+      "sourceKind": "official-statement-of-financial-information",
+      "notes": [
+        "Employee schedule only; board, suppliers, below-threshold aggregates, severance/reconciliation lines excluded.",
+        "Published remuneration is not an inferred annual base salary. Missing or dash expense cells remain null; printed numeric zero remains zero.",
+        "All compiled observations and their original labels are retained."
+      ],
+      "validation": {
+        "originalFingerprintVerified": true,
+        "independentReaders": [
+          "PyMuPDF positioned words",
+          "Poppler layout text"
+        ],
+        "everyRowFieldAgreement": true,
+        "rowsIndependentlyChecked": 256,
+        "completeEmployeeSchedule": true,
+        "pageRowCounts": [
+          [
+            25,
+            58
+          ],
+          [
+            26,
+            80
+          ],
+          [
+            27,
+            80
+          ],
+          [
+            28,
+            38
+          ]
+        ],
+        "printedControls": [
+          {
+            "field": "remuneration",
+            "rowSum": 29283383,
+            "printedControl": 29283375,
+            "residual": 8,
+            "basis": "Printed employee combined total minus separately printed below-$75,000 employee aggregate; board expenses are a separate schedule."
+          },
+          {
+            "field": "expenses",
+            "rowSum": 893903,
+            "printedControl": 893900,
+            "residual": 3,
+            "basis": "Printed employee combined total minus separately printed below-$75,000 employee aggregate; board expenses are a separate schedule."
+          }
+        ],
+        "evidenceFile": "evidence/rru-2022-23.json.gzip",
+        "physicalPagesVisuallyReviewed": [
+          25,
+          26,
+          27,
+          28
+        ],
+        "visualReviewFile": "visual/rru-2022-23.json",
+        "visualReviewScope": "Full page rendered contact sheets inspected for reporting-period headers, complete alphabetic employee continuation, board/employee boundaries, first/last rows and separate totals/reconciliation blocks. Original controls inspected as enlarged crops. Exact six-field values for digital schedules are independently validated with PyMuPDF and Poppler; contact sheets are not claimed as a manual pixel audit of every employee cell."
+      },
+      "retainCompiledPartition": true,
+      "publicWarning": "Published employee cells differ from printed named controls by 8 CAD remuneration and 3 CAD expenses. Original cells are retained.",
+      "dataSha256": "df5be894f8bf08e3835ebf58945f8e53055aa5192fcce2f5daf939daedf9d12b"
+    },
+    {
+      "id": "rru-sofi-2023-24-employees",
+      "employerSlug": "royal-roads-university",
+      "employerName": "Royal Roads University",
+      "sector": "Post-secondary education",
+      "year": "2023/24",
+      "periodType": "fiscal",
+      "periodStart": "2023-04-01",
+      "periodEnd": "2024-03-31",
+      "title": "Royal Roads University Statement of Financial Information 2023/24 — named employee remuneration and expenses",
+      "sha256": "69bc00cd0c0e51c89b76cfce7fb5e3f801762872bef45ffbc9e47988a1161bb3",
+      "file": "rru-2023-24.json.gzip",
+      "pages": [
+        28,
+        29,
+        30,
+        31,
+        32,
+        33
+      ],
+      "sourceUrl": "https://www.royalroads.ca/sites/default/files/2025-10/2024-03-31%20RRU%20SoFI-FIA_signed.pdf",
+      "sourceIndexUrl": "https://www.royalroads.ca/about/who-we-are/administration-governance/governance/plans-reports",
+      "pdfBytes": 3628421,
+      "rowCount": 307,
+      "totalRemuneration": 34445723.53,
+      "totalExpenses": 1106152,
+      "status": "verified",
+      "verifiedOn": "2026-11-02",
+      "category": "employee-remuneration",
+      "scope": "named-employees-over-threshold",
+      "completeEmployeeSchedule": true,
+      "threshold": 75000,
+      "thresholdComparison": ">=",
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "nameDisclosure": "as-published",
+      "positionDisclosure": "as-published",
+      "sourceKind": "official-statement-of-financial-information",
+      "retainCompiledPartition": true,
+      "dataSha256": "e284bda4334acf14f64bbda945511b82e3384db2c095abed6da6775367117cde",
+      "publicWarning": "Published remuneration cells total CAD34,445,723.53, CAD4.47 below the named control implied by printed totals. Expenses reconcile exactly. The source decimal75928.53 is preserved.",
+      "notes": [
+        "Complete named employee schedule only; board, supplier, below-threshold aggregate and reconciliation rows excluded.",
+        "Scanned employee pages were independently OCRed from3x full-page and5x column renders, compared field by field and all307 original complete row crops visually inspected. Explicit source-backed corrections are retained for both OCR readers.",
+        "Published names/positions retain uppercase source spellings, abbreviations and clipped titles; no identity links or source names are rewritten.",
+        "Visible dash expense cells remain missing, never zero. Remuneration is not inferred annual base salary.",
+        "The source visibly prints CORAK, LISA remuneration75928.53; cents are retained. LITTLER, BLAIR198,716 and DU, JUAN are also retained exactly.",
+        "Every compiled observation and original period label is retained; no replacement or redating."
+      ],
+      "validation": {
+        "originalFingerprintVerified": true,
+        "independentReaders": [
+          "Tesseract5 full original page at3x PSM6",
+          "Tesseract5 independently rendered5x original column crops PSM6",
+          "307 original full-row source crops individually inspected"
+        ],
+        "everyRowFieldAgreementAfterDocumentedPixelReview": true,
+        "rowsIndependentlyChecked": 307,
+        "completeEmployeeSchedule": true,
+        "physicalPagesVisuallyReviewed": [
+          28,
+          29,
+          30,
+          31,
+          32,
+          33
+        ],
+        "pageRowCounts": [
+          [
+            28,
+            46
+          ],
+          [
+            29,
+            61
+          ],
+          [
+            30,
+            61
+          ],
+          [
+            31,
+            61
+          ],
+          [
+            32,
+            62
+          ],
+          [
+            33,
+            16
+          ]
+        ],
+        "printedControls": [
+          {
+            "field": "remuneration",
+            "rowSum": 34445723.53,
+            "printedControl": 34445728,
+            "residual": -4.47,
+            "basis": "Printed employee combined total47,295,027 minus below-threshold employee aggregate12,849,299"
+          },
+          {
+            "field": "expenses",
+            "rowSum": 1106152,
+            "printedControl": 1106152,
+            "residual": 0,
+            "basis": "Printed employee combined total1,240,360 minus below-threshold employee aggregate134,208"
+          }
+        ],
+        "evidenceFile": "evidence/rru-2023-24-reviewed.json.gzip",
+        "visualReviewFile": "visual/rru-2023-24.json",
+        "rowsVisuallyReviewed": 307,
+        "unresolvedCells": []
+      }
+    },
+    {
+      "id": "rru-sofi-2024-25-employees",
+      "employerSlug": "royal-roads-university",
+      "employerName": "Royal Roads University",
+      "sector": "Post-secondary education",
+      "year": "2024/25",
+      "periodType": "fiscal",
+      "periodStart": "2024-04-01",
+      "periodEnd": "2025-03-31",
+      "title": "Royal Roads University Statement of Financial Information 2024/25 — named employee remuneration and expenses",
+      "sha256": "2d07621f5bd8c3a31e4cc3989bd6a817a74d30894c9b112cc61e538d8d627bba",
+      "file": "rru-2024-25.json.gzip",
+      "pages": [
+        28,
+        29,
+        30,
+        31,
+        32,
+        33
+      ],
+      "sourceUrl": "https://www.royalroads.ca/sites/default/files/2025-10/SOFI%20Report%202025_SIGNED_RRU.pdf",
+      "sourceIndexUrl": "https://www.royalroads.ca/about/who-we-are/administration-governance/governance/plans-reports",
+      "pdfBytes": 2003534,
+      "rowCount": 321,
+      "totalRemuneration": 36566647,
+      "totalExpenses": 1301171,
+      "status": "verified",
+      "verifiedOn": "2026-11-02",
+      "category": "employee-remuneration",
+      "scope": "named-employees-over-threshold",
+      "completeEmployeeSchedule": true,
+      "threshold": 75000,
+      "thresholdComparison": ">=",
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "nameDisclosure": "as-published",
+      "positionDisclosure": "as-published",
+      "sourceKind": "official-statement-of-financial-information",
+      "notes": [
+        "Employee schedule only; board, suppliers, below-threshold aggregates, severance/reconciliation lines excluded.",
+        "Published remuneration is not an inferred annual base salary. Missing or dash expense cells remain null; printed numeric zero remains zero.",
+        "All compiled observations and their original labels are retained."
+      ],
+      "validation": {
+        "originalFingerprintVerified": true,
+        "independentReaders": [
+          "PyMuPDF positioned words",
+          "Poppler layout text"
+        ],
+        "everyRowFieldAgreement": true,
+        "rowsIndependentlyChecked": 321,
+        "completeEmployeeSchedule": true,
+        "pageRowCounts": [
+          [
+            28,
+            43
+          ],
+          [
+            29,
+            59
+          ],
+          [
+            30,
+            63
+          ],
+          [
+            31,
+            61
+          ],
+          [
+            32,
+            63
+          ],
+          [
+            33,
+            32
+          ]
+        ],
+        "printedControls": [
+          {
+            "field": "remuneration",
+            "rowSum": 36566647,
+            "printedControl": 36566652,
+            "residual": -5,
+            "basis": "Printed employee combined total minus separately printed below-$75,000 employee aggregate; board expenses are a separate schedule."
+          },
+          {
+            "field": "expenses",
+            "rowSum": 1301171,
+            "printedControl": 1301172,
+            "residual": -1,
+            "basis": "Printed employee combined total minus separately printed below-$75,000 employee aggregate; board expenses are a separate schedule."
+          }
+        ],
+        "evidenceFile": "evidence/rru-2024-25.json.gzip",
+        "physicalPagesVisuallyReviewed": [
+          28,
+          29,
+          30,
+          31,
+          32,
+          33
+        ],
+        "visualReviewFile": "visual/rru-2024-25.json",
+        "visualReviewScope": "Full page rendered contact sheets inspected for reporting-period headers, complete alphabetic employee continuation, board/employee boundaries, first/last rows and separate totals/reconciliation blocks. Original controls inspected as enlarged crops. Exact six-field values for digital schedules are independently validated with PyMuPDF and Poppler; contact sheets are not claimed as a manual pixel audit of every employee cell."
+      },
+      "retainCompiledPartition": true,
+      "publicWarning": "Published employee cells differ from printed named controls by -5 CAD remuneration and -1 CAD expenses. Original cells are retained.",
+      "dataSha256": "1ced9a5a23e12548cd7c6f251d33d09db120b37ae0d9d714c9f405611041bf9a"
+    },
+    {
+      "id": "rru-sofi-2025-26-employees",
+      "employerSlug": "royal-roads-university",
+      "employerName": "Royal Roads University",
+      "sector": "Post-secondary education",
+      "year": "2025/26",
+      "periodType": "fiscal",
+      "periodStart": "2025-04-01",
+      "periodEnd": "2026-03-31",
+      "title": "Royal Roads University Statement of Financial Information 2025/26 — named employee remuneration and expenses",
+      "sha256": "15364058f90c046e74be903aaaa20aae2266ab30030c774735ba603b4100a1e8",
+      "file": "rru-2025-26.json.gzip",
+      "pages": [
+        26,
+        27,
+        28,
+        29,
+        30,
+        31
+      ],
+      "sourceUrl": "https://www.royalroads.ca/sites/default/files/2026-10/2026_RRU_SOFI%20Report_Signed.pdf",
+      "sourceIndexUrl": "https://www.royalroads.ca/about/who-we-are/administration-governance/governance/plans-reports",
+      "pdfBytes": 1190832,
+      "rowCount": 334,
+      "totalRemuneration": 38818151,
+      "totalExpenses": 1227031,
+      "status": "verified",
+      "verifiedOn": "2026-11-02",
+      "category": "employee-remuneration",
+      "scope": "named-employees-over-threshold",
+      "completeEmployeeSchedule": true,
+      "threshold": 75000,
+      "thresholdComparison": ">=",
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "nameDisclosure": "as-published",
+      "positionDisclosure": "as-published",
+      "sourceKind": "official-statement-of-financial-information",
+      "notes": [
+        "Employee schedule only; board, suppliers, below-threshold aggregates, severance/reconciliation lines excluded.",
+        "Published remuneration is not an inferred annual base salary. Missing or dash expense cells remain null; printed numeric zero remains zero.",
+        "All compiled observations and their original labels are retained.",
+        "The literal published name cell 3361 Zornes, Deborah is preserved, as is the separated minus-sign numeric-zero expense for Hutchison, Michael. The report separately prints a $42,908 financial-statement reconciliation variance; employee extraction is not adjusted to remove it."
+      ],
+      "validation": {
+        "originalFingerprintVerified": true,
+        "independentReaders": [
+          "PyMuPDF positioned words",
+          "Poppler layout text"
+        ],
+        "everyRowFieldAgreement": true,
+        "rowsIndependentlyChecked": 334,
+        "completeEmployeeSchedule": true,
+        "pageRowCounts": [
+          [
+            26,
+            46
+          ],
+          [
+            27,
+            67
+          ],
+          [
+            28,
+            68
+          ],
+          [
+            29,
+            68
+          ],
+          [
+            30,
+            68
+          ],
+          [
+            31,
+            17
+          ]
+        ],
+        "printedControls": [
+          {
+            "field": "remuneration",
+            "rowSum": 38818151,
+            "printedControl": 38818140,
+            "residual": 11,
+            "basis": "Printed employee combined total minus separately printed below-$75,000 employee aggregate; board expenses are a separate schedule."
+          },
+          {
+            "field": "expenses",
+            "rowSum": 1227031,
+            "printedControl": 1227026,
+            "residual": 5,
+            "basis": "Printed employee combined total minus separately printed below-$75,000 employee aggregate; board expenses are a separate schedule."
+          }
+        ],
+        "evidenceFile": "evidence/rru-2025-26.json.gzip",
+        "physicalPagesVisuallyReviewed": [
+          26,
+          27,
+          28,
+          29,
+          30,
+          31
+        ],
+        "visualReviewFile": "visual/rru-2025-26.json",
+        "visualReviewScope": "Full page rendered contact sheets inspected for reporting-period headers, complete alphabetic employee continuation, board/employee boundaries, first/last rows and separate totals/reconciliation blocks. Original controls inspected as enlarged crops. Exact six-field values for digital schedules are independently validated with PyMuPDF and Poppler; contact sheets are not claimed as a manual pixel audit of every employee cell."
+      },
+      "retainCompiledPartition": true,
+      "publicWarning": "Published employee cells differ from printed named controls by 11 CAD remuneration and 5 CAD expenses. Original cells are retained.",
+      "dataSha256": "d816441c6a8542d4bb0ff230261869b727d693a95e6f19a0b160cbb9660db5e7"
+    }
+  ],
+  "unparsedSources": []
+}

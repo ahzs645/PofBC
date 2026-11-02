@@ -1,0 +1,4463 @@
+{
+  "schemaVersion": 1,
+  "reviewedOn": "2026-11-02",
+  "task": "Independent source-copy review of six extraction leads and all six original CNC held candidates.",
+  "summary": {
+    "requestedOCRLeads": 6,
+    "originalCncCandidates": 6,
+    "distinctReviewedCases": 11,
+    "recommendedNumericPayAndExpenseConnections": 5,
+    "recommendedUniquePayOnlyConnectionsWithUnknownSourceExpenses": 1,
+    "originalQueueRecommendedAcceptedIds": [
+      1797,
+      1899,
+      2022,
+      3601
+    ],
+    "originalQueueHeldIds": [
+      1973,
+      1974
+    ],
+    "newOutsideOriginalQueueConnectionIds": [
+      "cnc-source-copy-cornelis-2023-24",
+      "cnc-source-copy-thorne-2023-24"
+    ],
+    "noConnectionNeeded": [
+      "Emerson, Cheryl",
+      "McInroy, Pamela",
+      "McWhinnie, Shannon"
+    ]
+  },
+  "inputs": [
+    {
+      "path": "research/salaries/compiled-baseline.json.gzip",
+      "sha256": "410bcae27c9755e387c473ab44d62081a50b46e7330f4d6d5c0b74979d392760"
+    },
+    {
+      "path": "research/salaries/name-links/connection-review-2026-11-02/surname-candidates.json",
+      "sha256": "ea26a1b0668aacfbc4b8ae85453dba0094dae081c684b62280f2f525e467080a"
+    },
+    {
+      "path": "research/salaries/name-links/held-completion-2026-11-02/review-results.json",
+      "sha256": "3e8b1444d68a9e2ad9baaa14e04ea256ad27365340bdf2d83d96f88c2a2040f0"
+    },
+    {
+      "path": "research/salaries/follow-through-cnc/sources.json",
+      "sha256": "ee880c15a43c068c4f2948017fd70847b8260649cbf0692706dca8afa1e88e35"
+    },
+    {
+      "path": "research/salaries/follow-through-cnc/reviewed-corrections.json",
+      "sha256": "437ed58e84af97a21ee07c2f0ca5c5a90f49897e5f68027311648b2e7f2df75a"
+    },
+    {
+      "path": "research/salaries/follow-through-cnc/visual-review.json",
+      "sha256": "040c71af587ee00cafc7b312e4180fbcad19207702d3e32de1fb72f46f9f4363"
+    },
+    {
+      "path": "research/salaries/follow-through-cnc/2018-19.json.gzip",
+      "sha256": "c5028ddf30f92ee4a24eb8eafe746cc7f7f5f29eb0220116952cb5e1841d4f20"
+    },
+    {
+      "path": "research/salaries/follow-through-cnc/2019-20.json.gzip",
+      "sha256": "17dcbdf9fd5618f43d4a1328833c006e208d54a255e3d590f50dc42f6469c7cf"
+    },
+    {
+      "path": "research/salaries/follow-through-cnc/2020-21.json.gzip",
+      "sha256": "d0598e2cf1613144ead367527c88de460b5276763cc2996f32578cd23cdb179f"
+    },
+    {
+      "path": "research/salaries/follow-through-cnc/2021-22.json.gzip",
+      "sha256": "9e964b7ac48378bebccf677a03d5c5378b5c6d0f991a8e7ea8151675693e1aec"
+    },
+    {
+      "path": "research/salaries/follow-through-cnc/2022-23.json.gzip",
+      "sha256": "c1bac51cef6fbcd3c09bed60eac3039d9ce4e68f2f74bf8b7d6a62c5fbd59422"
+    },
+    {
+      "path": "research/salaries/follow-through-cnc/2023-24.json.gzip",
+      "sha256": "6d805a9e5f7715e89837aa48c0733515938dad75ca03a9f6182b2b0f63751e1d"
+    },
+    {
+      "path": "research/salaries/follow-through-cnc/2024-25.json.gzip",
+      "sha256": "2cf12df8df70d73be6f2e261104a821aa0d106b1109c4e6e2c24432be5602fee"
+    },
+    {
+      "path": "research/salaries/source-follow-through-2026-11-02/cnc-name-evidence/2020-21-native-cornelis.png",
+      "sha256": "05a9cc106a1bda9e7a1fa1ce2e50011ad59d91680ed1c78fc8497a43ff7328b3"
+    },
+    {
+      "path": "research/salaries/source-follow-through-2026-11-02/cnc-name-evidence/2020-21-native-thorne.png",
+      "sha256": "cf2f1d9121df02eedbeec2b640593714edfa5bd1e89c8dc7c663f621f2f4c852"
+    },
+    {
+      "path": "research/salaries/source-follow-through-2026-11-02/cnc-name-evidence/2023-24-candidate-1899.png",
+      "sha256": "083648df7c91da928c4f416935309b84f777d1c132c6e907ca824a6cdd68381a"
+    },
+    {
+      "path": "research/salaries/source-follow-through-2026-11-02/cnc-name-evidence/2023-24-candidate-1973.png",
+      "sha256": "15ab6b621a4be316416245a523c5576b41fbd4619f9bb369335a2bee6fb99822"
+    },
+    {
+      "path": "research/salaries/source-follow-through-2026-11-02/cnc-name-evidence/2023-24-candidate-1974.png",
+      "sha256": "580d813ae90de1def57b3c8cd7efca1633a4a83957aced362bda33f30b125e86"
+    },
+    {
+      "path": "research/salaries/source-follow-through-2026-11-02/cnc-name-evidence/2023-24-candidate-2022.png",
+      "sha256": "98d157ed989f20c7de7017d820823615e965bc77111a69d4c7d19c9411082547"
+    },
+    {
+      "path": "research/salaries/source-follow-through-2026-11-02/cnc-name-evidence/2023-24-candidate-3601.png",
+      "sha256": "173ef773015a46981053b893e2779a7e8b2ba30e331b653d8057806338d9e704"
+    },
+    {
+      "path": "research/salaries/source-follow-through-2026-11-02/cnc-name-evidence/2023-24-p04.png",
+      "sha256": "3b02a4e7e427855f8d06b7c1f2f9ebd7f10d6b6ff5dd74ccdb656e2adbe10ea7"
+    },
+    {
+      "path": "research/salaries/source-follow-through-2026-11-02/cnc-name-evidence/2023-24-p05.png",
+      "sha256": "80ae3a4935dcf77b049c948420ca59888f8f8c0ae6a50fca67e178adedb55841"
+    },
+    {
+      "path": "research/salaries/source-follow-through-2026-11-02/cnc-name-evidence/2023-24-p06.png",
+      "sha256": "43baddcb7cdcd5ddfc0ed82bc56c7a83d41444d8b872904c3b49199b45a855a7"
+    },
+    {
+      "path": "research/salaries/source-follow-through-2026-11-02/cnc-name-evidence/2023-24-p07.png",
+      "sha256": "36edead2916cde4559e48b53902b093c2082af59cd4caf49410e4d329b1da82e"
+    }
+  ],
+  "policy": {
+    "nullExpensesRemainUnknown": true,
+    "nullIsNotNumericZero": true,
+    "unknownExpensesEstablishNeitherEqualityNorConflict": true,
+    "remunerationOnlyAllowedWhenUniqueInBothCompleteCohorts": true,
+    "expenseCellRetainedAfterConnection": true,
+    "sameExactLabelStringsRequiredForCurrentWitnesses": true,
+    "compiledEditionPeriodRemainsUnverified": true,
+    "sourceCohortsRemainSeparate": true,
+    "rootVisualReviewBeforeAdoption": "Root has reviewed the six2023/24 source-copy crops. Native2020/21 Cornelis and Thorne crops are now persisted for final root confirmation of the earlier r+n spellings. All source-copy crops/full-page renders needed by this review are durable and fingerprinted."
+  },
+  "reviews": [
+    {
+      "id": "cnc-source-copy-cornelis-2023-24",
+      "leadId": "cnc-source-copy-cornelis-2023-24",
+      "candidateId": null,
+      "memberOfOriginal3173": false,
+      "originalCandidateNames": null,
+      "originalOutcome": null,
+      "requestedOCRLead": true,
+      "employer": "college-of-new-caledonia",
+      "decision": "accept-source-copy-spelling",
+      "method": "unique-remuneration-and-numeric-expenses",
+      "preferredName": "Cornelis, Suzanne",
+      "compiledName": "Comelis, Suzanne",
+      "names": [
+        "Comelis, Suzanne",
+        "Cornelis, Suzanne"
+      ],
+      "compiledPersonKey": "comelis|suzanne",
+      "preferredPersonKey": "cornelis|suzanne",
+      "rawOCRVariant": "Comelis, Suzanne",
+      "rawOCRVariantOccursInCompiledSnapshot": true,
+      "note": "The source row reads Cornelis, Suzanne. Its 113,947 remuneration plus 973 disclosed expenses is unique in each complete cohort. The scan compresses the r+n letter forms; the earlier native 2020/21 original independently prints Cornelis.",
+      "source": {
+        "id": "cnc-sofi-2023-24-employees",
+        "url": "https://cnc.bc.ca/docs/public/governance/budgets---financial-statements/statement-of-financial-information/sofi-report-2023-24.pdf?sfvrsn=5c81c9b5_1",
+        "pdfSha256": "cb28eade49eb6b62ac1395a328735d7a12a600fe1bac78bd08d1bfcb107c4cd3",
+        "year": "2023/24",
+        "periodStart": "2023-04-01",
+        "periodEnd": "2024-03-31",
+        "dataFile": "research/salaries/follow-through-cnc/2023-24.json.gzip",
+        "dataSha256": "6d805a9e5f7715e89837aa48c0733515938dad75ca03a9f6182b2b0f63751e1d",
+        "normalizedSha256": "ed6a53e5e2b7481977c3c2b2b0b2c544e8a9701b9e68b0b1033f0cc3dd4ce513",
+        "sourceRowIndex0": 54,
+        "sourceRowOrdinal1": 55,
+        "physicalPdfPage": 4,
+        "row": [
+          "college-of-new-caledonia",
+          "Cornelis, Suzanne",
+          null,
+          113947,
+          973,
+          4
+        ],
+        "normalizedRowSha256": "d7ffbf2621a5ccc816830f2f66faf694b356f1b3e0f7c93bd16de53db769d2c9",
+        "stableRecordSha256": "8364cdb25d0718923a2af4685332180ededb6662c47a449f5f46c669c90d8617",
+        "livePublishedObservation": {
+          "shard": "co",
+          "shardRowIndex0": 15439,
+          "row": [
+            "Cornelis, Suzanne",
+            null,
+            113947,
+            973,
+            76,
+            46,
+            "cnc-sofi-2023-24-employees",
+            4
+          ],
+          "stableRecordSha256": "8364cdb25d0718923a2af4685332180ededb6662c47a449f5f46c669c90d8617"
+        }
+      },
+      "compiledObservation": {
+        "sourceId": "pssdb-2026-10-22",
+        "sourceKind": "compiled",
+        "periodType": "unverified",
+        "yearLabel": "2023/24",
+        "snapshotFile": "research/salaries/compiled-baseline.json.gzip",
+        "snapshotEmployerRowIndex0": 587,
+        "snapshotYearCohortRowIndex0": 117,
+        "rawSnapshotRow": [
+          "Comelis, Suzanne",
+          null,
+          113947,
+          973,
+          2
+        ],
+        "stableRecordSha256": "85cc42544ffe352119b79a27db27b202e20be4c6fe3981c4c458a562c48476c6",
+        "livePublishedObservation": {
+          "shard": "co",
+          "shardRowIndex0": 7183,
+          "row": [
+            "Comelis, Suzanne",
+            null,
+            113947,
+            973,
+            76,
+            46,
+            "pssdb-2026-10-22",
+            null
+          ],
+          "stableRecordSha256": "85cc42544ffe352119b79a27db27b202e20be4c6fe3981c4c458a562c48476c6"
+        }
+      },
+      "periodReview": {
+        "officialActualYear": "2023/24",
+        "compiledLabel": "2023/24",
+        "labelStringMismatch": false,
+        "compiledActualPeriodVerified": false,
+        "compilationLabelRelabelled": false,
+        "note": "The strings agree exactly for this case. The compilation retains its original unverified edition label; this individual copy witness does not certify or relabel every compiled observation."
+      },
+      "financialWitness": {
+        "currency": "CAD",
+        "officialCohortRows": 312,
+        "compiledCohortRows": 312,
+        "officialRemuneration": 113947,
+        "officialExpenses": 973,
+        "officialExpenseState": "numeric",
+        "compiledRemuneration": 113947,
+        "compiledExpenses": 973,
+        "expenseEqualityEstablished": true,
+        "expenseConflictEstablished": false,
+        "nullCoercedToZero": false,
+        "officialOccurrencesOfOfficialPayExpensePair": 1,
+        "compiledOccurrencesOfOfficialPayExpensePair": 1,
+        "officialOccurrencesOfActualCompiledPayExpensePair": 1,
+        "officialPayOnlyOccurrences": 45,
+        "compiledPayOnlyOccurrences": 45,
+        "proofUsesExpenses": true,
+        "proofUsesOnlyUniqueRemuneration": false,
+        "samePayOfficialNames": [
+          "Albisser, Tracie",
+          "Baker, Michael",
+          "Barber, Brian",
+          "Brbot, Rosemary",
+          "Card, Jessica",
+          "Clare, Sheldon",
+          "Cornelis, Suzanne",
+          "Craig, Zelda",
+          "Crosina, Kara",
+          "Frizzell, Garth",
+          "Fulton, Carla",
+          "Goudreau, Christien",
+          "Hes, Debbra",
+          "Kaulfuss, Marilyn",
+          "Lasnier, Alexandre",
+          "Latala, Michal",
+          "Liang, Wei",
+          "Little, Jennifer",
+          "Littler, Bradly",
+          "Madjitey, Jacob",
+          "Maides, Peter",
+          "Mansour, Abeer",
+          "Maruk, Lorne",
+          "Matthews, Layth",
+          "Moi, Meagan",
+          "Nahrgang, Wendy",
+          "Pacheco, John",
+          "Reich, Richard",
+          "Rose, Gregory",
+          "Rourke, David",
+          "Schreiner, Dennis",
+          "Selkirk, Mark",
+          "Smit, Jesse",
+          "St Pierre, Daniel",
+          "Stewart, Benjamin",
+          "Taylor, Andrew",
+          "Tejero, Marta",
+          "Thring, Ann",
+          "Valiente, Liza",
+          "Vaughan, Jody",
+          "Wendling, Mark",
+          "Wessels, Kelly",
+          "Winkel, Alice",
+          "Worfolk, Melinda",
+          "Yee, Brenda"
+        ],
+        "samePayCompiledNames": [
+          "Albisser, Tracie",
+          "Baker, Michael",
+          "Barber, Brian",
+          "Brbot, Rosemary",
+          "Card, Jessica",
+          "Clare, Sheldon",
+          "Comelis, Suzanne",
+          "Craig, Zelda",
+          "Crosina, Kara",
+          "Frizzell, Garth",
+          "Fulton, Carla",
+          "Goudreau, Christian",
+          "Hes, Debbra",
+          "Kaulfuss, Marilyn",
+          "Lasnier, Alexandre",
+          "Latala, Michal",
+          "Liang, Wei",
+          "Little, Jennifer",
+          "Littler, Bradly",
+          "Madjitey, Jacob",
+          "Maldes, Peter",
+          "Mansour, Abeer",
+          "Maruk, Lome",
+          "Matthews, Layth",
+          "Mol, Meagan",
+          "Nahrgang, Wendy",
+          "Pacheco, John",
+          "Reich, Richard",
+          "Rose, Gregory",
+          "Rour1<e, David",
+          "Schreiner, Dennis",
+          "Selkir1<, Marl<",
+          "Smit, Jesse",
+          "St Pierre, Daniel",
+          "Stewart, Benjamin",
+          "Taylor, Andrew",
+          "Tejero, Marta",
+          "Thring, Ann",
+          "Valiente, Liza",
+          "Vaughan, Jody",
+          "Wendling, Mark",
+          "Wessels, Kelly",
+          "Winkel, Alice",
+          "Worfolk, Melinda",
+          "Yee, Brenda"
+        ]
+      },
+      "visualReview": {
+        "reviewedFullPhysicalPage": true,
+        "reviewedOriginalCrop": true,
+        "reviewedNameAndBothMonetaryCells": true,
+        "crop": {
+          "file": "research/salaries/follow-through-cnc/evidence/crops/2023-24-p04-correction-05.png",
+          "sha256": "87278fe3d0466c8af15f761989a0267d6fbeb21d3b690909723e52fa83a2fec9",
+          "physicalPdfPage": 4,
+          "pdfCropPoints": [
+            95.92,
+            84.4,
+            501.2,
+            97.76
+          ],
+          "ocrLine": "Comelis Suzanne 113,947 973",
+          "persistedInRepository": true,
+          "bboxPoints": [
+            95.92,
+            84.4,
+            501.2,
+            97.76
+          ],
+          "pdfSha256": "cb28eade49eb6b62ac1395a328735d7a12a600fe1bac78bd08d1bfcb107c4cd3",
+          "sourceDataSha256": "6d805a9e5f7715e89837aa48c0733515938dad75ca03a9f6182b2b0f63751e1d",
+          "renderDpi": 400
+        },
+        "fullPageCacheFile": "/workspace/salary-source-follow-through/cache-cnc/2023-24-p04.png",
+        "fullPageRenderSha256": "3b02a4e7e427855f8d06b7c1f2f9ebd7f10d6b6ff5dd74ccdb656e2adbe10ea7",
+        "originalPdfSha256": "cb28eade49eb6b62ac1395a328735d7a12a600fe1bac78bd08d1bfcb107c4cd3",
+        "fullPageReceipt": "research/salaries/follow-through-cnc/visual-review.json",
+        "fullPageFile": "research/salaries/source-follow-through-2026-11-02/cnc-name-evidence/2023-24-p04.png",
+        "fullPageEvidencePersisted": true,
+        "earlierNativeSpellingConfirmation": {
+          "preferredName": "Cornelis, Suzanne",
+          "sourceId": "cnc-sofi-2020-21-employees",
+          "sourceUrl": "https://cnc.bc.ca/docs/public/governance/budgets---financial-statements/statement-of-financial-information/sofi-report-2020-21.pdf?sfvrsn=4d8314a_1",
+          "pdfSha256": "2140a55a0289cf9f2d96f7c541545ce3932dc8612e05536be597af33fa94c1a5",
+          "year": "2020/21",
+          "periodStart": "2020-04-01",
+          "periodEnd": "2021-03-31",
+          "physicalPdfPage": 4,
+          "dataFile": "research/salaries/follow-through-cnc/2020-21.json.gzip",
+          "dataSha256": "d0598e2cf1613144ead367527c88de460b5276763cc2996f32578cd23cdb179f",
+          "normalizedSha256": "55b11d057e6dc329ee3c0856d4673bf8d450b2ce67483fb75477ff92764c9c2e",
+          "sourceRowIndex0": 45,
+          "sourceRowOrdinal1": 46,
+          "row": [
+            "college-of-new-caledonia",
+            "Cornelis, Suzanne",
+            null,
+            99738,
+            6725,
+            4
+          ],
+          "normalizedRowSha256": "d674cf01066c02cdaf9380433e0b710d153907c123189c917adb29aa600ec880",
+          "crop": {
+            "file": "research/salaries/source-follow-through-2026-11-02/cnc-name-evidence/2020-21-native-cornelis.png",
+            "sha256": "05a9cc106a1bda9e7a1fa1ce2e50011ad59d91680ed1c78fc8497a43ff7328b3",
+            "pdfCropPoints": [
+              83.91999816894531,
+              149.7723846435547,
+              532.2088012695312,
+              163.12904357910156
+            ],
+            "bboxPoints": [
+              83.91999816894531,
+              149.7723846435547,
+              532.2088012695312,
+              163.12904357910156
+            ],
+            "physicalPdfPage": 4,
+            "pdfSha256": "2140a55a0289cf9f2d96f7c541545ce3932dc8612e05536be597af33fa94c1a5",
+            "sourceDataSha256": "d0598e2cf1613144ead367527c88de460b5276763cc2996f32578cd23cdb179f",
+            "renderDpi": 400,
+            "persistedInRepository": true,
+            "renderMethod": "PyMuPDF original native page render; no OCR overlay or text replacement."
+          },
+          "nativeWordEvidence": [
+            [
+              85.91999816894531,
+              151.7723846435547,
+              116.81800842285156,
+              161.12904357910156,
+              "Cornelis"
+            ],
+            [
+              159.24156188964844,
+              151.7723846435547,
+              192.33865356445312,
+              161.12904357910156,
+              "Suzanne"
+            ],
+            [
+              411.6164245605469,
+              151.7723846435547,
+              437.2586669921875,
+              161.12904357910156,
+              "99,738"
+            ],
+            [
+              509.2293701171875,
+              151.7723846435547,
+              530.2088012695312,
+              161.12904357910156,
+              "6,725"
+            ]
+          ],
+          "limitation": "The native original establishes the earlier published r+n spelling. The later2023/24 compressed scan glyphs and its unique numeric copy-cohort witness remain separate evidence; neither compiled year labels nor observations are rewritten."
+        }
+      },
+      "allCompiledAliasOccurrences": [
+        {
+          "snapshotEmployerRowIndex0": 587,
+          "yearLabel": "2023/24",
+          "row": [
+            "Comelis, Suzanne",
+            null,
+            113947,
+            973,
+            2
+          ],
+          "stableRecordSha256": "85cc42544ffe352119b79a27db27b202e20be4c6fe3981c4c458a562c48476c6"
+        }
+      ],
+      "earlierOfficialSpellingSupport": [
+        {
+          "sourceId": "cnc-sofi-2018-19-employees",
+          "year": "2018/19",
+          "periodStart": "2018-04-01",
+          "periodEnd": "2019-03-31",
+          "sourceUrl": "https://cnc.bc.ca/docs/public/governance/budgets---financial-statements/statement-of-financial-information/sofi-report-2018-19.pdf?sfvrsn=22935f48_1",
+          "pdfSha256": "7fbd2e773a6978fc5797e0496e16ffabc10bcb1c75ad5aabb0ff04c87e1771a4",
+          "dataFile": "research/salaries/follow-through-cnc/2018-19.json.gzip",
+          "dataSha256": "c5028ddf30f92ee4a24eb8eafe746cc7f7f5f29eb0220116952cb5e1841d4f20",
+          "sourceRowIndex0": 39,
+          "physicalPdfPage": 4,
+          "row": [
+            "college-of-new-caledonia",
+            "Cornelis, Suzanne",
+            null,
+            91603,
+            2825,
+            4
+          ],
+          "rowSha256": "6ff76f28fe44661fe90b1abcea5cc19ea359987177cc07ef39c52fd0613fa8b1",
+          "supportsPublishedSpelling": true,
+          "sameLabelCompiledRows": [],
+          "sameNameAndMoneyOccurrenceCount": 0,
+          "limitation": "Earlier spelling support is not an independent match for the later alias observation and does not verify a lifetime identity."
+        },
+        {
+          "sourceId": "cnc-sofi-2019-20-employees",
+          "year": "2019/20",
+          "periodStart": "2019-04-01",
+          "periodEnd": "2020-03-31",
+          "sourceUrl": "https://cnc.bc.ca/docs/public/governance/budgets---financial-statements/statement-of-financial-information/sofi-report-2019-20.pdf?sfvrsn=742e8937_1",
+          "pdfSha256": "6f8c6ad394df7df9dd58c7370a28fb367cdf5a12ad4a8e907606f1c1e6166129",
+          "dataFile": "research/salaries/follow-through-cnc/2019-20.json.gzip",
+          "dataSha256": "17dcbdf9fd5618f43d4a1328833c006e208d54a255e3d590f50dc42f6469c7cf",
+          "sourceRowIndex0": 40,
+          "physicalPdfPage": 3,
+          "row": [
+            "college-of-new-caledonia",
+            "Cornelis, Suzanne",
+            null,
+            94411,
+            2412,
+            3
+          ],
+          "rowSha256": "34f605e217b4003601650b08fc133a7188d1ec961a03d34d4a9473c37a1091db",
+          "supportsPublishedSpelling": true,
+          "sameLabelCompiledRows": [],
+          "sameNameAndMoneyOccurrenceCount": 0,
+          "limitation": "Earlier spelling support is not an independent match for the later alias observation and does not verify a lifetime identity."
+        },
+        {
+          "sourceId": "cnc-sofi-2020-21-employees",
+          "year": "2020/21",
+          "periodStart": "2020-04-01",
+          "periodEnd": "2021-03-31",
+          "sourceUrl": "https://cnc.bc.ca/docs/public/governance/budgets---financial-statements/statement-of-financial-information/sofi-report-2020-21.pdf?sfvrsn=4d8314a_1",
+          "pdfSha256": "2140a55a0289cf9f2d96f7c541545ce3932dc8612e05536be597af33fa94c1a5",
+          "dataFile": "research/salaries/follow-through-cnc/2020-21.json.gzip",
+          "dataSha256": "d0598e2cf1613144ead367527c88de460b5276763cc2996f32578cd23cdb179f",
+          "sourceRowIndex0": 45,
+          "physicalPdfPage": 4,
+          "row": [
+            "college-of-new-caledonia",
+            "Cornelis, Suzanne",
+            null,
+            99738,
+            6725,
+            4
+          ],
+          "rowSha256": "d674cf01066c02cdaf9380433e0b710d153907c123189c917adb29aa600ec880",
+          "supportsPublishedSpelling": true,
+          "sameLabelCompiledRows": [
+            [
+              "Cornelis, Suzanne",
+              null,
+              99738,
+              6725,
+              1
+            ]
+          ],
+          "sameNameAndMoneyOccurrenceCount": 1,
+          "limitation": "Earlier spelling support is not an independent match for the later alias observation and does not verify a lifetime identity.",
+          "nativeVisualEvidence": {
+            "file": "research/salaries/source-follow-through-2026-11-02/cnc-name-evidence/2020-21-native-cornelis.png",
+            "sha256": "05a9cc106a1bda9e7a1fa1ce2e50011ad59d91680ed1c78fc8497a43ff7328b3",
+            "pdfCropPoints": [
+              83.91999816894531,
+              149.7723846435547,
+              532.2088012695312,
+              163.12904357910156
+            ],
+            "bboxPoints": [
+              83.91999816894531,
+              149.7723846435547,
+              532.2088012695312,
+              163.12904357910156
+            ],
+            "physicalPdfPage": 4,
+            "pdfSha256": "2140a55a0289cf9f2d96f7c541545ce3932dc8612e05536be597af33fa94c1a5",
+            "sourceDataSha256": "d0598e2cf1613144ead367527c88de460b5276763cc2996f32578cd23cdb179f",
+            "renderDpi": 400,
+            "persistedInRepository": true,
+            "renderMethod": "PyMuPDF original native page render; no OCR overlay or text replacement."
+          }
+        },
+        {
+          "sourceId": "cnc-sofi-2021-22-employees",
+          "year": "2021/22",
+          "periodStart": "2021-04-01",
+          "periodEnd": "2022-03-31",
+          "sourceUrl": "https://cnc.bc.ca/docs/public/governance/budgets---financial-statements/statement-of-financial-information/sofi-report-2021-22.pdf?sfvrsn=43c3c8b0_1",
+          "pdfSha256": "4b1ff78a4ea9796a09e85da202071fd0dd1242361142a42bd29a08e801441554",
+          "dataFile": "research/salaries/follow-through-cnc/2021-22.json.gzip",
+          "dataSha256": "9e964b7ac48378bebccf677a03d5c5378b5c6d0f991a8e7ea8151675693e1aec",
+          "sourceRowIndex0": 49,
+          "physicalPdfPage": 4,
+          "row": [
+            "college-of-new-caledonia",
+            "Cornelis, Suzanne",
+            null,
+            99840,
+            334,
+            4
+          ],
+          "rowSha256": "e3e675f0ef441261387bb0530a5e4a87bd6f5649caa736d1dda3426271fc02c9",
+          "supportsPublishedSpelling": true,
+          "sameLabelCompiledRows": [],
+          "sameNameAndMoneyOccurrenceCount": 0,
+          "limitation": "Earlier spelling support is not an independent match for the later alias observation and does not verify a lifetime identity."
+        },
+        {
+          "sourceId": "cnc-sofi-2022-23-employees",
+          "year": "2022/23",
+          "periodStart": "2022-04-01",
+          "periodEnd": "2023-03-31",
+          "sourceUrl": "https://cnc.bc.ca/docs/public/governance/budgets---financial-statements/statement-of-financial-information/sofi-report-2022-23.pdf?sfvrsn=c9b36c88_1",
+          "pdfSha256": "1f8b6b337e23ffb0a4d3ae195c7715147a3d4f768a485639767a629049c89680",
+          "dataFile": "research/salaries/follow-through-cnc/2022-23.json.gzip",
+          "dataSha256": "c1bac51cef6fbcd3c09bed60eac3039d9ce4e68f2f74bf8b7d6a62c5fbd59422",
+          "sourceRowIndex0": 48,
+          "physicalPdfPage": 4,
+          "row": [
+            "college-of-new-caledonia",
+            "Cornelis, Suzanne",
+            null,
+            99719,
+            2350,
+            4
+          ],
+          "rowSha256": "642dfec1bc8bf2220514594771308b8dd8bb8664cb733ebe376f1d8f19458243",
+          "supportsPublishedSpelling": true,
+          "sameLabelCompiledRows": [],
+          "sameNameAndMoneyOccurrenceCount": 0,
+          "limitation": "Earlier spelling support is not an independent match for the later alias observation and does not verify a lifetime identity."
+        }
+      ],
+      "verificationLimit": "Specific compiled-source spelling connection only; raw names, amounts, expense states, titles, periods and observations remain intact. No lifetime identity or annual-base-salary claim."
+    },
+    {
+      "id": "cnc-source-copy-emerson-2023-24",
+      "leadId": "cnc-source-copy-emerson-2023-24",
+      "candidateId": null,
+      "memberOfOriginal3173": false,
+      "originalCandidateNames": null,
+      "originalOutcome": null,
+      "requestedOCRLead": true,
+      "employer": "college-of-new-caledonia",
+      "decision": "no-connection-needed",
+      "method": null,
+      "preferredName": "Emerson, Cheryl",
+      "compiledName": "Emerson, Cheryl",
+      "names": [
+        "Emerson, Cheryl",
+        "Emerson, Cheryl"
+      ],
+      "compiledPersonKey": "emerson|cheryl",
+      "preferredPersonKey": "emerson|cheryl",
+      "rawOCRVariant": "Emerson, Cheryt",
+      "rawOCRVariantOccursInCompiledSnapshot": false,
+      "note": "The current compiled observation already spells Emerson, Cheryl. Cheryt is a raw OCR artifact from this extraction, absent from the compiled cohort. Official dash expenses are unknown and the compiled expense 0 does not establish equality. Remuneration alone occurs three times in each cohort.",
+      "source": {
+        "id": "cnc-sofi-2023-24-employees",
+        "url": "https://cnc.bc.ca/docs/public/governance/budgets---financial-statements/statement-of-financial-information/sofi-report-2023-24.pdf?sfvrsn=5c81c9b5_1",
+        "pdfSha256": "cb28eade49eb6b62ac1395a328735d7a12a600fe1bac78bd08d1bfcb107c4cd3",
+        "year": "2023/24",
+        "periodStart": "2023-04-01",
+        "periodEnd": "2024-03-31",
+        "dataFile": "research/salaries/follow-through-cnc/2023-24.json.gzip",
+        "dataSha256": "6d805a9e5f7715e89837aa48c0733515938dad75ca03a9f6182b2b0f63751e1d",
+        "normalizedSha256": "ed6a53e5e2b7481977c3c2b2b0b2c544e8a9701b9e68b0b1033f0cc3dd4ce513",
+        "sourceRowIndex0": 81,
+        "sourceRowOrdinal1": 82,
+        "physicalPdfPage": 4,
+        "row": [
+          "college-of-new-caledonia",
+          "Emerson, Cheryl",
+          null,
+          114506,
+          null,
+          4
+        ],
+        "normalizedRowSha256": "cd876dc85a948061caab02a9cf1e642c88ceb6041f1692089cf793a9c6adc7cb",
+        "stableRecordSha256": "0b9b4afb16d51af8f151a9a120a8ae39abd84436ee06aea39b2a1bfb73036065",
+        "livePublishedObservation": {
+          "shard": "em",
+          "shardRowIndex0": 287,
+          "row": [
+            "Emerson, Cheryl",
+            null,
+            114506,
+            null,
+            76,
+            46,
+            "cnc-sofi-2023-24-employees",
+            4
+          ],
+          "stableRecordSha256": "0b9b4afb16d51af8f151a9a120a8ae39abd84436ee06aea39b2a1bfb73036065"
+        }
+      },
+      "compiledObservation": {
+        "sourceId": "pssdb-2026-10-22",
+        "sourceKind": "compiled",
+        "periodType": "unverified",
+        "yearLabel": "2023/24",
+        "snapshotFile": "research/salaries/compiled-baseline.json.gzip",
+        "snapshotEmployerRowIndex0": 565,
+        "snapshotYearCohortRowIndex0": 95,
+        "rawSnapshotRow": [
+          "Emerson, Cheryl",
+          null,
+          114506,
+          0,
+          2
+        ],
+        "stableRecordSha256": "e4bfbe9fee2b7fcd1fdf32bc36fb1f56308f965dd47a5025de08197a8c8a0589",
+        "livePublishedObservation": {
+          "shard": "em",
+          "shardRowIndex0": 286,
+          "row": [
+            "Emerson, Cheryl",
+            null,
+            114506,
+            0,
+            76,
+            46,
+            "pssdb-2026-10-22",
+            null
+          ],
+          "stableRecordSha256": "e4bfbe9fee2b7fcd1fdf32bc36fb1f56308f965dd47a5025de08197a8c8a0589"
+        }
+      },
+      "periodReview": {
+        "officialActualYear": "2023/24",
+        "compiledLabel": "2023/24",
+        "labelStringMismatch": false,
+        "compiledActualPeriodVerified": false,
+        "compilationLabelRelabelled": false,
+        "note": "The strings agree exactly for this case. The compilation retains its original unverified edition label; this individual copy witness does not certify or relabel every compiled observation."
+      },
+      "financialWitness": {
+        "currency": "CAD",
+        "officialCohortRows": 312,
+        "compiledCohortRows": 312,
+        "officialRemuneration": 114506,
+        "officialExpenses": null,
+        "officialExpenseState": "dash-unknown",
+        "compiledRemuneration": 114506,
+        "compiledExpenses": 0,
+        "expenseEqualityEstablished": false,
+        "expenseConflictEstablished": false,
+        "nullCoercedToZero": false,
+        "officialOccurrencesOfOfficialPayExpensePair": 3,
+        "compiledOccurrencesOfOfficialPayExpensePair": 0,
+        "officialOccurrencesOfActualCompiledPayExpensePair": 0,
+        "officialPayOnlyOccurrences": 3,
+        "compiledPayOnlyOccurrences": 3,
+        "proofUsesExpenses": false,
+        "proofUsesOnlyUniqueRemuneration": false,
+        "samePayOfficialNames": [
+          "Emerson, Cheryl",
+          "Haber, Jesse",
+          "Larocque, Louise"
+        ],
+        "samePayCompiledNames": [
+          "Emerson, Cheryl",
+          "Haber, Jesse",
+          "Larocque, Louise"
+        ]
+      },
+      "visualReview": {
+        "reviewedFullPhysicalPage": true,
+        "reviewedOriginalCrop": true,
+        "reviewedNameAndBothMonetaryCells": true,
+        "crop": {
+          "file": "research/salaries/follow-through-cnc/evidence/crops/2023-24-p04-correction-06.png",
+          "sha256": "631aba5b8d9e191f7edf53580264b5c95adb6e3504e8530ad197471d1a22f95c",
+          "physicalPdfPage": 4,
+          "pdfCropPoints": [
+            95.92,
+            329.92,
+            493.04,
+            342.8
+          ],
+          "ocrLine": "Emerson Cheryt 114,506 -",
+          "persistedInRepository": true,
+          "bboxPoints": [
+            95.92,
+            329.92,
+            493.04,
+            342.8
+          ],
+          "pdfSha256": "cb28eade49eb6b62ac1395a328735d7a12a600fe1bac78bd08d1bfcb107c4cd3",
+          "sourceDataSha256": "6d805a9e5f7715e89837aa48c0733515938dad75ca03a9f6182b2b0f63751e1d",
+          "renderDpi": 400
+        },
+        "fullPageCacheFile": "/workspace/salary-source-follow-through/cache-cnc/2023-24-p04.png",
+        "fullPageRenderSha256": "3b02a4e7e427855f8d06b7c1f2f9ebd7f10d6b6ff5dd74ccdb656e2adbe10ea7",
+        "originalPdfSha256": "cb28eade49eb6b62ac1395a328735d7a12a600fe1bac78bd08d1bfcb107c4cd3",
+        "fullPageReceipt": "research/salaries/follow-through-cnc/visual-review.json",
+        "fullPageFile": "research/salaries/source-follow-through-2026-11-02/cnc-name-evidence/2023-24-p04.png",
+        "fullPageEvidencePersisted": true
+      },
+      "allCompiledAliasOccurrences": [
+        {
+          "snapshotEmployerRowIndex0": 64,
+          "yearLabel": "2017/18",
+          "row": [
+            "Emerson, Cheryl",
+            "School of University Studies and Career Access · Early Childhood Education",
+            92609,
+            3130,
+            0
+          ],
+          "stableRecordSha256": "2acf5d697f2fb3641b3bf17ea34884526b0b2afd479bc6e0b1f48515f6e74de5"
+        },
+        {
+          "snapshotEmployerRowIndex0": 279,
+          "yearLabel": "2020/21",
+          "row": [
+            "Emerson, Cheryl",
+            null,
+            101113,
+            50,
+            1
+          ],
+          "stableRecordSha256": "9d39c87653b7d7352eb9ec472ca509561882512bbb8c82ee4fd4dfd36bf67e4b"
+        },
+        {
+          "snapshotEmployerRowIndex0": 565,
+          "yearLabel": "2023/24",
+          "row": [
+            "Emerson, Cheryl",
+            null,
+            114506,
+            0,
+            2
+          ],
+          "stableRecordSha256": "e4bfbe9fee2b7fcd1fdf32bc36fb1f56308f965dd47a5025de08197a8c8a0589"
+        }
+      ],
+      "earlierOfficialSpellingSupport": [
+        {
+          "sourceId": "cnc-sofi-2018-19-employees",
+          "year": "2018/19",
+          "periodStart": "2018-04-01",
+          "periodEnd": "2019-03-31",
+          "sourceUrl": "https://cnc.bc.ca/docs/public/governance/budgets---financial-statements/statement-of-financial-information/sofi-report-2018-19.pdf?sfvrsn=22935f48_1",
+          "pdfSha256": "7fbd2e773a6978fc5797e0496e16ffabc10bcb1c75ad5aabb0ff04c87e1771a4",
+          "dataFile": "research/salaries/follow-through-cnc/2018-19.json.gzip",
+          "dataSha256": "c5028ddf30f92ee4a24eb8eafe746cc7f7f5f29eb0220116952cb5e1841d4f20",
+          "sourceRowIndex0": 58,
+          "physicalPdfPage": 4,
+          "row": [
+            "college-of-new-caledonia",
+            "Emerson, Cheryl",
+            null,
+            94554,
+            3155,
+            4
+          ],
+          "rowSha256": "2739f4cdca2926e87749909eae4aabf56c9229cbaa7e1ab3be458c70621817d5",
+          "supportsPublishedSpelling": true,
+          "sameLabelCompiledRows": [],
+          "sameNameAndMoneyOccurrenceCount": 0,
+          "limitation": "Earlier spelling support is not an independent match for the later alias observation and does not verify a lifetime identity."
+        },
+        {
+          "sourceId": "cnc-sofi-2019-20-employees",
+          "year": "2019/20",
+          "periodStart": "2019-04-01",
+          "periodEnd": "2020-03-31",
+          "sourceUrl": "https://cnc.bc.ca/docs/public/governance/budgets---financial-statements/statement-of-financial-information/sofi-report-2019-20.pdf?sfvrsn=742e8937_1",
+          "pdfSha256": "6f8c6ad394df7df9dd58c7370a28fb367cdf5a12ad4a8e907606f1c1e6166129",
+          "dataFile": "research/salaries/follow-through-cnc/2019-20.json.gzip",
+          "dataSha256": "17dcbdf9fd5618f43d4a1328833c006e208d54a255e3d590f50dc42f6469c7cf",
+          "sourceRowIndex0": 58,
+          "physicalPdfPage": 3,
+          "row": [
+            "college-of-new-caledonia",
+            "Emerson, Cheryl",
+            null,
+            95707,
+            57,
+            3
+          ],
+          "rowSha256": "e5e623080261c4fe899b18399ae0c0a2a8f121f504d75fbb492c11eb98a181b4",
+          "supportsPublishedSpelling": true,
+          "sameLabelCompiledRows": [],
+          "sameNameAndMoneyOccurrenceCount": 0,
+          "limitation": "Earlier spelling support is not an independent match for the later alias observation and does not verify a lifetime identity."
+        },
+        {
+          "sourceId": "cnc-sofi-2020-21-employees",
+          "year": "2020/21",
+          "periodStart": "2020-04-01",
+          "periodEnd": "2021-03-31",
+          "sourceUrl": "https://cnc.bc.ca/docs/public/governance/budgets---financial-statements/statement-of-financial-information/sofi-report-2020-21.pdf?sfvrsn=4d8314a_1",
+          "pdfSha256": "2140a55a0289cf9f2d96f7c541545ce3932dc8612e05536be597af33fa94c1a5",
+          "dataFile": "research/salaries/follow-through-cnc/2020-21.json.gzip",
+          "dataSha256": "d0598e2cf1613144ead367527c88de460b5276763cc2996f32578cd23cdb179f",
+          "sourceRowIndex0": 65,
+          "physicalPdfPage": 4,
+          "row": [
+            "college-of-new-caledonia",
+            "Emerson, Cheryl",
+            null,
+            101113,
+            50,
+            4
+          ],
+          "rowSha256": "9f8b9760eed1745528fd1e516d9e89be9f0be20437a46cc1dbe69f6c49df2d3d",
+          "supportsPublishedSpelling": true,
+          "sameLabelCompiledRows": [
+            [
+              "Emerson, Cheryl",
+              null,
+              101113,
+              50,
+              1
+            ]
+          ],
+          "sameNameAndMoneyOccurrenceCount": 1,
+          "limitation": "Earlier spelling support is not an independent match for the later alias observation and does not verify a lifetime identity."
+        },
+        {
+          "sourceId": "cnc-sofi-2021-22-employees",
+          "year": "2021/22",
+          "periodStart": "2021-04-01",
+          "periodEnd": "2022-03-31",
+          "sourceUrl": "https://cnc.bc.ca/docs/public/governance/budgets---financial-statements/statement-of-financial-information/sofi-report-2021-22.pdf?sfvrsn=43c3c8b0_1",
+          "pdfSha256": "4b1ff78a4ea9796a09e85da202071fd0dd1242361142a42bd29a08e801441554",
+          "dataFile": "research/salaries/follow-through-cnc/2021-22.json.gzip",
+          "dataSha256": "9e964b7ac48378bebccf677a03d5c5378b5c6d0f991a8e7ea8151675693e1aec",
+          "sourceRowIndex0": 68,
+          "physicalPdfPage": 4,
+          "row": [
+            "college-of-new-caledonia",
+            "Emerson, Cheryl",
+            null,
+            101216,
+            null,
+            4
+          ],
+          "rowSha256": "615f43257b83da47ac417f3ec62584f4fc7c76657f720589e22536fdfd154960",
+          "supportsPublishedSpelling": true,
+          "sameLabelCompiledRows": [],
+          "sameNameAndMoneyOccurrenceCount": 0,
+          "limitation": "Earlier spelling support is not an independent match for the later alias observation and does not verify a lifetime identity."
+        },
+        {
+          "sourceId": "cnc-sofi-2022-23-employees",
+          "year": "2022/23",
+          "periodStart": "2022-04-01",
+          "periodEnd": "2023-03-31",
+          "sourceUrl": "https://cnc.bc.ca/docs/public/governance/budgets---financial-statements/statement-of-financial-information/sofi-report-2022-23.pdf?sfvrsn=c9b36c88_1",
+          "pdfSha256": "1f8b6b337e23ffb0a4d3ae195c7715147a3d4f768a485639767a629049c89680",
+          "dataFile": "research/salaries/follow-through-cnc/2022-23.json.gzip",
+          "dataSha256": "c1bac51cef6fbcd3c09bed60eac3039d9ce4e68f2f74bf8b7d6a62c5fbd59422",
+          "sourceRowIndex0": 70,
+          "physicalPdfPage": 4,
+          "row": [
+            "college-of-new-caledonia",
+            "Emerson, Cheryl",
+            null,
+            101095,
+            null,
+            4
+          ],
+          "rowSha256": "fe88d2a2bf10ba65ba411151dd58f038706418465b0e81fdbf89777671fd51b2",
+          "supportsPublishedSpelling": true,
+          "sameLabelCompiledRows": [],
+          "sameNameAndMoneyOccurrenceCount": 0,
+          "limitation": "Earlier spelling support is not an independent match for the later alias observation and does not verify a lifetime identity."
+        }
+      ],
+      "verificationLimit": "Specific compiled-source spelling connection only; raw names, amounts, expense states, titles, periods and observations remain intact. No lifetime identity or annual-base-salary claim."
+    },
+    {
+      "id": "cnc-source-copy-mcinroy-2023-24",
+      "leadId": "cnc-source-copy-mcinroy-2023-24",
+      "candidateId": null,
+      "memberOfOriginal3173": false,
+      "originalCandidateNames": null,
+      "originalOutcome": null,
+      "requestedOCRLead": true,
+      "employer": "college-of-new-caledonia",
+      "decision": "no-connection-needed",
+      "method": null,
+      "preferredName": "McInroy, Pamela",
+      "compiledName": "Mcinroy, Pamela",
+      "names": [
+        "Mcinroy, Pamela",
+        "McInroy, Pamela"
+      ],
+      "compiledPersonKey": "mcinroy|pamela",
+      "preferredPersonKey": "mcinroy|pamela",
+      "rawOCRVariant": "Mcinroy, Pamela",
+      "rawOCRVariantOccursInCompiledSnapshot": true,
+      "note": "The exact numeric pair is unique, but Mcinroy and McInroy have the same existing person key. Capitalization creates no separate alias to connect. Preserve both raw spellings.",
+      "source": {
+        "id": "cnc-sofi-2023-24-employees",
+        "url": "https://cnc.bc.ca/docs/public/governance/budgets---financial-statements/statement-of-financial-information/sofi-report-2023-24.pdf?sfvrsn=5c81c9b5_1",
+        "pdfSha256": "cb28eade49eb6b62ac1395a328735d7a12a600fe1bac78bd08d1bfcb107c4cd3",
+        "year": "2023/24",
+        "periodStart": "2023-04-01",
+        "periodEnd": "2024-03-31",
+        "dataFile": "research/salaries/follow-through-cnc/2023-24.json.gzip",
+        "dataSha256": "6d805a9e5f7715e89837aa48c0733515938dad75ca03a9f6182b2b0f63751e1d",
+        "normalizedSha256": "ed6a53e5e2b7481977c3c2b2b0b2c544e8a9701b9e68b0b1033f0cc3dd4ce513",
+        "sourceRowIndex0": 182,
+        "sourceRowOrdinal1": 183,
+        "physicalPdfPage": 5,
+        "row": [
+          "college-of-new-caledonia",
+          "McInroy, Pamela",
+          null,
+          131120,
+          17032,
+          5
+        ],
+        "normalizedRowSha256": "8d0953fbb4cda7bc872ea815acfd7151ceba77bff12e7e18468b70e17e94c8ac",
+        "stableRecordSha256": "ddbde3c8043321ff4253db3e13060998aa55f8b8cac055b6e1f8620f061efc41",
+        "livePublishedObservation": {
+          "shard": "mc",
+          "shardRowIndex0": 15155,
+          "row": [
+            "McInroy, Pamela",
+            null,
+            131120,
+            17032,
+            76,
+            46,
+            "cnc-sofi-2023-24-employees",
+            5
+          ],
+          "stableRecordSha256": "ddbde3c8043321ff4253db3e13060998aa55f8b8cac055b6e1f8620f061efc41"
+        }
+      },
+      "compiledObservation": {
+        "sourceId": "pssdb-2026-10-22",
+        "sourceKind": "compiled",
+        "periodType": "unverified",
+        "yearLabel": "2023/24",
+        "snapshotFile": "research/salaries/compiled-baseline.json.gzip",
+        "snapshotEmployerRowIndex0": 493,
+        "snapshotYearCohortRowIndex0": 23,
+        "rawSnapshotRow": [
+          "Mcinroy, Pamela",
+          null,
+          131120,
+          17032,
+          2
+        ],
+        "stableRecordSha256": "10b28c03438975297b6b11983423085ff06331e39bf9828c8f3030835307a08e",
+        "livePublishedObservation": {
+          "shard": "mc",
+          "shardRowIndex0": 15153,
+          "row": [
+            "Mcinroy, Pamela",
+            null,
+            131120,
+            17032,
+            76,
+            46,
+            "pssdb-2026-10-22",
+            null
+          ],
+          "stableRecordSha256": "10b28c03438975297b6b11983423085ff06331e39bf9828c8f3030835307a08e"
+        }
+      },
+      "periodReview": {
+        "officialActualYear": "2023/24",
+        "compiledLabel": "2023/24",
+        "labelStringMismatch": false,
+        "compiledActualPeriodVerified": false,
+        "compilationLabelRelabelled": false,
+        "note": "The strings agree exactly for this case. The compilation retains its original unverified edition label; this individual copy witness does not certify or relabel every compiled observation."
+      },
+      "financialWitness": {
+        "currency": "CAD",
+        "officialCohortRows": 312,
+        "compiledCohortRows": 312,
+        "officialRemuneration": 131120,
+        "officialExpenses": 17032,
+        "officialExpenseState": "numeric",
+        "compiledRemuneration": 131120,
+        "compiledExpenses": 17032,
+        "expenseEqualityEstablished": true,
+        "expenseConflictEstablished": false,
+        "nullCoercedToZero": false,
+        "officialOccurrencesOfOfficialPayExpensePair": 1,
+        "compiledOccurrencesOfOfficialPayExpensePair": 1,
+        "officialOccurrencesOfActualCompiledPayExpensePair": 1,
+        "officialPayOnlyOccurrences": 2,
+        "compiledPayOnlyOccurrences": 2,
+        "proofUsesExpenses": false,
+        "proofUsesOnlyUniqueRemuneration": false,
+        "samePayOfficialNames": [
+          "Giddens, Elyse",
+          "McInroy, Pamela"
+        ],
+        "samePayCompiledNames": [
+          "Giddens, Elyse",
+          "Mcinroy, Pamela"
+        ]
+      },
+      "visualReview": {
+        "reviewedFullPhysicalPage": true,
+        "reviewedOriginalCrop": true,
+        "reviewedNameAndBothMonetaryCells": true,
+        "crop": {
+          "file": "research/salaries/follow-through-cnc/evidence/crops/2023-24-p05-correction-11.png",
+          "sha256": "9b0f28bf9a9e7a3f29def66450818869b934f1597deb8b322e559c4616209ff4",
+          "physicalPdfPage": 5,
+          "pdfCropPoints": [
+            90.4,
+            578.08,
+            496.64,
+            590.96
+          ],
+          "ocrLine": "Mcinroy Pamela 131,120 17,032",
+          "persistedInRepository": true,
+          "bboxPoints": [
+            90.4,
+            578.08,
+            496.64,
+            590.96
+          ],
+          "pdfSha256": "cb28eade49eb6b62ac1395a328735d7a12a600fe1bac78bd08d1bfcb107c4cd3",
+          "sourceDataSha256": "6d805a9e5f7715e89837aa48c0733515938dad75ca03a9f6182b2b0f63751e1d",
+          "renderDpi": 400
+        },
+        "fullPageCacheFile": "/workspace/salary-source-follow-through/cache-cnc/2023-24-p05.png",
+        "fullPageRenderSha256": "80ae3a4935dcf77b049c948420ca59888f8f8c0ae6a50fca67e178adedb55841",
+        "originalPdfSha256": "cb28eade49eb6b62ac1395a328735d7a12a600fe1bac78bd08d1bfcb107c4cd3",
+        "fullPageReceipt": "research/salaries/follow-through-cnc/visual-review.json",
+        "fullPageFile": "research/salaries/source-follow-through-2026-11-02/cnc-name-evidence/2023-24-p05.png",
+        "fullPageEvidencePersisted": true
+      },
+      "allCompiledAliasOccurrences": [
+        {
+          "snapshotEmployerRowIndex0": 493,
+          "yearLabel": "2023/24",
+          "row": [
+            "Mcinroy, Pamela",
+            null,
+            131120,
+            17032,
+            2
+          ],
+          "stableRecordSha256": "10b28c03438975297b6b11983423085ff06331e39bf9828c8f3030835307a08e"
+        }
+      ],
+      "earlierOfficialSpellingSupport": [
+        {
+          "sourceId": "cnc-sofi-2022-23-employees",
+          "year": "2022/23",
+          "periodStart": "2022-04-01",
+          "periodEnd": "2023-03-31",
+          "sourceUrl": "https://cnc.bc.ca/docs/public/governance/budgets---financial-statements/statement-of-financial-information/sofi-report-2022-23.pdf?sfvrsn=c9b36c88_1",
+          "pdfSha256": "1f8b6b337e23ffb0a4d3ae195c7715147a3d4f768a485639767a629049c89680",
+          "dataFile": "research/salaries/follow-through-cnc/2022-23.json.gzip",
+          "dataSha256": "c1bac51cef6fbcd3c09bed60eac3039d9ce4e68f2f74bf8b7d6a62c5fbd59422",
+          "sourceRowIndex0": 155,
+          "physicalPdfPage": 5,
+          "row": [
+            "college-of-new-caledonia",
+            "McInroy, Pamela",
+            null,
+            69526,
+            15905,
+            5
+          ],
+          "rowSha256": "432031771e653189fb7f02cbdd5589ab173eabf0e3f4003955dd0fcefc9c56a6",
+          "supportsPublishedSpelling": true,
+          "sameLabelCompiledRows": [],
+          "sameNameAndMoneyOccurrenceCount": 0,
+          "limitation": "Earlier spelling support is not an independent match for the later alias observation and does not verify a lifetime identity."
+        }
+      ],
+      "verificationLimit": "Specific compiled-source spelling connection only; raw names, amounts, expense states, titles, periods and observations remain intact. No lifetime identity or annual-base-salary claim."
+    },
+    {
+      "id": "cnc-source-copy-mcwhinnie-2023-24",
+      "leadId": "cnc-source-copy-mcwhinnie-2023-24",
+      "candidateId": null,
+      "memberOfOriginal3173": false,
+      "originalCandidateNames": null,
+      "originalOutcome": null,
+      "requestedOCRLead": true,
+      "employer": "college-of-new-caledonia",
+      "decision": "no-connection-needed",
+      "method": null,
+      "preferredName": "McWhinnie, Shannon",
+      "compiledName": "McWhinnie, Shannon",
+      "names": [
+        "McWhinnie, Shannon",
+        "McWhinnie, Shannon"
+      ],
+      "compiledPersonKey": "mcwhinnie|shannon",
+      "preferredPersonKey": "mcwhinnie|shannon",
+      "rawOCRVariant": "MecWhinnie, Shannon",
+      "rawOCRVariantOccursInCompiledSnapshot": false,
+      "note": "The current compiled observation already spells McWhinnie, Shannon. MecWhinnie is a raw OCR artifact absent from the compiled cohort; the unique numeric pair confirms source correspondence without creating a new name connection.",
+      "source": {
+        "id": "cnc-sofi-2023-24-employees",
+        "url": "https://cnc.bc.ca/docs/public/governance/budgets---financial-statements/statement-of-financial-information/sofi-report-2023-24.pdf?sfvrsn=5c81c9b5_1",
+        "pdfSha256": "cb28eade49eb6b62ac1395a328735d7a12a600fe1bac78bd08d1bfcb107c4cd3",
+        "year": "2023/24",
+        "periodStart": "2023-04-01",
+        "periodEnd": "2024-03-31",
+        "dataFile": "research/salaries/follow-through-cnc/2023-24.json.gzip",
+        "dataSha256": "6d805a9e5f7715e89837aa48c0733515938dad75ca03a9f6182b2b0f63751e1d",
+        "normalizedSha256": "ed6a53e5e2b7481977c3c2b2b0b2c544e8a9701b9e68b0b1033f0cc3dd4ce513",
+        "sourceRowIndex0": 183,
+        "sourceRowOrdinal1": 184,
+        "physicalPdfPage": 5,
+        "row": [
+          "college-of-new-caledonia",
+          "McWhinnie, Shannon",
+          null,
+          87748,
+          172,
+          5
+        ],
+        "normalizedRowSha256": "caa0967938c463dae900a5db2514d8caa6f9e6604f0fe78128775dc84db8c941",
+        "stableRecordSha256": "a409b114ac364d4e75164cca401b717e55f2bc68dc9bae9b1245bc264d3db826",
+        "livePublishedObservation": {
+          "shard": "mc",
+          "shardRowIndex0": 30338,
+          "row": [
+            "McWhinnie, Shannon",
+            null,
+            87748,
+            172,
+            76,
+            46,
+            "cnc-sofi-2023-24-employees",
+            5
+          ],
+          "stableRecordSha256": "a409b114ac364d4e75164cca401b717e55f2bc68dc9bae9b1245bc264d3db826"
+        }
+      },
+      "compiledObservation": {
+        "sourceId": "pssdb-2026-10-22",
+        "sourceKind": "compiled",
+        "periodType": "unverified",
+        "yearLabel": "2023/24",
+        "snapshotFile": "research/salaries/compiled-baseline.json.gzip",
+        "snapshotEmployerRowIndex0": 736,
+        "snapshotYearCohortRowIndex0": 266,
+        "rawSnapshotRow": [
+          "McWhinnie, Shannon",
+          null,
+          87748,
+          172,
+          2
+        ],
+        "stableRecordSha256": "013d1154f51cca4dcd39a2558aaa7c927267980e7a2bfc5a3c2435028d881d08",
+        "livePublishedObservation": {
+          "shard": "mc",
+          "shardRowIndex0": 30337,
+          "row": [
+            "McWhinnie, Shannon",
+            null,
+            87748,
+            172,
+            76,
+            46,
+            "pssdb-2026-10-22",
+            null
+          ],
+          "stableRecordSha256": "013d1154f51cca4dcd39a2558aaa7c927267980e7a2bfc5a3c2435028d881d08"
+        }
+      },
+      "periodReview": {
+        "officialActualYear": "2023/24",
+        "compiledLabel": "2023/24",
+        "labelStringMismatch": false,
+        "compiledActualPeriodVerified": false,
+        "compilationLabelRelabelled": false,
+        "note": "The strings agree exactly for this case. The compilation retains its original unverified edition label; this individual copy witness does not certify or relabel every compiled observation."
+      },
+      "financialWitness": {
+        "currency": "CAD",
+        "officialCohortRows": 312,
+        "compiledCohortRows": 312,
+        "officialRemuneration": 87748,
+        "officialExpenses": 172,
+        "officialExpenseState": "numeric",
+        "compiledRemuneration": 87748,
+        "compiledExpenses": 172,
+        "expenseEqualityEstablished": true,
+        "expenseConflictEstablished": false,
+        "nullCoercedToZero": false,
+        "officialOccurrencesOfOfficialPayExpensePair": 1,
+        "compiledOccurrencesOfOfficialPayExpensePair": 1,
+        "officialOccurrencesOfActualCompiledPayExpensePair": 1,
+        "officialPayOnlyOccurrences": 1,
+        "compiledPayOnlyOccurrences": 1,
+        "proofUsesExpenses": false,
+        "proofUsesOnlyUniqueRemuneration": false,
+        "samePayOfficialNames": [
+          "McWhinnie, Shannon"
+        ],
+        "samePayCompiledNames": [
+          "McWhinnie, Shannon"
+        ]
+      },
+      "visualReview": {
+        "reviewedFullPhysicalPage": true,
+        "reviewedOriginalCrop": true,
+        "reviewedNameAndBothMonetaryCells": true,
+        "crop": {
+          "file": "research/salaries/follow-through-cnc/evidence/crops/2023-24-p05-correction-12.png",
+          "sha256": "21f156f4b558c043ad876d908b5a30d5fd4c58b0b52483d606ec70f5f3514e38",
+          "physicalPdfPage": 5,
+          "pdfCropPoints": [
+            90.16,
+            588.64,
+            496.4,
+            599.12
+          ],
+          "ocrLine": "MecWhinnie Shannon 87,748 172",
+          "persistedInRepository": true,
+          "bboxPoints": [
+            90.16,
+            588.64,
+            496.4,
+            599.12
+          ],
+          "pdfSha256": "cb28eade49eb6b62ac1395a328735d7a12a600fe1bac78bd08d1bfcb107c4cd3",
+          "sourceDataSha256": "6d805a9e5f7715e89837aa48c0733515938dad75ca03a9f6182b2b0f63751e1d",
+          "renderDpi": 400
+        },
+        "fullPageCacheFile": "/workspace/salary-source-follow-through/cache-cnc/2023-24-p05.png",
+        "fullPageRenderSha256": "80ae3a4935dcf77b049c948420ca59888f8f8c0ae6a50fca67e178adedb55841",
+        "originalPdfSha256": "cb28eade49eb6b62ac1395a328735d7a12a600fe1bac78bd08d1bfcb107c4cd3",
+        "fullPageReceipt": "research/salaries/follow-through-cnc/visual-review.json",
+        "fullPageFile": "research/salaries/source-follow-through-2026-11-02/cnc-name-evidence/2023-24-p05.png",
+        "fullPageEvidencePersisted": true
+      },
+      "allCompiledAliasOccurrences": [
+        {
+          "snapshotEmployerRowIndex0": 736,
+          "yearLabel": "2023/24",
+          "row": [
+            "McWhinnie, Shannon",
+            null,
+            87748,
+            172,
+            2
+          ],
+          "stableRecordSha256": "013d1154f51cca4dcd39a2558aaa7c927267980e7a2bfc5a3c2435028d881d08"
+        }
+      ],
+      "earlierOfficialSpellingSupport": [],
+      "verificationLimit": "Specific compiled-source spelling connection only; raw names, amounts, expense states, titles, periods and observations remain intact. No lifetime identity or annual-base-salary claim."
+    },
+    {
+      "id": 1797,
+      "leadId": "cnc-source-copy-perlstrom-2023-24",
+      "candidateId": 1797,
+      "memberOfOriginal3173": true,
+      "originalCandidateNames": [
+        "Perlstrom, Shannon",
+        "Per1strom, Shannon"
+      ],
+      "originalOutcome": "unconfirmed-keep-separate",
+      "requestedOCRLead": true,
+      "employer": "college-of-new-caledonia",
+      "decision": "accept-source-copy-spelling",
+      "method": "unique-remuneration-and-numeric-expenses",
+      "preferredName": "Perlstrom, Shannon",
+      "compiledName": "Per1strom, Shannon",
+      "names": [
+        "Per1strom, Shannon",
+        "Perlstrom, Shannon"
+      ],
+      "compiledPersonKey": "perstrom|shannon",
+      "preferredPersonKey": "perlstrom|shannon",
+      "rawOCRVariant": "Penstrom, Shannon",
+      "rawOCRVariantOccursInCompiledSnapshot": false,
+      "note": "The source row reads Perlstrom, Shannon, with a lowercase l. The exact 117,062 remuneration plus 1,659 expenses occurs once in each cohort. The actual compiled alias is Per1strom, not the extraction OCR artifact Penstrom.",
+      "source": {
+        "id": "cnc-sofi-2023-24-employees",
+        "url": "https://cnc.bc.ca/docs/public/governance/budgets---financial-statements/statement-of-financial-information/sofi-report-2023-24.pdf?sfvrsn=5c81c9b5_1",
+        "pdfSha256": "cb28eade49eb6b62ac1395a328735d7a12a600fe1bac78bd08d1bfcb107c4cd3",
+        "year": "2023/24",
+        "periodStart": "2023-04-01",
+        "periodEnd": "2024-03-31",
+        "dataFile": "research/salaries/follow-through-cnc/2023-24.json.gzip",
+        "dataSha256": "6d805a9e5f7715e89837aa48c0733515938dad75ca03a9f6182b2b0f63751e1d",
+        "normalizedSha256": "ed6a53e5e2b7481977c3c2b2b0b2c544e8a9701b9e68b0b1033f0cc3dd4ce513",
+        "sourceRowIndex0": 218,
+        "sourceRowOrdinal1": 219,
+        "physicalPdfPage": 6,
+        "row": [
+          "college-of-new-caledonia",
+          "Perlstrom, Shannon",
+          null,
+          117062,
+          1659,
+          6
+        ],
+        "normalizedRowSha256": "01d5f03031532bd39fe3cfc720e4cc95d033111fa8c7db15e3bbeec5aa8e3af3",
+        "stableRecordSha256": "de7b75fe05937e0565b05c421fff3027e687ab549dc6ec9b1d03a9687d119dc5",
+        "livePublishedObservation": {
+          "shard": "pe",
+          "shardRowIndex0": 8709,
+          "row": [
+            "Perlstrom, Shannon",
+            null,
+            117062,
+            1659,
+            76,
+            46,
+            "cnc-sofi-2023-24-employees",
+            6
+          ],
+          "stableRecordSha256": "de7b75fe05937e0565b05c421fff3027e687ab549dc6ec9b1d03a9687d119dc5"
+        }
+      },
+      "compiledObservation": {
+        "sourceId": "pssdb-2026-10-22",
+        "sourceKind": "compiled",
+        "periodType": "unverified",
+        "yearLabel": "2023/24",
+        "snapshotFile": "research/salaries/compiled-baseline.json.gzip",
+        "snapshotEmployerRowIndex0": 532,
+        "snapshotYearCohortRowIndex0": 62,
+        "rawSnapshotRow": [
+          "Per1strom, Shannon",
+          null,
+          117062,
+          1659,
+          2
+        ],
+        "stableRecordSha256": "bdcb79b1de76e4571d5796faa48332f13d78c6e0fd3f04830566a2669c0a6cf1",
+        "livePublishedObservation": {
+          "shard": "pe",
+          "shardRowIndex0": 6794,
+          "row": [
+            "Per1strom, Shannon",
+            null,
+            117062,
+            1659,
+            76,
+            46,
+            "pssdb-2026-10-22",
+            null
+          ],
+          "stableRecordSha256": "bdcb79b1de76e4571d5796faa48332f13d78c6e0fd3f04830566a2669c0a6cf1"
+        }
+      },
+      "periodReview": {
+        "officialActualYear": "2023/24",
+        "compiledLabel": "2023/24",
+        "labelStringMismatch": false,
+        "compiledActualPeriodVerified": false,
+        "compilationLabelRelabelled": false,
+        "note": "The strings agree exactly for this case. The compilation retains its original unverified edition label; this individual copy witness does not certify or relabel every compiled observation."
+      },
+      "financialWitness": {
+        "currency": "CAD",
+        "officialCohortRows": 312,
+        "compiledCohortRows": 312,
+        "officialRemuneration": 117062,
+        "officialExpenses": 1659,
+        "officialExpenseState": "numeric",
+        "compiledRemuneration": 117062,
+        "compiledExpenses": 1659,
+        "expenseEqualityEstablished": true,
+        "expenseConflictEstablished": false,
+        "nullCoercedToZero": false,
+        "officialOccurrencesOfOfficialPayExpensePair": 1,
+        "compiledOccurrencesOfOfficialPayExpensePair": 1,
+        "officialOccurrencesOfActualCompiledPayExpensePair": 1,
+        "officialPayOnlyOccurrences": 2,
+        "compiledPayOnlyOccurrences": 2,
+        "proofUsesExpenses": true,
+        "proofUsesOnlyUniqueRemuneration": false,
+        "samePayOfficialNames": [
+          "Kitchen, Annette",
+          "Perlstrom, Shannon"
+        ],
+        "samePayCompiledNames": [
+          "Kitchen, Annette",
+          "Per1strom, Shannon"
+        ]
+      },
+      "visualReview": {
+        "reviewedFullPhysicalPage": true,
+        "reviewedOriginalCrop": true,
+        "reviewedNameAndBothMonetaryCells": true,
+        "crop": {
+          "file": "research/salaries/follow-through-cnc/evidence/crops/2023-24-p06-correction-13.png",
+          "sha256": "23906bec0db36223fe1b87a09ce364437209b8087fe831c82d46149c052a2112",
+          "physicalPdfPage": 6,
+          "pdfCropPoints": [
+            94.96,
+            230.08,
+            500.24,
+            242.48
+          ],
+          "ocrLine": "Penstrom Shannon 117,062 1,659",
+          "persistedInRepository": true,
+          "bboxPoints": [
+            94.96,
+            230.08,
+            500.24,
+            242.48
+          ],
+          "pdfSha256": "cb28eade49eb6b62ac1395a328735d7a12a600fe1bac78bd08d1bfcb107c4cd3",
+          "sourceDataSha256": "6d805a9e5f7715e89837aa48c0733515938dad75ca03a9f6182b2b0f63751e1d",
+          "renderDpi": 400
+        },
+        "fullPageCacheFile": "/workspace/salary-source-follow-through/cache-cnc/2023-24-p06.png",
+        "fullPageRenderSha256": "43baddcb7cdcd5ddfc0ed82bc56c7a83d41444d8b872904c3b49199b45a855a7",
+        "originalPdfSha256": "cb28eade49eb6b62ac1395a328735d7a12a600fe1bac78bd08d1bfcb107c4cd3",
+        "fullPageReceipt": "research/salaries/follow-through-cnc/visual-review.json",
+        "fullPageFile": "research/salaries/source-follow-through-2026-11-02/cnc-name-evidence/2023-24-p06.png",
+        "fullPageEvidencePersisted": true
+      },
+      "allCompiledAliasOccurrences": [
+        {
+          "snapshotEmployerRowIndex0": 532,
+          "yearLabel": "2023/24",
+          "row": [
+            "Per1strom, Shannon",
+            null,
+            117062,
+            1659,
+            2
+          ],
+          "stableRecordSha256": "bdcb79b1de76e4571d5796faa48332f13d78c6e0fd3f04830566a2669c0a6cf1"
+        }
+      ],
+      "earlierOfficialSpellingSupport": [
+        {
+          "sourceId": "cnc-sofi-2018-19-employees",
+          "year": "2018/19",
+          "periodStart": "2018-04-01",
+          "periodEnd": "2019-03-31",
+          "sourceUrl": "https://cnc.bc.ca/docs/public/governance/budgets---financial-statements/statement-of-financial-information/sofi-report-2018-19.pdf?sfvrsn=22935f48_1",
+          "pdfSha256": "7fbd2e773a6978fc5797e0496e16ffabc10bcb1c75ad5aabb0ff04c87e1771a4",
+          "dataFile": "research/salaries/follow-through-cnc/2018-19.json.gzip",
+          "dataSha256": "c5028ddf30f92ee4a24eb8eafe746cc7f7f5f29eb0220116952cb5e1841d4f20",
+          "sourceRowIndex0": 136,
+          "physicalPdfPage": 6,
+          "row": [
+            "college-of-new-caledonia",
+            "Perlstrom, Shannon",
+            null,
+            77663,
+            2391,
+            6
+          ],
+          "rowSha256": "4eff09512bec1db5b33d9520d8e7529e62dc31bbdfbbcd4dca9ee58fbaee68b8",
+          "supportsPublishedSpelling": true,
+          "sameLabelCompiledRows": [],
+          "sameNameAndMoneyOccurrenceCount": 0,
+          "limitation": "Earlier spelling support is not an independent match for the later alias observation and does not verify a lifetime identity."
+        },
+        {
+          "sourceId": "cnc-sofi-2019-20-employees",
+          "year": "2019/20",
+          "periodStart": "2019-04-01",
+          "periodEnd": "2020-03-31",
+          "sourceUrl": "https://cnc.bc.ca/docs/public/governance/budgets---financial-statements/statement-of-financial-information/sofi-report-2019-20.pdf?sfvrsn=742e8937_1",
+          "pdfSha256": "6f8c6ad394df7df9dd58c7370a28fb367cdf5a12ad4a8e907606f1c1e6166129",
+          "dataFile": "research/salaries/follow-through-cnc/2019-20.json.gzip",
+          "dataSha256": "17dcbdf9fd5618f43d4a1328833c006e208d54a255e3d590f50dc42f6469c7cf",
+          "sourceRowIndex0": 159,
+          "physicalPdfPage": 5,
+          "row": [
+            "college-of-new-caledonia",
+            "Perlstrom, Shannon",
+            null,
+            81647,
+            3290,
+            5
+          ],
+          "rowSha256": "0f43290452cc62889f75466fbb19e5da0f17c518f2ea8b9593afdc4850b917fb",
+          "supportsPublishedSpelling": true,
+          "sameLabelCompiledRows": [],
+          "sameNameAndMoneyOccurrenceCount": 0,
+          "limitation": "Earlier spelling support is not an independent match for the later alias observation and does not verify a lifetime identity."
+        },
+        {
+          "sourceId": "cnc-sofi-2020-21-employees",
+          "year": "2020/21",
+          "periodStart": "2020-04-01",
+          "periodEnd": "2021-03-31",
+          "sourceUrl": "https://cnc.bc.ca/docs/public/governance/budgets---financial-statements/statement-of-financial-information/sofi-report-2020-21.pdf?sfvrsn=4d8314a_1",
+          "pdfSha256": "2140a55a0289cf9f2d96f7c541545ce3932dc8612e05536be597af33fa94c1a5",
+          "dataFile": "research/salaries/follow-through-cnc/2020-21.json.gzip",
+          "dataSha256": "d0598e2cf1613144ead367527c88de460b5276763cc2996f32578cd23cdb179f",
+          "sourceRowIndex0": 174,
+          "physicalPdfPage": 6,
+          "row": [
+            "college-of-new-caledonia",
+            "Perlstrom, Shannon",
+            null,
+            91198,
+            null,
+            6
+          ],
+          "rowSha256": "caa6a643a639366b9475c07f78c43dde03fdb7242fb16546264845db3d7d6057",
+          "supportsPublishedSpelling": true,
+          "sameLabelCompiledRows": [
+            [
+              "Perlstrom, Shannon",
+              null,
+              91198,
+              null,
+              1
+            ]
+          ],
+          "sameNameAndMoneyOccurrenceCount": 1,
+          "limitation": "Earlier spelling support is not an independent match for the later alias observation and does not verify a lifetime identity."
+        },
+        {
+          "sourceId": "cnc-sofi-2021-22-employees",
+          "year": "2021/22",
+          "periodStart": "2021-04-01",
+          "periodEnd": "2022-03-31",
+          "sourceUrl": "https://cnc.bc.ca/docs/public/governance/budgets---financial-statements/statement-of-financial-information/sofi-report-2021-22.pdf?sfvrsn=43c3c8b0_1",
+          "pdfSha256": "4b1ff78a4ea9796a09e85da202071fd0dd1242361142a42bd29a08e801441554",
+          "dataFile": "research/salaries/follow-through-cnc/2021-22.json.gzip",
+          "dataSha256": "9e964b7ac48378bebccf677a03d5c5378b5c6d0f991a8e7ea8151675693e1aec",
+          "sourceRowIndex0": 183,
+          "physicalPdfPage": 6,
+          "row": [
+            "college-of-new-caledonia",
+            "Perlstrom, Shannon",
+            null,
+            97738,
+            null,
+            6
+          ],
+          "rowSha256": "e64a9f9b15e336cc0535ddf6968a07c4df1ad08f0951a994b617f09110f7471e",
+          "supportsPublishedSpelling": true,
+          "sameLabelCompiledRows": [],
+          "sameNameAndMoneyOccurrenceCount": 0,
+          "limitation": "Earlier spelling support is not an independent match for the later alias observation and does not verify a lifetime identity."
+        },
+        {
+          "sourceId": "cnc-sofi-2022-23-employees",
+          "year": "2022/23",
+          "periodStart": "2022-04-01",
+          "periodEnd": "2023-03-31",
+          "sourceUrl": "https://cnc.bc.ca/docs/public/governance/budgets---financial-statements/statement-of-financial-information/sofi-report-2022-23.pdf?sfvrsn=c9b36c88_1",
+          "pdfSha256": "1f8b6b337e23ffb0a4d3ae195c7715147a3d4f768a485639767a629049c89680",
+          "dataFile": "research/salaries/follow-through-cnc/2022-23.json.gzip",
+          "dataSha256": "c1bac51cef6fbcd3c09bed60eac3039d9ce4e68f2f74bf8b7d6a62c5fbd59422",
+          "sourceRowIndex0": 187,
+          "physicalPdfPage": 6,
+          "row": [
+            "college-of-new-caledonia",
+            "Perlstrom, Shannon",
+            null,
+            101553,
+            null,
+            6
+          ],
+          "rowSha256": "7898be54dadaa3d361c98d14497b8ea4b6bf05849df8b3eefda19e93b82bb6d3",
+          "supportsPublishedSpelling": true,
+          "sameLabelCompiledRows": [],
+          "sameNameAndMoneyOccurrenceCount": 0,
+          "limitation": "Earlier spelling support is not an independent match for the later alias observation and does not verify a lifetime identity."
+        }
+      ],
+      "verificationLimit": "Specific compiled-source spelling connection only; raw names, amounts, expense states, titles, periods and observations remain intact. No lifetime identity or annual-base-salary claim."
+    },
+    {
+      "id": "cnc-source-copy-thorne-2023-24",
+      "leadId": "cnc-source-copy-thorne-2023-24",
+      "candidateId": null,
+      "memberOfOriginal3173": false,
+      "originalCandidateNames": null,
+      "originalOutcome": null,
+      "requestedOCRLead": true,
+      "employer": "college-of-new-caledonia",
+      "decision": "accept-source-copy-spelling",
+      "method": "unique-remuneration-and-numeric-expenses",
+      "preferredName": "Thorne, Sandra",
+      "compiledName": "Thome, Sandra",
+      "names": [
+        "Thome, Sandra",
+        "Thorne, Sandra"
+      ],
+      "compiledPersonKey": "thome|sandra",
+      "preferredPersonKey": "thorne|sandra",
+      "rawOCRVariant": "Thome, Sandra",
+      "rawOCRVariantOccursInCompiledSnapshot": true,
+      "note": "The source row reads Thorne, Sandra. The exact 116,968 remuneration plus 741 expenses occurs once in each cohort. The scan compresses the r+n forms; the earlier native 2020/21 original independently prints Thorne.",
+      "source": {
+        "id": "cnc-sofi-2023-24-employees",
+        "url": "https://cnc.bc.ca/docs/public/governance/budgets---financial-statements/statement-of-financial-information/sofi-report-2023-24.pdf?sfvrsn=5c81c9b5_1",
+        "pdfSha256": "cb28eade49eb6b62ac1395a328735d7a12a600fe1bac78bd08d1bfcb107c4cd3",
+        "year": "2023/24",
+        "periodStart": "2023-04-01",
+        "periodEnd": "2024-03-31",
+        "dataFile": "research/salaries/follow-through-cnc/2023-24.json.gzip",
+        "dataSha256": "6d805a9e5f7715e89837aa48c0733515938dad75ca03a9f6182b2b0f63751e1d",
+        "normalizedSha256": "ed6a53e5e2b7481977c3c2b2b0b2c544e8a9701b9e68b0b1033f0cc3dd4ce513",
+        "sourceRowIndex0": 282,
+        "sourceRowOrdinal1": 283,
+        "physicalPdfPage": 7,
+        "row": [
+          "college-of-new-caledonia",
+          "Thorne, Sandra",
+          null,
+          116968,
+          741,
+          7
+        ],
+        "normalizedRowSha256": "3ca4a6ccf2df7475787b7b68347855d7a437a6ea658c8cbbf9739cf38146702d",
+        "stableRecordSha256": "8348a10ab733b26863160b5683c628152ecdbf3f04be0e0cb5ba968f47ce978f",
+        "livePublishedObservation": {
+          "shard": "th",
+          "shardRowIndex0": 9731,
+          "row": [
+            "Thorne, Sandra",
+            null,
+            116968,
+            741,
+            76,
+            46,
+            "cnc-sofi-2023-24-employees",
+            7
+          ],
+          "stableRecordSha256": "8348a10ab733b26863160b5683c628152ecdbf3f04be0e0cb5ba968f47ce978f"
+        }
+      },
+      "compiledObservation": {
+        "sourceId": "pssdb-2026-10-22",
+        "sourceKind": "compiled",
+        "periodType": "unverified",
+        "yearLabel": "2023/24",
+        "snapshotFile": "research/salaries/compiled-baseline.json.gzip",
+        "snapshotEmployerRowIndex0": 536,
+        "snapshotYearCohortRowIndex0": 66,
+        "rawSnapshotRow": [
+          "Thome, Sandra",
+          null,
+          116968,
+          741,
+          2
+        ],
+        "stableRecordSha256": "44acea531c923ce477b84005a90d763c6482779b9dc17c2ecf625fd74cc6d5b4",
+        "livePublishedObservation": {
+          "shard": "th",
+          "shardRowIndex0": 5585,
+          "row": [
+            "Thome, Sandra",
+            null,
+            116968,
+            741,
+            76,
+            46,
+            "pssdb-2026-10-22",
+            null
+          ],
+          "stableRecordSha256": "44acea531c923ce477b84005a90d763c6482779b9dc17c2ecf625fd74cc6d5b4"
+        }
+      },
+      "periodReview": {
+        "officialActualYear": "2023/24",
+        "compiledLabel": "2023/24",
+        "labelStringMismatch": false,
+        "compiledActualPeriodVerified": false,
+        "compilationLabelRelabelled": false,
+        "note": "The strings agree exactly for this case. The compilation retains its original unverified edition label; this individual copy witness does not certify or relabel every compiled observation."
+      },
+      "financialWitness": {
+        "currency": "CAD",
+        "officialCohortRows": 312,
+        "compiledCohortRows": 312,
+        "officialRemuneration": 116968,
+        "officialExpenses": 741,
+        "officialExpenseState": "numeric",
+        "compiledRemuneration": 116968,
+        "compiledExpenses": 741,
+        "expenseEqualityEstablished": true,
+        "expenseConflictEstablished": false,
+        "nullCoercedToZero": false,
+        "officialOccurrencesOfOfficialPayExpensePair": 1,
+        "compiledOccurrencesOfOfficialPayExpensePair": 1,
+        "officialOccurrencesOfActualCompiledPayExpensePair": 1,
+        "officialPayOnlyOccurrences": 1,
+        "compiledPayOnlyOccurrences": 1,
+        "proofUsesExpenses": true,
+        "proofUsesOnlyUniqueRemuneration": false,
+        "samePayOfficialNames": [
+          "Thorne, Sandra"
+        ],
+        "samePayCompiledNames": [
+          "Thome, Sandra"
+        ]
+      },
+      "visualReview": {
+        "reviewedFullPhysicalPage": true,
+        "reviewedOriginalCrop": true,
+        "reviewedNameAndBothMonetaryCells": true,
+        "crop": {
+          "file": "research/salaries/follow-through-cnc/evidence/crops/2023-24-p07-correction-16.png",
+          "sha256": "f92a91c396841788343192c3610c97548927866f92506a5a70900645a36817d8",
+          "physicalPdfPage": 7,
+          "pdfCropPoints": [
+            93.04,
+            154.24,
+            498.32,
+            168.08
+          ],
+          "ocrLine": "Thome Sandra 116,968 741",
+          "persistedInRepository": true,
+          "bboxPoints": [
+            93.04,
+            154.24,
+            498.32,
+            168.08
+          ],
+          "pdfSha256": "cb28eade49eb6b62ac1395a328735d7a12a600fe1bac78bd08d1bfcb107c4cd3",
+          "sourceDataSha256": "6d805a9e5f7715e89837aa48c0733515938dad75ca03a9f6182b2b0f63751e1d",
+          "renderDpi": 400
+        },
+        "fullPageCacheFile": "/workspace/salary-source-follow-through/cache-cnc/2023-24-p07.png",
+        "fullPageRenderSha256": "36edead2916cde4559e48b53902b093c2082af59cd4caf49410e4d329b1da82e",
+        "originalPdfSha256": "cb28eade49eb6b62ac1395a328735d7a12a600fe1bac78bd08d1bfcb107c4cd3",
+        "fullPageReceipt": "research/salaries/follow-through-cnc/visual-review.json",
+        "fullPageFile": "research/salaries/source-follow-through-2026-11-02/cnc-name-evidence/2023-24-p07.png",
+        "fullPageEvidencePersisted": true,
+        "earlierNativeSpellingConfirmation": {
+          "preferredName": "Thorne, Sandra",
+          "sourceId": "cnc-sofi-2020-21-employees",
+          "sourceUrl": "https://cnc.bc.ca/docs/public/governance/budgets---financial-statements/statement-of-financial-information/sofi-report-2020-21.pdf?sfvrsn=4d8314a_1",
+          "pdfSha256": "2140a55a0289cf9f2d96f7c541545ce3932dc8612e05536be597af33fa94c1a5",
+          "year": "2020/21",
+          "periodStart": "2020-04-01",
+          "periodEnd": "2021-03-31",
+          "physicalPdfPage": 7,
+          "dataFile": "research/salaries/follow-through-cnc/2020-21.json.gzip",
+          "dataSha256": "d0598e2cf1613144ead367527c88de460b5276763cc2996f32578cd23cdb179f",
+          "normalizedSha256": "55b11d057e6dc329ee3c0856d4673bf8d450b2ce67483fb75477ff92764c9c2e",
+          "sourceRowIndex0": 231,
+          "sourceRowOrdinal1": 232,
+          "row": [
+            "college-of-new-caledonia",
+            "Thorne, Sandra",
+            null,
+            85664,
+            664,
+            7
+          ],
+          "normalizedRowSha256": "e59f692fb501d5a9de80514ab65bc1729fcec0e2305bc6c5e95003c3e4153709",
+          "crop": {
+            "file": "research/salaries/source-follow-through-2026-11-02/cnc-name-evidence/2020-21-native-thorne.png",
+            "sha256": "cf2f1d9121df02eedbeec2b640593714edfa5bd1e89c8dc7c663f621f2f4c852",
+            "pdfCropPoints": [
+              83.91999816894531,
+              149.7723846435547,
+              532.1753540039062,
+              163.12904357910156
+            ],
+            "bboxPoints": [
+              83.91999816894531,
+              149.7723846435547,
+              532.1753540039062,
+              163.12904357910156
+            ],
+            "physicalPdfPage": 7,
+            "pdfSha256": "2140a55a0289cf9f2d96f7c541545ce3932dc8612e05536be597af33fa94c1a5",
+            "sourceDataSha256": "d0598e2cf1613144ead367527c88de460b5276763cc2996f32578cd23cdb179f",
+            "renderDpi": 400,
+            "persistedInRepository": true,
+            "renderMethod": "PyMuPDF original native page render; no OCR overlay or text replacement."
+          },
+          "nativeWordEvidence": [
+            [
+              85.91999816894531,
+              151.7723846435547,
+              112.50860595703125,
+              161.12904357910156,
+              "Thorne"
+            ],
+            [
+              159.2415771484375,
+              151.7723846435547,
+              186.2757568359375,
+              161.12904357910156,
+              "Sandra"
+            ],
+            [
+              411.6739196777344,
+              151.7723846435547,
+              437.2505187988281,
+              161.12904357910156,
+              "85,664"
+            ],
+            [
+              516.1881103515625,
+              151.7723846435547,
+              530.1753540039062,
+              161.12904357910156,
+              "664"
+            ]
+          ],
+          "limitation": "The native original establishes the earlier published r+n spelling. The later2023/24 compressed scan glyphs and its unique numeric copy-cohort witness remain separate evidence; neither compiled year labels nor observations are rewritten."
+        }
+      },
+      "allCompiledAliasOccurrences": [
+        {
+          "snapshotEmployerRowIndex0": 536,
+          "yearLabel": "2023/24",
+          "row": [
+            "Thome, Sandra",
+            null,
+            116968,
+            741,
+            2
+          ],
+          "stableRecordSha256": "44acea531c923ce477b84005a90d763c6482779b9dc17c2ecf625fd74cc6d5b4"
+        }
+      ],
+      "earlierOfficialSpellingSupport": [
+        {
+          "sourceId": "cnc-sofi-2020-21-employees",
+          "year": "2020/21",
+          "periodStart": "2020-04-01",
+          "periodEnd": "2021-03-31",
+          "sourceUrl": "https://cnc.bc.ca/docs/public/governance/budgets---financial-statements/statement-of-financial-information/sofi-report-2020-21.pdf?sfvrsn=4d8314a_1",
+          "pdfSha256": "2140a55a0289cf9f2d96f7c541545ce3932dc8612e05536be597af33fa94c1a5",
+          "dataFile": "research/salaries/follow-through-cnc/2020-21.json.gzip",
+          "dataSha256": "d0598e2cf1613144ead367527c88de460b5276763cc2996f32578cd23cdb179f",
+          "sourceRowIndex0": 231,
+          "physicalPdfPage": 7,
+          "row": [
+            "college-of-new-caledonia",
+            "Thorne, Sandra",
+            null,
+            85664,
+            664,
+            7
+          ],
+          "rowSha256": "e59f692fb501d5a9de80514ab65bc1729fcec0e2305bc6c5e95003c3e4153709",
+          "supportsPublishedSpelling": true,
+          "sameLabelCompiledRows": [
+            [
+              "Thorne, Sandra",
+              null,
+              85664,
+              664,
+              1
+            ]
+          ],
+          "sameNameAndMoneyOccurrenceCount": 1,
+          "limitation": "Earlier spelling support is not an independent match for the later alias observation and does not verify a lifetime identity.",
+          "nativeVisualEvidence": {
+            "file": "research/salaries/source-follow-through-2026-11-02/cnc-name-evidence/2020-21-native-thorne.png",
+            "sha256": "cf2f1d9121df02eedbeec2b640593714edfa5bd1e89c8dc7c663f621f2f4c852",
+            "pdfCropPoints": [
+              83.91999816894531,
+              149.7723846435547,
+              532.1753540039062,
+              163.12904357910156
+            ],
+            "bboxPoints": [
+              83.91999816894531,
+              149.7723846435547,
+              532.1753540039062,
+              163.12904357910156
+            ],
+            "physicalPdfPage": 7,
+            "pdfSha256": "2140a55a0289cf9f2d96f7c541545ce3932dc8612e05536be597af33fa94c1a5",
+            "sourceDataSha256": "d0598e2cf1613144ead367527c88de460b5276763cc2996f32578cd23cdb179f",
+            "renderDpi": 400,
+            "persistedInRepository": true,
+            "renderMethod": "PyMuPDF original native page render; no OCR overlay or text replacement."
+          }
+        },
+        {
+          "sourceId": "cnc-sofi-2021-22-employees",
+          "year": "2021/22",
+          "periodStart": "2021-04-01",
+          "periodEnd": "2022-03-31",
+          "sourceUrl": "https://cnc.bc.ca/docs/public/governance/budgets---financial-statements/statement-of-financial-information/sofi-report-2021-22.pdf?sfvrsn=43c3c8b0_1",
+          "pdfSha256": "4b1ff78a4ea9796a09e85da202071fd0dd1242361142a42bd29a08e801441554",
+          "dataFile": "research/salaries/follow-through-cnc/2021-22.json.gzip",
+          "dataSha256": "9e964b7ac48378bebccf677a03d5c5378b5c6d0f991a8e7ea8151675693e1aec",
+          "sourceRowIndex0": 242,
+          "physicalPdfPage": 7,
+          "row": [
+            "college-of-new-caledonia",
+            "Thorne, Sandra",
+            null,
+            91989,
+            632,
+            7
+          ],
+          "rowSha256": "6f3e0bbb3b33bc5a9d861f2a49e4a86f6f44553c2630f1097804a18f3a915d34",
+          "supportsPublishedSpelling": true,
+          "sameLabelCompiledRows": [],
+          "sameNameAndMoneyOccurrenceCount": 0,
+          "limitation": "Earlier spelling support is not an independent match for the later alias observation and does not verify a lifetime identity."
+        },
+        {
+          "sourceId": "cnc-sofi-2022-23-employees",
+          "year": "2022/23",
+          "periodStart": "2022-04-01",
+          "periodEnd": "2023-03-31",
+          "sourceUrl": "https://cnc.bc.ca/docs/public/governance/budgets---financial-statements/statement-of-financial-information/sofi-report-2022-23.pdf?sfvrsn=c9b36c88_1",
+          "pdfSha256": "1f8b6b337e23ffb0a4d3ae195c7715147a3d4f768a485639767a629049c89680",
+          "dataFile": "research/salaries/follow-through-cnc/2022-23.json.gzip",
+          "dataSha256": "c1bac51cef6fbcd3c09bed60eac3039d9ce4e68f2f74bf8b7d6a62c5fbd59422",
+          "sourceRowIndex0": 251,
+          "physicalPdfPage": 7,
+          "row": [
+            "college-of-new-caledonia",
+            "Thorne, Sandra",
+            null,
+            101296,
+            690,
+            7
+          ],
+          "rowSha256": "4a4e217d238de02b8c9073feede6bd136e2505c32f0136195fc9d3a5bcc12a03",
+          "supportsPublishedSpelling": true,
+          "sameLabelCompiledRows": [],
+          "sameNameAndMoneyOccurrenceCount": 0,
+          "limitation": "Earlier spelling support is not an independent match for the later alias observation and does not verify a lifetime identity."
+        }
+      ],
+      "verificationLimit": "Specific compiled-source spelling connection only; raw names, amounts, expense states, titles, periods and observations remain intact. No lifetime identity or annual-base-salary claim."
+    },
+    {
+      "id": 1899,
+      "leadId": "cnc-source-copy-rosche-2023-24",
+      "candidateId": 1899,
+      "memberOfOriginal3173": true,
+      "originalCandidateNames": [
+        "Rasche, Mira",
+        "Rosche, Mira"
+      ],
+      "originalOutcome": "unconfirmed-keep-separate",
+      "requestedOCRLead": false,
+      "employer": "college-of-new-caledonia",
+      "decision": "accept-source-copy-spelling",
+      "method": "unique-remuneration-and-numeric-expenses",
+      "preferredName": "Rosche, Mira",
+      "compiledName": "Rasche, Mira",
+      "names": [
+        "Rasche, Mira",
+        "Rosche, Mira"
+      ],
+      "compiledPersonKey": "rasche|mira",
+      "preferredPersonKey": "rosche|mira",
+      "rawOCRVariant": null,
+      "rawOCRVariantOccursInCompiledSnapshot": null,
+      "note": "The original clearly prints Rosche, Mira beside remuneration 115,136 and expenses 368. The exact pair is unique in both complete cohorts; Rasche is the compiled spelling of that specific source-copy observation.",
+      "source": {
+        "id": "cnc-sofi-2023-24-employees",
+        "url": "https://cnc.bc.ca/docs/public/governance/budgets---financial-statements/statement-of-financial-information/sofi-report-2023-24.pdf?sfvrsn=5c81c9b5_1",
+        "pdfSha256": "cb28eade49eb6b62ac1395a328735d7a12a600fe1bac78bd08d1bfcb107c4cd3",
+        "year": "2023/24",
+        "periodStart": "2023-04-01",
+        "periodEnd": "2024-03-31",
+        "dataFile": "research/salaries/follow-through-cnc/2023-24.json.gzip",
+        "dataSha256": "6d805a9e5f7715e89837aa48c0733515938dad75ca03a9f6182b2b0f63751e1d",
+        "normalizedSha256": "ed6a53e5e2b7481977c3c2b2b0b2c544e8a9701b9e68b0b1033f0cc3dd4ce513",
+        "sourceRowIndex0": 238,
+        "sourceRowOrdinal1": 239,
+        "physicalPdfPage": 6,
+        "row": [
+          "college-of-new-caledonia",
+          "Rosche, Mira",
+          null,
+          115136,
+          368,
+          6
+        ],
+        "normalizedRowSha256": "5eda5a4b7512008deb07b79fa952b634a55073dc58c05ec01ebfc21a00b3337c",
+        "stableRecordSha256": "25cf94a527e08bfc246408ed76e9f142a4b828654333ec879d5d59003c2764b5",
+        "livePublishedObservation": {
+          "shard": "ro",
+          "shardRowIndex0": 14089,
+          "row": [
+            "Rosche, Mira",
+            null,
+            115136,
+            368,
+            76,
+            46,
+            "cnc-sofi-2023-24-employees",
+            6
+          ],
+          "stableRecordSha256": "25cf94a527e08bfc246408ed76e9f142a4b828654333ec879d5d59003c2764b5"
+        }
+      },
+      "compiledObservation": {
+        "sourceId": "pssdb-2026-10-22",
+        "sourceKind": "compiled",
+        "periodType": "unverified",
+        "yearLabel": "2023/24",
+        "snapshotFile": "research/salaries/compiled-baseline.json.gzip",
+        "snapshotEmployerRowIndex0": 553,
+        "snapshotYearCohortRowIndex0": 83,
+        "rawSnapshotRow": [
+          "Rasche, Mira",
+          null,
+          115136,
+          368,
+          2
+        ],
+        "stableRecordSha256": "940953bce25bdbc7ed65dded77d111409e408360b50793ab8484cfe672a6956c",
+        "livePublishedObservation": {
+          "shard": "ra",
+          "shardRowIndex0": 10558,
+          "row": [
+            "Rasche, Mira",
+            null,
+            115136,
+            368,
+            76,
+            46,
+            "pssdb-2026-10-22",
+            null
+          ],
+          "stableRecordSha256": "940953bce25bdbc7ed65dded77d111409e408360b50793ab8484cfe672a6956c"
+        }
+      },
+      "periodReview": {
+        "officialActualYear": "2023/24",
+        "compiledLabel": "2023/24",
+        "labelStringMismatch": false,
+        "compiledActualPeriodVerified": false,
+        "compilationLabelRelabelled": false,
+        "note": "The strings agree exactly for this case. The compilation retains its original unverified edition label; this individual copy witness does not certify or relabel every compiled observation."
+      },
+      "financialWitness": {
+        "currency": "CAD",
+        "officialCohortRows": 312,
+        "compiledCohortRows": 312,
+        "officialRemuneration": 115136,
+        "officialExpenses": 368,
+        "officialExpenseState": "numeric",
+        "compiledRemuneration": 115136,
+        "compiledExpenses": 368,
+        "expenseEqualityEstablished": true,
+        "expenseConflictEstablished": false,
+        "nullCoercedToZero": false,
+        "officialOccurrencesOfOfficialPayExpensePair": 1,
+        "compiledOccurrencesOfOfficialPayExpensePair": 1,
+        "officialOccurrencesOfActualCompiledPayExpensePair": 1,
+        "officialPayOnlyOccurrences": 1,
+        "compiledPayOnlyOccurrences": 1,
+        "proofUsesExpenses": true,
+        "proofUsesOnlyUniqueRemuneration": false,
+        "samePayOfficialNames": [
+          "Rosche, Mira"
+        ],
+        "samePayCompiledNames": [
+          "Rasche, Mira"
+        ]
+      },
+      "visualReview": {
+        "reviewedFullPhysicalPage": true,
+        "reviewedOriginalCrop": true,
+        "reviewedNameAndBothMonetaryCells": true,
+        "crop": {
+          "file": "research/salaries/source-follow-through-2026-11-02/cnc-name-evidence/2023-24-candidate-1899.png",
+          "sha256": "083648df7c91da928c4f416935309b84f777d1c132c6e907ca824a6cdd68381a",
+          "physicalPdfPage": 6,
+          "persistedInRepository": true,
+          "copyRequiredBeforePinnedAdoption": false,
+          "render": "Original PDF at400dpi; complete row, without OCR overlay.",
+          "pdfCropPoints": [
+            94.48,
+            412.0,
+            499.52,
+            424.64
+          ],
+          "bboxPoints": [
+            94.48,
+            412.0,
+            499.52,
+            424.64
+          ],
+          "pdfSha256": "cb28eade49eb6b62ac1395a328735d7a12a600fe1bac78bd08d1bfcb107c4cd3",
+          "sourceDataSha256": "6d805a9e5f7715e89837aa48c0733515938dad75ca03a9f6182b2b0f63751e1d",
+          "renderDpi": 400
+        },
+        "fullPageCacheFile": "/workspace/salary-source-follow-through/cache-cnc/2023-24-p06.png",
+        "fullPageRenderSha256": "43baddcb7cdcd5ddfc0ed82bc56c7a83d41444d8b872904c3b49199b45a855a7",
+        "originalPdfSha256": "cb28eade49eb6b62ac1395a328735d7a12a600fe1bac78bd08d1bfcb107c4cd3",
+        "fullPageReceipt": "research/salaries/follow-through-cnc/visual-review.json",
+        "fullPageFile": "research/salaries/source-follow-through-2026-11-02/cnc-name-evidence/2023-24-p06.png",
+        "fullPageEvidencePersisted": true
+      },
+      "allCompiledAliasOccurrences": [
+        {
+          "snapshotEmployerRowIndex0": 553,
+          "yearLabel": "2023/24",
+          "row": [
+            "Rasche, Mira",
+            null,
+            115136,
+            368,
+            2
+          ],
+          "stableRecordSha256": "940953bce25bdbc7ed65dded77d111409e408360b50793ab8484cfe672a6956c"
+        }
+      ],
+      "earlierOfficialSpellingSupport": [
+        {
+          "sourceId": "cnc-sofi-2018-19-employees",
+          "year": "2018/19",
+          "periodStart": "2018-04-01",
+          "periodEnd": "2019-03-31",
+          "sourceUrl": "https://cnc.bc.ca/docs/public/governance/budgets---financial-statements/statement-of-financial-information/sofi-report-2018-19.pdf?sfvrsn=22935f48_1",
+          "pdfSha256": "7fbd2e773a6978fc5797e0496e16ffabc10bcb1c75ad5aabb0ff04c87e1771a4",
+          "dataFile": "research/salaries/follow-through-cnc/2018-19.json.gzip",
+          "dataSha256": "c5028ddf30f92ee4a24eb8eafe746cc7f7f5f29eb0220116952cb5e1841d4f20",
+          "sourceRowIndex0": 151,
+          "physicalPdfPage": 6,
+          "row": [
+            "college-of-new-caledonia",
+            "Rosche, Mira",
+            null,
+            96281,
+            5437,
+            6
+          ],
+          "rowSha256": "54f54abbed6174eb208a1238a808e2bcb3be6c49847925aa242237d47e2b9192",
+          "supportsPublishedSpelling": true,
+          "sameLabelCompiledRows": [],
+          "sameNameAndMoneyOccurrenceCount": 0,
+          "limitation": "Earlier spelling support is not an independent match for the later alias observation and does not verify a lifetime identity."
+        },
+        {
+          "sourceId": "cnc-sofi-2019-20-employees",
+          "year": "2019/20",
+          "periodStart": "2019-04-01",
+          "periodEnd": "2020-03-31",
+          "sourceUrl": "https://cnc.bc.ca/docs/public/governance/budgets---financial-statements/statement-of-financial-information/sofi-report-2019-20.pdf?sfvrsn=742e8937_1",
+          "pdfSha256": "6f8c6ad394df7df9dd58c7370a28fb367cdf5a12ad4a8e907606f1c1e6166129",
+          "dataFile": "research/salaries/follow-through-cnc/2019-20.json.gzip",
+          "dataSha256": "17dcbdf9fd5618f43d4a1328833c006e208d54a255e3d590f50dc42f6469c7cf",
+          "sourceRowIndex0": 179,
+          "physicalPdfPage": 5,
+          "row": [
+            "college-of-new-caledonia",
+            "Rosche, Mira",
+            null,
+            97341,
+            5215,
+            5
+          ],
+          "rowSha256": "e5208cb45ab5701b48dbed61561eae4d7d34344a4f7c584d7aecc0fe73f4e937",
+          "supportsPublishedSpelling": true,
+          "sameLabelCompiledRows": [],
+          "sameNameAndMoneyOccurrenceCount": 0,
+          "limitation": "Earlier spelling support is not an independent match for the later alias observation and does not verify a lifetime identity."
+        },
+        {
+          "sourceId": "cnc-sofi-2020-21-employees",
+          "year": "2020/21",
+          "periodStart": "2020-04-01",
+          "periodEnd": "2021-03-31",
+          "sourceUrl": "https://cnc.bc.ca/docs/public/governance/budgets---financial-statements/statement-of-financial-information/sofi-report-2020-21.pdf?sfvrsn=4d8314a_1",
+          "pdfSha256": "2140a55a0289cf9f2d96f7c541545ce3932dc8612e05536be597af33fa94c1a5",
+          "dataFile": "research/salaries/follow-through-cnc/2020-21.json.gzip",
+          "dataSha256": "d0598e2cf1613144ead367527c88de460b5276763cc2996f32578cd23cdb179f",
+          "sourceRowIndex0": 192,
+          "physicalPdfPage": 6,
+          "row": [
+            "college-of-new-caledonia",
+            "Rosche, Mira",
+            null,
+            102487,
+            285,
+            6
+          ],
+          "rowSha256": "711643b052923b8cb952e6032309d67197faae8e24487a3481a1aa7d4680437f",
+          "supportsPublishedSpelling": true,
+          "sameLabelCompiledRows": [
+            [
+              "Rosche, Mira",
+              null,
+              102487,
+              285,
+              1
+            ]
+          ],
+          "sameNameAndMoneyOccurrenceCount": 1,
+          "limitation": "Earlier spelling support is not an independent match for the later alias observation and does not verify a lifetime identity."
+        },
+        {
+          "sourceId": "cnc-sofi-2021-22-employees",
+          "year": "2021/22",
+          "periodStart": "2021-04-01",
+          "periodEnd": "2022-03-31",
+          "sourceUrl": "https://cnc.bc.ca/docs/public/governance/budgets---financial-statements/statement-of-financial-information/sofi-report-2021-22.pdf?sfvrsn=43c3c8b0_1",
+          "pdfSha256": "4b1ff78a4ea9796a09e85da202071fd0dd1242361142a42bd29a08e801441554",
+          "dataFile": "research/salaries/follow-through-cnc/2021-22.json.gzip",
+          "dataSha256": "9e964b7ac48378bebccf677a03d5c5378b5c6d0f991a8e7ea8151675693e1aec",
+          "sourceRowIndex0": 198,
+          "physicalPdfPage": 6,
+          "row": [
+            "college-of-new-caledonia",
+            "Rosche, Mira",
+            null,
+            102591,
+            276,
+            6
+          ],
+          "rowSha256": "7b1f0b996b9fb799ee9a9a1122a3f94d742b9087312942fe3ef2b06dd575427f",
+          "supportsPublishedSpelling": true,
+          "sameLabelCompiledRows": [],
+          "sameNameAndMoneyOccurrenceCount": 0,
+          "limitation": "Earlier spelling support is not an independent match for the later alias observation and does not verify a lifetime identity."
+        },
+        {
+          "sourceId": "cnc-sofi-2022-23-employees",
+          "year": "2022/23",
+          "periodStart": "2022-04-01",
+          "periodEnd": "2023-03-31",
+          "sourceUrl": "https://cnc.bc.ca/docs/public/governance/budgets---financial-statements/statement-of-financial-information/sofi-report-2022-23.pdf?sfvrsn=c9b36c88_1",
+          "pdfSha256": "1f8b6b337e23ffb0a4d3ae195c7715147a3d4f768a485639767a629049c89680",
+          "dataFile": "research/salaries/follow-through-cnc/2022-23.json.gzip",
+          "dataSha256": "c1bac51cef6fbcd3c09bed60eac3039d9ce4e68f2f74bf8b7d6a62c5fbd59422",
+          "sourceRowIndex0": 206,
+          "physicalPdfPage": 6,
+          "row": [
+            "college-of-new-caledonia",
+            "Rosche, Mira",
+            null,
+            104374,
+            1985,
+            6
+          ],
+          "rowSha256": "ee465d67077065cf9ed0a7c975dbab58c74d5f6219676af927809d7d11ef125f",
+          "supportsPublishedSpelling": true,
+          "sameLabelCompiledRows": [],
+          "sameNameAndMoneyOccurrenceCount": 0,
+          "limitation": "Earlier spelling support is not an independent match for the later alias observation and does not verify a lifetime identity."
+        }
+      ],
+      "verificationLimit": "Specific compiled-source spelling connection only; raw names, amounts, expense states, titles, periods and observations remain intact. No lifetime identity or annual-base-salary claim."
+    },
+    {
+      "id": 1973,
+      "leadId": "cnc-source-copy-maides-2023-24",
+      "candidateId": 1973,
+      "memberOfOriginal3173": true,
+      "originalCandidateNames": [
+        "Maides, Peter",
+        "Maldes, Peter"
+      ],
+      "originalOutcome": "unconfirmed-keep-separate",
+      "requestedOCRLead": false,
+      "employer": "college-of-new-caledonia",
+      "decision": "hold",
+      "method": null,
+      "preferredName": "Maides, Peter",
+      "compiledName": "Maldes, Peter",
+      "names": [
+        "Maldes, Peter",
+        "Maides, Peter"
+      ],
+      "compiledPersonKey": "maldes|peter",
+      "preferredPersonKey": "maides|peter",
+      "rawOCRVariant": null,
+      "rawOCRVariantOccursInCompiledSnapshot": null,
+      "note": "The original prints Maides, Peter, but its 113,947 remuneration occurs 45 times in each complete cohort. Its expense cell is a dash; compiled 0 cannot be treated as a matching disclosed amount. Earlier correct-name observations do not supply a unique witness for the sole 2023/24 Maldes alias.",
+      "source": {
+        "id": "cnc-sofi-2023-24-employees",
+        "url": "https://cnc.bc.ca/docs/public/governance/budgets---financial-statements/statement-of-financial-information/sofi-report-2023-24.pdf?sfvrsn=5c81c9b5_1",
+        "pdfSha256": "cb28eade49eb6b62ac1395a328735d7a12a600fe1bac78bd08d1bfcb107c4cd3",
+        "year": "2023/24",
+        "periodStart": "2023-04-01",
+        "periodEnd": "2024-03-31",
+        "dataFile": "research/salaries/follow-through-cnc/2023-24.json.gzip",
+        "dataSha256": "6d805a9e5f7715e89837aa48c0733515938dad75ca03a9f6182b2b0f63751e1d",
+        "normalizedSha256": "ed6a53e5e2b7481977c3c2b2b0b2c544e8a9701b9e68b0b1033f0cc3dd4ce513",
+        "sourceRowIndex0": 170,
+        "sourceRowOrdinal1": 171,
+        "physicalPdfPage": 5,
+        "row": [
+          "college-of-new-caledonia",
+          "Maides, Peter",
+          null,
+          113947,
+          null,
+          5
+        ],
+        "normalizedRowSha256": "e323e24080a47b9cde593e2f724d3931eeee1a43c17e72e13bd92f192ee87212",
+        "stableRecordSha256": "bf3bfc87e9ac5d7b9780b240ec2d6324717bd4303c6911fd03c0685a26ff3172",
+        "livePublishedObservation": {
+          "shard": "ma",
+          "shardRowIndex0": 21244,
+          "row": [
+            "Maides, Peter",
+            null,
+            113947,
+            null,
+            76,
+            46,
+            "cnc-sofi-2023-24-employees",
+            5
+          ],
+          "stableRecordSha256": "bf3bfc87e9ac5d7b9780b240ec2d6324717bd4303c6911fd03c0685a26ff3172"
+        }
+      },
+      "compiledObservation": {
+        "sourceId": "pssdb-2026-10-22",
+        "sourceKind": "compiled",
+        "periodType": "unverified",
+        "yearLabel": "2023/24",
+        "snapshotFile": "research/salaries/compiled-baseline.json.gzip",
+        "snapshotEmployerRowIndex0": 601,
+        "snapshotYearCohortRowIndex0": 131,
+        "rawSnapshotRow": [
+          "Maldes, Peter",
+          null,
+          113947,
+          0,
+          2
+        ],
+        "stableRecordSha256": "dca17bf87efedd62111fe2c492d145587c5278ca7826f7081b84dd7dfc7d8d19",
+        "livePublishedObservation": {
+          "shard": "ma",
+          "shardRowIndex0": 24520,
+          "row": [
+            "Maldes, Peter",
+            null,
+            113947,
+            0,
+            76,
+            46,
+            "pssdb-2026-10-22",
+            null
+          ],
+          "stableRecordSha256": "dca17bf87efedd62111fe2c492d145587c5278ca7826f7081b84dd7dfc7d8d19"
+        }
+      },
+      "periodReview": {
+        "officialActualYear": "2023/24",
+        "compiledLabel": "2023/24",
+        "labelStringMismatch": false,
+        "compiledActualPeriodVerified": false,
+        "compilationLabelRelabelled": false,
+        "note": "The strings agree exactly for this case. The compilation retains its original unverified edition label; this individual copy witness does not certify or relabel every compiled observation."
+      },
+      "financialWitness": {
+        "currency": "CAD",
+        "officialCohortRows": 312,
+        "compiledCohortRows": 312,
+        "officialRemuneration": 113947,
+        "officialExpenses": null,
+        "officialExpenseState": "dash-unknown",
+        "compiledRemuneration": 113947,
+        "compiledExpenses": 0,
+        "expenseEqualityEstablished": false,
+        "expenseConflictEstablished": false,
+        "nullCoercedToZero": false,
+        "officialOccurrencesOfOfficialPayExpensePair": 26,
+        "compiledOccurrencesOfOfficialPayExpensePair": 0,
+        "officialOccurrencesOfActualCompiledPayExpensePair": 0,
+        "officialPayOnlyOccurrences": 45,
+        "compiledPayOnlyOccurrences": 45,
+        "proofUsesExpenses": false,
+        "proofUsesOnlyUniqueRemuneration": false,
+        "samePayOfficialNames": [
+          "Albisser, Tracie",
+          "Baker, Michael",
+          "Barber, Brian",
+          "Brbot, Rosemary",
+          "Card, Jessica",
+          "Clare, Sheldon",
+          "Cornelis, Suzanne",
+          "Craig, Zelda",
+          "Crosina, Kara",
+          "Frizzell, Garth",
+          "Fulton, Carla",
+          "Goudreau, Christien",
+          "Hes, Debbra",
+          "Kaulfuss, Marilyn",
+          "Lasnier, Alexandre",
+          "Latala, Michal",
+          "Liang, Wei",
+          "Little, Jennifer",
+          "Littler, Bradly",
+          "Madjitey, Jacob",
+          "Maides, Peter",
+          "Mansour, Abeer",
+          "Maruk, Lorne",
+          "Matthews, Layth",
+          "Moi, Meagan",
+          "Nahrgang, Wendy",
+          "Pacheco, John",
+          "Reich, Richard",
+          "Rose, Gregory",
+          "Rourke, David",
+          "Schreiner, Dennis",
+          "Selkirk, Mark",
+          "Smit, Jesse",
+          "St Pierre, Daniel",
+          "Stewart, Benjamin",
+          "Taylor, Andrew",
+          "Tejero, Marta",
+          "Thring, Ann",
+          "Valiente, Liza",
+          "Vaughan, Jody",
+          "Wendling, Mark",
+          "Wessels, Kelly",
+          "Winkel, Alice",
+          "Worfolk, Melinda",
+          "Yee, Brenda"
+        ],
+        "samePayCompiledNames": [
+          "Albisser, Tracie",
+          "Baker, Michael",
+          "Barber, Brian",
+          "Brbot, Rosemary",
+          "Card, Jessica",
+          "Clare, Sheldon",
+          "Comelis, Suzanne",
+          "Craig, Zelda",
+          "Crosina, Kara",
+          "Frizzell, Garth",
+          "Fulton, Carla",
+          "Goudreau, Christian",
+          "Hes, Debbra",
+          "Kaulfuss, Marilyn",
+          "Lasnier, Alexandre",
+          "Latala, Michal",
+          "Liang, Wei",
+          "Little, Jennifer",
+          "Littler, Bradly",
+          "Madjitey, Jacob",
+          "Maldes, Peter",
+          "Mansour, Abeer",
+          "Maruk, Lome",
+          "Matthews, Layth",
+          "Mol, Meagan",
+          "Nahrgang, Wendy",
+          "Pacheco, John",
+          "Reich, Richard",
+          "Rose, Gregory",
+          "Rour1<e, David",
+          "Schreiner, Dennis",
+          "Selkir1<, Marl<",
+          "Smit, Jesse",
+          "St Pierre, Daniel",
+          "Stewart, Benjamin",
+          "Taylor, Andrew",
+          "Tejero, Marta",
+          "Thring, Ann",
+          "Valiente, Liza",
+          "Vaughan, Jody",
+          "Wendling, Mark",
+          "Wessels, Kelly",
+          "Winkel, Alice",
+          "Worfolk, Melinda",
+          "Yee, Brenda"
+        ]
+      },
+      "visualReview": {
+        "reviewedFullPhysicalPage": true,
+        "reviewedOriginalCrop": true,
+        "reviewedNameAndBothMonetaryCells": true,
+        "crop": {
+          "file": "research/salaries/source-follow-through-2026-11-02/cnc-name-evidence/2023-24-candidate-1973.png",
+          "sha256": "15ab6b621a4be316416245a523c5576b41fbd4619f9bb369335a2bee6fb99822",
+          "physicalPdfPage": 5,
+          "persistedInRepository": true,
+          "copyRequiredBeforePinnedAdoption": false,
+          "render": "Original PDF at400dpi; complete row, without OCR overlay.",
+          "pdfCropPoints": [
+            91.12,
+            469.36,
+            489.44,
+            482.0
+          ],
+          "bboxPoints": [
+            91.12,
+            469.36,
+            489.44,
+            482.0
+          ],
+          "pdfSha256": "cb28eade49eb6b62ac1395a328735d7a12a600fe1bac78bd08d1bfcb107c4cd3",
+          "sourceDataSha256": "6d805a9e5f7715e89837aa48c0733515938dad75ca03a9f6182b2b0f63751e1d",
+          "renderDpi": 400
+        },
+        "fullPageCacheFile": "/workspace/salary-source-follow-through/cache-cnc/2023-24-p05.png",
+        "fullPageRenderSha256": "80ae3a4935dcf77b049c948420ca59888f8f8c0ae6a50fca67e178adedb55841",
+        "originalPdfSha256": "cb28eade49eb6b62ac1395a328735d7a12a600fe1bac78bd08d1bfcb107c4cd3",
+        "fullPageReceipt": "research/salaries/follow-through-cnc/visual-review.json",
+        "fullPageFile": "research/salaries/source-follow-through-2026-11-02/cnc-name-evidence/2023-24-p05.png",
+        "fullPageEvidencePersisted": true
+      },
+      "allCompiledAliasOccurrences": [
+        {
+          "snapshotEmployerRowIndex0": 601,
+          "yearLabel": "2023/24",
+          "row": [
+            "Maldes, Peter",
+            null,
+            113947,
+            0,
+            2
+          ],
+          "stableRecordSha256": "dca17bf87efedd62111fe2c492d145587c5278ca7826f7081b84dd7dfc7d8d19"
+        }
+      ],
+      "earlierOfficialSpellingSupport": [
+        {
+          "sourceId": "cnc-sofi-2018-19-employees",
+          "year": "2018/19",
+          "periodStart": "2018-04-01",
+          "periodEnd": "2019-03-31",
+          "sourceUrl": "https://cnc.bc.ca/docs/public/governance/budgets---financial-statements/statement-of-financial-information/sofi-report-2018-19.pdf?sfvrsn=22935f48_1",
+          "pdfSha256": "7fbd2e773a6978fc5797e0496e16ffabc10bcb1c75ad5aabb0ff04c87e1771a4",
+          "dataFile": "research/salaries/follow-through-cnc/2018-19.json.gzip",
+          "dataSha256": "c5028ddf30f92ee4a24eb8eafe746cc7f7f5f29eb0220116952cb5e1841d4f20",
+          "sourceRowIndex0": 113,
+          "physicalPdfPage": 5,
+          "row": [
+            "college-of-new-caledonia",
+            "Maides, Peter",
+            null,
+            93332,
+            900,
+            5
+          ],
+          "rowSha256": "06fe4c526f84f4223740ae227345f6e41f7257f063221ca717282c84843b79cc",
+          "supportsPublishedSpelling": true,
+          "sameLabelCompiledRows": [],
+          "sameNameAndMoneyOccurrenceCount": 0,
+          "limitation": "Earlier spelling support is not an independent match for the later alias observation and does not verify a lifetime identity."
+        },
+        {
+          "sourceId": "cnc-sofi-2019-20-employees",
+          "year": "2019/20",
+          "periodStart": "2019-04-01",
+          "periodEnd": "2020-03-31",
+          "sourceUrl": "https://cnc.bc.ca/docs/public/governance/budgets---financial-statements/statement-of-financial-information/sofi-report-2019-20.pdf?sfvrsn=742e8937_1",
+          "pdfSha256": "6f8c6ad394df7df9dd58c7370a28fb367cdf5a12ad4a8e907606f1c1e6166129",
+          "dataFile": "research/salaries/follow-through-cnc/2019-20.json.gzip",
+          "dataSha256": "17dcbdf9fd5618f43d4a1328833c006e208d54a255e3d590f50dc42f6469c7cf",
+          "sourceRowIndex0": 126,
+          "physicalPdfPage": 4,
+          "row": [
+            "college-of-new-caledonia",
+            "Maides, Peter",
+            null,
+            94561,
+            1635,
+            4
+          ],
+          "rowSha256": "39cded503bbe39531dc331ab7d898f5e1434035494bb5846867301788147c817",
+          "supportsPublishedSpelling": true,
+          "sameLabelCompiledRows": [],
+          "sameNameAndMoneyOccurrenceCount": 0,
+          "limitation": "Earlier spelling support is not an independent match for the later alias observation and does not verify a lifetime identity."
+        },
+        {
+          "sourceId": "cnc-sofi-2020-21-employees",
+          "year": "2020/21",
+          "periodStart": "2020-04-01",
+          "periodEnd": "2021-03-31",
+          "sourceUrl": "https://cnc.bc.ca/docs/public/governance/budgets---financial-statements/statement-of-financial-information/sofi-report-2020-21.pdf?sfvrsn=4d8314a_1",
+          "pdfSha256": "2140a55a0289cf9f2d96f7c541545ce3932dc8612e05536be597af33fa94c1a5",
+          "dataFile": "research/salaries/follow-through-cnc/2020-21.json.gzip",
+          "dataSha256": "d0598e2cf1613144ead367527c88de460b5276763cc2996f32578cd23cdb179f",
+          "sourceRowIndex0": 137,
+          "physicalPdfPage": 5,
+          "row": [
+            "college-of-new-caledonia",
+            "Maides, Peter",
+            null,
+            99738,
+            null,
+            5
+          ],
+          "rowSha256": "6ded5834fc2285fd2bd68f3346ed6efb3ac67c573d58062b01034ea88d362605",
+          "supportsPublishedSpelling": true,
+          "sameLabelCompiledRows": [
+            [
+              "Maides, Peter",
+              null,
+              99738,
+              null,
+              1
+            ]
+          ],
+          "sameNameAndMoneyOccurrenceCount": 1,
+          "limitation": "Earlier spelling support is not an independent match for the later alias observation and does not verify a lifetime identity."
+        },
+        {
+          "sourceId": "cnc-sofi-2021-22-employees",
+          "year": "2021/22",
+          "periodStart": "2021-04-01",
+          "periodEnd": "2022-03-31",
+          "sourceUrl": "https://cnc.bc.ca/docs/public/governance/budgets---financial-statements/statement-of-financial-information/sofi-report-2021-22.pdf?sfvrsn=43c3c8b0_1",
+          "pdfSha256": "4b1ff78a4ea9796a09e85da202071fd0dd1242361142a42bd29a08e801441554",
+          "dataFile": "research/salaries/follow-through-cnc/2021-22.json.gzip",
+          "dataSha256": "9e964b7ac48378bebccf677a03d5c5378b5c6d0f991a8e7ea8151675693e1aec",
+          "sourceRowIndex0": 146,
+          "physicalPdfPage": 5,
+          "row": [
+            "college-of-new-caledonia",
+            "Maides, Peter",
+            null,
+            99840,
+            null,
+            5
+          ],
+          "rowSha256": "f832683c55091fcd12f41740f91233a0edc287aba518b15afc6e6af992a78841",
+          "supportsPublishedSpelling": true,
+          "sameLabelCompiledRows": [],
+          "sameNameAndMoneyOccurrenceCount": 0,
+          "limitation": "Earlier spelling support is not an independent match for the later alias observation and does not verify a lifetime identity."
+        },
+        {
+          "sourceId": "cnc-sofi-2022-23-employees",
+          "year": "2022/23",
+          "periodStart": "2022-04-01",
+          "periodEnd": "2023-03-31",
+          "sourceUrl": "https://cnc.bc.ca/docs/public/governance/budgets---financial-statements/statement-of-financial-information/sofi-report-2022-23.pdf?sfvrsn=c9b36c88_1",
+          "pdfSha256": "1f8b6b337e23ffb0a4d3ae195c7715147a3d4f768a485639767a629049c89680",
+          "dataFile": "research/salaries/follow-through-cnc/2022-23.json.gzip",
+          "dataSha256": "c1bac51cef6fbcd3c09bed60eac3039d9ce4e68f2f74bf8b7d6a62c5fbd59422",
+          "sourceRowIndex0": 145,
+          "physicalPdfPage": 5,
+          "row": [
+            "college-of-new-caledonia",
+            "Maides, Peter",
+            null,
+            99719,
+            null,
+            5
+          ],
+          "rowSha256": "7c8657593e6b55d196a651ed5f892751262727693dc8e6571634e3453605e09e",
+          "supportsPublishedSpelling": true,
+          "sameLabelCompiledRows": [],
+          "sameNameAndMoneyOccurrenceCount": 0,
+          "limitation": "Earlier spelling support is not an independent match for the later alias observation and does not verify a lifetime identity."
+        }
+      ],
+      "verificationLimit": "Specific compiled-source spelling connection only; raw names, amounts, expense states, titles, periods and observations remain intact. No lifetime identity or annual-base-salary claim."
+    },
+    {
+      "id": 1974,
+      "leadId": "cnc-source-copy-rourke-2023-24",
+      "candidateId": 1974,
+      "memberOfOriginal3173": true,
+      "originalCandidateNames": [
+        "Rour1<e, David",
+        "Rourke, David"
+      ],
+      "originalOutcome": "unconfirmed-keep-separate",
+      "requestedOCRLead": false,
+      "employer": "college-of-new-caledonia",
+      "decision": "hold",
+      "method": null,
+      "preferredName": "Rourke, David",
+      "compiledName": "Rour1<e, David",
+      "names": [
+        "Rour1<e, David",
+        "Rourke, David"
+      ],
+      "compiledPersonKey": "roure|david",
+      "preferredPersonKey": "rourke|david",
+      "rawOCRVariant": null,
+      "rawOCRVariantOccursInCompiledSnapshot": null,
+      "note": "The original prints Rourke, David, but its 113,947 remuneration occurs 45 times in each complete cohort. Its expense cell is a dash; compiled 0 cannot be treated as a matching disclosed amount. Earlier correct-name observations do not supply a unique witness for the sole 2023/24 Rour1<e alias.",
+      "source": {
+        "id": "cnc-sofi-2023-24-employees",
+        "url": "https://cnc.bc.ca/docs/public/governance/budgets---financial-statements/statement-of-financial-information/sofi-report-2023-24.pdf?sfvrsn=5c81c9b5_1",
+        "pdfSha256": "cb28eade49eb6b62ac1395a328735d7a12a600fe1bac78bd08d1bfcb107c4cd3",
+        "year": "2023/24",
+        "periodStart": "2023-04-01",
+        "periodEnd": "2024-03-31",
+        "dataFile": "research/salaries/follow-through-cnc/2023-24.json.gzip",
+        "dataSha256": "6d805a9e5f7715e89837aa48c0733515938dad75ca03a9f6182b2b0f63751e1d",
+        "normalizedSha256": "ed6a53e5e2b7481977c3c2b2b0b2c544e8a9701b9e68b0b1033f0cc3dd4ce513",
+        "sourceRowIndex0": 241,
+        "sourceRowOrdinal1": 242,
+        "physicalPdfPage": 6,
+        "row": [
+          "college-of-new-caledonia",
+          "Rourke, David",
+          null,
+          113947,
+          null,
+          6
+        ],
+        "normalizedRowSha256": "76033c4d7f74d9d9a864e5e91caf551f1f6adb6420d2ba0a9beca9d204b8d17f",
+        "stableRecordSha256": "2fd66316cf0cfaff1ae96cdfbcd42ef21e33f71eef3131690953de8ea92e04b0",
+        "livePublishedObservation": {
+          "shard": "ro",
+          "shardRowIndex0": 18842,
+          "row": [
+            "Rourke, David",
+            null,
+            113947,
+            null,
+            76,
+            46,
+            "cnc-sofi-2023-24-employees",
+            6
+          ],
+          "stableRecordSha256": "2fd66316cf0cfaff1ae96cdfbcd42ef21e33f71eef3131690953de8ea92e04b0"
+        }
+      },
+      "compiledObservation": {
+        "sourceId": "pssdb-2026-10-22",
+        "sourceKind": "compiled",
+        "periodType": "unverified",
+        "yearLabel": "2023/24",
+        "snapshotFile": "research/salaries/compiled-baseline.json.gzip",
+        "snapshotEmployerRowIndex0": 610,
+        "snapshotYearCohortRowIndex0": 140,
+        "rawSnapshotRow": [
+          "Rour1<e, David",
+          null,
+          113947,
+          0,
+          2
+        ],
+        "stableRecordSha256": "20e48e029fe9d4467d584425d379a44f669bb0415398349485dfe137a4a60855",
+        "livePublishedObservation": {
+          "shard": "ro",
+          "shardRowIndex0": 18834,
+          "row": [
+            "Rour1<e, David",
+            null,
+            113947,
+            0,
+            76,
+            46,
+            "pssdb-2026-10-22",
+            null
+          ],
+          "stableRecordSha256": "20e48e029fe9d4467d584425d379a44f669bb0415398349485dfe137a4a60855"
+        }
+      },
+      "periodReview": {
+        "officialActualYear": "2023/24",
+        "compiledLabel": "2023/24",
+        "labelStringMismatch": false,
+        "compiledActualPeriodVerified": false,
+        "compilationLabelRelabelled": false,
+        "note": "The strings agree exactly for this case. The compilation retains its original unverified edition label; this individual copy witness does not certify or relabel every compiled observation."
+      },
+      "financialWitness": {
+        "currency": "CAD",
+        "officialCohortRows": 312,
+        "compiledCohortRows": 312,
+        "officialRemuneration": 113947,
+        "officialExpenses": null,
+        "officialExpenseState": "dash-unknown",
+        "compiledRemuneration": 113947,
+        "compiledExpenses": 0,
+        "expenseEqualityEstablished": false,
+        "expenseConflictEstablished": false,
+        "nullCoercedToZero": false,
+        "officialOccurrencesOfOfficialPayExpensePair": 26,
+        "compiledOccurrencesOfOfficialPayExpensePair": 0,
+        "officialOccurrencesOfActualCompiledPayExpensePair": 0,
+        "officialPayOnlyOccurrences": 45,
+        "compiledPayOnlyOccurrences": 45,
+        "proofUsesExpenses": false,
+        "proofUsesOnlyUniqueRemuneration": false,
+        "samePayOfficialNames": [
+          "Albisser, Tracie",
+          "Baker, Michael",
+          "Barber, Brian",
+          "Brbot, Rosemary",
+          "Card, Jessica",
+          "Clare, Sheldon",
+          "Cornelis, Suzanne",
+          "Craig, Zelda",
+          "Crosina, Kara",
+          "Frizzell, Garth",
+          "Fulton, Carla",
+          "Goudreau, Christien",
+          "Hes, Debbra",
+          "Kaulfuss, Marilyn",
+          "Lasnier, Alexandre",
+          "Latala, Michal",
+          "Liang, Wei",
+          "Little, Jennifer",
+          "Littler, Bradly",
+          "Madjitey, Jacob",
+          "Maides, Peter",
+          "Mansour, Abeer",
+          "Maruk, Lorne",
+          "Matthews, Layth",
+          "Moi, Meagan",
+          "Nahrgang, Wendy",
+          "Pacheco, John",
+          "Reich, Richard",
+          "Rose, Gregory",
+          "Rourke, David",
+          "Schreiner, Dennis",
+          "Selkirk, Mark",
+          "Smit, Jesse",
+          "St Pierre, Daniel",
+          "Stewart, Benjamin",
+          "Taylor, Andrew",
+          "Tejero, Marta",
+          "Thring, Ann",
+          "Valiente, Liza",
+          "Vaughan, Jody",
+          "Wendling, Mark",
+          "Wessels, Kelly",
+          "Winkel, Alice",
+          "Worfolk, Melinda",
+          "Yee, Brenda"
+        ],
+        "samePayCompiledNames": [
+          "Albisser, Tracie",
+          "Baker, Michael",
+          "Barber, Brian",
+          "Brbot, Rosemary",
+          "Card, Jessica",
+          "Clare, Sheldon",
+          "Comelis, Suzanne",
+          "Craig, Zelda",
+          "Crosina, Kara",
+          "Frizzell, Garth",
+          "Fulton, Carla",
+          "Goudreau, Christian",
+          "Hes, Debbra",
+          "Kaulfuss, Marilyn",
+          "Lasnier, Alexandre",
+          "Latala, Michal",
+          "Liang, Wei",
+          "Little, Jennifer",
+          "Littler, Bradly",
+          "Madjitey, Jacob",
+          "Maldes, Peter",
+          "Mansour, Abeer",
+          "Maruk, Lome",
+          "Matthews, Layth",
+          "Mol, Meagan",
+          "Nahrgang, Wendy",
+          "Pacheco, John",
+          "Reich, Richard",
+          "Rose, Gregory",
+          "Rour1<e, David",
+          "Schreiner, Dennis",
+          "Selkir1<, Marl<",
+          "Smit, Jesse",
+          "St Pierre, Daniel",
+          "Stewart, Benjamin",
+          "Taylor, Andrew",
+          "Tejero, Marta",
+          "Thring, Ann",
+          "Valiente, Liza",
+          "Vaughan, Jody",
+          "Wendling, Mark",
+          "Wessels, Kelly",
+          "Winkel, Alice",
+          "Worfolk, Melinda",
+          "Yee, Brenda"
+        ]
+      },
+      "visualReview": {
+        "reviewedFullPhysicalPage": true,
+        "reviewedOriginalCrop": true,
+        "reviewedNameAndBothMonetaryCells": true,
+        "crop": {
+          "file": "research/salaries/source-follow-through-2026-11-02/cnc-name-evidence/2023-24-candidate-1974.png",
+          "sha256": "580d813ae90de1def57b3c8cd7efca1633a4a83957aced362bda33f30b125e86",
+          "physicalPdfPage": 6,
+          "persistedInRepository": true,
+          "copyRequiredBeforePinnedAdoption": false,
+          "render": "Original PDF at400dpi; complete row, without OCR overlay.",
+          "pdfCropPoints": [
+            94.48,
+            438.88,
+            491.6,
+            451.28
+          ],
+          "bboxPoints": [
+            94.48,
+            438.88,
+            491.6,
+            451.28
+          ],
+          "pdfSha256": "cb28eade49eb6b62ac1395a328735d7a12a600fe1bac78bd08d1bfcb107c4cd3",
+          "sourceDataSha256": "6d805a9e5f7715e89837aa48c0733515938dad75ca03a9f6182b2b0f63751e1d",
+          "renderDpi": 400
+        },
+        "fullPageCacheFile": "/workspace/salary-source-follow-through/cache-cnc/2023-24-p06.png",
+        "fullPageRenderSha256": "43baddcb7cdcd5ddfc0ed82bc56c7a83d41444d8b872904c3b49199b45a855a7",
+        "originalPdfSha256": "cb28eade49eb6b62ac1395a328735d7a12a600fe1bac78bd08d1bfcb107c4cd3",
+        "fullPageReceipt": "research/salaries/follow-through-cnc/visual-review.json",
+        "fullPageFile": "research/salaries/source-follow-through-2026-11-02/cnc-name-evidence/2023-24-p06.png",
+        "fullPageEvidencePersisted": true
+      },
+      "allCompiledAliasOccurrences": [
+        {
+          "snapshotEmployerRowIndex0": 610,
+          "yearLabel": "2023/24",
+          "row": [
+            "Rour1<e, David",
+            null,
+            113947,
+            0,
+            2
+          ],
+          "stableRecordSha256": "20e48e029fe9d4467d584425d379a44f669bb0415398349485dfe137a4a60855"
+        }
+      ],
+      "earlierOfficialSpellingSupport": [
+        {
+          "sourceId": "cnc-sofi-2018-19-employees",
+          "year": "2018/19",
+          "periodStart": "2018-04-01",
+          "periodEnd": "2019-03-31",
+          "sourceUrl": "https://cnc.bc.ca/docs/public/governance/budgets---financial-statements/statement-of-financial-information/sofi-report-2018-19.pdf?sfvrsn=22935f48_1",
+          "pdfSha256": "7fbd2e773a6978fc5797e0496e16ffabc10bcb1c75ad5aabb0ff04c87e1771a4",
+          "dataFile": "research/salaries/follow-through-cnc/2018-19.json.gzip",
+          "dataSha256": "c5028ddf30f92ee4a24eb8eafe746cc7f7f5f29eb0220116952cb5e1841d4f20",
+          "sourceRowIndex0": 155,
+          "physicalPdfPage": 6,
+          "row": [
+            "college-of-new-caledonia",
+            "Rourke, David",
+            null,
+            93726,
+            null,
+            6
+          ],
+          "rowSha256": "6312efb1dddede3b3a6f20e2fb44cdaa7b0d476fcee080d7867962437ca7492d",
+          "supportsPublishedSpelling": true,
+          "sameLabelCompiledRows": [],
+          "sameNameAndMoneyOccurrenceCount": 0,
+          "limitation": "Earlier spelling support is not an independent match for the later alias observation and does not verify a lifetime identity."
+        },
+        {
+          "sourceId": "cnc-sofi-2019-20-employees",
+          "year": "2019/20",
+          "periodStart": "2019-04-01",
+          "periodEnd": "2020-03-31",
+          "sourceUrl": "https://cnc.bc.ca/docs/public/governance/budgets---financial-statements/statement-of-financial-information/sofi-report-2019-20.pdf?sfvrsn=742e8937_1",
+          "pdfSha256": "6f8c6ad394df7df9dd58c7370a28fb367cdf5a12ad4a8e907606f1c1e6166129",
+          "dataFile": "research/salaries/follow-through-cnc/2019-20.json.gzip",
+          "dataSha256": "17dcbdf9fd5618f43d4a1328833c006e208d54a255e3d590f50dc42f6469c7cf",
+          "sourceRowIndex0": 183,
+          "physicalPdfPage": 5,
+          "row": [
+            "college-of-new-caledonia",
+            "Rourke, David",
+            null,
+            94749,
+            null,
+            5
+          ],
+          "rowSha256": "feb454d5953143ec4c985b8479066cc5c0ae760022adf2f6003505489670da95",
+          "supportsPublishedSpelling": true,
+          "sameLabelCompiledRows": [],
+          "sameNameAndMoneyOccurrenceCount": 0,
+          "limitation": "Earlier spelling support is not an independent match for the later alias observation and does not verify a lifetime identity."
+        },
+        {
+          "sourceId": "cnc-sofi-2020-21-employees",
+          "year": "2020/21",
+          "periodStart": "2020-04-01",
+          "periodEnd": "2021-03-31",
+          "sourceUrl": "https://cnc.bc.ca/docs/public/governance/budgets---financial-statements/statement-of-financial-information/sofi-report-2020-21.pdf?sfvrsn=4d8314a_1",
+          "pdfSha256": "2140a55a0289cf9f2d96f7c541545ce3932dc8612e05536be597af33fa94c1a5",
+          "dataFile": "research/salaries/follow-through-cnc/2020-21.json.gzip",
+          "dataSha256": "d0598e2cf1613144ead367527c88de460b5276763cc2996f32578cd23cdb179f",
+          "sourceRowIndex0": 196,
+          "physicalPdfPage": 6,
+          "row": [
+            "college-of-new-caledonia",
+            "Rourke, David",
+            null,
+            99738,
+            null,
+            6
+          ],
+          "rowSha256": "ccbedad75c2a86246c1e6c9b58bb3f978e2e97f3d8d37d7525cf179d5d794346",
+          "supportsPublishedSpelling": true,
+          "sameLabelCompiledRows": [
+            [
+              "Rourke, David",
+              null,
+              99738,
+              null,
+              1
+            ]
+          ],
+          "sameNameAndMoneyOccurrenceCount": 1,
+          "limitation": "Earlier spelling support is not an independent match for the later alias observation and does not verify a lifetime identity."
+        },
+        {
+          "sourceId": "cnc-sofi-2021-22-employees",
+          "year": "2021/22",
+          "periodStart": "2021-04-01",
+          "periodEnd": "2022-03-31",
+          "sourceUrl": "https://cnc.bc.ca/docs/public/governance/budgets---financial-statements/statement-of-financial-information/sofi-report-2021-22.pdf?sfvrsn=43c3c8b0_1",
+          "pdfSha256": "4b1ff78a4ea9796a09e85da202071fd0dd1242361142a42bd29a08e801441554",
+          "dataFile": "research/salaries/follow-through-cnc/2021-22.json.gzip",
+          "dataSha256": "9e964b7ac48378bebccf677a03d5c5378b5c6d0f991a8e7ea8151675693e1aec",
+          "sourceRowIndex0": 202,
+          "physicalPdfPage": 6,
+          "row": [
+            "college-of-new-caledonia",
+            "Rourke, David",
+            null,
+            99840,
+            null,
+            6
+          ],
+          "rowSha256": "3be8b31c4f576c4ec9ebcea962659dc449e7f9f703a68644ea83b13477e33d4c",
+          "supportsPublishedSpelling": true,
+          "sameLabelCompiledRows": [],
+          "sameNameAndMoneyOccurrenceCount": 0,
+          "limitation": "Earlier spelling support is not an independent match for the later alias observation and does not verify a lifetime identity."
+        },
+        {
+          "sourceId": "cnc-sofi-2022-23-employees",
+          "year": "2022/23",
+          "periodStart": "2022-04-01",
+          "periodEnd": "2023-03-31",
+          "sourceUrl": "https://cnc.bc.ca/docs/public/governance/budgets---financial-statements/statement-of-financial-information/sofi-report-2022-23.pdf?sfvrsn=c9b36c88_1",
+          "pdfSha256": "1f8b6b337e23ffb0a4d3ae195c7715147a3d4f768a485639767a629049c89680",
+          "dataFile": "research/salaries/follow-through-cnc/2022-23.json.gzip",
+          "dataSha256": "c1bac51cef6fbcd3c09bed60eac3039d9ce4e68f2f74bf8b7d6a62c5fbd59422",
+          "sourceRowIndex0": 210,
+          "physicalPdfPage": 6,
+          "row": [
+            "college-of-new-caledonia",
+            "Rourke, David",
+            null,
+            99719,
+            null,
+            6
+          ],
+          "rowSha256": "4754386a4a6dcc740e98c1be5e40425b0f3406b0f8b2297c6071602676cc654d",
+          "supportsPublishedSpelling": true,
+          "sameLabelCompiledRows": [],
+          "sameNameAndMoneyOccurrenceCount": 0,
+          "limitation": "Earlier spelling support is not an independent match for the later alias observation and does not verify a lifetime identity."
+        }
+      ],
+      "verificationLimit": "Specific compiled-source spelling connection only; raw names, amounts, expense states, titles, periods and observations remain intact. No lifetime identity or annual-base-salary claim."
+    },
+    {
+      "id": 2022,
+      "leadId": "cnc-source-copy-stuart-clarke-2023-24",
+      "candidateId": 2022,
+      "memberOfOriginal3173": true,
+      "originalCandidateNames": [
+        "StuartClar1<e, Pat",
+        "Stuart-Clarke, Pat"
+      ],
+      "originalOutcome": "unconfirmed-keep-separate",
+      "requestedOCRLead": false,
+      "employer": "college-of-new-caledonia",
+      "decision": "accept-source-copy-spelling",
+      "method": "unique-remuneration-with-unknown-source-expenses",
+      "preferredName": "Stuart-Clarke, Pat",
+      "compiledName": "StuartClar1<e, Pat",
+      "names": [
+        "StuartClar1<e, Pat",
+        "Stuart-Clarke, Pat"
+      ],
+      "compiledPersonKey": "stuartclare|pat",
+      "preferredPersonKey": "stuartclarke|pat",
+      "rawOCRVariant": null,
+      "rawOCRVariantOccursInCompiledSnapshot": null,
+      "note": "The original clearly prints Stuart-Clarke, Pat beside remuneration 113,369, which occurs once in BOTH complete cohorts. The source expense is a dash and remains unknown; compiled 0 neither proves expense equality nor a financial conflict. This specific copy-cohort connection relies only on unique remuneration, visible spelling and the strong OCR variant. Earlier native 2020/21 independently prints Stuart-Clarke, Pat.",
+      "source": {
+        "id": "cnc-sofi-2023-24-employees",
+        "url": "https://cnc.bc.ca/docs/public/governance/budgets---financial-statements/statement-of-financial-information/sofi-report-2023-24.pdf?sfvrsn=5c81c9b5_1",
+        "pdfSha256": "cb28eade49eb6b62ac1395a328735d7a12a600fe1bac78bd08d1bfcb107c4cd3",
+        "year": "2023/24",
+        "periodStart": "2023-04-01",
+        "periodEnd": "2024-03-31",
+        "dataFile": "research/salaries/follow-through-cnc/2023-24.json.gzip",
+        "dataSha256": "6d805a9e5f7715e89837aa48c0733515938dad75ca03a9f6182b2b0f63751e1d",
+        "normalizedSha256": "ed6a53e5e2b7481977c3c2b2b0b2c544e8a9701b9e68b0b1033f0cc3dd4ce513",
+        "sourceRowIndex0": 270,
+        "sourceRowOrdinal1": 271,
+        "physicalPdfPage": 6,
+        "row": [
+          "college-of-new-caledonia",
+          "Stuart-Clarke, Pat",
+          null,
+          113369,
+          null,
+          6
+        ],
+        "normalizedRowSha256": "987a5c987e5869d4453a4e32f419ecd0e2b7e56944dada1b981ef4f89f8abd3e",
+        "stableRecordSha256": "cfa3f64d4a050a6279d7feb58c0e37780365c55ef4644841573f4d835b72e379",
+        "livePublishedObservation": {
+          "shard": "st",
+          "shardRowIndex0": 21210,
+          "row": [
+            "Stuart-Clarke, Pat",
+            null,
+            113369,
+            null,
+            76,
+            46,
+            "cnc-sofi-2023-24-employees",
+            6
+          ],
+          "stableRecordSha256": "cfa3f64d4a050a6279d7feb58c0e37780365c55ef4644841573f4d835b72e379"
+        }
+      },
+      "compiledObservation": {
+        "sourceId": "pssdb-2026-10-22",
+        "sourceKind": "compiled",
+        "periodType": "unverified",
+        "yearLabel": "2023/24",
+        "snapshotFile": "research/salaries/compiled-baseline.json.gzip",
+        "snapshotEmployerRowIndex0": 641,
+        "snapshotYearCohortRowIndex0": 171,
+        "rawSnapshotRow": [
+          "StuartClar1<e, Pat",
+          null,
+          113369,
+          0,
+          2
+        ],
+        "stableRecordSha256": "cb0cee9bf2eeab9a1f619adfca580b2ace2a8ab89ed4e7e081e5e5d53a449b09",
+        "livePublishedObservation": {
+          "shard": "st",
+          "shardRowIndex0": 21647,
+          "row": [
+            "StuartClar1<e, Pat",
+            null,
+            113369,
+            0,
+            76,
+            46,
+            "pssdb-2026-10-22",
+            null
+          ],
+          "stableRecordSha256": "cb0cee9bf2eeab9a1f619adfca580b2ace2a8ab89ed4e7e081e5e5d53a449b09"
+        }
+      },
+      "periodReview": {
+        "officialActualYear": "2023/24",
+        "compiledLabel": "2023/24",
+        "labelStringMismatch": false,
+        "compiledActualPeriodVerified": false,
+        "compilationLabelRelabelled": false,
+        "note": "The strings agree exactly for this case. The compilation retains its original unverified edition label; this individual copy witness does not certify or relabel every compiled observation."
+      },
+      "financialWitness": {
+        "currency": "CAD",
+        "officialCohortRows": 312,
+        "compiledCohortRows": 312,
+        "officialRemuneration": 113369,
+        "officialExpenses": null,
+        "officialExpenseState": "dash-unknown",
+        "compiledRemuneration": 113369,
+        "compiledExpenses": 0,
+        "expenseEqualityEstablished": false,
+        "expenseConflictEstablished": false,
+        "nullCoercedToZero": false,
+        "officialOccurrencesOfOfficialPayExpensePair": 1,
+        "compiledOccurrencesOfOfficialPayExpensePair": 0,
+        "officialOccurrencesOfActualCompiledPayExpensePair": 0,
+        "officialPayOnlyOccurrences": 1,
+        "compiledPayOnlyOccurrences": 1,
+        "proofUsesExpenses": false,
+        "proofUsesOnlyUniqueRemuneration": true,
+        "samePayOfficialNames": [
+          "Stuart-Clarke, Pat"
+        ],
+        "samePayCompiledNames": [
+          "StuartClar1<e, Pat"
+        ]
+      },
+      "visualReview": {
+        "reviewedFullPhysicalPage": true,
+        "reviewedOriginalCrop": true,
+        "reviewedNameAndBothMonetaryCells": true,
+        "crop": {
+          "file": "research/salaries/source-follow-through-2026-11-02/cnc-name-evidence/2023-24-candidate-2022.png",
+          "sha256": "98d157ed989f20c7de7017d820823615e965bc77111a69d4c7d19c9411082547",
+          "physicalPdfPage": 6,
+          "persistedInRepository": true,
+          "copyRequiredBeforePinnedAdoption": false,
+          "render": "Original PDF at400dpi; complete row, without OCR overlay.",
+          "pdfCropPoints": [
+            93.76,
+            711.52,
+            490.88,
+            724.16
+          ],
+          "bboxPoints": [
+            93.76,
+            711.52,
+            490.88,
+            724.16
+          ],
+          "pdfSha256": "cb28eade49eb6b62ac1395a328735d7a12a600fe1bac78bd08d1bfcb107c4cd3",
+          "sourceDataSha256": "6d805a9e5f7715e89837aa48c0733515938dad75ca03a9f6182b2b0f63751e1d",
+          "renderDpi": 400
+        },
+        "fullPageCacheFile": "/workspace/salary-source-follow-through/cache-cnc/2023-24-p06.png",
+        "fullPageRenderSha256": "43baddcb7cdcd5ddfc0ed82bc56c7a83d41444d8b872904c3b49199b45a855a7",
+        "originalPdfSha256": "cb28eade49eb6b62ac1395a328735d7a12a600fe1bac78bd08d1bfcb107c4cd3",
+        "fullPageReceipt": "research/salaries/follow-through-cnc/visual-review.json",
+        "fullPageFile": "research/salaries/source-follow-through-2026-11-02/cnc-name-evidence/2023-24-p06.png",
+        "fullPageEvidencePersisted": true
+      },
+      "allCompiledAliasOccurrences": [
+        {
+          "snapshotEmployerRowIndex0": 641,
+          "yearLabel": "2023/24",
+          "row": [
+            "StuartClar1<e, Pat",
+            null,
+            113369,
+            0,
+            2
+          ],
+          "stableRecordSha256": "cb0cee9bf2eeab9a1f619adfca580b2ace2a8ab89ed4e7e081e5e5d53a449b09"
+        }
+      ],
+      "earlierOfficialSpellingSupport": [
+        {
+          "sourceId": "cnc-sofi-2018-19-employees",
+          "year": "2018/19",
+          "periodStart": "2018-04-01",
+          "periodEnd": "2019-03-31",
+          "sourceUrl": "https://cnc.bc.ca/docs/public/governance/budgets---financial-statements/statement-of-financial-information/sofi-report-2018-19.pdf?sfvrsn=22935f48_1",
+          "pdfSha256": "7fbd2e773a6978fc5797e0496e16ffabc10bcb1c75ad5aabb0ff04c87e1771a4",
+          "dataFile": "research/salaries/follow-through-cnc/2018-19.json.gzip",
+          "dataSha256": "c5028ddf30f92ee4a24eb8eafe746cc7f7f5f29eb0220116952cb5e1841d4f20",
+          "sourceRowIndex0": 171,
+          "physicalPdfPage": 6,
+          "row": [
+            "college-of-new-caledonia",
+            "Stuart-Clarke, Pat",
+            null,
+            78230,
+            null,
+            6
+          ],
+          "rowSha256": "7bf79f5b09ba91b1dd55659d4cd7bc20da74aa89b4d61b74b8d906130cf525fc",
+          "supportsPublishedSpelling": true,
+          "sameLabelCompiledRows": [],
+          "sameNameAndMoneyOccurrenceCount": 0,
+          "limitation": "Earlier spelling support is not an independent match for the later alias observation and does not verify a lifetime identity."
+        },
+        {
+          "sourceId": "cnc-sofi-2019-20-employees",
+          "year": "2019/20",
+          "periodStart": "2019-04-01",
+          "periodEnd": "2020-03-31",
+          "sourceUrl": "https://cnc.bc.ca/docs/public/governance/budgets---financial-statements/statement-of-financial-information/sofi-report-2019-20.pdf?sfvrsn=742e8937_1",
+          "pdfSha256": "6f8c6ad394df7df9dd58c7370a28fb367cdf5a12ad4a8e907606f1c1e6166129",
+          "dataFile": "research/salaries/follow-through-cnc/2019-20.json.gzip",
+          "dataSha256": "17dcbdf9fd5618f43d4a1328833c006e208d54a255e3d590f50dc42f6469c7cf",
+          "sourceRowIndex0": 206,
+          "physicalPdfPage": 6,
+          "row": [
+            "college-of-new-caledonia",
+            "Stuart-Clarke, Pat",
+            null,
+            84547,
+            null,
+            6
+          ],
+          "rowSha256": "2fb535050645f0f756564030d4ee6ce3d7929777e83801317c9456c199db0525",
+          "supportsPublishedSpelling": true,
+          "sameLabelCompiledRows": [],
+          "sameNameAndMoneyOccurrenceCount": 0,
+          "limitation": "Earlier spelling support is not an independent match for the later alias observation and does not verify a lifetime identity."
+        },
+        {
+          "sourceId": "cnc-sofi-2020-21-employees",
+          "year": "2020/21",
+          "periodStart": "2020-04-01",
+          "periodEnd": "2021-03-31",
+          "sourceUrl": "https://cnc.bc.ca/docs/public/governance/budgets---financial-statements/statement-of-financial-information/sofi-report-2020-21.pdf?sfvrsn=4d8314a_1",
+          "pdfSha256": "2140a55a0289cf9f2d96f7c541545ce3932dc8612e05536be597af33fa94c1a5",
+          "dataFile": "research/salaries/follow-through-cnc/2020-21.json.gzip",
+          "dataSha256": "d0598e2cf1613144ead367527c88de460b5276763cc2996f32578cd23cdb179f",
+          "sourceRowIndex0": 221,
+          "physicalPdfPage": 6,
+          "row": [
+            "college-of-new-caledonia",
+            "Stuart-Clarke, Pat",
+            null,
+            92238,
+            null,
+            6
+          ],
+          "rowSha256": "453dbf6acb35a0db9ee7f2cbac7dd9b15ebbc86b53b76e952b0707659642a0fe",
+          "supportsPublishedSpelling": true,
+          "sameLabelCompiledRows": [
+            [
+              "Stuart-Clarke, Pat",
+              null,
+              92238,
+              null,
+              1
+            ]
+          ],
+          "sameNameAndMoneyOccurrenceCount": 1,
+          "limitation": "Earlier spelling support is not an independent match for the later alias observation and does not verify a lifetime identity."
+        },
+        {
+          "sourceId": "cnc-sofi-2021-22-employees",
+          "year": "2021/22",
+          "periodStart": "2021-04-01",
+          "periodEnd": "2022-03-31",
+          "sourceUrl": "https://cnc.bc.ca/docs/public/governance/budgets---financial-statements/statement-of-financial-information/sofi-report-2021-22.pdf?sfvrsn=43c3c8b0_1",
+          "pdfSha256": "4b1ff78a4ea9796a09e85da202071fd0dd1242361142a42bd29a08e801441554",
+          "dataFile": "research/salaries/follow-through-cnc/2021-22.json.gzip",
+          "dataSha256": "9e964b7ac48378bebccf677a03d5c5378b5c6d0f991a8e7ea8151675693e1aec",
+          "sourceRowIndex0": 230,
+          "physicalPdfPage": 6,
+          "row": [
+            "college-of-new-caledonia",
+            "Stuart-Clarke, Pat",
+            null,
+            98718,
+            null,
+            6
+          ],
+          "rowSha256": "9931ae1de7a472f0a907f7bca8effd1ac35de4c0980ed98db8e8ef94fab7040a",
+          "supportsPublishedSpelling": true,
+          "sameLabelCompiledRows": [],
+          "sameNameAndMoneyOccurrenceCount": 0,
+          "limitation": "Earlier spelling support is not an independent match for the later alias observation and does not verify a lifetime identity."
+        },
+        {
+          "sourceId": "cnc-sofi-2022-23-employees",
+          "year": "2022/23",
+          "periodStart": "2022-04-01",
+          "periodEnd": "2023-03-31",
+          "sourceUrl": "https://cnc.bc.ca/docs/public/governance/budgets---financial-statements/statement-of-financial-information/sofi-report-2022-23.pdf?sfvrsn=c9b36c88_1",
+          "pdfSha256": "1f8b6b337e23ffb0a4d3ae195c7715147a3d4f768a485639767a629049c89680",
+          "dataFile": "research/salaries/follow-through-cnc/2022-23.json.gzip",
+          "dataSha256": "c1bac51cef6fbcd3c09bed60eac3039d9ce4e68f2f74bf8b7d6a62c5fbd59422",
+          "sourceRowIndex0": 237,
+          "physicalPdfPage": 6,
+          "row": [
+            "college-of-new-caledonia",
+            "Stuart-Clarke, Pat",
+            null,
+            99835,
+            null,
+            6
+          ],
+          "rowSha256": "fddcc83a20222af92d176364b5888f74af6a7927d5e407aa6499bc1c00c4b878",
+          "supportsPublishedSpelling": true,
+          "sameLabelCompiledRows": [],
+          "sameNameAndMoneyOccurrenceCount": 0,
+          "limitation": "Earlier spelling support is not an independent match for the later alias observation and does not verify a lifetime identity."
+        }
+      ],
+      "verificationLimit": "Specific compiled-source spelling connection only; raw names, amounts, expense states, titles, periods and observations remain intact. No lifetime identity or annual-base-salary claim."
+    },
+    {
+      "id": 3601,
+      "leadId": "cnc-source-copy-idehen-2023-24",
+      "candidateId": 3601,
+      "memberOfOriginal3173": true,
+      "originalCandidateNames": [
+        "Idehen, Nekpen",
+        "ldehen, Nekpen"
+      ],
+      "originalOutcome": "unconfirmed-keep-separate",
+      "requestedOCRLead": false,
+      "employer": "college-of-new-caledonia",
+      "decision": "accept-source-copy-spelling",
+      "method": "unique-remuneration-and-numeric-expenses",
+      "preferredName": "Idehen, Nekpen",
+      "compiledName": "ldehen, Nekpen",
+      "names": [
+        "ldehen, Nekpen",
+        "Idehen, Nekpen"
+      ],
+      "compiledPersonKey": "ldehen|nekpen",
+      "preferredPersonKey": "idehen|nekpen",
+      "rawOCRVariant": null,
+      "rawOCRVariantOccursInCompiledSnapshot": null,
+      "note": "The original clearly prints capital I in Idehen, Nekpen beside remuneration 90,384 and expenses 4,021. The exact numeric pair is unique in both complete cohorts; the compiled initial lowercase l is the specific copy spelling being connected.",
+      "source": {
+        "id": "cnc-sofi-2023-24-employees",
+        "url": "https://cnc.bc.ca/docs/public/governance/budgets---financial-statements/statement-of-financial-information/sofi-report-2023-24.pdf?sfvrsn=5c81c9b5_1",
+        "pdfSha256": "cb28eade49eb6b62ac1395a328735d7a12a600fe1bac78bd08d1bfcb107c4cd3",
+        "year": "2023/24",
+        "periodStart": "2023-04-01",
+        "periodEnd": "2024-03-31",
+        "dataFile": "research/salaries/follow-through-cnc/2023-24.json.gzip",
+        "dataSha256": "6d805a9e5f7715e89837aa48c0733515938dad75ca03a9f6182b2b0f63751e1d",
+        "normalizedSha256": "ed6a53e5e2b7481977c3c2b2b0b2c544e8a9701b9e68b0b1033f0cc3dd4ce513",
+        "sourceRowIndex0": 127,
+        "sourceRowOrdinal1": 128,
+        "physicalPdfPage": 5,
+        "row": [
+          "college-of-new-caledonia",
+          "Idehen, Nekpen",
+          null,
+          90384,
+          4021,
+          5
+        ],
+        "normalizedRowSha256": "1f359b0a512fbf36f2937e42bf4a32e31faeafa5037f210a1f6cdf9cfe2ec0ab",
+        "stableRecordSha256": "8bb45f19ed06e5d47a77dcbc649e3c366204bb7225195950669fc11a877a2cb5",
+        "livePublishedObservation": {
+          "shard": "id",
+          "shardRowIndex0": 25,
+          "row": [
+            "Idehen, Nekpen",
+            null,
+            90384,
+            4021,
+            76,
+            46,
+            "cnc-sofi-2023-24-employees",
+            5
+          ],
+          "stableRecordSha256": "8bb45f19ed06e5d47a77dcbc649e3c366204bb7225195950669fc11a877a2cb5"
+        }
+      },
+      "compiledObservation": {
+        "sourceId": "pssdb-2026-10-22",
+        "sourceKind": "compiled",
+        "periodType": "unverified",
+        "yearLabel": "2023/24",
+        "snapshotFile": "research/salaries/compiled-baseline.json.gzip",
+        "snapshotEmployerRowIndex0": 731,
+        "snapshotYearCohortRowIndex0": 261,
+        "rawSnapshotRow": [
+          "ldehen, Nekpen",
+          null,
+          90384,
+          4021,
+          2
+        ],
+        "stableRecordSha256": "bd0b859b4d7b9221061ffb6db347e9648987c367f006aab6c8cbdedb60b66139",
+        "livePublishedObservation": {
+          "shard": "ld",
+          "shardRowIndex0": 0,
+          "row": [
+            "ldehen, Nekpen",
+            null,
+            90384,
+            4021,
+            76,
+            46,
+            "pssdb-2026-10-22",
+            null
+          ],
+          "stableRecordSha256": "bd0b859b4d7b9221061ffb6db347e9648987c367f006aab6c8cbdedb60b66139"
+        }
+      },
+      "periodReview": {
+        "officialActualYear": "2023/24",
+        "compiledLabel": "2023/24",
+        "labelStringMismatch": false,
+        "compiledActualPeriodVerified": false,
+        "compilationLabelRelabelled": false,
+        "note": "The strings agree exactly for this case. The compilation retains its original unverified edition label; this individual copy witness does not certify or relabel every compiled observation."
+      },
+      "financialWitness": {
+        "currency": "CAD",
+        "officialCohortRows": 312,
+        "compiledCohortRows": 312,
+        "officialRemuneration": 90384,
+        "officialExpenses": 4021,
+        "officialExpenseState": "numeric",
+        "compiledRemuneration": 90384,
+        "compiledExpenses": 4021,
+        "expenseEqualityEstablished": true,
+        "expenseConflictEstablished": false,
+        "nullCoercedToZero": false,
+        "officialOccurrencesOfOfficialPayExpensePair": 1,
+        "compiledOccurrencesOfOfficialPayExpensePair": 1,
+        "officialOccurrencesOfActualCompiledPayExpensePair": 1,
+        "officialPayOnlyOccurrences": 1,
+        "compiledPayOnlyOccurrences": 1,
+        "proofUsesExpenses": true,
+        "proofUsesOnlyUniqueRemuneration": false,
+        "samePayOfficialNames": [
+          "Idehen, Nekpen"
+        ],
+        "samePayCompiledNames": [
+          "ldehen, Nekpen"
+        ]
+      },
+      "visualReview": {
+        "reviewedFullPhysicalPage": true,
+        "reviewedOriginalCrop": true,
+        "reviewedNameAndBothMonetaryCells": true,
+        "crop": {
+          "file": "research/salaries/source-follow-through-2026-11-02/cnc-name-evidence/2023-24-candidate-3601.png",
+          "sha256": "173ef773015a46981053b893e2779a7e8b2ba30e331b653d8057806338d9e704",
+          "physicalPdfPage": 5,
+          "persistedInRepository": true,
+          "copyRequiredBeforePinnedAdoption": false,
+          "render": "Original PDF at400dpi; complete row, without OCR overlay.",
+          "pdfCropPoints": [
+            94.24,
+            78.4,
+            499.76,
+            89.6
+          ],
+          "bboxPoints": [
+            94.24,
+            78.4,
+            499.76,
+            89.6
+          ],
+          "pdfSha256": "cb28eade49eb6b62ac1395a328735d7a12a600fe1bac78bd08d1bfcb107c4cd3",
+          "sourceDataSha256": "6d805a9e5f7715e89837aa48c0733515938dad75ca03a9f6182b2b0f63751e1d",
+          "renderDpi": 400
+        },
+        "fullPageCacheFile": "/workspace/salary-source-follow-through/cache-cnc/2023-24-p05.png",
+        "fullPageRenderSha256": "80ae3a4935dcf77b049c948420ca59888f8f8c0ae6a50fca67e178adedb55841",
+        "originalPdfSha256": "cb28eade49eb6b62ac1395a328735d7a12a600fe1bac78bd08d1bfcb107c4cd3",
+        "fullPageReceipt": "research/salaries/follow-through-cnc/visual-review.json",
+        "fullPageFile": "research/salaries/source-follow-through-2026-11-02/cnc-name-evidence/2023-24-p05.png",
+        "fullPageEvidencePersisted": true
+      },
+      "allCompiledAliasOccurrences": [
+        {
+          "snapshotEmployerRowIndex0": 731,
+          "yearLabel": "2023/24",
+          "row": [
+            "ldehen, Nekpen",
+            null,
+            90384,
+            4021,
+            2
+          ],
+          "stableRecordSha256": "bd0b859b4d7b9221061ffb6db347e9648987c367f006aab6c8cbdedb60b66139"
+        }
+      ],
+      "earlierOfficialSpellingSupport": [
+        {
+          "sourceId": "cnc-sofi-2019-20-employees",
+          "year": "2019/20",
+          "periodStart": "2019-04-01",
+          "periodEnd": "2020-03-31",
+          "sourceUrl": "https://cnc.bc.ca/docs/public/governance/budgets---financial-statements/statement-of-financial-information/sofi-report-2019-20.pdf?sfvrsn=742e8937_1",
+          "pdfSha256": "6f8c6ad394df7df9dd58c7370a28fb367cdf5a12ad4a8e907606f1c1e6166129",
+          "dataFile": "research/salaries/follow-through-cnc/2019-20.json.gzip",
+          "dataSha256": "17dcbdf9fd5618f43d4a1328833c006e208d54a255e3d590f50dc42f6469c7cf",
+          "sourceRowIndex0": 90,
+          "physicalPdfPage": 3,
+          "row": [
+            "college-of-new-caledonia",
+            "Idehen, Nekpen",
+            null,
+            76034,
+            3159,
+            3
+          ],
+          "rowSha256": "6edeca37447b6e55678f7f236fc5aeebfcda0fe295bf25fefff63140e4bf2288",
+          "supportsPublishedSpelling": true,
+          "sameLabelCompiledRows": [],
+          "sameNameAndMoneyOccurrenceCount": 0,
+          "limitation": "Earlier spelling support is not an independent match for the later alias observation and does not verify a lifetime identity."
+        },
+        {
+          "sourceId": "cnc-sofi-2020-21-employees",
+          "year": "2020/21",
+          "periodStart": "2020-04-01",
+          "periodEnd": "2021-03-31",
+          "sourceUrl": "https://cnc.bc.ca/docs/public/governance/budgets---financial-statements/statement-of-financial-information/sofi-report-2020-21.pdf?sfvrsn=4d8314a_1",
+          "pdfSha256": "2140a55a0289cf9f2d96f7c541545ce3932dc8612e05536be597af33fa94c1a5",
+          "dataFile": "research/salaries/follow-through-cnc/2020-21.json.gzip",
+          "dataSha256": "d0598e2cf1613144ead367527c88de460b5276763cc2996f32578cd23cdb179f",
+          "sourceRowIndex0": 97,
+          "physicalPdfPage": 4,
+          "row": [
+            "college-of-new-caledonia",
+            "Idehen, Nekpen",
+            null,
+            79290,
+            888,
+            4
+          ],
+          "rowSha256": "bc351d5f1f6c47de9a01777eddc7f7bc9e14ae6284d5a97801ce4cf62c9afc50",
+          "supportsPublishedSpelling": true,
+          "sameLabelCompiledRows": [
+            [
+              "Idehen, Nekpen",
+              null,
+              79290,
+              888,
+              1
+            ]
+          ],
+          "sameNameAndMoneyOccurrenceCount": 1,
+          "limitation": "Earlier spelling support is not an independent match for the later alias observation and does not verify a lifetime identity."
+        },
+        {
+          "sourceId": "cnc-sofi-2021-22-employees",
+          "year": "2021/22",
+          "periodStart": "2021-04-01",
+          "periodEnd": "2022-03-31",
+          "sourceUrl": "https://cnc.bc.ca/docs/public/governance/budgets---financial-statements/statement-of-financial-information/sofi-report-2021-22.pdf?sfvrsn=43c3c8b0_1",
+          "pdfSha256": "4b1ff78a4ea9796a09e85da202071fd0dd1242361142a42bd29a08e801441554",
+          "dataFile": "research/salaries/follow-through-cnc/2021-22.json.gzip",
+          "dataSha256": "9e964b7ac48378bebccf677a03d5c5378b5c6d0f991a8e7ea8151675693e1aec",
+          "sourceRowIndex0": 104,
+          "physicalPdfPage": 4,
+          "row": [
+            "college-of-new-caledonia",
+            "Idehen, Nekpen",
+            null,
+            81990,
+            583,
+            4
+          ],
+          "rowSha256": "af1068f7b40a86081b60c4505c48972c6ebc294bcd4bb2bb3ec0d7dd901c7d7f",
+          "supportsPublishedSpelling": true,
+          "sameLabelCompiledRows": [],
+          "sameNameAndMoneyOccurrenceCount": 0,
+          "limitation": "Earlier spelling support is not an independent match for the later alias observation and does not verify a lifetime identity."
+        },
+        {
+          "sourceId": "cnc-sofi-2022-23-employees",
+          "year": "2022/23",
+          "periodStart": "2022-04-01",
+          "periodEnd": "2023-03-31",
+          "sourceUrl": "https://cnc.bc.ca/docs/public/governance/budgets---financial-statements/statement-of-financial-information/sofi-report-2022-23.pdf?sfvrsn=c9b36c88_1",
+          "pdfSha256": "1f8b6b337e23ffb0a4d3ae195c7715147a3d4f768a485639767a629049c89680",
+          "dataFile": "research/salaries/follow-through-cnc/2022-23.json.gzip",
+          "dataSha256": "c1bac51cef6fbcd3c09bed60eac3039d9ce4e68f2f74bf8b7d6a62c5fbd59422",
+          "sourceRowIndex0": 106,
+          "physicalPdfPage": 4,
+          "row": [
+            "college-of-new-caledonia",
+            "Idehen, Nekpen",
+            null,
+            84176,
+            1851,
+            4
+          ],
+          "rowSha256": "de88ea21cda0d05163d887993f6024ff8bf5a57f24390a9bc6369385eac58352",
+          "supportsPublishedSpelling": true,
+          "sameLabelCompiledRows": [],
+          "sameNameAndMoneyOccurrenceCount": 0,
+          "limitation": "Earlier spelling support is not an independent match for the later alias observation and does not verify a lifetime identity."
+        }
+      ],
+      "verificationLimit": "Specific compiled-source spelling connection only; raw names, amounts, expense states, titles, periods and observations remain intact. No lifetime identity or annual-base-salary claim."
+    }
+  ],
+  "earlierNativeRnSpellingCrops": [
+    {
+      "preferredName": "Cornelis, Suzanne",
+      "sourceId": "cnc-sofi-2020-21-employees",
+      "sourceUrl": "https://cnc.bc.ca/docs/public/governance/budgets---financial-statements/statement-of-financial-information/sofi-report-2020-21.pdf?sfvrsn=4d8314a_1",
+      "pdfSha256": "2140a55a0289cf9f2d96f7c541545ce3932dc8612e05536be597af33fa94c1a5",
+      "year": "2020/21",
+      "periodStart": "2020-04-01",
+      "periodEnd": "2021-03-31",
+      "physicalPdfPage": 4,
+      "dataFile": "research/salaries/follow-through-cnc/2020-21.json.gzip",
+      "dataSha256": "d0598e2cf1613144ead367527c88de460b5276763cc2996f32578cd23cdb179f",
+      "normalizedSha256": "55b11d057e6dc329ee3c0856d4673bf8d450b2ce67483fb75477ff92764c9c2e",
+      "sourceRowIndex0": 45,
+      "sourceRowOrdinal1": 46,
+      "row": [
+        "college-of-new-caledonia",
+        "Cornelis, Suzanne",
+        null,
+        99738,
+        6725,
+        4
+      ],
+      "normalizedRowSha256": "d674cf01066c02cdaf9380433e0b710d153907c123189c917adb29aa600ec880",
+      "crop": {
+        "file": "research/salaries/source-follow-through-2026-11-02/cnc-name-evidence/2020-21-native-cornelis.png",
+        "sha256": "05a9cc106a1bda9e7a1fa1ce2e50011ad59d91680ed1c78fc8497a43ff7328b3",
+        "pdfCropPoints": [
+          83.91999816894531,
+          149.7723846435547,
+          532.2088012695312,
+          163.12904357910156
+        ],
+        "bboxPoints": [
+          83.91999816894531,
+          149.7723846435547,
+          532.2088012695312,
+          163.12904357910156
+        ],
+        "physicalPdfPage": 4,
+        "pdfSha256": "2140a55a0289cf9f2d96f7c541545ce3932dc8612e05536be597af33fa94c1a5",
+        "sourceDataSha256": "d0598e2cf1613144ead367527c88de460b5276763cc2996f32578cd23cdb179f",
+        "renderDpi": 400,
+        "persistedInRepository": true,
+        "renderMethod": "PyMuPDF original native page render; no OCR overlay or text replacement."
+      },
+      "nativeWordEvidence": [
+        [
+          85.91999816894531,
+          151.7723846435547,
+          116.81800842285156,
+          161.12904357910156,
+          "Cornelis"
+        ],
+        [
+          159.24156188964844,
+          151.7723846435547,
+          192.33865356445312,
+          161.12904357910156,
+          "Suzanne"
+        ],
+        [
+          411.6164245605469,
+          151.7723846435547,
+          437.2586669921875,
+          161.12904357910156,
+          "99,738"
+        ],
+        [
+          509.2293701171875,
+          151.7723846435547,
+          530.2088012695312,
+          161.12904357910156,
+          "6,725"
+        ]
+      ],
+      "limitation": "The native original establishes the earlier published r+n spelling. The later2023/24 compressed scan glyphs and its unique numeric copy-cohort witness remain separate evidence; neither compiled year labels nor observations are rewritten."
+    },
+    {
+      "preferredName": "Thorne, Sandra",
+      "sourceId": "cnc-sofi-2020-21-employees",
+      "sourceUrl": "https://cnc.bc.ca/docs/public/governance/budgets---financial-statements/statement-of-financial-information/sofi-report-2020-21.pdf?sfvrsn=4d8314a_1",
+      "pdfSha256": "2140a55a0289cf9f2d96f7c541545ce3932dc8612e05536be597af33fa94c1a5",
+      "year": "2020/21",
+      "periodStart": "2020-04-01",
+      "periodEnd": "2021-03-31",
+      "physicalPdfPage": 7,
+      "dataFile": "research/salaries/follow-through-cnc/2020-21.json.gzip",
+      "dataSha256": "d0598e2cf1613144ead367527c88de460b5276763cc2996f32578cd23cdb179f",
+      "normalizedSha256": "55b11d057e6dc329ee3c0856d4673bf8d450b2ce67483fb75477ff92764c9c2e",
+      "sourceRowIndex0": 231,
+      "sourceRowOrdinal1": 232,
+      "row": [
+        "college-of-new-caledonia",
+        "Thorne, Sandra",
+        null,
+        85664,
+        664,
+        7
+      ],
+      "normalizedRowSha256": "e59f692fb501d5a9de80514ab65bc1729fcec0e2305bc6c5e95003c3e4153709",
+      "crop": {
+        "file": "research/salaries/source-follow-through-2026-11-02/cnc-name-evidence/2020-21-native-thorne.png",
+        "sha256": "cf2f1d9121df02eedbeec2b640593714edfa5bd1e89c8dc7c663f621f2f4c852",
+        "pdfCropPoints": [
+          83.91999816894531,
+          149.7723846435547,
+          532.1753540039062,
+          163.12904357910156
+        ],
+        "bboxPoints": [
+          83.91999816894531,
+          149.7723846435547,
+          532.1753540039062,
+          163.12904357910156
+        ],
+        "physicalPdfPage": 7,
+        "pdfSha256": "2140a55a0289cf9f2d96f7c541545ce3932dc8612e05536be597af33fa94c1a5",
+        "sourceDataSha256": "d0598e2cf1613144ead367527c88de460b5276763cc2996f32578cd23cdb179f",
+        "renderDpi": 400,
+        "persistedInRepository": true,
+        "renderMethod": "PyMuPDF original native page render; no OCR overlay or text replacement."
+      },
+      "nativeWordEvidence": [
+        [
+          85.91999816894531,
+          151.7723846435547,
+          112.50860595703125,
+          161.12904357910156,
+          "Thorne"
+        ],
+        [
+          159.2415771484375,
+          151.7723846435547,
+          186.2757568359375,
+          161.12904357910156,
+          "Sandra"
+        ],
+        [
+          411.6739196777344,
+          151.7723846435547,
+          437.2505187988281,
+          161.12904357910156,
+          "85,664"
+        ],
+        [
+          516.1881103515625,
+          151.7723846435547,
+          530.1753540039062,
+          161.12904357910156,
+          "664"
+        ]
+      ],
+      "limitation": "The native original establishes the earlier published r+n spelling. The later2023/24 compressed scan glyphs and its unique numeric copy-cohort witness remain separate evidence; neither compiled year labels nor observations are rewritten."
+    }
+  ],
+  "receipts": [
+    {
+      "id": "cnc-source-copy-cornelis-2023-24",
+      "candidateId": null,
+      "compiledSpelling": "Comelis, Suzanne",
+      "originalSpelling": "Cornelis, Suzanne",
+      "pdfPage": 4,
+      "pdfSha256": "cb28eade49eb6b62ac1395a328735d7a12a600fe1bac78bd08d1bfcb107c4cd3",
+      "cropFile": "research/salaries/follow-through-cnc/evidence/crops/2023-24-p04-correction-05.png",
+      "cropSha256": "87278fe3d0466c8af15f761989a0267d6fbeb21d3b690909723e52fa83a2fec9",
+      "fullPageFile": "research/salaries/source-follow-through-2026-11-02/cnc-name-evidence/2023-24-p04.png",
+      "fullPageSha256": "3b02a4e7e427855f8d06b7c1f2f9ebd7f10d6b6ff5dd74ccdb656e2adbe10ea7",
+      "bboxPoints": [
+        95.92,
+        84.4,
+        501.2,
+        97.76
+      ],
+      "sourceId": "cnc-sofi-2023-24-employees",
+      "sourceDataFile": "research/salaries/follow-through-cnc/2023-24.json.gzip",
+      "sourceDataSha256": "6d805a9e5f7715e89837aa48c0733515938dad75ca03a9f6182b2b0f63751e1d",
+      "sourceRowIndex0": 54,
+      "method": "unique-remuneration-and-numeric-expenses",
+      "financialWitness": {
+        "currency": "CAD",
+        "officialCohortRows": 312,
+        "compiledCohortRows": 312,
+        "officialRemuneration": 113947,
+        "officialExpenses": 973,
+        "officialExpenseState": "numeric",
+        "compiledRemuneration": 113947,
+        "compiledExpenses": 973,
+        "expenseEqualityEstablished": true,
+        "expenseConflictEstablished": false,
+        "nullCoercedToZero": false,
+        "officialOccurrencesOfOfficialPayExpensePair": 1,
+        "compiledOccurrencesOfOfficialPayExpensePair": 1,
+        "officialOccurrencesOfActualCompiledPayExpensePair": 1,
+        "officialPayOnlyOccurrences": 45,
+        "compiledPayOnlyOccurrences": 45,
+        "proofUsesExpenses": true,
+        "proofUsesOnlyUniqueRemuneration": false,
+        "samePayOfficialNames": [
+          "Albisser, Tracie",
+          "Baker, Michael",
+          "Barber, Brian",
+          "Brbot, Rosemary",
+          "Card, Jessica",
+          "Clare, Sheldon",
+          "Cornelis, Suzanne",
+          "Craig, Zelda",
+          "Crosina, Kara",
+          "Frizzell, Garth",
+          "Fulton, Carla",
+          "Goudreau, Christien",
+          "Hes, Debbra",
+          "Kaulfuss, Marilyn",
+          "Lasnier, Alexandre",
+          "Latala, Michal",
+          "Liang, Wei",
+          "Little, Jennifer",
+          "Littler, Bradly",
+          "Madjitey, Jacob",
+          "Maides, Peter",
+          "Mansour, Abeer",
+          "Maruk, Lorne",
+          "Matthews, Layth",
+          "Moi, Meagan",
+          "Nahrgang, Wendy",
+          "Pacheco, John",
+          "Reich, Richard",
+          "Rose, Gregory",
+          "Rourke, David",
+          "Schreiner, Dennis",
+          "Selkirk, Mark",
+          "Smit, Jesse",
+          "St Pierre, Daniel",
+          "Stewart, Benjamin",
+          "Taylor, Andrew",
+          "Tejero, Marta",
+          "Thring, Ann",
+          "Valiente, Liza",
+          "Vaughan, Jody",
+          "Wendling, Mark",
+          "Wessels, Kelly",
+          "Winkel, Alice",
+          "Worfolk, Melinda",
+          "Yee, Brenda"
+        ],
+        "samePayCompiledNames": [
+          "Albisser, Tracie",
+          "Baker, Michael",
+          "Barber, Brian",
+          "Brbot, Rosemary",
+          "Card, Jessica",
+          "Clare, Sheldon",
+          "Comelis, Suzanne",
+          "Craig, Zelda",
+          "Crosina, Kara",
+          "Frizzell, Garth",
+          "Fulton, Carla",
+          "Goudreau, Christian",
+          "Hes, Debbra",
+          "Kaulfuss, Marilyn",
+          "Lasnier, Alexandre",
+          "Latala, Michal",
+          "Liang, Wei",
+          "Little, Jennifer",
+          "Littler, Bradly",
+          "Madjitey, Jacob",
+          "Maldes, Peter",
+          "Mansour, Abeer",
+          "Maruk, Lome",
+          "Matthews, Layth",
+          "Mol, Meagan",
+          "Nahrgang, Wendy",
+          "Pacheco, John",
+          "Reich, Richard",
+          "Rose, Gregory",
+          "Rour1<e, David",
+          "Schreiner, Dennis",
+          "Selkir1<, Marl<",
+          "Smit, Jesse",
+          "St Pierre, Daniel",
+          "Stewart, Benjamin",
+          "Taylor, Andrew",
+          "Tejero, Marta",
+          "Thring, Ann",
+          "Valiente, Liza",
+          "Vaughan, Jody",
+          "Wendling, Mark",
+          "Wessels, Kelly",
+          "Winkel, Alice",
+          "Worfolk, Melinda",
+          "Yee, Brenda"
+        ]
+      },
+      "earlierNativeSupport": {
+        "preferredName": "Cornelis, Suzanne",
+        "sourceId": "cnc-sofi-2020-21-employees",
+        "sourceUrl": "https://cnc.bc.ca/docs/public/governance/budgets---financial-statements/statement-of-financial-information/sofi-report-2020-21.pdf?sfvrsn=4d8314a_1",
+        "pdfSha256": "2140a55a0289cf9f2d96f7c541545ce3932dc8612e05536be597af33fa94c1a5",
+        "year": "2020/21",
+        "periodStart": "2020-04-01",
+        "periodEnd": "2021-03-31",
+        "physicalPdfPage": 4,
+        "dataFile": "research/salaries/follow-through-cnc/2020-21.json.gzip",
+        "dataSha256": "d0598e2cf1613144ead367527c88de460b5276763cc2996f32578cd23cdb179f",
+        "normalizedSha256": "55b11d057e6dc329ee3c0856d4673bf8d450b2ce67483fb75477ff92764c9c2e",
+        "sourceRowIndex0": 45,
+        "sourceRowOrdinal1": 46,
+        "row": [
+          "college-of-new-caledonia",
+          "Cornelis, Suzanne",
+          null,
+          99738,
+          6725,
+          4
+        ],
+        "normalizedRowSha256": "d674cf01066c02cdaf9380433e0b710d153907c123189c917adb29aa600ec880",
+        "crop": {
+          "file": "research/salaries/source-follow-through-2026-11-02/cnc-name-evidence/2020-21-native-cornelis.png",
+          "sha256": "05a9cc106a1bda9e7a1fa1ce2e50011ad59d91680ed1c78fc8497a43ff7328b3",
+          "pdfCropPoints": [
+            83.91999816894531,
+            149.7723846435547,
+            532.2088012695312,
+            163.12904357910156
+          ],
+          "bboxPoints": [
+            83.91999816894531,
+            149.7723846435547,
+            532.2088012695312,
+            163.12904357910156
+          ],
+          "physicalPdfPage": 4,
+          "pdfSha256": "2140a55a0289cf9f2d96f7c541545ce3932dc8612e05536be597af33fa94c1a5",
+          "sourceDataSha256": "d0598e2cf1613144ead367527c88de460b5276763cc2996f32578cd23cdb179f",
+          "renderDpi": 400,
+          "persistedInRepository": true,
+          "renderMethod": "PyMuPDF original native page render; no OCR overlay or text replacement."
+        },
+        "nativeWordEvidence": [
+          [
+            85.91999816894531,
+            151.7723846435547,
+            116.81800842285156,
+            161.12904357910156,
+            "Cornelis"
+          ],
+          [
+            159.24156188964844,
+            151.7723846435547,
+            192.33865356445312,
+            161.12904357910156,
+            "Suzanne"
+          ],
+          [
+            411.6164245605469,
+            151.7723846435547,
+            437.2586669921875,
+            161.12904357910156,
+            "99,738"
+          ],
+          [
+            509.2293701171875,
+            151.7723846435547,
+            530.2088012695312,
+            161.12904357910156,
+            "6,725"
+          ]
+        ],
+        "limitation": "The native original establishes the earlier published r+n spelling. The later2023/24 compressed scan glyphs and its unique numeric copy-cohort witness remain separate evidence; neither compiled year labels nor observations are rewritten."
+      }
+    },
+    {
+      "id": 1797,
+      "candidateId": 1797,
+      "compiledSpelling": "Per1strom, Shannon",
+      "originalSpelling": "Perlstrom, Shannon",
+      "pdfPage": 6,
+      "pdfSha256": "cb28eade49eb6b62ac1395a328735d7a12a600fe1bac78bd08d1bfcb107c4cd3",
+      "cropFile": "research/salaries/follow-through-cnc/evidence/crops/2023-24-p06-correction-13.png",
+      "cropSha256": "23906bec0db36223fe1b87a09ce364437209b8087fe831c82d46149c052a2112",
+      "fullPageFile": "research/salaries/source-follow-through-2026-11-02/cnc-name-evidence/2023-24-p06.png",
+      "fullPageSha256": "43baddcb7cdcd5ddfc0ed82bc56c7a83d41444d8b872904c3b49199b45a855a7",
+      "bboxPoints": [
+        94.96,
+        230.08,
+        500.24,
+        242.48
+      ],
+      "sourceId": "cnc-sofi-2023-24-employees",
+      "sourceDataFile": "research/salaries/follow-through-cnc/2023-24.json.gzip",
+      "sourceDataSha256": "6d805a9e5f7715e89837aa48c0733515938dad75ca03a9f6182b2b0f63751e1d",
+      "sourceRowIndex0": 218,
+      "method": "unique-remuneration-and-numeric-expenses",
+      "financialWitness": {
+        "currency": "CAD",
+        "officialCohortRows": 312,
+        "compiledCohortRows": 312,
+        "officialRemuneration": 117062,
+        "officialExpenses": 1659,
+        "officialExpenseState": "numeric",
+        "compiledRemuneration": 117062,
+        "compiledExpenses": 1659,
+        "expenseEqualityEstablished": true,
+        "expenseConflictEstablished": false,
+        "nullCoercedToZero": false,
+        "officialOccurrencesOfOfficialPayExpensePair": 1,
+        "compiledOccurrencesOfOfficialPayExpensePair": 1,
+        "officialOccurrencesOfActualCompiledPayExpensePair": 1,
+        "officialPayOnlyOccurrences": 2,
+        "compiledPayOnlyOccurrences": 2,
+        "proofUsesExpenses": true,
+        "proofUsesOnlyUniqueRemuneration": false,
+        "samePayOfficialNames": [
+          "Kitchen, Annette",
+          "Perlstrom, Shannon"
+        ],
+        "samePayCompiledNames": [
+          "Kitchen, Annette",
+          "Per1strom, Shannon"
+        ]
+      },
+      "earlierNativeSupport": null
+    },
+    {
+      "id": "cnc-source-copy-thorne-2023-24",
+      "candidateId": null,
+      "compiledSpelling": "Thome, Sandra",
+      "originalSpelling": "Thorne, Sandra",
+      "pdfPage": 7,
+      "pdfSha256": "cb28eade49eb6b62ac1395a328735d7a12a600fe1bac78bd08d1bfcb107c4cd3",
+      "cropFile": "research/salaries/follow-through-cnc/evidence/crops/2023-24-p07-correction-16.png",
+      "cropSha256": "f92a91c396841788343192c3610c97548927866f92506a5a70900645a36817d8",
+      "fullPageFile": "research/salaries/source-follow-through-2026-11-02/cnc-name-evidence/2023-24-p07.png",
+      "fullPageSha256": "36edead2916cde4559e48b53902b093c2082af59cd4caf49410e4d329b1da82e",
+      "bboxPoints": [
+        93.04,
+        154.24,
+        498.32,
+        168.08
+      ],
+      "sourceId": "cnc-sofi-2023-24-employees",
+      "sourceDataFile": "research/salaries/follow-through-cnc/2023-24.json.gzip",
+      "sourceDataSha256": "6d805a9e5f7715e89837aa48c0733515938dad75ca03a9f6182b2b0f63751e1d",
+      "sourceRowIndex0": 282,
+      "method": "unique-remuneration-and-numeric-expenses",
+      "financialWitness": {
+        "currency": "CAD",
+        "officialCohortRows": 312,
+        "compiledCohortRows": 312,
+        "officialRemuneration": 116968,
+        "officialExpenses": 741,
+        "officialExpenseState": "numeric",
+        "compiledRemuneration": 116968,
+        "compiledExpenses": 741,
+        "expenseEqualityEstablished": true,
+        "expenseConflictEstablished": false,
+        "nullCoercedToZero": false,
+        "officialOccurrencesOfOfficialPayExpensePair": 1,
+        "compiledOccurrencesOfOfficialPayExpensePair": 1,
+        "officialOccurrencesOfActualCompiledPayExpensePair": 1,
+        "officialPayOnlyOccurrences": 1,
+        "compiledPayOnlyOccurrences": 1,
+        "proofUsesExpenses": true,
+        "proofUsesOnlyUniqueRemuneration": false,
+        "samePayOfficialNames": [
+          "Thorne, Sandra"
+        ],
+        "samePayCompiledNames": [
+          "Thome, Sandra"
+        ]
+      },
+      "earlierNativeSupport": {
+        "preferredName": "Thorne, Sandra",
+        "sourceId": "cnc-sofi-2020-21-employees",
+        "sourceUrl": "https://cnc.bc.ca/docs/public/governance/budgets---financial-statements/statement-of-financial-information/sofi-report-2020-21.pdf?sfvrsn=4d8314a_1",
+        "pdfSha256": "2140a55a0289cf9f2d96f7c541545ce3932dc8612e05536be597af33fa94c1a5",
+        "year": "2020/21",
+        "periodStart": "2020-04-01",
+        "periodEnd": "2021-03-31",
+        "physicalPdfPage": 7,
+        "dataFile": "research/salaries/follow-through-cnc/2020-21.json.gzip",
+        "dataSha256": "d0598e2cf1613144ead367527c88de460b5276763cc2996f32578cd23cdb179f",
+        "normalizedSha256": "55b11d057e6dc329ee3c0856d4673bf8d450b2ce67483fb75477ff92764c9c2e",
+        "sourceRowIndex0": 231,
+        "sourceRowOrdinal1": 232,
+        "row": [
+          "college-of-new-caledonia",
+          "Thorne, Sandra",
+          null,
+          85664,
+          664,
+          7
+        ],
+        "normalizedRowSha256": "e59f692fb501d5a9de80514ab65bc1729fcec0e2305bc6c5e95003c3e4153709",
+        "crop": {
+          "file": "research/salaries/source-follow-through-2026-11-02/cnc-name-evidence/2020-21-native-thorne.png",
+          "sha256": "cf2f1d9121df02eedbeec2b640593714edfa5bd1e89c8dc7c663f621f2f4c852",
+          "pdfCropPoints": [
+            83.91999816894531,
+            149.7723846435547,
+            532.1753540039062,
+            163.12904357910156
+          ],
+          "bboxPoints": [
+            83.91999816894531,
+            149.7723846435547,
+            532.1753540039062,
+            163.12904357910156
+          ],
+          "physicalPdfPage": 7,
+          "pdfSha256": "2140a55a0289cf9f2d96f7c541545ce3932dc8612e05536be597af33fa94c1a5",
+          "sourceDataSha256": "d0598e2cf1613144ead367527c88de460b5276763cc2996f32578cd23cdb179f",
+          "renderDpi": 400,
+          "persistedInRepository": true,
+          "renderMethod": "PyMuPDF original native page render; no OCR overlay or text replacement."
+        },
+        "nativeWordEvidence": [
+          [
+            85.91999816894531,
+            151.7723846435547,
+            112.50860595703125,
+            161.12904357910156,
+            "Thorne"
+          ],
+          [
+            159.2415771484375,
+            151.7723846435547,
+            186.2757568359375,
+            161.12904357910156,
+            "Sandra"
+          ],
+          [
+            411.6739196777344,
+            151.7723846435547,
+            437.2505187988281,
+            161.12904357910156,
+            "85,664"
+          ],
+          [
+            516.1881103515625,
+            151.7723846435547,
+            530.1753540039062,
+            161.12904357910156,
+            "664"
+          ]
+        ],
+        "limitation": "The native original establishes the earlier published r+n spelling. The later2023/24 compressed scan glyphs and its unique numeric copy-cohort witness remain separate evidence; neither compiled year labels nor observations are rewritten."
+      }
+    },
+    {
+      "id": 1899,
+      "candidateId": 1899,
+      "compiledSpelling": "Rasche, Mira",
+      "originalSpelling": "Rosche, Mira",
+      "pdfPage": 6,
+      "pdfSha256": "cb28eade49eb6b62ac1395a328735d7a12a600fe1bac78bd08d1bfcb107c4cd3",
+      "cropFile": "research/salaries/source-follow-through-2026-11-02/cnc-name-evidence/2023-24-candidate-1899.png",
+      "cropSha256": "083648df7c91da928c4f416935309b84f777d1c132c6e907ca824a6cdd68381a",
+      "fullPageFile": "research/salaries/source-follow-through-2026-11-02/cnc-name-evidence/2023-24-p06.png",
+      "fullPageSha256": "43baddcb7cdcd5ddfc0ed82bc56c7a83d41444d8b872904c3b49199b45a855a7",
+      "bboxPoints": [
+        94.48,
+        412.0,
+        499.52,
+        424.64
+      ],
+      "sourceId": "cnc-sofi-2023-24-employees",
+      "sourceDataFile": "research/salaries/follow-through-cnc/2023-24.json.gzip",
+      "sourceDataSha256": "6d805a9e5f7715e89837aa48c0733515938dad75ca03a9f6182b2b0f63751e1d",
+      "sourceRowIndex0": 238,
+      "method": "unique-remuneration-and-numeric-expenses",
+      "financialWitness": {
+        "currency": "CAD",
+        "officialCohortRows": 312,
+        "compiledCohortRows": 312,
+        "officialRemuneration": 115136,
+        "officialExpenses": 368,
+        "officialExpenseState": "numeric",
+        "compiledRemuneration": 115136,
+        "compiledExpenses": 368,
+        "expenseEqualityEstablished": true,
+        "expenseConflictEstablished": false,
+        "nullCoercedToZero": false,
+        "officialOccurrencesOfOfficialPayExpensePair": 1,
+        "compiledOccurrencesOfOfficialPayExpensePair": 1,
+        "officialOccurrencesOfActualCompiledPayExpensePair": 1,
+        "officialPayOnlyOccurrences": 1,
+        "compiledPayOnlyOccurrences": 1,
+        "proofUsesExpenses": true,
+        "proofUsesOnlyUniqueRemuneration": false,
+        "samePayOfficialNames": [
+          "Rosche, Mira"
+        ],
+        "samePayCompiledNames": [
+          "Rasche, Mira"
+        ]
+      },
+      "earlierNativeSupport": null
+    },
+    {
+      "id": 2022,
+      "candidateId": 2022,
+      "compiledSpelling": "StuartClar1<e, Pat",
+      "originalSpelling": "Stuart-Clarke, Pat",
+      "pdfPage": 6,
+      "pdfSha256": "cb28eade49eb6b62ac1395a328735d7a12a600fe1bac78bd08d1bfcb107c4cd3",
+      "cropFile": "research/salaries/source-follow-through-2026-11-02/cnc-name-evidence/2023-24-candidate-2022.png",
+      "cropSha256": "98d157ed989f20c7de7017d820823615e965bc77111a69d4c7d19c9411082547",
+      "fullPageFile": "research/salaries/source-follow-through-2026-11-02/cnc-name-evidence/2023-24-p06.png",
+      "fullPageSha256": "43baddcb7cdcd5ddfc0ed82bc56c7a83d41444d8b872904c3b49199b45a855a7",
+      "bboxPoints": [
+        93.76,
+        711.52,
+        490.88,
+        724.16
+      ],
+      "sourceId": "cnc-sofi-2023-24-employees",
+      "sourceDataFile": "research/salaries/follow-through-cnc/2023-24.json.gzip",
+      "sourceDataSha256": "6d805a9e5f7715e89837aa48c0733515938dad75ca03a9f6182b2b0f63751e1d",
+      "sourceRowIndex0": 270,
+      "method": "unique-remuneration-with-unknown-source-expenses",
+      "financialWitness": {
+        "currency": "CAD",
+        "officialCohortRows": 312,
+        "compiledCohortRows": 312,
+        "officialRemuneration": 113369,
+        "officialExpenses": null,
+        "officialExpenseState": "dash-unknown",
+        "compiledRemuneration": 113369,
+        "compiledExpenses": 0,
+        "expenseEqualityEstablished": false,
+        "expenseConflictEstablished": false,
+        "nullCoercedToZero": false,
+        "officialOccurrencesOfOfficialPayExpensePair": 1,
+        "compiledOccurrencesOfOfficialPayExpensePair": 0,
+        "officialOccurrencesOfActualCompiledPayExpensePair": 0,
+        "officialPayOnlyOccurrences": 1,
+        "compiledPayOnlyOccurrences": 1,
+        "proofUsesExpenses": false,
+        "proofUsesOnlyUniqueRemuneration": true,
+        "samePayOfficialNames": [
+          "Stuart-Clarke, Pat"
+        ],
+        "samePayCompiledNames": [
+          "StuartClar1<e, Pat"
+        ]
+      },
+      "earlierNativeSupport": null
+    },
+    {
+      "id": 3601,
+      "candidateId": 3601,
+      "compiledSpelling": "ldehen, Nekpen",
+      "originalSpelling": "Idehen, Nekpen",
+      "pdfPage": 5,
+      "pdfSha256": "cb28eade49eb6b62ac1395a328735d7a12a600fe1bac78bd08d1bfcb107c4cd3",
+      "cropFile": "research/salaries/source-follow-through-2026-11-02/cnc-name-evidence/2023-24-candidate-3601.png",
+      "cropSha256": "173ef773015a46981053b893e2779a7e8b2ba30e331b653d8057806338d9e704",
+      "fullPageFile": "research/salaries/source-follow-through-2026-11-02/cnc-name-evidence/2023-24-p05.png",
+      "fullPageSha256": "80ae3a4935dcf77b049c948420ca59888f8f8c0ae6a50fca67e178adedb55841",
+      "bboxPoints": [
+        94.24,
+        78.4,
+        499.76,
+        89.6
+      ],
+      "sourceId": "cnc-sofi-2023-24-employees",
+      "sourceDataFile": "research/salaries/follow-through-cnc/2023-24.json.gzip",
+      "sourceDataSha256": "6d805a9e5f7715e89837aa48c0733515938dad75ca03a9f6182b2b0f63751e1d",
+      "sourceRowIndex0": 127,
+      "method": "unique-remuneration-and-numeric-expenses",
+      "financialWitness": {
+        "currency": "CAD",
+        "officialCohortRows": 312,
+        "compiledCohortRows": 312,
+        "officialRemuneration": 90384,
+        "officialExpenses": 4021,
+        "officialExpenseState": "numeric",
+        "compiledRemuneration": 90384,
+        "compiledExpenses": 4021,
+        "expenseEqualityEstablished": true,
+        "expenseConflictEstablished": false,
+        "nullCoercedToZero": false,
+        "officialOccurrencesOfOfficialPayExpensePair": 1,
+        "compiledOccurrencesOfOfficialPayExpensePair": 1,
+        "officialOccurrencesOfActualCompiledPayExpensePair": 1,
+        "officialPayOnlyOccurrences": 1,
+        "compiledPayOnlyOccurrences": 1,
+        "proofUsesExpenses": true,
+        "proofUsesOnlyUniqueRemuneration": false,
+        "samePayOfficialNames": [
+          "Idehen, Nekpen"
+        ],
+        "samePayCompiledNames": [
+          "ldehen, Nekpen"
+        ]
+      },
+      "earlierNativeSupport": null
+    }
+  ]
+}

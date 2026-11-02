@@ -1,0 +1,151 @@
+{
+  "version": 1,
+  "sourceId": "follow-through-bcfsa-2022-23-employees",
+  "leadId": "additional-source-bcfsa-2022-23",
+  "sourceUrl": "https://www.bcfsa.ca/media/3558/download",
+  "sourceIndexUrl": "https://www.bcfsa.ca/about-us/what-we-do/corporate-publications",
+  "checkedOn": "2026-11-02",
+  "originalSha256": "f43f75ceefdfba06d6d3f8bc6bab83bb0e1a30c78c705be5d048daa22b9c458b",
+  "originalBytes": 393211,
+  "originalPdfPageCount": 17,
+  "period": {
+    "start": "2022-04-01",
+    "end": "2023-03-31",
+    "partial": false,
+    "evidence": "Original schedule year-ended header; first BCFSA schedule explicitly gives commencement date and period end."
+  },
+  "employeePhysicalPages": [
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13
+  ],
+  "retainedSourceEvidencePages": [
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13
+  ],
+  "readerNames": [
+    "PyMuPDF positioned words",
+    "Poppler pdftotext -layout"
+  ],
+  "primaryRowCount": 237,
+  "independentRowCount": 237,
+  "everyRowFieldMultisetEqual": true,
+  "primaryNormalizedSha256": "fc55739727defd51bad0be92ee418106bd58a0319393180b48f31107608d4d3e",
+  "independentRowMultisetSha256": "3c3643a38d96dacaba6058e6250f6b3c23ee8dc08ff938b3a8465d79691d25fd",
+  "pageControls": [
+    {
+      "physicalPage": 7,
+      "rowCount": 22,
+      "remuneration": 2393261,
+      "expenses": 53465
+    },
+    {
+      "physicalPage": 8,
+      "rowCount": 42,
+      "remuneration": 4629981,
+      "expenses": 92454
+    },
+    {
+      "physicalPage": 9,
+      "rowCount": 42,
+      "remuneration": 4712517,
+      "expenses": 51254
+    },
+    {
+      "physicalPage": 10,
+      "rowCount": 42,
+      "remuneration": 4927374,
+      "expenses": 110223
+    },
+    {
+      "physicalPage": 11,
+      "rowCount": 42,
+      "remuneration": 4956968,
+      "expenses": 68570
+    },
+    {
+      "physicalPage": 12,
+      "rowCount": 42,
+      "remuneration": 5268999,
+      "expenses": 160673
+    },
+    {
+      "physicalPage": 13,
+      "rowCount": 5,
+      "remuneration": 517572,
+      "expenses": 7150
+    }
+  ],
+  "controls": {
+    "physicalPage": 13,
+    "printedTotalEmployees": [
+      34789286,
+      565730
+    ],
+    "printedBelowThreshold": [
+      7382614,
+      21941
+    ],
+    "printedDirectNamedSubtotal": null,
+    "impliedNamedControl": [
+      27406672,
+      543789
+    ],
+    "observedAllNamedRows": [
+      27406672,
+      543789
+    ],
+    "residualNamedMinusImplied": [
+      0,
+      0
+    ],
+    "residualNamedMinusDirect": null,
+    "units": "CAD whole dollars",
+    "residualCause": null
+  },
+  "physicalPagesVisuallyReviewed": [
+    13
+  ],
+  "sourceRowReview": "Every native employee row compared field-for-field between independent PDF readers; source-pixel review of printed control totals and ambiguous glyph/layout cases. Every scan employee row and control additionally visually reviewed.",
+  "explicitZeroExpenseRows": 0,
+  "nullExpenseRows": 11,
+  "negativeExpenseRows": [],
+  "repeatedDisclosedNames": {
+    "Adams, S": 2,
+    "Peters, M": 2
+  },
+  "exactDuplicateSixFieldRows": 0,
+  "excludedScopes": [
+    "board-director-remuneration",
+    "suppliers",
+    "below-threshold-aggregate",
+    "reconciliation-adjustments",
+    "employer-tax-benefit-aggregates"
+  ],
+  "remunerationDefinitionVerbatim": null,
+  "severanceCompensationDefinitionContext": "\"Compensation\" means regular salary excluding benefits.",
+  "publicWarning": null,
+  "rawEvidenceFiles": [
+    {
+      "file": "evidence/bcfsa-2022-23.layout.txt",
+      "sha256": "b18108bea84e9df5dab719cc5e99309f648c70cf0ed07f360b24b58ae15b099b"
+    },
+    {
+      "file": "evidence/bcfsa-2022-23.words.json.gzip",
+      "sha256": "ea0bdedf8cb93750f520d5494cc64a7874f980f8f176c2e8ffa5d058a0b67277"
+    },
+    {
+      "file": "evidence/bcfsa-2022-23.controls.png",
+      "sha256": "6dfb796ebebbfaa4e029751709461f0ed8a2784dee3b4688c42b1406ced534f1"
+    }
+  ]
+}

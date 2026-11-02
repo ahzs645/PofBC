@@ -11,16 +11,16 @@ const compiled = (source) => source?.sourceKind === 'compiled' || source?.scope 
 const payKey = (row, index) => `${row[4]}|${index.years[row[5]].slice(0, 4)}|${Math.round(row[2] * 100)}`
 
 /** Explicit review modes keep a name correction, an expense value and a qualified inference separate. */
-export const validateHeldNameConnections = (payload, rows, index, root) => {
+export const validateHeldNameConnections = (payload, rows, index, root, { readInput = (path) => readFileSync(resolve(root, path)) } = {}) => {
   if (payload.schemaVersion !== 1 || !Array.isArray(payload.decisions)) throw new Error('Invalid completed name review')
   for (const pin of payload.inputs ?? []) {
     const path = resolve(root, pin.path)
-    if (relative(root, path).startsWith(`..${sep}`) || sha(readFileSync(path)) !== pin.sha256) throw new Error(`Name review evidence changed: ${pin.path}`)
+    if (relative(root, path).startsWith(`..${sep}`) || sha(readInput(pin.path)) !== pin.sha256) throw new Error(`Name review evidence changed: ${pin.path}`)
   }
   const pinned = new Set((payload.inputs ?? []).map((pin) => pin.path))
   const receipt = (ref) => {
     if (!pinned.has(ref.path)) throw new Error('A review receipt must be pinned')
-    const value = JSON.parse(readFileSync(resolve(root, ref.path), 'utf8'))
+    const value = JSON.parse(readInput(ref.path).toString('utf8'))
     const found = (Array.isArray(value) ? value : value.decisions ?? []).find((row) => row.id === ref.id)
     if (!found) throw new Error('Missing individual review receipt')
     return found

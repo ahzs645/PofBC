@@ -1,0 +1,1331 @@
+{
+  "schemaVersion": 1,
+  "base": "http://127.0.0.1:4193/PofBC/",
+  "startedOn": "2026-11-02T23:12:27Z",
+  "checks": [
+    {
+      "id": "served-data-and-source-copy-graph",
+      "status": "PASS",
+      "evidence": {
+        "employers": 273,
+        "observations": 1440498,
+        "servedPeopleIndexSha256": "aa9db1531c32ae7a81fe20485267fc4c4ad5e4c76aa5bd19f5cd9ff826002bc4",
+        "servedEmployerIndexSha256": "fe83f63b3b04bd38b9d373c9a65cfbc6ef6ef93ae7da5dc81fcb47681ea03a6e",
+        "htmlSha256": "6acfbe73029ed51d68d2100bd581de9636c8aa564b83340082f70fa0299f6fbf",
+        "assets": [
+          "/PofBC/assets/index-B_NKO06f.js",
+          "/PofBC/assets/rolldown-runtime-C0FnF6B9.js",
+          "/PofBC/assets/jsx-runtime-DSr1VPkp.js",
+          "/PofBC/assets/renderLogoSvg-CoD-ciUl.js",
+          "/PofBC/assets/index-C7wSpLoi.css"
+        ],
+        "CMBC": {
+          "2025OfficialRows": 4340,
+          "2024OfficialRows": 0,
+          "2024CoverageStatus": "excluded",
+          "2024HeldSourceLeadIds": [
+            "follow-through-translink-2024-coast-mountain-bus-company-employees"
+          ]
+        },
+        "TransitPolice": {
+          "sector": "Municipal police",
+          "officialCohorts": [
+            [
+              "follow-through-translink-2020-transit-police-employees",
+              210
+            ],
+            [
+              "follow-through-translink-2021-transit-police-employees",
+              229
+            ],
+            [
+              "follow-through-translink-2022-transit-police-employees",
+              238
+            ],
+            [
+              "follow-through-translink-2023-transit-police-employees",
+              233
+            ],
+            [
+              "follow-through-translink-2024-transit-police-employees",
+              264
+            ],
+            [
+              "follow-through-translink-2025-transit-police-employees",
+              266
+            ]
+          ],
+          "separateMetroVancouverCompiledObservations": 182
+        },
+        "WorkSafeBC": {
+          "2025OfficialRows": 3142
+        },
+        "RRUOriginalAndCompiledPeriods": {
+          "compiledLabel": "2020/21",
+          "officialPeriod": "2021/22",
+          "bothObservationsRetained": true,
+          "remuneration": 181040,
+          "expenses": null
+        },
+        "sourceCopyGraph": {
+          "Mittelman": "verified",
+          "Perlstrom": "verified",
+          "StuartClarke": "verified",
+          "Cornelis": "verified",
+          "Thorne": "verified"
+        },
+        "StuartExpenseStates": {
+          "originalExpense": null,
+          "compiledExpense": 0,
+          "coerced": false
+        }
+      }
+    },
+    {
+      "id": "rru-reviewed-history-keeps-source-periods",
+      "width": 375,
+      "status": "PASS",
+      "seconds": 0.94,
+      "evidence": {
+        "heading": "Robert Mittelman",
+        "labels": [
+          "2025/26+8%",
+          "2024/25+2%",
+          "2023/24\u22125%",
+          "2022/23+11%",
+          "2021/220%",
+          "2020/21",
+          "2017/18"
+        ],
+        "joinedAlias": "Mittleman, Robert",
+        "evidenceLinks": [
+          {
+            "text": "Source \u00b7 p. 27",
+            "href": "https://www.royalroads.ca/sites/default/files/2023-09/2023-03-31_RRU-SOFI-FullySigned.pdf#page=27"
+          },
+          {
+            "text": "Source \u00b7 p. 27",
+            "href": "https://www.royalroads.ca/sites/default/files/2023-03/SOFI-ATT1-Board-2022Jun16_FINAL-RRUWebsite.pdf#page=27"
+          },
+          {
+            "text": "Evidence \u00b7 p. 27",
+            "href": "https://www.royalroads.ca/sites/default/files/2023-03/SOFI-ATT1-Board-2022Jun16_FINAL-RRUWebsite.pdf#page=27"
+          }
+        ],
+        "aboutInitiallyFolded": true,
+        "aboutTextExcerpt": "About these records\n\nAmounts are payments disclosed for a reporting period, not annual salary rates. Records are grouped by the disclosed name only, so they may not all concern one person.\n\nOther spellings joined to this name:\n\n\u201cMittleman, Robert\u201d at Royal Roads University \u00b7 verified on review \u00b7 Evidence \u00b7 p. 27",
+        "screenshot": "375-rru-mittelman-history.png"
+      }
+    },
+    {
+      "id": "cnc-perlstrom-seven-year-source-evidence",
+      "width": 375,
+      "status": "PASS",
+      "seconds": 0.6,
+      "evidence": {
+        "heading": "Shannon Perlstrom",
+        "labels": [
+          "2024/250%",
+          "2023/24+15%",
+          "2022/23+4%",
+          "2021/22",
+          "2020/21",
+          "2019/20+5%",
+          "2018/19\u22128%",
+          "2017/18"
+        ],
+        "joinedAlias": "Per1strom, Shannon",
+        "evidenceLinks": [
+          {
+            "text": "Source \u00b7 p. 6",
+            "href": "https://cnc.bc.ca/docs/public/governance/budgets---financial-statements/statement-of-financial-information/sofi-report-2024-2025.pdf?sfvrsn=629edc16_1#page=6"
+          },
+          {
+            "text": "Source \u00b7 p. 6",
+            "href": "https://cnc.bc.ca/docs/public/governance/budgets---financial-statements/statement-of-financial-information/sofi-report-2023-24.pdf?sfvrsn=5c81c9b5_1#page=6"
+          },
+          {
+            "text": "Source \u00b7 p. 6",
+            "href": "https://cnc.bc.ca/docs/public/governance/budgets---financial-statements/statement-of-financial-information/sofi-report-2022-23.pdf?sfvrsn=c9b36c88_1#page=6"
+          },
+          {
+            "text": "Source \u00b7 p. 6",
+            "href": "https://cnc.bc.ca/docs/public/governance/budgets---financial-statements/statement-of-financial-information/sofi-report-2021-22.pdf?sfvrsn=43c3c8b0_1#page=6"
+          },
+          {
+            "text": "Source \u00b7 p. 6",
+            "href": "https://cnc.bc.ca/docs/public/governance/budgets---financial-statements/statement-of-financial-information/sofi-report-2020-21.pdf?sfvrsn=4d8314a_1#page=6"
+          },
+          {
+            "text": "Source \u00b7 p. 6",
+            "href": "https://cnc.bc.ca/docs/public/governance/budgets---financial-statements/statement-of-financial-information/sofi-report-2018-19.pdf?sfvrsn=22935f48_1#page=6"
+          },
+          {
+            "text": "Evidence \u00b7 p. 6",
+            "href": "https://cnc.bc.ca/docs/public/governance/budgets---financial-statements/statement-of-financial-information/sofi-report-2023-24.pdf?sfvrsn=5c81c9b5_1#page=6"
+          }
+        ],
+        "aboutInitiallyFolded": true,
+        "aboutTextExcerpt": "About these records\n\nAmounts are payments disclosed for a reporting period, not annual salary rates. Records are grouped by the disclosed name only, so they may not all concern one person. Some years have more than one record under this name: different people, separate payments or source duplicates.\n\nOther spellings joined to this name:\n\n\u201cPer1strom, Shannon\u201d at College of New Caledonia \u00b7 verified on review \u00b7 Evidence \u00b7 p. 6\n\nSource remuneration can include taxable benefits and other payments."
+      }
+    },
+    {
+      "id": "cnc-stuart-retains-unknown-versus-zero",
+      "width": 375,
+      "status": "PASS",
+      "seconds": 0.66,
+      "evidence": {
+        "heading": "Pat Stuart-Clarke",
+        "labels": [
+          "2024/25",
+          "2023/24",
+          "2022/23+1%",
+          "2021/22",
+          "2020/21",
+          "2019/20+8%",
+          "2018/19"
+        ],
+        "joinedAlias": "StuartClar1<e, Pat",
+        "evidenceLinks": [
+          {
+            "text": "Source \u00b7 p. 6",
+            "href": "https://cnc.bc.ca/docs/public/governance/budgets---financial-statements/statement-of-financial-information/sofi-report-2023-24.pdf?sfvrsn=5c81c9b5_1#page=6"
+          },
+          {
+            "text": "Source \u00b7 p. 6",
+            "href": "https://cnc.bc.ca/docs/public/governance/budgets---financial-statements/statement-of-financial-information/sofi-report-2022-23.pdf?sfvrsn=c9b36c88_1#page=6"
+          },
+          {
+            "text": "Source \u00b7 p. 6",
+            "href": "https://cnc.bc.ca/docs/public/governance/budgets---financial-statements/statement-of-financial-information/sofi-report-2021-22.pdf?sfvrsn=43c3c8b0_1#page=6"
+          },
+          {
+            "text": "Source \u00b7 p. 6",
+            "href": "https://cnc.bc.ca/docs/public/governance/budgets---financial-statements/statement-of-financial-information/sofi-report-2020-21.pdf?sfvrsn=4d8314a_1#page=6"
+          },
+          {
+            "text": "Source \u00b7 p. 6",
+            "href": "https://cnc.bc.ca/docs/public/governance/budgets---financial-statements/statement-of-financial-information/sofi-report-2019-20.pdf?sfvrsn=742e8937_1#page=6"
+          },
+          {
+            "text": "Source \u00b7 p. 6",
+            "href": "https://cnc.bc.ca/docs/public/governance/budgets---financial-statements/statement-of-financial-information/sofi-report-2018-19.pdf?sfvrsn=22935f48_1#page=6"
+          },
+          {
+            "text": "Evidence \u00b7 p. 6",
+            "href": "https://cnc.bc.ca/docs/public/governance/budgets---financial-statements/statement-of-financial-information/sofi-report-2023-24.pdf?sfvrsn=5c81c9b5_1#page=6"
+          }
+        ],
+        "aboutInitiallyFolded": true,
+        "aboutTextExcerpt": "About these records\n\nAmounts are payments disclosed for a reporting period, not annual salary rates. Records are grouped by the disclosed name only, so they may not all concern one person. Some years have more than one record under this name: different people, separate payments or source duplicates.\n\nOther spellings joined to this name:\n\n\u201cStuartClar1<e, Pat\u201d at College of New Caledonia \u00b7 verified on review \u00b7 Evidence \u00b7 p. 6\n\nSource remuneration can include taxable benefits and other payments.",
+        "2023RowsRemainSeparate": [
+          "$113,369Source \u00b7 p. 6",
+          "As \u201cStuartClar1<e, Pat\u201d$113,369Expenses $0"
+        ],
+        "screenshot": "375-cnc-stuart-null-and-zero.png"
+      }
+    },
+    {
+      "id": "cnc-cornelis-thorne-reviewed-spellings",
+      "width": 375,
+      "status": "PASS",
+      "seconds": 1.29,
+      "evidence": [
+        {
+          "heading": "Suzanne Cornelis",
+          "labels": [
+            "2023/24+14%",
+            "2022/230%",
+            "2021/220%",
+            "2020/21+6%",
+            "2019/20+3%",
+            "2018/19+8%",
+            "2017/18"
+          ],
+          "joinedAlias": "Comelis, Suzanne",
+          "evidenceLinks": [
+            {
+              "text": "Source \u00b7 p. 4",
+              "href": "https://cnc.bc.ca/docs/public/governance/budgets---financial-statements/statement-of-financial-information/sofi-report-2023-24.pdf?sfvrsn=5c81c9b5_1#page=4"
+            },
+            {
+              "text": "Source \u00b7 p. 4",
+              "href": "https://cnc.bc.ca/docs/public/governance/budgets---financial-statements/statement-of-financial-information/sofi-report-2022-23.pdf?sfvrsn=c9b36c88_1#page=4"
+            },
+            {
+              "text": "Source \u00b7 p. 4",
+              "href": "https://cnc.bc.ca/docs/public/governance/budgets---financial-statements/statement-of-financial-information/sofi-report-2021-22.pdf?sfvrsn=43c3c8b0_1#page=4"
+            },
+            {
+              "text": "Source \u00b7 p. 4",
+              "href": "https://cnc.bc.ca/docs/public/governance/budgets---financial-statements/statement-of-financial-information/sofi-report-2020-21.pdf?sfvrsn=4d8314a_1#page=4"
+            },
+            {
+              "text": "Source \u00b7 p. 4",
+              "href": "https://cnc.bc.ca/docs/public/governance/budgets---financial-statements/statement-of-financial-information/sofi-report-2018-19.pdf?sfvrsn=22935f48_1#page=4"
+            },
+            {
+              "text": "Evidence \u00b7 p. 4",
+              "href": "https://cnc.bc.ca/docs/public/governance/budgets---financial-statements/statement-of-financial-information/sofi-report-2023-24.pdf?sfvrsn=5c81c9b5_1#page=4"
+            }
+          ],
+          "aboutInitiallyFolded": true,
+          "aboutTextExcerpt": "About these records\n\nAmounts are payments disclosed for a reporting period, not annual salary rates. Records are grouped by the disclosed name only, so they may not all concern one person.\n\nOther spellings joined to this name:\n\n\u201cComelis, Suzanne\u201d at College of New Caledonia \u00b7 verified on review \u00b7 Evidence \u00b7 p. 4\n\nSource remuneration can include taxable benefits and other payments.",
+          "screenshot": "375-cnc-cornelis-evidence.png"
+        },
+        {
+          "heading": "Sandra Thorne",
+          "labels": [
+            "2024/25\u22122%",
+            "2023/24+15%",
+            "2022/23+10%",
+            "2021/22+7%",
+            "2020/21"
+          ],
+          "joinedAlias": "Thome, Sandra",
+          "evidenceLinks": [
+            {
+              "text": "Source \u00b7 p. 7",
+              "href": "https://cnc.bc.ca/docs/public/governance/budgets---financial-statements/statement-of-financial-information/sofi-report-2024-2025.pdf?sfvrsn=629edc16_1#page=7"
+            },
+            {
+              "text": "Source \u00b7 p. 7",
+              "href": "https://cnc.bc.ca/docs/public/governance/budgets---financial-statements/statement-of-financial-information/sofi-report-2023-24.pdf?sfvrsn=5c81c9b5_1#page=7"
+            },
+            {
+              "text": "Source \u00b7 p. 7",
+              "href": "https://cnc.bc.ca/docs/public/governance/budgets---financial-statements/statement-of-financial-information/sofi-report-2022-23.pdf?sfvrsn=c9b36c88_1#page=7"
+            },
+            {
+              "text": "Source \u00b7 p. 7",
+              "href": "https://cnc.bc.ca/docs/public/governance/budgets---financial-statements/statement-of-financial-information/sofi-report-2021-22.pdf?sfvrsn=43c3c8b0_1#page=7"
+            },
+            {
+              "text": "Source \u00b7 p. 7",
+              "href": "https://cnc.bc.ca/docs/public/governance/budgets---financial-statements/statement-of-financial-information/sofi-report-2020-21.pdf?sfvrsn=4d8314a_1#page=7"
+            },
+            {
+              "text": "Evidence \u00b7 p. 7",
+              "href": "https://cnc.bc.ca/docs/public/governance/budgets---financial-statements/statement-of-financial-information/sofi-report-2023-24.pdf?sfvrsn=5c81c9b5_1#page=7"
+            }
+          ],
+          "aboutInitiallyFolded": true,
+          "aboutTextExcerpt": "About these records\n\nAmounts are payments disclosed for a reporting period, not annual salary rates. Records are grouped by the disclosed name only, so they may not all concern one person.\n\nOther spellings joined to this name:\n\n\u201cThome, Sandra\u201d at College of New Caledonia \u00b7 verified on review \u00b7 Evidence \u00b7 p. 7\n\nSource remuneration can include taxable benefits and other payments.",
+          "screenshot": "375-cnc-thorne-evidence.png"
+        }
+      ]
+    },
+    {
+      "id": "old-alias-urls-click-through-to-reviewed-histories",
+      "width": 375,
+      "status": "PASS",
+      "seconds": 3.54,
+      "evidence": [
+        {
+          "aliasKey": "mittleman|robert",
+          "canonicalKey": "mittelman|robert",
+          "heading": "Robert Mittelman",
+          "clicked": true
+        },
+        {
+          "aliasKey": "perstrom|shannon",
+          "canonicalKey": "perlstrom|shannon",
+          "heading": "Shannon Perlstrom",
+          "clicked": true
+        },
+        {
+          "aliasKey": "stuartclare|pat",
+          "canonicalKey": "stuartclarke|pat",
+          "heading": "Pat Stuart-Clarke",
+          "clicked": true
+        },
+        {
+          "aliasKey": "comelis|suzanne",
+          "canonicalKey": "cornelis|suzanne",
+          "heading": "Suzanne Cornelis",
+          "clicked": true
+        },
+        {
+          "aliasKey": "thome|sandra",
+          "canonicalKey": "thorne|sandra",
+          "heading": "Sandra Thorne",
+          "clicked": true
+        }
+      ]
+    },
+    {
+      "id": "cmbc-new-legal-employer-calendar-2025-both-layouts",
+      "width": 375,
+      "status": "PASS",
+      "seconds": 1.3,
+      "evidence": [
+        {
+          "heading": "Coast Mountain Bus Company Ltd.",
+          "records": 4340,
+          "layout": "cards",
+          "sourceLinks": [
+            "https://www.translink.ca/-/media/translink/documents/about-translink/corporate-reports/translink_employee_remuneration/2025-financial-information-act-filing-and-remuneration-report.pdf"
+          ],
+          "screenshot": "375-cmbc-2025-cards.png"
+        },
+        {
+          "heading": "Coast Mountain Bus Company Ltd.",
+          "records": 4340,
+          "layout": "table",
+          "sourceLinks": [
+            "https://www.translink.ca/-/media/translink/documents/about-translink/corporate-reports/translink_employee_remuneration/2025-financial-information-act-filing-and-remuneration-report.pdf"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cmbc-calendar-2024-stays-held-without-official-rows",
+      "width": 375,
+      "status": "PASS",
+      "seconds": 0.56,
+      "evidence": {
+        "year": 2024,
+        "noEmployeeRecordsOrCountTiles": true,
+        "displayedText": "\u2190 Salaries\nCoast Mountain Bus Company Ltd.\n\nCrown corporations\n\nDisclosure period\n2024 (calendar year)\n2002\n2008\n2011\n2014\n2017\n2020\n2024\n2024 (calendar year)\n\nEmployee remuneration disclosure \u00b7 reporting period not verified \u00b7 no source document attached\n\nThese records are held for review because source checks have not passed. That does not mean it had no staff or made no payments.",
+        "screenshot": "375-cmbc-2024-held.png"
+      }
+    },
+    {
+      "id": "transit-police-sector-and-official-2025-both-layouts",
+      "width": 375,
+      "status": "PASS",
+      "seconds": 1.22,
+      "evidence": [
+        {
+          "heading": "Transit police",
+          "records": 266,
+          "layout": "cards",
+          "sourceLinks": [
+            "https://www.translink.ca/-/media/translink/documents/about-translink/corporate-reports/translink_employee_remuneration/2025-financial-information-act-filing-and-remuneration-report.pdf"
+          ],
+          "sector": "Municipal police \u00b7 also filed as \u201cTransit Police\u201d"
+        },
+        {
+          "heading": "Transit police",
+          "records": 266,
+          "layout": "table",
+          "sourceLinks": [
+            "https://www.translink.ca/-/media/translink/documents/about-translink/corporate-reports/translink_employee_remuneration/2025-financial-information-act-filing-and-remuneration-report.pdf"
+          ],
+          "sector": "Municipal police \u00b7 also filed as \u201cTransit Police\u201d"
+        }
+      ]
+    },
+    {
+      "id": "worksafebc-new-calendar-2025-both-layouts",
+      "width": 375,
+      "status": "PASS",
+      "seconds": 1.11,
+      "evidence": [
+        {
+          "heading": "Worksafe B.C.",
+          "records": 3142,
+          "layout": "cards",
+          "sourceLinks": [
+            "https://www.worksafebc.com/en/resources/about-us/statements-of-financial-information/2025-statement-financial-information?lang=en"
+          ]
+        },
+        {
+          "heading": "Worksafe B.C.",
+          "records": 3142,
+          "layout": "table",
+          "sourceLinks": [
+            "https://www.worksafebc.com/en/resources/about-us/statements-of-financial-information/2025-statement-financial-information?lang=en"
+          ],
+          "screenshot": "375-worksafe-2025-table.png"
+        }
+      ]
+    },
+    {
+      "id": "pittman-usd-history-cad-comparison-and-old-url",
+      "width": 375,
+      "status": "PASS",
+      "seconds": 1.21,
+      "evidence": {
+        "foreignAmount": "US$3,902,330",
+        "highestCad": "$1,512,762",
+        "currencyEvidenceLinks": [
+          "https://www.bci.ca/wp-content/uploads/2018/01/2023-2024-corporate-annual-report_financial-statements-1.pdf#page=67",
+          "https://www.bci.ca/wp-content/uploads/2018/01/2023-2024-corporate-annual-report_financial-statements-1.pdf#page=92",
+          "https://www.bci.ca/wp-content/uploads/2018/01/2023-2024-corporate-annual-report_financial-statements-1.pdf#page=67",
+          "https://www.bci.ca/wp-content/uploads/2018/01/2023-2024-corporate-annual-report_financial-statements-1.pdf#page=92",
+          "https://www.bci.ca/wp-content/uploads/2018/01/2023-2024-corporate-annual-report_financial-statements-1.pdf#page=67",
+          "https://www.bci.ca/wp-content/uploads/2018/01/2023-2024-corporate-annual-report_financial-statements-1.pdf#page=92"
+        ],
+        "screenshot": "375-pittman-currency-history.png",
+        "oldPittmsnUrlClickThrough": true
+      }
+    },
+    {
+      "id": "pittman-foreign-amount-unranked-both-layouts",
+      "width": 375,
+      "status": "PASS",
+      "seconds": 1.13,
+      "evidence": [
+        {
+          "layout": "cards",
+          "otherCurrenciesText": "Other currencies \u00b7 unranked\nJim Pittman\nExecutive Vice President\nB.C. Investment Management Corporation (BCI)\nAlso disclosed as Jim Pittmsn\nUS$3,902,330\nUnranked \u00b7 2023/24",
+          "numericRankAbsent": true,
+          "foreignAmountAbsentFromCadRanking": true
+        },
+        {
+          "layout": "table",
+          "otherCurrenciesText": "Other currencies \u00b7 unranked\nJim Pittman\nExecutive Vice President\nB.C. Investment Management Corporation (BCI)\nAlso disclosed as Jim Pittmsn\nUS$3,902,330\nUnranked \u00b7 2023/24",
+          "numericRankAbsent": true,
+          "foreignAmountAbsentFromCadRanking": true
+        }
+      ]
+    },
+    {
+      "id": "responsive-controls-search-and-horizontal-overflow",
+      "width": 375,
+      "status": "PASS",
+      "seconds": 1.5,
+      "evidence": {
+        "mobileDialogFocusOnHeading": true,
+        "searchRetainedAfterCloseAndReopen": true,
+        "escapeCloses": true,
+        "screenshot": "375-mobile-filter-dialog.png",
+        "checkedRoutesWithoutHorizontalOverflow": 22
+      }
+    },
+    {
+      "id": "rru-reviewed-history-keeps-source-periods",
+      "width": 1280,
+      "status": "PASS",
+      "seconds": 0.93,
+      "evidence": {
+        "heading": "Robert Mittelman",
+        "labels": [
+          "2025/26+8%",
+          "2024/25+2%",
+          "2023/24\u22125%",
+          "2022/23+11%",
+          "2021/220%",
+          "2020/21",
+          "2017/18"
+        ],
+        "joinedAlias": "Mittleman, Robert",
+        "evidenceLinks": [
+          {
+            "text": "Source \u00b7 p. 27",
+            "href": "https://www.royalroads.ca/sites/default/files/2023-09/2023-03-31_RRU-SOFI-FullySigned.pdf#page=27"
+          },
+          {
+            "text": "Source \u00b7 p. 27",
+            "href": "https://www.royalroads.ca/sites/default/files/2023-03/SOFI-ATT1-Board-2022Jun16_FINAL-RRUWebsite.pdf#page=27"
+          },
+          {
+            "text": "Evidence \u00b7 p. 27",
+            "href": "https://www.royalroads.ca/sites/default/files/2023-03/SOFI-ATT1-Board-2022Jun16_FINAL-RRUWebsite.pdf#page=27"
+          }
+        ],
+        "aboutInitiallyFolded": true,
+        "aboutTextExcerpt": "About these records\n\nAmounts are payments disclosed for a reporting period, not annual salary rates. Records are grouped by the disclosed name only, so they may not all concern one person.\n\nOther spellings joined to this name:\n\n\u201cMittleman, Robert\u201d at Royal Roads University \u00b7 verified on review \u00b7 Evidence \u00b7 p. 27",
+        "screenshot": "1280-rru-mittelman-history.png"
+      }
+    },
+    {
+      "id": "cnc-perlstrom-seven-year-source-evidence",
+      "width": 1280,
+      "status": "PASS",
+      "seconds": 0.72,
+      "evidence": {
+        "heading": "Shannon Perlstrom",
+        "labels": [
+          "2024/250%",
+          "2023/24+15%",
+          "2022/23+4%",
+          "2021/22",
+          "2020/21",
+          "2019/20+5%",
+          "2018/19\u22128%",
+          "2017/18"
+        ],
+        "joinedAlias": "Per1strom, Shannon",
+        "evidenceLinks": [
+          {
+            "text": "Source \u00b7 p. 6",
+            "href": "https://cnc.bc.ca/docs/public/governance/budgets---financial-statements/statement-of-financial-information/sofi-report-2024-2025.pdf?sfvrsn=629edc16_1#page=6"
+          },
+          {
+            "text": "Source \u00b7 p. 6",
+            "href": "https://cnc.bc.ca/docs/public/governance/budgets---financial-statements/statement-of-financial-information/sofi-report-2023-24.pdf?sfvrsn=5c81c9b5_1#page=6"
+          },
+          {
+            "text": "Source \u00b7 p. 6",
+            "href": "https://cnc.bc.ca/docs/public/governance/budgets---financial-statements/statement-of-financial-information/sofi-report-2022-23.pdf?sfvrsn=c9b36c88_1#page=6"
+          },
+          {
+            "text": "Source \u00b7 p. 6",
+            "href": "https://cnc.bc.ca/docs/public/governance/budgets---financial-statements/statement-of-financial-information/sofi-report-2021-22.pdf?sfvrsn=43c3c8b0_1#page=6"
+          },
+          {
+            "text": "Source \u00b7 p. 6",
+            "href": "https://cnc.bc.ca/docs/public/governance/budgets---financial-statements/statement-of-financial-information/sofi-report-2020-21.pdf?sfvrsn=4d8314a_1#page=6"
+          },
+          {
+            "text": "Source \u00b7 p. 6",
+            "href": "https://cnc.bc.ca/docs/public/governance/budgets---financial-statements/statement-of-financial-information/sofi-report-2018-19.pdf?sfvrsn=22935f48_1#page=6"
+          },
+          {
+            "text": "Evidence \u00b7 p. 6",
+            "href": "https://cnc.bc.ca/docs/public/governance/budgets---financial-statements/statement-of-financial-information/sofi-report-2023-24.pdf?sfvrsn=5c81c9b5_1#page=6"
+          }
+        ],
+        "aboutInitiallyFolded": true,
+        "aboutTextExcerpt": "About these records\n\nAmounts are payments disclosed for a reporting period, not annual salary rates. Records are grouped by the disclosed name only, so they may not all concern one person. Some years have more than one record under this name: different people, separate payments or source duplicates.\n\nOther spellings joined to this name:\n\n\u201cPer1strom, Shannon\u201d at College of New Caledonia \u00b7 verified on review \u00b7 Evidence \u00b7 p. 6\n\nSource remuneration can include taxable benefits and other payments.",
+        "screenshot": "1280-cnc-perlstrom-evidence.png"
+      }
+    },
+    {
+      "id": "cnc-stuart-retains-unknown-versus-zero",
+      "width": 1280,
+      "status": "PASS",
+      "seconds": 0.67,
+      "evidence": {
+        "heading": "Pat Stuart-Clarke",
+        "labels": [
+          "2024/25",
+          "2023/24",
+          "2022/23+1%",
+          "2021/22",
+          "2020/21",
+          "2019/20+8%",
+          "2018/19"
+        ],
+        "joinedAlias": "StuartClar1<e, Pat",
+        "evidenceLinks": [
+          {
+            "text": "Source \u00b7 p. 6",
+            "href": "https://cnc.bc.ca/docs/public/governance/budgets---financial-statements/statement-of-financial-information/sofi-report-2023-24.pdf?sfvrsn=5c81c9b5_1#page=6"
+          },
+          {
+            "text": "Source \u00b7 p. 6",
+            "href": "https://cnc.bc.ca/docs/public/governance/budgets---financial-statements/statement-of-financial-information/sofi-report-2022-23.pdf?sfvrsn=c9b36c88_1#page=6"
+          },
+          {
+            "text": "Source \u00b7 p. 6",
+            "href": "https://cnc.bc.ca/docs/public/governance/budgets---financial-statements/statement-of-financial-information/sofi-report-2021-22.pdf?sfvrsn=43c3c8b0_1#page=6"
+          },
+          {
+            "text": "Source \u00b7 p. 6",
+            "href": "https://cnc.bc.ca/docs/public/governance/budgets---financial-statements/statement-of-financial-information/sofi-report-2020-21.pdf?sfvrsn=4d8314a_1#page=6"
+          },
+          {
+            "text": "Source \u00b7 p. 6",
+            "href": "https://cnc.bc.ca/docs/public/governance/budgets---financial-statements/statement-of-financial-information/sofi-report-2019-20.pdf?sfvrsn=742e8937_1#page=6"
+          },
+          {
+            "text": "Source \u00b7 p. 6",
+            "href": "https://cnc.bc.ca/docs/public/governance/budgets---financial-statements/statement-of-financial-information/sofi-report-2018-19.pdf?sfvrsn=22935f48_1#page=6"
+          },
+          {
+            "text": "Evidence \u00b7 p. 6",
+            "href": "https://cnc.bc.ca/docs/public/governance/budgets---financial-statements/statement-of-financial-information/sofi-report-2023-24.pdf?sfvrsn=5c81c9b5_1#page=6"
+          }
+        ],
+        "aboutInitiallyFolded": true,
+        "aboutTextExcerpt": "About these records\n\nAmounts are payments disclosed for a reporting period, not annual salary rates. Records are grouped by the disclosed name only, so they may not all concern one person. Some years have more than one record under this name: different people, separate payments or source duplicates.\n\nOther spellings joined to this name:\n\n\u201cStuartClar1<e, Pat\u201d at College of New Caledonia \u00b7 verified on review \u00b7 Evidence \u00b7 p. 6\n\nSource remuneration can include taxable benefits and other payments.",
+        "2023RowsRemainSeparate": [
+          "$113,369Source \u00b7 p. 6",
+          "As \u201cStuartClar1<e, Pat\u201d$113,369Expenses $0"
+        ]
+      }
+    },
+    {
+      "id": "cnc-cornelis-thorne-reviewed-spellings",
+      "width": 1280,
+      "status": "PASS",
+      "seconds": 1.24,
+      "evidence": [
+        {
+          "heading": "Suzanne Cornelis",
+          "labels": [
+            "2023/24+14%",
+            "2022/230%",
+            "2021/220%",
+            "2020/21+6%",
+            "2019/20+3%",
+            "2018/19+8%",
+            "2017/18"
+          ],
+          "joinedAlias": "Comelis, Suzanne",
+          "evidenceLinks": [
+            {
+              "text": "Source \u00b7 p. 4",
+              "href": "https://cnc.bc.ca/docs/public/governance/budgets---financial-statements/statement-of-financial-information/sofi-report-2023-24.pdf?sfvrsn=5c81c9b5_1#page=4"
+            },
+            {
+              "text": "Source \u00b7 p. 4",
+              "href": "https://cnc.bc.ca/docs/public/governance/budgets---financial-statements/statement-of-financial-information/sofi-report-2022-23.pdf?sfvrsn=c9b36c88_1#page=4"
+            },
+            {
+              "text": "Source \u00b7 p. 4",
+              "href": "https://cnc.bc.ca/docs/public/governance/budgets---financial-statements/statement-of-financial-information/sofi-report-2021-22.pdf?sfvrsn=43c3c8b0_1#page=4"
+            },
+            {
+              "text": "Source \u00b7 p. 4",
+              "href": "https://cnc.bc.ca/docs/public/governance/budgets---financial-statements/statement-of-financial-information/sofi-report-2020-21.pdf?sfvrsn=4d8314a_1#page=4"
+            },
+            {
+              "text": "Source \u00b7 p. 4",
+              "href": "https://cnc.bc.ca/docs/public/governance/budgets---financial-statements/statement-of-financial-information/sofi-report-2018-19.pdf?sfvrsn=22935f48_1#page=4"
+            },
+            {
+              "text": "Evidence \u00b7 p. 4",
+              "href": "https://cnc.bc.ca/docs/public/governance/budgets---financial-statements/statement-of-financial-information/sofi-report-2023-24.pdf?sfvrsn=5c81c9b5_1#page=4"
+            }
+          ],
+          "aboutInitiallyFolded": true,
+          "aboutTextExcerpt": "About these records\n\nAmounts are payments disclosed for a reporting period, not annual salary rates. Records are grouped by the disclosed name only, so they may not all concern one person.\n\nOther spellings joined to this name:\n\n\u201cComelis, Suzanne\u201d at College of New Caledonia \u00b7 verified on review \u00b7 Evidence \u00b7 p. 4\n\nSource remuneration can include taxable benefits and other payments."
+        },
+        {
+          "heading": "Sandra Thorne",
+          "labels": [
+            "2024/25\u22122%",
+            "2023/24+15%",
+            "2022/23+10%",
+            "2021/22+7%",
+            "2020/21"
+          ],
+          "joinedAlias": "Thome, Sandra",
+          "evidenceLinks": [
+            {
+              "text": "Source \u00b7 p. 7",
+              "href": "https://cnc.bc.ca/docs/public/governance/budgets---financial-statements/statement-of-financial-information/sofi-report-2024-2025.pdf?sfvrsn=629edc16_1#page=7"
+            },
+            {
+              "text": "Source \u00b7 p. 7",
+              "href": "https://cnc.bc.ca/docs/public/governance/budgets---financial-statements/statement-of-financial-information/sofi-report-2023-24.pdf?sfvrsn=5c81c9b5_1#page=7"
+            },
+            {
+              "text": "Source \u00b7 p. 7",
+              "href": "https://cnc.bc.ca/docs/public/governance/budgets---financial-statements/statement-of-financial-information/sofi-report-2022-23.pdf?sfvrsn=c9b36c88_1#page=7"
+            },
+            {
+              "text": "Source \u00b7 p. 7",
+              "href": "https://cnc.bc.ca/docs/public/governance/budgets---financial-statements/statement-of-financial-information/sofi-report-2021-22.pdf?sfvrsn=43c3c8b0_1#page=7"
+            },
+            {
+              "text": "Source \u00b7 p. 7",
+              "href": "https://cnc.bc.ca/docs/public/governance/budgets---financial-statements/statement-of-financial-information/sofi-report-2020-21.pdf?sfvrsn=4d8314a_1#page=7"
+            },
+            {
+              "text": "Evidence \u00b7 p. 7",
+              "href": "https://cnc.bc.ca/docs/public/governance/budgets---financial-statements/statement-of-financial-information/sofi-report-2023-24.pdf?sfvrsn=5c81c9b5_1#page=7"
+            }
+          ],
+          "aboutInitiallyFolded": true,
+          "aboutTextExcerpt": "About these records\n\nAmounts are payments disclosed for a reporting period, not annual salary rates. Records are grouped by the disclosed name only, so they may not all concern one person.\n\nOther spellings joined to this name:\n\n\u201cThome, Sandra\u201d at College of New Caledonia \u00b7 verified on review \u00b7 Evidence \u00b7 p. 7\n\nSource remuneration can include taxable benefits and other payments."
+        }
+      ]
+    },
+    {
+      "id": "old-alias-urls-click-through-to-reviewed-histories",
+      "width": 1280,
+      "status": "PASS",
+      "seconds": 3.63,
+      "evidence": [
+        {
+          "aliasKey": "mittleman|robert",
+          "canonicalKey": "mittelman|robert",
+          "heading": "Robert Mittelman",
+          "clicked": true
+        },
+        {
+          "aliasKey": "perstrom|shannon",
+          "canonicalKey": "perlstrom|shannon",
+          "heading": "Shannon Perlstrom",
+          "clicked": true
+        },
+        {
+          "aliasKey": "stuartclare|pat",
+          "canonicalKey": "stuartclarke|pat",
+          "heading": "Pat Stuart-Clarke",
+          "clicked": true
+        },
+        {
+          "aliasKey": "comelis|suzanne",
+          "canonicalKey": "cornelis|suzanne",
+          "heading": "Suzanne Cornelis",
+          "clicked": true
+        },
+        {
+          "aliasKey": "thome|sandra",
+          "canonicalKey": "thorne|sandra",
+          "heading": "Sandra Thorne",
+          "clicked": true
+        }
+      ]
+    },
+    {
+      "id": "cmbc-new-legal-employer-calendar-2025-both-layouts",
+      "width": 1280,
+      "status": "PASS",
+      "seconds": 1.07,
+      "evidence": [
+        {
+          "heading": "Coast Mountain Bus Company Ltd.",
+          "records": 4340,
+          "layout": "cards",
+          "sourceLinks": [
+            "https://www.translink.ca/-/media/translink/documents/about-translink/corporate-reports/translink_employee_remuneration/2025-financial-information-act-filing-and-remuneration-report.pdf"
+          ]
+        },
+        {
+          "heading": "Coast Mountain Bus Company Ltd.",
+          "records": 4340,
+          "layout": "table",
+          "sourceLinks": [
+            "https://www.translink.ca/-/media/translink/documents/about-translink/corporate-reports/translink_employee_remuneration/2025-financial-information-act-filing-and-remuneration-report.pdf"
+          ],
+          "screenshot": "1280-cmbc-2025-table.png"
+        }
+      ]
+    },
+    {
+      "id": "cmbc-calendar-2024-stays-held-without-official-rows",
+      "width": 1280,
+      "status": "PASS",
+      "seconds": 0.51,
+      "evidence": {
+        "year": 2024,
+        "noEmployeeRecordsOrCountTiles": true,
+        "displayedText": "\u2190 Salaries\nCoast Mountain Bus Company Ltd.\n\nCrown corporations\n\n2002\n2003\n2004\n2005\n2006\n2007\n2008\n2009\n2010\n2011\n2012\n2013\n2014\n2015\n2016\n2017\n2018\n2019\n2020\n2021\n2022\n2023\n2024\n2025\n2024 (calendar year)\n\nEmployee remuneration disclosure \u00b7 reporting period not verified \u00b7 no source document attached\n\nThese records are held for review because source checks have not passed. That does not mean it had no staff or made no payments."
+      }
+    },
+    {
+      "id": "transit-police-sector-and-official-2025-both-layouts",
+      "width": 1280,
+      "status": "PASS",
+      "seconds": 1.11,
+      "evidence": [
+        {
+          "heading": "Transit police",
+          "records": 266,
+          "layout": "cards",
+          "sourceLinks": [
+            "https://www.translink.ca/-/media/translink/documents/about-translink/corporate-reports/translink_employee_remuneration/2025-financial-information-act-filing-and-remuneration-report.pdf"
+          ],
+          "sector": "Municipal police \u00b7 also filed as \u201cTransit Police\u201d"
+        },
+        {
+          "heading": "Transit police",
+          "records": 266,
+          "layout": "table",
+          "sourceLinks": [
+            "https://www.translink.ca/-/media/translink/documents/about-translink/corporate-reports/translink_employee_remuneration/2025-financial-information-act-filing-and-remuneration-report.pdf"
+          ],
+          "sector": "Municipal police \u00b7 also filed as \u201cTransit Police\u201d",
+          "screenshot": "1280-transit-police-2025-table.png"
+        }
+      ]
+    },
+    {
+      "id": "worksafebc-new-calendar-2025-both-layouts",
+      "width": 1280,
+      "status": "PASS",
+      "seconds": 1.04,
+      "evidence": [
+        {
+          "heading": "Worksafe B.C.",
+          "records": 3142,
+          "layout": "cards",
+          "sourceLinks": [
+            "https://www.worksafebc.com/en/resources/about-us/statements-of-financial-information/2025-statement-financial-information?lang=en"
+          ]
+        },
+        {
+          "heading": "Worksafe B.C.",
+          "records": 3142,
+          "layout": "table",
+          "sourceLinks": [
+            "https://www.worksafebc.com/en/resources/about-us/statements-of-financial-information/2025-statement-financial-information?lang=en"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "pittman-usd-history-cad-comparison-and-old-url",
+      "width": 1280,
+      "status": "PASS",
+      "seconds": 1.31,
+      "evidence": {
+        "foreignAmount": "US$3,902,330",
+        "highestCad": "$1,512,762",
+        "currencyEvidenceLinks": [
+          "https://www.bci.ca/wp-content/uploads/2018/01/2023-2024-corporate-annual-report_financial-statements-1.pdf#page=67",
+          "https://www.bci.ca/wp-content/uploads/2018/01/2023-2024-corporate-annual-report_financial-statements-1.pdf#page=92",
+          "https://www.bci.ca/wp-content/uploads/2018/01/2023-2024-corporate-annual-report_financial-statements-1.pdf#page=67",
+          "https://www.bci.ca/wp-content/uploads/2018/01/2023-2024-corporate-annual-report_financial-statements-1.pdf#page=92",
+          "https://www.bci.ca/wp-content/uploads/2018/01/2023-2024-corporate-annual-report_financial-statements-1.pdf#page=67",
+          "https://www.bci.ca/wp-content/uploads/2018/01/2023-2024-corporate-annual-report_financial-statements-1.pdf#page=92"
+        ],
+        "oldPittmsnUrlClickThrough": true
+      }
+    },
+    {
+      "id": "pittman-foreign-amount-unranked-both-layouts",
+      "width": 1280,
+      "status": "PASS",
+      "seconds": 1.1,
+      "evidence": [
+        {
+          "layout": "cards",
+          "otherCurrenciesText": "Other currencies \u00b7 unranked\nJim Pittman\nExecutive Vice President\nB.C. Investment Management Corporation (BCI)\nAlso disclosed as Jim Pittmsn\nUS$3,902,330\nUnranked \u00b7 2023/24",
+          "numericRankAbsent": true,
+          "foreignAmountAbsentFromCadRanking": true
+        },
+        {
+          "layout": "table",
+          "otherCurrenciesText": "Other currencies \u00b7 unranked\nJim Pittman\nExecutive Vice President\nB.C. Investment Management Corporation (BCI)\nAlso disclosed as Jim Pittmsn\nUS$3,902,330\nUnranked \u00b7 2023/24",
+          "numericRankAbsent": true,
+          "foreignAmountAbsentFromCadRanking": true,
+          "screenshot": "1280-pittman-other-currencies-unranked.png"
+        }
+      ]
+    },
+    {
+      "id": "responsive-controls-search-and-horizontal-overflow",
+      "width": 1280,
+      "status": "PASS",
+      "seconds": 0.85,
+      "evidence": {
+        "desktopSearchFindsReviewedPerlstrom": true,
+        "checkedRoutesWithoutHorizontalOverflow": 21
+      }
+    }
+  ],
+  "screenshots": [
+    {
+      "width": 375,
+      "file": "375-rru-mittelman-history.png",
+      "url": "http://127.0.0.1:4193/PofBC/?view=salaries&person=mittelman%7Crobert&person-at=royal-roads-university",
+      "sha256": "2effa226a78a963adf7ed3e2fce1e29b451adc13d5dd7896b2f948a66066aa03"
+    },
+    {
+      "width": 375,
+      "file": "375-cnc-stuart-null-and-zero.png",
+      "url": "http://127.0.0.1:4193/PofBC/?view=salaries&person=stuartclarke%7Cpat&person-at=college-of-new-caledonia",
+      "sha256": "a5c86228e3baaba57301ea00850ee6b6f677fe67867d47413704863c5a65b10d"
+    },
+    {
+      "width": 375,
+      "file": "375-cnc-cornelis-evidence.png",
+      "url": "http://127.0.0.1:4193/PofBC/?view=salaries&person=cornelis%7Csuzanne&person-at=college-of-new-caledonia",
+      "sha256": "87fa2dc56852be10112ad53295ae640c2b072bba929922b0f6777fa6feee9699"
+    },
+    {
+      "width": 375,
+      "file": "375-cnc-thorne-evidence.png",
+      "url": "http://127.0.0.1:4193/PofBC/?view=salaries&person=thorne%7Csandra&person-at=college-of-new-caledonia",
+      "sha256": "de3d164f8e4f46c6ba39ddbc07953ed789cf7222cccc1379a8b27aabbb1f2491"
+    },
+    {
+      "width": 375,
+      "file": "375-cmbc-2025-cards.png",
+      "url": "http://127.0.0.1:4193/PofBC/?view=salaries&employer=coast-mountain-bus-company&show=people&layout=cards&employer-year=2025",
+      "sha256": "8624c70b086a11b1431bce2b16707d6fd872ba9f1af06cc539d629f8a8a5b488"
+    },
+    {
+      "width": 375,
+      "file": "375-cmbc-2024-held.png",
+      "url": "http://127.0.0.1:4193/PofBC/?view=salaries&employer=coast-mountain-bus-company&show=people&employer-year=2024",
+      "sha256": "80583d2ef2c371f03385ece788344d965d1f606a988af8fe73342a75688a322b"
+    },
+    {
+      "width": 375,
+      "file": "375-worksafe-2025-table.png",
+      "url": "http://127.0.0.1:4193/PofBC/?view=salaries&employer=workers-compensation-board&show=people&layout=table&employer-year=2025",
+      "sha256": "4fa6e9fe22872569073b09f31afbae01fc88392c75934c8cef4240df51b24b5f"
+    },
+    {
+      "width": 375,
+      "file": "375-pittman-currency-history.png",
+      "url": "http://127.0.0.1:4193/PofBC/?view=salaries&person=pittman%7Cjim&person-at=bc-investment-management-corporation",
+      "sha256": "1d826692c1fc5ac06c50a58f39b9129b2feaa64091504af84673466f20a6eeb5"
+    },
+    {
+      "width": 375,
+      "file": "375-mobile-filter-dialog.png",
+      "url": "http://127.0.0.1:4193/PofBC/?view=salaries&browse=people",
+      "sha256": "c606e842b026b6be2c214e845d816af13b1ffe35afa7c41981b7cc0e97640ef3"
+    },
+    {
+      "width": 1280,
+      "file": "1280-rru-mittelman-history.png",
+      "url": "http://127.0.0.1:4193/PofBC/?view=salaries&person=mittelman%7Crobert&person-at=royal-roads-university",
+      "sha256": "2fb69639e293ce5bbe35928fddef969ac783f54d0d6173f454857b5696be1413"
+    },
+    {
+      "width": 1280,
+      "file": "1280-cnc-perlstrom-evidence.png",
+      "url": "http://127.0.0.1:4193/PofBC/?view=salaries&person=perlstrom%7Cshannon&person-at=college-of-new-caledonia",
+      "sha256": "bdc304b7b5b2a3888bd4ec049cd004e0fdeee3d82e3e2351eab581cf791c3e71"
+    },
+    {
+      "width": 1280,
+      "file": "1280-cmbc-2025-table.png",
+      "url": "http://127.0.0.1:4193/PofBC/?view=salaries&employer=coast-mountain-bus-company&show=people&layout=table&employer-year=2025",
+      "sha256": "50fda1cb8f99b9d655bf7c7bd78391679e3baa2f9b1e33ba7fda9181d99596ed"
+    },
+    {
+      "width": 1280,
+      "file": "1280-transit-police-2025-table.png",
+      "url": "http://127.0.0.1:4193/PofBC/?view=salaries&employer=transit-police&show=people&layout=table&employer-year=2025",
+      "sha256": "531394bbcc0b3c0bfafd8e9eb9601dd39ec8e7bb16012728d3f0f02c88bcf3b1"
+    },
+    {
+      "width": 1280,
+      "file": "1280-pittman-other-currencies-unranked.png",
+      "url": "http://127.0.0.1:4193/PofBC/?view=salaries&browse=people&layout=table&salary-year=2023%2F24&salary-sector=Crown+corporations",
+      "sha256": "f7fbb2b7a1c55403baa4e27be743671e101127ba1cbc893d2c3ac53fc4200ed5"
+    }
+  ],
+  "browserErrors": [],
+  "consoleErrors": [],
+  "httpFailures": [],
+  "overflowObservations": [
+    {
+      "width": 375,
+      "view": "Robert Mittelman",
+      "viewport": 375,
+      "document": 360,
+      "body": 360
+    },
+    {
+      "width": 375,
+      "view": "Shannon Perlstrom",
+      "viewport": 375,
+      "document": 360,
+      "body": 360
+    },
+    {
+      "width": 375,
+      "view": "Pat Stuart-Clarke",
+      "viewport": 375,
+      "document": 360,
+      "body": 360
+    },
+    {
+      "width": 375,
+      "view": "Suzanne Cornelis",
+      "viewport": 375,
+      "document": 360,
+      "body": 360
+    },
+    {
+      "width": 375,
+      "view": "Sandra Thorne",
+      "viewport": 375,
+      "document": 360,
+      "body": 360
+    },
+    {
+      "width": 375,
+      "view": "alias-mittleman|robert",
+      "viewport": 375,
+      "document": 360,
+      "body": 360
+    },
+    {
+      "width": 375,
+      "view": "alias-perstrom|shannon",
+      "viewport": 375,
+      "document": 360,
+      "body": 360
+    },
+    {
+      "width": 375,
+      "view": "alias-stuartclare|pat",
+      "viewport": 375,
+      "document": 360,
+      "body": 360
+    },
+    {
+      "width": 375,
+      "view": "alias-comelis|suzanne",
+      "viewport": 375,
+      "document": 360,
+      "body": 360
+    },
+    {
+      "width": 375,
+      "view": "alias-thome|sandra",
+      "viewport": 375,
+      "document": 360,
+      "body": 360
+    },
+    {
+      "width": 375,
+      "view": "coast-mountain-bus-company-2025-cards",
+      "viewport": 375,
+      "document": 360,
+      "body": 360
+    },
+    {
+      "width": 375,
+      "view": "coast-mountain-bus-company-2025-table",
+      "viewport": 375,
+      "document": 360,
+      "body": 360
+    },
+    {
+      "width": 375,
+      "view": "cmbc-held-2024",
+      "viewport": 375,
+      "document": 360,
+      "body": 360
+    },
+    {
+      "width": 375,
+      "view": "transit-police-2025-cards",
+      "viewport": 375,
+      "document": 360,
+      "body": 360
+    },
+    {
+      "width": 375,
+      "view": "transit-police-2025-table",
+      "viewport": 375,
+      "document": 360,
+      "body": 360
+    },
+    {
+      "width": 375,
+      "view": "workers-compensation-board-2025-cards",
+      "viewport": 375,
+      "document": 360,
+      "body": 360
+    },
+    {
+      "width": 375,
+      "view": "workers-compensation-board-2025-table",
+      "viewport": 375,
+      "document": 360,
+      "body": 360
+    },
+    {
+      "width": 375,
+      "view": "pittman-currency-history",
+      "viewport": 375,
+      "document": 360,
+      "body": 360
+    },
+    {
+      "width": 375,
+      "view": "foreign-currency-cards",
+      "viewport": 375,
+      "document": 360,
+      "body": 360
+    },
+    {
+      "width": 375,
+      "view": "foreign-currency-table",
+      "viewport": 375,
+      "document": 360,
+      "body": 360
+    },
+    {
+      "width": 375,
+      "view": "mobile-filter-dialog",
+      "viewport": 375,
+      "document": 360,
+      "body": 360
+    },
+    {
+      "width": 375,
+      "view": "final-responsive-controls",
+      "viewport": 375,
+      "document": 360,
+      "body": 360
+    },
+    {
+      "width": 1280,
+      "view": "Robert Mittelman",
+      "viewport": 1280,
+      "document": 1265,
+      "body": 1265
+    },
+    {
+      "width": 1280,
+      "view": "Shannon Perlstrom",
+      "viewport": 1280,
+      "document": 1265,
+      "body": 1265
+    },
+    {
+      "width": 1280,
+      "view": "Pat Stuart-Clarke",
+      "viewport": 1280,
+      "document": 1265,
+      "body": 1265
+    },
+    {
+      "width": 1280,
+      "view": "Suzanne Cornelis",
+      "viewport": 1280,
+      "document": 1265,
+      "body": 1265
+    },
+    {
+      "width": 1280,
+      "view": "Sandra Thorne",
+      "viewport": 1280,
+      "document": 1265,
+      "body": 1265
+    },
+    {
+      "width": 1280,
+      "view": "alias-mittleman|robert",
+      "viewport": 1280,
+      "document": 1265,
+      "body": 1265
+    },
+    {
+      "width": 1280,
+      "view": "alias-perstrom|shannon",
+      "viewport": 1280,
+      "document": 1265,
+      "body": 1265
+    },
+    {
+      "width": 1280,
+      "view": "alias-stuartclare|pat",
+      "viewport": 1280,
+      "document": 1265,
+      "body": 1265
+    },
+    {
+      "width": 1280,
+      "view": "alias-comelis|suzanne",
+      "viewport": 1280,
+      "document": 1265,
+      "body": 1265
+    },
+    {
+      "width": 1280,
+      "view": "alias-thome|sandra",
+      "viewport": 1280,
+      "document": 1265,
+      "body": 1265
+    },
+    {
+      "width": 1280,
+      "view": "coast-mountain-bus-company-2025-cards",
+      "viewport": 1280,
+      "document": 1265,
+      "body": 1265
+    },
+    {
+      "width": 1280,
+      "view": "coast-mountain-bus-company-2025-table",
+      "viewport": 1280,
+      "document": 1265,
+      "body": 1265
+    },
+    {
+      "width": 1280,
+      "view": "cmbc-held-2024",
+      "viewport": 1280,
+      "document": 1265,
+      "body": 1265
+    },
+    {
+      "width": 1280,
+      "view": "transit-police-2025-cards",
+      "viewport": 1280,
+      "document": 1265,
+      "body": 1265
+    },
+    {
+      "width": 1280,
+      "view": "transit-police-2025-table",
+      "viewport": 1280,
+      "document": 1265,
+      "body": 1265
+    },
+    {
+      "width": 1280,
+      "view": "workers-compensation-board-2025-cards",
+      "viewport": 1280,
+      "document": 1265,
+      "body": 1265
+    },
+    {
+      "width": 1280,
+      "view": "workers-compensation-board-2025-table",
+      "viewport": 1280,
+      "document": 1265,
+      "body": 1265
+    },
+    {
+      "width": 1280,
+      "view": "pittman-currency-history",
+      "viewport": 1280,
+      "document": 1265,
+      "body": 1265
+    },
+    {
+      "width": 1280,
+      "view": "foreign-currency-cards",
+      "viewport": 1280,
+      "document": 1265,
+      "body": 1265
+    },
+    {
+      "width": 1280,
+      "view": "foreign-currency-table",
+      "viewport": 1280,
+      "document": 1265,
+      "body": 1265
+    },
+    {
+      "width": 1280,
+      "view": "final-responsive-controls",
+      "viewport": 1280,
+      "document": 1265,
+      "body": 1265
+    }
+  ],
+  "scope": "Final full-site build, local HTTP. Read-only browser/data requests; no app edits.",
+  "browserVersion": "154.0.8037.57",
+  "incidentalBrowserRequests": {
+    "faviconHttpResponses": [],
+    "faviconConsoleMessages": [
+      {
+        "width": 375,
+        "text": "Failed to load resource: the server responded with a status of 404 (File not found)",
+        "location": {
+          "url": "http://127.0.0.1:4193/favicon.ico",
+          "line": 0,
+          "column": 0,
+          "lineNumber": 0,
+          "columnNumber": 0
+        }
+      }
+    ],
+    "note": "Browser-default favicon request is outside the /PofBC/ project base; tracked separately from application requests and JavaScript execution errors."
+  },
+  "status": "PASS",
+  "finishedOn": "2026-11-02T23:12:58Z",
+  "summary": {
+    "checks": 25,
+    "passed": 25,
+    "failed": 0,
+    "screenshots": 14,
+    "javascriptErrors": 0,
+    "consoleErrors": 0,
+    "localHttpFailures": 0,
+    "viewportWidths": [
+      375,
+      1280
+    ]
+  }
+}

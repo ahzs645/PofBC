@@ -1,0 +1,159 @@
+{
+  "version": 1,
+  "sourceId": "follow-through-bcib-2022-23-employees",
+  "leadId": "additional-source-bcib-2022-23",
+  "sourceUrl": "https://bcib.ca/wp-content/uploads/BCIB-SOFI-2023.pdf",
+  "sourceIndexUrl": "https://bcib.ca/reporting-resources/",
+  "checkedOn": "2026-11-02",
+  "originalSha256": "6e08d38733ed1f9c07b30dd7679332edca9db67541197b9350ee6dc13735bfb4",
+  "originalBytes": 2906431,
+  "originalPdfPageCount": 35,
+  "period": {
+    "start": "2022-04-01",
+    "end": "2023-03-31",
+    "partial": false,
+    "evidence": "Original schedule year-ended header; first BCFSA schedule explicitly gives commencement date and period end."
+  },
+  "employeePhysicalPages": [
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31
+  ],
+  "retainedSourceEvidencePages": [
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32
+  ],
+  "readerNames": [
+    "PyMuPDF positioned words",
+    "Poppler pdftotext -layout"
+  ],
+  "primaryRowCount": 558,
+  "independentRowCount": 558,
+  "everyRowFieldMultisetEqual": true,
+  "primaryNormalizedSha256": "3cb2b48aa22a9a2a4726e4d8a3fa4fdb9788935590dd26a7d478e5d68597d546",
+  "independentRowMultisetSha256": "3542e824cdcbb39fe66e4017384de13fa333e499ca6fa9a674b16014380ee09f",
+  "pageControls": [
+    {
+      "physicalPage": 25,
+      "rowCount": 88,
+      "remuneration": 10909989,
+      "expenses": 423967
+    },
+    {
+      "physicalPage": 26,
+      "rowCount": 94,
+      "remuneration": 11444926,
+      "expenses": 714014
+    },
+    {
+      "physicalPage": 27,
+      "rowCount": 94,
+      "remuneration": 11107685,
+      "expenses": 612070
+    },
+    {
+      "physicalPage": 28,
+      "rowCount": 94,
+      "remuneration": 11124832,
+      "expenses": 651979
+    },
+    {
+      "physicalPage": 29,
+      "rowCount": 94,
+      "remuneration": 11913402,
+      "expenses": 759993
+    },
+    {
+      "physicalPage": 30,
+      "rowCount": 84,
+      "remuneration": 11138521,
+      "expenses": 675549
+    },
+    {
+      "physicalPage": 31,
+      "rowCount": 10,
+      "remuneration": 1189423,
+      "expenses": 43060
+    }
+  ],
+  "controls": {
+    "physicalPage": 31,
+    "printedTotalEmployees": [
+      109993844,
+      5878482
+    ],
+    "printedBelowThreshold": [
+      41165068,
+      1997852
+    ],
+    "printedDirectNamedSubtotal": null,
+    "impliedNamedControl": [
+      68828776,
+      3880630
+    ],
+    "observedAllNamedRows": [
+      68828778,
+      3880632
+    ],
+    "residualNamedMinusImplied": [
+      2,
+      2
+    ],
+    "residualNamedMinusDirect": null,
+    "units": "CAD whole dollars",
+    "residualCause": "Unknown; preserved as printed."
+  },
+  "physicalPagesVisuallyReviewed": [
+    25,
+    31
+  ],
+  "sourceRowReview": "Every native employee row compared field-for-field between independent PDF readers; source-pixel review of printed control totals and ambiguous glyph/layout cases. Every scan employee row and control additionally visually reviewed.",
+  "explicitZeroExpenseRows": 0,
+  "nullExpenseRows": 385,
+  "negativeExpenseRows": [],
+  "repeatedDisclosedNames": {
+    "Hassan, AM": 2,
+    "Tanner, A": 2
+  },
+  "exactDuplicateSixFieldRows": 0,
+  "excludedScopes": [
+    "board-director-remuneration",
+    "suppliers",
+    "below-threshold-aggregate",
+    "reconciliation-adjustments",
+    "employer-tax-benefit-aggregates"
+  ],
+  "remunerationDefinitionVerbatim": "Note 1: Remuneration includes base salary and other compensation for 2022/23.",
+  "severanceCompensationDefinitionContext": null,
+  "publicWarning": "Published named rows sum to $68,828,778 remuneration and $3,880,632 expenses, differing from the printed total less below-threshold controls by +$2 and +$2. Original row values are retained; causes unknown.",
+  "rawEvidenceFiles": [
+    {
+      "file": "evidence/bcib-2022-23.layout.txt",
+      "sha256": "91fcda583df88a7635ce70a19fad54630f14a97b9b04d0c926e1eabb5f7698d7"
+    },
+    {
+      "file": "evidence/bcib-2022-23.words.json.gzip",
+      "sha256": "2f2a418331a6266c0d70175b1af9a652e6b4f516ebd44b027e7125944dd59b4f"
+    },
+    {
+      "file": "evidence/bcib-2022-23-bandila.png",
+      "sha256": "088a9b7f58b99fecdfceeb53cfb8a60f0bea3d5823c530f5e53e88b3f90ed09c"
+    },
+    {
+      "file": "evidence/bcib-2022-23.controls.png",
+      "sha256": "aef7a1dadea87c020aca11a89debbd8e34521271afe04d7e59220cc42c15d24e"
+    }
+  ],
+  "glyphReview": "Bandila, l: the source encodes the initial as lowercase l; both independent text readers agree and the printed glyph was inspected. No expansion or case inference is made."
+}

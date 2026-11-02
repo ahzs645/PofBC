@@ -1,0 +1,614 @@
+{
+  "schemaVersion": 1,
+  "checkedOn": "2026-11-02",
+  "baselineCommit": "2058e825f643641862792706f100ec425c1f705b",
+  "observations": {
+    "priorObservationsPreserved": 1385021,
+    "officialRecords": 1157138,
+    "compiledRecords": 228364,
+    "records": 1385502,
+    "addedObservations": 481,
+    "addedSourceGroups": 2
+  },
+  "acceptedSources": [
+    {
+      "sourceId": "cnc-sofi-2020-21-employees",
+      "employerSlug": "college-of-new-caledonia",
+      "year": "2020/21",
+      "rows": 258,
+      "sourceSha256": "2140a55a0289cf9f2d96f7c541545ce3932dc8612e05536be597af33fa94c1a5",
+      "dataSha256": "d0598e2cf1613144ead367527c88de460b5276763cc2996f32578cd23cdb179f",
+      "manifestSha256": "0a638a5a194fbd7761c20977a163cab08a67e2da6c19f116b1237a486b280d52",
+      "remuneration": 25302809,
+      "disclosedExpenses": 184800,
+      "missingExpenses": 138,
+      "explicitZeroExpenses": 0,
+      "printedControlResiduals": [
+        -24,
+        1
+      ]
+    },
+    {
+      "sourceId": "rru-sofi-2021-22-employees",
+      "employerSlug": "royal-roads-university",
+      "year": "2021/22",
+      "rows": 223,
+      "sourceSha256": "ca0634bec6ffece72903f8dcfb622a6b082526afaf955fadebc80d910ace2258",
+      "dataSha256": "dbe457690fb3950f6267205ff71df354877c8ad13d12bfbd4c2c7cc0009ebb0c",
+      "manifestSha256": "8f24d3410ecc88da84fdd58cd2f13e95bdebf6632cddd7fbd0a0c7eeea61c00d",
+      "remuneration": 25258361,
+      "disclosedExpenses": 273994,
+      "missingExpenses": 107,
+      "explicitZeroExpenses": 1,
+      "printedControlResiduals": [
+        -4,
+        2
+      ]
+    }
+  ],
+  "nameConnections": {
+    "priorGroupsPreserved": 22598,
+    "priorPublishedRelationshipsPreserved": 24451,
+    "priorVerifiedLocalRelationshipsPreserved": 1581,
+    "liveGroups": 22609,
+    "newVerifiedLocalRelationships": 11,
+    "newVerifiedCandidateIds": [
+      396,
+      414,
+      927,
+      1013,
+      1710,
+      1800,
+      2075,
+      2202,
+      2675,
+      3059,
+      3268
+    ],
+    "newLikelyRelationships": []
+  },
+  "heldPairs": {
+    "pairsAssessed": 3173,
+    "outcomes": {
+      "connected-likely": 25,
+      "connected-verified": 141,
+      "kept-separate-after-professional-review": 3,
+      "related-spelling-corrected-pair-unconfirmed": 28,
+      "unconfirmed-keep-separate": 2976
+    },
+    "remainingUnconfirmedPairs": 3007,
+    "changedCandidates": [
+      396,
+      414,
+      927,
+      1013,
+      1710,
+      1800,
+      2075,
+      2202,
+      2675,
+      3059,
+      3268
+    ],
+    "originalAssessmentSha256": "3e8b1444d68a9e2ad9baaa14e04ea256ad27365340bdf2d83d96f88c2a2040f0"
+  },
+  "additionalHeldPairs": {
+    "pairs": 1,
+    "decisions": [
+      {
+        "employer": "royal-roads-university",
+        "names": [
+          "Funk, Scot",
+          "Funk, Scott"
+        ],
+        "outcome": "kept-separate-pending-individual-review",
+        "reason": "The new 2021/22 original row and the unverified 2020/21 compiled observation have the same remuneration and missing expenses. This plausible source-copy correction is outside the eleven individually reviewed spelling receipts. Keep the spellings separate pending an individual original-row and cohort-uniqueness review; do not infer the reporting period from the compilation label."
+      }
+    ],
+    "receiptSha256": "9290147e81a3588df821ac72d81ee6bf028452b74163da166c239299173b3616",
+    "separateFromOriginalHeldQueue": true
+  },
+  "sourceBacklog": {
+    "earlierEntriesPreserved": 73,
+    "newDocumentEntries": 61,
+    "importedDocuments": 2,
+    "pendingEmployeeDocuments": 59,
+    "employersWithNewDocuments": 10,
+    "pendingByEmployer": {
+      "bc-financial-services-authority": 7,
+      "bc-infrastructure-benefits": 6,
+      "bc-pavilion-corporation": 1,
+      "college-of-new-caledonia": 6,
+      "community-living-bc": 20,
+      "langara-college": 3,
+      "royal-roads-university": 4,
+      "translink": 6,
+      "university-of-victoria": 3,
+      "workers-compensation-board": 3
+    },
+    "pendingByScope": {
+      "employee-and-board-remuneration": 49,
+      "employee-remuneration": 4,
+      "mixed-parent-subsidiaries-board-executives": 6
+    },
+    "normalizedDocumentUrlsNovel": true,
+    "pendingDocuments": [
+      {
+        "id": "additional-source-cnc-2018-19",
+        "employer": "college-of-new-caledonia",
+        "year": "2018/19",
+        "scope": "employee-and-board-remuneration",
+        "status": "requires-ocr",
+        "url": "https://cnc.bc.ca/docs/public/governance/budgets---financial-statements/statement-of-financial-information/sofi-report-2018-19.pdf?sfvrsn=22935f48_1"
+      },
+      {
+        "id": "additional-source-cnc-2019-20",
+        "employer": "college-of-new-caledonia",
+        "year": "2019/20",
+        "scope": "employee-and-board-remuneration",
+        "status": "requires-ocr",
+        "url": "https://cnc.bc.ca/docs/public/governance/budgets---financial-statements/statement-of-financial-information/sofi-report-2019-20.pdf?sfvrsn=742e8937_1"
+      },
+      {
+        "id": "additional-source-cnc-2021-22",
+        "employer": "college-of-new-caledonia",
+        "year": "2021/22",
+        "scope": "employee-and-board-remuneration",
+        "status": "requires-ocr",
+        "url": "https://cnc.bc.ca/docs/public/governance/budgets---financial-statements/statement-of-financial-information/sofi-report-2021-22.pdf?sfvrsn=43c3c8b0_1"
+      },
+      {
+        "id": "additional-source-cnc-2022-23",
+        "employer": "college-of-new-caledonia",
+        "year": "2022/23",
+        "scope": "employee-and-board-remuneration",
+        "status": "requires-ocr",
+        "url": "https://cnc.bc.ca/docs/public/governance/budgets---financial-statements/statement-of-financial-information/sofi-report-2022-23.pdf?sfvrsn=c9b36c88_1"
+      },
+      {
+        "id": "additional-source-cnc-2023-24",
+        "employer": "college-of-new-caledonia",
+        "year": "2023/24",
+        "scope": "employee-and-board-remuneration",
+        "status": "requires-ocr",
+        "url": "https://cnc.bc.ca/docs/public/governance/budgets---financial-statements/statement-of-financial-information/sofi-report-2023-24.pdf?sfvrsn=5c81c9b5_1"
+      },
+      {
+        "id": "additional-source-cnc-2024-25",
+        "employer": "college-of-new-caledonia",
+        "year": "2024/25",
+        "scope": "employee-and-board-remuneration",
+        "status": "requires-ocr",
+        "url": "https://cnc.bc.ca/docs/public/governance/budgets---financial-statements/statement-of-financial-information/sofi-report-2024-2025.pdf?sfvrsn=629edc16_1"
+      },
+      {
+        "id": "additional-source-translink-2025",
+        "employer": "translink",
+        "year": "2025",
+        "scope": "mixed-parent-subsidiaries-board-executives",
+        "status": "source-found-awaiting-extraction",
+        "url": "https://www.translink.ca/-/media/translink/documents/about-translink/corporate-reports/translink_employee_remuneration/2025-financial-information-act-filing-and-remuneration-report.pdf"
+      },
+      {
+        "id": "additional-source-translink-2024",
+        "employer": "translink",
+        "year": "2024",
+        "scope": "mixed-parent-subsidiaries-board-executives",
+        "status": "source-found-awaiting-extraction",
+        "url": "https://www.translink.ca/-/media/translink/documents/about-translink/corporate-reports/translink_employee_remuneration/2024-financial-information-act-filing-and-remuneration-report.pdf"
+      },
+      {
+        "id": "additional-source-translink-2023",
+        "employer": "translink",
+        "year": "2023",
+        "scope": "mixed-parent-subsidiaries-board-executives",
+        "status": "source-found-awaiting-extraction",
+        "url": "https://www.translink.ca/-/media/translink/documents/about-translink/corporate-reports/translink_employee_remuneration/2023-financial-information-act-filing-and-remuneration-report.pdf"
+      },
+      {
+        "id": "additional-source-translink-2022",
+        "employer": "translink",
+        "year": "2022",
+        "scope": "mixed-parent-subsidiaries-board-executives",
+        "status": "source-found-awaiting-extraction",
+        "url": "https://www.translink.ca/-/media/translink/documents/about-translink/corporate-reports/translink_employee_remuneration/2022_financial_information_act_filing_and_remuneration_report.pdf"
+      },
+      {
+        "id": "additional-source-translink-2021",
+        "employer": "translink",
+        "year": "2021",
+        "scope": "mixed-parent-subsidiaries-board-executives",
+        "status": "source-found-awaiting-extraction",
+        "url": "https://www.translink.ca/-/media/translink/documents/about-translink/corporate-reports/translink_employee_remuneration/2021_financial_information_act_filing_and_remuneration_report.pdf"
+      },
+      {
+        "id": "additional-source-translink-2020",
+        "employer": "translink",
+        "year": "2020",
+        "scope": "mixed-parent-subsidiaries-board-executives",
+        "status": "source-found-awaiting-extraction",
+        "url": "https://www.translink.ca/-/media/translink/documents/about-translink/corporate-reports/translink_employee_remuneration/2020_financial_information_act_filing_and_remuneration_report.pdf"
+      },
+      {
+        "id": "additional-source-langara-2024-25",
+        "employer": "langara-college",
+        "year": "2024/25",
+        "scope": "employee-and-board-remuneration",
+        "status": "source-found-awaiting-extraction",
+        "url": "https://langara.ca/media/15595/download?inline="
+      },
+      {
+        "id": "additional-source-langara-2023-24",
+        "employer": "langara-college",
+        "year": "2023/24",
+        "scope": "employee-and-board-remuneration",
+        "status": "source-found-awaiting-extraction",
+        "url": "https://langara.ca/sites/default/files/migrated/files/LC_FY24_SOFI.pdf"
+      },
+      {
+        "id": "additional-source-langara-2022-23",
+        "employer": "langara-college",
+        "year": "2022/23",
+        "scope": "employee-and-board-remuneration",
+        "status": "source-found-awaiting-extraction",
+        "url": "https://langara.ca/sites/default/files/migrated/files/LC_FY23_SOFI.pdf"
+      },
+      {
+        "id": "additional-source-bcfsa-2025-26",
+        "employer": "bc-financial-services-authority",
+        "year": "2025/26",
+        "scope": "employee-and-board-remuneration",
+        "status": "source-found-awaiting-extraction",
+        "url": "https://www.bcfsa.ca/media/4946/download"
+      },
+      {
+        "id": "additional-source-bcfsa-2024-25",
+        "employer": "bc-financial-services-authority",
+        "year": "2024/25",
+        "scope": "employee-and-board-remuneration",
+        "status": "source-found-awaiting-extraction",
+        "url": "https://www.bcfsa.ca/media/4308/download"
+      },
+      {
+        "id": "additional-source-bcfsa-2023-24",
+        "employer": "bc-financial-services-authority",
+        "year": "2023/24",
+        "scope": "employee-and-board-remuneration",
+        "status": "source-found-awaiting-extraction",
+        "url": "https://www.bcfsa.ca/media/3847/download"
+      },
+      {
+        "id": "additional-source-bcfsa-2022-23",
+        "employer": "bc-financial-services-authority",
+        "year": "2022/23",
+        "scope": "employee-and-board-remuneration",
+        "status": "source-found-awaiting-extraction",
+        "url": "https://www.bcfsa.ca/media/3558/download"
+      },
+      {
+        "id": "additional-source-bcfsa-2021-22",
+        "employer": "bc-financial-services-authority",
+        "year": "2021/22",
+        "scope": "employee-and-board-remuneration",
+        "status": "source-found-awaiting-extraction",
+        "url": "https://www.bcfsa.ca/media/3009/download"
+      },
+      {
+        "id": "additional-source-bcfsa-2020-21",
+        "employer": "bc-financial-services-authority",
+        "year": "2020/21",
+        "scope": "employee-and-board-remuneration",
+        "status": "requires-ocr",
+        "url": "https://www.bcfsa.ca/media/2657/download"
+      },
+      {
+        "id": "additional-source-bcfsa-2019-20",
+        "employer": "bc-financial-services-authority",
+        "year": "2019/20",
+        "scope": "employee-and-board-remuneration",
+        "status": "source-found-awaiting-extraction",
+        "url": "https://www.bcfsa.ca/media/39/download"
+      },
+      {
+        "id": "additional-source-pavco-2024-25",
+        "employer": "bc-pavilion-corporation",
+        "year": "2024/25",
+        "scope": "employee-and-board-remuneration",
+        "status": "source-found-awaiting-extraction",
+        "url": "https://www.bcpavco.com/pdfs/PavCo%20FY25%20FIA%20Report.pdf"
+      },
+      {
+        "id": "additional-source-clbc-2024-25",
+        "employer": "community-living-bc",
+        "year": "2024/25",
+        "scope": "employee-and-board-remuneration",
+        "status": "source-found-awaiting-extraction",
+        "url": "https://www.communitylivingbc.ca/wp-content/uploads/CLBC-FIA-Report-F25.pdf"
+      },
+      {
+        "id": "additional-source-clbc-2023-24",
+        "employer": "community-living-bc",
+        "year": "2023/24",
+        "scope": "employee-and-board-remuneration",
+        "status": "source-found-awaiting-extraction",
+        "url": "https://www.communitylivingbc.ca/wp-content/uploads/CLBC-Financial-Information-Act-Report-F24.pdf"
+      },
+      {
+        "id": "additional-source-clbc-2022-23",
+        "employer": "community-living-bc",
+        "year": "2022/23",
+        "scope": "employee-and-board-remuneration",
+        "status": "source-found-awaiting-extraction",
+        "url": "https://www.communitylivingbc.ca/wp-content/uploads/CLBC-Financial-Information-Act-Report-F23.pdf"
+      },
+      {
+        "id": "additional-source-clbc-2021-22",
+        "employer": "community-living-bc",
+        "year": "2021/22",
+        "scope": "employee-and-board-remuneration",
+        "status": "source-found-awaiting-extraction",
+        "url": "https://www.communitylivingbc.ca/wp-content/uploads/CLBC-Financial-Information-Act-Report-F22.pdf"
+      },
+      {
+        "id": "additional-source-clbc-2020-21",
+        "employer": "community-living-bc",
+        "year": "2020/21",
+        "scope": "employee-and-board-remuneration",
+        "status": "source-found-awaiting-extraction",
+        "url": "https://www.communitylivingbc.ca/wp-content/uploads/CLBC-Financial-Information-Act-Report-F21.pdf"
+      },
+      {
+        "id": "additional-source-clbc-2019-20",
+        "employer": "community-living-bc",
+        "year": "2019/20",
+        "scope": "employee-and-board-remuneration",
+        "status": "source-found-awaiting-extraction",
+        "url": "https://www.communitylivingbc.ca/wp-content/uploads/CLBC-FIA-Report-F20.pdf"
+      },
+      {
+        "id": "additional-source-clbc-2018-19",
+        "employer": "community-living-bc",
+        "year": "2018/19",
+        "scope": "employee-and-board-remuneration",
+        "status": "source-found-awaiting-extraction",
+        "url": "https://www.communitylivingbc.ca/wp-content/uploads/001_CLBC_FIA_-Report_-F19_signed_secured.pdf"
+      },
+      {
+        "id": "additional-source-clbc-2017-18",
+        "employer": "community-living-bc",
+        "year": "2017/18",
+        "scope": "employee-and-board-remuneration",
+        "status": "source-found-awaiting-extraction",
+        "url": "https://www.communitylivingbc.ca/wp-content/uploads/001-FIA-Report-F18-signed-secured.pdf"
+      },
+      {
+        "id": "additional-source-clbc-2016-17",
+        "employer": "community-living-bc",
+        "year": "2016/17",
+        "scope": "employee-and-board-remuneration",
+        "status": "source-found-awaiting-extraction",
+        "url": "https://www.communitylivingbc.ca/wp-content/uploads/2018/02/FIA-Report-F17-signed-secured.pdf"
+      },
+      {
+        "id": "additional-source-clbc-2015-16",
+        "employer": "community-living-bc",
+        "year": "2015/16",
+        "scope": "employee-and-board-remuneration",
+        "status": "source-found-awaiting-extraction",
+        "url": "https://www.communitylivingbc.ca/wp-content/uploads/2018/02/001-FIA-Report-F16-Final.pdf"
+      },
+      {
+        "id": "additional-source-clbc-2014-15",
+        "employer": "community-living-bc",
+        "year": "2014/15",
+        "scope": "employee-and-board-remuneration",
+        "status": "source-found-awaiting-extraction",
+        "url": "https://www.communitylivingbc.ca/wp-content/uploads/2018/02/3.-CLBC-FIA-Report-F15-Final-secured.pdf"
+      },
+      {
+        "id": "additional-source-clbc-2013-14",
+        "employer": "community-living-bc",
+        "year": "2013/14",
+        "scope": "employee-and-board-remuneration",
+        "status": "source-found-awaiting-extraction",
+        "url": "https://www.communitylivingbc.ca/wp-content/uploads/2018/02/CLBC-FIA-Report-2014.pdf"
+      },
+      {
+        "id": "additional-source-clbc-2012-13",
+        "employer": "community-living-bc",
+        "year": "2012/13",
+        "scope": "employee-and-board-remuneration",
+        "status": "source-found-awaiting-extraction",
+        "url": "https://www.communitylivingbc.ca/wp-content/uploads/2018/02/1b.-2013-FIA-Report-PDF-FINAL-V2.0.pdf"
+      },
+      {
+        "id": "additional-source-clbc-2011-12",
+        "employer": "community-living-bc",
+        "year": "2011/12",
+        "scope": "employee-and-board-remuneration",
+        "status": "source-found-awaiting-extraction",
+        "url": "https://www.communitylivingbc.ca/wp-content/uploads/2018/02/CLBC-2012-FIA-Report.pdf"
+      },
+      {
+        "id": "additional-source-clbc-2010-11",
+        "employer": "community-living-bc",
+        "year": "2010/11",
+        "scope": "employee-and-board-remuneration",
+        "status": "requires-ocr",
+        "url": "https://www.communitylivingbc.ca/wp-content/uploads/2018/02/CLBC-2011-FIA-Schedule-of-remuneration-and-expenses.pdf"
+      },
+      {
+        "id": "additional-source-clbc-2009-10",
+        "employer": "community-living-bc",
+        "year": "2009/10",
+        "scope": "employee-and-board-remuneration",
+        "status": "source-found-awaiting-extraction",
+        "url": "https://www.communitylivingbc.ca/wp-content/uploads/2018/02/CLBC-2010-FIA-Schedule-remuneration-and-expenses.pdf"
+      },
+      {
+        "id": "additional-source-clbc-2008-09",
+        "employer": "community-living-bc",
+        "year": "2008/09",
+        "scope": "employee-and-board-remuneration",
+        "status": "requires-ocr",
+        "url": "https://www.communitylivingbc.ca/wp-content/uploads/2018/02/CLBC2009FIA-Scheduleremunerationandexpenses.pdf"
+      },
+      {
+        "id": "additional-source-clbc-2007-08",
+        "employer": "community-living-bc",
+        "year": "2007/08",
+        "scope": "employee-and-board-remuneration",
+        "status": "source-found-awaiting-extraction",
+        "url": "https://www.communitylivingbc.ca/wp-content/uploads/2018/02/CLBC2008FIA-Scheduleremunerationandexpenses.pdf"
+      },
+      {
+        "id": "additional-source-clbc-2006-07",
+        "employer": "community-living-bc",
+        "year": "2006/07",
+        "scope": "employee-and-board-remuneration",
+        "status": "source-found-awaiting-extraction",
+        "url": "https://www.communitylivingbc.ca/wp-content/uploads/2018/02/2007_FIA_remuneration_expenses.pdf"
+      },
+      {
+        "id": "additional-source-clbc-2005-06",
+        "employer": "community-living-bc",
+        "year": "2005/06",
+        "scope": "employee-and-board-remuneration",
+        "status": "source-found-awaiting-extraction",
+        "url": "https://www.communitylivingbc.ca/wp-content/uploads/2018/02/2006_FIA_remuneration_expenses.pdf"
+      },
+      {
+        "id": "additional-source-worksafebc-2023",
+        "employer": "workers-compensation-board",
+        "year": "2023",
+        "scope": "employee-and-board-remuneration",
+        "status": "source-found-awaiting-extraction",
+        "url": "https://www.worksafebc.com/en/resources/about-us/statements-of-financial-information/2023-statement-financial-information?lang=en"
+      },
+      {
+        "id": "additional-source-worksafebc-2024",
+        "employer": "workers-compensation-board",
+        "year": "2024",
+        "scope": "employee-and-board-remuneration",
+        "status": "source-found-awaiting-extraction",
+        "url": "https://www.worksafebc.com/en/resources/about-us/statements-of-financial-information/2024-statement-financial-information?lang=en"
+      },
+      {
+        "id": "additional-source-worksafebc-2025",
+        "employer": "workers-compensation-board",
+        "year": "2025",
+        "scope": "employee-and-board-remuneration",
+        "status": "source-found-awaiting-extraction",
+        "url": "https://www.worksafebc.com/en/resources/about-us/statements-of-financial-information/2025-statement-financial-information?lang=en"
+      },
+      {
+        "id": "additional-source-uvic-2024-25",
+        "employer": "university-of-victoria",
+        "year": "2024/25",
+        "scope": "employee-and-board-remuneration",
+        "status": "source-found-awaiting-extraction",
+        "url": "https://www.uvic.ca/financialplanning/assets/docs/financial-reporting-docs/statement-of-financial-information-2024-25.pdf"
+      },
+      {
+        "id": "additional-source-uvic-2023-24",
+        "employer": "university-of-victoria",
+        "year": "2023/24",
+        "scope": "employee-and-board-remuneration",
+        "status": "source-found-awaiting-extraction",
+        "url": "https://www.uvic.ca/financialplanning/assets/docs/financial-reporting-docs/university-of-victoria-financial-information-act-year-ended-202324-statement-of-financial-information.pdf"
+      },
+      {
+        "id": "additional-source-uvic-2019-20",
+        "employer": "university-of-victoria",
+        "year": "2019/20",
+        "scope": "employee-and-board-remuneration",
+        "status": "source-found-awaiting-extraction",
+        "url": "https://www.uvic.ca/financialplanning/assets/docs/financial-reporting-docs/uvicfinancialstatements/FIA-2019-20.pdf"
+      },
+      {
+        "id": "additional-source-bcib-2024-25",
+        "employer": "bc-infrastructure-benefits",
+        "year": "2024/25",
+        "scope": "employee-and-board-remuneration",
+        "status": "source-found-awaiting-extraction",
+        "url": "https://bcib.ca/wp-content/uploads/BCIB-Statement-of-Financial-Information-FY2025.pdf"
+      },
+      {
+        "id": "additional-source-bcib-2023-24",
+        "employer": "bc-infrastructure-benefits",
+        "year": "2023/24",
+        "scope": "employee-and-board-remuneration",
+        "status": "source-found-awaiting-extraction",
+        "url": "https://bcib.ca/wp-content/uploads/BCIB-Statement-of-Financial-Information-FY2024-Board-Approved.pdf"
+      },
+      {
+        "id": "additional-source-bcib-2022-23",
+        "employer": "bc-infrastructure-benefits",
+        "year": "2022/23",
+        "scope": "employee-and-board-remuneration",
+        "status": "source-found-awaiting-extraction",
+        "url": "https://bcib.ca/wp-content/uploads/BCIB-SOFI-2023.pdf"
+      },
+      {
+        "id": "additional-source-bcib-2021-22",
+        "employer": "bc-infrastructure-benefits",
+        "year": "2021/22",
+        "scope": "employee-and-board-remuneration",
+        "status": "source-found-awaiting-extraction",
+        "url": "https://bcib.ca/wp-content/uploads/2023/05/BCIB-Statement-of-Financial-Information-2022-V2-Approved-by-the-Board-Sep-15-2022.pdf"
+      },
+      {
+        "id": "additional-source-bcib-2020-21",
+        "employer": "bc-infrastructure-benefits",
+        "year": "2020/21",
+        "scope": "employee-and-board-remuneration",
+        "status": "source-found-awaiting-extraction",
+        "url": "https://bcib.ca/wp-content/uploads/2023/05/2020-2021-bcib-statement-of-financial-information.pdf"
+      },
+      {
+        "id": "additional-source-bcib-2019-20",
+        "employer": "bc-infrastructure-benefits",
+        "year": "2019/20",
+        "scope": "employee-and-board-remuneration",
+        "status": "source-found-awaiting-extraction",
+        "url": "https://bcib.ca/wp-content/uploads/2023/05/BCIB-FP-2020-SOFI-20200924-Final.pdf"
+      },
+      {
+        "id": "additional-source-rru-2022-23",
+        "employer": "royal-roads-university",
+        "year": "2022/23",
+        "scope": "employee-remuneration",
+        "status": "source-found-awaiting-extraction",
+        "url": "https://www.royalroads.ca/sites/default/files/2023-09/2023-03-31_RRU-SOFI-FullySigned.pdf"
+      },
+      {
+        "id": "additional-source-rru-2023-24",
+        "employer": "royal-roads-university",
+        "year": "2023/24",
+        "scope": "employee-remuneration",
+        "status": "source-found-awaiting-extraction",
+        "url": "https://www.royalroads.ca/sites/default/files/2025-10/2024-03-31%20RRU%20SoFI-FIA_signed.pdf"
+      },
+      {
+        "id": "additional-source-rru-2024-25",
+        "employer": "royal-roads-university",
+        "year": "2024/25",
+        "scope": "employee-remuneration",
+        "status": "source-found-awaiting-extraction",
+        "url": "https://www.royalroads.ca/sites/default/files/2025-10/SOFI%20Report%202025_SIGNED_RRU.pdf"
+      },
+      {
+        "id": "additional-source-rru-2025-26",
+        "employer": "royal-roads-university",
+        "year": "2025/26",
+        "scope": "employee-remuneration",
+        "status": "source-found-awaiting-extraction",
+        "url": "https://www.royalroads.ca/sites/default/files/2026-10/2026_RRU_SOFI%20Report_Signed.pdf"
+      }
+    ]
+  },
+  "historicalReceiptsRewritten": false,
+  "rawObservationCorrections": 0,
+  "currencyConversions": 0,
+  "scope": "Additive official observations and individually reviewed source-copy spelling connections; all prior observations, source definitions and historical assessments remain intact."
+}
