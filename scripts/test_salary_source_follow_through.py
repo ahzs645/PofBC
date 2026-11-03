@@ -8,6 +8,8 @@ from pathlib import Path
 import tarfile
 import tempfile
 import unittest
+from types import SimpleNamespace
+from unittest.mock import patch
 
 import check_salary_source_follow_through as check
 
@@ -356,6 +358,7 @@ class BacklogMappingTests(unittest.TestCase):
                     'periodEnd': '2024-12-31', 'sourceUrl': 'https://official.example/report.pdf'}
         accepted = {'id': 'old-pending-now-accepted', 'group': 'original73',
                     'recommendedBacklogStatus': 'imported', 'employeeScopeComplete': True,
+                    'recommendedBacklogScope': 'employee-remuneration',
                     'currentAcceptedEmployeeCohorts': [self.ref], 'acceptedEmployeeRows': 1,
                     'heldCohorts': [], 'blockers': [], 'providedPendingStatusIsStale': True}
         opened = {'id': 'open-scan', 'group': 'original73', 'recommendedBacklogStatus': 'requires-ocr',
@@ -367,6 +370,7 @@ class BacklogMappingTests(unittest.TestCase):
                   'employerSlug', 'year', 'periodStart', 'periodEnd')
         self.live = {'sources': [
             {'id': 'old-pending-now-accepted', 'status': 'imported', 'employeeScopeComplete': True,
+             'scope': 'employee-remuneration',
              'acceptedRows': 1, 'acceptedSourceIds': ['accepted'], 'acceptedManifests': [self.ref['manifest']],
              'acceptedSourceId': 'accepted', 'acceptedManifest': self.ref['manifest'],
              'acceptedCohorts': [{k: self.ref[k] for k in fields}], 'heldCohorts': []},
@@ -410,6 +414,100 @@ class BacklogMappingTests(unittest.TestCase):
         self.plan['dispositions'][0]['currentAcceptedEmployeeCohorts'][0]['sourceId'] = check.HELD_ID
         self.live['sources'][0]['acceptedSourceIds'] = [check.HELD_ID]
         with self.assertRaisesRegex(ValueError, 'Held/repeated source'):self.validate()
+
+    def test_imported_employee_scope_cannot_continue_to_advertise_employee_and_board(self):
+        self.live['sources'][0]['scope'] = 'employee-and-board-remuneration'
+        with self.assertRaisesRegex(ValueError, 'scope is not canonical'):self.validate()
+
+    def test_all_imported_reports_reject_stale_pending_leads_including_broader_scopes(self):
+        self.plan['dispositions'][0]['group'] = 'additional61'
+        self.plan['dispositions'][0]['providedPendingStatusIsStale'] = False
+        self.catalog.append({'id': 'old-pending-now-accepted', 'employerSlug': 'employer',
+                             'year': '2024', 'url': self.ref['sourceUrl'],
+                             'scope': 'employee-and-board-remuneration', 'status': 'source-found-awaiting-extraction'})
+        with self.assertRaisesRegex(ValueError, 'retains a stale held employee lead'):self.validate()
+
+
+class RepeatReviewCoverageTests(unittest.TestCase):
+    def setUp(self):
+        self.approved = {'employer': 'employer', 'names': ['Compiled, A', 'Original, A'],
+                         'preferredName': 'Original, A', 'decision': 'verified',
+                         'witnesses': [{'year': '2023/24', 'sourceId': 'official', 'pay': 100000, 'expenses': 50}]}
+        self.payload = {'schemaVersion': 1, 'decisions': [self.approved]}
+        self.normalized = [{k: self.approved[k] for k in ('employer', 'names', 'preferredName', 'decision')}]
+        self.normalized[0]['proof'] = {'aliasNameKey': 'compiled|a', 'targetNameKey': 'original|a'}
+        self.groups = [['employer', 'original|a', 'Original, A',
+                        [['compiled|a', 'Compiled, A', 'verified', 'Reviewed witnessed copy']]]]
+
+    def validate(self):
+        decisions = check.repeat_required_decisions(self.payload, self.normalized)
+        return check.verify_required_name_links(decisions, self.groups)
+
+    def test_validated_repeat_ledger_requires_its_actual_verified_output_path(self):
+        self.assertEqual(self.validate(), 1)
+
+    def test_an_approved_repeat_pair_cannot_disappear_from_the_published_graph(self):
+        self.groups = []
+        with self.assertRaisesRegex(ValueError, 'output is absent or downgraded'):self.validate()
+
+    def test_an_approved_repeat_pair_cannot_be_downgraded_to_likely(self):
+        self.groups[0][3][0][2] = 'likely'
+        with self.assertRaisesRegex(ValueError, 'output is absent or downgraded'):self.validate()
+
+    def test_a_changed_or_unapproved_repeat_target_cannot_be_normalized_in(self):
+        self.normalized[0]['preferredName'] = 'Different, A'
+        with self.assertRaisesRegex(ValueError, 'changed its approved target'):self.validate()
+
+    def test_missing_disclosed_expense_witness_cannot_become_a_repeat_review(self):
+        self.approved['witnesses'][0]['expenses'] = None
+        with self.assertRaisesRegex(ValueError, 'lacks a witnessed'):self.validate()
+
+    def test_an_extra_normalized_pair_cannot_extend_the_approved_repeat_ledger(self):
+        self.normalized.append(copy.deepcopy(self.normalized[0]))
+        with self.assertRaisesRegex(ValueError, 'coverage differs'):self.validate()
+
+    def test_live_validator_witness_and_uniqueness_failures_stop_release(self):
+        inputs = {'name-review-rru.json': {'reviewer': 'root', 'decisions': [{}] * 12},
+                  'name-review-cnc.json': {'reviewer': 'root', 'decisions': [{}] * 6},
+                  check.REPEAT_REVIEW_PATH: {'schemaVersion': 1, 'decisions': [{}] * 2699}}
+        for error in ['No report record for the witnessed target', 'The report record is not unique']:
+            with self.subTest(error=error):
+                result = SimpleNamespace(returncode=1, stdout='', stderr=error)
+                with patch.object(check.subprocess, 'run', return_value=result):
+                    with self.assertRaisesRegex(ValueError, error):check.verify_new_name_receipts(check.ROOT, inputs)
+
+    def test_published_repeat_endpoints_retain_raw_name_key_after_internal_name_only_trimming(self):
+        entry = {'employer': 'provincial-health-services-authority',
+                 'names': ['Athaide,   Ii via', 'Athaide,Olivia'], 'preferredName': 'Athaide,Olivia', 'decision': 'verified'}
+        code = "import{readFileSync}from'node:fs';import{personKey}from'./src/salaries/people.js';const repeat=JSON.parse(readFileSync(0));"
+        code += check.REPEAT_PATH_MAPPING_NODE + 'console.log(JSON.stringify(normalizedRepeat));'
+        result = check.subprocess.run(['node', '--input-type=module', '-e', code], cwd=check.ROOT,
+                                      input=json.dumps([entry]), capture_output=True, text=True, check=True)
+        pair = json.loads(result.stdout)[0]
+        self.assertEqual(pair['proof'], {'aliasNameKey': 'athaide|ii via', 'targetNameKey': 'athaide|olivia'})
+
+
+class ExistingLikelyContinuityTests(unittest.TestCase):
+    def setUp(self):
+        self.decisions = [{'employer': 'employer', 'names': ['Surname, A', 'Surname, Full'],
+                           'decision': 'likely', 'proof': {'aliasKey': 'surname|a', 'targetKey': 'surname|full',
+                                                           'confidenceUpgradeAllowed': False}}]
+        self.groups = [['employer', 'surname|full', 'Surname, Full',
+                        [['surname|a', 'Surname, A', 'likely', 'Retained qualified assumption'],
+                         ['surname|typo full', 'Surname, Typo Full', 'verified', 'Reviewed copied source spelling']]]]
+
+    def test_old_assumption_and_new_verified_typo_can_coexist_at_distinct_confidence(self):
+        self.assertEqual(check.verify_preserved_likely_paths(self.decisions, self.groups), 1)
+
+    def test_a_retained_likely_pair_cannot_be_upgraded_to_verified(self):
+        self.groups[0][3][0][2] = 'verified'
+        with self.assertRaisesRegex(ValueError, 'upgraded without new identity evidence'):
+            check.verify_preserved_likely_paths(self.decisions, self.groups)
+
+    def test_missing_old_likely_path_is_not_excused_by_a_new_verified_typo(self):
+        self.groups[0][3] = self.groups[0][3][1:]
+        with self.assertRaisesRegex(ValueError, 'relationship disappeared'):
+            check.verify_preserved_likely_paths(self.decisions, self.groups)
 
 
 class CurrencyPreservationTests(unittest.TestCase):

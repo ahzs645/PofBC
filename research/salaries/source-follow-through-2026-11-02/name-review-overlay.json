@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "reviewedOn": "2026-11-02",
-  "scope": "Current overlay of exactly the original3173 reviewed candidate IDs. Three additional source-copy connections are reported separately.",
+  "scope": "Current overlay of exactly the original3173 candidate IDs, with local source-copy reviews and concurrent main repeat-review effects separately attributed. Three additional local source-copy connections remain outside that denominator.",
   "baseline": {
     "path": "research/salaries/name-links/held-completion-2026-11-02/review-results.json",
     "sha256": "3e8b1444d68a9e2ad9baaa14e04ea256ad27365340bdf2d83d96f88c2a2040f0",
@@ -23,6 +23,11 @@
       "unconfirmed-keep-separate": 2972
     }
   },
+  "attributionCounts": {
+    "localSourceCopyOriginalCandidates": 15,
+    "concurrentMainRepeatOriginalCandidates": 0,
+    "totalChangedOriginalCandidates": 15
+  },
   "changedOriginalCandidates": [
     {
       "id": 396,
@@ -33,7 +38,8 @@
       ],
       "priorOutcome": "unconfirmed-keep-separate",
       "outcome": "connected-verified",
-      "manualReview": true
+      "manualReview": true,
+      "reviewType": "local-source-copy"
     },
     {
       "id": 414,
@@ -44,7 +50,8 @@
       ],
       "priorOutcome": "unconfirmed-keep-separate",
       "outcome": "connected-verified",
-      "manualReview": true
+      "manualReview": true,
+      "reviewType": "local-source-copy"
     },
     {
       "id": 927,
@@ -55,7 +62,8 @@
       ],
       "priorOutcome": "unconfirmed-keep-separate",
       "outcome": "connected-verified",
-      "manualReview": true
+      "manualReview": true,
+      "reviewType": "local-source-copy"
     },
     {
       "id": 1013,
@@ -66,7 +74,8 @@
       ],
       "priorOutcome": "unconfirmed-keep-separate",
       "outcome": "connected-verified",
-      "manualReview": true
+      "manualReview": true,
+      "reviewType": "local-source-copy"
     },
     {
       "id": 1710,
@@ -77,7 +86,8 @@
       ],
       "priorOutcome": "unconfirmed-keep-separate",
       "outcome": "connected-verified",
-      "manualReview": true
+      "manualReview": true,
+      "reviewType": "local-source-copy"
     },
     {
       "id": 1797,
@@ -88,7 +98,8 @@
       ],
       "priorOutcome": "unconfirmed-keep-separate",
       "outcome": "connected-verified",
-      "manualReview": true
+      "manualReview": true,
+      "reviewType": "local-source-copy"
     },
     {
       "id": 1800,
@@ -99,7 +110,8 @@
       ],
       "priorOutcome": "unconfirmed-keep-separate",
       "outcome": "connected-verified",
-      "manualReview": true
+      "manualReview": true,
+      "reviewType": "local-source-copy"
     },
     {
       "id": 1899,
@@ -110,7 +122,8 @@
       ],
       "priorOutcome": "unconfirmed-keep-separate",
       "outcome": "connected-verified",
-      "manualReview": true
+      "manualReview": true,
+      "reviewType": "local-source-copy"
     },
     {
       "id": 2022,
@@ -121,7 +134,8 @@
       ],
       "priorOutcome": "unconfirmed-keep-separate",
       "outcome": "connected-verified",
-      "manualReview": true
+      "manualReview": true,
+      "reviewType": "local-source-copy"
     },
     {
       "id": 2075,
@@ -132,7 +146,8 @@
       ],
       "priorOutcome": "unconfirmed-keep-separate",
       "outcome": "connected-verified",
-      "manualReview": true
+      "manualReview": true,
+      "reviewType": "local-source-copy"
     },
     {
       "id": 2202,
@@ -143,7 +158,8 @@
       ],
       "priorOutcome": "unconfirmed-keep-separate",
       "outcome": "connected-verified",
-      "manualReview": true
+      "manualReview": true,
+      "reviewType": "local-source-copy"
     },
     {
       "id": 2675,
@@ -154,7 +170,8 @@
       ],
       "priorOutcome": "unconfirmed-keep-separate",
       "outcome": "connected-verified",
-      "manualReview": true
+      "manualReview": true,
+      "reviewType": "local-source-copy"
     },
     {
       "id": 3059,
@@ -165,7 +182,8 @@
       ],
       "priorOutcome": "unconfirmed-keep-separate",
       "outcome": "connected-verified",
-      "manualReview": true
+      "manualReview": true,
+      "reviewType": "local-source-copy"
     },
     {
       "id": 3268,
@@ -176,7 +194,8 @@
       ],
       "priorOutcome": "unconfirmed-keep-separate",
       "outcome": "connected-verified",
-      "manualReview": true
+      "manualReview": true,
+      "reviewType": "local-source-copy"
     },
     {
       "id": 3601,
@@ -187,7 +206,8 @@
       ],
       "priorOutcome": "unconfirmed-keep-separate",
       "outcome": "connected-verified",
-      "manualReview": true
+      "manualReview": true,
+      "reviewType": "local-source-copy"
     }
   ],
   "additionalReviewedConnections": [
@@ -230,8 +250,33 @@
     {
       "path": "research/salaries/source-follow-through-2026-11-02/name-review-cnc.json",
       "sha256": "416d65ab51729bcb303f8831caf21977ddfd438476adcf6b42a739ccfac2c4bf"
+    },
+    {
+      "path": "research/salaries/name-links/repeat-reviewed.json",
+      "sha256": "4acb7b26f25a626dc91aa4df48706b62d0993c31bd1139e48066dded791278b1"
     }
   ],
+  "baselineConnectionInputs": [
+    {
+      "path": "research/salaries/source-follow-through-2026-11-02/baseline-live-links.json.gzip",
+      "sha256": "c6b77c67224e1bbb554abb76b54b52e815e0861e888cca0081e30b9082a6f47c"
+    }
+  ],
+  "concurrentMainRepeatReview": {
+    "path": "research/salaries/name-links/repeat-reviewed.json",
+    "sha256": "4acb7b26f25a626dc91aa4df48706b62d0993c31bd1139e48066dded791278b1",
+    "reviewedDecisions": 2699,
+    "validation": {
+      "validatedDecisions": 2699,
+      "liveRelevantRows": 302956,
+      "validator": {
+        "path": "scripts/lib/repeat-name-connections.mjs",
+        "sha256": "982a243686c422f8f93a9f2d0315b894f9a6df41072a8ed044045b4fc56f9750"
+      }
+    },
+    "owner": "Concurrent main repeat-name review; separate from this release's18 local individual-pixel receipts",
+    "changedOriginalCandidateIds": []
+  },
   "publishedLinkInputs": [
     {
       "path": "public/salaries/links/aa.json.gzip",
@@ -239,15 +284,15 @@
     },
     {
       "path": "public/salaries/links/ab.json.gzip",
-      "sha256": "5099512d1603c4cdf11285763e01b0b88aec73d625b614f3b531668732f11c7c"
+      "sha256": "f5f13b0ac949543038b4d30574f26538caa7264c6362ca6b81499b6cf590bb9a"
     },
     {
       "path": "public/salaries/links/ac.json.gzip",
-      "sha256": "67efec2e283b808809d1e290b829bf12ead7f4f6516c36106b53a28021de9bfa"
+      "sha256": "b389f99a8b864a705248dc4700b8ad4449fb838b4b6dd9d1e3bb739608000b8e"
     },
     {
       "path": "public/salaries/links/ad.json.gzip",
-      "sha256": "daa5d1b5aaedd802b32183d5eb1380223493c45c51610ca87a4a7ab9fc05b076"
+      "sha256": "c1a97e0215431313aba7bc4502105ce0522ce9efa242679ccca445ba3678ae2b"
     },
     {
       "path": "public/salaries/links/ae.json.gzip",
@@ -255,19 +300,19 @@
     },
     {
       "path": "public/salaries/links/af.json.gzip",
-      "sha256": "a2499f57ccc77d6ef4eab5cd2a3e3fdf7464e93295d18d11a574eeeb975892f6"
+      "sha256": "95f6ee42e2cc0f19f3fc75b665779b8f0643837498e4d6bdd50831bc5dca7f9a"
     },
     {
       "path": "public/salaries/links/ag.json.gzip",
-      "sha256": "67ccfda9acb83912a280d76eccd46e5fe996dcbf9d08b8bd201668c690e7609c"
+      "sha256": "da154670c5c552e9917444d5cadeb706503e4946775b68cf799daf935dec933a"
     },
     {
       "path": "public/salaries/links/ah.json.gzip",
-      "sha256": "91868b6df2e2b2477f71b2e7c26c1994dfe7a2d620a0f75b6150dcc7e239776c"
+      "sha256": "8483684df582bc37116429d7f98e27e7344c182aacc26e146cbe87a6fd29f4d4"
     },
     {
       "path": "public/salaries/links/ai.json.gzip",
-      "sha256": "03fbb3fe2bc2d0ce03bd24a152a06fdd7aac4bf159492f654a411b6097908e53"
+      "sha256": "5b4f0532dbf899416c64666afe14c4d07eb08fa063d708eb9166826da5c38321"
     },
     {
       "path": "public/salaries/links/aj.json.gzip",
@@ -279,23 +324,23 @@
     },
     {
       "path": "public/salaries/links/al.json.gzip",
-      "sha256": "b49979f22c49b984c33dd75cfc42c0143beb605dc4ca79dc1eff0e4f2b35a440"
+      "sha256": "9bdd65a58cbd0310d4b50e28b7a7d38b5c4bde0c5f5f697b5a1121740eb0e3c2"
     },
     {
       "path": "public/salaries/links/am.json.gzip",
-      "sha256": "84a5d9d2898475ae3b367ed32ba8975185756e5237becd3554f15560b4cba779"
+      "sha256": "298263733b3744f18701559afa49c584e7a62180fbf021afb1076ec86b6e3c27"
     },
     {
       "path": "public/salaries/links/an.json.gzip",
-      "sha256": "fbfe3f71e65dde7f25f9461c94d40ad2097575e33c5d1184807cdd906a27de9b"
+      "sha256": "06097fec2ddacd0507b34d588b4606672b4dab682cb26343e3e5ad56c2912bfb"
     },
     {
       "path": "public/salaries/links/ao.json.gzip",
-      "sha256": "138942f2017f6642939c600fef9103c832c4ef8208af40af919ecc5d4ef9dc81"
+      "sha256": "b308ee50f2e67f861b1171ba27b9bedbbea545f314ea2634508746dd889d9f89"
     },
     {
       "path": "public/salaries/links/ap.json.gzip",
-      "sha256": "5b52f691cdb2e14b450ea2aacd4ff92a63c5394cbf376990a6d6076198798339"
+      "sha256": "8102339fbfc86fe512b295a0e9d7676f1f203d5066f08fb2b469ffc47b229a99"
     },
     {
       "path": "public/salaries/links/aq.json.gzip",
@@ -303,19 +348,19 @@
     },
     {
       "path": "public/salaries/links/ar.json.gzip",
-      "sha256": "a57faffda1b591e96fcb3f3bb25a632ed26eb53e307ede448d5f591f6199fc8a"
+      "sha256": "57bfaf78dc9b2953af18200e7d57166cc5e809424afd9e2d544b33fed89568a1"
     },
     {
       "path": "public/salaries/links/as.json.gzip",
-      "sha256": "d2e9ad9ae82115d14e415a0fb07716ec3d9f27cbdaa02e0e631312b7d15e7f47"
+      "sha256": "8192a8c657ef1e63535461c60be45e0ec2add15f372c437818aa6a60106cd617"
     },
     {
       "path": "public/salaries/links/at.json.gzip",
-      "sha256": "a61d9fe8285a4ca61d7f40efd8e47873982311d4cb12906d33df64ae88cd197c"
+      "sha256": "4620578a345cf5499f3ad2bc6d2163c05a31f1c363b9d6204376b32751fb9284"
     },
     {
       "path": "public/salaries/links/au.json.gzip",
-      "sha256": "76eba9fc29ccbbaacbfedb2881d6a089a788ca95e022e552dd3105ec24bd7ba1"
+      "sha256": "ec5f070077042ac56f7cf96beda333ad210aad0ed18e57a3827f16330051f89f"
     },
     {
       "path": "public/salaries/links/av.json.gzip",
@@ -323,7 +368,7 @@
     },
     {
       "path": "public/salaries/links/aw.json.gzip",
-      "sha256": "e1756c89f61e660526be1ce5c1e2b8ff8a78e705c635d80dd72fb09b593286ee"
+      "sha256": "e0b9f69d154b2ab87adb78ab2fb964f0ffb323eac645cd11190f40c57ef9c684"
     },
     {
       "path": "public/salaries/links/ax.json.gzip",
@@ -335,47 +380,55 @@
     },
     {
       "path": "public/salaries/links/az.json.gzip",
-      "sha256": "4b8658c9efde6ce4c9443c83cea1401b7cbdb65464139d6eb56d846a7b315dfc"
+      "sha256": "46bb2e0b716cb8f10656a86aa4ed6bd56b8b400d7e4dbba2e0fc00307d3a0b73"
     },
     {
       "path": "public/salaries/links/ba.json.gzip",
-      "sha256": "55c9902accc89c5da8daf17e2bc037960b44bbc4632aa16148a006bb25cf61ea"
+      "sha256": "2bb524da416300a5ffb6fe2d3cfcf0882e1eebe44acc8be655863ea63c116314"
     },
     {
       "path": "public/salaries/links/be.json.gzip",
-      "sha256": "a63bab75cb8d8bd512d189ac0cfa1f8e42331423e95397abce260ea909b6e6cb"
+      "sha256": "ac7671039dda711abf20a6898dff1900f0f9a447dfd243434dce64e3906d7d89"
     },
     {
       "path": "public/salaries/links/bh.json.gzip",
-      "sha256": "dc4e66f21b8dffa7760f0a9090f07249ab7fe2c62d724e094ee8084a6f80971c"
+      "sha256": "3bbc76dd3759da6b6b5ccbb14a651aca60fa49fb1dda27fa53e9a7b324ec0c54"
     },
     {
       "path": "public/salaries/links/bi.json.gzip",
-      "sha256": "804fb1931c51753c5037d9fbb6cce3fee04655fd900e52d3dda3cf5fbb15e3d7"
+      "sha256": "135ab9714d93afb66059f370fc7043a91591c3bbef6ed3c3a851bd05111947d3"
     },
     {
       "path": "public/salaries/links/bj.json.gzip",
-      "sha256": "10ef4561b9c512253aafd84300d194dfc22e24b0b25ecc4806c0c3281964290f"
+      "sha256": "902f5b913ec7099acd31038bacaf4c67890e94841d606c45cddba054ec6a3a6f"
     },
     {
       "path": "public/salaries/links/bl.json.gzip",
-      "sha256": "771d222f3be34d1c13507d16cf4376e37eaeeaf68e5a20c629a52e55d06d250a"
+      "sha256": "0c12a565df8560355d7d26ce1fe435a56c07ee4434eef6542d592940995dbe65"
+    },
+    {
+      "path": "public/salaries/links/bm.json.gzip",
+      "sha256": "56ded7f36c14a1f5a0fe2918068f100e69d7498b7eb73913aaf1e018e03e9032"
+    },
+    {
+      "path": "public/salaries/links/bn.json.gzip",
+      "sha256": "99e4e721c29e4b21dd4ae99abd3e1824fd65d79ded7035e5964f70fdf48e8356"
     },
     {
       "path": "public/salaries/links/bo.json.gzip",
-      "sha256": "0afd877f880c8ee644347119feb1fb605ff2931a40fa51e7cd6635e44d9e1ce9"
+      "sha256": "e2b8c65658590d2d7c11fda8ccfd8adbda53cc6f07472aabecfd016925ee6b59"
     },
     {
       "path": "public/salaries/links/br.json.gzip",
-      "sha256": "04ddb2b94e102535218a999a7935950adfb591bdd203b0622e47a80c46d7a075"
+      "sha256": "ef8cae2d4ddb89bef75e6a5c3b55d31f8b9985d7ebdc3bb3e2d9ddb802b12795"
     },
     {
       "path": "public/salaries/links/bu.json.gzip",
-      "sha256": "dfa7fb96951e35ec5341f8bc627f29ddf0efa6b05a781964a730f16cbcd37d1e"
+      "sha256": "277f34573ba738b71a818c775ceb6a0d2f3f80d75a0295c719014a4a2fc656a0"
     },
     {
       "path": "public/salaries/links/by.json.gzip",
-      "sha256": "1758886400633538e9c6429356588f9bc1a7c2cf770b4de86a9d070ff55814c3"
+      "sha256": "f531546b297453a1daaee51724a9829b1260f676b0f79068a0e266a378bf8e5e"
     },
     {
       "path": "public/salaries/links/bz.json.gzip",
@@ -383,31 +436,35 @@
     },
     {
       "path": "public/salaries/links/ca.json.gzip",
-      "sha256": "1ad0e0fb6b9b1f03e4952fde5bafd04851663c462e56bc05a70df4698c06bf7b"
+      "sha256": "5f81314ddce3c82d45c8894b6a06b23ec2b76f988dff5e0a67db7a096d0fffc7"
     },
     {
       "path": "public/salaries/links/ce.json.gzip",
-      "sha256": "4dce1d2a6068f0a2a418460041a8bf34765c4799baf80fbd21232ccf0e87fcd1"
+      "sha256": "7c20f701f033904b8f67e0a0467423ae31e6ac9356054ab3406c32bf5ff92c01"
     },
     {
       "path": "public/salaries/links/ch.json.gzip",
-      "sha256": "e0615369972aa2c9533abff9fafcd701864c1519ed998cb0fbb4bd42a13f5a26"
+      "sha256": "a8a44e485f5a889e67f3cefa051035bc591980c63e0c27e6ef9c3578a9859964"
     },
     {
       "path": "public/salaries/links/ci.json.gzip",
-      "sha256": "cc5005a192a7bbd665961e41fb043adb7b60360f30e7dc4994b148b5312a933d"
+      "sha256": "e7e7de2ebd9a26f5f1d24a835129b2d92017c35e0e6fb9d02afc24d1e0dadda5"
     },
     {
       "path": "public/salaries/links/cl.json.gzip",
-      "sha256": "11a073148caf633b41d560582ff2870d082aee09a09f2ca29b3752352d4c1cfe"
+      "sha256": "4a470b68ccd6eb3d775b81c8429ad3dcd0c66d860475aa459f5ab3cfb3f319ff"
+    },
+    {
+      "path": "public/salaries/links/cm.json.gzip",
+      "sha256": "7479cb6673b70768b0a6badc25a6857fd850a1e29a315864c00be56066bfbc42"
     },
     {
       "path": "public/salaries/links/co.json.gzip",
-      "sha256": "e5d05237f4db6af93b1f19e32eb018e5d4c3d03b9f4f57b90dc08ea57ca7b1a1"
+      "sha256": "c52ba1bed0dd6e306779896665853d7c3424022d36373a06470f5091c2a09f86"
     },
     {
       "path": "public/salaries/links/cr.json.gzip",
-      "sha256": "c978f17fc2e5edbe4f587b088e4c7a97bd5d6f8e089d722d5df5d4791b3c9146"
+      "sha256": "2964e4a789bf9c2ba82b0ddefeb49d92aa92a3c1a1911dd3274faff22c8f0ea0"
     },
     {
       "path": "public/salaries/links/cs.json.gzip",
@@ -415,7 +472,7 @@
     },
     {
       "path": "public/salaries/links/cu.json.gzip",
-      "sha256": "6328cbcacd0f611847e34049abbe0c2923d115077388dc3672ff398f3dbf23c2"
+      "sha256": "630763534c542df39f6ff66c8dea07fc902beaee8de56354e34a476c7c7adb13"
     },
     {
       "path": "public/salaries/links/cw.json.gzip",
@@ -431,7 +488,7 @@
     },
     {
       "path": "public/salaries/links/da.json.gzip",
-      "sha256": "5d9b7ad4f84ee58cd264a2300404049235662512dac7a805785ce6d89f96f882"
+      "sha256": "ff5e4da66d3dcf0a557a7e166cee84f28b5c5f3ecf128ecb60301dbbb3b26395"
     },
     {
       "path": "public/salaries/links/dc.json.gzip",
@@ -439,15 +496,15 @@
     },
     {
       "path": "public/salaries/links/de.json.gzip",
-      "sha256": "9cbc6e322e9691bf3186857e15ba553771f08cba5494c2bcdc24e197a15b4930"
+      "sha256": "b41ba024931e7ff74f7ee2617f7884acbfde6b30d134f2893e79664c1f920704"
     },
     {
       "path": "public/salaries/links/dh.json.gzip",
-      "sha256": "3ff79fceb43f2345c415bea65a2326264551f71d5c240ec716eeed3e577f55bd"
+      "sha256": "fc8190696c32c5d145969909c05a130289296c0a38d60e4257f74648f6c68524"
     },
     {
       "path": "public/salaries/links/di.json.gzip",
-      "sha256": "f19a7f439eab007767e9b906e3ffd077111ce24c0ccb7838c6aa3ea5222c35cd"
+      "sha256": "4270bd314901b024ec904cb92bbd0939ad8176132f131833252acfdd534f2382"
     },
     {
       "path": "public/salaries/links/dj.json.gzip",
@@ -459,15 +516,15 @@
     },
     {
       "path": "public/salaries/links/dm.json.gzip",
-      "sha256": "c5b83ed60cb7613bc98d6e4733dfc4e72b47e6c8fd0250f54d3ae5c4f953f7e1"
+      "sha256": "a7ae48e5aee598f35bfe4eb4f99e2501f442fe1318bf4f4a66ad57b22af4fd73"
     },
     {
       "path": "public/salaries/links/do.json.gzip",
-      "sha256": "a75b7104577d03065efcbcedd89145796b11c50da7849c868f2129ed9a9d51e8"
+      "sha256": "86b307704f05f709b80ced109983a4fce077d320b72b61e2c46cacb7b96ffd8c"
     },
     {
       "path": "public/salaries/links/dr.json.gzip",
-      "sha256": "bb95b4b93674a4f3e9d4d28ed37e45d998803f8dd111be4eb956ca715367e7c7"
+      "sha256": "da6a8e4af996ae60e8c21eed18a012b6fca5cb2f984f409b7ea5bafadd67b129"
     },
     {
       "path": "public/salaries/links/ds.json.gzip",
@@ -479,7 +536,7 @@
     },
     {
       "path": "public/salaries/links/du.json.gzip",
-      "sha256": "c6fcc1714eedfd2d08dd7925ee79d05a7e0fdf3ed1273f6973bdb32830ffc35f"
+      "sha256": "a477aa507e0fd7191e875e87aad2ca18abcf4807376ac0c78e7a87e0a3b33305"
     },
     {
       "path": "public/salaries/links/dv.json.gzip",
@@ -487,19 +544,19 @@
     },
     {
       "path": "public/salaries/links/dw.json.gzip",
-      "sha256": "5bbf7abaf83cab636d7c8864a5311f9576252e72d2257d355b043d54dc0c7ecb"
+      "sha256": "6fff9582e3500a94faff98509000ba43de2161bcbda17325cf7dc8db4270e7ee"
     },
     {
       "path": "public/salaries/links/dy.json.gzip",
-      "sha256": "bb506b711718e4c7a3de315bc93d482a2e591a3581594e683b2ce9e0eed53d72"
+      "sha256": "308be36fd426b47bad0220f3cffe46336fd388137ed6890d7d3076b4917747cc"
     },
     {
       "path": "public/salaries/links/ea.json.gzip",
-      "sha256": "ca4c83bca9209627b8a17a79dd62b7e0330fe02224c60bed9bd8fa34391635e2"
+      "sha256": "0c605c06b3d894a64213579bd42f6182c4338fd468cf80dd4d0de36a773d2ece"
     },
     {
       "path": "public/salaries/links/eb.json.gzip",
-      "sha256": "87ae7925a58319a719719716c5b49114c7d12d8ee5b23cf47808bb54fb960827"
+      "sha256": "ac9b98d1262ebbe0f8d66727538b85ae53c2df55c3dda849dea612f3b070cad7"
     },
     {
       "path": "public/salaries/links/ec.json.gzip",
@@ -507,11 +564,11 @@
     },
     {
       "path": "public/salaries/links/ed.json.gzip",
-      "sha256": "b283f7f0fa8794e773bb5688785314bcea79722160a7b56ffa32fdb5a0d4e0e3"
+      "sha256": "a2d7c2e9b1d9864ef877391a526d56eb6c2e02a7771bcc97df91245cc7810260"
     },
     {
       "path": "public/salaries/links/ee.json.gzip",
-      "sha256": "d997819115ac7a1e672a4dd42017f8b3c02f16b5362dac179ba53cd3eba4f6a1"
+      "sha256": "29aceff6d1d811942ebb9b974843c128ed3ea47ee23e60e6a8b7cf20bb97124a"
     },
     {
       "path": "public/salaries/links/ef.json.gzip",
@@ -519,7 +576,7 @@
     },
     {
       "path": "public/salaries/links/eg.json.gzip",
-      "sha256": "09eb13ec7f415015acb661fb875fca187865aa4ba1bfa01673c85ef7836f0e1f"
+      "sha256": "1040093c3e5e657ae1d49108ca4f795828f5b6c5dfa22a62b4e0d8ec34897e4e"
     },
     {
       "path": "public/salaries/links/eh.json.gzip",
@@ -527,7 +584,7 @@
     },
     {
       "path": "public/salaries/links/ei.json.gzip",
-      "sha256": "159bab83fabf1b1c423020f7f4d59749515b8a225755af6fe56bfe9035010ed7"
+      "sha256": "659996887fc2d6689795f5b7d8af96662dec74e390e8380d31ea5844a1ea332b"
     },
     {
       "path": "public/salaries/links/ek.json.gzip",
@@ -535,15 +592,15 @@
     },
     {
       "path": "public/salaries/links/el.json.gzip",
-      "sha256": "ea9e5eccc5f2f38d261e205c97c018feb97625f063295f886157544e06348dc0"
+      "sha256": "7b8bb66d8201a0a50aabb0376932f6e4436f4ccce54c562fa8b768273132d88c"
     },
     {
       "path": "public/salaries/links/em.json.gzip",
-      "sha256": "20b290f221f7cd1f3d5025fd0ac088ab880dd14fe924b715cbfb8e4fa3a7bbbd"
+      "sha256": "3abdbede689ba87f53dd221d2cfd0c53a5a84eea057e9b1d59e117392b385d49"
     },
     {
       "path": "public/salaries/links/en.json.gzip",
-      "sha256": "34bb71516fb5e987f3beb0c378a640603bbecf3a469e2c8a458d7b12570ecc31"
+      "sha256": "067c32ffb479d4d01a6c82779f9b905d8ef66ec93ca7818bcf8bc735c0af25b4"
     },
     {
       "path": "public/salaries/links/ep.json.gzip",
@@ -551,27 +608,27 @@
     },
     {
       "path": "public/salaries/links/er.json.gzip",
-      "sha256": "cf780d8b319654db713d7a364d380b29d6d9cf014872d136253a0fe175d9b2f7"
+      "sha256": "8e5a0edabb78a5dd0fe4d41ce66d9c9ec3e297e60d6ff3fb7eaeab1a529de751"
     },
     {
       "path": "public/salaries/links/es.json.gzip",
-      "sha256": "d1bb4b8dd4b79afc83762bd89caef5a1bad4950dc5c523cb5188f71f35cd09d3"
+      "sha256": "377fc55780ebe4c74900a1240275dbc9b57a71d562ea229e6b4ff72a6f032958"
     },
     {
       "path": "public/salaries/links/et.json.gzip",
-      "sha256": "360bd14bfe7f4e3cb3ef346275927798b277b711ba91fe2534877decf6e2f2cd"
+      "sha256": "94069c41781f8e7549b19125199bc7769959a5a19d1b095aee135a58dbbcdf55"
     },
     {
       "path": "public/salaries/links/eu.json.gzip",
-      "sha256": "a1420b4c50875aa32bf7e695131fecb24096fc005c0bb7e9b367e3e065ff53b0"
+      "sha256": "eb9dc54f9677f0a479cb16eb22dff3d010dcb604e9f2108d92c5638d74e0ca09"
     },
     {
       "path": "public/salaries/links/ev.json.gzip",
-      "sha256": "2c061e15dd676f7e8adee407c4eabfc5678d7c246a64982fc05e6eef9be3bfc3"
+      "sha256": "efd78facc6f2d71dce9750e26a2c831018a3e0b03404d37679ac6284e6c16b51"
     },
     {
       "path": "public/salaries/links/ew.json.gzip",
-      "sha256": "09b592edb3a6a4544a6d22ba403d4ebf909f5446b1a906f890a27e14677f97fe"
+      "sha256": "2e3902be574152e333fe09c832a5cb63c6d2a90a61e9127c296526bf9f97dbd0"
     },
     {
       "path": "public/salaries/links/ex.json.gzip",
@@ -579,35 +636,39 @@
     },
     {
       "path": "public/salaries/links/ey.json.gzip",
-      "sha256": "74653467f1925b9bd08a75bd79bb8208f639188ead70e7bc37d00e164506aa2f"
+      "sha256": "8add93410f151ad182a2b4285b1caa9a682073fc7618bdcbf4d082e06afc8791"
     },
     {
       "path": "public/salaries/links/fa.json.gzip",
-      "sha256": "7321e71e8d0923f1e9d3043d369e1846f5179c2616b808d92434f80e28dee102"
+      "sha256": "d4323687a3f563e95e1f560f5dfe9b40a68f5b3e91aebc6dd73e67ee36fa2801"
     },
     {
       "path": "public/salaries/links/fe.json.gzip",
-      "sha256": "e227c7c1c4363e37cc75960684ae4eb3a5a237c3be2f49f268187d2f72f5643f"
+      "sha256": "f27da94f981e011281951ca909c71208141e085d6630cdca70070a8a71dd1e0e"
     },
     {
       "path": "public/salaries/links/fi.json.gzip",
-      "sha256": "c579665f80f151e30c7325553f3638937238c3fe0b2aad8bea4261b2528b3b12"
+      "sha256": "88b3a9b665b69042f24036a2b9fe6deb9666947c6e97465ff97067306580578d"
     },
     {
       "path": "public/salaries/links/fl.json.gzip",
-      "sha256": "db93005c718f85568dc0f51a44e62b5b320c31d7a3ab23f7a270b712b8ea6616"
+      "sha256": "6d006075b90981f2a60ed80134619520eaedea327605e548e6592b2d1e13788f"
+    },
+    {
+      "path": "public/salaries/links/fm.json.gzip",
+      "sha256": "61faf74ae80c541fe6871ec3fd375ce9cd11c9dfbfa66b2a8d09dbf3192ff63c"
     },
     {
       "path": "public/salaries/links/fo.json.gzip",
-      "sha256": "76f674efdfe9bd345f0b9b71445adf18ba32442d5b584337cdf9eb4ef33136a9"
+      "sha256": "0de6c39b55de439b9e1a4b35f14078dd10605ce2d6d9a7f0b9ff9fe96294a289"
     },
     {
       "path": "public/salaries/links/fr.json.gzip",
-      "sha256": "bbec95c8d7ca7dcbcba0ac3e1f232e0ecfd5f5a45c51f191be00cfc01ba71e90"
+      "sha256": "63398b2130220898af6214df36549d90ba758806747d9a00b6c8d712790082bc"
     },
     {
       "path": "public/salaries/links/fu.json.gzip",
-      "sha256": "a03f7748d46bf186de3f999d77beba87acfde1a80d4004c6e07f915e0e058ab1"
+      "sha256": "be5c8d491e339b1cf18077e538ad30701c1283e7bbda93446d904e4e0bf1ae3b"
     },
     {
       "path": "public/salaries/links/fy.json.gzip",
@@ -615,11 +676,11 @@
     },
     {
       "path": "public/salaries/links/ga.json.gzip",
-      "sha256": "9cf8bfaf9e4831c6c3943758f10b3d29cd871cc65593aba20eadbdd9041b4c6b"
+      "sha256": "a13746e092d9940aee0cab445e8cfff755bc047f37850da9a41391c58446fb49"
     },
     {
       "path": "public/salaries/links/ge.json.gzip",
-      "sha256": "dc0d835fecfb47ce8e54a19f137ca9bc24243f3a5de292497cba8374cde021c1"
+      "sha256": "cb719a2430ec530aab346c24d1bafd8f3eb62061427c5f982166f288535a658c"
     },
     {
       "path": "public/salaries/links/gf.json.gzip",
@@ -631,7 +692,7 @@
     },
     {
       "path": "public/salaries/links/gi.json.gzip",
-      "sha256": "10baca04f1080a7d13334064b7041dc841741035d8d92a0ffce3f19cebac98b4"
+      "sha256": "d715412964eb04c2cd6a3dadf1e3b021acbdedc6fc7001cea5a2e7bc069b58da"
     },
     {
       "path": "public/salaries/links/gj.json.gzip",
@@ -639,11 +700,11 @@
     },
     {
       "path": "public/salaries/links/gl.json.gzip",
-      "sha256": "a809e065d4eb344003484bdd200a73897cd7b663a5758b581db8c6b936c3e090"
+      "sha256": "9ea01ec1ff764db1ed6568a9fbf3ec8437e8d6c3fe5adb93629c3d843ddb8970"
     },
     {
       "path": "public/salaries/links/gm.json.gzip",
-      "sha256": "9aa06e2ea5385137ce95947d6bd6bd2da5dfcffb57b44cf892499c8a0e6ef44b"
+      "sha256": "d74590e6ac9bc67b310e60d4f2aed0fb57782b0a94595f3427d7c40d1aec523a"
     },
     {
       "path": "public/salaries/links/gn.json.gzip",
@@ -651,11 +712,11 @@
     },
     {
       "path": "public/salaries/links/go.json.gzip",
-      "sha256": "c396588e08c01bdf93a998963c42969f52be3f3a0497e00f0b9d7780221d46d3"
+      "sha256": "59002fb3598a7096392142b04c8ec4e47ffb9a089aacb7c040d588a646594bfb"
     },
     {
       "path": "public/salaries/links/gr.json.gzip",
-      "sha256": "9f60952ade873d2802d6cb46581274153380be80d9efb7e482a919977b4739b8"
+      "sha256": "6a5b509402e21bf81aa3a2e3e6d809cc57e76a8654e094327d4d42747ebe496a"
     },
     {
       "path": "public/salaries/links/gs.json.gzip",
@@ -663,15 +724,15 @@
     },
     {
       "path": "public/salaries/links/gt.json.gzip",
-      "sha256": "99c77868c7921966ac62f5b683c682f84c793fd964563b0b8cafa65dffd043bb"
+      "sha256": "6fe2854c23054754645c674bf0aa9bae81a2f932f677256032ff61e95a647630"
     },
     {
       "path": "public/salaries/links/gu.json.gzip",
-      "sha256": "15d69dd977810c9b792d013c680ed072383468a9d68b10b59bc5a8d72d2684f6"
+      "sha256": "8753e95c1c9c63184714f37fe3d305d9bf9a5fb979cb344c7b84fd23f0be3515"
     },
     {
       "path": "public/salaries/links/gw.json.gzip",
-      "sha256": "1a11bf2c85d417aff2d4bda404f6847c45c612e25cb7c2f579da18d20c82534e"
+      "sha256": "4bd78986aadf8925c27cbf75d7a130294b5d5c9fbf3ee187f4c015d0a4e871bb"
     },
     {
       "path": "public/salaries/links/gy.json.gzip",
@@ -679,15 +740,15 @@
     },
     {
       "path": "public/salaries/links/ha.json.gzip",
-      "sha256": "f1084d279376ebedffa156e4508da8f8b54f63d1b4b838099d987e901e94283f"
+      "sha256": "230a91046c935d621b6425fb774218dedc7c0c22f1262f551725c61840821db8"
     },
     {
       "path": "public/salaries/links/he.json.gzip",
-      "sha256": "b8fd928972101a51db9215a3dbf58c15be056345a91251bdc2f55d1c678e9fd9"
+      "sha256": "8278f212caa661ce4fd0b8a3a4c612a5de4132ac44343d2d4e246de0f1e8e1d6"
     },
     {
       "path": "public/salaries/links/hi.json.gzip",
-      "sha256": "e016ce07ce1b76618958b2e392e03b2b0698d3ae1df68253b6b4f141cee76a43"
+      "sha256": "1ccfc789831f9d784d38d2149632e08a6eb631c9d2fb70df441c95c6d92981af"
     },
     {
       "path": "public/salaries/links/hj.json.gzip",
@@ -695,7 +756,11 @@
     },
     {
       "path": "public/salaries/links/hl.json.gzip",
-      "sha256": "03708afa9ce5c0eef102c8ab8583693938752265e17a65a3095f8d43d03c6837"
+      "sha256": "93754ae4c84861ce458483ce548fa61a48b0ed5c4d179cf7ee6d4190495cb893"
+    },
+    {
+      "path": "public/salaries/links/hm.json.gzip",
+      "sha256": "eb41485f831eea30592b32cd06107aabb62a917769cda979d4921c52ed4b55ad"
     },
     {
       "path": "public/salaries/links/hn.json.gzip",
@@ -703,7 +768,7 @@
     },
     {
       "path": "public/salaries/links/ho.json.gzip",
-      "sha256": "914ebf630fb0301741f86fb4da6a38f7542cf43cc51d32433e4fd8324d4d4075"
+      "sha256": "a7eb1721305e0d69d0c46ef1305f7e3eaa857d4ad918dec243b999a6ad230b26"
     },
     {
       "path": "public/salaries/links/hr.json.gzip",
@@ -711,15 +776,19 @@
     },
     {
       "path": "public/salaries/links/hs.json.gzip",
-      "sha256": "6d0f935129c1e7f46c02046e5d5fb89aa474f77fa6eacb6cb5217641f5e57b53"
+      "sha256": "4fe78998911084a06310fdc76d099bb67dfb9fb79e73d7d9735cc6660fb81c02"
+    },
+    {
+      "path": "public/salaries/links/ht.json.gzip",
+      "sha256": "6fab41cb3c6b2eff2348cfa20e7df3c6265cdb30ffd8d5416da5d87151aefda9"
     },
     {
       "path": "public/salaries/links/hu.json.gzip",
-      "sha256": "f996c8f97495faf358da1c77d36c03b1904b2d9f3ac77a6f075ad59932aadc77"
+      "sha256": "9383d4c490d58384f583d2ccaa5332de3b05b40a82477c45406d0c53b7687c19"
     },
     {
       "path": "public/salaries/links/hw.json.gzip",
-      "sha256": "b116edb764bd3c758645107cd0b4f89d942c7e58e57da3e048204b7f1afc17ad"
+      "sha256": "5394ebc311a735b6accaf4c2fae5d0e79ce9316e92b875360c88abe2ffae7161"
     },
     {
       "path": "public/salaries/links/hy.json.gzip",
@@ -727,7 +796,7 @@
     },
     {
       "path": "public/salaries/links/ia.json.gzip",
-      "sha256": "268b4195cfdf8479790c9332afb86b0a5cbaa4d2ab427f415e3dcf2bcfa678ed"
+      "sha256": "e8937ec154ed1bb9467ac26f245e344b63cdef9bc8159b9be7ccfa8fa16721e6"
     },
     {
       "path": "public/salaries/links/ib.json.gzip",
@@ -750,8 +819,12 @@
       "sha256": "36d09846980fae6ca6308f26069471615f8d546a7184078920c818ff719f10ca"
     },
     {
+      "path": "public/salaries/links/ij.json.gzip",
+      "sha256": "0e2bcb3ae408a4f0e90536a811b16bfb5052a4f50a70bff44f8fe9e3de6c987e"
+    },
+    {
       "path": "public/salaries/links/ik.json.gzip",
-      "sha256": "506a867b034489328faf4e827f7d9b69febeab363a1d5a4514a1b4154b3ce6fc"
+      "sha256": "51f5c032e25d8b893a4197bf91ec0f2f244f6d0710368c5e16619f6751113335"
     },
     {
       "path": "public/salaries/links/il.json.gzip",
@@ -759,11 +832,11 @@
     },
     {
       "path": "public/salaries/links/im.json.gzip",
-      "sha256": "6ab725c83715a10a1072beca578414d84878393fc52ad3d272a6af751b91dd66"
+      "sha256": "c3876b8906b548384b2a80a41d55ceeddd83f92000de5c56008db3e9e69ec0ea"
     },
     {
       "path": "public/salaries/links/in.json.gzip",
-      "sha256": "93ac704768a36986e1ef39edad67c66dacae0e3dae1372e8c7f768db4e87a062"
+      "sha256": "1c59fa7c756149424b3dc7283dfb0387c10d5b56ff5188c55fed9982cdec15d5"
     },
     {
       "path": "public/salaries/links/io.json.gzip",
@@ -771,7 +844,7 @@
     },
     {
       "path": "public/salaries/links/ip.json.gzip",
-      "sha256": "ba9b0fa90932eb90ee84c8720683a2359542f5064be6be621b0caa911ab39580"
+      "sha256": "bde6c0d99f002c5e2e930e4033685022f910d1c9ca848c2a6ae52d855ddd4442"
     },
     {
       "path": "public/salaries/links/iq.json.gzip",
@@ -779,15 +852,15 @@
     },
     {
       "path": "public/salaries/links/ir.json.gzip",
-      "sha256": "4976c5e3592d47dfb1ea3f77e43756e5ec07cad0a9a45caca76576dcc3db55cb"
+      "sha256": "4c7721a131a3bdff4bcfa5c652b587b726db8f0b099c25165669032ce5e432b6"
     },
     {
       "path": "public/salaries/links/is.json.gzip",
-      "sha256": "484fd9a928db988fd3badca38cf08a36c13b4ce9843fc433b92ac311ecbead75"
+      "sha256": "3d5b67020275480c4a0344fa1c6b168641fcf83e944833ec03fef1267108c81e"
     },
     {
       "path": "public/salaries/links/it.json.gzip",
-      "sha256": "1f39f674fd38fc009dd689cddd14342b2d7297f4f94b4a75f928675a33b08309"
+      "sha256": "d2e3f73857e91bc22e7565d6bde947e863f58d02d7954e7c715ad1665d111d87"
     },
     {
       "path": "public/salaries/links/iu.json.gzip",
@@ -795,7 +868,7 @@
     },
     {
       "path": "public/salaries/links/iv.json.gzip",
-      "sha256": "2c245f3f440198df6e49ac7c1b5cdbd18dbdc5c419a533f5e286355b26eadd97"
+      "sha256": "08416276717aaf1250fecc9bbedf9c6a288b25f49ede0754f8d4272367c5430e"
     },
     {
       "path": "public/salaries/links/iw.json.gzip",
@@ -811,19 +884,19 @@
     },
     {
       "path": "public/salaries/links/ja.json.gzip",
-      "sha256": "a0d47e422c1fbd8c866d078a7757f866630dda7561d1fb8040fbf71182dd7674"
+      "sha256": "4e77f89b5602e8ef052829538d99bf4994173c393d4c91e24b1c1fa30e678997"
     },
     {
       "path": "public/salaries/links/je.json.gzip",
-      "sha256": "86c4640e82e9d31f77b083a870c4c6b8bd63ded1b1a5a4f1aed28e8a7e59fa89"
+      "sha256": "a1003ca8589b4f268a9e44f29c9066cd1f36a475a6332e6683b3a977d7aaf5d9"
     },
     {
       "path": "public/salaries/links/jh.json.gzip",
-      "sha256": "c1f13ac7a17a6be95db3021f9e9c148f0f296e44c47245e17a3df4c7c319ddf5"
+      "sha256": "af9b4087aab233c7de147200ca64db1075339527fe273c5f765e0444d6f7ebb9"
     },
     {
       "path": "public/salaries/links/ji.json.gzip",
-      "sha256": "9fc1194ae658d552fd85699484bfd11962df0803c0a83cadc0f3e9065b75301c"
+      "sha256": "e85788df55f0036be279b0b22780b42210e0a9b42145c76c3785e844e50e68dc"
     },
     {
       "path": "public/salaries/links/jm.json.gzip",
@@ -831,43 +904,47 @@
     },
     {
       "path": "public/salaries/links/jo.json.gzip",
-      "sha256": "728d7fa91f544a137449bd208d43a8c47ff8ea057e6020ba4fca11b9e6fac50a"
+      "sha256": "1fe7cdb388d1b01bf916cc1443dec1d9fe101757b0b35fef07c19db09099ea6a"
+    },
+    {
+      "path": "public/salaries/links/jt.json.gzip",
+      "sha256": "3a9ee673cc89be6d903fd620fc38e3a36e97d346398d09322b942536f1df1f60"
     },
     {
       "path": "public/salaries/links/ju.json.gzip",
-      "sha256": "184133d8821585bc53ae7456c21f76b193bd2464e8a3ff432aa8be20a3b2c379"
+      "sha256": "c48c375f8ef369490ae0da40c1319825b5b9391639f6539df0edb6319533a3a7"
     },
     {
       "path": "public/salaries/links/ka.json.gzip",
-      "sha256": "1799d6b6ead921a6255db70dfdfb358e66e568b34582593a613c9dac13284026"
+      "sha256": "db4a90060bd889c459c846c9999c183eca0f2bebe55c86a994993331b8771b14"
     },
     {
       "path": "public/salaries/links/ke.json.gzip",
-      "sha256": "0df40f7b1677952d09bf432863713dbe190ed06faad8789fce2903b41650cbfd"
+      "sha256": "70a5b2adcc5e3f9bee0a1761975565c5d9a83ebc2466a64904cd70ef735dff18"
     },
     {
       "path": "public/salaries/links/kh.json.gzip",
-      "sha256": "f2336a2f1fdf7fdc41a578eeaa8a255c19ec96b31bc750cfc62bb46e0a0d79a5"
+      "sha256": "7c34eca4de0dcd51b8a7ac362acaab04a8b43b64a1654491bc8ada9be5cfb85e"
     },
     {
       "path": "public/salaries/links/ki.json.gzip",
-      "sha256": "ce7c4e954ee192476742330d44f281164aa1500ab7e8b9f66c40cc0f1474a808"
+      "sha256": "e250a5b45ba748637101dbba8244e66435c6375eb7e728b0f11f7608bce88a73"
     },
     {
       "path": "public/salaries/links/kj.json.gzip",
-      "sha256": "77c0c32bcf6aefcb59b68ec96f8f43cf61e7d592fd6e8df85687772793db51b2"
+      "sha256": "092f93990c82cc747f04369a294a7e95513bc5dc5e476ca34ba69a5caca970f8"
     },
     {
       "path": "public/salaries/links/kl.json.gzip",
-      "sha256": "1725eaf163b491b72d129acb2bdbc9920b14c1d0dc133d5fbc83787971207fbe"
+      "sha256": "ee11f5e8919960dcbb90ba3403c63adc43a2f9eba4e3faed8dc1854b53266fcf"
     },
     {
       "path": "public/salaries/links/kn.json.gzip",
-      "sha256": "4afe55aaade63e14b3081fe238d081ad85ed7b90890d4f565143989a5b6ed2c4"
+      "sha256": "6fd1ba3b3617e4aa6480c73c0dd35654552ec9158744bfe076ddebdc5ccbcc40"
     },
     {
       "path": "public/salaries/links/ko.json.gzip",
-      "sha256": "c13dd8d291a9c1598586a033e0f087fc8d92e9607ba1917b89f3a43acf529e94"
+      "sha256": "c9e19ad1a9ef506f648eca694034adfdaa5f89c9fcf5b2ed3bf6311cb121fa15"
     },
     {
       "path": "public/salaries/links/kp.json.gzip",
@@ -875,15 +952,19 @@
     },
     {
       "path": "public/salaries/links/kr.json.gzip",
-      "sha256": "8da478956be75e746eaafe9b98dd3d778bffc7865896c300ba79cb2e83217ed8"
+      "sha256": "bff9ff4e1bdb00f2c21eda67e584e6f14233e689762d97e8198c392567106e44"
+    },
+    {
+      "path": "public/salaries/links/kt.json.gzip",
+      "sha256": "06fa3fe99fce55f3a770dad258824e0b0cb5c864cb9b4a1bf565d40ad111b275"
     },
     {
       "path": "public/salaries/links/ku.json.gzip",
-      "sha256": "2c39d9dcf2d736825f7fe54a638fb5c7aea57142aab4396c136847d2ffadcd33"
+      "sha256": "6fe76eb6165b3e9ac414188b03c728a014fe089d3e4cbcc9c9b412297d08311b"
     },
     {
       "path": "public/salaries/links/kw.json.gzip",
-      "sha256": "b19398114a830c6712d86774dbe03baa89bcee98e4af5a9ecf963523b4abbe0e"
+      "sha256": "2077cab0474321b2dcf43fe4ba96dcc5783623e150dc6e1562308f1831488d81"
     },
     {
       "path": "public/salaries/links/ky.json.gzip",
@@ -891,7 +972,7 @@
     },
     {
       "path": "public/salaries/links/la.json.gzip",
-      "sha256": "d245fa689fc8fbdde9b3606a2eada18529c4c2245c5c9bc784a562b7183530cd"
+      "sha256": "286af61cb0bc3d09dd80bb3f3d29cd670493e80bbbf99260749ae59a9d05724f"
     },
     {
       "path": "public/salaries/links/lb.json.gzip",
@@ -903,7 +984,7 @@
     },
     {
       "path": "public/salaries/links/le.json.gzip",
-      "sha256": "9c4b4a0931e5d96f50c9375f442360d3152d51cd4ac780fcdd7bcfc0d18023c3"
+      "sha256": "fa7a5a2cbc5882a2331d718d2a3e9edac947515275879781571183c72ea23f49"
     },
     {
       "path": "public/salaries/links/lg.json.gzip",
@@ -915,47 +996,55 @@
     },
     {
       "path": "public/salaries/links/li.json.gzip",
-      "sha256": "03c0da3dbde1f03851f2ca3cff56bafc6872413ce01a2d931021fc08828635e2"
+      "sha256": "fa267dbafa20cec927c70aafb0d2866845537170cee3cf086fdaac03e1e28973"
     },
     {
       "path": "public/salaries/links/ll.json.gzip",
-      "sha256": "bb6b281273deec2569945e7237dc6898f931a43f772956a0964573951e8fdc90"
+      "sha256": "032fe6fc407bed547e43bff093227bffb256a8391565a7d76f057e098ed4335e"
     },
     {
       "path": "public/salaries/links/lm.json.gzip",
-      "sha256": "62f3ceabeb4001f81e0f117845358b41fece08c2abb28c88828b03f5122c3c60"
+      "sha256": "00587f6c8490db68a989b7e1833403c420e4e8732def558be94fac5ca1d5c724"
     },
     {
       "path": "public/salaries/links/ln.json.gzip",
-      "sha256": "6d413fea35edc13d7421a1cdb4daf238b161363daed3560ec2af571ae1ffc8d2"
+      "sha256": "652284f11967166ba69957988453324d05c33b7c55a7000e3e8d2680f324d209"
     },
     {
       "path": "public/salaries/links/lo.json.gzip",
-      "sha256": "17ea52f8335dafacfac69595533ceb9ca770a25a7b028711c576592dfb2154e0"
+      "sha256": "1113625ca42a339304f187b7c5ee31818f0959882e4dc4318f6916f3d1b9df58"
     },
     {
       "path": "public/salaries/links/lp.json.gzip",
-      "sha256": "ba9b0fa90932eb90ee84c8720683a2359542f5064be6be621b0caa911ab39580"
+      "sha256": "bde6c0d99f002c5e2e930e4033685022f910d1c9ca848c2a6ae52d855ddd4442"
+    },
+    {
+      "path": "public/salaries/links/lr.json.gzip",
+      "sha256": "adef926b9b7132d929aeaf8a4bef1c3021410edf3ed815ab1b7ad0a92c53eac2"
     },
     {
       "path": "public/salaries/links/ls.json.gzip",
       "sha256": "ccc074459704614f172e1cb6b5f973eab6177715820b8b83f87798ae7ac40e40"
     },
     {
+      "path": "public/salaries/links/lt.json.gzip",
+      "sha256": "d680635742a79bbb26bfea4ab98f594322b524a4a7150999ba675eb195b6af0f"
+    },
+    {
       "path": "public/salaries/links/lu.json.gzip",
-      "sha256": "6cb7ea1dbe0cc0fa04e111146933438185e1af34e9883cc2a0f6d61684e95598"
+      "sha256": "afd4ef54aa30d57277cae0f8d40e07b75fb76ad287d2e906014311afa38df645"
     },
     {
       "path": "public/salaries/links/lv.json.gzip",
-      "sha256": "e289a3e999e2fb84c5dad38bb64456faf430194a06cd7d00b7ca5d3672c158f0"
+      "sha256": "358da71cf8d94cf18f297bcfea1df5f07f7b94f5ebc8494b69d09d501ca2b91b"
     },
     {
       "path": "public/salaries/links/lw.json.gzip",
-      "sha256": "5771e547a5005e42fde8c684619a2c17933a728d65acc9ab444566e1d310fd23"
+      "sha256": "3d86bf33747319c35d030e4be94754bec593542f62e38d93091dac9f0473788a"
     },
     {
       "path": "public/salaries/links/ly.json.gzip",
-      "sha256": "c317bcd88f8f7c206218984a2eb14629724b07393711d2b3b21c4cc65f90b122"
+      "sha256": "ebdc1dd62ade870cc9c4b8ee1601c174e7f65bd05238ca51e099394609ec62d6"
     },
     {
       "path": "public/salaries/links/lz.json.gzip",
@@ -963,7 +1052,7 @@
     },
     {
       "path": "public/salaries/links/ma.json.gzip",
-      "sha256": "197fdb791c7b01d80b019dbc25c19608a82e3212649ec64b7821f4f585f101e6"
+      "sha256": "7c074aaa66d534cfe755cc64a157e26387c35e1272a8332d8552d7b80bd3198b"
     },
     {
       "path": "public/salaries/links/mb.json.gzip",
@@ -971,11 +1060,11 @@
     },
     {
       "path": "public/salaries/links/mc.json.gzip",
-      "sha256": "9d1cf8615cae8d4d3d9abe5c04569ec4a1b36c62e6ef9507d92fb1ccae421be8"
+      "sha256": "4081a8d013dc2bde56a37f04c288693d657c801b9d1ba3ba1864d1f1285acde4"
     },
     {
       "path": "public/salaries/links/me.json.gzip",
-      "sha256": "a626b4a36b63076de72fb356dbf4c3f0cbb5b10823dc7d5ca11e7d4c030aa8ff"
+      "sha256": "6cfcaefcc4cc847de21717191cdcef99f20b3afcea3cfed7ce7ac52b7d60f033"
     },
     {
       "path": "public/salaries/links/mg.json.gzip",
@@ -983,23 +1072,35 @@
     },
     {
       "path": "public/salaries/links/mi.json.gzip",
-      "sha256": "4ccaa3bf2f7fbc022323a1aaf66d84b28ad277a05dda2a610b967ac9a518efec"
+      "sha256": "fa6f8bc7da1f9093701f986f3a0b9ea701ffc463e6b164ddb54847b056e0d296"
     },
     {
       "path": "public/salaries/links/ml.json.gzip",
       "sha256": "657cccadb204ead770104a67fcbb2524fccd6d16288f8ec171f51f3331255a8f"
     },
     {
+      "path": "public/salaries/links/mm.json.gzip",
+      "sha256": "0d3e4eae518a6b129437ba3bf54f7ef05379eff7a37c4ab2fb3e8bc68420fade"
+    },
+    {
       "path": "public/salaries/links/mo.json.gzip",
-      "sha256": "ea2804c0def8cb85d488646f1587388194bf2f6d74cf6b0b79b4a755b84cdd40"
+      "sha256": "605e04f30ebd040e4c0b3ccc034fe816b9cce66e657d9fba6a5983b0b129e157"
     },
     {
       "path": "public/salaries/links/mr.json.gzip",
-      "sha256": "fc186882a81515cc30251539bb11bd71c150b5c912f2271639a91fc0dde3cc01"
+      "sha256": "51e608cc2ca81307360610c2f6a82d0a36c6e182d374363799599c2d428b6efe"
+    },
+    {
+      "path": "public/salaries/links/mt.json.gzip",
+      "sha256": "51de3df47dd603797524c1011a6d090ff3ca9bd7cd1c9b295678a2ac5f37e2ee"
     },
     {
       "path": "public/salaries/links/mu.json.gzip",
-      "sha256": "ca52c703f8cd83830de495efc4656d6459fe6a60aa51a4d39decfe8295aad071"
+      "sha256": "12c078a5ac47a2c016f5e8b2d52561c86bcd744d4f29eb8f815b1489eac377e6"
+    },
+    {
+      "path": "public/salaries/links/mw.json.gzip",
+      "sha256": "9a1bfdbba5804ea06abd7608acc2958ded314a9a490512d4ae6b2fce9dca00b8"
     },
     {
       "path": "public/salaries/links/my.json.gzip",
@@ -1007,7 +1108,7 @@
     },
     {
       "path": "public/salaries/links/na.json.gzip",
-      "sha256": "3bfc2873446349dfb9cd8a114081a04cc235a425d279e28e2da021b38ec94cff"
+      "sha256": "a256e047ae4fcee1602d30c2208a73a74810ff2a3a1af488d85c62225c59e1eb"
     },
     {
       "path": "public/salaries/links/nd.json.gzip",
@@ -1015,11 +1116,11 @@
     },
     {
       "path": "public/salaries/links/ne.json.gzip",
-      "sha256": "534290089951fb445b65f0ad24dc05f000140d182a471d3876c7ce0e8c4a5271"
+      "sha256": "4545c075f9356ffec1b92e6fa32f9be765da1528b24e02a401b92c0be5b1b332"
     },
     {
       "path": "public/salaries/links/ng.json.gzip",
-      "sha256": "44c9e5c0295b215e76e6251add46059c8cc5bfa2f555a1229aff80358c1ba8b5"
+      "sha256": "ceeb2139b25f2b17c330a9eda5971c65a1668907f2de56cb9b986bb1768dd8ad"
     },
     {
       "path": "public/salaries/links/nh.json.gzip",
@@ -1027,19 +1128,27 @@
     },
     {
       "path": "public/salaries/links/ni.json.gzip",
-      "sha256": "66b96b4e32a680f78a490998ab180392e0d0b8d3c7ab9ebf7ef2851f192bddd7"
+      "sha256": "7393ea1e84270d832faac70d53526d0d4ae9fffcb06ebb9ed7027ccb66694171"
     },
     {
       "path": "public/salaries/links/nj.json.gzip",
       "sha256": "8e7d0d8abe83c7b75d339706f0b9f82194022bc23f947f8e1cf7e7949e4827f6"
     },
     {
+      "path": "public/salaries/links/nm.json.gzip",
+      "sha256": "3b3d6f7c7ab73ccdaea8b392cadc244d84006b47928c91c6f5c40ec86eda8d90"
+    },
+    {
       "path": "public/salaries/links/no.json.gzip",
-      "sha256": "21ad5fc08416dc90b0c918212aaa3c1a60b45ca249d2a77f92aef774d06e531e"
+      "sha256": "e9b5ff849b4da9fdf830b43c0c63b2c68033f52d40ca7bb78c0ca047bf65469c"
+    },
+    {
+      "path": "public/salaries/links/nt.json.gzip",
+      "sha256": "e4d94dff07b73a6e415b135aa0a53cd77cf6f9a2f3f069c235f8a14255497e13"
     },
     {
       "path": "public/salaries/links/nu.json.gzip",
-      "sha256": "551d896e1df49d372c22047a83639bd3afe8222937f1dc0a94f14c766f26302e"
+      "sha256": "9dae230eb71f4746fcbe3e3cd5f42aa9dd00e733fb396a053f653829bed65f96"
     },
     {
       "path": "public/salaries/links/ny.json.gzip",
@@ -1051,7 +1160,7 @@
     },
     {
       "path": "public/salaries/links/ob.json.gzip",
-      "sha256": "4d9e73c48e85f21b9593569e87e83fb513a9331935f92c32468fe0acfe08f72b"
+      "sha256": "1c3b59dc19f7e5b04e0e101ad1f5e52200d6799298386042d53dd1cf5cc3cf97"
     },
     {
       "path": "public/salaries/links/oc.json.gzip",
@@ -1059,7 +1168,7 @@
     },
     {
       "path": "public/salaries/links/od.json.gzip",
-      "sha256": "97f1c815f26e2624e199e11e0cd3699b862dfa9407f7e2e158f14298369d0e93"
+      "sha256": "d4954331ea114afc826ec5075f39e7e472da122dc11e01a85d208cee1066d30b"
     },
     {
       "path": "public/salaries/links/oe.json.gzip",
@@ -1071,11 +1180,11 @@
     },
     {
       "path": "public/salaries/links/og.json.gzip",
-      "sha256": "ca8fab1aa645a3a8e7eae2e1d5a555194d7d4c7a34f1638c4d23f7605af3d531"
+      "sha256": "72ea658ab95b9e5bf9f58bf86122374def4834862e3b7e2040f3b37b1ccef691"
     },
     {
       "path": "public/salaries/links/oh.json.gzip",
-      "sha256": "b57f1938c4fe7a1ea3ee73d6e57fcd07f52029146e97f0a842758915ef685595"
+      "sha256": "71359c153e287b6947b3a26158122220fa55fc908b6d05112498704005fec12d"
     },
     {
       "path": "public/salaries/links/oi.json.gzip",
@@ -1083,15 +1192,15 @@
     },
     {
       "path": "public/salaries/links/oj.json.gzip",
-      "sha256": "427655bc45bec99d1481ac44b4a8f5fccdace517cbd1418bbfcfc6fcd71f7654"
+      "sha256": "0256c93d59772d26b9ceee545f72f6a96d83ac34178df8184f823fedc5f2d89a"
     },
     {
       "path": "public/salaries/links/ok.json.gzip",
-      "sha256": "f115307710f079dd2903581a80b1be788eb350f7c2a4c8623b849afe97fdd952"
+      "sha256": "792ab044dc0445fcc4c38c413046541d1d604f120dabfcef232e0ff83ac0863e"
     },
     {
       "path": "public/salaries/links/ol.json.gzip",
-      "sha256": "5d8561886bda79ac554773390933c28e35b46a6baf2009212e10837aac6a30d4"
+      "sha256": "08838469402fa27a5c6699a7ad80645635cb908f5948b15885bae866c991287f"
     },
     {
       "path": "public/salaries/links/om.json.gzip",
@@ -1099,7 +1208,7 @@
     },
     {
       "path": "public/salaries/links/on.json.gzip",
-      "sha256": "6fed241bd5c8d0533f538aeb1beca49c7d0a0849270ebc26b6a8bcb338ee7b09"
+      "sha256": "e3982189484cc4259fd4e49eff55a84420e65975b6d09d8908b3520bb4772b6a"
     },
     {
       "path": "public/salaries/links/oo.json.gzip",
@@ -1110,20 +1219,24 @@
       "sha256": "1c15d6dd0f1894336abd4ac7afcea0e1f496240666ebaade3adf2c4fcb5c8af5"
     },
     {
+      "path": "public/salaries/links/oq.json.gzip",
+      "sha256": "3980de6490fbbf48d0da5dd748e84730ab1d80a19a165509281372150434b70c"
+    },
+    {
       "path": "public/salaries/links/or.json.gzip",
-      "sha256": "1c440631b804adbc3c345b784021b6520db812e45828e215202bf7355b21be32"
+      "sha256": "9813dc403d7c4281ba22bc951059045662962f31aa6fbcea49afbc1626109f12"
     },
     {
       "path": "public/salaries/links/os.json.gzip",
-      "sha256": "098ac5f64a39658cdb7271a8c63951d3496805fb10d376309e6530c8511e2a97"
+      "sha256": "7bafebe347ed143e3f59868b1830a6712a8ab8e81d6896ebf46dc1b090f5a9d9"
     },
     {
       "path": "public/salaries/links/ot.json.gzip",
-      "sha256": "13ae825c240eb67a90b05e5780741c1d12e09e1759f9317ac35e569662691f0a"
+      "sha256": "a1271ea982597279193dc2ce2f198f77c90a2a7917a9488089d6bb260b1f5a7b"
     },
     {
       "path": "public/salaries/links/ou.json.gzip",
-      "sha256": "e446fe5d47cdaa1f921050e97602187e51b29ad8c1d56f81f18d84b26473265a"
+      "sha256": "07c67a433fe148a5849e0fdc342f0a10a4664c517e9bca61da8b49496c5280fb"
     },
     {
       "path": "public/salaries/links/ov.json.gzip",
@@ -1131,7 +1244,7 @@
     },
     {
       "path": "public/salaries/links/ow.json.gzip",
-      "sha256": "878a712deecb1d60daf932d9b9ebe74d912ec3e73a084dfa9822e8a22eda327b"
+      "sha256": "83606cd930343049f4aaf055ad397047cd6e6f5faf586ee2445f8268cd9d1b52"
     },
     {
       "path": "public/salaries/links/ox.json.gzip",
@@ -1139,19 +1252,19 @@
     },
     {
       "path": "public/salaries/links/oy.json.gzip",
-      "sha256": "ce736edee6e20b4518507ce7531e74242434535a9412485a9e9c0b611a8b03bb"
+      "sha256": "9e6e3d68e052c4ed5e7c321f469b9d804cf8c802c65cef3df4183525428055d2"
     },
     {
       "path": "public/salaries/links/oz.json.gzip",
-      "sha256": "ddc78005970a97bc571cee4d182921bd9914b9a65c5bd61ee095980df4d1c757"
+      "sha256": "0c59e955ce96d033bff24da29b31339507020aa06c25036a04d25415feaa7f06"
     },
     {
       "path": "public/salaries/links/pa.json.gzip",
-      "sha256": "75534faf57da94a5bb4f953dd06ed0cb0def2d31608f5d2b95c6dc80c2f7b245"
+      "sha256": "4ac5189d408a35291da68904ccadcfc61d8a186b84c9818fda0b87bfeeeb56ba"
     },
     {
       "path": "public/salaries/links/pe.json.gzip",
-      "sha256": "f973702c1f4767efd20cb9db8823f2486d9d7c4a59b22ed494ec8debbcbede39"
+      "sha256": "79aaf778411f96c2bb82e3ade4a2e79fd39a4c593b40d53d230af745c3609e7a"
     },
     {
       "path": "public/salaries/links/pf.json.gzip",
@@ -1159,23 +1272,27 @@
     },
     {
       "path": "public/salaries/links/ph.json.gzip",
-      "sha256": "a6ec45b4c33fa0db67508a6b3bb6c438d727d0f085ae1ed8f60061eeb9968fb5"
+      "sha256": "60fce46ee1fd25e0de07eee85e12a6b680978200c39537801eb796f4dbb35d98"
     },
     {
       "path": "public/salaries/links/pi.json.gzip",
-      "sha256": "11672c3de13d53d0d0ed642e045b06467e73c29c3ec0273a1235d13ba006d85d"
+      "sha256": "17fb13d8f2bc336534ad8677d53d9ed62fbd1e3edb46e7cc2ec4967e864312e9"
     },
     {
       "path": "public/salaries/links/pl.json.gzip",
-      "sha256": "be6d256dee20c0e01858709c3cde63077a059bb9a8efbc4d8e5891050280558b"
+      "sha256": "2f6e2daed646806617aba8ec6507c1775c76680b72a69dcde024bfe437061e3a"
+    },
+    {
+      "path": "public/salaries/links/pm.json.gzip",
+      "sha256": "011493730f80c1ef5052d207e7812a9b9e640ea8a879f6f5f5fee0a5f24f54f8"
     },
     {
       "path": "public/salaries/links/po.json.gzip",
-      "sha256": "0b006ee989a9a4b5c007601b9aa0848860be565020b9a69a0cb583d06c8242dc"
+      "sha256": "265b287c377ee9cc8e741e0fe7f5b91b9e3684cccd4a3d655946565328bb326a"
     },
     {
       "path": "public/salaries/links/pr.json.gzip",
-      "sha256": "6ff2bf94670aedf9341257fcc3d1a1d55f137fdffd207a8ff4dda55d2bf1ae85"
+      "sha256": "a760cadb3156c5ea9685da06f57a8e4aa34bb5179fd6ac8c536c3e72d72649f8"
     },
     {
       "path": "public/salaries/links/ps.json.gzip",
@@ -1187,7 +1304,7 @@
     },
     {
       "path": "public/salaries/links/pu.json.gzip",
-      "sha256": "b1b2a63e99ab6f5fd670ecb5cc72388b2c4dba812c2305f429fe349549beb325"
+      "sha256": "3070590ad60cfe1d08d2b7632cac65cc0256bbbcf487e64c8d5039b60fe25a13"
     },
     {
       "path": "public/salaries/links/py.json.gzip",
@@ -1203,11 +1320,11 @@
     },
     {
       "path": "public/salaries/links/qu.json.gzip",
-      "sha256": "9dcea1708b0ac40e2941150e9c2875a539f14158ddc32ff5819ff06dbe5d40dc"
+      "sha256": "8ace4805dd66973758d94c4181421fbb58b09bc2617b92239474c4391ce5ea99"
     },
     {
       "path": "public/salaries/links/ra.json.gzip",
-      "sha256": "222b151cf3729158b2b780def806b318ed58ab0bd4d361c379a287c9f80c478c"
+      "sha256": "1847504b21a2a45f40f17a1574e5e4e9d0be4b18e44ecd8e3e2975fa1b8a2ee8"
     },
     {
       "path": "public/salaries/links/rb.json.gzip",
@@ -1215,39 +1332,47 @@
     },
     {
       "path": "public/salaries/links/re.json.gzip",
-      "sha256": "ea676b4459ad8d21865d5e544fb97477fbbe07346687957daf6d45e658a593ee"
+      "sha256": "167690ccfead6e207c7555f7b88a8e3dece89ee2e8d71be4fd3f839408998be6"
     },
     {
       "path": "public/salaries/links/rh.json.gzip",
-      "sha256": "f3d5f68558811fd29bdf339adcb533c3e3abda482efb87873a412240e918955f"
+      "sha256": "3ed2d0e5d1d7146391929a8985f1cb41a1acad4954175cf7d747a60a647c7ac7"
     },
     {
       "path": "public/salaries/links/ri.json.gzip",
-      "sha256": "c568f110fd911101a2e3248e374e841b6b98da7dafb46c0f266db803a87221d4"
+      "sha256": "6cea806393056e850da0ee7b659dfe11529d882ee06251b2a7ade3c8faad646f"
+    },
+    {
+      "path": "public/salaries/links/rm.json.gzip",
+      "sha256": "a864ffe3c0284a8a9d6c003a8f9788a07ee17fcb5c1ce9f5ac70f3c9cd0c0ea9"
     },
     {
       "path": "public/salaries/links/ro.json.gzip",
-      "sha256": "baf5d7862e90f511aa4fd73b961281b6921172bf684118852a1b8b53a2a221a7"
+      "sha256": "11110d1486e3d0e4a6fb973c800fee9c240688d8cd2ddf66b56b9bb63dce5e96"
+    },
+    {
+      "path": "public/salaries/links/rr.json.gzip",
+      "sha256": "7928f630687b528d17c2af7ab84140804891d58a705c126d447458f35ad6706a"
     },
     {
       "path": "public/salaries/links/ru.json.gzip",
-      "sha256": "5c231b2b3475969aca359eef948352192ce8f3e7bf3bbbe33c203224eac0fdf7"
+      "sha256": "e349585e2c6fb61d98b88ae989c3c39627d38affada1ac9c0d35dc70244e249c"
     },
     {
       "path": "public/salaries/links/ry.json.gzip",
-      "sha256": "361f7d6f61171ba84b7fd86b51a99220ce6036e4d6e53407f01c9a5b05652744"
+      "sha256": "996c8300f52083fc2404ce036073b819782ca26240fd66f69b65c078d6fb1f63"
     },
     {
       "path": "public/salaries/links/sa.json.gzip",
-      "sha256": "5405998dbb6b86153ccf8e4b5693fc5e8088d1092c29d0526db62d45df0f18c5"
+      "sha256": "fd7ea490007395f7cdcadef367777f76a9fdbb88ead5de3140dd2cfd8c7f4cb7"
     },
     {
       "path": "public/salaries/links/sc.json.gzip",
-      "sha256": "2a02d1261268740d79b2745031677363a086490915d4e26d6db80f772c68599d"
+      "sha256": "8c471038372ac79e1b725b28ee00c9011b051cc97d7779f985976e18ac2f37ef"
     },
     {
       "path": "public/salaries/links/se.json.gzip",
-      "sha256": "4a5a81031e7c8ed1b536093910528e989badf5b49ace9fde530082e8fada43e2"
+      "sha256": "141d8d6a92a617ceb5953870506ca643df3905fbab0cfee301145ca17c9ab7b1"
     },
     {
       "path": "public/salaries/links/sf.json.gzip",
@@ -1255,11 +1380,11 @@
     },
     {
       "path": "public/salaries/links/sh.json.gzip",
-      "sha256": "c3f1b4a6fc1f6716690a03e5b082e961a6064a546442cf187252908a7f9ffc22"
+      "sha256": "918c8297b00c3df7e7fa8d977379438dae710c88c46202276cd59b25aec0467b"
     },
     {
       "path": "public/salaries/links/si.json.gzip",
-      "sha256": "a4a6f977637e00792d2768aade7d51fba8515ba6f8223627b21a928fd4fa0776"
+      "sha256": "5f6d7233bf2022402cef94a6fa56599de0a3b6c23ed75ba6a5266ab43612f3bb"
     },
     {
       "path": "public/salaries/links/sj.json.gzip",
@@ -1267,15 +1392,15 @@
     },
     {
       "path": "public/salaries/links/sk.json.gzip",
-      "sha256": "cd8f6649062fdf1bcc24e01472b2dc60d0d671baac4e675c50f77addefccc20e"
+      "sha256": "70ec27021448810ab83e86a835ee9ac1ef4f1ea81ae17b87df05c9631e77e49b"
     },
     {
       "path": "public/salaries/links/sl.json.gzip",
-      "sha256": "0c1d6ba337f84d773def57eebd2a82762c5a8ced97d834c78e3cdde1adb69a1a"
+      "sha256": "19d8221bc9c74f0c396bd9162c982133e2012d2a7e7ea05f0f17dfdfc0545f90"
     },
     {
       "path": "public/salaries/links/sm.json.gzip",
-      "sha256": "d3754a0a2f2e200d5773cfc8b0968d53632ec2e702cfbea4c5c803e514d3f656"
+      "sha256": "8c3585be8e23292110a9b54826174dc084c5daf55f9ef4366af574866a092106"
     },
     {
       "path": "public/salaries/links/sn.json.gzip",
@@ -1283,11 +1408,11 @@
     },
     {
       "path": "public/salaries/links/so.json.gzip",
-      "sha256": "305c136000af7174432881a8697b77bdfa75c2fe2ee6ac484d7653f8779a2039"
+      "sha256": "4026a44970d35443183434c4b139afc92c1c53155d4134172a1d2ac2e8cc8bce"
     },
     {
       "path": "public/salaries/links/sp.json.gzip",
-      "sha256": "1b7daec5ab636db7e2c7056bd3a7ffacb372ebfa5becd125c4999751b166980c"
+      "sha256": "c6a72fde75c98c00e19720107024b09374136c0e49dd86682cd8ad9236e96c7e"
     },
     {
       "path": "public/salaries/links/sq.json.gzip",
@@ -1295,7 +1420,7 @@
     },
     {
       "path": "public/salaries/links/sr.json.gzip",
-      "sha256": "1178be1a62b8319abb39775c4170d40bd00f6278e96b7fdd9885401eab38d9f8"
+      "sha256": "600c442da2f1a87522e26e5a149dc87ae5946240fef9e2a3395e47205378b9ac"
     },
     {
       "path": "public/salaries/links/ss.json.gzip",
@@ -1303,11 +1428,11 @@
     },
     {
       "path": "public/salaries/links/st.json.gzip",
-      "sha256": "8c4594c7357c626847614b1917b1a4b2b8f1cf7e0e3f6e95b32a00ae096f1d8b"
+      "sha256": "49bb93e79e8e6dd2c4fc99cd6df351685fd8f5c4c8f3e4d1df7560e649a75566"
     },
     {
       "path": "public/salaries/links/su.json.gzip",
-      "sha256": "99b36112a90a9cd3a8efab6d0586703dec12bcc7e45331d36f9c1ed148826f10"
+      "sha256": "046190dd7e50f53b88b8ec51427b17909bd4542cce9fc66c6013bfd45ce1789d"
     },
     {
       "path": "public/salaries/links/sv.json.gzip",
@@ -1315,35 +1440,39 @@
     },
     {
       "path": "public/salaries/links/sw.json.gzip",
-      "sha256": "d608c9442a5e375b05ea988b9c73cae7774eaed068e53679059614eeb6779e69"
+      "sha256": "386f61f86fdd72f7ed95bc799ff8c4618722198818ef8bcaa57ebe5b40eda597"
     },
     {
       "path": "public/salaries/links/sy.json.gzip",
-      "sha256": "ccf829c5d7ccfe831b7971822baca1749ad743e328089189a0d457c7e7cc8fb0"
+      "sha256": "7a99666d4b1788a706d553023d6d3a7754edca7191bbbf1edcacadded8fe5344"
     },
     {
       "path": "public/salaries/links/sz.json.gzip",
-      "sha256": "04d1f20453afa9f7f67ccd3d8995f51f030677aa492a9d83bf77b7e17958010f"
+      "sha256": "21bc96b98f90a62868a1c7cc49170b26b6b0580419455fff7e01f4adad9644ab"
     },
     {
       "path": "public/salaries/links/ta.json.gzip",
-      "sha256": "e700f9baefe4265dacf5c145cbba3a7f5e520e4a97ac10ce944626b186a4ec8c"
+      "sha256": "e074de488cb2d31add34b4dfecb2c23ff0abf66d371e39b0558530fa78f9ec6f"
     },
     {
       "path": "public/salaries/links/tc.json.gzip",
-      "sha256": "74599cc729f4e36c98346f1c99ba6fa9b1b2722bd02f669798ed17096b9f658d"
+      "sha256": "94193434c0a1e53cbfdcccb26420486b5cda5f63508e0def8a9731be5595c01f"
     },
     {
       "path": "public/salaries/links/te.json.gzip",
-      "sha256": "41a7fe349bf6f615a996a3e03eb2bd8ff9e9b4551a654f3df69afd8a2a562d8e"
+      "sha256": "18c7bd8bf8a74e8df885a39db2e7d245b6fd7a4121e635ae554ea3798846f991"
     },
     {
       "path": "public/salaries/links/th.json.gzip",
-      "sha256": "a4caa932e384ae18427c8a3511371dcdf28756573787db571bc1cb7865391497"
+      "sha256": "a3acbaf539638bbadc27b711fe43bd2665384f2dbcfd3ae0859847d356903b38"
     },
     {
       "path": "public/salaries/links/ti.json.gzip",
-      "sha256": "e8bf557bc11a86301e74a72e172514e0fa52bdc681141588b4d4f9a24e7c019f"
+      "sha256": "dd76dfb5405f343f1bc228c063e138a695c7b0aa89d1b4d80c8aaa5cb701042c"
+    },
+    {
+      "path": "public/salaries/links/tm.json.gzip",
+      "sha256": "78993b9fe76bf21b9386fb6ffebaf6362a362224c3ca5bf3021cf637b7df2a6e"
     },
     {
       "path": "public/salaries/links/tn.json.gzip",
@@ -1351,19 +1480,19 @@
     },
     {
       "path": "public/salaries/links/to.json.gzip",
-      "sha256": "709ea595e4a5bdc68d28c5122e3022018d1773c046b2586d9edca2798b910006"
+      "sha256": "0f098b5744ba6abdb2e5297ca1cff74c3b97325e2c0c8db16163f2c0687b2aca"
     },
     {
       "path": "public/salaries/links/top.json.gzip",
-      "sha256": "eb648d65d7583a12b2523eac680f322d325ed1f303b942f2097c0f885a3a68fa"
+      "sha256": "bce3890b1b31b8bd8e86c3d8ed6a7ae237bff5d02fea7a803ae6be2c63e98891"
     },
     {
       "path": "public/salaries/links/tr.json.gzip",
-      "sha256": "269eb2f81267a08124ffcbc3a6d627dcd5960e7a6a87ff4911a60c025591338a"
+      "sha256": "40edfca1fa2d3ca5733625f1078c7177bf834fcd9dbf26d23652c89f32081ddc"
     },
     {
       "path": "public/salaries/links/ts.json.gzip",
-      "sha256": "d0f547b86cd744d51c3b016f5e2a8e2893ec216d1646561e9e21aa6a71463c89"
+      "sha256": "694940f6c1c670b14d3ea0bb6e38b55e6102979a8a2597db4244279c2a046e61"
     },
     {
       "path": "public/salaries/links/tt.json.gzip",
@@ -1371,7 +1500,7 @@
     },
     {
       "path": "public/salaries/links/tu.json.gzip",
-      "sha256": "82cd0859121acac2bd5936a4f49abda9e763a86451afd0ae278ead99bd291f3e"
+      "sha256": "abb2e2f260fa6839296a3e0a58719054e49d816e276db893d7b8bcfa02d3eff5"
     },
     {
       "path": "public/salaries/links/tw.json.gzip",
@@ -1379,7 +1508,7 @@
     },
     {
       "path": "public/salaries/links/ty.json.gzip",
-      "sha256": "631e99bc276c3d2d36406cb330c9e7a055817f70ae5250ba96c72269d7d61d68"
+      "sha256": "7a4ed5d221d9e49d571d320052e1447321b5725fcbf18e3769e66d17492f9f14"
     },
     {
       "path": "public/salaries/links/tz.json.gzip",
@@ -1407,19 +1536,19 @@
     },
     {
       "path": "public/salaries/links/ul.json.gzip",
-      "sha256": "f936c6900dacd9dc8f375fd28e773e1468a2adc564cb92c6d90a503fa49a3ddd"
+      "sha256": "b06882c34dc9625b19a90fa9730e5a0f7a66150d0e9b440769b6489d4bceec75"
     },
     {
       "path": "public/salaries/links/un.json.gzip",
-      "sha256": "9b39b1285ebec577e9f62cbf6475560754fb3d55f0ebfb4142016064001188fb"
+      "sha256": "fb3a4022b7b4019f18ce47ba93373842627f02c1da610ff33f65a70bde16fc93"
     },
     {
       "path": "public/salaries/links/up.json.gzip",
-      "sha256": "43153be045715efeed5dae77111b136e1618192624454bb8f9dd80d6ecc12c47"
+      "sha256": "d9d23c6bfe2f2891e701878f6a926d617852d26fe3dede8c12ed2ca2d2b56a3b"
     },
     {
       "path": "public/salaries/links/ur.json.gzip",
-      "sha256": "321ae62fffbbe014e97a0766023c89818e20489f84310311ca9205339ff4e0ef"
+      "sha256": "35b20fd83214184ac335bf8b94870685fb4e6f2f05b3da400fcb2a80e8856e2b"
     },
     {
       "path": "public/salaries/links/us.json.gzip",
@@ -1431,7 +1560,7 @@
     },
     {
       "path": "public/salaries/links/uy.json.gzip",
-      "sha256": "58316e2def20d3ab5cae13d85d8ad3f493de899e59d79fbeaa8f5059297d8380"
+      "sha256": "590ffb32d03126855b8fde4a527643ee4500846181d07b05b0c9ef60fba5493f"
     },
     {
       "path": "public/salaries/links/uz.json.gzip",
@@ -1439,15 +1568,15 @@
     },
     {
       "path": "public/salaries/links/va.json.gzip",
-      "sha256": "966dc8e77b0b93b03220d5797b1c634c081fcf3d992863535ebff060ba9b1c73"
+      "sha256": "4619dc46aaa7cf05d61cc5409c3da6a995a976632ad9b5b12cc8a143d8e52fe2"
     },
     {
       "path": "public/salaries/links/ve.json.gzip",
-      "sha256": "f7fc7abdfbd2b4b3e2ae633c899ea7b4fe111d51cc93a5230bbb33b695d357d2"
+      "sha256": "56c4b4fa96d01cd019a1158b4ce4f23ea6adc3d58edbc601c69a5f063e5bbd46"
     },
     {
       "path": "public/salaries/links/vi.json.gzip",
-      "sha256": "9565f64272f077264aaedf41819d07377a10f6cc2bfa1d37c97b49b824a72e3a"
+      "sha256": "64116ee85373fbb22c7cc534374ba1b1a3e5f69e67636ba834fdbe5c37c1e9ac"
     },
     {
       "path": "public/salaries/links/vl.json.gzip",
@@ -1455,7 +1584,7 @@
     },
     {
       "path": "public/salaries/links/vo.json.gzip",
-      "sha256": "f125ed6b9d7f04c94b00a3d58e3cf00715f25e0d815e2f4952e3b06dc9a3229e"
+      "sha256": "fd25def6291b8b4bafbfa10dec72a4af889f8810e7648317ce0bd36f090c0a78"
     },
     {
       "path": "public/salaries/links/vr.json.gzip",
@@ -1463,39 +1592,39 @@
     },
     {
       "path": "public/salaries/links/vu.json.gzip",
-      "sha256": "a5838cbdee4f13b2c56c6f8418241375c32f6e4b78407c52fe1f9971dba145c5"
+      "sha256": "df1d119773c46596b3714402ba26c09b2bd472d30126d86740907ac9c792af77"
     },
     {
       "path": "public/salaries/links/wa.json.gzip",
-      "sha256": "29aabeded7a8399831d4ad57c5894806e4ab2254c9eda61786d97defc8b0c1de"
+      "sha256": "fb0b29a1f50726028aecfb754ce6e37aa8c0c38cced136360cf8f1df9523095d"
     },
     {
       "path": "public/salaries/links/we.json.gzip",
-      "sha256": "43d33829dc4e44711d12041761c24884bca8201fadc3c5931055a66a6dbee361"
+      "sha256": "5a888f681b39c4e9389d6a19063b4fc309288ee0ac8623b9807870db8dd2f4be"
     },
     {
       "path": "public/salaries/links/wh.json.gzip",
-      "sha256": "b8ef237a63e1717286a8368980d9251ac2a7bfa912d558deffc66106dd5f8941"
+      "sha256": "225d8c27856b367af2d829c8249386c46aa7b0be763749128d59ce1f7141b604"
     },
     {
       "path": "public/salaries/links/wi.json.gzip",
-      "sha256": "fb362bf36e41e36545d68f471387e32835ac45c850f15efd619dd7a6e2008dd3"
+      "sha256": "2e8c758a0db96f244cd4fe5ee0bb152fa57da33688e943a93a98481be0bf4421"
     },
     {
       "path": "public/salaries/links/wo.json.gzip",
-      "sha256": "e4b837acc9017ba6dc62fdc7a0d139c7b4cc3da3da746edda167c8721dbf8176"
+      "sha256": "20574bb57368e6d93c8801f1ad6b828026634259d831eda313d8ac397eefa592"
     },
     {
       "path": "public/salaries/links/wr.json.gzip",
-      "sha256": "c78f527e14731e71992b48b2987a984f3a6b5ce92130de9d962d81e2c1a73780"
+      "sha256": "f6b9adae9587e22d05049559aff9f747c8350a36414a8984161ff3bebb066a11"
     },
     {
       "path": "public/salaries/links/wu.json.gzip",
-      "sha256": "524b426820b8c61a47527525c58faffe8954ff3a4d30fe36b68330a63818a546"
+      "sha256": "1d46367dc30304dce03ead15d953cf20043c73711e3f55e9d230477feb9cd46d"
     },
     {
       "path": "public/salaries/links/wy.json.gzip",
-      "sha256": "5527e3da48ee4a3825c81355f08eb646c7841727e129e3422490fb7aa48f3772"
+      "sha256": "b2d344b1d233ecc2630b99a7f158a4df1ea23c9afedb0ab4b307b5d4306bd62a"
     },
     {
       "path": "public/salaries/links/xi.json.gzip",
@@ -1503,11 +1632,11 @@
     },
     {
       "path": "public/salaries/links/xu.json.gzip",
-      "sha256": "3668737f03b4e262f5757b54b2c964d6d6853b62a9b69ce46271c4574d2f26e1"
+      "sha256": "bd28a14ece2afc812069d15e34d1e4f9d48190b8218822e1323d02467914b4e2"
     },
     {
       "path": "public/salaries/links/ya.json.gzip",
-      "sha256": "03509cd53dbb81ca797c1da3d2bbdab8e74951057dc337160399bd9bfb09e829"
+      "sha256": "2cb765d47bd833426b3d1e3c07b106b5cbb4c18e9e851b4afea7f4ccb03dc637"
     },
     {
       "path": "public/salaries/links/yd.json.gzip",
@@ -1515,7 +1644,7 @@
     },
     {
       "path": "public/salaries/links/ye.json.gzip",
-      "sha256": "fbcdba64c9d8c7fdbbe1411fc4f6735f6aa2f4dcd18e3eb195251576a0b169c8"
+      "sha256": "6ce7d17e185d5b3bc6d9a8b28cfb1d0e8d79bab6e99f24fbf5186b03b7c4bcc7"
     },
     {
       "path": "public/salaries/links/yi.json.gzip",
@@ -1523,11 +1652,15 @@
     },
     {
       "path": "public/salaries/links/yo.json.gzip",
-      "sha256": "c1c342e848a8483b8a87fc8cea87640fb789a827fb2a6cebaaafebb277d980e4"
+      "sha256": "64473e65eaaa9464fe98d5c69d9051557879902ca3bfd00c69d80f0de82bb74d"
+    },
+    {
+      "path": "public/salaries/links/yp.json.gzip",
+      "sha256": "a94d82a2ded0e5d6d0c226f8f1b3c6495b8d63619b14c5faa4f52f6ea7d4e808"
     },
     {
       "path": "public/salaries/links/yu.json.gzip",
-      "sha256": "1d954ad26a89cd689c8504fcbe65562eab8ce4a2bdc096569bed695b597a9f5d"
+      "sha256": "446ff000ccd5bd0756afc7781977446a2dd9cc7116b52d81113bc551ecc37b9c"
     },
     {
       "path": "public/salaries/links/yz.json.gzip",
@@ -1535,7 +1668,7 @@
     },
     {
       "path": "public/salaries/links/za.json.gzip",
-      "sha256": "b2d220f75b311ca123aebb125cab5572f08ca0644598a178ec98f8ba1bc9ef92"
+      "sha256": "953cc4cdc68ddc88453dbf545a4d7ceefdd528fcd980d4f2b00857fbfa5f9037"
     },
     {
       "path": "public/salaries/links/zd.json.gzip",
@@ -1543,15 +1676,15 @@
     },
     {
       "path": "public/salaries/links/ze.json.gzip",
-      "sha256": "df185a1e82c55daae9e0d024a732f83d87ce59c37bf8417fe25d8ddace0e4112"
+      "sha256": "4c2206ff5fa19fa8df18e3736199b30e35852d3b389e64dc8ec036dd4c53e36f"
     },
     {
       "path": "public/salaries/links/zh.json.gzip",
-      "sha256": "9129101949d0bbe408ad7e079949816703e6ddfe0840b879173194eee24a052c"
+      "sha256": "54a8169e7e6efa69da4ea7dfed4d4d0a56395835b23f242f7e8407dd0c9c1e02"
     },
     {
       "path": "public/salaries/links/zi.json.gzip",
-      "sha256": "fbddec59948e48d8917095e16909dcea43393429e7617212bdfd357f76093dbc"
+      "sha256": "061839a9860d5104b478f0fe4128c680c236027a259b31515d6523c608b8fc7a"
     },
     {
       "path": "public/salaries/links/zl.json.gzip",
@@ -1559,7 +1692,7 @@
     },
     {
       "path": "public/salaries/links/zo.json.gzip",
-      "sha256": "36a2d898fffcd7d00de4033e88999c09bbfdfc35295fa1575674e25ba7e8ff6e"
+      "sha256": "c223fe93dc5f9fcac7c1eeba100c6fa814cc859fd27746fc29d0cf500ab7a9c7"
     },
     {
       "path": "public/salaries/links/zs.json.gzip",
@@ -1567,7 +1700,7 @@
     },
     {
       "path": "public/salaries/links/zu.json.gzip",
-      "sha256": "819e421e3fdc7142b97a6161dea8ca6b6b048b32a94f2e3ec11e6387c487282e"
+      "sha256": "41e3f08fba892ede906f430e575d69db64b36a366db866eb4ed65eb0238df0db"
     },
     {
       "path": "public/salaries/links/zw.json.gzip",

@@ -49,7 +49,7 @@ jobs:
       # This salary-only check needs neither the licensed artwork fonts nor live report downloads.
       - run: npm ci --ignore-scripts
       - name: Test salary data and interface behavior
-        run: node --test scripts/salary-data.test.mjs scripts/reviewed-name-connections.test.mjs scripts/held-name-connections.test.mjs scripts/salary-baseline-context.test.mjs scripts/follow-through-source-qualifications.test.mjs scripts/follow-through-name-connections.test.mjs src/salaries/*.test.js src/government/salaries.test.js
+        run: node --test scripts/salary-data.test.mjs scripts/reviewed-name-connections.test.mjs scripts/held-name-connections.test.mjs scripts/lib/repeat-name-connections.test.mjs scripts/salary-baseline-context.test.mjs scripts/follow-through-source-qualifications.test.mjs scripts/follow-through-name-connections.test.mjs scripts/baseline-likely-connections.test.mjs src/salaries/*.test.js src/government/salaries.test.js
       - name: Test source parsers with local regression fixtures
         # GIS fixtures run in health-map.yml with their own pinned dependencies.
         # Retain every other parser fixture in this lightweight salary job.

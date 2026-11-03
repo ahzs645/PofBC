@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "base": "http://127.0.0.1:4193/PofBC/",
-  "startedOn": "2026-11-02T23:27:50Z",
+  "startedOn": "2026-11-02T23:59:17Z",
   "checks": [
     {
       "id": "served-data-and-source-copy-graph",
@@ -9,11 +9,11 @@
       "evidence": {
         "employers": 273,
         "observations": 1440498,
-        "servedPeopleIndexSha256": "aa9db1531c32ae7a81fe20485267fc4c4ad5e4c76aa5bd19f5cd9ff826002bc4",
-        "servedEmployerIndexSha256": "fe83f63b3b04bd38b9d373c9a65cfbc6ef6ef93ae7da5dc81fcb47681ea03a6e",
-        "htmlSha256": "7ab202d16591466e7baf4d5e2db5423579d7b8d7919e49b46c24f7774f6d81e7",
+        "servedPeopleIndexSha256": "da17243a77b30d45ca1282a96447bafef83decfdd147395c2dd92ed9bc619895",
+        "servedEmployerIndexSha256": "8f44323da8ef15412a2f2085d57748bddd2718b1c8ff943272f1046284fc3609",
+        "htmlSha256": "80625102766692cd64d85a0c0afa7fce200887e1e23372a8b8c01e31951471a7",
         "assets": [
-          "/PofBC/assets/index-YEAqxlY_.js",
+          "/PofBC/assets/index-BP42rusj.js",
           "/PofBC/assets/rolldown-runtime-C0FnF6B9.js",
           "/PofBC/assets/jsx-runtime-DSr1VPkp.js",
           "/PofBC/assets/renderLogoSvg-CoD-ciUl.js",
@@ -182,8 +182,8 @@
             },
             {
               "file": "bclc.json.gzip",
-              "sha256": "260c282b395d5742e72395a427a0c4e244c470a02b5c30d6c121dc717ca1ac80",
-              "groups": 39
+              "sha256": "68a42433a893561ee230b0312db90b5033e113407d4271a0a7384ae096c71f44",
+              "groups": 42
             },
             {
               "file": "bowen-island.json.gzip",
@@ -202,8 +202,8 @@
             },
             {
               "file": "camosun-college.json.gzip",
-              "sha256": "5d7b20044bb869ba48cf3a1e7e49f441f0482a5fa3ebb6be193e0a814c1d2f8f",
-              "groups": 9
+              "sha256": "0a7b03885e1a825f50eebbfff2c6bf126c893e965c572b5e172546c4d00e47ea",
+              "groups": 10
             },
             {
               "file": "capilano-university.json.gzip",
@@ -707,8 +707,8 @@
             },
             {
               "file": "icbc.json.gzip",
-              "sha256": "f0c49bd689ba49f9fe90aaeb06d82f48e78d924c459790de0bdc96cbf55e6af6",
-              "groups": 17
+              "sha256": "dbf8860d44a3880156d615c6e7b87aaba23bc047e1d388dce239ef4f417b04d9",
+              "groups": 1250
             },
             {
               "file": "inbc.json.gzip",
@@ -887,8 +887,8 @@
             },
             {
               "file": "provincial-health-services-authority.json.gzip",
-              "sha256": "5777b15bc9a1733649a155b19c6f5619cee8eac797c01abf140e9b2a10c286cf",
-              "groups": 1189
+              "sha256": "f177b952f61ed6aa46947f618af280a35d9589a8ee7f687801fd8d0dc0534598",
+              "groups": 2496
             },
             {
               "file": "public-service.json.gzip",
@@ -1272,8 +1272,8 @@
             },
             {
               "file": "vancouver-coastal-health.json.gzip",
-              "sha256": "fe4d4dc544aa517573ab7c561572faa7798786f49a45cd6baec3b21c40d71212",
-              "groups": 431
+              "sha256": "8f410eedd5c4d85a461177faca3e28b155714bf4b1e5debe202c4195ea6d9bcd",
+              "groups": 433
             },
             {
               "file": "vancouver-community-college.json.gzip",
@@ -1448,8 +1448,62 @@
           "status": "verified"
         },
         "graphSummary": {
-          "groups": 23612,
-          "verified": 1606
+          "groups": 26158,
+          "verified": 4303,
+          "likely": 22906
+        },
+        "strongAndWeakEvidencePrecedence": [
+          {
+            "canonical": "hunsbedt|darrel",
+            "verifiedAlias": [
+              "hunsbedt|danel",
+              "Hunsbedt, Danel",
+              "verified",
+              "Reviewed: \u201cHunsbedt, Danel\u201d is \u201cHunsbedt,Darrel\u201d misread: the compiled copy repeats the employer report's only record with the same pay and expenses in 2023/24",
+              [
+                {
+                  "sourceId": "queue-completion-phsa-2023-24-employees",
+                  "pdfPage": 111
+                }
+              ]
+            ],
+            "likelyAlias": [
+              "hunsbedt|dan el",
+              "Hunsbedt, Dan el",
+              "likely",
+              "Assumption on review: Retain the previously published likely connection as an assumption while both complete name histories and the entire employer surname family remain unchanged. This is no new identity evidence or verified claim. Original qualification: Only fuller name here that agrees; \u201cHunsbedt, Danel\u201d in 2023/24, \u201cHunsbedt, Dan el\u201d in 2017/18, never both in one period"
+            ],
+            "sourcePage": 111
+          },
+          {
+            "canonical": "kiarash|maryam",
+            "verifiedAlias": [
+              "kiarash|malyam",
+              "Kiarash, Malyam",
+              "verified",
+              "Reviewed: \u201cKiarash, Malyam\u201d is \u201cKiarash,Maryam\u201d misread: the compiled copy repeats the employer report's only record with the same pay and expenses in 2023/24",
+              [
+                {
+                  "sourceId": "queue-completion-phsa-2023-24-employees",
+                  "pdfPage": 128
+                }
+              ]
+            ],
+            "likelyAlias": [
+              "kiarash|maly am",
+              "Kiarash, Maly am",
+              "likely",
+              "Assumption on review: Retain the previously published likely connection as an assumption while both complete name histories and the entire employer surname family remain unchanged. This is no new identity evidence or verified claim. Original qualification: Only fuller name here that agrees; \u201cKiarash, Malyam\u201d in 2023/24, \u201cKiarash, Maly am\u201d in 2017/18, never both in one period"
+            ],
+            "sourcePage": 128
+          }
+        ],
+        "AthaideRawPublicKeyBoundary": {
+          "canonicalKey": "athaide|olivia",
+          "aliasKey": "athaide|ii via",
+          "rawAliasName": "Athaide,   Ii via",
+          "status": "verified",
+          "sourcePage": 9
         },
         "sourceCopyGraph": {
           "Mittelman": "verified",
@@ -1469,7 +1523,7 @@
       "id": "rru-reviewed-history-keeps-source-periods",
       "width": 375,
       "status": "PASS",
-      "seconds": 0.98,
+      "seconds": 0.89,
       "evidence": {
         "heading": "Robert Mittelman",
         "labels": [
@@ -1505,7 +1559,7 @@
       "id": "martineau-requested-spelling-history-and-old-url",
       "width": 375,
       "status": "PASS",
-      "seconds": 1.89,
+      "seconds": 1.85,
       "evidence": {
         "heading": "Patrick Joseph Martineau",
         "labels": [
@@ -1529,10 +1583,157 @@
       }
     },
     {
+      "id": "hunsbedt-verified-danel-and-likely-dan-el-remain-distinct",
+      "width": 375,
+      "status": "PASS",
+      "seconds": 1.76,
+      "evidence": {
+        "heading": "Darrel Hunsbedt",
+        "labels": [
+          "2024/25\u22123%",
+          "2023/24+11%",
+          "2022/23+11%",
+          "2021/220%",
+          "2020/21+9%",
+          "2019/20\u221210%",
+          "2018/19",
+          "2017/18",
+          "2016/17\u22121%",
+          "2015/16+8%",
+          "2014/15+2%",
+          "2013/14\u22125%",
+          "2012/13\u22128%",
+          "2011/12"
+        ],
+        "joinedAlias": "Hunsbedt, Danel",
+        "evidenceLinks": [
+          {
+            "text": "Source \u00b7 p. 111",
+            "href": "https://www.phsa.ca/about-site/Documents/FY2024-Employee-Salary-and-Expenses-Exceeding-75000.pdf#page=111"
+          },
+          {
+            "text": "Evidence \u00b7 p. 111",
+            "href": "https://www.phsa.ca/about-site/Documents/FY2024-Employee-Salary-and-Expenses-Exceeding-75000.pdf#page=111"
+          }
+        ],
+        "aboutInitiallyFolded": true,
+        "aboutTextExcerpt": "About these records\n\nAmounts are payments disclosed for a reporting period, not annual salary rates. Records are grouped by the disclosed name only, so they may not all concern one person. Some years have more than one record under this name: different people, separate payments or source duplicates.\n\nOther spellings joined to this name:\n\n\u201cHunsbedt, Dan el\u201d at Provincial Health Services Authority (PHSA) \u00b7 likely the same person\n\u201cHunsbedt, Danel\u201d at Provincial Health Services Authority (PHSA) \u00b7 verified on review \u00b7 Evidence \u00b7 p. 111\n\nPublished remuneration includes actual payments and taxable compensation.\n\nSeparate expenses may be paid directly or through third parties.\n\nExpenses may include third-party supplier payments.\n\nThe published standalone schedule is unsigned and does not establish board approval.",
+        "screenshot": "375-hunsbedt-verified-and-likely-evidence.png",
+        "verifiedAliasText": "\u201cHunsbedt, Danel\u201d at Provincial Health Services Authority (PHSA) \u00b7 verified on review \u00b7 Evidence \u00b7 p. 111",
+        "likelyAliasText": "\u201cHunsbedt, Dan el\u201d at Provincial Health Services Authority (PHSA) \u00b7 likely the same person",
+        "verifiedSourceLinks": [
+          "https://www.phsa.ca/about-site/Documents/FY2024-Employee-Salary-and-Expenses-Exceeding-75000.pdf#page=111"
+        ],
+        "oldAliasRoutes": [
+          {
+            "aliasKey": "hunsbedt|danel",
+            "publishedConfidence": "verified",
+            "hint": "At Provincial Health Services Authority (PHSA) this spelling is joined to Darrel Hunsbedt (verified), whose page holds every spelling.",
+            "canonicalClickThrough": true
+          },
+          {
+            "aliasKey": "hunsbedt|dan el",
+            "publishedConfidence": "likely",
+            "hint": "At Provincial Health Services Authority (PHSA) this spelling is joined to Darrel Hunsbedt (likely the same person), whose page holds every spelling.",
+            "canonicalClickThrough": true
+          }
+        ],
+        "weakAliasNotPromoted": true
+      }
+    },
+    {
+      "id": "kiarash-verified-malyam-and-likely-maly-am-remain-distinct",
+      "width": 375,
+      "status": "PASS",
+      "seconds": 1.72,
+      "evidence": {
+        "heading": "Maryam Kiarash",
+        "labels": [
+          "2024/25+6%",
+          "2023/24+35%",
+          "2022/23\u22128%",
+          "2021/22",
+          "2020/21",
+          "2019/20+1%",
+          "2018/19",
+          "2017/18",
+          "2016/17+3%",
+          "2015/16+2%",
+          "2014/15\u22123%",
+          "2013/14+2%",
+          "2012/13+10%",
+          "2011/12\u22122%",
+          "2010/11\u22124%",
+          "2009/10"
+        ],
+        "joinedAlias": "Kiarash, Malyam",
+        "evidenceLinks": [
+          {
+            "text": "Source \u00b7 p. 128",
+            "href": "https://www.phsa.ca/about-site/Documents/FY2025-Employee-Salary-and-Expenses-exceeding-75000.pdf#page=128"
+          },
+          {
+            "text": "Source \u00b7 p. 128",
+            "href": "https://www.phsa.ca/about-site/Documents/FY2024-Employee-Salary-and-Expenses-Exceeding-75000.pdf#page=128"
+          },
+          {
+            "text": "Evidence \u00b7 p. 128",
+            "href": "https://www.phsa.ca/about-site/Documents/FY2024-Employee-Salary-and-Expenses-Exceeding-75000.pdf#page=128"
+          }
+        ],
+        "aboutInitiallyFolded": true,
+        "aboutTextExcerpt": "About these records\n\nAmounts are payments disclosed for a reporting period, not annual salary rates. Records are grouped by the disclosed name only, so they may not all concern one person. Some years have more than one record under this name: different people, separate payments or source duplicates.\n\nOther spellings joined to this name:\n\n\u201cKiarash, Maly am\u201d at Provincial Health Services Authority (PHSA) \u00b7 likely the same person\n\u201cKiarash, Malyam\u201d at Provincial Health Services Authority (PHSA) \u00b7 verified on review \u00b7 Evidence \u00b7 p. 128\n\nPublished remuneration includes actual payments and taxable compensation.\n\nSeparate expenses may be paid directly or through third parties.\n\nExpenses may include third-party supplier payments.\n\nThe published standalone schedule is unsigned and does not establish board approval.",
+        "screenshot": "375-kiarash-verified-and-likely-evidence.png",
+        "verifiedAliasText": "\u201cKiarash, Malyam\u201d at Provincial Health Services Authority (PHSA) \u00b7 verified on review \u00b7 Evidence \u00b7 p. 128",
+        "likelyAliasText": "\u201cKiarash, Maly am\u201d at Provincial Health Services Authority (PHSA) \u00b7 likely the same person",
+        "verifiedSourceLinks": [
+          "https://www.phsa.ca/about-site/Documents/FY2024-Employee-Salary-and-Expenses-Exceeding-75000.pdf#page=128"
+        ],
+        "oldAliasRoutes": [
+          {
+            "aliasKey": "kiarash|malyam",
+            "publishedConfidence": "verified",
+            "hint": "At Provincial Health Services Authority (PHSA) this spelling is joined to Maryam Kiarash (verified), whose page holds every spelling.",
+            "canonicalClickThrough": true
+          },
+          {
+            "aliasKey": "kiarash|maly am",
+            "publishedConfidence": "likely",
+            "hint": "At Provincial Health Services Authority (PHSA) this spelling is joined to Maryam Kiarash (likely the same person), whose page holds every spelling.",
+            "canonicalClickThrough": true
+          }
+        ],
+        "weakAliasNotPromoted": true
+      }
+    },
+    {
+      "id": "athaide-raw-public-alias-key-boundary-and-source-history",
+      "width": 375,
+      "status": "PASS",
+      "seconds": 1.12,
+      "evidence": {
+        "heading": "Olivia Athaide",
+        "labels": [
+          "2024/25+21%",
+          "2023/24"
+        ],
+        "rawAliasKey": "athaide|ii via",
+        "rawAliasName": "Athaide,   Ii via",
+        "oldAliasClickThrough": true,
+        "aboutInitiallyFolded": true,
+        "visibleAliasLabel": "\u201cAthaide,\u201d at Provincial Health Services Authority (PHSA) \u00b7 verified on review \u00b7 Evidence \u00b7 p. 9",
+        "fullRawAliasRetainedInReviewTitle": "\u201cAthaide,   Ii via\u201d is \u201cAthaide,Olivia\u201d misread: the compiled copy repeats the employer report's only record with the same pay and expenses in 2023/24",
+        "evidenceLinks": [
+          "https://www.phsa.ca/about-site/Documents/FY2024-Employee-Salary-and-Expenses-Exceeding-75000.pdf#page=9"
+        ],
+        "screenshot": "375-athaide-raw-alias-boundary-evidence.png"
+      }
+    },
+    {
       "id": "cnc-perlstrom-seven-year-source-evidence",
       "width": 375,
       "status": "PASS",
-      "seconds": 0.55,
+      "seconds": 0.57,
       "evidence": {
         "heading": "Shannon Perlstrom",
         "labels": [
@@ -1584,7 +1785,7 @@
       "id": "cnc-stuart-retains-unknown-versus-zero",
       "width": 375,
       "status": "PASS",
-      "seconds": 0.67,
+      "seconds": 0.7,
       "evidence": {
         "heading": "Pat Stuart-Clarke",
         "labels": [
@@ -1640,7 +1841,7 @@
       "id": "cnc-cornelis-thorne-reviewed-spellings",
       "width": 375,
       "status": "PASS",
-      "seconds": 1.19,
+      "seconds": 1.24,
       "evidence": [
         {
           "heading": "Suzanne Cornelis",
@@ -1730,7 +1931,7 @@
       "id": "old-alias-urls-click-through-to-reviewed-histories",
       "width": 375,
       "status": "PASS",
-      "seconds": 3.34,
+      "seconds": 3.35,
       "evidence": [
         {
           "aliasKey": "mittleman|robert",
@@ -1768,7 +1969,7 @@
       "id": "cmbc-new-legal-employer-calendar-2025-both-layouts",
       "width": 375,
       "status": "PASS",
-      "seconds": 1.13,
+      "seconds": 1.25,
       "evidence": [
         {
           "heading": "Coast Mountain Bus Company Ltd.",
@@ -1793,7 +1994,7 @@
       "id": "cmbc-calendar-2024-stays-held-without-official-rows",
       "width": 375,
       "status": "PASS",
-      "seconds": 0.49,
+      "seconds": 0.54,
       "evidence": {
         "year": 2024,
         "noEmployeeRecordsOrCountTiles": true,
@@ -1805,7 +2006,7 @@
       "id": "transit-police-sector-and-official-2025-both-layouts",
       "width": 375,
       "status": "PASS",
-      "seconds": 1.02,
+      "seconds": 1.06,
       "evidence": [
         {
           "heading": "Transit police",
@@ -1831,7 +2032,7 @@
       "id": "worksafebc-new-calendar-2025-both-layouts",
       "width": 375,
       "status": "PASS",
-      "seconds": 1.39,
+      "seconds": 1.14,
       "evidence": [
         {
           "heading": "Worksafe B.C.",
@@ -1856,7 +2057,7 @@
       "id": "pittman-usd-history-cad-comparison-and-old-url",
       "width": 375,
       "status": "PASS",
-      "seconds": 1.09,
+      "seconds": 1.21,
       "evidence": {
         "foreignAmount": "US$3,902,330",
         "highestCad": "$1,512,762",
@@ -1876,7 +2077,7 @@
       "id": "pittman-foreign-amount-unranked-both-layouts",
       "width": 375,
       "status": "PASS",
-      "seconds": 1.04,
+      "seconds": 1.06,
       "evidence": [
         {
           "layout": "cards",
@@ -1896,20 +2097,20 @@
       "id": "responsive-controls-search-and-horizontal-overflow",
       "width": 375,
       "status": "PASS",
-      "seconds": 1.09,
+      "seconds": 1.17,
       "evidence": {
         "mobileDialogFocusOnHeading": true,
         "searchRetainedAfterCloseAndReopen": true,
         "escapeCloses": true,
         "screenshot": "375-mobile-filter-dialog.png",
-        "checkedRoutesWithoutHorizontalOverflow": 24
+        "checkedRoutesWithoutHorizontalOverflow": 32
       }
     },
     {
       "id": "rru-reviewed-history-keeps-source-periods",
       "width": 1280,
       "status": "PASS",
-      "seconds": 0.85,
+      "seconds": 0.83,
       "evidence": {
         "heading": "Robert Mittelman",
         "labels": [
@@ -1945,7 +2146,7 @@
       "id": "martineau-requested-spelling-history-and-old-url",
       "width": 1280,
       "status": "PASS",
-      "seconds": 1.95,
+      "seconds": 1.91,
       "evidence": {
         "heading": "Patrick Joseph Martineau",
         "labels": [
@@ -1969,10 +2170,157 @@
       }
     },
     {
+      "id": "hunsbedt-verified-danel-and-likely-dan-el-remain-distinct",
+      "width": 1280,
+      "status": "PASS",
+      "seconds": 1.98,
+      "evidence": {
+        "heading": "Darrel Hunsbedt",
+        "labels": [
+          "2024/25\u22123%",
+          "2023/24+11%",
+          "2022/23+11%",
+          "2021/220%",
+          "2020/21+9%",
+          "2019/20\u221210%",
+          "2018/19",
+          "2017/18",
+          "2016/17\u22121%",
+          "2015/16+8%",
+          "2014/15+2%",
+          "2013/14\u22125%",
+          "2012/13\u22128%",
+          "2011/12"
+        ],
+        "joinedAlias": "Hunsbedt, Danel",
+        "evidenceLinks": [
+          {
+            "text": "Source \u00b7 p. 111",
+            "href": "https://www.phsa.ca/about-site/Documents/FY2024-Employee-Salary-and-Expenses-Exceeding-75000.pdf#page=111"
+          },
+          {
+            "text": "Evidence \u00b7 p. 111",
+            "href": "https://www.phsa.ca/about-site/Documents/FY2024-Employee-Salary-and-Expenses-Exceeding-75000.pdf#page=111"
+          }
+        ],
+        "aboutInitiallyFolded": true,
+        "aboutTextExcerpt": "About these records\n\nAmounts are payments disclosed for a reporting period, not annual salary rates. Records are grouped by the disclosed name only, so they may not all concern one person. Some years have more than one record under this name: different people, separate payments or source duplicates.\n\nOther spellings joined to this name:\n\n\u201cHunsbedt, Dan el\u201d at Provincial Health Services Authority (PHSA) \u00b7 likely the same person\n\u201cHunsbedt, Danel\u201d at Provincial Health Services Authority (PHSA) \u00b7 verified on review \u00b7 Evidence \u00b7 p. 111\n\nPublished remuneration includes actual payments and taxable compensation.\n\nSeparate expenses may be paid directly or through third parties.\n\nExpenses may include third-party supplier payments.\n\nThe published standalone schedule is unsigned and does not establish board approval.",
+        "screenshot": "1280-hunsbedt-verified-and-likely-evidence.png",
+        "verifiedAliasText": "\u201cHunsbedt, Danel\u201d at Provincial Health Services Authority (PHSA) \u00b7 verified on review \u00b7 Evidence \u00b7 p. 111",
+        "likelyAliasText": "\u201cHunsbedt, Dan el\u201d at Provincial Health Services Authority (PHSA) \u00b7 likely the same person",
+        "verifiedSourceLinks": [
+          "https://www.phsa.ca/about-site/Documents/FY2024-Employee-Salary-and-Expenses-Exceeding-75000.pdf#page=111"
+        ],
+        "oldAliasRoutes": [
+          {
+            "aliasKey": "hunsbedt|danel",
+            "publishedConfidence": "verified",
+            "hint": "At Provincial Health Services Authority (PHSA) this spelling is joined to Darrel Hunsbedt (verified), whose page holds every spelling.",
+            "canonicalClickThrough": true
+          },
+          {
+            "aliasKey": "hunsbedt|dan el",
+            "publishedConfidence": "likely",
+            "hint": "At Provincial Health Services Authority (PHSA) this spelling is joined to Darrel Hunsbedt (likely the same person), whose page holds every spelling.",
+            "canonicalClickThrough": true
+          }
+        ],
+        "weakAliasNotPromoted": true
+      }
+    },
+    {
+      "id": "kiarash-verified-malyam-and-likely-maly-am-remain-distinct",
+      "width": 1280,
+      "status": "PASS",
+      "seconds": 2.03,
+      "evidence": {
+        "heading": "Maryam Kiarash",
+        "labels": [
+          "2024/25+6%",
+          "2023/24+35%",
+          "2022/23\u22128%",
+          "2021/22",
+          "2020/21",
+          "2019/20+1%",
+          "2018/19",
+          "2017/18",
+          "2016/17+3%",
+          "2015/16+2%",
+          "2014/15\u22123%",
+          "2013/14+2%",
+          "2012/13+10%",
+          "2011/12\u22122%",
+          "2010/11\u22124%",
+          "2009/10"
+        ],
+        "joinedAlias": "Kiarash, Malyam",
+        "evidenceLinks": [
+          {
+            "text": "Source \u00b7 p. 128",
+            "href": "https://www.phsa.ca/about-site/Documents/FY2025-Employee-Salary-and-Expenses-exceeding-75000.pdf#page=128"
+          },
+          {
+            "text": "Source \u00b7 p. 128",
+            "href": "https://www.phsa.ca/about-site/Documents/FY2024-Employee-Salary-and-Expenses-Exceeding-75000.pdf#page=128"
+          },
+          {
+            "text": "Evidence \u00b7 p. 128",
+            "href": "https://www.phsa.ca/about-site/Documents/FY2024-Employee-Salary-and-Expenses-Exceeding-75000.pdf#page=128"
+          }
+        ],
+        "aboutInitiallyFolded": true,
+        "aboutTextExcerpt": "About these records\n\nAmounts are payments disclosed for a reporting period, not annual salary rates. Records are grouped by the disclosed name only, so they may not all concern one person. Some years have more than one record under this name: different people, separate payments or source duplicates.\n\nOther spellings joined to this name:\n\n\u201cKiarash, Maly am\u201d at Provincial Health Services Authority (PHSA) \u00b7 likely the same person\n\u201cKiarash, Malyam\u201d at Provincial Health Services Authority (PHSA) \u00b7 verified on review \u00b7 Evidence \u00b7 p. 128\n\nPublished remuneration includes actual payments and taxable compensation.\n\nSeparate expenses may be paid directly or through third parties.\n\nExpenses may include third-party supplier payments.\n\nThe published standalone schedule is unsigned and does not establish board approval.",
+        "screenshot": "1280-kiarash-verified-and-likely-evidence.png",
+        "verifiedAliasText": "\u201cKiarash, Malyam\u201d at Provincial Health Services Authority (PHSA) \u00b7 verified on review \u00b7 Evidence \u00b7 p. 128",
+        "likelyAliasText": "\u201cKiarash, Maly am\u201d at Provincial Health Services Authority (PHSA) \u00b7 likely the same person",
+        "verifiedSourceLinks": [
+          "https://www.phsa.ca/about-site/Documents/FY2024-Employee-Salary-and-Expenses-Exceeding-75000.pdf#page=128"
+        ],
+        "oldAliasRoutes": [
+          {
+            "aliasKey": "kiarash|malyam",
+            "publishedConfidence": "verified",
+            "hint": "At Provincial Health Services Authority (PHSA) this spelling is joined to Maryam Kiarash (verified), whose page holds every spelling.",
+            "canonicalClickThrough": true
+          },
+          {
+            "aliasKey": "kiarash|maly am",
+            "publishedConfidence": "likely",
+            "hint": "At Provincial Health Services Authority (PHSA) this spelling is joined to Maryam Kiarash (likely the same person), whose page holds every spelling.",
+            "canonicalClickThrough": true
+          }
+        ],
+        "weakAliasNotPromoted": true
+      }
+    },
+    {
+      "id": "athaide-raw-public-alias-key-boundary-and-source-history",
+      "width": 1280,
+      "status": "PASS",
+      "seconds": 1.27,
+      "evidence": {
+        "heading": "Olivia Athaide",
+        "labels": [
+          "2024/25+21%",
+          "2023/24"
+        ],
+        "rawAliasKey": "athaide|ii via",
+        "rawAliasName": "Athaide,   Ii via",
+        "oldAliasClickThrough": true,
+        "aboutInitiallyFolded": true,
+        "visibleAliasLabel": "\u201cAthaide,\u201d at Provincial Health Services Authority (PHSA) \u00b7 verified on review \u00b7 Evidence \u00b7 p. 9",
+        "fullRawAliasRetainedInReviewTitle": "\u201cAthaide,   Ii via\u201d is \u201cAthaide,Olivia\u201d misread: the compiled copy repeats the employer report's only record with the same pay and expenses in 2023/24",
+        "evidenceLinks": [
+          "https://www.phsa.ca/about-site/Documents/FY2024-Employee-Salary-and-Expenses-Exceeding-75000.pdf#page=9"
+        ],
+        "screenshot": "1280-athaide-raw-alias-boundary-evidence.png"
+      }
+    },
+    {
       "id": "cnc-perlstrom-seven-year-source-evidence",
       "width": 1280,
       "status": "PASS",
-      "seconds": 0.61,
+      "seconds": 0.74,
       "evidence": {
         "heading": "Shannon Perlstrom",
         "labels": [
@@ -2025,7 +2373,7 @@
       "id": "cnc-stuart-retains-unknown-versus-zero",
       "width": 1280,
       "status": "PASS",
-      "seconds": 0.61,
+      "seconds": 0.82,
       "evidence": {
         "heading": "Pat Stuart-Clarke",
         "labels": [
@@ -2080,7 +2428,7 @@
       "id": "cnc-cornelis-thorne-reviewed-spellings",
       "width": 1280,
       "status": "PASS",
-      "seconds": 1.07,
+      "seconds": 1.19,
       "evidence": [
         {
           "heading": "Suzanne Cornelis",
@@ -2168,7 +2516,7 @@
       "id": "old-alias-urls-click-through-to-reviewed-histories",
       "width": 1280,
       "status": "PASS",
-      "seconds": 3.14,
+      "seconds": 3.27,
       "evidence": [
         {
           "aliasKey": "mittleman|robert",
@@ -2206,7 +2554,7 @@
       "id": "cmbc-new-legal-employer-calendar-2025-both-layouts",
       "width": 1280,
       "status": "PASS",
-      "seconds": 1.13,
+      "seconds": 1.24,
       "evidence": [
         {
           "heading": "Coast Mountain Bus Company Ltd.",
@@ -2231,7 +2579,7 @@
       "id": "cmbc-calendar-2024-stays-held-without-official-rows",
       "width": 1280,
       "status": "PASS",
-      "seconds": 0.75,
+      "seconds": 0.47,
       "evidence": {
         "year": 2024,
         "noEmployeeRecordsOrCountTiles": true,
@@ -2269,7 +2617,7 @@
       "id": "worksafebc-new-calendar-2025-both-layouts",
       "width": 1280,
       "status": "PASS",
-      "seconds": 0.98,
+      "seconds": 1.04,
       "evidence": [
         {
           "heading": "Worksafe B.C.",
@@ -2293,7 +2641,7 @@
       "id": "pittman-usd-history-cad-comparison-and-old-url",
       "width": 1280,
       "status": "PASS",
-      "seconds": 1.18,
+      "seconds": 1.01,
       "evidence": {
         "foreignAmount": "US$3,902,330",
         "highestCad": "$1,512,762",
@@ -2312,7 +2660,7 @@
       "id": "pittman-foreign-amount-unranked-both-layouts",
       "width": 1280,
       "status": "PASS",
-      "seconds": 1.23,
+      "seconds": 1.13,
       "evidence": [
         {
           "layout": "cards",
@@ -2333,10 +2681,10 @@
       "id": "responsive-controls-search-and-horizontal-overflow",
       "width": 1280,
       "status": "PASS",
-      "seconds": 0.93,
+      "seconds": 0.86,
       "evidence": {
         "desktopSearchFindsReviewedPerlstrom": true,
-        "checkedRoutesWithoutHorizontalOverflow": 23
+        "checkedRoutesWithoutHorizontalOverflow": 31
       }
     }
   ],
@@ -2352,6 +2700,24 @@
       "file": "375-martineau-reviewed-history.png",
       "url": "http://127.0.0.1:4193/PofBC/?view=salaries&person=martineau%7Cpatrick+joseph&person-at=provincial-health-services-authority",
       "sha256": "a3fd8f834bbbee35df47eea839c49bfd817180b7e4f4658c0e6740ee4468f99e"
+    },
+    {
+      "width": 375,
+      "file": "375-hunsbedt-verified-and-likely-evidence.png",
+      "url": "http://127.0.0.1:4193/PofBC/?view=salaries&person=hunsbedt%7Cdarrel&person-at=provincial-health-services-authority",
+      "sha256": "6ec055c2704fb6fae8c954304a1fbc08a41fb51cea998a92bc3e1082496ac520"
+    },
+    {
+      "width": 375,
+      "file": "375-kiarash-verified-and-likely-evidence.png",
+      "url": "http://127.0.0.1:4193/PofBC/?view=salaries&person=kiarash%7Cmaryam&person-at=provincial-health-services-authority",
+      "sha256": "009d0da5c762ced5c92e8e80c3cc623749550f20978bb63fc58bd543724154b2"
+    },
+    {
+      "width": 375,
+      "file": "375-athaide-raw-alias-boundary-evidence.png",
+      "url": "http://127.0.0.1:4193/PofBC/?view=salaries&person=athaide%7Colivia&person-at=provincial-health-services-authority",
+      "sha256": "7240e7770525492bb6c240487ac66bcd2147f5dd4a0465b02c2e1df113f18345"
     },
     {
       "width": 375,
@@ -2415,6 +2781,24 @@
     },
     {
       "width": 1280,
+      "file": "1280-hunsbedt-verified-and-likely-evidence.png",
+      "url": "http://127.0.0.1:4193/PofBC/?view=salaries&person=hunsbedt%7Cdarrel&person-at=provincial-health-services-authority",
+      "sha256": "5cec4f175e669cd0fb5209d1f61717354662feefbf57962a707388aaba903582"
+    },
+    {
+      "width": 1280,
+      "file": "1280-kiarash-verified-and-likely-evidence.png",
+      "url": "http://127.0.0.1:4193/PofBC/?view=salaries&person=kiarash%7Cmaryam&person-at=provincial-health-services-authority",
+      "sha256": "d2fef4d3ac5f9d5fbb12b23012fb71dc1da48c5b90cdc77917e0d288eeddf2d0"
+    },
+    {
+      "width": 1280,
+      "file": "1280-athaide-raw-alias-boundary-evidence.png",
+      "url": "http://127.0.0.1:4193/PofBC/?view=salaries&person=athaide%7Colivia&person-at=provincial-health-services-authority",
+      "sha256": "01aa9b71f0694cca1361b0cd2c1929a90e5223e74e26ab52e9c11adb91cd9742"
+    },
+    {
+      "width": 1280,
       "file": "1280-cnc-perlstrom-evidence.png",
       "url": "http://127.0.0.1:4193/PofBC/?view=salaries&person=perlstrom%7Cshannon&person-at=college-of-new-caledonia",
       "sha256": "bdc304b7b5b2a3888bd4ec049cd004e0fdeee3d82e3e2351eab581cf791c3e71"
@@ -2459,6 +2843,62 @@
     {
       "width": 375,
       "view": "martineau-old-alias-click",
+      "viewport": 375,
+      "document": 360,
+      "body": 360
+    },
+    {
+      "width": 375,
+      "view": "Darrel Hunsbedt",
+      "viewport": 375,
+      "document": 360,
+      "body": 360
+    },
+    {
+      "width": 375,
+      "view": "hunsbedt-verified-alias",
+      "viewport": 375,
+      "document": 360,
+      "body": 360
+    },
+    {
+      "width": 375,
+      "view": "hunsbedt-likely-alias",
+      "viewport": 375,
+      "document": 360,
+      "body": 360
+    },
+    {
+      "width": 375,
+      "view": "Maryam Kiarash",
+      "viewport": 375,
+      "document": 360,
+      "body": 360
+    },
+    {
+      "width": 375,
+      "view": "kiarash-verified-alias",
+      "viewport": 375,
+      "document": 360,
+      "body": 360
+    },
+    {
+      "width": 375,
+      "view": "kiarash-likely-alias",
+      "viewport": 375,
+      "document": 360,
+      "body": 360
+    },
+    {
+      "width": 375,
+      "view": "athaide-canonical",
+      "viewport": 375,
+      "document": 360,
+      "body": 360
+    },
+    {
+      "width": 375,
+      "view": "athaide-raw-key-click",
       "viewport": 375,
       "document": 360,
       "body": 360
@@ -2633,6 +3073,62 @@
     },
     {
       "width": 1280,
+      "view": "Darrel Hunsbedt",
+      "viewport": 1280,
+      "document": 1265,
+      "body": 1265
+    },
+    {
+      "width": 1280,
+      "view": "hunsbedt-verified-alias",
+      "viewport": 1280,
+      "document": 1265,
+      "body": 1265
+    },
+    {
+      "width": 1280,
+      "view": "hunsbedt-likely-alias",
+      "viewport": 1280,
+      "document": 1265,
+      "body": 1265
+    },
+    {
+      "width": 1280,
+      "view": "Maryam Kiarash",
+      "viewport": 1280,
+      "document": 1265,
+      "body": 1265
+    },
+    {
+      "width": 1280,
+      "view": "kiarash-verified-alias",
+      "viewport": 1280,
+      "document": 1265,
+      "body": 1265
+    },
+    {
+      "width": 1280,
+      "view": "kiarash-likely-alias",
+      "viewport": 1280,
+      "document": 1265,
+      "body": 1265
+    },
+    {
+      "width": 1280,
+      "view": "athaide-canonical",
+      "viewport": 1280,
+      "document": 1265,
+      "body": 1265
+    },
+    {
+      "width": 1280,
+      "view": "athaide-raw-key-click",
+      "viewport": 1280,
+      "document": 1265,
+      "body": 1265
+    },
+    {
+      "width": 1280,
       "view": "Shannon Perlstrom",
       "viewport": 1280,
       "document": 1265,
@@ -2792,12 +3288,12 @@
     "note": "Browser-default favicon request is outside the /PofBC/ project base; tracked separately from application requests and JavaScript execution errors."
   },
   "status": "PASS",
-  "finishedOn": "2026-11-02T23:28:23Z",
+  "finishedOn": "2026-11-03T00:00:01Z",
   "summary": {
-    "checks": 27,
-    "passed": 27,
+    "checks": 33,
+    "passed": 33,
     "failed": 0,
-    "screenshots": 16,
+    "screenshots": 22,
     "javascriptErrors": 0,
     "consoleErrors": 0,
     "localHttpFailures": 0,

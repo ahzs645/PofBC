@@ -103,64 +103,147 @@ class UnionFind:
  def join(self,a,b):self.parents[self.find(a)]=self.find(b)
 
 def overlay_outputs(pending):
- import collections
+ import collections,subprocess
+ def published_namekey(s):
+  parts=str(s).split(',')
+  def letters(z):return re.sub('[^a-z]','',unicodedata.normalize('NFD',z).lower())
+  return letters(parts[0])+'|'+' '.join(z for z in (letters(v) for v in re.split(r'[\s.]+',' '.join(parts[1:]).strip())) if z)
  baseline_path='research/salaries/name-links/held-completion-2026-11-02/review-results.json'
  baseline_bytes=(ROOT/baseline_path).read_bytes();baseline=json.loads(baseline_bytes);assert len(baseline)==3173
  baseline_counts=collections.Counter(r['outcome'] for r in baseline)
  assert baseline_counts['connected-verified']==130 and baseline_counts['connected-likely']==25
- all_connections,verified_connections=UnionFind(),UnionFind();linkpins=[]
+ all_connections,verified_connections=UnionFind(),UnionFind();linkpins=[];published_graph={}
+ def edge(graph,left,right,proof):
+  old=graph.setdefault(left,{}).get(right)
+  if old is None or (old['confidence']!='verified' and proof['confidence']=='verified'):
+   graph[left][right]=proof;graph.setdefault(right,{})[left]=proof
  for path in sorted((ROOT/'public/salaries/links').glob('*.json.gzip')):
-  b=path.read_bytes();linkpins.append({'path':str(path.relative_to(ROOT)),'sha256':sha(b)})
+  b=path.read_bytes();rel=str(path.relative_to(ROOT));linkpins.append({'path':rel,'sha256':sha(b)})
   for slug,key,name,aliases in json.loads(gzip.decompress(b))['links']:
    for alias in aliases:
     if alias[2] not in ['verified','likely']:continue
     left,right=slug+'|'+key,slug+'|'+alias[0];all_connections.join(left,right)
+    proof={'type':'published-name-link','confidence':alias[2],'path':rel,'groupKey':key,'aliasKey':alias[0]}
+    edge(published_graph,left,right,proof)
     if alias[2]=='verified':verified_connections.join(left,right)
  decisions=[];decisionfiles=[]
  for kind in ['rru','cnc']:
   path=OUT/f'name-review-{kind}.json';b=pending[path] if path in pending else path.read_bytes();decisionfiles.append({'path':str(path.relative_to(ROOT)),'sha256':sha(b)})
   for d in json.loads(b)['decisions']:decisions.append((str(path.relative_to(ROOT)),d))
  by_candidate={d['candidateId']:(p,d) for p,d in decisions if d['queueMembership']=='original-3173'}
- assert len(by_candidate)==15
+ assert len(by_candidate)==15,'The local source-copy review owns exactly15 original candidates'
  def confidence(employer,names):
-  a,b=[employer+'|'+namekey(n) for n in names]
+  a,b=[employer+'|'+published_namekey(n) for n in names]
   if verified_connections.find(a)==verified_connections.find(b):return 'verified'
   if all_connections.find(a)==all_connections.find(b):return 'likely'
   return None
  for _,d in decisions:assert confidence(d['employer'],d['names'])=='verified',f'Final published namebuild does not yet include {d["names"]}'
- results=[];changed=[]
+ # The concurrent main review is independently revalidated against the LIVE rows.
+ # Merely finding a new name in the published graph never certifies an old held pair.
+ repeat_path='research/salaries/name-links/repeat-reviewed.json';repeat_validator='scripts/lib/repeat-name-connections.mjs'
+ repeat_bytes=(ROOT/repeat_path).read_bytes();repeat=json.loads(repeat_bytes);assert repeat['schemaVersion']==1
+ assert len(repeat['decisions'])==2699,'Concurrent main repeat-review scope changed; review its new scope explicitly'
+ node_code="""import fs from 'node:fs'; import {gunzipSync} from 'node:zlib';
+import {validateRepeatNameConnections} from './scripts/lib/repeat-name-connections.mjs';
+const payload=JSON.parse(fs.readFileSync('research/salaries/name-links/repeat-reviewed.json'));
+const index=JSON.parse(fs.readFileSync('public/salaries/people/index.json'));
+const wanted=new Set(payload.decisions.map(d=>d.employer));
+const ats=new Set(index.employers.flatMap((e,i)=>wanted.has(e[3])?[i]:[]));
+const rows=Object.keys(index.shards).flatMap(s=>JSON.parse(gunzipSync(fs.readFileSync(`public/salaries/people/${s}.json.gzip`))).filter(r=>ats.has(r[4])));
+const result=validateRepeatNameConnections(payload,rows,index);
+process.stdout.write(JSON.stringify({validatedDecisions:result.length,liveRelevantRows:rows.length}));
+"""
+ checked=subprocess.run(['node','--input-type=module'],input=node_code,cwd=ROOT,capture_output=True,text=True)
+ assert checked.returncode==0,'Concurrent main repeat reviews no longer validate against live rows: '+checked.stderr[-2500:]
+ repeat_validation=json.loads(checked.stdout);assert repeat_validation['validatedDecisions']==len(repeat['decisions'])
+ assert (ROOT/repeat_path).read_bytes()==repeat_bytes,'Concurrent repeat review changed during validation'
+ repeat_pin={'path':repeat_path,'sha256':sha(repeat_bytes)};decisionfiles.append(repeat_pin)
+ validator_pin={'path':repeat_validator,'sha256':sha((ROOT/repeat_validator).read_bytes())}
+ # A proof path can use old verified links and the independently reviewed edges.
+ # Non-local upgrades must traverse a concurrent-main-repeat edge, so they cannot
+ # be attributed to our18 individual source-pixel receipts.
+ proof_graph={};old_links_path='research/salaries/source-follow-through-2026-11-02/baseline-live-links.json.gzip'
+ old_links_bytes=(ROOT/old_links_path).read_bytes();old_links=json.loads(gzip.decompress(old_links_bytes))
+ for slug,key,name,aliases in old_links['groups']:
+  for alias in aliases:
+   if alias[2] in ['verified','likely']:
+    edge(proof_graph,slug+'|'+key,slug+'|'+alias[0],{'type':'baseline-published-connection','confidence':alias[2],'path':old_links_path,'groupKey':key,'aliasKey':alias[0]})
+ for file,d in decisions:
+  a,b=[d['employer']+'|'+published_namekey(n) for n in d['names']]
+  edge(proof_graph,a,b,{'type':'local-source-copy','confidence':'verified','path':file,'candidateId':d['candidateId'],'names':d['names']})
+ previous_all,previous_verified=UnionFind(),UnionFind()
+ for left,neighbors in proof_graph.items():
+  for right,p in neighbors.items():
+   previous_all.join(left,right)
+   if p['confidence']=='verified':previous_verified.join(left,right)
+ for i,d in enumerate(repeat['decisions']):
+  assert d['decision']=='verified' and len(d['names'])==2
+  assert confidence(d['employer'],d['names'])=='verified',f'Concurrent repeat review not published: {d["names"]}'
+  a,b=[d['employer']+'|'+published_namekey(n) for n in d['names']]
+  edge(proof_graph,a,b,{'type':'concurrent-main-repeat','confidence':'verified','path':repeat_path,'decisionIndex0':i,'decisionSha256':hashjson(d),'names':d['names']})
+ def path_between(graph,a,b,level,require_repeat=False):
+  start=(a,False);queue=collections.deque([start]);parents={start:None};last=None
+  while queue:
+   node,has_repeat=queue.popleft()
+   if node==b and (has_repeat or not require_repeat):last=(node,has_repeat);break
+   for nxt,p in sorted(graph.get(node,{}).items()):
+    if level=='verified' and p['confidence']!='verified':continue
+    state=(nxt,has_repeat or p['type']=='concurrent-main-repeat')
+    if state not in parents:parents[state]=((node,has_repeat),p);queue.append(state)
+  if last is None:return None
+  result=[]
+  while parents[last] is not None:
+   prev,p=parents[last];result.append({'fromKey':prev[0],'toKey':last[0],**p});last=prev
+  return list(reversed(result))
+ def concurrent_proof(old,level):
+  a,b=[old['employer']+'|'+published_namekey(n) for n in old['names']]
+  previous=previous_verified if level=='verified' else previous_all
+  assert previous.find(a)!=previous.find(b),f'Candidate upgrade predates concurrent repeat review and cannot be attributed to it: {old["id"]}'
+  proof_path=path_between(proof_graph,a,b,level,True)
+  published_path=path_between(published_graph,a,b,level)
+  assert proof_path and published_path,f'Current candidate upgrade lacks a validated concurrent repeat-review path: {old["id"]} {old["names"]}'
+  for p in proof_path:
+   actual=verified_connections if p['confidence']=='verified' else all_connections
+   assert actual.find(p['fromKey'])==actual.find(p['toKey']),'Proof path is not preserved in the published graph'
+  return {'type':'concurrent-main-repeat','path':repeat_path,'sha256':repeat_pin['sha256'],'confidence':level,'derivation':'direct-reviewed-pair' if len(proof_path)==1 else 'transitive-reviewed-path','repeatDecisionIndexes0':sorted({p['decisionIndex0'] for p in proof_path if p['type']=='concurrent-main-repeat'}),'reviewedPath':proof_path,'publishedPath':published_path,'attributedToLocalPixelReceipts':False}
+ results=[];changed=[];concurrent_changes=[]
  for old in baseline:
   current=confidence(old['employer'],old['names']);before=old['outcome']
   if before=='connected-verified':assert current=='verified',f'Previous verified connection lost: {old["id"]}'
   if before=='connected-likely':assert current in ['verified','likely'],f'Previous likely connection lost: {old["id"]}'
   outcome='connected-verified' if current=='verified' else 'connected-likely' if current=='likely' else before
   if current is None:assert before not in ['connected-verified','connected-likely']
-  review=by_candidate.get(str(old['id']))
-  public=[]
+  review=by_candidate.get(str(old['id']));public=[]
   for lead in old.get('publicSourceLeads',[]):
    if lead.get('url'):public.append(lead['url']+(f'#page={lead["physicalPage"]}' if lead.get('physicalPage') else ''))
   row={'id':old['id'],'employer':old['employer'],'names':old['names'],'priorOutcome':before,'outcome':outcome,'priorAssessment':old['assessment'],'assessment':old['assessment'],'pending':old.get('pending',current is None) if current is None else False,'currentPublishedConfidence':current,'nextAction':old['nextAction'],'baselineRowSha256':hashjson(old),'publicSources':sorted(set(public))}
+  review_type=None;attribution=None
   if review:
-   file,d=review;row['assessment']='reviewed-original-source-copy-spelling';row['nextAction']='Reviewed original source-copy spelling connection is published. Preserve every raw name, amount, expense, source and reporting label; no compiled observation is replaced or redated.'
-   row['sourceFollowThroughReview']={'path':file,'candidateId':d['candidateId'],'names':d['names'],'financialWitnessMode':d['proof']['financialWitness']['mode']};row['publicSources']=sorted(set(row['publicSources']+[e['url'] for e in d['evidence']]))
+   file,d=review;review_type='local-source-copy';row['assessment']='reviewed-original-source-copy-spelling';row['nextAction']='Reviewed original source-copy spelling connection is published. Preserve every raw name, amount, expense, source and reporting label; no compiled observation is replaced or redated.'
+   row['sourceFollowThroughReview']={'type':review_type,'path':file,'candidateId':d['candidateId'],'names':d['names'],'financialWitnessMode':d['proof']['financialWitness']['mode']};row['publicSources']=sorted(set(row['publicSources']+[e['url'] for e in d['evidence']]))
   elif outcome!=before:
-   row['assessment']='current-published-group-after-source-expansion';row['nextAction']='The current published name group establishes the recorded confidence; retain all source-specific observations and prior confidence qualifications.'
-  if outcome!=before:changed.append({'id':old['id'],'employer':old['employer'],'names':old['names'],'priorOutcome':before,'outcome':outcome,'manualReview':bool(review)})
+   review_type='concurrent-main-repeat';attribution=concurrent_proof(old,current);row['concurrentMainRepeatReview']=attribution
+   row['assessment']='concurrent-main-repeat-reviewed-connection';row['nextAction']='Current published confidence follows the independently validated concurrent main repeat review and its recorded path. This is not an additional local source-pixel review; preserve all observations and period/expense qualifications.'
+   concurrent_changes.append(old['id'])
+  if outcome!=before:
+   change={'id':old['id'],'employer':old['employer'],'names':old['names'],'priorOutcome':before,'outcome':outcome,'manualReview':bool(review),'reviewType':review_type}
+   if attribution:change['concurrentMainRepeatProof']=attribution
+   changed.append(change)
   results.append(row)
  counts=collections.Counter(r['outcome'] for r in results);v,l=counts['connected-verified'],counts['connected-likely'];unconnected=3173-v-l
+ local_changes=[r for r in changed if r['reviewType']=='local-source-copy'];assert len(local_changes)==15
  extras=[{'path':p,'names':d['names'],'employer':d['employer'],'decision':d['decision'],'queueMembership':d['queueMembership']} for p,d in decisions if d['queueMembership']=='additional-source-copy']
- meta={'schemaVersion':1,'reviewedOn':'2026-11-02','scope':'Current overlay of exactly the original3173 reviewed candidate IDs. Three additional source-copy connections are reported separately.','baseline':{'path':baseline_path,'sha256':sha(baseline_bytes),'rows':3173,'verified':130,'likely':25,'unconnected':3018},'current':{'rows':3173,'verified':v,'likely':l,'unconnected':unconnected,'outcomes':dict(sorted(counts.items()))},'changedOriginalCandidates':changed,'additionalReviewedConnections':extras,'nameReviewInputs':decisionfiles,'publishedLinkInputs':linkpins,'preservesAllPriorPublishedConfidence':True,'usesUploadedOutcomeLabelsAsEvidence':False}
+ meta={'schemaVersion':1,'reviewedOn':'2026-11-02','scope':'Current overlay of exactly the original3173 candidate IDs, with local source-copy reviews and concurrent main repeat-review effects separately attributed. Three additional local source-copy connections remain outside that denominator.','baseline':{'path':baseline_path,'sha256':sha(baseline_bytes),'rows':3173,'verified':130,'likely':25,'unconnected':3018},'current':{'rows':3173,'verified':v,'likely':l,'unconnected':unconnected,'outcomes':dict(sorted(counts.items()))},'attributionCounts':{'localSourceCopyOriginalCandidates':len(local_changes),'concurrentMainRepeatOriginalCandidates':len(concurrent_changes),'totalChangedOriginalCandidates':len(changed)},'changedOriginalCandidates':changed,'additionalReviewedConnections':extras,'nameReviewInputs':decisionfiles,'baselineConnectionInputs':[{'path':old_links_path,'sha256':sha(old_links_bytes)}],'concurrentMainRepeatReview':{**repeat_pin,'reviewedDecisions':len(repeat['decisions']),'validation':{**repeat_validation,'validator':validator_pin},'owner':'Concurrent main repeat-name review; separate from this release\'s18 local individual-pixel receipts','changedOriginalCandidateIds':concurrent_changes},'publishedLinkInputs':linkpins,'preservesAllPriorPublishedConfidence':True,'usesUploadedOutcomeLabelsAsEvidence':False}
  pending[OUT/'name-review-overlay.json']=(json.dumps(meta,ensure_ascii=False,indent=2)+'\n').encode()
  pending[OUT/'review-results.json']=(json.dumps(results,ensure_ascii=False,indent=2)+'\n').encode()
- text=io.StringIO(newline='');w=csv.writer(text);w.writerow(['candidate_id','employer','name_a','name_b','prior_outcome','outcome','prior_assessment','assessment','next_action','public_sources'])
- for r in results:w.writerow([r['id'],r['employer'],*r['names'],r['priorOutcome'],r['outcome'],r['priorAssessment'],r['assessment'],r['nextAction'],' | '.join(r['publicSources'])])
+ text=io.StringIO(newline='');w=csv.writer(text,lineterminator='\n');w.writerow(['candidate_id','employer','name_a','name_b','prior_outcome','outcome','prior_assessment','assessment','next_action','public_sources','review_type'])
+ for r in results:w.writerow([r['id'],r['employer'],*r['names'],r['priorOutcome'],r['outcome'],r['priorAssessment'],r['assessment'],r['nextAction'],' | '.join(r['publicSources']),r.get('sourceFollowThroughReview',r.get('concurrentMainRepeatReview',{})).get('type','')])
  pending[OUT/'held-pair-outcomes.csv']=text.getvalue().encode()
- lines=['# Current outcomes of the original3173-pair review','', 'This overlay starts from the immutable held-completion review:130 verified,25 likely and3018 unconnected pairs. It derives current confidence from the published name-link graph, retaining every prior verified/likely connection. Uploaded outcome labels are used only to preserve candidate membership, never as identity evidence.','', '| Outcome | Prior review | Current |','| --- | ---: | ---: |',f'| Verified connections |130|{v}|',f'| Likely connections |25|{l}|',f'| Unconnected; kept separate |3018|{unconnected}|','',f'{len(changed)} original candidate outcomes changed;15 have individually reviewed source-copy receipts. The complete original3173 IDs and names remain in [review-results.json](review-results.json) and [held-pair-outcomes.csv](held-pair-outcomes.csv). Raw salary observations, missing expenses, source definitions and period labels remain unchanged.','', 'The11 Royal Roads original-queue spelling cases are supported by the original2021/22 employee schedule while the related compilation keeps its2020/21 label. Four CNC original-queue cases are also accepted:Perlstrom/Per1strom, Rosche/Rasche, Idehen/ldehen and Stuart-Clarke/StuartClar1<e. Stuart-Clarke uses unique remuneration in both312-row cohorts; unknown source expenses remain unknown and the compiled numeric0 remains0.','', 'CNC Maides/Maldes and Rourke/Rour1<e remain separate:113947 remuneration occurs45times in each complete cohort, and unknown expenses cannot be equated to0.','', 'The three additional source-copy connections stay outside the original3173 denominator:','', '| Employer | Compiled spelling | Reviewed original spelling |','| --- | --- | --- |']
+ lines=['# Current outcomes of the original3,173-pair review','', 'This overlay starts from the immutable held-completion review:130 verified,25 likely and3,018 unconnected pairs. Current confidence comes from the published name-link graph, preserving every prior verified/likely connection. Uploaded outcome labels supply candidate membership only.','', '| Outcome | Prior review | Current |','| --- | ---: | ---: |',f'| Verified connections |130|{v}|',f'| Likely connections |25|{l}|',f'| Unconnected; kept separate |3018|{unconnected}|','',f'{len(changed)} original candidate outcomes changed. Exactly15 are this release\'s individual source-copy reviews; {len(concurrent_changes)} are separately justified by the concurrent main repeat review and recorded published paths. The complete original3,173 IDs and names remain in [review-results.json](review-results.json) and [held-pair-outcomes.csv](held-pair-outcomes.csv). All raw salary observations, missing expenses and period labels remain unchanged.','', 'The local15 consist of11 Royal Roads cases, supported by the original2021/22 schedule while the compilation retains2020/21, and four CNC cases:Perlstrom/Per1strom, Rosche/Rasche, Idehen/ldehen and Stuart-Clarke/StuartClar1<e. The18 local adopted connections, including three extra leads below, keep their original receipt bytes and proof hashes.','', f'The concurrent main review is a separate2,699-decision source-copy review at [repeat-reviewed.json](../name-links/repeat-reviewed.json), pinned as SHA256 `{repeat_pin["sha256"]}`. Its own validator is rerun against the live source rows before attribution. Each additional original-queue change records a direct or transitive reviewed path containing a concurrent-repeat edge and a matching current published path. These changes are not counted as new local source-pixel reviews.','', 'CNC Maides/Maldes and Rourke/Rour1<e remain separate:113,947 remuneration has45 occurrences in each complete cohort, and unknown expenses cannot be equated to0. Stuart-Clarke instead uses unique113,369 remuneration while retaining unknown source expenses and compiled numeric0 separately.','', 'Three additional local source-copy connections stay outside the original3,173 denominator:','', '| Employer | Compiled spelling | Reviewed original spelling |','| --- | --- | --- |']
  for extra in extras:lines.append('|'+extra['employer']+'|'+extra['names'][0]+'|'+extra['names'][1]+'|')
- lines+=['', 'All18 adopted source-copy connections have pinned individual source crops/pages, normalized source data, exact live alias/current-target histories, source definitions and unique financial witnesses in both complete cohorts. Cornelis and Thorne also require the earlier native2020/21 source crops. These verify the source-copy spellings without claiming lifetime identity or wholesale equivalence between source cohorts.','', 'See [name-review-overlay.json](name-review-overlay.json) for baseline/current counts, every changed original ID, separate extra leads and the exact published graph fingerprints.']
+ lines+=['', 'The18 local receipts retain individual source crops/pages, normalized source data, exact live alias/current-target histories, source definitions and unique financial witnesses in both complete cohorts. Cornelis and Thorne also require earlier native2020/21 crops. These establish source-copy spellings without asserting lifetime identity or wholesale cohort equivalence.','', 'See [name-review-overlay.json](name-review-overlay.json) for baseline/current counts, separate review ownership, every changed original ID, proof paths, concurrent review/validator fingerprints and exact published graph fingerprints.']
  pending[OUT/'remaining-evidence.md']=('\n'.join(lines)+'\n').encode()
  return meta['current']
-
 def main():
  ap=argparse.ArgumentParser();ap.add_argument('--outcomes',default='/workspace/salary-source-follow-through/provided-held-pair-outcomes.csv');ap.add_argument('--check',action='store_true');ap.add_argument('--overlay',action='store_true');ap.add_argument('--employer',choices=['rru','cnc','all'],default='all');args=ap.parse_args()
  pending={};index=json.loads((ROOT/'public/salaries/people/index.json').read_text())

@@ -18,19 +18,22 @@ import tarfile
 
 ROOT = Path(__file__).resolve().parents[1]
 AREA = 'research/salaries/source-follow-through-2026-11-02'
+REPEAT_REVIEW_PATH = 'research/salaries/name-links/repeat-reviewed.json'
 COLLECTIONS = ('follow-through-clbc', 'follow-through-cnc', 'follow-through-rru',
                'follow-through-langara', 'follow-through-small-crowns',
                'follow-through-translink', 'follow-through-worksafe-uvic')
 PINS = {
-    'baseline.json.gzip': '8f414198c5d2612972b071dd99ffd9ffdf37a2066f7eee24dfb0aa16cd8ec3ee',
+    'baseline.json.gzip': 'cab526de66ef1b1025af1fd8c6d412696e1d2b254778818b2dcce247471c1755',
     'baseline-row-groups.json.gzip': '2377f2220fdae030a2cf484dfce43091d16c484f4231d451c5705a409a01cb89',
     'baseline-live-links.json.gzip': 'c6b77c67224e1bbb554abb76b54b52e815e0861e888cca0081e30b9082a6f47c',
     'source-qualifications.json': '720c1e3bd87d24bfab5af9b812cdd4743e5cc9f5d97ac6b96e19a72e871f3322',
     'name-review-rru.json': 'b3e2b409ed0efe9f34a20497f8c951bb38033dd7e067ee7c52bd20e3f9c6bf04',
     'name-review-cnc.json': '416d65ab51729bcb303f8831caf21977ddfd438476adcf6b42a739ccfac2c4bf',
     'provided-source-backlog.json': '88f864e71d588308760ad9b20330d1b1b07d482a454db884e52ebcd3dc5b7c5a',
-    'backlog-reconciliation.json': '8e530484dded211587c6c5cac9f013ef05a7ff593e7b69c4a406f79fa9ae57a9',
+    'backlog-reconciliation.json': '5716ccc4ea58385e45ac37fdb271d9edc82e684496d606f4a767c62e8cb3e220',
     'concurrent-main.json': '5fae15c739ecd783139bd2abc5a160871a42aba9a8b940d9e5565f5363de5c70',
+    REPEAT_REVIEW_PATH: '4acb7b26f25a626dc91aa4df48706b62d0993c31bd1139e48066dded791278b1',
+    'likely-continuity.json': '2b68cf0300ef0e1c29d7bc211b6000742cecdc110f1c196140dfccecc4d3dd96',
 }
 EXPECTED_OLD_ROWS = 1385021
 EXPECTED_COMPILED_ROWS = 228364
@@ -410,23 +413,83 @@ def verify_required_name_links(decisions, groups):
     return len(expected)
 
 
+def verify_preserved_likely_paths(decisions, groups):
+    expected = []
+    verified = UnionFind()
+    for employer, key, name, aliases in groups:
+        for alias in aliases:
+            if alias[2] == 'verified':verified.union((employer, key), (employer, alias[0]))
+    for entry in decisions:
+        proof = entry['proof']
+        require(entry.get('decision') == 'likely' and proof.get('confidenceUpgradeAllowed') is False,
+                'Existing continuity review cannot establish a verified identity')
+        alias, target = proof['aliasKey'], proof['targetKey']
+        expected.append([entry['employer'], target, entry['names'][1],
+                         [[alias, entry['names'][0], 'likely', 'Retained prior qualified assumption']]])
+        require(not verified.connected((entry['employer'], alias), (entry['employer'], target)),
+                'Retained likely continuity was upgraded without new identity evidence')
+    verify_link_preservation(expected, groups)
+    return len(expected)
+
+
+REPEAT_PATH_MAPPING_NODE = r'''
+// Published linkLookup addresses raw disclosed names, including literal OCR spacing.
+// The receipt validator separately applies nameOnly for its internal match histories.
+const normalizedRepeat=repeat.map(d=>({...d,proof:{aliasNameKey:personKey(d.names[0]),targetNameKey:personKey(d.preferredName)}}));
+'''
+
+
 NAME_REVIEW_NODE = r'''
 import {readFileSync} from 'node:fs';
 import {gunzipSync} from 'node:zlib';
 import {validateFollowThroughNameReview} from './scripts/lib/follow-through-name-connections.mjs';
+import {validateRepeatNameConnections} from './scripts/lib/repeat-name-connections.mjs';
+import {salaryBaselineContext} from './scripts/lib/salary-baseline-context.mjs';
+import {validateBaselineLikelyConnections} from './scripts/lib/baseline-likely-connections.mjs';
+import {personKey} from './src/salaries/people.js';
 const area='research/salaries/source-follow-through-2026-11-02/';
 const payloads=['name-review-rru.json','name-review-cnc.json'].map(f=>JSON.parse(readFileSync(area+f)));
+const repeatPayload=JSON.parse(readFileSync('research/salaries/name-links/repeat-reviewed.json'));
+const likelyPayload=JSON.parse(readFileSync(area+'likely-continuity.json'));
 const index=JSON.parse(readFileSync('public/salaries/people/index.json'));
-const wanted=new Set(payloads.flatMap(p=>p.decisions.map(d=>d.employer)));
-const rows=[];
+const wanted=new Set([...payloads.flatMap(p=>p.decisions.map(d=>d.employer)),...repeatPayload.decisions.map(d=>d.employer)]);
+const rows=[],allRows=[];
 for(const shard of Object.keys(index.shards)) {
   const part=JSON.parse(gunzipSync(readFileSync('public/salaries/people/'+shard+'.json.gzip')));
-  for(const row of part) if(wanted.has(index.employers[row[4]][3])) rows.push(row);
+  for(const row of part) {allRows.push(row);if(wanted.has(index.employers[row[4]][3])) rows.push(row);}
 }
 const counts=payloads.map(p=>validateFollowThroughNameReview(p,rows,index,process.cwd()).length);
 if(counts[0]!==12||counts[1]!==6) throw new Error('Required 12 RRU and 6 CNC reviewed decisions changed');
-console.log(JSON.stringify({validatedNewNameDecisions:counts[0]+counts[1]}));
+const repeat=validateRepeatNameConnections(repeatPayload,rows,index);
+if(repeat.length!==2699) throw new Error('Required 2699 repeat-reviewed decisions changed');
+const baseline=salaryBaselineContext(allRows,index,process.cwd());
+const likely=validateBaselineLikelyConnections(likelyPayload,allRows,index,baseline,process.cwd());
+if(likely.length!==11||likely.some(d=>d.decision!=='likely')) throw new Error('Exactly11 unchanged likely-only continuity reviews are required');
+''' + REPEAT_PATH_MAPPING_NODE + r'''
+console.log(JSON.stringify({validatedNewNameDecisions:counts[0]+counts[1],validatedRepeatNameDecisions:repeat.length,preservedLikelyReviews:likely.length,normalizedRepeat}));
 '''
+
+
+def repeat_required_decisions(payload, normalized):
+    require(payload.get('schemaVersion') == 1 and isinstance(payload.get('decisions'), list)
+            and isinstance(normalized, list) and len(normalized) == len(payload['decisions']),
+            'Repeat-review output coverage differs from its approved ledger')
+    for approved, actual in zip(payload['decisions'], normalized):
+        names = approved.get('names', [])
+        require(approved.get('decision') == 'verified' and len(names) == 2
+                and approved.get('preferredName') == names[1] and approved.get('witnesses'),
+                'Repeat-review witness or preferred target is incomplete')
+        for witness in approved['witnesses']:
+            require(witness.get('year') and witness.get('sourceId') and witness.get('expenses') is not None,
+                    'Repeat review lacks a witnessed source/year/disclosed expense')
+            cents(witness['pay']);cents(witness['expenses'])
+        require(actual.get('employer') == approved.get('employer') and actual.get('names') == names
+                and actual.get('preferredName') == approved['preferredName'] and actual.get('decision') == 'verified',
+                'Repeat-review normalized output changed its approved target')
+        proof = actual.get('proof', {})
+        require(all(type(proof.get(key)) is str and proof[key] for key in ('aliasNameKey', 'targetNameKey'))
+                and proof['aliasNameKey'] != proof['targetNameKey'], 'Repeat-review normalized endpoints are invalid')
+    return normalized
 
 
 def verify_new_name_receipts(root, inputs):
@@ -436,11 +499,17 @@ def verify_new_name_receipts(root, inputs):
         require(payload.get('reviewer') == 'root' and len(payload.get('decisions', [])) == count,
                 'New source-copy review count/authority changed: ' + name)
         decisions.extend(payload['decisions'])
+    require(inputs[REPEAT_REVIEW_PATH].get('schemaVersion') == 1
+            and len(inputs[REPEAT_REVIEW_PATH].get('decisions', [])) == 2699, 'Repeat-review ledger count changed')
     result = subprocess.run(['node', '--input-type=module', '-e', NAME_REVIEW_NODE], cwd=root,
                             stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
-    require(result.returncode == 0, 'Latest source-copy receipt validation failed:\n' + result.stderr[-6000:])
-    require(json.loads(result.stdout).get('validatedNewNameDecisions') == 18, 'New source-copy validation coverage changed')
-    return decisions
+    require(result.returncode == 0, 'Latest source-copy/repeat receipt validation failed:\n' + result.stderr[-6000:])
+    output = json.loads(result.stdout)
+    require(output.get('validatedNewNameDecisions') == 18, 'New source-copy validation coverage changed')
+    require(output.get('validatedRepeatNameDecisions') == 2699, 'Live repeat-review witness validation coverage changed')
+    require(output.get('preservedLikelyReviews') == 11, 'Live likely-only continuity validation coverage changed')
+    repeated = repeat_required_decisions(inputs[REPEAT_REVIEW_PATH], output.get('normalizedRepeat'))
+    return decisions, repeated
 
 
 def verify_backlog_mapping(provided, reconciliation, backlog, resolve_ref, catalog):
@@ -475,6 +544,8 @@ def verify_backlog_mapping(provided, reconciliation, backlog, resolve_ref, catal
         require(json_equal(entry.get('heldCohorts', []), decision['heldCohorts']), 'Backlog held cohort scope changed: ' + identifier)
         if status == 'imported':
             require(refs and decision['employeeScopeComplete'] is True and not decision['heldCohorts'], 'Imported backlog entry is incomplete')
+            require(entry.get('scope') == decision.get('recommendedBacklogScope') == 'employee-remuneration',
+                    'Imported employee backlog scope is not canonical: ' + identifier)
             counts['imported'] += 1
         elif status == 'partially-imported':
             require(identifier == 'additional-source-translink-2024' and refs
@@ -493,11 +564,14 @@ def verify_backlog_mapping(provided, reconciliation, backlog, resolve_ref, catal
             require(matches, 'Published source catalog lacks accepted backlog cohort: ' + ref['sourceId'])
         if decision.get('group') == 'original73' and decision.get('providedPendingStatusIsStale'):
             stale += 1
+        if status == 'imported':
             for lead in catalog:
                 for ref in refs:
                     same = lead.get('employerSlug') == ref['employerSlug'] and lead.get('year') == ref['year']
                     same = same and (lead.get('url') == ref.get('sourceUrl') or lead.get('id') == identifier)
-                    require(not (same and lead.get('scope') in (None, 'employee-remuneration') and lead.get('status') != 'imported'),
+                    employee_scope = lead.get('scope') is None or 'employee' in str(lead.get('scope')).lower() or lead.get('id') == identifier
+                    pending = lead.get('status') in {'source-found-awaiting-extraction', 'requires-ocr', 'held-for-review', 'official-source-indexed-awaiting-validation'}
+                    require(not (same and employee_scope and pending),
                             'Published source catalog retains a stale held employee lead: ' + identifier)
         accepted_ids.extend(ids); accepted_rows += total
     require(len(accepted_ids) == len(set(accepted_ids)), 'Backlog repeats an accepted employee cohort across documents')
@@ -627,7 +701,7 @@ def verify_review_receipts(root, baseline, concurrent=None):
 def load_inputs(root):
     values = {}
     for name, expected in PINS.items():
-        path = root / AREA / name
+        path = root / name if name == REPEAT_REVIEW_PATH else root / AREA / name
         require(digest(path.read_bytes()) == expected, 'Immutable follow-through input changed: ' + name)
         values[name] = read(path)
     baseline = values['baseline.json.gzip']
@@ -746,8 +820,10 @@ def verify(root=ROOT, check_graph=True):
         groups = live_link_groups(root)
         result.update(verify_link_preservation(inputs['baseline-live-links.json.gzip']['groups'], groups))
         result['verifiedEmployerLinkExports'] = verify_employer_link_exports(root, groups, slugs)
-        new_decisions = verify_new_name_receipts(root, inputs)
+        new_decisions, repeat_decisions = verify_new_name_receipts(root, inputs)
         result['validatedNewNameDecisions'] = verify_required_name_links(new_decisions, groups)
+        result['validatedRepeatNameDecisions'] = verify_required_name_links(repeat_decisions, groups)
+        result['preservedLikelyReviews'] = verify_preserved_likely_paths(inputs['likely-continuity.json']['decisions'], groups)
     return result
 
 

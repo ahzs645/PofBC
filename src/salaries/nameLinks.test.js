@@ -188,3 +188,67 @@ test('a verified local typo remains a likely alias when its path to the fuller c
   assert.match(result.links[0].aliases.find((a) => a.key === 'murtby|srinivasa').reason, /includes an unverified surname inference/)
   assert.equal(result.decisions.find((d) => d.status === 'verified').status, 'verified', 'the original local evidence survives independently')
 })
+
+test('a later likely bridge preserves a verified alias and its source evidence', () => {
+  for (const [older, copy, printed] of [
+    ['Hunsbedt, Dan el', 'Hunsbedt, Danel', 'Hunsbedt,Darrel'],
+    ['Kiarash, Maly am', 'Kiarash, Malyam', 'Kiarash,Maryam']
+  ]) {
+    const rows = [[older, null, 100, 0, 0, 0, 'compiled'],
+      [copy, null, 120, 10, 0, 4, 'compiled'], [printed, null, 120, 10, 0, 4, 'official', 12]]
+    const evidence = [{ sourceId: 'official', pdfPage: 12 }]
+    const result = run(rows, [
+      { employer: 'bci', names: [copy, printed], decision: 'verified', preferredName: printed, note: 'Printed source row', evidence },
+      { employer: 'bci', names: [older, copy], decision: 'likely', note: 'Unchanged historical likely connection',
+        evidence: [{ sourceId: 'historical-review', pdfPage: 1 }] }
+    ])
+    const [group] = result.links
+    assert.equal(group.name, printed)
+    const corrected = group.aliases.find((alias) => alias.name === copy)
+    assert.equal(corrected.status, 'verified')
+    assert.equal(corrected.reason, 'Reviewed: Printed source row')
+    assert.deepEqual(corrected.evidence, evidence)
+    assert.equal(group.aliases.find((alias) => alias.name === older).status, 'likely')
+  }
+})
+
+test('a verified decision at either endpoint outranks a later likely decision at the other', () => {
+  const rows = [['Prit, Jan', null, 100, 10, 0, 0, 'compiled'],
+    ['Print, Jane', null, 100, 10, 0, 0, 'official', 3],
+    ['Print, Jane Ann', null, 100, 10, 0, 0, 'official', 4],
+    ['Other, Jane Annabelle', null, 110, 10, 0, 4, 'older']]
+  const evidence = [{ sourceId: 'official', pdfPage: 3 }]
+  const result = run(rows, [
+    { employer: 'bci', names: [rows[0][0], rows[1][0]], decision: 'verified', note: 'First printed spelling', evidence },
+    { employer: 'bci', names: [rows[0][0], rows[2][0]], decision: 'verified', preferredName: rows[2][0],
+      note: 'Full printed spelling', evidence: [{ sourceId: 'official', pdfPage: 4 }] },
+    { employer: 'bci', names: [rows[1][0], rows[3][0]], decision: 'likely', note: 'Historical qualified inference' }
+  ])
+  const [group] = result.links
+  assert.equal(group.name, 'Print, Jane Ann')
+  const printed = group.aliases.find((alias) => alias.name === 'Print, Jane')
+  assert.equal(printed.status, 'verified')
+  assert.equal(printed.reason, 'Reviewed: First printed spelling')
+  assert.deepEqual(printed.evidence, evidence)
+  assert.equal(group.aliases.find((alias) => alias.name === 'Other, Jane Annabelle').status, 'likely')
+})
+
+test('stronger local evidence stays likely when the primary is across a likely bridge', () => {
+  const rows = [['Prit, Jan', null, 100, 10, 0, 0, 'compiled'],
+    ['Print, Jane', null, 100, 10, 0, 0, 'official', 3],
+    ['Other, Jane Annabelle', null, 110, 10, 0, 4, 'older']]
+  const evidence = [{ sourceId: 'official', pdfPage: 3 }]
+  const result = run(rows, [
+    { employer: 'bci', names: [rows[0][0], rows[1][0]], decision: 'verified', note: 'Printed local source row', evidence },
+    { employer: 'bci', names: [rows[1][0], rows[2][0]], decision: 'likely', note: 'Qualified historical inference' }
+  ])
+  const [group] = result.links
+  assert.equal(group.name, 'Other, Jane Annabelle')
+  for (const alias of group.aliases) {
+    assert.equal(alias.status, 'likely')
+    assert.match(alias.reason, /includes an unverified surname inference/)
+    assert.match(alias.reason, /Printed local source row/)
+    assert.deepEqual(alias.evidence, evidence)
+  }
+  assert.equal(result.decisions.find((entry) => entry.reason === 'Reviewed: Printed local source row').status, 'verified')
+})

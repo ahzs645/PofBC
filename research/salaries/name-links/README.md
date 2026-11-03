@@ -45,8 +45,18 @@ Run `npm run build:name-links` (also run by `npm run build:salaries`). The rules
   their complete alias observations, exact source hashes, original pages and visual-review receipts.
 - `held-completion-reviewed.json` — 167 additional source-spelling, separator, professional
   identity and qualified inference decisions, with pinned individual evidence receipts.
+- `repeat-reviewed.json` — 2,699 compiled copies of an employer report's record under another
+  spelling: the same employer, reporting label, pay and disclosed expenses as the report's only such
+  record that year, in a spelling the employer never printed itself. Every one of the 2,787 candidate
+  pairs was read: 1,299 differ only in punctuation, spacing or capitals (mostly ICBC's 2017/18 report,
+  which prints "PRIOR G.K." without a comma), the rest are OCR misreadings in the compiled copy
+  ("Adarns" for "Adams", "Robelt" for "Robert"). Twenty are held, with the reason: 19 whose misspelling
+  also appears in a PHSA report's own extracted text in another year, so a join would claim that
+  record too, and one whose compiled spelling is already joined to a different given name. Each
+  rebuild re-checks every decision's witness records (`scripts/lib/repeat-name-connections.mjs`).
 - `public/salaries/links/` — the joins the site loads, sliced by surname like the people index, plus
-  `top.json.gzip` for the highest-paid browse.
+  `top.json.gzip` for the highest-paid browse and `employers/<slug>.json.gzip`, one employer's joins,
+  for its page's lists.
 
 ## Verified: the records establish it
 
