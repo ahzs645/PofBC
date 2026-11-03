@@ -577,6 +577,42 @@ export const COLLECTED_DISPLAY = {
    "recoloured": false
   }
  },
+ "reconstruction-bc-place-1982-monogram": {
+  "light": {
+   "file": "identity-display/reconstruction-bc-place-1982-monogram.light.svg",
+   "aspect": 0.6345,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/reconstruction-bc-place-1982-monogram.dark.svg",
+   "aspect": 0.6345,
+   "recoloured": true
+  }
+ },
+ "reconstruction-bc-place-1982-lockup": {
+  "light": {
+   "file": "identity-display/reconstruction-bc-place-1982-lockup.light.svg",
+   "aspect": 2.2004,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/reconstruction-bc-place-1982-lockup.dark.svg",
+   "aspect": 2.2004,
+   "recoloured": true
+  }
+ },
+ "reconstruction-bc-place-1982-lockup-colour": {
+  "light": {
+   "file": "identity-display/reconstruction-bc-place-1982-lockup-colour.light.svg",
+   "aspect": 2.2004,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/reconstruction-bc-place-1982-lockup-colour.dark.svg",
+   "aspect": 2.2004,
+   "recoloured": true
+  }
+ },
  "source-forest-renewal-bc-forest-renewal-bc-supplied-vector-svg": {
   "light": {
    "file": "identity-display/source-forest-renewal-bc-forest-renewal-bc-supplied-vector-svg.light.svg",

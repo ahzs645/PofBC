@@ -52,7 +52,8 @@ test('collected entries date sightings rather than claiming logo adoption', () =
   for (const entry of entries) {
     assert.equal(entry.kind, 'collected')
     assert.ok(['unknown', 'dated_specimen'].includes(entry.identity.applicability.kind), entry.id)
-    if (entry.asset.reconstruction) assert.equal(entry.identity.provenance, 'third_party_reconstruction')
+    if (entry.asset.reconstruction) assert.equal(entry.identity.provenance,
+      entry.asset.reconstructionBy === 'project' ? 'reconstructed' : 'third_party_reconstruction')
     if (entry.asset.supplied && !entry.asset.sourceDate) assert.equal(entry.identity.applicability.kind, 'unknown')
   }
 })
@@ -63,6 +64,33 @@ test('asset links respect both root and project deployments; leads stay uncollec
   assert.equal(researchLabel({ status: 'source-found' }), 'Source located · artwork wanted')
   assert.equal(researchLabel({ status: 'unresolved' }), 'Wanted · searched')
   assert.equal(researchLabel({ status: 'not-searched' }), 'Wanted')
+})
+
+test('BC Place keeps its archival deep link beside separately identified project reconstructions', () => {
+  const collection = collectionById('collected-bc-place-ltd')
+  assert.ok(collection)
+  const entries = entriesOf(collection)
+  const original = entries.find((entry) => entry.id === 'source-bc-place-ltd-bc-place-1983-logo-png')
+  assert.ok(original, 'the existing gallery deep link still resolves')
+  assert.equal(original.asset.file, 'identity-collected/bc-place-ltd/bc-place-1983-logo.png')
+  assert.equal(original.asset.sha256, '81f8e81394f8682fb210e8dc99f6b40e4b22fda5a046f7b0e7753e7bcee4785e')
+  assert.equal(original.identity.provenance, 'published_raster')
+
+  const redraws = entries.filter((entry) => entry.asset.reconstructionBy === 'project')
+  for (const file of ['bc-place-1982-monogram-reconstruction.svg', 'bc-place-1982-lockup-reconstruction.svg']) {
+    assert.ok(redraws.some((entry) => entry.asset.file === `identity-collected/bc-place-ltd/${file}`), file)
+  }
+  for (const entry of redraws) {
+    assert.equal(entry.asset.reconstruction, true, entry.id)
+    assert.equal(entry.identity.provenance, 'reconstructed', entry.id)
+    assert.equal(entry.identity.applicability.kind, 'dated_specimen', entry.id)
+    assert.match(entry.identity.applicability.note, /not a verified first use or adoption date/, entry.id)
+    assert.match(entry.asset.sourceDate, /1982/, entry.id)
+    assert.ok(/^https:\/\//.test(entry.asset.sourcePage || entry.asset.sourceUrl), entry.id)
+    const svg = readFileSync(new URL(`public/${entry.asset.file}`, root), 'utf8')
+    assert.match(svg, /<(?:path|circle|ellipse|rect|polygon|polyline)\b/, entry.id)
+    assert.doesNotMatch(svg, /<(?:\w+:)?(?:image|text|foreignObject)\b|(?:href|src)=["'](?:https?:|data:)/i, entry.id)
+  }
 })
 
 test('a body folded into a later name is a one-to-one line in the government history', () => {

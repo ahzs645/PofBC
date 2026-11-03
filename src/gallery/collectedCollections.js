@@ -26,11 +26,15 @@ const collectedEntry = (asset, timeline, owner) => ({
   ...(owner ? { owner } : {}),
   label: asset.label,
   note: asset.notes,
-  years: asset.sourceDate ? `Seen ${asset.sourceDate}` : 'Logo dates unestablished',
+  years: asset.sourceDate
+    ? `${asset.reconstructionBy === 'project' ? 'Historical evidence' : 'Seen'} ${asset.sourceDate}`
+    : 'Logo dates unestablished',
   asset,
   identity: {
-    provenance: asset.reconstruction ? 'third_party_reconstruction' : asset.supplied ? 'original_supplied' : asset.isVector ? 'published_vector' : 'published_raster',
-    fidelity: 'source compared',
+    provenance: asset.reconstruction
+      ? asset.reconstructionBy === 'project' ? 'reconstructed' : 'third_party_reconstruction'
+      : asset.supplied ? 'original_supplied' : asset.isVector ? 'published_vector' : 'published_raster',
+    fidelity: asset.fidelity || 'source compared',
     fidelityNote: asset.fidelityNote,
     applicability: {
       kind: asset.sourceDate ? 'dated_specimen' : 'unknown',

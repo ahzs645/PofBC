@@ -3643,7 +3643,7 @@ export const COLLECTED_BODIES = [
     "current": false,
     "status": "asset-collected",
     "observedDate": "2026-10-22",
-    "notes": "Corporate b/c/p monogram from the 1983 annual report",
+    "notes": "Corporate b/c/p identity documented in a 22 September 1982 advertisement and the 19 June 1983 opening programme. The collected 1983 annual-report crop is retained; separately labelled geometric SVG reconstructions add editable artwork. Designer, exact first/last use and production colours remain unconfirmed.",
     "assets": [
       {
         "id": "source-bc-place-ltd-bc-place-1983-logo-png",
@@ -3669,6 +3669,141 @@ export const COLLECTED_BODIES = [
         "dateNote": "A dated sighting is not a complete usage period.",
         "previewWidth": 788,
         "previewHeight": 388
+      },
+      {
+        "id": "reconstruction-bc-place-1982-lockup-colour",
+        "label": "British Columbia Place — Full signature — scan-informed blue and black reconstruction",
+        "file": "identity-collected/bc-place-ltd/bc-place-1982-lockup-colour-reconstruction.svg",
+        "format": "svg",
+        "isVector": true,
+        "supplied": false,
+        "reconstruction": true,
+        "reconstructionBy": "project",
+        "publisher": "PofBC project reconstruction; historical specimens published by British Columbia Place Ltd.",
+        "sourcePage": "https://www.historymuseum.ca/ke/_resources/5807325/2023-F0003-24.pdf",
+        "sourceUrl": "https://www.historymuseum.ca/ke/_resources/5807325/2023-F0003-24.pdf",
+        "sourceLocator": "PDF page 4; programme cover dates the gala to 19 June 1983",
+        "sourceFile": null,
+        "sourceDate": "1982-09-22 and 1983-06-19",
+        "dateNote": "Dated uses, not a verified adoption or retirement date. The filename uses the earliest confirmed specimen year. Reconstruction made 2026-11-03.",
+        "observedDate": "2026-11-03",
+        "evidenceType": "geometric-reconstruction",
+        "notes": "Clean vector reconstruction of the corporate b/c/p monogram and staggered lowercase wordmark. Custom outlined lettering retains the open b/p/a joins, angled c, diagonal e and shared h/l alignment. Checked against the 1983 opening programme and the collected annual-report scan; the same identity is visible in a 22 September 1982 advertisement. Blue #0096d6 is sampled from the colour-managed museum scan, not an authenticated production colour.",
+        "fidelity": "source compared",
+        "fidelityNote": "Modern geometric redraw, not a recovered original vector master. Source compared with an explicit pixel overlay; scan noise and printing irregularities are not reproduced. Original designer, exact historical typeface and production colour specification remain unconfirmed.",
+        "creator": "PofBC project, 2026-11-03; original designer unconfirmed",
+        "sha256": "461affc9913f0b62cea8cb3be53ccfc763c8890997655cda885f88e0d3b1671b",
+        "bytes": 5103,
+        "darkBackground": false,
+        "references": [
+          {
+            "title": "Gulf Islands Driftwood — 22 September 1982",
+            "url": "https://saltspringarchives.com/driftwood/1982/v23n38p1Sept22-1982.pdf",
+            "locator": "Printed page 6, lower-right signature in the BC Place advertisement"
+          },
+          {
+            "title": "British Columbia Place Ltd. annual report, 1983",
+            "url": "https://archive.org/details/micro_IA40243510_1428",
+            "locator": "PDF page 1; unchanged collected microfiche crop remains in this gallery"
+          },
+          {
+            "title": "Museum of Vancouver — BC Place Update, Spring 1984",
+            "url": "https://openmovportal.ca/argus/final/ViewRecord.aspx?record=8bc778ca-4bea-4503-ba93-89f537dbd82d&template=Object",
+            "locator": "H2025.7.1; a different circular/reversed variant, documented separately"
+          }
+        ],
+        "researchUrl": "https://github.com/ahzs645/PofBC/tree/codex/bc-place-historical-vector-20261103/research/identity/bc-place-reconstruction-2026-11-03",
+        "search": "bc-place-reconstruction-2026-11-03"
+      },
+      {
+        "id": "reconstruction-bc-place-1982-lockup",
+        "label": "British Columbia Place — Full signature — monochrome reconstruction",
+        "file": "identity-collected/bc-place-ltd/bc-place-1982-lockup-reconstruction.svg",
+        "format": "svg",
+        "isVector": true,
+        "supplied": false,
+        "reconstruction": true,
+        "reconstructionBy": "project",
+        "publisher": "PofBC project reconstruction; historical specimens published by British Columbia Place Ltd.",
+        "sourcePage": "https://www.historymuseum.ca/ke/_resources/5807325/2023-F0003-24.pdf",
+        "sourceUrl": "https://www.historymuseum.ca/ke/_resources/5807325/2023-F0003-24.pdf",
+        "sourceLocator": "PDF page 4; programme cover dates the gala to 19 June 1983",
+        "sourceFile": null,
+        "sourceDate": "1982-09-22 and 1983-06-19",
+        "dateNote": "Dated uses, not a verified adoption or retirement date. The filename uses the earliest confirmed specimen year. Reconstruction made 2026-11-03.",
+        "observedDate": "2026-11-03",
+        "evidenceType": "geometric-reconstruction",
+        "notes": "Clean vector reconstruction of the corporate b/c/p monogram and staggered lowercase wordmark. Custom outlined lettering retains the open b/p/a joins, angled c, diagonal e and shared h/l alignment. Checked against the 1983 opening programme and the collected annual-report scan; the same identity is visible in a 22 September 1982 advertisement. Monochrome interpretation; the 1983 colour programme separately shows a blue monogram with black lettering.",
+        "fidelity": "source compared",
+        "fidelityNote": "Modern geometric redraw, not a recovered original vector master. Source compared with an explicit pixel overlay; scan noise and printing irregularities are not reproduced. Original designer, exact historical typeface and production colour specification remain unconfirmed.",
+        "creator": "PofBC project, 2026-11-03; original designer unconfirmed",
+        "sha256": "6c53f20db218d9081c002eab260b4aebbfbba40f8d1b6e292639e88569f832c0",
+        "bytes": 5005,
+        "darkBackground": false,
+        "references": [
+          {
+            "title": "Gulf Islands Driftwood — 22 September 1982",
+            "url": "https://saltspringarchives.com/driftwood/1982/v23n38p1Sept22-1982.pdf",
+            "locator": "Printed page 6, lower-right signature in the BC Place advertisement"
+          },
+          {
+            "title": "British Columbia Place Ltd. annual report, 1983",
+            "url": "https://archive.org/details/micro_IA40243510_1428",
+            "locator": "PDF page 1; unchanged collected microfiche crop remains in this gallery"
+          },
+          {
+            "title": "Museum of Vancouver — BC Place Update, Spring 1984",
+            "url": "https://openmovportal.ca/argus/final/ViewRecord.aspx?record=8bc778ca-4bea-4503-ba93-89f537dbd82d&template=Object",
+            "locator": "H2025.7.1; a different circular/reversed variant, documented separately"
+          }
+        ],
+        "researchUrl": "https://github.com/ahzs645/PofBC/tree/codex/bc-place-historical-vector-20261103/research/identity/bc-place-reconstruction-2026-11-03",
+        "search": "bc-place-reconstruction-2026-11-03"
+      },
+      {
+        "id": "reconstruction-bc-place-1982-monogram",
+        "label": "British Columbia Place — Monogram — geometric reconstruction",
+        "file": "identity-collected/bc-place-ltd/bc-place-1982-monogram-reconstruction.svg",
+        "format": "svg",
+        "isVector": true,
+        "supplied": false,
+        "reconstruction": true,
+        "reconstructionBy": "project",
+        "publisher": "PofBC project reconstruction; historical specimens published by British Columbia Place Ltd.",
+        "sourcePage": "https://www.historymuseum.ca/ke/_resources/5807325/2023-F0003-24.pdf",
+        "sourceUrl": "https://www.historymuseum.ca/ke/_resources/5807325/2023-F0003-24.pdf",
+        "sourceLocator": "PDF page 4; programme cover dates the gala to 19 June 1983",
+        "sourceFile": null,
+        "sourceDate": "1982-09-22 and 1983-06-19",
+        "dateNote": "Dated uses, not a verified adoption or retirement date. The filename uses the earliest confirmed specimen year. Reconstruction made 2026-11-03.",
+        "observedDate": "2026-11-03",
+        "evidenceType": "geometric-reconstruction",
+        "notes": "Clean vector reconstruction of the corporate b/c/p monogram. Checked against the 1983 opening programme and the collected annual-report scan; the same identity is visible in a 22 September 1982 advertisement. Monochrome interpretation; the 1983 colour programme separately shows a blue monogram with black lettering.",
+        "fidelity": "source compared",
+        "fidelityNote": "Modern geometric redraw, not a recovered original vector master. Source compared with an explicit pixel overlay; scan noise and printing irregularities are not reproduced. Original designer, exact historical typeface and production colour specification remain unconfirmed.",
+        "creator": "PofBC project, 2026-11-03; original designer unconfirmed",
+        "sha256": "597f9109bbe8aa838e6c8854cad00d0402f6792a65d98776cc7fdaacb5de0274",
+        "bytes": 1505,
+        "darkBackground": false,
+        "references": [
+          {
+            "title": "Gulf Islands Driftwood — 22 September 1982",
+            "url": "https://saltspringarchives.com/driftwood/1982/v23n38p1Sept22-1982.pdf",
+            "locator": "Printed page 6, lower-right signature in the BC Place advertisement"
+          },
+          {
+            "title": "British Columbia Place Ltd. annual report, 1983",
+            "url": "https://archive.org/details/micro_IA40243510_1428",
+            "locator": "PDF page 1; unchanged collected microfiche crop remains in this gallery"
+          },
+          {
+            "title": "Museum of Vancouver — BC Place Update, Spring 1984",
+            "url": "https://openmovportal.ca/argus/final/ViewRecord.aspx?record=8bc778ca-4bea-4503-ba93-89f537dbd82d&template=Object",
+            "locator": "H2025.7.1; a different circular/reversed variant, documented separately"
+          }
+        ],
+        "researchUrl": "https://github.com/ahzs645/PofBC/tree/codex/bc-place-historical-vector-20261103/research/identity/bc-place-reconstruction-2026-11-03",
+        "search": "bc-place-reconstruction-2026-11-03"
       }
     ]
   },
