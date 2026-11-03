@@ -16,6 +16,7 @@ The supplied package is 215 MB. Kept here (400 KB):
 | `source/*.json`, `source/*.md` | Registration, panel layout, checked copy, tree regions, animal records, provenance, validation |
 | `source/*.py`, `source/requirements.txt` | The package's rebuild and proof scripts |
 | `web_copy.py` | Makes the site's copy from the outlined master (below) |
+| `render_preview.mjs`, `preview.py` | Make the preview the viewer opens on (below) |
 
 Left out, like the other posters' packages: the reference scan and its proofs (`reference/`,
 `proof/`, the overlay PDF and review page, the preview PNG), and the 45 MB masters, poster PDF and
@@ -58,6 +59,33 @@ python3 web_copy.py Wildlife-Trees-outlined.svg ../../../src/posters/wildlife-tr
 The card image, `src/posters/wildlife-trees/thumbnail.jpg`, is the package's preview PNG at 160
 pixels wide, so the shelf does not fetch the drawing to show a card. The viewer fetches the drawing
 as a file, not inside a script, and does not fetch it ahead when a neighbouring poster is open.
+
+## The preview it opens on
+
+Opened, the poster does not wait for 4.5 MB: it shows `src/posters/wildlife-trees/preview.png` at once,
+on a stand-in drawing of the same size, and swaps in the vector drawing when it arrives, keeping
+whatever view is on screen. Zoom, hotspots, panels and the story all work on the preview; only the
+spotlight (which lights the drawing's own layers) and export wait for the drawing, and a small notice
+says it is a preview until then (with a Retry if the download fails).
+
+The preview is 1000 × 2997 pixels and 198 KB. The poster is one ink on white, so it stores only how
+much ink each pixel holds, in four tones (paper, two tints, full ink), as a 2-bit PNG; a JPEG of the
+same picture is over 400 KB, because fine hatching is the hardest thing for JPEG to compress. At the
+size the whole poster first appears it cannot be told from the drawing; zoomed in before the drawing
+arrives, it is soft. It is made from a render of the site's copy, so the two are in register:
+
+```sh
+node render_preview.mjs ../../../src/posters/wildlife-trees/wildlife-trees.svg /tmp/wildlife-trees-2000.png
+python3 preview.py /tmp/wildlife-trees-2000.png ../../../src/posters/wildlife-trees/preview.png
+```
+
+## How smoothly it zooms
+
+Add `&frames=1` to the address and every zoom reports, in the corner, how many frames it drew and
+how long they took (`src/posters/stage/frameMeter.js`). In headless Chromium, which draws without a
+graphics card, Wildlife Trees' zooms that keep much of the tree on screen ran at 9–33 frames a second
+at desktop size against REWARD's 29–40, and zooms onto a single animal near REWARD's. That machine
+is not a phone, so the number that matters is the one a real device shows.
 
 ## What the poster's panels rely on
 

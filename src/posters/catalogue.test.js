@@ -163,6 +163,16 @@ test('the Wildlife Trees copy is light enough to draw: few paths, no editor note
   assert.ok(!svg.includes('inkscape:'), 'editor attributes left in')
 })
 
+test('Wildlife Trees opens on a small preview in the drawing’s shape', () => {
+  const png = readFileSync(new URL('./wildlife-trees/preview.png', import.meta.url))
+  assert.ok(png.length < 300e3, `the preview is ${Math.round(png.length / 1e3)} KB`)
+  const width = png.readUInt32BE(16)
+  const height = png.readUInt32BE(20)
+  const { w, h } = POSTERS['wildlife-trees'].view
+  assert.ok(Math.abs(width / height - w / h) < 0.002, `the preview is ${width} × ${height}, not the drawing’s shape`)
+  assert.ok(width >= 800, 'the preview is too small to stand in for the whole poster')
+})
+
 test('the two fire-prevention badges share one green', () => {
   const fills = (svg) => new Set([...svg.matchAll(/(?:fill|stroke)="(#[0-9a-f]{6})"/gi)].map((m) => m[1].toUpperCase()))
   const drop = fills(DRAWINGS['dont-drop-it'])

@@ -1,6 +1,7 @@
-import { useEffect, useRef } from 'react'
+import { useEffect, useLayoutEffect, useRef } from 'react'
 import { useReducedMotion } from 'motion/react'
 import { easeInOutQuint, easeOutQuint, fit, tween } from './zoom.js'
+import { meterZoom } from './frameMeter.js'
 
 const setViewBox = (svg, v) => svg.setAttribute('viewBox', `${v.x} ${v.y} ${v.w} ${v.h}`)
 
@@ -33,16 +34,26 @@ export const useViewBoxZoom = (svg, stageRef, { box, pad = 0.05, inset = { right
   const latest = useRef(target)
   latest.current = target
 
+  // A drawing swapped for another (a preview for the full drawing) takes the view the last one had
+  // before it is painted, rather than showing its own viewBox for a frame.
+  const seen = useRef(false)
+  useLayoutEffect(() => {
+    if (!svg) return
+    if (seen.current) setViewBox(svg, vb.current)
+    seen.current = true
+  }, [svg])
+
   useEffect(() => {
     if (!svg) return
     const moving = running.current
     stop.current?.()
     running.current = true
+    const meter = meterZoom()
     stop.current = tween(vb.current, target(), {
       duration: reduced ? 0 : duration,
       ease: moving ? easeOutQuint : easeInOutQuint,
-      onUpdate: (v) => { vb.current = v; setViewBox(svg, v) },
-      onComplete: () => { running.current = false }
+      onUpdate: (v) => { vb.current = v; setViewBox(svg, v); meter.frame() },
+      onComplete: () => { running.current = false; meter.done() }
     })
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [svg, key, inset.right, inset.bottom, reduced, duration])

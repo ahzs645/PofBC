@@ -3,7 +3,9 @@
 //
 // Generic over posters. A poster module supplies its drawing and parts; one that needs more than a
 // data panel per part (the coastal poster's live logo studio, say) adds a `useExtras` hook, which
-// can take over the frame, the stage's class, the panel and the export targets.
+// can take over the frame, the stage's class, the panel and the export targets. One whose drawing
+// is too large to wait for (Wildlife Trees) supplies a light stand-in as its drawing and an
+// `upgrade` that resolves to the real one, which replaces it when it arrives.
 
 import { useCallback, useEffect, useMemo, useState } from 'react'
 import { Poster } from './stage/Poster.jsx'
@@ -36,9 +38,22 @@ const writeStory = (on) => {
 }
 
 export function PosterViewer({ meta, series, module, part, onPart, onExit, previous, next, shelf, backLabel = 'Posters', noun = 'poster' }) {
-  const { parts, order, regions, spotlight, svgRaw, prepare } = module
+  const { parts, order, regions, spotlight, svgRaw, prepare, upgrade } = module
   const useExtras = module.useExtras ?? noExtras
   const [svg, setSvg] = useState(null)
+  // The drawing on the stage: the module's, or once it arrives the one its `upgrade` fetches.
+  const [drawing, setDrawing] = useState({ raw: svgRaw, state: upgrade ? 'loading' : 'ready' })
+  const [attempt, setAttempt] = useState(0)
+  useEffect(() => {
+    if (!upgrade) return undefined
+    let gone = false
+    setDrawing((d) => ({ ...d, state: 'loading' }))
+    upgrade()
+      .then((raw) => { if (!gone) setDrawing({ raw, state: 'ready' }) })
+      .catch((error) => { console.error(error); if (!gone) setDrawing((d) => ({ ...d, state: 'failed' })) })
+    return () => { gone = true }
+  }, [upgrade, attempt])
+  const exportable = drawing.state === 'ready'
   const [aboutOpen, setAboutOpen] = useState(false)
   const [exportOpen, setExportOpen] = useState(false)
   const [exportTarget, setExportTarget] = useState('poster')
@@ -83,12 +98,12 @@ export function PosterViewer({ meta, series, module, part, onPart, onExit, previ
     // Escape steps out of the story before it steps out of the poster.
     order, current, onSelect: select, onExit: telling ? () => tell(false) : onExit, enabled: !exportOpen,
     keys: useMemo(() => ({
-      e: () => setExportOpen(true),
+      e: () => { if (exportable) setExportOpen(true) },
       p: tour.toggle,
       s: () => { if (canTell) tell(!telling) },
       '[': () => previous?.open(),
       ']': () => next?.open()
-    }), [tour.toggle, previous, next, canTell, telling, tell])
+    }), [tour.toggle, previous, next, canTell, telling, tell, exportable])
   })
 
   const extras = useExtras({ svg, part: current, select, openExport, tour })
@@ -122,7 +137,7 @@ export function PosterViewer({ meta, series, module, part, onPart, onExit, previ
     <div className="pv" role="region" aria-label={`${meta.title}, interactive ${noun}`}>
       <div className="pv-app">
         <Poster
-          svgRaw={svgRaw}
+          svgRaw={drawing.raw}
           prepare={prepare}
           regions={regionList}
           current={current}
@@ -134,6 +149,13 @@ export function PosterViewer({ meta, series, module, part, onPart, onExit, previ
           onSelect={select}
           onReady={setSvg}
         >
+          {drawing.state !== 'ready' && (
+            <p className={'pv-drawing-status' + (drawing.state === 'failed' ? ' pv-drawing-failed' : '')} role="status">
+              {drawing.state === 'failed'
+                ? <>The full drawing did not load; this is a preview. <button type="button" className="pv-ghost" onClick={(e) => { e.stopPropagation(); setAttempt((n) => n + 1) }}>Retry</button></>
+                : <><span className="pv-drawing-spinner" aria-hidden="true" />Loading the full drawing; this is a preview</>}
+            </p>
+          )}
           {tour.playing && (
             <div className="pv-tour-bar" aria-hidden="true">
               <div className="pv-tour-fill" key={current} style={{ animationDuration: `${tour.seconds}s` }} />
@@ -169,7 +191,7 @@ export function PosterViewer({ meta, series, module, part, onPart, onExit, previ
             {canTell && <button type="button" className="pv-ghost pv-story-btn" aria-pressed={telling} onClick={() => tell(!telling)} title="Read it as a story (S)">Story</button>}
             <button type="button" className="pv-ghost" aria-pressed={!telling && aboutOpen && current === 'overview'} onClick={openAbout}>About</button>
             <button type="button" className="pv-ghost pv-tour-btn" aria-pressed={tour.playing} onClick={tour.toggle} title="Play the tour (P)">{tour.playing ? 'Stop' : 'Tour'}</button>
-            <button type="button" className="pv-ghost pv-solid" onClick={() => openExport('poster')} title="Export (E)">Export</button>
+            <button type="button" className="pv-ghost pv-solid" onClick={() => openExport('poster')} disabled={!exportable} title={exportable ? 'Export (E)' : 'Export is ready once the full drawing has loaded'}>Export</button>
           </div>
         </header>
 

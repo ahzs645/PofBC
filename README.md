@@ -762,7 +762,10 @@ past the six animals, to the roots, then down the copy to the two marks.
 45 MB master (14.8 MB, 1,960 paths, about 4.5 MB compressed; see
 [`artwork/posters/wildlife-trees/`](artwork/posters/wildlife-trees/README.md)), fetched as a file rather than
 built into a script, never fetched ahead of being opened (`prefetch: false` in its catalogue card), and a
-small JPEG for its card.
+small JPEG for its card. It opens at once on a 198 KB four-tone preview and sharpens when the drawing
+arrives: a module can give the viewer a light stand-in as its drawing and an `upgrade` that resolves to
+the real one, which replaces it without moving the view. Add `&frames=1` to the address to see how many
+frames each zoom draws and how long they take, to check a drawing on a real device.
 
 **Coastal Forest** was its own app, [coastal-forest-poster](https://github.com/ahzs645/coastal-forest-poster),
 and imported this repository's renderer through an alias; it now lives here, importing the same
