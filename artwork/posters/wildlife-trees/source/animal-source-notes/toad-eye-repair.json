@@ -1,0 +1,44 @@
+{
+  "schema_version": 1,
+  "key": "toad",
+  "slug": "northwestern-toad",
+  "coordinate_system": {
+    "viewBox": [
+      0,
+      0,
+      372.36622583926754,
+      350
+    ],
+    "native_pixels": [
+      1034,
+      970
+    ],
+    "working_translation_x_from_old_crop": 18.36622583926755
+  },
+  "scope": "Near-eye pupil only. Iris, eyelids and surrounding skin remain from source-fitted vectors.",
+  "erase_path": "M266.06622583926753 155.9C270.56622583926753 155.9 273.56622583926753 159.2 273.36622583926754 163.5C273.36622583926754 167.5 270.46622583926757 170.1 266.2662258392676 170.3C261.7662258392676 170.0 258.2662258392676 167.2 258.66622583926755 163.1C258.96622583926757 158.9 261.7662258392676 155.9 266.06622583926753 155.9Z",
+  "fill_paths": [
+    {
+      "id": "source-measured-round-pupil",
+      "path": "M265.7662258392676 157.0C268.46622583926757 156.9 270.2662258392676 158.1 271.56622583926753 159.5C272.66622583926755 161.3 272.56622583926753 163.8 271.96622583926757 165.7C270.96622583926757 168.0 268.46622583926757 169.0 266.06622583926753 169.0C263.46622583926757 169.0 261.06622583926753 167.3 260.2662258392676 165.2C259.36622583926754 163.4 259.56622583926753 161.4 260.7662258392676 160.0C261.7662258392676 158.1 263.66622583926755 157.0 265.7662258392676 157.0Z",
+      "fill": "#326c59"
+    }
+  ],
+  "white_strokes": [
+    {
+      "id": "observed-pupil-highlight",
+      "path": "M263.36622583926754 163.5C263.7662258392676 164.2 264.2662258392676 164.7 265.06622583926753 165.0",
+      "stroke_width": 0.6
+    }
+  ],
+  "white_paths": [],
+  "provenance": {
+    "source": "Original Wildlife Trees.pdf, expanded native toad-source.png crop",
+    "reason": "The source has a compact near-round pupil centered near old working (247.7,163.1), bounded approximately x241\u2013254 and y157\u2013169. The stroke fit distorted this solid component into a lobed shape. This manually measured cubic boundary restores that observed solid shape and its one clear diagonal pale highlight; no anatomy or texture is invented.",
+    "evidence": [
+      "proofs/details/toad-pupil-exact-grid.png",
+      "proofs/details/toad-eye-vector-review.png"
+    ]
+  },
+  "layer_order": "Cut erase_path out of fitted ink, insert measured pupil fill, and subtract white highlight stroke as a true vector cutout."
+}

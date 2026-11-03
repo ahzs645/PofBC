@@ -1,0 +1,65 @@
+{
+  "schema_version": 1,
+  "key": "bear",
+  "slug": "black-bear",
+  "coordinate_system": {
+    "viewBox": [
+      0,
+      0,
+      432,
+      438
+    ],
+    "native_pixels": [
+      1199,
+      1217
+    ]
+  },
+  "scope": "Upper solid core of near ear only; lower ear and neighboring head hatches remain from source-fitted vectors.",
+  "erase_path": "M130.6 53.5 C138.0 53.7 145.0 57.0 150.0 60.2 C156.2 64.6 161.7 69.8 166.6 75.5 L165.0 80.2 L158.1 81.6 L149.5 76.9 L141.2 72.7 L133.6 68.6 Z",
+  "fill_paths": [
+    {
+      "id": "near-ear-upper-solid-core",
+      "path": "M130.6 55.2 L132.4 54.8 L134.3 55.5 L135.4 56.2 L137.6 56.3 C142.0 57.5 147.2 60.8 151.7 64.6 C155.0 67.6 158.7 71.7 162.1 74.4 L165.6 76.3 L166.2 81.1 L158.0 82.4 L149.1 77.7 L140.6 73.5 L132.8 69.1 Z",
+      "fill": "#326c59"
+    }
+  ],
+  "white_strokes": [
+    {
+      "id": "source-ear-fleck-upper",
+      "path": "M138.1 59.6 Q139.3 60.7 140.7 61.5",
+      "stroke_width": 0.55
+    },
+    {
+      "id": "source-ear-fleck-left",
+      "path": "M129.0 63.4 Q130.6 65.0 132.8 67.0",
+      "stroke_width": 0.58
+    },
+    {
+      "id": "source-ear-fleck-central",
+      "path": "M133.9 64.8 Q135.9 66.3 138.5 68.1",
+      "stroke_width": 0.55
+    },
+    {
+      "id": "source-ear-fleck-right",
+      "path": "M149.4 64.4 Q150.5 64.9 151.8 65.9",
+      "stroke_width": 0.56
+    },
+    {
+      "id": "source-ear-fleck-small",
+      "path": "M146.5 66.6 L147.3 67.3",
+      "stroke_width": 0.66
+    }
+  ],
+  "white_paths": [],
+  "provenance": {
+    "source": "Original Wildlife Trees.pdf, native scan crop bear-source.png",
+    "reason": "The near-ear upper core is solid ink in the source, but the medial-axis vector reconstruction introduced a false triangular notch and regular comb-shaped boundary near x138\u2013160,y58\u201375. The repair replaces only that small mass with a manually measured anatomical edge and restores five individually observed pale flecks. No synthetic or random hatching.",
+    "evidence": [
+      "proofs/details/bear-ear-source-large.png",
+      "proofs/details/bear-ear-source-fine-grid.png",
+      "proofs/details/bear-ear-vector-fine-grid.png"
+    ],
+    "scan_damage_note": "The horizontal pale seam at bear working y\u2248396 is present in the native scan and is deliberately not changed."
+  },
+  "layer_order": "Erase the patch from existing ink, insert dark fill, then white source flecks. Keep this repair as a separate editable group."
+}

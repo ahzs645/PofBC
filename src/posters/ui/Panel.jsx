@@ -6,7 +6,7 @@ import { AnimatePresence, motion } from 'motion/react'
  * bottom on narrow ones. Contents keyed by `contentKey` swap at once and fade in, so stepping
  * quickly never leaves the panel empty while the old contents leave; the scroll resets.
  */
-export const Panel = ({ open, narrow = false, contentKey, onClose, children }) => {
+export const Panel = ({ open, narrow = false, contentKey, onClose, className = '', children }) => {
   const ref = useRef(null)
   useEffect(() => { ref.current?.scrollTo({ top: 0 }) }, [contentKey])
 
@@ -15,7 +15,7 @@ export const Panel = ({ open, narrow = false, contentKey, onClose, children }) =
       {open && (
         <motion.aside
           key="panel"
-          className="pv-panel"
+          className={`pv-panel ${className}`.trim()}
           ref={ref}
           initial={narrow ? { opacity: 0, y: 60 } : { opacity: 0, x: 48 }}
           animate={{ opacity: 1, x: 0, y: 0 }}

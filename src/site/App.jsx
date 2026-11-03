@@ -143,7 +143,7 @@ const initialView = () => {
 const writeView = (view) => {
   if (!globalThis.history?.replaceState) return
   const url = new URL(globalThis.location.href)
-  for (const key of ['view', 'year', 'node', 'logos', 'mark', 'internal', 'internal-logo', 'poster', 'sign', 'part', 'guide', 'page', 'org', 'patch', 'area', 'chapter']) url.searchParams.delete(key)
+  for (const key of ['view', 'year', 'node', 'logos', 'mark', 'internal', 'internal-logo', 'poster', 'sign', 'part', 'guide', 'page', 'org', 'patch', 'area', 'chapter', 'story']) url.searchParams.delete(key)
   if (view !== 'generator') url.searchParams.set('view', view)
   globalThis.history.replaceState(null, '', url)
 }

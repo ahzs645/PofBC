@@ -1,0 +1,208 @@
+{
+  "schema_version": 1,
+  "coordinate_system": "Manual animal contours measured in the supplied crop viewBoxes; native sources are about 2.78 pixels per unit. All SVG paths describe anatomical masks, not generated pen textures.",
+  "notes": [
+    "Preserve original source ink only within the visible animal mask. Do not copy panel frames or background branches.",
+    "For hawk: visible mask = full silhouette minus branch occluders, union the explicitly foreground right talons. The closed full silhouette bridges only hidden anatomy and must not be treated as observed ink.",
+    "The owl is a bust cropped by the original right and lower panel edges; do not invent a complete body."
+  ],
+  "animals": [
+    {
+      "key": "hawk",
+      "slug": "red-tailed-hawk",
+      "width": 395,
+      "height": 354,
+      "silhouette": "M 124 109 C 135 98 146 83 158 74 C 176 66 193 61 210 57 C 226 52 242 48 258 49 C 271 49 281 51 293 50 C 308 48 323 47 335 49 C 349 52 357 58 361 65 C 364 70 364 76 366 81 L 370 86 C 373 91 373 99 370 104 L 367 109 L 367 105 L 368 100 C 356 100 344 104 331 110 C 322 115 315 121 306 125 C 309 132 311 140 307 149 C 304 159 297 167 287 172 C 276 178 265 182 253 186 C 252 200 254 213 252 226 C 250 235 250 245 249 251 C 246 259 249 270 256 281 L 267 293 C 275 298 280 305 278 314 C 275 322 269 326 260 320 C 248 315 239 305 231 295 C 213 275 194 251 180 225 C 169 227 157 229 147 234 C 140 237 136 247 131 257 C 121 278 111 300 102 319 C 98 326 94 334 89 338 C 85 341 81 339 78 336 C 74 341 70 345 64 344 C 59 344 57 343 55 341 C 49 345 44 347 40 345 L 37 342 C 32 344 27 340 25 336 C 19 337 16 334 16 330 L 13 326 C 10 325 9 320 10 316 C 8 311 8 306 9 302 C 6 299 6 294 8 288 C 11 280 16 271 22 264 C 29 255 34 245 39 234 C 47 216 55 198 65 182 C 71 170 79 160 83 153 C 96 137 110 122 124 109 Z",
+      "silhouette_status": "Conservative closed anatomical silhouette. Hidden lower breast/leg bridge is explicitly marked below.",
+      "occluders": [
+        {
+          "id": "foreground-main-perch",
+          "path": "M 87 13 L 151 13 C 151 35 151 55 154 73 C 157 88 164 103 173 120 C 180 137 189 156 199 176 C 208 197 218 216 230 237 C 238 248 248 258 257 269 C 266 288 274 307 284 323 C 290 332 296 338 301 344 L 242 345 C 232 331 223 316 216 302 C 204 278 193 256 183 234 C 172 211 160 188 149 164 C 138 141 128 117 118 93 C 107 67 97 41 87 13 Z",
+          "foreground_exceptions": [
+            "right-talons"
+          ]
+        },
+        {
+          "id": "left-side-perch-branch",
+          "path": "M 39 35 C 57 48 75 60 95 67 C 106 70 120 75 132 78 L 139 95 C 121 92 109 87 96 82 C 75 73 55 65 39 62 Z"
+        }
+      ],
+      "foreground_regions": [
+        {
+          "id": "right-talons",
+          "path": "M 269 295 C 271 292 274 291 277 293 C 281 296 282 301 280 305 C 285 304 288 308 287 311 L 290 314 C 293 316 292 321 289 322 C 289 327 284 329 280 327 C 276 327 274 324 272 320 L 268 315 C 264 310 265 302 269 295 Z"
+        }
+      ],
+      "hidden_regions": [
+        {
+          "id": "body-hidden-by-perch",
+          "path": "M 124 109 C 143 88 151 78 158 74 C 162 100 177 133 192 165 C 208 195 227 227 249 251 C 246 259 249 270 256 281 L 267 293 L 260 320 C 248 315 239 305 231 295 C 213 275 194 251 180 225 C 160 193 141 151 124 109 Z",
+          "status": "Unobserved beneath trunk; conservative bridge only; no texture inferred."
+        }
+      ],
+      "ambiguous_features": [
+        {
+          "id": "left-grip-or-lichen-twig",
+          "path": "M 188 282 L 191 279 L 193 284 L 198 281 L 201 286 C 211 289 221 294 233 300 L 235 309 C 220 304 207 299 197 295 C 193 292 190 290 187 289 L 189 287 L 187 285 Z",
+          "status": "Do not include in isolated animal without explicit review. The form merges with a lichen-bearing perch twig; include only in contextual variant."
+        }
+      ],
+      "regions": [
+        {
+          "id": "body",
+          "path": "M 124 109 C 135 98 146 83 158 74 C 176 66 193 61 210 57 C 226 52 242 48 258 49 C 271 49 281 51 293 50 C 308 48 323 47 335 49 C 349 52 357 58 361 65 C 364 70 364 76 366 81 L 370 86 C 373 91 373 99 370 104 L 367 109 L 367 105 L 368 100 C 356 100 344 104 331 110 C 322 115 315 121 306 125 C 309 132 311 140 307 149 C 304 159 297 167 287 172 C 276 178 265 182 253 186 C 252 200 254 213 252 226 C 250 235 250 245 249 251 C 246 259 249 270 256 281 L 267 293 C 275 298 280 305 278 314 C 275 322 269 326 260 320 C 248 315 239 305 231 295 C 213 275 194 251 180 225 C 169 227 157 229 147 234 C 140 237 136 247 131 257 C 121 278 111 300 102 319 C 98 326 94 334 89 338 C 85 341 81 339 78 336 C 74 341 70 345 64 344 C 59 344 57 343 55 341 C 49 345 44 347 40 345 L 37 342 C 32 344 27 340 25 336 C 19 337 16 334 16 330 L 13 326 C 10 325 9 320 10 316 C 8 311 8 306 9 302 C 6 299 6 294 8 288 C 11 280 16 271 22 264 C 29 255 34 245 39 234 C 47 216 55 198 65 182 C 71 170 79 160 83 153 C 96 137 110 122 124 109 Z"
+        },
+        {
+          "id": "folded-wing-and-back",
+          "path": "M 124 109 C 139 94 154 80 175 73 C 194 66 217 65 234 70 C 247 73 256 81 257 91 C 259 101 252 110 239 117 C 221 128 207 134 190 145 L 180 225 C 162 229 147 231 137 236 C 121 235 104 241 87 247 L 29 257 C 42 228 54 203 68 178 C 80 154 105 126 124 109 Z"
+        },
+        {
+          "id": "tail-feathers",
+          "path": "M 93 184 C 106 190 121 195 139 203 C 151 208 166 217 180 225 C 169 227 157 229 147 234 C 140 237 136 247 131 257 C 121 278 111 300 102 319 C 98 326 94 334 89 338 C 85 341 81 339 78 336 C 74 341 70 345 64 344 C 59 344 57 343 55 341 C 49 345 44 347 40 345 L 37 342 C 32 344 27 340 25 336 C 19 337 16 334 16 330 L 13 326 C 10 325 9 320 10 316 C 8 311 8 306 9 302 C 6 299 6 294 8 288 C 11 280 16 271 22 264 C 34 248 49 233 62 217 C 73 205 82 194 93 184 Z"
+        },
+        {
+          "id": "head-and-neck",
+          "path": "M 157 74 C 176 65 193 61 210 57 C 226 52 242 48 258 49 C 271 49 281 51 293 50 C 308 48 323 47 335 49 C 349 52 357 58 361 65 C 364 70 364 76 366 81 L 370 86 C 373 91 373 99 370 104 L 367 109 L 367 105 L 368 100 C 356 100 344 104 331 110 C 322 115 315 121 306 125 C 286 138 268 148 249 160 L 210 155 L 183 128 L 169 103 Z"
+        },
+        {
+          "id": "breast-and-underwing",
+          "path": "M 211 145 C 238 136 269 124 306 125 C 309 132 311 140 307 149 C 304 159 297 167 287 172 C 276 178 265 182 253 186 C 252 200 254 213 252 226 C 250 235 250 245 249 251 L 233 264 L 206 231 L 188 196 Z"
+        },
+        {
+          "id": "eye",
+          "path": "M 326 70 C 334 67 343 69 347 73 C 348 77 343 82 338 83 C 331 83 326 79 326 74 Z"
+        },
+        {
+          "id": "beak",
+          "path": "M 353 80 C 359 78 364 80 367 84 C 371 85 373 91 372 98 C 372 102 369 107 367 109 L 367 105 L 368 100 C 362 101 356 99 350 101 L 345 100 C 350 95 353 88 353 80 Z"
+        },
+        {
+          "id": "right-talons",
+          "path": "M 269 295 C 271 292 274 291 277 293 C 281 296 282 301 280 305 C 285 304 288 308 287 311 L 290 314 C 293 316 292 321 289 322 C 289 327 284 329 280 327 C 276 327 274 324 272 320 L 268 315 C 264 310 265 302 269 295 Z",
+          "foreground": true
+        }
+      ],
+      "crop_edges": [],
+      "source_native_pixels": [
+        1098,
+        984
+      ],
+      "mask_build_order": [
+        "Fill silhouette white on black.",
+        "Paint each occluder black.",
+        "Paint foreground_regions white after all occluders.",
+        "Intersect resulting mask with source ink; never use hidden_regions as observed texture."
+      ],
+      "inspection": {
+        "overlay": "proofs/details/hawk-mask-overlay.png",
+        "isolated_source": "proofs/details/hawk-isolation-check.png",
+        "mask_svg": "tmp/wildlife-v2/hawk-anatomy-mask.svg",
+        "status": "Visually inspected against original high-resolution crop; hawk lower-perch bark sliver removed in final revision."
+      },
+      "context_regions": [
+        {
+          "id": "diagonal-foreground-perch",
+          "path": "M 88.3 15.1 L 150.3 15.1 C 150.6 35 151.1 55 154.0 73 C 157 88 164 103 173 120 C 180 137 189 156 199 176 C 208 197 218 216 230 237 C 238 248 248 258 257 269 C 266 288 274 307 284 323 C 289 330 294 336 299 340.8 L 240.2 340.8 C 231.5 328.8 222.5 314.5 216 302 C 204 278 193 256 183 234 C 172 211 160 188 149 164 C 138 141 128 117 118 93 C 107 67 97 41 88.3 15.1 Z",
+          "status": "Observed wood only. Ends stop inside the source top and bottom panel rules; continuation below the frame is excluded."
+        },
+        {
+          "id": "upper-left-supporting-side-branch",
+          "path": "M 40.9 36.5 L 48 41 L 51 44 L 56 45 L 59 49 L 65 51 L 68 54 L 72 55 L 74 58 L 80 61 L 85 63 L 89 67 L 94 67 L 98 70 L 103 70 L 108 73 L 113 74 L 119 77 L 126 78 L 136 93 L 129 96 C 117 93 104 88 94 84 C 77 77 61 70 48 67 L 40.9 66.1 Z",
+          "status": "Observed side branch attached to the diagonal perch. Left end stops inside the source panel rule."
+        },
+        {
+          "id": "upper-branch-hanging-lichen",
+          "path": "M 47 63 C 64 68 82 77 97 83 L 110 87 L 112 100 L 110 113 L 107 114 L 104 110 L 100 113 L 97 110 L 94 115 L 90 113 L 91 120 L 90 127 L 86 129 L 83 126 L 82 120 L 81 127 L 78 129 L 76 124 L 77 115 L 73 112 L 73 116 L 69 113 L 68 108 L 64 105 L 62 108 L 60 104 L 61 101 L 57 100 L 58 104 L 54 105 L 53 99 L 51 95 L 51 91 L 49 95 L 47 89 L 45 86 Z",
+          "status": "Only source ink in this mask is retained. Attached lichen included in contextual version, not treated as bird plumage."
+        },
+        {
+          "id": "lower-supporting-twig-grip-and-lichen",
+          "path": "M 187 282 L 190 279 L 193 282 L 196 281 L 200 285 L 206 287 C 212 290 221 294 234 300 L 236 310 L 224 310 L 219 307 L 218 319 L 215 327 L 214 331 L 211 329 L 210 320 L 210 336 L 207 338 L 205 334 L 205 322 L 203 318 L 203 334 L 200 335 L 198 327 L 197 314 L 194 317 L 192 310 L 192 300 L 188 295 L 188 291 L 186 288 L 188 286 L 186 284 Z",
+          "status": "Original supporting twig and hanging growth, including the visually ambiguous wrapping/grip form. Retained only in with-perch context; no claim that all of these marks are talons."
+        }
+      ],
+      "context_build_note": "Union these observed context masks with the source-visible animal mask for with-perch artwork. For separate semantic layers, subtract the animal-visible mask from context first so source ink is not duplicated. Do not add the source panel rules or the scenery at far right/below the panel."
+    },
+    {
+      "key": "owl",
+      "slug": "great-horned-owl",
+      "width": 346,
+      "height": 348,
+      "silhouette": "M 17 79 L 18 75 L 17 73 C 21 64 29 57 39 52 C 47 49 52 48 58 48 L 62 47 L 67 49 L 72 48 L 78 49 L 82 48 L 86 49 L 91 48 L 96 50 L 102 48 L 109 49 L 115 47 L 122 48 L 127 46 L 134 47 L 139 45 L 144 47 L 150 46 L 157 47 L 162 45 L 168 46 L 173 44 L 178 46 L 182 42 L 187 44 L 191 42 L 195 44 L 200 42 L 205 44 L 212 44 L 218 46 L 224 45 L 232 47 L 238 47 L 246 48 C 261 45 276 45 291 47 C 305 48 319 51 326 56 L 329 60 L 325 60 L 330 64 L 326 64 L 320 62 L 323 66 L 315 63 L 317 67 L 308 64 L 302 65 L 298 68 C 294 71 294 76 298 80 C 308 89 315 101 320 110 L 324 121 L 321 125 C 326 137 328 150 332 162 C 337 174 338 184 333 193 L 330 195 C 330 208 326 220 327 231 C 329 241 334 245 337 252 L 337 336 L 6 336 C 5 329 6 321 8 314 L 9 307 C 11 297 11 288 16 280 C 19 271 25 262 29 252 C 33 246 31 238 31 232 C 30 222 30 211 28 203 C 25 195 25 187 25 179 C 25 169 24 160 25 152 L 26 143 C 26 132 28 122 30 113 L 31 105 L 34 97 C 34 91 36 85 40 82 L 44 77 L 43 74 L 38 72 L 33 75 L 29 78 L 29 75 L 24 80 L 24 77 L 20 81 L 20 77 Z",
+      "silhouette_status": "Source-measured bust outline; original right and lower crop preserved, panel borders excluded.",
+      "occluders": [],
+      "foreground_regions": [],
+      "hidden_regions": [],
+      "regions": [
+        {
+          "id": "body-and-breast",
+          "path": "M 17 79 L 18 75 L 17 73 C 21 64 29 57 39 52 C 47 49 52 48 58 48 L 62 47 L 67 49 L 72 48 L 78 49 L 82 48 L 86 49 L 91 48 L 96 50 L 102 48 L 109 49 L 115 47 L 122 48 L 127 46 L 134 47 L 139 45 L 144 47 L 150 46 L 157 47 L 162 45 L 168 46 L 173 44 L 178 46 L 182 42 L 187 44 L 191 42 L 195 44 L 200 42 L 205 44 L 212 44 L 218 46 L 224 45 L 232 47 L 238 47 L 246 48 C 261 45 276 45 291 47 C 305 48 319 51 326 56 L 329 60 L 325 60 L 330 64 L 326 64 L 320 62 L 323 66 L 315 63 L 317 67 L 308 64 L 302 65 L 298 68 C 294 71 294 76 298 80 C 308 89 315 101 320 110 L 324 121 L 321 125 C 326 137 328 150 332 162 C 337 174 338 184 333 193 L 330 195 C 330 208 326 220 327 231 C 329 241 334 245 337 252 L 337 336 L 6 336 C 5 329 6 321 8 314 L 9 307 C 11 297 11 288 16 280 C 19 271 25 262 29 252 C 33 246 31 238 31 232 C 30 222 30 211 28 203 C 25 195 25 187 25 179 C 25 169 24 160 25 152 L 26 143 C 26 132 28 122 30 113 L 31 105 L 34 97 C 34 91 36 85 40 82 L 44 77 L 43 74 L 38 72 L 33 75 L 29 78 L 29 75 L 24 80 L 24 77 L 20 81 L 20 77 Z"
+        },
+        {
+          "id": "right-shoulder",
+          "path": "M 254 75 C 281 78 305 95 321 121 C 327 144 340 173 333 193 C 328 209 326 220 327 231 C 329 241 334 245 337 252 L 337 336 L 243 336 C 236 309 228 282 215 252 L 203 222 C 233 211 257 192 270 170 C 286 143 280 111 254 75 Z"
+        },
+        {
+          "id": "left-shoulder",
+          "path": "M 29 201 C 40 213 49 220 55 233 C 59 254 48 275 39 294 L 26 336 L 6 336 C 5 329 6 321 8 314 L 9 307 C 11 297 11 288 16 280 C 19 271 25 262 29 252 C 33 246 31 238 31 232 C 30 222 30 211 29 201 Z"
+        },
+        {
+          "id": "forehead-and-ear-tufts",
+          "path": "M 17 79 C 18 64 36 50 58 48 L 100 49 L 140 46 L 183 43 L 220 45 C 260 46 292 43 321 53 L 330 64 L 302 65 L 293 78 C 272 79 253 84 235 84 C 210 78 190 80 173 88 C 157 95 142 109 130 132 C 117 111 102 94 86 87 C 66 77 50 73 34 77 L 20 81 Z"
+        },
+        {
+          "id": "left-facial-disc",
+          "path": "M 43 78 C 58 77 73 81 86 91 C 102 97 111 108 116 123 C 116 139 109 159 105 177 C 101 191 98 203 94 212 C 74 214 56 205 43 191 C 31 176 28 158 29 140 C 28 121 33 103 37 91 Z"
+        },
+        {
+          "id": "right-facial-disc",
+          "path": "M 164 84 C 183 76 206 75 227 80 C 246 87 262 102 272 119 C 281 139 279 158 269 177 C 259 196 242 210 225 218 C 211 225 196 222 180 213 C 162 203 149 184 142 166 C 135 146 135 125 142 110 C 147 98 154 91 164 84 Z"
+        },
+        {
+          "id": "neck-ruff",
+          "path": "M 29 192 C 51 211 71 218 94 212 C 112 208 124 199 137 204 C 153 208 169 216 183 218 L 209 218 C 224 233 230 249 237 265 L 219 273 C 195 257 176 247 153 246 C 126 252 101 253 79 250 C 55 247 40 231 29 213 Z"
+        },
+        {
+          "id": "left-eye",
+          "path": "M 78 100 C 86 96 96 98 104 103 C 112 109 116 120 112 130 C 108 138 99 143 91 142 C 81 141 74 134 72 125 C 70 114 71 105 78 100 Z"
+        },
+        {
+          "id": "right-eye",
+          "path": "M 178 103 C 188 97 202 98 213 104 C 223 110 227 122 223 132 C 219 142 209 147 198 146 C 185 145 176 139 172 129 C 169 119 171 109 178 103 Z"
+        },
+        {
+          "id": "beak",
+          "path": "M 124 148 C 133 149 141 155 145 165 C 147 174 140 185 138 197 L 136 208 C 129 205 125 198 122 190 C 119 180 117 167 118 157 Z"
+        }
+      ],
+      "crop_edges": [
+        {
+          "edge": "right",
+          "coordinate": 337,
+          "status": "Body continues beyond original image."
+        },
+        {
+          "edge": "bottom",
+          "coordinate": 336,
+          "status": "Body continues below original image; panel rule removed."
+        }
+      ],
+      "source_native_pixels": [
+        961,
+        966
+      ],
+      "mask_build_order": [
+        "Fill silhouette white on black.",
+        "Paint each occluder black.",
+        "Paint foreground_regions white after all occluders.",
+        "Intersect resulting mask with source ink; never use hidden_regions as observed texture."
+      ],
+      "inspection": {
+        "overlay": "proofs/details/owl-mask-overlay.png",
+        "isolated_source": "proofs/details/owl-isolation-check.png",
+        "mask_svg": "tmp/wildlife-v2/owl-anatomy-mask.svg",
+        "status": "Visually inspected against original high-resolution crop; panel rules removed and original bust crop retained."
+      }
+    }
+  ]
+}

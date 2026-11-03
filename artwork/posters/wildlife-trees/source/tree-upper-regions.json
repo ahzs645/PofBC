@@ -1,0 +1,200 @@
+{
+  "schema_version": 1,
+  "coordinate_system": {
+    "viewBox_width": 1000,
+    "upper_work_extent_y": [
+      120,
+      1001
+    ],
+    "source_native_pixels": [
+      4576,
+      13715
+    ],
+    "scale_native_pixels_per_unit": 4.576
+  },
+  "source": "Original uploaded Wildlife Trees.pdf, extracted upright reference-native.jpg; no v1 synthetic tree paths reused.",
+  "region_order": "Specific-first. First matching region receives the observed ink; root excludes animal panels and captions before assigning tree ink.",
+  "regions": [
+    {
+      "id": "upper-crown-splinters",
+      "path": "M 572 139 H 682 L 683 232 L 670 247 L 639 235 L 609 239 L 579 227 Z",
+      "description": "Broken crown and narrow standing splinters. This is a semantic ink mask, not an instruction to fill the gaps white."
+    },
+    {
+      "id": "nest-woven-twigs",
+      "path": "M 386 386 L 403 376 L 426 375 L 431 359 L 439 369 L 459 361 L 466 369 L 479 362 L 487 372 L 502 359 L 509 370 L 515 351 L 520 370 L 532 359 L 540 371 L 552 363 L 567 371 L 579 357 L 589 368 L 602 367 L 611 382 L 616 403 L 618 426 L 606 448 L 593 455 L 573 444 L 552 439 L 538 444 L 521 434 L 507 433 L 496 443 L 489 436 L 472 431 L 463 433 L 447 426 L 432 421 L 414 419 L 403 411 L 383 405 L 354 395 L 386 394 Z",
+      "description": "Actual interwoven nest, loose top sticks, left overhang and dense lower bowl. Preserve its open interstices."
+    },
+    {
+      "id": "upper-right-bracket-fungus",
+      "path": "M 684 816 L 700 826 L 727 839 L 724 845 L 704 852 L 684 854 Z"
+    },
+    {
+      "id": "second-right-bracket-fungus",
+      "path": "M 686 878 L 705 884 L 720 890 L 717 898 L 698 905 L 686 904 Z"
+    },
+    {
+      "id": "large-broken-left-limb",
+      "path": "M 416 503 L 425 500 L 440 511 L 481 553 L 527 592 L 558 599 L 585 617 L 618 652 L 623 695 L 605 728 L 568 735 L 550 721 L 531 696 L 492 648 L 448 591 L 426 554 L 416 524 Z",
+      "description": "Measured broken limb envelope including its splintered tip, exposed pale wood and shaded underside."
+    },
+    {
+      "id": "left-nest-level-upward-twigs",
+      "path": "M 352 327 L 361 334 L 376 353 L 388 362 L 403 372 L 421 379 L 441 384 L 446 397 L 416 395 L 399 388 L 382 379 L 358 369 L 353 358 L 362 359 L 378 366 L 370 351 L 356 338 Z"
+    },
+    {
+      "id": "upper-left-slender-branch",
+      "path": "M 474 192 L 484 208 L 493 233 L 523 260 L 545 278 L 550 298 L 578 330 L 602 357 L 595 367 L 575 352 L 546 314 L 534 295 L 520 287 L 515 272 L 493 250 L 479 239 Z"
+    },
+    {
+      "id": "upper-left-horizontal-connector",
+      "path": "M 403 301 L 431 302 L 477 306 L 525 309 L 564 315 L 600 314 L 608 332 L 578 336 L 552 328 L 515 327 L 493 335 L 477 330 L 464 324 L 437 322 L 415 316 Z",
+      "description": "Branch beneath/behind hawk panel. Starts to the right of the original hawk caption."
+    },
+    {
+      "id": "nest-support-left-branch",
+      "path": "M 333 437 L 360 435 L 393 423 L 421 408 L 458 398 L 497 401 L 532 407 L 556 410 L 569 426 L 548 443 L 521 459 L 502 474 L 484 488 L 462 499 L 456 492 L 483 469 L 497 446 L 517 431 L 485 423 L 455 423 L 425 435 L 408 452 L 397 468 L 384 462 L 384 449 L 358 456 L 338 467 L 331 461 Z"
+    },
+    {
+      "id": "upper-right-ascending-fork",
+      "path": "M 654 326 L 681 308 L 698 279 L 704 267 L 702 230 L 707 225 L 711 261 L 722 245 L 733 215 L 736 204 L 742 207 L 739 224 L 741 231 L 731 238 L 733 240 L 719 271 L 700 300 L 733 294 L 735 306 L 723 321 L 713 315 L 706 307 L 690 313 L 668 350 L 655 353 Z"
+    },
+    {
+      "id": "upper-right-crown-branch-system",
+      "path": "M 649 397 L 678 386 L 703 377 L 736 353 L 779 331 L 810 301 L 836 280 L 859 266 L 884 232 L 889 231 L 886 240 L 872 261 L 898 266 L 904 278 L 899 292 L 947 294 L 950 303 L 924 310 L 908 318 L 949 339 L 952 348 L 929 345 L 900 332 L 877 322 L 857 314 L 837 314 L 830 333 L 806 339 L 783 357 L 757 377 L 738 389 L 712 398 L 689 416 L 669 432 L 648 436 Z M 663 354 L 686 359 L 712 365 L 731 371 L 774 373 L 807 381 L 833 398 L 868 417 L 894 431 L 914 438 L 917 449 L 901 446 L 880 435 L 850 425 L 821 405 L 797 393 L 771 388 L 744 386 L 721 382 L 698 382 L 673 374 Z",
+      "description": "Two crossing/attached crown branch runs, including terminal forks and hanging lichen. Background within this region remains transparent."
+    },
+    {
+      "id": "right-upper-middle-branch-system",
+      "path": "M 664 477 L 699 472 L 732 462 L 768 454 L 793 448 L 817 442 L 852 430 L 882 414 L 888 419 L 867 435 L 842 447 L 815 455 L 844 469 L 869 469 L 899 475 L 923 483 L 953 498 L 967 508 L 966 515 L 947 506 L 924 498 L 909 499 L 902 492 L 876 492 L 855 486 L 837 478 L 810 466 L 791 465 L 783 483 L 772 482 L 772 469 L 750 477 L 736 489 L 718 486 L 695 499 L 673 504 L 661 494 Z"
+    },
+    {
+      "id": "right-middle-fork-around-y520",
+      "path": "M 702 475 L 726 475 L 759 489 L 786 506 L 809 520 L 835 528 L 866 529 L 889 526 L 914 531 L 929 539 L 945 555 L 964 584 L 969 595 L 956 586 L 937 568 L 921 560 L 918 578 L 908 570 L 908 550 L 894 546 L 882 546 L 876 560 L 864 550 L 850 548 L 840 561 L 828 552 L 821 540 L 800 536 L 785 548 L 772 543 L 766 527 L 747 514 L 725 501 L 703 491 Z",
+      "description": "Fork and long lateral around y500\u2013590, with the small hanging lichen marks between the larger branch tiers."
+    },
+    {
+      "id": "right-long-descending-branch",
+      "path": "M 671 507 L 698 514 L 723 531 L 743 546 L 754 566 L 765 601 L 775 638 L 782 682 L 788 729 L 795 781 L 802 816 L 817 847 L 842 871 L 859 890 L 868 918 L 879 939 L 888 970 L 897 999 L 882 1001 L 876 970 L 865 946 L 856 924 L 848 897 L 828 879 L 804 858 L 784 853 L 777 838 L 786 815 L 780 784 L 777 748 L 772 704 L 766 667 L 756 630 L 745 594 L 732 562 L 716 547 L 693 534 L 674 529 Z",
+      "description": "Long hanging branch and attached growth on the right, followed only to y1001 for this upper-tree contribution."
+    },
+    {
+      "id": "right-middle-horizontal-laterals",
+      "path": "M 675 551 L 707 559 L 748 573 L 792 582 L 833 585 L 866 595 L 901 614 L 927 638 L 931 648 L 910 636 L 884 620 L 859 614 L 851 630 L 842 620 L 825 613 L 811 620 L 801 605 L 785 605 L 777 616 L 766 605 L 748 598 L 720 589 L 694 582 L 676 577 Z M 677 615 L 703 620 L 736 633 L 773 643 L 815 650 L 849 662 L 879 676 L 919 689 L 953 710 L 957 721 L 936 706 L 913 702 L 892 701 L 877 692 L 863 706 L 852 696 L 839 700 L 829 682 L 809 677 L 801 690 L 784 682 L 771 674 L 750 668 L 741 681 L 729 671 L 706 659 L 679 650 Z"
+    },
+    {
+      "id": "left-middle-branch-above-broken-limb",
+      "path": "M 333 543 L 363 540 L 401 534 L 444 522 L 479 509 L 502 498 L 528 500 L 558 507 L 567 520 L 545 527 L 524 519 L 512 526 L 499 525 L 482 528 L 455 538 L 425 549 L 391 559 L 365 574 L 350 619 L 320 669 L 313 666 L 330 631 L 344 600 L 351 576 L 342 577 L 331 570 Z"
+    },
+    {
+      "id": "left-lower-twig-under-broken-limb",
+      "path": "M 479 635 L 490 641 L 480 661 L 465 677 L 456 694 L 442 700 L 430 711 L 420 711 L 431 699 L 442 690 L 454 672 L 468 654 Z"
+    },
+    {
+      "id": "left-under-limb-branches",
+      "path": "M 544 720 L 556 730 L 548 744 L 521 744 L 496 754 L 479 766 L 466 780 L 455 781 L 449 772 L 437 772 L 440 762 L 459 751 L 485 742 L 517 730 Z M 545 776 L 557 788 L 542 803 L 521 815 L 497 824 L 477 839 L 451 847 L 429 862 L 423 850 L 440 841 L 469 829 L 494 813 L 522 796 Z"
+    },
+    {
+      "id": "upper-left-low-lateral-to-caption-panels",
+      "path": "M 542 886 L 554 894 L 545 907 L 519 909 L 495 919 L 475 935 L 451 943 L 426 946 L 403 940 L 376 937 L 340 940 L 302 939 L 278 944 L 251 955 L 232 970 L 207 978 L 180 981 L 151 980 L 125 977 L 100 968 L 77 953 L 82 949 L 105 961 L 135 970 L 165 970 L 193 964 L 220 950 L 244 937 L 270 928 L 300 925 L 335 926 L 369 923 L 404 928 L 432 928 L 458 925 L 480 914 L 507 900 Z",
+      "description": "Left lateral around y930, with source animal panels and labels excluded separately by the poster assembly."
+    },
+    {
+      "id": "upper-trunk-exposed-wood",
+      "path": "M 599 228 L 651 228 L 658 362 L 648 398 L 657 436 L 655 491 L 661 551 L 668 607 L 672 663 L 670 718 L 669 772 L 668 831 L 668 891 L 674 945 L 672 1001 L 593 1001 L 596 945 L 593 886 L 600 830 L 597 777 L 602 725 L 599 677 L 601 621 L 608 574 L 604 519 L 610 472 L 611 426 L 603 386 L 597 333 Z",
+      "description": "Broad semantic region for the pale, exposed wood face; source ink is still measured locally."
+    },
+    {
+      "id": "upper-trunk-bark-and-attachments",
+      "path": "M 572 227 L 683 228 L 699 352 L 697 492 L 705 654 L 706 810 L 707 1001 L 529 1001 L 535 895 L 536 788 L 543 703 L 542 604 L 549 510 L 563 419 L 571 343 Z",
+      "description": "General upper trunk region, last after the specific features."
+    }
+  ],
+  "white_base_paths": [
+    {
+      "id": "solid-upper-trunk-white",
+      "path": "M 582.2 199.2 C 585.1 190.8 588.9 177.2 592.4 174.8 L 595.2 190.9 L 599.0 190.7 L 601.8 195.5 L 605.1 194.0 L 609.0 197.0 L 609.8 174.2 L 613.8 170.2 L 617.3 172.7 L 621.6 175.2 L 624.6 186.7 L 627.1 180.0 L 630.4 174.1 L 634.9 158.7 L 638.8 161.0 L 643.5 171.4 L 646.2 179.3 L 647.2 149.1 L 650.7 145.5 L 653.1 148.5 L 654.7 145.0 L 657.8 148.4 L 659.1 145.8 L 662.2 147.4 L 664.7 146.5 L 667.7 149.0 L 669.1 152.1 L 671.3 153.4 C 673.0 190 674.0 231 675.0 265 C 678.0 302 676.0 336 678.0 371 C 681.0 412 677.0 448 680.0 483 C 684.0 520 682.0 551 686.0 582 C 687.0 614 686.0 651 690.0 680 C 691.0 722 690.0 761 692.0 798 C 692.0 833 692.0 867 693.0 901 C 695.0 934 693.0 970 694.0 1001 L 538.0 1001 C 543.0 983 541.0 964 544.0 943 C 546.0 924 542.0 909 543.0 893 C 546.0 877 546.0 859 545.0 841 C 547.0 823 546.0 805 549.0 787 C 551.0 768 549.0 748 551.0 726 C 555.0 701 552.0 679 553.0 656 C 554.0 633 552.0 609 553.0 586 C 555.0 559 557.0 535 559.0 515 C 563.0 494 566.0 470 570.0 447 C 574.0 427 580.0 412 584.0 394 C 584.0 374 587.0 354 586.0 335 C 587.0 319 584.0 309 585.0 296 C 582.0 286 582.0 277 583.0 264 C 583.0 244 584.0 228 583.0 213 Z",
+      "description": "Main solid trunk and faithfully notched crown. Narrow margins deliberately stay within observed wood; do not extend this fill to semantic branch masks."
+    },
+    {
+      "id": "solid-broken-limb-white",
+      "path": "M 422.0 506.2 C 425.7 503.8 429.7 509.4 435.0 514.0 C 451.0 529.0 463.0 544.0 478.0 559.0 C 494.0 575.0 509.0 590.0 526.0 598.0 C 541.0 603.0 553.0 604.0 566.0 613.0 C 584.0 624.0 598.0 640.0 610.0 660.0 L 616.0 692.0 L 597.0 721.0 L 567.0 728.0 C 554.0 721.0 547.0 708.0 537.0 694.0 C 523.0 677.0 507.0 657.0 494.0 640.0 C 480.0 622.0 465.0 604.0 452.0 585.0 C 438.0 566.0 426.0 544.0 424.0 526.0 C 421.0 519.0 419.0 510.0 422.0 506.2 Z",
+      "description": "Actual broken limb wood, joining the main trunk."
+    },
+    {
+      "id": "upper-conk-white",
+      "path": "M 689.0 823.0 C 699.0 829.0 710.0 835.0 721.0 839.0 L 724.0 840.0 C 715.0 845.0 703.0 849.0 689.0 850.0 Z",
+      "description": "Small solid bracket fungus body."
+    },
+    {
+      "id": "second-conk-white",
+      "path": "M 691.0 883.0 C 701.0 885.0 710.0 888.0 716.0 892.0 C 713.0 896.0 704.0 900.0 691.0 901.0 Z",
+      "description": "Second small bracket fungus body."
+    }
+  ],
+  "exclusions": [
+    {
+      "type": "upstream_required",
+      "description": "All six source animal panels, their frames and species captions must be excluded by root before tree fitting. Several real tree branches continue behind those panels; do not reconnect hidden penwork by guessing."
+    },
+    {
+      "type": "no_white_fill",
+      "description": "Never fill semantic branch regions or nest masks as silhouettes. Their background gaps and twig interstices must remain open."
+    }
+  ],
+  "ink_sensitive_details": [
+    {
+      "id": "crown-splits",
+      "description": "Preserve the deep open notches between the crown splinters around x595\u2013610,y175\u2013200 and x624\u2013647,y158\u2013190. Do not replace the crown with a straight or rounded cap."
+    },
+    {
+      "id": "nest-interstices",
+      "description": "Nest has crossing twigs, long projecting sticks and genuine white gaps, not a solid filled bowl. Thin top sticks reach about y351."
+    },
+    {
+      "id": "hanging-lichen",
+      "description": "Fine hanging vertical and looping growth belongs to branches. Do not discard it wholesale as scan noise."
+    },
+    {
+      "id": "broken-limb-woodgrain",
+      "description": "Preserve the diagonal exposed-wood direction and the original irregular fractures at the limb tip near(422,506). No artificial hatch field."
+    },
+    {
+      "id": "trunk-scar-details",
+      "description": "Small cavities, pale wood streaks and peeling-bark fragments are source ink, not type or background artifacts."
+    }
+  ],
+  "conditional_restoration_candidates": [
+    {
+      "id": "left-crown-splinter-outer-edge",
+      "path": "M 582.25 199.05 C 585.08 191.90 589.23 176.42 592.66 175.22 C 593.19 178.60 594.33 185.13 595.05 190.36",
+      "stroke_width": 0.55,
+      "apply_by_default": false,
+      "source_evidence": "Faint continuous outer contour visible in crown-detail-source.png and coordinate grid. Apply only if the fitted source ink leaves this observed line disconnected."
+    },
+    {
+      "id": "broken-limb-tip-upper-edge",
+      "path": "M 421.85 507.20 C 423.60 503.95 426.75 506.70 430.25 510.20 C 435.10 514.70 440.30 520.60 444.65 526.05",
+      "stroke_width": 0.6,
+      "apply_by_default": false,
+      "source_evidence": "Small observed tip outline at the top of the broken left limb. Conditional repair only after overlay shows an omission."
+    }
+  ],
+  "inspection": {
+    "source_grids": [
+      "tmp/wildlife-v3/crown-detail-grid.png",
+      "tmp/wildlife-v3/upper-crown-nest-grid.png",
+      "tmp/wildlife-v3/upper-right-branches-grid.png",
+      "tmp/wildlife-v3/broken-limb-grid.png",
+      "tmp/wildlife-v3/mid-trunk-upper-grid.png"
+    ],
+    "status": "Measured on original native scan, then inspected as coloured semantic outlines and as translucent solid-wood fills over the source. Crown notches and broken-limb edges checked in enlarged crops.",
+    "overlays": [
+      "tmp/wildlife-v3/tree-upper-regions-source-check.png",
+      "tmp/wildlife-v3/tree-upper-whitebase-source-check.png",
+      "tmp/wildlife-v3/crown-whitebase-check.png",
+      "tmp/wildlife-v3/broken-limb-whitebase-check.png"
+    ]
+  },
+  "coverage_note": "These are semantic assignment masks, not a strict union to discard all unassigned tree ink. Preserve source tree ink outside named branch corridors in an unassigned/tree-detail fallback, after panel/text exclusions. White bases are a separate deliberately restricted set."
+}

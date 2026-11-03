@@ -28,6 +28,12 @@ export const SERIES = [
     posters: ['dont-drop-it', 'dont-gamble-with-fire']
   },
   {
+    id: 'forest-practices',
+    title: 'Ministry of Forests',
+    kind: 'Forest Practices Branch',
+    posters: ['wildlife-trees']
+  },
+  {
     id: 'bc-ferries',
     title: 'British Columbia Ferries',
     kind: 'Car decals',
@@ -37,7 +43,8 @@ export const SERIES = [
 
 /**
  * Every poster's catalogue card. `view` is the drawing's own viewBox; `page` is the export page in
- * inches. `when` is the short answer to when it was printed; its panels give the evidence.
+ * inches. `when` is the short answer to when it was printed; its panels give the evidence. A
+ * drawing too large to fetch on spec says `prefetch: false`, and is loaded only when opened.
  */
 export const POSTERS = {
   'coastal-forest': {
@@ -84,6 +91,16 @@ export const POSTERS = {
     view: { x: 0, y: 0, w: 1233, h: 1233 },
     page: { w: 12, h: 12 },
     background: null
+  },
+  'wildlife-trees': {
+    id: 'wildlife-trees',
+    series: 'forest-practices',
+    title: 'Wildlife Trees',
+    when: 'About 2001, from the artist’s mark',
+    view: { x: 0, y: 0, w: 1000, h: 2997.159090909091 },
+    page: { w: 11.44, h: 34.288 },
+    background: null,
+    prefetch: false
   },
   'go-bc-ferries': {
     id: 'go-bc-ferries',

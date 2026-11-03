@@ -1,0 +1,571 @@
+{
+  "artworks": [
+    {
+      "animal": "Red-tailed hawk",
+      "source": "Wildlife Trees.pdf supplied by user",
+      "method": "Manually reconstructed anatomical silhouette and feature regions; source ink fitted as editable variable-width cubic Bezier stroke envelopes. No invented hatching and no embedded raster.",
+      "source_crop_native_pixels": [
+        1098,
+        984
+      ],
+      "source_viewBox": [
+        0,
+        0,
+        395,
+        354
+      ],
+      "isolation_origin_in_source_viewBox": [
+        1.4754098360655732,
+        42.84756097560975
+      ],
+      "export_viewBox": [
+        0,
+        0,
+        375.8606557377049,
+        307.8780487804878
+      ],
+      "mask_source": "raptors-masks.json",
+      "ink_colour": "#326c59",
+      "native_stroke_fit_tolerance_pixels": 0.65,
+      "native_width_offset_pixels": 0.05,
+      "notes": [
+        "Animal-only SVG retains visible original ink. The diagonal gap is the area hidden by the original perch. Use the separate with-perch variant for the complete source composition."
+      ],
+      "crop_edges": [],
+      "hidden_regions": [
+        {
+          "id": "body-hidden-by-perch",
+          "status": "Unobserved beneath trunk; conservative bridge only; no texture inferred."
+        }
+      ],
+      "counts": {
+        "source_ink_pixels": 200344,
+        "medial_samples": 39694,
+        "original_stroke_chains": 4991,
+        "vector_stroke_paths": 5178
+      },
+      "file": "red-tailed-hawk.svg",
+      "regions": {
+        "tail-feathers": 1479,
+        "right-talons": 35,
+        "head-and-neck": 1982,
+        "beak": 39,
+        "folded-wing-and-back": 901,
+        "body": 61,
+        "breast-and-underwing": 640,
+        "eye": 41
+      },
+      "manual_contour_restorations": [
+        {
+          "id": "head-to-cere-outline",
+          "path": "M 362.92 76.48 C 362.98 78.43 365.13 78.86 365.69 80.44 L 366.08 81.70",
+          "stroke_width": 0.58,
+          "stroke_linecap": "round",
+          "stroke_linejoin": "round",
+          "fill": "none",
+          "source_evidence": "Faint observed outer contour from the final crown feather at (362.9,76.5), bending forward at (363.5,78.7) and meeting the cere arch at (366.1,81.7). Visible in original hawk-source.png; no unseen geometry reconstructed."
+        },
+        {
+          "id": "upper-beak-cere-arch",
+          "path": "M 360.55 84.04 C 361.58 81.82 363.58 81.40 365.80 81.47 C 368.53 81.38 370.34 86.79 370.45 91.64",
+          "stroke_width": 0.67,
+          "stroke_linecap": "round",
+          "stroke_linejoin": "round",
+          "fill": "none",
+          "source_evidence": "Observed thin arch around the pale upper-beak/cere area. Starts at source (360.6,84.0), arches through (363.6,81.4), then runs along the outer bill to (370.5,91.6), where it meets preserved dark beak ink. This continuous scan contour was only partially retained by the solid-ink threshold."
+        }
+      ]
+    },
+    {
+      "animal": "Great horned owl",
+      "source": "Wildlife Trees.pdf supplied by user",
+      "method": "Manually reconstructed anatomical silhouette and feature regions; source ink fitted as editable variable-width cubic Bezier stroke envelopes. No invented hatching and no embedded raster.",
+      "source_crop_native_pixels": [
+        961,
+        966
+      ],
+      "source_viewBox": [
+        0,
+        0,
+        346,
+        348
+      ],
+      "isolation_origin_in_source_viewBox": [
+        0.7606659729448495,
+        37.14906832298137
+      ],
+      "export_viewBox": [
+        0,
+        0,
+        341.23829344432886,
+        303.9627329192547
+      ],
+      "mask_source": "raptors-masks.json",
+      "ink_colour": "#326c59",
+      "native_stroke_fit_tolerance_pixels": 0.65,
+      "native_width_offset_pixels": 0.05,
+      "notes": [],
+      "crop_edges": [
+        {
+          "edge": "right",
+          "coordinate": 337,
+          "status": "Body continues beyond original image."
+        },
+        {
+          "edge": "bottom",
+          "coordinate": 336,
+          "status": "Body continues below original image; panel rule removed."
+        }
+      ],
+      "hidden_regions": [],
+      "counts": {
+        "source_ink_pixels": 352459,
+        "medial_samples": 62412,
+        "original_stroke_chains": 7011,
+        "vector_stroke_paths": 7660
+      },
+      "file": "great-horned-owl.svg",
+      "regions": {
+        "right-shoulder": 2447,
+        "body-and-breast": 861,
+        "left-facial-disc": 536,
+        "forehead-and-ear-tufts": 1235,
+        "right-facial-disc": 1457,
+        "left-shoulder": 258,
+        "neck-ruff": 451,
+        "left-eye": 152,
+        "beak": 103,
+        "right-eye": 160
+      }
+    },
+    {
+      "animal": "Northern flying squirrel",
+      "source": "Wildlife Trees.pdf supplied by user",
+      "method": "Manually reconstructed anatomical silhouette and feature regions; source ink fitted as editable variable-width cubic Bezier stroke envelopes. No invented hatching and no embedded raster.",
+      "source_crop_native_pixels": [
+        965,
+        961
+      ],
+      "source_viewBox": [
+        0,
+        0,
+        348,
+        346
+      ],
+      "isolation_origin_in_source_viewBox": [
+        2.2124352331606225,
+        38.56503642039542
+      ],
+      "export_viewBox": [
+        0,
+        0,
+        343.57512953367876,
+        274.63059313215405
+      ],
+      "mask_source": "small-animals-masks.json",
+      "ink_colour": "#326c59",
+      "native_stroke_fit_tolerance_pixels": 0.65,
+      "native_width_offset_pixels": 0.05,
+      "notes": [
+        "Visible animal only. The actual tail exits the left crop; the large white area below the animal is background and is intentionally excluded.",
+        "Keep the rear and front paw outlines where they meet the trunk. The source panel frame occupies about x341.5; the right-hand crop at x340.7 excludes that printed frame without inventing hidden fingertip continuations. The left tail crop starts at x7.2, immediately inside the left frame.",
+        "No reconstruction of hidden anatomy. Forepaw and hind-foot contact limits are selected conservatively from original ink; inspect these areas closely after fitting.",
+        "Boundary review added a small source-paper margin around back and tail fur, so source stroke fitting can retain projecting original hairs instead of following the smooth selection boundary.",
+        "Final fitted-ink review widened only the jaw and rear-ear boundary into clean source paper to preserve faint original contour lines. No replacement contour is invented."
+      ],
+      "crop_edges": [],
+      "hidden_regions": [],
+      "counts": {
+        "source_ink_pixels": 131838,
+        "medial_samples": 32564,
+        "original_stroke_chains": 3528,
+        "vector_stroke_paths": 3970
+      },
+      "file": "northern-flying-squirrel.svg",
+      "regions": {
+        "head-and-muzzle": 303,
+        "back-and-body": 1788,
+        "tail-cropped-at-left-edge": 411,
+        "gliding-membrane": 180,
+        "haunch-and-near-hind-leg": 343,
+        "near-foreleg": 359,
+        "residual-original-ink": 188,
+        "near-front-paw": 84,
+        "rear-ear": 35,
+        "far-foreleg": 108,
+        "near-hind-foot": 37,
+        "far-hind-foot": 30,
+        "far-front-paw": 36,
+        "front-ear": 31,
+        "eye": 37
+      },
+      "manual_contour_restorations": [
+        {
+          "id": "faint-rear-ear-rim-join",
+          "path": "M 237.92 45.35 C 238.38 45.52 238.75 46.22 239.24 46.63 L 240.12 47.18",
+          "stroke_width": 0.58,
+          "stroke_linecap": "round",
+          "stroke_linejoin": "round",
+          "fill": "none",
+          "reason": "A 2.7-unit faint original rear-ear rim segment remains below the fitted ink threshold after the mask was widened. The source rim is visible between the retained left apex and retained descending right edge. This short measured curve joins only those original observed marks; it does not extrapolate hidden anatomy.",
+          "source_evidence": "Measured in reference/squirrel-source.png. Original ink minima follow approximately (237.5,45.37), (238.0,45.37), (238.5,45.37), (239.0,46.81), (239.5,46.81), (240.0,47.17). The geometry follows the blurred source line between retained stroke ends. Evidence: squirrel-ear-grid.png and squirrel-ear-final-check.png."
+        }
+      ]
+    },
+    {
+      "animal": "Black-capped chickadee",
+      "source": "Wildlife Trees.pdf supplied by user",
+      "method": "Manually reconstructed anatomical silhouette and feature regions; source ink fitted as editable variable-width cubic Bezier stroke envelopes. No invented hatching and no embedded raster.",
+      "source_crop_native_pixels": [
+        979,
+        984
+      ],
+      "source_viewBox": [
+        0,
+        0,
+        352,
+        355
+      ],
+      "isolation_origin_in_source_viewBox": [
+        60.078651685393254,
+        16.285569105691057
+      ],
+      "export_viewBox": [
+        0,
+        0,
+        267.438202247191,
+        297.17479674796743
+      ],
+      "mask_source": "small-animals-masks.json",
+      "ink_colour": "#326c59",
+      "native_stroke_fit_tolerance_pixels": 0.65,
+      "native_width_offset_pixels": 0.05,
+      "notes": [
+        "The two diagonal outlined appendages end in gripping digits against the trunk. Retain these source shapes as the two visible legs/feet, rather than deleting them as perches.",
+        "The tiny attached feature beneath the beak is retained as original detail without assigning it a new anatomical interpretation.",
+        "No frame, trunk, cavity, or lower/upper background branches are retained; no new hidden anatomy or toe geometry is invented.",
+        "Final fitted-ink review widened the lower-right tail selection to retain the second original outer feather contour. The tail has multiple drawn tips; it is not reduced to one pointed triangle."
+      ],
+      "crop_edges": [],
+      "hidden_regions": [],
+      "counts": {
+        "source_ink_pixels": 86456,
+        "medial_samples": 16825,
+        "original_stroke_chains": 1955,
+        "vector_stroke_paths": 2124
+      },
+      "file": "black-capped-chickadee.svg",
+      "regions": {
+        "breast-and-flank": 522,
+        "upper-leg-and-gripping-foot": 216,
+        "folded-wing": 705,
+        "lower-leg-and-gripping-foot": 144,
+        "tail-feathers": 166,
+        "head-and-cheek": 62,
+        "residual-original-ink": 38,
+        "cap": 105,
+        "eye": 38,
+        "black-bib": 61,
+        "beak-and-attached-original-detail": 67
+      }
+    },
+    {
+      "animal": "Black bear",
+      "source": "Wildlife Trees.pdf supplied by user",
+      "method": "Manually reconstructed anatomical silhouette and feature regions; source ink fitted as editable variable-width cubic Bezier stroke envelopes. No invented hatching and no embedded raster.",
+      "source_crop_native_pixels": [
+        1199,
+        1217
+      ],
+      "source_viewBox": [
+        0,
+        0,
+        432,
+        438
+      ],
+      "isolation_origin_in_source_viewBox": [
+        4.007506255212677,
+        8.676253081347575
+      ],
+      "export_viewBox": [
+        0,
+        0,
+        423.9849874895747,
+        415.2489728841413
+      ],
+      "mask_source": "bear-toad-masks.json",
+      "ink_colour": "#326c59",
+      "native_stroke_fit_tolerance_pixels": 0.65,
+      "native_width_offset_pixels": 0.05,
+      "notes": [
+        "Keep original cropped head and neck; no full body is inferred.",
+        "The left/bottom limits are inside the printed frame at x=9 and y=419.",
+        "Regions are ordered from specific anatomy to the residual neck/mane; use first match.",
+        "A pale horizontal seam near working y=396 is also present in the full native scan; do not classify it as vectorisation damage. No restoration of this seam has been made."
+      ],
+      "crop_edges": [],
+      "hidden_regions": [],
+      "counts": {
+        "source_ink_pixels": 456727,
+        "medial_samples": 73736,
+        "original_stroke_chains": 6176,
+        "vector_stroke_paths": 6489
+      },
+      "file": "black-bear.svg",
+      "regions": {
+        "head-and-brow": 1500,
+        "neck-and-mane": 4217,
+        "far-ear": 192,
+        "muzzle-and-lips": 276,
+        "eye": 86,
+        "nose": 66,
+        "near-ear": 152
+      },
+      "manual_solid_ink_repairs": [
+        {
+          "schema_version": 1,
+          "key": "bear",
+          "slug": "black-bear",
+          "coordinate_system": {
+            "viewBox": [
+              0,
+              0,
+              432,
+              438
+            ],
+            "native_pixels": [
+              1199,
+              1217
+            ]
+          },
+          "scope": "Upper solid core of near ear only; lower ear and neighboring head hatches remain from source-fitted vectors.",
+          "erase_path": "M130.6 53.5 C138.0 53.7 145.0 57.0 150.0 60.2 C156.2 64.6 161.7 69.8 166.6 75.5 L165.0 80.2 L158.1 81.6 L149.5 76.9 L141.2 72.7 L133.6 68.6 Z",
+          "fill_paths": [
+            {
+              "id": "near-ear-upper-solid-core",
+              "path": "M130.6 55.2 L132.4 54.8 L134.3 55.5 L135.4 56.2 L137.6 56.3 C142.0 57.5 147.2 60.8 151.7 64.6 C155.0 67.6 158.7 71.7 162.1 74.4 L165.6 76.3 L166.2 81.1 L158.0 82.4 L149.1 77.7 L140.6 73.5 L132.8 69.1 Z",
+              "fill": "#326c59"
+            }
+          ],
+          "white_strokes": [
+            {
+              "id": "source-ear-fleck-upper",
+              "path": "M138.1 59.6 Q139.3 60.7 140.7 61.5",
+              "stroke_width": 0.55
+            },
+            {
+              "id": "source-ear-fleck-left",
+              "path": "M129.0 63.4 Q130.6 65.0 132.8 67.0",
+              "stroke_width": 0.58
+            },
+            {
+              "id": "source-ear-fleck-central",
+              "path": "M133.9 64.8 Q135.9 66.3 138.5 68.1",
+              "stroke_width": 0.55
+            },
+            {
+              "id": "source-ear-fleck-right",
+              "path": "M149.4 64.4 Q150.5 64.9 151.8 65.9",
+              "stroke_width": 0.56
+            },
+            {
+              "id": "source-ear-fleck-small",
+              "path": "M146.5 66.6 L147.3 67.3",
+              "stroke_width": 0.66
+            }
+          ],
+          "white_paths": [],
+          "provenance": {
+            "source": "Original Wildlife Trees.pdf, native scan crop bear-source.png",
+            "reason": "The near-ear upper core is solid ink in the source, but the medial-axis vector reconstruction introduced a false triangular notch and regular comb-shaped boundary near x138–160,y58–75. The repair replaces only that small mass with a manually measured anatomical edge and restores five individually observed pale flecks. No synthetic or random hatching.",
+            "evidence": [
+              "proofs/details/bear-ear-source-large.png",
+              "proofs/details/bear-ear-source-fine-grid.png",
+              "proofs/details/bear-ear-vector-fine-grid.png"
+            ],
+            "scan_damage_note": "The horizontal pale seam at bear working y≈396 is present in the native scan and is deliberately not changed."
+          },
+          "layer_order": "Erase the patch from existing ink, insert dark fill, then white source flecks. Keep this repair as a separate editable group."
+        }
+      ]
+    },
+    {
+      "animal": "Northwestern toad",
+      "source": "Wildlife Trees.pdf supplied by user",
+      "method": "Manually reconstructed anatomical silhouette and feature regions; source ink fitted as editable variable-width cubic Bezier stroke envelopes. No invented hatching and no embedded raster.",
+      "source_crop_native_pixels": [
+        1034,
+        970
+      ],
+      "source_viewBox": [
+        0,
+        0,
+        372.36622583926754,
+        350
+      ],
+      "isolation_origin_in_source_viewBox": [
+        -2.119023397761953,
+        82.31958762886597
+      ],
+      "export_viewBox": [
+        0,
+        0,
+        368.3214649033571,
+        266.1855670103093
+      ],
+      "mask_source": "bear-toad-masks.json",
+      "ink_colour": "#326c59",
+      "native_stroke_fit_tolerance_pixels": 0.65,
+      "native_width_offset_pixels": 0.05,
+      "notes": [
+        "Silhouette is the nonzero union of four clockwise anatomical components.",
+        "All source-visible toes are retained. The original source crop was expanded 51 native pixels left to recover the outer folded hind leg and leftward toe.",
+        "The broad cast shadow below the abdomen is excluded. The curved underside at y≈231–240 is the interpreted skin/shadow boundary.",
+        "The three extended toe tips on the right forefoot and long outer toe of the nearer foot are included.",
+        "Regions are ordered from specific anatomy to residual head/body; use first match.",
+        "The two leftmost toe contour strokes terminate openly in the original print. The mask retains both; it does not invent ink connecting those endpoints."
+      ],
+      "crop_edges": [],
+      "hidden_regions": [],
+      "counts": {
+        "source_ink_pixels": 219149,
+        "medial_samples": 49619,
+        "original_stroke_chains": 6561,
+        "vector_stroke_paths": 7033
+      },
+      "file": "northwestern-toad.svg",
+      "regions": {
+        "folded-hind-leg-and-toes": 1324,
+        "back-and-body": 2270,
+        "far-foreleg-and-toes": 854,
+        "head": 290,
+        "near-eye": 292,
+        "tympanum": 192,
+        "muzzle-and-throat": 304,
+        "near-foreleg-and-toes": 1307,
+        "far-eye": 199,
+        "residual-original-ink": 1
+      },
+      "manual_solid_ink_repairs": [
+        {
+          "schema_version": 1,
+          "key": "toad",
+          "slug": "northwestern-toad",
+          "coordinate_system": {
+            "viewBox": [
+              0,
+              0,
+              372.36622583926754,
+              350
+            ],
+            "native_pixels": [
+              1034,
+              970
+            ],
+            "working_translation_x_from_old_crop": 18.36622583926755
+          },
+          "scope": "Near-eye pupil only. Iris, eyelids and surrounding skin remain from source-fitted vectors.",
+          "erase_path": "M266.06622583926753 155.9C270.56622583926753 155.9 273.56622583926753 159.2 273.36622583926754 163.5C273.36622583926754 167.5 270.46622583926757 170.1 266.2662258392676 170.3C261.7662258392676 170.0 258.2662258392676 167.2 258.66622583926755 163.1C258.96622583926757 158.9 261.7662258392676 155.9 266.06622583926753 155.9Z",
+          "fill_paths": [
+            {
+              "id": "source-measured-round-pupil",
+              "path": "M265.7662258392676 157.0C268.46622583926757 156.9 270.2662258392676 158.1 271.56622583926753 159.5C272.66622583926755 161.3 272.56622583926753 163.8 271.96622583926757 165.7C270.96622583926757 168.0 268.46622583926757 169.0 266.06622583926753 169.0C263.46622583926757 169.0 261.06622583926753 167.3 260.2662258392676 165.2C259.36622583926754 163.4 259.56622583926753 161.4 260.7662258392676 160.0C261.7662258392676 158.1 263.66622583926755 157.0 265.7662258392676 157.0Z",
+              "fill": "#326c59"
+            }
+          ],
+          "white_strokes": [
+            {
+              "id": "observed-pupil-highlight",
+              "path": "M263.36622583926754 163.5C263.7662258392676 164.2 264.2662258392676 164.7 265.06622583926753 165.0",
+              "stroke_width": 0.6
+            }
+          ],
+          "white_paths": [],
+          "provenance": {
+            "source": "Original Wildlife Trees.pdf, expanded native toad-source.png crop",
+            "reason": "The source has a compact near-round pupil centered near old working (247.7,163.1), bounded approximately x241–254 and y157–169. The stroke fit distorted this solid component into a lobed shape. This manually measured cubic boundary restores that observed solid shape and its one clear diagonal pale highlight; no anatomy or texture is invented.",
+            "evidence": [
+              "proofs/details/toad-pupil-exact-grid.png",
+              "proofs/details/toad-eye-vector-review.png"
+            ]
+          },
+          "layer_order": "Cut erase_path out of fitted ink, insert measured pupil fill, and subtract white highlight stroke as a true vector cutout."
+        }
+      ]
+    },
+    {
+      "animal": "Red-tailed hawk with original perch",
+      "source": "Wildlife Trees.pdf supplied by user",
+      "method": "Manually reconstructed anatomical silhouette and feature regions; source ink fitted as editable variable-width cubic Bezier stroke envelopes. No invented hatching and no embedded raster.",
+      "source_crop_native_pixels": [
+        1098,
+        984
+      ],
+      "source_viewBox": [
+        0,
+        0,
+        395,
+        354
+      ],
+      "isolation_origin_in_source_viewBox": [
+        1.4754098360655732,
+        10.109756097560975
+      ],
+      "export_viewBox": [
+        0,
+        0,
+        375.8606557377049,
+        340.6158536585366
+      ],
+      "mask_source": "raptors-masks.json",
+      "ink_colour": "#326c59",
+      "native_stroke_fit_tolerance_pixels": 0.65,
+      "native_width_offset_pixels": 0.05,
+      "notes": [
+        "Animal-only SVG retains visible original ink. The diagonal gap is the area hidden by the original perch. Use the separate with-perch variant for the complete source composition."
+      ],
+      "crop_edges": [],
+      "hidden_regions": [
+        {
+          "id": "body-hidden-by-perch",
+          "status": "Unobserved beneath trunk; conservative bridge only; no texture inferred."
+        }
+      ],
+      "counts": {
+        "source_ink_pixels": 200344,
+        "medial_samples": 39694,
+        "original_stroke_chains": 4991,
+        "vector_stroke_paths": 5178
+      },
+      "perch_vector_counts": {
+        "source_ink_pixels": 116631,
+        "medial_samples": 18993,
+        "original_stroke_chains": 2088,
+        "vector_stroke_paths": 2162
+      },
+      "variant": "Original perch retained on separate editable context layers. No hidden animal anatomy invented.",
+      "file": "red-tailed-hawk-with-perch.svg",
+      "manual_contour_restorations": [
+        {
+          "id": "head-to-cere-outline",
+          "path": "M 362.92 76.48 C 362.98 78.43 365.13 78.86 365.69 80.44 L 366.08 81.70",
+          "stroke_width": 0.58,
+          "stroke_linecap": "round",
+          "stroke_linejoin": "round",
+          "fill": "none",
+          "source_evidence": "Faint observed outer contour from the final crown feather at (362.9,76.5), bending forward at (363.5,78.7) and meeting the cere arch at (366.1,81.7). Visible in original hawk-source.png; no unseen geometry reconstructed."
+        },
+        {
+          "id": "upper-beak-cere-arch",
+          "path": "M 360.55 84.04 C 361.58 81.82 363.58 81.40 365.80 81.47 C 368.53 81.38 370.34 86.79 370.45 91.64",
+          "stroke_width": 0.67,
+          "stroke_linecap": "round",
+          "stroke_linejoin": "round",
+          "fill": "none",
+          "source_evidence": "Observed thin arch around the pale upper-beak/cere area. Starts at source (360.6,84.0), arches through (363.6,81.4), then runs along the outer bill to (370.5,91.6), where it meets preserved dark beak ink. This continuous scan contour was only partially retained by the solid-ink threshold."
+        }
+      ]
+    }
+  ],
+  "method": "Manual anatomical construction plus source-guided vector stroke reconstruction. See README.md and restoration JSON for limits."
+}

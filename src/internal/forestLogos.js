@@ -16,8 +16,8 @@ const atlasPhoto = (id, title, file) => ({
   url: `https://drive.google.com/file/d/${file}/view`
 })
 
-// The posters that carry the evergreen emblem, as places in the Posters view.
-const onPoster = (poster, title, note) => ({ title, note, to: { view: 'posters', poster, part: 'emblem' } })
+// The posters that carry a design, as places in the Posters view: each opens at the design.
+const onPoster = (poster, title, note, part = 'emblem') => ({ title, note, to: { view: 'posters', poster, part } })
 
 export const FOREST_LOGOS = [
   {
@@ -119,7 +119,11 @@ export const FOREST_LOGOS = [
     evidence: 'Adoption date unverified',
     comments: [
       '“FOREST SERVICE” and “BRITISH COLUMBIA” frame a single conifer and mountain landscape. Diamond separators and heavier lettering distinguish this design from the two wildlife ovals.',
-      'Forest Oval retains a supplied vector reference for this tree oval. PofBC’s BCTS research also records a related round Forest Service tree badge on archived sites from 2005 to 2017. That related badge does not establish the introduction or retirement of this exact oval.'
+      'Forest Oval retains a supplied vector reference for this tree oval. PofBC’s BCTS research also records a related round Forest Service tree badge on archived sites from 2005 to 2017. That related badge does not establish the introduction or retirement of this exact oval.',
+      'It is printed, in one green beside the Ministry of Forests’ arms signature, on the Forest Practices Branch’s Wildlife Trees poster, whose artist’s mark reads “d.g.01”. That places the oval in use in about 2001; it does not date when it was introduced.'
+    ],
+    seenOn: [
+      onPoster('wildlife-trees', 'Wildlife Trees', 'Forest Practices Branch poster, about 2001 · bottom right, beside the ministry’s signature', 'oval')
     ],
     sources: [
       forestOval,

@@ -7,6 +7,7 @@ import { readFileSync } from 'node:fs'
 import { POSTERS, SERIES, neighbours, posterIds, seriesOf } from './catalogue.js'
 import { FOREST_SERVICE_POSTERS } from './forest-service/posters.js'
 import { BC_FERRIES_POSTERS } from './bc-ferries/posters.js'
+import { WILDLIFE_TREES } from './wildlife-trees/posters.js'
 import { GALLERY_COLLECTIONS } from '../gallery/collections.js'
 import { ORDER as COASTAL_ORDER, PARTS as COASTAL_PARTS, REGIONS as COASTAL_REGIONS } from './coastal-forest/parts.js'
 import { FOREST_LOGOS } from '../internal/forestLogos.js'
@@ -19,7 +20,8 @@ const DRAWINGS = {
   'reward-living-forest': read('./forest-service/reward-living-forest.svg'),
   'enjoy-protect-forests': read('./forest-service/enjoy-protect-forests.svg'),
   'go-bc-ferries': read('./bc-ferries/go-bc-ferries.svg'),
-  'queen-of-sidney': read('./bc-ferries/queen-of-sidney.svg')
+  'queen-of-sidney': read('./bc-ferries/queen-of-sidney.svg'),
+  'wildlife-trees': read('./wildlife-trees/wildlife-trees.svg')
 }
 const GOVERNMENT = read('../government/historyData.js')
 
@@ -28,8 +30,11 @@ const GOVERNMENT = read('../government/historyData.js')
 const DEFINITIONS = {
   'coastal-forest': { parts: COASTAL_PARTS, order: COASTAL_ORDER, regions: COASTAL_REGIONS.map(({ id }) => id) },
   ...FOREST_SERVICE_POSTERS,
-  ...BC_FERRIES_POSTERS
+  ...BC_FERRIES_POSTERS,
+  'wildlife-trees': WILDLIFE_TREES
 }
+// The posters whose panels are data.
+const DATA_POSTERS = { ...FOREST_SERVICE_POSTERS, ...BC_FERRIES_POSTERS, 'wildlife-trees': WILDLIFE_TREES }
 
 const idsIn = (selector) => [...selector.matchAll(/#([\w-]+)/g)].map((m) => m[1])
 const hasId = (svg, id) => svg.includes(`id="${id}"`)
@@ -74,9 +79,15 @@ test('every part sits on its drawing, and names layers the drawing has', () => {
     assert.deepEqual([...regions].sort(), order.filter((part) => part !== 'overview').sort(), `${id}: every part but the overview is a hotspot`)
     for (const partId of order) {
       const part = parts[partId]
-      const { x, y, w, h } = part.box
-      assert.ok(w > 0 && h > 0, `${id}/${partId}: empty box`)
-      assert.ok(x >= view.x - 1 && y >= view.y - 1 && x + w <= view.x + view.w + 1 && y + h <= view.y + view.h + 1, `${id}/${partId}: box off the drawing`)
+      for (const { x, y, w, h } of [part.box, ...(part.boxes ?? [])]) {
+        assert.ok(w > 0 && h > 0, `${id}/${partId}: empty box`)
+        assert.ok(x >= view.x - 1 && y >= view.y - 1 && x + w <= view.x + view.w + 1 && y + h <= view.y + view.h + 1, `${id}/${partId}: box off the drawing`)
+      }
+      // A part found by several boxes is framed by one that holds them all.
+      for (const { x, y, w, h } of part.boxes ?? []) {
+        const { box } = part
+        assert.ok(x >= box.x - 1 && y >= box.y - 1 && x + w <= box.x + box.w + 1 && y + h <= box.y + box.h + 1, `${id}/${partId}: a hotspot outside the part's frame`)
+      }
       if (partId === 'overview') continue
       assert.ok(part.label && part.hint, `${id}/${partId}: label and hint`)
       assert.ok(part.layer, `${id}/${partId}: no layer to spotlight`)
@@ -88,7 +99,7 @@ test('every part sits on its drawing, and names layers the drawing has', () => {
 test('the data panels say something, and every link lands somewhere that exists', () => {
   const internal = new Set(FOREST_LOGOS.map(({ id }) => id))
   const galleries = new Set(GALLERY_COLLECTIONS.map(({ id }) => id))
-  for (const [id, { parts }] of Object.entries({ ...FOREST_SERVICE_POSTERS, ...BC_FERRIES_POSTERS })) {
+  for (const [id, { parts }] of Object.entries(DATA_POSTERS)) {
     for (const [partId, { panel }] of Object.entries(parts)) {
       assert.ok(panel?.eyebrow && panel.heading && panel.lede, `${id}/${partId}: panel`)
       for (const block of panel.blocks ?? []) {
@@ -122,6 +133,34 @@ test('the evergreen emblem and the posters that carry it point at each other', (
   const withEmblem = Object.entries(FOREST_SERVICE_POSTERS).filter(([, { parts }]) => parts.emblem).map(([id]) => id).sort()
   assert.deepEqual(carriers, withEmblem)
   for (const id of carriers) assert.ok(hasId(DRAWINGS[id], 'forest-service-emblem'), `${id} draws no emblem`)
+})
+
+test('the Forest Service tree oval and Wildlife Trees point at each other', () => {
+  const oval = FOREST_LOGOS.find(({ id }) => id === 'forest-service')
+  assert.deepEqual(oval.seenOn.map(({ to }) => [to.poster, to.part]), [['wildlife-trees', 'oval']])
+  const links = WILDLIFE_TREES.parts.oval.panel.blocks.flatMap((block) => block.links ?? [])
+  assert.ok(links.some(({ to }) => to.view === 'internal' && to['internal-logo'] === 'forest-service'), 'the oval does not link to its logo')
+  assert.ok(hasId(DRAWINGS['wildlife-trees'], 'forest-service-mark'))
+})
+
+test('a story tells every part of its poster, in order, with something to say', () => {
+  for (const [id, { parts, order }] of Object.entries(DEFINITIONS)) {
+    const told = order.filter((partId) => parts[partId].story)
+    if (!told.length) continue
+    assert.deepEqual(told, order, `${id}: a story leaves out a part`)
+    for (const partId of told) {
+      const { story } = parts[partId]
+      assert.ok(Array.isArray(story) && story.length && story.every((p) => typeof p === 'string' && p.length > 20), `${id}/${partId}: story`)
+    }
+  }
+})
+
+test('the Wildlife Trees copy is light enough to draw: few paths, no editor notes', () => {
+  const svg = DRAWINGS['wildlife-trees']
+  assert.ok(svg.length < 16e6, `the drawing is ${(svg.length / 1e6).toFixed(1)} MB`)
+  assert.ok((svg.match(/<path\b/g) ?? []).length < 2500, 'more paths than the joined copy has')
+  assert.ok(!/<(?:title|desc|metadata)>/.test(svg.slice(svg.indexOf('</desc>') + 7, svg.lastIndexOf('<metadata>'))), 'editor notes left inside the drawing')
+  assert.ok(!svg.includes('inkscape:'), 'editor attributes left in')
 })
 
 test('the two fire-prevention badges share one green', () => {

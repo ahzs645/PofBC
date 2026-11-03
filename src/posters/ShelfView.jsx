@@ -47,6 +47,7 @@ export const ShelfView = ({ view, param, title, intro, noun, series, itemsOf, it
     else url.searchParams.delete(param)
     if (id && part && part !== 'overview') url.searchParams.set('part', part)
     else url.searchParams.delete('part')
+    if (!id) url.searchParams.delete('story')
     globalThis.history.replaceState(null, '', url)
   }, [view, param])
 
@@ -62,7 +63,8 @@ export const ShelfView = ({ view, param, title, intro, noun, series, itemsOf, it
         if (gone) return
         setModule({ id: place.id, ...loaded })
         const at = order.indexOf(place.id)
-        for (const id of [order[at - 1], order[at + 1]]) if (id) loaders[id]().catch(() => {})
+        // A heavy drawing (`prefetch: false` in its card) is left until it is asked for.
+        for (const id of [order[at - 1], order[at + 1]]) if (id && items[id].prefetch !== false) loaders[id]().catch(() => {})
       })
       .catch((error) => { console.error(error); if (!gone) setFailed(true) })
     return () => { gone = true }

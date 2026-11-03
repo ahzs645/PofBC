@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "key": "hawk",
+  "slug": "red-tailed-hawk",
+  "coordinate_system": {
+    "viewBox": [
+      0,
+      0,
+      395,
+      354
+    ],
+    "native_pixels": [
+      1098,
+      984
+    ],
+    "stroke_width_units": "SVG viewBox units; multiply by about 2.78 for native pixels."
+  },
+  "restorations": [
+    {
+      "id": "head-to-cere-outline",
+      "path": "M 362.92 76.48 C 362.98 78.43 365.13 78.86 365.69 80.44 L 366.08 81.70",
+      "stroke_width": 0.58,
+      "stroke_linecap": "round",
+      "stroke_linejoin": "round",
+      "fill": "none",
+      "source_evidence": "Faint observed outer contour from the final crown feather at (362.9,76.5), bending forward at (363.5,78.7) and meeting the cere arch at (366.1,81.7). Visible in original hawk-source.png; no unseen geometry reconstructed."
+    },
+    {
+      "id": "upper-beak-cere-arch",
+      "path": "M 360.55 84.04 C 361.58 81.82 363.58 81.40 365.80 81.47 C 368.53 81.38 370.34 86.79 370.45 91.64",
+      "stroke_width": 0.67,
+      "stroke_linecap": "round",
+      "stroke_linejoin": "round",
+      "fill": "none",
+      "source_evidence": "Observed thin arch around the pale upper-beak/cere area. Starts at source (360.6,84.0), arches through (363.6,81.4), then runs along the outer bill to (370.5,91.6), where it meets preserved dark beak ink. This continuous scan contour was only partially retained by the solid-ink threshold."
+    }
+  ],
+  "source": "Original supplied Wildlife Trees.pdf, high-resolution crop reference/hawk-source.png.",
+  "method": "Two manually measured cubic centerline restorations, based only on visible faint source contours. They do not modify the threshold mask or invent texture.",
+  "evidence_grid": "proofs/details/hawk-beak-measurement-grid.png",
+  "layer_order": "Apply above source-fitted ink in both hawk variants; clip only to overall original crop, not to the thresholded-ink mask."
+}

@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "key": "hawk",
+  "width": 395,
+  "height": 354,
+  "source_native_pixels": [
+    1098,
+    984
+  ],
+  "context_regions": [
+    {
+      "id": "diagonal-foreground-perch",
+      "path": "M 88.3 15.1 L 150.3 15.1 C 150.6 35 151.1 55 154.0 73 C 157 88 164 103 173 120 C 180 137 189 156 199 176 C 208 197 218 216 230 237 C 238 248 248 258 257 269 C 266 288 274 307 284 323 C 289 330 294 336 299 340.8 L 240.2 340.8 C 231.5 328.8 222.5 314.5 216 302 C 204 278 193 256 183 234 C 172 211 160 188 149 164 C 138 141 128 117 118 93 C 107 67 97 41 88.3 15.1 Z",
+      "status": "Observed wood only. Ends stop inside the source top and bottom panel rules; continuation below the frame is excluded."
+    },
+    {
+      "id": "upper-left-supporting-side-branch",
+      "path": "M 40.9 36.5 L 48 41 L 51 44 L 56 45 L 59 49 L 65 51 L 68 54 L 72 55 L 74 58 L 80 61 L 85 63 L 89 67 L 94 67 L 98 70 L 103 70 L 108 73 L 113 74 L 119 77 L 126 78 L 136 93 L 129 96 C 117 93 104 88 94 84 C 77 77 61 70 48 67 L 40.9 66.1 Z",
+      "status": "Observed side branch attached to the diagonal perch. Left end stops inside the source panel rule."
+    },
+    {
+      "id": "upper-branch-hanging-lichen",
+      "path": "M 47 63 C 64 68 82 77 97 83 L 110 87 L 112 100 L 110 113 L 107 114 L 104 110 L 100 113 L 97 110 L 94 115 L 90 113 L 91 120 L 90 127 L 86 129 L 83 126 L 82 120 L 81 127 L 78 129 L 76 124 L 77 115 L 73 112 L 73 116 L 69 113 L 68 108 L 64 105 L 62 108 L 60 104 L 61 101 L 57 100 L 58 104 L 54 105 L 53 99 L 51 95 L 51 91 L 49 95 L 47 89 L 45 86 Z",
+      "status": "Only source ink in this mask is retained. Attached lichen included in contextual version, not treated as bird plumage."
+    },
+    {
+      "id": "lower-supporting-twig-grip-and-lichen",
+      "path": "M 187 282 L 190 279 L 193 282 L 196 281 L 200 285 L 206 287 C 212 290 221 294 234 300 L 236 310 L 224 310 L 219 307 L 218 319 L 215 327 L 214 331 L 211 329 L 210 320 L 210 336 L 207 338 L 205 334 L 205 322 L 203 318 L 203 334 L 200 335 L 198 327 L 197 314 L 194 317 L 192 310 L 192 300 L 188 295 L 188 291 L 186 288 L 188 286 L 186 284 Z",
+      "status": "Original supporting twig and hanging growth, including the visually ambiguous wrapping/grip form. Retained only in with-perch context; no claim that all of these marks are talons."
+    }
+  ],
+  "assembly_note": "Union these observed context masks with the source-visible animal mask for with-perch artwork. For separate semantic layers, subtract the animal-visible mask from context first so source ink is not duplicated. Do not add the source panel rules or the scenery at far right/below the panel."
+}

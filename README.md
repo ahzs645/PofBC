@@ -740,13 +740,29 @@ kept in the address — `?view=posters&poster=dont-drop-it&part=credit` — so a
 | Ministry of Environment | **Coastal Forest** (1979–86), with its live crest-lockup studio |
 | British Columbia Forest Service | **REWARD — A Living Forest**, **Enjoy & Protect our Forests** |
 | B. C. Forest Service fire-prevention badges | **DON’T DROP IT!**, **Don’t gamble with FIRE** (set in the first one’s green) |
+| Ministry of Forests, Forest Practices Branch | **Wildlife Trees** (about 2001, from the artist’s mark), told as a story too |
 | British Columbia Ferries car decals | **GO B.C. FERRIES** (1960–64, from its Toll Authority wording), **Queen of Sidney** |
 
 The panels link on: the emblem on either Forest Service poster opens the evergreen emblem in
 Internal Logos (which links back), a service credit opens the department the Forest Service sat in on
 the government diagram, a decal's authority opens the Toll Authority or the Ferry Authority there and its
-flag BC Ferries' marks in Logos, and each poster links to the others in its series. Every claim that is not
-established — a date, a typeface, an ink — is said to be so.
+flag BC Ferries' marks in Logos, and each poster links to the others in its series. Wildlife Trees' tree oval
+opens the Forest Service tree oval in Internal Logos (which lists the poster under *On the posters*), and its
+arms signature opens the Ministry of Forests in 2001 on the government diagram, with its lockup. Every claim
+that is not established — a date, a typeface, an ink — is said to be so.
+
+**Story mode.** A poster whose parts each carry a `story` (a list of paragraphs) gets a **Story** button
+(and `S`): the panel becomes one scrolling column of chapters, one per part, and the drawing follows the
+reading, gliding onto each part and lighting it as its chapter reaches the reading line. Stepping any other
+way (the dock, the arrow keys, a click on the drawing, the tour) scrolls the column to match. It is kept in
+the address as `&story=1`. Wildlife Trees is the first, read as it is drawn: from the broken top of the tree,
+past the six animals, to the roots, then down the copy to the two marks.
+
+**Wildlife Trees** is the largest drawing on the site, so it is handled differently: a lighter copy of its
+45 MB master (14.8 MB, 1,960 paths, about 4.5 MB compressed; see
+[`artwork/posters/wildlife-trees/`](artwork/posters/wildlife-trees/README.md)), fetched as a file rather than
+built into a script, never fetched ahead of being opened (`prefetch: false` in its catalogue card), and a
+small JPEG for its card.
 
 **Coastal Forest** was its own app, [coastal-forest-poster](https://github.com/ahzs645/coastal-forest-poster),
 and imported this repository's renderer through an alias; it now lives here, importing the same
@@ -756,7 +772,7 @@ modules directly.
 an entry in `src/posters/catalogue.js`, and a loader in `PostersView.jsx`. A part is a box in the
 drawing's own units, a `layer` selector to spotlight, and a panel. Panels can be data —
 `src/posters/forest-service/posters.js` writes every part as paragraphs, facts, palettes, notes and
-links — or components, as the coastal poster's are, through a `useExtras` hook that can also take over
+links (and, optionally, a `story` for story mode) — or components, as the coastal poster's are, through a `useExtras` hook that can also take over
 the frame and the export targets. Where parts overlap (a badge's lettering and the cigarette laid
 across it), `hit: 'shape'` makes the drawn shapes of the layer the hotspot instead of its box. A new
 series is one more entry in `SERIES`. `src/posters/catalogue.test.js` checks that every part sits on

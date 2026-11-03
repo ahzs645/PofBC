@@ -51,7 +51,7 @@ const Block = ({ block }) => {
  * One part's panel. On the overview it also lists the parts, as a table of contents, and offers
  * the tour.
  */
-export function DataPanel({ partId, parts, order, onSelect, tour }) {
+export function DataPanel({ partId, parts, order, onSelect, tour, story }) {
   const part = parts[partId]
   const { panel } = part
   const steps = order.filter((id) => id !== 'overview')
@@ -68,6 +68,12 @@ export function DataPanel({ partId, parts, order, onSelect, tour }) {
       {blocks.slice(0, tail).map((block, i) => <Block key={i} block={block} />)}
       {partId === 'overview' && (
         <>
+          {story && (
+            <Item as="div" className="pv-row">
+              <button type="button" className="pv-ghost pv-solid" onClick={story}>Read it as a story</button>
+              <span className="pv-muted">Scroll, and the poster follows</span>
+            </Item>
+          )}
           {tour && (
             <Item as="div" className="pv-row">
               <button type="button" className="pv-ghost pv-solid" onClick={tour.toggle}>{tour.playing ? 'Stop the tour' : 'Play the tour'}</button>

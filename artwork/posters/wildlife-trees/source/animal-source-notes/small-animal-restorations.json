@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "key": "squirrel",
+  "slug": "northern-flying-squirrel",
+  "coordinate_system": {
+    "viewBox": [0, 0, 348, 346],
+    "native_pixels": [965, 961],
+    "stroke_width_units": "SVG viewBox units."
+  },
+  "restorations": [
+    {
+      "id": "faint-rear-ear-rim-join",
+      "path": "M 237.92 45.35 C 238.38 45.52 238.75 46.22 239.24 46.63 L 240.12 47.18",
+      "stroke_width": 0.58,
+      "stroke_linecap": "round",
+      "stroke_linejoin": "round",
+      "fill": "none",
+      "reason": "A 2.7-unit faint original rear-ear rim segment remains below the fitted ink threshold after the mask was widened. The source rim is visible between the retained left apex and retained descending right edge. This short measured curve joins only those original observed marks; it does not extrapolate hidden anatomy.",
+      "source_evidence": "Measured in reference/squirrel-source.png. Original ink minima follow approximately (237.5,45.37), (238.0,45.37), (238.5,45.37), (239.0,46.81), (239.5,46.81), (240.0,47.17). The geometry follows the blurred source line between retained stroke ends. Evidence: squirrel-ear-grid.png and squirrel-ear-final-check.png."
+    }
+  ],
+  "source": "Original supplied Wildlife Trees.pdf, source crop reference/squirrel-source.png.",
+  "method": "One minimal source-measured contour restoration. The squirrel jaw and chickadee tail are recovered through corrected source masks and require no added paths."
+}

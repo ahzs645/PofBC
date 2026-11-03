@@ -311,7 +311,7 @@ export const InternalLogosView = () => {
           {current.seenOn && (
             <>
               <h3 className="internal-logos__section-title">On the posters</h3>
-              <p className="internal-logos__footnote">Open a poster at its emblem; every other part of the poster is clickable too.</p>
+              <p className="internal-logos__footnote">Open a poster at this mark; every other part of the poster is clickable too.</p>
               <PosterLinks logo={current} />
             </>
           )}

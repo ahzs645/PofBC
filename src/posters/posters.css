@@ -652,3 +652,42 @@
   .pv-panel::-webkit-scrollbar-thumb, .pv-dialog::-webkit-scrollbar-thumb { background: transparent; border-radius: 8px; border: 2px solid transparent; background-clip: padding-box; }
   .pv-panel:hover::-webkit-scrollbar-thumb, .pv-dialog::-webkit-scrollbar-thumb { background-color: rgba(255, 255, 255, 0.22); }
 }
+
+/* ── Story mode: one column of chapters, read with the drawing following ── */
+.pv-story { --pv-rail-h: 60vh; }
+.pv-story-hint { font-size: 13px; color: var(--muted); margin: 0 0 6px; }
+.pv-story-chapters { list-style: none; margin: 0; padding: 0; }
+.pv-story-chapter {
+  /* Room enough that one chapter at a time crosses the reading line. */
+  min-height: calc(var(--pv-rail-h) * 0.55);
+  padding: 22px 0 18px;
+  border-top: 1px solid var(--line);
+  opacity: 0.42;
+  transition: opacity 360ms ease;
+}
+.pv-story-chapter:first-child { border-top: 0; }
+.pv-story-chapter.pv-story-active { opacity: 1; }
+.pv-story-chapter h2 { margin-top: 2px; }
+.pv-story-chapter p:not(.pv-eyebrow) { font-size: 16px; line-height: 1.55; color: var(--text); }
+.pv-story-more {
+  margin-top: 4px;
+  padding: 6px 0;
+  border: 0;
+  background: none;
+  color: var(--mint);
+  font-size: 13.5px;
+  font-weight: 600;
+}
+.pv-story-more:hover { text-decoration: underline; }
+/* The run-out: the last chapter can still be scrolled up to the reading line. */
+.pv-story-end { min-height: calc(var(--pv-rail-h) * 0.62); padding-top: 22px; border-top: 1px solid var(--line); }
+@media (max-width: 900px) {
+  .pv-story-chapter { padding: 16px 0 14px; }
+  .pv-story-chapter p:not(.pv-eyebrow) { font-size: 15px; }
+}
+@media (max-width: 600px) {
+  .pv-story-btn { padding-inline: 9px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .pv-story-chapter { transition: none; }
+}
