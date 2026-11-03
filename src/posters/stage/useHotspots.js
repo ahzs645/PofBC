@@ -27,10 +27,15 @@ const parentMatrix = (svg, element) => {
  * everything in the drawing except that region's `layer` (any selector, any depth) and any ids in
  * `spotlight.keep`. Following the open part as well as the pointer keeps it isolated through the
  * story and after a click, once the zoom has moved the drawing out from under the pointer.
+ *
+ * What is lit carries the class `pv-lit` while it is. A drawing can use that to show something only
+ * then: a highlight (`data-highlight`), a copy of a photograph masked to one part of it, which keeps
+ * that part bright while the photograph around it settles back.
  */
 export const useHotspots = (svg, regions, { onSelect, active, margin = 0.08, spotlight } = {}) => {
   const [hover, setHover] = useState(null)
   const dimmed = useRef(new Set())
+  const litNow = useRef([])
 
   useEffect(() => {
     if (!svg) return
@@ -112,10 +117,14 @@ export const useHotspots = (svg, regions, { onSelect, active, margin = 0.08, spo
     if (!svg || !spotlight) return
     for (const el of dimmed.current) el.style.opacity = ''
     dimmed.current.clear()
+    for (const el of litNow.current) el.classList.remove('pv-lit')
+    litNow.current = []
     const region = regions.find((r) => r.id === (hover ?? active))
     if (!region?.layer) return
     const lit = [...svg.querySelectorAll(region.layer)]
     if (!lit.length) return
+    for (const el of lit) el.classList.add('pv-lit')
+    litNow.current = lit
     const keep = new Set(spotlight.keep ?? [])
     const walk = (parent) => {
       for (const child of parent.children) {

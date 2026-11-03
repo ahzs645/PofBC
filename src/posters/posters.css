@@ -730,3 +730,6 @@
 @media (prefers-reduced-motion: reduce) {
   .pv-drawing-spinner { animation-duration: 2.4s; }
 }
+
+/* ── Highlights: a part of a photograph kept bright while the spotlight is on it ── */
+.pv-sheet [data-highlight]:not(.pv-lit) { display: none; }

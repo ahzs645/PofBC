@@ -34,6 +34,12 @@ export const SERIES = [
     posters: ['wildlife-trees']
   },
   {
+    id: 'noxious-weeds',
+    title: 'Noxious Weeds',
+    kind: 'Ministry of Forests campaign, 1999–2000',
+    posters: ['beware-these-alien-invaders', 'shattering-the-environment', 'explosion-in-slow-motion']
+  },
+  {
     id: 'bc-ferries',
     title: 'British Columbia Ferries',
     kind: 'Car decals',
@@ -101,6 +107,33 @@ export const POSTERS = {
     page: { w: 11.44, h: 34.288 },
     background: null,
     prefetch: false
+  },
+  'beware-these-alien-invaders': {
+    id: 'beware-these-alien-invaders',
+    series: 'noxious-weeds',
+    title: 'Beware These Alien Invaders',
+    when: 'March 1999, from the PDF',
+    view: { x: 0, y: 0, w: 684, h: 2483 },
+    page: { w: 9.5, h: 34.486 },
+    background: null
+  },
+  'shattering-the-environment': {
+    id: 'shattering-the-environment',
+    series: 'noxious-weeds',
+    title: 'Shattering the Environment',
+    when: 'March 2000, from the PDF',
+    view: { x: 0, y: 0, w: 2592, h: 1944 },
+    page: { w: 36, h: 27 },
+    background: null
+  },
+  'explosion-in-slow-motion': {
+    id: 'explosion-in-slow-motion',
+    series: 'noxious-weeds',
+    title: 'Explosion in Slow Motion',
+    when: 'March 2000, from the PDF',
+    view: { x: 0, y: 0, w: 1584, h: 2592 },
+    page: { w: 22, h: 36 },
+    background: null
   },
   'go-bc-ferries': {
     id: 'go-bc-ferries',

@@ -521,7 +521,11 @@ export const WILDLIFE_TREES = {
             ['Ink', INK]
           ] },
           { h: 'The lockup on the site' },
-          { links: [MINISTRY_LINK] }
+          { links: [MINISTRY_LINK, {
+            label: 'The same signature on Noxious Weeds',
+            note: 'Posters · the branch’s weed campaign of 2000, signed the same way in black',
+            to: { view: 'posters', poster: 'shattering-the-environment', part: 'signature' }
+          }] }
         ]
       },
       story: [

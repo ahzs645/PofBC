@@ -8,6 +8,7 @@ import { POSTERS, SERIES, neighbours, posterIds, seriesOf } from './catalogue.js
 import { FOREST_SERVICE_POSTERS } from './forest-service/posters.js'
 import { BC_FERRIES_POSTERS } from './bc-ferries/posters.js'
 import { WILDLIFE_TREES } from './wildlife-trees/posters.js'
+import { NOXIOUS_WEEDS_POSTERS } from './noxious-weeds/posters.js'
 import { GALLERY_COLLECTIONS } from '../gallery/collections.js'
 import { ORDER as COASTAL_ORDER, PARTS as COASTAL_PARTS, REGIONS as COASTAL_REGIONS } from './coastal-forest/parts.js'
 import { FOREST_LOGOS } from '../internal/forestLogos.js'
@@ -21,7 +22,10 @@ const DRAWINGS = {
   'enjoy-protect-forests': read('./forest-service/enjoy-protect-forests.svg'),
   'go-bc-ferries': read('./bc-ferries/go-bc-ferries.svg'),
   'queen-of-sidney': read('./bc-ferries/queen-of-sidney.svg'),
-  'wildlife-trees': read('./wildlife-trees/wildlife-trees.svg')
+  'wildlife-trees': read('./wildlife-trees/wildlife-trees.svg'),
+  'beware-these-alien-invaders': read('./noxious-weeds/beware-these-alien-invaders.svg'),
+  'shattering-the-environment': read('./noxious-weeds/shattering-the-environment.svg'),
+  'explosion-in-slow-motion': read('./noxious-weeds/explosion-in-slow-motion.svg')
 }
 const GOVERNMENT = read('../government/historyData.js')
 
@@ -31,12 +35,14 @@ const DEFINITIONS = {
   'coastal-forest': { parts: COASTAL_PARTS, order: COASTAL_ORDER, regions: COASTAL_REGIONS.map(({ id }) => id) },
   ...FOREST_SERVICE_POSTERS,
   ...BC_FERRIES_POSTERS,
-  'wildlife-trees': WILDLIFE_TREES
+  'wildlife-trees': WILDLIFE_TREES,
+  ...NOXIOUS_WEEDS_POSTERS
 }
 // The posters whose panels are data.
-const DATA_POSTERS = { ...FOREST_SERVICE_POSTERS, ...BC_FERRIES_POSTERS, 'wildlife-trees': WILDLIFE_TREES }
+const DATA_POSTERS = { ...FOREST_SERVICE_POSTERS, ...BC_FERRIES_POSTERS, 'wildlife-trees': WILDLIFE_TREES, ...NOXIOUS_WEEDS_POSTERS }
 
 const idsIn = (selector) => [...selector.matchAll(/#([\w-]+)/g)].map((m) => m[1])
+const partsIn = (selector) => [...selector.matchAll(/\[data-part="([\w-]+)"\]/g)].map((m) => m[1])
 const hasId = (svg, id) => svg.includes(`id="${id}"`)
 
 test('every layer a part names can be found by a CSS selector', () => {
@@ -92,6 +98,7 @@ test('every part sits on its drawing, and names layers the drawing has', () => {
       assert.ok(part.label && part.hint, `${id}/${partId}: label and hint`)
       assert.ok(part.layer, `${id}/${partId}: no layer to spotlight`)
       for (const layer of idsIn(part.layer)) assert.ok(hasId(svg, layer), `${id}/${partId}: the drawing has no #${layer}`)
+      for (const name of partsIn(part.layer)) assert.ok(svg.includes(`data-part="${name}"`), `${id}/${partId}: nothing in the drawing is tagged ${name}`)
     }
   }
 })
@@ -171,6 +178,30 @@ test('Wildlife Trees opens on a small preview in the drawing’s shape', () => {
   const { w, h } = POSTERS['wildlife-trees'].view
   assert.ok(Math.abs(width / height - w / h) < 0.002, `the preview is ${width} × ${height}, not the drawing’s shape`)
   assert.ok(width >= 800, 'the preview is too small to stand in for the whole poster')
+})
+
+test('the Noxious Weeds drawings name their pictures by files that exist, and are light', () => {
+  for (const id of Object.keys(NOXIOUS_WEEDS_POSTERS)) {
+    const svg = DRAWINGS[id]
+    assert.ok(!svg.includes('base64,'), `${id}: a picture is still inside the drawing`)
+    assert.ok(svg.length < 600e3, `${id}: the drawing is ${Math.round(svg.length / 1e3)} KB`)
+    const files = [...svg.matchAll(/href="(images\/[^"]+)"/g)].map((m) => m[1])
+    assert.ok(files.length, `${id}: no pictures`)
+    for (const file of files) assert.ok(readFileSync(new URL(`./noxious-weeds/${file}`, import.meta.url)).length > 0, `${id}: ${file}`)
+    // Poppler numbers ids the same way in every file: each drawing's are its own.
+    const prefix = { 'beware-these-alien-invaders': 'btai-', 'shattering-the-environment': 'ste-', 'explosion-in-slow-motion': 'eis-' }[id]
+    for (const m of svg.matchAll(/ id="([^"]+)"/g)) assert.ok(m[1].startsWith(prefix), `${id}: the id ${m[1]} is not its own`)
+  }
+})
+
+test('a highlight is a masked copy of a photograph in its own drawing', () => {
+  for (const id of Object.keys(NOXIOUS_WEEDS_POSTERS)) {
+    const svg = DRAWINGS[id]
+    for (const m of svg.matchAll(/<g data-part="([\w-]+)" data-highlight="" mask="url\(#([^)]+)\)"><use xlink:href="#([^"]+)"/g)) {
+      assert.ok(hasId(svg, m[2]), `${id}/${m[1]}: no mask ${m[2]}`)
+      assert.ok(hasId(svg, m[3]), `${id}/${m[1]}: no photograph ${m[3]}`)
+    }
+  }
 })
 
 test('the two fire-prevention badges share one green', () => {

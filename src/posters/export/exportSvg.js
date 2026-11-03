@@ -56,9 +56,11 @@ const inlineImages = async (root) => {
 export const posterSvgString = async (svgEl, { view, page }) => {
   const clone = svgEl.cloneNode(true)
   clone.querySelector('#hotspots')?.remove()
+  // A highlight is only for the viewer's spotlight (see useHotspots).
+  for (const el of clone.querySelectorAll('[data-highlight]')) el.remove()
   for (const el of clone.querySelectorAll('[style]')) el.removeAttribute('style')
   for (const el of clone.querySelectorAll('[class]')) {
-    el.classList.remove('pv-active')
+    el.classList.remove('pv-active', 'pv-lit')
     if (!el.classList.length) el.removeAttribute('class')
   }
   clone.setAttribute('viewBox', `${view.x} ${view.y} ${view.w} ${view.h}`)

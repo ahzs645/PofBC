@@ -10,10 +10,14 @@ import enjoyThumb from './forest-service/enjoy-protect-forests.svg?url'
 import goFerriesThumb from './bc-ferries/go-bc-ferries.svg?url'
 import queenThumb from './bc-ferries/queen-of-sidney.svg?url'
 import wildlifeThumb from './wildlife-trees/thumbnail.jpg'
+import bewareThumb from './noxious-weeds/beware-these-alien-invaders.thumb.jpg'
+import shatteringThumb from './noxious-weeds/shattering-the-environment.thumb.jpg'
+import explosionThumb from './noxious-weeds/explosion-in-slow-motion.thumb.jpg'
 
 // Each poster's drawing and parts, fetched when it is opened.
 const forestService = (id) => () => import('./forest-service/index.js').then((module) => module.loaderFor(id)())
 const bcFerries = (id) => () => import('./bc-ferries/index.js').then((module) => module.loaderFor(id)())
+const noxiousWeeds = (id) => () => import('./noxious-weeds/index.js').then((module) => module.loaderFor(id)())
 const LOADERS = {
   'coastal-forest': () => import('./coastal-forest/index.jsx').then((module) => module.load()),
   'dont-drop-it': forestService('dont-drop-it'),
@@ -21,6 +25,9 @@ const LOADERS = {
   'reward-living-forest': forestService('reward-living-forest'),
   'enjoy-protect-forests': forestService('enjoy-protect-forests'),
   'wildlife-trees': () => import('./wildlife-trees/index.js').then((module) => module.load()),
+  'beware-these-alien-invaders': noxiousWeeds('beware-these-alien-invaders'),
+  'shattering-the-environment': noxiousWeeds('shattering-the-environment'),
+  'explosion-in-slow-motion': noxiousWeeds('explosion-in-slow-motion'),
   'go-bc-ferries': bcFerries('go-bc-ferries'),
   'queen-of-sidney': bcFerries('queen-of-sidney')
 }
@@ -32,6 +39,9 @@ const THUMBNAILS = {
   'reward-living-forest': rewardThumb,
   'enjoy-protect-forests': enjoyThumb,
   'wildlife-trees': wildlifeThumb,
+  'beware-these-alien-invaders': bewareThumb,
+  'shattering-the-environment': shatteringThumb,
+  'explosion-in-slow-motion': explosionThumb,
   'go-bc-ferries': goFerriesThumb,
   'queen-of-sidney': queenThumb
 }

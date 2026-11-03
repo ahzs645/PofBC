@@ -741,6 +741,7 @@ kept in the address — `?view=posters&poster=dont-drop-it&part=credit` — so a
 | British Columbia Forest Service | **REWARD — A Living Forest**, **Enjoy & Protect our Forests** |
 | B. C. Forest Service fire-prevention badges | **DON’T DROP IT!**, **Don’t gamble with FIRE** (set in the first one’s green) |
 | Ministry of Forests, Forest Practices Branch | **Wildlife Trees** (about 2001, from the artist’s mark), told as a story too |
+| Noxious Weeds, the same branch’s campaign | **Beware These Alien Invaders** (a five-screen leaflet, March 1999), **Shattering the Environment** and **Explosion in Slow Motion** (posters, March 2000), each told as a story |
 | British Columbia Ferries car decals | **GO B.C. FERRIES** (1960–64, from its Toll Authority wording), **Queen of Sidney** |
 
 The panels link on: the emblem on either Forest Service poster opens the evergreen emblem in
@@ -762,7 +763,18 @@ past the six animals, to the roots, then down the copy to the two marks.
 45 MB master (14.8 MB, 1,960 paths, about 4.5 MB compressed; see
 [`artwork/posters/wildlife-trees/`](artwork/posters/wildlife-trees/README.md)), fetched as a file rather than
 built into a script, never fetched ahead of being opened (`prefetch: false` in its catalogue card), and a
-small JPEG for its card. It opens at once on a 198 KB four-tone preview and sharpens when the drawing
+small JPEG for its card.
+
+**The Noxious Weeds pieces** are rebuilt from their supplied PDFs by
+[`artwork/posters/noxious-weeds/build.py`](artwork/posters/noxious-weeds/README.md): their photographs
+are the PDFs' own JPEGs, as files; their copy, in fonts the PDFs never carried, is set in chosen free
+substitutes and outlined; and each element is tagged with its part (`data-part`, which a part's
+`layer` can select). A weed that is part of a composite photograph gets a highlight (`data-highlight`):
+a copy of the photograph masked to it, shown only while the spotlight is on it (`pv-lit`), so the weed
+stays bright as the rest settles back. Their signatures link to the Ministry of Forests in 2000 and to
+the same branch's signature on Wildlife Trees, and a weed that is on more than one piece links to it there.
+
+Wildlife Trees opens at once on a 198 KB four-tone preview and sharpens when the drawing
 arrives: a module can give the viewer a light stand-in as its drawing and an `upgrade` that resolves to
 the real one, which replaces it without moving the view. Add `&frames=1` to the address to see how many
 frames each zoom draws and how long they take, to check a drawing on a real device.
