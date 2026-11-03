@@ -3,7 +3,7 @@
 Only root-reviewed original crops and unique monetary witnesses are eligible.
 No source observations, periods, exports or disclosed names are rewritten.
 """
-import argparse,csv,gzip,hashlib,io,json,pathlib,re,unicodedata
+import argparse,csv,gzip,hashlib,io,json,pathlib,re,unicodedata,zlib
 ROOT=pathlib.Path(__file__).resolve().parents[1]
 OUT=ROOT/'research/salaries/source-follow-through-2026-11-02'
 PDF='ca0634bec6ffece72903f8dcfb622a6b082526afaf955fadebc80d910ace2258'
@@ -27,7 +27,16 @@ def sourcehash(s):return hashjson([s.get('id'),s.get('url'),s.get('sha256'),s.ge
 def cents(z):return None if z is None else int(round(z*100))
 def compiled(s):return s.get('sourceKind')=='compiled' or s.get('scope')=='compiled-unverified'
 def write_json(p,x):p.write_text(json.dumps(encoded(x),ensure_ascii=False,indent=2)+'\n')
-def write_gzip(p,x):p.write_bytes(gzip.compress(dumpbytes(x)+b'\n',mtime=0))
+def output_gzip(path,payload):
+ # Output encoding is incidental; input and dataSha256 pins stay byte-exact.
+ # Reuse only an existing stream with exactly the canonical uncompressed bytes.
+ if path.exists():
+  existing=path.read_bytes()
+  try:
+   if gzip.decompress(existing)==payload:return existing
+  except (OSError,EOFError,zlib.error):pass
+ return gzip.compress(payload,mtime=0)
+def write_gzip(p,x):p.write_bytes(output_gzip(p,dumpbytes(x)+b'\n'))
 
 def profile_receipt(kind,index,rows,original,pending):
  base='research/salaries/follow-through-'+kind+'/'
@@ -87,7 +96,7 @@ def profile_receipt(kind,index,rows,original,pending):
  initial_index_sha=json.loads(trace_path.read_text()).get('reviewedLiveIndexSha256') if trace_path.exists() else sha((ROOT/'public/salaries/people/index.json').read_bytes())
  payload={'schemaVersion':1,'reviewKind':'manual-source-copy-spelling','reviewedOn':'2026-11-02','reviewer':'root','policy':'Exact source-copy spelling only. All live alias and current target observations and source definitions are pinned. Missing expenses never equal zero. Individual unique financial witnesses do not verify a compiled reporting label or permit replacement/redating.','reviewedLiveIndexSha256':initial_index_sha,'inputs':[{'path':p,'sha256':sha(pending[ROOT/p] if ROOT/p in pending else (ROOT/p).read_bytes())} for p in sorted(pinpaths)],'decisions':decisions,'holds':holds}
  dest=OUT/f'name-review-{kind}.json';pending[dest]=(json.dumps(encoded(payload),ensure_ascii=False,indent=2)+'\n').encode()
- pending[OUT/f'name-review-{kind}-observations.json.gzip']=gzip.compress(dumpbytes({'rowSchema':['name','position','remuneration','expenses','employerSlug','year','sourceId','pdfPage'],'observations':[{'names':d['names'],'aliasRows':[stable(r,index) for r in byname[d['proof']['aliasNameKey']]],'targetRows':[stable(r,index) for r in byname[d['proof']['targetNameKey']]]} for d in decisions]})+b'\n',mtime=0)
+ pending[OUT/f'name-review-{kind}-observations.json.gzip']=output_gzip(OUT/f'name-review-{kind}-observations.json.gzip',dumpbytes({'rowSchema':['name','position','remuneration','expenses','employerSlug','year','sourceId','pdfPage'],'observations':[{'names':d['names'],'aliasRows':[stable(r,index) for r in byname[d['proof']['aliasNameKey']]],'targetRows':[stable(r,index) for r in byname[d['proof']['targetNameKey']]]} for d in decisions]})+b'\n')
  text=io.StringIO(newline='');w=csv.writer(text);w.writerow(['candidate_id','queue_membership','alias','original_spelling','official_year','compiled_label','pay_cents','official_expenses_cents','compiled_expenses_cents','witness_mode','pdf_page','decision'])
  for d in decisions:
   p=d['proof'];m=p['financialWitness'];w.writerow([d['candidateId'],d['queueMembership'],*d['names'],p['official']['year'],p['compiled']['year'],m['payCents'],m['officialExpensesCents'],m['compiledExpensesCents'],m['mode'],p['official']['pdfPage'],d['decision']])
@@ -253,7 +262,7 @@ def main():
   csvbytes=path.read_bytes();original=list(csv.DictReader(csvbytes.decode().splitlines()));assert len(original)==3173
   original_snapshot={'schemaVersion':1,'originalFile':'provided-held-pair-outcomes.csv','originalFileSha256':sha(csvbytes),'rowCount':3173,'use':'Candidate membership only; supplied outcomes are not reused as identity evidence. New decisions require individually reviewed original pixels and current unique live witnesses.','rows':original}
  else:original_snapshot=json.loads(gzip.decompress((OUT/'name-review-original-outcomes.json.gzip').read_bytes()));original=original_snapshot['rows']
- pending[OUT/'name-review-original-outcomes.json.gzip']=gzip.compress(dumpbytes(original_snapshot)+b'\n',mtime=0)
+ pending[OUT/'name-review-original-outcomes.json.gzip']=output_gzip(OUT/'name-review-original-outcomes.json.gzip',dumpbytes(original_snapshot)+b'\n')
  profiles=['rru','cnc'] if args.employer=='all' else [args.employer]
  needed={i for i,e in enumerate(index['employers']) if e[3] in ['royal-roads-university','college-of-new-caledonia']};rows=[]
  for shard in index['shards']:rows.extend(r for r in json.loads(gzip.decompress((ROOT/'public/salaries/people'/f'{shard}.json.gzip').read_bytes())) if r[4] in needed)

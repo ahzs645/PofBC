@@ -224,3 +224,59 @@ test('current overlay preserves exactly3173 original IDs, old confidence and sep
   assert.equal(metadata.changedOriginalCandidates.length, 15); assert.ok(metadata.changedOriginalCandidates.every((r) => r.manualReview))
   assert.equal(metadata.additionalReviewedConnections.length, 3); assert.equal(metadata.usesUploadedOutcomeLabelsAsEvidence, false)
 })
+
+test('likely review CLI uses pinned semantic histories without whole-shard platform collation', () => {
+  const path = resolve(root, 'research/salaries/source-follow-through-2026-11-02/likely-continuity.json')
+  const before = readFileSync(path), time = statSync(path).mtimeMs
+  const code = `process.argv.push('--check');
+String.prototype.localeCompare = () => { throw new Error('Whole-shard platform collation must not run in the review CLI') };
+await import('./scripts/review-baseline-likely-connections.mjs');`
+  const result = spawnSync(process.execPath, ['--input-type=module', '-e', code], { cwd: root, encoding: 'utf8' })
+  assert.equal(result.status, 0, result.stderr)
+  assert.deepEqual(readFileSync(path), before); assert.equal(statSync(path).mtimeMs, time)
+})
+
+test('review gzip outputs retain alternate encoding bytes only for exactly matching canonical payloads', () => {
+  const code = `import gzip, importlib.util, pathlib, tempfile
+spec=importlib.util.spec_from_file_location('review','scripts/review_follow_through_names.py')
+review=importlib.util.module_from_spec(spec);spec.loader.exec_module(review)
+value={'name':'Same, Row','expenses':None,'pay':123.45}
+payload=review.dumpbytes(value)+b'\\n'
+changed=review.dumpbytes({**value,'pay':123.46})+b'\\n'
+with tempfile.TemporaryDirectory() as tmp:
+ path=pathlib.Path(tmp)/'snapshot.json.gzip'
+ for level,mtime,osbyte in [(1,123456789,0),(5,123456790,3),(9,123456791,255)]:
+  encoded=bytearray(gzip.compress(payload,compresslevel=level,mtime=mtime));encoded[9]=osbyte;encoded=bytes(encoded)
+  assert gzip.decompress(encoded)==payload
+  path.write_bytes(encoded)
+  assert review.output_gzip(path,payload)==encoded
+  review.write_gzip(path,value)
+  assert path.read_bytes()==encoded
+  replacement=review.output_gzip(path,changed)
+  assert replacement!=encoded and gzip.decompress(replacement)==changed
+  assert path.read_bytes()==encoded
+`
+  const result = spawnSync('python3', ['-c', code], { cwd: root, encoding: 'utf8' })
+  assert.equal(result.status, 0, result.stderr)
+})
+
+test('changed canonical output payload remains stale in actual readonly review check', () => {
+  const names = ['name-review-original-outcomes.json.gzip', ...['rru', 'cnc'].flatMap((e) => [`name-review-${e}.json`, `name-review-${e}-observations.json.gzip`, `name-review-${e}.csv`])]
+  const paths = names.map((n) => resolve(root, `research/salaries/source-follow-through-2026-11-02/${n}`))
+  const before = paths.map((p) => [statSync(p).mtimeMs, readFileSync(p)])
+  const code = `import csv,gzip,json,pathlib,subprocess,tempfile
+snapshot=json.loads(gzip.decompress(pathlib.Path('research/salaries/source-follow-through-2026-11-02/name-review-original-outcomes.json.gzip').read_bytes()))
+rows=snapshot['rows'];rows[0]['next_action']+=' Changed canonical review payload.'
+with tempfile.TemporaryDirectory() as tmp:
+ path=pathlib.Path(tmp)/'changed-outcomes.csv'
+ with path.open('w',newline='') as f:
+  writer=csv.DictWriter(f,fieldnames=list(rows[0]));writer.writeheader();writer.writerows(rows)
+ result=subprocess.run(['python3','scripts/review_follow_through_names.py','--check','--outcomes',str(path)],capture_output=True,text=True)
+ assert result.returncode!=0,result.stdout
+ assert 'Name-review output is stale:' in result.stderr,result.stderr
+ assert 'name-review-original-outcomes.json.gzip' in result.stderr,result.stderr
+`
+  const result = spawnSync('python3', ['-c', code], { cwd: root, encoding: 'utf8' })
+  assert.equal(result.status, 0, result.stderr)
+  paths.forEach((p, i) => { assert.equal(statSync(p).mtimeMs, before[i][0]); assert.deepEqual(readFileSync(p), before[i][1]) })
+})
