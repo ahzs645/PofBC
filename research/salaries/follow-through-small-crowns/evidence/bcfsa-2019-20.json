@@ -1,0 +1,106 @@
+{
+  "version": 1,
+  "sourceId": "follow-through-bcfsa-2019-20-employees",
+  "leadId": "additional-source-bcfsa-2019-20",
+  "sourceUrl": "https://www.bcfsa.ca/media/39/download",
+  "sourceIndexUrl": "https://www.bcfsa.ca/about-us/what-we-do/corporate-publications",
+  "checkedOn": "2026-11-02",
+  "originalSha256": "9cb80bb8e98f17249b09c7a3ca88dfc1a29275c6cbd5432ad60935c410e0bd49",
+  "originalBytes": 110099,
+  "originalPdfPageCount": 4,
+  "period": {
+    "start": "2019-11-01",
+    "end": "2020-03-31",
+    "partial": true,
+    "evidence": "Original schedule year-ended header; first BCFSA schedule explicitly gives commencement date and period end."
+  },
+  "employeePhysicalPages": [
+    3
+  ],
+  "retainedSourceEvidencePages": [
+    3
+  ],
+  "readerNames": [
+    "PyMuPDF positioned words",
+    "Poppler pdftotext -layout"
+  ],
+  "primaryRowCount": 6,
+  "independentRowCount": 6,
+  "everyRowFieldMultisetEqual": true,
+  "primaryNormalizedSha256": "954c40324e10bf913c47d95d1db3a5b307fdd1f6b68ab5a28d600ce0c5b0e0c0",
+  "independentRowMultisetSha256": "954c40324e10bf913c47d95d1db3a5b307fdd1f6b68ab5a28d600ce0c5b0e0c0",
+  "pageControls": [
+    {
+      "physicalPage": 3,
+      "rowCount": 6,
+      "remuneration": 539126,
+      "expenses": 82978
+    }
+  ],
+  "controls": {
+    "physicalPage": 3,
+    "printedTotalEmployees": [
+      5807438,
+      185931
+    ],
+    "printedBelowThreshold": [
+      5268312,
+      102954
+    ],
+    "printedDirectNamedSubtotal": [
+      539127,
+      82978
+    ],
+    "impliedNamedControl": [
+      539126,
+      82977
+    ],
+    "observedAllNamedRows": [
+      539126,
+      82978
+    ],
+    "residualNamedMinusImplied": [
+      0,
+      1
+    ],
+    "residualNamedMinusDirect": [
+      -1,
+      0
+    ],
+    "units": "CAD whole dollars",
+    "residualCause": "Unknown; preserved as printed."
+  },
+  "physicalPagesVisuallyReviewed": [
+    3
+  ],
+  "sourceRowReview": "Every native employee row compared field-for-field between independent PDF readers; source-pixel review of printed control totals and ambiguous glyph/layout cases. Every scan employee row and control additionally visually reviewed.",
+  "explicitZeroExpenseRows": 0,
+  "nullExpenseRows": 0,
+  "negativeExpenseRows": [],
+  "repeatedDisclosedNames": {},
+  "exactDuplicateSixFieldRows": 0,
+  "excludedScopes": [
+    "board-director-remuneration",
+    "suppliers",
+    "below-threshold-aggregate",
+    "reconciliation-adjustments",
+    "employer-tax-benefit-aggregates"
+  ],
+  "remunerationDefinitionVerbatim": null,
+  "severanceCompensationDefinitionContext": null,
+  "publicWarning": "This disclosure covers November 1, 2019 (commencement of operations) through March 31, 2020, a partial fiscal year. Published named remuneration rows sum to $539,126 versus the printed named subtotal $539,127; named expenses total $82,978 versus $82,977 implied by total less below-threshold controls. Values are unchanged; causes unknown.",
+  "rawEvidenceFiles": [
+    {
+      "file": "evidence/bcfsa-2019-20.layout.txt",
+      "sha256": "e210631790c95bb3243151380ba36a9d29e94dcf3dfab5139bd1f1264eec3370"
+    },
+    {
+      "file": "evidence/bcfsa-2019-20.words.json.gzip",
+      "sha256": "5dacc102fa5486635ceba923d519a6ffeda435307a36634e253dfb9f5b783f07"
+    },
+    {
+      "file": "evidence/bcfsa-2019-20.controls.png",
+      "sha256": "534fff45256bc1a8fd8d6ae7b27e07d37cb0f33f6a02b5d93857ac022d05bf85"
+    }
+  ]
+}

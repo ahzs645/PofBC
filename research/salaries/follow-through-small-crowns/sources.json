@@ -1,0 +1,1943 @@
+{
+  "version": 1,
+  "rowSchema": [
+    "employerSlug",
+    "name",
+    "position",
+    "remuneration",
+    "expenses",
+    "pdfPage"
+  ],
+  "sources": [
+    {
+      "id": "follow-through-bcfsa-2019-20-employees",
+      "employerSlug": "bc-financial-services-authority",
+      "employerName": "BC Financial Services Authority",
+      "sector": "Crown corporations",
+      "year": "2019/20",
+      "periodType": "fiscal",
+      "periodStart": "2019-11-01",
+      "periodEnd": "2020-03-31",
+      "title": "BC Financial Services Authority: named employee remuneration and expenses, 2019/20",
+      "sourceUrl": "https://www.bcfsa.ca/media/39/download",
+      "sourceIndexUrl": "https://www.bcfsa.ca/about-us/what-we-do/corporate-publications",
+      "sha256": "9cb80bb8e98f17249b09c7a3ca88dfc1a29275c6cbd5432ad60935c410e0bd49",
+      "pdfBytes": 110099,
+      "file": "bcfsa-2019-20.json.gzip",
+      "dataSha256": "6da70c86c30e8aeaa780734a5754964114c6e39f047f53c02f8a6916908e96bf",
+      "normalizedSha256": "954c40324e10bf913c47d95d1db3a5b307fdd1f6b68ab5a28d600ce0c5b0e0c0",
+      "rowCount": 6,
+      "totalRemuneration": 539126,
+      "totalExpenses": 82978,
+      "pages": [
+        3
+      ],
+      "status": "verified",
+      "verifiedOn": "2026-11-02",
+      "category": "employee-remuneration",
+      "scope": "named-employees-over-threshold",
+      "completeEmployeeSchedule": true,
+      "threshold": 75000,
+      "thresholdComparison": ">",
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "amountPrecision": "whole-dollar",
+      "nameDisclosure": "as-published",
+      "positionDisclosure": "not-published",
+      "sourceKind": "official-statement-of-financial-information",
+      "retainCompiledPartition": true,
+      "notes": [
+        "Complete named employee schedule; board/director, supplier, unnamed, aggregate and reconciliation rows excluded. Source names/initials retained without name expansion or identity inference; comma spacing normalized. Repeated names remain distinct observations.",
+        "The reported remuneration column is preserved as published and is not assumed to be base salary. Expenses remain separate. Printed dash/blank expense cells are null; printed numeric zeros remain 0. No amount is changed to reconcile controls.",
+        "No separate base-salary definition is imposed on the Remuneration column. Pension/other benefits, employer CPP/EI, accruals and other reconciliation items are not allocated to individual employees."
+      ],
+      "provenanceFile": "evidence/bcfsa-2019-20.json",
+      "provenanceSha256": "ca5ec34d96f2d9043bfeebc8e44f68ce5b092aaf81b3a0e5d176ca0f2b73b69a",
+      "validation": {
+        "originalFingerprintVerified": true,
+        "sourcePdfPageCount": 4,
+        "independentReaders": [
+          "PyMuPDF positioned words",
+          "Poppler pdftotext -layout"
+        ],
+        "everyRowFieldAgreement": true,
+        "rowsIndependentlyChecked": 6,
+        "completeEmployeeSchedule": true,
+        "physicalPagesVisuallyReviewed": [
+          3
+        ],
+        "pageRowCounts": [
+          [
+            3,
+            6
+          ]
+        ],
+        "sourceControls": {
+          "physicalPage": 3,
+          "printedTotalEmployees": [
+            5807438,
+            185931
+          ],
+          "printedBelowThreshold": [
+            5268312,
+            102954
+          ],
+          "printedDirectNamedSubtotal": [
+            539127,
+            82978
+          ],
+          "impliedNamedControl": [
+            539126,
+            82977
+          ],
+          "observedAllNamedRows": [
+            539126,
+            82978
+          ],
+          "residualNamedMinusImplied": [
+            0,
+            1
+          ],
+          "residualNamedMinusDirect": [
+            -1,
+            0
+          ],
+          "units": "CAD whole dollars",
+          "residualCause": "Unknown; preserved as printed."
+        },
+        "printedControls": [
+          {
+            "field": "pay",
+            "printedControl": 539126,
+            "rowSum": 539126,
+            "residual": 0,
+            "basis": "total employees minus below-threshold aggregate"
+          },
+          {
+            "field": "expenses",
+            "printedControl": 82977,
+            "rowSum": 82978,
+            "residual": 1,
+            "basis": "total employees minus below-threshold aggregate"
+          }
+        ],
+        "compiledPartitionRetained": true,
+        "evidenceFile": "evidence/bcfsa-2019-20.json"
+      },
+      "publicWarning": "This disclosure covers November 1, 2019 (commencement of operations) through March 31, 2020, a partial fiscal year. Published named remuneration rows sum to $539,126 versus the printed named subtotal $539,127; named expenses total $82,978 versus $82,977 implied by total less below-threshold controls. Values are unchanged; causes unknown."
+    },
+    {
+      "id": "follow-through-bcfsa-2020-21-employees",
+      "employerSlug": "bc-financial-services-authority",
+      "employerName": "BC Financial Services Authority",
+      "sector": "Crown corporations",
+      "year": "2020/21",
+      "periodType": "fiscal",
+      "periodStart": "2020-04-01",
+      "periodEnd": "2021-03-31",
+      "title": "BC Financial Services Authority: named employee remuneration and expenses, 2020/21",
+      "sourceUrl": "https://www.bcfsa.ca/media/2657/download",
+      "sourceIndexUrl": "https://www.bcfsa.ca/about-us/what-we-do/corporate-publications",
+      "sha256": "721c59f000e3444688cd32b5baefdccf2128cdfd05b93b230697a7076c01ff01",
+      "pdfBytes": 4954486,
+      "file": "bcfsa-2020-21.json.gzip",
+      "dataSha256": "faaf619a77ea1ea327d3a456051f118ee601405b1ee43bd59e3fcfcb5e82c68b",
+      "normalizedSha256": "aa23cf9c0e318ec918cedf5c31040d61fb3b40c830471fa8022fc611195e6f73",
+      "rowCount": 112,
+      "totalRemuneration": 12494835,
+      "totalExpenses": 204709,
+      "pages": [
+        7,
+        8,
+        9,
+        10
+      ],
+      "status": "verified",
+      "verifiedOn": "2026-11-02",
+      "category": "employee-remuneration",
+      "scope": "named-employees-over-threshold",
+      "completeEmployeeSchedule": true,
+      "threshold": 75000,
+      "thresholdComparison": ">",
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "amountPrecision": "whole-dollar",
+      "nameDisclosure": "as-published",
+      "positionDisclosure": "not-published",
+      "sourceKind": "official-statement-of-financial-information",
+      "retainCompiledPartition": true,
+      "notes": [
+        "Complete named employee schedule; board/director, supplier, unnamed, aggregate and reconciliation rows excluded. Source names/initials retained without name expansion or identity inference; comma spacing normalized. Repeated names remain distinct observations.",
+        "The reported remuneration column is preserved as published and is not assumed to be base salary. Expenses remain separate. Printed dash/blank expense cells are null; printed numeric zeros remain 0. No amount is changed to reconcile controls.",
+        "No separate base-salary definition is imposed on the Remuneration column. Pension/other benefits, employer CPP/EI, accruals and other reconciliation items are not allocated to individual employees.",
+        "The regular-salary definition of Compensation appears in the severance statement; it is retained as context and is not substituted for the table’s Remuneration label."
+      ],
+      "provenanceFile": "evidence/bcfsa-2020-21.json",
+      "provenanceSha256": "d10953015e94cee5ebaf6908cac552c55463f1ec713281cb660e086c6f8feb76",
+      "validation": {
+        "originalFingerprintVerified": true,
+        "sourcePdfPageCount": 12,
+        "independentReaders": [
+          "Tesseract5 PSM3 full original scan",
+          "Tesseract5 PSM6 independent column crops"
+        ],
+        "everyRowFieldAgreement": true,
+        "rowsIndependentlyChecked": 112,
+        "completeEmployeeSchedule": true,
+        "physicalPagesVisuallyReviewed": [
+          7,
+          8,
+          9,
+          10
+        ],
+        "pageRowCounts": [
+          [
+            7,
+            21
+          ],
+          [
+            8,
+            43
+          ],
+          [
+            9,
+            43
+          ],
+          [
+            10,
+            5
+          ]
+        ],
+        "sourceControls": {
+          "physicalPage": 10,
+          "printedTotalEmployees": [
+            16258253,
+            484058
+          ],
+          "printedBelowThreshold": [
+            3763415,
+            279346
+          ],
+          "printedDirectNamedSubtotal": null,
+          "impliedNamedControl": [
+            12494838,
+            204712
+          ],
+          "observedAllNamedRows": [
+            12494835,
+            204709
+          ],
+          "residualNamedMinusImplied": [
+            -3,
+            -3
+          ],
+          "residualNamedMinusDirect": null,
+          "units": "CAD whole dollars",
+          "residualCause": "Unknown; preserved as printed."
+        },
+        "printedControls": [
+          {
+            "field": "pay",
+            "printedControl": 12494838,
+            "rowSum": 12494835,
+            "residual": -3,
+            "basis": "total employees minus below-threshold aggregate"
+          },
+          {
+            "field": "expenses",
+            "printedControl": 204712,
+            "rowSum": 204709,
+            "residual": -3,
+            "basis": "total employees minus below-threshold aggregate"
+          }
+        ],
+        "compiledPartitionRetained": true,
+        "evidenceFile": "evidence/bcfsa-2020-21.json"
+      },
+      "publicWarning": "Published named rows sum to $12,494,835 remuneration and $204,709 expenses, differing from the printed total less below-threshold controls by −$3 and −$3. Original row values are retained; causes unknown. The source publishes negative expense adjustments: Drury, Courtney (−$298), Sherwood, David (−$822). These remain negative; printed numeric zeros remain 0."
+    },
+    {
+      "id": "follow-through-bcfsa-2021-22-employees",
+      "employerSlug": "bc-financial-services-authority",
+      "employerName": "BC Financial Services Authority",
+      "sector": "Crown corporations",
+      "year": "2021/22",
+      "periodType": "fiscal",
+      "periodStart": "2021-04-01",
+      "periodEnd": "2022-03-31",
+      "title": "BC Financial Services Authority: named employee remuneration and expenses, 2021/22",
+      "sourceUrl": "https://www.bcfsa.ca/media/3009/download",
+      "sourceIndexUrl": "https://www.bcfsa.ca/about-us/what-we-do/corporate-publications",
+      "sha256": "3722fac4678277643159a6d156d182d2633da71f9ad97a2149af04a49d9846df",
+      "pdfBytes": 694463,
+      "file": "bcfsa-2021-22.json.gzip",
+      "dataSha256": "384d2619c2c804beaecaf2d9adbabaf612a09decc1f7f8a09543973e4807d84d",
+      "normalizedSha256": "653152b69edf89eaa41619cbd096594183a09f08adee91efac13bb0273e71378",
+      "rowCount": 161,
+      "totalRemuneration": 17690190,
+      "totalExpenses": 257029,
+      "pages": [
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "status": "verified",
+      "verifiedOn": "2026-11-02",
+      "category": "employee-remuneration",
+      "scope": "named-employees-over-threshold",
+      "completeEmployeeSchedule": true,
+      "threshold": 75000,
+      "thresholdComparison": ">",
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "amountPrecision": "whole-dollar",
+      "nameDisclosure": "as-published",
+      "positionDisclosure": "not-published",
+      "sourceKind": "official-statement-of-financial-information",
+      "retainCompiledPartition": true,
+      "notes": [
+        "Complete named employee schedule; board/director, supplier, unnamed, aggregate and reconciliation rows excluded. Source names/initials retained without name expansion or identity inference; comma spacing normalized. Repeated names remain distinct observations.",
+        "The reported remuneration column is preserved as published and is not assumed to be base salary. Expenses remain separate. Printed dash/blank expense cells are null; printed numeric zeros remain 0. No amount is changed to reconcile controls.",
+        "No separate base-salary definition is imposed on the Remuneration column. Pension/other benefits, employer CPP/EI, accruals and other reconciliation items are not allocated to individual employees.",
+        "The regular-salary definition of Compensation appears in the severance statement; it is retained as context and is not substituted for the table’s Remuneration label."
+      ],
+      "provenanceFile": "evidence/bcfsa-2021-22.json",
+      "provenanceSha256": "835e2d090b530bcf4e55ab11ed0fcc69cb96c6df1163f4b501d51e95098e36ae",
+      "validation": {
+        "originalFingerprintVerified": true,
+        "sourcePdfPageCount": 14,
+        "independentReaders": [
+          "PyMuPDF positioned words",
+          "Poppler pdftotext -layout"
+        ],
+        "everyRowFieldAgreement": true,
+        "rowsIndependentlyChecked": 161,
+        "completeEmployeeSchedule": true,
+        "physicalPagesVisuallyReviewed": [
+          11
+        ],
+        "pageRowCounts": [
+          [
+            7,
+            18
+          ],
+          [
+            8,
+            42
+          ],
+          [
+            9,
+            42
+          ],
+          [
+            10,
+            42
+          ],
+          [
+            11,
+            17
+          ]
+        ],
+        "sourceControls": {
+          "physicalPage": 11,
+          "printedTotalEmployees": [
+            26822897,
+            393810
+          ],
+          "printedBelowThreshold": [
+            9132707,
+            136781
+          ],
+          "printedDirectNamedSubtotal": null,
+          "impliedNamedControl": [
+            17690190,
+            257029
+          ],
+          "observedAllNamedRows": [
+            17690190,
+            257029
+          ],
+          "residualNamedMinusImplied": [
+            0,
+            0
+          ],
+          "residualNamedMinusDirect": null,
+          "units": "CAD whole dollars",
+          "residualCause": null
+        },
+        "printedControls": [
+          {
+            "field": "pay",
+            "printedControl": 17690190,
+            "rowSum": 17690190,
+            "residual": 0,
+            "basis": "total employees minus below-threshold aggregate"
+          },
+          {
+            "field": "expenses",
+            "printedControl": 257029,
+            "rowSum": 257029,
+            "residual": 0,
+            "basis": "total employees minus below-threshold aggregate"
+          }
+        ],
+        "compiledPartitionRetained": true,
+        "evidenceFile": "evidence/bcfsa-2021-22.json"
+      }
+    },
+    {
+      "id": "follow-through-bcfsa-2022-23-employees",
+      "employerSlug": "bc-financial-services-authority",
+      "employerName": "BC Financial Services Authority",
+      "sector": "Crown corporations",
+      "year": "2022/23",
+      "periodType": "fiscal",
+      "periodStart": "2022-04-01",
+      "periodEnd": "2023-03-31",
+      "title": "BC Financial Services Authority: named employee remuneration and expenses, 2022/23",
+      "sourceUrl": "https://www.bcfsa.ca/media/3558/download",
+      "sourceIndexUrl": "https://www.bcfsa.ca/about-us/what-we-do/corporate-publications",
+      "sha256": "f43f75ceefdfba06d6d3f8bc6bab83bb0e1a30c78c705be5d048daa22b9c458b",
+      "pdfBytes": 393211,
+      "file": "bcfsa-2022-23.json.gzip",
+      "dataSha256": "37b1cd1acf6bd4553d57d66e01bea26ea6bd8615e40fa9f1789a7f1387981594",
+      "normalizedSha256": "fc55739727defd51bad0be92ee418106bd58a0319393180b48f31107608d4d3e",
+      "rowCount": 237,
+      "totalRemuneration": 27406672,
+      "totalExpenses": 543789,
+      "pages": [
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13
+      ],
+      "status": "verified",
+      "verifiedOn": "2026-11-02",
+      "category": "employee-remuneration",
+      "scope": "named-employees-over-threshold",
+      "completeEmployeeSchedule": true,
+      "threshold": 75000,
+      "thresholdComparison": ">",
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "amountPrecision": "whole-dollar",
+      "nameDisclosure": "as-published",
+      "positionDisclosure": "not-published",
+      "sourceKind": "official-statement-of-financial-information",
+      "retainCompiledPartition": true,
+      "notes": [
+        "Complete named employee schedule; board/director, supplier, unnamed, aggregate and reconciliation rows excluded. Source names/initials retained without name expansion or identity inference; comma spacing normalized. Repeated names remain distinct observations.",
+        "The reported remuneration column is preserved as published and is not assumed to be base salary. Expenses remain separate. Printed dash/blank expense cells are null; printed numeric zeros remain 0. No amount is changed to reconcile controls.",
+        "No separate base-salary definition is imposed on the Remuneration column. Pension/other benefits, employer CPP/EI, accruals and other reconciliation items are not allocated to individual employees.",
+        "The regular-salary definition of Compensation appears in the severance statement; it is retained as context and is not substituted for the table’s Remuneration label."
+      ],
+      "provenanceFile": "evidence/bcfsa-2022-23.json",
+      "provenanceSha256": "2874069189a0afd9cf2e7734502db899fbbfdcccc72fe760f236e44c6d492c12",
+      "validation": {
+        "originalFingerprintVerified": true,
+        "sourcePdfPageCount": 17,
+        "independentReaders": [
+          "PyMuPDF positioned words",
+          "Poppler pdftotext -layout"
+        ],
+        "everyRowFieldAgreement": true,
+        "rowsIndependentlyChecked": 237,
+        "completeEmployeeSchedule": true,
+        "physicalPagesVisuallyReviewed": [
+          13
+        ],
+        "pageRowCounts": [
+          [
+            7,
+            22
+          ],
+          [
+            8,
+            42
+          ],
+          [
+            9,
+            42
+          ],
+          [
+            10,
+            42
+          ],
+          [
+            11,
+            42
+          ],
+          [
+            12,
+            42
+          ],
+          [
+            13,
+            5
+          ]
+        ],
+        "sourceControls": {
+          "physicalPage": 13,
+          "printedTotalEmployees": [
+            34789286,
+            565730
+          ],
+          "printedBelowThreshold": [
+            7382614,
+            21941
+          ],
+          "printedDirectNamedSubtotal": null,
+          "impliedNamedControl": [
+            27406672,
+            543789
+          ],
+          "observedAllNamedRows": [
+            27406672,
+            543789
+          ],
+          "residualNamedMinusImplied": [
+            0,
+            0
+          ],
+          "residualNamedMinusDirect": null,
+          "units": "CAD whole dollars",
+          "residualCause": null
+        },
+        "printedControls": [
+          {
+            "field": "pay",
+            "printedControl": 27406672,
+            "rowSum": 27406672,
+            "residual": 0,
+            "basis": "total employees minus below-threshold aggregate"
+          },
+          {
+            "field": "expenses",
+            "printedControl": 543789,
+            "rowSum": 543789,
+            "residual": 0,
+            "basis": "total employees minus below-threshold aggregate"
+          }
+        ],
+        "compiledPartitionRetained": true,
+        "evidenceFile": "evidence/bcfsa-2022-23.json"
+      }
+    },
+    {
+      "id": "follow-through-bcfsa-2023-24-employees",
+      "employerSlug": "bc-financial-services-authority",
+      "employerName": "BC Financial Services Authority",
+      "sector": "Crown corporations",
+      "year": "2023/24",
+      "periodType": "fiscal",
+      "periodStart": "2023-04-01",
+      "periodEnd": "2024-03-31",
+      "title": "BC Financial Services Authority: named employee remuneration and expenses, 2023/24",
+      "sourceUrl": "https://www.bcfsa.ca/media/3847/download",
+      "sourceIndexUrl": "https://www.bcfsa.ca/about-us/what-we-do/corporate-publications",
+      "sha256": "286c896425c99aa33ed3d2476879a3ba91af31bf970b34d114f0f189914ca70e",
+      "pdfBytes": 460444,
+      "file": "bcfsa-2023-24.json.gzip",
+      "dataSha256": "817f13b230ca86a7ba2d94d1e836f64c45e6f4aab161d1ec55bf62d3321a6187",
+      "normalizedSha256": "55d2118256f0a6182a0d94c7b07f50d3a953b6375d37c489a19b2e6524f28d87",
+      "rowCount": 257,
+      "totalRemuneration": 30868113,
+      "totalExpenses": 857619,
+      "pages": [
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14
+      ],
+      "status": "verified",
+      "verifiedOn": "2026-11-02",
+      "category": "employee-remuneration",
+      "scope": "named-employees-over-threshold",
+      "completeEmployeeSchedule": true,
+      "threshold": 75000,
+      "thresholdComparison": ">",
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "amountPrecision": "whole-dollar",
+      "nameDisclosure": "as-published",
+      "positionDisclosure": "not-published",
+      "sourceKind": "official-statement-of-financial-information",
+      "retainCompiledPartition": true,
+      "notes": [
+        "Complete named employee schedule; board/director, supplier, unnamed, aggregate and reconciliation rows excluded. Source names/initials retained without name expansion or identity inference; comma spacing normalized. Repeated names remain distinct observations.",
+        "The reported remuneration column is preserved as published and is not assumed to be base salary. Expenses remain separate. Printed dash/blank expense cells are null; printed numeric zeros remain 0. No amount is changed to reconcile controls.",
+        "No separate base-salary definition is imposed on the Remuneration column. Pension/other benefits, employer CPP/EI, accruals and other reconciliation items are not allocated to individual employees.",
+        "The regular-salary definition of Compensation appears in the severance statement; it is retained as context and is not substituted for the table’s Remuneration label."
+      ],
+      "provenanceFile": "evidence/bcfsa-2023-24.json",
+      "provenanceSha256": "6403deb5d857311c56fab295a793e62e247e25ef91480537876ea8889cbbbbc8",
+      "validation": {
+        "originalFingerprintVerified": true,
+        "sourcePdfPageCount": 19,
+        "independentReaders": [
+          "PyMuPDF positioned words",
+          "Poppler pdftotext -layout"
+        ],
+        "everyRowFieldAgreement": true,
+        "rowsIndependentlyChecked": 257,
+        "completeEmployeeSchedule": true,
+        "physicalPagesVisuallyReviewed": [
+          14
+        ],
+        "pageRowCounts": [
+          [
+            8,
+            22
+          ],
+          [
+            9,
+            42
+          ],
+          [
+            10,
+            42
+          ],
+          [
+            11,
+            42
+          ],
+          [
+            12,
+            42
+          ],
+          [
+            13,
+            42
+          ],
+          [
+            14,
+            25
+          ]
+        ],
+        "sourceControls": {
+          "physicalPage": 14,
+          "printedTotalEmployees": [
+            37994622,
+            1015759
+          ],
+          "printedBelowThreshold": [
+            7126509,
+            158140
+          ],
+          "printedDirectNamedSubtotal": null,
+          "impliedNamedControl": [
+            30868113,
+            857619
+          ],
+          "observedAllNamedRows": [
+            30868113,
+            857619
+          ],
+          "residualNamedMinusImplied": [
+            0,
+            0
+          ],
+          "residualNamedMinusDirect": null,
+          "units": "CAD whole dollars",
+          "residualCause": null
+        },
+        "printedControls": [
+          {
+            "field": "pay",
+            "printedControl": 30868113,
+            "rowSum": 30868113,
+            "residual": 0,
+            "basis": "total employees minus below-threshold aggregate"
+          },
+          {
+            "field": "expenses",
+            "printedControl": 857619,
+            "rowSum": 857619,
+            "residual": 0,
+            "basis": "total employees minus below-threshold aggregate"
+          }
+        ],
+        "compiledPartitionRetained": true,
+        "evidenceFile": "evidence/bcfsa-2023-24.json"
+      }
+    },
+    {
+      "id": "follow-through-bcfsa-2024-25-employees",
+      "employerSlug": "bc-financial-services-authority",
+      "employerName": "BC Financial Services Authority",
+      "sector": "Crown corporations",
+      "year": "2024/25",
+      "periodType": "fiscal",
+      "periodStart": "2024-04-01",
+      "periodEnd": "2025-03-31",
+      "title": "BC Financial Services Authority: named employee remuneration and expenses, 2024/25",
+      "sourceUrl": "https://www.bcfsa.ca/media/4308/download",
+      "sourceIndexUrl": "https://www.bcfsa.ca/about-us/what-we-do/corporate-publications",
+      "sha256": "08a29ad9ad5917338a514584ef32518115dd81c0b6d19e2cc6f1a33127e82f0e",
+      "pdfBytes": 762980,
+      "file": "bcfsa-2024-25.json.gzip",
+      "dataSha256": "53da1cb473114f72ce993b09620f2b9e5bcd1abc1f8ca1e54f1a331b67a715fb",
+      "normalizedSha256": "c19622520154c1129d878781ade1fb18d46342764cb91f6f6b85bcce8b460b14",
+      "rowCount": 286,
+      "totalRemuneration": 35689351,
+      "totalExpenses": 1109428,
+      "pages": [
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "status": "verified",
+      "verifiedOn": "2026-11-02",
+      "category": "employee-remuneration",
+      "scope": "named-employees-over-threshold",
+      "completeEmployeeSchedule": true,
+      "threshold": 75000,
+      "thresholdComparison": ">",
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "amountPrecision": "whole-dollar",
+      "nameDisclosure": "as-published",
+      "positionDisclosure": "not-published",
+      "sourceKind": "official-statement-of-financial-information",
+      "retainCompiledPartition": true,
+      "notes": [
+        "Complete named employee schedule; board/director, supplier, unnamed, aggregate and reconciliation rows excluded. Source names/initials retained without name expansion or identity inference; comma spacing normalized. Repeated names remain distinct observations.",
+        "The reported remuneration column is preserved as published and is not assumed to be base salary. Expenses remain separate. Printed dash/blank expense cells are null; printed numeric zeros remain 0. No amount is changed to reconcile controls.",
+        "No separate base-salary definition is imposed on the Remuneration column. Pension/other benefits, employer CPP/EI, accruals and other reconciliation items are not allocated to individual employees.",
+        "The regular-salary definition of Compensation appears in the severance statement; it is retained as context and is not substituted for the table’s Remuneration label."
+      ],
+      "provenanceFile": "evidence/bcfsa-2024-25.json",
+      "provenanceSha256": "97b41b3e4f086ea457a6c1ed081eba6aad7c2700b896007fbf0264fd0d5472db",
+      "validation": {
+        "originalFingerprintVerified": true,
+        "sourcePdfPageCount": 21,
+        "independentReaders": [
+          "PyMuPDF positioned words",
+          "Poppler pdftotext -layout"
+        ],
+        "everyRowFieldAgreement": true,
+        "rowsIndependentlyChecked": 286,
+        "completeEmployeeSchedule": true,
+        "physicalPagesVisuallyReviewed": [
+          15
+        ],
+        "pageRowCounts": [
+          [
+            8,
+            20
+          ],
+          [
+            9,
+            42
+          ],
+          [
+            10,
+            42
+          ],
+          [
+            11,
+            42
+          ],
+          [
+            12,
+            42
+          ],
+          [
+            13,
+            42
+          ],
+          [
+            14,
+            42
+          ],
+          [
+            15,
+            14
+          ]
+        ],
+        "sourceControls": {
+          "physicalPage": 15,
+          "printedTotalEmployees": [
+            43510330,
+            1278742
+          ],
+          "printedBelowThreshold": [
+            7820979,
+            169314
+          ],
+          "printedDirectNamedSubtotal": null,
+          "impliedNamedControl": [
+            35689351,
+            1109428
+          ],
+          "observedAllNamedRows": [
+            35689351,
+            1109428
+          ],
+          "residualNamedMinusImplied": [
+            0,
+            0
+          ],
+          "residualNamedMinusDirect": null,
+          "units": "CAD whole dollars",
+          "residualCause": null
+        },
+        "printedControls": [
+          {
+            "field": "pay",
+            "printedControl": 35689351,
+            "rowSum": 35689351,
+            "residual": 0,
+            "basis": "total employees minus below-threshold aggregate"
+          },
+          {
+            "field": "expenses",
+            "printedControl": 1109428,
+            "rowSum": 1109428,
+            "residual": 0,
+            "basis": "total employees minus below-threshold aggregate"
+          }
+        ],
+        "compiledPartitionRetained": true,
+        "evidenceFile": "evidence/bcfsa-2024-25.json"
+      }
+    },
+    {
+      "id": "follow-through-bcfsa-2025-26-employees",
+      "employerSlug": "bc-financial-services-authority",
+      "employerName": "BC Financial Services Authority",
+      "sector": "Crown corporations",
+      "year": "2025/26",
+      "periodType": "fiscal",
+      "periodStart": "2025-04-01",
+      "periodEnd": "2026-03-31",
+      "title": "BC Financial Services Authority: named employee remuneration and expenses, 2025/26",
+      "sourceUrl": "https://www.bcfsa.ca/media/4946/download",
+      "sourceIndexUrl": "https://www.bcfsa.ca/about-us/what-we-do/corporate-publications",
+      "sha256": "7cd2c5a88799970cc4fb7b635c2a79ab6aa8266a120022d377227b7b0e50c369",
+      "pdfBytes": 606876,
+      "file": "bcfsa-2025-26.json.gzip",
+      "dataSha256": "8585f304bf44feaeda67110a1b1d991ee0f843eda51d3512faba7f2786b58e36",
+      "normalizedSha256": "9b7b9f1f6bac7b6823136272079b92e71ba17bd25ea952e23161bf4f8a057ae9",
+      "rowCount": 307,
+      "totalRemuneration": 38600921,
+      "totalExpenses": 649730,
+      "pages": [
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17
+      ],
+      "status": "verified",
+      "verifiedOn": "2026-11-02",
+      "category": "employee-remuneration",
+      "scope": "named-employees-over-threshold",
+      "completeEmployeeSchedule": true,
+      "threshold": 75000,
+      "thresholdComparison": ">",
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "amountPrecision": "whole-dollar",
+      "nameDisclosure": "as-published",
+      "positionDisclosure": "not-published",
+      "sourceKind": "official-statement-of-financial-information",
+      "retainCompiledPartition": true,
+      "notes": [
+        "Complete named employee schedule; board/director, supplier, unnamed, aggregate and reconciliation rows excluded. Source names/initials retained without name expansion or identity inference; comma spacing normalized. Repeated names remain distinct observations.",
+        "The reported remuneration column is preserved as published and is not assumed to be base salary. Expenses remain separate. Printed dash/blank expense cells are null; printed numeric zeros remain 0. No amount is changed to reconcile controls.",
+        "No separate base-salary definition is imposed on the Remuneration column. Pension/other benefits, employer CPP/EI, accruals and other reconciliation items are not allocated to individual employees.",
+        "The regular-salary definition of Compensation appears in the severance statement; it is retained as context and is not substituted for the table’s Remuneration label."
+      ],
+      "provenanceFile": "evidence/bcfsa-2025-26.json",
+      "provenanceSha256": "b81e161108cd38d5a8dd9784fec06212eaa9894551c953a3b348daa79adc78f4",
+      "validation": {
+        "originalFingerprintVerified": true,
+        "sourcePdfPageCount": 22,
+        "independentReaders": [
+          "PyMuPDF positioned words",
+          "Poppler pdftotext -layout"
+        ],
+        "everyRowFieldAgreement": true,
+        "rowsIndependentlyChecked": 307,
+        "completeEmployeeSchedule": true,
+        "physicalPagesVisuallyReviewed": [
+          17
+        ],
+        "pageRowCounts": [
+          [
+            9,
+            18
+          ],
+          [
+            10,
+            38
+          ],
+          [
+            11,
+            38
+          ],
+          [
+            12,
+            38
+          ],
+          [
+            13,
+            38
+          ],
+          [
+            14,
+            38
+          ],
+          [
+            15,
+            38
+          ],
+          [
+            16,
+            38
+          ],
+          [
+            17,
+            23
+          ]
+        ],
+        "sourceControls": {
+          "physicalPage": 17,
+          "printedTotalEmployees": [
+            45269545,
+            707322
+          ],
+          "printedBelowThreshold": [
+            6668624,
+            57592
+          ],
+          "printedDirectNamedSubtotal": null,
+          "impliedNamedControl": [
+            38600921,
+            649730
+          ],
+          "observedAllNamedRows": [
+            38600921,
+            649730
+          ],
+          "residualNamedMinusImplied": [
+            0,
+            0
+          ],
+          "residualNamedMinusDirect": null,
+          "units": "CAD whole dollars",
+          "residualCause": null
+        },
+        "printedControls": [
+          {
+            "field": "pay",
+            "printedControl": 38600921,
+            "rowSum": 38600921,
+            "residual": 0,
+            "basis": "total employees minus below-threshold aggregate"
+          },
+          {
+            "field": "expenses",
+            "printedControl": 649730,
+            "rowSum": 649730,
+            "residual": 0,
+            "basis": "total employees minus below-threshold aggregate"
+          }
+        ],
+        "compiledPartitionRetained": true,
+        "evidenceFile": "evidence/bcfsa-2025-26.json"
+      }
+    },
+    {
+      "id": "follow-through-bcib-2019-20-employees",
+      "employerSlug": "bc-infrastructure-benefits",
+      "employerName": "BC Infrastructure Benefits Inc.",
+      "sector": "Crown corporations",
+      "year": "2019/20",
+      "periodType": "fiscal",
+      "periodStart": "2019-04-01",
+      "periodEnd": "2020-03-31",
+      "title": "BC Infrastructure Benefits Inc.: named employee remuneration and expenses, 2019/20",
+      "sourceUrl": "https://bcib.ca/wp-content/uploads/2023/05/BCIB-FP-2020-SOFI-20200924-Final.pdf",
+      "sourceIndexUrl": "https://bcib.ca/reporting-resources/",
+      "sha256": "8fc45100a9731074ada394e55cf1e308b602aa53d0591329bd66034570565d2d",
+      "pdfBytes": 1292294,
+      "file": "bcib-2019-20.json.gzip",
+      "dataSha256": "13aca52b669700ad6d1da0c8124be5a846b6579144ca6c33500234e35a4e6c31",
+      "normalizedSha256": "ce4a06a1abefaf736522bf4e3fd162fbd5a7afd66814afe35fd1051a2da1b6f5",
+      "rowCount": 13,
+      "totalRemuneration": 1488004,
+      "totalExpenses": 83395,
+      "pages": [
+        20
+      ],
+      "status": "verified",
+      "verifiedOn": "2026-11-02",
+      "category": "employee-remuneration",
+      "scope": "named-employees-over-threshold",
+      "completeEmployeeSchedule": true,
+      "threshold": 75000,
+      "thresholdComparison": ">",
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "amountPrecision": "whole-dollar",
+      "nameDisclosure": "as-published",
+      "positionDisclosure": "not-published",
+      "sourceKind": "official-statement-of-financial-information",
+      "retainCompiledPartition": true,
+      "notes": [
+        "Complete named employee schedule; board/director, supplier, unnamed, aggregate and reconciliation rows excluded. Source names/initials retained without name expansion or identity inference; comma spacing normalized. Repeated names remain distinct observations.",
+        "The reported remuneration column is preserved as published and is not assumed to be base salary. Expenses remain separate. Printed dash/blank expense cells are null; printed numeric zeros remain 0. No amount is changed to reconcile controls.",
+        "Note 1: Remuneration includes base salary and other compensation for 2019/20.",
+        "Note 2: Majority of expenses are related to travel to work sites.",
+        "All named employees in this legal employer’s published employee table are included. Earlier reports do not identify an individual employee’s corporate/project cohort; no category or title is inferred."
+      ],
+      "provenanceFile": "evidence/bcib-2019-20.json",
+      "provenanceSha256": "eef8231078515fdbf55fd06a38cd94b83a66936ab7ca22364da21994c68a436f",
+      "validation": {
+        "originalFingerprintVerified": true,
+        "sourcePdfPageCount": 25,
+        "independentReaders": [
+          "PyMuPDF positioned words",
+          "Poppler pdftotext -layout"
+        ],
+        "everyRowFieldAgreement": true,
+        "rowsIndependentlyChecked": 13,
+        "completeEmployeeSchedule": true,
+        "physicalPagesVisuallyReviewed": [
+          20
+        ],
+        "pageRowCounts": [
+          [
+            20,
+            13
+          ]
+        ],
+        "sourceControls": {
+          "physicalPage": 20,
+          "printedTotalEmployees": [
+            3248680,
+            110228
+          ],
+          "printedBelowThreshold": [
+            1760676,
+            26833
+          ],
+          "printedDirectNamedSubtotal": null,
+          "impliedNamedControl": [
+            1488004,
+            83395
+          ],
+          "observedAllNamedRows": [
+            1488004,
+            83395
+          ],
+          "residualNamedMinusImplied": [
+            0,
+            0
+          ],
+          "residualNamedMinusDirect": null,
+          "units": "CAD whole dollars",
+          "residualCause": null
+        },
+        "printedControls": [
+          {
+            "field": "pay",
+            "printedControl": 1488004,
+            "rowSum": 1488004,
+            "residual": 0,
+            "basis": "total employees minus below-threshold aggregate"
+          },
+          {
+            "field": "expenses",
+            "printedControl": 83395,
+            "rowSum": 83395,
+            "residual": 0,
+            "basis": "total employees minus below-threshold aggregate"
+          }
+        ],
+        "compiledPartitionRetained": true,
+        "evidenceFile": "evidence/bcib-2019-20.json"
+      }
+    },
+    {
+      "id": "follow-through-bcib-2020-21-employees",
+      "employerSlug": "bc-infrastructure-benefits",
+      "employerName": "BC Infrastructure Benefits Inc.",
+      "sector": "Crown corporations",
+      "year": "2020/21",
+      "periodType": "fiscal",
+      "periodStart": "2020-04-01",
+      "periodEnd": "2021-03-31",
+      "title": "BC Infrastructure Benefits Inc.: named employee remuneration and expenses, 2020/21",
+      "sourceUrl": "https://bcib.ca/wp-content/uploads/2023/05/2020-2021-bcib-statement-of-financial-information.pdf",
+      "sourceIndexUrl": "https://bcib.ca/reporting-resources/",
+      "sha256": "c64a64b970f586550d921952d5f0fc018130eb651f40f6bd1b7d21673bdc3836",
+      "pdfBytes": 1472598,
+      "file": "bcib-2020-21.json.gzip",
+      "dataSha256": "3388702663b4634b0a4d127d22daa031c39737bcd60200d4b2ecc395086145ab",
+      "normalizedSha256": "6f18bb4cce8b92554a4d324f4a2c527219179cd47e8d9911d9c853897be7440f",
+      "rowCount": 28,
+      "totalRemuneration": 3128895,
+      "totalExpenses": 40058,
+      "pages": [
+        24
+      ],
+      "status": "verified",
+      "verifiedOn": "2026-11-02",
+      "category": "employee-remuneration",
+      "scope": "named-employees-over-threshold",
+      "completeEmployeeSchedule": true,
+      "threshold": 75000,
+      "thresholdComparison": ">",
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "amountPrecision": "whole-dollar",
+      "nameDisclosure": "as-published",
+      "positionDisclosure": "not-published",
+      "sourceKind": "official-statement-of-financial-information",
+      "retainCompiledPartition": true,
+      "notes": [
+        "Complete named employee schedule; board/director, supplier, unnamed, aggregate and reconciliation rows excluded. Source names/initials retained without name expansion or identity inference; comma spacing normalized. Repeated names remain distinct observations.",
+        "The reported remuneration column is preserved as published and is not assumed to be base salary. Expenses remain separate. Printed dash/blank expense cells are null; printed numeric zeros remain 0. No amount is changed to reconcile controls.",
+        "Note 1: Remuneration includes base salary and other compensation for 2020/21.",
+        "Note 2: Majority of expenses are related to travel to work sites.",
+        "All named employees in this legal employer’s published employee table are included. Earlier reports do not identify an individual employee’s corporate/project cohort; no category or title is inferred."
+      ],
+      "provenanceFile": "evidence/bcib-2020-21.json",
+      "provenanceSha256": "b5faea94aee55fb966a2813b6e14170c9eaac99ab5ea5cb89e4bb5a6820d16da",
+      "validation": {
+        "originalFingerprintVerified": true,
+        "sourcePdfPageCount": 29,
+        "independentReaders": [
+          "PyMuPDF positioned words",
+          "Poppler pdftotext -layout"
+        ],
+        "everyRowFieldAgreement": true,
+        "rowsIndependentlyChecked": 28,
+        "completeEmployeeSchedule": true,
+        "physicalPagesVisuallyReviewed": [
+          24
+        ],
+        "pageRowCounts": [
+          [
+            24,
+            28
+          ]
+        ],
+        "sourceControls": {
+          "physicalPage": 24,
+          "printedTotalEmployees": [
+            9232155,
+            68990
+          ],
+          "printedBelowThreshold": [
+            6103261,
+            28933
+          ],
+          "printedDirectNamedSubtotal": null,
+          "impliedNamedControl": [
+            3128894,
+            40057
+          ],
+          "observedAllNamedRows": [
+            3128895,
+            40058
+          ],
+          "residualNamedMinusImplied": [
+            1,
+            1
+          ],
+          "residualNamedMinusDirect": null,
+          "units": "CAD whole dollars",
+          "residualCause": "Unknown; preserved as printed."
+        },
+        "printedControls": [
+          {
+            "field": "pay",
+            "printedControl": 3128894,
+            "rowSum": 3128895,
+            "residual": 1,
+            "basis": "total employees minus below-threshold aggregate"
+          },
+          {
+            "field": "expenses",
+            "printedControl": 40057,
+            "rowSum": 40058,
+            "residual": 1,
+            "basis": "total employees minus below-threshold aggregate"
+          }
+        ],
+        "compiledPartitionRetained": true,
+        "evidenceFile": "evidence/bcib-2020-21.json"
+      },
+      "publicWarning": "Published named rows sum to $3,128,895 remuneration and $40,058 expenses, differing from the printed total less below-threshold controls by +$1 and +$1. Original row values are retained; causes unknown."
+    },
+    {
+      "id": "follow-through-bcib-2021-22-employees",
+      "employerSlug": "bc-infrastructure-benefits",
+      "employerName": "BC Infrastructure Benefits Inc.",
+      "sector": "Crown corporations",
+      "year": "2021/22",
+      "periodType": "fiscal",
+      "periodStart": "2021-04-01",
+      "periodEnd": "2022-03-31",
+      "title": "BC Infrastructure Benefits Inc.: named employee remuneration and expenses, 2021/22",
+      "sourceUrl": "https://bcib.ca/wp-content/uploads/2023/05/BCIB-Statement-of-Financial-Information-2022-V2-Approved-by-the-Board-Sep-15-2022.pdf",
+      "sourceIndexUrl": "https://bcib.ca/reporting-resources/",
+      "sha256": "ce0389d6690e1397e2d3a7a74eec98d093e8bc5dd4cf588772e9ee909d31f2b0",
+      "pdfBytes": 2892674,
+      "file": "bcib-2021-22.json.gzip",
+      "dataSha256": "cf5786f946099362971bfc04575b2d4de62beada27cb8564c5ac2d63330ffdbd",
+      "normalizedSha256": "5b43d597c7de41294282e7c48aabe4c258dce7a3f6bf24ba182a01e8e95050da",
+      "rowCount": 185,
+      "totalRemuneration": 21048966,
+      "totalExpenses": 51339,
+      "pages": [
+        24,
+        25,
+        26,
+        27,
+        28
+      ],
+      "status": "verified",
+      "verifiedOn": "2026-11-02",
+      "category": "employee-remuneration",
+      "scope": "named-employees-over-threshold",
+      "completeEmployeeSchedule": true,
+      "threshold": 75000,
+      "thresholdComparison": ">",
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "amountPrecision": "whole-dollar",
+      "nameDisclosure": "as-published",
+      "positionDisclosure": "not-published",
+      "sourceKind": "official-statement-of-financial-information",
+      "retainCompiledPartition": true,
+      "notes": [
+        "Complete named employee schedule; board/director, supplier, unnamed, aggregate and reconciliation rows excluded. Source names/initials retained without name expansion or identity inference; comma spacing normalized. Repeated names remain distinct observations.",
+        "The reported remuneration column is preserved as published and is not assumed to be base salary. Expenses remain separate. Printed dash/blank expense cells are null; printed numeric zeros remain 0. No amount is changed to reconcile controls.",
+        "Note 1: Remuneration includes base salary and other compensation for 2021/22.",
+        "Note 2: Majority of expenses are related to travel to work sites.",
+        "All named employees in this legal employer’s published employee table are included. Earlier reports do not identify an individual employee’s corporate/project cohort; no category or title is inferred."
+      ],
+      "provenanceFile": "evidence/bcib-2021-22.json",
+      "provenanceSha256": "000e585cbc9ef4002d8463adb3db182b60d221c90d006d1a6496ee7474ec31f6",
+      "validation": {
+        "originalFingerprintVerified": true,
+        "sourcePdfPageCount": 32,
+        "independentReaders": [
+          "PyMuPDF positioned words",
+          "Poppler pdftotext -layout"
+        ],
+        "everyRowFieldAgreement": true,
+        "rowsIndependentlyChecked": 185,
+        "completeEmployeeSchedule": true,
+        "physicalPagesVisuallyReviewed": [
+          28
+        ],
+        "pageRowCounts": [
+          [
+            24,
+            39
+          ],
+          [
+            25,
+            40
+          ],
+          [
+            26,
+            40
+          ],
+          [
+            27,
+            42
+          ],
+          [
+            28,
+            24
+          ]
+        ],
+        "sourceControls": {
+          "physicalPage": 28,
+          "printedTotalEmployees": [
+            47721390,
+            54824
+          ],
+          "printedBelowThreshold": [
+            26672430,
+            3487
+          ],
+          "printedDirectNamedSubtotal": null,
+          "impliedNamedControl": [
+            21048960,
+            51337
+          ],
+          "observedAllNamedRows": [
+            21048966,
+            51339
+          ],
+          "residualNamedMinusImplied": [
+            6,
+            2
+          ],
+          "residualNamedMinusDirect": null,
+          "units": "CAD whole dollars",
+          "residualCause": "Unknown; preserved as printed."
+        },
+        "printedControls": [
+          {
+            "field": "pay",
+            "printedControl": 21048960,
+            "rowSum": 21048966,
+            "residual": 6,
+            "basis": "total employees minus below-threshold aggregate"
+          },
+          {
+            "field": "expenses",
+            "printedControl": 51337,
+            "rowSum": 51339,
+            "residual": 2,
+            "basis": "total employees minus below-threshold aggregate"
+          }
+        ],
+        "compiledPartitionRetained": true,
+        "evidenceFile": "evidence/bcib-2021-22.json"
+      },
+      "publicWarning": "Published named rows sum to $21,048,966 remuneration and $51,339 expenses, differing from the printed total less below-threshold controls by +$6 and +$2. Original row values are retained; causes unknown."
+    },
+    {
+      "id": "follow-through-bcib-2022-23-employees",
+      "employerSlug": "bc-infrastructure-benefits",
+      "employerName": "BC Infrastructure Benefits Inc.",
+      "sector": "Crown corporations",
+      "year": "2022/23",
+      "periodType": "fiscal",
+      "periodStart": "2022-04-01",
+      "periodEnd": "2023-03-31",
+      "title": "BC Infrastructure Benefits Inc.: named employee remuneration and expenses, 2022/23",
+      "sourceUrl": "https://bcib.ca/wp-content/uploads/BCIB-SOFI-2023.pdf",
+      "sourceIndexUrl": "https://bcib.ca/reporting-resources/",
+      "sha256": "6e08d38733ed1f9c07b30dd7679332edca9db67541197b9350ee6dc13735bfb4",
+      "pdfBytes": 2906431,
+      "file": "bcib-2022-23.json.gzip",
+      "dataSha256": "0f7e019d6bf941e2af1e4bad4b00c5465218a5d70e48031cd95431f6a3788336",
+      "normalizedSha256": "3cb2b48aa22a9a2a4726e4d8a3fa4fdb9788935590dd26a7d478e5d68597d546",
+      "rowCount": 558,
+      "totalRemuneration": 68828778,
+      "totalExpenses": 3880632,
+      "pages": [
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31
+      ],
+      "status": "verified",
+      "verifiedOn": "2026-11-02",
+      "category": "employee-remuneration",
+      "scope": "named-employees-over-threshold",
+      "completeEmployeeSchedule": true,
+      "threshold": 75000,
+      "thresholdComparison": ">",
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "amountPrecision": "whole-dollar",
+      "nameDisclosure": "as-published",
+      "positionDisclosure": "not-published",
+      "sourceKind": "official-statement-of-financial-information",
+      "retainCompiledPartition": true,
+      "notes": [
+        "Complete named employee schedule; board/director, supplier, unnamed, aggregate and reconciliation rows excluded. Source names/initials retained without name expansion or identity inference; comma spacing normalized. Repeated names remain distinct observations.",
+        "The reported remuneration column is preserved as published and is not assumed to be base salary. Expenses remain separate. Printed dash/blank expense cells are null; printed numeric zeros remain 0. No amount is changed to reconcile controls.",
+        "Note 1: Remuneration includes base salary and other compensation for 2022/23.",
+        "Note 2: Majority of expenses are related to employee travel and living out allowances.",
+        "All named employees in this legal employer’s published employee table are included. Earlier reports do not identify an individual employee’s corporate/project cohort; no category or title is inferred."
+      ],
+      "provenanceFile": "evidence/bcib-2022-23.json",
+      "provenanceSha256": "b88bd02676fb1e92bc7b61cace66cdfe594538e0233ec7ea69682a577f94b42d",
+      "validation": {
+        "originalFingerprintVerified": true,
+        "sourcePdfPageCount": 35,
+        "independentReaders": [
+          "PyMuPDF positioned words",
+          "Poppler pdftotext -layout"
+        ],
+        "everyRowFieldAgreement": true,
+        "rowsIndependentlyChecked": 558,
+        "completeEmployeeSchedule": true,
+        "physicalPagesVisuallyReviewed": [
+          25,
+          31
+        ],
+        "pageRowCounts": [
+          [
+            25,
+            88
+          ],
+          [
+            26,
+            94
+          ],
+          [
+            27,
+            94
+          ],
+          [
+            28,
+            94
+          ],
+          [
+            29,
+            94
+          ],
+          [
+            30,
+            84
+          ],
+          [
+            31,
+            10
+          ]
+        ],
+        "sourceControls": {
+          "physicalPage": 31,
+          "printedTotalEmployees": [
+            109993844,
+            5878482
+          ],
+          "printedBelowThreshold": [
+            41165068,
+            1997852
+          ],
+          "printedDirectNamedSubtotal": null,
+          "impliedNamedControl": [
+            68828776,
+            3880630
+          ],
+          "observedAllNamedRows": [
+            68828778,
+            3880632
+          ],
+          "residualNamedMinusImplied": [
+            2,
+            2
+          ],
+          "residualNamedMinusDirect": null,
+          "units": "CAD whole dollars",
+          "residualCause": "Unknown; preserved as printed."
+        },
+        "printedControls": [
+          {
+            "field": "pay",
+            "printedControl": 68828776,
+            "rowSum": 68828778,
+            "residual": 2,
+            "basis": "total employees minus below-threshold aggregate"
+          },
+          {
+            "field": "expenses",
+            "printedControl": 3880630,
+            "rowSum": 3880632,
+            "residual": 2,
+            "basis": "total employees minus below-threshold aggregate"
+          }
+        ],
+        "compiledPartitionRetained": true,
+        "evidenceFile": "evidence/bcib-2022-23.json"
+      },
+      "publicWarning": "Published named rows sum to $68,828,778 remuneration and $3,880,632 expenses, differing from the printed total less below-threshold controls by +$2 and +$2. Original row values are retained; causes unknown."
+    },
+    {
+      "id": "follow-through-bcib-2023-24-employees",
+      "employerSlug": "bc-infrastructure-benefits",
+      "employerName": "BC Infrastructure Benefits Inc.",
+      "sector": "Crown corporations",
+      "year": "2023/24",
+      "periodType": "fiscal",
+      "periodStart": "2023-04-01",
+      "periodEnd": "2024-03-31",
+      "title": "BC Infrastructure Benefits Inc.: named employee remuneration and expenses, 2023/24",
+      "sourceUrl": "https://bcib.ca/wp-content/uploads/BCIB-Statement-of-Financial-Information-FY2024-Board-Approved.pdf",
+      "sourceIndexUrl": "https://bcib.ca/reporting-resources/",
+      "sha256": "ae2cfe7907a481f1517ce98c52899fe0d20ecfe149d4bffedb52cffc80973efb",
+      "pdfBytes": 5878758,
+      "file": "bcib-2023-24.json.gzip",
+      "dataSha256": "dbb3f1356a59ab1246f4ceab0895793ae6da611faf2c1c80df879ee02e37e214",
+      "normalizedSha256": "dd8d26d4d8412a52f927eb92295265cbe963bcf2637790a18f2285f34915b9a2",
+      "rowCount": 805,
+      "totalRemuneration": 100788239,
+      "totalExpenses": 4701607,
+      "pages": [
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33
+      ],
+      "status": "verified",
+      "verifiedOn": "2026-11-02",
+      "category": "employee-remuneration",
+      "scope": "named-employees-over-threshold",
+      "completeEmployeeSchedule": true,
+      "threshold": 75000,
+      "thresholdComparison": ">",
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "amountPrecision": "whole-dollar",
+      "nameDisclosure": "as-published",
+      "positionDisclosure": "not-published",
+      "sourceKind": "official-statement-of-financial-information",
+      "retainCompiledPartition": true,
+      "notes": [
+        "Complete named employee schedule; board/director, supplier, unnamed, aggregate and reconciliation rows excluded. Source names/initials retained without name expansion or identity inference; comma spacing normalized. Repeated names remain distinct observations.",
+        "The reported remuneration column is preserved as published and is not assumed to be base salary. Expenses remain separate. Printed dash/blank expense cells are null; printed numeric zeros remain 0. No amount is changed to reconcile controls.",
+        "Note 1: Remuneration includes base salary and other compensation for 2023/24.",
+        "Note 2: Majority of expenses are related to employee travel and living out allowances.",
+        "All named employees in this legal employer’s published employee table are included. Earlier reports do not identify an individual employee’s corporate/project cohort; no category or title is inferred.",
+        "Note 3: 95% of remuneration are for CBA employees. This is an aggregate statement, not an individual employee classification."
+      ],
+      "provenanceFile": "evidence/bcib-2023-24.json",
+      "provenanceSha256": "bd6fce738e40d811e47ab7d28a2915a1890201f24488fbade6144956a2a6bfba",
+      "validation": {
+        "originalFingerprintVerified": true,
+        "sourcePdfPageCount": 38,
+        "independentReaders": [
+          "PyMuPDF positioned words",
+          "Poppler pdftotext -layout"
+        ],
+        "everyRowFieldAgreement": true,
+        "rowsIndependentlyChecked": 805,
+        "completeEmployeeSchedule": true,
+        "physicalPagesVisuallyReviewed": [
+          24,
+          33
+        ],
+        "pageRowCounts": [
+          [
+            24,
+            80
+          ],
+          [
+            25,
+            84
+          ],
+          [
+            26,
+            84
+          ],
+          [
+            27,
+            84
+          ],
+          [
+            28,
+            84
+          ],
+          [
+            29,
+            84
+          ],
+          [
+            30,
+            84
+          ],
+          [
+            31,
+            84
+          ],
+          [
+            32,
+            84
+          ],
+          [
+            33,
+            53
+          ]
+        ],
+        "sourceControls": {
+          "physicalPage": 33,
+          "printedTotalEmployees": [
+            152231678,
+            9031268
+          ],
+          "printedBelowThreshold": [
+            51443442,
+            4329664
+          ],
+          "printedDirectNamedSubtotal": null,
+          "impliedNamedControl": [
+            100788236,
+            4701604
+          ],
+          "observedAllNamedRows": [
+            100788239,
+            4701607
+          ],
+          "residualNamedMinusImplied": [
+            3,
+            3
+          ],
+          "residualNamedMinusDirect": null,
+          "units": "CAD whole dollars",
+          "residualCause": "Unknown; preserved as printed."
+        },
+        "printedControls": [
+          {
+            "field": "pay",
+            "printedControl": 100788236,
+            "rowSum": 100788239,
+            "residual": 3,
+            "basis": "total employees minus below-threshold aggregate"
+          },
+          {
+            "field": "expenses",
+            "printedControl": 4701604,
+            "rowSum": 4701607,
+            "residual": 3,
+            "basis": "total employees minus below-threshold aggregate"
+          }
+        ],
+        "compiledPartitionRetained": true,
+        "evidenceFile": "evidence/bcib-2023-24.json"
+      },
+      "publicWarning": "Published named rows sum to $100,788,239 remuneration and $4,701,607 expenses, differing from the printed total less below-threshold controls by +$3 and +$3. Original row values are retained; causes unknown."
+    },
+    {
+      "id": "follow-through-bcib-2024-25-employees",
+      "employerSlug": "bc-infrastructure-benefits",
+      "employerName": "BC Infrastructure Benefits Inc.",
+      "sector": "Crown corporations",
+      "year": "2024/25",
+      "periodType": "fiscal",
+      "periodStart": "2024-04-01",
+      "periodEnd": "2025-03-31",
+      "title": "BC Infrastructure Benefits Inc.: named employee remuneration and expenses, 2024/25",
+      "sourceUrl": "https://bcib.ca/wp-content/uploads/BCIB-Statement-of-Financial-Information-FY2025.pdf",
+      "sourceIndexUrl": "https://bcib.ca/reporting-resources/",
+      "sha256": "2b61afed914702c33ca882c92c8cc775f56c20cdddd0c8063e8a57b28bd51dba",
+      "pdfBytes": 1472455,
+      "file": "bcib-2024-25.json.gzip",
+      "dataSha256": "cd86fe8a0d33e2a63903a75f2d61f2ae0a9a45de3084b7c9d19963cf7f9491d4",
+      "normalizedSha256": "f5dbd89d86381830a988eef23daba33ab4e1fb8770e43ea7abcc8db4165e7c9a",
+      "rowCount": 1122,
+      "totalRemuneration": 151049126,
+      "totalExpenses": 4404242,
+      "pages": [
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38
+      ],
+      "status": "verified",
+      "verifiedOn": "2026-11-02",
+      "category": "employee-remuneration",
+      "scope": "named-employees-over-threshold",
+      "completeEmployeeSchedule": true,
+      "threshold": 75000,
+      "thresholdComparison": ">",
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "amountPrecision": "whole-dollar",
+      "nameDisclosure": "as-published",
+      "positionDisclosure": "not-published",
+      "sourceKind": "official-statement-of-financial-information",
+      "retainCompiledPartition": true,
+      "notes": [
+        "Complete named employee schedule; board/director, supplier, unnamed, aggregate and reconciliation rows excluded. Source names/initials retained without name expansion or identity inference; comma spacing normalized. Repeated names remain distinct observations.",
+        "The reported remuneration column is preserved as published and is not assumed to be base salary. Expenses remain separate. Printed dash/blank expense cells are null; printed numeric zeros remain 0. No amount is changed to reconcile controls.",
+        "Note 1: Remuneration includes base salary and other compensation for 2024/25.",
+        "Note 2: Majority of expenses are related to employee travel and living out allowances.",
+        "All named employees in this legal employer’s published employee table are included. Earlier reports do not identify an individual employee’s corporate/project cohort; no category or title is inferred.",
+        "The original asterisk denotes unionized skilled trades workers working on select provincial infrastructure projects and collectively representing 95% of total remuneration paid by BCIB. Asterisks are preserved by row index in the evidence receipt and removed from normalized name strings; unmarked employees are not assigned an inferred role."
+      ],
+      "provenanceFile": "evidence/bcib-2024-25.json",
+      "provenanceSha256": "72d80b41242a032d9458f98bc6e36042fa17fa6b5b771df22d66861eae1c8af2",
+      "validation": {
+        "originalFingerprintVerified": true,
+        "sourcePdfPageCount": 42,
+        "independentReaders": [
+          "PyMuPDF positioned words",
+          "Poppler pdftotext -layout"
+        ],
+        "everyRowFieldAgreement": true,
+        "rowsIndependentlyChecked": 1122,
+        "completeEmployeeSchedule": true,
+        "physicalPagesVisuallyReviewed": [
+          38
+        ],
+        "pageRowCounts": [
+          [
+            25,
+            80
+          ],
+          [
+            26,
+            84
+          ],
+          [
+            27,
+            84
+          ],
+          [
+            28,
+            84
+          ],
+          [
+            29,
+            84
+          ],
+          [
+            30,
+            84
+          ],
+          [
+            31,
+            84
+          ],
+          [
+            32,
+            84
+          ],
+          [
+            33,
+            84
+          ],
+          [
+            34,
+            84
+          ],
+          [
+            35,
+            84
+          ],
+          [
+            36,
+            84
+          ],
+          [
+            37,
+            84
+          ],
+          [
+            38,
+            34
+          ]
+        ],
+        "sourceControls": {
+          "physicalPage": 38,
+          "printedTotalEmployees": [
+            206950559,
+            9374798
+          ],
+          "printedBelowThreshold": [
+            55901433,
+            4970556
+          ],
+          "printedDirectNamedSubtotal": [
+            151049126,
+            4404242
+          ],
+          "impliedNamedControl": [
+            151049126,
+            4404242
+          ],
+          "observedAllNamedRows": [
+            151049126,
+            4404242
+          ],
+          "residualNamedMinusImplied": [
+            0,
+            0
+          ],
+          "residualNamedMinusDirect": [
+            0,
+            0
+          ],
+          "units": "CAD whole dollars",
+          "residualCause": null
+        },
+        "printedControls": [
+          {
+            "field": "pay",
+            "printedControl": 151049126,
+            "rowSum": 151049126,
+            "residual": 0,
+            "basis": "total employees minus below-threshold aggregate"
+          },
+          {
+            "field": "expenses",
+            "printedControl": 4404242,
+            "rowSum": 4404242,
+            "residual": 0,
+            "basis": "total employees minus below-threshold aggregate"
+          }
+        ],
+        "compiledPartitionRetained": true,
+        "evidenceFile": "evidence/bcib-2024-25.json"
+      }
+    },
+    {
+      "id": "follow-through-pavco-2024-25-employees",
+      "employerSlug": "bc-pavilion-corporation",
+      "employerName": "B.C. Pavilion Corporation",
+      "sector": "Crown corporations",
+      "year": "2024/25",
+      "periodType": "fiscal",
+      "periodStart": "2024-04-01",
+      "periodEnd": "2025-03-31",
+      "title": "B.C. Pavilion Corporation: named employee remuneration and expenses, 2024/25",
+      "sourceUrl": "https://www.bcpavco.com/pdfs/PavCo%20FY25%20FIA%20Report.pdf",
+      "sourceIndexUrl": "https://www.bcpavco.com/resources/reports/",
+      "sha256": "22664b5f304bb019983acff5a164fd6900478e504f1731e8406dd5175a8185b3",
+      "pdfBytes": 550001,
+      "file": "pavco-2024-25.json.gzip",
+      "dataSha256": "ccc48d941e485ac58d05ae9c0ca35be673bdf361e8ac49b93a8bde7790413569",
+      "normalizedSha256": "a90d4dae9c1fe5e89820436b6f33215bdf87a5d4a78fda711967a976c8d27484",
+      "rowCount": 178,
+      "totalRemuneration": 19215743,
+      "totalExpenses": 739691,
+      "pages": [
+        4,
+        5,
+        6
+      ],
+      "status": "verified",
+      "verifiedOn": "2026-11-02",
+      "category": "employee-remuneration",
+      "scope": "named-employees-over-threshold",
+      "completeEmployeeSchedule": true,
+      "threshold": 75000,
+      "thresholdComparison": ">=",
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "amountPrecision": "whole-dollar",
+      "nameDisclosure": "as-published",
+      "positionDisclosure": "published",
+      "sourceKind": "official-statement-of-financial-information",
+      "retainCompiledPartition": true,
+      "notes": [
+        "Complete named employee schedule; board/director, supplier, unnamed, aggregate and reconciliation rows excluded. Source names/initials retained without name expansion or identity inference; comma spacing normalized. Repeated names remain distinct observations.",
+        "The reported remuneration column is preserved as published and is not assumed to be base salary. Expenses remain separate. Printed dash/blank expense cells are null; printed numeric zeros remain 0. No amount is changed to reconcile controls.",
+        "Source footnote: \"* expenses includes travel related to business development\". Marker is removed from normalized position text; original titles and marker context remain in the source layout evidence."
+      ],
+      "provenanceFile": "evidence/pavco-2024-25.json",
+      "provenanceSha256": "b459cb98b0a3f7ad916db145dc4ee8c808cddd40e06f83ab4a3438243b0998f9",
+      "validation": {
+        "originalFingerprintVerified": true,
+        "sourcePdfPageCount": 36,
+        "independentReaders": [
+          "PyMuPDF positioned words",
+          "Poppler pdftotext -layout"
+        ],
+        "everyRowFieldAgreement": true,
+        "rowsIndependentlyChecked": 178,
+        "completeEmployeeSchedule": true,
+        "physicalPagesVisuallyReviewed": [
+          6
+        ],
+        "pageRowCounts": [
+          [
+            4,
+            53
+          ],
+          [
+            5,
+            75
+          ],
+          [
+            6,
+            50
+          ]
+        ],
+        "sourceControls": {
+          "physicalPage": 6,
+          "printedTotalEmployees": [
+            33996902,
+            766078
+          ],
+          "printedBelowThreshold": [
+            14781165,
+            26389
+          ],
+          "printedDirectNamedSubtotal": [
+            19215737,
+            739689
+          ],
+          "impliedNamedControl": [
+            19215737,
+            739689
+          ],
+          "observedAllNamedRows": [
+            19215743,
+            739691
+          ],
+          "residualNamedMinusImplied": [
+            6,
+            2
+          ],
+          "residualNamedMinusDirect": [
+            6,
+            2
+          ],
+          "units": "CAD whole dollars",
+          "residualCause": "Unknown; preserved as printed."
+        },
+        "printedControls": [
+          {
+            "field": "pay",
+            "printedControl": 19215737,
+            "rowSum": 19215743,
+            "residual": 6,
+            "basis": "total employees minus below-threshold aggregate"
+          },
+          {
+            "field": "expenses",
+            "printedControl": 739689,
+            "rowSum": 739691,
+            "residual": 2,
+            "basis": "total employees minus below-threshold aggregate"
+          }
+        ],
+        "compiledPartitionRetained": true,
+        "evidenceFile": "evidence/pavco-2024-25.json"
+      },
+      "publicWarning": "Published named rows sum to $19,215,743 remuneration and $739,691 expenses, differing from the printed named subtotal by +$6 and +$2. Original row values are retained; causes unknown."
+    }
+  ]
+}

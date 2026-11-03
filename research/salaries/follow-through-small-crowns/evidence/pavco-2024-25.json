@@ -1,0 +1,124 @@
+{
+  "version": 1,
+  "sourceId": "follow-through-pavco-2024-25-employees",
+  "leadId": "additional-source-pavco-2024-25",
+  "sourceUrl": "https://www.bcpavco.com/pdfs/PavCo%20FY25%20FIA%20Report.pdf",
+  "sourceIndexUrl": "https://www.bcpavco.com/resources/reports/",
+  "checkedOn": "2026-11-02",
+  "originalSha256": "22664b5f304bb019983acff5a164fd6900478e504f1731e8406dd5175a8185b3",
+  "originalBytes": 550001,
+  "originalPdfPageCount": 36,
+  "period": {
+    "start": "2024-04-01",
+    "end": "2025-03-31",
+    "partial": false,
+    "evidence": "Original schedule year-ended header; first BCFSA schedule explicitly gives commencement date and period end."
+  },
+  "employeePhysicalPages": [
+    4,
+    5,
+    6
+  ],
+  "retainedSourceEvidencePages": [
+    4,
+    5,
+    6
+  ],
+  "readerNames": [
+    "PyMuPDF positioned words",
+    "Poppler pdftotext -layout"
+  ],
+  "primaryRowCount": 178,
+  "independentRowCount": 178,
+  "everyRowFieldMultisetEqual": true,
+  "primaryNormalizedSha256": "a90d4dae9c1fe5e89820436b6f33215bdf87a5d4a78fda711967a976c8d27484",
+  "independentRowMultisetSha256": "230b10100610b79b4e487cdcb40c2e99a75a86946a04a6a7e9701944ac3a856d",
+  "pageControls": [
+    {
+      "physicalPage": 4,
+      "rowCount": 53,
+      "remuneration": 5675540,
+      "expenses": 202142
+    },
+    {
+      "physicalPage": 5,
+      "rowCount": 75,
+      "remuneration": 7924360,
+      "expenses": 293091
+    },
+    {
+      "physicalPage": 6,
+      "rowCount": 50,
+      "remuneration": 5615843,
+      "expenses": 244458
+    }
+  ],
+  "controls": {
+    "physicalPage": 6,
+    "printedTotalEmployees": [
+      33996902,
+      766078
+    ],
+    "printedBelowThreshold": [
+      14781165,
+      26389
+    ],
+    "printedDirectNamedSubtotal": [
+      19215737,
+      739689
+    ],
+    "impliedNamedControl": [
+      19215737,
+      739689
+    ],
+    "observedAllNamedRows": [
+      19215743,
+      739691
+    ],
+    "residualNamedMinusImplied": [
+      6,
+      2
+    ],
+    "residualNamedMinusDirect": [
+      6,
+      2
+    ],
+    "units": "CAD whole dollars",
+    "residualCause": "Unknown; preserved as printed."
+  },
+  "physicalPagesVisuallyReviewed": [
+    6
+  ],
+  "sourceRowReview": "Every native employee row compared field-for-field between independent PDF readers; source-pixel review of printed control totals and ambiguous glyph/layout cases. Every scan employee row and control additionally visually reviewed.",
+  "explicitZeroExpenseRows": 0,
+  "nullExpenseRows": 60,
+  "negativeExpenseRows": [],
+  "repeatedDisclosedNames": {
+    "Lopez, C": 2
+  },
+  "exactDuplicateSixFieldRows": 0,
+  "excludedScopes": [
+    "board-director-remuneration",
+    "suppliers",
+    "below-threshold-aggregate",
+    "reconciliation-adjustments",
+    "employer-tax-benefit-aggregates"
+  ],
+  "remunerationDefinitionVerbatim": null,
+  "severanceCompensationDefinitionContext": null,
+  "publicWarning": "Published named rows sum to $19,215,743 remuneration and $739,691 expenses, differing from the printed named subtotal by +$6 and +$2. Original row values are retained; causes unknown.",
+  "rawEvidenceFiles": [
+    {
+      "file": "evidence/pavco-2024-25.layout.txt",
+      "sha256": "ca38de6537d200b9e295938f0bd2fd9a32b2bf365ab5ed10a7fd43caae617134"
+    },
+    {
+      "file": "evidence/pavco-2024-25.words.json.gzip",
+      "sha256": "6710ce0879ec6f417513d198d4c94ae5efb38010df18a4b84d46d7a2d0b88443"
+    },
+    {
+      "file": "evidence/pavco-2024-25.controls.png",
+      "sha256": "4073fce99fbc0af33504b9f410d7f1dc6e3d6613b6d092b74115df302c7088cb"
+    }
+  ]
+}

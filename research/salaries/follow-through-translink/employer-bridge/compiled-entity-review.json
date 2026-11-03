@@ -1,0 +1,863 @@
+{
+  "version": 1,
+  "checkedOn": "2026-11-02",
+  "compiledEmployerSlug": "translink",
+  "compiledRows": 12464,
+  "uniqueCompiledFinancialTuples": 12464,
+  "compiledAnonymousRowsExcludedFromEntityProof": 156,
+  "baseline": {
+    "file": "research/salaries/compiled-baseline.json.gzip",
+    "sha256": "410bcae27c9755e387c473ab44d62081a50b46e7330f4d6d5c0b74979d392760",
+    "sourceId": "pssdb-2026-10-22",
+    "snapshotRepositoryCommit": "eabe55708952f945cf2b0733230db31d48146d88",
+    "compiledEditionLabels": [
+      "2017/18",
+      "2020/21",
+      "2023/24"
+    ]
+  },
+  "officialManifest": {
+    "file": "research/salaries/follow-through-translink/sources.json",
+    "sha256": "fb82c4d954ea7beac89e4d201da01302ba1b4abb321e78411003d25358bc5e34"
+  },
+  "officialCohortPins": [
+    {
+      "sourceId": "follow-through-translink-2020-translink-employees",
+      "file": "translink-2020.json.gzip",
+      "dataSha256": "5eb95f893caaa7248659a27b8f91829ab467d79740e66d4b2a4148d0b541446f",
+      "accepted": true,
+      "employerSlug": "translink",
+      "sourcePeriod": "2020",
+      "rowCount": 557
+    },
+    {
+      "sourceId": "follow-through-translink-2020-british-columbia-rapid-transit-company-employees",
+      "file": "british-columbia-rapid-transit-company-2020.json.gzip",
+      "dataSha256": "b4fc2b63aa0fa30a9d714064f0644909c621431d335479a2600e42855d440c53",
+      "accepted": true,
+      "employerSlug": "british-columbia-rapid-transit-company",
+      "sourcePeriod": "2020",
+      "rowCount": 847
+    },
+    {
+      "sourceId": "follow-through-translink-2020-coast-mountain-bus-company-employees",
+      "file": "coast-mountain-bus-company-2020.json.gzip",
+      "dataSha256": "b07190dfed24bbffd979e11acecd95cc6108d6a4d45d590b9f6cf6998ade862c",
+      "accepted": true,
+      "employerSlug": "coast-mountain-bus-company",
+      "sourcePeriod": "2020",
+      "rowCount": 2635
+    },
+    {
+      "sourceId": "follow-through-translink-2020-transit-police-employees",
+      "file": "transit-police-2020.json.gzip",
+      "dataSha256": "93a8cdca57dcc8bbf6813d1490fad127f837e7b500694de31f9113d17228d9a3",
+      "accepted": true,
+      "employerSlug": "transit-police",
+      "sourcePeriod": "2020",
+      "rowCount": 210
+    },
+    {
+      "sourceId": "follow-through-translink-2020-west-coast-express-employees",
+      "file": "west-coast-express-2020.json.gzip",
+      "dataSha256": "66ff78255b76aac0bebc406a0f56ad45cdb6806cbe915b8e1018d77e74c13186",
+      "accepted": true,
+      "employerSlug": "west-coast-express",
+      "sourcePeriod": "2020",
+      "rowCount": 6
+    },
+    {
+      "sourceId": "follow-through-translink-2021-translink-employees",
+      "file": "translink-2021.json.gzip",
+      "dataSha256": "16b10552f11b8c538158698cccc7d8e4a11394014078716b575f6d8bfcf350a8",
+      "accepted": true,
+      "employerSlug": "translink",
+      "sourcePeriod": "2021",
+      "rowCount": 604
+    },
+    {
+      "sourceId": "follow-through-translink-2021-british-columbia-rapid-transit-company-employees",
+      "file": "british-columbia-rapid-transit-company-2021.json.gzip",
+      "dataSha256": "ca003c59d761ca19b3157dd835fd2fa8a732da9035cbc6602c50cb128e7e0926",
+      "accepted": true,
+      "employerSlug": "british-columbia-rapid-transit-company",
+      "sourcePeriod": "2021",
+      "rowCount": 857
+    },
+    {
+      "sourceId": "follow-through-translink-2021-coast-mountain-bus-company-employees",
+      "file": "coast-mountain-bus-company-2021.json.gzip",
+      "dataSha256": "78ff182f60aec31b3130b703d53479780b249eddc041cc13a0172161f9df3c16",
+      "accepted": true,
+      "employerSlug": "coast-mountain-bus-company",
+      "sourcePeriod": "2021",
+      "rowCount": 2496
+    },
+    {
+      "sourceId": "follow-through-translink-2021-transit-police-employees",
+      "file": "transit-police-2021.json.gzip",
+      "dataSha256": "ed74df88c57358c79874fa0ec84458ea0562cee6eea6d7b9682e9f00bde96b69",
+      "accepted": true,
+      "employerSlug": "transit-police",
+      "sourcePeriod": "2021",
+      "rowCount": 229
+    },
+    {
+      "sourceId": "follow-through-translink-2021-west-coast-express-employees",
+      "file": "west-coast-express-2021.json.gzip",
+      "dataSha256": "810effc5716deb4a923652eee1400877849386b75ee14bcf441d9059aeec2f69",
+      "accepted": true,
+      "employerSlug": "west-coast-express",
+      "sourcePeriod": "2021",
+      "rowCount": 7
+    },
+    {
+      "sourceId": "follow-through-translink-2022-translink-employees",
+      "file": "translink-2022.json.gzip",
+      "dataSha256": "965e4aaf43f2ac6342e656d9feb7b40abd95de5dd2ed6d2c7ea3c08e703e38c1",
+      "accepted": true,
+      "employerSlug": "translink",
+      "sourcePeriod": "2022",
+      "rowCount": 578
+    },
+    {
+      "sourceId": "follow-through-translink-2022-british-columbia-rapid-transit-company-employees",
+      "file": "british-columbia-rapid-transit-company-2022.json.gzip",
+      "dataSha256": "215c406368ffc308b7c974040ce4fc8bb1ca5c9e992f1caf5b033380ea32f17c",
+      "accepted": true,
+      "employerSlug": "british-columbia-rapid-transit-company",
+      "sourcePeriod": "2022",
+      "rowCount": 893
+    },
+    {
+      "sourceId": "follow-through-translink-2022-coast-mountain-bus-company-employees",
+      "file": "coast-mountain-bus-company-2022.json.gzip",
+      "dataSha256": "f737c5e48d361fc39b3fb2e1694c36438b9f26e23afbd963d358d271e089b849",
+      "accepted": true,
+      "employerSlug": "coast-mountain-bus-company",
+      "sourcePeriod": "2022",
+      "rowCount": 2874
+    },
+    {
+      "sourceId": "follow-through-translink-2022-transit-police-employees",
+      "file": "transit-police-2022.json.gzip",
+      "dataSha256": "10cdd351e94a312be5c693a3d040d06f46ad218f51cb2d6b6a0bdb42cac3dfbb",
+      "accepted": true,
+      "employerSlug": "transit-police",
+      "sourcePeriod": "2022",
+      "rowCount": 238
+    },
+    {
+      "sourceId": "follow-through-translink-2022-west-coast-express-employees",
+      "file": "west-coast-express-2022.json.gzip",
+      "dataSha256": "7327f6e5ff44ea92ad936e875b7ecba15be27b4caa292a5f1b3ba29ba56ae18f",
+      "accepted": true,
+      "employerSlug": "west-coast-express",
+      "sourcePeriod": "2022",
+      "rowCount": 7
+    },
+    {
+      "sourceId": "follow-through-translink-2023-translink-employees",
+      "file": "translink-2023.json.gzip",
+      "dataSha256": "cb48d36cc86795f93cfaaa78ed819868b06eb98bd910d3501710a33bf972dc09",
+      "accepted": true,
+      "employerSlug": "translink",
+      "sourcePeriod": "2023",
+      "rowCount": 654
+    },
+    {
+      "sourceId": "follow-through-translink-2023-british-columbia-rapid-transit-company-employees",
+      "file": "british-columbia-rapid-transit-company-2023.json.gzip",
+      "dataSha256": "bb4d91f7d809aac233d99c6c992496eba62e1bbb91a2df21b845b79afff40ab0",
+      "accepted": true,
+      "employerSlug": "british-columbia-rapid-transit-company",
+      "sourcePeriod": "2023",
+      "rowCount": 1029
+    },
+    {
+      "sourceId": "follow-through-translink-2023-coast-mountain-bus-company-employees",
+      "file": "coast-mountain-bus-company-2023.json.gzip",
+      "dataSha256": "83933064fed2068bb462464779a1d0f0d9e1a2cf8aa7f6d67576a198f3f3a976",
+      "accepted": true,
+      "employerSlug": "coast-mountain-bus-company",
+      "sourcePeriod": "2023",
+      "rowCount": 3504
+    },
+    {
+      "sourceId": "follow-through-translink-2023-transit-police-employees",
+      "file": "transit-police-2023.json.gzip",
+      "dataSha256": "3a3cd3851a2518404f1bd472a51b359076b40ddbe3cafe200bfd24215018bc39",
+      "accepted": true,
+      "employerSlug": "transit-police",
+      "sourcePeriod": "2023",
+      "rowCount": 233
+    },
+    {
+      "sourceId": "follow-through-translink-2023-west-coast-express-employees",
+      "file": "west-coast-express-2023.json.gzip",
+      "dataSha256": "758203f722159bf49f67c7422f06ad63194167a4013138e4345cdc3aa50d5622",
+      "accepted": true,
+      "employerSlug": "west-coast-express",
+      "sourcePeriod": "2023",
+      "rowCount": 6
+    },
+    {
+      "sourceId": "follow-through-translink-2024-translink-employees",
+      "file": "translink-2024.json.gzip",
+      "dataSha256": "9063d086eda9f2947e37e75a55dec1182f4ac8a9d81d85247bc60ad7e9cc753a",
+      "accepted": true,
+      "employerSlug": "translink",
+      "sourcePeriod": "2024",
+      "rowCount": 799
+    },
+    {
+      "sourceId": "follow-through-translink-2024-british-columbia-rapid-transit-company-employees",
+      "file": "british-columbia-rapid-transit-company-2024.json.gzip",
+      "dataSha256": "bc2218030d2f87176686b6a105234b9c83d861a87f0983a417705afbe692055e",
+      "accepted": true,
+      "employerSlug": "british-columbia-rapid-transit-company",
+      "sourcePeriod": "2024",
+      "rowCount": 1129
+    },
+    {
+      "sourceId": "follow-through-translink-2024-transit-police-employees",
+      "file": "transit-police-2024.json.gzip",
+      "dataSha256": "be45b500b37096920ae3c0484fec88845d44ad3ff482a2d139e9356fe87b3998",
+      "accepted": true,
+      "employerSlug": "transit-police",
+      "sourcePeriod": "2024",
+      "rowCount": 264
+    },
+    {
+      "sourceId": "follow-through-translink-2024-west-coast-express-employees",
+      "file": "west-coast-express-2024.json.gzip",
+      "dataSha256": "6ba7f86c8dc6c702c2fdaebf27c6efe157ba79cbdbd09d4a7da8ccf646a33e08",
+      "accepted": true,
+      "employerSlug": "west-coast-express",
+      "sourcePeriod": "2024",
+      "rowCount": 6
+    },
+    {
+      "sourceId": "follow-through-translink-2025-translink-employees",
+      "file": "translink-2025.json.gzip",
+      "dataSha256": "66517f0647db3f33b07d7b1f9e28ac5227c56588c6fa8ce8d2d747bf5de771df",
+      "accepted": true,
+      "employerSlug": "translink",
+      "sourcePeriod": "2025",
+      "rowCount": 906
+    },
+    {
+      "sourceId": "follow-through-translink-2025-british-columbia-rapid-transit-company-employees",
+      "file": "british-columbia-rapid-transit-company-2025.json.gzip",
+      "dataSha256": "e5c8a82bf0ad67f4d279cc4c23622f00fa1eda5f6e8cefd15d3134f74d71b354",
+      "accepted": true,
+      "employerSlug": "british-columbia-rapid-transit-company",
+      "sourcePeriod": "2025",
+      "rowCount": 1222
+    },
+    {
+      "sourceId": "follow-through-translink-2025-coast-mountain-bus-company-employees",
+      "file": "coast-mountain-bus-company-2025.json.gzip",
+      "dataSha256": "76124460cc50390e827f06176f7da0dd1f00f6c134237c2f81f6442ba8724626",
+      "accepted": true,
+      "employerSlug": "coast-mountain-bus-company",
+      "sourcePeriod": "2025",
+      "rowCount": 4340
+    },
+    {
+      "sourceId": "follow-through-translink-2025-transit-police-employees",
+      "file": "transit-police-2025.json.gzip",
+      "dataSha256": "2da765be19793a30b9452b24d06da9402c4da7ece7d682144e9ac6c6b0ac5a0e",
+      "accepted": true,
+      "employerSlug": "transit-police",
+      "sourcePeriod": "2025",
+      "rowCount": 266
+    },
+    {
+      "sourceId": "follow-through-translink-2025-west-coast-express-employees",
+      "file": "west-coast-express-2025.json.gzip",
+      "dataSha256": "5fa801b3a80ee9bfd2da1c72d3b29fe46adb2afe134390f5b0d70e0b76928f52",
+      "accepted": true,
+      "employerSlug": "west-coast-express",
+      "sourcePeriod": "2025",
+      "rowCount": 6
+    },
+    {
+      "sourceId": "follow-through-translink-2024-coast-mountain-bus-company-employees",
+      "file": "held/coast-mountain-bus-company-2024.json.gzip",
+      "dataSha256": "b371a93c5e6ac33554eb64adeebe8ead7b8f119b03cf47da37823e995391d474",
+      "accepted": false,
+      "employerSlug": "coast-mountain-bus-company",
+      "sourcePeriod": "2024",
+      "rowCount": 3896
+    }
+  ],
+  "officialCohorts": [
+    {
+      "sourceId": "follow-through-translink-2020-translink-employees",
+      "file": "translink-2020.json.gzip",
+      "dataSha256": "5eb95f893caaa7248659a27b8f91829ab467d79740e66d4b2a4148d0b541446f",
+      "accepted": true,
+      "employerSlug": "translink",
+      "sourcePeriod": "2020",
+      "rowCount": 557,
+      "namedRows": 557,
+      "anonymousRows": 0,
+      "uniqueNamedFinancialTuples": 557
+    },
+    {
+      "sourceId": "follow-through-translink-2020-british-columbia-rapid-transit-company-employees",
+      "file": "british-columbia-rapid-transit-company-2020.json.gzip",
+      "dataSha256": "b4fc2b63aa0fa30a9d714064f0644909c621431d335479a2600e42855d440c53",
+      "accepted": true,
+      "employerSlug": "british-columbia-rapid-transit-company",
+      "sourcePeriod": "2020",
+      "rowCount": 847,
+      "namedRows": 847,
+      "anonymousRows": 0,
+      "uniqueNamedFinancialTuples": 847
+    },
+    {
+      "sourceId": "follow-through-translink-2020-coast-mountain-bus-company-employees",
+      "file": "coast-mountain-bus-company-2020.json.gzip",
+      "dataSha256": "b07190dfed24bbffd979e11acecd95cc6108d6a4d45d590b9f6cf6998ade862c",
+      "accepted": true,
+      "employerSlug": "coast-mountain-bus-company",
+      "sourcePeriod": "2020",
+      "rowCount": 2635,
+      "namedRows": 2631,
+      "anonymousRows": 4,
+      "uniqueNamedFinancialTuples": 2631
+    },
+    {
+      "sourceId": "follow-through-translink-2020-transit-police-employees",
+      "file": "transit-police-2020.json.gzip",
+      "dataSha256": "93a8cdca57dcc8bbf6813d1490fad127f837e7b500694de31f9113d17228d9a3",
+      "accepted": true,
+      "employerSlug": "transit-police",
+      "sourcePeriod": "2020",
+      "rowCount": 210,
+      "namedRows": 52,
+      "anonymousRows": 158,
+      "uniqueNamedFinancialTuples": 52
+    },
+    {
+      "sourceId": "follow-through-translink-2020-west-coast-express-employees",
+      "file": "west-coast-express-2020.json.gzip",
+      "dataSha256": "66ff78255b76aac0bebc406a0f56ad45cdb6806cbe915b8e1018d77e74c13186",
+      "accepted": true,
+      "employerSlug": "west-coast-express",
+      "sourcePeriod": "2020",
+      "rowCount": 6,
+      "namedRows": 6,
+      "anonymousRows": 0,
+      "uniqueNamedFinancialTuples": 6
+    },
+    {
+      "sourceId": "follow-through-translink-2021-translink-employees",
+      "file": "translink-2021.json.gzip",
+      "dataSha256": "16b10552f11b8c538158698cccc7d8e4a11394014078716b575f6d8bfcf350a8",
+      "accepted": true,
+      "employerSlug": "translink",
+      "sourcePeriod": "2021",
+      "rowCount": 604,
+      "namedRows": 604,
+      "anonymousRows": 0,
+      "uniqueNamedFinancialTuples": 604
+    },
+    {
+      "sourceId": "follow-through-translink-2021-british-columbia-rapid-transit-company-employees",
+      "file": "british-columbia-rapid-transit-company-2021.json.gzip",
+      "dataSha256": "ca003c59d761ca19b3157dd835fd2fa8a732da9035cbc6602c50cb128e7e0926",
+      "accepted": true,
+      "employerSlug": "british-columbia-rapid-transit-company",
+      "sourcePeriod": "2021",
+      "rowCount": 857,
+      "namedRows": 857,
+      "anonymousRows": 0,
+      "uniqueNamedFinancialTuples": 857
+    },
+    {
+      "sourceId": "follow-through-translink-2021-coast-mountain-bus-company-employees",
+      "file": "coast-mountain-bus-company-2021.json.gzip",
+      "dataSha256": "78ff182f60aec31b3130b703d53479780b249eddc041cc13a0172161f9df3c16",
+      "accepted": true,
+      "employerSlug": "coast-mountain-bus-company",
+      "sourcePeriod": "2021",
+      "rowCount": 2496,
+      "namedRows": 2493,
+      "anonymousRows": 3,
+      "uniqueNamedFinancialTuples": 2493
+    },
+    {
+      "sourceId": "follow-through-translink-2021-transit-police-employees",
+      "file": "transit-police-2021.json.gzip",
+      "dataSha256": "ed74df88c57358c79874fa0ec84458ea0562cee6eea6d7b9682e9f00bde96b69",
+      "accepted": true,
+      "employerSlug": "transit-police",
+      "sourcePeriod": "2021",
+      "rowCount": 229,
+      "namedRows": 72,
+      "anonymousRows": 157,
+      "uniqueNamedFinancialTuples": 72
+    },
+    {
+      "sourceId": "follow-through-translink-2021-west-coast-express-employees",
+      "file": "west-coast-express-2021.json.gzip",
+      "dataSha256": "810effc5716deb4a923652eee1400877849386b75ee14bcf441d9059aeec2f69",
+      "accepted": true,
+      "employerSlug": "west-coast-express",
+      "sourcePeriod": "2021",
+      "rowCount": 7,
+      "namedRows": 7,
+      "anonymousRows": 0,
+      "uniqueNamedFinancialTuples": 7
+    },
+    {
+      "sourceId": "follow-through-translink-2022-translink-employees",
+      "file": "translink-2022.json.gzip",
+      "dataSha256": "965e4aaf43f2ac6342e656d9feb7b40abd95de5dd2ed6d2c7ea3c08e703e38c1",
+      "accepted": true,
+      "employerSlug": "translink",
+      "sourcePeriod": "2022",
+      "rowCount": 578,
+      "namedRows": 578,
+      "anonymousRows": 0,
+      "uniqueNamedFinancialTuples": 578
+    },
+    {
+      "sourceId": "follow-through-translink-2022-british-columbia-rapid-transit-company-employees",
+      "file": "british-columbia-rapid-transit-company-2022.json.gzip",
+      "dataSha256": "215c406368ffc308b7c974040ce4fc8bb1ca5c9e992f1caf5b033380ea32f17c",
+      "accepted": true,
+      "employerSlug": "british-columbia-rapid-transit-company",
+      "sourcePeriod": "2022",
+      "rowCount": 893,
+      "namedRows": 893,
+      "anonymousRows": 0,
+      "uniqueNamedFinancialTuples": 893
+    },
+    {
+      "sourceId": "follow-through-translink-2022-coast-mountain-bus-company-employees",
+      "file": "coast-mountain-bus-company-2022.json.gzip",
+      "dataSha256": "f737c5e48d361fc39b3fb2e1694c36438b9f26e23afbd963d358d271e089b849",
+      "accepted": true,
+      "employerSlug": "coast-mountain-bus-company",
+      "sourcePeriod": "2022",
+      "rowCount": 2874,
+      "namedRows": 2871,
+      "anonymousRows": 3,
+      "uniqueNamedFinancialTuples": 2871
+    },
+    {
+      "sourceId": "follow-through-translink-2022-transit-police-employees",
+      "file": "transit-police-2022.json.gzip",
+      "dataSha256": "10cdd351e94a312be5c693a3d040d06f46ad218f51cb2d6b6a0bdb42cac3dfbb",
+      "accepted": true,
+      "employerSlug": "transit-police",
+      "sourcePeriod": "2022",
+      "rowCount": 238,
+      "namedRows": 80,
+      "anonymousRows": 158,
+      "uniqueNamedFinancialTuples": 80
+    },
+    {
+      "sourceId": "follow-through-translink-2022-west-coast-express-employees",
+      "file": "west-coast-express-2022.json.gzip",
+      "dataSha256": "7327f6e5ff44ea92ad936e875b7ecba15be27b4caa292a5f1b3ba29ba56ae18f",
+      "accepted": true,
+      "employerSlug": "west-coast-express",
+      "sourcePeriod": "2022",
+      "rowCount": 7,
+      "namedRows": 7,
+      "anonymousRows": 0,
+      "uniqueNamedFinancialTuples": 7
+    },
+    {
+      "sourceId": "follow-through-translink-2023-translink-employees",
+      "file": "translink-2023.json.gzip",
+      "dataSha256": "cb48d36cc86795f93cfaaa78ed819868b06eb98bd910d3501710a33bf972dc09",
+      "accepted": true,
+      "employerSlug": "translink",
+      "sourcePeriod": "2023",
+      "rowCount": 654,
+      "namedRows": 654,
+      "anonymousRows": 0,
+      "uniqueNamedFinancialTuples": 654
+    },
+    {
+      "sourceId": "follow-through-translink-2023-british-columbia-rapid-transit-company-employees",
+      "file": "british-columbia-rapid-transit-company-2023.json.gzip",
+      "dataSha256": "bb4d91f7d809aac233d99c6c992496eba62e1bbb91a2df21b845b79afff40ab0",
+      "accepted": true,
+      "employerSlug": "british-columbia-rapid-transit-company",
+      "sourcePeriod": "2023",
+      "rowCount": 1029,
+      "namedRows": 1029,
+      "anonymousRows": 0,
+      "uniqueNamedFinancialTuples": 1029
+    },
+    {
+      "sourceId": "follow-through-translink-2023-coast-mountain-bus-company-employees",
+      "file": "coast-mountain-bus-company-2023.json.gzip",
+      "dataSha256": "83933064fed2068bb462464779a1d0f0d9e1a2cf8aa7f6d67576a198f3f3a976",
+      "accepted": true,
+      "employerSlug": "coast-mountain-bus-company",
+      "sourcePeriod": "2023",
+      "rowCount": 3504,
+      "namedRows": 3501,
+      "anonymousRows": 3,
+      "uniqueNamedFinancialTuples": 3501
+    },
+    {
+      "sourceId": "follow-through-translink-2023-transit-police-employees",
+      "file": "transit-police-2023.json.gzip",
+      "dataSha256": "3a3cd3851a2518404f1bd472a51b359076b40ddbe3cafe200bfd24215018bc39",
+      "accepted": true,
+      "employerSlug": "transit-police",
+      "sourcePeriod": "2023",
+      "rowCount": 233,
+      "namedRows": 82,
+      "anonymousRows": 151,
+      "uniqueNamedFinancialTuples": 82
+    },
+    {
+      "sourceId": "follow-through-translink-2023-west-coast-express-employees",
+      "file": "west-coast-express-2023.json.gzip",
+      "dataSha256": "758203f722159bf49f67c7422f06ad63194167a4013138e4345cdc3aa50d5622",
+      "accepted": true,
+      "employerSlug": "west-coast-express",
+      "sourcePeriod": "2023",
+      "rowCount": 6,
+      "namedRows": 6,
+      "anonymousRows": 0,
+      "uniqueNamedFinancialTuples": 6
+    },
+    {
+      "sourceId": "follow-through-translink-2024-translink-employees",
+      "file": "translink-2024.json.gzip",
+      "dataSha256": "9063d086eda9f2947e37e75a55dec1182f4ac8a9d81d85247bc60ad7e9cc753a",
+      "accepted": true,
+      "employerSlug": "translink",
+      "sourcePeriod": "2024",
+      "rowCount": 799,
+      "namedRows": 799,
+      "anonymousRows": 0,
+      "uniqueNamedFinancialTuples": 799
+    },
+    {
+      "sourceId": "follow-through-translink-2024-british-columbia-rapid-transit-company-employees",
+      "file": "british-columbia-rapid-transit-company-2024.json.gzip",
+      "dataSha256": "bc2218030d2f87176686b6a105234b9c83d861a87f0983a417705afbe692055e",
+      "accepted": true,
+      "employerSlug": "british-columbia-rapid-transit-company",
+      "sourcePeriod": "2024",
+      "rowCount": 1129,
+      "namedRows": 1129,
+      "anonymousRows": 0,
+      "uniqueNamedFinancialTuples": 1129
+    },
+    {
+      "sourceId": "follow-through-translink-2024-transit-police-employees",
+      "file": "transit-police-2024.json.gzip",
+      "dataSha256": "be45b500b37096920ae3c0484fec88845d44ad3ff482a2d139e9356fe87b3998",
+      "accepted": true,
+      "employerSlug": "transit-police",
+      "sourcePeriod": "2024",
+      "rowCount": 264,
+      "namedRows": 93,
+      "anonymousRows": 171,
+      "uniqueNamedFinancialTuples": 93
+    },
+    {
+      "sourceId": "follow-through-translink-2024-west-coast-express-employees",
+      "file": "west-coast-express-2024.json.gzip",
+      "dataSha256": "6ba7f86c8dc6c702c2fdaebf27c6efe157ba79cbdbd09d4a7da8ccf646a33e08",
+      "accepted": true,
+      "employerSlug": "west-coast-express",
+      "sourcePeriod": "2024",
+      "rowCount": 6,
+      "namedRows": 6,
+      "anonymousRows": 0,
+      "uniqueNamedFinancialTuples": 6
+    },
+    {
+      "sourceId": "follow-through-translink-2025-translink-employees",
+      "file": "translink-2025.json.gzip",
+      "dataSha256": "66517f0647db3f33b07d7b1f9e28ac5227c56588c6fa8ce8d2d747bf5de771df",
+      "accepted": true,
+      "employerSlug": "translink",
+      "sourcePeriod": "2025",
+      "rowCount": 906,
+      "namedRows": 906,
+      "anonymousRows": 0,
+      "uniqueNamedFinancialTuples": 906
+    },
+    {
+      "sourceId": "follow-through-translink-2025-british-columbia-rapid-transit-company-employees",
+      "file": "british-columbia-rapid-transit-company-2025.json.gzip",
+      "dataSha256": "e5c8a82bf0ad67f4d279cc4c23622f00fa1eda5f6e8cefd15d3134f74d71b354",
+      "accepted": true,
+      "employerSlug": "british-columbia-rapid-transit-company",
+      "sourcePeriod": "2025",
+      "rowCount": 1222,
+      "namedRows": 1222,
+      "anonymousRows": 0,
+      "uniqueNamedFinancialTuples": 1222
+    },
+    {
+      "sourceId": "follow-through-translink-2025-coast-mountain-bus-company-employees",
+      "file": "coast-mountain-bus-company-2025.json.gzip",
+      "dataSha256": "76124460cc50390e827f06176f7da0dd1f00f6c134237c2f81f6442ba8724626",
+      "accepted": true,
+      "employerSlug": "coast-mountain-bus-company",
+      "sourcePeriod": "2025",
+      "rowCount": 4340,
+      "namedRows": 4340,
+      "anonymousRows": 0,
+      "uniqueNamedFinancialTuples": 4340
+    },
+    {
+      "sourceId": "follow-through-translink-2025-transit-police-employees",
+      "file": "transit-police-2025.json.gzip",
+      "dataSha256": "2da765be19793a30b9452b24d06da9402c4da7ece7d682144e9ac6c6b0ac5a0e",
+      "accepted": true,
+      "employerSlug": "transit-police",
+      "sourcePeriod": "2025",
+      "rowCount": 266,
+      "namedRows": 93,
+      "anonymousRows": 173,
+      "uniqueNamedFinancialTuples": 93
+    },
+    {
+      "sourceId": "follow-through-translink-2025-west-coast-express-employees",
+      "file": "west-coast-express-2025.json.gzip",
+      "dataSha256": "5fa801b3a80ee9bfd2da1c72d3b29fe46adb2afe134390f5b0d70e0b76928f52",
+      "accepted": true,
+      "employerSlug": "west-coast-express",
+      "sourcePeriod": "2025",
+      "rowCount": 6,
+      "namedRows": 6,
+      "anonymousRows": 0,
+      "uniqueNamedFinancialTuples": 6
+    },
+    {
+      "sourceId": "follow-through-translink-2024-coast-mountain-bus-company-employees",
+      "file": "held/coast-mountain-bus-company-2024.json.gzip",
+      "dataSha256": "b371a93c5e6ac33554eb64adeebe8ead7b8f119b03cf47da37823e995391d474",
+      "accepted": false,
+      "employerSlug": "coast-mountain-bus-company",
+      "sourcePeriod": "2024",
+      "rowCount": 3896,
+      "namedRows": 3894,
+      "anonymousRows": 2,
+      "uniqueNamedFinancialTuples": 3894
+    }
+  ],
+  "comparisonRules": [
+    "Exact financial tuple = literal published name, remuneration, expenses. Original name case/spelling and null/zero distinctions are preserved. Position is separately retained but excluded from this financial comparison because compiled titles contain editorial employer/role annotations.",
+    "All three compiled edition labels are compared against all six official calendar periods independently. No label-to-year alignment, same-person assumption, fuzzy name matching, null-to-zero conversion, row reassignment or redating is performed.",
+    "All 29 accepted cohorts and the one held CMBC2024 candidate cohort are inventoried separately. Held-candidate matches never count as accepted proof.",
+    "Anonymous compiled observations are accounted for but excluded from entity attribution proof; amount-only coincidence cannot identify their employer/person.",
+    "Supplemental name-plus-remuneration matches ignore expenses and are reported separately as partial financial overlap only. Expense differences are never silently normalized.",
+    "Financial overlap proves that a compiled group mixes published observations from distinct official entity schedules; it does not establish original source provenance, person identity, employment continuity or complete compiled-cohort equivalence."
+  ],
+  "compiledEditionGroups": [
+    {
+      "compiledEditionLabel": "2017/18",
+      "compiledRows": 3237,
+      "compiledNamedRows": 3081,
+      "compiledAnonymousRows": 156,
+      "uniqueCompiledFinancialTuples": 3237,
+      "exactAcceptedNamedFinancialTupleMatches": 0,
+      "uniqueAcceptedOccurrenceMatches": 0,
+      "uniqueAcceptedEntityPeriodMatches": 0,
+      "uniqueAcceptedEntityMatches": 0,
+      "ambiguousAcceptedEntityMatches": 0,
+      "exactAcceptedMatchesByEntityAndSourcePeriod": [],
+      "uniqueAcceptedEntityPeriodMatchesByGroup": [],
+      "supplementalNameAndRemunerationMatches": 0,
+      "supplementalNameAndRemunerationByEntityAndSourcePeriod": [],
+      "expenseDifferencesAmongSupplementalOnlyMatches": {},
+      "noExactAcceptedNamedFinancialTupleMatch": 3081,
+      "matchedAcceptedEntities": [],
+      "provenMixedAcceptedEntityFinancialTuples": false
+    },
+    {
+      "compiledEditionLabel": "2020/21",
+      "compiledRows": 4043,
+      "compiledNamedRows": 4043,
+      "compiledAnonymousRows": 0,
+      "uniqueCompiledFinancialTuples": 4043,
+      "exactAcceptedNamedFinancialTupleMatches": 4033,
+      "uniqueAcceptedOccurrenceMatches": 4033,
+      "uniqueAcceptedEntityPeriodMatches": 4033,
+      "uniqueAcceptedEntityMatches": 4033,
+      "ambiguousAcceptedEntityMatches": 0,
+      "exactAcceptedMatchesByEntityAndSourcePeriod": [
+        {
+          "employerSlug": "british-columbia-rapid-transit-company",
+          "sourcePeriod": "2020",
+          "compiledFinancialTuples": 845
+        },
+        {
+          "employerSlug": "coast-mountain-bus-company",
+          "sourcePeriod": "2020",
+          "compiledFinancialTuples": 2628
+        },
+        {
+          "employerSlug": "translink",
+          "sourcePeriod": "2020",
+          "compiledFinancialTuples": 554
+        },
+        {
+          "employerSlug": "west-coast-express",
+          "sourcePeriod": "2020",
+          "compiledFinancialTuples": 6
+        }
+      ],
+      "uniqueAcceptedEntityPeriodMatchesByGroup": [
+        {
+          "employerSlug": "british-columbia-rapid-transit-company",
+          "sourcePeriod": "2020",
+          "compiledFinancialTuples": 845
+        },
+        {
+          "employerSlug": "coast-mountain-bus-company",
+          "sourcePeriod": "2020",
+          "compiledFinancialTuples": 2628
+        },
+        {
+          "employerSlug": "translink",
+          "sourcePeriod": "2020",
+          "compiledFinancialTuples": 554
+        },
+        {
+          "employerSlug": "west-coast-express",
+          "sourcePeriod": "2020",
+          "compiledFinancialTuples": 6
+        }
+      ],
+      "supplementalNameAndRemunerationMatches": 4035,
+      "supplementalNameAndRemunerationByEntityAndSourcePeriod": [
+        {
+          "employerSlug": "british-columbia-rapid-transit-company",
+          "sourcePeriod": "2020",
+          "compiledFinancialTuples": 845
+        },
+        {
+          "employerSlug": "coast-mountain-bus-company",
+          "sourcePeriod": "2020",
+          "compiledFinancialTuples": 2629
+        },
+        {
+          "employerSlug": "translink",
+          "sourcePeriod": "2020",
+          "compiledFinancialTuples": 555
+        },
+        {
+          "employerSlug": "west-coast-express",
+          "sourcePeriod": "2020",
+          "compiledFinancialTuples": 6
+        }
+      ],
+      "expenseDifferencesAmongSupplementalOnlyMatches": {
+        "otherExpenseDifference": 2
+      },
+      "noExactAcceptedNamedFinancialTupleMatch": 10,
+      "matchedAcceptedEntities": [
+        "british-columbia-rapid-transit-company",
+        "coast-mountain-bus-company",
+        "translink",
+        "west-coast-express"
+      ],
+      "provenMixedAcceptedEntityFinancialTuples": true
+    },
+    {
+      "compiledEditionLabel": "2023/24",
+      "compiledRows": 5184,
+      "compiledNamedRows": 5184,
+      "compiledAnonymousRows": 0,
+      "uniqueCompiledFinancialTuples": 5184,
+      "exactAcceptedNamedFinancialTupleMatches": 3137,
+      "uniqueAcceptedOccurrenceMatches": 3137,
+      "uniqueAcceptedEntityPeriodMatches": 3137,
+      "uniqueAcceptedEntityMatches": 3137,
+      "ambiguousAcceptedEntityMatches": 0,
+      "exactAcceptedMatchesByEntityAndSourcePeriod": [
+        {
+          "employerSlug": "british-columbia-rapid-transit-company",
+          "sourcePeriod": "2023",
+          "compiledFinancialTuples": 119
+        },
+        {
+          "employerSlug": "coast-mountain-bus-company",
+          "sourcePeriod": "2023",
+          "compiledFinancialTuples": 2570
+        },
+        {
+          "employerSlug": "translink",
+          "sourcePeriod": "2023",
+          "compiledFinancialTuples": 448
+        }
+      ],
+      "uniqueAcceptedEntityPeriodMatchesByGroup": [
+        {
+          "employerSlug": "british-columbia-rapid-transit-company",
+          "sourcePeriod": "2023",
+          "compiledFinancialTuples": 119
+        },
+        {
+          "employerSlug": "coast-mountain-bus-company",
+          "sourcePeriod": "2023",
+          "compiledFinancialTuples": 2570
+        },
+        {
+          "employerSlug": "translink",
+          "sourcePeriod": "2023",
+          "compiledFinancialTuples": 448
+        }
+      ],
+      "supplementalNameAndRemunerationMatches": 5136,
+      "supplementalNameAndRemunerationByEntityAndSourcePeriod": [
+        {
+          "employerSlug": "british-columbia-rapid-transit-company",
+          "sourcePeriod": "2023",
+          "compiledFinancialTuples": 1016
+        },
+        {
+          "employerSlug": "coast-mountain-bus-company",
+          "sourcePeriod": "2023",
+          "compiledFinancialTuples": 3473
+        },
+        {
+          "employerSlug": "translink",
+          "sourcePeriod": "2023",
+          "compiledFinancialTuples": 647
+        }
+      ],
+      "expenseDifferencesAmongSupplementalOnlyMatches": {
+        "compiledZeroVersusOfficialNull": 1999
+      },
+      "noExactAcceptedNamedFinancialTupleMatch": 2047,
+      "matchedAcceptedEntities": [
+        "british-columbia-rapid-transit-company",
+        "coast-mountain-bus-company",
+        "translink"
+      ],
+      "provenMixedAcceptedEntityFinancialTuples": true
+    }
+  ],
+  "decision": {
+    "reassignCompiledRows": false,
+    "deleteCompiledRows": false,
+    "redateCompiledRows": false,
+    "reason": "Mixed entity schedules and partial financial overlap are documented. Retain every baseline employer, compiled edition label and occurrence; investigate complete source scope and exceptions separately."
+  },
+  "observationEvidence": {
+    "file": "compiled-entity-observations.json.gzip",
+    "rowCount": 12464,
+    "sha256": "9f391b2a8d4a9badaf1ea81e7fbf87a41389a932d22bf4330ede5178df5a6dca",
+    "normalizedSha256": "c55b671e135209a67e192c08c6207fc10ec6e22fefd8d3f3561106aaf11381d1"
+  }
+}

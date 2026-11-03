@@ -1,0 +1,184 @@
+{
+  "version": 1,
+  "sourceId": "follow-through-bcib-2023-24-employees",
+  "leadId": "additional-source-bcib-2023-24",
+  "sourceUrl": "https://bcib.ca/wp-content/uploads/BCIB-Statement-of-Financial-Information-FY2024-Board-Approved.pdf",
+  "sourceIndexUrl": "https://bcib.ca/reporting-resources/",
+  "checkedOn": "2026-11-02",
+  "originalSha256": "ae2cfe7907a481f1517ce98c52899fe0d20ecfe149d4bffedb52cffc80973efb",
+  "originalBytes": 5878758,
+  "originalPdfPageCount": 38,
+  "period": {
+    "start": "2023-04-01",
+    "end": "2024-03-31",
+    "partial": false,
+    "evidence": "Original schedule year-ended header; first BCFSA schedule explicitly gives commencement date and period end."
+  },
+  "employeePhysicalPages": [
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32,
+    33
+  ],
+  "retainedSourceEvidencePages": [
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32,
+    33,
+    34
+  ],
+  "readerNames": [
+    "PyMuPDF positioned words",
+    "Poppler pdftotext -layout"
+  ],
+  "primaryRowCount": 805,
+  "independentRowCount": 805,
+  "everyRowFieldMultisetEqual": true,
+  "primaryNormalizedSha256": "dd8d26d4d8412a52f927eb92295265cbe963bcf2637790a18f2285f34915b9a2",
+  "independentRowMultisetSha256": "25adaed9fe81b0d84be1abf9a91d024f56068a5504557be3b44c75f9b0eabd69",
+  "pageControls": [
+    {
+      "physicalPage": 24,
+      "rowCount": 80,
+      "remuneration": 10117511,
+      "expenses": 355983
+    },
+    {
+      "physicalPage": 25,
+      "rowCount": 84,
+      "remuneration": 10676814,
+      "expenses": 493739
+    },
+    {
+      "physicalPage": 26,
+      "rowCount": 84,
+      "remuneration": 10158280,
+      "expenses": 561020
+    },
+    {
+      "physicalPage": 27,
+      "rowCount": 84,
+      "remuneration": 10854519,
+      "expenses": 474117
+    },
+    {
+      "physicalPage": 28,
+      "rowCount": 84,
+      "remuneration": 10292907,
+      "expenses": 436898
+    },
+    {
+      "physicalPage": 29,
+      "rowCount": 84,
+      "remuneration": 10213846,
+      "expenses": 594768
+    },
+    {
+      "physicalPage": 30,
+      "rowCount": 84,
+      "remuneration": 10711425,
+      "expenses": 456885
+    },
+    {
+      "physicalPage": 31,
+      "rowCount": 84,
+      "remuneration": 10322925,
+      "expenses": 610126
+    },
+    {
+      "physicalPage": 32,
+      "rowCount": 84,
+      "remuneration": 11037790,
+      "expenses": 417235
+    },
+    {
+      "physicalPage": 33,
+      "rowCount": 53,
+      "remuneration": 6402222,
+      "expenses": 300836
+    }
+  ],
+  "controls": {
+    "physicalPage": 33,
+    "printedTotalEmployees": [
+      152231678,
+      9031268
+    ],
+    "printedBelowThreshold": [
+      51443442,
+      4329664
+    ],
+    "printedDirectNamedSubtotal": null,
+    "impliedNamedControl": [
+      100788236,
+      4701604
+    ],
+    "observedAllNamedRows": [
+      100788239,
+      4701607
+    ],
+    "residualNamedMinusImplied": [
+      3,
+      3
+    ],
+    "residualNamedMinusDirect": null,
+    "units": "CAD whole dollars",
+    "residualCause": "Unknown; preserved as printed."
+  },
+  "physicalPagesVisuallyReviewed": [
+    24,
+    33
+  ],
+  "sourceRowReview": "Every native employee row compared field-for-field between independent PDF readers; source-pixel review of printed control totals and ambiguous glyph/layout cases. Every scan employee row and control additionally visually reviewed.",
+  "explicitZeroExpenseRows": 0,
+  "nullExpenseRows": 603,
+  "negativeExpenseRows": [],
+  "repeatedDisclosedNames": {
+    "Baker, D": 2,
+    "Garcia, J": 2,
+    "Williams, J": 2
+  },
+  "exactDuplicateSixFieldRows": 0,
+  "excludedScopes": [
+    "board-director-remuneration",
+    "suppliers",
+    "below-threshold-aggregate",
+    "reconciliation-adjustments",
+    "employer-tax-benefit-aggregates"
+  ],
+  "remunerationDefinitionVerbatim": "Note 1: Remuneration includes base salary and other compensation for 2023/24.",
+  "severanceCompensationDefinitionContext": null,
+  "publicWarning": "Published named rows sum to $100,788,239 remuneration and $4,701,607 expenses, differing from the printed total less below-threshold controls by +$3 and +$3. Original row values are retained; causes unknown.",
+  "rawEvidenceFiles": [
+    {
+      "file": "evidence/bcib-2023-24.layout.txt",
+      "sha256": "377cdaaeffded7b1d2a0d5526ddc86bd5cf2a2c9a4baa177ec736e03d2104f22"
+    },
+    {
+      "file": "evidence/bcib-2023-24.words.json.gzip",
+      "sha256": "b665f3316bc96082c51ea337a7b523a4d0e54961148a16950aa57a17cbf32d93"
+    },
+    {
+      "file": "evidence/bcib-2023-24-bandila.png",
+      "sha256": "5d497d518f0d785d9e3bfe79fee50acca78282899a56c8d507f4569b977da250"
+    },
+    {
+      "file": "evidence/bcib-2023-24.controls.png",
+      "sha256": "402469e0f60423c9c70fa1dfc6c937c4d7c7284abb3b7a435cfdb5283da27877"
+    }
+  ],
+  "glyphReview": "Bandila, l: the source encodes the initial as lowercase l; both independent text readers agree and the printed glyph was inspected. No expansion or case inference is made."
+}

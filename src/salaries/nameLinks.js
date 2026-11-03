@@ -264,8 +264,21 @@ export const findNameLinks = (rows, { years, employers, reviewed = [] }) => {
     const root = find(spelling)
     if (!clusters.has(root.id)) clusters.set(root.id, members(root))
   }
-  const decisionOf = new Map(decisions.filter((entry) => entry.status !== 'apart').map((entry) => [`${entry.employer}|${entry.key}`, entry]))
-  const joinedTo = new Map(decisions.filter((entry) => entry.status !== 'apart').map((entry) => [`${entry.employer}|${entry.targetKey}`, entry]))
+  // An endpoint can also acquire a later likely bridge. Keep its stronger local decision,
+  // including that decision's source evidence; equal-confidence decisions retain their order.
+  const strongerDecision = (earlier, later) => {
+    if (!earlier) return later
+    if (!later) return earlier
+    return earlier.status === 'verified' && later.status !== 'verified' ? earlier : later
+  }
+  const decisionOf = new Map()
+  const joinedTo = new Map()
+  for (const entry of decisions.filter((each) => each.status !== 'apart')) {
+    const from = `${entry.employer}|${entry.key}`
+    const to = `${entry.employer}|${entry.targetKey}`
+    decisionOf.set(from, strongerDecision(decisionOf.get(from), entry))
+    joinedTo.set(to, strongerDecision(joinedTo.get(to), entry))
+  }
   const result = []
   const canonicalReviews = reviewed.filter((entry) => entry.decision === 'verified' && entry.canonicalName)
   for (const cluster of clusters.values()) {
@@ -290,7 +303,8 @@ export const findNameLinks = (rows, { years, employers, reviewed = [] }) => {
         ? { ...each, status: 'verified', reason: `Reviewed: ${canonicalReview.note}`, evidence: canonicalReview.evidence }
         : { ...each, status: 'verified', reason: 'The same name with a position written into it' }
       // A reviewed pair may name either spelling first: the decision is the join's, either way.
-      const decision = decisionOf.get(`${employer}|${spelling.key}`) ?? joinedTo.get(`${employer}|${spelling.key}`)
+      const endpoint = `${employer}|${spelling.key}`
+      const decision = strongerDecision(joinedTo.get(endpoint), decisionOf.get(endpoint))
       const inferredPath = hasInference && !verifiedFromBest.has(spelling.id)
       return { ...each, status: inferredPath ? 'likely' : decision.status,
         reason: inferredPath && decision.status === 'verified' ? `The connection to this history includes an unverified surname inference. Local source evidence: ${decision.reason}` : decision.reason,

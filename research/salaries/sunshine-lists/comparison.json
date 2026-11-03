@@ -27,7 +27,7 @@
   "fingerprints": {
     "snapshotSha256": "5955544e5deef4dcc72fcb201137dd943053ef78deeca303026c4a4bc19124f1",
     "aliasesSha256": "f8fbabcea76dfaab15fcfcea12aac2eee5ba2e56203b89d7cb890ec4eec81b4d",
-    "repositoryInputsSha256": "e9f7582a8e8cc36999c6d2855cbfcd0c100786d355fe5db97cecddad8086a161"
+    "repositoryInputsSha256": "49c7616f26d7c01599ad26386c6173b5b8d3ba2ce9904ddb394617f6a2076836"
   },
   "summary": {
     "referenceEmployers": 3,
@@ -41,17 +41,17 @@
     "annualSeriesCompletenessEstablished": false,
     "recordLevelParityChecked": false,
     "repository": {
-      "employers": 270,
-      "rows": 1385021,
-      "namedRows": 1379680,
-      "officialRows": 1156657,
+      "employers": 273,
+      "rows": 1440498,
+      "namedRows": 1434176,
+      "officialRows": 1212134,
       "compiledRows": 228364,
-      "employeeRows": 1126062,
-      "availableEmployerYears": 1114
+      "employeeRows": 1181539,
+      "availableEmployerYears": 1187
     },
-    "repositoryEmployersWithOfficial": 217,
-    "repositoryCompiledOnlyEmployers": 53,
-    "repositorySourceTasks": 209,
+    "repositoryEmployersWithOfficial": 231,
+    "repositoryCompiledOnlyEmployers": 42,
+    "repositorySourceTasks": 211,
     "externalReferenceTasks": 3
   },
   "employers": [
@@ -656,20 +656,44 @@
         "B.C. Financial Services Authority"
       ],
       "sector": "Crown corporations",
-      "rows": 369,
-      "namedRows": 369,
-      "officialRows": 0,
+      "rows": 1735,
+      "namedRows": 1735,
+      "officialRows": 1366,
       "compiledRows": 369,
-      "employeeRows": 0,
-      "officialPeriods": [],
-      "officialEmployeePeriods": [],
+      "employeeRows": 1366,
+      "officialPeriods": [
+        "2019/20",
+        "2020/21",
+        "2021/22",
+        "2022/23",
+        "2023/24",
+        "2024/25",
+        "2025/26"
+      ],
+      "officialEmployeePeriods": [
+        "2019/20",
+        "2020/21",
+        "2021/22",
+        "2022/23",
+        "2023/24",
+        "2024/25",
+        "2025/26"
+      ],
       "compiledEditionLabels": [
         "2020/21",
         "2023/24"
       ],
-      "acceptedPeriodCount": 0,
+      "acceptedPeriodCount": 7,
       "sourceLeadCount": 0,
-      "partialSources": []
+      "partialSources": [
+        "follow-through-bcfsa-2019-20-employees",
+        "follow-through-bcfsa-2020-21-employees",
+        "follow-through-bcfsa-2021-22-employees",
+        "follow-through-bcfsa-2022-23-employees",
+        "follow-through-bcfsa-2023-24-employees",
+        "follow-through-bcfsa-2024-25-employees",
+        "follow-through-bcfsa-2025-26-employees"
+      ]
     },
     {
       "slug": "bc-housing",
@@ -752,20 +776,41 @@
         "B.C. Infrastructure Benefits"
       ],
       "sector": "Crown corporations",
-      "rows": 833,
-      "namedRows": 833,
-      "officialRows": 0,
+      "rows": 3544,
+      "namedRows": 3544,
+      "officialRows": 2711,
       "compiledRows": 833,
-      "employeeRows": 0,
-      "officialPeriods": [],
-      "officialEmployeePeriods": [],
+      "employeeRows": 2711,
+      "officialPeriods": [
+        "2019/20",
+        "2020/21",
+        "2021/22",
+        "2022/23",
+        "2023/24",
+        "2024/25"
+      ],
+      "officialEmployeePeriods": [
+        "2019/20",
+        "2020/21",
+        "2021/22",
+        "2022/23",
+        "2023/24",
+        "2024/25"
+      ],
       "compiledEditionLabels": [
         "2020/21",
         "2023/24"
       ],
-      "acceptedPeriodCount": 0,
+      "acceptedPeriodCount": 6,
       "sourceLeadCount": 0,
-      "partialSources": []
+      "partialSources": [
+        "follow-through-bcib-2019-20-employees",
+        "follow-through-bcib-2020-21-employees",
+        "follow-through-bcib-2021-22-employees",
+        "follow-through-bcib-2022-23-employees",
+        "follow-through-bcib-2023-24-employees",
+        "follow-through-bcib-2024-25-employees"
+      ]
     },
     {
       "slug": "bc-investment-management-corporation",
@@ -797,21 +842,27 @@
         "B.C. Pavilion Corporation"
       ],
       "sector": "Crown corporations",
-      "rows": 245,
-      "namedRows": 245,
-      "officialRows": 0,
+      "rows": 423,
+      "namedRows": 423,
+      "officialRows": 178,
       "compiledRows": 245,
-      "employeeRows": 0,
-      "officialPeriods": [],
-      "officialEmployeePeriods": [],
+      "employeeRows": 178,
+      "officialPeriods": [
+        "2024/25"
+      ],
+      "officialEmployeePeriods": [
+        "2024/25"
+      ],
       "compiledEditionLabels": [
         "2017/18",
         "2020/21",
         "2023/24"
       ],
-      "acceptedPeriodCount": 0,
+      "acceptedPeriodCount": 1,
       "sourceLeadCount": 0,
-      "partialSources": []
+      "partialSources": [
+        "follow-through-pavco-2024-25-employees"
+      ]
     },
     {
       "slug": "bc-pension-corporation",
@@ -1090,6 +1141,46 @@
       "acceptedPeriodCount": 3,
       "sourceLeadCount": 21,
       "partialSources": []
+    },
+    {
+      "slug": "british-columbia-rapid-transit-company",
+      "name": "British Columbia Rapid Transit Company Ltd.",
+      "names": [
+        "British Columbia Rapid Transit Company Ltd."
+      ],
+      "sector": "Crown corporations",
+      "rows": 5977,
+      "namedRows": 5977,
+      "officialRows": 5977,
+      "compiledRows": 0,
+      "employeeRows": 5977,
+      "officialPeriods": [
+        "2020",
+        "2021",
+        "2022",
+        "2023",
+        "2024",
+        "2025"
+      ],
+      "officialEmployeePeriods": [
+        "2020",
+        "2021",
+        "2022",
+        "2023",
+        "2024",
+        "2025"
+      ],
+      "compiledEditionLabels": [],
+      "acceptedPeriodCount": 6,
+      "sourceLeadCount": 0,
+      "partialSources": [
+        "follow-through-translink-2020-british-columbia-rapid-transit-company-employees",
+        "follow-through-translink-2021-british-columbia-rapid-transit-company-employees",
+        "follow-through-translink-2022-british-columbia-rapid-transit-company-employees",
+        "follow-through-translink-2023-british-columbia-rapid-transit-company-employees",
+        "follow-through-translink-2024-british-columbia-rapid-transit-company-employees",
+        "follow-through-translink-2025-british-columbia-rapid-transit-company-employees"
+      ]
     },
     {
       "slug": "burnaby-school-district",
@@ -2841,6 +2932,43 @@
       ]
     },
     {
+      "slug": "coast-mountain-bus-company",
+      "name": "Coast Mountain Bus Company Ltd.",
+      "names": [
+        "Coast Mountain Bus Company Ltd."
+      ],
+      "sector": "Crown corporations",
+      "rows": 15849,
+      "namedRows": 15836,
+      "officialRows": 15849,
+      "compiledRows": 0,
+      "employeeRows": 15849,
+      "officialPeriods": [
+        "2020",
+        "2021",
+        "2022",
+        "2023",
+        "2025"
+      ],
+      "officialEmployeePeriods": [
+        "2020",
+        "2021",
+        "2022",
+        "2023",
+        "2025"
+      ],
+      "compiledEditionLabels": [],
+      "acceptedPeriodCount": 5,
+      "sourceLeadCount": 1,
+      "partialSources": [
+        "follow-through-translink-2020-coast-mountain-bus-company-employees",
+        "follow-through-translink-2021-coast-mountain-bus-company-employees",
+        "follow-through-translink-2022-coast-mountain-bus-company-employees",
+        "follow-through-translink-2023-coast-mountain-bus-company-employees",
+        "follow-through-translink-2025-coast-mountain-bus-company-employees"
+      ]
+    },
+    {
       "slug": "coast-mountain-college",
       "name": "Coast Mountain College",
       "names": [
@@ -2880,21 +3008,45 @@
         "College of New Caledonia"
       ],
       "sector": "Universities and colleges",
-      "rows": 782,
-      "namedRows": 782,
-      "officialRows": 0,
+      "rows": 2677,
+      "namedRows": 2677,
+      "officialRows": 1895,
       "compiledRows": 782,
-      "employeeRows": 0,
-      "officialPeriods": [],
-      "officialEmployeePeriods": [],
+      "employeeRows": 1895,
+      "officialPeriods": [
+        "2018/19",
+        "2019/20",
+        "2020/21",
+        "2021/22",
+        "2022/23",
+        "2023/24",
+        "2024/25"
+      ],
+      "officialEmployeePeriods": [
+        "2018/19",
+        "2019/20",
+        "2020/21",
+        "2021/22",
+        "2022/23",
+        "2023/24",
+        "2024/25"
+      ],
       "compiledEditionLabels": [
         "2017/18",
         "2020/21",
         "2023/24"
       ],
-      "acceptedPeriodCount": 0,
+      "acceptedPeriodCount": 7,
       "sourceLeadCount": 0,
-      "partialSources": []
+      "partialSources": [
+        "cnc-sofi-2018-19-employees",
+        "cnc-sofi-2019-20-employees",
+        "cnc-sofi-2020-21-employees",
+        "cnc-sofi-2021-22-employees",
+        "cnc-sofi-2022-23-employees",
+        "cnc-sofi-2023-24-employees",
+        "cnc-sofi-2024-25-employees"
+      ]
     },
     {
       "slug": "college-of-the-rockies",
@@ -2970,21 +3122,84 @@
         "Community Living B.C."
       ],
       "sector": "Crown corporations",
-      "rows": 909,
-      "namedRows": 909,
-      "officialRows": 0,
+      "rows": 4127,
+      "namedRows": 4127,
+      "officialRows": 3218,
       "compiledRows": 909,
-      "employeeRows": 0,
-      "officialPeriods": [],
-      "officialEmployeePeriods": [],
+      "employeeRows": 3218,
+      "officialPeriods": [
+        "2005/06",
+        "2006/07",
+        "2007/08",
+        "2008/09",
+        "2009/10",
+        "2010/11",
+        "2011/12",
+        "2012/13",
+        "2013/14",
+        "2014/15",
+        "2015/16",
+        "2016/17",
+        "2017/18",
+        "2018/19",
+        "2019/20",
+        "2020/21",
+        "2021/22",
+        "2022/23",
+        "2023/24",
+        "2024/25"
+      ],
+      "officialEmployeePeriods": [
+        "2005/06",
+        "2006/07",
+        "2007/08",
+        "2008/09",
+        "2009/10",
+        "2010/11",
+        "2011/12",
+        "2012/13",
+        "2013/14",
+        "2014/15",
+        "2015/16",
+        "2016/17",
+        "2017/18",
+        "2018/19",
+        "2019/20",
+        "2020/21",
+        "2021/22",
+        "2022/23",
+        "2023/24",
+        "2024/25"
+      ],
       "compiledEditionLabels": [
         "2017/18",
         "2020/21",
         "2023/24"
       ],
-      "acceptedPeriodCount": 0,
+      "acceptedPeriodCount": 20,
       "sourceLeadCount": 0,
-      "partialSources": []
+      "partialSources": [
+        "additional-source-clbc-2005-06-employees",
+        "additional-source-clbc-2006-07-employees",
+        "additional-source-clbc-2007-08-employees",
+        "additional-source-clbc-2008-09-employees",
+        "additional-source-clbc-2009-10-employees",
+        "additional-source-clbc-2010-11-employees",
+        "additional-source-clbc-2011-12-employees",
+        "additional-source-clbc-2012-13-employees",
+        "additional-source-clbc-2013-14-employees",
+        "additional-source-clbc-2014-15-employees",
+        "additional-source-clbc-2015-16-employees",
+        "additional-source-clbc-2016-17-employees",
+        "additional-source-clbc-2017-18-employees",
+        "additional-source-clbc-2018-19-employees",
+        "additional-source-clbc-2019-20-employees",
+        "additional-source-clbc-2020-21-employees",
+        "additional-source-clbc-2021-22-employees",
+        "additional-source-clbc-2022-23-employees",
+        "additional-source-clbc-2023-24-employees",
+        "additional-source-clbc-2024-25-employees"
+      ]
     },
     {
       "slug": "coquitlam-school-district",
@@ -4779,21 +4994,33 @@
         "Langara College"
       ],
       "sector": "Universities and colleges",
-      "rows": 1997,
-      "namedRows": 1997,
-      "officialRows": 0,
+      "rows": 4548,
+      "namedRows": 4548,
+      "officialRows": 2551,
       "compiledRows": 1997,
-      "employeeRows": 0,
-      "officialPeriods": [],
-      "officialEmployeePeriods": [],
+      "employeeRows": 2551,
+      "officialPeriods": [
+        "2022/23",
+        "2023/24",
+        "2024/25"
+      ],
+      "officialEmployeePeriods": [
+        "2022/23",
+        "2023/24",
+        "2024/25"
+      ],
       "compiledEditionLabels": [
         "2017/18",
         "2020/21",
         "2023/24"
       ],
-      "acceptedPeriodCount": 0,
+      "acceptedPeriodCount": 3,
       "sourceLeadCount": 0,
-      "partialSources": []
+      "partialSources": [
+        "langara-sofi-2022-23-employees",
+        "langara-sofi-2023-24-employees",
+        "langara-sofi-2024-25-employees"
+      ]
     },
     {
       "slug": "langley-school-district",
@@ -5909,20 +6136,38 @@
         "Royal Roads University"
       ],
       "sector": "Universities and colleges",
-      "rows": 361,
-      "namedRows": 361,
-      "officialRows": 0,
+      "rows": 1802,
+      "namedRows": 1802,
+      "officialRows": 1441,
       "compiledRows": 361,
-      "employeeRows": 0,
-      "officialPeriods": [],
-      "officialEmployeePeriods": [],
+      "employeeRows": 1441,
+      "officialPeriods": [
+        "2021/22",
+        "2022/23",
+        "2023/24",
+        "2024/25",
+        "2025/26"
+      ],
+      "officialEmployeePeriods": [
+        "2021/22",
+        "2022/23",
+        "2023/24",
+        "2024/25",
+        "2025/26"
+      ],
       "compiledEditionLabels": [
         "2017/18",
         "2020/21"
       ],
-      "acceptedPeriodCount": 0,
+      "acceptedPeriodCount": 5,
       "sourceLeadCount": 0,
-      "partialSources": []
+      "partialSources": [
+        "rru-sofi-2021-22-employees",
+        "rru-sofi-2022-23-employees",
+        "rru-sofi-2023-24-employees",
+        "rru-sofi-2024-25-employees",
+        "rru-sofi-2025-26-employees"
+      ]
     },
     {
       "slug": "saanich-police",
@@ -7614,21 +7859,42 @@
         "Transit police"
       ],
       "sector": "Municipal police",
-      "rows": 598,
-      "namedRows": 284,
-      "officialRows": 0,
+      "rows": 2038,
+      "namedRows": 756,
+      "officialRows": 1440,
       "compiledRows": 598,
-      "employeeRows": 0,
-      "officialPeriods": [],
-      "officialEmployeePeriods": [],
+      "employeeRows": 1440,
+      "officialPeriods": [
+        "2020",
+        "2021",
+        "2022",
+        "2023",
+        "2024",
+        "2025"
+      ],
+      "officialEmployeePeriods": [
+        "2020",
+        "2021",
+        "2022",
+        "2023",
+        "2024",
+        "2025"
+      ],
       "compiledEditionLabels": [
         "2017/18",
         "2020/21",
         "2023/24"
       ],
-      "acceptedPeriodCount": 0,
+      "acceptedPeriodCount": 6,
       "sourceLeadCount": 0,
-      "partialSources": []
+      "partialSources": [
+        "follow-through-translink-2020-transit-police-employees",
+        "follow-through-translink-2021-transit-police-employees",
+        "follow-through-translink-2022-transit-police-employees",
+        "follow-through-translink-2023-transit-police-employees",
+        "follow-through-translink-2024-transit-police-employees",
+        "follow-through-translink-2025-transit-police-employees"
+      ]
     },
     {
       "slug": "translink",
@@ -7638,21 +7904,42 @@
         "Translink"
       ],
       "sector": "Crown corporations",
-      "rows": 12464,
-      "namedRows": 12308,
-      "officialRows": 0,
+      "rows": 16562,
+      "namedRows": 16406,
+      "officialRows": 4098,
       "compiledRows": 12464,
-      "employeeRows": 0,
-      "officialPeriods": [],
-      "officialEmployeePeriods": [],
+      "employeeRows": 4098,
+      "officialPeriods": [
+        "2020",
+        "2021",
+        "2022",
+        "2023",
+        "2024",
+        "2025"
+      ],
+      "officialEmployeePeriods": [
+        "2020",
+        "2021",
+        "2022",
+        "2023",
+        "2024",
+        "2025"
+      ],
       "compiledEditionLabels": [
         "2017/18",
         "2020/21",
         "2023/24"
       ],
-      "acceptedPeriodCount": 0,
-      "sourceLeadCount": 0,
-      "partialSources": []
+      "acceptedPeriodCount": 6,
+      "sourceLeadCount": 1,
+      "partialSources": [
+        "follow-through-translink-2020-translink-employees",
+        "follow-through-translink-2021-translink-employees",
+        "follow-through-translink-2022-translink-employees",
+        "follow-through-translink-2023-translink-employees",
+        "follow-through-translink-2024-translink-employees",
+        "follow-through-translink-2025-translink-employees"
+      ]
     },
     {
       "slug": "transportation-investment-corporation",
@@ -7785,21 +8072,33 @@
         "University of Victoria"
       ],
       "sector": "Universities and colleges",
-      "rows": 4874,
-      "namedRows": 4874,
-      "officialRows": 0,
+      "rows": 10595,
+      "namedRows": 10595,
+      "officialRows": 5721,
       "compiledRows": 4874,
-      "employeeRows": 0,
-      "officialPeriods": [],
-      "officialEmployeePeriods": [],
+      "employeeRows": 5721,
+      "officialPeriods": [
+        "2019/20",
+        "2023/24",
+        "2024/25"
+      ],
+      "officialEmployeePeriods": [
+        "2019/20",
+        "2023/24",
+        "2024/25"
+      ],
       "compiledEditionLabels": [
         "2017/18",
         "2020/21",
         "2023/24"
       ],
-      "acceptedPeriodCount": 0,
+      "acceptedPeriodCount": 3,
       "sourceLeadCount": 0,
-      "partialSources": []
+      "partialSources": [
+        "uvic-2019-20-sofi-employees",
+        "uvic-2023-24-sofi-employees",
+        "uvic-2024-25-sofi-employees"
+      ]
     },
     {
       "slug": "vancouver-coastal-health",
@@ -8758,6 +9057,46 @@
       "partialSources": []
     },
     {
+      "slug": "west-coast-express",
+      "name": "West Coast Express Ltd.",
+      "names": [
+        "West Coast Express Ltd."
+      ],
+      "sector": "Crown corporations",
+      "rows": 38,
+      "namedRows": 38,
+      "officialRows": 38,
+      "compiledRows": 0,
+      "employeeRows": 38,
+      "officialPeriods": [
+        "2020",
+        "2021",
+        "2022",
+        "2023",
+        "2024",
+        "2025"
+      ],
+      "officialEmployeePeriods": [
+        "2020",
+        "2021",
+        "2022",
+        "2023",
+        "2024",
+        "2025"
+      ],
+      "compiledEditionLabels": [],
+      "acceptedPeriodCount": 6,
+      "sourceLeadCount": 0,
+      "partialSources": [
+        "follow-through-translink-2020-west-coast-express-employees",
+        "follow-through-translink-2021-west-coast-express-employees",
+        "follow-through-translink-2022-west-coast-express-employees",
+        "follow-through-translink-2023-west-coast-express-employees",
+        "follow-through-translink-2024-west-coast-express-employees",
+        "follow-through-translink-2025-west-coast-express-employees"
+      ]
+    },
+    {
       "slug": "west-vancouver-school-district",
       "name": "West Vancouver School Board",
       "names": [
@@ -8796,32 +9135,44 @@
         "Worksafe B.C."
       ],
       "sector": "Crown corporations",
-      "rows": 6848,
-      "namedRows": 6848,
-      "officialRows": 0,
+      "rows": 15842,
+      "namedRows": 15842,
+      "officialRows": 8994,
       "compiledRows": 6848,
-      "employeeRows": 0,
-      "officialPeriods": [],
-      "officialEmployeePeriods": [],
+      "employeeRows": 8994,
+      "officialPeriods": [
+        "2023",
+        "2024",
+        "2025"
+      ],
+      "officialEmployeePeriods": [
+        "2023",
+        "2024",
+        "2025"
+      ],
       "compiledEditionLabels": [
         "2017/18",
         "2020/21",
         "2023/24"
       ],
-      "acceptedPeriodCount": 0,
+      "acceptedPeriodCount": 3,
       "sourceLeadCount": 0,
-      "partialSources": []
+      "partialSources": [
+        "worksafebc-2023-sofi-employees",
+        "worksafebc-2024-sofi-employees",
+        "worksafebc-2025-sofi-employees"
+      ]
     }
   ],
   "sectors": [
     {
       "sector": "Crown corporations",
-      "employers": 43,
-      "employersWithOfficial": 14,
-      "compiledOnlyEmployers": 29,
-      "officialRows": 107704,
+      "employers": 46,
+      "employersWithOfficial": 23,
+      "compiledOnlyEmployers": 23,
+      "officialRows": 150133,
       "compiledRows": 35310,
-      "rows": 143014
+      "rows": 185443
     },
     {
       "sector": "Government",
@@ -8844,11 +9195,11 @@
     {
       "sector": "Municipal police",
       "employers": 13,
-      "employersWithOfficial": 1,
-      "compiledOnlyEmployers": 12,
-      "officialRows": 142,
+      "employersWithOfficial": 2,
+      "compiledOnlyEmployers": 11,
+      "officialRows": 1582,
       "compiledRows": 9232,
-      "rows": 9374
+      "rows": 10814
     },
     {
       "sector": "Municipalities",
@@ -8871,11 +9222,11 @@
     {
       "sector": "Universities and colleges",
       "employers": 24,
-      "employersWithOfficial": 14,
-      "compiledOnlyEmployers": 10,
-      "officialRows": 56714,
+      "employersWithOfficial": 18,
+      "compiledOnlyEmployers": 6,
+      "officialRows": 68322,
       "compiledRows": 44857,
-      "rows": 101571
+      "rows": 113179
     }
   ],
   "queue": [
@@ -8944,7 +9295,7 @@
       "scope": "executive-only",
       "repositoryRows": 363,
       "referenceRecords": null,
-      "nextAction": "Preserve the reviewed component rows in executive-staging. Obtain a separate employee schedule or implement an explicitly separate executive-components view with row currencies before publication.",
+      "nextAction": "Keep reviewed executive-component staging separate. An explicit executive-components view with row currencies and source definitions, or a separately verified employee schedule, is needed to close the appropriate scope.",
       "reason": null
     },
     {
@@ -8978,7 +9329,7 @@
       "scope": "executive-only",
       "repositoryRows": 0,
       "referenceRecords": null,
-      "nextAction": "Preserve the reviewed component rows in executive-staging. Obtain a separate employee schedule or implement an explicitly separate executive-components view with row currencies before publication.",
+      "nextAction": "Keep reviewed executive-component staging separate. An explicit executive-components view with row currencies and source definitions, or a separately verified employee schedule, is needed to close the appropriate scope.",
       "reason": null
     },
     {
@@ -9012,7 +9363,7 @@
       "scope": "executive-base-salary-and-pension",
       "repositoryRows": 0,
       "referenceRecords": null,
-      "nextAction": "Preserve the reviewed component rows in executive-staging. Obtain a separate employee schedule or implement an explicitly separate executive-components view with row currencies before publication.",
+      "nextAction": "Keep reviewed executive-component staging separate. An explicit executive-components view with row currencies and source definitions, or a separately verified employee schedule, is needed to close the appropriate scope.",
       "reason": null
     },
     {
@@ -11090,6 +11441,23 @@
       "reason": "Official index links a filename containing draft. The report approval page (physical page 2) is unsigned. Parsed 191 employees and 7 elected officials are held until final/adopted publication status is established."
     },
     {
+      "id": "source-1b34fcd45b68976b",
+      "origin": "repository-source-catalog",
+      "priority": 1,
+      "employerSlug": "coast-mountain-bus-company",
+      "employerName": "Coast Mountain Bus Company Ltd.",
+      "referenceEmployer": null,
+      "year": "2024",
+      "status": "held-for-review",
+      "sourceUrl": "https://www.translink.ca/-/media/translink/documents/about-translink/corporate-reports/translink_employee_remuneration/2024-financial-information-act-filing-and-remuneration-report.pdf",
+      "sourceId": "follow-through-translink-2024-coast-mountain-bus-company-employees",
+      "scope": "employee-remuneration",
+      "repositoryRows": 0,
+      "referenceRecords": null,
+      "nextAction": "Inspect a publicly issued revised/corrected official report or further official row-level control explanation; resolve the four printed subtotal differences before importing this cohort. Preserve all candidate values and controls without balancing or substituting totals.",
+      "reason": "The complete 3,896-row CMBC 2024 candidate schedule agrees between both native readers, but row sums exceed printed salary payments by $3,859 and remuneration by $647, and fall below printed Other by $3,212 and expenses by $12. The source footnotes give no explanation. These larger control differences remain unresolved."
+    },
+    {
       "id": "source-fa4ee84fe0efaea0",
       "origin": "repository-source-catalog",
       "priority": 1,
@@ -12450,6 +12818,23 @@
       "reason": "Employee schedule imported; elected-official schedule has not yet completed extraction and validation."
     },
     {
+      "id": "source-bbdebad79b373142",
+      "origin": "repository-source-catalog",
+      "priority": 2,
+      "employerSlug": "translink",
+      "employerName": "TransLink",
+      "referenceEmployer": null,
+      "year": "2024",
+      "status": "partially-imported",
+      "sourceUrl": "https://www.translink.ca/-/media/translink/documents/about-translink/corporate-reports/translink_employee_remuneration/2024-financial-information-act-filing-and-remuneration-report.pdf",
+      "sourceId": "additional-source-translink-2024",
+      "scope": "mixed-parent-subsidiaries-board-executives",
+      "repositoryRows": 799,
+      "referenceRecords": null,
+      "nextAction": "Keep the four accepted legal-entity cohorts imported. Keep CMBC 2024 and its3,896 candidates held until all four printed controls are resolved from official public evidence.",
+      "reason": null
+    },
+    {
       "id": "source-b2f93793a8c90b81",
       "origin": "repository-source-catalog",
       "priority": 2,
@@ -12487,8 +12872,8 @@
   "inputs": [
     {
       "path": "public/salaries/coverage.json",
-      "bytes": 7019364,
-      "sha256": "b996ddf3fdc35501250fe23b41eceea7043139836a9354f78a2d550bcacd1a0d"
+      "bytes": 7354778,
+      "sha256": "f668633d4a0e931091b83f056c02fd48fc5fc15d5a7c4a2391d677eb4bed8e13"
     },
     {
       "path": "public/salaries/employers/abbotsford-police.json.gzip",
@@ -12537,8 +12922,8 @@
     },
     {
       "path": "public/salaries/employers/bc-financial-services-authority.json.gzip",
-      "bytes": 5346,
-      "sha256": "e05ccac8b0e343b68d291134e081194067061479159afbeaafc5cfcca70a1db5"
+      "bytes": 18844,
+      "sha256": "e2024bfc9cec2a131ab7e953d133eb7c735dc3a920650744180d2c73881abf74"
     },
     {
       "path": "public/salaries/employers/bc-housing.json.gzip",
@@ -12552,8 +12937,8 @@
     },
     {
       "path": "public/salaries/employers/bc-infrastructure-benefits.json.gzip",
-      "bytes": 10518,
-      "sha256": "94d661946a8c4f04b643cac9f15a24f9ec55c30b3b35e1861305ce25f4761ced"
+      "bytes": 40404,
+      "sha256": "a7301af227ae670c85b72c0c36a09eebe0936e32b8cf6438b705ce7ab3e1f76f"
     },
     {
       "path": "public/salaries/employers/bc-investment-management-corporation.json.gzip",
@@ -12562,8 +12947,8 @@
     },
     {
       "path": "public/salaries/employers/bc-pavilion-corporation.json.gzip",
-      "bytes": 5066,
-      "sha256": "a35f7c12c9d5890a48f736b95644cbd030b7415d092c81777009a0d5d11aa910"
+      "bytes": 7675,
+      "sha256": "8a75ec5dcaa9ccaa8e6d93541e8076b8fca79ac1d484fd2c4d1598cbdf087825"
     },
     {
       "path": "public/salaries/employers/bc-pension-corporation.json.gzip",
@@ -12604,6 +12989,11 @@
       "path": "public/salaries/employers/bowen-island.json.gzip",
       "bytes": 2246,
       "sha256": "734f7e0a3cf7a23391f310ff4f7f3cb1d602218aaf1da623eca197bf1af3d9ae"
+    },
+    {
+      "path": "public/salaries/employers/british-columbia-rapid-transit-company.json.gzip",
+      "bytes": 93655,
+      "sha256": "0dd2a9228900c061e86882ed39d2acdea3f209386f6beca78b14ed6e7582ccfc"
     },
     {
       "path": "public/salaries/employers/burnaby-school-district.json.gzip",
@@ -12856,14 +13246,19 @@
       "sha256": "64df96a7eb3760790eccce83956d43427c01e0705bbe8bfdecadb5f929a50b00"
     },
     {
+      "path": "public/salaries/employers/coast-mountain-bus-company.json.gzip",
+      "bytes": 238937,
+      "sha256": "8766fbe00ef95c3f6155755f3c54c3e2718b1aeae28993aacfad899ae335cdcf"
+    },
+    {
       "path": "public/salaries/employers/coast-mountain-college.json.gzip",
       "bytes": 6103,
       "sha256": "8f49c4e788167274884c5a168c5f466bd331e51959215c57913090ff57d3a909"
     },
     {
       "path": "public/salaries/employers/college-of-new-caledonia.json.gzip",
-      "bytes": 11450,
-      "sha256": "a7c1fee686040fcdd2871655525d3cf656383fdf50684cb92754629805239ba2"
+      "bytes": 28702,
+      "sha256": "d0c810787379f66330cb20e404b28858d50efb9786dab89a69384dda190bd80c"
     },
     {
       "path": "public/salaries/employers/college-of-the-rockies.json.gzip",
@@ -12882,8 +13277,8 @@
     },
     {
       "path": "public/salaries/employers/community-living-bc.json.gzip",
-      "bytes": 14472,
-      "sha256": "ae86e776f44cd37cc5e0bab456ef2ea1f803bacf915c45d1fdf1757eca407dfe"
+      "bytes": 52671,
+      "sha256": "ac56c4aadf5c1126749b6a668ded9a7b33b184463df5200d34ce7c0fdb03ece0"
     },
     {
       "path": "public/salaries/employers/coquitlam-school-district.json.gzip",
@@ -13172,8 +13567,8 @@
     },
     {
       "path": "public/salaries/employers/langara-college.json.gzip",
-      "bytes": 35924,
-      "sha256": "f777ec139f77f8df7d2738229d8f52556352a8ed991025e741a31597e3f1be7b"
+      "bytes": 75133,
+      "sha256": "f8e8f71d565ce43f747c274ce31810ed9c795e207990d17cba3f1cd156bfbec8"
     },
     {
       "path": "public/salaries/employers/langley-school-district.json.gzip",
@@ -13327,8 +13722,8 @@
     },
     {
       "path": "public/salaries/employers/royal-roads-university.json.gzip",
-      "bytes": 6685,
-      "sha256": "f09530031d49d26a34edda18a3e2eaf8eba92ac488e09c5d1c3a94b1ea9c031a"
+      "bytes": 35742,
+      "sha256": "8fd40bb069c756899c14c87f73fe192b764c7d83eca3bb696bffd79ec2296b03"
     },
     {
       "path": "public/salaries/employers/saanich-police.json.gzip",
@@ -13642,13 +14037,13 @@
     },
     {
       "path": "public/salaries/employers/transit-police.json.gzip",
-      "bytes": 6422,
-      "sha256": "a7ac61ab1be276eb2f3c8c68d01a7724748d561c7782642205737c9918a4f117"
+      "bytes": 18541,
+      "sha256": "0257962051279564eda1bc0857034f19fbaf79b903a3f57aeb785b82d58ca148"
     },
     {
       "path": "public/salaries/employers/translink.json.gzip",
-      "bytes": 169398,
-      "sha256": "f9ed92b99b0d250cfd59a71d3409f4af766f0068edd136f57970a707e1eebadf"
+      "bytes": 237142,
+      "sha256": "44c6264ec6d536309893cd19096c48b486f1187ca26f2628f75df72570e70814"
     },
     {
       "path": "public/salaries/employers/transportation-investment-corporation.json.gzip",
@@ -13672,8 +14067,8 @@
     },
     {
       "path": "public/salaries/employers/university-of-victoria.json.gzip",
-      "bytes": 82247,
-      "sha256": "f29d130c89af810fb6bebe3689e91d31d6588a9afa352b3e066170da644d0c19"
+      "bytes": 154989,
+      "sha256": "b9ea47eb26f28237845cf01c228f97e383213998a5e21bf6363e01d0e3f5809b"
     },
     {
       "path": "public/salaries/employers/vancouver-coastal-health.json.gzip",
@@ -13831,19 +14226,24 @@
       "sha256": "2cc7aba4c48e7593a6d7c843246be31ce7ffdd66f66c5aa86ad6311dfe6d433b"
     },
     {
+      "path": "public/salaries/employers/west-coast-express.json.gzip",
+      "bytes": 591,
+      "sha256": "b1c811ad3e4aa1d1d11e2524244c08da31a793b88fcafa86d4bb4d85c1e4a3eb"
+    },
+    {
       "path": "public/salaries/employers/west-vancouver-school-district.json.gzip",
       "bytes": 20062,
       "sha256": "f12bc1fd1ec19713e21f6dde001e461083ed2a1a80066e9779f863ebd5c94f1b"
     },
     {
       "path": "public/salaries/employers/workers-compensation-board.json.gzip",
-      "bytes": 107795,
-      "sha256": "64ba8c0b707bddf97144aeda1860ac2fe1c42a67bce7cdbcffa9e037b7fb5781"
+      "bytes": 232650,
+      "sha256": "50f71252ef5a38f0f5a11cc18b4b97120a0110e776a14d832f58459816eeec03"
     },
     {
       "path": "public/salaries/index.json",
-      "bytes": 11005543,
-      "sha256": "79d306093a22f4b5278149048434b209b8fcc204f25c0ea294d1ef1a673d3f00"
+      "bytes": 11439295,
+      "sha256": "b192a8fc82df0c6b1e700ce45ddfe774bc8f0331868c492472b914feee77ec4e"
     }
   ]
 }

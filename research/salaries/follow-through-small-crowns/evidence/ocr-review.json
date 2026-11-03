@@ -1,0 +1,219 @@
+{
+  "sourceKey": "bcfsa-2020-21",
+  "originalSha256": "721c59f000e3444688cd32b5baefdccf2128cdfd05b93b230697a7076c01ff01",
+  "reviewedOn": "2026-11-02",
+  "everyEmployeeSourceRowVisuallyReviewed": true,
+  "physicalPagesVisuallyReviewed": [
+    7,
+    8,
+    9,
+    10
+  ],
+  "rowCountsByPhysicalPage": {
+    "7": 21,
+    "8": 43,
+    "9": 43,
+    "10": 5
+  },
+  "independentReaders": [
+    "Tesseract 5 automatic page layout PSM3, original 300 dpi scan",
+    "Tesseract 5 PSM6 on separate name/pay/expense columns, independently segmented after removal of table rules; original 300 dpi scan"
+  ],
+  "inputPixels": "Original PDF rendering at300dpi; the second OCR input removes only detected long horizontal table rules, and crops inside the original vertical rules. Original unchanged.",
+  "adjudications": [
+    {
+      "page": 10,
+      "name": "Zhai, Xuetong",
+      "column": "remuneration",
+      "columnCropOcr": "83.616",
+      "sourcePixelValue": "83,616",
+      "decision": "Printed comma separator verified in full source pixels; period is OCR punctuation error."
+    },
+    {
+      "page": 8,
+      "name": "Harrington, Kevin",
+      "column": "remuneration",
+      "fullPageOcr": "108 ,444",
+      "sourcePixelValue": "108,444",
+      "decision": "Remove OCR whitespace before comma; independent column OCR and source pixels agree."
+    },
+    {
+      "page": 9,
+      "name": "Ong, Clarisse joy Sy",
+      "column": "name",
+      "decision": "Lowercase joy confirmed in original pixels and both OCR readers; retained."
+    },
+    {
+      "page": 8,
+      "name": "Drury, Courtney",
+      "column": "expenses",
+      "sourcePixelValue": "(298)",
+      "normalizedValue": -298,
+      "decision": "Printed parentheses indicate negative adjustment; retained."
+    },
+    {
+      "page": 9,
+      "name": "Sherwood, David",
+      "column": "expenses",
+      "sourcePixelValue": "(822)",
+      "normalizedValue": -822,
+      "decision": "Printed parentheses indicate negative adjustment; retained."
+    }
+  ],
+  "explicitZeroExpenseNames": [
+    "Desantis, Robert",
+    "Francis, Gavin",
+    "Ibarguen, Adolfo"
+  ],
+  "controlsVisuallyReviewed": {
+    "page": 10,
+    "totalEmployees": [
+      16258253,
+      484058
+    ],
+    "belowThreshold": [
+      3763415,
+      279346
+    ],
+    "impliedNamed": [
+      12494838,
+      204712
+    ],
+    "allPublishedNamedRowsSum": [
+      12494835,
+      204709
+    ],
+    "residualNamedMinusImplied": [
+      -3,
+      -3
+    ]
+  },
+  "residualConclusion": "All 112 published rows retained without alteration. Full-source pixel review and independent OCR agree on every row. The printed overall/below controls differ from published named rows by $3 in each column; cause unknown.",
+  "sourcePixelsDpi": 300,
+  "rowBoundaryPixelsByPhysicalPage": {
+    "7": [
+      1701,
+      1756,
+      1809,
+      1864,
+      1917,
+      1972,
+      2026,
+      2080,
+      2134,
+      2188,
+      2242,
+      2296,
+      2350,
+      2404,
+      2458,
+      2512,
+      2566,
+      2620,
+      2674,
+      2727,
+      2781,
+      2836
+    ],
+    "8": [
+      526,
+      580,
+      634,
+      688,
+      742,
+      796,
+      850,
+      904,
+      959,
+      1012,
+      1067,
+      1120,
+      1174,
+      1228,
+      1282,
+      1336,
+      1391,
+      1444,
+      1499,
+      1552,
+      1607,
+      1660,
+      1714,
+      1768,
+      1822,
+      1876,
+      1930,
+      1984,
+      2039,
+      2092,
+      2147,
+      2200,
+      2255,
+      2309,
+      2363,
+      2417,
+      2471,
+      2525,
+      2579,
+      2632,
+      2687,
+      2740,
+      2795,
+      2848
+    ],
+    "9": [
+      528,
+      581,
+      636,
+      689,
+      744,
+      797,
+      852,
+      905,
+      960,
+      1013,
+      1068,
+      1122,
+      1176,
+      1230,
+      1284,
+      1338,
+      1392,
+      1446,
+      1501,
+      1554,
+      1608,
+      1662,
+      1716,
+      1770,
+      1824,
+      1878,
+      1932,
+      1986,
+      2041,
+      2094,
+      2149,
+      2202,
+      2257,
+      2311,
+      2365,
+      2419,
+      2473,
+      2527,
+      2581,
+      2634,
+      2689,
+      2742,
+      2797,
+      2850
+    ],
+    "10": [
+      526,
+      579,
+      634,
+      687,
+      742,
+      795
+    ]
+  }
+}

@@ -1,0 +1,463 @@
+{
+  "version": 1,
+  "rowSchema": [
+    "employerSlug",
+    "name",
+    "position",
+    "remuneration",
+    "expenses",
+    "pdfPage"
+  ],
+  "sources": [
+    {
+      "id": "langara-sofi-2022-23-employees",
+      "employerSlug": "langara-college",
+      "employerName": "Langara College",
+      "sector": "Post-secondary education",
+      "year": "2022/23",
+      "periodType": "fiscal",
+      "periodStart": "2022-04-01",
+      "periodEnd": "2023-03-31",
+      "title": "Langara College Statement of Financial Information 2022/23 — named employee remuneration and expenses",
+      "sha256": "820da0516b04dd8d1cc36d1f04e3c91376b7d157b82e6c977216732625a048d6",
+      "file": "langara-2022-23.json.gzip",
+      "pages": [
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41
+      ],
+      "sourceUrl": "https://langara.ca/sites/default/files/migrated/files/LC_FY23_SOFI.pdf",
+      "sourceIndexUrl": "https://langara.ca/administration/financial-services/annual-reports",
+      "pdfBytes": 5364431,
+      "rowCount": 710,
+      "totalRemuneration": 69887446,
+      "totalExpenses": 2132016,
+      "status": "verified",
+      "verifiedOn": "2026-11-02",
+      "category": "employee-remuneration",
+      "scope": "named-employees-over-threshold",
+      "completeEmployeeSchedule": true,
+      "threshold": 75000,
+      "thresholdComparison": ">",
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "nameDisclosure": "as-published",
+      "positionDisclosure": "as-published",
+      "sourceKind": "official-statement-of-financial-information",
+      "notes": [
+        "Employee schedule only; board, suppliers, below-threshold aggregates, severance/reconciliation lines excluded.",
+        "Published remuneration is not an inferred annual base salary. Missing or dash expense cells remain null; printed numeric zero remains zero.",
+        "All compiled observations and their original labels are retained.",
+        "The printed named cohort is labelled Total of Employees Earning > $75,000, but some disclosed salary/gross-pay cells are below $75,000. All named schedule rows are retained without inferring a different threshold measure."
+      ],
+      "validation": {
+        "originalFingerprintVerified": true,
+        "independentReaders": [
+          "PyMuPDF positioned words",
+          "Poppler layout text"
+        ],
+        "everyRowFieldAgreement": true,
+        "rowsIndependentlyChecked": 710,
+        "completeEmployeeSchedule": true,
+        "pageRowCounts": [
+          [
+            31,
+            65
+          ],
+          [
+            32,
+            67
+          ],
+          [
+            33,
+            67
+          ],
+          [
+            34,
+            67
+          ],
+          [
+            35,
+            67
+          ],
+          [
+            36,
+            67
+          ],
+          [
+            37,
+            67
+          ],
+          [
+            38,
+            67
+          ],
+          [
+            39,
+            67
+          ],
+          [
+            40,
+            67
+          ],
+          [
+            41,
+            42
+          ]
+        ],
+        "printedControls": [
+          {
+            "field": "remuneration",
+            "rowSum": 69887446,
+            "printedControl": 69887454,
+            "residual": -8,
+            "basis": "Printed Total of Employees Earning > $75,000; board, under-threshold and other aggregates excluded."
+          },
+          {
+            "field": "expenses",
+            "rowSum": 2132016,
+            "printedControl": 2132005,
+            "residual": 11,
+            "basis": "Printed Total of Employees Earning > $75,000; board, under-threshold and other aggregates excluded."
+          }
+        ],
+        "evidenceFile": "evidence/langara-2022-23.json.gzip",
+        "physicalPagesVisuallyReviewed": [
+          31,
+          32,
+          33,
+          34,
+          35,
+          36,
+          37,
+          38,
+          39,
+          40,
+          41
+        ],
+        "visualReviewFile": "visual/langara-2022-23.json",
+        "visualReviewScope": "Full page rendered contact sheets inspected for reporting-period headers, complete alphabetic employee continuation, board/employee boundaries, first/last rows and separate totals/reconciliation blocks. Original controls inspected as enlarged crops. Exact six-field values for digital schedules are independently validated with PyMuPDF and Poppler; contact sheets are not claimed as a manual pixel audit of every employee cell."
+      },
+      "retainCompiledPartition": true,
+      "publicWarning": "Published employee cells differ from printed named controls by -8 CAD remuneration and 11 CAD expenses. Original cells are retained.",
+      "dataSha256": "651077f1edd227dc549da6c131c9986b6b243caad5d4c61a9fefdfbac34c0993"
+    },
+    {
+      "id": "langara-sofi-2023-24-employees",
+      "employerSlug": "langara-college",
+      "employerName": "Langara College",
+      "sector": "Post-secondary education",
+      "year": "2023/24",
+      "periodType": "fiscal",
+      "periodStart": "2023-04-01",
+      "periodEnd": "2024-03-31",
+      "title": "Langara College Statement of Financial Information 2023/24 — named employee gross pay and expenses",
+      "sourceUrl": "https://langara.ca/sites/default/files/migrated/files/LC_FY24_SOFI.pdf",
+      "sourceIndexUrl": "https://langara.ca/administration/financial-services/annual-reports",
+      "sha256": "74693accc765b5feb0a7e0985c9d8beb39d84bdac24d5bb92c3f78a4536e78c8",
+      "pdfBytes": 11728579,
+      "file": "langara-2023-24.json.gzip",
+      "dataSha256": "1be6e26ccc947fc00e9bfa9338832866f84d93ea0d85816a3d0a7a4257fd1e9b",
+      "normalizedSha256": "fcee5bf918cc20de664e12bfb9e3729b29b7885677385e032842c6191cdb1fc5",
+      "rowCount": 891,
+      "totalRemuneration": 94671610,
+      "totalExpenses": 2754209,
+      "pages": [
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42
+      ],
+      "status": "verified",
+      "verifiedOn": "2026-11-02",
+      "category": "employee-remuneration",
+      "scope": "named-employees-over-threshold",
+      "completeEmployeeSchedule": true,
+      "threshold": 75000,
+      "thresholdComparison": ">",
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "amountPrecision": "whole-dollars",
+      "nameDisclosure": "as-published",
+      "positionDisclosure": "as-published",
+      "sourceKind": "official-statement-of-financial-information",
+      "retainCompiledPartition": true,
+      "publicWarning": "Published individual gross-pay cells sum $6 below the printed named control and expense cells sum $16 above it. All 891 rows were checked in two OCR configurations and against source pixels. Literal employee amounts are retained without balancing adjustments; expense dashes remain null.",
+      "notes": [
+        "Complete employee schedule only; board, suppliers, below-threshold aggregates, severance and other financial reconciliation amounts are excluded.",
+        "The published remuneration column is Gross pay, not inferred annual base salary or a total including separate expenses.",
+        "The printed cohort label is Total of Employees Earning > $75,000, but 31 individually disclosed gross-pay cells are at or below $75,000. All named source rows are retained without inferring another threshold measure.",
+        "Two OCR configurations read all 891 rows and 1,782 monetary cells; every name, position and monetary cell was then checked against source pixels. Raw disagreements and explicit text corrections remain in evidence.",
+        "Both OCR passes misread Zanzerl, Heather as Zanzerl|, Heather. A six-times source crop resolves the literal printed surname. Todd Stuckless, J. retains its printed initial period.",
+        "All compiled observations and original labels are retained. Repeated names with different pay or positions remain separate source occurrences."
+      ],
+      "validation": {
+        "originalFingerprintVerified": true,
+        "documentPeriodChecked": true,
+        "independentReaders": [
+          "Tesseract LSTM eng, 3x render/PSM6",
+          "Tesseract LSTM eng, 4x render/PSM4",
+          "Complete manual source-pixel review of all four employee columns"
+        ],
+        "everyMonetaryCellAgreement": true,
+        "everyRowFieldAgreement": true,
+        "agreementBasis": "OCR text fields after documented source-pixel corrections; all raw OCR readings are retained.",
+        "rowsIndependentlyChecked": 891,
+        "completeEmployeeSchedule": true,
+        "pageRowCounts": [
+          [
+            32,
+            86
+          ],
+          [
+            33,
+            86
+          ],
+          [
+            34,
+            86
+          ],
+          [
+            35,
+            86
+          ],
+          [
+            36,
+            86
+          ],
+          [
+            37,
+            86
+          ],
+          [
+            38,
+            86
+          ],
+          [
+            39,
+            86
+          ],
+          [
+            40,
+            86
+          ],
+          [
+            41,
+            86
+          ],
+          [
+            42,
+            31
+          ]
+        ],
+        "printedControls": [
+          {
+            "field": "remuneration",
+            "rowSum": 94671610,
+            "printedControl": 94671616,
+            "residual": -6,
+            "basis": "Printed Total of Employees Earning > $75,000; board, below-threshold and other financial aggregates excluded."
+          },
+          {
+            "field": "expenses",
+            "rowSum": 2754209,
+            "printedControl": 2754193,
+            "residual": 16,
+            "basis": "Printed Total of Employees Earning > $75,000; board, below-threshold and other financial aggregates excluded."
+          }
+        ],
+        "physicalPagesVisuallyReviewed": [
+          32,
+          33,
+          34,
+          35,
+          36,
+          37,
+          38,
+          39,
+          40,
+          41,
+          42
+        ],
+        "sourcePixelsReviewed": true,
+        "allRowsVisuallyReviewed": true,
+        "textFieldCorrections": 21,
+        "evidenceFile": "evidence/langara-2023-24.json.gzip"
+      }
+    },
+    {
+      "id": "langara-sofi-2024-25-employees",
+      "employerSlug": "langara-college",
+      "employerName": "Langara College",
+      "sector": "Post-secondary education",
+      "year": "2024/25",
+      "periodType": "fiscal",
+      "periodStart": "2024-04-01",
+      "periodEnd": "2025-03-31",
+      "title": "Langara College Statement of Financial Information 2024/25 — named employee remuneration and expenses",
+      "sha256": "e0236a17bfa8f78ea28dba4a88d461a987eba8ad05bc56cc8ab41fe70763c325",
+      "file": "langara-2024-25.json.gzip",
+      "pages": [
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42
+      ],
+      "sourceUrl": "https://langara.ca/media/15595/download?inline=",
+      "sourceIndexUrl": "https://langara.ca/administration/financial-services/annual-reports",
+      "pdfBytes": 4871955,
+      "rowCount": 950,
+      "totalRemuneration": 101403151,
+      "totalExpenses": 3209876,
+      "status": "verified",
+      "verifiedOn": "2026-11-02",
+      "category": "employee-remuneration",
+      "scope": "named-employees-over-threshold",
+      "completeEmployeeSchedule": true,
+      "threshold": 75000,
+      "thresholdComparison": ">",
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "nameDisclosure": "as-published",
+      "positionDisclosure": "as-published",
+      "sourceKind": "official-statement-of-financial-information",
+      "notes": [
+        "Employee schedule only; board, suppliers, below-threshold aggregates, severance/reconciliation lines excluded.",
+        "Published remuneration is not an inferred annual base salary. Missing or dash expense cells remain null; printed numeric zero remains zero.",
+        "All compiled observations and their original labels are retained.",
+        "The printed named cohort is labelled Total of Employees Earning > $75,000, but some disclosed salary/gross-pay cells are below $75,000. All named schedule rows are retained without inferring a different threshold measure."
+      ],
+      "validation": {
+        "originalFingerprintVerified": true,
+        "independentReaders": [
+          "PyMuPDF positioned words",
+          "Poppler layout text"
+        ],
+        "everyRowFieldAgreement": true,
+        "rowsIndependentlyChecked": 950,
+        "completeEmployeeSchedule": true,
+        "pageRowCounts": [
+          [
+            29,
+            70
+          ],
+          [
+            30,
+            70
+          ],
+          [
+            31,
+            69
+          ],
+          [
+            32,
+            70
+          ],
+          [
+            33,
+            70
+          ],
+          [
+            34,
+            70
+          ],
+          [
+            35,
+            70
+          ],
+          [
+            36,
+            70
+          ],
+          [
+            37,
+            70
+          ],
+          [
+            38,
+            70
+          ],
+          [
+            39,
+            70
+          ],
+          [
+            40,
+            70
+          ],
+          [
+            41,
+            70
+          ],
+          [
+            42,
+            41
+          ]
+        ],
+        "printedControls": [
+          {
+            "field": "remuneration",
+            "rowSum": 101403151,
+            "printedControl": 101403162,
+            "residual": -11,
+            "basis": "Printed Total of Employees Earning > $75,000; board, under-threshold and other aggregates excluded."
+          },
+          {
+            "field": "expenses",
+            "rowSum": 3209876,
+            "printedControl": 3209860,
+            "residual": 16,
+            "basis": "Printed Total of Employees Earning > $75,000; board, under-threshold and other aggregates excluded."
+          }
+        ],
+        "evidenceFile": "evidence/langara-2024-25.json.gzip",
+        "physicalPagesVisuallyReviewed": [
+          29,
+          30,
+          31,
+          32,
+          33,
+          34,
+          35,
+          36,
+          37,
+          38,
+          39,
+          40,
+          41,
+          42
+        ],
+        "visualReviewFile": "visual/langara-2024-25.json",
+        "visualReviewScope": "Full page rendered contact sheets inspected for reporting-period headers, complete alphabetic employee continuation, board/employee boundaries, first/last rows and separate totals/reconciliation blocks. Original controls inspected as enlarged crops. Exact six-field values for digital schedules are independently validated with PyMuPDF and Poppler; contact sheets are not claimed as a manual pixel audit of every employee cell."
+      },
+      "retainCompiledPartition": true,
+      "publicWarning": "Published employee cells differ from printed named controls by -11 CAD remuneration and 16 CAD expenses. Original cells are retained.",
+      "dataSha256": "f5d5e2ef40f773a4466bf3e0f8f352a757b9066da205269a1ef50f79de84f724"
+    }
+  ]
+}

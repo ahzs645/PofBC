@@ -1,0 +1,102 @@
+{
+  "version": 1,
+  "sourceId": "follow-through-bcib-2020-21-employees",
+  "leadId": "additional-source-bcib-2020-21",
+  "sourceUrl": "https://bcib.ca/wp-content/uploads/2023/05/2020-2021-bcib-statement-of-financial-information.pdf",
+  "sourceIndexUrl": "https://bcib.ca/reporting-resources/",
+  "checkedOn": "2026-11-02",
+  "originalSha256": "c64a64b970f586550d921952d5f0fc018130eb651f40f6bd1b7d21673bdc3836",
+  "originalBytes": 1472598,
+  "originalPdfPageCount": 29,
+  "period": {
+    "start": "2020-04-01",
+    "end": "2021-03-31",
+    "partial": false,
+    "evidence": "Original schedule year-ended header; first BCFSA schedule explicitly gives commencement date and period end."
+  },
+  "employeePhysicalPages": [
+    24
+  ],
+  "retainedSourceEvidencePages": [
+    23,
+    24,
+    25
+  ],
+  "readerNames": [
+    "PyMuPDF positioned words",
+    "Poppler pdftotext -layout"
+  ],
+  "primaryRowCount": 28,
+  "independentRowCount": 28,
+  "everyRowFieldMultisetEqual": true,
+  "primaryNormalizedSha256": "6f18bb4cce8b92554a4d324f4a2c527219179cd47e8d9911d9c853897be7440f",
+  "independentRowMultisetSha256": "6f18bb4cce8b92554a4d324f4a2c527219179cd47e8d9911d9c853897be7440f",
+  "pageControls": [
+    {
+      "physicalPage": 24,
+      "rowCount": 28,
+      "remuneration": 3128895,
+      "expenses": 40058
+    }
+  ],
+  "controls": {
+    "physicalPage": 24,
+    "printedTotalEmployees": [
+      9232155,
+      68990
+    ],
+    "printedBelowThreshold": [
+      6103261,
+      28933
+    ],
+    "printedDirectNamedSubtotal": null,
+    "impliedNamedControl": [
+      3128894,
+      40057
+    ],
+    "observedAllNamedRows": [
+      3128895,
+      40058
+    ],
+    "residualNamedMinusImplied": [
+      1,
+      1
+    ],
+    "residualNamedMinusDirect": null,
+    "units": "CAD whole dollars",
+    "residualCause": "Unknown; preserved as printed."
+  },
+  "physicalPagesVisuallyReviewed": [
+    24
+  ],
+  "sourceRowReview": "Every native employee row compared field-for-field between independent PDF readers; source-pixel review of printed control totals and ambiguous glyph/layout cases. Every scan employee row and control additionally visually reviewed.",
+  "explicitZeroExpenseRows": 0,
+  "nullExpenseRows": 10,
+  "negativeExpenseRows": [],
+  "repeatedDisclosedNames": {},
+  "exactDuplicateSixFieldRows": 0,
+  "excludedScopes": [
+    "board-director-remuneration",
+    "suppliers",
+    "below-threshold-aggregate",
+    "reconciliation-adjustments",
+    "employer-tax-benefit-aggregates"
+  ],
+  "remunerationDefinitionVerbatim": "Note 1: Remuneration includes base salary and other compensation for 2020/21.",
+  "severanceCompensationDefinitionContext": null,
+  "publicWarning": "Published named rows sum to $3,128,895 remuneration and $40,058 expenses, differing from the printed total less below-threshold controls by +$1 and +$1. Original row values are retained; causes unknown.",
+  "rawEvidenceFiles": [
+    {
+      "file": "evidence/bcib-2020-21.layout.txt",
+      "sha256": "c7e739127e413fcaa8ebc6e49122f9d3f848e3edaffe4f9311b53f6b31799a82"
+    },
+    {
+      "file": "evidence/bcib-2020-21.words.json.gzip",
+      "sha256": "5fc693dbdd4b899b60646f1f5fd1262cede96ff07477c841e73f2a5f0cb5e08c"
+    },
+    {
+      "file": "evidence/bcib-2020-21.controls.png",
+      "sha256": "fb7b371a5ff1f796ec238d5d80ebfba344a68c6f2481a7dd2f80a32fc1ce1d23"
+    }
+  ]
+}

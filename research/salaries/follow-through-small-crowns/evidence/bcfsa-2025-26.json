@@ -1,0 +1,167 @@
+{
+  "version": 1,
+  "sourceId": "follow-through-bcfsa-2025-26-employees",
+  "leadId": "additional-source-bcfsa-2025-26",
+  "sourceUrl": "https://www.bcfsa.ca/media/4946/download",
+  "sourceIndexUrl": "https://www.bcfsa.ca/about-us/what-we-do/corporate-publications",
+  "checkedOn": "2026-11-02",
+  "originalSha256": "7cd2c5a88799970cc4fb7b635c2a79ab6aa8266a120022d377227b7b0e50c369",
+  "originalBytes": 606876,
+  "originalPdfPageCount": 22,
+  "period": {
+    "start": "2025-04-01",
+    "end": "2026-03-31",
+    "partial": false,
+    "evidence": "Original schedule year-ended header; first BCFSA schedule explicitly gives commencement date and period end."
+  },
+  "employeePhysicalPages": [
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17
+  ],
+  "retainedSourceEvidencePages": [
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17
+  ],
+  "readerNames": [
+    "PyMuPDF positioned words",
+    "Poppler pdftotext -layout"
+  ],
+  "primaryRowCount": 307,
+  "independentRowCount": 307,
+  "everyRowFieldMultisetEqual": true,
+  "primaryNormalizedSha256": "9b7b9f1f6bac7b6823136272079b92e71ba17bd25ea952e23161bf4f8a057ae9",
+  "independentRowMultisetSha256": "acac8ca9e346964ed29ceca278783011676a52912b79fc77faaf08117fb19dd7",
+  "pageControls": [
+    {
+      "physicalPage": 9,
+      "rowCount": 18,
+      "remuneration": 2410130,
+      "expenses": 56708
+    },
+    {
+      "physicalPage": 10,
+      "rowCount": 38,
+      "remuneration": 4380965,
+      "expenses": 47823
+    },
+    {
+      "physicalPage": 11,
+      "rowCount": 38,
+      "remuneration": 4758333,
+      "expenses": 66041
+    },
+    {
+      "physicalPage": 12,
+      "rowCount": 38,
+      "remuneration": 4587361,
+      "expenses": 68110
+    },
+    {
+      "physicalPage": 13,
+      "rowCount": 38,
+      "remuneration": 4974811,
+      "expenses": 92348
+    },
+    {
+      "physicalPage": 14,
+      "rowCount": 38,
+      "remuneration": 4729182,
+      "expenses": 49548
+    },
+    {
+      "physicalPage": 15,
+      "rowCount": 38,
+      "remuneration": 4829858,
+      "expenses": 42921
+    },
+    {
+      "physicalPage": 16,
+      "rowCount": 38,
+      "remuneration": 4926706,
+      "expenses": 126494
+    },
+    {
+      "physicalPage": 17,
+      "rowCount": 23,
+      "remuneration": 3003575,
+      "expenses": 99737
+    }
+  ],
+  "controls": {
+    "physicalPage": 17,
+    "printedTotalEmployees": [
+      45269545,
+      707322
+    ],
+    "printedBelowThreshold": [
+      6668624,
+      57592
+    ],
+    "printedDirectNamedSubtotal": null,
+    "impliedNamedControl": [
+      38600921,
+      649730
+    ],
+    "observedAllNamedRows": [
+      38600921,
+      649730
+    ],
+    "residualNamedMinusImplied": [
+      0,
+      0
+    ],
+    "residualNamedMinusDirect": null,
+    "units": "CAD whole dollars",
+    "residualCause": null
+  },
+  "physicalPagesVisuallyReviewed": [
+    17
+  ],
+  "sourceRowReview": "Every native employee row compared field-for-field between independent PDF readers; source-pixel review of printed control totals and ambiguous glyph/layout cases. Every scan employee row and control additionally visually reviewed.",
+  "explicitZeroExpenseRows": 0,
+  "nullExpenseRows": 6,
+  "negativeExpenseRows": [],
+  "repeatedDisclosedNames": {
+    "Chan, K": 2,
+    "Lee, J": 2
+  },
+  "exactDuplicateSixFieldRows": 0,
+  "excludedScopes": [
+    "board-director-remuneration",
+    "suppliers",
+    "below-threshold-aggregate",
+    "reconciliation-adjustments",
+    "employer-tax-benefit-aggregates"
+  ],
+  "remunerationDefinitionVerbatim": null,
+  "severanceCompensationDefinitionContext": "\"Compensation\" means regular salary excluding benefits.",
+  "publicWarning": null,
+  "rawEvidenceFiles": [
+    {
+      "file": "evidence/bcfsa-2025-26.layout.txt",
+      "sha256": "d77c13b0b6590aa9df39c4aa395f8d7cea04291eeba711462f77d36f9db5c669"
+    },
+    {
+      "file": "evidence/bcfsa-2025-26.words.json.gzip",
+      "sha256": "ee9c5a4b4c393a10b99655a9903c8ccf2e7bfe87e3dc7cfd82fd1ae91f91c715"
+    },
+    {
+      "file": "evidence/bcfsa-2025-26.controls.png",
+      "sha256": "66658f3aa869901cc157eb751f7a8505c5a03d019ad972d2a63ab7460559f4a4"
+    }
+  ]
+}

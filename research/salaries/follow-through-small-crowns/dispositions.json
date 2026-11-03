@@ -1,0 +1,444 @@
+{
+  "version": 1,
+  "checkedOn": "2026-11-02",
+  "assignedReports": 14,
+  "acceptedEmployeeReports": 14,
+  "acceptedEmployeeRows": 4255,
+  "heldEmployeeReports": 0,
+  "dispositions": [
+    {
+      "leadId": "additional-source-bcfsa-2019-20",
+      "employerSlug": "bc-financial-services-authority",
+      "year": "2019/20",
+      "status": "accepted-official-with-public-qualifications",
+      "sourceId": "follow-through-bcfsa-2019-20-employees",
+      "rowCount": 6,
+      "normalizedPayload": "bcfsa-2019-20.json.gzip",
+      "dataSha256": "6da70c86c30e8aeaa780734a5754964114c6e39f047f53c02f8a6916908e96bf",
+      "originalSourceSha256": "9cb80bb8e98f17249b09c7a3ca88dfc1a29275c6cbd5432ad60935c410e0bd49",
+      "actualPeriodStart": "2019-11-01",
+      "actualPeriodEnd": "2020-03-31",
+      "acceptedScope": "employee-remuneration",
+      "excludedScopes": [
+        "board-director-remuneration",
+        "suppliers",
+        "below-threshold-aggregate",
+        "reconciliation-adjustments",
+        "employer-tax-benefit-aggregates"
+      ],
+      "unacceptedNamedScopes": [
+        {
+          "scope": "board-director-remuneration",
+          "reason": "Separate board schedule intentionally excluded from authorized employee cohort import."
+        }
+      ],
+      "blockers": [],
+      "evidence": "evidence/bcfsa-2019-20.json",
+      "publicWarning": "This disclosure covers November 1, 2019 (commencement of operations) through March 31, 2020, a partial fiscal year. Published named remuneration rows sum to $539,126 versus the printed named subtotal $539,127; named expenses total $82,978 versus $82,977 implied by total less below-threshold controls. Values are unchanged; causes unknown.",
+      "compiledRowsDeleted": 0
+    },
+    {
+      "leadId": "additional-source-bcfsa-2020-21",
+      "employerSlug": "bc-financial-services-authority",
+      "year": "2020/21",
+      "status": "accepted-official-with-public-qualifications",
+      "sourceId": "follow-through-bcfsa-2020-21-employees",
+      "rowCount": 112,
+      "normalizedPayload": "bcfsa-2020-21.json.gzip",
+      "dataSha256": "faaf619a77ea1ea327d3a456051f118ee601405b1ee43bd59e3fcfcb5e82c68b",
+      "originalSourceSha256": "721c59f000e3444688cd32b5baefdccf2128cdfd05b93b230697a7076c01ff01",
+      "actualPeriodStart": "2020-04-01",
+      "actualPeriodEnd": "2021-03-31",
+      "acceptedScope": "employee-remuneration",
+      "excludedScopes": [
+        "board-director-remuneration",
+        "suppliers",
+        "below-threshold-aggregate",
+        "reconciliation-adjustments",
+        "employer-tax-benefit-aggregates"
+      ],
+      "unacceptedNamedScopes": [
+        {
+          "scope": "board-director-remuneration",
+          "reason": "Separate board schedule intentionally excluded from authorized employee cohort import."
+        }
+      ],
+      "blockers": [],
+      "evidence": "evidence/bcfsa-2020-21.json",
+      "publicWarning": "Published named rows sum to $12,494,835 remuneration and $204,709 expenses, differing from the printed total less below-threshold controls by −$3 and −$3. Original row values are retained; causes unknown. The source publishes negative expense adjustments: Drury, Courtney (−$298), Sherwood, David (−$822). These remain negative; printed numeric zeros remain 0.",
+      "compiledRowsDeleted": 0
+    },
+    {
+      "leadId": "additional-source-bcfsa-2021-22",
+      "employerSlug": "bc-financial-services-authority",
+      "year": "2021/22",
+      "status": "accepted-official",
+      "sourceId": "follow-through-bcfsa-2021-22-employees",
+      "rowCount": 161,
+      "normalizedPayload": "bcfsa-2021-22.json.gzip",
+      "dataSha256": "384d2619c2c804beaecaf2d9adbabaf612a09decc1f7f8a09543973e4807d84d",
+      "originalSourceSha256": "3722fac4678277643159a6d156d182d2633da71f9ad97a2149af04a49d9846df",
+      "actualPeriodStart": "2021-04-01",
+      "actualPeriodEnd": "2022-03-31",
+      "acceptedScope": "employee-remuneration",
+      "excludedScopes": [
+        "board-director-remuneration",
+        "suppliers",
+        "below-threshold-aggregate",
+        "reconciliation-adjustments",
+        "employer-tax-benefit-aggregates"
+      ],
+      "unacceptedNamedScopes": [
+        {
+          "scope": "board-director-remuneration",
+          "reason": "Separate board schedule intentionally excluded from authorized employee cohort import."
+        }
+      ],
+      "blockers": [],
+      "evidence": "evidence/bcfsa-2021-22.json",
+      "publicWarning": null,
+      "compiledRowsDeleted": 0
+    },
+    {
+      "leadId": "additional-source-bcfsa-2022-23",
+      "employerSlug": "bc-financial-services-authority",
+      "year": "2022/23",
+      "status": "accepted-official",
+      "sourceId": "follow-through-bcfsa-2022-23-employees",
+      "rowCount": 237,
+      "normalizedPayload": "bcfsa-2022-23.json.gzip",
+      "dataSha256": "37b1cd1acf6bd4553d57d66e01bea26ea6bd8615e40fa9f1789a7f1387981594",
+      "originalSourceSha256": "f43f75ceefdfba06d6d3f8bc6bab83bb0e1a30c78c705be5d048daa22b9c458b",
+      "actualPeriodStart": "2022-04-01",
+      "actualPeriodEnd": "2023-03-31",
+      "acceptedScope": "employee-remuneration",
+      "excludedScopes": [
+        "board-director-remuneration",
+        "suppliers",
+        "below-threshold-aggregate",
+        "reconciliation-adjustments",
+        "employer-tax-benefit-aggregates"
+      ],
+      "unacceptedNamedScopes": [
+        {
+          "scope": "board-director-remuneration",
+          "reason": "Separate board schedule intentionally excluded from authorized employee cohort import."
+        }
+      ],
+      "blockers": [],
+      "evidence": "evidence/bcfsa-2022-23.json",
+      "publicWarning": null,
+      "compiledRowsDeleted": 0
+    },
+    {
+      "leadId": "additional-source-bcfsa-2023-24",
+      "employerSlug": "bc-financial-services-authority",
+      "year": "2023/24",
+      "status": "accepted-official",
+      "sourceId": "follow-through-bcfsa-2023-24-employees",
+      "rowCount": 257,
+      "normalizedPayload": "bcfsa-2023-24.json.gzip",
+      "dataSha256": "817f13b230ca86a7ba2d94d1e836f64c45e6f4aab161d1ec55bf62d3321a6187",
+      "originalSourceSha256": "286c896425c99aa33ed3d2476879a3ba91af31bf970b34d114f0f189914ca70e",
+      "actualPeriodStart": "2023-04-01",
+      "actualPeriodEnd": "2024-03-31",
+      "acceptedScope": "employee-remuneration",
+      "excludedScopes": [
+        "board-director-remuneration",
+        "suppliers",
+        "below-threshold-aggregate",
+        "reconciliation-adjustments",
+        "employer-tax-benefit-aggregates"
+      ],
+      "unacceptedNamedScopes": [
+        {
+          "scope": "board-director-remuneration",
+          "reason": "Separate board schedule intentionally excluded from authorized employee cohort import."
+        }
+      ],
+      "blockers": [],
+      "evidence": "evidence/bcfsa-2023-24.json",
+      "publicWarning": null,
+      "compiledRowsDeleted": 0
+    },
+    {
+      "leadId": "additional-source-bcfsa-2024-25",
+      "employerSlug": "bc-financial-services-authority",
+      "year": "2024/25",
+      "status": "accepted-official",
+      "sourceId": "follow-through-bcfsa-2024-25-employees",
+      "rowCount": 286,
+      "normalizedPayload": "bcfsa-2024-25.json.gzip",
+      "dataSha256": "53da1cb473114f72ce993b09620f2b9e5bcd1abc1f8ca1e54f1a331b67a715fb",
+      "originalSourceSha256": "08a29ad9ad5917338a514584ef32518115dd81c0b6d19e2cc6f1a33127e82f0e",
+      "actualPeriodStart": "2024-04-01",
+      "actualPeriodEnd": "2025-03-31",
+      "acceptedScope": "employee-remuneration",
+      "excludedScopes": [
+        "board-director-remuneration",
+        "suppliers",
+        "below-threshold-aggregate",
+        "reconciliation-adjustments",
+        "employer-tax-benefit-aggregates"
+      ],
+      "unacceptedNamedScopes": [
+        {
+          "scope": "board-director-remuneration",
+          "reason": "Separate board schedule intentionally excluded from authorized employee cohort import."
+        }
+      ],
+      "blockers": [],
+      "evidence": "evidence/bcfsa-2024-25.json",
+      "publicWarning": null,
+      "compiledRowsDeleted": 0
+    },
+    {
+      "leadId": "additional-source-bcfsa-2025-26",
+      "employerSlug": "bc-financial-services-authority",
+      "year": "2025/26",
+      "status": "accepted-official",
+      "sourceId": "follow-through-bcfsa-2025-26-employees",
+      "rowCount": 307,
+      "normalizedPayload": "bcfsa-2025-26.json.gzip",
+      "dataSha256": "8585f304bf44feaeda67110a1b1d991ee0f843eda51d3512faba7f2786b58e36",
+      "originalSourceSha256": "7cd2c5a88799970cc4fb7b635c2a79ab6aa8266a120022d377227b7b0e50c369",
+      "actualPeriodStart": "2025-04-01",
+      "actualPeriodEnd": "2026-03-31",
+      "acceptedScope": "employee-remuneration",
+      "excludedScopes": [
+        "board-director-remuneration",
+        "suppliers",
+        "below-threshold-aggregate",
+        "reconciliation-adjustments",
+        "employer-tax-benefit-aggregates"
+      ],
+      "unacceptedNamedScopes": [
+        {
+          "scope": "board-director-remuneration",
+          "reason": "Separate board schedule intentionally excluded from authorized employee cohort import."
+        }
+      ],
+      "blockers": [],
+      "evidence": "evidence/bcfsa-2025-26.json",
+      "publicWarning": null,
+      "compiledRowsDeleted": 0
+    },
+    {
+      "leadId": "additional-source-bcib-2019-20",
+      "employerSlug": "bc-infrastructure-benefits",
+      "year": "2019/20",
+      "status": "accepted-official",
+      "sourceId": "follow-through-bcib-2019-20-employees",
+      "rowCount": 13,
+      "normalizedPayload": "bcib-2019-20.json.gzip",
+      "dataSha256": "13aca52b669700ad6d1da0c8124be5a846b6579144ca6c33500234e35a4e6c31",
+      "originalSourceSha256": "8fc45100a9731074ada394e55cf1e308b602aa53d0591329bd66034570565d2d",
+      "actualPeriodStart": "2019-04-01",
+      "actualPeriodEnd": "2020-03-31",
+      "acceptedScope": "employee-remuneration",
+      "excludedScopes": [
+        "board-director-remuneration",
+        "suppliers",
+        "below-threshold-aggregate",
+        "reconciliation-adjustments",
+        "employer-tax-benefit-aggregates"
+      ],
+      "unacceptedNamedScopes": [
+        {
+          "scope": "board-director-remuneration",
+          "reason": "Separate board schedule intentionally excluded from authorized employee cohort import."
+        }
+      ],
+      "blockers": [],
+      "evidence": "evidence/bcib-2019-20.json",
+      "publicWarning": null,
+      "compiledRowsDeleted": 0
+    },
+    {
+      "leadId": "additional-source-bcib-2020-21",
+      "employerSlug": "bc-infrastructure-benefits",
+      "year": "2020/21",
+      "status": "accepted-official-with-public-qualifications",
+      "sourceId": "follow-through-bcib-2020-21-employees",
+      "rowCount": 28,
+      "normalizedPayload": "bcib-2020-21.json.gzip",
+      "dataSha256": "3388702663b4634b0a4d127d22daa031c39737bcd60200d4b2ecc395086145ab",
+      "originalSourceSha256": "c64a64b970f586550d921952d5f0fc018130eb651f40f6bd1b7d21673bdc3836",
+      "actualPeriodStart": "2020-04-01",
+      "actualPeriodEnd": "2021-03-31",
+      "acceptedScope": "employee-remuneration",
+      "excludedScopes": [
+        "board-director-remuneration",
+        "suppliers",
+        "below-threshold-aggregate",
+        "reconciliation-adjustments",
+        "employer-tax-benefit-aggregates"
+      ],
+      "unacceptedNamedScopes": [
+        {
+          "scope": "board-director-remuneration",
+          "reason": "Separate board schedule intentionally excluded from authorized employee cohort import."
+        }
+      ],
+      "blockers": [],
+      "evidence": "evidence/bcib-2020-21.json",
+      "publicWarning": "Published named rows sum to $3,128,895 remuneration and $40,058 expenses, differing from the printed total less below-threshold controls by +$1 and +$1. Original row values are retained; causes unknown.",
+      "compiledRowsDeleted": 0
+    },
+    {
+      "leadId": "additional-source-bcib-2021-22",
+      "employerSlug": "bc-infrastructure-benefits",
+      "year": "2021/22",
+      "status": "accepted-official-with-public-qualifications",
+      "sourceId": "follow-through-bcib-2021-22-employees",
+      "rowCount": 185,
+      "normalizedPayload": "bcib-2021-22.json.gzip",
+      "dataSha256": "cf5786f946099362971bfc04575b2d4de62beada27cb8564c5ac2d63330ffdbd",
+      "originalSourceSha256": "ce0389d6690e1397e2d3a7a74eec98d093e8bc5dd4cf588772e9ee909d31f2b0",
+      "actualPeriodStart": "2021-04-01",
+      "actualPeriodEnd": "2022-03-31",
+      "acceptedScope": "employee-remuneration",
+      "excludedScopes": [
+        "board-director-remuneration",
+        "suppliers",
+        "below-threshold-aggregate",
+        "reconciliation-adjustments",
+        "employer-tax-benefit-aggregates"
+      ],
+      "unacceptedNamedScopes": [
+        {
+          "scope": "board-director-remuneration",
+          "reason": "Separate board schedule intentionally excluded from authorized employee cohort import."
+        }
+      ],
+      "blockers": [],
+      "evidence": "evidence/bcib-2021-22.json",
+      "publicWarning": "Published named rows sum to $21,048,966 remuneration and $51,339 expenses, differing from the printed total less below-threshold controls by +$6 and +$2. Original row values are retained; causes unknown.",
+      "compiledRowsDeleted": 0
+    },
+    {
+      "leadId": "additional-source-bcib-2022-23",
+      "employerSlug": "bc-infrastructure-benefits",
+      "year": "2022/23",
+      "status": "accepted-official-with-public-qualifications",
+      "sourceId": "follow-through-bcib-2022-23-employees",
+      "rowCount": 558,
+      "normalizedPayload": "bcib-2022-23.json.gzip",
+      "dataSha256": "0f7e019d6bf941e2af1e4bad4b00c5465218a5d70e48031cd95431f6a3788336",
+      "originalSourceSha256": "6e08d38733ed1f9c07b30dd7679332edca9db67541197b9350ee6dc13735bfb4",
+      "actualPeriodStart": "2022-04-01",
+      "actualPeriodEnd": "2023-03-31",
+      "acceptedScope": "employee-remuneration",
+      "excludedScopes": [
+        "board-director-remuneration",
+        "suppliers",
+        "below-threshold-aggregate",
+        "reconciliation-adjustments",
+        "employer-tax-benefit-aggregates"
+      ],
+      "unacceptedNamedScopes": [
+        {
+          "scope": "board-director-remuneration",
+          "reason": "Separate board schedule intentionally excluded from authorized employee cohort import."
+        }
+      ],
+      "blockers": [],
+      "evidence": "evidence/bcib-2022-23.json",
+      "publicWarning": "Published named rows sum to $68,828,778 remuneration and $3,880,632 expenses, differing from the printed total less below-threshold controls by +$2 and +$2. Original row values are retained; causes unknown.",
+      "compiledRowsDeleted": 0
+    },
+    {
+      "leadId": "additional-source-bcib-2023-24",
+      "employerSlug": "bc-infrastructure-benefits",
+      "year": "2023/24",
+      "status": "accepted-official-with-public-qualifications",
+      "sourceId": "follow-through-bcib-2023-24-employees",
+      "rowCount": 805,
+      "normalizedPayload": "bcib-2023-24.json.gzip",
+      "dataSha256": "dbb3f1356a59ab1246f4ceab0895793ae6da611faf2c1c80df879ee02e37e214",
+      "originalSourceSha256": "ae2cfe7907a481f1517ce98c52899fe0d20ecfe149d4bffedb52cffc80973efb",
+      "actualPeriodStart": "2023-04-01",
+      "actualPeriodEnd": "2024-03-31",
+      "acceptedScope": "employee-remuneration",
+      "excludedScopes": [
+        "board-director-remuneration",
+        "suppliers",
+        "below-threshold-aggregate",
+        "reconciliation-adjustments",
+        "employer-tax-benefit-aggregates"
+      ],
+      "unacceptedNamedScopes": [
+        {
+          "scope": "board-director-remuneration",
+          "reason": "Separate board schedule intentionally excluded from authorized employee cohort import."
+        }
+      ],
+      "blockers": [],
+      "evidence": "evidence/bcib-2023-24.json",
+      "publicWarning": "Published named rows sum to $100,788,239 remuneration and $4,701,607 expenses, differing from the printed total less below-threshold controls by +$3 and +$3. Original row values are retained; causes unknown.",
+      "compiledRowsDeleted": 0
+    },
+    {
+      "leadId": "additional-source-bcib-2024-25",
+      "employerSlug": "bc-infrastructure-benefits",
+      "year": "2024/25",
+      "status": "accepted-official",
+      "sourceId": "follow-through-bcib-2024-25-employees",
+      "rowCount": 1122,
+      "normalizedPayload": "bcib-2024-25.json.gzip",
+      "dataSha256": "cd86fe8a0d33e2a63903a75f2d61f2ae0a9a45de3084b7c9d19963cf7f9491d4",
+      "originalSourceSha256": "2b61afed914702c33ca882c92c8cc775f56c20cdddd0c8063e8a57b28bd51dba",
+      "actualPeriodStart": "2024-04-01",
+      "actualPeriodEnd": "2025-03-31",
+      "acceptedScope": "employee-remuneration",
+      "excludedScopes": [
+        "board-director-remuneration",
+        "suppliers",
+        "below-threshold-aggregate",
+        "reconciliation-adjustments",
+        "employer-tax-benefit-aggregates"
+      ],
+      "unacceptedNamedScopes": [
+        {
+          "scope": "board-director-remuneration",
+          "reason": "Separate board schedule intentionally excluded from authorized employee cohort import."
+        }
+      ],
+      "blockers": [],
+      "evidence": "evidence/bcib-2024-25.json",
+      "publicWarning": null,
+      "compiledRowsDeleted": 0
+    },
+    {
+      "leadId": "additional-source-pavco-2024-25",
+      "employerSlug": "bc-pavilion-corporation",
+      "year": "2024/25",
+      "status": "accepted-official-with-public-qualifications",
+      "sourceId": "follow-through-pavco-2024-25-employees",
+      "rowCount": 178,
+      "normalizedPayload": "pavco-2024-25.json.gzip",
+      "dataSha256": "ccc48d941e485ac58d05ae9c0ca35be673bdf361e8ac49b93a8bde7790413569",
+      "originalSourceSha256": "22664b5f304bb019983acff5a164fd6900478e504f1731e8406dd5175a8185b3",
+      "actualPeriodStart": "2024-04-01",
+      "actualPeriodEnd": "2025-03-31",
+      "acceptedScope": "employee-remuneration",
+      "excludedScopes": [
+        "board-director-remuneration",
+        "suppliers",
+        "below-threshold-aggregate",
+        "reconciliation-adjustments",
+        "employer-tax-benefit-aggregates"
+      ],
+      "unacceptedNamedScopes": [
+        {
+          "scope": "board-director-remuneration",
+          "reason": "Separate board schedule intentionally excluded from authorized employee cohort import."
+        }
+      ],
+      "blockers": [],
+      "evidence": "evidence/pavco-2024-25.json",
+      "publicWarning": "Published named rows sum to $19,215,743 remuneration and $739,691 expenses, differing from the printed named subtotal by +$6 and +$2. Original row values are retained; causes unknown.",
+      "compiledRowsDeleted": 0
+    }
+  ]
+}

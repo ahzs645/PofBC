@@ -1,0 +1,81 @@
+{
+  "sourceId": "rru-sofi-2022-23-employees",
+  "pdfSha256": "8aaa5e7d38ab9f0333b4c3a7f5b3e6996da5518e8f731f3f600e736027997fd5",
+  "renders": [
+    {
+      "pdfPage": 25,
+      "file": "images/rru-2022-23-p25.png",
+      "sha256": "eadf14661f410cb3526d4ceae95882fc8579139b6026a24ca8082c06ae2e1852",
+      "width": 918,
+      "height": 1188,
+      "scale": 1.5
+    },
+    {
+      "pdfPage": 26,
+      "file": "images/rru-2022-23-p26.png",
+      "sha256": "16faef8d4eb12fabffae1c03fac294c2e7be11bd4aff58ba47e41e30b77f629b",
+      "width": 918,
+      "height": 1188,
+      "scale": 1.5
+    },
+    {
+      "pdfPage": 27,
+      "file": "images/rru-2022-23-p27.png",
+      "sha256": "bee55d347453e78b4f11eb94a2f20cc53bb307913c2e7ce3a863bf97377a0eb1",
+      "width": 918,
+      "height": 1188,
+      "scale": 1.5
+    },
+    {
+      "pdfPage": 28,
+      "file": "images/rru-2022-23-p28.png",
+      "sha256": "fb3a23ee087daed545d4509b9b3170fb70cb2686590bb8ec98bec0ed1143bf30",
+      "width": 918,
+      "height": 1188,
+      "scale": 1.5
+    }
+  ],
+  "reviewedPhysicalPages": [
+    25,
+    26,
+    27,
+    28
+  ],
+  "status": "reviewed",
+  "reviewScope": "Full page rendered contact sheets inspected for reporting-period headers, complete alphabetic employee continuation, board/employee boundaries, first/last rows and separate totals/reconciliation blocks. Original controls inspected as enlarged crops. Exact six-field values for digital schedules are independently validated with PyMuPDF and Poppler; contact sheets are not claimed as a manual pixel audit of every employee cell.",
+  "reviewedOn": "2026-11-02",
+  "contactSheets": [
+    {
+      "file": "visual/rru-2022-23-contact-1.jpg",
+      "sha256": "d57b27a522a2a43ec15a539ce078b0ea67f581f7b1a180591c90959dc970c49f"
+    }
+  ],
+  "controlCrops": [
+    {
+      "pdfPage": 25,
+      "file": "visual/rru-2022-23-below-threshold-control.png",
+      "sha256": "d705e05b99d8e43b90752793ba31c925ca4e54dfe615eaacf7d743feb871ac1e",
+      "bboxPoints": [
+        40.0,
+        234.46054077148438,
+        570.0,
+        279.78977966308594
+      ],
+      "scale": 3,
+      "printedRemunerationAnchor": 17092897
+    },
+    {
+      "pdfPage": 28,
+      "file": "visual/rru-2022-23-combined-control.png",
+      "sha256": "cba67d90d1b8813331485710085cb5dedf84e018e216ed78b63efff9713a1115",
+      "bboxPoints": [
+        40.0,
+        377.8604431152344,
+        570.0,
+        423.189697265625
+      ],
+      "scale": 3,
+      "printedRemunerationAnchor": 46376272
+    }
+  ]
+}

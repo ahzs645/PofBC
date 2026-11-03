@@ -1,0 +1,156 @@
+{
+  "version": 1,
+  "sourceId": "follow-through-bcfsa-2024-25-employees",
+  "leadId": "additional-source-bcfsa-2024-25",
+  "sourceUrl": "https://www.bcfsa.ca/media/4308/download",
+  "sourceIndexUrl": "https://www.bcfsa.ca/about-us/what-we-do/corporate-publications",
+  "checkedOn": "2026-11-02",
+  "originalSha256": "08a29ad9ad5917338a514584ef32518115dd81c0b6d19e2cc6f1a33127e82f0e",
+  "originalBytes": 762980,
+  "originalPdfPageCount": 21,
+  "period": {
+    "start": "2024-04-01",
+    "end": "2025-03-31",
+    "partial": false,
+    "evidence": "Original schedule year-ended header; first BCFSA schedule explicitly gives commencement date and period end."
+  },
+  "employeePhysicalPages": [
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15
+  ],
+  "retainedSourceEvidencePages": [
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15
+  ],
+  "readerNames": [
+    "PyMuPDF positioned words",
+    "Poppler pdftotext -layout"
+  ],
+  "primaryRowCount": 286,
+  "independentRowCount": 286,
+  "everyRowFieldMultisetEqual": true,
+  "primaryNormalizedSha256": "c19622520154c1129d878781ade1fb18d46342764cb91f6f6b85bcce8b460b14",
+  "independentRowMultisetSha256": "10869b59f3b52a3f59ae4e7a56571cbccb6e8dcd28131ac5ae2e217e6f99dd72",
+  "pageControls": [
+    {
+      "physicalPage": 8,
+      "rowCount": 20,
+      "remuneration": 2472457,
+      "expenses": 76792
+    },
+    {
+      "physicalPage": 9,
+      "rowCount": 42,
+      "remuneration": 4837052,
+      "expenses": 136031
+    },
+    {
+      "physicalPage": 10,
+      "rowCount": 42,
+      "remuneration": 5337045,
+      "expenses": 157493
+    },
+    {
+      "physicalPage": 11,
+      "rowCount": 42,
+      "remuneration": 4856191,
+      "expenses": 146623
+    },
+    {
+      "physicalPage": 12,
+      "rowCount": 42,
+      "remuneration": 5516851,
+      "expenses": 167452
+    },
+    {
+      "physicalPage": 13,
+      "rowCount": 42,
+      "remuneration": 5269783,
+      "expenses": 116619
+    },
+    {
+      "physicalPage": 14,
+      "rowCount": 42,
+      "remuneration": 5862902,
+      "expenses": 269451
+    },
+    {
+      "physicalPage": 15,
+      "rowCount": 14,
+      "remuneration": 1537070,
+      "expenses": 38967
+    }
+  ],
+  "controls": {
+    "physicalPage": 15,
+    "printedTotalEmployees": [
+      43510330,
+      1278742
+    ],
+    "printedBelowThreshold": [
+      7820979,
+      169314
+    ],
+    "printedDirectNamedSubtotal": null,
+    "impliedNamedControl": [
+      35689351,
+      1109428
+    ],
+    "observedAllNamedRows": [
+      35689351,
+      1109428
+    ],
+    "residualNamedMinusImplied": [
+      0,
+      0
+    ],
+    "residualNamedMinusDirect": null,
+    "units": "CAD whole dollars",
+    "residualCause": null
+  },
+  "physicalPagesVisuallyReviewed": [
+    15
+  ],
+  "sourceRowReview": "Every native employee row compared field-for-field between independent PDF readers; source-pixel review of printed control totals and ambiguous glyph/layout cases. Every scan employee row and control additionally visually reviewed.",
+  "explicitZeroExpenseRows": 0,
+  "nullExpenseRows": 2,
+  "negativeExpenseRows": [],
+  "repeatedDisclosedNames": {},
+  "exactDuplicateSixFieldRows": 0,
+  "excludedScopes": [
+    "board-director-remuneration",
+    "suppliers",
+    "below-threshold-aggregate",
+    "reconciliation-adjustments",
+    "employer-tax-benefit-aggregates"
+  ],
+  "remunerationDefinitionVerbatim": null,
+  "severanceCompensationDefinitionContext": "\"Compensation\" means regular salary excluding benefits.",
+  "publicWarning": null,
+  "rawEvidenceFiles": [
+    {
+      "file": "evidence/bcfsa-2024-25.layout.txt",
+      "sha256": "c33054ee27f3e9a27ae441950e742fa53b585b3dc75e0065e79327e9bfcf5846"
+    },
+    {
+      "file": "evidence/bcfsa-2024-25.words.json.gzip",
+      "sha256": "7c61e4562be3dce4fb4c9773ee3f6ea53dbbb4aa95c52bb2d244c9b5c942d469"
+    },
+    {
+      "file": "evidence/bcfsa-2024-25.controls.png",
+      "sha256": "ad593b811eef7a99d88410ff2ffbf51641058de264ebdb23362ac67486e41d38"
+    }
+  ]
+}

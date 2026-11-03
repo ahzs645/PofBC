@@ -1,0 +1,7005 @@
+{
+  "version": 1,
+  "employerSlug": "royal-roads-university",
+  "baselinePath": "research/salaries/compiled-baseline.json.gzip",
+  "baselineSha256": "410bcae27c9755e387c473ab44d62081a50b46e7330f4d6d5c0b74979d392760",
+  "baselineProvenance": {
+    "sourceId": "pssdb-2026-10-22",
+    "repositoryCommit": "eabe55708952f945cf2b0733230db31d48146d88",
+    "description": "Lossless snapshot of retained employer exports from the supplied pssdb build. Original CSV files were not committed. Not an independently verified official disclosure. Per-row original agency spelling cannot be recovered; employer aliases are preserved."
+  },
+  "compiledYear": "2020/21",
+  "officialSourceId": "rru-sofi-2021-22-employees",
+  "officialSourceSha256": "ca0634bec6ffece72903f8dcfb622a6b082526afaf955fadebc80d910ace2258",
+  "officialYear": "2021/22",
+  "officialRowSchema": [
+    "employerSlug",
+    "name",
+    "position",
+    "remuneration",
+    "expenses",
+    "pdfPage"
+  ],
+  "compiledRowSchema": [
+    "name",
+    "position",
+    "remuneration",
+    "expenses",
+    "baselineYearIndex"
+  ],
+  "baselineYears": [
+    "2017/18",
+    "2020/21",
+    "2023/24"
+  ],
+  "compiledRows": 223,
+  "officialRows": 223,
+  "financialMultisetMatchedOccurrences": 211,
+  "exactNameAndFinancialMultisetMatchedOccurrences": 167,
+  "officialUnmatchedFinancialOccurrences": 12,
+  "compiledUnmatchedFinancialOccurrences": 12,
+  "completeFinancialMultisetMatch": false,
+  "compiledTotalRemuneration": 25267436,
+  "compiledTotalDisclosedExpenses": 258873,
+  "officialTotalRemuneration": 25258361,
+  "officialTotalDisclosedExpenses": 273994,
+  "replacementAuthorized": false,
+  "retainAllCompiledObservations": true,
+  "limitations": [
+    "The original PDF explicitly covers the year ended March 31, 2022; the compiled label remains 2020/21. Neither dataset is silently redated.",
+    "Financial tuple groups retain occurrence counts and nulls. Shared amounts do not establish an identity, and ambiguous groups are not assigned one-to-one.",
+    "Titles are published in the official schedule, while the compiled 2020/21 cohort has no positions. Financial overlap does not establish full field equality.",
+    "Twelve financial occurrences on each side are unmatched. No compiled observation is removed or overwritten by this import."
+  ],
+  "financialGroups": [
+    {
+      "remuneration": 75104,
+      "expenses": null,
+      "officialOccurrences": [
+        {
+          "rowNumber": 70,
+          "row": [
+            "royal-roads-university",
+            "Gaunt, Tom",
+            "IT Support Analyst - Tier 2",
+            75104,
+            null,
+            26
+          ]
+        }
+      ],
+      "compiledOccurrences": [
+        {
+          "employerBaselineRowNumber": 361,
+          "row": [
+            "Gaunt, Tom",
+            null,
+            75104,
+            null,
+            1
+          ]
+        }
+      ],
+      "matchedOccurrences": 1,
+      "uniqueInBoth": true
+    },
+    {
+      "remuneration": 75232,
+      "expenses": 6907,
+      "officialOccurrences": [
+        {
+          "rowNumber": 78,
+          "row": [
+            "royal-roads-university",
+            "Grundy, Stephen",
+            "Professor, School of Environment & Sustainability",
+            75232,
+            6907,
+            26
+          ]
+        }
+      ],
+      "compiledOccurrences": [
+        {
+          "employerBaselineRowNumber": 360,
+          "row": [
+            "Grundy, Stephen",
+            null,
+            75232,
+            6907,
+            1
+          ]
+        }
+      ],
+      "matchedOccurrences": 1,
+      "uniqueInBoth": true
+    },
+    {
+      "remuneration": 75465,
+      "expenses": null,
+      "officialOccurrences": [
+        {
+          "rowNumber": 178,
+          "row": [
+            "royal-roads-university",
+            "Sigalet, Jennifer",
+            "Research Development Coordinator",
+            75465,
+            null,
+            27
+          ]
+        }
+      ],
+      "compiledOccurrences": [
+        {
+          "employerBaselineRowNumber": 359,
+          "row": [
+            "Sigalet, Jennifer",
+            null,
+            75465,
+            null,
+            1
+          ]
+        }
+      ],
+      "matchedOccurrences": 1,
+      "uniqueInBoth": true
+    },
+    {
+      "remuneration": 75483,
+      "expenses": 3397,
+      "officialOccurrences": [
+        {
+          "rowNumber": 156,
+          "row": [
+            "royal-roads-university",
+            "Proudlove, Matthew",
+            "Marketing Specialist",
+            75483,
+            3397,
+            27
+          ]
+        }
+      ],
+      "compiledOccurrences": [
+        {
+          "employerBaselineRowNumber": 358,
+          "row": [
+            "Proudlove, Matthew",
+            null,
+            75483,
+            3397,
+            1
+          ]
+        }
+      ],
+      "matchedOccurrences": 1,
+      "uniqueInBoth": true
+    },
+    {
+      "remuneration": 75530,
+      "expenses": null,
+      "officialOccurrences": [
+        {
+          "rowNumber": 218,
+          "row": [
+            "royal-roads-university",
+            "Wrobel, Melanie",
+            "Research Development Coordinator",
+            75530,
+            null,
+            28
+          ]
+        }
+      ],
+      "compiledOccurrences": [
+        {
+          "employerBaselineRowNumber": 357,
+          "row": [
+            "Wrobel, Melanle",
+            null,
+            75530,
+            null,
+            1
+          ]
+        }
+      ],
+      "matchedOccurrences": 1,
+      "uniqueInBoth": true
+    },
+    {
+      "remuneration": 76491,
+      "expenses": null,
+      "officialOccurrences": [
+        {
+          "rowNumber": 47,
+          "row": [
+            "royal-roads-university",
+            "De Souza da Cruz Alves, Carlos",
+            "Manager, Course Production",
+            76491,
+            null,
+            25
+          ]
+        }
+      ],
+      "compiledOccurrences": [
+        {
+          "employerBaselineRowNumber": 356,
+          "row": [
+            "De Souza da Cruz Alves, Carlos",
+            null,
+            76491,
+            null,
+            1
+          ]
+        }
+      ],
+      "matchedOccurrences": 1,
+      "uniqueInBoth": true
+    },
+    {
+      "remuneration": 76966,
+      "expenses": null,
+      "officialOccurrences": [
+        {
+          "rowNumber": 119,
+          "row": [
+            "royal-roads-university",
+            "Lang, Kim",
+            null,
+            76966,
+            null,
+            26
+          ]
+        }
+      ],
+      "compiledOccurrences": [
+        {
+          "employerBaselineRowNumber": 355,
+          "row": [
+            "Lang, Kim",
+            null,
+            76966,
+            null,
+            1
+          ]
+        }
+      ],
+      "matchedOccurrences": 1,
+      "uniqueInBoth": true
+    },
+    {
+      "remuneration": 76967,
+      "expenses": null,
+      "officialOccurrences": [
+        {
+          "rowNumber": 3,
+          "row": [
+            "royal-roads-university",
+            "Albion, Gerald",
+            "IT Senior Systems Analyst, RAID",
+            76967,
+            null,
+            25
+          ]
+        }
+      ],
+      "compiledOccurrences": [
+        {
+          "employerBaselineRowNumber": 354,
+          "row": [
+            "Albion, Gurald",
+            null,
+            76967,
+            null,
+            1
+          ]
+        }
+      ],
+      "matchedOccurrences": 1,
+      "uniqueInBoth": true
+    },
+    {
+      "remuneration": 76972,
+      "expenses": null,
+      "officialOccurrences": [
+        {
+          "rowNumber": 31,
+          "row": [
+            "royal-roads-university",
+            "Carrara, Carolina",
+            "IT Technical Analyst/Project Coordinator",
+            76972,
+            null,
+            25
+          ]
+        }
+      ],
+      "compiledOccurrences": [
+        {
+          "employerBaselineRowNumber": 353,
+          "row": [
+            "Carrara, Carolina",
+            null,
+            76972,
+            null,
+            1
+          ]
+        }
+      ],
+      "matchedOccurrences": 1,
+      "uniqueInBoth": true
+    },
+    {
+      "remuneration": 77358,
+      "expenses": null,
+      "officialOccurrences": [
+        {
+          "rowNumber": 37,
+          "row": [
+            "royal-roads-university",
+            "Cordua-von Specht, Maria Isabel",
+            "Manager, Faculty Affairs",
+            77358,
+            null,
+            25
+          ]
+        }
+      ],
+      "compiledOccurrences": [
+        {
+          "employerBaselineRowNumber": 352,
+          "row": [
+            "Cordua-von Specht, Maria Isabel",
+            null,
+            77358,
+            null,
+            1
+          ]
+        }
+      ],
+      "matchedOccurrences": 1,
+      "uniqueInBoth": true
+    },
+    {
+      "remuneration": 77746,
+      "expenses": null,
+      "officialOccurrences": [
+        {
+          "rowNumber": 131,
+          "row": [
+            "royal-roads-university",
+            "MacDonald, Megan",
+            "Manager, Creative Services",
+            77746,
+            null,
+            26
+          ]
+        }
+      ],
+      "compiledOccurrences": [
+        {
+          "employerBaselineRowNumber": 351,
+          "row": [
+            "MacDonald, Megan",
+            null,
+            77746,
+            null,
+            1
+          ]
+        }
+      ],
+      "matchedOccurrences": 1,
+      "uniqueInBoth": true
+    },
+    {
+      "remuneration": 78187,
+      "expenses": 4835,
+      "officialOccurrences": [
+        {
+          "rowNumber": 12,
+          "row": [
+            "royal-roads-university",
+            "Bell, Nissa",
+            "Learning & Development Advisor, CT",
+            78187,
+            4835,
+            25
+          ]
+        }
+      ],
+      "compiledOccurrences": [
+        {
+          "employerBaselineRowNumber": 350,
+          "row": [
+            "Bell, Nissa",
+            null,
+            78187,
+            4835,
+            1
+          ]
+        }
+      ],
+      "matchedOccurrences": 1,
+      "uniqueInBoth": true
+    },
+    {
+      "remuneration": 78637,
+      "expenses": null,
+      "officialOccurrences": [
+        {
+          "rowNumber": 75,
+          "row": [
+            "royal-roads-university",
+            "Goranson, John",
+            "Learning and Development Facilitator",
+            78637,
+            null,
+            26
+          ]
+        }
+      ],
+      "compiledOccurrences": [
+        {
+          "employerBaselineRowNumber": 349,
+          "row": [
+            "Goranson, John",
+            null,
+            78637,
+            null,
+            1
+          ]
+        }
+      ],
+      "matchedOccurrences": 1,
+      "uniqueInBoth": true
+    },
+    {
+      "remuneration": 78644,
+      "expenses": null,
+      "officialOccurrences": [
+        {
+          "rowNumber": 110,
+          "row": [
+            "royal-roads-university",
+            "Kettlewell, Marianne",
+            "Learning and Development Facilitator",
+            78644,
+            null,
+            26
+          ]
+        },
+        {
+          "rowNumber": 151,
+          "row": [
+            "royal-roads-university",
+            "Perrella, Elvira",
+            "Learning and Development Facilitator",
+            78644,
+            null,
+            27
+          ]
+        },
+        {
+          "rowNumber": 192,
+          "row": [
+            "royal-roads-university",
+            "Thomas, Wendy",
+            "Learning and Development Facilitator",
+            78644,
+            null,
+            27
+          ]
+        }
+      ],
+      "compiledOccurrences": [
+        {
+          "employerBaselineRowNumber": 346,
+          "row": [
+            "Kettlewell, Marianne",
+            null,
+            78644,
+            null,
+            1
+          ]
+        },
+        {
+          "employerBaselineRowNumber": 347,
+          "row": [
+            "Perrella, Elvira",
+            null,
+            78644,
+            null,
+            1
+          ]
+        },
+        {
+          "employerBaselineRowNumber": 348,
+          "row": [
+            "Thomas, Wendy",
+            null,
+            78644,
+            null,
+            1
+          ]
+        }
+      ],
+      "matchedOccurrences": 3,
+      "uniqueInBoth": false
+    },
+    {
+      "remuneration": 78713,
+      "expenses": null,
+      "officialOccurrences": [
+        {
+          "rowNumber": 207,
+          "row": [
+            "royal-roads-university",
+            "Weighton, Lisa",
+            "Senior Communications Officer, Digital Experience",
+            78713,
+            null,
+            27
+          ]
+        }
+      ],
+      "compiledOccurrences": [
+        {
+          "employerBaselineRowNumber": 345,
+          "row": [
+            "Weighton, Lisa",
+            null,
+            78713,
+            null,
+            1
+          ]
+        }
+      ],
+      "matchedOccurrences": 1,
+      "uniqueInBoth": true
+    },
+    {
+      "remuneration": 79032,
+      "expenses": null,
+      "officialOccurrences": [
+        {
+          "rowNumber": 33,
+          "row": [
+            "royal-roads-university",
+            "Changwo, Maureen",
+            "Program Administrative Associate",
+            79032,
+            null,
+            25
+          ]
+        }
+      ],
+      "compiledOccurrences": [
+        {
+          "employerBaselineRowNumber": 344,
+          "row": [
+            "Changwo, Maureen",
+            null,
+            79032,
+            null,
+            1
+          ]
+        }
+      ],
+      "matchedOccurrences": 1,
+      "uniqueInBoth": true
+    },
+    {
+      "remuneration": 79891,
+      "expenses": null,
+      "officialOccurrences": [
+        {
+          "rowNumber": 92,
+          "row": [
+            "royal-roads-university",
+            "Houlden, Shandell",
+            "Research Post-Doctoral",
+            79891,
+            null,
+            26
+          ]
+        }
+      ],
+      "compiledOccurrences": [
+        {
+          "employerBaselineRowNumber": 343,
+          "row": [
+            "Houldan, Shandell",
+            null,
+            79891,
+            null,
+            1
+          ]
+        }
+      ],
+      "matchedOccurrences": 1,
+      "uniqueInBoth": true
+    },
+    {
+      "remuneration": 79938,
+      "expenses": 13,
+      "officialOccurrences": [
+        {
+          "rowNumber": 40,
+          "row": [
+            "royal-roads-university",
+            "Cote, Sophie",
+            "Executive Assistant, VP Communications and Advancement",
+            79938,
+            13,
+            25
+          ]
+        }
+      ],
+      "compiledOccurrences": [
+        {
+          "employerBaselineRowNumber": 342,
+          "row": [
+            "Cote, Sophie",
+            null,
+            79938,
+            13,
+            1
+          ]
+        }
+      ],
+      "matchedOccurrences": 1,
+      "uniqueInBoth": true
+    },
+    {
+      "remuneration": 80195,
+      "expenses": 3686,
+      "officialOccurrences": [
+        {
+          "rowNumber": 98,
+          "row": [
+            "royal-roads-university",
+            "Jaycock, Eden",
+            "Learning & Development Advisor",
+            80195,
+            3686,
+            26
+          ]
+        }
+      ],
+      "compiledOccurrences": [
+        {
+          "employerBaselineRowNumber": 341,
+          "row": [
+            "Jaycock, Edan",
+            null,
+            80195,
+            3686,
+            1
+          ]
+        }
+      ],
+      "matchedOccurrences": 1,
+      "uniqueInBoth": true
+    },
+    {
+      "remuneration": 80209,
+      "expenses": null,
+      "officialOccurrences": [
+        {
+          "rowNumber": 86,
+          "row": [
+            "royal-roads-university",
+            "Hilts, April",
+            "Program Manager, MBA Programs",
+            80209,
+            null,
+            26
+          ]
+        }
+      ],
+      "compiledOccurrences": [
+        {
+          "employerBaselineRowNumber": 340,
+          "row": [
+            "Hilts, April",
+            null,
+            80209,
+            null,
+            1
+          ]
+        }
+      ],
+      "matchedOccurrences": 1,
+      "uniqueInBoth": true
+    },
+    {
+      "remuneration": 80245,
+      "expenses": null,
+      "officialOccurrences": [
+        {
+          "rowNumber": 34,
+          "row": [
+            "royal-roads-university",
+            "Chen, Eva",
+            "Retail Manager",
+            80245,
+            null,
+            25
+          ]
+        }
+      ],
+      "compiledOccurrences": [
+        {
+          "employerBaselineRowNumber": 339,
+          "row": [
+            "Chen, Eva",
+            null,
+            80245,
+            null,
+            1
+          ]
+        }
+      ],
+      "matchedOccurrences": 1,
+      "uniqueInBoth": true
+    },
+    {
+      "remuneration": 80288,
+      "expenses": null,
+      "officialOccurrences": [
+        {
+          "rowNumber": 10,
+          "row": [
+            "royal-roads-university",
+            "Balino, George",
+            "Senior Designer",
+            80288,
+            null,
+            25
+          ]
+        }
+      ],
+      "compiledOccurrences": [
+        {
+          "employerBaselineRowNumber": 338,
+          "row": [
+            "Balino, George",
+            null,
+            80288,
+            null,
+            1
+          ]
+        }
+      ],
+      "matchedOccurrences": 1,
+      "uniqueInBoth": true
+    },
+    {
+      "remuneration": 80289,
+      "expenses": null,
+      "officialOccurrences": [
+        {
+          "rowNumber": 205,
+          "row": [
+            "royal-roads-university",
+            "Wassman, Katrina",
+            "Program Manager, Bachelor of Business Administration",
+            80289,
+            null,
+            27
+          ]
+        }
+      ],
+      "compiledOccurrences": [
+        {
+          "employerBaselineRowNumber": 337,
+          "row": [
+            "Wassman, Katrina",
+            null,
+            80289,
+            null,
+            1
+          ]
+        }
+      ],
+      "matchedOccurrences": 1,
+      "uniqueInBoth": true
+    },
+    {
+      "remuneration": 80408,
+      "expenses": null,
+      "officialOccurrences": [
+        {
+          "rowNumber": 148,
+          "row": [
+            "royal-roads-university",
+            "Oliver, Jason",
+            "Team Coach",
+            80408,
+            null,
+            27
+          ]
+        }
+      ],
+      "compiledOccurrences": [
+        {
+          "employerBaselineRowNumber": 336,
+          "row": [
+            "Oliver, Jason",
+            null,
+            80408,
+            null,
+            1
+          ]
+        }
+      ],
+      "matchedOccurrences": 1,
+      "uniqueInBoth": true
+    },
+    {
+      "remuneration": 80435,
+      "expenses": null,
+      "officialOccurrences": [
+        {
+          "rowNumber": 186,
+          "row": [
+            "royal-roads-university",
+            "Szucs, Julia",
+            "Team Coach",
+            80435,
+            null,
+            27
+          ]
+        }
+      ],
+      "compiledOccurrences": [
+        {
+          "employerBaselineRowNumber": 335,
+          "row": [
+            "Szucs, Julia",
+            null,
+            80435,
+            null,
+            1
+          ]
+        }
+      ],
+      "matchedOccurrences": 1,
+      "uniqueInBoth": true
+    },
+    {
+      "remuneration": 80559,
+      "expenses": null,
+      "officialOccurrences": [
+        {
+          "rowNumber": 177,
+          "row": [
+            "royal-roads-university",
+            "Siewertson, Annette",
+            "Learning & Development Advisor",
+            80559,
+            null,
+            27
+          ]
+        }
+      ],
+      "compiledOccurrences": [
+        {
+          "employerBaselineRowNumber": 334,
+          "row": [
+            "Siewertson, Annette",
+            null,
+            80559,
+            null,
+            1
+          ]
+        }
+      ],
+      "matchedOccurrences": 1,
+      "uniqueInBoth": true
+    },
+    {
+      "remuneration": 80641,
+      "expenses": null,
+      "officialOccurrences": [
+        {
+          "rowNumber": 172,
+          "row": [
+            "royal-roads-university",
+            "Sandhu, Carole",
+            "College Manager",
+            80641,
+            null,
+            27
+          ]
+        }
+      ],
+      "compiledOccurrences": [
+        {
+          "employerBaselineRowNumber": 333,
+          "row": [
+            "Sandhu, Carole",
+            null,
+            80641,
+            null,
+            1
+          ]
+        }
+      ],
+      "matchedOccurrences": 1,
+      "uniqueInBoth": true
+    },
+    {
+      "remuneration": 80649,
+      "expenses": null,
+      "officialOccurrences": [
+        {
+          "rowNumber": 21,
+          "row": [
+            "royal-roads-university",
+            "Bosma, Rebecca",
+            "Operations Manager, Professional & Continuing Studies",
+            80649,
+            null,
+            25
+          ]
+        },
+        {
+          "rowNumber": 26,
+          "row": [
+            "royal-roads-university",
+            "Brown, Susan",
+            "Career Learning and Development Advisor",
+            80649,
+            null,
+            25
+          ]
+        }
+      ],
+      "compiledOccurrences": [
+        {
+          "employerBaselineRowNumber": 331,
+          "row": [
+            "Bosma, Rebecca",
+            null,
+            80649,
+            null,
+            1
+          ]
+        },
+        {
+          "employerBaselineRowNumber": 332,
+          "row": [
+            "Brown, Susan",
+            null,
+            80649,
+            null,
+            1
+          ]
+        }
+      ],
+      "matchedOccurrences": 2,
+      "uniqueInBoth": false
+    },
+    {
+      "remuneration": 80665,
+      "expenses": null,
+      "officialOccurrences": [
+        {
+          "rowNumber": 164,
+          "row": [
+            "royal-roads-university",
+            "Richards, Sherry",
+            "School Manager, School of Leadership Studies",
+            80665,
+            null,
+            27
+          ]
+        }
+      ],
+      "compiledOccurrences": [
+        {
+          "employerBaselineRowNumber": 330,
+          "row": [
+            "Richards, Sherry",
+            null,
+            80665,
+            null,
+            1
+          ]
+        }
+      ],
+      "matchedOccurrences": 1,
+      "uniqueInBoth": true
+    },
+    {
+      "remuneration": 80705,
+      "expenses": null,
+      "officialOccurrences": [
+        {
+          "rowNumber": 109,
+          "row": [
+            "royal-roads-university",
+            "Kerr, Rhona",
+            "Manager, Student Accounts",
+            80705,
+            null,
+            26
+          ]
+        }
+      ],
+      "compiledOccurrences": [
+        {
+          "employerBaselineRowNumber": 329,
+          "row": [
+            "Kerr, Rhona",
+            null,
+            80705,
+            null,
+            1
+          ]
+        }
+      ],
+      "matchedOccurrences": 1,
+      "uniqueInBoth": true
+    },
+    {
+      "remuneration": 80749,
+      "expenses": null,
+      "officialOccurrences": [
+        {
+          "rowNumber": 122,
+          "row": [
+            "royal-roads-university",
+            "Leithead, Wendy",
+            "Learning & Development Advisor",
+            80749,
+            null,
+            26
+          ]
+        }
+      ],
+      "compiledOccurrences": [
+        {
+          "employerBaselineRowNumber": 328,
+          "row": [
+            "Leithead, Wendy",
+            null,
+            80749,
+            null,
+            1
+          ]
+        }
+      ],
+      "matchedOccurrences": 1,
+      "uniqueInBoth": true
+    },
+    {
+      "remuneration": 80839,
+      "expenses": null,
+      "officialOccurrences": [
+        {
+          "rowNumber": 204,
+          "row": [
+            "royal-roads-university",
+            "Walsh, Patti",
+            "Manager, Recreation Centre",
+            80839,
+            null,
+            27
+          ]
+        }
+      ],
+      "compiledOccurrences": [
+        {
+          "employerBaselineRowNumber": 327,
+          "row": [
+            "Walsh, Patti",
+            null,
+            80839,
+            null,
+            1
+          ]
+        }
+      ],
+      "matchedOccurrences": 1,
+      "uniqueInBoth": true
+    },
+    {
+      "remuneration": 80883,
+      "expenses": null,
+      "officialOccurrences": [
+        {
+          "rowNumber": 32,
+          "row": [
+            "royal-roads-university",
+            "Chandler, Kathryn",
+            "Records Analyst",
+            80883,
+            null,
+            25
+          ]
+        }
+      ],
+      "compiledOccurrences": [
+        {
+          "employerBaselineRowNumber": 326,
+          "row": [
+            "Chandler, Kathryn",
+            null,
+            80883,
+            null,
+            1
+          ]
+        }
+      ],
+      "matchedOccurrences": 1,
+      "uniqueInBoth": true
+    },
+    {
+      "remuneration": 80927,
+      "expenses": 0,
+      "officialOccurrences": [
+        {
+          "rowNumber": 183,
+          "row": [
+            "royal-roads-university",
+            "Stewart, John",
+            "Program Manager, School of Tourism & Hospitality Management",
+            80927,
+            0,
+            27
+          ]
+        }
+      ],
+      "compiledOccurrences": [
+        {
+          "employerBaselineRowNumber": 325,
+          "row": [
+            "Stewart, John",
+            null,
+            80927,
+            0,
+            1
+          ]
+        }
+      ],
+      "matchedOccurrences": 1,
+      "uniqueInBoth": true
+    },
+    {
+      "remuneration": 80953,
+      "expenses": 8791,
+      "officialOccurrences": [
+        {
+          "rowNumber": 58,
+          "row": [
+            "royal-roads-university",
+            "Edwards, Erin",
+            "School Manager, School of Environment & Sustainability",
+            80953,
+            8791,
+            25
+          ]
+        }
+      ],
+      "compiledOccurrences": [
+        {
+          "employerBaselineRowNumber": 324,
+          "row": [
+            "Edwards, Erin",
+            null,
+            80953,
+            8791,
+            1
+          ]
+        }
+      ],
+      "matchedOccurrences": 1,
+      "uniqueInBoth": true
+    },
+    {
+      "remuneration": 81076,
+      "expenses": null,
+      "officialOccurrences": [
+        {
+          "rowNumber": 132,
+          "row": [
+            "royal-roads-university",
+            "MacIntosh-Snell, Pamela",
+            "HR Consultant",
+            81076,
+            null,
+            26
+          ]
+        }
+      ],
+      "compiledOccurrences": [
+        {
+          "employerBaselineRowNumber": 323,
+          "row": [
+            "Macintosh-Snell, Pamela",
+            null,
+            81076,
+            null,
+            1
+          ]
+        }
+      ],
+      "matchedOccurrences": 1,
+      "uniqueInBoth": true
+    },
+    {
+      "remuneration": 81209,
+      "expenses": null,
+      "officialOccurrences": [
+        {
+          "rowNumber": 160,
+          "row": [
+            "royal-roads-university",
+            "Rathwell, Jennifer",
+            "Communications Officer",
+            81209,
+            null,
+            27
+          ]
+        }
+      ],
+      "compiledOccurrences": [
+        {
+          "employerBaselineRowNumber": 322,
+          "row": [
+            "Rathwell, Jennifer",
+            null,
+            81209,
+            null,
+            1
+          ]
+        }
+      ],
+      "matchedOccurrences": 1,
+      "uniqueInBoth": true
+    },
+    {
+      "remuneration": 81362,
+      "expenses": null,
+      "officialOccurrences": [
+        {
+          "rowNumber": 69,
+          "row": [
+            "royal-roads-university",
+            "Gaskill, L. Kent",
+            "Senior Designer",
+            81362,
+            null,
+            26
+          ]
+        }
+      ],
+      "compiledOccurrences": [
+        {
+          "employerBaselineRowNumber": 321,
+          "row": [
+            "Gaskill, L. Kent",
+            null,
+            81362,
+            null,
+            1
+          ]
+        }
+      ],
+      "matchedOccurrences": 1,
+      "uniqueInBoth": true
+    },
+    {
+      "remuneration": 81461,
+      "expenses": 3288,
+      "officialOccurrences": [
+        {
+          "rowNumber": 94,
+          "row": [
+            "royal-roads-university",
+            "Hughes, Janine",
+            "Theses and Dissertation Manager",
+            81461,
+            3288,
+            26
+          ]
+        }
+      ],
+      "compiledOccurrences": [],
+      "matchedOccurrences": 0,
+      "uniqueInBoth": false
+    },
+    {
+      "remuneration": 81878,
+      "expenses": null,
+      "officialOccurrences": [
+        {
+          "rowNumber": 60,
+          "row": [
+            "royal-roads-university",
+            "Faerber, Jonathan",
+            "Academic Writing Specialist",
+            81878,
+            null,
+            25
+          ]
+        }
+      ],
+      "compiledOccurrences": [
+        {
+          "employerBaselineRowNumber": 320,
+          "row": [
+            "Faerber, Jonathan",
+            null,
+            81878,
+            null,
+            1
+          ]
+        }
+      ],
+      "matchedOccurrences": 1,
+      "uniqueInBoth": true
+    },
+    {
+      "remuneration": 82839,
+      "expenses": 963,
+      "officialOccurrences": [
+        {
+          "rowNumber": 194,
+          "row": [
+            "royal-roads-university",
+            "Thompson, Chrystyn",
+            "Senior Accounting Associate",
+            82839,
+            963,
+            27
+          ]
+        }
+      ],
+      "compiledOccurrences": [
+        {
+          "employerBaselineRowNumber": 319,
+          "row": [
+            "Thompson, Chrystyn",
+            null,
+            82839,
+            963,
+            1
+          ]
+        }
+      ],
+      "matchedOccurrences": 1,
+      "uniqueInBoth": true
+    },
+    {
+      "remuneration": 83254,
+      "expenses": null,
+      "officialOccurrences": [
+        {
+          "rowNumber": 112,
+          "row": [
+            "royal-roads-university",
+            "Kituri, Timothy",
+            "Program Manager, School of Business - MGM",
+            83254,
+            null,
+            26
+          ]
+        }
+      ],
+      "compiledOccurrences": [
+        {
+          "employerBaselineRowNumber": 318,
+          "row": [
+            "Klturl, Timothy",
+            null,
+            83254,
+            null,
+            1
+          ]
+        }
+      ],
+      "matchedOccurrences": 1,
+      "uniqueInBoth": true
+    },
+    {
+      "remuneration": 83958,
+      "expenses": null,
+      "officialOccurrences": [
+        {
+          "rowNumber": 113,
+          "row": [
+            "royal-roads-university",
+            "Klassen, Brooke",
+            "Manager, Student Recruitment Agent Relations",
+            83958,
+            null,
+            26
+          ]
+        }
+      ],
+      "compiledOccurrences": [
+        {
+          "employerBaselineRowNumber": 317,
+          "row": [
+            "Klassen, Brooke",
+            null,
+            83958,
+            null,
+            1
+          ]
+        }
+      ],
+      "matchedOccurrences": 1,
+      "uniqueInBoth": true
+    },
+    {
+      "remuneration": 84490,
+      "expenses": null,
+      "officialOccurrences": [
+        {
+          "rowNumber": 72,
+          "row": [
+            "royal-roads-university",
+            "Girvin, Carla",
+            "Senior Marketing Specialist",
+            84490,
+            null,
+            26
+          ]
+        }
+      ],
+      "compiledOccurrences": [
+        {
+          "employerBaselineRowNumber": 316,
+          "row": [
+            "Girvin, Carla",
+            null,
+            84490,
+            null,
+            1
+          ]
+        }
+      ],
+      "matchedOccurrences": 1,
+      "uniqueInBoth": true
+    },
+    {
+      "remuneration": 84683,
+      "expenses": null,
+      "officialOccurrences": [
+        {
+          "rowNumber": 99,
+          "row": [
+            "royal-roads-university",
+            "Jefferis, Vivianne",
+            "Operations Manager, Communciatons and Advancement",
+            84683,
+            null,
+            26
+          ]
+        }
+      ],
+      "compiledOccurrences": [
+        {
+          "employerBaselineRowNumber": 315,
+          "row": [
+            "Jefferis, Vivianne",
+            null,
+            84683,
+            null,
+            1
+          ]
+        }
+      ],
+      "matchedOccurrences": 1,
+      "uniqueInBoth": true
+    },
+    {
+      "remuneration": 84712,
+      "expenses": null,
+      "officialOccurrences": [
+        {
+          "rowNumber": 38,
+          "row": [
+            "royal-roads-university",
+            "Cornish, Megan",
+            "Program Manager, BCom Program On-Line",
+            84712,
+            null,
+            25
+          ]
+        }
+      ],
+      "compiledOccurrences": [
+        {
+          "employerBaselineRowNumber": 314,
+          "row": [
+            "Cornish, Megan",
+            null,
+            84712,
+            null,
+            1
+          ]
+        }
+      ],
+      "matchedOccurrences": 1,
+      "uniqueInBoth": true
+    },
+    {
+      "remuneration": 84770,
+      "expenses": 1550,
+      "officialOccurrences": [
+        {
+          "rowNumber": 79,
+          "row": [
+            "royal-roads-university",
+            "Hachigian, Heather",
+            "Assistant Professor, School of Business",
+            84770,
+            1550,
+            26
+          ]
+        }
+      ],
+      "compiledOccurrences": [
+        {
+          "employerBaselineRowNumber": 313,
+          "row": [
+            "Hachigian, Heather",
+            null,
+            84770,
+            1550,
+            1
+          ]
+        }
+      ],
+      "matchedOccurrences": 1,
+      "uniqueInBoth": true
+    },
+    {
+      "remuneration": 85231,
+      "expenses": 1034,
+      "officialOccurrences": [
+        {
+          "rowNumber": 63,
+          "row": [
+            "royal-roads-university",
+            "Fischer, Maria (Christina)",
+            "Senior Budget Analyst",
+            85231,
+            1034,
+            25
+          ]
+        }
+      ],
+      "compiledOccurrences": [
+        {
+          "employerBaselineRowNumber": 312,
+          "row": [
+            "Fischer, Maria (Christina)",
+            null,
+            85231,
+            1034,
+            1
+          ]
+        }
+      ],
+      "matchedOccurrences": 1,
+      "uniqueInBoth": true
+    },
+    {
+      "remuneration": 85894,
+      "expenses": null,
+      "officialOccurrences": [
+        {
+          "rowNumber": 139,
+          "row": [
+            "royal-roads-university",
+            "Maxwell, Jennifer",
+            "School Manager, School of Communication & Culture",
+            85894,
+            null,
+            26
+          ]
+        }
+      ],
+      "compiledOccurrences": [
+        {
+          "employerBaselineRowNumber": 311,
+          "row": [
+            "Maxwell, Jennifer",
+            null,
+            85894,
+            null,
+            1
+          ]
+        }
+      ],
+      "matchedOccurrences": 1,
+      "uniqueInBoth": true
+    },
+    {
+      "remuneration": 86917,
+      "expenses": 2024,
+      "officialOccurrences": [
+        {
+          "rowNumber": 216,
+          "row": [
+            "royal-roads-university",
+            "Wood, Samantha",
+            "School Manager, School of Education and Technology",
+            86917,
+            2024,
+            28
+          ]
+        }
+      ],
+      "compiledOccurrences": [
+        {
+          "employerBaselineRowNumber": 310,
+          "row": [
+            "Wood, Samantha",
+            null,
+            86917,
+            2024,
+            1
+          ]
+        }
+      ],
+      "matchedOccurrences": 1,
+      "uniqueInBoth": true
+    },
+    {
+      "remuneration": 86921,
+      "expenses": null,
+      "officialOccurrences": [
+        {
+          "rowNumber": 198,
+          "row": [
+            "royal-roads-university",
+            "Turner, Paul",
+            "Manager, Language Programs Global Language and Learning Centre",
+            86921,
+            null,
+            27
+          ]
+        }
+      ],
+      "compiledOccurrences": [
+        {
+          "employerBaselineRowNumber": 309,
+          "row": [
+            "Turner, Paul",
+            null,
+            86921,
+            null,
+            1
+          ]
+        }
+      ],
+      "matchedOccurrences": 1,
+      "uniqueInBoth": true
+    },
+    {
+      "remuneration": 87118,
+      "expenses": null,
+      "officialOccurrences": [
+        {
+          "rowNumber": 65,
+          "row": [
+            "royal-roads-university",
+            "Funk, Scott",
+            "Construction, Compliance and Maintenance Inspector",
+            87118,
+            null,
+            26
+          ]
+        }
+      ],
+      "compiledOccurrences": [
+        {
+          "employerBaselineRowNumber": 308,
+          "row": [
+            "Funk, Scot",
+            null,
+            87118,
+            null,
+            1
+          ]
+        }
+      ],
+      "matchedOccurrences": 1,
+      "uniqueInBoth": true
+    },
+    {
+      "remuneration": 87123,
+      "expenses": null,
+      "officialOccurrences": [
+        {
+          "rowNumber": 80,
+          "row": [
+            "royal-roads-university",
+            "Hamilton, Donna-Marie",
+            "Instructional Designer",
+            87123,
+            null,
+            26
+          ]
+        }
+      ],
+      "compiledOccurrences": [
+        {
+          "employerBaselineRowNumber": 307,
+          "row": [
+            "Hamilton, Donne-Merle",
+            null,
+            87123,
+            null,
+            1
+          ]
+        }
+      ],
+      "matchedOccurrences": 1,
+      "uniqueInBoth": true
+    },
+    {
+      "remuneration": 87231,
+      "expenses": null,
+      "officialOccurrences": [
+        {
+          "rowNumber": 118,
+          "row": [
+            "royal-roads-university",
+            "Kulikova, Nadezda",
+            "Instructional Designer",
+            87231,
+            null,
+            26
+          ]
+        }
+      ],
+      "compiledOccurrences": [
+        {
+          "employerBaselineRowNumber": 306,
+          "row": [
+            "Kullkova, Nadezda",
+            null,
+            87231,
+            null,
+            1
+          ]
+        }
+      ],
+      "matchedOccurrences": 1,
+      "uniqueInBoth": true
+    },
+    {
+      "remuneration": 87391,
+      "expenses": 1550,
+      "officialOccurrences": [
+        {
+          "rowNumber": 16,
+          "row": [
+            "royal-roads-university",
+            "Bird, Geoffrey",
+            "Professor, School of Tourism & Hospitality Management",
+            87391,
+            1550,
+            25
+          ]
+        }
+      ],
+      "compiledOccurrences": [
+        {
+          "employerBaselineRowNumber": 305,
+          "row": [
+            "Bird, Geoffrey",
+            null,
+            87391,
+            1550,
+            1
+          ]
+        }
+      ],
+      "matchedOccurrences": 1,
+      "uniqueInBoth": true
+    },
+    {
+      "remuneration": 87749,
+      "expenses": null,
+      "officialOccurrences": [
+        {
+          "rowNumber": 155,
+          "row": [
+            "royal-roads-university",
+            "Pregelj, Rebecca",
+            "Events and Scheduling Manager",
+            87749,
+            null,
+            27
+          ]
+        }
+      ],
+      "compiledOccurrences": [
+        {
+          "employerBaselineRowNumber": 304,
+          "row": [
+            "Pregelj, Rebecca",
+            null,
+            87749,
+            null,
+            1
+          ]
+        }
+      ],
+      "matchedOccurrences": 1,
+      "uniqueInBoth": true
+    },
+    {
+      "remuneration": 87813,
+      "expenses": 1550,
+      "officialOccurrences": [
+        {
+          "rowNumber": 202,
+          "row": [
+            "royal-roads-university",
+            "Wafai, Hassan",
+            "Associate Professor, School of Business",
+            87813,
+            1550,
+            27
+          ]
+        }
+      ],
+      "compiledOccurrences": [
+        {
+          "employerBaselineRowNumber": 303,
+          "row": [
+            "Wafal, Hassan",
+            null,
+            87813,
+            1550,
+            1
+          ]
+        }
+      ],
+      "matchedOccurrences": 1,
+      "uniqueInBoth": true
+    },
+    {
+      "remuneration": 87901,
+      "expenses": null,
+      "officialOccurrences": [
+        {
+          "rowNumber": 1,
+          "row": [
+            "royal-roads-university",
+            "Adamson, Sara",
+            "Senior Admin Coordinator, President's Office",
+            87901,
+            null,
+            25
+          ]
+        }
+      ],
+      "compiledOccurrences": [
+        {
+          "employerBaselineRowNumber": 302,
+          "row": [
+            "Adamson, Sara",
+            null,
+            87901,
+            null,
+            1
+          ]
+        }
+      ],
+      "matchedOccurrences": 1,
+      "uniqueInBoth": true
+    },
+    {
+      "remuneration": 88435,
+      "expenses": 210,
+      "officialOccurrences": [
+        {
+          "rowNumber": 169,
+          "row": [
+            "royal-roads-university",
+            "Rogers, Vanessa",
+            "IT Senior Systems Analyst, Planning and Delivery",
+            88435,
+            210,
+            27
+          ]
+        }
+      ],
+      "compiledOccurrences": [
+        {
+          "employerBaselineRowNumber": 301,
+          "row": [
+            "Rogers, Vanessa",
+            null,
+            88435,
+            210,
+            1
+          ]
+        }
+      ],
+      "matchedOccurrences": 1,
+      "uniqueInBoth": true
+    },
+    {
+      "remuneration": 88556,
+      "expenses": null,
+      "officialOccurrences": [
+        {
+          "rowNumber": 8,
+          "row": [
+            "royal-roads-university",
+            "Armellino, Gina",
+            "Manager, Research Ethics",
+            88556,
+            null,
+            25
+          ]
+        }
+      ],
+      "compiledOccurrences": [
+        {
+          "employerBaselineRowNumber": 300,
+          "row": [
+            "Armelllno, Gina",
+            null,
+            88556,
+            null,
+            1
+          ]
+        }
+      ],
+      "matchedOccurrences": 1,
+      "uniqueInBoth": true
+    },
+    {
+      "remuneration": 88643,
+      "expenses": null,
+      "officialOccurrences": [
+        {
+          "rowNumber": 91,
+          "row": [
+            "royal-roads-university",
+            "Hossain, Zara",
+            "Instructional Designer",
+            88643,
+            null,
+            26
+          ]
+        },
+        {
+          "rowNumber": 213,
+          "row": [
+            "royal-roads-university",
+            "Wilson, Gary",
+            "IT Senior QA Analyst",
+            88643,
+            null,
+            27
+          ]
+        }
+      ],
+      "compiledOccurrences": [
+        {
+          "employerBaselineRowNumber": 298,
+          "row": [
+            "Hossain, Zara",
+            null,
+            88643,
+            null,
+            1
+          ]
+        },
+        {
+          "employerBaselineRowNumber": 299,
+          "row": [
+            "Wilson, Gary",
+            null,
+            88643,
+            null,
+            1
+          ]
+        }
+      ],
+      "matchedOccurrences": 2,
+      "uniqueInBoth": false
+    },
+    {
+      "remuneration": 88896,
+      "expenses": null,
+      "officialOccurrences": [
+        {
+          "rowNumber": 108,
+          "row": [
+            "royal-roads-university",
+            "Keddie, Jason",
+            "Instructional Designer",
+            88896,
+            null,
+            26
+          ]
+        }
+      ],
+      "compiledOccurrences": [
+        {
+          "employerBaselineRowNumber": 297,
+          "row": [
+            "Keddie, Jason",
+            null,
+            88896,
+            null,
+            1
+          ]
+        }
+      ],
+      "matchedOccurrences": 1,
+      "uniqueInBoth": true
+    },
+    {
+      "remuneration": 89124,
+      "expenses": null,
+      "officialOccurrences": [
+        {
+          "rowNumber": 48,
+          "row": [
+            "royal-roads-university",
+            "DesBiens, Donna",
+            "Instructional Designer",
+            89124,
+            null,
+            25
+          ]
+        }
+      ],
+      "compiledOccurrences": [
+        {
+          "employerBaselineRowNumber": 296,
+          "row": [
+            "DesBiens, Donna",
+            null,
+            89124,
+            null,
+            1
+          ]
+        }
+      ],
+      "matchedOccurrences": 1,
+      "uniqueInBoth": true
+    },
+    {
+      "remuneration": 89144,
+      "expenses": null,
+      "officialOccurrences": [
+        {
+          "rowNumber": 163,
+          "row": [
+            "royal-roads-university",
+            "Richards, Ashley",
+            "Board Secretary",
+            89144,
+            null,
+            27
+          ]
+        }
+      ],
+      "compiledOccurrences": [
+        {
+          "employerBaselineRowNumber": 295,
+          "row": [
+            "Richards, Ashley",
+            null,
+            89144,
+            null,
+            1
+          ]
+        }
+      ],
+      "matchedOccurrences": 1,
+      "uniqueInBoth": true
+    },
+    {
+      "remuneration": 89360,
+      "expenses": null,
+      "officialOccurrences": [
+        {
+          "rowNumber": 176,
+          "row": [
+            "royal-roads-university",
+            "Sheh, Wai Kwong",
+            "IT Systems Analyst, Infrastructure",
+            89360,
+            null,
+            27
+          ]
+        }
+      ],
+      "compiledOccurrences": [
+        {
+          "employerBaselineRowNumber": 294,
+          "row": [
+            "Sheh, Wai Kwong",
+            null,
+            89360,
+            null,
+            1
+          ]
+        }
+      ],
+      "matchedOccurrences": 1,
+      "uniqueInBoth": true
+    },
+    {
+      "remuneration": 89362,
+      "expenses": null,
+      "officialOccurrences": [
+        {
+          "rowNumber": 190,
+          "row": [
+            "royal-roads-university",
+            "Thaler, Christine",
+            "Manager, Client Services",
+            89362,
+            null,
+            27
+          ]
+        }
+      ],
+      "compiledOccurrences": [
+        {
+          "employerBaselineRowNumber": 293,
+          "row": [
+            "Thaler, Christine",
+            null,
+            89362,
+            null,
+            1
+          ]
+        }
+      ],
+      "matchedOccurrences": 1,
+      "uniqueInBoth": true
+    },
+    {
+      "remuneration": 89503,
+      "expenses": null,
+      "officialOccurrences": [
+        {
+          "rowNumber": 53,
+          "row": [
+            "royal-roads-university",
+            "Doyle, Richard",
+            "Safety and Environment Officer",
+            89503,
+            null,
+            25
+          ]
+        }
+      ],
+      "compiledOccurrences": [
+        {
+          "employerBaselineRowNumber": 292,
+          "row": [
+            "Doyle, Rlchard",
+            null,
+            89503,
+            null,
+            1
+          ]
+        }
+      ],
+      "matchedOccurrences": 1,
+      "uniqueInBoth": true
+    },
+    {
+      "remuneration": 90023,
+      "expenses": 1926,
+      "officialOccurrences": [
+        {
+          "rowNumber": 55,
+          "row": [
+            "royal-roads-university",
+            "Dube, Seema (Carla)",
+            "Senior Financial Analyst, Policy and Reporting",
+            90023,
+            1926,
+            25
+          ]
+        }
+      ],
+      "compiledOccurrences": [
+        {
+          "employerBaselineRowNumber": 291,
+          "row": [
+            "Dube, Seema (Carla)",
+            null,
+            90023,
+            1926,
+            1
+          ]
+        }
+      ],
+      "matchedOccurrences": 1,
+      "uniqueInBoth": true
+    },
+    {
+      "remuneration": 90034,
+      "expenses": 1550,
+      "officialOccurrences": [
+        {
+          "rowNumber": 64,
+          "row": [
+            "royal-roads-university",
+            "Fovet, Frederic",
+            "Associate Professor, School of Education and Technology",
+            90034,
+            1550,
+            25
+          ]
+        }
+      ],
+      "compiledOccurrences": [
+        {
+          "employerBaselineRowNumber": 290,
+          "row": [
+            "Fovet, Frederic",
+            null,
+            90034,
+            1550,
+            1
+          ]
+        }
+      ],
+      "matchedOccurrences": 1,
+      "uniqueInBoth": true
+    },
+    {
+      "remuneration": 90854,
+      "expenses": null,
+      "officialOccurrences": [
+        {
+          "rowNumber": 171,
+          "row": [
+            "royal-roads-university",
+            "Ruffolo, Antonio",
+            "Manager, Media Support Services",
+            90854,
+            null,
+            27
+          ]
+        }
+      ],
+      "compiledOccurrences": [
+        {
+          "employerBaselineRowNumber": 289,
+          "row": [
+            "Ruffolo, Antonio",
+            null,
+            90854,
+            null,
+            1
+          ]
+        }
+      ],
+      "matchedOccurrences": 1,
+      "uniqueInBoth": true
+    },
+    {
+      "remuneration": 91435,
+      "expenses": 963,
+      "officialOccurrences": [
+        {
+          "rowNumber": 20,
+          "row": [
+            "royal-roads-university",
+            "Bolduc, Temara",
+            "Manager, Accounting",
+            91435,
+            963,
+            25
+          ]
+        }
+      ],
+      "compiledOccurrences": [
+        {
+          "employerBaselineRowNumber": 288,
+          "row": [
+            "Bolduc, Temara",
+            null,
+            91435,
+            963,
+            1
+          ]
+        }
+      ],
+      "matchedOccurrences": 1,
+      "uniqueInBoth": true
+    },
+    {
+      "remuneration": 91461,
+      "expenses": 3288,
+      "officialOccurrences": [],
+      "compiledOccurrences": [
+        {
+          "employerBaselineRowNumber": 287,
+          "row": [
+            "Hughs, Janine",
+            null,
+            91461,
+            3288,
+            1
+          ]
+        }
+      ],
+      "matchedOccurrences": 0,
+      "uniqueInBoth": false
+    },
+    {
+      "remuneration": 91631,
+      "expenses": null,
+      "officialOccurrences": [
+        {
+          "rowNumber": 93,
+          "row": [
+            "royal-roads-university",
+            "Howe, Felix",
+            "IT Systems Analyst, Infrastructure",
+            91631,
+            null,
+            26
+          ]
+        }
+      ],
+      "compiledOccurrences": [
+        {
+          "employerBaselineRowNumber": 286,
+          "row": [
+            "Howe, Felix",
+            null,
+            91631,
+            null,
+            1
+          ]
+        }
+      ],
+      "matchedOccurrences": 1,
+      "uniqueInBoth": true
+    },
+    {
+      "remuneration": 92026,
+      "expenses": null,
+      "officialOccurrences": [
+        {
+          "rowNumber": 141,
+          "row": [
+            "royal-roads-university",
+            "McGonigal, Colleen",
+            "Manager, Bookstore and Library Front Desk",
+            92026,
+            null,
+            27
+          ]
+        }
+      ],
+      "compiledOccurrences": [
+        {
+          "employerBaselineRowNumber": 285,
+          "row": [
+            "McGonigal, Colleen",
+            null,
+            92026,
+            null,
+            1
+          ]
+        }
+      ],
+      "matchedOccurrences": 1,
+      "uniqueInBoth": true
+    },
+    {
+      "remuneration": 92052,
+      "expenses": null,
+      "officialOccurrences": [
+        {
+          "rowNumber": 196,
+          "row": [
+            "royal-roads-university",
+            "Tonning, Coleen",
+            "School Manager, Humanitarian Studies",
+            92052,
+            null,
+            27
+          ]
+        }
+      ],
+      "compiledOccurrences": [
+        {
+          "employerBaselineRowNumber": 284,
+          "row": [
+            "Tonning, Coleen",
+            null,
+            92052,
+            null,
+            1
+          ]
+        }
+      ],
+      "matchedOccurrences": 1,
+      "uniqueInBoth": true
+    },
+    {
+      "remuneration": 92443,
+      "expenses": null,
+      "officialOccurrences": [],
+      "compiledOccurrences": [
+        {
+          "employerBaselineRowNumber": 283,
+          "row": [
+            "McLeod, Robert",
+            null,
+            92443,
+            null,
+            1
+          ]
+        }
+      ],
+      "matchedOccurrences": 0,
+      "uniqueInBoth": false
+    },
+    {
+      "remuneration": 92443,
+      "expenses": 3440,
+      "officialOccurrences": [
+        {
+          "rowNumber": 143,
+          "row": [
+            "royal-roads-university",
+            "McLeod, Robert",
+            "Copyright Manager",
+            92443,
+            3440,
+            27
+          ]
+        }
+      ],
+      "compiledOccurrences": [],
+      "matchedOccurrences": 0,
+      "uniqueInBoth": false
+    },
+    {
+      "remuneration": 93303,
+      "expenses": 1550,
+      "officialOccurrences": [
+        {
+          "rowNumber": 157,
+          "row": [
+            "royal-roads-university",
+            "Pulla, Siomonn",
+            "Associate Professor, Doctor of Social Sciences",
+            93303,
+            1550,
+            27
+          ]
+        }
+      ],
+      "compiledOccurrences": [
+        {
+          "employerBaselineRowNumber": 282,
+          "row": [
+            "Puila, Slomann",
+            null,
+            93303,
+            1550,
+            1
+          ]
+        }
+      ],
+      "matchedOccurrences": 1,
+      "uniqueInBoth": true
+    },
+    {
+      "remuneration": 93906,
+      "expenses": null,
+      "officialOccurrences": [
+        {
+          "rowNumber": 144,
+          "row": [
+            "royal-roads-university",
+            "McPherson, Madeline",
+            "Manager, Planning and Delivery",
+            93906,
+            null,
+            27
+          ]
+        }
+      ],
+      "compiledOccurrences": [
+        {
+          "employerBaselineRowNumber": 281,
+          "row": [
+            "McPherson, Madeline",
+            null,
+            93906,
+            null,
+            1
+          ]
+        }
+      ],
+      "matchedOccurrences": 1,
+      "uniqueInBoth": true
+    },
+    {
+      "remuneration": 94069,
+      "expenses": null,
+      "officialOccurrences": [
+        {
+          "rowNumber": 6,
+          "row": [
+            "royal-roads-university",
+            "Anttila, Peter",
+            "IT Systems Analyst, Infrastructure",
+            94069,
+            null,
+            25
+          ]
+        }
+      ],
+      "compiledOccurrences": [
+        {
+          "employerBaselineRowNumber": 280,
+          "row": [
+            "Anttila, Peter",
+            null,
+            94069,
+            null,
+            1
+          ]
+        }
+      ],
+      "matchedOccurrences": 1,
+      "uniqueInBoth": true
+    },
+    {
+      "remuneration": 94100,
+      "expenses": null,
+      "officialOccurrences": [
+        {
+          "rowNumber": 211,
+          "row": [
+            "royal-roads-university",
+            "Williams, Gina",
+            "Associate Director, Employee and Labour Relations",
+            94100,
+            null,
+            27
+          ]
+        }
+      ],
+      "compiledOccurrences": [
+        {
+          "employerBaselineRowNumber": 279,
+          "row": [
+            "Williams, Gina",
+            null,
+            94100,
+            null,
+            1
+          ]
+        }
+      ],
+      "matchedOccurrences": 1,
+      "uniqueInBoth": true
+    },
+    {
+      "remuneration": 94248,
+      "expenses": null,
+      "officialOccurrences": [
+        {
+          "rowNumber": 175,
+          "row": [
+            "royal-roads-university",
+            "Shah-Preusser, Nooreen",
+            "Manager, Student Team Performance",
+            94248,
+            null,
+            27
+          ]
+        }
+      ],
+      "compiledOccurrences": [
+        {
+          "employerBaselineRowNumber": 278,
+          "row": [
+            "Shah-Preusser, Nooreen",
+            null,
+            94248,
+            null,
+            1
+          ]
+        }
+      ],
+      "matchedOccurrences": 1,
+      "uniqueInBoth": true
+    },
+    {
+      "remuneration": 94399,
+      "expenses": 9900,
+      "officialOccurrences": [
+        {
+          "rowNumber": 197,
+          "row": [
+            "royal-roads-university",
+            "Torres Lopez, Andrea",
+            "Manager, Student Recruitment The Americas",
+            94399,
+            9900,
+            27
+          ]
+        }
+      ],
+      "compiledOccurrences": [
+        {
+          "employerBaselineRowNumber": 277,
+          "row": [
+            "Torros Lopez, Andrea",
+            null,
+            94399,
+            9900,
+            1
+          ]
+        }
+      ],
+      "matchedOccurrences": 1,
+      "uniqueInBoth": true
+    },
+    {
+      "remuneration": 94566,
+      "expenses": 872,
+      "officialOccurrences": [
+        {
+          "rowNumber": 25,
+          "row": [
+            "royal-roads-university",
+            "Brigham, Tim",
+            "Program Coordinator, Professional & Continuing Studies",
+            94566,
+            872,
+            25
+          ]
+        }
+      ],
+      "compiledOccurrences": [
+        {
+          "employerBaselineRowNumber": 276,
+          "row": [
+            "Brlgham, Tim",
+            null,
+            94566,
+            872,
+            1
+          ]
+        }
+      ],
+      "matchedOccurrences": 1,
+      "uniqueInBoth": true
+    },
+    {
+      "remuneration": 94730,
+      "expenses": null,
+      "officialOccurrences": [
+        {
+          "rowNumber": 101,
+          "row": [
+            "royal-roads-university",
+            "Jiang, Xiao Bei",
+            "Program Associate, Bachelor of Business Administration",
+            94730,
+            null,
+            26
+          ]
+        }
+      ],
+      "compiledOccurrences": [
+        {
+          "employerBaselineRowNumber": 275,
+          "row": [
+            "Jiang, Xiao Bei",
+            null,
+            94730,
+            null,
+            1
+          ]
+        }
+      ],
+      "matchedOccurrences": 1,
+      "uniqueInBoth": true
+    },
+    {
+      "remuneration": 96130,
+      "expenses": 4276,
+      "officialOccurrences": [
+        {
+          "rowNumber": 9,
+          "row": [
+            "royal-roads-university",
+            "Axe, Jo",
+            "Professor, School of Education and Technology",
+            96130,
+            4276,
+            25
+          ]
+        }
+      ],
+      "compiledOccurrences": [
+        {
+          "employerBaselineRowNumber": 274,
+          "row": [
+            "Axe, Jo",
+            null,
+            96130,
+            4276,
+            1
+          ]
+        }
+      ],
+      "matchedOccurrences": 1,
+      "uniqueInBoth": true
+    },
+    {
+      "remuneration": 96571,
+      "expenses": null,
+      "officialOccurrences": [
+        {
+          "rowNumber": 180,
+          "row": [
+            "royal-roads-university",
+            "Spicer, Jacynta",
+            "Student System Coordinator",
+            96571,
+            null,
+            27
+          ]
+        }
+      ],
+      "compiledOccurrences": [
+        {
+          "employerBaselineRowNumber": 273,
+          "row": [
+            "Spicer, Jacynta",
+            null,
+            96571,
+            null,
+            1
+          ]
+        }
+      ],
+      "matchedOccurrences": 1,
+      "uniqueInBoth": true
+    },
+    {
+      "remuneration": 96722,
+      "expenses": null,
+      "officialOccurrences": [],
+      "compiledOccurrences": [
+        {
+          "employerBaselineRowNumber": 272,
+          "row": [
+            "Webster, Keith",
+            null,
+            96722,
+            null,
+            1
+          ]
+        }
+      ],
+      "matchedOccurrences": 0,
+      "uniqueInBoth": false
+    },
+    {
+      "remuneration": 96722,
+      "expenses": 7033,
+      "officialOccurrences": [
+        {
+          "rowNumber": 206,
+          "row": [
+            "royal-roads-university",
+            "Webster, Keith",
+            "Associate Director, Learning Technologies",
+            96722,
+            7033,
+            27
+          ]
+        }
+      ],
+      "compiledOccurrences": [],
+      "matchedOccurrences": 0,
+      "uniqueInBoth": false
+    },
+    {
+      "remuneration": 97166,
+      "expenses": 1242,
+      "officialOccurrences": [
+        {
+          "rowNumber": 23,
+          "row": [
+            "royal-roads-university",
+            "Bracewell, Margot",
+            "Senior Administrative Manager, Faculty of Management",
+            97166,
+            1242,
+            25
+          ]
+        }
+      ],
+      "compiledOccurrences": [
+        {
+          "employerBaselineRowNumber": 271,
+          "row": [
+            "Broacowell, Margot",
+            null,
+            97166,
+            1242,
+            1
+          ]
+        }
+      ],
+      "matchedOccurrences": 1,
+      "uniqueInBoth": true
+    },
+    {
+      "remuneration": 97169,
+      "expenses": null,
+      "officialOccurrences": [
+        {
+          "rowNumber": 107,
+          "row": [
+            "royal-roads-university",
+            "Karleen, Darryl A.",
+            "Process Designer",
+            97169,
+            null,
+            26
+          ]
+        }
+      ],
+      "compiledOccurrences": [
+        {
+          "employerBaselineRowNumber": 270,
+          "row": [
+            "Karleen, Darryl A.",
+            null,
+            97169,
+            null,
+            1
+          ]
+        }
+      ],
+      "matchedOccurrences": 1,
+      "uniqueInBoth": true
+    },
+    {
+      "remuneration": 97196,
+      "expenses": 1550,
+      "officialOccurrences": [
+        {
+          "rowNumber": 84,
+          "row": [
+            "royal-roads-university",
+            "Heykoop, Cheryl",
+            "Associate Professor, School of Leadership Studies",
+            97196,
+            1550,
+            26
+          ]
+        }
+      ],
+      "compiledOccurrences": [
+        {
+          "employerBaselineRowNumber": 269,
+          "row": [
+            "Heykoop, Cheryl",
+            null,
+            97196,
+            1550,
+            1
+          ]
+        }
+      ],
+      "matchedOccurrences": 1,
+      "uniqueInBoth": true
+    },
+    {
+      "remuneration": 97278,
+      "expenses": null,
+      "officialOccurrences": [
+        {
+          "rowNumber": 97,
+          "row": [
+            "royal-roads-university",
+            "Isaak, Mark",
+            "Manager, Customer Service",
+            97278,
+            null,
+            26
+          ]
+        }
+      ],
+      "compiledOccurrences": [
+        {
+          "employerBaselineRowNumber": 268,
+          "row": [
+            "Issak, Mark",
+            null,
+            97278,
+            null,
+            1
+          ]
+        }
+      ],
+      "matchedOccurrences": 1,
+      "uniqueInBoth": true
+    },
+    {
+      "remuneration": 97425,
+      "expenses": null,
+      "officialOccurrences": [
+        {
+          "rowNumber": 182,
+          "row": [
+            "royal-roads-university",
+            "Stevenson, David",
+            "Instructional Designer",
+            97425,
+            null,
+            27
+          ]
+        }
+      ],
+      "compiledOccurrences": [
+        {
+          "employerBaselineRowNumber": 267,
+          "row": [
+            "Stevenson, David",
+            null,
+            97425,
+            null,
+            1
+          ]
+        }
+      ],
+      "matchedOccurrences": 1,
+      "uniqueInBoth": true
+    },
+    {
+      "remuneration": 97879,
+      "expenses": 207,
+      "officialOccurrences": [
+        {
+          "rowNumber": 67,
+          "row": [
+            "royal-roads-university",
+            "Gammert, Vera",
+            "Capital (Infrastructure) Project Manager",
+            97879,
+            207,
+            26
+          ]
+        }
+      ],
+      "compiledOccurrences": [
+        {
+          "employerBaselineRowNumber": 266,
+          "row": [
+            "Gammcrt, Vera",
+            null,
+            97879,
+            207,
+            1
+          ]
+        }
+      ],
+      "matchedOccurrences": 1,
+      "uniqueInBoth": true
+    },
+    {
+      "remuneration": 98156,
+      "expenses": null,
+      "officialOccurrences": [
+        {
+          "rowNumber": 174,
+          "row": [
+            "royal-roads-university",
+            "Segall, Aaron",
+            "Manager, Property Operations",
+            98156,
+            null,
+            27
+          ]
+        }
+      ],
+      "compiledOccurrences": [
+        {
+          "employerBaselineRowNumber": 265,
+          "row": [
+            "Segoll, Aaron",
+            null,
+            98156,
+            null,
+            1
+          ]
+        }
+      ],
+      "matchedOccurrences": 1,
+      "uniqueInBoth": true
+    },
+    {
+      "remuneration": 98664,
+      "expenses": null,
+      "officialOccurrences": [
+        {
+          "rowNumber": 13,
+          "row": [
+            "royal-roads-university",
+            "Bell, Theresa",
+            "Manager, Blended Learning Success",
+            98664,
+            null,
+            25
+          ]
+        },
+        {
+          "rowNumber": 24,
+          "row": [
+            "royal-roads-university",
+            "Bremner, Maria",
+            "Manager, Resilience",
+            98664,
+            null,
+            25
+          ]
+        }
+      ],
+      "compiledOccurrences": [
+        {
+          "employerBaselineRowNumber": 263,
+          "row": [
+            "Bell, Theresa",
+            null,
+            98664,
+            null,
+            1
+          ]
+        },
+        {
+          "employerBaselineRowNumber": 264,
+          "row": [
+            "Bremner, Marla",
+            null,
+            98664,
+            null,
+            1
+          ]
+        }
+      ],
+      "matchedOccurrences": 2,
+      "uniqueInBoth": false
+    },
+    {
+      "remuneration": 98842,
+      "expenses": 1843,
+      "officialOccurrences": [
+        {
+          "rowNumber": 168,
+          "row": [
+            "royal-roads-university",
+            "Rodrigue, Michelle",
+            "Manager, Enrolment Services",
+            98842,
+            1843,
+            27
+          ]
+        }
+      ],
+      "compiledOccurrences": [
+        {
+          "employerBaselineRowNumber": 262,
+          "row": [
+            "Rodrigue, Michelle",
+            null,
+            98842,
+            1843,
+            1
+          ]
+        }
+      ],
+      "matchedOccurrences": 1,
+      "uniqueInBoth": true
+    },
+    {
+      "remuneration": 98862,
+      "expenses": 608,
+      "officialOccurrences": [
+        {
+          "rowNumber": 115,
+          "row": [
+            "royal-roads-university",
+            "Kostyuk, Nataliya",
+            "IT Senior Database Analyst",
+            98862,
+            608,
+            26
+          ]
+        }
+      ],
+      "compiledOccurrences": [
+        {
+          "employerBaselineRowNumber": 261,
+          "row": [
+            "Kostyuk, Natallya",
+            null,
+            98862,
+            608,
+            1
+          ]
+        }
+      ],
+      "matchedOccurrences": 1,
+      "uniqueInBoth": true
+    },
+    {
+      "remuneration": 99140,
+      "expenses": null,
+      "officialOccurrences": [
+        {
+          "rowNumber": 173,
+          "row": [
+            "royal-roads-university",
+            "Seeman, Jenny",
+            "Manager, Archives",
+            99140,
+            null,
+            27
+          ]
+        }
+      ],
+      "compiledOccurrences": [
+        {
+          "employerBaselineRowNumber": 260,
+          "row": [
+            "Seernan, Jenny",
+            null,
+            99140,
+            null,
+            1
+          ]
+        }
+      ],
+      "matchedOccurrences": 1,
+      "uniqueInBoth": true
+    },
+    {
+      "remuneration": 99190,
+      "expenses": null,
+      "officialOccurrences": [
+        {
+          "rowNumber": 222,
+          "row": [
+            "royal-roads-university",
+            "Zoltay, Andy",
+            "Senior Systems Analyst",
+            99190,
+            null,
+            28
+          ]
+        }
+      ],
+      "compiledOccurrences": [
+        {
+          "employerBaselineRowNumber": 259,
+          "row": [
+            "Zoltay, Andy",
+            null,
+            99190,
+            null,
+            1
+          ]
+        }
+      ],
+      "matchedOccurrences": 1,
+      "uniqueInBoth": true
+    },
+    {
+      "remuneration": 99222,
+      "expenses": null,
+      "officialOccurrences": [
+        {
+          "rowNumber": 87,
+          "row": [
+            "royal-roads-university",
+            "Hinrichs, Amy",
+            "Manager, Advancement",
+            99222,
+            null,
+            26
+          ]
+        },
+        {
+          "rowNumber": 159,
+          "row": [
+            "royal-roads-university",
+            "Raby, Jacalyn",
+            "Senior Administrative Manager, FSAS",
+            99222,
+            null,
+            27
+          ]
+        }
+      ],
+      "compiledOccurrences": [
+        {
+          "employerBaselineRowNumber": 257,
+          "row": [
+            "Hinrichs, Amy",
+            null,
+            99222,
+            null,
+            1
+          ]
+        },
+        {
+          "employerBaselineRowNumber": 258,
+          "row": [
+            "Raby, Jacalyn",
+            null,
+            99222,
+            null,
+            1
+          ]
+        }
+      ],
+      "matchedOccurrences": 2,
+      "uniqueInBoth": false
+    },
+    {
+      "remuneration": 99227,
+      "expenses": 5550,
+      "officialOccurrences": [
+        {
+          "rowNumber": 116,
+          "row": [
+            "royal-roads-university",
+            "Krause, Wanda",
+            "Associate Professor",
+            99227,
+            5550,
+            26
+          ]
+        }
+      ],
+      "compiledOccurrences": [
+        {
+          "employerBaselineRowNumber": 256,
+          "row": [
+            "Krause, Wanda",
+            null,
+            99227,
+            5550,
+            1
+          ]
+        }
+      ],
+      "matchedOccurrences": 1,
+      "uniqueInBoth": true
+    },
+    {
+      "remuneration": 99249,
+      "expenses": null,
+      "officialOccurrences": [
+        {
+          "rowNumber": 19,
+          "row": [
+            "royal-roads-university",
+            "Blythe, Ali",
+            "Manager, Digital Experience",
+            99249,
+            null,
+            25
+          ]
+        }
+      ],
+      "compiledOccurrences": [
+        {
+          "employerBaselineRowNumber": 255,
+          "row": [
+            "Blythe, Ali",
+            null,
+            99249,
+            null,
+            1
+          ]
+        }
+      ],
+      "matchedOccurrences": 1,
+      "uniqueInBoth": true
+    },
+    {
+      "remuneration": 99525,
+      "expenses": 1550,
+      "officialOccurrences": [
+        {
+          "rowNumber": 62,
+          "row": [
+            "royal-roads-university",
+            "Fearon, Lois",
+            "Assistant Professor, School of Business",
+            99525,
+            1550,
+            25
+          ]
+        }
+      ],
+      "compiledOccurrences": [
+        {
+          "employerBaselineRowNumber": 254,
+          "row": [
+            "Fearon, Lois",
+            null,
+            99525,
+            1550,
+            1
+          ]
+        }
+      ],
+      "matchedOccurrences": 1,
+      "uniqueInBoth": true
+    },
+    {
+      "remuneration": 99871,
+      "expenses": null,
+      "officialOccurrences": [
+        {
+          "rowNumber": 15,
+          "row": [
+            "royal-roads-university",
+            "Bigrigg, Eric",
+            "Instructional Designer",
+            99871,
+            null,
+            25
+          ]
+        }
+      ],
+      "compiledOccurrences": [
+        {
+          "employerBaselineRowNumber": 253,
+          "row": [
+            "Bigrigg, Eric",
+            null,
+            99871,
+            null,
+            1
+          ]
+        }
+      ],
+      "matchedOccurrences": 1,
+      "uniqueInBoth": true
+    },
+    {
+      "remuneration": 99981,
+      "expenses": null,
+      "officialOccurrences": [
+        {
+          "rowNumber": 187,
+          "row": [
+            "royal-roads-university",
+            "Taggart, Tracy",
+            "Financial Planning SME",
+            99981,
+            null,
+            27
+          ]
+        }
+      ],
+      "compiledOccurrences": [
+        {
+          "employerBaselineRowNumber": 252,
+          "row": [
+            "taggart, Tracy",
+            null,
+            99981,
+            null,
+            1
+          ]
+        }
+      ],
+      "matchedOccurrences": 1,
+      "uniqueInBoth": true
+    },
+    {
+      "remuneration": 100454,
+      "expenses": null,
+      "officialOccurrences": [
+        {
+          "rowNumber": 66,
+          "row": [
+            "royal-roads-university",
+            "Furukawa, Liton",
+            "Research Ethics Reviewer",
+            100454,
+            null,
+            26
+          ]
+        }
+      ],
+      "compiledOccurrences": [
+        {
+          "employerBaselineRowNumber": 251,
+          "row": [
+            "Furukawa, Llton",
+            null,
+            100454,
+            null,
+            1
+          ]
+        }
+      ],
+      "matchedOccurrences": 1,
+      "uniqueInBoth": true
+    },
+    {
+      "remuneration": 100662,
+      "expenses": null,
+      "officialOccurrences": [
+        {
+          "rowNumber": 43,
+          "row": [
+            "royal-roads-university",
+            "D´souza, Pamela",
+            "Manager, Communications",
+            100662,
+            null,
+            25
+          ]
+        }
+      ],
+      "compiledOccurrences": [
+        {
+          "employerBaselineRowNumber": 250,
+          "row": [
+            "D'souza, Pamela",
+            null,
+            100662,
+            null,
+            1
+          ]
+        }
+      ],
+      "matchedOccurrences": 1,
+      "uniqueInBoth": true
+    },
+    {
+      "remuneration": 101602,
+      "expenses": 1550,
+      "officialOccurrences": [
+        {
+          "rowNumber": 120,
+          "row": [
+            "royal-roads-university",
+            "Leary, Tamara",
+            "Associate Professor (Director), School of Education and Technology",
+            101602,
+            1550,
+            26
+          ]
+        }
+      ],
+      "compiledOccurrences": [
+        {
+          "employerBaselineRowNumber": 249,
+          "row": [
+            "Leary, Tamara",
+            null,
+            101602,
+            1550,
+            1
+          ]
+        }
+      ],
+      "matchedOccurrences": 1,
+      "uniqueInBoth": true
+    },
+    {
+      "remuneration": 101785,
+      "expenses": null,
+      "officialOccurrences": [
+        {
+          "rowNumber": 28,
+          "row": [
+            "royal-roads-university",
+            "Cabrera, Mehgan",
+            "Manager, Alumni Relations",
+            101785,
+            null,
+            25
+          ]
+        }
+      ],
+      "compiledOccurrences": [
+        {
+          "employerBaselineRowNumber": 248,
+          "row": [
+            "Cabrera, Mehgan",
+            null,
+            101785,
+            null,
+            1
+          ]
+        }
+      ],
+      "matchedOccurrences": 1,
+      "uniqueInBoth": true
+    },
+    {
+      "remuneration": 102493,
+      "expenses": null,
+      "officialOccurrences": [
+        {
+          "rowNumber": 150,
+          "row": [
+            "royal-roads-university",
+            "Palahicky, Sophia",
+            "Associate Director, Learning Design",
+            102493,
+            null,
+            27
+          ]
+        }
+      ],
+      "compiledOccurrences": [
+        {
+          "employerBaselineRowNumber": 247,
+          "row": [
+            "Palahicky, Sophia",
+            null,
+            102493,
+            null,
+            1
+          ]
+        }
+      ],
+      "matchedOccurrences": 1,
+      "uniqueInBoth": true
+    },
+    {
+      "remuneration": 102603,
+      "expenses": 326,
+      "officialOccurrences": [
+        {
+          "rowNumber": 49,
+          "row": [
+            "royal-roads-university",
+            "Devenney, Don",
+            "Senior IT Security and Risk Specialist",
+            102603,
+            326,
+            25
+          ]
+        }
+      ],
+      "compiledOccurrences": [
+        {
+          "employerBaselineRowNumber": 246,
+          "row": [
+            "Devonney, Don",
+            null,
+            102603,
+            326,
+            1
+          ]
+        }
+      ],
+      "matchedOccurrences": 1,
+      "uniqueInBoth": true
+    },
+    {
+      "remuneration": 102687,
+      "expenses": null,
+      "officialOccurrences": [
+        {
+          "rowNumber": 219,
+          "row": [
+            "royal-roads-university",
+            "Yaremcio, Lisa",
+            "Policy Manager and Board Committee Secretary",
+            102687,
+            null,
+            28
+          ]
+        }
+      ],
+      "compiledOccurrences": [
+        {
+          "employerBaselineRowNumber": 245,
+          "row": [
+            "Yaremico, Lisa",
+            null,
+            102687,
+            null,
+            1
+          ]
+        }
+      ],
+      "matchedOccurrences": 1,
+      "uniqueInBoth": true
+    },
+    {
+      "remuneration": 102906,
+      "expenses": 1550,
+      "officialOccurrences": [
+        {
+          "rowNumber": 46,
+          "row": [
+            "royal-roads-university",
+            "Das, Runa",
+            "Assistant Professor, College of Interdisciplinary Studies",
+            102906,
+            1550,
+            25
+          ]
+        }
+      ],
+      "compiledOccurrences": [
+        {
+          "employerBaselineRowNumber": 244,
+          "row": [
+            "Das, Runa",
+            null,
+            102906,
+            1550,
+            1
+          ]
+        }
+      ],
+      "matchedOccurrences": 1,
+      "uniqueInBoth": true
+    },
+    {
+      "remuneration": 103666,
+      "expenses": 1550,
+      "officialOccurrences": [
+        {
+          "rowNumber": 152,
+          "row": [
+            "royal-roads-university",
+            "Porter, Ross",
+            "Assistant Professor, School of Business",
+            103666,
+            1550,
+            27
+          ]
+        }
+      ],
+      "compiledOccurrences": [
+        {
+          "employerBaselineRowNumber": 243,
+          "row": [
+            "Porter, Ross",
+            null,
+            103666,
+            1550,
+            1
+          ]
+        }
+      ],
+      "matchedOccurrences": 1,
+      "uniqueInBoth": true
+    },
+    {
+      "remuneration": 104593,
+      "expenses": null,
+      "officialOccurrences": [
+        {
+          "rowNumber": 100,
+          "row": [
+            "royal-roads-university",
+            "Jeffery, Kenneth",
+            "Associate Director, Learning Design",
+            104593,
+            null,
+            26
+          ]
+        }
+      ],
+      "compiledOccurrences": [
+        {
+          "employerBaselineRowNumber": 242,
+          "row": [
+            "Jeffery, Kenneth",
+            null,
+            104593,
+            null,
+            1
+          ]
+        }
+      ],
+      "matchedOccurrences": 1,
+      "uniqueInBoth": true
+    },
+    {
+      "remuneration": 105164,
+      "expenses": 3796,
+      "officialOccurrences": [
+        {
+          "rowNumber": 85,
+          "row": [
+            "royal-roads-university",
+            "Hill, Gwen",
+            "Manager of Equity, Diversity and Inclusion in Research",
+            105164,
+            3796,
+            26
+          ]
+        }
+      ],
+      "compiledOccurrences": [
+        {
+          "employerBaselineRowNumber": 241,
+          "row": [
+            "Hill, Gwen",
+            null,
+            105164,
+            3796,
+            1
+          ]
+        }
+      ],
+      "matchedOccurrences": 1,
+      "uniqueInBoth": true
+    },
+    {
+      "remuneration": 106141,
+      "expenses": null,
+      "officialOccurrences": [
+        {
+          "rowNumber": 95,
+          "row": [
+            "royal-roads-university",
+            "Hutchison, Mike",
+            "Manager, Infrastructure",
+            106141,
+            null,
+            26
+          ]
+        }
+      ],
+      "compiledOccurrences": [
+        {
+          "employerBaselineRowNumber": 240,
+          "row": [
+            "Hutchison, Mike",
+            null,
+            106141,
+            null,
+            1
+          ]
+        }
+      ],
+      "matchedOccurrences": 1,
+      "uniqueInBoth": true
+    },
+    {
+      "remuneration": 106918,
+      "expenses": 627,
+      "officialOccurrences": [
+        {
+          "rowNumber": 30,
+          "row": [
+            "royal-roads-university",
+            "Campos-Garcia, Alejandro",
+            "Associate Director, Human Rights, Equity, Diversity & Inclusion",
+            106918,
+            627,
+            25
+          ]
+        }
+      ],
+      "compiledOccurrences": [
+        {
+          "employerBaselineRowNumber": 239,
+          "row": [
+            "Campos-Garcia, Alejandro",
+            null,
+            106918,
+            627,
+            1
+          ]
+        }
+      ],
+      "matchedOccurrences": 1,
+      "uniqueInBoth": true
+    },
+    {
+      "remuneration": 107161,
+      "expenses": 247,
+      "officialOccurrences": [],
+      "compiledOccurrences": [
+        {
+          "employerBaselineRowNumber": 238,
+          "row": [
+            "Wilson, Angela",
+            null,
+            107161,
+            247,
+            1
+          ]
+        }
+      ],
+      "matchedOccurrences": 0,
+      "uniqueInBoth": false
+    },
+    {
+      "remuneration": 107181,
+      "expenses": 247,
+      "officialOccurrences": [
+        {
+          "rowNumber": 212,
+          "row": [
+            "royal-roads-university",
+            "Wilson, Angella",
+            "Manager, Academic Analysis",
+            107181,
+            247,
+            27
+          ]
+        }
+      ],
+      "compiledOccurrences": [],
+      "matchedOccurrences": 0,
+      "uniqueInBoth": false
+    },
+    {
+      "remuneration": 107716,
+      "expenses": 1550,
+      "officialOccurrences": [
+        {
+          "rowNumber": 146,
+          "row": [
+            "royal-roads-university",
+            "Moran, Jonathan",
+            "Professor, School of Environment & Sustainability",
+            107716,
+            1550,
+            27
+          ]
+        }
+      ],
+      "compiledOccurrences": [
+        {
+          "employerBaselineRowNumber": 237,
+          "row": [
+            "Moran, Jonathan",
+            null,
+            107716,
+            1550,
+            1
+          ]
+        }
+      ],
+      "matchedOccurrences": 1,
+      "uniqueInBoth": true
+    },
+    {
+      "remuneration": 108548,
+      "expenses": null,
+      "officialOccurrences": [
+        {
+          "rowNumber": 158,
+          "row": [
+            "royal-roads-university",
+            "Qaqish, Marco",
+            "Manager, Marketing",
+            108548,
+            null,
+            27
+          ]
+        }
+      ],
+      "compiledOccurrences": [
+        {
+          "employerBaselineRowNumber": 236,
+          "row": [
+            "Qaqish, Marco",
+            null,
+            108548,
+            null,
+            1
+          ]
+        }
+      ],
+      "matchedOccurrences": 1,
+      "uniqueInBoth": true
+    },
+    {
+      "remuneration": 108738,
+      "expenses": 1983,
+      "officialOccurrences": [
+        {
+          "rowNumber": 214,
+          "row": [
+            "royal-roads-university",
+            "Wilson-Mah, Rebecca",
+            "Associate Professor, School of Tourism & Hospitality Management",
+            108738,
+            1983,
+            27
+          ]
+        }
+      ],
+      "compiledOccurrences": [
+        {
+          "employerBaselineRowNumber": 235,
+          "row": [
+            "Wilson-Mah, Rebecca",
+            null,
+            108738,
+            1983,
+            1
+          ]
+        }
+      ],
+      "matchedOccurrences": 1,
+      "uniqueInBoth": true
+    },
+    {
+      "remuneration": 108754,
+      "expenses": 1550,
+      "officialOccurrences": [],
+      "compiledOccurrences": [
+        {
+          "employerBaselineRowNumber": 234,
+          "row": [
+            "Thexton, Todd",
+            null,
+            108754,
+            1550,
+            1
+          ]
+        }
+      ],
+      "matchedOccurrences": 0,
+      "uniqueInBoth": false
+    },
+    {
+      "remuneration": 108764,
+      "expenses": 1550,
+      "officialOccurrences": [
+        {
+          "rowNumber": 191,
+          "row": [
+            "royal-roads-university",
+            "Thexton, Todd",
+            "Assistant Professor, School of Business",
+            108764,
+            1550,
+            27
+          ]
+        }
+      ],
+      "compiledOccurrences": [],
+      "matchedOccurrences": 0,
+      "uniqueInBoth": false
+    },
+    {
+      "remuneration": 110189,
+      "expenses": 1550,
+      "officialOccurrences": [
+        {
+          "rowNumber": 134,
+          "row": [
+            "royal-roads-university",
+            "Madan, Athena",
+            "Associate Professor, School of Humanitarian Studies",
+            110189,
+            1550,
+            26
+          ]
+        }
+      ],
+      "compiledOccurrences": [
+        {
+          "employerBaselineRowNumber": 233,
+          "row": [
+            "Madan, Athena",
+            null,
+            110189,
+            1550,
+            1
+          ]
+        }
+      ],
+      "matchedOccurrences": 1,
+      "uniqueInBoth": true
+    },
+    {
+      "remuneration": 110281,
+      "expenses": null,
+      "officialOccurrences": [
+        {
+          "rowNumber": 27,
+          "row": [
+            "royal-roads-university",
+            "Burtoi, Lorraine",
+            "Associate Director, Campus Services",
+            110281,
+            null,
+            25
+          ]
+        }
+      ],
+      "compiledOccurrences": [
+        {
+          "employerBaselineRowNumber": 232,
+          "row": [
+            "Burtol, Lorraine",
+            null,
+            110281,
+            null,
+            1
+          ]
+        }
+      ],
+      "matchedOccurrences": 1,
+      "uniqueInBoth": true
+    },
+    {
+      "remuneration": 110470,
+      "expenses": 1550,
+      "officialOccurrences": [
+        {
+          "rowNumber": 125,
+          "row": [
+            "royal-roads-university",
+            "Linehan, Deb",
+            "Assistant Professor, School of Business",
+            110470,
+            1550,
+            26
+          ]
+        }
+      ],
+      "compiledOccurrences": [
+        {
+          "employerBaselineRowNumber": 231,
+          "row": [
+            "Linehan, Deb",
+            null,
+            110470,
+            1550,
+            1
+          ]
+        }
+      ],
+      "matchedOccurrences": 1,
+      "uniqueInBoth": true
+    },
+    {
+      "remuneration": 110946,
+      "expenses": 180,
+      "officialOccurrences": [
+        {
+          "rowNumber": 45,
+          "row": [
+            "royal-roads-university",
+            "Daniels, Curtis",
+            "Manager, Reporting Applications, Integration and Data (RAID)",
+            110946,
+            180,
+            25
+          ]
+        }
+      ],
+      "compiledOccurrences": [
+        {
+          "employerBaselineRowNumber": 230,
+          "row": [
+            "Daniels, Curtis",
+            null,
+            110946,
+            180,
+            1
+          ]
+        }
+      ],
+      "matchedOccurrences": 1,
+      "uniqueInBoth": true
+    },
+    {
+      "remuneration": 111272,
+      "expenses": 1550,
+      "officialOccurrences": [
+        {
+          "rowNumber": 179,
+          "row": [
+            "royal-roads-university",
+            "Slick, Jean",
+            "Associate Professor, School of Humanitarian Studies",
+            111272,
+            1550,
+            27
+          ]
+        }
+      ],
+      "compiledOccurrences": [
+        {
+          "employerBaselineRowNumber": 229,
+          "row": [
+            "Sllck, Jean",
+            null,
+            111272,
+            1550,
+            1
+          ]
+        }
+      ],
+      "matchedOccurrences": 1,
+      "uniqueInBoth": true
+    },
+    {
+      "remuneration": 111408,
+      "expenses": 1086,
+      "officialOccurrences": [
+        {
+          "rowNumber": 4,
+          "row": [
+            "royal-roads-university",
+            "Andrews-Brown, Adrianna",
+            "Manager, Student Engagement",
+            111408,
+            1086,
+            25
+          ]
+        }
+      ],
+      "compiledOccurrences": [
+        {
+          "employerBaselineRowNumber": 228,
+          "row": [
+            "Androws-Brown, Adrlanna",
+            null,
+            111408,
+            1086,
+            1
+          ]
+        }
+      ],
+      "matchedOccurrences": 1,
+      "uniqueInBoth": true
+    },
+    {
+      "remuneration": 111735,
+      "expenses": 1550,
+      "officialOccurrences": [
+        {
+          "rowNumber": 121,
+          "row": [
+            "royal-roads-university",
+            "Leighton, Hilary",
+            "Associate Professor, School of Environment & Sustainability",
+            111735,
+            1550,
+            26
+          ]
+        }
+      ],
+      "compiledOccurrences": [
+        {
+          "employerBaselineRowNumber": 227,
+          "row": [
+            "Leighton, Hilary",
+            null,
+            111735,
+            1550,
+            1
+          ]
+        }
+      ],
+      "matchedOccurrences": 1,
+      "uniqueInBoth": true
+    },
+    {
+      "remuneration": 112056,
+      "expenses": 1365,
+      "officialOccurrences": [
+        {
+          "rowNumber": 29,
+          "row": [
+            "royal-roads-university",
+            "Campden, Gwendolyn",
+            "Manager, Student Success",
+            112056,
+            1365,
+            25
+          ]
+        }
+      ],
+      "compiledOccurrences": [
+        {
+          "employerBaselineRowNumber": 226,
+          "row": [
+            "Campden, Gwendolyn",
+            null,
+            112056,
+            1365,
+            1
+          ]
+        }
+      ],
+      "matchedOccurrences": 1,
+      "uniqueInBoth": true
+    },
+    {
+      "remuneration": 112667,
+      "expenses": 1550,
+      "officialOccurrences": [
+        {
+          "rowNumber": 135,
+          "row": [
+            "royal-roads-university",
+            "Malisius, Eva",
+            "Associate Professor, School of Humanitarian Studies",
+            112667,
+            1550,
+            26
+          ]
+        }
+      ],
+      "compiledOccurrences": [
+        {
+          "employerBaselineRowNumber": 225,
+          "row": [
+            "Malisius, Eva",
+            null,
+            112667,
+            1550,
+            1
+          ]
+        }
+      ],
+      "matchedOccurrences": 1,
+      "uniqueInBoth": true
+    },
+    {
+      "remuneration": 112844,
+      "expenses": 767,
+      "officialOccurrences": [
+        {
+          "rowNumber": 73,
+          "row": [
+            "royal-roads-university",
+            "Glab, Patricia",
+            "Manager, Admissions",
+            112844,
+            767,
+            26
+          ]
+        }
+      ],
+      "compiledOccurrences": [
+        {
+          "employerBaselineRowNumber": 224,
+          "row": [
+            "Glab, Patricia",
+            null,
+            112844,
+            767,
+            1
+          ]
+        }
+      ],
+      "matchedOccurrences": 1,
+      "uniqueInBoth": true
+    },
+    {
+      "remuneration": 113415,
+      "expenses": null,
+      "officialOccurrences": [
+        {
+          "rowNumber": 199,
+          "row": [
+            "royal-roads-university",
+            "van Akker, Donna",
+            "Manager, Contract Training",
+            113415,
+            null,
+            27
+          ]
+        }
+      ],
+      "compiledOccurrences": [
+        {
+          "employerBaselineRowNumber": 223,
+          "row": [
+            "van Akker, Donna",
+            null,
+            113415,
+            null,
+            1
+          ]
+        }
+      ],
+      "matchedOccurrences": 1,
+      "uniqueInBoth": true
+    },
+    {
+      "remuneration": 113884,
+      "expenses": 2,
+      "officialOccurrences": [],
+      "compiledOccurrences": [
+        {
+          "employerBaselineRowNumber": 222,
+          "row": [
+            "Takach, Geo",
+            null,
+            113884,
+            2,
+            1
+          ]
+        }
+      ],
+      "matchedOccurrences": 0,
+      "uniqueInBoth": false
+    },
+    {
+      "remuneration": 113884,
+      "expenses": 1550,
+      "officialOccurrences": [
+        {
+          "rowNumber": 188,
+          "row": [
+            "royal-roads-university",
+            "Takach, Geo",
+            "Associate Professor, School of Communication and Culture",
+            113884,
+            1550,
+            27
+          ]
+        }
+      ],
+      "compiledOccurrences": [],
+      "matchedOccurrences": 0,
+      "uniqueInBoth": false
+    },
+    {
+      "remuneration": 114058,
+      "expenses": null,
+      "officialOccurrences": [],
+      "compiledOccurrences": [
+        {
+          "employerBaselineRowNumber": 221,
+          "row": [
+            "Gregg, Lynn",
+            null,
+            114058,
+            null,
+            1
+          ]
+        }
+      ],
+      "matchedOccurrences": 0,
+      "uniqueInBoth": false
+    },
+    {
+      "remuneration": 114591,
+      "expenses": null,
+      "officialOccurrences": [
+        {
+          "rowNumber": 217,
+          "row": [
+            "royal-roads-university",
+            "Woollard, Jessica",
+            "University SME",
+            114591,
+            null,
+            28
+          ]
+        }
+      ],
+      "compiledOccurrences": [
+        {
+          "employerBaselineRowNumber": 220,
+          "row": [
+            "Woollard, Jaulca",
+            null,
+            114591,
+            null,
+            1
+          ]
+        }
+      ],
+      "matchedOccurrences": 1,
+      "uniqueInBoth": true
+    },
+    {
+      "remuneration": 114737,
+      "expenses": 8489,
+      "officialOccurrences": [
+        {
+          "rowNumber": 130,
+          "row": [
+            "royal-roads-university",
+            "MacArthur, Julie",
+            "CRC, Reimagining Capitalism",
+            114737,
+            8489,
+            26
+          ]
+        }
+      ],
+      "compiledOccurrences": [
+        {
+          "employerBaselineRowNumber": 219,
+          "row": [
+            "MacArthur, Julie",
+            null,
+            114737,
+            8489,
+            1
+          ]
+        }
+      ],
+      "matchedOccurrences": 1,
+      "uniqueInBoth": true
+    },
+    {
+      "remuneration": 114958,
+      "expenses": null,
+      "officialOccurrences": [
+        {
+          "rowNumber": 77,
+          "row": [
+            "royal-roads-university",
+            "Gregg, Lynn",
+            "Associate Registrar & Manager Registration Services",
+            114958,
+            null,
+            26
+          ]
+        }
+      ],
+      "compiledOccurrences": [],
+      "matchedOccurrences": 0,
+      "uniqueInBoth": false
+    },
+    {
+      "remuneration": 115782,
+      "expenses": 1550,
+      "officialOccurrences": [
+        {
+          "rowNumber": 17,
+          "row": [
+            "royal-roads-university",
+            "Bishop, Kathy",
+            "Associate Professor, School of Leadership Studies",
+            115782,
+            1550,
+            25
+          ]
+        }
+      ],
+      "compiledOccurrences": [
+        {
+          "employerBaselineRowNumber": 218,
+          "row": [
+            "Bishop, Kathy",
+            null,
+            115782,
+            1550,
+            1
+          ]
+        }
+      ],
+      "matchedOccurrences": 1,
+      "uniqueInBoth": true
+    },
+    {
+      "remuneration": 116085,
+      "expenses": 4521,
+      "officialOccurrences": [
+        {
+          "rowNumber": 136,
+          "row": [
+            "royal-roads-university",
+            "Manion, Kathleen",
+            "Associate Professor, School of Humanitarian Studies",
+            116085,
+            4521,
+            26
+          ]
+        }
+      ],
+      "compiledOccurrences": [
+        {
+          "employerBaselineRowNumber": 217,
+          "row": [
+            "Manion, Kathleen",
+            null,
+            116085,
+            4521,
+            1
+          ]
+        }
+      ],
+      "matchedOccurrences": 1,
+      "uniqueInBoth": true
+    },
+    {
+      "remuneration": 116103,
+      "expenses": 1550,
+      "officialOccurrences": [
+        {
+          "rowNumber": 88,
+          "row": [
+            "royal-roads-university",
+            "Hodson, Jaigris",
+            "CRChair, Digital Communication in the Public Interest",
+            116103,
+            1550,
+            26
+          ]
+        }
+      ],
+      "compiledOccurrences": [
+        {
+          "employerBaselineRowNumber": 216,
+          "row": [
+            "Hodson, Jaigris",
+            null,
+            116103,
+            1550,
+            1
+          ]
+        }
+      ],
+      "matchedOccurrences": 1,
+      "uniqueInBoth": true
+    },
+    {
+      "remuneration": 116142,
+      "expenses": 3397,
+      "officialOccurrences": [
+        {
+          "rowNumber": 102,
+          "row": [
+            "royal-roads-university",
+            "Johnston, Russell",
+            "Manager, Indigenous Education",
+            116142,
+            3397,
+            26
+          ]
+        }
+      ],
+      "compiledOccurrences": [
+        {
+          "employerBaselineRowNumber": 215,
+          "row": [
+            "Johnston, Russell",
+            null,
+            116142,
+            3397,
+            1
+          ]
+        }
+      ],
+      "matchedOccurrences": 1,
+      "uniqueInBoth": true
+    },
+    {
+      "remuneration": 116187,
+      "expenses": 1550,
+      "officialOccurrences": [
+        {
+          "rowNumber": 210,
+          "row": [
+            "royal-roads-university",
+            "Wilde, Russell",
+            "Associate Professor, School of Education and Technology",
+            116187,
+            1550,
+            27
+          ]
+        }
+      ],
+      "compiledOccurrences": [
+        {
+          "employerBaselineRowNumber": 214,
+          "row": [
+            "Wilde, Russell",
+            null,
+            116187,
+            1550,
+            1
+          ]
+        }
+      ],
+      "matchedOccurrences": 1,
+      "uniqueInBoth": true
+    },
+    {
+      "remuneration": 116490,
+      "expenses": 1550,
+      "officialOccurrences": [
+        {
+          "rowNumber": 126,
+          "row": [
+            "royal-roads-university",
+            "Ling, Christopher",
+            "Associate Professor, School of Environment & Sustainability",
+            116490,
+            1550,
+            26
+          ]
+        }
+      ],
+      "compiledOccurrences": [
+        {
+          "employerBaselineRowNumber": 213,
+          "row": [
+            "Ling, Christopher",
+            null,
+            116490,
+            1550,
+            1
+          ]
+        }
+      ],
+      "matchedOccurrences": 1,
+      "uniqueInBoth": true
+    },
+    {
+      "remuneration": 116906,
+      "expenses": 1550,
+      "officialOccurrences": [
+        {
+          "rowNumber": 106,
+          "row": [
+            "royal-roads-university",
+            "Kajzer Mitchell, Ingrid",
+            "Associate Professor, School of Business",
+            116906,
+            1550,
+            26
+          ]
+        }
+      ],
+      "compiledOccurrences": [
+        {
+          "employerBaselineRowNumber": 212,
+          "row": [
+            "Kajzer Mltchell, Ingrid",
+            null,
+            116906,
+            1550,
+            1
+          ]
+        }
+      ],
+      "matchedOccurrences": 1,
+      "uniqueInBoth": true
+    },
+    {
+      "remuneration": 116930,
+      "expenses": 2058,
+      "officialOccurrences": [
+        {
+          "rowNumber": 140,
+          "row": [
+            "royal-roads-university",
+            "McDonald, Moira",
+            "Assistant Professor, School of Tourism & Hospitality Management",
+            116930,
+            2058,
+            27
+          ]
+        }
+      ],
+      "compiledOccurrences": [
+        {
+          "employerBaselineRowNumber": 211,
+          "row": [
+            "McDonald, Moira",
+            null,
+            116930,
+            2058,
+            1
+          ]
+        }
+      ],
+      "matchedOccurrences": 1,
+      "uniqueInBoth": true
+    },
+    {
+      "remuneration": 117837,
+      "expenses": 1519,
+      "officialOccurrences": [
+        {
+          "rowNumber": 167,
+          "row": [
+            "royal-roads-university",
+            "Robinson, Lisa",
+            "Associate Director, Employee Experience and Organizational Development",
+            117837,
+            1519,
+            27
+          ]
+        }
+      ],
+      "compiledOccurrences": [
+        {
+          "employerBaselineRowNumber": 210,
+          "row": [
+            "Robinson, Lisa",
+            null,
+            117837,
+            1519,
+            1
+          ]
+        }
+      ],
+      "matchedOccurrences": 1,
+      "uniqueInBoth": true
+    },
+    {
+      "remuneration": 118082,
+      "expenses": 947,
+      "officialOccurrences": [
+        {
+          "rowNumber": 166,
+          "row": [
+            "royal-roads-university",
+            "Roberts, Calvin",
+            "Associate Director, Professional and Continuing Studies",
+            118082,
+            947,
+            27
+          ]
+        }
+      ],
+      "compiledOccurrences": [],
+      "matchedOccurrences": 0,
+      "uniqueInBoth": false
+    },
+    {
+      "remuneration": 118087,
+      "expenses": 947,
+      "officialOccurrences": [],
+      "compiledOccurrences": [
+        {
+          "employerBaselineRowNumber": 209,
+          "row": [
+            "Roberts, Calvin",
+            null,
+            118087,
+            947,
+            1
+          ]
+        }
+      ],
+      "matchedOccurrences": 0,
+      "uniqueInBoth": false
+    },
+    {
+      "remuneration": 118148,
+      "expenses": 6666,
+      "officialOccurrences": [
+        {
+          "rowNumber": 96,
+          "row": [
+            "royal-roads-university",
+            "Irwin, Sean",
+            "Assistant Professor, School of Business",
+            118148,
+            6666,
+            26
+          ]
+        }
+      ],
+      "compiledOccurrences": [
+        {
+          "employerBaselineRowNumber": 208,
+          "row": [
+            "Irwin, Sean",
+            null,
+            118148,
+            6666,
+            1
+          ]
+        }
+      ],
+      "matchedOccurrences": 1,
+      "uniqueInBoth": true
+    },
+    {
+      "remuneration": 118268,
+      "expenses": 1550,
+      "officialOccurrences": [
+        {
+          "rowNumber": 124,
+          "row": [
+            "royal-roads-university",
+            "Li, Zhenyi",
+            "Professor (Director), School of Communication and Culture",
+            118268,
+            1550,
+            26
+          ]
+        }
+      ],
+      "compiledOccurrences": [
+        {
+          "employerBaselineRowNumber": 207,
+          "row": [
+            "Li, Zhenyl",
+            null,
+            118268,
+            1550,
+            1
+          ]
+        }
+      ],
+      "matchedOccurrences": 1,
+      "uniqueInBoth": true
+    },
+    {
+      "remuneration": 118909,
+      "expenses": 1550,
+      "officialOccurrences": [
+        {
+          "rowNumber": 2,
+          "row": [
+            "royal-roads-university",
+            "Agger-Gupta, Niels",
+            "Associate Professor, School of Leadership Studies",
+            118909,
+            1550,
+            25
+          ]
+        }
+      ],
+      "compiledOccurrences": [
+        {
+          "employerBaselineRowNumber": 206,
+          "row": [
+            "Agger-Gupta, Niels",
+            null,
+            118909,
+            1550,
+            1
+          ]
+        }
+      ],
+      "matchedOccurrences": 1,
+      "uniqueInBoth": true
+    },
+    {
+      "remuneration": 119365,
+      "expenses": 6683,
+      "officialOccurrences": [
+        {
+          "rowNumber": 193,
+          "row": [
+            "royal-roads-university",
+            "Thomlinson, Eugene",
+            "Associate Professor (Director), School of Tourism & Hospitality Managemen",
+            119365,
+            6683,
+            27
+          ]
+        }
+      ],
+      "compiledOccurrences": [
+        {
+          "employerBaselineRowNumber": 205,
+          "row": [
+            "Thomlinson, Eugene",
+            null,
+            119365,
+            6683,
+            1
+          ]
+        }
+      ],
+      "matchedOccurrences": 1,
+      "uniqueInBoth": true
+    },
+    {
+      "remuneration": 120367,
+      "expenses": 1150,
+      "officialOccurrences": [
+        {
+          "rowNumber": 50,
+          "row": [
+            "royal-roads-university",
+            "Dilay, Natasha",
+            "Manager, Career Learning and Development",
+            120367,
+            1150,
+            25
+          ]
+        }
+      ],
+      "compiledOccurrences": [
+        {
+          "employerBaselineRowNumber": 204,
+          "row": [
+            "Dilay, Natasha",
+            null,
+            120367,
+            1150,
+            1
+          ]
+        }
+      ],
+      "matchedOccurrences": 1,
+      "uniqueInBoth": true
+    },
+    {
+      "remuneration": 121709,
+      "expenses": null,
+      "officialOccurrences": [
+        {
+          "rowNumber": 90,
+          "row": [
+            "royal-roads-university",
+            "Hood, James",
+            "Director, Tech Enabled Project Delivery",
+            121709,
+            null,
+            26
+          ]
+        }
+      ],
+      "compiledOccurrences": [
+        {
+          "employerBaselineRowNumber": 203,
+          "row": [
+            "Hood, Jamos",
+            null,
+            121709,
+            null,
+            1
+          ]
+        }
+      ],
+      "matchedOccurrences": 1,
+      "uniqueInBoth": true
+    },
+    {
+      "remuneration": 121958,
+      "expenses": 1627,
+      "officialOccurrences": [
+        {
+          "rowNumber": 103,
+          "row": [
+            "royal-roads-university",
+            "Jones, Shelley",
+            "Professor, College of Interdisciplinary Studies",
+            121958,
+            1627,
+            26
+          ]
+        }
+      ],
+      "compiledOccurrences": [
+        {
+          "employerBaselineRowNumber": 202,
+          "row": [
+            "Jones, Shelley",
+            null,
+            121958,
+            1627,
+            1
+          ]
+        }
+      ],
+      "matchedOccurrences": 1,
+      "uniqueInBoth": true
+    },
+    {
+      "remuneration": 123762,
+      "expenses": 963,
+      "officialOccurrences": [
+        {
+          "rowNumber": 184,
+          "row": [
+            "royal-roads-university",
+            "Stuart, Arlene",
+            "Associate Director, Financial Reporting and Compliance",
+            123762,
+            963,
+            27
+          ]
+        }
+      ],
+      "compiledOccurrences": [
+        {
+          "employerBaselineRowNumber": 201,
+          "row": [
+            "Stuart, Arlene",
+            null,
+            123762,
+            963,
+            1
+          ]
+        }
+      ],
+      "matchedOccurrences": 1,
+      "uniqueInBoth": true
+    },
+    {
+      "remuneration": 124104,
+      "expenses": 1550,
+      "officialOccurrences": [
+        {
+          "rowNumber": 147,
+          "row": [
+            "royal-roads-university",
+            "Noble, Mickie",
+            "Associate Professor",
+            124104,
+            1550,
+            27
+          ]
+        }
+      ],
+      "compiledOccurrences": [
+        {
+          "employerBaselineRowNumber": 200,
+          "row": [
+            "Nobto, Mlckle",
+            null,
+            124104,
+            1550,
+            1
+          ]
+        }
+      ],
+      "matchedOccurrences": 1,
+      "uniqueInBoth": true
+    },
+    {
+      "remuneration": 124215,
+      "expenses": 1550,
+      "officialOccurrences": [
+        {
+          "rowNumber": 36,
+          "row": [
+            "royal-roads-university",
+            "Christie, Kenneth",
+            "Professor, School of Humanitarian Studies",
+            124215,
+            1550,
+            25
+          ]
+        }
+      ],
+      "compiledOccurrences": [
+        {
+          "employerBaselineRowNumber": 199,
+          "row": [
+            "Christie, Kenneth",
+            null,
+            124215,
+            1550,
+            1
+          ]
+        }
+      ],
+      "matchedOccurrences": 1,
+      "uniqueInBoth": true
+    },
+    {
+      "remuneration": 124439,
+      "expenses": 963,
+      "officialOccurrences": [
+        {
+          "rowNumber": 185,
+          "row": [
+            "royal-roads-university",
+            "Subin, Jessica",
+            "Associate Director, Financial Services",
+            124439,
+            963,
+            27
+          ]
+        }
+      ],
+      "compiledOccurrences": [
+        {
+          "employerBaselineRowNumber": 198,
+          "row": [
+            "Subin, Jessica",
+            null,
+            124439,
+            963,
+            1
+          ]
+        }
+      ],
+      "matchedOccurrences": 1,
+      "uniqueInBoth": true
+    },
+    {
+      "remuneration": 125815,
+      "expenses": 1550,
+      "officialOccurrences": [
+        {
+          "rowNumber": 105,
+          "row": [
+            "royal-roads-university",
+            "Jull, Margart (Marnie)",
+            "Associate Professor, School of Humanitarian Studies",
+            125815,
+            1550,
+            26
+          ]
+        }
+      ],
+      "compiledOccurrences": [
+        {
+          "employerBaselineRowNumber": 197,
+          "row": [
+            "Jull, Margart (marnie)",
+            null,
+            125815,
+            1550,
+            1
+          ]
+        }
+      ],
+      "matchedOccurrences": 1,
+      "uniqueInBoth": true
+    },
+    {
+      "remuneration": 126332,
+      "expenses": 1550,
+      "officialOccurrences": [
+        {
+          "rowNumber": 61,
+          "row": [
+            "royal-roads-university",
+            "Fahmy, Hany",
+            "Associate Professor, School of Business",
+            126332,
+            1550,
+            25
+          ]
+        }
+      ],
+      "compiledOccurrences": [
+        {
+          "employerBaselineRowNumber": 196,
+          "row": [
+            "Fahmy, Hany",
+            null,
+            126332,
+            1550,
+            1
+          ]
+        }
+      ],
+      "matchedOccurrences": 1,
+      "uniqueInBoth": true
+    },
+    {
+      "remuneration": 126897,
+      "expenses": null,
+      "officialOccurrences": [
+        {
+          "rowNumber": 52,
+          "row": [
+            "royal-roads-university",
+            "Domenichelli, Megan",
+            "Director, Global Language and Learning Centre",
+            126897,
+            null,
+            25
+          ]
+        }
+      ],
+      "compiledOccurrences": [
+        {
+          "employerBaselineRowNumber": 195,
+          "row": [
+            "Domenichelli, Megan",
+            null,
+            126897,
+            null,
+            1
+          ]
+        }
+      ],
+      "matchedOccurrences": 1,
+      "uniqueInBoth": true
+    },
+    {
+      "remuneration": 129015,
+      "expenses": 1550,
+      "officialOccurrences": [
+        {
+          "rowNumber": 114,
+          "row": [
+            "royal-roads-university",
+            "Kool, Richard",
+            "Professor, School of Environment & Sustainability",
+            129015,
+            1550,
+            26
+          ]
+        }
+      ],
+      "compiledOccurrences": [
+        {
+          "employerBaselineRowNumber": 194,
+          "row": [
+            "Kool, Richard",
+            null,
+            129015,
+            1550,
+            1
+          ]
+        }
+      ],
+      "matchedOccurrences": 1,
+      "uniqueInBoth": true
+    },
+    {
+      "remuneration": 130645,
+      "expenses": 1550,
+      "officialOccurrences": [
+        {
+          "rowNumber": 162,
+          "row": [
+            "royal-roads-university",
+            "Remillard, Chaseten",
+            "Associate Professor, School of Communication and Culture",
+            130645,
+            1550,
+            27
+          ]
+        }
+      ],
+      "compiledOccurrences": [
+        {
+          "employerBaselineRowNumber": 193,
+          "row": [
+            "Remillard, Chaseten",
+            null,
+            130645,
+            1550,
+            1
+          ]
+        }
+      ],
+      "matchedOccurrences": 1,
+      "uniqueInBoth": true
+    },
+    {
+      "remuneration": 130890,
+      "expenses": 1550,
+      "officialOccurrences": [
+        {
+          "rowNumber": 11,
+          "row": [
+            "royal-roads-university",
+            "Belcher, Brian",
+            "Professor, Doctor of Social Sciences",
+            130890,
+            1550,
+            25
+          ]
+        }
+      ],
+      "compiledOccurrences": [
+        {
+          "employerBaselineRowNumber": 192,
+          "row": [
+            "Belcher, Brian",
+            null,
+            130890,
+            1550,
+            1
+          ]
+        }
+      ],
+      "matchedOccurrences": 1,
+      "uniqueInBoth": true
+    },
+    {
+      "remuneration": 132426,
+      "expenses": 1550,
+      "officialOccurrences": [
+        {
+          "rowNumber": 203,
+          "row": [
+            "royal-roads-university",
+            "Walinga, Jennifer",
+            "Professor, School of Communication and Culture",
+            132426,
+            1550,
+            27
+          ]
+        }
+      ],
+      "compiledOccurrences": [
+        {
+          "employerBaselineRowNumber": 191,
+          "row": [
+            "Walinga, Jennifer",
+            null,
+            132426,
+            1550,
+            1
+          ]
+        }
+      ],
+      "matchedOccurrences": 1,
+      "uniqueInBoth": true
+    },
+    {
+      "remuneration": 132492,
+      "expenses": 1550,
+      "officialOccurrences": [
+        {
+          "rowNumber": 54,
+          "row": [
+            "royal-roads-university",
+            "Du, Juana",
+            "Associate Professor, School of Communication and Culture",
+            132492,
+            1550,
+            25
+          ]
+        }
+      ],
+      "compiledOccurrences": [
+        {
+          "employerBaselineRowNumber": 190,
+          "row": [
+            "Du, Juana",
+            null,
+            132492,
+            1550,
+            1
+          ]
+        }
+      ],
+      "matchedOccurrences": 1,
+      "uniqueInBoth": true
+    },
+    {
+      "remuneration": 132836,
+      "expenses": 1550,
+      "officialOccurrences": [
+        {
+          "rowNumber": 221,
+          "row": [
+            "royal-roads-university",
+            "Zidulka, Amy",
+            "Associate Professor, School of Business",
+            132836,
+            1550,
+            28
+          ]
+        }
+      ],
+      "compiledOccurrences": [
+        {
+          "employerBaselineRowNumber": 189,
+          "row": [
+            "Zidulka, Amy",
+            null,
+            132836,
+            1550,
+            1
+          ]
+        }
+      ],
+      "matchedOccurrences": 1,
+      "uniqueInBoth": true
+    },
+    {
+      "remuneration": 132898,
+      "expenses": null,
+      "officialOccurrences": [
+        {
+          "rowNumber": 76,
+          "row": [
+            "royal-roads-university",
+            "Granados, Ron",
+            "Director, Operations",
+            132898,
+            null,
+            26
+          ]
+        }
+      ],
+      "compiledOccurrences": [
+        {
+          "employerBaselineRowNumber": 188,
+          "row": [
+            "Granados, Ron",
+            null,
+            132898,
+            null,
+            1
+          ]
+        }
+      ],
+      "matchedOccurrences": 1,
+      "uniqueInBoth": true
+    },
+    {
+      "remuneration": 132910,
+      "expenses": null,
+      "officialOccurrences": [
+        {
+          "rowNumber": 68,
+          "row": [
+            "royal-roads-university",
+            "Gann, Dale",
+            "Director, Business Development",
+            132910,
+            null,
+            26
+          ]
+        }
+      ],
+      "compiledOccurrences": [
+        {
+          "employerBaselineRowNumber": 187,
+          "row": [
+            "Gann, Daln",
+            null,
+            132910,
+            null,
+            1
+          ]
+        }
+      ],
+      "matchedOccurrences": 1,
+      "uniqueInBoth": true
+    },
+    {
+      "remuneration": 133750,
+      "expenses": null,
+      "officialOccurrences": [
+        {
+          "rowNumber": 74,
+          "row": [
+            "royal-roads-university",
+            "Glass-Painchaud, Cristal",
+            "Associate Vice-President Human Resources",
+            133750,
+            null,
+            26
+          ]
+        }
+      ],
+      "compiledOccurrences": [
+        {
+          "employerBaselineRowNumber": 186,
+          "row": [
+            "Glass-Painchaud, Cristal",
+            null,
+            133750,
+            null,
+            1
+          ]
+        }
+      ],
+      "matchedOccurrences": 1,
+      "uniqueInBoth": true
+    },
+    {
+      "remuneration": 134563,
+      "expenses": 1550,
+      "officialOccurrences": [
+        {
+          "rowNumber": 201,
+          "row": [
+            "royal-roads-university",
+            "Veletsianos, George",
+            "Professor, School of Education and Technology",
+            134563,
+            1550,
+            27
+          ]
+        }
+      ],
+      "compiledOccurrences": [
+        {
+          "employerBaselineRowNumber": 185,
+          "row": [
+            "Veletsianos, George",
+            null,
+            134563,
+            1550,
+            1
+          ]
+        }
+      ],
+      "matchedOccurrences": 1,
+      "uniqueInBoth": true
+    },
+    {
+      "remuneration": 137525,
+      "expenses": 388,
+      "officialOccurrences": [
+        {
+          "rowNumber": 215,
+          "row": [
+            "royal-roads-university",
+            "Wolfe, Sarah",
+            "Professor, School of Environment & Sustainability",
+            137525,
+            388,
+            28
+          ]
+        }
+      ],
+      "compiledOccurrences": [
+        {
+          "employerBaselineRowNumber": 184,
+          "row": [
+            "Wolfe, Sarah",
+            null,
+            137525,
+            388,
+            1
+          ]
+        }
+      ],
+      "matchedOccurrences": 1,
+      "uniqueInBoth": true
+    },
+    {
+      "remuneration": 139080,
+      "expenses": 3375,
+      "officialOccurrences": [
+        {
+          "rowNumber": 44,
+          "row": [
+            "royal-roads-university",
+            "Dale, Ann",
+            "Professor, School of Environment & Sustainability",
+            139080,
+            3375,
+            25
+          ]
+        }
+      ],
+      "compiledOccurrences": [
+        {
+          "employerBaselineRowNumber": 183,
+          "row": [
+            "Dale, Ann",
+            null,
+            139080,
+            3375,
+            1
+          ]
+        }
+      ],
+      "matchedOccurrences": 1,
+      "uniqueInBoth": true
+    },
+    {
+      "remuneration": 139487,
+      "expenses": null,
+      "officialOccurrences": [],
+      "compiledOccurrences": [
+        {
+          "employerBaselineRowNumber": 182,
+          "row": [
+            "Welch, Tasha",
+            null,
+            139487,
+            null,
+            1
+          ]
+        }
+      ],
+      "matchedOccurrences": 0,
+      "uniqueInBoth": false
+    },
+    {
+      "remuneration": 139487,
+      "expenses": 5,
+      "officialOccurrences": [
+        {
+          "rowNumber": 208,
+          "row": [
+            "royal-roads-university",
+            "Welch, Tasha",
+            "Director, Global Recruitment and Partnerships",
+            139487,
+            5,
+            27
+          ]
+        }
+      ],
+      "compiledOccurrences": [],
+      "matchedOccurrences": 0,
+      "uniqueInBoth": false
+    },
+    {
+      "remuneration": 139967,
+      "expenses": 1550,
+      "officialOccurrences": [
+        {
+          "rowNumber": 170,
+          "row": [
+            "royal-roads-university",
+            "Rowe, Wendy",
+            "Research Development Coordinator",
+            139967,
+            1550,
+            27
+          ]
+        }
+      ],
+      "compiledOccurrences": [
+        {
+          "employerBaselineRowNumber": 181,
+          "row": [
+            "Rowe, Wendy",
+            null,
+            139967,
+            1550,
+            1
+          ]
+        }
+      ],
+      "matchedOccurrences": 1,
+      "uniqueInBoth": true
+    },
+    {
+      "remuneration": 140372,
+      "expenses": 963,
+      "officialOccurrences": [
+        {
+          "rowNumber": 39,
+          "row": [
+            "royal-roads-university",
+            "Coronica, Paul",
+            "Director, Business Performance and Analysis",
+            140372,
+            963,
+            25
+          ]
+        }
+      ],
+      "compiledOccurrences": [
+        {
+          "employerBaselineRowNumber": 180,
+          "row": [
+            "Corontca, Paul",
+            null,
+            140372,
+            963,
+            1
+          ]
+        }
+      ],
+      "matchedOccurrences": 1,
+      "uniqueInBoth": true
+    },
+    {
+      "remuneration": 143878,
+      "expenses": 1550,
+      "officialOccurrences": [
+        {
+          "rowNumber": 7,
+          "row": [
+            "royal-roads-university",
+            "Archer, Geoff",
+            "Associate Professor (Director), Eric Douglas Centre",
+            143878,
+            1550,
+            25
+          ]
+        }
+      ],
+      "compiledOccurrences": [
+        {
+          "employerBaselineRowNumber": 179,
+          "row": [
+            "Archer, Geoff",
+            null,
+            143878,
+            1550,
+            1
+          ]
+        }
+      ],
+      "matchedOccurrences": 1,
+      "uniqueInBoth": true
+    },
+    {
+      "remuneration": 144266,
+      "expenses": 1550,
+      "officialOccurrences": [
+        {
+          "rowNumber": 59,
+          "row": [
+            "royal-roads-university",
+            "Etmanski, Catherine",
+            "Professor, School of Leadership Studies",
+            144266,
+            1550,
+            25
+          ]
+        }
+      ],
+      "compiledOccurrences": [
+        {
+          "employerBaselineRowNumber": 178,
+          "row": [
+            "Etmanskl, Catherine",
+            null,
+            144266,
+            1550,
+            1
+          ]
+        }
+      ],
+      "matchedOccurrences": 1,
+      "uniqueInBoth": true
+    },
+    {
+      "remuneration": 144814,
+      "expenses": 5430,
+      "officialOccurrences": [
+        {
+          "rowNumber": 35,
+          "row": [
+            "royal-roads-university",
+            "Childs, Elizabeth",
+            "Professor, School of Education and Technology",
+            144814,
+            5430,
+            25
+          ]
+        }
+      ],
+      "compiledOccurrences": [
+        {
+          "employerBaselineRowNumber": 177,
+          "row": [
+            "Childs, Elizabeth",
+            null,
+            144814,
+            5430,
+            1
+          ]
+        }
+      ],
+      "matchedOccurrences": 1,
+      "uniqueInBoth": true
+    },
+    {
+      "remuneration": 146191,
+      "expenses": 1550,
+      "officialOccurrences": [
+        {
+          "rowNumber": 200,
+          "row": [
+            "royal-roads-university",
+            "Vannini, Phillip",
+            "Professor, School of Communication and Culture",
+            146191,
+            1550,
+            27
+          ]
+        }
+      ],
+      "compiledOccurrences": [
+        {
+          "employerBaselineRowNumber": 176,
+          "row": [
+            "Vannini, Phillip",
+            null,
+            146191,
+            1550,
+            1
+          ]
+        }
+      ],
+      "matchedOccurrences": 1,
+      "uniqueInBoth": true
+    },
+    {
+      "remuneration": 146432,
+      "expenses": null,
+      "officialOccurrences": [
+        {
+          "rowNumber": 5,
+          "row": [
+            "royal-roads-university",
+            "Antoine, Angela",
+            "Director, Indigenous Engagement",
+            146432,
+            null,
+            25
+          ]
+        }
+      ],
+      "compiledOccurrences": [
+        {
+          "employerBaselineRowNumber": 175,
+          "row": [
+            "Antoine, Angela",
+            null,
+            146432,
+            null,
+            1
+          ]
+        }
+      ],
+      "matchedOccurrences": 1,
+      "uniqueInBoth": true
+    },
+    {
+      "remuneration": 146451,
+      "expenses": 2,
+      "officialOccurrences": [],
+      "compiledOccurrences": [
+        {
+          "employerBaselineRowNumber": 174,
+          "row": [
+            "Rekar Munro, Carolin",
+            null,
+            146451,
+            2,
+            1
+          ]
+        }
+      ],
+      "matchedOccurrences": 0,
+      "uniqueInBoth": false
+    },
+    {
+      "remuneration": 146451,
+      "expenses": 1550,
+      "officialOccurrences": [
+        {
+          "rowNumber": 161,
+          "row": [
+            "royal-roads-university",
+            "Rekar Munro, Carolin",
+            "Professor, School of Business",
+            146451,
+            1550,
+            27
+          ]
+        }
+      ],
+      "compiledOccurrences": [],
+      "matchedOccurrences": 0,
+      "uniqueInBoth": false
+    },
+    {
+      "remuneration": 148104,
+      "expenses": null,
+      "officialOccurrences": [
+        {
+          "rowNumber": 142,
+          "row": [
+            "royal-roads-university",
+            "McLeod, Kyla",
+            "Director, Student Services",
+            148104,
+            null,
+            27
+          ]
+        }
+      ],
+      "compiledOccurrences": [
+        {
+          "employerBaselineRowNumber": 173,
+          "row": [
+            "Mcleod, Kyle",
+            null,
+            148104,
+            null,
+            1
+          ]
+        }
+      ],
+      "matchedOccurrences": 1,
+      "uniqueInBoth": true
+    },
+    {
+      "remuneration": 148749,
+      "expenses": 1550,
+      "officialOccurrences": [
+        {
+          "rowNumber": 128,
+          "row": [
+            "royal-roads-university",
+            "Low, William",
+            "Professor, School of Business",
+            148749,
+            1550,
+            26
+          ]
+        }
+      ],
+      "compiledOccurrences": [
+        {
+          "employerBaselineRowNumber": 172,
+          "row": [
+            "Low, William",
+            null,
+            148749,
+            1550,
+            1
+          ]
+        }
+      ],
+      "matchedOccurrences": 1,
+      "uniqueInBoth": true
+    },
+    {
+      "remuneration": 148946,
+      "expenses": 1550,
+      "officialOccurrences": [
+        {
+          "rowNumber": 189,
+          "row": [
+            "royal-roads-university",
+            "Taylor, Marilyn",
+            "Professor, School of Leadership Studies",
+            148946,
+            1550,
+            27
+          ]
+        }
+      ],
+      "compiledOccurrences": [
+        {
+          "employerBaselineRowNumber": 171,
+          "row": [
+            "Taylor, Marilyn",
+            null,
+            148946,
+            1550,
+            1
+          ]
+        }
+      ],
+      "matchedOccurrences": 1,
+      "uniqueInBoth": true
+    },
+    {
+      "remuneration": 149305,
+      "expenses": 1550,
+      "officialOccurrences": [
+        {
+          "rowNumber": 14,
+          "row": [
+            "royal-roads-university",
+            "Bernard, Mary",
+            "Professor, College of Interdisciplinary Studies",
+            149305,
+            1550,
+            25
+          ]
+        }
+      ],
+      "compiledOccurrences": [
+        {
+          "employerBaselineRowNumber": 170,
+          "row": [
+            "Bernard, Mary",
+            null,
+            149305,
+            1550,
+            1
+          ]
+        }
+      ],
+      "matchedOccurrences": 1,
+      "uniqueInBoth": true
+    },
+    {
+      "remuneration": 149605,
+      "expenses": null,
+      "officialOccurrences": [
+        {
+          "rowNumber": 42,
+          "row": [
+            "royal-roads-university",
+            "Croft, Rosemary",
+            "University Librarian",
+            149605,
+            null,
+            25
+          ]
+        }
+      ],
+      "compiledOccurrences": [
+        {
+          "employerBaselineRowNumber": 169,
+          "row": [
+            "Croft, Rosemary",
+            null,
+            149605,
+            null,
+            1
+          ]
+        }
+      ],
+      "matchedOccurrences": 1,
+      "uniqueInBoth": true
+    },
+    {
+      "remuneration": 149929,
+      "expenses": 1550,
+      "officialOccurrences": [
+        {
+          "rowNumber": 117,
+          "row": [
+            "royal-roads-university",
+            "Krusekopf, Charles",
+            "Professor, School of Business",
+            149929,
+            1550,
+            26
+          ]
+        }
+      ],
+      "compiledOccurrences": [
+        {
+          "employerBaselineRowNumber": 168,
+          "row": [
+            "Krusekopf, Charles",
+            null,
+            149929,
+            1550,
+            1
+          ]
+        }
+      ],
+      "matchedOccurrences": 1,
+      "uniqueInBoth": true
+    },
+    {
+      "remuneration": 151874,
+      "expenses": 1550,
+      "officialOccurrences": [
+        {
+          "rowNumber": 209,
+          "row": [
+            "royal-roads-university",
+            "White, Brian",
+            "Professor, School of Tourism & Hospitality Management",
+            151874,
+            1550,
+            27
+          ]
+        }
+      ],
+      "compiledOccurrences": [
+        {
+          "employerBaselineRowNumber": 167,
+          "row": [
+            "White, Brian",
+            null,
+            151874,
+            1550,
+            1
+          ]
+        }
+      ],
+      "matchedOccurrences": 1,
+      "uniqueInBoth": true
+    },
+    {
+      "remuneration": 151983,
+      "expenses": null,
+      "officialOccurrences": [
+        {
+          "rowNumber": 56,
+          "row": [
+            "royal-roads-university",
+            "Dueck, Peter",
+            "Director, Admissions and Registrar",
+            151983,
+            null,
+            25
+          ]
+        }
+      ],
+      "compiledOccurrences": [
+        {
+          "employerBaselineRowNumber": 166,
+          "row": [
+            "Dueck, Peter",
+            null,
+            151983,
+            null,
+            1
+          ]
+        }
+      ],
+      "matchedOccurrences": 1,
+      "uniqueInBoth": true
+    },
+    {
+      "remuneration": 152057,
+      "expenses": 214,
+      "officialOccurrences": [
+        {
+          "rowNumber": 123,
+          "row": [
+            "royal-roads-university",
+            "Levesque, Carolyn E.",
+            "Associate Vice-President Operations and Resilience",
+            152057,
+            214,
+            26
+          ]
+        }
+      ],
+      "compiledOccurrences": [
+        {
+          "employerBaselineRowNumber": 165,
+          "row": [
+            "Levesque, Carolyn E.",
+            null,
+            152057,
+            214,
+            1
+          ]
+        }
+      ],
+      "matchedOccurrences": 1,
+      "uniqueInBoth": true
+    },
+    {
+      "remuneration": 152296,
+      "expenses": 1550,
+      "officialOccurrences": [
+        {
+          "rowNumber": 22,
+          "row": [
+            "royal-roads-university",
+            "Boydell, Anthony",
+            "Professor, School of Environment & Sustainability",
+            152296,
+            1550,
+            25
+          ]
+        }
+      ],
+      "compiledOccurrences": [
+        {
+          "employerBaselineRowNumber": 164,
+          "row": [
+            "Boydell, Anthony",
+            null,
+            152296,
+            1550,
+            1
+          ]
+        }
+      ],
+      "matchedOccurrences": 1,
+      "uniqueInBoth": true
+    },
+    {
+      "remuneration": 152903,
+      "expenses": 1550,
+      "officialOccurrences": [
+        {
+          "rowNumber": 83,
+          "row": [
+            "royal-roads-university",
+            "Heinz, Matt",
+            "Professor, College of Interdisciplinary Studies",
+            152903,
+            1550,
+            26
+          ]
+        }
+      ],
+      "compiledOccurrences": [
+        {
+          "employerBaselineRowNumber": 163,
+          "row": [
+            "Heinz, Matt",
+            null,
+            152903,
+            1550,
+            1
+          ]
+        }
+      ],
+      "matchedOccurrences": 1,
+      "uniqueInBoth": true
+    },
+    {
+      "remuneration": 153191,
+      "expenses": 1550,
+      "officialOccurrences": [
+        {
+          "rowNumber": 89,
+          "row": [
+            "royal-roads-university",
+            "Holmes, William",
+            "Associate Professor, School of Business",
+            153191,
+            1550,
+            26
+          ]
+        }
+      ],
+      "compiledOccurrences": [
+        {
+          "employerBaselineRowNumber": 162,
+          "row": [
+            "Holmes, William",
+            null,
+            153191,
+            1550,
+            1
+          ]
+        }
+      ],
+      "matchedOccurrences": 1,
+      "uniqueInBoth": true
+    },
+    {
+      "remuneration": 153662,
+      "expenses": 1550,
+      "officialOccurrences": [
+        {
+          "rowNumber": 81,
+          "row": [
+            "royal-roads-university",
+            "Hamilton, Doug",
+            "Professor, School of Education and Technology",
+            153662,
+            1550,
+            26
+          ]
+        }
+      ],
+      "compiledOccurrences": [
+        {
+          "employerBaselineRowNumber": 161,
+          "row": [
+            "Hamilton, Doug",
+            null,
+            153662,
+            1550,
+            1
+          ]
+        }
+      ],
+      "matchedOccurrences": 1,
+      "uniqueInBoth": true
+    },
+    {
+      "remuneration": 158571,
+      "expenses": 4956,
+      "officialOccurrences": [
+        {
+          "rowNumber": 51,
+          "row": [
+            "royal-roads-university",
+            "Dodd, Matthew",
+            "Professor, School of Environment & Sustainability",
+            158571,
+            4956,
+            25
+          ]
+        }
+      ],
+      "compiledOccurrences": [
+        {
+          "employerBaselineRowNumber": 160,
+          "row": [
+            "Dodd, Matthew",
+            null,
+            158571,
+            4956,
+            1
+          ]
+        }
+      ],
+      "matchedOccurrences": 1,
+      "uniqueInBoth": true
+    },
+    {
+      "remuneration": 159991,
+      "expenses": 2,
+      "officialOccurrences": [],
+      "compiledOccurrences": [
+        {
+          "employerBaselineRowNumber": 159,
+          "row": [
+            "Power, Terrance",
+            null,
+            159991,
+            2,
+            1
+          ]
+        }
+      ],
+      "matchedOccurrences": 0,
+      "uniqueInBoth": false
+    },
+    {
+      "remuneration": 159991,
+      "expenses": 1550,
+      "officialOccurrences": [
+        {
+          "rowNumber": 153,
+          "row": [
+            "royal-roads-university",
+            "Power, Terrance",
+            "Professor, School of Business",
+            159991,
+            1550,
+            27
+          ]
+        }
+      ],
+      "compiledOccurrences": [],
+      "matchedOccurrences": 0,
+      "uniqueInBoth": false
+    },
+    {
+      "remuneration": 160247,
+      "expenses": 1550,
+      "officialOccurrences": [
+        {
+          "rowNumber": 127,
+          "row": [
+            "royal-roads-university",
+            "Lokanan, Mark",
+            "Associate Professor, School of Business",
+            160247,
+            1550,
+            26
+          ]
+        }
+      ],
+      "compiledOccurrences": [
+        {
+          "employerBaselineRowNumber": 158,
+          "row": [
+            "Lokanan, Mark",
+            null,
+            160247,
+            1550,
+            1
+          ]
+        }
+      ],
+      "matchedOccurrences": 1,
+      "uniqueInBoth": true
+    },
+    {
+      "remuneration": 160798,
+      "expenses": 1550,
+      "officialOccurrences": [
+        {
+          "rowNumber": 18,
+          "row": [
+            "royal-roads-university",
+            "Black, John David",
+            "Associate Professor, School of Communication and Culture",
+            160798,
+            1550,
+            25
+          ]
+        }
+      ],
+      "compiledOccurrences": [
+        {
+          "employerBaselineRowNumber": 157,
+          "row": [
+            "Block, John Davld",
+            null,
+            160798,
+            1550,
+            1
+          ]
+        }
+      ],
+      "matchedOccurrences": 1,
+      "uniqueInBoth": true
+    },
+    {
+      "remuneration": 174153,
+      "expenses": null,
+      "officialOccurrences": [
+        {
+          "rowNumber": 223,
+          "row": [
+            "royal-roads-university",
+            "Zornes, Deborah",
+            "Director, Research and Innovation",
+            174153,
+            null,
+            28
+          ]
+        }
+      ],
+      "compiledOccurrences": [
+        {
+          "employerBaselineRowNumber": 156,
+          "row": [
+            "Zornes, Deborah",
+            null,
+            174153,
+            null,
+            1
+          ]
+        }
+      ],
+      "matchedOccurrences": 1,
+      "uniqueInBoth": true
+    },
+    {
+      "remuneration": 175640,
+      "expenses": 1726,
+      "officialOccurrences": [
+        {
+          "rowNumber": 41,
+          "row": [
+            "royal-roads-university",
+            "Cox, Robin",
+            "Professor, School of Humanitarian Studies",
+            175640,
+            1726,
+            25
+          ]
+        }
+      ],
+      "compiledOccurrences": [
+        {
+          "employerBaselineRowNumber": 155,
+          "row": [
+            "Cox, Robin",
+            null,
+            175640,
+            1726,
+            1
+          ]
+        }
+      ],
+      "matchedOccurrences": 1,
+      "uniqueInBoth": true
+    },
+    {
+      "remuneration": 176862,
+      "expenses": null,
+      "officialOccurrences": [
+        {
+          "rowNumber": 165,
+          "row": [
+            "royal-roads-university",
+            "Riggins, Catherine",
+            "Associate Vice-President, Marketing",
+            176862,
+            null,
+            27
+          ]
+        }
+      ],
+      "compiledOccurrences": [
+        {
+          "employerBaselineRowNumber": 154,
+          "row": [
+            "Riggins, Catherine",
+            null,
+            176862,
+            null,
+            1
+          ]
+        }
+      ],
+      "matchedOccurrences": 1,
+      "uniqueInBoth": true
+    },
+    {
+      "remuneration": 177744,
+      "expenses": 1193,
+      "officialOccurrences": [
+        {
+          "rowNumber": 149,
+          "row": [
+            "royal-roads-university",
+            "Ostergard, Don",
+            "Chief Information Officer",
+            177744,
+            1193,
+            27
+          ]
+        }
+      ],
+      "compiledOccurrences": [
+        {
+          "employerBaselineRowNumber": 153,
+          "row": [
+            "Osterfard, Don",
+            null,
+            177744,
+            1193,
+            1
+          ]
+        }
+      ],
+      "matchedOccurrences": 1,
+      "uniqueInBoth": true
+    },
+    {
+      "remuneration": 181040,
+      "expenses": null,
+      "officialOccurrences": [
+        {
+          "rowNumber": 145,
+          "row": [
+            "royal-roads-university",
+            "Mittelman, Robert",
+            "Dean, Faculty of Management",
+            181040,
+            null,
+            27
+          ]
+        }
+      ],
+      "compiledOccurrences": [
+        {
+          "employerBaselineRowNumber": 152,
+          "row": [
+            "Mittleman, Robert",
+            null,
+            181040,
+            null,
+            1
+          ]
+        }
+      ],
+      "matchedOccurrences": 1,
+      "uniqueInBoth": true
+    },
+    {
+      "remuneration": 181095,
+      "expenses": 1550,
+      "officialOccurrences": [
+        {
+          "rowNumber": 220,
+          "row": [
+            "royal-roads-university",
+            "Young, Michael",
+            "Professor (Director), School of Humanitarian Studies",
+            181095,
+            1550,
+            28
+          ]
+        }
+      ],
+      "compiledOccurrences": [
+        {
+          "employerBaselineRowNumber": 151,
+          "row": [
+            "Young, Michael",
+            null,
+            181095,
+            1550,
+            1
+          ]
+        }
+      ],
+      "matchedOccurrences": 1,
+      "uniqueInBoth": true
+    },
+    {
+      "remuneration": 189047,
+      "expenses": 2922,
+      "officialOccurrences": [
+        {
+          "rowNumber": 133,
+          "row": [
+            "royal-roads-university",
+            "Macleod, Zoe",
+            "Associate Vice-President, Professional and Continuing Studies",
+            189047,
+            2922,
+            26
+          ]
+        }
+      ],
+      "compiledOccurrences": [
+        {
+          "employerBaselineRowNumber": 150,
+          "row": [
+            "Macleod, Zoe",
+            null,
+            189047,
+            2922,
+            1
+          ]
+        }
+      ],
+      "matchedOccurrences": 1,
+      "uniqueInBoth": true
+    },
+    {
+      "remuneration": 190326,
+      "expenses": null,
+      "officialOccurrences": [
+        {
+          "rowNumber": 82,
+          "row": [
+            "royal-roads-university",
+            "Harris, Brigitte",
+            "Dean, Faculty of Social & Applied Sciences",
+            190326,
+            null,
+            26
+          ]
+        }
+      ],
+      "compiledOccurrences": [
+        {
+          "employerBaselineRowNumber": 149,
+          "row": [
+            "Harris, Brigitte",
+            null,
+            190326,
+            null,
+            1
+          ]
+        }
+      ],
+      "matchedOccurrences": 1,
+      "uniqueInBoth": true
+    },
+    {
+      "remuneration": 200568,
+      "expenses": 12698,
+      "officialOccurrences": [
+        {
+          "rowNumber": 154,
+          "row": [
+            "royal-roads-university",
+            "Prasad, Ajnesh",
+            "Professor, School of Business",
+            200568,
+            12698,
+            27
+          ]
+        }
+      ],
+      "compiledOccurrences": [],
+      "matchedOccurrences": 0,
+      "uniqueInBoth": false
+    },
+    {
+      "remuneration": 200568,
+      "expenses": 12699,
+      "officialOccurrences": [],
+      "compiledOccurrences": [
+        {
+          "employerBaselineRowNumber": 148,
+          "row": [
+            "Prasad, Ajnesh",
+            null,
+            200568,
+            12699,
+            1
+          ]
+        }
+      ],
+      "matchedOccurrences": 0,
+      "uniqueInBoth": false
+    },
+    {
+      "remuneration": 203449,
+      "expenses": 1550,
+      "officialOccurrences": [
+        {
+          "rowNumber": 111,
+          "row": [
+            "royal-roads-university",
+            "King, Leslie",
+            "Professor, School of Environment & Sustainability",
+            203449,
+            1550,
+            26
+          ]
+        }
+      ],
+      "compiledOccurrences": [
+        {
+          "employerBaselineRowNumber": 147,
+          "row": [
+            "Kina, Leslie",
+            null,
+            203449,
+            1550,
+            1
+          ]
+        }
+      ],
+      "matchedOccurrences": 1,
+      "uniqueInBoth": true
+    },
+    {
+      "remuneration": 204376,
+      "expenses": null,
+      "officialOccurrences": [
+        {
+          "rowNumber": 129,
+          "row": [
+            "royal-roads-university",
+            "MacArthur, Cathy",
+            "Associate Vice-President, Finance",
+            204376,
+            null,
+            26
+          ]
+        }
+      ],
+      "compiledOccurrences": [
+        {
+          "employerBaselineRowNumber": 146,
+          "row": [
+            "MacArthur, Cathy",
+            null,
+            204376,
+            null,
+            1
+          ]
+        }
+      ],
+      "matchedOccurrences": 1,
+      "uniqueInBoth": true
+    },
+    {
+      "remuneration": 205502,
+      "expenses": 305,
+      "officialOccurrences": [
+        {
+          "rowNumber": 138,
+          "row": [
+            "royal-roads-university",
+            "Mason, Roberta",
+            "Associate Vice President, Student & Academic Services",
+            205502,
+            305,
+            26
+          ]
+        }
+      ],
+      "compiledOccurrences": [
+        {
+          "employerBaselineRowNumber": 145,
+          "row": [
+            "Mason, Roberta",
+            null,
+            205502,
+            305,
+            1
+          ]
+        }
+      ],
+      "matchedOccurrences": 1,
+      "uniqueInBoth": true
+    },
+    {
+      "remuneration": 206950,
+      "expenses": null,
+      "officialOccurrences": [
+        {
+          "rowNumber": 71,
+          "row": [
+            "royal-roads-university",
+            "Gee, Susan",
+            "Vice President, Communications and Advancement",
+            206950,
+            null,
+            26
+          ]
+        }
+      ],
+      "compiledOccurrences": [
+        {
+          "employerBaselineRowNumber": 144,
+          "row": [
+            "Gee, Susan",
+            null,
+            206950,
+            null,
+            1
+          ]
+        }
+      ],
+      "matchedOccurrences": 1,
+      "uniqueInBoth": true
+    },
+    {
+      "remuneration": 236384,
+      "expenses": null,
+      "officialOccurrences": [
+        {
+          "rowNumber": 57,
+          "row": [
+            "royal-roads-university",
+            "Eason, Cheryl",
+            "Vice President & Chief Financial Officer",
+            236384,
+            null,
+            25
+          ]
+        }
+      ],
+      "compiledOccurrences": [
+        {
+          "employerBaselineRowNumber": 143,
+          "row": [
+            "Eason, Cheryl",
+            null,
+            236384,
+            null,
+            1
+          ]
+        }
+      ],
+      "matchedOccurrences": 1,
+      "uniqueInBoth": true
+    },
+    {
+      "remuneration": 239734,
+      "expenses": 1550,
+      "officialOccurrences": [
+        {
+          "rowNumber": 104,
+          "row": [
+            "royal-roads-university",
+            "Jorgensen, Frances",
+            "Professor, School of Business",
+            239734,
+            1550,
+            26
+          ]
+        }
+      ],
+      "compiledOccurrences": [
+        {
+          "employerBaselineRowNumber": 142,
+          "row": [
+            "Jorgensen, Frances",
+            null,
+            239734,
+            1550,
+            1
+          ]
+        }
+      ],
+      "matchedOccurrences": 1,
+      "uniqueInBoth": true
+    },
+    {
+      "remuneration": 240889,
+      "expenses": 490,
+      "officialOccurrences": [
+        {
+          "rowNumber": 137,
+          "row": [
+            "royal-roads-university",
+            "Marquez-Perez, Pedro",
+            "Vice President, Research and International",
+            240889,
+            490,
+            26
+          ]
+        }
+      ],
+      "compiledOccurrences": [
+        {
+          "employerBaselineRowNumber": 141,
+          "row": [
+            "Marquez-Perez, Pedro",
+            null,
+            240889,
+            490,
+            1
+          ]
+        }
+      ],
+      "matchedOccurrences": 1,
+      "uniqueInBoth": true
+    },
+    {
+      "remuneration": 246685,
+      "expenses": 5778,
+      "officialOccurrences": [
+        {
+          "rowNumber": 195,
+          "row": [
+            "royal-roads-university",
+            "Thompson, Elizabeth",
+            "Vice President, Academic & Provost",
+            246685,
+            5778,
+            27
+          ]
+        }
+      ],
+      "compiledOccurrences": [
+        {
+          "employerBaselineRowNumber": 140,
+          "row": [
+            "Thompson, Elizabeth",
+            null,
+            246685,
+            5778,
+            1
+          ]
+        }
+      ],
+      "matchedOccurrences": 1,
+      "uniqueInBoth": true
+    },
+    {
+      "remuneration": 298163,
+      "expenses": 24383,
+      "officialOccurrences": [
+        {
+          "rowNumber": 181,
+          "row": [
+            "royal-roads-university",
+            "Steenkamp, Philip",
+            "President & Vice Chancellor",
+            298163,
+            24383,
+            27
+          ]
+        }
+      ],
+      "compiledOccurrences": [
+        {
+          "employerBaselineRowNumber": 139,
+          "row": [
+            "Steenkamp, Philip",
+            null,
+            298163,
+            24383,
+            1
+          ]
+        }
+      ],
+      "matchedOccurrences": 1,
+      "uniqueInBoth": true
+    }
+  ]
+}
