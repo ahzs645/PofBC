@@ -29,9 +29,13 @@ def no_duplicate_ids(page):
 
 
 def main():
+    global OUT
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--url', default='http://localhost:4182/')
+    parser.add_argument('--out', type=Path, default=OUT)
     args = parser.parse_args()
+    OUT = args.out
+    OUT.mkdir(parents=True, exist_ok=True)
     reports = []
     with sync_playwright() as playwright:
         browser = playwright.chromium.launch(executable_path='/usr/bin/chromium', headless=True, args=['--no-sandbox'])
@@ -67,12 +71,27 @@ def main():
                 page.close()
                 continue
 
-            expect(page.get_by_role('searchbox', name=SEARCH)).to_have_count(0)
+            expect(page.get_by_role('searchbox', name=SEARCH)).to_be_visible()
             expect(page.get_by_role('group', name='Sector', exact=True)).to_have_count(0)
             trigger = page.get_by_role('button', name=re.compile('^Filters'))
+            row = page.locator('.salaries__mobile-filters')
+            search = row.get_by_role('searchbox', name=SEARCH)
+            expect(search).to_be_visible()
+            expect(page.locator('.salaries__filter-summary')).to_have_count(0)
+            search_box = search.bounding_box()
+            filter_box = trigger.bounding_box()
+            assert abs(search_box['y'] - filter_box['y']) < 1
+            assert search_box['x'] + search_box['width'] <= filter_box['x']
+            assert search_box['height'] >= 44 and search_box['width'] >= 140
+            assert filter_box['x'] + filter_box['width'] <= width
+            search.press_sequentially('Nanaimo', delay=20)
+            expect(search).to_be_focused()
+            expect(page.get_by_role('heading', name='Employers', exact=True)).to_be_visible()
+            assert params(page)['q'] == ['Nanaimo'] and 'employer' not in params(page)
             trigger.click()
             sheet = page.get_by_role('dialog', name='Search and filters')
             expect(sheet).to_be_visible()
+            expect(sheet.get_by_role('searchbox', name=SEARCH)).to_have_value('Nanaimo')
             assert sheet.evaluate('(node) => node.matches(":modal")')
             assert page.evaluate('document.documentElement.style.overflow') == 'hidden'
             assert page.evaluate('document.body.style.overflow') == 'hidden'
@@ -89,7 +108,7 @@ def main():
             expect(sheet.get_by_role('button', name='Done', exact=True)).to_be_focused()
             page.keyboard.press('Tab')
             expect(sheet.get_by_role('button', name='Close filters')).to_be_focused()
-            page.locator('.salaries__browse-bar button').first.evaluate('(node) => node.focus()')
+            trigger.evaluate('(node) => node.focus()')
             assert sheet.evaluate('(node) => node.contains(document.activeElement)'), 'background received focus'
 
             # The body can scroll to the sector chips while Done remains reachable.
@@ -107,6 +126,7 @@ def main():
             sheet.get_by_role('button', name='Done', exact=True).click()
             expect(sheet).not_to_be_visible()
             expect(trigger).to_be_focused()
+            expect(search).to_have_value('Nanaimo')
             assert page.evaluate('document.documentElement.style.overflow') == ''
             assert page.evaluate('document.body.style.overflow') == ''
             assert params(page)['q'] == ['Nanaimo']
@@ -167,7 +187,7 @@ def main():
             assert params(page)['browse'] == ['positions']
             assert params(page)['layout'] == ['table']
             assert not errors, errors
-            reports.append({'width': width, 'browseControls': controls, 'checks': ['nowrap browse/layout', 'desktop inputs hidden', 'native modal/background inert', 'initial focus', 'Tab/Shift+Tab trap', 'scroll lock and restore', 'inline period controls', 'scrollable sector chips and fixed Done', 'live query/range/sector state', 'URL reload', 'Done/Escape/backdrop/close', 'focus return', 'clear filters including pending range endpoint', 'browse/layout URL state', 'desktop resize cleanup', 'no duplicate IDs'], 'errors': errors})
+            reports.append({'width': width, 'browseControls': controls, 'checks': ['nowrap browse/layout', 'main search visible before selecting an employer', 'native modal/background inert', 'initial focus', 'Tab/Shift+Tab trap', 'scroll lock and restore', 'inline period controls', 'scrollable sector chips and fixed Done', 'live query/range/sector state', 'URL reload', 'Done/Escape/backdrop/close', 'focus return', 'clear filters including pending range endpoint', 'browse/layout URL state', 'desktop resize cleanup', 'no duplicate IDs'], 'errors': errors})
             page.close()
         browser.close()
     (OUT / 'results.json').write_text(json.dumps(reports, indent=2) + '\n')

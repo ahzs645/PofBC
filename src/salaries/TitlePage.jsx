@@ -11,7 +11,7 @@ import { Segmented } from '../site/Segmented.jsx'
 import { keyedTitles, relatedTitles, titleLabel, titleShard } from './positions.js'
 import { formatMoney as money } from './money.js'
 import { YearPicker, yearSpan } from './parts.jsx'
-import { count, LAYOUTS, loadJson, Paged, RoleIcon } from './common.jsx'
+import { count, LAYOUTS, loadJson, Paged, RoleIcon, SalaryPageHeading } from './common.jsx'
 import { DataTable } from './DataTable.jsx'
 import { formatRate, pooledGrowth, seriesGrowth } from './growth.js'
 import { GrowthTiles, rateColumn } from './Growth.jsx'
@@ -133,8 +133,7 @@ export const TitlePage = ({ titleKey: key, employers, years, sector, year: wante
   return (
     <div className="salaries">
       <section className="salaries__person" aria-labelledby="salaries-title">
-        {back}
-        <h2 id="salaries-title" className="salaries__heading">{label}</h2>
+        <SalaryPageHeading id="salaries-title" back={back}>{label}</SalaryPageHeading>
         {detail && (
           <p className="salaries__note">
             {count(employerCount, 'employer', 'employers')}{sector !== 'all' ? ` in ${sector.toLowerCase()}` : ''} · {count(inSector.reduce((sum, cell) => sum + cell.count, 0), 'record', 'records')}

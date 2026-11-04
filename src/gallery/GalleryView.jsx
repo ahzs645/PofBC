@@ -770,10 +770,10 @@ const Crumbs = ({ collection, entry, onHome, onCollection }) => (
     </button>
     {collection && <span aria-hidden="true">/</span>}
     {collection && (entry && hasPage(collection)
-      ? <button type="button" className="gallery__crumb" onClick={onCollection}>{collection.label}</button>
-      : <span aria-current="page">{collection.label}</span>)}
+      ? <button type="button" className="gallery__crumb" title={collection.label} onClick={onCollection}>{collection.label}</button>
+      : <span aria-current="page" title={collection.label}>{collection.label}</span>)}
     {entry && hasPage(collection) && <span aria-hidden="true">/</span>}
-    {entry && hasPage(collection) && <span aria-current="page">{entry.label}</span>}
+    {entry && hasPage(collection) && <span aria-current="page" title={entry.label}>{entry.label}</span>}
   </nav>
 )
 

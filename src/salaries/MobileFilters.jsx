@@ -1,19 +1,19 @@
 import { useEffect, useId, useRef, useState } from 'react'
 import { PeriodRange, rangeLabel } from './parts.jsx'
 
-/** One search state, presented in the desktop toolbar or the mobile filter sheet. */
-export const SalarySearchField = ({ value, onChange, labelled = false }) => {
+/** One search state, visible on every salary page and also in the mobile filter sheet. */
+export const SalarySearchField = ({ value, onChange, labelled = false, label = 'Search', placeholder }) => {
   const id = useId()
   const help = `${id}-help`
   return (
     <div className="salaries__filter-field">
-      {labelled && <label htmlFor={id} className="salaries__filter-label">Search</label>}
+      {labelled && <label htmlFor={id} className="salaries__filter-label">{label}</label>}
       <span className="salaries__field">
         <input
           id={id}
           type="search"
           value={value}
-          placeholder={labelled ? 'Name, employer or position' : 'A name, an employer or a position, like “Smith, J”, “Transit” or “Nurse”'}
+          placeholder={placeholder ?? (labelled ? 'Name, employer or position' : 'A name, an employer or a position, like “Smith, J”, “Transit” or “Nurse”')}
           aria-label="Search a name, an employer or a position"
           aria-describedby={help}
           onChange={(event) => onChange(event.target.value)}
@@ -44,7 +44,7 @@ const focusable = (dialog) => [...dialog.querySelectorAll('button:not(:disabled)
   .filter((node) => node.getClientRects().length && !node.closest('[hidden], [inert]'))
 
 /** Mobile filters share the page's live values; closing never resets a filter or its URL. */
-export const MobileSalaryFilters = ({ query, onSearch, years, counts, range, onRange, sectors, employers, sector, onSector, showSector = true }) => {
+export const MobileSalaryFilters = ({ query, onSearch, years, counts, range, onRange, sectors, employers, sector, onSector, showSector = true, showFilters = true }) => {
   const [open, setOpen] = useState(false)
   const id = useId()
   const dialog = useRef(null)
@@ -87,7 +87,7 @@ export const MobileSalaryFilters = ({ query, onSearch, years, counts, range, onR
       document.body.style.overflow = bodyOverflow
       // A touch/Safari button activation may leave body as the active element.
       // When rotating into desktop, return to the now-visible search instead.
-      const desktopSearch = document.querySelector('.salaries__desktop-filters input[type="search"]')
+      const desktopSearch = document.querySelector('.salaries__global-search input[type="search"]')
       const back = opener?.isConnected && opener.getClientRects().length ? opener
         : desktopSearch?.getClientRects().length ? desktopSearch : previous?.isConnected ? previous : null
       back?.focus({ preventScroll: true })
@@ -100,6 +100,8 @@ export const MobileSalaryFilters = ({ query, onSearch, years, counts, range, onR
     desktop.addEventListener('change', resized)
     return () => desktop.removeEventListener('change', resized)
   }, [])
+
+  useEffect(() => { if (!showFilters) setOpen(false) }, [showFilters])
 
   const key = (event) => {
     if (event.key !== 'Tab') return
@@ -124,8 +126,8 @@ export const MobileSalaryFilters = ({ query, onSearch, years, counts, range, onR
   return (
     <>
       <div className="salaries__mobile-filters">
-        <span className="salaries__filter-summary" title={summary}>{summary}</span>
-        <button
+        <SalarySearchField value={query} onChange={onSearch} placeholder="Name or place" />
+        {showFilters && <button
           ref={trigger}
           type="button"
           className="salaries__filter-trigger"
@@ -133,6 +135,7 @@ export const MobileSalaryFilters = ({ query, onSearch, years, counts, range, onR
           aria-controls={id}
           aria-expanded={open}
           aria-label={`Filters${active ? `, ${active} active` : ''}`}
+          aria-description={summary}
           onClick={() => setOpen(true)}
         >
           <svg width="18" height="18" viewBox="0 0 20 20" fill="none" aria-hidden="true">
@@ -140,7 +143,7 @@ export const MobileSalaryFilters = ({ query, onSearch, years, counts, range, onR
           </svg>
           <span>Filters</span>
           {active > 0 && <span className="salaries__filter-count" aria-hidden="true">{active}</span>}
-        </button>
+        </button>}
       </div>
       <dialog
         ref={dialog}

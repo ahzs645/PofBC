@@ -21,10 +21,11 @@ import { keyedTitles, titleMatcher } from './positions.js'
 import { formatMoney as money } from './money.js'
 import { PeriodRange, YearStrip } from './parts.jsx'
 import { MobileSalaryFilters, SalarySearchField, SalarySectorChips } from './MobileFilters.jsx'
-import { salaryYearRange, salaryYearValue } from './viewState.js'
+import { personEmployerForBack, salaryYearRange, salaryYearValue } from './viewState.js'
+import { useSalaryPlace } from './useSalaryPlace.js'
 import { Segmented } from '../site/Segmented.jsx'
 import { EmployerBrowse, EmployerCard, PeopleBrowse, PositionBrowse } from './Browse.jsx'
-import { count, LAYOUTS, loadJson, Paged, PersonIcon, readPlace, toTop, wordsOf, writePlace } from './common.jsx'
+import { count, LAYOUTS, loadJson, Paged, PersonIcon, toTop, wordsOf } from './common.jsx'
 import { EmployerPage } from './EmployerPage.jsx'
 import { PersonPage } from './PersonPage.jsx'
 import { linkLookup, personRecordShards } from './nameLinks.js'
@@ -68,9 +69,7 @@ export const SalariesView = ({ onOpenGovernment }) => {
   const [titlesIndex, setTitlesIndex] = useState(null)
   const [failed, setFailed] = useState(false)
   const [loadVersion, setLoadVersion] = useState(0)
-  const [place, setPlace] = useState(readPlace)
-  // The pages opened on the way here, newest last, each with the name its back button gives it.
-  const [trail, setTrail] = useState([])
+  const { place, setPlace, go: goPlace, goBack: backPlace } = useSalaryPlace()
   const heading = useRef(null)
   const [shards, setShards] = useState({})
   // The link list's slices (nameLinks.js), by surname slice: which spellings at an employer are one name.
@@ -136,7 +135,7 @@ export const SalariesView = ({ onOpenGovernment }) => {
     loadJson('salaries/positions/index.json.gzip').then(setTitlesIndex, () => {})
   }, [titleQuery, place.title, place.browse])
 
-  useEffect(() => { writePlace(place) }, [place])
+  useEffect(() => { setReading(null) }, [query])
 
   // Each reading's names, in the order they answer it; then the reading shown — the first that finds
   // anyone in full, or failing that by initials alone, unless another has been chosen.
@@ -210,24 +209,36 @@ export const SalariesView = ({ onOpenGovernment }) => {
   if (!index || !employersIndex) return <p className="gallery__intro" role="status">Loading the salary index…</p>
 
   const years = index.years
+  const sectors = [...new Set(employersIndex.employers.map((entry) => entry.sector))].filter(Boolean).sort()
+  const periodCounts = years.map((_, at) => employersIndex.employers.reduce((sum, entry) => sum + (entry.counts[at] ?? 0), 0))
   const yearAt = place.employerYear ? years.indexOf(place.employerYear) : -1
   const pageYear = yearAt >= 0 ? yearAt : null
   const rootLabel = query.trim() ? `All “${query.trim()}” results` : 'Salaries'
 
   // Going somewhere remembers where from, under the name of the page being left.
   const go = (next) => {
-    setTrail((current) => [...current, { place, label: place.person || place.employer || place.title ? heading.current : rootLabel }])
-    setPlace({ ...place, person: null, personAt: null, employer: null, role: null, title: null, show: null, ...next })
+    goPlace(
+      { ...place, person: null, personAt: null, employer: null, role: null, title: null, show: null, ...next },
+      place.person || place.employer || place.title ? heading.current ?? rootLabel : rootLabel
+    )
     toTop()
   }
-  const goBack = () => {
-    const previous = trail.at(-1)
-    setTrail((current) => current.slice(0, -1))
-    setPlace(previous ? previous.place : { ...place, person: null, personAt: null, employer: null, role: null, title: null, show: null })
+  const goBack = (parentEmployer) => {
+    backPlace({
+      ...place, person: null, personAt: null, employer: parentEmployer ?? null, role: null, title: null,
+      show: parentEmployer ? 'people' : null,
+      q: parentEmployer ? '' : place.q
+    })
     toTop()
   }
-  const backLabel = trail.at(-1)?.label ?? rootLabel
-  const back = <button type="button" className="salaries__back" onClick={goBack}>← {backLabel}</button>
+  const backButton = (parentEmployer = null) => (
+    <button type="button" className="salaries__back" aria-label="Back" title="Back" onClick={() => goBack(parentEmployer)}>
+      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+        <path d="M16 10H4m5-5-5 5 5 5" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
+      </svg>
+    </button>
+  )
+  const back = backButton(place.person && employersIndex.employers.some((entry) => entry.slug === place.personAt) ? place.personAt : null)
   const remember = (label) => { heading.current = label }
   const setYear = (at) => setPlace((current) => ({ ...current, employerYear: years[at] }))
   const yearFromFilter = range ? years[range[1]] : place.employerYear
@@ -237,7 +248,7 @@ export const SalariesView = ({ onOpenGovernment }) => {
   // A name opened from an employer's page shows its records at that employer first; the rest of the
   // name's records are one click away.
   const openPersonAt = (name, slug) => go({ q: name, person: personKey(name), personAt: slug })
-  const openPersonKey = (key) => go({ person: key })
+  const openPersonKey = (key) => go({ person: key, personAt: place.personAt })
   const openTitle = (key) => go({
     title: key,
     employerYear: yearFromFilter,
@@ -245,16 +256,30 @@ export const SalariesView = ({ onOpenGovernment }) => {
   })
   const openRole = (slug, key, at) => go({ employer: slug, role: key, employerYear: at !== undefined && at !== null && at >= 0 ? years[at] : place.employerYear })
   const search = (text) => {
-    setPlace((current) => ({ ...current, q: text, person: null, personAt: null }))
+    if (place.person || place.employer || place.title) go({ q: text })
+    else setPlace((current) => ({ ...current, q: text }))
     setReading(null)
   }
+  // Keep the same field mounted across browse and detail pages, including the first keystroke
+  // of a new search from a shared link. Institution-specific searches remain inside their page.
+  const withSearch = (content, filters = null, introduction = null) => (
+    <div className="salaries">
+      <div className={`salaries__search salaries__global-search salaries__desktop-filters${filters ? ' salaries__global-search--filters' : ''}`}>
+        <SalarySearchField labelled label="Search people, employers or positions" value={query} onChange={search} />
+        {filters && <div className="salaries__desktop-filters">{filters}</div>}
+      </div>
+      {introduction}
+      <MobileSalaryFilters query={query} onSearch={search} years={years} counts={periodCounts} range={range} onRange={setRange} sectors={sectors} employers={employersIndex.employers} sector={sector} onSector={setSector} showSector={showSector} showFilters={Boolean(filters)} />
+      {content}
+    </div>
+  )
 
   if (place.employer) {
     // An employer by its slug, an old slug, or the government body it is (the panel links by body).
     const canonical = employersIndex.aliases?.[place.employer] ?? place.employer
     const entry = employersIndex.employers.find((each) => each.slug === canonical) ?? employersIndex.employers.find((each) => each.body === canonical)
     if (entry) {
-      return (
+      return withSearch(
         <EmployerPage
           key={`${entry.slug}|${place.role ?? ''}`}
           entry={entry}
@@ -267,7 +292,7 @@ export const SalariesView = ({ onOpenGovernment }) => {
           onLayout={(next) => setPlace((current) => ({ ...current, layout: next }))}
           back={back}
           onYear={setYear}
-          onShow={(show) => setPlace((current) => ({ ...current, show }))}
+          onShow={(show) => go({ employer: entry.slug, employerYear: place.employerYear, show })}
           onRole={(key) => openRole(entry.slug, key, pageYear)}
           onTitle={openTitle}
           onPerson={(name) => openPersonAt(name, entry.slug)}
@@ -279,7 +304,7 @@ export const SalariesView = ({ onOpenGovernment }) => {
   }
 
   if (place.title) {
-    return (
+    return withSearch(
       <TitlePage
         key={place.title}
         titleKey={place.title}
@@ -324,30 +349,28 @@ export const SalariesView = ({ onOpenGovernment }) => {
     hidden: personList.length - atEmployer.length,
     onShowAll: () => setPlace((current) => ({ ...current, personAt: null }))
   } : null
-  if (place.person && personShards.some((shard) => shards[shard] === 'failed')) return <p className="gallery__intro" role="alert">The name’s records could not all be loaded. <button type="button" onClick={retryNames}>Retry</button></p>
-  if (place.person && (!personRows || !personLinks)) return <p className="gallery__intro" role="status">Loading the name…</p>
+  if (place.person && personShards.some((shard) => shards[shard] === 'failed')) return withSearch(<div>{back}<p className="gallery__intro" role="alert">The name’s records could not all be loaded. <button type="button" onClick={retryNames}>Retry</button></p></div>)
+  if (place.person && (!personRows || !personLinks)) return withSearch(<div>{back}<p className="gallery__intro" role="status">Loading the name…</p></div>)
   if (chosen) {
-    return (
+    return withSearch(
       <div className="salaries">
-        <PersonPage chosen={chosen} joins={joins} joinedElsewhere={joinedElsewhere} onPerson={openPersonKey} all={scoped ? personRows.filter((row) => index.employers[row[4]][3] === place.personAt) : personRows} scope={scope} index={index} back={back} onEmployer={openEmployer} onRole={openRole} onOpenGovernment={onOpenGovernment} remember={remember} />
+        <PersonPage chosen={chosen} joins={joins} joinedElsewhere={joinedElsewhere} onPerson={openPersonKey} all={scoped ? personRows.filter((row) => index.employers[row[4]][3] === place.personAt) : personRows} scope={scope} index={index} back={backButton(personEmployerForBack(place.personAt, personList, index.employers))} onEmployer={openEmployer} onRole={openRole} onOpenGovernment={onOpenGovernment} remember={remember} />
       </div>
     )
   }
 
   // Every record, named or not: the people index holds only the named ones.
   const total = employersIndex.employers.reduce((sum, entry) => sum + entry.counts.reduce((a, b) => a + b, 0), 0)
-  const sectors = [...new Set(employersIndex.employers.map((entry) => entry.sector))].filter(Boolean).sort()
   const peopleSettled = result && !result.loading
   const filtered = Boolean(range) || sector !== 'all'
   const layout = place.layout === 'table' ? 'table' : 'cards'
-  const periodCounts = years.map((_, at) => employersIndex.employers.reduce((sum, entry) => sum + (entry.counts[at] ?? 0), 0))
   // Count individual official rows even when the same period also retains compiled records.
   // Older indexes lack recordCounts and use the previous period-level estimate.
   const compiled = new Set(Object.entries(employersIndex.sources ?? {}).filter(([, source]) => source.scope === 'compiled-unverified' || source.sourceKind === 'compiled').map(([id]) => id))
   const official = employersIndex.recordCounts?.official ?? employersIndex.employers.reduce((sum, entry) => sum + entry.coverage.reduce((part, cell, at) => part + (cell?.status === 'available' && !(cell.sourceIds ?? []).some((id) => compiled.has(id)) ? entry.counts[at] : 0), 0), 0)
 
-  return (
-    <div className="salaries">
+  const introduction = (
+    <>
       <section className="salaries__intro" aria-labelledby="salaries-intro">
         <h2 id="salaries-intro" className="salaries__heading">Public-sector salaries</h2>
         <dl className="salaries__tiles">
@@ -358,31 +381,27 @@ export const SalariesView = ({ onOpenGovernment }) => {
         </dl>
       </section>
 
-      <div className="salaries__desktop-filters">
-        <div className="salaries__search">
-          <SalarySearchField value={query} onChange={search} />
-          <PeriodRange years={years} counts={periodCounts} value={range} onChange={setRange} />
-        </div>
-      </div>
-
       {!typed && (
         <div className="salaries__browse-bar">
           <Segmented
             ariaLabel="Browse"
             value={browse}
-            onChange={(next) => setPlace((current) => ({ ...current, browse: next }))}
+            onChange={(next) => go({ browse: next })}
             options={[{ value: 'employers', label: 'Employers' }, { value: 'people', label: 'People' }, { value: 'positions', label: 'Positions' }]}
           />
           <Segmented compact ariaLabel="Layout" value={layout} onChange={(next) => setPlace((current) => ({ ...current, layout: next }))} options={LAYOUTS} />
         </div>
       )}
+    </>
+  )
 
+  return withSearch(
+    <div className="salaries">
       {showSector && (
         <div className="salaries__desktop-filters">
           <SalarySectorChips sectors={sectors} employers={employersIndex.employers} value={sector} onChange={setSector} />
         </div>
       )}
-      <MobileSalaryFilters query={query} onSearch={search} years={years} counts={periodCounts} range={range} onRange={setRange} sectors={sectors} employers={employersIndex.employers} sector={sector} onSector={setSector} showSector={showSector} />
 
       {typed && (
         <>
@@ -466,6 +485,8 @@ export const SalariesView = ({ onOpenGovernment }) => {
           {browse === 'positions' && <PositionBrowse titlesIndex={titlesIndex} years={years} range={range} layout={layout} onTitle={openTitle} />}
         </section>
       )}
-    </div>
+    </div>,
+    <PeriodRange years={years} counts={periodCounts} value={range} onChange={setRange} />,
+    introduction
   )
 }

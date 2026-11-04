@@ -1,6 +1,6 @@
 import { test } from 'node:test'
 import assert from 'node:assert/strict'
-import { filterPositionGroups, hasExpenseAmount, matchesRecordQuery, readSalaryPlace, salaryPlaceUrl, salaryYearIndex } from './viewState.js'
+import { filterPositionGroups, hasExpenseAmount, matchesRecordQuery, personEmployerForBack, readSalaryPlace, salaryPlaceUrl, salaryYearIndex } from './viewState.js'
 
 test('shared salary filters and employer year survive reload and catalog expansion', () => {
   const place = { q: 'Smith, J', person: 'smith|j', personAt: 'city-of-vancouver', employer: 'northern-health', role: 'nurse', title: null, show: 'positions', browse: 'people', layout: 'table', year: '2020/21', sector: 'Health authorities', employerYear: '2023/24' }
@@ -10,8 +10,25 @@ test('shared salary filters and employer year survive reload and catalog expansi
   assert.equal(salaryYearIndex(place.year, ['2020/21', '2023/24']), '0')
   assert.equal(salaryYearIndex(place.year, ['2019/20', '2020/21', '2023/24']), '1')
   assert.equal(salaryYearIndex('2099/00', ['2020/21']), 'all')
-  assert.equal(salaryPlaceUrl(url.href, { ...place, employer: null }).searchParams.has('employer-year'), false)
+  assert.equal(salaryPlaceUrl(url.href, { ...place, employer: null }).searchParams.get('employer-year'), '2023/24')
+  assert.equal(salaryPlaceUrl(url.href, { ...place, employer: null, personAt: null }).searchParams.has('employer-year'), false)
   assert.equal(salaryPlaceUrl(url.href, { ...place, employer: null, title: 'nurse' }).searchParams.get('employer-year'), '2023/24')
+})
+
+test('shared person Back retains the originating employer, with a unique-employer fallback for old links', () => {
+  const employers = [['Company A', 'Sector', null, 'company-a'], ['Company B', 'Sector', null, 'company-b']]
+  const row = (at) => ['Smith, Jane', 'Nurse', 88000, 0, at]
+  assert.equal(personEmployerForBack(null, [row(0), row(0)], employers), 'company-a')
+  assert.equal(personEmployerForBack('company-b', [row(0), row(1)], employers), 'company-b')
+  assert.equal(personEmployerForBack(null, [row(0), row(1)], employers), null)
+  assert.equal(personEmployerForBack('missing-employer', [row(0), row(1)], employers), null)
+  assert.equal(personEmployerForBack('missing-employer', [row(0)], employers), 'company-a')
+  assert.equal(personEmployerForBack(null, [], employers), null)
+
+  const place = readSalaryPlace('?view=salaries&person=smith%7Cjane&person-at=company-b&employer-year=2020%2F21')
+  const shared = salaryPlaceUrl('https://example.org/PofBC/?view=salaries', place)
+  assert.equal(readSalaryPlace(shared.search).personAt, 'company-b')
+  assert.equal(readSalaryPlace(shared.search).employerYear, '2020/21')
 })
 
 test('a name search returns matching people within a position group', () => {

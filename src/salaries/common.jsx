@@ -6,7 +6,7 @@ import { displayName } from './people.js'
 import { sourceHref } from './coverage.js'
 import { SourceLink } from './DisclosureEvidence.jsx'
 import { formatMoney as money } from './money.js'
-import { hasExpenseAmount, readSalaryPlace, salaryPlaceUrl } from './viewState.js'
+import { hasExpenseAmount } from './viewState.js'
 
 const BASE = import.meta.env?.BASE_URL ?? '/'
 const loaded = new Map()
@@ -16,6 +16,13 @@ export const wordsOf = (text) => text.trim().toLowerCase().split(/\s+/).filter(B
 export const seenYears = (entry) => entry.counts.map((value, at) => (value > 0 ? at : null)).filter((at) => at !== null)
 export const latestYear = (entry) => entry.counts.reduce((best, value, at) => (value ? at : best), 0)
 export const toTop = () => globalThis.scrollTo?.({ top: 0 })
+
+export const SalaryPageHeading = ({ id, back, children }) => (
+  <div className="salaries__page-heading">
+    {back}
+    <h2 id={id} className="salaries__heading">{children}</h2>
+  </div>
+)
 
 /** A gzipped file, decompressed here; or plain JSON, if the server already undid the gzip. */
 export const loadJson = (path) => {
@@ -31,13 +38,6 @@ export const loadJson = (path) => {
     }).catch((error) => { loaded.delete(path); throw error }))
   }
   return loaded.get(path)
-}
-
-export const readPlace = () => readSalaryPlace(globalThis.location?.search ?? '')
-
-export const writePlace = (place) => {
-  if (!globalThis.history?.replaceState) return
-  globalThis.history.replaceState(null, '', salaryPlaceUrl(globalThis.location.href, place))
 }
 
 export const PersonIcon = () => (

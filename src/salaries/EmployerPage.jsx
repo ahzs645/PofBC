@@ -7,6 +7,7 @@
 
 import { useEffect, useMemo, useState } from 'react'
 import { Segmented } from '../site/Segmented.jsx'
+import { SiteLink } from '../site/navigation.jsx'
 import { displayName, EMPLOYER_LAYOUT, personKey, withoutCompiledRepeats } from './people.js'
 import { employerNameKeys } from './nameLinks.js'
 import { meanMoney, titleKey, titleLabel } from './positions.js'
@@ -14,7 +15,7 @@ import { categoryCoverage, coverageAt, expenseLabel, reportingYearLabel, scopeLa
 import { DisclosureSummary } from './DisclosureEvidence.jsx'
 import { formatMoney as money, medianMoney as median } from './money.js'
 import { PayChart, YearPicker, shortYear } from './parts.jsx'
-import { count, LAYOUTS, loadJson, Paged, RecordRow, RoleIcon, seenYears, wordsOf } from './common.jsx'
+import { count, LAYOUTS, loadJson, Paged, RecordRow, RoleIcon, SalaryPageHeading, seenYears, wordsOf } from './common.jsx'
 import { DataTable } from './DataTable.jsx'
 import { GrowthTiles, rateColumn } from './Growth.jsx'
 import { peopleOverTime, Trends } from './Trends.jsx'
@@ -184,14 +185,18 @@ export const EmployerPage = ({ entry, years, sources, year: wantedYear, show, ro
   return (
     <div className="salaries">
       <section className="salaries__person" aria-labelledby="salaries-employer">
-        {back}
-        <h2 id="salaries-employer" className="salaries__heading">{name}</h2>
+        <SalaryPageHeading id="salaries-employer" back={back}>
+          {entry.body && onOpenGovernment ? (
+            <SiteLink
+              className="salaries__heading-link"
+              to={{ view: 'government', node: entry.body, year: Number(years[year].slice(0, 4)) }}
+              title={`View ${name} in Government`}
+            >{name}</SiteLink>
+          ) : name}
+        </SalaryPageHeading>
         <p className="salaries__note">
           {entry.sector}
           {entry.names.length > 1 ? ` · also filed as ${entry.names.slice(0, -1).map((each) => `“${each}”`).join(', ')}` : ''}
-          {entry.body && onOpenGovernment && (
-            <> · <button type="button" className="salaries__link" onClick={() => onOpenGovernment(entry.body, Number(years[year].slice(0, 4)))}>See it in Government</button></>
-          )}
         </p>
         <YearPicker years={years} counts={entry.counts} coverage={entry.coverage} value={year} onChange={pick} />
         <h3 className="salaries__year-title">{reportingYearLabel(years[year])}</h3>
@@ -205,7 +210,7 @@ export const EmployerPage = ({ entry, years, sources, year: wantedYear, show, ro
             </select>
           </label>
         )}
-        <DisclosureSummary coverage={coverage} sources={sources} />
+        <DisclosureSummary coverage={coverage} sources={sources} className="salaries-disclosure--mobile-notes" />
         {!entry.counts[year] && <p className="salaries__hint">{coverage.status === 'aggregate-only' ? 'The verified report publishes aggregate payroll without named employee records.' : coverage.status === 'excluded' ? 'These records are held for review because source checks have not passed.' : coverage.status === 'source-found' ? 'A report has been located, but its employee records have not yet passed extraction and validation.' : 'No records have been imported for this employer in this year.'} That does not mean it had no staff or made no payments.</p>}
         {rows && entry.counts[year] > 0 && (
           <dl className="salaries__tiles">
@@ -375,8 +380,7 @@ const RolePage = ({ entry, years, sources, rows, failed, roleKey, wantedYear, ba
   return (
     <div className="salaries">
       <section className="salaries__person" aria-labelledby="salaries-role">
-        {back}
-        <h2 id="salaries-role" className="salaries__heading">{label}</h2>
+        <SalaryPageHeading id="salaries-role" back={back}>{label}</SalaryPageHeading>
         <p className="salaries__note">
           {entry.names.at(-1)}
           {group && ` · ${count(points.length, 'year', 'years')} with records`}

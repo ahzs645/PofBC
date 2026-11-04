@@ -1,4 +1,4 @@
-import { Suspense, lazy, useState } from 'react'
+import { Suspense, lazy, useEffect, useState } from 'react'
 import { BcLockup } from '../logo/BcLockup.jsx'
 import { CurrentControls } from '../current/CurrentControls.jsx'
 import { CurrentLockup } from '../current/CurrentLockup.jsx'
@@ -48,6 +48,8 @@ import { Segmented } from './Segmented.jsx'
 import { ShareLink } from './ShareLink.jsx'
 import { HIDDEN_VIEWS, ViewSwitcher, VIEWS } from './ViewSwitcher.jsx'
 import { NavigationContext, searchFor } from './navigation.jsx'
+import { writeHistory } from './browserHistory.js'
+import { salaryPlaceUrl } from '../salaries/viewState.js'
 import { SunGlyph, ThemeIcon } from './icons.jsx'
 import { useSiteTheme } from './useTheme.js'
 import { useAgentTools } from './useAgentTools.js'
@@ -141,11 +143,10 @@ const initialView = () => {
  * gallery's collection — so each view's link stays its own. The generator carries no view at all.
  */
 const writeView = (view) => {
-  if (!globalThis.history?.replaceState) return
-  const url = new URL(globalThis.location.href)
+  const url = salaryPlaceUrl(globalThis.location.href, {})
   for (const key of ['view', 'year', 'node', 'logos', 'mark', 'internal', 'internal-logo', 'poster', 'sign', 'part', 'guide', 'page', 'org', 'patch', 'area', 'chapter', 'story']) url.searchParams.delete(key)
   if (view !== 'generator') url.searchParams.set('view', view)
-  globalThis.history.replaceState(null, '', url)
+  writeHistory(url)
 }
 
 export const App = () => {
@@ -157,10 +158,20 @@ export const App = () => {
   // Bumped by every link between views, so the view it lands on opens afresh and reads its place
   // from the address — even when it is the view already on screen.
   const [visit, setVisit] = useState(0)
+  useEffect(() => {
+    const restore = () => {
+      setView(initialView())
+      // Each view reads its selection from the restored URL when mounted.
+      setVisit((value) => value + 1)
+    }
+    globalThis.addEventListener('popstate', restore)
+    return () => globalThis.removeEventListener('popstate', restore)
+  }, [])
   const theme = useSiteTheme()
   const showView = (next) => {
-    setView(next)
     writeView(next)
+    setView(next)
+    setVisit((value) => value + 1)
   }
   // A link from one view to a place in another: the posters to the emblem they carry, the emblem to
   // the posters, either to the body in the government diagram.
@@ -168,7 +179,7 @@ export const App = () => {
     const next = VIEW_IDS.includes(params.view) ? params.view : 'generator'
     const url = new URL(globalThis.location.href)
     url.search = searchFor({ ...params, view: next === 'generator' ? null : next })
-    globalThis.history?.replaceState(null, '', url)
+    writeHistory(url)
     setView(next)
     setVisit((value) => value + 1)
     globalThis.scrollTo?.({ top: 0 })
@@ -184,8 +195,9 @@ export const App = () => {
     url.searchParams.set('node', node)
     if (year) url.searchParams.set('year', String(year))
     else url.searchParams.delete('year')
-    globalThis.history?.replaceState(null, '', url)
+    writeHistory(url)
     setView('government')
+    setVisit((value) => value + 1)
   }
   // The diagram hands a ministry over in the identity of the year it was looking at.
   const openInGenerator = ({ era, name }) => {
@@ -358,16 +370,6 @@ export const App = () => {
               <BcLockup {...artwork} />
             )}
           </div>
-
-          <div className="stage__bar">
-            <Segmented
-              compact
-              label="Preview on"
-              options={BACKDROP_OPTIONS}
-              value={state.backdrop}
-              onChange={(value) => update({ backdrop: value })}
-            />
-          </div>
         </section>
 
         <div className="controls">
@@ -385,6 +387,12 @@ export const App = () => {
                     ? 'BC beside the waving provincial flag. Any ministry, any colour.'
                     : 'The crest identity, rebuilt from the supplied artwork. Any ministry, any colourway.'
               }
+            />
+            <Segmented
+              label="Preview on"
+              options={BACKDROP_OPTIONS}
+              value={state.backdrop}
+              onChange={(value) => update({ backdrop: value })}
             />
           </section>
 

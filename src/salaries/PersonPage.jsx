@@ -8,7 +8,7 @@ import { expenseLabel, GAP_LABELS, gapReason, gapRuns, missingYearMessage, recor
 import { SourceLink, SourceNotes } from './DisclosureEvidence.jsx'
 import { formatMoney as money } from './money.js'
 import { PayChart, yearSpan } from './parts.jsx'
-import { count } from './common.jsx'
+import { count, SalaryPageHeading } from './common.jsx'
 import { hasExpenseAmount } from './viewState.js'
 import { isCadPerson, personAnnotation, personCurrency } from './recordAnnotations.js'
 import { RecordAnnotation } from './RecordAnnotation.jsx'
@@ -132,8 +132,7 @@ export const PersonPage = ({ chosen, joins = [], joinedElsewhere = [], all, scop
 
   return (
     <section className="salaries__person" aria-labelledby="salaries-person">
-      {back}
-      <h2 id="salaries-person" className="salaries__heading">{heading}</h2>
+      <SalaryPageHeading id="salaries-person" back={back}>{heading}</SalaryPageHeading>
       <p className="salaries__note">
         {employers.map((employer, at) => (
           <span key={employer.slug}>

@@ -1221,10 +1221,12 @@ input.share__url {
 
 /* A collection's own page: the way back, its name and whose it is, and a way to the body in the
    government diagram. */
-.gallery__crumbs { display: flex; align-items: center; gap: 8px; font-size: 14px; color: var(--ink-muted); }
+.gallery__crumbs { display: flex; align-items: center; gap: 8px; min-width: 0; white-space: nowrap; font-size: 14px; color: var(--ink-muted); }
+.gallery__crumbs > [aria-hidden='true'] { flex: none; }
 
 .gallery__back {
   display: inline-flex;
+  flex: none;
   gap: 6px;
   padding: 0 10px;
   height: var(--control);
@@ -1423,6 +1425,12 @@ input.share__url {
 
 /* The collection in the trail, when a mark is open: a way back to it. */
 .gallery__crumb {
+  flex: 0 1 auto;
+  min-width: 0;
+  max-width: 30%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
   padding: 0 4px;
   margin: 0 -4px;
   border: 0;
@@ -1433,7 +1441,7 @@ input.share__url {
   cursor: pointer;
 }
 .gallery__crumb:hover { background: var(--hover); }
-.gallery__crumbs [aria-current='page'] { color: var(--ink-muted); }
+.gallery__crumbs [aria-current='page'] { flex: 1 1 0; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; color: var(--ink-muted); }
 
 /* ── What each mark is, and what is missing ───────────────────────────────────────────────────── */
 
@@ -1576,10 +1584,12 @@ button.gallery__collecting-status, .gallery__collecting-graph {
 .salaries__intro p { margin: 8px 0 0; max-width: 70ch; font-size: 15px; line-height: 1.5; color: var(--ink-muted); }
 .salaries__heading { margin: 0; font-size: 22px; font-weight: 600; color: var(--ink); }
 .salaries__search { display: grid; grid-template-columns: 1fr auto; gap: 8px; }
+.salaries__global-search { grid-template-columns: minmax(0, 1fr); }
+.salaries__global-search--filters { grid-template-columns: minmax(0, 1fr) auto; align-items: end; }
 .salaries__desktop-filters { display: grid; gap: 16px; }
 .salaries__mobile-filters { display: none; }
 @media (max-width: 560px) { .salaries__search { grid-template-columns: 1fr; } .salaries-range__trigger { width: 100%; } }
-.salaries__search input, .salaries__search select {
+.salaries__search input, .salaries__search select, .salaries__mobile-filters input {
   box-sizing: border-box;
   min-width: 0;
   padding: 10px 12px;
@@ -1707,7 +1717,6 @@ button.gallery__collecting-status, .gallery__collecting-graph {
   background: var(--surface); color: var(--ink); font: inherit; font-size: 14px; font-weight: 600; cursor: pointer;
 }
 .salaries__filter-trigger:hover { background: var(--hover); }
-.salaries__filter-summary { min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-size: 12px; color: var(--ink-faint); }
 .salaries__filter-count { display: grid; place-items: center; min-width: 20px; height: 20px; padding: 0 5px; border-radius: 10px; background: var(--salaries-ink); color: var(--surface); font-size: 11px; font-variant-numeric: tabular-nums; }
 .salaries-filter-sheet {
   position: fixed; inset: auto 0 var(--salaries-sheet-bottom, 0px); width: 100%; max-width: 560px; max-height: 90vh; max-height: var(--salaries-sheet-height, 90dvh); margin: 0 auto; padding: 0;
@@ -1735,7 +1744,13 @@ button.gallery__collecting-status, .gallery__collecting-graph {
 
 @media (max-width: 639px) {
   .salaries__desktop-filters { display: none; }
-  .salaries__mobile-filters { display: flex; align-items: center; justify-content: space-between; gap: 12px; min-width: 0; }
+  .salaries__global-search--filters { grid-template-columns: minmax(0, 1fr); }
+  .salaries__mobile-filters { display: flex; align-items: center; gap: 8px; min-width: 0; }
+  .salaries__mobile-filters > .salaries__filter-field { flex: 1 1 0; }
+  .salaries__mobile-filters input { height: 44px; padding: 9px 12px; }
+  .salaries__mobile-filters .salaries__tip { display: none; }
+  .salaries-disclosure--mobile-notes .salaries-disclosure__line { display: none; }
+  .salaries-disclosure--mobile-notes:not(:has(.salaries__caveats)) { display: none; }
   .salaries__browse-bar { flex-wrap: nowrap; gap: 6px; }
   .salaries__browse-bar > .field:first-child:not(.field--compact) { flex: 1 1 auto; min-width: 0; max-width: none; }
   .salaries__browse-bar .segmented { min-height: 44px; gap: 0; padding: 2px; }
@@ -1787,7 +1802,13 @@ button.gallery__collecting-status, .gallery__collecting-graph {
   font-size: 14px;
   cursor: pointer;
 }
-.salaries__back { margin: 0 0 8px; }
+.salaries__back { display: inline-flex; align-items: center; justify-content: center; flex: none; width: 44px; height: 44px; margin: 0; padding: 0; }
+.salaries__back:focus-visible { outline: 2px solid var(--salaries-ink); outline-offset: 2px; }
+.salaries__page-heading { display: flex; align-items: center; gap: 10px; min-width: 0; }
+.salaries__page-heading .salaries__heading { min-width: 0; overflow-wrap: anywhere; }
+.salaries__heading-link { color: inherit; text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 4px; }
+.salaries__heading-link:hover { color: var(--salaries-ink); }
+.salaries__heading-link:focus-visible { outline: 2px solid var(--salaries-ink); outline-offset: 4px; }
 .salaries__person { display: grid; gap: 8px; padding: 20px; border-radius: var(--radius); background: var(--surface); }
 .salaries__person .salaries__card { background: var(--surface); }
 .salaries__link { padding: 0; border: 0; background: none; color: inherit; font: inherit; text-align: inherit; text-decoration: underline; text-underline-offset: 2px; cursor: pointer; }
