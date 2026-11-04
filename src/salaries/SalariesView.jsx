@@ -265,7 +265,7 @@ const SalaryRecordsView = ({ onOpenGovernment, navigation }) => {
   const setYear = (at) => setPlace((current) => ({ ...current, employerYear: years[at] }))
   const yearFromFilter = range ? years[range[1]] : place.employerYear
 
-  const openEmployer = (slug) => go({ employer: slug, employerYear: yearFromFilter })
+  const openEmployer = (slug, employerYear = yearFromFilter) => go({ employer: slug, employerYear })
   const openPerson = (name) => go({ q: name, person: personKey(name) })
   // A name opened from an employer's page shows its records at that employer first; the rest of the
   // name's records are one click away.

@@ -21,6 +21,17 @@ pages at phone and desktop widths and counts their words (needs Playwright with 
 
 ## Salary data and coverage
 
+The Employers view (`?view=salaries&browse=employers`) compares the latest official annual
+employee disclosures in the selected periods and sector. Cards and sortable tables include
+median and average remuneration, disclosed payroll, the share paid $100,000 or more, and
+year-over-year growth in published employee records where consecutive periods have matching
+recorded disclosure rules. These counts are not employee headcount. Council, board,
+executive-only, compiled and incomplete schedules are excluded from these comparisons;
+latest reporting periods and thresholds remain visible. Rankings require at least ten records.
+The small `public/salaries/employer-stats.json.gzip` companion is rebuilt from existing employer
+exports by `npm run build:employer-stats` (also part of `build:salaries`) and checked for freshness
+by the salary tests. Existing salary records and indexes are unchanged by that companion build.
+
 The salary search (`?view=salaries`) combines verified official remuneration schedules with
 explicitly labelled, retained compiled disclosures. Reporting periods, source links, disclosure
 scope and remaining gaps are attached to the records. The original three compiled editions are

@@ -5,7 +5,8 @@ import { motion } from 'motion/react'
  * A bar along the bottom of the stage, in three parts: where you are on the left, the steps in the
  * middle, and the way forward on the right. `steps` is [{ id, label }]. With no current step the
  * left shows `hint` and the right a start button; once a step is open they become a count and a
- * pair of arrows. The arrows sit at the bar's edge, so they stay put under the pointer however
+ * pair of arrows. Starting selects the first step and runs the optional `onStart` action.
+ * The arrows sit at the bar's edge, so they stay put under the pointer however
  * wide the current step's label is. On touch screens every step keeps its label.
  */
 export function Dock({ steps, current, onSelect, onStart, hint, startLabel = 'Start →', coarse = false }) {
@@ -62,7 +63,7 @@ export function Dock({ steps, current, onSelect, onStart, hint, startLabel = 'St
               <button type="button" className="pv-arrow" aria-label="Next" onClick={() => onSelect(i >= steps.length - 1 ? null : steps[i + 1].id)}>→</button>
             </>
           )
-          : <button type="button" className="pv-ghost pv-solid pv-dock-go" onClick={() => (onStart ? onStart() : onSelect(steps[0].id))}>{startLabel}</button>}
+          : <button type="button" className="pv-ghost pv-solid pv-dock-go" onClick={() => { onSelect(steps[0].id); onStart?.() }}>{startLabel}</button>}
       </div>
     </nav>
   )

@@ -13,7 +13,7 @@
 
 import { useCallback, useDeferredValue, useEffect, useMemo, useRef, useState } from 'react'
 import { BRITISH_COLUMBIA } from 'plateforge/bc'
-import { PlateView, plateforgeLink, regionFamilies, regionSections, samplePlate, setupPlates, statusBadge } from 'plateforge'
+import { PlateView, regionFamilies, regionSections, samplePlate, setupPlates, statusBadge } from 'plateforge'
 import { searchFor } from '../site/navigation.jsx'
 import { Segmented } from '../site/Segmented.jsx'
 import { PlateViewer } from './PlateViewer.jsx'
@@ -197,13 +197,6 @@ export const PlatesView = () => {
     <section className="plates" aria-label="Licence plates">
       <div className="plates__intro">
         <h2>Licence plates <span className="plates__count">{TOTAL}</span></h2>
-        {/* Hidden on a phone, where it would push the controls below the fold. */}
-        <p className="plates__lede">
-          British Columbia’s plates from the leather plates of 1904 to the flag base of today, in {FAMILIES.length} families:
-          passenger, commercial, farm, motorcycle, official, municipal and the rest. Each is a research reconstruction
-          from <a href={plateforgeLink(REGION)} target="_blank" rel="noreferrer">PlateForge</a>, redrawn as SVG from
-          photographs and source notes, and opens to take any serial.
-        </p>
         <div className="plates__filters">
           <label className="plates__filter">
             <span>Family</span>

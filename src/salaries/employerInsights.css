@@ -1,0 +1,19 @@
+.employer-insights { margin: 0 0 16px; }
+.employer-insights > .salaries__meta { margin: 5px 0 12px; }
+.employer-insights__grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 10px; }
+.employer-insights__tile { display: grid; align-content: start; gap: 8px; padding: 16px; border: 1px solid var(--mid); border-radius: 12px; background: var(--surface); min-width: 0; }
+.employer-insights__label { font-size: 12px; text-align: left; }
+.employer-insights__value { font-size: clamp(18px, 2vw, 26px); font-weight: 600; font-variant-numeric: tabular-nums; overflow-wrap: anywhere; }
+.employer-insights__name { font-size: 14px; text-align: left; overflow-wrap: anywhere; }
+.employer-insights__definitions { margin-top: 12px; font-size: 13px; color: var(--ink-faint); line-height: 1.5; max-width: 90ch; }
+.employer-insights__definitions summary { cursor: pointer; color: var(--ink); }
+.employer-insights__definitions p { margin: 10px 0 0; }
+.employer-insights__order { display: flex; align-items: center; flex-wrap: wrap; gap: 10px 16px; margin-bottom: 12px; }
+.employer-insights__order label { display: flex; align-items: center; flex-wrap: wrap; gap: 8px; font-size: 13px; }
+.employer-insights__order select { max-width: 100%; min-height: 44px; padding: 6px 30px 6px 10px; border: 1px solid var(--mid); border-radius: 8px; background: var(--surface); color: var(--ink); font: inherit; }
+.employer-card__stats { display: grid; gap: 3px; padding-top: 6px; margin-top: 4px; border-top: 1px solid var(--mid); }
+@media (max-width: 1000px) { .employer-insights__grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 480px) {
+  .employer-insights__tile { padding: 12px; }
+  .employer-insights__value { font-size: 19px; }
+}
