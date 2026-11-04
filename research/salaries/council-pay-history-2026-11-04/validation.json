@@ -3,10 +3,12 @@
   "asOf": "2026-11-04",
   "scope": "Council-pay companion only; existing salary and name-link exports are untouched.",
   "counts": {
-    "sources": 25,
-    "officeObservations": 430,
-    "namedPayments": 182,
-    "columnControls": 61,
+    "sources": 54,
+    "officeObservations": 578,
+    "namedPayments": 385,
+    "columnControls": 129,
+    "exactColumnControls": 114,
+    "roundingQualifiedControls": 15,
     "surveyValueChecks": 320
   },
   "inputs": [
@@ -35,8 +37,28 @@
       "sha256": "5760046daac6581d70e4c0e6840e7d7da156f616fd460986441bfc57156c4863"
     },
     {
+      "path": "research/salaries/council-pay-history-2026-11-04/official-additional-timeseries.json",
+      "sha256": "0b48380d1b1014e920abf4e105d8c0be1aafaad67ddae1acba0e8c96eca563b8"
+    },
+    {
       "path": "research/salaries/council-pay-history-2026-11-04/official-rates-vancouver-saanich.json",
       "sha256": "530b7f42f18554b6569d70621adf66c0a245ec6527adfbc8f1e63ff62848d13b"
+    },
+    {
+      "path": "research/salaries/council-pay-history-2026-11-04/timeseries-expansion-baseline.json",
+      "sha256": "7d070716811917da2485b0b5ab7cb73943862c74ea1ae115058057a0cfda820e"
+    },
+    {
+      "path": "research/salaries/council-pay-history-2026-11-04/vancouver-2004-2011-payments-transcription.json",
+      "sha256": "0f7d7a10d7dc13e529f3a45101b9c6cee838c3e98ce59c66a8ee174c8ed67255"
+    },
+    {
+      "path": "research/salaries/council-pay-history-2026-11-04/vancouver-2012-2019-payments-transcription.json",
+      "sha256": "29f367eb419e9d7c3c2fc16e05c25205086054fccf590ba7659573393447bd60"
+    },
+    {
+      "path": "research/salaries/council-pay-history-2026-11-04/vancouver-2016-2018-rates.json",
+      "sha256": "344553bed69116e3ddc4eb9c9b257bd8c3e6cd5aab9a6e11a72587dcde0f357e"
     },
     {
       "path": "research/salaries/council-pay-history-2026-11-04/vancouver-2019-2021-rates.json",
@@ -65,10 +87,759 @@
   ],
   "controls": [
     {
+      "year": 2004,
+      "column": "remuneration",
+      "printedTotal": 668077.84,
+      "sumOfDisclosedCells": 668077.84,
+      "difference": 0,
+      "status": "exact",
+      "roundingLimit": 0,
+      "missingCells": 0
+    },
+    {
+      "year": 2004,
+      "column": "localExpenses",
+      "printedTotal": 14811.3,
+      "sumOfDisclosedCells": 14811.3,
+      "difference": 0,
+      "status": "exact",
+      "roundingLimit": 0,
+      "missingCells": 0
+    },
+    {
+      "year": 2004,
+      "column": "transportationAllowance",
+      "printedTotal": 25915.72,
+      "sumOfDisclosedCells": 25915.72,
+      "difference": 0,
+      "status": "exact",
+      "roundingLimit": 0,
+      "missingCells": 0
+    },
+    {
+      "year": 2004,
+      "column": "travelConferences",
+      "printedTotal": 47666.66,
+      "sumOfDisclosedCells": 47666.66,
+      "difference": 0,
+      "status": "exact",
+      "roundingLimit": 0,
+      "missingCells": 0
+    },
+    {
+      "year": 2005,
+      "column": "remuneration",
+      "printedTotal": 611122,
+      "sumOfDisclosedCells": 611120,
+      "difference": -2,
+      "status": "within-reported-rounding",
+      "roundingLimit": 9.5,
+      "missingCells": 0,
+      "roundingReason": "The report presents individual amounts and column totals in whole dollars. The transcription preserves both. All differences fit the bound for independently rounding individual cells and the total to the nearest dollar. Rounding is an inference where underlying cent-precision amounts have not been recovered. The same numeric cells and totals were checked against the official SOFI.",
+      "evidenceUrl": "https://vancouver.ca/files/cov/FI2005.pdf"
+    },
+    {
+      "year": 2005,
+      "column": "localExpenses",
+      "printedTotal": 15932,
+      "sumOfDisclosedCells": 15932,
+      "difference": 0,
+      "status": "exact",
+      "roundingLimit": 0,
+      "missingCells": 0
+    },
+    {
+      "year": 2005,
+      "column": "transportationAllowance",
+      "printedTotal": 25527,
+      "sumOfDisclosedCells": 25530,
+      "difference": 3,
+      "status": "within-reported-rounding",
+      "roundingLimit": 9.5,
+      "missingCells": 0,
+      "roundingReason": "The report presents individual amounts and column totals in whole dollars. The transcription preserves both. All differences fit the bound for independently rounding individual cells and the total to the nearest dollar. Rounding is an inference where underlying cent-precision amounts have not been recovered. The same numeric cells and totals were checked against the official SOFI.",
+      "evidenceUrl": "https://vancouver.ca/files/cov/FI2005.pdf"
+    },
+    {
+      "year": 2005,
+      "column": "travelConferences",
+      "printedTotal": 86362,
+      "sumOfDisclosedCells": 86362,
+      "difference": 0,
+      "status": "exact",
+      "roundingLimit": 0,
+      "missingCells": 0
+    },
+    {
+      "year": 2006,
+      "column": "remuneration",
+      "printedTotal": 668071,
+      "sumOfDisclosedCells": 668072,
+      "difference": 1,
+      "status": "within-reported-rounding",
+      "roundingLimit": 6,
+      "missingCells": 0,
+      "roundingReason": "The report presents individual amounts and column totals in whole dollars. The transcription preserves both. All differences fit the bound for independently rounding individual cells and the total to the nearest dollar. Rounding is an inference where underlying cent-precision amounts have not been recovered. All source cells and totals were rechecked in the primary annual-report PDF text; the separate 2006 SOFI text could not be decoded reliably.",
+      "evidenceUrl": "https://council.vancouver.ca/20070503/documents/cs1.pdf"
+    },
+    {
+      "year": 2006,
+      "column": "localExpenses",
+      "printedTotal": 19217,
+      "sumOfDisclosedCells": 19216,
+      "difference": -1,
+      "status": "within-reported-rounding",
+      "roundingLimit": 6,
+      "missingCells": 0,
+      "roundingReason": "The report presents individual amounts and column totals in whole dollars. The transcription preserves both. All differences fit the bound for independently rounding individual cells and the total to the nearest dollar. Rounding is an inference where underlying cent-precision amounts have not been recovered. All source cells and totals were rechecked in the primary annual-report PDF text; the separate 2006 SOFI text could not be decoded reliably.",
+      "evidenceUrl": "https://council.vancouver.ca/20070503/documents/cs1.pdf"
+    },
+    {
+      "year": 2006,
+      "column": "transportationAllowance",
+      "printedTotal": 29159,
+      "sumOfDisclosedCells": 29160,
+      "difference": 1,
+      "status": "within-reported-rounding",
+      "roundingLimit": 6,
+      "missingCells": 0,
+      "roundingReason": "The report presents individual amounts and column totals in whole dollars. The transcription preserves both. All differences fit the bound for independently rounding individual cells and the total to the nearest dollar. Rounding is an inference where underlying cent-precision amounts have not been recovered. All source cells and totals were rechecked in the primary annual-report PDF text; the separate 2006 SOFI text could not be decoded reliably.",
+      "evidenceUrl": "https://council.vancouver.ca/20070503/documents/cs1.pdf"
+    },
+    {
+      "year": 2006,
+      "column": "travelConferences",
+      "printedTotal": 89077,
+      "sumOfDisclosedCells": 89076,
+      "difference": -1,
+      "status": "within-reported-rounding",
+      "roundingLimit": 6,
+      "missingCells": 0,
+      "roundingReason": "The report presents individual amounts and column totals in whole dollars. The transcription preserves both. All differences fit the bound for independently rounding individual cells and the total to the nearest dollar. Rounding is an inference where underlying cent-precision amounts have not been recovered. All source cells and totals were rechecked in the primary annual-report PDF text; the separate 2006 SOFI text could not be decoded reliably.",
+      "evidenceUrl": "https://council.vancouver.ca/20070503/documents/cs1.pdf"
+    },
+    {
+      "year": 2007,
+      "column": "remuneration",
+      "printedTotal": 685728,
+      "sumOfDisclosedCells": 685728,
+      "difference": 0,
+      "status": "exact",
+      "roundingLimit": 0,
+      "missingCells": 0
+    },
+    {
+      "year": 2007,
+      "column": "localExpenses",
+      "printedTotal": 20789,
+      "sumOfDisclosedCells": 20789,
+      "difference": 0,
+      "status": "exact",
+      "roundingLimit": 0,
+      "missingCells": 0
+    },
+    {
+      "year": 2007,
+      "column": "transportationAllowance",
+      "printedTotal": 29007,
+      "sumOfDisclosedCells": 29007,
+      "difference": 0,
+      "status": "exact",
+      "roundingLimit": 0,
+      "missingCells": 0
+    },
+    {
+      "year": 2007,
+      "column": "travelConferences",
+      "printedTotal": 59460,
+      "sumOfDisclosedCells": 59460,
+      "difference": 0,
+      "status": "exact",
+      "roundingLimit": 0,
+      "missingCells": 0
+    },
+    {
+      "year": 2008,
+      "column": "remuneration",
+      "printedTotal": 707439,
+      "sumOfDisclosedCells": 707439,
+      "difference": 0,
+      "status": "exact",
+      "roundingLimit": 0,
+      "missingCells": 0
+    },
+    {
+      "year": 2008,
+      "column": "localExpenses",
+      "printedTotal": 25679,
+      "sumOfDisclosedCells": 25679,
+      "difference": 0,
+      "status": "exact",
+      "roundingLimit": 0,
+      "missingCells": 0
+    },
+    {
+      "year": 2008,
+      "column": "transportationAllowance",
+      "printedTotal": 29347,
+      "sumOfDisclosedCells": 29347,
+      "difference": 0,
+      "status": "exact",
+      "roundingLimit": 0,
+      "missingCells": 0
+    },
+    {
+      "year": 2008,
+      "column": "travelConferences",
+      "printedTotal": 93434,
+      "sumOfDisclosedCells": 93434,
+      "difference": 0,
+      "status": "exact",
+      "roundingLimit": 0,
+      "missingCells": 0
+    },
+    {
+      "year": 2009,
+      "column": "remuneration",
+      "printedTotal": 776469,
+      "sumOfDisclosedCells": 776469,
+      "difference": 0,
+      "status": "exact",
+      "roundingLimit": 0,
+      "missingCells": 0
+    },
+    {
+      "year": 2009,
+      "column": "localExpenses",
+      "printedTotal": 35579,
+      "sumOfDisclosedCells": 35579,
+      "difference": 0,
+      "status": "exact",
+      "roundingLimit": 0,
+      "missingCells": 0
+    },
+    {
+      "year": 2009,
+      "column": "transportationAllowance",
+      "printedTotal": 21780,
+      "sumOfDisclosedCells": 21780,
+      "difference": 0,
+      "status": "exact",
+      "roundingLimit": 0,
+      "missingCells": 0
+    },
+    {
+      "year": 2009,
+      "column": "travelConferences",
+      "printedTotal": 62674,
+      "sumOfDisclosedCells": 62674,
+      "difference": 0,
+      "status": "exact",
+      "roundingLimit": 0,
+      "missingCells": 0
+    },
+    {
+      "year": 2010,
+      "column": "remuneration",
+      "printedTotal": 784354,
+      "sumOfDisclosedCells": 784356,
+      "difference": 2,
+      "status": "within-reported-rounding",
+      "roundingLimit": 6,
+      "missingCells": 0,
+      "roundingReason": "The report presents individual amounts and column totals in whole dollars. The transcription preserves both. All differences fit the bound for independently rounding individual cells and the total to the nearest dollar. Rounding is an inference where underlying cent-precision amounts have not been recovered. The same numeric cells and totals were checked against the official SOFI. Appendix A independently confirms the travel column's exact-cent amounts and total, which round to every annual-table travel cell and its printed total.",
+      "evidenceUrl": "https://council.vancouver.ca/20110405/documents/a2.pdf"
+    },
+    {
+      "year": 2010,
+      "column": "localExpenses",
+      "printedTotal": 39226,
+      "sumOfDisclosedCells": 39225,
+      "difference": -1,
+      "status": "within-reported-rounding",
+      "roundingLimit": 6,
+      "missingCells": 0,
+      "roundingReason": "The report presents individual amounts and column totals in whole dollars. The transcription preserves both. All differences fit the bound for independently rounding individual cells and the total to the nearest dollar. Rounding is an inference where underlying cent-precision amounts have not been recovered. The same numeric cells and totals were checked against the official SOFI. Appendix A independently confirms the travel column's exact-cent amounts and total, which round to every annual-table travel cell and its printed total.",
+      "evidenceUrl": "https://council.vancouver.ca/20110405/documents/a2.pdf"
+    },
+    {
+      "year": 2010,
+      "column": "transportationAllowance",
+      "printedTotal": 21912,
+      "sumOfDisclosedCells": 21911,
+      "difference": -1,
+      "status": "within-reported-rounding",
+      "roundingLimit": 6,
+      "missingCells": 0,
+      "roundingReason": "The report presents individual amounts and column totals in whole dollars. The transcription preserves both. All differences fit the bound for independently rounding individual cells and the total to the nearest dollar. Rounding is an inference where underlying cent-precision amounts have not been recovered. The same numeric cells and totals were checked against the official SOFI. Appendix A independently confirms the travel column's exact-cent amounts and total, which round to every annual-table travel cell and its printed total.",
+      "evidenceUrl": "https://council.vancouver.ca/20110405/documents/a2.pdf"
+    },
+    {
+      "year": 2010,
+      "column": "travelConferences",
+      "printedTotal": 73090,
+      "sumOfDisclosedCells": 73088,
+      "difference": -2,
+      "status": "within-reported-rounding",
+      "roundingLimit": 6,
+      "missingCells": 0,
+      "roundingReason": "The report presents individual amounts and column totals in whole dollars. The transcription preserves both. All differences fit the bound for independently rounding individual cells and the total to the nearest dollar. Rounding is an inference where underlying cent-precision amounts have not been recovered. The same numeric cells and totals were checked against the official SOFI. Appendix A independently confirms the travel column's exact-cent amounts and total, which round to every annual-table travel cell and its printed total.",
+      "evidenceUrl": "https://council.vancouver.ca/20110405/documents/a2.pdf"
+    },
+    {
+      "year": 2011,
+      "column": "remuneration",
+      "printedTotal": 808759,
+      "sumOfDisclosedCells": 808759,
+      "difference": 0,
+      "status": "exact",
+      "roundingLimit": 0,
+      "missingCells": 0
+    },
+    {
+      "year": 2011,
+      "column": "localExpenses",
+      "printedTotal": 37029,
+      "sumOfDisclosedCells": 37028,
+      "difference": -1,
+      "status": "within-reported-rounding",
+      "roundingLimit": 8,
+      "missingCells": 0,
+      "roundingReason": "The report presents individual amounts and column totals in whole dollars. The transcription preserves both. All differences fit the bound for independently rounding individual cells and the total to the nearest dollar. Rounding is an inference where underlying cent-precision amounts have not been recovered. The same numeric cells and totals were checked against the official SOFI.",
+      "evidenceUrl": "https://vancouver.ca/files/cov/2011-statement-of-financial-information.pdf"
+    },
+    {
+      "year": 2011,
+      "column": "transportationAllowance",
+      "printedTotal": 22602,
+      "sumOfDisclosedCells": 22601,
+      "difference": -1,
+      "status": "within-reported-rounding",
+      "roundingLimit": 8,
+      "missingCells": 0,
+      "roundingReason": "The report presents individual amounts and column totals in whole dollars. The transcription preserves both. All differences fit the bound for independently rounding individual cells and the total to the nearest dollar. Rounding is an inference where underlying cent-precision amounts have not been recovered. The same numeric cells and totals were checked against the official SOFI.",
+      "evidenceUrl": "https://vancouver.ca/files/cov/2011-statement-of-financial-information.pdf"
+    },
+    {
+      "year": 2011,
+      "column": "travelConferences",
+      "printedTotal": 55989,
+      "sumOfDisclosedCells": 55989,
+      "difference": 0,
+      "status": "exact",
+      "roundingLimit": 0,
+      "missingCells": 0
+    },
+    {
+      "year": 2012,
+      "tableLabel": "Mayor and Councillors",
+      "column": "remuneration",
+      "printedTotal": 819141,
+      "sumOfDisclosedCells": 819141,
+      "difference": 0,
+      "status": "exact",
+      "roundingLimit": 0,
+      "missingCells": 0
+    },
+    {
+      "year": 2012,
+      "tableLabel": "Mayor and Councillors",
+      "column": "localExpenses",
+      "printedTotal": 35593,
+      "sumOfDisclosedCells": 35593,
+      "difference": 0,
+      "status": "exact",
+      "roundingLimit": 0,
+      "missingCells": 0
+    },
+    {
+      "year": 2012,
+      "tableLabel": "Mayor and Councillors",
+      "column": "transportationAllowance",
+      "printedTotal": 30262,
+      "sumOfDisclosedCells": 30263,
+      "difference": 1,
+      "status": "within-reported-rounding",
+      "roundingLimit": 6,
+      "missingCells": 0,
+      "roundingReason": "Both the SOFI and the separate Council report publish the same whole-dollar cells: $7,175 plus six entries of $3,848 sums to $30,263, while the printed total is $30,262. The $1 difference is consistent with independent whole-dollar rounding; no cell or printed total is changed.",
+      "evidenceUrl": "https://council.vancouver.ca/20130312/documents/a2.pdf"
+    },
+    {
+      "year": 2012,
+      "tableLabel": "Mayor and Councillors",
+      "column": "travelConferences",
+      "printedTotal": 59144,
+      "sumOfDisclosedCells": 59144,
+      "difference": 0,
+      "status": "exact",
+      "roundingLimit": 0,
+      "missingCells": 0
+    },
+    {
+      "year": 2013,
+      "tableLabel": "Mayor and Councillors",
+      "column": "remuneration",
+      "printedTotal": 837531,
+      "sumOfDisclosedCells": 837531,
+      "difference": 0,
+      "status": "exact",
+      "roundingLimit": 0,
+      "missingCells": 0
+    },
+    {
+      "year": 2013,
+      "tableLabel": "Mayor and Councillors",
+      "column": "localExpenses",
+      "printedTotal": 29304,
+      "sumOfDisclosedCells": 29304,
+      "difference": 0,
+      "status": "exact",
+      "roundingLimit": 0,
+      "missingCells": 0
+    },
+    {
+      "year": 2013,
+      "tableLabel": "Mayor and Councillors",
+      "column": "transportationAllowance",
+      "printedTotal": 46515,
+      "sumOfDisclosedCells": 46515,
+      "difference": 0,
+      "status": "exact",
+      "roundingLimit": 0,
+      "missingCells": 0
+    },
+    {
+      "year": 2013,
+      "tableLabel": "Mayor and Councillors",
+      "column": "travelConferences",
+      "printedTotal": 49711,
+      "sumOfDisclosedCells": 49711,
+      "difference": 0,
+      "status": "exact",
+      "roundingLimit": 0,
+      "missingCells": 0
+    },
+    {
+      "year": 2014,
+      "tableLabel": "Mayor and Councillors",
+      "column": "remuneration",
+      "printedTotal": 863542,
+      "sumOfDisclosedCells": 863542,
+      "difference": 0,
+      "status": "exact",
+      "roundingLimit": 0,
+      "missingCells": 0
+    },
+    {
+      "year": 2014,
+      "tableLabel": "Mayor and Councillors",
+      "column": "localExpenses",
+      "printedTotal": 34433,
+      "sumOfDisclosedCells": 34433,
+      "difference": 0,
+      "status": "exact",
+      "roundingLimit": 0,
+      "missingCells": 0
+    },
+    {
+      "year": 2014,
+      "tableLabel": "Mayor and Councillors",
+      "column": "transportationAllowance",
+      "printedTotal": 39720,
+      "sumOfDisclosedCells": 39720,
+      "difference": 0,
+      "status": "exact",
+      "roundingLimit": 0,
+      "missingCells": 0
+    },
+    {
+      "year": 2014,
+      "tableLabel": "Mayor and Councillors",
+      "column": "travelConferences",
+      "printedTotal": 61967,
+      "sumOfDisclosedCells": 61967,
+      "difference": 0,
+      "status": "exact",
+      "roundingLimit": 0,
+      "missingCells": 0
+    },
+    {
+      "year": 2015,
+      "tableLabel": "Mayor and Councillors",
+      "column": "remuneration",
+      "printedTotal": 904274,
+      "sumOfDisclosedCells": 904274,
+      "difference": 0,
+      "status": "exact",
+      "roundingLimit": 0,
+      "missingCells": 0
+    },
+    {
+      "year": 2015,
+      "tableLabel": "Mayor and Councillors",
+      "column": "localExpenses",
+      "printedTotal": 28386,
+      "sumOfDisclosedCells": 28386,
+      "difference": 0,
+      "status": "exact",
+      "roundingLimit": 0,
+      "missingCells": 0
+    },
+    {
+      "year": 2015,
+      "tableLabel": "Mayor and Councillors",
+      "column": "transportationAllowance",
+      "printedTotal": 41483,
+      "sumOfDisclosedCells": 41483,
+      "difference": 0,
+      "status": "exact",
+      "roundingLimit": 0,
+      "missingCells": 0
+    },
+    {
+      "year": 2015,
+      "tableLabel": "Mayor and Councillors",
+      "column": "travelConferences",
+      "printedTotal": 62800,
+      "sumOfDisclosedCells": 62800,
+      "difference": 0,
+      "status": "exact",
+      "roundingLimit": 0,
+      "missingCells": 0
+    },
+    {
+      "year": 2016,
+      "tableLabel": "Mayor and Councillors",
+      "column": "remuneration",
+      "printedTotal": 1243010,
+      "sumOfDisclosedCells": 1243010,
+      "difference": 0,
+      "status": "exact",
+      "roundingLimit": 0,
+      "missingCells": 0
+    },
+    {
+      "year": 2016,
+      "tableLabel": "Mayor and Councillors",
+      "column": "localExpenses",
+      "printedTotal": 86298,
+      "sumOfDisclosedCells": 86298,
+      "difference": 0,
+      "status": "exact",
+      "roundingLimit": 0,
+      "missingCells": 0
+    },
+    {
+      "year": 2016,
+      "tableLabel": "Mayor and Councillors",
+      "column": "travelConferences",
+      "printedTotal": 61198,
+      "sumOfDisclosedCells": 61198,
+      "difference": 0,
+      "status": "exact",
+      "roundingLimit": 0,
+      "missingCells": 0
+    },
+    {
+      "year": 2016,
+      "tableLabel": "Mayor and Councillors",
+      "column": "discretionaryExpenses",
+      "printedTotal": 797607,
+      "sumOfDisclosedCells": 797607,
+      "difference": 0,
+      "status": "exact",
+      "roundingLimit": 0,
+      "missingCells": 0
+    },
+    {
+      "year": 2017,
+      "tableLabel": "Mayor and Councillors",
+      "column": "remuneration",
+      "printedTotal": 1079826,
+      "sumOfDisclosedCells": 1079826,
+      "difference": 0,
+      "status": "exact",
+      "roundingLimit": 0,
+      "missingCells": 0
+    },
+    {
+      "year": 2017,
+      "tableLabel": "Mayor and Councillors",
+      "column": "localExpenses",
+      "printedTotal": 80382,
+      "sumOfDisclosedCells": 80382,
+      "difference": 0,
+      "status": "exact",
+      "roundingLimit": 0,
+      "missingCells": 0
+    },
+    {
+      "year": 2017,
+      "tableLabel": "Mayor and Councillors",
+      "column": "travelConferences",
+      "printedTotal": 93864,
+      "sumOfDisclosedCells": 93864,
+      "difference": 0,
+      "status": "exact",
+      "roundingLimit": 0,
+      "missingCells": 0
+    },
+    {
+      "year": 2017,
+      "tableLabel": "Mayor and Councillors",
+      "column": "discretionaryExpenses",
+      "printedTotal": 727045,
+      "sumOfDisclosedCells": 727045,
+      "difference": 0,
+      "status": "exact",
+      "roundingLimit": 0,
+      "missingCells": 0
+    },
+    {
+      "year": 2018,
+      "tableLabel": "Council 2018 - 2022",
+      "column": "remuneration",
+      "printedTotal": 308471,
+      "sumOfDisclosedCells": 308469,
+      "difference": -2,
+      "status": "within-reported-rounding",
+      "roundingLimit": 6,
+      "missingCells": 0,
+      "roundingReason": "The standalone SOFI and its official council-packet edition publish identical whole-dollar cells and totals. The remuneration rows sum to $308,469 versus $308,471 printed, and local expenses sum to $21,074 versus $21,072 printed. Both $2 differences are consistent with independent whole-dollar rounding; original amounts are preserved.",
+      "evidenceUrl": "https://council.vancouver.ca/20190402/documents/a2.pdf"
+    },
+    {
+      "year": 2018,
+      "tableLabel": "Council 2018 - 2022",
+      "column": "localExpenses",
+      "printedTotal": 21072,
+      "sumOfDisclosedCells": 21074,
+      "difference": 2,
+      "status": "within-reported-rounding",
+      "roundingLimit": 6,
+      "missingCells": 0,
+      "roundingReason": "The standalone SOFI and its official council-packet edition publish identical whole-dollar cells and totals. The remuneration rows sum to $308,469 versus $308,471 printed, and local expenses sum to $21,074 versus $21,072 printed. Both $2 differences are consistent with independent whole-dollar rounding; original amounts are preserved.",
+      "evidenceUrl": "https://council.vancouver.ca/20190402/documents/a2.pdf"
+    },
+    {
+      "year": 2018,
+      "tableLabel": "Council 2018 - 2022",
+      "column": "travelConferences",
+      "printedTotal": 12966,
+      "sumOfDisclosedCells": 12966,
+      "difference": 0,
+      "status": "exact",
+      "roundingLimit": 0,
+      "missingCells": 0
+    },
+    {
+      "year": 2018,
+      "tableLabel": "Council 2018 - 2022",
+      "column": "discretionaryExpenses",
+      "printedTotal": 158600,
+      "sumOfDisclosedCells": 158600,
+      "difference": 0,
+      "status": "exact",
+      "roundingLimit": 0,
+      "missingCells": 0
+    },
+    {
+      "year": 2018,
+      "tableLabel": "Council 2014 - 2018",
+      "column": "remuneration",
+      "printedTotal": 953542,
+      "sumOfDisclosedCells": 953542,
+      "difference": 0,
+      "status": "exact",
+      "roundingLimit": 0,
+      "missingCells": 0
+    },
+    {
+      "year": 2018,
+      "tableLabel": "Council 2014 - 2018",
+      "column": "localExpenses",
+      "printedTotal": 68812,
+      "sumOfDisclosedCells": 68812,
+      "difference": 0,
+      "status": "exact",
+      "roundingLimit": 0,
+      "missingCells": 0
+    },
+    {
+      "year": 2018,
+      "tableLabel": "Council 2014 - 2018",
+      "column": "travelConferences",
+      "printedTotal": 64825,
+      "sumOfDisclosedCells": 64825,
+      "difference": 0,
+      "status": "exact",
+      "roundingLimit": 0,
+      "missingCells": 0
+    },
+    {
+      "year": 2018,
+      "tableLabel": "Council 2014 - 2018",
+      "column": "discretionaryExpenses",
+      "printedTotal": 619019,
+      "sumOfDisclosedCells": 619019,
+      "difference": 0,
+      "status": "exact",
+      "roundingLimit": 0,
+      "missingCells": 0
+    },
+    {
+      "year": 2019,
+      "tableLabel": "Mayor and Councillors",
+      "column": "remuneration",
+      "printedTotal": 1143477,
+      "sumOfDisclosedCells": 1143477,
+      "difference": 0,
+      "status": "exact",
+      "roundingLimit": 0,
+      "missingCells": 0
+    },
+    {
+      "year": 2019,
+      "tableLabel": "Mayor and Councillors",
+      "column": "localExpenses",
+      "printedTotal": 90591,
+      "sumOfDisclosedCells": 90591,
+      "difference": 0,
+      "status": "exact",
+      "roundingLimit": 0,
+      "missingCells": 0
+    },
+    {
+      "year": 2019,
+      "tableLabel": "Mayor and Councillors",
+      "column": "travelConferences",
+      "printedTotal": 64971,
+      "sumOfDisclosedCells": 64971,
+      "difference": 0,
+      "status": "exact",
+      "roundingLimit": 0,
+      "missingCells": 0
+    },
+    {
+      "year": 2019,
+      "tableLabel": "Mayor and Councillors",
+      "column": "discretionaryExpenses",
+      "printedTotal": 861815,
+      "sumOfDisclosedCells": 861815,
+      "difference": 0,
+      "status": "exact",
+      "roundingLimit": 0,
+      "missingCells": 0
+    },
+    {
       "year": 2020,
       "column": "remuneration",
       "printedTotal": 1104744,
       "sumOfDisclosedCells": 1104744,
+      "difference": 0,
+      "status": "exact",
+      "roundingLimit": 0,
       "missingCells": 0
     },
     {
@@ -76,6 +847,9 @@
       "column": "localExpenses",
       "printedTotal": 77517,
       "sumOfDisclosedCells": 77517,
+      "difference": 0,
+      "status": "exact",
+      "roundingLimit": 0,
       "missingCells": 0
     },
     {
@@ -83,6 +857,9 @@
       "column": "travelConferences",
       "printedTotal": 12188,
       "sumOfDisclosedCells": 12188,
+      "difference": 0,
+      "status": "exact",
+      "roundingLimit": 0,
       "missingCells": 0
     },
     {
@@ -90,6 +867,9 @@
       "column": "discretionaryExpenses",
       "printedTotal": 956880,
       "sumOfDisclosedCells": 956880,
+      "difference": 0,
+      "status": "exact",
+      "roundingLimit": 0,
       "missingCells": 0
     },
     {
@@ -97,6 +877,9 @@
       "column": "remuneration",
       "printedTotal": 1155987,
       "sumOfDisclosedCells": 1155987,
+      "difference": 0,
+      "status": "exact",
+      "roundingLimit": 0,
       "missingCells": 0
     },
     {
@@ -104,6 +887,9 @@
       "column": "localExpenses",
       "printedTotal": 87835,
       "sumOfDisclosedCells": 87835,
+      "difference": 0,
+      "status": "exact",
+      "roundingLimit": 0,
       "missingCells": 0
     },
     {
@@ -111,6 +897,9 @@
       "column": "travelConferences",
       "printedTotal": 24424,
       "sumOfDisclosedCells": 24424,
+      "difference": 0,
+      "status": "exact",
+      "roundingLimit": 0,
       "missingCells": 0
     },
     {
@@ -118,6 +907,9 @@
       "column": "discretionaryExpenses",
       "printedTotal": 877248,
       "sumOfDisclosedCells": 877248,
+      "difference": 0,
+      "status": "exact",
+      "roundingLimit": 0,
       "missingCells": 0
     },
     {
@@ -125,6 +917,9 @@
       "column": "remuneration",
       "printedTotal": 1271275,
       "sumOfDisclosedCells": 1271275,
+      "difference": 0,
+      "status": "exact",
+      "roundingLimit": 0,
       "missingCells": 0
     },
     {
@@ -132,6 +927,9 @@
       "column": "localExpenses",
       "printedTotal": 94905,
       "sumOfDisclosedCells": 94905,
+      "difference": 0,
+      "status": "exact",
+      "roundingLimit": 0,
       "missingCells": 0
     },
     {
@@ -139,6 +937,9 @@
       "column": "travelConferences",
       "printedTotal": 33792,
       "sumOfDisclosedCells": 33792,
+      "difference": 0,
+      "status": "exact",
+      "roundingLimit": 0,
       "missingCells": 0
     },
     {
@@ -146,6 +947,9 @@
       "column": "discretionaryExpenses",
       "printedTotal": 893061,
       "sumOfDisclosedCells": 893061,
+      "difference": 0,
+      "status": "exact",
+      "roundingLimit": 0,
       "missingCells": 0
     },
     {
@@ -153,6 +957,9 @@
       "column": "remuneration",
       "printedTotal": 1313949,
       "sumOfDisclosedCells": 1313949,
+      "difference": 0,
+      "status": "exact",
+      "roundingLimit": 0,
       "missingCells": 0
     },
     {
@@ -160,6 +967,9 @@
       "column": "localExpenses",
       "printedTotal": 111017,
       "sumOfDisclosedCells": 111017,
+      "difference": 0,
+      "status": "exact",
+      "roundingLimit": 0,
       "missingCells": 0
     },
     {
@@ -167,6 +977,9 @@
       "column": "travelConferences",
       "printedTotal": 98610,
       "sumOfDisclosedCells": 98610,
+      "difference": 0,
+      "status": "exact",
+      "roundingLimit": 0,
       "missingCells": 0
     },
     {
@@ -174,6 +987,9 @@
       "column": "discretionaryExpenses",
       "printedTotal": 949065,
       "sumOfDisclosedCells": 949065,
+      "difference": 0,
+      "status": "exact",
+      "roundingLimit": 0,
       "missingCells": 0
     },
     {
@@ -181,6 +997,9 @@
       "column": "remuneration",
       "printedTotal": 1347296,
       "sumOfDisclosedCells": 1347296,
+      "difference": 0,
+      "status": "exact",
+      "roundingLimit": 0,
       "missingCells": 0
     },
     {
@@ -188,6 +1007,9 @@
       "column": "localExpenses",
       "printedTotal": 109197,
       "sumOfDisclosedCells": 109197,
+      "difference": 0,
+      "status": "exact",
+      "roundingLimit": 0,
       "missingCells": 0
     },
     {
@@ -195,6 +1017,9 @@
       "column": "travelConferences",
       "printedTotal": 73614,
       "sumOfDisclosedCells": 73614,
+      "difference": 0,
+      "status": "exact",
+      "roundingLimit": 0,
       "missingCells": 0
     },
     {
@@ -202,6 +1027,9 @@
       "column": "discretionaryExpenses",
       "printedTotal": 1174913,
       "sumOfDisclosedCells": 1174913,
+      "difference": 0,
+      "status": "exact",
+      "roundingLimit": 0,
       "missingCells": 0
     },
     {
@@ -209,6 +1037,9 @@
       "column": "remuneration",
       "printedTotal": 1344313,
       "sumOfDisclosedCells": 1344313,
+      "difference": 0,
+      "status": "exact",
+      "roundingLimit": 0,
       "missingCells": 0
     },
     {
@@ -216,6 +1047,9 @@
       "column": "localExpenses",
       "printedTotal": 106798,
       "sumOfDisclosedCells": 106798,
+      "difference": 0,
+      "status": "exact",
+      "roundingLimit": 0,
       "missingCells": 0
     },
     {
@@ -223,6 +1057,9 @@
       "column": "travelConferences",
       "printedTotal": 96635,
       "sumOfDisclosedCells": 96635,
+      "difference": 0,
+      "status": "exact",
+      "roundingLimit": 0,
       "missingCells": 0
     },
     {
@@ -230,6 +1067,9 @@
       "column": "discretionaryExpenses",
       "printedTotal": 1249042,
       "sumOfDisclosedCells": 1249042,
+      "difference": 0,
+      "status": "exact",
+      "roundingLimit": 0,
       "missingCells": 0
     },
     {
@@ -237,6 +1077,9 @@
       "column": "income",
       "printedTotal": 247674.7,
       "sumOfDisclosedCells": 247674.7,
+      "difference": 0,
+      "status": "exact",
+      "roundingLimit": 0,
       "missingCells": 0
     },
     {
@@ -244,6 +1087,9 @@
       "column": "municipalOfficersAllowance",
       "printedTotal": 123837.42,
       "sumOfDisclosedCells": 123837.42,
+      "difference": 0,
+      "status": "exact",
+      "roundingLimit": 0,
       "missingCells": 0
     },
     {
@@ -251,6 +1097,9 @@
       "column": "travelTraining",
       "printedTotal": 26238.76,
       "sumOfDisclosedCells": 26238.76,
+      "difference": 0,
+      "status": "exact",
+      "roundingLimit": 0,
       "missingCells": 0
     },
     {
@@ -258,6 +1107,9 @@
       "column": "autoAllowance",
       "printedTotal": 7200,
       "sumOfDisclosedCells": 7200,
+      "difference": 0,
+      "status": "exact",
+      "roundingLimit": 0,
       "missingCells": 0
     },
     {
@@ -265,6 +1117,9 @@
       "column": "income",
       "printedTotal": 353454.48,
       "sumOfDisclosedCells": 353454.48,
+      "difference": 0,
+      "status": "exact",
+      "roundingLimit": 0,
       "missingCells": 0
     },
     {
@@ -272,6 +1127,9 @@
       "column": "municipalOfficersAllowance",
       "printedTotal": 73449.94,
       "sumOfDisclosedCells": 73449.94,
+      "difference": 0,
+      "status": "exact",
+      "roundingLimit": 0,
       "missingCells": 0
     },
     {
@@ -279,6 +1137,9 @@
       "column": "travelTraining",
       "printedTotal": 34887.19,
       "sumOfDisclosedCells": 34887.19,
+      "difference": 0,
+      "status": "exact",
+      "roundingLimit": 0,
       "missingCells": 0
     },
     {
@@ -286,6 +1147,9 @@
       "column": "autoAllowance",
       "printedTotal": 7200,
       "sumOfDisclosedCells": 7200,
+      "difference": 0,
+      "status": "exact",
+      "roundingLimit": 0,
       "missingCells": 0
     },
     {
@@ -293,6 +1157,9 @@
       "column": "localExpenses",
       "printedTotal": 3776.7,
       "sumOfDisclosedCells": 3776.7,
+      "difference": 0,
+      "status": "exact",
+      "roundingLimit": 0,
       "missingCells": 0
     },
     {
@@ -300,6 +1167,9 @@
       "column": "income",
       "printedTotal": 522721.7,
       "sumOfDisclosedCells": 522721.7,
+      "difference": 0,
+      "status": "exact",
+      "roundingLimit": 0,
       "missingCells": 0
     },
     {
@@ -307,6 +1177,9 @@
       "column": "localExpenses",
       "printedTotal": 27157.02,
       "sumOfDisclosedCells": 27157.02,
+      "difference": 0,
+      "status": "exact",
+      "roundingLimit": 0,
       "missingCells": 0
     },
     {
@@ -314,6 +1187,9 @@
       "column": "autoAllowance",
       "printedTotal": 7200,
       "sumOfDisclosedCells": 7200,
+      "difference": 0,
+      "status": "exact",
+      "roundingLimit": 0,
       "missingCells": 0
     },
     {
@@ -321,6 +1197,9 @@
       "column": "travelTraining",
       "printedTotal": 32992.12,
       "sumOfDisclosedCells": 32992.12,
+      "difference": 0,
+      "status": "exact",
+      "roundingLimit": 0,
       "missingCells": 0
     },
     {
@@ -328,6 +1207,9 @@
       "column": "income",
       "printedTotal": 532004.16,
       "sumOfDisclosedCells": 532004.16,
+      "difference": 0,
+      "status": "exact",
+      "roundingLimit": 0,
       "missingCells": 0
     },
     {
@@ -335,6 +1217,9 @@
       "column": "localExpenses",
       "printedTotal": 31436.73,
       "sumOfDisclosedCells": 31436.73,
+      "difference": 0,
+      "status": "exact",
+      "roundingLimit": 0,
       "missingCells": 0
     },
     {
@@ -342,6 +1227,9 @@
       "column": "autoAllowance",
       "printedTotal": 6933.42,
       "sumOfDisclosedCells": 6933.42,
+      "difference": 0,
+      "status": "exact",
+      "roundingLimit": 0,
       "missingCells": 1
     },
     {
@@ -349,6 +1237,9 @@
       "column": "travelTraining",
       "printedTotal": 54489.71,
       "sumOfDisclosedCells": 54489.71,
+      "difference": 0,
+      "status": "exact",
+      "roundingLimit": 0,
       "missingCells": 0
     },
     {
@@ -356,6 +1247,9 @@
       "column": "income",
       "printedTotal": 530814.08,
       "sumOfDisclosedCells": 530814.08,
+      "difference": 0,
+      "status": "exact",
+      "roundingLimit": 0,
       "missingCells": 0
     },
     {
@@ -363,6 +1257,9 @@
       "column": "localExpenses",
       "printedTotal": 31644.81,
       "sumOfDisclosedCells": 31644.81,
+      "difference": 0,
+      "status": "exact",
+      "roundingLimit": 0,
       "missingCells": 0
     },
     {
@@ -370,6 +1267,9 @@
       "column": "autoAllowance",
       "printedTotal": 7176.53,
       "sumOfDisclosedCells": 7176.53,
+      "difference": 0,
+      "status": "exact",
+      "roundingLimit": 0,
       "missingCells": 1
     },
     {
@@ -377,6 +1277,9 @@
       "column": "travelTraining",
       "printedTotal": 55662.49,
       "sumOfDisclosedCells": 55662.49,
+      "difference": 0,
+      "status": "exact",
+      "roundingLimit": 0,
       "missingCells": 0
     },
     {
@@ -384,6 +1287,9 @@
       "column": "income",
       "printedTotal": 537901.38,
       "sumOfDisclosedCells": 537901.38,
+      "difference": 0,
+      "status": "exact",
+      "roundingLimit": 0,
       "missingCells": 0
     },
     {
@@ -391,6 +1297,9 @@
       "column": "localExpenses",
       "printedTotal": 29542.48,
       "sumOfDisclosedCells": 29542.48,
+      "difference": 0,
+      "status": "exact",
+      "roundingLimit": 0,
       "missingCells": 0
     },
     {
@@ -398,6 +1307,9 @@
       "column": "autoAllowance",
       "printedTotal": 7175.48,
       "sumOfDisclosedCells": 7175.48,
+      "difference": 0,
+      "status": "exact",
+      "roundingLimit": 0,
       "missingCells": 0
     },
     {
@@ -405,6 +1317,9 @@
       "column": "travelTraining",
       "printedTotal": 51809.2,
       "sumOfDisclosedCells": 51809.2,
+      "difference": 0,
+      "status": "exact",
+      "roundingLimit": 0,
       "missingCells": 0
     },
     {
@@ -412,6 +1327,9 @@
       "column": "income",
       "printedTotal": 543073.37,
       "sumOfDisclosedCells": 543073.37,
+      "difference": 0,
+      "status": "exact",
+      "roundingLimit": 0,
       "missingCells": 0
     },
     {
@@ -419,6 +1337,9 @@
       "column": "localExpenses",
       "printedTotal": 29920.56,
       "sumOfDisclosedCells": 29920.56,
+      "difference": 0,
+      "status": "exact",
+      "roundingLimit": 0,
       "missingCells": 0
     },
     {
@@ -426,6 +1347,9 @@
       "column": "autoAllowance",
       "printedTotal": 7147.88,
       "sumOfDisclosedCells": 7147.88,
+      "difference": 0,
+      "status": "exact",
+      "roundingLimit": 0,
       "missingCells": 0
     },
     {
@@ -433,6 +1357,9 @@
       "column": "travelTraining",
       "printedTotal": 58334.58,
       "sumOfDisclosedCells": 58334.58,
+      "difference": 0,
+      "status": "exact",
+      "roundingLimit": 0,
       "missingCells": 0
     },
     {
@@ -440,6 +1367,9 @@
       "column": "income",
       "printedTotal": 546388.11,
       "sumOfDisclosedCells": 546388.11,
+      "difference": 0,
+      "status": "exact",
+      "roundingLimit": 0,
       "missingCells": 0
     },
     {
@@ -447,6 +1377,9 @@
       "column": "localExpenses",
       "printedTotal": 32201.54,
       "sumOfDisclosedCells": 32201.54,
+      "difference": 0,
+      "status": "exact",
+      "roundingLimit": 0,
       "missingCells": 0
     },
     {
@@ -454,6 +1387,9 @@
       "column": "autoAllowance",
       "printedTotal": 6903.44,
       "sumOfDisclosedCells": 6903.44,
+      "difference": 0,
+      "status": "exact",
+      "roundingLimit": 0,
       "missingCells": 0
     },
     {
@@ -461,6 +1397,9 @@
       "column": "travelTraining",
       "printedTotal": 56096.32,
       "sumOfDisclosedCells": 56096.32,
+      "difference": 0,
+      "status": "exact",
+      "roundingLimit": 0,
       "missingCells": 0
     },
     {
@@ -468,6 +1407,9 @@
       "column": "income",
       "printedTotal": 569468.54,
       "sumOfDisclosedCells": 569468.54,
+      "difference": 0,
+      "status": "exact",
+      "roundingLimit": 0,
       "missingCells": 0
     },
     {
@@ -475,6 +1417,9 @@
       "column": "localExpenses",
       "printedTotal": 13381.18,
       "sumOfDisclosedCells": 13381.18,
+      "difference": 0,
+      "status": "exact",
+      "roundingLimit": 0,
       "missingCells": 0
     },
     {
@@ -482,6 +1427,9 @@
       "column": "autoAllowance",
       "printedTotal": 23879.47,
       "sumOfDisclosedCells": 23879.47,
+      "difference": 0,
+      "status": "exact",
+      "roundingLimit": 0,
       "missingCells": 0
     },
     {
@@ -489,24 +1437,88 @@
       "column": "travelTraining",
       "printedTotal": 56005.72,
       "sumOfDisclosedCells": 56005.72,
+      "difference": 0,
+      "status": "exact",
+      "roundingLimit": 0,
       "missingCells": 0
     }
   ],
+  "precisionEvidence": [
+    {
+      "year": 2004,
+      "type": "rounded-source-edition",
+      "sourceUrl": "https://council.vancouver.ca/20050524/documents/a4.pdf",
+      "checkedCells": 44,
+      "totalDifferences": [
+        {
+          "column": "remuneration",
+          "primaryPrintedTotal": 668077.84,
+          "comparedPrintedTotal": 668078,
+          "roundedPrimaryMinusCompared": 0
+        },
+        {
+          "column": "localExpenses",
+          "primaryPrintedTotal": 14811.3,
+          "comparedPrintedTotal": 14811,
+          "roundedPrimaryMinusCompared": 0
+        },
+        {
+          "column": "transportationAllowance",
+          "primaryPrintedTotal": 25915.72,
+          "comparedPrintedTotal": 25916,
+          "roundedPrimaryMinusCompared": 0
+        },
+        {
+          "column": "travelConferences",
+          "primaryPrintedTotal": 47666.66,
+          "comparedPrintedTotal": 47666,
+          "roundedPrimaryMinusCompared": 1
+        }
+      ]
+    },
+    {
+      "year": 2010,
+      "type": "exact-cent-appendix",
+      "sourceUrl": "https://council.vancouver.ca/20110405/documents/a2.pdf",
+      "column": "travelConferences",
+      "checkedPersonAmounts": 11,
+      "exactPrintedTotal": 73089.62,
+      "exactSum": 73089.62,
+      "annualPrintedTotal": 73090
+    },
+    {
+      "year": 2011,
+      "type": "exact-cent-appendix",
+      "sourceUrl": "https://council.vancouver.ca/20120327/documents/a3.pdf",
+      "column": "travelConferences",
+      "checkedPersonAmounts": 11,
+      "exactPrintedTotal": 55988.82,
+      "exactSum": 55988.82,
+      "annualPrintedTotal": 55989
+    }
+  ],
+  "preservation": {
+    "baselineCommit": "bc4559176a8fc76e070e8ae6d51cc518eee63bf8",
+    "officeObservations": 430,
+    "namedPayments": 182,
+    "sources": 25,
+    "protectedCoreSha256": "a1224d3f7d761a2ee65ec2b98d78fdb86f7bba8b9d5e1107d45cd13cb3139f72"
+  },
   "outputs": [
     {
       "path": "public/salaries/council-pay.json",
-      "sha256": "3a5239041e2e7b0b27dc52b50ca98b3bb3bd0c1d0cc80bb252c62ebe8b4f3529",
-      "bytes": 348893
+      "sha256": "27baf0c3d59203749ee939459e0aeff50e24ae36535e1c1a259f19ef155d45b8",
+      "bytes": 923349
     },
     {
       "path": "public/salaries/council-pay.csv",
-      "sha256": "b4c63d66890de339fcc43d1141e872394fbc1d9e083ae67ea7ff533edcc6b4a8",
-      "bytes": 730604
+      "sha256": "ade121a00d5fe25847f4900ffd25392efe2a8e8c497adc90895546af58095d7f",
+      "bytes": 1544948
     },
     {
       "path": "research/salaries/council-pay-history-2026-11-04/coverage.json",
-      "sha256": "0d81da874ee45730d5b45a5eb437ed436ddbc10e7cc05a9290a2680c0e8100f9",
-      "bytes": 38186
+      "sha256": "5cafa3b200bea35cd79913a22f85d50f54dbaf1856d3d163e47ecabf77e35535",
+      "bytes": 175493
     }
   ]
 }

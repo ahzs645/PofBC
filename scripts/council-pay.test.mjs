@@ -1,10 +1,12 @@
 import test from 'node:test'
 import assert from 'node:assert/strict'
 import { readFileSync } from 'node:fs'
-import { buildCouncilPay, checkTable, checkCbc2021, checkSourceComparisons, normalizePayment, validateDataset, datasetCsv } from './build-council-pay.mjs'
+import { buildCouncilPay, checkTable, checkCbc2021, checkSourceComparisons, checkPaymentPrecisionEvidence, checkExpansionPreservation, normalizePayment, validateDataset, datasetCsv } from './build-council-pay.mjs'
 
 const old = JSON.parse(readFileSync(new URL('../research/salaries/council-pay-history-2026-11-04/vancouver-payments-transcription.json', import.meta.url)))
 const modern = JSON.parse(readFileSync(new URL('../research/salaries/council-pay-history-2026-11-04/vancouver-modern-payments-transcription.json', import.meta.url)))
+const earlierExtension = JSON.parse(readFileSync(new URL('../research/salaries/council-pay-history-2026-11-04/vancouver-2004-2011-payments-transcription.json', import.meta.url)))
+const laterExtension = JSON.parse(readFileSync(new URL('../research/salaries/council-pay-history-2026-11-04/vancouver-2012-2019-payments-transcription.json', import.meta.url)))
 const payment = (year, pattern) => {
   const table = [...old.tables, ...modern.tables].find((table) => table.year === year)
   return normalizePayment(table, table.rows.find((row) => pattern.test(row.sourceName)))
@@ -31,12 +33,124 @@ test('CBC and official rate differences remain independently sourced observation
   assert.equal(data.coverage.surveys.find((survey) => survey.input.includes('2019')).status, 'partial')
 })
 
-test('every accepted Vancouver table reconciles every published component total', () => {
+test('all original Vancouver tables retain their exact printed column controls', () => {
   const controls = [...old.tables, ...modern.tables].flatMap(checkTable)
   assert.equal(controls.length, 61)
   assert.equal([...old.tables, ...modern.tables].reduce((n, table) => n + table.rows.length, 0), 182)
   const damaged = structuredClone(old.tables[0]); damaged.rows[0].values[0] += 0.01
   assert.throws(() => checkTable(damaged), /printed total mismatch/)
+})
+
+test('the added payment years close the 2004–2019 gap without promoting the held 1996 report', () => {
+  const { data, validation } = buildCouncilPay()
+  assert.deepEqual(data.coverage.vancouverPaymentYears, [1994, 1995, ...Array.from({ length: 29 }, (_, at) => 1997 + at)])
+  assert.deepEqual(data.coverage.vancouverPaymentGaps, [1996])
+  assert.equal(earlierExtension.tables.reduce((sum, table) => sum + table.rows.length, 0), 104)
+  assert.equal(laterExtension.tables.reduce((sum, table) => sum + table.rows.length, 0), 99)
+  assert.equal(validation.counts.exactColumnControls, 114)
+  assert.equal(validation.counts.roundingQualifiedControls, 15)
+  assert.equal(data.coverage.paymentObservations, 385)
+  const councilRates = data.coverage.timeSeries.find((series) => series.employerSlug === 'city-of-vancouver' && series.role === 'Councillor' && series.measure === 'annual-base-rate')
+  assert.equal(councilRates.ranges, '1995–2026')
+  assert.deepEqual(councilRates.missingYears, [])
+})
+
+test('older transportation allowances are included once and office budgets remain excluded', () => {
+  const table = laterExtension.tables.find((entry) => entry.year === 2012)
+  const mayor = normalizePayment(table, table.rows.find((row) => row.role === 'Mayor'))
+  assert.equal(mayor.name, 'Robertson, G.')
+  assert.equal(mayor.remuneration, 145581)
+  assert.equal(mayor.expenses, 34441)
+  assert.deepEqual(mayor.expenseComponentKeys, ['localExpenses', 'transportationAllowance', 'travelConferences'])
+  const later = laterExtension.tables.find((entry) => entry.year === 2017)
+  const laterMayor = normalizePayment(later, later.rows.find((row) => row.role === 'Mayor'))
+  assert.equal(laterMayor.expenses, 60994)
+  assert.equal(laterMayor.components.discretionaryExpenses, 706165)
+  const invalid = structuredClone(later); invalid.expenseColumns.push('discretionaryExpenses')
+  assert.throws(() => checkTable(invalid), /invalid personal expense component/)
+})
+
+test('Sullivan’s two 2005 roles retain separate amounts, source keys and term labels', () => {
+  const { data } = buildCouncilPay()
+  const rows = data.payments.filter((row) => row.year === 2005 && row.name === 'Sullivan, S.')
+  assert.equal(rows.length, 2)
+  assert.equal(new Set(rows.map((row) => row.id)).size, 2)
+  assert.equal(rows.find((row) => row.role === 'Mayor').remuneration, 5935)
+  assert.equal(rows.find((row) => row.role === 'Councillor').remuneration, 50269)
+  assert.deepEqual(new Set(rows.map((row) => row.term)), new Set(['2005-2008', '2002-2005']))
+  assert.ok(rows.every((row) => row.sourceRowLabel && row.sourceRowKey))
+})
+
+test('2018 keeps both actual printed subtables under one primary source', () => {
+  const { data, validation } = buildCouncilPay()
+  assert.equal(data.payments.filter((row) => row.year === 2018).length, 20)
+  assert.equal(data.sources.filter((source) => source.id === 'vancouver-council-payments-2018').length, 1)
+  const controls = validation.controls.filter((row) => row.year === 2018)
+  assert.equal(controls.length, 8)
+  assert.equal(new Set(controls.map((row) => row.tableLabel)).size, 2)
+  assert.equal(controls.filter((row) => row.status === 'within-reported-rounding').length, 2)
+})
+
+test('rounding qualifications retain differences and cannot mask larger or cent-level errors', () => {
+  const table = laterExtension.tables.find((entry) => entry.year === 2012)
+  const control = checkTable(table).find((row) => row.column === 'transportationAllowance')
+  assert.equal(control.printedTotal, 30262)
+  assert.equal(control.sumOfDisclosedCells, 30263)
+  assert.equal(control.difference, 1)
+  assert.equal(control.status, 'within-reported-rounding')
+  const unqualified = structuredClone(table); delete unqualified.rounding
+  assert.throws(() => checkTable(unqualified), /printed total mismatch/)
+  const large = structuredClone(table); large.rows[0].values[2] += 100
+  assert.throws(() => checkTable(large), /exceeds documented rounding bound/)
+  const centsError = structuredClone(table); centsError.rows[0].values[2] += 0.01
+  assert.throws(() => checkTable(centsError), /whole-dollar cells/)
+})
+
+test('independent exact-cent evidence checks rounded cells without replacing source editions', () => {
+  const first = earlierExtension.tables.find((table) => table.year === 2004)
+  const [comparison] = checkPaymentPrecisionEvidence(first)
+  assert.equal(comparison.checkedCells, 44)
+  assert.equal(comparison.totalDifferences.find((row) => row.column === 'travelConferences').roundedPrimaryMinusCompared, 1)
+  const evidence = earlierExtension.tables.filter((table) => [2010, 2011].includes(table.year)).flatMap(checkPaymentPrecisionEvidence)
+  assert.equal(evidence.reduce((sum, entry) => sum + entry.checkedPersonAmounts, 0), 22)
+  assert.deepEqual(evidence.map((entry) => entry.exactSum), [73089.62, 55988.82])
+  const damaged = structuredClone(first); damaged.sourceComparisons[0].rows[0].values[0] += 1
+  assert.throws(() => checkPaymentPrecisionEvidence(damaged), /rounded comparison cell differs/)
+})
+
+test('all prior companion amounts, roles, years and primary source URLs remain protected', () => {
+  const { data } = buildCouncilPay()
+  const baseline = JSON.parse(readFileSync(new URL('../research/salaries/council-pay-history-2026-11-04/timeseries-expansion-baseline.json', import.meta.url)))
+  const result = checkExpansionPreservation(data, baseline)
+  assert.equal(result.officeObservations, 430)
+  assert.equal(result.namedPayments, 182)
+  const modified = structuredClone(data)
+  modified.observations.find((row) => row.id === baseline.protectedOfficeIds[0]).amount += 1
+  assert.throws(() => checkExpansionPreservation(modified, baseline), /Prior council monetary values/)
+})
+
+test('survey years and precision do not fill gaps in an adopted-rate series', () => {
+  const { data } = buildCouncilPay()
+  const rates = data.coverage.timeSeries.find((entry) => entry.municipality === 'Victoria' && entry.role === 'Mayor' && entry.measure === 'annual-base-rate')
+  assert.deepEqual(rates.years, [2022, 2024])
+  assert.deepEqual(rates.missingYears, [2023])
+  const survey = data.observations.find((row) => row.municipality === 'Victoria' && row.role === 'Mayor' && row.year === 2023)
+  assert.equal(survey.measure, 'reported-office-pay')
+  assert.equal(survey.amountPrecisionCad, 100)
+  assert.ok(data.payments.filter((row) => row.year >= 2012 && row.year <= 2019).every((row) => row.sourcePrecision === 1))
+})
+
+test('Abbotsford’s explicitly stated rate interval retains its 2011 transition and source precision', () => {
+  const { data } = buildCouncilPay()
+  const rows = data.observations.filter((row) => row.sourceId === 'abbotsford-rate-interval-2007-2011-original-review')
+  assert.equal(rows.length, 10)
+  assert.ok(rows.every((row) => row.sourceEffectiveFrom === '2007-01-01' && row.sourceEffectiveTo === '2011-11-30' && row.amountPrecisionCad === 100))
+  const earlier = rows.find((row) => row.year === 2011 && row.role === 'Mayor')
+  const later = data.observations.find((row) => row.municipality === 'Abbotsford' && row.year === 2011 && row.role === 'Mayor' && row.effectiveFrom === '2011-12-01')
+  assert.equal(earlier.effectiveTo, '2011-11-30')
+  assert.equal(earlier.amount, 86600)
+  assert.equal(later.amount, 94500)
+  assert.match(datasetCsv({ ...data, observations: [earlier], payments: [] }), /"2007-01-01","2011-11-30"/)
 })
 
 test('old tax-free officers allowance stays remuneration and source components survive', () => {

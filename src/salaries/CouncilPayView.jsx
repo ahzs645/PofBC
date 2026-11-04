@@ -19,14 +19,19 @@ const RecordDetails = ({ row, source }) => {
   const notes = councilNotes(row.notes)
   const sourceNotes = councilNotes(source?.notes)
   const components = Object.entries(row.components ?? {})
+  const precision = row.sourcePrecision ?? row.amountPrecisionCad
   return <div className="council-pay__evidence">
     <p><SourceLink source={source} page={row.pdfPage} /></p>
     <p className="council-pay__muted">{humanize(source?.kind ?? 'Source')}</p>
+    {row.sourceRowLabel && <p>{row.sourceRowLabel}</p>}
+    {!row.sourceRowLabel && row.tableLabel && <p>Source table: {row.tableLabel}</p>}
+    {Number.isFinite(precision) && precision >= 1 && <p className="council-pay__muted">Reported precision: {councilMoney(precision, row.currency)}.</p>}
     {row.sourceLocator && <p>{row.sourceLocator}</p>}
     {source?.locator && source.locator !== row.sourceLocator && <p className="council-pay__muted">{source.locator}</p>}
     {row.effectiveFrom && <p>Effective from {row.effectiveFrom}{row.effectiveTo ? ` to ${row.effectiveTo}` : ''}.</p>}
     {!row.effectiveFrom && row.effectiveTo && <p>Effective through {row.effectiveTo}.</p>}
     {row.effectiveDateNote && <p>{row.effectiveDateNote}</p>}
+    {row.sourceEffectiveFrom && <p>Published rate interval: {row.sourceEffectiveFrom}{row.sourceEffectiveTo ? ` to ${row.sourceEffectiveTo}` : ''}. The annual row retains this source interval.</p>}
     {row.scheduleVersion && <p>Schedule edition: {humanize(row.scheduleVersion)}.</p>}
     {notes.length > 0 && <ul>{notes.map((note, at) => <li key={at}>{note}</li>)}</ul>}
     {(components.length > 0 || sourceNotes.length > 0) && <details>
@@ -64,6 +69,7 @@ export default function CouncilPayView({ place, setPlace, onBrowse }) {
   const filtered = useMemo(() => filterCouncilRows(rows, { query, municipality, year, role }, sources), [rows, query, municipality, year, role, sources])
   const coverageRows = useMemo(() => filterCouncilRows(rows, { municipality, role }), [rows, municipality, role])
   const observed = useMemo(() => councilYearCoverage(coverageRows), [coverageRows])
+  const series = useMemo(() => (data?.coverage?.timeSeries ?? []).filter((entry) => entry.municipality === municipality && (role === 'all' || entry.role === role) && (tab === 'payments' ? entry.measure === 'actual-remuneration' : entry.measure !== 'actual-remuneration')), [data, municipality, role, tab])
   const municipalities = useMemo(() => [...new Set([...(data?.coverage?.municipalities ?? []).map((entry) => entry.municipality), ...rows.map((row) => row.municipality)])].sort((a, b) => a.localeCompare(b, 'en-CA')), [data, rows])
   const years = useMemo(() => [...new Set(rows.map((row) => String(row.year)))].sort((a, b) => b - a), [rows])
   const roles = useMemo(() => [...new Set(rows.map((row) => row.role))].sort(), [rows])
@@ -109,6 +115,7 @@ export default function CouncilPayView({ place, setPlace, onBrowse }) {
       <div className="council-pay__coverage" aria-label="Available years">
         <p><strong>{municipality === 'all' ? 'Years represented in this tab' : `${municipality}: years represented`}{role !== 'all' ? ` · ${role}` : ''}:</strong> {observed.years.length ? describeCouncilYears(observed.years) : 'No records added.'}</p>
         {observed.missing.length > 0 && <p>Gaps between those years: {describeCouncilYears(observed.missing)}.</p>}
+        {series.length > 0 && <details><summary>Coverage by office and type of figure</summary><ul>{series.map((entry) => <li key={`${entry.role}-${entry.measure}`}><strong>{entry.role} · {councilMeasure(entry.measure)}:</strong> {entry.ranges}{entry.missingYears.length > 0 ? ` · Gaps: ${describeCouncilYears(entry.missingYears)}.` : ''}</li>)}</ul></details>}
         <p className="council-pay__muted">A represented year can contain only some offices or officials. Other years are unknown; missing amounts are never treated as zero.</p>
       </div>
       <div className="council-pay__results-bar"><p role="status">{filtered.length.toLocaleString('en-CA')} {tab === 'payments' ? 'named payments' : 'office observations'} match</p><div><button type="button" onClick={clear}>Clear filters</button><button type="button" disabled={!filtered.length} onClick={download}>Download these rows (CSV)</button></div></div>

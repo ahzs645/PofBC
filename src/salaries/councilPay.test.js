@@ -84,6 +84,15 @@ test('CSV keeps supplements separate and includes original article and exact sou
   assert.match(csv, /"https:\/\/example.org\/original","Schedule A","Councillor row",,5,2,/)
 })
 
+test('CSV retains split-role provenance, expense definitions and reported precision', () => {
+  const row = { ...data.payments[0], sourceRowKey: 'mayor-term', sourceRowLabel: 'Mayor (2005–2008)', tableLabel: 'Council payments', term: '2005–2008', expenseComponentKeys: ['localExpenses', 'transportationAllowance', 'travelConferences'], sourcePrecision: 1 }
+  const csv = councilCsv([row], 'payments', sources)
+  assert.match(csv, /source_row_key,source_row_label,table_label,council_term_label,expense_component_keys,reported_precision_cad/)
+  assert.match(csv, /"mayor-term","Mayor \(2005–2008\)","Council payments","2005–2008","localExpenses \| transportationAllowance \| travelConferences",1\r\n/)
+  const survey = councilCsv([{ ...data.observations[0], amountPrecisionCad: 100 }], 'rates', sources)
+  assert.match(survey, /,100\r\n$/)
+})
+
 test('loader makes exactly one companion request under the deployed base path', async () => {
   const requests = []
   const signal = new AbortController().signal

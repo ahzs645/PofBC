@@ -41,6 +41,8 @@ named council-payment schedules. Office survey figures, annual base rates and ac
 payments retain distinct definitions, source links and year filters. Download either the filtered
 rows or the full CSV/JSON. The [council-pay source report](research/salaries/council-pay-history-2026-11-04/README.md)
 documents exact coverage, conflicts, the held 1996 Vancouver report and remaining historical work.
+The [time-series extension](research/salaries/council-pay-history-2026-11-04/timeseries-expansion.md)
+adds 2004–2019 Vancouver payments, fills its 2016–2018 rate gap, and extends 18 other municipal histories.
 This companion preserves existing salary records and name links. Rebuild it alone with
 `npm run build:council-pay` and verify it with `npm run check:council-pay`; the regular salary
 build and check commands include it too.

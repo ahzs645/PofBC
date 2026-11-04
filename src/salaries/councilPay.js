@@ -91,7 +91,7 @@ export const councilCsv = (rows, tab, sources) => {
     const source = sources.get(row.sourceId) ?? {}
     return [row.id, tab === 'payments' ? 'named-payment' : 'office-observation', row.municipality, row.name, row.role, row.year, row.currency ?? 'CAD', row.measure, row.amount, row.remuneration, row.expenses, row.knownExpenses, row.annualSupplement, row.effectiveFrom, row.effectiveTo, row.effectiveDateNote, row.components ? JSON.stringify(row.components) : '', row.sourceId, source.title, source.kind, source.url, source.originalUrl, source.locator, row.sourceLocator, row.pdfPage, row.tablePage, row.tableBlock, councilNotes(row.notes).join(' | '), councilNotes(source.notes).join(' | ')].map(csvCell).join(',')
   })
-  columns.push('schedule_version', 'effective_date_sources', 'supporting_sources')
-  const completeLines = lines.map((line, at) => `${line},${[rows[at].scheduleVersion, (rows[at].effectiveDateSources ?? []).join(' | '), JSON.stringify(sources.get(rows[at].sourceId)?.supportingSources ?? [])].map(csvCell).join(',')}`)
+  columns.push('schedule_version', 'effective_date_sources', 'supporting_sources', 'source_effective_from', 'source_effective_to', 'source_row_key', 'source_row_label', 'table_label', 'council_term_label', 'expense_component_keys', 'reported_precision_cad')
+  const completeLines = lines.map((line, at) => `${line},${[rows[at].scheduleVersion, (rows[at].effectiveDateSources ?? []).join(' | '), JSON.stringify(sources.get(rows[at].sourceId)?.supportingSources ?? []), rows[at].sourceEffectiveFrom, rows[at].sourceEffectiveTo, rows[at].sourceRowKey, rows[at].sourceRowLabel, rows[at].tableLabel, rows[at].term, (rows[at].expenseComponentKeys ?? []).join(' | '), rows[at].sourcePrecision ?? rows[at].amountPrecisionCad].map(csvCell).join(',')}`)
   return [columns.join(','), ...completeLines].join('\r\n') + '\r\n'
 }
