@@ -63,3 +63,34 @@ test('a period filter is one period or a range, and survives the catalog growing
   assert.equal(salaryYearValue([3, 3], years), '2019/20')
   assert.equal(salaryYearValue(null, years), 'all')
 })
+
+test('council filters round-trip independently of salary year, sector and the site timeline', () => {
+  const place = readSalaryPlace('?view=salaries&browse=council&council-tab=payments&council-municipality=Vancouver&council-year=1994&council-role=Councillor&q=Hemer&salary-year=2020%2F21&salary-sector=Municipalities')
+  const url = salaryPlaceUrl('https://example.org/PofBC/?view=salaries&year=1950', place)
+  assert.deepEqual(readSalaryPlace(url.search), place)
+  assert.equal(place.councilTab, 'payments')
+  assert.equal(place.councilYear, '1994')
+  assert.equal(place.year, '2020/21')
+  assert.equal(url.searchParams.get('year'), '1950')
+  assert.equal(url.searchParams.get('salary-sector'), 'Municipalities')
+})
+
+test('leaving the council view removes its parameters and retains the regular salary filters', () => {
+  const href = 'https://example.org/PofBC/?view=salaries&browse=council&council-tab=payments&council-year=1996&council-role=Mayor&council-municipality=Saanich&salary-year=2021'
+  const place = { ...readSalaryPlace(new URL(href).search), browse: 'employers' }
+  const url = salaryPlaceUrl(href, place)
+  assert.equal([...url.searchParams.keys()].some((key) => key.startsWith('council-')), false)
+  assert.equal(readSalaryPlace(url.search).year, '2021')
+  assert.equal('councilYear' in readSalaryPlace(url.search), false)
+})
+
+test('a bare council link defaults to office observations without borrowing a salary year', () => {
+  const place = readSalaryPlace('?view=salaries&browse=council&salary-year=2020%2F21')
+  assert.equal(place.councilTab, 'rates')
+  assert.equal(place.councilYear, 'all')
+  assert.equal(place.councilMunicipality, 'all')
+  assert.equal(place.councilRole, 'all')
+  const url = salaryPlaceUrl('https://example.org/PofBC/', place)
+  assert.equal(url.searchParams.has('council-tab'), false)
+  assert.equal(url.searchParams.has('council-year'), false)
+})

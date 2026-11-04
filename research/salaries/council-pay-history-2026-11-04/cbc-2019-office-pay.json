@@ -1,0 +1,340 @@
+{
+  "version": 1,
+  "retrievedOn": "2026-11-04",
+  "extractionStatus": "partial",
+  "coverage": {
+    "recoveredMunicipalities": 17,
+    "recoveredObservations": 20,
+    "mayorObservations": 17,
+    "councillorObservations": 3,
+    "region": "Southern Vancouver Island",
+    "notes": [
+      "Partial preservation of the CBC 2019 survey; does not cover all British Columbia municipalities.",
+      "Only exact printed values are included."
+    ]
+  },
+  "sources": [
+    {
+      "id": "cbc-bc-municipal-office-pay-2019-viewroyal-extract",
+      "title": "CBC News — 2019 southern Vancouver Island office pay, preserved by View Royal",
+      "url": "https://www.viewroyal.ca/assets/Home/Whats~New/2021/2021%2010%2027%20Council%20Size%20Report.pdf",
+      "originalUrl": "https://www.cbc.ca/news/canada/british-columbia/local-politics-salaries-revelstoke-victoria-mayors-councillors-1.5365662",
+      "kind": "media-survey-preserved-in-official-report",
+      "retrievedOn": "2026-11-04",
+      "locator": "PDF physical pages 16–17; Schedule 2, March 23, 2021 report, printed pages 4–5 of 6",
+      "sha256": "914c82077914ef35a701b38ab6c75e463561303a0300ae52eed0b8944592ef2d",
+      "notes": [
+        "CBC article published November 21, 2019. The preserved charts show southern Vancouver Island only.",
+        "Sources were remuneration bylaws and financial disclosures. Where councillor remuneration varied, CBC used the mean; this differs from the 2021 survey's most-common-value statistic.",
+        "Most values are 2019; chart asterisks denote 2018. None of the included municipality labels has an asterisk.",
+        "Seventeen mayor amounts are printed inside the bars. Three exact councillor amounts are specified in the report prose. Fourteen other councillor bars have no numeric value label and are excluded; no amount is inferred from bar length.",
+        "Original report downloaded and chart pages rendered for visual verification. The source hash identifies the downloaded PDF."
+      ]
+    }
+  ],
+  "observations": [
+    {
+      "id": "cbc-2019-district-of-saanich-mayor",
+      "municipality": "Saanich",
+      "employerSlug": "district-of-saanich",
+      "role": "Mayor",
+      "year": 2019,
+      "amount": 116492.22,
+      "currency": "CAD",
+      "measure": "reported-office-pay",
+      "sourceId": "cbc-bc-municipal-office-pay-2019-viewroyal-extract",
+      "sourceLocator": "PDF physical page 16, Schedule 2 printed page 4 of 6; mayor chart",
+      "notes": [
+        "2019 figure: the preserved chart label has no 2018 asterisk."
+      ]
+    },
+    {
+      "id": "cbc-2019-city-of-victoria-mayor",
+      "municipality": "Victoria",
+      "employerSlug": "city-of-victoria",
+      "role": "Mayor",
+      "year": 2019,
+      "amount": 113461.0,
+      "currency": "CAD",
+      "measure": "reported-office-pay",
+      "sourceId": "cbc-bc-municipal-office-pay-2019-viewroyal-extract",
+      "sourceLocator": "PDF physical page 16, Schedule 2 printed page 4 of 6; mayor chart",
+      "notes": [
+        "2019 figure: the preserved chart label has no 2018 asterisk."
+      ]
+    },
+    {
+      "id": "cbc-2019-district-of-north-cowichan-mayor",
+      "municipality": "North Cowichan",
+      "employerSlug": "district-of-north-cowichan",
+      "role": "Mayor",
+      "year": 2019,
+      "amount": 77854.0,
+      "currency": "CAD",
+      "measure": "reported-office-pay",
+      "sourceId": "cbc-bc-municipal-office-pay-2019-viewroyal-extract",
+      "sourceLocator": "PDF physical page 16, Schedule 2 printed page 4 of 6; mayor chart",
+      "notes": [
+        "2019 figure: the preserved chart label has no 2018 asterisk."
+      ]
+    },
+    {
+      "id": "cbc-2019-city-of-langford-mayor",
+      "municipality": "Langford",
+      "employerSlug": "city-of-langford",
+      "role": "Mayor",
+      "year": 2019,
+      "amount": 75863.0,
+      "currency": "CAD",
+      "measure": "reported-office-pay",
+      "sourceId": "cbc-bc-municipal-office-pay-2019-viewroyal-extract",
+      "sourceLocator": "PDF physical page 16, Schedule 2 printed page 4 of 6; mayor chart",
+      "notes": [
+        "2019 figure: the preserved chart label has no 2018 asterisk."
+      ]
+    },
+    {
+      "id": "cbc-2019-township-of-esquimalt-mayor",
+      "municipality": "Esquimalt",
+      "employerSlug": "township-of-esquimalt",
+      "role": "Mayor",
+      "year": 2019,
+      "amount": 57600.0,
+      "currency": "CAD",
+      "measure": "reported-office-pay",
+      "sourceId": "cbc-bc-municipal-office-pay-2019-viewroyal-extract",
+      "sourceLocator": "PDF physical page 16, Schedule 2 printed page 4 of 6; mayor chart",
+      "notes": [
+        "2019 figure: the preserved chart label has no 2018 asterisk."
+      ]
+    },
+    {
+      "id": "cbc-2019-town-of-sidney-mayor",
+      "municipality": "Sidney",
+      "employerSlug": "town-of-sidney",
+      "role": "Mayor",
+      "year": 2019,
+      "amount": 37448.0,
+      "currency": "CAD",
+      "measure": "reported-office-pay",
+      "sourceId": "cbc-bc-municipal-office-pay-2019-viewroyal-extract",
+      "sourceLocator": "PDF physical page 16, Schedule 2 printed page 4 of 6; mayor chart",
+      "notes": [
+        "2019 figure: the preserved chart label has no 2018 asterisk."
+      ]
+    },
+    {
+      "id": "cbc-2019-district-of-central-saanich-mayor",
+      "municipality": "Central Saanich",
+      "employerSlug": "district-of-central-saanich",
+      "role": "Mayor",
+      "year": 2019,
+      "amount": 34800.0,
+      "currency": "CAD",
+      "measure": "reported-office-pay",
+      "sourceId": "cbc-bc-municipal-office-pay-2019-viewroyal-extract",
+      "sourceLocator": "PDF physical page 16, Schedule 2 printed page 4 of 6; mayor chart",
+      "notes": [
+        "2019 figure: the preserved chart label has no 2018 asterisk."
+      ]
+    },
+    {
+      "id": "cbc-2019-town-of-ladysmith-mayor",
+      "municipality": "Ladysmith",
+      "employerSlug": "town-of-ladysmith",
+      "role": "Mayor",
+      "year": 2019,
+      "amount": 34320.0,
+      "currency": "CAD",
+      "measure": "reported-office-pay",
+      "sourceId": "cbc-bc-municipal-office-pay-2019-viewroyal-extract",
+      "sourceLocator": "PDF physical page 16, Schedule 2 printed page 4 of 6; mayor chart",
+      "notes": [
+        "2019 figure: the preserved chart label has no 2018 asterisk."
+      ]
+    },
+    {
+      "id": "cbc-2019-district-of-oak-bay-mayor",
+      "municipality": "Oak Bay",
+      "employerSlug": "district-of-oak-bay",
+      "role": "Mayor",
+      "year": 2019,
+      "amount": 34081.0,
+      "currency": "CAD",
+      "measure": "reported-office-pay",
+      "sourceId": "cbc-bc-municipal-office-pay-2019-viewroyal-extract",
+      "sourceLocator": "PDF physical page 16, Schedule 2 printed page 4 of 6; mayor chart",
+      "notes": [
+        "2019 figure: the preserved chart label has no 2018 asterisk."
+      ]
+    },
+    {
+      "id": "cbc-2019-town-of-view-royal-mayor",
+      "municipality": "View Royal",
+      "employerSlug": "town-of-view-royal",
+      "role": "Mayor",
+      "year": 2019,
+      "amount": 31737.0,
+      "currency": "CAD",
+      "measure": "reported-office-pay",
+      "sourceId": "cbc-bc-municipal-office-pay-2019-viewroyal-extract",
+      "sourceLocator": "PDF physical page 16, Schedule 2 printed page 4 of 6; mayor chart",
+      "notes": [
+        "2019 figure: the preserved chart label has no 2018 asterisk."
+      ]
+    },
+    {
+      "id": "cbc-2019-city-of-duncan-mayor",
+      "municipality": "Duncan",
+      "employerSlug": "city-of-duncan",
+      "role": "Mayor",
+      "year": 2019,
+      "amount": 31031.0,
+      "currency": "CAD",
+      "measure": "reported-office-pay",
+      "sourceId": "cbc-bc-municipal-office-pay-2019-viewroyal-extract",
+      "sourceLocator": "PDF physical page 16, Schedule 2 printed page 4 of 6; mayor chart",
+      "notes": [
+        "2019 figure: the preserved chart label has no 2018 asterisk."
+      ]
+    },
+    {
+      "id": "cbc-2019-district-of-north-saanich-mayor",
+      "municipality": "North Saanich",
+      "employerSlug": "district-of-north-saanich",
+      "role": "Mayor",
+      "year": 2019,
+      "amount": 30337.0,
+      "currency": "CAD",
+      "measure": "reported-office-pay",
+      "sourceId": "cbc-bc-municipal-office-pay-2019-viewroyal-extract",
+      "sourceLocator": "PDF physical page 16, Schedule 2 printed page 4 of 6; mayor chart",
+      "notes": [
+        "2019 figure: the preserved chart label has no 2018 asterisk."
+      ]
+    },
+    {
+      "id": "cbc-2019-city-of-colwood-mayor",
+      "municipality": "Colwood",
+      "employerSlug": "city-of-colwood",
+      "role": "Mayor",
+      "year": 2019,
+      "amount": 28900.0,
+      "currency": "CAD",
+      "measure": "reported-office-pay",
+      "sourceId": "cbc-bc-municipal-office-pay-2019-viewroyal-extract",
+      "sourceLocator": "PDF physical page 16, Schedule 2 printed page 4 of 6; mayor chart",
+      "notes": [
+        "2019 figure: the preserved chart label has no 2018 asterisk."
+      ]
+    },
+    {
+      "id": "cbc-2019-district-of-metchosin-mayor",
+      "municipality": "Metchosin",
+      "employerSlug": "district-of-metchosin",
+      "role": "Mayor",
+      "year": 2019,
+      "amount": 26592.0,
+      "currency": "CAD",
+      "measure": "reported-office-pay",
+      "sourceId": "cbc-bc-municipal-office-pay-2019-viewroyal-extract",
+      "sourceLocator": "PDF physical page 16, Schedule 2 printed page 4 of 6; mayor chart",
+      "notes": [
+        "2019 figure: the preserved chart label has no 2018 asterisk."
+      ]
+    },
+    {
+      "id": "cbc-2019-district-of-sooke-mayor",
+      "municipality": "Sooke",
+      "employerSlug": "district-of-sooke",
+      "role": "Mayor",
+      "year": 2019,
+      "amount": 25000.0,
+      "currency": "CAD",
+      "measure": "reported-office-pay",
+      "sourceId": "cbc-bc-municipal-office-pay-2019-viewroyal-extract",
+      "sourceLocator": "PDF physical page 16, Schedule 2 printed page 4 of 6; mayor chart",
+      "notes": [
+        "2019 figure: the preserved chart label has no 2018 asterisk."
+      ]
+    },
+    {
+      "id": "cbc-2019-town-of-lake-cowichan-mayor",
+      "municipality": "Lake Cowichan",
+      "employerSlug": "town-of-lake-cowichan",
+      "role": "Mayor",
+      "year": 2019,
+      "amount": 23386.0,
+      "currency": "CAD",
+      "measure": "reported-office-pay",
+      "sourceId": "cbc-bc-municipal-office-pay-2019-viewroyal-extract",
+      "sourceLocator": "PDF physical page 16, Schedule 2 printed page 4 of 6; mayor chart",
+      "notes": [
+        "2019 figure: the preserved chart label has no 2018 asterisk."
+      ]
+    },
+    {
+      "id": "cbc-2019-district-of-highlands-mayor",
+      "municipality": "Highlands",
+      "employerSlug": "district-of-highlands",
+      "role": "Mayor",
+      "year": 2019,
+      "amount": 15625.0,
+      "currency": "CAD",
+      "measure": "reported-office-pay",
+      "sourceId": "cbc-bc-municipal-office-pay-2019-viewroyal-extract",
+      "sourceLocator": "PDF physical page 16, Schedule 2 printed page 4 of 6; mayor chart",
+      "notes": [
+        "2019 figure: the preserved chart label has no 2018 asterisk."
+      ]
+    },
+    {
+      "id": "cbc-2019-district-of-sooke-councillor",
+      "municipality": "Sooke",
+      "employerSlug": "district-of-sooke",
+      "role": "Councillor",
+      "year": 2019,
+      "amount": 12500,
+      "currency": "CAD",
+      "measure": "reported-office-pay",
+      "sourceId": "cbc-bc-municipal-office-pay-2019-viewroyal-extract",
+      "sourceLocator": "PDF physical page 17, Schedule 2 printed page 5 of 6; prose above councillor chart",
+      "notes": [
+        "CBC statistic: mean councillor remuneration where individual payments varied.",
+        "2019 figure: the preserved chart label has no 2018 asterisk."
+      ]
+    },
+    {
+      "id": "cbc-2019-city-of-duncan-councillor",
+      "municipality": "Duncan",
+      "employerSlug": "city-of-duncan",
+      "role": "Councillor",
+      "year": 2019,
+      "amount": 15862,
+      "currency": "CAD",
+      "measure": "reported-office-pay",
+      "sourceId": "cbc-bc-municipal-office-pay-2019-viewroyal-extract",
+      "sourceLocator": "PDF physical page 17, Schedule 2 printed page 5 of 6; prose above councillor chart",
+      "notes": [
+        "CBC statistic: mean councillor remuneration where individual payments varied.",
+        "2019 figure: the preserved chart label has no 2018 asterisk."
+      ]
+    },
+    {
+      "id": "cbc-2019-town-of-view-royal-councillor",
+      "municipality": "View Royal",
+      "employerSlug": "town-of-view-royal",
+      "role": "Councillor",
+      "year": 2019,
+      "amount": 15216,
+      "currency": "CAD",
+      "measure": "reported-office-pay",
+      "sourceId": "cbc-bc-municipal-office-pay-2019-viewroyal-extract",
+      "sourceLocator": "PDF physical page 17, Schedule 2 printed page 5 of 6; prose above councillor chart",
+      "notes": [
+        "CBC statistic: mean councillor remuneration where individual payments varied.",
+        "2019 figure: the preserved chart label has no 2018 asterisk."
+      ]
+    }
+  ]
+}

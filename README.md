@@ -30,10 +30,22 @@ The [salary audit and source recovery report](research/salaries/README.md) expla
 Hydro-group and public-service years, duplicated records, earlier history, remaining source work,
 and the limits of name matching. The [employer coverage inventory](research/salaries/coverage-inventory.md)
 lists every employer; [the source inventory](research/salaries/source-inventory.md) distinguishes
-accepted reports from located sources awaiting extraction or review. The current build has 926,855
-records, including 683,243 with official-source provenance. The
+accepted reports from located sources awaiting extraction or review. Current record totals and
+official-source coverage are reported in the generated inventories. The
 [23 October follow-up](research/salaries/interface-review-2026-10-23.md) adds Fraser Health history,
 eight BCIT schedules, four BC Transit schedules and salary-interface corrections.
+
+The **Council pay** tab (`?view=salaries&browse=council`) adds CBC's complete 2021 municipal
+survey, a verified subset of its 2019 survey, official historical office rates and Vancouver's
+named council-payment schedules. Office survey figures, annual base rates and actual named
+payments retain distinct definitions, source links and year filters. Download either the filtered
+rows or the full CSV/JSON. The [council-pay source report](research/salaries/council-pay-history-2026-11-04/README.md)
+documents exact coverage, conflicts, the held 1996 Vancouver report and remaining historical work.
+The [time-series extension](research/salaries/council-pay-history-2026-11-04/timeseries-expansion.md)
+adds 2004–2019 Vancouver payments, fills its 2016–2018 rate gap, and extends 18 other municipal histories.
+This companion preserves existing salary records and name links. Rebuild it alone with
+`npm run build:council-pay` and verify it with `npm run check:council-pay`; the regular salary
+build and check commands include it too.
 
 Rebuild all salary views offline with `npm run build:salaries`, then reconcile their rows and
 refresh the inventory with `npm run check:salaries`. The accepted normalized schedules, source

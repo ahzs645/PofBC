@@ -15,7 +15,7 @@
 // A name in two years' disclosures is not proof of one person. Multiple rows may be different people,
 // multiple payments to one person, or source duplicates; none of these is inferred from a name alone.
 
-import { useEffect, useMemo, useRef, useState } from 'react'
+import { lazy, Suspense, useEffect, useMemo, useRef, useState } from 'react'
 import { displayName, nameQueryTier, nameReadings, personKey, surnameShard } from './people.js'
 import { keyedTitles, titleMatcher } from './positions.js'
 import { formatMoney as money } from './money.js'
@@ -31,6 +31,8 @@ import { PersonPage } from './PersonPage.jsx'
 import { linkLookup, personRecordShards } from './nameLinks.js'
 import { TitleCard, TitlePage } from './TitlePage.jsx'
 import { personAnnotation, personCurrency } from './recordAnnotations.js'
+
+const CouncilPayView = lazy(() => import('./CouncilPayView.jsx'))
 
 const describeNameGroup = (key, list, name, index) => {
   const latest = list.reduce((best, row) => (row[5] > best[5] || (row[5] === best[5] && (
@@ -64,12 +66,32 @@ const PersonCard = ({ each, index, onOpen }) => (
  * @param {(node: string, year?: number) => void} [props.onOpenGovernment]  To a body in the diagram.
  */
 export const SalariesView = ({ onOpenGovernment }) => {
+  const navigation = useSalaryPlace()
+  // Mount the companion before the records component: none of its index or surname fetch effects
+  // should run for a shared council link, including one with a search already filled in.
+  if (navigation.place.browse === 'council') return (
+    <Suspense fallback={<p className="gallery__intro" role="status">Loading council pay…</p>}>
+      <CouncilPayView
+        place={navigation.place}
+        setPlace={navigation.setPlace}
+        onBrowse={(browse) => {
+          if (browse === 'council') return
+          navigation.go({ ...navigation.place, browse, q: '', person: null, personAt: null, employer: null, employerYear: null, role: null, title: null, show: null }, 'Council pay')
+          toTop()
+        }}
+      />
+    </Suspense>
+  )
+  return <SalaryRecordsView onOpenGovernment={onOpenGovernment} navigation={navigation} />
+}
+
+const SalaryRecordsView = ({ onOpenGovernment, navigation }) => {
   const [index, setIndex] = useState(null)
   const [employersIndex, setEmployersIndex] = useState(null)
   const [titlesIndex, setTitlesIndex] = useState(null)
   const [failed, setFailed] = useState(false)
   const [loadVersion, setLoadVersion] = useState(0)
-  const { place, setPlace, go: goPlace, goBack: backPlace } = useSalaryPlace()
+  const { place, setPlace, go: goPlace, goBack: backPlace } = navigation
   const heading = useRef(null)
   const [shards, setShards] = useState({})
   // The link list's slices (nameLinks.js), by surname slice: which spellings at an employer are one name.
@@ -387,7 +409,7 @@ export const SalariesView = ({ onOpenGovernment }) => {
             ariaLabel="Browse"
             value={browse}
             onChange={(next) => go({ browse: next })}
-            options={[{ value: 'employers', label: 'Employers' }, { value: 'people', label: 'People' }, { value: 'positions', label: 'Positions' }]}
+            options={[{ value: 'employers', label: 'Employers' }, { value: 'people', label: 'People' }, { value: 'positions', label: 'Positions' }, { value: 'council', label: 'Council pay' }]}
           />
           <Segmented compact ariaLabel="Layout" value={layout} onChange={(next) => setPlace((current) => ({ ...current, layout: next }))} options={LAYOUTS} />
         </div>

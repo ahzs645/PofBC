@@ -1,0 +1,192 @@
+{
+  "version": 1,
+  "retrievedOn": "2026-11-04",
+  "coverage": {
+    "years": [
+      2016,
+      2017,
+      2018
+    ],
+    "observations": 6,
+    "purpose": "Fill the three missing annual-rate years in the Vancouver councillor series."
+  },
+  "sources": [
+    {
+      "id": "vancouver-2016-bylaw-11483",
+      "title": "City of Vancouver — Mayor and Councillor Remuneration By-law 11483, 2016 rates",
+      "url": "https://bylaws.vancouver.ca/11483c.PDF",
+      "kind": "official-adopted-rate-bylaw",
+      "retrievedOn": "2026-11-04",
+      "locator": "Sections 3.1–3.3 (2016 salary and supplement); sections 4.1–4.2 (annual adjustments); section 6.2 and enactment",
+      "notes": [
+        "The consolidated official bylaw expressly preserves the 2016 base rates in sections 3.2 and 3.3. It was enacted April 5, 2016; the annual supplement commenced May 1, 2016.",
+        "The $3,048 annual supplement and the separate one-time payments in Part 2 are not included in these base rates. One-time payments must not be interpreted as recurring salary.",
+        "The 2016 mayor amount is the explicitly enacted $161,308.02. The 2.02 multiplier applies commencing January 1, 2017; it is not used to recompute the stated 2016 rate.",
+        "Transcribed from the official PDF text. No original downloaded-file hash is claimed."
+      ]
+    },
+    {
+      "id": "vancouver-2017-2018-rate-memo",
+      "title": "City of Vancouver — 2018 Council Remuneration and Expenses, November 27, 2017",
+      "url": "https://vancouver.ca/files/cov/2017-11-28-2018-council-remuneration.pdf",
+      "kind": "official-historical-rate-table",
+      "retrievedOn": "2026-11-04",
+      "locator": "Annual Salaries comparison table and detailed annual adjustment schedule for 2017 and 2018",
+      "notes": [
+        "The published comparison table explicitly states the annual salaries for 2017 and 2018. No historical salaries were inferred from the inflation index.",
+        "The separately prescribed $3,048 annual supplement is recorded from By-law 11483 section 3.1; expense and transportation allowances, discretionary funds and extra duties are excluded from base salary.",
+        "The memo states that the 2018 adjustment takes effect January 1, 2018. January 1 annual adjustments from 2017 are also specified in By-law 11483 sections 4.1–4.2.",
+        "Transcribed from the official PDF text. No original downloaded-file hash is claimed."
+      ],
+      "supportingSources": [
+        {
+          "title": "Vancouver By-law 11483, sections 3.1 and 4.1–4.2",
+          "url": "https://bylaws.vancouver.ca/11483c.PDF",
+          "locator": "Annual supplement and January 1 annual adjustment provisions"
+        }
+      ]
+    }
+  ],
+  "observations": [
+    {
+      "id": "vancouver-official-2016-annual-mayor",
+      "municipality": "Vancouver",
+      "employerSlug": "city-of-vancouver",
+      "role": "Mayor",
+      "year": 2016,
+      "amount": 161308.02,
+      "currency": "CAD",
+      "measure": "annual-base-rate",
+      "sourceId": "vancouver-2016-bylaw-11483",
+      "sourceLocator": "Sections 3.1–3.3 (2016 salary and supplement); sections 4.1–4.2 (annual adjustments); section 6.2 and enactment",
+      "annualSupplement": 3048,
+      "scheduleVersion": "bylaw-11483-enacted",
+      "effectiveFrom": "2016-04-05",
+      "effectiveTo": "2016-12-31",
+      "effectiveDateSources": [
+        "https://bylaws.vancouver.ca/11483c.PDF"
+      ],
+      "effectiveDateNote": "The bylaw took effect on enactment, April 5, 2016, and states annual remuneration for 2016. This edition interval does not establish payroll proration. The separate annual supplement starts May 1; separate one-time payments are excluded.",
+      "notes": [
+        "Base annual salary only. The annual supplement, reimbursed expenses, transportation, discretionary funds and additional duties are separate."
+      ]
+    },
+    {
+      "id": "vancouver-official-2016-annual-councillor",
+      "municipality": "Vancouver",
+      "employerSlug": "city-of-vancouver",
+      "role": "Councillor",
+      "year": 2016,
+      "amount": 80028.8,
+      "currency": "CAD",
+      "measure": "annual-base-rate",
+      "sourceId": "vancouver-2016-bylaw-11483",
+      "sourceLocator": "Sections 3.1–3.3 (2016 salary and supplement); sections 4.1–4.2 (annual adjustments); section 6.2 and enactment",
+      "annualSupplement": 3048,
+      "scheduleVersion": "bylaw-11483-enacted",
+      "effectiveFrom": "2016-04-05",
+      "effectiveTo": "2016-12-31",
+      "effectiveDateSources": [
+        "https://bylaws.vancouver.ca/11483c.PDF"
+      ],
+      "effectiveDateNote": "The bylaw took effect on enactment, April 5, 2016, and states annual remuneration for 2016. This edition interval does not establish payroll proration. The separate annual supplement starts May 1; separate one-time payments are excluded.",
+      "notes": [
+        "Base annual salary only. The annual supplement, reimbursed expenses, transportation, discretionary funds and additional duties are separate."
+      ]
+    },
+    {
+      "id": "vancouver-official-2017-annual-mayor",
+      "municipality": "Vancouver",
+      "employerSlug": "city-of-vancouver",
+      "role": "Mayor",
+      "year": 2017,
+      "amount": 165699.63,
+      "currency": "CAD",
+      "measure": "annual-base-rate",
+      "sourceId": "vancouver-2017-2018-rate-memo",
+      "sourceLocator": "Annual Salaries comparison table and detailed annual adjustment schedule for 2017 and 2018",
+      "annualSupplement": 3048,
+      "scheduleVersion": "annual",
+      "effectiveFrom": "2017-01-01",
+      "effectiveTo": "2017-12-31",
+      "effectiveDateSources": [
+        "https://bylaws.vancouver.ca/11483c.PDF"
+      ],
+      "effectiveDateNote": "January 1 annual adjustment; the displayed rate is the annual schedule, not an amount actually paid to an individual.",
+      "notes": [
+        "Base annual salary only. The annual supplement, reimbursed expenses, transportation, discretionary funds and additional duties are separate."
+      ]
+    },
+    {
+      "id": "vancouver-official-2017-annual-councillor",
+      "municipality": "Vancouver",
+      "employerSlug": "city-of-vancouver",
+      "role": "Councillor",
+      "year": 2017,
+      "amount": 82029.52,
+      "currency": "CAD",
+      "measure": "annual-base-rate",
+      "sourceId": "vancouver-2017-2018-rate-memo",
+      "sourceLocator": "Annual Salaries comparison table and detailed annual adjustment schedule for 2017 and 2018",
+      "annualSupplement": 3048,
+      "scheduleVersion": "annual",
+      "effectiveFrom": "2017-01-01",
+      "effectiveTo": "2017-12-31",
+      "effectiveDateSources": [
+        "https://bylaws.vancouver.ca/11483c.PDF"
+      ],
+      "effectiveDateNote": "January 1 annual adjustment; the displayed rate is the annual schedule, not an amount actually paid to an individual.",
+      "notes": [
+        "Base annual salary only. The annual supplement, reimbursed expenses, transportation, discretionary funds and additional duties are separate."
+      ]
+    },
+    {
+      "id": "vancouver-official-2018-annual-mayor",
+      "municipality": "Vancouver",
+      "employerSlug": "city-of-vancouver",
+      "role": "Mayor",
+      "year": 2018,
+      "amount": 169676.42,
+      "currency": "CAD",
+      "measure": "annual-base-rate",
+      "sourceId": "vancouver-2017-2018-rate-memo",
+      "sourceLocator": "Annual Salaries comparison table and detailed annual adjustment schedule for 2017 and 2018",
+      "annualSupplement": 3048,
+      "scheduleVersion": "annual",
+      "effectiveFrom": "2018-01-01",
+      "effectiveTo": "2018-12-31",
+      "effectiveDateSources": [
+        "https://vancouver.ca/files/cov/2017-11-28-2018-council-remuneration.pdf",
+        "https://bylaws.vancouver.ca/11483c.PDF"
+      ],
+      "effectiveDateNote": "January 1 annual adjustment; the displayed rate is the annual schedule, not an amount actually paid to an individual.",
+      "notes": [
+        "Base annual salary only. The annual supplement, reimbursed expenses, transportation, discretionary funds and additional duties are separate."
+      ]
+    },
+    {
+      "id": "vancouver-official-2018-annual-councillor",
+      "municipality": "Vancouver",
+      "employerSlug": "city-of-vancouver",
+      "role": "Councillor",
+      "year": 2018,
+      "amount": 83998.23,
+      "currency": "CAD",
+      "measure": "annual-base-rate",
+      "sourceId": "vancouver-2017-2018-rate-memo",
+      "sourceLocator": "Annual Salaries comparison table and detailed annual adjustment schedule for 2017 and 2018",
+      "annualSupplement": 3048,
+      "scheduleVersion": "annual",
+      "effectiveFrom": "2018-01-01",
+      "effectiveTo": "2018-12-31",
+      "effectiveDateSources": [
+        "https://vancouver.ca/files/cov/2017-11-28-2018-council-remuneration.pdf",
+        "https://bylaws.vancouver.ca/11483c.PDF"
+      ],
+      "effectiveDateNote": "January 1 annual adjustment; the displayed rate is the annual schedule, not an amount actually paid to an individual.",
+      "notes": [
+        "Base annual salary only. The annual supplement, reimbursed expenses, transportation, discretionary funds and additional duties are separate."
+      ]
+    }
+  ]
+}

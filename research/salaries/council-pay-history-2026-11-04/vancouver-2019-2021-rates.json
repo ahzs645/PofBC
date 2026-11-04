@@ -1,0 +1,247 @@
+{
+  "version": 1,
+  "retrievedOn": "2026-11-04",
+  "coverage": {
+    "observations": 8,
+    "municipalities": 1,
+    "years": [
+      2019,
+      2020,
+      2021
+    ],
+    "scheduleEditions": 4,
+    "notes": [
+      "Two distinct annual-rate editions are retained for 2020; date intervals describe the legal edition, not a payroll reconstruction."
+    ]
+  },
+  "sources": [
+    {
+      "id": "vancouver-2019-2021-rate-memo",
+      "title": "City of Vancouver — 2021 Council Remuneration and Expenses, December 9, 2020",
+      "url": "https://vancouver.ca/files/cov/12-10-2020-2021-remuneration.pdf",
+      "kind": "official-historical-rate-table",
+      "retrievedOn": "2026-11-04",
+      "locator": "PDF physical page 3 annual-salary table; physical page 5 detailed 2019–2021 schedule",
+      "notes": [
+        "The memo preserves annual base salary figures for 2019, the original January 2020 schedule, the amended May 2020 schedule, and 2021.",
+        "The annual $3,048 benefit supplement, expense allowance, transportation allowance and extra-duty payments are separately listed and excluded from these observations.",
+        "The 2021 adjustment is based on the original January 2020 schedule, not the reduced May 2020 amounts.",
+        "Effective dates are corroborated by By-law 11483 sections 4.1–4.2 (annual January 1 adjustments) and enacted By-law 12700 section 5 (effective May 12, 2020).",
+        "The 2020 amendment specifies annual remuneration for the year 2020. Date intervals describe when each edition took legal effect, not enough information to reconstruct actual payroll by prorating the two annual amounts.",
+        "Transcribed from the official PDF text exposed by web retrieval. Direct download returned HTTP 403; no original-file hash or visual verification is claimed."
+      ],
+      "supportingSources": [
+        {
+          "title": "Vancouver By-law 11483, consolidated to May 12, 2020",
+          "url": "https://bylaws.vancouver.ca/11483c.PDF",
+          "locator": "PDF physical page 7, sections 4.1 and 4.2; January 1 annual adjustments"
+        },
+        {
+          "title": "Vancouver By-law 12700, enacted May 12, 2020",
+          "url": "https://bylaws.vancouver.ca/consolidated/12700.pdf",
+          "locator": "Single page, sections 2–3 and 5; amendment amounts and enactment/effective date"
+        }
+      ]
+    }
+  ],
+  "observations": [
+    {
+      "id": "vancouver-memo-2019-annual-mayor",
+      "municipality": "Vancouver",
+      "employerSlug": "city-of-vancouver",
+      "role": "Mayor",
+      "year": 2019,
+      "amount": 174257.68,
+      "currency": "CAD",
+      "measure": "annual-base-rate",
+      "sourceId": "vancouver-2019-2021-rate-memo",
+      "sourceLocator": "PDF physical page 3 annual-salary table; physical page 5 detailed schedule",
+      "scheduleVersion": "annual",
+      "effectiveFrom": "2019-01-01",
+      "effectiveTo": "2019-12-31",
+      "effectiveDateNote": "January 1 annual adjustment date is established by By-law 11483 sections 4.1–4.2; the calendar-year interval ends before the next January 1 schedule.",
+      "effectiveDateSources": [
+        "https://bylaws.vancouver.ca/11483c.PDF"
+      ],
+      "notes": [
+        "Annual base salary schedule; excludes the separately listed benefit supplement, expense allowance and extra-duty remuneration."
+      ],
+      "annualSupplement": 3048
+    },
+    {
+      "id": "vancouver-memo-2019-annual-councillor",
+      "municipality": "Vancouver",
+      "employerSlug": "city-of-vancouver",
+      "role": "Councillor",
+      "year": 2019,
+      "amount": 86266.18,
+      "currency": "CAD",
+      "measure": "annual-base-rate",
+      "sourceId": "vancouver-2019-2021-rate-memo",
+      "sourceLocator": "PDF physical page 3 annual-salary table; physical page 5 detailed schedule",
+      "scheduleVersion": "annual",
+      "effectiveFrom": "2019-01-01",
+      "effectiveTo": "2019-12-31",
+      "effectiveDateNote": "January 1 annual adjustment date is established by By-law 11483 sections 4.1–4.2; the calendar-year interval ends before the next January 1 schedule.",
+      "effectiveDateSources": [
+        "https://bylaws.vancouver.ca/11483c.PDF"
+      ],
+      "notes": [
+        "Annual base salary schedule; excludes the separately listed benefit supplement, expense allowance and extra-duty remuneration."
+      ],
+      "annualSupplement": 3048
+    },
+    {
+      "id": "vancouver-memo-2020-original-mayor",
+      "municipality": "Vancouver",
+      "employerSlug": "city-of-vancouver",
+      "role": "Mayor",
+      "year": 2020,
+      "amount": 178265.61,
+      "currency": "CAD",
+      "measure": "annual-base-rate",
+      "sourceId": "vancouver-2019-2021-rate-memo",
+      "sourceLocator": "PDF physical page 3 annual-salary table; physical page 5 detailed schedule",
+      "scheduleVersion": "original",
+      "effectiveFrom": "2020-01-01",
+      "effectiveTo": "2020-05-11",
+      "effectiveDateNote": "January 1 original edition; effectiveTo is the day before By-law 12700 took effect on May 12, 2020.",
+      "effectiveDateSources": [
+        "https://bylaws.vancouver.ca/11483c.PDF",
+        "https://bylaws.vancouver.ca/consolidated/12700.pdf"
+      ],
+      "notes": [
+        "Annual base salary schedule; excludes the separately listed benefit supplement, expense allowance and extra-duty remuneration.",
+        "2020 has two source editions. These annual figures must not be combined or prorated to infer actual payments without payroll evidence.",
+        "Original rate set at the beginning of 2020, retained for comparison and as the base used to calculate the 2021 adjustment."
+      ],
+      "annualSupplement": 3048
+    },
+    {
+      "id": "vancouver-memo-2020-original-councillor",
+      "municipality": "Vancouver",
+      "employerSlug": "city-of-vancouver",
+      "role": "Councillor",
+      "year": 2020,
+      "amount": 88250.3,
+      "currency": "CAD",
+      "measure": "annual-base-rate",
+      "sourceId": "vancouver-2019-2021-rate-memo",
+      "sourceLocator": "PDF physical page 3 annual-salary table; physical page 5 detailed schedule",
+      "scheduleVersion": "original",
+      "effectiveFrom": "2020-01-01",
+      "effectiveTo": "2020-05-11",
+      "effectiveDateNote": "January 1 original edition; effectiveTo is the day before By-law 12700 took effect on May 12, 2020.",
+      "effectiveDateSources": [
+        "https://bylaws.vancouver.ca/11483c.PDF",
+        "https://bylaws.vancouver.ca/consolidated/12700.pdf"
+      ],
+      "notes": [
+        "Annual base salary schedule; excludes the separately listed benefit supplement, expense allowance and extra-duty remuneration.",
+        "2020 has two source editions. These annual figures must not be combined or prorated to infer actual payments without payroll evidence.",
+        "Original rate set at the beginning of 2020, retained for comparison and as the base used to calculate the 2021 adjustment."
+      ],
+      "annualSupplement": 3048
+    },
+    {
+      "id": "vancouver-memo-2020-amended-may-mayor",
+      "municipality": "Vancouver",
+      "employerSlug": "city-of-vancouver",
+      "role": "Mayor",
+      "year": 2020,
+      "amount": 165971.43,
+      "currency": "CAD",
+      "measure": "annual-base-rate",
+      "sourceId": "vancouver-2019-2021-rate-memo",
+      "sourceLocator": "PDF physical page 3 annual-salary table; physical page 5 detailed schedule",
+      "scheduleVersion": "amended-may",
+      "effectiveFrom": "2020-05-12",
+      "effectiveTo": "2020-12-31",
+      "effectiveDateNote": "By-law 12700 section 5 takes effect on its enactment date, May 12, 2020; the amendment applies to the 2020 annual remuneration. The next schedule is effective January 1, 2021.",
+      "effectiveDateSources": [
+        "https://bylaws.vancouver.ca/11483c.PDF",
+        "https://bylaws.vancouver.ca/consolidated/12700.pdf"
+      ],
+      "notes": [
+        "Annual base salary schedule; excludes the separately listed benefit supplement, expense allowance and extra-duty remuneration.",
+        "2020 has two source editions. These annual figures must not be combined or prorated to infer actual payments without payroll evidence.",
+        "By-law 12700 amended annual remuneration for the year 2020. Its May 12 effective date identifies the amended edition and should not be treated as proof of the payroll timing of the reduction."
+      ],
+      "annualSupplement": 3048
+    },
+    {
+      "id": "vancouver-memo-2020-amended-may-councillor",
+      "municipality": "Vancouver",
+      "employerSlug": "city-of-vancouver",
+      "role": "Councillor",
+      "year": 2020,
+      "amount": 82164.08,
+      "currency": "CAD",
+      "measure": "annual-base-rate",
+      "sourceId": "vancouver-2019-2021-rate-memo",
+      "sourceLocator": "PDF physical page 3 annual-salary table; physical page 5 detailed schedule",
+      "scheduleVersion": "amended-may",
+      "effectiveFrom": "2020-05-12",
+      "effectiveTo": "2020-12-31",
+      "effectiveDateNote": "By-law 12700 section 5 takes effect on its enactment date, May 12, 2020; the amendment applies to the 2020 annual remuneration. The next schedule is effective January 1, 2021.",
+      "effectiveDateSources": [
+        "https://bylaws.vancouver.ca/11483c.PDF",
+        "https://bylaws.vancouver.ca/consolidated/12700.pdf"
+      ],
+      "notes": [
+        "Annual base salary schedule; excludes the separately listed benefit supplement, expense allowance and extra-duty remuneration.",
+        "2020 has two source editions. These annual figures must not be combined or prorated to infer actual payments without payroll evidence.",
+        "By-law 12700 amended annual remuneration for the year 2020. Its May 12 effective date identifies the amended edition and should not be treated as proof of the payroll timing of the reduction."
+      ],
+      "annualSupplement": 3048
+    },
+    {
+      "id": "vancouver-memo-2021-annual-mayor",
+      "municipality": "Vancouver",
+      "employerSlug": "city-of-vancouver",
+      "role": "Mayor",
+      "year": 2021,
+      "amount": 178800.41,
+      "currency": "CAD",
+      "measure": "annual-base-rate",
+      "sourceId": "vancouver-2019-2021-rate-memo",
+      "sourceLocator": "PDF physical page 3 annual-salary table; physical page 5 detailed schedule",
+      "scheduleVersion": "annual",
+      "effectiveFrom": "2021-01-01",
+      "effectiveTo": "2021-12-31",
+      "effectiveDateNote": "January 1, 2021 is printed on PDF physical page 5; the observation covers the 2021 annual schedule.",
+      "effectiveDateSources": [
+        "https://bylaws.vancouver.ca/11483c.PDF"
+      ],
+      "notes": [
+        "Annual base salary schedule; excludes the separately listed benefit supplement, expense allowance and extra-duty remuneration.",
+        "The memo explicitly makes this schedule effective January 1, 2021 and calculates its 0.3% increase from the original January 2020 rates."
+      ],
+      "annualSupplement": 3048
+    },
+    {
+      "id": "vancouver-memo-2021-annual-councillor",
+      "municipality": "Vancouver",
+      "employerSlug": "city-of-vancouver",
+      "role": "Councillor",
+      "year": 2021,
+      "amount": 88515.05,
+      "currency": "CAD",
+      "measure": "annual-base-rate",
+      "sourceId": "vancouver-2019-2021-rate-memo",
+      "sourceLocator": "PDF physical page 3 annual-salary table; physical page 5 detailed schedule",
+      "scheduleVersion": "annual",
+      "effectiveFrom": "2021-01-01",
+      "effectiveTo": "2021-12-31",
+      "effectiveDateNote": "January 1, 2021 is printed on PDF physical page 5; the observation covers the 2021 annual schedule.",
+      "effectiveDateSources": [
+        "https://bylaws.vancouver.ca/11483c.PDF"
+      ],
+      "notes": [
+        "Annual base salary schedule; excludes the separately listed benefit supplement, expense allowance and extra-duty remuneration.",
+        "The memo explicitly makes this schedule effective January 1, 2021 and calculates its 0.3% increase from the original January 2020 rates."
+      ],
+      "annualSupplement": 3048
+    }
+  ]
+}
