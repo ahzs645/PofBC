@@ -1,0 +1,1650 @@
+{
+  "officeObservations": 430,
+  "paymentObservations": 182,
+  "municipalityCount": 160,
+  "officeYears": [
+    1995,
+    1996,
+    1997,
+    1998,
+    1999,
+    2000,
+    2001,
+    2002,
+    2003,
+    2004,
+    2005,
+    2006,
+    2007,
+    2008,
+    2009,
+    2010,
+    2011,
+    2012,
+    2013,
+    2014,
+    2015,
+    2016,
+    2017,
+    2018,
+    2019,
+    2020,
+    2021,
+    2022,
+    2023,
+    2024,
+    2025,
+    2026
+  ],
+  "paymentYears": [
+    1994,
+    1995,
+    1997,
+    1998,
+    1999,
+    2000,
+    2001,
+    2002,
+    2003,
+    2020,
+    2021,
+    2022,
+    2023,
+    2024,
+    2025
+  ],
+  "sourceCount": 25,
+  "held": [
+    {
+      "year": 1996,
+      "sourceUrl": "https://council.vancouver.ca/970722/a4.htm",
+      "evidenceUrl": "https://council.vancouver.ca/970722/regmin.htm",
+      "reason": "The July 22, 1997 minutes, item 4, record errors in the July 3 report and a request for a corrected final report. No demonstrably corrected edition has been verified."
+    }
+  ],
+  "candidateSourceEditionOverlaps": 22,
+  "sourceEditionExpenseDifferences": 1,
+  "surveys": [
+    {
+      "input": "research/salaries/council-pay-history-2026-11-04/cbc-2019-office-pay.json",
+      "status": "partial",
+      "recoveredMunicipalities": 17,
+      "recoveredObservations": 20,
+      "mayorObservations": 17,
+      "councillorObservations": 3,
+      "region": "Southern Vancouver Island",
+      "notes": [
+        "Partial preservation of the CBC 2019 survey; does not cover all British Columbia municipalities.",
+        "Only exact printed values are included."
+      ]
+    },
+    {
+      "input": "research/salaries/council-pay-history-2026-11-04/cbc-office-pay.json",
+      "status": "complete",
+      "recoveredMunicipalities": 160,
+      "recoveredObservations": 320,
+      "tablePagesConfirmed": [
+        1,
+        2,
+        4,
+        8
+      ],
+      "tableBlockCount": 8,
+      "tableBlockSize": 20,
+      "referenceYears": {
+        "2020": 2,
+        "2021": 318
+      },
+      "notes": [
+        "All 160 distinct municipality rows have been independently recovered from eight indexed table blocks. Page labels are only recorded where visible; block order follows descending mayoral amount."
+      ]
+    }
+  ],
+  "notes": [
+    "This is a source inventory with selected historical coverage, not a complete annual series for every BC municipality. Missing years are unknown, not zero.",
+    "Office survey figures, scheduled annual rates and payments to named officials have distinct definitions. No combined pay total, inflation adjustment, interpolation or automatic growth comparison is calculated.",
+    "Council records are separate from employee disclosures. Existing salary files and name-link groups are not rebuilt or merged by this companion.",
+    "Some modern Vancouver officials already appear in retained compiled editions. The official calendar-year source remains separate; do not add the two source editions together.",
+    "Vancouver named-payment coverage currently omits 1996 (source errors), 2004–2019 (not extracted here), and years before 1994. Annual-rate coverage does not fill those payment gaps.",
+    "A current municipal roster is a discovery aid and does not establish that every municipality existed in each historical year."
+  ],
+  "municipalities": [
+    {
+      "municipality": "100 Mile House",
+      "employerSlug": "district-of-100-mile-house",
+      "website": "http://www.100milehouse.com",
+      "officeYears": [
+        2021
+      ],
+      "paymentYears": []
+    },
+    {
+      "municipality": "Abbotsford",
+      "employerSlug": "city-of-abbotsford",
+      "website": "http://www.abbotsford.ca",
+      "officeYears": [
+        2021
+      ],
+      "paymentYears": []
+    },
+    {
+      "municipality": "Alert Bay",
+      "employerSlug": "village-of-alert-bay",
+      "website": "http://www.alertbay.ca",
+      "officeYears": [
+        2021
+      ],
+      "paymentYears": []
+    },
+    {
+      "municipality": "Anmore",
+      "employerSlug": "village-of-anmore",
+      "website": "http://www.anmore.com",
+      "officeYears": [
+        2021
+      ],
+      "paymentYears": []
+    },
+    {
+      "municipality": "Armstrong",
+      "employerSlug": "city-of-armstrong",
+      "website": "http://www.cityofarmstrong.bc.ca",
+      "officeYears": [
+        2021
+      ],
+      "paymentYears": []
+    },
+    {
+      "municipality": "Ashcroft",
+      "employerSlug": "village-of-ashcroft",
+      "website": "http://www.ashcroftbc.ca/",
+      "officeYears": [
+        2021
+      ],
+      "paymentYears": []
+    },
+    {
+      "municipality": "Barriere",
+      "employerSlug": "district-of-barriere",
+      "website": "http://www.barriere.ca",
+      "officeYears": [
+        2021
+      ],
+      "paymentYears": []
+    },
+    {
+      "municipality": "Belcarra",
+      "employerSlug": "village-of-belcarra",
+      "website": "http://www.belcarra.ca",
+      "officeYears": [
+        2021
+      ],
+      "paymentYears": []
+    },
+    {
+      "municipality": "Bowen Island",
+      "employerSlug": "bowen-island",
+      "website": "https://www.bowenislandmunicipality.ca",
+      "officeYears": [
+        2021
+      ],
+      "paymentYears": []
+    },
+    {
+      "municipality": "Burnaby",
+      "employerSlug": "city-of-burnaby",
+      "website": "http://www.burnaby.ca",
+      "officeYears": [
+        2021
+      ],
+      "paymentYears": []
+    },
+    {
+      "municipality": "Burns Lake",
+      "employerSlug": "village-of-burns-lake",
+      "website": "http://www.burnslake.ca",
+      "officeYears": [
+        2021
+      ],
+      "paymentYears": []
+    },
+    {
+      "municipality": "Cache Creek",
+      "employerSlug": "village-of-cache-creek",
+      "website": "http://www.cachecreek.ca",
+      "officeYears": [
+        2021
+      ],
+      "paymentYears": []
+    },
+    {
+      "municipality": "Campbell River",
+      "employerSlug": "city-of-campbell-river",
+      "website": "http://www.campbellriver.ca",
+      "officeYears": [
+        2021
+      ],
+      "paymentYears": []
+    },
+    {
+      "municipality": "Canal Flats",
+      "employerSlug": "village-of-canal-flats",
+      "website": "http://www.canalflats.ca",
+      "officeYears": [
+        2021
+      ],
+      "paymentYears": []
+    },
+    {
+      "municipality": "Castlegar",
+      "employerSlug": "city-of-castlegar",
+      "website": "http://www.castlegar.ca",
+      "officeYears": [
+        2021
+      ],
+      "paymentYears": []
+    },
+    {
+      "municipality": "Central Saanich",
+      "employerSlug": "district-of-central-saanich",
+      "website": "http://www.centralsaanich.ca",
+      "officeYears": [
+        2019,
+        2021
+      ],
+      "paymentYears": []
+    },
+    {
+      "municipality": "Chase",
+      "employerSlug": "village-of-chase",
+      "website": "http://www.chasebc.ca/",
+      "officeYears": [
+        2021
+      ],
+      "paymentYears": []
+    },
+    {
+      "municipality": "Chetwynd",
+      "employerSlug": "district-of-chetwynd",
+      "website": "http://www.gochetwynd.com",
+      "officeYears": [
+        2021
+      ],
+      "paymentYears": []
+    },
+    {
+      "municipality": "Chilliwack",
+      "employerSlug": "city-of-chilliwack",
+      "website": "http://www.chilliwack.com",
+      "officeYears": [
+        2021
+      ],
+      "paymentYears": []
+    },
+    {
+      "municipality": "Clearwater",
+      "employerSlug": "district-of-clearwater",
+      "website": "http://www.districtofclearwater.com/",
+      "officeYears": [
+        2021
+      ],
+      "paymentYears": []
+    },
+    {
+      "municipality": "Clinton",
+      "employerSlug": "village-of-clinton",
+      "website": "http://www.village.clinton.bc.ca",
+      "officeYears": [
+        2021
+      ],
+      "paymentYears": []
+    },
+    {
+      "municipality": "Coldstream",
+      "employerSlug": "district-of-coldstream",
+      "website": "https://www.coldstream.ca/",
+      "officeYears": [
+        2021
+      ],
+      "paymentYears": []
+    },
+    {
+      "municipality": "Colwood",
+      "employerSlug": "city-of-colwood",
+      "website": "http://www.colwood.ca",
+      "officeYears": [
+        2019,
+        2021
+      ],
+      "paymentYears": []
+    },
+    {
+      "municipality": "Comox",
+      "employerSlug": "town-of-comox",
+      "website": "http://www.comox.ca",
+      "officeYears": [
+        2021
+      ],
+      "paymentYears": []
+    },
+    {
+      "municipality": "Coquitlam",
+      "employerSlug": "city-of-coquitlam",
+      "website": "http://www.coquitlam.ca",
+      "officeYears": [
+        2021
+      ],
+      "paymentYears": []
+    },
+    {
+      "municipality": "Courtenay",
+      "employerSlug": "city-of-courtenay",
+      "website": "http://www.courtenay.ca",
+      "officeYears": [
+        2021
+      ],
+      "paymentYears": []
+    },
+    {
+      "municipality": "Cranbrook",
+      "employerSlug": "city-of-cranbrook",
+      "website": "http://www.cranbrook.ca",
+      "officeYears": [
+        2021
+      ],
+      "paymentYears": []
+    },
+    {
+      "municipality": "Creston",
+      "employerSlug": "town-of-creston",
+      "website": "http://www.creston.ca",
+      "officeYears": [
+        2021
+      ],
+      "paymentYears": []
+    },
+    {
+      "municipality": "Cumberland",
+      "employerSlug": "village-of-cumberland",
+      "website": "https://cumberland.ca/",
+      "officeYears": [
+        2021
+      ],
+      "paymentYears": []
+    },
+    {
+      "municipality": "Daajing Giids",
+      "employerSlug": "village-of-daajing-giids",
+      "website": "http://www.daajinggiids.ca",
+      "officeYears": [
+        2021
+      ],
+      "paymentYears": []
+    },
+    {
+      "municipality": "Dawson Creek",
+      "employerSlug": "city-of-dawson-creek",
+      "website": "http://www.dawsoncreek.ca",
+      "officeYears": [
+        2021
+      ],
+      "paymentYears": []
+    },
+    {
+      "municipality": "Delta",
+      "employerSlug": "city-of-delta",
+      "website": "http://www.delta.ca",
+      "officeYears": [
+        2021
+      ],
+      "paymentYears": []
+    },
+    {
+      "municipality": "Duncan",
+      "employerSlug": "city-of-duncan",
+      "website": "http://www.duncan.ca",
+      "officeYears": [
+        2019,
+        2021
+      ],
+      "paymentYears": []
+    },
+    {
+      "municipality": "Elkford",
+      "employerSlug": "district-of-elkford",
+      "website": "http://www.elkford.ca",
+      "officeYears": [
+        2021
+      ],
+      "paymentYears": []
+    },
+    {
+      "municipality": "Enderby",
+      "employerSlug": "city-of-enderby",
+      "website": "https://www.cityofenderby.com",
+      "officeYears": [
+        2021
+      ],
+      "paymentYears": []
+    },
+    {
+      "municipality": "Esquimalt",
+      "employerSlug": "township-of-esquimalt",
+      "website": "http://www.esquimalt.ca",
+      "officeYears": [
+        2019,
+        2021
+      ],
+      "paymentYears": []
+    },
+    {
+      "municipality": "Fernie",
+      "employerSlug": "city-of-fernie",
+      "website": "http://www.fernie.ca",
+      "officeYears": [
+        2021
+      ],
+      "paymentYears": []
+    },
+    {
+      "municipality": "Fort St. James",
+      "employerSlug": "district-of-fort-st-james",
+      "website": "http://fortstjames.ca",
+      "officeYears": [
+        2021
+      ],
+      "paymentYears": []
+    },
+    {
+      "municipality": "Fort St. John",
+      "employerSlug": "city-of-fort-st-john",
+      "website": "http://www.fortstjohn.ca/",
+      "officeYears": [
+        2021
+      ],
+      "paymentYears": []
+    },
+    {
+      "municipality": "Fraser Lake",
+      "employerSlug": "village-of-fraser-lake",
+      "website": "http://www.fraserlake.ca",
+      "officeYears": [
+        2021
+      ],
+      "paymentYears": []
+    },
+    {
+      "municipality": "Fruitvale",
+      "employerSlug": "village-of-fruitvale",
+      "website": "http://www.fruitvale.ca",
+      "officeYears": [
+        2021
+      ],
+      "paymentYears": []
+    },
+    {
+      "municipality": "Gibsons",
+      "employerSlug": "town-of-gibsons",
+      "website": "http://www.gibsons.ca",
+      "officeYears": [
+        2021
+      ],
+      "paymentYears": []
+    },
+    {
+      "municipality": "Golden",
+      "employerSlug": "town-of-golden",
+      "website": "http://www.golden.ca",
+      "officeYears": [
+        2021
+      ],
+      "paymentYears": []
+    },
+    {
+      "municipality": "Gold River",
+      "employerSlug": "village-of-gold-river",
+      "website": "http://goldriver.ca",
+      "officeYears": [
+        2021
+      ],
+      "paymentYears": []
+    },
+    {
+      "municipality": "Grand Forks",
+      "employerSlug": "city-of-grand-forks",
+      "website": "http://grandforks.ca",
+      "officeYears": [
+        2021
+      ],
+      "paymentYears": []
+    },
+    {
+      "municipality": "Granisle",
+      "employerSlug": "village-of-granisle",
+      "website": "https://villageofgranisle.ca/",
+      "officeYears": [
+        2021
+      ],
+      "paymentYears": []
+    },
+    {
+      "municipality": "Greenwood",
+      "employerSlug": "city-of-greenwood",
+      "website": "http://www.greenwoodcity.com",
+      "officeYears": [
+        2021
+      ],
+      "paymentYears": []
+    },
+    {
+      "municipality": "Harrison Hot Springs",
+      "employerSlug": "village-of-harrison-hot-springs",
+      "website": "http://www.harrisonhotsprings.ca",
+      "officeYears": [
+        2021
+      ],
+      "paymentYears": []
+    },
+    {
+      "municipality": "Hazelton",
+      "employerSlug": "village-of-hazelton",
+      "website": "http://www.hazelton.ca",
+      "officeYears": [
+        2021
+      ],
+      "paymentYears": []
+    },
+    {
+      "municipality": "Highlands",
+      "employerSlug": "district-of-highlands",
+      "website": "http://www.highlands.ca",
+      "officeYears": [
+        2019,
+        2021
+      ],
+      "paymentYears": []
+    },
+    {
+      "municipality": "Hope",
+      "employerSlug": "district-of-hope",
+      "website": "http://www.hope.ca",
+      "officeYears": [
+        2021
+      ],
+      "paymentYears": []
+    },
+    {
+      "municipality": "Houston",
+      "employerSlug": "district-of-houston",
+      "website": "http://www.houston.ca",
+      "officeYears": [
+        2021
+      ],
+      "paymentYears": []
+    },
+    {
+      "municipality": "Hudson's Hope",
+      "employerSlug": "district-of-hudson-s-hope",
+      "website": "http://hudsonshope.ca/",
+      "officeYears": [
+        2021
+      ],
+      "paymentYears": []
+    },
+    {
+      "municipality": "Invermere",
+      "employerSlug": "district-of-invermere",
+      "website": "http://www.invermere.net",
+      "officeYears": [
+        2021
+      ],
+      "paymentYears": []
+    },
+    {
+      "municipality": "Kamloops",
+      "employerSlug": "city-of-kamloops",
+      "website": "http://www.kamloops.ca",
+      "officeYears": [
+        2021,
+        2022,
+        2023,
+        2024,
+        2025,
+        2026
+      ],
+      "paymentYears": []
+    },
+    {
+      "municipality": "Kaslo",
+      "employerSlug": "village-of-kaslo",
+      "website": "http://www.kaslo.ca",
+      "officeYears": [
+        2021
+      ],
+      "paymentYears": []
+    },
+    {
+      "municipality": "Kelowna",
+      "employerSlug": "city-of-kelowna",
+      "website": "http://www.kelowna.ca",
+      "officeYears": [
+        2021,
+        2025
+      ],
+      "paymentYears": []
+    },
+    {
+      "municipality": "Kent",
+      "employerSlug": "district-of-kent",
+      "website": "http://www.kentbc.ca",
+      "officeYears": [
+        2021
+      ],
+      "paymentYears": []
+    },
+    {
+      "municipality": "Keremeos",
+      "employerSlug": "village-of-keremeos",
+      "website": "http://www.keremeos.ca",
+      "officeYears": [
+        2021
+      ],
+      "paymentYears": []
+    },
+    {
+      "municipality": "Kimberley",
+      "employerSlug": "city-of-kimberley",
+      "website": "http://www.kimberley.ca",
+      "officeYears": [
+        2021
+      ],
+      "paymentYears": []
+    },
+    {
+      "municipality": "Kitimat",
+      "employerSlug": "district-of-kitimat",
+      "website": "http://www.kitimat.ca",
+      "officeYears": [
+        2021
+      ],
+      "paymentYears": []
+    },
+    {
+      "municipality": "Ladysmith",
+      "employerSlug": "town-of-ladysmith",
+      "website": "http://www.ladysmith.ca",
+      "officeYears": [
+        2019,
+        2021
+      ],
+      "paymentYears": []
+    },
+    {
+      "municipality": "Lake Country",
+      "employerSlug": "district-of-lake-country",
+      "website": "http://www.lakecountry.bc.ca",
+      "officeYears": [
+        2021
+      ],
+      "paymentYears": []
+    },
+    {
+      "municipality": "Lake Cowichan",
+      "employerSlug": "town-of-lake-cowichan",
+      "website": "http://www.town.lakecowichan.bc.ca",
+      "officeYears": [
+        2019,
+        2021
+      ],
+      "paymentYears": []
+    },
+    {
+      "municipality": "Langford",
+      "employerSlug": "city-of-langford",
+      "website": "https://www.langford.ca/",
+      "officeYears": [
+        2019,
+        2021
+      ],
+      "paymentYears": []
+    },
+    {
+      "municipality": "Langley",
+      "employerSlug": "city-of-langley",
+      "website": "http://www.langleycity.ca",
+      "officeYears": [
+        2021
+      ],
+      "paymentYears": []
+    },
+    {
+      "municipality": "Langley",
+      "employerSlug": "langley-township",
+      "website": "http://www.tol.ca",
+      "officeYears": [
+        2021
+      ],
+      "paymentYears": []
+    },
+    {
+      "municipality": "Lantzville",
+      "employerSlug": "district-of-lantzville",
+      "website": "http://www.lantzville.ca",
+      "officeYears": [
+        2021
+      ],
+      "paymentYears": []
+    },
+    {
+      "municipality": "Lillooet",
+      "employerSlug": "district-of-lillooet",
+      "website": "http://www.lillooet.ca",
+      "officeYears": [
+        2021
+      ],
+      "paymentYears": []
+    },
+    {
+      "municipality": "Lions Bay",
+      "employerSlug": "village-of-lions-bay",
+      "website": "http://www.lionsbay.ca/",
+      "officeYears": [
+        2021
+      ],
+      "paymentYears": []
+    },
+    {
+      "municipality": "Logan Lake",
+      "employerSlug": "district-of-logan-lake",
+      "website": "http://www.loganlake.ca",
+      "officeYears": [
+        2021
+      ],
+      "paymentYears": []
+    },
+    {
+      "municipality": "Lumby",
+      "employerSlug": "village-of-lumby",
+      "website": "http://www.lumby.ca",
+      "officeYears": [
+        2021
+      ],
+      "paymentYears": []
+    },
+    {
+      "municipality": "Lytton",
+      "employerSlug": "village-of-lytton",
+      "website": "http://www.lytton.ca",
+      "officeYears": [
+        2021
+      ],
+      "paymentYears": []
+    },
+    {
+      "municipality": "Mackenzie",
+      "employerSlug": "district-of-mackenzie",
+      "website": "http://www.districtofmackenzie.ca",
+      "officeYears": [
+        2015,
+        2016,
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023
+      ],
+      "paymentYears": []
+    },
+    {
+      "municipality": "Maple Ridge",
+      "employerSlug": "city-of-maple-ridge",
+      "website": "http://www.mapleridge.ca",
+      "officeYears": [
+        2021
+      ],
+      "paymentYears": []
+    },
+    {
+      "municipality": "Masset",
+      "employerSlug": "village-of-masset",
+      "website": "http://massetbc.com/",
+      "officeYears": [
+        2021
+      ],
+      "paymentYears": []
+    },
+    {
+      "municipality": "McBride",
+      "employerSlug": "village-of-mcbride",
+      "website": "http://www.mcbride.ca",
+      "officeYears": [
+        2021
+      ],
+      "paymentYears": []
+    },
+    {
+      "municipality": "Merritt",
+      "employerSlug": "city-of-merritt",
+      "website": "http://www.merritt.ca",
+      "officeYears": [
+        2021
+      ],
+      "paymentYears": []
+    },
+    {
+      "municipality": "Metchosin",
+      "employerSlug": "district-of-metchosin",
+      "website": "http://www.metchosin.ca",
+      "officeYears": [
+        2019,
+        2021
+      ],
+      "paymentYears": []
+    },
+    {
+      "municipality": "Midway",
+      "employerSlug": "village-of-midway",
+      "website": "http://www.midwaybc.ca/",
+      "officeYears": [
+        2021
+      ],
+      "paymentYears": []
+    },
+    {
+      "municipality": "Mission",
+      "employerSlug": "city-of-mission",
+      "website": "http://www.mission.ca",
+      "officeYears": [
+        2021
+      ],
+      "paymentYears": []
+    },
+    {
+      "municipality": "Montrose",
+      "employerSlug": "village-of-montrose",
+      "website": "http://www.montrose.ca",
+      "officeYears": [
+        2021
+      ],
+      "paymentYears": []
+    },
+    {
+      "municipality": "Nakusp",
+      "employerSlug": "village-of-nakusp",
+      "website": "http://www.nakusp.com",
+      "officeYears": [
+        2021
+      ],
+      "paymentYears": []
+    },
+    {
+      "municipality": "Nanaimo",
+      "employerSlug": "city-of-nanaimo",
+      "website": "https://www.nanaimo.ca",
+      "officeYears": [
+        2016,
+        2021
+      ],
+      "paymentYears": []
+    },
+    {
+      "municipality": "Nelson",
+      "employerSlug": "city-of-nelson",
+      "website": "http://www.nelson.ca/",
+      "officeYears": [
+        2021
+      ],
+      "paymentYears": []
+    },
+    {
+      "municipality": "New Denver",
+      "employerSlug": "village-of-new-denver",
+      "website": "http://www.newdenver.ca",
+      "officeYears": [
+        2021
+      ],
+      "paymentYears": []
+    },
+    {
+      "municipality": "New Hazelton",
+      "employerSlug": "district-of-new-hazelton",
+      "website": "http://www.newhazelton.ca",
+      "officeYears": [
+        2021
+      ],
+      "paymentYears": []
+    },
+    {
+      "municipality": "New Westminster",
+      "employerSlug": "city-of-new-westminster",
+      "website": "http://www.newwestcity.ca/",
+      "officeYears": [
+        2021
+      ],
+      "paymentYears": []
+    },
+    {
+      "municipality": "North Cowichan",
+      "employerSlug": "district-of-north-cowichan",
+      "website": "http://www.northcowichan.ca",
+      "officeYears": [
+        2019,
+        2021
+      ],
+      "paymentYears": []
+    },
+    {
+      "municipality": "Northern Rockies",
+      "employerSlug": "northern-rockies-regional-municipality",
+      "website": "http://www.northernrockies.ca",
+      "officeYears": [
+        2021
+      ],
+      "paymentYears": []
+    },
+    {
+      "municipality": "North Saanich",
+      "employerSlug": "district-of-north-saanich",
+      "website": "http://www.northsaanich.ca",
+      "officeYears": [
+        2019,
+        2021
+      ],
+      "paymentYears": []
+    },
+    {
+      "municipality": "North Vancouver",
+      "employerSlug": "city-of-north-vancouver",
+      "website": "http://www.cnv.org",
+      "officeYears": [
+        2021
+      ],
+      "paymentYears": []
+    },
+    {
+      "municipality": "North Vancouver",
+      "employerSlug": "district-of-north-vancouver",
+      "website": "http://www.dnv.org",
+      "officeYears": [
+        2021
+      ],
+      "paymentYears": []
+    },
+    {
+      "municipality": "Oak Bay",
+      "employerSlug": "district-of-oak-bay",
+      "website": "http://www.oakbay.ca",
+      "officeYears": [
+        2019,
+        2021
+      ],
+      "paymentYears": []
+    },
+    {
+      "municipality": "Okanagan Falls",
+      "employerSlug": "district-of-okanagan-falls",
+      "website": "http://okanaganfalls.ca",
+      "officeYears": [],
+      "paymentYears": []
+    },
+    {
+      "municipality": "Oliver",
+      "employerSlug": "town-of-oliver",
+      "website": "http://www.oliver.ca",
+      "officeYears": [
+        2021
+      ],
+      "paymentYears": []
+    },
+    {
+      "municipality": "Osoyoos",
+      "employerSlug": "town-of-osoyoos",
+      "website": "http://www.osoyoos.ca",
+      "officeYears": [
+        2021
+      ],
+      "paymentYears": []
+    },
+    {
+      "municipality": "Parksville",
+      "employerSlug": "city-of-parksville",
+      "website": "http://www.parksville.ca",
+      "officeYears": [
+        2021
+      ],
+      "paymentYears": []
+    },
+    {
+      "municipality": "Peachland",
+      "employerSlug": "district-of-peachland",
+      "website": "http://www.peachland.ca",
+      "officeYears": [
+        2021
+      ],
+      "paymentYears": []
+    },
+    {
+      "municipality": "Pemberton",
+      "employerSlug": "village-of-pemberton",
+      "website": "http://www.pemberton.ca",
+      "officeYears": [
+        2021
+      ],
+      "paymentYears": []
+    },
+    {
+      "municipality": "Penticton",
+      "employerSlug": "city-of-penticton",
+      "website": "http://www.penticton.ca",
+      "officeYears": [
+        2021
+      ],
+      "paymentYears": []
+    },
+    {
+      "municipality": "Pitt Meadows",
+      "employerSlug": "city-of-pitt-meadows",
+      "website": "https://www.pittmeadows.ca",
+      "officeYears": [
+        2021
+      ],
+      "paymentYears": []
+    },
+    {
+      "municipality": "Port Alberni",
+      "employerSlug": "city-of-port-alberni",
+      "website": "http://www.portalberni.ca",
+      "officeYears": [
+        2021
+      ],
+      "paymentYears": []
+    },
+    {
+      "municipality": "Port Alice",
+      "employerSlug": "village-of-port-alice",
+      "website": "http://www.portalice.ca",
+      "officeYears": [
+        2021
+      ],
+      "paymentYears": []
+    },
+    {
+      "municipality": "Port Clements",
+      "employerSlug": "village-of-port-clements",
+      "website": "http://www.portclements.ca",
+      "officeYears": [
+        2021
+      ],
+      "paymentYears": []
+    },
+    {
+      "municipality": "Port Coquitlam",
+      "employerSlug": "city-of-port-coquitlam",
+      "website": "http://www.portcoquitlam.ca",
+      "officeYears": [
+        2021
+      ],
+      "paymentYears": []
+    },
+    {
+      "municipality": "Port Edward",
+      "employerSlug": "district-of-port-edward",
+      "website": "http://www.portedward.ca",
+      "officeYears": [
+        2021
+      ],
+      "paymentYears": []
+    },
+    {
+      "municipality": "Port Hardy",
+      "employerSlug": "district-of-port-hardy",
+      "website": "http://www.porthardy.ca",
+      "officeYears": [
+        2020
+      ],
+      "paymentYears": []
+    },
+    {
+      "municipality": "Port McNeill",
+      "employerSlug": "town-of-port-mcneill",
+      "website": "http://portmcneill.ca",
+      "officeYears": [
+        2021
+      ],
+      "paymentYears": []
+    },
+    {
+      "municipality": "Port Moody",
+      "employerSlug": "city-of-port-moody",
+      "website": "http://www.portmoody.ca",
+      "officeYears": [
+        2021
+      ],
+      "paymentYears": []
+    },
+    {
+      "municipality": "Pouce Coupe",
+      "employerSlug": "village-of-pouce-coupe",
+      "website": "http://www.poucecoupe.ca",
+      "officeYears": [
+        2021
+      ],
+      "paymentYears": []
+    },
+    {
+      "municipality": "Powell River",
+      "employerSlug": "city-of-powell-river",
+      "website": "http://www.powellriver.ca/",
+      "officeYears": [
+        2021
+      ],
+      "paymentYears": []
+    },
+    {
+      "municipality": "Prince George",
+      "employerSlug": "city-of-prince-george",
+      "website": "http://www.princegeorge.ca",
+      "officeYears": [
+        2021
+      ],
+      "paymentYears": []
+    },
+    {
+      "municipality": "Prince Rupert",
+      "employerSlug": "city-of-prince-rupert",
+      "website": "http://www.princerupert.ca",
+      "officeYears": [
+        2021
+      ],
+      "paymentYears": []
+    },
+    {
+      "municipality": "Princeton",
+      "employerSlug": "town-of-princeton",
+      "website": "http://www.princeton.ca",
+      "officeYears": [
+        2021
+      ],
+      "paymentYears": []
+    },
+    {
+      "municipality": "Qualicum Beach",
+      "employerSlug": "town-of-qualicum-beach",
+      "website": "http://www.qualicumbeach.com",
+      "officeYears": [
+        2021
+      ],
+      "paymentYears": []
+    },
+    {
+      "municipality": "Quesnel",
+      "employerSlug": "city-of-quesnel",
+      "website": "http://www.quesnel.ca",
+      "officeYears": [
+        2021
+      ],
+      "paymentYears": []
+    },
+    {
+      "municipality": "Radium Hot Springs",
+      "employerSlug": "village-of-radium-hot-springs",
+      "website": "http://www.radiumhotsprings.ca/",
+      "officeYears": [
+        2021
+      ],
+      "paymentYears": []
+    },
+    {
+      "municipality": "Revelstoke",
+      "employerSlug": "city-of-revelstoke",
+      "website": "http://www.revelstoke.ca",
+      "officeYears": [
+        2021
+      ],
+      "paymentYears": []
+    },
+    {
+      "municipality": "Richmond",
+      "employerSlug": "city-of-richmond",
+      "website": "http://www.richmond.ca",
+      "officeYears": [
+        2021
+      ],
+      "paymentYears": []
+    },
+    {
+      "municipality": "Rossland",
+      "employerSlug": "city-of-rossland",
+      "website": "http://www.rossland.ca",
+      "officeYears": [
+        2021
+      ],
+      "paymentYears": []
+    },
+    {
+      "municipality": "Saanich",
+      "employerSlug": "district-of-saanich",
+      "website": "https://www.saanich.ca/",
+      "officeYears": [
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025,
+        2026
+      ],
+      "paymentYears": []
+    },
+    {
+      "municipality": "Salmo",
+      "employerSlug": "village-of-salmo",
+      "website": "http://www.salmo.ca",
+      "officeYears": [
+        2021
+      ],
+      "paymentYears": []
+    },
+    {
+      "municipality": "Salmon Arm",
+      "employerSlug": "city-of-salmon-arm",
+      "website": "http://www.salmonarm.ca",
+      "officeYears": [
+        2021
+      ],
+      "paymentYears": []
+    },
+    {
+      "municipality": "Sayward",
+      "employerSlug": "village-of-sayward",
+      "website": "http://www.sayward.ca",
+      "officeYears": [
+        2021
+      ],
+      "paymentYears": []
+    },
+    {
+      "municipality": "Sechelt",
+      "employerSlug": "district-of-sechelt",
+      "website": "http://www.sechelt.ca",
+      "officeYears": [
+        2021
+      ],
+      "paymentYears": []
+    },
+    {
+      "municipality": "shíshálh Nation Government District",
+      "employerSlug": "shishalh-nation-government-district",
+      "website": "http://www.shishalh.com",
+      "officeYears": [],
+      "paymentYears": []
+    },
+    {
+      "municipality": "Sicamous",
+      "employerSlug": "district-of-sicamous",
+      "website": "http://www.sicamous.ca",
+      "officeYears": [
+        2021
+      ],
+      "paymentYears": []
+    },
+    {
+      "municipality": "Sidney",
+      "employerSlug": "town-of-sidney",
+      "website": "http://www.sidney.ca",
+      "officeYears": [
+        2019,
+        2021
+      ],
+      "paymentYears": []
+    },
+    {
+      "municipality": "Silverton",
+      "employerSlug": "village-of-silverton",
+      "website": "http://www.silverton.ca",
+      "officeYears": [
+        2021
+      ],
+      "paymentYears": []
+    },
+    {
+      "municipality": "Slocan",
+      "employerSlug": "village-of-slocan",
+      "website": "http://www.slocancity.com/",
+      "officeYears": [
+        2021
+      ],
+      "paymentYears": []
+    },
+    {
+      "municipality": "Smithers",
+      "employerSlug": "town-of-smithers",
+      "website": "http://www.smithers.ca",
+      "officeYears": [
+        2021
+      ],
+      "paymentYears": []
+    },
+    {
+      "municipality": "Sooke",
+      "employerSlug": "district-of-sooke",
+      "website": "http://www.sooke.ca",
+      "officeYears": [
+        2019,
+        2021
+      ],
+      "paymentYears": []
+    },
+    {
+      "municipality": "Spallumcheen",
+      "employerSlug": "township-of-spallumcheen",
+      "website": "http://www.spallumcheentwp.bc.ca",
+      "officeYears": [
+        2021
+      ],
+      "paymentYears": []
+    },
+    {
+      "municipality": "Sparwood",
+      "employerSlug": "district-of-sparwood",
+      "website": "http://www.sparwood.ca",
+      "officeYears": [
+        2021
+      ],
+      "paymentYears": []
+    },
+    {
+      "municipality": "Squamish",
+      "employerSlug": "district-of-squamish",
+      "website": "http://www.squamish.ca",
+      "officeYears": [
+        2021
+      ],
+      "paymentYears": []
+    },
+    {
+      "municipality": "Stewart",
+      "employerSlug": "district-of-stewart",
+      "website": "http://www.districtofstewart.com",
+      "officeYears": [
+        2021
+      ],
+      "paymentYears": []
+    },
+    {
+      "municipality": "Summerland",
+      "employerSlug": "district-of-summerland",
+      "website": "http://www.summerland.ca",
+      "officeYears": [
+        2021
+      ],
+      "paymentYears": []
+    },
+    {
+      "municipality": "Sun Peaks",
+      "employerSlug": "sun-peaks-mountain-resort-municipality",
+      "website": "http://sunpeaksmunicipality.ca/",
+      "officeYears": [
+        2021
+      ],
+      "paymentYears": []
+    },
+    {
+      "municipality": "Surrey",
+      "employerSlug": "city-of-surrey",
+      "website": "http://www.surrey.ca",
+      "officeYears": [
+        2021
+      ],
+      "paymentYears": []
+    },
+    {
+      "municipality": "Tahsis",
+      "employerSlug": "village-of-tahsis",
+      "website": "http://www.villageoftahsis.com",
+      "officeYears": [
+        2021
+      ],
+      "paymentYears": []
+    },
+    {
+      "municipality": "Taylor",
+      "employerSlug": "district-of-taylor",
+      "website": "http://www.districtoftaylor.com",
+      "officeYears": [
+        2021
+      ],
+      "paymentYears": []
+    },
+    {
+      "municipality": "Telkwa",
+      "employerSlug": "village-of-telkwa",
+      "website": "http://www.telkwa.ca",
+      "officeYears": [
+        2021
+      ],
+      "paymentYears": []
+    },
+    {
+      "municipality": "Terrace",
+      "employerSlug": "city-of-terrace",
+      "website": "http://terrace.ca",
+      "officeYears": [
+        2021
+      ],
+      "paymentYears": []
+    },
+    {
+      "municipality": "Tofino",
+      "employerSlug": "district-of-tofino",
+      "website": "http://www.tofino.ca",
+      "officeYears": [
+        2021
+      ],
+      "paymentYears": []
+    },
+    {
+      "municipality": "Trail",
+      "employerSlug": "city-of-trail",
+      "website": "http://www.trail.ca",
+      "officeYears": [
+        2021
+      ],
+      "paymentYears": []
+    },
+    {
+      "municipality": "Tumbler Ridge",
+      "employerSlug": "district-of-tumbler-ridge",
+      "website": "http://www.districtoftumblerridge.ca",
+      "officeYears": [
+        2021
+      ],
+      "paymentYears": []
+    },
+    {
+      "municipality": "Ucluelet",
+      "employerSlug": "district-of-ucluelet",
+      "website": "http://www.ucluelet.ca",
+      "officeYears": [
+        2021
+      ],
+      "paymentYears": []
+    },
+    {
+      "municipality": "Valemount",
+      "employerSlug": "village-of-valemount",
+      "website": "http://www.valemount.ca",
+      "officeYears": [
+        2021
+      ],
+      "paymentYears": []
+    },
+    {
+      "municipality": "Vancouver",
+      "employerSlug": "city-of-vancouver",
+      "website": "http://vancouver.ca/",
+      "officeYears": [
+        1995,
+        1996,
+        1997,
+        1998,
+        1999,
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005,
+        2006,
+        2007,
+        2008,
+        2009,
+        2010,
+        2011,
+        2012,
+        2013,
+        2014,
+        2015,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025,
+        2026
+      ],
+      "paymentYears": [
+        1994,
+        1995,
+        1997,
+        1998,
+        1999,
+        2000,
+        2001,
+        2002,
+        2003,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ]
+    },
+    {
+      "municipality": "Vanderhoof",
+      "employerSlug": "district-of-vanderhoof",
+      "website": "http://www.vanderhoof.ca",
+      "officeYears": [
+        2021
+      ],
+      "paymentYears": []
+    },
+    {
+      "municipality": "Vernon",
+      "employerSlug": "city-of-vernon",
+      "website": "http://www.vernon.ca",
+      "officeYears": [
+        2021
+      ],
+      "paymentYears": []
+    },
+    {
+      "municipality": "Victoria",
+      "employerSlug": "city-of-victoria",
+      "website": "http://www.victoria.ca",
+      "officeYears": [
+        2019,
+        2021
+      ],
+      "paymentYears": []
+    },
+    {
+      "municipality": "View Royal",
+      "employerSlug": "town-of-view-royal",
+      "website": "https://viewroyal.ca",
+      "officeYears": [
+        2019,
+        2021
+      ],
+      "paymentYears": []
+    },
+    {
+      "municipality": "Warfield",
+      "employerSlug": "village-of-warfield",
+      "website": "http://warfield.ca/",
+      "officeYears": [
+        2021
+      ],
+      "paymentYears": []
+    },
+    {
+      "municipality": "Wells",
+      "employerSlug": "district-of-wells",
+      "website": "http://www.wells.ca",
+      "officeYears": [
+        2021
+      ],
+      "paymentYears": []
+    },
+    {
+      "municipality": "West Kelowna",
+      "employerSlug": "city-of-west-kelowna",
+      "website": "http://www.westkelownacity.ca",
+      "officeYears": [
+        2021
+      ],
+      "paymentYears": []
+    },
+    {
+      "municipality": "West Vancouver",
+      "employerSlug": "district-of-west-vancouver",
+      "website": "http://www.westvancouver.ca",
+      "officeYears": [
+        2021
+      ],
+      "paymentYears": []
+    },
+    {
+      "municipality": "Whistler",
+      "employerSlug": "resort-municipality-of-whistler",
+      "website": "http://www.whistler.ca",
+      "officeYears": [
+        2021
+      ],
+      "paymentYears": []
+    },
+    {
+      "municipality": "White Rock",
+      "employerSlug": "city-of-white-rock",
+      "website": "http://www.whiterockcity.ca",
+      "officeYears": [
+        2021
+      ],
+      "paymentYears": []
+    },
+    {
+      "municipality": "Williams Lake",
+      "employerSlug": "city-of-williams-lake",
+      "website": "http://www.williamslake.ca",
+      "officeYears": [
+        2021
+      ],
+      "paymentYears": []
+    },
+    {
+      "municipality": "Zeballos",
+      "employerSlug": "village-of-zeballos",
+      "website": "https://www.zeballos.com",
+      "officeYears": [
+        2021
+      ],
+      "paymentYears": []
+    }
+  ]
+}

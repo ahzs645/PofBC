@@ -1,0 +1,512 @@
+{
+  "version": 1,
+  "asOf": "2026-11-04",
+  "scope": "Council-pay companion only; existing salary and name-link exports are untouched.",
+  "counts": {
+    "sources": 25,
+    "officeObservations": 430,
+    "namedPayments": 182,
+    "columnControls": 61,
+    "surveyValueChecks": 320
+  },
+  "inputs": [
+    {
+      "path": "research/salaries/council-pay-history-2026-11-04/cbc-2019-office-pay.json",
+      "sha256": "9b06d940c622b2ff81a5e72b94a77b35bd1dceee8bfb4e6c2f58510cba840e78"
+    },
+    {
+      "path": "research/salaries/council-pay-history-2026-11-04/cbc-2021-transcription-evidence.json",
+      "sha256": "7a16aec7409108c164d2aadeffcd489e1ef6b83babae1b3ebd23faf1d1898c1b"
+    },
+    {
+      "path": "research/salaries/council-pay-history-2026-11-04/cbc-office-pay.json",
+      "sha256": "9dfd230709a22bdf5754a531959a5c21e9d5873fb20f8b82080eb7fd26902152"
+    },
+    {
+      "path": "research/salaries/council-pay-history-2026-11-04/existing-source-comparison.json",
+      "sha256": "cd796012b8807baee1d664309efc523c68762aa1038038ff5bf166f236a23923"
+    },
+    {
+      "path": "research/salaries/council-pay-history-2026-11-04/historical-other.json",
+      "sha256": "ce7416a4e02abdf7620f306ef47f43dab347d170950b15bf8b2022f679ec7b81"
+    },
+    {
+      "path": "research/salaries/council-pay-history-2026-11-04/mackenzie-office-history.json",
+      "sha256": "4a8e0cc37bc4c5c0b47cd51681f8a1acb93494a56c8822cb5fb8cc258e1bbd39"
+    },
+    {
+      "path": "research/salaries/council-pay-history-2026-11-04/official-rates-vancouver-saanich.json",
+      "sha256": "530b7f42f18554b6569d70621adf66c0a245ec6527adfbc8f1e63ff62848d13b"
+    },
+    {
+      "path": "research/salaries/council-pay-history-2026-11-04/vancouver-2019-2021-rates.json",
+      "sha256": "9ff0cc7bc46cd5be9833b2077b44dbb7c74414ec34e2d127a3be186ae45630e1"
+    },
+    {
+      "path": "research/salaries/council-pay-history-2026-11-04/vancouver-modern-payments-transcription.json",
+      "sha256": "e8e6aa9e08913ab28fa2a866ce3cf7bdf98059a6555c968954283cb4c06f7b68"
+    },
+    {
+      "path": "research/salaries/council-pay-history-2026-11-04/vancouver-payments-transcription.json",
+      "sha256": "39bae673c4c232092ab9ecd05d0d1ad43173309e3ece758ed73656affd07d3c4"
+    },
+    {
+      "path": "research/salaries/municipal-audit/roster.json",
+      "sha256": "dcb28c9fc261a8295e1ca601cfba9138047133abae04a031baf4c098b659ba99"
+    },
+    {
+      "path": "public/salaries/employers/city-of-vancouver.json.gzip",
+      "sha256": "3489d3963e7e0a84710f5feaa3a6fb1c3e058921e5f041ff85b0778d94bf5dd2"
+    },
+    {
+      "path": "src/government/salaryIndex.js",
+      "sha256": "2eaa7494fdda188f62d46716fc62f5a11aca1e1fa99ab3912c10247531d704cc"
+    }
+  ],
+  "controls": [
+    {
+      "year": 2020,
+      "column": "remuneration",
+      "printedTotal": 1104744,
+      "sumOfDisclosedCells": 1104744,
+      "missingCells": 0
+    },
+    {
+      "year": 2020,
+      "column": "localExpenses",
+      "printedTotal": 77517,
+      "sumOfDisclosedCells": 77517,
+      "missingCells": 0
+    },
+    {
+      "year": 2020,
+      "column": "travelConferences",
+      "printedTotal": 12188,
+      "sumOfDisclosedCells": 12188,
+      "missingCells": 0
+    },
+    {
+      "year": 2020,
+      "column": "discretionaryExpenses",
+      "printedTotal": 956880,
+      "sumOfDisclosedCells": 956880,
+      "missingCells": 0
+    },
+    {
+      "year": 2021,
+      "column": "remuneration",
+      "printedTotal": 1155987,
+      "sumOfDisclosedCells": 1155987,
+      "missingCells": 0
+    },
+    {
+      "year": 2021,
+      "column": "localExpenses",
+      "printedTotal": 87835,
+      "sumOfDisclosedCells": 87835,
+      "missingCells": 0
+    },
+    {
+      "year": 2021,
+      "column": "travelConferences",
+      "printedTotal": 24424,
+      "sumOfDisclosedCells": 24424,
+      "missingCells": 0
+    },
+    {
+      "year": 2021,
+      "column": "discretionaryExpenses",
+      "printedTotal": 877248,
+      "sumOfDisclosedCells": 877248,
+      "missingCells": 0
+    },
+    {
+      "year": 2022,
+      "column": "remuneration",
+      "printedTotal": 1271275,
+      "sumOfDisclosedCells": 1271275,
+      "missingCells": 0
+    },
+    {
+      "year": 2022,
+      "column": "localExpenses",
+      "printedTotal": 94905,
+      "sumOfDisclosedCells": 94905,
+      "missingCells": 0
+    },
+    {
+      "year": 2022,
+      "column": "travelConferences",
+      "printedTotal": 33792,
+      "sumOfDisclosedCells": 33792,
+      "missingCells": 0
+    },
+    {
+      "year": 2022,
+      "column": "discretionaryExpenses",
+      "printedTotal": 893061,
+      "sumOfDisclosedCells": 893061,
+      "missingCells": 0
+    },
+    {
+      "year": 2023,
+      "column": "remuneration",
+      "printedTotal": 1313949,
+      "sumOfDisclosedCells": 1313949,
+      "missingCells": 0
+    },
+    {
+      "year": 2023,
+      "column": "localExpenses",
+      "printedTotal": 111017,
+      "sumOfDisclosedCells": 111017,
+      "missingCells": 0
+    },
+    {
+      "year": 2023,
+      "column": "travelConferences",
+      "printedTotal": 98610,
+      "sumOfDisclosedCells": 98610,
+      "missingCells": 0
+    },
+    {
+      "year": 2023,
+      "column": "discretionaryExpenses",
+      "printedTotal": 949065,
+      "sumOfDisclosedCells": 949065,
+      "missingCells": 0
+    },
+    {
+      "year": 2024,
+      "column": "remuneration",
+      "printedTotal": 1347296,
+      "sumOfDisclosedCells": 1347296,
+      "missingCells": 0
+    },
+    {
+      "year": 2024,
+      "column": "localExpenses",
+      "printedTotal": 109197,
+      "sumOfDisclosedCells": 109197,
+      "missingCells": 0
+    },
+    {
+      "year": 2024,
+      "column": "travelConferences",
+      "printedTotal": 73614,
+      "sumOfDisclosedCells": 73614,
+      "missingCells": 0
+    },
+    {
+      "year": 2024,
+      "column": "discretionaryExpenses",
+      "printedTotal": 1174913,
+      "sumOfDisclosedCells": 1174913,
+      "missingCells": 0
+    },
+    {
+      "year": 2025,
+      "column": "remuneration",
+      "printedTotal": 1344313,
+      "sumOfDisclosedCells": 1344313,
+      "missingCells": 0
+    },
+    {
+      "year": 2025,
+      "column": "localExpenses",
+      "printedTotal": 106798,
+      "sumOfDisclosedCells": 106798,
+      "missingCells": 0
+    },
+    {
+      "year": 2025,
+      "column": "travelConferences",
+      "printedTotal": 96635,
+      "sumOfDisclosedCells": 96635,
+      "missingCells": 0
+    },
+    {
+      "year": 2025,
+      "column": "discretionaryExpenses",
+      "printedTotal": 1249042,
+      "sumOfDisclosedCells": 1249042,
+      "missingCells": 0
+    },
+    {
+      "year": 1994,
+      "column": "income",
+      "printedTotal": 247674.7,
+      "sumOfDisclosedCells": 247674.7,
+      "missingCells": 0
+    },
+    {
+      "year": 1994,
+      "column": "municipalOfficersAllowance",
+      "printedTotal": 123837.42,
+      "sumOfDisclosedCells": 123837.42,
+      "missingCells": 0
+    },
+    {
+      "year": 1994,
+      "column": "travelTraining",
+      "printedTotal": 26238.76,
+      "sumOfDisclosedCells": 26238.76,
+      "missingCells": 0
+    },
+    {
+      "year": 1994,
+      "column": "autoAllowance",
+      "printedTotal": 7200,
+      "sumOfDisclosedCells": 7200,
+      "missingCells": 0
+    },
+    {
+      "year": 1995,
+      "column": "income",
+      "printedTotal": 353454.48,
+      "sumOfDisclosedCells": 353454.48,
+      "missingCells": 0
+    },
+    {
+      "year": 1995,
+      "column": "municipalOfficersAllowance",
+      "printedTotal": 73449.94,
+      "sumOfDisclosedCells": 73449.94,
+      "missingCells": 0
+    },
+    {
+      "year": 1995,
+      "column": "travelTraining",
+      "printedTotal": 34887.19,
+      "sumOfDisclosedCells": 34887.19,
+      "missingCells": 0
+    },
+    {
+      "year": 1995,
+      "column": "autoAllowance",
+      "printedTotal": 7200,
+      "sumOfDisclosedCells": 7200,
+      "missingCells": 0
+    },
+    {
+      "year": 1995,
+      "column": "localExpenses",
+      "printedTotal": 3776.7,
+      "sumOfDisclosedCells": 3776.7,
+      "missingCells": 0
+    },
+    {
+      "year": 1997,
+      "column": "income",
+      "printedTotal": 522721.7,
+      "sumOfDisclosedCells": 522721.7,
+      "missingCells": 0
+    },
+    {
+      "year": 1997,
+      "column": "localExpenses",
+      "printedTotal": 27157.02,
+      "sumOfDisclosedCells": 27157.02,
+      "missingCells": 0
+    },
+    {
+      "year": 1997,
+      "column": "autoAllowance",
+      "printedTotal": 7200,
+      "sumOfDisclosedCells": 7200,
+      "missingCells": 0
+    },
+    {
+      "year": 1997,
+      "column": "travelTraining",
+      "printedTotal": 32992.12,
+      "sumOfDisclosedCells": 32992.12,
+      "missingCells": 0
+    },
+    {
+      "year": 1998,
+      "column": "income",
+      "printedTotal": 532004.16,
+      "sumOfDisclosedCells": 532004.16,
+      "missingCells": 0
+    },
+    {
+      "year": 1998,
+      "column": "localExpenses",
+      "printedTotal": 31436.73,
+      "sumOfDisclosedCells": 31436.73,
+      "missingCells": 0
+    },
+    {
+      "year": 1998,
+      "column": "autoAllowance",
+      "printedTotal": 6933.42,
+      "sumOfDisclosedCells": 6933.42,
+      "missingCells": 1
+    },
+    {
+      "year": 1998,
+      "column": "travelTraining",
+      "printedTotal": 54489.71,
+      "sumOfDisclosedCells": 54489.71,
+      "missingCells": 0
+    },
+    {
+      "year": 1999,
+      "column": "income",
+      "printedTotal": 530814.08,
+      "sumOfDisclosedCells": 530814.08,
+      "missingCells": 0
+    },
+    {
+      "year": 1999,
+      "column": "localExpenses",
+      "printedTotal": 31644.81,
+      "sumOfDisclosedCells": 31644.81,
+      "missingCells": 0
+    },
+    {
+      "year": 1999,
+      "column": "autoAllowance",
+      "printedTotal": 7176.53,
+      "sumOfDisclosedCells": 7176.53,
+      "missingCells": 1
+    },
+    {
+      "year": 1999,
+      "column": "travelTraining",
+      "printedTotal": 55662.49,
+      "sumOfDisclosedCells": 55662.49,
+      "missingCells": 0
+    },
+    {
+      "year": 2000,
+      "column": "income",
+      "printedTotal": 537901.38,
+      "sumOfDisclosedCells": 537901.38,
+      "missingCells": 0
+    },
+    {
+      "year": 2000,
+      "column": "localExpenses",
+      "printedTotal": 29542.48,
+      "sumOfDisclosedCells": 29542.48,
+      "missingCells": 0
+    },
+    {
+      "year": 2000,
+      "column": "autoAllowance",
+      "printedTotal": 7175.48,
+      "sumOfDisclosedCells": 7175.48,
+      "missingCells": 0
+    },
+    {
+      "year": 2000,
+      "column": "travelTraining",
+      "printedTotal": 51809.2,
+      "sumOfDisclosedCells": 51809.2,
+      "missingCells": 0
+    },
+    {
+      "year": 2001,
+      "column": "income",
+      "printedTotal": 543073.37,
+      "sumOfDisclosedCells": 543073.37,
+      "missingCells": 0
+    },
+    {
+      "year": 2001,
+      "column": "localExpenses",
+      "printedTotal": 29920.56,
+      "sumOfDisclosedCells": 29920.56,
+      "missingCells": 0
+    },
+    {
+      "year": 2001,
+      "column": "autoAllowance",
+      "printedTotal": 7147.88,
+      "sumOfDisclosedCells": 7147.88,
+      "missingCells": 0
+    },
+    {
+      "year": 2001,
+      "column": "travelTraining",
+      "printedTotal": 58334.58,
+      "sumOfDisclosedCells": 58334.58,
+      "missingCells": 0
+    },
+    {
+      "year": 2002,
+      "column": "income",
+      "printedTotal": 546388.11,
+      "sumOfDisclosedCells": 546388.11,
+      "missingCells": 0
+    },
+    {
+      "year": 2002,
+      "column": "localExpenses",
+      "printedTotal": 32201.54,
+      "sumOfDisclosedCells": 32201.54,
+      "missingCells": 0
+    },
+    {
+      "year": 2002,
+      "column": "autoAllowance",
+      "printedTotal": 6903.44,
+      "sumOfDisclosedCells": 6903.44,
+      "missingCells": 0
+    },
+    {
+      "year": 2002,
+      "column": "travelTraining",
+      "printedTotal": 56096.32,
+      "sumOfDisclosedCells": 56096.32,
+      "missingCells": 0
+    },
+    {
+      "year": 2003,
+      "column": "income",
+      "printedTotal": 569468.54,
+      "sumOfDisclosedCells": 569468.54,
+      "missingCells": 0
+    },
+    {
+      "year": 2003,
+      "column": "localExpenses",
+      "printedTotal": 13381.18,
+      "sumOfDisclosedCells": 13381.18,
+      "missingCells": 0
+    },
+    {
+      "year": 2003,
+      "column": "autoAllowance",
+      "printedTotal": 23879.47,
+      "sumOfDisclosedCells": 23879.47,
+      "missingCells": 0
+    },
+    {
+      "year": 2003,
+      "column": "travelTraining",
+      "printedTotal": 56005.72,
+      "sumOfDisclosedCells": 56005.72,
+      "missingCells": 0
+    }
+  ],
+  "outputs": [
+    {
+      "path": "public/salaries/council-pay.json",
+      "sha256": "3a5239041e2e7b0b27dc52b50ca98b3bb3bd0c1d0cc80bb252c62ebe8b4f3529",
+      "bytes": 348893
+    },
+    {
+      "path": "public/salaries/council-pay.csv",
+      "sha256": "b4c63d66890de339fcc43d1141e872394fbc1d9e083ae67ea7ff533edcc6b4a8",
+      "bytes": 730604
+    },
+    {
+      "path": "research/salaries/council-pay-history-2026-11-04/coverage.json",
+      "sha256": "0d81da874ee45730d5b45a5eb437ed436ddbc10e7cc05a9290a2680c0e8100f9",
+      "bytes": 38186
+    }
+  ]
+}

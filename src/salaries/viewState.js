@@ -8,11 +8,19 @@ const PARAMETERS = {
   year: 'salary-year', sector: 'salary-sector', employerYear: 'employer-year'
 }
 
+// These filters belong only to the companion. Keep the main salary filters intact when visiting
+// council pay, and remove companion parameters when leaving it.
+const COUNCIL_PARAMETERS = {
+  councilTab: 'council-tab', councilMunicipality: 'council-municipality', councilYear: 'council-year', councilRole: 'council-role'
+}
+
 export const readSalaryPlace = (search = '') => {
   const params = new URLSearchParams(search)
-  return Object.fromEntries(Object.entries(PARAMETERS).map(([key, param]) => [key,
+  const place = Object.fromEntries(Object.entries(PARAMETERS).map(([key, param]) => [key,
     params.get(param) ?? (key === 'q' ? '' : key === 'year' || key === 'sector' ? 'all' : null)
   ]))
+  if (place.browse === 'council') for (const [key, param] of Object.entries(COUNCIL_PARAMETERS)) place[key] = params.get(param) ?? (key === 'councilTab' ? 'rates' : 'all')
+  return place
 }
 
 export const salaryPlaceUrl = (href, place) => {
@@ -20,6 +28,11 @@ export const salaryPlaceUrl = (href, place) => {
   for (const [key, param] of Object.entries(PARAMETERS)) {
     const value = place[key]
     if (value && value !== 'all' && (key !== 'employerYear' || place.employer || place.title || place.personAt)) url.searchParams.set(param, value)
+    else url.searchParams.delete(param)
+  }
+  for (const [key, param] of Object.entries(COUNCIL_PARAMETERS)) {
+    const value = place[key]
+    if (place.browse === 'council' && value && value !== 'all' && !(key === 'councilTab' && value === 'rates')) url.searchParams.set(param, value)
     else url.searchParams.delete(param)
   }
   return url
