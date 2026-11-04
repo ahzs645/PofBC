@@ -33,15 +33,13 @@ export const EMPLOYER_ORDERS = [
   { value: 'count', label: 'Most employee records' },
   { value: 'median', label: 'Highest median pay' },
   { value: 'mean', label: 'Highest average pay' },
-  { value: 'growth', label: 'Fastest disclosure growth' },
-  { value: 'total', label: 'Largest disclosed payroll' }
+  { value: 'growth', label: 'Fastest disclosure growth' }
 ]
 
 const highlights = [
   { metric: 'median', label: 'Highest median pay', format: formatMoney },
   { metric: 'mean', label: 'Highest average pay', format: formatMoney },
-  { metric: 'growth', label: 'Fastest disclosure growth', format: employerRate },
-  { metric: 'total', label: 'Largest disclosed payroll', format: (value) => new Intl.NumberFormat('en-CA', { style: 'currency', currency: 'CAD', notation: 'compact', maximumFractionDigits: 2 }).format(value) }
+  { metric: 'growth', label: 'Fastest disclosure growth', format: employerRate }
 ]
 
 export const EmployerInsights = ({ rows, years, ready, failed, onRetry, onOpen, onOrder }) => (
@@ -61,7 +59,7 @@ export const EmployerInsights = ({ rows, years, ready, failed, onRetry, onOpen, 
                 <button type="button" className="salaries__link employer-insights__label" onClick={() => onOrder(metric)}>{label} <span aria-hidden="true">→</span></button>
                 {winner && positive
                   ? <>
-                    <strong className="employer-insights__value" title={metric === 'total' ? formatMoney(winner.stats.total) : undefined}>{format(winner.stats[metric])}</strong>
+                    <strong className="employer-insights__value">{format(winner.stats[metric])}</strong>
                     <button type="button" className="salaries__link employer-insights__name" onClick={() => onOpen(winner.entry.slug, years[winner.stats.year])}>{winner.name}</button>
                     <span className="salaries__line">{metric === 'growth' ? `${years[winner.stats.from]} → ${years[winner.stats.year]} · ${winner.stats.previousCount.toLocaleString('en-CA')} → ${winner.stats.count.toLocaleString('en-CA')} records` : `${years[winner.stats.year]} · ${count(winner.stats.count, 'employee record', 'employee records')}`}</span>
                     <span className="salaries__line">Reporting threshold {formatMoney(winner.stats.threshold, 'not specified')}</span>
@@ -73,7 +71,7 @@ export const EmployerInsights = ({ rows, years, ready, failed, onRetry, onOpen, 
         </div>}
     <details className="employer-insights__definitions">
       <summary>What these statistics cover</summary>
-      <p>Amounts are CAD remuneration in official annual employee schedules. Council, board, executive-only, compiled and incomplete schedules are excluded. Median, average and payroll describe the disclosed records, including any part-year payments; they are not annual salary rates or the organization’s complete payroll.</p>
+      <p>Amounts are CAD remuneration in official annual employee schedules. Council, board, executive-only, compiled and incomplete schedules are excluded. Median and average describe the disclosed records, including any part-year payments; they are not annual salary rates. These organization-level figures combine different roles.</p>
       <p>Disclosure growth counts published employee records, not total employees or new hires. It compares consecutive annual periods only when the recorded scope, threshold and boundary rule match, with unique disclosed names and at least {MIN_EMPLOYER_RECORDS} records in each. Pay increases can move more employees above a reporting threshold.</p>
       <p>Rankings require at least {MIN_EMPLOYER_RECORDS} records. Latest periods and reporting thresholds can differ across organizations. Filter to the same period and sector for a closer comparison; open an employer to inspect its source reports.</p>
     </details>
