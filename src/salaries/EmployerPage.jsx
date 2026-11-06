@@ -10,7 +10,7 @@ import { Segmented } from '../site/Segmented.jsx'
 import { SiteLink } from '../site/navigation.jsx'
 import { displayName, EMPLOYER_LAYOUT, personKey, withoutCompiledRepeats } from './people.js'
 import { employerNameKeys } from './nameLinks.js'
-import { meanMoney, titleKey, titleLabel } from './positions.js'
+import { meanMoney, titleKey, titleLabel, titleRecords } from './positions.js'
 import { categoryCoverage, coverageAt, expenseLabel, reportingYearLabel, scopeLabel } from './coverage.js'
 import { DisclosureSummary } from './DisclosureEvidence.jsx'
 import { formatMoney as money, medianMoney as median } from './money.js'
@@ -66,14 +66,17 @@ export const EmployerPage = ({ entry, years, sources, year: wantedYear, show, ro
     loadJson(`salaries/links/employers/${entry.slug}.json.gzip`).then((published) => live && setNameLinks(employerNameKeys(published, entry.slug)), () => live && setNameLinks(new Map()))
     return () => { live = false }
   }, [entry.slug])
+  const cadRows = useMemo(() => sourceRows?.filter((row) => isCadEmployer(row, entry.slug, years, sources)) ?? null, [sourceRows, entry.slug, years, sources])
+  const nameKey = useMemo(() => (row) => {
+    const key = personKey(row[0] ?? '')
+    return nameLinks?.get(key) ?? key
+  }, [nameLinks])
   // A compiled copy of a payment the employer's own report discloses, under the same name or a
   // joined spelling, is listed once: the report's record stays.
   const rows = useMemo(() => {
-    const cad = sourceRows?.filter((row) => isCadEmployer(row, entry.slug, years, sources))
-    if (!cad) return null
-    const nameKey = (row) => { const key = personKey(row[0] ?? ''); return nameLinks?.get(key) ?? key }
-    return withoutCompiledRepeats(cad, sources, undefined, { layout: EMPLOYER_LAYOUT, nameKey })
-  }, [sourceRows, entry.slug, years, sources, nameLinks])
+    if (!cadRows) return null
+    return withoutCompiledRepeats(cadRows, sources, undefined, { layout: EMPLOYER_LAYOUT, nameKey })
+  }, [cadRows, sources, nameKey])
   const foreignRows = useMemo(() => sourceRows?.filter((row) => !isCadEmployer(row, entry.slug, years, sources)) ?? [], [sourceRows, entry.slug, years, sources])
   const [failed, setFailed] = useState(false)
   const [loadVersion, setLoadVersion] = useState(0)
@@ -172,7 +175,7 @@ export const EmployerPage = ({ entry, years, sources, year: wantedYear, show, ro
     return (
       <>
       <RolePage
-        entry={entry} years={years} sources={sources} rows={rows} failed={failed} roleKey={role} wantedYear={wantedYear} back={back}
+        entry={entry} years={years} sources={sources} rows={cadRows} nameKey={nameKey} failed={failed} roleKey={role} wantedYear={wantedYear} back={back}
         onRetry={() => setLoadVersion((value) => value + 1)} onYear={pick} onTitle={onTitle} onPerson={onPerson} remember={remember}
       />
       <ForeignObservations rows={foreignRows.filter((row) => titleKey(row[1] ?? '') === role)} employer={entry.slug} years={years} sources={sources} onPerson={onPerson} />
@@ -346,8 +349,11 @@ export const EmployerPage = ({ entry, years, sources, year: wantedYear, show, ro
  * One position at one employer: its average by year as a chart and a list, and the people in the
  * year chosen. The same title at other employers is a link away.
  */
-const RolePage = ({ entry, years, sources, rows, failed, roleKey, wantedYear, back, onRetry, onYear, onTitle, onPerson, remember }) => {
-  const matching = useMemo(() => (rows ? rows.filter((row) => row[1] && titleKey(row[1]) === roleKey) : []), [rows, roleKey])
+const RolePage = ({ entry, years, sources, rows, nameKey, failed, roleKey, wantedYear, back, onRetry, onYear, onTitle, onPerson, remember }) => {
+  // Title discovery can retain a compiled title even when the matching official payment omits
+  // positions. Filter first, then fold repeated payments within that title, retaining provenance.
+  const matching = useMemo(() => (rows ? titleRecords(rows, roleKey, sources, { nameKey }) : []), [rows, roleKey, sources, nameKey])
+  const fromCompilation = (row) => sources?.[row[5]]?.sourceKind === 'compiled' || sources?.[row[5]]?.scope === 'compiled-unverified'
   const byYear = useMemo(() => years.map((_, at) => matching.filter((row) => row[4] === at)), [matching, years])
   const [group] = useMemo(() => groupTitles(matching), [matching])
   const label = group?.label ?? roleKey
@@ -389,6 +395,7 @@ const RolePage = ({ entry, years, sources, rows, failed, roleKey, wantedYear, ba
         {group?.spellings.length > 1 && (
           <p className="salaries__hint salaries__hint--small">Written as {group.spellings.slice(0, 6).map(([text]) => `“${text}”`).join(', ')}{group.spellings.length > 6 ? ` and ${group.spellings.length - 6} more ways` : ''}.</p>
         )}
+        {matching.some(fromCompilation) && <p className="salaries__hint salaries__hint--small">Rows labelled “Compiled position” come from the imported compilation. Their job titles have not been independently verified against an employer report.</p>}
         {failed && <p className="salaries__hint" role="alert">The employer’s records could not be loaded. <button type="button" onClick={onRetry}>Retry</button></p>}
         {!rows && !failed && <p className="salaries__hint" role="status">Loading its records…</p>}
         {rows && !group && <p className="salaries__hint">No records under this position at {entry.names.at(-1)}.</p>}
@@ -465,7 +472,7 @@ const RolePage = ({ entry, years, sources, rows, failed, roleKey, wantedYear, ba
                     key={`${row[0]}-${row[2]}-${ranked.indexOf(row)}`}
                     rank={ranked.indexOf(row) + 1}
                     name={row[0]}
-                    position={group.spellings.length > 1 ? row[1] : null}
+                    position={[group.spellings.length > 1 ? row[1] : null, fromCompilation(row) ? 'Compiled position · not independently verified' : null].filter(Boolean).join(' · ') || null}
                     pay={row[2]}
                     expenses={row[3]}
                     expenseText={expenseLabel(row[5], sources)}

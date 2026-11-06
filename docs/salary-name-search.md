@@ -42,6 +42,28 @@ Normalized spelling tokens are cached by immutable document object using a WeakM
 filter results are not cached. Changing the query or filters resets paging, including when a
 previous query is entered again.
 
+## Employers and positions
+
+Employer discovery uses `employerSearch.js` and the same text normalization. It searches the
+published names and slug in any word order, plus explicit discovery-only aliases. UNBC and UVic
+are supported from their universities' own [UNBC](https://www.unbc.ca/) and
+[UVic](https://www.uvic.ca/about-uvic/about-the-university/index.php) naming. These aliases do not
+alter disclosed names, employer identifiers or source evidence. Sector and period filters still
+apply before the employer results are displayed.
+
+Position discovery keeps the existing `titleMatcher` and expands its supported abbreviations
+before checking query length, so `RN` and `VP` reach the registered-nurse and vice-president
+matches. Its compact index lists titles across all sectors and periods; the interface now states
+that scope. Opening a title applies the selected sector and period to its detailed records.
+Within an employer, the existing local name/position filter remains available alongside the
+global search field. The separate Government view's organization/timeline search is unchanged.
+
+Role pages select the requested title from original CAD rows before applying the existing
+compiled-repeat suppression. This preserves a title supplied only by the compilation when a
+matching official payment omits the position, preventing a search result from opening an empty
+role page. Such rows retain their original source and display an unverified compiled-position
+label. Employer and person payment aggregates keep their existing repeat-suppression behavior.
+
 ## Build and verification
 
 ```sh
@@ -63,12 +85,17 @@ SALARY_UI_TEST_MODULES=/tmp/salary-ui-tools/node_modules node scripts/verify-sal
 Generate the search directory first. These checks exercise first-name and comma searches, original
 card summaries and history, Back navigation, paging resets, sector/period filters, legitimate absent
 optional links, and visible failures with successful retries. Expected counts and the target card's
-summary come from the current published data. This is React DOM integration coverage, not a visual
-browser test.
+summary come from the current published data. Employer cases cover published names, supported
+aliases, filters, old-slug routes and local searches. Position cases cover abbreviations, global
+versus detail filter scope, employer table filtering, and title-to-role-to-person navigation,
+including a real compiled-title/untitled-official-payment regression. This is React DOM integration
+coverage, not a visual browser test.
 
 The directory is generated during `build:assets`, after name links in `build:salaries`, and before
 the salary preview. Its output at `public/salaries/search/` is ignored by Git and included in site
-builds. Rebuilding uses the checked-in published exports and needs no live report downloads.
+builds. The salary export validator treats `search` as a generated companion directory while still
+rejecting unknown directories and reconciling every published record. Rebuilding uses the checked-in
+published exports and needs no live report downloads.
 `check:salary-search` validates the reported Milad case against the complete dataset, including
 query order, partial words, year/employer filters and first-page record-shard costs. The dedicated
 salary-search workflow runs the unit, full-data and DOM checks, then builds the preview with the

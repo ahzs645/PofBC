@@ -13,6 +13,7 @@ import { gunzipSync } from 'node:zlib'
 import { chooseNameSearchBucket, searchNameSearchDocuments } from '../src/salaries/nameSearch.js'
 import { displayName, nameOnly, nameQueryTier, personKey, surnameShard, withoutCompiledRepeats } from '../src/salaries/people.js'
 import { formatMoney } from '../src/salaries/money.js'
+import { keyedTitles, titleKey, titleMatcher, titleShard } from '../src/salaries/positions.js'
 
 const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), '..')
 const appRequire = createRequire(join(ROOT, 'package.json'))
@@ -72,8 +73,10 @@ async function waitFor(assertion, { timeout = 12000 } = {}) {
   const deadline = performance.now() + timeout
   let lastError
   while (performance.now() < deadline) {
-    try { return assertion() } catch (error) { lastError = error }
+    // Even an immediately satisfied assertion should flush queued React/TanStack microtasks.
+    // They can reset table pagination or finish a background search after the visible route changes.
     await React.act(async () => { await new Promise(resolve => setTimeout(resolve, 20)) })
+    try { return assertion() } catch (error) { lastError = error }
   }
   throw lastError ?? new Error('Timed out waiting for DOM state')
 }
@@ -108,6 +111,9 @@ const reports = []
 let caseId = 0
 let mounted = null
 const index = JSON.parse(await readFile(join(PUBLIC, 'salaries/people/index.json'), 'utf8'))
+const employersIndex = JSON.parse(await readFile(join(PUBLIC, 'salaries/employers/index.json'), 'utf8'))
+const titlesIndex = JSON.parse(gunzipSync(await readFile(join(PUBLIC, 'salaries/positions/index.json.gzip'))))
+const titles = keyedTitles(titlesIndex)
 const manifest = JSON.parse(await readFile(join(PUBLIC, 'salaries/search/index.json'), 'utf8'))
 const readRows = async shard => JSON.parse(gunzipSync(await readFile(join(PUBLIC, `salaries/people/${shard}.json.gzip`))))
 const targetKey = personKey('Fathi Baghbadorani, Milad')
@@ -150,6 +156,35 @@ const commaSection = () => document.querySelector('section[aria-labelledby="sala
 const cards = (section = peopleSection()) => [...(section?.querySelectorAll('button.salaries__card') ?? [])]
 const target = (section = peopleSection()) => cards(section).find(node => node.querySelector('.salaries__name')?.textContent === targetName)
 const requestPath = input => new URL(typeof input === 'string' ? input : input.url, 'https://salary.test').pathname
+const employerSection = () => document.querySelector('section[aria-labelledby="salaries-employer-results"]')
+const titleSection = () => document.querySelector('section[aria-labelledby="salaries-title-results"]')
+const namedCard = (section, name) => cards(section).find(node => node.querySelector('.salaries__name')?.textContent === name)
+const employerCard = entry => namedCard(employerSection(), entry.names.at(-1))
+const employerBySlug = slug => {
+  const entry = employersIndex.employers.find(entry => entry.slug === slug)
+  assert.ok(entry, `Published employer fixture ${slug} exists`)
+  return entry
+}
+const northernHealth = employerBySlug('northern-health')
+const bcHydro = employerBySlug('bc-hydro')
+const transLink = employerBySlug('translink')
+const uvic = employerBySlug('university-of-victoria')
+const unbc = employerBySlug('university-of-northern-bc')
+const policyKey = 'senior policy analyst'
+const policySummary = titles.find(title => title.key === policyKey)
+assert.ok(policySummary, 'Common multiword position fixture exists')
+const policyDetail = JSON.parse(gunzipSync(await readFile(join(PUBLIC, `salaries/positions/${titleShard(policyKey)}.json.gzip`))))[policyKey]
+const policyEmployer = employerBySlug('community-living-bc')
+const policyEmployerCell = policyDetail.cells.find(cell => employersIndex.employers[cell[0]].slug === policyEmployer.slug)
+assert.ok(policyEmployerCell, 'The CLBC compiled-title regression fixture exists')
+const policyYear = policyEmployerCell[1]
+const policyYearLabel = employersIndex.years[policyYear]
+const policyCells = (sector = 'all', year = policyYear) => policyDetail.cells.filter(cell => cell[1] === year && (sector === 'all' || employersIndex.employers[cell[0]].sector === sector))
+const policySector = 'Crown corporations'
+const policyOriginalRows = JSON.parse(gunzipSync(await readFile(join(PUBLIC, `salaries/employers/${policyEmployer.slug}.json.gzip`))))
+const policyOriginalRow = policyOriginalRows.find(row => row[4] === policyYear && titleKey(row[1]) === policyKey)
+assert.ok(policyOriginalRow, 'The linked title has an original named source record')
+const policyPersonName = displayName(policyOriginalRow[0], employersIndex.sources?.[policyOriginalRow[5]]?.nameDisclosure)
 
 async function mount(query, { faults = new Map(), delays = new Map(), params = '' } = {}) {
   if (mounted) { cleanup(); mounted = null }
@@ -175,8 +210,10 @@ async function mount(query, { faults = new Map(), delays = new Map(), params = '
       return new Response('', { status: 404 })
     }
   }
-  const { SalariesView } = await import(`${pathToFileURL(bundle).href}?case=${++caseId}`)
-  mounted = render(React.createElement(SalariesView))
+  await React.act(async () => {
+    const { SalariesView } = await import(`${pathToFileURL(bundle).href}?case=${++caseId}`)
+    mounted = render(React.createElement(SalariesView))
+  })
   return { requests, faults, delays }
 }
 
@@ -190,6 +227,43 @@ async function ready(expected, section = peopleSection) {
     if (section === peopleSection) assert.equal(node.getAttribute('aria-busy'), 'false')
   })
   return section()
+}
+
+async function readyEmployer(query, entry) {
+  await waitFor(() => {
+    assert.equal(document.querySelector('.salaries__global-search input[type="search"]')?.value, query)
+    assert.ok(employerCard(entry), `Employer ${entry.names.at(-1)} appears for ${query}`)
+    assert.match(employerSection().querySelector('.salaries__meta')?.textContent ?? '', /^\d[\d,]* employers?$/)
+  })
+  return employerCard(entry)
+}
+
+async function readyTitles(query) {
+  const match = titleMatcher(query)
+  const expected = titles.filter(title => match(title.key) !== null).length
+  assert.ok(expected, `Position query ${query} has published matches`)
+  await waitFor(() => {
+    assert.equal(document.querySelector('.salaries__global-search input[type="search"]')?.value, query)
+    const section = titleSection()
+    assert.ok(section, `Position results appear for ${query}`)
+    assert.equal(section.querySelector('.salaries__meta')?.textContent, `${expected.toLocaleString('en-CA')} ${expected === 1 ? 'title' : 'titles'} across employers`)
+    assert.equal(cards(section).length, Math.min(9, expected))
+  })
+  return titleSection()
+}
+
+function pickYear(section, label) {
+  const buttons = [...section.querySelectorAll('.salaries-picker[role="group"] > button')]
+  fireEvent.click(buttons.find(button => button.getAttribute('aria-label')?.startsWith(`${label}:`)))
+}
+
+function localSearch(value) {
+  const input = document.querySelector('section[aria-labelledby="salaries-records"] input[aria-label="Find a name or a position"]')
+  fireEvent.change(input, { target: { value } })
+}
+
+function selectedSector(group, name) {
+  fireEvent.click([...group.querySelectorAll('button')].find(button => name === 'all' ? button.textContent === 'All sectors' : button.textContent.startsWith(`${name} `)))
 }
 
 function search(value) {
@@ -207,6 +281,7 @@ async function test(label, fn) {
   } catch (error) {
     reports.push({ label, result: 'FAIL', milliseconds: Math.round(performance.now() - start), error: error.message })
     console.log(`FAIL ${label}: ${error.message}`)
+    console.log('DOM failure context', JSON.stringify({ href: location.href, headings: [...document.querySelectorAll('h2,h3')].map(node => node.textContent), alerts: [...document.querySelectorAll('[role="alert"],[role="status"]')].map(node => node.textContent), role: document.querySelector('section[aria-labelledby="salaries-role"]')?.textContent?.slice(0,2500) }))
   }
 }
 
@@ -319,6 +394,187 @@ try {
     await ready(fixture.total)
     assert.ok(cards().some(node => node.querySelector('.salaries__name')?.textContent === fixture.name))
     assert.ok(requests.some(r => r.path === `/salaries/links/${fixture.shard}.json.gzip` && r.status === 404))
+  })
+
+  await test('Organizations: case, word order, published names, BC Hydro/TransLink and sourced university aliases', async () => {
+    await mount('northern health')
+    await readyEmployer('northern health', northernHealth)
+    for (const [query, entry] of [
+      ['northern health', northernHealth], ['  NORTHERN HEALTH  ', northernHealth], ['health northern', northernHealth],
+      ['BC Hydro', bcHydro], ['hydro bc', bcHydro], ['B.C. Hydro', bcHydro], [bcHydro.names.at(-1), bcHydro],
+      ['translink', transLink], ['TRANSLINK', transLink],
+      [uvic.names.at(-1), uvic], ['UVic', uvic], ['uvic', uvic],
+      [unbc.names.at(-1), unbc], ['UNBC', unbc], ['unbc', unbc],
+    ]) {
+      search(query)
+      const card = await readyEmployer(query, entry)
+      // Discovery aliases must leave the disclosed employer name on the result card intact.
+      assert.equal(card.querySelector('.salaries__name').textContent, entry.names.at(-1))
+    }
+  })
+
+  await test('Northern Health: organization filters, period selection, local name search, detail and Back/global search', async () => {
+    const yearLabel = index.years[targetLatest[5]]
+    await mount('northern health', { params: `&salary-year=${encodeURIComponent(yearLabel)}` })
+    await readyEmployer('northern health', northernHealth)
+    const sectors = document.querySelector('.salaries__desktop-filters [aria-label="Sector"]')
+    selectedSector(sectors, 'Crown corporations')
+    await waitFor(() => assert.equal(employerCard(northernHealth), undefined))
+    selectedSector(sectors, 'all')
+    await readyEmployer('northern health', northernHealth)
+    const originalUrl = location.href
+    fireEvent.click(employerCard(northernHealth))
+    await waitFor(() => {
+      assert.equal(document.querySelector('#salaries-employer')?.textContent, northernHealth.names.at(-1))
+      assert.ok(document.querySelector('section[aria-labelledby="salaries-records"] input[type="search"]'))
+      assert.equal(new URL(location.href).searchParams.get('employer-year'), yearLabel)
+    })
+    const employerUrl = location.href
+    localSearch('milad baghbadorani')
+    const localRecords = () => [...document.querySelectorAll('section[aria-labelledby="salaries-records"] .salaries-record-card')]
+    await waitFor(() => {
+      assert.ok(localRecords().length, 'The employer-local name search finds the reported person')
+      assert.ok(localRecords().every(node => /milad/i.test(node.textContent) && /baghbadorani/i.test(node.textContent)))
+      assert.ok(localRecords().some(node => node.textContent.includes(formatMoney(targetLatest[2]))))
+    })
+    const localNames = localRecords().map(node => node.querySelector('.salaries-record-card__open')?.textContent)
+    localSearch('BAGHBADORANI MILAD')
+    await waitFor(() => assert.deepEqual(localRecords().map(node => node.querySelector('.salaries-record-card__open')?.textContent), localNames))
+    fireEvent.click(localRecords()[0].querySelector('.salaries-record-card__open'))
+    await waitFor(() => {
+      assert.equal(document.querySelector('#salaries-person')?.textContent, targetName)
+      assert.equal(new URL(location.href).searchParams.get('person-at'), northernHealth.slug)
+    })
+    fireEvent.click(within(document.querySelector('section[aria-labelledby="salaries-person"]')).getByRole('button', { name: 'Back' }))
+    await waitFor(() => {
+      assert.equal(document.querySelector('#salaries-employer')?.textContent, northernHealth.names.at(-1))
+      assert.equal(location.href, employerUrl)
+    })
+    // A detail page's global field starts a new cross-employer search; browser Back restores it.
+    search('teacher')
+    await readyTitles('teacher')
+    assert.equal(document.querySelector('#salaries-employer'), null)
+    assert.equal(new URL(location.href).searchParams.has('employer'), false)
+    React.act(() => history.back())
+    await waitFor(() => {
+      assert.equal(document.querySelector('#salaries-employer')?.textContent, northernHealth.names.at(-1))
+      assert.equal(location.href, employerUrl)
+    })
+    fireEvent.click(within(document.querySelector('section[aria-labelledby="salaries-employer"]')).getByRole('button', { name: 'Back' }))
+    await readyEmployer('northern health', northernHealth)
+    assert.equal(location.href, originalUrl)
+  })
+
+  await test('Published old employer URL resolves to the canonical organization and returns to search', async () => {
+    const [alias, slug] = Object.entries(employersIndex.aliases ?? {}).find(([alias, slug]) => alias !== slug && employersIndex.employers.some(entry => entry.slug === slug)) ?? []
+    assert.ok(alias, 'Published employer metadata supplies an old-slug alias fixture')
+    const entry = employerBySlug(slug)
+    const query = entry.names.at(-1)
+    const { requests } = await mount(query, { params: `&employer=${encodeURIComponent(alias)}` })
+    await waitFor(() => {
+      assert.equal(document.querySelector('#salaries-employer')?.textContent, entry.names.at(-1))
+      assert.ok(document.querySelector('section[aria-labelledby="salaries-records"]'))
+    })
+    assert.ok(requests.some(request => request.path === `/salaries/employers/${entry.slug}.json.gzip` && request.status === 200))
+    fireEvent.click(within(document.querySelector('section[aria-labelledby="salaries-employer"]')).getByRole('button', { name: 'Back' }))
+    await readyEmployer(query, entry)
+    assert.equal(new URL(location.href).searchParams.has('employer'), false)
+  })
+
+  await test('Positions: common titles, plural/prefix search, reordered words and Sr/RN/VP abbreviations', async () => {
+    await mount('teacher')
+    await readyTitles('teacher')
+    const teacher = titles.find(title => title.key === 'teacher')
+    assert.ok(teacher)
+    for (const query of ['teacher', 'TEACHERS', 'teach']) {
+      search(query)
+      const section = await readyTitles(query)
+      assert.ok(namedCard(section, teacher.label))
+    }
+    for (const query of ['senior policy analyst', 'analyst policy senior', 'Sr. Policy Analyst']) {
+      search(query)
+      const section = await readyTitles(query)
+      assert.ok(namedCard(section, policySummary.label))
+    }
+    for (const query of ['RN', 'VP']) {
+      search(query)
+      const section = await readyTitles(query)
+      const match = titleMatcher(query)
+      assert.ok(cards(section).every(card => match(titleKey(card.querySelector('.salaries__name').textContent)) !== null))
+    }
+  })
+
+  await test('Title detail: explicit global-list scope, selected filters, employer table search, role/person links and Back', async () => {
+    await mount('senior policy analyst', { params: `&salary-year=${encodeURIComponent(policyYearLabel)}&salary-sector=${encodeURIComponent(policySector)}` })
+    const results = await readyTitles('senior policy analyst')
+    assert.match(results.textContent, /Titles are listed across all sectors and periods\./)
+    assert.match(results.textContent, /selected sector and period/)
+    const originalUrl = location.href
+    fireEvent.click(namedCard(results, policySummary.label))
+    const titleHeading = () => document.querySelector('section[aria-labelledby="salaries-title"]')
+    const titleEmployers = () => document.querySelector('section[aria-labelledby="salaries-title-employers"]')
+    const expectTitleEmployers = async (sector, year = policyYear) => {
+      const expected = policyCells(sector, year)
+      await waitFor(() => {
+        assert.equal(titleKey(document.querySelector('#salaries-title')?.textContent), policyKey)
+        assert.equal(titleHeading().querySelector('.salaries__year-title')?.textContent, employersIndex.years[year])
+        assert.equal(titleEmployers()?.querySelector('.salaries__meta')?.textContent, `${expected.length} ${expected.length === 1 ? 'employer' : 'employers'}`)
+        assert.equal(cards(titleEmployers()).length, Math.min(24, expected.length))
+      })
+      return expected
+    }
+    await expectTitleEmployers(policySector)
+    assert.equal(new URL(location.href).searchParams.get('salary-sector'), policySector)
+    assert.equal(new URL(location.href).searchParams.get('employer-year'), policyYearLabel)
+    assert.ok(cards(titleEmployers()).every(card => card.textContent.includes(policySector)))
+    const sectorGroup = titleHeading().querySelector('[aria-label="Sector"]')
+    selectedSector(sectorGroup, 'all')
+    const allCells = await expectTitleEmployers('all')
+    const otherYear = policyDetail.cells.find(cell => cell[1] !== policyYear)?.[1]
+    assert.notEqual(otherYear, undefined, 'Position fixture has another reporting period')
+    pickYear(titleHeading(), employersIndex.years[otherYear])
+    await expectTitleEmployers('all', otherYear)
+    pickYear(titleHeading(), policyYearLabel)
+    await expectTitleEmployers('all')
+    fireEvent.click(within(titleEmployers()).getByRole('button', { name: 'Table' }))
+    await waitFor(() => assert.ok(titleEmployers().querySelector('input[aria-label="Filter Employer"]')))
+    const localQuery = policyEmployer.names.at(-1).split(/\s+/).slice(0, 2).join(' ').toUpperCase()
+    fireEvent.change(titleEmployers().querySelector('input[aria-label="Filter Employer"]'), { target: { value: localQuery } })
+    const expectedFiltered = allCells.filter(cell => localQuery.toLowerCase().split(/\s+/).every(word => employersIndex.employers[cell[0]].names.at(-1).toLowerCase().includes(word))).length
+    await waitFor(() => assert.match(titleEmployers().querySelector('.salaries-datatable__count')?.textContent ?? '', new RegExp(`^${expectedFiltered} of ${allCells.length} rows match`)))
+    fireEvent.click(within(titleEmployers()).getByRole('button', { name: 'Clear column filters' }))
+    await waitFor(() => assert.equal(titleEmployers().querySelector('.salaries-datatable__count'), null))
+    fireEvent.click(within(titleEmployers()).getByRole('button', { name: 'Cards' }))
+    await expectTitleEmployers('all')
+    const employer = namedCard(titleEmployers(), policyEmployer.names.at(-1))
+    assert.ok(employer.textContent.includes(formatMoney(policyEmployerCell[4])), 'Employer card retains the published title-cell median')
+    fireEvent.click(employer)
+    await waitFor(() => {
+      assert.equal(titleKey(document.querySelector('#salaries-role')?.textContent), policyKey)
+      assert.equal(new URL(location.href).searchParams.get('employer'), policyEmployer.slug)
+      assert.equal(new URL(location.href).searchParams.get('role'), policyKey)
+      assert.equal(new URL(location.href).searchParams.get('employer-year'), policyYearLabel)
+      assert.ok(document.querySelector('section[aria-labelledby="salaries-role-people"] .salaries-record-card__open'))
+    })
+    const roleRecord = [...document.querySelectorAll('section[aria-labelledby="salaries-role-people"] .salaries-record-card')].find(node => node.querySelector('.salaries-record-card__open')?.textContent === policyPersonName)
+    assert.ok(roleRecord, 'The compiled title remains accessible when the official duplicate omits its position')
+    assert.ok(roleRecord.textContent.includes(formatMoney(policyOriginalRow[2])))
+    assert.match(document.querySelector('section[aria-labelledby="salaries-role"]').parentElement.textContent, /Compiled position · not independently verified/)
+    fireEvent.click(roleRecord.querySelector('.salaries-record-card__open'))
+    await waitFor(() => {
+      assert.ok(document.querySelector('#salaries-person'))
+      assert.equal(new URL(location.href).searchParams.get('person-at'), policyEmployer.slug)
+    })
+    fireEvent.click(within(document.querySelector('section[aria-labelledby="salaries-person"]')).getByRole('button', { name: 'Back' }))
+    await waitFor(() => assert.equal(titleKey(document.querySelector('#salaries-role')?.textContent), policyKey))
+    fireEvent.click(within(document.querySelector('section[aria-labelledby="salaries-role"]')).getByRole('button', { name: 'Back' }))
+    await expectTitleEmployers('all')
+    fireEvent.click(within(titleHeading()).getByRole('button', { name: 'Back' }))
+    await readyTitles('senior policy analyst')
+    assert.equal(location.href, originalUrl)
+    selectedSector(document.querySelector('.salaries__desktop-filters [aria-label="Sector"]'), 'all')
+    search('UVic')
+    await readyEmployer('UVic', uvic)
   })
 
   for (const [kind, path, status] of [

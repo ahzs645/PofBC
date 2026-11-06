@@ -16,7 +16,7 @@
 
 import { lazy, Suspense, useEffect, useMemo, useRef, useState } from 'react'
 import { displayName, nameQueryTier, nameReadings, personKey, surnameShard } from './people.js'
-import { keyedTitles, titleMatcher } from './positions.js'
+import { keyedTitles, titleKey, titleMatcher } from './positions.js'
 import { formatMoney as money } from './money.js'
 import { PeriodRange, YearStrip } from './parts.jsx'
 import { MobileSalaryFilters, SalarySearchField, SalarySectorChips } from './MobileFilters.jsx'
@@ -24,7 +24,7 @@ import { personEmployerForBack, salaryYearRange, salaryYearValue } from './viewS
 import { useSalaryPlace } from './useSalaryPlace.js'
 import { Segmented } from '../site/Segmented.jsx'
 import { EmployerBrowse, EmployerCard, PeopleBrowse, PositionBrowse } from './Browse.jsx'
-import { count, LAYOUTS, loadJson, Paged, PersonIcon, toTop, wordsOf } from './common.jsx'
+import { count, LAYOUTS, loadJson, Paged, PersonIcon, toTop } from './common.jsx'
 import { EmployerPage } from './EmployerPage.jsx'
 import { PersonPage } from './PersonPage.jsx'
 import { linkLookup, personRecordShards } from './nameLinks.js'
@@ -32,6 +32,7 @@ import { TitleCard, TitlePage } from './TitlePage.jsx'
 import { personAnnotation, personCurrency } from './recordAnnotations.js'
 import { NameSearchResults } from './NameSearchResults.jsx'
 import { nameSearchTokens } from './nameSearch.js'
+import { employerMatcher } from './employerSearch.js'
 
 const CouncilPayView = lazy(() => import('./CouncilPayView.jsx'))
 const WorkforceView = lazy(() => import('./WorkforceView.jsx'))
@@ -170,9 +171,9 @@ const SalaryRecordsView = ({ onOpenGovernment, navigation }) => {
   const personLinks = useMemo(() => (index && linkShard && Array.isArray(linkShards[linkShard]?.links) ? linkLookup(linkShards[linkShard], index.employers) : null), [index, linkShard, linkShards])
   const searchLinks = useMemo(() => new Map(index ? Object.values(linkShards).filter((published) => Array.isArray(published?.links)).flatMap((published) => [...linkLookup(published, index.employers)]) : []), [index, linkShards])
 
-  // Position titles are searched once three letters are typed, and browsed under Positions; their
-  // index is loaded then.
-  const titleQuery = query.trim().replace(/[^A-Za-z0-9 ]/g, '').length >= 3 ? query.trim() : ''
+  // Expand supported abbreviations before the minimum-length check so RN and VP can reach the
+  // same title matcher used inside employer pages. Other title searches still need three letters.
+  const titleQuery = titleKey(query).replace(/[^a-z0-9]/g, '').length >= 3 ? query.trim() : ''
   useEffect(() => {
     if (!titleQuery && !place.title && place.browse !== 'positions') return
     loadJson('salaries/positions/index.json.gzip').then(setTitlesIndex, () => {})
@@ -232,15 +233,14 @@ const SalaryRecordsView = ({ onOpenGovernment, navigation }) => {
   const wordInitials = [...new Map(found.flatMap((each) => each.groups).filter((each) => each.tier === 2).map((each) => [each.key, each])).values()]
     .sort((a, b) => a.key.localeCompare(b.key))
 
-  // Employers whose name, or a name they filed under, has every word typed.
+  // Employers whose disclosed names or explicit search aliases contain every word typed.
   const employerMatches = useMemo(() => {
-    const words = wordsOf(query)
-    if (!words.length || !employersIndex) return []
+    if (!employersIndex) return []
+    const matches = employerMatcher(query)
     return employersIndex.employers.filter((entry) => {
       if (sector !== 'all' && entry.sector !== sector) return false
       if (range && !entry.counts.some((value, at) => value && within(at))) return false
-      const text = entry.names.join(' ').toLowerCase()
-      return words.every((word) => text.includes(word))
+      return matches(entry)
     }).sort((a, b) => Math.max(...b.counts) - Math.max(...a.counts))
   }, [query, employersIndex, sector, place.year]) // eslint-disable-line react-hooks/exhaustive-deps
 
@@ -532,6 +532,7 @@ const SalaryRecordsView = ({ onOpenGovernment, navigation }) => {
                 <h2 id="salaries-title-results" className="salaries__title">Positions</h2>
                 <p className="salaries__meta">{count(titleMatches.length, 'title', 'titles')} across employers</p>
               </div>
+              <p className="salaries__hint salaries__hint--small">Titles are listed across all sectors and periods. Open a title to see records for the selected sector and period.</p>
               <Paged list={titleMatches} size={9} reset={query}>
                 {(page) => <div className="salaries__grid">{page.map((title) => <TitleCard key={title.key} title={title} years={years} onOpen={openTitle} />)}</div>}
               </Paged>
