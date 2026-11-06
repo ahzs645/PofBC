@@ -1,14 +1,13 @@
 // Search the remuneration records imported here, with explicit employer/year coverage and sources.
 //
 // Disclosures differ in reporting period, threshold and scope. A search finds employers by name,
-// position titles across employers, and people by name. A name typed without a comma can be read more
-// than one way ("john smith" or "smith john"), so it is read the likeliest way first, surname first,
-// and only where nobody is disclosed under that reading is the next one tried; the page says which
-// reading it shows and offers the others that also find someone. Within a reading, names that answer
-// in full come first, then names that only begin as typed, then initials that may be the person meant.
+// position titles across employers, and people by any part of their names. Unpunctuated searches
+// use a compact word directory (NameSearchResults.jsx); a comma keeps the precise surname/given
+// interpretation and its initial matching. The old readings also provide labelled initials-only
+// alternatives for multiword searches. Search matches do not make new identity links.
 //
-// Each search loads one slice of the people index — the surnames that start with the same two letters
-// (scripts/build-salaries.mjs) — a slice for each reading. Opening a name sets its years out as a chart
+// The directory discovers a name independently of its surname's record storage. Only the visible
+// result page loads its original surname slices. Opening a name sets its years out as a chart
 // and a table (PersonPage.jsx); an employer, its positions, people and every year (EmployerPage.jsx);
 // a title, the employers that disclosed it (TitlePage.jsx).
 //
@@ -31,6 +30,8 @@ import { PersonPage } from './PersonPage.jsx'
 import { linkLookup, personRecordShards } from './nameLinks.js'
 import { TitleCard, TitlePage } from './TitlePage.jsx'
 import { personAnnotation, personCurrency } from './recordAnnotations.js'
+import { NameSearchResults } from './NameSearchResults.jsx'
+import { nameSearchTokens } from './nameSearch.js'
 
 const CouncilPayView = lazy(() => import('./CouncilPayView.jsx'))
 const WorkforceView = lazy(() => import('./WorkforceView.jsx'))
@@ -54,7 +55,7 @@ const PersonCard = ({ each, index, onOpen }) => (
   <button type="button" className="salaries__card" onClick={() => onOpen(each.key)}>
     <span className="salaries__lead"><PersonIcon /></span>
     <span className="salaries__text">
-      <span className="salaries__name">{displayName(each.name, index.sources?.[each.latest[6]]?.nameDisclosure)}</span>
+      <span className="salaries__name">{displayName(each.name, Object.hasOwn(each, 'displayDisclosure') ? each.displayDisclosure : index.sources?.[each.latest[6]]?.nameDisclosure)}</span>
       <span className="salaries__line">{[each.latest[1], index.employers[each.latest[4]][0]].filter(Boolean).join(' · ')}</span>
       <YearStrip years={index.years} seen={each.years} />
     </span>
@@ -114,6 +115,8 @@ const SalaryRecordsView = ({ onOpenGovernment, navigation }) => {
   const query = place.q
   const sector = place.sector
   const typed = query.trim()
+  const queryTokens = useMemo(() => nameSearchTokens(query), [query])
+  const wordSearch = !typed.includes(',') && queryTokens.some((token) => token.length >= 2)
   const browse = ['employers', 'people', 'positions'].includes(place.browse) ? place.browse : 'employers'
   // The cross-employer position index has no sector breakdown. Keep the sector choice for
   // Employers/People, but omit it from controls and active counts while browsing positions.
@@ -121,8 +124,8 @@ const SalaryRecordsView = ({ onOpenGovernment, navigation }) => {
   const setSector = (value) => setPlace((current) => ({ ...current, sector: value }))
 
   useEffect(() => {
-    loadJson('salaries/people/index.json').then(setIndex, () => setFailed(true))
-    loadJson('salaries/employers/index.json').then(setEmployersIndex, () => setFailed(true))
+    loadJson('salaries/people/index.json', { reload: loadVersion > 0 }).then(setIndex, () => setFailed(true))
+    loadJson('salaries/employers/index.json', { reload: loadVersion > 0 }).then(setEmployersIndex, () => setFailed(true))
   }, [loadVersion])
 
   // The year filter is kept as a label, so a shared link survives older years being added.
@@ -130,8 +133,10 @@ const SalaryRecordsView = ({ onOpenGovernment, navigation }) => {
   const within = (at) => !range || (at >= range[0] && at <= range[1])
   const setRange = (next) => setPlace((current) => ({ ...current, year: salaryYearValue(next, index.years) }))
 
-  // The ways what was typed can be read as a name, and the index slices they need.
-  const readings = useMemo(() => nameReadings(query), [query])
+  // Precise comma searches and initials-only alternatives still use the surname matcher.
+  // A single unpunctuated word is discovered in the name directory; it is not presumed a surname.
+  const readings = useMemo(() => place.person || place.employer || place.title || (wordSearch && queryTokens.length === 1)
+    ? [] : nameReadings(query), [query, wordSearch, queryTokens, place.person, place.employer, place.title])
   const selectedLinks = place.person ? linkShards[shardOfKey(place.person)] : null
   const personShards = useMemo(() => place.person ? personRecordShards(selectedLinks, place.person) : [], [place.person, selectedLinks])
   const needed = useMemo(() => [...new Set([...readings.map(shardOf), ...personShards])], [readings, personShards])
@@ -152,16 +157,18 @@ const SalaryRecordsView = ({ onOpenGovernment, navigation }) => {
   const linkShard = place.person ? shardOfKey(place.person) : null
   const neededLinks = useMemo(() => [...new Set([...(linkShard ? [linkShard] : []), ...readings.map(shardOf)])], [linkShard, readings])
   useEffect(() => {
+    let live = true
     for (const shard of neededLinks) {
       if (linkShards[shard]) continue
       loadJson(`salaries/links/${shard}.json.gzip`).then(
-        (list) => setLinkShards((current) => ({ ...current, [shard]: list })),
-        () => setLinkShards((current) => ({ ...current, [shard]: { links: [] } }))
+        (list) => live && setLinkShards((current) => ({ ...current, [shard]: list })),
+        (error) => live && setLinkShards((current) => ({ ...current, [shard]: error.message === '404' ? { links: [] } : 'failed' }))
       )
     }
-  }, [neededLinks]) // eslint-disable-line react-hooks/exhaustive-deps
-  const personLinks = useMemo(() => (index && linkShard && linkShards[linkShard] ? linkLookup(linkShards[linkShard], index.employers) : null), [index, linkShard, linkShards])
-  const searchLinks = useMemo(() => new Map(index ? Object.values(linkShards).flatMap((published) => [...linkLookup(published, index.employers)]) : []), [index, linkShards])
+    return () => { live = false }
+  }, [neededLinks, loadVersion]) // eslint-disable-line react-hooks/exhaustive-deps
+  const personLinks = useMemo(() => (index && linkShard && Array.isArray(linkShards[linkShard]?.links) ? linkLookup(linkShards[linkShard], index.employers) : null), [index, linkShard, linkShards])
+  const searchLinks = useMemo(() => new Map(index ? Object.values(linkShards).filter((published) => Array.isArray(published?.links)).flatMap((published) => [...linkLookup(published, index.employers)]) : []), [index, linkShards])
 
   // Position titles are searched once three letters are typed, and browsed under Positions; their
   // index is loaded then.
@@ -179,8 +186,9 @@ const SalaryRecordsView = ({ onOpenGovernment, navigation }) => {
     if (!index) return []
     return readings.map((each) => {
       const list = shards[shardOf(each)]
-      if (!list) return { reading: each, loading: true, groups: [] }
-      if (list === 'failed') return { reading: each, loading: false, failed: true, groups: [], full: 0 }
+      const links = linkShards[shardOf(each)]
+      if (list === 'failed' || links === 'failed') return { reading: each, loading: false, failed: true, groups: [], full: 0 }
+      if (!list || !links) return { reading: each, loading: true, groups: [] }
       const groups = new Map()
       for (const row of list) {
         const link = searchLinks.get(`${row[4]}|${personKey(row[0])}`)
@@ -199,9 +207,13 @@ const SalaryRecordsView = ({ onOpenGovernment, navigation }) => {
         .sort((a, b) => a.tier - b.tier || b.years.length - a.years.length || personCurrency(a.latest, index).localeCompare(personCurrency(b.latest, index)) || b.latest[2] - a.latest[2])
       return { reading: each, loading: false, groups: described, full: described.filter((group) => group.tier < 2).length }
     })
-  }, [readings, shards, place.year, sector, index, searchLinks]) // eslint-disable-line react-hooks/exhaustive-deps
+  }, [readings, shards, linkShards, place.year, sector, index, searchLinks]) // eslint-disable-line react-hooks/exhaustive-deps
   const nameSearchFailed = found.some((each) => each.failed)
-  const retryNames = () => { setShards((current) => Object.fromEntries(Object.entries(current).filter(([, list]) => list !== 'failed'))); setLoadVersion((value) => value + 1) }
+  const retryNames = () => {
+    setShards((current) => Object.fromEntries(Object.entries(current).filter(([, list]) => list !== 'failed')))
+    setLinkShards((current) => Object.fromEntries(Object.entries(current).filter(([, list]) => list !== 'failed')))
+    setLoadVersion((value) => value + 1)
+  }
   const settled = found.findIndex((each) => each.loading)
   const automatic = (() => {
     const done = settled < 0 ? found : found.slice(0, settled)
@@ -217,6 +229,8 @@ const SalaryRecordsView = ({ onOpenGovernment, navigation }) => {
   const fullPeople = people.filter((each) => each.tier < 2)
   const initialsOnly = people.filter((each) => each.tier === 2)
   const otherReadings = found.map((each, at) => ({ ...each, at })).filter((each) => each.at !== shownReading && each.groups.length > 0)
+  const wordInitials = [...new Map(found.flatMap((each) => each.groups).filter((each) => each.tier === 2).map((each) => [each.key, each])).values()]
+    .sort((a, b) => a.key.localeCompare(b.key))
 
   // Employers whose name, or a name they filed under, has every word typed.
   const employerMatches = useMemo(() => {
@@ -385,7 +399,7 @@ const SalaryRecordsView = ({ onOpenGovernment, navigation }) => {
     hidden: personList.length - atEmployer.length,
     onShowAll: () => setPlace((current) => ({ ...current, personAt: null }))
   } : null
-  if (place.person && personShards.some((shard) => shards[shard] === 'failed')) return withSearch(<div>{back}<p className="gallery__intro" role="alert">The name’s records could not all be loaded. <button type="button" onClick={retryNames}>Retry</button></p></div>)
+  if (place.person && (linkShards[linkShard] === 'failed' || personShards.some((shard) => shards[shard] === 'failed'))) return withSearch(<div>{back}<p className="gallery__intro" role="alert">The name’s records could not all be loaded. <button type="button" onClick={retryNames}>Retry</button></p></div>)
   if (place.person && (!personRows || !personLinks)) return withSearch(<div>{back}<p className="gallery__intro" role="status">Loading the name…</p></div>)
   if (chosen) {
     return withSearch(
@@ -453,7 +467,21 @@ const SalaryRecordsView = ({ onOpenGovernment, navigation }) => {
             </section>
           )}
 
-          {readings.length > 0 && !(peopleSettled && !nameSearchFailed && !people.length && (employerMatches.length > 0 || titleMatches.length > 0)) && (
+          {wordSearch && <NameSearchResults
+            query={query}
+            index={index}
+            sector={sector}
+            range={range}
+            onOpen={openPersonKey}
+            describeGroup={describeNameGroup}
+            renderCard={(each, onOpen) => <PersonCard key={each.key} each={each} index={index} onOpen={onOpen} />}
+            initials={wordInitials}
+            initialsLoading={found.some((each) => each.loading)}
+            initialsFailed={nameSearchFailed}
+            onRetryInitials={retryNames}
+          />}
+
+          {!wordSearch && readings.length > 0 && !(peopleSettled && !nameSearchFailed && !people.length && (employerMatches.length > 0 || titleMatches.length > 0)) && (
             <section aria-labelledby="salaries-results">
               <div className="salaries__head">
                 <h2 id="salaries-results" className="salaries__title">People</h2>
@@ -477,7 +505,7 @@ const SalaryRecordsView = ({ onOpenGovernment, navigation }) => {
                 </p>
               )}
               {peopleSettled && !nameSearchFailed && people.length === 0 && !(titleQuery && !titlesIndex) && (
-                <p className="salaries__hint">No disclosed name matches “{typed}”{filtered ? ' with these filters' : ''}. Try the surname alone.</p>
+                <p className="salaries__hint">No disclosed name matches “{typed}”{filtered ? ' with these filters' : ''}. Try another part of the name without a comma.</p>
               )}
               {peopleSettled && fullPeople.length === 0 && initialsOnly.length > 0 && (
                 <p className="salaries__hint">No disclosed name matches “{typed}” in full.</p>
@@ -510,7 +538,7 @@ const SalaryRecordsView = ({ onOpenGovernment, navigation }) => {
             </section>
           )}
 
-          {!readings.length && !employerMatches.length && !titleMatches.length && <p className="salaries__hint">Type at least two letters of a surname, or part of an employer’s name or a position.</p>}
+          {!wordSearch && !readings.length && !employerMatches.length && !titleMatches.length && <p className="salaries__hint">Type at least two letters of any part of a name, or part of an employer’s name or a position.</p>}
         </>
       )}
 
