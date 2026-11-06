@@ -1,7 +1,8 @@
 // A small companion to the existing published employer exports. Those exports stay untouched.
-import { readFileSync, writeFileSync } from 'node:fs'
+import { readFileSync, writeFileSync, existsSync } from 'node:fs'
 import { fileURLToPath } from 'node:url'
 import { gzipSync, gunzipSync } from 'node:zlib'
+import { gzipContentMatches } from './lib/gzip-content.mjs'
 import { buildEmployerStats } from '../src/salaries/employerStats.js'
 
 const root = new URL('../public/salaries/', import.meta.url)
@@ -16,8 +17,9 @@ const result = {
   employers
 }
 const target = new URL('employer-stats.json.gzip', root)
-const bytes = gzipSync(JSON.stringify(result) + '\n', { level: 9 })
+const payload = JSON.stringify(result) + '\n'
+const current = existsSync(target) && gzipContentMatches(readFileSync(target), payload)
 if (process.argv.includes('--check')) {
-  if (!readFileSync(target).equals(bytes)) throw new Error('Published employer statistics are stale; run npm run build:employer-stats')
-} else writeFileSync(target, bytes)
+  if (!current) throw new Error('Published employer statistics are stale; run npm run build:employer-stats')
+} else if (!current) writeFileSync(target, gzipSync(payload, { level: 9 }))
 console.log(`Employer statistics: ${Object.values(employers).filter((cells) => cells.length).length} employers, ${Object.values(employers).reduce((sum, cells) => sum + cells.length, 0)} annual periods → ${fileURLToPath(target)}`)

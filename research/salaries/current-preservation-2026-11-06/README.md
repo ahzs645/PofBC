@@ -64,3 +64,8 @@ changing or deleting any original row still fails reconstruction.
 The maintainer-only `--freeze-from` option expects a checkout extracted with
 `git archive` of the above baseline. The resulting SHA-256 must match the pinned
 checker constant. It is not an automatic baseline refresh and is never used in CI.
+
+The current saved Sunshine comparison is generated under `sunshine/`. The older
+`sunshine-lists` reports remain byte-identical historical evidence.
+`npm run audit:sunshine` writes the current directory by default; CI reproduces
+its four reports against the current exports without modifying the archived set.

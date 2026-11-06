@@ -61,7 +61,7 @@ jobs:
         if: github.event_name != 'workflow_dispatch'
         run: |
           for file in comparison.json comparison.md repository-employers.csv work-queue.csv; do
-            cmp "research/salaries/sunshine-lists/$file" "$RUNNER_TEMP/sunshine-audit/$file"
+            cmp "research/salaries/current-preservation-2026-11-06/sunshine/$file" "$RUNNER_TEMP/sunshine-audit/$file"
           done
       - name: Publish the comparison summary
         if: always()
