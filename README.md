@@ -21,6 +21,8 @@ pages at phone and desktop widths and counts their words (needs Playwright with 
 
 ## Salary data and coverage
 
+The [consolidated recovery and preservation checks](research/salaries/consolidation-2026-11-06.md) keep original salary evidence and reviewed name decisions intact while adding official elected, Assembly staff and police records. The Workforce view also provides all 30 archived official Workforce Profile CSV tables, separately from employee payment records.
+
 The Employers view (`?view=salaries&browse=employers`) compares the latest official annual
 employee disclosures in the selected periods and sector. Cards and sortable tables include
 median and average remuneration, the share paid $100,000 or more, and

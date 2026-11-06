@@ -94,7 +94,8 @@
     "review:salary-recovery": "python3 scripts/review-salary-recovery.py --frozen",
     "review:salary-held-resolution": "python3 scripts/review-salary-held-resolution.py --frozen",
     "review:salary-queue-completion": "python3 scripts/gap_fill_previous_release.py",
-    "review:salary-gap-fill": "python3 scripts/review_salary_gap_fill.py"
+    "review:salary-gap-fill": "python3 scripts/review_salary_gap_fill.py",
+    "check:salary-preservation": "python3 scripts/check_salary_current_preservation.py"
   },
   "peerDependencies": {
     "react": ">=18",
