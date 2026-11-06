@@ -1,0 +1,45 @@
+name: Compare saved OpenCompensation coverage
+
+on:
+  pull_request:
+    paths:
+      - 'scripts/*opencompensation*.mjs'
+      - 'scripts/lib/opencompensation.mjs'
+      - 'scripts/lib/sunshine-*.mjs'
+      - 'scripts/lib/salary-employers.mjs'
+      - 'public/salaries/**'
+      - 'research/salaries/opencompensation/**'
+      - 'research/salaries/baseline-manifest.json'
+      - 'research/salaries/compiled-baseline.json.gzip'
+      - 'package.json'
+      - '.github/workflows/opencompensation-comparison.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/*opencompensation*.mjs'
+      - 'scripts/lib/opencompensation.mjs'
+      - 'scripts/lib/sunshine-*.mjs'
+      - 'scripts/lib/salary-employers.mjs'
+      - 'public/salaries/**'
+      - 'research/salaries/opencompensation/**'
+      - 'research/salaries/baseline-manifest.json'
+      - 'research/salaries/compiled-baseline.json.gzip'
+      - 'package.json'
+      - '.github/workflows/opencompensation-comparison.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  compare:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
+        with:
+          node-version: '24'
+      - name: Verify matching safeguards and reproduce the saved comparison
+        run: npm run check:opencompensation
+      - name: Publish comparison summary
+        run: cat research/salaries/opencompensation/comparison.md >> "$GITHUB_STEP_SUMMARY"

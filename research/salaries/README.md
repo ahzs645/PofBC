@@ -1,5 +1,12 @@
 # Salary audit, source recovery and remaining gaps
 
+The [4 November OpenCompensation comparison](opencompensation/README.md) compares
+the saved B.C. employer directory with the published exports and original compilation,
+preserving period uncertainty, source overlap and remuneration/expense distinctions.
+The separate [workforce companion](workforce/README.md) adds PSA-2024-42006's
+all-employee and Victoria-office aggregates without changing named salary observations
+or the existing Public Accounts FTE series.
+
 For the latest work, start with the [2 November official-source follow-through](source-follow-through-2026-11-02/README.md):
 55,477 additional observations from 61 reports, 18 source-backed name connections, and the
 [reconciled 134-entry backlog](source-follow-through-2026-11-02/backlog-reconciliation.md).

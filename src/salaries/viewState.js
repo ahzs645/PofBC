@@ -20,6 +20,7 @@ export const readSalaryPlace = (search = '') => {
     params.get(param) ?? (key === 'q' ? '' : key === 'year' || key === 'sector' ? 'all' : null)
   ]))
   if (place.browse === 'council') for (const [key, param] of Object.entries(COUNCIL_PARAMETERS)) place[key] = params.get(param) ?? (key === 'councilTab' ? 'rates' : 'all')
+  if (place.browse === 'workforce') place.workforcePopulation = params.get('workforce-population') ?? 'all'
   return place
 }
 
@@ -35,6 +36,8 @@ export const salaryPlaceUrl = (href, place) => {
     if (place.browse === 'council' && value && value !== 'all' && !(key === 'councilTab' && value === 'rates')) url.searchParams.set(param, value)
     else url.searchParams.delete(param)
   }
+  if (place.browse === 'workforce' && place.workforcePopulation && place.workforcePopulation !== 'all') url.searchParams.set('workforce-population', place.workforcePopulation)
+  else url.searchParams.delete('workforce-population')
   return url
 }
 

@@ -4,7 +4,7 @@ import { councilCsv, councilMeasure, councilMoney, councilNotes, councilRows, co
 import './councilPay.css'
 
 const BASE = import.meta.env?.BASE_URL ?? '/'
-const BROWSE = [{ value: 'employers', label: 'Employers' }, { value: 'people', label: 'People' }, { value: 'positions', label: 'Positions' }, { value: 'council', label: 'Council pay' }]
+const BROWSE = [{ value: 'employers', label: 'Employers' }, { value: 'people', label: 'People' }, { value: 'positions', label: 'Positions' }, { value: 'council', label: 'Council pay' }, { value: 'workforce', label: 'Workforce' }]
 const humanize = (value) => value.replace(/([a-z])([A-Z])/g, '$1 $2').replaceAll('-', ' ').replace(/^./, (letter) => letter.toUpperCase())
 
 const SourceLink = ({ source, page }) => {
