@@ -11,7 +11,7 @@ test('population selection stays separate and defaults to all employees', () => 
   assert.equal(normalizeWorkforcePopulation('victoria'), 'victoria')
   assert.equal(selectWorkforceRows(source, 'all').length, 8)
   assert.equal(selectWorkforceRows(source, 'victoria').length, 8)
-  assert.equal(selectWorkforceRows(source, 'victoria')[2].averageHeadCount, 21405)
+  assert.equal(selectWorkforceRows(source, 'victoria')[2].averageHeadCount, 13972.25)
   assert.deepEqual(selectWorkforceRows(source, undefined).at(-1), { populationId: 'all', yearLabel: '2024', averageHeadCount: 40787, averageSalary: 81718 })
 })
 
@@ -56,13 +56,13 @@ test('CSV keeps exact labels, numeric amounts and provenance, and escapes text c
   assert.equal(csv.trimEnd().split('\r\n').length, 17)
   assert.match(csv, /"Year label","Average HeadCount","Average Salary"/)
   assert.match(csv, /"2017",31153,63704,"unverified",,,"unknown","unknown"/)
-  assert.match(csv, /"PSA-2024-42006","https:\/\/docs.openinfo.gov.bc.ca\/Response_Package_PSA-2024-42006.pdf",3,4/)
+  assert.match(csv, /"PSA-2024-42006","https:\/\/docs.openinfo.gov.bc.ca\/Response_Package_PSA-2024-42006.pdf",3/)
   const escaped = structuredClone(source)
   escaped.populations[0].sourceLabel = '=SUM("untrusted")'
   assert.match(workforceCsv(escaped), /"'=SUM\(""untrusted""\)"/)
 })
 
-test('formatting preserves printed integer precision', () => {
-  assert.equal(formatWorkforceNumber(21405), '21,405')
+test('formatting preserves printed decimal precision', () => {
+  assert.equal(formatWorkforceNumber(13972.25), '13,972.25')
   assert.equal(formatWorkforceSalary(81718), '$81,718')
 })

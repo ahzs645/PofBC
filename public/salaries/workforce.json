@@ -6,18 +6,15 @@
     "publisher": "Government of British Columbia",
     "url": "https://docs.openinfo.gov.bc.ca/Response_Package_PSA-2024-42006.pdf",
     "pageCount": 4,
-    "transcriptionMethod": "Visual transcription of the released tables, checked against the chart pages.",
-    "duplicatePages": [
-      {
-        "tablePage": 1,
-        "repeatPage": 2
-      },
-      {
-        "tablePage": 3,
-        "repeatPage": 4
-      }
-    ],
-    "requestMetadata": null
+    "transcriptionMethod": "Visual transcription of original PDF pages 1 and 3; all four pages rendered and inspected.",
+    "requestMetadata": null,
+    "sha256": "46ae5c7fbbbd1db9e3eac581cd89685ce14d9718b94a24d2ee943677bb4989dc",
+    "pageContents": {
+      "1": "All-employees average headcount and salary",
+      "2": "All-employees telework schedules",
+      "3": "Victoria-office average headcount and salary",
+      "4": "Victoria-office telework schedules"
+    }
   },
   "measures": {
     "averageHeadCount": {
@@ -43,20 +40,18 @@
     {
       "id": "all",
       "label": "All BC Public Service employees",
-      "sourceLabel": "Data for all BC Public Service employees",
+      "sourceLabel": "Data for all BC Public Service Employees",
       "scope": "BC Public Service",
       "parentPopulationId": null,
-      "sourcePage": 1,
-      "corroboratingPage": 2
+      "sourcePage": 1
     },
     {
       "id": "victoria",
       "label": "Employees assigned to Victoria offices",
-      "sourceLabel": "Data for BC Public Service employees whose office is located in Victoria",
+      "sourceLabel": "Data for BC Public Service Employees assigned to Victoria offices",
       "scope": "BC Public Service employees whose office is located in Victoria",
       "parentPopulationId": "all",
-      "sourcePage": 3,
-      "corroboratingPage": 4
+      "sourcePage": 3
     }
   ],
   "notes": [
@@ -64,9 +59,9 @@
     "Victoria-office employees are included in the all-employees population. Do not add the two populations.",
     "The release does not establish the calculation methods for Average HeadCount or Average Salary, or the start and end of each reporting period.",
     "Year labels are preserved as printed. Calendar-year, fiscal-year and partial-year interpretations are unverified.",
-    "The 2019 Victoria Average HeadCount of 21,405 is reproduced as printed on pages 3 and 4. The release does not explain the increase or subsequent decrease.",
-    "Pages 2 and 4 repeat the values on pages 1 and 3. Each population and year is recorded once.",
-    "These aggregate observations are separate from named payment records and the fiscal-year FTE series. They must not be included in named-earner record counts, salary rankings or payment totals."
+    "These aggregate observations are separate from named payment records and the fiscal-year FTE series. They must not be included in named-earner record counts, salary rankings or payment totals.",
+    "Pages 2 and 4 report telework schedules, not duplicate headcount or salary tables.",
+    "The search cutoff and reporting-period boundaries have not been independently verified; 2024 must not be presented as a verified complete calendar year."
   ],
   "observations": [
     {
@@ -120,50 +115,50 @@
     {
       "populationId": "victoria",
       "yearLabel": "2017",
-      "averageHeadCount": 14366,
-      "averageSalary": 72066
+      "averageHeadCount": 12210.83,
+      "averageSalary": 69074.72
     },
     {
       "populationId": "victoria",
       "yearLabel": "2018",
-      "averageHeadCount": 15180,
-      "averageSalary": 73680
+      "averageHeadCount": 13100.33,
+      "averageSalary": 70311.53
     },
     {
       "populationId": "victoria",
       "yearLabel": "2019",
-      "averageHeadCount": 21405,
-      "averageSalary": 73715
+      "averageHeadCount": 13972.25,
+      "averageSalary": 72593.09
     },
     {
       "populationId": "victoria",
       "yearLabel": "2020",
-      "averageHeadCount": 15662,
-      "averageSalary": 78082
+      "averageHeadCount": 14135.33,
+      "averageSalary": 75033.52
     },
     {
       "populationId": "victoria",
       "yearLabel": "2021",
-      "averageHeadCount": 15686,
-      "averageSalary": 80035
+      "averageHeadCount": 14653.75,
+      "averageSalary": 76699.98
     },
     {
       "populationId": "victoria",
       "yearLabel": "2022",
-      "averageHeadCount": 15535,
-      "averageSalary": 83047
+      "averageHeadCount": 15200.08,
+      "averageSalary": 79590.49
     },
     {
       "populationId": "victoria",
       "yearLabel": "2023",
-      "averageHeadCount": 15388,
-      "averageSalary": 88262
+      "averageHeadCount": 16516.58,
+      "averageSalary": 84508.68
     },
     {
       "populationId": "victoria",
       "yearLabel": "2024",
-      "averageHeadCount": 15493,
-      "averageSalary": 91347
+      "averageHeadCount": 17564.38,
+      "averageSalary": 87527.87
     }
   ]
 }

@@ -23,7 +23,7 @@ export function validateWorkforce(data) {
   for (const row of data.observations) {
     const key = `${row.populationId}:${row.yearLabel}`
     if (!WORKFORCE_POPULATIONS.includes(row.populationId) || typeof row.yearLabel !== 'string' || !/^(201[7-9]|202[0-4])$/.test(row.yearLabel) || seen.has(key)) throw new Error('Duplicate or invalid workforce observation')
-    if (!Number.isInteger(row.averageHeadCount) || row.averageHeadCount <= 0 || !Number.isInteger(row.averageSalary) || row.averageSalary <= 0) throw new Error('Invalid workforce measure')
+    if (!Number.isFinite(row.averageHeadCount) || row.averageHeadCount <= 0 || !Number.isFinite(row.averageSalary) || row.averageSalary <= 0) throw new Error('Invalid workforce measure')
     seen.add(key)
   }
   return data
@@ -50,10 +50,10 @@ const csvCell = value => {
 }
 
 export function workforceCsv(data) {
-  const headers = ['Population', 'Population source label', 'Parent population', 'Year label', 'Average HeadCount', 'Average Salary', 'Period type', 'Period start', 'Period end', 'Headcount calculation', 'Salary calculation', 'Currency', 'Currency basis', 'Source ID', 'Source URL', 'Source page', 'Corroborating page']
+  const headers = ['Population', 'Population source label', 'Parent population', 'Year label', 'Average HeadCount', 'Average Salary', 'Period type', 'Period start', 'Period end', 'Headcount calculation', 'Salary calculation', 'Currency', 'Currency basis', 'Source ID', 'Source URL', 'Source page']
   const rows = [...data.observations].sort((a, b) => a.populationId.localeCompare(b.populationId) || a.yearLabel.localeCompare(b.yearLabel)).map(row => {
     const population = data.populations.find(item => item.id === row.populationId)
-    return [population.id, population.sourceLabel, population.parentPopulationId, row.yearLabel, row.averageHeadCount, row.averageSalary, data.period.periodType, data.period.periodStart, data.period.periodEnd, data.measures.averageHeadCount.calculationMethod, data.measures.averageSalary.calculationMethod, data.measures.averageSalary.currency, data.measures.averageSalary.currencyBasis, data.source.id, data.source.url, population.sourcePage, population.corroboratingPage]
+    return [population.id, population.sourceLabel, population.parentPopulationId, row.yearLabel, row.averageHeadCount, row.averageSalary, data.period.periodType, data.period.periodStart, data.period.periodEnd, data.measures.averageHeadCount.calculationMethod, data.measures.averageSalary.calculationMethod, data.measures.averageSalary.currency, data.measures.averageSalary.currencyBasis, data.source.id, data.source.url, population.sourcePage]
   })
   return [headers, ...rows].map(row => row.map(csvCell).join(',')).join('\r\n') + '\r\n'
 }

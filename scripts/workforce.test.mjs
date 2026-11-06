@@ -1,12 +1,13 @@
 import test from 'node:test'
 import assert from 'node:assert/strict'
 import { readFileSync } from 'node:fs'
+import { createHash } from 'node:crypto'
 import { buildWorkforce, runWorkforceBuild } from './build-workforce.mjs'
 
 const source = JSON.parse(readFileSync(new URL('../research/salaries/workforce/PSA-2024-42006.json', import.meta.url), 'utf8'))
 const expected = {
   all: [[2017, 31153, 63704], [2018, 32787, 64956], [2019, 34333, 67187], [2020, 34783, 69170], [2021, 35565, 70917], [2022, 36149, 73775], [2023, 38352, 78802], [2024, 40787, 81718]],
-  victoria: [[2017, 14366, 72066], [2018, 15180, 73680], [2019, 21405, 73715], [2020, 15662, 78082], [2021, 15686, 80035], [2022, 15535, 83047], [2023, 15388, 88262], [2024, 15493, 91347]],
+  victoria: [[2017, 12210.83, 69074.72], [2018, 13100.33, 70311.53], [2019, 13972.25, 72593.09], [2020, 14135.33, 75033.52], [2021, 14653.75, 76699.98], [2022, 15200.08, 79590.49], [2023, 16516.58, 84508.68], [2024, 17564.38, 87527.87]],
 }
 
 test('all 32 visually verified source values are preserved in 16 unique observations', () => {
@@ -20,17 +21,18 @@ test('all 32 visually verified source values are preserved in 16 unique observat
 test('source pages, overlapping populations and original labels are retained', () => {
   assert.equal(source.source.pageCount, 4)
   assert.equal(source.source.requestMetadata, null)
-  assert.deepEqual(source.source.duplicatePages, [{ tablePage: 1, repeatPage: 2 }, { tablePage: 3, repeatPage: 4 }])
-  assert.deepEqual(source.populations.map(row => [row.id, row.sourceLabel, row.sourcePage, row.corroboratingPage, row.parentPopulationId]), [
-    ['all', 'Data for all BC Public Service employees', 1, 2, null],
-    ['victoria', 'Data for BC Public Service employees whose office is located in Victoria', 3, 4, 'all'],
+  assert.equal(source.source.duplicatePages, undefined)
+  assert.match(source.source.pageContents['2'], /telework/)
+  assert.deepEqual(source.populations.map(row => [row.id, row.sourceLabel, row.sourcePage, row.parentPopulationId]), [
+    ['all', 'Data for all BC Public Service Employees', 1, null],
+    ['victoria', 'Data for BC Public Service Employees assigned to Victoria offices', 3, 'all'],
   ])
   assert.deepEqual(source.period, { label: 'Year label', periodType: 'unverified', periodStart: null, periodEnd: null })
   assert.equal(source.measures.averageHeadCount.label, 'Average HeadCount')
   assert.equal(source.measures.averageSalary.label, 'Average Salary')
   assert.equal(source.measures.averageSalary.calculationMethod, 'unknown')
   assert.match(source.measures.averageSalary.currencyBasis, /inferred/)
-  assert.ok(source.notes.some(note => note.includes('21,405') && note.includes('does not explain')))
+  assert.ok(source.notes.every(note => !note.includes('21,405')))
 })
 
 test('generation is deterministic and does not mutate input or double-count chart pages', () => {
@@ -46,4 +48,8 @@ test('generation is deterministic and does not mutate input or double-count char
 
 test('checked-in public downloads match the curated input exactly', () => {
   assert.match(runWorkforceBuild({ check: true }), /Checked/)
+})
+
+test('original official PDF bytes match the verified transcription source', () => {
+  assert.equal(createHash('sha256').update(readFileSync(new URL('../research/salaries/workforce/PSA-2024-42006.pdf', import.meta.url))).digest('hex'), source.source.sha256)
 })

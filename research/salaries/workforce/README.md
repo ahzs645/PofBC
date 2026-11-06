@@ -1,32 +1,82 @@
-# BC Public Service workforce companion
+# BC Public Service workforce sources
 
-The curated input is `PSA-2024-42006.json`. The official source is [FOI release PSA-2024-42006](https://docs.openinfo.gov.bc.ca/Response_Package_PSA-2024-42006.pdf).
+This data is independent of named compensation disclosures. No rows in these files
+are employee payment records, and none enter salary rankings, payment totals,
+named-earner counts, identity linkage or employer disclosure completeness estimates.
 
-The first and third PDF pages contain the all-employees and Victoria-office tables. Pages 2 and 4 repeat the corresponding values alongside charts; they do not add observations. The input contains exactly 16 population/year observations and 32 transcribed measure values. The tables and chart pages were checked visually. Each population retains its exact source description and page references.
+## FOI average headcount and salary
 
-Run `node scripts/build-workforce.mjs` to produce the separate public JSON and CSV downloads. Run `node scripts/build-workforce.mjs --check` to check that the checked-in downloads match the input. Generation does not fetch the PDF and does not include timestamps, so the artifacts are reproducible. Tests pin the transcribed values, provenance and material limitations.
+Official source: https://docs.openinfo.gov.bc.ca/Response_Package_PSA-2024-42006.pdf
 
-## Interpretation
+The original four-page PDF is retained beside its transcription. SHA-256:
+`46ae5c7fbbbd1db9e3eac581cd89685ce14d9718b94a24d2ee943677bb4989dc`.
+All four pages were rendered and visually inspected on November 6, 2026. The PDF
+has image-only tables; text extraction alone is insufficient to verify its values.
 
-- Preserve the labels **Average HeadCount** and **Average Salary**. Calculation methods have not been established; Average Salary must not be relabelled as actual earnings, annualized salary or an average of PofBC payment records.
-- Preserve the source's year labels without assuming calendar or fiscal reporting periods. Period type is `unverified`; period start and end are `null`. No associated request metadata establishing these definitions was located during review.
-- This is the **BC Public Service**, not the whole BC public sector. Victoria-office employees are a subset of all employees. The populations must never be summed.
-- The 2019 Victoria Average HeadCount is **21,405**, as shown on both pages 3 and 4. Its rise and subsequent fall remain unexplained. Keep the printed value; do not interpolate or silently correct it.
-- The PDF uses a dollar symbol. CAD is inferred from the British Columbia government context, and the currency field records that basis explicitly.
-- These observations are not named individual records. They remain outside salary payment indices, rankings, totals, threshold coverage and record counts. The existing government fiscal-year FTE series is also a distinct measure.
-- The statistics can supply broader workforce context, but do not establish how many employees are missing from any threshold-based disclosure list. A rising disclosure count alone does not establish headcount growth.
+- Page 1: all-employees Average HeadCount and Average Salary, 2017–2024.
+- Page 2: all-employees telework schedules, 2022–2024.
+- Page 3: Victoria-office Average HeadCount and Average Salary, 2017–2024.
+- Page 4: Victoria-office telework schedules, 2022–2024.
 
-The CSV includes both populations, exact measure labels, the unknown method and period fields, inferred-currency basis, source URL and PDF pages. Blank period boundaries mean unknown, not a zero-length interval.
+Pages 2 and 4 are **not duplicate headcount/salary tables**. They are not imported
+into the headcount/salary series. The previous draft's complete Victoria series
+was incorrect. In particular, 2019 headcount is **13,972.25**, not 21,405, and 2024
+headcount is **17,564.38**. All Victoria headcount and salary decimals are retained.
 
-## Questions to resolve before comparing with annual payments
+The search cutoff has not been independently verified from request metadata. The
+PDF does not state reporting-period boundaries. Do not label 2024 as a complete
+calendar year.
+The release does not explain calculation methods, calendar/fiscal periods, extraction
+dates, annualized versus earned salary, weighting, employee statuses or office assignment
+rules. Original measure names are retained; currency CAD is inferred from context.
+Do not multiply average headcount by average salary to estimate payroll. Victoria is
+included in all employees, so these populations must not be added. FTE is another measure.
 
-1. What start date, end date and extraction date apply to each year label? Does 2024 represent a complete period or a partial period?
-2. How is **Average HeadCount** calculated: daily or monthly snapshots, pay-period averages, unique people or another method? How are employees with multiple appointments counted?
-3. Which employee groups and employment statuses are included, including regular, auxiliary, part-time and leave statuses? Are these definitions constant across the series?
-4. Does **Average Salary** use annualized salary rates, actual payroll earnings or another amount? What numerator, denominator and weighting are used, and how are part-time employment, overtime, allowances and benefits treated?
-5. What office-location definition produces the Victoria population? How are transfers, remote work and changes in office assignment handled?
-6. What explains the Victoria headcount of 21,405 in 2019 and its subsequent decrease? Are revised values or newer releases available under the same definitions?
+Rebuild and test offline:
 
-Until these definitions are established, the series can be displayed under its
-original labels but should not be used to estimate missing payment records, calculate
-total payroll by multiplying the two averages, or replace fiscal-year FTE statistics.
+```
+node scripts/build-workforce.mjs
+node scripts/build-workforce.mjs --check
+node --test scripts/workforce.test.mjs src/salaries/workforce.test.js
+```
+
+## BC Stats Workforce Profiles archive
+
+Official catalogue: https://catalogue.data.gov.bc.ca/dataset/bc-public-service-workforce-profiles
+
+`profiles/manifest.json` identifies the exact 30 public CSVs, source URLs, resource IDs,
+row counts and SHA-256 digests. `profiles/raw/` contains their unmodified bytes as
+retrieved November 6, 2026. There are **10,435 source rows**, of which **111 are ministry
+lookup rows**, leaving 10,324 aggregate profile rows. These are not 10,435 employees.
+The catalogue has an additional empty-URL entry for WP2024_Ind_Progress; it is not a
+second source and is excluded. Editions: 2018 (6 tables), 2020, 2022 and 2024 (8 each).
+
+Tables cover employee counts, population/workforce representation comparators,
+Indigenous/protected-group progress, leadership, occupation and region representation,
+hiring, flows and ministry keys. The original columns and string values are preserved;
+S, NA and blanks are not zero and are never reconstructed. Source years are edition
+labels; historical comparison columns refer to other years. Different measures and
+groups have different or overlapping denominators. Ministry keys are edition-specific.
+The archive is not harmonized across reorganizations. The viewer deliberately shows
+source tables and explicit labels rather than computing unsupported totals or rankings.
+
+The catalogue describes demographics gathered in BC Stats corporate surveys and
+comparators from federal reports. Consult its linked official methodology before
+interpreting representation, shortfalls or counts. These profile employee counts
+must not be substituted for the FOI average headcounts, fiscal-year FTE or payment lists.
+
+The public JSON preserves source rows and provenance per table. The viewer offers
+filtering, 25-row pages, official CSV links and the complete JSON download, separately
+from FOI downloads. Raw CSV files are not regenerated or spreadsheet-sanitized: they
+are the official original files. Any future generated CSV should escape formula cells.
+
+```
+node scripts/build-workforce-profiles.mjs
+node scripts/build-workforce-profiles.mjs --check
+node --test scripts/workforce-profiles.test.mjs
+```
+
+Both builds are deterministic and use only the committed public-source snapshots.
+The profile build verifies all source digests before parsing and rejects changed source
+counts or malformed row widths. A future refresh must deliberately update the manifest,
+expected coverage, review and tests; do not silently mix editions or reinterpret symbols.

@@ -59,3 +59,12 @@
   .workforce__table { font-size: 13px; }
   .workforce__table th, .workforce__table td { padding: 10px 8px; }
 }
+
+.workforce__profiles { margin: 24px 0 40px; line-height: 1.65; }
+.workforce__profile-table { table-layout: auto; font-size: 12px; }
+.workforce__profile-table th, .workforce__profile-table td { min-width: 100px; text-align: left; overflow-wrap: normal; }
+.workforce__population input { border: 1px solid var(--mid); border-radius: 8px; padding: 12px; background: var(--surface); color: var(--ink); font: inherit; min-height: 44px; box-sizing: border-box; }
+.workforce__pagination { display: flex; align-items: center; gap: 16px; margin: 14px 0; font-size: 13px; }
+.workforce__pagination button { border: 1px solid var(--mid); border-radius: 8px; padding: 10px 14px; background: var(--surface); color: var(--ink); cursor: pointer; }
+.workforce__pagination button:disabled { opacity: .4; cursor: default; }
+.workforce__foi-heading { border-top: 1px solid var(--mid); padding-top: 26px; }
