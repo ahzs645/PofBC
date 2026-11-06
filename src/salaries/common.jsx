@@ -25,9 +25,10 @@ export const SalaryPageHeading = ({ id, back, children }) => (
 )
 
 /** A gzipped file, decompressed here; or plain JSON, if the server already undid the gzip. */
-export const loadJson = (path) => {
+export const loadJson = (path, { reload = false } = {}) => {
+  if (reload) loaded.delete(path)
   if (!loaded.has(path)) {
-    loaded.set(path, fetch(`${BASE}${path}`).then(async (response) => {
+    const request = fetch(`${BASE}${path}`, { headers: { Accept: 'application/json' }, ...(reload ? { cache: 'reload' } : {}) }).then(async (response) => {
       if (!response.ok) throw new Error(`${response.status}`)
       const bytes = new Uint8Array(await response.arrayBuffer())
       if (bytes[0] === 0x1f && bytes[1] === 0x8b) {
@@ -35,7 +36,8 @@ export const loadJson = (path) => {
         return JSON.parse(await new Response(stream).text())
       }
       return JSON.parse(new TextDecoder().decode(bytes))
-    }).catch((error) => { loaded.delete(path); throw error }))
+    }).catch((error) => { if (loaded.get(path) === request) loaded.delete(path); throw error })
+    loaded.set(path, request)
   }
   return loaded.get(path)
 }
@@ -99,6 +101,9 @@ export const RecordRow = ({ rank, name, position, pay, expenses, expenseText, so
  */
 export const usePages = (list, size, reset) => {
   const [state, setState] = useState({ page: 1, reset })
+  // Remember every new search/filter key, including while its results are loading. Otherwise
+  // revisiting an earlier query can resurrect the page number left under that old key.
+  if (state.reset !== reset) setState({ page: 1, reset })
   const page = state.reset === reset ? state.page : 1
   const pages = Math.max(1, Math.ceil(list.length / size))
   const at = Math.min(page, pages)

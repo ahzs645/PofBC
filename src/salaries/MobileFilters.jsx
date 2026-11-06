@@ -13,7 +13,7 @@ export const SalarySearchField = ({ value, onChange, labelled = false, label = '
           id={id}
           type="search"
           value={value}
-          placeholder={placeholder ?? (labelled ? 'Name, employer or position' : 'A name, an employer or a position, like “Smith, J”, “Transit” or “Nurse”')}
+          placeholder={placeholder ?? (labelled ? 'First name, surname, employer or position' : 'Any part of a name, an employer or a position')}
           aria-label="Search a name, an employer or a position"
           aria-describedby={help}
           onChange={(event) => onChange(event.target.value)}
@@ -21,7 +21,7 @@ export const SalarySearchField = ({ value, onChange, labelled = false, label = '
         <span className="salaries__tip">
           <button type="button" className="salaries__tip-button" aria-label="How names are searched" aria-describedby={help}>i</button>
           <span role="tooltip" id={help} className="salaries__tip-text">
-            A name is read surname first, then the other way round. A comma fixes where given names begin, as in “Van der Meer, J”.
+            Search any part of a name, in any order, such as “Milad” or “Milad Fathi”. Partial words work too. Use a comma for a precise surname-first search, as in “Van der Meer, J”.
           </span>
         </span>
       </span>

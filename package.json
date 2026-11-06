@@ -27,7 +27,7 @@
     "build": "npm run build:assets --silent && vite build",
     "preview": "vite preview",
     "test": "node --test \"src/**/*.test.js\" \"scripts/**/*.test.mjs\"",
-    "build:assets": "npm run vendor:build --silent && node scripts/build-mark.mjs && node scripts/build-fonts.mjs && node scripts/build-current-extras.mjs && node scripts/build-capabilities.mjs",
+    "build:assets": "npm run vendor:build --silent && node scripts/build-mark.mjs && node scripts/build-fonts.mjs && node scripts/build-current-extras.mjs && node scripts/build-capabilities.mjs && npm run build:salary-search --silent",
     "build:mark": "node scripts/build-mark.mjs",
     "build:fonts": "node scripts/build-fonts.mjs",
     "compare": "node scripts/compare-artwork.mjs",
@@ -51,7 +51,7 @@
     "build:collecting": "node scripts/build-collecting.mjs",
     "build:collected-marks": "node scripts/build-collected-marks.mjs",
     "build:collected-display": "python3 scripts/build_collected_display.py",
-    "build:salaries": "node scripts/build-salaries.mjs && node scripts/build-name-links.mjs && node scripts/build-employer-stats.mjs && npm run build:workforce && node scripts/build-council-pay.mjs",
+    "build:salaries": "node scripts/build-salaries.mjs && node scripts/build-name-links.mjs && npm run build:salary-search --silent && node scripts/build-employer-stats.mjs && npm run build:workforce && node scripts/build-council-pay.mjs",
     "build:employer-stats": "node scripts/build-employer-stats.mjs",
     "build:workforce": "node scripts/build-workforce.mjs && node scripts/build-workforce-profiles.mjs",
     "check:workforce": "node scripts/build-workforce.mjs --check && node scripts/build-workforce-profiles.mjs --check && node --test scripts/workforce.test.mjs scripts/workforce-profiles.test.mjs src/salaries/workforce.test.js",
@@ -63,7 +63,7 @@
     "import:sunshine": "node scripts/import-sunshine-snapshot.mjs",
     "audit:sunshine": "node scripts/audit-sunshine-lists.mjs",
     "test:sunshine": "node --test scripts/sunshine-lists.test.mjs scripts/sunshine-coverage.test.mjs scripts/sunshine-compare.test.mjs",
-    "preview:salaries": "node scripts/preview-salaries.mjs",
+    "preview:salaries": "npm run build:salary-search --silent && node scripts/preview-salaries.mjs",
     "shots:salaries": "node scripts/salary-shots.mjs",
     "check:salaries": "node scripts/check-salary-exports.mjs --write-inventory && node scripts/build-council-pay.mjs --check && node --test scripts/council-pay.test.mjs && npm run check:workforce",
     "build:crest": "python3 scripts/build_crest.py",
@@ -95,7 +95,9 @@
     "review:salary-held-resolution": "python3 scripts/review-salary-held-resolution.py --frozen",
     "review:salary-queue-completion": "python3 scripts/gap_fill_previous_release.py",
     "review:salary-gap-fill": "python3 scripts/review_salary_gap_fill.py",
-    "check:salary-preservation": "python3 scripts/check_salary_current_preservation.py"
+    "check:salary-preservation": "python3 scripts/check_salary_current_preservation.py",
+    "build:salary-search": "node scripts/build-salary-search.mjs",
+    "check:salary-search": "npm run build:salary-search --silent && node scripts/check-salary-search.mjs"
   },
   "peerDependencies": {
     "react": ">=18",

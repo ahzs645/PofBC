@@ -8,7 +8,7 @@
 // spellings, departments and notes are kept with it. Nothing else is assumed: "Teacher" and "Teacher
 // Elementary" stay two titles, and the search offers the second as a related one rather than merging it.
 
-import { positionKey } from './people.js'
+import { EMPLOYER_LAYOUT, personKey, positionKey, withoutCompiledRepeats } from './people.js'
 
 // Only abbreviations that cannot be read another way in a job title.
 const ABBREVIATIONS = {
@@ -31,6 +31,22 @@ export const titleWords = (position) => positionKey(String(position ?? '').split
 
 /** The key one title is grouped under, however its employer spelled it. */
 export const titleKey = (position) => titleWords(position).join(' ')
+
+/**
+ * Original CAD employer rows for one title, with compiled repeats folded only within that title.
+ * Filter first: an official payment with no disclosed position must not erase the compiled row
+ * that supplies this title. Returned rows keep their original spelling, source and other fields;
+ * no compiled title is copied onto an official record. `nameKey` may supply the employer's
+ * reviewed name joins; without it, only identical normalized disclosed names can be folded.
+ */
+export const titleRecords = (rows, key, sources = {}, { nameKey = null } = {}) => {
+  if (!rows || !key) return []
+  const matching = rows.filter((row) => row[1] && titleKey(row[1]) === key)
+  return withoutCompiledRepeats(matching, sources, undefined, {
+    layout: EMPLOYER_LAYOUT,
+    nameKey: nameKey ?? ((row) => personKey(row[0] ?? ''))
+  })
+}
 
 /** The slice of the position index a title is filed under: its key's first two letters or digits. */
 export const titleShard = (key) => String(key ?? '').replace(/[^a-z0-9]/g, '').slice(0, 2).padEnd(2, '_')
