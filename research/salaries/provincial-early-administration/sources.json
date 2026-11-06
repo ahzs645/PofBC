@@ -1,0 +1,756 @@
+{
+  "version": 1,
+  "rowSchema": [
+    "employerSlug",
+    "name",
+    "position",
+    "remuneration",
+    "expenses",
+    "pdfPage"
+  ],
+  "coverageNotes": [
+    "Early official salary tables 1999/00–2005/06 only. No overlap with existing 2006/07+ catalogue imports.",
+    "Cabinet executive salary and administration deputy compensation are separate scopes; neither is the complete public-service employee population."
+  ],
+  "sources": [
+    {
+      "id": "provincial-early-1999-00-ministers",
+      "employerSlug": "provincial-cabinet",
+      "employerName": "Premier and ministers",
+      "sector": "Government",
+      "year": "1999/00",
+      "periodType": "fiscal",
+      "periodStart": "1999-04-01",
+      "periodEnd": "2000-03-31",
+      "file": "1999-00-ministers.json.gzip",
+      "originalFile": "originals/1999-00.pdf",
+      "auditFile": "1999-00.audit.json",
+      "title": "Public Accounts 1999/00: Premier and ministers executive salary",
+      "sourceUrl": "https://www2.gov.bc.ca/assets/gov/british-columbians-our-governments/government-finances/public-accounts/1999-00/pa-1999-00-crf-detailed-schedules-of-payments.pdf",
+      "sha256": "8cf063150b697c1fa309964b06ffb76e888dcda15edfd3b0e5140082d7e0bedd",
+      "dataSha256": "a4c0387075fe93eddda8666c77d1ea0e91843f8cf61fb91c2408ce8e6352f71c",
+      "rowCount": 27,
+      "totalRemuneration": 789538,
+      "totalDisclosedExpenses": 844692,
+      "category": "minister-executive-salary",
+      "scope": "minister-executive-salary",
+      "threshold": null,
+      "currency": "CAD",
+      "status": "verified",
+      "verifiedOn": "2026-11-06",
+      "completeEmployeeSchedule": false,
+      "retainCompiledPartition": true,
+      "notes": [
+        "Payments for the stated fiscal year, not annual salary rates. Published initials and spelling are preserved; no cross-source identity joins.",
+        "Travel and capital city allowances are expenses, not salary. Missing expense amounts remain null.",
+        "Executive salary component only; member compensation is additional and not included here."
+      ],
+      "validation": {
+        "physicalPdfPages": [
+          8
+        ],
+        "publishedColumnTotals": [
+          789538,
+          844692
+        ],
+        "parsedColumnTotals": [
+          789538,
+          844692
+        ],
+        "allPublishedColumnTotalsReconciled": true,
+        "publishedTotalDeltas": [
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "id": "provincial-early-1999-00-deputies",
+      "employerSlug": "public-service",
+      "employerName": "Provincial government",
+      "sector": "Government",
+      "year": "1999/00",
+      "periodType": "fiscal",
+      "periodStart": "1999-04-01",
+      "periodEnd": "2000-03-31",
+      "file": "1999-00-deputies.json.gzip",
+      "originalFile": "originals/1999-00.pdf",
+      "auditFile": "1999-00.audit.json",
+      "title": "Public Accounts 1999/00: Deputy and associate deputy salary and compensation",
+      "sourceUrl": "https://www2.gov.bc.ca/assets/gov/british-columbians-our-governments/government-finances/public-accounts/1999-00/pa-1999-00-crf-detailed-schedules-of-payments.pdf",
+      "sha256": "8cf063150b697c1fa309964b06ffb76e888dcda15edfd3b0e5140082d7e0bedd",
+      "dataSha256": "c117ff0ffb705fd665da224897d81f0e9ff544dec0d232fe06f2dfd2f3e888f0",
+      "rowCount": 38,
+      "totalRemuneration": 4076342,
+      "totalDisclosedExpenses": 697039,
+      "category": "deputy-minister-remuneration",
+      "scope": "deputy-minister-remuneration",
+      "threshold": null,
+      "currency": "CAD",
+      "status": "verified",
+      "verifiedOn": "2026-11-06",
+      "completeEmployeeSchedule": false,
+      "retainCompiledPartition": true,
+      "notes": [
+        "Payments for the stated fiscal year, not annual salary rates. Published initials and spelling are preserved; no cross-source identity joins.",
+        "Travel and capital city allowances are expenses, not salary. Missing expense amounts remain null.",
+        "Remuneration includes salary plus the separately disclosed deferred compensation column. Columns are retained separately in the audit."
+      ],
+      "validation": {
+        "physicalPdfPages": [
+          8
+        ],
+        "publishedColumnTotals": [
+          4061942,
+          null,
+          697039
+        ],
+        "parsedColumnTotals": [
+          4061942,
+          14400,
+          697039
+        ],
+        "allPublishedColumnTotalsReconciled": true,
+        "publishedTotalDeltas": [
+          0,
+          null,
+          0
+        ]
+      }
+    },
+    {
+      "id": "provincial-early-2000-01-ministers",
+      "employerSlug": "provincial-cabinet",
+      "employerName": "Premier and ministers",
+      "sector": "Government",
+      "year": "2000/01",
+      "periodType": "fiscal",
+      "periodStart": "2000-04-01",
+      "periodEnd": "2001-03-31",
+      "file": "2000-01-ministers.json.gzip",
+      "originalFile": "originals/2000-01.pdf",
+      "auditFile": "2000-01.audit.json",
+      "title": "Public Accounts 2000/01: Premier and ministers executive salary",
+      "sourceUrl": "https://www2.gov.bc.ca/assets/gov/british-columbians-our-governments/government-finances/public-accounts/2000-01/pa-2000-01-crf-detailed-schedules-of-payments.pdf",
+      "sha256": "ce4e9e971db8db090e71230e2b5ce5472467209f2b737fd05db04b6dbd429fe5",
+      "dataSha256": "6468b74496533b5713156a40c18677d6eee2490b42343004606027c8364d3333",
+      "rowCount": 29,
+      "totalRemuneration": 768678,
+      "totalDisclosedExpenses": 792826,
+      "category": "minister-executive-salary",
+      "scope": "minister-executive-salary",
+      "threshold": null,
+      "currency": "CAD",
+      "status": "verified",
+      "verifiedOn": "2026-11-06",
+      "completeEmployeeSchedule": false,
+      "retainCompiledPartition": true,
+      "notes": [
+        "Payments for the stated fiscal year, not annual salary rates. Published initials and spelling are preserved; no cross-source identity joins.",
+        "Travel and capital city allowances are expenses, not salary. Missing expense amounts remain null.",
+        "Executive salary component only; member compensation is additional and not included here."
+      ],
+      "validation": {
+        "physicalPdfPages": [
+          9
+        ],
+        "publishedColumnTotals": [
+          768678,
+          792826
+        ],
+        "parsedColumnTotals": [
+          768678,
+          792826
+        ],
+        "allPublishedColumnTotalsReconciled": true,
+        "publishedTotalDeltas": [
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "id": "provincial-early-2000-01-deputies",
+      "employerSlug": "public-service",
+      "employerName": "Provincial government",
+      "sector": "Government",
+      "year": "2000/01",
+      "periodType": "fiscal",
+      "periodStart": "2000-04-01",
+      "periodEnd": "2001-03-31",
+      "file": "2000-01-deputies.json.gzip",
+      "originalFile": "originals/2000-01.pdf",
+      "auditFile": "2000-01.audit.json",
+      "title": "Public Accounts 2000/01: Deputy and associate deputy salary and compensation",
+      "sourceUrl": "https://www2.gov.bc.ca/assets/gov/british-columbians-our-governments/government-finances/public-accounts/2000-01/pa-2000-01-crf-detailed-schedules-of-payments.pdf",
+      "sha256": "ce4e9e971db8db090e71230e2b5ce5472467209f2b737fd05db04b6dbd429fe5",
+      "dataSha256": "cbf1b2fad67a1ff0d600ad82a1d055b2fb5cc053cfa6f601505d4913935abc51",
+      "rowCount": 41,
+      "totalRemuneration": 5110100,
+      "totalDisclosedExpenses": 903201,
+      "category": "deputy-minister-remuneration",
+      "scope": "deputy-minister-remuneration",
+      "threshold": null,
+      "currency": "CAD",
+      "status": "verified",
+      "verifiedOn": "2026-11-06",
+      "completeEmployeeSchedule": false,
+      "retainCompiledPartition": true,
+      "notes": [
+        "Payments for the stated fiscal year, not annual salary rates. Published initials and spelling are preserved; no cross-source identity joins.",
+        "Travel and capital city allowances are expenses, not salary. Missing expense amounts remain null.",
+        "Remuneration includes salary plus the separately disclosed deferred compensation column. Columns are retained separately in the audit."
+      ],
+      "validation": {
+        "physicalPdfPages": [
+          9
+        ],
+        "publishedColumnTotals": [
+          5081320,
+          null,
+          903201
+        ],
+        "parsedColumnTotals": [
+          5081320,
+          28780,
+          903201
+        ],
+        "allPublishedColumnTotalsReconciled": true,
+        "publishedTotalDeltas": [
+          0,
+          null,
+          0
+        ]
+      }
+    },
+    {
+      "id": "provincial-early-2001-02-ministers",
+      "employerSlug": "provincial-cabinet",
+      "employerName": "Premier and ministers",
+      "sector": "Government",
+      "year": "2001/02",
+      "periodType": "fiscal",
+      "periodStart": "2001-04-01",
+      "periodEnd": "2002-03-31",
+      "file": "2001-02-ministers.json.gzip",
+      "originalFile": "originals/2001-02.pdf",
+      "auditFile": "2001-02.audit.json",
+      "title": "Public Accounts 2001/02: Premier and ministers executive salary",
+      "sourceUrl": "https://www2.gov.bc.ca/assets/gov/british-columbians-our-governments/government-finances/public-accounts/2001-02/pa-2001-02-crf-detailed-schedules-of-payments.pdf",
+      "sha256": "3815ac29fe378fde536155ec7121013c98a81e06c311537ce255d30f3ee6f4f2",
+      "dataSha256": "81251b9c051b9a23fde5c7fc3e4adcf315c5020aca0901e9d2fc8e35910d3958",
+      "rowCount": 49,
+      "totalRemuneration": 951602,
+      "totalDisclosedExpenses": 1101215,
+      "category": "minister-executive-salary",
+      "scope": "minister-executive-salary",
+      "threshold": null,
+      "currency": "CAD",
+      "status": "verified",
+      "verifiedOn": "2026-11-06",
+      "completeEmployeeSchedule": false,
+      "retainCompiledPartition": true,
+      "notes": [
+        "Payments for the stated fiscal year, not annual salary rates. Published initials and spelling are preserved; no cross-source identity joins.",
+        "Travel and capital city allowances are expenses, not salary. Missing expense amounts remain null.",
+        "Executive salary component only; member compensation is additional and not included here."
+      ],
+      "validation": {
+        "physicalPdfPages": [
+          10
+        ],
+        "publishedColumnTotals": [
+          951602,
+          262477,
+          838738
+        ],
+        "parsedColumnTotals": [
+          951602,
+          262477,
+          838738
+        ],
+        "allPublishedColumnTotalsReconciled": true,
+        "publishedTotalDeltas": [
+          0,
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "id": "provincial-early-2001-02-deputies",
+      "employerSlug": "public-service",
+      "employerName": "Provincial government",
+      "sector": "Government",
+      "year": "2001/02",
+      "periodType": "fiscal",
+      "periodStart": "2001-04-01",
+      "periodEnd": "2002-03-31",
+      "file": "2001-02-deputies.json.gzip",
+      "originalFile": "originals/2001-02.pdf",
+      "auditFile": "2001-02.audit.json",
+      "title": "Public Accounts 2001/02: Deputy and associate deputy salary and compensation",
+      "sourceUrl": "https://www2.gov.bc.ca/assets/gov/british-columbians-our-governments/government-finances/public-accounts/2001-02/pa-2001-02-crf-detailed-schedules-of-payments.pdf",
+      "sha256": "3815ac29fe378fde536155ec7121013c98a81e06c311537ce255d30f3ee6f4f2",
+      "dataSha256": "539869e2f9a6ae1e809d7ff765c1a46b8b01a9dd630707618d7bddb8ff9f6259",
+      "rowCount": 61,
+      "totalRemuneration": 7214074,
+      "totalDisclosedExpenses": 668338,
+      "category": "deputy-minister-remuneration",
+      "scope": "deputy-minister-remuneration",
+      "threshold": null,
+      "currency": "CAD",
+      "status": "verified",
+      "verifiedOn": "2026-11-06",
+      "completeEmployeeSchedule": false,
+      "retainCompiledPartition": true,
+      "notes": [
+        "Payments for the stated fiscal year, not annual salary rates. Published initials and spelling are preserved; no cross-source identity joins.",
+        "Travel and capital city allowances are expenses, not salary. Missing expense amounts remain null.",
+        "Remuneration includes salary plus the separately disclosed deferred compensation column. Columns are retained separately in the audit."
+      ],
+      "validation": {
+        "physicalPdfPages": [
+          10,
+          11
+        ],
+        "publishedColumnTotals": [
+          7193569,
+          20505,
+          668338
+        ],
+        "parsedColumnTotals": [
+          7193569,
+          20505,
+          668338
+        ],
+        "allPublishedColumnTotalsReconciled": true,
+        "publishedTotalDeltas": [
+          0,
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "id": "provincial-early-2002-03-ministers",
+      "employerSlug": "provincial-cabinet",
+      "employerName": "Premier and ministers",
+      "sector": "Government",
+      "year": "2002/03",
+      "periodType": "fiscal",
+      "periodStart": "2002-04-01",
+      "periodEnd": "2003-03-31",
+      "file": "2002-03-ministers.json.gzip",
+      "originalFile": "originals/2002-03.pdf",
+      "auditFile": "2002-03.audit.json",
+      "title": "Public Accounts 2002/03: Premier and ministers executive salary",
+      "sourceUrl": "https://www2.gov.bc.ca/assets/gov/british-columbians-our-governments/government-finances/public-accounts/2002-03/pa-2002-03-crf-detailed-schedules-of-payments.pdf",
+      "sha256": "df3d0103ff42c7190ef73455fa69c3ebd9dae92a458f90fd5846579a9daa16a8",
+      "dataSha256": "918b270f515ac695415880fcefc127256ac93fe55fc1b6f971689efd173b1ae5",
+      "rowCount": 28,
+      "totalRemuneration": 794512,
+      "totalDisclosedExpenses": 1451476,
+      "category": "minister-executive-salary",
+      "scope": "minister-executive-salary",
+      "threshold": null,
+      "currency": "CAD",
+      "status": "verified",
+      "verifiedOn": "2026-11-06",
+      "completeEmployeeSchedule": false,
+      "retainCompiledPartition": true,
+      "notes": [
+        "Payments for the stated fiscal year, not annual salary rates. Published initials and spelling are preserved; no cross-source identity joins.",
+        "Travel and capital city allowances are expenses, not salary. Missing expense amounts remain null.",
+        "Executive salary component only; member compensation is additional and not included here."
+      ],
+      "validation": {
+        "physicalPdfPages": [
+          9
+        ],
+        "publishedColumnTotals": [
+          794512,
+          428321,
+          1023155
+        ],
+        "parsedColumnTotals": [
+          794512,
+          428321,
+          1023155
+        ],
+        "allPublishedColumnTotalsReconciled": true,
+        "publishedTotalDeltas": [
+          0,
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "id": "provincial-early-2002-03-deputies",
+      "employerSlug": "public-service",
+      "employerName": "Provincial government",
+      "sector": "Government",
+      "year": "2002/03",
+      "periodType": "fiscal",
+      "periodStart": "2002-04-01",
+      "periodEnd": "2003-03-31",
+      "file": "2002-03-deputies.json.gzip",
+      "originalFile": "originals/2002-03.pdf",
+      "auditFile": "2002-03.audit.json",
+      "title": "Public Accounts 2002/03: Deputy and associate deputy salary and compensation",
+      "sourceUrl": "https://www2.gov.bc.ca/assets/gov/british-columbians-our-governments/government-finances/public-accounts/2002-03/pa-2002-03-crf-detailed-schedules-of-payments.pdf",
+      "sha256": "df3d0103ff42c7190ef73455fa69c3ebd9dae92a458f90fd5846579a9daa16a8",
+      "dataSha256": "2600fdc8a7921c3b8285036437e31690d8e592eec13761ced6c8371ca4f27aef",
+      "rowCount": 38,
+      "totalRemuneration": 6150575,
+      "totalDisclosedExpenses": 937265,
+      "category": "deputy-minister-remuneration",
+      "scope": "deputy-minister-remuneration",
+      "threshold": null,
+      "currency": "CAD",
+      "status": "verified",
+      "verifiedOn": "2026-11-06",
+      "completeEmployeeSchedule": false,
+      "retainCompiledPartition": true,
+      "notes": [
+        "Payments for the stated fiscal year, not annual salary rates. Published initials and spelling are preserved; no cross-source identity joins.",
+        "Travel and capital city allowances are expenses, not salary. Missing expense amounts remain null.",
+        "D Scott Campbell compensation was paid to his corporation for contracted interim deputy/CIO services, as explicitly footnoted in the report; it is not employee payroll."
+      ],
+      "validation": {
+        "physicalPdfPages": [
+          9
+        ],
+        "publishedColumnTotals": [
+          6150575,
+          937265
+        ],
+        "parsedColumnTotals": [
+          6150575,
+          937265
+        ],
+        "allPublishedColumnTotalsReconciled": true,
+        "publishedTotalDeltas": [
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "id": "provincial-early-2003-04-ministers",
+      "employerSlug": "provincial-cabinet",
+      "employerName": "Premier and ministers",
+      "sector": "Government",
+      "year": "2003/04",
+      "periodType": "fiscal",
+      "periodStart": "2003-04-01",
+      "periodEnd": "2004-03-31",
+      "file": "2003-04-ministers.json.gzip",
+      "originalFile": "originals/2003-04.pdf",
+      "auditFile": "2003-04.audit.json",
+      "title": "Public Accounts 2003/04: Premier and ministers executive salary",
+      "sourceUrl": "https://www2.gov.bc.ca/assets/gov/british-columbians-our-governments/government-finances/public-accounts/2003-04/pa-2003-04-crf-detailed-schedules-of-payments.pdf",
+      "sha256": "0038ca624a5522e5b995ff10f3feff886c2d3d7bc07d2996b22c153896d13a59",
+      "dataSha256": "d27676e507ba5e09b3ead49308b8d157441950f387e28decc6805aed1ef62245",
+      "rowCount": 34,
+      "totalRemuneration": 986513,
+      "totalDisclosedExpenses": 1502108,
+      "category": "minister-executive-salary",
+      "scope": "minister-executive-salary",
+      "threshold": null,
+      "currency": "CAD",
+      "status": "verified",
+      "verifiedOn": "2026-11-06",
+      "completeEmployeeSchedule": false,
+      "retainCompiledPartition": true,
+      "notes": [
+        "Payments for the stated fiscal year, not annual salary rates. Published initials and spelling are preserved; no cross-source identity joins.",
+        "Travel and capital city allowances are expenses, not salary. Missing expense amounts remain null.",
+        "The sum of displayed rows differs slightly from printed totals: cabinet columns by -1, +2, -4 dollars; deputy columns by +1, -1 dollars. Every row was independently checked against raw PDF extraction. Displayed amounts are retained without balancing adjustments. This is the published errata page, including corrected Joyce Murray salary of $38,717.",
+        "Executive salary component only; member compensation is additional and not included here."
+      ],
+      "validation": {
+        "physicalPdfPages": [
+          9
+        ],
+        "publishedColumnTotals": [
+          986514,
+          398305,
+          1103805
+        ],
+        "parsedColumnTotals": [
+          986513,
+          398307,
+          1103801
+        ],
+        "allPublishedColumnTotalsReconciled": false,
+        "publishedTotalDeltas": [
+          -1,
+          2,
+          -4
+        ]
+      }
+    },
+    {
+      "id": "provincial-early-2003-04-deputies",
+      "employerSlug": "public-service",
+      "employerName": "Provincial government",
+      "sector": "Government",
+      "year": "2003/04",
+      "periodType": "fiscal",
+      "periodStart": "2003-04-01",
+      "periodEnd": "2004-03-31",
+      "file": "2003-04-deputies.json.gzip",
+      "originalFile": "originals/2003-04.pdf",
+      "auditFile": "2003-04.audit.json",
+      "title": "Public Accounts 2003/04: Deputy and associate deputy salary and compensation",
+      "sourceUrl": "https://www2.gov.bc.ca/assets/gov/british-columbians-our-governments/government-finances/public-accounts/2003-04/pa-2003-04-crf-detailed-schedules-of-payments.pdf",
+      "sha256": "0038ca624a5522e5b995ff10f3feff886c2d3d7bc07d2996b22c153896d13a59",
+      "dataSha256": "91fa4e0810f8cd26526d09ef57e609ae97094f9f89435280dfe74432bbbf8248",
+      "rowCount": 46,
+      "totalRemuneration": 6936540,
+      "totalDisclosedExpenses": 897294,
+      "category": "deputy-minister-remuneration",
+      "scope": "deputy-minister-remuneration",
+      "threshold": null,
+      "currency": "CAD",
+      "status": "verified",
+      "verifiedOn": "2026-11-06",
+      "completeEmployeeSchedule": false,
+      "retainCompiledPartition": true,
+      "notes": [
+        "Payments for the stated fiscal year, not annual salary rates. Published initials and spelling are preserved; no cross-source identity joins.",
+        "Travel and capital city allowances are expenses, not salary. Missing expense amounts remain null.",
+        "The sum of displayed rows differs slightly from printed totals: cabinet columns by -1, +2, -4 dollars; deputy columns by +1, -1 dollars. Every row was independently checked against raw PDF extraction. Displayed amounts are retained without balancing adjustments. This is the published errata page, including corrected Joyce Murray salary of $38,717.",
+        "D Scott Campbell compensation was paid to his corporation for contracted interim deputy/CIO services, as explicitly footnoted in the report; it is not employee payroll."
+      ],
+      "validation": {
+        "physicalPdfPages": [
+          9
+        ],
+        "publishedColumnTotals": [
+          6936539,
+          897295
+        ],
+        "parsedColumnTotals": [
+          6936540,
+          897294
+        ],
+        "allPublishedColumnTotalsReconciled": false,
+        "publishedTotalDeltas": [
+          1,
+          -1
+        ]
+      }
+    },
+    {
+      "id": "provincial-early-2004-05-ministers",
+      "employerSlug": "provincial-cabinet",
+      "employerName": "Premier and ministers",
+      "sector": "Government",
+      "year": "2004/05",
+      "periodType": "fiscal",
+      "periodStart": "2004-04-01",
+      "periodEnd": "2005-03-31",
+      "file": "2004-05-ministers.json.gzip",
+      "originalFile": "originals/2004-05.pdf",
+      "auditFile": "2004-05.audit.json",
+      "title": "Public Accounts 2004/05: Premier and ministers executive salary",
+      "sourceUrl": "https://www2.gov.bc.ca/assets/gov/british-columbians-our-governments/government-finances/public-accounts/2004-05/pa-2004-05-crf-detailed-schedules-of-payments.pdf",
+      "sha256": "5ee4fcd4567abc869520acf7f3d2022da9f256a5da6fd398fa1ca88d4d26c7f0",
+      "dataSha256": "49c713b21a0443d4c3aab7b973a24bc6ed5daf755c9e976a3a16945d5b84cb95",
+      "rowCount": 38,
+      "totalRemuneration": 973769,
+      "totalDisclosedExpenses": 1565819,
+      "category": "minister-executive-salary",
+      "scope": "minister-executive-salary",
+      "threshold": null,
+      "currency": "CAD",
+      "status": "verified",
+      "verifiedOn": "2026-11-06",
+      "completeEmployeeSchedule": false,
+      "retainCompiledPartition": true,
+      "notes": [
+        "Payments for the stated fiscal year, not annual salary rates. Published initials and spelling are preserved; no cross-source identity joins.",
+        "Travel and capital city allowances are expenses, not salary. Missing expense amounts remain null.",
+        "Executive salary component only; member compensation is additional and not included here."
+      ],
+      "validation": {
+        "physicalPdfPages": [
+          11
+        ],
+        "publishedColumnTotals": [
+          973769,
+          294040,
+          1271779
+        ],
+        "parsedColumnTotals": [
+          973769,
+          294040,
+          1271779
+        ],
+        "allPublishedColumnTotalsReconciled": true,
+        "publishedTotalDeltas": [
+          0,
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "id": "provincial-early-2004-05-deputies",
+      "employerSlug": "public-service",
+      "employerName": "Provincial government",
+      "sector": "Government",
+      "year": "2004/05",
+      "periodType": "fiscal",
+      "periodStart": "2004-04-01",
+      "periodEnd": "2005-03-31",
+      "file": "2004-05-deputies.json.gzip",
+      "originalFile": "originals/2004-05.pdf",
+      "auditFile": "2004-05.audit.json",
+      "title": "Public Accounts 2004/05: Deputy and associate deputy salary and compensation",
+      "sourceUrl": "https://www2.gov.bc.ca/assets/gov/british-columbians-our-governments/government-finances/public-accounts/2004-05/pa-2004-05-crf-detailed-schedules-of-payments.pdf",
+      "sha256": "5ee4fcd4567abc869520acf7f3d2022da9f256a5da6fd398fa1ca88d4d26c7f0",
+      "dataSha256": "74316e7e45cbca03ff29bc8de1a2b6b73093bb1828ec43ecd1d38bf76924d395",
+      "rowCount": 40,
+      "totalRemuneration": 6600412,
+      "totalDisclosedExpenses": 946931,
+      "category": "deputy-minister-remuneration",
+      "scope": "deputy-minister-remuneration",
+      "threshold": null,
+      "currency": "CAD",
+      "status": "verified",
+      "verifiedOn": "2026-11-06",
+      "completeEmployeeSchedule": false,
+      "retainCompiledPartition": true,
+      "notes": [
+        "Payments for the stated fiscal year, not annual salary rates. Published initials and spelling are preserved; no cross-source identity joins.",
+        "Travel and capital city allowances are expenses, not salary. Missing expense amounts remain null."
+      ],
+      "validation": {
+        "physicalPdfPages": [
+          11
+        ],
+        "publishedColumnTotals": [
+          6600412,
+          946931
+        ],
+        "parsedColumnTotals": [
+          6600412,
+          946931
+        ],
+        "allPublishedColumnTotalsReconciled": true,
+        "publishedTotalDeltas": [
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "id": "provincial-early-2005-06-ministers",
+      "employerSlug": "provincial-cabinet",
+      "employerName": "Premier and ministers",
+      "sector": "Government",
+      "year": "2005/06",
+      "periodType": "fiscal",
+      "periodStart": "2005-04-01",
+      "periodEnd": "2006-03-31",
+      "file": "2005-06-ministers.json.gzip",
+      "originalFile": "originals/2005-06.pdf",
+      "auditFile": "2005-06.audit.json",
+      "title": "Public Accounts 2005/06: Premier and ministers executive salary",
+      "sourceUrl": "https://www2.gov.bc.ca/assets/gov/british-columbians-our-governments/government-finances/public-accounts/2005-06/pa-2005-06-crf-detailed-schedules-of-payments.pdf",
+      "sha256": "2028c0f92d245043fd4b98438b50cbc817993c02e189c9cdd08dec074b5366ca",
+      "dataSha256": "2a25efe2005785c22534999e5e363045a90652dca3af898a29874ce65d3446ec",
+      "rowCount": 37,
+      "totalRemuneration": 904304,
+      "totalDisclosedExpenses": 1254491,
+      "category": "minister-executive-salary",
+      "scope": "minister-executive-salary",
+      "threshold": null,
+      "currency": "CAD",
+      "status": "verified",
+      "verifiedOn": "2026-11-06",
+      "completeEmployeeSchedule": false,
+      "retainCompiledPartition": true,
+      "notes": [
+        "Payments for the stated fiscal year, not annual salary rates. Published initials and spelling are preserved; no cross-source identity joins.",
+        "Travel and capital city allowances are expenses, not salary. Missing expense amounts remain null.",
+        "Executive salary component only; member compensation is additional and not included here."
+      ],
+      "validation": {
+        "physicalPdfPages": [
+          13
+        ],
+        "publishedColumnTotals": [
+          904304,
+          274503,
+          979988
+        ],
+        "parsedColumnTotals": [
+          904304,
+          274503,
+          979988
+        ],
+        "allPublishedColumnTotalsReconciled": true,
+        "publishedTotalDeltas": [
+          0,
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "id": "provincial-early-2005-06-deputies",
+      "employerSlug": "public-service",
+      "employerName": "Provincial government",
+      "sector": "Government",
+      "year": "2005/06",
+      "periodType": "fiscal",
+      "periodStart": "2005-04-01",
+      "periodEnd": "2006-03-31",
+      "file": "2005-06-deputies.json.gzip",
+      "originalFile": "originals/2005-06.pdf",
+      "auditFile": "2005-06.audit.json",
+      "title": "Public Accounts 2005/06: Deputy and associate deputy salary and compensation",
+      "sourceUrl": "https://www2.gov.bc.ca/assets/gov/british-columbians-our-governments/government-finances/public-accounts/2005-06/pa-2005-06-crf-detailed-schedules-of-payments.pdf",
+      "sha256": "2028c0f92d245043fd4b98438b50cbc817993c02e189c9cdd08dec074b5366ca",
+      "dataSha256": "68227c78b9b25d419998bbf47e51151bae99fc9e39b4b00a18d47520cd83ff8d",
+      "rowCount": 46,
+      "totalRemuneration": 7533730,
+      "totalDisclosedExpenses": 1089461,
+      "category": "deputy-minister-remuneration",
+      "scope": "deputy-minister-remuneration",
+      "threshold": null,
+      "currency": "CAD",
+      "status": "verified",
+      "verifiedOn": "2026-11-06",
+      "completeEmployeeSchedule": false,
+      "retainCompiledPartition": true,
+      "notes": [
+        "Payments for the stated fiscal year, not annual salary rates. Published initials and spelling are preserved; no cross-source identity joins.",
+        "Travel and capital city allowances are expenses, not salary. Missing expense amounts remain null."
+      ],
+      "validation": {
+        "physicalPdfPages": [
+          13
+        ],
+        "publishedColumnTotals": [
+          7533730,
+          1089461
+        ],
+        "parsedColumnTotals": [
+          7533730,
+          1089461
+        ],
+        "allPublishedColumnTotalsReconciled": true,
+        "publishedTotalDeltas": [
+          0,
+          0
+        ]
+      }
+    }
+  ]
+}
