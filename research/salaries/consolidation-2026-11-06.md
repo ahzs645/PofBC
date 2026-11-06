@@ -32,7 +32,8 @@ The Workforce view also exposes 30 official Workforce Profile CSV tables from th
 - Salary export reconciliation passes: 1,421 accepted source files, 1,445,458 rows, 276 employers.
 - The [preservation gate](current-preservation-2026-11-06/README.md) preserves 34,284 original research files, all 228,364 compiled observations and all 461 source-backed name decisions. Exactly two previously automatic identity links are reduced from verified to likely under pinned new evidence; no different identity is asserted.
 - All 16 frozen historical release gates pass and reproduce 1,749 byte-identical exports.
-- JavaScript suite: 816 passing tests and eight existing asset-related skips. Salary Python suite: 985 tests successful, including six skips. Separate elected, early-administration and Assembly parser tests also pass.
+- JavaScript suite: 827 tests completed, with 819 passing and eight existing asset-related skips. Salary Python suite: 985 tests completed, with 979 passing and six skips. Separate elected, early-administration and Assembly parser tests also pass.
+- The current Sunshine comparison is reproduced separately from its frozen historical reports. Employer-statistics checks compare exact uncompressed JSON bytes across platform-specific gzip encodings; regression tests reject changed values, ordering, newlines and corrupt data.
 - Workforce and OpenCompensation deterministic checks pass. Production and salary-preview builds pass.
 - Interactive browser review is incomplete: the available browser could not reach the local preview. No visual QA pass is claimed.
 
