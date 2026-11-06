@@ -12,6 +12,7 @@ import { BODIES, EMPLOYER_ALIASES, canonicalSlug, employerSector, employerSlug, 
 import { periodMean, TOP_PER_PERIOD, topRecords, csvRows, money, median, sha256, yearSlug, reportingPeriodType, applyCompiledReplacements, applyTravelJoinCorrections, applyCompiledRetentionDecisions, preservePublishedCompiledRows, sumMoney, duplicateStats, repeatedCandidates, validateRow, validateReplacementScopes, compiledPartitionsToRetain } from './lib/salary-data.mjs'
 import { sourceCatalog, sourceLeadsFor, hasLocatedSource } from './lib/salary-sources.mjs'
 import { decodedCurrency, isCadPerson, validateRecordAnnotations } from '../src/salaries/recordAnnotations.js'
+import { applyWestVancouverTitleRecovery } from './lib/west-vancouver-title-recovery.mjs'
 import { applyFollowThroughQualifications } from './lib/follow-through-source-qualifications.mjs'
 
 const root = resolve(dirname(fileURLToPath(import.meta.url)), '..')
@@ -192,6 +193,9 @@ for (const directory of requiredCollections ?? readdirSync(research).sort()) {
     importStats.push({ id: source.id, year, rows: accepted.length, employers: [...new Set(accepted.map((row) => row.slug))], totalRemuneration: sumMoney(accepted.map((row) => row.pay)) })
   }
 }
+const westVancouverCorrections = join(research, 'west-vancouver-title-recovery/corrections.json')
+if (existsSync(westVancouverCorrections)) official = applyWestVancouverTitleRecovery(official, readJson(westVancouverCorrections))
+else if (official.some(row => ["lower-mainland-west-vancouver-2019-employees", "lower-mainland-west-vancouver-2022-employees", "lower-mainland-west-vancouver-2023-employees", "lower-mainland-west-vancouver-2024-employees"].includes(row.sourceId))) throw new Error('Required West Vancouver title corrections are missing')
 const travelRecovery = applyTravelJoinCorrections(official, sources, manifests.flatMap(({ manifest }) => manifest.invalidatedTravelJoins ?? []))
 official = travelRecovery.rows
 const recoveredOicYears = new Set(official.filter((row) => row.sourceId.startsWith('public-accounts-oic-')).map((row) => row.year))

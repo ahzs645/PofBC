@@ -33,6 +33,7 @@ import { TitleCard, TitlePage } from './TitlePage.jsx'
 import { personAnnotation, personCurrency } from './recordAnnotations.js'
 
 const CouncilPayView = lazy(() => import('./CouncilPayView.jsx'))
+const WorkforceView = lazy(() => import('./WorkforceView.jsx'))
 
 const describeNameGroup = (key, list, name, index) => {
   const latest = list.reduce((best, row) => (row[5] > best[5] || (row[5] === best[5] && (
@@ -67,6 +68,19 @@ const PersonCard = ({ each, index, onOpen }) => (
  */
 export const SalariesView = ({ onOpenGovernment }) => {
   const navigation = useSalaryPlace()
+  if (navigation.place.browse === 'workforce') return (
+    <Suspense fallback={<p className="gallery__intro" role="status">Loading workforce statistics…</p>}>
+      <WorkforceView
+        place={navigation.place}
+        setPlace={navigation.setPlace}
+        onBrowse={(browse) => {
+          if (browse === 'workforce') return
+          navigation.go({ ...navigation.place, browse, q: '', person: null, personAt: null, employer: null, employerYear: null, role: null, title: null, show: null }, 'Workforce statistics')
+          toTop()
+        }}
+      />
+    </Suspense>
+  )
   // Mount the companion before the records component: none of its index or surname fetch effects
   // should run for a shared council link, including one with a search already filled in.
   if (navigation.place.browse === 'council') return (
@@ -265,7 +279,7 @@ const SalaryRecordsView = ({ onOpenGovernment, navigation }) => {
   const setYear = (at) => setPlace((current) => ({ ...current, employerYear: years[at] }))
   const yearFromFilter = range ? years[range[1]] : place.employerYear
 
-  const openEmployer = (slug) => go({ employer: slug, employerYear: yearFromFilter })
+  const openEmployer = (slug, employerYear = yearFromFilter) => go({ employer: slug, employerYear })
   const openPerson = (name) => go({ q: name, person: personKey(name) })
   // A name opened from an employer's page shows its records at that employer first; the rest of the
   // name's records are one click away.
@@ -409,7 +423,7 @@ const SalaryRecordsView = ({ onOpenGovernment, navigation }) => {
             ariaLabel="Browse"
             value={browse}
             onChange={(next) => go({ browse: next })}
-            options={[{ value: 'employers', label: 'Employers' }, { value: 'people', label: 'People' }, { value: 'positions', label: 'Positions' }, { value: 'council', label: 'Council pay' }]}
+            options={[{ value: 'employers', label: 'Employers' }, { value: 'people', label: 'People' }, { value: 'positions', label: 'Positions' }, { value: 'council', label: 'Council pay' }, { value: 'workforce', label: 'Workforce' }]}
           />
           <Segmented compact ariaLabel="Layout" value={layout} onChange={(next) => setPlace((current) => ({ ...current, layout: next }))} options={LAYOUTS} />
         </div>

@@ -18,20 +18,28 @@ import { DataTable } from './DataTable.jsx'
 import { TitleCard } from './TitlePage.jsx'
 import { GrowthTip, rateColumn } from './Growth.jsx'
 import { Segmented } from '../site/Segmented.jsx'
+import { employerRanking, employerSnapshot } from './employerStats.js'
+import { EmployerInsights, EMPLOYER_ORDERS, employerRate, useEmployerStatistics } from './EmployerInsights.jsx'
 
 const within = (range) => (at) => !range || (at >= range[0] && at <= range[1])
 
 /** An employer as a card: its name, its records in the periods chosen, and the years it has any. */
-export const EmployerCard = ({ entry, years, range, onOpen }) => {
+export const EmployerCard = ({ entry, years, range, onOpen, stats }) => {
   const inRange = within(range)
   const latest = entry.counts.reduce((best, value, at) => (value && inRange(at) ? at : best), -1)
   const records = range ? entry.counts.reduce((sum, value, at) => sum + (inRange(at) ? value : 0), 0) : entry.counts[latest] ?? 0
   return (
-    <button type="button" className="salaries__card" onClick={() => onOpen(entry.slug)}>
+    <button type="button" className="salaries__card" onClick={() => onOpen(entry.slug, stats ? years[stats.year] : undefined)}>
       <span className="salaries__lead"><RoleIcon /></span>
       <span className="salaries__text">
         <span className="salaries__name">{entry.names.at(-1)}</span>
         <span className="salaries__line">{count(records, 'record', 'records')} in {range ? rangeLabel(years, range) : years[latest]}</span>
+        {stats && <span className="employer-card__stats">
+          <span className="salaries__line"><b>Median {money(stats.median)}</b> · Average {money(stats.mean)}</span>
+          <span className="salaries__line">{years[stats.year]} · {count(stats.count, 'official employee record', 'official employee records')}</span>
+          <span className="salaries__line">{Math.round(stats.above100k / stats.count * 100)}% paid $100,000+ · Threshold {money(stats.threshold, 'not specified')}</span>
+          {stats.growth !== null && <span className="salaries__line">Disclosure growth {employerRate(stats.growth)} · {years[stats.from]} → {years[stats.year]}</span>}
+        </span>}
         <YearStrip years={years} seen={seenYears(entry)} coverage={entry.coverage} />
       </span>
     </button>
@@ -45,46 +53,73 @@ const PREVIEW = 4
  * to the rest; with one chosen, all of its employers, in pages. As a table, one row an employer.
  */
 export const EmployerBrowse = ({ employers, years, sector, range, layout, onOpen, onSector }) => {
+  const [order, setOrder] = useState('sector')
+  const { data: statistics, failed, retry } = useEmployerStatistics(years)
   const inRange = within(range)
   const visible = employers.filter((entry) => (sector === 'all' || entry.sector === sector) && entry.counts.some((value, at) => value && inRange(at)))
   const rows = useMemo(() => visible.map((entry) => {
     const periods = entry.counts.map((value, at) => (value && inRange(at) ? at : null)).filter((at) => at !== null)
-    return { entry, name: entry.names.at(-1), sector: entry.sector, records: periods.reduce((sum, at) => sum + entry.counts[at], 0), periods: periods.length, latest: years[periods.at(-1)] }
-  }), [visible, range]) // eslint-disable-line react-hooks/exhaustive-deps
+    return { entry, stats: employerSnapshot(statistics?.[entry.slug], range), name: entry.names.at(-1), sector: entry.sector, records: periods.reduce((sum, at) => sum + entry.counts[at], 0), periods: periods.length, latest: years[periods.at(-1)] }
+  }), [visible, range, statistics, years]) // eslint-disable-line react-hooks/exhaustive-deps
   const columns = useMemo(() => [
-    { id: 'name', header: 'Employer', accessorKey: 'name', cell: ({ row }) => <button type="button" className="salaries__link salaries-row__name" onClick={() => onOpen(row.original.entry.slug)}>{row.original.name}</button> },
+    { id: 'name', header: 'Employer', accessorKey: 'name', cell: ({ row }) => <button type="button" className="salaries__link salaries-row__name" onClick={() => onOpen(row.original.entry.slug, row.original.stats ? years[row.original.stats.year] : undefined)}>{row.original.name}</button> },
     { id: 'sector', header: 'Sector', accessorKey: 'sector' },
     { id: 'records', header: 'Records', accessorKey: 'records', meta: { kind: 'number' }, cell: ({ getValue }) => getValue().toLocaleString('en-CA') },
     { id: 'periods', header: 'Periods', accessorKey: 'periods', meta: { kind: 'number', filter: false } },
-    { id: 'latest', header: 'Latest', accessorKey: 'latest', cell: ({ getValue }) => reportingYearLabel(getValue() ?? '') }
-  ], [onOpen])
+    { id: 'latest', header: 'Latest record', accessorKey: 'latest', cell: ({ getValue }) => reportingYearLabel(getValue() ?? '') },
+    { id: 'employee-period', header: 'Employee statistics period', accessorFn: ({ stats }) => stats ? years[stats.year] : undefined, sortUndefined: 'last' },
+    { id: 'count', header: 'Employee records', accessorFn: ({ stats }) => stats?.count, sortUndefined: 'last', meta: { kind: 'number' }, cell: ({ getValue }) => getValue()?.toLocaleString('en-CA') ?? '—' },
+    { id: 'threshold', header: 'Reporting threshold', accessorFn: ({ stats }) => stats?.threshold ?? undefined, sortUndefined: 'last', meta: { kind: 'money' }, cell: ({ getValue }) => money(getValue()) },
+    ...[['median', 'Median pay'], ['mean', 'Average pay']].map(([id, header]) => ({ id, header, accessorFn: ({ stats }) => stats?.[id], sortUndefined: 'last', meta: { kind: 'money' }, cell: ({ getValue }) => money(getValue()) })),
+    { id: 'above100k', header: 'Paid $100,000+', accessorFn: ({ stats }) => stats ? stats.above100k / stats.count : undefined, sortUndefined: 'last', meta: { kind: 'number', filter: false }, cell: ({ getValue }) => getValue() == null ? '—' : `${Math.round(getValue() * 100)}%` },
+    { id: 'growth', header: 'Disclosure growth', accessorFn: ({ stats }) => stats?.growth ?? undefined, sortUndefined: 'last', meta: { kind: 'number', filter: false }, cell: ({ getValue }) => employerRate(getValue()) },
+    { id: 'growth-period', header: 'Growth periods', accessorFn: ({ stats }) => stats?.from != null ? `${years[stats.from]} → ${years[stats.year]}` : '—' }
+  ], [onOpen, years])
+
+  const measured = order === 'sector' ? rows : employerRanking(rows, order)
+  const header = <>
+    <EmployerInsights rows={rows} years={years} ready={Boolean(statistics)} failed={failed} onRetry={retry} onOpen={onOpen} onOrder={setOrder} />
+    <div className="employer-insights__order">
+      <label>Order employers <select aria-label="Order employers" value={order} onChange={(event) => setOrder(event.target.value)}>{EMPLOYER_ORDERS.map(({ value, label }) => <option key={value} value={value}>{label}</option>)}</select></label>
+      {order !== 'sector' && <p className="salaries__meta" role="status">{count(measured.length, 'organization', 'organizations')} with eligible statistics</p>}
+    </div>
+  </>
 
   if (layout === 'table') {
-    return <DataTable data={rows} columns={columns} sorting={[{ id: 'records', desc: true }]} label="Employers" />
+    return <>{header}<DataTable key={order} data={measured} columns={columns} sorting={[{ id: order === 'sector' ? 'records' : order, desc: true }]} label="Employers" /></>
   }
+  if (order !== 'sector') return <>{header}{measured.length
+    ? <Paged list={measured} size={24} reset={`${sector}|${range}|${order}`}>
+      {(page) => <div className="salaries__grid">{page.map(({ entry, stats }) => <EmployerCard key={entry.slug} entry={entry} stats={stats} years={years} range={range} onOpen={onOpen} />)}</div>}
+    </Paged>
+    : <p className="salaries__hint">{statistics ? 'No comparable employee statistics in this selection. Choose other periods or a different ranking.' : failed ? 'Choose By sector to browse while statistics are unavailable.' : 'Loading organization statistics…'}</p>}</>
+  const statsBySlug = new Map(rows.map(({ entry, stats }) => [entry.slug, stats]))
   const bySector = new Map()
   for (const entry of visible) {
     if (!bySector.has(entry.sector)) bySector.set(entry.sector, [])
     bySector.get(entry.sector).push(entry)
   }
-  const largest = (a, b) => Math.max(...b.counts) - Math.max(...a.counts)
-  if (!visible.length) return <p className="salaries__hint">No employers have imported records in these periods and sector. Choose other periods or clear the filters above.</p>
+  const latestCount = (entry) => entry.counts.findLast((value, at) => value && inRange(at)) ?? 0
+  const largest = (a, b) => latestCount(b) - latestCount(a)
+  if (!visible.length) return <>{header}<p className="salaries__hint">No employers have imported records in these periods and sector. Choose other periods or clear the filters above.</p></>
   if (sector !== 'all') {
     return (
+      <>{header}
       <Paged list={[...visible].sort(largest)} size={24} reset={`${sector}|${range}`}>
-        {(page) => <div className="salaries__grid">{page.map((entry) => <EmployerCard key={entry.slug} entry={entry} years={years} range={range} onOpen={onOpen} />)}</div>}
+        {(page) => <div className="salaries__grid">{page.map((entry) => <EmployerCard key={entry.slug} entry={entry} stats={statsBySlug.get(entry.slug)} years={years} range={range} onOpen={onOpen} />)}</div>}
       </Paged>
+      </>
     )
   }
-  return [...bySector].sort(([a], [b]) => a.localeCompare(b)).map(([name, list]) => (
+  return <>{header}{[...bySector].sort(([a], [b]) => a.localeCompare(b)).map(([name, list]) => (
     <div key={name} className="salaries__sector">
       <h3 className="salaries__sector-title">{name} <span className="salaries__meta">{list.length}</span></h3>
       <div className="salaries__grid">
-        {[...list].sort(largest).slice(0, PREVIEW).map((entry) => <EmployerCard key={entry.slug} entry={entry} years={years} range={range} onOpen={onOpen} />)}
+        {[...list].sort(largest).slice(0, PREVIEW).map((entry) => <EmployerCard key={entry.slug} entry={entry} stats={statsBySlug.get(entry.slug)} years={years} range={range} onOpen={onOpen} />)}
       </div>
       {list.length > PREVIEW && <button type="button" className="salaries__more" onClick={() => onSector(name)}>All {list.length} {name.toLowerCase()} →</button>}
     </div>
-  ))
+  ))}</>
 }
 
 /**

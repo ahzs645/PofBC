@@ -1,0 +1,106 @@
+{
+  "id": "lower-mainland-west-vancouver-2022-employees",
+  "inputKey": "west-vancouver-2022",
+  "employerSlug": "district-of-west-vancouver",
+  "employerName": "District of West Vancouver",
+  "sector": "Municipalities",
+  "year": "2022",
+  "slug": "2022",
+  "periodType": "calendar",
+  "periodStart": "2022-01-01",
+  "periodEnd": "2022-12-31",
+  "title": "District of West Vancouver 2022 Statement of Financial Information: employees",
+  "sourceUrl": "https://westvancouver.ca/sites/default/files/media/documents/2022%20Statement%20of%20Financial%20Information_0.pdf",
+  "sourceIndexUrl": "https://westvancouver.ca/sofi",
+  "sha256": "d1cc40fb10212c16a2fbbac1508b90178e2caa41fef2cd8a7ea0a82ff0026bb7",
+  "file": "west-vancouver-2022-employees.json.gzip",
+  "dataSha256": "6f3dabbec67da12b10a94b8a54d9d6cb00b8fa4e3eb02baa522043d62bf95f84",
+  "normalizedSha256": "96234ef80eb23a3e4fd24570ca32e0ced46f7503deed86500bd66ccc3003d615",
+  "provenanceFile": "west-vancouver-2022-components.json.gzip",
+  "provenanceSha256": "7d466c2cf23b23e080ddd09a0807b02791424dfd29b0d84e056cb309158d38e9",
+  "category": "employee-remuneration",
+  "scope": "named-employees-over-threshold",
+  "scopeDescription": "Published named employee schedule, including any published threshold exceptions",
+  "threshold": 75000,
+  "thresholdRule": "over",
+  "currency": "CAD",
+  "amountUnit": "dollars",
+  "amountPrecision": "whole-dollars",
+  "nameDisclosure": "published-name-as-disclosed",
+  "positionDisclosure": "published-where-present",
+  "rowCount": 426,
+  "totalRemuneration": 46323864,
+  "totalExpenses": 350352,
+  "pages": [
+    39,
+    40,
+    41,
+    42,
+    43,
+    44
+  ],
+  "status": "verified",
+  "sourceKind": "official-pdf",
+  "verifiedOn": "2026-10-31",
+  "notes": [
+    "Calendar-year named employee disclosure; amounts are remuneration as published and may include overtime, retroactive pay, taxable benefits, leave payouts and other compensation. They are not annual base salary rates.",
+    "Expenses are kept separately from remuneration. Published dashes and blank expenses remain null; explicit zero and negative amounts are retained. Names, initials and available positions are preserved as disclosed; they do not establish unique person identities.",
+    "Only the employee schedule is imported. Elected officials, supplier payments, aggregate under-threshold payroll and employer pension/insurance contributions are outside this collection.",
+    "Printed component subtotals and the sum of printed individual rows differ by [5.0, 12.0, 2.0, 0.0] CAD in source column order (or explicit total remuneration and expenses where only those subtotals are printed). Published row values are retained without adjustments. Whole-dollar reports can exhibit rounding residuals; the exact observed differences are pinned for revalidation.",
+    "2026-11-06 title recovery: corrected titles formerly concatenated into names; every observation, amount, expense and physical page is unchanged."
+  ],
+  "validation": {
+    "sourceFingerprintVerified": true,
+    "reportedYearEvidence": [
+      {
+        "physicalPage": 39,
+        "text": "FOR THE YEAR ENDED DECEMBER 31, 2022"
+      }
+    ],
+    "rowsByPhysicalPage": {
+      "39": 56,
+      "40": 79,
+      "41": 79,
+      "42": 79,
+      "43": 79,
+      "44": 54
+    },
+    "componentColumns": [
+      "base_salary",
+      "other",
+      "total_remuneration",
+      "expenses"
+    ],
+    "printedControlTotals": [
+      "42,471,234",
+      "3,852,629",
+      "46,323,862",
+      "350,352"
+    ],
+    "computedComponentTotals": [
+      "42471239",
+      "3852641",
+      "46323864",
+      "350352"
+    ],
+    "controlResiduals": [
+      5.0,
+      12.0,
+      2.0,
+      0.0
+    ],
+    "allComponentSubtotalsExact": false,
+    "independentPdfReaders": "Poppler layout versus independently grouped PyMuPDF word coordinates; pypdf corroboration for clipped/wrapped text where required",
+    "allRowFieldsAndMultiplicitiesAgree": true,
+    "rowsIndependentlyChecked": 426,
+    "unparsedInterRowText": 0,
+    "missingExpenses": 124,
+    "negativeExpenses": 3,
+    "publishedThresholdExceptions": 0,
+    "titleRecovery": {
+      "date": "2026-11-06",
+      "count": 426,
+      "method": "Split original sourcePrefix at printed column whitespace; all original row fields including amount cells match original PDF physical-page text with multiplicity."
+    }
+  }
+}

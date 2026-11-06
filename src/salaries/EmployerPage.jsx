@@ -92,12 +92,12 @@ export const EmployerPage = ({ entry, years, sources, year: wantedYear, show, ro
   const year = wantedYear ?? seen.at(-1) ?? 0
   const name = entry.names.at(-1)
   remember?.(name)
-  // A period can combine disclosure categories (Prince George's employees and its mayor and council):
-  // employees are shown by default, and each category can be chosen on its own.
+  // Keep employee statistics apart from council, board and appointee schedules in the same period.
+  // Employees are shown by default, and each category can be chosen on its own.
   const wholeCoverage = coverageAt({ ...entry, years }, year)
   const periodRows = useMemo(() => (rows ? rows.filter((row) => row[4] === year) : []), [rows, year])
   const categories = [...new Set(periodRows.map((row) => sources?.[row[5]]?.scope ?? 'compiled-unverified'))]
-  const defaultCategory = categories.includes('elected-officials') && categories.includes('employee-remuneration') ? 'employee-remuneration' : 'all'
+  const defaultCategory = categories.includes('employee-remuneration') ? 'employee-remuneration' : 'all'
   const chosenCategory = category && (category === 'all' || categories.includes(category)) ? category : defaultCategory
   const people = useMemo(() => periodRows.filter((row) => chosenCategory === 'all' || sources?.[row[5]]?.scope === chosenCategory), [periodRows, chosenCategory, sources])
   const coverage = categoryCoverage(wholeCoverage, chosenCategory, sources, people)

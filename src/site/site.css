@@ -1751,8 +1751,8 @@ button.gallery__collecting-status, .gallery__collecting-graph {
   .salaries__mobile-filters .salaries__tip { display: none; }
   .salaries-disclosure--mobile-notes .salaries-disclosure__line { display: none; }
   .salaries-disclosure--mobile-notes:not(:has(.salaries__caveats)) { display: none; }
-  .salaries__browse-bar { flex-wrap: nowrap; gap: 6px; }
-  .salaries__browse-bar > .field:first-child:not(.field--compact) { flex: 1 1 auto; min-width: 0; max-width: none; }
+  .salaries__browse-bar { flex-wrap: wrap; gap: 6px; }
+  .salaries__browse-bar > .field:first-child:not(.field--compact) { flex: 1 1 100%; min-width: 0; max-width: none; }
   .salaries__browse-bar .segmented { min-height: 44px; gap: 0; padding: 2px; }
   .salaries__browse-bar .segmented button { flex: 1 1 auto; min-width: 0; min-height: 40px; padding: 4px; font-size: 12px; }
   .salaries__browse-bar .field--compact .segmented button { min-height: 40px; padding: 4px 5px; font-size: 12px; }

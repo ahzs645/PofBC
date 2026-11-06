@@ -73,6 +73,8 @@ test('scope and exact period come from evidence, never the collection label', ()
   assert.match(scopeLabel('mixed-disclosure'), /Combined/)
   assert.equal(scopeLabel('deputy-minister-remuneration'), 'Deputy minister remuneration')
   assert.equal(scopeLabel('appointee-remuneration'), 'Order in Council appointee remuneration')
+  assert.equal(scopeLabel('elected-member-compensation'), 'MLA compensation; excludes minister executive salary')
+  assert.equal(scopeLabel('minister-executive-salary'), 'Minister executive salary component; not total compensation')
   assert.equal(disclosurePeriod({ sourceIds: ['compiled'] }, { compiled: {} }), null)
   assert.deepEqual(disclosurePeriod({ sourceIds: ['original'] }, {
     original: { periodStart: '2019-04-01', periodEnd: '2020-03-31' }

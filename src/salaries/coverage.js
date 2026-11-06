@@ -13,6 +13,8 @@ export const scopeLabel = (scope) => ({
   'executive-only': 'Executive compensation only',
   'board-remuneration': 'Board remuneration disclosure',
   'elected-officials': 'Mayor and council remuneration',
+  'elected-member-compensation': 'MLA compensation; excludes minister executive salary',
+  'minister-executive-salary': 'Minister executive salary component; not total compensation',
   'school-trustees': 'School trustee remuneration',
   'aggregate-only': 'Aggregate payroll only; no individual records',
   'deputy-ministers': 'Deputy minister remuneration',

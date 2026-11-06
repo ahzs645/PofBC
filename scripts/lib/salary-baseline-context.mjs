@@ -1,7 +1,8 @@
-import { readFileSync } from 'node:fs'
+import { readFileSync, existsSync } from 'node:fs'
 import { join } from 'node:path'
 import { gunzipSync, gzipSync } from 'node:zlib'
 import { createHash } from 'node:crypto'
+import { reverseWestVancouverTitleRecovery } from './west-vancouver-title-recovery.mjs'
 import { surnameShard } from '../../src/salaries/people.js'
 
 const digest = (data) => createHash('sha256').update(data).digest('hex')
@@ -21,7 +22,12 @@ export const salaryBaselineContext = (rows, index, root) => {
   const employers = new Map(baseline.employers.map((e, at) => [e[3], at]))
   const years = new Map(baseline.years.map((year, at) => [year, at]))
   const shards = new Map(Object.keys(baseline.shards).map((shard) => [shard, []]))
-  for (const row of rows) {
+  const correctionPath = join(root, 'research/salaries/west-vancouver-title-recovery/corrections.json')
+  const corrections = existsSync(correctionPath) ? JSON.parse(readFileSync(correctionPath)) : []
+  const correctionSources = new Set(corrections.map(c => c.sourceId))
+  const historicalRows = rows.some(row => correctionSources.has(row[6]))
+    ? reverseWestVancouverTitleRecovery(rows, index, corrections) : rows
+  for (const row of historicalRows) {
     if (!baseline.sources[row[6]]) continue
     const employer = employers.get(index.employers[row[4]][3]), year = years.get(index.years[row[5]])
     if (employer == null || year == null) throw new Error('An original observation moved employer or period')

@@ -10,7 +10,7 @@ import { buildSunshineComparison, compareReportChanges, renderSunshineReport, to
 
 const root = resolve(dirname(fileURLToPath(import.meta.url)), '..')
 const base = join(root, 'research/salaries/sunshine-lists')
-const options = { snapshot: join(base, 'observed-snapshot.json'), aliases: join(base, 'aliases.json'), out: base, previous: null, requireComplete: false }
+const options = { snapshot: join(base, 'observed-snapshot.json'), aliases: join(base, 'aliases.json'), out: join(root, 'research/salaries/current-preservation-2026-11-06/sunshine'), previous: null, requireComplete: false }
 const args = process.argv.slice(2)
 const help = `Compare an authorized Sunshine Lists snapshot with all published PofBC salary exports.
 

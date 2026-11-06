@@ -94,3 +94,28 @@ test('a bare council link defaults to office observations without borrowing a sa
   assert.equal(url.searchParams.has('council-tab'), false)
   assert.equal(url.searchParams.has('council-year'), false)
 })
+
+test('workforce population is independent of named salary filters and cleared on exit', () => {
+  const href = 'https://example.org/PofBC/?view=salaries&browse=workforce&workforce-population=victoria&salary-year=2023%2F24&salary-sector=Government'
+  const place = readSalaryPlace(new URL(href).search)
+  assert.equal(place.workforcePopulation, 'victoria')
+  assert.equal(place.year, '2023/24')
+  assert.deepEqual(readSalaryPlace(salaryPlaceUrl(href, place).search), place)
+  const next = salaryPlaceUrl(href, { ...place, browse: 'employers' })
+  assert.equal(next.searchParams.has('workforce-population'), false)
+  assert.equal(readSalaryPlace(next.search).year, '2023/24')
+  assert.equal('workforcePopulation' in readSalaryPlace(next.search), false)
+  const council = salaryPlaceUrl(href, { ...place, browse: 'council' })
+  assert.equal(council.searchParams.has('workforce-population'), false)
+})
+
+test('a shared workforce link does not borrow a council filter', () => {
+  const href = 'https://example.org/PofBC/?view=salaries&browse=workforce&council-year=2021&council-tab=payments'
+  const place = readSalaryPlace(new URL(href).search)
+  assert.equal(place.workforcePopulation, 'all')
+  assert.equal('councilYear' in place, false)
+  const url = salaryPlaceUrl(href, place)
+  assert.equal(url.searchParams.has('council-year'), false)
+  assert.equal(url.searchParams.has('council-tab'), false)
+  assert.equal(url.searchParams.has('workforce-population'), false)
+})

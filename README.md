@@ -21,6 +21,37 @@ pages at phone and desktop widths and counts their words (needs Playwright with 
 
 ## Salary data and coverage
 
+The [consolidated recovery and preservation checks](research/salaries/consolidation-2026-11-06.md) keep original salary evidence and reviewed name decisions intact while adding official elected, Assembly staff and police records. The Workforce view also provides all 30 archived official Workforce Profile CSV tables, separately from employee payment records.
+
+The Employers view (`?view=salaries&browse=employers`) compares the latest official annual
+employee disclosures in the selected periods and sector. Cards and sortable tables include
+median and average remuneration, the share paid $100,000 or more, and
+year-over-year growth in published employee records where consecutive periods have matching
+recorded disclosure rules. These organization-level figures combine different roles;
+the counts are not employee headcount. Council, board,
+executive-only, compiled and incomplete schedules are excluded from these comparisons;
+latest reporting periods and thresholds remain visible. Rankings require at least ten records.
+The small `public/salaries/employer-stats.json.gzip` companion is rebuilt from existing employer
+exports by `npm run build:employer-stats` (also part of `build:salaries`) and checked for freshness
+by the salary tests. Existing salary records and indexes are unchanged by that companion build.
+
+The **Workforce** tab (`?view=salaries&browse=workforce`) adds the official
+PSA-2024-42006 aggregate series for all B.C. Public Service employees and the
+Victoria-office subset, covering source year labels 2017–2024. Exact **Average
+HeadCount** and **Average Salary** labels, PDF page links and calculation limitations
+stay with the figures. Download the source-qualified CSV or JSON. These aggregates
+remain separate from named payment records and the existing Public Accounts FTE
+series; see the [workforce source notes](research/salaries/workforce/README.md).
+
+The [OpenCompensation comparison](research/salaries/opencompensation/README.md)
+reconciles its saved, filtered B.C. employer directory against every published
+PofBC employer export and the immutable original compilation. It identifies
+historical name aliases, official/compiled overlap and compensation figures that
+can be reproduced only when expenses are added to remuneration. Run
+`npm run audit:opencompensation` to regenerate the evidence and
+`npm run check:opencompensation` to check it. Matching aggregate statistics do not
+establish individual-record parity or complete workforce coverage.
+
 The salary search (`?view=salaries`) combines verified official remuneration schedules with
 explicitly labelled, retained compiled disclosures. Reporting periods, source links, disclosure
 scope and remaining gaps are attached to the records. The original three compiled editions are

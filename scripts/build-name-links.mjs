@@ -33,7 +33,9 @@ reviewed.push(...validateReviewedNameConnections(sourceReviewed, rows, index))
 const continuedReview = JSON.parse(readFileSync(join(research, 'continuation-reviewed.json'), 'utf8'))
 reviewed.push(...validateReviewedNameConnections(continuedReview, rows, index))
 const completedReview = JSON.parse(readFileSync(join(research, 'held-completion-reviewed.json'), 'utf8'))
-reviewed.push(...validateHeldNameConnections(completedReview, rows, index, root, { readInput: baseline.readInput }))
+// Validate frozen source-backed receipts against their byte-exact historical cohort.
+// Newly appended periods do not rewrite prior evidence or create new reviewed decisions.
+reviewed.push(...validateHeldNameConnections(completedReview, baseline.rows, baseline.index, root, { readInput: baseline.readInput }))
 for (const name of ['name-review-rru.json', 'name-review-cnc.json']) {
   const followThroughReview = JSON.parse(readFileSync(join(root, 'research/salaries/source-follow-through-2026-11-02', name), 'utf8'))
   reviewed.push(...validateFollowThroughNameReview(followThroughReview, rows, index, root))

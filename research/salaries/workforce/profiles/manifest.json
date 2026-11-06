@@ -1,0 +1,250 @@
+{
+  "schemaVersion": 1,
+  "catalogueUrl": "https://catalogue.data.gov.bc.ca/dataset/bc-public-service-workforce-profiles",
+  "title": "BC Public Service - Workforce Profiles",
+  "description": "The Workforce Profiles datasets provide B.C. Public Service representation statistics on employees who identify themselves as women, Indigenous, persons with disabilities, racialized, and 2SLGBTQ+. \n\nDemographic data is gathered through BC Stats' corporate surveys and the resulting statistics are used to produce the B.C. Public Service Workforce Profiles.\n\nComparator data comes from federal reports, including the Canadian Census, Canadian Survey on Disability, and Canadian Community Health Survey. Comparators use the most recent data available at the time of analysis.",
+  "license": "Open Government Licence - British Columbia",
+  "retrievedOn": "2026-11-06",
+  "sources": [
+    {
+      "id": "de900fd0-529d-4e4b-b76f-42fdf035fbf9",
+      "name": "WP2018_Comparison",
+      "url": "https://catalogue.data.gov.bc.ca/dataset/55dacce5-8b63-471c-9feb-2d64ad88a567/resource/de900fd0-529d-4e4b-b76f-42fdf035fbf9/download/wp2018_comparison.csv",
+      "file": "raw/wp2018_comparison.csv",
+      "sha256": "62b8c6c2c27d5c295fb427bce07c656964e971c3d1e7640b8dd5dd0e3d55eb13",
+      "rowCount": 324
+    },
+    {
+      "id": "39ae5727-805d-4ae7-9a42-4824d59bd9e9",
+      "name": "WP2018_EmpCounts",
+      "url": "https://catalogue.data.gov.bc.ca/dataset/55dacce5-8b63-471c-9feb-2d64ad88a567/resource/39ae5727-805d-4ae7-9a42-4824d59bd9e9/download/wp2018_empcounts.csv",
+      "file": "raw/wp2018_empcounts.csv",
+      "sha256": "96858d04bfd5e9c5e750a4e36923f134f6e651e49799cd2c8f4de3c1a8dd889b",
+      "rowCount": 81
+    },
+    {
+      "id": "868a080e-38e4-4c1c-8245-36094e338291",
+      "name": "WP2018_Ind_Progress",
+      "url": "https://catalogue.data.gov.bc.ca/dataset/55dacce5-8b63-471c-9feb-2d64ad88a567/resource/868a080e-38e4-4c1c-8245-36094e338291/download/wp2018_ind_progress.csv",
+      "file": "raw/wp2018_ind_progress.csv",
+      "sha256": "9e85b46eae9c6570d528371ddef51d0905661c6ddef9dfda877a779a6cb61e81",
+      "rowCount": 432
+    },
+    {
+      "id": "6ff0b304-47c2-4c92-8f39-7ab069e79f31",
+      "name": "WP2018_Leadership",
+      "url": "https://catalogue.data.gov.bc.ca/dataset/55dacce5-8b63-471c-9feb-2d64ad88a567/resource/6ff0b304-47c2-4c92-8f39-7ab069e79f31/download/wp2018_leadership.csv",
+      "file": "raw/wp2018_leadership.csv",
+      "sha256": "e0aeabdd8a6c6171c5011316458bbe6612d0957e5d0bac04727c989f65e4af75",
+      "rowCount": 4
+    },
+    {
+      "id": "1cff9315-0e27-46a8-ba86-82db3503e272",
+      "name": "WP2018_MinistryKey",
+      "url": "https://catalogue.data.gov.bc.ca/dataset/55dacce5-8b63-471c-9feb-2d64ad88a567/resource/1cff9315-0e27-46a8-ba86-82db3503e272/download/wp2018_ministrykey.csv",
+      "file": "raw/wp2018_ministrykey.csv",
+      "sha256": "b3e7f18e5cbe66267f1eff4d43ac8e11337de251949a30ef73bacf91d0884cb2",
+      "rowCount": 27
+    },
+    {
+      "id": "916e8734-7d12-4bd0-b211-e517755f3eb4",
+      "name": "WP2018_Rep_Occ_Rgn",
+      "url": "https://catalogue.data.gov.bc.ca/dataset/55dacce5-8b63-471c-9feb-2d64ad88a567/resource/916e8734-7d12-4bd0-b211-e517755f3eb4/download/wp2018_rep_occ_rgn.csv",
+      "file": "raw/wp2018_rep_occ_rgn.csv",
+      "sha256": "6258502e5e6ceded2c91107bdc89dd08ceaad3a81fef6a482652006813e1c0bc",
+      "rowCount": 1284
+    },
+    {
+      "id": "f13a27fd-bf54-4222-a546-1a6b5abec39a",
+      "name": "WP2020_Comparison",
+      "url": "https://catalogue.data.gov.bc.ca/dataset/55dacce5-8b63-471c-9feb-2d64ad88a567/resource/f13a27fd-bf54-4222-a546-1a6b5abec39a/download/wp2020_comparison.csv",
+      "file": "raw/wp2020_comparison.csv",
+      "sha256": "32a1dfad863f3a5e3110bdb27dd14b9f2c33c3fa34fe6657d0afb99567bbe5cb",
+      "rowCount": 320
+    },
+    {
+      "id": "107e3d82-d759-45ea-b994-9f610d1d29be",
+      "name": "WP2020_EmpCounts",
+      "url": "https://catalogue.data.gov.bc.ca/dataset/55dacce5-8b63-471c-9feb-2d64ad88a567/resource/107e3d82-d759-45ea-b994-9f610d1d29be/download/wp2020_empcounts.csv",
+      "file": "raw/wp2020_empcounts.csv",
+      "sha256": "4bf29930bcde09fa77805f9424de226aab9192fdf4ffe4c46e0c455a284f4d54",
+      "rowCount": 80
+    },
+    {
+      "id": "00b43049-68a0-4b6c-a1a4-8bed856df3cf",
+      "name": "WP2020_Flow",
+      "url": "https://catalogue.data.gov.bc.ca/dataset/55dacce5-8b63-471c-9feb-2d64ad88a567/resource/00b43049-68a0-4b6c-a1a4-8bed856df3cf/download/wp2020_flow.csv",
+      "file": "raw/wp2020_flow.csv",
+      "sha256": "97662deb0acb47ad805709bf8febba9e27f8f63be6fbb0fbda1e9c25a3fe1ded",
+      "rowCount": 100
+    },
+    {
+      "id": "144b08f7-0541-46fd-9037-1877fbf37be2",
+      "name": "WP2020_Hiring",
+      "url": "https://catalogue.data.gov.bc.ca/dataset/55dacce5-8b63-471c-9feb-2d64ad88a567/resource/144b08f7-0541-46fd-9037-1877fbf37be2/download/wp2020_hiring.csv",
+      "file": "raw/wp2020_hiring.csv",
+      "sha256": "ce42d0777d07494f7dab5509391ac925e4a5c5b868c4f8bf6882a2b704e7f2ec",
+      "rowCount": 324
+    },
+    {
+      "id": "0a3e6225-d9a5-4b78-bc70-60a9f6ffb6bc",
+      "name": "WP2020_Ind_Progress",
+      "url": "https://catalogue.data.gov.bc.ca/dataset/55dacce5-8b63-471c-9feb-2d64ad88a567/resource/0a3e6225-d9a5-4b78-bc70-60a9f6ffb6bc/download/wp2020_ind_progress.csv",
+      "file": "raw/wp2020_ind_progress.csv",
+      "sha256": "400e850fd1ce6d12b7d0c4bdaccdad2ff3718a427188330789191ed3351f4afd",
+      "rowCount": 320
+    },
+    {
+      "id": "57f41396-a9b2-4d57-9212-6d98de8a0bca",
+      "name": "WP2020_Leadership",
+      "url": "https://catalogue.data.gov.bc.ca/dataset/55dacce5-8b63-471c-9feb-2d64ad88a567/resource/57f41396-a9b2-4d57-9212-6d98de8a0bca/download/wp2020_leadership.csv",
+      "file": "raw/wp2020_leadership.csv",
+      "sha256": "822da0840734a8dd707b58389af93d823837d12413b0c9d943b6c5d016929be4",
+      "rowCount": 12
+    },
+    {
+      "id": "6791d9dc-3c0d-420c-a2d2-a349a52fcd4c",
+      "name": "WP2020_MinistryKey",
+      "url": "https://catalogue.data.gov.bc.ca/dataset/55dacce5-8b63-471c-9feb-2d64ad88a567/resource/6791d9dc-3c0d-420c-a2d2-a349a52fcd4c/download/wp2020_ministrykey.csv",
+      "file": "raw/wp2020_ministrykey.csv",
+      "sha256": "3d66857c6dd59eb7541365c97d064d94b8b74220cacbea89f5d25152f57cc875",
+      "rowCount": 27
+    },
+    {
+      "id": "ec14fc3e-1a2f-4952-a682-4426610a1c73",
+      "name": "WP2020_Rep_Occ_Rgn",
+      "url": "https://catalogue.data.gov.bc.ca/dataset/55dacce5-8b63-471c-9feb-2d64ad88a567/resource/ec14fc3e-1a2f-4952-a682-4426610a1c73/download/wp2020_rep_occ_rgn.csv",
+      "file": "raw/wp2020_rep_occ_rgn.csv",
+      "sha256": "07001141efbad9fd450446b1a73bb2c3cc349402f4bd194c1ebfaf20c0280d76",
+      "rowCount": 1268
+    },
+    {
+      "id": "f5082d34-aaa8-49e4-9795-38646eac086e",
+      "name": "WP2022_Comparison",
+      "url": "https://catalogue.data.gov.bc.ca/dataset/55dacce5-8b63-471c-9feb-2d64ad88a567/resource/f5082d34-aaa8-49e4-9795-38646eac086e/download/wp2022_comparison.csv",
+      "file": "raw/wp2022_comparison.csv",
+      "sha256": "b34f6ee1dcdf7a69f9f5a23e8be759fe716c48711bd3692bdd837af3142ac861",
+      "rowCount": 336
+    },
+    {
+      "id": "6081c224-0c64-43fe-9c2c-a916aa1cd62d",
+      "name": "WP2022_EmpCounts",
+      "url": "https://catalogue.data.gov.bc.ca/dataset/55dacce5-8b63-471c-9feb-2d64ad88a567/resource/6081c224-0c64-43fe-9c2c-a916aa1cd62d/download/wp2022_empcounts.csv",
+      "file": "raw/wp2022_empcounts.csv",
+      "sha256": "f71b326e1453195e3e5749bb881fa2a3261edddc76e268151535ac2cee082f82",
+      "rowCount": 84
+    },
+    {
+      "id": "4c21b910-914f-4d5c-ae8b-1ec9491ae29a",
+      "name": "WP2022_Flow",
+      "url": "https://catalogue.data.gov.bc.ca/dataset/55dacce5-8b63-471c-9feb-2d64ad88a567/resource/4c21b910-914f-4d5c-ae8b-1ec9491ae29a/download/wp2022_flow.csv",
+      "file": "raw/wp2022_flow.csv",
+      "sha256": "977d203d9b4490b47a0017810c0c715b3dc0883daee47931741cc56f3125e2d6",
+      "rowCount": 100
+    },
+    {
+      "id": "4a04b964-d321-4580-9fc7-19c04854f078",
+      "name": "WP2022_Hiring",
+      "url": "https://catalogue.data.gov.bc.ca/dataset/55dacce5-8b63-471c-9feb-2d64ad88a567/resource/4a04b964-d321-4580-9fc7-19c04854f078/download/wp2022_hiring.csv",
+      "file": "raw/wp2022_hiring.csv",
+      "sha256": "3ecb938fc8b2e640b2afaea6dfb147173a7d971b87005f09d5535e39d2f2eb7b",
+      "rowCount": 336
+    },
+    {
+      "id": "9ba2954d-d2c0-4edb-ad9d-ebe05212af6e",
+      "name": "WP2022_Ind_Progress",
+      "url": "https://catalogue.data.gov.bc.ca/dataset/55dacce5-8b63-471c-9feb-2d64ad88a567/resource/9ba2954d-d2c0-4edb-ad9d-ebe05212af6e/download/wp2022_ind_progress.csv",
+      "file": "raw/wp2022_ind_progress.csv",
+      "sha256": "83e2b54e3d886565842b7aeac1541cb4281f0fb4a683c2dcbde7336121a5cf74",
+      "rowCount": 336
+    },
+    {
+      "id": "20ead29f-010d-42d6-ba19-b8a3fa174596",
+      "name": "WP2022_Leadership",
+      "url": "https://catalogue.data.gov.bc.ca/dataset/55dacce5-8b63-471c-9feb-2d64ad88a567/resource/20ead29f-010d-42d6-ba19-b8a3fa174596/download/wp2022_leadership.csv",
+      "file": "raw/wp2022_leadership.csv",
+      "sha256": "24d4b8d103b792e789afe818c831069a4c5199a796256720452e05b51565f446",
+      "rowCount": 12
+    },
+    {
+      "id": "f424d3e2-f43b-48a9-b91f-7b7cf3a012ad",
+      "name": "WP2022_MinistryKey",
+      "url": "https://catalogue.data.gov.bc.ca/dataset/55dacce5-8b63-471c-9feb-2d64ad88a567/resource/f424d3e2-f43b-48a9-b91f-7b7cf3a012ad/download/wp2022_ministrykey.csv",
+      "file": "raw/wp2022_ministrykey.csv",
+      "sha256": "c21a8847dcb897194cf514092c602bdd0463621f2d3527a01ce3ba3bca7bd80d",
+      "rowCount": 28
+    },
+    {
+      "id": "ca5c382a-18a7-4feb-96fe-e904d3a119eb",
+      "name": "WP2022_Rep_Occ_Rgn",
+      "url": "https://catalogue.data.gov.bc.ca/dataset/55dacce5-8b63-471c-9feb-2d64ad88a567/resource/ca5c382a-18a7-4feb-96fe-e904d3a119eb/download/wp2022_rep_occ_rgn.csv",
+      "file": "raw/wp2022_rep_occ_rgn.csv",
+      "sha256": "f238b77ef35b4d510f8b690fd71ddd00844a856f95376043d5dea347edd6ceb3",
+      "rowCount": 1324
+    },
+    {
+      "id": "c6bde9a8-3295-4a02-8f6e-7f1398ad7012",
+      "name": "WP2024_Comparison",
+      "url": "https://catalogue.data.gov.bc.ca/dataset/55dacce5-8b63-471c-9feb-2d64ad88a567/resource/c6bde9a8-3295-4a02-8f6e-7f1398ad7012/download/wp2024_comparison.csv",
+      "file": "raw/wp2024_comparison.csv",
+      "sha256": "5d36e2fe8a56c9a1cf33ad2d0a261c8209974038dc1160fa1f4da1ac67721aa7",
+      "rowCount": 435
+    },
+    {
+      "id": "8fdcc853-ee8b-41ed-b9a3-20b4beb1fd23",
+      "name": "WP2024_EmpCounts",
+      "url": "https://catalogue.data.gov.bc.ca/dataset/55dacce5-8b63-471c-9feb-2d64ad88a567/resource/8fdcc853-ee8b-41ed-b9a3-20b4beb1fd23/download/wp2024_empcounts.csv",
+      "file": "raw/wp2024_empcounts.csv",
+      "sha256": "fdbdafca1cfd2999286d4b3140b890b4aae4a2c5ea31bca026762469ba1f8d15",
+      "rowCount": 87
+    },
+    {
+      "id": "2f292949-6c58-4c50-997d-184aadb723d4",
+      "name": "WP2024_Flow",
+      "url": "https://catalogue.data.gov.bc.ca/dataset/55dacce5-8b63-471c-9feb-2d64ad88a567/resource/2f292949-6c58-4c50-997d-184aadb723d4/download/wp2024_flow.csv",
+      "file": "raw/wp2024_flow.csv",
+      "sha256": "b95173777c48981a0ae29edd6184530fc517795deb489f27211efa36fdc25fa6",
+      "rowCount": 125
+    },
+    {
+      "id": "908b18b5-25f6-4e85-ab61-ab3c7a920f0d",
+      "name": "WP2024_Hiring",
+      "url": "https://catalogue.data.gov.bc.ca/dataset/55dacce5-8b63-471c-9feb-2d64ad88a567/resource/908b18b5-25f6-4e85-ab61-ab3c7a920f0d/download/wp2024_hiring.csv",
+      "file": "raw/wp2024_hiring.csv",
+      "sha256": "b2b665bbe03b9220fa645be417259ba32755a5e49e0b185d65c9f601f3093e84",
+      "rowCount": 435
+    },
+    {
+      "id": "9edf0d58-b01a-44ef-91e6-a9b7168af876",
+      "name": "WP2024_Ind_Progress",
+      "url": "https://catalogue.data.gov.bc.ca/dataset/55dacce5-8b63-471c-9feb-2d64ad88a567/resource/9edf0d58-b01a-44ef-91e6-a9b7168af876/download/wp2024_ind_progress.csv",
+      "file": "raw/wp2024_ind_progress.csv",
+      "sha256": "c385bb834ac5a571b0cfbe5b5658da4e166cdd9dbb225a8ddf2264a9233f6cfe",
+      "rowCount": 435
+    },
+    {
+      "id": "9a5936ad-1bfb-49d7-9474-5777797f0b92",
+      "name": "WP2024_Leadership",
+      "url": "https://catalogue.data.gov.bc.ca/dataset/55dacce5-8b63-471c-9feb-2d64ad88a567/resource/9a5936ad-1bfb-49d7-9474-5777797f0b92/download/wp2024_leadership.csv",
+      "file": "raw/wp2024_leadership.csv",
+      "sha256": "23ae377799ce2fa0536b99ec1f16be12bf6e9bfb3110fdf5cad61f117c041457",
+      "rowCount": 15
+    },
+    {
+      "id": "4341245a-72f6-431b-8ba3-309b9e581efe",
+      "name": "WP2024_MinistryKey",
+      "url": "https://catalogue.data.gov.bc.ca/dataset/55dacce5-8b63-471c-9feb-2d64ad88a567/resource/4341245a-72f6-431b-8ba3-309b9e581efe/download/wp2024_ministrykey.csv",
+      "file": "raw/wp2024_ministrykey.csv",
+      "sha256": "42cbf05a492a37b71556f4fdae0a62a86c76246b69f3835155b92a46e8a74907",
+      "rowCount": 29
+    },
+    {
+      "id": "f7f8bc4a-b90c-4b60-ae75-5a78f88497bd",
+      "name": "WP2024_Rep_Occ_Rgn",
+      "url": "https://catalogue.data.gov.bc.ca/dataset/55dacce5-8b63-471c-9feb-2d64ad88a567/resource/f7f8bc4a-b90c-4b60-ae75-5a78f88497bd/download/wp2024_rep_occ_rgn.csv",
+      "file": "raw/wp2024_rep_occ_rgn.csv",
+      "sha256": "f61bb9d5e93a0c23a0bbe3360ab022aaf23581c5a15d9ce99dcb853a8077a07b",
+      "rowCount": 1715
+    }
+  ]
+}

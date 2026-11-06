@@ -1,0 +1,271 @@
+{
+  "schemaVersion": 1,
+  "scope": "exactly-two-automatic-confidence-withdrawals",
+  "baselineCommit": "7399fde18d2b278f5e99e2e201b915adadc7a8e2",
+  "sourceBackedReceiptsChanged": false,
+  "decisions": [
+    {
+      "employer": "vancouver-police",
+      "targetKey": "palmer|a a",
+      "aliasKey": "palmer|a",
+      "previousStatus": "verified",
+      "previousReason": "Same position under both spellings: “chief constable”, held by few others here",
+      "currentStatus": "likely",
+      "currentReason": "Only fuller name here that agrees; “Palmer, A” in 2009–2025, “Palmer, A A” in 2015–2020, never both in one period",
+      "basis": "automatic-distinctive-position-heuristic-only",
+      "title": "chief constable",
+      "distinctiveTitleLimit": 3,
+      "currentTitleHolderNames": [
+        "chu|j",
+        "chu|j s",
+        "palmer|a a",
+        "palmer|a",
+        "rai|s"
+      ],
+      "originalEmployerObservations": {
+        "rows": 4950,
+        "sha256": "3598638989b357c0ccdb529089090d088ac3cfb6530395017192a738d0cfbe74"
+      },
+      "currentEmployerObservations": {
+        "rows": 6187,
+        "sha256": "abb6c6813ff4a33fb675a8212a8dca4561b2fe7796a853c8b551921229630a86"
+      },
+      "rationale": "Official recovery expands the number of normalized name spellings holding this title beyond the unchanged three-spelling distinctiveness limit. Preserve the likely relationship, but withdraw unsupported verified certainty. This does not assert different identities and does not alter any source-backed review receipt.",
+      "relatedCurrentRows": [
+        [
+          "vancouver-police",
+          "2009",
+          "PALMER, A",
+          "INSPECTOR",
+          14762749,
+          173659,
+          "vpd-recovery-2009-named",
+          2
+        ],
+        [
+          "vancouver-police",
+          "2015",
+          "Palmer, A A",
+          "Chief Constable",
+          29705900,
+          1110800,
+          "continuation-government-police-vancouver-police-2015-executives",
+          1
+        ],
+        [
+          "vancouver-police",
+          "2016",
+          "Palmer, A A",
+          "Chief Constable",
+          34546600,
+          1885500,
+          "continuation-government-police-vancouver-police-2016-executives",
+          1
+        ],
+        [
+          "vancouver-police",
+          "2017",
+          "Palmer, A A",
+          "Chief Constable",
+          35583300,
+          1720600,
+          "continuation-government-police-vancouver-police-2017-executives",
+          1
+        ],
+        [
+          "vancouver-police",
+          "2017/18",
+          "Palmer, A A",
+          "Chief Constable",
+          35857300,
+          2996800,
+          "pssdb-2026-10-22",
+          null
+        ],
+        [
+          "vancouver-police",
+          "2018",
+          "Palmer, A A",
+          "Chief Constable",
+          35857300,
+          2984000,
+          "continuation-government-police-vancouver-police-2018-executives",
+          1
+        ],
+        [
+          "vancouver-police",
+          "2019",
+          "Palmer, A A",
+          "Chief Constable",
+          36321600,
+          2272700,
+          "continuation-government-police-vancouver-police-2019-executives",
+          1
+        ],
+        [
+          "vancouver-police",
+          "2020",
+          "Palmer, A A",
+          "Chief Constable",
+          37467300,
+          159400,
+          "continuation-government-police-vancouver-police-2020-executives",
+          1
+        ],
+        [
+          "vancouver-police",
+          "2020/21",
+          "Palmer, A.",
+          "Chief Constable",
+          37836800,
+          629800,
+          "pssdb-2026-10-22",
+          null
+        ],
+        [
+          "vancouver-police",
+          "2021",
+          "Palmer, A.",
+          "Chief Constable",
+          37836800,
+          629800,
+          "continuation-government-police-vancouver-police-2021-executives",
+          1
+        ],
+        [
+          "vancouver-police",
+          "2022",
+          "Palmer, A.",
+          "Chief Constable",
+          49393200,
+          4828200,
+          "continuation-government-police-vancouver-police-2022-executives",
+          1
+        ],
+        [
+          "vancouver-police",
+          "2023",
+          "Palmer, A",
+          "Chief Constable",
+          46420700,
+          5886700,
+          "continuation-government-police-vancouver-police-2023-executives",
+          1
+        ],
+        [
+          "vancouver-police",
+          "2023/24",
+          "Palmer, A",
+          "Chief Constable",
+          46420700,
+          5886700,
+          "pssdb-2026-10-22",
+          null
+        ],
+        [
+          "vancouver-police",
+          "2024",
+          "Palmer, A",
+          "Chief Constable",
+          48722400,
+          5840600,
+          "continuation-government-police-vancouver-police-2024-executives",
+          1
+        ],
+        [
+          "vancouver-police",
+          "2025",
+          "Palmer, A",
+          "Chief Constable",
+          52055500,
+          2198100,
+          "vpd-recovery-2025-executives",
+          1
+        ]
+      ],
+      "originalTitleHolderCount": 3,
+      "currentTitleHolderCount": 5
+    },
+    {
+      "employer": "district-of-west-vancouver",
+      "targetKey": "stuart|sharon",
+      "aliasKey": "stuart|s",
+      "previousStatus": "verified",
+      "previousReason": "Same position under both spellings: “gis technologist”, held by few others here",
+      "currentStatus": "likely",
+      "currentReason": "Only fuller name here that agrees; “Stuart, S” in 2022–2023/24, “Stuart, Sharon” in 2020/21, never both in one period",
+      "basis": "automatic-distinctive-position-heuristic-only",
+      "title": "gis technologist",
+      "distinctiveTitleLimit": 3,
+      "currentTitleHolderNames": [
+        "stuart|sharon",
+        "stuart|s",
+        "choostuart|s",
+        "vanderstar|s"
+      ],
+      "originalEmployerObservations": {
+        "rows": 3518,
+        "sha256": "afcb356aa2b0db61a61377affe862a5ac64768f00bf3b0f46bf06537d0222afb"
+      },
+      "currentEmployerObservations": {
+        "rows": 3518,
+        "sha256": "768a830f713e509157a69669ce9075bd07e77e21280dcf5bae0d5142143dab9d"
+      },
+      "rationale": "Official recovery expands the number of normalized name spellings holding this title beyond the unchanged three-spelling distinctiveness limit. Preserve the likely relationship, but withdraw unsupported verified certainty. This does not assert different identities and does not alter any source-backed review receipt.",
+      "relatedCurrentRows": [
+        [
+          "district-of-west-vancouver",
+          "2020/21",
+          "Stuart, Sharon",
+          "GIS Technologist",
+          7642500,
+          0,
+          "pssdb-2026-10-22",
+          null
+        ],
+        [
+          "district-of-west-vancouver",
+          "2022",
+          "Stuart, S",
+          "GIS Technologist",
+          7667700,
+          null,
+          "lower-mainland-west-vancouver-2022-employees",
+          43
+        ],
+        [
+          "district-of-west-vancouver",
+          "2023",
+          "Stuart, S",
+          "GIS Technologist",
+          8359400,
+          null,
+          "lower-mainland-west-vancouver-2023-employees",
+          46
+        ],
+        [
+          "district-of-west-vancouver",
+          "2023/24",
+          "Stuart, S",
+          "Gis Technologist",
+          8359400,
+          0,
+          "pssdb-2026-10-22",
+          null
+        ]
+      ],
+      "originalTitleHolderCount": 2,
+      "currentTitleHolderCount": 4
+    }
+  ],
+  "relatedRowSchema": [
+    "employer",
+    "period",
+    "name",
+    "position",
+    "payCents",
+    "expensesCentsOrNull",
+    "sourceId",
+    "pdfPage"
+  ]
+}
