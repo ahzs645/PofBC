@@ -37,5 +37,14 @@ jobs:
         run: node --test src/salaries/*.test.js scripts/salary-search.test.mjs
       - name: Verify discovery against every published salary shard
         run: npm run check:salary-search
+      - name: Install isolated DOM test tools
+        run: >-
+          npm install --prefix "$RUNNER_TEMP/salary-ui-tools"
+          --ignore-scripts --no-package-lock
+          jsdom@29.1.1 esbuild@0.27.0
+      - name: Verify search, cards, filters, history and retries with the locked React
+        env:
+          SALARY_UI_TEST_MODULES: ${{ runner.temp }}/salary-ui-tools/node_modules
+        run: node scripts/verify-salary-search-ui.mjs
       - name: Build the salary interface with the locked dependencies
         run: npm run preview:salaries -- --build

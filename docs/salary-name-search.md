@@ -51,13 +51,29 @@ node --test src/salaries/*.test.js scripts/salary-search.test.mjs
 npm run preview:salaries -- --build
 ```
 
+The DOM integration harness mounts the actual salary components against the published files. It
+uses the application's installed React and an isolated installation of test tools, without changing
+the application's dependencies or lockfile:
+
+```sh
+npm install --prefix /tmp/salary-ui-tools --ignore-scripts --no-package-lock jsdom@29.1.1 esbuild@0.27.0
+SALARY_UI_TEST_MODULES=/tmp/salary-ui-tools/node_modules node scripts/verify-salary-search-ui.mjs
+```
+
+Generate the search directory first. These checks exercise first-name and comma searches, original
+card summaries and history, Back navigation, paging resets, sector/period filters, legitimate absent
+optional links, and visible failures with successful retries. Expected counts and the target card's
+summary come from the current published data. This is React DOM integration coverage, not a visual
+browser test.
+
 The directory is generated during `build:assets`, after name links in `build:salaries`, and before
 the salary preview. Its output at `public/salaries/search/` is ignored by Git and included in site
 builds. Rebuilding uses the checked-in published exports and needs no live report downloads.
 `check:salary-search` validates the reported Milad case against the complete dataset, including
 query order, partial words, year/employer filters and first-page record-shard costs. The dedicated
-salary-search workflow runs these checks and builds the preview with the repository's locked
-dependencies; the existing salary source/export workflow continues to run as well.
+salary-search workflow runs the unit, full-data and DOM checks, then builds the preview with the
+repository's locked application dependencies; the existing salary source/export workflow continues
+to run as well.
 
 Builds validate each people shard against the published row count, produce deterministic
 content-addressed bucket files, and replace the directory only after successful generation.
