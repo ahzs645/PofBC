@@ -35,13 +35,13 @@
     "namesMatchingCompilationOnlyWhenExpensesAdded": 152,
     "namesMatchingOnlyWithPositiveRemunerationFilter": 5,
     "repository": {
-      "employers": 273,
-      "rows": 1440498,
-      "namedRows": 1434176,
-      "officialRows": 1212134,
+      "employers": 276,
+      "rows": 1445458,
+      "namedRows": 1438011,
+      "officialRows": 1217094,
       "compiledRows": 228364,
-      "employeeRows": 1181539,
-      "availableEmployerYears": 1187
+      "employeeRows": 1183494,
+      "availableEmployerYears": 1240
     },
     "workforceCompletenessEstablished": false,
     "recordLevelParityChecked": false,
@@ -656,6 +656,16 @@
       "rows": 1076
     },
     {
+      "slug": "legislative-assembly-members",
+      "name": "Members of the Legislative Assembly",
+      "rows": 1796
+    },
+    {
+      "slug": "legislative-assembly-staff",
+      "name": "Legislative Assembly of British Columbia staff",
+      "rows": 743
+    },
+    {
       "slug": "nanaimo-ladysmith-school-district",
       "name": "School District No. 68 (Nanaimo-Ladysmith)",
       "rows": 1012
@@ -669,6 +679,11 @@
       "slug": "pacific-rim-school-district",
       "name": "School District No. 70 (Pacific Rim)",
       "rows": 297
+    },
+    {
+      "slug": "provincial-cabinet",
+      "name": "Premier and ministers",
+      "rows": 874
     },
     {
       "slug": "qualicum-school-district",
@@ -1112,7 +1127,7 @@
       "referencePeriodVerified": false,
       "recordLevelParityChecked": false,
       "countDifference": null,
-      "repositoryRowsAllPeriods": 242158,
+      "repositoryRowsAllPeriods": 242468,
       "candidates": [
         {
           "yearLabel": "2023/24",
@@ -3843,7 +3858,7 @@
       "referencePeriodVerified": false,
       "recordLevelParityChecked": false,
       "countDifference": null,
-      "repositoryRowsAllPeriods": 4950,
+      "repositoryRowsAllPeriods": 6187,
       "candidates": [
         {
           "yearLabel": "2023",
@@ -14899,7 +14914,7 @@
       "referencePeriodVerified": false,
       "recordLevelParityChecked": false,
       "countDifference": null,
-      "repositoryRowsAllPeriods": 4950,
+      "repositoryRowsAllPeriods": 6187,
       "candidates": [
         {
           "yearLabel": "2020",
@@ -20263,15 +20278,15 @@
   "fingerprints": {
     "snapshotSha256": "3c3a0fb9ef04e42aa58d4ea5f5d20084dc92fbdc6fe3162fc9eb336d6dec7f24",
     "aliasesSha256": "01bd579dd41abd3006f68cb9aec0daecdd5fe4a8a4ff8d15eb6ccefedaf72952",
-    "repositoryInputsSha256": "49c7616f26d7c01599ad26386c6173b5b8d3ba2ce9904ddb394617f6a2076836",
+    "repositoryInputsSha256": "b40f0060e51af0e11506291ab1db5eebf6b0fc2f9bb797af218e2593d17ecd4f",
     "historicalCompilationSha256": "410bcae27c9755e387c473ab44d62081a50b46e7330f4d6d5c0b74979d392760",
     "historicalCompilationManifestSha256": "57d5444065bc037147368c4e6642b5f880dc10c784d7b390168a01145822a49b"
   },
   "repositoryInputs": [
     {
       "path": "public/salaries/coverage.json",
-      "bytes": 7354778,
-      "sha256": "f668633d4a0e931091b83f056c02fd48fc5fc15d5a7c4a2391d677eb4bed8e13"
+      "bytes": 7490465,
+      "sha256": "e3c1308f3102ef4bfca6d349388dfef7ab38b22ad0cc2a67d608a44c58737cfc"
     },
     {
       "path": "public/salaries/employers/abbotsford-police.json.gzip",
@@ -20855,8 +20870,8 @@
     },
     {
       "path": "public/salaries/employers/district-of-west-vancouver.json.gzip",
-      "bytes": 61694,
-      "sha256": "a734124ecaa79b691c834bff4765f5712e410a9303be04e3b3a5a23331493917"
+      "bytes": 57378,
+      "sha256": "6c349c8447ec63695059b09831fd85ae70daf8a7cffa5e15361837d73d2a1ea0"
     },
     {
       "path": "public/salaries/employers/douglas-college.json.gzip",
@@ -20984,6 +20999,16 @@
       "sha256": "b9fef0bce85152ae82b886649375fa7282ad01b562337e370134f68ae7e2538b"
     },
     {
+      "path": "public/salaries/employers/legislative-assembly-members.json.gzip",
+      "bytes": 22499,
+      "sha256": "261e91f838109d0684fa4c89d8df25964c68171ee9ef6a72d44293e2ac139d02"
+    },
+    {
+      "path": "public/salaries/employers/legislative-assembly-staff.json.gzip",
+      "bytes": 10382,
+      "sha256": "d3e5e327085911e160a238f03f0b50d7cc9a99e020baf448e7326c428ac44538"
+    },
+    {
       "path": "public/salaries/employers/liquor-distribution-branch.json.gzip",
       "bytes": 11181,
       "sha256": "ecaa1667fdf14e5df7f8449853a004b0f4c2f0a45e97cdeadcf2fc8eb037b171"
@@ -21084,14 +21109,19 @@
       "sha256": "c62457f5ab439b3ba4ae22af74592149ec1b43e164989a85fe10901fb74404f2"
     },
     {
+      "path": "public/salaries/employers/provincial-cabinet.json.gzip",
+      "bytes": 10434,
+      "sha256": "38cf1b55ed7f17cc442d17971c96452ea7117cac9372016f64f7a24f1eee9bb3"
+    },
+    {
       "path": "public/salaries/employers/provincial-health-services-authority.json.gzip",
       "bytes": 1882007,
       "sha256": "f5c2566327c9c1b4c8f3feb7ad6227a5244fa054923d8328b0122681131d6f21"
     },
     {
       "path": "public/salaries/employers/public-service.json.gzip",
-      "bytes": 4518533,
-      "sha256": "71c62e45c12d7a2c1772ce96f56dfe15606dd1236f01dad246c9f6c75cbf6e42"
+      "bytes": 4525671,
+      "sha256": "43689f8ab59b93344f721075806a1f3a63eff40db928d27838fac6fd20753c0b"
     },
     {
       "path": "public/salaries/employers/qualicum-school-district.json.gzip",
@@ -21485,8 +21515,8 @@
     },
     {
       "path": "public/salaries/employers/vancouver-police.json.gzip",
-      "bytes": 38008,
-      "sha256": "1fe4d04cafd6b0ded5e2d83d2af7ad7504beb20a0aaa5594302ef03149d8d4bc"
+      "bytes": 48513,
+      "sha256": "c9e0e086366e681a7a9db361aa185b44df83f4914aefde8e436b21efd5c1f525"
     },
     {
       "path": "public/salaries/employers/vancouver-school-district.json.gzip",
@@ -21640,8 +21670,8 @@
     },
     {
       "path": "public/salaries/index.json",
-      "bytes": 11439295,
-      "sha256": "b192a8fc82df0c6b1e700ce45ddfe774bc8f0331868c492472b914feee77ec4e"
+      "bytes": 11544218,
+      "sha256": "55cc67f7d3c703f936d164f54f00e90fbb3edceb5f0adad6919a5412e2225e84"
     }
   ],
   "historicalCompilationNotes": [

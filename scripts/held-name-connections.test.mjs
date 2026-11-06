@@ -1,11 +1,13 @@
 import test from 'node:test'
 import assert from 'node:assert/strict'
-import { mkdtempSync, writeFileSync, rmSync } from 'node:fs'
+import { mkdtempSync, mkdirSync, writeFileSync, rmSync } from 'node:fs'
 import { tmpdir } from 'node:os'
 import { join } from 'node:path'
 import { createHash } from 'node:crypto'
 import { validateHeldNameConnections } from './lib/held-name-connections.mjs'
 import { nameRecordFingerprint, nameRowsFingerprint } from './lib/reviewed-name-connections.mjs'
+import { gzipSync } from 'node:zlib'
+import { salaryBaselineContext } from './lib/salary-baseline-context.mjs'
 import { personKey } from '../src/salaries/people.js'
 
 const index = { employers: [['Employer', 'Health authorities', null, 'employer']], years: ['2023/24'],
@@ -75,5 +77,37 @@ test('a qualified inference needs its exact pinned case receipt and cannot becom
     delete entry.canonicalName
     writeFileSync(join(root, 'receipt.json'), '[]')
     assert.throws(() => validateHeldNameConnections(p, [alias, original], index, root), /evidence changed/)
+  } finally { rmSync(root, { recursive: true, force: true }) }
+})
+
+
+test('frozen held receipts survive additive earlier periods but original row mutations still reject', () => {
+  const root = mkdtempSync(join(tmpdir(), 'held-historical-'))
+  const zip = (value) => gzipSync(JSON.stringify(value) + '\n', { level: 9, mtime: 0 })
+  const sha = (bytes) => createHash('sha256').update(bytes).digest('hex')
+  try {
+    const area = join(root, 'research/salaries/source-follow-through-2026-11-02')
+    mkdirSync(area, { recursive: true })
+    const historicalIndex = { ...index, shards: { mu: 2 } }
+    const historicalRows = [alias, original].toSorted((a, b) => a[0].localeCompare(b[0]))
+    const indexBytes = Buffer.from(JSON.stringify(historicalIndex) + '\n')
+    writeFileSync(join(area, 'baseline-people-index.json.gzip'), gzipSync(indexBytes))
+    writeFileSync(join(area, 'baseline.json.gzip'), zip({ baselinePeopleIndexSha256: sha(indexBytes),
+      exportFiles: [{ path: 'public/salaries/people/mu.json.gzip', sha256: sha(zip(historicalRows)) }] }))
+    const liveIndex = { ...historicalIndex, years: ['2000/01', ...index.years],
+      sources: { ...index.sources, early: { sourceKind: 'official-pdf', sha256: 'new-earlier-source' } } }
+    const carried = historicalRows.map((row) => { const copy = [...row]; copy[5] = 1; return copy })
+    const earlier = [...original]; earlier[2] = 85000; earlier[6] = 'early'
+    const unrelated = [...earlier]; unrelated[0] = 'Other, Name'
+    const review = payload(), originalReceipt = JSON.stringify(review)
+    assert.throws(() => validateHeldNameConnections(review, [...carried, earlier, unrelated], liveIndex, root), /observations changed/)
+    const baseline = salaryBaselineContext([...carried, earlier, unrelated], liveIndex, root)
+    assert.deepEqual(baseline.rows, historicalRows)
+    const decisions = validateHeldNameConnections(review, baseline.rows, baseline.index, root, { readInput: baseline.readInput })
+    assert.equal(decisions.length, 1, 'only the original reviewed pair is returned')
+    assert.deepEqual(decisions[0].names, review.decisions[0].names)
+    assert.equal(JSON.stringify(review), originalReceipt, 'historical receipts are never reissued')
+    const changed = carried.map((row) => [...row]); changed[0][2] += 1
+    assert.throws(() => salaryBaselineContext([...changed, earlier, unrelated], liveIndex, root), /Original named export differs/)
   } finally { rmSync(root, { recursive: true, force: true }) }
 })

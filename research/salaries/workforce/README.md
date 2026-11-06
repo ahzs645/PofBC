@@ -52,7 +52,7 @@ The catalogue has an additional empty-URL entry for WP2024_Ind_Progress; it is n
 second source and is excluded. Editions: 2018 (6 tables), 2020, 2022 and 2024 (8 each).
 
 Tables cover employee counts, population/workforce representation comparators,
-Indigenous/protected-group progress, leadership, occupation and region representation,
+representation progress, leadership, occupation and region representation,
 hiring, flows and ministry keys. The original columns and string values are preserved;
 S, NA and blanks are not zero and are never reconstructed. Source years are edition
 labels; historical comparison columns refer to other years. Different measures and

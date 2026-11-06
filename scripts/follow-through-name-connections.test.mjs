@@ -192,7 +192,7 @@ test('generator check is read-only for ALL RRU/CNC outputs and works without upl
   const names = ['name-review-original-outcomes.json.gzip', 'name-review-overlay.json', 'review-results.json', 'held-pair-outcomes.csv', 'remaining-evidence.md', ...['rru', 'cnc'].flatMap((e) => [`name-review-${e}.json`, `name-review-${e}-observations.json.gzip`, `name-review-${e}.csv`])]
   const paths = names.map((n) => resolve(root, `research/salaries/source-follow-through-2026-11-02/${n}`))
   const before = paths.map((p) => [statSync(p).mtimeMs, readFileSync(p)])
-  const result = spawnSync('python3', ['scripts/review_follow_through_names.py', '--check', '--outcomes', '/nonexistent-review-upload.csv'], { cwd: root, encoding: 'utf8' })
+  const result = spawnSync('python3', ['scripts/check_follow_through_name_replay.py', '--check', '--outcomes', '/nonexistent-review-upload.csv'], { cwd: root, encoding: 'utf8' })
   assert.equal(result.status, 0, result.stderr)
   paths.forEach((p, i) => { assert.equal(statSync(p).mtimeMs, before[i][0]); assert.deepEqual(readFileSync(p), before[i][1]) })
 })

@@ -1,5 +1,7 @@
 # Salary audit, source recovery and remaining gaps
 
+The latest consolidation adds [provincial elected compensation](provincial-elected/README.md), [early provincial deputies and cabinet tables](provincial-early-administration/README.md), [Assembly staff](assembly-staff-recovery/README.md), and [VPD disclosures with explicit overlap controls](vpd-recovery/README.md). [West Vancouver title corrections](west-vancouver-title-recovery/README.md) preserve each original observation and amount. The [current preservation gate](current-preservation-2026-11-06/README.md) verifies original data and receipts; [workforce tables](workforce/README.md) remain a separate aggregate dataset. Earlier release counts below describe their own historical scope.
+
 The [4 November OpenCompensation comparison](opencompensation/README.md) compares
 the saved B.C. employer directory with the published exports and original compilation,
 preserving period uncertainty, source overlap and remuneration/expense distinctions.

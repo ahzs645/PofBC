@@ -4,7 +4,7 @@ Reproduce offline: `python scripts/import-provincial-early.py`.
 Test: `python -m unittest discover -s tests -p 'test_provincial_early.py'`.
 Requires Poppler `pdftotext`; no network calls occur in either command.
 
-Seven original official Public Accounts PDFs support 14 schedules for fiscal 1999/00–2005/06:310 deputy/associate-deputy observations and 242 cabinet executive-salary observations. These do not overlap the existing 2006/07+ catalogue imports. Exact official source URLs and PDF hashes are in `sources.json`. Only selected compensation-table pages are retained as readable extracted text. Full original PDFs remain unchanged. Each normalized row points to its physical PDF page.
+Seven original official Public Accounts PDFs support 14 schedules for fiscal 1999/00–2005/06: 310 deputy/associate-deputy observations and 242 cabinet executive-salary observations. These do not overlap the existing 2006/07+ catalogue imports. Exact official source URLs and PDF hashes are in `sources.json`. Only selected compensation-table pages are retained as readable extracted text. Full original PDFs remain unchanged. Each normalized row points to its physical PDF page.
 
 Minister executive salary is a separate component in `provincial-cabinet`, additional to MLA member compensation, and is not represented as total compensation. Deputy schedules remain in `public-service` with their own scope, separate from general employees and OIC appointees. These small cohorts do not replace compiled whole-employee partitions.
 

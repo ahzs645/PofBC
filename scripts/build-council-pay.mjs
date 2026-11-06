@@ -359,7 +359,7 @@ export function buildCouncilPay(repoRoot = root) {
     controls, precisionEvidence, preservation,
     outputs: Object.entries(outputs).map(([path, content]) => ({ path, sha256: createHash('sha256').update(content).digest('hex'), bytes: Buffer.byteLength(content) }))
   }
-  outputs[`${researchPath}/validation.json`] = JSON.stringify(validation, null, 2) + '\n'
+  outputs['research/salaries/current-preservation-2026-11-06/council-validation.json'] = JSON.stringify(validation, null, 2) + '\n'
   return { data, outputs, validation }
 }
 

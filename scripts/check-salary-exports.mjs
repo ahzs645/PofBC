@@ -7,6 +7,7 @@ import { createHash } from 'node:crypto'
 import { fileURLToPath } from 'node:url'
 import { resolve, dirname, join } from 'node:path'
 import { SALARY_YEARS, SALARY_INDEX, SALARY_SOURCES, SALARY_COVERAGE } from '../src/government/salaryIndex.js'
+import { applyWestVancouverTitleRecovery } from './lib/west-vancouver-title-recovery.mjs'
 import { titleKey, titleShard } from '../src/salaries/positions.js'
 import { periodMean, topRecords } from './lib/salary-data.mjs'
 import { isCadEmployer, isCadPerson, currencyOf, governmentAnnotation, RECORD_ANNOTATIONS } from '../src/salaries/recordAnnotations.js'
@@ -170,6 +171,7 @@ assert.deepEqual(actualAtlasPaths, atlasPaths, 'Unindexed or missing atlas files
 
 let sourceFiles = 0
 const consumedTravelCorrections = new Set()
+const normalizedOfficial = []
 for (const collection of json(join(research, 'collections.json')).collections) {
   const manifest = json(join(research, collection, 'sources.json'))
   for (const source of manifest.sources) {
@@ -188,10 +190,13 @@ for (const collection of json(join(research, 'collections.json')).collections) {
         assert.ok(!consumedTravelCorrections.has(correction), 'Travel correction matched multiple source rows')
         consumedTravelCorrections.add(correction)
       }
-      consume(official, JSON.stringify([canonical(slug), source.year ?? source.label, name, position, pay, correction ? correction.replacementExpenses : expenses, source.id, page ?? null]), `Official schedule ${source.id}`)
+      normalizedOfficial.push({ slug: canonical(slug), year: source.year ?? source.label, name, position, pay, expenses: correction ? correction.replacementExpenses : expenses, sourceId: source.id, page: page ?? null })
     }
     sourceFiles += 1
   }
+}
+for (const row of applyWestVancouverTitleRecovery(normalizedOfficial, json(join(research, 'west-vancouver-title-recovery/corrections.json')))) {
+  consume(official, JSON.stringify([row.slug, row.year, row.name, row.position, row.pay, row.expenses, row.sourceId, row.page]), `Official schedule ${row.sourceId}`)
 }
 assert.equal(consumedTravelCorrections.size, (audit.travelJoinCorrections ?? []).length, 'Unapplied travel correction')
 assert.equal(official.size, 0, 'Published official rows have no normalized source record')
