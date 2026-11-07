@@ -1,8 +1,8 @@
 """Builds the gallery's display copies of the collected vector logos.
 
-The collected files are kept exactly as they were found (build-collected-marks.mjs checks each
-against its checksum), so a white logo meant for a navy page, or a file with a wide margin, arrives
-that way. For each collected SVG this writes a copy for the gallery to show on the page's own light
+The downloadable files, including separately identified reconstructions, are kept unchanged
+(build-collected-marks.mjs checks each against its checksum), so a white logo meant for a navy page,
+or a file with a wide margin, arrives that way. For each SVG this writes a copy for the gallery to show on the page's own light
 and dark grounds, and leaves the source file alone for download:
 
 1. The copy is trimmed to the logo itself (its viewBox is cut to what it draws), so every logo is

@@ -1,0 +1,86 @@
+{
+  "date": "2026-11-03",
+  "vectorValidation": [
+    {
+      "file": "identity-collected/bc-place-ltd/bc-place-1982-lockup-colour-reconstruction.svg",
+      "sha256": "461affc9913f0b62cea8cb3be53ccfc763c8890997655cda885f88e0d3b1671b",
+      "bytes": 5103,
+      "pathCount": 25,
+      "imageElements": 0,
+      "textElements": 0,
+      "externalResources": [],
+      "renderedSize": [
+        2070,
+        984
+      ],
+      "unclipped": true
+    },
+    {
+      "file": "identity-collected/bc-place-ltd/bc-place-1982-lockup-reconstruction.svg",
+      "sha256": "6c53f20db218d9081c002eab260b4aebbfbba40f8d1b6e292639e88569f832c0",
+      "bytes": 5005,
+      "pathCount": 25,
+      "imageElements": 0,
+      "textElements": 0,
+      "externalResources": [],
+      "renderedSize": [
+        2070,
+        984
+      ],
+      "unclipped": true
+    },
+    {
+      "file": "identity-collected/bc-place-ltd/bc-place-1982-monogram-reconstruction.svg",
+      "sha256": "597f9109bbe8aa838e6c8854cad00d0402f6792a65d98776cc7fdaacb5de0274",
+      "bytes": 1505,
+      "pathCount": 2,
+      "imageElements": 0,
+      "textElements": 0,
+      "externalResources": [],
+      "renderedSize": [
+        648,
+        984
+      ],
+      "unclipped": true
+    }
+  ],
+  "comparison": {
+    "whole": {
+      "intersectionOverUnion": 0.9398977838284197,
+      "sourceInkPixels": 43279,
+      "reconstructionInkPixels": 43642,
+      "symmetricBoundaryMedianPixels": 0.0,
+      "symmetricBoundary95thPercentilePixels": 1.0
+    },
+    "monogram": {
+      "intersectionOverUnion": 0.9375802469135802,
+      "sourceInkPixels": 19597,
+      "reconstructionInkPixels": 19639,
+      "symmetricBoundaryMedianPixels": 0.0,
+      "symmetricBoundary95thPercentilePixels": 1.0
+    },
+    "lettering": {
+      "intersectionOverUnion": 0.9418088528729079,
+      "sourceInkPixels": 23682,
+      "reconstructionInkPixels": 24003,
+      "symmetricBoundaryMedianPixels": 0.0,
+      "symmetricBoundary95thPercentilePixels": 1.0
+    }
+  },
+  "method": {
+    "reference": "evidence/1983-programme-logo.png",
+    "referenceSize": [
+      760,
+      385
+    ],
+    "registration": "None; common source-coordinate canvas. No affine fit or local warping.",
+    "sourceMask": "Black: maximum RGB < 130 for x>=250; blue: R<117 (halfway between sampled ink R=0 and paper R=234), B-R>50 and G-R>35 for x<240; connected components <=12 pixels excluded.",
+    "vectorMask": "PyMuPDF rendering at the reference resolution; red channel <128.",
+    "thresholdSensitivityIoU": {
+      "black=100,blueRed=97": 0.9269645191830846,
+      "black=130,blueRed=117": 0.9398977838284197,
+      "black=160,blueRed=137": 0.9382570033072695
+    },
+    "interpretation": "Overlap is a comparison against one imperfect scan, not a percentage of historical authenticity. Printing, scanning, threshold choice and hand reconstruction all contribute to differences."
+  }
+}

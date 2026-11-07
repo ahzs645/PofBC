@@ -1,8 +1,8 @@
 // Build the small gallery index from the complete acquisition records.
 // Assets are local source files, including raster specimens; no remote hotlink is needed.
 //
-// The acquisition inventory, vector search and historical follow-up registers feed it.
-// They add original artwork to bodies and to the one-off programs on the gallery's timelines.
+// The acquisition inventory, source-artwork registers and documented reconstruction register feed
+// it. Source artwork and project redraws keep their distinct provenance in the generated records.
 // Every file is checked against the checksum its record gives.
 import { readFileSync, writeFileSync } from 'node:fs'
 import { basename } from 'node:path'
@@ -14,6 +14,7 @@ const read = (path) => JSON.parse(readFileSync(new URL(path, root), 'utf8'))
 const inventory = read('research/identity/collection-2026-10-22/inventory.json')
 const register = read('research/identity/vector-search-2026-10-30/source-register.json')
 const historical = read('research/identity/historical-vector-followup-2026-10-30/source-register.json')
+const reconstructed = read('research/identity/bc-place-reconstruction-2026-11-03/source-register.json')
 
 const checked = (asset) => {
   if (!/^identity-collected\/[a-z0-9._/-]+$/i.test(asset.file) || asset.file.includes('..')) {
@@ -116,19 +117,30 @@ for (const entry of register.assets) {
   additions.get(entry.bodyId).push(fromRegister(entry))
 }
 
-// Historical specimens use inventory-shaped records; detailed extraction evidence stays in
-// their source register rather than in the gallery bundle. They must name an inventory body.
+// Historical specimens and project redraws use inventory-shaped records; detailed evidence stays
+// in their registers rather than in the gallery bundle. They must name an inventory body. A
+// reconstructed vector remains a reconstruction even when its geometry is verified as pure SVG.
 const bodyIds = new Set(inventory.bodies.map((body) => body.id))
-for (const { bodyId, verification, ...asset } of historical.assets) {
-  if (!bodyIds.has(bodyId)) throw new Error(`Unknown historical body: ${bodyId}`)
-  if (asset.isVector && (!verification?.genuineVectorVerified || verification.embeddedImages !== 0 || verification.textElements !== 0 || verification.externalResources?.length !== 0)) {
-    throw new Error(`Not verified as pure vector: ${asset.id}`)
+const bodyUpdates = {}
+for (const [search, register] of [
+  ['historical-vector-followup-2026-10-30', historical],
+  ['bc-place-reconstruction-2026-11-03', reconstructed]
+]) {
+  for (const { bodyId, verification, ...asset } of register.assets) {
+    if (!bodyIds.has(bodyId)) throw new Error(`Unknown registered body: ${bodyId}`)
+    if (register === reconstructed && (asset.reconstruction !== true || asset.reconstructionBy !== 'project')) {
+      throw new Error(`Project redraw is not identified as a reconstruction: ${asset.id}`)
+    }
+    if (asset.isVector && (!verification?.genuineVectorVerified || verification.embeddedImages !== 0 || verification.textElements !== 0 || verification.externalResources?.length !== 0)) {
+      throw new Error(`Not verified as pure vector: ${asset.id}`)
+    }
+    if (!additions.has(bodyId)) additions.set(bodyId, [])
+    additions.get(bodyId).push(checked({ ...asset, search }))
   }
-  if (!additions.has(bodyId)) additions.set(bodyId, [])
-  additions.get(bodyId).push(checked({ ...asset, search: 'historical-vector-followup-2026-10-30' }))
-}
-for (const bodyId of Object.keys(historical.bodyUpdates)) {
-  if (!bodyIds.has(bodyId)) throw new Error(`Unknown historical body update: ${bodyId}`)
+  for (const [bodyId, update] of Object.entries(register.bodyUpdates ?? {})) {
+    if (!bodyIds.has(bodyId)) throw new Error(`Unknown registered body update: ${bodyId}`)
+    bodyUpdates[bodyId] = { ...bodyUpdates[bodyId], ...update }
+  }
 }
 
 const bodies = inventory.bodies.map((body) => {
@@ -138,7 +150,7 @@ const bodies = inventory.bodies.map((body) => {
   additions.delete(body.id)
   return added.length ? {
     ...display,
-    ...historical.bodyUpdates[body.id],
+    ...bodyUpdates[body.id],
     status: 'asset-collected',
     assets: [...display.assets, ...added]
   } : display

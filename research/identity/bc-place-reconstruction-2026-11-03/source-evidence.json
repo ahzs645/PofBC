@@ -1,0 +1,89 @@
+{
+  "retrieved": "2026-11-03",
+  "downloads": [
+    {
+      "id": "1983-opening-programme",
+      "url": "https://www.historymuseum.ca/ke/_resources/5807325/2023-F0003-24.pdf",
+      "bytes": 10854420,
+      "sha256": "5db9071eb55a09e7ed154e9ab88290d1e7395f8efff1762f00c1a663a686ac99"
+    },
+    {
+      "id": "1982-newspaper",
+      "url": "https://saltspringarchives.com/driftwood/1982/v23n38p1Sept22-1982.pdf",
+      "bytes": 18806100,
+      "sha256": "0820b303f9a139c8a9fc7cce70594551cc07dafbb7899b0da0a635f3fdaede5c"
+    },
+    {
+      "id": "1984-newsletter-front",
+      "url": "https://openmovportal.ca/argus/final/ViewImage.aspx?template=Image&field=DerivedIma&hash=7a0e5571fef0c4a25f1e0ea422510259&width=max&height=max&r=-1735779844&lang=en-CA",
+      "bytes": 145180,
+      "sha256": "5f872d682c8d554cf2ef4ea785a4d9fd57799b5404eb9163ed15e8ba7d4125ea"
+    }
+  ],
+  "crops": {
+    "1983-programme-logo.png": {
+      "pdfPage": 4,
+      "renderSize": [
+        3280,
+        4201
+      ],
+      "cropBoxPixels": [
+        2020,
+        485,
+        2780,
+        870
+      ],
+      "method": "PyMuPDF page render applying source ICC profile; RGB crop without retouching; this differs from extracting unprofiled JPEG samples."
+    },
+    "1982-driftwood-logo.png": {
+      "pdfPage": 6,
+      "imageXref": 22,
+      "imageSize": [
+        2264,
+        3119
+      ],
+      "cropBoxPixels": [
+        1440,
+        2490,
+        2080,
+        2810
+      ],
+      "method": "Crop of native embedded grayscale JPEG; no resampling or cleanup."
+    },
+    "1982-driftwood-page6-context.png": {
+      "pdfPage": 6,
+      "renderScale": 0.8,
+      "method": "Whole-page context render, keeping publication date and advertisement together."
+    },
+    "1984-newsletter-header.png": {
+      "originalSize": [
+        948,
+        1200
+      ],
+      "cropBoxPixels": [
+        130,
+        135,
+        825,
+        340
+      ],
+      "method": "Unmodified crop of publicly linked maximum-size museum image."
+    }
+  },
+  "colour": {
+    "sampleFrom": "1983-programme-logo.png",
+    "cropBoxPixels": [
+      47,
+      55,
+      63,
+      92
+    ],
+    "statistic": "Per-channel median across 592 pixels",
+    "rgb": [
+      0,
+      150,
+      214
+    ],
+    "hex": "#0096d6",
+    "meaning": "Representative colour-managed scan sample, not an original ink/Pantone specification"
+  }
+}
