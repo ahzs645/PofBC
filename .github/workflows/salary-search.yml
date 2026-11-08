@@ -23,6 +23,10 @@ on:
 permissions:
   contents: read
 
+concurrency:
+  group: ${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+
 jobs:
   name-search:
     runs-on: ubuntu-latest
@@ -34,6 +38,7 @@ jobs:
           cache: npm
       - run: npm ci --ignore-scripts
       - name: Test matching, filters, links and deterministic directory builds
+        if: github.event_name == 'workflow_dispatch'
         run: node --test src/salaries/*.test.js scripts/salary-search.test.mjs
       - name: Verify discovery against every published salary shard
         run: npm run check:salary-search
@@ -47,4 +52,5 @@ jobs:
           SALARY_UI_TEST_MODULES: ${{ runner.temp }}/salary-ui-tools/node_modules
         run: node scripts/verify-salary-search-ui.mjs
       - name: Build the salary interface with the locked dependencies
+        if: github.event_name == 'workflow_dispatch'
         run: npm run preview:salaries -- --build

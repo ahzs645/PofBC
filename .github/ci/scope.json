@@ -1,0 +1,61 @@
+{
+  "flags": [
+    "data"
+  ],
+  "rules": [
+    {
+      "pattern": "^\\.github/|(^|/)(package(-lock)?\\.json|requirements[^/]*\\.txt|pyproject\\.toml)$",
+      "select": [
+        "data"
+      ]
+    },
+    {
+      "pattern": "^(research/salaries/|public/salaries/|scripts/)|^src/government/salaryIndex\\.js$",
+      "select": [
+        "data"
+      ]
+    },
+    {
+      "pattern": "^src/salaries/|^src/government/(Salaries\\.jsx|salaries\\.test\\.js)$|^src/site/site\\.css$",
+      "select": []
+    },
+    {
+      "pattern": "^docs/|^[^/]+\\.md$",
+      "select": []
+    }
+  ],
+  "cases": [
+    {
+      "paths": [
+        "src/salaries/Search.jsx"
+      ],
+      "expected": {
+        "data": false
+      }
+    },
+    {
+      "paths": [
+        "scripts/recover.py"
+      ],
+      "expected": {
+        "data": true
+      }
+    },
+    {
+      "paths": [
+        "public/salaries/people/2024.json"
+      ],
+      "expected": {
+        "data": true
+      }
+    },
+    {
+      "paths": [
+        "src/government/salaryIndex.js"
+      ],
+      "expected": {
+        "data": true
+      }
+    }
+  ]
+}
