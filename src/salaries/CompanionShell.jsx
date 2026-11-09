@@ -29,6 +29,7 @@ export const CompanionShell = ({ browse, onBrowse, layout, onLayout, query, onSe
     <section className="salaries__intro" aria-labelledby={`salaries-${browse}-intro`}>
       <h2 id={`salaries-${browse}-intro`} className="salaries__heading">{heading}</h2>
       {intro}
+      {browse !== 'about' && onBrowse && <p className="salaries__about-link"><button type="button" className="salaries__link" onClick={() => onBrowse('about')}>About these records, privacy and corrections</button></p>}
       {tiles.length > 0 && (
         <dl className="salaries__tiles">
           {tiles.map((tile) => (

@@ -2086,3 +2086,9 @@ button.gallery__collecting-status, .gallery__collecting-graph {
 @media (max-width: 560px) {
   .salaries-years > li { grid-template-columns: 5.5em minmax(0, 1fr); gap: 8px; }
 }
+.salaries__about-link { margin: 6px 0 0; font-size: 14px; }
+.salaries-about { display: grid; gap: 20px; max-width: 78ch; padding-bottom: 48px; }
+.salaries-about section { display: grid; gap: 8px; }
+.salaries-about p, .salaries-about li { font-size: 15px; line-height: 1.6; color: var(--ink); margin: 0; }
+.salaries-about ul { margin: 0; padding-left: 20px; display: grid; gap: 6px; }
+.salaries-about a { color: inherit; text-underline-offset: 3px; }

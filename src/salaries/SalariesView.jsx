@@ -37,6 +37,7 @@ import { documentTitle, setDocumentMeta } from '../site/documentMeta.js'
 
 const CouncilPayView = lazy(() => import('./CouncilPayView.jsx'))
 const WorkforceView = lazy(() => import('./WorkforceView.jsx'))
+const AboutView = lazy(() => import('./AboutView.jsx'))
 
 const describeNameGroup = (key, list, name, index) => {
   const latest = list.reduce((best, row) => (row[5] > best[5] || (row[5] === best[5] && (
@@ -79,8 +80,19 @@ export const SalariesView = ({ onOpenGovernment }) => {
   const companion = navigation.place.browse
   useEffect(() => {
     if (companion === 'workforce') setDocumentMeta({ title: documentTitle('Workforce statistics', 'Salaries'), description: 'B.C. Public Service headcount, average salary and Workforce Profile tables from official releases.' })
+    else if (companion === 'about') setDocumentMeta({ title: documentTitle('About, privacy and corrections', 'Salaries'), description: 'Where the B.C. public-sector salary records come from, what they can and cannot show, how personal information is handled and how to report an error.' })
     else if (companion === 'council') setDocumentMeta({ title: documentTitle('Council pay', 'Salaries'), description: 'Municipal council remuneration in British Columbia: survey figures, official rates and named payments, with sources.' })
   }, [companion])
+  const leaveFor = (label) => (browse) => {
+    if (browse === navigation.place.browse) return
+    navigation.go({ ...navigation.place, browse, q: '', person: null, personAt: null, employer: null, employerYear: null, role: null, title: null, show: null }, label)
+    toTop()
+  }
+  if (navigation.place.browse === 'about') return (
+    <Suspense fallback={<p className="gallery__intro" role="status">Loading…</p>}>
+      <AboutView onBrowse={leaveFor('About these records')} />
+    </Suspense>
+  )
   if (navigation.place.browse === 'workforce') return (
     <Suspense fallback={<p className="gallery__intro" role="status">Loading workforce statistics…</p>}>
       <WorkforceView
@@ -471,6 +483,7 @@ const SalaryRecordsView = ({ onOpenGovernment, navigation }) => {
     <>
       <section className="salaries__intro" aria-labelledby="salaries-intro">
         <h2 id="salaries-intro" className="salaries__heading">Public-sector salaries</h2>
+        <p className="salaries__about-link"><button type="button" className="salaries__link" onClick={() => go({ browse: 'about', q: '' })}>About these records, privacy and corrections</button></p>
         <dl className="salaries__tiles">
           <div><dt>Records</dt><dd>{total.toLocaleString('en-CA')}</dd><dd className="salaries__line">disclosed payments</dd></div>
           <div><dt>Employers</dt><dd>{employersIndex.employers.length.toLocaleString('en-CA')}</dd><dd className="salaries__line">{sectors.length} sectors</dd></div>
