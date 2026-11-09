@@ -1819,6 +1819,8 @@ button.gallery__collecting-status, .gallery__collecting-graph {
 .salaries__search--one { grid-template-columns: 1fr; margin-bottom: 12px; }
 .salaries__sector { margin-top: 8px; }
 .salaries__tiles { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 8px; margin: 4px 0 0; }
+.salaries__dollars { display: flex; flex-wrap: wrap; align-items: center; gap: 4px 12px; margin: 16px 0 4px; }
+.salaries__dollars .field { margin: 0; }
 @media (max-width: 560px) { .salaries__tiles { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 .salaries__tiles div { padding: 10px 12px; border-radius: 10px; background: var(--hover); }
 .salaries__tiles dt { font-size: 11px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--ink-faint); }

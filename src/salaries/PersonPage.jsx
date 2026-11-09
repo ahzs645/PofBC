@@ -2,6 +2,7 @@
 // absent from folded into runs that give the reason. Names that only may be the same — a surname with
 // compatible initials — are kept apart, below. None of this is a verified employment history.
 
+import { useState } from 'react'
 import { displayName, nameMatch, nameOnly, personKey, withoutCompiledRepeats } from './people.js'
 import { titleKey } from './positions.js'
 import { expenseLabel, GAP_LABELS, gapReason, gapRuns, missingYearMessage, recordPeriodLabel, samePeriodKinds, sourceHref } from './coverage.js'
@@ -12,6 +13,8 @@ import { count, SalaryPageHeading } from './common.jsx'
 import { hasExpenseAmount } from './viewState.js'
 import { isCadPerson, personAnnotation, personCurrency } from './recordAnnotations.js'
 import { RecordAnnotation } from './RecordAnnotation.jsx'
+import { Segmented } from '../site/Segmented.jsx'
+import { CPI_LATEST, inDollarsOf } from './inflation.js'
 
 /** A change between two payments as a signed whole percentage, with a true minus sign. */
 export const percentChange = (from, to) => {
@@ -22,6 +25,9 @@ export const percentChange = (from, to) => {
 
 /** A position in a record opens that position's page at its employer, in the record's year. */
 export const PersonPage = ({ chosen, joins = [], joinedElsewhere = [], all, scope, index, back, onEmployer, onRole, onPerson, onOpenGovernment, remember }) => {
+  // Paid then, or in the latest published year's dollars by the B.C. CPI (inflation.js).
+  const [dollars, setDollars] = useState('nominal')
+  const real = dollars === 'real'
   // A record under a joined spelling says how it was disclosed.
   const disclosedAs = (row) => (personKey(row[0]) === chosen.key ? null : row[0])
   const sureness = (status) => (status === 'verified' ? 'verified' : 'likely the same person')
@@ -85,6 +91,10 @@ export const PersonPage = ({ chosen, joins = [], joinedElsewhere = [], all, scop
   // Where the latest payment is also the highest, the second tile shows the change since the first
   // period — only when every record is in CAD, so the two ends are comparable.
   const sinceFirst = top && !hasOtherCurrencies && !shared && top.year === last.year && first.year !== last.year && first.pay > 0 ? percentChange(first.pay, last.pay) : null
+  // The chart and the first-to-last change, in today's dollars when asked.
+  const shownPoints = real ? points.map((point) => ({ ...point, pay: inDollarsOf(point.pay, index.years[point.year]) ?? point.pay })) : points
+  const realSinceFirst = first && last && first.year !== last.year && first.pay > 0 && !hasOtherCurrencies && !shared
+    ? percentChange(inDollarsOf(first.pay, index.years[first.year]), inDollarsOf(last.pay, index.years[last.year])) : null
   const runs = gapRuns(missing, (at) => gapReason(index.coverage, associated, at), periods)
   const lines = [
     ...chosen.years.map((at) => ({ at, rows: rows.filter((row) => row[5] === at).sort((a, b) => b[2] - a[2]) })),
@@ -117,6 +127,7 @@ export const PersonPage = ({ chosen, joins = [], joinedElsewhere = [], all, scop
         </span>
         <span className="salaries-row__pay">
           {money(row[2], '—', currency)}
+          {real && currency === 'CAD' && Number.isFinite(row[2]) && index.years[row[5]] !== String(CPI_LATEST) && <span className="salaries__line">≈ {money(Math.round(inDollarsOf(row[2], index.years[row[5]])))} in {CPI_LATEST} dollars</span>}
           {details.length > 0 && (
             <span className="salaries__line">
               {details.map((detail, at) => <span key={at}>{at > 0 ? ' · ' : ''}{detail}</span>)}
@@ -168,7 +179,13 @@ export const PersonPage = ({ chosen, joins = [], joinedElsewhere = [], all, scop
       </dl>
       {hasOtherCurrencies && <p className="salaries__hint salaries__hint--small">CAD comparisons exclude observations in other currencies. Their original amounts and currency evidence are listed below; no exchange rate is assumed.</p>}
 
-      {points.length > 1 && <PayChart years={index.years} points={points} multiple={shared} label={hasOtherCurrencies ? 'CAD observations only, by reporting label' : hasUnverifiedPeriods ? 'Disclosed payments by reporting label; some periods are unverified' : undefined} />}
+      {points.length > 1 && (
+        <div className="salaries__dollars">
+          <Segmented compact ariaLabel="Dollars" value={dollars} onChange={setDollars} options={[{ value: 'nominal', label: 'Paid then' }, { value: 'real', label: `${CPI_LATEST} dollars`, title: 'Adjusted by the B.C. consumer price index' }]} />
+          {real && <span className="salaries__line">Adjusted by the B.C. consumer price index (Statistics Canada).{realSinceFirst ? ` ${realSinceFirst} after inflation since ${index.years[first.year]}.` : ''}</span>}
+        </div>
+      )}
+      {points.length > 1 && <PayChart years={index.years} points={shownPoints} multiple={shared} label={real ? `Disclosed pay in ${CPI_LATEST} dollars` : hasOtherCurrencies ? 'CAD observations only, by reporting label' : hasUnverifiedPeriods ? 'Disclosed payments by reporting label; some periods are unverified' : undefined} />}
 
       <h3 className="salaries__title salaries__title--spaced">{hasUnverifiedPeriods ? 'Records by label' : 'Year by year'}</h3>
       <ol className="salaries-years">

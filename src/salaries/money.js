@@ -24,3 +24,10 @@ export const medianMoney = (values) => {
   const upperCents = Math.round(sorted[middle] * 100)
   return Math.round((lowerCents + upperCents) / 2) / 100
 }
+
+/**
+ * A summary of many records (a median, an average) in whole dollars. Individual records keep the
+ * cents they were published with; a statistic's cents are false precision.
+ */
+export const formatSummaryMoney = (value, missing = '—', currency = 'CAD') =>
+  formatMoney(Number.isFinite(value) ? Math.round(value) : value, missing, currency)

@@ -10,7 +10,7 @@ import { displayName, groupHighestPaidRecords } from './people.js'
 import { linkLookup } from './nameLinks.js'
 import { keyedTitles, shortTitle } from './positions.js'
 import { reportingYearLabel } from './coverage.js'
-import { formatMoney as money } from './money.js'
+import { formatMoney as money, formatSummaryMoney as summary } from './money.js'
 import { personAnnotation, personCurrency } from './recordAnnotations.js'
 import { rangeLabel, YearStrip } from './parts.jsx'
 import { count, loadJson, Paged, PersonIcon, RoleIcon, seenYears } from './common.jsx'
@@ -35,10 +35,10 @@ export const EmployerCard = ({ entry, years, range, onOpen, stats }) => {
         <span className="salaries__name">{entry.names.at(-1)}</span>
         <span className="salaries__line">{count(records, 'record', 'records')} in {range ? rangeLabel(years, range) : years[latest]}</span>
         {stats && <span className="employer-card__stats">
-          <span className="salaries__line"><b>Median {money(stats.median)}</b> · Average {money(stats.mean)}</span>
+          <span className="salaries__line"><b>Median {summary(stats.median)}</b> · Average {summary(stats.mean)}</span>
           <span className="salaries__line">{years[stats.year]} · {count(stats.count, 'official employee record', 'official employee records')}</span>
           <span className="salaries__line">{Math.round(stats.above100k / stats.count * 100)}% paid $100,000+ · Threshold {money(stats.threshold, 'not specified')}</span>
-          {stats.growth !== null && <span className="salaries__line">Disclosure growth {employerRate(stats.growth)} · {years[stats.from]} → {years[stats.year]}</span>}
+          {stats.raise !== null && <span className="salaries__line">Typical raise {employerRate(stats.raise)} · {years[stats.raiseFrom]} → {years[stats.year]}</span>}
         </span>}
         <YearStrip years={years} seen={seenYears(entry)} coverage={entry.coverage} />
       </span>
@@ -70,9 +70,11 @@ export const EmployerBrowse = ({ employers, years, sector, range, layout, onOpen
     { id: 'employee-period', header: 'Employee statistics period', accessorFn: ({ stats }) => stats ? years[stats.year] : undefined, sortUndefined: 'last' },
     { id: 'count', header: 'Employee records', accessorFn: ({ stats }) => stats?.count, sortUndefined: 'last', meta: { kind: 'number' }, cell: ({ getValue }) => getValue()?.toLocaleString('en-CA') ?? '—' },
     { id: 'threshold', header: 'Reporting threshold', accessorFn: ({ stats }) => stats?.threshold ?? undefined, sortUndefined: 'last', meta: { kind: 'money' }, cell: ({ getValue }) => money(getValue()) },
-    ...[['median', 'Median pay'], ['mean', 'Average pay']].map(([id, header]) => ({ id, header, accessorFn: ({ stats }) => stats?.[id], sortUndefined: 'last', meta: { kind: 'money' }, cell: ({ getValue }) => money(getValue()) })),
+    ...[['median', 'Median pay'], ['mean', 'Average pay']].map(([id, header]) => ({ id, header, accessorFn: ({ stats }) => stats?.[id], sortUndefined: 'last', meta: { kind: 'money' }, cell: ({ getValue }) => summary(getValue()) })),
     { id: 'above100k', header: 'Paid $100,000+', accessorFn: ({ stats }) => stats ? stats.above100k / stats.count : undefined, sortUndefined: 'last', meta: { kind: 'number', filter: false }, cell: ({ getValue }) => getValue() == null ? '—' : `${Math.round(getValue() * 100)}%` },
-    { id: 'growth', header: 'Disclosure growth', accessorFn: ({ stats }) => stats?.growth ?? undefined, sortUndefined: 'last', meta: { kind: 'number', filter: false }, cell: ({ getValue }) => employerRate(getValue()) },
+    { id: 'raise', header: 'Typical raise', accessorFn: ({ stats }) => stats?.raise ?? undefined, sortUndefined: 'last', meta: { kind: 'number', filter: false }, cell: ({ getValue }) => employerRate(getValue()) },
+    { id: 'stayers', header: 'Names on both lists', accessorFn: ({ stats }) => stats?.stayers ?? undefined, sortUndefined: 'last', meta: { kind: 'number', filter: false }, cell: ({ getValue }) => getValue()?.toLocaleString('en-CA') ?? '—' },
+    { id: 'growth', header: 'Change in records listed', accessorFn: ({ stats }) => stats?.growth ?? undefined, sortUndefined: 'last', meta: { kind: 'number', filter: false }, cell: ({ getValue }) => employerRate(getValue()) },
     { id: 'growth-period', header: 'Growth periods', accessorFn: ({ stats }) => stats?.from != null ? `${years[stats.from]} → ${years[stats.year]}` : '—' }
   ], [onOpen, years])
 

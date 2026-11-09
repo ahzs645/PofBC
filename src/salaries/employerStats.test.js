@@ -93,3 +93,28 @@ test('published statistics reproduce from every employer export without changing
     cwd: new URL('../../', import.meta.url), stdio: 'pipe'
   })
 })
+
+test('the typical raise follows names on both adjacent lists, not the number of records', () => {
+  // Ten names get 3%; the second year also adds twenty new names just over the threshold.
+  const given = 'abcdefghijklmnopqrst'.split('')
+  const first = given.slice(0, 10).map((letter, n) => [`Stayer, ${letter}`, null, 100000 + n * 1000, null, 0, 'a', null])
+  const second = [...first.map((row) => [row[0], null, Math.round(row[2] * 1.03), null, 1, 'b', null]),
+    ...given.map((letter) => [`Newcomer, ${letter}`, null, 76000, null, 1, 'b', null])]
+  const [firstCell, cell] = build([...first, ...second], { a: source(2022), b: source(2023) })
+  assert.equal(cell.stayers, 10)
+  assert.ok(Math.abs(cell.raise - 0.03) < 1e-4)
+  assert.ok(cell.median < firstCell.median, 'the median falls even though everyone who stayed got a raise')
+  assert.equal(employerSnapshot([firstCell, cell]).raise, cell.raise)
+})
+
+test('fewer than ten names on both lists report no raise', () => {
+  const names = (year, id) => 'abcdefghi'.split('').map((letter) => [`Few, ${letter}`, null, 100000, null, year, id, null])
+  const [, cell] = build([...names(0, 'a'), ...names(1, 'b')], { a: source(2022), b: source(2023) })
+  assert.equal(cell.raise, undefined)
+})
+
+test('rankings leave out employers whose latest disclosure is much older than the rest', () => {
+  const entry = (name, end, median) => ({ name, stats: { count: 20, median, end } })
+  const ranked = employerRanking([entry('Old', '2018-03-31', 200000), entry('New', '2025-12-31', 100000), entry('Recent', '2025-03-31', 90000)], 'median')
+  assert.deepEqual(ranked.map(({ name }) => name), ['New', 'Recent'])
+})

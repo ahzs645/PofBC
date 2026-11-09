@@ -13,7 +13,7 @@ const employers = Object.fromEntries(index.employers.map(({ slug }) => {
 }))
 const result = {
   schemaVersion: 1, years: index.years,
-  note: 'CAD remuneration in official annual employee schedules only. Excludes compiled editions, incomplete schedules, executives, boards and council. Each cell has one disclosure definition. Counts are records, not employee headcount. Growth requires adjacent annual periods with matching scope, threshold and boundary rule, unique disclosed names, and at least 10 records at both ends. Latest periods differ between employers.',
+  note: 'CAD remuneration in official annual employee schedules only. Excludes compiled editions, incomplete schedules, executives, boards and council. Each cell has one disclosure definition. Counts are records, not employee headcount. raise is the median yearly change for names on both this and the previous comparable list (at least 10 names). Growth requires adjacent annual periods with matching scope, threshold and boundary rule, unique disclosed names, and at least 10 records at both ends. Latest periods differ between employers.',
   employers
 }
 const target = new URL('employer-stats.json.gzip', root)

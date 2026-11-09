@@ -13,7 +13,7 @@ import { employerNameKeys } from './nameLinks.js'
 import { meanMoney, titleKey, titleLabel, titleRecords } from './positions.js'
 import { categoryCoverage, coverageAt, expenseLabel, reportingYearLabel, scopeLabel } from './coverage.js'
 import { DisclosureSummary } from './DisclosureEvidence.jsx'
-import { formatMoney as money, medianMoney as median } from './money.js'
+import { formatMoney as money, formatSummaryMoney as summary, medianMoney as median } from './money.js'
 import { PayChart, YearPicker, shortYear } from './parts.jsx'
 import { count, LAYOUTS, loadJson, Paged, RecordRow, RoleIcon, SalaryPageHeading, seenYears, wordsOf } from './common.jsx'
 import { DataTable } from './DataTable.jsx'
@@ -144,8 +144,8 @@ export const EmployerPage = ({ entry, years, sources, year: wantedYear, show, ro
   const positionColumns = useMemo(() => [
     { id: 'label', header: 'Position', accessorKey: 'label', cell: ({ row, getValue }) => <button type="button" className="salaries__link salaries-row__name" onClick={() => onRole(row.original.key)}>{getValue()}</button> },
     { id: 'records', header: 'Records', accessorFn: (position) => position.totalRows, meta: { kind: 'number' } },
-    { id: 'mean', header: 'Average', accessorKey: 'mean', meta: { kind: 'money' }, cell: ({ getValue }) => money(getValue()) },
-    { id: 'median', header: 'Median', accessorKey: 'median', meta: { kind: 'money' }, cell: ({ getValue }) => money(getValue()) },
+    { id: 'mean', header: 'Average', accessorKey: 'mean', meta: { kind: 'money' }, cell: ({ getValue }) => summary(getValue()) },
+    { id: 'median', header: 'Median', accessorKey: 'median', meta: { kind: 'money' }, cell: ({ getValue }) => summary(getValue()) },
     { id: 'low', header: 'Lowest', accessorKey: 'low', meta: { kind: 'money' }, cell: ({ getValue }) => money(getValue()) },
     { id: 'high', header: 'Highest', accessorKey: 'high', meta: { kind: 'money' }, cell: ({ getValue }) => money(getValue()) }
   ], [onRole])
@@ -218,8 +218,8 @@ export const EmployerPage = ({ entry, years, sources, year: wantedYear, show, ro
         {rows && entry.counts[year] > 0 && (
           <dl className="salaries__tiles">
             <div><dt>Records</dt><dd>{people.length.toLocaleString('en-CA')}</dd></div>
-            <div><dt>Average</dt><dd>{pay.length ? money(meanMoney(pay)) : '—'}</dd></div>
-            <div><dt>Median</dt><dd>{pay.length ? money(median(pay)) : '—'}</dd></div>
+            <div><dt>Average</dt><dd>{pay.length ? summary(meanMoney(pay)) : '—'}</dd></div>
+            <div><dt>Median</dt><dd>{pay.length ? summary(median(pay)) : '—'}</dd></div>
             <div><dt>{named.length ? 'Positions' : 'Highest'}</dt><dd>{named.length ? named.length.toLocaleString('en-CA') : money(Math.max(...pay))}</dd></div>
           </dl>
         )}
@@ -286,9 +286,9 @@ export const EmployerPage = ({ entry, years, sources, year: wantedYear, show, ro
                           {position.rows.length < position.totalRows ? ` of ${position.totalRows.toLocaleString('en-CA')} match` : ''}
                           {position.totalRows > 1 ? ` · ${money(position.low)}–${money(position.high)}` : ''}
                         </span>
-                        {position.totalRows > 1 && <span className="salaries__line">Median {money(position.median)}</span>}
+                        {position.totalRows > 1 && <span className="salaries__line">Median {summary(position.median)}</span>}
                       </span>
-                      <span className="salaries__aside">{money(position.mean)}<span className="salaries__line">{position.totalRows > 1 ? 'average' : 'paid'}</span></span>
+                      <span className="salaries__aside">{position.totalRows > 1 ? summary(position.mean) : money(position.mean)}<span className="salaries__line">{position.totalRows > 1 ? 'average' : 'paid'}</span></span>
                     </button>
                   ))}
                 </div>
@@ -297,7 +297,7 @@ export const EmployerPage = ({ entry, years, sources, year: wantedYear, show, ro
           )}
           {view === 'positions' && unpositioned && !words.length && (
             <p className="salaries__hint salaries__hint--small">
-              {count(unpositioned.rows.length, 'record does', 'records do')} not name a position (average {money(unpositioned.mean)}); they are under People.
+              {count(unpositioned.rows.length, 'record does', 'records do')} not name a position (average {summary(unpositioned.mean)}); they are under People.
             </p>
           )}
 
@@ -407,8 +407,8 @@ const RolePage = ({ entry, years, sources, rows, nameKey, failed, roleKey, wante
               ? (
                 <dl className="salaries__tiles">
                   <div><dt>Records</dt><dd>{chosen.length.toLocaleString('en-CA')}</dd></div>
-                  <div><dt>Average</dt><dd>{money(stats[year].mean)}</dd></div>
-                  <div><dt>Median</dt><dd>{money(stats[year].median)}</dd></div>
+                  <div><dt>Average</dt><dd>{summary(stats[year].mean)}</dd></div>
+                  <div><dt>Median</dt><dd>{summary(stats[year].median)}</dd></div>
                   <div><dt>Range</dt><dd className="salaries__range">{chosen.length > 1 ? `${money(stats[year].low)}–${money(stats[year].high)}` : money(stats[year].low)}</dd></div>
                 </dl>
               )
@@ -448,9 +448,9 @@ const RolePage = ({ entry, years, sources, rows, nameKey, failed, roleKey, wante
                 <span className="salaries-record">
                   <span className="salaries-record__what">
                     <span className="salaries__name">{count(counts[at], 'record', 'records')}</span>
-                    <span className="salaries__line">{counts[at] > 1 ? `Median ${money(stat.median)} · ${money(stat.low)}–${money(stat.high)}` : 'One record'}</span>
+                    <span className="salaries__line">{counts[at] > 1 ? `Median ${summary(stat.median)} · ${money(stat.low)}–${money(stat.high)}` : 'One record'}</span>
                   </span>
-                  <span className="salaries-row__pay">{money(stat.mean)}<span className="salaries__line">{counts[at] > 1 ? 'average' : 'paid'}</span></span>
+                  <span className="salaries-row__pay">{counts[at] > 1 ? summary(stat.mean) : money(stat.mean)}<span className="salaries__line">{counts[at] > 1 ? 'average' : 'paid'}</span></span>
                 </span>
               </li>
             ))}

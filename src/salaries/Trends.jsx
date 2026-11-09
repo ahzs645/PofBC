@@ -13,6 +13,7 @@ import { count } from './common.jsx'
 import { DataTable } from './DataTable.jsx'
 import { GrowthTip, rateColumn } from './Growth.jsx'
 import { formatMoney as money, medianMoney } from './money.js'
+import { inflationRate } from './inflation.js'
 
 /** Every measure the page shows, worked out once from the employer's rows. */
 const analyse = (rows, years) => {
@@ -90,6 +91,10 @@ export const Trends = ({ rows, years, year, onRole, onYear }) => {
   const analysis = useMemo(() => analyse(rows, years), [rows, years])
   const { perYear, main, positions, raise, medianGrowth, first, last } = analysis
   const chosen = perYear.find((each) => each.year === year) ?? last
+  const priceSpan = first && last ? yearNumber(last.label) - yearNumber(first.label) : 0
+  const prices = priceSpan > 0 ? inflationRate(first.label, last.label, priceSpan) : null
+  // Worth explaining when the two measures point different ways by more than a point a year.
+  const thresholdEffect = medianGrowth !== null && raise && raise.rate - medianGrowth > 0.01
   const bands = useMemo(() => payBands(rows.filter((row) => row[4] === chosen?.year).map((row) => row[2])), [rows, chosen?.year])
   const widest = Math.max(1, ...bands.map((band) => band.count))
 
@@ -172,11 +177,17 @@ export const Trends = ({ rows, years, year, onRole, onYear }) => {
 
       <section className="salaries__person" aria-labelledby="salaries-trends">
         <h2 id="salaries-trends" className="salaries__title">Over the years{first && last && first !== last ? `: ${first.label}–${last.label}` : ''}</h2>
-        <dl className="salaries__tiles salaries__tiles--three">
+        <dl className="salaries__tiles">
           <div><dt>Records</dt><dd>{first.records.toLocaleString('en-CA')} → {last.records.toLocaleString('en-CA')}</dd><dd className="salaries__line">{first.label} to {last.label}</dd></div>
           <div><dt>Median</dt><dd>{formatRate(medianGrowth, '')}</dd><dd className="salaries__line">{medianGrowth === null ? 'one period only' : `a year, ${compactMoney(first.median)} → ${compactMoney(last.median)}`}</dd></div>
           <div><dt>Typical raise</dt><dd>{formatRate(raise?.rate, '')}</dd><dd className="salaries__line">{raise ? 'a year, for names that stayed' : 'no name in two disclosures'}</dd></div>
+          <div><dt>Prices</dt><dd>{formatRate(prices, '')}</dd><dd className="salaries__line">{prices === null ? 'one period only' : 'a year, B.C. consumer prices'}</dd></div>
         </dl>
+        {thresholdEffect && (
+          <p className="salaries__hint salaries__hint--small">
+            The median rose more slowly than the typical raise. The $75,000 disclosure threshold has not changed since 2002, so as pay rises, people just over it join the list each year and hold the median down. The typical raise follows the same names from year to year and is the better guide to pay growth.
+          </p>
+        )}
         {main.length > 1 && (
           <div className="salaries__charts">
             <div>

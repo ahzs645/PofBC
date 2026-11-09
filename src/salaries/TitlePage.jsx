@@ -9,7 +9,7 @@
 import { useEffect, useMemo, useState } from 'react'
 import { Segmented } from '../site/Segmented.jsx'
 import { keyedTitles, relatedTitles, titleLabel, titleShard } from './positions.js'
-import { formatMoney as money } from './money.js'
+import { formatMoney as money, formatSummaryMoney as summary } from './money.js'
 import { YearPicker, yearSpan } from './parts.jsx'
 import { count, LAYOUTS, loadJson, Paged, RoleIcon, SalaryPageHeading } from './common.jsx'
 import { DataTable } from './DataTable.jsx'
@@ -59,7 +59,7 @@ export const TitleCard = ({ title, years, onOpen, measure }) => (
           <span className="salaries__line">{measure === 'growth' ? `a year, ${years[title.growth.from]}–${years[title.growth.to]}` : `a year, ${count(title.raise.pairs, 'raise', 'raises')}`}</span>
         </span>
       )
-      : title.mean != null && <span className="salaries__aside">{money(title.mean)}<span className="salaries__line">average {years[title.last]}</span></span>}
+      : title.mean != null && <span className="salaries__aside">{summary(title.mean)}<span className="salaries__line">average {years[title.last]}</span></span>}
   </button>
 )
 
@@ -123,8 +123,8 @@ export const TitlePage = ({ titleKey: key, employers, years, sector, year: wante
     { id: 'name', header: 'Employer', accessorKey: 'name', cell: ({ row, getValue }) => <button type="button" className="salaries__link salaries-row__name" onClick={() => onEmployerRole(row.original.entry.slug, key, row.original.year)}>{getValue()}</button> },
     { id: 'sector', header: 'Sector', accessorFn: (cell) => cell.entry.sector },
     { id: 'count', header: 'Records', accessorKey: 'count', meta: { kind: 'number' } },
-    { id: 'mean', header: 'Average', accessorKey: 'mean', meta: { kind: 'money' }, cell: ({ getValue }) => money(getValue()) },
-    { id: 'median', header: 'Median', accessorKey: 'median', meta: { kind: 'money' }, cell: ({ getValue }) => money(getValue()) },
+    { id: 'mean', header: 'Average', accessorKey: 'mean', meta: { kind: 'money' }, cell: ({ getValue }) => summary(getValue()) },
+    { id: 'median', header: 'Median', accessorKey: 'median', meta: { kind: 'money' }, cell: ({ getValue }) => summary(getValue()) },
     { id: 'low', header: 'Lowest', accessorKey: 'low', meta: { kind: 'money' }, cell: ({ getValue }) => money(getValue()) },
     { id: 'high', header: 'Highest', accessorKey: 'high', meta: { kind: 'money' }, cell: ({ getValue }) => money(getValue()) },
     rateColumn('growth', 'Average growth', (cell) => growthAt.get(cell.entry.slug)?.rate)
@@ -208,10 +208,10 @@ export const TitlePage = ({ titleKey: key, employers, years, sector, year: wante
                 <span className="salaries__text">
                   <span className="salaries__name">{cell.name}</span>
                   <span className="salaries__line">{cell.entry.sector} · {count(cell.count, 'record', 'records')}</span>
-                  {cell.count > 1 && <span className="salaries__line">{money(cell.low)}–{money(cell.high)} · average {money(cell.mean)}</span>}
+                  {cell.count > 1 && <span className="salaries__line">{money(cell.low)}–{money(cell.high)} · average {summary(cell.mean)}</span>}
                   {growthAt.get(cell.entry.slug) && <span className="salaries__line">Average {formatRate(growthAt.get(cell.entry.slug).rate)}</span>}
                 </span>
-                <span className="salaries__aside">{money(cell.median)}<span className="salaries__line">{cell.count > 1 ? 'median' : 'paid'}</span></span>
+                <span className="salaries__aside">{cell.count > 1 ? summary(cell.median) : money(cell.median)}<span className="salaries__line">{cell.count > 1 ? 'median' : 'paid'}</span></span>
               </button>
             ))}
           </div>

@@ -25,12 +25,18 @@ The [consolidated recovery and preservation checks](research/salaries/consolidat
 
 The Employers view (`?view=salaries&browse=employers`) compares the latest official annual
 employee disclosures in the selected periods and sector. Cards and sortable tables include
-median and average remuneration, the share paid $100,000 or more, and
-year-over-year growth in published employee records where consecutive periods have matching
-recorded disclosure rules. These organization-level figures combine different roles;
-the counts are not employee headcount. Council, board,
-executive-only, compiled and incomplete schedules are excluded from these comparisons;
-latest reporting periods and thresholds remain visible. Rankings require at least ten records.
+median and average remuneration (in whole dollars), the share paid $100,000 or more, the
+**typical raise** (the median change for names on both of two consecutive comparable lists) and
+the change in published employee records. The $75,000 threshold has not moved since 2002, so the
+record count grows as pay rises; the typical raise is the headline measure. These
+organization-level figures combine different roles; the counts are not employee headcount.
+Council, board, executive-only, compiled and incomplete schedules are excluded from these
+comparisons; latest reporting periods and thresholds remain visible. Rankings require at least ten
+records (fifty names on both lists for raises) and leave out employers whose latest disclosure ends
+more than about 18 months before the newest in the selection.
+
+Person pages and employer trends can show amounts in the latest year's dollars, using the B.C.
+consumer price index from Statistics Canada ([source and method](research/salaries/cpi/README.md)).
 The small `public/salaries/employer-stats.json.gzip` companion is rebuilt from existing employer
 exports by `npm run build:employer-stats` (also part of `build:salaries`) and checked for freshness
 by the salary tests. Existing salary records and indexes are unchanged by that companion build.
