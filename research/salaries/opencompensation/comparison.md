@@ -4,7 +4,7 @@ Observed 2026-11-04T20:33:23Z. Status: **filtered-directory-compared-periods-unv
 
 The [published employer directory](https://www.opencompensation.org/british-columbia/employer) contains **158 published names** selected by its minimum of 15 positive compensation records and latest period per name. **158 names map to 119 PofBC employer IDs**; 0 are unmatched and 0 are ambiguous. Employer IDs are the repository's identities, not an independent legal-entity census.
 
-The comparison reconciles **1,455,023 PofBC disclosure observations**, including **1,226,659 official-source observations** and **228,364 compiled observations**, across **280 employers** and **1279 populated employer/periods**. These totals span different years and scopes from the external table and are not subtracted.
+The comparison reconciles **1,460,511 PofBC disclosure observations**, including **1,232,147 official-source observations** and **228,364 compiled observations**, across **280 employers** and **1279 populated employer/periods**. These totals span different years and scopes from the external table and are not subtracted.
 
 The saved site coverage statement reports **171,863 B.C. salary records** under **2023-2024**. Its national record total also includes other provinces and physician-payment datasets. The B.C. latest snapshot does not imply continuous annual coverage.
 
@@ -217,5 +217,5 @@ npm run check:opencompensation
 
 [Detailed comparison](comparison.json) · [Directory comparison CSV](comparison.csv) · [Observed input](observed-snapshot.json) · [Methods and source findings](README.md)
 
-Repository salary input SHA-256: `729cebb0d6cbf0a34169fa5ce8504f13c7f021ad1d01302fc18ded0f7d8aa310`.
+Repository salary input SHA-256: `5ec17e87601082358380134b48be5c4a7c1dd2c65e7b50ce307b73be417a9120`.
 Saved directory input SHA-256: `3c3a0fb9ef04e42aa58d4ea5f5d20084dc92fbdc6fe3162fc9eb336d6dec7f24`.

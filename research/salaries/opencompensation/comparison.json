@@ -36,11 +36,11 @@
     "namesMatchingOnlyWithPositiveRemunerationFilter": 5,
     "repository": {
       "employers": 280,
-      "rows": 1455023,
-      "namedRows": 1447576,
-      "officialRows": 1226659,
+      "rows": 1460511,
+      "namedRows": 1453064,
+      "officialRows": 1232147,
       "compiledRows": 228364,
-      "employeeRows": 1192554,
+      "employeeRows": 1198042,
       "availableEmployerYears": 1279
     },
     "workforceCompletenessEstablished": false,
@@ -3029,13 +3029,13 @@
       "referencePeriodVerified": false,
       "recordLevelParityChecked": false,
       "countDifference": null,
-      "repositoryRowsAllPeriods": 16902,
+      "repositoryRowsAllPeriods": 22390,
       "candidates": [
         {
           "yearLabel": "2023/24",
           "candidateBasis": "normalized-edition-label-only",
-          "rows": 3187,
-          "officialRows": 0,
+          "rows": 6374,
+          "officialRows": 3187,
           "compiledRows": 3187,
           "cohorts": [
             {
@@ -3070,6 +3070,44 @@
                   "highestRounded": 363579
                 },
                 "expenseTreatment": "All expense cells in this input are numeric; remuneration and expenses remain separate source fields."
+              },
+              "matchingAggregateDefinitions": [
+                "remunerationPlusKnownExpenses",
+                "remunerationPlusKnownExpensesForPositiveRemuneration"
+              ]
+            },
+            {
+              "sourceId": "vsb-history-sd39-2024-employees",
+              "sourceKind": "official",
+              "scope": "employee-remuneration",
+              "rows": 3187,
+              "periodType": "fiscal",
+              "periodStart": "2023-07-01",
+              "periodEnd": "2024-06-30",
+              "threshold": 75000,
+              "thresholdComparison": ">",
+              "url": "https://media.vsb.bc.ca/media/Default/medialib/2023-2024-statement-of-financial-information.784fac77630.pdf",
+              "hasPublicWarning": true,
+              "partialDisclosure": false,
+              "signatures": {
+                "rows": 3187,
+                "unknownExpenses": 1873,
+                "remuneration": {
+                  "recordCount": 3187,
+                  "averageRounded": 103379,
+                  "highestRounded": 345934
+                },
+                "remunerationPlusKnownExpenses": {
+                  "recordCount": 3187,
+                  "averageRounded": 103707,
+                  "highestRounded": 363579
+                },
+                "remunerationPlusKnownExpensesForPositiveRemuneration": {
+                  "recordCount": 3187,
+                  "averageRounded": 103707,
+                  "highestRounded": 363579
+                },
+                "expenseTreatment": "Only reported numeric expenses are added; missing expenses remain unknown. This is an arithmetic diagnostic, not a complete compensation measure."
               },
               "matchingAggregateDefinitions": [
                 "remunerationPlusKnownExpenses",
@@ -17425,13 +17463,13 @@
       "referencePeriodVerified": false,
       "recordLevelParityChecked": false,
       "countDifference": null,
-      "repositoryRowsAllPeriods": 16902,
+      "repositoryRowsAllPeriods": 22390,
       "candidates": [
         {
           "yearLabel": "2017/18",
           "candidateBasis": "normalized-edition-label-only",
-          "rows": 2312,
-          "officialRows": 0,
+          "rows": 4613,
+          "officialRows": 2301,
           "compiledRows": 2312,
           "cohorts": [
             {
@@ -17471,6 +17509,41 @@
                 "remunerationPlusKnownExpenses",
                 "remunerationPlusKnownExpensesForPositiveRemuneration"
               ]
+            },
+            {
+              "sourceId": "vsb-history-sd39-2018-employees",
+              "sourceKind": "official",
+              "scope": "employee-remuneration",
+              "rows": 2301,
+              "periodType": "fiscal",
+              "periodStart": "2017-07-01",
+              "periodEnd": "2018-06-30",
+              "threshold": 75000,
+              "thresholdComparison": ">",
+              "url": "https://media.vsb.bc.ca/media/Default/medialib/2017-2018-statement-of-financial-information.f3b9a327108.pdf",
+              "hasPublicWarning": true,
+              "partialDisclosure": false,
+              "signatures": {
+                "rows": 2301,
+                "unknownExpenses": 1426,
+                "remuneration": {
+                  "recordCount": 2301,
+                  "averageRounded": 88533,
+                  "highestRounded": 198189
+                },
+                "remunerationPlusKnownExpenses": {
+                  "recordCount": 2301,
+                  "averageRounded": 88691,
+                  "highestRounded": 198189
+                },
+                "remunerationPlusKnownExpensesForPositiveRemuneration": {
+                  "recordCount": 2301,
+                  "averageRounded": 88691,
+                  "highestRounded": 198189
+                },
+                "expenseTreatment": "Only reported numeric expenses are added; missing expenses remain unknown. This is an arithmetic diagnostic, not a complete compensation measure."
+              },
+              "matchingAggregateDefinitions": []
             }
           ]
         }
@@ -20298,15 +20371,15 @@
   "fingerprints": {
     "snapshotSha256": "3c3a0fb9ef04e42aa58d4ea5f5d20084dc92fbdc6fe3162fc9eb336d6dec7f24",
     "aliasesSha256": "01bd579dd41abd3006f68cb9aec0daecdd5fe4a8a4ff8d15eb6ccefedaf72952",
-    "repositoryInputsSha256": "729cebb0d6cbf0a34169fa5ce8504f13c7f021ad1d01302fc18ded0f7d8aa310",
+    "repositoryInputsSha256": "5ec17e87601082358380134b48be5c4a7c1dd2c65e7b50ce307b73be417a9120",
     "historicalCompilationSha256": "410bcae27c9755e387c473ab44d62081a50b46e7330f4d6d5c0b74979d392760",
     "historicalCompilationManifestSha256": "57d5444065bc037147368c4e6642b5f880dc10c784d7b390168a01145822a49b"
   },
   "repositoryInputs": [
     {
       "path": "public/salaries/coverage.json",
-      "bytes": 7721508,
-      "sha256": "58db2070adbbf43541095e720d7526247d0a2b3e228b530d1e404e13213baf47"
+      "bytes": 7709093,
+      "sha256": "cbec846fa293ce5c530152e72ced0d399f27f3d36c3cc5b3163dc2a84e83382a"
     },
     {
       "path": "public/salaries/employers/abbotsford-police.json.gzip",
@@ -21560,8 +21633,8 @@
     },
     {
       "path": "public/salaries/employers/vancouver-school-district.json.gzip",
-      "bytes": 253772,
-      "sha256": "b827d84e9817ac5fbd9849675df7f383fabaa9b3e25d2bc6cb6131e0fe0cbc74"
+      "bytes": 297193,
+      "sha256": "3a06ddee4b97d111688d502d4e29625391d37f0ae45760f634ae040fef085ab8"
     },
     {
       "path": "public/salaries/employers/victoria-police.json.gzip",
@@ -21710,8 +21783,8 @@
     },
     {
       "path": "public/salaries/index.json",
-      "bytes": 11766499,
-      "sha256": "46b3777481eae4ece8206f960b2fab0f58d45ab7ec1644ce40786909e857216a"
+      "bytes": 11775474,
+      "sha256": "512016e7ba0842c8de866a8da9a4826a7df11cd7a331d66937dd47cf1aefa931"
     }
   ],
   "historicalCompilationNotes": [

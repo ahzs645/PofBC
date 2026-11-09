@@ -27,7 +27,7 @@
   "fingerprints": {
     "snapshotSha256": "5955544e5deef4dcc72fcb201137dd943053ef78deeca303026c4a4bc19124f1",
     "aliasesSha256": "f8fbabcea76dfaab15fcfcea12aac2eee5ba2e56203b89d7cb890ec4eec81b4d",
-    "repositoryInputsSha256": "729cebb0d6cbf0a34169fa5ce8504f13c7f021ad1d01302fc18ded0f7d8aa310"
+    "repositoryInputsSha256": "5ec17e87601082358380134b48be5c4a7c1dd2c65e7b50ce307b73be417a9120"
   },
   "summary": {
     "referenceEmployers": 3,
@@ -42,16 +42,16 @@
     "recordLevelParityChecked": false,
     "repository": {
       "employers": 280,
-      "rows": 1455023,
-      "namedRows": 1447576,
-      "officialRows": 1226659,
+      "rows": 1460511,
+      "namedRows": 1453064,
+      "officialRows": 1232147,
       "compiledRows": 228364,
-      "employeeRows": 1192554,
+      "employeeRows": 1198042,
       "availableEmployerYears": 1279
     },
     "repositoryEmployersWithOfficial": 238,
     "repositoryCompiledOnlyEmployers": 42,
-    "repositorySourceTasks": 216,
+    "repositorySourceTasks": 214,
     "externalReferenceTasks": 3
   },
   "employers": [
@@ -8729,19 +8729,23 @@
         "Vancouver school district"
       ],
       "sector": "School districts",
-      "rows": 16902,
-      "namedRows": 16902,
-      "officialRows": 8774,
+      "rows": 22390,
+      "namedRows": 22390,
+      "officialRows": 14262,
       "compiledRows": 8128,
-      "employeeRows": 8763,
+      "employeeRows": 14251,
       "officialPeriods": [
+        "2017/18",
         "2019/20",
         "2022/23",
+        "2023/24",
         "2024/25"
       ],
       "officialEmployeePeriods": [
+        "2017/18",
         "2019/20",
         "2022/23",
+        "2023/24",
         "2024/25"
       ],
       "compiledEditionLabels": [
@@ -8749,13 +8753,15 @@
         "2020/21",
         "2023/24"
       ],
-      "acceptedPeriodCount": 3,
-      "sourceLeadCount": 5,
+      "acceptedPeriodCount": 5,
+      "sourceLeadCount": 3,
       "partialSources": [
         "gap-fill-school-south-sd39-2025-employees",
         "gap-fill-school-south-sd39-2025-trustees",
+        "vsb-history-sd39-2018-employees",
         "vsb-history-sd39-2020-employees",
-        "vsb-history-sd39-2023-employees"
+        "vsb-history-sd39-2023-employees",
+        "vsb-history-sd39-2024-employees"
       ]
     },
     {
@@ -9642,9 +9648,9 @@
       "employers": 60,
       "employersWithOfficial": 60,
       "compiledOnlyEmployers": 0,
-      "officialRows": 59610,
+      "officialRows": 65098,
       "compiledRows": 45385,
-      "rows": 104995
+      "rows": 110483
     },
     {
       "sector": "Universities and colleges",
@@ -12548,23 +12554,6 @@
       "reason": null
     },
     {
-      "id": "source-15e517eac92d156f",
-      "origin": "repository-source-catalog",
-      "priority": 1,
-      "employerSlug": "vancouver-school-district",
-      "employerName": "Vancouver School Board",
-      "referenceEmployer": null,
-      "year": "2017/18",
-      "status": "held-for-review",
-      "sourceUrl": "https://media.vsb.bc.ca/media/Default/medialib/2017-2018-statement-of-financial-information.f3b9a327108.pdf",
-      "sourceId": "vsb-history-sd39-2018-employees",
-      "scope": "employee-remuneration",
-      "repositoryRows": 2312,
-      "referenceRecords": null,
-      "nextAction": "Validated and ready, but this year already has published compiled records, which the build preserves exactly. Importing it needs the site owner's decision in compiled-retention-decisions.json (retain the compiled rows alongside, or retire them so this official schedule replaces their damaged names).",
-      "reason": "Validated and ready, but this year already has published compiled records, which the build preserves exactly. Importing it needs the site owner's decision in compiled-retention-decisions.json (retain the compiled rows alongside, or retire them so this official schedule replaces their damaged names)."
-    },
-    {
       "id": "source-f95fde22546bcdfa",
       "origin": "repository-source-catalog",
       "priority": 1,
@@ -12614,23 +12603,6 @@
       "referenceRecords": null,
       "nextAction": "The employee schedule (physical pages 55-105) is a scanned image (Canon iR-ADV scan) with an embedded OCR text layer, not native text. The OCR layer contains character errors in names and amounts (e.g. \"t04\"), and both extraction engines read the same OCR layer, so they are not independent transcriptions. No rows imported; requires an image-based transcription with independent review.",
       "reason": "The employee schedule (physical pages 55-105) is a scanned image (Canon iR-ADV scan) with an embedded OCR text layer, not native text. The OCR layer contains character errors in names and amounts (e.g. \"t04\"), and both extraction engines read the same OCR layer, so they are not independent transcriptions. No rows imported; requires an image-based transcription with independent review."
-    },
-    {
-      "id": "source-6d2ada6268aa5572",
-      "origin": "repository-source-catalog",
-      "priority": 1,
-      "employerSlug": "vancouver-school-district",
-      "employerName": "Vancouver School Board",
-      "referenceEmployer": null,
-      "year": "2023/24",
-      "status": "held-for-review",
-      "sourceUrl": "https://media.vsb.bc.ca/media/Default/medialib/2023-2024-statement-of-financial-information.784fac77630.pdf",
-      "sourceId": "vsb-history-sd39-2024-employees",
-      "scope": "employee-remuneration",
-      "repositoryRows": 3187,
-      "referenceRecords": null,
-      "nextAction": "Validated and ready, but this year already has published compiled records, which the build preserves exactly. Importing it needs the site owner's decision in compiled-retention-decisions.json (retain the compiled rows alongside, or retire them so this official schedule replaces their damaged names).",
-      "reason": "Validated and ready, but this year already has published compiled records, which the build preserves exactly. Importing it needs the site owner's decision in compiled-retention-decisions.json (retain the compiled rows alongside, or retire them so this official schedule replaces their damaged names)."
     },
     {
       "id": "source-397f30411bc0c7c9",
@@ -13384,8 +13356,8 @@
   "inputs": [
     {
       "path": "public/salaries/coverage.json",
-      "bytes": 7721508,
-      "sha256": "58db2070adbbf43541095e720d7526247d0a2b3e228b530d1e404e13213baf47"
+      "bytes": 7709093,
+      "sha256": "cbec846fa293ce5c530152e72ced0d399f27f3d36c3cc5b3163dc2a84e83382a"
     },
     {
       "path": "public/salaries/employers/abbotsford-police.json.gzip",
@@ -14639,8 +14611,8 @@
     },
     {
       "path": "public/salaries/employers/vancouver-school-district.json.gzip",
-      "bytes": 253772,
-      "sha256": "b827d84e9817ac5fbd9849675df7f383fabaa9b3e25d2bc6cb6131e0fe0cbc74"
+      "bytes": 297193,
+      "sha256": "3a06ddee4b97d111688d502d4e29625391d37f0ae45760f634ae040fef085ab8"
     },
     {
       "path": "public/salaries/employers/victoria-police.json.gzip",
@@ -14789,8 +14761,8 @@
     },
     {
       "path": "public/salaries/index.json",
-      "bytes": 11766499,
-      "sha256": "46b3777481eae4ece8206f960b2fab0f58d45ab7ec1644ce40786909e857216a"
+      "bytes": 11775474,
+      "sha256": "512016e7ba0842c8de866a8da9a4826a7df11cd7a331d66937dd47cf1aefa931"
     }
   ]
 }

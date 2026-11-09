@@ -13,11 +13,11 @@ compilation.
 
 Each batch was read with two PDF engines (pdftotext and pdfplumber) agreeing row-for-row, and
 reconciled to the printed totals. The PDF hashes were rechecked and rows sampled against the PDFs
-at integration. Official rows rose from 1,217,094 to 1,226,659; the compiled baseline is unchanged.
+at integration. Official rows rose from 1,217,094 to 1,232,147; the compiled baseline is unchanged.
 
 | Batch | Accepted | Held, and why |
 |---|---|---|
-| `vsb-history/`: Vancouver School District | 2019/20 (2,534 rows) and 2022/23 (2,869), both years that had no records | 2018/19, 2020/21, 2021/22: scanned images whose embedded OCR is wrong. **2017/18 (2,301) and 2023/24 (3,187): validated and ready, but these years have published compiled records, which the build preserves exactly. They need the site owner's decision in `compiled-retention-decisions.json`: keep the compiled rows alongside, or retire them so the official schedule replaces their damaged names.** |
+| `vsb-history/`: Vancouver School District | 2017/18 (2,301 rows), 2019/20 (2,534), 2022/23 (2,869) and 2023/24 (3,187). 2017/18 and 2023/24 sit beside their published compiled records, kept by the owner's retention decision of 9 November 2026. | 2018/19, 2020/21, 2021/22: scanned images whose embedded OCR is wrong. 2020/21 still has only the compiled records, with their damaged names. |
 | `regional-districts/`: Cowichan Valley, Thompson-Nicola, Nanaimo and North Okanagan regional districts, 2023–2025, employees and directors | 23 schedules | Cowichan Valley 2024 directors: $309.26 short of the printed total. Capital, Fraser Valley, Central Okanagan and Comox Valley: no current SOFI PDF found. |
 | `source-found-municipal/`: years marked "source found" | 46 schedules: Nelson 2019–2024, Prince Rupert 2016–2017 and 2019–2024, Penticton 2023–2024, Cranbrook 2023–2024, Quesnel 2024 (plus 2021–2022 council), Castlegar 2021–2022 council, Dawson Creek 2015, Smithers 2024 | Image-only PDFs needing OCR: Nelson 2011–2018, Prince Rupert 2018, Quesnel 2018–2020, Penticton 2021–2022. OCR text layers with visible errors: Dawson Creek 2016, 2018, 2025; Salmon Arm 2021, 2023; Smithers 2023. Totals off: Quesnel 2021–2022 employee expenses, Castlegar 2021–2022 employees. |
 

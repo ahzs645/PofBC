@@ -79,11 +79,11 @@
       "rowCount": 2301,
       "totalRemuneration": 203714938.43,
       "totalExpenses": 364150.92,
-      "status": "held-for-review",
+      "status": "accepted",
       "sourceKind": "official",
       "completeEmployeeSchedule": true,
       "verifiedOn": "2026-11-09",
-      "publicWarning": "Fiscal-year payment disclosures are not annual base salary rates or a complete workforce census. Source expense dashes remain unknown (null); explicit zero and negative amounts remain literal. The source surname and given-name columns are joined with a comma and space, without expanding or resolving identities.",
+      "publicWarning": "Fiscal-year payment disclosures are not annual base salary rates or a complete workforce census. Source expense dashes remain unknown (null); explicit zero and negative amounts remain literal. The source surname and given-name columns are joined with a comma and space, without expanding or resolving identities. Existing compiled observations are retained and may overlap these official disclosures; a complete source-compatible duplicate-copy comparison has not established a replacement.",
       "notes": [
         "Only literal named employee observations are imported. Elected officials, below-threshold totals, employer CPP/EI, vendors and financial statements remain supporting evidence.",
         "No amount was changed to balance a printed subtotal. Two independent native-text readers agree on every character and amount; this does not establish perfect transcription accuracy."
@@ -173,10 +173,10 @@
         "zeroExpenseRows": 0,
         "negativeExpenseRows": 0,
         "rowsAtOrBelowThreshold": 0,
-        "completeEmployeeSchedule": true
-      },
-      "reason": "Validated and ready, but this year already has published compiled records, which the build preserves exactly. Importing it needs the site owner's decision in compiled-retention-decisions.json (retain the compiled rows alongside, or retire them so this official schedule replaces their damaged names).",
-      "nextAction": "Validated and ready, but this year already has published compiled records, which the build preserves exactly. Importing it needs the site owner's decision in compiled-retention-decisions.json (retain the compiled rows alongside, or retire them so this official schedule replaces their damaged names)."
+        "completeEmployeeSchedule": true,
+        "compiledPartitionRetained": true,
+        "compiledPartitionRetentionReason": "Existing compiled observations are retained and may overlap these official disclosures; a complete source-compatible duplicate-copy comparison has not established a replacement."
+      }
     },
     {
       "id": "vsb-history-sd39-2019-employees",
@@ -803,11 +803,11 @@
       "rowCount": 3187,
       "totalRemuneration": 329468990,
       "totalExpenses": 1044624,
-      "status": "held-for-review",
+      "status": "accepted",
       "sourceKind": "official",
       "completeEmployeeSchedule": true,
       "verifiedOn": "2026-11-09",
-      "publicWarning": "Fiscal-year payment disclosures are not annual base salary rates or a complete workforce census. Source expense dashes remain unknown (null); explicit zero and negative amounts remain literal. The source surname and given-name columns are joined with a comma and space, without expanding or resolving identities. In 1 row the printed given names run into the position cell; the split follows the printed column boundary. Asterisks printed after two given names mark expenses that include international student recruitment travel; they are kept as printed.",
+      "publicWarning": "Fiscal-year payment disclosures are not annual base salary rates or a complete workforce census. Source expense dashes remain unknown (null); explicit zero and negative amounts remain literal. The source surname and given-name columns are joined with a comma and space, without expanding or resolving identities. In 1 row the printed given names run into the position cell; the split follows the printed column boundary. Asterisks printed after two given names mark expenses that include international student recruitment travel; they are kept as printed. Existing compiled observations are retained and may overlap these official disclosures; a complete source-compatible duplicate-copy comparison has not established a replacement.",
       "notes": [
         "Only literal named employee observations are imported. Elected officials, below-threshold totals, employer CPP/EI, vendors and financial statements remain supporting evidence.",
         "No amount was changed to balance a printed subtotal. Two independent native-text readers agree on every character and amount; this does not establish perfect transcription accuracy."
@@ -934,10 +934,10 @@
         "zeroExpenseRows": 0,
         "negativeExpenseRows": 0,
         "rowsAtOrBelowThreshold": 0,
-        "completeEmployeeSchedule": true
-      },
-      "reason": "Validated and ready, but this year already has published compiled records, which the build preserves exactly. Importing it needs the site owner's decision in compiled-retention-decisions.json (retain the compiled rows alongside, or retire them so this official schedule replaces their damaged names).",
-      "nextAction": "Validated and ready, but this year already has published compiled records, which the build preserves exactly. Importing it needs the site owner's decision in compiled-retention-decisions.json (retain the compiled rows alongside, or retire them so this official schedule replaces their damaged names)."
+        "completeEmployeeSchedule": true,
+        "compiledPartitionRetained": true,
+        "compiledPartitionRetentionReason": "Existing compiled observations are retained and may overlap these official disclosures; a complete source-compatible duplicate-copy comparison has not established a replacement."
+      }
     }
   ]
 }
