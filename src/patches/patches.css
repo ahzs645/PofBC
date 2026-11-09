@@ -94,6 +94,22 @@
 .patch__steps { display: flex; gap: 8px; margin-left: auto; }
 
 .patch__body { display: grid; grid-template-columns: minmax(0, 1fr) 340px; }
+.patch__visuals { min-width: 0; }
+.patch__review { display: grid; gap: 10px; padding: 18px 20px; border-bottom: 1px solid var(--outline); font-size: 13px; line-height: 1.5; color: var(--ink-muted); }
+.patch__review-heading { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 10px; }
+.patch__review h3 { margin: 0; color: var(--ink); font-size: 16px; }
+.patch__review p { margin: 0; }
+.patch__review ul { margin: 0; padding-left: 19px; display: grid; gap: 5px; }
+.patch__review-status { padding: 2px 8px; border: 1px solid var(--outline); border-radius: 6px; background: var(--track); color: var(--ink-2); font-size: 12px; font-weight: 600; }
+.patch__review-status--reconstruct, .patch__review-status--refine { border-style: dashed; }
+.patch__review-priority { font-size: 12px; font-weight: 600; color: var(--ink-2); }
+.patch__review-limits { border-left: 2px solid var(--outline); padding-left: 10px; }
+.patch__candidate { display: grid; gap: 5px; padding: 9px 11px; border: 1px solid var(--outline); border-radius: 6px; }
+.patch__candidate h4 { margin: 0; color: var(--ink-2); font-size: 13px; }
+.patch__review-date { font-size: 12px; color: var(--ink-faint); }
+.patch__source-select { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 10px; }
+.patch__source-select > span { font-weight: 600; color: var(--ink-2); }
+.patch__source-select select { min-width: 0; max-width: 100%; }
 .patch__stages { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1px; background: var(--outline); }
 .patch__stage {
   position: relative;
@@ -120,7 +136,15 @@
 }
 .patch__stage img,
 .patch__stage canvas { display: block; max-width: 100%; max-height: min(52vh, 480px); width: auto; height: auto; object-fit: contain; }
+.patch__stage canvas[hidden] { display: none; }
 .patch__stage img { width: 80%; filter: drop-shadow(0 6px 14px rgba(0, 0, 0, 0.18)); }
+.patch__stage--source, .patch__stage--vector { flex-direction: column; justify-content: flex-start; gap: 16px; }
+/* Equal fit boxes enlarge small evidence crops without changing the image's proportions. */
+.patch__stage--source img, .patch__stage--vector img { width: 100%; height: min(52vh, 480px); max-width: 100%; object-fit: contain; filter: none; }
+.patch__source-caption { display: grid; gap: 5px; width: 100%; font-size: 12px; line-height: 1.5; color: var(--ink-muted); overflow-wrap: anywhere; }
+.patch__source-caption p { margin: 0; }
+.patch__source-caption a { color: var(--ink); }
+.patch__stage--simulation { grid-column: 1 / -1; min-height: 320px; border-top: 1px solid var(--outline); }
 .patch__status { color: var(--ink-muted); font-size: 14px; text-align: center; }
 
 .patch__panel { padding: 18px 20px 22px; border-left: 1px solid var(--outline); display: grid; align-content: start; gap: 12px; }
