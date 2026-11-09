@@ -1,0 +1,415 @@
+{
+  "schemaVersion": 1,
+  "description": "Inputs for scripts/build_health_boundaries.py. Each unit is one map panel registered to the modern LHA linework (coast, provincial border and LHA edges). Seeds are only a starting position; the fit itself uses thousands of automatically matched boundary points.",
+  "sources": {
+    "oag": {
+      "file": "maps/BC-health-area-maps-1997-98.pdf",
+      "sha256": "6f55df69890dd1ce89a516fc25325aa142eee26618911179a8a52e703bf31d04"
+    },
+    "statcan": {
+      "file": "maps/statcan-bc-health-regions-2000-map.pdf",
+      "sha256": "c6f46808c9c20cce227436862a79297f03aaf54e2e6fe81845750b32552db425"
+    }
+  },
+  "reference": {
+    "file": "display-lha.geojson",
+    "sha256": "8577feb8eb24cb66c08ad36bf4d7ba5d093ec94de0b070d3965e2dc2a56e6a96"
+  },
+  "units": [
+    {
+      "id": "boards",
+      "mapId": "boards",
+      "source": "oag",
+      "page": 1,
+      "style": "oag",
+      "order": 3,
+      "tps": true,
+      "clip": {
+        "include": [
+          [
+            100,
+            115,
+            520,
+            480
+          ]
+        ],
+        "exclude": []
+      },
+      "seeds": [
+        [
+          125.285004,
+          119.679016,
+          -139.052201,
+          60.000041
+        ],
+        [
+          387.359985,
+          145.778015,
+          -120,
+          60
+        ],
+        [
+          508.368011,
+          441.071991,
+          -114.068332,
+          48.99885
+        ]
+      ]
+    },
+    {
+      "id": "boards-inset-mainland",
+      "mapId": "boards",
+      "source": "oag",
+      "page": 1,
+      "style": "oag",
+      "order": 2,
+      "tps": false,
+      "inset": true,
+      "clip": {
+        "include": [
+          [
+            178,
+            502.3,
+            283.2,
+            550.8
+          ]
+        ],
+        "exclude": []
+      },
+      "seeds": [
+        [
+          190,
+          535,
+          -123.13,
+          49.17
+        ],
+        [
+          236,
+          550,
+          -122.468,
+          49.0
+        ]
+      ],
+      "seedNote": "Richmond centre and the Langley/Abbotsford line on the 49th parallel"
+    },
+    {
+      "id": "boards-inset-island",
+      "mapId": "boards",
+      "source": "oag",
+      "page": 1,
+      "style": "oag",
+      "order": 2,
+      "tps": false,
+      "inset": true,
+      "clip": {
+        "include": [
+          [
+            113.9,
+            502.3,
+            288,
+            643
+          ]
+        ],
+        "exclude": [
+          [
+            178,
+            502.3,
+            288,
+            550.8
+          ],
+          [
+            180,
+            628,
+            288,
+            643
+          ]
+        ]
+      },
+      "initialFrom": "boards-inset-mainland",
+      "searchMetres": 30000
+    },
+    {
+      "id": "councils",
+      "mapId": "councils",
+      "source": "oag",
+      "page": 2,
+      "style": "oag",
+      "order": 3,
+      "tps": true,
+      "clip": {
+        "include": [
+          [
+            100,
+            115,
+            520,
+            480
+          ]
+        ],
+        "exclude": []
+      },
+      "seeds": [
+        [
+          106.226997,
+          119.799011,
+          -139.052201,
+          60.000041
+        ],
+        [
+          368.368988,
+          145.922974,
+          -120,
+          60
+        ],
+        [
+          488.778015,
+          441.274994,
+          -114.068332,
+          48.99885
+        ]
+      ]
+    },
+    {
+      "id": "societies",
+      "mapId": "societies",
+      "source": "oag",
+      "page": 3,
+      "style": "oag",
+      "order": 3,
+      "tps": true,
+      "clip": {
+        "include": [
+          [
+            100,
+            115,
+            520,
+            480
+          ]
+        ],
+        "exclude": []
+      },
+      "seeds": [
+        [
+          113.169998,
+          120.018005,
+          -139.052201,
+          60.000041
+        ],
+        [
+          375.002991,
+          146.117981,
+          -120,
+          60
+        ],
+        [
+          495.683014,
+          441.411011,
+          -114.068332,
+          48.99885
+        ]
+      ]
+    },
+    {
+      "id": "regions-2000",
+      "mapId": "regions-2000",
+      "source": "statcan",
+      "page": 1,
+      "style": "statcan",
+      "order": 3,
+      "tps": true,
+      "clip": {
+        "include": [
+          [
+            39.1,
+            19.4,
+            586.6,
+            742.6
+          ]
+        ],
+        "exclude": [
+          [
+            39.1,
+            565,
+            252.5,
+            742.6
+          ],
+          [
+            436,
+            340,
+            586.6,
+            742.6
+          ],
+          [
+            440,
+            19.4,
+            586.6,
+            120
+          ]
+        ]
+      },
+      "seeds": [
+        [
+          318.3,
+          390.7,
+          -122.749,
+          53.917
+        ],
+        [
+          403.0,
+          324.6,
+          -120.847,
+          56.252
+        ],
+        [
+          406.9,
+          349.6,
+          -120.234,
+          55.76
+        ],
+        [
+          306.9,
+          428.0,
+          -122.493,
+          52.979
+        ],
+        [
+          298.4,
+          464.0,
+          -122.141,
+          52.129
+        ],
+        [
+          208.6,
+          296.7,
+          -128.599,
+          54.517
+        ],
+        [
+          486.5,
+          193.3,
+          -120,
+          60
+        ]
+      ],
+      "seedNote": "Printed city dots (Prince George, Fort St. John, Dawson Creek, Quesnel, Williams Lake, Terrace) and the 120°W/60°N corner"
+    },
+    {
+      "id": "regions-2000-inset",
+      "mapId": "regions-2000",
+      "source": "statcan",
+      "page": 1,
+      "style": "statcan",
+      "order": 2,
+      "tps": false,
+      "inset": true,
+      "clip": {
+        "include": [
+          [
+            43.9,
+            567.1,
+            250.8,
+            739.9
+          ]
+        ],
+        "exclude": []
+      },
+      "seeds": [
+        [
+          65.1,
+          593.8,
+          -124.805,
+          49.234
+        ],
+        [
+          105.9,
+          626.5,
+          -123.94,
+          49.165
+        ],
+        [
+          103.5,
+          669.7,
+          -123.708,
+          48.778
+        ],
+        [
+          107.3,
+          706.4,
+          -123.366,
+          48.428
+        ],
+        [
+          159.9,
+          651.2,
+          -123.116,
+          49.283
+        ],
+        [
+          188.2,
+          687.2,
+          -122.305,
+          49.05
+        ],
+        [
+          214.1,
+          687.9,
+          -121.951,
+          49.158
+        ]
+      ],
+      "seedNote": "Printed city dots (Port Alberni, Nanaimo, Duncan, Victoria, Vancouver, Abbotsford, Chilliwack)"
+    }
+  ],
+  "insetDrawings": {
+    "fraser-valley-health-region": [
+      11
+    ],
+    "simon-fraser-health-region": [
+      12
+    ],
+    "north-shore-health-region": [
+      13,
+      14
+    ],
+    "vancouver-richmond-health-board": [
+      26,
+      27,
+      28,
+      29,
+      30,
+      31
+    ],
+    "south-fraser-health-region": [
+      41
+    ],
+    "capital-health-region": [
+      35
+    ],
+    "central-vancouver-island-health-region": [
+      38
+    ]
+  },
+  "statcanLegendSwatches": {
+    "01": 1811,
+    "02": 1813,
+    "03": 1815,
+    "04": 1817,
+    "05": 1819,
+    "06": 1821,
+    "07": 1823,
+    "08": 1825,
+    "09": 1827,
+    "10": 1829,
+    "11": 1831,
+    "12": 1833,
+    "13": 1835,
+    "14": 1837,
+    "15": 1839,
+    "16": 1841,
+    "17": 1843,
+    "18": 1845,
+    "19": 1847,
+    "20": 1849
+  },
+  "statcanSharedColours": "Regions 11/18 and 12/20 share a fill colour. Each registered component is assigned to the southern region (18 North Shore, 20 Capital) when its centroid lies south of 49.5°N, otherwise to the northern one.",
+  "snapThreshold": 0.5
+}
