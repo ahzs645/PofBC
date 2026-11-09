@@ -66,7 +66,9 @@ const CouncilCard = ({ row, tab, source, onEmployer }) => {
       </span>
       <span className="salaries__aside">
         {councilMoney(payment ? row.remuneration : row.amount, row.currency)}
-        <span className="salaries__line">{payment ? (Number.isFinite(row.expenses) ? `Expenses ${councilMoney(row.expenses, row.currency)}` : 'Expenses not stated') : Number.isFinite(row.annualSupplement) ? `+ ${councilMoney(row.annualSupplement, row.currency)} supplement` : 'office figure'}</span>
+        {payment
+          ? <span className="salaries__line">{Number.isFinite(row.expenses) ? `Expenses ${councilMoney(row.expenses, row.currency)}` : 'Expenses not stated'}</span>
+          : Number.isFinite(row.annualSupplement) && <span className="salaries__line">+ {councilMoney(row.annualSupplement, row.currency)} supplement</span>}
       </span>
     </article>
   )

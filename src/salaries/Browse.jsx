@@ -36,8 +36,9 @@ export const EmployerCard = ({ entry, years, range, onOpen, stats }) => {
         <span className="salaries__line">{count(records, 'record', 'records')} in {range ? rangeLabel(years, range) : years[latest]}</span>
         {stats && <span className="employer-card__stats">
           <span className="salaries__line"><b>Median {summary(stats.median)}</b> · Average {summary(stats.mean)}</span>
-          <span className="salaries__line">{years[stats.year]} · {count(stats.count, 'official employee record', 'official employee records')}</span>
-          <span className="salaries__line">{Math.round(stats.above100k / stats.count * 100)}% paid $100,000+ · Threshold {money(stats.threshold, 'not specified')}</span>
+          {/* The period and count are on the line above unless the statistics come from another one. */}
+          {stats.year !== latest && <span className="salaries__line">Statistics: {years[stats.year]} · {count(stats.count, 'employee record', 'employee records')}</span>}
+          <span className="salaries__line">{Math.round(stats.above100k / stats.count * 100)}% paid $100,000+{stats.threshold !== STANDARD_THRESHOLD && ` · Threshold ${money(stats.threshold, 'not specified')}`}</span>
           {stats.raise !== null && <span className="salaries__line">Typical raise {employerRate(stats.raise)} · {years[stats.raiseFrom]} → {years[stats.year]}</span>}
         </span>}
         <YearStrip years={years} seen={seenYears(entry)} coverage={entry.coverage} />
@@ -47,6 +48,8 @@ export const EmployerCard = ({ entry, years, range, onOpen, stats }) => {
 }
 
 const PREVIEW = 4
+/** The Financial Information Act's threshold: said once in the notes, and on a card only when it differs. */
+export const STANDARD_THRESHOLD = 75000
 
 /**
  * Every employer, by sector, as cards: with every sector shown, each lists its largest few and a way

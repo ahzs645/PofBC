@@ -72,7 +72,7 @@ export const EmployerInsights = ({ rows, years, ready, failed, onRetry, onOpen, 
                     <strong className="employer-insights__value">{format(winner.stats[metric])}</strong>
                     <button type="button" className="salaries__link employer-insights__name" onClick={() => onOpen(winner.entry.slug, years[winner.stats.year])}>{winner.name}</button>
                     <span className="salaries__line">{detail(metric, winner.stats, years)}</span>
-                    <span className="salaries__line">Reporting threshold {formatMoney(winner.stats.threshold, 'not specified')}</span>
+                    {winner.stats.threshold !== 75000 && <span className="salaries__line">Reporting threshold {formatMoney(winner.stats.threshold, 'not specified')}</span>}
                   </>
                   : <p className="salaries__meta">{metric === 'raise' ? 'No comparable raises in this selection.' : 'No eligible employee disclosures in this selection.'}</p>}
               </div>
@@ -82,7 +82,7 @@ export const EmployerInsights = ({ rows, years, ready, failed, onRetry, onOpen, 
     {ready && older > 0 && <p className="salaries__meta employer-insights__older">{count(older, 'organization is', 'organizations are')} not ranked because {older === 1 ? 'its' : 'their'} latest disclosure in this selection is more than {Math.round(CURRENT_WINDOW_DAYS / 365 * 12)} months older than the newest. Choose a period range to compare older years.</p>}
     <details className="employer-insights__definitions">
       <summary>What these statistics cover</summary>
-      <p>Amounts are CAD remuneration in official annual employee schedules. Council, board, executive-only, compiled and incomplete schedules are excluded. Median and average describe the disclosed records, including any part-year payments; they are not annual salary rates. These organization-level figures combine different roles.</p>
+      <p>Amounts are CAD remuneration in official annual employee schedules, which list employees paid more than $75,000 unless a card says otherwise. Council, board, executive-only, compiled and incomplete schedules are excluded. Median and average describe the disclosed records, including any part-year payments; they are not annual salary rates. These organization-level figures combine different roles.</p>
       <p>Typical raise is the median change in pay for names on both of two consecutive annual lists with the same threshold and period rules, at least {MIN_STAYERS} of them ({MIN_RANKED_STAYERS} to be ranked). A promotion, a part year or retroactive pay from a settled contract shows as a raise or a cut; a shared name is not proof of one person.</p>
       <p>The $75,000 Financial Information Act threshold has not changed since 2002 and is not indexed to inflation, so as pay rises more employees cross it each year. That is why “Most added to the list” counts published records, not employees or new hires, and why an employer’s median can fall while nearly everyone on its list got a raise.</p>
       <p>Rankings require at least {MIN_EMPLOYER_RECORDS} records, and leave out organizations whose latest disclosure is much older than the rest. Reporting thresholds can differ across organizations. Filter to the same period and sector for a closer comparison; open an employer to inspect its source reports.</p>
