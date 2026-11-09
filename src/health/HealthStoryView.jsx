@@ -1,272 +1,214 @@
 import { useCallback, useMemo, useState } from 'react'
-import StoryFrame from './StoryFrame.jsx'
-import { AreaResearchNotes, HealthResearchPanel } from './HealthResearchPanel.jsx'
-import { RectificationEvidence } from './RectificationEvidence.jsx'
-import { BoundaryMap } from './BoundaryMap.jsx'
-import { BoundaryEstimateEvidence, comparisonLayerNames, estimateFor } from './BoundaryEstimateEvidence.jsx'
-import { AlignmentMap } from './AlignmentMap.jsx'
-import { useBoundaryData } from './useBoundaryData.js'
+import { HealthAtlasMap } from './HealthAtlasMap.jsx'
+import { useHealthGeography } from './useHealthGeography.js'
 import {
-  AREAS, CATALOGUE, CHAPTERS, DEFAULT_AREA_ID, PUBLIC_SOURCES, SOURCE_REPORT,
-  CONSOLIDATION_SOURCE, areaById, areasIn, assetUrl, candidateCodes,
-  comparisonFor, evidenceLabel, filterAreas, mapById, readHealthPlace,
+  AREAS, BOUNDARIES, CONSOLIDATION_SOURCE, FRAMEWORKS, OVERLAY_MAP, SOURCE_REPORT, STATCAN_MAP,
+  areaById, areasIn, assetUrl, filterAreas, formatDate, frameworkById, readHealthPlace, relatedAreas,
 } from './healthStoryData.js'
 import { SiteLink } from '../site/navigation.jsx'
 import './healthStory.css'
 
 const asset = (path) => assetUrl(path, import.meta.env.BASE_URL)
-const groupLabels = { boards: 'Regional boards', councils: 'Community councils', societies: 'Service societies' }
-const formatCodes = (codes) => codes.length ? codes.join(', ') : 'None proposed'
-
-function SourceLink({ href, children }) {
-  return <a href={href} target="_blank" rel="noreferrer">{children}<span aria-hidden="true"> ↗</span></a>
+const km = (metres) => (metres / 1000).toLocaleString('en-CA', { maximumFractionDigits: 1, minimumFractionDigits: 1 })
+const PANEL_LABELS = {
+  boards: 'Regional boards, main map', 'boards-inset-mainland': 'Regional boards, Lower Mainland inset',
+  'boards-inset-island': 'Regional boards, south Vancouver Island inset', councils: 'Community councils',
+  societies: 'Service societies', 'regions-2000': 'Statistical regions, main map', 'regions-2000-inset': 'Statistical regions, southwest inset',
 }
 
-function ArchiveMap({ map, area }) {
-  const [zoom, setZoom] = useState(1)
-  const selected = area?.mapId === map.id ? area : null
-  return <figure className="health-archive">
-    <div className="health-media-heading"><div><span className="health-kicker">Original published map</span><h3>{map.title}</h3></div><span className="health-date">{map.dateLabel}</span></div>
-    {selected && <p className="health-archive-selection"><b>{selected.number}</b><span>{selected.sourceLabel}<small>Number in the original legend</small></span></p>}
-    <div className="health-archive-viewport" tabIndex={0} aria-label={`${map.title}, scroll to inspect the enlarged map`}>
-      <img src={asset(map.asset)} alt={`${map.title}. ${map.dateLabel}. Geographic areas are numbered; the complete legend is in the image and the area index below.`} draggable={false} style={{ width: `${zoom * 100}%`, height: `${zoom * 100}%` }} />
+function External({ href, children, className }) {
+  return <a className={className} href={href} target="_blank" rel="noreferrer">{children}<span aria-hidden="true"> ↗</span></a>
+}
+
+// The area in another framework that shares the most local health areas.
+function counterpartIn(area, framework) {
+  const candidates = areasIn(framework)
+  if (!area) return candidates[0]
+  let best = null
+  let bestShared = 0
+  for (const candidate of candidates) {
+    const shared = candidate.lhaCodes.filter((code) => area.lhaCodes.includes(code)).length
+    if (shared > bestShared) { best = candidate; bestShared = shared }
+  }
+  return best ?? candidates[0]
+}
+
+function fitLabel(area) {
+  if (area.framework === 'authorities-2001') return 'Rebuilt from the organizations that amalgamated into it'
+  const overlap = Math.round(area.drawingOverlap * 100)
+  return `${overlap}% overlap with the printed map`
+}
+
+function AreaDetails({ area, onSelect }) {
+  if (!area) return <aside className="hm-details hm-details--empty"><p>Select an area on the map or in the list to see the organization and its boundary.</p></aside>
+  const framework = frameworkById(area.framework)
+  const org = area.organization
+  const groups = relatedAreas(area)
+  const historyYear = area.framework === 'authorities-2001' ? 2002 : 1998
+  return <aside className="hm-details" aria-labelledby="hm-details-title">
+    <p className="hm-kicker">{framework.kind}{area.legendNumber ? ` · map no. ${area.legendNumber}` : ''}</p>
+    <h3 id="hm-details-title">{area.name}</h3>
+    {org && org.officialName !== area.name && <p className="hm-official">{org.officialName}</p>}
+    {!org && area.framework === 'councils' && <p className="hm-official">Shown on the 1997/98 council map, but not designated under the Health Authorities Act. It is not linked to an organization record.</p>}
+    {org && <dl className="hm-facts">
+      {(org.established || org.ended) && <div><dt>{org.ended ? 'Active' : 'Established'}</dt><dd>{formatDate(org.established) ?? 'Unknown'}{org.ended ? ` – ${formatDate(org.ended)}` : ''}</dd></div>}
+      {org.formerNames?.length > 0 && <div><dt>Earlier names</dt><dd>{org.formerNames.join(' · ')}</dd></div>}
+    </dl>}
+    {!org && area.framework === 'regions-2000' && <p className="hm-official">A reporting region used by Statistics Canada, not an organization.</p>}
+    <div className="hm-boundary">
+      <p className="hm-kicker">Boundary</p>
+      <p><b>{area.areaKm2.toLocaleString('en-CA')} km²</b> · made of {area.lhaCodes.length} local health area{area.lhaCodes.length === 1 ? '' : 's'}</p>
+      <ul className="hm-lha-list">{area.lhaNames.map((name, index) => <li key={area.lhaCodes[index]}>{name}</li>)}</ul>
+      <p className={`hm-fit hm-fit--${area.confidence}`}>{area.framework !== 'authorities-2001' && <span>{area.confidence === 'high' ? 'Close fit' : 'Approximate fit'}</span>}{fitLabel(area)}</p>
+      {area.note && <p className="hm-note">{area.note}</p>}
     </div>
-    <figcaption className="health-archive-caption">
-      <div className="health-map-zoom" aria-label="Original map zoom">
-        <button type="button" aria-label="Enlarge original map" disabled={zoom >= 3} onClick={() => setZoom((value) => Math.min(3, value + .5))}>+</button>
-        <button type="button" aria-label="Reduce original map" disabled={zoom <= 1} onClick={() => setZoom((value) => Math.max(1, value - .5))}>−</button>
-        <button type="button" onClick={() => setZoom(1)}>Fit page</button>
-      </div>
-      <SourceLink href={map.sourceUrl}>Original source{map.printedPage ? ` · page ${map.printedPage}` : ''}</SourceLink>
-      <span className="health-map-credit">{map.credit}</span>
-    </figcaption>
-  </figure>
-}
-
-function AreaPicker({ mapId, selected, onSelect, id }) {
-  return <label className="health-field" htmlFor={id}><span>Find an area on this map</span>
-    <select id={id} value={selected?.mapId === mapId ? selected.id : ''} onChange={(event) => { if (event.target.value) onSelect(event.target.value) }}>
-      <option value="">Choose an area…</option>
-      {areasIn(mapId).map((area) => <option key={area.id} value={area.id}>{area.number}. {area.sourceLabel}</option>)}
-    </select>
-  </label>
-}
-
-function AreaEvidence({ area, match, onCompare, compact = false }) {
-  if (!area) return null
-  return <section className={`health-area-evidence${compact ? ' is-compact' : ''}`} aria-label={`Evidence for ${area.sourceLabel}`}>
-    <p className="health-kicker">{groupLabels[area.mapId]} · map area {area.number}</p>
-    <h3>{area.sourceLabel}</h3><p className="health-muted">{area.name}</p>
-    {!area.identityConfirmed && <p className="health-notice">This source labels a Nisga’a health authority. Its relationship to the separately recorded statutory council remains unresolved.</p>}
-    {match && <><span className="health-evidence-badge">{evidenceLabel(match)}</span><p>{match.explanation}</p></>}
-    {area.legalDefinition && <p className="health-small"><SourceLink href={area.legalDefinition.sourcePageUrl}>Written boundary · PDF pages {area.legalDefinition.pdfPageStart}–{area.legalDefinition.pdfPageEnd}</SourceLink></p>}
-    <div className="health-actions">
-      {onCompare && <button type="button" className="health-button" onClick={() => onCompare(area.id)}>Compare existing boundaries</button>}
-      {area.bodyId && <SiteLink to={{ view: 'government', node: area.bodyId, year: 1997 }} className="health-text-link">Organization history →</SiteLink>}
-      <SourceLink href={area.sourceUrl}>Source map</SourceLink>
+    {groups.map((group) => <div className="hm-related" key={group.label}>
+      <p className="hm-kicker">{group.label}</p>
+      <div className="hm-chips">{group.areas.map((related) => <button type="button" key={related.id} onClick={() => onSelect(related.id)}>{related.name}</button>)}</div>
+    </div>)}
+    <div className="hm-links">
+      {org && <SiteLink to={{ view: 'government', node: org.bodyId, year: historyYear }}>Organization history →</SiteLink>}
+      <External href={framework.source.url}>Printed source</External>
     </div>
-    {!compact && <details className="health-details"><summary>Names and evidence notes</summary><ul>{area.notes.map((note, index) => <li key={index}>{note}</li>)}</ul></details>}
-    <AreaResearchNotes areaId={area.id} />
-  </section>
+  </aside>
 }
 
-function BoundaryLoading({ data }) {
-  return <div className="health-loading" role="status"><p>{data.phase === 'error' ? data.error : 'Loading the boundary comparison…'}</p>
-    {data.phase === 'error' && <button type="button" className="health-button" onClick={data.retry}>Retry boundary data</button>}
-    <p className="health-small">The original maps remain available in the earlier chapters and downloads.</p>
-  </div>
-}
-
-function ComparisonMedia({ data, area, layer, setLayer, onFeatureSelect }) {
-  const [view, setView] = useState('boundaries')
-  const match = comparisonFor(data.comparison, area.id)
-  const assessment = estimateFor(data.estimates, area.id)
-  const review = data.estimates?.alignmentReviews?.[area.id]
-  const localAlignment = review?.workingAlignment?.enabled
-  const displayedLayer = localAlignment && !Object.hasOwn(comparisonLayerNames, layer) ? 'lha' : layer
-  const selectedCodes = useMemo(() => ['estimates', 'drawn'].includes(displayedLayer) ? new Set([area.id])
-    : ['municipalities', 'regionalDistricts', 'schoolDistricts'].includes(displayedLayer) ? new Set(assessment?.currentBoundaryScreening[displayedLayer].slice(0, 1).map((entry) => String(entry.code)))
-      : candidateCodes(match, displayedLayer), [area.id, match, displayedLayer, assessment])
-  return <div className="health-comparison-media">
-    <div className="health-media-tabs" role="group" aria-label="Comparison display">
-      {[['boundaries', 'Estimates and boundaries'], ['archive', 'Original map'], ['both', 'Side by side']].map(([id, label]) => <button type="button" key={id} aria-pressed={view === id} onClick={() => setView(id)}>{label}</button>)}
-    </div>
-    <div className={`health-comparison-panes${view === 'both' ? ' is-split' : ''}`}>
-      {view !== 'archive' && <section className="health-current-pane" aria-label="Existing PGMaps boundary comparison">
-        <div className="health-media-heading"><div><span className="health-kicker">Historical estimates and current references</span><h3>{area.sourceLabel}</h3></div>
-          <select aria-label="Boundary or estimate layer" value={displayedLayer} onChange={(event) => setLayer(event.target.value)}>{localAlignment ? Object.entries(comparisonLayerNames).map(([id, name]) => <option key={id} value={id}>Current {name.toLowerCase()}</option>) : <><option value="estimates">Best working estimate</option><option value="drawn">Source-drawn estimate</option><option value="lha">Current local health areas</option><option value="hsda">Current service delivery areas</option><option value="ha">Current health authorities</option><option value="municipalities">Current municipalities</option><option value="regionalDistricts">Current regional districts</option><option value="schoolDistricts">Current school districts</option><option value="historical">20 statistical illustrations</option></>}</select>
-        </div>
-        {data.phase !== 'ready' ? <BoundaryLoading data={data} /> : localAlignment ? <AlignmentMap key={area.id} collections={data.collections} referenceLayer={displayedLayer} referenceCodes={selectedCodes} areaId={area.id} review={review} /> : <BoundaryMap collections={data.collections} layer={displayedLayer} selectedCodes={selectedCodes} selectedName={area.sourceLabel} onFeatureSelect={onFeatureSelect} sourceMapId={area.mapId} sourceAreaId={area.id} />}
-        <p className="health-map-credit">{localAlignment ? 'Reference: current PGMaps geography and coastal coverage. Magenta: original trace. Orange: provisional local adjustment, 5 km north. Place labels provide orientation. Original cartography: Ministry of Health, published by the BC Auditor General, March 1998.' : 'Estimates are provisional. Current reference layers are dated modern geography; extra layers highlight the closest individual feature by drawing overlap. Magenta: registered Ministry map, published by the BC Auditor General, March 1998.'} No historical legal boundary is verified.</p>
-      </section>}
-      {view !== 'boundaries' && <ArchiveMap key={area.mapId} map={mapById(area.mapId)} area={area} />}
-    </div>
-  </div>
-}
-
-function StatisticalRegionMedia({ data, onEnable }) {
-  const [view, setView] = useState('archive')
-  const [selected, setSelected] = useState(null)
-  const codes = useMemo(() => new Set(selected ? [String(selected.properties.code)] : []), [selected])
-  return <div className="health-comparison-media">
-    <div className="health-media-tabs" role="group" aria-label="Statistical region display">
-      <button type="button" aria-pressed={view === 'archive'} onClick={() => setView('archive')}>Original statistical map</button>
-      <button type="button" aria-pressed={view === 'estimate'} onClick={() => { setView('estimate'); onEnable() }}>20 working illustrations</button>
-    </div>
-    {view === 'archive' ? <ArchiveMap map={mapById('regions-2000')} /> : <section className="health-current-pane">
-      <div className="health-media-heading"><div><span className="health-kicker">Statistical geography · provisional</span><h3>Twenty regional illustrations</h3></div></div>
-      {data.phase !== 'ready' ? <BoundaryLoading data={data} /> : <><BoundaryMap collections={data.collections} layer="historical" selectedCodes={codes} selectedName={selected?.properties.name} onFeatureSelect={setSelected} contextOnly /><p className="health-notice">{data.estimates.statisticalCaveat}</p></>}
-    </section>}
-  </div>
-}
-
-function CurrentAuthorityMap({ data }) {
-  const [chosen, setChosen] = useState(null)
-  const codes = useMemo(() => new Set(chosen ? [String(chosen.properties.code)] : []), [chosen])
-  return <section className="health-current-pane">
-    <div className="health-media-heading"><div><span className="health-kicker">Present-day context</span><h3>Five geographic health authorities</h3></div><span className="health-date">Current PGMaps layer</span></div>
-    {data.phase !== 'ready' ? <BoundaryLoading data={data} /> : <BoundaryMap collections={data.collections} layer="ha" selectedCodes={codes} selectedName={chosen?.properties.name} onFeatureSelect={setChosen} contextOnly />}
-    <p className="health-map-credit">This modern map provides context. It is not asserted to show the boundaries on 12 December 2001; later transfers also changed the geography.</p>
-  </section>
+function AccuracyTable() {
+  const rows = BOUNDARIES.panels
+  return <div className="hm-table-wrap"><table className="hm-table">
+    <caption>Typical distance between a printed boundary and the modern line it was matched to, measured on parts of each map held out of the fit.</caption>
+    <thead><tr><th scope="col">Map panel</th><th scope="col">Typical error</th><th scope="col">Nine in ten within</th><th scope="col">Earlier 3-point fit</th></tr></thead>
+    <tbody>{rows.map((row) => <tr key={row.id}>
+      <th scope="row">{PANEL_LABELS[row.id] ?? row.id}</th>
+      <td>{km(row.heldOut.medianMetres)} km</td>
+      <td>{km(row.heldOut.p90Metres)} km</td>
+      <td>{row.seedAffineBaseline ? `${km(row.seedAffineBaseline.medianMetres)} km` : '—'}</td>
+    </tr>)}</tbody>
+  </table></div>
 }
 
 export function HealthStoryView() {
   const [initial] = useState(() => readHealthPlace(globalThis.location?.search))
-  const [chapter, setChapter] = useState(initial.chapter)
-  const [requestedChapter, setRequestedChapter] = useState(initial.chapter)
-  const [navigationRequestKey, setNavigationRequestKey] = useState(0)
+  const [framework, setFramework] = useState(initial.framework)
   const [selectedId, setSelectedId] = useState(initial.area)
-  const [layer, setLayer] = useState('estimates')
+  const [overlayOn, setOverlayOn] = useState(false)
+  const [opacity, setOpacity] = useState(.8)
   const [query, setQuery] = useState('')
-  const [group, setGroup] = useState('all')
-  const [copied, setCopied] = useState(false)
-  const [copyFailed, setCopyFailed] = useState(false)
-  const [clickedFeature, setClickedFeature] = useState(null)
-  const [loadComparison, setLoadComparison] = useState(['compare-boundaries', 'consolidation'].includes(initial.chapter))
-  const data = useBoundaryData(loadComparison)
-  const selected = areaById(selectedId) ?? areaById(DEFAULT_AREA_ID)
-  const match = comparisonFor(data.comparison, selected.id)
-  const filteredAreas = useMemo(() => filterAreas(query, group), [query, group])
+  const [chosenFilter, setFilter] = useState(null)
+  const overlayMap = OVERLAY_MAP[framework]
+  const geo = useHealthGeography(framework, overlayOn && overlayMap ? overlayMap : null)
+  const selected = areaById(selectedId)
+  const current = frameworkById(framework)
+  // The list follows the map on screen until the reader picks a filter.
+  const filter = chosenFilter ?? (query ? 'all' : framework)
+  const results = useMemo(() => filterAreas(query, filter), [query, filter])
 
-  const writePlace = useCallback((nextChapter, nextArea) => {
+  const writePlace = useCallback((nextFramework, nextArea) => {
     if (!globalThis.history?.replaceState) return
     const url = new URL(globalThis.location.href)
     url.searchParams.set('view', 'health-map')
-    url.searchParams.set('chapter', nextChapter)
-    url.searchParams.set('area', nextArea)
+    url.searchParams.set('layer', nextFramework)
+    if (nextArea) url.searchParams.set('area', nextArea)
+    else url.searchParams.delete('area')
+    url.searchParams.delete('chapter')
     globalThis.history.replaceState(null, '', url)
-    setCopied(false)
-    setCopyFailed(false)
   }, [])
-  const chooseArea = useCallback((id) => {
-    if (!areaById(id)) return
-    setSelectedId(id)
-    setClickedFeature(null)
-    writePlace(chapter, id)
-  }, [chapter, writePlace])
-  const compareArea = useCallback((id) => {
-    chooseArea(id)
-    setLoadComparison(true)
-    setRequestedChapter('compare-boundaries')
-    setNavigationRequestKey((value) => value + 1)
-    setChapter('compare-boundaries')
-    writePlace('compare-boundaries', id)
-    document.getElementById('health-story-frame')?.scrollIntoView({ block: 'start', behavior: globalThis.matchMedia?.('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth' })
-  }, [chooseArea, writePlace])
-  const onChapterChange = useCallback((id) => {
-    setChapter(id)
-    if (id === 'compare-boundaries' || id === 'consolidation') setLoadComparison(true)
-    writePlace(id, selectedId)
-  }, [selectedId, writePlace])
-  const onFeatureSelect = useCallback((feature, featureLayer) => {
-    if (['estimates', 'drawn'].includes(featureLayer)) chooseArea(String(feature.properties.code))
-    else setClickedFeature({ code: String(feature.properties.code), name: feature.properties.name, layer: featureLayer })
-  }, [chooseArea])
-  const copyLink = async () => {
-    try { await navigator.clipboard.writeText(globalThis.location.href); setCopied(true); setCopyFailed(false) }
-    catch { setCopied(false); setCopyFailed(true) }
+  const select = useCallback((id) => {
+    const area = areaById(id)
+    if (!area) return
+    setFramework(area.framework)
+    setSelectedId(area.id)
+    writePlace(area.framework, area.id)
+  }, [writePlace])
+  const chooseFramework = (id) => {
+    const next = counterpartIn(selected, id)
+    setFramework(id)
+    setSelectedId(next?.id ?? null)
+    writePlace(id, next?.id)
   }
-  const matchSources = (match?.sourceIds ?? []).map((id) => data.comparison?.sources?.find((source) => source.id === id)).filter(Boolean)
-  const relatedToClick = clickedFeature ? AREAS.filter((area) => ['municipalities', 'regionalDistricts', 'schoolDistricts'].includes(clickedFeature.layer)
-    ? estimateFor(data.estimates, area.id)?.currentBoundaryScreening[clickedFeature.layer].some((entry) => String(entry.code) === clickedFeature.code)
-    : candidateCodes(comparisonFor(data.comparison, area.id), clickedFeature.layer).has(clickedFeature.code)) : []
-  const selectedFor = (mapId) => selected.mapId === mapId ? selected : areasIn(mapId)[0]
-  const chapterTitle = (number, title, date) => <><p className="health-chapter-date">Chapter {number} · {date}</p><h2>{title}</h2></>
-  const choose = (mapId) => <AreaPicker mapId={mapId} selected={selected} onSelect={chooseArea} id={`choose-${mapId}`} />
-  const evidence = (mapId) => <AreaEvidence area={selectedFor(mapId)} match={comparisonFor(data.comparison, selectedFor(mapId).id)} onCompare={compareArea} compact />
+  const showInAtlas = (id) => {
+    select(id)
+    document.getElementById('hm-atlas')?.scrollIntoView({ block: 'start', behavior: globalThis.matchMedia?.('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth' })
+  }
 
-  const slides = [
-    { ...CHAPTERS[0], imageUrl: asset(mapById('regions-2000').asset), content: <>
-      {chapterTitle('01', 'A different health map', '1995–2000')}
-      <p className="health-lead">Before the five geographic authorities, British Columbia had a much more local health system.</p>
-      <p>A 1995 order designated twenty regional boards. The statistical map published in April 2001 preserves twenty analytical health regions, including separate Vancouver, Richmond, Burnaby and Simon Fraser areas.</p>
-      <p className="health-notice">Statistical regions generally coincided with boards, but were not a complete statement of their legal territories. Keep the two kinds of evidence together.</p>
-      <div className="health-story-facts"><span><b>20</b> earlier boards</span><span><b>1997</b> reorganization</span><span><b>2001</b> consolidation</span></div>
-      <p><SourceLink href="https://www.bclaws.gov.bc.ca/civix/document/id/mo/hmo/m0597_1995#page=2">1995 designation and boundary schedule</SourceLink></p>
-      <details className="health-details"><summary>Written boundaries for the twenty boards</summary><ul className="health-source-list">{CATALOGUE.earlierBoards.map((row) => <li key={row.name}><SourceLink href={row.link}>{row.name}</SourceLink><small>PDF pages {row.pdf_pages.join('–')}</small></li>)}</ul></details>
-    </>, media: <StatisticalRegionMedia data={data} onEnable={() => setLoadComparison(true)} /> },
-    { ...CHAPTERS[1], imageUrl: asset(mapById('boards').asset), content: <>
-      {chapterTitle('02', 'Eleven regional boards', '1997 restructuring')}
-      <p className="health-lead">The regional boards covered these eleven areas. The rest of the province had a different arrangement.</p>
-      <p>The original Ministry map gives each board a number. Choose one to connect its geographic area with the organization’s history and its written boundary definition.</p>
-      {choose('boards')}{evidence('boards')}
-      <p className="health-small"><SourceLink href={`${SOURCE_REPORT}#page=28`}>Original map · exhibit 3</SourceLink></p>
-    </>, media: <ArchiveMap key="boards" map={mapById('boards')} area={selectedFor('boards')} /> },
-    { ...CHAPTERS[2], imageUrl: asset(mapById('councils').asset), content: <>
-      {chapterTitle('03', 'Care closer to home', 'Community councils')}
-      <p className="health-lead">Local councils served communities outside the regional-board areas.</p>
-      <p>This map contains 34 numbered entries. Thirty-three have a confirmed institutional name match here; the separately labelled Nisga’a area retains its unresolved identity note.</p>
-      {choose('councils')}{evidence('councils')}
-      <p className="health-small"><SourceLink href={`${SOURCE_REPORT}#page=29`}>Original map · exhibit 4</SourceLink></p>
-    </>, media: <ArchiveMap key="councils" map={mapById('councils')} area={selectedFor('councils')} /> },
-    { ...CHAPTERS[3], imageUrl: asset(mapById('societies').asset), content: <>
-      {chapterTitle('04', 'Shared community services', 'Seven service societies')}
-      <p className="health-lead">The societies linked multiple local council areas through community health services.</p>
-      <p>Their geography overlaps the council areas they served. Showing them as a separate layer preserves that relationship.</p>
-      {choose('societies')}{evidence('societies')}
-      <p className="health-small">The map’s “Central Kootenay” label is retained as the earlier name of Kootenay Boundary. North West’s source map explicitly excludes the Nisga’a health authority.</p>
-    </>, media: <ArchiveMap key="societies" map={mapById('societies')} area={selectedFor('societies')} /> },
-    { ...CHAPTERS[4], content: <>
-      {chapterTitle('05', 'What changed in 2001', '12 December 2001')}
-      <p className="health-lead">Five geographic health authorities brought together the preceding boards and councils.</p>
-      <p>The original consolidation regulation names the constituent organizations. Society services passed to the new authorities through a different process; the societies were not all statutory amalgamations.</p>
-      <p>Later transfers also matter. Bella Coola and Central Coast moved to Vancouver Coastal in 2002. Today’s boundaries cannot simply be assigned to every predecessor.</p>
-      <p className="health-notice">The map here is the existing modern PGMaps layer, shown for orientation. It is not a verified December 2001 snapshot.</p>
-      <div className="health-actions"><SourceLink href={CONSOLIDATION_SOURCE}>Original consolidation regulation</SourceLink><SiteLink to={{ view: 'government', year: 2001, node: 'northern-health' }}>Explore the 2001 government →</SiteLink></div>
-    </>, media: <CurrentAuthorityMap data={data} /> },
-    { ...CHAPTERS[5], content: <>
-      {chapterTitle('06', 'Which boundaries still align?', 'Compare existing geography')}
-      <p className="health-lead">Inspect a working estimate for every historical area, its written definition and its closest current boundary matches.</p>
-      <label className="health-field" htmlFor="compare-area"><span>Historical area</span><select id="compare-area" value={selected.id} onChange={(event) => chooseArea(event.target.value)}>{Object.entries(groupLabels).map(([mapId, label]) => <optgroup key={mapId} label={label}>{areasIn(mapId).map((area) => <option key={area.id} value={area.id}>{area.number}. {area.sourceLabel}</option>)}</optgroup>)}</select></label>
-      <AreaEvidence area={selected} match={match} compact />
-      {data.estimates && <BoundaryEstimateEvidence report={data.estimates} area={selected} />}
-      {data.rectification && <RectificationEvidence report={data.rectification} area={selected} />}
-      {data.phase === 'ready' && <><dl className="health-match-facts"><div><dt>Candidate local health areas</dt><dd>{formatCodes([...candidateCodes(match, 'lha')])}</dd></div><div><dt>Candidate delivery areas</dt><dd>{formatCodes([...candidateCodes(match, 'hsda')])}</dd></div></dl>
-        {matchSources.length > 0 && <details className="health-details"><summary>Why this comparison was proposed</summary><ul>{matchSources.map((source) => <li key={source.id}><SourceLink href={source.url}>{source.title}</SourceLink>{source.note && <p>{source.note}</p>}</li>)}</ul></details>}
-      </>}
-      <p className="health-notice">A shared name, a documented code correspondence and matching polygons answer different questions. The original legal boundaries remain the standard for historical territorial claims.</p>
-      {clickedFeature && <section className="health-clicked-area"><h3>{clickedFeature.name} · {clickedFeature.code}</h3><p>Historical areas with this comparison candidate or a top-three drawing similarity:</p>{relatedToClick.length ? <div className="health-chip-list">{relatedToClick.map((area) => <button type="button" key={area.id} onClick={() => chooseArea(area.id)}>{area.sourceLabel}</button>)}</div> : <p>No relationship is proposed in this catalogue.</p>}</section>}
-    </>, media: <ComparisonMedia data={data} area={selected} layer={layer} setLayer={setLayer} onFeatureSelect={onFeatureSelect} /> },
-  ]
-
-  return <main className="health-story">
-    <header className="health-story-heading"><div><p className="health-kicker">Historical atlas · British Columbia</p><h1>How the health map changed</h1><p>Explore the boards, councils and societies before the 2001 consolidation, and compare their areas with the boundaries already in PGMaps.</p></div>
-      <div className="health-heading-actions"><button type="button" className="health-button health-button--quiet" onClick={copyLink}>{copied ? 'Link copied' : 'Copy this chapter’s link'}</button>{copyFailed && <span className="health-small" role="status">Copy the current address from your browser to share this chapter.</span>}<a className="health-text-link" href={asset('maps/BC-health-area-maps-1997-98.pdf')} download>Download original map pages ↓</a></div>
+  return <main className="health-story hm">
+    <header className="hm-header">
+      <p className="hm-kicker">Historical atlas · British Columbia</p>
+      <h1>How BC’s health map changed</h1>
+      <p className="hm-lede">Before five health authorities took over in December 2001, BC’s health services were run by regional boards, community councils and service societies. These maps put each of those organizations back on the map, with its dates, its earlier names and what it became.</p>
     </header>
-    <p className="health-intro-note"><strong>Historical sources, dated comparisons.</strong> Original maps retain their published labels. Modern polygons are comparison candidates until a historical boundary is verified.</p>
-    <div id="health-story-frame"><StoryFrame id="health-geography" title="The changing health map" slides={slides} initialChapterId={initial.chapter} requestedChapterId={requestedChapter} navigationRequestKey={navigationRequestKey} onChapterChange={onChapterChange} /></div>
-    <HealthResearchPanel selectedAreaId={selected.id} estimates={data.estimates} />
-    <section className="health-area-index" aria-labelledby="health-area-index-title">
-      <div className="health-section-heading"><div><p className="health-kicker">Explore every source area</p><h2 id="health-area-index-title">Find a board, council or society</h2></div><span className="health-count">{filteredAreas.length} of {AREAS.length}</span></div>
-      <div className="health-index-filters"><label className="health-field" htmlFor="health-area-search"><span>Search historical areas</span><input id="health-area-search" type="search" value={query} onChange={(event) => setQuery(event.target.value)} placeholder="Northern Interior, Cariboo, North Shore…" /></label><label className="health-field" htmlFor="health-area-type"><span>Type</span><select id="health-area-type" value={group} onChange={(event) => setGroup(event.target.value)}><option value="all">All source areas</option>{Object.entries(groupLabels).map(([id, label]) => <option key={id} value={id}>{label}</option>)}</select></label></div>
-      <div className="health-area-grid">{filteredAreas.map((area) => <article key={area.id} className="health-index-card"><p className="health-kicker">{groupLabels[area.mapId]} · {area.number}</p><h3>{area.sourceLabel}</h3><p>{area.identityConfirmed ? 'Matched to the organization record' : 'Institutional identity unresolved'}</p><div className="health-actions"><button type="button" onClick={() => compareArea(area.id)}>Compare area →</button>{area.bodyId && <SiteLink to={{ view: 'government', node: area.bodyId, year: 1997 }}>History</SiteLink>}<SourceLink href={area.sourceUrl}>Map</SourceLink></div></article>)}</div>
-      {!filteredAreas.length && <p className="health-empty" role="status">No source areas match that search. <button type="button" onClick={() => { setQuery(''); setGroup('all') }}>Clear the filters</button></p>}
+
+    <section id="hm-atlas" className="hm-atlas" aria-labelledby="hm-atlas-title">
+      <h2 id="hm-atlas-title" className="hm-visually-hidden">Map of historical health organizations</h2>
+      <div className="hm-tabs" role="tablist" aria-label="Choose a historical map">
+        {FRAMEWORKS.map((entry) => <button type="button" role="tab" key={entry.id} aria-selected={entry.id === framework} onClick={() => chooseFramework(entry.id)}>
+          <span>{entry.year}</span>{entry.label}
+        </button>)}
+      </div>
+      <div className="hm-intro"><h3>{current.title}</h3><p>{current.blurb}</p></div>
+      <div className="hm-grid">
+        <div className="hm-map-column">
+          {geo.phase === 'error' ? <div className="hm-loading" role="alert"><p>{geo.error}</p><button type="button" className="hm-button" onClick={geo.retry}>Try again</button></div>
+            : !geo.regions ? <div className="hm-loading" role="status"><p>Loading the map…</p></div>
+              : <HealthAtlasMap base={geo.base} regions={geo.regions} overlay={overlayOn ? geo.overlay : null} overlayOpacity={opacity}
+                selectedId={selectedId} onSelect={select} frameworkLabel={current.title} />}
+          <div className="hm-map-options">
+            {overlayMap ? <>
+              <label className="hm-toggle"><input type="checkbox" checked={overlayOn} onChange={(event) => setOverlayOn(event.target.checked)} /> Show the original printed map, georectified</label>
+              {overlayOn && <label className="hm-range">Opacity <input type="range" min=".2" max="1" step=".05" value={opacity} onChange={(event) => setOpacity(Number(event.target.value))} aria-label="Original map opacity" /></label>}
+              {overlayOn && geo.phase === 'updating' && <span className="hm-small" role="status">Loading the original map…</span>}
+            </> : <span className="hm-small">This layer is rebuilt from its predecessor organizations, so it has no printed map.</span>}
+          </div>
+        </div>
+        <AreaDetails area={selected?.framework === framework ? selected : null} onSelect={select} />
+      </div>
     </section>
-    <section className="health-source-section" aria-labelledby="health-source-title">
-      <div className="health-section-heading"><div><p className="health-kicker">Evidence and reuse</p><h2 id="health-source-title">Sources behind the story</h2></div><a href={asset('catalogue.json')} download>Download the area index ↓</a></div>
-      <ul className="health-source-grid">{PUBLIC_SOURCES.map((source) => <li key={source.id}><SourceLink href={source.url}>{source.title}</SourceLink><p>{source.detail}</p></li>)}</ul>
-      <details className="health-details"><summary>Boundary comparison method and limits</summary><p>Every administrative label has both a source-drawing approximation and a chosen working estimate, using predefined modern areas where justified. The twenty statistical illustrations remain separate from the legal board territories.</p><p>The three main-map pages are registered through three physical controls per page in BC Albers. Drawing overlap percentages measure approximate cartographic similarity. Three controls provide no independent registration accuracy, and the southern insets remain unregistered. Current municipalities, regional districts and school districts are screening references; their historical versions may differ.</p><p>Later renamings, the separate Nisga’a source label, the two South Cariboo lineages, and the 2002 coastal transfers remain explicit evidence notes.</p>{data.phase === 'ready' && <a href={asset('estimates-index.json')} download>Download estimate decisions, definitions and screening results ↓</a>}</details>
-      <p className="health-small health-muted">Story presentation uses the same <SourceLink href="https://github.com/ahzs645/geo-toolkit">geo-toolkit</SourceLink> components as <SourceLink href="https://github.com/ahzs645/PGMaps">PGMaps</SourceLink>. Source artwork and data retain their original attribution.</p>
+
+    <section className="hm-directory" aria-labelledby="hm-directory-title">
+      <div className="hm-section-heading"><div><p className="hm-kicker">Every organization</p><h2 id="hm-directory-title">Find a board, council, society or region</h2></div><span className="hm-count">{results.length} of {AREAS.length}</span></div>
+      <div className="hm-filters">
+        <label className="hm-field"><span>Search names and places</span><input type="search" value={query} onChange={(event) => setQuery(event.target.value)} placeholder="Cariboo, Nelson, Richmond…" /></label>
+        <label className="hm-field"><span>Map</span><select value={filter} onChange={(event) => setFilter(event.target.value)}><option value="all">All maps</option>{FRAMEWORKS.map((entry) => <option key={entry.id} value={entry.id}>{entry.year} · {entry.label}</option>)}</select></label>
+      </div>
+      {FRAMEWORKS.filter((entry) => results.some((area) => area.framework === entry.id)).map((entry) => <div className="hm-group" key={entry.id}>
+        <h3>{entry.year} · {entry.label}</h3>
+        <ul className="hm-cards">{results.filter((area) => area.framework === entry.id).map((area) => <li key={area.id}>
+          <button type="button" className={area.id === selectedId ? 'is-selected' : undefined} onClick={() => showInAtlas(area.id)}>
+            <i className={`hm-swatch hm-c${area.colour ?? 0}`} aria-hidden="true" />
+            <span className="hm-card-name">{area.legendNumber ? <b>{area.legendNumber}</b> : null}{area.name}</span>
+            <span className="hm-card-meta">{area.organization?.ended ? `${area.organization.established?.slice(0, 4) ?? '?'}–${area.organization.ended.slice(0, 4)}` : area.framework === 'regions-2000' ? 'Statistical region' : area.organization ? `Since ${area.organization.established?.slice(0, 4)}` : 'No organization record'}</span>
+          </button>
+        </li>)}</ul>
+      </div>)}
+      {!results.length && <p className="hm-small" role="status">Nothing matches that search. <button type="button" className="hm-link-button" onClick={() => { setQuery(''); setFilter('all') }}>Clear the search</button></p>}
+    </section>
+
+    <section className="hm-method" aria-labelledby="hm-method-title">
+      <div className="hm-section-heading"><div><p className="hm-kicker">Method</p><h2 id="hm-method-title">How these boundaries were made</h2></div></div>
+      <ol className="hm-steps">
+        <li><b>Georectify the printed maps.</b> The three 1997/98 Ministry maps (published by the Auditor General in March 1998) and the Statistics Canada map were fitted onto modern BC geography. Thousands of points along each printed boundary were matched to the coast, the provincial border and modern local health area (LHA) edges, and each map panel, including the enlarged insets, was warped to fit.</li>
+        <li><b>Snap each printed region to local health areas.</b> Health regions were built from LHAs, so every LHA that falls at least half inside a printed region is assigned to it. Two exceptions, where a legal boundary description settles a detail the printed map is too small to show, are noted on those areas.</li>
+        <li><b>Check the result.</b> Nothing forced these to agree, yet the 11 boards and 34 councils cover all 89 LHAs exactly once, the 20 statistical regions do too, and each society is exactly the councils it served.</li>
+      </ol>
+      <AccuracyTable />
+      <p className="hm-small">Boundaries use today’s LHA lines. Where a 1997 edge did not follow one, the true line can differ locally. The statistical layer also corrects an earlier mix-up: New Westminster belongs to Simon Fraser (region 08) and Burnaby is region 17.</p>
+      <div className="hm-downloads">
+        <a className="hm-button hm-button--quiet" href={asset('historical-boundaries.geojson')} download>Download all boundaries (GeoJSON) ↓</a>
+        <a href={asset('georectification.json')} download>Fit and LHA-share report ↓</a>
+        <a href={asset('maps/BC-health-area-maps-1997-98.pdf')} download>Original 1997/98 map pages ↓</a>
+      </div>
+    </section>
+
+    <section className="hm-sources" aria-labelledby="hm-sources-title">
+      <h2 id="hm-sources-title">Sources</h2>
+      <ul>
+        <li><External href={`${SOURCE_REPORT}#page=28`}>BC Auditor General, <i>A Review of Governance and Accountability in the Regionalization of Health Services</i>, 1997/98 Report 3, Exhibits 3–5</External> — maps credited to the Ministry of Health and Ministry Responsible for Seniors, March 1998.</li>
+        <li><External href={STATCAN_MAP}>Statistics Canada, <i>Health Indicators</i>, April 2001, BC health regions map</External> — reproduced and distributed on an “as is” basis with the permission of Statistics Canada.</li>
+        <li><External href={CONSOLIDATION_SOURCE}>B.C. Reg. 293/2001, Regional Health Boards Regulation</External> — names the organizations amalgamated into each authority.</li>
+        <li><External href="https://catalogue.data.gov.bc.ca/dataset/local-health-area-boundaries">BC Ministry of Health local health area boundaries</External> via <External href="https://github.com/ahzs645/PGMaps">PGMaps</External> — Open Government Licence – British Columbia.</li>
+      </ul>
     </section>
   </main>
 }
+
+export default HealthStoryView

@@ -70,6 +70,7 @@
     "build:ministry-history": "node scripts/build-ministry-history.mjs",
     "build:government-history": "node scripts/build-government-history.mjs",
     "build:health-map": "node scripts/build-health-map-catalogue.mjs",
+    "build:health-boundaries": "python3 scripts/build_health_boundaries.py",
     "build:health-estimates": "python3 scripts/build_health_estimates.py",
     "build:health-comparisons": "node scripts/build-health-comparisons.mjs",
     "build:health-geolibre": "python3 scripts/build_health_geolibre.py",

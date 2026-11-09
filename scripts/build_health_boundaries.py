@@ -489,14 +489,14 @@ def overlay_features(units, source, unit_ids, style, legend_colours=()):
             elif style == 'statcan' and fill and colour_key(fill) not in legend_colours:
                 continue
             elif fill and min(fill) > .99:
-                kind = 'paper'
+                continue  # unshaded paper; the app's base map already shows that land
             elif fill:
                 kind = 'fill'
-            elif style == 'oag' and drawing['type'] == 's' and (drawing.get('width') or 0) < .3:
+            elif style == 'oag' and drawing['type'] == 's' and (drawing.get('width') or 0) < .3 and max(drawing.get('color') or (1,)) < .5:
                 kind = 'line'
             else:
                 continue
-            if kind in ('fill', 'label', 'water', 'paper'):
+            if kind in ('fill', 'water'):
                 geometry = drawing_polygon(drawing).intersection(clip)
                 geometry = polygonal(geometry)
             else:
@@ -508,7 +508,7 @@ def overlay_features(units, source, unit_ids, style, legend_colours=()):
                 registered = shapely.make_valid(registered)
             if not mask.is_empty:
                 registered = registered.difference(mask)
-            if kind in ('fill', 'water', 'paper'):
+            if kind in ('fill', 'water'):
                 registered = polygonal(shapely.make_valid(registered.simplify(200, preserve_topology=True)))
                 registered = unary_union([p for p in shapely.get_parts(registered) if p.area >= 500_000])
             elif kind == 'line':
@@ -523,20 +523,20 @@ def overlay_features(units, source, unit_ids, style, legend_colours=()):
             if geographic.is_empty:
                 continue
             properties = {'kind': kind, 'panel': unit_id}
-            if kind in ('fill', 'paper') and fill:
+            if kind == 'fill':
                 properties['fill'] = hex_colour(fill)
             features.append({'type': 'Feature', 'properties': properties, 'geometry': mapping(geographic)})
     # Dissolve same-coloured fills and water so shared edges are stored once.
     groups = defaultdict(list)
     for feature in features:
         props = feature['properties']
-        if props['kind'] in ('fill', 'water', 'paper'):
+        if props['kind'] in ('fill', 'water'):
             groups[(props['kind'], props.get('fill'))].append(shape(feature['geometry']))
     merged = [{'type': 'Feature', 'properties': {'kind': kind, **({'fill': fill} if fill else {})},
                'geometry': mapping(polygonal(shapely.set_precision(shapely.make_valid(unary_union(parts)), 1e-5)))}
               for (kind, fill), parts in groups.items()]
     features = merged + [f for f in features if f['properties']['kind'] == 'line']
-    order = {'paper': 0, 'fill': 1, 'water': 2, 'line': 3}
+    order = {'fill': 0, 'water': 1, 'line': 2}
     return sorted(features, key=lambda f: order[f['properties']['kind']])
 
 
@@ -550,6 +550,19 @@ def display_coverage(lhas, tolerance=500, min_island=3_000_000):
         kept = [p for p in parts if p.area >= min_island] or [max(parts, key=lambda p: p.area)]
         result[code] = unary_union(kept)
     return result
+
+
+def colour_regions(geometries, colours=6):
+    """Greedy colouring so neighbouring regions never share a fill colour."""
+    ids = list(geometries)
+    if len(ids) <= colours:
+        return {i: n for n, i in enumerate(sorted(ids))}
+    neighbours = {i: {j for j in ids if j != i and geometries[i].buffer(50).intersects(geometries[j])} for i in ids}
+    assigned = {}
+    for i in sorted(ids, key=lambda k: (-len(neighbours[k]), k)):
+        used = {assigned[j] for j in neighbours[i] if j in assigned}
+        assigned[i] = next(c for c in range(colours) if c not in used)
+    return assigned
 
 
 def label_point(geometry):
@@ -703,6 +716,9 @@ def main():
     (PUBLIC / 'boundaries').mkdir(exist_ok=True)
     for framework in ['boards', 'councils', 'societies', 'regions-2000', 'authorities-2001']:
         chosen = [f for f in features if f['properties']['framework'] == framework]
+        palette = colour_regions({f['id']: display[f['id']] for f in chosen})
+        for f in chosen:
+            f['properties']['colour'] = palette[f['id']]
         write_json(PUBLIC / f'boundaries/{framework}.geojson', {'type': 'FeatureCollection',
                    'metadata': {'framework': framework, 'coordinateSystem': 'EPSG:4326', 'display': 'Simplified for display; use historical-boundaries.geojson for analysis.'},
                    'features': [{**f, 'geometry': mapping(polygonal(shapely.set_precision(shapely.make_valid(project(display[f['id']], TO_GEO)), 1e-4)))} for f in chosen]},
@@ -719,6 +735,12 @@ def main():
                      'those unseen blocks. Source generalization (a 1:10-million-scale drawing) is part of the residual.'),
         'snapThreshold': threshold, 'coverage': coverage,
         'panels': registration_report, 'regions': rows}, digits=4)
+    index = {'preparedOn': PREPARED_ON, 'panels': [{k: row[k] for k in ('id', 'mapId', 'inset', 'heldOut', 'fit')} | ({'seedAffineBaseline': row['seedAffineBaseline']} if 'seedAffineBaseline' in row else {})
+                                                    for row in registration_report],
+             'coverage': coverage, 'areas': [f['properties'] for f in features]}
+    (ROOT / 'src/health/healthBoundaries.generated.js').write_text(
+        '// Generated by scripts/build_health_boundaries.py; edit the research inputs and rerun.\n'
+        'export const HEALTH_BOUNDARIES = ' + json.dumps(index, ensure_ascii=False, indent=1) + '\n')
     if not args.skip_overlays:
         (PUBLIC / 'rectified').mkdir(exist_ok=True)
         for map_id, unit_ids, source, style in [('boards', ['boards', 'boards-inset-mainland', 'boards-inset-island'], sources[('oag', 1)], 'oag'),

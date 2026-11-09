@@ -1,5 +1,26 @@
 # Historical health geography
 
+## Current boundaries (November 2026)
+
+The health-map page (`?view=health-map`) now shows one boundary per organization on five maps: the 11 regional boards, 34 community councils and 7 service societies of 1997, the 20 Statistics Canada regions of 2000, and the five health authorities as they stood on 12 December 2001. They are built by one script:
+
+```sh
+python3 -m venv /tmp/pofbc-boundaries
+/tmp/pofbc-boundaries/bin/pip install -r research/health-geography/requirements-boundaries.txt
+/tmp/pofbc-boundaries/bin/python scripts/build_health_boundaries.py
+node --test src/health/*.test.js
+```
+
+1. **Georectification.** Each printed map panel — the three OAG exhibits, both panels of the board inset, and the Statistics Canada map and its inset — is registered to the modern LHA linework (coast, provincial border and LHA edges). Seeds in [georectification-settings.json](georectification-settings.json) (provincial corners, printed city dots, two Lower Mainland landmarks) only give a starting position. An iterative closest-point fit then matches every sampled printed boundary point to the nearest modern edge and fits an affine, quadratic and cubic polynomial, plus a smoothed thin-plate spline on the main maps. Held-out median error, measured on map blocks left out of the fit, is 0.2–0.7 km per panel, against 1.0–1.8 km for the earlier three-corner affine.
+2. **LHA snap.** Every LHA at least half inside a registered printed region belongs to it. [boundary-decisions.json](boundary-decisions.json) records the only two exceptions (New Westminster in Simon Fraser; the Southern Gulf Islands in Capital), each with its legal evidence.
+3. **Checks.** Nothing in the method forces it, but the boards plus councils cover all 89 LHAs exactly once, the 20 statistical regions do too, and each society equals the union of its councils. The 2001 authorities are the union of the boards and councils whose lineage records name them as successor, which keeps Bella Coola in Interior and the Central Coast in Vancouver Island until their 2002 transfers.
+
+Outputs in `public/health-geography/`: `historical-boundaries.geojson` (all 77, for analysis), `boundaries/*.geojson` (display, per map, with organization lineage), `rectified/*.geojson` (the printed maps warped onto modern geography), and `georectification.json` (panel accuracy and every region's LHA shares). The script also writes `src/health/healthBoundaries.generated.js`.
+
+The georectified snap corrected two earlier working choices: Statistics Canada region 08 Simon Fraser contains New Westminster and region 17 is Burnaby alone (the earlier statistical illustration had them swapped), and Snow Country, Stikine and Upper Skeena now resolve cleanly to LHAs 511, 516 + 519 and 513. The older estimate, rectification and GeoLibre files below are retained as the research record; the page no longer uses them.
+
+## Earlier research record
+
 This directory records the evidence behind PofBC's health-history story and its links between published map labels, institutional records, and modern comparison areas. The original maps remain source artwork; the selectable PGMaps polygons are modern geographic candidates. See [boundary-comparison-README.md](boundary-comparison-README.md) for the detailed geometry method, source manifest, audit, and reconstruction limits.
 
 The follow-up [drawing registration experiment](rectification-README.md) overlays all three administrative main maps on modern BC geography. The [extended boundary review](boundary-estimates.md) supplies working geometry and an independent source-drawing approximation for **all 52 administrative labels**, plus **20 separately labelled statistical illustrations**. It locates 44 written territories and a related Nisga’a definition, and screens the drawings against 357 current features across six boundary types. These estimates remain separate from authenticated historical GIS and legal-boundary verification. The app also exposes an [evidence review and records list](records-to-obtain.md), compiled from [evidence-plan.json](evidence-plan.json), covering all 52 labels. Request drafts have not been sent.
