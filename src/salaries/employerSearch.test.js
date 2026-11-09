@@ -24,3 +24,12 @@ test('verified university acronyms find only their associated employer without c
   assert.deepEqual(uvic.names, ['University of Victoria'])
   assert.equal(employerMatcher('unbc')({ slug: 'other-university', names: ['University of Northern B.C.'] }), false, 'an acronym does not create an identity match for another slug')
 })
+
+test('employer words match from their start, not inside another word', () => {
+  const ladysmith = { slug: 'town-of-ladysmith', names: ['Town of Ladysmith'] }
+  const sd68 = { slug: 'nanaimo-ladysmith-school-district', names: ['School District No. 68 (Nanaimo-Ladysmith)'] }
+  assert.equal(employerMatcher('smith')(ladysmith), false)
+  assert.equal(employerMatcher('smith')(sd68), false)
+  assert.equal(employerMatcher('lady')(ladysmith), true)
+  assert.equal(employerMatcher('ladysmith')(sd68), true)
+})

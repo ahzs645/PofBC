@@ -124,29 +124,34 @@ export const searchNameSearchDocuments = (documents, query, { employerIds = null
     if (!years.length) continue
     // Query words are already normalized. Repeating that work for every spelling in a common
     // two-letter bucket adds noticeable typing latency; a complete-word match cannot improve.
+    // Among complete matches, a spelling whose whole surname was typed comes first: "smith" lists
+    // the Smiths before Armstrong-Smith, and before a Smith who is only a given name.
     let tier = null
-    for (const words of documentWords(document)) {
-      const matched = matchWords(words, wanted)
+    let surname = 1
+    const prepared = documentWords(document)
+    for (let at = 0; at < prepared.length; at += 1) {
+      const matched = matchWords(prepared[at], wanted)
       if (matched === null) continue
-      tier = matched
-      if (tier === 0) break
+      const whole = nameSearchTokens(personKey(spellings[at]).split('|')[0]).every((word) => wanted.includes(word)) ? 0 : 1
+      if (tier === null || matched < tier || (matched === tier && whole < surname)) { tier = matched; surname = whole }
+      if (tier === 0 && surname === 0) break
     }
     if (tier === null) continue
     const group = groups.get(key)
     // Most results have one employer document. Copy its already-unique arrays directly instead
     // of allocating four Sets and converting them back to arrays for every result on each keypress.
     if (!group) {
-      groups.set(key, { key, name, tier, employerIds: [employerAt], years: [...years], spellings: [...spellings], recordShards: [...recordShards] })
+      groups.set(key, { key, name, tier, surname, employerIds: [employerAt], years: [...years], spellings: [...spellings], recordShards: [...recordShards] })
       continue
     }
-    group.tier = Math.min(group.tier, tier)
+    if (tier < group.tier || (tier === group.tier && surname < group.surname)) { group.tier = tier; group.surname = surname }
     if (alphabetically(name, group.name) < 0) group.name = name
     if (!group.employerIds.includes(employerAt)) group.employerIds.push(employerAt)
     for (const year of years) if (!group.years.includes(year)) group.years.push(year)
     for (const spelling of spellings) if (!group.spellings.includes(spelling)) group.spellings.push(spelling)
     for (const shard of recordShards) if (!group.recordShards.includes(shard)) group.recordShards.push(shard)
   }
-  return [...groups.values()].sort((a, b) => a.tier - b.tier || alphabetically(a.key, b.key))
+  return [...groups.values()].sort((a, b) => a.tier - b.tier || a.surname - b.surname || alphabetically(a.key, b.key))
     .map((group) => ({ ...group,
       employerIds: group.employerIds.sort(numerically), years: group.years.sort(numerically),
       spellings: group.spellings.sort(alphabetically), recordShards: group.recordShards.sort(alphabetically) }))

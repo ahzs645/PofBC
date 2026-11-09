@@ -115,7 +115,7 @@ export const NameSearchResults = ({ query, index, sector, range, onOpen, renderC
         <h2 id="salaries-people-results" className="salaries__title">People</h2>
         <p className="salaries__meta" role="status">{directoryReady ? count(matches.length, 'name', 'names') : contextChanged ? 'Data updated' : directoryFailed ? 'Search unavailable' : 'Searching names…'}</p>
       </div>
-      <p className="salaries__hint salaries__hint--small">Matches any part of a name, in any order. Complete words appear before partial matches.</p>
+      <p className="salaries__hint salaries__hint--small">Matches any part of a name, in any order. Whole surnames come first, then other complete words, then partial matches.</p>
       {contextChanged && <p className="salaries__hint" role="alert">The salary data has been updated since this page opened. <button type="button" onClick={() => globalThis.location.reload()}>Reload search</button></p>}
       {directoryFailed && <p className="salaries__hint" role="alert">The name search could not be loaded. Employer and position results are still available. <button type="button" onClick={() => setDirectoryVersion((value) => value + 1)}>Retry name search</button></p>}
       {directoryReady && !directoryFailed && matches.length === 0 && !initialsLoading && <p className="salaries__hint">No disclosed name matches “{query.trim()}”{filtered ? ' with these filters' : ''}. Try fewer letters or another part of the name{filtered ? ', or clear the period and sector filters' : ''}.</p>}

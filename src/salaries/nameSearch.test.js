@@ -173,3 +173,12 @@ test('reuses immutable documents safely across queries and filters without shari
   assert.deepEqual(again.spellings, [milad])
   assert.deepEqual(again.years, [0, 4])
 })
+
+test('a whole typed surname ranks before hyphenated surnames and given names', () => {
+  const documents = [
+    ['armstrong smith|christine', 'Christine Armstrong-Smith', 0, [0], ['Armstrong-Smith, Christine'], ['ar']],
+    ['smith|brad', 'Brad Smith', 0, [0], ['Smith, Brad'], ['sm']],
+    ['jones|smith', 'Smith Jones', 0, [0], ['Jones, Smith'], ['jo']]
+  ]
+  assert.deepEqual(searchNameSearchDocuments(documents, 'smith').map(({ key }) => key), ['smith|brad', 'armstrong smith|christine', 'jones|smith'])
+})

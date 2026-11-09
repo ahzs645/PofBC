@@ -13,13 +13,16 @@ const SEARCH_ALIASES = {
   },
 }
 
-/** Every query word must occur in an employer's disclosed names or explicit search aliases. */
+/**
+ * Every query word must begin a word of an employer's disclosed names or explicit search aliases:
+ * "lady" and "ladysmith" find the Town of Ladysmith, but "smith" does not.
+ */
 export const employerMatcher = (query) => {
   const words = nameSearchTokens(query)
   return (entry) => {
     if (!words.length) return false
     const labels = [...entry.names, entry.slug, ...(SEARCH_ALIASES[entry.slug]?.names ?? [])]
-    const text = nameSearchTokens(labels.join(' ')).join(' ')
-    return words.every((word) => text.includes(word))
+    const text = nameSearchTokens(labels.join(' '))
+    return words.every((word) => text.some((each) => each.startsWith(word)))
   }
 }
