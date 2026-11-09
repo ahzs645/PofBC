@@ -1,0 +1,96 @@
+{
+ "cvrd-2023-elected": {
+  "pdf": "rd-work/cvrd-2023.pdf",
+  "pages": [
+   6
+  ],
+  "columns": [
+   "remuneration",
+   "expenses"
+  ],
+  "hasPosition": true,
+  "headerRegex": "Position\\s+Remuneration\\s+Expenses",
+  "stopRegex": "^\\s*\\$\\s*[\\d,]+\\.\\d\\d\\s+\\$\\s*[\\d,]+\\.\\d\\d\\s*$",
+  "skipRegex": "(^Note 1$)|^\\d+$"
+ },
+ "cvrd-2023-employees": {
+  "pdf": "rd-work/cvrd-2023.pdf",
+  "pages": [
+   7,
+   8
+  ],
+  "columns": [
+   "remuneration",
+   "expenses"
+  ],
+  "hasPosition": true,
+  "headerRegex": "EARNINGS GREATER THAN|Position\\s+Remuneration\\s+Expenses",
+  "stopRegex": "^\\s*(Subtotal\\b|Consolidated total|Total Remuneration and Expenses)",
+  "skipRegex": "(^Note 1\\s+Note 2$)|^\\d+$",
+  "endRegex": "^\\s*Reconciliation:",
+  "stopEndsTableOnPage": false
+ },
+ "cvrd-2024-elected": {
+  "pdf": "rd-work/cvrd-2024.pdf",
+  "pages": [
+   50
+  ],
+  "columns": [
+   "remuneration",
+   "expenses"
+  ],
+  "hasPosition": true,
+  "headerRegex": "Position\\s+Remuneration\\s+Expenses",
+  "stopRegex": "^\\s*\\$\\s*[\\d,]+\\.\\d\\d\\s+\\$\\s*[\\d,]+\\.\\d\\d\\s*$",
+  "skipRegex": "(^Note 1$)|^\\d+$"
+ },
+ "cvrd-2024-employees": {
+  "pdf": "rd-work/cvrd-2024.pdf",
+  "pages": [
+   51,
+   52
+  ],
+  "columns": [
+   "remuneration",
+   "expenses"
+  ],
+  "hasPosition": true,
+  "headerRegex": "EARNINGS GREATER THAN|Position\\s+Remuneration\\s+Expenses",
+  "stopRegex": "^\\s*(Subtotal\\b|Consolidated total|Total Remuneration and Expenses)",
+  "skipRegex": "(^Note 1\\s+Note 2$)|^\\d+$",
+  "endRegex": "^\\s*Reconciliation:",
+  "stopEndsTableOnPage": false
+ },
+ "cvrd-2025-elected": {
+  "pdf": "rd-work/cvrd-2025.pdf",
+  "pages": [
+   49
+  ],
+  "columns": [
+   "remuneration",
+   "expenses"
+  ],
+  "hasPosition": true,
+  "headerRegex": "Position\\s+Remuneration\\s+Expenses",
+  "stopRegex": "^\\s*\\$\\s*[\\d,]+\\.\\d\\d\\s+\\$\\s*[\\d,]+\\.\\d\\d\\s*$",
+  "skipRegex": "(^Note 1$)|^\\d+$"
+ },
+ "cvrd-2025-employees": {
+  "pdf": "rd-work/cvrd-2025.pdf",
+  "pages": [
+   50,
+   51,
+   52
+  ],
+  "columns": [
+   "remuneration",
+   "expenses"
+  ],
+  "hasPosition": true,
+  "headerRegex": "EARNINGS GREATER THAN|Position\\s+Remuneration\\s+Expenses",
+  "stopRegex": "^\\s*(Subtotal\\b|Consolidated total|Total Remuneration and Expenses)",
+  "skipRegex": "(^Note 1\\s+Note 2$)|^\\d+$",
+  "endRegex": "^\\s*Reconciliation:",
+  "stopEndsTableOnPage": false
+ }
+}

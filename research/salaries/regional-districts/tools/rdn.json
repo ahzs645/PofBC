@@ -1,0 +1,119 @@
+{
+ "rdn-2023-elected": {
+  "pdf": "rd-work/rdn-2023.pdf",
+  "pages": [
+   38
+  ],
+  "columns": [
+   "remuneration",
+   "expenses"
+  ],
+  "hasPosition": true,
+  "headerRegex": "^\\s*Name\\s+Position\\s+Remuneration",
+  "stopRegex": "^\\s*Total Remuneration and Expenses",
+  "skipRegex": "^\\d$",
+  "endRegex": "^\\s*Page\\s?\\||^\\s*\\d?\\s*Base remuneration includes"
+ },
+ "rdn-2023-employees": {
+  "pdf": "rd-work/rdn-2023.pdf",
+  "pages": [
+   39,
+   40,
+   41,
+   42
+  ],
+  "columns": [
+   "base",
+   "other",
+   "total",
+   "expenses"
+  ],
+  "hasPosition": true,
+  "headerRegex": "^\\s*Employee Name\\s+Position",
+  "stopRegex": "^\\s*Total (Individual|Summary|Remuneration and Expenses Paid)",
+  "skipRegex": "^(Exempt Staff|CUPE Staff)$|^\\d$|^Page \\| Page \\d+$",
+  "stopEndsTableOnPage": false,
+  "endRegex": "^\\s*Page\\s?\\||^\\s*\\d?\\s*Base remuneration includes"
+ },
+ "rdn-2024-elected": {
+  "pdf": "rd-work/rdn-2024.pdf",
+  "pages": [
+   38
+  ],
+  "columns": [
+   "remuneration",
+   "expenses"
+  ],
+  "hasPosition": true,
+  "headerRegex": "^\\s*Name\\s+Position\\s+Remuneration",
+  "stopRegex": "^\\s*Total Remuneration and Expenses",
+  "skipRegex": "^\\d$",
+  "endRegex": "^\\s*Page\\s?\\||^\\s*\\d?\\s*Base remuneration includes"
+ },
+ "rdn-2024-employees": {
+  "pdf": "rd-work/rdn-2024.pdf",
+  "pages": [
+   39,
+   40,
+   41,
+   42,
+   43,
+   44,
+   45,
+   46
+  ],
+  "columns": [
+   "base",
+   "other",
+   "total",
+   "expenses"
+  ],
+  "hasPosition": true,
+  "headerRegex": "^\\s*Employee Name\\s+Position",
+  "stopRegex": "^\\s*Total (Individual|Summary|Remuneration and Expenses Paid)",
+  "skipRegex": "^(Exempt Staff|CUPE Staff)$|^\\d$|^Page \\| Page \\d+$",
+  "stopEndsTableOnPage": false,
+  "endRegex": "^\\s*Page\\s?\\||^\\s*\\d?\\s*Base remuneration includes"
+ },
+ "rdn-2025-elected": {
+  "pdf": "rd-work/rdn-2025.pdf",
+  "pages": [
+   36
+  ],
+  "columns": [
+   "remuneration",
+   "expenses"
+  ],
+  "hasPosition": true,
+  "headerRegex": "^\\s*Name\\s+Position\\s+Remuneration",
+  "stopRegex": "^\\s*Total Remuneration and Expenses",
+  "skipRegex": "^\\d$",
+  "endRegex": "^\\s*Page\\s?\\||^\\s*\\d?\\s*Base remuneration includes"
+ },
+ "rdn-2025-employees": {
+  "pdf": "rd-work/rdn-2025.pdf",
+  "pages": [
+   37,
+   38,
+   39,
+   40,
+   41,
+   42,
+   43,
+   44
+  ],
+  "columns": [
+   "base",
+   "emergency",
+   "other",
+   "total",
+   "expenses"
+  ],
+  "hasPosition": true,
+  "headerRegex": "^\\s*Employee Name\\s+Position",
+  "stopRegex": "^\\s*Total (Individual|Summary|Remuneration and Expenses Paid)",
+  "skipRegex": "^(Exempt Staff|CUPE Staff)$|^\\d$|^Page \\| Page \\d+$",
+  "stopEndsTableOnPage": false,
+  "endRegex": "^\\s*Page\\s?\\||^\\s*\\d?\\s*Base remuneration includes"
+ }
+}

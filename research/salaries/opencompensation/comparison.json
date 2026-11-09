@@ -35,13 +35,13 @@
     "namesMatchingCompilationOnlyWhenExpensesAdded": 152,
     "namesMatchingOnlyWithPositiveRemunerationFilter": 5,
     "repository": {
-      "employers": 276,
-      "rows": 1445458,
-      "namedRows": 1438011,
-      "officialRows": 1217094,
+      "employers": 280,
+      "rows": 1455023,
+      "namedRows": 1447576,
+      "officialRows": 1226659,
       "compiledRows": 228364,
-      "employeeRows": 1183494,
-      "availableEmployerYears": 1240
+      "employeeRows": 1192554,
+      "availableEmployerYears": 1279
     },
     "workforceCompletenessEstablished": false,
     "recordLevelParityChecked": false,
@@ -348,7 +348,7 @@
     {
       "slug": "city-of-castlegar",
       "name": "City of Castlegar",
-      "rows": 64
+      "rows": 83
     },
     {
       "slug": "city-of-colwood",
@@ -363,12 +363,12 @@
     {
       "slug": "city-of-cranbrook",
       "name": "City of Cranbrook",
-      "rows": 130
+      "rows": 362
     },
     {
       "slug": "city-of-dawson-creek",
       "name": "City of Dawson Creek",
-      "rows": 504
+      "rows": 562
     },
     {
       "slug": "city-of-duncan",
@@ -413,7 +413,7 @@
     {
       "slug": "city-of-penticton",
       "name": "City of Penticton",
-      "rows": 258
+      "rows": 683
     },
     {
       "slug": "city-of-prince-george",
@@ -423,12 +423,12 @@
     {
       "slug": "city-of-prince-rupert",
       "name": "City of Prince Rupert",
-      "rows": 133
+      "rows": 922
     },
     {
       "slug": "city-of-quesnel",
       "name": "City of Quesnel",
-      "rows": 78
+      "rows": 160
     },
     {
       "slug": "city-of-revelstoke",
@@ -474,6 +474,11 @@
       "slug": "columbia-power",
       "name": "Columbia Power Corporation",
       "rows": 8
+    },
+    {
+      "slug": "cowichan-valley-regional-district",
+      "name": "Cowichan Valley Regional District",
+      "rows": 511
     },
     {
       "slug": "cowichan-valley-school-district",
@@ -696,6 +701,16 @@
       "rows": 155
     },
     {
+      "slug": "regional-district-of-nanaimo",
+      "name": "Regional District of Nanaimo",
+      "rows": 969
+    },
+    {
+      "slug": "regional-district-of-north-okanagan",
+      "name": "Regional District of North Okanagan",
+      "rows": 227
+    },
+    {
       "slug": "resort-municipality-of-whistler",
       "name": "Resort Municipality of Whistler",
       "rows": 849
@@ -901,6 +916,11 @@
       "rows": 15
     },
     {
+      "slug": "thompson-nicola-regional-district",
+      "name": "Thompson-Nicola Regional District",
+      "rows": 304
+    },
+    {
       "slug": "town-of-comox",
       "name": "Town of Comox",
       "rows": 47
@@ -948,7 +968,7 @@
     {
       "slug": "town-of-smithers",
       "name": "Town of Smithers",
-      "rows": 43
+      "rows": 88
     },
     {
       "slug": "town-of-view-royal",
@@ -3009,7 +3029,7 @@
       "referencePeriodVerified": false,
       "recordLevelParityChecked": false,
       "countDifference": null,
-      "repositoryRowsAllPeriods": 11499,
+      "repositoryRowsAllPeriods": 16902,
       "candidates": [
         {
           "yearLabel": "2023/24",
@@ -17405,7 +17425,7 @@
       "referencePeriodVerified": false,
       "recordLevelParityChecked": false,
       "countDifference": null,
-      "repositoryRowsAllPeriods": 11499,
+      "repositoryRowsAllPeriods": 16902,
       "candidates": [
         {
           "yearLabel": "2017/18",
@@ -19989,7 +20009,7 @@
       "referencePeriodVerified": false,
       "recordLevelParityChecked": false,
       "countDifference": null,
-      "repositoryRowsAllPeriods": 186,
+      "repositoryRowsAllPeriods": 687,
       "candidates": [
         {
           "yearLabel": "2017/18",
@@ -20278,15 +20298,15 @@
   "fingerprints": {
     "snapshotSha256": "3c3a0fb9ef04e42aa58d4ea5f5d20084dc92fbdc6fe3162fc9eb336d6dec7f24",
     "aliasesSha256": "01bd579dd41abd3006f68cb9aec0daecdd5fe4a8a4ff8d15eb6ccefedaf72952",
-    "repositoryInputsSha256": "b40f0060e51af0e11506291ab1db5eebf6b0fc2f9bb797af218e2593d17ecd4f",
+    "repositoryInputsSha256": "729cebb0d6cbf0a34169fa5ce8504f13c7f021ad1d01302fc18ded0f7d8aa310",
     "historicalCompilationSha256": "410bcae27c9755e387c473ab44d62081a50b46e7330f4d6d5c0b74979d392760",
     "historicalCompilationManifestSha256": "57d5444065bc037147368c4e6642b5f880dc10c784d7b390168a01145822a49b"
   },
   "repositoryInputs": [
     {
       "path": "public/salaries/coverage.json",
-      "bytes": 7490465,
-      "sha256": "e3c1308f3102ef4bfca6d349388dfef7ab38b22ad0cc2a67d608a44c58737cfc"
+      "bytes": 7721508,
+      "sha256": "58db2070adbbf43541095e720d7526247d0a2b3e228b530d1e404e13213baf47"
     },
     {
       "path": "public/salaries/employers/abbotsford-police.json.gzip",
@@ -20450,8 +20470,8 @@
     },
     {
       "path": "public/salaries/employers/city-of-castlegar.json.gzip",
-      "bytes": 1900,
-      "sha256": "f9c8dcf87f487f028ebe9ef2c22e0cd46d416ac1c29577b45dc63a812c25d74c"
+      "bytes": 2167,
+      "sha256": "2b7ec0cd6c24ce2b56f2ca104f1e4952ee39ef947ca4f61cabd56a444c1b2c39"
     },
     {
       "path": "public/salaries/employers/city-of-chilliwack.json.gzip",
@@ -20475,13 +20495,13 @@
     },
     {
       "path": "public/salaries/employers/city-of-cranbrook.json.gzip",
-      "bytes": 3293,
-      "sha256": "7e5426608d0405b0322494f94c0628d7a34fdce50190a1b7c475dd578f0b3e80"
+      "bytes": 6558,
+      "sha256": "3f8845c349ffc2eff679dd0a5272e19bbd23e1ff360ca040887fa24b9968a582"
     },
     {
       "path": "public/salaries/employers/city-of-dawson-creek.json.gzip",
-      "bytes": 9570,
-      "sha256": "816d018917904bacfc749b798ac989c29368d0142241755a75d0022b44223789"
+      "bytes": 10831,
+      "sha256": "2bf483f5aa1e3a0e339cd905146796f7f6de7ac48ab3e8023465af9db86184ee"
     },
     {
       "path": "public/salaries/employers/city-of-delta.json.gzip",
@@ -20545,8 +20565,8 @@
     },
     {
       "path": "public/salaries/employers/city-of-nelson.json.gzip",
-      "bytes": 2871,
-      "sha256": "f93f9b5af917d75ab4952e4c6b9fd999878627a177ad8313e2745c4af12c02f0"
+      "bytes": 8467,
+      "sha256": "4814406cc0acbd6eb05f4927f5da0b9ce7610dc7f25fe5339b3cfcccc9241551"
     },
     {
       "path": "public/salaries/employers/city-of-new-westminster.json.gzip",
@@ -20565,8 +20585,8 @@
     },
     {
       "path": "public/salaries/employers/city-of-penticton.json.gzip",
-      "bytes": 7252,
-      "sha256": "0173626de1658c0524b72be9211d03a5a3342e7fe3b6bc3ec075a4a1f9a120da"
+      "bytes": 14502,
+      "sha256": "df609d41ceb9b232c3c59fa9ecaaf96fe5b4529ea0c8c7a8f81bcbda7ddcc1c1"
     },
     {
       "path": "public/salaries/employers/city-of-pitt-meadows.json.gzip",
@@ -20590,13 +20610,13 @@
     },
     {
       "path": "public/salaries/employers/city-of-prince-rupert.json.gzip",
-      "bytes": 2412,
-      "sha256": "17c2e280aaebfb3d1a12bd2265dff15652986b90607ea44aac462a2c988db8ff"
+      "bytes": 12049,
+      "sha256": "6d14ebd0469f53b7f8757e1124ea0c7de2cefe563775bf4d1482fa5b567626ee"
     },
     {
       "path": "public/salaries/employers/city-of-quesnel.json.gzip",
-      "bytes": 2250,
-      "sha256": "9f24c14afee69919035f4b1e011ca5e1baee0fc4475d8b5f51ee0af7a7649e44"
+      "bytes": 3445,
+      "sha256": "6e0845e00b1e63659d38b07ffbeea3daa905d5817ebec5c8157241c15725296c"
     },
     {
       "path": "public/salaries/employers/city-of-revelstoke.json.gzip",
@@ -20697,6 +20717,11 @@
       "path": "public/salaries/employers/coquitlam-school-district.json.gzip",
       "bytes": 97624,
       "sha256": "11ff157e1a32f29f39c00af6577c52cb2a16204e04beb2bec86bc6328e0ee41f"
+    },
+    {
+      "path": "public/salaries/employers/cowichan-valley-regional-district.json.gzip",
+      "bytes": 9913,
+      "sha256": "bdbfed5f5fe16e0011b13d28ed24855c0b4d9f899678d6326e9d1d5f4021d30f"
     },
     {
       "path": "public/salaries/employers/cowichan-valley-school-district.json.gzip",
@@ -21134,6 +21159,16 @@
       "sha256": "d63a423330f7796dbc80e977a566d96a9c86a2f776277026adf61b8fbe3eb5c2"
     },
     {
+      "path": "public/salaries/employers/regional-district-of-nanaimo.json.gzip",
+      "bytes": 21363,
+      "sha256": "5f2b79ab7c23a6b91fa3b1888018d295fc01aadcafa51e80c223ba83232812f9"
+    },
+    {
+      "path": "public/salaries/employers/regional-district-of-north-okanagan.json.gzip",
+      "bytes": 3964,
+      "sha256": "907927321f49f64a3679533998079c8be166f8d1453a57a1c013d45780c81a4e"
+    },
+    {
       "path": "public/salaries/employers/resort-municipality-of-whistler.json.gzip",
       "bytes": 14077,
       "sha256": "fbdcef82faed6bf2507c1abb3e2c837c6a92f64d031c588a354853b3c84097c2"
@@ -21399,6 +21434,11 @@
       "sha256": "21d724b2e57c16f275e5834f115b915f2593949d03cf0d0552c8ba39d2b43151"
     },
     {
+      "path": "public/salaries/employers/thompson-nicola-regional-district.json.gzip",
+      "bytes": 4518,
+      "sha256": "36def70f9e2483a4971b767350520e418bf3562b9ea34aebabec53ad6cbb1af4"
+    },
+    {
       "path": "public/salaries/employers/thompson-rivers-university.json.gzip",
       "bytes": 52021,
       "sha256": "ddf98299186158f6729d2706b754825ede5db8678e0b49e8e4efe8fe84d4502e"
@@ -21450,8 +21490,8 @@
     },
     {
       "path": "public/salaries/employers/town-of-smithers.json.gzip",
-      "bytes": 729,
-      "sha256": "9969262c1b306eb18137b13b1350d9d00526e0dbb7764b3b1e173255feb4d11d"
+      "bytes": 1900,
+      "sha256": "db827a462f0f3740a10ace7e71dfefb63ae726aed3c5284de886a8d75cb616ba"
     },
     {
       "path": "public/salaries/employers/town-of-view-royal.json.gzip",
@@ -21520,8 +21560,8 @@
     },
     {
       "path": "public/salaries/employers/vancouver-school-district.json.gzip",
-      "bytes": 166437,
-      "sha256": "1730831540ea8ff8f828fad6fbe4551ae75762696fc7cc5b2a22ddd4f3abf215"
+      "bytes": 253772,
+      "sha256": "b827d84e9817ac5fbd9849675df7f383fabaa9b3e25d2bc6cb6131e0fe0cbc74"
     },
     {
       "path": "public/salaries/employers/victoria-police.json.gzip",
@@ -21670,8 +21710,8 @@
     },
     {
       "path": "public/salaries/index.json",
-      "bytes": 11544218,
-      "sha256": "55cc67f7d3c703f936d164f54f00e90fbb3edceb5f0adad6919a5412e2225e84"
+      "bytes": 11766499,
+      "sha256": "46b3777481eae4ece8206f960b2fab0f58d45ab7ec1644ce40786909e857216a"
     }
   ],
   "historicalCompilationNotes": [

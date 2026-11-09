@@ -1,0 +1,137 @@
+{
+ "rdno-2023-elected": {
+  "pdf": "rd-work/rdno-2023.pdf",
+  "pdfLayout": "rd-work/derived/rdno-2023-no-overlay.pdf",
+  "charFontPrefix": "Helvetica",
+  "columns": [
+   "remuneration",
+   "expenses"
+  ],
+  "pages": [
+   6
+  ],
+  "hasPosition": true,
+  "textColumns": [
+   "name",
+   "position",
+   "area"
+  ],
+  "textColumnHeaders": [
+   "Board",
+   "Position",
+   "Area"
+  ],
+  "headerRegex": "^\\s*Board Members\\s+Position\\s+Area",
+  "stopRegex": "^\\s*Total\\b",
+  "skipRegex": "^\\d+$"
+ },
+ "rdno-2023-employees": {
+  "pdf": "rd-work/rdno-2023.pdf",
+  "pdfLayout": "rd-work/derived/rdno-2023-no-overlay.pdf",
+  "charFontPrefix": "Helvetica",
+  "columns": [
+   "remuneration",
+   "expenses"
+  ],
+  "pages": [
+   7,
+   8
+  ],
+  "hasPosition": true,
+  "headerRegex": "^\\s*Employee\\s+Position\\s+Remuneration",
+  "stopRegex": "^\\s*(SUBTOTAL|TOTAL|Employees Under|Employer portion)",
+  "skipRegex": "^\\d+$",
+  "stopEndsTableOnPage": false,
+  "endRegex": "^\\s*Any differences"
+ },
+ "rdno-2024-elected": {
+  "pdf": "rd-work/rdno-2024.pdf",
+  "pdfLayout": "rd-work/derived/rdno-2024-no-overlay.pdf",
+  "charFontPrefix": "Helvetica",
+  "columns": [
+   "remuneration",
+   "expenses"
+  ],
+  "pages": [
+   6
+  ],
+  "hasPosition": true,
+  "textColumns": [
+   "name",
+   "position",
+   "area"
+  ],
+  "textColumnHeaders": [
+   "Board",
+   "Position",
+   "Area"
+  ],
+  "headerRegex": "^\\s*Board Members\\s+Position\\s+Area",
+  "stopRegex": "^\\s*Total\\b",
+  "skipRegex": "^\\d+$"
+ },
+ "rdno-2024-employees": {
+  "pdf": "rd-work/rdno-2024.pdf",
+  "pdfLayout": "rd-work/derived/rdno-2024-no-overlay.pdf",
+  "charFontPrefix": "Helvetica",
+  "columns": [
+   "remuneration",
+   "expenses"
+  ],
+  "pages": [
+   7,
+   8
+  ],
+  "hasPosition": true,
+  "headerRegex": "^\\s*Employee\\s+Position\\s+Remuneration",
+  "stopRegex": "^\\s*(SUBTOTAL|TOTAL|Employees Under|Employer portion)",
+  "skipRegex": "^\\d+$",
+  "stopEndsTableOnPage": false,
+  "endRegex": "^\\s*Any differences"
+ },
+ "rdno-2025-elected": {
+  "pdf": "rd-work/rdno-2025.pdf",
+  "pdfLayout": "rd-work/derived/rdno-2025-no-overlay.pdf",
+  "charFontPrefix": "Helvetica",
+  "columns": [
+   "remuneration",
+   "expenses"
+  ],
+  "pages": [
+   6
+  ],
+  "hasPosition": true,
+  "textColumns": [
+   "name",
+   "position",
+   "area"
+  ],
+  "textColumnHeaders": [
+   "Board",
+   "Position",
+   "Area"
+  ],
+  "headerRegex": "^\\s*Board Members\\s+Position\\s+Area",
+  "stopRegex": "^\\s*Total\\b",
+  "skipRegex": "^\\d+$"
+ },
+ "rdno-2025-employees": {
+  "pdf": "rd-work/rdno-2025.pdf",
+  "pdfLayout": "rd-work/derived/rdno-2025-no-overlay.pdf",
+  "charFontPrefix": "Helvetica",
+  "columns": [
+   "remuneration",
+   "expenses"
+  ],
+  "pages": [
+   7,
+   8
+  ],
+  "hasPosition": true,
+  "headerRegex": "^\\s*Employee\\s+Position\\s+Remuneration",
+  "stopRegex": "^\\s*(SUBTOTAL|TOTAL|Employees Under|Employer portion)",
+  "skipRegex": "^\\d+$",
+  "stopEndsTableOnPage": false,
+  "endRegex": "^\\s*Any differences"
+ }
+}

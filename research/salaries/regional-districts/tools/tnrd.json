@@ -1,0 +1,134 @@
+{
+ "tnrd-2023-elected": {
+  "pdf": "rd-work/tnrd-2023.pdf",
+  "pages": [
+   45
+  ],
+  "columns": [
+   "remuneration",
+   "expenses"
+  ],
+  "hasPosition": true,
+  "twoSided": true,
+  "twoSidedHeaderWord": "Elected",
+  "twoSidedHeaderWordA": "Elected Official",
+  "headerRegex": "Elected Official.*Elected Official",
+  "stopRegex": "Consolidated total, elected",
+  "skipRegex": "^\\d+$"
+ },
+ "tnrd-2023-employees": {
+  "pdf": "rd-work/tnrd-2023.pdf",
+  "pages": [
+   46,
+   47
+  ],
+  "columns": [
+   "operational",
+   "emergency",
+   "total",
+   "expenses"
+  ],
+  "hasPosition": false,
+  "missingRule": {
+   "3": [
+    0,
+    null,
+    1,
+    2
+   ]
+  },
+  "headerRegex": "^\\s*Employee\\b",
+  "stopRegex": "^\\s*(Total\\b|Consolidated total)",
+  "skipRegex": "^(Remuneration\\s*)+$|^(R\\s?e\\s?m\\s?u\\s?n\\s?e\\s?r\\s?a\\s?t\\s?i\\s?o\\s?n\\s*)+$|^\\d+$",
+  "endRegex": "Employer portion|^\\s*SCHEDULE G",
+  "stopEndsTableOnPage": false
+ },
+ "tnrd-2024-elected": {
+  "pdf": "rd-work/tnrd-2024.pdf",
+  "pages": [
+   45
+  ],
+  "columns": [
+   "remuneration",
+   "expenses"
+  ],
+  "hasPosition": true,
+  "twoSided": true,
+  "twoSidedHeaderWord": "Elected",
+  "twoSidedHeaderWordA": "Elected Official",
+  "headerRegex": "Elected Official.*Elected Official",
+  "stopRegex": "Consolidated total, elected",
+  "skipRegex": "^\\d+$"
+ },
+ "tnrd-2024-employees": {
+  "pdf": "rd-work/tnrd-2024.pdf",
+  "pages": [
+   46,
+   47
+  ],
+  "columns": [
+   "operational",
+   "emergency",
+   "total",
+   "expenses"
+  ],
+  "hasPosition": false,
+  "missingRule": {
+   "3": [
+    0,
+    null,
+    1,
+    2
+   ]
+  },
+  "headerRegex": "^\\s*Employee\\b",
+  "stopRegex": "^\\s*(Total\\b|Consolidated total)",
+  "skipRegex": "^(Remuneration\\s*)+$|^(R\\s?e\\s?m\\s?u\\s?n\\s?e\\s?r\\s?a\\s?t\\s?i\\s?o\\s?n\\s*)+$|^\\d+$",
+  "endRegex": "Employer portion|^\\s*SCHEDULE G",
+  "stopEndsTableOnPage": false
+ },
+ "tnrd-2025-elected": {
+  "pdf": "rd-work/tnrd-2025.pdf",
+  "pages": [
+   44
+  ],
+  "columns": [
+   "remuneration",
+   "expenses"
+  ],
+  "hasPosition": true,
+  "twoSided": true,
+  "twoSidedHeaderWord": "Elected",
+  "twoSidedHeaderWordA": "Elected Official",
+  "headerRegex": "Elected Official.*Elected Official",
+  "stopRegex": "Consolidated total, elected",
+  "skipRegex": "^\\d+$"
+ },
+ "tnrd-2025-employees": {
+  "pdf": "rd-work/tnrd-2025.pdf",
+  "pages": [
+   45,
+   46
+  ],
+  "columns": [
+   "operational",
+   "emergency",
+   "total",
+   "expenses"
+  ],
+  "hasPosition": false,
+  "missingRule": {
+   "3": [
+    0,
+    null,
+    1,
+    2
+   ]
+  },
+  "headerRegex": "^\\s*Employee\\b",
+  "stopRegex": "^\\s*(Total\\b|Consolidated total)",
+  "skipRegex": "^(Remuneration\\s*)+$|^(R\\s?e\\s?m\\s?u\\s?n\\s?e\\s?r\\s?a\\s?t\\s?i\\s?o\\s?n\\s*)+$|^\\d+$",
+  "endRegex": "Employer portion|^\\s*SCHEDULE G",
+  "stopEndsTableOnPage": false
+ }
+}
