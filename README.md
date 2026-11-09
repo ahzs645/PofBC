@@ -37,6 +37,12 @@ more than about 18 months before the newest in the selection.
 
 Person pages and employer trends can show amounts in the latest year's dollars, using the B.C.
 consumer price index from Statistics Canada ([source and method](research/salaries/cpi/README.md)).
+
+Employer pages download the chosen year's records, or every year, as CSV, and rank any amount among
+the year's records. Person pages flag a payment that more than doubled or halved from the year
+before. **About** (`?view=salaries&browse=about`) explains the sources and their limits, privacy, and
+how to report a correction. The [coverage roadmap](research/salaries/coverage-roadmap-2026-11-09.md)
+lists the remaining gaps and where their sources are.
 The small `public/salaries/employer-stats.json.gzip` companion is rebuilt from existing employer
 exports by `npm run build:employer-stats` (also part of `build:salaries`) and checked for freshness
 by the salary tests. Existing salary records and indexes are unchanged by that companion build.
