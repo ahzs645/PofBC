@@ -13,6 +13,7 @@ const root = new URL('../', import.meta.url)
 const read = (path) => JSON.parse(readFileSync(new URL(path, root), 'utf8'))
 const inventory = read('research/identity/collection-2026-10-22/inventory.json')
 const register = read('research/identity/vector-search-2026-10-30/source-register.json')
+const ticorp = read('research/identity/ticorp-vector-2026-11-08/source-register.json')
 const historical = read('research/identity/historical-vector-followup-2026-10-30/source-register.json')
 
 const checked = (asset) => {
@@ -37,6 +38,8 @@ const checked = (asset) => {
 
 // The register's labels are its file names; these say what each file shows.
 const LABELS = {
+  'ticorp-2025-colour-source-vector': 'Full colour, Summer 2025 project update',
+  'ticorp-2020-reversed-source-vector': 'White, Spring 2020 project overview',
   'bccie-2022-source-vector': 'Full colour, 2022–2025 strategic plan',
   'bcfma-2021-source-vector': 'Teal emblem and wordmark, 2020/21 report',
   'bc-housing-corporate-component-source-vector': 'Emblem and wordmark',
@@ -75,7 +78,7 @@ const LABELS = {
 }
 
 /** A register entry as the inventory's asset record, so both read the same in the gallery. */
-const fromRegister = (entry) => {
+const fromRegister = (entry, search = 'vector-search-2026-10-30') => {
   if (!LABELS[entry.id]) throw new Error(`No label for ${entry.id}`)
   if (!entry.genuineVectorVerified || entry.validation?.embeddedImages || entry.validation?.textElements || entry.validation?.externalResources?.length) {
     throw new Error(`Not verified as pure vector: ${entry.id}`)
@@ -106,7 +109,7 @@ const fromRegister = (entry) => {
     bytes: entry.bytes,
     darkBackground: Boolean(entry.darkBackgroundRecommended),
     ...(entry.timelineId ? { timelineEra: entry.timelineId } : {}),
-    search: 'vector-search-2026-10-30'
+    search
   })
 }
 
@@ -114,6 +117,10 @@ const additions = new Map()
 for (const entry of register.assets) {
   if (!additions.has(entry.bodyId)) additions.set(entry.bodyId, [])
   additions.get(entry.bodyId).push(fromRegister(entry))
+}
+for (const entry of ticorp.assets) {
+  if (!additions.has(entry.bodyId)) additions.set(entry.bodyId, [])
+  additions.get(entry.bodyId).push(fromRegister(entry, 'ticorp-vector-2026-11-08'))
 }
 
 // Historical specimens use inventory-shaped records; detailed extraction evidence stays in
