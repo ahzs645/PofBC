@@ -14,6 +14,7 @@ const read = (path) => JSON.parse(readFileSync(new URL(path, root), 'utf8'))
 const inventory = read('research/identity/collection-2026-10-22/inventory.json')
 const register = read('research/identity/vector-search-2026-10-30/source-register.json')
 const ticorp = read('research/identity/ticorp-vector-2026-11-08/source-register.json')
+const followup = read('research/identity/vector-followup-2026-11-08/source-register.json')
 const historical = read('research/identity/historical-vector-followup-2026-10-30/source-register.json')
 
 const checked = (asset) => {
@@ -40,6 +41,16 @@ const checked = (asset) => {
 const LABELS = {
   'ticorp-2025-colour-source-vector': 'Full colour, Summer 2025 project update',
   'ticorp-2020-reversed-source-vector': 'White, Spring 2020 project overview',
+  'pavco-2025-26-colour-source-vector': 'Full colour, FY2025/26 year in review',
+  'pavco-2023-reversed-source-vector': 'White, 2023–2026 accessibility plan',
+  'forest-renewal-bc-2000-colour-source-vector': 'Full colour, December 2000 funded-project report',
+  'forest-renewal-bc-1999-black-source-vector': 'Black, March 1999 woodlot inventory manual',
+  'worksafe-2003-serif-source-vector': 'Distressed WorkSafe wordmark and board name, 2003 annual report',
+  'worksafebc-2004-tagline-source-vector': 'Black and orange with tagline, 2004 annual report',
+  'worksafebc-2024-colour-source-vector': 'Black and orange, 2024 annual report',
+  'bclc-2009-colour-tagline-source-vector': 'Older palette with tagline, 2009 service plan update',
+  'bclc-2009-reversed-source-vector': 'White with coloured dots, 2009 service plan update',
+  'bclc-2011-reversed-tagline-source-vector': 'White with coloured dots and tagline, 2010/11 annual report',
   'bccie-2022-source-vector': 'Full colour, 2022–2025 strategic plan',
   'bcfma-2021-source-vector': 'Teal emblem and wordmark, 2020/21 report',
   'bc-housing-corporate-component-source-vector': 'Emblem and wordmark',
@@ -92,11 +103,11 @@ const fromRegister = (entry, search = 'vector-search-2026-10-30') => {
     isVector: true,
     supplied: false,
     reconstruction: false,
-    publisher: entry.organization,
+    publisher: entry.publisher ?? entry.organization,
     sourcePage: entry.sourcePageUrl ?? entry.sourceUrl,
     sourceUrl: entry.sourceUrl,
     sourceLocator: entry.sourcePdfPage ? `PDF page ${entry.sourcePdfPage}` : entry.sourcePackageEntry ?? null,
-    sourceFile: null,
+    sourceFile: entry.sourceTitle ?? null,
     sourceDate: entry.sourceDate ?? null,
     dateNote: entry.dateMeaning ?? '',
     observedDate: entry.retrievedDate,
@@ -121,6 +132,10 @@ for (const entry of register.assets) {
 for (const entry of ticorp.assets) {
   if (!additions.has(entry.bodyId)) additions.set(entry.bodyId, [])
   additions.get(entry.bodyId).push(fromRegister(entry, 'ticorp-vector-2026-11-08'))
+}
+for (const entry of followup.assets) {
+  if (!additions.has(entry.bodyId)) additions.set(entry.bodyId, [])
+  additions.get(entry.bodyId).push(fromRegister(entry, 'vector-followup-2026-11-08'))
 }
 
 // Historical specimens use inventory-shaped records; detailed extraction evidence stays in

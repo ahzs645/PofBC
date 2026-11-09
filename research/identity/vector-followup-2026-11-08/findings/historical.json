@@ -1,0 +1,400 @@
+{
+  "research_date": "2026-11-08",
+  "research_timezone": "America/Vancouver",
+  "date_note": "The displayed research date is 2026-11-08 in America/Vancouver. Some recorded UTC retrievals fall on 2026-11-09; exact retrieval timestamps and source publication or PDF metadata dates are preserved.",
+  "path_note": "Source and evidence paths beginning current-crown/, historical/, historical-corporate/ or health/ are relative to the reproduction source directory. Prior references beginning research/ are repository-relative. Public source URLs and SHA-256 values identify the originals. Research-stage SVG files and checksums are separate from final published assets in the canonical asset register.",
+  "canonical_asset_register": "research/identity/vector-followup-2026-11-08/source-register.json",
+  "observedUtcCompletionDate": "2026-11-09",
+  "scope": "Targeted continuation for five former Crown bodies, with source-quality checks and no reconstruction. This is not a new full inventory sweep.",
+  "summary": {
+    "bodiesRevisited": 5,
+    "bodiesWithNewVerifiedOriginalVectors": 1,
+    "acceptedVectorFiles": 2,
+    "pdfBinariesDownloaded": 6,
+    "pdfDownloadFailures": 6,
+    "note": "Six downloaded PDFs were inspected to the scopes stated below; total document page counts are not claims of page-by-page visual inspection. Three unresolved bodies received search-only revisits.",
+    "acceptedFiles": [
+      "historical/forest-renewal-bc-2000-colour-source-vector.svg",
+      "historical/forest-renewal-bc-1999-black-source-vector.svg"
+    ]
+  },
+  "priorResearchReviewed": [
+    "research/identity/vector-search-2026-10-30/research/historical_crown_findings.json",
+    "research/identity/historical-vector-followup-2026-10-30/research-checklist.json",
+    "research/identity/historical-vector-followup-2026-10-30/search-pass-5.json"
+  ],
+  "rows": [
+    {
+      "id": "forest-renewal-bc",
+      "name": "Forest Renewal BC",
+      "result": "Two verified original-source vectors recovered",
+      "originalSourceGapClosed": true,
+      "acceptedAssetMetadata": [
+        "historical/forest-renewal-bc-asset.json",
+        "historical/forest-renewal-bc-1999-black-asset.json"
+      ],
+      "acceptedAssets": [
+        {
+          "id": "forest-renewal-bc-2000-colour-source-vector",
+          "bodyId": "forest-renewal-bc",
+          "organization": "Forest Renewal BC",
+          "file": "historical/forest-renewal-bc-2000-colour-source-vector.svg",
+          "sourceFile": "historical/frbc-mackenzie.pdf",
+          "sourceUrl": "https://a100.gov.bc.ca/pub/acat/documents/r1498/pem_4039_bgc_1095808248945_9166ace7d9694265b194d72986a3bbf2.pdf",
+          "sourcePageUrl": "https://a100.gov.bc.ca/pub/acat/documents/r1498/pem_4039_bgc_1095808248945_9166ace7d9694265b194d72986a3bbf2.pdf",
+          "sourcePdfPage": 4,
+          "sourceDate": "December 2000",
+          "dateMeaning": "Printed report date, not PDF conversion date or logo adoption date.",
+          "retrievedDate": "2026-11-08",
+          "publisher": "Atticus Resource Consulting Ltd. for Abitibi Consolidated Mackenzie Region; hosted by the Government of British Columbia",
+          "sourceTitle": "Annual Methods Report for Localization of Biogeoclimatic Linework (Lower Osilinka, Upper Osilinka, Tenakihi, Aiken, and Swannell Landscape Units)",
+          "sourceSha256": "7595301527671885e3e76e9555e6639928514143d5dd8cfce4973aa0334684db",
+          "sha256": "7a8ee90b748099c5e6159a65dba544db1aa84d97a7778bed1d6e21694b29a8a7",
+          "bytes": 15790,
+          "selectedDrawingIndices": [
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20,
+            21
+          ],
+          "sourceBounds": [
+            237.60000610351562,
+            503.5799865722656,
+            377.5799865722656,
+            590.7000122070312
+          ],
+          "sourceCrop": [
+            237.00000610351563,
+            502.9799865722656,
+            378.17998657226565,
+            591.3000122070313
+          ],
+          "validation": {
+            "genuineVectorVerified": true,
+            "paintedPaths": 20,
+            "xmlElementCounts": {
+              "svg": 1,
+              "title": 1,
+              "desc": 1,
+              "defs": 1,
+              "clipPath": 6,
+              "path": 26,
+              "g": 6
+            },
+            "embeddedImages": 0,
+            "textElements": 0,
+            "externalResources": [],
+            "intersectingSourceImages": 0,
+            "intersectingSourceText": 0
+          },
+          "notes": "Government-hosted Forest Renewal BC-funded project report. Includes complete multi-colour ribbons and original outlined lettering. Native PDF vector extraction, not an official standalone SVG master. Polygonal contours already present in original PDF are retained unchanged.",
+          "method": "PyMuPDF 1.26.6 PDF-to-SVG conversion; selected source path nodes, ancestor transforms and referenced clipping definitions retained. Unrelated content excluded. Viewport set to 780px with proportional height; original PDF-coordinate viewBox retained."
+        },
+        {
+          "id": "forest-renewal-bc-1999-black-source-vector",
+          "bodyId": "forest-renewal-bc",
+          "organization": "Forest Renewal BC",
+          "file": "historical/forest-renewal-bc-1999-black-source-vector.svg",
+          "sourceFile": "historical/frbc-woodlot1999.pdf",
+          "sourceUrl": "https://www.econ.ca/wp-content/uploads/2016/01/Econ_Woodlot-Inventory-Manual.pdf",
+          "sourcePageUrl": "https://www.econ.ca/wp-content/uploads/2016/01/Econ_Woodlot-Inventory-Manual.pdf",
+          "sourcePdfPage": 2,
+          "sourceDate": "March 1999",
+          "dateMeaning": "Printed manual date, not PDF upload date or logo adoption date.",
+          "retrievedDate": "2026-11-08",
+          "publisher": "Province of British Columbia, Vancouver Forest Region; prepared by Wolfram Wollenheit (ECON); copy hosted by ECON",
+          "sourceTitle": "Woodlot Licence Inventory Manual",
+          "sourceSha256": "79ea66997530a6cc527511091305d6ef3df1f3ffc203ed3ebacdca89ab59192a",
+          "sha256": "b52dcb1be93a1d2c6242d62fb6288cf9d5be66a1dd478ea108ff707109e79183",
+          "bytes": 13072,
+          "selectedDrawingIndices": [
+            64,
+            65,
+            66,
+            67,
+            68,
+            69,
+            70,
+            71,
+            72,
+            73,
+            74,
+            75,
+            76,
+            77,
+            78,
+            79,
+            80,
+            81,
+            82,
+            83
+          ],
+          "sourceBounds": [
+            144.04100036621094,
+            236.760009765625,
+            240.1610107421875,
+            296.8799743652344
+          ],
+          "sourceCrop": [
+            143.44100036621094,
+            236.160009765625,
+            240.7610107421875,
+            297.4799743652344
+          ],
+          "validation": {
+            "genuineVectorVerified": true,
+            "paintedPaths": 20,
+            "xmlElementCounts": {
+              "svg": 1,
+              "title": 1,
+              "desc": 1,
+              "defs": 1,
+              "clipPath": 6,
+              "path": 26,
+              "g": 6
+            },
+            "embeddedImages": 0,
+            "textElements": 0,
+            "externalResources": [],
+            "intersectingSourceImages": 0,
+            "intersectingSourceText": 0
+          },
+          "notes": "Government-published manual, mirrored by its named preparer ECON, acknowledging Forest Renewal BC as funder. Includes complete black ribbons and original outlined lettering. Native PDF vector extraction, not an official standalone SVG master. Polygonal contours already present in original PDF are retained unchanged.",
+          "method": "PyMuPDF 1.26.6 PDF-to-SVG conversion; selected source path nodes, ancestor transforms and referenced clipping definitions retained. Unrelated content excluded. Viewport set to 780px with proportional height; original PDF-coordinate viewBox retained."
+        }
+      ],
+      "sources": [
+        {
+          "url": "https://a100.gov.bc.ca/pub/acat/documents/r1498/pem_4039_bgc_1095808248945_9166ace7d9694265b194d72986a3bbf2.pdf",
+          "inspectionStatus": "downloaded-and-inspected",
+          "inspectionScope": "Cover and acknowledgements inspected visually; page 4 logo region checked against source images, live text and native paths. Printed report date December 2000; PDF conversion metadata is September 2004 and is not the publication date.",
+          "outcome": "ACCEPTED: complete native colour ribbons and outlined wordmark, 20 original painted vector paths (indices 2–21) on PDF page 4. No source images or visible text intersect the logo. Original polygon geometry, transforms and clipping retained. Government-hosted funded-project report, not a standalone master.",
+          "source_dir_path": "historical/frbc-mackenzie.pdf",
+          "sha256": "7595301527671885e3e76e9555e6639928514143d5dd8cfce4973aa0334684db",
+          "bytes": 183631,
+          "pdfPages": 52
+        },
+        {
+          "url": "https://www.econ.ca/wp-content/uploads/2016/01/Econ_Woodlot-Inventory-Manual.pdf",
+          "inspectionStatus": "downloaded-and-inspected",
+          "inspectionScope": "Cover and publication/funding page inspected visually; native logo paths and other images/text on page 2 structurally inspected. Printed March 1999 date verified on both pages.",
+          "outcome": "ACCEPTED: complete native black mark, 20 original painted paths (indices 64–83) on PDF page 2. No raster or visible text intersects the logo. Published by the Province of BC, Vancouver Forest Region; the copy is hosted by named preparer ECON.",
+          "source_dir_path": "historical/frbc-woodlot1999.pdf",
+          "sha256": "79ea66997530a6cc527511091305d6ef3df1f3ffc203ed3ebacdca89ab59192a",
+          "bytes": 892190,
+          "pdfPages": 65
+        },
+        {
+          "url": "https://www.nswooa.ca/uploads/5/9/6/9/59690537/managing-your-woodland-bc.pdf",
+          "inspectionStatus": "downloaded-and-inspected",
+          "inspectionScope": "Cover, publication page and funding page reviewed. PDF page 3 native drawing indices 14–35 contain the logo plus two original horizontal paint paths. Exploratory SVG is retained only as a rejected candidate and has a small viewport issue at the extra line endpoints.",
+          "outcome": "REJECTED FOR INTEGRATION: native black logo exists, but the original has coarser polygonal contours and two extra black horizontal paint paths crossing the ribbons. Prefer the cleaner March 1999 source. No smoothing or cleanup performed.",
+          "source_dir_path": "historical/frbc-woodland2002.pdf",
+          "sha256": "b07e0910d8e2c2ce84088d6be6a291f1d9715514bd0b4161e14f0aa11a29a133",
+          "bytes": 2746184,
+          "pdfPages": 301
+        },
+        {
+          "url": "https://www.env.gov.bc.ca/wld/documents/vancouver.pdf",
+          "inspectionStatus": "downloaded-and-inspected",
+          "inspectionScope": "PDF page 1 cover visually and structurally inspected; report identifies February 2001 publication date.",
+          "outcome": "No usable vector: Forest Renewal BC logo on the cover is a raster image; the two cover drawings are page rules.",
+          "source_dir_path": "historical/frbc-vancouver-sera.pdf",
+          "sha256": "69c7603524e6306ed6a7d5298393ea15a4eadb1787a901c0227ad6cdffb249ec",
+          "bytes": 551666,
+          "pdfPages": 39
+        },
+        {
+          "url": "https://sherwoods-forests.com/Images/trees/Populus/Diseases-Of-Populus-In-BC.pdf",
+          "inspectionStatus": "downloaded-and-inspected",
+          "inspectionScope": "PDF page 5 acknowledgements visually inspected; image placements and five drawing paths inventoried. Official federal catalogue separately identifies the 1998 government publication: https://publications.gc.ca/site/eng/9.647042/publication.html. Downloaded copy is a nursery mirror, not an official master.",
+          "outcome": "REJECTED mixed artwork: the Forest Renewal BC logo on PDF page 5 contains 15 bitmap pieces, with a few simple letter shapes as native paths. It is not a complete vector logo.",
+          "source_dir_path": "historical/frbc-populus1998.pdf",
+          "sha256": "2b58a7846b8e60cb742c3a30153f418c21cdc7a467584c831767d3d2ac4f6743",
+          "bytes": 8015045,
+          "pdfPages": 164
+        },
+        {
+          "url": "https://www2.gov.bc.ca/assets/gov/farming-natural-resources-and-industry/forestry/silviculture/training-modules/intro.pdf",
+          "inspectionStatus": "download-blocked",
+          "inspectionScope": "Direct public download attempted; structural/visual PDF inspection unavailable.",
+          "outcome": "No PDF binary retrieved; no vector claim. A search-indexed funding/logo lead only.",
+          "httpError": "HTTP Error 503: Service Unavailable"
+        },
+        {
+          "url": "https://forestgeneticsbc.ca/wp-content/uploads/bsk-pdf-manager/2020/07/ExtNote1-Final-web.pdf",
+          "inspectionStatus": "download-blocked",
+          "inspectionScope": "Direct public download attempted; structural/visual PDF inspection unavailable.",
+          "outcome": "No PDF binary retrieved; no vector claim. A search-indexed funding/logo lead only.",
+          "httpError": "HTTP Error 403: Forbidden"
+        },
+        {
+          "url": "https://forestgeneticsbc.ca/wp-content/uploads/2020/07/2002-PliSeedSetRept.pdf",
+          "inspectionStatus": "download-blocked",
+          "inspectionScope": "Direct public download attempted; structural/visual PDF inspection unavailable.",
+          "outcome": "No PDF binary retrieved; no vector claim. A search-indexed funding/logo lead only.",
+          "httpError": "HTTP Error 403: Forbidden"
+        },
+        {
+          "url": "https://www2.gov.bc.ca/assets/gov/farming-natural-resources-and-industry/forestry/visual-resource-mgmt/training-vrm/vrm_visual_landscape_inventory_course_manual.pdf",
+          "inspectionStatus": "download-blocked",
+          "inspectionScope": "Direct public download attempted; structural/visual PDF inspection unavailable.",
+          "outcome": "No PDF binary retrieved; no vector claim. A search-indexed funding/logo lead only.",
+          "httpError": "HTTP Error 503: Service Unavailable"
+        },
+        {
+          "url": "https://www.skeetchestnnr.ca/wp-content/uploads/2022/09/1998_REPORT-FINAL_deadman_moose_study.pdf",
+          "inspectionStatus": "download-blocked",
+          "inspectionScope": "Direct public download attempted; structural/visual PDF inspection unavailable.",
+          "outcome": "No PDF binary retrieved; no vector claim. A search-indexed funding/logo lead only.",
+          "httpError": "HTTP Error 503: Service Unavailable"
+        }
+      ],
+      "notes": "The prior supplied reconstruction remains separately attributed. These new files reproduce original published vector nodes; neither is claimed to be a standalone corporate-issued SVG master. Display dates refer to the source publications, not logo adoption. Source-versus-SVG comparison images were viewed for both accepted files.",
+      "remainingLead": "A white variant may exist in the blocked March 2001 Forest Genetics Council extension note; that variant is unverified and not needed to establish the two accepted sources."
+    },
+    {
+      "id": "expo-86-corporation",
+      "name": "Expo 86 Corporation",
+      "result": "No new original vector verified",
+      "originalSourceGapClosed": false,
+      "sources": [
+        {
+          "url": "https://www.pendulumgallery.bc.ca/wp-content/uploads/2016/08/Expo-86-Exhibition-Catalogue.pdf",
+          "inspectionStatus": "downloaded-and-inspected",
+          "inspectionScope": "PDF pages 1–5 visually and structurally inspected; 2016 exhibition catalogue context.",
+          "outcome": "The cover Expo 86 logo is a 336 by 501 raster image with zero native drawing paths. Other sampled exhibition images are also raster; page 5 native paths are image-border rectangles, not the identity.",
+          "source_dir_path": "historical/expo86-pendulum2016.pdf",
+          "sha256": "46e62f705a69e4776c50024960fcda1d551f2d3d08ab7313f65386cf24f16ab9",
+          "bytes": 5365850,
+          "pdfPages": 14
+        },
+        {
+          "url": "https://www.scienceworld.ca/wp-content/uploads/EXPO86_PR.pdf",
+          "inspectionStatus": "web-text-read-binary-download-blocked",
+          "sourceDate": "2022-11-21",
+          "httpError": "HTTP Error 403: Forbidden",
+          "inspectionScope": "Web-accessible two-page release text read; direct PDF binary download failed. No structural or logo-artwork inspection.",
+          "outcome": "The official release describes licensed Expo 86 merchandise and states the family of marks is owned by the Province of British Columbia and used under licence by Science World. This is a promising production-artwork lead; it does not establish that a public vector download exists."
+        },
+        {
+          "url": "https://www.bie-paris.org/site/en/1986-vancouver",
+          "inspectionStatus": "web-page-text-read-asset-inspection-blocked",
+          "inspectionScope": "Official BIE page text read. Direct HTML request returned 403, preventing asset URL inventory.",
+          "outcome": "Official Expo context found; no inspected downloadable original vector."
+        },
+        {
+          "url": "https://shop.scienceworld.ca/products/expo-86-logo-sticker",
+          "inspectionStatus": "search-index-only",
+          "inspectionScope": "Indexed licensed product listing; page image binaries were not inspected.",
+          "outcome": "Supports the current licensed-merchandise lead only, not original vector provenance."
+        }
+      ],
+      "priorEvidenceReviewed": "Existing CIPO registration image and 1986 leaflet are raster. The collected Commons SVGs are reconstructed and do not close the original-source gap.",
+      "nextLead": "Locate publicly released licensed artwork from the Province or Science World production materials. No external contact was sent."
+    },
+    {
+      "id": "bc-enterprise-corporation",
+      "name": "British Columbia Enterprise Corporation",
+      "result": "No new vector verified; search-only revisit",
+      "originalSourceGapClosed": false,
+      "sources": [
+        {
+          "url": "https://sacda.ufv.ca/collections/2023_14_02_460",
+          "inspectionStatus": "search-index-only-prior-source",
+          "inspectionScope": "Indexed 1988 prospectus description returned by the current searches; the same raster specimen is already collected. No new binary downloaded.",
+          "outcome": "Upright triangle, sun and coloured ribbon identity reconfirmed as an archival prospectus image; no downloadable native vector found."
+        },
+        {
+          "url": "https://www2.gov.bc.ca/assets/gov/british-columbians-our-governments/services-policies-for-government/information-management-technology/records-management/orcs/bcec_orcs_170469.pdf",
+          "inspectionStatus": "prior-research-record-reviewed-not-redownloaded",
+          "sha256": "a6011d01d97931628a718e6f0b9a011f8ee7a897531c39c3695eaef7963d75ad",
+          "inspectionScope": "Reviewed saved prior-pass findings; not counted as a new document inspection.",
+          "outcome": "Schedule 170469, classification 20000-20, identifies final corporate marketing/logo records. Index accessions 93-4720 boxes 1–4 and 90-1769 box 24 are locators, not identified artwork boxes. No newly accessed digital artwork."
+        }
+      ],
+      "priorEvidenceReviewed": "The 2002/03 financial statements and original 1988 prospectus were already examined; repeating those scans would not improve the vector search.",
+      "nextLead": "Locate final marketing records through the recorded creator indexes. This archival route also applies to BC Development Corporation and BC Place Ltd; neither is counted as a separate new search in this pass.",
+      "searchScope": "Exact-name corporation logo/PDF discovery searches; no new downloadable original candidate beyond the already collected 1988 prospectus."
+    },
+    {
+      "id": "bc-resources-investment-corporation",
+      "name": "British Columbia Resources Investment Corporation",
+      "result": "No new vector verified; search-only revisit",
+      "originalSourceGapClosed": false,
+      "queries": [
+        "\"BCRIC\" \"logo\" vector",
+        "\"BCRIC\" \"logo\" \"Landor\""
+      ],
+      "sources": [
+        {
+          "url": "https://www.creativehotlist.com/Individuals/details/176005",
+          "inspectionStatus": "prior-research-record-reviewed-search-lead",
+          "inspectionScope": "Previously inspected supplier-attribution lead considered against current exact-name searches; no original binary obtained.",
+          "outcome": "Paul Woods self-published history lists BC Resources during a Landor role, but abbreviated entity and specific artwork attribution remain uncorroborated. Do not attribute the BCRIC logo to Woods based on this alone."
+        },
+        {
+          "url": "https://sacda.ufv.ca/collections/2021_03_01_03_003",
+          "inspectionStatus": "prior-research-record-reviewed-not-redownloaded",
+          "inspectionScope": "Known 1979 brochure and 1980 corporate-report scan results reviewed; no new scan download counted.",
+          "outcome": "Existing green acronym and BC RESOURCES wordmarks are raster originals. New queries found no public original vector source."
+        }
+      ],
+      "nextLead": "Corroborate the exact Landor client and identity before following production artwork records; no contact or attribution claim made."
+    },
+    {
+      "id": "bc-systems-corporation",
+      "name": "British Columbia Systems Corporation",
+      "result": "No new vector verified; search-only revisit",
+      "originalSourceGapClosed": false,
+      "queries": [
+        "\"BC Systems\" \"NetGuide\" pdf",
+        "\"British Columbia Systems Corporation\" \"NetGuide\" OR \"1996\" \"logo\""
+      ],
+      "sources": [
+        {
+          "url": "https://techcommunicators.com/clients/",
+          "inspectionStatus": "search-index-only-prior-lead",
+          "inspectionScope": "Exact NetGuide searches returned the already known named supplier/client context; no manual binary downloaded.",
+          "outcome": "Duncan Kent & Associates NetGuide project remains a production-document lead, not a recovered vector or designer attribution."
+        },
+        {
+          "url": "https://www.lib.uwo.ca/business/records/canadian_corporate_reportsAI.html",
+          "inspectionStatus": "search-index-only",
+          "inspectionScope": "Indexed corporate-report holdings list.",
+          "outcome": "BC Systems 1983 holdings are listed as microfiche; no original electronic publication or logo asset obtained."
+        }
+      ],
+      "priorEvidenceReviewed": "Prior 1991/92 annual report, 1992/93 business-plan scans and 1992-published strategic-plan OCR already failed to provide native artwork. The historical corporate domain remains unverified; modern Securities Commission marks are excluded.",
+      "nextLead": "Find the original electronic NetGuide or a born-digital 1990s corporate publication. Further microfilm scans are unlikely to supply native paths."
+    }
+  ],
+  "contactMade": false,
+  "repoEditsMadeByThisAgent": false,
+  "accepted_asset_record_note": "acceptedAssets preserves the research-stage extraction metadata and checksums. The canonical asset register records final published SVG serialization and checksums.",
+  "lane_summary": {
+    "target_rows": 5,
+    "bodies_with_verified_original_vectors": 1,
+    "verified_original_vector_variants": 2,
+    "new_pdf_binaries": 6,
+    "source_retrieval_failure_records": 6,
+    "unresolved_target_rows": 4,
+    "scope_note": "Five former Crown targets. Forest Renewal BC and Expo 86 received new PDF/source inspections; BC Enterprise, BCRIC and BC Systems received search-only revisits with prior findings reviewed. BC Development Corporation and BC Place archival connections are not counted as additional target rows."
+  }
+}

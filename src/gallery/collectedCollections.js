@@ -52,6 +52,10 @@ const kindOf = (body) => body.kind === 'health-authority' ? 'health organization
 /** A body's collected files as gallery entries. */
 export const collectedEntriesOf = (bodyId) => (BODIES.get(bodyId)?.assets ?? []).map((asset) => collectedEntry(asset, undefined, bodyId))
 
+/** Published specimens folded into a researched collection rather than a one-off timeline. */
+export const specimenEntriesOf = (program) => (COLLECTED_SPECIMENS.find((each) => each.program === program)?.assets ?? [])
+  .map((asset) => collectedEntry(asset))
+
 const collectionOf = (body) => ({
   id: `collected-${body.id}`,
   shelf: 'bodies',

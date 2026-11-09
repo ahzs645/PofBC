@@ -18,7 +18,7 @@
 import { BCTS_ENTRIES, ONE_OFFS } from './oneOffs.js'
 import { COLLECTION_ERAS, TIMELINES, timelineKeyOf } from './timelines.js'
 import { CURRENT_VARIANT_ORDER, CURRENT_VARIANTS } from '../hydro/hydroMarks.js'
-import { COLLECTED_COLLECTIONS, SPECIMEN_COLLECTIONS, collectedEntriesOf, nodesOf } from './collectedCollections.js'
+import { COLLECTED_COLLECTIONS, SPECIMEN_COLLECTIONS, collectedEntriesOf, specimenEntriesOf, nodesOf } from './collectedCollections.js'
 
 // ── The identity record ──────────────────────────────────────────────────────────────────────────
 
@@ -604,8 +604,8 @@ const BCF_ENTRIES = {
 
 // ── WorkSafeBC ───────────────────────────────────────────────────────────────────────────────────
 //
-// From a fourth package (research/identity/worksafebc). Both marks are rebuilt: the 1983 lockup from
-// undated specimens, today's wordmark from a small supplied picture.
+// The fourth package (research/identity/worksafebc) supplied reconstructions: the 1983 lockup from
+// undated specimens, today's wordmark from a small picture. Original report vectors join them below.
 
 const WCB_RIGHTS = {
   status: 'unresolved',
@@ -787,11 +787,18 @@ const provincial = (entry) => withTimeline(withIdentity(withNode(entry)))
 const withMarks = (eras, marks) => eras.map((each) => ({ ...each, entries: marks[each.id] ?? [] }))
 
 /**
- * Marks with, added to an era, the files collected for a body the collection's own body once was —
- * the name it went by then, which the government history records it becoming this one under.
+ * Add a body's collected files to an era: its own artwork, or files under an earlier name that the
+ * government history records it continuing from.
  */
 const withCollected = (marks, earlier) => Object.fromEntries([...new Set([...Object.keys(marks), ...Object.keys(earlier)])]
   .map((era) => [era, [...(marks[era] ?? []), ...(earlier[era] ?? []).flatMap(collectedEntriesOf)]]))
+
+/** Add published specimens outside the body inventory to their recorded collection eras. */
+const withSpecimens = (marks, program) => {
+  const specimens = specimenEntriesOf(program)
+  return Object.fromEntries([...new Set([...Object.keys(marks), ...specimens.map((entry) => entry.asset.timelineEra)])]
+    .map((era) => [era, [...(marks[era] ?? []), ...specimens.filter((entry) => entry.asset.timelineEra === era)]]))
+}
 
 /**
  * The gallery in two shelves.
@@ -944,9 +951,11 @@ export const GALLERY_COLLECTIONS = [
     cover: 'bclc-contemporary',
     intro: 'The British Columbia Lottery Corporation’s marks: the sun and waves beside its full name, then ' +
       'from August 2008 its initials in lowercase with three dots of colour, which have since changed ' +
-      'from red, orange and green to purple, coral and yellow. Shown as supplied; the 2008 colours are a ' +
-      'reconstruction.',
-    eras: withMarks(COLLECTION_ERAS.bclc, BCLC_ENTRIES)
+      'from red, orange and green to purple, coral and yellow. Original vectors from the 2009 service plan ' +
+      'update and 2010/11 annual report sit beside the supplied artwork and the older reconstruction.',
+    eras: withMarks(COLLECTION_ERAS.bclc, withCollected(BCLC_ENTRIES, {
+      'bclc-2008': ['bclc']
+    }))
   },
   {
     id: 'bc-ferries',
@@ -980,12 +989,14 @@ export const GALLERY_COLLECTIONS = [
     body: 'Workers’ Compensation Board · agency',
     years: '1917–present',
     graphNode: 'workers-compensation-board',
-    cover: 'worksafebc',
-    intro: 'The Workers’ Compensation Board’s marks since its own history starts dating them: a ' +
-      'worker-protection emblem in 1968, not yet found; the province and the worker from 1983; and ' +
-      'WorkSafeBC in black and orange, the everyday name since 2005. What the board used from its ' +
-      'founding in 1917 until 1968 is not known. Both marks here are reconstructions.',
-    eras: withMarks(COLLECTION_ERAS.worksafebc, WCB_ENTRIES)
+    cover: 'vector-worksafebc-2024-colour-source-vector',
+    intro: 'The Workers’ Compensation Board’s marks: a worker-protection emblem introduced in 1968, still ' +
+      'sought; the province and worker from 1983, reconstructed here; a distressed WorkSafe wordmark in ' +
+      'the 2003 annual report; and black-and-orange WorkSafeBC in the 2004 and 2024 reports. The report ' +
+      'specimens retain their original vectors alongside the existing reconstructions. Report years do ' +
+      'not establish logo introductions. WorkSafeBC became the operating name in 2005. What the board used ' +
+      'from its founding in 1917 until 1968 is not known.',
+    eras: withMarks(COLLECTION_ERAS.worksafebc, withSpecimens(WCB_ENTRIES, 'worksafebc'))
   },
   {
     id: 'bc-transit',
@@ -1042,8 +1053,8 @@ export const GALLERY_COLLECTIONS = [
 // histories remain authoritative for bodies that already have a collection.
 GALLERY_COLLECTIONS.push(...COLLECTED_COLLECTIONS.filter((candidate) =>
   !GALLERY_COLLECTIONS.some((held) => nodesOf(held).includes(candidate.graphNode))))
-// The one-off programs' published specimens, reached from their timelines' eras.
-GALLERY_COLLECTIONS.push(...SPECIMEN_COLLECTIONS)
+// WorkSafeBC's specimens are folded into its collection above; the one-off programs keep theirs.
+GALLERY_COLLECTIONS.push(...SPECIMEN_COLLECTIONS.filter((collection) => collection.id !== 'specimens-worksafebc'))
 
 /** The collection holding a body's logos — its own, or one it carried on as under a later name. */
 export const collectionOfNode = (node) => GALLERY_COLLECTIONS.find((collection) => nodesOf(collection).includes(node))

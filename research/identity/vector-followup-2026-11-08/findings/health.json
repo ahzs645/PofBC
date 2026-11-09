@@ -1,0 +1,697 @@
+{
+  "research_date": "2026-11-08",
+  "research_timezone": "America/Vancouver",
+  "date_note": "The displayed research date is 2026-11-08 in America/Vancouver. Some recorded UTC retrievals fall on 2026-11-09; exact retrieval timestamps and source publication or PDF metadata dates are preserved.",
+  "path_note": "Source and evidence paths beginning current-crown/, historical/, historical-corporate/ or health/ are relative to the reproduction source directory. Prior references beginning research/ are repository-relative. Public source URLs and SHA-256 values identify the originals. Research-stage SVG files and checksums are separate from final published assets in the canonical asset register.",
+  "canonical_asset_register": "research/identity/vector-followup-2026-11-08/source-register.json",
+  "title": "Focused historical health vector follow-up",
+  "scope": "11 assigned raster-only historical health bodies; original-native vector search, no tracing or substituted successor artwork.",
+  "summary": {
+    "new_verified_vectors": 0,
+    "new_artwork_files_accepted": 0,
+    "new_unique_pdfs_retrieved": 3,
+    "pdf_pages_structurally_inventoried": 297,
+    "source_retrieval_failures": 5,
+    "false_gap_or_duplicate_proven": 0
+  },
+  "prior_records_read": [
+    "research/identity/vector-search-2026-10-30/research/health_findings.json",
+    "research/identity/vector-search-2026-10-30/research/health_tail_1.json",
+    "research/identity/vector-search-2026-10-30/research/health_tail_2.json",
+    "research/identity/vector-search-2026-10-30/research/health_tail_3.json",
+    "research/identity/historical-vector-followup-2026-10-30/README.md",
+    "research/identity/historical-vector-followup-2026-10-30/source-register.json",
+    "research/identity/historical-vector-followup-2026-10-30/research-checklist.json",
+    "research/identity/historical-vector-followup-2026-10-30/search-pass-4.json",
+    "research/identity/historical-vector-followup-2026-10-30/search-pass-5.json"
+  ],
+  "method": "Whole-file PyMuPDF get_drawings/get_image_info object inventory; full-size covers and contact sheets of every page with drawing paths visually examined. No claim of page-by-page visual review of all 297 pages. Native shapes for charts, tables, cover lettering, and tiny OCR bullet/spot shapes were not accepted as agency vector logos.",
+  "limits": [
+    "The first five fresh original-source retrievals failed with 403, 429, timeout or 503; failures are not proof of missing archive content.",
+    "No further Wayback requests were made after 429 responses.",
+    "Searches often returned old corpus entries or successor identities; no global absence claim.",
+    "Existing similar names were not merged or reassigned. No verified false gap found among these eleven bodies."
+  ],
+  "query_log": [
+    {
+      "engine": "system2",
+      "queries": [
+        "\"Kootenay Boundary Community Health Services\" pdf",
+        "\"Coast Garibaldi\" \"health\" filetype:pdf -\"North Shore\" -Thesis",
+        "\"Fraser Valley Health Region\" \"logo\" -site:veddercrossingplaza.com",
+        "\"North Shore Health Region\" \"pdf\" -\"Quest\" -\"Canadian Nurse\" -\"balanced scorecard\""
+      ],
+      "result": "Mostly prior sources or successor identities; new Hotel Lake mirror of 2000 Coast Garibaldi commissioned report inspected."
+    },
+    {
+      "engine": "system1",
+      "queries": [
+        "\"North Shore Health Region\" filetype:pdf -site:hl-prod-ca-oc-download.s3.ca-central-1.amazonaws.com -site:collectionscanada.gc.ca -site:publications.gc.ca",
+        "\"Vancouver Richmond Health Board\" \"report\" filetype:pdf -site:hl-prod-ca-oc-download.s3.ca-central-1.amazonaws.com",
+        "\"Fraser Valley Health Region\" \"annual\" filetype:pdf -site:hl-prod-ca-oc-download.s3.ca-central-1.amazonaws.com",
+        "\"Simon Fraser Health Region\" \"pdf\" -\"Health Profile\" -site:hl-prod-ca-oc-download.s3.ca-central-1.amazonaws.com"
+      ],
+      "result": "Rediscovered prior Quest report, Richmond environmental review and original-domain leads; not counted as new inspections."
+    },
+    {
+      "engine": "system2",
+      "queries": [
+        "\"Fraser Valley Health Region\" \"pdf\" \"2000\"",
+        "\"Okanagan Similkameen\" \"health region\" annual report",
+        "\"North Shore Health Region\" \"nshr\"",
+        "\"Vancouver/Richmond Health Board\" \"newsletter\""
+      ],
+      "result": "New usable LAC resolver for uninspected MQ59418 thesis; otherwise prior or successor sources."
+    },
+    {
+      "engine": "system1",
+      "queries": [
+        "\"Vancouver/Richmond\" \"health\" \"logo\"",
+        "\"Vancouver/Richmond Health Board\" \"info-structure\"",
+        "\"North Shore Health Region\" \"sharing a vision\"",
+        "\"Fraser Valley Health Region\" \"www\""
+      ],
+      "result": "No fresh attributable historical native source identified; current VCH logos excluded."
+    },
+    {
+      "engine": "system2",
+      "queries": [
+        "\"North Shore Health Region\" \"advertising\"",
+        "\"Fraser Valley Health Region\" \"Canadian Medical\"",
+        "\"Kootenay/Boundary Community Health Services\"",
+        "Canadian Nurse archived issues 2000"
+      ],
+      "result": "Publisher archive route found, returned 403. Exact period recruitment ad remains uninspected. North Shore Roadmap Project named by former communications practitioner, a bibliographic lead only."
+    },
+    {
+      "engine": "system2",
+      "queries": [
+        "\"Campbell River/Nootka\" \"report\" pdf",
+        "\"Sunshine Coast Community Health Council\" \"pdf\"",
+        "\"Greater Trail Community Health Council\" \"pdf\"",
+        "\"South Cariboo Community Health Council\" pdf"
+      ],
+      "result": "Search returned mostly unrelated or successor results; no new agency print/design source identified."
+    },
+    {
+      "engine": "system1",
+      "queries": [
+        "\"Okanagan Similkameen Health Region\" \"brochure\"",
+        "\"Coast Garibaldi\" \"health\" \"arsenic\"",
+        "\"Sunshine Coast Community Health Council\" \"report\"",
+        "\"Greater Trail Community Health Council\" \"report\""
+      ],
+      "result": "Verified the 2000 arsenic-report attribution through the partner's publication index; no fresh source for the other queried bodies."
+    }
+  ],
+  "rows": [
+    {
+      "id": "fraser-valley-health-region",
+      "name": "Fraser Valley Health Region",
+      "outcome": "No new original vector verified.",
+      "new_source_ids": [],
+      "exclusions": [
+        "The 2001 business case catalogue and microfiche route were already logged in pass 4; not a new source inspection.",
+        "Current Fraser Health branding at a directory using the older name is not this mark."
+      ],
+      "remaining_leads": [
+        {
+          "url": "https://canadacommons.ca/artifacts/52101310/business-case-for-the-fraser-valley-health-centre-and-eastern-fraser-valley-cancer-centre/52999927/",
+          "note": "Prior catalogue-only lead. Seek the original publisher PDF/design source rather than the IA microfiche derivative; 114-page catalogue version is not assumed identical to the 200-scan IA item."
+        },
+        {
+          "url": "https://www.canadian-nurse.com/archive/2000-2009",
+          "note": "May 2000 recruitment advert is indexed; fresh publisher route returned 403. Actual artwork structure remains uninspected."
+        }
+      ]
+    },
+    {
+      "id": "north-shore-health-region",
+      "name": "North Shore Health Region",
+      "outcome": "Two additional PDFs structurally checked; no North Shore native logo verified.",
+      "new_source_ids": [
+        "north-shore-social-plan",
+        "cgh-arsenic-partner-report"
+      ],
+      "exclusions": [
+        "Quest for Quality had already been inspected with no agency mark; no duplicate inspection.",
+        "The North Vancouver civic crest on the Social Plan cover is not health-region artwork."
+      ],
+      "remaining_leads": [
+        {
+          "url": "https://twuonline.github.io/ldrs634/u9.html",
+          "note": "Specific bibliography: 2000 Health Services Plan for 2000–2003; Balanced Scorecard version 1.1 (2001); Community Health Profile 2000. Original source files remain unlocated."
+        },
+        {
+          "url": "https://www.canadian-nurse.com/archive/2000-2009",
+          "note": "May 2000 recruiting ad is indexed with the period mark; publisher archive 403 prevents source inspection."
+        },
+        {
+          "url": "https://ca.linkedin.com/in/dianelund",
+          "note": "Search-indexed practitioner profile identifies an award-winning North Shore Health Region Roadmap Project. Bibliographic/design-project lead only, no original artwork accessed."
+        }
+      ]
+    },
+    {
+      "id": "vancouver-richmond-health-board",
+      "name": "Vancouver/Richmond Health Board",
+      "outcome": "No new vector verified; outstanding alternate women-centred-health PDF remains inaccessible.",
+      "new_source_ids": [
+        "vrhb-women-framework-new-retrieval"
+      ],
+      "exclusions": [
+        "Previously inspected original Word report WMF holds bitmap painting only; not a native vector.",
+        "No current VCH branding substituted."
+      ],
+      "remaining_leads": [
+        {
+          "url": "https://www.womennorthnetwork.com/wp-content/uploads/2016/08/A_Framework_for_Women_Centred_Health.pdf",
+          "note": "Fresh request still HTTP 503; a lawful accessible mirror of the original report remains useful."
+        },
+        {
+          "url": "https://www.doctorsofbc.ca/sites/default/files/primarycareensuringexcellence.pdf",
+          "note": "Search-index text cites the 2001 Vancouver/Richmond Health Board Health Info-Structure Vision; this report is a discovery citation only, not a verified artwork source. Original plan remains a specific lead."
+        }
+      ]
+    },
+    {
+      "id": "okanagan-similkameen-health-region",
+      "name": "Okanagan Similkameen Health Region",
+      "outcome": "Previously uninspected MQ59418 lead retrieved through LAC resolver; 126 scanned pages, no native target logo verified.",
+      "new_source_ids": [
+        "oshr-thesis-mq59418-alternate"
+      ],
+      "exclusions": [
+        "MQ49217 known raster thesis was not reinspected.",
+        "Regional Hospital District and current Interior Health marks are separate identities."
+      ],
+      "remaining_leads": [
+        {
+          "url": "https://central.bac-lac.gc.ca/.item?app=Library&id=MQ59418&oclc_number=1007023852&op=pdf",
+          "note": "Thesis cites OSHR Corporate Vision April 1999 and Policy Manual AD 10. Original organization documents, rather than the scanned thesis reproduction, remain a specific unlocated native-source lead."
+        }
+      ]
+    },
+    {
+      "id": "simon-fraser-health-region",
+      "name": "Simon Fraser Health Region",
+      "outcome": "No new source recovered. A fresh bounded newsletter-prefix archive index timed out.",
+      "new_source_ids": [
+        "sfhr-newsletter-cdx"
+      ],
+      "exclusions": [
+        "January 2001 Continuum and Health Profile 2000 already proved raster; no repeat extraction.",
+        "Simon Fraser Health Board is not automatically assigned the Region's artwork."
+      ],
+      "remaining_leads": [
+        {
+          "url": "https://web.archive.org/web/20011123165919id_/http://www.sfhr.com/ccregionalnews/Newsletters/Default.htm",
+          "note": "Other 2001 Continuum issues remain exact-link leads despite previous 404s. Current index timeout does not establish absence."
+        },
+        {
+          "url": "https://web.archive.org/web/20011109164705id_/http://www.sfhr.com/inter_ccaboutsfhr/",
+          "note": "The linked 2000/2001 annual report and strategic brochure remain unlocated original-file leads."
+        }
+      ]
+    },
+    {
+      "id": "kootenay-boundary-community-health-services-society",
+      "name": "Kootenay Boundary Community Health Services Society",
+      "outcome": "No new source or vector verified. Canadian Nurse publisher archive returned 403.",
+      "new_source_ids": [
+        "nurse-archive-2000-2009"
+      ],
+      "exclusions": [
+        "Existing FOI letterhead is already known page-sized raster; Trail technical reports already inspected with no society logo.",
+        "Current Kootenay Boundary Community Services Cooperative and Regional Hospital District artwork cannot close this gap."
+      ],
+      "remaining_leads": [
+        {
+          "url": "https://hl-prod-ca-oc-download.s3.ca-central-1.amazonaws.com/CNA/8de47524-f9d6-87da-7be2-8a87771997ec_file.pdf",
+          "note": "September 2001 Canadian Nurse, volume 97 number 8, printed page 56 recruiting ad. Bare source locator retained from previous work; did not retry expired signed URLs. A fresh official download remains needed."
+        },
+        {
+          "url": "https://www.canadian-nurse.com/archive/2000-2009",
+          "note": "Publisher archive route was explicitly attempted and returned 403; source file/artwork not inspected."
+        }
+      ]
+    },
+    {
+      "id": "campbell-river-nootka-community-health-council",
+      "name": "Campbell River/Nootka Community Health Council",
+      "outcome": "Fresh search did not identify a new original print/design source. No vector verified.",
+      "new_source_ids": [],
+      "exclusions": [
+        "2002 Words on the Water program and full original archived version were already proved raster.",
+        "Original 2000 website GIF is already preserved."
+      ],
+      "remaining_leads": [
+        {
+          "url": "https://web.archive.org/web/20011203211029id_/http://www.crncare.org:80/crnchc/whoweare.htm",
+          "note": "Prior original corporate history gives combined council establishment 1 April 1997; useful attribution constraint, not artwork. Original print/design source for logo_col_345_328.gif remains unlocated."
+        }
+      ],
+      "identity_note": "The combined council's 1997 establishment supports keeping the earlier Campbell River and Area and Nootka bodies distinct; no false duplicate demonstrated."
+    },
+    {
+      "id": "coast-garibaldi-community-health-services-society",
+      "name": "Coast Garibaldi Community Health Services Society",
+      "outcome": "New 89-page born-digital 2000 commissioned report inspected; agency title and funding attribution only, no target logo verified.",
+      "new_source_ids": [
+        "cgh-arsenic-partner-report",
+        "cghealth-three-year-plan"
+      ],
+      "exclusions": [
+        "The 13 cover paths spell FINAL REPORT and its underline; not a logo.",
+        "Prior original website GIF is already preserved.",
+        "Earlier regional health board and later VCH area are distinct attribution scopes."
+      ],
+      "remaining_leads": [
+        {
+          "url": "https://web.archive.org/web/20020325203027id_/http://www.cghealth.org/Documents/Three_Year_Plan.htm",
+          "note": "Previously seen Word-generated HTML references editdata.mso/filelist.xml auxiliaries. Fresh page retrieval returned 429, so exact auxiliary links could not be followed; no retry was made."
+        },
+        {
+          "url": "http://www.cghealth.org/Documents/Connections_Newsletters/Connections_3.pdf",
+          "note": "Original linked newsletter, prior 404; lawful mirror or original design source remains unlocated."
+        },
+        {
+          "url": "http://www.cghealth.org/Documents/CC_Facilities_Plan_2001.pdf",
+          "note": "Original linked plan, prior 404; not repeated."
+        }
+      ]
+    },
+    {
+      "id": "sunshine-coast-community-health-council",
+      "name": "Sunshine Coast Community Health Council",
+      "outcome": "No newly accessible original source or native vector identified.",
+      "new_source_ids": [],
+      "exclusions": [
+        "Original three-slice website banner and HTML newsletter were already inspected.",
+        "Current Sunshine Coast Rural health-service-area material is not council-era artwork."
+      ],
+      "remaining_leads": [
+        {
+          "url": "https://web.archive.org/web/20010616123937id_/http://www.sunshinecoastcommunityhealthcouncil.com:80/newsletter.html",
+          "note": "UPBEAT website is HTML with raster header. An original newsletter print/design file remains unlocated; no new file found."
+        }
+      ]
+    },
+    {
+      "id": "south-cariboo-community-health-council",
+      "name": "South Cariboo Community Health Council",
+      "outcome": "No new source or vector verified; original site retrieval to follow remaining PDFs returned 429.",
+      "new_source_ids": [
+        "south-cariboo-home"
+      ],
+      "exclusions": [
+        "Health Plan 1999 and its byte-identical mirror are already inspected; not counted twice.",
+        "18 December 2000 agenda has already been checked; no repeat."
+      ],
+      "remaining_leads": [
+        {
+          "url": "https://web.archive.org/web/20010606220634id_/http://www.100mile.com/health/",
+          "note": "Original site links other minutes/member-list PDFs. Current request hit 429; remaining files and underlying DOC/WMF source remain uninspected."
+        }
+      ],
+      "identity_note": "The distinct earlier South Cariboo Health Council row is not closed from later CHC artwork without continuity/adoption evidence."
+    },
+    {
+      "id": "greater-trail-community-health-council",
+      "name": "Greater Trail Community Health Council",
+      "outcome": "Fresh exact-name report searches yielded no new native artwork source.",
+      "new_source_ids": [],
+      "exclusions": [
+        "190-page 2001 Trail remedial-options report and original council GIF/HTML report already inspected.",
+        "Modern Interior Health and Trail hospital identities were not substituted."
+      ],
+      "remaining_leads": [
+        {
+          "url": "https://web.archive.org/web/20011016202119id_/http://trailnet.bc.ca:80/~trh/CHC/CHAIRreport.htm",
+          "note": "Known HTML annual chair report has no native drawing link. An original letterhead or report print/design source remains unlocated; existing archive prefix had only HTML/raster/template files."
+        }
+      ]
+    }
+  ],
+  "download_manifests": [
+    "health/initial-requests-results.json",
+    "health/final-requests-results.json"
+  ],
+  "inspection_files": [
+    "health/evidence/cgh-arsenic-partner-report-structure.json",
+    "health/evidence/north-shore-social-plan-structure.json",
+    "health/evidence/oshr-thesis-mq59418-structure.json"
+  ],
+  "inspection_notes": [
+    {
+      "source_id": "cgh-arsenic-partner-report",
+      "printed_date": "2000-03-01",
+      "pages": 89,
+      "assessment": "No image objects. Cover plain agency title; 13 native cover paths spell FINAL REPORT and underline. Other drawing pages are report rules, table/grid/chart geometry and links. No agency mark verified.",
+      "visually_examined_drawing_pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        23,
+        25,
+        27,
+        28,
+        29,
+        31,
+        34,
+        36,
+        37,
+        39,
+        40,
+        42,
+        48,
+        49,
+        89
+      ]
+    },
+    {
+      "source_id": "north-shore-social-plan",
+      "printed_date": "1997-11",
+      "pages": 82,
+      "assessment": "Native city report with one raster city crest on cover. Drawing pages show tables, charts, rules and links. North Shore Health Region is a bibliographic text reference (PDF page 77), not an attributable logo.",
+      "visually_examined_drawing_pages": [
+        1,
+        2,
+        3,
+        5,
+        7,
+        10,
+        20,
+        31,
+        32,
+        48,
+        53,
+        57,
+        58,
+        61,
+        63,
+        64,
+        65,
+        66,
+        67,
+        76,
+        81,
+        82
+      ]
+    },
+    {
+      "source_id": "oshr-thesis-mq59418-alternate",
+      "printed_date": "2001-04",
+      "pages": 126,
+      "assessment": "Every page contains a page-sized raster. 11 tiny native drawing objects on pages 5,47,48,120 are OCR bullet/spot shapes, not the agency mark; no native logo recovered.",
+      "visually_examined_drawing_pages": [
+        5,
+        47,
+        48,
+        120
+      ]
+    }
+  ],
+  "fresh_source_retrievals": [
+    {
+      "id": "nurse-archive-2000-2009",
+      "filename": "nurse-archive-2000-2009.html",
+      "url": "https://www.canadian-nurse.com/archive/2000-2009",
+      "status": "retrieval-failed",
+      "error": "HTTP Error 403: Forbidden",
+      "retrieved_at": "2026-11-09T06:10:24.252594+00:00",
+      "retrieval_manifest_ref": "health/initial-requests-results.json"
+    },
+    {
+      "id": "cghealth-three-year-plan",
+      "filename": "cghealth-three-year-plan.html",
+      "url": "https://web.archive.org/web/20020325203027id_/http://www.cghealth.org/Documents/Three_Year_Plan.htm",
+      "status": "retrieval-failed",
+      "error": "HTTP Error 429: Too Many Requests",
+      "retrieved_at": "2026-11-09T06:10:25.682273+00:00",
+      "retrieval_manifest_ref": "health/initial-requests-results.json"
+    },
+    {
+      "id": "south-cariboo-home",
+      "filename": "south-cariboo-home.html",
+      "url": "https://web.archive.org/web/20010606220634id_/http://www.100mile.com/health/",
+      "status": "retrieval-failed",
+      "error": "HTTP Error 429: Too Many Requests",
+      "retrieved_at": "2026-11-09T06:10:25.684216+00:00",
+      "retrieval_manifest_ref": "health/initial-requests-results.json"
+    },
+    {
+      "id": "sfhr-newsletter-cdx",
+      "filename": "sfhr-newsletter-cdx.json",
+      "url": "https://web.archive.org/cdx/search/cdx?url=www.sfhr.com%2Fccregionalnews%2FNewsletters%2F&matchType=prefix&output=json&filter=statuscode%3A200&collapse=urlkey&fl=timestamp%2Coriginal%2Cmimetype%2Cdigest%2Clength&limit=100",
+      "status": "retrieval-failed",
+      "error": "The read operation timed out",
+      "retrieved_at": "2026-11-09T06:10:49.571374+00:00",
+      "retrieval_manifest_ref": "health/initial-requests-results.json"
+    },
+    {
+      "id": "vrhb-women-framework-new-retrieval",
+      "filename": "vrhb-women-framework.pdf",
+      "url": "https://www.womennorthnetwork.com/wp-content/uploads/2016/08/A_Framework_for_Women_Centred_Health.pdf",
+      "status": "retrieval-failed",
+      "error": "HTTP Error 503: Service Unavailable",
+      "retrieved_at": "2026-11-09T06:10:24.252251+00:00",
+      "retrieval_manifest_ref": "health/initial-requests-results.json"
+    },
+    {
+      "id": "cgh-arsenic-partner-report",
+      "filename": "cgh-arsenic-partner-report.pdf",
+      "url": "https://www.hotellakeadvisory.com/_files/ugd/caa3e3_07080087706044bdb2381d9ca76e523f.pdf",
+      "status": 200,
+      "resolved_url": "https://www.hotellakeadvisory.com/_files/ugd/caa3e3_07080087706044bdb2381d9ca76e523f.pdf",
+      "content_type": "application/pdf",
+      "bytes": 366933,
+      "sha256": "b4a786339e469b12b1c187a03540e4e4f07122c1a47f61bea134d7e14cafe5e3",
+      "source_dir_path": "health/sources/cgh-arsenic-partner-report.pdf",
+      "retrieved_at": "2026-11-09T06:11:15.371539+00:00",
+      "retrieval_manifest_ref": "health/final-requests-results.json",
+      "structural_inventory": {
+        "structure_file": "health/evidence/cgh-arsenic-partner-report-structure.json",
+        "source_file": "health/sources/cgh-arsenic-partner-report.pdf",
+        "page_count": 89,
+        "native_drawing_count_all_pages": 3843,
+        "image_placements_all_pages": 0,
+        "pages_with_native_drawings": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          23,
+          25,
+          27,
+          28,
+          29,
+          31,
+          34,
+          36,
+          37,
+          39,
+          40,
+          42,
+          48,
+          49,
+          89
+        ],
+        "pdf_metadata": {
+          "format": "PDF 1.3",
+          "title": "Microsoft Word - Final Arsenic Report UBC 2000.doc",
+          "author": "jpearce",
+          "subject": "",
+          "keywords": "",
+          "creator": "PScript5.dll Version 5.2",
+          "producer": "GNU Ghostscript 7.05",
+          "creationDate": "6/9/2003 10:59:16",
+          "modDate": "",
+          "trapped": "",
+          "encryption": null
+        },
+        "inspection_note": {
+          "source_id": "cgh-arsenic-partner-report",
+          "printed_date": "2000-03-01",
+          "pages": 89,
+          "assessment": "No image objects. Cover plain agency title; 13 native cover paths spell FINAL REPORT and underline. Other drawing pages are report rules, table/grid/chart geometry and links. No agency mark verified.",
+          "visually_examined_drawing_pages": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            23,
+            25,
+            27,
+            28,
+            29,
+            31,
+            34,
+            36,
+            37,
+            39,
+            40,
+            42,
+            48,
+            49,
+            89
+          ]
+        }
+      },
+      "inspection_status": "native-document-no-target-logo-verified"
+    },
+    {
+      "id": "oshr-thesis-mq59418-alternate",
+      "filename": "oshr-thesis-mq59418.pdf",
+      "url": "https://central.bac-lac.gc.ca/.item?app=Library&id=MQ59418&oclc_number=1007023852&op=pdf",
+      "status": 200,
+      "resolved_url": "https://nlc-bnc.ca/obj/s4/f2/dsk3/ftp04/MQ59418.pdf",
+      "content_type": "application/pdf",
+      "bytes": 6736793,
+      "sha256": "b4d158e998f45c7957d792f1d45306caeccb8107b72b542217ac371db4cc95f6",
+      "source_dir_path": "health/sources/oshr-thesis-mq59418.pdf",
+      "retrieved_at": "2026-11-09T06:11:22.411646+00:00",
+      "retrieval_manifest_ref": "health/final-requests-results.json",
+      "structural_inventory": {
+        "structure_file": "health/evidence/oshr-thesis-mq59418-structure.json",
+        "source_file": "health/sources/oshr-thesis-mq59418.pdf",
+        "page_count": 126,
+        "native_drawing_count_all_pages": 11,
+        "image_placements_all_pages": 126,
+        "pages_with_native_drawings": [
+          5,
+          47,
+          48,
+          120
+        ],
+        "pdf_metadata": {
+          "format": "PDF 1.3",
+          "title": "",
+          "author": "",
+          "subject": "A UMI Dissertation",
+          "keywords": "UMI Co. Dissertation # MQ59418",
+          "creator": "Adobe Acrobat 6.02",
+          "producer": "Adobe Acrobat 6.02 Paper Capture Plug-in",
+          "creationDate": "D:20010916054110-05'00'",
+          "modDate": "D:20050126232634-05'00'",
+          "trapped": "",
+          "encryption": null
+        },
+        "inspection_note": {
+          "source_id": "oshr-thesis-mq59418-alternate",
+          "printed_date": "2001-04",
+          "pages": 126,
+          "assessment": "Every page contains a page-sized raster. 11 tiny native drawing objects on pages 5,47,48,120 are OCR bullet/spot shapes, not the agency mark; no native logo recovered.",
+          "visually_examined_drawing_pages": [
+            5,
+            47,
+            48,
+            120
+          ]
+        }
+      },
+      "inspection_status": "raster-scan-no-native-target-logo"
+    },
+    {
+      "id": "north-shore-social-plan",
+      "filename": "north-shore-social-plan.pdf",
+      "url": "https://www.cnv.org/-/media/City-of-North-Vancouver/Documents/Social-Plan/Social-Plan-Background.pdf",
+      "status": 200,
+      "resolved_url": "https://www.cnv.org/-/media/City-of-North-Vancouver/Documents/Social-Plan/Social-Plan-Background.pdf",
+      "content_type": "application/pdf",
+      "bytes": 716118,
+      "sha256": "327d90ab8e545888f1d52c40cd0ad731ba73bb43438da169137e4becd1e588fc",
+      "source_dir_path": "health/sources/north-shore-social-plan.pdf",
+      "retrieved_at": "2026-11-09T06:11:15.312133+00:00",
+      "retrieval_manifest_ref": "health/final-requests-results.json",
+      "structural_inventory": {
+        "structure_file": "health/evidence/north-shore-social-plan-structure.json",
+        "source_file": "health/sources/north-shore-social-plan.pdf",
+        "page_count": 82,
+        "native_drawing_count_all_pages": 1946,
+        "image_placements_all_pages": 1,
+        "pages_with_native_drawings": [
+          1,
+          2,
+          3,
+          5,
+          7,
+          10,
+          20,
+          31,
+          32,
+          48,
+          53,
+          57,
+          58,
+          61,
+          63,
+          64,
+          65,
+          66,
+          67,
+          76,
+          81,
+          82
+        ],
+        "pdf_metadata": {
+          "format": "PDF 1.4",
+          "title": "1",
+          "author": "jocain",
+          "subject": "",
+          "keywords": "",
+          "creator": "Acrobat PDFMaker 6.0 for Word",
+          "producer": "Acrobat Distiller 6.0 (Windows)",
+          "creationDate": "D:20040611093737-07'00'",
+          "modDate": "D:20040611094150-07'00'",
+          "trapped": "",
+          "encryption": null
+        },
+        "inspection_note": {
+          "source_id": "north-shore-social-plan",
+          "printed_date": "1997-11",
+          "pages": 82,
+          "assessment": "Native city report with one raster city crest on cover. Drawing pages show tables, charts, rules and links. North Shore Health Region is a bibliographic text reference (PDF page 77), not an attributable logo.",
+          "visually_examined_drawing_pages": [
+            1,
+            2,
+            3,
+            5,
+            7,
+            10,
+            20,
+            31,
+            32,
+            48,
+            53,
+            57,
+            58,
+            61,
+            63,
+            64,
+            65,
+            66,
+            67,
+            76,
+            81,
+            82
+          ]
+        }
+      },
+      "inspection_status": "native-document-no-target-logo-verified"
+    }
+  ],
+  "lane_summary": {
+    "target_rows": 11,
+    "bodies_with_verified_original_vectors": 0,
+    "verified_original_vector_variants": 0,
+    "new_pdf_binaries": 3,
+    "source_retrieval_failure_records": 5,
+    "unresolved_target_rows": 11,
+    "scope_note": "Eleven historical health bodies, three new unique PDFs and 297 pages structurally inventoried. Covers and contact sheets of pages containing drawing paths were visually examined. This is not a page-by-page visual review of all 297 pages; several bodies received search-only or blocked-retrieval follow-up."
+  }
+}

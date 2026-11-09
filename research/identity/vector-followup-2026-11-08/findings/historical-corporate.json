@@ -1,0 +1,474 @@
+{
+  "research_date": "2026-11-08",
+  "research_timezone": "America/Vancouver",
+  "date_note": "The displayed research date is 2026-11-08 in America/Vancouver. Some recorded UTC retrievals fall on 2026-11-09; exact retrieval timestamps and source publication or PDF metadata dates are preserved.",
+  "path_note": "Source and evidence paths beginning current-crown/, historical/, historical-corporate/ or health/ are relative to the reproduction source directory. Prior references beginning research/ are repository-relative. Public source URLs and SHA-256 values identify the originals. Research-stage SVG files and checksums are separate from final published assets in the canonical asset register.",
+  "canonical_asset_register": "research/identity/vector-followup-2026-11-08/source-register.json",
+  "scope": "Original period vector artwork for BC Ferries geometric dogwood lockup (~1978–2003) and BCLC red/orange/green 2008-era identity; no tracing, recreating, palette substitution or repository edits.",
+  "prior_evidence_reviewed": [
+    "research/identity/README.md",
+    "research/identity/historical-vector-followup-2026-10-30/research-checklist.json"
+  ],
+  "organizations": [
+    {
+      "id": "bclc",
+      "result": "verified_vector",
+      "summary": "Found original period artwork in 2009 government-hosted service plan update and 2010/11 official annual report. This resolves the absence of genuine older-palette artwork; period source paths supersede a recolour of current paths as evidence.",
+      "inspected_sources": [
+        {
+          "url": "https://www.bcbudget.gov.bc.ca/2009_Sept_Update/sp/pdf/agency/bclc.pdf",
+          "status": "verified_vector",
+          "publication_title": "BCLC Service Plan Update 2009/2010–2011/2012",
+          "publication_period": "2009/10–2011/12",
+          "publication_date": null,
+          "source_dir_path": "historical-corporate/bclc-sp2009-update.pdf",
+          "sha256": "9082cc95f49c71d317ef11f32773669d50982d0709eae6c31e0dd57c3ce2ad4a",
+          "page_count": 38,
+          "pdf_metadata": {
+            "format": "PDF 1.6",
+            "title": "2009/10 – 2011/12  Service Plan Update",
+            "author": "",
+            "subject": "",
+            "keywords": "",
+            "creator": "Adobe InDesign CS4 (6.0.3)",
+            "producer": "Adobe PDF Library 9.0",
+            "creationDate": "D:20090821141918-07'00'",
+            "modDate": "D:20090829185237-07'00'",
+            "trapped": "",
+            "encryption": "Standard V2 R3 128-bit RC4"
+          },
+          "variants": [
+            {
+              "variant": "dark grey letters, red/orange/green dots, playing it right tagline",
+              "page": 38,
+              "page_index": 37,
+              "drawing_indices": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7
+              ],
+              "drawing_index_basis": "Zero-based PyMuPDF Page.get_drawings() on original unmodified PDF",
+              "path_count": 8,
+              "tight_crop_points": [
+                267.59619140625,
+                553.45068359375,
+                348.5967712402344,
+                604.8391723632812
+              ],
+              "proof_crop_points": [
+                258,
+                546,
+                356,
+                610
+              ],
+              "live_text_in_logo": "",
+              "page_images_intersecting_bbox": 0,
+              "rendered_proof": "historical-corporate/bclc-sp2009-update-logo-page38-proof.png",
+              "assessment": "All artwork is original outlined paths; zero intersecting raster images or live text. The Province emblem below is separate and excluded.",
+              "selected_paths_rgb": [
+                {
+                  "drawing_index": 0,
+                  "fill": [
+                    0.2739909887313843,
+                    0.3349965810775757,
+                    0.3759975731372833
+                  ]
+                },
+                {
+                  "drawing_index": 1,
+                  "fill": [
+                    0.2739909887313843,
+                    0.3349965810775757,
+                    0.3759975731372833
+                  ]
+                },
+                {
+                  "drawing_index": 2,
+                  "fill": [
+                    0.2739909887313843,
+                    0.3349965810775757,
+                    0.3759975731372833
+                  ]
+                },
+                {
+                  "drawing_index": 3,
+                  "fill": [
+                    0.2739909887313843,
+                    0.3349965810775757,
+                    0.3759975731372833
+                  ]
+                },
+                {
+                  "drawing_index": 4,
+                  "fill": [
+                    0.7689936757087708,
+                    0.1259937435388565,
+                    0.19598688185214996
+                  ]
+                },
+                {
+                  "drawing_index": 5,
+                  "fill": [
+                    0.9599908590316772,
+                    0.502998411655426,
+                    0.13499656319618225
+                  ]
+                },
+                {
+                  "drawing_index": 6,
+                  "fill": [
+                    0.5539940595626831,
+                    0.7779964804649353,
+                    0.251987487077713
+                  ]
+                },
+                {
+                  "drawing_index": 7,
+                  "fill": [
+                    0.2739909887313843,
+                    0.3349965810775757,
+                    0.3759975731372833
+                  ]
+                }
+              ]
+            },
+            {
+              "variant": "white letters, red/orange/green dots, no tagline",
+              "page": 1,
+              "page_index": 0,
+              "drawing_indices": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6
+              ],
+              "drawing_index_basis": "Zero-based PyMuPDF Page.get_drawings() on original unmodified PDF",
+              "path_count": 7,
+              "tight_crop_points": [
+                240.00010681152344,
+                250.36358642578125,
+                372.90899658203125,
+                306.5448913574219
+              ],
+              "proof_crop_points": [
+                230,
+                242,
+                380,
+                310
+              ],
+              "live_text_in_logo": "",
+              "page_images_intersecting_bbox": 1,
+              "rendered_proof": "historical-corporate/bclc-sp2009-update-logo-page1-proof.png",
+              "assessment": "Seven native filled paths above the page-cover bitmap. The bitmap is the photographic background, not the logo. Select only indices 0–6; do not include raster background.",
+              "selected_paths_rgb": [
+                {
+                  "drawing_index": 0,
+                  "fill": [
+                    1.0,
+                    1.0,
+                    1.0
+                  ]
+                },
+                {
+                  "drawing_index": 1,
+                  "fill": [
+                    1.0,
+                    1.0,
+                    1.0
+                  ]
+                },
+                {
+                  "drawing_index": 2,
+                  "fill": [
+                    1.0,
+                    1.0,
+                    1.0
+                  ]
+                },
+                {
+                  "drawing_index": 3,
+                  "fill": [
+                    1.0,
+                    1.0,
+                    1.0
+                  ]
+                },
+                {
+                  "drawing_index": 4,
+                  "fill": [
+                    0.7689936757087708,
+                    0.07098496705293655,
+                    0.1879911571741104
+                  ]
+                },
+                {
+                  "drawing_index": 5,
+                  "fill": [
+                    0.8899977207183838,
+                    0.43698787689208984,
+                    0.11799801886081696
+                  ]
+                },
+                {
+                  "drawing_index": 6,
+                  "fill": [
+                    0.5519950985908508,
+                    0.7779964804649353,
+                    0.24699778854846954
+                  ]
+                }
+              ]
+            }
+          ],
+          "publication_date_note": "September 2009 update; PDF created 2009-08-21 and modified 2009-08-29. This is a period specimen of the 2008-era identity, not a claimed 2008 master or adoption-date proof."
+        },
+        {
+          "url": "https://corporate.bclc.com/content/dam/bclccorporate/reports/annual-reports/2011/bclc-annual-report-1011.pdf",
+          "status": "verified_vector",
+          "publication_title": "BCLC Annual Service Plan Report 2010/11",
+          "publication_period": "2010/11",
+          "publication_date": null,
+          "source_dir_path": "historical-corporate/bclc-annual2011.pdf",
+          "sha256": "868368749638a2ebbcb270c937609317145384cce314353d62445f2961e87675",
+          "page_count": 88,
+          "pdf_metadata": {
+            "format": "PDF 1.6",
+            "title": "BCLC 2010/11 Annual Report",
+            "author": "BCLC",
+            "subject": "",
+            "keywords": "",
+            "creator": "Adobe InDesign CS5 (7.0.4)",
+            "producer": "Adobe PDF Library 9.9",
+            "creationDate": "D:20110705131928-07'00'",
+            "modDate": "D:20110718095037-07'00'",
+            "trapped": "",
+            "encryption": "Standard V4 R4 128-bit AES"
+          },
+          "variants": [
+            {
+              "variant": "white letters, red/orange/green dots, playing it right tagline",
+              "page": 1,
+              "page_index": 0,
+              "drawing_indices": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8
+              ],
+              "drawing_index_basis": "Zero-based PyMuPDF Page.get_drawings() on original unmodified PDF",
+              "path_count": 8,
+              "tight_crop_points": [
+                18.0,
+                11.699518203735352,
+                66.59980010986328,
+                42.53242492675781
+              ],
+              "proof_crop_points": [
+                10,
+                5,
+                75,
+                48
+              ],
+              "live_text_in_logo": "",
+              "page_images_intersecting_bbox": 1,
+              "rendered_proof": "historical-corporate/bclc-annual2011-logo-proof.png",
+              "assessment": "Eight native filled paths. Index 0 is the dark header band and must be omitted. Full-page grass bitmap underlies the header, but neither logo letters/dots nor tagline depend on it.",
+              "selected_paths_rgb": [
+                {
+                  "drawing_index": 1,
+                  "fill": [
+                    1.0,
+                    1.0,
+                    1.0
+                  ]
+                },
+                {
+                  "drawing_index": 2,
+                  "fill": [
+                    1.0,
+                    1.0,
+                    1.0
+                  ]
+                },
+                {
+                  "drawing_index": 3,
+                  "fill": [
+                    1.0,
+                    1.0,
+                    1.0
+                  ]
+                },
+                {
+                  "drawing_index": 4,
+                  "fill": [
+                    1.0,
+                    1.0,
+                    1.0
+                  ]
+                },
+                {
+                  "drawing_index": 5,
+                  "fill": [
+                    0.7689936757087708,
+                    0.07098496705293655,
+                    0.1879911571741104
+                  ]
+                },
+                {
+                  "drawing_index": 6,
+                  "fill": [
+                    0.8899977207183838,
+                    0.43698787689208984,
+                    0.11799801886081696
+                  ]
+                },
+                {
+                  "drawing_index": 7,
+                  "fill": [
+                    0.5519950985908508,
+                    0.7779964804649353,
+                    0.24699778854846954
+                  ]
+                },
+                {
+                  "drawing_index": 8,
+                  "fill": [
+                    1.0,
+                    1.0,
+                    1.0
+                  ]
+                }
+              ]
+            }
+          ],
+          "publication_date_note": "PDF created 2011-07-05 and modified 2011-07-18; dated specimen of the older palette."
+        },
+        {
+          "url": "https://corporate.bclc.com/content/dam/bclccorporate/reports/annual-reports/2009/bclc-annual-report-0809.pdf",
+          "status": "blocked",
+          "assessment": "Search indexed an official 2008/09 annual report, but direct current download returned 404. No file inspection."
+        },
+        {
+          "url": "https://corporate.bclc.com/content/dam/bclccorporate/reports/annual-reports/2008/bclc-annual-report-0708.pdf",
+          "status": "blocked",
+          "assessment": "Search indexed official 2007/08 report, but direct download 404. This predates August 2008 rebrand and was only secondary discovery context."
+        },
+        {
+          "url": "https://corporate.bclc.com/our-business/reports---disclosures/all-reports.html?filter=annual-reports",
+          "status": "unresolved",
+          "assessment": "Retrieved official report index and extracted original PDF links; linked 2011 annual report inspected above.",
+          "source_dir_path": "historical-corporate/bclc-all-reports.html"
+        }
+      ],
+      "extraction_note": "Use the original source colors per specimen; do not recolour one specimen into another. Dark 2009 page 38 and white 2009 page 1 red/orange dots have slightly different recorded RGB fills. All identity letters and tagline are paths, not substitute fonts."
+    },
+    {
+      "id": "bc-ferries",
+      "result": "unresolved",
+      "summary": "No original geometric dogwood vector recovered in this focused lane. Historic report searches yielded mainly post-2003 material or document references. No modern wave or other-operator graphic substituted.",
+      "inspected_sources": [
+        {
+          "url": "https://www.bcferries.com/web_image/hc6/h5d/8798744576030.pdf",
+          "status": "unresolved",
+          "publication_title": "Coastal Ferry Services Contract",
+          "publication_date": "2003-04-01",
+          "source_dir_path": "historical-corporate/bcferries-coastal2003.pdf",
+          "sha256": "3b0fccbdeaf3e7555bcd4bbe2fec88dc9276fb833f9ca2fd6e1c72b8baeb4ad3",
+          "page_count": 163,
+          "pdf_metadata": {
+            "format": "PDF 1.4",
+            "title": "Microsoft Word - coverpage.doc",
+            "author": "tmvaugha",
+            "subject": "",
+            "keywords": "",
+            "creator": "PScript5.dll Version 5.2",
+            "producer": "Acrobat Distiller 5.0.5 (Windows)",
+            "creationDate": "D:20030401092857-08'00'",
+            "modDate": "D:20030401112344-08'00'",
+            "trapped": "",
+            "encryption": "Standard V1 R2 40-bit RC4"
+          },
+          "inspected_pages": [
+            1,
+            2,
+            28,
+            29,
+            34,
+            35,
+            162,
+            163
+          ],
+          "assessment": "No dogwood mark on inspected cover, contents, signature page or route-appendix headers. Image inventory and sampled pages showed maps, ship silhouettes and a scanned signature page; no separately identifiable logo candidate emerged. This is a focused inspection and does not establish that no vector exists anywhere in the document or other archives.",
+          "rendered_proofs": [
+            "historical-corporate/bcferries-coastal2003-page1.png",
+            "historical-corporate/bcferries-coastal2003-page29.png",
+            "historical-corporate/bcferries-coastal2003-page34.png",
+            "historical-corporate/bcferries-coastal2003-page35.png"
+          ]
+        },
+        {
+          "url": "https://www2.gov.bc.ca/assets/gov/british-columbians-our-governments/government-finances/public-accounts/1999-00/sup-e/bc-ferry-corporation-fs-1999-00.pdf",
+          "status": "blocked",
+          "assessment": "Direct download 503; web tool recognized 14-page PDF with no readable lines but did not expose inspectable bytes or images. No structural/raster conclusion made."
+        },
+        {
+          "url": "https://www.bcbudget.gov.bc.ca/2003/sp/",
+          "status": "blocked",
+          "assessment": "Web tool could not open presumed period service-plan index."
+        },
+        {
+          "url": "https://www.bcbudget.gov.bc.ca/2002/",
+          "status": "blocked",
+          "assessment": "Web tool could not open period budget index."
+        },
+        {
+          "url": "https://www.bcbudget.gov.bc.ca/annual_reports/2002_2003/",
+          "status": "blocked",
+          "assessment": "Web tool could not open period annual-report index."
+        }
+      ],
+      "related_sources_reviewed": [
+        {
+          "url": "https://archive.news.gov.bc.ca/releases/archive/2001-2005/2003tran0017-000313.htm",
+          "assessment": "Official April 2, 2003 announcement distinguishes retirement of 43-year dogwood flag from replacement of 25-year corporate logo. Historical dating context only; no downloadable native dogwood artwork."
+        },
+        {
+          "url": "https://www.bcferries.com/our-company/freedom-of-information/23-016",
+          "assessment": "Prior checklist already structurally inspected 325 pages: raster-only post-2003 manuals. Not downloaded again and not used as historical-vector evidence."
+        }
+      ],
+      "searches": [
+        "BC Ferries annual report2001 pdf",
+        "\"BC Ferries\" \"2001/2002\" pdf",
+        "\"BC Ferries\" \"annual report\" \"2002\" filetype:pdf",
+        "\"British Columbia Ferry Corporation\" \"service plan\" pdf",
+        "\"BC Ferries\" \"2002\" \"logo\" filetype:pdf",
+        "\"BC Ferries\" \"logo\" filetype:eps dogwood",
+        "\"BC Ferries\" \"2000/01\" \"pdf\"",
+        "\"BC Ferries\" \"2001/02\" \"pdf\""
+      ],
+      "stopping_reason": "No further promising native dogwood source discovered after period-report, service-plan and original-brand-asset searches. Archives may hold physical originals, but no claim is made about their contents."
+    }
+  ],
+  "lane_summary": {
+    "target_rows": 2,
+    "bodies_with_verified_original_vectors": 1,
+    "verified_original_vector_variants": 3,
+    "new_pdf_binaries": 3,
+    "source_retrieval_failure_records": 6,
+    "unresolved_target_rows": 1,
+    "scope_note": "Two historical corporate-identity targets: the BC Ferries geometric dogwood lockup and original older-palette BCLC artwork. Three BCLC specimens identified, not three organizations or proof of a 2008 master. BC Ferries contract inspection was limited to the stated pages and inventory."
+  }
+}
