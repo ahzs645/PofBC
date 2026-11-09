@@ -121,6 +121,14 @@ export const EmployerPage = ({ entry, years, sources, year: wantedYear, show, ro
   const matchingPeople = ranked.filter((row) => matchesRecordQuery(row, filter))
   const positionedRecords = people.filter((row) => row[1]).length
   const pay = people.map((row) => row[2])
+  // Trends follow employees alone where the employer discloses any: council, board and appointee
+  // schedules have no threshold and would pull its median and pay bands down.
+  const trendRows = useMemo(() => {
+    if (!rows) return []
+    const employees = rows.filter((row) => sources?.[row[5]]?.scope === 'employee-remuneration')
+    return employees.length ? employees : rows
+  }, [rows, sources])
+  const leftOut = rows ? rows.length - trendRows.length : 0
 
   // Everyone under a name across the years: one row a name, one column a year with records.
   const everyone = useMemo(() => {
@@ -240,7 +248,8 @@ export const EmployerPage = ({ entry, years, sources, year: wantedYear, show, ro
               { value: 'trends', label: 'Trends', title: 'Records, pay and raises over the years, and positions by how fast their pay grew' }
             ]}
           />
-          {view === 'trends' && <Trends rows={rows} years={years} year={year} onRole={onRole} onYear={pick} />}
+          {view === 'trends' && leftOut > 0 && <p className="salaries__hint salaries__hint--small">Trends use the employee schedules. {count(leftOut, 'record', 'records')} from council, board, appointee or other schedules {leftOut === 1 ? 'is' : 'are'} left out; choose them under Disclosure category in a year.</p>}
+          {view === 'trends' && <Trends rows={trendRows} years={years} year={year} onRole={onRole} onYear={pick} />}
           {view !== 'trends' && <>
           <div className="salaries__search salaries__search--one">
             <input type="search" value={filter} placeholder={view === 'positions' ? 'Find a position' : 'Find a name or a position'} aria-label="Find a name or a position" onChange={(event) => setFilter(event.target.value)} />
