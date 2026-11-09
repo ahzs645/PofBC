@@ -27,8 +27,8 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  check-research-and-registration:
-    # The derived map comparison and feature preview do not need artwork fonts.
+  check-boundaries:
+    # Rebuilds the georectified boundaries offline and checks they are current.
     runs-on: ubuntu-latest
     timeout-minutes: 15
     steps:
@@ -43,24 +43,14 @@ jobs:
         with:
           python-version: '3.12'
           cache: pip
-          cache-dependency-path: |
-            research/health-geography/requirements-rectification.txt
-            research/health-geography/requirements-geolibre.txt
-            research/health-geography/requirements-estimates.txt
+          cache-dependency-path: research/health-geography/requirements-boundaries.txt
       - run: npm ci
-      - run: python -m pip install -r research/health-geography/requirements-estimates.txt
-      - run: python -m unittest discover -s scripts -p test_rectify_health_maps.py
-      - run: python -m unittest discover -s scripts -p test_health_geolibre.py
-      - run: python scripts/rectify_health_maps.py
+      - run: python -m pip install -r research/health-geography/requirements-boundaries.txt
       - run: npm run build:health-map
-      - run: python scripts/build_health_estimates.py
-      - run: node scripts/build-health-comparisons.mjs --no-png
-      - run: python -m unittest discover -s scripts -p test_health_estimates.py
-      - name: Check derived research and map files are current
-        run: git diff --exit-code -- public/health-geography src/health/healthAreas.generated.js src/health/healthResearch.generated.js research/health-geography/rectification-results.json research/health-geography/records-to-obtain.md research/health-geography/estimate-results.json research/health-geography/boundary-estimates.md
+      - run: python scripts/build_health_boundaries.py
+      - name: Check derived boundary files are current
+        run: git diff --exit-code -- public/health-geography src/health/healthBoundaries.generated.js
       - run: node --test src/health/*.test.js
-      - name: Verify the GeoLibre SDK can rebuild the portable review
-        run: python scripts/build_health_geolibre.py
       - run: npm run preview:health-map -- --build --base /PofBC/
 
   build-and-test:

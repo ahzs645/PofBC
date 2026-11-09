@@ -841,76 +841,30 @@ supplied reconstruction packages are in [`artwork/posters/`](artwork/posters/REA
 
 ## Historical health maps
 
-Open **Health Maps** in the view menu, or link to `?view=health-map`. Six chapters connect the
-twenty earlier regions, the 1997 regional boards, community councils and service societies, the
-December 2001 consolidation, and modern boundary comparisons. The scrolling sidecar and chapter
-navigation come from the same pinned `geo-toolkit` source used by
-[PGMaps](https://github.com/ahzs645/PGMaps).
+Open **Health Maps** in the view menu, or link to `?view=health-map&layer=councils&area=<id>`.
+Five tabs show the province as it was divided before and at the December 2001 consolidation:
+the **11 regional boards, 34 community councils and 7 service societies** of the 1997 Ministry
+maps (published by the Auditor General in March 1998), the **20 Statistics Canada regions** of
+2000, and the **five health authorities as they stood on 12 December 2001**. Select any area to
+see its organization's dates, earlier names, LHA make-up, how closely it matches the printed map,
+and the related boards, councils, societies and successor authority. A toggle lays the original
+printed map, georectified, over the boundaries. Organization records link back to their map area.
 
-The original Auditor General maps retain their numbered labels. The searchable index contains
-**52 source labels and 51 confirmed institutional links**, with the Nisga’a source area kept
-separate because its institutional identity is unresolved. A fourth original map, published by
-Statistics Canada in **April 2001**, depicts twenty statistical regions; it does not certify the
-1997 legal board boundaries. Each linked health organization also offers a route back to its map.
-
-The comparison chapter offers **52 working administrative estimates**, with separate source-drawn
-approximations for every label. Twenty statistical illustrations remain a separate modern-LHA
-aggregation. Current references include **89 Local Health Areas, 16 Health Service Delivery Areas,
-five geographic Health Authorities, 28 regional districts, 160 municipalities and 59 geographic
-school districts**, loaded on demand from local snapshots. Select an area, inspect its defining
-watershed/survey/municipal references, switch layers, fit the estimate, or put the original page
-beside it. Selection and chapter links can be copied from the address bar.
-
-The three administrative main-map drawings are registered as vectors. Source-drawing screening
-now covers all 52 labels, independently of their modern comparison edges. Original B.C. Reg.
-293/2001 supplies 44 later written territories; M191/1997 supplies a related Nisga’a council
-definition without settling the map-label identity. All geometry remains provisional; legal
-reconstruction, historical amendments, marine detail and inset registration remain open.
-See the complete [area-by-area estimate review](research/health-geography/boundary-estimates.md).
-GeoJSON, CSV, controls, screening scores, sources and remaining records are downloadable in the app.
-
-Use **Explore all 52 comparisons side by side** to open an offline viewer with historical drawing,
-current reference and overlay panels, six boundary types and direct links to definitions. The
-six-example overview is `public/health-geography/comparison-examples.png`; regenerate the viewer,
-SVG and PNG after rebuilding estimates with `npm run build:health-comparisons`.
-
-An evidence review below the story covers all 52 labels, with explicit assumptions, eight tasks
-using existing sources and seven records/provenance targets. It includes archive/direct-request
-routes, possible FOI routes, proposed custodians, date scopes and unsent request drafts. See
-[`records-to-obtain.md`](research/health-geography/records-to-obtain.md) and the
-[`registration method`](research/health-geography/rectification-README.md).
-
-Use `npm run preview:health-map` to review the real feature at port 4174 without building the
-unrelated licensed artwork fonts; `npm run preview:health-map -- --build` creates a standalone
-production preview. The preview covers the health feature; organization-history links require
-the complete application. The full app still needs its normal licensed font assets.
-
-**GeoLibre:** the Health Maps evidence panels now open a portable GeoLibre review and download
-the sixteen-layer project, original image/control-point CSV pairs and registered Cloud-Optimized
-GeoTIFFs. It includes all working estimates and the additional comparison layers, initially hidden.
-Build estimates with `npm run build:health-estimates`, then `npm run build:health-geolibre`, after installing the Python requirements in
-[`geolibre-workflow.md`](research/health-geography/geolibre-workflow.md). Edited GeoLibre controls
-can be imported and evaluated as separate proposals; the baseline is preserved until reviewed.
-
-The evidence preserves consequential differences: the old South Cariboo council follows the
-100 Mile House lineage; North Shore is smaller than today's North Shore/Coast Garibaldi service
-region; Northern Interior's candidate excludes Quesnel; and North West explicitly excludes Nisga’a.
-See [`research/health-geography/README.md`](research/health-geography/README.md) for dated sources,
-asset provenance and the comparison method. Rebuild the catalogue with `npm run build:health-map`.
-The boundary research script is documented in
-[`boundary-comparison-README.md`](research/health-geography/boundary-comparison-README.md).
+Every boundary is a union of modern local health areas (LHAs). Each printed map panel, insets
+included, is georectified to the modern LHA linework (held-out median error 0.2–0.7 km), and each
+printed region takes the LHAs it covers by at least half. The boards plus councils, and separately
+the statistical regions, cover all 89 LHAs exactly once; each society is exactly its councils.
+Rebuild with `npm run build:health-map` and `npm run build:health-boundaries`; see
+[`research/health-geography/README.md`](research/health-geography/README.md) for the method, inputs,
+decisions and sources. `npm run preview:health-map` serves the feature alone at port 4174 without
+the licensed artwork fonts; add `-- --build` for a standalone production preview.
 
 ## Requirements
 
-**Node 20.19+ or 22.12+**, **a copy of Helvetica**, and five git submodules. A copy of **Adobe
+**Node 20.19+ or 22.12+**, **a copy of Helvetica**, and four git submodules. A copy of **Adobe
 Garamond Pro** is optional and widens the current era's alphabet.
 
 ### The submodules
-
-[`vendor/geo-toolkit`](https://github.com/ahzs645/geo-toolkit) supplies the historical health
-story's sidecar, chapter navigation and responsive workspace context. It is pinned to PGMaps's
-`e186e12005afb97c0b4470899bd2713c98336f36` revision. Vite imports the required source entry points
-directly; the toolkit's optional mapping dependencies and separate build toolchain are not installed.
 
 [`vendor/plateforge`](https://github.com/ahzs645/plateforge) is the licence-plate renderer and
 B.C. plate data behind **Licence Plates** (above). Like Patcher, it needs no build step; it is
