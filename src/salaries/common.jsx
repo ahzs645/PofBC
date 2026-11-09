@@ -3,6 +3,7 @@
 
 import { useEffect, useState } from 'react'
 import { displayName } from './people.js'
+import { displayTitle } from './positions.js'
 import { sourceHref } from './coverage.js'
 import { SourceLink } from './DisclosureEvidence.jsx'
 import { formatMoney as money } from './money.js'
@@ -81,7 +82,7 @@ export const RecordRow = ({ rank, name, position, pay, expenses, expenseText, so
         {name !== undefined && (name
           ? <button type="button" className="salaries__name salaries-record-card__open" onClick={() => onPerson(name)}>{displayName(name, nameDisclosure)}</button>
           : <span className="salaries__name" data-missing>Name unavailable</span>)}
-        {position && <span className="salaries__line">{position}</span>}
+        {position && <span className="salaries__line">{displayTitle(position)}</span>}
         {(expense || href) && (
           <span className="salaries__line">
             {expense ? `${expenseText} ${money(expenses)}` : ''}

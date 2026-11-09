@@ -69,11 +69,40 @@ export const titleMatcher = (query) => {
   }
 }
 
+// Short words written in lower case inside a title once its capitals are relaxed.
+const MINOR = new Set(['a', 'an', 'and', 'at', 'by', 'for', 'in', 'of', 'on', 'or', 'the', 'to', 'with', 'de', 'des', 'du', 'la', 'le', 'et'])
+const ROMAN = /^(i{1,3}|iv|v|vi{0,3}|ix|x{1,3})$/i
+
+/**
+ * A position in ordinary capitals where it was published in capitals throughout ("TEACHER", "TRADES II
+ * - CARPENTER" → "Teacher", "Trades II - Carpenter"). Words of up to three letters that are not
+ * ordinary words (CEO, HR, RN, BC) and Roman numerals stay in capitals. Mixed-case
+ * text is returned exactly as published, so an abbreviation an employer chose is never rewritten.
+ * Display only: keys, search and the published records are unchanged.
+ */
+export const displayTitle = (text) => {
+  const value = String(text ?? '')
+  if (!/[A-Z]{2}/.test(value) || /[a-z]/.test(value)) return value
+  let first = true
+  return value.replace(/[A-Z][A-Z'’]*/g, (word) => {
+    const lower = word.toLowerCase()
+    const wasFirst = first
+    first = false
+    if (ROMAN.test(word)) return word
+    if (!wasFirst && MINOR.has(lower)) return lower
+    // Short words are acronyms unless they are ordinary words ("Art", "Bus").
+    if (word.length <= 3 && !COMMON.has(lower)) return word
+    return word[0] + lower.slice(1)
+  })
+}
+// Three-letter-or-shorter words that are ordinary words in titles, not acronyms.
+const COMMON = new Set(['aid', 'air', 'all', 'art', 'bus', 'car', 'day', 'dog', 'fit', 'gas', 'ice', 'key', 'lab', 'law', 'log', 'man', 'map', 'net', 'new', 'off', 'oil', 'old', 'one', 'out', 'own', 'pay', 'pre', 'pro', 'sea', 'set', 'sub', 'tax', 'two', 'use', 'vet', 'way', 'web'])
+
 /**
  * A title as it is shown for every spelling it gathers: the commonest spelling, without the department
  * or bracketed note that the key sets aside ("Nurse 4 (C) · Ward 3" is shown as "Nurse 4").
  */
-export const titleLabel = (spelling) => String(spelling ?? '').split(' · ')[0].replace(/\s*\([^)]*\)/g, ' ').replace(/\s+/g, ' ').trim() || String(spelling ?? '')
+export const titleLabel = (spelling) => displayTitle(String(spelling ?? '').split(' · ')[0].replace(/\s*\([^)]*\)/g, ' ').replace(/\s+/g, ' ').trim() || String(spelling ?? ''))
 
 /** An average of pay, to the dollar: it is worked out here, not disclosed, so its cents would mislead. */
 export const meanMoney = (values) => (values.length ? Math.round(values.reduce((sum, value) => sum + value, 0) / values.length) : null)
@@ -112,5 +141,5 @@ export const relatedTitles = (titles, key) => {
 
 /** A disclosed title without a department it already names: "VP, Private Equity · Private Equity". */
 export const shortTitle = (title) => String(title ?? '').split(' · ').reduce((kept, part) => (
-  kept.some((earlier) => earlier.toLowerCase().includes(part.trim().toLowerCase())) ? kept : [...kept, part.trim()]
+  kept.some((earlier) => earlier.toLowerCase().includes(part.trim().toLowerCase())) ? kept : [...kept, displayTitle(part.trim())]
 ), []).join(' · ')

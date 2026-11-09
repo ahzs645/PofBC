@@ -16,7 +16,7 @@
 
 import { lazy, Suspense, useEffect, useMemo, useRef, useState } from 'react'
 import { displayName, nameQueryTier, nameReadings, personKey, surnameShard } from './people.js'
-import { keyedTitles, titleKey, titleMatcher } from './positions.js'
+import { displayTitle, keyedTitles, titleKey, titleMatcher } from './positions.js'
 import { formatMoney as money } from './money.js'
 import { PeriodRange, YearStrip } from './parts.jsx'
 import { MobileSalaryFilters, SalarySearchField, SalarySectorChips } from './MobileFilters.jsx'
@@ -63,7 +63,7 @@ const PersonCard = ({ each, index, onOpen }) => (
     <span className="salaries__lead"><PersonIcon /></span>
     <span className="salaries__text">
       <span className="salaries__name">{displayName(each.name, Object.hasOwn(each, 'displayDisclosure') ? each.displayDisclosure : index.sources?.[each.latest[6]]?.nameDisclosure)}</span>
-      <span className="salaries__line">{[each.latest[1], index.employers[each.latest[4]][0]].filter(Boolean).join(' · ')}</span>
+      <span className="salaries__line">{[each.latest[1] && displayTitle(each.latest[1]), index.employers[each.latest[4]][0]].filter(Boolean).join(' · ')}</span>
       <YearStrip years={index.years} seen={each.years} />
     </span>
     <span className="salaries__aside">{money(each.latest[2], '—', personCurrency(each.latest, index))}<span className="salaries__line">{index.years[each.latest[5]]}{personAnnotation(each.latest, index) && ' · executive total compensation'}</span></span>

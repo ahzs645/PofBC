@@ -122,3 +122,14 @@ test('role discovery preserves stricter existing payment agreement for title var
   const conflictingExpenses = employerRow('Greene, Alexis', 'Senior Policy Analyst', 'compiled', 9999)
   assert.deepEqual(titleRecords([official, conflictingExpenses], analyst, roleSources), [official, conflictingExpenses])
 })
+
+test('titles published in capitals are shown in ordinary capitals; mixed case is left as published', async () => {
+  const { displayTitle } = await import('./positions.js')
+  assert.equal(displayTitle('TEACHER'), 'Teacher')
+  assert.equal(displayTitle('TRADES II - CARPENTER'), 'Trades II - Carpenter')
+  assert.equal(displayTitle('DIRECTOR OF FINANCE'), 'Director of Finance')
+  assert.equal(displayTitle('MANAGER, IT SERVICES'), 'Manager, IT Services')
+  assert.equal(displayTitle('ART TEACHER'), 'Art Teacher')
+  assert.equal(displayTitle('Professor - ESM'), 'Professor - ESM')
+  assert.equal(displayTitle('SrBrdgSeis&StrucHlthMntrngEng'), 'SrBrdgSeis&StrucHlthMntrngEng')
+})

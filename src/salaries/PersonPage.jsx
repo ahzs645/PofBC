@@ -4,7 +4,7 @@
 
 import { useState } from 'react'
 import { displayName, nameMatch, nameOnly, personKey, withoutCompiledRepeats } from './people.js'
-import { titleKey } from './positions.js'
+import { displayTitle, titleKey } from './positions.js'
 import { expenseLabel, GAP_LABELS, gapReason, gapRuns, missingYearMessage, recordPeriodLabel, samePeriodKinds, sourceHref } from './coverage.js'
 import { SourceLink, SourceNotes } from './DisclosureEvidence.jsx'
 import { formatMoney as money } from './money.js'
@@ -18,7 +18,7 @@ import { CPI_LATEST, inDollarsOf } from './inflation.js'
 
 /** A change between two payments as a signed whole percentage, with a true minus sign. */
 export const percentChange = (from, to) => {
-  if (!Number.isFinite(from) || !Number.isFinite(to) || from <= 0) return null
+  if (!Number.isFinite(from) || !Number.isFinite(to) || from <= 0 || to < 0) return null
   const change = Math.round(((to - from) / from) * 100)
   return change === 0 ? '0%' : `${change > 0 ? '+' : '−'}${Math.abs(change)}%`
 }
@@ -108,14 +108,15 @@ export const PersonPage = ({ chosen, joins = [], joinedElsewhere = [], all, scop
     const details = [
       hasExpenseAmount(row[3]) && `${expenseLabel(row[6], index.sources)} ${money(row[3], '—', annotation?.expenseCurrency ?? currency)}`,
       periodOf(row).kind !== 'verified' && 'Reporting period unverified',
+      Number.isFinite(row[2]) && row[2] < 0 && 'Printed as a negative amount; the source does not say why',
       sourceHref(index.sources?.[row[6]], row[7]) && <SourceLink sourceId={row[6]} sources={index.sources} pdfPage={row[7]} />
     ].filter(Boolean)
     return (
       <div className="salaries-record" key={`${row[5]}-${row[2]}-${row[4]}-${as ?? ''}-${rowIndex}`}>
         <span className="salaries-record__what">
           {row[1] && (titleKey(row[1])
-            ? <span className="salaries__name"><button type="button" className="salaries__link" onClick={() => onRole(slug, titleKey(row[1]), row[5])}>{row[1]}</button></span>
-            : <span className="salaries__name">{row[1]}</span>)}
+            ? <span className="salaries__name"><button type="button" className="salaries__link" onClick={() => onRole(slug, titleKey(row[1]), row[5])}>{displayTitle(row[1])}</button></span>
+            : <span className="salaries__name">{displayTitle(row[1])}</span>)}
           {/* The employer, unless it is the one employer the header names. */}
           {(employers.length > 1 || !employers.some((each) => each.slug === slug)) && (
             <span className={row[1] ? 'salaries__line' : 'salaries__name'}>
