@@ -33,6 +33,7 @@ import { personAnnotation, personCurrency } from './recordAnnotations.js'
 import { NameSearchResults } from './NameSearchResults.jsx'
 import { nameSearchTokens } from './nameSearch.js'
 import { employerMatcher } from './employerSearch.js'
+import { documentTitle, setDocumentMeta } from '../site/documentMeta.js'
 
 const CouncilPayView = lazy(() => import('./CouncilPayView.jsx'))
 const WorkforceView = lazy(() => import('./WorkforceView.jsx'))
@@ -45,6 +46,11 @@ const describeNameGroup = (key, list, name, index) => {
   return { key, name: name ?? latest[0], latest, years, rows: list, shared }
 }
 
+/** "mawson|john b" as "John B Mawson", for the tab title before the name's records load. */
+const personTitle = (key) => {
+  const [surname = '', given = ''] = String(key).split('|')
+  return [given, surname].filter(Boolean).join(' ').replace(/(^|[\s-])(\p{L})/gu, (_, before, letter) => `${before}${letter.toUpperCase()}`)
+}
 const shardOf = (reading) => surnameShard(`${reading.surname},`)
 const shardOfKey = (key) => key.split('|')[0].slice(0, 2).padEnd(2, '_')
 /** A reading as it is written in the disclosures: "smith john" read surname first is "Smith, John". */
@@ -70,6 +76,11 @@ const PersonCard = ({ each, index, onOpen }) => (
  */
 export const SalariesView = ({ onOpenGovernment }) => {
   const navigation = useSalaryPlace()
+  const companion = navigation.place.browse
+  useEffect(() => {
+    if (companion === 'workforce') setDocumentMeta({ title: documentTitle('Workforce statistics', 'Salaries'), description: 'B.C. Public Service headcount, average salary and Workforce Profile tables from official releases.' })
+    else if (companion === 'council') setDocumentMeta({ title: documentTitle('Council pay', 'Salaries'), description: 'Municipal council remuneration in British Columbia: survey figures, official rates and named payments, with sources.' })
+  }, [companion])
   if (navigation.place.browse === 'workforce') return (
     <Suspense fallback={<p className="gallery__intro" role="status">Loading workforce statistics…</p>}>
       <WorkforceView
@@ -255,6 +266,25 @@ const SalaryRecordsView = ({ onOpenGovernment, navigation }) => {
       .map(({ title }) => title)
   }, [titleQuery, titlesIndex])
 
+  // The tab names the page: an employer, a title or a name. A name's page asks not to be indexed.
+  const pageEmployer = employersIndex && place.employer
+    ? employersIndex.employers.find((each) => each.slug === (employersIndex.aliases?.[place.employer] ?? place.employer) || each.body === place.employer)
+    : null
+  const titleName = place.title && titlesIndex ? keyedTitles(titlesIndex).find((each) => each.key === place.title)?.label : null
+  const metaTitle = place.person ? personTitle(place.person)
+    : place.employer ? pageEmployer?.names.at(-1) ?? null
+      : place.title ? titleName ?? place.title
+        : typed ? `“${typed}”` : null
+  useEffect(() => {
+    setDocumentMeta({
+      title: documentTitle(metaTitle, 'Salaries'),
+      description: pageEmployer
+        ? `Disclosed remuneration at ${pageEmployer.names.at(-1)}, by year, position and name, with the source of every record.`
+        : 'Public-sector salaries in British Columbia: employee remuneration disclosed under the Financial Information Act and related reports, by employer, position and name, with sources.',
+      noindex: Boolean(place.person)
+    })
+  }, [metaTitle, pageEmployer, place.person])
+
   if (failed) return <p className="gallery__intro">The requested salary records could not be loaded. <button type="button" onClick={() => { setFailed(false); setLoadVersion((value) => value + 1) }}>Retry</button></p>
   if (!index || !employersIndex) return <p className="gallery__intro" role="status">Loading the salary index…</p>
 
@@ -351,6 +381,20 @@ const SalaryRecordsView = ({ onOpenGovernment, navigation }) => {
         />
       )
     }
+  }
+
+  if (place.employer) {
+    // A stale or mistyped employer link says so, rather than silently showing the browse page.
+    const missing = (
+      <div className="salaries">
+        <p className="salaries__hint" role="alert">
+          No employer matches “{place.employer}”. It may have been renamed, or the link may be incomplete.{' '}
+          <button type="button" className="salaries__link" onClick={() => go({ employer: null, employerYear: null, q: place.employer.replace(/-/g, ' ') })}>Search for it</button>
+          {' '}or <button type="button" className="salaries__link" onClick={() => go({ employer: null, employerYear: null, browse: 'employers' })}>browse every employer</button>.
+        </p>
+      </div>
+    )
+    return withSearch(missing)
   }
 
   if (place.title) {

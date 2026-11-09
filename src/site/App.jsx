@@ -54,6 +54,7 @@ import { SunGlyph, ThemeIcon } from './icons.jsx'
 import { useSiteTheme } from './useTheme.js'
 import { useAgentTools } from './useAgentTools.js'
 import { useLockupState } from './useLockupState.js'
+import { DEFAULT_TITLE, documentTitle, setDocumentMeta } from './documentMeta.js'
 
 const CLEAR_SPACE_OPTIONS = CLEAR_SPACE_ORDER.map((value) => ({
   value,
@@ -130,6 +131,7 @@ const BACKDROP_OPTIONS = [
   { value: 'dark', label: 'Dark' }
 ]
 
+const GENERATOR_DESCRIPTION = 'Generate the three official Province of British Columbia lockups in any ministry and colourway, and download them as SVG, PDF, PNG, WebP or JPEG.'
 const VIEW_IDS = [...VIEWS, ...HIDDEN_VIEWS].map(({ id }) => id)
 
 /** The view in the address bar, so a link to the gallery or the diagram opens it. */
@@ -167,6 +169,15 @@ export const App = () => {
     globalThis.addEventListener('popstate', restore)
     return () => globalThis.removeEventListener('popstate', restore)
   }, [])
+  // Each view names itself in the tab; the salary pages refine this for the page they show.
+  useEffect(() => {
+    if (view === 'salaries') return
+    const entry = [...VIEWS, ...HIDDEN_VIEWS].find(({ id }) => id === view)
+    setDocumentMeta({
+      title: view === 'generator' || !entry ? DEFAULT_TITLE : documentTitle(entry.label),
+      description: view === 'generator' || !entry ? GENERATOR_DESCRIPTION : `${entry.description}.`
+    })
+  }, [view])
   const theme = useSiteTheme()
   const showView = (next) => {
     writeView(next)
