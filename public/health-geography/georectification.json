@@ -1,0 +1,2444 @@
+{
+  "schemaVersion": 1,
+  "preparedOn": "2026-11-09",
+  "projectedCrs": "EPSG:3005",
+  "method": "Each map panel is registered to the modern LHA linework (coast, provincial border and LHA edges). Printed city dots or provincial corners give a starting position. An iterative closest-point fit then matches every sampled source boundary point to the nearest modern edge, rejecting matches beyond a shrinking distance threshold, and fits an affine, then quadratic, then cubic polynomial. Main maps add a smoothed thin-plate spline for local distortion. Insets are registered separately.",
+  "accuracy": "Distances are from each registered source boundary point to the nearest modern LHA edge or coastline. \"heldOut\" refits the panel without one quarter of the map (a checkerboard of 25-point blocks) and measures those unseen blocks. Source generalization (a 1:10-million-scale drawing) is part of the residual.",
+  "snapThreshold": 0.5,
+  "coverage": {
+    "boards+councils": {
+      "unassignedLhas": [],
+      "lhasInMoreThanOneArea": {}
+    },
+    "regions-2000": {
+      "unassignedLhas": [],
+      "lhasInMoreThanOneArea": {}
+    }
+  },
+  "panels": [
+    {
+      "id": "boards",
+      "mapId": "boards",
+      "inset": false,
+      "sourcePoints": 48803,
+      "model": "order-3 polynomial + smoothed thin-plate spline",
+      "fit": {
+        "medianMetres": 641,
+        "p90Metres": 2353,
+        "within1kmShare": 0.658,
+        "within3kmShare": 0.937
+      },
+      "heldOut": {
+        "medianMetres": 639,
+        "p90Metres": 1966,
+        "within1kmShare": 0.669,
+        "within3kmShare": 0.965
+      },
+      "seedAffineBaseline": {
+        "medianMetres": 1710,
+        "p90Metres": 5399,
+        "within1kmShare": 0.34,
+        "within3kmShare": 0.71
+      }
+    },
+    {
+      "id": "boards-inset-mainland",
+      "mapId": "boards",
+      "inset": true,
+      "sourcePoints": 6194,
+      "model": "order-2 polynomial",
+      "fit": {
+        "medianMetres": 802,
+        "p90Metres": 2215,
+        "within1kmShare": 0.58,
+        "within3kmShare": 0.974
+      },
+      "heldOut": {
+        "medianMetres": 536,
+        "p90Metres": 1947,
+        "within1kmShare": 0.721,
+        "within3kmShare": 1.0
+      }
+    },
+    {
+      "id": "boards-inset-island",
+      "mapId": "boards",
+      "inset": true,
+      "sourcePoints": 8193,
+      "model": "order-2 polynomial",
+      "fit": {
+        "medianMetres": 346,
+        "p90Metres": 1084,
+        "within1kmShare": 0.882,
+        "within3kmShare": 0.997
+      },
+      "heldOut": {
+        "medianMetres": 371,
+        "p90Metres": 1012,
+        "within1kmShare": 0.896,
+        "within3kmShare": 1.0
+      }
+    },
+    {
+      "id": "councils",
+      "mapId": "councils",
+      "inset": false,
+      "sourcePoints": 67151,
+      "model": "order-3 polynomial + smoothed thin-plate spline",
+      "fit": {
+        "medianMetres": 460,
+        "p90Metres": 1957,
+        "within1kmShare": 0.76,
+        "within3kmShare": 0.94
+      },
+      "heldOut": {
+        "medianMetres": 590,
+        "p90Metres": 2177,
+        "within1kmShare": 0.694,
+        "within3kmShare": 0.93
+      },
+      "seedAffineBaseline": {
+        "medianMetres": 1718,
+        "p90Metres": 4930,
+        "within1kmShare": 0.334,
+        "within3kmShare": 0.716
+      }
+    },
+    {
+      "id": "societies",
+      "mapId": "societies",
+      "inset": false,
+      "sourcePoints": 55140,
+      "model": "order-3 polynomial + smoothed thin-plate spline",
+      "fit": {
+        "medianMetres": 591,
+        "p90Metres": 2249,
+        "within1kmShare": 0.679,
+        "within3kmShare": 0.937
+      },
+      "heldOut": {
+        "medianMetres": 676,
+        "p90Metres": 2151,
+        "within1kmShare": 0.653,
+        "within3kmShare": 0.945
+      },
+      "seedAffineBaseline": {
+        "medianMetres": 1803,
+        "p90Metres": 5250,
+        "within1kmShare": 0.331,
+        "within3kmShare": 0.69
+      }
+    },
+    {
+      "id": "regions-2000",
+      "mapId": "regions-2000",
+      "inset": false,
+      "sourcePoints": 91546,
+      "model": "order-3 polynomial + smoothed thin-plate spline",
+      "fit": {
+        "medianMetres": 397,
+        "p90Metres": 2298,
+        "within1kmShare": 0.77,
+        "within3kmShare": 0.929
+      },
+      "heldOut": {
+        "medianMetres": 463,
+        "p90Metres": 2393,
+        "within1kmShare": 0.74,
+        "within3kmShare": 0.925
+      },
+      "seedAffineBaseline": {
+        "medianMetres": 1076,
+        "p90Metres": 4640,
+        "within1kmShare": 0.475,
+        "within3kmShare": 0.812
+      }
+    },
+    {
+      "id": "regions-2000-inset",
+      "mapId": "regions-2000",
+      "inset": true,
+      "sourcePoints": 31365,
+      "model": "order-2 polynomial",
+      "fit": {
+        "medianMetres": 254,
+        "p90Metres": 11054,
+        "within1kmShare": 0.798,
+        "within3kmShare": 0.875
+      },
+      "heldOut": {
+        "medianMetres": 180,
+        "p90Metres": 1333,
+        "within1kmShare": 0.847,
+        "within3kmShare": 0.958
+      },
+      "seedAffineBaseline": {
+        "medianMetres": 974,
+        "p90Metres": 10166,
+        "within1kmShare": 0.51,
+        "within3kmShare": 0.814
+      }
+    }
+  ],
+  "regions": [
+    {
+      "id": "north-okanagan-health-region",
+      "name": "North Okanagan",
+      "framework": "boards",
+      "legendNumber": 1,
+      "drawingAreaKm2": 20645,
+      "lhaShares": {
+        "135": 1.0,
+        "139": 1.0,
+        "136": 0.982,
+        "142": 0.982,
+        "141": 0.956,
+        "143": 0.04,
+        "137": 0.03,
+        "124": 0.011
+      },
+      "snappedLhaCodes": [
+        "135",
+        "136",
+        "139",
+        "141",
+        "142"
+      ],
+      "chosenLhaCodes": [
+        "135",
+        "136",
+        "139",
+        "141",
+        "142"
+      ],
+      "reviewOverride": false,
+      "note": null,
+      "drawingVsBoundary": {
+        "iou": 0.9241,
+        "sourceCovered": 0.9498,
+        "candidateCovered": 0.9716
+      },
+      "confidence": "high"
+    },
+    {
+      "id": "okanagan-similkameen-health-region",
+      "name": "Okanagan Similkameen",
+      "framework": "boards",
+      "legendNumber": 2,
+      "drawingAreaKm2": 13827,
+      "lhaShares": {
+        "138": 1.0,
+        "133": 0.998,
+        "132": 0.995,
+        "134": 0.986,
+        "137": 0.982,
+        "131": 0.981,
+        "211": 0.016,
+        "127": 0.014,
+        "136": 0.012,
+        "149": 0.012
+      },
+      "snappedLhaCodes": [
+        "131",
+        "132",
+        "133",
+        "134",
+        "137",
+        "138"
+      ],
+      "chosenLhaCodes": [
+        "131",
+        "132",
+        "133",
+        "134",
+        "137",
+        "138"
+      ],
+      "reviewOverride": false,
+      "note": null,
+      "drawingVsBoundary": {
+        "iou": 0.9677,
+        "sourceCovered": 0.9789,
+        "candidateCovered": 0.9883
+      },
+      "confidence": "high"
+    },
+    {
+      "id": "thompson-health-region",
+      "name": "Thompson",
+      "framework": "boards",
+      "legendNumber": 3,
+      "drawingAreaKm2": 52114,
+      "lhaShares": {
+        "149": 0.988,
+        "145": 0.979,
+        "147": 0.976,
+        "148": 0.976,
+        "143": 0.959,
+        "144": 0.066,
+        "142": 0.019
+      },
+      "snappedLhaCodes": [
+        "143",
+        "145",
+        "147",
+        "148",
+        "149"
+      ],
+      "chosenLhaCodes": [
+        "143",
+        "145",
+        "147",
+        "148",
+        "149"
+      ],
+      "reviewOverride": false,
+      "note": null,
+      "drawingVsBoundary": {
+        "iou": 0.9508,
+        "sourceCovered": 0.9767,
+        "candidateCovered": 0.9728
+      },
+      "confidence": "high"
+    },
+    {
+      "id": "fraser-valley-health-region",
+      "name": "Fraser Valley",
+      "framework": "boards",
+      "legendNumber": 4,
+      "drawingAreaKm2": 12429,
+      "lhaShares": {
+        "215": 0.981,
+        "212": 0.977,
+        "211": 0.973,
+        "213": 0.959,
+        "214": 0.958
+      },
+      "snappedLhaCodes": [
+        "211",
+        "212",
+        "213",
+        "214",
+        "215"
+      ],
+      "chosenLhaCodes": [
+        "211",
+        "212",
+        "213",
+        "214",
+        "215"
+      ],
+      "reviewOverride": false,
+      "note": null,
+      "drawingVsBoundary": {
+        "iou": 0.9597,
+        "sourceCovered": 0.9851,
+        "candidateCovered": 0.9738
+      },
+      "confidence": "high"
+    },
+    {
+      "id": "south-fraser-health-region",
+      "name": "South Fraser",
+      "framework": "boards",
+      "legendNumber": 5,
+      "drawingAreaKm2": 868,
+      "lhaShares": {
+        "231": 0.997,
+        "233": 0.986,
+        "234": 0.966,
+        "232": 0.838,
+        "221": 0.283,
+        "311": 0.05,
+        "224": 0.018
+      },
+      "snappedLhaCodes": [
+        "231",
+        "232",
+        "233",
+        "234"
+      ],
+      "chosenLhaCodes": [
+        "231",
+        "232",
+        "233",
+        "234"
+      ],
+      "reviewOverride": false,
+      "note": null,
+      "drawingVsBoundary": {
+        "iou": 0.9115,
+        "sourceCovered": 0.9533,
+        "candidateCovered": 0.9541
+      },
+      "confidence": "medium"
+    },
+    {
+      "id": "simon-fraser-health-region",
+      "name": "Simon Fraser",
+      "framework": "boards",
+      "legendNumber": 6,
+      "drawingAreaKm2": 2243,
+      "lhaShares": {
+        "223": 0.935,
+        "224": 0.901,
+        "222": 0.81,
+        "323": 0.439,
+        "326": 0.074,
+        "331": 0.063,
+        "214": 0.015
+      },
+      "snappedLhaCodes": [
+        "222",
+        "223",
+        "224"
+      ],
+      "chosenLhaCodes": [
+        "221",
+        "222",
+        "223",
+        "224"
+      ],
+      "reviewOverride": true,
+      "note": "New Westminster is too small to resolve on the 1997/98 inset. The 2001 boundary schedule for this region names Burnaby and New Westminster, and the Statistics Canada map places New Westminster in Simon Fraser.",
+      "drawingVsBoundary": {
+        "iou": 0.8627,
+        "sourceCovered": 0.9412,
+        "candidateCovered": 0.9118
+      },
+      "confidence": "high"
+    },
+    {
+      "id": "central-vancouver-island-health-region",
+      "name": "Central Vancouver Island",
+      "framework": "boards",
+      "legendNumber": 7,
+      "drawingAreaKm2": 11513,
+      "lhaShares": {
+        "422": 0.991,
+        "421": 0.961,
+        "424": 0.915,
+        "426": 0.891,
+        "423": 0.833,
+        "425": 0.809,
+        "412": 0.036
+      },
+      "snappedLhaCodes": [
+        "421",
+        "422",
+        "423",
+        "424",
+        "425",
+        "426"
+      ],
+      "chosenLhaCodes": [
+        "421",
+        "422",
+        "423",
+        "424",
+        "425",
+        "426"
+      ],
+      "reviewOverride": false,
+      "note": null,
+      "drawingVsBoundary": {
+        "iou": 0.9039,
+        "sourceCovered": 0.9936,
+        "candidateCovered": 0.9092
+      },
+      "confidence": "high"
+    },
+    {
+      "id": "northern-interior-regional-health-board",
+      "name": "Northern Interior",
+      "framework": "boards",
+      "legendNumber": 8,
+      "drawingAreaKm2": 143667,
+      "lhaShares": {
+        "523": 0.994,
+        "522": 0.982,
+        "524": 0.966,
+        "514": 0.041,
+        "531": 0.021,
+        "145": 0.013
+      },
+      "snappedLhaCodes": [
+        "522",
+        "523",
+        "524"
+      ],
+      "chosenLhaCodes": [
+        "522",
+        "523",
+        "524"
+      ],
+      "reviewOverride": false,
+      "note": null,
+      "drawingVsBoundary": {
+        "iou": 0.9601,
+        "sourceCovered": 0.9824,
+        "candidateCovered": 0.9769
+      },
+      "confidence": "high"
+    },
+    {
+      "id": "vancouver-richmond-health-board",
+      "name": "Vancouver/Richmond",
+      "framework": "boards",
+      "legendNumber": 9,
+      "drawingAreaKm2": 225,
+      "lhaShares": {
+        "322": 1.0,
+        "325": 1.0,
+        "321": 0.894,
+        "324": 0.858,
+        "311": 0.667,
+        "326": 0.647,
+        "323": 0.561,
+        "221": 0.125,
+        "222": 0.066,
+        "232": 0.023
+      },
+      "snappedLhaCodes": [
+        "311",
+        "321",
+        "322",
+        "323",
+        "324",
+        "325",
+        "326"
+      ],
+      "chosenLhaCodes": [
+        "311",
+        "321",
+        "322",
+        "323",
+        "324",
+        "325",
+        "326"
+      ],
+      "reviewOverride": false,
+      "note": null,
+      "drawingVsBoundary": {
+        "iou": 0.685,
+        "sourceCovered": 0.9199,
+        "candidateCovered": 0.7284
+      },
+      "confidence": "medium"
+    },
+    {
+      "id": "north-shore-health-region",
+      "name": "North Shore",
+      "framework": "boards",
+      "legendNumber": 10,
+      "drawingAreaKm2": 459,
+      "lhaShares": {
+        "331": 0.76,
+        "332": 0.583
+      },
+      "snappedLhaCodes": [
+        "331",
+        "332"
+      ],
+      "chosenLhaCodes": [
+        "331",
+        "332"
+      ],
+      "reviewOverride": false,
+      "note": null,
+      "drawingVsBoundary": {
+        "iou": 0.6843,
+        "sourceCovered": 0.9708,
+        "candidateCovered": 0.6987
+      },
+      "confidence": "medium"
+    },
+    {
+      "id": "capital-health-region",
+      "name": "Capital",
+      "framework": "boards",
+      "legendNumber": 11,
+      "drawingAreaKm2": 1921,
+      "lhaShares": {
+        "412": 0.952,
+        "411": 0.946,
+        "413": 0.928,
+        "421": 0.015
+      },
+      "snappedLhaCodes": [
+        "411",
+        "412",
+        "413"
+      ],
+      "chosenLhaCodes": [
+        "411",
+        "412",
+        "413",
+        "414"
+      ],
+      "reviewOverride": true,
+      "note": "The Southern Gulf Islands are shaded but unnumbered in the inset. The 2001 boundary schedule runs Capital's edge along Houstoun Passage and Stuart Channel, which places Salt Spring and the southern Gulf Islands inside it.",
+      "drawingVsBoundary": {
+        "iou": 0.792,
+        "sourceCovered": 0.9871,
+        "candidateCovered": 0.8003
+      },
+      "confidence": "high"
+    },
+    {
+      "id": "elk-valley-and-south-country-health-council",
+      "name": "Elk Valley and South Country",
+      "framework": "councils",
+      "legendNumber": 1,
+      "drawingAreaKm2": 7708,
+      "lhaShares": {
+        "111": 0.953
+      },
+      "snappedLhaCodes": [
+        "111"
+      ],
+      "chosenLhaCodes": [
+        "111"
+      ],
+      "reviewOverride": false,
+      "note": null,
+      "drawingVsBoundary": {
+        "iou": 0.9476,
+        "sourceCovered": 0.9944,
+        "candidateCovered": 0.9527
+      },
+      "confidence": "high"
+    },
+    {
+      "id": "cranbrook-health-council",
+      "name": "Cranbrook",
+      "framework": "councils",
+      "legendNumber": 2,
+      "drawingAreaKm2": 4236,
+      "lhaShares": {
+        "112": 0.927
+      },
+      "snappedLhaCodes": [
+        "112"
+      ],
+      "chosenLhaCodes": [
+        "112"
+      ],
+      "reviewOverride": false,
+      "note": null,
+      "drawingVsBoundary": {
+        "iou": 0.91,
+        "sourceCovered": 0.9798,
+        "candidateCovered": 0.9275
+      },
+      "confidence": "high"
+    },
+    {
+      "id": "kimberley-community-health-council",
+      "name": "Kimberley",
+      "framework": "councils",
+      "legendNumber": 3,
+      "drawingAreaKm2": 4151,
+      "lhaShares": {
+        "113": 0.939
+      },
+      "snappedLhaCodes": [
+        "113"
+      ],
+      "chosenLhaCodes": [
+        "113"
+      ],
+      "reviewOverride": false,
+      "note": null,
+      "drawingVsBoundary": {
+        "iou": 0.9236,
+        "sourceCovered": 0.9828,
+        "candidateCovered": 0.9388
+      },
+      "confidence": "high"
+    },
+    {
+      "id": "columbia-valley-health-council",
+      "name": "Columbia Valley",
+      "framework": "councils",
+      "legendNumber": 4,
+      "drawingAreaKm2": 10676,
+      "lhaShares": {
+        "114": 0.962,
+        "113": 0.012
+      },
+      "snappedLhaCodes": [
+        "114"
+      ],
+      "chosenLhaCodes": [
+        "114"
+      ],
+      "reviewOverride": false,
+      "note": null,
+      "drawingVsBoundary": {
+        "iou": 0.9529,
+        "sourceCovered": 0.9899,
+        "candidateCovered": 0.9623
+      },
+      "confidence": "high"
+    },
+    {
+      "id": "creston-and-district-health-council",
+      "name": "Creston and District",
+      "framework": "councils",
+      "legendNumber": 5,
+      "drawingAreaKm2": 3477,
+      "lhaShares": {
+        "115": 0.915
+      },
+      "snappedLhaCodes": [
+        "115"
+      ],
+      "chosenLhaCodes": [
+        "115"
+      ],
+      "reviewOverride": false,
+      "note": null,
+      "drawingVsBoundary": {
+        "iou": 0.9123,
+        "sourceCovered": 0.997,
+        "candidateCovered": 0.9148
+      },
+      "confidence": "high"
+    },
+    {
+      "id": "nelson-and-area-health-council",
+      "name": "Nelson and Area",
+      "framework": "councils",
+      "legendNumber": 6,
+      "drawingAreaKm2": 11022,
+      "lhaShares": {
+        "122": 0.968,
+        "121": 0.939,
+        "115": 0.034
+      },
+      "snappedLhaCodes": [
+        "121",
+        "122"
+      ],
+      "chosenLhaCodes": [
+        "121",
+        "122"
+      ],
+      "reviewOverride": false,
+      "note": null,
+      "drawingVsBoundary": {
+        "iou": 0.9324,
+        "sourceCovered": 0.9793,
+        "candidateCovered": 0.9511
+      },
+      "confidence": "high"
+    },
+    {
+      "id": "castlegar-and-district-health-council",
+      "name": "Castlegar and District",
+      "framework": "councils",
+      "legendNumber": 7,
+      "drawingAreaKm2": 1826,
+      "lhaShares": {
+        "123": 0.925
+      },
+      "snappedLhaCodes": [
+        "123"
+      ],
+      "chosenLhaCodes": [
+        "123"
+      ],
+      "reviewOverride": false,
+      "note": null,
+      "drawingVsBoundary": {
+        "iou": 0.9098,
+        "sourceCovered": 0.9827,
+        "candidateCovered": 0.9246
+      },
+      "confidence": "high"
+    },
+    {
+      "id": "arrow-lakes-upper-slocan-valley-health-council",
+      "name": "Arrow Lakes/Upper Slocan Valley",
+      "framework": "councils",
+      "legendNumber": 8,
+      "drawingAreaKm2": 7294,
+      "lhaShares": {
+        "124": 0.96
+      },
+      "snappedLhaCodes": [
+        "124"
+      ],
+      "chosenLhaCodes": [
+        "124"
+      ],
+      "reviewOverride": false,
+      "note": null,
+      "drawingVsBoundary": {
+        "iou": 0.9354,
+        "sourceCovered": 0.9731,
+        "candidateCovered": 0.9602
+      },
+      "confidence": "high"
+    },
+    {
+      "id": "greater-trail-community-health-council",
+      "name": "Greater Trail",
+      "framework": "councils",
+      "legendNumber": 9,
+      "drawingAreaKm2": 1048,
+      "lhaShares": {
+        "125": 0.917
+      },
+      "snappedLhaCodes": [
+        "125"
+      ],
+      "chosenLhaCodes": [
+        "125"
+      ],
+      "reviewOverride": false,
+      "note": null,
+      "drawingVsBoundary": {
+        "iou": 0.9087,
+        "sourceCovered": 0.9903,
+        "candidateCovered": 0.9169
+      },
+      "confidence": "high"
+    },
+    {
+      "id": "boundary-health-council",
+      "name": "Boundary",
+      "framework": "councils",
+      "legendNumber": 10,
+      "drawingAreaKm2": 6830,
+      "lhaShares": {
+        "127": 0.975,
+        "126": 0.955,
+        "131": 0.01
+      },
+      "snappedLhaCodes": [
+        "126",
+        "127"
+      ],
+      "chosenLhaCodes": [
+        "126",
+        "127"
+      ],
+      "reviewOverride": false,
+      "note": null,
+      "drawingVsBoundary": {
+        "iou": 0.9641,
+        "sourceCovered": 0.9967,
+        "candidateCovered": 0.9671
+      },
+      "confidence": "high"
+    },
+    {
+      "id": "golden-health-council",
+      "name": "Golden",
+      "framework": "councils",
+      "legendNumber": 11,
+      "drawingAreaKm2": 13021,
+      "lhaShares": {
+        "116": 0.969
+      },
+      "snappedLhaCodes": [
+        "116"
+      ],
+      "chosenLhaCodes": [
+        "116"
+      ],
+      "reviewOverride": false,
+      "note": null,
+      "drawingVsBoundary": {
+        "iou": 0.9624,
+        "sourceCovered": 0.9932,
+        "candidateCovered": 0.9688
+      },
+      "confidence": "high"
+    },
+    {
+      "id": "south-cariboo-community-health-council",
+      "name": "South Cariboo",
+      "framework": "councils",
+      "legendNumber": 12,
+      "drawingAreaKm2": 10464,
+      "lhaShares": {
+        "144": 0.908,
+        "148": 0.018
+      },
+      "snappedLhaCodes": [
+        "144"
+      ],
+      "chosenLhaCodes": [
+        "144"
+      ],
+      "reviewOverride": false,
+      "note": null,
+      "drawingVsBoundary": {
+        "iou": 0.8677,
+        "sourceCovered": 0.9512,
+        "candidateCovered": 0.9082
+      },
+      "confidence": "high"
+    },
+    {
+      "id": "central-cariboo-chilcotin-health-council",
+      "name": "Central Cariboo Chilcotin",
+      "framework": "councils",
+      "legendNumber": 13,
+      "drawingAreaKm2": 43792,
+      "lhaShares": {
+        "146": 0.974,
+        "144": 0.019
+      },
+      "snappedLhaCodes": [
+        "146"
+      ],
+      "chosenLhaCodes": [
+        "146"
+      ],
+      "reviewOverride": false,
+      "note": null,
+      "drawingVsBoundary": {
+        "iou": 0.962,
+        "sourceCovered": 0.9875,
+        "candidateCovered": 0.9739
+      },
+      "confidence": "high"
+    },
+    {
+      "id": "quesnel-and-district-community-health-council",
+      "name": "Quesnel and District",
+      "framework": "councils",
+      "legendNumber": 14,
+      "drawingAreaKm2": 23296,
+      "lhaShares": {
+        "521": 0.972
+      },
+      "snappedLhaCodes": [
+        "521"
+      ],
+      "chosenLhaCodes": [
+        "521"
+      ],
+      "reviewOverride": false,
+      "note": null,
+      "drawingVsBoundary": {
+        "iou": 0.9631,
+        "sourceCovered": 0.9901,
+        "candidateCovered": 0.9725
+      },
+      "confidence": "high"
+    },
+    {
+      "id": "bella-coola-and-district-transitional-health-authority",
+      "name": "Bella Coola Valley and District",
+      "framework": "councils",
+      "legendNumber": 15,
+      "drawingAreaKm2": 22461,
+      "lhaShares": {
+        "336": 0.885
+      },
+      "snappedLhaCodes": [
+        "336"
+      ],
+      "chosenLhaCodes": [
+        "336"
+      ],
+      "reviewOverride": false,
+      "note": null,
+      "drawingVsBoundary": {
+        "iou": 0.8789,
+        "sourceCovered": 0.9928,
+        "candidateCovered": 0.8845
+      },
+      "confidence": "high"
+    },
+    {
+      "id": "sunshine-coast-community-health-council",
+      "name": "Sunshine Coast",
+      "framework": "councils",
+      "legendNumber": 16,
+      "drawingAreaKm2": 3145,
+      "lhaShares": {
+        "333": 0.813
+      },
+      "snappedLhaCodes": [
+        "333"
+      ],
+      "chosenLhaCodes": [
+        "333"
+      ],
+      "reviewOverride": false,
+      "note": null,
+      "drawingVsBoundary": {
+        "iou": 0.8048,
+        "sourceCovered": 0.9875,
+        "candidateCovered": 0.8131
+      },
+      "confidence": "high"
+    },
+    {
+      "id": "powell-river-community-health-council",
+      "name": "Powell River",
+      "framework": "councils",
+      "legendNumber": 17,
+      "drawingAreaKm2": 4642,
+      "lhaShares": {
+        "334": 0.879
+      },
+      "snappedLhaCodes": [
+        "334"
+      ],
+      "chosenLhaCodes": [
+        "334"
+      ],
+      "reviewOverride": false,
+      "note": null,
+      "drawingVsBoundary": {
+        "iou": 0.8704,
+        "sourceCovered": 0.9884,
+        "candidateCovered": 0.8794
+      },
+      "confidence": "high"
+    },
+    {
+      "id": "sea-to-sky-community-health-council",
+      "name": "Sea To Sky",
+      "framework": "councils",
+      "legendNumber": 18,
+      "drawingAreaKm2": 8756,
+      "lhaShares": {
+        "335": 0.942,
+        "223": 0.012
+      },
+      "snappedLhaCodes": [
+        "335"
+      ],
+      "chosenLhaCodes": [
+        "335"
+      ],
+      "reviewOverride": false,
+      "note": null,
+      "drawingVsBoundary": {
+        "iou": 0.9332,
+        "sourceCovered": 0.99,
+        "candidateCovered": 0.9421
+      },
+      "confidence": "high"
+    },
+    {
+      "id": "comox-valley-community-health-council",
+      "name": "Comox Valley",
+      "framework": "councils",
+      "legendNumber": 19,
+      "drawingAreaKm2": 1544,
+      "lhaShares": {
+        "431": 0.881
+      },
+      "snappedLhaCodes": [
+        "431"
+      ],
+      "chosenLhaCodes": [
+        "431"
+      ],
+      "reviewOverride": false,
+      "note": null,
+      "drawingVsBoundary": {
+        "iou": 0.8779,
+        "sourceCovered": 0.9965,
+        "candidateCovered": 0.8806
+      },
+      "confidence": "high"
+    },
+    {
+      "id": "campbell-river-nootka-community-health-council",
+      "name": "Campbell River/Nootka",
+      "framework": "councils",
+      "legendNumber": 20,
+      "drawingAreaKm2": 15482,
+      "lhaShares": {
+        "432": 0.842,
+        "433": 0.771,
+        "434": 0.012
+      },
+      "snappedLhaCodes": [
+        "432",
+        "433"
+      ],
+      "chosenLhaCodes": [
+        "432",
+        "433"
+      ],
+      "reviewOverride": false,
+      "note": null,
+      "drawingVsBoundary": {
+        "iou": 0.8086,
+        "sourceCovered": 0.9801,
+        "candidateCovered": 0.8221
+      },
+      "confidence": "medium"
+    },
+    {
+      "id": "mount-waddington-health-council",
+      "name": "Mount Waddington",
+      "framework": "councils",
+      "legendNumber": 21,
+      "drawingAreaKm2": 17282,
+      "lhaShares": {
+        "434": 0.827
+      },
+      "snappedLhaCodes": [
+        "434"
+      ],
+      "chosenLhaCodes": [
+        "434"
+      ],
+      "reviewOverride": false,
+      "note": null,
+      "drawingVsBoundary": {
+        "iou": 0.8219,
+        "sourceCovered": 0.9923,
+        "candidateCovered": 0.8271
+      },
+      "confidence": "high"
+    },
+    {
+      "id": "central-coast-transitional-health-authority",
+      "name": "Central Coast",
+      "framework": "councils",
+      "legendNumber": 22,
+      "drawingAreaKm2": 15523,
+      "lhaShares": {
+        "337": 0.841,
+        "515": 0.181,
+        "432": 0.073,
+        "336": 0.055,
+        "434": 0.033
+      },
+      "snappedLhaCodes": [
+        "337"
+      ],
+      "chosenLhaCodes": [
+        "337"
+      ],
+      "reviewOverride": false,
+      "note": null,
+      "drawingVsBoundary": {
+        "iou": 0.5197,
+        "sourceCovered": 0.5765,
+        "candidateCovered": 0.8407
+      },
+      "confidence": "medium"
+    },
+    {
+      "id": "south-peace-health-council",
+      "name": "South Peace",
+      "framework": "councils",
+      "legendNumber": 23,
+      "drawingAreaKm2": 26182,
+      "lhaShares": {
+        "531": 0.934
+      },
+      "snappedLhaCodes": [
+        "531"
+      ],
+      "chosenLhaCodes": [
+        "531"
+      ],
+      "reviewOverride": false,
+      "note": null,
+      "drawingVsBoundary": {
+        "iou": 0.9271,
+        "sourceCovered": 0.9921,
+        "candidateCovered": 0.9339
+      },
+      "confidence": "high"
+    },
+    {
+      "id": "north-peace-health-council",
+      "name": "North Peace",
+      "framework": "councils",
+      "legendNumber": 24,
+      "drawingAreaKm2": 69846,
+      "lhaShares": {
+        "532": 0.994,
+        "531": 0.024,
+        "524": 0.02
+      },
+      "snappedLhaCodes": [
+        "532"
+      ],
+      "chosenLhaCodes": [
+        "532"
+      ],
+      "reviewOverride": false,
+      "note": null,
+      "drawingVsBoundary": {
+        "iou": 0.9623,
+        "sourceCovered": 0.9675,
+        "candidateCovered": 0.9945
+      },
+      "confidence": "high"
+    },
+    {
+      "id": "fort-nelson-liard-health-council",
+      "name": "Fort Nelson-Liard",
+      "framework": "councils",
+      "legendNumber": 25,
+      "drawingAreaKm2": 88867,
+      "lhaShares": {
+        "533": 0.991
+      },
+      "snappedLhaCodes": [
+        "533"
+      ],
+      "chosenLhaCodes": [
+        "533"
+      ],
+      "reviewOverride": false,
+      "note": null,
+      "drawingVsBoundary": {
+        "iou": 0.9875,
+        "sourceCovered": 0.9968,
+        "candidateCovered": 0.9906
+      },
+      "confidence": "high"
+    },
+    {
+      "id": "bulkley-valley-health-council",
+      "name": "Bulkley Valley",
+      "framework": "councils",
+      "legendNumber": 26,
+      "drawingAreaKm2": 9153,
+      "lhaShares": {
+        "514": 0.908
+      },
+      "snappedLhaCodes": [
+        "514"
+      ],
+      "chosenLhaCodes": [
+        "514"
+      ],
+      "reviewOverride": false,
+      "note": null,
+      "drawingVsBoundary": {
+        "iou": 0.8966,
+        "sourceCovered": 0.9862,
+        "candidateCovered": 0.908
+      },
+      "confidence": "high"
+    },
+    {
+      "id": "upper-skeena-community-health-council",
+      "name": "Upper Skeena",
+      "framework": "councils",
+      "legendNumber": 27,
+      "drawingAreaKm2": 4033,
+      "lhaShares": {
+        "513": 0.886
+      },
+      "snappedLhaCodes": [
+        "513"
+      ],
+      "chosenLhaCodes": [
+        "513"
+      ],
+      "reviewOverride": false,
+      "note": null,
+      "drawingVsBoundary": {
+        "iou": 0.8714,
+        "sourceCovered": 0.9809,
+        "candidateCovered": 0.8864
+      },
+      "confidence": "high"
+    },
+    {
+      "id": "terrace-and-area-health-council",
+      "name": "Terrace and Area",
+      "framework": "councils",
+      "legendNumber": 28,
+      "drawingAreaKm2": 13245,
+      "lhaShares": {
+        "517": 0.959,
+        "513": 0.052,
+        "514": 0.011
+      },
+      "snappedLhaCodes": [
+        "517"
+      ],
+      "chosenLhaCodes": [
+        "517"
+      ],
+      "reviewOverride": false,
+      "note": null,
+      "drawingVsBoundary": {
+        "iou": 0.9211,
+        "sourceCovered": 0.9584,
+        "candidateCovered": 0.9594
+      },
+      "confidence": "high"
+    },
+    {
+      "id": "kitimat-and-area-health-council",
+      "name": "Kitimat and Area",
+      "framework": "councils",
+      "legendNumber": 29,
+      "drawingAreaKm2": 13863,
+      "lhaShares": {
+        "515": 0.702
+      },
+      "snappedLhaCodes": [
+        "515"
+      ],
+      "chosenLhaCodes": [
+        "515"
+      ],
+      "reviewOverride": false,
+      "note": null,
+      "drawingVsBoundary": {
+        "iou": 0.6967,
+        "sourceCovered": 0.99,
+        "candidateCovered": 0.7017
+      },
+      "confidence": "medium"
+    },
+    {
+      "id": "north-coast-community-health-council",
+      "name": "North Coast",
+      "framework": "councils",
+      "legendNumber": 30,
+      "drawingAreaKm2": 5237,
+      "lhaShares": {
+        "512": 0.855
+      },
+      "snappedLhaCodes": [
+        "512"
+      ],
+      "chosenLhaCodes": [
+        "512"
+      ],
+      "reviewOverride": false,
+      "note": null,
+      "drawingVsBoundary": {
+        "iou": 0.8518,
+        "sourceCovered": 0.9956,
+        "candidateCovered": 0.8551
+      },
+      "confidence": "high"
+    },
+    {
+      "id": "queen-charlotte-islands-haida-gwaii-community-health-council",
+      "name": "Queen Charlotte Islands/Haida Gwaii",
+      "framework": "councils",
+      "legendNumber": 31,
+      "drawingAreaKm2": 8766,
+      "lhaShares": {
+        "510": 0.873
+      },
+      "snappedLhaCodes": [
+        "510"
+      ],
+      "chosenLhaCodes": [
+        "510"
+      ],
+      "reviewOverride": false,
+      "note": null,
+      "drawingVsBoundary": {
+        "iou": 0.8728,
+        "sourceCovered": 1.0,
+        "candidateCovered": 0.8728
+      },
+      "confidence": "high"
+    },
+    {
+      "id": "nisgaa-source-area",
+      "name": "Nisga'a Health Authority",
+      "framework": "councils",
+      "legendNumber": 32,
+      "drawingAreaKm2": 4058,
+      "lhaShares": {
+        "518": 0.802
+      },
+      "snappedLhaCodes": [
+        "518"
+      ],
+      "chosenLhaCodes": [
+        "518"
+      ],
+      "reviewOverride": false,
+      "note": null,
+      "drawingVsBoundary": {
+        "iou": 0.7978,
+        "sourceCovered": 0.9941,
+        "candidateCovered": 0.8015
+      },
+      "confidence": "medium"
+    },
+    {
+      "id": "snow-country-health-council",
+      "name": "Snow Country",
+      "framework": "councils",
+      "legendNumber": 33,
+      "drawingAreaKm2": 27161,
+      "lhaShares": {
+        "511": 0.946,
+        "518": 0.124,
+        "513": 0.018,
+        "517": 0.011
+      },
+      "snappedLhaCodes": [
+        "511"
+      ],
+      "chosenLhaCodes": [
+        "511"
+      ],
+      "reviewOverride": false,
+      "note": null,
+      "drawingVsBoundary": {
+        "iou": 0.9112,
+        "sourceCovered": 0.961,
+        "candidateCovered": 0.9462
+      },
+      "confidence": "high"
+    },
+    {
+      "id": "stikine-health-council",
+      "name": "Stikine",
+      "framework": "councils",
+      "legendNumber": 34,
+      "drawingAreaKm2": 154057,
+      "lhaShares": {
+        "519": 0.993,
+        "516": 0.979
+      },
+      "snappedLhaCodes": [
+        "516",
+        "519"
+      ],
+      "chosenLhaCodes": [
+        "516",
+        "519"
+      ],
+      "reviewOverride": false,
+      "note": null,
+      "drawingVsBoundary": {
+        "iou": 0.9757,
+        "sourceCovered": 0.9946,
+        "candidateCovered": 0.9809
+      },
+      "confidence": "high"
+    },
+    {
+      "id": "east-kootenay-community-health-services-society",
+      "name": "East Kootenay",
+      "framework": "societies",
+      "legendNumber": 1,
+      "drawingAreaKm2": 44850,
+      "lhaShares": {
+        "112": 1.0,
+        "113": 0.999,
+        "114": 0.992,
+        "111": 0.982,
+        "116": 0.981,
+        "115": 0.978,
+        "121": 0.022,
+        "122": 0.013,
+        "141": 0.013
+      },
+      "snappedLhaCodes": [
+        "111",
+        "112",
+        "113",
+        "114",
+        "115",
+        "116"
+      ],
+      "chosenLhaCodes": [
+        "111",
+        "112",
+        "113",
+        "114",
+        "115",
+        "116"
+      ],
+      "reviewOverride": false,
+      "note": null,
+      "drawingVsBoundary": {
+        "iou": 0.9778,
+        "sourceCovered": 0.9903,
+        "candidateCovered": 0.9873
+      },
+      "confidence": "high"
+    },
+    {
+      "id": "kootenay-boundary-community-health-services-society",
+      "name": "Central Kootenay",
+      "framework": "societies",
+      "legendNumber": 2,
+      "drawingAreaKm2": 28758,
+      "lhaShares": {
+        "123": 1.0,
+        "126": 1.0,
+        "125": 0.997,
+        "124": 0.991,
+        "127": 0.985,
+        "122": 0.98,
+        "121": 0.97,
+        "115": 0.019,
+        "141": 0.015,
+        "131": 0.013,
+        "136": 0.011
+      },
+      "snappedLhaCodes": [
+        "121",
+        "122",
+        "123",
+        "124",
+        "125",
+        "126",
+        "127"
+      ],
+      "chosenLhaCodes": [
+        "121",
+        "122",
+        "123",
+        "124",
+        "125",
+        "126",
+        "127"
+      ],
+      "reviewOverride": false,
+      "note": null,
+      "drawingVsBoundary": {
+        "iou": 0.9742,
+        "sourceCovered": 0.9885,
+        "candidateCovered": 0.9853
+      },
+      "confidence": "high"
+    },
+    {
+      "id": "coast-garibaldi-community-health-services-society",
+      "name": "Coast Garibaldi",
+      "framework": "societies",
+      "legendNumber": 3,
+      "drawingAreaKm2": 18835,
+      "lhaShares": {
+        "335": 0.984,
+        "334": 0.955,
+        "333": 0.884,
+        "332": 0.074,
+        "425": 0.052,
+        "331": 0.051,
+        "431": 0.041,
+        "432": 0.038,
+        "434": 0.027,
+        "147": 0.019,
+        "224": 0.018,
+        "223": 0.017
+      },
+      "snappedLhaCodes": [
+        "333",
+        "334",
+        "335"
+      ],
+      "chosenLhaCodes": [
+        "333",
+        "334",
+        "335"
+      ],
+      "reviewOverride": false,
+      "note": null,
+      "drawingVsBoundary": {
+        "iou": 0.8853,
+        "sourceCovered": 0.9243,
+        "candidateCovered": 0.9545
+      },
+      "confidence": "high"
+    },
+    {
+      "id": "upper-island-central-coast-community-health-services-society",
+      "name": "Upper Island/Central Coast",
+      "framework": "societies",
+      "legendNumber": 4,
+      "drawingAreaKm2": 45729,
+      "lhaShares": {
+        "431": 0.933,
+        "434": 0.876,
+        "432": 0.86,
+        "433": 0.841,
+        "337": 0.571,
+        "515": 0.15,
+        "336": 0.036,
+        "426": 0.018,
+        "425": 0.017,
+        "334": 0.015
+      },
+      "snappedLhaCodes": [
+        "337",
+        "431",
+        "432",
+        "433",
+        "434"
+      ],
+      "chosenLhaCodes": [
+        "337",
+        "431",
+        "432",
+        "433",
+        "434"
+      ],
+      "reviewOverride": false,
+      "note": null,
+      "drawingVsBoundary": {
+        "iou": 0.7481,
+        "sourceCovered": 0.9107,
+        "candidateCovered": 0.8073
+      },
+      "confidence": "medium"
+    },
+    {
+      "id": "cariboo-community-health-services-society",
+      "name": "Cariboo",
+      "framework": "societies",
+      "legendNumber": 5,
+      "drawingAreaKm2": 105761,
+      "lhaShares": {
+        "146": 0.995,
+        "521": 0.994,
+        "336": 0.949,
+        "144": 0.93,
+        "337": 0.251,
+        "148": 0.02,
+        "432": 0.018,
+        "434": 0.015
+      },
+      "snappedLhaCodes": [
+        "144",
+        "146",
+        "336",
+        "521"
+      ],
+      "chosenLhaCodes": [
+        "144",
+        "146",
+        "336",
+        "521"
+      ],
+      "reviewOverride": false,
+      "note": null,
+      "drawingVsBoundary": {
+        "iou": 0.9418,
+        "sourceCovered": 0.9633,
+        "candidateCovered": 0.9768
+      },
+      "confidence": "medium"
+    },
+    {
+      "id": "north-west-community-health-services-society",
+      "name": "North West",
+      "framework": "societies",
+      "legendNumber": 6,
+      "drawingAreaKm2": 239750,
+      "lhaShares": {
+        "519": 0.999,
+        "517": 0.991,
+        "513": 0.989,
+        "516": 0.988,
+        "511": 0.968,
+        "514": 0.959,
+        "510": 0.879,
+        "512": 0.857,
+        "515": 0.75,
+        "518": 0.177,
+        "522": 0.013,
+        "337": 0.012
+      },
+      "snappedLhaCodes": [
+        "510",
+        "511",
+        "512",
+        "513",
+        "514",
+        "515",
+        "516",
+        "517",
+        "519"
+      ],
+      "chosenLhaCodes": [
+        "510",
+        "511",
+        "512",
+        "513",
+        "514",
+        "515",
+        "516",
+        "517",
+        "519"
+      ],
+      "reviewOverride": false,
+      "note": null,
+      "drawingVsBoundary": {
+        "iou": 0.9492,
+        "sourceCovered": 0.9889,
+        "candidateCovered": 0.9594
+      },
+      "confidence": "medium"
+    },
+    {
+      "id": "peace-liard-community-health-services-society",
+      "name": "Peace Liard",
+      "framework": "societies",
+      "legendNumber": 7,
+      "drawingAreaKm2": 186304,
+      "lhaShares": {
+        "532": 0.998,
+        "533": 0.996,
+        "531": 0.982,
+        "524": 0.022
+      },
+      "snappedLhaCodes": [
+        "531",
+        "532",
+        "533"
+      ],
+      "chosenLhaCodes": [
+        "531",
+        "532",
+        "533"
+      ],
+      "reviewOverride": false,
+      "note": null,
+      "drawingVsBoundary": {
+        "iou": 0.983,
+        "sourceCovered": 0.9885,
+        "candidateCovered": 0.9944
+      },
+      "confidence": "high"
+    },
+    {
+      "id": "statistical-region-01",
+      "name": "East Kootenay",
+      "framework": "regions-2000",
+      "legendNumber": 1,
+      "drawingAreaKm2": 43254,
+      "lhaShares": {
+        "112": 0.999,
+        "113": 0.995,
+        "116": 0.994,
+        "114": 0.989,
+        "115": 0.989,
+        "111": 0.745,
+        "141": 0.051,
+        "121": 0.016
+      },
+      "snappedLhaCodes": [
+        "111",
+        "112",
+        "113",
+        "114",
+        "115",
+        "116"
+      ],
+      "chosenLhaCodes": [
+        "111",
+        "112",
+        "113",
+        "114",
+        "115",
+        "116"
+      ],
+      "reviewOverride": false,
+      "note": null,
+      "drawingVsBoundary": {
+        "iou": 0.9358,
+        "sourceCovered": 0.9862,
+        "candidateCovered": 0.9482
+      },
+      "confidence": "medium"
+    },
+    {
+      "id": "statistical-region-02",
+      "name": "West Kootenay-Boundary",
+      "framework": "regions-2000",
+      "legendNumber": 2,
+      "drawingAreaKm2": 29124,
+      "lhaShares": {
+        "123": 1.0,
+        "125": 0.999,
+        "126": 0.999,
+        "122": 0.997,
+        "124": 0.993,
+        "127": 0.986,
+        "121": 0.984,
+        "141": 0.037
+      },
+      "snappedLhaCodes": [
+        "121",
+        "122",
+        "123",
+        "124",
+        "125",
+        "126",
+        "127"
+      ],
+      "chosenLhaCodes": [
+        "121",
+        "122",
+        "123",
+        "124",
+        "125",
+        "126",
+        "127"
+      ],
+      "reviewOverride": false,
+      "note": null,
+      "drawingVsBoundary": {
+        "iou": 0.9747,
+        "sourceCovered": 0.9826,
+        "candidateCovered": 0.9919
+      },
+      "confidence": "high"
+    },
+    {
+      "id": "statistical-region-03",
+      "name": "North Okanagan",
+      "framework": "regions-2000",
+      "legendNumber": 3,
+      "drawingAreaKm2": 19814,
+      "lhaShares": {
+        "135": 1.0,
+        "139": 1.0,
+        "136": 0.99,
+        "142": 0.99,
+        "141": 0.912,
+        "143": 0.025
+      },
+      "snappedLhaCodes": [
+        "135",
+        "136",
+        "139",
+        "141",
+        "142"
+      ],
+      "chosenLhaCodes": [
+        "135",
+        "136",
+        "139",
+        "141",
+        "142"
+      ],
+      "reviewOverride": false,
+      "note": null,
+      "drawingVsBoundary": {
+        "iou": 0.9299,
+        "sourceCovered": 0.9726,
+        "candidateCovered": 0.9548
+      },
+      "confidence": "high"
+    },
+    {
+      "id": "statistical-region-04",
+      "name": "South Okanagan-Similkameen",
+      "framework": "regions-2000",
+      "legendNumber": 4,
+      "drawingAreaKm2": 13764,
+      "lhaShares": {
+        "133": 1.0,
+        "138": 1.0,
+        "132": 0.997,
+        "131": 0.994,
+        "137": 0.989,
+        "134": 0.988,
+        "127": 0.013,
+        "211": 0.011
+      },
+      "snappedLhaCodes": [
+        "131",
+        "132",
+        "133",
+        "134",
+        "137",
+        "138"
+      ],
+      "chosenLhaCodes": [
+        "131",
+        "132",
+        "133",
+        "134",
+        "137",
+        "138"
+      ],
+      "reviewOverride": false,
+      "note": null,
+      "drawingVsBoundary": {
+        "iou": 0.98,
+        "sourceCovered": 0.9874,
+        "candidateCovered": 0.9924
+      },
+      "confidence": "high"
+    },
+    {
+      "id": "statistical-region-05",
+      "name": "Thompson",
+      "framework": "regions-2000",
+      "legendNumber": 5,
+      "drawingAreaKm2": 52715,
+      "lhaShares": {
+        "145": 0.995,
+        "149": 0.994,
+        "147": 0.988,
+        "143": 0.974,
+        "148": 0.974,
+        "144": 0.075,
+        "211": 0.014,
+        "335": 0.014
+      },
+      "snappedLhaCodes": [
+        "143",
+        "145",
+        "147",
+        "148",
+        "149"
+      ],
+      "chosenLhaCodes": [
+        "143",
+        "145",
+        "147",
+        "148",
+        "149"
+      ],
+      "reviewOverride": false,
+      "note": null,
+      "drawingVsBoundary": {
+        "iou": 0.9608,
+        "sourceCovered": 0.9764,
+        "candidateCovered": 0.9836
+      },
+      "confidence": "high"
+    },
+    {
+      "id": "statistical-region-06",
+      "name": "Fraser Valley",
+      "framework": "regions-2000",
+      "legendNumber": 6,
+      "drawingAreaKm2": 12837,
+      "lhaShares": {
+        "212": 0.999,
+        "213": 0.993,
+        "215": 0.989,
+        "211": 0.974,
+        "214": 0.839,
+        "147": 0.028,
+        "231": 0.025,
+        "148": 0.024,
+        "335": 0.021
+      },
+      "snappedLhaCodes": [
+        "211",
+        "212",
+        "213",
+        "214",
+        "215"
+      ],
+      "chosenLhaCodes": [
+        "211",
+        "212",
+        "213",
+        "214",
+        "215"
+      ],
+      "reviewOverride": false,
+      "note": null,
+      "drawingVsBoundary": {
+        "iou": 0.9169,
+        "sourceCovered": 0.9468,
+        "candidateCovered": 0.9667
+      },
+      "confidence": "high"
+    },
+    {
+      "id": "statistical-region-07",
+      "name": "South Fraser Valley",
+      "framework": "regions-2000",
+      "legendNumber": 7,
+      "drawingAreaKm2": 991,
+      "lhaShares": {
+        "234": 0.999,
+        "233": 0.993,
+        "231": 0.968,
+        "232": 0.965,
+        "221": 0.017,
+        "335": 0.015
+      },
+      "snappedLhaCodes": [
+        "231",
+        "232",
+        "233",
+        "234"
+      ],
+      "chosenLhaCodes": [
+        "231",
+        "232",
+        "233",
+        "234"
+      ],
+      "reviewOverride": false,
+      "note": null,
+      "drawingVsBoundary": {
+        "iou": 0.84,
+        "sourceCovered": 0.8564,
+        "candidateCovered": 0.9777
+      },
+      "confidence": "high"
+    },
+    {
+      "id": "statistical-region-08",
+      "name": "Simon Fraser",
+      "framework": "regions-2000",
+      "legendNumber": 8,
+      "drawingAreaKm2": 2491,
+      "lhaShares": {
+        "224": 0.999,
+        "223": 0.971,
+        "221": 0.965,
+        "214": 0.161,
+        "222": 0.013
+      },
+      "snappedLhaCodes": [
+        "221",
+        "223",
+        "224"
+      ],
+      "chosenLhaCodes": [
+        "221",
+        "223",
+        "224"
+      ],
+      "reviewOverride": false,
+      "note": null,
+      "drawingVsBoundary": {
+        "iou": 0.8607,
+        "sourceCovered": 0.8755,
+        "candidateCovered": 0.9807
+      },
+      "confidence": "high"
+    },
+    {
+      "id": "statistical-region-09",
+      "name": "Coast Garibaldi",
+      "framework": "regions-2000",
+      "legendNumber": 9,
+      "drawingAreaKm2": 17893,
+      "lhaShares": {
+        "335": 0.981,
+        "333": 0.971,
+        "334": 0.961,
+        "223": 0.02,
+        "332": 0.015,
+        "331": 0.014
+      },
+      "snappedLhaCodes": [
+        "333",
+        "334",
+        "335"
+      ],
+      "chosenLhaCodes": [
+        "333",
+        "334",
+        "335"
+      ],
+      "reviewOverride": false,
+      "note": null,
+      "drawingVsBoundary": {
+        "iou": 0.9656,
+        "sourceCovered": 0.992,
+        "candidateCovered": 0.9732
+      },
+      "confidence": "high"
+    },
+    {
+      "id": "statistical-region-10",
+      "name": "Central Vancouver Island",
+      "framework": "regions-2000",
+      "legendNumber": 10,
+      "drawingAreaKm2": 12036,
+      "lhaShares": {
+        "422": 0.998,
+        "421": 0.988,
+        "424": 0.985,
+        "423": 0.965,
+        "425": 0.918,
+        "426": 0.906,
+        "412": 0.024,
+        "335": 0.016
+      },
+      "snappedLhaCodes": [
+        "421",
+        "422",
+        "423",
+        "424",
+        "425",
+        "426"
+      ],
+      "chosenLhaCodes": [
+        "421",
+        "422",
+        "423",
+        "424",
+        "425",
+        "426"
+      ],
+      "reviewOverride": false,
+      "note": null,
+      "drawingVsBoundary": {
+        "iou": 0.9238,
+        "sourceCovered": 0.9821,
+        "candidateCovered": 0.9396
+      },
+      "confidence": "high"
+    },
+    {
+      "id": "statistical-region-11",
+      "name": "Upper Island / Central Coast",
+      "framework": "regions-2000",
+      "legendNumber": 11,
+      "drawingAreaKm2": 59440,
+      "lhaShares": {
+        "434": 0.956,
+        "433": 0.943,
+        "432": 0.933,
+        "431": 0.914,
+        "337": 0.914,
+        "336": 0.29,
+        "515": 0.162,
+        "426": 0.052,
+        "425": 0.03,
+        "334": 0.015
+      },
+      "snappedLhaCodes": [
+        "337",
+        "431",
+        "432",
+        "433",
+        "434"
+      ],
+      "chosenLhaCodes": [
+        "337",
+        "431",
+        "432",
+        "433",
+        "434"
+      ],
+      "reviewOverride": false,
+      "note": null,
+      "drawingVsBoundary": {
+        "iou": 0.7735,
+        "sourceCovered": 0.8146,
+        "candidateCovered": 0.9387
+      },
+      "confidence": "medium"
+    },
+    {
+      "id": "statistical-region-12",
+      "name": "Cariboo",
+      "framework": "regions-2000",
+      "legendNumber": 12,
+      "drawingAreaKm2": 96867,
+      "lhaShares": {
+        "146": 0.998,
+        "521": 0.997,
+        "144": 0.925,
+        "336": 0.707,
+        "335": 0.048,
+        "432": 0.012
+      },
+      "snappedLhaCodes": [
+        "144",
+        "146",
+        "336",
+        "521"
+      ],
+      "chosenLhaCodes": [
+        "144",
+        "146",
+        "336",
+        "521"
+      ],
+      "reviewOverride": false,
+      "note": null,
+      "drawingVsBoundary": {
+        "iou": 0.9111,
+        "sourceCovered": 0.99,
+        "candidateCovered": 0.9195
+      },
+      "confidence": "medium"
+    },
+    {
+      "id": "statistical-region-13",
+      "name": "North West",
+      "framework": "regions-2000",
+      "legendNumber": 13,
+      "drawingAreaKm2": 238198,
+      "lhaShares": {
+        "517": 1.0,
+        "518": 0.999,
+        "513": 0.994,
+        "511": 0.988,
+        "519": 0.982,
+        "514": 0.975,
+        "512": 0.955,
+        "510": 0.949,
+        "516": 0.916,
+        "515": 0.806,
+        "522": 0.014,
+        "533": 0.014,
+        "524": 0.011
+      },
+      "snappedLhaCodes": [
+        "510",
+        "511",
+        "512",
+        "513",
+        "514",
+        "515",
+        "516",
+        "517",
+        "518",
+        "519"
+      ],
+      "chosenLhaCodes": [
+        "510",
+        "511",
+        "512",
+        "513",
+        "514",
+        "515",
+        "516",
+        "517",
+        "518",
+        "519"
+      ],
+      "reviewOverride": false,
+      "note": null,
+      "drawingVsBoundary": {
+        "iou": 0.924,
+        "sourceCovered": 0.9886,
+        "candidateCovered": 0.9339
+      },
+      "confidence": "high"
+    },
+    {
+      "id": "statistical-region-14",
+      "name": "Peace Liard",
+      "framework": "regions-2000",
+      "legendNumber": 14,
+      "drawingAreaKm2": 170474,
+      "lhaShares": {
+        "531": 0.997,
+        "533": 0.986,
+        "532": 0.788
+      },
+      "snappedLhaCodes": [
+        "531",
+        "532",
+        "533"
+      ],
+      "chosenLhaCodes": [
+        "531",
+        "532",
+        "533"
+      ],
+      "reviewOverride": false,
+      "note": null,
+      "drawingVsBoundary": {
+        "iou": 0.9102,
+        "sourceCovered": 0.9941,
+        "candidateCovered": 0.9152
+      },
+      "confidence": "medium"
+    },
+    {
+      "id": "statistical-region-15",
+      "name": "Northern Interior",
+      "framework": "regions-2000",
+      "legendNumber": 15,
+      "drawingAreaKm2": 157333,
+      "lhaShares": {
+        "523": 0.996,
+        "522": 0.984,
+        "524": 0.977,
+        "532": 0.211,
+        "514": 0.025
+      },
+      "snappedLhaCodes": [
+        "522",
+        "523",
+        "524"
+      ],
+      "chosenLhaCodes": [
+        "522",
+        "523",
+        "524"
+      ],
+      "reviewOverride": false,
+      "note": null,
+      "drawingVsBoundary": {
+        "iou": 0.8906,
+        "sourceCovered": 0.9036,
+        "candidateCovered": 0.9841
+      },
+      "confidence": "medium"
+    },
+    {
+      "id": "statistical-region-16",
+      "name": "Vancouver",
+      "framework": "regions-2000",
+      "legendNumber": 16,
+      "drawingAreaKm2": 130,
+      "lhaShares": {
+        "322": 0.999,
+        "326": 0.996,
+        "323": 0.994,
+        "325": 0.994,
+        "324": 0.947,
+        "321": 0.931
+      },
+      "snappedLhaCodes": [
+        "321",
+        "322",
+        "323",
+        "324",
+        "325",
+        "326"
+      ],
+      "chosenLhaCodes": [
+        "321",
+        "322",
+        "323",
+        "324",
+        "325",
+        "326"
+      ],
+      "reviewOverride": false,
+      "note": null,
+      "drawingVsBoundary": {
+        "iou": 0.9626,
+        "sourceCovered": 0.9898,
+        "candidateCovered": 0.9723
+      },
+      "confidence": "high"
+    },
+    {
+      "id": "statistical-region-17",
+      "name": "Burnaby",
+      "framework": "regions-2000",
+      "legendNumber": 17,
+      "drawingAreaKm2": 91,
+      "lhaShares": {
+        "222": 0.982,
+        "221": 0.018
+      },
+      "snappedLhaCodes": [
+        "222"
+      ],
+      "chosenLhaCodes": [
+        "222"
+      ],
+      "reviewOverride": false,
+      "note": null,
+      "drawingVsBoundary": {
+        "iou": 0.9759,
+        "sourceCovered": 0.9933,
+        "candidateCovered": 0.9824
+      },
+      "confidence": "high"
+    },
+    {
+      "id": "statistical-region-18",
+      "name": "North Shore",
+      "framework": "regions-2000",
+      "legendNumber": 18,
+      "drawingAreaKm2": 623,
+      "lhaShares": {
+        "331": 0.985,
+        "332": 0.93
+      },
+      "snappedLhaCodes": [
+        "331",
+        "332"
+      ],
+      "chosenLhaCodes": [
+        "331",
+        "332"
+      ],
+      "reviewOverride": false,
+      "note": null,
+      "drawingVsBoundary": {
+        "iou": 0.9551,
+        "sourceCovered": 0.9883,
+        "candidateCovered": 0.966
+      },
+      "confidence": "high"
+    },
+    {
+      "id": "statistical-region-19",
+      "name": "Richmond",
+      "framework": "regions-2000",
+      "legendNumber": 19,
+      "drawingAreaKm2": 133,
+      "lhaShares": {
+        "311": 0.87
+      },
+      "snappedLhaCodes": [
+        "311"
+      ],
+      "chosenLhaCodes": [
+        "311"
+      ],
+      "reviewOverride": false,
+      "note": null,
+      "drawingVsBoundary": {
+        "iou": 0.8662,
+        "sourceCovered": 0.9947,
+        "candidateCovered": 0.8703
+      },
+      "confidence": "high"
+    },
+    {
+      "id": "statistical-region-20",
+      "name": "Capital",
+      "framework": "regions-2000",
+      "legendNumber": 20,
+      "drawingAreaKm2": 2287,
+      "lhaShares": {
+        "413": 0.972,
+        "412": 0.966,
+        "411": 0.963,
+        "414": 0.929
+      },
+      "snappedLhaCodes": [
+        "411",
+        "412",
+        "413",
+        "414"
+      ],
+      "chosenLhaCodes": [
+        "411",
+        "412",
+        "413",
+        "414"
+      ],
+      "reviewOverride": false,
+      "note": null,
+      "drawingVsBoundary": {
+        "iou": 0.9555,
+        "sourceCovered": 0.9949,
+        "candidateCovered": 0.9602
+      },
+      "confidence": "high"
+    }
+  ]
+}

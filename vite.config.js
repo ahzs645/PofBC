@@ -17,10 +17,6 @@ const patcher = (entry) => fileURLToPath(new URL(`./vendor/patcher/src/${entry}`
 // share this app's React, so React is deduplicated.
 const brandkit = (path) => fileURLToPath(new URL(`./vendor/brandkit/${path}`, import.meta.url))
 
-// Reuse the pinned PGMaps story components directly, without the toolkit's optional map/editor
-// dependencies or a separate package build. These entry points need only React and local helpers.
-const storyToolkit = (entry) => fileURLToPath(new URL(`./vendor/geo-toolkit/src/${entry}`, import.meta.url))
-
 // PlateForge (licence plates, drawn as SVG from its region data) is a submodule too, aliased to its
 // embed entry points (vendor/plateforge/docs/embed.md): `plateforge/bc` registers British Columbia
 // alone, and `plateforge` is the renderer and gallery API. Its fonts come from the @fontsource
@@ -41,11 +37,7 @@ export default defineConfig(({ command }) => ({
       { find: /^brandkit\/manuals$/, replacement: brandkit('src/manuals/index.js') },
       { find: /^brandkit$/, replacement: brandkit('src/engine/index.js') },
       { find: /^plateforge\/bc$/, replacement: plateforge('bc.ts') },
-      { find: /^plateforge$/, replacement: plateforge('index.ts') },
-      { find: /^@pgmaps\/geo-toolkit\/stories\/components\/StorySidecar$/, replacement: storyToolkit('stories/components/StorySidecar.tsx') },
-      { find: /^@pgmaps\/geo-toolkit\/stories\/components\/StoryChapterNavigation$/, replacement: storyToolkit('stories/components/StoryChapterNavigation.tsx') },
-      { find: /^@pgmaps\/geo-toolkit\/workspace\/workspace-context$/, replacement: storyToolkit('workspace/workspace-context.tsx') },
-      { find: /^@pgmaps\/geo-toolkit\/stories\/styles\.css$/, replacement: storyToolkit('stories/styles.css') }
+      { find: /^plateforge$/, replacement: plateforge('index.ts') }
     ],
     dedupe: ['react', 'react-dom']
   },

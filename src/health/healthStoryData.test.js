@@ -3,54 +3,93 @@ import assert from 'node:assert/strict'
 import { readFileSync } from 'node:fs'
 import { geoArea, geoContains } from 'd3-geo'
 import {
-  DEFAULT_AREA_ID, areaById, readHealthPlace, healthMapLink,
-  comparisonFor, filterAreas, assetUrl,
+  AREAS, DEFAULT_AREA_ID, areaById, areasIn, readHealthPlace, healthMapLink, filterAreas, assetUrl, relatedAreas, formatDate,
 } from './healthStoryData.js'
 import { forSphericalDrawing, prepareMap, selectionViewBox } from './mapGeometry.js'
 
 const readPublic = (name) => JSON.parse(readFileSync(
   new URL(`../../public/health-geography/${name}`, import.meta.url), 'utf8',
 ))
+const catalogue = readPublic('catalogue.json')
 
-test('health-map deep links preserve a valid area and chapter and recover from unknown values', () => {
+test('health-map links carry the layer and area, accept organization ids and recover from unknown values', () => {
   const id = 'south-cariboo-community-health-council'
   const link = healthMapLink(id)
   assert.equal(new URLSearchParams(link).get('view'), 'health-map')
-  assert.deepEqual(readHealthPlace(link), { area: id, chapter: 'community-councils' })
-  assert.deepEqual(readHealthPlace(healthMapLink(id, 'compare-boundaries')), {
-    area: id, chapter: 'compare-boundaries',
-  })
-  assert.deepEqual(readHealthPlace('?area=missing&chapter=missing'), {
-    area: DEFAULT_AREA_ID, chapter: 'before-2001',
-  })
-  assert.deepEqual(readHealthPlace(`?area=${id}&chapter=missing`), {
-    area: id, chapter: 'community-councils',
-  })
+  assert.deepEqual(readHealthPlace(link), { framework: 'councils', area: id })
+  assert.deepEqual(readHealthPlace(healthMapLink('northern-health')), { framework: 'authorities-2001', area: 'northern-health-2001' })
+  assert.deepEqual(readHealthPlace('?area=missing&layer=missing'), { framework: 'boards', area: DEFAULT_AREA_ID })
+  assert.deepEqual(readHealthPlace('?layer=regions-2000'), { framework: 'regions-2000', area: null })
+  assert.equal(healthMapLink('not-an-area'), '?view=health-map')
   assert.equal(assetUrl('/maps/example.svg', '/PofBC/'), '/PofBC/health-geography/maps/example.svg')
 })
 
-test('the unresolved Nisga’a label is looked up by source map and legend number rather than null identity', () => {
-  const area = areaById('nisgaa-source-area')
-  assert.ok(area)
-  assert.equal(area.bodyId, null)
-  const comparison = readPublic('boundary-comparison.json')
-  const expected = comparison.bodyMatches.find((row) => row.bodyId === null && row.sourceLegendNumber === 32)
-  assert.ok(expected)
-  const unrelated = { ...expected, sourceLegendNumber: 1 }
-  assert.equal(comparisonFor({ bodyMatches: [unrelated, expected] }, area.id), expected)
-  assert.equal(comparisonFor({ bodyMatches: [unrelated] }, area.id), null)
-  assert.equal(comparisonFor(comparison, 'not-a-source-area'), null)
+test('every printed map label and every statistical region has exactly one boundary', () => {
+  for (const area of catalogue.areas) assert.ok(areaById(area.id), area.id)
+  assert.equal(areasIn('boards').length, 11)
+  assert.equal(areasIn('councils').length, 34)
+  assert.equal(areasIn('societies').length, 7)
+  assert.equal(areasIn('regions-2000').length, 20)
+  assert.equal(areasIn('authorities-2001').length, 5)
+  assert.equal(new Set(AREAS.map((area) => area.id)).size, AREAS.length)
+  const nisgaa = areaById('nisgaa-source-area')
+  assert.equal(nisgaa.organization, null, 'the Nisga’a label stays unlinked to an organization record')
 })
 
-test('Cariboo filtering respects the council category and returns its two matching council labels', () => {
-  const results = filterAreas('  CARIBOO  ', 'councils')
-  assert.deepEqual(results.map((area) => area.id).sort(), [
-    'central-cariboo-chilcotin-health-council',
-    'south-cariboo-community-health-council',
+test('boards with councils, and the statistical regions, each cover all 89 LHAs exactly once; the 2001 authorities all but Nisga’a', () => {
+  const lhas = readPublic('display-lha.geojson').features.map((feature) => feature.properties.code).sort()
+  for (const frameworks of [['boards', 'councils'], ['regions-2000'], ['authorities-2001']]) {
+    const codes = frameworks.flatMap(areasIn).flatMap((area) => area.lhaCodes)
+    // The Nisga'a area was not part of the 2001 amalgamation.
+    const expected = frameworks[0] === 'authorities-2001' ? lhas.filter((code) => code !== '518') : lhas
+    assert.deepEqual([...codes].sort(), expected, frameworks.join('+'))
+  }
+})
+
+test('each society is exactly the union of the councils it served', () => {
+  for (const society of areasIn('societies')) {
+    const served = relatedAreas(society).find((group) => group.label === 'Council areas it served').areas
+    assert.deepEqual(served.flatMap((council) => council.lhaCodes).sort(), [...society.lhaCodes].sort(), society.name)
+  }
+  const cariboo = areaById('cariboo-community-health-services-society')
+  assert.deepEqual(cariboo.organization.successorIds, ['interior-health', 'northern-health'])
+})
+
+test('the 2001 authorities are rebuilt from the predecessors that amalgamated into them', () => {
+  for (const authority of areasIn('authorities-2001')) {
+    for (const id of authority.predecessorIds) assert.ok(areaById(id).organization.successorIds.includes(authority.organization.bodyId))
+  }
+  // Bella Coola and the Central Coast moved to Vancouver Coastal only in 2002.
+  assert.ok(areaById('interior-health-2001').lhaCodes.includes('336'))
+  assert.ok(areaById('vancouver-island-health-2001').lhaCodes.includes('337'))
+  assert.ok(!areaById('vancouver-coastal-health-2001').lhaCodes.includes('336'))
+})
+
+test('the statistical regions follow the printed map: New Westminster in Simon Fraser, Burnaby alone', () => {
+  assert.deepEqual(areaById('statistical-region-17').lhaCodes, ['222'])
+  assert.ok(areaById('statistical-region-08').lhaCodes.includes('221'))
+})
+
+test('search spans names, earlier names and LHA places, and respects the layer filter', () => {
+  assert.deepEqual(filterAreas('  CARIBOO  ', 'councils').map((area) => area.id).sort(), [
+    'central-cariboo-chilcotin-health-council', 'south-cariboo-community-health-council',
   ])
-  assert.ok(results.every((area) => area.mapId === 'councils'))
-  assert.equal(filterAreas('Cariboo', 'societies').length, 1)
-  assert.deepEqual(filterAreas('missing health area', 'councils'), [])
+  assert.ok(filterAreas('Vancouver Health Board').some((area) => area.id === 'vancouver-richmond-health-board'))
+  assert.deepEqual(filterAreas('missing health area'), [])
+  assert.equal(formatDate('1994-11-17'), '17 November 1994')
+  assert.equal(formatDate('1997-03'), 'March 1997')
+})
+
+test('every boundary file is a valid collection whose features match the generated index', () => {
+  for (const framework of ['boards', 'councils', 'societies', 'regions-2000', 'authorities-2001']) {
+    const collection = readPublic(`boundaries/${framework}.geojson`)
+    assert.deepEqual(collection.features.map((feature) => feature.id).sort(), areasIn(framework).map((area) => area.id).sort())
+    const map = prepareMap(collection)
+    for (const feature of map.features) {
+      assert.doesNotMatch(map.path(feature), /NaN|Infinity/, feature.id)
+      assert.ok(geoContains(feature, feature.properties.labelPoint) || feature.properties.lhaCodes.length > 0, feature.id)
+    }
+  }
 })
 
 test('D3 spherical winding normalization preserves a local polygon and its hole without modifying the source', () => {

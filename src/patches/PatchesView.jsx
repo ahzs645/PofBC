@@ -105,7 +105,8 @@ export const PatchesView = ({ collection = 'patches' }) => {
 
   // Back from a patch lands on its card.
   const close = useCallback(() => {
-    const id = place.patch
+    const selected = findPatch(place.patch)
+    const id = selected ? cardOf(selected).id : place.patch
     go({ org: place.org, patch: null })
     requestAnimationFrame(() => cards.current[id]?.focus())
   }, [go, place.org, place.patch])
@@ -196,7 +197,7 @@ export const PatchesView = ({ collection = 'patches' }) => {
                       <span className="patches__medium">
                         {patch.medium}
                         {variantsOf(patch) && ` · ${variantsOf(patch).members.length} variants`}
-                        {photosOf(patch).length > 1 && ` · seen in ${photosOf(patch).length} photos`}
+                        {photosOf(patch).length > 1 && ` · seen in ${photosOf(patch).length} sources`}
                       </span>
                     </span>
                   </a>

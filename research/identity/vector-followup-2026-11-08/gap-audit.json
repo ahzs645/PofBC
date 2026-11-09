@@ -1,0 +1,782 @@
+{
+  "title": "Acquisition coverage and remaining original-vector gaps",
+  "researchDate": "2026-11-08",
+  "timeZone": "America/Vancouver",
+  "baselineCommit": "658a83af56e4b6ebaf38bb1a69812d6052ce4cc1",
+  "scope": "The 183 acquisition body records, with five dedicated collections classified separately. Program timelines and individual historical design gaps are not equivalent to inventory bodies.",
+  "countingRule": "A verified original-vector asset has isVector true and reconstruction false/absent. existingCollection is classified first: dedicated collections are neither empty bodies nor a guarantee that every historical design has original artwork.",
+  "before": {
+    "totalBodies": 183,
+    "originalVectorHeld": 47,
+    "artworkWithoutOriginalVector": 28,
+    "noAcquiredArtwork": 103,
+    "dedicatedCollection": 5,
+    "bodyAssetFiles": 168,
+    "programAssetFiles": 15
+  },
+  "after": {
+    "totalBodies": 183,
+    "originalVectorHeld": 49,
+    "artworkWithoutOriginalVector": 26,
+    "noAcquiredArtwork": 103,
+    "dedicatedCollection": 5,
+    "bodyAssetFiles": 175,
+    "programAssetFiles": 18
+  },
+  "resolvedGeneralBodyGaps": [
+    {
+      "id": "bc-pavilion-corporation",
+      "name": "British Columbia Pavilion Corporation",
+      "kind": "crown-corporation"
+    },
+    {
+      "id": "forest-renewal-bc",
+      "name": "Forest Renewal BC",
+      "kind": "crown-corporation"
+    }
+  ],
+  "dedicatedCollectionImprovements": [
+    {
+      "id": "bclc",
+      "change": "Three original older-palette specimens added beside the reconstructed recolour; all in the documented 2008-era group."
+    },
+    {
+      "id": "worksafebc",
+      "change": "Three original specimens added: a newly represented distressed WorkSafe design and two black/orange specimens. WorkSafeBC is a program record outside the 183-body acquisition inventory."
+    }
+  ],
+  "newVectorFiles": [
+    {
+      "id": "pavco-2025-26-colour-source-vector",
+      "bodyId": "bc-pavilion-corporation",
+      "file": "identity-collected/bc-pavilion-corporation/pavco-2025-26-colour-source-vector.svg"
+    },
+    {
+      "id": "pavco-2023-reversed-source-vector",
+      "bodyId": "bc-pavilion-corporation",
+      "file": "identity-collected/bc-pavilion-corporation/pavco-2023-reversed-source-vector.svg"
+    },
+    {
+      "id": "forest-renewal-bc-2000-colour-source-vector",
+      "bodyId": "forest-renewal-bc",
+      "file": "identity-collected/forest-renewal-bc/forest-renewal-bc-2000-colour-source-vector.svg"
+    },
+    {
+      "id": "forest-renewal-bc-1999-black-source-vector",
+      "bodyId": "forest-renewal-bc",
+      "file": "identity-collected/forest-renewal-bc/forest-renewal-bc-1999-black-source-vector.svg"
+    },
+    {
+      "id": "worksafe-2003-serif-source-vector",
+      "bodyId": "worksafebc",
+      "file": "identity-collected/worksafebc/worksafe-2003-serif-source-vector.svg"
+    },
+    {
+      "id": "worksafebc-2004-tagline-source-vector",
+      "bodyId": "worksafebc",
+      "file": "identity-collected/worksafebc/worksafebc-2004-tagline-source-vector.svg"
+    },
+    {
+      "id": "worksafebc-2024-colour-source-vector",
+      "bodyId": "worksafebc",
+      "file": "identity-collected/worksafebc/worksafebc-2024-colour-source-vector.svg"
+    },
+    {
+      "id": "bclc-2009-colour-tagline-source-vector",
+      "bodyId": "bclc",
+      "file": "identity-collected/bclc/bclc-2009-colour-tagline-source-vector.svg"
+    },
+    {
+      "id": "bclc-2009-reversed-source-vector",
+      "bodyId": "bclc",
+      "file": "identity-collected/bclc/bclc-2009-reversed-source-vector.svg"
+    },
+    {
+      "id": "bclc-2011-reversed-tagline-source-vector",
+      "bodyId": "bclc",
+      "file": "identity-collected/bclc/bclc-2011-reversed-tagline-source-vector.svg"
+    }
+  ],
+  "remainingWithArtworkButNoOriginalVector": [
+    {
+      "id": "bc-railway-company",
+      "name": "British Columbia Railway Company",
+      "kind": "crown-corporation"
+    },
+    {
+      "id": "pacific-great-eastern-railway",
+      "name": "Pacific Great Eastern Railway Company",
+      "kind": "crown-corporation"
+    },
+    {
+      "id": "bc-power-commission",
+      "name": "British Columbia Power Commission",
+      "kind": "crown-corporation"
+    },
+    {
+      "id": "bc-toll-highways-and-bridges-authority",
+      "name": "British Columbia Toll Highways and Bridges Authority",
+      "kind": "crown-corporation"
+    },
+    {
+      "id": "bc-ferry-authority",
+      "name": "British Columbia Ferry Authority",
+      "kind": "crown-corporation"
+    },
+    {
+      "id": "bc-development-corporation",
+      "name": "British Columbia Development Corporation",
+      "kind": "crown-corporation"
+    },
+    {
+      "id": "bc-petroleum-corporation",
+      "name": "British Columbia Petroleum Corporation",
+      "kind": "crown-corporation"
+    },
+    {
+      "id": "ocean-falls-corporation",
+      "name": "Ocean Falls Corporation",
+      "kind": "crown-corporation"
+    },
+    {
+      "id": "bc-steamship-company",
+      "name": "British Columbia Steamship Company (1975) Ltd.",
+      "kind": "crown-corporation"
+    },
+    {
+      "id": "bc-resources-investment-corporation",
+      "name": "British Columbia Resources Investment Corporation",
+      "kind": "crown-corporation"
+    },
+    {
+      "id": "bc-systems-corporation",
+      "name": "British Columbia Systems Corporation",
+      "kind": "crown-corporation"
+    },
+    {
+      "id": "urban-transit-authority",
+      "name": "Urban Transit Authority",
+      "kind": "crown-corporation"
+    },
+    {
+      "id": "expo-86-corporation",
+      "name": "Expo 86 Corporation",
+      "kind": "crown-corporation"
+    },
+    {
+      "id": "bc-place-ltd",
+      "name": "British Columbia Place Ltd.",
+      "kind": "crown-corporation"
+    },
+    {
+      "id": "bc-enterprise-corporation",
+      "name": "British Columbia Enterprise Corporation",
+      "kind": "crown-corporation"
+    },
+    {
+      "id": "fraser-valley-health-region",
+      "name": "Fraser Valley Health Region",
+      "kind": "health-authority"
+    },
+    {
+      "id": "greater-trail-community-health-council",
+      "name": "Greater Trail Community Health Council",
+      "kind": "health-authority"
+    },
+    {
+      "id": "north-shore-health-region",
+      "name": "North Shore Health Region",
+      "kind": "health-authority"
+    },
+    {
+      "id": "south-cariboo-community-health-council",
+      "name": "South Cariboo Community Health Council",
+      "kind": "health-authority"
+    },
+    {
+      "id": "sunshine-coast-community-health-council",
+      "name": "Sunshine Coast Community Health Council",
+      "kind": "health-authority"
+    },
+    {
+      "id": "vancouver-richmond-health-board",
+      "name": "Vancouver/Richmond Health Board",
+      "kind": "health-authority"
+    },
+    {
+      "id": "okanagan-similkameen-health-region",
+      "name": "Okanagan Similkameen Health Region",
+      "kind": "health-authority"
+    },
+    {
+      "id": "simon-fraser-health-region",
+      "name": "Simon Fraser Health Region",
+      "kind": "health-authority"
+    },
+    {
+      "id": "campbell-river-nootka-community-health-council",
+      "name": "Campbell River/Nootka Community Health Council",
+      "kind": "health-authority"
+    },
+    {
+      "id": "coast-garibaldi-community-health-services-society",
+      "name": "Coast Garibaldi Community Health Services Society",
+      "kind": "health-authority"
+    },
+    {
+      "id": "kootenay-boundary-community-health-services-society",
+      "name": "Kootenay Boundary Community Health Services Society",
+      "kind": "health-authority"
+    }
+  ],
+  "noAcquiredArtwork": [
+    {
+      "id": "provincial-rental-housing-corporation",
+      "name": "Provincial Rental Housing Corporation",
+      "kind": "crown-corporation"
+    },
+    {
+      "id": "bc-electric-company-crown",
+      "name": "British Columbia Electric Company (provincially owned)",
+      "kind": "crown-corporation"
+    },
+    {
+      "id": "metro-transit-operating-company",
+      "name": "Metro Transit Operating Company",
+      "kind": "crown-corporation"
+    },
+    {
+      "id": "wlc-developments",
+      "name": "W.L.C. Developments Ltd.",
+      "kind": "crown-corporation"
+    },
+    {
+      "id": "bc-harbours-board",
+      "name": "British Columbia Harbours Board",
+      "kind": "crown-corporation"
+    },
+    {
+      "id": "abbotsford-matsqui-health-council",
+      "name": "Abbotsford/Matsqui Health Council",
+      "kind": "health-authority"
+    },
+    {
+      "id": "alberni-valley-health-council",
+      "name": "Alberni Valley Health Council",
+      "kind": "health-authority"
+    },
+    {
+      "id": "armstrong-enderby-and-spallumcheen-health-council",
+      "name": "Armstrong, Enderby and Spallumcheen Health Council",
+      "kind": "health-authority"
+    },
+    {
+      "id": "arrow-lakes-upper-slocan-valley-health-council",
+      "name": "Arrow Lakes/Upper Slocan Valley Health Council",
+      "kind": "health-authority"
+    },
+    {
+      "id": "barriere-and-district-community-health-council",
+      "name": "Barriere and District Community Health Council",
+      "kind": "health-authority"
+    },
+    {
+      "id": "boundary-health-council",
+      "name": "Boundary Health Council",
+      "kind": "health-authority"
+    },
+    {
+      "id": "burnaby-health-board",
+      "name": "Burnaby Health Board",
+      "kind": "health-authority"
+    },
+    {
+      "id": "cariboo-regional-health-board",
+      "name": "Cariboo Regional Health Board",
+      "kind": "health-authority"
+    },
+    {
+      "id": "castlegar-and-district-health-council",
+      "name": "Castlegar and District Health Council",
+      "kind": "health-authority"
+    },
+    {
+      "id": "chilliwack-kent-harrison-health-council",
+      "name": "Chilliwack/Kent/Harrison Health Council",
+      "kind": "health-authority"
+    },
+    {
+      "id": "clearwater-and-district-community-health-council",
+      "name": "Clearwater and District Community Health Council",
+      "kind": "health-authority"
+    },
+    {
+      "id": "coast-garibaldi-regional-health-board",
+      "name": "Coast Garibaldi Regional Health Board",
+      "kind": "health-authority"
+    },
+    {
+      "id": "columbia-valley-health-council",
+      "name": "Columbia Valley Health Council",
+      "kind": "health-authority"
+    },
+    {
+      "id": "cranbrook-health-council",
+      "name": "Cranbrook Health Council",
+      "kind": "health-authority"
+    },
+    {
+      "id": "creston-and-district-health-council",
+      "name": "Creston and District Health Council",
+      "kind": "health-authority"
+    },
+    {
+      "id": "delta-health-council",
+      "name": "Delta Health Council",
+      "kind": "health-authority"
+    },
+    {
+      "id": "east-kootenay-regional-health-board",
+      "name": "East Kootenay Regional Health Board",
+      "kind": "health-authority"
+    },
+    {
+      "id": "east-thompson-north-shuswap-health-council",
+      "name": "East Thompson/North Shuswap Health Council",
+      "kind": "health-authority"
+    },
+    {
+      "id": "elk-valley-and-south-country-health-council",
+      "name": "Elk Valley and South Country Health Council",
+      "kind": "health-authority"
+    },
+    {
+      "id": "golden-health-council",
+      "name": "Golden Health Council",
+      "kind": "health-authority"
+    },
+    {
+      "id": "hope-and-district-health-council",
+      "name": "Hope and District Health Council",
+      "kind": "health-authority"
+    },
+    {
+      "id": "hudsons-hope-health-council",
+      "name": "Hudson’s Hope Health Council",
+      "kind": "health-authority"
+    },
+    {
+      "id": "kamloops-community-health-council",
+      "name": "Kamloops Community Health Council",
+      "kind": "health-authority"
+    },
+    {
+      "id": "kimberley-community-health-council",
+      "name": "Kimberley Community Health Council",
+      "kind": "health-authority"
+    },
+    {
+      "id": "lillooet-district-health-council",
+      "name": "Lillooet District Health Council",
+      "kind": "health-authority"
+    },
+    {
+      "id": "logan-lake-health-council",
+      "name": "Logan Lake Health Council",
+      "kind": "health-authority"
+    },
+    {
+      "id": "mackenzie-and-area-health-council",
+      "name": "MacKenzie and Area Health Council",
+      "kind": "health-authority"
+    },
+    {
+      "id": "mission-and-district-community-health-council",
+      "name": "Mission and District Community Health Council",
+      "kind": "health-authority"
+    },
+    {
+      "id": "mount-waddington-health-council",
+      "name": "Mount Waddington Health Council",
+      "kind": "health-authority"
+    },
+    {
+      "id": "nelson-and-area-health-council",
+      "name": "Nelson and Area Health Council",
+      "kind": "health-authority"
+    },
+    {
+      "id": "new-westminster-health-council",
+      "name": "New Westminster Health Council",
+      "kind": "health-authority"
+    },
+    {
+      "id": "nicola-valley-health-council",
+      "name": "Nicola Valley Health Council",
+      "kind": "health-authority"
+    },
+    {
+      "id": "north-coast-community-health-council",
+      "name": "North Coast Community Health Council",
+      "kind": "health-authority"
+    },
+    {
+      "id": "north-west-regional-health-board",
+      "name": "North West Regional Health Board",
+      "kind": "health-authority"
+    },
+    {
+      "id": "peace-arch-community-health-council",
+      "name": "Peace Arch Community Health Council",
+      "kind": "health-authority"
+    },
+    {
+      "id": "powell-river-community-health-council",
+      "name": "Powell River Community Health Council",
+      "kind": "health-authority"
+    },
+    {
+      "id": "richmond-health-board",
+      "name": "Richmond Health Board",
+      "kind": "health-authority"
+    },
+    {
+      "id": "ridge-meadows-community-health-council",
+      "name": "Ridge Meadows Community Health Council",
+      "kind": "health-authority"
+    },
+    {
+      "id": "robson-valley-health-council",
+      "name": "Robson Valley Health Council",
+      "kind": "health-authority"
+    },
+    {
+      "id": "saint-bartholomews-health-council",
+      "name": "Saint Bartholomew’s Health Council",
+      "kind": "health-authority"
+    },
+    {
+      "id": "sea-to-sky-community-health-council",
+      "name": "Sea to Sky Community Health Council",
+      "kind": "health-authority"
+    },
+    {
+      "id": "shuswap-community-health-council",
+      "name": "Shuswap Community Health Council",
+      "kind": "health-authority"
+    },
+    {
+      "id": "simon-fraser-health-board",
+      "name": "Simon Fraser Health Board",
+      "kind": "health-authority"
+    },
+    {
+      "id": "south-cariboo-health-council-1996",
+      "name": "South Cariboo Health Council",
+      "kind": "health-authority"
+    },
+    {
+      "id": "south-similkameen-community-health-council",
+      "name": "South Similkameen Community Health Council",
+      "kind": "health-authority"
+    },
+    {
+      "id": "surrey-central-community-health-council",
+      "name": "Surrey Central Community Health Council",
+      "kind": "health-authority"
+    },
+    {
+      "id": "surrey-north-community-health-council",
+      "name": "Surrey North Community Health Council",
+      "kind": "health-authority"
+    },
+    {
+      "id": "the-langleys-health-council",
+      "name": "The Langleys’ Health Council",
+      "kind": "health-authority"
+    },
+    {
+      "id": "thompson-health-region",
+      "name": "Thompson Health Region",
+      "kind": "health-authority"
+    },
+    {
+      "id": "tri-cities-health-council",
+      "name": "Tri-Cities Health Council",
+      "kind": "health-authority"
+    },
+    {
+      "id": "upper-island-central-coast-regional-health-board",
+      "name": "Upper Island/Central Coast Regional Health Board",
+      "kind": "health-authority"
+    },
+    {
+      "id": "west-kootenay-boundary-regional-health-board",
+      "name": "West Kootenay-Boundary Regional Health Board",
+      "kind": "health-authority"
+    },
+    {
+      "id": "bella-coola-and-district-transitional-health-authority",
+      "name": "Bella Coola and District Transitional Health Authority",
+      "kind": "health-authority"
+    },
+    {
+      "id": "campbell-river-and-area-health-council",
+      "name": "Campbell River and Area Health Council",
+      "kind": "health-authority"
+    },
+    {
+      "id": "central-cariboo-chilcotin-health-council",
+      "name": "Central Cariboo Chilcotin Health Council",
+      "kind": "health-authority"
+    },
+    {
+      "id": "central-coast-transitional-health-authority",
+      "name": "Central Coast Transitional Health Authority",
+      "kind": "health-authority"
+    },
+    {
+      "id": "central-okanagan-community-health-council",
+      "name": "Central Okanagan Community Health Council",
+      "kind": "health-authority"
+    },
+    {
+      "id": "chetwynd-health-council",
+      "name": "Chetwynd Health Council",
+      "kind": "health-authority"
+    },
+    {
+      "id": "comox-valley-community-health-council",
+      "name": "Comox Valley Community Health Council",
+      "kind": "health-authority"
+    },
+    {
+      "id": "cowichan-communities-health-council",
+      "name": "Cowichan Communities Health Council",
+      "kind": "health-authority"
+    },
+    {
+      "id": "district-69-community-health-council",
+      "name": "District 69 Community Health Council",
+      "kind": "health-authority"
+    },
+    {
+      "id": "fort-nelson-liard-health-council",
+      "name": "Fort Nelson-Liard Health Council",
+      "kind": "health-authority"
+    },
+    {
+      "id": "fort-st-john-and-district-health-council",
+      "name": "Fort St. John and District Health Council",
+      "kind": "health-authority"
+    },
+    {
+      "id": "greater-vernon-health-council",
+      "name": "Greater Vernon Health Council",
+      "kind": "health-authority"
+    },
+    {
+      "id": "houston-health-council",
+      "name": "Houston Health Council",
+      "kind": "health-authority"
+    },
+    {
+      "id": "kitimat-and-area-health-council",
+      "name": "Kitimat and Area Health Council",
+      "kind": "health-authority"
+    },
+    {
+      "id": "lakes-district-health-council",
+      "name": "Lakes District Health Council",
+      "kind": "health-authority"
+    },
+    {
+      "id": "nanaimo-and-area-community-health-council",
+      "name": "Nanaimo and Area Community Health Council",
+      "kind": "health-authority"
+    },
+    {
+      "id": "nisgaa-community-health-council",
+      "name": "Nisga’a Community Health Council",
+      "kind": "health-authority"
+    },
+    {
+      "id": "nootka-community-health-council",
+      "name": "Nootka Community Health Council",
+      "kind": "health-authority"
+    },
+    {
+      "id": "oliver-osoyoos-health-council",
+      "name": "Oliver Osoyoos Health Council",
+      "kind": "health-authority"
+    },
+    {
+      "id": "omineca-health-council",
+      "name": "Omineca Health Council",
+      "kind": "health-authority"
+    },
+    {
+      "id": "oyster-district-community-health-council",
+      "name": "Oyster District Community Health Council",
+      "kind": "health-authority"
+    },
+    {
+      "id": "peace-river-south-east-health-council",
+      "name": "Peace River South East Health Council",
+      "kind": "health-authority"
+    },
+    {
+      "id": "peace-river-liard-regional-health-board",
+      "name": "Peace River-Liard Regional Health Board",
+      "kind": "health-authority"
+    },
+    {
+      "id": "penticton-and-area-health-council",
+      "name": "Penticton and Area Health Council",
+      "kind": "health-authority"
+    },
+    {
+      "id": "prince-george-health-council",
+      "name": "Prince George Health Council",
+      "kind": "health-authority"
+    },
+    {
+      "id": "princeton-health-council",
+      "name": "Princeton Health Council",
+      "kind": "health-authority"
+    },
+    {
+      "id": "queen-charlotte-islands-haida-gwaii-community-health-council",
+      "name": "Queen Charlotte Islands/Haida Gwaii Community Health Council",
+      "kind": "health-authority"
+    },
+    {
+      "id": "quesnel-and-district-community-health-council",
+      "name": "Quesnel and District Community Health Council",
+      "kind": "health-authority"
+    },
+    {
+      "id": "revelstoke-community-health-council",
+      "name": "Revelstoke Community Health Council",
+      "kind": "health-authority"
+    },
+    {
+      "id": "smithers-and-area-health-council",
+      "name": "Smithers and Area Health Council",
+      "kind": "health-authority"
+    },
+    {
+      "id": "snow-country-health-council",
+      "name": "Snow Country Health Council",
+      "kind": "health-authority"
+    },
+    {
+      "id": "southern-gulf-islands-community-health-council",
+      "name": "Southern Gulf Islands Community Health Council",
+      "kind": "health-authority"
+    },
+    {
+      "id": "stikine-health-council",
+      "name": "Stikine Health Council",
+      "kind": "health-authority"
+    },
+    {
+      "id": "summerland-health-council",
+      "name": "Summerland Health Council",
+      "kind": "health-authority"
+    },
+    {
+      "id": "terrace-and-area-health-council",
+      "name": "Terrace and Area Health Council",
+      "kind": "health-authority"
+    },
+    {
+      "id": "tumbler-ridge-health-council",
+      "name": "Tumbler Ridge Health Council",
+      "kind": "health-authority"
+    },
+    {
+      "id": "upper-skeena-community-health-council",
+      "name": "Upper Skeena Community Health Council",
+      "kind": "health-authority"
+    },
+    {
+      "id": "west-coast-community-health-council",
+      "name": "West Coast Community Health Council",
+      "kind": "health-authority"
+    },
+    {
+      "id": "bulkley-valley-health-council",
+      "name": "Bulkley Valley Health Council",
+      "kind": "health-authority"
+    },
+    {
+      "id": "cariboo-community-health-services-society",
+      "name": "Cariboo Community Health Services Society",
+      "kind": "health-authority"
+    },
+    {
+      "id": "east-kootenay-community-health-services-society",
+      "name": "East Kootenay Community Health Services Society",
+      "kind": "health-authority"
+    },
+    {
+      "id": "north-peace-health-council",
+      "name": "North Peace Health Council",
+      "kind": "health-authority"
+    },
+    {
+      "id": "north-west-community-health-services-society",
+      "name": "North West Community Health Services Society",
+      "kind": "health-authority"
+    },
+    {
+      "id": "peace-liard-community-health-services-society",
+      "name": "Peace Liard Community Health Services Society",
+      "kind": "health-authority"
+    },
+    {
+      "id": "south-peace-health-council",
+      "name": "South Peace Health Council",
+      "kind": "health-authority"
+    },
+    {
+      "id": "upper-island-central-coast-community-health-services-society",
+      "name": "Upper Island/Central Coast Community Health Services Society",
+      "kind": "health-authority"
+    }
+  ],
+  "dedicatedCollections": [
+    {
+      "id": "bc-hydro",
+      "name": "British Columbia Hydro and Power Authority",
+      "kind": "crown-corporation",
+      "collectionId": "bc-hydro"
+    },
+    {
+      "id": "icbc",
+      "name": "Insurance Corporation of British Columbia",
+      "kind": "crown-corporation",
+      "collectionId": "icbc"
+    },
+    {
+      "id": "bclc",
+      "name": "British Columbia Lottery Corporation",
+      "kind": "crown-corporation",
+      "collectionId": "bclc"
+    },
+    {
+      "id": "bc-transit",
+      "name": "British Columbia Transit",
+      "kind": "crown-corporation",
+      "collectionId": "bc-transit"
+    },
+    {
+      "id": "bc-ferry-corporation",
+      "name": "British Columbia Ferry Corporation",
+      "kind": "crown-corporation",
+      "collectionId": "bc-ferries"
+    }
+  ],
+  "limitation": "This audit inventories files and declared provenance. It does not establish that an empty body used a distinct logo, that all existing dedicated-collection artwork is original vector, or that any unresolved original is unavailable elsewhere."
+}

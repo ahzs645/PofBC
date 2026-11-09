@@ -7,7 +7,16 @@ This note records how they were found, and what is still open.
 
 Researched 2026-09-26, mostly from Wayback Machine captures of each body's site, the Province's news
 release archive, and the covers of its published plans and reports. Nothing was downloaded into the
-repo.
+repo during that original pass.
+
+## Subsequent vector recoveries
+
+The notes below preserve the original September research state. The
+[8 November vector follow-up](vector-followup-2026-11-08/README.md) adds ten original PDF-vector
+specimens for PavCo, Forest Renewal BC, WorkSafeBC and BCLC, with reproducible extraction,
+source comparisons and a remaining-gap audit. It resolves the older BCLC palette's lack of period
+originals and adds WorkSafeBC's 2003, 2004 and 2024 report specimens alongside the earlier
+reconstructions. Report periods remain distinct from adoption dates.
 
 ## ICBC, BCLC, BC Ferries, WorkSafeBC and BC Transit
 
