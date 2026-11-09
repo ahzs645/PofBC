@@ -110,3 +110,47 @@ test('bad fetches and missing source references fail explicitly instead of prese
   assert.throws(() => validateCouncilPay({ ...data, sources: [] }), /Incomplete/)
   assert.throws(() => validateCouncilPay({ ...data, observations: [...data.observations, data.observations[0]] }), /Incomplete/)
 })
+
+test('municipalities summarise their latest figure for each office', async () => {
+  const { councilMunicipalities } = await import('./councilPay.js')
+  const data = {
+    observations: [
+      { id: 'a', municipality: 'Kelowna', employerSlug: 'city-of-kelowna', role: 'Councillor', year: 2025, amount: 58080, measure: 'annual-base-rate' },
+      { id: 'b', municipality: 'Kelowna', role: 'Councillor', year: 2025, amount: 58080, measure: 'reported-office-pay' },
+      { id: 'c', municipality: 'Kelowna', role: 'Mayor', year: 2021, amount: 100000, measure: 'reported-office-pay' },
+      { id: 'd', municipality: 'Kelowna', role: 'Mayor', year: 2025, amount: 140000, measure: 'reported-office-pay' },
+      { id: 'e', municipality: 'Kelowna', role: 'Mayor', year: 2025, amount: 139000, measure: 'annual-base-rate' }
+    ],
+    payments: [{ id: 'p', municipality: 'Kelowna', role: 'Mayor', year: 2024, remuneration: 1 }]
+  }
+  const [kelowna] = councilMunicipalities(data)
+  assert.equal(kelowna.employerSlug, 'city-of-kelowna')
+  assert.deepEqual([kelowna.first, kelowna.last, kelowna.figures, kelowna.payments], [2021, 2025, 5, 1])
+  assert.deepEqual(kelowna.offices, [{ role: 'Mayor', year: 2025, amount: 140000, disagree: true }, { role: 'Councillor', year: 2025, amount: 58080, disagree: false }])
+})
+
+test('the same amount from two sources is one figure; different amounts stay apart', async () => {
+  const { councilFiguresByYear } = await import('./councilPay.js')
+  const years = councilFiguresByYear([
+    { id: 'a', role: 'Councillor', year: 2025, amount: 58080, measure: 'annual-base-rate', sourceId: 's1' },
+    { id: 'b', role: 'Councillor', year: 2025, amount: 58080, measure: 'reported-office-pay', sourceId: 's2' },
+    { id: 'c', role: 'Mayor', year: 2025, amount: 140000, measure: 'reported-office-pay', sourceId: 's2' },
+    { id: 'd', role: 'Mayor', year: 2025, amount: 139000, measure: 'annual-base-rate', sourceId: 's1' },
+    { id: 'e', role: 'Mayor', year: 2021, amount: 100000, measure: 'reported-office-pay', sourceId: 's3' }
+  ])
+  assert.deepEqual(years.map(({ year }) => year), [2025, 2021])
+  const [mayor, councillor] = years[0].roles
+  assert.equal(mayor.role, 'Mayor')
+  assert.deepEqual(mayor.figures.map(({ amount }) => amount), [140000, 139000])
+  assert.deepEqual(councillor.figures.map(({ measures, rows }) => [measures, rows.length]), [[['annual-base-rate', 'reported-office-pay'], 2]])
+})
+
+test('an amount rounded to the dollar agrees with the same amount in cents', async () => {
+  const { councilFiguresByYear } = await import('./councilPay.js')
+  const [{ roles: [mayor] }] = councilFiguresByYear([
+    { id: 'a', role: 'Mayor', year: 2025, amount: 139502, measure: 'reported-office-pay', sourceId: 's1' },
+    { id: 'b', role: 'Mayor', year: 2025, amount: 139502.08, measure: 'annual-base-rate', sourceId: 's2' }
+  ])
+  assert.equal(mayor.figures.length, 1)
+  assert.equal(mayor.figures[0].amount, 139502.08)
+})

@@ -19,7 +19,7 @@ export const BROWSE = [
  * @param {object} props
  * @param {Array<{ label: string, value: string, note?: string }>} props.tiles  Up to four headline figures.
  */
-export const CompanionShell = ({ browse, onBrowse, layout, onLayout, query, onSearch, searchLabel, placeholder, searchHelp, heading, tiles = [], intro = null, children }) => (
+export const CompanionShell = ({ browse, onBrowse, layout, onLayout, query, onSearch, searchLabel, placeholder, searchHelp, heading, back = null, tiles = [], intro = null, children }) => (
   <div className="salaries salaries-companion">
     {onSearch && (
       <div className="salaries__search salaries__global-search">
@@ -27,7 +27,10 @@ export const CompanionShell = ({ browse, onBrowse, layout, onLayout, query, onSe
       </div>
     )}
     <section className="salaries__intro" aria-labelledby={`salaries-${browse}-intro`}>
-      <h2 id={`salaries-${browse}-intro`} className="salaries__heading">{heading}</h2>
+      <div className="salaries__page-heading">
+        {back}
+        <h2 id={`salaries-${browse}-intro`} className="salaries__heading">{heading}</h2>
+      </div>
       {intro}
       {browse !== 'about' && onBrowse && <p className="salaries__about-link"><button type="button" className="salaries__link" onClick={() => onBrowse('about')}>About these records, privacy and corrections</button></p>}
       {tiles.length > 0 && (

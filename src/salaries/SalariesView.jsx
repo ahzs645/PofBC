@@ -78,11 +78,12 @@ const PersonCard = ({ each, index, onOpen }) => (
 export const SalariesView = ({ onOpenGovernment }) => {
   const navigation = useSalaryPlace()
   const companion = navigation.place.browse
+  const municipality = companion === 'council' && navigation.place.councilMunicipality !== 'all' ? navigation.place.councilMunicipality : null
   useEffect(() => {
     if (companion === 'workforce') setDocumentMeta({ title: documentTitle('Workforce statistics', 'Salaries'), description: 'B.C. Public Service headcount, average salary and Workforce Profile tables from official releases.' })
     else if (companion === 'about') setDocumentMeta({ title: documentTitle('About, privacy and corrections', 'Salaries'), description: 'Where the B.C. public-sector salary records come from, what they can and cannot show, how personal information is handled and how to report an error.' })
-    else if (companion === 'council') setDocumentMeta({ title: documentTitle('Council pay', 'Salaries'), description: 'Municipal council remuneration in British Columbia: survey figures, official rates and named payments, with sources.' })
-  }, [companion])
+    else if (companion === 'council') setDocumentMeta({ title: documentTitle(municipality, 'Council pay', 'Salaries'), description: 'Municipal council remuneration in British Columbia: survey figures, official rates and named payments, with sources.' })
+  }, [companion, municipality])
   const leaveFor = (label) => (browse) => {
     if (browse === navigation.place.browse) return
     navigation.go({ ...navigation.place, browse, q: '', person: null, personAt: null, employer: null, employerYear: null, role: null, title: null, show: null }, label)
@@ -113,6 +114,15 @@ export const SalariesView = ({ onOpenGovernment }) => {
       <CouncilPayView
         place={navigation.place}
         setPlace={navigation.setPlace}
+        onOpen={(name) => {
+          navigation.go({ ...navigation.place, councilMunicipality: name, q: '' }, 'Council pay')
+          toTop()
+        }}
+        back={(
+          <button type="button" className="salaries__back" aria-label="Back" title="Back" onClick={() => { navigation.goBack({ ...navigation.place, councilMunicipality: 'all' }); toTop() }}>
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M16 10H4m5-5-5 5 5 5" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" /></svg>
+          </button>
+        )}
         onEmployer={(slug) => {
           navigation.go({ ...navigation.place, browse: 'employers', q: '', person: null, personAt: null, employer: slug, employerYear: null, role: null, title: null, show: null }, 'Council pay')
           toTop()

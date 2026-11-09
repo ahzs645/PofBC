@@ -1,7 +1,39 @@
 // What the salary records are, where they come from, how personal information is handled and how to
 // ask for a correction. Linked from every salary section's introduction.
 
+import { useEffect, useState } from 'react'
 import { CompanionShell } from './CompanionShell.jsx'
+import { councilNotes, councilSourceUrl, loadCouncilPay } from './councilPay.js'
+import { CouncilSource } from './CouncilPayView.jsx'
+
+const BASE = import.meta.env?.BASE_URL ?? '/'
+
+/** Council pay's coverage notes, records held back and every source, as documentation. */
+const CouncilSources = () => {
+  const [data, setData] = useState(null)
+  const [failed, setFailed] = useState(false)
+  useEffect(() => {
+    const controller = new AbortController()
+    loadCouncilPay({ signal: controller.signal }).then((value) => { if (!controller.signal.aborted) setData(value) }, () => { if (!controller.signal.aborted) setFailed(true) })
+    return () => controller.abort()
+  }, [])
+  if (failed) return <p>The council pay sources could not be loaded.</p>
+  if (!data) return <p role="status">Loading council pay sources…</p>
+  const held = data.coverage?.held ?? []
+  return (
+    <>
+      <p>Council pay keeps three kinds of figure apart: office pay reported in surveys (CBC’s 2019 and 2021 municipal surveys), annual base rates from council salary schedules, and actual payments to named officials. A survey figure and a base rate can be defined differently, so where they disagree for the same office and year both are shown. Office figures are never assigned to a person, missing years are unknown rather than zero, and a payment is what an official was paid that year, which partial terms and extra duties can change. Reviewed {data.asOf}.</p>
+      <ul>{councilNotes(data.coverage?.notes).map((note, at) => <li key={at}>{note}</li>)}</ul>
+      {held.length > 0 && <>
+        <h4 className="salaries-about__subhead">Held for verification</h4>
+        <ul>{held.map((entry, at) => <li key={at}><strong>{entry.municipality ? `${entry.municipality}, ` : ''}{entry.year}.</strong> {entry.reason} {councilSourceUrl(entry.evidenceUrl) && <a href={councilSourceUrl(entry.evidenceUrl)} target="_blank" rel="noreferrer">Correction evidence</a>}</li>)}</ul>
+      </>}
+      <h4 className="salaries-about__subhead">All {data.sources.length} sources</h4>
+      <ul className="salaries-about__sources">{data.sources.map((source) => <li key={source.id}><CouncilSource source={source} />{councilSourceUrl(source.originalUrl) && <> · <a href={councilSourceUrl(source.originalUrl)} target="_blank" rel="noreferrer">original article</a></>}</li>)}</ul>
+      <p><a href={`${BASE}salaries/council-pay.csv`} download>Download every council record (CSV)</a> · <a href={`${BASE}salaries/council-pay.json`} download>JSON with sources and coverage</a></p>
+    </>
+  )
+}
 
 const ISSUES = 'https://github.com/ahzs645/PofBC/issues/new'
 const correctionUrl = `${ISSUES}?${new URLSearchParams({
@@ -30,6 +62,11 @@ export default function AboutView({ onBrowse }) {
             <li><strong>A missing record is not evidence of anything.</strong> Many employers and years have not been added yet, and pay at or below the threshold is not listed.</li>
             <li>Amounts shown in another year’s dollars use the B.C. consumer price index from Statistics Canada.</li>
           </ul>
+        </section>
+
+        <section aria-labelledby="about-council">
+          <h3 id="about-council" className="salaries__title">Council pay: coverage and sources</h3>
+          <CouncilSources />
         </section>
 
         <section aria-labelledby="about-privacy">

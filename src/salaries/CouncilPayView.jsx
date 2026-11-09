@@ -1,89 +1,123 @@
-import { useMemo, useEffect, useState } from 'react'
-import { CompanionShell, Chips } from './CompanionShell.jsx'
+// Council pay by municipality, like the employers elsewhere: every municipality as a card with its
+// latest mayor and councillor figures; opening one sets out its figures year by year, with the same
+// amount from several sources shown once, and any payments to named officials. Where the data come
+// from, what is held back and the full source list are on the About page.
+
+import { useEffect, useMemo, useState } from 'react'
+import { CompanionShell } from './CompanionShell.jsx'
 import { DataTable } from './DataTable.jsx'
-import { count, Paged, PersonIcon, RoleIcon } from './common.jsx'
-import { councilCsv, councilMeasure, councilMoney, councilNotes, councilRows, councilSourceMap, councilSourceUrl, councilYearCoverage, describeCouncilYears, filterCouncilRows, loadCouncilPay } from './councilPay.js'
+import { count, Paged, RoleIcon } from './common.jsx'
+import { councilCsv, councilFiguresByYear, councilMeasure, councilMunicipalities, councilNotes, councilSourceMap, councilSourceUrl, describeCouncilYears, loadCouncilPay } from './councilPay.js'
+import { formatMoney } from './money.js'
+import { saveText } from './exportCsv.js'
 import './councilPay.css'
 
-const BASE = import.meta.env?.BASE_URL ?? '/'
-const humanize = (value) => value.replace(/([a-z])([A-Z])/g, '$1 $2').replaceAll('-', ' ').replace(/^./, (letter) => letter.toUpperCase())
+const money = (value, currency = 'CAD') => formatMoney(value, 'Not reported', currency)
+const words = (text) => String(text ?? '').normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase().split(/\s+/).filter(Boolean)
 
-const SourceLink = ({ source, page }) => {
+/** A source as a short link, with its page; its notes are the link's tooltip. */
+export const CouncilSource = ({ source, page }) => {
   const href = councilSourceUrl(source?.url)
-  const original = councilSourceUrl(source?.originalUrl)
-  return <>{href ? <a href={href} target="_blank" rel="noreferrer">{source.title}{page ? ` · PDF p. ${page}` : ''}</a> : <span>{source?.title ?? 'Source unavailable'}</span>}{original && <> · <a href={original} target="_blank" rel="noreferrer">Original article</a></>}</>
+  const label = `${source?.title ?? 'Source unavailable'}${page ? ` · p. ${page}` : ''}`
+  const notes = councilNotes(source?.notes).join(' ')
+  return href ? <a href={href} target="_blank" rel="noreferrer" title={notes || undefined}>{label}</a> : <span title={notes || undefined}>{label}</span>
 }
 
-const SupportingSources = ({ source }) => (source?.supportingSources ?? []).map((support) => <p key={support.url}><SourceLink source={support} />{support.locator ? ` · ${support.locator}` : ''}</p>)
+const latestLine = (place) => place.offices.map((office) => `${office.role} ${money(office.amount)}${office.disagree ? '*' : ''}`).join(' · ')
 
-const RecordDetails = ({ row, source }) => {
-  const notes = councilNotes(row.notes)
-  const sourceNotes = councilNotes(source?.notes)
-  const components = Object.entries(row.components ?? {})
-  const precision = row.sourcePrecision ?? row.amountPrecisionCad
-  return <div className="council-pay__evidence">
-    <p><SourceLink source={source} page={row.pdfPage} /></p>
-    <p className="council-pay__muted">{humanize(source?.kind ?? 'Source')}</p>
-    {row.sourceRowLabel && <p>{row.sourceRowLabel}</p>}
-    {!row.sourceRowLabel && row.tableLabel && <p>Source table: {row.tableLabel}</p>}
-    {Number.isFinite(precision) && precision >= 1 && <p className="council-pay__muted">Reported precision: {councilMoney(precision, row.currency)}.</p>}
-    {row.sourceLocator && <p>{row.sourceLocator}</p>}
-    {source?.locator && source.locator !== row.sourceLocator && <p className="council-pay__muted">{source.locator}</p>}
-    {row.effectiveFrom && <p>Effective from {row.effectiveFrom}{row.effectiveTo ? ` to ${row.effectiveTo}` : ''}.</p>}
-    {!row.effectiveFrom && row.effectiveTo && <p>Effective through {row.effectiveTo}.</p>}
-    {row.effectiveDateNote && <p>{row.effectiveDateNote}</p>}
-    {row.sourceEffectiveFrom && <p>Published rate interval: {row.sourceEffectiveFrom}{row.sourceEffectiveTo ? ` to ${row.sourceEffectiveTo}` : ''}. The annual row retains this source interval.</p>}
-    {row.scheduleVersion && <p>Schedule edition: {humanize(row.scheduleVersion)}.</p>}
-    {notes.length > 0 && <ul>{notes.map((note, at) => <li key={at}>{note}</li>)}</ul>}
-    {(components.length > 0 || sourceNotes.length > 0) && <details>
-      <summary>{components.length ? 'Payment components and source notes' : 'Source notes'}</summary>
-      {components.length > 0 && <dl className="council-pay__components">{components.map(([name, value]) => <div key={name}><dt>{humanize(name)}</dt><dd>{typeof value === 'number' || value == null ? councilMoney(value, row.currency) : String(value)}</dd></div>)}</dl>}
-      {sourceNotes.length > 0 && <ul>{sourceNotes.map((note, at) => <li key={at}>{note}</li>)}</ul>}
-      <SupportingSources source={source} />
-    </details>}
-  </div>
-}
+/** A municipality as a card, like an employer: opening it shows its figures year by year. */
+const MunicipalityCard = ({ place, onOpen }) => (
+  <button type="button" className="salaries__card" onClick={() => onOpen(place.name)}>
+    <span className="salaries__lead"><RoleIcon /></span>
+    <span className="salaries__text">
+      <span className="salaries__name">{place.name}</span>
+      {place.offices.length > 0 && <span className="salaries__line">{latestLine(place)}</span>}
+      {(place.first !== place.last || place.payments > 0) && <span className="salaries__line">{[place.first !== place.last && `${place.first}–${place.last}`, place.payments > 0 && count(place.payments, 'named payment', 'named payments')].filter(Boolean).join(' · ')}</span>}
+    </span>
+    <span className="salaries__aside">{place.offices[0]?.year ?? place.last}<span className="salaries__line">latest</span></span>
+  </button>
+)
 
-const Filter = ({ label, value, onChange, children }) => <label className="council-pay__filter"><span>{label}</span><select value={value} onChange={(event) => onChange(event.target.value)}>{children}</select></label>
+/** One municipality: its office figures by year, then any payments to named officials. */
+const Municipality = ({ data, place, sources, layout, onEmployer }) => {
+  const figures = useMemo(() => data.observations.filter((row) => row.municipality === place.name), [data, place])
+  const payments = useMemo(() => data.payments.filter((row) => row.municipality === place.name).sort((a, b) => b.year - a.year || (b.remuneration ?? 0) - (a.remuneration ?? 0)), [data, place])
+  const byYear = useMemo(() => councilFiguresByYear(figures), [figures])
+  const flat = useMemo(() => byYear.flatMap(({ year, roles }) => roles.flatMap(({ role, figures: list }) => list.map((figure) => ({ year, role, ...figure })))), [byYear])
+  const figureColumns = useMemo(() => [
+    { id: 'year', header: 'Year', accessorKey: 'year', meta: { kind: 'number' } },
+    { id: 'role', header: 'Office', accessorKey: 'role' },
+    { id: 'amount', header: 'Amount', accessorFn: (row) => row.amount ?? undefined, sortUndefined: 'last', meta: { kind: 'money' }, cell: ({ row }) => money(row.original.amount, row.original.currency) },
+    { id: 'measure', header: 'Type of figure', accessorFn: (row) => row.measures.map(councilMeasure).join(', ') },
+    { id: 'source', header: 'Sources', accessorFn: (row) => row.rows.map((each) => sources.get(each.sourceId)?.title ?? '').join('; '), cell: ({ row }) => row.original.rows.map((each, at) => <span key={each.id}>{at > 0 ? '; ' : ''}<CouncilSource source={sources.get(each.sourceId)} page={each.pdfPage} /></span>) }
+  ], [sources])
+  const paymentColumns = useMemo(() => [
+    { id: 'year', header: 'Year', accessorKey: 'year', meta: { kind: 'number' } },
+    { id: 'name', header: 'Official', accessorKey: 'name' },
+    { id: 'role', header: 'Office', accessorKey: 'role' },
+    { id: 'remuneration', header: 'Remuneration', accessorFn: (row) => row.remuneration ?? undefined, sortUndefined: 'last', meta: { kind: 'money' }, cell: ({ row }) => money(row.original.remuneration, row.original.currency) },
+    { id: 'expenses', header: 'Expenses', accessorFn: (row) => row.expenses ?? undefined, sortUndefined: 'last', meta: { kind: 'money' }, cell: ({ row }) => money(row.original.expenses, row.original.currency) },
+    { id: 'source', header: 'Source', accessorFn: (row) => sources.get(row.sourceId)?.title ?? '', cell: ({ row }) => <CouncilSource source={sources.get(row.original.sourceId)} page={row.original.pdfPage} /> }
+  ], [sources])
+  const download = () => saveText(councilCsv([...figures, ...payments], 'rates', sources), `council-pay-${place.name.toLowerCase().replace(/[^a-z0-9]+/g, '-')}.csv`)
 
-/** One office figure or named payment as a card, like an employer or a person elsewhere; its source opens below. */
-const CouncilCard = ({ row, tab, source, onEmployer }) => {
-  const payment = tab === 'payments'
   return (
-    <article className="salaries__card salaries__card--static council-pay__card">
-      <span className="salaries__lead">{payment ? <PersonIcon /> : <RoleIcon />}</span>
-      <span className="salaries__text">
-        <span className="salaries__name">{payment ? row.name : row.municipality}</span>
-        <span className="salaries__line">{payment ? row.role : `${row.role} · ${councilMeasure(row.measure)}`}</span>
-        <span className="salaries__line">
-          {payment && <>{row.employerSlug && onEmployer ? <button type="button" className="salaries__link" onClick={() => onEmployer(row.employerSlug)}>{row.municipality}</button> : row.municipality} · </>}
-          {row.year}
-        </span>
-        <details className="council-pay__card-source">
-          <summary>Source</summary>
-          <RecordDetails row={row} source={source} />
-        </details>
-      </span>
-      <span className="salaries__aside">
-        {councilMoney(payment ? row.remuneration : row.amount, row.currency)}
-        {payment
-          ? <span className="salaries__line">{Number.isFinite(row.expenses) ? `Expenses ${councilMoney(row.expenses, row.currency)}` : 'Expenses not stated'}</span>
-          : Number.isFinite(row.annualSupplement) && <span className="salaries__line">+ {councilMoney(row.annualSupplement, row.currency)} supplement</span>}
-      </span>
-    </article>
+    <div className="council-pay">
+      <p className="salaries__meta council-pay__links">
+        {place.employerSlug && onEmployer && <><button type="button" className="salaries__link" onClick={() => onEmployer(place.employerSlug)}>Every disclosed salary at {place.name}</button> · </>}
+        <button type="button" className="salaries__link" onClick={download}>Download as CSV</button>
+      </p>
+
+      <section aria-labelledby="council-figures">
+        <div className="salaries__head">
+          <h3 id="council-figures" className="salaries__title">Pay for each office</h3>
+          <p className="salaries__meta">{count(byYear.length, 'year', 'years')}: {describeCouncilYears(byYear.map(({ year }) => year))}</p>
+        </div>
+        {layout === 'table'
+          ? <DataTable data={flat} columns={figureColumns} sorting={[{ id: 'year', desc: true }]} label={`${place.name} council office figures`} rowHeight={52} />
+          : <ol className="salaries-years council-pay__years">
+            {byYear.map(({ year, roles }) => (
+              <li key={year} className="salaries-years__year">
+                <span className="salaries-years__label">{year}</span>
+                <span className="salaries-years__records">
+                  {roles.flatMap(({ role, figures: list }) => list.map((figure, at) => (
+                    <span key={`${role}-${at}`} className="salaries-record">
+                      <span className="salaries-record__what">
+                        <span className="salaries__name">{role}</span>
+                        <span className="salaries__line">{figure.measures.map(councilMeasure).join(' and ')}{list.length > 1 ? ' (sources differ)' : ''}</span>
+                      </span>
+                      <span className="salaries-row__pay">
+                        {money(figure.amount, figure.currency)}
+                        <span className="salaries__line">{figure.rows.map((row, index) => <span key={row.id}>{index > 0 ? ' · ' : ''}<CouncilSource source={sources.get(row.sourceId)} page={row.pdfPage} /></span>)}</span>
+                      </span>
+                    </span>
+                  )))}
+                </span>
+              </li>
+            ))}
+          </ol>}
+      </section>
+
+      {payments.length > 0 && (
+        <section aria-labelledby="council-payments">
+          <div className="salaries__head">
+            <h3 id="council-payments" className="salaries__title">Payments to named officials</h3>
+            <p className="salaries__meta">{count(payments.length, 'payment', 'payments')} · what each was paid that year, not a salary rate</p>
+          </div>
+          <DataTable data={payments} columns={paymentColumns} sorting={[{ id: 'year', desc: true }]} label={`${place.name} payments to named officials`} rowHeight={48} />
+        </section>
+      )}
+    </div>
   )
 }
 
-export default function CouncilPayView({ place, setPlace, onBrowse, onEmployer }) {
+export default function CouncilPayView({ place, setPlace, onBrowse, onOpen, onEmployer, back }) {
   const [data, setData] = useState(null)
   const [failed, setFailed] = useState(false)
   const [attempt, setAttempt] = useState(0)
-  const tab = place.councilTab === 'payments' ? 'payments' : 'rates'
-  const municipality = place.councilMunicipality || 'all'
-  const year = place.councilYear || 'all'
-  const role = place.councilRole || 'all'
   const query = place.q ?? ''
   const layout = place.layout === 'table' ? 'table' : 'cards'
+  const chosen = place.councilMunicipality && place.councilMunicipality !== 'all' ? place.councilMunicipality : null
 
   useEffect(() => {
     const controller = new AbortController()
@@ -93,109 +127,60 @@ export default function CouncilPayView({ place, setPlace, onBrowse, onEmployer }
   }, [attempt])
 
   const sources = useMemo(() => data ? councilSourceMap(data) : new Map(), [data])
-  const rows = useMemo(() => data ? councilRows(data, tab) : [], [data, tab])
-  const filtered = useMemo(() => filterCouncilRows(rows, { query, municipality, year, role }, sources), [rows, query, municipality, year, role, sources])
-  const coverageRows = useMemo(() => filterCouncilRows(rows, { municipality, role }), [rows, municipality, role])
-  const observed = useMemo(() => councilYearCoverage(coverageRows), [coverageRows])
-  const series = useMemo(() => (data?.coverage?.timeSeries ?? []).filter((entry) => entry.municipality === municipality && (role === 'all' || entry.role === role) && (tab === 'payments' ? entry.measure === 'actual-remuneration' : entry.measure !== 'actual-remuneration')), [data, municipality, role, tab])
-  const municipalities = useMemo(() => [...new Set([...(data?.coverage?.municipalities ?? []).map((entry) => entry.municipality), ...rows.map((row) => row.municipality)])].sort((a, b) => a.localeCompare(b, 'en-CA')), [data, rows])
-  const years = useMemo(() => [...new Set(rows.map((row) => String(row.year)))].sort((a, b) => b - a), [rows])
-  // Roles as chips, each with how many rows it has under the other filters.
-  const roleCounts = useMemo(() => {
-    const counts = new Map()
-    for (const row of filterCouncilRows(rows, { query, municipality, year }, sources)) counts.set(row.role, (counts.get(row.role) ?? 0) + 1)
-    return [...counts].sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0]))
-  }, [rows, query, municipality, year, sources])
-  const update = (key, value) => setPlace((current) => ({ ...current, [key]: value }))
-  const clear = () => setPlace((current) => ({ ...current, q: '', councilMunicipality: 'all', councilYear: 'all', councilRole: 'all' }))
-  const download = () => {
-    const url = URL.createObjectURL(new Blob(['﻿', councilCsv(filtered, tab, sources)], { type: 'text/csv;charset=utf-8' }))
-    const link = document.createElement('a')
-    link.href = url
-    link.download = `bc-council-${tab}-filtered.csv`
-    link.click()
-    setTimeout(() => URL.revokeObjectURL(url), 1000)
-  }
-  const payment = tab === 'payments'
+  const places = useMemo(() => data ? councilMunicipalities(data) : [], [data])
+  const wanted = words(query)
+  const shown = useMemo(() => places.filter((each) => wanted.every((word) => words(each.name).some((part) => part.startsWith(word)))), [places, query]) // eslint-disable-line react-hooks/exhaustive-deps
+  const current = chosen ? places.find((each) => each.name === chosen) : null
+  const update = (key, value) => setPlace((value_) => ({ ...value_, [key]: value }))
   const columns = useMemo(() => [
-    { id: 'municipality', header: 'Municipality', accessorKey: 'municipality' },
-    { id: 'year', header: 'Year', accessorFn: (row) => row.year, meta: { kind: 'number' } },
-    ...(payment ? [{ id: 'name', header: 'Official', accessorKey: 'name' }] : []),
-    { id: 'role', header: 'Role', accessorKey: 'role' },
-    ...(payment
-      ? [
-        { id: 'remuneration', header: 'Remuneration', accessorFn: (row) => row.remuneration ?? undefined, sortUndefined: 'last', meta: { kind: 'money' }, cell: ({ row }) => councilMoney(row.original.remuneration, row.original.currency) },
-        { id: 'expenses', header: 'Expenses', accessorFn: (row) => row.expenses ?? undefined, sortUndefined: 'last', meta: { kind: 'money' }, cell: ({ row }) => councilMoney(row.original.expenses, row.original.currency) }
-      ]
-      : [
-        { id: 'measure', header: 'Type of figure', accessorFn: (row) => councilMeasure(row.measure) },
-        { id: 'amount', header: 'Amount', accessorFn: (row) => row.amount ?? undefined, sortUndefined: 'last', meta: { kind: 'money' }, cell: ({ row }) => councilMoney(row.original.amount, row.original.currency) }
-      ]),
-    { id: 'source', header: 'Source', accessorFn: (row) => sources.get(row.sourceId)?.title ?? '', cell: ({ row }) => <SourceLink source={sources.get(row.original.sourceId)} page={row.original.pdfPage} /> }
-  ], [payment, sources])
+    { id: 'name', header: 'Municipality', accessorKey: 'name', cell: ({ row }) => <button type="button" className="salaries__link salaries-row__name" onClick={() => onOpen(row.original.name)}>{row.original.name}</button> },
+    ...['Mayor', 'Councillor'].map((role) => ({ id: role, header: `${role}, latest`, accessorFn: (row) => row.offices.find((office) => office.role === role)?.amount ?? undefined, sortUndefined: 'last', meta: { kind: 'money' }, cell: ({ getValue }) => money(getValue()) })),
+    { id: 'last', header: 'Latest year', accessorKey: 'last', meta: { kind: 'number' } },
+    { id: 'first', header: 'First year', accessorKey: 'first', meta: { kind: 'number' } },
+    { id: 'payments', header: 'Named payments', accessorKey: 'payments', meta: { kind: 'number', filter: false } }
+  ], [onOpen])
 
-  // The tiles describe the whole dataset, whichever record type is chosen.
-  const allRows = data ? [...data.observations, ...data.payments] : []
-  const allYears = allRows.map((row) => Number(row.year)).filter(Number.isFinite)
-  const allMunicipalities = new Set(allRows.map((row) => row.municipality))
-  const tiles = data ? [
-    { label: 'Office figures', value: data.observations.length.toLocaleString('en-CA'), note: 'rates and reported pay' },
-    { label: 'Named payments', value: data.payments.length.toLocaleString('en-CA'), note: 'to council members' },
-    { label: 'Municipalities', value: allMunicipalities.size.toLocaleString('en-CA'), note: `${data.sources.length} sources` },
-    { label: 'Years', value: allYears.length ? `${Math.min(...allYears)}–${Math.max(...allYears)}` : '—', note: `reviewed ${data.asOf}` }
-  ] : []
+  const yearsAll = data ? [...data.observations, ...data.payments].map((row) => Number(row.year)).filter(Number.isFinite) : []
+  const tiles = !data ? []
+    : current ? current.offices.map((office) => ({ label: `${office.role}, ${office.year}`, value: money(office.amount), note: office.disagree ? 'highest of the sources' : councilMeasure(data.observations.find((row) => row.municipality === current.name && row.role === office.role && row.year === office.year)?.measure) }))
+      .concat([{ label: 'Years', value: current.first === current.last ? String(current.first) : `${current.first}–${current.last}`, note: count(current.years.length, 'year with figures', 'years with figures') }])
+      : [
+        { label: 'Municipalities', value: places.length.toLocaleString('en-CA'), note: 'with council pay figures' },
+        { label: 'Office figures', value: data.observations.length.toLocaleString('en-CA'), note: 'mayor and councillor rates and reported pay' },
+        { label: 'Named payments', value: data.payments.length.toLocaleString('en-CA'), note: 'to council members' },
+        { label: 'Years', value: yearsAll.length ? `${Math.min(...yearsAll)}–${Math.max(...yearsAll)}` : '—', note: `${data.sources.length} sources` }
+      ]
 
   return (
     <CompanionShell
       browse="council" onBrowse={onBrowse}
       layout={layout} onLayout={(next) => update('layout', next)}
-      query={query} onSearch={(value) => update('q', value)}
-      searchLabel="Search council pay" searchHelp="Search a municipality, an official’s name or a source, such as “Saanich”, “Vancouver” or “CBC”."
-      placeholder={payment ? 'Municipality, name or source' : 'Municipality or source'}
-      heading="Council pay"
-      intro={<p>Published mayor and councillor pay: office figures from surveys and salary schedules, and payments to named officials, each with its source. Amounts are in Canadian dollars as reported. Coverage is partial; an unlisted year or municipality means no record has been added here.</p>}
+      query={query} onSearch={chosen ? null : (value) => update('q', value)}
+      searchLabel="Find a municipality" placeholder="Kamloops, Saanich, Kelowna…" searchHelp="Type the start of any word in a municipality’s name."
+      heading={current ? current.name : chosen ?? 'Council pay'}
+      back={chosen ? back : null}
+      intro={current ? null : !chosen && <p>Mayor and councillor pay in each municipality: office rates from salary schedules and surveys, and payments to named officials, each with its source. Amounts are in Canadian dollars as published.</p>}
       tiles={tiles}
     >
-      {failed ? <p className="salaries__hint" role="alert">Council pay could not be loaded. <button type="button" className="salaries__link" onClick={() => setAttempt((value) => value + 1)}>Retry</button></p> : !data ? <p className="salaries__hint" role="status">Loading council sources…</p> : <div className="council-pay">
-        <Chips label="Record type" value={tab} onChange={(value) => update('councilTab', value)} options={[
-          { value: 'rates', label: 'Office rates & reported pay', count: data.observations.length },
-          { value: 'payments', label: 'Named payments', count: data.payments.length }
-        ]} />
-        <Chips label="Role" all="All roles" value={role} onChange={(value) => update('councilRole', value)} options={roleCounts.map(([name, total]) => ({ value: name, label: name, count: total }))} />
-        <p className="salaries__meta council-pay__definition">{payment
-          ? 'Amounts paid to named officials in the source year. Remuneration and expenses remain separate. Partial terms and extra duties can affect the amount; a payment does not establish a full-year salary.'
-          : 'Figures attached to an office. A published survey figure and an annual base rate can use different definitions. Multiple sources for the same office and year remain visible; these figures are not assigned to a person.'}</p>
-        <div className="council-pay__filters">
-          <Filter label="Municipality" value={municipality} onChange={(value) => update('councilMunicipality', value)}><option value="all">All municipalities</option>{!municipalities.includes(municipality) && municipality !== 'all' && <option value={municipality}>{municipality}</option>}{municipalities.map((value) => <option key={value} value={value}>{value}</option>)}</Filter>
-          <Filter label="Year" value={year} onChange={(value) => update('councilYear', value)}><option value="all">All source years</option>{!years.includes(year) && year !== 'all' && <option value={year}>{year} (no records)</option>}{years.map((value) => <option key={value} value={value}>{value}</option>)}</Filter>
-          <div className="council-pay__actions"><button type="button" onClick={clear}>Clear filters</button><button type="button" disabled={!filtered.length} onClick={download}>Download these rows (CSV)</button></div>
-        </div>
-        <div className="council-pay__coverage" aria-label="Available years">
-          <p><strong>{municipality === 'all' ? 'Years represented' : `${municipality}: years represented`}{role !== 'all' ? ` · ${role}` : ''}:</strong> {observed.years.length ? describeCouncilYears(observed.years) : 'No records added.'}</p>
-          {observed.missing.length > 0 && <p>Gaps between those years: {describeCouncilYears(observed.missing)}.</p>}
-          {series.length > 0 && <details><summary>Coverage by office and type of figure</summary><ul>{series.map((entry) => <li key={`${entry.role}-${entry.measure}`}><strong>{entry.role} · {councilMeasure(entry.measure)}:</strong> {entry.ranges}{entry.missingYears.length > 0 ? ` · Gaps: ${describeCouncilYears(entry.missingYears)}.` : ''}</li>)}</ul></details>}
-          <p className="council-pay__muted">A represented year can contain only some offices or officials. Other years are unknown; missing amounts are never treated as zero.</p>
-        </div>
-        <div className="salaries__head">
-          <h3 className="salaries__title">{payment ? 'Named payments' : 'Office figures'}</h3>
-          <p className="salaries__meta" role="status">{count(filtered.length, payment ? 'payment' : 'figure', payment ? 'payments' : 'figures')} · newest first</p>
-        </div>
-        {!filtered.length
-          ? <p className="salaries__hint">No source records match these filters. This does not indicate unpaid service. Try another year or municipality, or clear the filters.</p>
-          : layout === 'table'
-            ? <DataTable key={tab} data={filtered} columns={columns} sorting={[{ id: 'year', desc: true }]} label={payment ? 'Named council payments' : 'Council office figures'} rowHeight={52} />
-            : <Paged list={filtered} size={24} reset={`${tab}|${query}|${municipality}|${year}|${role}`}>
-              {(page) => <div className="salaries__grid">{page.map((row) => <CouncilCard key={row.id} row={row} tab={tab} source={sources.get(row.sourceId)} onEmployer={onEmployer} />)}</div>}
-            </Paged>}
-        <details className="council-pay__source-inventory">
-          <summary>Historical coverage, held records and all sources</summary>
-          <ul>{councilNotes(data.coverage?.notes).map((note, at) => <li key={at}>{note}</li>)}</ul>
-          {(data.coverage?.held ?? []).map((held, at) => <p key={at}><strong>{held.municipality ? `${held.municipality} · ` : ''}{held.year}: held for verification.</strong> {held.reason} {councilSourceUrl(held.evidenceUrl) && <a href={councilSourceUrl(held.evidenceUrl)} target="_blank" rel="noreferrer">Read the correction evidence</a>}</p>)}
-          <h3>Sources</h3>
-          <ul>{data.sources.map((source) => <li key={source.id}><SourceLink source={source} /> <span className="council-pay__muted">({humanize(source.kind ?? 'Source')})</span>{councilNotes(source.notes).map((note, at) => <p key={at}>{note}</p>)}</li>)}</ul>
-          <p><a href={`${BASE}salaries/council-pay.csv`} download>Download the complete council dataset (CSV)</a> · <a href={`${BASE}salaries/council-pay.json`} download>JSON with sources and coverage</a></p>
-        </details>
-      </div>}
+      {failed ? <p className="salaries__hint" role="alert">Council pay could not be loaded. <button type="button" className="salaries__link" onClick={() => setAttempt((value) => value + 1)}>Retry</button></p>
+        : !data ? <p className="salaries__hint" role="status">Loading council pay…</p>
+          : chosen
+            ? current
+              ? <Municipality data={data} place={current} sources={sources} layout={layout} onEmployer={onEmployer} />
+              : <p className="salaries__hint" role="alert">No council pay figures for “{chosen}”.</p>
+            : <div className="council-pay">
+              <div className="salaries__head">
+                <h3 className="salaries__title">Municipalities</h3>
+                <p className="salaries__meta" role="status">{count(shown.length, 'municipality', 'municipalities')}{wanted.length ? ` matching “${query.trim()}”` : ''} · latest figures{places.some((each) => each.offices.some((office) => office.disagree)) ? ' (* sources differ; the highest is shown)' : ''}</p>
+              </div>
+              {!shown.length
+                ? <p className="salaries__hint">No municipality matches “{query.trim()}”.</p>
+                : layout === 'table'
+                  ? <DataTable data={shown} columns={columns} sorting={[{ id: 'name', desc: false }]} label="Municipalities with council pay" />
+                  : <Paged list={shown} size={24} reset={query}>
+                    {(page) => <div className="salaries__grid">{page.map((each) => <MunicipalityCard key={each.name} place={each} onOpen={onOpen} />)}</div>}
+                  </Paged>}
+            </div>}
     </CompanionShell>
   )
 }
