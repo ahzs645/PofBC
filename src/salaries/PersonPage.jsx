@@ -85,6 +85,15 @@ export const PersonPage = ({ chosen, joins = [], joinedElsewhere = [], all, scop
     const before = periods[periods.indexOf(at) - 1]
     return [at, before !== undefined && chosen.years.includes(before) && single(at) && single(before) && payAt(before) > 0 ? percentChange(payAt(before), payAt(at)) : null]
   }))
+  // A payment that more than doubled or fell by more than half from the year before usually has a
+  // reason the record does not give: a part year, severance, a payout or retroactive pay.
+  const unusual = new Set(chosen.years.filter((at) => {
+    const before = periods[periods.indexOf(at) - 1]
+    if (before === undefined || !chosen.years.includes(before) || !single(at) || !single(before)) return false
+    const from = payAt(before)
+    const to = payAt(at)
+    return from > 0 && to > 0 && (to / from > 2 || to / from < 0.5)
+  }))
   const first = points.reduce((low, point) => (!low || point.year < low.year ? point : low), null)
   const last = points.reduce((high, point) => (!high || point.year > high.year ? point : high), null)
   const top = points.reduce((best, point) => (!best || point.pay > best.pay ? point : best), null)
@@ -202,6 +211,7 @@ export const PersonPage = ({ chosen, joins = [], joinedElsewhere = [], all, scop
               <span className="salaries-years__label">
                 {yearLabel(line.at)}
                 {changeAt.get(line.at) && <span className="salaries-years__change">{changeAt.get(line.at)}</span>}
+                {unusual.has(line.at) && <span className="salaries-years__unusual" title="More than double, or less than half, the year before. A part year, severance, a payout or retroactive pay can do this; the record does not say which.">Unusual change</span>}
               </span>
               <span className="salaries-years__records">{line.rows.map((row, at) => recordLine(row, disclosedAs(row), at))}</span>
             </li>

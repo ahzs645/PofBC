@@ -19,6 +19,7 @@ import { count, LAYOUTS, loadJson, Paged, RecordRow, RoleIcon, SalaryPageHeading
 import { DataTable } from './DataTable.jsx'
 import { GrowthTiles, rateColumn } from './Growth.jsx'
 import { peopleOverTime, Trends } from './Trends.jsx'
+import { employerCsv, rankOf, saveText } from './exportCsv.js'
 import { seriesGrowth, stayerRaises, typicalRaise, yearNumber } from './growth.js'
 import { SourceLink } from './DisclosureEvidence.jsx'
 import { filterPositionGroups, matchesRecordQuery } from './viewState.js'
@@ -55,6 +56,20 @@ const POSITION_ORDER = {
  * @param {string|null} props.show   'positions', 'people' or 'everyone'; null for the default.
  * @param {string|null} props.role   A title key: that position's page.
  */
+/** Where an amount typed would fall among this year's records. */
+const RankAmount = ({ pay, label }) => {
+  const [text, setText] = useState('')
+  const amount = Number(text.replace(/[^0-9.]/g, ''))
+  const place = text.trim() ? rankOf(amount, pay) : null
+  return (
+    <label className="salaries__rank">
+      <span className="salaries__line">Where would an amount rank?</span>
+      <input type="text" inputMode="decimal" value={text} placeholder="$95,000" aria-label={`An amount to rank among ${label}`} onChange={(event) => setText(event.target.value)} />
+      {place && <span className="salaries__line" role="status">No. {place.rank.toLocaleString('en-CA')} of {place.of.toLocaleString('en-CA')}: more than {Math.round(place.share * 100)}% of these records{amount <= 75000 ? ' (amounts at or below $75,000 are not usually listed)' : ''}.</span>}
+    </label>
+  )
+}
+
 export const EmployerPage = ({ entry, years, sources, year: wantedYear, show, role, layout = 'cards', back, onYear, onShow, onLayout, onRole, onTitle, onPerson, onOpenGovernment, remember }) => {
   const seen = seenYears(entry)
   const [sourceRows, setRows] = useState(null)
@@ -230,6 +245,17 @@ export const EmployerPage = ({ entry, years, sources, year: wantedYear, show, ro
             <div><dt>Median</dt><dd>{pay.length ? summary(median(pay)) : '—'}</dd></div>
             <div><dt>{named.length ? 'Positions' : 'Highest'}</dt><dd>{named.length ? named.length.toLocaleString('en-CA') : money(Math.max(...pay))}</dd></div>
           </dl>
+        )}
+        {rows && entry.counts[year] > 0 && (
+          <div className="salaries__year-tools">
+            <RankAmount pay={pay} label={`${name}, ${years[year]}`} />
+            <span className="salaries__line">
+              Download as CSV:{' '}
+              <button type="button" className="salaries__link" onClick={() => saveText(employerCsv(people, { employer: name, years, sources }), `${entry.slug}-${years[year].replace('/', '-')}.csv`)}>{years[year]}</button>
+              {' · '}
+              <button type="button" className="salaries__link" onClick={() => saveText(employerCsv(rows, { employer: name, years, sources }), `${entry.slug}-all-years.csv`)}>every year</button>
+            </span>
+          </div>
         )}
       </section>
 
