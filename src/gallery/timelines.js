@@ -708,7 +708,11 @@ const BCLC_SOURCES = {
     'grey #414B56, red #9B1831, orange #E86A10, green #7DBC13; undated'),
   S8: source('BCLC 2025/26 Prince George Community Impact Report [8]', 'https://corporate.bclc.com/content/dam/bclccorporate/reports/community-impact-reports/2026/community-impact-report-2025-26-prince-george.pdf', 'page 1'),
   S9: source('BCLC 2008 Carbon Neutral Action Report [9]', 'https://www2.gov.bc.ca/assets/gov/environment/climate-change/cnar/2008/cc/bc_lottery_corporation.pdf',
-    'page 4, 30 June 2009: new supplies replaced the old only as stock ran out')
+    'page 4, 30 June 2009: new supplies replaced the old only as stock ran out'),
+  S10: source('BCLC Service Plan Update 2009/10–2011/12 [10]', 'https://www.bcbudget.gov.bc.ca/2009_Sept_Update/sp/pdf/agency/bclc.pdf',
+    'September 2009 update: PDF pages 1 and 38 retain original white and full-colour vector artwork'),
+  S11: source('BCLC Annual Service Plan Report 2010/11 [11]', 'https://corporate.bclc.com/content/dam/bclccorporate/reports/annual-reports/2011/bclc-annual-report-1011.pdf',
+    'cover: original white lettering, coloured dots and tagline; PDF created July 2011')
 }
 
 // BC Ferries' sources, from the research package in research/identity/bc-ferries (27 September 2026).
@@ -743,7 +747,16 @@ const WCB_SOURCES = {
   S5: source('Freebie Supply, Worker’s Compensation Board logo [S5]', 'https://freebiesupply.com/logos/workers-compensation-board-logo/',
     'an undated specimen'),
   S6: source('Seeklogo, Worker’s Compensation Board logo no. 153800 [S6]', 'https://seeklogo.com/vector-logo/153800/workers-compensation-board',
-    'an undated specimen')
+    'an undated specimen'),
+  S7: source('Workers’ Compensation Board, 2003 Annual Report and 2004–2006 Service Plan [S7]',
+    'https://www.worksafebc.com/~/media/335158F1D70F4FE68BE299D5CFEDA0B7.ashx',
+    'PDF page 1: distressed WorkSafe wordmark and board name; reporting year 2003, PDF created April 2004'),
+  S8: source('WorkSafeBC, 2004 Annual Report and 2005–2007 Service Plan [S8]',
+    'https://www.worksafebc.com/~/media/D01B2DADAA624A8A83680C1947803D07.ashx',
+    'PDF page 94: black-and-orange wordmark with “Working to make a difference”; reporting year 2004, PDF created September 2005'),
+  S9: source('WorkSafeBC, 2024 Annual Report and 2025–2027 Service Plan [S9]',
+    'https://www.worksafebc.com/~/media/8FBA76F2A2F54B9C92F416B87E4B26AA.ashx',
+    'PDF page 1: black-and-orange wordmark without tagline; reporting year 2024, PDF created May 2025')
 }
 
 // BC Transit's sources, from the research package in research/identity/bc-transit (27 September 2026).
@@ -1040,14 +1053,16 @@ export const COLLECTION_ERAS = {
       years: '2008–by 2022',
       label: 'Lowercase, in red, orange and green',
       note: 'The corporation’s initials in lowercase, with a dot of colour inside the b and each c, launched ' +
-        'with the tagline “playing it right”. New stationery replaced the old only as stock ran out.',
+        'with the tagline “playing it right”. New stationery replaced the old only as stock ran out. ' +
+        'Original colour and white vectors from the 2009 service plan update and 2010/11 annual report ' +
+        'show the older palette, with and without the tagline.',
       applicability: {
         kind: 'documented_adoption',
         years: '2008–by 2022',
         note: 'The new identity was reported on 13 August 2008, and is on the next year’s service plan. ' +
           'The older palette is still on a report of 2022, which is not an end date.'
       },
-      sources: [BCLC_SOURCES.S3, BCLC_SOURCES.S4, BCLC_SOURCES.S9, BCLC_SOURCES.S6, BCLC_SOURCES.S7]
+      sources: [BCLC_SOURCES.S3, BCLC_SOURCES.S4, BCLC_SOURCES.S9, BCLC_SOURCES.S6, BCLC_SOURCES.S7, BCLC_SOURCES.S10, BCLC_SOURCES.S11]
     },
     {
       id: 'bclc-contemporary',
@@ -1173,21 +1188,44 @@ export const COLLECTION_ERAS = {
       sources: [WCB_SOURCES.S2, WCB_SOURCES.S5, WCB_SOURCES.S6]
     },
     {
+      id: 'worksafe-2003',
+      status: 'held',
+      years: '2003 annual report',
+      label: 'The distressed WorkSafe wordmark',
+      note: 'A distressed italic serif “WorkSafe” in white on a dark block, above the board’s full name. ' +
+        'The original outlined artwork comes from the 2003 annual report, whose PDF was created in April ' +
+        '2004. It is an additional dated specimen; no adoption or first-use date is established.',
+      applicability: {
+        kind: 'dated_specimen',
+        years: '2003 annual report',
+        note: '2003 is the reporting year in the publication title. PDF creation in April 2004 does not ' +
+          'establish when the wordmark was introduced or first used.'
+      },
+      seenAt: ['https://www.worksafebc.com/~/media/335158F1D70F4FE68BE299D5CFEDA0B7.ashx'],
+      sources: [WCB_SOURCES.S7]
+    },
+    {
       id: 'worksafebc-orange',
       status: 'held',
-      years: 'by 2026',
+      years: '2004 and 2024 annual reports',
       label: 'WorkSafeBC, in black and orange',
-      note: '“Work” and “Safe” reversed out of black blocks and “BC” out of an orange one. The board took ' +
-        'WorkSafeBC as its everyday name in 2005 and kept its legal name; when this wordmark first ' +
-        'appeared has not been found.',
+      note: '“Work” in white on black, with “Safe” in black and “BC” in white on orange. The 2004 annual ' +
+        'report carries “Working to make a difference”; the 2024 report has no tagline. These original ' +
+        'vectors sit beside the existing reconstruction. The board took WorkSafeBC as its everyday ' +
+        'name in 2005 and kept its legal name; the wordmark is also seen on its official service in 2026.',
       applicability: {
-        kind: 'first_observation',
-        years: 'by 2026',
-        note: 'On an official WorkSafeBC service on 27 September 2026. The name dates from 2005, which ' +
-          'does not date this drawing of it.'
+        kind: 'dated_specimen',
+        years: '2004 and 2024 annual reports',
+        note: 'These are reporting years: the PDFs were created in September 2005 and May 2025 respectively. ' +
+          'They establish dated specimens, not adoption or first use. The operating name’s 2005 date is ' +
+          'recorded separately from the artwork.'
       },
-      seenAt: ['https://asmtclr.online.worksafebc.com/Mobile/css/images/WorkSafeBC-logo.png'],
-      sources: [WCB_SOURCES.S4, WCB_SOURCES.S3]
+      seenAt: [
+        'https://www.worksafebc.com/~/media/D01B2DADAA624A8A83680C1947803D07.ashx',
+        'https://www.worksafebc.com/~/media/8FBA76F2A2F54B9C92F416B87E4B26AA.ashx',
+        'https://asmtclr.online.worksafebc.com/Mobile/css/images/WorkSafeBC-logo.png'
+      ],
+      sources: [WCB_SOURCES.S8, WCB_SOURCES.S9, WCB_SOURCES.S4, WCB_SOURCES.S3]
     }
   ],
 

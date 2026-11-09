@@ -1,0 +1,67 @@
+{
+  "reviewDate": "2026-11-08",
+  "timeZone": "America/Vancouver",
+  "integrationBaseCommit": "648409e4b9f41940607c0c2b8ceddcf59480cc58",
+  "researchBaselineCommit": "658a83af56e4b6ebaf38bb1a69812d6052ce4cc1",
+  "checks": [
+    {
+      "check": "Native extraction reproducibility",
+      "command": "python research/identity/vector-followup-2026-11-08/extract.py --source-dir SOURCE_DIR --check",
+      "result": "passed",
+      "details": "All ten SVGs and source-register.json reproduce byte for byte with the fixed source PDFs and PyMuPDF 1.26.6."
+    },
+    {
+      "check": "Acquisition builder reproducibility",
+      "command": "node scripts/build-collected-marks.mjs",
+      "result": "passed",
+      "details": "Generated collectedData.js matches committed content: 183 bodies, 175 body assets, 18 program specimens."
+    },
+    {
+      "check": "Gap audit reproducibility",
+      "command": "node research/identity/vector-followup-2026-11-08/audit.mjs --check",
+      "result": "passed",
+      "details": "183 = 49 general bodies with original vectors + 26 with other artwork + 103 with no acquired artwork + 5 dedicated collections."
+    },
+    {
+      "check": "Existing focused gallery and timeline tests",
+      "command": "node --test src/gallery/collectedCollections.test.js src/gallery/collections.test.js src/gallery/collectedDisplay.test.js src/gallery/timelines.test.js",
+      "result": "passed",
+      "tests": 23,
+      "failed": 0,
+      "skipped": 0,
+      "details": "Rerun after rebasing onto the integration base."
+    },
+    {
+      "check": "Semantic integration review",
+      "result": "passed",
+      "details": "Every new asset occurs once; all 183 prior acquired assets preserve IDs, files, SHA-256 hashes and source URLs. BCLC originals belong to bclc-2008. WorkSafe entry counts are 0, 2, 1, 3 for 1968, 1983, 2003 and orange groups; the 1968/1983 era records are unchanged. Existing reconstructions remain labelled."
+    },
+    {
+      "check": "Independent source/SVG review",
+      "result": "passed",
+      "details": "Source crops match original geometry, lettering, colours and cropping. Both rotated WorkSafe pages are upright. The 2003 fill/stroke pair is retained. The 2004 tagline and border are complete; its separate website address is excluded."
+    },
+    {
+      "check": "BCLC native-path and background review",
+      "result": "passed",
+      "details": "Selected path attributes exactly match the PDF SVG conversion. White specimens contain the complete logos as native paths above page backgrounds. Missing or surplus image approvals both fail. All SVGs have no raster images, live text, external resources or active content."
+    },
+    {
+      "check": "Change and documentation checks",
+      "result": "passed",
+      "details": "git diff --check, JSON parsing and local Markdown links pass. Published research findings have no absolute workspace paths."
+    }
+  ],
+  "environment": {
+    "node": "24",
+    "pymupdf": "1.26.6",
+    "pillow": "13.0.0",
+    "previewDependencies": "Temporary React 18/fontkit dependencies; no repository dependency or lockfile changes."
+  },
+  "notRun": [
+    "Full production asset build",
+    "Full browser acceptance test"
+  ],
+  "ciPolicy": "Feature commit uses [skip ci] to avoid broad unrelated GitHub Actions workflows. Local results are not represented as CI results.",
+  "reviewScope": "Source extraction, gallery mapping, provenance, chronology and acquisition counts. Negative searches are limited to the files/pages recorded in findings."
+}

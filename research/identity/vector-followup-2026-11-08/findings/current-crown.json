@@ -1,0 +1,397 @@
+{
+  "research_date": "2026-11-08",
+  "research_timezone": "America/Vancouver",
+  "date_note": "The displayed research date is 2026-11-08 in America/Vancouver. Some recorded UTC retrievals fall on 2026-11-09; exact retrieval timestamps and source publication or PDF metadata dates are preserved.",
+  "path_note": "Source and evidence paths beginning current-crown/, historical/, historical-corporate/ or health/ are relative to the reproduction source directory. Prior references beginning research/ are repository-relative. Public source URLs and SHA-256 values identify the originals. Research-stage SVG files and checksums are separate from final published assets in the canonical asset register.",
+  "canonical_asset_register": "research/identity/vector-followup-2026-11-08/source-register.json",
+  "scope": "Current Crown gaps only: BC Railway Company current corporate identity, BC Pavilion Corporation/PavCo, Provincial Rental Housing Corporation if separately attributable. No traced or recreated graphics; no repository edits.",
+  "prior_findings_reviewed": "research/identity/vector-search-2026-10-30/research/current_crown_findings.json",
+  "status_values": [
+    "verified_vector",
+    "raster",
+    "blocked",
+    "unresolved"
+  ],
+  "organizations": [
+    {
+      "id": "bc-pavilion-corporation",
+      "name": "BC Pavilion Corporation / PavCo",
+      "result": "verified_vector",
+      "summary": "Recovered two original six-path variants in official designed publications: full color and white reverse. Prior 2013 annual-report lead is raster.",
+      "target_raster_url": "https://www.bcpavco.com/template/logo.png",
+      "discovery_pages": [
+        "https://www.bcpavco.com/resources/reports/"
+      ],
+      "inspected_sources": [
+        {
+          "url": "https://www.bcpavco.com/pdfs/PavCo%20FY2025-26%20Year%20in%20Review.pdf",
+          "status": "verified_vector",
+          "assessment": "Original full-color PavCo graphic: five magenta letter outlines and blue abstract symbol; exact current identity family, not traced or recreated.",
+          "source_dir_path": "current-crown/pavco-review2025.pdf",
+          "sha256": "ac94ba12f14a7c34d665cac53791d62b11b7a8a74dd71a969b46bf102c446091",
+          "page_count": 20,
+          "pdf_metadata": {
+            "format": "PDF 1.4",
+            "title": "",
+            "author": "",
+            "subject": "",
+            "keywords": "",
+            "creator": "Adobe InDesign 21.5 (Macintosh)",
+            "producer": "Adobe PDF Library 18.0",
+            "creationDate": "D:20260831165106-04'00'",
+            "modDate": "D:20260831165321-04'00'",
+            "trapped": "",
+            "encryption": null
+          },
+          "inspected_pages": [
+            1,
+            20
+          ],
+          "publication_title": "PavCo FY2025/26 Year in Review",
+          "publication_period": "FY2025/26",
+          "publication_date": null,
+          "publication_date_note": "PDF creation metadata records 2026-08-31; no independently confirmed public release day.",
+          "vector_variants": [
+            {
+              "variant": "full-color",
+              "page": 1,
+              "page_index": 0,
+              "drawing_indices": [
+                8,
+                9,
+                10,
+                11,
+                12,
+                13
+              ],
+              "drawing_index_basis": "PyMuPDF Page.get_drawings(), zero-based, original unmodified PDF",
+              "path_count": 6,
+              "tight_crop_points": [
+                48.75049591064453,
+                48.9998779296875,
+                165.66749572753906,
+                98.46639251708984
+              ],
+              "proof_crop_points": [
+                40,
+                40,
+                174,
+                105
+              ],
+              "raster_images_intersecting_logo": 0,
+              "live_text_in_logo": "",
+              "rendered_proof": "current-crown/pavco-review2025-logo-proof.png",
+              "full_page_proof": "current-crown/pavco-review2025-page1.png",
+              "extraction_note": "Select only drawings 8–13; do not include page photography/background. Preserve original path geometry and source colors."
+            }
+          ]
+        },
+        {
+          "url": "https://www.bcpavco.com/pdfs/PavCo-Accessibility-Plan_2023-2026%281%29.pdf",
+          "status": "verified_vector",
+          "assessment": "Original white reverse PavCo graphic in footer of final page; five outlined letters and abstract symbol, not traced or recreated.",
+          "source_dir_path": "current-crown/pavco-accessibility2023.pdf",
+          "sha256": "4d17379bd770a4ae24f67a7711bec238ff59c8d627de169155ff3412b55d910f",
+          "page_count": 38,
+          "pdf_metadata": {
+            "format": "PDF 1.4",
+            "title": "",
+            "author": "",
+            "subject": "",
+            "keywords": "",
+            "creator": "Adobe InDesign 18.1 (Windows)",
+            "producer": "Adobe PDF Library 17.0",
+            "creationDate": "D:20230831163257-07'00'",
+            "modDate": "D:20230831163326-07'00'",
+            "trapped": "",
+            "encryption": null
+          },
+          "inspected_pages": [
+            1,
+            38
+          ],
+          "publication_title": "PavCo Accessibility Plan 2023–2026",
+          "publication_period": "2023–2026",
+          "publication_date": null,
+          "publication_date_note": "PDF creation metadata records 2023-08-31; no independently confirmed public release day.",
+          "vector_variants": [
+            {
+              "variant": "white reverse",
+              "page": 38,
+              "page_index": 37,
+              "drawing_indices": [
+                145,
+                146,
+                147,
+                148,
+                149,
+                150
+              ],
+              "drawing_index_basis": "PyMuPDF Page.get_drawings(), zero-based, original unmodified PDF",
+              "path_count": 6,
+              "tight_crop_points": [
+                195.90060424804688,
+                724.2897338867188,
+                260.8550720214844,
+                752.0068359375
+              ],
+              "proof_crop_points": [
+                190,
+                714,
+                264,
+                756
+              ],
+              "raster_images_intersecting_logo": 0,
+              "live_text_in_logo": "",
+              "rendered_proof": "current-crown/pavco-accessibility2023-logo-proof.png",
+              "full_page_proof": "current-crown/pavco-accessibility2023-page38.png",
+              "extraction_note": "Select only drawings 145–150; dark blue page background and adjacent venue logos are not part of this logo. White paths require a dark proof backdrop."
+            }
+          ]
+        },
+        {
+          "url": "https://www.bcpavco.com/pdfs/PavCo_2013_Annual_Report_FINAL_June_24_2013.pdf",
+          "status": "raster",
+          "assessment": "Cover PavCo mark is a 163×69 bitmap, back-page PavCo mark 121×51. Cover decorative paths do not make the logo vector.",
+          "source_dir_path": "current-crown/pavco-2013-annual.pdf",
+          "sha256": "318ee195517365d54eb45a672a322ff81a1de5ff5f55fec2299fb11d42620af4",
+          "page_count": 69,
+          "pdf_metadata": {
+            "format": "PDF 1.5",
+            "title": "Annual Report 2005",
+            "author": "John Harding",
+            "subject": "",
+            "keywords": "",
+            "creator": "Acrobat PDFMaker 10.0 for Word",
+            "producer": "Adobe PDF Library 10.0",
+            "creationDate": "D:20130624152444-07'00'",
+            "modDate": "D:20130624152517-07'00'",
+            "trapped": "",
+            "encryption": null
+          },
+          "inspected_pages": [
+            1,
+            69
+          ],
+          "rendered_proof": "current-crown/pavco-2013-annual-page1.png"
+        }
+      ]
+    },
+    {
+      "id": "bc-railway-company",
+      "name": "British Columbia Railway Company",
+      "result": "unresolved",
+      "summary": "No original vector for requested current corporate mark found. FIA 2008 confirms matching family but raster; other public reports use different live-text treatments. Historic BC Rail operating logos are excluded.",
+      "target_raster_url": "https://bcrco.com/wp-content/uploads/2024/10/bcrco_logo-1.png",
+      "inspected_sources": [
+        {
+          "url": "https://www.bcrco.com/fia2008.pdf",
+          "status": "raster",
+          "assessment": "Current-family staggered bold italic red/blue four-line corporate mark is an embedded 600×327 bitmap on the cover. Border paths are unrelated.",
+          "source_dir_path": "current-crown/bcrco-fia2008-www.pdf",
+          "sha256": "9eacfa34a320ea8167161e77ae1e389cd5225a7737a152badaeae3f41090f92e",
+          "page_count": 26,
+          "pdf_metadata": {
+            "format": "PDF 1.6",
+            "title": " ",
+            "author": "Shelley Westerhout",
+            "subject": "",
+            "keywords": "",
+            "creator": "Adobe Acrobat Pro 9.0.0",
+            "producer": "Adobe Acrobat Pro 9.0.0",
+            "creationDate": "D:20090624083720-07'00'",
+            "modDate": "D:20090624083720-07'00'",
+            "trapped": "",
+            "encryption": null
+          },
+          "inspected_pages": [
+            1,
+            26
+          ],
+          "publication_title": "Statement of Financial Information, fiscal year ended December 31, 2008",
+          "logo_page": 1,
+          "logo_image_dimensions": [
+            600,
+            327
+          ],
+          "logo_image_bbox_points": [
+            201.59999084472656,
+            178.8000030517578,
+            410.15997314453125,
+            292.67999267578125
+          ],
+          "rendered_proof": "current-crown/bcrco-fia2008-www-logo-proof.png",
+          "full_page_proof": "current-crown/bcrco-fia2008-www-page1.png"
+        },
+        {
+          "url": "https://www.bcrco.com/2009report.pdf",
+          "status": "unresolved",
+          "assessment": "Raster-free InDesign cover has staggered corporate name as live embedded Eurostile-Demi text. Rendered shape, weight, larger initials and spacing differ from requested current bold italic outlined/shadowed mark; not promoted as target vector.",
+          "source_dir_path": "current-crown/bcrco-annual2009.pdf",
+          "sha256": "c576a7eb83c62369f275aa9dc53d4245b9eaf9f3e711481eb90ccedfbe61a57f",
+          "page_count": 39,
+          "pdf_metadata": {
+            "format": "PDF 1.4",
+            "title": "",
+            "author": "",
+            "subject": "",
+            "keywords": "",
+            "creator": "Adobe InDesign CS3 (5.0.4)",
+            "producer": "Adobe PDF Library 8.0",
+            "creationDate": "D:20100524090155-07'00'",
+            "modDate": "D:20100524090203-07'00'",
+            "trapped": "",
+            "encryption": null
+          },
+          "inspected_pages": [
+            1,
+            39
+          ],
+          "rendered_proof": "current-crown/bcrco-annual2009-page1.png"
+        },
+        {
+          "url": "https://bcbudget.gov.bc.ca/2006/sp/crownagency/bcrc.pdf",
+          "status": "unresolved",
+          "assessment": "Cover uses staggered red-initial/blue serif live text, upright with more leading. Not the requested current graphic.",
+          "source_dir_path": "current-crown/bcrco-sp2006.pdf",
+          "sha256": "cc7fead21b1cc9e719d21bcba2e2384f0affabb62c78dc5120a49a72fcf32e3a",
+          "page_count": 15,
+          "pdf_metadata": {
+            "format": "PDF 1.3",
+            "title": "2006/07 - 2008/09 SERVICE PLAN",
+            "author": "BRITISH COLUMBIA RAILWAY COMPANY",
+            "subject": "Budget 2006",
+            "keywords": "",
+            "creator": "Acrobat PDFMaker 6.0 for Word",
+            "producer": "Acrobat Distiller 6.0 (Windows)",
+            "creationDate": "D:20060131161938-08'00'",
+            "modDate": "D:20060219133820-08'00'",
+            "trapped": "",
+            "encryption": "Standard V1 R2 40-bit RC4"
+          },
+          "inspected_pages": [
+            1,
+            15
+          ],
+          "rendered_proof": "current-crown/bcrco-sp2006-page1.png"
+        },
+        {
+          "url": "https://www.bcbudget.gov.bc.ca/2009/sp/pdf/agency/bcrc.pdf",
+          "status": "unresolved",
+          "assessment": "Cover corporate name uses a different serif italic live-text treatment and spacing. Province emblem raster is not a BCRC logo. Not the requested current graphic.",
+          "source_dir_path": "current-crown/bcrco-sp2009.pdf",
+          "sha256": "77db90d111cd652189ba673e2fafeee669784021d6fe0aaccda3f915455682ff",
+          "page_count": 26,
+          "pdf_metadata": {
+            "format": "PDF 1.6",
+            "title": "Crown Agency Service Plans",
+            "author": "",
+            "subject": "",
+            "keywords": "",
+            "creator": "Acrobat PDFMaker 9.0 for Word",
+            "producer": "Acrobat Distiller 8.1.0 (Windows)",
+            "creationDate": "D:20090205180012-08'00'",
+            "modDate": "D:20090214125831-08'00'",
+            "trapped": "",
+            "encryption": "Standard V2 R3 128-bit RC4"
+          },
+          "inspected_pages": [
+            1,
+            26
+          ],
+          "rendered_proof": "current-crown/bcrco-sp2009-page1.png"
+        },
+        {
+          "url": "https://www.bcrco.com/22fire.pdf",
+          "status": "raster",
+          "assessment": "Cover logo belongs to BCR Properties, not current BCRC corporate identity, and is an 897×238 bitmap.",
+          "source_dir_path": "current-crown/bcrco-22fire.pdf",
+          "sha256": "6cb76aadd4ee42453c186d410d2c6ab142f3dacdae0b5a051d31b5c97faf4ca8",
+          "page_count": 23,
+          "pdf_metadata": {
+            "format": "PDF 1.7",
+            "title": "Fire Prevention Plan",
+            "author": "Union Pacific Railroad",
+            "subject": "Revised Aug. 10, 2016",
+            "keywords": "",
+            "creator": "Microsoft® Word 2019",
+            "producer": "Microsoft® Word 2019",
+            "creationDate": "D:20220624092743-07'00'",
+            "modDate": "D:20220624092743-07'00'",
+            "trapped": "",
+            "encryption": null
+          },
+          "inspected_pages": [
+            1,
+            23
+          ],
+          "rendered_proof": "current-crown/bcrco-22fire-page1.png"
+        },
+        {
+          "url": "https://bcrco.com/fia2008.pdf",
+          "status": "blocked",
+          "assessment": "Bare host 503; same public PDF obtained successfully from canonical www host and inspected above."
+        },
+        {
+          "url": "https://bcrco.com/22fire.pdf",
+          "status": "blocked",
+          "assessment": "Bare host 503; same public PDF obtained from www host and inspected above."
+        },
+        {
+          "url": "https://bcrco.com/",
+          "status": "blocked",
+          "assessment": "Site timed out through web open."
+        },
+        {
+          "url": "https://www.bcrco.com/",
+          "status": "blocked",
+          "assessment": "Direct HTTP 503 for homepage, while named PDF paths succeeded."
+        },
+        {
+          "url": "https://www2.gov.bc.ca/assets/gov/british-columbians-our-governments/government-finances/public-accounts/2008-09/sup-e/bc-railway-company-fs-2008-09.pdf",
+          "status": "blocked",
+          "assessment": "Direct 503 and web 502; no local content inspection."
+        },
+        {
+          "url": "https://www2.gov.bc.ca/gov/content/transportation/transportation-reports-and-reference/ministry-reporting/bctfa/british-columbia-railway-company",
+          "status": "unresolved",
+          "assessment": "Official public reference page found; no new native identity asset discovered."
+        }
+      ],
+      "searches": [
+        "site:bcrco.com filetype:pdf \"British\" \"Company\"",
+        "\"British Columbia Railway Company\" logo filetype:svg",
+        "\"British Columbia Railway Company\" \"Annual Report\" \"2010\"",
+        "site:bcrco.com filetype:pdf \"logo\"",
+        "\"British Columbia Railway Company\" logo vector -site:commons.wikimedia.org -site:wikipedia.org"
+      ]
+    },
+    {
+      "id": "provincial-rental-housing-corporation",
+      "name": "Provincial Rental Housing Corporation",
+      "result": "unresolved",
+      "summary": "No separately attributable PRHC graphic discovered. Do not substitute the BC Housing logo.",
+      "inspected_sources": [
+        {
+          "url": "https://www.bchousing.org/about/our-organization",
+          "status": "unresolved",
+          "assessment": "Official organization source establishes BC Housing administration of PRHC, but no separately attributable graphic was found."
+        },
+        {
+          "url": "https://www.bchousing.org/publications/Provincial-Rental-Housing-Corporation-Financial-Statement-2023.pdf",
+          "status": "blocked",
+          "assessment": "Direct download 403. Web tool recognized 22-page PDF but did not provide inspectable PDF bytes or image output to this agent. No structural or visual logo conclusion made."
+        }
+      ]
+    }
+  ],
+  "lane_summary": {
+    "target_rows": 3,
+    "bodies_with_verified_original_vectors": 1,
+    "verified_original_vector_variants": 2,
+    "new_pdf_binaries": 8,
+    "source_retrieval_failure_records": 6,
+    "unresolved_target_rows": 2,
+    "scope_note": "Three current corporate-identity targets. The eight PDF downloads were inspected on the pages listed in their records, not comprehensively page by page. Blocked URL records include bare-host PDF attempts subsequently retrieved from the canonical www host."
+  }
+}
