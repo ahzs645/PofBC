@@ -1,4 +1,4 @@
-.council-pay { color: var(--ink); max-width: 1240px; margin-inline: auto; padding-block: 16px 48px; }
+.council-pay { display: grid; gap: 14px; color: var(--ink); padding-block: 0 48px; }
 .council-pay nav > .field { width: fit-content; max-width: 100%; }
 .council-pay .segmented { flex-wrap: wrap; }
 .council-pay__header { max-width: 780px; margin-block: 30px 22px; }
@@ -10,16 +10,24 @@
 .council-pay__stats dt { color: var(--ink-muted); font-size: 12px; margin-bottom: 8px; }
 .council-pay__stats dd { margin: 0; font-size: 28px; font-weight: 600; font-variant-numeric: tabular-nums; }
 .council-pay__stats .council-pay__date { font-size: 19px; padding-top: 7px; }
-.council-pay__definition { max-width: 880px; line-height: 1.65; font-size: 14px; color: var(--ink-muted); margin-block: 14px 22px; }
-.council-pay__filters { display: grid; grid-template-columns: 1.8fr 1.2fr .8fr .8fr; gap: 12px; align-items: end; }
+.council-pay__definition { max-width: 880px; line-height: 1.6; margin: 0; }
+.council-pay__filters { display: grid; grid-template-columns: minmax(0, 1.4fr) minmax(0, .8fr) auto; gap: 12px; align-items: end; }
+.council-pay__actions { display: flex; gap: 8px; flex-wrap: wrap; }
+.salaries__card--static { cursor: default; }
+.salaries__card--static:hover { background: var(--surface); }
+.council-pay__card { align-items: start; }
+.council-pay__card-source { margin-top: 6px; font-size: 13px; }
+.council-pay__card-source summary { cursor: pointer; color: var(--ink-muted); }
+.council-pay__card-source .council-pay__evidence { margin-top: 6px; line-height: 1.5; }
+.council-pay__card-source .council-pay__evidence p { margin: 4px 0; }
 .council-pay__filter { display: flex; flex-direction: column; gap: 7px; min-width: 0; font-size: 12px; color: var(--ink-muted); }
 .council-pay__filter input, .council-pay__filter select { box-sizing: border-box; width: 100%; min-width: 0; min-height: 44px; border: 1px solid var(--mid); border-radius: 8px; padding: 10px 12px; color: var(--ink); background: var(--surface); font: inherit; font-size: 14px; }
-.council-pay__coverage { border-left: 3px solid var(--sun); padding: 2px 16px; margin-block: 22px; font-size: 13px; line-height: 1.65; }
+.council-pay__coverage { border-left: 3px solid var(--sun); padding: 2px 16px; margin: 0; font-size: 13px; line-height: 1.65; }
 .council-pay__coverage p { margin-block: 6px; }
 .council-pay__results-bar { display: flex; justify-content: space-between; align-items: center; gap: 12px; margin-block: 18px; font-size: 13px; }
 .council-pay__results-bar > div { display: flex; gap: 8px; flex-wrap: wrap; }
-.council-pay button:not(.segmented button) { min-height: 40px; padding: 8px 12px; border: 1px solid var(--mid); border-radius: 8px; background: var(--surface); color: var(--ink); font: inherit; cursor: pointer; }
-.council-pay button:disabled { opacity: .5; cursor: default; }
+.council-pay button:not(.segmented button):not(.salaries__chips button):not(.salaries__link) { min-height: 40px; padding: 8px 12px; border: 1px solid var(--mid); border-radius: 8px; background: var(--surface); color: var(--ink); font: inherit; cursor: pointer; }
+.council-pay .council-pay__actions button:disabled { opacity: .5; cursor: default; }
 .council-pay a { color: inherit; text-underline-offset: 3px; overflow-wrap: anywhere; }
 .council-pay :is(a, button, select, input, summary):focus-visible { outline: 2px solid var(--focus); outline-offset: 3px; }
 .council-pay__table { width: 100%; border-collapse: collapse; table-layout: fixed; font-size: 13px; line-height: 1.6; }
@@ -53,7 +61,7 @@
 @media (max-width: 760px) {
   .council-pay__stats { grid-template-columns: repeat(2, 1fr); }
   .council-pay__filters { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-  .council-pay__search { grid-column: 1 / -1; }
+  .council-pay__actions { grid-column: 1 / -1; }
   .council-pay__results-bar { align-items: flex-start; flex-direction: column; }
   .council-pay__table, .council-pay__table tbody { display: block; }
   .council-pay__table caption { display: block; }

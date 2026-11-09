@@ -101,6 +101,10 @@ export const SalariesView = ({ onOpenGovernment }) => {
       <CouncilPayView
         place={navigation.place}
         setPlace={navigation.setPlace}
+        onEmployer={(slug) => {
+          navigation.go({ ...navigation.place, browse: 'employers', q: '', person: null, personAt: null, employer: slug, employerYear: null, role: null, title: null, show: null }, 'Council pay')
+          toTop()
+        }}
         onBrowse={(browse) => {
           if (browse === 'council') return
           navigation.go({ ...navigation.place, browse, q: '', person: null, personAt: null, employer: null, employerYear: null, role: null, title: null, show: null }, 'Council pay')

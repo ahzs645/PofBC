@@ -2,7 +2,7 @@ import { useEffect, useId, useRef, useState } from 'react'
 import { PeriodRange, rangeLabel } from './parts.jsx'
 
 /** One search state, visible on every salary page and also in the mobile filter sheet. */
-export const SalarySearchField = ({ value, onChange, labelled = false, label = 'Search', placeholder }) => {
+export const SalarySearchField = ({ value, onChange, labelled = false, label = 'Search', placeholder, help: helpText, ariaLabel = 'Search a name, an employer or a position' }) => {
   const id = useId()
   const help = `${id}-help`
   return (
@@ -14,14 +14,14 @@ export const SalarySearchField = ({ value, onChange, labelled = false, label = '
           type="search"
           value={value}
           placeholder={placeholder ?? (labelled ? 'First name, surname, employer or position' : 'Any part of a name, an employer or a position')}
-          aria-label="Search a name, an employer or a position"
+          aria-label={ariaLabel}
           aria-describedby={help}
           onChange={(event) => onChange(event.target.value)}
         />
         <span className="salaries__tip">
-          <button type="button" className="salaries__tip-button" aria-label="How names are searched" aria-describedby={help}>i</button>
+          <button type="button" className="salaries__tip-button" aria-label={helpText ? 'How this search works' : 'How names are searched'} aria-describedby={help}>i</button>
           <span role="tooltip" id={help} className="salaries__tip-text">
-            Search any part of a name, in any order, such as “Milad” or “Milad Fathi”. Partial words work too. Use a comma for a precise surname-first search, as in “Van der Meer, J”.
+            {helpText ?? 'Search any part of a name, in any order, such as “Milad” or “Milad Fathi”. Partial words work too. Use a comma for a precise surname-first search, as in “Van der Meer, J”.'}
           </span>
         </span>
       </span>
