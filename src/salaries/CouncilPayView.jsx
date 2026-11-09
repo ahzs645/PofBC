@@ -32,7 +32,8 @@ const MunicipalityCard = ({ place, onOpen }) => (
     <span className="salaries__text">
       <span className="salaries__name">{place.name}</span>
       {place.offices.length > 0 && <span className="salaries__line">{latestLine(place)}</span>}
-      {(place.first !== place.last || place.payments > 0) && <span className="salaries__line">{[place.first !== place.last && `${place.first}–${place.last}`, place.payments > 0 && count(place.payments, 'named payment', 'named payments')].filter(Boolean).join(' · ')}</span>}
+      {/* Every card says how many years it has, so one with a single year does not look incomplete. */}
+      <span className="salaries__line">{[place.years.length === 1 ? '1 year' : `${place.years.length} years, ${place.first}–${place.last}`, place.payments > 0 && count(place.payments, 'named payment', 'named payments')].filter(Boolean).join(' · ')}</span>
     </span>
     <span className="salaries__aside">{place.offices[0]?.year ?? place.last}<span className="salaries__line">latest</span></span>
   </button>
