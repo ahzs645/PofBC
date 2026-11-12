@@ -16,6 +16,7 @@ const register = read('research/identity/vector-search-2026-10-30/source-registe
 const ticorp = read('research/identity/ticorp-vector-2026-11-08/source-register.json')
 const followup = read('research/identity/vector-followup-2026-11-08/source-register.json')
 const historical = read('research/identity/historical-vector-followup-2026-10-30/source-register.json')
+const innovate = read('research/identity/innovate-bc-vector-2026-11-12/source-register.json')
 
 const checked = (asset) => {
   if (!/^identity-collected\/[a-z0-9._/-]+$/i.test(asset.file) || asset.file.includes('..')) {
@@ -103,9 +104,10 @@ const SUPERSEDED = {
   'source-bc-pavilion-corporation-pavco-png': 'vector-pavco-2025-26-colour-source-vector',
   'source-forest-enhancement-society-fesbc-horizontal-png': 'source-forest-enhancement-society-fesbc-horizontal-eps',
   'source-forest-enhancement-society-fesbc-vertical-png': 'source-forest-enhancement-society-fesbc-vertical-eps',
-  'source-innovate-bc-innovate-bc-teal-png': 'source-innovate-bc-innovate-bc-white-eps',
-  // Two copies of the same wordmark, neither vector: the larger is kept.
-  'source-innovate-bc-innovate-bc-logo-png': 'source-innovate-bc-innovate-bc-wordmark-png',
+  'source-innovate-bc-innovate-bc-teal-png': 'innovate-bc-2024-colour',
+  // The wordmark alone, twice; the logo's vector carries it.
+  'source-innovate-bc-innovate-bc-logo-png': 'innovate-bc-2024-colour',
+  'source-innovate-bc-innovate-bc-wordmark-png': 'innovate-bc-2024-colour',
   'source-bc-family-maintenance-agency-bc-family-maintenance-agency-png': 'vector-bcfma-2021-source-vector',
   'source-inbc-inbc-print-png': 'source-inbc-inbc-svg',
   'source-bc-council-for-international-education-bccie-png': 'vector-bccie-2022-source-vector',
@@ -145,7 +147,8 @@ const VARIANT_OF = {
   'vector-fnha-logo-white': 'vector-fnha-logo-colour',
   'source-first-nations-health-authority-fnha-white-png': 'source-first-nations-health-authority-fnha-horizontal-png',
   'vector-forest-renewal-bc-1999-black-source-vector': 'vector-forest-renewal-bc-2000-colour-source-vector',
-  'historical-capital-health-region-2000-dark-white': 'historical-capital-health-region-2000-dark-grey'
+  'historical-capital-health-region-2000-dark-white': 'historical-capital-health-region-2000-dark-grey',
+  'source-innovate-bc-innovate-bc-white-eps': 'innovate-bc-2024-colour'
 }
 
 // What each version is called inside its design's entry.
@@ -169,7 +172,9 @@ const VERSION_LABELS = {
   'vector-forest-renewal-bc-2000-colour-source-vector': 'Full colour',
   'vector-forest-renewal-bc-1999-black-source-vector': 'Black',
   'historical-capital-health-region-2000-dark-grey': 'Dark and grey',
-  'historical-capital-health-region-2000-dark-white': 'Dark and white'
+  'historical-capital-health-region-2000-dark-white': 'Dark and white',
+  'innovate-bc-2024-colour': 'Full colour',
+  'source-innovate-bc-innovate-bc-white-eps': 'White'
 }
 
 // Shorter accounts where a body's or file's own record is about a file no longer shown.
@@ -183,7 +188,7 @@ const BODY_NOTES = {
   'knowledge-network': 'One design, in full colour and with white lettering, as vector artwork from the official brand kit.',
   'bc-pavilion-corporation': 'One design in full colour and in white, both original vector artwork from PavCo’s own publications.',
   'forest-enhancement-society': 'The horizontal and vertical logos from the official 2026 logo kit, as vector artwork, and the 10th-anniversary logo.',
-  'innovate-bc': 'The stacked logo as vector artwork from the official brand kit, and the wordmark alone as published images.',
+  'innovate-bc': 'One logo, the disc with its i over “innovate BC”: in full colour from the 2024/2025 Impact Report (vector, with the report’s star-trail photograph in the disc), and in white as vector artwork from the official brand kit.',
   'bc-family-maintenance-agency': 'The logo as original vector artwork from the 2020/21 annual report.',
   'inbc': 'The logo as vector artwork from the official website.',
   'bc-council-for-international-education': 'The logo as original vector artwork from the 2022–2025 strategic plan.',
@@ -256,6 +261,15 @@ for (const entry of followup.assets) {
 // Historical specimens use inventory-shaped records; detailed extraction evidence stays in
 // their source register rather than in the gallery bundle. They must name an inventory body.
 const bodyIds = new Set(inventory.bodies.map((body) => body.id))
+for (const { bodyId, verification, ...asset } of innovate.assets) {
+  if (!bodyIds.has(bodyId)) throw new Error(`Unknown body: ${bodyId}`)
+  // Vector paths over the report's own photograph, so not pure vector, and recorded as such.
+  if (asset.isVector || verification?.textElements !== 0 || verification.externalResources?.length !== 0) {
+    throw new Error(`Unexpected record for ${asset.id}`)
+  }
+  if (!additions.has(bodyId)) additions.set(bodyId, [])
+  additions.get(bodyId).push(checked({ ...asset, search: 'innovate-bc-vector-2026-11-12' }))
+}
 for (const { bodyId, verification, ...asset } of historical.assets) {
   if (!bodyIds.has(bodyId)) throw new Error(`Unknown historical body: ${bodyId}`)
   if (asset.isVector && (!verification?.genuineVectorVerified || verification.embeddedImages !== 0 || verification.textElements !== 0 || verification.externalResources?.length !== 0)) {

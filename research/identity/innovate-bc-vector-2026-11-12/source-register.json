@@ -1,0 +1,49 @@
+{
+  "researchDate": "2026-11-12",
+  "summary": "Innovate BC's stacked logo from the cover of its 2024/2025 Impact Report: the wordmark and the white i as the PDF's own vector paths, over the report's star-trail photograph clipped to its circle, kept as the logo's texture.",
+  "source": {
+    "title": "2024 / 2025 Impact Report",
+    "url": "https://www.innovatebc.ca/hubfs/Impact-Report_2024-2025_FINAL-PORTRAIT-1.pdf",
+    "sha256": "8858c0093a0cd93a13f193d1bdd42d0191f61e000a627f0c8309b6b1f86d6ed4",
+    "page": 1
+  },
+  "alsoChecked": [
+    {
+      "title": "2022–2023 Impact Report",
+      "url": "https://www.innovatebc.ca/hubfs/2023%20Impact%20Report.pdf",
+      "finding": "The logo is an embedded image on the cover (536 × 429) and on the back cover (747 × 598, white on orange); no vector paths."
+    }
+  ],
+  "assets": [
+    {
+      "bodyId": "innovate-bc",
+      "id": "innovate-bc-2024-colour",
+      "label": "Innovate BC — Full colour, 2024/2025 Impact Report",
+      "file": "identity-collected/innovate-bc/innovate-bc-2024-colour.svg",
+      "format": "svg",
+      "isVector": false,
+      "supplied": false,
+      "reconstruction": false,
+      "publisher": "Innovate BC",
+      "sourcePage": "https://www.innovatebc.ca/hubfs/Impact-Report_2024-2025_FINAL-PORTRAIT-1.pdf",
+      "sourceUrl": "https://www.innovatebc.ca/hubfs/Impact-Report_2024-2025_FINAL-PORTRAIT-1.pdf",
+      "sourceLocator": "PDF page 1, lower left",
+      "sourceFile": "2024 / 2025 Impact Report",
+      "sourceDate": "2024/25",
+      "observedDate": "2026-11-12",
+      "dateNote": "The report's year, not an adoption date.",
+      "evidenceType": "native-pdf-vector-extraction-with-embedded-image",
+      "notes": "The disc with the white i, over “innovate BC” with “BC” in teal. The wordmark and the i are the report's own vector paths; the disc is the report's star-trail photograph, kept as the logo's texture and clipped to the report's own circle.",
+      "fidelityNote": "The wordmark, the i and the disc's circle are the PDF's own paths and colours, extracted with PyMuPDF 1.26.6 (research/identity/innovate-bc-vector-2026-11-12/extract.py). The disc's photograph (252 × 252) is the report's own, converted from CMYK to RGB by MuPDF and embedded as a JPEG at quality 92, placed where the cover places it.",
+      "sha256": "2bc8961ba81e256761669a577aa0db40120b0f6545a0d908f4d38e2572ac2290",
+      "bytes": 49326,
+      "darkBackground": false,
+      "verification": {
+        "pathsVerified": true,
+        "embeddedImages": 1,
+        "textElements": 0,
+        "externalResources": []
+      }
+    }
+  ]
+}

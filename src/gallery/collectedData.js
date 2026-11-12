@@ -1474,35 +1474,8 @@ export const COLLECTED_BODIES = [
     "current": true,
     "status": "asset-collected",
     "observedDate": "2026-10-22",
-    "notes": "The stacked logo as vector artwork from the official brand kit, and the wordmark alone as published images.",
+    "notes": "One logo, the disc with its i over “innovate BC”: in full colour from the 2024/2025 Impact Report (vector, with the report’s star-trail photograph in the disc), and in white as vector artwork from the official brand kit.",
     "assets": [
-      {
-        "id": "source-innovate-bc-innovate-bc-wordmark-png",
-        "label": "Innovate BC — innovate bc wordmark",
-        "file": "identity-collected/innovate-bc/innovate-bc-wordmark.png",
-        "format": "png",
-        "isVector": false,
-        "supplied": false,
-        "reconstruction": false,
-        "publisher": "Innovate BC",
-        "sourcePage": "https://www.innovatebc.ca/media-kit",
-        "sourceUrl": "https://3044422.fs1.hubspotusercontent-na1.net/hubfs/3044422/Website%20Assets/Innovate%20BC%20Logos.zip",
-        "sourceLocator": null,
-        "sourceFile": null,
-        "sourceDate": null,
-        "observedDate": "2026-10-22",
-        "evidenceType": "official-archive-member",
-        "notes": "Original file extracted unchanged from official logo kit.",
-        "fidelityNote": "Original published drawing or image recovered from the cited source. Method: Original file extracted unchanged from official logo kit.",
-        "sha256": "8f8ee62457ea0f602c0afee0e448492e7882cb6d57deeb2807a6f535df9050e5",
-        "bytes": 11536,
-        "darkBackground": false,
-        "extraction": {
-          "vector_type": "raster"
-        },
-        "previewWidth": 1067,
-        "previewHeight": 152
-      },
       {
         "id": "source-innovate-bc-innovate-bc-white-eps",
         "label": "Innovate BC — innovate bc white",
@@ -1529,7 +1502,34 @@ export const COLLECTED_BODIES = [
         },
         "preview": "identity-collected/innovate-bc/innovate-bc-white-eps-preview.png",
         "previewWidth": 576,
-        "previewHeight": 461
+        "previewHeight": 461,
+        "versionLabel": "White",
+        "variantOf": "innovate-bc-2024-colour"
+      },
+      {
+        "id": "innovate-bc-2024-colour",
+        "label": "Innovate BC — Full colour, 2024/2025 Impact Report",
+        "file": "identity-collected/innovate-bc/innovate-bc-2024-colour.svg",
+        "format": "svg",
+        "isVector": false,
+        "supplied": false,
+        "reconstruction": false,
+        "publisher": "Innovate BC",
+        "sourcePage": "https://www.innovatebc.ca/hubfs/Impact-Report_2024-2025_FINAL-PORTRAIT-1.pdf",
+        "sourceUrl": "https://www.innovatebc.ca/hubfs/Impact-Report_2024-2025_FINAL-PORTRAIT-1.pdf",
+        "sourceLocator": "PDF page 1, lower left",
+        "sourceFile": "2024 / 2025 Impact Report",
+        "sourceDate": "2024/25",
+        "observedDate": "2026-11-12",
+        "dateNote": "The report's year, not an adoption date.",
+        "evidenceType": "native-pdf-vector-extraction-with-embedded-image",
+        "notes": "The disc with the white i, over “innovate BC” with “BC” in teal. The wordmark and the i are the report's own vector paths; the disc is the report's star-trail photograph, kept as the logo's texture and clipped to the report's own circle.",
+        "fidelityNote": "The wordmark, the i and the disc's circle are the PDF's own paths and colours, extracted with PyMuPDF 1.26.6 (research/identity/innovate-bc-vector-2026-11-12/extract.py). The disc's photograph (252 × 252) is the report's own, converted from CMYK to RGB by MuPDF and embedded as a JPEG at quality 92, placed where the cover places it.",
+        "sha256": "2bc8961ba81e256761669a577aa0db40120b0f6545a0d908f4d38e2572ac2290",
+        "bytes": 49326,
+        "darkBackground": false,
+        "search": "innovate-bc-vector-2026-11-12",
+        "versionLabel": "Full colour"
       }
     ]
   },
