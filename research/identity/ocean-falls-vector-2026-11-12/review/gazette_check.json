@@ -1,0 +1,98 @@
+{
+  "model_path": "verification/OFC_source_aligned_4x.png",
+  "source_path": "reference/OFC_1977_Gazette_logo_890x310.png",
+  "model_source_canvas": [
+    747,
+    341
+  ],
+  "gazette_canvas": [
+    890,
+    310
+  ],
+  "method": "one global six-parameter affine, fitted symmetrically to source and model edges with robust least-squares; no per-letter alignment or deformation",
+  "source_preprocessing_for_fit": "Gaussian sigma 0.8 px, threshold128, keep three main black components, fill white speckles smaller than20px; raw source retained for separate IoU",
+  "model_bbox": [
+    33,
+    40,
+    704,
+    283
+  ],
+  "gazette_clean_bbox": [
+    36,
+    11,
+    845,
+    299
+  ],
+  "initial_bbox_affine": [
+    1.2056631892697467,
+    0.0,
+    -3.7868852459016438,
+    0.0,
+    1.1851851851851851,
+    -36.407407407407405
+  ],
+  "affine_model_to_gazette": [
+    [
+      1.2021479393421122,
+      -0.01671885221765089,
+      4.033730571737267
+    ],
+    [
+      0.008805710096352459,
+      1.2084726720498198,
+      -46.132649601349456
+    ],
+    [
+      0,
+      0,
+      1
+    ]
+  ],
+  "iou_raw_threshold128": 0.9602231416976218,
+  "iou_denoised_threshold128": 0.9602267471821774,
+  "edge_abs_median_px": 1.5772937268104756,
+  "edge_abs_mean_px": 1.9819134943734513,
+  "edge_abs_p95_px": 5.511325979374657,
+  "optimization_success": true,
+  "nfev": 23,
+  "model_component_bounds_O_F_C": [
+    [
+      39,
+      12,
+      449,
+      298
+    ],
+    [
+      328,
+      6,
+      850,
+      296
+    ],
+    [
+      477,
+      79,
+      809,
+      295
+    ]
+  ],
+  "gazette_component_bounds_O_F_C": [
+    [
+      36,
+      11,
+      452,
+      299
+    ],
+    [
+      329,
+      11,
+      845,
+      295
+    ],
+    [
+      475,
+      76,
+      809,
+      295
+    ]
+  ]
+}

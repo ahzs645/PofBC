@@ -3350,29 +3350,50 @@ export const COLLECTED_BODIES = [
     "notes": "OFC newsprint trademark artwork filed in 1976",
     "assets": [
       {
-        "id": "source-ocean-falls-corporation-ocean-falls-ofc-trademark-png",
-        "label": "OFC newsprint trademark artwork filed in 1976",
-        "file": "identity-collected/ocean-falls-corporation/ocean-falls-ofc-trademark.png",
-        "format": "png",
-        "isVector": false,
-        "supplied": false,
-        "reconstruction": false,
-        "publisher": "Justia reproduction of United States trademark record",
-        "sourcePage": "https://trademarks.justia.com/730/80/ofc-73080960.html",
-        "sourceUrl": "https://trademarks.justia.com/media/image.php?serial=73080960",
-        "sourceLocator": null,
+        "id": "ocean-falls-ofc-vector",
+        "label": "Ocean Falls Corporation — OFC trademark",
+        "file": "identity-collected/ocean-falls-corporation/ocean-falls-ofc.svg",
+        "format": "svg",
+        "isVector": true,
+        "supplied": true,
+        "reconstruction": true,
+        "publisher": "Canadian Intellectual Property Office (source artwork)",
+        "sourcePage": "https://ised-isde.canada.ca/cipo/trademark-search/0390863?lang=eng",
+        "sourceUrl": "https://ised-isde.canada.ca/cipo/trademark-search/media/390863.png",
+        "sourceLocator": "CIPO application 0390863, OFC DESIGN; USPTO Official Gazette, 31 May 1977, p. TM 241",
         "sourceFile": null,
-        "sourceDate": "1976-03-22",
-        "observedDate": "2026-10-22",
-        "evidenceType": "trademark-record-artwork",
-        "notes": "Stylized OFC mark, serial 73080960, owned by Ocean Falls Corporation. Date is the application filing date, not a proven first-use or end date. Registered 23 August 1977 as 1071831. Raster record artwork.",
-        "fidelityNote": "Original published drawing or image recovered from the cited source. Method: Stylized OFC mark, serial 73080960, owned by Ocean Falls Corporation. Date is the application filing date, not a proven first-use or end date. Registered 23 August 1977 as 1071831. Raster record artwork.",
-        "sha256": "3001d1ab305d3e65d1ad1ae09bce0506c3d0061320ef292e9999d67c20e18fc4",
-        "bytes": 3242,
+        "sourceDate": null,
+        "observedDate": "2026-11-12",
+        "evidenceType": "supplied-vector-reconstruction",
+        "notes": "The letters OFC in a heavy forward slant, the corporation’s newsprint trademark. It was filed in the United States in March 1976 and registered in August 1977, and also filed in Canada.",
+        "fidelityNote": "A supplied vector reconstruction, not original artwork: three hand-built letter paths sheared to a measured slant, drawn after the CIPO artwork and checked against the 1977 Gazette; no automatic tracing. Black follows the monochrome trademark artwork.",
+        "sha256": "38e6dce6217eb2ab1af68c4dbe4af5dee900045edfd10fb30429c0569fb92d3b",
+        "bytes": 1970,
         "darkBackground": false,
-        "dateNote": "A dated sighting is not a complete usage period.",
-        "previewWidth": 324,
-        "previewHeight": 140
+        "downloads": [
+          {
+            "label": "Download white version (SVG)",
+            "file": "identity-collected/ocean-falls-corporation/ocean-falls-ofc-white.svg",
+            "sha256": "59b5310113910932f8afa7bb32ddf7973140d07d399b9b2925555c1addb30bec"
+          },
+          {
+            "label": "Download CIPO trademark artwork (PNG)",
+            "file": "identity-collected/ocean-falls-corporation/ocean-falls-ofc-cipo-0390863.png",
+            "sha256": "46772330cbd8082197bba829daab5f14ccd2cdbe748684ae6e925d416655f110"
+          },
+          {
+            "label": "Download US trademark artwork (PNG)",
+            "file": "identity-collected/ocean-falls-corporation/ocean-falls-ofc-trademark.png",
+            "sha256": "3001d1ab305d3e65d1ad1ae09bce0506c3d0061320ef292e9999d67c20e18fc4"
+          }
+        ],
+        "search": "ocean-falls-vector-2026-11-12",
+        "alsoSeen": [
+          {
+            "date": "1976-03-22",
+            "source": "https://trademarks.justia.com/730/80/ofc-73080960.html"
+          }
+        ]
       }
     ]
   },

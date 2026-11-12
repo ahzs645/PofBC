@@ -1,0 +1,38 @@
+{
+  "method": "Binary silhouette intersection over union; CIPO reference held fixed",
+  "reference_size_px": [
+    747,
+    341
+  ],
+  "render_size_px": [
+    2988,
+    1364
+  ],
+  "downsample": "4x SVG render downsampled to source dimensions with Pillow Lanczos",
+  "reference_threshold": "grayscale < 128",
+  "vector_threshold": "alpha > 127",
+  "registration": "none; shared 747 x 341 source coordinate canvas",
+  "intersection_px": 101796,
+  "union_px": 102524,
+  "intersection_over_union": 0.9928992235964262,
+  "source_only_px": 401,
+  "vector_only_px": 327,
+  "reference_ink_area_px": 102197,
+  "vector_ink_area_px": 102123,
+  "source_bounds_xyxy_exclusive": [
+    33,
+    40,
+    704,
+    284
+  ],
+  "vector_bounds_xyxy_exclusive": [
+    33,
+    40,
+    705,
+    284
+  ],
+  "vector_path_count": 3,
+  "embedded_images": 0,
+  "live_text": 0,
+  "interpretation": "A comparison to the supplied raster, not a percentage of historical design accuracy. Smooth curves intentionally omit pixel stair-stepping."
+}

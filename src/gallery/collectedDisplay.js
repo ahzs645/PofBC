@@ -793,6 +793,18 @@ export const COLLECTED_DISPLAY = {
    "recoloured": false
   }
  },
+ "ocean-falls-ofc-vector": {
+  "light": {
+   "file": "identity-display/ocean-falls-ofc-vector.light.svg",
+   "aspect": 2.7423,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/ocean-falls-ofc-vector.dark.svg",
+   "aspect": 2.7423,
+   "recoloured": true
+  }
+ },
  "bc-steamship-round-logo": {
   "light": {
    "file": "identity-display/bc-steamship-round-logo.light.svg",
