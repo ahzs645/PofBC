@@ -178,6 +178,17 @@ export const ONE_OFFS = [
       'the second — but on the later flat sun, with the gold divider kept.',
     caveat: 'Drawn from the supplied artwork, in the screen colours (#234075 and #e3a82b).'
   }),
+  artwork({
+    id: 'coroners-service',
+    label: 'BC Coroners Service',
+    body: 'BC Coroners Service',
+    years: '2012–2026',
+    note: 'The BC mark with its shaded sun but no tagline, a thin gold divider its full height, and ' +
+      '“Coroners Service” in large blue Garamond on the wordmark’s baseline, with no gold accent.',
+    caveat: 'Put together from the gallery’s Best Place on Earth mark and the Province’s Garamond: ' +
+      '“Service” is BC Wildfire Service’s own, and “Coroners” is set from its C and from letters of ' +
+      'Environmental Reporting BC and BC Stats. Placed and spaced as in the image the Service’s reports print.'
+  }),
   {
     id: 'prepared-bc',
     kind: 'current',

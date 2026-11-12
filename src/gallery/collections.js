@@ -195,6 +195,22 @@ const ONE_OFF_IDENTITY = {
     applicability: DATED_BY_TIMELINE('first_observation', 'by 2025',
       'Its file on the lab’s page is first captured in April 2025, after the lab took the name.')
   },
+  'coroners-service': {
+    provenance: 'reconstructed',
+    fidelity: 'partially compared',
+    fidelityNote: 'Put together from the gallery’s Best Place on Earth mark (without its tagline) and letters of ' +
+      'the same Garamond the Province published: BC Wildfire Service’s “Service” and C, and Environmental ' +
+      'Reporting BC’s and BC Stats’ lowercase letters, scaled to one x-height. Its placing and spacing are ' +
+      'measured off the 1241 × 385 image the Service’s reports embed, and the result was laid over that image.',
+    applicability: {
+      kind: 'first_observation',
+      years: '2012–2026',
+      note: 'Seen on the cover of the Service’s 2012–2014 strategic plan (https://oag.bc.ca/app/uploads/sites/963/2024/08/OAGBC-2012-10a-bccs-strategic-plan.pdf) ' +
+        'and on a report posted 24 April 2026 (https://www2.gov.bc.ca/assets/gov/birth-adoption-death-marriage-and-divorce/deaths/coroners-service/statistical/deaths_incarceratedpeople_corrections_report_2015-2025.pdf). ' +
+        'No adoption record is cited.'
+    },
+    rights: PROVINCE_RIGHTS
+  },
   // Remade, not lifted: the program's own marks have not been obtained, so the card is the published
   // BC mark with the name set beside it.
   'prepared-bc': {
@@ -766,6 +782,7 @@ const GRAPH_NODES = {
   'bc-stats': 'sub-bc-stats',
   'bc-wildfire-service': 'sub-bc-wildfire-service',
   'bc-wildfire-service-one-line': 'sub-bc-wildfire-service',
+  'coroners-service': 'sub-bc-coroners-service',
   'public-service': 'bc-public-service-agency'
 }
 

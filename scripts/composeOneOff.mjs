@@ -63,6 +63,61 @@ export function bcParks (marks, cap) {
   return subpaths
 }
 
+/**
+ * “Coroners Service” in the Province's Garamond, on a baseline at y = 0 with its cap height `cap`,
+ * from x = 0. “Service” is BC Wildfire Service's own word, with its own spacing. “Coroners” takes its
+ * C from that mark's “BC”, its o, r, n and e from Environmental Reporting BC's name and its s from BC
+ * Stats', each scaled to the same x-height. The gaps between the letters of “Coroners”, and the word
+ * space, are measured off the lockup as the Coroners Service's reports print it (a 1241 × 385 image
+ * whose C is 80 pixels tall), as a fraction of the cap height.
+ */
+export function coronersService (marks, cap) {
+  const wild = marks['bc-wildfire-service-one-line']
+  const wildName = lettersOf(shapeOf(wild, 'name').d)
+  const wildAccent = lettersOf(shapeOf(wild, 'accent').d)
+  const env = lettersOf(shapeOf(marks['environmental-reporting-bc'], 'name').d)
+  const stats = lettersOf(shapeOf(marks['bc-stats'], 'name').d)
+  // Each source's x-height, from its e (BC Wildfire Service, Environmental Reporting BC) or its a.
+  const xOf = (letter) => letter.box.bottom - letter.box.top
+  const wildX = xOf(wildName[9])
+  const envScale = wildX / xOf(env[19])
+  const statsScale = wildX / xOf(stats[2])
+  // Baselines: the foot of a flat-footed letter in each source (an r, a t).
+  const wildBase = wildName[10].box.bottom
+  const envUpper = env[9].box.bottom
+  const statsBase = stats[1].box.bottom
+  const unit = cap / (wildAccent[1].box.bottom - wildAccent[1].box.top)
+  // A gap in the printed lockup, in pixels against its 80-pixel C, or one in the source's own units.
+  const printed = (pixels) => ({ gap: pixels / 80 * cap })
+  const own = (a, b) => ({ gap: (b.box.left - a.box.right) * unit })
+  const fromEnv = (letter, gap) => ({ letter, scale: envScale, base: envUpper, ...gap })
+  const letters = [
+    { letter: wildAccent[1], scale: 1, base: wildBase },
+    fromEnv(env[11], printed(5)),
+    fromEnv(env[9], printed(7)),
+    fromEnv(env[11], printed(2)),
+    fromEnv(env[13], printed(7)),
+    fromEnv(env[19], printed(4)),
+    { letter: wildName[10], scale: 1, base: wildBase, ...printed(4) },
+    { letter: stats[4], scale: statsScale, base: statsBase, ...printed(2) },
+    { letter: wildName[8], scale: 1, base: wildBase, ...printed(34) },
+    ...wildName.slice(9).map((letter, i) => ({
+      letter, scale: 1, base: wildBase,
+      // The i's dot sits over its stem rather than after it.
+      ...(letter === wildName[13] ? { gap: (wildName[13].box.left - wildName[12].box.right) * unit } : own(wildName[8 + i], letter))
+    }))
+  ]
+  let x = 0
+  const subpaths = []
+  for (const { letter, scale, base, gap = 0 } of letters) {
+    x += gap
+    const s = scale * unit
+    subpaths.push(...transformed(letter.subpaths, s, x - letter.box.left * s, -base * s))
+    x += (letter.box.right - letter.box.left) * s
+  }
+  return subpaths
+}
+
 /** A mark's parts moved by (dx, dy) and scaled by `scale`, keeping their roles. */
 const moved = (mark, roles, scale, dx, dy) => mark.shapes.filter(({ role }) => roles.includes(role))
   .map(({ role, d }) => ({ role, subpaths: transformed(absolute(d), scale, dx, dy) }))
@@ -104,6 +159,25 @@ export function compose (entry, marks) {
     const width = 0.022 * height
     const divider = rectangle(rule - width / 2, mark.top, width, height)
     const name = transformed(bcParks(marks, 0.35 * height), 1, rule + 0.21 * height, mark.bottom)
+    return {
+      shapes: [...parts, { role: 'divider', subpaths: divider }, { role: 'name', subpaths: name }],
+      sun: source.sun,
+      gradients: source.gradients,
+      colours: { ...entry.colours }
+    }
+  }
+  if (entry.compose === 'coroners-service') {
+    // The BC mark without its tagline, a thin gold divider the height of it, and the name. Measured
+    // off the lockup as the Coroners Service's reports print it, against the mark's height: the
+    // divider stands 0.187 of it after the mark and 0.009 wide, the name 0.178 after the divider,
+    // with a cap height of 0.36 and its baseline on the wordmark's foot.
+    const parts = moved(source, [...SYMBOL, 'wordmark'], 1, 0, 0)
+    const mark = boxOf(parts.flatMap(({ subpaths }) => subpaths))
+    const height = mark.bottom - mark.top
+    const rule = mark.right + 0.187 * height
+    const width = 0.009 * height
+    const divider = rectangle(rule - width / 2, mark.top, width, height)
+    const name = transformed(coronersService(marks, 0.36 * height), 1, rule + 0.178 * height, mark.bottom)
     return {
       shapes: [...parts, { role: 'divider', subpaths: divider }, { role: 'name', subpaths: name }],
       sun: source.sun,
