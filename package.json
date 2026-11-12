@@ -54,6 +54,7 @@
     "build:collected-display": "python3 scripts/build_collected_display.py",
     "brandkit:build": "node brandkit/scripts/build.mjs",
     "brandkit:pack": "node brandkit/scripts/pack.mjs",
+    "brandkit:release": "node brandkit/scripts/release.mjs",
     "build:salaries": "node scripts/build-salaries.mjs && node scripts/build-name-links.mjs && npm run build:salary-search --silent && node scripts/build-employer-stats.mjs && npm run build:workforce && node scripts/build-council-pay.mjs",
     "build:employer-stats": "node scripts/build-employer-stats.mjs",
     "build:workforce": "node scripts/build-workforce.mjs && node scripts/build-workforce-profiles.mjs",

@@ -9,7 +9,16 @@ here, from PofBC's own reconstructions, so they cannot drift from what the gener
 npm run brandkit:build                     # write every era's brand folder
 npm run brandkit:pack                      # build, then pack every era
 npm run brandkit:pack -- bc-province-flag  # one era (or several), by id
+npm run brandkit:release                   # build, pack, and zip the packs for a release
 ```
+
+**Releases.** `npm run brandkit:release` writes one zip,
+`brandkit/out/release/pofbc-brandkit-<date>-<commit>.zip` (`-- --name 2026.11` names it), holding
+every era's pack, its menu logo, `catalog.json` and a README listing the eras. The same commit
+gives the same zip byte for byte. To publish it, run the **Release brandkit packs** workflow
+(Actions → Run workflow, or `gh workflow run brandkit-release.yml`): it builds the zip on a clean
+checkout, tests it, and attaches it to a GitHub Release tagged `brandkit-<version>`, replacing the
+zip if that release already exists.
 
 `brandkit:pack` writes to `brandkit/out/packs/`:
 
@@ -29,7 +38,7 @@ byte the same from the same sources.
 
 | Id | Era | Years | Made from |
 | --- | --- | --- | --- |
-| `bc-province-engraved-arms` | Engraved arms | before 1977 | The Grace M. McCarthy calling-card reconstruction: the supplied arms engraving and three PlateForge Card Script study fonts (`sources/bc-province-engraved-arms/`) |
+| `bc-province-engraved-arms` | Engraved arms | before 1977 | The Grace M. McCarthy calling-card reconstruction: the supplied arms engraving and three PlateForge Card Script study fonts (`artwork/stationery/grace-mccarthy/`) |
 | `bc-province-1977` | Visual Identity Program (crest and ring) | 1977 – about 1983 | The four 1977 manuals as rebuilt in brandkit's BC manual pack, and PofBC's Provincial Symbol and ministry history |
 | `bc-province-flag` | The flag logo | about 1983 – 2005 | PofBC's flag drawing and its layout from seventeen printed references (`src/flag/`) |
 | `bc-province-arms` | Coat of arms and BRITISH COLUMBIA wordmark | after the flag (unconfirmed) | PofBC's arms and wordmark and their layout from twelve documents (`src/crest/`) |
@@ -46,6 +55,13 @@ the pack. Its typeface, ink colours, printed size and date are not established, 
 arms are a different engraving from the card's; the brand says so wherever the card is shown. Add
 the era's next pieces (a letterhead, an envelope, another card) as templates in
 [`scripts/eras/engraved-arms.mjs`](scripts/eras/engraved-arms.mjs).
+
+Like every other era's source artwork, the card's reconstruction package lives in PofBC's
+`artwork/` ([`artwork/stationery/grace-mccarthy/`](../artwork/stationery/grace-mccarthy)): the
+editable and outlined SVGs, fonts, offline editor, report and evidence, as supplied (less its
+`model.json`, which repeats the font files at 5 MB). The script reads the arms path, its
+placement and every line's text, position, size and cut from the editable SVG, so a revised
+package rebuilds the brand with no numbers to copy.
 
 **1977** is the generator brandkit used to ship (`scripts/brands/bc-province-1977*.mjs` and its
 helpers, before brands moved out of brandkit), moved here with its paths retargeted. It now reads
@@ -87,7 +103,7 @@ font is used: Helvetica is TeX Gyre Heros throughout, as the 1977 brand always d
 
 - TeX Gyre Heros and Cursor: GUST Font License (`shared/fonts/`).
 - PlateForge Card Script studies: SIL Open Font License, derived from Pinyon Script, each with its
-  provenance (`sources/bc-province-engraved-arms/fonts/`).
+  provenance (`artwork/stationery/grace-mccarthy/fonts/`).
 - EB Garamond: SIL Open Font License, from Fontsource (`sources/bc-province-current/fonts/`).
 
 Every brand is labelled as a reconstruction or reference kit, not the Province's current identity

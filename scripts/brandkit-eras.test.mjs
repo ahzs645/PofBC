@@ -42,5 +42,5 @@ test('every era builds and packs', { skip: !ready && 'vendor/brandkit is not che
 test('the engraved-arms era starts with the McCarthy card, every line a field', () => {
   const source = readFileSync(join(root, 'brandkit/scripts/eras/engraved-arms.mjs'), 'utf8')
   for (const id of ['name', 'title-1', 'title-2', 'title-3', 'telephone-line', 'city', 'province']) assert.match(source, new RegExp(`id: '${id}'`))
-  assert.ok(existsSync(join(root, 'brandkit/sources/bc-province-engraved-arms/artwork/arms.svg')))
+  assert.ok(existsSync(join(root, 'artwork/stationery/grace-mccarthy/grace-mccarthy-card-editable.svg')))
 })

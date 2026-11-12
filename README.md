@@ -796,13 +796,17 @@ era, oldest first:
 ```sh
 npm run brandkit:pack                      # every era → brandkit/out/packs/
 npm run brandkit:pack -- bc-province-flag  # one era
+npm run brandkit:release                   # every pack, zipped for a release
 ```
 
 Each `<id>.zip` opens in brandkit by drag and drop or `?url=`; `catalog.json` lists them all and
 `bc-province.bundle.zip` adds all five at once. The flag, arms and current brands are written from
 the same layout code the generator draws with, so the two cannot disagree; the 1977 brand's
 generator, which brandkit used to carry, now lives here and reads the symbol and ministries from
-`src/`. `npm run brandkit:build` writes the brand folders alone (`brandkit/out/brands/`).
+`src/`, and the engraved-arms brand reads the card's reconstruction package in
+`artwork/stationery/grace-mccarthy/`. `npm run brandkit:build` writes the brand folders alone
+(`brandkit/out/brands/`). The **Release brandkit packs** workflow, run by hand, rebuilds the release
+zip on a clean checkout and attaches it to a GitHub Release.
 
 ---
 
