@@ -685,6 +685,18 @@ export const COLLECTED_DISPLAY = {
    "recoloured": false
   }
  },
+ "bc-place-1983-rebuilt": {
+  "light": {
+   "file": "identity-display/bc-place-1983-rebuilt.light.svg",
+   "aspect": 2.195,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/bc-place-1983-rebuilt.dark.svg",
+   "aspect": 2.195,
+   "recoloured": true
+  }
+ },
  "vector-forest-renewal-bc-2000-colour-source-vector": {
   "light": {
    "file": "identity-display/vector-forest-renewal-bc-2000-colour-source-vector.light.svg",
@@ -1093,6 +1105,18 @@ export const COLLECTED_DISPLAY = {
    "file": "identity-display/bc-travel-industry-ca-1970.light.svg",
    "aspect": 1.4192,
    "recoloured": false
+  }
+ },
+ "jibc-monogram": {
+  "light": {
+   "file": "identity-display/jibc-monogram.light.svg",
+   "aspect": 2.3183,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/jibc-monogram.dark.svg",
+   "aspect": 2.3183,
+   "recoloured": true
   }
  }
 }

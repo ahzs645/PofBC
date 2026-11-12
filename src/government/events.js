@@ -45,6 +45,7 @@ export const EVENT_TYPES = {
   general_election_period: { label: 'General election', kind: 'election' },
   electoral_system_context: { label: 'Electoral history', kind: 'election' },
   policy_investigation: { label: 'Policy investigation', kind: 'relationship' },
+  site_provided: { label: 'Site provided', kind: 'relationship' },
   operational_milestone: { label: 'Operational milestone', kind: 'origin' },
   logo_observed: { label: 'Logo seen', kind: 'identity' },
   identity_observed: { label: 'Identity seen', kind: 'identity' },

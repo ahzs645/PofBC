@@ -1062,7 +1062,28 @@ GALLERY_COLLECTIONS.push(...COLLECTED_COLLECTIONS.filter((candidate) =>
   !GALLERY_COLLECTIONS.some((held) => nodesOf(held).includes(candidate.graphNode))))
 // WorkSafeBC's specimens are folded into its collection above; the one-off programs keep theirs.
 // The Department of Travel Industry's is folded into the BC mark collection.
-GALLERY_COLLECTIONS.push(...SPECIMEN_COLLECTIONS.filter((collection) => !['specimens-worksafebc', 'specimens-travel-industry'].includes(collection.id)))
+GALLERY_COLLECTIONS.push(...SPECIMEN_COLLECTIONS.filter((collection) => !['specimens-worksafebc', 'specimens-travel-industry', 'specimens-justice-institute'].includes(collection.id)))
+
+// The Justice Institute is a public body, but a post-secondary institute rather than one of the Crown
+// corporations or health authorities the shelf collects for, so its collection is placed there by hand.
+const JIBC = SPECIMEN_COLLECTIONS.find((collection) => collection.id === 'specimens-justice-institute')
+if (JIBC) {
+  GALLERY_COLLECTIONS.push({
+    ...JIBC,
+    id: 'collected-justice-institute',
+    shelf: 'bodies',
+    graphNode: 'justice-institute',
+    label: 'JIBC',
+    body: 'Current public post-secondary institute',
+    years: '1978–present',
+    intro: 'The Justice Institute of British Columbia, established in 1978 to train police, corrections, sheriffs, ' +
+      'paramedics, firefighters and emergency managers. Its monogram, the triangle with B and C, is the centre of ' +
+      'its fan-shield badge and of its gold and navy roundel, both under Patches.',
+    cover: JIBC.entries[0]?.id,
+    // A body's files, not a program's: they sit on no timeline.
+    entries: JIBC.entries.map(({ timeline, ...entry }) => ({ ...entry, owner: 'justice-institute' }))
+  })
+}
 
 /** The collection holding a body's logos — its own, or one it carried on as under a later name. */
 export const collectionOfNode = (node) => GALLERY_COLLECTIONS.find((collection) => nodesOf(collection).includes(node))

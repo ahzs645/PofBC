@@ -1,7 +1,7 @@
 {
   "schema": "import-accounting/1",
   "counts": {
-    "accepted": 909,
+    "accepted": 914,
     "unresolved_unmapped": 26,
     "corroborating_duplicate": 11
   },
@@ -1468,6 +1468,141 @@
         "reviewed_on": "2026-09-26"
       },
       "output_id": "bcfs:290:sub-bc-wildfire-service"
+    },
+    {
+      "origin": "atlas/events-bcplace-jibc-2026-11-12.json#atlas:bcplace-jibc-stadium-opened-1983",
+      "disposition": "accepted",
+      "input": {
+        "id": "atlas:bcplace-jibc-stadium-opened-1983",
+        "subject_id": "bc-place-ltd",
+        "related_subject_ids": [
+          "sub-bc-place",
+          "bc-pavilion-corporation"
+        ],
+        "event_type": "operational_milestone",
+        "title": "BC Place Stadium officially opened by British Columbia Place Ltd., with a televised gala",
+        "date": {
+          "start": "1983-06-19",
+          "end": null,
+          "precision": "day",
+          "range_end_inclusive": false
+        },
+        "temporal_status": "source_reported_past",
+        "evidence": {
+          "source_url": "https://dailyhive.com/vancouver/bc-place-opens-history-vancouver",
+          "locator": "On This Day: BC Place Stadium opened"
+        },
+        "interpretation_notes": "The grand-opening gala programme of 19 June 1983 also carries the company’s b/c/p symbol and wordmark. The stadium is today run by B.C. Pavilion Corporation as BC Place.",
+        "reviewed_on": "2026-11-12"
+      },
+      "output_id": "atlas:bcplace-jibc-stadium-opened-1983"
+    },
+    {
+      "origin": "atlas/events-bcplace-jibc-2026-11-12.json#atlas:bcplace-jibc-expo-on-bc-place-lands-1986",
+      "disposition": "accepted",
+      "input": {
+        "id": "atlas:bcplace-jibc-expo-on-bc-place-lands-1986",
+        "subject_id": "bc-place-ltd",
+        "related_subject_ids": [
+          "expo-86-corporation"
+        ],
+        "event_type": "site_provided",
+        "title": "Expo 86 held on BC Place’s False Creek lands",
+        "date": {
+          "start": "1986-05-02",
+          "end": "1986-10-13",
+          "precision": "day",
+          "range_end_inclusive": true
+        },
+        "temporal_status": "source_reported_past",
+        "evidence": {
+          "source_url": "https://biv.com/article/2016/04/expo-86-effect-vancouver-developing-legacy",
+          "locator": "Business in Vancouver, “Expo 86 effect”, 2016"
+        },
+        "interpretation_notes": "The fair, run by the Expo 86 Corporation, used the provincial company’s False Creek site beside the stadium; it closed on 13 October 1986. The company was renamed British Columbia Enterprise Corporation the next year, which sold the site in 1988.",
+        "reviewed_on": "2026-11-12"
+      },
+      "output_id": "atlas:bcplace-jibc-expo-on-bc-place-lands-1986"
+    },
+    {
+      "origin": "atlas/events-bcplace-jibc-2026-11-12.json#atlas:bcplace-jibc-false-creek-sale-1988",
+      "disposition": "accepted",
+      "input": {
+        "id": "atlas:bcplace-jibc-false-creek-sale-1988",
+        "subject_id": "bc-enterprise-corporation",
+        "related_subject_ids": [
+          "bc-place-ltd"
+        ],
+        "event_type": "asset_transfer",
+        "title": "The former Expo lands at False Creek sold to Concord Pacific Developments Ltd.",
+        "date": {
+          "start": "1988",
+          "end": null,
+          "precision": "year",
+          "range_end_inclusive": false
+        },
+        "temporal_status": "source_reported_past",
+        "evidence": {
+          "source_url": "https://biv.com/article/2016/04/expo-86-effect-vancouver-developing-legacy",
+          "locator": "Business in Vancouver, “Expo 86 effect”, 2016"
+        },
+        "interpretation_notes": "British Columbia Enterprise Corporation (BC Place Ltd. renamed in 1987) as seller; a 1988 prospectus page describing the sale is held at sacda.ca (object 22935). The price is reported variously ($320 million over 15 years; about $145 million in effect, the Province having taken on the soil remediation); Concord Pacific Place was built on the lands.",
+        "reviewed_on": "2026-11-12"
+      },
+      "output_id": "atlas:bcplace-jibc-false-creek-sale-1988"
+    },
+    {
+      "origin": "atlas/events-bcplace-jibc-2026-11-12.json#atlas:bcplace-jibc-stadium-to-pavco-1989",
+      "disposition": "accepted",
+      "input": {
+        "id": "atlas:bcplace-jibc-stadium-to-pavco-1989",
+        "subject_id": "bc-enterprise-corporation",
+        "related_subject_ids": [
+          "bc-pavilion-corporation",
+          "bc-place-ltd"
+        ],
+        "event_type": "functions_transferred",
+        "title": "British Columbia Enterprise Corporation ceases operations; its remaining assets, the stadium among them, pass to the Province and B.C. Pavilion Corporation",
+        "date": {
+          "start": "1989-09-30",
+          "end": null,
+          "precision": "day",
+          "range_end_inclusive": false
+        },
+        "temporal_status": "source_reported_past",
+        "evidence": {
+          "source_url": "https://search-bcarchives.royalbcmuseum.bc.ca/british-columbia-enterprise-corporation",
+          "locator": "BC Archives authority record"
+        },
+        "interpretation_notes": null,
+        "reviewed_on": "2026-11-12"
+      },
+      "output_id": "atlas:bcplace-jibc-stadium-to-pavco-1989"
+    },
+    {
+      "origin": "atlas/events-bcplace-jibc-2026-11-12.json#atlas:bcplace-jibc-jibc-established-1978",
+      "disposition": "accepted",
+      "input": {
+        "id": "atlas:bcplace-jibc-jibc-established-1978",
+        "subject_id": "justice-institute",
+        "related_subject_ids": [],
+        "event_type": "legal_establishment",
+        "title": "Justice Institute of British Columbia established by order in council under the College and Institute Act",
+        "date": {
+          "start": "1978-04",
+          "end": null,
+          "precision": "month",
+          "range_end_inclusive": false
+        },
+        "temporal_status": "source_reported_past",
+        "evidence": {
+          "source_url": "https://blueline.ca/justice-institute-of-british-columbia-celebrates-40-years-5465",
+          "locator": "Blue Line, “Justice Institute of British Columbia celebrates 40 years”"
+        },
+        "interpretation_notes": "The month and statute are as the Institute’s own reports give them (a 1982 sunset report to the Minister of Education in its repository, jibc.arcabc.ca); the order itself was not obtained. A joint undertaking of the Ministry of Education and the Ministry of Attorney General, whose objectives for it date from 1974; it opened in spring 1978 at the former Jericho Hill site.",
+        "reviewed_on": "2026-11-12"
+      },
+      "output_id": "atlas:bcplace-jibc-jibc-established-1978"
     },
     {
       "origin": "atlas/events-caws-census.json#caws:formation",

@@ -17,9 +17,12 @@ const ticorp = read('research/identity/ticorp-vector-2026-11-08/source-register.
 const followup = read('research/identity/vector-followup-2026-11-08/source-register.json')
 const historical = read('research/identity/historical-vector-followup-2026-10-30/source-register.json')
 const innovate = read('research/identity/innovate-bc-vector-2026-11-12/source-register.json')
-const bcAssessment = read('research/identity/bc-assessment-vector-2026-11-12/source-register.json')
-const travelIndustry = read('research/identity/bc-travel-industry-2026-11-12/source-register.json')
-const bcPowerCommission = read('research/identity/bc-power-commission-vector-2026-11-12/source-register.json')
+// Programs' marks held as supplied reconstructions, with no body of their own in the inventory.
+const PROGRAM_PACKAGES = ['bc-travel-industry-2026-11-12', 'justice-institute-2026-11-12']
+  .map((search) => ({ search, register: read(`research/identity/${search}/source-register.json`) }))
+// Supplied packages that add a vector to a body, each read with the search it came from.
+const PACKAGES = ['bc-assessment-vector-2026-11-12', 'bc-power-commission-vector-2026-11-12', 'bc-place-vector-2026-11-12']
+  .map((search) => ({ search, register: read(`research/identity/${search}/source-register.json`) }))
 
 const checked = (asset) => {
   if (!/^identity-collected\/[a-z0-9._/-]+$/i.test(asset.file) || asset.file.includes('..')) {
@@ -139,7 +142,8 @@ const SUPERSEDED = {
   'source-north-okanagan-health-region-north-okanagan-health-region-2000-hybrid-svg': 'source-north-okanagan-health-region-north-okanagan-health-region-2000-png',
   'source-northern-interior-regional-health-board-northern-interior-regional-health-board-2001-png': 'historical-northern-interior-regional-health-board-blue-2001',
   // The reconstruction keeps the Power Pioneers image as its source download.
-  'source-bc-power-commission-bc-power-commission-original-logo-jpg': 'bc-power-commission-rebuilt'
+  'source-bc-power-commission-bc-power-commission-original-logo-jpg': 'bc-power-commission-rebuilt',
+  'source-bc-place-ltd-bc-place-1983-logo-png': 'bc-place-1983-rebuilt'
 }
 
 // Another colourway of the same design: shown inside the design's entry as a version to switch
@@ -186,6 +190,7 @@ const VERSION_LABELS = {
 
 // Shorter accounts where a body's or file's own record is about a file no longer shown.
 const BODY_NOTES = {
+  'bc-place-ltd': 'The Crown company that developed BC Place on Vancouver’s False Creek, opening BC Place Stadium on 19 June 1983 and providing the site of Expo 86. Its b/c/p symbol and wordmark are from 1983. In 1987 it was renamed British Columbia Enterprise Corporation, with the BC Development Corporation merged into it, and in 1989 its remaining assets went to the Province and B.C. Pavilion Corporation, which runs the stadium today.',
   'bc-power-commission': 'Established in 1945 to consolidate local electricity systems and extend service to communities outside BC Electric’s territory, the BC Power Commission became one of BC Hydro’s two principal predecessors. BC Hydro was established in 1962, and the authority, BC Electric and the Power Commission were formally amalgamated on 20 August 1965. The emblem is reproduced by BC Hydro Power Pioneers, which documents it on the commission’s red service trucks; its designer and introduction date are unconfirmed.',
   'bc-steamship-company': 'A provincial Crown company, separate from BC Ferries, set up in 1975 to keep the Victoria–Seattle Princess Marguerite service. It added the Vancouver Island Princess in 1987, sold its vessels and operating assets to B.C. Stena Line in November 1988, and continued as a corporation, renamed Victoria Line Ltd. in 1994. Its circular emblem is documented on a 1987 casino token; the emblem’s introduction, colours and designer are unconfirmed, and the Princess Marguerite’s own 1983 brochure branding is a separate service identity.',
   'transportation-investment-corporation': 'One design — the BC emblem, a gold divider and the name on three lines — in full colour and in white, both original vector artwork from Pattullo Bridge Replacement Project publications.',
@@ -267,14 +272,14 @@ for (const entry of followup.assets) {
   additions.get(entry.bodyId).push(fromRegister(entry, 'vector-followup-2026-11-08'))
 }
 
-// A program's mark held as a supplied reconstruction, with no body of its own in the inventory: the
-// Department of Travel Industry's, on the Province's own timeline (gallery collection "bc-mark").
-for (const { verification, ...asset } of travelIndustry.assets) {
+// The Department of Travel Industry's, on the Province's own timeline (gallery collection "bc-mark"),
+// and the Justice Institute's, a public body outside the inventory's Crown corporations.
+for (const { search, register: packaged } of PROGRAM_PACKAGES) for (const { verification, ...asset } of packaged.assets) {
   if (!verification?.genuineVectorVerified || verification.embeddedImages !== 0 || verification.textElements !== 0) {
     throw new Error(`Not verified as pure vector: ${asset.id}`)
   }
-  if (!additions.has(travelIndustry.program)) additions.set(travelIndustry.program, [])
-  additions.get(travelIndustry.program).push(checked({ ...asset, search: 'bc-travel-industry-2026-11-12' }))
+  if (!additions.has(packaged.program)) additions.set(packaged.program, [])
+  additions.get(packaged.program).push(checked({ ...asset, search }))
 }
 
 // Historical specimens use inventory-shaped records; detailed extraction evidence stays in
@@ -289,14 +294,14 @@ for (const { bodyId, verification, ...asset } of innovate.assets) {
   if (!additions.has(bodyId)) additions.set(bodyId, [])
   additions.get(bodyId).push(checked({ ...asset, search: 'innovate-bc-vector-2026-11-12' }))
 }
-for (const { bodyId, verification, ...asset } of [...bcAssessment.assets, ...bcPowerCommission.assets]) {
+for (const { search, register: packaged } of PACKAGES) for (const { bodyId, verification, ...asset } of packaged.assets) {
   if (!bodyIds.has(bodyId)) throw new Error(`Unknown body: ${bodyId}`)
   if (!verification?.genuineVectorVerified || verification.embeddedImages !== 0 || verification.textElements !== 0 || verification.externalResources?.length !== 0) {
     throw new Error(`Not verified as pure vector: ${asset.id}`)
   }
   for (const extra of asset.downloads ?? []) checked({ file: extra.file, sha256: extra.sha256 })
   if (!additions.has(bodyId)) additions.set(bodyId, [])
-  additions.get(bodyId).push(checked({ ...asset, search: asset.id === 'bc-power-commission-rebuilt' ? 'bc-power-commission-vector-2026-11-12' : 'bc-assessment-vector-2026-11-12' }))
+  additions.get(bodyId).push(checked({ ...asset, search }))
 }
 for (const { bodyId, verification, ...asset } of historical.assets) {
   if (!bodyIds.has(bodyId)) throw new Error(`Unknown historical body: ${bodyId}`)

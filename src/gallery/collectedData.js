@@ -3297,32 +3297,44 @@ export const COLLECTED_BODIES = [
     "current": false,
     "status": "asset-collected",
     "observedDate": "2026-10-22",
-    "notes": "Corporate b/c/p monogram from the 1983 annual report",
+    "notes": "The Crown company that developed BC Place on Vancouver’s False Creek, opening BC Place Stadium on 19 June 1983 and providing the site of Expo 86. Its b/c/p symbol and wordmark are from 1983. In 1987 it was renamed British Columbia Enterprise Corporation, with the BC Development Corporation merged into it, and in 1989 its remaining assets went to the Province and B.C. Pavilion Corporation, which runs the stadium today.",
     "assets": [
       {
-        "id": "source-bc-place-ltd-bc-place-1983-logo-png",
-        "label": "Corporate b/c/p monogram from the 1983 annual report",
-        "file": "identity-collected/bc-place-ltd/bc-place-1983-logo.png",
-        "format": "png",
-        "isVector": false,
-        "supplied": false,
-        "reconstruction": false,
-        "publisher": "British Columbia Place Ltd.; microfiche scan hosted by Internet Archive",
+        "id": "bc-place-1983-rebuilt",
+        "label": "British Columbia Place Ltd. — Symbol and wordmark, vector reconstruction",
+        "file": "identity-collected/bc-place-ltd/bc-place-1983-rebuilt.svg",
+        "format": "svg",
+        "isVector": true,
+        "supplied": true,
+        "reconstruction": true,
+        "publisher": "British Columbia Place Ltd.",
         "sourcePage": "https://archive.org/details/micro_IA40243510_1428",
         "sourceUrl": "https://archive.org/download/micro_IA40243510_1428/micro_IA40243510_1428.pdf",
-        "sourceLocator": "PDF page 1",
-        "sourceFile": null,
+        "sourceLocator": "Rebuilt after the grand-opening gala programme of 19 June 1983, page 4 (scanned PDF 2023-F0003-24); also on the 1983 annual report's cover",
+        "sourceFile": "BC Place grand opening gala programme, 1983",
         "sourceDate": "1983",
-        "observedDate": "2026-10-22",
-        "evidenceType": "original-annual-report-crop",
-        "notes": "Lowercase integrated b/c/p monogram and british columbia place wordmark directly from corporate annual-report cover. This is the corporation’s evidenced mark; stadium branding was not substituted.",
-        "fidelityNote": "Original published drawing or image recovered from the cited source. Method: Lowercase integrated b/c/p monogram and british columbia place wordmark directly from corporate annual-report cover. This is the corporation’s evidenced mark; stadium branding was not substituted.",
-        "sha256": "81f8e81394f8682fb210e8dc99f6b40e4b22fda5a046f7b0e7753e7bcee4785e",
-        "bytes": 152314,
+        "observedDate": "2026-11-12",
+        "dateNote": "The programme and the annual report are of 1983, the year the stadium opened; the mark's introduction is not dated.",
+        "evidenceType": "supplied-vector-reconstruction",
+        "notes": "The blue b/c/p symbol — bowls on a shared stem inside a fine offset outline — beside “british columbia place” on three staggered lines.",
+        "fidelityNote": "A supplied vector reconstruction, not original artwork: the symbol is built geometrically (equal circular bowls on an equilateral grid, two stems, a fine offset outline) and each letter is a custom outline after the scan (no automatic tracing). The wordmark is consistent with ITC Bauhaus; the weight and any modifications are unconfirmed. The blue (#3093D2) is sampled from the scan, not an original specification. The annual-report image is kept as a download.",
+        "sha256": "a2925f26a75bf58f04d7b5322a99e3ef94646149c0708f6f4678a8a9e226827f",
+        "bytes": 9202,
         "darkBackground": false,
-        "dateNote": "A dated sighting is not a complete usage period.",
-        "previewWidth": 788,
-        "previewHeight": 388
+        "downloads": [
+          {
+            "label": "Download 1983 annual-report image (PNG)",
+            "file": "identity-collected/bc-place-ltd/bc-place-1983-logo.png",
+            "sha256": "81f8e81394f8682fb210e8dc99f6b40e4b22fda5a046f7b0e7753e7bcee4785e"
+          }
+        ],
+        "search": "bc-place-vector-2026-11-12",
+        "alsoSeen": [
+          {
+            "date": "1983",
+            "source": "https://archive.org/details/micro_IA40243510_1428"
+          }
+        ]
       }
     ]
   },
@@ -6783,6 +6795,34 @@ export const COLLECTED_SPECIMENS = [
         "bytes": 38388,
         "darkBackground": false,
         "search": "bc-travel-industry-2026-11-12"
+      }
+    ]
+  },
+  {
+    "program": "justice-institute",
+    "assets": [
+      {
+        "id": "jibc-monogram",
+        "label": "Justice Institute of British Columbia — Monogram, vector reconstruction",
+        "file": "identity-collected/justice-institute/jibc-monogram.svg",
+        "format": "svg",
+        "isVector": true,
+        "supplied": true,
+        "reconstruction": true,
+        "publisher": "Justice Institute of British Columbia",
+        "sourcePage": null,
+        "sourceUrl": null,
+        "sourceLocator": "The centre of the Institute’s fan-shield shoulder badge (patch S56-O46)",
+        "sourceFile": null,
+        "sourceDate": null,
+        "observedDate": "2026-11-12",
+        "evidenceType": "supplied-vector-reconstruction",
+        "notes": "The Institute’s monogram: a triangle split by a gap, with B and C in its centre. It is the centre of the Institute’s fan-shield badge and, in gold, of its navy roundel (Patches, S56-O46 and S56-O36).",
+        "fidelityNote": "A supplied vector reconstruction, not original artwork: four authored paths — two angular parts and the B and C, with real counters — rebuilt after an image of the badge. The blue (#0141A2) is sampled from that image.",
+        "sha256": "1a45f5dbb07c53fb7450a7494106c9e44edc1671ba86008db0e8609b2c20b9b1",
+        "bytes": 1778,
+        "darkBackground": false,
+        "search": "justice-institute-2026-11-12"
       }
     ]
   }
