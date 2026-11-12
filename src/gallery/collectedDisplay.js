@@ -709,6 +709,30 @@ export const COLLECTED_DISPLAY = {
    "recoloured": false
   }
  },
+ "bcsc-1983-white": {
+  "light": {
+   "file": "identity-display/bcsc-1983-white.light.svg",
+   "aspect": 5.0319,
+   "recoloured": true
+  },
+  "dark": {
+   "file": "identity-display/bcsc-1983-white.dark.svg",
+   "aspect": 5.0319,
+   "recoloured": false
+  }
+ },
+ "bcsc-1983-black": {
+  "light": {
+   "file": "identity-display/bcsc-1983-black.light.svg",
+   "aspect": 5.0319,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/bcsc-1983-black.dark.svg",
+   "aspect": 5.0319,
+   "recoloured": true
+  }
+ },
  "source-expo-86-corporation-expo86-symbol-svg": {
   "light": {
    "file": "identity-display/source-expo-86-corporation-expo86-symbol-svg.light.svg",

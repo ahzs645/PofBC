@@ -57,7 +57,7 @@ export const COLLECTING = [
   {"id":"bc-ferry-corporation","name":"British Columbia Ferry Corporation","shortName":"BC Ferries","kind":"crown-corporation","from":1977,"to":2003,"current":false},
   {"id":"bc-heritage-trust","name":"British Columbia Heritage Trust","kind":"crown-corporation","from":1977,"to":2003,"current":false},
   {"id":"bc-resources-investment-corporation","name":"British Columbia Resources Investment Corporation","shortName":"BCRIC","kind":"crown-corporation","from":1977,"to":1988,"current":false},
-  {"id":"bc-systems-corporation","name":"British Columbia Systems Corporation","shortName":"BC Systems","kind":"crown-corporation","from":1977,"to":1996,"current":false},
+  {"id":"bc-systems-corporation","name":"British Columbia Systems Corporation","shortName":"BC Systems","kind":"crown-corporation","from":1977,"to":2000,"current":false},
   {"id":"urban-transit-authority","name":"Urban Transit Authority","shortName":"UTA","kind":"crown-corporation","from":1978,"to":1982,"current":false},
   {"id":"expo-86-corporation","name":"Expo 86 Corporation","kind":"crown-corporation","from":1979,"to":1986,"current":false},
   {"id":"bc-place-ltd","name":"British Columbia Place Ltd.","kind":"crown-corporation","from":1980,"to":1987,"current":false},

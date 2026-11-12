@@ -22,7 +22,7 @@ const railSightings = read('research/identity/bc-rail-sightings-2026-11-12/sourc
 const PROGRAM_PACKAGES = ['bc-travel-industry-2026-11-12', 'justice-institute-2026-11-12']
   .map((search) => ({ search, register: read(`research/identity/${search}/source-register.json`) }))
 // Supplied packages that add a vector to a body, each read with the search it came from.
-const PACKAGES = ['bc-assessment-vector-2026-11-12', 'bc-power-commission-vector-2026-11-12', 'bc-place-vector-2026-11-12', 'bc-railway-vector-2026-11-12', 'bc-railway-dogwood-vector-2026-11-12']
+const PACKAGES = ['bc-assessment-vector-2026-11-12', 'bc-power-commission-vector-2026-11-12', 'bc-place-vector-2026-11-12', 'bc-railway-vector-2026-11-12', 'bc-railway-dogwood-vector-2026-11-12', 'bc-systems-vector-2026-11-12']
   .map((search) => ({ search, register: read(`research/identity/${search}/source-register.json`) }))
 
 const checked = (asset) => {
@@ -144,7 +144,8 @@ const SUPERSEDED = {
   'source-northern-interior-regional-health-board-northern-interior-regional-health-board-2001-png': 'historical-northern-interior-regional-health-board-blue-2001',
   // The reconstruction keeps the Power Pioneers image as its source download.
   'source-bc-power-commission-bc-power-commission-original-logo-jpg': 'bc-power-commission-rebuilt',
-  'source-bc-place-ltd-bc-place-1983-logo-png': 'bc-place-1983-rebuilt'
+  'source-bc-place-ltd-bc-place-1983-logo-png': 'bc-place-1983-rebuilt',
+  'source-bc-systems-corporation-bc-systems-1983-logo-png': 'bcsc-1983-white'
 }
 
 // Another colourway of the same design: shown inside the design's entry as a version to switch
@@ -161,7 +162,8 @@ const VARIANT_OF = {
   'vector-forest-renewal-bc-1999-black-source-vector': 'vector-forest-renewal-bc-2000-colour-source-vector',
   'historical-capital-health-region-2000-dark-white': 'historical-capital-health-region-2000-dark-grey',
   'source-innovate-bc-innovate-bc-white-eps': 'innovate-bc-2024-colour',
-  'bcr-dogwood-dark': 'bcr-dogwood-white'
+  'bcr-dogwood-dark': 'bcr-dogwood-white',
+  'bcsc-1983-black': 'bcsc-1983-white'
 }
 
 // What each version is called inside its design's entry.
@@ -189,11 +191,14 @@ const VERSION_LABELS = {
   'innovate-bc-2024-colour': 'Full colour',
   'source-innovate-bc-innovate-bc-white-eps': 'White',
   'bcr-dogwood-white': 'White lettering',
-  'bcr-dogwood-dark': 'Dark lettering'
+  'bcr-dogwood-dark': 'Dark lettering',
+  'bcsc-1983-white': 'White (as printed)',
+  'bcsc-1983-black': 'Black'
 }
 
 // Shorter accounts where a body's or file's own record is about a file no longer shown.
 const BODY_NOTES = {
+  'bc-systems-corporation': 'British Columbia Systems Corporation — BC Systems — was established in 1977 to consolidate and coordinate computing and information-system services across the provincial government. Its employees and operating business passed to the Information Technology Services Division on 31 March 1996; the corporation was legally dissolved on 30 April 2000, its remaining assets and liabilities passing to the Province. Its IT functions continued through later shared-services organizations and the Office of the Chief Information Officer, part of the history of today’s Connected Services BC.',
   'bc-railway-company': 'Its wordmark is the BCRC acrostic — British Columbia Railway Company stepped down on four lines, with the initials in red — seen in three letterings: the heavier one on its website, and the wide Eurostile of the 2024 report’s cover and the Verdana of its letterhead.',
   'bc-place-ltd': 'The Crown company that developed BC Place on Vancouver’s False Creek, opening BC Place Stadium on 19 June 1983 and providing the site of Expo 86. Its b/c/p symbol and wordmark are from 1983. In 1987 it was renamed British Columbia Enterprise Corporation, with the BC Development Corporation merged into it, and in 1989 its remaining assets went to the Province and B.C. Pavilion Corporation, which runs the stadium today.',
   'bc-power-commission': 'Established in 1945 to consolidate local electricity systems and extend service to communities outside BC Electric’s territory, the BC Power Commission became one of BC Hydro’s two principal predecessors. BC Hydro was established in 1962, and the authority, BC Electric and the Power Commission were formally amalgamated on 20 August 1965. The emblem is reproduced by BC Hydro Power Pioneers, which documents it on the commission’s red service trucks; its designer and introduction date are unconfirmed.',
@@ -346,7 +351,11 @@ const finished = (asset) => ({
 
 // Where later research changed a body's years: the Steamship Company was renamed in 1994, not
 // dissolved in 1992, and its legal end is untraced.
-const BODY_DATES = { 'bc-steamship-company': { to: null } }
+const BODY_DATES = {
+  'bc-steamship-company': { to: null },
+  // Operations passed to government in 1996; the corporation was dissolved on 30 April 2000.
+  'bc-systems-corporation': { to: 2000 }
+}
 
 const bodies = inventory.bodies.map((body) => {
   const { queries, researchSources, ...display } = body
