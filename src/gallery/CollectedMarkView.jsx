@@ -47,6 +47,9 @@ export const CollectedMarkView = ({ entry }) => {
       <p>{asset.notes}</p>
       <div className="row gallery__asset-downloads">
         <a className="button" href={assetUrl(asset.file)} download>Download {asset.format.toUpperCase()}</a>
+        {(asset.downloads ?? []).map((extra) => (
+          <a key={extra.file} className="button button--ghost" href={assetUrl(extra.file)} download>{extra.label}</a>
+        ))}
         {asset.preview && asset.preview !== asset.file && (
           <a className="button button--ghost" href={assetUrl(asset.preview)} download>Download PNG preview</a>
         )}

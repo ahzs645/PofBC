@@ -163,36 +163,37 @@ export const COLLECTED_BODIES = [
     "current": true,
     "status": "asset-collected",
     "observedDate": "2026-10-22",
-    "notes": "The logo as vector artwork from the official brand kit.",
+    "notes": "The full-colour logo from the official media kit: an SVG converted from its EPS, with the EPS itself as the original download.",
     "assets": [
       {
-        "id": "source-bc-assessment-bc-assessment-eps",
-        "label": "BC Assessment — bc assessment",
-        "file": "identity-collected/bc-assessment/bc-assessment.eps",
-        "format": "eps",
+        "id": "bc-assessment-svg",
+        "label": "BC Assessment — Full colour, official media kit",
+        "file": "identity-collected/bc-assessment/bc-assessment.svg",
+        "format": "svg",
         "isVector": true,
         "supplied": false,
         "reconstruction": false,
-        "publisher": "British Columbia Assessment Authority",
+        "publisher": "BC Assessment",
         "sourcePage": "https://info.bcassessment.ca/about/contact/Pages/Media-Kit.aspx",
         "sourceUrl": "https://info.bcassessment.ca/about/contact/StockImages/BCA-full-colour.eps",
         "sourceLocator": null,
-        "sourceFile": null,
+        "sourceFile": "BCA-full-colour.eps (FCV - BCA - 1a Full colour primary brandmark - CMYK 20150421)",
         "sourceDate": null,
-        "observedDate": "2026-10-22",
-        "evidenceType": "official-download",
-        "notes": "Artwork retrieved from official public website/brand kit. Current observation is not an adoption-date claim.",
-        "fidelityNote": "Published file retained byte for byte and visually inspected. Its source is linked below.",
-        "sha256": "f415a6097f1088b1367daf11ffd737b4e09a9abd3fce2efdd19eeb5aa777bd37",
-        "bytes": 3424170,
+        "observedDate": "2026-11-12",
+        "evidenceType": "official-eps-conversion",
+        "notes": "The symbol above the right end of the BC ASSESSMENT wordmark, in full colour, from the official media kit. The SVG is converted from the media kit's EPS (Illustrator, created May 2015), which is kept as the original download.",
+        "fidelityNote": "Converted from the official EPS with Ghostscript 10.05.1 and MuPDF: the original path geometry, placement and spacing are retained, the white page and unused artboard removed. Colours are converted from the EPS's CMYK to RGB and are not official RGB values. No tracing or font substitution.",
+        "sha256": "7bfe92aee8dfb878f993429897b0c3fb25168d399d817a532a5b7cef497af9f3",
+        "bytes": 9348,
         "darkBackground": false,
-        "extraction": {
-          "vector_type": "vector"
-        },
-        "preview": "identity-collected/bc-assessment/bc-assessment-eps-preview.png",
-        "previewNote": "Excess outer whitespace trimmed in this PNG preview; the native EPS is unchanged.",
-        "previewWidth": 1290,
-        "previewHeight": 887
+        "downloads": [
+          {
+            "label": "Download original EPS",
+            "file": "identity-collected/bc-assessment/bc-assessment.eps",
+            "sha256": "f415a6097f1088b1367daf11ffd737b4e09a9abd3fce2efdd19eeb5aa777bd37"
+          }
+        ],
+        "search": "bc-assessment-vector-2026-11-12"
       }
     ]
   },

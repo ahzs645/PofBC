@@ -25,6 +25,18 @@ export const COLLECTED_DISPLAY = {
    "recoloured": true
   }
  },
+ "bc-assessment-svg": {
+  "light": {
+   "file": "identity-display/bc-assessment-svg.light.svg",
+   "aspect": 1.5388,
+   "recoloured": true
+  },
+  "dark": {
+   "file": "identity-display/bc-assessment-svg.dark.svg",
+   "aspect": 1.5388,
+   "recoloured": false
+  }
+ },
  "source-bc-games-society-bc-games-svg": {
   "light": {
    "file": "identity-display/source-bc-games-society-bc-games-svg.light.svg",

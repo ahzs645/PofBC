@@ -17,6 +17,7 @@ const ticorp = read('research/identity/ticorp-vector-2026-11-08/source-register.
 const followup = read('research/identity/vector-followup-2026-11-08/source-register.json')
 const historical = read('research/identity/historical-vector-followup-2026-10-30/source-register.json')
 const innovate = read('research/identity/innovate-bc-vector-2026-11-12/source-register.json')
+const bcAssessment = read('research/identity/bc-assessment-vector-2026-11-12/source-register.json')
 
 const checked = (asset) => {
   if (!/^identity-collected\/[a-z0-9._/-]+$/i.test(asset.file) || asset.file.includes('..')) {
@@ -96,7 +97,9 @@ const LABELS = {
 const SUPERSEDED = {
   'source-transportation-investment-corporation-transportation-investment-corporation-png': 'vector-ticorp-2025-colour-source-vector',
   'source-bc-housing-bc-housing-png': 'vector-bc-housing-corporate-component-source-vector',
-  'source-bc-assessment-bc-assessment-jpg': 'source-bc-assessment-bc-assessment-eps',
+  'source-bc-assessment-bc-assessment-jpg': 'bc-assessment-svg',
+  // The official EPS stays as the SVG's original download.
+  'source-bc-assessment-bc-assessment-eps': 'bc-assessment-svg',
   'source-columbia-power-columbia-power-png': 'vector-columbia-power-2024-reversed-source-vector',
   'source-infrastructure-bc-infrastructure-bc-png': 'vector-infrastructure-bc-2026-colour-source-vector',
   'source-community-living-bc-community-living-bc-png': 'vector-community-living-bc-2023-colour-source-vector',
@@ -181,7 +184,7 @@ const VERSION_LABELS = {
 const BODY_NOTES = {
   'transportation-investment-corporation': 'One design — the BC emblem, a gold divider and the name on three lines — in full colour and in white, both original vector artwork from Pattullo Bridge Replacement Project publications.',
   'bc-housing': 'The emblem and wordmark, and the Research Centre lockup, as original vector artwork from a BC Housing report.',
-  'bc-assessment': 'The logo as vector artwork from the official brand kit.',
+  'bc-assessment': 'The full-colour logo from the official media kit: an SVG converted from its EPS, with the EPS itself as the original download.',
   'columbia-power': 'The logo as original vector artwork, reversed, from the 2024 history book.',
   'infrastructure-bc': 'One design in full colour and reversed, both original vector artwork from the Spring 2026 brochure.',
   'community-living-bc': 'One design in full colour and reversed, both original vector artwork from its 2014 and 2023 reports.',
@@ -269,6 +272,15 @@ for (const { bodyId, verification, ...asset } of innovate.assets) {
   }
   if (!additions.has(bodyId)) additions.set(bodyId, [])
   additions.get(bodyId).push(checked({ ...asset, search: 'innovate-bc-vector-2026-11-12' }))
+}
+for (const { bodyId, verification, ...asset } of bcAssessment.assets) {
+  if (!bodyIds.has(bodyId)) throw new Error(`Unknown body: ${bodyId}`)
+  if (!verification?.genuineVectorVerified || verification.embeddedImages !== 0 || verification.textElements !== 0 || verification.externalResources?.length !== 0) {
+    throw new Error(`Not verified as pure vector: ${asset.id}`)
+  }
+  for (const extra of asset.downloads ?? []) checked({ file: extra.file, sha256: extra.sha256 })
+  if (!additions.has(bodyId)) additions.set(bodyId, [])
+  additions.get(bodyId).push(checked({ ...asset, search: 'bc-assessment-vector-2026-11-12' }))
 }
 for (const { bodyId, verification, ...asset } of historical.assets) {
   if (!bodyIds.has(bodyId)) throw new Error(`Unknown historical body: ${bodyId}`)
