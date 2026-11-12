@@ -30,7 +30,7 @@ import { BCTS_FOREST, BCTS_TEAL } from './oneOffs.js'
 import { SuppliedMarkView } from './SuppliedMarkView.jsx'
 import { CollectedMarkView } from './CollectedMarkView.jsx'
 import { COLLECTION_RESEARCH, nodesOf, researchLabel } from './collectedCollections.js'
-import { onPage, tileArt } from './tileArt.js'
+import { generatorArt, onPage, tileArt } from './tileArt.js'
 
 const PALETTE_OPTIONS = FLAG_PALETTE_ORDER.map((value) => ({
   value, label: FLAG_PALETTE_LABELS[value], title: FLAG_PALETTE_HINTS[value]
@@ -533,19 +533,34 @@ const SeenAt = ({ urls }) => urls?.length > 0 && (
 )
 
 /**
- * An era without marks in the gallery: an empty slot where they would be, as a body on the "not
- * yet in the gallery" shelf has, and — for an identity the generator draws — a way to it there.
+ * An era without marks in the gallery: for an identity the generator draws, that drawing, the mark
+ * alone, and a way to it there; otherwise an empty slot where the marks would be, as a body on the
+ * "not yet in the gallery" shelf has.
  */
-const EmptyEra = ({ era, onOpenInGenerator }) => (
+const EmptyEra = ({ era, theme, onOpenInGenerator }) => {
+  const art = eraStatus(era) === 'generator' ? generatorArt(era.generator, theme) : null
+  return (
   <div className="gallery__era-missing">
-    <div className="gallery__wanted-slot" data-status={eraStatus(era)}>{EMPTY_SLOT[eraStatus(era)]}</div>
+    {art
+      ? (
+        <div
+          className="gallery__art gallery__era-generator"
+          data-ground="page"
+          role="img"
+          aria-label={`${era.label}, as the generator draws it`}
+          // Built by this project's own renderers; every value is escaped where written.
+          dangerouslySetInnerHTML={{ __html: art }}
+        />
+        )
+      : <div className="gallery__wanted-slot" data-status={eraStatus(era)}>{EMPTY_SLOT[eraStatus(era)]}</div>}
     {era.generator && onOpenInGenerator && (
       <button type="button" className="gallery__graph-link" onClick={() => onOpenInGenerator(era.generator)}>
         Open in the generator <span aria-hidden="true">→</span>
       </button>
     )}
   </div>
-)
+  )
+}
 
 /**
  * A picture's link, named for the site it is on and the file it is — two files on one site would
@@ -622,7 +637,7 @@ const EraSection = ({ era, theme, onOpen, openId, onOpenInGenerator }) => {
               : <Tile key={entry.id} entry={entry} theme={theme} said={said} onOpen={() => onOpen(entry.id)} />)}
           </div>
           )
-        : <EmptyEra era={era} onOpenInGenerator={onOpenInGenerator} />}
+        : <EmptyEra era={era} theme={theme} onOpenInGenerator={onOpenInGenerator} />}
     </section>
   )
 }

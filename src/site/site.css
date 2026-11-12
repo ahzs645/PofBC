@@ -1283,6 +1283,9 @@ input.share__url {
 .gallery__era-missing .gallery__wanted-slot[data-status='none'] { border-style: solid; border-color: var(--border); }
 .gallery__era-missing .gallery__wanted-slot[data-status='generator'] { border-style: solid; color: var(--ink-muted); }
 .gallery__era-missing .gallery__graph-link { margin-top: 10px; }
+/* An identity the generator draws, shown as it draws it: the mark alone, sized like a tile's art. */
+.gallery__era-missing .gallery__era-generator { justify-self: stretch; display: grid; place-items: center; min-height: 96px; padding: 12px 0; }
+.gallery__era-missing .gallery__era-generator svg { width: auto; max-width: 100%; height: 96px; }
 
 /* What an era's dates rest on, under what it was. */
 .gallery__era-dates { margin: 6px 0 0; max-width: 62ch; font-size: 13px; line-height: 1.5; color: var(--ink-faint); }
