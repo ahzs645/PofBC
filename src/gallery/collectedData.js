@@ -2357,31 +2357,37 @@ export const COLLECTED_BODIES = [
     "current": false,
     "status": "asset-collected",
     "observedDate": "2026-10-22",
-    "notes": "Original BCPC truck logo reproduced by BC Hydro Power Pioneers",
+    "notes": "Established in 1945 to consolidate local electricity systems and extend service to communities outside BC Electric’s territory, the BC Power Commission became one of BC Hydro’s two principal predecessors. BC Hydro was established in 1962, and the authority, BC Electric and the Power Commission were formally amalgamated on 20 August 1965. The emblem is reproduced by BC Hydro Power Pioneers, which documents it on the commission’s red service trucks; its designer and introduction date are unconfirmed.",
     "assets": [
       {
-        "id": "source-bc-power-commission-bc-power-commission-original-logo-jpg",
-        "label": "Original BCPC truck logo reproduced by BC Hydro Power Pioneers",
-        "file": "identity-collected/bc-power-commission/bc-power-commission-original-logo.jpg",
-        "format": "jpg",
-        "isVector": false,
-        "supplied": false,
-        "reconstruction": false,
-        "publisher": "BC Hydro Power Pioneers",
+        "id": "bc-power-commission-rebuilt",
+        "label": "British Columbia Power Commission — Emblem, vector reconstruction",
+        "file": "identity-collected/bc-power-commission/bc-power-commission-rebuilt.svg",
+        "format": "svg",
+        "isVector": true,
+        "supplied": true,
+        "reconstruction": true,
+        "publisher": "BC Hydro Power Pioneers (source image)",
         "sourcePage": "https://www.powerpioneers.com/our-community/bc-hydro-history/1945-1962/",
         "sourceUrl": "https://www.powerpioneers.com/media/2016/08/BCPowerCommLogoH.jpg",
         "sourceLocator": null,
         "sourceFile": null,
         "sourceDate": null,
-        "observedDate": "2026-10-22",
-        "evidenceType": "historical-logo-reproduction",
-        "notes": "The historical page identifies this as the original BCPC logo and describes use on bright red trucks. The chapter span 1945–1962 and 2016 upload path do not establish this specimen’s date.",
-        "fidelityNote": "Original published drawing or image recovered from the cited source. Method: The historical page identifies this as the original BCPC logo and describes use on bright red trucks. The chapter span 1945–1962 and 2016 upload path do not establish this specimen’s date.",
-        "sha256": "1b8fd49046bc1337de6bfbb101d940a08224ce4967dcb2575708b9c75ae2f6e2",
-        "bytes": 5205,
+        "observedDate": "2026-11-12",
+        "evidenceType": "supplied-vector-reconstruction",
+        "notes": "The sunburst behind a white arched plaque, with BC in red over POWER COMMISSION in navy. Power Pioneers identifies the emblem as the commission’s original logo and documents it on the commission’s bright red service trucks. Its designer and exact introduction date are unconfirmed.",
+        "fidelityNote": "A supplied vector reconstruction, not original artwork: the sunburst, arched plaque and frame are geometric constructions and the seventeen letters custom outlines, placed after the Power Pioneers image (rebuild_emblem.py; no automatic tracing). Colours are flat approximations of the image (#FFD800, #E60010, #011842). The source image is kept as a download.",
+        "sha256": "e393114a535e5ff777d145e14722a2bffd5463238d6b90b39d4706e6c0838ee4",
+        "bytes": 5537,
         "darkBackground": false,
-        "previewWidth": 240,
-        "previewHeight": 146
+        "downloads": [
+          {
+            "label": "Download source image (JPG)",
+            "file": "identity-collected/bc-power-commission/bc-power-commission-original-logo.jpg",
+            "sha256": "1b8fd49046bc1337de6bfbb101d940a08224ce4967dcb2575708b9c75ae2f6e2"
+          }
+        ],
+        "search": "bc-power-commission-vector-2026-11-12"
       }
     ]
   },
@@ -2715,11 +2721,11 @@ export const COLLECTED_BODIES = [
     "name": "British Columbia Steamship Company (1975) Ltd.",
     "kind": "crown-corporation",
     "from": 1975,
-    "to": 1992,
+    "to": null,
     "current": false,
     "status": "asset-collected",
     "observedDate": "2026-10-22",
-    "notes": "Company emblem photographed on a dated 1987 token",
+    "notes": "A provincial Crown company, separate from BC Ferries, set up in 1975 to keep the Victoria–Seattle Princess Marguerite service. It added the Vancouver Island Princess in 1987, sold its vessels and operating assets to B.C. Stena Line in November 1988, and continued as a corporation, renamed Victoria Line Ltd. in 1994. Its circular emblem is documented on a 1987 casino token; the emblem’s introduction, colours and designer are unconfirmed, and the Princess Marguerite’s own 1983 brochure branding is a separate service identity.",
     "assets": [
       {
         "id": "source-bc-steamship-company-bc-steamship-token-1987-obverse-jpg",

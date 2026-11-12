@@ -18,6 +18,7 @@ const followup = read('research/identity/vector-followup-2026-11-08/source-regis
 const historical = read('research/identity/historical-vector-followup-2026-10-30/source-register.json')
 const innovate = read('research/identity/innovate-bc-vector-2026-11-12/source-register.json')
 const bcAssessment = read('research/identity/bc-assessment-vector-2026-11-12/source-register.json')
+const bcPowerCommission = read('research/identity/bc-power-commission-vector-2026-11-12/source-register.json')
 
 const checked = (asset) => {
   if (!/^identity-collected\/[a-z0-9._/-]+$/i.test(asset.file) || asset.file.includes('..')) {
@@ -135,7 +136,9 @@ const SUPERSEDED = {
   'source-central-vancouver-island-health-region-central-vancouver-island-health-region-1999-png': 'source-central-vancouver-island-health-region-central-vancouver-island-health-region-1999-svg',
   // The hybrid SVG wraps the same low-resolution wordmark as the complete image, which is kept.
   'source-north-okanagan-health-region-north-okanagan-health-region-2000-hybrid-svg': 'source-north-okanagan-health-region-north-okanagan-health-region-2000-png',
-  'source-northern-interior-regional-health-board-northern-interior-regional-health-board-2001-png': 'historical-northern-interior-regional-health-board-blue-2001'
+  'source-northern-interior-regional-health-board-northern-interior-regional-health-board-2001-png': 'historical-northern-interior-regional-health-board-blue-2001',
+  // The reconstruction keeps the Power Pioneers image as its source download.
+  'source-bc-power-commission-bc-power-commission-original-logo-jpg': 'bc-power-commission-rebuilt'
 }
 
 // Another colourway of the same design: shown inside the design's entry as a version to switch
@@ -182,6 +185,8 @@ const VERSION_LABELS = {
 
 // Shorter accounts where a body's or file's own record is about a file no longer shown.
 const BODY_NOTES = {
+  'bc-power-commission': 'Established in 1945 to consolidate local electricity systems and extend service to communities outside BC Electric’s territory, the BC Power Commission became one of BC Hydro’s two principal predecessors. BC Hydro was established in 1962, and the authority, BC Electric and the Power Commission were formally amalgamated on 20 August 1965. The emblem is reproduced by BC Hydro Power Pioneers, which documents it on the commission’s red service trucks; its designer and introduction date are unconfirmed.',
+  'bc-steamship-company': 'A provincial Crown company, separate from BC Ferries, set up in 1975 to keep the Victoria–Seattle Princess Marguerite service. It added the Vancouver Island Princess in 1987, sold its vessels and operating assets to B.C. Stena Line in November 1988, and continued as a corporation, renamed Victoria Line Ltd. in 1994. Its circular emblem is documented on a 1987 casino token; the emblem’s introduction, colours and designer are unconfirmed, and the Princess Marguerite’s own 1983 brochure branding is a separate service identity.',
   'transportation-investment-corporation': 'One design — the BC emblem, a gold divider and the name on three lines — in full colour and in white, both original vector artwork from Pattullo Bridge Replacement Project publications.',
   'bc-housing': 'The emblem and wordmark, and the Research Centre lockup, as original vector artwork from a BC Housing report.',
   'bc-assessment': 'The full-colour logo from the official media kit: an SVG converted from its EPS, with the EPS itself as the original download.',
@@ -273,14 +278,14 @@ for (const { bodyId, verification, ...asset } of innovate.assets) {
   if (!additions.has(bodyId)) additions.set(bodyId, [])
   additions.get(bodyId).push(checked({ ...asset, search: 'innovate-bc-vector-2026-11-12' }))
 }
-for (const { bodyId, verification, ...asset } of bcAssessment.assets) {
+for (const { bodyId, verification, ...asset } of [...bcAssessment.assets, ...bcPowerCommission.assets]) {
   if (!bodyIds.has(bodyId)) throw new Error(`Unknown body: ${bodyId}`)
   if (!verification?.genuineVectorVerified || verification.embeddedImages !== 0 || verification.textElements !== 0 || verification.externalResources?.length !== 0) {
     throw new Error(`Not verified as pure vector: ${asset.id}`)
   }
   for (const extra of asset.downloads ?? []) checked({ file: extra.file, sha256: extra.sha256 })
   if (!additions.has(bodyId)) additions.set(bodyId, [])
-  additions.get(bodyId).push(checked({ ...asset, search: 'bc-assessment-vector-2026-11-12' }))
+  additions.get(bodyId).push(checked({ ...asset, search: asset.id === 'bc-power-commission-rebuilt' ? 'bc-power-commission-vector-2026-11-12' : 'bc-assessment-vector-2026-11-12' }))
 }
 for (const { bodyId, verification, ...asset } of historical.assets) {
   if (!bodyIds.has(bodyId)) throw new Error(`Unknown historical body: ${bodyId}`)
@@ -311,6 +316,10 @@ const finished = (asset) => ({
   ...(VARIANT_OF[asset.id] ? { variantOf: VARIANT_OF[asset.id] } : {})
 })
 
+// Where later research changed a body's years: the Steamship Company was renamed in 1994, not
+// dissolved in 1992, and its legal end is untraced.
+const BODY_DATES = { 'bc-steamship-company': { to: null } }
+
 const bodies = inventory.bodies.map((body) => {
   const { queries, researchSources, ...display } = body
   for (const asset of kept(display.assets)) checked(asset)
@@ -325,6 +334,7 @@ const bodies = inventory.bodies.map((body) => {
   return {
     ...record,
     ...(BODY_NOTES[body.id] ? { notes: BODY_NOTES[body.id] } : {}),
+    ...BODY_DATES[body.id],
     assets: kept(record.assets).map(finished)
   }
 })

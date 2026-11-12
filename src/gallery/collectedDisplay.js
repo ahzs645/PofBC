@@ -625,6 +625,18 @@ export const COLLECTED_DISPLAY = {
    "recoloured": true
   }
  },
+ "bc-power-commission-rebuilt": {
+  "light": {
+   "file": "identity-display/bc-power-commission-rebuilt.light.svg",
+   "aspect": 1.3986,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/bc-power-commission-rebuilt.light.svg",
+   "aspect": 1.3986,
+   "recoloured": false
+  }
+ },
  "historical-bc-buildings-corporation-2005": {
   "light": {
    "file": "identity-display/historical-bc-buildings-corporation-2005.light.svg",
