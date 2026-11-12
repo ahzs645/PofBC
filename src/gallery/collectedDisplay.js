@@ -37,6 +37,30 @@ export const COLLECTED_DISPLAY = {
    "recoloured": true
   }
  },
+ "bc-housing-houses": {
+  "light": {
+   "file": "identity-display/bc-housing-houses.light.svg",
+   "aspect": 1.2861,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/bc-housing-houses.dark.svg",
+   "aspect": 1.2861,
+   "recoloured": true
+  }
+ },
+ "bc-housing-houses-white": {
+  "light": {
+   "file": "identity-display/bc-housing-houses-white.light.svg",
+   "aspect": 1.2861,
+   "recoloured": true
+  },
+  "dark": {
+   "file": "identity-display/bc-housing-houses-white.dark.svg",
+   "aspect": 1.2861,
+   "recoloured": false
+  }
+ },
  "bcrc-2024-cover-rebuilt": {
   "light": {
    "file": "identity-display/bcrc-2024-cover-rebuilt.light.svg",

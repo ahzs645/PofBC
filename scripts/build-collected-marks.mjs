@@ -24,7 +24,7 @@ const sharedServices = read('research/identity/shared-services-bc-2026-11-12/sou
 const PROGRAM_PACKAGES = ['bc-travel-industry-2026-11-12', 'justice-institute-2026-11-12', 'auditor-general-2026-11-12', 'bc-online-2026-11-12']
   .map((search) => ({ search, register: read(`research/identity/${search}/source-register.json`) }))
 // Supplied packages that add a vector to a body, each read with the search it came from.
-const PACKAGES = ['bc-assessment-vector-2026-11-12', 'bc-power-commission-vector-2026-11-12', 'bc-place-vector-2026-11-12', 'bc-railway-vector-2026-11-12', 'bc-railway-dogwood-vector-2026-11-12', 'bc-systems-vector-2026-11-12', 'bc-housing-1978-vector-2026-11-12', 'bc-petroleum-vector-2026-11-12']
+const PACKAGES = ['bc-assessment-vector-2026-11-12', 'bc-power-commission-vector-2026-11-12', 'bc-place-vector-2026-11-12', 'bc-railway-vector-2026-11-12', 'bc-railway-dogwood-vector-2026-11-12', 'bc-systems-vector-2026-11-12', 'bc-housing-1978-vector-2026-11-12', 'bc-petroleum-vector-2026-11-12', 'bc-housing-houses-vector-2026-11-12']
   .map((search) => ({ search, register: read(`research/identity/${search}/source-register.json`) }))
 
 const checked = (asset) => {
@@ -172,7 +172,8 @@ const VARIANT_OF = {
   'bcsc-1983-black': 'bcsc-1983-white',
   'jibc-logo-reversed': 'jibc-logo',
   'bcpc-stacked-black': 'bcpc-stacked-white',
-  'bcpc-emblem-white': 'bcpc-emblem-black'
+  'bcpc-emblem-white': 'bcpc-emblem-black',
+  'bc-housing-houses-white': 'bc-housing-houses'
 }
 
 // What each version is called inside its design's entry.
@@ -208,11 +209,14 @@ const VERSION_LABELS = {
   'bcpc-stacked-white': 'White (as printed)',
   'bcpc-stacked-black': 'Black',
   'bcpc-emblem-black': 'Black (as printed)',
-  'bcpc-emblem-white': 'White'
+  'bcpc-emblem-white': 'White',
+  'bc-housing-houses': 'Black',
+  'bc-housing-houses-white': 'White'
 }
 
 // Shorter accounts where a body's or file's own record is about a file no longer shown.
 const BODY_NOTES = {
+  'provincial-rental-housing-corporation': 'No separate PRHC logo or readable seal has been found. Incorporated in 1961 as Pemco Holdings Ltd., renamed British Columbia Housing Corporation and then, in December 1976, Provincial Rental Housing Corporation. It holds land and has no staff; BC Housing acts for it, and its correspondence and signage carry BC Housing’s identity. Its own reports use plain name headings. Leads: BC Housing’s PRHC land files and CMHC’s British Columbia files at Library and Archives Canada.',
   'bc-petroleum-corporation': 'The Crown corporation that bought and sold the province’s natural gas from 1973. Its curled-flame emblem, alone and over its four-line name, from its 1982/83 and 1991/92 annual reports.',
   'bc-systems-corporation': 'The Province’s shared computing corporation, from 1977. Its operations moved into government in 1996 and it was dissolved in 2000; its role continues in today’s Connected Services BC.',
   'bc-railway-company': 'Its wordmark is the BCRC acrostic — British Columbia Railway Company stepped down on four lines, with the initials in red — seen in three letterings: the heavier one on its website, and the wide Eurostile of the 2024 report’s cover and the Verdana of its letterhead.',
@@ -220,7 +224,7 @@ const BODY_NOTES = {
   'bc-power-commission': 'The public utility that brought power to communities outside BC Electric’s territory from 1945, and one of BC Hydro’s two predecessors (established 1962, amalgamated 1965). Its emblem was on the commission’s red service trucks.',
   'bc-steamship-company': 'The Crown company that ran the Princess Marguerite between Victoria and Seattle from 1975. It sold its ships in 1988 and was renamed Victoria Line Ltd. in 1994.',
   'transportation-investment-corporation': 'One design in full colour and white, both original vector artwork from Pattullo Bridge Replacement Project publications.',
-  'bc-housing': 'The British Columbia Housing Management Commission, known as BC Housing, since 1967: its house-shaped BC of 1978, and today’s emblem and the Research Centre lockup.',
+  'bc-housing': 'The British Columbia Housing Management Commission, known as BC Housing, since 1967: its house-shaped BC of 1978, the illustrated houses it registered as a trademark (advertised 2010), and today’s emblem from its 2015 rebrand, with the Research Centre lockup.',
   'bc-assessment': 'The full-colour logo from the official media kit: an SVG converted from its EPS, with the EPS itself as the original download.',
   'columbia-power': 'The logo as original vector artwork, reversed, from the 2024 history book.',
   'infrastructure-bc': 'One design in full colour and reversed, both original vector artwork from the Spring 2026 brochure.',
