@@ -29,6 +29,7 @@ import { useSiteTheme } from '../site/useTheme.js'
 import { BCTS_FOREST, BCTS_TEAL } from './oneOffs.js'
 import { SuppliedMarkView } from './SuppliedMarkView.jsx'
 import { CollectedMarkView } from './CollectedMarkView.jsx'
+import { RailwayHistory, RailwayHistoryLinks } from './RailwayHistory.jsx'
 import { COLLECTION_RESEARCH, nodesOf, researchLabel } from './collectedCollections.js'
 import { onPage, tileArt } from './tileArt.js'
 
@@ -755,6 +756,8 @@ const writePlace = (collection, mark) => {
     if (value) url.searchParams.set(key, value)
     else url.searchParams.delete(key)
   }
+  // A section anchor belongs to the page being left, not to a different mark or collection.
+  if (/^#railway-(history|connections|evidence)$/.test(url.hash)) url.hash = ''
   globalThis.history.replaceState(null, '', url)
 }
 
@@ -879,6 +882,7 @@ export const GalleryView = ({ onOpenGovernment, onOpenInGenerator }) => {
             {markTimeline.eras.map(eraSection)}
           </section>
         )}
+        <RailwayHistory history={collection?.railwayHistory} compact />
         <AboutMark identity={open.identity} />
       </div>
     )
@@ -934,6 +938,7 @@ export const GalleryView = ({ onOpenGovernment, onOpenInGenerator }) => {
         <GraphLink node={collection.graphNode} onOpenGovernment={onOpenGovernment} />
       </div>
       <p className="gallery__intro">{collection.intro}</p>
+      <RailwayHistoryLinks history={collection.railwayHistory} />
 
       {timeline}
       {collection.eras
@@ -945,6 +950,7 @@ export const GalleryView = ({ onOpenGovernment, onOpenInGenerator }) => {
             ))}
           </div>
           )}
+      <RailwayHistory history={collection.railwayHistory} />
       <AboutCollection collection={collection} />
     </div>
   )

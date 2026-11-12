@@ -2,6 +2,7 @@
 // A date on a report is a sighting, never an inferred logo adoption date.
 import { COLLECTED_BODIES, COLLECTED_SPECIMENS } from './collectedData.js'
 import { COLLECTED_DISPLAY } from './collectedDisplay.js'
+import { RAILWAY_HISTORY } from './railwayHistoryData.js'
 
 /**
  * The file a body's card shows: one with a display copy that keeps its own colours on the light
@@ -26,7 +27,9 @@ const collectedEntry = (asset, timeline, owner) => ({
   ...(owner ? { owner } : {}),
   label: asset.label,
   note: asset.notes,
-  years: asset.sourceDate ? `Seen ${asset.sourceDate}` : 'Logo dates unestablished',
+  years: asset.sourceReproduction && asset.historicalDateLabel && asset.sourceDate
+    ? `${asset.historicalDateLabel} · reproduced ${asset.sourceDate}`
+    : asset.sourceDate ? `Seen ${asset.sourceDate}` : 'Logo dates unestablished',
   asset,
   identity: {
     provenance: asset.reconstruction ? 'third_party_reconstruction' : asset.supplied ? 'original_supplied' : asset.isVector ? 'published_vector' : 'published_raster',
@@ -36,7 +39,9 @@ const collectedEntry = (asset, timeline, owner) => ({
       kind: asset.sourceDate ? 'dated_specimen' : 'unknown',
       years: asset.sourceDate || 'undated',
       note: asset.sourceDate
-        ? 'This is the date of the cited specimen, not a verified first use or adoption date. ' + (asset.dateNote || '')
+        ? (asset.sourceReproduction
+            ? 'This dates the publication reproducing the historical artwork. The historical use is described separately; the reproduction date does not date the design’s adoption. '
+            : 'This is the date of the cited specimen, not a verified first use or adoption date. ') + (asset.dateNote || '')
         : `Collected on ${asset.observedDate}. A retrieval date does not establish when the design was adopted.`,
     },
     rights: {
@@ -123,7 +128,7 @@ const lineCollection = (line) => {
   const last = bodies.at(-1)
   const eras = bodies.map((body, at) => nameEra(body, at ? bodies[at - 1].to : body.from, at < bodies.length - 1 ? body.to : last.current ? null : last.to, bodies[at + 1]))
   const earlier = bodies.slice(0, -1)
-  return {
+  const collection = {
     ...collectionOf(last),
     graphNodes: [last.id, ...earlier.map((body) => body.id)],
     aliases: earlier.map((body) => `collected-${body.id}`),
@@ -135,6 +140,31 @@ const lineCollection = (line) => {
     cover: coverOf(bodies.flatMap((body) => body.assets).reverse()) ?? last.assets[0]?.id,
     entries: undefined,
     eras
+  }
+  if (last.id !== 'bc-railway-company') return collection
+
+  // A named body can have several designs in use at once. The railway's researched design
+  // groups replace the two generic name eras without changing any collection or artwork URL.
+  const entries = new Map(eras.flatMap((era) => era.entries).map((entry) => [entry.id, entry]))
+  const placed = new Set()
+  const researchedEras = RAILWAY_HISTORY.eras.map(({ assetIds = [], ...era }) => ({
+    ...era,
+    entries: assetIds.map((id) => {
+      if (!entries.has(id)) throw new Error(`Railway era ${era.id} names an unknown asset: ${id}`)
+      if (placed.has(id)) throw new Error(`Railway asset is in more than one era: ${id}`)
+      placed.add(id)
+      return entries.get(id)
+    })
+  }))
+  for (const id of entries.keys()) {
+    if (!placed.has(id)) throw new Error(`Railway asset has no researched era: ${id}`)
+  }
+  return {
+    ...collection,
+    years: RAILWAY_HISTORY.years ?? collection.years,
+    intro: RAILWAY_HISTORY.intro,
+    eras: researchedEras,
+    railwayHistory: RAILWAY_HISTORY
   }
 }
 
