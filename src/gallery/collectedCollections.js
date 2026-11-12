@@ -47,7 +47,9 @@ const collectedEntry = (asset, timeline, owner, versions = [asset]) => ({
   ...(owner ? { owner } : {}),
   label: versions.length > 1 ? asset.publisher : asset.label,
   // A design's card names its versions; each version's own account is on the design's page.
-  note: versions.length > 1 ? versions.map((each) => `${each.label.split(' — ').at(-1)}.`).join(' ') : asset.notes,
+  note: versions.length > 1
+    ? `${asset.notes} In ${versions.length} versions: ${versions.map((each) => (each.versionLabel ?? each.label.split(' — ').at(-1)).toLowerCase()).join(' and ')}.`
+    : asset.notes,
   years: seenDates(versions) ? `Seen ${seenDates(versions)}` : 'Logo dates unestablished',
   asset,
   ...(versions.length > 1 ? { versions } : {}),

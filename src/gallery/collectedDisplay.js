@@ -49,6 +49,30 @@ export const COLLECTED_DISPLAY = {
    "recoloured": true
   }
  },
+ "bcr-dogwood-white": {
+  "light": {
+   "file": "identity-display/bcr-dogwood-white.light.svg",
+   "aspect": 3.9618,
+   "recoloured": true
+  },
+  "dark": {
+   "file": "identity-display/bcr-dogwood-white.dark.svg",
+   "aspect": 3.9618,
+   "recoloured": false
+  }
+ },
+ "bcr-dogwood-dark": {
+  "light": {
+   "file": "identity-display/bcr-dogwood-dark.light.svg",
+   "aspect": 3.9618,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/bcr-dogwood-dark.dark.svg",
+   "aspect": 3.9618,
+   "recoloured": true
+  }
+ },
  "bc-assessment-svg": {
   "light": {
    "file": "identity-display/bc-assessment-svg.light.svg",

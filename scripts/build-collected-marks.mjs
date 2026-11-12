@@ -22,7 +22,7 @@ const railSightings = read('research/identity/bc-rail-sightings-2026-11-12/sourc
 const PROGRAM_PACKAGES = ['bc-travel-industry-2026-11-12', 'justice-institute-2026-11-12']
   .map((search) => ({ search, register: read(`research/identity/${search}/source-register.json`) }))
 // Supplied packages that add a vector to a body, each read with the search it came from.
-const PACKAGES = ['bc-assessment-vector-2026-11-12', 'bc-power-commission-vector-2026-11-12', 'bc-place-vector-2026-11-12', 'bc-railway-vector-2026-11-12']
+const PACKAGES = ['bc-assessment-vector-2026-11-12', 'bc-power-commission-vector-2026-11-12', 'bc-place-vector-2026-11-12', 'bc-railway-vector-2026-11-12', 'bc-railway-dogwood-vector-2026-11-12']
   .map((search) => ({ search, register: read(`research/identity/${search}/source-register.json`) }))
 
 const checked = (asset) => {
@@ -160,7 +160,8 @@ const VARIANT_OF = {
   'source-first-nations-health-authority-fnha-white-png': 'source-first-nations-health-authority-fnha-horizontal-png',
   'vector-forest-renewal-bc-1999-black-source-vector': 'vector-forest-renewal-bc-2000-colour-source-vector',
   'historical-capital-health-region-2000-dark-white': 'historical-capital-health-region-2000-dark-grey',
-  'source-innovate-bc-innovate-bc-white-eps': 'innovate-bc-2024-colour'
+  'source-innovate-bc-innovate-bc-white-eps': 'innovate-bc-2024-colour',
+  'bcr-dogwood-dark': 'bcr-dogwood-white'
 }
 
 // What each version is called inside its design's entry.
@@ -186,7 +187,9 @@ const VERSION_LABELS = {
   'historical-capital-health-region-2000-dark-grey': 'Dark and grey',
   'historical-capital-health-region-2000-dark-white': 'Dark and white',
   'innovate-bc-2024-colour': 'Full colour',
-  'source-innovate-bc-innovate-bc-white-eps': 'White'
+  'source-innovate-bc-innovate-bc-white-eps': 'White',
+  'bcr-dogwood-white': 'White lettering',
+  'bcr-dogwood-dark': 'Dark lettering'
 }
 
 // Shorter accounts where a body's or file's own record is about a file no longer shown.
