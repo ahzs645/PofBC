@@ -59,6 +59,26 @@ export const TIMELINES = {
     label: 'The BC mark',
     eras: [
       {
+        id: 'bc-mark-department-marks',
+        status: 'held',
+        marks: ['bc-travel-industry-ca-1970'],
+        years: 'about 1970',
+        label: 'Before the crest: department marks',
+        note: 'Before a common identity, departments published under marks of their own. The Department of ' +
+          'Travel Industry’s set BRITISH COLUMBIA and two dogwood blossoms inside a green outline of the ' +
+          'province, with the department’s name beneath them.',
+        applicability: {
+          kind: 'dated_specimen',
+          years: 'about 1970',
+          note: 'Seen in the Department’s book “This is British Columbia”, which is undated and catalogued as ' +
+            'about 1970. The Department of Travel Industry existed from 1967 to 1975; how long the mark was ' +
+            'used, and whether other departments had marks like it, is not established.'
+        },
+        sources: [
+          { title: '“This is British Columbia”, published by the Department of Travel Industry of the Province of British Columbia, undated [about 1970]', print: true }
+        ]
+      },
+      {
         id: 'bc-mark-flag',
         status: 'generator',
         years: 'about 1983–2005',

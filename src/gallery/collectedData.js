@@ -6756,5 +6756,34 @@ export const COLLECTED_SPECIMENS = [
         "search": "vector-followup-2026-11-08"
       }
     ]
+  },
+  {
+    "program": "travel-industry",
+    "assets": [
+      {
+        "id": "bc-travel-industry-ca-1970",
+        "label": "Department of Travel Industry — Map and dogwood, about 1970",
+        "file": "identity-collected/travel-industry/bc-travel-industry-ca-1970.svg",
+        "format": "svg",
+        "isVector": true,
+        "supplied": true,
+        "reconstruction": true,
+        "publisher": "Department of Travel Industry, Province of British Columbia",
+        "sourcePage": null,
+        "sourceUrl": null,
+        "sourceLocator": "“This is British Columbia”, published by the Department of Travel Industry, undated [about 1970]",
+        "sourceFile": "This is British Columbia",
+        "sourceDate": "about 1970",
+        "observedDate": "2026-11-12",
+        "dateNote": "The book is undated; “about 1970” is its catalogue estimate. The Department of Travel Industry existed from 1967 to 1975.",
+        "evidenceType": "supplied-vector-reconstruction",
+        "notes": "The province’s outline in green, with a black edge, carrying BRITISH COLUMBIA, two dogwood blossoms on a branch, and “Department of TRAVEL INDUSTRY”. Seen in the Department’s book “This is British Columbia”, about 1970.",
+        "fidelityNote": "A supplied vector reconstruction, not original artwork: the map, the dogwood and 41 hand-authored letters are rebuilt from line segments and Bézier curves after a photograph of the logo in the book, with the flowers redrawn after a closer floral reference (no automatic tracing). Colours are flat approximations of the print. The typeface is not identified.",
+        "sha256": "d417e69638ae8c999b4c4dcca19162cbcbc8370e119df08d6ca078d26344d139",
+        "bytes": 38388,
+        "darkBackground": false,
+        "search": "bc-travel-industry-2026-11-12"
+      }
+    ]
   }
 ]

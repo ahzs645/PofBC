@@ -77,8 +77,8 @@ export const collectedEntriesOf = (bodyId) => designsOf(BODIES.get(bodyId)?.asse
   .map(({ asset, versions }) => collectedEntry(asset, undefined, bodyId, versions))
 
 /** Published specimens folded into a researched collection rather than a one-off timeline. */
-export const specimenEntriesOf = (program) => (COLLECTED_SPECIMENS.find((each) => each.program === program)?.assets ?? [])
-  .map((asset) => collectedEntry(asset))
+export const specimenEntriesOf = (program, timeline) => (COLLECTED_SPECIMENS.find((each) => each.program === program)?.assets ?? [])
+  .map((asset) => collectedEntry(asset, timeline))
 
 const collectionOf = (body) => ({
   id: `collected-${body.id}`,

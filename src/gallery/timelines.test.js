@@ -17,9 +17,11 @@ test('every era says what it is, what its dates rest on, and where they come fro
     assert.ok(era.applicability?.kind in APPLICABILITY, `${where}: applicability ${era.applicability?.kind}`)
     assert.ok(era.applicability.years?.trim() && era.applicability.note?.trim(), `${where}: dates unexplained`)
     assert.ok(era.sources?.length > 0, `${where}: no source`)
-    for (const { title, url } of era.sources) {
+    for (const { title, url, print } of era.sources) {
       assert.ok(title?.trim(), `${where}: a source without a title`)
-      assert.match(url, /^https:\/\//, `${where}: ${url}`)
+      // A printed source not found online says so, and is the only kind without a link.
+      if (print) assert.equal(url, undefined, `${where}: a print source is named, not linked`)
+      else assert.match(url, /^https:\/\//, `${where}: ${url}`)
     }
     for (const url of era.seenAt ?? []) assert.match(url, /^https:\/\//, `${where}: ${url}`)
     assert.equal(era.status === 'generator', Boolean(era.generator), `${where}: a generator era says how to open it, and only one does`)

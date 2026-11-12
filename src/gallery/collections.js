@@ -1048,7 +1048,11 @@ export const GALLERY_COLLECTIONS = [
     intro: 'Names set beside the BC mark, each drawn once for one body, program or campaign, following ' +
       'no pattern that generalises — so they sit here rather than in the generator, which is built on ' +
       'patterns. Open one to recolour it.',
-    entries: ONE_OFFS.filter((entry) => !PARKS_ONE_OFFS.includes(entry.id)).map(provincial)
+    entries: [
+      ...ONE_OFFS.filter((entry) => !PARKS_ONE_OFFS.includes(entry.id)).map(provincial),
+      // Before the crest: a department's own mark, on the BC mark's timeline.
+      ...specimenEntriesOf('travel-industry', 'bc-mark')
+    ]
   }
 ]
 
@@ -1057,7 +1061,8 @@ export const GALLERY_COLLECTIONS = [
 GALLERY_COLLECTIONS.push(...COLLECTED_COLLECTIONS.filter((candidate) =>
   !GALLERY_COLLECTIONS.some((held) => nodesOf(held).includes(candidate.graphNode))))
 // WorkSafeBC's specimens are folded into its collection above; the one-off programs keep theirs.
-GALLERY_COLLECTIONS.push(...SPECIMEN_COLLECTIONS.filter((collection) => collection.id !== 'specimens-worksafebc'))
+// The Department of Travel Industry's is folded into the BC mark collection.
+GALLERY_COLLECTIONS.push(...SPECIMEN_COLLECTIONS.filter((collection) => !['specimens-worksafebc', 'specimens-travel-industry'].includes(collection.id)))
 
 /** The collection holding a body's logos — its own, or one it carried on as under a later name. */
 export const collectionOfNode = (node) => GALLERY_COLLECTIONS.find((collection) => nodesOf(collection).includes(node))

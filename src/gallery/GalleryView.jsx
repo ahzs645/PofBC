@@ -475,9 +475,10 @@ const Sources = ({ sources }) => sources?.length > 0 && (
   <p className="gallery__sources">
     <span>{sources.length === 1 ? 'Source' : 'Sources'}:</span>{' '}
     {sources.map((source, index) => (
-      <span key={source.url}>
+      <span key={source.url ?? source.title}>
         {index > 0 && '; '}
-        <a href={source.url} target="_blank" rel="noreferrer">{source.title}</a>
+        {/* A printed source not found online is named, with no link. */}
+        {source.url ? <a href={source.url} target="_blank" rel="noreferrer">{source.title}</a> : <cite>{source.title}</cite>}
         {source.locator && <span className="gallery__sources-locator">, {source.locator}</span>}
       </span>
     ))}

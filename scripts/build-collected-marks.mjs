@@ -18,6 +18,7 @@ const followup = read('research/identity/vector-followup-2026-11-08/source-regis
 const historical = read('research/identity/historical-vector-followup-2026-10-30/source-register.json')
 const innovate = read('research/identity/innovate-bc-vector-2026-11-12/source-register.json')
 const bcAssessment = read('research/identity/bc-assessment-vector-2026-11-12/source-register.json')
+const travelIndustry = read('research/identity/bc-travel-industry-2026-11-12/source-register.json')
 const bcPowerCommission = read('research/identity/bc-power-commission-vector-2026-11-12/source-register.json')
 
 const checked = (asset) => {
@@ -264,6 +265,16 @@ for (const entry of ticorp.assets) {
 for (const entry of followup.assets) {
   if (!additions.has(entry.bodyId)) additions.set(entry.bodyId, [])
   additions.get(entry.bodyId).push(fromRegister(entry, 'vector-followup-2026-11-08'))
+}
+
+// A program's mark held as a supplied reconstruction, with no body of its own in the inventory: the
+// Department of Travel Industry's, on the Province's own timeline (gallery collection "bc-mark").
+for (const { verification, ...asset } of travelIndustry.assets) {
+  if (!verification?.genuineVectorVerified || verification.embeddedImages !== 0 || verification.textElements !== 0) {
+    throw new Error(`Not verified as pure vector: ${asset.id}`)
+  }
+  if (!additions.has(travelIndustry.program)) additions.set(travelIndustry.program, [])
+  additions.get(travelIndustry.program).push(checked({ ...asset, search: 'bc-travel-industry-2026-11-12' }))
 }
 
 // Historical specimens use inventory-shaped records; detailed extraction evidence stays in

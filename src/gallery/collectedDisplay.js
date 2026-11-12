@@ -1082,5 +1082,17 @@ export const COLLECTED_DISPLAY = {
    "aspect": 5.2691,
    "recoloured": false
   }
+ },
+ "bc-travel-industry-ca-1970": {
+  "light": {
+   "file": "identity-display/bc-travel-industry-ca-1970.light.svg",
+   "aspect": 1.4192,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/bc-travel-industry-ca-1970.light.svg",
+   "aspect": 1.4192,
+   "recoloured": false
+  }
  }
 }
