@@ -4599,11 +4599,11 @@ export const COLLECTED_BODIES = [
     "current": false,
     "status": "asset-collected",
     "observedDate": "2026-10-22",
-    "notes": "Authentic marks recovered from original published documents or official letterheads. Dates identify source sightings, not first use. Vector files were not invented from scans.",
+    "notes": "The region’s blue-and-green flower around a white cross, from the cover of a September 2000 project report it shared with the BC Cancer Agency; the source image is only 78 pixels square, and no sharper original has been found. Leads: recruitment advertisements with its slogan “Integrating Health Care” in Canadian Nurse, June 1998 and May 2000 (vol. 96, no. 5, pp. 46 and 49). Amalgamated into the Fraser Health Authority in December 2001.",
     "assets": [
       {
         "id": "source-fraser-valley-health-region-fraser-valley-health-region-2000-jpg",
-        "label": "September 2000 project-report symbol",
+        "label": "Fraser Valley Health Region — Flower and cross",
         "file": "identity-collected/fraser-valley-health-region/fraser-valley-health-region-2000.jpg",
         "format": "jpg",
         "isVector": false,
@@ -4617,7 +4617,7 @@ export const COLLECTED_BODIES = [
         "sourceDate": "2000-09-27",
         "observedDate": "2026-10-22",
         "evidenceType": "original-embedded-image",
-        "notes": "Original embedded JPEG extracted losslessly as xref 44 from cover of Fraser Valley Health Centre and Eastern Fraser Valley Cancer Centre Project Definition Report. Report date September 27, 2000 shown next page. The left blue/green rosette is the region mark; separate BC Cancer symbol at right not included. Source logo only 78×78 pixels; no invented high-resolution/vector version.",
+        "notes": "Four petals in blue and green around a white cross, from the cover of the Fraser Valley Health Centre / Eastern Fraser Valley Cancer Centre project report of September 2000. The report embeds it at only 78 pixels square.",
         "fidelityNote": "Original published drawing or image recovered from the cited source. Method: Original embedded JPEG extracted losslessly as xref 44 from cover of Fraser Valley Health Centre and Eastern Fraser Valley Cancer Centre Project Definition Report. Report date September 27, 2000 shown next page. The left blue/green rosette is the region mark; separate BC Cancer symbol at right not included. Source logo only 78×78 pixels; no invented high-resolution/vector version.",
         "sha256": "a4ba2a46463dfc642280e8fa5ecfee08e14fa454d0129c52a7f5b1bdee3806b7",
         "bytes": 2413,
@@ -7266,6 +7266,71 @@ export const COLLECTED_SPECIMENS = [
         "sha256": "4a92b948f0c5d5e159465659d2703d049daa6d8f31c86e173991825be9cd6bc7",
         "bytes": 12964,
         "search": "bc-online-2026-11-12"
+      }
+    ]
+  },
+  {
+    "program": "sub-bc-cancer",
+    "assets": [
+      {
+        "id": "bc-cancer-agency-lockup",
+        "label": "BC Cancer Agency — Emblem and name",
+        "file": "identity-collected/bc-cancer/bc-cancer-agency-lockup-2015.svg",
+        "format": "svg",
+        "isVector": true,
+        "supplied": false,
+        "reconstruction": false,
+        "publisher": "BC Cancer Agency",
+        "sourcePage": "https://www.bccancer.bc.ca/about-site/Documents/ResearchReport2015_Final_Web.pdf",
+        "sourceUrl": "https://www.bccancer.bc.ca/about-site/Documents/ResearchReport2015_Final_Web.pdf",
+        "sourceLocator": "Research Report 2015, PDF page 32",
+        "sourceFile": "BC Cancer Agency Research Report 2015",
+        "sourceDate": "2015",
+        "observedDate": "2026-11-12",
+        "dateNote": "The report’s year, not an adoption date; the designer and introduction date are not established.",
+        "evidenceType": "native-pdf-vector-extraction",
+        "notes": "The circular emblem beside “BC Cancer Agency”, with “CARE + RESEARCH” and the Provincial Health Services Authority line beneath, in blue and warm grey: the agency’s logo until its identity as BC Cancer in November 2017.",
+        "fidelityNote": "The report’s own vector paths, exported from PDF page 32 with the lettering already outlined; not traced or redrawn. Colours are the publication’s RGB rendering; the 2010 Radiation Therapy booklet names them as PANTONE 273 U (blue) and PANTONE Warm Gray 11 U, in artwork from an Illustrator file “BCCA_Template_Horz” dated 21 June 2007.",
+        "sha256": "8fe35b19369b95e2d430961c90cbae068e1600a99401b6ce3303ae71cff4858b",
+        "bytes": 33190,
+        "darkBackground": false,
+        "alsoSeen": [
+          {
+            "date": "2010",
+            "source": "https://www.bccancer.bc.ca/patient-and-public-info-site/Documents/Radiation_Therapy_What_to_Expect_Chinese_English_2.pdf"
+          }
+        ],
+        "search": "bc-cancer-agency-2026-11-12"
+      },
+      {
+        "id": "bc-cancer-agency-emblem",
+        "label": "BC Cancer Agency — Emblem",
+        "file": "identity-collected/bc-cancer/bc-cancer-agency-emblem-2015.svg",
+        "format": "svg",
+        "isVector": true,
+        "supplied": false,
+        "reconstruction": false,
+        "publisher": "BC Cancer Agency",
+        "sourcePage": "https://www.bccancer.bc.ca/about-site/Documents/ResearchReport2015_Final_Web.pdf",
+        "sourceUrl": "https://www.bccancer.bc.ca/about-site/Documents/ResearchReport2015_Final_Web.pdf",
+        "sourceLocator": "Research Report 2015, PDF page 32",
+        "sourceFile": "BC Cancer Agency Research Report 2015",
+        "sourceDate": "2015",
+        "observedDate": "2026-11-12",
+        "dateNote": "The report’s year, not an adoption date; the designer and introduction date are not established.",
+        "evidenceType": "native-pdf-vector-extraction",
+        "notes": "The agency’s circular emblem alone, in blue.",
+        "fidelityNote": "The report’s own vector paths, exported from PDF page 32 with the lettering already outlined; not traced or redrawn. Colours are the publication’s RGB rendering; the 2010 Radiation Therapy booklet names them as PANTONE 273 U (blue) and PANTONE Warm Gray 11 U, in artwork from an Illustrator file “BCCA_Template_Horz” dated 21 June 2007.",
+        "sha256": "bd294173ce62593466bf63b0422215e60f77f44795ea1d78b55266b42845fa7e",
+        "bytes": 2826,
+        "darkBackground": false,
+        "alsoSeen": [
+          {
+            "date": "2000-09-27",
+            "source": "https://mf.gov.cz/assets/attachments/PPP-Canada-Project-definition-report-Contents.pdf"
+          }
+        ],
+        "search": "bc-cancer-agency-2026-11-12"
       }
     ]
   },

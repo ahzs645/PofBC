@@ -21,7 +21,7 @@ const railSightings = read('research/identity/bc-rail-sightings-2026-11-12/sourc
 const bceid = read('research/identity/bceid-2026-11-12/source-register.json')
 const sharedServices = read('research/identity/shared-services-bc-2026-11-12/source-register.json')
 // Programs' marks held as supplied reconstructions, with no body of their own in the inventory.
-const PROGRAM_PACKAGES = ['bc-travel-industry-2026-11-12', 'justice-institute-2026-11-12', 'auditor-general-2026-11-12', 'bc-online-2026-11-12']
+const PROGRAM_PACKAGES = ['bc-travel-industry-2026-11-12', 'justice-institute-2026-11-12', 'auditor-general-2026-11-12', 'bc-online-2026-11-12', 'bc-cancer-agency-2026-11-12']
   .map((search) => ({ search, register: read(`research/identity/${search}/source-register.json`) }))
 // Supplied packages that add a vector to a body, each read with the search it came from.
 const PACKAGES = ['bc-assessment-vector-2026-11-12', 'bc-power-commission-vector-2026-11-12', 'bc-place-vector-2026-11-12', 'bc-railway-vector-2026-11-12', 'bc-railway-dogwood-vector-2026-11-12', 'bc-systems-vector-2026-11-12', 'bc-housing-1978-vector-2026-11-12', 'bc-petroleum-vector-2026-11-12', 'bc-housing-houses-vector-2026-11-12']
@@ -216,6 +216,7 @@ const VERSION_LABELS = {
 
 // Shorter accounts where a body's or file's own record is about a file no longer shown.
 const BODY_NOTES = {
+  'fraser-valley-health-region': 'The region’s blue-and-green flower around a white cross, from the cover of a September 2000 project report it shared with the BC Cancer Agency; the source image is only 78 pixels square, and no sharper original has been found. Leads: recruitment advertisements with its slogan “Integrating Health Care” in Canadian Nurse, June 1998 and May 2000 (vol. 96, no. 5, pp. 46 and 49). Amalgamated into the Fraser Health Authority in December 2001.',
   'provincial-rental-housing-corporation': 'No separate PRHC logo or readable seal has been found. Incorporated in 1961 as Pemco Holdings Ltd., renamed British Columbia Housing Corporation and then, in December 1976, Provincial Rental Housing Corporation. It holds land and has no staff; BC Housing acts for it, and its correspondence and signage carry BC Housing’s identity. Its own reports use plain name headings. Leads: BC Housing’s PRHC land files and CMHC’s British Columbia files at Library and Archives Canada.',
   'bc-petroleum-corporation': 'The Crown corporation that bought and sold the province’s natural gas from 1973. Its curled-flame emblem, alone and over its four-line name, from its 1982/83 and 1991/92 annual reports.',
   'bc-systems-corporation': 'The Province’s shared computing corporation, from 1977. Its operations moved into government in 1996 and it was dissolved in 2000; its role continues in today’s Connected Services BC.',
@@ -252,12 +253,14 @@ const BODY_NOTES = {
 const ASSET_LABELS = {
   'source-urban-transit-authority-urban-transit-authority-png': 'Urban Transit Authority — signature',
   'source-expo-86-corporation-expo86-symbol-svg': 'Expo 86 — symbol',
-  'source-expo-86-corporation-expo86-wordmark-svg': 'Expo 86 — wordmark'
+  'source-expo-86-corporation-expo86-wordmark-svg': 'Expo 86 — wordmark',
+  'source-fraser-valley-health-region-fraser-valley-health-region-2000-jpg': 'Fraser Valley Health Region — Flower and cross'
 }
 const ASSET_NOTES = {
   'source-urban-transit-authority-urban-transit-authority-png': 'The Urban Transit Authority’s signature, drawn in 2020 by Colin Stepney (Cjstepney); a contemporary original is still wanted.',
   'source-expo-86-corporation-expo86-symbol-svg': 'The Expo 86 symbol, as drawn for Wikimedia Commons from merchandise photographs.',
   'source-expo-86-corporation-expo86-wordmark-svg': 'The Expo 86 wordmark, as drawn for Wikipedia in 2008.',
+  'source-fraser-valley-health-region-fraser-valley-health-region-2000-jpg': 'Four petals in blue and green around a white cross, from the cover of the Fraser Valley Health Centre / Eastern Fraser Valley Cancer Centre project report of September 2000. The report embeds it at only 78 pixels square.',
   'vector-ticorp-2025-colour-source-vector': 'The BC emblem, a gold divider and the name on three lines, as original vector paths from page 1 of the Pattullo Bridge Replacement Project’s Summer 2025 project update. The PDF’s print colours are converted to sRGB.',
   'vector-ticorp-2020-reversed-source-vector': 'The publication’s own white version, as original vector paths from the back cover of the Spring 2020 project overview. Its blue page is left out, so it needs a dark ground.'
 }

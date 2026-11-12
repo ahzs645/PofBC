@@ -2,6 +2,7 @@
   "schema": "import-accounting/1",
   "counts": {
     "accepted": 943,
+    "conflicting": 2,
     "unresolved_unmapped": 26,
     "corroborating_duplicate": 11
   },
@@ -740,6 +741,63 @@
         "integration_status": "needs_local_id_mapping_and_review"
       },
       "output_id": "pkg:first-election-range"
+    },
+    {
+      "origin": "atlas/events-bc-cancer-2026-11-12.json#atlas:bccancer-identity-2017",
+      "disposition": "conflicting",
+      "input": {
+        "id": "atlas:bccancer-identity-2017",
+        "subject_id": "sub-bc-cancer",
+        "related_subject_ids": [
+          "provincial-health-services-authority"
+        ],
+        "event_type": "operating_name_and_identity_change",
+        "title": "BC Cancer Agency takes the simpler name BC Cancer, with a new identity replacing its circular emblem",
+        "date": {
+          "start": "2017-11-15",
+          "end": null,
+          "precision": "day",
+          "range_end_inclusive": false
+        },
+        "temporal_status": "source_reported_past",
+        "evidence": {
+          "source_url": "https://bccancerfoundation.com/news-and-media/blog/bc-cancer-and-bc-cancer-foundation-strengthen-partnership-break-down-cancer/",
+          "locator": "BC Cancer Foundation, announcement",
+          "basis": "supplied_research_summary"
+        },
+        "interpretation_notes": "From a research summary supplied on 2026-11-12, which cites this source; it was not re-read in this pass.",
+        "reviewed_on": "2026-11-12"
+      },
+      "output_id": "atlas:bccancer-identity-2017:variant:0b7828f198cb7465",
+      "conflict_group": "atlas:bccancer-identity-2017"
+    },
+    {
+      "origin": "atlas/events-bc-cancer-2026-11-12.json#atlas:bccancer-emblem-2000",
+      "disposition": "accepted",
+      "input": {
+        "id": "atlas:bccancer-emblem-2000",
+        "subject_id": "sub-bc-cancer",
+        "related_subject_ids": [
+          "fraser-valley-health-region"
+        ],
+        "event_type": "logo_observed",
+        "title": "The BC Cancer Agency’s circular emblem beside the Fraser Valley Health Region’s flower on the Fraser Valley Health Centre / Eastern Fraser Valley Cancer Centre project report",
+        "date": {
+          "start": "2000-09-27",
+          "end": null,
+          "precision": "day",
+          "range_end_inclusive": false
+        },
+        "temporal_status": "source_reported_past",
+        "evidence": {
+          "source_url": "https://mf.gov.cz/assets/attachments/PPP-Canada-Project-definition-report-Contents.pdf",
+          "locator": "Project Definition Report, cover (date on PDF page 2)",
+          "basis": "supplied_research_summary"
+        },
+        "interpretation_notes": "A joint project of the region and the agency; both marks are embedded images (78 and 162 pixels square).",
+        "reviewed_on": "2026-11-12"
+      },
+      "output_id": "atlas:bccancer-emblem-2000"
     },
     {
       "origin": "atlas/events-bc-rail-2026-11-12.json#atlas:bcrail-royal-hudson-1974",
@@ -10764,7 +10822,7 @@
     },
     {
       "origin": "atlas/events-divisions.json#atlas:bccancer-identity-2017",
-      "disposition": "accepted",
+      "disposition": "conflicting",
       "input": {
         "id": "atlas:bccancer-identity-2017",
         "subject_id": "sub-bc-cancer",
@@ -10797,7 +10855,7 @@
         "reviewed_on": "2026-09-25",
         "integration_status": "needs_local_id_mapping_and_review"
       },
-      "output_id": "atlas:bccancer-identity-2017"
+      "output_id": "atlas:bccancer-identity-2017:variant:66970feb67107500"
     },
     {
       "origin": "atlas/events-divisions.json#atlas:bccancer-branch-amalgamation-2018",

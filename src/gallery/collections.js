@@ -1093,7 +1093,7 @@ GALLERY_COLLECTIONS.push(...COLLECTED_COLLECTIONS.filter((candidate) =>
   !GALLERY_COLLECTIONS.some((held) => nodesOf(held).includes(candidate.graphNode))))
 // WorkSafeBC's specimens are folded into its collection above; the one-off programs keep theirs.
 // The Department of Travel Industry's is folded into the BC mark collection.
-GALLERY_COLLECTIONS.push(...SPECIMEN_COLLECTIONS.filter((collection) => !['specimens-worksafebc', 'specimens-travel-industry', 'specimens-justice-institute', 'specimens-auditor-general', 'specimens-sub-bc-online', 'specimens-bceid', 'specimens-shared-services-bc'].includes(collection.id)))
+GALLERY_COLLECTIONS.push(...SPECIMEN_COLLECTIONS.filter((collection) => !['specimens-worksafebc', 'specimens-travel-industry', 'specimens-justice-institute', 'specimens-auditor-general', 'specimens-sub-bc-online', 'specimens-bceid', 'specimens-shared-services-bc', 'specimens-sub-bc-cancer'].includes(collection.id)))
 
 // Public bodies outside the Crown corporations and health authorities the shelf collects for — a
 // post-secondary institute and an officer of the Legislature — whose collections are placed there by hand.
@@ -1120,6 +1120,13 @@ const PLACED = {
     years: 'from 2003',
     intro: 'Solutions BC, formed on 1 April 2003, gathered the government’s common IT, payroll, accounting and ' +
       'procurement services — carrying on, among them, BC Systems’ central IT role. It was soon Shared Services BC.'
+  },
+  'sub-bc-cancer': {
+    label: 'BC Cancer',
+    body: 'Agency of the Provincial Health Services Authority',
+    years: '1974–present',
+    intro: 'The BC Cancer Agency’s circular emblem and logo, used until it became BC Cancer, with a new identity, in ' +
+      'November 2017; seen from a 2000 report to its 2015 research report.'
   },
   'auditor-general': {
     label: 'Auditor General',

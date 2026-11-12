@@ -1322,5 +1322,29 @@ export const COLLECTED_DISPLAY = {
    "aspect": 4.5834,
    "recoloured": true
   }
+ },
+ "bc-cancer-agency-lockup": {
+  "light": {
+   "file": "identity-display/bc-cancer-agency-lockup.light.svg",
+   "aspect": 3.4917,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/bc-cancer-agency-lockup.dark.svg",
+   "aspect": 3.4917,
+   "recoloured": true
+  }
+ },
+ "bc-cancer-agency-emblem": {
+  "light": {
+   "file": "identity-display/bc-cancer-agency-emblem.light.svg",
+   "aspect": 1.0002,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/bc-cancer-agency-emblem.light.svg",
+   "aspect": 1.0002,
+   "recoloured": false
+  }
  }
 }

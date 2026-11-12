@@ -132,7 +132,7 @@ This is a self-contained work packet for the **PofBC government atlas**, a site 
 - **Collected from:** https://www.phsa.ca/our-services/programs-services/bc-cancer-agency
 - **What it does:** Leads the provincial planning and regional delivery of cancer care, from prevention and screening through treatment, survivorship and end-of-life care.
 - **Held:** began 1974-10-31 (Public Cancer Control Agency formed); names on file: Cancer Control Agency of British Columbia (seen 1974-10-31)
-- **Events on file:** 1938-11-05 operational start; 1974-09-09 registration; 1974-10-31 unit established; 1990 legal name change; 1990-02-14 registry name change; 1994 operating name change; 2017 operating name and identity change; 2018-04-01 legal status change
+- **Events on file:** 1938-11-05 operational start; 1974-09-09 registration; 1974-10-31 unit established; 1990 legal name change; 1990-02-14 registry name change; 1994 operating name change; 2000-09-27 logo observed; 2017 operating name and identity change; 2017-11-15 operating name and identity change; 2018-04-01 legal status change
 - **Review:** partly reviewed (documented_partial): extend the existing record, do not start again
 - **Search for:** "BC Cancer", "Cancer Control Agency of British Columbia"
 - **Questions:**
