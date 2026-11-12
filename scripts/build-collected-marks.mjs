@@ -19,6 +19,7 @@ const historical = read('research/identity/historical-vector-followup-2026-10-30
 const innovate = read('research/identity/innovate-bc-vector-2026-11-12/source-register.json')
 const railSightings = read('research/identity/bc-rail-sightings-2026-11-12/source-register.json')
 const bceid = read('research/identity/bceid-2026-11-12/source-register.json')
+const sharedServices = read('research/identity/shared-services-bc-2026-11-12/source-register.json')
 // Programs' marks held as supplied reconstructions, with no body of their own in the inventory.
 const PROGRAM_PACKAGES = ['bc-travel-industry-2026-11-12', 'justice-institute-2026-11-12', 'auditor-general-2026-11-12', 'bc-online-2026-11-12']
   .map((search) => ({ search, register: read(`research/identity/${search}/source-register.json`) }))
@@ -146,7 +147,8 @@ const SUPERSEDED = {
   // The reconstruction keeps the Power Pioneers image as its source download.
   'source-bc-power-commission-bc-power-commission-original-logo-jpg': 'bc-power-commission-rebuilt',
   'source-bc-place-ltd-bc-place-1983-logo-png': 'bc-place-1983-rebuilt',
-  'source-bc-systems-corporation-bc-systems-1983-logo-png': 'bcsc-1983-white'
+  'source-bc-systems-corporation-bc-systems-1983-logo-png': 'bcsc-1983-white',
+  'shared-services-bc-2010-letterhead': 'shared-services-bc-2006-07'
 }
 
 // Another colourway of the same design: shown inside the design's entry as a version to switch
@@ -231,7 +233,17 @@ const BODY_NOTES = {
   'north-okanagan-health-region': 'The NOHR emblem and acronym wordmark from the June 2000 report cover. The emblem alone is original vector; the full logo survives only as an image, its wordmark very small (46 × 22 px). No font substitution or traced wordmark supplied.',
   'northern-interior-regional-health-board': 'Original blue vector emblem and full name from the July 2001 annual report; the same mark is on an April 2001 organizational chart. Dates identify source appearances, not first use.'
 }
+// Display labels for files whose inventory label says how they were made; that stays in the record
+// (reconstruction: true), not on the page.
+const ASSET_LABELS = {
+  'source-urban-transit-authority-urban-transit-authority-png': 'Urban Transit Authority — signature',
+  'source-expo-86-corporation-expo86-symbol-svg': 'Expo 86 — symbol',
+  'source-expo-86-corporation-expo86-wordmark-svg': 'Expo 86 — wordmark'
+}
 const ASSET_NOTES = {
+  'source-urban-transit-authority-urban-transit-authority-png': 'The Urban Transit Authority’s signature, drawn in 2020 by Colin Stepney (Cjstepney); a contemporary original is still wanted.',
+  'source-expo-86-corporation-expo86-symbol-svg': 'The Expo 86 symbol, as drawn for Wikimedia Commons from merchandise photographs.',
+  'source-expo-86-corporation-expo86-wordmark-svg': 'The Expo 86 wordmark, as drawn for Wikipedia in 2008.',
   'vector-ticorp-2025-colour-source-vector': 'The BC emblem, a gold divider and the name on three lines, as original vector paths from page 1 of the Pattullo Bridge Replacement Project’s Summer 2025 project update. The PDF’s print colours are converted to sRGB.',
   'vector-ticorp-2020-reversed-source-vector': 'The publication’s own white version, as original vector paths from the back cover of the Spring 2020 project overview. Its blue page is left out, so it needs a dark ground.'
 }
@@ -307,10 +319,10 @@ for (const { bodyId, ...asset } of railSightings.assets) {
   additions.get(bodyId).push(checked({ ...asset, search: 'bc-rail-sightings-2026-11-12' }))
 }
 // A program's published image, kept as published.
-for (const asset of bceid.assets) {
+for (const [search, register] of [['bceid-2026-11-12', bceid], ['shared-services-bc-2026-11-12', sharedServices]]) for (const asset of register.assets) {
   if (asset.isVector) throw new Error(`Expected an image: ${asset.id}`)
-  if (!additions.has(bceid.program)) additions.set(bceid.program, [])
-  additions.get(bceid.program).push(checked({ ...asset, search: 'bceid-2026-11-12' }))
+  if (!additions.has(register.program)) additions.set(register.program, [])
+  additions.get(register.program).push(SUPERSEDED[asset.id] ? asset : checked({ ...asset, search }))
 }
 for (const { bodyId, verification, ...asset } of innovate.assets) {
   if (!bodyIds.has(bodyId)) throw new Error(`Unknown body: ${bodyId}`)
@@ -355,6 +367,7 @@ const kept = (assets) => assets.filter((asset) => !SUPERSEDED[asset.id])
 const finished = (asset) => ({
   ...asset,
   ...(ASSET_NOTES[asset.id] ? { notes: ASSET_NOTES[asset.id] } : {}),
+  ...(ASSET_LABELS[asset.id] ? { label: ASSET_LABELS[asset.id] } : {}),
   ...(VERSION_LABELS[asset.id] ? { versionLabel: VERSION_LABELS[asset.id] } : {}),
   ...(VARIANT_OF[asset.id] ? { variantOf: VARIANT_OF[asset.id] } : {})
 })

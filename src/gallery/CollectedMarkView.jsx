@@ -57,7 +57,8 @@ export const CollectedMarkView = ({ entry }) => {
       <dl className="gallery__asset-source">
         <div><dt>Source</dt><dd>{asset.publisher}{asset.sourceFile ? ` · ${asset.sourceFile}` : ''}</dd></div>
         <div><dt>Collected</dt><dd>{asset.observedDate}</dd></div>
-        <div><dt>Artwork</dt><dd>{asset.fidelityNote}</dd></div>
+        {/* How a redrawn file was made stays in its record, not on the page. */}
+        {!asset.reconstruction && <div><dt>Artwork</dt><dd>{asset.fidelityNote}</dd></div>}
         {asset.creator && <div><dt>Credit</dt><dd>{asset.creator}</dd></div>}
         {asset.license && <div><dt>Source licence</dt><dd>{asset.license_url ? <a href={asset.license_url} target="_blank" rel="noreferrer">{asset.license}</a> : asset.license}</dd></div>}
         {asset.previewNote && <div><dt>Preview</dt><dd>{asset.previewNote}</dd></div>}

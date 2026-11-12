@@ -196,9 +196,18 @@ const DATE_SENTENCES = {
   unknown: () => 'Unknown. That is not to say it was never in use.'
 }
 
+/**
+ * Marks redrawn rather than taken from a file. The records say so (provenance, and `reconstruction`
+ * on a collected file), but the page does not: it shows the mark, its dates and its sources.
+ */
+export const REDRAWN = new Set(['third_party_reconstruction', 'reconstructed'])
+const isRedrawn = (identity) => REDRAWN.has(identity?.provenance)
+
 const sentencesOf = (identity) => ({
-  Provenance: PROVENANCE_SENTENCES[identity.provenance],
-  Fidelity: [FIDELITY_SENTENCES[identity.fidelity], identity.fidelityNote].filter(Boolean).join(' '),
+  ...(isRedrawn(identity) ? {} : {
+    Provenance: PROVENANCE_SENTENCES[identity.provenance],
+    Fidelity: [FIDELITY_SENTENCES[identity.fidelity], identity.fidelityNote].filter(Boolean).join(' ')
+  }),
   Dates: [DATE_SENTENCES[identity.applicability.kind](identity.applicability.years), identity.applicability.note]
     .filter(Boolean).join(' '),
   Rights: `${RIGHTS[identity.rights.status]}. ${identity.rights.note}`
@@ -210,7 +219,7 @@ const sentencesOf = (identity) => ({
  * card apart; the mark's own page still says so under "About this mark".
  */
 const chipsOf = (identity) => [
-  PROVENANCE[identity.provenance],
+  !isRedrawn(identity) && PROVENANCE[identity.provenance],
   APPLICABILITY[identity.applicability.kind],
   identity.rights.status !== 'unresolved' && RIGHTS[identity.rights.status]
 ].filter(Boolean)
@@ -280,10 +289,12 @@ const whoOf = (collection, entries) => {
  */
 const AboutCollection = ({ collection }) => {
   const entries = entriesOf(collection)
-  const rows = Object.keys(sentencesOf(entries[0].identity)).map((term) => {
+  const terms = [...new Set(entries.flatMap((entry) => Object.keys(sentencesOf(entry.identity))))]
+  const rows = terms.map((term) => {
     const groups = new Map()
     for (const entry of entries) {
       const sentence = sentencesOf(entry.identity)[term]
+      if (sentence === undefined) continue
       groups.set(sentence, [...(groups.get(sentence) ?? []), entry])
     }
     const detail = groups.size === 1
@@ -315,7 +326,9 @@ const AboutCollection = ({ collection }) => {
  * here has its rights unresolved, so on every card that chip said nothing that told cards apart.
  */
 const collectionChips = (collection) => {
-  const provenances = new Set(entriesOf(collection).map((entry) => PROVENANCE[entry.identity.provenance]))
+  const shown = entriesOf(collection).filter((entry) => !isRedrawn(entry.identity))
+  const provenances = new Set(shown.map((entry) => PROVENANCE[entry.identity.provenance]))
+  if (!provenances.size) return []
   return provenances.size === 1 ? [...provenances] : ['Mixed provenance']
 }
 
@@ -367,7 +380,7 @@ const Detail = ({ entry, onClose }) => {
               Download SVG
             </button>
           </div>
-          {entry.caveat && <p className="gallery__caveat">{entry.caveat}</p>}
+          {entry.caveat && !isRedrawn(entry.identity) && <p className="gallery__caveat">{entry.caveat}</p>}
         </div>
       </div>
     </section>

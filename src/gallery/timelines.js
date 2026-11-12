@@ -1260,7 +1260,7 @@ export const COLLECTION_ERAS = {
       label: 'The Urban Transit Authority',
       note: 'BC Transit before it took that name: the Urban Transit Authority of British Columbia, whose ' +
         'italic UTA lettering and double-arrow device appear in newspaper advertisements of 1979 and 1980. ' +
-        'These are the specimens collected as found, and a later reconstruction of the same identity.',
+        'These are the specimens collected as found, and a later drawing of the same identity.',
       applicability: {
         kind: 'dated_specimen',
         years: '1979–1980',
