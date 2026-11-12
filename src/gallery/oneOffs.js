@@ -190,6 +190,16 @@ export const ONE_OFFS = [
       'Environmental Reporting BC and BC Stats. Placed and spaced as in the image the Service’s reports print.'
   }),
   artwork({
+    id: 'bc-bid',
+    label: 'BC Bid',
+    body: 'BC Bid',
+    years: 'by 2026',
+    note: 'The BC mark, a thin gold divider its full height, and “BCBid” in Garamond on the wordmark’s foot, with ' +
+      '“BC” in gold — the Coroners Service’s arrangement.',
+    caveat: 'Put together from the gallery’s BC mark and the Province’s Garamond: WelcomeBC’s B and C, Environmental ' +
+      'Lab BC’s i and BC Wildfire Service’s d. Placed as the published logo, a small reversed image, shows it.'
+  }),
+  artwork({
     id: 'bc-online',
     label: 'BC OnLine',
     body: 'BC OnLine',

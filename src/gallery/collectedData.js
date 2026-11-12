@@ -6989,6 +6989,30 @@ export const COLLECTED_SPECIMENS = [
       {
         "id": "jibc-logo",
         "label": "Justice Institute of British Columbia — Eagle shield and name",
+        "file": "identity-collected/justice-institute/jibc-logo.svg",
+        "format": "svg",
+        "isVector": true,
+        "supplied": true,
+        "reconstruction": false,
+        "publisher": "Justice Institute of British Columbia",
+        "sourcePage": "https://www.jibc.ca",
+        "sourceUrl": null,
+        "sourceLocator": "The Institute’s current logo file (logo.svg, an Adobe Illustrator 26 export), supplied",
+        "sourceFile": "logo.svg",
+        "sourceDate": null,
+        "observedDate": "2026-11-12",
+        "evidenceType": "adapted-from-supplied-vector",
+        "notes": "A blue eagle rising in a white, blue-edged shield, beside “Justice Institute” and “BRITISH COLUMBIA”: the Institute’s current logo.",
+        "fidelityNote": "The supplied Illustrator file with only its lettering changed from white to black for a light ground (the shield, its white field and its blue #034EA2 unchanged). Which colour the Institute sets its lettering in on light grounds is not established here; the supplied, reversed file is the other version.",
+        "sha256": "32e0258ada5c5f7a2a61e97e0edc840f6a0f47493f31d0b1a549a606bc8ca152",
+        "bytes": 8915,
+        "darkBackground": false,
+        "search": "justice-institute-2026-11-12",
+        "versionLabel": "On white"
+      },
+      {
+        "id": "jibc-logo-reversed",
+        "label": "Justice Institute of British Columbia — Eagle shield and name, reversed",
         "file": "identity-collected/justice-institute/jibc-logo-reversed.svg",
         "format": "svg",
         "isVector": true,
@@ -7002,12 +7026,14 @@ export const COLLECTED_SPECIMENS = [
         "sourceDate": null,
         "observedDate": "2026-11-12",
         "evidenceType": "supplied-original-vector",
-        "notes": "A blue eagle rising in a rounded shield, beside “Justice Institute” and “BRITISH COLUMBIA” in white, for a dark ground: the Institute’s current logo.",
+        "notes": "The supplied file: the shield and its white field with “Justice Institute” and “BRITISH COLUMBIA” in white, for a dark ground.",
         "fidelityNote": "The supplied file, unchanged: an Illustrator export with the shield in blue (#034EA2) and the lettering in white. When it was adopted is not established.",
         "sha256": "59899e0c4951ce1ceb00c655509518f7833229863e149c9ccc735bd9fa6a246f",
         "bytes": 8766,
         "darkBackground": true,
-        "search": "justice-institute-2026-11-12"
+        "search": "justice-institute-2026-11-12",
+        "versionLabel": "Reversed (as supplied)",
+        "variantOf": "jibc-logo"
       },
       {
         "id": "jibc-monogram",
@@ -7059,6 +7085,89 @@ export const COLLECTED_SPECIMENS = [
         "bytes": 11828,
         "darkBackground": false,
         "search": "auditor-general-2026-11-12"
+      }
+    ]
+  },
+  {
+    "program": "sub-bc-online",
+    "assets": [
+      {
+        "format": "svg",
+        "isVector": true,
+        "supplied": true,
+        "reconstruction": true,
+        "publisher": "BC OnLine",
+        "sourceFile": null,
+        "observedDate": "2026-11-12",
+        "evidenceType": "supplied-vector-reconstruction",
+        "darkBackground": false,
+        "id": "bc-online-2005-emblem",
+        "label": "BC OnLine — Hand and screen emblem, 2005 (reconstruction)",
+        "file": "identity-collected/bc-online/bc-online-2005-emblem.svg",
+        "sourcePage": "https://www.bconline.gov.bc.ca/pdf/DataFilesJul05.pdf",
+        "sourceUrl": "https://www.bconline.gov.bc.ca/pdf/DataFilesJul05.pdf",
+        "sourceLocator": "DataFiles newsletter, July 2005, page 1 (a 181 × 128 image)",
+        "sourceDate": "July 2005",
+        "dateNote": "The newsletter’s date, not an adoption date.",
+        "notes": "A hand reaching through a computer screen to its keyboard, drawn in tapered blue strokes: BC OnLine’s emblem, alone.",
+        "fidelityNote": "A supplied reconstruction: 27 hand-drawn Bézier shapes after the newsletter’s small image (no automatic tracing), in its blue (#333B97). Fine detail is interpreted.",
+        "sha256": "a6c85cf0f7529298cd15f5e1573a2d3a495e92bcdfe051f496f4ed248c2270e1",
+        "bytes": 9678,
+        "search": "bc-online-2026-11-12"
+      },
+      {
+        "format": "svg",
+        "isVector": true,
+        "supplied": true,
+        "reconstruction": true,
+        "publisher": "BC OnLine",
+        "sourceFile": null,
+        "observedDate": "2026-11-12",
+        "evidenceType": "supplied-vector-reconstruction",
+        "darkBackground": false,
+        "id": "bc-online-2011-logo",
+        "label": "BC OnLine — Wordmark and emblem, 2011 (reconstruction)",
+        "file": "identity-collected/bc-online/bc-online-2011-logo.svg",
+        "sourcePage": "https://www.bconline.gov.bc.ca/pdf/websiteUseTandC.pdf",
+        "sourceUrl": "https://www.bconline.gov.bc.ca/pdf/websiteUseTandC.pdf",
+        "sourceLocator": "Website use terms and conditions, April 2011, page 1 letterhead (a 672 × 145 image)",
+        "sourceDate": "April 2011",
+        "dateNote": "The document’s date, not an adoption date.",
+        "notes": "“BC OnLine” in broad, slightly inclined capitals, beside the hand-and-screen emblem, in black: the service’s letterhead logo.",
+        "fidelityNote": "A supplied reconstruction: eight hand-drawn letter outlines and the emblem redrawn at the letterhead’s lighter weight, after the document’s image (no automatic tracing). The typeface is not identified.",
+        "sha256": "4a92b948f0c5d5e159465659d2703d049daa6d8f31c86e173991825be9cd6bc7",
+        "bytes": 12964,
+        "search": "bc-online-2026-11-12"
+      }
+    ]
+  },
+  {
+    "program": "bceid",
+    "assets": [
+      {
+        "id": "bceid-reversed",
+        "label": "BCeID — Wordmark, reversed",
+        "file": "identity-collected/bceid/bceid-reversed-2x.png",
+        "format": "png",
+        "isVector": false,
+        "supplied": false,
+        "reconstruction": false,
+        "publisher": "Province of British Columbia (BCeID)",
+        "sourcePage": "https://www.bceid.ca/",
+        "sourceUrl": "https://www.bceid.ca/assets/images/bceid_rev@2x.png",
+        "sourceLocator": "The website’s 2× reverse logo",
+        "sourceFile": null,
+        "sourceDate": null,
+        "observedDate": "2026-11-12",
+        "evidenceType": "official-download",
+        "notes": "“BCeID” in Garamond capitals with an italic e in gold between BC and ID, in white for a dark ground: the wordmark of the Province’s online identity service.",
+        "fidelityNote": "The website’s image, unchanged (220 × 58). Its white lettering needs a dark ground.",
+        "sha256": "3abd1d5303a267f7555ff8069abf4082d7fc00dd7ba4a738f8d7a72c9a025b0b",
+        "bytes": 6123,
+        "darkBackground": true,
+        "previewWidth": 220,
+        "previewHeight": 58,
+        "search": "bceid-2026-11-12"
       }
     ]
   }

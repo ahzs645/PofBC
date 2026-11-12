@@ -160,6 +160,40 @@ export function bcOnLine (marks, cap) {
   return parts
 }
 
+/**
+ * “BCBid” in the Province's Garamond, on a baseline at y = 0 with its cap height `cap`, from x = 0, as
+ * the accent (“BC”, WelcomeBC's own) and the name (“Bid”: WelcomeBC's B, Environmental Lab BC's i and
+ * BC Wildfire Service's d, scaled to the i's x-height). The gaps are measured off BC Bid's published
+ * logo (a 150 × 52 image whose capitals stand about 19 pixels), as fractions of the cap height.
+ */
+export function bcBid (marks, cap) {
+  const accent = lettersOf(shapeOf(marks['welcome-bc'], 'accent').d)
+  const lab = lettersOf(shapeOf(marks['environmental-lab-bc'], 'name').d)
+  const wild = lettersOf(shapeOf(marks['bc-wildfire-service-one-line'], 'name').d)
+  const height = (letter) => letter.box.bottom - letter.box.top
+  const accentScale = cap / height(accent[0])
+  const labScale = cap / height(lab[1])
+  // The d stands to the ascender of Wildfire's own d; its x-height is matched to the i's stem.
+  const wildScale = labScale * height(lab[6]) / height(wild[1])
+  const printed = (pixels) => pixels / 19 * cap
+  const letters = [
+    { part: 'accent', letter: accent[0], scale: accentScale, base: accent[0].box.bottom },
+    { part: 'accent', letter: accent[1], scale: accentScale, base: accent[0].box.bottom, gap: printed(3) },
+    { part: 'name', letter: accent[0], scale: accentScale, base: accent[0].box.bottom, gap: printed(2) },
+    { part: 'name', letter: lab[6], scale: labScale, base: lab[6].box.bottom, gap: printed(3) },
+    { part: 'name', letter: lab[7], scale: labScale, base: lab[6].box.bottom, gap: (lab[7].box.left - lab[6].box.right) * labScale },
+    { part: 'name', letter: wild[4], scale: wildScale, base: wild[4].box.bottom, gap: printed(3) - (lab[7].box.right - lab[6].box.right) * labScale }
+  ]
+  let x = 0
+  const parts = { accent: [], name: [] }
+  for (const { part, letter, scale, base, gap = 0 } of letters) {
+    x += gap
+    parts[part].push(...transformed(letter.subpaths, scale, x - letter.box.left * scale, -base * scale))
+    x += (letter.box.right - letter.box.left) * scale
+  }
+  return parts
+}
+
 /** A mark's parts moved by (dx, dy) and scaled by `scale`, keeping their roles. */
 const moved = (mark, roles, scale, dx, dy) => mark.shapes.filter(({ role }) => roles.includes(role))
   .map(({ role, d }) => ({ role, subpaths: transformed(absolute(d), scale, dx, dy) }))
@@ -222,6 +256,28 @@ export function compose (entry, marks) {
     const name = transformed(coronersService(marks, 0.36 * height), 1, rule + 0.178 * height, mark.bottom)
     return {
       shapes: [...parts, { role: 'divider', subpaths: divider }, { role: 'name', subpaths: name }],
+      sun: source.sun,
+      gradients: source.gradients,
+      colours: { ...entry.colours }
+    }
+  }
+  if (entry.compose === 'bc-bid') {
+    // As the Coroners Service's lockup: the BC mark without its tagline, a thin gold divider its full
+    // height, and the name on the wordmark's foot. Measured off BC Bid's logo against the mark's height
+    // (about 52 pixels there): the divider 0.21 of it after the mark, the name 0.19 after the divider,
+    // its capitals 0.37 tall.
+    const parts = moved(source, [...SYMBOL, 'wordmark'], 1, 0, 0)
+    const mark = boxOf(parts.flatMap(({ subpaths }) => subpaths))
+    const height = mark.bottom - mark.top
+    const rule = mark.right + 0.21 * height
+    const width = 0.012 * height
+    const divider = rectangle(rule - width / 2, mark.top, width, height)
+    const { accent, name } = bcBid(marks, 0.37 * height)
+    const left = rule + 0.19 * height
+    return {
+      shapes: [...parts, { role: 'divider', subpaths: divider },
+        { role: 'accent', subpaths: transformed(accent, 1, left, mark.bottom) },
+        { role: 'name', subpaths: transformed(name, 1, left, mark.bottom) }],
       sun: source.sun,
       gradients: source.gradients,
       colours: { ...entry.colours }

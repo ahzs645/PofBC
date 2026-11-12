@@ -92,8 +92,8 @@ export const collectedEntriesOf = (bodyId) => designsOf(BODIES.get(bodyId)?.asse
   .map(({ asset, versions }) => collectedEntry(asset, undefined, bodyId, versions))
 
 /** Published specimens folded into a researched collection rather than a one-off timeline. */
-export const specimenEntriesOf = (program, timeline) => (COLLECTED_SPECIMENS.find((each) => each.program === program)?.assets ?? [])
-  .map((asset) => collectedEntry(asset, timeline))
+export const specimenEntriesOf = (program, timeline) => designsOf(COLLECTED_SPECIMENS.find((each) => each.program === program)?.assets ?? [])
+  .map(({ asset, versions }) => collectedEntry(asset, timeline, undefined, versions))
 
 const collectionOf = (body) => ({
   id: `collected-${body.id}`,
@@ -208,7 +208,7 @@ export const SPECIMEN_COLLECTIONS = COLLECTED_SPECIMENS.map(({ program, assets }
   fileCollection: true,
   label: assets[0]?.publisher ?? program,
   intro: 'Published vector specimens, each with its source recorded. A capture or document date is a sighting, not an adoption date.',
-  entries: assets.map((asset) => collectedEntry(asset, program))
+  entries: designsOf(assets).map(({ asset, versions }) => collectedEntry(asset, program, undefined, versions))
 }))
 
 export const COLLECTION_RESEARCH = new Map(COLLECTED_BODIES.map((body) => [body.id, body]))

@@ -1195,12 +1195,12 @@ export const COLLECTED_DISPLAY = {
   "light": {
    "file": "identity-display/jibc-logo.light.svg",
    "aspect": 2.7152,
-   "recoloured": true
+   "recoloured": false
   },
   "dark": {
    "file": "identity-display/jibc-logo.dark.svg",
    "aspect": 2.7152,
-   "recoloured": false
+   "recoloured": true
   }
  },
  "jibc-monogram": {
@@ -1224,6 +1224,30 @@ export const COLLECTED_DISPLAY = {
   "dark": {
    "file": "identity-display/oag-bc-logo.dark.svg",
    "aspect": 3.8132,
+   "recoloured": true
+  }
+ },
+ "bc-online-2005-emblem": {
+  "light": {
+   "file": "identity-display/bc-online-2005-emblem.light.svg",
+   "aspect": 1.4158,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/bc-online-2005-emblem.dark.svg",
+   "aspect": 1.4158,
+   "recoloured": true
+  }
+ },
+ "bc-online-2011-logo": {
+  "light": {
+   "file": "identity-display/bc-online-2011-logo.light.svg",
+   "aspect": 4.5834,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/bc-online-2011-logo.dark.svg",
+   "aspect": 4.5834,
    "recoloured": true
   }
  }

@@ -18,8 +18,9 @@ const followup = read('research/identity/vector-followup-2026-11-08/source-regis
 const historical = read('research/identity/historical-vector-followup-2026-10-30/source-register.json')
 const innovate = read('research/identity/innovate-bc-vector-2026-11-12/source-register.json')
 const railSightings = read('research/identity/bc-rail-sightings-2026-11-12/source-register.json')
+const bceid = read('research/identity/bceid-2026-11-12/source-register.json')
 // Programs' marks held as supplied reconstructions, with no body of their own in the inventory.
-const PROGRAM_PACKAGES = ['bc-travel-industry-2026-11-12', 'justice-institute-2026-11-12', 'auditor-general-2026-11-12']
+const PROGRAM_PACKAGES = ['bc-travel-industry-2026-11-12', 'justice-institute-2026-11-12', 'auditor-general-2026-11-12', 'bc-online-2026-11-12']
   .map((search) => ({ search, register: read(`research/identity/${search}/source-register.json`) }))
 // Supplied packages that add a vector to a body, each read with the search it came from.
 const PACKAGES = ['bc-assessment-vector-2026-11-12', 'bc-power-commission-vector-2026-11-12', 'bc-place-vector-2026-11-12', 'bc-railway-vector-2026-11-12', 'bc-railway-dogwood-vector-2026-11-12', 'bc-systems-vector-2026-11-12', 'bc-housing-1978-vector-2026-11-12']
@@ -163,7 +164,8 @@ const VARIANT_OF = {
   'historical-capital-health-region-2000-dark-white': 'historical-capital-health-region-2000-dark-grey',
   'source-innovate-bc-innovate-bc-white-eps': 'innovate-bc-2024-colour',
   'bcr-dogwood-dark': 'bcr-dogwood-white',
-  'bcsc-1983-black': 'bcsc-1983-white'
+  'bcsc-1983-black': 'bcsc-1983-white',
+  'jibc-logo-reversed': 'jibc-logo'
 }
 
 // What each version is called inside its design's entry.
@@ -193,7 +195,9 @@ const VERSION_LABELS = {
   'bcr-dogwood-white': 'White lettering',
   'bcr-dogwood-dark': 'Dark lettering',
   'bcsc-1983-white': 'White (as printed)',
-  'bcsc-1983-black': 'Black'
+  'bcsc-1983-black': 'Black',
+  'jibc-logo': 'On white',
+  'jibc-logo-reversed': 'Reversed (as supplied)'
 }
 
 // Shorter accounts where a body's or file's own record is about a file no longer shown.
@@ -302,6 +306,12 @@ for (const { bodyId, ...asset } of railSightings.assets) {
   if (!additions.has(bodyId)) additions.set(bodyId, [])
   additions.get(bodyId).push(checked({ ...asset, search: 'bc-rail-sightings-2026-11-12' }))
 }
+// A program's published image, kept as published.
+for (const asset of bceid.assets) {
+  if (asset.isVector) throw new Error(`Expected an image: ${asset.id}`)
+  if (!additions.has(bceid.program)) additions.set(bceid.program, [])
+  additions.get(bceid.program).push(checked({ ...asset, search: 'bceid-2026-11-12' }))
+}
 for (const { bodyId, verification, ...asset } of innovate.assets) {
   if (!bodyIds.has(bodyId)) throw new Error(`Unknown body: ${bodyId}`)
   // Vector paths over the report's own photograph, so not pure vector, and recorded as such.
@@ -375,13 +385,13 @@ const bodies = inventory.bodies.map((body) => {
     assets: kept(record.assets).map(finished)
   }
 })
+// What is left belongs to the one-off programs, which are timelines rather than inventory bodies.
+const specimens = [...additions].map(([program, assets]) => ({ program, assets: kept(assets).map(finished) }))
+
 for (const [id, keeper] of Object.entries({ ...SUPERSEDED, ...VARIANT_OF })) {
-  const ids = new Set(bodies.flatMap((body) => body.assets.map((asset) => asset.id)))
+  const ids = new Set([...bodies, ...specimens].flatMap((each) => each.assets.map((asset) => asset.id)))
   if (!ids.has(keeper) || (VARIANT_OF[id] && !ids.has(id))) throw new Error(`Unknown consolidation: ${id} → ${keeper}`)
 }
-
-// What is left belongs to the one-off programs, which are timelines rather than inventory bodies.
-const specimens = [...additions].map(([program, assets]) => ({ program, assets }))
 
 const seenIds = new Set()
 const seenFiles = new Set()

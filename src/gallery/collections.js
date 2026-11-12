@@ -195,6 +195,19 @@ const ONE_OFF_IDENTITY = {
     applicability: DATED_BY_TIMELINE('first_observation', 'by 2025',
       'Its file on the lab’s page is first captured in April 2025, after the lab took the name.')
   },
+  'bc-bid': {
+    provenance: 'reconstructed',
+    fidelity: 'partially compared',
+    fidelityNote: 'Put together from the gallery’s Best Place on Earth mark (without its tagline) and letters of the ' +
+      'Garamond the Province published (WelcomeBC’s B and C, Environmental Lab BC’s i, BC Wildfire Service’s d). ' +
+      'Placing is measured off the published 150 × 52 image, itself cropped at its edges, and the result laid over it.',
+    applicability: {
+      kind: 'first_observation',
+      years: 'by 2026',
+      note: 'Seen as the BC Bid portal’s header image in November 2026; when it was adopted is not established.'
+    },
+    rights: PROVINCE_RIGHTS
+  },
   'bc-online': {
     provenance: 'reconstructed',
     fidelity: 'partially compared',
@@ -785,6 +798,7 @@ const GRAPH_NODES = {
   'bc-wildfire-service-one-line': 'sub-bc-wildfire-service',
   'coroners-service': 'sub-bc-coroners-service',
   'bc-online': 'sub-bc-online',
+  'bc-bid': 'sub-bc-bid',
   'public-service': 'bc-public-service-agency'
 }
 
@@ -1067,7 +1081,9 @@ export const GALLERY_COLLECTIONS = [
     entries: [
       ...ONE_OFFS.filter((entry) => !PARKS_ONE_OFFS.includes(entry.id)).map(provincial),
       // Before the crest: a department's own mark, on the BC mark's timeline.
-      ...specimenEntriesOf('travel-industry', 'bc-mark')
+      ...specimenEntriesOf('travel-industry', 'bc-mark'),
+      // A service wordmark in the BC mark's Garamond, held as published.
+      ...specimenEntriesOf('bceid')
     ]
   }
 ]
@@ -1078,7 +1094,7 @@ GALLERY_COLLECTIONS.push(...COLLECTED_COLLECTIONS.filter((candidate) =>
   !GALLERY_COLLECTIONS.some((held) => nodesOf(held).includes(candidate.graphNode))))
 // WorkSafeBC's specimens are folded into its collection above; the one-off programs keep theirs.
 // The Department of Travel Industry's is folded into the BC mark collection.
-GALLERY_COLLECTIONS.push(...SPECIMEN_COLLECTIONS.filter((collection) => !['specimens-worksafebc', 'specimens-travel-industry', 'specimens-justice-institute', 'specimens-auditor-general'].includes(collection.id)))
+GALLERY_COLLECTIONS.push(...SPECIMEN_COLLECTIONS.filter((collection) => !['specimens-worksafebc', 'specimens-travel-industry', 'specimens-justice-institute', 'specimens-auditor-general', 'specimens-sub-bc-online', 'specimens-bceid'].includes(collection.id)))
 
 // Public bodies outside the Crown corporations and health authorities the shelf collects for — a
 // post-secondary institute and an officer of the Legislature — whose collections are placed there by hand.
@@ -1089,6 +1105,14 @@ const PLACED = {
     years: '1978–present',
     intro: 'The Justice Institute of British Columbia, established in 1978 to train police, corrections, sheriffs, ' +
       'paramedics, firefighters and emergency managers. Its earlier monogram is also the centre of its patches.'
+  },
+  'sub-bc-online': {
+    label: 'BC OnLine',
+    body: 'The Province’s online registry access service',
+    years: '1989–present',
+    intro: 'BC OnLine, created in July 1989 and run at first by BC Systems, gives professional users online access to ' +
+      'land titles, personal property, company and other registries. Its earlier logo — a hand reaching through a ' +
+      'screen — is here; its later logo on the BC mark is under “On the BC mark”.'
   },
   'auditor-general': {
     label: 'Auditor General',
