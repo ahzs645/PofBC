@@ -19,7 +19,7 @@ test('every requested body is accounted for without inventing collected artwork'
       const collection = collectionOfNode(body.id)
       assert.ok(collection, body.id)
       // Every file of the body is in the collection that holds it, under that body.
-      const shown = new Set(entriesOfNode(collection, body.id).map((entry) => entry.id))
+      const shown = new Set(entriesOfNode(collection, body.id).flatMap((entry) => (entry.versions ?? [entry.asset ?? entry]).map((each) => each.id)))
       for (const asset of body.assets) assert.ok(shown.has(asset.id), `${body.id}: ${asset.id}`)
     }
   }

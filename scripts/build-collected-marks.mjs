@@ -88,6 +88,33 @@ const LABELS = {
   'workbc-current': 'The flat mark with a grey rule, current'
 }
 
+// A raster file dropped because the same design is held as published vector artwork. The gallery
+// keeps the vector; the raster's source stays recorded in the acquisition inventory.
+const SUPERSEDED = {
+  'source-transportation-investment-corporation-transportation-investment-corporation-png': 'vector-ticorp-2025-colour-source-vector'
+}
+
+// Another colourway of the same design: shown inside the design's entry as a version to switch
+// to, rather than as a separate mark.
+const VARIANT_OF = {
+  'vector-ticorp-2020-reversed-source-vector': 'vector-ticorp-2025-colour-source-vector'
+}
+
+// What each version is called inside its design's entry.
+const VERSION_LABELS = {
+  'vector-ticorp-2025-colour-source-vector': 'Full colour',
+  'vector-ticorp-2020-reversed-source-vector': 'White'
+}
+
+// Shorter accounts where a body's or file's own record is about a file no longer shown.
+const BODY_NOTES = {
+  'transportation-investment-corporation': 'One design — the BC emblem, a gold divider and the name on three lines — in full colour and in white, both original vector artwork from Pattullo Bridge Replacement Project publications.'
+}
+const ASSET_NOTES = {
+  'vector-ticorp-2025-colour-source-vector': 'The BC emblem, a gold divider and the name on three lines, as original vector paths from page 1 of the Pattullo Bridge Replacement Project’s Summer 2025 project update. The PDF’s print colours are converted to sRGB.',
+  'vector-ticorp-2020-reversed-source-vector': 'The publication’s own white version, as original vector paths from the back cover of the Spring 2020 project overview. Its blue page is left out, so it needs a dark ground.'
+}
+
 /** A register entry as the inventory's asset record, so both read the same in the gallery. */
 const fromRegister = (entry, search = 'vector-search-2026-10-30') => {
   if (!LABELS[entry.id]) throw new Error(`No label for ${entry.id}`)
@@ -153,18 +180,35 @@ for (const bodyId of Object.keys(historical.bodyUpdates)) {
   if (!bodyIds.has(bodyId)) throw new Error(`Unknown historical body update: ${bodyId}`)
 }
 
+const kept = (assets) => assets.filter((asset) => !SUPERSEDED[asset.id])
+const finished = (asset) => ({
+  ...asset,
+  ...(ASSET_NOTES[asset.id] ? { notes: ASSET_NOTES[asset.id] } : {}),
+  ...(VERSION_LABELS[asset.id] ? { versionLabel: VERSION_LABELS[asset.id] } : {}),
+  ...(VARIANT_OF[asset.id] ? { variantOf: VARIANT_OF[asset.id] } : {})
+})
+
 const bodies = inventory.bodies.map((body) => {
-  for (const asset of body.assets) checked(asset)
   const { queries, researchSources, ...display } = body
+  for (const asset of kept(display.assets)) checked(asset)
   const added = additions.get(body.id) ?? []
   additions.delete(body.id)
-  return added.length ? {
+  const record = added.length ? {
     ...display,
     ...historical.bodyUpdates[body.id],
     status: 'asset-collected',
     assets: [...display.assets, ...added]
   } : display
+  return {
+    ...record,
+    ...(BODY_NOTES[body.id] ? { notes: BODY_NOTES[body.id] } : {}),
+    assets: kept(record.assets).map(finished)
+  }
 })
+for (const [id, keeper] of Object.entries({ ...SUPERSEDED, ...VARIANT_OF })) {
+  const ids = new Set(bodies.flatMap((body) => body.assets.map((asset) => asset.id)))
+  if (!ids.has(keeper) || (VARIANT_OF[id] && !ids.has(id))) throw new Error(`Unknown consolidation: ${id} → ${keeper}`)
+}
 
 // What is left belongs to the one-off programs, which are timelines rather than inventory bodies.
 const specimens = [...additions].map(([program, assets]) => ({ program, assets }))

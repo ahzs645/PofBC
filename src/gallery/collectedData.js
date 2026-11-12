@@ -1331,35 +1331,8 @@ export const COLLECTED_BODIES = [
     "current": true,
     "status": "asset-collected",
     "observedDate": "2026-10-22",
-    "notes": "Artwork retrieved from official public website/brand kit. Current observation is not an adoption-date claim.",
+    "notes": "One design — the BC emblem, a gold divider and the name on three lines — in full colour and in white, both original vector artwork from Pattullo Bridge Replacement Project publications.",
     "assets": [
-      {
-        "id": "source-transportation-investment-corporation-transportation-investment-corporation-png",
-        "label": "TI Corp — transportation investment corporation",
-        "file": "identity-collected/transportation-investment-corporation/transportation-investment-corporation.png",
-        "format": "png",
-        "isVector": false,
-        "supplied": false,
-        "reconstruction": false,
-        "publisher": "Transportation Investment Corporation",
-        "sourcePage": "https://www.ticorp.ca/",
-        "sourceUrl": "https://www.ticorp.ca/app/uploads/sites/601/2020/01/TI-Corp-logo.png",
-        "sourceLocator": null,
-        "sourceFile": null,
-        "sourceDate": null,
-        "observedDate": "2026-10-22",
-        "evidenceType": "official-download",
-        "notes": "Artwork retrieved from official public website/brand kit. Current observation is not an adoption-date claim.",
-        "fidelityNote": "Published file retained byte for byte and visually inspected. Its source is linked below.",
-        "sha256": "1ccff78a428af02c4ca3a5138bbfe0230a637d993ba79e8e5e0a6ed8b6846735",
-        "bytes": 32833,
-        "darkBackground": false,
-        "extraction": {
-          "vector_type": "raster"
-        },
-        "previewWidth": 582,
-        "previewHeight": 149
-      },
       {
         "id": "vector-ticorp-2025-colour-source-vector",
         "label": "Transportation Investment Corporation — Full colour, Summer 2025 project update",
@@ -1377,12 +1350,13 @@ export const COLLECTED_BODIES = [
         "dateNote": "Date printed on the source publication, not an adoption or first-use date.",
         "observedDate": "2026-11-08",
         "evidenceType": "native-pdf-vector-extraction",
-        "notes": "Full-colour TI Corp lockup recovered from the official Pattullo Bridge Replacement Project Summer 2025 Project Update, page 1. The emblem, divider and all lettering are original vector paths. The website PNG remains available as a separate specimen. PDF print colours are converted to sRGB; this is an extraction from a publication, not a separately published SVG master.",
+        "notes": "The BC emblem, a gold divider and the name on three lines, as original vector paths from page 1 of the Pattullo Bridge Replacement Project’s Summer 2025 project update. The PDF’s print colours are converted to sRGB.",
         "fidelityNote": "Official publication, original native vector paths extracted; not a supplied standalone master. PyMuPDF 1.26.6 PDF-to-SVG conversion, preserving selected source path nodes, ancestor transforms and referenced clipping definitions. Unrelated artwork, page backgrounds, raster images and unused definitions excluded. All lettering was already outlined in the PDF. No tracing, type recreation or recolouring; PDF print colours converted to sRGB by MuPDF. Intrinsic width is 780px with proportional height for display; the PDF-coordinate viewBox and geometry are retained.",
         "sha256": "e052363a9fb84e09c3ee4af83632fa868d3b29432e96f7954e11bcb863d505fa",
         "bytes": 27424,
         "darkBackground": false,
-        "search": "ticorp-vector-2026-11-08"
+        "search": "ticorp-vector-2026-11-08",
+        "versionLabel": "Full colour"
       },
       {
         "id": "vector-ticorp-2020-reversed-source-vector",
@@ -1401,12 +1375,14 @@ export const COLLECTED_BODIES = [
         "dateNote": "Date printed on the source publication, not an adoption or first-use date.",
         "observedDate": "2026-11-08",
         "evidenceType": "native-pdf-vector-extraction",
-        "notes": "Original white TI Corp lockup recovered from the back cover (PDF page 19) of the official Pattullo Bridge Replacement Project Spring 2020 Project Overview. The source's blue page background is excluded; the SVG has a transparent background and needs a dark ground. This is the publication's own reverse artwork, not a recolouring of the full-colour specimen.",
+        "notes": "The publication’s own white version, as original vector paths from the back cover of the Spring 2020 project overview. Its blue page is left out, so it needs a dark ground.",
         "fidelityNote": "Official publication, original native vector paths extracted; not a supplied standalone master. PyMuPDF 1.26.6 PDF-to-SVG conversion, preserving selected source path nodes, ancestor transforms and referenced clipping definitions. Unrelated artwork, page backgrounds, raster images and unused definitions excluded. All lettering was already outlined in the PDF. No tracing, type recreation or recolouring; PDF print colours converted to sRGB by MuPDF. Intrinsic width is 780px with proportional height for display; the PDF-coordinate viewBox and geometry are retained.",
         "sha256": "685f2b06ee1bd8e305df095ead95c263089c8992c4c02b18bd7216072998ab39",
         "bytes": 28003,
         "darkBackground": true,
-        "search": "ticorp-vector-2026-11-08"
+        "search": "ticorp-vector-2026-11-08",
+        "versionLabel": "White",
+        "variantOf": "vector-ticorp-2025-colour-source-vector"
       }
     ]
   },

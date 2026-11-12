@@ -204,12 +204,16 @@ const sentencesOf = (identity) => ({
   Rights: `${RIGHTS[identity.rights.status]}. ${identity.rights.note}`
 })
 
-/** The short form, for a card: where it came from, what its date rests on, whether it may be shown. */
+/**
+ * The short form, for a card: where it came from, what its date rests on, and whether it may be
+ * shown once that is anything but unresolved. Every mark here is unresolved, so that chip told no
+ * card apart; the mark's own page still says so under "About this mark".
+ */
 const chipsOf = (identity) => [
   PROVENANCE[identity.provenance],
   APPLICABILITY[identity.applicability.kind],
-  RIGHTS[identity.rights.status]
-]
+  identity.rights.status !== 'unresolved' && RIGHTS[identity.rights.status]
+].filter(Boolean)
 
 /**
  * A card's chips. They sit inside buttons, where a list would be flattened anyway, so the
@@ -413,7 +417,11 @@ const OneOffEntry = ({ entry, onOpen, theme, onOpenGovernment }) => (
       </span>
     </div>
     <p className="gallery__note">{entry.note}</p>
-    <IdentityChips identity={entry.identity} />
+    {/* A collected file's dates are the line above, so its card does not say them twice. */}
+    <Chips
+      labels={chipsOf(entry.identity).filter((label) => entry.kind !== 'collected' || label !== APPLICABILITY[entry.identity.applicability.kind])}
+      title={FIDELITY[entry.identity.fidelity]}
+    />
 
     <button
       type="button"
@@ -428,7 +436,8 @@ const OneOffEntry = ({ entry, onOpen, theme, onOpenGovernment }) => (
       />
       <span className="gallery__label">
         {entry.kind === 'current' ? 'Open in the generator'
-          : entry.kind === 'collected' ? 'View artwork and download the source file'
+          : entry.kind === 'collected'
+            ? entry.versions ? `View and download it in ${listOf(entry.versions.map((each) => each.versionLabel.toLowerCase()))}` : 'View artwork and download the source file'
             : 'Open to recolour, or to see it as published'}
       </span>
     </button>

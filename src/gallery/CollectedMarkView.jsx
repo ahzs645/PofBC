@@ -1,10 +1,12 @@
+import { useState } from 'react'
 import { assetUrl } from './collectedCollections.js'
 import { collectedDisplay } from './tileArt.js'
 import { useSiteTheme } from '../site/useTheme.js'
 
 /** A recovered mark is displayed in its source format; raster files stay raster. */
 export const CollectedMarkView = ({ entry }) => {
-  const { asset } = entry
+  const [version, setVersion] = useState(entry.asset.id)
+  const asset = entry.versions?.find((each) => each.id === version) ?? entry.asset
   const { name: theme } = useSiteTheme()
   const display = collectedDisplay(asset, theme)
   return (
@@ -12,10 +14,24 @@ export const CollectedMarkView = ({ entry }) => {
       <header className="gallery__head">
         <div>
           <h2>{entry.label}</h2>
-          <p className="gallery__note">{entry.years}</p>
+          <p className="gallery__note">{asset.sourceDate ? `Seen ${asset.sourceDate}` : entry.years}</p>
         </div>
         <span className="gallery__asset-format">{asset.format.toUpperCase()} · {asset.isVector ? 'Vector artwork' : asset.format === 'svg' ? 'Contains bitmap artwork' : 'Image'}</span>
       </header>
+      {entry.versions && (
+        <div className="segmented" role="group" aria-label="Version">
+          {entry.versions.map((each) => (
+            <button
+              key={each.id}
+              type="button"
+              aria-pressed={each.id === asset.id}
+              onClick={() => setVersion(each.id)}
+            >
+              {each.versionLabel}
+            </button>
+          ))}
+        </div>
+      )}
       {display ? (
         <div className="gallery__recovered-preview gallery__recovered-preview--clean">
           <img src={assetUrl(display.file)} alt={entry.label} data-plate={display.plate || undefined} />

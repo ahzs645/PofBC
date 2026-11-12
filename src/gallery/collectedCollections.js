@@ -8,33 +8,48 @@ import { COLLECTED_DISPLAY } from './collectedDisplay.js'
  * page, else any with a display copy, else the first file. A display copy is drawn for the page
  * in both themes, where a raster file still sits on a plate of its own.
  */
-const coverOf = (assets) =>
-  (assets.find((asset) => COLLECTED_DISPLAY[asset.id] && !COLLECTED_DISPLAY[asset.id].light.recoloured) ??
+const coverOf = (all) => {
+  const assets = all.filter((asset) => !asset.variantOf)
+  return (assets.find((asset) => COLLECTED_DISPLAY[asset.id] && !COLLECTED_DISPLAY[asset.id].light.recoloured) ??
     assets.find((asset) => COLLECTED_DISPLAY[asset.id]) ?? assets[0])?.id
+}
 
 export const assetUrl = (path, base = import.meta.env?.BASE_URL ?? '/') =>
   `${base.replace(/\/?$/, '/')}${path.replace(/^\//, '')}`
+
+/** When a design's files were seen, oldest first; a retrieval date is not a sighting of the logo. */
+const seenDates = (versions) => [...new Set(versions.map((each) => each.sourceDate).filter(Boolean))]
+  .sort((a, b) => Number(a.match(/\d{4}/)?.[0]) - Number(b.match(/\d{4}/)?.[0]))
+  .join(' and ')
+
+/** A body's files as one entry per design, each with its other colourways as versions. */
+const designsOf = (assets) => assets.filter((asset) => !asset.variantOf).map((asset) => {
+  const versions = [asset, ...assets.filter((each) => each.variantOf === asset.id)]
+  return { asset, versions }
+})
 
 /**
  * A collected file as a gallery entry; `timeline` places a program's specimen on its timeline, and
  * `owner` is the body it was collected for, kept when its collection holds a body's successors too.
  */
-const collectedEntry = (asset, timeline, owner) => ({
+const collectedEntry = (asset, timeline, owner, versions = [asset]) => ({
   id: asset.id,
   kind: 'collected',
   ...(timeline ? { timeline } : {}),
   ...(owner ? { owner } : {}),
-  label: asset.label,
-  note: asset.notes,
-  years: asset.sourceDate ? `Seen ${asset.sourceDate}` : 'Logo dates unestablished',
+  label: versions.length > 1 ? asset.publisher : asset.label,
+  // A design's card names its versions; each version's own account is on the design's page.
+  note: versions.length > 1 ? versions.map((each) => `${each.label.split(' — ').at(-1)}.`).join(' ') : asset.notes,
+  years: seenDates(versions) ? `Seen ${seenDates(versions)}` : 'Logo dates unestablished',
   asset,
+  ...(versions.length > 1 ? { versions } : {}),
   identity: {
     provenance: asset.reconstruction ? 'third_party_reconstruction' : asset.supplied ? 'original_supplied' : asset.isVector ? 'published_vector' : 'published_raster',
     fidelity: 'source compared',
     fidelityNote: asset.fidelityNote,
     applicability: {
-      kind: asset.sourceDate ? 'dated_specimen' : 'unknown',
-      years: asset.sourceDate || 'undated',
+      kind: seenDates(versions) ? 'dated_specimen' : 'unknown',
+      years: seenDates(versions) || 'undated',
       note: asset.sourceDate
         ? 'This is the date of the cited specimen, not a verified first use or adoption date. ' + (asset.dateNote || '')
         : `Collected on ${asset.observedDate}. A retrieval date does not establish when the design was adopted.`,
@@ -50,7 +65,8 @@ const BODIES = new Map(COLLECTED_BODIES.map((body) => [body.id, body]))
 const kindOf = (body) => body.kind === 'health-authority' ? 'health organization' : 'Crown corporation'
 
 /** A body's collected files as gallery entries. */
-export const collectedEntriesOf = (bodyId) => (BODIES.get(bodyId)?.assets ?? []).map((asset) => collectedEntry(asset, undefined, bodyId))
+export const collectedEntriesOf = (bodyId) => designsOf(BODIES.get(bodyId)?.assets ?? [])
+  .map(({ asset, versions }) => collectedEntry(asset, undefined, bodyId, versions))
 
 /** Published specimens folded into a researched collection rather than a one-off timeline. */
 export const specimenEntriesOf = (program) => (COLLECTED_SPECIMENS.find((each) => each.program === program)?.assets ?? [])
