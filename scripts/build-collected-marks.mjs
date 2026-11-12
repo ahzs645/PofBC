@@ -24,7 +24,7 @@ const sharedServices = read('research/identity/shared-services-bc-2026-11-12/sou
 const PROGRAM_PACKAGES = ['bc-travel-industry-2026-11-12', 'justice-institute-2026-11-12', 'auditor-general-2026-11-12', 'bc-online-2026-11-12']
   .map((search) => ({ search, register: read(`research/identity/${search}/source-register.json`) }))
 // Supplied packages that add a vector to a body, each read with the search it came from.
-const PACKAGES = ['bc-assessment-vector-2026-11-12', 'bc-power-commission-vector-2026-11-12', 'bc-place-vector-2026-11-12', 'bc-railway-vector-2026-11-12', 'bc-railway-dogwood-vector-2026-11-12', 'bc-systems-vector-2026-11-12', 'bc-housing-1978-vector-2026-11-12']
+const PACKAGES = ['bc-assessment-vector-2026-11-12', 'bc-power-commission-vector-2026-11-12', 'bc-place-vector-2026-11-12', 'bc-railway-vector-2026-11-12', 'bc-railway-dogwood-vector-2026-11-12', 'bc-systems-vector-2026-11-12', 'bc-housing-1978-vector-2026-11-12', 'bc-petroleum-vector-2026-11-12']
   .map((search) => ({ search, register: read(`research/identity/${search}/source-register.json`) }))
 
 const checked = (asset) => {
@@ -148,7 +148,10 @@ const SUPERSEDED = {
   'source-bc-power-commission-bc-power-commission-original-logo-jpg': 'bc-power-commission-rebuilt',
   'source-bc-place-ltd-bc-place-1983-logo-png': 'bc-place-1983-rebuilt',
   'source-bc-systems-corporation-bc-systems-1983-logo-png': 'bcsc-1983-white',
-  'shared-services-bc-2010-letterhead': 'shared-services-bc-2006-07'
+  'shared-services-bc-2010-letterhead': 'shared-services-bc-2006-07',
+  // The two scans are kept as the logos' downloads.
+  'source-bc-petroleum-corporation-bc-petroleum-1983-logo-png': 'bcpc-stacked-white',
+  'historical-bc-petroleum-1992-symbol-raster': 'bcpc-emblem-black'
 }
 
 // Another colourway of the same design: shown inside the design's entry as a version to switch
@@ -167,7 +170,9 @@ const VARIANT_OF = {
   'source-innovate-bc-innovate-bc-white-eps': 'innovate-bc-2024-colour',
   'bcr-dogwood-dark': 'bcr-dogwood-white',
   'bcsc-1983-black': 'bcsc-1983-white',
-  'jibc-logo-reversed': 'jibc-logo'
+  'jibc-logo-reversed': 'jibc-logo',
+  'bcpc-stacked-black': 'bcpc-stacked-white',
+  'bcpc-emblem-white': 'bcpc-emblem-black'
 }
 
 // What each version is called inside its design's entry.
@@ -199,11 +204,16 @@ const VERSION_LABELS = {
   'bcsc-1983-white': 'White (as printed)',
   'bcsc-1983-black': 'Black',
   'jibc-logo': 'On white',
-  'jibc-logo-reversed': 'Reversed (as supplied)'
+  'jibc-logo-reversed': 'Reversed (as supplied)',
+  'bcpc-stacked-white': 'White (as printed)',
+  'bcpc-stacked-black': 'Black',
+  'bcpc-emblem-black': 'Black (as printed)',
+  'bcpc-emblem-white': 'White'
 }
 
 // Shorter accounts where a body's or file's own record is about a file no longer shown.
 const BODY_NOTES = {
+  'bc-petroleum-corporation': 'The Crown corporation that bought and sold the province’s natural gas from 1973. Its curled-flame emblem, alone and over its four-line name, from its 1982/83 and 1991/92 annual reports.',
   'bc-systems-corporation': 'The Province’s shared computing corporation, from 1977. Its operations moved into government in 1996 and it was dissolved in 2000; its role continues in today’s Connected Services BC.',
   'bc-railway-company': 'Its wordmark is the BCRC acrostic — British Columbia Railway Company stepped down on four lines, with the initials in red — seen in three letterings: the heavier one on its website, and the wide Eurostile of the 2024 report’s cover and the Verdana of its letterhead.',
   'bc-place-ltd': 'The Crown company that built BC Place Stadium (opened 1983) on the False Creek lands that later held Expo 86. Renamed BC Enterprise Corporation in 1987; its assets passed to PavCo in 1989.',

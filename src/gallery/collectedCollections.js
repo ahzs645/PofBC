@@ -29,8 +29,16 @@ const shortDate = (date) => {
   return yearOf(date) ? `about ${yearOf(date)}` : null
 }
 
+/** The years a date covers: a fiscal year such as 1982/83 covers both. */
+const yearsOf = (date) => {
+  const fiscal = String(date).match(/(\d{4})\/(\d{2})\b/)
+  return fiscal ? [Number(fiscal[1]), Number(fiscal[1].slice(0, 2) + fiscal[2])] : [yearOf(date)]
+}
+
 const seenDates = (versions) => {
-  const dates = [...new Set(versions.flatMap((each) => [each.sourceDate, ...(each.alsoSeen ?? []).map((seen) => seen.date)]).map(shortDate).filter(Boolean))]
+  const all = [...new Set(versions.flatMap((each) => [each.sourceDate, ...(each.alsoSeen ?? []).map((seen) => seen.date)]).map(shortDate).filter(Boolean))]
+  // A bare year another date already covers says nothing more (1982/83 and 1983).
+  const dates = all.filter((date) => !/^\d{4}$/.test(date) || !all.some((other) => other !== date && yearsOf(other).includes(Number(date))))
     .sort((a, b) => yearOf(a) - yearOf(b))
   if (dates.length < 3 || !dates.every(yearOf)) return dates.join(' and ')
   const [first, last] = [yearOf(dates[0]), yearOf(dates.at(-1))]

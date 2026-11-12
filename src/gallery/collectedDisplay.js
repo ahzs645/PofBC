@@ -697,6 +697,54 @@ export const COLLECTED_DISPLAY = {
    "recoloured": false
   }
  },
+ "bcpc-stacked-white": {
+  "light": {
+   "file": "identity-display/bcpc-stacked-white.light.svg",
+   "aspect": 1.0162,
+   "recoloured": true
+  },
+  "dark": {
+   "file": "identity-display/bcpc-stacked-white.dark.svg",
+   "aspect": 1.0162,
+   "recoloured": false
+  }
+ },
+ "bcpc-stacked-black": {
+  "light": {
+   "file": "identity-display/bcpc-stacked-black.light.svg",
+   "aspect": 1.0162,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/bcpc-stacked-black.dark.svg",
+   "aspect": 1.0162,
+   "recoloured": true
+  }
+ },
+ "bcpc-emblem-black": {
+  "light": {
+   "file": "identity-display/bcpc-emblem-black.light.svg",
+   "aspect": 0.7817,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/bcpc-emblem-black.dark.svg",
+   "aspect": 0.7817,
+   "recoloured": true
+  }
+ },
+ "bcpc-emblem-white": {
+  "light": {
+   "file": "identity-display/bcpc-emblem-white.light.svg",
+   "aspect": 0.7817,
+   "recoloured": true
+  },
+  "dark": {
+   "file": "identity-display/bcpc-emblem-white.dark.svg",
+   "aspect": 0.7817,
+   "recoloured": false
+  }
+ },
  "historical-bc-buildings-corporation-2005": {
   "light": {
    "file": "identity-display/historical-bc-buildings-corporation-2005.light.svg",

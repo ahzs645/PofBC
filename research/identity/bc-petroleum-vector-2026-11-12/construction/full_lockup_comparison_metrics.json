@@ -1,0 +1,37 @@
+{
+  "method": "Single affine registration of the whole manually constructed lockup; artwork outlines are unchanged.",
+  "reference": "Supplied 289 x 311 lockup screenshot",
+  "threshold": 0.5,
+  "minimum_source_component_area_pixels": 3,
+  "affine_parameters_order": [
+    "x_scale",
+    "y_scale",
+    "x_shear",
+    "y_shear",
+    "x_translate",
+    "y_translate"
+  ],
+  "affine_parameters": [
+    1.0049521847611629,
+    1.0179893916307021,
+    -0.026553970424803133,
+    0.025867800352819794,
+    9.629677033986331,
+    120.2272199956285
+  ],
+  "full_lockup": {
+    "iou": 0.7946721695900948,
+    "intersection_pixels": 8472,
+    "union_pixels": 10661
+  },
+  "emblem_in_full_lockup_registration": {
+    "iou": 0.9104477611940298,
+    "intersection_pixels": 1769,
+    "union_pixels": 1943
+  },
+  "wordmark": {
+    "iou": 0.768869006652902,
+    "intersection_pixels": 6703,
+    "union_pixels": 8718
+  }
+}
