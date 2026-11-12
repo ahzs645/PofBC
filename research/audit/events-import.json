@@ -1,7 +1,7 @@
 {
   "schema": "import-accounting/1",
   "counts": {
-    "accepted": 894,
+    "accepted": 909,
     "unresolved_unmapped": 26,
     "corroborating_duplicate": 11
   },
@@ -13260,6 +13260,402 @@
         "reviewed_on": "2026-10-21"
       },
       "output_id": "atlas:institutional-history-sheriffs-1974"
+    },
+    {
+      "origin": "atlas/events-power-steamship-2026-11-12.json#atlas:power-steamship-puc-rural-electrification-1943",
+      "disposition": "accepted",
+      "input": {
+        "id": "atlas:power-steamship-puc-rural-electrification-1943",
+        "subject_id": "public-utilities-commission",
+        "related_subject_ids": [
+          "bc-power-commission"
+        ],
+        "event_type": "policy_investigation",
+        "title": "Public Utilities Commission puts a rural-electrification committee to work on how electricity could reach more British Columbians",
+        "date": {
+          "start": "1943",
+          "end": null,
+          "precision": "year",
+          "range_end_inclusive": false
+        },
+        "temporal_status": "source_reported_past",
+        "evidence": {
+          "source_url": "https://www.powerpioneers.com/our-community/bc-hydro-history/1945-1962/",
+          "locator": "BC Hydro history, 1945–1962, account preceding the Power Commission’s creation",
+          "basis": "supplied_research_summary"
+        },
+        "interpretation_notes": "A policy connection: the regulator’s investigation is the context for creating the public supplier in 1945. It is not a renaming or a transfer of the regulator into the Power Commission. From a research summary supplied on 2026-11-12, citing this source; not re-read in this pass.",
+        "reviewed_on": "2026-11-12"
+      },
+      "output_id": "atlas:power-steamship-puc-rural-electrification-1943"
+    },
+    {
+      "origin": "atlas/events-power-steamship-2026-11-12.json#atlas:power-steamship-bcpc-appointed-1945-04-17",
+      "disposition": "accepted",
+      "input": {
+        "id": "atlas:power-steamship-bcpc-appointed-1945-04-17",
+        "subject_id": "bc-power-commission",
+        "related_subject_ids": [],
+        "event_type": "executive_appointment",
+        "title": "The British Columbia Power Commission appointed under the Electric Power Act",
+        "date": {
+          "start": "1945-04-17",
+          "end": null,
+          "precision": "day",
+          "range_end_inclusive": false
+        },
+        "temporal_status": "source_reported_past",
+        "evidence": {
+          "source_url": "https://www66.statcan.gc.ca/eng/1950/195006420580_p.%20580.pdf",
+          "locator": "Canada Year Book",
+          "basis": "supplied_research_summary"
+        },
+        "interpretation_notes": "The contemporary Canada Year Book gives the appointment date; the Hart government’s mandate was to consolidate smaller systems outside BC Electric’s territory and extend service to communities without electricity. From a research summary supplied on 2026-11-12, citing this source; not re-read in this pass.",
+        "reviewed_on": "2026-11-12"
+      },
+      "output_id": "atlas:power-steamship-bcpc-appointed-1945-04-17"
+    },
+    {
+      "origin": "atlas/events-power-steamship-2026-11-12.json#atlas:power-steamship-bcpc-john-hart-1947",
+      "disposition": "accepted",
+      "input": {
+        "id": "atlas:power-steamship-bcpc-john-hart-1947",
+        "subject_id": "bc-power-commission",
+        "related_subject_ids": [],
+        "event_type": "operational_milestone",
+        "title": "John Hart hydroelectric development on the Campbell River opened",
+        "date": {
+          "start": "1947-12-15",
+          "end": null,
+          "precision": "day",
+          "range_end_inclusive": false
+        },
+        "temporal_status": "source_reported_past",
+        "evidence": {
+          "source_url": "https://www66.statcan.gc.ca/eng/1950/195006420580_p.%20580.pdf",
+          "locator": "Canada Year Book 1950, p. 580",
+          "basis": "supplied_research_summary"
+        },
+        "interpretation_notes": "From a research summary supplied on 2026-11-12, citing this source; not re-read in this pass.",
+        "reviewed_on": "2026-11-12"
+      },
+      "output_id": "atlas:power-steamship-bcpc-john-hart-1947"
+    },
+    {
+      "origin": "atlas/events-power-steamship-2026-11-12.json#atlas:power-steamship-bcpc-prince-george-1956",
+      "disposition": "accepted",
+      "input": {
+        "id": "atlas:power-steamship-bcpc-prince-george-1956",
+        "subject_id": "bc-power-commission",
+        "related_subject_ids": [],
+        "event_type": "acquisition",
+        "title": "Prince George sells its electrical utility to the Power Commission (Electrical Utility Sale By-law No. 843, approved by order in council subject to the voters’ assent)",
+        "date": {
+          "start": "1956",
+          "end": null,
+          "precision": "year",
+          "range_end_inclusive": false
+        },
+        "temporal_status": "source_reported_past",
+        "evidence": {
+          "source_url": "https://www.bclaws.gov.bc.ca/civix/document/id/oic/arc_oic/0421_1956",
+          "locator": "OIC 421/1956 and By-law No. 843",
+          "basis": "supplied_research_summary"
+        },
+        "interpretation_notes": "Generating equipment, distribution lines, meters, street lighting and vehicles, to improve supply and reduce rates. The City’s own history credits Mayors Gordon Bryant (1954–1955) and John Morrison (1956–1957) and calls the buyer “BC Hydro” retrospectively; the period documents name the Power Commission. From a research summary supplied on 2026-11-12, citing this source; not re-read in this pass.",
+        "reviewed_on": "2026-11-12"
+      },
+      "output_id": "atlas:power-steamship-bcpc-prince-george-1956"
+    },
+    {
+      "origin": "atlas/events-power-steamship-2026-11-12.json#atlas:power-steamship-bce-railway-1897",
+      "disposition": "accepted",
+      "input": {
+        "id": "atlas:power-steamship-bce-railway-1897",
+        "subject_id": "bc-electric-company-crown",
+        "related_subject_ids": [],
+        "event_type": "retrospective_origin_claim",
+        "title": "BC Electric traces its roots to the British Columbia Electric Railway of 1897, a streetcar and lighting utility for Victoria, Vancouver and New Westminster",
+        "date": {
+          "start": "1897",
+          "end": null,
+          "precision": "year",
+          "range_end_inclusive": false
+        },
+        "temporal_status": "source_reported_past",
+        "evidence": {
+          "source_url": "https://www.bchydro.com/toolbar/about/who_we_are/history.html",
+          "locator": "BC Hydro, Who we are: history",
+          "basis": "supplied_research_summary"
+        },
+        "interpretation_notes": "The private company’s origin; it entered the Province’s record only when its shares were vested in the Crown in 1961. From a research summary supplied on 2026-11-12, citing this source; not re-read in this pass.",
+        "reviewed_on": "2026-11-12"
+      },
+      "output_id": "atlas:power-steamship-bce-railway-1897"
+    },
+    {
+      "origin": "atlas/events-power-steamship-2026-11-12.json#atlas:power-steamship-bcpowercorp-1928",
+      "disposition": "accepted",
+      "input": {
+        "id": "atlas:power-steamship-bcpowercorp-1928",
+        "subject_id": "bc-electric-company-crown",
+        "related_subject_ids": [],
+        "event_type": "related_body_origin",
+        "title": "British Columbia Power Corporation, Limited incorporated: the private holding company that owned BC Electric’s common shares",
+        "date": {
+          "start": "1928",
+          "end": null,
+          "precision": "year",
+          "range_end_inclusive": false
+        },
+        "temporal_status": "source_reported_past",
+        "evidence": {
+          "source_url": "https://taxinterpretations.com/content/352796",
+          "locator": "Supreme Court account of the BC Power Corporation litigation",
+          "basis": "supplied_research_summary"
+        },
+        "interpretation_notes": "Not the British Columbia Power Commission: a private company on BC Electric’s ownership side, and the party to the 1963 settlement over the vested shares. From a research summary supplied on 2026-11-12, citing this source; not re-read in this pass.",
+        "reviewed_on": "2026-11-12"
+      },
+      "output_id": "atlas:power-steamship-bcpowercorp-1928"
+    },
+    {
+      "origin": "atlas/events-power-steamship-2026-11-12.json#atlas:power-steamship-bcuc-regulates-hydro-1980",
+      "disposition": "accepted",
+      "input": {
+        "id": "atlas:power-steamship-bcuc-regulates-hydro-1980",
+        "subject_id": "bc-utilities-commission",
+        "related_subject_ids": [
+          "bc-hydro"
+        ],
+        "event_type": "jurisdiction_expansion",
+        "title": "Utilities Commission Act in force: BC Hydro comes under general utility regulation",
+        "date": {
+          "start": "1980-09-11",
+          "end": null,
+          "precision": "day",
+          "range_end_inclusive": false
+        },
+        "temporal_status": "source_reported_past",
+        "evidence": {
+          "source_url": "https://www2.gov.bc.ca/assets/gov/farming-natural-resources-and-industry/electricity-alternative-energy/electricity/iepr/iepr_regulatory_approach_for_bc_hydro.pdf",
+          "locator": "Regulatory approach for BC Hydro",
+          "basis": "supplied_research_summary"
+        },
+        "interpretation_notes": "Before this, BC Hydro’s rates and activities were approved by Cabinet; the Energy Commission had regulated privately owned utilities but not BC Hydro (Auditor General, 2018 report on the BCUC). The relationship is regulation, not succession; government directions and exemptions can narrow it. From a research summary supplied on 2026-11-12, citing this source; not re-read in this pass.",
+        "reviewed_on": "2026-11-12"
+      },
+      "output_id": "atlas:power-steamship-bcuc-regulates-hydro-1980"
+    },
+    {
+      "origin": "atlas/events-power-steamship-2026-11-12.json#atlas:power-steamship-hydro-gas-division-1988",
+      "disposition": "accepted",
+      "input": {
+        "id": "atlas:power-steamship-hydro-gas-division-1988",
+        "subject_id": "bc-hydro",
+        "related_subject_ids": [],
+        "event_type": "functions_transferred",
+        "title": "BC Hydro’s Lower Mainland Gas Division sold to Inland Natural Gas; combined in 1989 into BC Gas (later Terasen Gas, 2003, and FortisBC Energy, 2011)",
+        "date": {
+          "start": "1988",
+          "end": null,
+          "precision": "year",
+          "range_end_inclusive": false
+        },
+        "temporal_status": "source_reported_past",
+        "evidence": {
+          "source_url": "https://www.ordersdecisions.bcuc.com/bcuc/decisions/en/111733/1/document.do",
+          "locator": "BCUC decision, Phase 1",
+          "basis": "supplied_research_summary"
+        },
+        "interpretation_notes": "The transferred business is the gas division, not BC Hydro, which continued as the electric utility. Its later owners are private companies outside this record. From a research summary supplied on 2026-11-12, citing this source; not re-read in this pass.",
+        "reviewed_on": "2026-11-12"
+      },
+      "output_id": "atlas:power-steamship-hydro-gas-division-1988"
+    },
+    {
+      "origin": "atlas/events-power-steamship-2026-11-12.json#atlas:power-steamship-columbia-power-1994",
+      "disposition": "accepted",
+      "input": {
+        "id": "atlas:power-steamship-columbia-power-1994",
+        "subject_id": "columbia-power-corporation",
+        "related_subject_ids": [],
+        "event_type": "legal_establishment",
+        "title": "Columbia Power Corporation established",
+        "date": {
+          "start": "1994-04-18",
+          "end": null,
+          "precision": "day",
+          "range_end_inclusive": false
+        },
+        "temporal_status": "source_reported_past",
+        "evidence": {
+          "source_url": "https://columbiapower.org/wp-content/uploads/2024/05/2024_ColumbiaPowerHistoryBook_reducedsize1.pdf",
+          "locator": "Columbia Power history book, 2024",
+          "basis": "supplied_research_summary"
+        },
+        "interpretation_notes": "Its origins are the rights to expand generation at the Brilliant and Waneta dams; it is not a continuation of the 1945 British Columbia Power Commission. From a research summary supplied on 2026-11-12, citing this source; not re-read in this pass.",
+        "reviewed_on": "2026-11-12"
+      },
+      "output_id": "atlas:power-steamship-columbia-power-1994"
+    },
+    {
+      "origin": "atlas/events-power-steamship-2026-11-12.json#atlas:power-steamship-bcss-livery-1975",
+      "disposition": "accepted",
+      "input": {
+        "id": "atlas:power-steamship-bcss-livery-1975",
+        "subject_id": "bc-steamship-company",
+        "related_subject_ids": [],
+        "event_type": "identity_observed",
+        "title": "Princess Marguerite’s new funnel design: a modified Union Jack in red, blue and white",
+        "date": {
+          "start": "1975-06",
+          "end": null,
+          "precision": "month",
+          "range_end_inclusive": false
+        },
+        "temporal_status": "source_reported_past",
+        "evidence": {
+          "source_url": "https://pnwc-nrhs.org/Trainmaster1975/TM-1975-06.pdf",
+          "locator": "The Trainmaster, June 1975, printed p. 8 (PDF p. 10)",
+          "basis": "supplied_research_summary"
+        },
+        "interpretation_notes": "The vessel livery of the revived service. How its colours relate to the company’s circular emblem is not established. Canadian Rail, June 1976 (“The Georgian Princess”), also describes the funnel motif. From a research summary supplied on 2026-11-12, citing this source; not re-read in this pass.",
+        "reviewed_on": "2026-11-12"
+      },
+      "output_id": "atlas:power-steamship-bcss-livery-1975"
+    },
+    {
+      "origin": "atlas/events-power-steamship-2026-11-12.json#atlas:power-steamship-bcss-brochure-1983",
+      "disposition": "accepted",
+      "input": {
+        "id": "atlas:power-steamship-bcss-brochure-1983",
+        "subject_id": "bc-steamship-company",
+        "related_subject_ids": [],
+        "event_type": "identity_observed",
+        "title": "Princess Marguerite brochure: the ship and Victoria skyline mark with “The Last of the Great Romantics”, and the cover’s three-band title lettering",
+        "date": {
+          "start": "1983",
+          "end": null,
+          "precision": "year",
+          "range_end_inclusive": false
+        },
+        "temporal_status": "source_reported_past",
+        "evidence": {
+          "source_url": "https://www.ebay.com/itm/147644435138",
+          "locator": "Brochure dated 1983 on its reverse; small print names British Columbia Steamship Company (1975) Ltd.",
+          "basis": "supplied_research_summary"
+        },
+        "interpretation_notes": "A service identity for the Princess Marguerite, not a version of the company’s circular emblem. Seen in a sale listing’s photographs, which may not stay online. From a research summary supplied on 2026-11-12, citing this source; not re-read in this pass.",
+        "reviewed_on": "2026-11-12"
+      },
+      "output_id": "atlas:power-steamship-bcss-brochure-1983"
+    },
+    {
+      "origin": "atlas/events-power-steamship-2026-11-12.json#atlas:power-steamship-bcss-vip-1987",
+      "disposition": "accepted",
+      "input": {
+        "id": "atlas:power-steamship-bcss-vip-1987",
+        "subject_id": "bc-steamship-company",
+        "related_subject_ids": [
+          "bc-ferry-corporation"
+        ],
+        "event_type": "acquisition",
+        "title": "The company acquires the Vancouver Island Princess from BC Ferry Corporation for $8.7 million, for a ship with an onboard casino",
+        "date": {
+          "start": "1987-03-24",
+          "end": null,
+          "precision": "day",
+          "range_end_inclusive": false
+        },
+        "temporal_status": "source_reported_past",
+        "evidence": {
+          "source_url": "https://lims.leg.bc.ca/hdms/file/Debates/34th1st/34p_01s_870324p.htm",
+          "locator": "Hansard, 24 March 1987, pp. 248–250",
+          "basis": "supplied_research_summary"
+        },
+        "interpretation_notes": "The date is the debate’s; the sale itself may have closed on another day. From a research summary supplied on 2026-11-12, citing this source; not re-read in this pass.",
+        "reviewed_on": "2026-11-12"
+      },
+      "output_id": "atlas:power-steamship-bcss-vip-1987"
+    },
+    {
+      "origin": "atlas/events-power-steamship-2026-11-12.json#atlas:power-steamship-bcss-token-1987",
+      "disposition": "accepted",
+      "input": {
+        "id": "atlas:power-steamship-bcss-token-1987",
+        "subject_id": "bc-steamship-company",
+        "related_subject_ids": [],
+        "event_type": "logo_observed",
+        "title": "The company’s circular emblem (a Union Jack over stacked waves) on a B.C. Steamship casino token",
+        "date": {
+          "start": "1987",
+          "end": null,
+          "precision": "year",
+          "range_end_inclusive": false
+        },
+        "temporal_status": "source_reported_past",
+        "evidence": {
+          "source_url": "https://en.numista.com/130778",
+          "locator": "Numista catalogue 130778",
+          "basis": "supplied_research_summary"
+        },
+        "interpretation_notes": "A dated artifact showing the emblem; it does not date the emblem’s introduction or give its print colours. The Museum of Gaming History’s ChipGuide records two 1987 tokens of different sizes. From a research summary supplied on 2026-11-12, citing this source; not re-read in this pass.",
+        "reviewed_on": "2026-11-12"
+      },
+      "output_id": "atlas:power-steamship-bcss-token-1987"
+    },
+    {
+      "origin": "atlas/events-power-steamship-2026-11-12.json#atlas:power-steamship-bcss-assets-sold-1988",
+      "disposition": "accepted",
+      "input": {
+        "id": "atlas:power-steamship-bcss-assets-sold-1988",
+        "subject_id": "bc-steamship-company",
+        "related_subject_ids": [],
+        "event_type": "asset_transfer",
+        "title": "Operating assets — two vessels, the dock facilities and related assets — sold to B.C. Stena Line Ltd. for $6 million",
+        "date": {
+          "start": "1988-11",
+          "end": null,
+          "precision": "month",
+          "range_end_inclusive": false
+        },
+        "temporal_status": "source_reported_past",
+        "evidence": {
+          "source_url": "https://bcombudsperson.ca/wp-content/uploads/2025/08/1990-Annual-Report-of-the-Ombudsman-web.pdf",
+          "locator": "Ombudsman, 1990 annual report, p. 200",
+          "basis": "supplied_research_summary"
+        },
+        "interpretation_notes": "The end of the Crown-operated service, not of the company: the final instalment was paid in November 1990 and the corporation was renamed in 1994. From a research summary supplied on 2026-11-12, citing this source; not re-read in this pass.",
+        "reviewed_on": "2026-11-12"
+      },
+      "output_id": "atlas:power-steamship-bcss-assets-sold-1988"
+    },
+    {
+      "origin": "atlas/events-power-steamship-2026-11-12.json#atlas:power-steamship-bcss-renamed-1994",
+      "disposition": "accepted",
+      "input": {
+        "id": "atlas:power-steamship-bcss-renamed-1994",
+        "subject_id": "bc-steamship-company",
+        "related_subject_ids": [],
+        "event_type": "legal_name_change",
+        "title": "The surviving corporation renamed Victoria Line Ltd.",
+        "date": {
+          "start": "1994",
+          "end": null,
+          "precision": "year",
+          "range_end_inclusive": false
+        },
+        "temporal_status": "source_reported_past",
+        "evidence": {
+          "source_url": "https://lims.leg.bc.ca/hdms/file/Debates/35th3rd/19940505pm-Hansard-v15n1.htm",
+          "locator": "Hansard, 5 May 1994 (afternoon)",
+          "basis": "supplied_research_summary"
+        },
+        "interpretation_notes": "Stated by the minister in May 1994 and confirmed in the Auditor General’s report on the 1994/95 public accounts. From a research summary supplied on 2026-11-12, citing this source; not re-read in this pass.",
+        "reviewed_on": "2026-11-12"
+      },
+      "output_id": "atlas:power-steamship-bcss-renamed-1994"
     },
     {
       "origin": "atlas/events-primary-evidence.json#atlas:primary-evidence-twenty-boards-1995",

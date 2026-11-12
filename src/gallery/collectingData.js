@@ -52,7 +52,7 @@ export const COLLECTING = [
   {"id":"bc-development-corporation","name":"British Columbia Development Corporation","kind":"crown-corporation","from":1973,"to":1987,"current":false},
   {"id":"bc-petroleum-corporation","name":"British Columbia Petroleum Corporation","kind":"crown-corporation","from":1973,"to":1994,"current":false},
   {"id":"ocean-falls-corporation","name":"Ocean Falls Corporation","kind":"crown-corporation","from":1973,"to":1986,"current":false},
-  {"id":"bc-steamship-company","name":"British Columbia Steamship Company (1975) Ltd.","kind":"crown-corporation","from":1975,"to":1992,"current":false},
+  {"id":"bc-steamship-company","name":"British Columbia Steamship Company (1975) Ltd.","kind":"crown-corporation","from":1975,"to":null,"current":false,"untraced":true},
   {"id":"bc-buildings-corporation","name":"British Columbia Buildings Corporation","shortName":"BCBC","kind":"crown-corporation","from":1976,"to":2006,"current":false},
   {"id":"bc-ferry-corporation","name":"British Columbia Ferry Corporation","shortName":"BC Ferries","kind":"crown-corporation","from":1977,"to":2003,"current":false},
   {"id":"bc-heritage-trust","name":"British Columbia Heritage Trust","kind":"crown-corporation","from":1977,"to":2003,"current":false},
