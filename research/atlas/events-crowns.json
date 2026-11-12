@@ -1749,8 +1749,8 @@
         "quote": "The name of the Pacific Great Eastern Railway Company ... is amended so that the name of the company is British Columbia Railway Company.",
         "publisher": "BC Laws (King's Printer) historical statute scan"
       },
-      "interpretation_notes": "Name change of the same company (not a new corporation). Date is assent; current Act s. 43 uses \"before March 30, 1972\" as the cut-off. CONFLICT with local 1972-04-01 boundary.",
-      "reviewed_on": "2026-09-25",
+      "interpretation_notes": "Name change of the same company, not a new corporation. The statute was assented to on 30 March 1972 and current Act s. 43 uses that legal-name boundary. Canadian Rail 248 (September 1972), printed p. 265 / PDF p. 5, separately dates public use of the new name to 1 April 1972; see atlas:railway-bcr-public-name-1972-04-01. The two records describe legal and public-name milestones, not competing incorporation dates. The atlas’s 1 April body boundary is retained as a public-name boundary.",
+      "reviewed_on": "2026-11-12",
       "integration_status": "needs_local_id_mapping_and_review",
       "related_subjects": [
         "pacific-great-eastern-railway"
@@ -4166,8 +4166,16 @@
         "local 1972-04-01"
       ],
       "event_ids": [
-        "atlas:bcr-name-change-1972-03-30"
-      ]
+        "atlas:bcr-name-change-1972-03-30",
+        "atlas:railway-bcr-public-name-1972-04-01"
+      ],
+      "status": "distinguished_legal_and_public_name_dates",
+      "resolution": "The legal-name event remains 30 March 1972. Contemporary Canadian Rail 248 documents the public name from 1 April 1972; these separate milestones explain the existing body-display boundary without claiming a new corporation.",
+      "resolved_on": "2026-11-12",
+      "evidence": {
+        "source_url": "https://exporail.org/canrail/canadian_rail_1962_1989/canadian-rail-248-1972.pdf",
+        "locator": "Printed p. 265 / PDF p. 5"
+      }
     },
     {
       "subject_id": "agricultural-land-commission",
@@ -4272,7 +4280,7 @@
     "BC Transit: proclamation dates of UTA Act 1978 and 1982 amendment; logo history; Metro Transit Operating Company in-force and end dates.",
     "BC Hydro: BC Hydro Act proclamation date; BC Power Commission first appointments; official (non-retiree) source for 1962 logo; later chairs/CEOs.",
     "BC Ferries: official BC Ferries (company) history page not found; exact first-sailing date 1960 only in secondary sources; Ferry Authority 1964–1977 transition proclamation (BC Reg 556/76 cited by law library only); 2003-onward logos.",
-    "BC Rail: official history of 1984 BC Rail Ltd reorganisation and 2004 CN transaction not reviewed; actual share-transfer date after 1918 Act.",
+    "BC Rail: the exact 1918 share-transfer date after the enabling Act remains unresolved. The 1984 subsidiary restructuring and 2004 CN transaction are documented in events-railway-identity.json.",
     "WorkSafeBC: first Board member appointment dates (1916-1917); 1974 name-change legal instrument and exact day (local uses 1974-07-01, unverified); logo artwork.",
     "Royal BC Museum/BC Archives: statutory instrument for 1908 Provincial Archives; pre-1987 official name; in-force regulation for Museum Act 2003 (org says April 1, 2003).",
     "Knowledge Network: official source for 1981 launch (only non-official sources found); Open Learning Agency 1988 creation; executive appointments.",

@@ -1332,6 +1332,45 @@ input.share__url {
 .gallery__pick--this { cursor: default; }
 .gallery__pick--this:hover { background: none; }
 
+/* The railway's corporate history is distinct from its logo groups. Every event and connection
+   keeps its source, while photographs and unadopted designs remain supporting evidence. */
+.gallery__railway-links { display: flex; flex-wrap: wrap; gap: 8px 20px; padding: 2px 4px; }
+.gallery__railway-links a { color: var(--ink-muted); font-size: 14px; text-underline-offset: 3px; }
+.gallery__railway-content { display: grid; gap: var(--gap); min-width: 0; }
+.gallery__railway-section { min-width: 0; padding: 20px; border-radius: var(--radius); background: var(--surface); scroll-margin-top: 16px; }
+.gallery__railway-section h2 { margin: 0; font-size: 20px; line-height: 1.3; font-weight: 600; }
+.gallery__railway-section h3 { margin: 0; font-size: 16px; line-height: 1.4; font-weight: 600; }
+.gallery__railway-section p { max-width: 78ch; margin: 8px 0 0; color: var(--ink-muted); font-size: 14px; line-height: 1.6; }
+.gallery__railway-section .gallery__sources { font-size: 12.5px; line-height: 1.55; }
+.gallery__railway-section .gallery__railway-overview { max-width: 72ch; margin-top: 12px; }
+.gallery__railway-events { margin: 24px 0 0; padding: 0; list-style: none; }
+.gallery__railway-events > li { display: grid; gap: 8px; padding: 18px 0; border-top: 1px solid var(--mid); }
+.gallery__railway-event-date { display: flex; flex-wrap: wrap; align-content: start; align-items: baseline; gap: 4px 12px; font-size: 14px; font-weight: 600; font-variant-numeric: tabular-nums; }
+.gallery__railway-kind { display: block; color: var(--ink-faint); font-size: 12px; font-weight: 400; line-height: 1.5; }
+.gallery__railway-connections { display: grid; gap: 16px; padding: 0; margin: 20px 0 0; list-style: none; }
+.gallery__railway-connections > li { min-width: 0; border-top: 1px solid var(--mid); padding-top: 16px; }
+.gallery__railway-section .gallery__railway-connection-route { display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 10px; margin-top: 0; color: var(--ink); }
+.gallery__railway-connection-route strong { font-weight: 600; }
+.gallery__railway-section .gallery__railway-connection-type { display: flex; flex-wrap: wrap; gap: 2px 12px; font-size: 12.5px; }
+.gallery__railway-connection-type > :first-child { color: var(--ink); }
+.gallery__railway-evidence { display: grid; gap: 24px; margin-top: 20px; }
+.gallery__railway-evidence figure { min-width: 0; margin: 0; }
+.gallery__railway-image { display: grid; place-items: center; height: 230px; padding: 12px; border-radius: var(--radius-sm); background: #f5f4ef; }
+.gallery__railway-image img { max-width: 100%; max-height: 206px; object-fit: contain; }
+.gallery__railway-evidence figcaption { margin-top: 12px; }
+.gallery__railway-evidence h3 { margin-top: 4px; }
+.gallery__railway-download { display: inline-block; margin-top: 10px; color: var(--ink-muted); font-size: 13px; text-underline-offset: 3px; }
+.gallery__railway-more { padding: 16px 20px; border-radius: var(--radius); background: var(--surface); }
+.gallery__railway-more > summary { cursor: pointer; color: var(--ink-muted); font-size: 14px; font-weight: 600; line-height: 1.5; }
+.gallery__railway-more[open] > summary { margin-bottom: 20px; }
+.gallery__railway-more .gallery__railway-section { padding: 12px 0; }
+.gallery__railway-links a:focus-visible, .gallery__railway-image:focus-visible, .gallery__railway-download:focus-visible, .gallery__railway-more > summary:focus-visible { outline: 2px solid var(--focus); outline-offset: 4px; }
+@media (min-width: 760px) {
+  .gallery__railway-events > li { grid-template-columns: 160px minmax(0, 1fr); gap: 24px; }
+  .gallery__railway-event-date { display: grid; gap: 4px; }
+  .gallery__railway-connections, .gallery__railway-evidence { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
 /* Where an era's dates rest, under it: quiet, but every link a real one. */
 .gallery__sources { margin: 14px 0 0; max-width: 78ch; font-size: 12.5px; line-height: 1.55; color: var(--ink-faint); }
 .gallery__sources a { color: var(--ink-muted); }

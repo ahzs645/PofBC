@@ -18,6 +18,14 @@ source comparisons and a remaining-gap audit. It resolves the older BCLC palette
 originals and adds WorkSafeBC's 2003, 2004 and 2024 report specimens alongside the earlier
 reconstructions. Report periods remain distinct from adoption dates.
 
+## Railway history
+
+The [12 November railway history package](railway-history-2026-11-12/README.md) adds twelve source
+logo specimens and four context crops for PGE, British Columbia Railway and BC Rail. The combined
+collection now has fifteen logo specimens across thirteen design groups, with sourced company
+events and connections. Its register preserves exact crop provenance and separates historical
+use from later reproductions; the isolated BC Rail operating graphic remains sought.
+
 ## ICBC, BCLC, BC Ferries, WorkSafeBC and BC Transit
 
 Their timelines came as five research packages (27 September 2026), filed here whole in
