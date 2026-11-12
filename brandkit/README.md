@@ -11,7 +11,7 @@ npm run brandkit:pack                      # build, then pack every era
 npm run brandkit:pack -- bc-province-flag  # one era (or several), by id
 ```
 
-`brandkit:pack` writes to `dist/brandkit/packs/`:
+`brandkit:pack` writes to `brandkit/out/packs/`:
 
 | File | What it is |
 | --- | --- |
@@ -20,7 +20,7 @@ npm run brandkit:pack -- bc-province-flag  # one era (or several), by id
 | `catalog.json` | All five packs, for `?catalog=<address>` or a site built with `VITE_BRANDKIT_CATALOGS`. Pass `--base-url https://host/path/` to write absolute addresses. |
 | `bc-province.bundle.zip` | Every pack in one file: dropped or linked, it adds all five eras at once. |
 
-The brand folders themselves are in `dist/brandkit/brands/<id>/` (or `BRANDKIT_OUT`); `brandkit
+The brand folders themselves are in `brandkit/out/brands/<id>/` (or `BRANDKIT_OUT`); `brandkit
 build <folder>/brand.json` turns one into a complete kit of files. Packing is brandkit's own
 (`vendor/brandkit/src/pack`), so the packs are exactly what brandkit reads, and come out byte for
 byte the same from the same sources.
@@ -67,7 +67,7 @@ brandkit/
   sources/<id>/            what an era starts from: artwork, fonts, references, its README (committed)
   shared/fonts/            TeX Gyre Heros and Cursor (GUST licence), copied into every era
   scripts/
-    build.mjs              sources → dist/brandkit/brands/<id>/, validated by brandkit
+    build.mjs              sources → brandkit/out/brands/<id>/, validated by brandkit
     pack.mjs               brand folders → packs, catalog and bundle
     eras/<era>.mjs         one generator per era: writes its brand.json
     lib/                   shared helpers; the 1977 brand's applications, illustrations, motion

@@ -6,7 +6,7 @@
 //   npm run brandkit:pack -- --no-build                     pack what <out> already holds
 //   npm run brandkit:pack -- --base-url https://host/path/  catalog entries as absolute addresses
 //
-// Writes to dist/brandkit/packs (BRANDKIT_PACKS overrides it):
+// Writes to brandkit/out/packs (BRANDKIT_PACKS overrides it):
 //
 //   <id>.zip              the era's pack: open it in brandkit by dropping it on the page, with
 //                         ⋯ → Open a brand…, or by link (?url=<address of the zip>)
@@ -42,7 +42,7 @@ const run = (script, scriptArgs) => {
 if (!noBuild) run(resolve(ROOT, 'brandkit/scripts/build.mjs'), eras.map((era) => era.id))
 for (const era of eras) if (!existsSync(resolve(OUT, era.id, 'brand.json'))) throw new Error(`${era.id} has not been built: run npm run brandkit:build`)
 
-const out = resolve(ROOT, process.env.BRANDKIT_PACKS ?? 'dist/brandkit/packs')
+const out = resolve(ROOT, process.env.BRANDKIT_PACKS ?? 'brandkit/out/packs')
 const { pack } = await import(new URL('../../vendor/brandkit/src/pack/cli.js', import.meta.url))
 pack([
   ...eras.map((era) => resolve(OUT, era.id)),

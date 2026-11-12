@@ -794,7 +794,7 @@ era, oldest first:
 | `bc-province-current` | **The BC mark**, 2011 to the present, with every published ministry mark |
 
 ```sh
-npm run brandkit:pack                      # every era → dist/brandkit/packs/
+npm run brandkit:pack                      # every era → brandkit/out/packs/
 npm run brandkit:pack -- bc-province-flag  # one era
 ```
 
@@ -802,7 +802,7 @@ Each `<id>.zip` opens in brandkit by drag and drop or `?url=`; `catalog.json` li
 `bc-province.bundle.zip` adds all five at once. The flag, arms and current brands are written from
 the same layout code the generator draws with, so the two cannot disagree; the 1977 brand's
 generator, which brandkit used to carry, now lives here and reads the symbol and ministries from
-`src/`. `npm run brandkit:build` writes the brand folders alone (`dist/brandkit/brands/`).
+`src/`. `npm run brandkit:build` writes the brand folders alone (`brandkit/out/brands/`).
 
 ---
 
