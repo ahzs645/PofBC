@@ -19,10 +19,10 @@ const historical = read('research/identity/historical-vector-followup-2026-10-30
 const innovate = read('research/identity/innovate-bc-vector-2026-11-12/source-register.json')
 const railSightings = read('research/identity/bc-rail-sightings-2026-11-12/source-register.json')
 // Programs' marks held as supplied reconstructions, with no body of their own in the inventory.
-const PROGRAM_PACKAGES = ['bc-travel-industry-2026-11-12', 'justice-institute-2026-11-12']
+const PROGRAM_PACKAGES = ['bc-travel-industry-2026-11-12', 'justice-institute-2026-11-12', 'auditor-general-2026-11-12']
   .map((search) => ({ search, register: read(`research/identity/${search}/source-register.json`) }))
 // Supplied packages that add a vector to a body, each read with the search it came from.
-const PACKAGES = ['bc-assessment-vector-2026-11-12', 'bc-power-commission-vector-2026-11-12', 'bc-place-vector-2026-11-12', 'bc-railway-vector-2026-11-12', 'bc-railway-dogwood-vector-2026-11-12', 'bc-systems-vector-2026-11-12']
+const PACKAGES = ['bc-assessment-vector-2026-11-12', 'bc-power-commission-vector-2026-11-12', 'bc-place-vector-2026-11-12', 'bc-railway-vector-2026-11-12', 'bc-railway-dogwood-vector-2026-11-12', 'bc-systems-vector-2026-11-12', 'bc-housing-1978-vector-2026-11-12']
   .map((search) => ({ search, register: read(`research/identity/${search}/source-register.json`) }))
 
 const checked = (asset) => {
@@ -204,7 +204,7 @@ const BODY_NOTES = {
   'bc-power-commission': 'The public utility that brought power to communities outside BC Electric’s territory from 1945, and one of BC Hydro’s two predecessors (established 1962, amalgamated 1965). Its emblem was on the commission’s red service trucks.',
   'bc-steamship-company': 'The Crown company that ran the Princess Marguerite between Victoria and Seattle from 1975. It sold its ships in 1988 and was renamed Victoria Line Ltd. in 1994.',
   'transportation-investment-corporation': 'One design in full colour and white, both original vector artwork from Pattullo Bridge Replacement Project publications.',
-  'bc-housing': 'The emblem and wordmark, and the Research Centre lockup, as original vector artwork from a BC Housing report.',
+  'bc-housing': 'The British Columbia Housing Management Commission, known as BC Housing, since 1967: its house-shaped BC of 1978, and today’s emblem and the Research Centre lockup.',
   'bc-assessment': 'The full-colour logo from the official media kit: an SVG converted from its EPS, with the EPS itself as the original download.',
   'columbia-power': 'The logo as original vector artwork, reversed, from the 2024 history book.',
   'infrastructure-bc': 'One design in full colour and reversed, both original vector artwork from the Spring 2026 brochure.',

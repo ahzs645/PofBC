@@ -29,7 +29,7 @@ export const COLLECTED_BODIES = [
     "current": true,
     "status": "asset-collected",
     "observedDate": "2026-10-22",
-    "notes": "The emblem and wordmark, and the Research Centre lockup, as original vector artwork from a BC Housing report.",
+    "notes": "The British Columbia Housing Management Commission, known as BC Housing, since 1967: its house-shaped BC of 1978, and today’s emblem and the Research Centre lockup.",
     "assets": [
       {
         "id": "vector-bc-housing-corporate-component-source-vector",
@@ -78,6 +78,30 @@ export const COLLECTED_BODIES = [
         "bytes": 13570,
         "darkBackground": false,
         "search": "vector-search-2026-10-30"
+      },
+      {
+        "id": "bc-housing-1978-rebuilt",
+        "label": "BC Housing Management Commission — House symbol and name, 1978 (reconstruction)",
+        "file": "identity-collected/bc-housing/bc-housing-1978-rebuilt.svg",
+        "format": "svg",
+        "isVector": true,
+        "supplied": true,
+        "reconstruction": true,
+        "publisher": "British Columbia Housing Management Commission",
+        "sourcePage": null,
+        "sourceUrl": null,
+        "sourceLocator": "Annual Report 1978, cover and title page (PDF pages 2–3), with the enlarged symbol on PDF page 13; a Legislative Library of British Columbia copy, supplied",
+        "sourceFile": "Annual Report, year ended December 31, 1978",
+        "sourceDate": "1978",
+        "observedDate": "2026-11-12",
+        "dateNote": "The report’s year, not an adoption date.",
+        "evidenceType": "supplied-vector-reconstruction",
+        "notes": "BC drawn as a house — a pitched roof over the two letters, with a slit under the roof — beside “British Columbia Housing Management Commission” on three lines, in brown.",
+        "fidelityNote": "A supplied vector reconstruction, not original artwork: the symbol is two drawn paths (no automatic tracing) and the name is set in Nimbus Sans Bold outlines with close spacing; the original typeface is not verified, and the brown (#836458) approximates the scan.",
+        "sha256": "1fceb7ba97d254cd89f0aafece6dede77e75bd3bcb6d2da4d645baf87d696550",
+        "bytes": 31283,
+        "darkBackground": false,
+        "search": "bc-housing-1978-vector-2026-11-12"
       }
     ]
   },
@@ -6963,6 +6987,29 @@ export const COLLECTED_SPECIMENS = [
     "program": "justice-institute",
     "assets": [
       {
+        "id": "jibc-logo",
+        "label": "Justice Institute of British Columbia — Eagle shield and name",
+        "file": "identity-collected/justice-institute/jibc-logo-reversed.svg",
+        "format": "svg",
+        "isVector": true,
+        "supplied": true,
+        "reconstruction": false,
+        "publisher": "Justice Institute of British Columbia",
+        "sourcePage": "https://www.jibc.ca",
+        "sourceUrl": null,
+        "sourceLocator": "The Institute’s current logo file (logo.svg, an Adobe Illustrator 26 export), supplied",
+        "sourceFile": "logo.svg",
+        "sourceDate": null,
+        "observedDate": "2026-11-12",
+        "evidenceType": "supplied-original-vector",
+        "notes": "A blue eagle rising in a rounded shield, beside “Justice Institute” and “BRITISH COLUMBIA” in white, for a dark ground: the Institute’s current logo.",
+        "fidelityNote": "The supplied file, unchanged: an Illustrator export with the shield in blue (#034EA2) and the lettering in white. When it was adopted is not established.",
+        "sha256": "59899e0c4951ce1ceb00c655509518f7833229863e149c9ccc735bd9fa6a246f",
+        "bytes": 8766,
+        "darkBackground": true,
+        "search": "justice-institute-2026-11-12"
+      },
+      {
         "id": "jibc-monogram",
         "label": "Justice Institute of British Columbia — Monogram, vector reconstruction",
         "file": "identity-collected/justice-institute/jibc-monogram.svg",
@@ -6984,6 +7031,34 @@ export const COLLECTED_SPECIMENS = [
         "bytes": 1778,
         "darkBackground": false,
         "search": "justice-institute-2026-11-12"
+      }
+    ]
+  },
+  {
+    "program": "auditor-general",
+    "assets": [
+      {
+        "id": "oag-bc-logo",
+        "label": "Office of the Auditor General of British Columbia — Emblem and name",
+        "file": "identity-collected/auditor-general/oag-bc-logo.svg",
+        "format": "svg",
+        "isVector": true,
+        "supplied": true,
+        "reconstruction": false,
+        "publisher": "Office of the Auditor General of British Columbia",
+        "sourcePage": "https://www.oag.bc.ca",
+        "sourceUrl": null,
+        "sourceLocator": "A vector selection from page 1 of an Office publication (PDF), supplied; the publication is not named",
+        "sourceFile": null,
+        "sourceDate": null,
+        "observedDate": "2026-11-12",
+        "evidenceType": "supplied-pdf-vector-selection",
+        "notes": "A purple circular emblem of layered, folded bands beside “Office of the Auditor General of British Columbia”, with “Auditor General” in bold.",
+        "fidelityNote": "The publication’s own paths, as selected from its first page and supplied; only the page’s border rectangle, caught in the selection, was removed. Purple #613393.",
+        "sha256": "6ef7966ae2bafec1a0be1a5dabf1054995fe29d827d2506befd821372f8a839b",
+        "bytes": 11828,
+        "darkBackground": false,
+        "search": "auditor-general-2026-11-12"
       }
     ]
   }

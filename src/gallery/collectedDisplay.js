@@ -25,6 +25,18 @@ export const COLLECTED_DISPLAY = {
    "recoloured": true
   }
  },
+ "bc-housing-1978-rebuilt": {
+  "light": {
+   "file": "identity-display/bc-housing-1978-rebuilt.light.svg",
+   "aspect": 4.8417,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/bc-housing-1978-rebuilt.dark.svg",
+   "aspect": 4.8417,
+   "recoloured": true
+  }
+ },
  "bcrc-2024-cover-rebuilt": {
   "light": {
    "file": "identity-display/bcrc-2024-cover-rebuilt.light.svg",
@@ -1179,6 +1191,18 @@ export const COLLECTED_DISPLAY = {
    "recoloured": false
   }
  },
+ "jibc-logo": {
+  "light": {
+   "file": "identity-display/jibc-logo.light.svg",
+   "aspect": 2.7152,
+   "recoloured": true
+  },
+  "dark": {
+   "file": "identity-display/jibc-logo.dark.svg",
+   "aspect": 2.7152,
+   "recoloured": false
+  }
+ },
  "jibc-monogram": {
   "light": {
    "file": "identity-display/jibc-monogram.light.svg",
@@ -1188,6 +1212,18 @@ export const COLLECTED_DISPLAY = {
   "dark": {
    "file": "identity-display/jibc-monogram.dark.svg",
    "aspect": 2.3183,
+   "recoloured": true
+  }
+ },
+ "oag-bc-logo": {
+  "light": {
+   "file": "identity-display/oag-bc-logo.light.svg",
+   "aspect": 3.8132,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/oag-bc-logo.dark.svg",
+   "aspect": 3.8132,
    "recoloured": true
   }
  }

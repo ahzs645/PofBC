@@ -1078,26 +1078,38 @@ GALLERY_COLLECTIONS.push(...COLLECTED_COLLECTIONS.filter((candidate) =>
   !GALLERY_COLLECTIONS.some((held) => nodesOf(held).includes(candidate.graphNode))))
 // WorkSafeBC's specimens are folded into its collection above; the one-off programs keep theirs.
 // The Department of Travel Industry's is folded into the BC mark collection.
-GALLERY_COLLECTIONS.push(...SPECIMEN_COLLECTIONS.filter((collection) => !['specimens-worksafebc', 'specimens-travel-industry', 'specimens-justice-institute'].includes(collection.id)))
+GALLERY_COLLECTIONS.push(...SPECIMEN_COLLECTIONS.filter((collection) => !['specimens-worksafebc', 'specimens-travel-industry', 'specimens-justice-institute', 'specimens-auditor-general'].includes(collection.id)))
 
-// The Justice Institute is a public body, but a post-secondary institute rather than one of the Crown
-// corporations or health authorities the shelf collects for, so its collection is placed there by hand.
-const JIBC = SPECIMEN_COLLECTIONS.find((collection) => collection.id === 'specimens-justice-institute')
-if (JIBC) {
-  GALLERY_COLLECTIONS.push({
-    ...JIBC,
-    id: 'collected-justice-institute',
-    shelf: 'bodies',
-    graphNode: 'justice-institute',
+// Public bodies outside the Crown corporations and health authorities the shelf collects for — a
+// post-secondary institute and an officer of the Legislature — whose collections are placed there by hand.
+const PLACED = {
+  'justice-institute': {
     label: 'JIBC',
     body: 'Current public post-secondary institute',
     years: '1978–present',
     intro: 'The Justice Institute of British Columbia, established in 1978 to train police, corrections, sheriffs, ' +
-      'paramedics, firefighters and emergency managers. Its monogram, the triangle with B and C, is the centre of ' +
-      'its fan-shield badge and of its gold and navy roundel, both under Patches.',
-    cover: JIBC.entries[0]?.id,
+      'paramedics, firefighters and emergency managers. Its earlier monogram is also the centre of its patches.'
+  },
+  'auditor-general': {
+    label: 'Auditor General',
+    body: 'Current officer of the Legislature',
+    years: '1977–present',
+    intro: 'The Office of the Auditor General of British Columbia, which audits the government’s accounts and ' +
+      'programs and reports to the Legislative Assembly.'
+  }
+}
+for (const [node, place] of Object.entries(PLACED)) {
+  const held = SPECIMEN_COLLECTIONS.find((collection) => collection.id === `specimens-${node}`)
+  if (!held) continue
+  GALLERY_COLLECTIONS.push({
+    ...held,
+    ...place,
+    id: `collected-${node}`,
+    shelf: 'bodies',
+    graphNode: node,
+    cover: held.entries[0]?.id,
     // A body's files, not a program's: they sit on no timeline.
-    entries: JIBC.entries.map(({ timeline, ...entry }) => ({ ...entry, owner: 'justice-institute' }))
+    entries: held.entries.map(({ timeline, ...entry }) => ({ ...entry, owner: node }))
   })
 }
 

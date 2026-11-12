@@ -21,9 +21,16 @@ export const assetUrl = (path, base = import.meta.env?.BASE_URL ?? '/') =>
  * When a design's files were seen: one or two sightings as given, more as the years they span. A
  * retrieval date is not a sighting of the logo.
  */
+const yearOf = (date) => Number(String(date).match(/\d{4}/)?.[0])
+
+/** A date as a card can show it: a short one as given; a sentence about one, as the year it names. */
+const shortDate = (date) => {
+  if (!date || String(date).length <= 24) return date
+  return yearOf(date) ? `about ${yearOf(date)}` : null
+}
+
 const seenDates = (versions) => {
-  const yearOf = (date) => Number(date.match(/\d{4}/)?.[0])
-  const dates = [...new Set(versions.flatMap((each) => [each.sourceDate, ...(each.alsoSeen ?? []).map((seen) => seen.date)]).filter(Boolean))]
+  const dates = [...new Set(versions.flatMap((each) => [each.sourceDate, ...(each.alsoSeen ?? []).map((seen) => seen.date)]).map(shortDate).filter(Boolean))]
     .sort((a, b) => yearOf(a) - yearOf(b))
   if (dates.length < 3 || !dates.every(yearOf)) return dates.join(' and ')
   const [first, last] = [yearOf(dates[0]), yearOf(dates.at(-1))]
@@ -36,11 +43,13 @@ const firstSentence = (text = '') => {
   return end < 0 ? text : String(text).slice(0, end + 1)
 }
 
-/** A body's files as one entry per design, each with its other colourways as versions. */
+/** A body's files as one entry per design, each with its other colourways as versions, oldest first. */
 const designsOf = (assets) => assets.filter((asset) => !asset.variantOf).map((asset) => {
   const versions = [asset, ...assets.filter((each) => each.variantOf === asset.id)]
   return { asset, versions }
-})
+}).map((design, order) => ({ ...design, order, year: Math.min(...design.versions.flatMap((each) => [each.sourceDate, ...(each.alsoSeen ?? []).map((seen) => seen.date)]).map(yearOf).filter(Boolean)) }))
+  // Undated designs keep their place after the dated ones.
+  .sort((a, b) => (Number.isFinite(a.year) ? a.year : 9999) - (Number.isFinite(b.year) ? b.year : 9999) || a.order - b.order)
 
 /**
  * A collected file as a gallery entry; `timeline` places a program's specimen on its timeline, and
