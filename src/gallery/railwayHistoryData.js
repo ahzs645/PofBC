@@ -223,10 +223,9 @@ export const RAILWAY_HISTORY = {
       "label": "PGE and the map of British Columbia",
       "status": "held",
       "assetIds": [
-        "archival-pge-bc-map-herald-circa-1970-pnra",
-        "pge-map-mark"
+        "pge-map-green-livery"
       ],
-      "note": "Kennelly dates the map mark’s replacement of the caribou on public timetables to 19 January 1966. Chuck Strawn’s archival close-up shows the equipment herald on remote-control car RCC2 around 1970. Rivets, perspective and paint texture remain visible because this is an application photograph.",
+      "note": "Kennelly dates the map mark’s replacement of the caribou on public timetables to 19 January 1966. Chuck Strawn’s archival close-up shows the equipment herald on remote-control car RCC2 around 1970; that photograph is kept as a download. The vector here is rebuilt from a livery screenshot, with white-panel and striped versions.",
       "applicability": {
         "kind": "first_observation",
         "years": "Timetables from 1966; equipment c. 1970",

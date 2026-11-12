@@ -53,7 +53,8 @@ test('collected entries date sightings rather than claiming logo adoption', () =
     assert.equal(entry.kind, 'collected')
     assert.ok(['unknown', 'dated_specimen'].includes(entry.identity.applicability.kind), entry.id)
     if (entry.asset.reconstruction) assert.equal(entry.identity.provenance, 'third_party_reconstruction')
-    if (entry.asset.supplied && !entry.asset.sourceDate) assert.equal(entry.identity.applicability.kind, 'unknown')
+    // A supplied file is dated only by the sightings of its design it stands for.
+    if (entry.asset.supplied && !entry.asset.sourceDate && !entry.asset.alsoSeen?.length) assert.equal(entry.identity.applicability.kind, 'unknown')
   }
 })
 

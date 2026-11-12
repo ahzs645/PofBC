@@ -2548,29 +2548,96 @@ export const COLLECTED_BODIES = [
         "previewHeight": 364
       },
       {
-        "id": "pge-map-mark",
-        "label": "PGE in an orange outline of the province",
-        "file": "identity-collected/pacific-great-eastern-railway/pge-map-mark-rapido.png",
-        "format": "png",
-        "isVector": false,
+        "id": "pge-map-green-livery",
+        "label": "Pacific Great Eastern — Map mark",
+        "file": "identity-collected/pacific-great-eastern-railway/pge-map-green-livery.svg",
+        "format": "svg",
+        "isVector": true,
         "supplied": true,
         "reconstruction": true,
-        "publisher": "Rapido Trains Inc. (model announcement)",
+        "versionLabel": "On green livery",
+        "publisher": "Pacific Great Eastern Railway",
         "sourcePage": null,
         "sourceUrl": null,
-        "sourceLocator": "Rapido Trains’ “PGE and BC Rail Squamish Caboose” HO-scale launch announcement, as supplied",
+        "sourceLocator": "Supplied green-livery screenshot (151 × 167 px)",
         "sourceFile": null,
         "sourceDate": null,
         "observedDate": "2026-11-12",
-        "evidenceType": "supplied-image-crop",
-        "notes": "An orange parallelogram carrying a green outline of British Columbia, with PGE beneath in italic capitals: the railway’s mark of its later PGE years, as on the Squamish caboose No. 1857 in the same announcement.",
-        "fidelityNote": "A 74 × 82 pixel crop of a supplied image of a model maker’s announcement, unchanged. The maker’s drawing of the mark, not the railway’s artwork; its dates of use are not established here.",
-        "sha256": "d0e6f321b68130fd2f4c9658df06e1967a7c07fa80933a638148b0998610bbcf",
-        "bytes": 11310,
+        "evidenceType": "supplied-vector-reconstruction",
+        "notes": "The province of British Columbia over PGE in italic capitals, on a folded panel. It replaced the caribou on PGE timetables from 1966 and was on equipment around 1970, in outline, solid and striped forms.",
+        "fidelityNote": "A supplied vector reconstruction, not original artwork: the map and letters are shared paths, placed after a 151 × 167 pixel livery screenshot; no letter was redrawn. A white coastal gap is a separate overlay. The greens (#728B76, #345135) are sampled from the screenshot, not verified paint standards.",
+        "sha256": "46781343bcc6daeb805753045ecdf2800e5d7e296cb40ea92274a4e48f59fb7b",
+        "bytes": 5649,
         "darkBackground": false,
-        "previewWidth": 74,
-        "previewHeight": 82,
-        "search": "bc-rail-sightings-2026-11-12"
+        "downloads": [
+          {
+            "label": "Download equipment photograph, c. 1970 (PNRA, PNG)",
+            "file": "identity-collected/pacific-great-eastern-railway/pge-bc-map-herald-circa-1970-pnra.png",
+            "sha256": "5611243fef66d4810985310bdecc4d8edf816b175fd61a6fa56f5f559f78ab20"
+          },
+          {
+            "label": "Download Rapido Trains crop (PNG)",
+            "file": "identity-collected/pacific-great-eastern-railway/pge-map-mark-rapido.png",
+            "sha256": "d0e6f321b68130fd2f4c9658df06e1967a7c07fa80933a638148b0998610bbcf"
+          }
+        ],
+        "search": "pge-map-vector-2026-11-12",
+        "alsoSeen": [
+          {
+            "date": "c. 1970",
+            "source": "https://atom.pnrarchive.org/index.php/pacific-great-eastern-railway-pge-remote-control-car-rcc2-pge-logo-detail-at-north-vancouver-british-columbia-circa-1970"
+          }
+        ]
+      },
+      {
+        "id": "pge-map-solid",
+        "variantOf": "pge-map-green-livery",
+        "versionLabel": "White panel",
+        "label": "Pacific Great Eastern — Map mark, white panel",
+        "file": "identity-collected/pacific-great-eastern-railway/pge-map-solid.svg",
+        "format": "svg",
+        "isVector": true,
+        "supplied": true,
+        "reconstruction": true,
+        "publisher": "Pacific Great Eastern Railway",
+        "sourcePage": null,
+        "sourceUrl": null,
+        "sourceLocator": "Supplied green-livery screenshot (151 × 167 px)",
+        "sourceFile": null,
+        "sourceDate": null,
+        "observedDate": "2026-11-12",
+        "evidenceType": "supplied-vector-reconstruction",
+        "notes": "The mark alone on its white folded panel, with no livery ground.",
+        "fidelityNote": "A supplied vector reconstruction; the map and letters are the shared paths. Black and white are neutral.",
+        "sha256": "c95b1243b6f664e9287929eb7ba227f8f0869b6c0e36e5fecc79cc1afe232634",
+        "bytes": 5246,
+        "darkBackground": false,
+        "search": "pge-map-vector-2026-11-12"
+      },
+      {
+        "id": "pge-map-striped",
+        "variantOf": "pge-map-green-livery",
+        "versionLabel": "Striped",
+        "label": "Pacific Great Eastern — Map mark, striped",
+        "file": "identity-collected/pacific-great-eastern-railway/pge-map-striped.svg",
+        "format": "svg",
+        "isVector": true,
+        "supplied": true,
+        "reconstruction": true,
+        "publisher": "Pacific Great Eastern Railway",
+        "sourcePage": null,
+        "sourceUrl": null,
+        "sourceLocator": null,
+        "sourceFile": null,
+        "sourceDate": null,
+        "observedDate": "2026-11-12",
+        "evidenceType": "supplied-vector-reconstruction",
+        "notes": "The map mark with a striped upper panel and the province and lettering reversed out in white.",
+        "fidelityNote": "A supplied geometric vector reconstruction, sharing its map and letter paths with the solid version.",
+        "sha256": "40b9eb2f22e026dbe9943c7131e11e0b8285b4e1f33fa7b832f86e8ceaf019a4",
+        "bytes": 9553,
+        "darkBackground": false,
+        "search": "pge-map-vector-2026-11-12"
       },
       {
         "id": "cariboo-pge-point-ellice-diamond-1929",
@@ -2859,35 +2926,6 @@ export const COLLECTED_BODIES = [
         "bytes": 87644,
         "previewWidth": 376,
         "previewHeight": 246,
-        "darkBackground": false,
-        "search": "railway-history-2026-11-12"
-      },
-      {
-        "id": "archival-pge-bc-map-herald-circa-1970-pnra",
-        "label": "PGE British Columbia-map herald on RCC2 at North Vancouver",
-        "file": "identity-collected/pacific-great-eastern-railway/pge-bc-map-herald-circa-1970-pnra.png",
-        "format": "png",
-        "isVector": false,
-        "supplied": false,
-        "reconstruction": false,
-        "sourceReproduction": false,
-        "publisher": "Pacific Northwest Railroad Archive",
-        "creator": "Chuck Strawn / Pacific Northwest Railroad Archive, US WaBuPNRA D0177A-010-014-001-005-Strawn0548",
-        "sourcePage": "https://atom.pnrarchive.org/index.php/pacific-great-eastern-railway-pge-remote-control-car-rcc2-pge-logo-detail-at-north-vancouver-british-columbia-circa-1970",
-        "sourceUrl": "https://atom.pnrarchive.org/uploads/r/pacific-northwest-railroad-archive-burien-wa-3/6/5/5/655fa53e9e5533701df1c0f736a9ac583b90f8285d5f28db21fd8caa430b61cf/Strawn0548.jpg",
-        "sourceLocator": "Item Strawn0548; archive dates photograph circa 1970",
-        "sourceFile": "PNRA Chuck Strawn Collection, Strawn0548",
-        "sourceDate": "c. 1970",
-        "historicalDateLabel": "Photographed circa 1970",
-        "observedDate": "2026-11-12",
-        "dateNote": "Approximate photograph date supplied by the archive; this does not establish first use of the herald.",
-        "evidenceType": "archival-equipment-photo-crop",
-        "notes": "PGE British Columbia-map herald on RCC2 at North Vancouver. Original photo evidence of use circa 1970; not an isolated logo master or first-use date. Archive reproduction policy applies.",
-        "fidelityNote": "Rectangular crop only; scan texture, rivets, perspective, contrast and lettering retained. Equipment perspective and texture are retained; not isolated master artwork.",
-        "sha256": "5611243fef66d4810985310bdecc4d8edf816b175fd61a6fa56f5f559f78ab20",
-        "bytes": 485927,
-        "previewWidth": 941,
-        "previewHeight": 1035,
         "darkBackground": false,
         "search": "railway-history-2026-11-12"
       }
@@ -3350,30 +3388,55 @@ export const COLLECTED_BODIES = [
     "notes": "The Crown company that ran the Princess Marguerite between Victoria and Seattle from 1975. It sold its ships in 1988 and was renamed Victoria Line Ltd. in 1994.",
     "assets": [
       {
-        "id": "source-bc-steamship-company-bc-steamship-token-1987-obverse-jpg",
-        "label": "Company emblem photographed on a dated 1987 token",
-        "file": "identity-collected/bc-steamship-company/bc-steamship-token-1987-obverse.jpg",
-        "format": "jpg",
-        "isVector": false,
-        "supplied": false,
-        "reconstruction": false,
-        "publisher": "Numista; photograph by gringo.l",
+        "id": "bc-steamship-round-logo",
+        "label": "British Columbia Steamship Company (1975) Ltd. — Round logo",
+        "file": "identity-collected/bc-steamship-company/bc-steamship-round-logo.svg",
+        "format": "svg",
+        "isVector": true,
+        "supplied": true,
+        "reconstruction": true,
+        "publisher": "Numista (token photograph); supplied reference",
         "sourcePage": "https://en.numista.com/130778",
-        "sourceUrl": "https://en.numista.com/catalogue/photos/canada/606218e5a91b74.98972590-original.jpg",
+        "sourceUrl": null,
         "sourceLocator": null,
         "sourceFile": null,
-        "sourceDate": "1987",
-        "observedDate": "2026-10-22",
-        "evidenceType": "dated-artifact-photograph",
-        "notes": "The token obverse carries the exact company name and central emblem. The reverse, retained with source evidence, says JACKPOT 1987. This is an artifact photograph, not isolated production logo artwork.",
-        "fidelityNote": "Original published drawing or image recovered from the cited source. Method: The token obverse carries the exact company name and central emblem. The reverse, retained with source evidence, says JACKPOT 1987. This is an artifact photograph, not isolated production logo artwork.",
-        "sha256": "ca96d318ffa0e47ea4e798620ce3a8a87029e12dab872f299eba0379ca878034",
-        "bytes": 121310,
+        "sourceDate": null,
+        "observedDate": "2026-11-12",
+        "evidenceType": "supplied-vector-reconstruction",
+        "notes": "A Union Jack over stacked waves inside a ring lettered British Columbia Steamship Company (1975) Ltd. The same emblem and name are on a casino token dated 1987. Its designer, introduction date and colours are unconfirmed.",
+        "fidelityNote": "A supplied vector reconstruction, not original artwork: clean concentric rings, analytic emblem geometry and outlined Roman serif lettering (six characters redrawn) placed after a supplied circular reference; no automatic tracing. The reference's extra letters after Ltd. are omitted. The original typeface is unidentified, and black and white are neutral.",
+        "sha256": "fb8d58f0d2a8d70e3647805cf9f658d8daee753cf7aa5a69495d918d53f15729",
+        "bytes": 60350,
         "darkBackground": false,
-        "creator": "gringo.l",
-        "dateNote": "A dated sighting is not a complete usage period.",
-        "previewWidth": 591,
-        "previewHeight": 591
+        "downloads": [
+          {
+            "label": "Download white version (SVG)",
+            "file": "identity-collected/bc-steamship-company/bc-steamship-round-logo-white.svg",
+            "sha256": "fec48c9bf2c66d97615e57a80969e36d2661e999f87c24aa932bfd635de38961"
+          },
+          {
+            "label": "Download emblem only (SVG)",
+            "file": "identity-collected/bc-steamship-company/bc-steamship-emblem.svg",
+            "sha256": "5f9a5d1c893b6eb4bb940e0a9444ee584c4f742311311d795185e88c4b59ec0d"
+          },
+          {
+            "label": "Download name strip (SVG)",
+            "file": "identity-collected/bc-steamship-company/bc-steamship-wordmark.svg",
+            "sha256": "65d3af791c56bd06e956d7c9ec9d49fe64d934c5bd33108e2f67ac2f9560ab4b"
+          },
+          {
+            "label": "Download 1987 token photograph (JPG)",
+            "file": "identity-collected/bc-steamship-company/bc-steamship-token-1987-obverse.jpg",
+            "sha256": "ca96d318ffa0e47ea4e798620ce3a8a87029e12dab872f299eba0379ca878034"
+          }
+        ],
+        "search": "bc-steamship-vector-2026-11-12",
+        "alsoSeen": [
+          {
+            "date": "1987",
+            "source": "https://en.numista.com/130778"
+          }
+        ]
       }
     ]
   },

@@ -709,6 +709,30 @@ export const COLLECTED_DISPLAY = {
    "recoloured": true
   }
  },
+ "pge-map-solid": {
+  "light": {
+   "file": "identity-display/pge-map-solid.light.svg",
+   "aspect": 0.8844,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/pge-map-solid.light.svg",
+   "aspect": 0.8844,
+   "recoloured": false
+  }
+ },
+ "pge-map-striped": {
+  "light": {
+   "file": "identity-display/pge-map-striped.light.svg",
+   "aspect": 0.9187,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/pge-map-striped.light.svg",
+   "aspect": 0.9187,
+   "recoloured": false
+  }
+ },
  "bc-power-commission-rebuilt": {
   "light": {
    "file": "identity-display/bc-power-commission-rebuilt.light.svg",
@@ -767,6 +791,18 @@ export const COLLECTED_DISPLAY = {
    "file": "identity-display/bcpc-emblem-white.dark.svg",
    "aspect": 0.7817,
    "recoloured": false
+  }
+ },
+ "bc-steamship-round-logo": {
+  "light": {
+   "file": "identity-display/bc-steamship-round-logo.light.svg",
+   "aspect": 1.0,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/bc-steamship-round-logo.dark.svg",
+   "aspect": 1.0,
+   "recoloured": true
   }
  },
  "historical-bc-buildings-corporation-2005": {
