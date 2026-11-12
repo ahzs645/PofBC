@@ -195,6 +195,21 @@ const ONE_OFF_IDENTITY = {
     applicability: DATED_BY_TIMELINE('first_observation', 'by 2025',
       'Its file on the lab’s page is first captured in April 2025, after the lab took the name.')
   },
+  'bc-online': {
+    provenance: 'reconstructed',
+    fidelity: 'partially compared',
+    fidelityNote: 'Put together from the gallery’s Best Place on Earth mark, rearranged horizontally, and letters of ' +
+      'the Garamond the Province published (WelcomeBC’s “BC”, Environmental Lab BC’s L, n, i and e, and the ' +
+      'mark’s own O, enlarged). Placing and spacing are measured off the published 372 × 49 image and the result ' +
+      'laid over it; the name is scaled as a whole to the logo’s width.',
+    applicability: {
+      kind: 'first_observation',
+      years: 'by 2026',
+      note: 'The logo was supplied in November 2026 as the service’s web artwork. BC OnLine itself dates from July ' +
+        '1989; when this logo was adopted is not established.'
+    },
+    rights: PROVINCE_RIGHTS
+  },
   'coroners-service': {
     provenance: 'reconstructed',
     fidelity: 'partially compared',
@@ -769,6 +784,7 @@ const GRAPH_NODES = {
   'bc-wildfire-service': 'sub-bc-wildfire-service',
   'bc-wildfire-service-one-line': 'sub-bc-wildfire-service',
   'coroners-service': 'sub-bc-coroners-service',
+  'bc-online': 'sub-bc-online',
   'public-service': 'bc-public-service-agency'
 }
 

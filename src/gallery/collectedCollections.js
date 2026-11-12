@@ -30,6 +30,12 @@ const seenDates = (versions) => {
   return first === last ? String(first) : `${first}–${last}`
 }
 
+/** A note's first sentence, for a card: the rest is on the mark's own page. */
+const firstSentence = (text = '') => {
+  const end = String(text).search(/[.!?](?=\s+[A-Z“"(])/)
+  return end < 0 ? text : String(text).slice(0, end + 1)
+}
+
 /** A body's files as one entry per design, each with its other colourways as versions. */
 const designsOf = (assets) => assets.filter((asset) => !asset.variantOf).map((asset) => {
   const versions = [asset, ...assets.filter((each) => each.variantOf === asset.id)]
@@ -46,10 +52,8 @@ const collectedEntry = (asset, timeline, owner, versions = [asset]) => ({
   ...(timeline ? { timeline } : {}),
   ...(owner ? { owner } : {}),
   label: versions.length > 1 ? asset.publisher : asset.label,
-  // A design's card names its versions; each version's own account is on the design's page.
-  note: versions.length > 1
-    ? `${asset.notes} In ${versions.length} versions: ${versions.map((each) => (each.versionLabel ?? each.label.split(' — ').at(-1)).toLowerCase()).join(' and ')}.`
-    : asset.notes,
+  // A card says what the mark is in a sentence; its full account, versions and sources are on its page.
+  note: firstSentence(asset.notes),
   years: seenDates(versions) ? `Seen ${seenDates(versions)}` : 'Logo dates unestablished',
   asset,
   ...(versions.length > 1 ? { versions } : {}),
@@ -90,8 +94,9 @@ const collectionOf = (body) => ({
   label: body.shortName || body.name,
   body: `${body.current ? 'Current' : 'Former'} ${kindOf(body)}`,
   years: `${body.from ?? '?'}–${body.current ? 'present' : body.to ?? '?'}`,
-  intro: 'Collected artwork with its source recorded for each file. The organization’s dates above are not the dates of its logo. ' +
-    (body.notes || ''),
+  // The body's own account where it has one; that its years are not its logos' is said on each card
+  // (“Seen …”) and under About.
+  intro: body.notes || 'Collected artwork, with its source recorded for each file.',
   cover: coverOf(body.assets),
   entries: collectedEntriesOf(body.id),
 })

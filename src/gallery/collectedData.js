@@ -1252,7 +1252,7 @@ export const COLLECTED_BODIES = [
     "current": true,
     "status": "asset-collected",
     "observedDate": "2026-10-22",
-    "notes": "One design — the BC emblem, a gold divider and the name on three lines — in full colour and in white, both original vector artwork from Pattullo Bridge Replacement Project publications.",
+    "notes": "One design in full colour and white, both original vector artwork from Pattullo Bridge Replacement Project publications.",
     "assets": [
       {
         "id": "vector-ticorp-2025-colour-source-vector",
@@ -2479,7 +2479,7 @@ export const COLLECTED_BODIES = [
     "current": false,
     "status": "asset-collected",
     "observedDate": "2026-10-22",
-    "notes": "Established in 1945 to consolidate local electricity systems and extend service to communities outside BC Electric’s territory, the BC Power Commission became one of BC Hydro’s two principal predecessors. BC Hydro was established in 1962, and the authority, BC Electric and the Power Commission were formally amalgamated on 20 August 1965. The emblem is reproduced by BC Hydro Power Pioneers, which documents it on the commission’s red service trucks; its designer and introduction date are unconfirmed.",
+    "notes": "The public utility that brought power to communities outside BC Electric’s territory from 1945, and one of BC Hydro’s two predecessors (established 1962, amalgamated 1965). Its emblem was on the commission’s red service trucks.",
     "assets": [
       {
         "id": "bc-power-commission-rebuilt",
@@ -2847,7 +2847,7 @@ export const COLLECTED_BODIES = [
     "current": false,
     "status": "asset-collected",
     "observedDate": "2026-10-22",
-    "notes": "A provincial Crown company, separate from BC Ferries, set up in 1975 to keep the Victoria–Seattle Princess Marguerite service. It added the Vancouver Island Princess in 1987, sold its vessels and operating assets to B.C. Stena Line in November 1988, and continued as a corporation, renamed Victoria Line Ltd. in 1994. Its circular emblem is documented on a 1987 casino token; the emblem’s introduction, colours and designer are unconfirmed, and the Princess Marguerite’s own 1983 brochure branding is a separate service identity.",
+    "notes": "The Crown company that ran the Princess Marguerite between Victoria and Seattle from 1975. It sold its ships in 1988 and was renamed Victoria Line Ltd. in 1994.",
     "assets": [
       {
         "id": "source-bc-steamship-company-bc-steamship-token-1987-obverse-jpg",
@@ -3107,7 +3107,7 @@ export const COLLECTED_BODIES = [
     "current": false,
     "status": "asset-collected",
     "observedDate": "2026-10-22",
-    "notes": "British Columbia Systems Corporation — BC Systems — was established in 1977 to consolidate and coordinate computing and information-system services across the provincial government. Its employees and operating business passed to the Information Technology Services Division on 31 March 1996; the corporation was legally dissolved on 30 April 2000, its remaining assets and liabilities passing to the Province. Its IT functions continued through later shared-services organizations and the Office of the Chief Information Officer, part of the history of today’s Connected Services BC.",
+    "notes": "The Province’s shared computing corporation, from 1977. Its operations moved into government in 1996 and it was dissolved in 2000; its role continues in today’s Connected Services BC.",
     "assets": [
       {
         "format": "svg",
@@ -3458,7 +3458,7 @@ export const COLLECTED_BODIES = [
     "current": false,
     "status": "asset-collected",
     "observedDate": "2026-10-22",
-    "notes": "The Crown company that developed BC Place on Vancouver’s False Creek, opening BC Place Stadium on 19 June 1983 and providing the site of Expo 86. Its b/c/p symbol and wordmark are from 1983. In 1987 it was renamed British Columbia Enterprise Corporation, with the BC Development Corporation merged into it, and in 1989 its remaining assets went to the Province and B.C. Pavilion Corporation, which runs the stadium today.",
+    "notes": "The Crown company that built BC Place Stadium (opened 1983) on the False Creek lands that later held Expo 86. Renamed BC Enterprise Corporation in 1987; its assets passed to PavCo in 1989.",
     "assets": [
       {
         "id": "bc-place-1983-rebuilt",

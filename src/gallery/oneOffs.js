@@ -189,6 +189,17 @@ export const ONE_OFFS = [
       '“Service” is BC Wildfire Service’s own, and “Coroners” is set from its C and from letters of ' +
       'Environmental Reporting BC and BC Stats. Placed and spaced as in the image the Service’s reports print.'
   }),
+  artwork({
+    id: 'bc-online',
+    label: 'BC OnLine',
+    body: 'BC OnLine',
+    years: 'by 2026',
+    note: 'The BC mark set horizontally — “British Columbia” beside the sun, not under it — then a short gold ' +
+      'divider and “BCOnLine” in Garamond, with “BC” in gold.',
+    caveat: 'Put together from the gallery’s BC mark and the Province’s Garamond: “BC” is WelcomeBC’s, L, n, i ' +
+      'and e are Environmental Lab BC’s, and the O is the mark’s own from COLUMBIA, enlarged. Placed and spaced ' +
+      'as the published logo, a small reversed image, shows it.'
+  }),
   {
     id: 'prepared-bc',
     kind: 'current',

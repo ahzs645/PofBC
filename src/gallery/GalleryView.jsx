@@ -436,8 +436,7 @@ const OneOffEntry = ({ entry, onOpen, theme, onOpenGovernment }) => (
       />
       <span className="gallery__label">
         {entry.kind === 'current' ? 'Open in the generator'
-          : entry.kind === 'collected'
-            ? entry.versions ? `View and download it in ${listOf(entry.versions.map((each) => each.versionLabel.toLowerCase()))}` : 'View artwork and download the source file'
+          : entry.kind === 'collected' ? 'View and download'
             : 'Open to recolour, or to see it as published'}
       </span>
     </button>

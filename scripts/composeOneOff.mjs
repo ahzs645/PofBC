@@ -118,6 +118,48 @@ export function coronersService (marks, cap) {
   return subpaths
 }
 
+/**
+ * “BCOnLine” in the Province's Garamond, on a baseline at y = 0 with its cap height `cap`, from x = 0,
+ * as two parts: the accent (“BC”, WelcomeBC's own) and the name (“OnLine”). The L, n, i and e are
+ * Environmental Lab BC's; no held mark sets a Garamond capital O, so the O is the BC mark's own, from
+ * COLUMBIA, enlarged from its small-cap size to the capitals'. The gaps are measured off the logo as
+ * BC OnLine published it (a 372 × 49 image whose capitals are 27 pixels tall), as fractions of the
+ * cap height.
+ */
+export function bcOnLine (marks, cap) {
+  const accent = lettersOf(shapeOf(marks['welcome-bc'], 'accent').d)
+  const lab = lettersOf(shapeOf(marks['environmental-lab-bc'], 'name').d)
+  const wordmark = lettersOf(shapeOf(marks['best-place-on-earth'], 'wordmark').d)
+  const height = (letter) => letter.box.bottom - letter.box.top
+  const L = lab[1]
+  const labScale = cap / height(L)
+  const accentScale = cap / height(accent[0])
+  // A round capital stands a little above and below the flat ones it sits with.
+  const O = wordmark[2]
+  const oScale = (cap * 1.03) / height(O)
+  const printed = (pixels) => pixels / 27 * cap
+  const letters = [
+    { part: 'accent', letter: accent[0], scale: accentScale, base: accent[0].box.bottom },
+    { part: 'accent', letter: accent[1], scale: accentScale, base: accent[0].box.bottom, gap: printed(3) },
+    { part: 'name', letter: O, scale: oScale, base: O.box.bottom - (cap * 0.015) / oScale, gap: printed(3) },
+    { part: 'name', letter: lab[3], scale: labScale, base: lab[3].box.bottom, gap: printed(2) },
+    { part: 'name', letter: L, scale: labScale, base: L.box.bottom, gap: printed(3) },
+    { part: 'name', letter: lab[6], scale: labScale, base: lab[6].box.bottom, gap: printed(2) },
+    // The i's dot sits over its stem, where the source sets it.
+    { part: 'name', letter: lab[7], scale: labScale, base: lab[6].box.bottom, gap: (lab[7].box.left - lab[6].box.right) * labScale },
+    { part: 'name', letter: lab[3], scale: labScale, base: lab[3].box.bottom, gap: printed(3) - (lab[7].box.right - lab[6].box.right) * labScale },
+    { part: 'name', letter: lab[12], scale: labScale, base: lab[12].box.bottom, gap: printed(2) }
+  ]
+  let x = 0
+  const parts = { accent: [], name: [] }
+  for (const { part, letter, scale, base, gap = 0 } of letters) {
+    x += gap
+    parts[part].push(...transformed(letter.subpaths, scale, x - letter.box.left * scale, -base * scale))
+    x += (letter.box.right - letter.box.left) * scale
+  }
+  return parts
+}
+
 /** A mark's parts moved by (dx, dy) and scaled by `scale`, keeping their roles. */
 const moved = (mark, roles, scale, dx, dy) => mark.shapes.filter(({ role }) => roles.includes(role))
   .map(({ role, d }) => ({ role, subpaths: transformed(absolute(d), scale, dx, dy) }))
@@ -180,6 +222,44 @@ export function compose (entry, marks) {
     const name = transformed(coronersService(marks, 0.36 * height), 1, rule + 0.178 * height, mark.bottom)
     return {
       shapes: [...parts, { role: 'divider', subpaths: divider }, { role: 'name', subpaths: name }],
+      sun: source.sun,
+      gradients: source.gradients,
+      colours: { ...entry.colours }
+    }
+  }
+  if (entry.compose === 'bc-online') {
+    // The BC mark set horizontally, its wordmark beside the symbol rather than under it, then a short
+    // gold divider and the name. Measured off the published logo, against the symbol's height (49
+    // pixels there): the wordmark 6 after the symbol, 10 below its top and 28 tall; the divider 19
+    // after the wordmark, 2 wide and as tall as it; the name 20 after the divider, its capitals 27
+    // tall on the wordmark's foot.
+    const symbolParts = moved(source, SYMBOL, 1, 0, 0)
+    const symbol = boxOf(symbolParts.flatMap(({ subpaths }) => subpaths))
+    const unit = (symbol.bottom - symbol.top) / 49
+    const nativeWordmark = boxOf(subpathsOf(source, 'wordmark'))
+    const wordScale = (28 * unit) / (nativeWordmark.bottom - nativeWordmark.top)
+    const wordLeft = symbol.right + 6 * unit
+    const wordTop = symbol.top + 10 * unit
+    const wordmark = moved(source, ['wordmark'], wordScale, wordLeft - nativeWordmark.left * wordScale, wordTop - nativeWordmark.top * wordScale)
+    const wordRight = wordLeft + (nativeWordmark.right - nativeWordmark.left) * wordScale
+    const ruleLeft = wordRight + 19 * unit
+    const divider = rectangle(ruleLeft, wordTop, 2 * unit, 28 * unit)
+    const set = bcOnLine(marks, 27 * unit)
+    // These letters set wider than the logo's, the enlarged O most of all: the name is scaled as a
+    // whole to the logo's measured width, 162 pixels, rather than any letter being narrowed.
+    const width = boxOf([...set.accent, ...set.name]).right
+    const fit = Math.min(1, (162 * unit) / width)
+    const accent = transformed(set.accent, fit, 0, 0)
+    const name = transformed(set.name, fit, 0, 0)
+    const nameLeft = ruleLeft + 2 * unit + 20 * unit
+    const baseline = wordTop + 28 * unit
+    return {
+      shapes: [
+        ...symbolParts, ...wordmark,
+        { role: 'divider', subpaths: divider },
+        { role: 'accent', subpaths: transformed(accent, 1, nameLeft, baseline) },
+        { role: 'name', subpaths: transformed(name, 1, nameLeft, baseline) }
+      ],
       sun: source.sun,
       gradients: source.gradients,
       colours: { ...entry.colours }
