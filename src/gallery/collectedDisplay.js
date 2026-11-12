@@ -25,6 +25,30 @@ export const COLLECTED_DISPLAY = {
    "recoloured": true
   }
  },
+ "bcrc-2024-cover-rebuilt": {
+  "light": {
+   "file": "identity-display/bcrc-2024-cover-rebuilt.light.svg",
+   "aspect": 2.3122,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/bcrc-2024-cover-rebuilt.dark.svg",
+   "aspect": 2.3122,
+   "recoloured": true
+  }
+ },
+ "bcrc-2024-letterhead": {
+  "light": {
+   "file": "identity-display/bcrc-2024-letterhead.light.svg",
+   "aspect": 1.9046,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/bcrc-2024-letterhead.dark.svg",
+   "aspect": 1.9046,
+   "recoloured": true
+  }
+ },
  "bc-assessment-svg": {
   "light": {
    "file": "identity-display/bc-assessment-svg.light.svg",

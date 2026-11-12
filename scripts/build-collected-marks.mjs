@@ -21,7 +21,7 @@ const innovate = read('research/identity/innovate-bc-vector-2026-11-12/source-re
 const PROGRAM_PACKAGES = ['bc-travel-industry-2026-11-12', 'justice-institute-2026-11-12']
   .map((search) => ({ search, register: read(`research/identity/${search}/source-register.json`) }))
 // Supplied packages that add a vector to a body, each read with the search it came from.
-const PACKAGES = ['bc-assessment-vector-2026-11-12', 'bc-power-commission-vector-2026-11-12', 'bc-place-vector-2026-11-12']
+const PACKAGES = ['bc-assessment-vector-2026-11-12', 'bc-power-commission-vector-2026-11-12', 'bc-place-vector-2026-11-12', 'bc-railway-vector-2026-11-12']
   .map((search) => ({ search, register: read(`research/identity/${search}/source-register.json`) }))
 
 const checked = (asset) => {
@@ -190,6 +190,7 @@ const VERSION_LABELS = {
 
 // Shorter accounts where a body's or file's own record is about a file no longer shown.
 const BODY_NOTES = {
+  'bc-railway-company': 'Its wordmark is the BCRC acrostic — British Columbia Railway Company stepped down on four lines, with the initials in red — seen in three letterings: the heavier one on its website, and the wide Eurostile of the 2024 report’s cover and the Verdana of its letterhead.',
   'bc-place-ltd': 'The Crown company that developed BC Place on Vancouver’s False Creek, opening BC Place Stadium on 19 June 1983 and providing the site of Expo 86. Its b/c/p symbol and wordmark are from 1983. In 1987 it was renamed British Columbia Enterprise Corporation, with the BC Development Corporation merged into it, and in 1989 its remaining assets went to the Province and B.C. Pavilion Corporation, which runs the stadium today.',
   'bc-power-commission': 'Established in 1945 to consolidate local electricity systems and extend service to communities outside BC Electric’s territory, the BC Power Commission became one of BC Hydro’s two principal predecessors. BC Hydro was established in 1962, and the authority, BC Electric and the Power Commission were formally amalgamated on 20 August 1965. The emblem is reproduced by BC Hydro Power Pioneers, which documents it on the commission’s red service trucks; its designer and introduction date are unconfirmed.',
   'bc-steamship-company': 'A provincial Crown company, separate from BC Ferries, set up in 1975 to keep the Victoria–Seattle Princess Marguerite service. It added the Vancouver Island Princess in 1987, sold its vessels and operating assets to B.C. Stena Line in November 1988, and continued as a corporation, renamed Victoria Line Ltd. in 1994. Its circular emblem is documented on a 1987 casino token; the emblem’s introduction, colours and designer are unconfirmed, and the Princess Marguerite’s own 1983 brochure branding is a separate service identity.',
