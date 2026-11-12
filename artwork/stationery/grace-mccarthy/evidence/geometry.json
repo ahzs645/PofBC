@@ -1,0 +1,247 @@
+{
+  "source_filename": "Screenshot 2026-11-11 at 11.41.38 PM.png",
+  "source_sha256": "daeafbf0d0d5c76e3f176388a482da3598c6d59d35be604fba12019807763847",
+  "source_size_px": [
+    2048,
+    1179
+  ],
+  "coordinate_convention": "bounding boxes are x0,y0,x1,y1 with right/bottom exclusive",
+  "physical_card_corners_tl_tr_br_bl": [
+    [
+      109.0,
+      63.0
+    ],
+    [
+      1918.0,
+      95.0
+    ],
+    [
+      1903.0,
+      1137.0
+    ],
+    [
+      89.0,
+      1112.0
+    ]
+  ],
+  "corner_confidence": "estimated from faint physical paper edges; especially upper-right is uncertain by roughly 10–20 px; card is not perfectly planar",
+  "physical_size": "not established by this screenshot",
+  "rectification": {
+    "size_px": [
+      1800,
+      1038
+    ],
+    "aspect_ratio": 1.7341040462427746,
+    "source_to_rectified_homography": [
+      [
+        0.9877386543251891,
+        0.0188320048489073,
+        -108.84992962692677
+      ],
+      [
+        -0.017540880763463575,
+        0.9916079156595503,
+        -60.559342683334144
+      ],
+      [
+        -3.767559418289881e-06,
+        2.5086079832532966e-06,
+        1.0
+      ]
+    ],
+    "pillow_inverse_coefficients": [
+      1.0122272750968304,
+      -0.019499347390882354,
+      109.0,
+      0.018135750214794914,
+      1.0077045450194808,
+      63.00000000000001,
+      3.7681309159698434e-06,
+      -2.6014006163095256e-06
+    ],
+    "note": "analysis view only; native physical card aspect is unknown and this uses measured pixel edge ratios, not an asserted standard business-card size"
+  },
+  "lines": [
+    {
+      "id": "name",
+      "text": "Grace M. McCarthy",
+      "source_ink_bbox_xyxy": [
+        574,
+        457,
+        1450,
+        618
+      ],
+      "rectified_ink_bbox_xyxy": [
+        469,
+        375,
+        1339,
+        530
+      ],
+      "ink_pixels_at_threshold_190": 19920,
+      "bbox_rule": "mean RGB <190; connected components assigned by line; antialias edges may extend 1–2 px"
+    },
+    {
+      "id": "deputy",
+      "text": "Deputy Premier",
+      "source_ink_bbox_xyxy": [
+        832,
+        573,
+        1197,
+        667
+      ],
+      "rectified_ink_bbox_xyxy": [
+        726,
+        493,
+        1088,
+        585
+      ],
+      "ink_pixels_at_threshold_190": 7188,
+      "bbox_rule": "mean RGB <190; connected components assigned by line; antialias edges may extend 1–2 px"
+    },
+    {
+      "id": "secretary",
+      "text": "Provincial Secretary",
+      "source_ink_bbox_xyxy": [
+        794,
+        651,
+        1229,
+        748
+      ],
+      "rectified_ink_bbox_xyxy": [
+        689,
+        571,
+        1121,
+        662
+      ],
+      "ink_pixels_at_threshold_190": 8155,
+      "bbox_rule": "mean RGB <190; connected components assigned by line; antialias edges may extend 1–2 px"
+    },
+    {
+      "id": "minister",
+      "text": "Minister of Recreation & Travel Industry",
+      "source_ink_bbox_xyxy": [
+        568,
+        724,
+        1445,
+        828
+      ],
+      "rectified_ink_bbox_xyxy": [
+        467,
+        645,
+        1338,
+        738
+      ],
+      "ink_pixels_at_threshold_190": 16200,
+      "bbox_rule": "mean RGB <190; connected components assigned by line; antialias edges may extend 1–2 px"
+    },
+    {
+      "id": "telephone",
+      "text": "Telephone 387-6601",
+      "source_ink_bbox_xyxy": [
+        223,
+        911,
+        708,
+        1002
+      ],
+      "rectified_ink_bbox_xyxy": [
+        129,
+        836,
+        608,
+        926
+      ],
+      "ink_pixels_at_threshold_190": 8951,
+      "bbox_rule": "mean RGB <190; connected components assigned by line; antialias edges may extend 1–2 px"
+    },
+    {
+      "id": "city",
+      "text": "Victoria",
+      "source_ink_bbox_xyxy": [
+        1459,
+        851,
+        1660,
+        922
+      ],
+      "rectified_ink_bbox_xyxy": [
+        1353,
+        759,
+        1554,
+        831
+      ],
+      "ink_pixels_at_threshold_190": 3830,
+      "bbox_rule": "mean RGB <190; connected components assigned by line; antialias edges may extend 1–2 px"
+    },
+    {
+      "id": "province",
+      "text": "British Columbia",
+      "source_ink_bbox_xyxy": [
+        1335,
+        930,
+        1785,
+        1001
+      ],
+      "rectified_ink_bbox_xyxy": [
+        1231,
+        838,
+        1680,
+        906
+      ],
+      "ink_pixels_at_threshold_190": 8867,
+      "bbox_rule": "mean RGB <190; connected components assigned by line; antialias edges may extend 1–2 px"
+    }
+  ],
+  "typography": {
+    "line_family_relationship": "The image is consistent with one related formal engraved script family used at two sizes/optical weights; exact font is not established by geometry.",
+    "name_vs_body_cap_height_ratio_approx": 1.5,
+    "name_cap_height_px_approx": [
+      94,
+      100
+    ],
+    "body_cap_height_px_approx": [
+      60,
+      67
+    ],
+    "source_rightward_slant_from_vertical_degrees_approx": [
+      35,
+      45
+    ],
+    "characters_observed": " &-.013678BCDGIMPRSTVabcdefhilmnoprstuvy",
+    "unobserved_warning": "No full alphabet or full numeral set can be recovered from this card; 2,4,5,9 are unobserved."
+  },
+  "crest": {
+    "source_ink_bbox_xyxy_approx": [
+      258,
+      175,
+      614,
+      410
+    ],
+    "source_aspect_ratio_approx": 1.5148936170212766,
+    "supplied_path_bounds_xyxy": [
+      20.352419984551098,
+      20.0,
+      1125.135395331817,
+      1262.9247286377545
+    ],
+    "supplied_natural_aspect_ratio": 0.8888575067277873,
+    "source_svg_original_attributes": {
+      "fill": "currentColor",
+      "fill_rule": "evenodd",
+      "color": "#96c733",
+      "data_accuracy": "approximate",
+      "transform": "translate(38.141 42.000) scale(0.03710 0.03710)"
+    },
+    "comparison": "Different engraving from the card: supplied art is much taller/narrower, its supporter/crest shapes differ, and it lacks the photographed long horizontal ribbon tails. Preserve its natural ratio rather than silently widening it.",
+    "ink_color": "The original raster appears muted olive-gold; photographic white balance and printing cannot establish an exact original ink value.",
+    "rectified_ink_bbox_xyxy_approx": [
+      149.4,
+      102.4,
+      506.0,
+      341.5
+    ],
+    "sampled_raster_ink_median_rgb": [
+      169,
+      162,
+      131
+    ]
+  },
+  "source_card_edges": "The pale perimeter is the photographed paper edge/shadow rather than confirmed printed border; omit in a clean reconstruction or label as an optional border."
+}

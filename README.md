@@ -779,6 +779,35 @@ The symbol prints in Pantone 462 brown, shown as Pantone's screen conversion (#5
 
 ---
 
+## Brand kits, for every era
+
+[`brandkit/`](brandkit/README.md) writes each of the Province's identities as a
+[brandkit](https://github.com/ahzs645/brandkit) brand and packs it as a brand pack, one zip per
+era, oldest first:
+
+| Pack | Era |
+|---|---|
+| `bc-province-engraved-arms` | **Engraved arms, before 1977**: the full coat of arms over formal script. It starts with Grace M. McCarthy's calling card, rebuilt from a photograph as an editable template |
+| `bc-province-1977` | **The Visual Identity Program, 1977**: the crest and ring, the ministerial signatures, stationery, forms, signs and vehicles of the four manuals |
+| `bc-province-flag` | **The flag logo**, about 1983–2005 |
+| `bc-province-arms` | **The coat of arms and BRITISH COLUMBIA wordmark** |
+| `bc-province-current` | **The BC mark**, 2011 to the present, with every published ministry mark |
+
+```sh
+npm run brandkit:pack                      # every era → brandkit/out/packs/
+npm run brandkit:pack -- bc-province-flag  # one era
+npm run brandkit:release                   # every pack, zipped for a release
+```
+
+Each `<id>.zip` opens in brandkit by drag and drop or `?url=`; `catalog.json` lists them all and
+`bc-province.bundle.zip` adds all five at once. The flag, arms and current brands are written from
+the same layout code the generator draws with, so the two cannot disagree; the 1977 brand's
+generator, which brandkit used to carry, now lives here and reads the symbol and ministries from
+`src/`, and the engraved-arms brand reads the card's reconstruction package in
+`artwork/stationery/grace-mccarthy/`. `npm run brandkit:build` writes the brand folders alone
+(`brandkit/out/brands/`). The **Release brandkit packs** workflow, run by hand, rebuilds the release
+zip on a clean checkout and attaches it to a GitHub Release.
+
 ---
 
 ## Posters, by series
@@ -888,7 +917,8 @@ digitizer behind **Patches** (above). It needs no build step: Vite compiles its 
 
 
 [`vendor/brandkit`](https://github.com/ahzs645/brandkit) is the manual library behind **Visual
-Guides**, with the BC manuals' pages, and the template engine and studio behind **Stationery**. It
+Guides**, with the BC manuals' pages, the template engine and studio behind **Stationery**, and the
+engine and packer the era brands in [`brandkit/`](brandkit/README.md) are built and packed with. It
 is a project of its own, with its own site: brand kits (logos, business cards, letterhead, social
 graphics, a brand guide, web files) generated in the browser from one `brand.json`. Vite aliases
 its source (`brandkit`, `brandkit/studio`, `brandkit/manuals`) as it does Patcher's, with React
@@ -970,6 +1000,7 @@ scripts/
 vendor/json-url/             submodule — compresses a configuration into a share link
 vendor/brandkit/             submodule — the manual library and BC manual pages, and the template
                              engine and studio the stationery is drawn with
+brandkit/                    every era as a brandkit brand: sources, generators, and the pack script
 vendor/patcher/              submodule — the patch library and embroidery digitizer
 vendor/plateforge/           submodule — licence plates: the B.C. region data and its SVG renderer
 src/

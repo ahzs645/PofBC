@@ -1,0 +1,44 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-11-12",
+  "staticValidation": {
+    "pythonSyntax": "passed",
+    "editorJavaScriptSyntax": "passed",
+    "assembledHtmlScriptSyntax": "passed",
+    "embeddedJsonParsing": "passed",
+    "externalRuntimeScriptCount": 0,
+    "allTemplateTokensReplaced": true,
+    "repeatEditorBuildByteIdentical": true,
+    "htmlSha256": "efc5405f4ae5a792cf32834274341e1adde13844f1bf97b5d0ef3b6955646bf4"
+  },
+  "reviewCorrections": [
+    "Embedded font aliases include actual installed-family fallbacks.",
+    "Pointer selection and drag completion restore keyboard focus.",
+    "Font comparison remains reachable below the desktop breakpoint.",
+    "PNG export uses loaded FontFace and vector Path2D directly; no SVG-image font decoding."
+  ],
+  "projectChecks": {
+    "npmCi": "passed",
+    "testFiles": 70,
+    "testsPassed": 1977,
+    "testsFailed": 0,
+    "typeScriptCompilation": "passed",
+    "productionBuild": "passed",
+    "buildBase": "/plateforge/",
+    "builtCardAssetsByteIdentical": true,
+    "sourceChangesRequiredForExistingTests": false
+  },
+  "browserAcceptance": {
+    "status": "unverified",
+    "reason": "CLI Chromium could not create its process socket (Operation not permitted); the shared browser could not access this workspace local preview. No additional browser path was attempted after the policy restriction.",
+    "notClaimed": [
+      "interactive browser downloads",
+      "mobile browser acceptance",
+      "browser canvas output comparison",
+      "live deployment"
+    ]
+  },
+  "actions": {
+    "githubActionsStartedByValidation": false
+  }
+}
