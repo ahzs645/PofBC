@@ -1382,5 +1382,29 @@ export const COLLECTED_DISPLAY = {
    "aspect": 1.0002,
    "recoloured": false
   }
+ },
+ "solutions-bc-2003-black": {
+  "light": {
+   "file": "identity-display/solutions-bc-2003-black.light.svg",
+   "aspect": 0.7637,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/solutions-bc-2003-black.dark.svg",
+   "aspect": 0.7637,
+   "recoloured": true
+  }
+ },
+ "healthlink-bc-logo": {
+  "light": {
+   "file": "identity-display/healthlink-bc-logo.light.svg",
+   "aspect": 4.4039,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/healthlink-bc-logo.dark.svg",
+   "aspect": 4.4039,
+   "recoloured": true
+  }
  }
 }

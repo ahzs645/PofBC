@@ -1082,7 +1082,9 @@ export const GALLERY_COLLECTIONS = [
       // Before the crest: a department's own mark, on the BC mark's timeline.
       ...specimenEntriesOf('travel-industry', 'bc-mark'),
       // A service wordmark in the BC mark's Garamond, held as published.
-      ...specimenEntriesOf('bceid')
+      ...specimenEntriesOf('bceid'),
+      // A service on the BC mark, as its website serves it.
+      ...specimenEntriesOf('healthlink-bc')
     ]
   }
 ]
@@ -1093,7 +1095,7 @@ GALLERY_COLLECTIONS.push(...COLLECTED_COLLECTIONS.filter((candidate) =>
   !GALLERY_COLLECTIONS.some((held) => nodesOf(held).includes(candidate.graphNode))))
 // WorkSafeBC's specimens are folded into its collection above; the one-off programs keep theirs.
 // The Department of Travel Industry's is folded into the BC mark collection.
-GALLERY_COLLECTIONS.push(...SPECIMEN_COLLECTIONS.filter((collection) => !['specimens-worksafebc', 'specimens-travel-industry', 'specimens-justice-institute', 'specimens-auditor-general', 'specimens-sub-bc-online', 'specimens-bceid', 'specimens-shared-services-bc', 'specimens-sub-bc-cancer'].includes(collection.id)))
+GALLERY_COLLECTIONS.push(...SPECIMEN_COLLECTIONS.filter((collection) => !['specimens-worksafebc', 'specimens-travel-industry', 'specimens-justice-institute', 'specimens-auditor-general', 'specimens-sub-bc-online', 'specimens-bceid', 'specimens-shared-services-bc', 'specimens-sub-bc-cancer', 'specimens-healthlink-bc'].includes(collection.id)))
 
 // Public bodies outside the Crown corporations and health authorities the shelf collects for — a
 // post-secondary institute and an officer of the Legislature — whose collections are placed there by hand.
@@ -1125,8 +1127,8 @@ const PLACED = {
     label: 'BC Cancer',
     body: 'Agency of the Provincial Health Services Authority',
     years: '1974–present',
-    intro: 'The BC Cancer Agency’s circular emblem and logo, used until it became BC Cancer, with a new identity, in ' +
-      'November 2017; seen from a 2000 report to its 2015 research report.'
+    intro: 'The BC Cancer Agency’s circular emblem and logo, seen from 2000 to 2015, and the stacked BC / CAN / CER of ' +
+      'its identity as BC Cancer since November 2017.'
   },
   'auditor-general': {
     label: 'Auditor General',

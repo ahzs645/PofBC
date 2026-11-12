@@ -20,8 +20,9 @@ const innovate = read('research/identity/innovate-bc-vector-2026-11-12/source-re
 const railSightings = read('research/identity/bc-rail-sightings-2026-11-12/source-register.json')
 const bceid = read('research/identity/bceid-2026-11-12/source-register.json')
 const sharedServices = read('research/identity/shared-services-bc-2026-11-12/source-register.json')
+const bcCancerNow = read('research/identity/bc-cancer-current-2026-11-12/source-register.json')
 // Programs' marks held as supplied reconstructions, with no body of their own in the inventory.
-const PROGRAM_PACKAGES = ['bc-travel-industry-2026-11-12', 'justice-institute-2026-11-12', 'auditor-general-2026-11-12', 'bc-online-2026-11-12', 'bc-cancer-agency-2026-11-12']
+const PROGRAM_PACKAGES = ['bc-travel-industry-2026-11-12', 'justice-institute-2026-11-12', 'auditor-general-2026-11-12', 'bc-online-2026-11-12', 'bc-cancer-agency-2026-11-12', 'solutions-bc-vector-2026-11-12', 'healthlink-bc-2026-11-12']
   .map((search) => ({ search, register: read(`research/identity/${search}/source-register.json`) }))
 // Supplied packages that add a vector to a body, each read with the search it came from.
 const PACKAGES = ['bc-assessment-vector-2026-11-12', 'bc-power-commission-vector-2026-11-12', 'bc-place-vector-2026-11-12', 'bc-railway-vector-2026-11-12', 'bc-railway-dogwood-vector-2026-11-12', 'bc-systems-vector-2026-11-12', 'bc-housing-1978-vector-2026-11-12', 'bc-petroleum-vector-2026-11-12', 'bc-housing-houses-vector-2026-11-12', 'fvhr-vector-2026-11-12']
@@ -153,7 +154,9 @@ const SUPERSEDED = {
   'source-bc-petroleum-corporation-bc-petroleum-1983-logo-png': 'bcpc-stacked-white',
   'historical-bc-petroleum-1992-symbol-raster': 'bcpc-emblem-black',
   // The report's 78-pixel image is kept as the emblem's download.
-  'source-fraser-valley-health-region-fraser-valley-health-region-2000-jpg': 'fvhr-emblem-colour'
+  'source-fraser-valley-health-region-fraser-valley-health-region-2000-jpg': 'fvhr-emblem-colour',
+  // The 2003 document's image is kept as the vector's download.
+  'solutions-bc-2003': 'solutions-bc-2003-vector'
 }
 
 // Another colourway of the same design: shown inside the design's entry as a version to switch
@@ -176,7 +179,8 @@ const VARIANT_OF = {
   'bcpc-stacked-black': 'bcpc-stacked-white',
   'bcpc-emblem-white': 'bcpc-emblem-black',
   'bc-housing-houses-white': 'bc-housing-houses',
-  'fvhr-emblem-black': 'fvhr-emblem-colour'
+  'fvhr-emblem-black': 'fvhr-emblem-colour',
+  'solutions-bc-2003-black': 'solutions-bc-2003-vector'
 }
 
 // What each version is called inside its design's entry.
@@ -216,7 +220,9 @@ const VERSION_LABELS = {
   'bc-housing-houses': 'Black',
   'bc-housing-houses-white': 'White',
   'fvhr-emblem-colour': 'Colour',
-  'fvhr-emblem-black': 'Black'
+  'fvhr-emblem-black': 'Black',
+  'solutions-bc-2003-vector': 'On teal (as printed)',
+  'solutions-bc-2003-black': 'Black'
 }
 
 // Shorter accounts where a body's or file's own record is about a file no longer shown.
@@ -341,7 +347,7 @@ for (const { bodyId, ...asset } of railSightings.assets) {
   additions.get(bodyId).push(checked({ ...asset, search: 'bc-rail-sightings-2026-11-12' }))
 }
 // A program's published image, kept as published.
-for (const [search, register] of [['bceid-2026-11-12', bceid], ['shared-services-bc-2026-11-12', sharedServices]]) for (const asset of register.assets) {
+for (const [search, register] of [['bceid-2026-11-12', bceid], ['shared-services-bc-2026-11-12', sharedServices], ['bc-cancer-current-2026-11-12', bcCancerNow]]) for (const asset of register.assets) {
   if (asset.isVector) throw new Error(`Expected an image: ${asset.id}`)
   if (!additions.has(register.program)) additions.set(register.program, [])
   additions.get(register.program).push(SUPERSEDED[asset.id] ? asset : checked({ ...asset, search }))

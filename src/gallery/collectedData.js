@@ -7391,36 +7391,32 @@ export const COLLECTED_SPECIMENS = [
           }
         ],
         "search": "bc-cancer-agency-2026-11-12"
-      }
-    ]
-  },
-  {
-    "program": "bceid",
-    "assets": [
+      },
       {
-        "id": "bceid-reversed",
-        "label": "BCeID — Wordmark, reversed",
-        "file": "identity-collected/bceid/bceid-reversed-2x.png",
+        "id": "bc-cancer-logo",
+        "label": "BC Cancer",
+        "file": "identity-collected/bc-cancer/bc-cancer-logo.png",
         "format": "png",
         "isVector": false,
         "supplied": false,
         "reconstruction": false,
-        "publisher": "Province of British Columbia (BCeID)",
-        "sourcePage": "https://www.bceid.ca/",
-        "sourceUrl": "https://www.bceid.ca/assets/images/bceid_rev@2x.png",
-        "sourceLocator": "The website’s 2× reverse logo",
+        "publisher": "BC Cancer",
+        "sourcePage": "https://www.bccancer.bc.ca/",
+        "sourceUrl": "https://www.bccancer.bc.ca/Style%20Library/Go/Modules/BccaBrandModule/styles/images/logo.png",
+        "sourceLocator": "The website’s header logo",
         "sourceFile": null,
-        "sourceDate": null,
+        "sourceDate": "2017-11-15",
         "observedDate": "2026-11-12",
+        "dateNote": "The identity was announced on 15 November 2017; this file is the website’s current copy.",
         "evidenceType": "official-download",
-        "notes": "“BCeID” in Garamond capitals with an italic e in gold between BC and ID, in white for a dark ground: the wordmark of the Province’s online identity service.",
-        "fidelityNote": "The website’s image, unchanged (220 × 58). Its white lettering needs a dark ground.",
-        "sha256": "3abd1d5303a267f7555ff8069abf4082d7fc00dd7ba4a738f8d7a72c9a025b0b",
-        "bytes": 6123,
-        "darkBackground": true,
-        "previewWidth": 220,
-        "previewHeight": 58,
-        "search": "bceid-2026-11-12"
+        "notes": "BC / CAN / CER stacked in three lines of heavy geometric capitals, cyan with CAN in purple and the A’s counter a dot: BC Cancer’s identity since November 2017.",
+        "fidelityNote": "The website’s image, unchanged (356 × 400).",
+        "sha256": "ba44f237c3671f78e3ad4f92b4f7b53b30d653c54a7fbeb2d5a8a80f11e72871",
+        "bytes": 22008,
+        "darkBackground": false,
+        "previewWidth": 356,
+        "previewHeight": 400,
+        "search": "bc-cancer-current-2026-11-12"
       }
     ]
   },
@@ -7428,30 +7424,68 @@ export const COLLECTED_SPECIMENS = [
     "program": "shared-services-bc",
     "assets": [
       {
-        "id": "solutions-bc-2003",
+        "id": "solutions-bc-2003-vector",
         "label": "Solutions BC — Figures on teal, 2003",
-        "file": "identity-collected/shared-services-bc/solutions-bc-2003.jpeg",
-        "format": "jpeg",
-        "isVector": false,
-        "supplied": false,
-        "reconstruction": false,
+        "file": "identity-collected/shared-services-bc/solutions-bc-2003.svg",
+        "format": "svg",
+        "isVector": true,
+        "supplied": true,
+        "reconstruction": true,
         "publisher": "Solutions BC",
         "sourcePage": "https://www2.gov.bc.ca/assets/gov/british-columbians-our-governments/about-the-bc-government/strategic-partnerships/the-strategic-partnerships-office/high-value-service-contracts/jsrfp_revenue_management_project.pdf",
         "sourceUrl": "https://www2.gov.bc.ca/assets/gov/british-columbians-our-governments/about-the-bc-government/strategic-partnerships/the-strategic-partnerships-office/high-value-service-contracts/jsrfp_revenue_management_project.pdf",
-        "sourceLocator": "Revenue Management Project procurement document, PDF page 2 (cover letter dated 27 June 2003); the same image is in the payroll procurement document of 9 October 2003",
+        "sourceLocator": "Revenue Management Project procurement document, PDF page 2 (cover letter dated 27 June 2003)",
         "sourceFile": null,
         "sourceDate": "2003-06-27",
         "observedDate": "2026-11-12",
-        "dateNote": "The document’s date: a dated appearance, not an adoption date.",
-        "evidenceType": "official-pdf-image-extraction",
+        "dateNote": "The document’s date, not an adoption date.",
+        "evidenceType": "supplied-vector-reconstruction",
         "notes": "Four interlocking grey figures on a teal panel, over “Solutions BC / SHARED SERVICES”: the shared-services organization’s first logo.",
-        "fidelityNote": "The document’s embedded JPEG, unchanged (115 × 149).",
-        "sha256": "c2269ed44646f2f28d09cc32a0a7d1f0ed8f63dfd600ab239dfe35cd2d878629",
-        "bytes": 2953,
+        "fidelityNote": "A supplied reconstruction: two drawn figure shapes, each repeated turned about, with four circles for heads, and both lines of lettering as custom outlines, after a restored copy of the 2003 logo (overlap 98% for the emblem, 95% and 91% for the two lines). Colours are sampled, not a brand specification; the typeface is not identified.",
+        "sha256": "4947007a95663f958d0e3990582e621c19d44b3aad0ca7fc4bfdf5a002e94354",
+        "bytes": 12824,
         "darkBackground": false,
-        "previewWidth": 115,
-        "previewHeight": 149,
-        "search": "shared-services-bc-2026-11-12"
+        "downloads": [
+          {
+            "label": "Download the 2003 document’s image (JPEG)",
+            "file": "identity-collected/shared-services-bc/solutions-bc-2003.jpeg",
+            "sha256": "c2269ed44646f2f28d09cc32a0a7d1f0ed8f63dfd600ab239dfe35cd2d878629"
+          }
+        ],
+        "search": "solutions-bc-vector-2026-11-12",
+        "alsoSeen": [
+          {
+            "date": "2003-06-27",
+            "source": "https://www2.gov.bc.ca/assets/gov/british-columbians-our-governments/about-the-bc-government/strategic-partnerships/the-strategic-partnerships-office/high-value-service-contracts/jsrfp_revenue_management_project.pdf"
+          }
+        ],
+        "versionLabel": "On teal (as printed)"
+      },
+      {
+        "id": "solutions-bc-2003-black",
+        "label": "Solutions BC — Figures and name, black",
+        "file": "identity-collected/shared-services-bc/solutions-bc-2003-black.svg",
+        "format": "svg",
+        "isVector": true,
+        "supplied": true,
+        "reconstruction": true,
+        "publisher": "Solutions BC",
+        "sourcePage": "https://www2.gov.bc.ca/assets/gov/british-columbians-our-governments/about-the-bc-government/strategic-partnerships/the-strategic-partnerships-office/high-value-service-contracts/jsrfp_revenue_management_project.pdf",
+        "sourceUrl": "https://www2.gov.bc.ca/assets/gov/british-columbians-our-governments/about-the-bc-government/strategic-partnerships/the-strategic-partnerships-office/high-value-service-contracts/jsrfp_revenue_management_project.pdf",
+        "sourceLocator": "Revenue Management Project procurement document, PDF page 2 (cover letter dated 27 June 2003)",
+        "sourceFile": null,
+        "sourceDate": "2003-06-27",
+        "observedDate": "2026-11-12",
+        "dateNote": "The document’s date, not an adoption date.",
+        "evidenceType": "supplied-vector-reconstruction",
+        "notes": "The figures and lettering in black, without the panel, for a light ground.",
+        "fidelityNote": "A supplied reconstruction: two drawn figure shapes, each repeated turned about, with four circles for heads, and both lines of lettering as custom outlines, after a restored copy of the 2003 logo (overlap 98% for the emblem, 95% and 91% for the two lines). Colours are sampled, not a brand specification; the typeface is not identified.",
+        "sha256": "a7b1e622cd38a161ed68b21abcf6f711785b86f4fd909f13cc0a160a2cd95c13",
+        "bytes": 12746,
+        "darkBackground": false,
+        "search": "solutions-bc-vector-2026-11-12",
+        "versionLabel": "Black",
+        "variantOf": "solutions-bc-2003-vector"
       },
       {
         "id": "solutions-bc-2006-letterhead",
@@ -7536,6 +7570,64 @@ export const COLLECTED_SPECIMENS = [
         "previewWidth": 810,
         "previewHeight": 267,
         "search": "shared-services-bc-2026-11-12"
+      }
+    ]
+  },
+  {
+    "program": "healthlink-bc",
+    "assets": [
+      {
+        "id": "healthlink-bc-logo",
+        "label": "HealthLink BC",
+        "file": "identity-collected/healthlink-bc/healthlink-bc-logo.svg",
+        "format": "svg",
+        "isVector": true,
+        "supplied": false,
+        "reconstruction": false,
+        "publisher": "HealthLink BC",
+        "sourcePage": "https://www.healthlinkbc.ca/",
+        "sourceUrl": "https://www.healthlinkbc.ca/themes/custom/kb_bootstrap5/logo.svg",
+        "sourceLocator": "The website’s logo file",
+        "sourceFile": null,
+        "sourceDate": null,
+        "observedDate": "2026-11-12",
+        "evidenceType": "official-svg-download",
+        "notes": "The BC mark with its shaded sun, a gold divider, and “HealthLinkBC” in Garamond with “BC” in gold: the Province’s health information service, on the BC mark.",
+        "fidelityNote": "The website’s Illustrator SVG, unchanged; its sun’s shading is gradient fills.",
+        "sha256": "045bad7bcfd50f5a1db7eb1811b583f9465ead7621484c1d0ad645e76635e6f0",
+        "bytes": 28621,
+        "darkBackground": false,
+        "search": "healthlink-bc-2026-11-12"
+      }
+    ]
+  },
+  {
+    "program": "bceid",
+    "assets": [
+      {
+        "id": "bceid-reversed",
+        "label": "BCeID — Wordmark, reversed",
+        "file": "identity-collected/bceid/bceid-reversed-2x.png",
+        "format": "png",
+        "isVector": false,
+        "supplied": false,
+        "reconstruction": false,
+        "publisher": "Province of British Columbia (BCeID)",
+        "sourcePage": "https://www.bceid.ca/",
+        "sourceUrl": "https://www.bceid.ca/assets/images/bceid_rev@2x.png",
+        "sourceLocator": "The website’s 2× reverse logo",
+        "sourceFile": null,
+        "sourceDate": null,
+        "observedDate": "2026-11-12",
+        "evidenceType": "official-download",
+        "notes": "“BCeID” in Garamond capitals with an italic e in gold between BC and ID, in white for a dark ground: the wordmark of the Province’s online identity service.",
+        "fidelityNote": "The website’s image, unchanged (220 × 58). Its white lettering needs a dark ground.",
+        "sha256": "3abd1d5303a267f7555ff8069abf4082d7fc00dd7ba4a738f8d7a72c9a025b0b",
+        "bytes": 6123,
+        "darkBackground": true,
+        "previewWidth": 220,
+        "previewHeight": 58,
+        "search": "bceid-2026-11-12"
       }
     ]
   }
