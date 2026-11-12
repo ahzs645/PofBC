@@ -1,0 +1,51 @@
+name: Release brandkit packs
+
+# Run by hand (Actions → Release brandkit packs → Run workflow, or `gh workflow run brandkit-release.yml`).
+# Builds every era from brandkit/ and artwork/, packs them, and attaches the release zip to a
+# GitHub Release. No licensed font is needed, so this runs on Linux.
+
+on:
+  workflow_dispatch:
+    inputs:
+      version:
+        description: 'Release name (blank: commit date and hash)'
+        required: false
+        default: ''
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+
+      # brandkit builds and packs the eras; json-url is built by npm's prepare step.
+      - run: git submodule update --init vendor/brandkit vendor/json-url
+
+      - uses: actions/setup-node@v7
+        with:
+          node-version: '22'
+          cache: npm
+
+      - run: npm ci
+
+      - name: Build the release zip
+        run: npm run brandkit:release -- ${{ inputs.version && format('--name {0}', inputs.version) || '' }}
+
+      - run: node --test scripts/brandkit-eras.test.mjs
+
+      - name: Publish the release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          zip=$(ls brandkit/out/release/pofbc-brandkit-*.zip)
+          version=$(basename "$zip" .zip); version=${version#pofbc-brandkit-}
+          tag="brandkit-$version"
+          unzip -p "$zip" '*/README.md' > notes.md
+          if gh release view "$tag" > /dev/null 2>&1; then
+            gh release upload "$tag" "$zip" --clobber
+          else
+            gh release create "$tag" "$zip" --target "$GITHUB_SHA" --title "Brandkit packs $version" --notes-file notes.md
+          fi
