@@ -72,10 +72,13 @@ extraction and confirmed the source match.
 ## Gallery integration
 
 The two verified SVGs are appended to the existing Transportation Investment
-Corporation collection through `scripts/build-collected-marks.mjs`. The original
-PNG, its gallery entry and existing links remain available. The full colour SVG
-uses the standard white preview plate; `darkBackground: true` gives the white SVG
-a dark plate. Display recolouring and additional display copies are unnecessary.
+Corporation collection through `scripts/build-collected-marks.mjs`. Since 12
+November 2026 the gallery shows them as one design with two versions (full
+colour and white), and no longer shows the website PNG: it is the same design,
+and the vectors supersede it. The PNG's source URL and checksum remain in the
+October acquisition inventory. The full colour SVG uses the standard white
+preview plate; `darkBackground: true` gives the white SVG a dark plate. Display
+recolouring and additional display copies are unnecessary.
 
 Focused existing checks:
 

@@ -84,6 +84,28 @@ export const tileArt = (entry, theme = 'light', { cover = false } = {}) => {
   return renderCurrentHydroSvg({ variant: entry.variant, clearSpace: 1 / 3, width: 480 }).svg
 }
 
+/**
+ * An identity the generator draws, as an era of a timeline shows it: the mark alone, with no
+ * ministry set beside it, in its colours on the light page and reversed on the dark one.
+ * Null for an identity it has no drawing of here.
+ */
+export const generatorArt = (generator, theme = 'light') => {
+  const dark = theme === 'dark'
+  if (generator?.era === 'flag') {
+    return renderFlagSvg({
+      letterColor: dark ? '#ffffff' : '#10069f',
+      textColor: dark ? '#ffffff' : '#10069f',
+      flagPalette: dark ? 'ink' : 'official',
+      background: TRANSPARENT,
+      clearSpaceFactor: 0.02
+    }).svg
+  }
+  if (generator?.era === 'current') {
+    return renderCurrentSvg({ text: '', variant: dark ? 'reverse' : 'colour', clearSpaceFactor: 0.02 })
+  }
+  return null
+}
+
 /** Whether a card draws on the page's ground, or keeps a ground of its own. */
 export const onPage = (entry) => (entry.kind === 'collected' && Boolean(COLLECTED_DISPLAY[entry.asset.id])) || entry.kind === 'artwork' || entry.kind === 'current' || entry.kind === 'flag' || entry.kind === 'supplied' || entry.mark === '1990' ||
   (entry.kind === 'hydro' && HYDRO_PRESETS[entry.preset]?.group === 'signature')

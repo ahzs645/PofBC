@@ -25,6 +25,102 @@ export const COLLECTED_DISPLAY = {
    "recoloured": true
   }
  },
+ "bc-housing-1978-rebuilt": {
+  "light": {
+   "file": "identity-display/bc-housing-1978-rebuilt.light.svg",
+   "aspect": 4.8417,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/bc-housing-1978-rebuilt.dark.svg",
+   "aspect": 4.8417,
+   "recoloured": true
+  }
+ },
+ "bc-housing-houses": {
+  "light": {
+   "file": "identity-display/bc-housing-houses.light.svg",
+   "aspect": 1.2861,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/bc-housing-houses.dark.svg",
+   "aspect": 1.2861,
+   "recoloured": true
+  }
+ },
+ "bc-housing-houses-white": {
+  "light": {
+   "file": "identity-display/bc-housing-houses-white.light.svg",
+   "aspect": 1.2861,
+   "recoloured": true
+  },
+  "dark": {
+   "file": "identity-display/bc-housing-houses-white.dark.svg",
+   "aspect": 1.2861,
+   "recoloured": false
+  }
+ },
+ "bcrc-2024-cover-rebuilt": {
+  "light": {
+   "file": "identity-display/bcrc-2024-cover-rebuilt.light.svg",
+   "aspect": 2.3122,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/bcrc-2024-cover-rebuilt.dark.svg",
+   "aspect": 2.3122,
+   "recoloured": true
+  }
+ },
+ "bcrc-2024-letterhead": {
+  "light": {
+   "file": "identity-display/bcrc-2024-letterhead.light.svg",
+   "aspect": 1.9046,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/bcrc-2024-letterhead.dark.svg",
+   "aspect": 1.9046,
+   "recoloured": true
+  }
+ },
+ "bcr-dogwood-white": {
+  "light": {
+   "file": "identity-display/bcr-dogwood-white.light.svg",
+   "aspect": 3.9618,
+   "recoloured": true
+  },
+  "dark": {
+   "file": "identity-display/bcr-dogwood-white.dark.svg",
+   "aspect": 3.9618,
+   "recoloured": false
+  }
+ },
+ "bcr-dogwood-dark": {
+  "light": {
+   "file": "identity-display/bcr-dogwood-dark.light.svg",
+   "aspect": 3.9618,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/bcr-dogwood-dark.dark.svg",
+   "aspect": 3.9618,
+   "recoloured": true
+  }
+ },
+ "bc-assessment-svg": {
+  "light": {
+   "file": "identity-display/bc-assessment-svg.light.svg",
+   "aspect": 1.5388,
+   "recoloured": true
+  },
+  "dark": {
+   "file": "identity-display/bc-assessment-svg.dark.svg",
+   "aspect": 1.5388,
+   "recoloured": false
+  }
+ },
  "source-bc-games-society-bc-games-svg": {
   "light": {
    "file": "identity-display/source-bc-games-society-bc-games-svg.light.svg",
@@ -83,6 +179,42 @@ export const COLLECTED_DISPLAY = {
    "file": "identity-display/source-legal-aid-bc-legal-aid-bc-vertical-svg.light.svg",
    "aspect": 1.536,
    "recoloured": false
+  }
+ },
+ "vector-bclc-2009-colour-tagline-source-vector": {
+  "light": {
+   "file": "identity-display/vector-bclc-2009-colour-tagline-source-vector.light.svg",
+   "aspect": 1.5738,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/vector-bclc-2009-colour-tagline-source-vector.dark.svg",
+   "aspect": 1.5738,
+   "recoloured": true
+  }
+ },
+ "vector-bclc-2009-reversed-source-vector": {
+  "light": {
+   "file": "identity-display/vector-bclc-2009-reversed-source-vector.light.svg",
+   "aspect": 2.3627,
+   "recoloured": true
+  },
+  "dark": {
+   "file": "identity-display/vector-bclc-2009-reversed-source-vector.dark.svg",
+   "aspect": 2.3627,
+   "recoloured": true
+  }
+ },
+ "vector-bclc-2011-reversed-tagline-source-vector": {
+  "light": {
+   "file": "identity-display/vector-bclc-2011-reversed-tagline-source-vector.light.svg",
+   "aspect": 1.575,
+   "recoloured": true
+  },
+  "dark": {
+   "file": "identity-display/vector-bclc-2011-reversed-tagline-source-vector.dark.svg",
+   "aspect": 1.575,
+   "recoloured": true
   }
  },
  "source-first-peoples-cultural-council-fpcc-svg": {
@@ -250,6 +382,54 @@ export const COLLECTED_DISPLAY = {
   "dark": {
    "file": "identity-display/source-knowledge-network-knowledge-network-svg.dark.svg",
    "aspect": 5.0654,
+   "recoloured": false
+  }
+ },
+ "vector-pavco-2025-26-colour-source-vector": {
+  "light": {
+   "file": "identity-display/vector-pavco-2025-26-colour-source-vector.light.svg",
+   "aspect": 2.4267,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/vector-pavco-2025-26-colour-source-vector.dark.svg",
+   "aspect": 2.4267,
+   "recoloured": true
+  }
+ },
+ "vector-pavco-2023-reversed-source-vector": {
+  "light": {
+   "file": "identity-display/vector-pavco-2023-reversed-source-vector.light.svg",
+   "aspect": 2.4065,
+   "recoloured": true
+  },
+  "dark": {
+   "file": "identity-display/vector-pavco-2023-reversed-source-vector.dark.svg",
+   "aspect": 2.4065,
+   "recoloured": false
+  }
+ },
+ "vector-ticorp-2025-colour-source-vector": {
+  "light": {
+   "file": "identity-display/vector-ticorp-2025-colour-source-vector.light.svg",
+   "aspect": 3.9059,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/vector-ticorp-2025-colour-source-vector.dark.svg",
+   "aspect": 3.9059,
+   "recoloured": true
+  }
+ },
+ "vector-ticorp-2020-reversed-source-vector": {
+  "light": {
+   "file": "identity-display/vector-ticorp-2020-reversed-source-vector.light.svg",
+   "aspect": 3.8803,
+   "recoloured": true
+  },
+  "dark": {
+   "file": "identity-display/vector-ticorp-2020-reversed-source-vector.dark.svg",
+   "aspect": 3.8803,
    "recoloured": false
   }
  },
@@ -529,6 +709,102 @@ export const COLLECTED_DISPLAY = {
    "recoloured": true
   }
  },
+ "pge-map-solid": {
+  "light": {
+   "file": "identity-display/pge-map-solid.light.svg",
+   "aspect": 0.8844,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/pge-map-solid.light.svg",
+   "aspect": 0.8844,
+   "recoloured": false
+  }
+ },
+ "pge-map-striped": {
+  "light": {
+   "file": "identity-display/pge-map-striped.light.svg",
+   "aspect": 0.9187,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/pge-map-striped.light.svg",
+   "aspect": 0.9187,
+   "recoloured": false
+  }
+ },
+ "bc-power-commission-rebuilt": {
+  "light": {
+   "file": "identity-display/bc-power-commission-rebuilt.light.svg",
+   "aspect": 1.3986,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/bc-power-commission-rebuilt.light.svg",
+   "aspect": 1.3986,
+   "recoloured": false
+  }
+ },
+ "bcpc-stacked-white": {
+  "light": {
+   "file": "identity-display/bcpc-stacked-white.light.svg",
+   "aspect": 1.0162,
+   "recoloured": true
+  },
+  "dark": {
+   "file": "identity-display/bcpc-stacked-white.dark.svg",
+   "aspect": 1.0162,
+   "recoloured": false
+  }
+ },
+ "bcpc-stacked-black": {
+  "light": {
+   "file": "identity-display/bcpc-stacked-black.light.svg",
+   "aspect": 1.0162,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/bcpc-stacked-black.dark.svg",
+   "aspect": 1.0162,
+   "recoloured": true
+  }
+ },
+ "bcpc-emblem-black": {
+  "light": {
+   "file": "identity-display/bcpc-emblem-black.light.svg",
+   "aspect": 0.7817,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/bcpc-emblem-black.dark.svg",
+   "aspect": 0.7817,
+   "recoloured": true
+  }
+ },
+ "bcpc-emblem-white": {
+  "light": {
+   "file": "identity-display/bcpc-emblem-white.light.svg",
+   "aspect": 0.7817,
+   "recoloured": true
+  },
+  "dark": {
+   "file": "identity-display/bcpc-emblem-white.dark.svg",
+   "aspect": 0.7817,
+   "recoloured": false
+  }
+ },
+ "bc-steamship-round-logo": {
+  "light": {
+   "file": "identity-display/bc-steamship-round-logo.light.svg",
+   "aspect": 1.0,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/bc-steamship-round-logo.dark.svg",
+   "aspect": 1.0,
+   "recoloured": true
+  }
+ },
  "historical-bc-buildings-corporation-2005": {
   "light": {
    "file": "identity-display/historical-bc-buildings-corporation-2005.light.svg",
@@ -551,6 +827,30 @@ export const COLLECTED_DISPLAY = {
    "file": "identity-display/historical-bc-heritage-trust-2002.light.svg",
    "aspect": 1.2972,
    "recoloured": false
+  }
+ },
+ "bcsc-1983-white": {
+  "light": {
+   "file": "identity-display/bcsc-1983-white.light.svg",
+   "aspect": 5.0319,
+   "recoloured": true
+  },
+  "dark": {
+   "file": "identity-display/bcsc-1983-white.dark.svg",
+   "aspect": 5.0319,
+   "recoloured": false
+  }
+ },
+ "bcsc-1983-black": {
+  "light": {
+   "file": "identity-display/bcsc-1983-black.light.svg",
+   "aspect": 5.0319,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/bcsc-1983-black.dark.svg",
+   "aspect": 5.0319,
+   "recoloured": true
   }
  },
  "source-expo-86-corporation-expo86-symbol-svg": {
@@ -577,15 +877,39 @@ export const COLLECTED_DISPLAY = {
    "recoloured": false
   }
  },
- "source-forest-renewal-bc-forest-renewal-bc-supplied-vector-svg": {
+ "bc-place-1983-rebuilt": {
   "light": {
-   "file": "identity-display/source-forest-renewal-bc-forest-renewal-bc-supplied-vector-svg.light.svg",
-   "aspect": 1.5977,
+   "file": "identity-display/bc-place-1983-rebuilt.light.svg",
+   "aspect": 2.195,
    "recoloured": false
   },
   "dark": {
-   "file": "identity-display/source-forest-renewal-bc-forest-renewal-bc-supplied-vector-svg.dark.svg",
-   "aspect": 1.5977,
+   "file": "identity-display/bc-place-1983-rebuilt.dark.svg",
+   "aspect": 2.195,
+   "recoloured": true
+  }
+ },
+ "vector-forest-renewal-bc-2000-colour-source-vector": {
+  "light": {
+   "file": "identity-display/vector-forest-renewal-bc-2000-colour-source-vector.light.svg",
+   "aspect": 1.6048,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/vector-forest-renewal-bc-2000-colour-source-vector.dark.svg",
+   "aspect": 1.6048,
+   "recoloured": true
+  }
+ },
+ "vector-forest-renewal-bc-1999-black-source-vector": {
+  "light": {
+   "file": "identity-display/vector-forest-renewal-bc-1999-black-source-vector.light.svg",
+   "aspect": 1.597,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/vector-forest-renewal-bc-1999-black-source-vector.dark.svg",
+   "aspect": 1.597,
    "recoloured": true
   }
  },
@@ -708,6 +1032,42 @@ export const COLLECTED_DISPLAY = {
   "dark": {
    "file": "identity-display/source-central-vancouver-island-health-region-central-vancouver-island-health-region-1999-svg.dark.svg",
    "aspect": 3.3402,
+   "recoloured": true
+  }
+ },
+ "fvhr-emblem-colour": {
+  "light": {
+   "file": "identity-display/fvhr-emblem-colour.light.svg",
+   "aspect": 1.0,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/fvhr-emblem-colour.dark.svg",
+   "aspect": 1.0,
+   "recoloured": true
+  }
+ },
+ "fvhr-emblem-black": {
+  "light": {
+   "file": "identity-display/fvhr-emblem-black.light.svg",
+   "aspect": 1.0,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/fvhr-emblem-black.dark.svg",
+   "aspect": 1.0,
+   "recoloured": true
+  }
+ },
+ "fvhr-lockup": {
+  "light": {
+   "file": "identity-display/fvhr-lockup.light.svg",
+   "aspect": 7.4421,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/fvhr-lockup.dark.svg",
+   "aspect": 7.4421,
    "recoloured": true
   }
  },
@@ -924,6 +1284,258 @@ export const COLLECTED_DISPLAY = {
   "dark": {
    "file": "identity-display/vector-workbc-current.dark.svg",
    "aspect": 5.4524,
+   "recoloured": true
+  }
+ },
+ "vector-worksafe-2003-serif-source-vector": {
+  "light": {
+   "file": "identity-display/vector-worksafe-2003-serif-source-vector.light.svg",
+   "aspect": 3.401,
+   "recoloured": true
+  },
+  "dark": {
+   "file": "identity-display/vector-worksafe-2003-serif-source-vector.dark.svg",
+   "aspect": 3.401,
+   "recoloured": false
+  }
+ },
+ "vector-worksafebc-2004-tagline-source-vector": {
+  "light": {
+   "file": "identity-display/vector-worksafebc-2004-tagline-source-vector.light.svg",
+   "aspect": 3.4922,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/vector-worksafebc-2004-tagline-source-vector.dark.svg",
+   "aspect": 3.4922,
+   "recoloured": true
+  }
+ },
+ "vector-worksafebc-2024-colour-source-vector": {
+  "light": {
+   "file": "identity-display/vector-worksafebc-2024-colour-source-vector.light.svg",
+   "aspect": 5.2691,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/vector-worksafebc-2024-colour-source-vector.light.svg",
+   "aspect": 5.2691,
+   "recoloured": false
+  }
+ },
+ "bc-travel-industry-ca-1970": {
+  "light": {
+   "file": "identity-display/bc-travel-industry-ca-1970.light.svg",
+   "aspect": 1.4192,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/bc-travel-industry-ca-1970.light.svg",
+   "aspect": 1.4192,
+   "recoloured": false
+  }
+ },
+ "jibc-logo": {
+  "light": {
+   "file": "identity-display/jibc-logo.light.svg",
+   "aspect": 2.7152,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/jibc-logo.dark.svg",
+   "aspect": 2.7152,
+   "recoloured": true
+  }
+ },
+ "jibc-monogram": {
+  "light": {
+   "file": "identity-display/jibc-monogram.light.svg",
+   "aspect": 2.3183,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/jibc-monogram.dark.svg",
+   "aspect": 2.3183,
+   "recoloured": true
+  }
+ },
+ "oag-bc-logo": {
+  "light": {
+   "file": "identity-display/oag-bc-logo.light.svg",
+   "aspect": 3.8132,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/oag-bc-logo.dark.svg",
+   "aspect": 3.8132,
+   "recoloured": true
+  }
+ },
+ "bc-online-2005-emblem": {
+  "light": {
+   "file": "identity-display/bc-online-2005-emblem.light.svg",
+   "aspect": 1.4158,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/bc-online-2005-emblem.dark.svg",
+   "aspect": 1.4158,
+   "recoloured": true
+  }
+ },
+ "bc-online-2011-logo": {
+  "light": {
+   "file": "identity-display/bc-online-2011-logo.light.svg",
+   "aspect": 4.5834,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/bc-online-2011-logo.dark.svg",
+   "aspect": 4.5834,
+   "recoloured": true
+  }
+ },
+ "bc-cancer-agency-lockup": {
+  "light": {
+   "file": "identity-display/bc-cancer-agency-lockup.light.svg",
+   "aspect": 3.4917,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/bc-cancer-agency-lockup.dark.svg",
+   "aspect": 3.4917,
+   "recoloured": true
+  }
+ },
+ "bc-cancer-agency-emblem": {
+  "light": {
+   "file": "identity-display/bc-cancer-agency-emblem.light.svg",
+   "aspect": 1.0002,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/bc-cancer-agency-emblem.light.svg",
+   "aspect": 1.0002,
+   "recoloured": false
+  }
+ },
+ "bc-cancer-phsa": {
+  "light": {
+   "file": "identity-display/bc-cancer-phsa.light.svg",
+   "aspect": 1.5191,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/bc-cancer-phsa.light.svg",
+   "aspect": 1.5191,
+   "recoloured": false
+  }
+ },
+ "bc-cancer-research": {
+  "light": {
+   "file": "identity-display/bc-cancer-research.light.svg",
+   "aspect": 1.7235,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/bc-cancer-research.light.svg",
+   "aspect": 1.7235,
+   "recoloured": false
+  }
+ },
+ "bc-cancer-research-white": {
+  "light": {
+   "file": "identity-display/bc-cancer-research-white.light.svg",
+   "aspect": 1.7231,
+   "recoloured": true
+  },
+  "dark": {
+   "file": "identity-display/bc-cancer-research-white.dark.svg",
+   "aspect": 1.7231,
+   "recoloured": true
+  }
+ },
+ "bc-cancer-research-institute": {
+  "light": {
+   "file": "identity-display/bc-cancer-research-institute.light.svg",
+   "aspect": 1.7411,
+   "recoloured": true
+  },
+  "dark": {
+   "file": "identity-display/bc-cancer-research-institute.dark.svg",
+   "aspect": 1.7411,
+   "recoloured": false
+  }
+ },
+ "bc-cancer-foundation-2018": {
+  "light": {
+   "file": "identity-display/bc-cancer-foundation-2018.light.svg",
+   "aspect": 2.287,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/bc-cancer-foundation-2018.light.svg",
+   "aspect": 2.287,
+   "recoloured": false
+  }
+ },
+ "bc-cancer-foundation-2018-white": {
+  "light": {
+   "file": "identity-display/bc-cancer-foundation-2018-white.light.svg",
+   "aspect": 2.2885,
+   "recoloured": true
+  },
+  "dark": {
+   "file": "identity-display/bc-cancer-foundation-2018-white.dark.svg",
+   "aspect": 2.2885,
+   "recoloured": false
+  }
+ },
+ "bc-cancer-foundation-2026": {
+  "light": {
+   "file": "identity-display/bc-cancer-foundation-2026.light.svg",
+   "aspect": 0.7476,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/bc-cancer-foundation-2026.dark.svg",
+   "aspect": 0.7476,
+   "recoloured": true
+  }
+ },
+ "bc-cancer-foundation-2026-white": {
+  "light": {
+   "file": "identity-display/bc-cancer-foundation-2026-white.light.svg",
+   "aspect": 0.7476,
+   "recoloured": true
+  },
+  "dark": {
+   "file": "identity-display/bc-cancer-foundation-2026-white.dark.svg",
+   "aspect": 0.7476,
+   "recoloured": false
+  }
+ },
+ "solutions-bc-2003-black": {
+  "light": {
+   "file": "identity-display/solutions-bc-2003-black.light.svg",
+   "aspect": 0.7637,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/solutions-bc-2003-black.dark.svg",
+   "aspect": 0.7637,
+   "recoloured": true
+  }
+ },
+ "healthlink-bc-logo": {
+  "light": {
+   "file": "identity-display/healthlink-bc-logo.light.svg",
+   "aspect": 4.4039,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/healthlink-bc-logo.dark.svg",
+   "aspect": 4.4039,
    "recoloured": true
   }
  }

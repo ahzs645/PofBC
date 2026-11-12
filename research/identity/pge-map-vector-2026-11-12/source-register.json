@@ -1,0 +1,110 @@
+{
+  "researchDate": "2026-11-12",
+  "summary": "Supplied vector reconstructions of the Pacific Great Eastern map mark (the province over PGE on a folded panel): a solid version rebuilt after a green-livery screenshot, the earlier striped version, and the solid mark on its green livery. All three share one set of map and letter paths (see package-README.txt and review/comparison.webp). The PNRA equipment photograph and the Rapido Trains crop of the same mark are kept as downloads.",
+  "assets": [
+    {
+      "bodyId": "pacific-great-eastern-railway",
+      "id": "pge-map-green-livery",
+      "label": "Pacific Great Eastern — Map mark",
+      "file": "identity-collected/pacific-great-eastern-railway/pge-map-green-livery.svg",
+      "format": "svg",
+      "isVector": true,
+      "supplied": true,
+      "reconstruction": true,
+      "versionLabel": "On green livery",
+      "publisher": "Pacific Great Eastern Railway",
+      "sourcePage": null,
+      "sourceUrl": null,
+      "sourceLocator": "Supplied green-livery screenshot (151 × 167 px)",
+      "sourceFile": null,
+      "sourceDate": null,
+      "observedDate": "2026-11-12",
+      "evidenceType": "supplied-vector-reconstruction",
+      "notes": "The province of British Columbia over PGE in italic capitals, on a folded panel. It replaced the caribou on PGE timetables from 1966 and was on equipment around 1970, in outline, solid and striped forms.",
+      "fidelityNote": "A supplied vector reconstruction, not original artwork: the map and letters are shared paths, placed after a 151 × 167 pixel livery screenshot; no letter was redrawn. A white coastal gap is a separate overlay. The greens (#728B76, #345135) are sampled from the screenshot, not verified paint standards.",
+      "sha256": "46781343bcc6daeb805753045ecdf2800e5d7e296cb40ea92274a4e48f59fb7b",
+      "bytes": 5649,
+      "darkBackground": false,
+      "downloads": [
+        {
+          "label": "Download equipment photograph, c. 1970 (PNRA, PNG)",
+          "file": "identity-collected/pacific-great-eastern-railway/pge-bc-map-herald-circa-1970-pnra.png",
+          "sha256": "5611243fef66d4810985310bdecc4d8edf816b175fd61a6fa56f5f559f78ab20"
+        },
+        {
+          "label": "Download Rapido Trains crop (PNG)",
+          "file": "identity-collected/pacific-great-eastern-railway/pge-map-mark-rapido.png",
+          "sha256": "d0e6f321b68130fd2f4c9658df06e1967a7c07fa80933a638148b0998610bbcf"
+        }
+      ],
+      "verification": {
+        "genuineVectorVerified": true,
+        "embeddedImages": 0,
+        "textElements": 0,
+        "externalResources": []
+      }
+    },
+    {
+      "bodyId": "pacific-great-eastern-railway",
+      "id": "pge-map-solid",
+      "variantOf": "pge-map-green-livery",
+      "versionLabel": "White panel",
+      "label": "Pacific Great Eastern — Map mark, white panel",
+      "file": "identity-collected/pacific-great-eastern-railway/pge-map-solid.svg",
+      "format": "svg",
+      "isVector": true,
+      "supplied": true,
+      "reconstruction": true,
+      "publisher": "Pacific Great Eastern Railway",
+      "sourcePage": null,
+      "sourceUrl": null,
+      "sourceLocator": "Supplied green-livery screenshot (151 × 167 px)",
+      "sourceFile": null,
+      "sourceDate": null,
+      "observedDate": "2026-11-12",
+      "evidenceType": "supplied-vector-reconstruction",
+      "notes": "The mark alone on its white folded panel, with no livery ground.",
+      "fidelityNote": "A supplied vector reconstruction; the map and letters are the shared paths. Black and white are neutral.",
+      "sha256": "c95b1243b6f664e9287929eb7ba227f8f0869b6c0e36e5fecc79cc1afe232634",
+      "bytes": 5246,
+      "darkBackground": false,
+      "verification": {
+        "genuineVectorVerified": true,
+        "embeddedImages": 0,
+        "textElements": 0,
+        "externalResources": []
+      }
+    },
+    {
+      "bodyId": "pacific-great-eastern-railway",
+      "id": "pge-map-striped",
+      "variantOf": "pge-map-green-livery",
+      "versionLabel": "Striped",
+      "label": "Pacific Great Eastern — Map mark, striped",
+      "file": "identity-collected/pacific-great-eastern-railway/pge-map-striped.svg",
+      "format": "svg",
+      "isVector": true,
+      "supplied": true,
+      "reconstruction": true,
+      "publisher": "Pacific Great Eastern Railway",
+      "sourcePage": null,
+      "sourceUrl": null,
+      "sourceLocator": null,
+      "sourceFile": null,
+      "sourceDate": null,
+      "observedDate": "2026-11-12",
+      "evidenceType": "supplied-vector-reconstruction",
+      "notes": "The map mark with a striped upper panel and the province and lettering reversed out in white.",
+      "fidelityNote": "A supplied geometric vector reconstruction, sharing its map and letter paths with the solid version.",
+      "sha256": "40b9eb2f22e026dbe9943c7131e11e0b8285b4e1f33fa7b832f86e8ceaf019a4",
+      "bytes": 9553,
+      "darkBackground": false,
+      "verification": {
+        "genuineVectorVerified": true,
+        "embeddedImages": 0,
+        "textElements": 0,
+        "externalResources": []
+      }
+    }
+  ]
+}

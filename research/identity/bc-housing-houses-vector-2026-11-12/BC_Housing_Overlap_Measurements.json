@@ -1,0 +1,321 @@
+{
+  "method": {
+    "source_size_px": [
+      1569,
+      1038
+    ],
+    "coordinate_registration": "identical original coordinates; no extra warp, scale or translation",
+    "source_preprocessing": "grayscale, 0.7 px Gaussian smoothing",
+    "source_thresholds": [
+      135,
+      150,
+      165
+    ],
+    "vector_threshold": 128,
+    "note": "Threshold-dependent diagnostic of shape agreement, not a percentage of visual fidelity or historical accuracy."
+  },
+  "region_boxes": {
+    "illustration": [
+      370,
+      110,
+      1180,
+      665
+    ],
+    "rear_windows": [
+      495,
+      185,
+      705,
+      430
+    ],
+    "fanlights": [
+      700,
+      245,
+      920,
+      320
+    ],
+    "doors": [
+      726,
+      375,
+      927,
+      501
+    ],
+    "people": [
+      480,
+      450,
+      680,
+      588
+    ],
+    "wordmark": [
+      220,
+      740,
+      1330,
+      975
+    ]
+  },
+  "results": {
+    "illustration": {
+      "135": {
+        "v1": {
+          "intersection_over_union": 0.8457,
+          "reference_only_pixels": 13274,
+          "vector_only_pixels": 6359,
+          "mean_boundary_distance_px": 1.472
+        },
+        "v2": {
+          "intersection_over_union": 0.8935,
+          "reference_only_pixels": 7573,
+          "vector_only_pixels": 5933,
+          "mean_boundary_distance_px": 1.058
+        }
+      },
+      "150": {
+        "v1": {
+          "intersection_over_union": 0.842,
+          "reference_only_pixels": 15579,
+          "vector_only_pixels": 4887,
+          "mean_boundary_distance_px": 1.534
+        },
+        "v2": {
+          "intersection_over_union": 0.8927,
+          "reference_only_pixels": 9621,
+          "vector_only_pixels": 4204,
+          "mean_boundary_distance_px": 1.078
+        }
+      },
+      "165": {
+        "v1": {
+          "intersection_over_union": 0.8338,
+          "reference_only_pixels": 18244,
+          "vector_only_pixels": 3729,
+          "mean_boundary_distance_px": 1.659
+        },
+        "v2": {
+          "intersection_over_union": 0.8851,
+          "reference_only_pixels": 12168,
+          "vector_only_pixels": 2928,
+          "mean_boundary_distance_px": 1.176
+        }
+      }
+    },
+    "rear_windows": {
+      "135": {
+        "v1": {
+          "intersection_over_union": 0.6789,
+          "reference_only_pixels": 3508,
+          "vector_only_pixels": 1765,
+          "mean_boundary_distance_px": 1.478
+        },
+        "v2": {
+          "intersection_over_union": 0.809,
+          "reference_only_pixels": 1548,
+          "vector_only_pixels": 1547,
+          "mean_boundary_distance_px": 1.026
+        }
+      },
+      "150": {
+        "v1": {
+          "intersection_over_union": 0.6805,
+          "reference_only_pixels": 3990,
+          "vector_only_pixels": 1411,
+          "mean_boundary_distance_px": 1.534
+        },
+        "v2": {
+          "intersection_over_union": 0.8151,
+          "reference_only_pixels": 1954,
+          "vector_only_pixels": 1117,
+          "mean_boundary_distance_px": 1.039
+        }
+      },
+      "165": {
+        "v1": {
+          "intersection_over_union": 0.6766,
+          "reference_only_pixels": 4562,
+          "vector_only_pixels": 1090,
+          "mean_boundary_distance_px": 1.624
+        },
+        "v2": {
+          "intersection_over_union": 0.8099,
+          "reference_only_pixels": 2495,
+          "vector_only_pixels": 765,
+          "mean_boundary_distance_px": 1.12
+        }
+      }
+    },
+    "fanlights": {
+      "135": {
+        "v1": {
+          "intersection_over_union": 0.7396,
+          "reference_only_pixels": 908,
+          "vector_only_pixels": 271,
+          "mean_boundary_distance_px": 1.239
+        },
+        "v2": {
+          "intersection_over_union": 0.8606,
+          "reference_only_pixels": 248,
+          "vector_only_pixels": 401,
+          "mean_boundary_distance_px": 0.728
+        }
+      },
+      "150": {
+        "v1": {
+          "intersection_over_union": 0.7258,
+          "reference_only_pixels": 1068,
+          "vector_only_pixels": 217,
+          "mean_boundary_distance_px": 1.353
+        },
+        "v2": {
+          "intersection_over_union": 0.8693,
+          "reference_only_pixels": 341,
+          "vector_only_pixels": 280,
+          "mean_boundary_distance_px": 0.71
+        }
+      },
+      "165": {
+        "v1": {
+          "intersection_over_union": 0.7128,
+          "reference_only_pixels": 1231,
+          "vector_only_pixels": 162,
+          "mean_boundary_distance_px": 1.47
+        },
+        "v2": {
+          "intersection_over_union": 0.8649,
+          "reference_only_pixels": 469,
+          "vector_only_pixels": 190,
+          "mean_boundary_distance_px": 0.745
+        }
+      }
+    },
+    "doors": {
+      "135": {
+        "v1": {
+          "intersection_over_union": 0.796,
+          "reference_only_pixels": 1268,
+          "vector_only_pixels": 825,
+          "mean_boundary_distance_px": 1.653
+        },
+        "v2": {
+          "intersection_over_union": 0.8707,
+          "reference_only_pixels": 522,
+          "vector_only_pixels": 801,
+          "mean_boundary_distance_px": 1.024
+        }
+      },
+      "150": {
+        "v1": {
+          "intersection_over_union": 0.7956,
+          "reference_only_pixels": 1465,
+          "vector_only_pixels": 672,
+          "mean_boundary_distance_px": 1.698
+        },
+        "v2": {
+          "intersection_over_union": 0.8771,
+          "reference_only_pixels": 674,
+          "vector_only_pixels": 603,
+          "mean_boundary_distance_px": 0.994
+        }
+      },
+      "165": {
+        "v1": {
+          "intersection_over_union": 0.7912,
+          "reference_only_pixels": 1686,
+          "vector_only_pixels": 543,
+          "mean_boundary_distance_px": 1.79
+        },
+        "v2": {
+          "intersection_over_union": 0.8775,
+          "reference_only_pixels": 858,
+          "vector_only_pixels": 437,
+          "mean_boundary_distance_px": 1.01
+        }
+      }
+    },
+    "people": {
+      "135": {
+        "v1": {
+          "intersection_over_union": 0.8879,
+          "reference_only_pixels": 770,
+          "vector_only_pixels": 683,
+          "mean_boundary_distance_px": 0.982
+        },
+        "v2": {
+          "intersection_over_union": 0.9299,
+          "reference_only_pixels": 617,
+          "vector_only_pixels": 262,
+          "mean_boundary_distance_px": 0.623
+        }
+      },
+      "150": {
+        "v1": {
+          "intersection_over_union": 0.8859,
+          "reference_only_pixels": 956,
+          "vector_only_pixels": 544,
+          "mean_boundary_distance_px": 1.008
+        },
+        "v2": {
+          "intersection_over_union": 0.9227,
+          "reference_only_pixels": 833,
+          "vector_only_pixels": 153,
+          "mean_boundary_distance_px": 0.692
+        }
+      },
+      "165": {
+        "v1": {
+          "intersection_over_union": 0.8822,
+          "reference_only_pixels": 1137,
+          "vector_only_pixels": 433,
+          "mean_boundary_distance_px": 1.071
+        },
+        "v2": {
+          "intersection_over_union": 0.9117,
+          "reference_only_pixels": 1059,
+          "vector_only_pixels": 87,
+          "mean_boundary_distance_px": 0.794
+        }
+      }
+    },
+    "wordmark": {
+      "135": {
+        "v1": {
+          "intersection_over_union": 0.838,
+          "reference_only_pixels": 3228,
+          "vector_only_pixels": 2626,
+          "mean_boundary_distance_px": 0.899
+        },
+        "v2": {
+          "intersection_over_union": 0.9065,
+          "reference_only_pixels": 1153,
+          "vector_only_pixels": 2186,
+          "mean_boundary_distance_px": 0.539
+        }
+      },
+      "150": {
+        "v1": {
+          "intersection_over_union": 0.838,
+          "reference_only_pixels": 4280,
+          "vector_only_pixels": 1744,
+          "mean_boundary_distance_px": 0.927
+        },
+        "v2": {
+          "intersection_over_union": 0.9148,
+          "reference_only_pixels": 2007,
+          "vector_only_pixels": 1106,
+          "mean_boundary_distance_px": 0.501
+        }
+      },
+      "165": {
+        "v1": {
+          "intersection_over_union": 0.8258,
+          "reference_only_pixels": 5581,
+          "vector_only_pixels": 1123,
+          "mean_boundary_distance_px": 1.034
+        },
+        "v2": {
+          "intersection_over_union": 0.8993,
+          "reference_only_pixels": 3317,
+          "vector_only_pixels": 494,
+          "mean_boundary_distance_px": 0.61
+        }
+      }
+    }
+  }
+}

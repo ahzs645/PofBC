@@ -1,0 +1,71 @@
+{
+  "researchDate": "2026-11-12",
+  "source": {
+    "url": "https://www.bcrco.com/FIA_2024.pdf",
+    "sha256": "9834286bad12c1cf8e2492a647ae968b899c08e5eaa60c95ccbee11db2952586",
+    "title": "BC Railway Company, Statement of Financial Information, fiscal year ended March 31, 2024"
+  },
+  "summary": "Two wordmarks from the Company's 2024 Statement of Financial Information, in a supplied package: the cover's, rebuilt in Eurostile Demi outlines fitted to its 600 × 327 JPEG, and the letterhead's, its own Verdana Bold Italic glyph outlines extracted from page 3. Both are distinct from the heavier wordmark on the Company's website. See package-README.md and review/comparison.webp.",
+  "assets": [
+    {
+      "bodyId": "bc-railway-company",
+      "format": "svg",
+      "isVector": true,
+      "supplied": true,
+      "publisher": "British Columbia Railway Company",
+      "sourcePage": "https://www.bcrco.com/FIA_2024.pdf",
+      "sourceUrl": "https://www.bcrco.com/FIA_2024.pdf",
+      "sourceFile": "Statement of Financial Information, fiscal year ended March 31, 2024",
+      "sourceDate": "2024",
+      "observedDate": "2026-11-12",
+      "dateNote": "The report's fiscal year, not an adoption date.",
+      "darkBackground": false,
+      "verification": {
+        "genuineVectorVerified": true,
+        "embeddedImages": 0,
+        "textElements": 0,
+        "externalResources": []
+      },
+      "id": "bcrc-2024-cover-rebuilt",
+      "label": "BC Railway Company — Cover wordmark, 2024 report",
+      "file": "identity-collected/bc-railway-company/bcrc-2024-cover-rebuilt.svg",
+      "reconstruction": true,
+      "sourceLocator": "PDF page 1 (repeated on page 36), a 600 × 327 JPEG",
+      "evidenceType": "supplied-vector-reconstruction",
+      "notes": "The four words stepped down to the right, each initial in red and the rest in purple-blue, in a wide oblique Eurostile — the BCRC acrostic, as the 2024 report's cover sets it.",
+      "fidelityNote": "A supplied reconstruction: genuine Eurostile Demi outlines with one shared widening (about 131%) and slant (about 15.4°), the red initials about 122% of the blue, each letter placed to the cover image (silhouette overlap 0.97). The cover is a JPEG, so the typeface is a match, not a recovery. Red #E63C2B and purple-blue #3A3376 are sampled from it.",
+      "sha256": "a1ff2da285e8a6ef96a74f51a2429f96c307106dff5506308c2ac2c854e2584e",
+      "bytes": 13379
+    },
+    {
+      "bodyId": "bc-railway-company",
+      "format": "svg",
+      "isVector": true,
+      "supplied": false,
+      "publisher": "British Columbia Railway Company",
+      "sourcePage": "https://www.bcrco.com/FIA_2024.pdf",
+      "sourceUrl": "https://www.bcrco.com/FIA_2024.pdf",
+      "sourceFile": "Statement of Financial Information, fiscal year ended March 31, 2024",
+      "sourceDate": "2024",
+      "observedDate": "2026-11-12",
+      "dateNote": "The report's fiscal year, not an adoption date.",
+      "darkBackground": false,
+      "verification": {
+        "genuineVectorVerified": true,
+        "embeddedImages": 0,
+        "textElements": 0,
+        "externalResources": []
+      },
+      "id": "bcrc-2024-letterhead",
+      "label": "BC Railway Company — Letterhead wordmark, 2024 report",
+      "file": "identity-collected/bc-railway-company/bcrc-2024-letterhead.svg",
+      "reconstruction": false,
+      "sourceLocator": "PDF page 3, the management letter's heading",
+      "evidenceType": "native-pdf-glyph-extraction",
+      "notes": "The same stepped acrostic in Verdana Bold Italic, red initials and blue letters, at the head of the management letter. The final C of COMPANY is set larger than the other initials, as printed.",
+      "fidelityNote": "The page's own lettering: the embedded Verdana Bold Italic glyph outlines at their printed sizes (11.04 pt, initials 12.96 pt, the last C 14.04 pt) and positions, converted to paths. Colours are the PDF's own (#FF0000, #0000FF).",
+      "sha256": "fa9eee57e4ad333951f7d236fe14e226a6c135c58fdb254950152e2344253e22",
+      "bytes": 15148
+    }
+  ]
+}

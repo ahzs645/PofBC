@@ -29,8 +29,10 @@ import { useSiteTheme } from '../site/useTheme.js'
 import { BCTS_FOREST, BCTS_TEAL } from './oneOffs.js'
 import { SuppliedMarkView } from './SuppliedMarkView.jsx'
 import { CollectedMarkView } from './CollectedMarkView.jsx'
+import { RailwayHistory, RailwayHistoryLinks } from './RailwayHistory.jsx'
 import { COLLECTION_RESEARCH, nodesOf, researchLabel } from './collectedCollections.js'
-import { onPage, tileArt } from './tileArt.js'
+import { generatorArt, onPage, tileArt } from './tileArt.js'
+import { isSearchShortcut, searchGallery } from './gallerySearch.js'
 
 const PALETTE_OPTIONS = FLAG_PALETTE_ORDER.map((value) => ({
   value, label: FLAG_PALETTE_LABELS[value], title: FLAG_PALETTE_HINTS[value]
@@ -196,20 +198,33 @@ const DATE_SENTENCES = {
   unknown: () => 'Unknown. That is not to say it was never in use.'
 }
 
+/**
+ * Marks redrawn rather than taken from a file. The records say so (provenance, and `reconstruction`
+ * on a collected file), but the page does not: it shows the mark, its dates and its sources.
+ */
+export const REDRAWN = new Set(['third_party_reconstruction', 'reconstructed'])
+const isRedrawn = (identity) => REDRAWN.has(identity?.provenance)
+
 const sentencesOf = (identity) => ({
-  Provenance: PROVENANCE_SENTENCES[identity.provenance],
-  Fidelity: [FIDELITY_SENTENCES[identity.fidelity], identity.fidelityNote].filter(Boolean).join(' '),
+  ...(isRedrawn(identity) ? {} : {
+    Provenance: PROVENANCE_SENTENCES[identity.provenance],
+    Fidelity: [FIDELITY_SENTENCES[identity.fidelity], identity.fidelityNote].filter(Boolean).join(' ')
+  }),
   Dates: [DATE_SENTENCES[identity.applicability.kind](identity.applicability.years), identity.applicability.note]
     .filter(Boolean).join(' '),
   Rights: `${RIGHTS[identity.rights.status]}. ${identity.rights.note}`
 })
 
-/** The short form, for a card: where it came from, what its date rests on, whether it may be shown. */
+/**
+ * The short form, for a card: where it came from, what its date rests on, and whether it may be
+ * shown once that is anything but unresolved. Every mark here is unresolved, so that chip told no
+ * card apart; the mark's own page still says so under "About this mark".
+ */
 const chipsOf = (identity) => [
-  PROVENANCE[identity.provenance],
+  !isRedrawn(identity) && PROVENANCE[identity.provenance],
   APPLICABILITY[identity.applicability.kind],
-  RIGHTS[identity.rights.status]
-]
+  identity.rights.status !== 'unresolved' && RIGHTS[identity.rights.status]
+].filter(Boolean)
 
 /**
  * A card's chips. They sit inside buttons, where a list would be flattened anyway, so the
@@ -276,10 +291,12 @@ const whoOf = (collection, entries) => {
  */
 const AboutCollection = ({ collection }) => {
   const entries = entriesOf(collection)
-  const rows = Object.keys(sentencesOf(entries[0].identity)).map((term) => {
+  const terms = [...new Set(entries.flatMap((entry) => Object.keys(sentencesOf(entry.identity))))]
+  const rows = terms.map((term) => {
     const groups = new Map()
     for (const entry of entries) {
       const sentence = sentencesOf(entry.identity)[term]
+      if (sentence === undefined) continue
       groups.set(sentence, [...(groups.get(sentence) ?? []), entry])
     }
     const detail = groups.size === 1
@@ -311,7 +328,9 @@ const AboutCollection = ({ collection }) => {
  * here has its rights unresolved, so on every card that chip said nothing that told cards apart.
  */
 const collectionChips = (collection) => {
-  const provenances = new Set(entriesOf(collection).map((entry) => PROVENANCE[entry.identity.provenance]))
+  const shown = entriesOf(collection).filter((entry) => !isRedrawn(entry.identity))
+  const provenances = new Set(shown.map((entry) => PROVENANCE[entry.identity.provenance]))
+  if (!provenances.size) return []
   return provenances.size === 1 ? [...provenances] : ['Mixed provenance']
 }
 
@@ -363,7 +382,7 @@ const Detail = ({ entry, onClose }) => {
               Download SVG
             </button>
           </div>
-          {entry.caveat && <p className="gallery__caveat">{entry.caveat}</p>}
+          {entry.caveat && !isRedrawn(entry.identity) && <p className="gallery__caveat">{entry.caveat}</p>}
         </div>
       </div>
     </section>
@@ -413,7 +432,11 @@ const OneOffEntry = ({ entry, onOpen, theme, onOpenGovernment }) => (
       </span>
     </div>
     <p className="gallery__note">{entry.note}</p>
-    <IdentityChips identity={entry.identity} />
+    {/* A collected file's dates are the line above, so its card does not say them twice. */}
+    <Chips
+      labels={chipsOf(entry.identity).filter((label) => entry.kind !== 'collected' || label !== APPLICABILITY[entry.identity.applicability.kind])}
+      title={FIDELITY[entry.identity.fidelity]}
+    />
 
     <button
       type="button"
@@ -428,7 +451,7 @@ const OneOffEntry = ({ entry, onOpen, theme, onOpenGovernment }) => (
       />
       <span className="gallery__label">
         {entry.kind === 'current' ? 'Open in the generator'
-          : entry.kind === 'collected' ? 'View artwork and download the source file'
+          : entry.kind === 'collected' ? 'View and download'
             : 'Open to recolour, or to see it as published'}
       </span>
     </button>
@@ -466,9 +489,10 @@ const Sources = ({ sources }) => sources?.length > 0 && (
   <p className="gallery__sources">
     <span>{sources.length === 1 ? 'Source' : 'Sources'}:</span>{' '}
     {sources.map((source, index) => (
-      <span key={source.url}>
+      <span key={source.url ?? source.title}>
         {index > 0 && '; '}
-        <a href={source.url} target="_blank" rel="noreferrer">{source.title}</a>
+        {/* A printed source not found online is named, with no link. */}
+        {source.url ? <a href={source.url} target="_blank" rel="noreferrer">{source.title}</a> : <cite>{source.title}</cite>}
         {source.locator && <span className="gallery__sources-locator">, {source.locator}</span>}
       </span>
     ))}
@@ -523,19 +547,34 @@ const SeenAt = ({ urls }) => urls?.length > 0 && (
 )
 
 /**
- * An era without marks in the gallery: an empty slot where they would be, as a body on the "not
- * yet in the gallery" shelf has, and — for an identity the generator draws — a way to it there.
+ * An era without marks in the gallery: for an identity the generator draws, that drawing, the mark
+ * alone, and a way to it there; otherwise an empty slot where the marks would be, as a body on the
+ * "not yet in the gallery" shelf has.
  */
-const EmptyEra = ({ era, onOpenInGenerator }) => (
+const EmptyEra = ({ era, theme, onOpenInGenerator }) => {
+  const art = eraStatus(era) === 'generator' ? generatorArt(era.generator, theme) : null
+  return (
   <div className="gallery__era-missing">
-    <div className="gallery__wanted-slot" data-status={eraStatus(era)}>{EMPTY_SLOT[eraStatus(era)]}</div>
+    {art
+      ? (
+        <div
+          className="gallery__art gallery__era-generator"
+          data-ground="page"
+          role="img"
+          aria-label={`${era.label}, as the generator draws it`}
+          // Built by this project's own renderers; every value is escaped where written.
+          dangerouslySetInnerHTML={{ __html: art }}
+        />
+        )
+      : <div className="gallery__wanted-slot" data-status={eraStatus(era)}>{EMPTY_SLOT[eraStatus(era)]}</div>}
     {era.generator && onOpenInGenerator && (
       <button type="button" className="gallery__graph-link" onClick={() => onOpenInGenerator(era.generator)}>
         Open in the generator <span aria-hidden="true">→</span>
       </button>
     )}
   </div>
-)
+  )
+}
 
 /**
  * A picture's link, named for the site it is on and the file it is — two files on one site would
@@ -612,7 +651,7 @@ const EraSection = ({ era, theme, onOpen, openId, onOpenInGenerator }) => {
               : <Tile key={entry.id} entry={entry} theme={theme} said={said} onOpen={() => onOpen(entry.id)} />)}
           </div>
           )
-        : <EmptyEra era={era} onOpenInGenerator={onOpenInGenerator} />}
+        : <EmptyEra era={era} theme={theme} onOpenInGenerator={onOpenInGenerator} />}
     </section>
   )
 }
@@ -755,6 +794,8 @@ const writePlace = (collection, mark) => {
     if (value) url.searchParams.set(key, value)
     else url.searchParams.delete(key)
   }
+  // A section anchor belongs to the page being left, not to a different mark or collection.
+  if (/^#railway-(history|connections|evidence)$/.test(url.hash)) url.hash = ''
   globalThis.history.replaceState(null, '', url)
 }
 
@@ -791,6 +832,63 @@ const hasPage = (collection) => Boolean(collection.eras) || entriesOf(collection
  * @param {(patch: object) => void} [props.onOpenInGenerator]  Loads a patch into the generator and
  *   shows it — how a mark remade in the current identity opens.
  */
+const IS_MAC = /Mac|iPhone|iPad/.test(globalThis.navigator?.platform ?? globalThis.navigator?.userAgent ?? '')
+
+/** The gallery's search box, with its shortcut shown where there is a keyboard to press it on. */
+const GallerySearch = ({ query, onChange, inputRef }) => (
+  <div className="gallery__search" role="search">
+    <input
+      ref={inputRef}
+      type="search"
+      value={query}
+      placeholder="Search logos — BC Hydro, dogwood, 1983…"
+      aria-label="Search the logos"
+      aria-keyshortcuts={IS_MAC ? 'Meta+K' : 'Control+K'}
+      onChange={(event) => onChange(event.target.value)}
+      onKeyDown={(event) => {
+        if (event.key === 'Escape' && query) { event.preventDefault(); onChange('') }
+      }}
+    />
+    {!query && <kbd className="gallery__search-key" aria-hidden="true">{IS_MAC ? '⌘K' : 'Ctrl K'}</kbd>}
+  </div>
+)
+
+/** What a search finds: the collections, then the logos not already within one of them. */
+const SearchResults = ({ query, theme, onChooseCollection, onOpenMark }) => {
+  const { collections, marks } = searchGallery(query)
+  if (!collections.length && !marks.length) {
+    return <p className="gallery__intro gallery__search-none">Nothing found for “{query.trim()}”.</p>
+  }
+  return (
+    <>
+      {collections.length > 0 && (
+        <section className="gallery__shelf" aria-labelledby="search-collections">
+          <h2 id="search-collections" className="gallery__shelf-title">
+            {collections.length === 1 ? '1 collection' : `${collections.length} collections`}
+          </h2>
+          <div className="gallery__collections">
+            {collections.map((entry) => (
+              <CollectionCard key={entry.id} collection={entry} theme={theme} onOpen={() => onChooseCollection(entry.id)} />
+            ))}
+          </div>
+        </section>
+      )}
+      {marks.length > 0 && (
+        <section className="gallery__shelf" aria-labelledby="search-marks">
+          <h2 id="search-marks" className="gallery__shelf-title">
+            {marks.length === 1 ? '1 logo' : `${marks.length} logos`}
+          </h2>
+          <div className="gallery__tiles">
+            {marks.map(({ entry, collection }) => (
+              <Tile key={entry.id} entry={entry} theme={theme} onOpen={() => onOpenMark(collection.id, entry)} />
+            ))}
+          </div>
+        </section>
+      )}
+    </>
+  )
+}
+
 export const GalleryView = ({ onOpenGovernment, onOpenInGenerator }) => {
   const { name: theme } = useSiteTheme()
   const [collectionId, setCollectionId] = useState(readCollection)
@@ -832,6 +930,31 @@ export const GalleryView = ({ onOpenGovernment, onOpenInGenerator }) => {
     else go(collectionId, id)
   }
   const home = () => go(null, null)
+
+  // Search, on the first page. Cmd-K (Ctrl-K elsewhere) reaches it from any page of the gallery.
+  const [query, setQuery] = useState('')
+  const searchInput = useRef(null)
+  const [focusSearch, setFocusSearch] = useState(false)
+  useEffect(() => {
+    const onKey = (event) => {
+      if (!isSearchShortcut(event)) return
+      event.preventDefault()
+      if (collectionId || openId) go(null, null)
+      setFocusSearch(true)
+    }
+    globalThis.addEventListener?.('keydown', onKey)
+    return () => globalThis.removeEventListener?.('keydown', onKey)
+  })
+  useEffect(() => {
+    if (!focusSearch || !searchInput.current) return
+    searchInput.current.focus()
+    searchInput.current.select()
+    setFocusSearch(false)
+  }, [focusSearch, collectionId, openId])
+  const openFound = (id, entry) => {
+    if (entry.kind === 'current' && onOpenInGenerator) onOpenInGenerator({ era: 'current', currentName: entry.text })
+    else go(id, entry.id)
+  }
   const backToCollection = () => go(collectionId, null)
   const crumbs = <Crumbs collection={collection} entry={open} onHome={home} onCollection={backToCollection} />
 
@@ -879,6 +1002,7 @@ export const GalleryView = ({ onOpenGovernment, onOpenInGenerator }) => {
             {markTimeline.eras.map(eraSection)}
           </section>
         )}
+        <RailwayHistory history={collection?.railwayHistory} compact />
         <AboutMark identity={open.identity} />
       </div>
     )
@@ -886,8 +1010,18 @@ export const GalleryView = ({ onOpenGovernment, onOpenInGenerator }) => {
 
   // The first page: the bodies with identities of their own, then the Province's one-offs.
   if (!collection) {
+    const search = <GallerySearch query={query} onChange={setQuery} inputRef={searchInput} />
+    if (query.trim()) {
+      return (
+        <div className="gallery">
+          {search}
+          <SearchResults query={query} theme={theme} onChooseCollection={choose} onOpenMark={openFound} />
+        </div>
+      )
+    }
     return (
       <div className="gallery">
+        {search}
         <section className="gallery__shelf" aria-labelledby="shelf-bodies">
           <h2 id="shelf-bodies" className="gallery__shelf-title">Crown corporations and public bodies</h2>
           <div className="gallery__collections">
@@ -934,6 +1068,7 @@ export const GalleryView = ({ onOpenGovernment, onOpenInGenerator }) => {
         <GraphLink node={collection.graphNode} onOpenGovernment={onOpenGovernment} />
       </div>
       <p className="gallery__intro">{collection.intro}</p>
+      <RailwayHistoryLinks history={collection.railwayHistory} />
 
       {timeline}
       {collection.eras
@@ -945,6 +1080,7 @@ export const GalleryView = ({ onOpenGovernment, onOpenInGenerator }) => {
             ))}
           </div>
           )}
+      <RailwayHistory history={collection.railwayHistory} />
       <AboutCollection collection={collection} />
     </div>
   )

@@ -1,21 +1,40 @@
+import { useState } from 'react'
 import { assetUrl } from './collectedCollections.js'
 import { collectedDisplay } from './tileArt.js'
 import { useSiteTheme } from '../site/useTheme.js'
 
 /** A recovered mark is displayed in its source format; raster files stay raster. */
 export const CollectedMarkView = ({ entry }) => {
-  const { asset } = entry
+  const [version, setVersion] = useState(entry.asset.id)
+  const asset = entry.versions?.find((each) => each.id === version) ?? entry.asset
   const { name: theme } = useSiteTheme()
-  const display = collectedDisplay(asset, theme)
+  // A version chosen by its colour is shown in that colour: one whose page copy would be redrawn
+  // (a white version on the light page) is shown as published, on its own plate.
+  const copy = collectedDisplay(asset, theme)
+  const display = entry.versions && copy?.recoloured ? null : copy
   return (
     <section className="gallery__recovered">
       <header className="gallery__head">
         <div>
           <h2>{entry.label}</h2>
-          <p className="gallery__note">{entry.years}</p>
+          <p className="gallery__note">{asset.sourceDate ? `Seen ${asset.sourceDate}` : entry.years}</p>
         </div>
         <span className="gallery__asset-format">{asset.format.toUpperCase()} · {asset.isVector ? 'Vector artwork' : asset.format === 'svg' ? 'Contains bitmap artwork' : 'Image'}</span>
       </header>
+      {entry.versions && (
+        <div className="segmented" role="group" aria-label="Version">
+          {entry.versions.map((each) => (
+            <button
+              key={each.id}
+              type="button"
+              aria-pressed={each.id === asset.id}
+              onClick={() => setVersion(each.id)}
+            >
+              {each.versionLabel}
+            </button>
+          ))}
+        </div>
+      )}
       {display ? (
         <div className="gallery__recovered-preview gallery__recovered-preview--clean">
           <img src={assetUrl(display.file)} alt={entry.label} data-plate={display.plate || undefined} />
@@ -28,6 +47,9 @@ export const CollectedMarkView = ({ entry }) => {
       <p>{asset.notes}</p>
       <div className="row gallery__asset-downloads">
         <a className="button" href={assetUrl(asset.file)} download>Download {asset.format.toUpperCase()}</a>
+        {(asset.downloads ?? []).map((extra) => (
+          <a key={extra.file} className="button button--ghost" href={assetUrl(extra.file)} download>{extra.label}</a>
+        ))}
         {asset.preview && asset.preview !== asset.file && (
           <a className="button button--ghost" href={assetUrl(asset.preview)} download>Download PNG preview</a>
         )}
@@ -35,7 +57,8 @@ export const CollectedMarkView = ({ entry }) => {
       <dl className="gallery__asset-source">
         <div><dt>Source</dt><dd>{asset.publisher}{asset.sourceFile ? ` · ${asset.sourceFile}` : ''}</dd></div>
         <div><dt>Collected</dt><dd>{asset.observedDate}</dd></div>
-        <div><dt>Artwork</dt><dd>{asset.fidelityNote}</dd></div>
+        {/* How a redrawn file was made stays in its record, not on the page. */}
+        {!asset.reconstruction && <div><dt>Artwork</dt><dd>{asset.fidelityNote}</dd></div>}
         {asset.creator && <div><dt>Credit</dt><dd>{asset.creator}</dd></div>}
         {asset.license && <div><dt>Source licence</dt><dd>{asset.license_url ? <a href={asset.license_url} target="_blank" rel="noreferrer">{asset.license}</a> : asset.license}</dd></div>}
         {asset.previewNote && <div><dt>Preview</dt><dd>{asset.previewNote}</dd></div>}

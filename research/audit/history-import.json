@@ -1,7 +1,7 @@
 {
   "schema": "import-accounting/1",
   "counts": {
-    "accepted": 2499,
+    "accepted": 2500,
     "unresolved_unmapped": 168,
     "intentionally_excluded": 4,
     "conflicting": 1
@@ -22377,11 +22377,14 @@
           "pacific-great-eastern-railway"
         ],
         "responsible": [],
-        "description": "Renamed from the Pacific Great Eastern Railway in 1972 and operated as BC Rail from 1984; its freight operations were leased to CN in 2004, and it continues to hold railway and port lands as a subsidiary of the BC Transportation Financing Authority.",
+        "description": "The continuing statutory company renamed from Pacific Great Eastern in 1972; BC Rail became its public railway name in 1984. CN acquired the BC Rail Ltd. operating subsidiary and BCR Partnership units at closing on 14 July 2004, while the provincial company retained ownership of the railway corridor and infrastructure leased to CN. It became a wholly owned subsidiary of the BC Transportation Financing Authority on 1 April 2010 and continues to hold railway and port assets.",
         "source": "https://search-bcarchives.royalbcmuseum.bc.ca/british-columbia-railway-company-2",
         "otherSources": [
           "https://bcrco.com/about-us/",
-          "https://en.wikipedia.org/wiki/BC_Rail"
+          "https://en.wikipedia.org/wiki/BC_Rail",
+          "https://archive.news.gov.bc.ca/releases/archive/2001-2005/2004tran0051-000631.htm",
+          "https://www2.gov.bc.ca/assets/gov/british-columbians-our-governments/government-finances/public-accounts/2020-21/sup-e/bc-transportation-financing-authority-fs-2020-21.pdf",
+          "https://www2.gov.bc.ca/assets/gov/british-columbians-our-governments/government-finances/public-accounts/2024-25/sup-e/bc-railway-company-fs-2024-25.pdf"
         ]
       }
     },
@@ -22594,13 +22597,45 @@
         "name": "British Columbia Steamship Company (1975) Ltd.",
         "kind": "crown-corporation",
         "established": "1975-05-05",
-        "ended": "1992",
+        "ended": null,
         "becameId": null,
         "predecessorIds": [],
         "responsible": [],
-        "description": "Crown corporation created in 1975 to restore Victoria-Seattle passenger and car service with the Princess Marguerite, bought from Canadian Pacific; dissolved in 1992.",
+        "description": "Crown company incorporated in 1975 to keep the Victoria–Seattle Princess Marguerite service after Canadian Pacific withdrew it; separate from BC Ferries. It added the Vancouver Island Princess, bought from BC Ferry Corporation in 1987, sold its operating assets to B.C. Stena Line in November 1988, and continued as a corporation, renamed Victoria Line Ltd. in 1994.",
         "source": "https://search-bcarchives.royalbcmuseum.bc.ca/british-columbia-british-columbia-steamship-company-1975-ltd",
-        "establishedMeaning": "incorporated under the Canada Corporations Act, as its first-year audited statements record (Public Accounts 1975/76, p. F84); the certificate was not obtained"
+        "establishedMeaning": "incorporated under the Canada Corporations Act, as its first-year audited statements record (Public Accounts 1975/76, p. F84); the certificate was not obtained",
+        "endStatus": "untraced",
+        "endedMeaning": "Its operating assets were sold in November 1988, but the corporation continued and was renamed Victoria Line Ltd. in 1994; its later end is not traced. BC Archives’ authority record gives 1992, which the 1994 records contradict.",
+        "operationalEnd": {
+          "date": "1988-11",
+          "meaning": "operating assets (two vessels, dock facilities and related assets) sold to B.C. Stena Line Ltd. for $6 million",
+          "source": "https://bcombudsperson.ca/wp-content/uploads/2025/08/1990-Annual-Report-of-the-Ombudsman-web.pdf",
+          "locator": "Ombudsman, 1990 annual report, p. 200"
+        },
+        "names": [
+          {
+            "name": "British Columbia Steamship Company (1975) Ltd.",
+            "from": "1975-05-05",
+            "to": "1994",
+            "source": "https://archive.org/download/publicaccountsof00mini_4/publicaccountsof00mini_4.pdf",
+            "locator": "Public Accounts 1975/76, printed F84"
+          },
+          {
+            "name": "Victoria Line Ltd.",
+            "from": "1994",
+            "to": null,
+            "source": "https://lims.leg.bc.ca/hdms/file/Debates/35th3rd/19940505pm-Hansard-v15n1.htm",
+            "locator": "Hansard, 5 May 1994"
+          }
+        ],
+        "attestations": [
+          {
+            "date": "1994-05-05",
+            "source": "https://lims.leg.bc.ca/hdms/file/Debates/35th3rd/19940505pm-Hansard-v15n1.htm",
+            "locator": "Hansard, 5 May 1994: the minister states the company has been renamed Victoria Line Ltd.",
+            "scope": "corporate existence"
+          }
+        ]
       }
     },
     {
@@ -22629,15 +22664,22 @@
         "shortName": "BC Systems",
         "kind": "crown-corporation",
         "established": "1977-09-01",
-        "ended": "1996",
+        "ended": "2000-04-30",
         "becameId": null,
         "predecessorIds": [],
         "responsible": [],
-        "description": "Crown corporation created under the System Act on 1 September 1977 to provide data-processing and telecommunications services to ministries; broken up in 1996.",
+        "description": "Crown corporation established in 1977 under the Systems Act to consolidate and coordinate computing and information-system services across the provincial government. Offered for sale in 1983 but kept, streamlined, with some services contracted out. Its operations passed to the Information Technology Services Division on 31 March 1996, and it was legally dissolved on 30 April 2000.",
         "source": "https://search-bcarchives.royalbcmuseum.bc.ca/british-columbia-systems-corporation",
         "otherSources": [
           "https://en.wikipedia.org/wiki/BC_Systems_Corporation"
-        ]
+        ],
+        "endedMeaning": "dissolved when the dissolution provisions of the Budget Measures Implementation Act, 1998 came into force, its remaining assets and liabilities passing to the Province; it had stopped operating on 31 March 1996",
+        "operationalEnd": {
+          "date": "1996-03-31",
+          "meaning": "employees and operating business, all but the general manager, transferred to the Information Technology Services Division of the Information, Science and Technology Agency",
+          "source": "https://search-bcarchives.royalbcmuseum.bc.ca/british-columbia-systems-corporation",
+          "locator": "as the corporation’s final financial statements record (from a supplied research summary)"
+        }
       }
     },
     {
@@ -27975,6 +28017,27 @@
         "otherSources": [
           "https://www.bclaws.gov.bc.ca/civix/document/id/mo/hmo/m0191_1997",
           "https://www.bclaws.gov.bc.ca/civix/document/id/lc/regulationbulletin/1999cumulati"
+        ]
+      }
+    },
+    {
+      "origin": "bodies.json#justice-institute",
+      "disposition": "accepted",
+      "input": {
+        "id": "justice-institute",
+        "name": "Justice Institute of British Columbia",
+        "shortName": "JIBC",
+        "kind": "agency",
+        "established": "1978-04",
+        "ended": null,
+        "becameId": null,
+        "predecessorIds": [],
+        "responsible": [],
+        "description": "Public post-secondary institute with a provincial mandate to educate and train public-safety professionals — police, corrections, sheriffs, paramedics, firefighters and emergency managers. Established in April 1978 by order in council under the College and Institute Act, a joint undertaking of the Ministries of Education and Attorney General.",
+        "establishedMeaning": "by order in council under the College and Institute Act, as the Institute’s own reports give it; the order was not obtained",
+        "source": "https://blueline.ca/justice-institute-of-british-columbia-celebrates-40-years-5465",
+        "otherSources": [
+          "https://en.wikipedia.org/wiki/Justice_Institute_of_British_Columbia"
         ]
       }
     },
@@ -51226,7 +51289,15 @@
         "official_url": "https://www2.gov.bc.ca/gov/content/employment-business/business/managing-a-business/running-a-business/bc-online",
         "source_today": "https://www.bcbudget.gov.bc.ca/2026/pdf/2026_Estimates.pdf",
         "description": "Fee-based online service giving professional users access to provincial registry and other government data.",
-        "established": null,
+        "established": {
+          "date": "1989-07",
+          "precision": "month",
+          "evidence": "records_schedule",
+          "source": "https://www2.gov.bc.ca/assets/gov/british-columbians-our-governments/services-policies-for-government/information-management-technology/records-management/orcs/bc-online.pdf",
+          "locator": "BC OnLine operational records classification system (ORCS), administrative history: BC OnLine created in July 1989; the Partnership Office's inception is dated 1988",
+          "checked": "2026-11-12",
+          "meaning": "created, as the government's own records schedule for the service gives it"
+        },
         "ended": null,
         "first_observed": {
           "date": "2002",
@@ -51351,7 +51422,21 @@
           "scope": "Six Estimates checkpoints, selected name-bearing passages per ministry",
           "by": "ChatGPT (six-checkpoint historical research, release 1.0)",
           "full_history_complete": false
-        }
+        },
+        "decisions": [
+          {
+            "id": "bc-online-established-1989-07",
+            "field": "established",
+            "reason": "The records schedule dates the service's creation; the review had only a first sighting in the 2002 Estimates, which stays as an observation. A contemporary BC Library Association fact sheet names BC Systems Corporation as its manager.",
+            "setAside": [
+              {
+                "date": "2002",
+                "why": "The earliest Estimates checkpoint read, an observation of the name, not a founding."
+              }
+            ],
+            "decided": "2026-11-12"
+          }
+        ]
       }
     },
     {

@@ -195,6 +195,50 @@ const ONE_OFF_IDENTITY = {
     applicability: DATED_BY_TIMELINE('first_observation', 'by 2025',
       'Its file on the lab’s page is first captured in April 2025, after the lab took the name.')
   },
+  'bc-bid': {
+    provenance: 'reconstructed',
+    fidelity: 'partially compared',
+    fidelityNote: 'Put together from the gallery’s Best Place on Earth mark (without its tagline) and letters of the ' +
+      'Garamond the Province published (WelcomeBC’s B and C, Environmental Lab BC’s i, BC Wildfire Service’s d). ' +
+      'Placing is measured off the published 150 × 52 image, itself cropped at its edges, and the result laid over it.',
+    applicability: {
+      kind: 'first_observation',
+      years: 'by 2026',
+      note: 'Seen as the BC Bid portal’s header image in November 2026; when it was adopted is not established.'
+    },
+    rights: PROVINCE_RIGHTS
+  },
+  'bc-online': {
+    provenance: 'reconstructed',
+    fidelity: 'partially compared',
+    fidelityNote: 'Put together from the gallery’s Best Place on Earth mark, rearranged horizontally, and letters of ' +
+      'the Garamond the Province published (WelcomeBC’s “BC”, Environmental Lab BC’s L, n, i and e, and the ' +
+      'mark’s own O, enlarged). Placing and spacing are measured off the published 372 × 49 image and the result ' +
+      'laid over it; the name is scaled as a whole to the logo’s width.',
+    applicability: {
+      kind: 'first_observation',
+      years: 'by 2026',
+      note: 'The logo was supplied in November 2026 as the service’s web artwork. BC OnLine itself dates from July ' +
+        '1989; when this logo was adopted is not established.'
+    },
+    rights: PROVINCE_RIGHTS
+  },
+  'coroners-service': {
+    provenance: 'reconstructed',
+    fidelity: 'partially compared',
+    fidelityNote: 'Put together from the gallery’s Best Place on Earth mark (without its tagline) and letters of ' +
+      'the same Garamond the Province published: BC Wildfire Service’s “Service” and C, and Environmental ' +
+      'Reporting BC’s and BC Stats’ lowercase letters, scaled to one x-height. Its placing and spacing are ' +
+      'measured off the 1241 × 385 image the Service’s reports embed, and the result was laid over that image.',
+    applicability: {
+      kind: 'first_observation',
+      years: '2012–2026',
+      note: 'Seen on the cover of the Service’s 2012–2014 strategic plan (https://oag.bc.ca/app/uploads/sites/963/2024/08/OAGBC-2012-10a-bccs-strategic-plan.pdf) ' +
+        'and on a report posted 24 April 2026 (https://www2.gov.bc.ca/assets/gov/birth-adoption-death-marriage-and-divorce/deaths/coroners-service/statistical/deaths_incarceratedpeople_corrections_report_2015-2025.pdf). ' +
+        'No adoption record is cited.'
+    },
+    rights: PROVINCE_RIGHTS
+  },
   // Remade, not lifted: the program's own marks have not been obtained, so the card is the published
   // BC mark with the name set beside it.
   'prepared-bc': {
@@ -641,23 +685,9 @@ const WCB_ENTRIES = {
       note: 'The province, the sheltering hand and the worker, without the name.'
     })
   ],
+  // The black-and-orange wordmark is the 2004 and 2024 reports' own vectors (withSpecimens): the
+  // reconstruction from a 210-pixel picture that stood in for them is superseded.
   'worksafebc-orange': [
-    supplied({
-      ...RECONSTRUCTED('Letters and blocks drawn by hand from a supplied picture 210 pixels wide, and checked by ' +
-        'eye against a logo on an official WorkSafeBC service. The orange, #ED8B00, is a screen approximation, ' +
-        'not a brand value.'),
-      applicability: DATED_BY_TIMELINE('first_observation', 'by 2026', 'On an official WorkSafeBC service in ' +
-        'September 2026.'),
-      rights: WCB_RIGHTS
-    })({
-      id: 'worksafebc',
-      label: 'WorkSafeBC',
-      // "Work" and "BC" are white on the blocks: on a dark page the black block goes white, so they
-      // take the card's colour.
-      onDark: { swap: ['#ffffff'] },
-      years: 'by 2026',
-      note: 'The operating name in black and orange blocks.'
-    })
   ]
 }
 
@@ -766,6 +796,9 @@ const GRAPH_NODES = {
   'bc-stats': 'sub-bc-stats',
   'bc-wildfire-service': 'sub-bc-wildfire-service',
   'bc-wildfire-service-one-line': 'sub-bc-wildfire-service',
+  'coroners-service': 'sub-bc-coroners-service',
+  'bc-online': 'sub-bc-online',
+  'bc-bid': 'sub-bc-bid',
   'public-service': 'bc-public-service-agency'
 }
 
@@ -825,7 +858,7 @@ export const GALLERY_COLLECTIONS = [
         years: '1961–1990',
         label: 'The Rimmer signature',
         note: 'Designed by Jim Rimmer and launched in 1961: a ringed H of two four-pointed stars, green ' +
-          'over blue, beside “B.C.Hydro” in a serif. Reconstructed from five pages of its identity ' +
+          'over blue, beside “B.C.Hydro” in a serif, drawn from five pages of its identity ' +
           'manual — four signatures, and the rules for signs, backgrounds and vehicles, checked as you ' +
           'go. The typeface was never recovered; the lettering is set in a close substitute.',
         identity: {
@@ -952,7 +985,7 @@ export const GALLERY_COLLECTIONS = [
     intro: 'The British Columbia Lottery Corporation’s marks: the sun and waves beside its full name, then ' +
       'from August 2008 its initials in lowercase with three dots of colour, which have since changed ' +
       'from red, orange and green to purple, coral and yellow. Original vectors from the 2009 service plan ' +
-      'update and 2010/11 annual report sit beside the supplied artwork and the older reconstruction.',
+      'update and 2010/11 annual report sit beside the supplied artwork.',
     eras: withMarks(COLLECTION_ERAS.bclc, withCollected(BCLC_ENTRIES, {
       'bclc-2008': ['bclc']
     }))
@@ -974,8 +1007,7 @@ export const GALLERY_COLLECTIONS = [
       'System under that name’s wordmark, until 1964, when its authority was renamed. Then its two symbols: ' +
       'the dogwood, first an outlined flower on a waving flag and later redrawn in geometric petals beside a ' +
       'squared wordmark, and the wave, introduced on 2 April 2003 with the company that replaced the Crown ' +
-      'corporation. The wordmarks and dogwoods are reconstructions; the wave is supplied paths, shown as they came. ' +
-      'Beside the reconstructions are newspaper specimens as found: the Toll Authority ferry system’s emblem in ' +
+      'corporation. Beside them are newspaper specimens as found: the Toll Authority ferry system’s emblem in ' +
       '1960, and the British Columbia Ferry Authority’s signature and dogwood flag in 1964.',
     eras: withMarks(COLLECTION_ERAS['bc-ferries'], withCollected(BCF_ENTRIES, {
       'bcf-toll-authority': ['bc-toll-highways-and-bridges-authority'],
@@ -991,9 +1023,9 @@ export const GALLERY_COLLECTIONS = [
     graphNode: 'workers-compensation-board',
     cover: 'vector-worksafebc-2024-colour-source-vector',
     intro: 'The Workers’ Compensation Board’s marks: a worker-protection emblem introduced in 1968, still ' +
-      'sought; the province and worker from 1983, reconstructed here; a distressed WorkSafe wordmark in ' +
-      'the 2003 annual report; and black-and-orange WorkSafeBC in the 2004 and 2024 reports. The report ' +
-      'specimens retain their original vectors alongside the existing reconstructions. Report years do ' +
+      'sought; the province and worker from 1983; a distressed WorkSafe wordmark in ' +
+      'the 2003 annual report; and black-and-orange WorkSafeBC in the 2004 and 2024 reports, as their ' +
+      'original vectors. Report years do ' +
       'not establish logo introductions. WorkSafeBC became the operating name in 2005. What the board used ' +
       'from its founding in 1917 until 1968 is not known.',
     eras: withMarks(COLLECTION_ERAS.worksafebc, withSpecimens(WCB_ENTRIES, 'worksafebc'))
@@ -1045,7 +1077,15 @@ export const GALLERY_COLLECTIONS = [
     intro: 'Names set beside the BC mark, each drawn once for one body, program or campaign, following ' +
       'no pattern that generalises — so they sit here rather than in the generator, which is built on ' +
       'patterns. Open one to recolour it.',
-    entries: ONE_OFFS.filter((entry) => !PARKS_ONE_OFFS.includes(entry.id)).map(provincial)
+    entries: [
+      ...ONE_OFFS.filter((entry) => !PARKS_ONE_OFFS.includes(entry.id)).map(provincial),
+      // Before the crest: a department's own mark, on the BC mark's timeline.
+      ...specimenEntriesOf('travel-industry', 'bc-mark'),
+      // A service wordmark in the BC mark's Garamond, held as published.
+      ...specimenEntriesOf('bceid'),
+      // A service on the BC mark, as its website serves it.
+      ...specimenEntriesOf('healthlink-bc')
+    ]
   }
 ]
 
@@ -1054,7 +1094,65 @@ export const GALLERY_COLLECTIONS = [
 GALLERY_COLLECTIONS.push(...COLLECTED_COLLECTIONS.filter((candidate) =>
   !GALLERY_COLLECTIONS.some((held) => nodesOf(held).includes(candidate.graphNode))))
 // WorkSafeBC's specimens are folded into its collection above; the one-off programs keep theirs.
-GALLERY_COLLECTIONS.push(...SPECIMEN_COLLECTIONS.filter((collection) => collection.id !== 'specimens-worksafebc'))
+// The Department of Travel Industry's is folded into the BC mark collection.
+GALLERY_COLLECTIONS.push(...SPECIMEN_COLLECTIONS.filter((collection) => !['specimens-worksafebc', 'specimens-travel-industry', 'specimens-justice-institute', 'specimens-auditor-general', 'specimens-sub-bc-online', 'specimens-bceid', 'specimens-shared-services-bc', 'specimens-sub-bc-cancer', 'specimens-healthlink-bc'].includes(collection.id)))
+
+// Public bodies outside the Crown corporations and health authorities the shelf collects for — a
+// post-secondary institute and an officer of the Legislature — whose collections are placed there by hand.
+const PLACED = {
+  'justice-institute': {
+    label: 'JIBC',
+    body: 'Current public post-secondary institute',
+    years: '1978–present',
+    intro: 'The Justice Institute of British Columbia, established in 1978 to train police, corrections, sheriffs, ' +
+      'paramedics, firefighters and emergency managers. Its earlier monogram is also the centre of its patches.'
+  },
+  'sub-bc-online': {
+    label: 'BC OnLine',
+    body: 'The Province’s online registry access service',
+    years: '1989–present',
+    intro: 'BC OnLine, created in July 1989 and run at first by BC Systems, gives professional users online access to ' +
+      'land titles, personal property, company and other registries. Its earlier logo — a hand reaching through a ' +
+      'screen — is here; its later logo on the BC mark is under “On the BC mark”.'
+  },
+  'shared-services-bc': {
+    graphNode: null,
+    label: 'Shared Services BC',
+    body: 'The government’s shared-services organization, as Solutions BC and Shared Services BC',
+    years: 'from 2003',
+    intro: 'Solutions BC, formed on 1 April 2003, gathered the government’s common IT, payroll, accounting and ' +
+      'procurement services — carrying on, among them, BC Systems’ central IT role. It was soon Shared Services BC.'
+  },
+  'sub-bc-cancer': {
+    label: 'BC Cancer',
+    body: 'Agency of the Provincial Health Services Authority',
+    years: '1974–present',
+    intro: 'The BC Cancer Agency’s circular emblem and logo, seen from 2000 to 2015, and the stacked BC / CAN / CER of ' +
+      'its identity as BC Cancer since November 2017 — for BC Cancer, its Research Centre and Institute, and the BC Cancer ' +
+      'Foundation, its fundraising charity, which shares the identity and has a newer logo of its own.'
+  },
+  'auditor-general': {
+    label: 'Auditor General',
+    body: 'Current officer of the Legislature',
+    years: '1977–present',
+    intro: 'The Office of the Auditor General of British Columbia, which audits the government’s accounts and ' +
+      'programs and reports to the Legislative Assembly.'
+  }
+}
+for (const [node, place] of Object.entries(PLACED)) {
+  const held = SPECIMEN_COLLECTIONS.find((collection) => collection.id === `specimens-${node}`)
+  if (!held) continue
+  GALLERY_COLLECTIONS.push({
+    ...held,
+    ...place,
+    id: `collected-${node}`,
+    shelf: 'bodies',
+    graphNode: place.graphNode === undefined ? node : place.graphNode,
+    cover: held.entries[0]?.id,
+    // A body's files, not a program's: they sit on no timeline.
+    entries: held.entries.map(({ timeline, ...entry }) => ({ ...entry, owner: node }))
+  })
+}
 
 /** The collection holding a body's logos — its own, or one it carried on as under a later name. */
 export const collectionOfNode = (node) => GALLERY_COLLECTIONS.find((collection) => nodesOf(collection).includes(node))

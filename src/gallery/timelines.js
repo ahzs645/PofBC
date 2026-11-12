@@ -59,6 +59,26 @@ export const TIMELINES = {
     label: 'The BC mark',
     eras: [
       {
+        id: 'bc-mark-department-marks',
+        status: 'held',
+        marks: ['bc-travel-industry-ca-1970'],
+        years: 'about 1970',
+        label: 'Before the crest: department marks',
+        note: 'Before a common identity, departments published under marks of their own. The Department of ' +
+          'Travel Industry’s set BRITISH COLUMBIA and two dogwood blossoms inside a green outline of the ' +
+          'province, with the department’s name beneath them.',
+        applicability: {
+          kind: 'dated_specimen',
+          years: 'about 1970',
+          note: 'Seen in the Department’s book “This is British Columbia”, which is undated and catalogued as ' +
+            'about 1970. The Department of Travel Industry existed from 1967 to 1975; how long the mark was ' +
+            'used, and whether other departments had marks like it, is not established.'
+        },
+        sources: [
+          { title: '“This is British Columbia”, published by the Department of Travel Industry of the Province of British Columbia, undated [about 1970]', print: true }
+        ]
+      },
+      {
         id: 'bc-mark-flag',
         status: 'generator',
         years: 'about 1983–2005',
@@ -1210,8 +1230,8 @@ export const COLLECTION_ERAS = {
       years: '2004 and 2024 annual reports',
       label: 'WorkSafeBC, in black and orange',
       note: '“Work” in white on black, with “Safe” in black and “BC” in white on orange. The 2004 annual ' +
-        'report carries “Working to make a difference”; the 2024 report has no tagline. These original ' +
-        'vectors sit beside the existing reconstruction. The board took WorkSafeBC as its everyday ' +
+        'report carries “Working to make a difference”; the 2024 report has no tagline. Both are the ' +
+        'reports’ original vectors. The board took WorkSafeBC as its everyday ' +
         'name in 2005 and kept its legal name; the wordmark is also seen on its official service in 2026.',
       applicability: {
         kind: 'dated_specimen',
@@ -1240,7 +1260,7 @@ export const COLLECTION_ERAS = {
       label: 'The Urban Transit Authority',
       note: 'BC Transit before it took that name: the Urban Transit Authority of British Columbia, whose ' +
         'italic UTA lettering and double-arrow device appear in newspaper advertisements of 1979 and 1980. ' +
-        'These are the specimens collected as found, and a later reconstruction of the same identity.',
+        'These are the specimens collected as found, and a later drawing of the same identity.',
       applicability: {
         kind: 'dated_specimen',
         years: '1979–1980',

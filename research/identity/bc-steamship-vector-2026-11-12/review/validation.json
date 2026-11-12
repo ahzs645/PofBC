@@ -1,0 +1,158 @@
+{
+  "scope": "Finalized full round logo against the latest supplied1254px reference; earlier token-based separate assets retain their earlier construction.",
+  "reference_to_final": {
+    "scale": 1.1627780209836296,
+    "source_center": [
+      620.5355002322681,
+      621.8197600642902
+    ],
+    "target_center": [
+      750,
+      750
+    ]
+  },
+  "method": "Whole artwork is compared under one ring-based uniform registration. Common text includes British Columbia Steamship Company (1975) through the complete closing parenthesis. Both Ltd. endings are excluded to avoid the source text error. Binary alpha threshold0.5.",
+  "common_text_before": {
+    "reference_ink_pixels": 80870,
+    "current_ink_pixels": 66078,
+    "intersection_pixels": 28114,
+    "union_pixels": 118834,
+    "intersection_over_union": 0.23658212296144202,
+    "dice": 0.38263875656694885,
+    "reference_ink_covered": 0.3476443675034005,
+    "current_ink_in_reference": 0.42546687248403403
+  },
+  "common_text_after": {
+    "reference_ink_pixels": 80870,
+    "vector_ink_pixels": 78342,
+    "intersection": 74879,
+    "union": 84333,
+    "iou": 0.8878967901058897,
+    "dice": 0.9406200537647916
+  },
+  "all_artwork_including_source_extra_characters": {
+    "reference_ink_pixels": 534708,
+    "vector_ink_pixels": 527052,
+    "intersection": 498429,
+    "union": 563331,
+    "iou": 0.8847888719065701,
+    "dice": 0.938873191681736
+  },
+  "geometry": {
+    "registration": {
+      "cx": 620.5355002322681,
+      "cy": 621.8197600642902,
+      "outer_radius": 591.6864505385126,
+      "reference_to_final_scale": 1.1627780209836296,
+      "final_center": [
+        750,
+        750
+      ]
+    },
+    "metrics": {
+      "all_geometry": {
+        "reference_pixels": 443906,
+        "model_pixels": 442487,
+        "intersection": 417590,
+        "union": 468803,
+        "iou": 0.8907579516342685,
+        "dice": 0.942223144812741,
+        "symmetric_boundary_mean_px": 2.2641074113545767,
+        "boundary_p95_px": 6.0
+      },
+      "internal_emblem": {
+        "reference_pixels": 297367,
+        "model_pixels": 296016,
+        "intersection": 289463,
+        "union": 303920,
+        "iou": 0.9524315609370887,
+        "dice": 0.9756363090954746,
+        "symmetric_boundary_mean_px": 1.451345746541642,
+        "boundary_p95_px": 5.0
+      },
+      "emblem_ring": {
+        "reference_pixels": 55746,
+        "model_pixels": 55711,
+        "intersection": 48248,
+        "union": 63209,
+        "iou": 0.7633090224493347,
+        "dice": 0.8657688615340445,
+        "symmetric_boundary_mean_px": 2.9419509131486836,
+        "boundary_p95_px": 7.615773105863909
+      },
+      "outer_border": {
+        "reference_pixels": 89468,
+        "model_pixels": 89436,
+        "intersection": 78599,
+        "union": 100305,
+        "iou": 0.7836000199391855,
+        "dice": 0.8786723605956267,
+        "symmetric_boundary_mean_px": 2.889253076380997,
+        "boundary_p95_px": 6.4031242374328485
+      },
+      "bottom_dot": {
+        "reference_pixels": 1325,
+        "model_pixels": 1324,
+        "intersection": 1280,
+        "union": 1369,
+        "iou": 0.9349890430971513,
+        "dice": 0.96640241600604,
+        "symmetric_boundary_mean_px": 0.7220500745524979,
+        "boundary_p95_px": 1.4142135623730951
+      }
+    },
+    "svg_validation": {
+      "path_count": 13,
+      "image_count": 0,
+      "text_count": 0,
+      "mask_count": 0,
+      "filter_count": 0,
+      "path_data_total_characters": 1704,
+      "geometry_model": "Two exact concentric rings; one T/bar; three mirrored pairs of fan facets; 3+2 shared analytic elliptical lobes; one circular segment; one circular separator."
+    },
+    "caution": "Source circles are imperfect/oval and small source asymmetries are intentionally normalized; metrics are comparison diagnostics, not historical-authenticity confidence."
+  },
+  "file_checks": {
+    "bc-steamship-round-logo.svg": {
+      "paths": 54,
+      "embedded_images": 0,
+      "live_text": 0,
+      "masks_or_filters": 0,
+      "unique_ids": true,
+      "outlined_visible_text": "BritishColumbiaSteamshipCompany(1975)Ltd.",
+      "has_external_href": false
+    },
+    "bc-steamship-round-logo-white.svg": {
+      "paths": 54,
+      "embedded_images": 0,
+      "live_text": 0,
+      "masks_or_filters": 0,
+      "unique_ids": true,
+      "outlined_visible_text": "BritishColumbiaSteamshipCompany(1975)Ltd.",
+      "has_external_href": false
+    },
+    "bc-steamship-round-logo.pdf": {
+      "pages": 1,
+      "embedded_images": 0,
+      "fonts": 0,
+      "drawing_groups": 54
+    },
+    "bc-steamship-round-logo-3200.png": {
+      "dimensions": [
+        3200,
+        3200
+      ],
+      "mode": "RGBA",
+      "alpha_extrema": [
+        0,
+        255
+      ]
+    }
+  },
+  "svg_rebuild_identical": true,
+  "limitations": [
+    "The source rings are slightly elliptical; final rings are exact concentric circles.",
+    "This is a modern vector reconstruction, not a recovered original corporate master.",
+    "Overlap measures agreement with the supplied image; it is not a font-authenticity or historical accuracy percentage."
+  ]
+}

@@ -2,41 +2,93 @@
 // A date on a report is a sighting, never an inferred logo adoption date.
 import { COLLECTED_BODIES, COLLECTED_SPECIMENS } from './collectedData.js'
 import { COLLECTED_DISPLAY } from './collectedDisplay.js'
+import { RAILWAY_HISTORY } from './railwayHistoryData.js'
 
 /**
  * The file a body's card shows: one with a display copy that keeps its own colours on the light
  * page, else any with a display copy, else the first file. A display copy is drawn for the page
  * in both themes, where a raster file still sits on a plate of its own.
  */
-const coverOf = (assets) =>
-  (assets.find((asset) => COLLECTED_DISPLAY[asset.id] && !COLLECTED_DISPLAY[asset.id].light.recoloured) ??
+const coverOf = (all) => {
+  const assets = all.filter((asset) => !asset.variantOf)
+  return (assets.find((asset) => COLLECTED_DISPLAY[asset.id] && !COLLECTED_DISPLAY[asset.id].light.recoloured) ??
     assets.find((asset) => COLLECTED_DISPLAY[asset.id]) ?? assets[0])?.id
+}
 
 export const assetUrl = (path, base = import.meta.env?.BASE_URL ?? '/') =>
   `${base.replace(/\/?$/, '/')}${path.replace(/^\//, '')}`
 
 /**
+ * When a design's files were seen: one or two sightings as given, more as the years they span. A
+ * retrieval date is not a sighting of the logo.
+ */
+const yearOf = (date) => Number(String(date).match(/\d{4}/)?.[0])
+
+/** A date as a card can show it: a short one as given; a sentence about one, as the year it names. */
+const shortDate = (date) => {
+  if (!date || String(date).length <= 24) return date
+  return yearOf(date) ? `about ${yearOf(date)}` : null
+}
+
+/** The years a date covers: a fiscal year such as 1982/83 covers both. */
+const yearsOf = (date) => {
+  const fiscal = String(date).match(/(\d{4})\/(\d{2})\b/)
+  return fiscal ? [Number(fiscal[1]), Number(fiscal[1].slice(0, 2) + fiscal[2])] : [yearOf(date)]
+}
+
+const seenDates = (versions) => {
+  const all = [...new Set(versions.flatMap((each) => [each.sourceDate, ...(each.alsoSeen ?? []).map((seen) => seen.date)]).map(shortDate).filter(Boolean))]
+  // A bare year another date already covers says nothing more (1982/83 and 1983).
+  const dates = all.filter((date) => !/^\d{4}$/.test(date) || !all.some((other) => other !== date && yearsOf(other).includes(Number(date))))
+    .sort((a, b) => yearOf(a) - yearOf(b))
+  if (dates.length < 3 || !dates.every(yearOf)) return dates.join(' and ')
+  const [first, last] = [yearOf(dates[0]), yearOf(dates.at(-1))]
+  return first === last ? String(first) : `${first}–${last}`
+}
+
+/** A note's first sentence, for a card: the rest is on the mark's own page. */
+const firstSentence = (text = '') => {
+  const end = String(text).search(/[.!?](?=\s+[A-Z“"(])/)
+  return end < 0 ? text : String(text).slice(0, end + 1)
+}
+
+/** A body's files as one entry per design, each with its other colourways as versions, oldest first. */
+const designsOf = (assets) => assets.filter((asset) => !asset.variantOf).map((asset) => {
+  const versions = [asset, ...assets.filter((each) => each.variantOf === asset.id)]
+  return { asset, versions }
+}).map((design, order) => ({ ...design, order, year: Math.min(...design.versions.flatMap((each) => [each.sourceDate, ...(each.alsoSeen ?? []).map((seen) => seen.date)]).map(yearOf).filter(Boolean)) }))
+  // Undated designs keep their place after the dated ones.
+  .sort((a, b) => (Number.isFinite(a.year) ? a.year : 9999) - (Number.isFinite(b.year) ? b.year : 9999) || a.order - b.order)
+
+/**
  * A collected file as a gallery entry; `timeline` places a program's specimen on its timeline, and
  * `owner` is the body it was collected for, kept when its collection holds a body's successors too.
  */
-const collectedEntry = (asset, timeline, owner) => ({
+const collectedEntry = (asset, timeline, owner, versions = [asset]) => ({
   id: asset.id,
   kind: 'collected',
   ...(timeline ? { timeline } : {}),
   ...(owner ? { owner } : {}),
-  label: asset.label,
-  note: asset.notes,
-  years: asset.sourceDate ? `Seen ${asset.sourceDate}` : 'Logo dates unestablished',
+  label: versions.length > 1 ? asset.publisher : asset.label,
+  // A card says what the mark is in a sentence; its full account, versions and sources are on its page.
+  note: firstSentence(asset.notes),
+  // A publication reproducing historical artwork is dated as such, beside the use it records.
+  years: asset.sourceReproduction && asset.historicalDateLabel && asset.sourceDate
+    ? `${asset.historicalDateLabel} · reproduced ${asset.sourceDate}`
+    : seenDates(versions) ? `Seen ${seenDates(versions)}` : 'Logo dates unestablished',
   asset,
+  ...(versions.length > 1 ? { versions } : {}),
   identity: {
     provenance: asset.reconstruction ? 'third_party_reconstruction' : asset.supplied ? 'original_supplied' : asset.isVector ? 'published_vector' : 'published_raster',
     fidelity: 'source compared',
     fidelityNote: asset.fidelityNote,
     applicability: {
-      kind: asset.sourceDate ? 'dated_specimen' : 'unknown',
-      years: asset.sourceDate || 'undated',
+      kind: seenDates(versions) ? 'dated_specimen' : 'unknown',
+      years: seenDates(versions) || 'undated',
       note: asset.sourceDate
-        ? 'This is the date of the cited specimen, not a verified first use or adoption date. ' + (asset.dateNote || '')
+        ? (asset.sourceReproduction
+            ? 'This dates the publication reproducing the historical artwork. The historical use is described separately; the reproduction date does not date the design’s adoption. '
+            : 'This is the date of the cited specimen, not a verified first use or adoption date. ') + (asset.dateNote || '')
         : `Collected on ${asset.observedDate}. A retrieval date does not establish when the design was adopted.`,
     },
     rights: {
@@ -50,11 +102,12 @@ const BODIES = new Map(COLLECTED_BODIES.map((body) => [body.id, body]))
 const kindOf = (body) => body.kind === 'health-authority' ? 'health organization' : 'Crown corporation'
 
 /** A body's collected files as gallery entries. */
-export const collectedEntriesOf = (bodyId) => (BODIES.get(bodyId)?.assets ?? []).map((asset) => collectedEntry(asset, undefined, bodyId))
+export const collectedEntriesOf = (bodyId) => designsOf(BODIES.get(bodyId)?.assets ?? [])
+  .map(({ asset, versions }) => collectedEntry(asset, undefined, bodyId, versions))
 
 /** Published specimens folded into a researched collection rather than a one-off timeline. */
-export const specimenEntriesOf = (program) => (COLLECTED_SPECIMENS.find((each) => each.program === program)?.assets ?? [])
-  .map((asset) => collectedEntry(asset))
+export const specimenEntriesOf = (program, timeline) => designsOf(COLLECTED_SPECIMENS.find((each) => each.program === program)?.assets ?? [])
+  .map(({ asset, versions }) => collectedEntry(asset, timeline, undefined, versions))
 
 const collectionOf = (body) => ({
   id: `collected-${body.id}`,
@@ -64,8 +117,9 @@ const collectionOf = (body) => ({
   label: body.shortName || body.name,
   body: `${body.current ? 'Current' : 'Former'} ${kindOf(body)}`,
   years: `${body.from ?? '?'}–${body.current ? 'present' : body.to ?? '?'}`,
-  intro: 'Collected artwork with its source recorded for each file. The organization’s dates above are not the dates of its logo. ' +
-    (body.notes || ''),
+  // The body's own account where it has one; that its years are not its logos' is said on each card
+  // (“Seen …”) and under About.
+  intro: body.notes || 'Collected artwork, with its source recorded for each file.',
   cover: coverOf(body.assets),
   entries: collectedEntriesOf(body.id),
 })
@@ -123,7 +177,7 @@ const lineCollection = (line) => {
   const last = bodies.at(-1)
   const eras = bodies.map((body, at) => nameEra(body, at ? bodies[at - 1].to : body.from, at < bodies.length - 1 ? body.to : last.current ? null : last.to, bodies[at + 1]))
   const earlier = bodies.slice(0, -1)
-  return {
+  const collection = {
     ...collectionOf(last),
     graphNodes: [last.id, ...earlier.map((body) => body.id)],
     aliases: earlier.map((body) => `collected-${body.id}`),
@@ -135,6 +189,31 @@ const lineCollection = (line) => {
     cover: coverOf(bodies.flatMap((body) => body.assets).reverse()) ?? last.assets[0]?.id,
     entries: undefined,
     eras
+  }
+  if (last.id !== 'bc-railway-company') return collection
+
+  // A named body can have several designs in use at once. The railway's researched design
+  // groups replace the two generic name eras without changing any collection or artwork URL.
+  const entries = new Map(eras.flatMap((era) => era.entries).map((entry) => [entry.id, entry]))
+  const placed = new Set()
+  const researchedEras = RAILWAY_HISTORY.eras.map(({ assetIds = [], ...era }) => ({
+    ...era,
+    entries: assetIds.map((id) => {
+      if (!entries.has(id)) throw new Error(`Railway era ${era.id} names an unknown asset: ${id}`)
+      if (placed.has(id)) throw new Error(`Railway asset is in more than one era: ${id}`)
+      placed.add(id)
+      return entries.get(id)
+    })
+  }))
+  for (const id of entries.keys()) {
+    if (!placed.has(id)) throw new Error(`Railway asset has no researched era: ${id}`)
+  }
+  return {
+    ...collection,
+    years: RAILWAY_HISTORY.years ?? collection.years,
+    intro: RAILWAY_HISTORY.intro,
+    eras: researchedEras,
+    railwayHistory: RAILWAY_HISTORY
   }
 }
 
@@ -168,7 +247,7 @@ export const SPECIMEN_COLLECTIONS = COLLECTED_SPECIMENS.map(({ program, assets }
   fileCollection: true,
   label: assets[0]?.publisher ?? program,
   intro: 'Published vector specimens, each with its source recorded. A capture or document date is a sighting, not an adoption date.',
-  entries: assets.map((asset) => collectedEntry(asset, program))
+  entries: designsOf(assets).map(({ asset, versions }) => collectedEntry(asset, program, undefined, versions))
 }))
 
 export const COLLECTION_RESEARCH = new Map(COLLECTED_BODIES.map((body) => [body.id, body]))
