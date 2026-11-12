@@ -999,6 +999,42 @@ export const COLLECTED_DISPLAY = {
    "recoloured": true
   }
  },
+ "fvhr-emblem-colour": {
+  "light": {
+   "file": "identity-display/fvhr-emblem-colour.light.svg",
+   "aspect": 1.0,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/fvhr-emblem-colour.dark.svg",
+   "aspect": 1.0,
+   "recoloured": true
+  }
+ },
+ "fvhr-emblem-black": {
+  "light": {
+   "file": "identity-display/fvhr-emblem-black.light.svg",
+   "aspect": 1.0,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/fvhr-emblem-black.dark.svg",
+   "aspect": 1.0,
+   "recoloured": true
+  }
+ },
+ "fvhr-lockup": {
+  "light": {
+   "file": "identity-display/fvhr-lockup.light.svg",
+   "aspect": 7.4421,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/fvhr-lockup.dark.svg",
+   "aspect": 7.4421,
+   "recoloured": true
+  }
+ },
  "source-north-okanagan-health-region-north-okanagan-health-region-2000-emblem-svg": {
   "light": {
    "file": "identity-display/source-north-okanagan-health-region-north-okanagan-health-region-2000-emblem-svg.light.svg",
