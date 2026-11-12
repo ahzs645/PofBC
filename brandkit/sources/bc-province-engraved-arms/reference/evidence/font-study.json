@@ -1,0 +1,457 @@
+{
+  "schemaVersion": 1,
+  "studyDate": "2026-11-12",
+  "status": "source-informed approximation; exact historical font unverified",
+  "source": {
+    "kind": "user-uploaded raster",
+    "filename": "Screenshot 2026-11-11 at 11.41.38 PM.png",
+    "sha256": "daeafbf0d0d5c76e3f176388a482da3598c6d59d35be604fba12019807763847",
+    "archiveAttribution": "Not established from the upload alone. The name, titles and telephone number are transcribed as shown."
+  },
+  "identification": {
+    "classification": "Formal engraved/copperplate script",
+    "commercialCandidate": "Commercial Script (Bitstream/URW interpretations of Morris Fuller Benton) is a visual comparison candidate, not a verified identification. Public foundry specimens were inspected; no proprietary font binary was downloaded or included.",
+    "rejectedExactClaim": "Palace Script is a useful initial comparison family, but the uploaded lettering was not verified as Palace Script.",
+    "selectedOpenFont": "Pinyon Script is the closest of seven tested redistributable candidates, chiefly for the G and angular M. It is not an exact original match."
+  },
+  "primarySources": [
+    {
+      "label": "Bitstream Commercial Script official foundry page",
+      "url": "https://www.myfonts.com/collections/commercial-script-font-bitstream",
+      "supports": "Designer/publisher and official specimen, including a full glyph preview; candidate family comparison only."
+    },
+    {
+      "label": "URW Commercial Script official foundry page",
+      "url": "https://www.myfonts.com/collections/commercial-script-font-urw/",
+      "supports": "Alternative official Commercial Script specimen; candidate comparison only."
+    },
+    {
+      "label": "Microsoft Palace Script MT documentation",
+      "url": "https://learn.microsoft.com/en-us/typography/font-list/palace-script-mt",
+      "supports": "Formal English copperplate classification and official sample; not identification of the card."
+    },
+    {
+      "label": "Pinyon upstream snapshot from Google Fonts metadata",
+      "url": "https://github.com/SorkinType/Pinyon/tree/91d502f9b3a98c210c54916c356caa534cdc4d70",
+      "supports": "Pinned original font source."
+    },
+    {
+      "label": "Google Fonts canonical Pinyon distribution",
+      "url": "https://github.com/google/fonts/tree/main/ofl/pinyonscript",
+      "supports": "Downloaded TTF, metadata and license. Binary checksum is the authoritative pin in this study."
+    },
+    {
+      "label": "Pinyon OFL",
+      "url": "https://github.com/google/fonts/blob/main/ofl/pinyonscript/OFL.txt",
+      "supports": "Full original license preserved in the model and rebuilt directories."
+    },
+    {
+      "label": "FreeType outline processing reference",
+      "url": "https://freetype.org/freetype2/docs/reference/ft2-outline_processing.html",
+      "supports": "Vector outline emboldening method; native curve points retained."
+    }
+  ],
+  "candidateFonts": [
+    {
+      "family": "Imperial Script",
+      "source_url": "https://github.com/google/fonts/tree/main/ofl/imperialscript",
+      "sha256": "fa040ae596cde82559c3bcf056ac216a94efa904b848382ab85740d38df4bab7",
+      "copyright": "Copyright 2008 The Imperial Script Project Authors (https://github.com/googlefonts/imperial-script)",
+      "version": "Version 1.010; ttfautohint (v1.8.3)",
+      "license": "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://scripts.sil.org/OFL",
+      "license_url": "https://scripts.sil.org/OFL"
+    },
+    {
+      "family": "Pinyon Script",
+      "source_url": "https://github.com/google/fonts/tree/main/ofl/pinyonscript",
+      "sha256": "4aab130a6ed27f8b8117738c84a5602edf9300cdcc0651a9a65bf96f451ac29a",
+      "copyright": "Copyright 2022 The PinyonScript Project Authors (https://github.com/SorkinType/Pinyon)",
+      "version": "Version 1.008; ttfautohint (v1.8.4.7-5d5b)",
+      "license": "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://openfontlicense.org",
+      "license_url": "https://openfontlicense.org"
+    },
+    {
+      "family": "Luxurious Script",
+      "source_url": "https://github.com/google/fonts/tree/main/ofl/luxuriousscript",
+      "sha256": "db1a118a34eb835f7960a09d8be472b65971d7798772842dc3cd37a8641491e9",
+      "copyright": "Copyright 2015-2021 The Luxurious Project Authors (https://github.com/googlefonts/luxurious)",
+      "version": "Version 1.010; ttfautohint (v1.8.3)",
+      "license": "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://scripts.sil.org/OFL",
+      "license_url": "https://scripts.sil.org/OFL"
+    },
+    {
+      "family": "Mea Culpa",
+      "source_url": "https://github.com/google/fonts/tree/main/ofl/meaculpa",
+      "sha256": "c5a293151793820d25ff10844f1418170ae755fa61d0a126cefa1e9b82f21ce5",
+      "copyright": "Copyright 2003-2021 The Mea Culpa Project Authors (https://github.com/googlefonts/mea-culpa)",
+      "version": "Version 1.010; ttfautohint (v1.8.3)",
+      "license": "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://scripts.sil.org/OFL",
+      "license_url": "https://scripts.sil.org/OFL"
+    },
+    {
+      "family": "Herr Von Muellerhoff",
+      "source_url": "https://github.com/google/fonts/tree/main/ofl/herrvonmuellerhoff",
+      "sha256": "ba8ac10807a79462b7c8265b2eebb8419e5017fdc1a5828b1a071d9e8478772e",
+      "copyright": "Copyright (c) 2004 Alejandro Paul (sudtipos@sudtipos.com),\rwith Reserved Font Name \"Herr Von Mullerhoff\"",
+      "version": "Version 1.000",
+      "license": "This Font Software is licensed under the SIL Open Font License,\rVersion 1.1. This license is available with a FAQ at:\rhttp://scripts.sil.org/OFL",
+      "license_url": "http://scripts.sil.org/OFL"
+    },
+    {
+      "family": "Monsieur La Doulaise",
+      "source_url": "https://github.com/google/fonts/tree/main/ofl/monsieurladoulaise",
+      "sha256": "dd3e04fbe661a7a70ff87b56b446e57a2605de5659c84d35ef58f4606ee68fad",
+      "copyright": "Copyright (c) 2006 Alejandro Paul (sudtipos@sudtipos.com),\rwith Reserved Font Name \"MonsieurLaDoulaise\"",
+      "version": "Version 1.000",
+      "license": "This Font Software is licensed under the SIL Open Font License,\rVersion 1.1. This license is available with a FAQ at:\rhttp://scripts.sil.org/OFL",
+      "license_url": "http://scripts.sil.org/OFL"
+    },
+    {
+      "family": "Italianno",
+      "source_url": "https://github.com/google/fonts/tree/main/ofl/italianno",
+      "sha256": "f6ae96dea0da46c73370eb0575848ab0eda190315bdfda3f5b252bba3dc9173c",
+      "copyright": "Copyright 2009 The Italianno Project Authors (https://github.com/googlefonts/italianno)",
+      "version": "Version 1.100; ttfautohint (v1.8.3)",
+      "license": "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://scripts.sil.org/OFL",
+      "license_url": "https://scripts.sil.org/OFL"
+    }
+  ],
+  "observedCoverage": {
+    "uppercase": "BCDGIMPRSTV",
+    "lowercase": "abcdefhilmnoprstuvy",
+    "digits": "013678",
+    "punctuation": " &-.",
+    "unobservedDigits": "2459",
+    "rule": "Observed presence is not contour verification. Unobserved glyphs inherit Pinyon anatomy and remain unverified even where the same fitting transforms were applied."
+  },
+  "studies": [
+    {
+      "id": "plateforgecardscriptcompactstudy",
+      "family": "PlateForge Card Script Compact Study",
+      "styleName": "Compact study",
+      "lower_x": 0.62,
+      "lower_y": 0.91,
+      "descender_y": 1.12,
+      "cap_x": 0.9,
+      "m_x": 0.84,
+      "space_scale": 0.5,
+      "embolden_units": 36,
+      "role": "titles",
+      "source_url": "https://github.com/SorkinType/Pinyon/tree/91d502f9b3a98c210c54916c356caa534cdc4d70",
+      "base_font": "Pinyon Script Regular",
+      "source_font_sha256": "4aab130a6ed27f8b8117738c84a5602edf9300cdcc0651a9a65bf96f451ac29a",
+      "source_image_sha256": "daeafbf0d0d5c76e3f176388a482da3598c6d59d35be604fba12019807763847",
+      "sha256": "6fa1cd50a1104198273d2ab11a2f9e69abc74b8974bfcbaa27f155821d834c64",
+      "matchStatus": "source-informed approximation",
+      "matchNote": "Measured fitting study derived from Pinyon; historical font identity and unobserved letters are unverified.",
+      "method": "Pinyon curves adjusted in an unslanted coordinate system; hand-drawn observed C,V,0,1,3,6,7,8,hyphen; modest FreeType vector outline weight adjustment; recomputed metrics; no raster tracing.",
+      "notes": "Display/name, compact/titles, and text/footer are fitting studies; their separation does not prove the source used three fonts. Weight and detailed letterforms remain approximate.",
+      "observed_capitals": "BCDGIMPRSTV",
+      "observed_lowercase": "abcdefhilmnoprstuvy",
+      "observed_digits": "013678",
+      "inherited_unobserved": "Unobserved characters, accents and alternate glyphs inherit Pinyon anatomy and remain unverified even when a consistent fitting transform was applied.",
+      "manual_glyphs": [
+        "zero",
+        "one",
+        "three",
+        "six",
+        "seven",
+        "eight",
+        "C",
+        "V",
+        "hyphen"
+      ],
+      "fitted_glyph_count": 632,
+      "weight_adjusted_glyph_count": 818,
+      "rebuild_script": "scripts/mccarthy-card/rebuild-study-fonts.py",
+      "license": "SIL Open Font License 1.1; original copyright 2024 Pinyon Project Authors retained verbatim in OFL.txt; embedded original copyright 2022 retained."
+    },
+    {
+      "id": "plateforgecardscriptdisplaystudy",
+      "family": "PlateForge Card Script Display Study",
+      "styleName": "Display study",
+      "lower_x": 0.92,
+      "lower_y": 0.74,
+      "descender_y": 1.15,
+      "cap_x": 1.0,
+      "m_x": 0.85,
+      "m_advance_x": 0.96,
+      "space_scale": 0.52,
+      "embolden_units": 20,
+      "role": "name",
+      "source_url": "https://github.com/SorkinType/Pinyon/tree/91d502f9b3a98c210c54916c356caa534cdc4d70",
+      "base_font": "Pinyon Script Regular",
+      "source_font_sha256": "4aab130a6ed27f8b8117738c84a5602edf9300cdcc0651a9a65bf96f451ac29a",
+      "source_image_sha256": "daeafbf0d0d5c76e3f176388a482da3598c6d59d35be604fba12019807763847",
+      "sha256": "054cea37ec0cccc6440d50eb12c7790759edd9ef185c3b12af46a15b3f832a5d",
+      "matchStatus": "source-informed approximation",
+      "matchNote": "Measured fitting study derived from Pinyon; historical font identity and unobserved letters are unverified.",
+      "method": "Pinyon curves adjusted in an unslanted coordinate system; hand-drawn observed C,V,0,1,3,6,7,8,hyphen; modest FreeType vector outline weight adjustment; recomputed metrics; no raster tracing.",
+      "notes": "Display/name, compact/titles, and text/footer are fitting studies; their separation does not prove the source used three fonts. Weight and detailed letterforms remain approximate.",
+      "observed_capitals": "BCDGIMPRSTV",
+      "observed_lowercase": "abcdefhilmnoprstuvy",
+      "observed_digits": "013678",
+      "inherited_unobserved": "Unobserved characters, accents and alternate glyphs inherit Pinyon anatomy and remain unverified even when a consistent fitting transform was applied.",
+      "manual_glyphs": [
+        "zero",
+        "one",
+        "three",
+        "six",
+        "seven",
+        "eight",
+        "C",
+        "V",
+        "hyphen"
+      ],
+      "fitted_glyph_count": 632,
+      "weight_adjusted_glyph_count": 818,
+      "rebuild_script": "scripts/mccarthy-card/rebuild-study-fonts.py",
+      "license": "SIL Open Font License 1.1; original copyright 2024 Pinyon Project Authors retained verbatim in OFL.txt; embedded original copyright 2022 retained."
+    },
+    {
+      "id": "plateforgecardscriptstudy",
+      "family": "PlateForge Card Script Study",
+      "styleName": "Text study",
+      "lower_x": 0.8,
+      "lower_y": 0.96,
+      "descender_y": 1.08,
+      "cap_x": 0.97,
+      "m_x": 0.87,
+      "space_scale": 0.52,
+      "embolden_units": 30,
+      "role": "footer",
+      "source_url": "https://github.com/SorkinType/Pinyon/tree/91d502f9b3a98c210c54916c356caa534cdc4d70",
+      "base_font": "Pinyon Script Regular",
+      "source_font_sha256": "4aab130a6ed27f8b8117738c84a5602edf9300cdcc0651a9a65bf96f451ac29a",
+      "source_image_sha256": "daeafbf0d0d5c76e3f176388a482da3598c6d59d35be604fba12019807763847",
+      "sha256": "9a933eb6f5acc33f478007b837ff1a1eec2e7ffe58abe170438acf535a59e96f",
+      "matchStatus": "source-informed approximation",
+      "matchNote": "Measured fitting study derived from Pinyon; historical font identity and unobserved letters are unverified.",
+      "method": "Pinyon curves adjusted in an unslanted coordinate system; hand-drawn observed C,V,0,1,3,6,7,8,hyphen; modest FreeType vector outline weight adjustment; recomputed metrics; no raster tracing.",
+      "notes": "Display/name, compact/titles, and text/footer are fitting studies; their separation does not prove the source used three fonts. Weight and detailed letterforms remain approximate.",
+      "observed_capitals": "BCDGIMPRSTV",
+      "observed_lowercase": "abcdefhilmnoprstuvy",
+      "observed_digits": "013678",
+      "inherited_unobserved": "Unobserved characters, accents and alternate glyphs inherit Pinyon anatomy and remain unverified even when a consistent fitting transform was applied.",
+      "manual_glyphs": [
+        "zero",
+        "one",
+        "three",
+        "six",
+        "seven",
+        "eight",
+        "C",
+        "V",
+        "hyphen"
+      ],
+      "fitted_glyph_count": 632,
+      "weight_adjusted_glyph_count": 818,
+      "rebuild_script": "scripts/mccarthy-card/rebuild-study-fonts.py",
+      "license": "SIL Open Font License 1.1; original copyright 2024 Pinyon Project Authors retained verbatim in OFL.txt; embedded original copyright 2022 retained."
+    }
+  ],
+  "roles": {
+    "name": "plateforgecardscriptdisplaystudy",
+    "deputy": "plateforgecardscriptcompactstudy",
+    "secretary": "plateforgecardscriptcompactstudy",
+    "minister": "plateforgecardscriptcompactstudy",
+    "telephone": "plateforgecardscriptstudy",
+    "city": "plateforgecardscriptstudy",
+    "province": "plateforgecardscriptstudy"
+  },
+  "methods": [
+    "Compare original raster beside seven actual font renderings; do not claim identification from style alone.",
+    "Adjust lower-case width and x-height in an unslanted coordinate system, then restore the same pen slant; keep explicit cap metrics and advances.",
+    "Display, Compact and Text are reconstruction cuts selected by measured text roles; they do not establish that three fonts were used in the historical card.",
+    "Hand-design observed C, V, 0, 1, 3, 6, 7, 8 and hyphen as explicit cubic curves, convert to TrueType quadratics with 1-font-unit tolerance; no raster tracing.",
+    "Use a modest FreeType outline offset for printed stroke weight; this is an approximate reconstruction choice, not an original master.",
+    "Raw comparison retains natural advances and requested cap heights. Application fitting scales whole lines uniformly; no independent horizontal stretching.",
+    "Diagnostic overlays fit both base and study uniformly to the source line width, then optimize translation only within +/-15 horizontal and +/-30 vertical pixels. Source scan perspective/blur are retained."
+  ],
+  "naturalWidthMetrics": [
+    {
+      "line": "name",
+      "source_width": 876,
+      "study_width": 878,
+      "width_error_percent": 0.23,
+      "cap_target": 96,
+      "font_id": "plateforgecardscriptdisplaystudy"
+    },
+    {
+      "line": "deputy",
+      "source_width": 365,
+      "study_width": 355,
+      "width_error_percent": -2.74,
+      "cap_target": 62,
+      "font_id": "plateforgecardscriptcompactstudy"
+    },
+    {
+      "line": "secretary",
+      "source_width": 435,
+      "study_width": 429,
+      "width_error_percent": -1.38,
+      "cap_target": 62,
+      "font_id": "plateforgecardscriptcompactstudy"
+    },
+    {
+      "line": "minister",
+      "source_width": 877,
+      "study_width": 907,
+      "width_error_percent": 3.42,
+      "cap_target": 62,
+      "font_id": "plateforgecardscriptcompactstudy"
+    },
+    {
+      "line": "telephone",
+      "source_width": 485,
+      "study_width": 462,
+      "width_error_percent": -4.74,
+      "cap_target": 62,
+      "font_id": "plateforgecardscriptstudy"
+    },
+    {
+      "line": "city",
+      "source_width": 201,
+      "study_width": 198,
+      "width_error_percent": -1.49,
+      "cap_target": 62,
+      "font_id": "plateforgecardscriptstudy"
+    },
+    {
+      "line": "province",
+      "source_width": 450,
+      "study_width": 445,
+      "width_error_percent": -1.11,
+      "cap_target": 62,
+      "font_id": "plateforgecardscriptstudy"
+    }
+  ],
+  "overlayMetrics": [
+    {
+      "line": "name",
+      "font": "pinyonscript",
+      "source_ink_size": [
+        876,
+        161
+      ],
+      "render_ink_size": [
+        876,
+        142
+      ],
+      "uniform_fit": "width only; equal scale on x and y",
+      "best_translation_relative_to_centers_px": [
+        9,
+        -3
+      ],
+      "threshold": 190,
+      "iou": 0.2557,
+      "foreground_precision_within_2px": 0.6418,
+      "foreground_recall_within_2px": 0.5572,
+      "foreground_f1_within_2px": 0.5965,
+      "interpretation": "Diagnostic geometric foreground overlap; not a percentage identification or historical accuracy score. Scan perspective/blur retained."
+    },
+    {
+      "line": "name",
+      "font": "plateforgecardscriptdisplaystudy",
+      "source_ink_size": [
+        876,
+        161
+      ],
+      "render_ink_size": [
+        876,
+        158
+      ],
+      "uniform_fit": "width only; equal scale on x and y",
+      "best_translation_relative_to_centers_px": [
+        1,
+        0
+      ],
+      "threshold": 190,
+      "iou": 0.2526,
+      "foreground_precision_within_2px": 0.5889,
+      "foreground_recall_within_2px": 0.5541,
+      "foreground_f1_within_2px": 0.571,
+      "interpretation": "Diagnostic geometric foreground overlap; not a percentage identification or historical accuracy score. Scan perspective/blur retained."
+    },
+    {
+      "line": "telephone",
+      "font": "pinyonscript",
+      "source_ink_size": [
+        485,
+        91
+      ],
+      "render_ink_size": [
+        485,
+        68
+      ],
+      "uniform_fit": "width only; equal scale on x and y",
+      "best_translation_relative_to_centers_px": [
+        2,
+        9
+      ],
+      "threshold": 190,
+      "iou": 0.1775,
+      "foreground_precision_within_2px": 0.6442,
+      "foreground_recall_within_2px": 0.4711,
+      "foreground_f1_within_2px": 0.5442,
+      "interpretation": "Diagnostic geometric foreground overlap; not a percentage identification or historical accuracy score. Scan perspective/blur retained."
+    },
+    {
+      "line": "telephone",
+      "font": "plateforgecardscriptstudy",
+      "source_ink_size": [
+        485,
+        91
+      ],
+      "render_ink_size": [
+        485,
+        103
+      ],
+      "uniform_fit": "width only; equal scale on x and y",
+      "best_translation_relative_to_centers_px": [
+        2,
+        5
+      ],
+      "threshold": 190,
+      "iou": 0.2875,
+      "foreground_precision_within_2px": 0.6483,
+      "foreground_recall_within_2px": 0.6752,
+      "foreground_f1_within_2px": 0.6615,
+      "interpretation": "Diagnostic geometric foreground overlap; not a percentage identification or historical accuracy score. Scan perspective/blur retained."
+    }
+  ],
+  "interpretation": {
+    "widths": "Before application fitting, all seven raw line widths are within 4.74 percent of their native source crop widths. Layout fit is not proof of contour accuracy.",
+    "name": "Name ink IoU is essentially unchanged/slightly lower (0.2557 base vs 0.2526 study); 2 px foreground F1 is lower (0.5965 vs 0.5710). The study improves cap/x-height relation and uses a source-informed C, but the full name is not a verified contour match.",
+    "telephone": "Telephone ink IoU improves from 0.1775 to 0.2875; 2 px foreground F1 improves from 0.5442 to 0.6615. These are diagnostic overlaps, not percentages of historical accuracy.",
+    "remaining": "Small lettering anatomy, individual spacing, thin-stroke details, source perspective, printed ink spread and scan blur remain unresolved. No full historical alphabet is recoverable from this card alone."
+  },
+  "rebuild": {
+    "script": "scripts/mccarthy-card/rebuild-study-fonts.py",
+    "command": "python scripts/mccarthy-card/rebuild-study-fonts.py --output-dir /tmp/plateforge-card-fonts",
+    "canonicalInput": "public/stationery/grace-mccarthy/model.json; pinyonscript.ttfBase64 and exact OFL license",
+    "networkRequired": false,
+    "duplicateBinaryRequired": false,
+    "defaultOutput": "An automatically created temporary directory when --output-dir is omitted.",
+    "dependencies": {
+      "python": "3.12.14 (tested)",
+      "fontTools": "4.61.1 (tested)",
+      "libfreetype": "2.13.3 (tested via ctypes; FT_Outline_EmboldenXY)"
+    },
+    "scope": "Rebuilds three TTF fonts, complete OFL copies and provenance.json files. All hand-drawn curves, transformations, metrics and naming are included. Does not regenerate card SVG outlines, browser previews, comparison PNGs or diagnostic overlays; those are separate rendering stages.",
+    "determinism": "All three rebuilt TTF hashes were identical to the integrated candidate binaries in the tested environment. Modified timestamps are not recomputed. Bit-for-bit identity on a different FreeType version is not promised."
+  },
+  "proofRenderingEnvironment": {
+    "Pillow": "13.0.0 with RAQM",
+    "numpy": "2.3.5",
+    "scipy": "1.17.0",
+    "foregroundThreshold": "Mean grayscale <190",
+    "edgeTolerancePixels": 2
+  },
+  "evidenceFiles": [
+    "font-study-comparison.png",
+    "font-study-overlays.png",
+    "font-candidates-name.png"
+  ],
+  "licensing": "Pinyon OFL 1.1 is preserved. Original font copyright 2022 and distributed OFL copyright 2024 are both retained; their year difference is upstream metadata, not silently normalized."
+}
