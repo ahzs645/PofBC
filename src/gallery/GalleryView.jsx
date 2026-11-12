@@ -31,6 +31,7 @@ import { SuppliedMarkView } from './SuppliedMarkView.jsx'
 import { CollectedMarkView } from './CollectedMarkView.jsx'
 import { COLLECTION_RESEARCH, nodesOf, researchLabel } from './collectedCollections.js'
 import { generatorArt, onPage, tileArt } from './tileArt.js'
+import { isSearchShortcut, searchGallery } from './gallerySearch.js'
 
 const PALETTE_OPTIONS = FLAG_PALETTE_ORDER.map((value) => ({
   value, label: FLAG_PALETTE_LABELS[value], title: FLAG_PALETTE_HINTS[value]
@@ -828,6 +829,63 @@ const hasPage = (collection) => Boolean(collection.eras) || entriesOf(collection
  * @param {(patch: object) => void} [props.onOpenInGenerator]  Loads a patch into the generator and
  *   shows it — how a mark remade in the current identity opens.
  */
+const IS_MAC = /Mac|iPhone|iPad/.test(globalThis.navigator?.platform ?? globalThis.navigator?.userAgent ?? '')
+
+/** The gallery's search box, with its shortcut shown where there is a keyboard to press it on. */
+const GallerySearch = ({ query, onChange, inputRef }) => (
+  <div className="gallery__search" role="search">
+    <input
+      ref={inputRef}
+      type="search"
+      value={query}
+      placeholder="Search logos — BC Hydro, dogwood, 1983…"
+      aria-label="Search the logos"
+      aria-keyshortcuts={IS_MAC ? 'Meta+K' : 'Control+K'}
+      onChange={(event) => onChange(event.target.value)}
+      onKeyDown={(event) => {
+        if (event.key === 'Escape' && query) { event.preventDefault(); onChange('') }
+      }}
+    />
+    {!query && <kbd className="gallery__search-key" aria-hidden="true">{IS_MAC ? '⌘K' : 'Ctrl K'}</kbd>}
+  </div>
+)
+
+/** What a search finds: the collections, then the logos not already within one of them. */
+const SearchResults = ({ query, theme, onChooseCollection, onOpenMark }) => {
+  const { collections, marks } = searchGallery(query)
+  if (!collections.length && !marks.length) {
+    return <p className="gallery__intro gallery__search-none">Nothing found for “{query.trim()}”.</p>
+  }
+  return (
+    <>
+      {collections.length > 0 && (
+        <section className="gallery__shelf" aria-labelledby="search-collections">
+          <h2 id="search-collections" className="gallery__shelf-title">
+            {collections.length === 1 ? '1 collection' : `${collections.length} collections`}
+          </h2>
+          <div className="gallery__collections">
+            {collections.map((entry) => (
+              <CollectionCard key={entry.id} collection={entry} theme={theme} onOpen={() => onChooseCollection(entry.id)} />
+            ))}
+          </div>
+        </section>
+      )}
+      {marks.length > 0 && (
+        <section className="gallery__shelf" aria-labelledby="search-marks">
+          <h2 id="search-marks" className="gallery__shelf-title">
+            {marks.length === 1 ? '1 logo' : `${marks.length} logos`}
+          </h2>
+          <div className="gallery__tiles">
+            {marks.map(({ entry, collection }) => (
+              <Tile key={entry.id} entry={entry} theme={theme} onOpen={() => onOpenMark(collection.id, entry)} />
+            ))}
+          </div>
+        </section>
+      )}
+    </>
+  )
+}
+
 export const GalleryView = ({ onOpenGovernment, onOpenInGenerator }) => {
   const { name: theme } = useSiteTheme()
   const [collectionId, setCollectionId] = useState(readCollection)
@@ -869,6 +927,31 @@ export const GalleryView = ({ onOpenGovernment, onOpenInGenerator }) => {
     else go(collectionId, id)
   }
   const home = () => go(null, null)
+
+  // Search, on the first page. Cmd-K (Ctrl-K elsewhere) reaches it from any page of the gallery.
+  const [query, setQuery] = useState('')
+  const searchInput = useRef(null)
+  const [focusSearch, setFocusSearch] = useState(false)
+  useEffect(() => {
+    const onKey = (event) => {
+      if (!isSearchShortcut(event)) return
+      event.preventDefault()
+      if (collectionId || openId) go(null, null)
+      setFocusSearch(true)
+    }
+    globalThis.addEventListener?.('keydown', onKey)
+    return () => globalThis.removeEventListener?.('keydown', onKey)
+  })
+  useEffect(() => {
+    if (!focusSearch || !searchInput.current) return
+    searchInput.current.focus()
+    searchInput.current.select()
+    setFocusSearch(false)
+  }, [focusSearch, collectionId, openId])
+  const openFound = (id, entry) => {
+    if (entry.kind === 'current' && onOpenInGenerator) onOpenInGenerator({ era: 'current', currentName: entry.text })
+    else go(id, entry.id)
+  }
   const backToCollection = () => go(collectionId, null)
   const crumbs = <Crumbs collection={collection} entry={open} onHome={home} onCollection={backToCollection} />
 
@@ -923,8 +1006,18 @@ export const GalleryView = ({ onOpenGovernment, onOpenInGenerator }) => {
 
   // The first page: the bodies with identities of their own, then the Province's one-offs.
   if (!collection) {
+    const search = <GallerySearch query={query} onChange={setQuery} inputRef={searchInput} />
+    if (query.trim()) {
+      return (
+        <div className="gallery">
+          {search}
+          <SearchResults query={query} theme={theme} onChooseCollection={choose} onOpenMark={openFound} />
+        </div>
+      )
+    }
     return (
       <div className="gallery">
+        {search}
         <section className="gallery__shelf" aria-labelledby="shelf-bodies">
           <h2 id="shelf-bodies" className="gallery__shelf-title">Crown corporations and public bodies</h2>
           <div className="gallery__collections">
