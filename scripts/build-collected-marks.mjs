@@ -17,6 +17,7 @@ const ticorp = read('research/identity/ticorp-vector-2026-11-08/source-register.
 const followup = read('research/identity/vector-followup-2026-11-08/source-register.json')
 const historical = read('research/identity/historical-vector-followup-2026-10-30/source-register.json')
 const innovate = read('research/identity/innovate-bc-vector-2026-11-12/source-register.json')
+const railSightings = read('research/identity/bc-rail-sightings-2026-11-12/source-register.json')
 // Programs' marks held as supplied reconstructions, with no body of their own in the inventory.
 const PROGRAM_PACKAGES = ['bc-travel-industry-2026-11-12', 'justice-institute-2026-11-12']
   .map((search) => ({ search, register: read(`research/identity/${search}/source-register.json`) }))
@@ -286,6 +287,13 @@ for (const { search, register: packaged } of PROGRAM_PACKAGES) for (const { veri
 // Historical specimens use inventory-shaped records; detailed extraction evidence stays in
 // their source register rather than in the gallery bundle. They must name an inventory body.
 const bodyIds = new Set(inventory.bodies.map((body) => body.id))
+// Supplied images of marks with no vector: kept as images, and said to be.
+for (const { bodyId, ...asset } of railSightings.assets) {
+  if (!bodyIds.has(bodyId)) throw new Error(`Unknown body: ${bodyId}`)
+  if (asset.isVector || !asset.supplied) throw new Error(`Expected a supplied image: ${asset.id}`)
+  if (!additions.has(bodyId)) additions.set(bodyId, [])
+  additions.get(bodyId).push(checked({ ...asset, search: 'bc-rail-sightings-2026-11-12' }))
+}
 for (const { bodyId, verification, ...asset } of innovate.assets) {
   if (!bodyIds.has(bodyId)) throw new Error(`Unknown body: ${bodyId}`)
   // Vector paths over the report's own photograph, so not pure vector, and recorded as such.
