@@ -1210,8 +1210,8 @@ export const COLLECTION_ERAS = {
       years: '2004 and 2024 annual reports',
       label: 'WorkSafeBC, in black and orange',
       note: '“Work” in white on black, with “Safe” in black and “BC” in white on orange. The 2004 annual ' +
-        'report carries “Working to make a difference”; the 2024 report has no tagline. These original ' +
-        'vectors sit beside the existing reconstruction. The board took WorkSafeBC as its everyday ' +
+        'report carries “Working to make a difference”; the 2024 report has no tagline. Both are the ' +
+        'reports’ original vectors. The board took WorkSafeBC as its everyday ' +
         'name in 2005 and kept its legal name; the wordmark is also seen on its official service in 2026.',
       applicability: {
         kind: 'dated_specimen',

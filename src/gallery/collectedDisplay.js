@@ -85,6 +85,42 @@ export const COLLECTED_DISPLAY = {
    "recoloured": false
   }
  },
+ "vector-bclc-2009-colour-tagline-source-vector": {
+  "light": {
+   "file": "identity-display/vector-bclc-2009-colour-tagline-source-vector.light.svg",
+   "aspect": 1.5738,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/vector-bclc-2009-colour-tagline-source-vector.dark.svg",
+   "aspect": 1.5738,
+   "recoloured": true
+  }
+ },
+ "vector-bclc-2009-reversed-source-vector": {
+  "light": {
+   "file": "identity-display/vector-bclc-2009-reversed-source-vector.light.svg",
+   "aspect": 2.3627,
+   "recoloured": true
+  },
+  "dark": {
+   "file": "identity-display/vector-bclc-2009-reversed-source-vector.dark.svg",
+   "aspect": 2.3627,
+   "recoloured": true
+  }
+ },
+ "vector-bclc-2011-reversed-tagline-source-vector": {
+  "light": {
+   "file": "identity-display/vector-bclc-2011-reversed-tagline-source-vector.light.svg",
+   "aspect": 1.575,
+   "recoloured": true
+  },
+  "dark": {
+   "file": "identity-display/vector-bclc-2011-reversed-tagline-source-vector.dark.svg",
+   "aspect": 1.575,
+   "recoloured": true
+  }
+ },
  "source-first-peoples-cultural-council-fpcc-svg": {
   "light": {
    "file": "identity-display/source-first-peoples-cultural-council-fpcc-svg.light.svg",
@@ -250,6 +286,54 @@ export const COLLECTED_DISPLAY = {
   "dark": {
    "file": "identity-display/source-knowledge-network-knowledge-network-svg.dark.svg",
    "aspect": 5.0654,
+   "recoloured": false
+  }
+ },
+ "vector-pavco-2025-26-colour-source-vector": {
+  "light": {
+   "file": "identity-display/vector-pavco-2025-26-colour-source-vector.light.svg",
+   "aspect": 2.4267,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/vector-pavco-2025-26-colour-source-vector.dark.svg",
+   "aspect": 2.4267,
+   "recoloured": true
+  }
+ },
+ "vector-pavco-2023-reversed-source-vector": {
+  "light": {
+   "file": "identity-display/vector-pavco-2023-reversed-source-vector.light.svg",
+   "aspect": 2.4065,
+   "recoloured": true
+  },
+  "dark": {
+   "file": "identity-display/vector-pavco-2023-reversed-source-vector.dark.svg",
+   "aspect": 2.4065,
+   "recoloured": false
+  }
+ },
+ "vector-ticorp-2025-colour-source-vector": {
+  "light": {
+   "file": "identity-display/vector-ticorp-2025-colour-source-vector.light.svg",
+   "aspect": 3.9059,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/vector-ticorp-2025-colour-source-vector.dark.svg",
+   "aspect": 3.9059,
+   "recoloured": true
+  }
+ },
+ "vector-ticorp-2020-reversed-source-vector": {
+  "light": {
+   "file": "identity-display/vector-ticorp-2020-reversed-source-vector.light.svg",
+   "aspect": 3.8803,
+   "recoloured": true
+  },
+  "dark": {
+   "file": "identity-display/vector-ticorp-2020-reversed-source-vector.dark.svg",
+   "aspect": 3.8803,
    "recoloured": false
   }
  },
@@ -577,7 +661,30 @@ export const COLLECTED_DISPLAY = {
    "recoloured": false
   }
  },
- 
+ "vector-forest-renewal-bc-2000-colour-source-vector": {
+  "light": {
+   "file": "identity-display/vector-forest-renewal-bc-2000-colour-source-vector.light.svg",
+   "aspect": 1.6048,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/vector-forest-renewal-bc-2000-colour-source-vector.dark.svg",
+   "aspect": 1.6048,
+   "recoloured": true
+  }
+ },
+ "vector-forest-renewal-bc-1999-black-source-vector": {
+  "light": {
+   "file": "identity-display/vector-forest-renewal-bc-1999-black-source-vector.light.svg",
+   "aspect": 1.597,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/vector-forest-renewal-bc-1999-black-source-vector.dark.svg",
+   "aspect": 1.597,
+   "recoloured": true
+  }
+ },
  "source-tourism-bc-tourism-british-columbia-2005-svg": {
   "light": {
    "file": "identity-display/source-tourism-bc-tourism-british-columbia-2005-svg.light.svg",
@@ -914,6 +1021,42 @@ export const COLLECTED_DISPLAY = {
    "file": "identity-display/vector-workbc-current.dark.svg",
    "aspect": 5.4524,
    "recoloured": true
+  }
+ },
+ "vector-worksafe-2003-serif-source-vector": {
+  "light": {
+   "file": "identity-display/vector-worksafe-2003-serif-source-vector.light.svg",
+   "aspect": 3.401,
+   "recoloured": true
+  },
+  "dark": {
+   "file": "identity-display/vector-worksafe-2003-serif-source-vector.dark.svg",
+   "aspect": 3.401,
+   "recoloured": false
+  }
+ },
+ "vector-worksafebc-2004-tagline-source-vector": {
+  "light": {
+   "file": "identity-display/vector-worksafebc-2004-tagline-source-vector.light.svg",
+   "aspect": 3.4922,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/vector-worksafebc-2004-tagline-source-vector.dark.svg",
+   "aspect": 3.4922,
+   "recoloured": true
+  }
+ },
+ "vector-worksafebc-2024-colour-source-vector": {
+  "light": {
+   "file": "identity-display/vector-worksafebc-2024-colour-source-vector.light.svg",
+   "aspect": 5.2691,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/vector-worksafebc-2024-colour-source-vector.light.svg",
+   "aspect": 5.2691,
+   "recoloured": false
   }
  }
 }

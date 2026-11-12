@@ -657,23 +657,9 @@ const WCB_ENTRIES = {
       note: 'The province, the sheltering hand and the worker, without the name.'
     })
   ],
+  // The black-and-orange wordmark is the 2004 and 2024 reports' own vectors (withSpecimens): the
+  // reconstruction from a 210-pixel picture that stood in for them is superseded.
   'worksafebc-orange': [
-    supplied({
-      ...RECONSTRUCTED('Letters and blocks drawn by hand from a supplied picture 210 pixels wide, and checked by ' +
-        'eye against a logo on an official WorkSafeBC service. The orange, #ED8B00, is a screen approximation, ' +
-        'not a brand value.'),
-      applicability: DATED_BY_TIMELINE('first_observation', 'by 2026', 'On an official WorkSafeBC service in ' +
-        'September 2026.'),
-      rights: WCB_RIGHTS
-    })({
-      id: 'worksafebc',
-      label: 'WorkSafeBC',
-      // "Work" and "BC" are white on the blocks: on a dark page the black block goes white, so they
-      // take the card's colour.
-      onDark: { swap: ['#ffffff'] },
-      years: 'by 2026',
-      note: 'The operating name in black and orange blocks.'
-    })
   ]
 }
 
@@ -1009,8 +995,8 @@ export const GALLERY_COLLECTIONS = [
     cover: 'vector-worksafebc-2024-colour-source-vector',
     intro: 'The Workers’ Compensation Board’s marks: a worker-protection emblem introduced in 1968, still ' +
       'sought; the province and worker from 1983, reconstructed here; a distressed WorkSafe wordmark in ' +
-      'the 2003 annual report; and black-and-orange WorkSafeBC in the 2004 and 2024 reports. The report ' +
-      'specimens retain their original vectors alongside the existing reconstructions. Report years do ' +
+      'the 2003 annual report; and black-and-orange WorkSafeBC in the 2004 and 2024 reports, as their ' +
+      'original vectors. Report years do ' +
       'not establish logo introductions. WorkSafeBC became the operating name in 2005. What the board used ' +
       'from its founding in 1917 until 1968 is not known.',
     eras: withMarks(COLLECTION_ERAS.worksafebc, withSpecimens(WCB_ENTRIES, 'worksafebc'))

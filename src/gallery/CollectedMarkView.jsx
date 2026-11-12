@@ -8,7 +8,10 @@ export const CollectedMarkView = ({ entry }) => {
   const [version, setVersion] = useState(entry.asset.id)
   const asset = entry.versions?.find((each) => each.id === version) ?? entry.asset
   const { name: theme } = useSiteTheme()
-  const display = collectedDisplay(asset, theme)
+  // A version chosen by its colour is shown in that colour: one whose page copy would be redrawn
+  // (a white version on the light page) is shown as published, on its own plate.
+  const copy = collectedDisplay(asset, theme)
+  const display = entry.versions && copy?.recoloured ? null : copy
   return (
     <section className="gallery__recovered">
       <header className="gallery__head">
