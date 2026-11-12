@@ -1128,7 +1128,8 @@ const PLACED = {
     body: 'Agency of the Provincial Health Services Authority',
     years: '1974–present',
     intro: 'The BC Cancer Agency’s circular emblem and logo, seen from 2000 to 2015, and the stacked BC / CAN / CER of ' +
-      'its identity as BC Cancer since November 2017.'
+      'its identity as BC Cancer since November 2017 — for BC Cancer, its Research Centre and Institute, and the BC Cancer ' +
+      'Foundation, its fundraising charity, which shares the identity and has a newer logo of its own.'
   },
   'auditor-general': {
     label: 'Auditor General',

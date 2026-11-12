@@ -1383,6 +1383,102 @@ export const COLLECTED_DISPLAY = {
    "recoloured": false
   }
  },
+ "bc-cancer-phsa": {
+  "light": {
+   "file": "identity-display/bc-cancer-phsa.light.svg",
+   "aspect": 1.5191,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/bc-cancer-phsa.light.svg",
+   "aspect": 1.5191,
+   "recoloured": false
+  }
+ },
+ "bc-cancer-research": {
+  "light": {
+   "file": "identity-display/bc-cancer-research.light.svg",
+   "aspect": 1.7235,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/bc-cancer-research.light.svg",
+   "aspect": 1.7235,
+   "recoloured": false
+  }
+ },
+ "bc-cancer-research-white": {
+  "light": {
+   "file": "identity-display/bc-cancer-research-white.light.svg",
+   "aspect": 1.7231,
+   "recoloured": true
+  },
+  "dark": {
+   "file": "identity-display/bc-cancer-research-white.dark.svg",
+   "aspect": 1.7231,
+   "recoloured": true
+  }
+ },
+ "bc-cancer-research-institute": {
+  "light": {
+   "file": "identity-display/bc-cancer-research-institute.light.svg",
+   "aspect": 1.7411,
+   "recoloured": true
+  },
+  "dark": {
+   "file": "identity-display/bc-cancer-research-institute.dark.svg",
+   "aspect": 1.7411,
+   "recoloured": false
+  }
+ },
+ "bc-cancer-foundation-2018": {
+  "light": {
+   "file": "identity-display/bc-cancer-foundation-2018.light.svg",
+   "aspect": 2.287,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/bc-cancer-foundation-2018.light.svg",
+   "aspect": 2.287,
+   "recoloured": false
+  }
+ },
+ "bc-cancer-foundation-2018-white": {
+  "light": {
+   "file": "identity-display/bc-cancer-foundation-2018-white.light.svg",
+   "aspect": 2.2885,
+   "recoloured": true
+  },
+  "dark": {
+   "file": "identity-display/bc-cancer-foundation-2018-white.dark.svg",
+   "aspect": 2.2885,
+   "recoloured": false
+  }
+ },
+ "bc-cancer-foundation-2026": {
+  "light": {
+   "file": "identity-display/bc-cancer-foundation-2026.light.svg",
+   "aspect": 0.7476,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/bc-cancer-foundation-2026.dark.svg",
+   "aspect": 0.7476,
+   "recoloured": true
+  }
+ },
+ "bc-cancer-foundation-2026-white": {
+  "light": {
+   "file": "identity-display/bc-cancer-foundation-2026-white.light.svg",
+   "aspect": 0.7476,
+   "recoloured": true
+  },
+  "dark": {
+   "file": "identity-display/bc-cancer-foundation-2026-white.dark.svg",
+   "aspect": 0.7476,
+   "recoloured": false
+  }
+ },
  "solutions-bc-2003-black": {
   "light": {
    "file": "identity-display/solutions-bc-2003-black.light.svg",

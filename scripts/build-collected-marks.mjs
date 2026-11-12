@@ -22,7 +22,7 @@ const bceid = read('research/identity/bceid-2026-11-12/source-register.json')
 const sharedServices = read('research/identity/shared-services-bc-2026-11-12/source-register.json')
 const bcCancerNow = read('research/identity/bc-cancer-current-2026-11-12/source-register.json')
 // Programs' marks held as supplied reconstructions, with no body of their own in the inventory.
-const PROGRAM_PACKAGES = ['bc-travel-industry-2026-11-12', 'justice-institute-2026-11-12', 'auditor-general-2026-11-12', 'bc-online-2026-11-12', 'bc-cancer-agency-2026-11-12', 'solutions-bc-vector-2026-11-12', 'healthlink-bc-2026-11-12']
+const PROGRAM_PACKAGES = ['bc-travel-industry-2026-11-12', 'justice-institute-2026-11-12', 'auditor-general-2026-11-12', 'bc-online-2026-11-12', 'bc-cancer-agency-2026-11-12', 'solutions-bc-vector-2026-11-12', 'healthlink-bc-2026-11-12', 'bc-cancer-modern-2026-11-12']
   .map((search) => ({ search, register: read(`research/identity/${search}/source-register.json`) }))
 // Supplied packages that add a vector to a body, each read with the search it came from.
 const PACKAGES = ['bc-assessment-vector-2026-11-12', 'bc-power-commission-vector-2026-11-12', 'bc-place-vector-2026-11-12', 'bc-railway-vector-2026-11-12', 'bc-railway-dogwood-vector-2026-11-12', 'bc-systems-vector-2026-11-12', 'bc-housing-1978-vector-2026-11-12', 'bc-petroleum-vector-2026-11-12', 'bc-housing-houses-vector-2026-11-12', 'fvhr-vector-2026-11-12']
@@ -156,7 +156,9 @@ const SUPERSEDED = {
   // The report's 78-pixel image is kept as the emblem's download.
   'source-fraser-valley-health-region-fraser-valley-health-region-2000-jpg': 'fvhr-emblem-colour',
   // The 2003 document's image is kept as the vector's download.
-  'solutions-bc-2003': 'solutions-bc-2003-vector'
+  'solutions-bc-2003': 'solutions-bc-2003-vector',
+  // The website's PNG, without the PHSA line, is kept as the vector's download.
+  'bc-cancer-logo': 'bc-cancer-phsa'
 }
 
 // Another colourway of the same design: shown inside the design's entry as a version to switch
@@ -180,7 +182,10 @@ const VARIANT_OF = {
   'bcpc-emblem-white': 'bcpc-emblem-black',
   'bc-housing-houses-white': 'bc-housing-houses',
   'fvhr-emblem-black': 'fvhr-emblem-colour',
-  'solutions-bc-2003-black': 'solutions-bc-2003-vector'
+  'solutions-bc-2003-black': 'solutions-bc-2003-vector',
+  'bc-cancer-research-white': 'bc-cancer-research',
+  'bc-cancer-foundation-2018-white': 'bc-cancer-foundation-2018',
+  'bc-cancer-foundation-2026-white': 'bc-cancer-foundation-2026'
 }
 
 // What each version is called inside its design's entry.
@@ -222,7 +227,13 @@ const VERSION_LABELS = {
   'fvhr-emblem-colour': 'Colour',
   'fvhr-emblem-black': 'Black',
   'solutions-bc-2003-vector': 'On teal (as printed)',
-  'solutions-bc-2003-black': 'Black'
+  'solutions-bc-2003-black': 'Black',
+  'bc-cancer-research': 'Colour',
+  'bc-cancer-research-white': 'White and purple',
+  'bc-cancer-foundation-2018': 'Colour',
+  'bc-cancer-foundation-2018-white': 'White and purple',
+  'bc-cancer-foundation-2026': 'Navy and purple',
+  'bc-cancer-foundation-2026-white': 'White and purple'
 }
 
 // Shorter accounts where a body's or file's own record is about a file no longer shown.
