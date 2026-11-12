@@ -1,7 +1,7 @@
 {
   "schema": "import-accounting/1",
   "counts": {
-    "accepted": 914,
+    "accepted": 923,
     "unresolved_unmapped": 26,
     "corroborating_duplicate": 11
   },
@@ -740,6 +740,240 @@
         "integration_status": "needs_local_id_mapping_and_review"
       },
       "output_id": "pkg:first-election-range"
+    },
+    {
+      "origin": "atlas/events-bc-rail-2026-11-12.json#atlas:bcrail-royal-hudson-1974",
+      "disposition": "accepted",
+      "input": {
+        "id": "atlas:bcrail-royal-hudson-1974",
+        "subject_id": "bc-railway-company",
+        "related_subject_ids": [],
+        "event_type": "service_launch",
+        "title": "Royal Hudson steam excursions begin, with locomotive 2860 acquired by the government",
+        "date": {
+          "start": "1974-06-20",
+          "end": null,
+          "precision": "day",
+          "range_end_inclusive": false
+        },
+        "temporal_status": "source_reported_past",
+        "evidence": {
+          "source_url": "https://en.wikipedia.org/wiki/BC_Rail",
+          "source_title": "BC Rail — Wikipedia",
+          "basis": "secondary_reference"
+        },
+        "interpretation_notes": "The excursion ran until it was cancelled after the 2001 season. From the English Wikipedia article on BC Rail (read 2026-11-12), which carries citation-needed tags; its own references were not followed in this pass.",
+        "reviewed_on": "2026-11-12"
+      },
+      "output_id": "atlas:bcrail-royal-hudson-1974"
+    },
+    {
+      "origin": "atlas/events-bc-rail-2026-11-12.json#atlas:bcrail-tumbler-ridge-1983",
+      "disposition": "accepted",
+      "input": {
+        "id": "atlas:bcrail-tumbler-ridge-1983",
+        "subject_id": "bc-railway-company",
+        "related_subject_ids": [],
+        "event_type": "operational_milestone",
+        "title": "The electrified Tumbler Ridge Subdivision opens, serving the northeast coal mines",
+        "date": {
+          "start": "1983",
+          "end": null,
+          "precision": "year",
+          "range_end_inclusive": false
+        },
+        "temporal_status": "source_reported_past",
+        "evidence": {
+          "source_url": "https://en.wikipedia.org/wiki/BC_Rail",
+          "source_title": "BC Rail — Wikipedia",
+          "basis": "secondary_reference"
+        },
+        "interpretation_notes": "Electric operation ended on 29 September 2000, after the Quintette mine closed. From the English Wikipedia article on BC Rail (read 2026-11-12), which carries citation-needed tags; its own references were not followed in this pass.",
+        "reviewed_on": "2026-11-12"
+      },
+      "output_id": "atlas:bcrail-tumbler-ridge-1983"
+    },
+    {
+      "origin": "atlas/events-bc-rail-2026-11-12.json#atlas:bcrail-bc-rail-ltd-1984",
+      "disposition": "accepted",
+      "input": {
+        "id": "atlas:bcrail-bc-rail-ltd-1984",
+        "subject_id": "bc-railway-company",
+        "related_subject_ids": [],
+        "event_type": "reorganization",
+        "title": "Restructured: BC Rail Ltd. formed to run the railway, jointly owned by the Company and its subsidiary BCR Properties Ltd., and the operations take the name BC Rail",
+        "date": {
+          "start": "1984",
+          "end": null,
+          "precision": "year",
+          "range_end_inclusive": false
+        },
+        "temporal_status": "source_reported_past",
+        "evidence": {
+          "source_url": "https://en.wikipedia.org/wiki/BC_Rail",
+          "source_title": "BC Rail — Wikipedia",
+          "basis": "secondary_reference"
+        },
+        "interpretation_notes": "The corporate logo of these years, BC Rail’s 1984–2004 wordmark, is the one Wikimedia Commons holds as BC_Rail_logo.svg. From the English Wikipedia article on BC Rail (read 2026-11-12), which carries citation-needed tags; its own references were not followed in this pass.",
+        "reviewed_on": "2026-11-12"
+      },
+      "output_id": "atlas:bcrail-bc-rail-ltd-1984"
+    },
+    {
+      "origin": "atlas/events-bc-rail-2026-11-12.json#atlas:bcrail-bcr-marine-1999",
+      "disposition": "accepted",
+      "input": {
+        "id": "atlas:bcrail-bcr-marine-1999",
+        "subject_id": "bc-railway-company",
+        "related_subject_ids": [],
+        "event_type": "reorganization",
+        "title": "Vancouver Wharves (bought 1993) and the terminals bought in 1998 grouped as BCR Marine, under the parent BCR Group",
+        "date": {
+          "start": "1999",
+          "end": null,
+          "precision": "year",
+          "range_end_inclusive": false
+        },
+        "temporal_status": "source_reported_past",
+        "evidence": {
+          "source_url": "https://en.wikipedia.org/wiki/BC_Rail",
+          "source_title": "BC Rail — Wikipedia",
+          "basis": "secondary_reference"
+        },
+        "interpretation_notes": "BCR Marine’s assets other than Vancouver Wharves were sold in early 2003; Vancouver Wharves remains a provincial holding. From the English Wikipedia article on BC Rail (read 2026-11-12), which carries citation-needed tags; its own references were not followed in this pass.",
+        "reviewed_on": "2026-11-12"
+      },
+      "output_id": "atlas:bcrail-bcr-marine-1999"
+    },
+    {
+      "origin": "atlas/events-bc-rail-2026-11-12.json#atlas:bcrail-passenger-end-2002",
+      "disposition": "accepted",
+      "input": {
+        "id": "atlas:bcrail-passenger-end-2002",
+        "subject_id": "bc-railway-company",
+        "related_subject_ids": [],
+        "event_type": "function_ended",
+        "title": "Passenger service ends, including the Cariboo Prospector and the Whistler Northwind",
+        "date": {
+          "start": "2002-10-31",
+          "end": null,
+          "precision": "day",
+          "range_end_inclusive": false
+        },
+        "temporal_status": "source_reported_past",
+        "evidence": {
+          "source_url": "https://en.wikipedia.org/wiki/BC_Rail",
+          "source_title": "BC Rail — Wikipedia",
+          "basis": "secondary_reference"
+        },
+        "interpretation_notes": "From the English Wikipedia article on BC Rail (read 2026-11-12), which carries citation-needed tags; its own references were not followed in this pass.",
+        "reviewed_on": "2026-11-12"
+      },
+      "output_id": "atlas:bcrail-passenger-end-2002"
+    },
+    {
+      "origin": "atlas/events-bc-rail-2026-11-12.json#atlas:bcrail-sale-announced-2003",
+      "disposition": "accepted",
+      "input": {
+        "id": "atlas:bcrail-sale-announced-2003",
+        "subject_id": "bc-railway-company",
+        "related_subject_ids": [],
+        "event_type": "announcement",
+        "title": "Premier Gordon Campbell announces the sale of the railway’s operations",
+        "date": {
+          "start": "2003-05-13",
+          "end": null,
+          "precision": "day",
+          "range_end_inclusive": false
+        },
+        "temporal_status": "source_reported_past",
+        "evidence": {
+          "source_url": "https://en.wikipedia.org/wiki/BC_Rail",
+          "source_title": "BC Rail — Wikipedia",
+          "basis": "secondary_reference"
+        },
+        "interpretation_notes": "The sale is bound up with the 2003 “BC Legislature raids”; two ministerial aides pleaded guilty in 2010 over leaked bid information. From the English Wikipedia article on BC Rail (read 2026-11-12), which carries citation-needed tags; its own references were not followed in this pass.",
+        "reviewed_on": "2026-11-12"
+      },
+      "output_id": "atlas:bcrail-sale-announced-2003"
+    },
+    {
+      "origin": "atlas/events-bc-rail-2026-11-12.json#atlas:bcrail-cn-bid-2003",
+      "disposition": "accepted",
+      "input": {
+        "id": "atlas:bcrail-cn-bid-2003",
+        "subject_id": "bc-railway-company",
+        "related_subject_ids": [],
+        "event_type": "transaction_approved",
+        "title": "CN’s bid for the operations accepted",
+        "date": {
+          "start": "2003-11-25",
+          "end": null,
+          "precision": "day",
+          "range_end_inclusive": false
+        },
+        "temporal_status": "source_reported_past",
+        "evidence": {
+          "source_url": "https://en.wikipedia.org/wiki/BC_Rail",
+          "source_title": "BC Rail — Wikipedia",
+          "basis": "secondary_reference"
+        },
+        "interpretation_notes": "From the English Wikipedia article on BC Rail (read 2026-11-12), which carries citation-needed tags; its own references were not followed in this pass.",
+        "reviewed_on": "2026-11-12"
+      },
+      "output_id": "atlas:bcrail-cn-bid-2003"
+    },
+    {
+      "origin": "atlas/events-bc-rail-2026-11-12.json#atlas:bcrail-cn-lease-2004",
+      "disposition": "accepted",
+      "input": {
+        "id": "atlas:bcrail-cn-lease-2004",
+        "subject_id": "bc-railway-company",
+        "related_subject_ids": [],
+        "event_type": "operations_transferred",
+        "title": "The deal closes: the railway’s operations are leased to CN for an initial 60 years, and the Company keeps the right-of-way, the leased assets, its lands and the Roberts Bank–Langley line",
+        "date": {
+          "start": "2004-07-15",
+          "end": null,
+          "precision": "day",
+          "range_end_inclusive": false
+        },
+        "temporal_status": "source_reported_past",
+        "evidence": {
+          "source_url": "https://en.wikipedia.org/wiki/BC_Rail",
+          "source_title": "BC Rail — Wikipedia",
+          "basis": "secondary_reference"
+        },
+        "interpretation_notes": "Wikipedia gives both $550 million and $1 billion for the deal. A planned sale of the Port Subdivision was cancelled. From the English Wikipedia article on BC Rail (read 2026-11-12), which carries citation-needed tags; its own references were not followed in this pass.",
+        "reviewed_on": "2026-11-12"
+      },
+      "output_id": "atlas:bcrail-cn-lease-2004"
+    },
+    {
+      "origin": "atlas/events-bc-rail-2026-11-12.json#atlas:bcrail-cn-abandonment-2025",
+      "disposition": "accepted",
+      "input": {
+        "id": "atlas:bcrail-cn-abandonment-2025",
+        "subject_id": "bc-railway-company",
+        "related_subject_ids": [],
+        "event_type": "announcement",
+        "title": "CN announces plans to abandon the leased route",
+        "date": {
+          "start": "2025-07-11",
+          "end": null,
+          "precision": "day",
+          "range_end_inclusive": false
+        },
+        "temporal_status": "source_reported_past",
+        "evidence": {
+          "source_url": "https://en.wikipedia.org/wiki/BC_Rail",
+          "source_title": "BC Rail — Wikipedia",
+          "basis": "secondary_reference"
+        },
+        "interpretation_notes": "In 2026 Rocky Mountaineer said it would end its trips over the line after that season, and Columbia Rail confirmed its intent to take over about 344 km of track. From the English Wikipedia article on BC Rail (read 2026-11-12), which carries citation-needed tags; its own references were not followed in this pass.",
+        "reviewed_on": "2026-11-12"
+      },
+      "output_id": "atlas:bcrail-cn-abandonment-2025"
     },
     {
       "origin": "atlas/events-bcfs-timeline.json#bcfs:70:department-of-lands-1908",
