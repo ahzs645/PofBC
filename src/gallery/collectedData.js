@@ -29,35 +29,8 @@ export const COLLECTED_BODIES = [
     "current": true,
     "status": "asset-collected",
     "observedDate": "2026-10-22",
-    "notes": "The official website SVG is a raster wrapper. Deliverable is its embedded PNG extracted losslessly; this is not a true vector. No adoption date established.",
+    "notes": "The emblem and wordmark, and the Research Centre lockup, as original vector artwork from a BC Housing report.",
     "assets": [
-      {
-        "id": "source-bc-housing-bc-housing-png",
-        "label": "BC Housing — bc housing",
-        "file": "identity-collected/bc-housing/bc-housing.png",
-        "format": "png",
-        "isVector": false,
-        "supplied": false,
-        "reconstruction": false,
-        "publisher": "British Columbia Housing Management Commission",
-        "sourcePage": "https://www.bchousing.org/",
-        "sourceUrl": "https://www.bchousing.org/themes/custom/bchousing/logo.svg",
-        "sourceLocator": null,
-        "sourceFile": null,
-        "sourceDate": null,
-        "observedDate": "2026-10-22",
-        "evidenceType": "official-embedded-raster",
-        "notes": "Lossless extraction of the embedded raster from the official website SVG; source wrapper contains no vector paths.",
-        "fidelityNote": "Original published drawing or image recovered from the cited source. Method: Lossless extraction of the embedded raster from the official website SVG; source wrapper contains no vector paths.",
-        "sha256": "c9f1a125906dfbe0c31a29081a66bb84b42aa882cfb45cb1135bbc0d6554a0de",
-        "bytes": 5406,
-        "darkBackground": false,
-        "extraction": {
-          "vector_type": "raster"
-        },
-        "previewWidth": 540,
-        "previewHeight": 124
-      },
       {
         "id": "vector-bc-housing-corporate-component-source-vector",
         "label": "BC Housing — Emblem and wordmark",
@@ -190,35 +163,8 @@ export const COLLECTED_BODIES = [
     "current": true,
     "status": "asset-collected",
     "observedDate": "2026-10-22",
-    "notes": "Artwork retrieved from official public website/brand kit. Current observation is not an adoption-date claim.",
+    "notes": "The logo as vector artwork from the official brand kit.",
     "assets": [
-      {
-        "id": "source-bc-assessment-bc-assessment-jpg",
-        "label": "BC Assessment — bc assessment",
-        "file": "identity-collected/bc-assessment/bc-assessment.jpg",
-        "format": "jpg",
-        "isVector": false,
-        "supplied": false,
-        "reconstruction": false,
-        "publisher": "British Columbia Assessment Authority",
-        "sourcePage": "https://info.bcassessment.ca/about/contact/Pages/Media-Kit.aspx",
-        "sourceUrl": "https://info.bcassessment.ca/about/contact/StockImages/BCA-full-colour.jpg",
-        "sourceLocator": null,
-        "sourceFile": null,
-        "sourceDate": null,
-        "observedDate": "2026-10-22",
-        "evidenceType": "official-download",
-        "notes": "Artwork retrieved from official public website/brand kit. Current observation is not an adoption-date claim.",
-        "fidelityNote": "Published file retained byte for byte and visually inspected. Its source is linked below.",
-        "sha256": "c86e1fa61e608e508a5ba4e1c9a5998e607476ffd68af76e6c4c6a83d92bd3cc",
-        "bytes": 1354645,
-        "darkBackground": false,
-        "extraction": {
-          "vector_type": "raster"
-        },
-        "previewWidth": 5100,
-        "previewHeight": 3300
-      },
       {
         "id": "source-bc-assessment-bc-assessment-eps",
         "label": "BC Assessment — bc assessment",
@@ -634,35 +580,8 @@ export const COLLECTED_BODIES = [
     "current": true,
     "status": "asset-collected",
     "observedDate": "2026-10-22",
-    "notes": "Official website serves a 195 x 159 px sprite. Selected PNG is the exact top 195 x 59 px area defined by header CSS. Source and crop bounds recorded; no upscale.",
+    "notes": "The logo as original vector artwork, reversed, from the 2024 history book.",
     "assets": [
-      {
-        "id": "source-columbia-power-columbia-power-png",
-        "label": "Columbia Power — columbia power",
-        "file": "identity-collected/columbia-power/columbia-power.png",
-        "format": "png",
-        "isVector": false,
-        "supplied": false,
-        "reconstruction": false,
-        "publisher": "Columbia Power Corporation",
-        "sourcePage": "https://columbiapower.org/",
-        "sourceUrl": "https://columbiapower.org/wp-content/themes/columbiapower/images/logo.png",
-        "sourceLocator": null,
-        "sourceFile": null,
-        "sourceDate": null,
-        "observedDate": "2026-10-22",
-        "evidenceType": "official-download",
-        "notes": "Lossless crop of top 195 x 59 px of official sprite, exactly matching header .logo CSS. No tracing or upscaling. Original retained in research sources.",
-        "fidelityNote": "Published file retained byte for byte and visually inspected. Its source is linked below.",
-        "sha256": "67ae5140d98d9a6279df9def96ef69d1490b384c9ee899bad77d0216093a212f",
-        "bytes": 2208,
-        "darkBackground": false,
-        "extraction": {
-          "vector_type": "raster"
-        },
-        "previewWidth": 195,
-        "previewHeight": 59
-      },
       {
         "id": "vector-columbia-power-2024-reversed-source-vector",
         "label": "Columbia Power Corporation — Reversed, 2024 history book",
@@ -884,35 +803,8 @@ export const COLLECTED_BODIES = [
     "current": true,
     "status": "asset-collected",
     "observedDate": "2026-10-22",
-    "notes": "Artwork retrieved from official public website/brand kit. Current observation is not an adoption-date claim.",
+    "notes": "One design in full colour and reversed, both original vector artwork from the Spring 2026 brochure.",
     "assets": [
-      {
-        "id": "source-infrastructure-bc-infrastructure-bc-png",
-        "label": "Infrastructure BC — infrastructure bc",
-        "file": "identity-collected/infrastructure-bc/infrastructure-bc.png",
-        "format": "png",
-        "isVector": false,
-        "supplied": false,
-        "reconstruction": false,
-        "publisher": "Infrastructure BC Inc.",
-        "sourcePage": "https://www.infrastructurebc.com/",
-        "sourceUrl": "https://www.infrastructurebc.com/wp-content/uploads/2021/07/infra-bc-logo-email-sig.png",
-        "sourceLocator": null,
-        "sourceFile": null,
-        "sourceDate": null,
-        "observedDate": "2026-10-22",
-        "evidenceType": "official-download",
-        "notes": "Artwork retrieved from official public website/brand kit. Current observation is not an adoption-date claim.",
-        "fidelityNote": "Published file retained byte for byte and visually inspected. Its source is linked below.",
-        "sha256": "c1f27508e17c62ad5c8feb5e1f54b6d000e726e1d72c6e18e3171c8a1177a332",
-        "bytes": 4723,
-        "darkBackground": false,
-        "extraction": {
-          "vector_type": "raster"
-        },
-        "previewWidth": 158,
-        "previewHeight": 77
-      },
       {
         "id": "vector-infrastructure-bc-2026-colour-source-vector",
         "label": "Infrastructure BC — Full colour, Spring 2026 brochure",
@@ -935,7 +827,8 @@ export const COLLECTED_BODIES = [
         "sha256": "a825f5a8004239678991db41cec26a94f6a44449fb12b6e59d798e0fd7d3adaa",
         "bytes": 15650,
         "darkBackground": false,
-        "search": "vector-search-2026-10-30"
+        "search": "vector-search-2026-10-30",
+        "versionLabel": "Full colour"
       },
       {
         "id": "vector-infrastructure-bc-2026-reversed-source-vector",
@@ -959,7 +852,9 @@ export const COLLECTED_BODIES = [
         "sha256": "cf88102ce774602138e3c1e6ad3cb4f912c708b8e2238a15718fb4d5ba3e269c",
         "bytes": 13225,
         "darkBackground": true,
-        "search": "vector-search-2026-10-30"
+        "search": "vector-search-2026-10-30",
+        "versionLabel": "Reversed",
+        "variantOf": "vector-infrastructure-bc-2026-colour-source-vector"
       }
     ]
   },
@@ -1056,35 +951,8 @@ export const COLLECTED_BODIES = [
     "current": true,
     "status": "asset-collected",
     "observedDate": "2026-10-22",
-    "notes": "Artwork retrieved from official public website/brand kit. Current observation is not an adoption-date claim.",
+    "notes": "One design in full colour and reversed, both original vector artwork from its 2014 and 2023 reports.",
     "assets": [
-      {
-        "id": "source-community-living-bc-community-living-bc-png",
-        "label": "CLBC — community living bc",
-        "file": "identity-collected/community-living-bc/community-living-bc.png",
-        "format": "png",
-        "isVector": false,
-        "supplied": false,
-        "reconstruction": false,
-        "publisher": "Community Living British Columbia",
-        "sourcePage": "https://www.communitylivingbc.ca/",
-        "sourceUrl": "https://www.communitylivingbc.ca/wp-content/uploads/2018/01/logo-e1527801547458.png",
-        "sourceLocator": null,
-        "sourceFile": null,
-        "sourceDate": null,
-        "observedDate": "2026-10-22",
-        "evidenceType": "official-download",
-        "notes": "Artwork retrieved from official public website/brand kit. Current observation is not an adoption-date claim.",
-        "fidelityNote": "Published file retained byte for byte and visually inspected. Its source is linked below.",
-        "sha256": "47993b388f2349fd00148821dcb2099d0275bec8b35de6c4e1c6c7aa0ddea2fe",
-        "bytes": 6207,
-        "darkBackground": false,
-        "extraction": {
-          "vector_type": "raster"
-        },
-        "previewWidth": 230,
-        "previewHeight": 150
-      },
       {
         "id": "vector-community-living-bc-2014-reversed-source-vector",
         "label": "Community Living British Columbia — Reversed, 2013/14 annual report",
@@ -1107,7 +975,9 @@ export const COLLECTED_BODIES = [
         "sha256": "2a7f0f90d9f8d7cb2c0e3c1cd9f0ce50f788bc1da524d390a600310e8b79236a",
         "bytes": 13808,
         "darkBackground": true,
-        "search": "vector-search-2026-10-30"
+        "search": "vector-search-2026-10-30",
+        "versionLabel": "Reversed",
+        "variantOf": "vector-community-living-bc-2023-colour-source-vector"
       },
       {
         "id": "vector-community-living-bc-2023-colour-source-vector",
@@ -1131,7 +1001,8 @@ export const COLLECTED_BODIES = [
         "sha256": "47e3bc440e19d94198c81b623fd3a8f2d2eae60e892057d4a01055d3c6f17fb5",
         "bytes": 13869,
         "darkBackground": false,
-        "search": "vector-search-2026-10-30"
+        "search": "vector-search-2026-10-30",
+        "versionLabel": "Full colour"
       }
     ]
   },
@@ -1145,35 +1016,8 @@ export const COLLECTED_BODIES = [
     "current": true,
     "status": "asset-collected",
     "observedDate": "2026-10-22",
-    "notes": "Artwork retrieved from official public website/brand kit. Current observation is not an adoption-date claim.",
+    "notes": "One design, in full colour and with white lettering, as vector artwork from the official brand kit.",
     "assets": [
-      {
-        "id": "source-knowledge-network-knowledge-network-colour-png",
-        "label": "Knowledge Network — knowledge network colour",
-        "file": "identity-collected/knowledge-network/knowledge-network-colour.png",
-        "format": "png",
-        "isVector": false,
-        "supplied": false,
-        "reconstruction": false,
-        "publisher": "Knowledge Network Corporation",
-        "sourcePage": "https://about.knowledge.ca/independent-producers/working-with-knowledge/",
-        "sourceUrl": "https://about.knowledge.ca/wp-content/uploads/2026/04/kn-brand-assets.zip",
-        "sourceLocator": null,
-        "sourceFile": null,
-        "sourceDate": null,
-        "observedDate": "2026-10-22",
-        "evidenceType": "official-archive-member",
-        "notes": "Original file extracted unchanged from official logo kit.",
-        "fidelityNote": "Original published drawing or image recovered from the cited source. Method: Original file extracted unchanged from official logo kit.",
-        "sha256": "15caa3c1fcae77bb3bc5320b626b2f4849f799707620882fe94e5a3aea869693",
-        "bytes": 55122,
-        "darkBackground": false,
-        "extraction": {
-          "vector_type": "raster"
-        },
-        "previewWidth": 2928,
-        "previewHeight": 576
-      },
       {
         "id": "source-knowledge-network-knowledge-network-svg",
         "label": "Knowledge Network — knowledge network",
@@ -1200,7 +1044,9 @@ export const COLLECTED_BODIES = [
         },
         "preview": "identity-collected/knowledge-network/knowledge-network-svg-preview.png",
         "previewWidth": 1200,
-        "previewHeight": 240
+        "previewHeight": 240,
+        "versionLabel": "White lettering",
+        "variantOf": "source-knowledge-network-knowledge-network-colour-eps"
       },
       {
         "id": "source-knowledge-network-knowledge-network-colour-eps",
@@ -1228,7 +1074,8 @@ export const COLLECTED_BODIES = [
         },
         "preview": "identity-collected/knowledge-network/knowledge-network-colour-eps-preview.png",
         "previewWidth": 1406,
-        "previewHeight": 277
+        "previewHeight": 277,
+        "versionLabel": "Full colour"
       }
     ]
   },
@@ -1242,35 +1089,8 @@ export const COLLECTED_BODIES = [
     "current": true,
     "status": "asset-collected",
     "observedDate": "2026-10-22",
-    "notes": "Logo image attributed by CivicInfo BC listing for B.C. Pavilion Corporation. The official PavCo site could be read through web search but direct download loops; the 2024/25 government-hosted report cover uses the generic Province mark and was not substituted. Treat image as secondary-source current observation, not dated logo history.",
+    "notes": "One design in full colour and in white, both original vector artwork from PavCo’s own publications.",
     "assets": [
-      {
-        "id": "source-bc-pavilion-corporation-pavco-png",
-        "label": "PavCo — pavco",
-        "file": "identity-collected/bc-pavilion-corporation/pavco.png",
-        "format": "png",
-        "isVector": false,
-        "supplied": false,
-        "reconstruction": false,
-        "publisher": "CivicInfo BC",
-        "sourcePage": "https://www.civicinfo.bc.ca/ministries-and-crowns?id=790",
-        "sourceUrl": "https://civicinfo.s3.ca-central-1.amazonaws.com/public_images/images/civicjobs/British_Columbia/sponsor/Logos/PAVCO.png",
-        "sourceLocator": null,
-        "sourceFile": null,
-        "sourceDate": null,
-        "observedDate": "2026-10-22",
-        "evidenceType": "secondary-directory-image",
-        "notes": "Original image downloaded unchanged from CivicInfo BC organization listing.",
-        "fidelityNote": "Original published drawing or image recovered from the cited source. Method: Original image downloaded unchanged from CivicInfo BC organization listing.",
-        "sha256": "6a4fec762a2803e60a6aa30d20771f7b66fa43b7aa44674038afb325680098b3",
-        "bytes": 4949,
-        "darkBackground": false,
-        "extraction": {
-          "vector_type": "raster"
-        },
-        "previewWidth": 200,
-        "previewHeight": 200
-      },
       {
         "id": "vector-pavco-2025-26-colour-source-vector",
         "label": "British Columbia Pavilion Corporation — Full colour, FY2025/26 year in review",
@@ -1293,7 +1113,8 @@ export const COLLECTED_BODIES = [
         "sha256": "f925f1e70aca020f8c088aa017d6f5c03ef03a28bf5a9267934eb8f2affe68b2",
         "bytes": 3919,
         "darkBackground": false,
-        "search": "vector-followup-2026-11-08"
+        "search": "vector-followup-2026-11-08",
+        "versionLabel": "Full colour"
       },
       {
         "id": "vector-pavco-2023-reversed-source-vector",
@@ -1317,7 +1138,9 @@ export const COLLECTED_BODIES = [
         "sha256": "9bdba59f938de223ed25cf01e452b7dca93439b212bfba8c3db2f9c63f1f2b62",
         "bytes": 4630,
         "darkBackground": true,
-        "search": "vector-followup-2026-11-08"
+        "search": "vector-followup-2026-11-08",
+        "versionLabel": "White",
+        "variantOf": "vector-pavco-2025-26-colour-source-vector"
       }
     ]
   },
@@ -1438,35 +1261,8 @@ export const COLLECTED_BODIES = [
     "current": true,
     "status": "asset-collected",
     "observedDate": "2026-10-22",
-    "notes": "Standard horizontal and vertical artwork from official 2026 logo kit, plus the current 10th-anniversary SVG. Anniversary variant is explicitly identified. The kit download path is not used as a logo-adoption date.",
+    "notes": "The horizontal and vertical logos from the official 2026 logo kit, as vector artwork, and the 10th-anniversary logo.",
     "assets": [
-      {
-        "id": "source-forest-enhancement-society-fesbc-horizontal-png",
-        "label": "FESBC — fesbc horizontal",
-        "file": "identity-collected/forest-enhancement-society/fesbc-horizontal.png",
-        "format": "png",
-        "isVector": false,
-        "supplied": false,
-        "reconstruction": false,
-        "publisher": "Forest Enhancement Society of BC",
-        "sourcePage": "https://fesbc.ca/fesbc-media-kit/",
-        "sourceUrl": "https://fesbc.ca/wp-content/uploads/2026/01/FESBC-Logos-2026.zip",
-        "sourceLocator": null,
-        "sourceFile": null,
-        "sourceDate": null,
-        "observedDate": "2026-10-22",
-        "evidenceType": "official-archive-member",
-        "notes": "Original artwork extracted unchanged from official FESBC logo kit.",
-        "fidelityNote": "Original published drawing or image recovered from the cited source. Method: Original artwork extracted unchanged from official FESBC logo kit.",
-        "sha256": "42c71d7ad4252ba356c011a229dd3250a3ddeb14fa98f471e86dd0ab4a3c69c8",
-        "bytes": 71554,
-        "darkBackground": false,
-        "extraction": {
-          "vector_type": "raster"
-        },
-        "previewWidth": 1501,
-        "previewHeight": 503
-      },
       {
         "id": "source-forest-enhancement-society-fesbc-10th-anniversary-svg",
         "label": "FESBC — fesbc 10th anniversary",
@@ -1550,33 +1346,6 @@ export const COLLECTED_BODIES = [
         "preview": "identity-collected/forest-enhancement-society/fesbc-vertical-eps-preview.png",
         "previewWidth": 526,
         "previewHeight": 538
-      },
-      {
-        "id": "source-forest-enhancement-society-fesbc-vertical-png",
-        "label": "FESBC — fesbc vertical",
-        "file": "identity-collected/forest-enhancement-society/fesbc-vertical.png",
-        "format": "png",
-        "isVector": false,
-        "supplied": false,
-        "reconstruction": false,
-        "publisher": "Forest Enhancement Society of BC",
-        "sourcePage": "https://fesbc.ca/fesbc-media-kit/",
-        "sourceUrl": "https://fesbc.ca/wp-content/uploads/2026/01/FESBC-Logos-2026.zip",
-        "sourceLocator": null,
-        "sourceFile": null,
-        "sourceDate": null,
-        "observedDate": "2026-10-22",
-        "evidenceType": "official-archive-member",
-        "notes": "Original artwork extracted unchanged from official FESBC logo kit.",
-        "fidelityNote": "Original published drawing or image recovered from the cited source. Method: Original artwork extracted unchanged from official FESBC logo kit.",
-        "sha256": "1174cdd81f633980a7691ac787c9ec838323022e20fbed1d1792e10ac25a3908",
-        "bytes": 101032,
-        "darkBackground": false,
-        "extraction": {
-          "vector_type": "raster"
-        },
-        "previewWidth": 1092,
-        "previewHeight": 1114
       }
     ]
   },
@@ -1705,62 +1474,8 @@ export const COLLECTED_BODIES = [
     "current": true,
     "status": "asset-collected",
     "observedDate": "2026-10-22",
-    "notes": "Artwork retrieved from official public website/brand kit. Current observation is not an adoption-date claim.",
+    "notes": "The stacked logo as vector artwork from the official brand kit, and the wordmark alone as published images.",
     "assets": [
-      {
-        "id": "source-innovate-bc-innovate-bc-teal-png",
-        "label": "Innovate BC — innovate bc teal",
-        "file": "identity-collected/innovate-bc/innovate-bc-teal.png",
-        "format": "png",
-        "isVector": false,
-        "supplied": false,
-        "reconstruction": false,
-        "publisher": "Innovate BC",
-        "sourcePage": "https://www.innovatebc.ca/media-kit",
-        "sourceUrl": "https://3044422.fs1.hubspotusercontent-na1.net/hubfs/3044422/Website%20Assets/Innovate%20BC%20Logos.zip",
-        "sourceLocator": null,
-        "sourceFile": null,
-        "sourceDate": null,
-        "observedDate": "2026-10-22",
-        "evidenceType": "official-archive-member",
-        "notes": "Original file extracted unchanged from official logo kit.",
-        "fidelityNote": "Original published drawing or image recovered from the cited source. Method: Original file extracted unchanged from official logo kit.",
-        "sha256": "236fbb709e2065cabe7c694e9b9936e9d98216d9df0913631f356ec3bdac477d",
-        "bytes": 135309,
-        "darkBackground": false,
-        "extraction": {
-          "vector_type": "raster"
-        },
-        "previewWidth": 600,
-        "previewHeight": 481
-      },
-      {
-        "id": "source-innovate-bc-innovate-bc-logo-png",
-        "label": "Innovate BC — innovate bc logo",
-        "file": "identity-collected/innovate-bc/innovate-bc-logo.png",
-        "format": "png",
-        "isVector": false,
-        "supplied": false,
-        "reconstruction": false,
-        "publisher": "Innovate BC",
-        "sourcePage": "https://www.innovatebc.ca/media-kit",
-        "sourceUrl": "https://3044422.fs1.hubspotusercontent-na1.net/hub/3044422/hubfs/Logos/InnovateBC-Logo.png?width=154&height=22&name=InnovateBC-Logo.png",
-        "sourceLocator": null,
-        "sourceFile": null,
-        "sourceDate": null,
-        "observedDate": "2026-10-22",
-        "evidenceType": "official-download",
-        "notes": "Artwork retrieved from official public website/brand kit. Current observation is not an adoption-date claim.",
-        "fidelityNote": "Published file retained byte for byte and visually inspected. Its source is linked below.",
-        "sha256": "b674a8a1f9becd06d4c448d4c3b73b07c90cfcb0a3f21aa0534aacaa669f19c0",
-        "bytes": 3533,
-        "darkBackground": false,
-        "extraction": {
-          "vector_type": "raster"
-        },
-        "previewWidth": 154,
-        "previewHeight": 22
-      },
       {
         "id": "source-innovate-bc-innovate-bc-wordmark-png",
         "label": "Innovate BC — innovate bc wordmark",
@@ -1828,35 +1543,8 @@ export const COLLECTED_BODIES = [
     "current": true,
     "status": "asset-collected",
     "observedDate": "2026-10-22",
-    "notes": "Artwork retrieved from official public website/brand kit. Current observation is not an adoption-date claim.",
+    "notes": "The logo as original vector artwork from the 2020/21 annual report.",
     "assets": [
-      {
-        "id": "source-bc-family-maintenance-agency-bc-family-maintenance-agency-png",
-        "label": "BCFMA — bc family maintenance agency",
-        "file": "identity-collected/bc-family-maintenance-agency/bc-family-maintenance-agency.png",
-        "format": "png",
-        "isVector": false,
-        "supplied": false,
-        "reconstruction": false,
-        "publisher": "BC Family Maintenance Agency Ltd.",
-        "sourcePage": "https://www.bcfma.ca/",
-        "sourceUrl": "https://www.bcfma.ca/assets/themes/fmep/img/bcfma-logo.png",
-        "sourceLocator": null,
-        "sourceFile": null,
-        "sourceDate": null,
-        "observedDate": "2026-10-22",
-        "evidenceType": "official-download",
-        "notes": "Artwork retrieved from official public website/brand kit. Current observation is not an adoption-date claim.",
-        "fidelityNote": "Published file retained byte for byte and visually inspected. Its source is linked below.",
-        "sha256": "fe95e23782b51ba62a03a35d5bb2452f04d4eacfb9fe784bbcf68891edbd099a",
-        "bytes": 71905,
-        "darkBackground": false,
-        "extraction": {
-          "vector_type": "raster"
-        },
-        "previewWidth": 1125,
-        "previewHeight": 380
-      },
       {
         "id": "vector-bcfma-2021-source-vector",
         "label": "BC Family Maintenance Agency — Teal emblem and wordmark, 2020/21 report",
@@ -1935,7 +1623,7 @@ export const COLLECTED_BODIES = [
     "current": true,
     "status": "asset-collected",
     "observedDate": "2026-10-22",
-    "notes": "Artwork retrieved from official public website/brand kit. Current observation is not an adoption-date claim.",
+    "notes": "The logo as vector artwork from the official website.",
     "assets": [
       {
         "id": "source-inbc-inbc-svg",
@@ -1964,33 +1652,6 @@ export const COLLECTED_BODIES = [
         "preview": "identity-collected/inbc/inbc-svg-preview.png",
         "previewWidth": 1200,
         "previewHeight": 600
-      },
-      {
-        "id": "source-inbc-inbc-print-png",
-        "label": "InBC — inbc print",
-        "file": "identity-collected/inbc/inbc-print.png",
-        "format": "png",
-        "isVector": false,
-        "supplied": false,
-        "reconstruction": false,
-        "publisher": "InBC Investment Corp.",
-        "sourcePage": "https://inbcinvestment.com/media/",
-        "sourceUrl": "https://inbcinvestment.com/wp-content/uploads/2024/02/InBC-logo-primary-print.png",
-        "sourceLocator": null,
-        "sourceFile": null,
-        "sourceDate": null,
-        "observedDate": "2026-10-22",
-        "evidenceType": "official-download",
-        "notes": "Artwork retrieved from official public website/brand kit. Current observation is not an adoption-date claim.",
-        "fidelityNote": "Published file retained byte for byte and visually inspected. Its source is linked below.",
-        "sha256": "3089c215b18c0e2dc50bbb262fb22a89ce03f71f93205e6651d61984394fc391",
-        "bytes": 384442,
-        "darkBackground": false,
-        "extraction": {
-          "vector_type": "raster"
-        },
-        "previewWidth": 2236,
-        "previewHeight": 1319
       }
     ]
   },
@@ -2004,35 +1665,8 @@ export const COLLECTED_BODIES = [
     "current": true,
     "status": "asset-collected",
     "observedDate": "2026-10-22",
-    "notes": "Artwork retrieved from official public website/brand kit. Current observation is not an adoption-date claim.",
+    "notes": "The logo as original vector artwork from the 2022–2025 strategic plan.",
     "assets": [
-      {
-        "id": "source-bc-council-for-international-education-bccie-png",
-        "label": "BCCIE — bccie",
-        "file": "identity-collected/bc-council-for-international-education/bccie.png",
-        "format": "png",
-        "isVector": false,
-        "supplied": false,
-        "reconstruction": false,
-        "publisher": "British Columbia Council for International Education",
-        "sourcePage": "https://bccie.bc.ca/",
-        "sourceUrl": "https://bccie.bc.ca/wp-content/uploads/2023/01/bccie-logo.png",
-        "sourceLocator": null,
-        "sourceFile": null,
-        "sourceDate": null,
-        "observedDate": "2026-10-22",
-        "evidenceType": "official-download",
-        "notes": "Artwork retrieved from official public website/brand kit. Current observation is not an adoption-date claim.",
-        "fidelityNote": "Published file retained byte for byte and visually inspected. Its source is linked below.",
-        "sha256": "9c3859349a52e0e0522b0f8ccffbb8335aacc5d78db69b6ea31032bcce673573",
-        "bytes": 7077,
-        "darkBackground": false,
-        "extraction": {
-          "vector_type": "raster"
-        },
-        "previewWidth": 319,
-        "previewHeight": 78
-      },
       {
         "id": "vector-bccie-2022-source-vector",
         "label": "BC Council for International Education — Full colour, 2022–2025 strategic plan",
@@ -2148,80 +1782,8 @@ export const COLLECTED_BODIES = [
     "current": true,
     "status": "asset-collected",
     "observedDate": "2026-10-22",
-    "notes": "Official current logos and a June 2004 letterhead sighting",
+    "notes": "The horizontal logo as original vector artwork, seen on a June 2004 letterhead and in a 2023 roadmap, with the stacked logo and the symbol as published images.",
     "assets": [
-      {
-        "id": "source-interior-health-interior-health-png",
-        "label": "Interior Health — interior health",
-        "file": "identity-collected/interior-health/interior-health.png",
-        "format": "png",
-        "isVector": false,
-        "supplied": false,
-        "reconstruction": false,
-        "publisher": "Interior Health",
-        "sourcePage": "https://www.interiorhealth.ca/about-ih/media-centre-and-alerts",
-        "sourceUrl": "https://www.interiorhealth.ca/sites/default/files/header-logo-blue%403x.png",
-        "sourceLocator": null,
-        "sourceFile": null,
-        "sourceDate": null,
-        "observedDate": "2026-10-22",
-        "evidenceType": "official-website-original",
-        "notes": "Original logo file served by the official organization website, observed on October 22, 2026. Publication and first-use dates are not established. ",
-        "fidelityNote": "Original published drawing or image recovered from the cited source. Method: Original logo file served by the official organization website, observed on October 22, 2026. Publication and first-use dates are not established. ",
-        "sha256": "4696fbef0af9a6c1dcceec3a912bab41fe5eba4e314a71845b8bfc72db6960c9",
-        "bytes": 5545,
-        "darkBackground": false,
-        "previewWidth": 747,
-        "previewHeight": 162
-      },
-      {
-        "id": "source-interior-health-interior-health-white-png",
-        "label": "Interior Health — interior health white",
-        "file": "identity-collected/interior-health/interior-health-white.png",
-        "format": "png",
-        "isVector": false,
-        "supplied": false,
-        "reconstruction": false,
-        "publisher": "Interior Health",
-        "sourcePage": "https://www.interiorhealth.ca/about-ih/media-centre-and-alerts",
-        "sourceUrl": "https://www.interiorhealth.ca/sites/default/files/logo/IH-logo-white.png",
-        "sourceLocator": null,
-        "sourceFile": null,
-        "sourceDate": null,
-        "observedDate": "2026-10-22",
-        "evidenceType": "official-website-original",
-        "notes": "Original logo file served by the official organization website, observed on October 22, 2026. Publication and first-use dates are not established.  Displayed against a dark ground to show its original light lettering.",
-        "fidelityNote": "Original published drawing or image recovered from the cited source. Method: Original logo file served by the official organization website, observed on October 22, 2026. Publication and first-use dates are not established. ",
-        "sha256": "61a5784c02d833ca0226e65d7c8140ce1ca7f1d68c76eeef1573c1b6f6befa2d",
-        "bytes": 3284,
-        "darkBackground": true,
-        "previewWidth": 250,
-        "previewHeight": 50
-      },
-      {
-        "id": "source-interior-health-interior-health-horizontal-jpg",
-        "label": "Interior Health — interior health horizontal",
-        "file": "identity-collected/interior-health/interior-health-horizontal.jpg",
-        "format": "jpg",
-        "isVector": false,
-        "supplied": false,
-        "reconstruction": false,
-        "publisher": "Interior Health",
-        "sourcePage": "https://www.interiorhealth.ca/about-ih/media-centre-and-alerts",
-        "sourceUrl": "https://www.interiorhealth.ca/sites/default/files/images/ih-logo-horizontal-full-colour.jpg",
-        "sourceLocator": null,
-        "sourceFile": null,
-        "sourceDate": null,
-        "observedDate": "2026-10-22",
-        "evidenceType": "official-website-original",
-        "notes": "Original logo file served by the official organization website, observed on October 22, 2026. Publication and first-use dates are not established. ",
-        "fidelityNote": "Original published drawing or image recovered from the cited source. Method: Original logo file served by the official organization website, observed on October 22, 2026. Publication and first-use dates are not established. ",
-        "sha256": "db5ad136626f44f0c8bd0349f37f9ac9ebf0d2164f6f653f001ec0746a0709f5",
-        "bytes": 22399,
-        "darkBackground": false,
-        "previewWidth": 1080,
-        "previewHeight": 225
-      },
       {
         "id": "source-interior-health-interior-health-stacked-jpg",
         "label": "Interior Health — interior health stacked",
@@ -2271,41 +1833,6 @@ export const COLLECTED_BODIES = [
         "previewHeight": 635
       },
       {
-        "id": "source-interior-health-interior-health-2004-letterhead-png",
-        "label": "Interior Health — interior health 2004 letterhead",
-        "file": "identity-collected/interior-health/interior-health-2004-letterhead.png",
-        "format": "png",
-        "isVector": false,
-        "supplied": false,
-        "reconstruction": false,
-        "publisher": "Interior Health; BC Government FOI disclosure TRA-2017-70554",
-        "sourcePage": "https://docs.openinfo.gov.bc.ca/Response_Package_TRA-2017-70554.pdf",
-        "sourceUrl": "https://docs.openinfo.gov.bc.ca/Response_Package_TRA-2017-70554.pdf",
-        "sourceLocator": "PDF page 5",
-        "sourceFile": null,
-        "sourceDate": "2004-06-17",
-        "observedDate": "2026-10-22",
-        "evidenceType": "faithful-crop-of-primary-document",
-        "notes": "Original Interior Health mark on letterhead dated June 17, 2004. Faithful crop preserves the scanned artwork and serif-free wordmark; no first-use claim.",
-        "fidelityNote": "Original published drawing or image recovered from the cited source. Method: Original Interior Health mark on letterhead dated June 17, 2004. Faithful crop preserves the scanned artwork and serif-free wordmark; no first-use claim.",
-        "sha256": "713991beae53883c6170d25e34ad56c595f2d0da67d781eafe7985495b768e91",
-        "bytes": 26992,
-        "darkBackground": false,
-        "dateNote": "A dated sighting is not a complete usage period.",
-        "extraction": {
-          "source_pdf_page": 5,
-          "crop_bbox_pdf_points": [
-            64,
-            40,
-            385,
-            97
-          ],
-          "render_scale": 4
-        },
-        "previewWidth": 1284,
-        "previewHeight": 228
-      },
-      {
         "id": "vector-interior-health-blue-horizontal-source-extraction",
         "label": "Interior Health — Blue, horizontal, 2023 roadmap",
         "file": "identity-collected/interior-health/interior-health-blue-horizontal-source-extraction.svg",
@@ -2327,7 +1854,13 @@ export const COLLECTED_BODIES = [
         "sha256": "49df1519c3628d381fe35a7072d4ba73b628b9c94595707abd7bfaeb8b6067c4",
         "bytes": 5358,
         "darkBackground": false,
-        "search": "vector-search-2026-10-30"
+        "search": "vector-search-2026-10-30",
+        "alsoSeen": [
+          {
+            "date": "2004-06-17",
+            "source": "https://docs.openinfo.gov.bc.ca/Response_Package_TRA-2017-70554.pdf"
+          }
+        ]
       }
     ]
   },
@@ -2517,32 +2050,8 @@ export const COLLECTED_BODIES = [
     "current": true,
     "status": "asset-collected",
     "observedDate": "2026-10-22",
-    "notes": "Official current website logo",
+    "notes": "One design in black and in white, as original vector artwork.",
     "assets": [
-      {
-        "id": "source-provincial-health-services-authority-phsa-png",
-        "label": "Official current website logo",
-        "file": "identity-collected/provincial-health-services-authority/phsa.png",
-        "format": "png",
-        "isVector": false,
-        "supplied": false,
-        "reconstruction": false,
-        "publisher": "Provincial Health Services Authority",
-        "sourcePage": "https://www.phsa.ca/",
-        "sourceUrl": "https://www.phsa.ca/SiteAssets/phsa-logo.png",
-        "sourceLocator": null,
-        "sourceFile": null,
-        "sourceDate": null,
-        "observedDate": "2026-10-22",
-        "evidenceType": "official-website-original",
-        "notes": "Original logo file served by the official organization website, observed on October 22, 2026. Publication and first-use dates are not established. ",
-        "fidelityNote": "Original published drawing or image recovered from the cited source. Method: Original logo file served by the official organization website, observed on October 22, 2026. Publication and first-use dates are not established. ",
-        "sha256": "66526434c6bf2e521bd04e0a2f694b5f1de191af18deb50b126be78769ddc8ab",
-        "bytes": 10153,
-        "darkBackground": false,
-        "previewWidth": 242,
-        "previewHeight": 63
-      },
       {
         "id": "vector-phsa-black-source-extraction",
         "label": "Provincial Health Services Authority — Black",
@@ -2565,7 +2074,8 @@ export const COLLECTED_BODIES = [
         "sha256": "7e7c757fdf1521d5bc2e15b31274dbb6a1bbc1fb18c3ba1835ea096abe662f49",
         "bytes": 18827,
         "darkBackground": false,
-        "search": "vector-search-2026-10-30"
+        "search": "vector-search-2026-10-30",
+        "versionLabel": "Black"
       },
       {
         "id": "vector-phsa-white-source-extraction",
@@ -2589,7 +2099,9 @@ export const COLLECTED_BODIES = [
         "sha256": "71e9bc14b3d457ec69d21dfb7fd07fbf8ba4f02bd75534d1b288bf109e3dde02",
         "bytes": 19501,
         "darkBackground": true,
-        "search": "vector-search-2026-10-30"
+        "search": "vector-search-2026-10-30",
+        "versionLabel": "White",
+        "variantOf": "vector-phsa-black-source-extraction"
       }
     ]
   },
@@ -2665,7 +2177,8 @@ export const COLLECTED_BODIES = [
         "bytes": 17478,
         "darkBackground": false,
         "previewWidth": 552,
-        "previewHeight": 114
+        "previewHeight": 114,
+        "versionLabel": "Full colour"
       },
       {
         "id": "source-first-nations-health-authority-fnha-white-png",
@@ -2689,7 +2202,9 @@ export const COLLECTED_BODIES = [
         "bytes": 8727,
         "darkBackground": true,
         "previewWidth": 442,
-        "previewHeight": 298
+        "previewHeight": 298,
+        "versionLabel": "White",
+        "variantOf": "source-first-nations-health-authority-fnha-horizontal-png"
       },
       {
         "id": "vector-fnha-icon",
@@ -2737,7 +2252,8 @@ export const COLLECTED_BODIES = [
         "sha256": "61f7becb41d30ae82d09e47d80545040c3e231ab8379df6d9f0380a37acf6eef",
         "bytes": 29666,
         "darkBackground": false,
-        "search": "vector-search-2026-10-30"
+        "search": "vector-search-2026-10-30",
+        "versionLabel": "Full colour"
       },
       {
         "id": "vector-fnha-logo-white",
@@ -2761,7 +2277,9 @@ export const COLLECTED_BODIES = [
         "sha256": "14708519a9a6f75bee3970da283c66929ff4086daa7a7878c365c1253653580c",
         "bytes": 32806,
         "darkBackground": true,
-        "search": "vector-search-2026-10-30"
+        "search": "vector-search-2026-10-30",
+        "versionLabel": "White lettering",
+        "variantOf": "vector-fnha-logo-colour"
       }
     ]
   },
@@ -3320,33 +2838,8 @@ export const COLLECTED_BODIES = [
     "current": false,
     "status": "asset-collected",
     "observedDate": "2026-10-22",
-    "notes": "Trust mark from its 1989 conservation publication, with original vector artwork from the 2001/02 annual report.",
+    "notes": "The boxed Trust mark as original vector artwork from the 2001/02 annual report; the same mark is on its 1989 conservation publication.",
     "assets": [
-      {
-        "id": "source-bc-heritage-trust-bc-heritage-trust-1989-logo-png",
-        "label": "Trust mark from its 1989 conservation publication",
-        "file": "identity-collected/bc-heritage-trust/bc-heritage-trust-1989-logo.png",
-        "format": "png",
-        "isVector": false,
-        "supplied": false,
-        "reconstruction": false,
-        "publisher": "British Columbia Heritage Trust; preserved by Heritage BC",
-        "sourcePage": "https://heritagebc.ca/learning-centre/heritage-place-conservation/tips-tools-publications-guides/",
-        "sourceUrl": "https://heritagebc.ca/wp-content/uploads/2017/10/Rehabilitation-Principles-and-Guidelines-Series-9.pdf",
-        "sourceLocator": "PDF page 3",
-        "sourceFile": null,
-        "sourceDate": "1989",
-        "observedDate": "2026-10-22",
-        "evidenceType": "original-publication-crop",
-        "notes": "Original scanned wordmark from Principles of Heritage Conservation, Technical Paper Series 9. The date is confirmed by the publication listings; the hosting upload date is not used.",
-        "fidelityNote": "Original published drawing or image recovered from the cited source. Method: Original scanned wordmark from Principles of Heritage Conservation, Technical Paper Series 9. The date is confirmed by the publication listings; the hosting upload date is not used.",
-        "sha256": "2a60eea8cbfaed5fd4a65608c0709fef0ae960be00b14e5b7d63aa9f2a54e15b",
-        "bytes": 37596,
-        "darkBackground": false,
-        "dateNote": "A dated sighting is not a complete usage period.",
-        "previewWidth": 864,
-        "previewHeight": 450
-      },
       {
         "id": "historical-bc-heritage-trust-2002",
         "label": "Boxed mark, 2001/02 annual report",
@@ -3369,7 +2862,13 @@ export const COLLECTED_BODIES = [
         "sha256": "711190f12788d8ed626378c2899fec1bec006dc82b1e74009e3e7ee9e56097cb",
         "bytes": 51380,
         "darkBackground": false,
-        "search": "historical-vector-followup-2026-10-30"
+        "search": "historical-vector-followup-2026-10-30",
+        "alsoSeen": [
+          {
+            "date": "1989",
+            "source": "https://heritagebc.ca/learning-centre/heritage-place-conservation/tips-tools-publications-guides/"
+          }
+        ]
       }
     ]
   },
@@ -3895,60 +3394,8 @@ export const COLLECTED_BODIES = [
     "current": false,
     "status": "asset-collected",
     "observedDate": "2026-10-22",
-    "notes": "Original 1999 native raster and separately labelled third-party vector",
+    "notes": "One design in full colour and black, both original vector artwork from the Corporation’s 1999 and 2000 publications.",
     "assets": [
-      {
-        "id": "source-forest-renewal-bc-forest-renewal-bc-1999-original-png",
-        "label": "Original mark from the 1999 project report",
-        "file": "identity-collected/forest-renewal-bc/forest-renewal-bc-1999-original.png",
-        "format": "png",
-        "isVector": false,
-        "supplied": false,
-        "reconstruction": false,
-        "publisher": "Forest Renewal BC; report hosted by Forest Genetics BC",
-        "sourcePage": "https://forestgeneticsbc.ca/wp-content/uploads/2020/07/TIPPR-1999.pdf",
-        "sourceUrl": "https://forestgeneticsbc.ca/wp-content/uploads/2020/07/TIPPR-1999.pdf",
-        "sourceLocator": "PDF page 66",
-        "sourceFile": null,
-        "sourceDate": "1999",
-        "observedDate": "2026-10-22",
-        "evidenceType": "native-pdf-raster-extraction",
-        "notes": "Original bitonal image mask from Operational Tree Improvement Program Project Report 1998/99. PDF stencil polarity was normalized to match the rendered page and white border added; no shapes were traced or fabricated. The source mask is tightly bounded, so the original silhouette is preserved.",
-        "fidelityNote": "Original published drawing or image recovered from the cited source. Method: Original bitonal image mask from Operational Tree Improvement Program Project Report 1998/99. PDF stencil polarity was normalized to match the rendered page and white border added; no shapes were traced or fabricated. The source mask is tightly bounded, so the original silhouette is preserved.",
-        "sha256": "2361bbfdfba6312c1f1fbf249f7b232522236f9c70fc25d69a714758c473d093",
-        "bytes": 41011,
-        "darkBackground": false,
-        "dateNote": "A dated sighting is not a complete usage period.",
-        "previewWidth": 3760,
-        "previewHeight": 2403
-      },
-      {
-        "id": "source-forest-renewal-bc-forest-renewal-bc-supplied-vector-svg",
-        "label": "Third-party vector with unverified production origin",
-        "file": "identity-collected/forest-renewal-bc/forest-renewal-bc-supplied-vector.svg",
-        "format": "svg",
-        "isVector": true,
-        "supplied": false,
-        "reconstruction": true,
-        "publisher": "Freebie Supply",
-        "sourcePage": "https://freebiesupply.com/logos/forest-renewal-bc-logo/",
-        "sourceUrl": "https://cdn.freebiesupply.com/logos/large/2x/forest-renewal-bc-logo-svg-vector.svg",
-        "sourceLocator": null,
-        "sourceFile": null,
-        "sourceDate": null,
-        "observedDate": "2026-10-22",
-        "evidenceType": "third-party-vector-unverified-origin",
-        "notes": "Third-party SVG whose original production provenance and author are not identified. Conservatively classified with reconstructions; the separately collected 1999 primary raster supports the logo form but does not authenticate this SVG as a historical master.",
-        "fidelityNote": "The cited third-party vector rendition is retained and identified as a reconstruction; it is not an original historical master.",
-        "sha256": "be81e77c7f74bc77bed661065a25c5717462c614e667d954a90170f73a2fe693",
-        "bytes": 8942,
-        "darkBackground": false,
-        "creator": "Not identified by source",
-        "license": "No explicit reusable licence verified",
-        "preview": "identity-collected/forest-renewal-bc/forest-renewal-bc-supplied-vector-svg-preview.png",
-        "previewWidth": 1200,
-        "previewHeight": 1200
-      },
       {
         "id": "vector-forest-renewal-bc-2000-colour-source-vector",
         "label": "Forest Renewal BC — Full colour, December 2000 funded-project report",
@@ -3971,7 +3418,8 @@ export const COLLECTED_BODIES = [
         "sha256": "3c33703ae86daaec93966efe8727e09686b96f314142a9399e5b8c2cc0d4ba08",
         "bytes": 15776,
         "darkBackground": false,
-        "search": "vector-followup-2026-11-08"
+        "search": "vector-followup-2026-11-08",
+        "versionLabel": "Full colour"
       },
       {
         "id": "vector-forest-renewal-bc-1999-black-source-vector",
@@ -3995,7 +3443,15 @@ export const COLLECTED_BODIES = [
         "sha256": "0e774c23aa46a215a181aee58e00c0313d8bd4322be5aaa6d7ecafb062e0ea25",
         "bytes": 13038,
         "darkBackground": false,
-        "search": "vector-followup-2026-11-08"
+        "search": "vector-followup-2026-11-08",
+        "alsoSeen": [
+          {
+            "date": "1999",
+            "source": "https://forestgeneticsbc.ca/wp-content/uploads/2020/07/TIPPR-1999.pdf"
+          }
+        ],
+        "versionLabel": "Black",
+        "variantOf": "vector-forest-renewal-bc-2000-colour-source-vector"
       }
     ]
   },
@@ -4049,58 +3505,8 @@ export const COLLECTED_BODIES = [
     "current": false,
     "status": "asset-collected",
     "observedDate": "2026-10-22",
-    "notes": "Original embedded raster marks from 2019 and 2021 official PDFs",
+    "notes": "The corporate mark as original vector artwork from the 2014 annual report; the same mark is on official PDFs of 2019 and 2021.",
     "assets": [
-      {
-        "id": "source-oil-and-gas-commission-bc-oil-gas-commission-2021-jpeg",
-        "label": "Original corporate mark, April 2021",
-        "file": "identity-collected/oil-and-gas-commission/bc-oil-gas-commission-2021.jpeg",
-        "format": "jpeg",
-        "isVector": false,
-        "supplied": false,
-        "reconstruction": false,
-        "publisher": "BC Oil and Gas Commission; preserved by BC Energy Regulator",
-        "sourcePage": "https://procurement.bc-er.ca/files/documents/proposal-details/18522001-Scope-of-Work_April-15-2021-Graphic-Design-Services.pdf",
-        "sourceUrl": "https://procurement.bc-er.ca/files/documents/proposal-details/18522001-Scope-of-Work_April-15-2021-Graphic-Design-Services.pdf",
-        "sourceLocator": "PDF page 1",
-        "sourceFile": null,
-        "sourceDate": "2021-04",
-        "observedDate": "2026-10-22",
-        "evidenceType": "native-pdf-raster-extraction",
-        "notes": "Native embedded corporate-logo bitmap from the cover of April 2021 graphic design services scope of work. No native vector was found in this PDF.",
-        "fidelityNote": "Original published drawing or image recovered from the cited source. Method: Native embedded corporate-logo bitmap from the cover of April 2021 graphic design services scope of work. No native vector was found in this PDF.",
-        "sha256": "16ebc9231b0ad61c0219068ed0963e9917cce6ead532cd7e04fdb2d3148ded12",
-        "bytes": 5778,
-        "darkBackground": false,
-        "dateNote": "A dated sighting is not a complete usage period.",
-        "previewWidth": 324,
-        "previewHeight": 141
-      },
-      {
-        "id": "source-oil-and-gas-commission-bc-oil-gas-commission-2019-jpeg",
-        "label": "Original corporate mark, March 2019",
-        "file": "identity-collected/oil-and-gas-commission/bc-oil-gas-commission-2019.jpeg",
-        "format": "jpeg",
-        "isVector": false,
-        "supplied": false,
-        "reconstruction": false,
-        "publisher": "BC Oil and Gas Commission; preserved by BC Energy Regulator",
-        "sourcePage": "https://www.bc-er.ca/files/application-manuals/AMS-Guidance/AMS-Release-Guides/AMS-Release-Guide-March-2019.pdf",
-        "sourceUrl": "https://www.bc-er.ca/files/application-manuals/AMS-Guidance/AMS-Release-Guides/AMS-Release-Guide-March-2019.pdf",
-        "sourceLocator": "PDF page 1",
-        "sourceFile": null,
-        "sourceDate": "2019-03-28",
-        "observedDate": "2026-10-22",
-        "evidenceType": "native-pdf-raster-extraction",
-        "notes": "Native embedded bitmap from the 28 March 2019 AMS Release Guide. Original margins and resolution retained.",
-        "fidelityNote": "Original published drawing or image recovered from the cited source. Method: Native embedded bitmap from the 28 March 2019 AMS Release Guide. Original margins and resolution retained.",
-        "sha256": "3ede7bf78c44a809b1b7e07e70dba5bd1029fe076a64575395834a2cb9fbdf6e",
-        "bytes": 4844,
-        "darkBackground": false,
-        "dateNote": "A dated sighting is not a complete usage period.",
-        "previewWidth": 257,
-        "previewHeight": 151
-      },
       {
         "id": "vector-bc-oil-gas-commission-2014",
         "label": "BC Oil and Gas Commission — Full colour, 2014 report",
@@ -4123,7 +3529,17 @@ export const COLLECTED_BODIES = [
         "sha256": "9cc125d0da2ab3e1e8747e98b73e0a5343ab586647eabb49b2353310a757fcd9",
         "bytes": 11873,
         "darkBackground": false,
-        "search": "vector-search-2026-10-30"
+        "search": "vector-search-2026-10-30",
+        "alsoSeen": [
+          {
+            "date": "2021-04",
+            "source": "https://procurement.bc-er.ca/files/documents/proposal-details/18522001-Scope-of-Work_April-15-2021-Graphic-Design-Services.pdf"
+          },
+          {
+            "date": "2019-03-28",
+            "source": "https://www.bc-er.ca/files/application-manuals/AMS-Guidance/AMS-Release-Guides/AMS-Release-Guide-March-2019.pdf"
+          }
+        ]
       }
     ]
   },
@@ -4263,33 +3679,8 @@ export const COLLECTED_BODIES = [
     "current": false,
     "status": "asset-collected",
     "observedDate": "2026-10-22",
-    "notes": "Corporate wordmark from the official 2006 service plan",
+    "notes": "The wordmark as original vector artwork from the 2012/13 annual report; the same wordmark is in the 2006 service plan.",
     "assets": [
-      {
-        "id": "source-partnerships-bc-partnerships-bc-2006-logo-crop-png",
-        "label": "Corporate wordmark from the official 2006 service plan",
-        "file": "identity-collected/partnerships-bc/partnerships-bc-2006-logo-crop.png",
-        "format": "png",
-        "isVector": false,
-        "supplied": false,
-        "reconstruction": false,
-        "publisher": "Partnerships British Columbia / Government of British Columbia",
-        "sourcePage": "https://www.bcbudget.gov.bc.ca/2006/sp/crownagency/pbc.pdf",
-        "sourceUrl": "https://www.bcbudget.gov.bc.ca/2006/sp/crownagency/pbc.pdf",
-        "sourceLocator": "PDF page 2",
-        "sourceFile": null,
-        "sourceDate": "2006-01-31",
-        "observedDate": "2026-10-22",
-        "evidenceType": "native-pdf-raster-crop",
-        "notes": "Corporate wordmark cropped from the embedded original service-plan banner. The lime background is part of the original. Date follows the report’s transmittal letter. No tracing or reconstruction.",
-        "fidelityNote": "Original published drawing or image recovered from the cited source. Method: Corporate wordmark cropped from the embedded original service-plan banner. The lime background is part of the original. Date follows the report’s transmittal letter. No tracing or reconstruction.",
-        "sha256": "26684253a353cd15a5d30000607db5b61b966c133ba72770ca28f38cdc9f3f53",
-        "bytes": 46266,
-        "darkBackground": false,
-        "dateNote": "A dated sighting is not a complete usage period.",
-        "previewWidth": 396,
-        "previewHeight": 88
-      },
       {
         "id": "vector-partnerships-bc-2012",
         "label": "Partnerships British Columbia — Full colour, 2012/13 report",
@@ -4312,7 +3703,13 @@ export const COLLECTED_BODIES = [
         "sha256": "152ab2d35c6c87f6ae7078bbb7f154d7b13650d0f6e580ccaa7ecfd75a93a44e",
         "bytes": 16848,
         "darkBackground": false,
-        "search": "vector-search-2026-10-30"
+        "search": "vector-search-2026-10-30",
+        "alsoSeen": [
+          {
+            "date": "2006-01-31",
+            "source": "https://www.bcbudget.gov.bc.ca/2006/sp/crownagency/pbc.pdf"
+          }
+        ]
       }
     ]
   },
@@ -4414,32 +3811,13 @@ export const COLLECTED_BODIES = [
         "dateNote": "A dated sighting is not a complete usage period.",
         "preview": "identity-collected/pacific-carbon-trust/pacific-carbon-trust-2013-svg-preview.png",
         "previewWidth": 1200,
-        "previewHeight": 555
-      },
-      {
-        "id": "source-pacific-carbon-trust-pacific-carbon-trust-2013-png",
-        "label": "PNG rendering of the original 2013 vector mark",
-        "file": "identity-collected/pacific-carbon-trust/pacific-carbon-trust-2013.png",
-        "format": "png",
-        "isVector": false,
-        "supplied": false,
-        "reconstruction": false,
-        "publisher": "Pacific Carbon Trust / Government of British Columbia",
-        "sourcePage": "https://www.bcbudget.gov.bc.ca/2013/sp/pdf/agency/pct.pdf",
-        "sourceUrl": "https://www.bcbudget.gov.bc.ca/2013/sp/pdf/agency/pct.pdf",
-        "sourceLocator": "PDF page 1",
-        "sourceFile": null,
-        "sourceDate": "2013",
-        "observedDate": "2026-10-22",
-        "evidenceType": "raster-preview-of-original-vector",
-        "notes": "PNG preview of the same original 2013 vector mark, useful in interfaces without SVG support.",
-        "fidelityNote": "Original published drawing or image recovered from the cited source. Method: PNG preview of the same original 2013 vector mark, useful in interfaces without SVG support.",
-        "sha256": "ef5d77a2b1b9851630cbb74d5a5d6e9a827f96df636add9b20204f329912c52f",
-        "bytes": 14480,
-        "darkBackground": false,
-        "dateNote": "A dated sighting is not a complete usage period.",
-        "previewWidth": 564,
-        "previewHeight": 261
+        "previewHeight": 555,
+        "alsoSeen": [
+          {
+            "date": "2013",
+            "source": "https://www.bcbudget.gov.bc.ca/2013/sp/pdf/agency/pct.pdf"
+          }
+        ]
       },
       {
         "id": "source-pacific-carbon-trust-pacific-carbon-trust-2009-jpeg",
@@ -4573,37 +3951,8 @@ export const COLLECTED_BODIES = [
     "current": false,
     "status": "asset-collected",
     "observedDate": "2026-10-22",
-    "notes": "Capital Health Region of Victoria. Two original vector variants and dated raster specimens preserve their source colours and lettering. Dates identify appearances, not adoption.",
+    "notes": "Capital Health Region of Victoria. One design in two original vector versions from 2000 publications, the same mark as on its 1999 and 2000 letterheads and newspaper notices. Dates identify appearances, not adoption.",
     "assets": [
-      {
-        "id": "source-capital-health-region-capital-health-region-2000-letterhead-png",
-        "label": "Original scanned letterhead logo and tagline",
-        "file": "identity-collected/capital-health-region/capital-health-region-2000-letterhead.png",
-        "format": "png",
-        "isVector": false,
-        "supplied": false,
-        "reconstruction": false,
-        "publisher": "Government of British Columbia, Open Information",
-        "sourcePage": "https://docs.openinfo.gov.bc.ca/Response_Package_HTH-2017-72113.pdf",
-        "sourceUrl": "https://docs.openinfo.gov.bc.ca/Response_Package_HTH-2017-72113.pdf",
-        "sourceLocator": "PDF page 44 (1-based)",
-        "sourceFile": null,
-        "sourceDate": "2000-02-25",
-        "observedDate": "2026-10-22",
-        "evidenceType": "original-period-logo-in-primary-document",
-        "notes": "Lossless crop (425,72)-(875,231) from the original 1275 × 1650 scan image embedded in PDF page 44. No upscaling, tracing, or reconstruction. The crop includes the original horizontal letterhead rule through the logo. Letter is dated February 25, 2000; tagline reads Building Partnerships for Better Health.",
-        "fidelityNote": "Original published drawing or image recovered from the cited source. Method: Lossless crop (425,72)-(875,231) from the original 1275 × 1650 scan image embedded in PDF page 44. No upscaling, tracing, or reconstruction. The crop includes the original horizontal letterhead rule through the logo. Letter is dated February 25, 2000; tagline reads Building Partnerships for Better Health.",
-        "sha256": "f374cc0bfb62d2e4c5c696b0493372e4b4c0007376915e31e02226fbdd5688aa",
-        "bytes": 5767,
-        "darkBackground": false,
-        "dateNote": "A dated sighting is not a complete usage period.",
-        "extraction": {
-          "source_pdf_page": 44,
-          "vector_type": "raster"
-        },
-        "previewWidth": 450,
-        "previewHeight": 159
-      },
       {
         "id": "historical-capital-health-region-2000-dark-grey",
         "label": "Dark and grey, June 2000 brochure",
@@ -4626,7 +3975,30 @@ export const COLLECTED_BODIES = [
         "sha256": "7abc94d245234fca51210f403385c09e775564273617f5d2fc9def95fb1d985a",
         "bytes": 86181,
         "darkBackground": false,
-        "search": "historical-vector-followup-2026-10-30"
+        "search": "historical-vector-followup-2026-10-30",
+        "alsoSeen": [
+          {
+            "date": "2000-02-25",
+            "source": "https://docs.openinfo.gov.bc.ca/Response_Package_HTH-2017-72113.pdf"
+          },
+          {
+            "date": "2000-01",
+            "source": "https://web.archive.org/web/20000925063118id_/http://www.caphealth.org:80/PhaseOneReport.pdf"
+          },
+          {
+            "date": "2000-09-01",
+            "source": "https://web.archive.org/web/20000925063021id_/http://www.caphealth.org:80/org.pdf"
+          },
+          {
+            "date": "1999-01-27",
+            "source": "https://saltspringarchives.com/driftwood/1999/v41n4Jan27-1999.pdf"
+          },
+          {
+            "date": "1999-10-14",
+            "source": "https://central.bac-lac.gc.ca/.item?app=Library&id=MQ49172&op=pdf"
+          }
+        ],
+        "versionLabel": "Dark and grey"
       },
       {
         "id": "historical-capital-health-region-2000-dark-white",
@@ -4655,111 +4027,9 @@ export const COLLECTED_BODIES = [
         "previewWidth": 780,
         "previewHeight": 276,
         "previewNote": "Rendered crop of the original report page, including its orange background texture, so both the dark lettering and white bands remain visible. The SVG download contains only the unchanged original logo paths and no embedded background image.",
-        "search": "historical-vector-followup-2026-10-30"
-      },
-      {
-        "id": "historical-capital-health-region-2000-original-colour",
-        "label": "Capital Health Region Diabetes Initiative: Phase One — original embedded logo",
-        "file": "identity-collected/capital-health-region/capital-health-region-2000-original-colour.jpeg",
-        "format": "jpeg",
-        "isVector": false,
-        "supplied": false,
-        "reconstruction": false,
-        "publisher": "Capital Health Region",
-        "sourcePage": "https://web.archive.org/web/20000925063118id_/http://www.caphealth.org:80/PhaseOneReport.pdf",
-        "sourceUrl": "https://web.archive.org/web/20000925063118id_/http://www.caphealth.org:80/PhaseOneReport.pdf",
-        "sourceLocator": "PDF page 1",
-        "sourceFile": null,
-        "sourceDate": "2000-01",
-        "observedDate": "2026-10-30",
-        "dateNote": "Printed source date; a sighting, not an adoption date.",
-        "evidenceType": "original-raster-extraction",
-        "notes": "Capital Health Region Diabetes Initiative: Phase One — original embedded logo",
-        "fidelityNote": "Exact embedded image extraction; original pixel dimensions retained, no resampling, tracing or recolouring.",
-        "sha256": "572871e905c8d0d3e85b358f66e5ea80613ed94c512f52d0f5e75f33fee22697",
-        "bytes": 18116,
-        "darkBackground": false,
-        "previewWidth": 237,
-        "previewHeight": 81,
-        "search": "historical-vector-followup-2026-10-30"
-      },
-      {
-        "id": "historical-capital-health-region-2000-original-greyscale",
-        "label": "Organization of the Capital Health Region — original embedded logo",
-        "file": "identity-collected/capital-health-region/capital-health-region-2000-original-greyscale.png",
-        "format": "png",
-        "isVector": false,
-        "supplied": false,
-        "reconstruction": false,
-        "publisher": "Capital Health Region",
-        "sourcePage": "https://web.archive.org/web/20000925063021id_/http://www.caphealth.org:80/org.pdf",
-        "sourceUrl": "https://web.archive.org/web/20000925063021id_/http://www.caphealth.org:80/org.pdf",
-        "sourceLocator": "PDF page 1",
-        "sourceFile": null,
-        "sourceDate": "2000-09-01",
-        "observedDate": "2026-10-30",
-        "dateNote": "Printed source date; a sighting, not an adoption date.",
-        "evidenceType": "original-raster-extraction",
-        "notes": "Organization of the Capital Health Region — original embedded logo",
-        "fidelityNote": "Exact embedded image extraction; original pixel dimensions retained, no resampling, tracing or recolouring.",
-        "sha256": "4260bf5e450c68b82c4649544a98624679f122d0d551158cf72a30cda2ee9f1a",
-        "bytes": 37002,
-        "darkBackground": false,
-        "previewWidth": 1751,
-        "previewHeight": 593,
-        "search": "historical-vector-followup-2026-10-30"
-      },
-      {
-        "id": "historical-capital-health-region-1999-january-newspaper-raster",
-        "label": "Capital Health Region — January 1999 newspaper",
-        "file": "identity-collected/capital-health-region/capital-health-region-1999-january-newspaper-raster.png",
-        "format": "png",
-        "isVector": false,
-        "supplied": false,
-        "reconstruction": false,
-        "publisher": "Capital Health Region advertisement in Gulf Islands Driftwood, hosted by Salt Spring Archives",
-        "sourcePage": "https://saltspringarchives.com/driftwood/1999/v41n4Jan27-1999.pdf",
-        "sourceUrl": "https://saltspringarchives.com/driftwood/1999/v41n4Jan27-1999.pdf",
-        "sourceLocator": "PDF page 14",
-        "sourceFile": null,
-        "sourceDate": "1999-01-27",
-        "observedDate": "2026-10-30",
-        "dateNote": "Printed source date; a sighting, not an adoption date.",
-        "evidenceType": "original-raster-extraction",
-        "notes": "Dated public-health telephone-service advertisement in Gulf Islands Driftwood, PDF and printed page 14. Original scan pixels and background retained.",
-        "fidelityNote": "Decoded embedded PDF image; rectangular pixel crop at original resolution; saved losslessly as PNG.",
-        "sha256": "dff44cc89c7055ca031d4600e3c60edaab237e490530e6377a2e0e8da9d3bf83",
-        "bytes": 40550,
-        "darkBackground": false,
-        "previewWidth": 272,
-        "previewHeight": 98,
-        "search": "historical-vector-followup-2026-10-30"
-      },
-      {
-        "id": "historical-capital-health-region-1999-october-letterhead-raster",
-        "label": "Capital Health Region — October 1999 letterhead",
-        "file": "identity-collected/capital-health-region/capital-health-region-1999-october-letterhead-raster.png",
-        "format": "png",
-        "isVector": false,
-        "supplied": false,
-        "reconstruction": false,
-        "publisher": "Capital Health Region letter reproduced in a thesis, hosted by Library and Archives Canada",
-        "sourcePage": "https://central.bac-lac.gc.ca/.item?app=Library&id=MQ49172&op=pdf",
-        "sourceUrl": "https://central.bac-lac.gc.ca/.item?app=Library&id=MQ49172&op=pdf",
-        "sourceLocator": "PDF page 97",
-        "sourceFile": null,
-        "sourceDate": "1999-10-14",
-        "observedDate": "2026-10-30",
-        "dateNote": "Printed source date; a sighting, not an adoption date.",
-        "evidenceType": "original-raster-extraction",
-        "notes": "Original ethics-approval appendix letterhead, dated October 14 1999. Source is a fax/scan with visible damage; crop preserves that damage and fragments of the original letterhead rule. Thesis PDF page 92 also includes permission to reproduce the logo.  Source URL was already a baseline research lead; the earlier baseline review listed p 89–94, whereas this evidence is p 97.",
-        "fidelityNote": "Decoded embedded PDF image; rectangular pixel crop at original resolution; saved losslessly as PNG.",
-        "sha256": "1327c2cd2924b62b2561a32de2d8cd54c21cb119c0bcd7dc32ffdd5792f28405",
-        "bytes": 12767,
-        "darkBackground": false,
-        "previewWidth": 1125,
-        "previewHeight": 370,
-        "search": "historical-vector-followup-2026-10-30"
+        "search": "historical-vector-followup-2026-10-30",
+        "versionLabel": "Dark and white",
+        "variantOf": "historical-capital-health-region-2000-dark-grey"
       }
     ]
   },
@@ -4797,7 +4067,7 @@ export const COLLECTED_BODIES = [
     "current": false,
     "status": "asset-collected",
     "observedDate": "2026-10-22",
-    "notes": "The March 2002 report The World Without Linen Bags reproduces authentic 1999 letterheads. Full black logo uses original PDF vector paths and original glyph outlines, not a new trace. A grayscale emblem is also preserved from an embedded source image. Letter dates are sightings; no adoption date is asserted.",
+    "notes": "The March 2002 report The World Without Linen Bags reproduces authentic 1999 letterheads. The full logo uses original PDF vector paths and glyph outlines, not a new trace. A grayscale emblem is also preserved from an embedded source image. Letter dates are sightings; no adoption date is asserted.",
     "assets": [
       {
         "id": "source-central-vancouver-island-health-region-central-vancouver-island-health-region-1999-svg",
@@ -4827,36 +4097,13 @@ export const COLLECTED_BODIES = [
         },
         "preview": "identity-collected/central-vancouver-island-health-region/central-vancouver-island-health-region-1999-svg-preview.png",
         "previewWidth": 1200,
-        "previewHeight": 385
-      },
-      {
-        "id": "source-central-vancouver-island-health-region-central-vancouver-island-health-region-1999-png",
-        "label": "Image rendering of original February 1999 letterhead logo",
-        "file": "identity-collected/central-vancouver-island-health-region/central-vancouver-island-health-region-1999.png",
-        "format": "png",
-        "isVector": false,
-        "supplied": false,
-        "reconstruction": false,
-        "publisher": "Nanaimo Regional General Hospital / Central Vancouver Island Health Region",
-        "sourcePage": "https://www.hcergo.org/wp-content/uploads/2018/04/The-world-without-linen-bags.pdf",
-        "sourceUrl": "https://www.hcergo.org/wp-content/uploads/2018/04/The-world-without-linen-bags.pdf",
-        "sourceLocator": "PDF page 58 (1-based)",
-        "sourceFile": null,
-        "sourceDate": "1999-02-08",
-        "observedDate": "2026-10-22",
-        "evidenceType": "original-period-logo-in-primary-document",
-        "notes": "Faithful 4× raster rendering of the same source PDF logo rectangle. No redrawing or generative reconstruction.",
-        "fidelityNote": "Original published drawing or image recovered from the cited source. Method: Faithful 4× raster rendering of the same source PDF logo rectangle. No redrawing or generative reconstruction.",
-        "sha256": "f7ec61634a822c83f2a243b5763e47de8ec52744973263571826ef463aa466aa",
-        "bytes": 26535,
-        "darkBackground": false,
-        "dateNote": "A dated sighting is not a complete usage period.",
-        "extraction": {
-          "source_pdf_page": 58,
-          "vector_type": "raster-render-of-native-vector"
-        },
-        "previewWidth": 860,
-        "previewHeight": 276
+        "previewHeight": 385,
+        "alsoSeen": [
+          {
+            "date": "1999-02-08",
+            "source": "https://www.hcergo.org/wp-content/uploads/2018/04/The-world-without-linen-bags.pdf"
+          }
+        ]
       },
       {
         "id": "source-central-vancouver-island-health-region-central-vancouver-island-health-region-1999-grayscale-emblem-png",
@@ -5268,38 +4515,8 @@ export const COLLECTED_BODIES = [
     "current": false,
     "status": "asset-collected",
     "observedDate": "2026-10-22",
-    "notes": "Actual NOHR emblem and acronym wordmark appear on the jointly published June 2000 report cover. Full logo has a very small 46 × 22 px raster wordmark. The standalone emblem is true original vector; the complete SVG is explicitly hybrid. No font substitution or traced wordmark supplied.",
+    "notes": "The NOHR emblem and acronym wordmark from the June 2000 report cover. The emblem alone is original vector; the full logo survives only as an image, its wordmark very small (46 × 22 px). No font substitution or traced wordmark supplied.",
     "assets": [
-      {
-        "id": "source-north-okanagan-health-region-north-okanagan-health-region-2000-hybrid-svg",
-        "label": "Complete NOHR mark — hybrid SVG with low-resolution wordmark",
-        "file": "identity-collected/north-okanagan-health-region/north-okanagan-health-region-2000-hybrid.svg",
-        "format": "svg",
-        "isVector": false,
-        "supplied": false,
-        "reconstruction": false,
-        "publisher": "Canadian Mental Health Association BC Division / North Okanagan Health Region",
-        "sourcePage": "https://bc.cmha.ca/wp-content/uploads/2016/08/nomhs_fin.pdf",
-        "sourceUrl": "https://bc.cmha.ca/wp-content/uploads/2016/08/nomhs_fin.pdf",
-        "sourceLocator": "PDF page 1 (1-based)",
-        "sourceFile": null,
-        "sourceDate": "2000-06",
-        "observedDate": "2026-10-22",
-        "evidenceType": "original-period-logo-in-primary-document",
-        "notes": "Original three vector emblem paths plus original 46 × 22 px embedded PNG acronym wordmark, with source positions preserved. This SVG is not pure vector. Cropped logo bounds 213.8 619 63.2 23.6 in source PDF coordinates.",
-        "fidelityNote": "Original published drawing or image recovered from the cited source. Method: Original three vector emblem paths plus original 46 × 22 px embedded PNG acronym wordmark, with source positions preserved. This SVG is not pure vector. Cropped logo bounds 213.8 619 63.2 23.6 in source PDF coordinates.",
-        "sha256": "474fb86ed0181cbe26df3b9ee06b971ad7126baed7991ebbd8fb81a8bdc9ca3d",
-        "bytes": 2317,
-        "darkBackground": false,
-        "dateNote": "A dated sighting is not a complete usage period.",
-        "extraction": {
-          "source_pdf_page": 1,
-          "vector_type": "hybrid-vector-and-raster"
-        },
-        "preview": "identity-collected/north-okanagan-health-region/north-okanagan-health-region-2000-hybrid-svg-preview.png",
-        "previewWidth": 1200,
-        "previewHeight": 448
-      },
       {
         "id": "source-north-okanagan-health-region-north-okanagan-health-region-2000-emblem-svg",
         "label": "Original vector emblem only",
@@ -5357,7 +4574,13 @@ export const COLLECTED_BODIES = [
           "vector_type": "raster-render-of-hybrid"
         },
         "previewWidth": 253,
-        "previewHeight": 95
+        "previewHeight": 95,
+        "alsoSeen": [
+          {
+            "date": "2000-06",
+            "source": "https://bc.cmha.ca/wp-content/uploads/2016/08/nomhs_fin.pdf"
+          }
+        ]
       }
     ]
   },
@@ -5462,43 +4685,8 @@ export const COLLECTED_BODIES = [
     "current": false,
     "status": "asset-collected",
     "observedDate": "2026-10-22",
-    "notes": "Original blue vector emblem and full name recovered from the July 2001 annual report, alongside the earlier letterhead scan. Dates identify source appearances, not first use.",
+    "notes": "Original blue vector emblem and full name from the July 2001 annual report; the same mark is on an April 2001 organizational chart. Dates identify source appearances, not first use.",
     "assets": [
-      {
-        "id": "source-northern-interior-regional-health-board-northern-interior-regional-health-board-2001-png",
-        "label": "April 2001 organizational-chart logo crop",
-        "file": "identity-collected/northern-interior-regional-health-board/northern-interior-regional-health-board-2001.png",
-        "format": "png",
-        "isVector": false,
-        "supplied": false,
-        "reconstruction": false,
-        "publisher": "Northern Interior Regional Health Board; reproduced in Marina E. Reid, Royal Roads University thesis, Library and Archives Canada",
-        "sourcePage": "https://central.bac-lac.gc.ca/.item?app=Library&id=MQ59474&oclc_number=1007023962&op=pdf",
-        "sourceUrl": "https://nlc-bnc.ca/obj/s4/f2/dsk3/ftp04/MQ59474.pdf",
-        "sourceLocator": "PDF page 126",
-        "sourceFile": null,
-        "sourceDate": "2001-04",
-        "observedDate": "2026-10-22",
-        "evidenceType": "faithful-crop-of-primary-document",
-        "notes": "Scanned original organizational chart, Appendix B, in Transforming The Training Paradigm In Healthcare Brick By Brick, Marina E. Reid, April 2001. Cropped logo only; chart itself has no separate date. Source artifact date is thesis publication, not claimed first use.",
-        "fidelityNote": "Original published drawing or image recovered from the cited source. Method: Scanned original organizational chart, Appendix B, in Transforming The Training Paradigm In Healthcare Brick By Brick, Marina E. Reid, April 2001. Cropped logo only; chart itself has no separate date. Source artifact date is thesis publication, not claimed first use.",
-        "sha256": "1e4e9419fb8d2faf5d831c466ecf9fbccc9569215a9ef63cf1570d905cdfd820",
-        "bytes": 30582,
-        "darkBackground": false,
-        "dateNote": "A dated sighting is not a complete usage period.",
-        "extraction": {
-          "source_pdf_page": 126,
-          "crop_bbox_pdf_points": [
-            104,
-            343,
-            285,
-            401
-          ],
-          "render_scale": 4
-        },
-        "previewWidth": 724,
-        "previewHeight": 232
-      },
       {
         "id": "historical-northern-interior-regional-health-board-blue-2001",
         "label": "Blue emblem and full name, July 2001 annual report",
@@ -5521,7 +4709,13 @@ export const COLLECTED_BODIES = [
         "sha256": "23605bb9818415356b47d9b6464d2498bda33baf6cb6cef1e931359ed10e4995",
         "bytes": 100889,
         "darkBackground": false,
-        "search": "historical-vector-followup-2026-10-30"
+        "search": "historical-vector-followup-2026-10-30",
+        "alsoSeen": [
+          {
+            "date": "2001-04",
+            "source": "https://central.bac-lac.gc.ca/.item?app=Library&id=MQ59474&oclc_number=1007023962&op=pdf"
+          }
+        ]
       }
     ]
   },

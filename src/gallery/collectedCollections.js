@@ -17,10 +17,18 @@ const coverOf = (all) => {
 export const assetUrl = (path, base = import.meta.env?.BASE_URL ?? '/') =>
   `${base.replace(/\/?$/, '/')}${path.replace(/^\//, '')}`
 
-/** When a design's files were seen, oldest first; a retrieval date is not a sighting of the logo. */
-const seenDates = (versions) => [...new Set(versions.map((each) => each.sourceDate).filter(Boolean))]
-  .sort((a, b) => Number(a.match(/\d{4}/)?.[0]) - Number(b.match(/\d{4}/)?.[0]))
-  .join(' and ')
+/**
+ * When a design's files were seen: one or two sightings as given, more as the years they span. A
+ * retrieval date is not a sighting of the logo.
+ */
+const seenDates = (versions) => {
+  const yearOf = (date) => Number(date.match(/\d{4}/)?.[0])
+  const dates = [...new Set(versions.flatMap((each) => [each.sourceDate, ...(each.alsoSeen ?? []).map((seen) => seen.date)]).filter(Boolean))]
+    .sort((a, b) => yearOf(a) - yearOf(b))
+  if (dates.length < 3 || !dates.every(yearOf)) return dates.join(' and ')
+  const [first, last] = [yearOf(dates[0]), yearOf(dates.at(-1))]
+  return first === last ? String(first) : `${first}–${last}`
+}
 
 /** A body's files as one entry per design, each with its other colourways as versions. */
 const designsOf = (assets) => assets.filter((asset) => !asset.variantOf).map((asset) => {

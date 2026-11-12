@@ -3923,7 +3923,7 @@ export const ONE_OFF_MARKS = {
       "light": "#ffffff",
       "mountains": "#004b8d",
       "wordmark": "#004b8d",
-      "divider": "#fdb813",
+      "divider": "#fdb913",
       "name": "#004b8d"
     },
     "shapes": [

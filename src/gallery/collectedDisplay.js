@@ -577,18 +577,7 @@ export const COLLECTED_DISPLAY = {
    "recoloured": false
   }
  },
- "source-forest-renewal-bc-forest-renewal-bc-supplied-vector-svg": {
-  "light": {
-   "file": "identity-display/source-forest-renewal-bc-forest-renewal-bc-supplied-vector-svg.light.svg",
-   "aspect": 1.5977,
-   "recoloured": false
-  },
-  "dark": {
-   "file": "identity-display/source-forest-renewal-bc-forest-renewal-bc-supplied-vector-svg.dark.svg",
-   "aspect": 1.5977,
-   "recoloured": true
-  }
- },
+ 
  "source-tourism-bc-tourism-british-columbia-2005-svg": {
   "light": {
    "file": "identity-display/source-tourism-bc-tourism-british-columbia-2005-svg.light.svg",

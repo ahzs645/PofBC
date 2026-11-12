@@ -88,27 +88,115 @@ const LABELS = {
   'workbc-current': 'The flat mark with a grey rule, current'
 }
 
-// A raster file dropped because the same design is held as published vector artwork. The gallery
-// keeps the vector; the raster's source stays recorded in the acquisition inventory.
+// Files dropped because the same design is held as vector artwork (colour aside: a body's colours
+// are its standard ones, so a recoloured copy is not another design). The gallery keeps the vector;
+// the dropped file's source stays recorded in its acquisition record, and its date, if it has one,
+// is kept on the vector as a further sighting.
 const SUPERSEDED = {
-  'source-transportation-investment-corporation-transportation-investment-corporation-png': 'vector-ticorp-2025-colour-source-vector'
+  'source-transportation-investment-corporation-transportation-investment-corporation-png': 'vector-ticorp-2025-colour-source-vector',
+  'source-bc-housing-bc-housing-png': 'vector-bc-housing-corporate-component-source-vector',
+  'source-bc-assessment-bc-assessment-jpg': 'source-bc-assessment-bc-assessment-eps',
+  'source-columbia-power-columbia-power-png': 'vector-columbia-power-2024-reversed-source-vector',
+  'source-infrastructure-bc-infrastructure-bc-png': 'vector-infrastructure-bc-2026-colour-source-vector',
+  'source-community-living-bc-community-living-bc-png': 'vector-community-living-bc-2023-colour-source-vector',
+  'source-knowledge-network-knowledge-network-colour-png': 'source-knowledge-network-knowledge-network-colour-eps',
+  'source-bc-pavilion-corporation-pavco-png': 'vector-pavco-2025-26-colour-source-vector',
+  'source-forest-enhancement-society-fesbc-horizontal-png': 'source-forest-enhancement-society-fesbc-horizontal-eps',
+  'source-forest-enhancement-society-fesbc-vertical-png': 'source-forest-enhancement-society-fesbc-vertical-eps',
+  'source-innovate-bc-innovate-bc-teal-png': 'source-innovate-bc-innovate-bc-white-eps',
+  // Two copies of the same wordmark, neither vector: the larger is kept.
+  'source-innovate-bc-innovate-bc-logo-png': 'source-innovate-bc-innovate-bc-wordmark-png',
+  'source-bc-family-maintenance-agency-bc-family-maintenance-agency-png': 'vector-bcfma-2021-source-vector',
+  'source-inbc-inbc-print-png': 'source-inbc-inbc-svg',
+  'source-bc-council-for-international-education-bccie-png': 'vector-bccie-2022-source-vector',
+  'source-interior-health-interior-health-png': 'vector-interior-health-blue-horizontal-source-extraction',
+  'source-interior-health-interior-health-white-png': 'vector-interior-health-blue-horizontal-source-extraction',
+  'source-interior-health-interior-health-horizontal-jpg': 'vector-interior-health-blue-horizontal-source-extraction',
+  'source-interior-health-interior-health-2004-letterhead-png': 'vector-interior-health-blue-horizontal-source-extraction',
+  'source-provincial-health-services-authority-phsa-png': 'vector-phsa-black-source-extraction',
+  'source-bc-heritage-trust-bc-heritage-trust-1989-logo-png': 'historical-bc-heritage-trust-2002',
+  'source-forest-renewal-bc-forest-renewal-bc-1999-original-png': 'vector-forest-renewal-bc-1999-black-source-vector',
+  // A third-party vector of the design the Corporation's own reports give as original paths.
+  'source-forest-renewal-bc-forest-renewal-bc-supplied-vector-svg': 'vector-forest-renewal-bc-2000-colour-source-vector',
+  'source-oil-and-gas-commission-bc-oil-gas-commission-2021-jpeg': 'vector-bc-oil-gas-commission-2014',
+  'source-oil-and-gas-commission-bc-oil-gas-commission-2019-jpeg': 'vector-bc-oil-gas-commission-2014',
+  'source-partnerships-bc-partnerships-bc-2006-logo-crop-png': 'vector-partnerships-bc-2012',
+  'source-pacific-carbon-trust-pacific-carbon-trust-2013-png': 'source-pacific-carbon-trust-pacific-carbon-trust-2013-svg',
+  'source-capital-health-region-capital-health-region-2000-letterhead-png': 'historical-capital-health-region-2000-dark-grey',
+  'historical-capital-health-region-2000-original-colour': 'historical-capital-health-region-2000-dark-grey',
+  'historical-capital-health-region-2000-original-greyscale': 'historical-capital-health-region-2000-dark-grey',
+  'historical-capital-health-region-1999-january-newspaper-raster': 'historical-capital-health-region-2000-dark-grey',
+  'historical-capital-health-region-1999-october-letterhead-raster': 'historical-capital-health-region-2000-dark-grey',
+  'source-central-vancouver-island-health-region-central-vancouver-island-health-region-1999-png': 'source-central-vancouver-island-health-region-central-vancouver-island-health-region-1999-svg',
+  // The hybrid SVG wraps the same low-resolution wordmark as the complete image, which is kept.
+  'source-north-okanagan-health-region-north-okanagan-health-region-2000-hybrid-svg': 'source-north-okanagan-health-region-north-okanagan-health-region-2000-png',
+  'source-northern-interior-regional-health-board-northern-interior-regional-health-board-2001-png': 'historical-northern-interior-regional-health-board-blue-2001'
 }
 
 // Another colourway of the same design: shown inside the design's entry as a version to switch
 // to, rather than as a separate mark.
 const VARIANT_OF = {
-  'vector-ticorp-2020-reversed-source-vector': 'vector-ticorp-2025-colour-source-vector'
+  'vector-ticorp-2020-reversed-source-vector': 'vector-ticorp-2025-colour-source-vector',
+  'vector-infrastructure-bc-2026-reversed-source-vector': 'vector-infrastructure-bc-2026-colour-source-vector',
+  'vector-community-living-bc-2014-reversed-source-vector': 'vector-community-living-bc-2023-colour-source-vector',
+  'source-knowledge-network-knowledge-network-svg': 'source-knowledge-network-knowledge-network-colour-eps',
+  'vector-pavco-2023-reversed-source-vector': 'vector-pavco-2025-26-colour-source-vector',
+  'vector-phsa-white-source-extraction': 'vector-phsa-black-source-extraction',
+  'vector-fnha-logo-white': 'vector-fnha-logo-colour',
+  'source-first-nations-health-authority-fnha-white-png': 'source-first-nations-health-authority-fnha-horizontal-png',
+  'vector-forest-renewal-bc-1999-black-source-vector': 'vector-forest-renewal-bc-2000-colour-source-vector',
+  'historical-capital-health-region-2000-dark-white': 'historical-capital-health-region-2000-dark-grey'
 }
 
 // What each version is called inside its design's entry.
 const VERSION_LABELS = {
   'vector-ticorp-2025-colour-source-vector': 'Full colour',
-  'vector-ticorp-2020-reversed-source-vector': 'White'
+  'vector-ticorp-2020-reversed-source-vector': 'White',
+  'vector-infrastructure-bc-2026-colour-source-vector': 'Full colour',
+  'vector-infrastructure-bc-2026-reversed-source-vector': 'Reversed',
+  'vector-community-living-bc-2023-colour-source-vector': 'Full colour',
+  'vector-community-living-bc-2014-reversed-source-vector': 'Reversed',
+  'source-knowledge-network-knowledge-network-colour-eps': 'Full colour',
+  'source-knowledge-network-knowledge-network-svg': 'White lettering',
+  'vector-pavco-2025-26-colour-source-vector': 'Full colour',
+  'vector-pavco-2023-reversed-source-vector': 'White',
+  'vector-phsa-black-source-extraction': 'Black',
+  'vector-phsa-white-source-extraction': 'White',
+  'vector-fnha-logo-colour': 'Full colour',
+  'vector-fnha-logo-white': 'White lettering',
+  'source-first-nations-health-authority-fnha-horizontal-png': 'Full colour',
+  'source-first-nations-health-authority-fnha-white-png': 'White',
+  'vector-forest-renewal-bc-2000-colour-source-vector': 'Full colour',
+  'vector-forest-renewal-bc-1999-black-source-vector': 'Black',
+  'historical-capital-health-region-2000-dark-grey': 'Dark and grey',
+  'historical-capital-health-region-2000-dark-white': 'Dark and white'
 }
 
 // Shorter accounts where a body's or file's own record is about a file no longer shown.
 const BODY_NOTES = {
-  'transportation-investment-corporation': 'One design — the BC emblem, a gold divider and the name on three lines — in full colour and in white, both original vector artwork from Pattullo Bridge Replacement Project publications.'
+  'transportation-investment-corporation': 'One design — the BC emblem, a gold divider and the name on three lines — in full colour and in white, both original vector artwork from Pattullo Bridge Replacement Project publications.',
+  'bc-housing': 'The emblem and wordmark, and the Research Centre lockup, as original vector artwork from a BC Housing report.',
+  'bc-assessment': 'The logo as vector artwork from the official brand kit.',
+  'columbia-power': 'The logo as original vector artwork, reversed, from the 2024 history book.',
+  'infrastructure-bc': 'One design in full colour and reversed, both original vector artwork from the Spring 2026 brochure.',
+  'community-living-bc': 'One design in full colour and reversed, both original vector artwork from its 2014 and 2023 reports.',
+  'knowledge-network': 'One design, in full colour and with white lettering, as vector artwork from the official brand kit.',
+  'bc-pavilion-corporation': 'One design in full colour and in white, both original vector artwork from PavCo’s own publications.',
+  'forest-enhancement-society': 'The horizontal and vertical logos from the official 2026 logo kit, as vector artwork, and the 10th-anniversary logo.',
+  'innovate-bc': 'The stacked logo as vector artwork from the official brand kit, and the wordmark alone as published images.',
+  'bc-family-maintenance-agency': 'The logo as original vector artwork from the 2020/21 annual report.',
+  'inbc': 'The logo as vector artwork from the official website.',
+  'bc-council-for-international-education': 'The logo as original vector artwork from the 2022–2025 strategic plan.',
+  'interior-health': 'The horizontal logo as original vector artwork, seen on a June 2004 letterhead and in a 2023 roadmap, with the stacked logo and the symbol as published images.',
+  'provincial-health-services-authority': 'One design in black and in white, as original vector artwork.',
+  'bc-heritage-trust': 'The boxed Trust mark as original vector artwork from the 2001/02 annual report; the same mark is on its 1989 conservation publication.',
+  'forest-renewal-bc': 'One design in full colour and black, both original vector artwork from the Corporation’s 1999 and 2000 publications.',
+  'oil-and-gas-commission': 'The corporate mark as original vector artwork from the 2014 annual report; the same mark is on official PDFs of 2019 and 2021.',
+  'partnerships-bc': 'The wordmark as original vector artwork from the 2012/13 annual report; the same wordmark is in the 2006 service plan.',
+  'capital-health-region': 'Capital Health Region of Victoria. One design in two original vector versions from 2000 publications, the same mark as on its 1999 and 2000 letterheads and newspaper notices. Dates identify appearances, not adoption.',
+  'central-vancouver-island-health-region': 'The March 2002 report The World Without Linen Bags reproduces authentic 1999 letterheads. The full logo uses original PDF vector paths and glyph outlines, not a new trace. A grayscale emblem is also preserved from an embedded source image. Letter dates are sightings; no adoption date is asserted.',
+  'north-okanagan-health-region': 'The NOHR emblem and acronym wordmark from the June 2000 report cover. The emblem alone is original vector; the full logo survives only as an image, its wordmark very small (46 × 22 px). No font substitution or traced wordmark supplied.',
+  'northern-interior-regional-health-board': 'Original blue vector emblem and full name from the July 2001 annual report; the same mark is on an April 2001 organizational chart. Dates identify source appearances, not first use.'
 }
 const ASSET_NOTES = {
   'vector-ticorp-2025-colour-source-vector': 'The BC emblem, a gold divider and the name on three lines, as original vector paths from page 1 of the Pattullo Bridge Replacement Project’s Summer 2025 project update. The PDF’s print colours are converted to sRGB.',
@@ -174,13 +262,22 @@ for (const { bodyId, verification, ...asset } of historical.assets) {
     throw new Error(`Not verified as pure vector: ${asset.id}`)
   }
   if (!additions.has(bodyId)) additions.set(bodyId, [])
-  additions.get(bodyId).push(checked({ ...asset, search: 'historical-vector-followup-2026-10-30' }))
+  // A superseded file is not shown, so its file need not be held.
+  const record = { ...asset, search: 'historical-vector-followup-2026-10-30' }
+  additions.get(bodyId).push(SUPERSEDED[asset.id] ? record : checked(record))
 }
 for (const bodyId of Object.keys(historical.bodyUpdates)) {
   if (!bodyIds.has(bodyId)) throw new Error(`Unknown historical body update: ${bodyId}`)
 }
 
+// Dates of the files each kept file stands for, as further sightings of its design.
+const alsoSeenOf = (all, id) => all.filter((asset) => SUPERSEDED[asset.id] === id && asset.sourceDate)
+  .map((asset) => ({ date: asset.sourceDate, source: asset.sourcePage || asset.sourceUrl || null }))
 const kept = (assets) => assets.filter((asset) => !SUPERSEDED[asset.id])
+  .map((asset) => {
+    const alsoSeen = alsoSeenOf(assets, asset.id)
+    return alsoSeen.length ? { ...asset, alsoSeen } : asset
+  })
 const finished = (asset) => ({
   ...asset,
   ...(ASSET_NOTES[asset.id] ? { notes: ASSET_NOTES[asset.id] } : {}),
