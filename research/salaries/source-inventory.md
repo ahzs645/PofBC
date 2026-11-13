@@ -8,12 +8,12 @@ Generated from accepted source manifests and the source backlog by `npm run buil
 | employee-schedule-not-yet-located | 1 |
 | held-for-review | 126 |
 | held-unparsed | 23 |
-| imported | 1518 |
+| imported | 1519 |
 | official-archive-found-awaiting-document-selection | 1 |
 | official-archive-found-awaiting-extraction | 1 |
 | official-source-indexed-awaiting-validation | 2 |
 | partially-imported | 1 |
-| requires-ocr | 17 |
+| requires-ocr | 16 |
 | scope-review-required | 4 |
 | source-found-awaiting-extraction | 39 |
 
@@ -734,7 +734,7 @@ Generated from accepted source manifests and the source backlog by `npm run buil
 | District of Coldstream | 2021 | imported | 19 | [District of Coldstream 2021 official employee-remuneration](https://coldstream.civicweb.net/document/84263/) | Accepted normalized records are included in the build; see the source manifest for validation and reporting scope. |
 | District of Elkford | 2022 | imported | 11 | [District of Elkford 2022 SOFI: elected-officials](https://www.elkford.ca/sites/default/files/2023-06/2022%20SOFI.pdf) | Accepted normalized records are included in the build; see the source manifest for validation and reporting scope. |
 | District of Elkford | 2022 | imported | 18 | [District of Elkford 2022 SOFI: employee-remuneration](https://www.elkford.ca/sites/default/files/2023-06/2022%20SOFI.pdf) | Accepted normalized records are included in the build; see the source manifest for validation and reporting scope. |
-| District of Fort St. James | 2024 | requires-ocr | — | [District of Fort St. James Statement of Financial Information 2024](https://www.fortstjames.ca/sites/default/files/2025-06/District%20of%20Fort%20St%20James%20-%202024%20Statement%20of%20Financial%20Information%20w%20checklist-signed.pdf) | Independently transcribe and reconcile page 8. Preserve all named rows: the source's over-$75,000 section includes a remuneration-below-$75,000 row whose combined remuneration and expenses exceeds that amount. Record this scope issue instead of filtering the row away or merging expenses into salary. |
+| District of Fort St. James | 2024 | imported | 20 | [District of Fort St. James 2024 Statement of Financial Information: employee remuneration](https://www.fortstjames.ca/sites/default/files/2025-06/District%20of%20Fort%20St%20James%20-%202024%20Statement%20of%20Financial%20Information%20w%20checklist-signed.pdf) | Accepted normalized records are included in the build; see the source manifest for validation and reporting scope. |
 | District of Highlands | 2024 | imported | 7 | [District of Highlands 2024 SOFI: elected-officials](https://www.highlands.ca/sites/31/files/2025-06/2024%20Annual%20Report%20-%20FINAL_5.pdf) | Accepted normalized records are included in the build; see the source manifest for validation and reporting scope. |
 | District of Highlands | 2024 | imported | 4 | [District of Highlands 2024 SOFI: employee-remuneration](https://www.highlands.ca/sites/31/files/2025-06/2024%20Annual%20Report%20-%20FINAL_5.pdf) | Accepted normalized records are included in the build; see the source manifest for validation and reporting scope. |
 | District of Hudson's Hope | 2022 | imported | 11 | [District of Hudson's Hope 2022 SOFI: elected-officials](https://hudsonshope.ca/wp-content/uploads/2023/06/District-of-HH-SOFI-2022.pdf) | Accepted normalized records are included in the build; see the source manifest for validation and reporting scope. |

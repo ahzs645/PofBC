@@ -352,6 +352,107 @@
         "excludedAggregates": {},
         "visualReview": "Elected-official rows checked against the printed \"Total, Elected Officials\" line."
       }
+    },
+    {
+      "id": "fort-st-james-sofi-2024-employees",
+      "registerLead": "fort-st-james-sofi-2024",
+      "employerSlug": "district-of-fort-st-james",
+      "employerName": "District of Fort St. James",
+      "sector": "Municipalities",
+      "year": "2024",
+      "slug": "2024",
+      "periodType": "calendar",
+      "periodStart": "2024-01-01",
+      "periodEnd": "2024-12-31",
+      "title": "District of Fort St. James 2024 Statement of Financial Information: employee remuneration",
+      "sourceUrl": "https://www.fortstjames.ca/sites/default/files/2025-06/District%20of%20Fort%20St%20James%20-%202024%20Statement%20of%20Financial%20Information%20w%20checklist-signed.pdf",
+      "sourceIndexUrl": "https://www.fortstjames.ca/government/municipal-reports",
+      "sha256": "50fe1bac12033a84fc154fc5515f9667182da6e1c0ef51cd5b4a662d9cb7f79d",
+      "file": "district-of-fort-st-james-2024-employees.json.gzip",
+      "dataSha256": "a9278762d9ebcbc22f6eb50b983af878e9962587bd0ccfcb7a7e611eac31b195",
+      "normalizedSha256": "735eef6ef298c0bf916b602c19ba588902171afebc3135437c5280bfb3b36da5",
+      "provenanceFile": "evidence/district-of-fort-st-james-2024-employees.json.gzip",
+      "provenanceSha256": "25100395c2eaa8e620d557c6afaeddb0da6e3943b554040fa33d126a89cc2267",
+      "category": "employee-remuneration",
+      "scope": "employee-remuneration",
+      "scopeDescription": "Named employees with remuneration and expenses over $75,000 (the source threshold is on combined remuneration plus expenses)",
+      "threshold": null,
+      "thresholdComparison": null,
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "amountPrecision": "cents",
+      "nameDisclosure": "published-surname-and-initial",
+      "positionDisclosure": "published",
+      "rowCount": 20,
+      "totalRemuneration": 1939961.8,
+      "totalExpenses": 55045.11,
+      "pages": [
+        8
+      ],
+      "status": "verified",
+      "sourceKind": "official",
+      "completeEmployeeSchedule": true,
+      "verifiedOn": "2026-11-13",
+      "notes": [
+        "The scanned page 8 schedule \"Employees with Remuneration and Expenses over $75,000\" is imported in full: 20 named rows with surname and initial, position, remuneration and expenses. Council remuneration and the \"All under $75,000\" aggregate on the same page are not employee rows.",
+        "The source threshold is on remuneration plus expenses. Constantine, C (Human Resources) is listed with remuneration $68,927.28 and expenses $6,437.92 (printed total $75,365.20); the row is preserved as published, not filtered for remuneration below $75,000, and expenses are not merged into pay.",
+        "Named remuneration sums exactly to the printed $1,939,961.80 and expenses to the printed $55,045.11. Four blank expense cells and one printed dash are null; the evidence file records which.",
+        "Approval: the statement approving the included statements and schedules (PDF page 12) is signed by the CFO and the mayor, dated June 10, 2025. The page notes that remuneration comes from T4 reporting and expenses are departmentalized, so figures differ from the financial statements."
+      ],
+      "validation": {
+        "sourceFingerprintLocked": true,
+        "originalFingerprintVerified": true,
+        "registerFingerprint": "50fe1bac12033a84fc154fc5515f9667182da6e1c0ef51cd5b4a662d9cb7f79d",
+        "completeEmployeeSchedule": true,
+        "independentReaders": [
+          "Tesseract OCR of a 300 dpi Poppler render",
+          "visual transcription of the same render"
+        ],
+        "independentMethod": "Scanned page: Tesseract rows required to equal a visual transcription cell for cell; each printed row Total equals remuneration + expenses; named, below-threshold and council controls add to the printed grand totals",
+        "rowsIndependentlyChecked": 20,
+        "allFieldsOrderAndMultiplicityAgree": true,
+        "rowCountsByPdfPage": {
+          "8": 20
+        },
+        "printedControlTotals": [
+          "1939961.80",
+          "55045.11"
+        ],
+        "computedComponentTotals": [
+          "1939961.80",
+          "55045.11"
+        ],
+        "controlResiduals": [
+          "0.00",
+          "0.00"
+        ],
+        "summaryReconciles": true,
+        "zeroExpenseRows": 0,
+        "dashExpenseRows": 1,
+        "blankExpenseRows": 4,
+        "nullExpenseRows": 5,
+        "negativeExpenseRows": 0,
+        "expenseCellConvention": "Printed dash and blank expense cells are null in the normalized rows; the evidence file keeps which was printed. Printed 0.00 stays 0.",
+        "reportingPeriodBasis": "Page 8 is headed \"Schedule of Employee Remuneration and Expenses for the year ended December 31, 2024\".",
+        "approvalEvidence": {
+          "status": "verified-signed-sofi-approval",
+          "date": "2025-06-10",
+          "source_url": "https://www.fortstjames.ca/sites/default/files/2025-06/District%20of%20Fort%20St%20James%20-%202024%20Statement%20of%20Financial%20Information%20w%20checklist-signed.pdf",
+          "locator": "Physical PDF page 12, visually inspected",
+          "supports": "The statement approving all included statements and schedules bears CFO and mayor signatures dated June 10, 2025."
+        },
+        "excludedAggregates": {
+          "councilRemuneration": 82530.4,
+          "councilExpenses": 37898.47,
+          "belowThresholdRemuneration": 738381.47,
+          "belowThresholdExpenses": 15561.26,
+          "grandTotalRemuneration": 2760873.67,
+          "grandTotalExpenses": 108504.84,
+          "employerCpp": 117031.89,
+          "employerEi": 45437.08
+        },
+        "visualReview": "Every row, the dash and blank expense cells and the printed totals were read from 300 dpi crops of page 8."
+      }
     }
   ]
 }
