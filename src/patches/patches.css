@@ -93,9 +93,9 @@
 .patch__crumb { flex: 1; min-width: 0; font-size: 13px; color: var(--ink-muted); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 .patch__steps { display: flex; gap: 8px; margin-left: auto; }
 
-.patch__body { display: grid; grid-template-columns: minmax(0, 1fr) 340px; }
-.patch__visuals { min-width: 0; }
-.patch__review { display: grid; gap: 10px; padding: 18px 20px; border-bottom: 1px solid var(--outline); font-size: 13px; line-height: 1.5; color: var(--ink-muted); }
+.patch__body { display: grid; grid-template-columns: minmax(0, 1fr) 340px; grid-template-areas: 'visuals panel' 'review panel'; grid-template-rows: auto 1fr; }
+.patch__visuals { grid-area: visuals; min-width: 0; }
+.patch__review { grid-area: review; display: grid; align-content: start; gap: 10px; padding: 18px 20px; border-top: 1px solid var(--outline); font-size: 13px; line-height: 1.5; color: var(--ink-muted); }
 .patch__review-heading { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 10px; }
 .patch__review h3 { margin: 0; color: var(--ink); font-size: 16px; }
 .patch__review p { margin: 0; }
@@ -110,21 +110,40 @@
 .patch__source-select { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 10px; }
 .patch__source-select > span { font-weight: 600; color: var(--ink-2); }
 .patch__source-select select { min-width: 0; max-width: 100%; }
-.patch__stages { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1px; background: var(--outline); }
-.patch__stage {
+.patch__source-caption { display: grid; gap: 5px; font-size: 12px; line-height: 1.5; color: var(--ink-muted); overflow-wrap: anywhere; }
+.patch__source-caption:empty { display: none; }
+.patch__source-caption a { color: var(--ink); }
+.patch__status { color: var(--ink-muted); font-size: 14px; text-align: center; }
+
+/* The stage: panes that zoom and pan together. */
+.patch-stage { display: grid; grid-template-rows: auto minmax(0, 1fr); height: min(74vh, 720px); min-height: 360px; background: var(--surface); }
+.patch-stage--expanded { position: fixed; inset: 0; z-index: 1000; height: auto; }
+.patch-stage__bar { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px 12px; padding: 8px 12px; border-bottom: 1px solid var(--outline); }
+.patch-stage__tools { min-width: 0; }
+.patch-stage__tools .field { margin: 0; }
+.patch-stage__zoom { display: flex; gap: 6px; margin-left: auto; }
+.patch-stage__zoom .button { min-width: 36px; min-height: 32px; padding: 3px 10px; font-size: 13px; justify-content: center; }
+.patch-stage__level { min-width: 56px; font-variant-numeric: tabular-nums; }
+.patch-stage__panes { display: grid; gap: 1px; min-height: 0; background: var(--outline); }
+.patch-stage__panes--2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.patch-stage__panes--3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.patch-stage__pane {
   position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: min(62vh, 560px);
+  min-width: 0;
+  min-height: 0;
   margin: 0;
-  padding: 44px 24px 24px;
+  overflow: hidden;
+  /* A swipe scrolls the page while the stage is at fit; a pinch always zooms the stage. */
+  touch-action: pan-y;
   background: radial-gradient(circle at 50% 40%, var(--surface) 0, var(--page) 100%);
 }
-.patch__stage figcaption {
+.patch-stage__pane--zoomed { touch-action: none; cursor: grab; }
+.patch-stage__pane--zoomed:active { cursor: grabbing; }
+.patch-stage__pane figcaption {
   position: absolute;
-  top: 12px;
-  left: 12px;
+  z-index: 1;
+  top: 10px;
+  left: 10px;
   padding: 3px 9px;
   border-radius: 999px;
   background: var(--surface);
@@ -133,21 +152,16 @@
   letter-spacing: 0.08em;
   text-transform: uppercase;
   color: var(--ink-muted);
+  pointer-events: none;
 }
-.patch__stage img,
-.patch__stage canvas { display: block; max-width: 100%; max-height: min(52vh, 480px); width: auto; height: auto; object-fit: contain; }
-.patch__stage canvas[hidden] { display: none; }
-.patch__stage img { width: 80%; filter: drop-shadow(0 6px 14px rgba(0, 0, 0, 0.18)); }
-.patch__stage--source, .patch__stage--vector { flex-direction: column; justify-content: flex-start; gap: 16px; }
-/* Equal fit boxes enlarge small evidence crops without changing the image's proportions. */
-.patch__stage--source img, .patch__stage--vector img { width: 100%; height: min(52vh, 480px); max-width: 100%; object-fit: contain; filter: none; }
-.patch__source-caption { display: grid; gap: 5px; width: 100%; font-size: 12px; line-height: 1.5; color: var(--ink-muted); overflow-wrap: anywhere; }
-.patch__source-caption p { margin: 0; }
-.patch__source-caption a { color: var(--ink); }
-.patch__stage--simulation { grid-column: 1 / -1; min-height: 320px; border-top: 1px solid var(--outline); }
-.patch__status { color: var(--ink-muted); font-size: 14px; text-align: center; }
+.patch-stage__content { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 10px; padding: 20px; transform-origin: 50% 50%; will-change: transform; }
+.patch-stage__content img,
+.patch-stage__content canvas { display: block; min-width: 0; min-height: 0; max-width: 100%; max-height: 100%; width: auto; height: auto; object-fit: contain; user-select: none; -webkit-user-drag: none; }
+.patch-stage__content canvas[hidden] { display: none; }
+/* A drawing has no size of its own to speak of: let it fill the pane, as the simulation does. */
+.patch-stage__content .patch__vector { width: 100%; height: 100%; filter: drop-shadow(0 6px 14px rgba(0, 0, 0, 0.18)); }
 
-.patch__panel { padding: 18px 20px 22px; border-left: 1px solid var(--outline); display: grid; align-content: start; gap: 12px; }
+.patch__panel { grid-area: panel; padding: 18px 20px 22px; border-left: 1px solid var(--outline); display: grid; align-content: start; gap: 12px; }
 .patch__panel h2 { margin: 0; font-size: 19px; line-height: 1.3; }
 .patch__meta { margin: -6px 0 2px; font-size: 13px; color: var(--ink-muted); }
 .patch__panel .field--compact { justify-content: space-between; }
@@ -155,6 +169,10 @@
 .patch__variants .field__label { font-size: 12px; font-weight: 500; color: var(--ink-muted); }
 .patch__variants .segmented { flex-wrap: wrap; }
 .patch__variants .segmented button { flex: 1 1 auto; min-height: 26px; padding: 3px 10px; font-size: 12px; white-space: nowrap; }
+.patch__light { display: flex; align-items: center; justify-content: space-between; gap: 10px; font-size: 12px; font-weight: 500; color: var(--ink-muted); }
+.patch__light input { flex: 1; min-width: 0; max-width: 190px; margin-left: auto; }
+.patch__light output { min-width: 34px; text-align: right; font-variant-numeric: tabular-nums; color: var(--ink-2); }
+.patch__reset { justify-self: start; font-size: 12px; }
 .patch__facts { display: grid; grid-template-columns: repeat(3, auto); justify-content: start; gap: 4px 22px; margin: 4px 0 0; }
 .patch__facts dt { font-size: 11.5px; color: var(--ink-faint); }
 .patch__facts dd { margin: 0; font-weight: 600; font-variant-numeric: tabular-nums; }
@@ -174,12 +192,17 @@
 .patch__source { color: var(--ink-faint); }
 
 @media (max-width: 1000px) {
-  .patch__body { grid-template-columns: 1fr; }
+  /* Stage, then its controls, then the written review: the settings stay next to what they change. */
+  .patch__body { grid-template-columns: minmax(0, 1fr); grid-template-areas: 'visuals' 'panel' 'review'; grid-template-rows: none; }
   .patch__panel { border-left: 0; border-top: 1px solid var(--outline); }
+  .patch-stage__panes--3 { grid-template-columns: 1fr; grid-auto-rows: minmax(0, 1fr); }
+  .patch-stage:not(.patch-stage--expanded):has(.patch-stage__panes--3) { height: min(150vh, 1500px); }
 }
 @media (max-width: 600px) {
-  .patch__stages { grid-template-columns: 1fr; }
-  .patch__stage { min-height: 300px; }
+  .patch-stage { height: 62vh; min-height: 320px; }
+  .patch-stage__panes--2 { grid-template-columns: 1fr; grid-auto-rows: minmax(0, 1fr); }
+  .patch-stage:not(.patch-stage--expanded):has(.patch-stage__panes--2) { height: 110vh; }
+  .patch-stage__bar { padding: 8px; }
   .patch__bar { flex-wrap: nowrap; }
   .patch__step-label { display: none; }
   .patch__steps .button { min-width: 40px; justify-content: center; font-size: 18px; line-height: 1; }

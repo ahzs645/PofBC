@@ -111,7 +111,9 @@ export const PatchesView = ({ collection = 'patches' }) => {
     requestAnimationFrame(() => cards.current[id]?.focus())
   }, [go, place.org, place.patch])
 
-  useEffect(() => { if (!open) return; globalThis.scrollTo?.({ top: 0 }) }, [open])
+  // Opening a patch starts at its top; switching between a card's variants stays where it is.
+  const openCard = open ? cardOf(open).id : null
+  useEffect(() => { if (!openCard) return; globalThis.scrollTo?.({ top: 0 }) }, [openCard])
 
   if (open) {
     // Stepping goes card to card; a variant sits at its card's place.
