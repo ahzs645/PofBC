@@ -25,8 +25,13 @@ const bcCancerNow = read('research/identity/bc-cancer-current-2026-11-12/source-
 const PROGRAM_PACKAGES = ['bc-travel-industry-2026-11-12', 'justice-institute-2026-11-12', 'auditor-general-2026-11-12', 'bc-online-2026-11-12', 'bc-cancer-agency-2026-11-12', 'solutions-bc-vector-2026-11-12', 'healthlink-bc-2026-11-12', 'bc-cancer-modern-2026-11-12']
   .map((search) => ({ search, register: read(`research/identity/${search}/source-register.json`) }))
 // Supplied packages that add a vector to a body, each read with the search it came from.
-const PACKAGES = ['bc-assessment-vector-2026-11-12', 'bc-power-commission-vector-2026-11-12', 'bc-place-vector-2026-11-12', 'bc-railway-vector-2026-11-12', 'bc-railway-dogwood-vector-2026-11-12', 'bc-systems-vector-2026-11-12', 'bc-housing-1978-vector-2026-11-12', 'bc-petroleum-vector-2026-11-12', 'bc-housing-houses-vector-2026-11-12', 'fvhr-vector-2026-11-12', 'bc-steamship-vector-2026-11-12', 'pge-map-vector-2026-11-12', 'ocean-falls-vector-2026-11-12']
+const PACKAGES = ['bc-assessment-vector-2026-11-12', 'bc-power-commission-vector-2026-11-12', 'bc-place-vector-2026-11-12', 'bc-railway-vector-2026-11-12', 'bc-railway-dogwood-vector-2026-11-12', 'bc-systems-vector-2026-11-12', 'bc-housing-1978-vector-2026-11-12', 'bc-petroleum-vector-2026-11-12', 'bc-housing-houses-vector-2026-11-12', 'fvhr-vector-2026-11-12', 'bc-steamship-vector-2026-11-12', 'pge-map-vector-2026-11-12', 'ocean-falls-vector-2026-11-12', 'bc-trade-vector-2026-11-13']
   .map((search) => ({ search, register: read(`research/identity/${search}/source-register.json`) }))
+// A package may bring the body it is for, when the inventory never searched for that body.
+for (const { register: packaged } of PACKAGES) if (packaged.body) {
+  if (inventory.bodies.some((body) => body.id === packaged.body.id)) throw new Error(`Body already in the inventory: ${packaged.body.id}`)
+  inventory.bodies.push(packaged.body)
+}
 const railway = read('research/identity/railway-history-2026-11-12/source-register.json')
 const railwayHistory = read('research/identity/railway-history-2026-11-12/history.json')
 

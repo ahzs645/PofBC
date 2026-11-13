@@ -64,6 +64,7 @@ export const COLLECTING = [
   {"id":"metro-transit-operating-company","name":"Metro Transit Operating Company","shortName":"MTOC","kind":"crown-corporation","from":1980,"to":null,"current":false,"untraced":true},
   {"id":"wlc-developments","name":"W.L.C. Developments Ltd.","kind":"crown-corporation","from":1983,"to":1998,"current":false},
   {"id":"bc-enterprise-corporation","name":"British Columbia Enterprise Corporation","shortName":"BCEC","kind":"crown-corporation","from":1987,"to":1989,"current":false},
+  {"id":"bc-trade-development-corporation","name":"British Columbia Trade Development Corporation","shortName":"BC Trade","kind":"crown-corporation","from":1989,"to":2003,"current":false},
   {"id":"forest-renewal-bc","name":"Forest Renewal BC","shortName":"FRBC","kind":"crown-corporation","from":1994,"to":2002,"current":false},
   {"id":"tourism-bc","name":"Tourism British Columbia","shortName":"Tourism BC","kind":"crown-corporation","from":1997,"to":2010,"current":false},
   {"id":"oil-and-gas-commission","name":"BC Oil and Gas Commission","shortName":"OGC","kind":"crown-corporation","from":1998,"to":2023,"current":false},

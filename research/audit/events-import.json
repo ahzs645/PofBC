@@ -1,7 +1,7 @@
 {
   "schema": "import-accounting/1",
   "counts": {
-    "accepted": 970,
+    "accepted": 974,
     "corroborating_duplicate": 12,
     "unresolved_unmapped": 26
   },
@@ -1378,6 +1378,110 @@
         "reviewed_on": "2026-11-12"
       },
       "output_id": "atlas:bcsc-connected-services-2025"
+    },
+    {
+      "origin": "atlas/events-bc-trade-2026-11-13.json#atlas:bctrade-act-assented-1989",
+      "disposition": "accepted",
+      "input": {
+        "id": "atlas:bctrade-act-assented-1989",
+        "subject_id": "bc-trade-development-corporation",
+        "related_subject_ids": [
+          "ministry-of-international-business-and-immigration-1988"
+        ],
+        "event_type": "legal_establishment",
+        "title": "Trade Development Corporation Act assented to, establishing the British Columbia Trade Development Corporation (BC Trade)",
+        "date": {
+          "start": "1989-06-01",
+          "end": null,
+          "precision": "day",
+          "range_end_inclusive": false
+        },
+        "temporal_status": "source_reported_past",
+        "evidence": {
+          "source_url": "https://www.bclaws.gov.bc.ca/civix/document/id/hstats/hstats/1221940092",
+          "locator": "Trade Development Corporation Act, historical table"
+        },
+        "interpretation_notes": "The Act authorized both the full name and “B.C. Trade”. The corporation had been announced in July 1988 as part of an international business development strategy, as the Minister of International Business and Immigration, John Jansen, recalled when introducing the bill on 29 March 1989. BC Trade’s own launch advertisement also gives 1 June as the new organization’s arrival.",
+        "reviewed_on": "2026-11-13"
+      },
+      "output_id": "atlas:bctrade-act-assented-1989"
+    },
+    {
+      "origin": "atlas/events-bc-trade-2026-11-13.json#atlas:bctrade-logo-1989",
+      "disposition": "accepted",
+      "input": {
+        "id": "atlas:bctrade-logo-1989",
+        "subject_id": "bc-trade-development-corporation",
+        "related_subject_ids": [],
+        "event_type": "logo_observed",
+        "title": "BC Trade’s maple leaf, flag and rising sun closing its launch advertisement, “Going the distance for B.C. business”, in the Gulf Islands Driftwood",
+        "date": {
+          "start": "1989-07-12",
+          "end": null,
+          "precision": "day",
+          "range_end_inclusive": false
+        },
+        "temporal_status": "source_reported_past",
+        "evidence": {
+          "source_url": "https://saltspringarchives.com/driftwood/1989/v30n28July12-1989A.pdf#page=19",
+          "locator": "Gulf Islands Driftwood, 12 July 1989, printed page A19 (PDF page 19)"
+        },
+        "interpretation_notes": "Printed in black. Documented use by this date, not its introduction; the designer is not known. The advertisement names John Jansen as chairman, under the Ministry of International Business and Immigration. The colour version is on the back cover of British Columbia: Software Developers 1991.",
+        "reviewed_on": "2026-11-13"
+      },
+      "output_id": "atlas:bctrade-logo-1989"
+    },
+    {
+      "origin": "atlas/events-bc-trade-2026-11-13.json#atlas:bctrade-functions-to-bctio-1996",
+      "disposition": "accepted",
+      "input": {
+        "id": "atlas:bctrade-functions-to-bctio-1996",
+        "subject_id": "bc-trade-development-corporation",
+        "related_subject_ids": [
+          "ministry-of-employment-and-investment-1993"
+        ],
+        "event_type": "functions_transferred",
+        "title": "BC Trade’s functions combined with the British Columbia Investment Office and the Industry and Investment Division as the British Columbia Trade and Investment Office (BCTIO)",
+        "date": {
+          "start": "1996-03",
+          "end": null,
+          "precision": "month",
+          "range_end_inclusive": false
+        },
+        "temporal_status": "source_reported_past",
+        "evidence": {
+          "source_url": "https://www2.gov.bc.ca/assets/gov/british-columbians-our-governments/government-finances/financial-economic-review/financial-economic-review-1997.pdf",
+          "locator": "Financial and Economic Review, 1997"
+        },
+        "interpretation_notes": "BCTIO was formed within the Ministry of Employment and Investment. The corporation itself continued in law while it was wound up; its 2002/03 financial statements still record the settlement of loan guarantees and the disposal of investments. Today’s Trade and Invest BC does comparable work, but the reorganizations between are not traced here.",
+        "reviewed_on": "2026-11-13"
+      },
+      "output_id": "atlas:bctrade-functions-to-bctio-1996"
+    },
+    {
+      "origin": "atlas/events-bc-trade-2026-11-13.json#atlas:bctrade-dissolved-2003",
+      "disposition": "accepted",
+      "input": {
+        "id": "atlas:bctrade-dissolved-2003",
+        "subject_id": "bc-trade-development-corporation",
+        "related_subject_ids": [],
+        "event_type": "dissolved",
+        "title": "British Columbia Trade Development Corporation dissolved as its Act is repealed; its remaining assets and liabilities pass to the Province",
+        "date": {
+          "start": "2003-11-21",
+          "end": null,
+          "precision": "day",
+          "range_end_inclusive": false
+        },
+        "temporal_status": "source_reported_past",
+        "evidence": {
+          "source_url": "https://www.bclaws.gov.bc.ca/civix/document/id/consol18/consol18/tlc96456",
+          "locator": "Legislative changes table; B.C. Reg. 418/2003"
+        },
+        "interpretation_notes": "The order in council bringing the repeal into force was approved on 20 November 2003. The dissolution provisions transferred the corporation’s remaining assets, rights, obligations and liabilities to the government.",
+        "reviewed_on": "2026-11-13"
+      },
+      "output_id": "atlas:bctrade-dissolved-2003"
     },
     {
       "origin": "atlas/events-bcfs-timeline.json#bcfs:70:department-of-lands-1908",
