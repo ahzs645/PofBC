@@ -3,7 +3,7 @@
 // unregistered overlay is implied.
 
 import { useDeferredValue, useEffect, useLayoutEffect, useRef, useState } from 'react'
-import { createDigitizer, renderTextured, writeDst, writeExp } from 'patcher'
+import { createDigitizer, profileOf, renderTextured, threadColor, threadColors, writeDst, writeExp } from 'patcher'
 import { LIBRARY, cardLabel, loadPatchSvg, variantsOf } from 'patcher/library'
 import { Segmented } from '../site/Segmented.jsx'
 import { SiteLink } from '../site/navigation.jsx'
@@ -105,11 +105,13 @@ const download = (blob, name) => {
   setTimeout(() => URL.revokeObjectURL(link.href), 1000)
 }
 
-const textured = (result, finish, lightDeg, scale, canvas) => renderTextured(result, {
+// A profile is what the patch's source photograph shows about how it was made (vendor/patcher
+// library/profiles.json): the thread a drawn colour really is, the cloth, the edge.
+const textured = (result, profile, finish, lightDeg, scale, canvas) => renderTextured(result, {
   scale,
   lightDeg,
-  colors: result.palette,
-  borderColor: result.borderColor,
+  colors: threadColors(profile, result.palette),
+  borderColor: threadColor(profile, result.borderColor),
   dropShadow: true,
   finish
 }, canvas)
@@ -132,6 +134,7 @@ export const PatchViewer = ({ patch, org, position, previous, next, onOpen, onCl
   // Dragging the light re-renders the canvas; let the slider stay ahead of it.
   const lightDeg = useDeferredValue(view.lightDeg)
   const sewn = useRef(new Map())
+  const profile = profileOf(patch.id)
   const [sewOut, setSewOut] = useState(null)
   const [status, setStatus] = useState({ patchId: patch.id, phase: 'loading' })
   const [attempt, setAttempt] = useState(0)
@@ -226,7 +229,7 @@ export const PatchViewer = ({ patch, org, position, previous, next, onOpen, onCl
     setStatus({ patchId: patch.id, phase: 'sewing' })
     // A short wait, so stepping through several settings sews only the one that is settled on.
     const timer = setTimeout(() => {
-      digitizer.current.digitize(drawing.text, { widthMm: Number(widthMm), border, ground })
+      digitizer.current.digitize(drawing.text, { ...profileOf(patch.id)?.params, widthMm: Number(widthMm), border, ground })
         .then((result) => {
           if (sewn.current.size >= SEWN_LIMIT) sewn.current.delete(sewn.current.keys().next().value)
           sewn.current.set(key, result)
@@ -241,8 +244,8 @@ export const PatchViewer = ({ patch, org, position, previous, next, onOpen, onCl
   useLayoutEffect(() => {
     if (!result || !canvas.current) return
     const ratio = Math.min(2, globalThis.devicePixelRatio || 1)
-    textured(result, finish, lightDeg, (Math.min(16, 3200 / Math.max(result.widthMm, result.heightMm)) * ratio) / 1.4, canvas.current)
-  }, [result, finish, lightDeg, mode])
+    textured(result, profile, finish, lightDeg, (Math.min(16, 3200 / Math.max(result.widthMm, result.heightMm)) * ratio) / 1.4, canvas.current)
+  }, [result, profile, finish, lightDeg, mode])
 
   useEffect(() => {
     const onKey = (event) => {
@@ -261,7 +264,7 @@ export const PatchViewer = ({ patch, org, position, previous, next, onOpen, onCl
   const title = patch.variant ? `${cardLabel(patch)} — ${patch.variant}` : patch.label
   const exportPng = () => {
     if (!ready) return
-    const png = textured(result, finish, view.lightDeg, exportScale(result))
+    const png = textured(result, profile, finish, view.lightDeg, exportScale(result))
     png.toBlob((blob) => blob && download(blob, `${name}-embroidered.png`), 'image/png')
   }
 
@@ -367,10 +370,11 @@ export const PatchViewer = ({ patch, org, position, previous, next, onOpen, onCl
                 <div><dt>Threads</dt><dd>{result.palette.length}</dd></div>
               </dl>
               <ul className="patch__threads" aria-label="Thread colours">
-                {result.palette.map((colour, index) => (
-                  <li key={colour} title={`${colour} · ${Math.round(result.coverage[index] * 100)}%`} style={{ background: colour }} />
+                {threadColors(profile, result.palette).map((colour, index) => (
+                  <li key={result.palette[index]} title={`${colour} · ${Math.round(result.coverage[index] * 100)}%${index === result.clothIndex ? ' · cloth' : ''}`} style={{ background: colour }} />
                 ))}
               </ul>
+              {profile && <p className="patch__source">Cloth, edge and thread colours follow the source: {profile.evidence}</p>}
             </>
           )}
 
@@ -459,7 +463,7 @@ export const PatchViewer = ({ patch, org, position, previous, next, onOpen, onCl
             {source?.note && <p>{source.note}</p>}
             {sourceUrl && <a href={sourceUrl} target="_blank" rel="noreferrer">Open full source</a>}
           </div>
-          {review && <p className="patch__review-date">Evidence record: {reviewIndex.data.reviewedAt}. Source images keep their original proportions.</p>}
+          {review && <p className="patch__review-date">Evidence record: {review.reviewedAt ?? reviewIndex.data.reviewedAt}. Source images keep their original proportions.</p>}
         </section>}
       </div>
     </section>
