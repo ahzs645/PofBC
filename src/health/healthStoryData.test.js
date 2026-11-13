@@ -1,11 +1,11 @@
 import { test } from 'node:test'
 import assert from 'node:assert/strict'
 import { readFileSync } from 'node:fs'
-import { geoArea, geoContains } from 'd3-geo'
+import { geoContains } from 'd3-geo'
 import {
   AREAS, DEFAULT_AREA_ID, areaById, areasIn, readHealthPlace, healthMapLink, filterAreas, assetUrl, relatedAreas, formatDate,
 } from './healthStoryData.js'
-import { forSphericalDrawing, prepareMap, selectionViewBox } from './mapGeometry.js'
+import { featureBounds, isInside, isSmall, padBounds } from './mapGeometry.js'
 
 const readPublic = (name) => JSON.parse(readFileSync(
   new URL(`../../public/health-geography/${name}`, import.meta.url), 'utf8',
@@ -84,52 +84,45 @@ test('every boundary file is a valid collection whose features match the generat
   for (const framework of ['boards', 'councils', 'societies', 'regions-2000', 'authorities-2001']) {
     const collection = readPublic(`boundaries/${framework}.geojson`)
     assert.deepEqual(collection.features.map((feature) => feature.id).sort(), areasIn(framework).map((area) => area.id).sort())
-    const map = prepareMap(collection)
-    for (const feature of map.features) {
-      assert.doesNotMatch(map.path(feature), /NaN|Infinity/, feature.id)
+    for (const feature of collection.features) {
+      const box = featureBounds([feature])
+      assert.ok(box && box.flat().every(Number.isFinite), `${feature.id} has a finite extent`)
+      const [[west, south], [east, north]] = box
+      assert.ok(west >= -140 && east <= -113 && south >= 48 && north <= 60.1, `${feature.id} lies in British Columbia`)
       assert.ok(geoContains(feature, feature.properties.labelPoint) || feature.properties.lhaCodes.length > 0, feature.id)
     }
   }
 })
 
-test('D3 spherical winding normalization preserves a local polygon and its hole without modifying the source', () => {
+test('the map framing helpers measure boxes in longitude and latitude without touching the data', () => {
   const polygon = {
-    type: 'Feature', properties: { code: 'example' },
-    geometry: { type: 'Polygon', coordinates: [
-      [[-125, 50], [-123, 50], [-123, 52], [-125, 52], [-125, 50]],
-      [[-124.5, 50.5], [-124.5, 51.5], [-123.5, 51.5], [-123.5, 50.5], [-124.5, 50.5]],
-    ] },
+    type: 'Feature', properties: {},
+    geometry: { type: 'MultiPolygon', coordinates: [[[[-125, 50], [-123, 50], [-123, 52], [-125, 52], [-125, 50]]], [[[-122, 49], [-121, 49], [-121, 49.5], [-122, 49]]]] },
   }
   const source = structuredClone(polygon)
-  assert.ok(geoArea(polygon) > 2 * Math.PI, 'the RFC7946 fixture exercises the opposite D3 winding')
-  const normalized = forSphericalDrawing(polygon)
-  assert.ok(geoArea(normalized) > 0 && geoArea(normalized) < 2 * Math.PI)
-  assert.equal(geoContains(normalized, [-124.8, 51]), true, 'the polygon interior remains filled')
-  assert.equal(geoContains(normalized, [-124, 51]), false, 'the hole remains empty')
-  assert.equal(geoContains(normalized, [-130, 51]), false, 'the rest of the globe is excluded')
-  assert.deepEqual(polygon, source, 'source coordinates are preserved')
-  const multi = { ...polygon, geometry: { type: 'MultiPolygon', coordinates: [polygon.geometry.coordinates] } }
-  const normalizedMulti = forSphericalDrawing(multi)
-  assert.ok(geoArea(normalizedMulti) < 2 * Math.PI)
-  assert.equal(geoContains(normalizedMulti, [-124, 51]), false)
+  assert.deepEqual(featureBounds([polygon]), [[-125, 49], [-121, 52]])
+  assert.equal(featureBounds([]), null)
+  assert.equal(featureBounds([{ type: 'Feature', geometry: null }]), null)
+  assert.deepEqual(polygon, source, 'measuring does not rewrite the stored GeoJSON')
+  const padded = padBounds([[-125, 49], [-121, 52]])
+  assert.ok(padded[0][0] < -125 && padded[1][1] > 52)
+  const tiny = padBounds([[-123, 49], [-123, 49]])
+  assert.ok(tiny[1][0] - tiny[0][0] > 0, 'a point still gets a frame')
+  const visible = { getWest: () => -130, getEast: () => -115, getSouth: () => 48, getNorth: () => 60 }
+  assert.equal(isInside([[-125, 49], [-121, 52]], visible), true)
+  assert.equal(isInside([[-135, 49], [-121, 52]], { ...visible, getWest: () => -126 }), false)
+  const map = { project: ([x, y]) => ({ x: x * 10, y: -y * 10 }) }
+  assert.equal(isSmall([[-123, 49], [-122, 49.5]], map, 40), true)
+  assert.equal(isSmall([[-125, 49], [-115, 52]], map, 40), false)
 })
 
-test('all 89 modern LHA features produce finite SVG paths and usable selection view boxes', () => {
+test('all 89 modern LHA features have a finite, framable extent', () => {
   const collection = readPublic('display-lha.geojson')
-  const original = JSON.stringify(collection)
-  const map = prepareMap(collection)
-  assert.equal(map.features.length, 89)
-  for (const feature of map.features) {
-    const label = feature.properties.code
-    const path = map.path(feature)
-    assert.equal(typeof path, 'string', label)
-    assert.ok(path.length > 0, `${label} has a visible path`)
-    assert.doesNotMatch(path, /NaN|Infinity/, `${label} contains finite projected coordinates`)
-    const box = selectionViewBox(map.path, [feature], map.width, map.height)
-    assert.equal(box.length, 4)
-    assert.ok(box.every(Number.isFinite), `${label} has a finite view box`)
-    assert.ok(box[2] > 0 && box[3] > 0, `${label} has a positive view-box extent`)
+  assert.equal(collection.features.length, 89)
+  for (const feature of collection.features) {
+    const box = featureBounds([feature])
+    assert.ok(box && box.flat().every(Number.isFinite), feature.properties.code)
+    const [[west, south], [east, north]] = padBounds(box)
+    assert.ok(east > west && north > south, `${feature.properties.code} has a positive frame`)
   }
-  assert.deepEqual(selectionViewBox(map.path, [], map.width, map.height), [0, 0, 800, 650])
-  assert.equal(JSON.stringify(collection), original, 'projection does not rewrite the stored GeoJSON')
 })

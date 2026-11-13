@@ -46,6 +46,11 @@ The first, exploratory pipeline was removed once the georectified boundaries rep
 - **Evidence review and records list** (`scripts/health-map-research.mjs`, `evidence-plan.json`, `research-plan.json`, `records-to-obtain.md`): unsent request drafts for historical GIS and society schedules.
 - **Page artwork and story frame**: SVG exports of the four maps (the PDFs remain), the six-chapter story components and the `vendor/geo-toolkit` submodule they used.
 
+  `vendor/geo-toolkit` has since come back for a different job: from 13 November 2026 the atlas map
+  itself (`src/health/HealthAtlasMap.jsx`) draws with geo-toolkit's MapLibre map on an offline
+  basemap built from the province outline, in place of the site's own d3-geo SVG drawing. The
+  boundary data and everything around the map are unchanged.
+
 ## Original map sources and dates
 
 The principal source is the BC Auditor General's *A Review of Governance and Accountability in the Regionalization of Health Services*, **1997/98 Report 3, published March 1998**. The maps credit the Ministry of Health and Ministry Responsible for Seniors. The current website's `2024/08` upload path is not the report's publication date.

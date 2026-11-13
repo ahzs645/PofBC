@@ -1,34 +1,45 @@
-import { geoArea, geoConicConformal, geoPath } from 'd3-geo'
+// Longitude/latitude helpers for framing the health map. geo-toolkit (MapLibre) draws the GeoJSON
+// itself, so this only measures it: the box around some areas, whether a box is in view, and
+// whether an area is too small on screen to pick out.
 
-// D3 uses the opposite exterior-ring winding from RFC 7946 GeoJSON. Normalize
-// a copy for projection so a BC polygon does not render as the rest of the globe.
-export function forSphericalDrawing(feature) {
-  const orientPolygon = (coordinates) => geoArea({ type: 'Polygon', coordinates }) > 2 * Math.PI
-    ? coordinates.map((ring) => [...ring].reverse()) : coordinates
-  const geometry = feature.geometry
-  if (!geometry) return feature
-  if (geometry.type === 'Polygon') return { ...feature, geometry: { ...geometry, coordinates: orientPolygon(geometry.coordinates) } }
-  if (geometry.type === 'MultiPolygon') return { ...feature, geometry: { ...geometry, coordinates: geometry.coordinates.map(orientPolygon) } }
-  return feature
+function extend(box, [x, y]) {
+  if (!Number.isFinite(x) || !Number.isFinite(y)) return box
+  if (!box) return [[x, y], [x, y]]
+  box[0][0] = Math.min(box[0][0], x); box[0][1] = Math.min(box[0][1], y)
+  box[1][0] = Math.max(box[1][0], x); box[1][1] = Math.max(box[1][1], y)
+  return box
 }
 
-export function prepareMap(collection, width = 800, height = 650) {
-  const features = (collection?.features ?? []).filter((feature) => feature.geometry).map(forSphericalDrawing)
-  if (!features.length) return { features: [], path: () => '', width, height }
-  const projection = geoConicConformal().parallels([50, 58.5]).rotate([126, 0]).center([0, 54])
-    .fitExtent([[24, 24], [width - 24, height - 24]], { type: 'FeatureCollection', features })
-  return { features, projection, path: geoPath(projection).digits(2), width, height }
+function walk(coordinates, box) {
+  if (typeof coordinates?.[0] === 'number') return extend(box, coordinates)
+  for (const part of coordinates ?? []) box = walk(part, box)
+  return box
 }
 
-export function selectionViewBox(path, features, width = 800, height = 650) {
-  if (!features.length) return [0, 0, width, height]
-  const [[x0, y0], [x1, y1]] = path.bounds({ type: 'FeatureCollection', features })
-  if (![x0, y0, x1, y1].every(Number.isFinite)) return [0, 0, width, height]
-  const cx = (x0 + x1) / 2
-  const cy = (y0 + y1) / 2
-  const paddedWidth = Math.max(45, x1 - x0) * 1.22
-  const paddedHeight = Math.max(45, y1 - y0) * 1.22
-  const fittedWidth = Math.max(paddedWidth, paddedHeight * width / height)
-  const fittedHeight = fittedWidth * height / width
-  return [cx - fittedWidth / 2, cy - fittedHeight / 2, fittedWidth, fittedHeight]
+/** [[west, south], [east, north]] around the features' geometry, or null when there is none. */
+export function featureBounds(features) {
+  let box = null
+  for (const feature of features ?? []) box = walk(feature?.geometry?.coordinates, box)
+  return box
+}
+
+/** A box grown by a share of its size, with a floor so a small area is not framed edge to edge. */
+export function padBounds([[west, south], [east, north]], share = .12, floor = .08) {
+  const dx = Math.max((east - west) * share, floor)
+  const dy = Math.max((north - south) * share, floor)
+  return [[west - dx, south - dy], [east + dx, north + dy]]
+}
+
+/** Whether `inner` lies wholly inside the map's visible bounds (a MapLibre LngLatBounds). */
+export function isInside([[west, south], [east, north]], visible) {
+  return west >= visible.getWest() && east <= visible.getEast() && south >= visible.getSouth() && north <= visible.getNorth()
+}
+
+/** Whether a box is under `pixels` across on screen at the map's current zoom. */
+export function isSmall(box, map, pixels = 40) {
+  if (!box || !map) return false
+  const [[west, south], [east, north]] = box
+  const a = map.project([west, south])
+  const b = map.project([east, north])
+  return Math.max(Math.abs(b.x - a.x), Math.abs(b.y - a.y)) < pixels
 }
