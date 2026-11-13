@@ -14,7 +14,7 @@
     "accepted_employee_rows_added": 0,
     "accepted_source_manifests_added": 0
   },
-  "acceptance_boundary": "This queue supplements the existing inventory; it does not change its accepted-source statuses or salary coverage. Full row extraction, independent checking and reconciliation remain required for every lead. Downloaded PDFs are working copies, not committed repository artifacts.",
+  "acceptance_boundary": "This queue supplements the existing inventory. The salary build reads each lead as the current state of its source (retrieved, approval verified or held), superseding the pinned backlog entry it names and keeping that entry's earlier blocker as dated history; it does not change accepted sources, accepted rows or salary coverage counts. Full row extraction, independent checking and reconciliation remain required for every lead. Downloaded PDFs are working copies, not committed repository artifacts.",
   "shared_acceptance_criteria": [
     "Retain the official original and its SHA-256, reporting-period header, employee schedule pages, and final approval evidence in the source manifest.",
     "Extract all named employee rows independently of elected/board schedules. Preserve positions, original compensation components, decimal cents, and the distinction between explicit zero, dash and blank cells.",
@@ -111,6 +111,7 @@
       "id": "sd57-sofi-2023-24",
       "priority": 1,
       "employer": "School District No. 57 (Prince George)",
+      "employer_slug": "school-district-57",
       "existing_backlog_id": null,
       "reporting_period": "2023/24",
       "period_end": "2024-06-30",
@@ -154,6 +155,7 @@
       "id": "sd57-sofi-2022-23",
       "priority": 2,
       "employer": "School District No. 57 (Prince George)",
+      "employer_slug": "school-district-57",
       "existing_backlog_id": null,
       "reporting_period": "2022/23",
       "period_end": "2023-06-30",
@@ -196,6 +198,7 @@
       "id": "fort-st-james-sofi-2024",
       "priority": 1,
       "employer": "District of Fort St. James",
+      "employer_slug": "district-of-fort-st-james",
       "existing_backlog_id": null,
       "reporting_period": "2024",
       "period_end": "2024-12-31",

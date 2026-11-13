@@ -197,7 +197,7 @@ The three count columns are the original compiled edition labels. Official repla
 | School District No. 52 (Prince Rupert) | School districts | — | — | — | 2024/25 | None | — |
 | School District No. 53 (Okanagan Similkameen) | School districts | — | — | — | 2024/25 | None | — |
 | School District No. 54 (Bulkley Valley) | School districts | — | — | — | 2024/25 | None | — |
-| School District No. 57 (Prince George) | School districts | — | — | — | 2024/25 | None | — |
+| School District No. 57 (Prince George) | School districts | — | — | — | 2024/25 | None | 2022/23 source found; extraction pending; 2023/24 source found; extraction pending |
 | School District No. 58 (Nicola-Similkameen) | School districts | — | — | — | 2024/25 | None | — |
 | School District No. 59 (Peace River South) | School districts | — | — | — | 2024/25 | None | — |
 | School District No. 6 (Rocky Mountain) | School districts | — | — | — | 2024/25 | None | — |

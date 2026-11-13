@@ -276,7 +276,7 @@ if (process.argv.includes('--write-inventory')) {
       const employer = employers.employers.find((item) => item.slug === entry.employerSlug)
       const title = escape(entry.title).replaceAll('[', '\\[').replaceAll(']', '\\]')
       const source = entry.url ? `[${title}](${entry.url.replaceAll(' ', '%20').replaceAll('(', '%28').replaceAll(')', '%29')})` : title
-      return `| ${escape(employer?.names.at(-1) ?? entry.employerSlug)} | ${entry.year ?? 'Historical / multiple'} | ${entry.status} | ${entry.status === 'imported' && entry.rows != null ? count(entry.rows) : '—'} | ${source} | ${escape(entry.nextAction)} |`
+      return `| ${escape(employer?.names.at(-1) ?? entry.employerName ?? entry.employerSlug)} | ${entry.year ?? 'Historical / multiple'} | ${entry.status} | ${entry.status === 'imported' && entry.rows != null ? count(entry.rows) : '—'} | ${source} | ${escape(entry.nextAction)} |`
     }), '',
     'Employers and periods without a source entry still require source discovery; see [coverage-inventory.md](coverage-inventory.md). Source metadata never invents employee records or establishes that an employer had no employees.', '']
   writeFileSync(join(research, 'source-inventory.md'), sourceLines.join('\n'))
