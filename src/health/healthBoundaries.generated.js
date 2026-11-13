@@ -88,15 +88,15 @@ export const HEALTH_BOUNDARIES = {
    "inset": false,
    "heldOut": {
     "medianMetres": 676,
-    "p90Metres": 2151,
+    "p90Metres": 2154,
     "within1kmShare": 0.653,
     "within3kmShare": 0.945
    },
    "fit": {
-    "medianMetres": 591,
-    "p90Metres": 2249,
+    "medianMetres": 593,
+    "p90Metres": 2252,
     "within1kmShare": 0.679,
-    "within3kmShare": 0.937
+    "within3kmShare": 0.938
    },
    "seedAffineBaseline": {
     "medianMetres": 1803,
@@ -2032,7 +2032,7 @@ export const HEALTH_BOUNDARIES = {
    "basis": "drawing",
    "confidence": "high",
    "note": null,
-   "drawingOverlap": 0.9778,
+   "drawingOverlap": 0.9777,
    "areaKm2": 44985,
    "labelPoint": [
     -115.5085,
@@ -2084,7 +2084,7 @@ export const HEALTH_BOUNDARIES = {
    "basis": "drawing",
    "confidence": "high",
    "note": null,
-   "drawingOverlap": 0.9742,
+   "drawingOverlap": 0.9741,
    "areaKm2": 28851,
    "labelPoint": [
     -118.0279,
@@ -2126,7 +2126,7 @@ export const HEALTH_BOUNDARIES = {
    "basis": "drawing",
    "confidence": "high",
    "note": null,
-   "drawingOverlap": 0.8853,
+   "drawingOverlap": 0.8849,
    "areaKm2": 18239,
    "labelPoint": [
     -123.2611,
@@ -2172,7 +2172,7 @@ export const HEALTH_BOUNDARIES = {
    "basis": "drawing",
    "confidence": "medium",
    "note": null,
-   "drawingOverlap": 0.7481,
+   "drawingOverlap": 0.7484,
    "areaKm2": 51585,
    "labelPoint": [
     -126.0346,
@@ -2272,7 +2272,7 @@ export const HEALTH_BOUNDARIES = {
    "basis": "drawing",
    "confidence": "medium",
    "note": null,
-   "drawingOverlap": 0.9492,
+   "drawingOverlap": 0.9491,
    "areaKm2": 247124,
    "labelPoint": [
     -130.1355,

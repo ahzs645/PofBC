@@ -72,7 +72,12 @@ def sha(path):
 
 
 def project(geometry, function):
-    return shapely.transform(geometry, function, interleaved=False)
+    # Projection goes through the C maths library, whose last bits differ between CPUs. Source
+    # vertices often sit exactly on a published rounding midpoint (49.11965), so a 1e-15 difference
+    # decides which way they round. Quantizing each projection's output (degrees to 1e-9, metres to
+    # the millimetre) restores the exact value first, so every machine rounds it the same way.
+    digits = 9 if function is TO_GEO else 3
+    return shapely.transform(geometry, lambda x, y: tuple(np.round(np.asarray(v, dtype=float), digits) for v in function(x, y)), interleaved=False)
 
 
 def polygonal(geometry):
@@ -588,7 +593,7 @@ def label_point(geometry):
     from shapely.ops import polylabel
     largest = max(shapely.get_parts(geometry), key=lambda p: p.area)
     point = polylabel(largest, tolerance=500)
-    return [round(v, 4) for v in TO_GEO(point.x, point.y)]
+    return [round(round(v, 9), 4) for v in TO_GEO(point.x, point.y)]
 
 
 def deliver(geometry, tolerance=400):
