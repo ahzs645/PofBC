@@ -30,6 +30,22 @@ const ROOT = process.env.GOVERNMENT_RESEARCH || 'research'
 const read = (path) => JSON.parse(readFileSync(resolve(ROOT, path), 'utf8'))
 const OUT = resolve('src/government/atlasData.js')
 
+// Election returns have their own observation date. They cannot refresh cabinet/office-holder
+// facts checked earlier, or certify that a declared candidate has been sworn into office.
+const finalCountPath = 'atlas/election-2026-final-count.json'
+const finalCount = existsSync(resolve(ROOT, finalCountPath)) ? read(finalCountPath) : null
+if (finalCount) {
+  const actual = {}
+  for (const candidate of finalCount.candidates) actual[candidate.party] = (actual[candidate.party] ?? 0) + 1
+  if (finalCount.candidates.length !== finalCount.totalSeats ||
+      new Set(finalCount.candidates.map((candidate) => candidate.district)).size !== finalCount.totalSeats ||
+      Object.keys(actual).length !== Object.keys(finalCount.parties).length ||
+      Object.entries(finalCount.parties).some(([party, total]) => actual[party] !== total)) {
+    throw new Error('Election final-count candidates do not match the declared seat totals')
+  }
+  accounting.record(finalCountPath, 'accepted', finalCount, { reason: 'Declared election results, with recount qualifications; not a certified sitting-member or cabinet roster' })
+}
+
 // ── Lieutenant Governors ─────────────────────────────────────────────────────────────────────────
 
 const lg = read('atlas/lieutenant-governors.json')
@@ -155,6 +171,9 @@ writeFileSync(OUT, [
   '',
   '/** The 43rd Parliament (elected 2024-10-19, dissolved 2026-09-22): one entry per electoral district. */',
   `export const PARLIAMENT_43 = ${json({ elected: parliament?.election?.date ?? '2024-10-19', dissolved: '2026-09-22', seats, standings })}`,
+  '',
+  '/** Declared 2026 election results, separately dated and retaining judicial-recount qualifications. */',
+  `export const ELECTION_RESULTS_2026 = ${json(finalCount)}`,
   ''
 ].join('\n'))
 

@@ -20,12 +20,12 @@ export const LogoCard = ({ node, theme }) => {
       <div className="gov-salaries__head">
         <h2 id="gov-logos-heading" className="gov-card__heading">Logos</h2>
         <SiteLink className="gov-salaries__open" to={{ view: 'gallery', logos: logos.collection }}>
-          {logos.total > logos.entries.length ? `All ${logos.total} in Logos →` : 'Open in Logos →'}
+          {logos.collections.length === 1 && logos.total > logos.entries.length ? `All ${logos.total} in Logos →` : 'Open in Logos →'}
         </SiteLink>
       </div>
       <div className="gov-logos__grid">
         {logos.entries.map((entry) => (
-          <SiteLink key={entry.id} className="gov-logos__tile" to={{ view: 'gallery', logos: logos.collection, mark: entry.id }} title={entry.label} aria-label={`${entry.label} in Logos`}>
+          <SiteLink key={entry.id} className="gov-logos__tile" to={{ view: 'gallery', logos: entry.collection, mark: entry.id }} title={entry.label} aria-label={`${entry.label} in Logos`}>
             <span
               className="gallery__art gov-logos__art"
               data-ground={entry.ground}

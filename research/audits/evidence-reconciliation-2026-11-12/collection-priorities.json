@@ -1,0 +1,245 @@
+{
+  "reviewed_on": "2026-11-12",
+  "scope": "Five official salary-disclosure collection leads for gaps raised by the audit. Source discovery and approval evidence are recorded separately from accepted employee data.",
+  "inventory_checked": [
+    "research/salaries/source-inventory.md",
+    "research/salaries/source-backlog.json",
+    "research/salaries/coverage-inventory.md"
+  ],
+  "outcome": {
+    "source_documents_located": 5,
+    "original_binaries_downloaded_and_fingerprinted": 5,
+    "approval_evidence_verified": 4,
+    "approval_still_held": 1,
+    "accepted_employee_rows_added": 0,
+    "accepted_source_manifests_added": 0
+  },
+  "acceptance_boundary": "This queue supplements the existing inventory; it does not change its accepted-source statuses or salary coverage. Full row extraction, independent checking and reconciliation remain required for every lead. Downloaded PDFs are working copies, not committed repository artifacts.",
+  "shared_acceptance_criteria": [
+    "Retain the official original and its SHA-256, reporting-period header, employee schedule pages, and final approval evidence in the source manifest.",
+    "Extract all named employee rows independently of elected/board schedules. Preserve positions, original compensation components, decimal cents, and the distinction between explicit zero, dash and blank cells.",
+    "Validate names and numeric cells with an independent reader against the original pages; reconcile named remuneration and expenses to printed controls and explain aggregate differences without manufacturing individual rows.",
+    "Update accepted rows, manifests and coverage only after the complete employee cohort passes the repository's source acceptance gates. Do not count source discovery as accepted coverage."
+  ],
+  "leads": [
+    {
+      "id": "unbc-sofi-2021-22-approval-follow-through",
+      "priority": 1,
+      "employer": "University of Northern British Columbia",
+      "employer_slug": "university-of-northern-bc",
+      "existing_backlog_id": "unbc-board-sofi-2021-22",
+      "reporting_period": "2021/22",
+      "period_end": "2022-03-31",
+      "source_status": "located-original-retrieved-approval-verified",
+      "acceptance_status": "awaiting-complete-extraction-and-validation",
+      "accepted_employee_rows": 0,
+      "source_url": "https://www.unbc.ca/sites/default/files/sections/governance/20220916boardpublicsessionmeetingpackageminusminutes.pdf",
+      "official_index_url": "https://www.unbc.ca/university-secretary/board-governors/meeting-dates-agendas-and-minutes",
+      "binary": {
+        "sha256": "c0bb93513dd08d9cf56d573952fc1216634b98f9868981815294938e51045856",
+        "bytes": 9031248,
+        "pdf_pages": 115,
+        "extraction_mode": "native-text"
+      },
+      "scope": "Named employee remuneration, positions and separate expenses; the board schedule is separate and says board members receive no remuneration.",
+      "locators": {
+        "employee_schedule": "Physical PDF pages 11–17; printed package pages 16–22 of 120",
+        "board_schedule": "Physical PDF page 10",
+        "employee_controls_and_basis": "Physical PDF page 17"
+      },
+      "printed_employee_controls": {
+        "named_remuneration": 40670870.80,
+        "named_expenses": 619232.02,
+        "below_threshold_remuneration": 30112798.91,
+        "below_threshold_expenses": 547360.71,
+        "locator": "Physical PDF page 17; amounts transcribed as collection controls, not reconciled row totals"
+      },
+      "approval": {
+        "status": "verified-carried-board-motion",
+        "date": "2022-09-16",
+        "source_url": "https://www.unbc.ca/sites/default/files/sections/governance/20220916boardpublicsessionminutes-approved.pdf",
+        "locator": "PDF/printed page 2, item 7(i)(a), motion 2022BP09.16.03",
+        "supports": "The approved minutes record that the Board approved the Financial Information Act report to March 31, 2022 as presented; the motion carried."
+      },
+      "progress_from_held_work": "The earlier binary HTTP 403 blocker is cleared in this review, and approval is now verified; no employee rows have been accepted.",
+      "next_action": "Extract PDF pages 11–17, validate every employee cell including explicit 0.00 expenses, and reconcile both named controls. Preserve the report's exclusions and accounting-basis note."
+    },
+    {
+      "id": "unbc-sofi-2025-26-approval-hold",
+      "priority": 2,
+      "employer": "University of Northern British Columbia",
+      "employer_slug": "university-of-northern-bc",
+      "existing_backlog_id": "unbc-board-sofi-2025-26",
+      "reporting_period": "2025/26",
+      "period_end": "2026-03-31",
+      "source_status": "located-original-retrieved-approval-unverified",
+      "acceptance_status": "held-final-approval-and-row-validation",
+      "accepted_employee_rows": 0,
+      "source_url": "https://www.unbc.ca/sites/default/files/sections/university-secretary/board-governors/2026-09-18-board-public-package-minus-minutescompressed_1.pdf",
+      "official_index_url": "https://www.unbc.ca/university-secretary/board-governors/meeting-dates-agendas-and-minutes",
+      "binary": {
+        "sha256": "8f75d86229708c94d12939d5a2895178a4421e56e3303ce68e9b754ef78d86f2",
+        "bytes": 7231753,
+        "pdf_pages": 243,
+        "extraction_mode": "native-text"
+      },
+      "scope": "Employee SOFI with positions, remuneration and expenses inside a board meeting package; it is not a board-only disclosure.",
+      "locators": {
+        "employee_schedule": "Physical PDF pages 37–45",
+        "board_schedule": "Physical PDF page 36",
+        "proposed_approval": "Physical PDF page 2, agenda item 6.1.1",
+        "employee_controls_and_basis": "Physical PDF page 45"
+      },
+      "printed_employee_controls": {
+        "named_remuneration": 61308435.64,
+        "named_expenses": 3214336.71,
+        "below_threshold_remuneration": 27398562.86,
+        "below_threshold_expenses": 870761.94,
+        "locator": "Physical PDF page 45; amounts transcribed as collection controls, not reconciled row totals"
+      },
+      "approval": {
+        "status": "unverified-agenda-proposal-only",
+        "meeting_date": "2026-09-18",
+        "source_url": "https://www.unbc.ca/university-secretary/board-governors/meeting-dates-agendas-and-minutes",
+        "locator": "2026 meeting schedule, September 18 row",
+        "limitation": "The official index provides the revised package but no minutes link for this meeting as reviewed. The package proposes approval; it does not establish a carried motion."
+      },
+      "progress_from_held_work": "The earlier binary HTTP 403 blocker is cleared; final approval and complete employee validation remain unresolved.",
+      "next_action": "Locate a signed final SOFI or approved September 18 minutes, compare the approved version to this fingerprint, then extract and reconcile pages 37–45. Preserve the cash-payment basis and position-as-at-date notes on page 45."
+    },
+    {
+      "id": "sd57-sofi-2023-24",
+      "priority": 1,
+      "employer": "School District No. 57 (Prince George)",
+      "existing_backlog_id": null,
+      "reporting_period": "2023/24",
+      "period_end": "2024-06-30",
+      "source_status": "located-original-retrieved-approval-verified",
+      "acceptance_status": "awaiting-complete-extraction-and-validation",
+      "accepted_employee_rows": 0,
+      "source_url": "https://22.files.edl.io/607e/11/15/24/215959-e2178279-6c84-4d69-960b-b7ae70f553f1.pdf",
+      "official_index_url": "https://sd57.scholantisschools.com/apps/pages/index.jsp?uREC_ID=1144483&type=d&pREC_ID=1388703",
+      "official_source_basis": "The district Financial Reports page links this CDN document as its 2023/2024 Statement of Financial Information.",
+      "binary": {
+        "sha256": "e6ef623ccd6a1f62a9e49ff3de7e5efb63064b51e85b09168076a0653639fdd7",
+        "bytes": 877386,
+        "pdf_pages": 76,
+        "extraction_mode": "native-text-with-image-approval-page"
+      },
+      "scope": "Named employees earning over $75,000, positions and separate expenses; trustees occupy a distinct section at the beginning of the same schedule.",
+      "locators": {
+        "employee_schedule": "Physical PDF pages 56–71; employees begin below the elected-official section on page 56",
+        "trustee_schedule": "Physical PDF page 56",
+        "threshold_checklist": "Physical PDF page 4",
+        "employee_controls": "Physical PDF page 71",
+        "financial_statement_reconciliation_note": "Physical PDF page 76"
+      },
+      "printed_employee_controls": {
+        "named_remuneration": 84247372.38,
+        "named_expenses": 858990.53,
+        "below_threshold_remuneration": 51347360.47,
+        "below_threshold_expenses": 344768.21,
+        "locator": "Physical PDF page 71; the final combined total also includes trustees"
+      },
+      "approval": {
+        "status": "verified-original-signed-declaration-published",
+        "date": "2024-11-14",
+        "source_url": "https://22.files.edl.io/607e/11/15/24/215959-e2178279-6c84-4d69-960b-b7ae70f553f1.pdf",
+        "locator": "Physical PDF page 3, declaration and signatures; visually inspected",
+        "supports": "The SOFI declaration identifies the board chair, superintendent and secretary treasurer as original signatories, all dated November 14, 2024."
+      },
+      "next_action": "Extract the complete employee section without trustees, reconcile named remuneration and expense totals, then retain the page 76 explanations for differences from audited financial statements."
+    },
+    {
+      "id": "sd57-sofi-2022-23",
+      "priority": 2,
+      "employer": "School District No. 57 (Prince George)",
+      "existing_backlog_id": null,
+      "reporting_period": "2022/23",
+      "period_end": "2023-06-30",
+      "source_status": "located-original-retrieved-approval-verified",
+      "acceptance_status": "awaiting-scan-extraction-and-independent-validation",
+      "accepted_employee_rows": 0,
+      "source_url": "https://22.files.edl.io/ecb5/11/15/24/222817-489f5533-61fe-4897-9dbc-86cbb8fb2362.pdf",
+      "official_index_url": "https://sd57.scholantisschools.com/apps/pages/index.jsp?uREC_ID=1144483&type=d&pREC_ID=1388703",
+      "official_source_basis": "The district Financial Reports page links this CDN document as its 2022/2023 Statement of Financial Information.",
+      "binary": {
+        "sha256": "4804bb7e254313a4d3626862da291b78870124be65cbcd983a9ece09dec05616",
+        "bytes": 6413173,
+        "pdf_pages": 69,
+        "extraction_mode": "scanned-pages-no-native-text"
+      },
+      "scope": "Named employee remuneration, positions and expenses; a separate trustee section precedes employees on the first schedule page.",
+      "locators": {
+        "employee_schedule": "Physical PDF pages 51–64; printed schedule pages 1–14",
+        "trustee_schedule": "Physical PDF page 51, upper section",
+        "threshold_checklist": "Physical PDF page 4",
+        "employee_controls": "Physical PDF page 64, printed schedule page 14"
+      },
+      "printed_employee_controls": {
+        "named_remuneration": 71496307.59,
+        "named_expenses": 862050.36,
+        "below_threshold_remuneration": 53506286.48,
+        "below_threshold_expenses": 474292.88,
+        "locator": "Physical PDF page 64, visually inspected; the final combined total also includes trustees"
+      },
+      "approval": {
+        "status": "verified-signed-sofi-declaration",
+        "signature_dates": ["2023-11-28", "2023-11-29"],
+        "source_url": "https://22.files.edl.io/ecb5/11/15/24/222817-489f5533-61fe-4897-9dbc-86cbb8fb2362.pdf",
+        "locator": "Physical PDF page 2, visually inspected",
+        "supports": "The SOFI declaration carries three signatures; the board chair is dated November 28 and the superintendent and secretary treasurer November 29, 2023."
+      },
+      "next_action": "OCR or manually extract pages 51–64 with retained page images; independently check every name, position and amount, separate trustees, and reconcile both employee controls before acceptance."
+    },
+    {
+      "id": "fort-st-james-sofi-2024",
+      "priority": 1,
+      "employer": "District of Fort St. James",
+      "existing_backlog_id": null,
+      "reporting_period": "2024",
+      "period_end": "2024-12-31",
+      "source_status": "located-original-retrieved-approval-verified",
+      "acceptance_status": "awaiting-scan-extraction-and-independent-validation",
+      "accepted_employee_rows": 0,
+      "source_url": "https://www.fortstjames.ca/sites/default/files/2025-06/District%20of%20Fort%20St%20James%20-%202024%20Statement%20of%20Financial%20Information%20w%20checklist-signed.pdf",
+      "official_index_url": "https://www.fortstjames.ca/government/municipal-reports",
+      "binary": {
+        "sha256": "50fe1bac12033a84fc154fc5515f9667182da6e1c0ef51cd5b4a662d9cb7f79d",
+        "bytes": 2050940,
+        "pdf_pages": 12,
+        "extraction_mode": "scanned-pages-no-native-text"
+      },
+      "scope": "Named employees with positions, separate remuneration and expenses; council remuneration and the unnamed employee aggregate are separate sections on the same page.",
+      "locators": {
+        "employee_and_council_schedules": "Physical PDF page 8, visually inspected",
+        "employee_controls_and_basis": "Physical PDF page 8",
+        "approval": "Physical PDF page 12"
+      },
+      "printed_employee_controls": {
+        "named_remuneration": 1939961.80,
+        "named_expenses": 55045.11,
+        "below_threshold_remuneration": 738381.47,
+        "below_threshold_expenses": 15561.26,
+        "locator": "Physical PDF page 8; council totals are separate"
+      },
+      "approval": {
+        "status": "verified-signed-sofi-approval",
+        "date": "2025-06-10",
+        "source_url": "https://www.fortstjames.ca/sites/default/files/2025-06/District%20of%20Fort%20St%20James%20-%202024%20Statement%20of%20Financial%20Information%20w%20checklist-signed.pdf",
+        "locator": "Physical PDF page 12, visually inspected",
+        "supports": "The statement approving all included statements and schedules bears CFO and mayor signatures dated June 10, 2025."
+      },
+      "next_action": "Independently transcribe and reconcile page 8. Preserve all named rows: the source's over-$75,000 section includes a remuneration-below-$75,000 row whose combined remuneration and expenses exceeds that amount. Record this scope issue instead of filtering the row away or merging expenses into salary."
+    }
+  ],
+  "deferred_discovery_note": {
+    "employer": "District of Kitimat",
+    "reporting_period": "2024",
+    "status": "existing-held-lead-needs-current-download-link",
+    "old_source_url": "https://www.kitimat.ca/en/municipal-hall/resources/Documents/Council-Meetings-and-Agendas/Agendas/2025-Agendas/2025_06_23_SPEC-agenda-final.pdf",
+    "official_index_url": "https://kitimat.ca/municipal-office/annual-sofi",
+    "observation": "The previously inventoried agenda URL returned 404. The current official annual-SOFI index lists a 2024 report, but its replacement binary was not recovered in this review. Fort St. James supplies the verified northern municipal document in this bounded queue.",
+    "accepted_employee_rows": 0
+  }
+}

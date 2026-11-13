@@ -113,7 +113,7 @@
       "claims": [
         "TSB dates CN acquisition of the BCR system to 15 July 2004."
       ],
-      "caution": "Use July 14 for legal closing and July 15 for operational transition, explaining the distinction."
+      "caution": "This is a retrospective acquisition-date claim. It does not independently establish a distinct operational transition on 15 July. Contemporary CN and provincial records date closing and the start of phased integration to 14 July."
     },
     {
       "id": "bctfa-fs-2021",
@@ -194,6 +194,25 @@
       "locator": "Corporate wordmark; existing gallery specimen collected 22 October 2026",
       "claims": [
         "The continuing provincial company uses its own BC Railway Company wordmark. The website asset does not establish a design introduction date."
+      ]
+    },
+    {
+      "id": "cn-closing-release-2004-07-14",
+      "title": "CN closes BC Rail transaction",
+      "url": "https://www.sec.gov/Archives/edgar/data/16868/000095010304000988/jul1504_6k.htm",
+      "locator": "Contemporary CN release dated 14 July 2004, opening three paragraphs",
+      "claims": [
+        "CN completed the BC Rail transaction on 14 July 2004 and announced the start of step-by-step integration."
+      ],
+      "caution": "The release date is 14 July; the SEC filename contains jul1504 and the signature is dated 16 July. Neither replaces the stated transaction date."
+    },
+    {
+      "id": "cn-annual-report-2004",
+      "title": "CN 2004 audited financial statements, filed February 2005",
+      "url": "https://www.sec.gov/Archives/edgar/data/16868/000095010305000208/feb0405_6k.htm",
+      "locator": "Note 3, Acquisitions: BC Rail; printed p. 11",
+      "claims": [
+        "CN completed acquisition and began phased integration on 14 July 2004."
       ]
     }
   ],
@@ -300,19 +319,21 @@
       "type": "transaction",
       "title": "CN transaction closes",
       "sources": [
-        "cn-transaction-release-2004"
+        "cn-transaction-release-2004",
+        "cn-closing-release-2004-07-14",
+        "cn-annual-report-2004"
       ],
       "note": "Operating business transferred; BCRC survives and railway infrastructure remains publicly owned."
     },
     {
       "id": "cn-operation-2004",
       "date": "2004-07-15",
-      "type": "operations",
-      "title": "CN operational transition",
+      "type": "retrospective_date_claim",
+      "title": "TSB’s retrospective account dates CN acquisition to 15 July",
       "sources": [
         "tsb-cn-operations-2004"
       ],
-      "note": "Keep distinct from legal closing."
+      "note": "Retained as an attributed source discrepancy. CN’s contemporary release and audited report support 14 July for closing and the start of phased integration; no distinct 15 July operational milestone is established."
     },
     {
       "id": "bctfa-bcrc-2010",

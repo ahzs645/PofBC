@@ -1291,7 +1291,7 @@ export const COLLECTED_BODIES = [
     "current": true,
     "status": "asset-collected",
     "observedDate": "2026-10-22",
-    "notes": "One design in full colour and in white, both original vector artwork from PavCo’s own publications.",
+    "notes": "The former PavCo was incorporated on 3 May 1984, before it received certain BCEC assets and liabilities in 1989. The present corporation was formed on 1 April 2008 by amalgamating former PavCo and Vancouver Convention Centre Expansion Project Ltd. The held design appears in full colour and white in PavCo’s own publications.",
     "assets": [
       {
         "id": "vector-pavco-2025-26-colour-source-vector",
@@ -4042,7 +4042,7 @@ export const COLLECTED_BODIES = [
     "current": false,
     "status": "asset-collected",
     "observedDate": "2026-10-22",
-    "notes": "The Crown company that built BC Place Stadium (opened 1983) on the False Creek lands that later held Expo 86. Renamed BC Enterprise Corporation in 1987; its assets passed to PavCo in 1989.",
+    "notes": "The Crown company that built BC Place Stadium (opened 1983) on the False Creek lands that later held Expo 86. Legislation renamed it BC Enterprise Corporation with effect from 31 March 1987. BCEC ceased operations in 1989 and transferred certain assets and liabilities to the Province and the separately incorporated PavCo.",
     "assets": [
       {
         "id": "bc-place-1983-rebuilt",
@@ -4119,7 +4119,7 @@ export const COLLECTED_BODIES = [
     "current": false,
     "status": "asset-collected",
     "observedDate": "2026-10-22",
-    "notes": "Corporate mark from a dated 1988 land-sale prospectus",
+    "notes": "BC Place Ltd. renamed with effect from 31 March 1987, with BC Development Corporation assets and liabilities transferred into it. BCEC ceased operations on 30 September 1989 and transferred certain assets and liabilities to the Province and PavCo. It remained a distinct company until statutory dissolution on 13 March 2023. Its held mark comes from a dated 1988 land-sale prospectus.",
     "assets": [
       {
         "id": "source-bc-enterprise-corporation-bc-enterprise-1988-logo-png",

@@ -892,9 +892,7 @@
    "id": "atlas:parks-branch-1957-03-28",
    "subject_id": "sub-bc-parks",
    "subject_key": "parks-branch-historical",
-   "related_subject_ids": [
-    "seed:parks-branch-1957"
-   ],
+   "related_subject_ids": [],
    "event_type": "reorganization",
    "title": "Parks and Recreation Division becomes the Parks Branch, reporting to the new Dept. of Recreation and Conservation",
    "date": {
@@ -938,6 +936,9 @@
      "locator": "Department of Recreation and Conservation, Report 1957, Introduction (II 7) and Provincial Parks history (before II 24)",
      "note": "The department's own first report dates the Act creating the department to 28 March 1957 and says the Parks and Recreation Division entered it, as the Provincial Parks Branch, on 1 April 1957."
     }
+   ],
+   "related_event_ids": [
+    "pkg:parks-branch-1957"
    ]
   },
   {
@@ -1310,7 +1311,6 @@
    "subject_id": "sub-bc-wildfire-service",
    "subject_key": "bc-wildfire-service-lineage",
    "related_subject_ids": [
-    "seed:wildfire-origin",
     "sub-office-of-the-chief-forester"
    ],
    "event_type": "legislation_assented",
@@ -1338,7 +1338,10 @@
    },
    "interpretation_notes": "Day-precision legal event underlying the 1912 formation claim (seed:wildfire-origin). Separate from the seed, which is a year-only retrospective origin claim.",
    "reviewed_on": "2026-09-25",
-   "integration_status": "needs_local_id_mapping_and_review"
+   "integration_status": "needs_local_id_mapping_and_review",
+   "related_event_ids": [
+    "pkg:wildfire-origin"
+   ]
   },
   {
    "id": "atlas:bcws-operations-division-1912",
@@ -1779,7 +1782,7 @@
    "subject_id": "sub-bc-timber-sales",
    "subject_key": "bc-timber-sales",
    "related_subject_ids": [
-    "small-business-forest-enterprise-program"
+    "sub-small-business-forest-enterprise-program"
    ],
    "event_type": "succession",
    "title": "BC Timber Sales replaces the Small Business Forest Enterprise Program",
@@ -2863,7 +2866,6 @@
    "subject_id": "sub-bc-coroners-service",
    "subject_key": "bc-coroners-service",
    "related_subject_ids": [
-    "emergency-management-bc",
     "sub-office-of-the-fire-commissioner"
    ],
    "event_type": "administrative_grouping",
@@ -2891,7 +2893,14 @@
    },
    "interpretation_notes": "Administrative grouping in a service plan, not a statutory reporting change; the Chief Coroner is appointed on the Solicitor General's recommendation.",
    "reviewed_on": "2026-09-25",
-   "integration_status": "needs_local_id_mapping_and_review"
+   "integration_status": "needs_local_id_mapping_and_review",
+   "unresolved_related_entities": [
+    {
+     "label": "Emergency Management B.C.",
+     "supplied_id": "emergency-management-bc",
+     "reason": "The 2007 service plan names this core business area, but the government register has no matching historical entity. Health Emergency Management BC is a different body. Retain this source-supported entity mention pending a dated institutional record."
+    }
+   ]
   },
   {
    "id": "atlas:corr-probation-1942",
@@ -2969,7 +2978,7 @@
    "subject_id": "sub-bc-corrections",
    "subject_key": "bc-corrections-branch",
    "related_subject_ids": [
-    "ministry-of-attorney-general"
+    "department-of-the-attorney-general-1871"
    ],
    "event_type": "unit_established",
    "title": "BC Archives: Corrections Branch established in 1951 within the Attorney General's ministry",
@@ -3356,9 +3365,7 @@
    "id": "atlas:pgt-public-trustee-act-repealed-2000",
    "subject_id": "sub-public-guardian-and-trustee",
    "subject_key": "public-guardian-and-trustee",
-   "related_subject_ids": [
-    "A40:s.29"
-   ],
+   "related_subject_ids": [],
    "event_type": "legislation_repealed",
    "title": "Public Trustee Act repealed effective February 28, 2000 (B.C. Reg. 12/2000)",
    "date": {
@@ -3384,7 +3391,16 @@
    },
    "interpretation_notes": "The PGT Act (s. 29) makes the PGT successor in office of the Public Trustee (A40). The PGT Act commencement date is not stated in the text captured; do not assume it equals the repeal date.",
    "reviewed_on": "2026-09-25",
-   "integration_status": "needs_local_id_mapping_and_review"
+   "integration_status": "needs_local_id_mapping_and_review",
+   "related_legal_references": [
+    {
+     "source_id": "A40",
+     "source_url": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/96383_01#section29",
+     "title": "Public Guardian and Trustee Act",
+     "locator": "Section 29: The offices the Public Guardian and Trustee succeeds to",
+     "original_reference": "A40:s.29"
+    }
+   ]
   },
   {
    "id": "atlas:pep-civil-defence-act-1951",

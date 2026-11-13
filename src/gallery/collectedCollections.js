@@ -19,30 +19,49 @@ export const assetUrl = (path, base = import.meta.env?.BASE_URL ?? '/') =>
   `${base.replace(/\/?$/, '/')}${path.replace(/^\//, '')}`
 
 /**
- * When a design's files were seen: one or two sightings as given, more as the years they span. A
- * retrieval date is not a sighting of the logo.
+ * Only an explicit specimen date can date artwork. A sentence containing a year may describe a
+ * reporting period, an upload, or an event inside an undated document. Keep such prose as context;
+ * never shorten it to an invented "about YYYY" sighting. Dates retain their supplied precision.
  */
-const yearOf = (date) => Number(String(date).match(/\d{4}/)?.[0])
-
-/** A date as a card can show it: a short one as given; a sentence about one, as the year it names. */
-const shortDate = (date) => {
-  if (!date || String(date).length <= 24) return date
-  return yearOf(date) ? `about ${yearOf(date)}` : null
+export const parseSpecimenDate = (value) => {
+  if (typeof value !== 'string') return null
+  const label = value.trim()
+  const iso = label.match(/^(\d{4})(?:-(\d{2})(?:-(\d{2}))?)?$/)
+  if (iso) {
+    const [, year, month, day] = iso
+    if (month && (Number(month) < 1 || Number(month) > 12)) return null
+    if (day) {
+      const date = new Date(`${label}T00:00:00Z`)
+      if (!Number.isFinite(date.getTime()) || date.toISOString().slice(0, 10) !== label) return null
+    }
+    return { label, firstYear: Number(year), lastYear: Number(year) }
+  }
+  const fiscal = label.match(/^(?:FY\s*)?(\d{4})\/(\d{2}|\d{4})$/i)
+  if (fiscal) {
+    const firstYear = Number(fiscal[1])
+    let lastYear = fiscal[2].length === 4 ? Number(fiscal[2]) : Math.floor(firstYear / 100) * 100 + Number(fiscal[2])
+    if (fiscal[2].length === 2 && lastYear < firstYear) lastYear += 100
+    return lastYear === firstYear + 1 ? { label, firstYear, lastYear } : null
+  }
+  const range = label.match(/^(\d{4})\s*[–—-]\s*(\d{4})$/)
+  if (range) return Number(range[2]) >= Number(range[1])
+    ? { label, firstYear: Number(range[1]), lastYear: Number(range[2]) } : null
+  const months = 'January|February|March|April|May|June|July|August|September|October|November|December'
+  const named = label.match(new RegExp(`^(?:(?:c\\.\\s*|about\\s+)|(?:(?:${months})(?:[–—-](?:${months}))?|Spring|Summer|Autumn|Fall|Winter)\\s+)(\\d{4})$`, 'i'))
+  return named ? { label, firstYear: Number(named[1]), lastYear: Number(named[1]) } : null
 }
 
-/** The years a date covers: a fiscal year such as 1982/83 covers both. */
-const yearsOf = (date) => {
-  const fiscal = String(date).match(/(\d{4})\/(\d{2})\b/)
-  return fiscal ? [Number(fiscal[1]), Number(fiscal[1].slice(0, 2) + fiscal[2])] : [yearOf(date)]
-}
+const datesOf = (asset) => [asset.specimenDate ?? asset.sourceDate, ...(asset.alsoSeen ?? []).map((seen) => seen.date)]
+  .map(parseSpecimenDate).filter(Boolean)
 
+/** One or two sightings as given; more as their full year span. Retrieval dates are never used. */
 const seenDates = (versions) => {
-  const all = [...new Set(versions.flatMap((each) => [each.sourceDate, ...(each.alsoSeen ?? []).map((seen) => seen.date)]).map(shortDate).filter(Boolean))]
+  const all = [...new Map(versions.flatMap(datesOf).map((date) => [date.label, date])).values()]
   // A bare year another date already covers says nothing more (1982/83 and 1983).
-  const dates = all.filter((date) => !/^\d{4}$/.test(date) || !all.some((other) => other !== date && yearsOf(other).includes(Number(date))))
-    .sort((a, b) => yearOf(a) - yearOf(b))
-  if (dates.length < 3 || !dates.every(yearOf)) return dates.join(' and ')
-  const [first, last] = [yearOf(dates[0]), yearOf(dates.at(-1))]
+  const dates = all.filter((date) => !/^\d{4}$/.test(date.label) || !all.some((other) => other !== date && other.firstYear <= date.firstYear && other.lastYear >= date.lastYear))
+    .sort((a, b) => a.firstYear - b.firstYear)
+  if (dates.length < 3) return dates.map((date) => date.label).join(' and ')
+  const [first, last] = [dates[0].firstYear, Math.max(...dates.map((date) => date.lastYear))]
   return first === last ? String(first) : `${first}–${last}`
 }
 
@@ -56,7 +75,7 @@ const firstSentence = (text = '') => {
 const designsOf = (assets) => assets.filter((asset) => !asset.variantOf).map((asset) => {
   const versions = [asset, ...assets.filter((each) => each.variantOf === asset.id)]
   return { asset, versions }
-}).map((design, order) => ({ ...design, order, year: Math.min(...design.versions.flatMap((each) => [each.sourceDate, ...(each.alsoSeen ?? []).map((seen) => seen.date)]).map(yearOf).filter(Boolean)) }))
+}).map((design, order) => ({ ...design, order, year: Math.min(...design.versions.flatMap(datesOf).map((date) => date.firstYear)) }))
   // Undated designs keep their place after the dated ones.
   .sort((a, b) => (Number.isFinite(a.year) ? a.year : 9999) - (Number.isFinite(b.year) ? b.year : 9999) || a.order - b.order)
 
@@ -73,8 +92,8 @@ const collectedEntry = (asset, timeline, owner, versions = [asset]) => ({
   // A card says what the mark is in a sentence; its full account, versions and sources are on its page.
   note: firstSentence(asset.notes),
   // A publication reproducing historical artwork is dated as such, beside the use it records.
-  years: asset.sourceReproduction && asset.historicalDateLabel && asset.sourceDate
-    ? `${asset.historicalDateLabel} · reproduced ${asset.sourceDate}`
+  years: asset.sourceReproduction && asset.historicalDateLabel && parseSpecimenDate(asset.specimenDate ?? asset.sourceDate)
+    ? `${asset.historicalDateLabel} · reproduced ${parseSpecimenDate(asset.specimenDate ?? asset.sourceDate).label}`
     : seenDates(versions) ? `Seen ${seenDates(versions)}` : 'Logo dates unestablished',
   asset,
   ...(versions.length > 1 ? { versions } : {}),
@@ -85,11 +104,12 @@ const collectedEntry = (asset, timeline, owner, versions = [asset]) => ({
     applicability: {
       kind: seenDates(versions) ? 'dated_specimen' : 'unknown',
       years: seenDates(versions) || 'undated',
-      note: asset.sourceDate
+      note: seenDates(versions)
         ? (asset.sourceReproduction
             ? 'This dates the publication reproducing the historical artwork. The historical use is described separately; the reproduction date does not date the design’s adoption. '
             : 'This is the date of the cited specimen, not a verified first use or adoption date. ') + (asset.dateNote || '')
-        : `Collected on ${asset.observedDate}. A retrieval date does not establish when the design was adopted.`,
+        : [asset.sourceDate ? `Source-date context: ${asset.sourceDate}. This does not establish a dated specimen.` : null,
+            `Collected on ${asset.observedDate}. A retrieval date does not establish when the design was adopted.`, asset.dateNote].filter(Boolean).join(' '),
     },
     rights: {
       status: 'unresolved',
@@ -139,7 +159,6 @@ const collectionOf = (body) => ({
  */
 export const CONTINUATIONS = [
   ['pacific-great-eastern-railway', 'bc-railway-company'],
-  ['bc-enterprise-corporation', 'bc-pavilion-corporation'],
   ['bc-assets-and-land-corporation', 'land-and-water-bc'],
   ['oil-and-gas-commission', 'bc-energy-regulator'],
   ['partnerships-bc', 'infrastructure-bc']

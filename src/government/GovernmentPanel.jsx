@@ -5,6 +5,8 @@
 import { useMemo, useState } from 'react'
 import { bodyFamily, elsewhereLine, groupTitle } from './bodyFamily.js'
 import { CURRENT_AS_OF } from './currentData.js'
+import { ELECTION_RESULTS_2026 } from './atlasData.js'
+import { ElectionResultsCard } from './ElectionResultsCard.jsx'
 import { changesIn, episodeById, predecessorsOf, successorsOf } from './episodes.js'
 import { currentMarkFor, identityFor, renderEraMark } from './eraMark.js'
 import { KINDS, RELATIONS } from './GovernmentGraph.jsx'
@@ -738,11 +740,12 @@ export const EntityCard = ({ node, government, theme, onSelect, onJump, onJumpBo
             {node.election && Object.keys(node.election.seats).length > 0 && (
               <SeatBar seats={node.election.seats} total={node.election.totalSeats} />
             )}
-            {present && <ElectionStages stages={electionStages(day)} />}
+            {present && !ELECTION_RESULTS_2026 && <ElectionStages stages={electionStages(day)} />}
             {node.dissolved && PENDING_ELECTION && (
               <p className="gov-notice">
-                Dissolved on {formatDate(PENDING_ELECTION.dissolved)}. The {ordinal(PENDING_ELECTION.parliament)} Legislature
-                will be elected on {formatDate(PENDING_ELECTION.date)}.
+                {present && ELECTION_RESULTS_2026
+                  ? `This government snapshot is dated ${formatDate(CURRENT_AS_OF)}. The later election results are shown below with their own review date.`
+                  : <>Dissolved on {formatDate(PENDING_ELECTION.dissolved)}. The {ordinal(PENDING_ELECTION.parliament)} Legislature will be elected on {formatDate(PENDING_ELECTION.date)}.</>}
               </p>
             )}
             <div className="gov-people">
@@ -816,6 +819,7 @@ export const EntityCard = ({ node, government, theme, onSelect, onJump, onJumpBo
       )}
       {isMinistry && <MarkCard node={node} year={year} theme={theme} onOpenInGenerator={onOpenInGenerator} />}
       <StaffingCard rows={node.staffing} year={year} />
+      {node.kind === 'assembly' && present && <ElectionResultsCard results={ELECTION_RESULTS_2026} snapshotDate={CURRENT_AS_OF} />}
       {node.kind === 'assembly' && <ParliamentCard parliament={node.parliament} />}
       <PathToPeople node={node} government={government} onSelect={onSelect} />
       <Connections node={node} government={government} onSelect={onSelect} />
@@ -891,8 +895,9 @@ export const OverviewCard = ({ government, onSelect }) => {
       </dl>
       {government.dissolved && PENDING_ELECTION && (
         <p className="gov-notice">
-          The Legislature was dissolved on {formatDate(PENDING_ELECTION.dissolved)}; British Columbians
-          vote on {formatDate(PENDING_ELECTION.date)}. Ministers stay in office until a new cabinet is sworn in.
+          {ELECTION_RESULTS_2026
+            ? <>This office-holder snapshot predates the {formatDate(ELECTION_RESULTS_2026.electionDate)} election. <button type="button" className="gov-link-button" onClick={() => onSelect('legislative-assembly')}>See the declared election results, checked {formatDate(ELECTION_RESULTS_2026.checkedOn)} →</button></>
+            : <>The Legislature was dissolved on {formatDate(PENDING_ELECTION.dissolved)}; British Columbians vote on {formatDate(PENDING_ELECTION.date)}. Ministers stay in office until a new cabinet is sworn in.</>}
         </p>
       )}
       <p className="gov-description gov-muted">

@@ -1,10 +1,696 @@
 {
   "schema": "import-accounting/1",
   "counts": {
-    "accepted": 791,
+    "accepted": 792,
     "unresolved_unmapped": 75
   },
   "rows": [
+    {
+      "origin": "atlas/election-2026-final-count.json",
+      "disposition": "accepted",
+      "input": {
+        "schema": "election-final-count/1",
+        "electionDate": "2026-10-24",
+        "parliament": 44,
+        "publishedOn": "2026-11-09",
+        "checkedOn": "2026-11-12",
+        "totalSeats": 93,
+        "status": "declared_results_subject_to_judicial_recounts",
+        "source": {
+          "url": "https://elections.bc.ca/news/final-results-for-the-2026-provincial-general-election-now-available/",
+          "title": "Elections BC — Final Results for the 2026 Provincial General Election Now Available",
+          "locator": "Candidates Elected summary; Electoral District / Candidate Elected / Political Party table; judicial-recount footnote",
+          "sha256": "1a76761202f033f45459de847c2216fe803964ec003c0e7709a11bfeaa6abc71"
+        },
+        "assemblySource": {
+          "url": "https://www.leg.bc.ca/",
+          "title": "Legislative Assembly — Happening at the Legislature",
+          "checkedOn": "2026-11-12",
+          "note": "The Assembly says 44th Parliament member information will be available upon receipt of certified results on November 18, 2026."
+        },
+        "note": "The November 9 final count declares 93 candidates elected. Kelowna Centre and Ladysmith-Oceanside are subject to automatic judicial recounts. These results do not establish swearing-in, current caucus affiliation, the Speaker or a new cabinet. Other government office-holder data retains its own review date.",
+        "normalization": "Conservative party in the Vancouver-Langara row is normalized to the summary table's Conservative Party; its original spelling is retained. Asterisks are stored as recount flags.",
+        "parties": {
+          "BC Green Party": 2,
+          "BC NDP": 27,
+          "Conservative Party": 64
+        },
+        "candidates": [
+          {
+            "district": "Abbotsford-Mission",
+            "candidate": "Darryl Kropp",
+            "party": "Conservative Party",
+            "partyAsPrinted": "Conservative Party",
+            "judicialRecountRequired": false
+          },
+          {
+            "district": "Abbotsford South",
+            "candidate": "Bruce Banman",
+            "party": "Conservative Party",
+            "partyAsPrinted": "Conservative Party",
+            "judicialRecountRequired": false
+          },
+          {
+            "district": "Abbotsford West",
+            "candidate": "Korky Neufeld",
+            "party": "Conservative Party",
+            "partyAsPrinted": "Conservative Party",
+            "judicialRecountRequired": false
+          },
+          {
+            "district": "Boundary-Similkameen",
+            "candidate": "Donegal Wilson",
+            "party": "Conservative Party",
+            "partyAsPrinted": "Conservative Party",
+            "judicialRecountRequired": false
+          },
+          {
+            "district": "Bulkley Valley-Stikine",
+            "candidate": "Sharon Hartwell",
+            "party": "Conservative Party",
+            "partyAsPrinted": "Conservative Party",
+            "judicialRecountRequired": false
+          },
+          {
+            "district": "Burnaby Centre",
+            "candidate": "Joshua Domnich",
+            "party": "Conservative Party",
+            "partyAsPrinted": "Conservative Party",
+            "judicialRecountRequired": false
+          },
+          {
+            "district": "Burnaby East",
+            "candidate": "Rohini Reah Arora",
+            "party": "BC NDP",
+            "partyAsPrinted": "BC NDP",
+            "judicialRecountRequired": false
+          },
+          {
+            "district": "Burnaby-New Westminster",
+            "candidate": "Raj Chouhan",
+            "party": "BC NDP",
+            "partyAsPrinted": "BC NDP",
+            "judicialRecountRequired": false
+          },
+          {
+            "district": "Burnaby North",
+            "candidate": "Simon Chandler",
+            "party": "Conservative Party",
+            "partyAsPrinted": "Conservative Party",
+            "judicialRecountRequired": false
+          },
+          {
+            "district": "Burnaby South-Metrotown",
+            "candidate": "David Xie",
+            "party": "Conservative Party",
+            "partyAsPrinted": "Conservative Party",
+            "judicialRecountRequired": false
+          },
+          {
+            "district": "Cariboo-Chilcotin",
+            "candidate": "Lorne Doerkson",
+            "party": "Conservative Party",
+            "partyAsPrinted": "Conservative Party",
+            "judicialRecountRequired": false
+          },
+          {
+            "district": "Chilliwack-Cultus Lake",
+            "candidate": "A’aliya Warbus",
+            "party": "Conservative Party",
+            "partyAsPrinted": "Conservative Party",
+            "judicialRecountRequired": false
+          },
+          {
+            "district": "Chilliwack North",
+            "candidate": "Heather Maahs",
+            "party": "Conservative Party",
+            "partyAsPrinted": "Conservative Party",
+            "judicialRecountRequired": false
+          },
+          {
+            "district": "Columbia River-Revelstoke",
+            "candidate": "Scott McInnis",
+            "party": "Conservative Party",
+            "partyAsPrinted": "Conservative Party",
+            "judicialRecountRequired": false
+          },
+          {
+            "district": "Coquitlam-Burke Mountain",
+            "candidate": "Ryan Peterson",
+            "party": "Conservative Party",
+            "partyAsPrinted": "Conservative Party",
+            "judicialRecountRequired": false
+          },
+          {
+            "district": "Coquitlam-Maillardville",
+            "candidate": "Matt Liang",
+            "party": "Conservative Party",
+            "partyAsPrinted": "Conservative Party",
+            "judicialRecountRequired": false
+          },
+          {
+            "district": "Courtenay-Comox",
+            "candidate": "Will Cole-Hamilton",
+            "party": "BC NDP",
+            "partyAsPrinted": "BC NDP",
+            "judicialRecountRequired": false
+          },
+          {
+            "district": "Cowichan Valley",
+            "candidate": "Bert Chen",
+            "party": "Conservative Party",
+            "partyAsPrinted": "Conservative Party",
+            "judicialRecountRequired": false
+          },
+          {
+            "district": "Delta North",
+            "candidate": "Monica Mohan",
+            "party": "Conservative Party",
+            "partyAsPrinted": "Conservative Party",
+            "judicialRecountRequired": false
+          },
+          {
+            "district": "Delta South",
+            "candidate": "Ian Paton",
+            "party": "Conservative Party",
+            "partyAsPrinted": "Conservative Party",
+            "judicialRecountRequired": false
+          },
+          {
+            "district": "Esquimalt-Colwood",
+            "candidate": "Darlene Rotchford",
+            "party": "BC NDP",
+            "partyAsPrinted": "BC NDP",
+            "judicialRecountRequired": false
+          },
+          {
+            "district": "Fraser-Nicola",
+            "candidate": "Tony Luck",
+            "party": "Conservative Party",
+            "partyAsPrinted": "Conservative Party",
+            "judicialRecountRequired": false
+          },
+          {
+            "district": "Juan de Fuca-Malahat",
+            "candidate": "Mike Hicks",
+            "party": "Conservative Party",
+            "partyAsPrinted": "Conservative Party",
+            "judicialRecountRequired": false
+          },
+          {
+            "district": "Kamloops Centre",
+            "candidate": "Peter Milobar",
+            "party": "Conservative Party",
+            "partyAsPrinted": "Conservative Party",
+            "judicialRecountRequired": false
+          },
+          {
+            "district": "Kamloops-North Thompson",
+            "candidate": "Ward Stamer",
+            "party": "Conservative Party",
+            "partyAsPrinted": "Conservative Party",
+            "judicialRecountRequired": false
+          },
+          {
+            "district": "Kelowna Centre",
+            "candidate": "Kristina Loewen",
+            "party": "Conservative Party",
+            "partyAsPrinted": "Conservative Party",
+            "judicialRecountRequired": true
+          },
+          {
+            "district": "Kelowna-Lake Country-Coldstream",
+            "candidate": "Pavneet Singh",
+            "party": "Conservative Party",
+            "partyAsPrinted": "Conservative Party",
+            "judicialRecountRequired": false
+          },
+          {
+            "district": "Kelowna-Mission",
+            "candidate": "Gavin Dew",
+            "party": "Conservative Party",
+            "partyAsPrinted": "Conservative Party",
+            "judicialRecountRequired": false
+          },
+          {
+            "district": "Kootenay Central",
+            "candidate": "Brittny Anderson",
+            "party": "BC NDP",
+            "partyAsPrinted": "BC NDP",
+            "judicialRecountRequired": false
+          },
+          {
+            "district": "Kootenay-Monashee",
+            "candidate": "Steve Morissette",
+            "party": "BC NDP",
+            "partyAsPrinted": "BC NDP",
+            "judicialRecountRequired": false
+          },
+          {
+            "district": "Kootenay-Rockies",
+            "candidate": "Pete Davis",
+            "party": "Conservative Party",
+            "partyAsPrinted": "Conservative Party",
+            "judicialRecountRequired": false
+          },
+          {
+            "district": "Ladysmith-Oceanside",
+            "candidate": "Stephanie Higginson",
+            "party": "BC NDP",
+            "partyAsPrinted": "BC NDP",
+            "judicialRecountRequired": true
+          },
+          {
+            "district": "Langford-Highlands",
+            "candidate": "Ravi Parmar",
+            "party": "BC NDP",
+            "partyAsPrinted": "BC NDP",
+            "judicialRecountRequired": false
+          },
+          {
+            "district": "Langley-Abbotsford",
+            "candidate": "Harman Bhangu",
+            "party": "Conservative Party",
+            "partyAsPrinted": "Conservative Party",
+            "judicialRecountRequired": false
+          },
+          {
+            "district": "Langley-Walnut Grove",
+            "candidate": "Misty Van Popta",
+            "party": "Conservative Party",
+            "partyAsPrinted": "Conservative Party",
+            "judicialRecountRequired": false
+          },
+          {
+            "district": "Langley-Willowbrook",
+            "candidate": "Jody Toor",
+            "party": "Conservative Party",
+            "partyAsPrinted": "Conservative Party",
+            "judicialRecountRequired": false
+          },
+          {
+            "district": "Maple Ridge East",
+            "candidate": "Lawrence Mok",
+            "party": "Conservative Party",
+            "partyAsPrinted": "Conservative Party",
+            "judicialRecountRequired": false
+          },
+          {
+            "district": "Maple Ridge-Pitt Meadows",
+            "candidate": "Doug Morneau",
+            "party": "Conservative Party",
+            "partyAsPrinted": "Conservative Party",
+            "judicialRecountRequired": false
+          },
+          {
+            "district": "Mid Island-Pacific Rim",
+            "candidate": "Josie Osborne",
+            "party": "BC NDP",
+            "partyAsPrinted": "BC NDP",
+            "judicialRecountRequired": false
+          },
+          {
+            "district": "Nanaimo-Gabriola Island",
+            "candidate": "Sheila Malcolmson",
+            "party": "BC NDP",
+            "partyAsPrinted": "BC NDP",
+            "judicialRecountRequired": false
+          },
+          {
+            "district": "Nanaimo-Lantzville",
+            "candidate": "George Anderson",
+            "party": "BC NDP",
+            "partyAsPrinted": "BC NDP",
+            "judicialRecountRequired": false
+          },
+          {
+            "district": "Nechako Lakes",
+            "candidate": "Diane Black",
+            "party": "Conservative Party",
+            "partyAsPrinted": "Conservative Party",
+            "judicialRecountRequired": false
+          },
+          {
+            "district": "New Westminster-Coquitlam",
+            "candidate": "Jennifer Whiteside",
+            "party": "BC NDP",
+            "partyAsPrinted": "BC NDP",
+            "judicialRecountRequired": false
+          },
+          {
+            "district": "North Coast-Haida Gwaii",
+            "candidate": "Tamara Davidson",
+            "party": "BC NDP",
+            "partyAsPrinted": "BC NDP",
+            "judicialRecountRequired": false
+          },
+          {
+            "district": "North Island",
+            "candidate": "Anna Kindy",
+            "party": "Conservative Party",
+            "partyAsPrinted": "Conservative Party",
+            "judicialRecountRequired": false
+          },
+          {
+            "district": "North Vancouver-Lonsdale",
+            "candidate": "Bowinn Ma",
+            "party": "BC NDP",
+            "partyAsPrinted": "BC NDP",
+            "judicialRecountRequired": false
+          },
+          {
+            "district": "North Vancouver-Seymour",
+            "candidate": "Lynne Block",
+            "party": "Conservative Party",
+            "partyAsPrinted": "Conservative Party",
+            "judicialRecountRequired": false
+          },
+          {
+            "district": "Oak Bay-Gordon Head",
+            "candidate": "Diana Gibson",
+            "party": "BC NDP",
+            "partyAsPrinted": "BC NDP",
+            "judicialRecountRequired": false
+          },
+          {
+            "district": "Peace River North",
+            "candidate": "Curtis Whitford",
+            "party": "Conservative Party",
+            "partyAsPrinted": "Conservative Party",
+            "judicialRecountRequired": false
+          },
+          {
+            "district": "Peace River South",
+            "candidate": "Larry Neufeld",
+            "party": "Conservative Party",
+            "partyAsPrinted": "Conservative Party",
+            "judicialRecountRequired": false
+          },
+          {
+            "district": "Penticton-Summerland",
+            "candidate": "Tracy St Claire",
+            "party": "Conservative Party",
+            "partyAsPrinted": "Conservative Party",
+            "judicialRecountRequired": false
+          },
+          {
+            "district": "Port Coquitlam",
+            "candidate": "Mike Farnworth",
+            "party": "BC NDP",
+            "partyAsPrinted": "BC NDP",
+            "judicialRecountRequired": false
+          },
+          {
+            "district": "Port Moody-Burquitlam",
+            "candidate": "John McEwen",
+            "party": "Conservative Party",
+            "partyAsPrinted": "Conservative Party",
+            "judicialRecountRequired": false
+          },
+          {
+            "district": "Powell River-Sunshine Coast",
+            "candidate": "Randene Neill",
+            "party": "BC NDP",
+            "partyAsPrinted": "BC NDP",
+            "judicialRecountRequired": false
+          },
+          {
+            "district": "Prince George-Mackenzie",
+            "candidate": "Kiel Giddens",
+            "party": "Conservative Party",
+            "partyAsPrinted": "Conservative Party",
+            "judicialRecountRequired": false
+          },
+          {
+            "district": "Prince George-North Cariboo",
+            "candidate": "Sheldon Clare",
+            "party": "Conservative Party",
+            "partyAsPrinted": "Conservative Party",
+            "judicialRecountRequired": false
+          },
+          {
+            "district": "Prince George-Valemount",
+            "candidate": "Rosalyn Bird",
+            "party": "Conservative Party",
+            "partyAsPrinted": "Conservative Party",
+            "judicialRecountRequired": false
+          },
+          {
+            "district": "Richmond-Bridgeport",
+            "candidate": "Teresa Wat",
+            "party": "Conservative Party",
+            "partyAsPrinted": "Conservative Party",
+            "judicialRecountRequired": false
+          },
+          {
+            "district": "Richmond Centre",
+            "candidate": "Sacha Peter",
+            "party": "Conservative Party",
+            "partyAsPrinted": "Conservative Party",
+            "judicialRecountRequired": false
+          },
+          {
+            "district": "Richmond-Queensborough",
+            "candidate": "Steve Kooner",
+            "party": "Conservative Party",
+            "partyAsPrinted": "Conservative Party",
+            "judicialRecountRequired": false
+          },
+          {
+            "district": "Richmond-Steveston",
+            "candidate": "Gordon Zhang",
+            "party": "Conservative Party",
+            "partyAsPrinted": "Conservative Party",
+            "judicialRecountRequired": false
+          },
+          {
+            "district": "Saanich North and the Islands",
+            "candidate": "Emily Lowan",
+            "party": "BC Green Party",
+            "partyAsPrinted": "BC Green Party",
+            "judicialRecountRequired": false
+          },
+          {
+            "district": "Saanich South",
+            "candidate": "Cathie Ounsted",
+            "party": "Conservative Party",
+            "partyAsPrinted": "Conservative Party",
+            "judicialRecountRequired": false
+          },
+          {
+            "district": "Salmon Arm-Shuswap",
+            "candidate": "David L Williams",
+            "party": "Conservative Party",
+            "partyAsPrinted": "Conservative Party",
+            "judicialRecountRequired": false
+          },
+          {
+            "district": "Skeena",
+            "candidate": "Claire Rattée",
+            "party": "Conservative Party",
+            "partyAsPrinted": "Conservative Party",
+            "judicialRecountRequired": false
+          },
+          {
+            "district": "Surrey City Centre",
+            "candidate": "Zeeshan Wahla",
+            "party": "Conservative Party",
+            "partyAsPrinted": "Conservative Party",
+            "judicialRecountRequired": false
+          },
+          {
+            "district": "Surrey-Cloverdale",
+            "candidate": "Nicholas Cartmell",
+            "party": "Conservative Party",
+            "partyAsPrinted": "Conservative Party",
+            "judicialRecountRequired": false
+          },
+          {
+            "district": "Surrey-Fleetwood",
+            "candidate": "Garry Purewal",
+            "party": "Conservative Party",
+            "partyAsPrinted": "Conservative Party",
+            "judicialRecountRequired": false
+          },
+          {
+            "district": "Surrey-Guildford",
+            "candidate": "Garry Thind",
+            "party": "Conservative Party",
+            "partyAsPrinted": "Conservative Party",
+            "judicialRecountRequired": false
+          },
+          {
+            "district": "Surrey-Newton",
+            "candidate": "Harj Dhaliwal",
+            "party": "Conservative Party",
+            "partyAsPrinted": "Conservative Party",
+            "judicialRecountRequired": false
+          },
+          {
+            "district": "Surrey North",
+            "candidate": "Mandeep Singh Dhaliwal",
+            "party": "Conservative Party",
+            "partyAsPrinted": "Conservative Party",
+            "judicialRecountRequired": false
+          },
+          {
+            "district": "Surrey-Panorama",
+            "candidate": "Bryan Tepper",
+            "party": "Conservative Party",
+            "partyAsPrinted": "Conservative Party",
+            "judicialRecountRequired": false
+          },
+          {
+            "district": "Surrey-Serpentine River",
+            "candidate": "Jessy Sahota",
+            "party": "Conservative Party",
+            "partyAsPrinted": "Conservative Party",
+            "judicialRecountRequired": false
+          },
+          {
+            "district": "Surrey South",
+            "candidate": "Megan Knight",
+            "party": "Conservative Party",
+            "partyAsPrinted": "Conservative Party",
+            "judicialRecountRequired": false
+          },
+          {
+            "district": "Surrey-White Rock",
+            "candidate": "Trevor Halford",
+            "party": "Conservative Party",
+            "partyAsPrinted": "Conservative Party",
+            "judicialRecountRequired": false
+          },
+          {
+            "district": "Vancouver-Fraserview",
+            "candidate": "Deep Sandhu",
+            "party": "Conservative Party",
+            "partyAsPrinted": "Conservative Party",
+            "judicialRecountRequired": false
+          },
+          {
+            "district": "Vancouver-Hastings",
+            "candidate": "Niki Sharma",
+            "party": "BC NDP",
+            "partyAsPrinted": "BC NDP",
+            "judicialRecountRequired": false
+          },
+          {
+            "district": "Vancouver-Kensington",
+            "candidate": "Mable Elmore",
+            "party": "BC NDP",
+            "partyAsPrinted": "BC NDP",
+            "judicialRecountRequired": false
+          },
+          {
+            "district": "Vancouver-Langara",
+            "candidate": "Jaime Stein",
+            "party": "Conservative Party",
+            "partyAsPrinted": "Conservative party",
+            "judicialRecountRequired": false
+          },
+          {
+            "district": "Vancouver-Little Mountain",
+            "candidate": "Christine Boyle",
+            "party": "BC NDP",
+            "partyAsPrinted": "BC NDP",
+            "judicialRecountRequired": false
+          },
+          {
+            "district": "Vancouver-Point Grey",
+            "candidate": "David Eby",
+            "party": "BC NDP",
+            "partyAsPrinted": "BC NDP",
+            "judicialRecountRequired": false
+          },
+          {
+            "district": "Vancouver-Quilchena",
+            "candidate": "Carson Binda",
+            "party": "Conservative Party",
+            "partyAsPrinted": "Conservative Party",
+            "judicialRecountRequired": false
+          },
+          {
+            "district": "Vancouver-Renfrew",
+            "candidate": "Adrian Dix",
+            "party": "BC NDP",
+            "partyAsPrinted": "BC NDP",
+            "judicialRecountRequired": false
+          },
+          {
+            "district": "Vancouver-South Granville",
+            "candidate": "Lara Honrado",
+            "party": "BC NDP",
+            "partyAsPrinted": "BC NDP",
+            "judicialRecountRequired": false
+          },
+          {
+            "district": "Vancouver-Strathcona",
+            "candidate": "Amanda Burrows",
+            "party": "BC NDP",
+            "partyAsPrinted": "BC NDP",
+            "judicialRecountRequired": false
+          },
+          {
+            "district": "Vancouver-West End",
+            "candidate": "Spencer Chandra Herbert",
+            "party": "BC NDP",
+            "partyAsPrinted": "BC NDP",
+            "judicialRecountRequired": false
+          },
+          {
+            "district": "Vancouver-Yaletown",
+            "candidate": "Margareta Dovgal",
+            "party": "Conservative Party",
+            "partyAsPrinted": "Conservative Party",
+            "judicialRecountRequired": false
+          },
+          {
+            "district": "Vernon-Lumby",
+            "candidate": "Kevin Acton",
+            "party": "Conservative Party",
+            "partyAsPrinted": "Conservative Party",
+            "judicialRecountRequired": false
+          },
+          {
+            "district": "Victoria-Beacon Hill",
+            "candidate": "Grace Lore",
+            "party": "BC NDP",
+            "partyAsPrinted": "BC NDP",
+            "judicialRecountRequired": false
+          },
+          {
+            "district": "Victoria-Swan Lake",
+            "candidate": "Nina Krieger",
+            "party": "BC NDP",
+            "partyAsPrinted": "BC NDP",
+            "judicialRecountRequired": false
+          },
+          {
+            "district": "West Kelowna-Peachland",
+            "candidate": "Macklin McCall",
+            "party": "Conservative Party",
+            "partyAsPrinted": "Conservative Party",
+            "judicialRecountRequired": false
+          },
+          {
+            "district": "West Vancouver-Capilano",
+            "candidate": "Caroline Elliott",
+            "party": "Conservative Party",
+            "partyAsPrinted": "Conservative Party",
+            "judicialRecountRequired": false
+          },
+          {
+            "district": "West Vancouver-Sea to Sky",
+            "candidate": "Jeremy Valeriote",
+            "party": "BC Green Party",
+            "partyAsPrinted": "BC Green Party",
+            "judicialRecountRequired": false
+          }
+        ]
+      },
+      "reason": "Declared election results, with recount qualifications; not a certified sitting-member or cabinet roster"
+    },
     {
       "origin": "lieutenant-governors.json#Sir Joseph William Trutch/1871-08-14",
       "disposition": "accepted",
