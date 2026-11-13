@@ -16,12 +16,14 @@
 //     with its subject. A title naming no instrument, or several, is left for review;
 //   - instruments an event names explicitly (`instruments`, e.g. a policy document) are taken as given.
 
-import { writeFileSync } from 'node:fs'
+import { readFileSync, writeFileSync } from 'node:fs'
 import { resolve } from 'node:path'
 import { EVENTS, EVENT_SOURCES } from '../src/government/eventsData.js'
 import { HISTORICAL_BODIES, HISTORY_SOURCES, SUB_AGENCIES } from '../src/government/historyData.js'
 
 const OUT = resolve('src/government/instrumentsData.js')
+// Reviewed decisions for citations the rules below cannot read safely (research/legislation/README.md).
+const DECISIONS = JSON.parse(readFileSync(resolve('research/legislation/instrument-decisions.json'), 'utf8'))
 const REVIEW = resolve('research/audit/instruments-review.json')
 
 // ── Reading a citation ───────────────────────────────────────────────────────────────────────────
@@ -33,12 +35,12 @@ const fullYear = (year) => year.length === 4 ? year : Number(year) > 30 ? `19${y
 const ORDER_PATTERNS = [
   // Orders in Council, B.C. regulations and ministerial orders are identified by number and year.
   { re: /\bO\.?I\.?C\.?\s+(\d+)\/(\d{2,4})\b/g, type: 'order_in_council', id: (n, y) => `oic-${fullYear(y)}-${n}`, title: (n, y) => `OIC ${n}/${fullYear(y)}` },
-  { re: /\bB\.?C\.?\s+Reg\.?\s+(\d+)\/(\d{2,4})\b/g, type: 'regulation', id: (n, y) => `bc-reg-${fullYear(y)}-${n}`, title: (n, y) => `B.C. Reg. ${n}/${fullYear(y)}` },
+  { re: /\bB\.?C\.?\s*Reg\.?\s*(\d+)\/(\d{2,4})\b/g, type: 'regulation', id: (n, y) => `bc-reg-${fullYear(y)}-${n}`, title: (n, y) => `B.C. Reg. ${n}/${fullYear(y)}` },
   { re: /\bM\s?(\d+)\/(\d{4})\b/g, type: 'ministerial_order', id: (n, y) => `mo-${y}-${n}`, title: (n, y) => `Ministerial Order M${n}/${y}` }
 ]
 // An Act's short title: capitalized words ending in "Act", with an optional year that is part of the
 // title ("Budget Measures Implementation Act, 2002"). "The Act" or "1916 Act" names nothing.
-const ACT = /\b((?:[A-Z][\w’'.-]*)(?:\s+(?:[A-Z][\w’'.-]*|of|and|the|for|on|in|to|de|des|du))*?\s+Act\b(?:\s+\(No\.\s*\d+\))?)(?:,?\s+(\d{4})\b)?(?:\s*\(?\[?(?:SBC|S\.B\.C\.|RSBC|R\.S\.B\.C\.)\s*(\d{4})\]?,?\s*c\.\s*(\d+)\)?)?/g
+const ACT = /\b((?:[A-Z][\w’'.-]*)(?:\s+(?:[A-Z][\w’'.-]*|of|and|the|for|on|in|to|de|des|du))*?\s+Act\b(?:\s+Amendment\s+Act\b)?(?:\s+\(No\.\s*\d+\))?)(?:,?\s+(\d{4})\b)?(?:\s*\(?\[?(?:SBC|S\.B\.C\.|RSBC|R\.S\.B\.C\.)\s*(\d{4})\]?,?\s*c\.\s*(\d+)\)?)?/g
 const NOT_A_TITLE = /^(The|This|That|An?|Its|New|Modern|Former|Federal|Provincial)\s+Act$/
 
 /** The instruments a piece of text names, each once. */
@@ -104,7 +106,11 @@ const relationOf = (event) => {
 
 const instruments = new Map()
 const review = []
-const instrument = (found) => {
+const instrument = (cited) => {
+  // A citation reviewed as another form of an instrument already held (a short title read without its
+  // year or number) is that instrument.
+  const alias = DECISIONS.aliases?.[cited.id]
+  const found = alias ? { id: alias.id, type: alias.type ?? cited.type, title: alias.title, citations: cited.citations } : cited
   const held = instruments.get(found.id)
   if (held) {
     for (const citation of found.citations ?? []) if (!held.citations.includes(citation)) held.citations.push(citation)
@@ -114,11 +120,28 @@ const instrument = (found) => {
   instruments.set(found.id, entry)
   return entry
 }
+/** One reviewed instrument: its citation must read as exactly one instrument, so its ID is the catalogue's. */
+const decided = (entry, origin) => {
+  const found = readInstruments(entry.cite)
+  if (found.length !== 1) throw new Error(`${origin}: decision cite "${entry.cite}" reads as ${found.length} instruments`)
+  return instrument(found[0])
+}
+const applied = { events: 0, bodies: 0, legalBasis: 0 }
+
 const historySource = (index) => (index === null || index === undefined ? null : HISTORY_SOURCES[index] ?? null)
 
 // 1. The sub-agencies' legal-basis citations, as the current consolidation gives them.
 for (const sub of SUB_AGENCIES.filter((entry) => entry.legalBasis)) {
   const { citation, source, locator } = sub.legalBasis
+  const decision = DECISIONS.legalBasis?.[sub.id]
+  if (decision) {
+    applied.legalBasis += 1
+    for (const entry of decision.instruments ?? []) {
+      decided(entry, `legalBasis#${sub.id}`).relations.push({ body: sub.id, relation: entry.relation ?? 'current_legal_basis', provisions: entry.provisions ?? [], from: null, to: null, precision: null,
+        asOf: 'current consolidation', citation, source: historySource(source), locator: locator ?? null, ...(entry.note ? { note: entry.note } : {}) })
+    }
+    continue
+  }
   const parts = citation.split(/;\s*/)
   const read = parts.map((part) => ({ part, found: readInstruments(part) }))
   for (const { part, found } of read) {
@@ -138,8 +161,21 @@ for (const sub of SUB_AGENCIES.filter((entry) => entry.legalBasis)) {
 }
 
 // 2. Bodies designated by a ministerial order, as their establishedMeaning records it.
+const precisionOf = (date) => String(date).length === 10 ? 'day' : String(date).length === 7 ? 'month' : 'year'
 for (const body of HISTORICAL_BODIES.filter((entry) => entry.establishedMeaning && entry.established)) {
-  const match = body.establishedMeaning.match(/^designated (?:as the [^,]+? )?by (M\d+\/\d{4}), effective that day$/)
+  const decision = DECISIONS.bodies?.[body.id]
+  if (decision) {
+    applied.bodies += 1
+    for (const entry of decision.instruments ?? []) {
+      const from = entry.from === undefined ? String(body.established) : entry.from
+      decided(entry, `body#${body.id}`).relations.push({ body: body.id, relation: entry.relation, provisions: entry.provisions ?? [], from, to: null,
+        precision: from ? precisionOf(from) : null, citation: body.establishedMeaning, source: historySource(body.establishedSource ?? body.source), locator: null,
+        ...(entry.note ? { note: entry.note } : {}) })
+    }
+    continue
+  }
+  // A later clause ("; the December 1996 order calls it …") qualifies the name, not the order.
+  const match = body.establishedMeaning.match(/^designated (?:as the [^,]+? )?by (M\d+\/\d{4}), effective that day(?:;.*)?$/)
   if (!match) {
     if (/\b(?:M\d+\/\d{4}|OIC \d+\/\d{4}|Act)\b/.test(body.establishedMeaning)) {
       review.push({ origin: `historyData.HISTORICAL_BODIES#${body.id}/establishedMeaning`, citation: body.establishedMeaning, reason: 'Names an instrument in prose that does not follow a reviewed pattern' })
@@ -149,24 +185,37 @@ for (const body of HISTORICAL_BODIES.filter((entry) => entry.establishedMeaning 
   const [found] = readInstruments(match[1])
   instrument(found).relations.push({
     body: body.id, relation: 'established_by', provisions: [], from: String(body.established), to: null,
-    precision: String(body.established).length === 10 ? 'day' : String(body.established).length === 7 ? 'month' : 'year',
+    precision: precisionOf(body.established),
     citation: body.establishedMeaning, source: historySource(body.establishedSource ?? body.source), locator: null
   })
 }
 
-// 3. Events citing BC Laws, and instruments any event names explicitly.
+// 3. Relationships read from an instrument's own text and checked against it (the decisions file says how).
+for (const entry of DECISIONS.relations ?? []) {
+  decided(entry, `relation#${entry.body}`).relations.push({ body: entry.body, relation: entry.relation, provisions: entry.provisions ?? [], from: entry.from ?? null, to: null,
+    precision: entry.from ? precisionOf(entry.from) : null, citation: entry.note ?? entry.cite, source: entry.source ?? null, locator: entry.locator ?? null, ...(entry.note ? { note: entry.note } : {}) })
+}
+
+// 4. Events citing BC Laws, and instruments any event names explicitly.
 const bcLaws = (index) => /bclaws/.test(EVENT_SOURCES[index]?.url ?? '')
 for (const event of EVENTS) {
   const sources = event.sources.map((index) => EVENT_SOURCES[index]).filter(Boolean)
-  const milestone = (entry, relation, note) => {
-    entry.milestones.push({ event: event.id, subject: event.subject, related: event.related ?? [], type: event.type, title: event.title, date: event.date })
+  const milestone = (entry, relation, note, body = event.subject, provisions) => {
+    if (!entry.milestones.some((held) => held.event === event.id)) entry.milestones.push({ event: event.id, subject: event.subject, related: event.related ?? [], type: event.type, title: event.title, date: event.date })
     if (relation) {
-      entry.relations.push({ body: event.subject, relation, provisions: provisionsOf(event.title), from: event.date.start, to: null,
+      entry.relations.push({ body, relation, provisions: provisions ?? provisionsOf(event.title), from: event.date.start, to: null,
         precision: event.date.precision, event: event.id, citation: event.title, source: sources[0] ?? null, locator: event.locator ?? null, ...(note ? { note } : {}) })
     }
   }
   for (const named of event.instruments ?? []) milestone(instrument({ ...named, citations: [] }), named.relation, named.note)
-  if (event.instruments?.length || !event.sources.some(bcLaws)) continue
+  if (event.instruments?.length) continue
+  const decision = DECISIONS.events?.[event.id]
+  if (decision) {
+    applied.events += 1
+    for (const entry of decision.instruments ?? []) milestone(decided(entry, `event#${event.id}`), entry.relation ?? null, entry.note ?? null, entry.body ?? event.subject, entry.provisions)
+    continue
+  }
+  if (!event.sources.some(bcLaws)) continue
 
   // A BC Laws source title that is itself one instrument's citation ("Coroners Act [SBC 2007] c. 15",
   // "OIC 2604/1981: …") names the event's instrument better than an Act the title mentions in passing.
@@ -174,7 +223,13 @@ for (const event of EVENTS) {
   const sourceTitle = EVENT_SOURCES[event.sources.find(bcLaws)]?.title ?? ''
   const cited = readInstruments(sourceTitle).filter((entry) => sourceTitle.startsWith(entry.title.replace(/, \d{4}$/, '').replace(/^Ministerial Order /, '')))
   let found = cited.length === 1 ? cited : readInstruments(event.title)
-  const from = cited.length === 1 ? 'source title' : 'title'
+  let from = cited.length === 1 ? 'source title' : 'title'
+  // An event whose title names nothing often cites its instrument in its locator ("B.C. Reg. 293/2001,
+  // sections 2-4 and Schedule A"); one instrument there is read the same way.
+  if (!found.length) {
+    const located = readInstruments(event.locator ?? '')
+    if (located.length === 1) { found = located; from = 'locator' }
+  }
   if (found.length !== 1) {
     review.push({ origin: `eventsData#${event.id}`, citation: event.title, reason: found.length ? `The ${from} names ${found.length} instruments (${found.map((each) => each.title).join('; ')})` : 'No instrument could be read from the title or its BC Laws source title' })
     continue
@@ -194,7 +249,7 @@ for (const event of EVENTS) {
     milestone(instrument(named[0]), relation, `Through ${found[0].title}, the source cited.`)
     milestone(instrument(found[0]), null)
   } else {
-    milestone(instrument(found[0]), relation, from === 'source title' ? 'Instrument read from the BC Laws source title, the citation of the document itself.' : null)
+    milestone(instrument(found[0]), relation, from === 'source title' ? 'Instrument read from the BC Laws source title, the citation of the document itself.' : from === 'locator' ? 'Instrument read from the event\'s locator.' : null)
     if (named.length === 1) milestone(instrument(named[0]), null)
   }
   if (!read && !/^(ministry|department)-/.test(event.subject) && !/assent|in_force|commence|proclamation|royal|enacted|repeal|deposit|regulation_made|observed|appoint|members|origin|provision|establishment_set|increased|defined|scheduled|approved|named_in/.test(event.type)) {
@@ -212,7 +267,7 @@ for (const entry of instruments.values()) {
 for (const entry of instruments.values()) {
   const bare = entry.type === 'act' && entry.title.match(/^(.*), \d{4}$/)?.[1]
   const other = bare && instruments.get(`act-${slug(bare)}`)
-  if (other) review.push({ origin: `instrument#${entry.id}`, citation: `${entry.title} / ${other.title}`, reason: 'The same short title with and without a year; one Act cited two ways, or two enactments' })
+  if (other && !(DECISIONS.distinct ?? []).includes(entry.id)) review.push({ origin: `instrument#${entry.id}`, citation: `${entry.title} / ${other.title}`, reason: 'The same short title with and without a year; one Act cited two ways, or two enactments' })
 }
 
 // ── Writing ──────────────────────────────────────────────────────────────────────────────────────
@@ -251,7 +306,7 @@ writeFileSync(OUT, [
   ''
 ].join('\n'))
 review.sort((a, b) => a.origin.localeCompare(b.origin))
-writeFileSync(REVIEW, JSON.stringify({ schema: 'instrument-review/1', note: 'Citations the instrument catalogue did not read into a relationship, with why. Nothing here is guessed into the catalogue.', count: review.length, rows: review }, null, 2) + '\n')
+writeFileSync(REVIEW, JSON.stringify({ schema: 'instrument-review/1', note: 'Citations the instrument catalogue did not read into a relationship, with why. Nothing here is guessed into the catalogue. Reviewed citations are decided in research/legislation/instrument-decisions.json.', decided: applied, count: review.length, rows: review }, null, 2) + '\n')
 
 const relations = list.reduce((total, entry) => total + entry.relations.length, 0)
 console.log(`${list.length} instruments, ${relations} relationships, ${list.reduce((total, entry) => total + entry.milestones.length, 0)} milestones; ${review.length} citations for review`)

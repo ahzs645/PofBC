@@ -50,3 +50,20 @@ test('policy events have a policy category and lead to their implementation, not
   }
   assert.equal(byId('policy-better-teamwork-better-care-1996').type, 'policy')
 })
+
+test('every citation is read or decided: the review list stays empty unless a new citation arrives', async () => {
+  const { readFileSync } = await import('node:fs')
+  const review = JSON.parse(readFileSync('research/audit/instruments-review.json', 'utf8'))
+  assert.equal(review.count, 0, review.rows.map((row) => `${row.origin}: ${row.reason}`).join('\n'))
+})
+
+test('B.C. Reg. 293/2001: the five authorities formed by it and the 44 Schedule A authorities ended by it', () => {
+  const reg = byId('bc-reg-2001-293')
+  const formed = reg.relations.filter((relation) => relation.relation === 'established_by').map((relation) => relation.body).sort()
+  assert.deepEqual(formed, ['fraser-health', 'interior-health', 'island-health', 'northern-health', 'vancouver-coastal-health'])
+  const ended = reg.relations.filter((relation) => relation.relation === 'ended_by')
+  assert.equal(ended.length, 44)
+  for (const relation of ended) assert.equal(relation.from, '2001-12-12')
+  const northern = ended.filter((relation) => /Northern Health Authority/.test(relation.note))
+  assert.equal(northern.length, 13)
+})

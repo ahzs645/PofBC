@@ -1,0 +1,1754 @@
+{
+  "schema": "instrument-decisions/1",
+  "reviewed_on": "2026-11-13",
+  "note": "Reviewed readings of citations the instrument catalogue's rules leave for review (research/audit/instruments-review.json). Each decision is read from the event's own title and locator, or the body's own record, as already held in the repository: no new research. `cite` must read as exactly one instrument; `relation` null keeps the instrument as a dated event citing it, without a stated relationship; an empty `instruments` list records that the citation names no instrument to catalogue. `body` overrides the event's subject where the relationship is with another body the event names.",
+  "aliases": {
+    "act-park-act": {
+      "id": "act-park-act-1965",
+      "title": "Park Act, 1965",
+      "reason": "The same 1965 Park Act, read from the event title without its year."
+    },
+    "act-miscellaneous-statutes-amendment-act": {
+      "id": "act-miscellaneous-statutes-amendment-act-no-3-1985",
+      "title": "Miscellaneous Statutes Amendment Act (No. 3), 1985",
+      "reason": "The same Act, read from the event title without its number and year."
+    },
+    "act-medical-services-act-1967": {
+      "id": "act-medical-services-act",
+      "title": "Medical Services Act",
+      "reason": "Both cite S.B.C. 1967, c. 24."
+    },
+    "act-financial-services-authority-act-2019": {
+      "id": "act-financial-services-authority-act",
+      "title": "Financial Services Authority Act",
+      "reason": "Both are S.B.C. 2019, c. 14; the year is the enactment year, not part of a distinct title."
+    }
+  },
+  "distinct": [
+    "act-british-columbia-hydro-and-power-authority-act-1964",
+    "act-sheriffs-act-1860",
+    "act-sheriffs-act-1873",
+    "act-sheriffs-act-1976",
+    "act-miscellaneous-statutes-amendment-act-2003"
+  ],
+  "distinct_reasons": {
+    "act-british-columbia-hydro-and-power-authority-act-1964": "The 1962 Act was held ultra vires in 1963; the Authority was constituted anew under the 1964 Act.",
+    "act-sheriffs-act-1860": "Separate colonial and provincial enactments; the undated 'Sheriffs Act' is the one the 1878 amendment amends, not identified further.",
+    "act-sheriffs-act-1873": "As above.",
+    "act-sheriffs-act-1976": "As above.",
+    "act-miscellaneous-statutes-amendment-act-2003": "The 2003 Act is not the 1985 (No. 3) Act."
+  },
+  "events": {
+    "atlas:bcfsa-replaces-ficom-2019-11-01": {
+      "instruments": [
+        {
+          "cite": "B.C. Reg. 197/2019",
+          "relation": null
+        },
+        {
+          "cite": "Financial Services Authority Act",
+          "relation": null,
+          "provisions": [
+            "s. 4(b)-(g)"
+          ]
+        }
+      ],
+      "reason": "Powers in force by regulation; FICOM's own end is not dated by this event."
+    },
+    "atlas:bchmc-continued-reg-490-79": {
+      "instruments": [
+        {
+          "cite": "Housing Act",
+          "relation": "continued_under",
+          "note": "By B.C. Reg. 490/79."
+        },
+        {
+          "cite": "B.C. Reg. 490/79",
+          "relation": null
+        }
+      ],
+      "reason": "Title: continued under the Housing Act by the regulation."
+    },
+    "atlas:bclc-act-1985-assent": {
+      "instruments": [
+        {
+          "cite": "Lottery Corporation Act",
+          "relation": "continued_under",
+          "provisions": [
+            "s. 2(1)"
+          ]
+        }
+      ],
+      "reason": "The Act continues the existing Company Act corporation; the Company Act is its earlier form, not this event's instrument."
+    },
+    "atlas:bcplace-act-assent-1980": {
+      "instruments": [
+        {
+          "cite": "British Columbia Place Act",
+          "relation": "reorganized_by",
+          "provisions": [
+            "s. 2"
+          ],
+          "note": "Made an agent of the Crown; the company itself was registered under the Company Act."
+        }
+      ],
+      "reason": "The Act names an existing company and makes it a Crown agent."
+    },
+    "atlas:bcr-name-change-1972-03-30": {
+      "instruments": [],
+      "reason": "S.B.C. 1972, c. 8 is cited by chapter only; its short title is not recorded."
+    },
+    "atlas:bcsc-dissolution-provided-1998": {
+      "instruments": [
+        {
+          "cite": "Budget Measures Implementation Act, 1998",
+          "relation": null
+        },
+        {
+          "cite": "System Act",
+          "relation": null
+        }
+      ],
+      "reason": "Provides for repeal and dissolution later; not the dissolution itself."
+    },
+    "atlas:coastal-ferry-act-assent-2003": {
+      "instruments": [
+        {
+          "cite": "Coastal Ferry Act",
+          "relation": "reorganized_by",
+          "provisions": [
+            "s. 2(1)"
+          ],
+          "note": "Converted by the Act; the B.C. Ferry Authority it establishes is not the 1964-1977 British Columbia Ferry Authority."
+        }
+      ],
+      "reason": "The subject, BC Ferry Corporation, was converted, not established."
+    },
+    "atlas:health-lineage-central-coast-2002": {
+      "instruments": [
+        {
+          "cite": "B.C. Reg. 52/2002",
+          "relation": "reorganized_by",
+          "note": "Its area enlarged (M51/2002)."
+        },
+        {
+          "cite": "M51/2002",
+          "relation": null
+        }
+      ],
+      "reason": "Locator names the regulation and the ministerial order making it."
+    },
+    "atlas:health-lineage-nisgaa-1999": {
+      "instruments": [
+        {
+          "cite": "M366/1999",
+          "relation": null
+        },
+        {
+          "cite": "B.C. Reg. 333/99",
+          "relation": null
+        }
+      ],
+      "reason": "Filed under the ministry; concerns the Nisga'a council, which the diagram does not draw."
+    },
+    "atlas:hydro-pda-1961-vesting": {
+      "instruments": [
+        {
+          "cite": "Power Development Act, 1961",
+          "relation": "reorganized_by",
+          "provisions": [
+            "s. 3(a)"
+          ],
+          "note": "Its shares vested in the Crown: public ownership, not a new company."
+        }
+      ],
+      "reason": "Acquisition of an existing company."
+    },
+    "atlas:ibc-act-retitled-2006-03-30": {
+      "instruments": [
+        {
+          "cite": "Innovation and Science Council Act",
+          "relation": null
+        },
+        {
+          "cite": "British Columbia Innovation Council Act",
+          "relation": null
+        }
+      ],
+      "reason": "A retitling of the Act; what it did to the council is not stated."
+    },
+    "atlas:innovatebc-renamed-2018-03-15": {
+      "instruments": [
+        {
+          "cite": "British Columbia Innovation Council Amendment Act, 2018",
+          "relation": "reorganized_by",
+          "note": "Renamed."
+        },
+        {
+          "cite": "Innovate BC Act",
+          "relation": "continued_under",
+          "provisions": [
+            "s. 2"
+          ]
+        }
+      ],
+      "reason": "Locator quotes s. 2: 'Innovate BC is continued as an agency'."
+    },
+    "atlas:ita-act-assent-2003": {
+      "instruments": [
+        {
+          "cite": "Industry Training Authority Act",
+          "relation": "established_by",
+          "provisions": [
+            "s. 2(1)"
+          ]
+        }
+      ],
+      "reason": "s. 2(1) establishes the Authority; what is 'continued' is ITAC's programs, not the Authority."
+    },
+    "atlas:pge-incorporated-1912-02-27": {
+      "instruments": [],
+      "reason": "S.B.C. 1912, c. 36 is cited by chapter only."
+    },
+    "atlas:pge-province-acquires-1918": {
+      "instruments": [
+        {
+          "cite": "Pacific Great Eastern Settlement Act",
+          "relation": "reorganized_by",
+          "provisions": [
+            "s. 3"
+          ],
+          "note": "Authorises the Province to acquire all its shares."
+        }
+      ],
+      "reason": "Acquisition of an existing company."
+    },
+    "atlas:power-steamship-bcpc-prince-george-1956": {
+      "instruments": [
+        {
+          "cite": "OIC 421/1956",
+          "relation": null
+        }
+      ],
+      "reason": "An asset purchase approved by order; no relationship with the Commission's constitution."
+    },
+    "atlas:prhc-responsibility-1998": {
+      "instruments": [
+        {
+          "cite": "OIC 177/1998",
+          "relation": "reorganized_by",
+          "provisions": [
+            "appendix s. 15"
+          ],
+          "note": "Responsibility moved to the Minister of Employment and Investment."
+        }
+      ],
+      "reason": "Source is OIC 177/1998 (appendix s. 15)."
+    },
+    "atlas:primary-evidence-health-act-title-1977": {
+      "instruments": [
+        {
+          "cite": "Ministerial Titles Amendment Act, 1977",
+          "relation": "reorganized_by",
+          "note": "Retitles the Department of Health Act as the Ministry of Health Act."
+        },
+        {
+          "cite": "Ministry of Health Act",
+          "relation": null
+        }
+      ],
+      "reason": "Locator names the amending Act; the title's 'Ministerial Titles Act' is shorthand for it."
+    },
+    "atlas:primary-evidence-phsa-amalgamation-2018-04": {
+      "instruments": [],
+      "reason": "Society amalgamation recorded by Registrar notice; no instrument named."
+    },
+    "atlas:primary-evidence-phsa-amalgamation-2018-06": {
+      "instruments": [],
+      "reason": "As above."
+    },
+    "atlas:primary-evidence-reversal-1947": {
+      "instruments": [
+        {
+          "cite": "OIC 752/1947",
+          "relation": "reorganized_by"
+        },
+        {
+          "cite": "Physiotherapists and Massage Practitioners Act",
+          "relation": "administers",
+          "note": "Duties returned by OIC 752/1947."
+        },
+        {
+          "cite": "Welfare Institutions Licensing Act",
+          "relation": "administers",
+          "note": "Duties returned by OIC 752/1947."
+        }
+      ],
+      "reason": "The order returns the administration of two named Acts to the Provincial Secretary."
+    },
+    "atlas:primary-evidence-social-welfare-1934": {
+      "instruments": [
+        {
+          "cite": "OIC 1294/1934",
+          "relation": null
+        }
+      ],
+      "reason": "A unit observed in an appointment order."
+    },
+    "atlas:primary-evidence-split-1959": {
+      "instruments": [
+        {
+          "cite": "OIC 558/1959",
+          "relation": "reorganized_by"
+        },
+        {
+          "cite": "OIC 559/1959",
+          "relation": "reorganized_by"
+        }
+      ],
+      "reason": "The two orders in force for the split, as the locator gives them."
+    },
+    "atlas:primary-evidence-twenty-boards-1995": {
+      "instruments": [
+        {
+          "cite": "M597/1995",
+          "relation": null
+        }
+      ],
+      "reason": "Filed under the ministry; the twenty boards are not named individually in the title."
+    },
+    "atlas:review-frbc-act-2002": {
+      "instruments": [
+        {
+          "cite": "Budget Measures Implementation Act, 2002",
+          "relation": null,
+          "provisions": [
+            "ss. 8, 28"
+          ]
+        },
+        {
+          "cite": "Forest Renewal Act",
+          "relation": null
+        }
+      ],
+      "reason": "Assent; the dissolution took effect on 27 June 2002."
+    },
+    "atlas:review-frbc-dissolved-2002": {
+      "instruments": [
+        {
+          "cite": "Budget Measures Implementation Act, 2002",
+          "relation": "ended_by",
+          "provisions": [
+            "s. 28"
+          ],
+          "note": "In force on deposit of B.C. Reg. 158/2002 (OIC 517/2002)."
+        },
+        {
+          "cite": "B.C. Reg. 158/2002",
+          "relation": null
+        },
+        {
+          "cite": "Forest Renewal Act",
+          "relation": null
+        }
+      ],
+      "reason": "s. 28 dissolves Forest Renewal BC on the repeal of the Forest Renewal Act (related events)."
+    },
+    "atlas:review-frbc-oic-517-2002": {
+      "instruments": [
+        {
+          "cite": "OIC 517/2002",
+          "relation": null
+        },
+        {
+          "cite": "Budget Measures Implementation Act, 2002",
+          "relation": null
+        }
+      ],
+      "reason": "A commencement order."
+    },
+    "atlas:round4-bcrail-vancouver-wharves-lp-2003-12-30": {
+      "instruments": [
+        {
+          "cite": "M5/2004",
+          "relation": "reorganized_by",
+          "note": "Ministerial Order 5/2004 (Railway Certificate 6497)."
+        }
+      ],
+      "reason": "Locator names the order approving the reorganization."
+    },
+    "atlas:round4-bctransit-crown-agent-1982-08-12": {
+      "instruments": [
+        {
+          "cite": "Urban Transit Authority Amendment Act, 1982",
+          "relation": "reorganized_by",
+          "provisions": [
+            "s. 3"
+          ],
+          "note": "Made an agent of the Crown; in force by OIC 1534/1982."
+        },
+        {
+          "cite": "OIC 1534/1982",
+          "relation": null
+        }
+      ],
+      "reason": "Locator names the Act and its commencement order."
+    },
+    "atlas:round4-burnaby-parcel-2008": {
+      "instruments": [
+        {
+          "cite": "M158/2008",
+          "relation": "reorganized_by",
+          "note": "Amends B.C. Reg. 293/2001, Schedule B: a parcel moved from Fraser Health."
+        },
+        {
+          "cite": "B.C. Reg. 293/2001",
+          "relation": null
+        }
+      ],
+      "reason": "Locator names the amending order and the regulation amended."
+    },
+    "atlas:round4-fraser-valley-rhd-1995": {
+      "instruments": [
+        {
+          "cite": "OIC 1501/1995",
+          "relation": null
+        }
+      ],
+      "reason": "Filed under the ministry; concerns regional hospital districts, which the diagram does not draw."
+    },
+    "atlas:round4-gvrhd-dissolved-1999": {
+      "instruments": [
+        {
+          "cite": "OIC 1601/1998",
+          "relation": null
+        }
+      ],
+      "reason": "As above."
+    },
+    "atlas:round4-hid-dissolution-1969": {
+      "instruments": [
+        {
+          "cite": "OIC 3082/1969",
+          "relation": null
+        }
+      ],
+      "reason": "As above; the Water Act is where the districts were incorporated."
+    },
+    "atlas:round4-lcb-gla-repealed-1976-12-31": {
+      "instruments": [
+        {
+          "cite": "Liquor Distribution Act",
+          "relation": null,
+          "provisions": [
+            "s. 27"
+          ]
+        },
+        {
+          "cite": "OIC 3493/1976",
+          "relation": null
+        },
+        {
+          "cite": "Government Liquor Act",
+          "relation": null
+        }
+      ],
+      "reason": "The Board's record ends in 1973, so this repeal is not its end."
+    },
+    "atlas:round4-ldb-admin-assigned-1976-12-02": {
+      "instruments": [
+        {
+          "cite": "Liquor Distribution Act",
+          "relation": "administers",
+          "body": "ministry-of-consumer-and-corporate-affairs-1976",
+          "note": "Charged by OIC 3495/1976."
+        },
+        {
+          "cite": "OIC 3495/1976",
+          "relation": null
+        }
+      ],
+      "reason": "The order charges the Minister of Consumer and Corporate Affairs with the Act."
+    },
+    "atlas:round4-mtoc-assets-to-bctransit-1985-06-01": {
+      "instruments": [
+        {
+          "cite": "British Columbia Transit Amendment Act (No. 2), 1985",
+          "relation": null
+        },
+        {
+          "cite": "OIC 1093/1985",
+          "relation": null
+        }
+      ],
+      "reason": "Its operations passed to BC Transit; its legal end is untraced, so no 'ended by'."
+    },
+    "atlas:round4-mtoc-board-appointment-1980-01-18": {
+      "instruments": [
+        {
+          "cite": "Metro Transit Operating Company Act",
+          "relation": null,
+          "provisions": [
+            "s. 4"
+          ]
+        }
+      ],
+      "reason": "A governance provision in force."
+    },
+    "atlas:round4-pho-independence-1994-oic": {
+      "instruments": [
+        {
+          "cite": "Health Statutes Amendment Act, 1994",
+          "relation": "reorganized_by",
+          "provisions": [
+            "s. 6"
+          ],
+          "note": "In force by OIC 1164/1994."
+        },
+        {
+          "cite": "OIC 1164/1994",
+          "relation": null
+        }
+      ],
+      "reason": "The Act's s. 6 sets the officer's independent advice; the order commenced it."
+    },
+    "atlas:round4-rhd-areas-1967": {
+      "instruments": [
+        {
+          "cite": "OIC 1222/1967",
+          "relation": null
+        },
+        {
+          "cite": "Regional Hospital Districts Act",
+          "relation": null
+        }
+      ],
+      "reason": "Filed under the department; the districts are not drawn."
+    },
+    "atlas:round4-rhd-coordination-1972": {
+      "instruments": [
+        {
+          "cite": "OIC 527/1972",
+          "relation": null
+        }
+      ],
+      "reason": "As above."
+    },
+    "atlas:round4-rhd-five-dissolved-1998": {
+      "instruments": [
+        {
+          "cite": "OIC 1429/1998",
+          "relation": null
+        }
+      ],
+      "reason": "As above."
+    },
+    "atlas:round4-rhd-powers-restricted-1995": {
+      "instruments": [
+        {
+          "cite": "OIC 1549/1995",
+          "relation": null
+        }
+      ],
+      "reason": "As above."
+    },
+    "atlas:round4-rhd-reorganization-1998": {
+      "instruments": [
+        {
+          "cite": "OIC 1429/1998",
+          "relation": null
+        }
+      ],
+      "reason": "As above."
+    },
+    "atlas:round4-rhd-twelve-new-1996": {
+      "instruments": [],
+      "reason": "Twelve orders (OIC 1550/1995 to 1561/1995), one per district; the districts are not drawn."
+    },
+    "atlas:round4-sheriffs-vancouver-act-1892": {
+      "instruments": [
+        {
+          "cite": "Sheriffs Act Amendment Act, 1892",
+          "relation": "reorganized_by",
+          "provisions": [
+            "ss. 2-5"
+          ],
+          "note": "A Sheriff for the County of Vancouver."
+        }
+      ],
+      "reason": "Title names the amending Act."
+    },
+    "atlas:round4-sheriffs-vancouver-acting-1892": {
+      "instruments": [
+        {
+          "cite": "OIC 427/1892",
+          "relation": null
+        }
+      ],
+      "reason": "An appointment."
+    },
+    "atlas:round4-titles-in-force-hca-1977": {
+      "instruments": [
+        {
+          "cite": "Ministerial Titles Amendment Act, 1977",
+          "relation": null
+        },
+        {
+          "cite": "Hospital Corporations Act",
+          "relation": null
+        }
+      ],
+      "reason": "Commencement recorded in the Table of Statutes."
+    },
+    "atlas:round4-titles-proclamation-ordered-1977": {
+      "instruments": [
+        {
+          "cite": "OIC 3240/1977",
+          "relation": null
+        },
+        {
+          "cite": "Ministerial Titles Amendment Act, 1977",
+          "relation": null
+        }
+      ],
+      "reason": "A commencement order."
+    },
+    "atlas:round4-uta-admin-assigned-1978-07-13": {
+      "instruments": [
+        {
+          "cite": "Urban Transit Authority Act",
+          "relation": "administers",
+          "body": "ministry-of-municipal-affairs-and-housing-1976",
+          "note": "Charged by OIC 1930/1978."
+        },
+        {
+          "cite": "OIC 1930/1978",
+          "relation": null
+        }
+      ],
+      "reason": "The order charges the Minister of Municipal Affairs and Housing with the Act."
+    },
+    "atlas:round4-uta-board-appointment-1978-07-20": {
+      "instruments": [
+        {
+          "cite": "Urban Transit Authority Act",
+          "relation": null,
+          "provisions": [
+            "s. 4"
+          ]
+        }
+      ],
+      "reason": "A governance provision in force."
+    },
+    "atlas:scbc-act-retitled-2003-03-12": {
+      "instruments": [
+        {
+          "cite": "Science Council Act",
+          "relation": null
+        },
+        {
+          "cite": "Innovation and Science Council Act",
+          "relation": null
+        }
+      ],
+      "reason": "A retitling of the Act; what it did to the council is not stated."
+    },
+    "atlas:thba-renamed-ferry-authority-1964": {
+      "instruments": [],
+      "reason": "S.B.C. 1964, c. 57 is cited by chapter only."
+    },
+    "atlas:uta-amendment-1982-assent": {
+      "instruments": [
+        {
+          "cite": "Urban Transit Authority Amendment Act, 1982",
+          "relation": "reorganized_by",
+          "provisions": [
+            "s. 1"
+          ],
+          "note": "Renamed British Columbia Transit; the Act retitled the British Columbia Transit Act."
+        }
+      ],
+      "reason": "Title names the amending Act and the new title."
+    },
+    "atlas:wca-1916-compensation-effect": {
+      "instruments": [
+        {
+          "cite": "Workmen's Compensation Act",
+          "relation": null,
+          "provisions": [
+            "ss. 75-76(1)"
+          ]
+        },
+        {
+          "cite": "Employers' Liability Act",
+          "relation": null
+        }
+      ],
+      "reason": "Commencement of the 1916 Act's compensation provisions and repeal of earlier Acts."
+    },
+    "atlas:wca-1916-general-effect": {
+      "instruments": [
+        {
+          "cite": "Workmen's Compensation Act",
+          "relation": null,
+          "provisions": [
+            "s. 76(2)"
+          ]
+        }
+      ],
+      "reason": "The '1916 Act' is the Workmen's Compensation Act (locator S.B.C. 1916, c. 77)."
+    },
+    "hc:evt-007": {
+      "instruments": [
+        {
+          "cite": "OIC 928/2003",
+          "relation": "reorganized_by"
+        }
+      ],
+      "reason": "Source is OIC 928/2003; its commencement changes the regulatory names."
+    },
+    "hc:evt-017": {
+      "instruments": [],
+      "reason": "The same repeal as the Tourism British Columbia Act event already catalogued; this locator does not name the Act."
+    },
+    "sub:bc-arts-and-culture-endowment:established": {
+      "instruments": [
+        {
+          "cite": "Budget Measures Implementation Act, 2008",
+          "relation": "established_by",
+          "provisions": [
+            "s. 113"
+          ],
+          "note": "In force retroactively."
+        }
+      ],
+      "reason": "s. 113: 'The BC Arts and Culture Endowment special account is established'."
+    },
+    "sub:bc-timber-sales:first-observed": {
+      "instruments": [],
+      "reason": "A name sighting in a notice, not an instrument."
+    },
+    "sub:kings-printer:event-0": {
+      "instruments": [],
+      "reason": "An origin claim on a BC Laws FAQ page, not an instrument."
+    },
+    "sub:private-training-institutions-branch:first-observed": {
+      "instruments": [
+        {
+          "cite": "B.C. Reg. 153/2016",
+          "relation": null
+        }
+      ],
+      "reason": "The name is first seen in this regulation (s. 17(2)(f))."
+    },
+    "atlas:health-lineage-fraser-health-amalgamation": {
+      "instruments": [
+        {
+          "cite": "B.C. Reg. 293/2001",
+          "relation": "established_by",
+          "provisions": [
+            "s. 2",
+            "s. 4(1)",
+            "Schedule A"
+          ],
+          "note": "Formed by amalgamating and renaming the 3 authorities in Schedule A, column 2 (s. 2), and continued as a regional health board (s. 4(1)); made by M297/2001 under the Health Authorities Act."
+        },
+        {
+          "cite": "M297/2001",
+          "relation": null
+        },
+        {
+          "cite": "Health Authorities Act",
+          "relation": null
+        }
+      ],
+      "reason": "Checked against the regulation's text: s. 2 and Schedule A (see relations_note)."
+    },
+    "atlas:health-lineage-interior-health-amalgamation": {
+      "instruments": [
+        {
+          "cite": "B.C. Reg. 293/2001",
+          "relation": "established_by",
+          "provisions": [
+            "s. 2",
+            "s. 4(1)",
+            "Schedule A"
+          ],
+          "note": "Formed by amalgamating and renaming the 17 authorities in Schedule A, column 2 (s. 2), and continued as a regional health board (s. 4(1)); made by M297/2001 under the Health Authorities Act."
+        },
+        {
+          "cite": "M297/2001",
+          "relation": null
+        },
+        {
+          "cite": "Health Authorities Act",
+          "relation": null
+        }
+      ],
+      "reason": "Checked against the regulation's text: s. 2 and Schedule A (see relations_note)."
+    },
+    "atlas:health-lineage-northern-health-amalgamation": {
+      "instruments": [
+        {
+          "cite": "B.C. Reg. 293/2001",
+          "relation": "established_by",
+          "provisions": [
+            "s. 2",
+            "s. 4(1)",
+            "Schedule A"
+          ],
+          "note": "Formed by amalgamating and renaming the 13 authorities in Schedule A, column 2 (s. 2), and continued as a regional health board (s. 4(1)); made by M297/2001 under the Health Authorities Act."
+        },
+        {
+          "cite": "M297/2001",
+          "relation": null
+        },
+        {
+          "cite": "Health Authorities Act",
+          "relation": null
+        }
+      ],
+      "reason": "Checked against the regulation's text: s. 2 and Schedule A (see relations_note)."
+    },
+    "atlas:health-lineage-vancouver-coastal-health-amalgamation": {
+      "instruments": [
+        {
+          "cite": "B.C. Reg. 293/2001",
+          "relation": "established_by",
+          "provisions": [
+            "s. 2",
+            "s. 4(1)",
+            "Schedule A"
+          ],
+          "note": "Formed by amalgamating and renaming the 5 authorities in Schedule A, column 2 (s. 2), and continued as a regional health board (s. 4(1)); made by M297/2001 under the Health Authorities Act."
+        },
+        {
+          "cite": "M297/2001",
+          "relation": null
+        },
+        {
+          "cite": "Health Authorities Act",
+          "relation": null
+        }
+      ],
+      "reason": "Checked against the regulation's text: s. 2 and Schedule A (see relations_note)."
+    },
+    "atlas:health-lineage-island-health-amalgamation": {
+      "instruments": [
+        {
+          "cite": "B.C. Reg. 293/2001",
+          "relation": "established_by",
+          "provisions": [
+            "s. 2",
+            "s. 4(1)",
+            "Schedule A"
+          ],
+          "note": "Formed by amalgamating and renaming the 6 authorities in Schedule A, column 2 (s. 2), and continued as a regional health board (s. 4(1)); made by M297/2001 under the Health Authorities Act."
+        },
+        {
+          "cite": "M297/2001",
+          "relation": null
+        },
+        {
+          "cite": "Health Authorities Act",
+          "relation": null
+        }
+      ],
+      "reason": "Checked against the regulation's text: s. 2 and Schedule A (see relations_note)."
+    },
+    "atlas:round4-hydro-amalgamation-1965-08-20": {
+      "instruments": [
+        {
+          "cite": "Power Measures Act, 1966",
+          "relation": null,
+          "provisions": [
+            "s. 3",
+            "s. 5"
+          ],
+          "note": "A later Act validating the 1965 amalgamation, after the 1962 statutory amalgamation was held ultra vires."
+        }
+      ],
+      "reason": "The 1966 Act is cited for the 1965 event; the amalgamation itself was authorized by OIC 2386/1965 (a separate event)."
+    }
+  },
+  "bodies": {
+    "bc-hydro": {
+      "instruments": [],
+      "reason": "Already catalogued from its events: the 1962 Act, the 1964 Act and OIC 2386/1965."
+    },
+    "bc-place-ltd": {
+      "instruments": [
+        {
+          "cite": "Company Act",
+          "relation": "established_by",
+          "note": "Registered under it, certificate 207097."
+        }
+      ],
+      "reason": "Registered under the Company Act."
+    },
+    "bc-steamship-company": {
+      "instruments": [
+        {
+          "cite": "Canada Corporations Act",
+          "relation": "established_by",
+          "note": "A federal Act; as its first audited statements record, the certificate not obtained."
+        }
+      ],
+      "reason": "Incorporated under the federal Act."
+    },
+    "bc-transit": {
+      "instruments": [],
+      "reason": "Already catalogued from its events: the Urban Transit Authority Amendment Act, 1982."
+    },
+    "bulkley-valley-health-council": {
+      "instruments": [
+        {
+          "cite": "M52/1997",
+          "relation": "established_by",
+          "note": "Members appointed by M49/1997; under Reg. 338/96 s. 3 this brings the amalgamation of its predecessors into effect."
+        }
+      ],
+      "reason": "Designated by M52/1997."
+    },
+    "north-peace-health-council": {
+      "instruments": [
+        {
+          "cite": "M52/1997",
+          "relation": "established_by",
+          "note": "Members appointed by M51/1997; under Reg. 338/96 s. 3 this brings the amalgamation of its predecessors into effect."
+        }
+      ],
+      "reason": "Designated by M52/1997."
+    },
+    "south-peace-health-council": {
+      "instruments": [
+        {
+          "cite": "M52/1997",
+          "relation": "established_by",
+          "note": "Members appointed by M50/1997; under Reg. 338/96 s. 3 this brings the amalgamation of its predecessors into effect."
+        }
+      ],
+      "reason": "Designated by M52/1997."
+    },
+    "campbell-river-nootka-community-health-council": {
+      "instruments": [
+        {
+          "cite": "M96/1997",
+          "relation": "established_by",
+          "note": "The day in its date line is unclear; members appointed by M98/1997 effective 1997-03-04."
+        }
+      ],
+      "reason": "Designated by M96/1997."
+    },
+    "homeowner-protection-office": {
+      "instruments": [
+        {
+          "cite": "Homeowner Protection Act",
+          "relation": "established_by",
+          "provisions": [
+            "s. 3"
+          ],
+          "note": "In force by OIC 1188/1998 (B.C. Reg. 309/98); it opened on 1 October 1998."
+        }
+      ],
+      "reason": "Established by s. 3."
+    },
+    "justice-institute": {
+      "instruments": [
+        {
+          "cite": "College and Institute Act",
+          "relation": "established_by",
+          "note": "By an order in council under the Act, as the Institute's reports give it; the order was not obtained."
+        }
+      ],
+      "reason": "Established under the Act by an order not obtained."
+    },
+    "liquor-distribution-branch": {
+      "instruments": [
+        {
+          "cite": "Liquor Distribution Act",
+          "relation": "established_by",
+          "provisions": [
+            "s. 2"
+          ],
+          "note": "When s. 2 came into force; the assent in 1975 is a separate event."
+        }
+      ],
+      "reason": "Established by statute on s. 2's commencement."
+    },
+    "metro-transit-operating-company": {
+      "instruments": [],
+      "reason": "Already catalogued from its events: assent and commencement of its Act."
+    },
+    "urban-transit-authority": {
+      "instruments": [],
+      "reason": "Already catalogued from its events: assent and commencement of its Act."
+    },
+    "prince-george-health-council": {
+      "instruments": [
+        {
+          "cite": "M178/1995",
+          "relation": "established_by",
+          "note": "A 1994 board-composition order already names a council of this name."
+        }
+      ],
+      "reason": "Designated by M178/1995."
+    },
+    "sea-to-sky-community-health-council": {
+      "instruments": [
+        {
+          "cite": "M441/1994",
+          "relation": "established_by",
+          "note": "By the Sea to Sky Community Health Council Regulation, made effective by this order; the archived annexes of M441 and M444/1994 appear interchanged."
+        }
+      ],
+      "reason": "Made effective by M441/1994."
+    },
+    "simon-fraser-health-region": {
+      "instruments": [
+        {
+          "cite": "M432/1996",
+          "relation": "established_by",
+          "note": "Combining the Simon Fraser and Burnaby health boards."
+        }
+      ],
+      "reason": "Designated by M432/1996."
+    }
+  },
+  "legalBasis": {
+    "sub-bc-training-and-education-savings-program": {
+      "instruments": [
+        {
+          "cite": "Special Accounts Appropriation and Control Act",
+          "relation": "current_legal_basis",
+          "provisions": [
+            "s. 9.4"
+          ]
+        }
+      ],
+      "reason": "The regulation (B.C. Reg. 132/2013, OIC 173/2013) was replaced under OIC 389/2014, so it is not its basis today."
+    },
+    "sub-disaster-financial-assistance": {
+      "instruments": [
+        {
+          "cite": "B.C. Reg. 124/95",
+          "relation": "current_legal_basis",
+          "note": "Compensation and Disaster Financial Assistance Regulation, made by OIC 310/1995."
+        },
+        {
+          "cite": "Emergency Program Act",
+          "relation": "current_legal_basis",
+          "note": "The Act the regulation is made under."
+        }
+      ],
+      "reason": "The regulation and its parent Act."
+    }
+  },
+  "relations_note": "Bodies related to an instrument by its own text, checked against it. B.C. Reg. 293/2001 (fetched 2026-11-13 from the source below): s. 2 amalgamates the health authorities in Schedule A column 2 and renames them as column 1; s. 4(1) continues the column 1 boards. All 44 column 2 names match a body whose record already ends on 12 December 2001 and becomes the column 1 authority; none is missing either way.",
+  "relations": [
+    {
+      "body": "fraser-valley-health-region",
+      "cite": "B.C. Reg. 293/2001",
+      "relation": "ended_by",
+      "from": "2001-12-12",
+      "provisions": [
+        "s. 2",
+        "Schedule A"
+      ],
+      "note": "Amalgamated into the Fraser Health Authority, as “Fraser Valley Health Region” in Schedule A, column 2.",
+      "source": {
+        "url": "https://www.bclaws.gov.bc.ca/civix/document/id/lc/bcgaz2/v44n25_293-2001",
+        "title": "B.C. Reg. 293/2001 (Regional Health Boards Regulation, M297/2001), BC Gazette Part II, vol. 44 no. 25"
+      },
+      "locator": "Appendix s. 2 and Schedule A"
+    },
+    {
+      "body": "simon-fraser-health-region",
+      "cite": "B.C. Reg. 293/2001",
+      "relation": "ended_by",
+      "from": "2001-12-12",
+      "provisions": [
+        "s. 2",
+        "Schedule A"
+      ],
+      "note": "Amalgamated into the Fraser Health Authority, as “Simon Fraser Health Region” in Schedule A, column 2.",
+      "source": {
+        "url": "https://www.bclaws.gov.bc.ca/civix/document/id/lc/bcgaz2/v44n25_293-2001",
+        "title": "B.C. Reg. 293/2001 (Regional Health Boards Regulation, M297/2001), BC Gazette Part II, vol. 44 no. 25"
+      },
+      "locator": "Appendix s. 2 and Schedule A"
+    },
+    {
+      "body": "south-fraser-health-region",
+      "cite": "B.C. Reg. 293/2001",
+      "relation": "ended_by",
+      "from": "2001-12-12",
+      "provisions": [
+        "s. 2",
+        "Schedule A"
+      ],
+      "note": "Amalgamated into the Fraser Health Authority, as “South Fraser Health Region” in Schedule A, column 2.",
+      "source": {
+        "url": "https://www.bclaws.gov.bc.ca/civix/document/id/lc/bcgaz2/v44n25_293-2001",
+        "title": "B.C. Reg. 293/2001 (Regional Health Boards Regulation, M297/2001), BC Gazette Part II, vol. 44 no. 25"
+      },
+      "locator": "Appendix s. 2 and Schedule A"
+    },
+    {
+      "body": "arrow-lakes-upper-slocan-valley-health-council",
+      "cite": "B.C. Reg. 293/2001",
+      "relation": "ended_by",
+      "from": "2001-12-12",
+      "provisions": [
+        "s. 2",
+        "Schedule A"
+      ],
+      "note": "Amalgamated into the Interior Health Authority, as “Arrow Lakes/Upper Slocan Valley Health Council” in Schedule A, column 2.",
+      "source": {
+        "url": "https://www.bclaws.gov.bc.ca/civix/document/id/lc/bcgaz2/v44n25_293-2001",
+        "title": "B.C. Reg. 293/2001 (Regional Health Boards Regulation, M297/2001), BC Gazette Part II, vol. 44 no. 25"
+      },
+      "locator": "Appendix s. 2 and Schedule A"
+    },
+    {
+      "body": "bella-coola-and-district-transitional-health-authority",
+      "cite": "B.C. Reg. 293/2001",
+      "relation": "ended_by",
+      "from": "2001-12-12",
+      "provisions": [
+        "s. 2",
+        "Schedule A"
+      ],
+      "note": "Amalgamated into the Interior Health Authority, as “Bella Coola and District Transitional Health Authority” in Schedule A, column 2.",
+      "source": {
+        "url": "https://www.bclaws.gov.bc.ca/civix/document/id/lc/bcgaz2/v44n25_293-2001",
+        "title": "B.C. Reg. 293/2001 (Regional Health Boards Regulation, M297/2001), BC Gazette Part II, vol. 44 no. 25"
+      },
+      "locator": "Appendix s. 2 and Schedule A"
+    },
+    {
+      "body": "boundary-health-council",
+      "cite": "B.C. Reg. 293/2001",
+      "relation": "ended_by",
+      "from": "2001-12-12",
+      "provisions": [
+        "s. 2",
+        "Schedule A"
+      ],
+      "note": "Amalgamated into the Interior Health Authority, as “Boundary Health Council” in Schedule A, column 2.",
+      "source": {
+        "url": "https://www.bclaws.gov.bc.ca/civix/document/id/lc/bcgaz2/v44n25_293-2001",
+        "title": "B.C. Reg. 293/2001 (Regional Health Boards Regulation, M297/2001), BC Gazette Part II, vol. 44 no. 25"
+      },
+      "locator": "Appendix s. 2 and Schedule A"
+    },
+    {
+      "body": "castlegar-and-district-health-council",
+      "cite": "B.C. Reg. 293/2001",
+      "relation": "ended_by",
+      "from": "2001-12-12",
+      "provisions": [
+        "s. 2",
+        "Schedule A"
+      ],
+      "note": "Amalgamated into the Interior Health Authority, as “Castlegar and District Health Council” in Schedule A, column 2.",
+      "source": {
+        "url": "https://www.bclaws.gov.bc.ca/civix/document/id/lc/bcgaz2/v44n25_293-2001",
+        "title": "B.C. Reg. 293/2001 (Regional Health Boards Regulation, M297/2001), BC Gazette Part II, vol. 44 no. 25"
+      },
+      "locator": "Appendix s. 2 and Schedule A"
+    },
+    {
+      "body": "central-cariboo-chilcotin-health-council",
+      "cite": "B.C. Reg. 293/2001",
+      "relation": "ended_by",
+      "from": "2001-12-12",
+      "provisions": [
+        "s. 2",
+        "Schedule A"
+      ],
+      "note": "Amalgamated into the Interior Health Authority, as “Central Cariboo Chilcotin Health Council” in Schedule A, column 2.",
+      "source": {
+        "url": "https://www.bclaws.gov.bc.ca/civix/document/id/lc/bcgaz2/v44n25_293-2001",
+        "title": "B.C. Reg. 293/2001 (Regional Health Boards Regulation, M297/2001), BC Gazette Part II, vol. 44 no. 25"
+      },
+      "locator": "Appendix s. 2 and Schedule A"
+    },
+    {
+      "body": "columbia-valley-health-council",
+      "cite": "B.C. Reg. 293/2001",
+      "relation": "ended_by",
+      "from": "2001-12-12",
+      "provisions": [
+        "s. 2",
+        "Schedule A"
+      ],
+      "note": "Amalgamated into the Interior Health Authority, as “Columbia Valley Health Council” in Schedule A, column 2.",
+      "source": {
+        "url": "https://www.bclaws.gov.bc.ca/civix/document/id/lc/bcgaz2/v44n25_293-2001",
+        "title": "B.C. Reg. 293/2001 (Regional Health Boards Regulation, M297/2001), BC Gazette Part II, vol. 44 no. 25"
+      },
+      "locator": "Appendix s. 2 and Schedule A"
+    },
+    {
+      "body": "cranbrook-health-council",
+      "cite": "B.C. Reg. 293/2001",
+      "relation": "ended_by",
+      "from": "2001-12-12",
+      "provisions": [
+        "s. 2",
+        "Schedule A"
+      ],
+      "note": "Amalgamated into the Interior Health Authority, as “Cranbrook Health Council” in Schedule A, column 2.",
+      "source": {
+        "url": "https://www.bclaws.gov.bc.ca/civix/document/id/lc/bcgaz2/v44n25_293-2001",
+        "title": "B.C. Reg. 293/2001 (Regional Health Boards Regulation, M297/2001), BC Gazette Part II, vol. 44 no. 25"
+      },
+      "locator": "Appendix s. 2 and Schedule A"
+    },
+    {
+      "body": "creston-and-district-health-council",
+      "cite": "B.C. Reg. 293/2001",
+      "relation": "ended_by",
+      "from": "2001-12-12",
+      "provisions": [
+        "s. 2",
+        "Schedule A"
+      ],
+      "note": "Amalgamated into the Interior Health Authority, as “Creston and District Health Council” in Schedule A, column 2.",
+      "source": {
+        "url": "https://www.bclaws.gov.bc.ca/civix/document/id/lc/bcgaz2/v44n25_293-2001",
+        "title": "B.C. Reg. 293/2001 (Regional Health Boards Regulation, M297/2001), BC Gazette Part II, vol. 44 no. 25"
+      },
+      "locator": "Appendix s. 2 and Schedule A"
+    },
+    {
+      "body": "elk-valley-and-south-country-health-council",
+      "cite": "B.C. Reg. 293/2001",
+      "relation": "ended_by",
+      "from": "2001-12-12",
+      "provisions": [
+        "s. 2",
+        "Schedule A"
+      ],
+      "note": "Amalgamated into the Interior Health Authority, as “Elk Valley and South Country Health Council” in Schedule A, column 2.",
+      "source": {
+        "url": "https://www.bclaws.gov.bc.ca/civix/document/id/lc/bcgaz2/v44n25_293-2001",
+        "title": "B.C. Reg. 293/2001 (Regional Health Boards Regulation, M297/2001), BC Gazette Part II, vol. 44 no. 25"
+      },
+      "locator": "Appendix s. 2 and Schedule A"
+    },
+    {
+      "body": "golden-health-council",
+      "cite": "B.C. Reg. 293/2001",
+      "relation": "ended_by",
+      "from": "2001-12-12",
+      "provisions": [
+        "s. 2",
+        "Schedule A"
+      ],
+      "note": "Amalgamated into the Interior Health Authority, as “Golden Health Council” in Schedule A, column 2.",
+      "source": {
+        "url": "https://www.bclaws.gov.bc.ca/civix/document/id/lc/bcgaz2/v44n25_293-2001",
+        "title": "B.C. Reg. 293/2001 (Regional Health Boards Regulation, M297/2001), BC Gazette Part II, vol. 44 no. 25"
+      },
+      "locator": "Appendix s. 2 and Schedule A"
+    },
+    {
+      "body": "greater-trail-community-health-council",
+      "cite": "B.C. Reg. 293/2001",
+      "relation": "ended_by",
+      "from": "2001-12-12",
+      "provisions": [
+        "s. 2",
+        "Schedule A"
+      ],
+      "note": "Amalgamated into the Interior Health Authority, as “Greater Trail Community Health Council” in Schedule A, column 2.",
+      "source": {
+        "url": "https://www.bclaws.gov.bc.ca/civix/document/id/lc/bcgaz2/v44n25_293-2001",
+        "title": "B.C. Reg. 293/2001 (Regional Health Boards Regulation, M297/2001), BC Gazette Part II, vol. 44 no. 25"
+      },
+      "locator": "Appendix s. 2 and Schedule A"
+    },
+    {
+      "body": "kimberley-community-health-council",
+      "cite": "B.C. Reg. 293/2001",
+      "relation": "ended_by",
+      "from": "2001-12-12",
+      "provisions": [
+        "s. 2",
+        "Schedule A"
+      ],
+      "note": "Amalgamated into the Interior Health Authority, as “Kimberley Community Health Council” in Schedule A, column 2.",
+      "source": {
+        "url": "https://www.bclaws.gov.bc.ca/civix/document/id/lc/bcgaz2/v44n25_293-2001",
+        "title": "B.C. Reg. 293/2001 (Regional Health Boards Regulation, M297/2001), BC Gazette Part II, vol. 44 no. 25"
+      },
+      "locator": "Appendix s. 2 and Schedule A"
+    },
+    {
+      "body": "nelson-and-area-health-council",
+      "cite": "B.C. Reg. 293/2001",
+      "relation": "ended_by",
+      "from": "2001-12-12",
+      "provisions": [
+        "s. 2",
+        "Schedule A"
+      ],
+      "note": "Amalgamated into the Interior Health Authority, as “Nelson and Area Health Council” in Schedule A, column 2.",
+      "source": {
+        "url": "https://www.bclaws.gov.bc.ca/civix/document/id/lc/bcgaz2/v44n25_293-2001",
+        "title": "B.C. Reg. 293/2001 (Regional Health Boards Regulation, M297/2001), BC Gazette Part II, vol. 44 no. 25"
+      },
+      "locator": "Appendix s. 2 and Schedule A"
+    },
+    {
+      "body": "north-okanagan-health-region",
+      "cite": "B.C. Reg. 293/2001",
+      "relation": "ended_by",
+      "from": "2001-12-12",
+      "provisions": [
+        "s. 2",
+        "Schedule A"
+      ],
+      "note": "Amalgamated into the Interior Health Authority, as “North Okanagan Health Region” in Schedule A, column 2.",
+      "source": {
+        "url": "https://www.bclaws.gov.bc.ca/civix/document/id/lc/bcgaz2/v44n25_293-2001",
+        "title": "B.C. Reg. 293/2001 (Regional Health Boards Regulation, M297/2001), BC Gazette Part II, vol. 44 no. 25"
+      },
+      "locator": "Appendix s. 2 and Schedule A"
+    },
+    {
+      "body": "okanagan-similkameen-health-region",
+      "cite": "B.C. Reg. 293/2001",
+      "relation": "ended_by",
+      "from": "2001-12-12",
+      "provisions": [
+        "s. 2",
+        "Schedule A"
+      ],
+      "note": "Amalgamated into the Interior Health Authority, as “Okanagan Similkameen Health Region” in Schedule A, column 2.",
+      "source": {
+        "url": "https://www.bclaws.gov.bc.ca/civix/document/id/lc/bcgaz2/v44n25_293-2001",
+        "title": "B.C. Reg. 293/2001 (Regional Health Boards Regulation, M297/2001), BC Gazette Part II, vol. 44 no. 25"
+      },
+      "locator": "Appendix s. 2 and Schedule A"
+    },
+    {
+      "body": "south-cariboo-community-health-council",
+      "cite": "B.C. Reg. 293/2001",
+      "relation": "ended_by",
+      "from": "2001-12-12",
+      "provisions": [
+        "s. 2",
+        "Schedule A"
+      ],
+      "note": "Amalgamated into the Interior Health Authority, as “South Cariboo Community Health Council” in Schedule A, column 2.",
+      "source": {
+        "url": "https://www.bclaws.gov.bc.ca/civix/document/id/lc/bcgaz2/v44n25_293-2001",
+        "title": "B.C. Reg. 293/2001 (Regional Health Boards Regulation, M297/2001), BC Gazette Part II, vol. 44 no. 25"
+      },
+      "locator": "Appendix s. 2 and Schedule A"
+    },
+    {
+      "body": "thompson-health-region",
+      "cite": "B.C. Reg. 293/2001",
+      "relation": "ended_by",
+      "from": "2001-12-12",
+      "provisions": [
+        "s. 2",
+        "Schedule A"
+      ],
+      "note": "Amalgamated into the Interior Health Authority, as “Thompson Health Region” in Schedule A, column 2.",
+      "source": {
+        "url": "https://www.bclaws.gov.bc.ca/civix/document/id/lc/bcgaz2/v44n25_293-2001",
+        "title": "B.C. Reg. 293/2001 (Regional Health Boards Regulation, M297/2001), BC Gazette Part II, vol. 44 no. 25"
+      },
+      "locator": "Appendix s. 2 and Schedule A"
+    },
+    {
+      "body": "bulkley-valley-health-council",
+      "cite": "B.C. Reg. 293/2001",
+      "relation": "ended_by",
+      "from": "2001-12-12",
+      "provisions": [
+        "s. 2",
+        "Schedule A"
+      ],
+      "note": "Amalgamated into the Northern Health Authority, as “Bulkley Valley Health Council” in Schedule A, column 2.",
+      "source": {
+        "url": "https://www.bclaws.gov.bc.ca/civix/document/id/lc/bcgaz2/v44n25_293-2001",
+        "title": "B.C. Reg. 293/2001 (Regional Health Boards Regulation, M297/2001), BC Gazette Part II, vol. 44 no. 25"
+      },
+      "locator": "Appendix s. 2 and Schedule A"
+    },
+    {
+      "body": "fort-nelson-liard-health-council",
+      "cite": "B.C. Reg. 293/2001",
+      "relation": "ended_by",
+      "from": "2001-12-12",
+      "provisions": [
+        "s. 2",
+        "Schedule A"
+      ],
+      "note": "Amalgamated into the Northern Health Authority, as “Fort Nelson-Liard Health Council” in Schedule A, column 2.",
+      "source": {
+        "url": "https://www.bclaws.gov.bc.ca/civix/document/id/lc/bcgaz2/v44n25_293-2001",
+        "title": "B.C. Reg. 293/2001 (Regional Health Boards Regulation, M297/2001), BC Gazette Part II, vol. 44 no. 25"
+      },
+      "locator": "Appendix s. 2 and Schedule A"
+    },
+    {
+      "body": "kitimat-and-area-health-council",
+      "cite": "B.C. Reg. 293/2001",
+      "relation": "ended_by",
+      "from": "2001-12-12",
+      "provisions": [
+        "s. 2",
+        "Schedule A"
+      ],
+      "note": "Amalgamated into the Northern Health Authority, as “Kitimat and Area Health Council” in Schedule A, column 2.",
+      "source": {
+        "url": "https://www.bclaws.gov.bc.ca/civix/document/id/lc/bcgaz2/v44n25_293-2001",
+        "title": "B.C. Reg. 293/2001 (Regional Health Boards Regulation, M297/2001), BC Gazette Part II, vol. 44 no. 25"
+      },
+      "locator": "Appendix s. 2 and Schedule A"
+    },
+    {
+      "body": "north-coast-community-health-council",
+      "cite": "B.C. Reg. 293/2001",
+      "relation": "ended_by",
+      "from": "2001-12-12",
+      "provisions": [
+        "s. 2",
+        "Schedule A"
+      ],
+      "note": "Amalgamated into the Northern Health Authority, as “North Coast Community Health Council” in Schedule A, column 2.",
+      "source": {
+        "url": "https://www.bclaws.gov.bc.ca/civix/document/id/lc/bcgaz2/v44n25_293-2001",
+        "title": "B.C. Reg. 293/2001 (Regional Health Boards Regulation, M297/2001), BC Gazette Part II, vol. 44 no. 25"
+      },
+      "locator": "Appendix s. 2 and Schedule A"
+    },
+    {
+      "body": "north-peace-health-council",
+      "cite": "B.C. Reg. 293/2001",
+      "relation": "ended_by",
+      "from": "2001-12-12",
+      "provisions": [
+        "s. 2",
+        "Schedule A"
+      ],
+      "note": "Amalgamated into the Northern Health Authority, as “North Peace Health Council” in Schedule A, column 2.",
+      "source": {
+        "url": "https://www.bclaws.gov.bc.ca/civix/document/id/lc/bcgaz2/v44n25_293-2001",
+        "title": "B.C. Reg. 293/2001 (Regional Health Boards Regulation, M297/2001), BC Gazette Part II, vol. 44 no. 25"
+      },
+      "locator": "Appendix s. 2 and Schedule A"
+    },
+    {
+      "body": "northern-interior-regional-health-board",
+      "cite": "B.C. Reg. 293/2001",
+      "relation": "ended_by",
+      "from": "2001-12-12",
+      "provisions": [
+        "s. 2",
+        "Schedule A"
+      ],
+      "note": "Amalgamated into the Northern Health Authority, as “Northern Interior Regional Health Board” in Schedule A, column 2.",
+      "source": {
+        "url": "https://www.bclaws.gov.bc.ca/civix/document/id/lc/bcgaz2/v44n25_293-2001",
+        "title": "B.C. Reg. 293/2001 (Regional Health Boards Regulation, M297/2001), BC Gazette Part II, vol. 44 no. 25"
+      },
+      "locator": "Appendix s. 2 and Schedule A"
+    },
+    {
+      "body": "queen-charlotte-islands-haida-gwaii-community-health-council",
+      "cite": "B.C. Reg. 293/2001",
+      "relation": "ended_by",
+      "from": "2001-12-12",
+      "provisions": [
+        "s. 2",
+        "Schedule A"
+      ],
+      "note": "Amalgamated into the Northern Health Authority, as “Queen Charlotte Islands/Haida Gwaii Community Health Council” in Schedule A, column 2.",
+      "source": {
+        "url": "https://www.bclaws.gov.bc.ca/civix/document/id/lc/bcgaz2/v44n25_293-2001",
+        "title": "B.C. Reg. 293/2001 (Regional Health Boards Regulation, M297/2001), BC Gazette Part II, vol. 44 no. 25"
+      },
+      "locator": "Appendix s. 2 and Schedule A"
+    },
+    {
+      "body": "quesnel-and-district-community-health-council",
+      "cite": "B.C. Reg. 293/2001",
+      "relation": "ended_by",
+      "from": "2001-12-12",
+      "provisions": [
+        "s. 2",
+        "Schedule A"
+      ],
+      "note": "Amalgamated into the Northern Health Authority, as “Quesnel and District Community Health Council” in Schedule A, column 2.",
+      "source": {
+        "url": "https://www.bclaws.gov.bc.ca/civix/document/id/lc/bcgaz2/v44n25_293-2001",
+        "title": "B.C. Reg. 293/2001 (Regional Health Boards Regulation, M297/2001), BC Gazette Part II, vol. 44 no. 25"
+      },
+      "locator": "Appendix s. 2 and Schedule A"
+    },
+    {
+      "body": "snow-country-health-council",
+      "cite": "B.C. Reg. 293/2001",
+      "relation": "ended_by",
+      "from": "2001-12-12",
+      "provisions": [
+        "s. 2",
+        "Schedule A"
+      ],
+      "note": "Amalgamated into the Northern Health Authority, as “Snow Country Health Council” in Schedule A, column 2.",
+      "source": {
+        "url": "https://www.bclaws.gov.bc.ca/civix/document/id/lc/bcgaz2/v44n25_293-2001",
+        "title": "B.C. Reg. 293/2001 (Regional Health Boards Regulation, M297/2001), BC Gazette Part II, vol. 44 no. 25"
+      },
+      "locator": "Appendix s. 2 and Schedule A"
+    },
+    {
+      "body": "south-peace-health-council",
+      "cite": "B.C. Reg. 293/2001",
+      "relation": "ended_by",
+      "from": "2001-12-12",
+      "provisions": [
+        "s. 2",
+        "Schedule A"
+      ],
+      "note": "Amalgamated into the Northern Health Authority, as “South Peace Health Council” in Schedule A, column 2.",
+      "source": {
+        "url": "https://www.bclaws.gov.bc.ca/civix/document/id/lc/bcgaz2/v44n25_293-2001",
+        "title": "B.C. Reg. 293/2001 (Regional Health Boards Regulation, M297/2001), BC Gazette Part II, vol. 44 no. 25"
+      },
+      "locator": "Appendix s. 2 and Schedule A"
+    },
+    {
+      "body": "stikine-health-council",
+      "cite": "B.C. Reg. 293/2001",
+      "relation": "ended_by",
+      "from": "2001-12-12",
+      "provisions": [
+        "s. 2",
+        "Schedule A"
+      ],
+      "note": "Amalgamated into the Northern Health Authority, as “Stikine Health Council” in Schedule A, column 2.",
+      "source": {
+        "url": "https://www.bclaws.gov.bc.ca/civix/document/id/lc/bcgaz2/v44n25_293-2001",
+        "title": "B.C. Reg. 293/2001 (Regional Health Boards Regulation, M297/2001), BC Gazette Part II, vol. 44 no. 25"
+      },
+      "locator": "Appendix s. 2 and Schedule A"
+    },
+    {
+      "body": "terrace-and-area-health-council",
+      "cite": "B.C. Reg. 293/2001",
+      "relation": "ended_by",
+      "from": "2001-12-12",
+      "provisions": [
+        "s. 2",
+        "Schedule A"
+      ],
+      "note": "Amalgamated into the Northern Health Authority, as “Terrace and Area Health Council” in Schedule A, column 2.",
+      "source": {
+        "url": "https://www.bclaws.gov.bc.ca/civix/document/id/lc/bcgaz2/v44n25_293-2001",
+        "title": "B.C. Reg. 293/2001 (Regional Health Boards Regulation, M297/2001), BC Gazette Part II, vol. 44 no. 25"
+      },
+      "locator": "Appendix s. 2 and Schedule A"
+    },
+    {
+      "body": "upper-skeena-community-health-council",
+      "cite": "B.C. Reg. 293/2001",
+      "relation": "ended_by",
+      "from": "2001-12-12",
+      "provisions": [
+        "s. 2",
+        "Schedule A"
+      ],
+      "note": "Amalgamated into the Northern Health Authority, as “Upper Skeena Community Health Council” in Schedule A, column 2.",
+      "source": {
+        "url": "https://www.bclaws.gov.bc.ca/civix/document/id/lc/bcgaz2/v44n25_293-2001",
+        "title": "B.C. Reg. 293/2001 (Regional Health Boards Regulation, M297/2001), BC Gazette Part II, vol. 44 no. 25"
+      },
+      "locator": "Appendix s. 2 and Schedule A"
+    },
+    {
+      "body": "north-shore-health-region",
+      "cite": "B.C. Reg. 293/2001",
+      "relation": "ended_by",
+      "from": "2001-12-12",
+      "provisions": [
+        "s. 2",
+        "Schedule A"
+      ],
+      "note": "Amalgamated into the Vancouver Coastal Health Authority, as “North Shore Health Region” in Schedule A, column 2.",
+      "source": {
+        "url": "https://www.bclaws.gov.bc.ca/civix/document/id/lc/bcgaz2/v44n25_293-2001",
+        "title": "B.C. Reg. 293/2001 (Regional Health Boards Regulation, M297/2001), BC Gazette Part II, vol. 44 no. 25"
+      },
+      "locator": "Appendix s. 2 and Schedule A"
+    },
+    {
+      "body": "powell-river-community-health-council",
+      "cite": "B.C. Reg. 293/2001",
+      "relation": "ended_by",
+      "from": "2001-12-12",
+      "provisions": [
+        "s. 2",
+        "Schedule A"
+      ],
+      "note": "Amalgamated into the Vancouver Coastal Health Authority, as “Powell River Community Health Council” in Schedule A, column 2.",
+      "source": {
+        "url": "https://www.bclaws.gov.bc.ca/civix/document/id/lc/bcgaz2/v44n25_293-2001",
+        "title": "B.C. Reg. 293/2001 (Regional Health Boards Regulation, M297/2001), BC Gazette Part II, vol. 44 no. 25"
+      },
+      "locator": "Appendix s. 2 and Schedule A"
+    },
+    {
+      "body": "sea-to-sky-community-health-council",
+      "cite": "B.C. Reg. 293/2001",
+      "relation": "ended_by",
+      "from": "2001-12-12",
+      "provisions": [
+        "s. 2",
+        "Schedule A"
+      ],
+      "note": "Amalgamated into the Vancouver Coastal Health Authority, as “Sea to Sky Community Health Council” in Schedule A, column 2.",
+      "source": {
+        "url": "https://www.bclaws.gov.bc.ca/civix/document/id/lc/bcgaz2/v44n25_293-2001",
+        "title": "B.C. Reg. 293/2001 (Regional Health Boards Regulation, M297/2001), BC Gazette Part II, vol. 44 no. 25"
+      },
+      "locator": "Appendix s. 2 and Schedule A"
+    },
+    {
+      "body": "sunshine-coast-community-health-council",
+      "cite": "B.C. Reg. 293/2001",
+      "relation": "ended_by",
+      "from": "2001-12-12",
+      "provisions": [
+        "s. 2",
+        "Schedule A"
+      ],
+      "note": "Amalgamated into the Vancouver Coastal Health Authority, as “Sunshine Coast Community Health Council” in Schedule A, column 2.",
+      "source": {
+        "url": "https://www.bclaws.gov.bc.ca/civix/document/id/lc/bcgaz2/v44n25_293-2001",
+        "title": "B.C. Reg. 293/2001 (Regional Health Boards Regulation, M297/2001), BC Gazette Part II, vol. 44 no. 25"
+      },
+      "locator": "Appendix s. 2 and Schedule A"
+    },
+    {
+      "body": "vancouver-richmond-health-board",
+      "cite": "B.C. Reg. 293/2001",
+      "relation": "ended_by",
+      "from": "2001-12-12",
+      "provisions": [
+        "s. 2",
+        "Schedule A"
+      ],
+      "note": "Amalgamated into the Vancouver Coastal Health Authority, as “Vancouver/Richmond Health Board” in Schedule A, column 2.",
+      "source": {
+        "url": "https://www.bclaws.gov.bc.ca/civix/document/id/lc/bcgaz2/v44n25_293-2001",
+        "title": "B.C. Reg. 293/2001 (Regional Health Boards Regulation, M297/2001), BC Gazette Part II, vol. 44 no. 25"
+      },
+      "locator": "Appendix s. 2 and Schedule A"
+    },
+    {
+      "body": "campbell-river-nootka-community-health-council",
+      "cite": "B.C. Reg. 293/2001",
+      "relation": "ended_by",
+      "from": "2001-12-12",
+      "provisions": [
+        "s. 2",
+        "Schedule A"
+      ],
+      "note": "Amalgamated into the Vancouver Island Health Authority, as “Campbell River/Nootka Community Health Council” in Schedule A, column 2.",
+      "source": {
+        "url": "https://www.bclaws.gov.bc.ca/civix/document/id/lc/bcgaz2/v44n25_293-2001",
+        "title": "B.C. Reg. 293/2001 (Regional Health Boards Regulation, M297/2001), BC Gazette Part II, vol. 44 no. 25"
+      },
+      "locator": "Appendix s. 2 and Schedule A"
+    },
+    {
+      "body": "capital-health-region",
+      "cite": "B.C. Reg. 293/2001",
+      "relation": "ended_by",
+      "from": "2001-12-12",
+      "provisions": [
+        "s. 2",
+        "Schedule A"
+      ],
+      "note": "Amalgamated into the Vancouver Island Health Authority, as “Capital Health Region” in Schedule A, column 2.",
+      "source": {
+        "url": "https://www.bclaws.gov.bc.ca/civix/document/id/lc/bcgaz2/v44n25_293-2001",
+        "title": "B.C. Reg. 293/2001 (Regional Health Boards Regulation, M297/2001), BC Gazette Part II, vol. 44 no. 25"
+      },
+      "locator": "Appendix s. 2 and Schedule A"
+    },
+    {
+      "body": "central-coast-transitional-health-authority",
+      "cite": "B.C. Reg. 293/2001",
+      "relation": "ended_by",
+      "from": "2001-12-12",
+      "provisions": [
+        "s. 2",
+        "Schedule A"
+      ],
+      "note": "Amalgamated into the Vancouver Island Health Authority, as “Central Coast Transitional Health Authority” in Schedule A, column 2.",
+      "source": {
+        "url": "https://www.bclaws.gov.bc.ca/civix/document/id/lc/bcgaz2/v44n25_293-2001",
+        "title": "B.C. Reg. 293/2001 (Regional Health Boards Regulation, M297/2001), BC Gazette Part II, vol. 44 no. 25"
+      },
+      "locator": "Appendix s. 2 and Schedule A"
+    },
+    {
+      "body": "central-vancouver-island-health-region",
+      "cite": "B.C. Reg. 293/2001",
+      "relation": "ended_by",
+      "from": "2001-12-12",
+      "provisions": [
+        "s. 2",
+        "Schedule A"
+      ],
+      "note": "Amalgamated into the Vancouver Island Health Authority, as “Central Vancouver Island Health Region” in Schedule A, column 2.",
+      "source": {
+        "url": "https://www.bclaws.gov.bc.ca/civix/document/id/lc/bcgaz2/v44n25_293-2001",
+        "title": "B.C. Reg. 293/2001 (Regional Health Boards Regulation, M297/2001), BC Gazette Part II, vol. 44 no. 25"
+      },
+      "locator": "Appendix s. 2 and Schedule A"
+    },
+    {
+      "body": "comox-valley-community-health-council",
+      "cite": "B.C. Reg. 293/2001",
+      "relation": "ended_by",
+      "from": "2001-12-12",
+      "provisions": [
+        "s. 2",
+        "Schedule A"
+      ],
+      "note": "Amalgamated into the Vancouver Island Health Authority, as “Comox Valley Community Health Council” in Schedule A, column 2.",
+      "source": {
+        "url": "https://www.bclaws.gov.bc.ca/civix/document/id/lc/bcgaz2/v44n25_293-2001",
+        "title": "B.C. Reg. 293/2001 (Regional Health Boards Regulation, M297/2001), BC Gazette Part II, vol. 44 no. 25"
+      },
+      "locator": "Appendix s. 2 and Schedule A"
+    },
+    {
+      "body": "mount-waddington-health-council",
+      "cite": "B.C. Reg. 293/2001",
+      "relation": "ended_by",
+      "from": "2001-12-12",
+      "provisions": [
+        "s. 2",
+        "Schedule A"
+      ],
+      "note": "Amalgamated into the Vancouver Island Health Authority, as “Mount Waddington Health Council” in Schedule A, column 2.",
+      "source": {
+        "url": "https://www.bclaws.gov.bc.ca/civix/document/id/lc/bcgaz2/v44n25_293-2001",
+        "title": "B.C. Reg. 293/2001 (Regional Health Boards Regulation, M297/2001), BC Gazette Part II, vol. 44 no. 25"
+      },
+      "locator": "Appendix s. 2 and Schedule A"
+    }
+  ]
+}
