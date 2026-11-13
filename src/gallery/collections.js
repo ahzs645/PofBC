@@ -800,6 +800,8 @@ const GRAPH_NODES = {
   'bc-online': 'sub-bc-online',
   'bc-bid': 'sub-bc-bid',
   'public-service': 'bc-public-service-agency',
+  // A remake, not the program's own lockup: its card keeps that label wherever it is reached from.
+  'prepared-bc': 'sub-preparedbc',
   'healthlink-bc-logo': 'sub-healthlink-bc'
 }
 
@@ -1096,7 +1098,13 @@ GALLERY_COLLECTIONS.push(...COLLECTED_COLLECTIONS.filter((candidate) =>
   !GALLERY_COLLECTIONS.some((held) => nodesOf(held).includes(candidate.graphNode))))
 // WorkSafeBC's specimens are folded into its collection above; the one-off programs keep theirs.
 // The Department of Travel Industry's is folded into the BC mark collection.
-GALLERY_COLLECTIONS.push(...SPECIMEN_COLLECTIONS.filter((collection) => !['specimens-worksafebc', 'specimens-travel-industry', 'specimens-justice-institute', 'specimens-auditor-general', 'specimens-sub-bc-online', 'specimens-bceid', 'specimens-shared-services-bc', 'specimens-sub-bc-cancer', 'specimens-healthlink-bc'].includes(collection.id)))
+// A program's published specimens belong to the body its one-off stands for (WorkBC's to WorkBC, Where
+// ideas work to the Public Service Agency), so that body's panel finds its original files too.
+GALLERY_COLLECTIONS.push(...SPECIMEN_COLLECTIONS.filter((collection) => !['specimens-worksafebc', 'specimens-travel-industry', 'specimens-justice-institute', 'specimens-auditor-general', 'specimens-sub-bc-online', 'specimens-bceid', 'specimens-shared-services-bc', 'specimens-sub-bc-cancer', 'specimens-healthlink-bc'].includes(collection.id))
+  .map((collection) => {
+    const node = GRAPH_NODES[collection.id.replace(/^specimens-/, '')]
+    return node ? { ...collection, entries: collection.entries.map((entry) => ({ ...entry, graphNode: entry.graphNode ?? node })) } : collection
+  }))
 
 // Public bodies outside the Crown corporations and health authorities the shelf collects for — a
 // post-secondary institute and an officer of the Legislature — whose collections are placed there by hand.
