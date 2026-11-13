@@ -1,0 +1,25 @@
+{
+  "schema": "record-link-audit/1",
+  "events": 970,
+  "entities": 812,
+  "relatedEntityLinks": 315,
+  "relatedEventLinks": 2,
+  "legalReferences": 1,
+  "issues": [],
+  "unresolvedEntities": [
+    {
+      "event": "atlas:coroners-in-embc-2007",
+      "label": "Emergency Management B.C.",
+      "supplied_id": "emergency-management-bc",
+      "reason": "The 2007 service plan names this core business area, but the government register has no matching historical entity. Health Emergency Management BC is a different body. Retain this source-supported entity mention pending a dated institutional record."
+    }
+  ],
+  "eventsWithoutSource": [
+    {
+      "event": "atlas:prhc-name-1976-report",
+      "title": "Reported PRHC name treatment in the 1976 ministry annual report (source not retrieved)",
+      "locator": "Ministry of Municipal Affairs and Housing, annual report 1976, printed page 70 (PDF page 73); Legislative Library of British Columbia",
+      "reviewed": null
+    }
+  ]
+}

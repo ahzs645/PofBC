@@ -158,22 +158,39 @@
       "id": "atlas:bcrail-cn-lease-2004",
       "subject_id": "bc-railway-company",
       "related_subject_ids": [],
-      "event_type": "operations_transferred",
-      "title": "The deal closes: the railway’s operations are leased to CN for an initial 60 years, and the Company keeps the right-of-way, the leased assets, its lands and the Roberts Bank–Langley line",
+      "event_type": "lease_and_operating_rights_transfer",
+      "title": "The BC Rail/CN transaction transfers the freight operating business and long-term railway infrastructure lease to CN",
       "date": {
-        "start": "2004-07-15",
+        "start": "2004-07-14",
         "end": null,
         "precision": "day",
         "range_end_inclusive": false
       },
       "temporal_status": "source_reported_past",
       "evidence": {
-        "source_url": "https://en.wikipedia.org/wiki/BC_Rail",
-        "source_title": "BC Rail — Wikipedia",
-        "basis": "secondary_reference"
+        "source_url": "https://www2.gov.bc.ca/assets/gov/british-columbians-our-governments/government-finances/public-accounts/2004-05/public-accounts-2004-05.pdf",
+        "source_title": "British Columbia Public Accounts 2004/05",
+        "locator": "Printed p. 66, note 33, Significant Events: British Columbia Railway Company (BCRC) Operations",
+        "basis": "direct_statement_in_official_source",
+        "observed_on": "2026-11-12"
       },
-      "interpretation_notes": "Wikipedia gives both $550 million and $1 billion for the deal. A planned sale of the Port Subdivision was cancelled. From the English Wikipedia article on BC Rail (read 2026-11-12), which carries citation-needed tags; its own references were not followed in this pass.",
-      "reviewed_on": "2026-11-12"
+      "interpretation_notes": "The official accounts date completion to 14 July 2004 and describe CN purchasing BC Rail Ltd. shares and BC Rail Partnership interests, while assuming the pre-existing Revitalization Agreement over the railbed and infrastructure. Its initial lease term is 60 years, with renewal provisions. These operating interests are distinct from the continuing Crown parent. The previous Wikipedia-derived 15 July closing assertion is retained in superseded_assertion and is not used as the event date.",
+      "reviewed_on": "2026-11-12",
+      "superseded_assertion": {
+        "title": "The deal closes: the railway’s operations are leased to CN for an initial 60 years, and the Company keeps the right-of-way, the leased assets, its lands and the Roberts Bank–Langley line",
+        "date": {
+          "start": "2004-07-15",
+          "end": null,
+          "precision": "day",
+          "range_end_inclusive": false
+        },
+        "evidence": {
+          "source_url": "https://en.wikipedia.org/wiki/BC_Rail",
+          "source_title": "BC Rail — Wikipedia",
+          "basis": "secondary_reference"
+        },
+        "interpretation_notes": "Wikipedia gives both $550 million and $1 billion for the deal. A planned sale of the Port Subdivision was cancelled. From the English Wikipedia article on BC Rail (read 2026-11-12), which carries citation-needed tags; its own references were not followed in this pass."
+      }
     },
     {
       "id": "atlas:bcrail-cn-abandonment-2025",

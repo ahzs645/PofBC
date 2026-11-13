@@ -158,6 +158,29 @@
         }
       ],
       "decided": "2026-11-12"
+    },
+    {
+      "id": "bccancer-identity-date-refinement-2017-11-15",
+      "subject": "events/atlas:bccancer-identity-2017",
+      "field": "preferred_assertion",
+      "value": {
+        "origin": "atlas/events-bc-cancer-2026-11-12.json#atlas:bccancer-identity-2017",
+        "corroboratingOrigins": [
+          "atlas/events-divisions.json#atlas:bccancer-identity-2017"
+        ],
+        "inputDigests": {
+          "atlas/events-bc-cancer-2026-11-12.json#atlas:bccancer-identity-2017": "268f31d296c2775d",
+          "atlas/events-divisions.json#atlas:bccancer-identity-2017": "319162402b6c8e9e"
+        }
+      },
+      "reason": "The official BC Cancer history dates the joint BC Cancer/Foundation identity announcement to 2017. The Foundation’s contemporary announcement supplies 15 November 2017 and the simplified public name. These identify the same branding event at compatible precision, not conflicting histories. Retain both original assertions and their dates in evidence and import accounting, while displaying the dated announcement. No general same-year event matching is authorized.",
+      "set_aside": [
+        {
+          "date": "2017",
+          "why": "Retained as corroborating year-only source precision, not rejected as false."
+        }
+      ],
+      "decided": "2026-11-12"
     }
   ]
 }

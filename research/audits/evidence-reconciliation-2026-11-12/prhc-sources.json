@@ -1,0 +1,114 @@
+{
+  "reviewed_on": "2026-11-12",
+  "scope": "Recover missing PRHC event citations and one explicitly bounded ministerial-responsibility period. No claim of complete PRHC history or an independent corporate logo.",
+  "outcome": {
+    "missing_event_urls_recovered": 3,
+    "missing_event_urls_remaining": 1,
+    "new_responsibility_periods": 1,
+    "new_transfer_events": 1,
+    "reused_transfer_event": "atlas:primary-evidence-bc-housing-responsibility-1999"
+  },
+  "sources": [
+    {
+      "id": "PRHC-2001-REPORT",
+      "url": "https://www.bchousing.org/sites/default/files/media/documents/2000-01-Annual-Report.pdf",
+      "discovery_url": "https://www.bchousing.org/about/corporate-reports-plans",
+      "title": "BC Housing Annual Report 2000-2001",
+      "locator": "Printed page 59 / PDF page 61",
+      "sha256": "290098a0914cd31bc38d9370a89b27ad0a8a591a1da246c1d71b22adb3064b19",
+      "review_method": "Downloaded PDF; rendered target page and visually checked typography.",
+      "supports": [
+        "atlas:prhc-name-2001-report"
+      ],
+      "claim": "The PRHC financial-statements section uses widely spaced orange capitals in a narrow ruled box.",
+      "date_basis": "The retained year 2001 is the end year of reporting period 2000/01.",
+      "limits": "Section-heading typography does not establish a separate logo or a logo-adoption date; exact publication date not established."
+    },
+    {
+      "id": "PRHC-2023-FINANCIAL",
+      "url": "https://www.bchousing.org/publications/Provincial-Rental-Housing-Corporation-Financial-Statement-2023.pdf",
+      "title": "PRHC Financial Statements, March 31, 2023",
+      "locator": "Note 9(b), printed/PDF page 18",
+      "sha256": "4346d86d0459a3e2521c2f3d3b2ed335f5c30886170022fcbe74a7383935db2d",
+      "review_method": "Official PDF text and rendered page reviewed.",
+      "supports": [
+        "atlas:prhc-riverview-2015"
+      ],
+      "claim": "Ownership of the Riverview land and buildings transferred from Citizens’ Services to PRHC on 2 February 2015 at book value.",
+      "date_basis": "Explicit transfer date, distinct from the statements’ 2023 reporting date.",
+      "limits": "An asset transfer does not imply a renamed corporation or changed brand."
+    },
+    {
+      "id": "PRHC-2025-LETTER",
+      "url": "https://www.100milehouse.com/sites/default/files/2025-11/2025_Nov_12_Special_Agenda_PKG.pdf",
+      "title": "District of 100 Mile House Special Council agenda, November 12, 2025",
+      "locator": "PDF page 7, letter dated November 6, 2025, re 350 Aspen St",
+      "sha256": "6e521c1b421d1df2cbb8addaaf6da38cf12e6301823cea5d45114dd8e8947b31",
+      "review_method": "Downloaded full agenda; rendered PDF page 7; inspected letterhead, date and signatory.",
+      "supports": [
+        "atlas:prhc-letter-2025"
+      ],
+      "claim": "The PRHC letter uses BC Housing’s emblem and wordmark; Tyler Baker signs as BC Housing Director Regional Development, Interior Region.",
+      "date_basis": "Letter date 2025-11-06, not agenda date 2025-11-12.",
+      "limits": "Proves the identity used in this document, not all PRHC correspondence."
+    },
+    {
+      "id": "PRHC-1976-REPORT-UNRETRIEVED",
+      "url": null,
+      "title": "Ministry of Municipal Affairs and Housing annual report 1976",
+      "locator": "Reported printed page 70 / PDF page 73; not independently verified",
+      "review_status": "source_not_retrieved",
+      "supports": [],
+      "related_unverified_event": "atlas:prhc-name-1976-report",
+      "date_basis": "Reported coverage year only.",
+      "attempts": [
+        "Exact-title and PRHC searches with two search engines.",
+        "Repository source registers and earlier PRHC research inspected.",
+        "Legislative Library catalogue returned HTTP 403; publications portal timed out or returned HTTP 503."
+      ],
+      "limits": "Original page not retrieved. Neither typeface nor page locator verified; no URL guessed; event reviewed_on cleared."
+    },
+    {
+      "id": "PRHC-OIC-177-1998",
+      "url": "https://www.bclaws.gov.bc.ca/civix/document/id/oic/arc_oic/0177_1998",
+      "title": "Order in Council 177/1998",
+      "locator": "Approval on PDF page 1; appendix section 15, printed page 2 / PDF page 3",
+      "sha256": "9479024fe5813ea13240250456512bf49201580da214cb51a0d57f470cefa60d",
+      "review_method": "Downloaded official scan; visually checked approval stamp and section 15.",
+      "existing_handoff": "research/reviews/integration-review-2026-10-21/datasets/root/ministry_transfer_clauses.json#R3D-177-1998-A15",
+      "supports": [
+        "atlas:prhc-responsibility-1998",
+        "responsible-evidence-reconciliation-2026-11-12.json:from"
+      ],
+      "claim": "The housing minister’s responsibilities move to Employment and Investment on 18 February 1998.",
+      "limits": "The printed name Provincial Rental Housing Commission is retained as a source discrepancy and resolved against the contemporary Auditor General account. Statutory administration is separately addressed in section 16."
+    },
+    {
+      "id": "PRHC-OIC-897-1999",
+      "url": "https://www.bclaws.gov.bc.ca/civix/document/id/oic/arc_oic/0897_1999",
+      "title": "Order in Council 897/1999",
+      "locator": "Approval on PDF page 1; appendix section 23, printed page 4 / PDF page 5",
+      "sha256": "e5a17e883b8621a8dd40472cea93d34fdd4c865831d0e89070c5197e92534137",
+      "review_method": "Official PDF text reviewed; section 23 rendered and visually checked.",
+      "supports": [
+        "atlas:primary-evidence-bc-housing-responsibility-1999",
+        "responsible-evidence-reconciliation-2026-11-12.json:to"
+      ],
+      "claim": "Responsibilities move onward to Social Development and Economic Security on 21 July 1999.",
+      "limits": "This closes the researched Employment and Investment period. No interval after this date is asserted. The order again prints Commission rather than Corporation."
+    },
+    {
+      "id": "PRHC-OAG-1999",
+      "url": "https://www.oag.bc.ca/app/uploads/sites/963/2024/08/OAGBC-19990901-social-housing-governance.pdf",
+      "title": "Auditor General 1999/2000 Report 8: Social Housing",
+      "locator": "Printed page 53 / PDF page 48 (1998 assignment); printed page 35 / PDF page 30 (1999 transfer)",
+      "review_method": "Primary-source PDF text reviewed; exact dates and PRHC references checked.",
+      "supports": [
+        "normalization of Commission in the two orders to Provincial Rental Housing Corporation",
+        "both bounds of the 1998-02-18 to 1999-07-21 responsibility period"
+      ],
+      "claim": "The contemporary report identifies PRHC in both responsibility changes and corroborates the dates.",
+      "limits": "Does not justify filling earlier or later PRHC reporting gaps."
+    }
+  ]
+}

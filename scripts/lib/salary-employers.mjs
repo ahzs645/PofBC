@@ -61,6 +61,16 @@ export const BODIES = {
   'Provincial government': 'public-service'
 }
 
+// Reviewed connections use the existing employer slugs, independently of government IDs.
+// In particular, JIBC's disclosure URLs and row identity keep justice-institute-of-bc.
+export const REVIEWED_BODY_LINKS = {
+  'bc-railway-company': 'bc-railway-company',
+  'bc-family-maintenance-agency': 'bc-family-maintenance-agency',
+  'justice-institute-of-bc': 'justice-institute'
+}
+const BODY_BY_SLUG = { ...Object.fromEntries(Object.values(BODIES).map((body) => [body, body])), ...REVIEWED_BODY_LINKS }
+export const bodyOfEmployer = (slug) => BODY_BY_SLUG[canonicalSlug(slug)] ?? null
+
 export const EMPLOYER_ALIASES = {
   'langley-city': 'city-of-langley',
   'township-of-langley': 'langley-township',

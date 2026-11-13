@@ -8,10 +8,10 @@
 import { useEffect, useMemo, useState } from 'react'
 import { Card, CardSection, KindIcon } from './PanelCards.jsx'
 import * as salaryData from './salaryIndex.js'
-import { PUBLIC_SERVICE, salaryKeyOf } from './salaries.js'
+import { PUBLIC_SERVICE, salaryKeyOf, salaryEmployerOf } from './salaries.js'
 import { displayName, personKey } from '../salaries/people.js'
 import { DisclosureSummary, SourceLink } from '../salaries/DisclosureEvidence.jsx'
-import { expenseLabel } from '../salaries/coverage.js'
+import { coverageStatus, expenseLabel } from '../salaries/coverage.js'
 import { formatMoney } from '../salaries/money.js'
 import { governmentAnnotation, currencyOf } from '../salaries/recordAnnotations.js'
 import { YearPicker } from '../salaries/parts.jsx'
@@ -43,6 +43,7 @@ const load = (slug, key) => {
 export const Salaries = ({ node, year }) => {
   const navigate = useNavigate()
   const key = salaryKeyOf(node)
+  const employer = salaryEmployerOf(key)
   const years = key ? SALARY_YEARS.filter(({ slug }) => SALARY_INDEX[key]?.[slug]) : []
   // Every collection year, so the picker shows the gaps too; choosing one without records says so.
   const counts = SALARY_YEARS.map(({ slug }) => (key ? SALARY_INDEX[key]?.[slug]?.count ?? 0 : 0))
@@ -79,14 +80,16 @@ export const Salaries = ({ node, year }) => {
       return words.every((word) => text.includes(word))
     })
     const label = SALARY_YEARS.find((each) => each.slug === selectedSlug)?.label
-    const currency = (row) => currencyOf(governmentAnnotation(row, key, label), SALARY_SOURCES[row[4]])
+    const currency = (row) => currencyOf(governmentAnnotation(row, employer, label), SALARY_SOURCES[row[4]])
     return [...matching].sort((a, b) => currency(a).localeCompare(currency(b)) || b[2] - a[2])
-  }, [state.rows, query, key, selectedSlug])
+  }, [state.rows, query, employer, selectedSlug])
 
   if (!key || !years.length) return null
   const label = SALARY_YEARS.find((each) => each.slug === selectedSlug)?.label
   const selectedIndex = SALARY_YEARS.findIndex((each) => each.slug === selectedSlug)
   const coverage = SALARY_COVERAGE[key]?.[selectedIndex]
+  const disclosure = totals ? { ...coverage, status: 'available', ...totals } : coverage
+  const compiled = Boolean(totals) && coverageStatus(disclosure, SALARY_SOURCES).kind === 'compiled'
   // A source shown once in the summary is not repeated on every card.
   const oneSource = new Set(state.rows.map((row) => row[4])).size <= 1
   const personLink = (name) => ({ view: 'salaries', q: name, person: personKey(name) })
@@ -96,7 +99,7 @@ export const Salaries = ({ node, year }) => {
     <section className="gov-card gov-salaries" aria-labelledby={`salaries-${node.id}`}>
       <div className="gov-salaries__head">
         <h2 id={`salaries-${node.id}`} className="gov-card__heading">Salaries</h2>
-        <SiteLink className="gov-salaries__open" to={{ view: 'salaries', employer: key, 'employer-year': label }}>All years in Salaries →</SiteLink>
+        <SiteLink className="gov-salaries__open" to={{ view: 'salaries', employer, 'employer-year': label }}>All years in Salaries →</SiteLink>
       </div>
       {key === PUBLIC_SERVICE && <p className="gov-muted gov-salaries__about">The Province discloses its public service as one employer, so every ministry shows the same records.</p>}
       <YearPicker years={SALARY_YEARS.map((each) => each.label)} counts={counts} coverage={SALARY_COVERAGE[key]} value={selectedIndex} onChange={(at) => { setSlug(SALARY_YEARS[at].slug); setShown(PAGE) }} />
@@ -106,14 +109,15 @@ export const Salaries = ({ node, year }) => {
       </>}
       {totals && (
         <>
+          {compiled && <p className="gov-muted gov-salaries__about"><strong>Compiled records · source review pending.</strong> The selected edition label is not a verified reporting period.</p>}
           <dl className="gov-tiles">
             <div><dt>Records</dt><dd>{totals.count.toLocaleString('en-CA')}</dd></div>
-            <div><dt>Disclosed total</dt><dd>{compact(totals.total)}</dd></div>
+            <div><dt>{compiled ? 'Recorded total' : 'Disclosed total'}</dt><dd>{compact(totals.total)}</dd></div>
             <div><dt>Median</dt><dd>{money(totals.median)}</dd></div>
           </dl>
           {totals.nonCadRecords > 0 && <p className="gov-muted">Totals and medians use CAD observations only. Other currencies remain listed with their original amounts; no conversion is applied.</p>}
           <DisclosureSummary
-            coverage={{ ...coverage, status: 'available', ...totals }}
+            coverage={disclosure}
             sources={SALARY_SOURCES}
             className="gov-salaries__disclosure"
           />
@@ -140,7 +144,7 @@ export const Salaries = ({ node, year }) => {
               {matches.length === 0 && <p className="gov-muted">No imported records match “{query.trim()}”. Try a surname or position.</p>}
               {matches.slice(0, shown).map((row, index) => {
                 const [name, position, pay, expenses, sourceId, pdfPage] = row
-                const annotation = governmentAnnotation(row, key, label)
+                const annotation = governmentAnnotation(row, employer, label)
                 const currency = currencyOf(annotation, SALARY_SOURCES[sourceId])
                 return (
                 <Card

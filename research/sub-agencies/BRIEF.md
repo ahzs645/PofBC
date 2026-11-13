@@ -564,7 +564,7 @@ _Look under:_ Ministry of Land, Water and Resource Stewardship (2022–2022)
 | `cardiac-services-bc` | Cardiac Services BC | agency |  | 1 | https://www.phsa.ca/our-services/programs-services/cardiac-services-bc |
 | `health-emergency-management-bc` | Health Emergency Management BC (HEMBC) | agency |  | 1 | https://www.phsa.ca/our-services/programs-services/health-emergency-management-bc |
 | `perinatal-services-bc` | Perinatal Services BC (PSBC) | agency |  | 1 | https://www.phsa.ca/our-services/programs-services/perinatal-services-bc |
-| `bc-cancer` | BC Cancer | agency | 1974-10-31 | 10 | https://www.phsa.ca/our-services/programs-services/bc-cancer-agency |
+| `bc-cancer` | BC Cancer | agency | 1974-10-31 | 9 | https://www.phsa.ca/our-services/programs-services/bc-cancer-agency |
 | `bc-renal` | BC Renal | agency | 1997 | 2 | https://www.phsa.ca/our-services/programs-services/bc-renal |
 | `bc-transplant` | BC Transplant (BCT) | agency | 1986 | 7 | https://www.phsa.ca/our-services/programs-services/bc-transplant |
 | `provincial-laboratory-medicine-services` | Provincial Laboratory Medicine Services (PLMS) | agency | 2019 |  | https://www.phsa.ca/our-services/programs-services/provincial-laboratory-medicine-services |

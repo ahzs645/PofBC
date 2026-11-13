@@ -1,8 +1,11 @@
 // Which disclosure of pay a body's panel shows (Salaries.jsx).
 
-import { SALARY_INDEX } from './salaryIndex.js'
+import { SALARY_INDEX, SALARY_EMPLOYERS } from './salaryIndex.js'
 
 export const PUBLIC_SERVICE = 'public-service'
+
+/** Disclosure URLs retain their employer key even when the graph uses a different body ID. */
+export const salaryEmployerOf = (key) => SALARY_EMPLOYERS[key] ?? key
 
 /**
  * Whose disclosure a body's panel shows: its own, or, for a ministry and the agency that employs the

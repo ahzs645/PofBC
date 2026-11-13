@@ -1,0 +1,163 @@
+{
+  "reviewedOn": "2026-11-12",
+  "baselineCommit": "620294eec90dba2e69d94b4dde8551108f61fe37",
+  "scope": "Final local verification before the evidence-reconciliation PR commit; no merge or deployment.",
+  "regressionTests": {
+    "command": "node --test --test-reporter=tap 'src/government/*.test.js' 'src/gallery/*.test.js' scripts/event-decisions.test.mjs scripts/record-links.test.mjs scripts/evidence-reconciliation-history.test.mjs scripts/salary-body-links.test.mjs scripts/evidence-integrity.test.mjs scripts/salary-data.test.mjs scripts/merge-research.test.mjs",
+    "completedAtUTC": "2026-11-13T01:35:56.304488+00:00",
+    "exitCode": 0,
+    "counts": {
+      "tests": 232,
+      "suites": 0,
+      "pass": 232,
+      "fail": 0,
+      "cancelled": 0,
+      "skipped": 0,
+      "todo": 0
+    },
+    "uniqueTopLevelSubtestNames": 232
+  },
+  "renderedComponents": {
+    "method": "Vite SSR module loading plus ReactDOMServer.renderToStaticMarkup; no browser or network listener",
+    "checks": 11,
+    "passed": 11,
+    "failed": 0,
+    "results": [
+      {
+        "name": "election summary renders 93 declared candidates and the 64/27/2 party totals",
+        "passed": true
+      },
+      {
+        "name": "election initial list renders exactly the two required judicial recount districts",
+        "passed": true
+      },
+      {
+        "name": "election result date and earlier office-holder snapshot date remain explicit",
+        "passed": true
+      },
+      {
+        "name": "overview labels the September snapshot and directs readers to later declared results",
+        "passed": true
+      },
+      {
+        "name": "assembly panel distinguishes its dated snapshot from the subsequent election results",
+        "passed": true
+      },
+      {
+        "name": "vector-bc-housing-corporate-component-source-vector: undated header retains source-date context without assigning 2019",
+        "passed": true
+      },
+      {
+        "name": "vector-bc-housing-research-centre-source-vector: undated header retains source-date context without assigning 2019",
+        "passed": true
+      },
+      {
+        "name": "Knowledge Network light: held SVG renders and its public path and design route resolve locally",
+        "passed": true,
+        "detail": {
+          "src": "/PofBC/identity-display/source-knowledge-network-knowledge-network-svg.light.svg",
+          "route": "?view=gallery&logos=collected-knowledge-network&mark=source-knowledge-network-knowledge-network-colour-eps"
+        }
+      },
+      {
+        "name": "Knowledge Network dark: held SVG renders and its public path and design route resolve locally",
+        "passed": true,
+        "detail": {
+          "src": "/PofBC/identity-display/source-knowledge-network-knowledge-network-svg.dark.svg",
+          "route": "?view=gallery&logos=collected-knowledge-network&mark=source-knowledge-network-knowledge-network-colour-eps"
+        }
+      },
+      {
+        "name": "justice-institute: rendered salary link preserves employer slug and source disclosure scope",
+        "passed": true,
+        "detail": {
+          "href": "?view=salaries&employer=justice-institute-of-bc&employer-year=2023%2F24",
+          "url": "/PofBC/salaries/2023-24/justice-institute.json",
+          "rows": 152,
+          "scope": "compiled-unverified"
+        }
+      },
+      {
+        "name": "bc-family-maintenance-agency: rendered salary link preserves employer slug and source disclosure scope",
+        "passed": true,
+        "detail": {
+          "href": "?view=salaries&employer=bc-family-maintenance-agency&employer-year=2025%2F26",
+          "url": "/PofBC/salaries/2025-26/bc-family-maintenance-agency.json",
+          "rows": 7,
+          "scope": "board-remuneration"
+        }
+      }
+    ],
+    "limitations": [
+      "No browser, screenshots, layout, responsive behavior or visual inspection.",
+      "React effects do not run in SSR: async LogoCard mounting and salary fetching were not exercised.",
+      "Election expand/collapse interaction was not exercised; the initial recount list and expansion control were rendered.",
+      "Public asset and data URLs were checked against local files, not an HTTP deployment."
+    ]
+  },
+  "generatedOutputs": {
+    "command": "npm run check:government",
+    "result": "pass: all generated outputs reproduce byte for byte",
+    "GOVERNMENT_AS_OF": "2026-09-30"
+  },
+  "salaryProjection": {
+    "command": "node scripts/relink-salary-bodies.mjs --check",
+    "result": "pass",
+    "derivedAndIndexFiles": 20,
+    "newBodyPeriodRoutes": 15,
+    "existingObservationsLinked": 560,
+    "mappedGovernmentBodiesBefore": 45,
+    "mappedGovernmentBodiesAfter": 48,
+    "newAcceptedObservations": 0
+  },
+  "preservedEmployerExports": [
+    {
+      "employer": "bc-railway-company",
+      "rows": 146,
+      "periods": 8,
+      "sha256": "daae0a15c6b7002c776224a008143d5f4347d6c533a89cb5651d9bb7b0484ba3"
+    },
+    {
+      "employer": "bc-family-maintenance-agency",
+      "rows": 22,
+      "periods": 4,
+      "sha256": "138774fbb64442329e22acbba1e45c1fdd62d98d16d9da44617835e659d02ac4"
+    },
+    {
+      "employer": "justice-institute-of-bc",
+      "rows": 392,
+      "periods": 3,
+      "sha256": "90bddbdb67e30c35682e874739f6bda0e67305b79dc7cb3dc63a7056875daa5b"
+    }
+  ],
+  "preservationMethod": "SHA-256 comparison of each working-tree public/salaries/employers/<employer>.json.gzip with git show of the baseline file; every pair is identical.",
+  "recordLinks": {
+    "command": "npm run check:record-links",
+    "result": "pass",
+    "events": 970,
+    "entities": 812,
+    "structuralIssues": 0,
+    "unmatchedEntityMentions": 1,
+    "eventsWithoutRetrievedSourceUrl": 1,
+    "report": "link-check.json"
+  },
+  "productionComponentBuild": {
+    "result": "pass",
+    "transformedModules": 107,
+    "method": "Temporary Vite production harness importing the actual GovernmentPanel, AtlasCards, ElectionResultsCard, LogoCard, Salaries and CollectedMarkView components with application CSS. configFile:false; publicDir:false for the build. The harness is a verification aid, not a changed product entry point.",
+    "warning": "The combined verification harness exceeds the default chunk-size warning. It does not reproduce the full application bundle splitting.",
+    "nodeVersion": "v24.22.1",
+    "viteVersion": "8.3.0"
+  },
+  "diffWhitespace": {
+    "command": "git diff --check",
+    "result": "pass"
+  },
+  "limitations": [
+    "Full application build was not verified; unrelated vendor submodules are not initialized in this checkout.",
+    "Visual browser validation was blocked: standalone Chromium failed platform socket restrictions; connected extension and cloud browsers could not reach the workspace loopback preview.",
+    "Server rendering does not exercise effects, asynchronous salary fetching, interactive expansion, responsive layout or deployed HTTP routes.",
+    "No new salary cohort was accepted from the five researched document leads. Full extraction, independent review and reconciliation remain outstanding; UNBC2025/26 approval remains held.",
+    "No hosted CI was requested. The commit includes [skip ci] to avoid unnecessary GitHub Actions usage."
+  ]
+}

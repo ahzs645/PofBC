@@ -19,7 +19,10 @@ in `research/atlas/events-prhc-2026-11-12.json`.
 The Province acquired the company in 1973 (Auditor General, 1999). BC Housing gained control of it
 on 26 January 2024 and consolidates it from 31 March 2024.
 
-## What was checked
+## Original search record
+
+The following list preserves the supplied search summary. It is not a claim that every item
+was retrieved again during the evidence reconciliation below.
 
 - **Name treatments, not logos:**
   - the 1976 Municipal Affairs and Housing report page (stacked serif capitals);
@@ -50,3 +53,33 @@ on 26 January 2024 and consolidates it from 31 March 2024.
   MIKAN 4686749), opened.
 - The search to make: letterhead, identity artwork, seal impressions or minute-book records for
   BC0052129, under all three names, especially 1961–1980.
+
+## Evidence reconciliation, 12 November 2026
+
+Three previously missing event URLs have now been recovered and the relevant pages reviewed:
+
+| Event | Primary source and locator | What the source establishes |
+|---|---|---|
+| 2000/01 report heading | [BC Housing Annual Report 2000-2001](https://www.bchousing.org/sites/default/files/media/documents/2000-01-Annual-Report.pdf), printed page 59 / PDF page 61 | A visually checked orange, spaced-capitals PRHC section heading. The event year is the reporting-period end year, not a logo-adoption date. |
+| Riverview transfer | [PRHC Financial Statements, March 31, 2023](https://www.bchousing.org/publications/Provincial-Rental-Housing-Corporation-Financial-Statement-2023.pdf), note 9(b), printed/PDF page 18 | The land and buildings transferred from Citizens' Services on 2 February 2015 at book value. |
+| 2025 letter | [100 Mile House Special Council agenda](https://www.100milehouse.com/sites/default/files/2025-11/2025_Nov_12_Special_Agenda_PKG.pdf), PDF page 7 | The letter is dated 6 November 2025 and uses BC Housing's emblem and wordmark. The agenda meeting was 12 November. |
+
+**The 1976 ministry report remains unretrieved.** Its reported printed-page 70 / PDF-page 73
+locator and description are retained as a lead, but its event no longer has a source-reviewed
+date. The catalogue endpoints returned an access error or timeout. An unrelated report or a
+Hansard tabling notice would not verify its typography, so no substitute link has been assigned.
+
+One historical reporting gap is now bounded by original instruments:
+[OIC 177/1998](https://www.bclaws.gov.bc.ca/civix/document/id/oic/arc_oic/0177_1998), appendix
+section 15, transfers responsibility to the Minister of Employment and Investment on
+18 February 1998; [OIC 897/1999](https://www.bclaws.gov.bc.ca/civix/document/id/oic/arc_oic/0897_1999),
+section 23, transfers it onward on 21 July 1999. Both print *Provincial Rental Housing
+Commission*. The [1999 Auditor General report](https://www.oag.bc.ca/app/uploads/sites/963/2024/08/OAGBC-19990901-social-housing-governance.pdf),
+printed pages 53 and 35, corroborates the PRHC identity and the two dates. The new
+`research/history/responsible-evidence-reconciliation-2026-11-12.json` records only that period.
+Earlier and later placements remain open. The existing 1999 event is reused; a new 1998 event
+records the missing beginning.
+
+The claim-by-claim source register, review methods, checksums and limitations are in
+`research/audits/evidence-reconciliation-2026-11-12/prhc-sources.json`. Retrieved PDFs were used
+for verification; no large duplicate source package is added.
