@@ -279,6 +279,10 @@ export const TIMELINES = {
     ]
   },
 
+  // The three sought eras' specimens were retrieved from the Wayback Machine and looked at on 30 Oct
+  // 2026 (research/identity/vector-search-2026-10-30/research/timeline_findings.json and
+  // timeline_extra_findings.json). Each is a small archived raster; no original vector was found,
+  // and the rasters are not bundled here, so the eras stay sought.
   'bc-stats': {
     label: 'BC Stats',
     eras: [
@@ -288,8 +292,10 @@ export const TIMELINES = {
         years: '1996–1998',
         label: 'Its first web logo',
         note: 'BC Stats, “the statistical agency of the Province of British Columbia”, had a site of its own ' +
-          'by 1996, headed by an image titled “BC STATS logo”. Its filename suggests the flag identity; ' +
-          'nobody has looked at it yet.',
+          'by 1996, headed by an image titled “BC STATS logo”. The archived image, a 350 × 86 GIF, has been ' +
+          'retrieved and looked at: the provincial flag, then BC STATS in white italic capitals on a blue ' +
+          'band. Only that small raster is known, and it is not reproduced here; no original vector artwork ' +
+          'has been found, and when the logo was adopted is not established.',
         applicability: { kind: 'first_observation', years: '1996–1998', note: 'Seen on the site from October 1996 to January 1998.' },
         seenAt: [wayback('19961228003016', 'http://www.bcstats.gov.bc.ca/pics/flagcol2.gif')],
         sources: [source('BCStats.gov.bc.ca, 20 Oct 1996 (Wayback Machine)', wayback('19961020180542', 'http://www.bcstats.gov.bc.ca/'))]
@@ -309,8 +315,10 @@ export const TIMELINES = {
         status: 'sought',
         years: '2004–2006',
         label: 'Beside the government crest',
-        note: 'The government’s crest in the header, beside a BC Stats logo that was archived but has not ' +
-          'been looked at.',
+        note: 'The government’s crest in the header, beside a BC Stats logo. The archived logo, a 108 × 20 ' +
+          'GIF, has been retrieved and looked at: a small dark blue serif BC STATS wordmark. Only that ' +
+          'small raster is known, and it is not reproduced here; no original vector artwork has been found, ' +
+          'and when the logo was adopted is not established.',
         applicability: { kind: 'first_observation', years: '2004–2006', note: 'Seen on the site from April 2004 to January 2006.' },
         seenAt: [wayback('20041205214534', 'http://www.bcstats.gov.bc.ca/images/bcstats_logo.gif')],
         sources: [source('BCStats.gov.bc.ca, 5 Dec 2004 (Wayback Machine)', wayback('20041205214534', 'http://www.bcstats.gov.bc.ca/'))]
@@ -337,7 +345,11 @@ export const TIMELINES = {
         status: 'sought',
         years: '2012–2017',
         label: 'The last site of its own',
-        note: 'A new site with a new logo, archived but not yet looked at.',
+        note: 'A new site with a new logo. The archived logo, a 400 × 100 PNG, has been retrieved and looked ' +
+          'at: the BC mark beside “BC” in gold and “Stats” in blue. BC Stats reports dated 2013 carry the ' +
+          'shaded sun, a gold rule and the BCStats wordmark, but only as embedded bitmaps; a raster logo in ' +
+          'a report of 2011 does not date the website’s. Only rasters are known, and none is reproduced ' +
+          'here; no original vector artwork has been found, and when the logo was adopted is not established.',
         applicability: { kind: 'first_observation', years: '2012–2017', note: 'Seen from February 2012 to January 2017.' },
         seenAt: [wayback('20120319163902', 'http://www.bcstats.gov.bc.ca/Libraries/Website_Pictures/BCStats.sflb.ashx')],
         sources: [source('BCStats.gov.bc.ca, 24 Feb 2012 (Wayback Machine)', wayback('20120224195540', 'http://www.bcstats.gov.bc.ca/Home.aspx'))]
