@@ -32,6 +32,7 @@ import { FLAG_PALETTE } from '../src/assets/flagMark.js'
 import { SHARE_PARAM } from '../src/site/shareLink.js'
 import { CONFIG_PARAM, toConfig } from '../src/site/configFormat.js'
 import { DEFAULTS } from '../src/site/lockupDefaults.js'
+import { DOCUMENT_ARMS_LAYOUT_ORDER, DOCUMENT_ARMS_LAYOUTS } from '../src/documentArms/layouts.js'
 
 const root = resolve(dirname(fileURLToPath(import.meta.url)), '..')
 const { name, version, description } = JSON.parse(readFileSync(resolve(root, 'package.json'), 'utf8'))
@@ -45,6 +46,16 @@ const manifest = {
   // Two identities, and almost nothing carries between them. Everything below this describes the
   // historical era unless it says otherwise.
   eras: {
+    document: {
+      description: 'Earlier British Columbia document-heading studies: arms alone, split serif, government caption and split blackletter. Fixed wording, adjustable colours and export margins.',
+      generated: true,
+      accuracy: 'reconstruction-study',
+      documentLayouts: DOCUMENT_ARMS_LAYOUT_ORDER.map((id) => ({ id, label: DOCUMENT_ARMS_LAYOUTS[id].label })),
+      outlined: true,
+      note: 'The arms reuse the PlateForge generated-master vector conversion used on the 1919 cardboard plate, not a verified historical drawing. Lettering uses open-font stand-ins. No period standard for these exact headings has been verified.',
+      configuration: toConfig({ ...DEFAULTS, era: 'document' }),
+      research: 'https://github.com/ahzs645/PofBC/blob/main/research/identity/document-arms-2026-11-13/README.md'
+    },
     historical: {
       description: 'The crest identity, rebuilt from supplied artwork. Any ministry, any wording, ' +
         'any colour, four lockups. Everything else in this manifest describes this era.',

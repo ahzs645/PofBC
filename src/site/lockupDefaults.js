@@ -15,6 +15,12 @@ export const DEFAULTS = {
   // 'current' serves the Province's own ministry marks. Each keeps its own colours, because each
   // was drawn for a different ground.
   era: 'historical',
+  // Earlier document headings. These are studies, with their own monochrome palette;
+  // the shared plate engraving is not a verified historical master.
+  documentLayout: 'split-serif',
+  documentMarkColor: BRAND_COLORS.black,
+  documentTextColor: BRAND_COLORS.black,
+  documentBackground: BRAND_COLORS.white,
   // Current era only. Its background is kept apart from the historical one because the two eras
   // have different palettes — the crest era's forest green is not a BC identity colour, and
   // dragging it across produced blue type on green the moment you switched.

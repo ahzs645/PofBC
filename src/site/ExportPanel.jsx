@@ -68,7 +68,7 @@ export const ExportPanel = ({ lockup, era = 'historical' }) => {
   const bundling = mode === 'bundle'
   // The current era's artwork is already outlined — the wording is drawn, not set — so there is
   // nothing to convert and no font to embed.
-  const canOutline = era !== 'current'
+  const canOutline = era !== 'current' && era !== 'document'
 
   const bundleHasRaster = formats.some((id) => !EXPORT_FORMATS[id].vector)
   const bundleHasVector = formats.some((id) => EXPORT_FORMATS[id].vector)
@@ -163,7 +163,7 @@ export const ExportPanel = ({ lockup, era = 'historical' }) => {
             hint={
               !spec.vector
                 ? 'Pixels. Choose a width at least as large as it will ever be shown.'
-                : outlineText
+                : !canOutline || outlineText
                   ? 'Vector, carrying its own shapes — scales to any size, and needs no font at all.'
                   : 'Vector, with the brand font embedded — scales to any size.'
             }
@@ -182,8 +182,9 @@ export const ExportPanel = ({ lockup, era = 'historical' }) => {
             </div>
           ) : canOutline ? outlineControl : (
             <p className="field__note">
-              The official artwork is already outlined — the wording is drawn, not set — so it needs
-              no font and nothing to convert.
+              {era === 'document'
+                ? 'The arms and fixed heading are already vector outlines. The reconstruction note travels in the SVG metadata.'
+                : 'The official artwork is already outlined — the wording is drawn, not set — so it needs no font and nothing to convert.'}
             </p>
           )}
         </>

@@ -4,6 +4,9 @@ import { CurrentControls } from '../current/CurrentControls.jsx'
 import { CurrentLockup } from '../current/CurrentLockup.jsx'
 import { CrestLockup } from '../crest/CrestLockup.jsx'
 import { FlagLockup } from '../flag/FlagLockup.jsx'
+import { DocumentArmsPanel } from './DocumentArmsPanel.jsx'
+const DocumentArmsPreview = lazy(() => import('./DocumentArmsPreview.jsx'))
+const DocumentArmsReference = lazy(() => import('./DocumentArmsPreview.jsx').then((module) => ({ default: module.DocumentArmsReference })))
 // Loaded when it is opened: the gallery's marks are drawn from their own artwork and renderers,
 // which the generator never needs.
 const GalleryView = lazy(() => import('../gallery/GalleryView.jsx').then((module) => ({ default: module.GalleryView })))
@@ -104,6 +107,11 @@ const FLAG_PALETTE_OPTIONS = FLAG_PALETTE_ORDER.map((value) => ({
 
 const ERA_OPTIONS = [
   {
+    value: 'document',
+    label: 'Historic arms',
+    title: 'Earlier document-heading studies using the shared plate arms reconstruction.'
+  },
+  {
     value: 'historical',
     label: 'Crest',
     title: 'The crest lockups, built from the supplied artwork. Any ministry, any colour.'
@@ -131,7 +139,7 @@ const BACKDROP_OPTIONS = [
   { value: 'dark', label: 'Dark' }
 ]
 
-const GENERATOR_DESCRIPTION = 'Generate the three official Province of British Columbia lockups in any ministry and colourway, and download them as SVG, PDF, PNG, WebP or JPEG.'
+const GENERATOR_DESCRIPTION = 'Explore British Columbia identity artwork and historical layout studies, with SVG, PDF, PNG, WebP and JPEG export.'
 const VIEW_IDS = [...VIEWS, ...HIDDEN_VIEWS].map(({ id }) => id)
 
 /** The view in the address bar, so a link to the gallery or the diagram opens it. */
@@ -220,11 +228,12 @@ export const App = () => {
   const isCurrent = state.era === 'current'
   const isFlag = state.era === 'flag'
   const isCrest = state.era === 'crest'
+  const isDocument = state.era === 'document'
   // A one-off from the gallery: its arrangement is the mark, not a choice.
   const isBadge = isFlag && state.flagSymbol === 'badge'
   // The crest era is the only one with lockups to choose between, a province wordmark to show or
   // hide, and a mark to align.
-  const isOldCrest = !isCurrent && !isFlag && !isCrest
+  const isOldCrest = !isCurrent && !isFlag && !isCrest && !isDocument
 
   // Registers this page's tools with an agent driving the browser, where the browser supports it.
   // A no-op everywhere else.
@@ -340,7 +349,11 @@ export const App = () => {
       <div className="layout">
         <section className="stage" aria-label="Preview">
           <div className="stage__frame" data-backdrop={backdrop} data-transparent={isTransparent || undefined}>
-            {isCurrent ? (
+            {isDocument ? (
+              <Suspense fallback={<p role="status">Loading the historical arms study…</p>}>
+                <DocumentArmsPreview lockup={lockup} />
+              </Suspense>
+            ) : isCurrent ? (
               <CurrentLockup
                 text={state.currentName}
                 language={state.language}
@@ -381,6 +394,11 @@ export const App = () => {
               <BcLockup {...artwork} />
             )}
           </div>
+          {isDocument && (
+            <Suspense fallback={null}>
+              <DocumentArmsReference layout={state.documentLayout} />
+            </Suspense>
+          )}
         </section>
 
         <div className="controls">
@@ -392,7 +410,9 @@ export const App = () => {
               value={state.era}
               onChange={(value) => update({ era: value })}
               hint={
-                isCurrent
+                isDocument
+                  ? 'Earlier government document headings. A reconstruction study using the plate artwork; the original engraving and typefaces remain unverified.'
+                  : isCurrent
                   ? 'The Province’s current marks, used exactly as published, with the wording set to match.'
                   : isFlag
                     ? 'BC beside the waving provincial flag. Any ministry, any colour.'
@@ -406,6 +426,8 @@ export const App = () => {
               onChange={(value) => update({ backdrop: value })}
             />
           </section>
+
+          {isDocument && <DocumentArmsPanel state={state} update={update} clearSpaceOptions={CLEAR_SPACE_OPTIONS} />}
 
           {isCurrent && <CurrentControls state={state} update={update} />}
 
@@ -582,7 +604,7 @@ export const App = () => {
 
           )}
 
-          {!isCurrent && (
+          {!isCurrent && !isDocument && (
           <section className="panel">
             <h2>Wording</h2>
             {(isFlag || isCrest) && (
@@ -622,9 +644,9 @@ export const App = () => {
               label={state.linkColors
                 ? (isFlag ? 'Letters and text' : 'Mark and text')
                 : (isFlag ? 'Letters' : 'Mark')}
-              value={isFlag ? state.flagMarkColor : isCrest ? state.crestMarkColor : state.markColor}
+              value={isDocument ? state.documentMarkColor : isFlag ? state.flagMarkColor : isCrest ? state.crestMarkColor : state.markColor}
               onChange={(value) => update(
-                isFlag ? { flagMarkColor: value } : isCrest ? { crestMarkColor: value } : { markColor: value }
+                isDocument ? { documentMarkColor: value } : isFlag ? { flagMarkColor: value } : isCrest ? { crestMarkColor: value } : { markColor: value }
               )}
               palette={isFlag ? FLAG_SWATCHES : undefined}
             />
@@ -641,18 +663,18 @@ export const App = () => {
             {!state.linkColors && (
               <ColourField
                 label="Text"
-                value={isFlag ? state.flagTextColor : isCrest ? state.crestTextColor : state.textColor}
+                value={isDocument ? state.documentTextColor : isFlag ? state.flagTextColor : isCrest ? state.crestTextColor : state.textColor}
                 onChange={(value) => update(
-                  isFlag ? { flagTextColor: value } : isCrest ? { crestTextColor: value } : { textColor: value }
+                  isDocument ? { documentTextColor: value } : isFlag ? { flagTextColor: value } : isCrest ? { crestTextColor: value } : { textColor: value }
                 )}
               />
             )}
 
             <ColourField
               label="Background"
-              value={isFlag ? state.flagBackground : isCrest ? state.crestBackground : state.background}
+              value={isDocument ? state.documentBackground : isFlag ? state.flagBackground : isCrest ? state.crestBackground : state.background}
               onChange={(value) => update(
-                isFlag ? { flagBackground: value } : isCrest ? { crestBackground: value } : { background: value }
+                isDocument ? { documentBackground: value } : isFlag ? { flagBackground: value } : isCrest ? { crestBackground: value } : { background: value }
               )}
               palette={isFlag ? FLAG_SWATCHES : undefined}
               allowTransparent

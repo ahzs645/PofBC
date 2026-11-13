@@ -53,9 +53,10 @@ const slugify = (value) => (value == null ? '' : String(value))
 
 export const buildFileName = ({
   era = 'historical', language, currentMinistry, currentVariant,
-  layout = 'stacked', ministry, color, markColor, textColor, outlineText, format
+  layout = 'stacked', documentLayout = 'split-serif', ministry, color, markColor, textColor, outlineText, format
 }) => {
   const extension = EXPORT_FORMATS[format]?.extension || format
+  if (era === 'document') return `bc-historic-arms-${slugify(documentLayout)}-study.${extension}`
 
   // The current era names what it actually is: an official mark, in a language, in one of the
   // Province's colourways. None of the historical era's colour or lockup choices apply.
@@ -101,6 +102,7 @@ export const buildFileName = ({
  * third copy of the payload for svg2pdf to parse.
  */
 export const buildSvgSource = async ({ embedFont = true, outlineText = false, ...options } = {}) => {
+  if (options.era === 'document') return (await buildDocumentArtwork(options)).svg
   if (options.era === 'current') {
     const { svg } = await buildCurrentArtwork(options)
     return svg
@@ -114,6 +116,20 @@ export const buildSvgSource = async ({ embedFont = true, outlineText = false, ..
   if (options.era === 'crest') return buildCrestArtwork({ ...options, glyphs, fontCss }).svg
 
   return renderLockupSvg({ ...options, glyphs, fontCss })
+}
+
+// Loaded only for this identity. The fixed headings are already outlined; exporting them
+// must never fetch Helvetica or substitute a browser font for the historical type study.
+const buildDocumentArtwork = async ({
+  documentLayout, documentMarkColor, documentTextColor, documentBackground,
+  clearSpaceFactor = 0, pixelWidth, title
+}) => {
+  const { renderDocumentArmsSvg } = await import('../documentArms/renderDocumentArmsSvg.js')
+  const { svg, box } = renderDocumentArmsSvg({
+    layout: documentLayout, markColor: documentMarkColor, textColor: documentTextColor,
+    background: documentBackground, clearSpaceFactor, pixelWidth, title
+  })
+  return { svg, viewBox: box }
 }
 
 /** The crest lockup's artwork. Drawn from parts, so the outline option applies as it does to the
@@ -337,7 +353,9 @@ export const renderLogoBlob = async ({
 
   // The current era's geometry comes from the artwork itself; the other two compute theirs. The
   // flag era's layout needs no font, so its box can be had before any outline has been loaded.
-  const current = options.era === 'current' ? buildCurrentArtwork({ ...options, pixelWidth }) : null
+  const current = options.era === 'document'
+    ? await buildDocumentArtwork({ ...options, pixelWidth })
+    : options.era === 'current' ? buildCurrentArtwork({ ...options, pixelWidth }) : null
   const resolved = current ??
     (options.era === 'flag'
       ? { viewBox: flagViewBox(options) }

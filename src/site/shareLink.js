@@ -13,7 +13,7 @@
 // Between them, a near-default lockup fits in a token shorter than the word "configuration".
 
 import { CLEAR_SPACE_ORDER, LAYOUT_ORDER, MARK_ALIGNMENT_ORDER } from '../logo/layouts.js'
-import { cleanBoolean, cleanColour, cleanOneOf, cleanText } from './configFormat.js'
+import { cleanBoolean, cleanColour, cleanOneOf, cleanText, fromConfig, toConfig } from './configFormat.js'
 import { DEFAULTS } from './lockupDefaults.js'
 
 export const SHARE_PARAM = 's'
@@ -73,7 +73,11 @@ const getEngine = () => {
 const pick = (state) => Object.fromEntries(SHARED_FIELDS.map((key) => [key, state[key]]))
 
 /** Compresses a lockup configuration into a URL token. */
-export const encodeShare = async (state) => (await getEngine()).compress(pick(state))
+export const encodeShare = async (state) => (await getEngine()).compress(
+  // Keep existing tokens compatible and small. The new document identity carries its public
+  // configuration so the era and its own colours/layout cannot be lost when sharing.
+  state.era === 'document' ? { config: toConfig(state) } : pick(state)
+)
 
 // ── Validation ───────────────────────────────────────────────────────────────────────────────────
 //
@@ -84,6 +88,7 @@ export const encodeShare = async (state) => (await getEngine()).compress(pick(st
 /** Coerces a decoded payload into a state patch, discarding anything unrecognised. */
 export const sanitizeShare = (raw) => {
   if (!raw || typeof raw !== 'object' || Array.isArray(raw)) return null
+  if (Object.hasOwn(raw, 'config')) return fromConfig(raw.config)
 
   return {
     layout: cleanOneOf(raw.layout, LAYOUT_ORDER, DEFAULTS.layout),
@@ -125,6 +130,7 @@ export const readShareToken = (search = globalThis.location?.search ?? '') => (
 export const buildShareUrl = async (state, href = globalThis.location?.href ?? '') => {
   const token = await encodeShare(state)
   const url = new URL(href)
+  url.searchParams.delete('c')
   url.searchParams.set(SHARE_PARAM, token)
   return url.toString()
 }

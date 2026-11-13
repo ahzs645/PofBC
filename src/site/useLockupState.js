@@ -54,10 +54,12 @@ export const useLockupState = () => {
     markAlign: state.markAlign
   }), [state])
 
-  // Everything an export needs, both eras.
+  // Everything an export needs, for each identity.
   // Each era draws on its own background, so everything downstream — preview, export, backdrop,
   // contrast — reads it from here rather than reaching for state.background directly.
-  const background = state.era === 'current'
+  const background = state.era === 'document'
+    ? state.documentBackground
+    : state.era === 'current'
     ? state.currentBackground
     : state.era === 'flag'
       ? state.flagBackground
@@ -67,6 +69,10 @@ export const useLockupState = () => {
 
   const lockup = useMemo(() => ({
     era: state.era,
+    documentLayout: state.documentLayout,
+    documentMarkColor: state.documentMarkColor,
+    documentTextColor: state.linkColors ? state.documentMarkColor : state.documentTextColor,
+    documentBackground: state.documentBackground,
     language: state.language,
     // Only while the chosen name is still one of the published marks. A name typed by hand has no
     // code, and an export named after a stale one would be a lie about what is inside it.
@@ -122,7 +128,9 @@ export const useLockupState = () => {
    * least legible half.
    */
   // Each era has its own pair, so the readout has to measure the one on screen.
-  const ink = state.era === 'flag'
+  const ink = state.era === 'document'
+    ? { mark: state.documentMarkColor, text: state.linkColors ? state.documentMarkColor : state.documentTextColor }
+    : state.era === 'flag'
     ? { mark: state.flagMarkColor, text: state.linkColors ? state.flagMarkColor : state.flagTextColor }
     : state.era === 'crest'
       ? { mark: state.crestMarkColor, text: state.linkColors ? state.crestMarkColor : state.crestTextColor }

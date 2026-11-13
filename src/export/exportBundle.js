@@ -42,7 +42,7 @@ export const planBundle = ({
 
   // The current era has one mark per ministry, not a choice of lockups, so it bundles formats and
   // sizes only and everything lands in one folder.
-  const chosen = lockup.era === 'current'
+  const chosen = lockup.era === 'current' || lockup.era === 'document'
     ? [null]
     : LAYOUT_ORDER.filter((id) => layouts.includes(id))
 
@@ -69,7 +69,9 @@ export const planBundle = ({
 
 /** The folder everything sits under, so unzipping leaves one thing behind rather than three. */
 export const bundleName = (lockup = {}) => (
-  lockup.era === 'current'
+  lockup.era === 'document'
+    ? `bc-historic-arms-${slugify(lockup.documentLayout) || 'split-serif'}-study`
+    : lockup.era === 'current'
     ? ['bc', slugify(lockup.currentMinistry) || slugify(lockup.ministry), lockup.language]
         .filter(Boolean).join('-')
     : ['bc', slugify(lockup.ministry) || 'wordmark'].filter(Boolean).join('-')
@@ -90,6 +92,25 @@ const readme = (lockup, entries) => {
   // Only what is actually in the box: a legend describing files that are not there is worse than
   // no legend at all.
   const formats = [...new Set(entries.map((entry) => entry.format))]
+
+  if (lockup.era === 'document') return [
+    'British Columbia historical document arms — reconstruction study',
+    '',
+    `Layout: ${lockup.documentLayout || 'split-serif'}`,
+    `Arms: ${lockup.documentMarkColor}`,
+    `Lettering: ${lockup.documentTextColor}`,
+    `Background: ${lockup.documentBackground === 'none' ? 'transparent' : lockup.documentBackground}`,
+    'Arms and fixed wording are vector outlines; no fonts are needed.',
+    '',
+    'The arms reuse the PlateForge study used on the 1919 cardboard plate.',
+    'It is a vector conversion of a generated master, not a verified historical or official drawing.',
+    'The original engravings differ. Lettering uses open-font stand-ins; spacing is a study.',
+    'The supplied reference scans are not included in these exports.',
+    '',
+    ...formats.map((id) => `.${EXPORT_FORMATS[id].extension}: ${FORMAT_NOTES[id]}`),
+    '',
+    `${entries.length} files of the selected layout.`
+  ].join('\n')
 
   return [
     'Province of British Columbia — logo bundle',
