@@ -87,13 +87,36 @@ const BODIES = [
 
 const standsIn = (episode, year) => episode.from <= year && (episode.to === null || episode.to >= year)
 const staffing = read('atlas/staffing.json')
+
+// Rows the name matcher cannot place are reviewed in atlas/staffing-scope-review.json: a combined
+// row (Officers of the Legislature, Other Appropriations) stays an aggregate and is never given to
+// one node; a single ministry row is mapped only to an existing node, with its dated evidence.
+const scopeReviewPath = 'atlas/staffing-scope-review.json'
+const scopeReview = existsSync(resolve(ROOT, scopeReviewPath)) ? read(scopeReviewPath) : { aggregate_scopes: [], ministry_mappings: [] }
+const episodeIds = new Set(MINISTRY_EPISODES.map((episode) => episode.id))
+for (const mapping of scopeReview.ministry_mappings) {
+  if (!episodeIds.has(mapping.output_id)) throw new Error(`Reviewed staffing mapping names an unknown ministry: ${mapping.output_id}`)
+  const hits = staffing.measures.filter((measure) => measure.fiscal_year === mapping.fiscal_year && measure.basis === mapping.basis && measure.ministry_as_printed === mapping.ministry_as_printed)
+  if (hits.length !== 1) throw new Error(`Reviewed staffing mapping matches ${hits.length} measures: ${mapping.fiscal_year} ${mapping.basis} ${mapping.ministry_as_printed}`)
+}
+const reviewedMapping = (measure) => scopeReview.ministry_mappings.find((mapping) => mapping.fiscal_year === measure.fiscal_year && mapping.basis === measure.basis && mapping.ministry_as_printed === measure.ministry_as_printed)
+const aggregateScope = (measure) => scopeReview.aggregate_scopes.find((scope) => scope.ministry_as_printed === measure.ministry_as_printed)
+
 const byEpisode = {}
 const unmatched = new Map()
+const aggregates = new Map()
 for (const measure of staffing.measures) {
   const start = Number(String(measure.fiscal_year).slice(0, 4))
   const printed = measure.full_name_per_document_abbreviation_table || measure.ministry_as_printed
+  const aggregate = aggregateScope(measure)
+  if (aggregate) {
+    accounting.record(`staffing.json#${staffing.measures.indexOf(measure)}`, 'aggregate_scope', measure, { scope: aggregate.scope, reason: aggregate.reason })
+    aggregates.set(printed, (aggregates.get(printed) ?? 0) + 1)
+    continue
+  }
+  const reviewed = reviewedMapping(measure)
   const body = BODIES.find(([pattern]) => pattern.test(printed))?.[1]
-  let target = body ?? null
+  let target = reviewed?.output_id ?? body ?? null
   if (!target) {
     // The episode standing in the fiscal year's first or last calendar year, by name, or failing
     // that by the one near name that contains the other.
@@ -111,7 +134,7 @@ for (const measure of staffing.measures) {
     unmatched.set(printed, (unmatched.get(printed) ?? 0) + 1)
     continue
   }
-  accounting.record(`staffing.json#${staffing.measures.indexOf(measure)}`, 'accepted', measure, { output_id: target })
+  accounting.record(`staffing.json#${staffing.measures.indexOf(measure)}`, 'accepted', measure, { output_id: target, ...(reviewed ? { reason: `Reviewed mapping (${scopeReviewPath}): ${reviewed.reason}` } : {}) })
   ;(byEpisode[target] ??= []).push([measure.fiscal_year, measure.basis, measure.value, printed, measure.source_url, measure.locator])
 }
 for (const rows of Object.values(byEpisode)) rows.sort((a, b) => a[0].localeCompare(b[0]) || a[1].localeCompare(b[1]))
@@ -179,6 +202,8 @@ writeFileSync(OUT, [
 
 accounting.write(resolve(ROOT, 'audit/atlas-import.json'))
 console.log(`${lieutenantGovernors.length} Lieutenant Governors and administrators`)
-console.log(`${staffing.measures.length - [...unmatched.values()].reduce((a, b) => a + b, 0)}/${staffing.measures.length} staffing figures matched to ${Object.keys(byEpisode).length} ministries and bodies`)
+const sum = (counts) => [...counts.values()].reduce((a, b) => a + b, 0)
+console.log(`${staffing.measures.length - sum(unmatched) - sum(aggregates)}/${staffing.measures.length} staffing figures matched to ${Object.keys(byEpisode).length} ministries and bodies`)
+if (aggregates.size) console.log('aggregate staffing rows kept unattributed:', [...aggregates.entries()].map(([name, count]) => `${count}× ${name}`).join('; '))
 if (unmatched.size) console.log('unmatched staffing rows:', [...unmatched.entries()].map(([name, count]) => `${count}× ${name}`).join('; '))
 console.log(`${seats.length} seats in the 43rd Parliament`)
