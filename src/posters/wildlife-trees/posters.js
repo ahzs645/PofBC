@@ -20,7 +20,7 @@ const INK = '#326C59'
 
 const MINISTRY_LINK = {
   label: 'Ministry of Forests, in 2001',
-  note: 'Government · 2001: the ministry this poster is signed by, and its lockup in the identity of the day',
+  note: 'Government · 2001: the ministry this poster is signed by (the name it held from 1988 to 2005), and its lockup in the identity of the day',
   to: { view: 'government', year: 2001, node: 'ministry-of-forests-1988' }
 }
 const OVAL_LINK = {
@@ -37,6 +37,23 @@ const EARLIER_EMBLEM_LINK = {
   label: 'The service’s earlier mark, on REWARD',
   note: 'Posters · the evergreen emblem it used before the ovals',
   to: { view: 'posters', poster: 'reward-living-forest', part: 'emblem' }
+}
+
+const PUBLICATIONS_SOURCE = {
+  label: 'Province of British Columbia, Wildlife Tree Committee publications',
+  href: 'https://www2.gov.bc.ca/gov/content/environment/plants-animals-ecosystems/wildlife/wildlife-habitats/wildlife-tree-committee/publications'
+}
+const OFFICIAL_COPY_SOURCE = {
+  label: 'Stand-level Biodiversity Brochure, Side 2 (the Province’s scan of this sheet; PDF, 3.6 MB)',
+  href: 'https://www2.gov.bc.ca/assets/gov/environment/plants-animals-and-ecosystems/conservation-habitat-management/wildlife-conservation/wildlife-tree-committee/stand_level_biodiversity_brochure_side_2.pdf'
+}
+const GUIDANCE_SOURCE = {
+  label: 'Wildlife Tree Retention: Management Guidance, May 2006 (PDF)',
+  href: 'https://www2.gov.bc.ca/assets/gov/environment/plants-animals-and-ecosystems/conservation-habitat-management/wildlife-conservation/wildlife-tree-committee/wt-guidance-05-2006.pdf'
+}
+const TOAD_SOURCE = {
+  label: 'Province of British Columbia, Western Toad factsheet (PDF)',
+  href: 'https://www.env.gov.bc.ca/wld/documents/westerntoad.pdf'
 }
 
 const part = (id) => ({ view: 'posters', poster: ID, part: id })
@@ -80,7 +97,7 @@ export const WILDLIFE_TREES = {
           'The sheet is long and narrow, a third as wide as it is tall, so the tree can be drawn whole. It reads from the top down: the hawk on its perch, the nest, the owl, the cavities and the conks of rot on the trunk, the bear and the toad at its foot, then the title and the copy.',
           { facts: [
             ['Issued by', 'Ministry of Forests, Forest Practices Branch, from its signature'],
-            ['Date', 'about 2001, from the artist’s mark “d.g.01”; not printed'],
+            ['Date', 'not printed; the artist’s mark “d.g.01” suggests 2001, an inference'],
             ['Sheet', '290.6 × 870.9 mm'],
             ['Rebuilt from', 'one scan of a printed copy, 4576 × 13,715 pixels'],
             ['Drawing', '1000 × 2997 units, no images; the master’s 104,787 paths are 1,960 here']
@@ -89,8 +106,8 @@ export const WILDLIFE_TREES = {
           { note: 'A reconstruction. The penwork is rebuilt as filled Bézier outlines fitted to the scan, the lettering is set again in a substitute face, and the two logos are this site’s own drawings placed where the printed ones are. The site shows a lighter copy of the master. Each part’s panel says what was repaired and what was left as found.' },
           { h: 'Read it as a story' },
           'The Story button (or S) reads the poster from top to bottom: scroll, and the drawing follows.',
-          { h: 'Its marks elsewhere on the site' },
-          { links: [MINISTRY_LINK, OVAL_LINK] }
+          'The Province still hosts a scan of this sheet, as Side 2 of its Stand-level Biodiversity Brochure: the same tree, portraits, copy and signatures. Its 2006 guidance on wildlife trees records a first policy in 1985, an update in February 2000 and an evaluation in 2002. That is the setting the poster belongs to; no publication record yet says which of them, if any, it was made for.',
+          { sources: [OFFICIAL_COPY_SOURCE, PUBLICATIONS_SOURCE, GUIDANCE_SOURCE] }
         ]
       },
       story: [
@@ -353,16 +370,18 @@ export const WILDLIFE_TREES = {
         lede: 'A toad crouched low on the ground, hind leg folded, toes spread, its near foot crossing the bottom of the frame.',
         blocks: [
           'The poster’s amphibians: “Salamanders and toads use wildlife trees for shelter, food, and as safe, moist sites to lay their eggs.” Not only standing trees: the rotting wood on the ground, too.',
+          { note: 'The poster’s words, kept as printed. They cover salamanders and toads together, and the egg-laying fits some salamanders, not this toad: the Province’s factsheet has the Western Toad laying its eggs in strings in water, and sheltering on land in burrows, beneath logs and in rock crevices. “Northwestern toad” is the poster’s name for it; the species is now usually called the Western Toad.' },
           ANIMAL_NOTE,
           { facts: [
             ['Ink strokes', '7,033 fitted outlines'],
             ['Repairs', 'the pupil and one highlight of the near eye, measured from the scan'],
             ['Recovered', 'the outer hind foot, by widening the cut 51 scan pixels to the left']
-          ] }
+          ] },
+          { sources: [TOAD_SOURCE] }
         ]
       },
       story: [
-        'The last portrait is on the ground. A toad needs a wildlife tree as much as the hawk does, for shelter, food and a moist place to lay its eggs, and it uses the tree even after it has fallen.'
+        'The last portrait is on the ground. The poster groups toads with salamanders, as animals that use wildlife trees for shelter, food and moist places. For this toad the tree matters most once it has fallen: it shelters beneath the logs, and goes to water to lay its eggs.'
       ]
     }),
     roots: {
@@ -397,13 +416,13 @@ export const WILDLIFE_TREES = {
         heading: 'd.g.01',
         lede: 'A small hand-written mark in the grass at the right of the roots.',
         blocks: [
-          'It reads “d.g.01”: most likely the artist’s initials and the year, 2001. That fits the signature below it, since the Ministry of Forests held that name from 1988 to 2005. Who d.g. was is not established, and the poster credits no one else.',
+          'It reads “d.g.01”: most likely the artist’s initials and the year, 2001. That fits the signature below it, since the Ministry of Forests held that name from 1988 to 2005. It is an inference from the mark: it would date the drawing, not the printing, and no publication record confirms either. Who d.g. was is not established, and the poster credits no one else.',
           'The mark is kept as the pen left it. It was not redrawn or neatened, and no new signature was added.',
           { links: [MINISTRY_LINK] }
         ]
       },
       story: [
-        'In the grass, a signature: d.g.01. The artist’s initials, it seems, and the year: 2001. Nothing else on the sheet says who drew it.'
+        'In the grass, a signature: d.g.01. The artist’s initials, it seems, and perhaps the year, 2001. Nothing else on the sheet says who drew it, or when it was printed.'
       ]
     },
     heading: {
@@ -523,7 +542,7 @@ export const WILDLIFE_TREES = {
           { h: 'The lockup on the site' },
           { links: [MINISTRY_LINK, {
             label: 'The same signature on Noxious Weeds',
-            note: 'Posters · the branch’s weed campaign of 2000, signed the same way in black',
+            note: 'Posters · the branch’s weed poster, signed the same way in black',
             to: { view: 'posters', poster: 'shattering-the-environment', part: 'signature' }
           }] }
         ]

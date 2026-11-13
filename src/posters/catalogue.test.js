@@ -3,7 +3,7 @@
 
 import { test } from 'node:test'
 import assert from 'node:assert/strict'
-import { readFileSync } from 'node:fs'
+import { existsSync, readFileSync } from 'node:fs'
 import { POSTERS, SERIES, neighbours, posterIds, seriesOf } from './catalogue.js'
 import { FOREST_SERVICE_POSTERS } from './forest-service/posters.js'
 import { BC_FERRIES_POSTERS } from './bc-ferries/posters.js'
@@ -12,6 +12,7 @@ import { NOXIOUS_WEEDS_POSTERS } from './noxious-weeds/posters.js'
 import { GALLERY_COLLECTIONS } from '../gallery/collections.js'
 import { ORDER as COASTAL_ORDER, PARTS as COASTAL_PARTS, REGIONS as COASTAL_REGIONS } from './coastal-forest/parts.js'
 import { FOREST_LOGOS } from '../internal/forestLogos.js'
+import { CERTAINTY, GROUPS, MARK_OBJECTS, connectedPosters, connectionsOf, groupedConnections, objectsForLogo, postersForLogo, postersForPatch } from './connections.js'
 
 const read = (path) => readFileSync(new URL(path, import.meta.url), 'utf8')
 const DRAWINGS = {
@@ -28,6 +29,36 @@ const DRAWINGS = {
   'explosion-in-slow-motion': read('./noxious-weeds/explosion-in-slow-motion.svg')
 }
 const GOVERNMENT = read('../government/historyData.js')
+
+// The patch library (the Patcher submodule), for links into the Patches and Badges views.
+const MANIFEST = new URL('../../vendor/patcher/library/manifest.json', import.meta.url)
+const LIBRARY = existsSync(MANIFEST) ? JSON.parse(readFileSync(MANIFEST, 'utf8')) : null
+const PATCHES = new Map((LIBRARY?.orgs ?? []).flatMap((org) => org.patches.map((patch) => [patch.id, patch.collection])))
+const ORGS = new Set((LIBRARY?.orgs ?? []).map((org) => org.id))
+
+/** Fails unless a place on the site (a link's `to`) exists. `where` names the link in the message. */
+const assertPlace = (to, where) => {
+  const internal = new Set(FOREST_LOGOS.map(({ id }) => id))
+  const galleries = new Set(GALLERY_COLLECTIONS.map(({ id }) => id))
+  if (to.view === 'posters') {
+    assert.ok(POSTERS[to.poster], `${where}: no poster ${to.poster}`)
+    assert.ok(DEFINITIONS[to.poster].parts[to.part ?? 'overview'], `${where}: ${to.poster} has no part ${to.part}`)
+  } else if (to.view === 'internal') {
+    assert.equal(to.internal, 'forests')
+    if (to['internal-logo']) assert.ok(internal.has(to['internal-logo']), `${where}: no logo ${to['internal-logo']}`)
+  } else if (to.view === 'gallery') {
+    assert.ok(galleries.has(to.logos), `${where}: no logo collection ${to.logos}`)
+  } else if (to.view === 'government') {
+    assert.ok(GOVERNMENT.includes(`"${to.node}"`), `${where}: no body ${to.node}`)
+  } else if (to.view === 'patches' || to.view === 'badges') {
+    // Without the submodule there is nothing to check these against.
+    if (!LIBRARY) return
+    if (to.patch) assert.equal(PATCHES.get(to.patch), to.view, `${where}: ${to.patch} is not in ${to.view}`)
+    else assert.ok(ORGS.has(to.org), `${where}: no organization ${to.org}`)
+  } else {
+    assert.fail(`${where}: a link to an unknown view, ${to.view}`)
+  }
+}
 
 // Every poster as the viewer sees it: its parts, the order they are stepped through, and which of
 // them are hotspots.
@@ -104,28 +135,13 @@ test('every part sits on its drawing, and names layers the drawing has', () => {
 })
 
 test('the data panels say something, and every link lands somewhere that exists', () => {
-  const internal = new Set(FOREST_LOGOS.map(({ id }) => id))
-  const galleries = new Set(GALLERY_COLLECTIONS.map(({ id }) => id))
   for (const [id, { parts }] of Object.entries(DATA_POSTERS)) {
     for (const [partId, { panel }] of Object.entries(parts)) {
       assert.ok(panel?.eyebrow && panel.heading && panel.lede, `${id}/${partId}: panel`)
       for (const block of panel.blocks ?? []) {
         for (const link of block.links ?? []) {
-          const { to } = link
           assert.ok(link.label, `${id}/${partId}: a link without a label`)
-          if (to.view === 'posters') {
-            assert.ok(POSTERS[to.poster], `${id}/${partId}: no poster ${to.poster}`)
-            assert.ok(DEFINITIONS[to.poster].parts[to.part ?? 'overview'], `${id}/${partId}: ${to.poster} has no part ${to.part}`)
-          } else if (to.view === 'internal') {
-            assert.equal(to.internal, 'forests')
-            if (to['internal-logo']) assert.ok(internal.has(to['internal-logo']), `${id}/${partId}: no logo ${to['internal-logo']}`)
-          } else if (to.view === 'gallery') {
-            assert.ok(galleries.has(to.logos), `${id}/${partId}: no logo collection ${to.logos}`)
-          } else if (to.view === 'government') {
-            assert.ok(GOVERNMENT.includes(`"${to.node}"`), `${id}/${partId}: no body ${to.node}`)
-          } else {
-            assert.fail(`${id}/${partId}: a link to an unknown view, ${to.view}`)
-          }
+          assertPlace(link.to, `${id}/${partId}`)
         }
       }
     }
@@ -204,12 +220,68 @@ test('a highlight is a masked copy of a photograph in its own drawing', () => {
   }
 })
 
-test('the two fire-prevention badges share one green', () => {
+test('the gamble badge is drawn in its printed blue, and its green is a named variation', () => {
   const fills = (svg) => new Set([...svg.matchAll(/(?:fill|stroke)="(#[0-9a-f]{6})"/gi)].map((m) => m[1].toUpperCase()))
   const drop = fills(DRAWINGS['dont-drop-it'])
   const gamble = fills(DRAWINGS['dont-gamble-with-fire'])
-  assert.ok(drop.has('#003E2D') && gamble.has('#003E2D'))
-  assert.ok(!gamble.has('#01375D'), 'the gamble badge still paints its old blue')
+  assert.ok(gamble.has('#01375D'), 'the gamble badge is not in the blue it was photographed in')
+  assert.ok(!gamble.has('#003E2D'), 'the gamble badge is drawn in the other badge’s green')
+  const { options } = FOREST_SERVICE_POSTERS['dont-gamble-with-fire'].variations
+  assert.ok(!options[0].swap, 'the first variation is the drawing as it is')
+  const green = options.find(({ id }) => id === 'series-green')
+  assert.deepEqual(green.swap, [['#01375D', '#003E2D']])
+  assert.ok(drop.has(green.swap[0][1]), 'the adaptation is not DON’T DROP IT!’s green')
+  assert.match(green.note, /adaptation/, 'the green is not labelled as the site’s own')
+})
+
+test('every piece is worded for what it is made of, and its exports follow', () => {
+  for (const [id, meta] of Object.entries(POSTERS)) {
+    assert.ok(['vector', 'mixed', 'photographic'].includes(meta.made), `${id}: made`)
+    const pictures = /<image\b/.test(DRAWINGS[id])
+    assert.equal(meta.made !== 'vector', pictures, `${id}: says ${meta.made}, but ${pictures ? 'holds' : 'holds no'} pictures`)
+  }
+})
+
+test('every connection says what it is and what it rests on, and leads somewhere that exists', () => {
+  assert.deepEqual(connectedPosters().sort(), Object.keys(POSTERS).sort(), 'a piece has no connections')
+  const groups = new Set(GROUPS.map(({ id }) => id))
+  for (const id of connectedPosters()) {
+    const entries = connectionsOf(id)
+    assert.ok(entries.some(({ group }) => group === 'issuer'), `${id}: no issuer`)
+    assert.equal(groupedConnections(id).reduce((n, group) => n + group.entries.length, 0), entries.length)
+    const keys = entries.map(({ rel, label }) => rel + label)
+    assert.equal(new Set(keys).size, keys.length, `${id}: a connection is listed twice`)
+    for (const entry of entries) {
+      const where = `${id} → ${entry.label}`
+      assert.ok(groups.has(entry.group) && entry.rel && entry.label && entry.note, `${where}: incomplete`)
+      assert.ok(CERTAINTY[entry.certainty], `${where}: certainty`)
+      assert.ok(!(entry.to && entry.href), `${where}: both a place and a page`)
+      if (entry.to) assertPlace(entry.to, where)
+      if (entry.href) assert.match(entry.href, /^https:\/\//, `${where}: href`)
+      if (entry.to?.view === 'posters') assert.notEqual(entry.to.poster === id && !entry.to.part, true, `${where}: leads to itself`)
+    }
+  }
+})
+
+test('a mark, the pieces that use it and the object made of it name each other', () => {
+  for (const { logo } of MARK_OBJECTS) {
+    const seenOn = FOREST_LOGOS.find(({ id }) => id === logo).seenOn.map(({ to }) => to.poster).sort()
+    assert.deepEqual(postersForLogo(logo).sort(), seenOn, `${logo}: the registry and the logo’s own list differ`)
+    for (const object of objectsForLogo(logo)) {
+      assert.deepEqual(postersForPatch(object.to.patch).map(({ poster }) => poster).sort(), seenOn, `${object.to.patch}: not tied back to the pieces`)
+    }
+  }
+  // The emblem's cloth square, from both posters; the fire artefacts, from the fire pieces.
+  assert.deepEqual(postersForPatch('S48-O01').map(({ poster }) => poster).sort(), ['enjoy-protect-forests', 'reward-living-forest'])
+  assert.ok(postersForPatch('FO-fire-control').some(({ poster, certainty }) => poster === 'dont-drop-it' && certainty === 'thematic'))
+  assert.deepEqual(postersForPatch('no-such-patch'), [])
+})
+
+test('no card dates a piece more firmly than its evidence', () => {
+  for (const id of ['reward-living-forest', 'enjoy-protect-forests', 'wildlife-trees', 'beware-these-alien-invaders', 'shattering-the-environment', 'explosion-in-slow-motion', 'queen-of-sidney']) {
+    assert.match(POSTERS[id].when, /^Undated/, `${id}: ${POSTERS[id].when}`)
+  }
+  assert.match(POSTERS['coastal-forest'].when, /1979–86 or 1988–91/)
 })
 
 test('neighbours step through the posters in catalogue order', () => {

@@ -7,6 +7,7 @@ import { LIBRARY, cardLabel, loadPatchSvg, variantsOf } from 'patcher/library'
 import { Segmented } from '../site/Segmented.jsx'
 import { SiteLink } from '../site/navigation.jsx'
 import { FOREST_SERVICE_TIMELINE, historyOf } from './patchHistory.js'
+import { CERTAINTY, postersForPatch } from '../posters/connections.js'
 
 /** Patcher's own site, which opens a library patch with every digitizing setting exposed. */
 const PATCHER_URL = 'https://ahzs645.github.io/patcher/'
@@ -59,7 +60,9 @@ const absorbedLabels = new Map((LIBRARY.absorbed ?? []).map((m) => [m.id, m.labe
 /** What the BC Forest Service timeline says about the patch's wording, and a Forest Oval's own history. */
 function PatchHistory({ patch }) {
   const { notes, logo } = historyOf(patch)
-  if (!notes.length && !logo) return null
+  // The printed pieces tied to this patch, read back from the posters' connection registry.
+  const printed = postersForPatch(patch.id)
+  if (!notes.length && !logo && !printed.length) return null
   return (
     <section className="patch__history" aria-label="History">
       <h3>History</h3>
@@ -81,6 +84,19 @@ function PatchHistory({ patch }) {
           {logo.evidence}. <SiteLink to={{ view: 'internal', internal: 'forests', 'internal-logo': logo.id }}>{logo.name} in Internal Logos</SiteLink> has
           its dated research.
         </p>
+      )}
+      {printed.length > 0 && (
+        <>
+          <h3>In print</h3>
+          <ul>
+            {printed.map((entry) => (
+              <li key={entry.poster + entry.rel}>
+                <span className="patch__era">{CERTAINTY[entry.certainty]}</span> <SiteLink to={entry.to}>{entry.title}</SiteLink>, in Posters: {entry.rel.toLowerCase()}.
+              </li>
+            ))}
+          </ul>
+          <p className="patch__source">A shared mark or subject, not evidence that the pieces were issued together.</p>
+        </>
       )}
     </section>
   )

@@ -1,5 +1,6 @@
 // The Noxious Weeds pieces: the Ministry of Forests' Forest Practices Branch campaign against
-// invasive plants, as three supplied PDFs — a screen leaflet (1999) and two posters (2000). Their
+// invasive plants, as three supplied PDFs — a screen leaflet (its file made in 1999) and two posters
+// (theirs in 2000). Those are the files' creation dates, not publication dates. Their
 // parts, what the panels say, and the stories. Data only; the drawings are attached in ./index.js.
 //
 // The drawings are built from the PDFs by artwork/posters/noxious-weeds/build.py, which also
@@ -28,7 +29,7 @@ const ministry = (year) => ({
 })
 const WILDLIFE_TREES_SIGNATURE = {
   label: 'The same signature on Wildlife Trees',
-  note: 'Posters · the Forest Practices Branch’s poster of a habitat tree, about 2001',
+  note: 'Posters · the Forest Practices Branch’s poster of a habitat tree',
   to: { view: 'posters', poster: 'wildlife-trees', part: 'ministry' }
 }
 const on = (poster, part, note) => ({ label: POSTERS[poster].title, note, to: { view: 'posters', poster, part } })
@@ -55,23 +56,20 @@ const BEWARE_PARTS = {
       heading: 'Beware These Alien Invaders',
       lede: 'A five-screen leaflet made to be read on a computer: a cover, and one screen each for four weeds, joined by buttons. Here its screens are laid out one under another.',
       blocks: [
-        'It is a PDF with links in it, made in March 1999, before either poster: the cover’s red button opens the first weed, and the arrows and HOME under each weed step on or go back.',
+        'It is a PDF with links in it, a file made in March 1999, a year before the posters’ files: the cover’s red button opens the first weed, and the arrows and HOME under each weed step on or go back.',
         { facts: [
           ['Issued by', 'Ministry of Forests, from the cover; the file names its author as MOF'],
-          ['Made', '25 March 1999, from the PDF (QuarkXPress, Acrobat Distiller 3.01)'],
+          ['File made', '25 March 1999 (QuarkXPress, Acrobat Distiller 3.01)'],
+          ['Published', 'not established; the file’s date is not a publication date'],
           ['Screens', 'five, each 684 × 468 points'],
           ['Its subject', 'Vegetation Management, from the file']
         ] },
         { note: `${SOURCE_NOTE} ${SUBSTITUTE_TYPE} The weed headings and the cover’s text use the faces embedded in the file, and are their own.` },
-        { h: 'In the same campaign' },
-        { links: [
-          on(SHATTERING, 'overview', 'The landscape poster, 2000'),
-          on(EXPLOSION, 'overview', 'The specimen poster, 2000')
-        ] }
+        'Its strongest story is its format: an early interactive PDF, a cover and four pages joined by buttons, read on a screen years before that was ordinary for a government leaflet.'
       ]
     },
     story: [
-      'In 1999 the Ministry of Forests made a leaflet for the screen about weeds: five pages of a PDF, linked like a small website. It is the first piece of a campaign called Noxious Weeds.',
+      'The Ministry of Forests made a leaflet for the screen about weeds: five pages of a PDF, linked like a small website. Its file is dated March 1999, the earliest of the three pieces here under the name Noxious Weeds.',
       'Read it as it was meant to be clicked through: the cover, then four weeds.'
     ]
   },
@@ -233,17 +231,17 @@ const SHATTERING_PARTS = {
         'The landscape and the weeds are one photographic composite; the cracks are part of it. The weeds are photographed separately and set into the scene at a scale no real weed reaches, the poster’s point.',
         { facts: [
           ['Issued by', 'Ministry of Forests, Forest Practices Branch'],
-          ['Made', '31 March 2000, from the PDF (Acrobat Distiller 4.0)'],
+          ['File made', '31 March 2000 (Acrobat Distiller 4.0)'],
+          ['Printed', 'not established; the file’s date is not a printing date'],
           ['Sheet', '36 × 27 inches'],
           ['Photograph', 'one JPEG, 2106 × 1592 pixels, as in the PDF']
         ] },
         { note: `${SOURCE_NOTE} ${SUBSTITUTE_TYPE}` },
-        { h: 'In the same campaign' },
-        { links: [on(BEWARE, 'overview', 'The screen leaflet, 1999'), on(EXPLOSION, 'overview', 'The specimen poster, 2000')] }
+        'The management advice on the sheet is the campaign’s own, of its time; it is kept as printed, and is not current guidance.'
       ]
     },
     story: [
-      'A year after the leaflet, the campaign went to print. This poster puts four weeds into a mountain valley and breaks the picture like glass.',
+      'The posters’ files are dated a year after the leaflet’s. This one puts four weeds into a mountain valley and breaks the picture like glass.',
       'Read it left to right, the way the weeds stand in it.'
     ]
   },
@@ -444,13 +442,13 @@ const EXPLOSION_PARTS = {
         'The explosion is the weeds’ spread: slow, seed by seed, and everywhere. Seeds drift across the top of the sheet; every weed has a caption of what it looks like and how it travels.',
         { facts: [
           ['Issued by', 'Ministry of Forests, Forest Practices Branch'],
-          ['Made', '31 March 2000, from the PDF (Acrobat Distiller 4.0)'],
+          ['File made', '31 March 2000 (Acrobat Distiller 4.0)'],
+          ['Printed', 'not established; the file’s date is not a printing date'],
           ['Sheet', '22 × 36 inches'],
           ['Pictures', '20 JPEG images and one PNG, as in the PDF; the centre is one composite']
         ] },
         { note: `${SOURCE_NOTE} ${SUBSTITUTE_TYPE}` },
-        { h: 'In the same campaign' },
-        { links: [on(BEWARE, 'overview', 'The screen leaflet, 1999'), on(SHATTERING, 'overview', 'The landscape poster, 2000')] }
+        'The control methods and claims on the sheet are the campaign’s own, of its time; they are kept as printed, and are not current guidance.'
       ]
     },
     story: [

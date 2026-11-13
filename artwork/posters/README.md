@@ -17,12 +17,13 @@ palettes and validation records are here.
 | `wildlife-trees/` | Wildlife Trees — Ministry of Forests, Forest Practices Branch | `src/posters/wildlife-trees/wildlife-trees.svg`, a **lighter copy** (below) |
 | `noxious-weeds/` | Beware These Alien Invaders, Shattering the Environment, Explosion in Slow Motion — the Noxious Weeds campaign | `src/posters/noxious-weeds/`, **rebuilt from the PDFs** by `noxious-weeds/build.py` (below) |
 
-**The gamble badge is recoloured on the site.** The supplied badge, like the photograph it was
-rebuilt from, is deep blue (`#01375D`). The site sets every use of that blue — the field, the pips,
-the dice outlines and the knockout stroke on “with” — in DON’T DROP IT!’s forest green (`#003E2D`), so
-the two fire-prevention badges read as one series. The cream (`#F1D8AC`) is the badge’s own. The
-master here is left blue; to regenerate the green one, change `BLUE` in
-`dont-gamble-with-fire/source/rebuild_badge.py` or replace the colour in the SVG.
+**The gamble badge is shown in its printed blue.** The supplied badge, like the photograph it was
+rebuilt from, is deep blue (`#01375D`), and so is the site's copy. The Posters view also offers a
+“Series green” variation, which sets every use of that blue — the field, the pips, the dice outlines
+and the knockout stroke on “with” — in DON’T DROP IT!’s forest green (`#003E2D`). That is this site's
+adaptation, labelled as one wherever it is shown and in the exported file's name; no source shows the
+badge printed green, or establishes that the two badges were issued as a pair. The swap is made on
+the stage (`src/posters/stage/useColourSwap.js`), not in the drawing.
 
 **The Queen of Sidney decal's layers are renamed on the site.** The master names its ten layers with
 a leading number (`02-flag-and-pole`), which a CSS selector cannot name, and the Posters view finds a

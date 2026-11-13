@@ -588,6 +588,15 @@
 .pv-panel a.pv-link-card:hover { background: var(--glass-3); border-color: rgba(127, 196, 182, 0.5); transform: translateX(2px); }
 .pv-link-card b { font-size: 14px; color: var(--mint); }
 .pv-link-card span { font-size: 12.5px; color: var(--muted); line-height: 1.35; }
+/* Connections: each card leads with the relationship and what it rests on. */
+.pv-connections h4 { margin: 14px 0 0; font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); font-weight: 600; }
+.pv-connections-key { margin: 0 0 4px; }
+.pv-link-card .pv-connection-rel { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; font-size: 11.5px; letter-spacing: 0.02em; }
+.pv-connection-rel i { font-style: normal; padding: 1px 7px; border-radius: 999px; border: 1px solid var(--line-2); color: var(--text); font-size: 10.5px; }
+.pv-connection-rel i[data-certainty="thematic"], .pv-connection-rel i[data-certainty="inferred"] { border-style: dashed; color: var(--muted); }
+.pv-link-card.pv-link-plain { display: grid; gap: 2px; padding: 10px 12px; border: 1px dashed var(--line); border-radius: 12px; }
+.pv-variation { margin: 4px 0 14px; display: grid; gap: 6px; }
+.pv-variation p { margin: 0; }
 .pv-palette { list-style: none; margin: 10px 0 16px; padding: 0; display: grid; gap: 6px; }
 .pv-palette li { display: grid; grid-template-columns: 22px 1fr auto; align-items: center; gap: 10px; font-size: 13.5px; }
 .pv-palette-chip { width: 22px; height: 22px; border-radius: 6px; box-shadow: 0 0 0 1px var(--line-2); }

@@ -5,13 +5,15 @@
 // data panel per part (the coastal poster's live logo studio, say) adds a `useExtras` hook, which
 // can take over the frame, the stage's class, the panel and the export targets. One whose drawing
 // is too large to wait for (Wildlife Trees) supplies a light stand-in as its drawing and an
-// `upgrade` that resolves to the real one, which replaces it when it arrives.
+// `upgrade` that resolves to the real one, which replaces it when it arrives. One with named
+// recolourings (`variations`) gets a switch on its overview; the first is the drawing as it is.
 
 import { useCallback, useEffect, useMemo, useState } from 'react'
 import { Poster } from './stage/Poster.jsx'
 import { useMedia } from './hooks/useMedia.js'
 import { useKeyboardNav } from './hooks/useKeyboardNav.js'
 import { useTour } from './hooks/useTour.js'
+import { useColourSwap } from './stage/useColourSwap.js'
 import { Panel } from './ui/Panel.jsx'
 import { Dock } from './ui/Dock.jsx'
 import { DataPanel } from './ui/DataPanel.jsx'
@@ -38,7 +40,7 @@ const writeStory = (on) => {
 }
 
 export function PosterViewer({ meta, series, module, part, onPart, onExit, previous, next, shelf, backLabel = 'Posters', noun = 'poster' }) {
-  const { parts, order, regions, spotlight, svgRaw, prepare, upgrade } = module
+  const { parts, order, regions, spotlight, svgRaw, prepare, upgrade, variations } = module
   const useExtras = module.useExtras ?? noExtras
   const [svg, setSvg] = useState(null)
   // The drawing on the stage: the module's, or once it arrives the one its `upgrade` fetches.
@@ -108,6 +110,12 @@ export function PosterViewer({ meta, series, module, part, onPart, onExit, previ
 
   const extras = useExtras({ svg, part: current, select, openExport, tour })
 
+  // A named recolouring, if the poster offers any; the first is the drawing untouched.
+  const [variationId, setVariationId] = useState(null)
+  const variation = variations?.options.find(({ id }) => id === variationId) ?? variations?.options[0] ?? null
+  useColourSwap(svg, variation?.swap ?? null)
+  const variationControl = variations && { ...variations, value: variation.id, onChange: setVariationId }
+
   const frame = extras.frame ?? { box: parts[current].box, pad: parts[current].pad, initial: parts.overview.box }
   const panelOpen = telling || current !== 'overview' || aboutOpen
   const inset = { right: panelOpen && !narrow ? PANEL_INSET : 0, bottom: DOCK_HEIGHT + (panelOpen && narrow ? Math.round(innerHeight * SHEET_SHARE) : 0) }
@@ -115,7 +123,7 @@ export function PosterViewer({ meta, series, module, part, onPart, onExit, previ
   const regionList = useMemo(() => regions.map((id) => ({ id, ...parts[id] })), [regions, parts])
 
   const targets = [
-    posterTarget({ meta, noun, getSvg: () => posterSvgString(svg, meta), tag: extras.posterTag }),
+    posterTarget({ meta, noun, getSvg: () => posterSvgString(svg, meta), tag: extras.posterTag ?? (variation?.swap ? variation.id : null), ...(variation?.changed && !extras.posterTag ? { changed: variation.changed } : {}) }),
     ...(extras.targets ?? [])
   ]
 
@@ -131,7 +139,7 @@ export function PosterViewer({ meta, series, module, part, onPart, onExit, previ
         onLeave={() => tell(false)}
       />
     )
-    : extras.content ?? <DataPanel partId={current} parts={parts} order={order} onSelect={select} tour={tour} story={canTell ? () => tell(true) : null} />
+    : extras.content ?? <DataPanel partId={current} parts={parts} order={order} onSelect={select} tour={tour} story={canTell ? () => tell(true) : null} poster={meta.id} variation={variationControl} />
 
   return (
     <div className="pv" role="region" aria-label={`${meta.title}, interactive ${noun}`}>

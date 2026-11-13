@@ -12,6 +12,6 @@ const DRAWINGS = {
 
 export const loaderFor = (id) => async () => {
   const { default: svgRaw } = await DRAWINGS[id]()
-  const { parts, order, regions, spotlight } = FOREST_SERVICE_POSTERS[id]
-  return { svgRaw, parts, order, regions, spotlight }
+  const { parts, order, regions, spotlight, variations } = FOREST_SERVICE_POSTERS[id]
+  return { svgRaw, parts, order, regions, spotlight, variations }
 }

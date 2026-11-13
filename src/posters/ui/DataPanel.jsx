@@ -3,6 +3,8 @@
 
 import { SiteLink } from '../../site/navigation.jsx'
 import { Facts, Item, Reveal } from './Reveal.jsx'
+import { Connections } from './Connections.jsx'
+import { Segmented } from './Segmented.jsx'
 
 const Links = ({ links }) => (
   <Item as="ul" className="pv-links">
@@ -48,10 +50,11 @@ const Block = ({ block }) => {
 }
 
 /**
- * One part's panel. On the overview it also lists the parts, as a table of contents, and offers
- * the tour.
+ * One part's panel. On the overview it also lists the parts, as a table of contents, offers the
+ * tour and any named recolouring (`variation`), and ends with the piece's connections from the
+ * registry (`poster` is its id there).
  */
-export function DataPanel({ partId, parts, order, onSelect, tour, story }) {
+export function DataPanel({ partId, parts, order, onSelect, tour, story, poster, variation }) {
   const part = parts[partId]
   const { panel } = part
   const steps = order.filter((id) => id !== 'overview')
@@ -68,6 +71,12 @@ export function DataPanel({ partId, parts, order, onSelect, tour, story }) {
       {blocks.slice(0, tail).map((block, i) => <Block key={i} block={block} />)}
       {partId === 'overview' && (
         <>
+          {variation && (
+            <Item as="div" className="pv-variation">
+              <Segmented label={variation.label} options={variation.options.map(({ id, label }) => ({ value: id, label }))} value={variation.value} onChange={variation.onChange} />
+              <p className="pv-muted">{variation.options.find(({ id }) => id === variation.value)?.note}</p>
+            </Item>
+          )}
           {story && (
             <Item as="div" className="pv-row">
               <button type="button" className="pv-ghost pv-solid" onClick={story}>Read it as a story</button>
@@ -95,6 +104,7 @@ export function DataPanel({ partId, parts, order, onSelect, tour, story }) {
         </>
       )}
       {blocks.slice(tail).map((block, i) => <Block key={tail + i} block={block} />)}
+      {partId === 'overview' && poster && <Connections poster={poster} />}
     </Reveal>
   )
 }

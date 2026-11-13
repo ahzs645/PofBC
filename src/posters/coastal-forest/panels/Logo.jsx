@@ -19,10 +19,10 @@ export function Logo({ config, onConfig, live, onLive, onExport }) {
         <>
           <Item as="h3">What is in the crest</Item>
           <Item as="p">The whole coat of arms, simplified to one weight of line. A wapiti stag for Vancouver Island and a bighorn sheep for the mainland hold the shield, recalling the union of the two colonies in 1866. Above it a lion stands on a crown wearing a garland of Pacific dogwood. Underneath, the motto <i>Splendor sine occasu</i>: splendour without diminishment.</Item>
-          <Item as="p">Canon Arthur Beanlands of Christ Church Cathedral in Victoria designed the arms in the 1890s. The shield was granted by Edward VII in 1906, but the crest, supporters and motto you see here were used for decades before Elizabeth II formally granted the complete arms in 1987. On this poster they are still, strictly, unofficial.</Item>
+          <Item as="p">Canon Arthur Beanlands of Christ Church Cathedral in Victoria designed the arms in the 1890s. The shield was granted by Edward VII in 1906, but the crest, supporters and motto you see here were used for decades before Elizabeth II formally granted the complete arms in 1987, with additions to the design. The crest drawn here is the generator's, placed where the printed one sits; the printed emblem has not yet been compared with it detail by detail, so its features are not used here as evidence for or against a date before 1987.</Item>
 
           <Item as="h3">Dating the poster from the wording</Item>
-          <Item as="p">The ministry has been renamed many times, and the lockup says exactly <b>Ministry of Environment</b>, with no "the" and no "and Parks". Only one span of years fits.</Item>
+          <Item as="p">The ministry has been renamed many times, and the lockup says exactly <b>Ministry of Environment</b>, with no "the" and no "and Parks". Two spans of years fit: 1979 to 1986, and 1988 to 1991, when the ministry took the same name back. The wording alone cannot choose between them.</Item>
           <motion.ol className="pv-timeline" variants={item}>
             {MINISTRY_NAMES.map(({ year, text, here }) => (
               <motion.li key={year} className={here ? 'pv-here' : undefined} variants={item}>

@@ -36,7 +36,7 @@ export const SERIES = [
   {
     id: 'noxious-weeds',
     title: 'Noxious Weeds',
-    kind: 'Ministry of Forests campaign, 1999–2000',
+    kind: 'Ministry of Forests campaign · PDFs made in 1999 and 2000',
     posters: ['beware-these-alien-invaders', 'shattering-the-environment', 'explosion-in-slow-motion']
   },
   {
@@ -49,15 +49,18 @@ export const SERIES = [
 
 /**
  * Every poster's catalogue card. `view` is the drawing's own viewBox; `page` is the export page in
- * inches. `when` is the short answer to when it was printed; its panels give the evidence. A
- * drawing too large to fetch on spec says `prefetch: false`, and is loaded only when opened.
+ * inches. `when` is the short answer to when it was printed, worded no more firmly than the
+ * evidence in its panels: a date read off a file or a mark says so. `made` is what the drawing is
+ * made of — 'vector', or 'mixed' where it keeps photographs — and words its exports. A drawing too
+ * large to fetch on spec says `prefetch: false`, and is loaded only when opened.
  */
 export const POSTERS = {
   'coastal-forest': {
     id: 'coastal-forest',
     series: 'environment',
     title: 'Coastal Forest',
-    when: '1979–86',
+    when: '1979–86 or 1988–91, from its wording',
+    made: 'mixed',
     view: { x: 0, y: 0, w: 2400, h: 3600 },
     page: { w: 24, h: 36 },
     background: '#121411'
@@ -66,7 +69,8 @@ export const POSTERS = {
     id: 'reward-living-forest',
     series: 'forest-service',
     title: 'REWARD: A Living Forest',
-    when: 'Before about 1973',
+    when: 'Undated · evergreen-emblem design',
+    made: 'vector',
     view: { x: 80, y: 67, w: 930, h: 1308 },
     page: { w: 11.69, h: 16.45 },
     background: '#f4f1e8'
@@ -75,7 +79,8 @@ export const POSTERS = {
     id: 'enjoy-protect-forests',
     series: 'forest-service',
     title: 'Enjoy & Protect our Forests',
-    when: 'Before about 1973',
+    when: 'Undated · evergreen-emblem design',
+    made: 'vector',
     view: { x: 0, y: 0, w: 1122, h: 1402 },
     page: { w: 11.22, h: 14.02 },
     background: '#f6efdf'
@@ -85,6 +90,7 @@ export const POSTERS = {
     series: 'fire-prevention',
     title: 'DON’T DROP IT!',
     when: 'Undated',
+    made: 'vector',
     view: { x: 0, y: 0, w: 1254, h: 1254 },
     page: { w: 12, h: 12 },
     background: null
@@ -94,6 +100,7 @@ export const POSTERS = {
     series: 'fire-prevention',
     title: 'Don’t gamble with FIRE',
     when: 'Undated',
+    made: 'vector',
     view: { x: 0, y: 0, w: 1233, h: 1233 },
     page: { w: 12, h: 12 },
     background: null
@@ -102,7 +109,8 @@ export const POSTERS = {
     id: 'wildlife-trees',
     series: 'forest-practices',
     title: 'Wildlife Trees',
-    when: 'About 2001, from the artist’s mark',
+    when: 'Undated · the artist’s mark suggests 2001',
+    made: 'vector',
     view: { x: 0, y: 0, w: 1000, h: 2997.159090909091 },
     page: { w: 11.44, h: 34.288 },
     background: null,
@@ -112,7 +120,8 @@ export const POSTERS = {
     id: 'beware-these-alien-invaders',
     series: 'noxious-weeds',
     title: 'Beware These Alien Invaders',
-    when: 'March 1999, from the PDF',
+    when: 'Undated · PDF made March 1999',
+    made: 'mixed',
     view: { x: 0, y: 0, w: 684, h: 2483 },
     page: { w: 9.5, h: 34.486 },
     background: null
@@ -121,7 +130,8 @@ export const POSTERS = {
     id: 'shattering-the-environment',
     series: 'noxious-weeds',
     title: 'Shattering the Environment',
-    when: 'March 2000, from the PDF',
+    when: 'Undated · PDF made March 2000',
+    made: 'mixed',
     view: { x: 0, y: 0, w: 2592, h: 1944 },
     page: { w: 36, h: 27 },
     background: null
@@ -130,7 +140,8 @@ export const POSTERS = {
     id: 'explosion-in-slow-motion',
     series: 'noxious-weeds',
     title: 'Explosion in Slow Motion',
-    when: 'March 2000, from the PDF',
+    when: 'Undated · PDF made March 2000',
+    made: 'mixed',
     view: { x: 0, y: 0, w: 1584, h: 2592 },
     page: { w: 22, h: 36 },
     background: null
@@ -140,6 +151,7 @@ export const POSTERS = {
     series: 'bc-ferries',
     title: 'GO B.C. FERRIES',
     when: '1960–64, from its wording',
+    made: 'vector',
     view: { x: 0, y: 0, w: 1354, h: 1161 },
     page: { w: 5.4, h: 4.63 },
     background: null
@@ -149,6 +161,7 @@ export const POSTERS = {
     series: 'bc-ferries',
     title: 'Queen of Sidney',
     when: 'Undated',
+    made: 'vector',
     view: { x: 0, y: 0, w: 1305, h: 1206 },
     page: { w: 5.2, h: 4.81 },
     background: null

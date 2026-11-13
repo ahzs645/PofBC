@@ -53,7 +53,7 @@ export const FOREST_LOGOS = [
     comments: [
       'The British Columbia Forest Service’s mark before the oval designs: the mainland and its three largest islands in white, with a geometric evergreen standing over the mainland’s eastern edge, on a badge whose sides bow gently outward.',
       'It is believed to have been in use until about 1973. No source in this collection yet confirms that date, or when the emblem was introduced; it is recorded here as the working date, to be replaced when a dated document turns up.',
-      'In the emblem’s last years the Forest Service sat within the Department of Lands, Forests and Water Resources (1962–1976). The Department of Forests was separated from it in 1976, and the Ministry of Forests Act came into force on 1 January 1979.',
+      'In the emblem’s last years the Forest Service sat within the Department of Lands, Forests and Water Resources (1962–1975). The Department of Forests was separated from it in 1976, and the Ministry of Forests Act came into force on 1 January 1979.',
       'The artwork is a vector reconstruction from a supplied image: seven shapes (the badge, the mainland, three islands, the crown and the trunk) with flat colours chosen from the image, not verified ink specifications. The same drawing is used on both Forest Service posters in the Posters view.',
       'The black-and-white print reconstructions use one fourfold-symmetric superellipse frame (exponent 3.25, constant stroke), a province-and-tree silhouette with an unpainted evergreen cutout, and two detached coastal island marks. Both prints show only two identifiable detached island components; the earlier coloured reconstruction has three. A separately labelled three-island variation is offered for comparing these distinct renderings, not as proof of a missing historical detail. The revised two-island geometry gives about 92.4% and 90.8% full-image pixel intersection-over-union against the two prints after size registration; those scores remain sensitive to scans and are not evidence of official construction.',
       'An undated newspaper clipping headed “Identity crisis for Socreds?” compares a Social Credit League provincial-profile emblem to the B.C. Forest Service symbol without its tree. This is historical evidence of a visual comparison, not proof of shared artwork, authorization, or the Forest Service logo’s introduction date.'
@@ -120,10 +120,10 @@ export const FOREST_LOGOS = [
     comments: [
       '“FOREST SERVICE” and “BRITISH COLUMBIA” frame a single conifer and mountain landscape. Diamond separators and heavier lettering distinguish this design from the two wildlife ovals.',
       'Forest Oval retains a supplied vector reference for this tree oval. PofBC’s BCTS research also records a related round Forest Service tree badge on archived sites from 2005 to 2017. That related badge does not establish the introduction or retirement of this exact oval.',
-      'It is printed, in one green beside the Ministry of Forests’ arms signature, on the Forest Practices Branch’s Wildlife Trees poster, whose artist’s mark reads “d.g.01”. That places the oval in use in about 2001; it does not date when it was introduced.'
+      'It is printed, in one green beside the Ministry of Forests’ arms signature, on the Forest Practices Branch’s Wildlife Trees poster, whose artist’s mark reads “d.g.01”. If that is a year, the oval was in use in about 2001; it is an inference, and it does not date when the oval was introduced.'
     ],
     seenOn: [
-      onPoster('wildlife-trees', 'Wildlife Trees', 'Forest Practices Branch poster, about 2001 · bottom right, beside the ministry’s signature', 'oval')
+      onPoster('wildlife-trees', 'Wildlife Trees', 'Forest Practices Branch poster, undated (its artist’s mark suggests 2001) · bottom right, beside the ministry’s signature', 'oval')
     ],
     sources: [
       forestOval,

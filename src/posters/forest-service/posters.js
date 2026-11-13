@@ -6,7 +6,13 @@
 // is found by the ink of its `layer` rather than by its box, for badges whose parts overlap.
 //
 // Panels are blocks: a string is a paragraph, and { h }, { facts }, { note }, { palette } and
-// { links } are what they say. A link's `to` is a place on the site (see site/navigation.jsx).
+// { links } are what they say. A link's `to` is a place on the site (see site/navigation.jsx). What a
+// piece is connected to (its issuer, marks, related objects) is not in its panels: that is the
+// registry, ../connections.js, which the overview lists.
+//
+// A poster may offer `variations`: named recolourings of the drawing, the first being the drawing as
+// it is. Each other one swaps colours ([from, to] pairs) on the stage and in the export, and says
+// plainly what it is.
 
 import { POSTERS } from '../catalogue.js'
 
@@ -17,6 +23,11 @@ const EMBLEM_LINK = {
   note: 'Internal Logos · Forests: its colourways, history and the other posters it is on',
   to: { view: 'internal', internal: 'forests', 'internal-logo': 'forest-service-emblem' }
 }
+const EMBLEM_PATCH_LINK = {
+  label: 'The same emblem on a cloth patch',
+  note: 'Patches · S48-O01: the evergreen emblem as a cloth square',
+  to: { view: 'patches', patch: 'S48-O01' }
+}
 const OVALS_LINK = {
   label: 'The Forest Service’s later marks',
   note: 'Internal Logos · Forests: the tree oval and the wildlife ovals',
@@ -24,7 +35,7 @@ const OVALS_LINK = {
 }
 const DEPARTMENT_LINK = {
   label: 'Department of Lands, Forests and Water Resources',
-  note: 'Government · 1970: the department the Forest Service sat in from 1962 to 1976',
+  note: 'Government · 1970: the department the Forest Service sat in from 1962 to 1975',
   to: { view: 'government', year: 1970, node: 'department-of-lands-forests-and-water-resources-1962' }
 }
 const MINISTRY_OF_FORESTS_LINK = {
@@ -74,8 +85,7 @@ export const DONT_DROP_IT = {
             { name: 'Footer ivory', value: '#F1F0DE' }
           ] },
           { note: 'The colours were chosen from the photograph, not taken from a verified ink specification. Its texture, irregular edge and ash speckle were cleaned up rather than copied.' },
-          { h: 'In the same series' },
-          { links: [poster('dont-gamble-with-fire', 'overview', 'The other badge, set in this one’s green')] }
+          'The same instruction could be given many ways. Beside the dice of Don’t gamble with FIRE and the bargain of REWARD, this is the bluntest: name the act, and show the object.'
         ]
       }
     },
@@ -159,6 +169,19 @@ export const DONT_DROP_IT = {
 export const DONT_GAMBLE = {
   id: 'dont-gamble-with-fire',
   spotlight: { keep: ['field'] },
+  variations: {
+    label: 'Colour',
+    options: [
+      { id: 'printed', label: 'Printed blue', note: 'As photographed: deep blue, #01375D.' },
+      {
+        id: 'series-green',
+        label: 'Series green',
+        note: 'An adaptation by this site, not a recorded printing: the blue set in DON’T DROP IT!’s green, #003E2D.',
+        changed: 'in the site’s green adaptation',
+        swap: [['#01375D', '#003E2D']]
+      }
+    ]
+  },
   regions: ['headline', 'dice', 'fire', 'caption'],
   parts: {
     overview: {
@@ -178,12 +201,11 @@ export const DONT_GAMBLE = {
             ['Drawing', '1233 × 1233 units; 43 paths, 10 circles, 12 ellipses']
           ] },
           { palette: [
-            { name: 'Forest green (series)', value: '#003E2D' },
+            { name: 'Deep blue', value: '#01375D' },
             { name: 'Warm cream', value: '#F1D8AC' }
           ] },
-          { note: 'Printed blue. The photographed badge and its reconstruction are a deep blue (#01375D); here the field, the pips and the outline of “with” are set in DON’T DROP IT!’s forest green so the two badges read as one series. The cream is the badge’s own.' },
-          { h: 'In the same series' },
-          { links: [poster('dont-drop-it', 'overview', 'The green this one now shares')] }
+          { note: 'Shown in its printed blue. The photographed badge is a deep blue, and so is the drawing. “Series green” below is this site’s adaptation, setting the blue in DON’T DROP IT!’s forest green; no source shows the badge printed that way, or establishes that the two were issued as a pair.' },
+          'Where DON’T DROP IT! names the act, this badge makes carelessness a bet: the dice are already in the air.'
         ]
       }
     },
@@ -283,11 +305,12 @@ export const DONT_GAMBLE = {
 const EMBLEM_PANEL = (others) => ({
   eyebrow: 'The emblem',
   heading: 'The evergreen emblem',
-  em: 'before about 1973',
+  em: 'undated',
   lede: 'A rounded green badge holding a white silhouette of British Columbia, its three largest islands, and a dark evergreen standing over the mainland’s eastern edge.',
   blocks: [
     'This was the Forest Service’s mark before the oval designs. It is the same drawing on every poster in this series: one vector reconstruction, shared, rather than a fresh copy for each.',
-    'It also dates the poster. With no printed date, the emblem is the best evidence for when this was issued: before about 1973, the date the emblem is believed to have been replaced, which has not yet been confirmed by a source.',
+    'It does not yet date the poster. The working assumption is that the oval designs replaced this emblem in about 1973, which would put the poster before then; no source in this collection confirms that date, or says when the emblem was introduced. Until one does, the poster is undated.',
+    'The same mark was also made in cloth: the patch collection has it as a square patch, S48-O01. That shows the emblem in use beyond print; it does not show that the patch and the posters were issued together.',
     { facts: [
       ['Badge', '#278F38'],
       ['Map and islands', '#FFFFFF'],
@@ -295,7 +318,7 @@ const EMBLEM_PANEL = (others) => ({
       ['Drawing', 'badge, mainland, three islands, crown and trunk']
     ] },
     { h: 'See it as a logo' },
-    { links: [EMBLEM_LINK, ...others, OVALS_LINK] }
+    { links: [EMBLEM_LINK, ...others, EMBLEM_PATCH_LINK, OVALS_LINK] }
   ]
 })
 
@@ -314,16 +337,15 @@ export const REWARD = {
         em: 'a living forest',
         lede: 'It reads like a wanted poster, and the reward is the forest itself: a bird and a bear under blue boughs, for anyone who observes the campfire regulations.',
         blocks: [
+          'The Forest Service turns a rule into something worth protecting. The animals are the argument: they make the benefit of a careful campfire visible, where the fire badges show only the danger.',
           'Navy lettering on warm paper, with the illustration in flat blues, yellows and lime inside an open rectangular frame that the bear’s paw and the boughs break out of.',
           { facts: [
             ['Issued by', 'British Columbia Forest Service'],
-            ['Date', 'not printed; the emblem places it before about 1973'],
-            ['Rebuilt from', 'one supplied photograph'],
-            ['Drawing', '347 paths, no images; 297 × 417.7 mm']
+            ['Date', 'not established; “before about 1973” is a working hypothesis from the emblem'],
+            ['Rebuilt from', 'two supplied photographs of the print'],
+            ['Drawing', '348 paths, no images; 297 × 417.7 mm']
           ] },
-          { note: 'An interpretive reconstruction: paper damage, uneven light and print noise were left out, and fine feather, bark and face details are simplified. The emblem is the shared emblem drawing in its full colours; the photographed print shows it in a lighter lime.' },
-          { h: 'In the same series' },
-          { links: [poster('enjoy-protect-forests', 'overview', 'The other poster with the evergreen emblem')] }
+          { note: 'An interpretive reconstruction: paper damage, uneven light and print noise were left out, and fine feather, bark and face details are simplified. The bird’s tail and the bear’s eyes, mask, nose and muzzle were redrawn against two small photographs of the print (213 × 292 and 308 × 445 pixels); those support the tail’s segmented rhythm and a more compact face, not the exact edge of each feather or the small planes of the nose. The emblem is the shared emblem drawing in its full colours; the photographed print shows it in a lighter lime.' }
         ]
       }
     },
@@ -363,7 +385,7 @@ export const REWARD = {
           'Everything is flat colour: separate panels for the plumage and foliage, designed bark ribbons clipped to the trunk, and needles clipped to each blade of bough. A few bough facets use partial opacity; there are no gradients.',
           { facts: [
             ['Layers', 'frame, boughs, trunk, bird, bear, foliage, paw'],
-            ['Paths', '265 in the illustration alone'],
+            ['Paths', '266 in the illustration alone'],
             ['Method', 'hand-authored Bézier curves; no tracing']
           ] }
         ]
@@ -383,6 +405,7 @@ export const REWARD = {
           'Its feathers are separate inlaid panels (tail, wing and shoulder), so each colour is its own shape rather than a stroke over a fill. The eye is geometric: concentric circles.',
           { facts: [
             ['Groups', 'tail feathers, feet, shoulder markings, wing panels, eye'],
+            ['Tail', '15 short, capped panels in staggered groups; the count is the drawing’s, not a claim about the print'],
             ['Simplified', 'the finest feather detail']
           ] }
         ]
@@ -402,7 +425,8 @@ export const REWARD = {
           'The foreleg is a layer of its own, drawn last, so the paw sits in front of the foliage and the frame: the one place the illustration steps out of its box.',
           { facts: [
             ['Layers', 'bear (head, mask, muzzle), foreleg and paw'],
-            ['Order', 'paw above the foreground foliage']
+            ['Order', 'paw above the foreground foliage'],
+            ['Face', 'eyes, mask, nose and muzzle fitted together to the photographs; the pale spot on the bridge of the nose is the least certain detail']
           ] }
         ]
       }
@@ -438,7 +462,7 @@ export const REWARD = {
         heading: 'British Columbia Forest Service',
         lede: 'The poster is signed by the service, set in full on one line beside its emblem.',
         blocks: [
-          'Through the years of this emblem the Forest Service was a branch within a provincial department rather than a ministry of its own. The Department of Forests was separated from the Department of Lands in 1976, and the Ministry of Forests Act came into force on 1 January 1979.',
+          'The Forest Service was a branch within a provincial department rather than a ministry of its own: the Department of Lands, Forests and Water Resources from 1962 to 1975, then a Department of Forests. The Ministry of Forests Act came into force on 1 January 1979. Which of those years this poster belongs to is not established.',
           { h: 'Where the service sat' },
           { links: [DEPARTMENT_LINK, MINISTRY_OF_FORESTS_LINK] },
           { sources: [TIMELINE_SOURCE] }
@@ -447,7 +471,7 @@ export const REWARD = {
     },
     emblem: {
       label: 'Emblem',
-      hint: 'the evergreen emblem, before about 1973',
+      hint: 'the evergreen emblem, undated',
       box: { x: 831, y: 1221, w: 112, h: 113 },
       pad: 0.5,
       layer: '#forest-service-emblem',
@@ -473,16 +497,14 @@ export const ENJOY_PROTECT = {
         heading: 'Enjoy & Protect our Forests',
         lede: 'A rounded cream panel in a tan border: a smiling evergreen with its branch around a red-hatted figure, red flowers at their feet, and the service’s name and emblem along the bottom.',
         blocks: [
-          'Where REWARD bargains, this one simply asks: two verbs, the friendlier one first.',
+          'Where REWARD bargains, this one simply asks: two verbs, the friendlier one first. The tree’s branch around the figure’s shoulders makes the invitation literal: enjoy the forest, and look after it. Neither the tree nor the figure is named on the sign, and neither is named here.',
           { facts: [
             ['Issued by', 'British Columbia Forest Service'],
-            ['Date', 'not printed; the emblem places it before about 1973'],
+            ['Date', 'not established; “before about 1973” is a working hypothesis from the emblem'],
             ['Rebuilt from', 'one supplied photograph'],
             ['Drawing', '1122 × 1402 units; 78 paths, six named layers']
           ] },
-          { note: 'A visual remake: the source texture, irregular edge and shading are replaced by flat colour and smooth curves. The face, the small map and the lettering are reconstructed approximations.' },
-          { h: 'In the same series' },
-          { links: [poster('reward-living-forest', 'overview', 'The campfire poster with the same emblem')] }
+          { note: 'A visual remake: the source texture, irregular edge and shading are replaced by flat colour and smooth curves. The face, the small map and the lettering are reconstructed approximations.' }
         ]
       }
     },
@@ -563,7 +585,7 @@ export const ENJOY_PROTECT = {
     },
     emblem: {
       label: 'Emblem',
-      hint: 'the evergreen emblem, before about 1973',
+      hint: 'the evergreen emblem, undated',
       box: { x: 896, y: 1171, w: 130, h: 131 },
       pad: 0.5,
       layer: '#forest-service-emblem',

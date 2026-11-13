@@ -4,7 +4,7 @@
 // svg2pdf.js, loaded on demand since most visits never export.
 
 export const FORMATS = {
-  svg: { label: 'SVG', ext: 'svg', mime: 'image/svg+xml', vector: true, note: 'Vector. Self-contained; the photo is embedded.' },
+  svg: { label: 'SVG', ext: 'svg', mime: 'image/svg+xml', vector: true, note: 'Self-contained; any photographs are embedded.' },
   pdf: { label: 'PDF', ext: 'pdf', mime: 'application/pdf', vector: true, note: 'Vector, page sized to the artwork.' },
   png: { label: 'PNG', ext: 'png', mime: 'image/png', alpha: true, note: 'Lossless raster.' },
   webp: { label: 'WebP', ext: 'webp', mime: 'image/webp', alpha: true, note: 'Small raster, transparency kept.' },

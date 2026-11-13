@@ -4,6 +4,7 @@ import mountainRidge from '../../vendor/forestoval/shared-primitives/bc-ministry
 import mountainBase from '../../vendor/forestoval/shared-primitives/bc-ministry-v5/scenes/tree-parts/mountain-base.svg?raw'
 import { FOREST_LOGOS, variantsFor } from './forestLogos.js'
 import { SiteLink } from '../site/navigation.jsx'
+import { objectsForLogo } from '../posters/connections.js'
 import './internal.css'
 
 // Forest Oval's single-colour recreation retains both mountain edges as lines.
@@ -168,11 +169,18 @@ const DrawingLogo = ({ artwork, recolour, padding, name, decorative = false, bac
   )
 }
 
+// The patches and badges that carry the mark come from the posters' connection registry, so a
+// poster, its mark and the cloth version of that mark all name each other from one record.
 const PosterLinks = ({ logo }) => (
   <ul className="internal-logos__posters">
     {logo.seenOn.map((entry) => (
       <li key={entry.to.poster}>
         <SiteLink to={entry.to}><b>{entry.title} <span aria-hidden="true">→</span></b><span>{entry.note}</span></SiteLink>
+      </li>
+    ))}
+    {objectsForLogo(logo.id).map((entry) => (
+      <li key={entry.to.patch}>
+        <SiteLink to={entry.to}><b>{entry.label} <span aria-hidden="true">→</span></b><span>{entry.note}</span></SiteLink>
       </li>
     ))}
   </ul>
@@ -199,7 +207,7 @@ const LogoComments = ({ logo }) => (
     )}
     {logo.seenOn && (
       <>
-        <h4>On the posters</h4>
+        <h4>On the posters, and as an object</h4>
         <PosterLinks logo={logo} />
       </>
     )}
@@ -310,7 +318,7 @@ export const InternalLogosView = () => {
           )}
           {current.seenOn && (
             <>
-              <h3 className="internal-logos__section-title">On the posters</h3>
+              <h3 className="internal-logos__section-title">On the posters, and as an object</h3>
               <p className="internal-logos__footnote">Open a poster at this mark; every other part of the poster is clickable too.</p>
               <PosterLinks logo={current} />
             </>

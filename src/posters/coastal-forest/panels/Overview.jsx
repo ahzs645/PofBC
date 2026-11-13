@@ -1,5 +1,6 @@
 import { ORDER, PARTS } from '../parts.js'
 import { Facts, Item, Reveal } from '../../ui/Reveal.jsx'
+import { Connections } from '../../ui/Connections.jsx'
 import referencePoster from '../reference_poster.jpg'
 
 export function Overview({ onSelect, onTour, touring }) {
@@ -7,7 +8,7 @@ export function Overview({ onSelect, onTour, touring }) {
     <Reveal>
       <Item as="p" className="pv-eyebrow">About this piece</Item>
       <Item as="h2">A poster, and where each piece came from</Item>
-      <Item as="p" className="pv-lede">A vector reconstruction of a framed print, made from one photograph of it. Every part of the page has its own history: the crest the Province used before its rising-sun mark, a swash-alphabet Bookman rebuilt letter by letter, a transcription of copy too small to read with certainty.</Item>
+      <Item as="p" className="pv-lede">Its copy presents the coastal forest as four things at once: timber, wildlife habitat, a place to be in, and the source of fish-bearing water. A vector reconstruction of a framed print, made from one photograph of it. Every part of the page has its own history: the crest the Province used before its rising-sun mark, a swash-alphabet Bookman rebuilt letter by letter, a transcription of copy too small to read with certainty.</Item>
       <Item as="div" className="pv-row">
         <button type="button" className="pv-ghost pv-solid" onClick={onTour}>{touring ? 'Stop the tour' : 'Play the tour'}</button>
         <span className="pv-muted">12 seconds a part, hands free</span>
@@ -28,12 +29,14 @@ export function Overview({ onSelect, onTour, touring }) {
         ['Page', '24 × 36 in, assumed'],
         ['Units', '2400 × 3600'],
         ['Ink', '#eee3c0 on #121411'],
-        ['Dated by its logo', '1979 – 1986']
+        ['Date', 'not printed; its wording fits 1979–86 or 1988–91'],
+        ['Photograph', 'the supplied image, embedded as it is; the rest is vector']
       ]} />
       <Item as="figure" className="pv-figure">
         <img src={referencePoster} alt="The framed original poster, photographed under glass with reflections of ceiling lights" width="1000" height="1333" loading="lazy" />
         <figcaption>The framed original, and the source for everything but the photo credit, which only became readable from a separate close-up. Reflections, perspective and small print are why some readings are still marked tentative.</figcaption>
       </Item>
+      <Connections poster="coastal-forest" />
     </Reveal>
   )
 }

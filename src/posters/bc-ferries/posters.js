@@ -23,12 +23,6 @@ const FERRY_AUTHORITY_LINK = {
   note: 'Government · 1970: the ferries’ own authority, from 1 April 1964',
   to: { view: 'government', year: 1970, node: 'bc-ferry-authority' }
 }
-const poster = (id, part, note) => ({
-  label: POSTERS[id].title,
-  note,
-  to: { view: 'posters', poster: id, part }
-})
-
 const box = (id) => POSTERS[id].view
 
 // ── GO B.C. FERRIES ─────────────────────────────────────────────────────────────────────────────
@@ -50,7 +44,7 @@ export const GO_BC_FERRIES = {
           'A window sticker for a car that had made the crossing. It sells the service the way a resort sticker sells a place: the routes are destinations, and the ferry is half hidden by the gull.',
           { facts: [
             ['Issued by', 'British Columbia Toll Authority Ferry Systems, from the subtitle'],
-            ['Date', 'not established; the wording places it in 1960–64'],
+            ['Date', 'not established; the Toll Authority wording belongs to 1960–64, which places the design, not this printing'],
             ['Rebuilt from', 'one supplied picture of the sticker, 1354 × 1161 pixels'],
             ['Drawing', '145 paths, 23 rectangles, 15 circles and 2 ellipses; all lettering outlined']
           ] },
@@ -62,8 +56,7 @@ export const GO_BC_FERRIES = {
             { name: 'Gold edge', value: '#EFB247' }
           ] },
           { note: 'The colours are flat approximations of the picture’s, not verified ink values. Its paper grain, tonal variation and fuzzy edge were left out, and the outline was regularised.' },
-          { h: 'Also a decal' },
-          { links: [poster('queen-of-sidney', 'overview', 'A ship’s own sticker, from the same fleet'), LOGOS_LINK] }
+          'The destinations round the rim do the selling: a transport service presented as an invitation to explore the coast.'
         ]
       }
     },
@@ -233,8 +226,7 @@ export const QUEEN_OF_SIDNEY = {
             { name: 'Warm white', value: '#FFFDF7' }
           ] },
           { note: 'The colours are clean approximations of the picture’s, not recovered ink specifications. Its paper grain, faded ink, wear and drop shadow were left out, and the wheel and the sticker’s edge were regularised.' },
-          { h: 'Also a decal' },
-          { links: [poster('go-bc-ferries', 'overview', 'The Toll Authority’s sticker for the whole system'), LOGOS_LINK] }
+          'A particular ship has become the souvenir: the vessel stands for the fleet.'
         ]
       }
     },
@@ -250,7 +242,7 @@ export const QUEEN_OF_SIDNEY = {
         em: 'either side of the flag',
         lede: 'The system’s name in plain capitals across the top, split by the flagpole.',
         blocks: [
-          'It names British Columbia Ferries, not the Toll Authority. That points to a sticker of after 1 April 1964, when the ferries passed to an authority of their own, though the wording alone does not establish a date.',
+          'It names British Columbia Ferries, not the Toll Authority. The ferries passed to an authority of their own on 1 April 1964, but the short name is a brand, used loosely; it does not say which body printed the sticker, or when. The decal stays undated until the ship’s naming, livery or a dated listing of the souvenir settles it.',
           'The letters are outlined Nimbus Sans Regular, fitted one by one to the picture: a substitute, not a claim about the original face.',
           { h: 'The authority' },
           { links: [FERRY_AUTHORITY_LINK, TOLL_AUTHORITY_LINK] }
