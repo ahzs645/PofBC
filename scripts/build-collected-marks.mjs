@@ -416,12 +416,13 @@ for (const bodyId of Object.keys(railway.bodyUpdates)) {
   if (!bodyIds.has(bodyId)) throw new Error(`Unknown railway body update: ${bodyId}`)
 }
 
-// Dates of the files each kept file stands for, as further sightings of its design.
+// Dates of the files each kept file stands for, as further sightings of its design, after any
+// sightings its register records directly (a dated specimen held only as a citation, not a file).
 const alsoSeenOf = (all, id) => all.filter((asset) => SUPERSEDED[asset.id] === id && asset.sourceDate)
   .map((asset) => ({ date: asset.sourceDate, source: asset.sourcePage || asset.sourceUrl || null }))
 const kept = (assets) => assets.filter((asset) => !SUPERSEDED[asset.id])
   .map((asset) => {
-    const alsoSeen = alsoSeenOf(assets, asset.id)
+    const alsoSeen = [...(asset.alsoSeen ?? []), ...alsoSeenOf(assets, asset.id)]
     return alsoSeen.length ? { ...asset, alsoSeen } : asset
   })
 const finished = (asset) => ({
