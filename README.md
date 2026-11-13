@@ -617,8 +617,8 @@ loading and viewer, given a catalogue. A sign is added as a poster is: its drawi
 ## Patches
 
 **Patches** in the title menu (`?view=patches`) is the patch library of
-[Patcher](https://github.com/ahzs645/patcher), a git submodule at `vendor/patcher`. It holds 132
-patches and emblems from the BC Forestry Patch Atlas, grouped by organization under sectors. The atlas
+[Patcher](https://github.com/ahzs645/patcher), a git submodule at `vendor/patcher`. It holds 154
+patch and emblem variants in 126 catalogue cards, grouped by organization under sectors. The atlas
 lists a design once per photograph it appears in; Patcher merges those into one patch (the Parks scenic
 arch, seen in five photographs, is one card), and the viewer links every photograph. Some designs use a better drawing supplied to Patcher in
 place of the atlas's (the Parks Branch elk roundel, the Recreation and Conservation arch, the scenic
@@ -663,6 +663,21 @@ and checks the result against the atlas's SHA-256. `vite.config.js` aliases `pat
 submodule's TypeScript source, which Vite compiles together with Patcher's digitizing worker.
 `src/patches/patches.test.js` checks that the submodule is checked out, that its library hangs
 together, and that every patch joins back into the atlas's drawing (or the supplied one) byte for byte.
+
+The catalogue also offers **Group by → Template family** and an independent template filter. The
+curated Patcher metadata assigns 98 designs across both collections to 26 families; unrelated or
+unclassified designs remain under Other designs. Membership groups related layouts, without merging
+wording, dates, specimen numbers or source evidence. Fifteen provincial ministry shields can therefore
+be compared across five organizations while keeping their individual records. The URL retains
+`group=template`, `family`, `org` and `q` through opening a design and using Back/Forward. Search includes
+old atlas aliases and opens the matching variant, and explicitly generated colourways are labelled.
+
+The gallery loads metadata and thumbnails first and loads the viewer, digitizer and exports when a
+design opens. Patcher keeps recently joined SVG text in a bounded 16 MiB cache, reusing a verified drawing
+on repeat visits. These improve browsing; the existing exact shared-artwork storage remains unchanged.
+The [collection audit](research/patches/catalogue-audit-2026-11-13/README.md) records missing-design leads,
+specimen corroborations, template decisions and measured storage. New candidates remain research
+records until their source and drawing can be reviewed.
 
 To take a newer Patcher:
 

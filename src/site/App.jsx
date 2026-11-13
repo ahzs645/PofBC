@@ -146,7 +146,7 @@ const initialView = () => {
  */
 const writeView = (view) => {
   const url = salaryPlaceUrl(globalThis.location.href, {})
-  for (const key of ['view', 'year', 'node', 'logos', 'mark', 'internal', 'internal-logo', 'poster', 'sign', 'part', 'guide', 'page', 'org', 'patch', 'area', 'chapter', 'story']) url.searchParams.delete(key)
+  for (const key of ['view', 'year', 'node', 'logos', 'mark', 'internal', 'internal-logo', 'poster', 'sign', 'part', 'guide', 'page', 'org', 'patch', 'group', 'family', 'area', 'chapter', 'story']) url.searchParams.delete(key)
   if (view !== 'generator') url.searchParams.set('view', view)
   writeHistory(url)
 }

@@ -1,0 +1,1589 @@
+{
+  "schemaVersion": 1,
+  "reviewed": "2026-11-13",
+  "baseline": {
+    "repository": "ahzs645/patcher",
+    "commit": "68f145d3f91fd3d915b0810b4faf19dd81b1e7e3",
+    "designs": 168,
+    "patches": 154,
+    "badges": 14,
+    "organizations": 22
+  },
+  "scope": "Evidence-backed additions and a bounded follow-up queue. Not an exhaustive list of every BC patch ever issued. No candidate is production-ready artwork.",
+  "statusDefinitions": {
+    "documented-missing": "Physical museum object or official agency publication establishes a design absent from baseline labels/organizations; exact reconstruction still needs image review.",
+    "collector-candidate": "Collector/dealer/photographer evidence identifies a likely missing design; issue authenticity and dates remain unverified.",
+    "documented-needs-comparison": "A physical uniform component is documented, but its exact design, wearing agency or relationship to baseline remains unresolved; image-level and attribution review required.",
+    "documented-needs-image": "Agency confirms patch existence; specific visual specimen still required.",
+    "held-unverified-issue": "Object exists but evidence does not establish official operational issue.",
+    "held-printed-design-only": "Printed emblem is documented but a physical cloth version is not.",
+    "held-planned-only": "Source describes future development, not confirmed production."
+  },
+  "sources": [
+    {
+      "id": "pemberton-bcfs",
+      "title": "Pemberton Museum: BCFS Patches, 014.06.11 abcdefghijklmn",
+      "url": "https://www.pembertonmuseum.org/objects/bcfs-patches/",
+      "kind": "museum-object-record",
+      "accessed": "2026-11-13",
+      "note": "Fourteen physical objects, including duplicates and one plastic pin. Accession suffixes identify specimens; the object date is blank.",
+      "assetDownloadStatus": "not-downloaded-to-project",
+      "rightsReview": "Required before importing or reproducing source imagery; public access is not a reuse license."
+    },
+    {
+      "id": "ingenium-aviation",
+      "title": "Ingenium 2003.0257.001: Forest Service British Columbia Aviation",
+      "url": "https://collection.ingenium.ca/en/id/2003.0257.001/",
+      "kind": "museum-object-record",
+      "accessed": "2026-11-13",
+      "note": "Catalogue gives circa 2003, unknown manufacturer/period, fabric and embroidery; dimensions explicitly describe storage size, not exact object measurements.",
+      "assetDownloadStatus": "not-downloaded-to-project",
+      "rightsReview": "Required before importing or reproducing source imagery; public access is not a reuse license."
+    },
+    {
+      "id": "ingenium-parattack",
+      "title": "Ingenium 2005.0019.001: Parattack fabric badge",
+      "url": "https://collection.ingenium.ca/en/id/2005.0019.001/",
+      "kind": "museum-object-record",
+      "accessed": "2026-11-13",
+      "note": "Unknown date. Adjacent 2005.0020.001 is a decal and must not be counted as a second cloth patch.",
+      "assetDownloadStatus": "not-downloaded-to-project",
+      "rightsReview": "Required before importing or reproducing source imagery; public access is not a reuse license."
+    },
+    {
+      "id": "ingenium-forest",
+      "title": "Ingenium 2003.0255.001: Forest Service British Columbia",
+      "url": "https://collection.ingenium.ca/en/id/2003.0255.001/",
+      "kind": "museum-object-record",
+      "accessed": "2026-11-13",
+      "note": "",
+      "assetDownloadStatus": "not-downloaded-to-project",
+      "rightsReview": "Required before importing or reproducing source imagery; public access is not a reuse license."
+    },
+    {
+      "id": "ingenium-fire-control",
+      "title": "Ingenium 2003.0256.001: Fire Control Forest Service British Columbia",
+      "url": "https://collection.ingenium.ca/en/id/2003.0256.001/",
+      "kind": "museum-object-record",
+      "accessed": "2026-11-13",
+      "note": "",
+      "assetDownloadStatus": "not-downloaded-to-project",
+      "rightsReview": "Required before importing or reproducing source imagery; public access is not a reuse license."
+    },
+    {
+      "id": "ingenium-airtanker",
+      "title": "Ingenium 2003.0258.001: Forest Service British Columbia Airtanker Operations",
+      "url": "https://collection.ingenium.ca/en/id/2003.0258.001/",
+      "kind": "museum-object-record",
+      "accessed": "2026-11-13",
+      "note": "",
+      "assetDownloadStatus": "not-downloaded-to-project",
+      "rightsReview": "Required before importing or reproducing source imagery; public access is not a reuse license."
+    },
+    {
+      "id": "bcss-heraldry",
+      "title": "Canadian Heraldic Authority: BC Sheriff Service grant",
+      "url": "https://www.gg.ca/en/heraldry/public-register/project/2209",
+      "kind": "official-heraldic-record",
+      "accessed": "2026-11-13",
+      "note": "Grant dated 2011-08-15. Establishes official devices, not a particular cloth manufacturing pattern.",
+      "assetDownloadStatus": "not-downloaded-to-project",
+      "rightsReview": "Required before importing or reproducing source imagery; public access is not a reuse license."
+    },
+    {
+      "id": "bcss-physical",
+      "title": "BCSS shoulder flash 2.jpg",
+      "url": "https://commons.wikimedia.org/wiki/File:BCSS_shoulder_flash_2.jpg",
+      "kind": "photographer-owned-specimen-image",
+      "accessed": "2026-11-13",
+      "note": "Historicalunit1857, 2024-02-19; 3024 × 3444 photograph. Do not substitute BCSS_Shoulder_Flash.png, which declares itself a digital interpretation.",
+      "assetDownloadStatus": "not-downloaded-to-project",
+      "rightsReview": "Required before importing or reproducing source imagery; public access is not a reuse license."
+    },
+    {
+      "id": "bcss-old-physical",
+      "title": "BC Sheriff yellow shield patch.jpg",
+      "url": "https://commons.wikimedia.org/wiki/File:BC_Sheriff_yellow_shield_patch.jpg",
+      "kind": "photographer-owned-specimen-image",
+      "accessed": "2026-11-13",
+      "note": "Ominae, 2025-07-11. Described as no longer in use. Compare with existing S56 sheriff designs before making a new record.",
+      "assetDownloadStatus": "not-downloaded-to-project",
+      "rightsReview": "Required before importing or reproducing source imagery; public access is not a reuse license."
+    },
+    {
+      "id": "vancouver-museum",
+      "title": "Museum of Vancouver H998.19.4: Vancouver Police shoulder flash",
+      "url": "https://openmovportal.ca/argus/final/ViewRecord.aspx?lang=en-CA&record=0c543f81-f00f-4821-b5b7-fbfa5b65e3d1&template=Object",
+      "kind": "museum-object-record",
+      "accessed": "2026-11-13",
+      "note": "Catalogue object title c.1980–1997; history says this style remained worn until 2000. Preserve both statements as distinct date assertions.",
+      "assetDownloadStatus": "not-downloaded-to-project",
+      "rightsReview": "Required before importing or reproducing source imagery; public access is not a reuse license."
+    },
+    {
+      "id": "surrey-uniform",
+      "title": "Surrey Police Service Uniform Revealed",
+      "url": "https://www.surreypolice.ca/news-events/news/surrey-police-service-uniform-revealed",
+      "kind": "official-agency-publication",
+      "accessed": "2026-11-13",
+      "note": "",
+      "assetDownloadStatus": "not-downloaded-to-project",
+      "rightsReview": "Required before importing or reproducing source imagery; public access is not a reuse license."
+    },
+    {
+      "id": "surrey-crest",
+      "title": "New Crest for Surrey Police Service",
+      "url": "https://www.surreypolice.ca/news-events/news/new-crest-surrey-police-service",
+      "kind": "official-agency-publication",
+      "accessed": "2026-11-13",
+      "note": "2021-05-04. Names artist Leslie Wells and explains elements. Link authored artwork attribution to the design record.",
+      "assetDownloadStatus": "not-downloaded-to-project",
+      "rightsReview": "Required before importing or reproducing source imagery; public access is not a reuse license."
+    },
+    {
+      "id": "saanich-2024",
+      "title": "Saanich Police 2024 Annual Report: New Crest Design",
+      "url": "https://saanichpolice.ca/wp-content/uploads/2025/09/2024-Annual-Report-Final-Version.pdf",
+      "kind": "official-agency-publication",
+      "accessed": "2026-11-13",
+      "note": "Crest approved 2024; report includes a physical uniform photograph and artist credits. Report publication date is separate from design adoption.",
+      "assetDownloadStatus": "not-downloaded-to-project",
+      "rightsReview": "Required before importing or reproducing source imagery; public access is not a reuse license."
+    },
+    {
+      "id": "delta-policy",
+      "title": "Delta Police DP40: Uniforms, Insignia & Identification",
+      "url": "https://www.deltapolice.ca/sites/default/files/documents/2026-04/DP40%20-%20Uniforms%2C%20Insignia%20%26%20Identification.pdf",
+      "kind": "official-uniform-policy",
+      "accessed": "2026-11-13",
+      "note": "Illustrated agency-issued event flashes. Policy snapshot establishes authorized occasion, not date of first production.",
+      "assetDownloadStatus": "not-downloaded-to-project",
+      "rightsReview": "Required before importing or reproducing source imagery; public access is not a reuse license."
+    },
+    {
+      "id": "delta-ceremonial",
+      "title": "Delta Police Ceremonial Unit",
+      "url": "https://www.deltapolice.ca/about/discover/ceremonial",
+      "kind": "official-agency-publication",
+      "accessed": "2026-11-13",
+      "note": "Explicitly distinguishes silver embroidered uniform patches and the separate Honour Guard sleeve crest.",
+      "assetDownloadStatus": "not-downloaded-to-project",
+      "rightsReview": "Required before importing or reproducing source imagery; public access is not a reuse license."
+    },
+    {
+      "id": "abbotsford-2024",
+      "title": "Abbotsford Police 2024 Annual Report",
+      "url": "https://www.abbypd.ca/files/File/Annual%20Reports/2024%20Annual%20Report%20-%20Abbotsford%20Police%20Department.pdf",
+      "kind": "official-agency-publication",
+      "accessed": "2026-11-13",
+      "note": "",
+      "assetDownloadStatus": "not-downloaded-to-project",
+      "rightsReview": "Required before importing or reproducing source imagery; public access is not a reuse license."
+    },
+    {
+      "id": "abbotsford-truth",
+      "title": "Abbotsford Police Community Connect: shoulder-flash contest",
+      "url": "https://www.abbypd.ca/community-connect",
+      "kind": "official-agency-publication",
+      "accessed": "2026-11-13",
+      "note": "Liam Silver design unveiled for 2024 Truth and Reconciliation Day. Preserve named artist and event context.",
+      "assetDownloadStatus": "not-downloaded-to-project",
+      "rightsReview": "Required before importing or reproducing source imagery; public access is not a reuse license."
+    },
+    {
+      "id": "port-moody-2015",
+      "title": "Port Moody Police 2015 Annual Report",
+      "url": "https://portmoodypolice.ca/wp-content/uploads/2018/05/Web-Annual-2015-Opt.pdf",
+      "kind": "official-agency-publication",
+      "accessed": "2026-11-13",
+      "note": "Published report contains a photographed shoulder flash.",
+      "assetDownloadStatus": "not-downloaded-to-project",
+      "rightsReview": "Required before importing or reproducing source imagery; public access is not a reuse license."
+    },
+    {
+      "id": "transit-2013",
+      "title": "Transit Police 2013 Report to the Community",
+      "url": "https://transitpolice.ca/wp-content/uploads/2016/04/2013_report_to_the_community.pdf",
+      "kind": "official-agency-publication",
+      "accessed": "2026-11-13",
+      "note": "Photographs the South Coast British Columbia Transportation Authority Police shoulder patch.",
+      "assetDownloadStatus": "not-downloaded-to-project",
+      "rightsReview": "Required before importing or reproducing source imagery; public access is not a reuse license."
+    },
+    {
+      "id": "transit-2021-ecm",
+      "title": "Transit Police Board 2022-05: Indigenous Peoples Action 2021",
+      "url": "https://transitpolice.ca/wp-content/uploads/2022/04/Board-Report-No.-2022-05_Indigenous-Peoples-Action-2021.pdf",
+      "kind": "official-agency-publication",
+      "accessed": "2026-11-13",
+      "note": "Reports September 2021 release of Every Child Matters patch and shows it being worn.",
+      "assetDownloadStatus": "not-downloaded-to-project",
+      "rightsReview": "Required before importing or reproducing source imagery; public access is not a reuse license."
+    },
+    {
+      "id": "transit-2022-memorial",
+      "title": "Transit Police Board 2022-27: Historical Context and Existing Policy",
+      "url": "https://transitpolice.ca/wp-content/uploads/2022/06/Board-Report-No.-2022-27-Service-or-Policy-Complaint.pdf",
+      "kind": "official-agency-publication",
+      "accessed": "2026-11-13",
+      "note": "Shows authorized memorial variants for Abbotsford, Nelson, New Westminster and Metro Vancouver Transit Police. Do not equate them with every privately purchased flag patch.",
+      "assetDownloadStatus": "not-downloaded-to-project",
+      "rightsReview": "Required before importing or reproducing source imagery; public access is not a reuse license."
+    },
+    {
+      "id": "transit-collector",
+      "title": "Transit Police Patch collection: BC Transit and TransLink",
+      "url": "https://transitpolice.jimdoweb.com/canada/british-columbia/bc-transit-translink/",
+      "kind": "collector-gallery",
+      "accessed": "2026-11-13",
+      "note": "Multiple physical-looking specimens grouped by lettering/organization. Dates and issue authenticity need independent checks.",
+      "assetDownloadStatus": "not-downloaded-to-project",
+      "rightsReview": "Required before importing or reproducing source imagery; public access is not a reuse license."
+    },
+    {
+      "id": "transit-history",
+      "title": "Metro Vancouver Transit Police: History",
+      "url": "https://transitpolice.ca/about-us/history/",
+      "kind": "official-agency-history",
+      "accessed": "2026-11-13",
+      "note": "Connects BC Electric, BC Hydro, transit security and police. Agency history is not patch issue dating.",
+      "assetDownloadStatus": "not-downloaded-to-project",
+      "rightsReview": "Required before importing or reproducing source imagery; public access is not a reuse license."
+    },
+    {
+      "id": "rail-museum",
+      "title": "International Police Museum: Uniforms collection",
+      "url": "https://www.internationalpolicemuseum.org/explore.php?category=Uniforms",
+      "kind": "museum-collection-catalogue",
+      "accessed": "2026-11-13",
+      "note": "Accessioned BC Railway cloth variants 3217-PA-0540 through 3220-PA-0543. Search-index retrieval succeeded; direct full-catalogue fetch timed out.",
+      "assetDownloadStatus": "not-downloaded-to-project",
+      "rightsReview": "Required before importing or reproducing source imagery; public access is not a reuse license."
+    },
+    {
+      "id": "rail-collector",
+      "title": "The Railroad Police: Patches A–H",
+      "url": "https://www.therailroadpolice.com/page-p",
+      "kind": "collector-gallery",
+      "accessed": "2026-11-13",
+      "note": "Four captioned BC Railway/BC Rail pictures; contributors credited individually.",
+      "assetDownloadStatus": "not-downloaded-to-project",
+      "rightsReview": "Required before importing or reproducing source imagery; public access is not a reuse license."
+    },
+    {
+      "id": "ambulance-2024",
+      "title": "BCEHS 2023/24 Progress Report",
+      "url": "https://www.bcehs.ca/about-site/Documents/bcehs_progress_report_2023-24.pdf",
+      "kind": "official-agency-publication",
+      "accessed": "2026-11-13",
+      "note": "Page 20 photographs the Ambulance British Columbia shoulder roundel.",
+      "assetDownloadStatus": "not-downloaded-to-project",
+      "rightsReview": "Required before importing or reproducing source imagery; public access is not a reuse license."
+    },
+    {
+      "id": "ambulance-photo",
+      "title": "British Columbia Ambulance Badge.jpg",
+      "url": "https://commons.wikimedia.org/wiki/File:British_Columbia_Ambulance_Badge.jpg",
+      "kind": "photographer-owned-specimen-image",
+      "accessed": "2026-11-13",
+      "note": "72stormer photograph dated 2012-11-18; inspect and compare with current roundel before claiming a separate version.",
+      "assetDownloadStatus": "not-downloaded-to-project",
+      "rightsReview": "Required before importing or reproducing source imagery; public access is not a reuse license."
+    },
+    {
+      "id": "ambulance-qualifier",
+      "title": "LVV Research Foundation 2024 Annual Report",
+      "url": "https://lvvresearchfoundation.com/wp-content/uploads/2025/07/2024-ANNUAL-REPORT.pdf",
+      "kind": "organization-publication",
+      "accessed": "2026-11-13",
+      "note": "Photographs a separate PARAMEDIC tab with Canadian flag and Star of Life above the roundel.",
+      "assetDownloadStatus": "not-downloaded-to-project",
+      "rightsReview": "Required before importing or reproducing source imagery; public access is not a reuse license."
+    },
+    {
+      "id": "ambulance-pocket",
+      "title": "EMSClassics: BC Ambulance retired pocket crest",
+      "url": "https://www.emsclassics.com/buy.php?Catalogue=Full&ChasisBuilder=All&CoachBuilder=All&Country=Canada&PhotoNumber=7527&Province=All&Return=Photo&Search=&Theme=All&Town=All&Type=All&VehicleRetailer=N%252FA&Year=All&limit=50&offset=7450",
+      "kind": "specialist-photo-catalogue",
+      "accessed": "2026-11-13",
+      "note": "",
+      "assetDownloadStatus": "not-downloaded-to-project",
+      "rightsReview": "Required before importing or reproducing source imagery; public access is not a reuse license."
+    },
+    {
+      "id": "richmond-ambulance",
+      "title": "BC Medic Boss: Richmond Ambulance vintage shoulder patch",
+      "url": "https://www.flickr.com/photos/34202075%40N04/39408720410",
+      "kind": "collector-photograph",
+      "accessed": "2026-11-13",
+      "note": "Caption identifies a historical local ambulance patch; dating and issue details not established.",
+      "assetDownloadStatus": "not-downloaded-to-project",
+      "rightsReview": "Required before importing or reproducing source imagery; public access is not a reuse license."
+    },
+    {
+      "id": "ferries-collector",
+      "title": "Pacific Coast Collectibles: Historical BC Ferry Items",
+      "url": "https://pacificcoastcollectibles.com/pdfs/bc_ferries.pdf",
+      "kind": "dealer-catalogue",
+      "accessed": "2026-11-13",
+      "note": "BCF-2 describes a dogwood coveralls badge, attributed by dealer to 1978–2003. Retrieved PDF says updated 2020 while search index says 2024; do not use update label as object date.",
+      "assetDownloadStatus": "not-downloaded-to-project",
+      "rightsReview": "Required before importing or reproducing source imagery; public access is not a reuse license."
+    },
+    {
+      "id": "ferries-uniform",
+      "title": "WorkBC: Industrial Marine career kit",
+      "url": "https://www.workbc.ca/sites/default/files/Industrial-Marine_Implementatio_Career-Kit_June14.pdf",
+      "kind": "government-publication",
+      "accessed": "2026-11-13",
+      "note": "Profile of Carlos Siguenza photographs BC Ferries coveralls with a chest patch.",
+      "assetDownloadStatus": "not-downloaded-to-project",
+      "rightsReview": "Required before importing or reproducing source imagery; public access is not a reuse license."
+    },
+    {
+      "id": "ferries-foi",
+      "title": "BC Ferries FOIPP 23-016: branding guidelines",
+      "url": "https://www.bcferries.com/our-company/freedom-of-information/23-016",
+      "kind": "official-archive-disclosure",
+      "accessed": "2026-11-13",
+      "note": "325-page responsive-records PDF: https://www.bcferries.com/web_image/h19/h10/8911891234846.pdf . Web fetch exceeded size limit; content not reviewed here.",
+      "assetDownloadStatus": "not-downloaded-to-project",
+      "rightsReview": "Required before importing or reproducing source imagery; public access is not a reuse license."
+    },
+    {
+      "id": "nro-disclosure",
+      "title": "BC disclosure FNR-2018-86429",
+      "url": "https://docs.openinfo.gov.bc.ca/Response_Package_FNR-2018-86429.pdf",
+      "kind": "official-archive-disclosure",
+      "accessed": "2026-11-13",
+      "note": "Text expressly describes NRO uniform with provincial shoulder flash; inspect imagery before choosing a design or merging with a ministry shield.",
+      "assetDownloadStatus": "not-downloaded-to-project",
+      "rightsReview": "Required before importing or reproducing source imagery; public access is not a reuse license."
+    },
+    {
+      "id": "nro-brochure",
+      "title": "Natural Resource Officer brochure",
+      "url": "https://www2.gov.bc.ca/assets/gov/environment/natural-resource-stewardship/enforcement/nro2_brochure.pdf",
+      "kind": "official-agency-publication",
+      "accessed": "2026-11-13",
+      "note": "Published crest and uniform photographs; printed crest alone is not cloth evidence.",
+      "assetDownloadStatus": "not-downloaded-to-project",
+      "rightsReview": "Required before importing or reproducing source imagery; public access is not a reuse license."
+    },
+    {
+      "id": "coastal-crews-2020",
+      "title": "Coastal Fire Centre Wildfire News, issue 6, 17 July 2020",
+      "url": "https://www.thetisislandfire.ca/newsletters/2020-07-17-Issue6-Coastal-Wildfire-News.pdf",
+      "kind": "agency-publication-mirrored-by-fire-department",
+      "accessed": "2026-11-13",
+      "note": "Page 3 describes Fraser Unit Crew patch; page 4 lists 30 crews. Treat dated roster as a research scope, not 30 verified new images or a current roster.",
+      "assetDownloadStatus": "not-downloaded-to-project",
+      "rightsReview": "Required before importing or reproducing source imagery; public access is not a reuse license."
+    },
+    {
+      "id": "stlatlimx",
+      "title": "Stl’atl’imx Tribal Police Service",
+      "url": "https://stlatlimxpolice.ca/",
+      "kind": "official-agency-publication",
+      "accessed": "2026-11-13",
+      "note": "Acknowledges STPS patches but says they no longer distribute them. Use public material; no request was sent.",
+      "assetDownloadStatus": "not-downloaded-to-project",
+      "rightsReview": "Required before importing or reproducing source imagery; public access is not a reuse license."
+    },
+    {
+      "id": "bcpolice-auction",
+      "title": "BC Provincial Police sew-on patch, Madison’s lot 124",
+      "url": "https://www.icollector.com/British-columbia-provincial-police-sew-on-patch_i15745268",
+      "kind": "auction-listing",
+      "accessed": "2026-11-13",
+      "note": "Sold 2013; described as a framed presentation piece. Does not prove historic operational issue.",
+      "assetDownloadStatus": "not-downloaded-to-project",
+      "rightsReview": "Required before importing or reproducing source imagery; public access is not a reuse license."
+    },
+    {
+      "id": "parks-student",
+      "title": "Shackan Connection May 2018: BC Parks Student Ranger recruitment",
+      "url": "https://www.shackan.ca/docs/may_2018.pdf",
+      "kind": "community-publication-reprinting-agency-material",
+      "accessed": "2026-11-13",
+      "note": "Printed Student Ranger design beside uniform photograph. Need evidence that the Student Ranger variant itself was made as a patch.",
+      "assetDownloadStatus": "not-downloaded-to-project",
+      "rightsReview": "Required before importing or reproducing source imagery; public access is not a reuse license."
+    },
+    {
+      "id": "haida-guardian",
+      "title": "BC Gov News: Haida guardian position",
+      "url": "https://news.gov.bc.ca/releases/2018ENV0085-002291",
+      "kind": "official-agency-publication",
+      "accessed": "2026-11-13",
+      "note": "2018 article says a Haida Nation shoulder patch was in development; this is not confirmation it was produced.",
+      "assetDownloadStatus": "not-downloaded-to-project",
+      "rightsReview": "Required before importing or reproducing source imagery; public access is not a reuse license."
+    },
+    {
+      "id": "sar-directory",
+      "title": "BC Search and Rescue Association",
+      "url": "https://bcsara.com/",
+      "kind": "official-association-directory",
+      "accessed": "2026-11-13",
+      "note": "Group directory supplies a coverage universe; it does not establish every team’s patch variants.",
+      "assetDownloadStatus": "not-downloaded-to-project",
+      "rightsReview": "Required before importing or reproducing source imagery; public access is not a reuse license."
+    },
+    {
+      "id": "pgsar",
+      "title": "Prince George Search and Rescue",
+      "url": "https://pgsar.ca/",
+      "kind": "official-organization-site",
+      "accessed": "2026-11-13",
+      "note": "Local priority for future specimen research; site identity alone is not proof of a particular cloth patch.",
+      "assetDownloadStatus": "not-downloaded-to-project",
+      "rightsReview": "Required before importing or reproducing source imagery; public access is not a reuse license."
+    },
+    {
+      "id": "moosecop-parks",
+      "title": "Moosecop: BC Parks patch history",
+      "url": "https://www.moosecop.net/Displays/BCParks/",
+      "kind": "specialist-collector-history",
+      "accessed": "2026-11-13",
+      "note": "Most illustrated principal designs already match baseline. Later cloth construction, cap, tab, and unofficial issues need specimen comparison.",
+      "assetDownloadStatus": "not-downloaded-to-project",
+      "rightsReview": "Required before importing or reproducing source imagery; public access is not a reuse license."
+    }
+  ],
+  "candidates": [
+    {
+      "id": "bcfs-recreation-title",
+      "label": "Recreation — brown and white title strip",
+      "organization": "BC Forest Service",
+      "sector": "forests",
+      "collection": "patches",
+      "status": "documented-missing",
+      "classification": "new-candidate",
+      "priority": 1,
+      "evidence": "Museum specimen 014.06.11b; no matching wording in baseline.",
+      "sources": [
+        "pemberton-bcfs"
+      ],
+      "baselineIds": [
+        "S49-O01"
+      ],
+      "templateCandidate": "forest-service-role-titles",
+      "artworkStatus": "not-created",
+      "sourceImagesDownloaded": false,
+      "nextStep": "Inspect the source image at full resolution, record provenance, and compare the physical variant before creating artwork."
+    },
+    {
+      "id": "bcfs-revenue-inspector",
+      "label": "Revenue Inspector — navy and white title strip",
+      "organization": "BC Forest Service",
+      "sector": "forests",
+      "collection": "patches",
+      "status": "documented-missing",
+      "classification": "new-candidate",
+      "priority": 1,
+      "evidence": "Museum specimens 014.06.11e/f; duplicate specimens of one wording.",
+      "sources": [
+        "pemberton-bcfs"
+      ],
+      "baselineIds": [
+        "S49-O01"
+      ],
+      "templateCandidate": "forest-service-role-titles",
+      "artworkStatus": "not-created",
+      "sourceImagesDownloaded": false,
+      "nextStep": "Inspect the source image at full resolution, record provenance, and compare the physical variant before creating artwork."
+    },
+    {
+      "id": "bcfs-forests-and-lands",
+      "label": "Forests and Lands — brown and white title strip",
+      "organization": "BC Forest Service",
+      "sector": "forests",
+      "collection": "patches",
+      "status": "documented-missing",
+      "classification": "new-candidate",
+      "priority": 1,
+      "evidence": "Museum specimens 014.06.11g/h; preserve reported size difference as specimen data.",
+      "sources": [
+        "pemberton-bcfs"
+      ],
+      "baselineIds": [
+        "S49-O01"
+      ],
+      "templateCandidate": "forest-service-role-titles",
+      "artworkStatus": "not-created",
+      "sourceImagesDownloaded": false,
+      "nextStep": "Inspect the source image at full resolution, record provenance, and compare the physical variant before creating artwork."
+    },
+    {
+      "id": "bcfs-aviation",
+      "label": "Forest Service / British Columbia / Aviation",
+      "organization": "BC Forest Service",
+      "sector": "forests",
+      "collection": "patches",
+      "status": "documented-missing",
+      "classification": "new-candidate",
+      "priority": 1,
+      "evidence": "Museum identifies embroidered general-aviation insignia; differs from existing Airtanker Operations wording.",
+      "sources": [
+        "ingenium-aviation"
+      ],
+      "baselineIds": [
+        "FO-airtanker"
+      ],
+      "templateCandidate": "forest-service-oval-with-role",
+      "artworkStatus": "not-created",
+      "sourceImagesDownloaded": false,
+      "nextStep": "Inspect the source image at full resolution, record provenance, and compare the physical variant before creating artwork."
+    },
+    {
+      "id": "bcfs-parattack",
+      "label": "Parattack — winged parachutist",
+      "organization": "BC Forest Service",
+      "sector": "forests",
+      "collection": "patches",
+      "status": "documented-missing",
+      "classification": "new-candidate",
+      "priority": 1,
+      "evidence": "Museum catalogues a machine-embroidered cloth badge, date unknown.",
+      "sources": [
+        "ingenium-parattack"
+      ],
+      "baselineIds": [],
+      "templateCandidate": "parattack",
+      "artworkStatus": "not-created",
+      "sourceImagesDownloaded": false,
+      "nextStep": "Inspect the source image at full resolution, record provenance, and compare the physical variant before creating artwork."
+    },
+    {
+      "id": "bcfs-fire-warden-pin",
+      "label": "Fire Warden / BC Forest Service — plastic pin",
+      "organization": "BC Forest Service",
+      "sector": "forests",
+      "collection": "badges",
+      "status": "documented-missing",
+      "classification": "new-candidate",
+      "priority": 2,
+      "evidence": "Museum specimen 014.06.11m; plastic pin, maker Superior Stamp Vancouver BC; differs from metal Fire Prevention Officer badge.",
+      "sources": [
+        "pemberton-bcfs"
+      ],
+      "baselineIds": [
+        "S51-O01"
+      ],
+      "templateCandidate": null,
+      "artworkStatus": "not-created",
+      "sourceImagesDownloaded": false,
+      "nextStep": "Inspect the source image at full resolution, record provenance, and compare the physical variant before creating artwork."
+    },
+    {
+      "id": "bcss-modern-flash",
+      "label": "BC Sheriff Service — service-specific heraldic shoulder flash",
+      "organization": "BC Sheriff Service",
+      "sector": "justice",
+      "collection": "patches",
+      "status": "documented-missing",
+      "classification": "new-candidate",
+      "priority": 1,
+      "evidence": "Physical 2024 photograph and official 2011 grant identify a later emblem than baseline provincial-arms designs.",
+      "sources": [
+        "bcss-physical",
+        "bcss-heraldry"
+      ],
+      "baselineIds": [
+        "S56-O01",
+        "S56-O02"
+      ],
+      "templateCandidate": "bc-sheriff-service-heraldic",
+      "artworkStatus": "not-created",
+      "sourceImagesDownloaded": false,
+      "nextStep": "Inspect the source image at full resolution, record provenance, and compare the physical variant before creating artwork."
+    },
+    {
+      "id": "vpd-city-arms",
+      "label": "Vancouver Police — city-arms shoulder flash",
+      "organization": "Vancouver Police",
+      "sector": "justice",
+      "collection": "patches",
+      "status": "documented-missing",
+      "classification": "new-candidate",
+      "priority": 1,
+      "evidence": "Museum accession H998.19.4 documents a manufactured cloth shoulder flash.",
+      "sources": [
+        "vancouver-museum"
+      ],
+      "baselineIds": [],
+      "templateCandidate": "vancouver-police-city-arms",
+      "artworkStatus": "not-created",
+      "sourceImagesDownloaded": false,
+      "nextStep": "Inspect the source image at full resolution, record provenance, and compare the physical variant before creating artwork."
+    },
+    {
+      "id": "surrey-2021",
+      "label": "Surrey Police Service — 2021 shoulder flash",
+      "organization": "Surrey Police Service",
+      "sector": "justice",
+      "collection": "patches",
+      "status": "documented-missing",
+      "classification": "new-candidate",
+      "priority": 1,
+      "evidence": "Official uniform release describes shoulder flashes and their Coast Salish eye, fess and six stars.",
+      "sources": [
+        "surrey-uniform",
+        "surrey-crest"
+      ],
+      "baselineIds": [],
+      "templateCandidate": "surrey-police-crest",
+      "artworkStatus": "not-created",
+      "sourceImagesDownloaded": false,
+      "nextStep": "Inspect the source image at full resolution, record provenance, and compare the physical variant before creating artwork."
+    },
+    {
+      "id": "saanich-2024",
+      "label": "Saanich Police — 2024 raven crest",
+      "organization": "Saanich Police",
+      "sector": "justice",
+      "collection": "patches",
+      "status": "documented-missing",
+      "classification": "new-candidate",
+      "priority": 1,
+      "evidence": "Annual report documents approved crest and photographs the embroidered uniform patch.",
+      "sources": [
+        "saanich-2024"
+      ],
+      "baselineIds": [],
+      "templateCandidate": "saanich-police-2024",
+      "artworkStatus": "not-created",
+      "sourceImagesDownloaded": false,
+      "nextStep": "Inspect the source image at full resolution, record provenance, and compare the physical variant before creating artwork."
+    },
+    {
+      "id": "delta-canada-day",
+      "label": "Delta Police — Canada Day shoulder flash",
+      "organization": "Delta Police",
+      "sector": "justice",
+      "collection": "patches",
+      "status": "documented-missing",
+      "classification": "new-candidate",
+      "priority": 2,
+      "evidence": "Illustrated as an issued occasion-specific flash in departmental uniform policy.",
+      "sources": [
+        "delta-policy"
+      ],
+      "baselineIds": [],
+      "templateCandidate": "delta-police-event-flashes",
+      "artworkStatus": "not-created",
+      "sourceImagesDownloaded": false,
+      "nextStep": "Inspect the source image at full resolution, record provenance, and compare the physical variant before creating artwork."
+    },
+    {
+      "id": "delta-remembrance",
+      "label": "Delta Police — Remembrance Day shoulder flash",
+      "organization": "Delta Police",
+      "sector": "justice",
+      "collection": "patches",
+      "status": "documented-missing",
+      "classification": "new-candidate",
+      "priority": 2,
+      "evidence": "Illustrated as an issued occasion-specific flash in departmental uniform policy.",
+      "sources": [
+        "delta-policy"
+      ],
+      "baselineIds": [],
+      "templateCandidate": "delta-police-event-flashes",
+      "artworkStatus": "not-created",
+      "sourceImagesDownloaded": false,
+      "nextStep": "Inspect the source image at full resolution, record provenance, and compare the physical variant before creating artwork."
+    },
+    {
+      "id": "delta-memorial",
+      "label": "Delta Police — Police Officer Memorial shoulder flash",
+      "organization": "Delta Police",
+      "sector": "justice",
+      "collection": "patches",
+      "status": "documented-missing",
+      "classification": "new-candidate",
+      "priority": 2,
+      "evidence": "Illustrated as an issued occasion-specific flash in departmental uniform policy.",
+      "sources": [
+        "delta-policy"
+      ],
+      "baselineIds": [],
+      "templateCandidate": "delta-police-event-flashes",
+      "artworkStatus": "not-created",
+      "sourceImagesDownloaded": false,
+      "nextStep": "Inspect the source image at full resolution, record provenance, and compare the physical variant before creating artwork."
+    },
+    {
+      "id": "delta-ceremonial-silver",
+      "label": "Delta Police — silver ceremonial shoulder patch",
+      "organization": "Delta Police",
+      "sector": "justice",
+      "collection": "patches",
+      "status": "documented-missing",
+      "classification": "new-candidate",
+      "priority": 2,
+      "evidence": "Agency explicitly identifies silver embroidery distinguishing Ceremonial Unit patches.",
+      "sources": [
+        "delta-ceremonial"
+      ],
+      "baselineIds": [],
+      "templateCandidate": "delta-police-ceremonial",
+      "artworkStatus": "not-created",
+      "sourceImagesDownloaded": false,
+      "nextStep": "Inspect the source image at full resolution, record provenance, and compare the physical variant before creating artwork."
+    },
+    {
+      "id": "delta-honour-guard",
+      "label": "Delta Police — Honour Guard sleeve crest",
+      "organization": "Delta Police",
+      "sector": "justice",
+      "collection": "patches",
+      "status": "documented-missing",
+      "classification": "new-candidate",
+      "priority": 2,
+      "evidence": "Agency describes a distinct Honour Guard coat-of-arms patch worn on the lower right sleeve.",
+      "sources": [
+        "delta-ceremonial"
+      ],
+      "baselineIds": [],
+      "templateCandidate": "delta-police-ceremonial",
+      "artworkStatus": "not-created",
+      "sourceImagesDownloaded": false,
+      "nextStep": "Inspect the source image at full resolution, record provenance, and compare the physical variant before creating artwork."
+    },
+    {
+      "id": "abbotsford-standard",
+      "label": "Abbotsford Police — standard shoulder patch",
+      "organization": "Abbotsford Police",
+      "sector": "justice",
+      "collection": "patches",
+      "status": "documented-missing",
+      "classification": "new-candidate",
+      "priority": 2,
+      "evidence": "Official annual report photographs the uniform shoulder patch.",
+      "sources": [
+        "abbotsford-2024"
+      ],
+      "baselineIds": [],
+      "templateCandidate": "abbotsford-police",
+      "artworkStatus": "not-created",
+      "sourceImagesDownloaded": false,
+      "nextStep": "Inspect the source image at full resolution, record provenance, and compare the physical variant before creating artwork."
+    },
+    {
+      "id": "abbotsford-truth-2024",
+      "label": "Abbotsford Police — Truth and Reconciliation 2024",
+      "organization": "Abbotsford Police",
+      "sector": "justice",
+      "collection": "patches",
+      "status": "documented-missing",
+      "classification": "new-candidate",
+      "priority": 2,
+      "evidence": "Agency identifies Liam Silver’s design as an official shoulder flash unveiled in 2024.",
+      "sources": [
+        "abbotsford-truth"
+      ],
+      "baselineIds": [],
+      "templateCandidate": "abbotsford-police-commemorative",
+      "artworkStatus": "not-created",
+      "sourceImagesDownloaded": false,
+      "nextStep": "Inspect the source image at full resolution, record provenance, and compare the physical variant before creating artwork."
+    },
+    {
+      "id": "port-moody-2015",
+      "label": "Port Moody Police — shoulder flash photographed in 2015 report",
+      "organization": "Port Moody Police",
+      "sector": "justice",
+      "collection": "patches",
+      "status": "documented-missing",
+      "classification": "new-candidate",
+      "priority": 2,
+      "evidence": "Official annual report photographs this uniform insignia; 2015 is observation context, not adoption.",
+      "sources": [
+        "port-moody-2015"
+      ],
+      "baselineIds": [],
+      "templateCandidate": "port-moody-police",
+      "artworkStatus": "not-created",
+      "sourceImagesDownloaded": false,
+      "nextStep": "Inspect the source image at full resolution, record provenance, and compare the physical variant before creating artwork."
+    },
+    {
+      "id": "transit-scbcta",
+      "label": "South Coast BC Transportation Authority Police — shoulder flash",
+      "organization": "Transit Police",
+      "sector": "transportation",
+      "collection": "patches",
+      "status": "documented-missing",
+      "classification": "new-candidate",
+      "priority": 1,
+      "evidence": "Official 2013 report photographs the shoulder patch with full authority name.",
+      "sources": [
+        "transit-2013"
+      ],
+      "baselineIds": [],
+      "templateCandidate": "transit-police-heraldic",
+      "artworkStatus": "not-created",
+      "sourceImagesDownloaded": false,
+      "nextStep": "Inspect the source image at full resolution, record provenance, and compare the physical variant before creating artwork."
+    },
+    {
+      "id": "transit-every-child",
+      "label": "Transit Police — Every Child Matters 2021",
+      "organization": "Transit Police",
+      "sector": "transportation",
+      "collection": "patches",
+      "status": "documented-missing",
+      "classification": "new-candidate",
+      "priority": 2,
+      "evidence": "Board report confirms release in September 2021 and photographs the patch in use.",
+      "sources": [
+        "transit-2021-ecm"
+      ],
+      "baselineIds": [],
+      "templateCandidate": "transit-police-commemorative",
+      "artworkStatus": "not-created",
+      "sourceImagesDownloaded": false,
+      "nextStep": "Inspect the source image at full resolution, record provenance, and compare the physical variant before creating artwork."
+    },
+    {
+      "id": "abbotsford-memorial",
+      "label": "Police Memorial shoulder flash — Abbotsford Police",
+      "organization": "Abbotsford Police",
+      "sector": "justice",
+      "collection": "patches",
+      "status": "documented-missing",
+      "classification": "new-candidate",
+      "priority": 2,
+      "evidence": "Official 2022 board report illustrates an agency-issued memorial shoulder flash.",
+      "sources": [
+        "transit-2022-memorial"
+      ],
+      "baselineIds": [],
+      "templateCandidate": "abbotsford-police-commemorative",
+      "artworkStatus": "not-created",
+      "sourceImagesDownloaded": false,
+      "nextStep": "Inspect the source image at full resolution, record provenance, and compare the physical variant before creating artwork."
+    },
+    {
+      "id": "nelson-memorial",
+      "label": "Police Memorial shoulder flash — Nelson Police",
+      "organization": "Nelson Police",
+      "sector": "justice",
+      "collection": "patches",
+      "status": "documented-missing",
+      "classification": "new-candidate",
+      "priority": 2,
+      "evidence": "Official 2022 board report illustrates an agency-issued memorial shoulder flash.",
+      "sources": [
+        "transit-2022-memorial"
+      ],
+      "baselineIds": [],
+      "templateCandidate": "nelson-police-commemorative",
+      "artworkStatus": "not-created",
+      "sourceImagesDownloaded": false,
+      "nextStep": "Inspect the source image at full resolution, record provenance, and compare the physical variant before creating artwork."
+    },
+    {
+      "id": "new-westminster-memorial",
+      "label": "Police Memorial shoulder flash — New Westminster Police",
+      "organization": "New Westminster Police",
+      "sector": "justice",
+      "collection": "patches",
+      "status": "documented-missing",
+      "classification": "new-candidate",
+      "priority": 2,
+      "evidence": "Official 2022 board report illustrates an agency-issued memorial shoulder flash.",
+      "sources": [
+        "transit-2022-memorial"
+      ],
+      "baselineIds": [],
+      "templateCandidate": "new-westminster-police-commemorative",
+      "artworkStatus": "not-created",
+      "sourceImagesDownloaded": false,
+      "nextStep": "Inspect the source image at full resolution, record provenance, and compare the physical variant before creating artwork."
+    },
+    {
+      "id": "transit-memorial",
+      "label": "Police Memorial shoulder flash — Transit Police",
+      "organization": "Transit Police",
+      "sector": "transportation",
+      "collection": "patches",
+      "status": "documented-missing",
+      "classification": "new-candidate",
+      "priority": 2,
+      "evidence": "Official 2022 board report illustrates an agency-issued memorial shoulder flash.",
+      "sources": [
+        "transit-2022-memorial"
+      ],
+      "baselineIds": [],
+      "templateCandidate": "transit-police-commemorative",
+      "artworkStatus": "not-created",
+      "sourceImagesDownloaded": false,
+      "nextStep": "Inspect the source image at full resolution, record provenance, and compare the physical variant before creating artwork."
+    },
+    {
+      "id": "transit-collector-security",
+      "label": "BC Transit Security",
+      "organization": "BC Transit / TransLink predecessors",
+      "sector": "transportation",
+      "collection": "patches",
+      "status": "collector-candidate",
+      "classification": "new-candidate",
+      "priority": 2,
+      "evidence": "Specialist gallery shows multiple specimen images under this heading; needs issue/date verification.",
+      "sources": [
+        "transit-collector",
+        "transit-history"
+      ],
+      "baselineIds": [
+        "S56-O21",
+        "S56-O22"
+      ],
+      "templateCandidate": "transit-predecessor-title-families",
+      "artworkStatus": "not-created",
+      "sourceImagesDownloaded": false,
+      "nextStep": "Inspect the source image at full resolution, record provenance, and compare the physical variant before creating artwork."
+    },
+    {
+      "id": "transit-collector-security-special-constable",
+      "label": "BC Transit Security Services / Special Constable",
+      "organization": "BC Transit / TransLink predecessors",
+      "sector": "transportation",
+      "collection": "patches",
+      "status": "collector-candidate",
+      "classification": "new-candidate",
+      "priority": 2,
+      "evidence": "Specialist gallery shows multiple specimen images under this heading; needs issue/date verification.",
+      "sources": [
+        "transit-collector",
+        "transit-history"
+      ],
+      "baselineIds": [
+        "S56-O21",
+        "S56-O22"
+      ],
+      "templateCandidate": "transit-predecessor-title-families",
+      "artworkStatus": "not-created",
+      "sourceImagesDownloaded": false,
+      "nextStep": "Inspect the source image at full resolution, record provenance, and compare the physical variant before creating artwork."
+    },
+    {
+      "id": "transit-collector-special-provincial-constable",
+      "label": "BC Transit / Special Provincial Constable",
+      "organization": "BC Transit / TransLink predecessors",
+      "sector": "transportation",
+      "collection": "patches",
+      "status": "collector-candidate",
+      "classification": "new-candidate",
+      "priority": 2,
+      "evidence": "Specialist gallery shows multiple specimen images under this heading; needs issue/date verification.",
+      "sources": [
+        "transit-collector",
+        "transit-history"
+      ],
+      "baselineIds": [
+        "S56-O21",
+        "S56-O22"
+      ],
+      "templateCandidate": "transit-predecessor-title-families",
+      "artworkStatus": "not-created",
+      "sourceImagesDownloaded": false,
+      "nextStep": "Inspect the source image at full resolution, record provenance, and compare the physical variant before creating artwork."
+    },
+    {
+      "id": "transit-collector-police",
+      "label": "British Columbia Transit Police",
+      "organization": "BC Transit / TransLink predecessors",
+      "sector": "transportation",
+      "collection": "patches",
+      "status": "collector-candidate",
+      "classification": "new-candidate",
+      "priority": 2,
+      "evidence": "Specialist gallery shows multiple specimen images under this heading; needs issue/date verification.",
+      "sources": [
+        "transit-collector",
+        "transit-history"
+      ],
+      "baselineIds": [
+        "S56-O21",
+        "S56-O22"
+      ],
+      "templateCandidate": "transit-predecessor-title-families",
+      "artworkStatus": "not-created",
+      "sourceImagesDownloaded": false,
+      "nextStep": "Inspect the source image at full resolution, record provenance, and compare the physical variant before creating artwork."
+    },
+    {
+      "id": "transit-collector-translink-spc",
+      "label": "TransLink / Special Provincial Constable",
+      "organization": "BC Transit / TransLink predecessors",
+      "sector": "transportation",
+      "collection": "patches",
+      "status": "collector-candidate",
+      "classification": "new-candidate",
+      "priority": 2,
+      "evidence": "Specialist gallery shows multiple specimen images under this heading; needs issue/date verification.",
+      "sources": [
+        "transit-collector",
+        "transit-history"
+      ],
+      "baselineIds": [
+        "S56-O21",
+        "S56-O22"
+      ],
+      "templateCandidate": "transit-predecessor-title-families",
+      "artworkStatus": "not-created",
+      "sourceImagesDownloaded": false,
+      "nextStep": "Inspect the source image at full resolution, record provenance, and compare the physical variant before creating artwork."
+    },
+    {
+      "id": "bcrail-3217-pa-0540",
+      "label": "BC Railway Police — white crescent, red BC and blue lettering",
+      "organization": "BC Rail Police",
+      "sector": "transportation",
+      "collection": "patches",
+      "status": "documented-missing",
+      "classification": "new-candidate",
+      "priority": 1,
+      "evidence": "Museum accession 3217-PA-0540; four catalogue records should remain separate until visual comparison confirms relationship.",
+      "sources": [
+        "rail-museum",
+        "rail-collector"
+      ],
+      "baselineIds": [],
+      "templateCandidate": "bc-rail-police-crescents",
+      "artworkStatus": "not-created",
+      "sourceImagesDownloaded": false,
+      "nextStep": "Inspect the source image at full resolution, record provenance, and compare the physical variant before creating artwork."
+    },
+    {
+      "id": "bcrail-3218-pa-0541",
+      "label": "BC Railway Police — dark crescent with BC Rail lettering",
+      "organization": "BC Rail Police",
+      "sector": "transportation",
+      "collection": "patches",
+      "status": "documented-missing",
+      "classification": "new-candidate",
+      "priority": 1,
+      "evidence": "Museum accession 3218-PA-0541; four catalogue records should remain separate until visual comparison confirms relationship.",
+      "sources": [
+        "rail-museum",
+        "rail-collector"
+      ],
+      "baselineIds": [],
+      "templateCandidate": "bc-rail-police-crescents",
+      "artworkStatus": "not-created",
+      "sourceImagesDownloaded": false,
+      "nextStep": "Inspect the source image at full resolution, record provenance, and compare the physical variant before creating artwork."
+    },
+    {
+      "id": "bcrail-3219-pa-0542",
+      "label": "BC Railway Police — dark crescent with dogwood disc",
+      "organization": "BC Rail Police",
+      "sector": "transportation",
+      "collection": "patches",
+      "status": "documented-missing",
+      "classification": "new-candidate",
+      "priority": 1,
+      "evidence": "Museum accession 3219-PA-0542; four catalogue records should remain separate until visual comparison confirms relationship.",
+      "sources": [
+        "rail-museum",
+        "rail-collector"
+      ],
+      "baselineIds": [],
+      "templateCandidate": "bc-rail-police-crescents",
+      "artworkStatus": "not-created",
+      "sourceImagesDownloaded": false,
+      "nextStep": "Inspect the source image at full resolution, record provenance, and compare the physical variant before creating artwork."
+    },
+    {
+      "id": "bcrail-3220-pa-0543",
+      "label": "BC Railway Police — dark crescent with full railway name",
+      "organization": "BC Rail Police",
+      "sector": "transportation",
+      "collection": "patches",
+      "status": "documented-missing",
+      "classification": "new-candidate",
+      "priority": 1,
+      "evidence": "Museum accession 3220-PA-0543; four catalogue records should remain separate until visual comparison confirms relationship.",
+      "sources": [
+        "rail-museum",
+        "rail-collector"
+      ],
+      "baselineIds": [],
+      "templateCandidate": "bc-rail-police-crescents",
+      "artworkStatus": "not-created",
+      "sourceImagesDownloaded": false,
+      "nextStep": "Inspect the source image at full resolution, record provenance, and compare the physical variant before creating artwork."
+    },
+    {
+      "id": "ambulance-roundel",
+      "label": "Ambulance / British Columbia — shoulder roundel",
+      "organization": "BC Ambulance Service",
+      "sector": "health",
+      "collection": "patches",
+      "status": "documented-missing",
+      "classification": "new-candidate",
+      "priority": 1,
+      "evidence": "Official report photographs cloth roundel; separate 2012 specimen photograph can corroborate.",
+      "sources": [
+        "ambulance-2024",
+        "ambulance-photo"
+      ],
+      "baselineIds": [],
+      "templateCandidate": "bc-ambulance-roundel",
+      "artworkStatus": "not-created",
+      "sourceImagesDownloaded": false,
+      "nextStep": "Inspect the source image at full resolution, record provenance, and compare the physical variant before creating artwork."
+    },
+    {
+      "id": "ambulance-paramedic-tab",
+      "label": "Paramedic — Canadian flag and Star of Life tab",
+      "organization": "BC Ambulance Service — attribution pending",
+      "sector": "health",
+      "collection": "patches",
+      "status": "documented-needs-comparison",
+      "classification": "new-candidate",
+      "priority": 2,
+      "evidence": "LVV Foundation publication shows a qualification tab on a uniform; agency issue attribution and exact variant remain unresolved.",
+      "sources": [
+        "ambulance-qualifier"
+      ],
+      "baselineIds": [],
+      "templateCandidate": "bc-ambulance-qualification-tabs",
+      "artworkStatus": "not-created",
+      "sourceImagesDownloaded": false,
+      "nextStep": "Inspect the source image at full resolution, record provenance, and compare the physical variant before creating artwork."
+    },
+    {
+      "id": "ambulance-retired-pocket",
+      "label": "BC Ambulance — retired pocket crest",
+      "organization": "BC Ambulance Service",
+      "sector": "health",
+      "collection": "patches",
+      "status": "collector-candidate",
+      "classification": "new-candidate",
+      "priority": 2,
+      "evidence": "Specialist photographic catalogue names a retired pocket crest; date and construction require review.",
+      "sources": [
+        "ambulance-pocket"
+      ],
+      "baselineIds": [],
+      "templateCandidate": "bc-ambulance-pocket",
+      "artworkStatus": "not-created",
+      "sourceImagesDownloaded": false,
+      "nextStep": "Inspect the source image at full resolution, record provenance, and compare the physical variant before creating artwork."
+    },
+    {
+      "id": "richmond-ambulance-patch",
+      "label": "Richmond Ambulance — vintage shoulder patch",
+      "organization": "Richmond Ambulance",
+      "sector": "health",
+      "collection": "patches",
+      "status": "collector-candidate",
+      "classification": "new-candidate",
+      "priority": 2,
+      "evidence": "Photographer’s caption identifies the physical patch; attribution and dates still need corroboration.",
+      "sources": [
+        "richmond-ambulance"
+      ],
+      "baselineIds": [],
+      "templateCandidate": null,
+      "artworkStatus": "not-created",
+      "sourceImagesDownloaded": false,
+      "nextStep": "Inspect the source image at full resolution, record provenance, and compare the physical variant before creating artwork."
+    },
+    {
+      "id": "ferries-dogwood",
+      "label": "BC Ferries — dogwood coveralls badge",
+      "organization": "BC Ferries",
+      "sector": "transportation",
+      "collection": "patches",
+      "status": "collector-candidate",
+      "classification": "new-candidate",
+      "priority": 2,
+      "evidence": "Dealer catalogue BCF-2 identifies a coveralls badge; compare with government uniform photograph and branding archive.",
+      "sources": [
+        "ferries-collector",
+        "ferries-uniform",
+        "ferries-foi"
+      ],
+      "baselineIds": [],
+      "templateCandidate": "bc-ferries-dogwood",
+      "artworkStatus": "not-created",
+      "sourceImagesDownloaded": false,
+      "nextStep": "Inspect the source image at full resolution, record provenance, and compare the physical variant before creating artwork."
+    },
+    {
+      "id": "nro-shoulder",
+      "label": "Natural Resource Officer — provincial shoulder flash",
+      "organization": "Natural Resource Officer Service",
+      "sector": "environment",
+      "collection": "patches",
+      "status": "documented-needs-comparison",
+      "classification": "new-candidate",
+      "priority": 2,
+      "evidence": "Official disclosure confirms a shoulder crest exists, but source imagery must establish whether the exact variant is new.",
+      "sources": [
+        "nro-disclosure",
+        "nro-brochure"
+      ],
+      "baselineIds": [
+        "S56-O41"
+      ],
+      "templateCandidate": "provincial-ministry-shield",
+      "artworkStatus": "not-created",
+      "sourceImagesDownloaded": false,
+      "nextStep": "Inspect the source image at full resolution, record provenance, and compare the physical variant before creating artwork."
+    },
+    {
+      "id": "fraser-unit-crew",
+      "label": "Fraser Unit Crew — crew patch",
+      "organization": "BC Wildfire Service",
+      "sector": "forests",
+      "collection": "patches",
+      "status": "documented-needs-image",
+      "classification": "new-candidate",
+      "priority": 1,
+      "evidence": "Agency newsletter explicitly discusses the crew’s patch; a usable physical specimen image is still required.",
+      "sources": [
+        "coastal-crews-2020"
+      ],
+      "baselineIds": [],
+      "templateCandidate": "wildfire-unit-crews",
+      "artworkStatus": "not-created",
+      "sourceImagesDownloaded": false,
+      "nextStep": "Inspect the source image at full resolution, record provenance, and compare the physical variant before creating artwork."
+    },
+    {
+      "id": "stlatlimx-patch",
+      "label": "Stl’atl’imx Tribal Police — shoulder patch",
+      "organization": "Stl’atl’imx Tribal Police Service",
+      "sector": "justice",
+      "collection": "patches",
+      "status": "documented-needs-image",
+      "classification": "new-candidate",
+      "priority": 2,
+      "evidence": "Agency publicly acknowledges its patches; obtain a suitable public specimen image and preserve authored-art attribution.",
+      "sources": [
+        "stlatlimx"
+      ],
+      "baselineIds": [],
+      "templateCandidate": "stlatlimx-tribal-police",
+      "artworkStatus": "not-created",
+      "sourceImagesDownloaded": false,
+      "nextStep": "Inspect the source image at full resolution, record provenance, and compare the physical variant before creating artwork."
+    },
+    {
+      "id": "bcpp-presentation",
+      "label": "British Columbia Provincial Police — framed sew-on presentation piece",
+      "organization": "British Columbia Provincial Police",
+      "sector": "justice",
+      "collection": "patches",
+      "status": "held-unverified-issue",
+      "classification": "held-lead",
+      "priority": 3,
+      "evidence": "Auction description establishes a presentation object, not historic operational issue. Do not label authentic issued BCPP patch.",
+      "sources": [
+        "bcpolice-auction"
+      ],
+      "baselineIds": [],
+      "templateCandidate": null,
+      "artworkStatus": "not-created",
+      "sourceImagesDownloaded": false,
+      "nextStep": "Inspect the source image at full resolution, record provenance, and compare the physical variant before creating artwork."
+    },
+    {
+      "id": "parks-student-ranger",
+      "label": "BC Parks — Student Ranger version",
+      "organization": "BC Parks",
+      "sector": "environment",
+      "collection": "patches",
+      "status": "held-printed-design-only",
+      "classification": "held-lead",
+      "priority": 3,
+      "evidence": "Recruitment material depicts a Student Ranger design, but no cloth specimen of that variant is established.",
+      "sources": [
+        "parks-student"
+      ],
+      "baselineIds": [
+        "S30-O04",
+        "S27-O04"
+      ],
+      "templateCandidate": "parks-scenic-arch",
+      "artworkStatus": "not-created",
+      "sourceImagesDownloaded": false,
+      "nextStep": "Inspect the source image at full resolution, record provenance, and compare the physical variant before creating artwork."
+    },
+    {
+      "id": "haida-guardian-planned",
+      "label": "Haida guardian — shoulder patch planned in 2018",
+      "organization": "Haida Nation / integrated enforcement",
+      "sector": "environment",
+      "collection": "patches",
+      "status": "held-planned-only",
+      "classification": "held-lead",
+      "priority": 3,
+      "evidence": "Government article says the patch was in development; production and adopted design remain unverified.",
+      "sources": [
+        "haida-guardian"
+      ],
+      "baselineIds": [],
+      "templateCandidate": null,
+      "artworkStatus": "not-created",
+      "sourceImagesDownloaded": false,
+      "nextStep": "Inspect the source image at full resolution, record provenance, and compare the physical variant before creating artwork."
+    }
+  ],
+  "corroborations": [
+    {
+      "source": "pemberton-bcfs",
+      "specimens": [
+        "a",
+        "c"
+      ],
+      "baselineIds": [
+        "S49-O01"
+      ],
+      "note": "Fire Control titles; compare colour and manufacture before adding a variant."
+    },
+    {
+      "source": "pemberton-bcfs",
+      "specimens": [
+        "d"
+      ],
+      "baselineIds": [
+        "S44-O01",
+        "S56-O52"
+      ],
+      "note": "Forest shoulder emblem."
+    },
+    {
+      "source": "pemberton-bcfs",
+      "specimens": [
+        "i"
+      ],
+      "baselineIds": [
+        "S45-O01"
+      ],
+      "note": "BC map, tree and deer rectangle."
+    },
+    {
+      "source": "pemberton-bcfs",
+      "specimens": [
+        "j",
+        "k"
+      ],
+      "baselineIds": [
+        "FO-fire-control"
+      ],
+      "note": "Two specimens, one Fire Control oval."
+    },
+    {
+      "source": "pemberton-bcfs",
+      "specimens": [
+        "l"
+      ],
+      "baselineIds": [
+        "S48-O01"
+      ],
+      "note": "Evergreen map cloth square."
+    },
+    {
+      "source": "pemberton-bcfs",
+      "specimens": [
+        "n"
+      ],
+      "baselineIds": [
+        "FO-green-gold"
+      ],
+      "note": "Green/gold tree oval."
+    },
+    {
+      "source": "ingenium-forest",
+      "baselineIds": [
+        "FO-forest-service"
+      ],
+      "note": "Physical embroidered specimen; can distinguish cloth evidence from the existing generated digital rendition."
+    },
+    {
+      "source": "ingenium-fire-control",
+      "baselineIds": [
+        "FO-fire-control"
+      ],
+      "note": "Physical embroidered specimen."
+    },
+    {
+      "source": "ingenium-airtanker",
+      "baselineIds": [
+        "FO-airtanker"
+      ],
+      "note": "Physical embroidered specimen; do not count as new wording."
+    },
+    {
+      "source": "bcss-old-physical",
+      "baselineIds": [
+        "S56-O01",
+        "S56-O02"
+      ],
+      "note": "Higher-resolution source candidate. Resolve the exact matching design first."
+    },
+    {
+      "source": "moosecop-parks",
+      "baselineIds": [
+        "S25-O01",
+        "S31-O01",
+        "S29-O01",
+        "S29-O02",
+        "S29-O04",
+        "S29-O03",
+        "S25-O03",
+        "S25-O04",
+        "S25-O05",
+        "S25-O06",
+        "S30-O01",
+        "S30-O02",
+        "S30-O03",
+        "S30-O04",
+        "S27-O04",
+        "S27-O02"
+      ],
+      "note": "Principal designs appear represented already. Check separately sewn ranger tab, later one-piece outerwear construction, cap scale and unofficial issue as specimen/variant attributes."
+    }
+  ],
+  "crewResearch": {
+    "source": "coastal-crews-2020",
+    "asOf": "2020-07-17",
+    "status": "roster-targets-not-individually-verified-patches",
+    "note": "Fraser patch existence is explicitly described. Other names seed a systematic collection queue; neither a new design count nor a current roster.",
+    "byFireCentre": {
+      "Cariboo": [
+        "Vesta",
+        "Stormriders",
+        "Blackwater",
+        "Ravens"
+      ],
+      "Coastal": [
+        "Trailblazers",
+        "Thunderbirds",
+        "Heatseekers",
+        "Fraser",
+        "Salish"
+      ],
+      "Kamloops": [
+        "Bighorns",
+        "Thunderstrike",
+        "Fire Devils",
+        "Fire Stalkers",
+        "Sierras",
+        "Nicola Knights",
+        "Rattlers"
+      ],
+      "Northwest": [
+        "Firebirds",
+        "Rangers",
+        "Rainmakers",
+        "Burns Lake"
+      ],
+      "Prince George": [
+        "Rhinos",
+        "Firehawks",
+        "Titans",
+        "Mack"
+      ],
+      "Southeast": [
+        "Sentinel",
+        "Valhalla",
+        "Rocky Mountain",
+        "Flathead",
+        "Columbia",
+        "Monashee"
+      ]
+    }
+  },
+  "coverageLeads": [
+    {
+      "area": "Search and rescue",
+      "sources": [
+        "sar-directory",
+        "pgsar"
+      ],
+      "nextStep": "Use the association directory to create a team checklist; begin with Prince George, then identify public photographs of physical patches. Keep supporter merchandise separate."
+    },
+    {
+      "area": "Municipal and Indigenous policing",
+      "nextStep": "Complete standard issue and historical specimens for Central Saanich, Oak Bay, Victoria, West Vancouver, Nelson, New Westminster and other departments; the entries above do not close full agency coverage."
+    },
+    {
+      "area": "Provincial enforcement",
+      "nextStep": "Compare current CVSE, Legislative Assembly Protective Services, Coroners, Corrections and Natural Resource Officer insignia against existing historical shields."
+    },
+    {
+      "area": "Wildfire",
+      "sources": [
+        "coastal-crews-2020"
+      ],
+      "nextStep": "Collect individual unit-crew specimens, Rapattack and Parattack variations, and preserve crew/role, place and date separately from Forest Service corporate identity."
+    },
+    {
+      "area": "Ferries, rail and transit",
+      "sources": [
+        "transit-history",
+        "ferries-foi"
+      ],
+      "nextStep": "Link operational insignia to existing corporate identity histories without assuming each logo was a patch. Review BC Ferries brand disclosure for uniform specifications."
+    },
+    {
+      "area": "Ambulance and emergency management",
+      "sources": [
+        "ambulance-pocket",
+        "richmond-ambulance"
+      ],
+      "nextStep": "Inspect pre-provincial local ambulance services, provincial emergency program and civil defence; confirm cloth specimens before catalogue admission."
+    }
+  ],
+  "designPrinciples": [
+    "A specimen photograph is evidence for a design, not automatically a new design.",
+    "Keep organization, design family, wording/role, palette, manufacture/backing, and evidence status in separate fields.",
+    "Generated recolours and a physical issue need different evidence states even when they share artwork.",
+    "A detached title or qualification tab can form a documented assembly with a main patch without becoming a duplicate combined design.",
+    "Shared template geometry does not establish organizational or historical identity.",
+    "Save source documents once and refer to image/page/crop coordinates from multiple sightings; do not duplicate the same museum image for each accession component.",
+    "Source dates, catalogue dates, first-seen dates and verified issue periods must remain distinct."
+  ],
+  "counts": {
+    "candidateRecords": 44,
+    "byStatus": {
+      "documented-missing": 29,
+      "collector-candidate": 8,
+      "documented-needs-comparison": 2,
+      "documented-needs-image": 2,
+      "held-unverified-issue": 1,
+      "held-printed-design-only": 1,
+      "held-planned-only": 1
+    },
+    "byCollection": {
+      "patches": 43,
+      "badges": 1
+    },
+    "corroborationRecords": 11,
+    "crewResearchTargets": 30
+  },
+  "assetPolicy": {
+    "status": "research-metadata-only",
+    "sourceImagesDownloaded": false,
+    "artworkCreated": false,
+    "rightsAssessed": false,
+    "note": "Rights and attribution must be assessed at the individual source before importing imagery. Ingenium pages present an apparent mismatch between the displayed license label and linked license; resolve it before reuse. Museum catalogue descriptions do not grant artwork or photograph reuse rights."
+  },
+  "baselineComparisonNote": "baselineIds identify nearest comparison targets, not confirmed matches or shared geometry; an empty list means no close target was identified in this review.",
+  "relatedInventories": [
+    {
+      "file": "museum-specimens-2026-11-13.json",
+      "accessionRecords": 55,
+      "note": "Separate bounded museum-source pass: 23 potential additional design/variant specimens, 19 specimens linked to existing research candidates, 7 baseline corroborations, 5 scope reviews and 1 unresolved rank item. Do not add these counts to design totals."
+    }
+  ]
+}

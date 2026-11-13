@@ -13,7 +13,9 @@
 
 .patches__filters { display: flex; flex-wrap: wrap; gap: 10px 14px; margin-top: 16px; }
 .patches__filter { display: grid; gap: 6px; min-width: 0; flex: 0 1 320px; }
+.patches__filter--compact { flex-basis: 180px; }
 .patches__filter--grow { flex: 1 1 260px; }
+.patches__filter select { width: 100%; min-width: 0; max-width: 100%; }
 .patches__filter > span { font-size: 13px; font-weight: 600; color: var(--ink-2); }
 .patches__filter input {
   width: 100%;
@@ -30,6 +32,12 @@
 @media (min-width: 900px) { .patches__filter input { font-size: 14px; } }
 
 .patches__empty { padding: 24px 4px; color: var(--ink-muted); }
+.patches__intro .patches__group-note { margin-top: 14px; font-size: 13px; line-height: 1.5; }
+.patches__results { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 14px; margin-top: 12px; color: var(--ink-muted); font-size: 13px; }
+.patches__results .button { min-height: 32px; font-size: 13px; }
+.patches__family-head { display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 12px; margin-bottom: 16px; }
+.patches__family-head h3 { margin: 0; font-size: 19px; }
+.patches__family-head p { flex-basis: 100%; margin: 2px 0 0; max-width: 90ch; color: var(--ink-muted); font-size: 13.5px; line-height: 1.5; }
 
 .patches__sector-name {
   margin: 0 0 4px;
@@ -74,9 +82,14 @@
 .patches__card-text { display: grid; align-content: start; gap: 2px; padding: 10px 12px 12px; }
 .patches__title { font-weight: 600; font-size: 13.5px; line-height: 1.35; }
 .patches__medium { font-size: 12px; color: var(--ink-faint); }
+.patches__owner, .patches__template-name { font-size: 11.5px; color: var(--ink-muted); line-height: 1.4; }
+.patches__owner { margin-bottom: 2px; }
+.patches__matched { font-size: 12px; color: var(--ink-2); line-height: 1.4; }
+.patches__evidence { margin-top: 5px; padding: 3px 6px; border: 1px dashed var(--mid); border-radius: 5px; font-size: 11px; line-height: 1.4; color: var(--ink-muted); width: fit-content; }
 
 @media (max-width: 600px) {
   .patches__intro, .patches__sector { padding: 16px; }
+  .patches__filter { flex: 1 1 100%; }
   .patches__grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
 
