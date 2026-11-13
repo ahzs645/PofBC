@@ -27,7 +27,7 @@
   "fingerprints": {
     "snapshotSha256": "5955544e5deef4dcc72fcb201137dd943053ef78deeca303026c4a4bc19124f1",
     "aliasesSha256": "f8fbabcea76dfaab15fcfcea12aac2eee5ba2e56203b89d7cb890ec4eec81b4d",
-    "repositoryInputsSha256": "499028b1668c8d7e05e68f745cce157074b4b4e98fbcb7501a9a829330a7e006"
+    "repositoryInputsSha256": "f2bcb4010adac0627c8b3848a584185153b10f38434a4183e9ca31f7c764aa40"
   },
   "summary": {
     "referenceEmployers": 3,
@@ -51,7 +51,7 @@
     },
     "repositoryEmployersWithOfficial": 238,
     "repositoryCompiledOnlyEmployers": 42,
-    "repositorySourceTasks": 214,
+    "repositorySourceTasks": 217,
     "externalReferenceTasks": 3
   },
   "employers": [
@@ -7054,7 +7054,7 @@
       ],
       "compiledEditionLabels": [],
       "acceptedPeriodCount": 1,
-      "sourceLeadCount": 0,
+      "sourceLeadCount": 2,
       "partialSources": [
         "gap-fill-school-native-sd57-2025-employees",
         "gap-fill-school-native-sd57-2025-trustees"
@@ -11874,6 +11874,23 @@
       "reason": "The complete 3,896-row CMBC 2024 candidate schedule agrees between both native readers, but row sums exceed printed salary payments by $3,859 and remuneration by $647, and fall below printed Other by $3,212 and expenses by $12. The source footnotes give no explanation. These larger control differences remain unresolved."
     },
     {
+      "id": "source-9278ef8a5a4d2937",
+      "origin": "repository-source-catalog",
+      "priority": 1,
+      "employerSlug": "district-of-fort-st-james",
+      "employerName": "District of Fort St. James",
+      "referenceEmployer": null,
+      "year": "2024",
+      "status": "requires-ocr",
+      "sourceUrl": "https://www.fortstjames.ca/sites/default/files/2025-06/District%20of%20Fort%20St%20James%20-%202024%20Statement%20of%20Financial%20Information%20w%20checklist-signed.pdf",
+      "sourceId": "fort-st-james-sofi-2024",
+      "scope": "employee-remuneration",
+      "repositoryRows": 0,
+      "referenceRecords": null,
+      "nextAction": "Independently transcribe and reconcile page 8. Preserve all named rows: the source's over-$75,000 section includes a remuneration-below-$75,000 row whose combined remuneration and expenses exceeds that amount. Record this scope issue instead of filtering the row away or merging expenses into salary.",
+      "reason": null
+    },
+    {
       "id": "source-fa4ee84fe0efaea0",
       "origin": "repository-source-catalog",
       "priority": 1,
@@ -12469,6 +12486,40 @@
       "reason": "Earlier audit: Report retrieved, but the reviewed employee layout is absent (scan, font extraction issue or unsupported format); no rows imported. Follow-up: OCR discovery is complete on all 50 physical pages, with 10 two-pass candidate pages retained. Source-specific row, period and control acceptance is still unfinished; no OCR candidate rows are imported."
     },
     {
+      "id": "source-a6e18c6aa987004b",
+      "origin": "repository-source-catalog",
+      "priority": 1,
+      "employerSlug": "school-district-57",
+      "employerName": "School District No. 57 (Prince George)",
+      "referenceEmployer": null,
+      "year": "2022/23",
+      "status": "requires-ocr",
+      "sourceUrl": "https://22.files.edl.io/ecb5/11/15/24/222817-489f5533-61fe-4897-9dbc-86cbb8fb2362.pdf",
+      "sourceId": "sd57-sofi-2022-23",
+      "scope": "employee-remuneration",
+      "repositoryRows": 0,
+      "referenceRecords": null,
+      "nextAction": "OCR or manually extract pages 51–64 with retained page images; independently check every name, position and amount, separate trustees, and reconcile both employee controls before acceptance.",
+      "reason": null
+    },
+    {
+      "id": "source-ed735c6e2a2ef216",
+      "origin": "repository-source-catalog",
+      "priority": 1,
+      "employerSlug": "school-district-57",
+      "employerName": "School District No. 57 (Prince George)",
+      "referenceEmployer": null,
+      "year": "2023/24",
+      "status": "source-found-awaiting-extraction",
+      "sourceUrl": "https://22.files.edl.io/607e/11/15/24/215959-e2178279-6c84-4d69-960b-b7ae70f553f1.pdf",
+      "sourceId": "sd57-sofi-2023-24",
+      "scope": "employee-remuneration",
+      "repositoryRows": 0,
+      "referenceRecords": null,
+      "nextAction": "Extract the complete employee section without trustees, reconcile named remuneration and expense totals, then retain the page 76 explanations for differences from audited financial statements.",
+      "reason": null
+    },
+    {
       "id": "source-4cfa22bf60ce8446",
       "origin": "repository-source-catalog",
       "priority": 1,
@@ -12527,13 +12578,13 @@
       "employerName": "University of Northern B.C.",
       "referenceEmployer": null,
       "year": "2021/22",
-      "status": "official-source-indexed-awaiting-validation",
+      "status": "source-found-awaiting-extraction",
       "sourceUrl": "https://www.unbc.ca/sites/default/files/sections/governance/20220916boardpublicsessionmeetingpackageminusminutes.pdf",
-      "sourceId": "unbc-board-sofi-2021-22",
+      "sourceId": "unbc-sofi-2021-22-approval-follow-through",
       "scope": "employee-remuneration",
       "repositoryRows": 0,
       "referenceRecords": null,
-      "nextAction": "Verify the SOFI report period, complete employee table and final approval. Extract and reconcile only the employee schedule; board agenda proposals alone are not final disclosures.",
+      "nextAction": "Extract PDF pages 11–17, validate every employee cell including explicit 0.00 expenses, and reconcile both named controls. Preserve the report's exclusions and accounting-basis note.",
       "reason": null
     },
     {
@@ -12546,11 +12597,11 @@
       "year": "2025/26",
       "status": "official-source-indexed-awaiting-validation",
       "sourceUrl": "https://www.unbc.ca/sites/default/files/sections/university-secretary/board-governors/2026-09-18-board-public-package-minus-minutescompressed_1.pdf",
-      "sourceId": "unbc-board-sofi-2025-26",
+      "sourceId": "unbc-sofi-2025-26-approval-hold",
       "scope": "employee-remuneration",
       "repositoryRows": 0,
       "referenceRecords": null,
-      "nextAction": "Verify the SOFI report period, complete employee table and final approval. Extract and reconcile only the employee schedule; board agenda proposals alone are not final disclosures.",
+      "nextAction": "Locate a signed final SOFI or approved September 18 minutes, compare the approved version to this fingerprint, then extract and reconcile pages 37–45. Preserve the cash-payment basis and position-as-at-date notes on page 45.",
       "reason": null
     },
     {
@@ -13356,8 +13407,8 @@
   "inputs": [
     {
       "path": "public/salaries/coverage.json",
-      "bytes": 7709093,
-      "sha256": "d625b4decdbb0e52f5ba0c2dda3a68c8c35ca73a8b0aff0a63baf7873baf1116"
+      "bytes": 7718767,
+      "sha256": "19648a3dde6edc7ec98e83caee3fb65423c05c6010ab9878f6589aff3f73b9c1"
     },
     {
       "path": "public/salaries/employers/abbotsford-police.json.gzip",
@@ -14762,7 +14813,7 @@
     {
       "path": "public/salaries/index.json",
       "bytes": 11842440,
-      "sha256": "0866d14d10e5a9fa9e4d5bbaaa0e969e45ac6dd92bdcbf7b4d2f5290519393a4"
+      "sha256": "5976772ec9e2145c214db5f1f78be59592aec54145d780903bd47e3a83b60683"
     }
   ]
 }

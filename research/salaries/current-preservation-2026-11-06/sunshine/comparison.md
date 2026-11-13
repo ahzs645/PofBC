@@ -30,7 +30,7 @@ Reference totals span the source’s own reported years and definitions. The tab
 
 ## Processing queue
 
-The [work queue](work-queue.csv) contains **214 existing official-source tasks** and **3 reference-comparison tasks**. Existing leads are linked to their original report or archive and retain the recorded next action. They do not prove that additional records are available or that a report has passed validation.
+The [work queue](work-queue.csv) contains **217 existing official-source tasks** and **3 reference-comparison tasks**. Existing leads are linked to their original report or archive and retain the recorded next action. They do not prove that additional records are available or that a report has passed validation.
 
 This queue covers the published source catalog and supplied reference. The broader [six-sector processing and archive queue](../continuation-2026-11-01/work-queue.csv) remains available separately. The queues can overlap and their totals must not be added.
 
@@ -52,5 +52,5 @@ Priority 1 covers missing official employer/period coverage, held partial employ
 - [Work queue](work-queue.csv) is suitable for filtering by employer, period, source status and priority.
 - [Usage and snapshot format](README.md) explains importing a saved snapshot and rerunning the audit.
 
-Repository input fingerprint: `499028b1668c8d7e05e68f745cce157074b4b4e98fbcb7501a9a829330a7e006`.
+Repository input fingerprint: `f2bcb4010adac0627c8b3848a584185153b10f38434a4183e9ca31f7c764aa40`.
 Reference snapshot fingerprint: `5955544e5deef4dcc72fcb201137dd943053ef78deeca303026c4a4bc19124f1`.
