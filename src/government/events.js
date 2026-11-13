@@ -106,6 +106,13 @@ export const yearOfEvent = (event) => part(event.date.start).year
 /** Whether a scheduled event is still ahead on `day`; a past event never is. */
 export const isAhead = (event, day) => event.status !== 'source_reported_past' && String(event.date.start) > day
 
+/**
+ * Whether the sources disagree about this event. Kept apart from its status: an event can be in the
+ * past and still have competing dates. Two assertions under one ID that disagree are marked by the
+ * collector; a claim the research itself records as disputed carries certainty "conflicting".
+ */
+export const isConflicting = (event) => event.status === 'conflicting' || event.certainty === 'conflicting' || Boolean(event.conflictGroup)
+
 /** Events about any of these subjects, oldest first. */
 export const eventsFor = (subjects) => {
   const wanted = new Set(subjects)

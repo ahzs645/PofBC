@@ -25,6 +25,11 @@ export const checkRecordLinks = () => {
       relatedEventLinks++
       if (!eventIds.has(id)) issues.push({ event: event.id, field: 'relatedEvents', value: id })
     }
+    for (const id of event.competingEvents ?? []) {
+      relatedEventLinks++
+      if (!eventIds.has(id)) issues.push({ event: event.id, field: 'competingEvents', value: id })
+      else if (!(EVENTS.find((other) => other.id === id).competingEvents ?? []).includes(event.id)) issues.push({ event: event.id, field: 'competingEvents', value: id, reason: 'Competing claims must name each other' })
+    }
     for (const reference of event.legalReferences ?? []) {
       legalReferences++
       if (!/^https:\/\//.test(reference.source_url) || !reference.locator) issues.push({ event: event.id, field: 'legalReferences', value: reference })

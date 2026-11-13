@@ -9,7 +9,7 @@
 import { HISTORICAL_CENSUSES, IMPORT_COUNTS } from './researchData.js'
 import { Fragment, useMemo, useState } from 'react'
 import { compareYears } from './compare.js'
-import { EVENTS, EVENT_SOURCES, formatEventDate, isAhead, typeOf } from './events.js'
+import { EVENTS, EVENT_SOURCES, formatEventDate, isAhead, isConflicting, typeOf } from './events.js'
 import { MINISTRY_EPISODES, standsIn } from './episodes.js'
 import { StoryText } from './StoryText.jsx'
 import { storySteps } from './storySteps.js'
@@ -46,7 +46,8 @@ export const EventsCard = ({ events, day, title = 'Origins and changes' }) => {
               <span className="gov-events__body">
                 <span className="gov-events__type">
                   {type.label}
-                  {event.status !== 'source_reported_past' && <span className="gov-chip" data-type="scheduled">{event.status === 'conflicting' ? 'Conflicting evidence' : event.status === 'planned' ? 'Planned' : 'Scheduled'}</span>}
+                  {['planned', 'scheduled'].includes(event.status) && <span className="gov-chip" data-type="scheduled">{event.status === 'planned' ? 'Planned' : 'Scheduled'}</span>}
+                  {isConflicting(event) && <span className="gov-chip" data-type="scheduled">Conflicting evidence</span>}
                 </span>
                 <span className="gov-events__title">{event.title}</span>
                 {event.notes && <StoryText text={event.notes} label="Note" className="gov-events__note" />}
@@ -70,6 +71,10 @@ export const EventsCard = ({ events, day, title = 'Origins and changes' }) => {
                   )
                 })}
                 {(event.decisions ?? []).map((decision) => <span key={decision.id} className="gov-events__note">Reviewed {decision.decided}: {decision.reason}</span>)}
+                {(event.competingEvents ?? []).map((id) => {
+                  const rival = EVENTS.find((candidate) => candidate.id === id)
+                  return rival && <span key={id} className="gov-events__note">Competing claim: <a href={`#event-${id}`}>{rival.title} ({formatEventDate(rival.date)})</a></span>
+                })}
                 {(event.relatedEvents ?? []).map((id) => {
                   const related = EVENTS.find((candidate) => candidate.id === id)
                   return related && <span key={id} className="gov-events__note">Related event: <a href={`#event-${id}`}>{related.title} ({formatEventDate(related.date)})</a></span>
