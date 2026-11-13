@@ -55,6 +55,6 @@ The reconstruction script looks for NimbusSans-Bold.otf at a conventional Linux 
 
 ## Validation
 
-The primary SVG contains 347 path elements and no image elements. The live-text SVG contains 279 paths and four text elements. The standalone illustration contains 265 paths, and the emblem contains five paths (badge, mainland and three islands) plus a rectangle and polygon for the evergreen. The PDF and PNG were re-exported with CairoSVG after the emblem swap. The PDF was rendered for visual checking and contains no embedded images or font resources. Details are recorded in `vector-validation.json`.
+The primary SVG contains 348 path elements and no image elements. The live-text SVG contains 280 paths and four text elements. The standalone illustration contains 266 paths, and the emblem contains five paths (badge, mainland and three islands) plus a rectangle and polygon for the evergreen. The PDF and PNG were re-exported with CairoSVG after the emblem swap. The PDF was rendered for visual checking and contains no embedded images or font resources. Details are recorded in `vector-validation.json`.
 
 No affiliation, official approval, or ownership transfer in the underlying historical poster design is implied.
