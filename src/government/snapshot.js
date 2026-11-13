@@ -128,6 +128,15 @@ export const lifespanOf = (record) => {
   }
 }
 
+/**
+ * The earliest day a sourced responsibility row shows a body standing, for a body whose start no source
+ * gives. It is when the body is first seen answering to a ministry, never its establishment.
+ */
+export const responsibilitySighting = (record) => (record?.responsible ?? [])
+  .filter(([, from, , source]) => from && source !== null && source !== undefined)
+  .map(([, from]) => String(from))
+  .sort()[0] ?? null
+
 /** A life in years, for a search result or a list: "1980–1985", "known 1983–1985", "1994–?". */
 export const lifeYears = (life) => {
   const y = (value) => (value ? String(value).slice(0, 4) : '?')
@@ -493,6 +502,13 @@ export const governmentIn = (year, { includeUndated = false, includeLocal = fals
     const established = record?.established ?? (body.established ? String(body.established) : null)
     // A body whose start no source gives is drawn before today only when asked, and marked uncertain.
     const undated = !established
+    // A body with no start given, but a sourced period of answering to a ministry, is shown from that
+    // period's start: a sighting, not a founding (FII's 2003 service-plan row is not its incorporation).
+    const sighted = undated ? responsibilitySighting(record) : null
+    if (!present && sighted && startOf(sighted) <= day) {
+      place({ ...body, established: null, presence: 'seen', firstSeen: sighted, head: null, description: body.description ?? record?.description ?? null }, record)
+      continue
+    }
     if (!present && !stands(established, null) && !(includeUndated && undated)) continue
     if (!present && undated) {
       place({ ...body, established: null, head: null, description: body.description ?? null }, record, { uncertain: true })
@@ -816,7 +832,7 @@ export const lifeOf = (id) => {
         const life = lifespanOf(body)
         return { name: body.name, from: body.established ?? null, firstSeen: life.fromKind === 'firstSeen' ? life.from : null, to: life.to, toKind: life.toKind, lastSeen: life.lastSeen, operationalEnd: life.operationalEnd }
       })()
-        : current ? { name: current.name, from: current.established ? String(current.established) : null, to: null, toKind: 'open' }
+        : current ? { name: current.name, from: current.established ? String(current.established) : null, firstSeen: current.established ? null : responsibilitySighting(HISTORICAL_BODIES.find((entry) => entry.id === id)), to: null, toKind: 'open' }
           : null
   if (!record && !events.length) return null
   return { id, name: record?.name ?? null, from: record?.from ?? null, firstSeen: record?.firstSeen ?? null, to: record?.to ?? null, toKind: record?.toKind ?? 'open', lastSeen: record?.lastSeen ?? null, operationalEnd: record?.operationalEnd ?? null, events }

@@ -2,7 +2,7 @@ import { readFileSync, existsSync, readdirSync } from 'node:fs'
 import { spawnSync } from 'node:child_process'
 // The research queue's batches are regenerated whole, so their set of files is compared too.
 const batches = () => existsSync('research/queue/batches') ? readdirSync('research/queue/batches').sort().map((name) => `research/queue/batches/${name}`) : []
-const fixed = ['src/government/historyData.js', 'src/government/eventsData.js', 'src/government/atlasData.js', 'src/government/researchData.js', 'research/sub-agencies/BRIEF.md', 'research/sub-agencies/TEMPLATE.json', 'research/queue/INDEX.md', 'research/queue/sub-agencies.json', ...['events', 'history', 'atlas'].map((name) => `research/audit/${name}-import.json`)]
+const fixed = ['src/government/historyData.js', 'src/government/eventsData.js', 'src/government/instrumentsData.js', 'research/audit/instruments-review.json', 'src/government/atlasData.js', 'src/government/researchData.js', 'research/sub-agencies/BRIEF.md', 'research/sub-agencies/TEMPLATE.json', 'research/queue/INDEX.md', 'research/queue/sub-agencies.json', ...['events', 'history', 'atlas'].map((name) => `research/audit/${name}-import.json`)]
 const files = [...fixed, ...batches()]
 const before = new Map(files.map((name) => [name, existsSync(name) ? readFileSync(name) : null]))
 const result = spawnSync('npm', ['run', 'build:government'], { stdio: 'inherit', env: { ...process.env, GOVERNMENT_AS_OF: process.env.GOVERNMENT_AS_OF ?? '2026-09-30' } })

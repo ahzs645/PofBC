@@ -115,7 +115,7 @@ function leadQueue(repository) {
     const period = employer?.periods.find(period => period.yearLabel === lead.year)
     return [{ id: `source-${hash(key).slice(0, 16)}`, origin: 'repository-source-catalog',
       priority: !employer?.officialRows || lead.year && !period?.employeeRows ? 1 : 2,
-      employerSlug: lead.employerSlug, employerName: employer?.name ?? lead.employerSlug,
+      employerSlug: lead.employerSlug, employerName: employer?.name ?? lead.employerName ?? lead.employerSlug,
       referenceEmployer: null, year: lead.year ?? null, status: lead.status,
       sourceUrl: lead.url ?? lead.indexUrl ?? null, sourceId: lead.id,
       scope: lead.scope ?? null, repositoryRows: period?.rows ?? 0, referenceRecords: null,

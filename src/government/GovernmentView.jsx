@@ -11,6 +11,8 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import { canonicalId, MINISTRY_EPISODES, standsIn } from './episodes.js'
 import { ChangesCard, EntityCard, OverviewCard } from './GovernmentPanel.jsx'
+import { InstrumentCard } from './LegislationCards.jsx'
+import { instrumentById } from './instruments.js'
 import { GovernmentGraph } from './GovernmentGraph.jsx'
 import { GovernmentList } from './GovernmentList.jsx'
 import { CompareView, CoverageCard, ResearchCard } from './AtlasCards.jsx'
@@ -28,6 +30,7 @@ import { THEMES } from './theme.js'
 import { CURRENT_AS_OF, CURRENT_SOURCES } from './currentData.js'
 import { HISTORICAL_BODIES, HISTORY_SOURCES, MINISTERS, LOCAL_BODIES } from './historyData.js'
 import { TIMELINE_SOURCES } from './timelineData.js'
+import { AMR_ATTRIBUTION, AMR_COLLECTION, AMR_LICENCE } from './amrLicence.js'
 import './government.css'
 
 // What the view is drawn from, and how far to trust it: read in steps under Sources and caveats.
@@ -61,7 +64,9 @@ const readParams = () => {
     compare: validYear(compare) ? compare : null,
     // Unconfirmed bodies are drawn unless the link turns them off; local bodies only when it asks.
     undated: params.get('undated') !== '0',
-    local: params.get('local') === '1'
+    local: params.get('local') === '1',
+    // An Act, order or policy document's own page (instruments.js).
+    instrument: instrumentById(params.get('instrument') ?? '') ? params.get('instrument') : null
   }
 }
 
@@ -69,7 +74,7 @@ const readParams = () => {
  * Everything that decides what is on screen goes in the address bar — the year, the body, the view,
  * the year compared against, and whether unconfirmed bodies are drawn — so a copied link restores it.
  */
-const writeParams = ({ year, node, mode, compare, undated, local }) => {
+const writeParams = ({ year, node, mode, compare, undated, local, instrument }) => {
   if (!globalThis.history?.replaceState) return
   const url = new URL(globalThis.location.href)
   url.searchParams.set('view', 'government')
@@ -80,6 +85,7 @@ const writeParams = ({ year, node, mode, compare, undated, local }) => {
   set('compare', mode === 'compare' ? compare : null)
   set('undated', undated ? null : 0)
   set('local', local ? 1 : null)
+  set('instrument', instrument)
   globalThis.history.replaceState(null, '', url)
 }
 
@@ -233,6 +239,7 @@ export const GovernmentView = ({ onOpenInGenerator, onChangeView }) => {
   const initial = useMemo(readParams, [])
   const [year, setYear] = useState(initial.year)
   const [selectedId, setSelectedId] = useState(initial.node)
+  const [instrumentId, setInstrumentId] = useState(initial.instrument)
   const [hidden, setHidden] = useState(() => new Set())
   const [hiddenRelations, setHiddenRelations] = useState(() => new Set())
   const [mode, setMode] = useState(initial.mode)
@@ -251,8 +258,8 @@ export const GovernmentView = ({ onOpenInGenerator, onChangeView }) => {
   const life = useMemo(() => lifeOf(selectedId), [selectedId])
 
   useEffect(() => {
-    writeParams({ year, node: selected ? selectedId : null, mode, compare: compareYear, undated: includeUndated, local: includeLocal })
-  }, [year, selectedId, selected, mode, compareYear, includeUndated, includeLocal])
+    writeParams({ year, node: selected ? selectedId : null, mode, compare: compareYear, undated: includeUndated, local: includeLocal, instrument: instrumentId })
+  }, [year, selectedId, selected, mode, compareYear, includeUndated, includeLocal, instrumentId])
 
   // On a phone the chosen body opens in a sheet over the foot of the diagram (Sheet.jsx), so the
   // diagram stays where it is to choose the next one.
@@ -364,8 +371,15 @@ export const GovernmentView = ({ onOpenInGenerator, onChangeView }) => {
     </button>
   )
 
+  // An instrument's page replaces the body's card (on a phone, its sheet); choosing a body from it closes it.
+  const openInstrument = useCallback((id) => { setInstrumentId(id); setSelectedId(null) }, [])
+  const goFromInstrument = useCallback((target, id) => { setInstrumentId(null); go(target, id) }, [go])
+  const instrument = instrumentId ? instrumentById(instrumentId) : null
+  // Choosing a body anywhere (the diagram, search, a link) closes an open instrument page.
+  useEffect(() => { if (selectedId) setInstrumentId(null) }, [selectedId])
+
   const entityCard = selected && (
-    <EntityCard node={selected} government={government} theme={themeName} onJumpBody={jumpBody} onGo={go} onSelect={setSelectedId} onJump={jump} onOpenInGenerator={onOpenInGenerator} />
+    <EntityCard node={selected} government={government} theme={themeName} onJumpBody={jumpBody} onGo={go} onSelect={setSelectedId} onJump={jump} onOpenInGenerator={onOpenInGenerator} onOpenInstrument={openInstrument} />
   )
 
   return (
@@ -431,9 +445,11 @@ export const GovernmentView = ({ onOpenInGenerator, onChangeView }) => {
       </div>
       <div className="gov__panel">
 
-        {selected
-          ? !sheeted && entityCard
-          : <OverviewCard government={government} onSelect={setSelectedId} />}
+        {instrument && !selected
+          ? <InstrumentCard instrument={instrument} onGo={goFromInstrument} onClose={() => setInstrumentId(null)} />
+          : selected
+            ? !sheeted && entityCard
+            : <OverviewCard government={government} onSelect={setSelectedId} />}
         <ChangesCard key={year} year={year} onSelect={setSelectedId} onJump={jump} />
 
         <details className="gov-card gov-sources">
@@ -448,6 +464,10 @@ export const GovernmentView = ({ onOpenInGenerator, onChangeView }) => {
               <li key={source.id}><a href={source.url} target="_blank" rel="noreferrer">{source.title}</a></li>
             ))}
           </ul>
+          <p className="gov-muted gov-sources__licence">
+            Ministers’ responsibilities for Acts: <a href={AMR_COLLECTION.url} target="_blank" rel="noreferrer">{AMR_COLLECTION.title}</a>,
+            under the <a href={AMR_LICENCE.url} target="_blank" rel="noreferrer">{AMR_LICENCE.name}</a>. {AMR_ATTRIBUTION}
+          </p>
           <details className="gov-sources__more">
             <summary>{HISTORY_SOURCES.length} sources behind the history</summary>
             <ul>
