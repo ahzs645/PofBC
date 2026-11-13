@@ -8,14 +8,14 @@ Generated from accepted source manifests and the source backlog by `npm run buil
 | employee-schedule-not-yet-located | 1 |
 | held-for-review | 126 |
 | held-unparsed | 23 |
-| imported | 1516 |
+| imported | 1518 |
 | official-archive-found-awaiting-document-selection | 1 |
 | official-archive-found-awaiting-extraction | 1 |
 | official-source-indexed-awaiting-validation | 2 |
 | partially-imported | 1 |
 | requires-ocr | 17 |
 | scope-review-required | 4 |
-| source-found-awaiting-extraction | 40 |
+| source-found-awaiting-extraction | 39 |
 
 | Employer | Period | Status | Accepted rows | Source | Next action |
 |---|---|---|---:|---|---|
@@ -1363,7 +1363,8 @@ Generated from accepted source manifests and the source backlog by `npm run buil
 | School District No. 54 (Bulkley Valley) | 2024/25 | imported | 127 | [School District No. 54 (Bulkley Valley), year ended June 30, 2025: employee-remuneration](https://www2.gov.bc.ca/assets/gov/education/administration/resource-management/school-district-financial-reporting/financial-information/sd54-sofi-2025.pdf) | Accepted normalized records are included in the build; see the source manifest for validation and reporting scope. |
 | School District No. 54 (Bulkley Valley) | 2024/25 | imported | 7 | [School District No. 54 (Bulkley Valley), year ended June 30, 2025: school-trustees](https://www2.gov.bc.ca/assets/gov/education/administration/resource-management/school-district-financial-reporting/financial-information/sd54-sofi-2025.pdf) | Accepted normalized records are included in the build; see the source manifest for validation and reporting scope. |
 | School District No. 57 (Prince George) | 2022/23 | requires-ocr | — | [School District No. 57 (Prince George) Statement of Financial Information 2022/23](https://22.files.edl.io/ecb5/11/15/24/222817-489f5533-61fe-4897-9dbc-86cbb8fb2362.pdf) | OCR or manually extract pages 51–64 with retained page images; independently check every name, position and amount, separate trustees, and reconcile both employee controls before acceptance. |
-| School District No. 57 (Prince George) | 2023/24 | source-found-awaiting-extraction | — | [School District No. 57 (Prince George) Statement of Financial Information 2023/24](https://22.files.edl.io/607e/11/15/24/215959-e2178279-6c84-4d69-960b-b7ae70f553f1.pdf) | Extract the complete employee section without trustees, reconcile named remuneration and expense totals, then retain the page 76 explanations for differences from audited financial statements. |
+| School District No. 57 (Prince George) | 2023/24 | imported | 822 | [School District No. 57 (Prince George), year ended June 30, 2024: employees](https://22.files.edl.io/607e/11/15/24/215959-e2178279-6c84-4d69-960b-b7ae70f553f1.pdf) | Accepted normalized records are included in the build; see the source manifest for validation and reporting scope. |
+| School District No. 57 (Prince George) | 2023/24 | imported | 7 | [School District No. 57 (Prince George), year ended June 30, 2024: trustees](https://22.files.edl.io/607e/11/15/24/215959-e2178279-6c84-4d69-960b-b7ae70f553f1.pdf) | Accepted normalized records are included in the build; see the source manifest for validation and reporting scope. |
 | School District No. 57 (Prince George) | 2024/25 | imported | 841 | [School District No. 57 (Prince George), year ended June30,2025: employees](https://www2.gov.bc.ca/assets/gov/education/administration/resource-management/school-district-financial-reporting/financial-information/sd57-sofi-2025.pdf) | Accepted normalized records are included in the build; see the source manifest for validation and reporting scope. |
 | School District No. 57 (Prince George) | 2024/25 | imported | 7 | [School District No. 57 (Prince George), year ended June30,2025: trustees](https://www2.gov.bc.ca/assets/gov/education/administration/resource-management/school-district-financial-reporting/financial-information/sd57-sofi-2025.pdf) | Accepted normalized records are included in the build; see the source manifest for validation and reporting scope. |
 | School District No. 58 (Nicola-Similkameen) | 2024/25 | imported | 153 | [School District No. 58 (Nicola-Similkameen), year ended June 30, 2025: employee-remuneration](https://www2.gov.bc.ca/assets/gov/education/administration/resource-management/school-district-financial-reporting/financial-information/sd58-sofi-2025.pdf) | Accepted normalized records are included in the build; see the source manifest for validation and reporting scope. |

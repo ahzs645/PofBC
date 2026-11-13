@@ -132,6 +132,226 @@
         },
         "visualReview": "Rendered PDF page 17 and compared the final rows and all three printed control lines; no row values were changed."
       }
+    },
+    {
+      "id": "sd57-sofi-2023-24-employees",
+      "registerLead": "sd57-sofi-2023-24",
+      "employerSlug": "school-district-57",
+      "employerName": "School District No. 57 (Prince George)",
+      "sector": "School districts",
+      "year": "2023/24",
+      "slug": "2023-24",
+      "periodType": "fiscal",
+      "periodStart": "2023-07-01",
+      "periodEnd": "2024-06-30",
+      "title": "School District No. 57 (Prince George), year ended June 30, 2024: employees",
+      "sourceUrl": "https://22.files.edl.io/607e/11/15/24/215959-e2178279-6c84-4d69-960b-b7ae70f553f1.pdf",
+      "sourceIndexUrl": "https://sd57.scholantisschools.com/apps/pages/index.jsp?uREC_ID=1144483&type=d&pREC_ID=1388703",
+      "sha256": "e6ef623ccd6a1f62a9e49ff3de7e5efb63064b51e85b09168076a0653639fdd7",
+      "file": "sd57-2023-24-employees.json.gzip",
+      "dataSha256": "e873436fa84c18fcc1f31a6af6f3332ba579cdd0bf5e99ee8d75f4b452ea540e",
+      "normalizedSha256": "79c913f5dc3918c567808e73590a743255a52e61556d7518673dca9fd7bddeed",
+      "provenanceFile": "evidence/sd57-2023-24-employees.json.gzip",
+      "provenanceSha256": "642bbdf155e4028861c34460d2ba2eb03c20fe09e81efffd68e99d36afc539fa",
+      "category": "employee-remuneration",
+      "scope": "employee-remuneration",
+      "scopeDescription": "Complete published named employee table above the source $75,000 threshold; trustees are a separate source",
+      "threshold": 75000,
+      "thresholdComparison": ">",
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "amountPrecision": "cents",
+      "nameDisclosure": "published-name-as-disclosed",
+      "positionDisclosure": "published",
+      "rowCount": 822,
+      "totalRemuneration": 84247372.38,
+      "totalExpenses": 858990.53,
+      "pages": [
+        56,
+        57,
+        58,
+        59,
+        60,
+        61,
+        62,
+        63,
+        64,
+        65,
+        66,
+        67,
+        68,
+        69,
+        70,
+        71
+      ],
+      "status": "verified",
+      "sourceKind": "official",
+      "completeEmployeeSchedule": true,
+      "verifiedOn": "2026-11-13",
+      "notes": [
+        "Official fiscal-year payment disclosure from the district Statement of Financial Information 2023/2024 (physical PDF pages 56-71). Employees begin below the \"Elected Officials\" section on page 56; trustees are imported separately as school-trustees, below-threshold totals and employer CPP/EI are excluded.",
+        "Named remuneration sums exactly to the printed $84,247,372.38 and expenses to the printed $858,990.53. 111 printed dash expense cells are null; one printed (23.46) expense cell is kept as -23.46, as the printed control includes it.",
+        "Approval: the SOFI declaration on PDF page 3 is signed by the board chair, superintendent and secretary-treasurer, dated November 14, 2024.",
+        "The report (PDF page 76) explains that the remuneration schedule is cash-basis while the audited statements are accrual-basis, that some salaries are capitalized, and that taxable benefits paid to benefit suppliers appear as remuneration, so totals differ from the financial statements."
+      ],
+      "validation": {
+        "sourceFingerprintLocked": true,
+        "originalFingerprintVerified": true,
+        "registerFingerprint": "e6ef623ccd6a1f62a9e49ff3de7e5efb63064b51e85b09168076a0653639fdd7",
+        "completeEmployeeSchedule": true,
+        "independentReaders": [
+          "Poppler pdftotext -layout lines",
+          "pdfplumber glyph-box word geometry"
+        ],
+        "independentMethod": "pdftotext -layout rows compared field-for-field (page, name, position, literal remuneration and expense cells) with pdfplumber glyph-geometry columns; exact agreement required",
+        "rowsIndependentlyChecked": 822,
+        "allFieldsOrderAndMultiplicityAgree": true,
+        "rowCountsByPdfPage": {
+          "56": 44,
+          "57": 55,
+          "58": 55,
+          "59": 55,
+          "60": 55,
+          "61": 55,
+          "62": 55,
+          "63": 55,
+          "64": 55,
+          "65": 55,
+          "66": 55,
+          "67": 55,
+          "68": 55,
+          "69": 55,
+          "70": 55,
+          "71": 8
+        },
+        "printedControlTotals": [
+          "84247372.38",
+          "858990.53"
+        ],
+        "computedComponentTotals": [
+          "84247372.38",
+          "858990.53"
+        ],
+        "controlResiduals": [
+          "0.00",
+          "0.00"
+        ],
+        "summaryReconciles": true,
+        "zeroExpenseRows": 0,
+        "dashExpenseRows": 111,
+        "blankExpenseRows": 0,
+        "nullExpenseRows": 111,
+        "negativeExpenseRows": 1,
+        "expenseCellConvention": "Printed dash and blank expense cells are null in the normalized rows; the evidence file keeps which was printed. Printed 0.00 stays 0.",
+        "reportingPeriodBasis": "Every schedule page is headed \"Year Ended June 30, 2024\".",
+        "approvalEvidence": {
+          "status": "verified-original-signed-declaration-published",
+          "date": "2024-11-14",
+          "source_url": "https://22.files.edl.io/607e/11/15/24/215959-e2178279-6c84-4d69-960b-b7ae70f553f1.pdf",
+          "locator": "Physical PDF page 3, declaration and signatures; visually inspected",
+          "supports": "The SOFI declaration identifies the board chair, superintendent and secretary treasurer as original signatories, all dated November 14, 2024."
+        },
+        "excludedAggregates": {
+          "electedOfficialsRemuneration": 157468.76,
+          "electedOfficialsExpenses": 50318.76,
+          "belowThresholdRemuneration": 51347360.47,
+          "belowThresholdExpenses": 344768.21,
+          "employeesAndElectedTotalRemuneration": 135752201.61,
+          "employeesAndElectedTotalExpenses": 1254077.5,
+          "employerCppEi": 8193624.69,
+          "electedOfficialsPdfPage": 56
+        },
+        "visualReview": "Rendered PDF page 61 and confirmed the parenthesized (23.46) expense cell and dash cells; no row values were changed."
+      }
+    },
+    {
+      "id": "sd57-sofi-2023-24-trustees",
+      "registerLead": "sd57-sofi-2023-24",
+      "employerSlug": "school-district-57",
+      "employerName": "School District No. 57 (Prince George)",
+      "sector": "School districts",
+      "year": "2023/24",
+      "slug": "2023-24",
+      "periodType": "fiscal",
+      "periodStart": "2023-07-01",
+      "periodEnd": "2024-06-30",
+      "title": "School District No. 57 (Prince George), year ended June 30, 2024: trustees",
+      "sourceUrl": "https://22.files.edl.io/607e/11/15/24/215959-e2178279-6c84-4d69-960b-b7ae70f553f1.pdf",
+      "sourceIndexUrl": "https://sd57.scholantisschools.com/apps/pages/index.jsp?uREC_ID=1144483&type=d&pREC_ID=1388703",
+      "sha256": "e6ef623ccd6a1f62a9e49ff3de7e5efb63064b51e85b09168076a0653639fdd7",
+      "file": "sd57-2023-24-trustees.json.gzip",
+      "dataSha256": "582d64071412b74f1a7241b8efe2821737e4f8b1a0bfda1fe9428222cb385651",
+      "normalizedSha256": "c865dcd1867afcc726cc15d2956ea61b3a908b3bc57b29a239fddc7a9f8a5cb7",
+      "provenanceFile": "evidence/sd57-2023-24-trustees.json.gzip",
+      "provenanceSha256": "0add9db41c0401bfda5ebaba6318a307995b701ea60d80dde8fed13f77f42748",
+      "category": "school-trustees",
+      "scope": "school-trustees",
+      "scopeDescription": "Complete published school trustee (elected officials) remuneration table",
+      "threshold": null,
+      "thresholdComparison": null,
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "amountPrecision": "cents",
+      "nameDisclosure": "published-name-as-disclosed",
+      "positionDisclosure": "published",
+      "rowCount": 7,
+      "totalRemuneration": 157468.76,
+      "totalExpenses": 50318.76,
+      "pages": [
+        56
+      ],
+      "status": "verified",
+      "sourceKind": "official",
+      "completeEmployeeSchedule": false,
+      "verifiedOn": "2026-11-13",
+      "notes": [
+        "The seven trustees listed under \"Elected Officials\" on PDF page 56 are a separate elected cohort, not employees, following the repository convention for school-district trustees. Their remuneration and expenses sum exactly to the printed Total, Elected Officials ($157,468.76; $50,318.76)."
+      ],
+      "validation": {
+        "sourceFingerprintLocked": true,
+        "originalFingerprintVerified": true,
+        "registerFingerprint": "e6ef623ccd6a1f62a9e49ff3de7e5efb63064b51e85b09168076a0653639fdd7",
+        "completeEmployeeSchedule": false,
+        "independentReaders": [
+          "Poppler pdftotext -layout lines",
+          "pdfplumber glyph-box word geometry"
+        ],
+        "independentMethod": "pdftotext -layout rows compared field-for-field with pdfplumber glyph-geometry columns; exact agreement required",
+        "rowsIndependentlyChecked": 7,
+        "allFieldsOrderAndMultiplicityAgree": true,
+        "rowCountsByPdfPage": {
+          "56": 7
+        },
+        "printedControlTotals": [
+          "157468.76",
+          "50318.76"
+        ],
+        "computedComponentTotals": [
+          "157468.76",
+          "50318.76"
+        ],
+        "controlResiduals": [
+          "0.00",
+          "0.00"
+        ],
+        "summaryReconciles": true,
+        "zeroExpenseRows": 0,
+        "dashExpenseRows": 0,
+        "blankExpenseRows": 0,
+        "nullExpenseRows": 0,
+        "negativeExpenseRows": 0,
+        "expenseCellConvention": "Printed dash and blank expense cells are null in the normalized rows; the evidence file keeps which was printed. Printed 0.00 stays 0.",
+        "reportingPeriodBasis": "Schedule page headed \"Year Ended June 30, 2024\".",
+        "approvalEvidence": {
+          "status": "verified-original-signed-declaration-published",
+          "date": "2024-11-14",
+          "source_url": "https://22.files.edl.io/607e/11/15/24/215959-e2178279-6c84-4d69-960b-b7ae70f553f1.pdf",
+          "locator": "Physical PDF page 3, declaration and signatures; visually inspected",
+          "supports": "The SOFI declaration identifies the board chair, superintendent and secretary treasurer as original signatories, all dated November 14, 2024."
+        },
+        "excludedAggregates": {},
+        "visualReview": "Elected-official rows checked against the printed \"Total, Elected Officials\" line."
+      }
     }
   ]
 }

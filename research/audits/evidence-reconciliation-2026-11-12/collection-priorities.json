@@ -17,9 +17,10 @@
   "acceptance_follow_through": {
     "reviewed_on": "2026-11-13",
     "note": "The outcome above records the 12 November discovery pass. Leads accepted since then name their accepted manifest sources; the salary build checks each claim (employer, period, document URL, SHA-256 and row count) against those manifests, and the accepted manifest supersedes the lead in the source catalog. Earlier lead states are kept in each lead's acceptance_history.",
-    "accepted_leads": ["unbc-sofi-2021-22-approval-follow-through"],
-    "accepted_employee_rows_added": 333,
-    "accepted_source_manifests_added": 1
+    "accepted_leads": ["unbc-sofi-2021-22-approval-follow-through", "sd57-sofi-2023-24"],
+    "accepted_employee_rows_added": 1155,
+    "accepted_separate_cohort_rows_added": 7,
+    "accepted_source_manifests_added": 3
   },
   "acceptance_boundary": "This queue supplements the existing inventory. The salary build reads each lead as the current state of its source (retrieved, approval verified or held), superseding the pinned backlog entry it names and keeping that entry's earlier blocker as dated history; it does not change accepted sources, accepted rows or salary coverage counts. Full row extraction, independent checking and reconciliation remain required for every lead. Downloaded PDFs are working copies, not committed repository artifacts.",
   "shared_acceptance_criteria": [
@@ -129,8 +130,17 @@
       "reporting_period": "2023/24",
       "period_end": "2024-06-30",
       "source_status": "located-original-retrieved-approval-verified",
-      "acceptance_status": "awaiting-complete-extraction-and-validation",
-      "accepted_employee_rows": 0,
+      "acceptance_status": "accepted-via-source-manifest",
+      "accepted_employee_rows": 822,
+      "accepted_source_ids": ["sd57-sofi-2023-24-employees"],
+      "accepted_separate_cohorts": [
+        { "source_id": "sd57-sofi-2023-24-trustees", "scope": "school-trustees", "rows": 7, "note": "Elected officials (trustees) from the top of page 56, accepted as a separate school-trustees source following the repository convention; not counted as employee rows." }
+      ],
+      "accepted_manifest": "research/salaries/collection-priorities-2026-11-12/sources.json",
+      "accepted_on": "2026-11-13",
+      "acceptance_history": [
+        { "reviewed_on": "2026-11-12", "acceptance_status": "awaiting-complete-extraction-and-validation", "accepted_employee_rows": 0 }
+      ],
       "source_url": "https://22.files.edl.io/607e/11/15/24/215959-e2178279-6c84-4d69-960b-b7ae70f553f1.pdf",
       "official_index_url": "https://sd57.scholantisschools.com/apps/pages/index.jsp?uREC_ID=1144483&type=d&pREC_ID=1388703",
       "official_source_basis": "The district Financial Reports page links this CDN document as its 2023/2024 Statement of Financial Information.",
