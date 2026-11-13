@@ -773,8 +773,8 @@ const readCollection = () => {
   // A link to a body's collection from before it was folded into a later name's still opens there.
   const named = collectionById(readParam('logos'))
   if (named) return named.id
-  const mark = readParam('mark')
-  return GALLERY_COLLECTIONS.find((collection) => entriesOf(collection).some((entry) => entry.id === mark))?.id ?? null
+  const mark = findGalleryEntry(readParam('mark'))
+  return GALLERY_COLLECTIONS.find((collection) => entriesOf(collection).some((entry) => entry.id === mark?.id))?.id ?? null
 }
 
 // A mark remade in the current identity opens in the generator, not here, so it is never the open one.
@@ -794,6 +794,8 @@ const writePlace = (collection, mark) => {
     if (value) url.searchParams.set(key, value)
     else url.searchParams.delete(key)
   }
+  // A palette belongs to the mark being left, not the next collection or design.
+  url.searchParams.delete('colour')
   // A section anchor belongs to the page being left, not to a different mark or collection.
   if (/^#railway-(history|connections|evidence)$/.test(url.hash)) url.hash = ''
   globalThis.history.replaceState(null, '', url)

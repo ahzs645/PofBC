@@ -1197,7 +1197,9 @@ export const entriesOf = (collection) => collection.eras
 
 export const findGalleryEntry = (id) => GALLERY_COLLECTIONS
   .flatMap(entriesOf)
-  .find((entry) => entry.id === id)
+  .find((entry) => entry.id === id || entry.aliases?.includes(id) ||
+    entry.versions?.some((version) => version.id === id) ||
+    entry.paletteGroup?.palettes.some((palette) => palette.sourceIds?.includes(id)))
 
 /**
  * The timeline a one-off sits on, with each era's marks resolved to the gallery's own entries, so a

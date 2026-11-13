@@ -1,0 +1,1782 @@
+{
+  "auditDate": "2026-11-13",
+  "baselineCommit": "1fb9e08dbb105bd691bed0790c81365b46ebc4f0",
+  "scope": "Repository baseline gallery and collected-artwork inventory; not a census of all British Columbia visual identities. No external source content was newly verified by this audit.",
+  "methodology": [
+    "Read generated collectedData.js at the baseline commit.",
+    "Count assets as source-file records; count collected designs as assets without variantOf; count full gallery entries from GALLERY_COLLECTIONS.",
+    "For missing-artwork counts, exclude bodies with existingCollection even when their collected-assets list is empty.",
+    "Compare exact path/shape attributes and inherited transforms, then resolve fills from class CSS, inline style and inheritance for palette candidates.",
+    "Inspect selected rendered candidates side by side to distinguish colour variants from changes in composition.",
+    "Verify all 208 baseline source-file SHA-256 digests, and compare every public/identity-collected SVG with catalogued files/downloads."
+  ],
+  "counts": {
+    "galleryCollections": 87,
+    "galleryEntries": 246,
+    "uniqueGalleryEntryIds": 246,
+    "entryKinds": {
+      "hydro": 7,
+      "hydro-mark": 7,
+      "artwork": 18,
+      "supplied": 28,
+      "collected": 184,
+      "flag": 1,
+      "current": 1
+    },
+    "inventoryBodies": 183,
+    "currentInventoryBodies": 40,
+    "bodiesWithCollectedAssets": 76,
+    "bodiesCoveredOnlyByExistingCollections": 4,
+    "bodiesWithNoHeldArtwork": 103,
+    "missingByKind": {
+      "crown-corporation": 5,
+      "health-authority": 98
+    },
+    "missingCurrentBodies": [
+      "provincial-rental-housing-corporation"
+    ],
+    "programGroups": 14,
+    "bodyAssets": 166,
+    "programAssets": 42,
+    "collectedAssets": 208,
+    "collectedDesigns": 184,
+    "existingGroupedVariants": 24,
+    "formats": {
+      "svg": 133,
+      "png": 60,
+      "eps": 5,
+      "jpg": 4,
+      "jpeg": 2,
+      "gif": 4
+    },
+    "pureVectorSvg": 132,
+    "vectorEps": 5,
+    "hybridSvg": 1,
+    "rasterFiles": 70,
+    "rasterOnlyBodyRecords": 16,
+    "assetsInRasterOnlyBodyRecords": 34,
+    "sourceDateBlank": 74,
+    "sourceDateParsed": 112,
+    "sourceDateProseRejected": 22
+  },
+  "integrity": {
+    "sourceFilesChecked": 208,
+    "sourceFileFailures": [],
+    "cataloguedAssetsNotRepresentedInGallery": [],
+    "publicSvgCount": 137,
+    "publicSvgUncatalogued": [],
+    "duplicateAssetHashes": [],
+    "publicSvgPrimaryAssets": 133,
+    "publicSvgAttachedDownloads": 4,
+    "attachedSvgDownloads": [
+      "identity-collected/bc-steamship-company/bc-steamship-emblem.svg",
+      "identity-collected/bc-steamship-company/bc-steamship-round-logo-white.svg",
+      "identity-collected/bc-steamship-company/bc-steamship-wordmark.svg",
+      "identity-collected/ocean-falls-corporation/ocean-falls-ofc-white.svg"
+    ]
+  },
+  "knownMissingEras": [
+    {
+      "collection": "bcts",
+      "id": "bcts-oval-crest",
+      "label": "Beside the oval crest",
+      "years": "2017\u20132022",
+      "note": "An oval ministry crest \u2014 British Columbia and Forests, Lands and Natural Resource Operations around an eagle, two conifers, a deer and a fish over water \u2014 then \u201cBCTS\u201d in a heavy green sans over \u201cBC Timber Sales\u201d: a sans redrawing of the wordmark, on the covers of its business plans.",
+      "sources": [
+        {
+          "title": "BC Timber Sales business plan 2017/18\u20132019/20",
+          "url": "https://www2.gov.bc.ca/assets/gov/farming-natural-resources-and-industry/forestry/bc-timber-sales/business-plans-performance-reports/bp-201718-201920.pdf",
+          "locator": "cover"
+        },
+        {
+          "title": "BC Timber Sales business plan 2021/22\u20132023/24",
+          "url": "https://www2.gov.bc.ca/assets/gov/farming-natural-resources-and-industry/forestry/bc-timber-sales/business-plans-performance-reports/bcts-business-plan_2021-22-to-2023-24.pdf",
+          "locator": "cover"
+        }
+      ]
+    },
+    {
+      "collection": "worksafebc",
+      "id": "wcb-1968",
+      "label": "The worker-protection emblem",
+      "years": "1968\u20131983",
+      "note": "The board\u2019s history describes a new design in 1968 built on protecting the worker. No picture of it has been found, so it is not drawn.",
+      "sources": [
+        {
+          "title": "WorkSafeBC, \u201cOur story: 1967\u20131991\u201d [S2]",
+          "url": "https://www.worksafebc.com/en/about-us/who-we-are/our-story/1967-1991",
+          "locator": "a worker-protection logo in 1968; provincial imagery added in 1983; \u201cWorkmen\u2019s\u201d became \u201cWorkers\u2019\u201d in 1974"
+        }
+      ]
+    },
+    {
+      "collection": "collected-bc-railway-company",
+      "id": "railway-bc-rail-operating",
+      "label": "BC Rail operating identity",
+      "years": "Name from 1984; graphic variants later",
+      "note": "The public BC Rail name dates to 19 June 1984. The familiar red-and-blue graphic must be dated separately: later caboose research distinguishes white lettering in 1985 and a red-and-blue herald in 1986\u20131987 schemes. The supporting photograph below documents the latter graphic on locomotives on 21 July 1990. A verified isolated master is still sought.",
+      "sources": [
+        {
+          "title": "Canadian Rail 547, March\u2013April 2012",
+          "url": "https://exporail.org/canrail/canadian_rail_1990_plus/canadian-rail-547-2012.pdf",
+          "locator": "Printed p.49 / PDF p.5: BC Rail name date; p.70 / PDF p.26: BCR dogwood; p.72 / PDF p.28: red-blue BC Rail graphic"
+        },
+        {
+          "title": "The Cariboo 23, January 1996; Ron Tuff, B.C.R.'s Wide Vision Cabooses, diagrams Greg M. Kennelly",
+          "url": "https://www.cwrailway.ca/sites/default/files/Cariboo/Cariboo%20-%20Issue%2023.pdf",
+          "locator": "PDF/printed pp.13, 15\u201316"
+        },
+        {
+          "title": "CIPO trademark application 0770811: BC RAIL",
+          "url": "https://ised-isde.canada.ca/cipo/trademark-search/770811",
+          "locator": "Type: Word; Claims; Action History"
+        }
+      ]
+    }
+  ],
+  "paletteCandidates": [
+    {
+      "master": "source-northern-health-northern-health-colour-tagline-svg",
+      "variant": "source-northern-health-northern-health-black-tagline-svg",
+      "masterFile": "identity-collected/northern-health/northern-health-colour-tagline.svg",
+      "variantFile": "identity-collected/northern-health/northern-health-black-tagline.svg",
+      "masterSha256": "7ca95efce8a568f922a012384c67cec71854da1ddeddc3a25165b0885946b42d",
+      "variantSha256": "471684e133b984726dc9160d487d8a19faf8a8ca924e687dfdef5072086f77d7",
+      "masterBytes": 13958,
+      "variantBytes": 13181,
+      "viewBox": "0 0 397.99 96.32",
+      "shapeCount": 42,
+      "geometryAndTransformsEqual": true,
+      "nonPaintStyleEqual": true,
+      "paintMapping": [
+        {
+          "property": "fill",
+          "source": "#005699",
+          "target": "#000",
+          "count": 14,
+          "zeroBasedShapeIndices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13
+          ]
+        },
+        {
+          "property": "stroke",
+          "source": "none",
+          "target": "none",
+          "count": 42,
+          "zeroBasedShapeIndices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20,
+            21,
+            22,
+            23,
+            24,
+            25,
+            26,
+            27,
+            28,
+            29,
+            30,
+            31,
+            32,
+            33,
+            34,
+            35,
+            36,
+            37,
+            38,
+            39,
+            40,
+            41
+          ]
+        },
+        {
+          "property": "fill",
+          "source": "#3197b9",
+          "target": "#000",
+          "count": 6,
+          "zeroBasedShapeIndices": [
+            14,
+            15,
+            16,
+            17,
+            18,
+            19
+          ]
+        },
+        {
+          "property": "fill",
+          "source": "#6d7071",
+          "target": "#000",
+          "count": 22,
+          "zeroBasedShapeIndices": [
+            20,
+            21,
+            22,
+            23,
+            24,
+            25,
+            26,
+            27,
+            28,
+            29,
+            30,
+            31,
+            32,
+            33,
+            34,
+            35,
+            36,
+            37,
+            38,
+            39,
+            40,
+            41
+          ]
+        }
+      ],
+      "requiresShapeRoles": false,
+      "nonGlobalMappings": []
+    },
+    {
+      "master": "source-northern-health-northern-health-colour-tagline-svg",
+      "variant": "source-northern-health-northern-health-white-tagline-svg",
+      "masterFile": "identity-collected/northern-health/northern-health-colour-tagline.svg",
+      "variantFile": "identity-collected/northern-health/northern-health-white-tagline.svg",
+      "masterSha256": "7ca95efce8a568f922a012384c67cec71854da1ddeddc3a25165b0885946b42d",
+      "variantSha256": "97e1a074f2a919b232e0ffb33af51df14e7cf9ac13cca13582e482c3c7a35458",
+      "masterBytes": 13958,
+      "variantBytes": 13685,
+      "viewBox": "0 0 397.99 96.32",
+      "shapeCount": 42,
+      "geometryAndTransformsEqual": true,
+      "nonPaintStyleEqual": true,
+      "paintMapping": [
+        {
+          "property": "fill",
+          "source": "#005699",
+          "target": "#fff",
+          "count": 14,
+          "zeroBasedShapeIndices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13
+          ]
+        },
+        {
+          "property": "stroke",
+          "source": "none",
+          "target": "none",
+          "count": 42,
+          "zeroBasedShapeIndices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20,
+            21,
+            22,
+            23,
+            24,
+            25,
+            26,
+            27,
+            28,
+            29,
+            30,
+            31,
+            32,
+            33,
+            34,
+            35,
+            36,
+            37,
+            38,
+            39,
+            40,
+            41
+          ]
+        },
+        {
+          "property": "fill",
+          "source": "#3197b9",
+          "target": "#fff",
+          "count": 6,
+          "zeroBasedShapeIndices": [
+            14,
+            15,
+            16,
+            17,
+            18,
+            19
+          ]
+        },
+        {
+          "property": "fill",
+          "source": "#6d7071",
+          "target": "#fff",
+          "count": 22,
+          "zeroBasedShapeIndices": [
+            20,
+            21,
+            22,
+            23,
+            24,
+            25,
+            26,
+            27,
+            28,
+            29,
+            30,
+            31,
+            32,
+            33,
+            34,
+            35,
+            36,
+            37,
+            38,
+            39,
+            40,
+            41
+          ]
+        }
+      ],
+      "requiresShapeRoles": false,
+      "nonGlobalMappings": []
+    },
+    {
+      "master": "vector-StrongerBC_RGB_pos",
+      "variant": "vector-StrongerBC_RGB_rev",
+      "masterFile": "identity-collected/stronger-bc/StrongerBC_RGB_pos.svg",
+      "variantFile": "identity-collected/stronger-bc/StrongerBC_RGB_rev.svg",
+      "masterSha256": "f03c0e3a3f2373fe53cc8acc0af0556e7d85daa7c3d5e2e796c2a8a8286310b1",
+      "variantSha256": "6a2283489bcda65cb01ddafd94409b3f99edcf7ed148853a600ffe39dec16812",
+      "masterBytes": 5503,
+      "variantBytes": 5554,
+      "viewBox": "0 0 496.23 134.76",
+      "shapeCount": 11,
+      "geometryAndTransformsEqual": true,
+      "nonPaintStyleEqual": true,
+      "paintMapping": [
+        {
+          "property": "fill",
+          "source": "none",
+          "target": "none",
+          "count": 1,
+          "zeroBasedShapeIndices": [
+            0
+          ]
+        },
+        {
+          "property": "stroke",
+          "source": "none",
+          "target": "none",
+          "count": 11,
+          "zeroBasedShapeIndices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10
+          ]
+        },
+        {
+          "property": "fill",
+          "source": "#234075",
+          "target": "#fff",
+          "count": 8,
+          "zeroBasedShapeIndices": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ]
+        },
+        {
+          "property": "fill",
+          "source": "#e3a82b",
+          "target": "#e3a82b",
+          "count": 2,
+          "zeroBasedShapeIndices": [
+            9,
+            10
+          ]
+        }
+      ],
+      "requiresShapeRoles": false,
+      "nonGlobalMappings": []
+    },
+    {
+      "master": "vector-StrongerBC_Solid_pos",
+      "variant": "vector-StrongerBC_Solid_rev",
+      "masterFile": "identity-collected/stronger-bc/StrongerBC_Solid_pos.svg",
+      "variantFile": "identity-collected/stronger-bc/StrongerBC_Solid_rev.svg",
+      "masterSha256": "47c05f0b72adec0990b303c99faa83e4a31dc05a231b23d3130579e7bf384d80",
+      "variantSha256": "0e250eb796958a4624b0c7b4b755c232ce86ffe32c6b0ea42fdf7d2be9077d99",
+      "masterBytes": 5502,
+      "variantBytes": 5499,
+      "viewBox": "0 0 497.23 134.76",
+      "shapeCount": 11,
+      "geometryAndTransformsEqual": true,
+      "nonPaintStyleEqual": true,
+      "paintMapping": [
+        {
+          "property": "fill",
+          "source": "none",
+          "target": "none",
+          "count": 1,
+          "zeroBasedShapeIndices": [
+            0
+          ]
+        },
+        {
+          "property": "stroke",
+          "source": "none",
+          "target": "none",
+          "count": 11,
+          "zeroBasedShapeIndices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10
+          ]
+        },
+        {
+          "property": "fill",
+          "source": "#231f20",
+          "target": "#fff",
+          "count": 10,
+          "zeroBasedShapeIndices": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10
+          ]
+        }
+      ],
+      "requiresShapeRoles": false,
+      "nonGlobalMappings": []
+    },
+    {
+      "master": "vector-BCID_StrongerBC_RGB_pos",
+      "variant": "vector-BCID_StrongerBC_RGB_rev",
+      "masterFile": "identity-collected/stronger-bc/BCID_StrongerBC_RGB_pos.svg",
+      "variantFile": "identity-collected/stronger-bc/BCID_StrongerBC_RGB_rev.svg",
+      "masterSha256": "4b5fe61670b7779dce275e154168d7bdabfbf4e24ef1d8b0fb846f263ee9d5cb",
+      "variantSha256": "e28bf36aaae66d0ebfdea7702dc416940beb4e00973c0ef373bdbd6cc9a0b347",
+      "masterBytes": 17323,
+      "variantBytes": 17323,
+      "viewBox": "0 0 662.02 182.06",
+      "shapeCount": 31,
+      "geometryAndTransformsEqual": true,
+      "nonPaintStyleEqual": true,
+      "paintMapping": [
+        {
+          "property": "fill",
+          "source": "none",
+          "target": "none",
+          "count": 1,
+          "zeroBasedShapeIndices": [
+            0
+          ]
+        },
+        {
+          "property": "stroke",
+          "source": "none",
+          "target": "none",
+          "count": 31,
+          "zeroBasedShapeIndices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20,
+            21,
+            22,
+            23,
+            24,
+            25,
+            26,
+            27,
+            28,
+            29,
+            30
+          ]
+        },
+        {
+          "property": "fill",
+          "source": "#e3a82b",
+          "target": "#e3a82b",
+          "count": 5,
+          "zeroBasedShapeIndices": [
+            1,
+            18,
+            19,
+            29,
+            30
+          ]
+        },
+        {
+          "property": "fill",
+          "source": "#234075",
+          "target": "#fff",
+          "count": 23,
+          "zeroBasedShapeIndices": [
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            21,
+            22,
+            23,
+            24,
+            25,
+            26,
+            27,
+            28
+          ]
+        },
+        {
+          "property": "fill",
+          "source": "#fff",
+          "target": "#fff",
+          "count": 1,
+          "zeroBasedShapeIndices": [
+            17
+          ]
+        },
+        {
+          "property": "fill",
+          "source": "#234075",
+          "target": "#7b8cac",
+          "count": 1,
+          "zeroBasedShapeIndices": [
+            20
+          ]
+        }
+      ],
+      "requiresShapeRoles": true,
+      "nonGlobalMappings": [
+        {
+          "property": "fill",
+          "source": "#234075",
+          "targets": [
+            "#7b8cac",
+            "#fff"
+          ]
+        }
+      ]
+    }
+  ],
+  "keepDistinct": [
+    {
+      "body": "first-peoples-cultural-council",
+      "reason": "The SVG and EPS have different symbol scale, corner shape and lettering arrangement. They are not merely different download formats.",
+      "assets": [
+        "source-first-peoples-cultural-council-fpcc-svg",
+        "source-first-peoples-cultural-council-fpcc-eps"
+      ]
+    },
+    {
+      "body": "first-nations-health-authority",
+      "reason": "The raster source is a horizontal lockup; the held SVG is stacked. Keep the horizontal reference until that layout is recovered as vector.",
+      "assets": [
+        "source-first-nations-health-authority-fnha-horizontal-png",
+        "vector-fnha-logo-colour"
+      ]
+    },
+    {
+      "body": "bc-infrastructure-benefits",
+      "reason": "The raster tagline sits below BCIB; the SVG tagline sits at its right. The mobile raster omits the full-name extension. Preserve these layouts.",
+      "assets": [
+        "source-bc-infrastructure-benefits-bcib-building-opportunity-here-reverse-png",
+        "vector-bcib-2025-tagline-reversed-source-vector",
+        "source-bc-infrastructure-benefits-bcib-mobile-png",
+        "vector-bcib-2022-horizontal-reversed-source-vector"
+      ]
+    },
+    {
+      "body": "land-and-water-bc",
+      "reason": "The 2004 raster uses large LWBC serif initials and small full name; the 2002 SVG spells out the name in italic type.",
+      "assets": [
+        "source-land-and-water-bc-land-and-water-bc-2004-logo-png",
+        "historical-land-and-water-bc-2002"
+      ]
+    },
+    {
+      "body": "bc-buildings-corporation",
+      "reason": "The 2003 raster is a tall stacked BC/Buildings/Corporation mark; the 2005 vector is horizontal bcbc with a tagline.",
+      "assets": [
+        "source-bc-buildings-corporation-bc-buildings-corporation-2003-png",
+        "historical-bc-buildings-corporation-2005"
+      ]
+    },
+    {
+      "body": "bc-transmission-corporation",
+      "reason": "The source metadata explicitly distinguishes the earlier corporate-name raster from the 2009 short-name vector. Do not consolidate by organization name alone.",
+      "assets": [
+        "source-bc-transmission-corporation-bc-transmission-corporation-2006-jpeg",
+        "vector-bc-transmission-2009"
+      ]
+    },
+    {
+      "body": "innovate-bc",
+      "reason": "The coloured SVG intentionally includes a photograph in the disc and is correctly classified isVector=false. The white EPS is pure vector; recolouring it cannot recover that photographic treatment.",
+      "assets": [
+        "innovate-bc-2024-colour",
+        "source-innovate-bc-innovate-bc-white-eps"
+      ]
+    }
+  ],
+  "rasterOnlyBodies": [
+    {
+      "id": "bc-toll-highways-and-bridges-authority",
+      "name": "British Columbia Toll Highways and Bridges Authority",
+      "current": false,
+      "assetCount": 1,
+      "assets": [
+        "source-bc-toll-highways-and-bridges-authority-bc-toll-authority-ferry-system-1960-png"
+      ]
+    },
+    {
+      "id": "bc-ferry-authority",
+      "name": "British Columbia Ferry Authority",
+      "current": false,
+      "assetCount": 2,
+      "assets": [
+        "source-bc-ferry-authority-bc-ferry-authority-1964-advertisement-signature-png",
+        "source-bc-ferry-authority-bc-ferry-authority-1964-dogwood-flag-png"
+      ]
+    },
+    {
+      "id": "bc-development-corporation",
+      "name": "British Columbia Development Corporation",
+      "current": false,
+      "assetCount": 2,
+      "assets": [
+        "source-bc-development-corporation-bc-development-1985-logo-png",
+        "source-bc-development-corporation-bc-development-1985-logo-context-png"
+      ]
+    },
+    {
+      "id": "bc-resources-investment-corporation",
+      "name": "British Columbia Resources Investment Corporation",
+      "current": false,
+      "assetCount": 3,
+      "assets": [
+        "source-bc-resources-investment-corporation-bcric-1979-certificate-header-png",
+        "source-bc-resources-investment-corporation-bcric-share-certificate-jpg",
+        "historical-bcric-1979-brochure-wordmark-raster"
+      ]
+    },
+    {
+      "id": "urban-transit-authority",
+      "name": "Urban Transit Authority",
+      "current": false,
+      "assetCount": 4,
+      "assets": [
+        "source-urban-transit-authority-urban-transit-authority-1979-newspaper-png",
+        "source-urban-transit-authority-urban-transit-authority-1980-regional-signature-png",
+        "source-urban-transit-authority-urban-transit-authority-1980-arrow-png",
+        "source-urban-transit-authority-urban-transit-authority-png"
+      ]
+    },
+    {
+      "id": "bc-enterprise-corporation",
+      "name": "British Columbia Enterprise Corporation",
+      "current": false,
+      "assetCount": 1,
+      "assets": [
+        "source-bc-enterprise-corporation-bc-enterprise-1988-logo-png"
+      ]
+    },
+    {
+      "id": "greater-trail-community-health-council",
+      "name": "Greater Trail Community Health Council",
+      "current": false,
+      "assetCount": 1,
+      "assets": [
+        "historical-greater-trail-2001-web"
+      ]
+    },
+    {
+      "id": "north-shore-health-region",
+      "name": "North Shore Health Region",
+      "current": false,
+      "assetCount": 2,
+      "assets": [
+        "source-north-shore-health-region-north-shore-health-region-1999-png",
+        "historical-north-shore-health-region-trail-reversed-raster"
+      ]
+    },
+    {
+      "id": "south-cariboo-community-health-council",
+      "name": "South Cariboo Community Health Council",
+      "current": false,
+      "assetCount": 2,
+      "assets": [
+        "historical-south-cariboo-1999-health-plan",
+        "historical-south-cariboo-2000-web-emblem"
+      ]
+    },
+    {
+      "id": "sunshine-coast-community-health-council",
+      "name": "Sunshine Coast Community Health Council",
+      "current": false,
+      "assetCount": 1,
+      "assets": [
+        "historical-sunshine-coast-2001-web-banner"
+      ]
+    },
+    {
+      "id": "vancouver-richmond-health-board",
+      "name": "Vancouver/Richmond Health Board",
+      "current": false,
+      "assetCount": 5,
+      "assets": [
+        "source-vancouver-richmond-health-board-vancouver-richmond-health-board-2001-png",
+        "historical-vancouver-richmond-health-board-tmj-2001",
+        "historical-vancouver-richmond-health-board-2001-visions-raster",
+        "historical-vancouver-richmond-health-board-colour-2001",
+        "historical-vancouver-richmond-health-board-colour-2000-original"
+      ]
+    },
+    {
+      "id": "okanagan-similkameen-health-region",
+      "name": "Okanagan Similkameen Health Region",
+      "current": false,
+      "assetCount": 1,
+      "assets": [
+        "source-okanagan-similkameen-health-region-okanagan-similkameen-health-region-1999-png"
+      ]
+    },
+    {
+      "id": "simon-fraser-health-region",
+      "name": "Simon Fraser Health Region",
+      "current": false,
+      "assetCount": 4,
+      "assets": [
+        "source-simon-fraser-health-region-simon-fraser-health-region-board-letterhead-1997-png",
+        "source-simon-fraser-health-region-simon-fraser-health-region-2003-png",
+        "historical-simon-fraser-health-region-original-web-colour-2001",
+        "historical-simon-fraser-health-region-continuum-2001-monochrome"
+      ]
+    },
+    {
+      "id": "campbell-river-nootka-community-health-council",
+      "name": "Campbell River/Nootka Community Health Council",
+      "current": false,
+      "assetCount": 2,
+      "assets": [
+        "source-campbell-river-nootka-community-health-council-campbell-river-nootka-health-council-2002-png",
+        "historical-campbell-river-nootka-2000-color-web"
+      ]
+    },
+    {
+      "id": "coast-garibaldi-community-health-services-society",
+      "name": "Coast Garibaldi Community Health Services Society",
+      "current": false,
+      "assetCount": 1,
+      "assets": [
+        "historical-coast-garibaldi-community-health-services-society-original-web-colour-2001"
+      ]
+    },
+    {
+      "id": "kootenay-boundary-community-health-services-society",
+      "name": "Kootenay Boundary Community Health Services Society",
+      "current": false,
+      "assetCount": 2,
+      "assets": [
+        "source-kootenay-boundary-community-health-services-society-kootenay-boundary-chss-1998-png",
+        "source-kootenay-boundary-community-health-services-society-kootenay-boundary-chss-fax-png"
+      ]
+    }
+  ],
+  "bodiesWithNoHeldArtwork": [
+    {
+      "id": "provincial-rental-housing-corporation",
+      "name": "Provincial Rental Housing Corporation",
+      "kind": "crown-corporation",
+      "current": true,
+      "status": "unresolved"
+    },
+    {
+      "id": "bc-electric-company-crown",
+      "name": "British Columbia Electric Company (provincially owned)",
+      "kind": "crown-corporation",
+      "current": false,
+      "status": "source-found"
+    },
+    {
+      "id": "metro-transit-operating-company",
+      "name": "Metro Transit Operating Company",
+      "kind": "crown-corporation",
+      "current": false,
+      "status": "source-found"
+    },
+    {
+      "id": "wlc-developments",
+      "name": "W.L.C. Developments Ltd.",
+      "kind": "crown-corporation",
+      "current": false,
+      "status": "unresolved"
+    },
+    {
+      "id": "bc-harbours-board",
+      "name": "British Columbia Harbours Board",
+      "kind": "crown-corporation",
+      "current": false,
+      "status": "unresolved"
+    },
+    {
+      "id": "abbotsford-matsqui-health-council",
+      "name": "Abbotsford/Matsqui Health Council",
+      "kind": "health-authority",
+      "current": false,
+      "status": "unresolved"
+    },
+    {
+      "id": "alberni-valley-health-council",
+      "name": "Alberni Valley Health Council",
+      "kind": "health-authority",
+      "current": false,
+      "status": "unresolved"
+    },
+    {
+      "id": "armstrong-enderby-and-spallumcheen-health-council",
+      "name": "Armstrong, Enderby and Spallumcheen Health Council",
+      "kind": "health-authority",
+      "current": false,
+      "status": "unresolved"
+    },
+    {
+      "id": "arrow-lakes-upper-slocan-valley-health-council",
+      "name": "Arrow Lakes/Upper Slocan Valley Health Council",
+      "kind": "health-authority",
+      "current": false,
+      "status": "unresolved"
+    },
+    {
+      "id": "barriere-and-district-community-health-council",
+      "name": "Barriere and District Community Health Council",
+      "kind": "health-authority",
+      "current": false,
+      "status": "unresolved"
+    },
+    {
+      "id": "boundary-health-council",
+      "name": "Boundary Health Council",
+      "kind": "health-authority",
+      "current": false,
+      "status": "unresolved"
+    },
+    {
+      "id": "burnaby-health-board",
+      "name": "Burnaby Health Board",
+      "kind": "health-authority",
+      "current": false,
+      "status": "unresolved"
+    },
+    {
+      "id": "cariboo-regional-health-board",
+      "name": "Cariboo Regional Health Board",
+      "kind": "health-authority",
+      "current": false,
+      "status": "unresolved"
+    },
+    {
+      "id": "castlegar-and-district-health-council",
+      "name": "Castlegar and District Health Council",
+      "kind": "health-authority",
+      "current": false,
+      "status": "unresolved"
+    },
+    {
+      "id": "chilliwack-kent-harrison-health-council",
+      "name": "Chilliwack/Kent/Harrison Health Council",
+      "kind": "health-authority",
+      "current": false,
+      "status": "unresolved"
+    },
+    {
+      "id": "clearwater-and-district-community-health-council",
+      "name": "Clearwater and District Community Health Council",
+      "kind": "health-authority",
+      "current": false,
+      "status": "unresolved"
+    },
+    {
+      "id": "coast-garibaldi-regional-health-board",
+      "name": "Coast Garibaldi Regional Health Board",
+      "kind": "health-authority",
+      "current": false,
+      "status": "unresolved"
+    },
+    {
+      "id": "columbia-valley-health-council",
+      "name": "Columbia Valley Health Council",
+      "kind": "health-authority",
+      "current": false,
+      "status": "unresolved"
+    },
+    {
+      "id": "cranbrook-health-council",
+      "name": "Cranbrook Health Council",
+      "kind": "health-authority",
+      "current": false,
+      "status": "unresolved"
+    },
+    {
+      "id": "creston-and-district-health-council",
+      "name": "Creston and District Health Council",
+      "kind": "health-authority",
+      "current": false,
+      "status": "unresolved"
+    },
+    {
+      "id": "delta-health-council",
+      "name": "Delta Health Council",
+      "kind": "health-authority",
+      "current": false,
+      "status": "unresolved"
+    },
+    {
+      "id": "east-kootenay-regional-health-board",
+      "name": "East Kootenay Regional Health Board",
+      "kind": "health-authority",
+      "current": false,
+      "status": "unresolved"
+    },
+    {
+      "id": "east-thompson-north-shuswap-health-council",
+      "name": "East Thompson/North Shuswap Health Council",
+      "kind": "health-authority",
+      "current": false,
+      "status": "unresolved"
+    },
+    {
+      "id": "elk-valley-and-south-country-health-council",
+      "name": "Elk Valley and South Country Health Council",
+      "kind": "health-authority",
+      "current": false,
+      "status": "unresolved"
+    },
+    {
+      "id": "golden-health-council",
+      "name": "Golden Health Council",
+      "kind": "health-authority",
+      "current": false,
+      "status": "unresolved"
+    },
+    {
+      "id": "hope-and-district-health-council",
+      "name": "Hope and District Health Council",
+      "kind": "health-authority",
+      "current": false,
+      "status": "unresolved"
+    },
+    {
+      "id": "hudsons-hope-health-council",
+      "name": "Hudson\u2019s Hope Health Council",
+      "kind": "health-authority",
+      "current": false,
+      "status": "unresolved"
+    },
+    {
+      "id": "kamloops-community-health-council",
+      "name": "Kamloops Community Health Council",
+      "kind": "health-authority",
+      "current": false,
+      "status": "unresolved"
+    },
+    {
+      "id": "kimberley-community-health-council",
+      "name": "Kimberley Community Health Council",
+      "kind": "health-authority",
+      "current": false,
+      "status": "unresolved"
+    },
+    {
+      "id": "lillooet-district-health-council",
+      "name": "Lillooet District Health Council",
+      "kind": "health-authority",
+      "current": false,
+      "status": "unresolved"
+    },
+    {
+      "id": "logan-lake-health-council",
+      "name": "Logan Lake Health Council",
+      "kind": "health-authority",
+      "current": false,
+      "status": "unresolved"
+    },
+    {
+      "id": "mackenzie-and-area-health-council",
+      "name": "MacKenzie and Area Health Council",
+      "kind": "health-authority",
+      "current": false,
+      "status": "unresolved"
+    },
+    {
+      "id": "mission-and-district-community-health-council",
+      "name": "Mission and District Community Health Council",
+      "kind": "health-authority",
+      "current": false,
+      "status": "unresolved"
+    },
+    {
+      "id": "mount-waddington-health-council",
+      "name": "Mount Waddington Health Council",
+      "kind": "health-authority",
+      "current": false,
+      "status": "unresolved"
+    },
+    {
+      "id": "nelson-and-area-health-council",
+      "name": "Nelson and Area Health Council",
+      "kind": "health-authority",
+      "current": false,
+      "status": "unresolved"
+    },
+    {
+      "id": "new-westminster-health-council",
+      "name": "New Westminster Health Council",
+      "kind": "health-authority",
+      "current": false,
+      "status": "unresolved"
+    },
+    {
+      "id": "nicola-valley-health-council",
+      "name": "Nicola Valley Health Council",
+      "kind": "health-authority",
+      "current": false,
+      "status": "unresolved"
+    },
+    {
+      "id": "north-coast-community-health-council",
+      "name": "North Coast Community Health Council",
+      "kind": "health-authority",
+      "current": false,
+      "status": "unresolved"
+    },
+    {
+      "id": "north-west-regional-health-board",
+      "name": "North West Regional Health Board",
+      "kind": "health-authority",
+      "current": false,
+      "status": "unresolved"
+    },
+    {
+      "id": "peace-arch-community-health-council",
+      "name": "Peace Arch Community Health Council",
+      "kind": "health-authority",
+      "current": false,
+      "status": "unresolved"
+    },
+    {
+      "id": "powell-river-community-health-council",
+      "name": "Powell River Community Health Council",
+      "kind": "health-authority",
+      "current": false,
+      "status": "unresolved"
+    },
+    {
+      "id": "richmond-health-board",
+      "name": "Richmond Health Board",
+      "kind": "health-authority",
+      "current": false,
+      "status": "unresolved"
+    },
+    {
+      "id": "ridge-meadows-community-health-council",
+      "name": "Ridge Meadows Community Health Council",
+      "kind": "health-authority",
+      "current": false,
+      "status": "unresolved"
+    },
+    {
+      "id": "robson-valley-health-council",
+      "name": "Robson Valley Health Council",
+      "kind": "health-authority",
+      "current": false,
+      "status": "unresolved"
+    },
+    {
+      "id": "saint-bartholomews-health-council",
+      "name": "Saint Bartholomew\u2019s Health Council",
+      "kind": "health-authority",
+      "current": false,
+      "status": "unresolved"
+    },
+    {
+      "id": "sea-to-sky-community-health-council",
+      "name": "Sea to Sky Community Health Council",
+      "kind": "health-authority",
+      "current": false,
+      "status": "unresolved"
+    },
+    {
+      "id": "shuswap-community-health-council",
+      "name": "Shuswap Community Health Council",
+      "kind": "health-authority",
+      "current": false,
+      "status": "unresolved"
+    },
+    {
+      "id": "simon-fraser-health-board",
+      "name": "Simon Fraser Health Board",
+      "kind": "health-authority",
+      "current": false,
+      "status": "unresolved"
+    },
+    {
+      "id": "south-cariboo-health-council-1996",
+      "name": "South Cariboo Health Council",
+      "kind": "health-authority",
+      "current": false,
+      "status": "unresolved"
+    },
+    {
+      "id": "south-similkameen-community-health-council",
+      "name": "South Similkameen Community Health Council",
+      "kind": "health-authority",
+      "current": false,
+      "status": "unresolved"
+    },
+    {
+      "id": "surrey-central-community-health-council",
+      "name": "Surrey Central Community Health Council",
+      "kind": "health-authority",
+      "current": false,
+      "status": "unresolved"
+    },
+    {
+      "id": "surrey-north-community-health-council",
+      "name": "Surrey North Community Health Council",
+      "kind": "health-authority",
+      "current": false,
+      "status": "unresolved"
+    },
+    {
+      "id": "the-langleys-health-council",
+      "name": "The Langleys\u2019 Health Council",
+      "kind": "health-authority",
+      "current": false,
+      "status": "unresolved"
+    },
+    {
+      "id": "thompson-health-region",
+      "name": "Thompson Health Region",
+      "kind": "health-authority",
+      "current": false,
+      "status": "unresolved"
+    },
+    {
+      "id": "tri-cities-health-council",
+      "name": "Tri-Cities Health Council",
+      "kind": "health-authority",
+      "current": false,
+      "status": "unresolved"
+    },
+    {
+      "id": "upper-island-central-coast-regional-health-board",
+      "name": "Upper Island/Central Coast Regional Health Board",
+      "kind": "health-authority",
+      "current": false,
+      "status": "unresolved"
+    },
+    {
+      "id": "west-kootenay-boundary-regional-health-board",
+      "name": "West Kootenay-Boundary Regional Health Board",
+      "kind": "health-authority",
+      "current": false,
+      "status": "unresolved"
+    },
+    {
+      "id": "bella-coola-and-district-transitional-health-authority",
+      "name": "Bella Coola and District Transitional Health Authority",
+      "kind": "health-authority",
+      "current": false,
+      "status": "unresolved"
+    },
+    {
+      "id": "campbell-river-and-area-health-council",
+      "name": "Campbell River and Area Health Council",
+      "kind": "health-authority",
+      "current": false,
+      "status": "unresolved"
+    },
+    {
+      "id": "central-cariboo-chilcotin-health-council",
+      "name": "Central Cariboo Chilcotin Health Council",
+      "kind": "health-authority",
+      "current": false,
+      "status": "unresolved"
+    },
+    {
+      "id": "central-coast-transitional-health-authority",
+      "name": "Central Coast Transitional Health Authority",
+      "kind": "health-authority",
+      "current": false,
+      "status": "unresolved"
+    },
+    {
+      "id": "central-okanagan-community-health-council",
+      "name": "Central Okanagan Community Health Council",
+      "kind": "health-authority",
+      "current": false,
+      "status": "unresolved"
+    },
+    {
+      "id": "chetwynd-health-council",
+      "name": "Chetwynd Health Council",
+      "kind": "health-authority",
+      "current": false,
+      "status": "unresolved"
+    },
+    {
+      "id": "comox-valley-community-health-council",
+      "name": "Comox Valley Community Health Council",
+      "kind": "health-authority",
+      "current": false,
+      "status": "unresolved"
+    },
+    {
+      "id": "cowichan-communities-health-council",
+      "name": "Cowichan Communities Health Council",
+      "kind": "health-authority",
+      "current": false,
+      "status": "unresolved"
+    },
+    {
+      "id": "district-69-community-health-council",
+      "name": "District 69 Community Health Council",
+      "kind": "health-authority",
+      "current": false,
+      "status": "unresolved"
+    },
+    {
+      "id": "fort-nelson-liard-health-council",
+      "name": "Fort Nelson-Liard Health Council",
+      "kind": "health-authority",
+      "current": false,
+      "status": "unresolved"
+    },
+    {
+      "id": "fort-st-john-and-district-health-council",
+      "name": "Fort St. John and District Health Council",
+      "kind": "health-authority",
+      "current": false,
+      "status": "unresolved"
+    },
+    {
+      "id": "greater-vernon-health-council",
+      "name": "Greater Vernon Health Council",
+      "kind": "health-authority",
+      "current": false,
+      "status": "unresolved"
+    },
+    {
+      "id": "houston-health-council",
+      "name": "Houston Health Council",
+      "kind": "health-authority",
+      "current": false,
+      "status": "unresolved"
+    },
+    {
+      "id": "kitimat-and-area-health-council",
+      "name": "Kitimat and Area Health Council",
+      "kind": "health-authority",
+      "current": false,
+      "status": "unresolved"
+    },
+    {
+      "id": "lakes-district-health-council",
+      "name": "Lakes District Health Council",
+      "kind": "health-authority",
+      "current": false,
+      "status": "unresolved"
+    },
+    {
+      "id": "nanaimo-and-area-community-health-council",
+      "name": "Nanaimo and Area Community Health Council",
+      "kind": "health-authority",
+      "current": false,
+      "status": "unresolved"
+    },
+    {
+      "id": "nisgaa-community-health-council",
+      "name": "Nisga\u2019a Community Health Council",
+      "kind": "health-authority",
+      "current": false,
+      "status": "unresolved"
+    },
+    {
+      "id": "nootka-community-health-council",
+      "name": "Nootka Community Health Council",
+      "kind": "health-authority",
+      "current": false,
+      "status": "unresolved"
+    },
+    {
+      "id": "oliver-osoyoos-health-council",
+      "name": "Oliver Osoyoos Health Council",
+      "kind": "health-authority",
+      "current": false,
+      "status": "unresolved"
+    },
+    {
+      "id": "omineca-health-council",
+      "name": "Omineca Health Council",
+      "kind": "health-authority",
+      "current": false,
+      "status": "unresolved"
+    },
+    {
+      "id": "oyster-district-community-health-council",
+      "name": "Oyster District Community Health Council",
+      "kind": "health-authority",
+      "current": false,
+      "status": "unresolved"
+    },
+    {
+      "id": "peace-river-south-east-health-council",
+      "name": "Peace River South East Health Council",
+      "kind": "health-authority",
+      "current": false,
+      "status": "unresolved"
+    },
+    {
+      "id": "peace-river-liard-regional-health-board",
+      "name": "Peace River-Liard Regional Health Board",
+      "kind": "health-authority",
+      "current": false,
+      "status": "unresolved"
+    },
+    {
+      "id": "penticton-and-area-health-council",
+      "name": "Penticton and Area Health Council",
+      "kind": "health-authority",
+      "current": false,
+      "status": "unresolved"
+    },
+    {
+      "id": "prince-george-health-council",
+      "name": "Prince George Health Council",
+      "kind": "health-authority",
+      "current": false,
+      "status": "unresolved"
+    },
+    {
+      "id": "princeton-health-council",
+      "name": "Princeton Health Council",
+      "kind": "health-authority",
+      "current": false,
+      "status": "unresolved"
+    },
+    {
+      "id": "queen-charlotte-islands-haida-gwaii-community-health-council",
+      "name": "Queen Charlotte Islands/Haida Gwaii Community Health Council",
+      "kind": "health-authority",
+      "current": false,
+      "status": "unresolved"
+    },
+    {
+      "id": "quesnel-and-district-community-health-council",
+      "name": "Quesnel and District Community Health Council",
+      "kind": "health-authority",
+      "current": false,
+      "status": "unresolved"
+    },
+    {
+      "id": "revelstoke-community-health-council",
+      "name": "Revelstoke Community Health Council",
+      "kind": "health-authority",
+      "current": false,
+      "status": "unresolved"
+    },
+    {
+      "id": "smithers-and-area-health-council",
+      "name": "Smithers and Area Health Council",
+      "kind": "health-authority",
+      "current": false,
+      "status": "unresolved"
+    },
+    {
+      "id": "snow-country-health-council",
+      "name": "Snow Country Health Council",
+      "kind": "health-authority",
+      "current": false,
+      "status": "unresolved"
+    },
+    {
+      "id": "southern-gulf-islands-community-health-council",
+      "name": "Southern Gulf Islands Community Health Council",
+      "kind": "health-authority",
+      "current": false,
+      "status": "unresolved"
+    },
+    {
+      "id": "stikine-health-council",
+      "name": "Stikine Health Council",
+      "kind": "health-authority",
+      "current": false,
+      "status": "unresolved"
+    },
+    {
+      "id": "summerland-health-council",
+      "name": "Summerland Health Council",
+      "kind": "health-authority",
+      "current": false,
+      "status": "unresolved"
+    },
+    {
+      "id": "terrace-and-area-health-council",
+      "name": "Terrace and Area Health Council",
+      "kind": "health-authority",
+      "current": false,
+      "status": "unresolved"
+    },
+    {
+      "id": "tumbler-ridge-health-council",
+      "name": "Tumbler Ridge Health Council",
+      "kind": "health-authority",
+      "current": false,
+      "status": "unresolved"
+    },
+    {
+      "id": "upper-skeena-community-health-council",
+      "name": "Upper Skeena Community Health Council",
+      "kind": "health-authority",
+      "current": false,
+      "status": "unresolved"
+    },
+    {
+      "id": "west-coast-community-health-council",
+      "name": "West Coast Community Health Council",
+      "kind": "health-authority",
+      "current": false,
+      "status": "unresolved"
+    },
+    {
+      "id": "bulkley-valley-health-council",
+      "name": "Bulkley Valley Health Council",
+      "kind": "health-authority",
+      "current": false,
+      "status": "unresolved"
+    },
+    {
+      "id": "cariboo-community-health-services-society",
+      "name": "Cariboo Community Health Services Society",
+      "kind": "health-authority",
+      "current": false,
+      "status": "unresolved"
+    },
+    {
+      "id": "east-kootenay-community-health-services-society",
+      "name": "East Kootenay Community Health Services Society",
+      "kind": "health-authority",
+      "current": false,
+      "status": "unresolved"
+    },
+    {
+      "id": "north-peace-health-council",
+      "name": "North Peace Health Council",
+      "kind": "health-authority",
+      "current": false,
+      "status": "unresolved"
+    },
+    {
+      "id": "north-west-community-health-services-society",
+      "name": "North West Community Health Services Society",
+      "kind": "health-authority",
+      "current": false,
+      "status": "unresolved"
+    },
+    {
+      "id": "peace-liard-community-health-services-society",
+      "name": "Peace Liard Community Health Services Society",
+      "kind": "health-authority",
+      "current": false,
+      "status": "unresolved"
+    },
+    {
+      "id": "south-peace-health-council",
+      "name": "South Peace Health Council",
+      "kind": "health-authority",
+      "current": false,
+      "status": "unresolved"
+    },
+    {
+      "id": "upper-island-central-coast-community-health-services-society",
+      "name": "Upper Island/Central Coast Community Health Services Society",
+      "kind": "health-authority",
+      "current": false,
+      "status": "unresolved"
+    }
+  ],
+  "epsConversionCandidates": [
+    {
+      "id": "source-first-peoples-cultural-council-fpcc-eps",
+      "owner": "first-peoples-cultural-council",
+      "file": "identity-collected/first-peoples-cultural-council/fpcc.eps",
+      "preview": "identity-collected/first-peoples-cultural-council/fpcc-eps-preview.png",
+      "variantOf": null
+    },
+    {
+      "id": "source-knowledge-network-knowledge-network-colour-eps",
+      "owner": "knowledge-network",
+      "file": "identity-collected/knowledge-network/knowledge-network-colour.eps",
+      "preview": "identity-collected/knowledge-network/knowledge-network-colour-eps-preview.png",
+      "variantOf": null
+    },
+    {
+      "id": "source-forest-enhancement-society-fesbc-horizontal-eps",
+      "owner": "forest-enhancement-society",
+      "file": "identity-collected/forest-enhancement-society/fesbc-horizontal.eps",
+      "preview": "identity-collected/forest-enhancement-society/fesbc-horizontal-eps-preview.png",
+      "variantOf": null
+    },
+    {
+      "id": "source-forest-enhancement-society-fesbc-vertical-eps",
+      "owner": "forest-enhancement-society",
+      "file": "identity-collected/forest-enhancement-society/fesbc-vertical.eps",
+      "preview": "identity-collected/forest-enhancement-society/fesbc-vertical-eps-preview.png",
+      "variantOf": null
+    },
+    {
+      "id": "source-innovate-bc-innovate-bc-white-eps",
+      "owner": "innovate-bc",
+      "file": "identity-collected/innovate-bc/innovate-bc-white.eps",
+      "preview": "identity-collected/innovate-bc/innovate-bc-white-eps-preview.png",
+      "variantOf": "innovate-bc-2024-colour"
+    }
+  ],
+  "sourceDateNormalizationQueue": [
+    {
+      "id": "vector-bc-housing-corporate-component-source-vector",
+      "sourceDate": "Undated report describing April 2019 events; no adoption date inferred"
+    },
+    {
+      "id": "vector-bc-housing-research-centre-source-vector",
+      "sourceDate": "Undated report describing April 2019 events; no adoption date inferred"
+    },
+    {
+      "id": "vector-bclc-2009-colour-tagline-source-vector",
+      "sourceDate": "2009 service plan update"
+    },
+    {
+      "id": "vector-bclc-2009-reversed-source-vector",
+      "sourceDate": "2009 service plan update"
+    },
+    {
+      "id": "vector-bclc-2011-reversed-tagline-source-vector",
+      "sourceDate": "2010/11 annual report"
+    },
+    {
+      "id": "source-bc-transportation-financing-authority-bctfa-2000-01-white-svg",
+      "sourceDate": "2000\u20132001 report"
+    },
+    {
+      "id": "vector-columbia-power-2024-reversed-source-vector",
+      "sourceDate": "2024 history book"
+    },
+    {
+      "id": "vector-infrastructure-bc-2026-colour-source-vector",
+      "sourceDate": "Spring 2026 brochure"
+    },
+    {
+      "id": "vector-infrastructure-bc-2026-reversed-source-vector",
+      "sourceDate": "Spring 2026 brochure"
+    },
+    {
+      "id": "vector-community-living-bc-2014-reversed-source-vector",
+      "sourceDate": "2013\u20132014 annual report; URL uploaded 2018/02"
+    },
+    {
+      "id": "vector-community-living-bc-2023-colour-source-vector",
+      "sourceDate": "2023 first-year report for 2022\u20132025 strategic plan"
+    },
+    {
+      "id": "vector-pavco-2025-26-colour-source-vector",
+      "sourceDate": "FY2025/26 year in review"
+    },
+    {
+      "id": "vector-pavco-2023-reversed-source-vector",
+      "sourceDate": "2023\u20132026 accessibility plan"
+    },
+    {
+      "id": "vector-bcib-2022-horizontal-reversed-source-vector",
+      "sourceDate": "2021/22 reporting period; URL uploaded 2023/05"
+    },
+    {
+      "id": "vector-bcib-2025-tagline-reversed-source-vector",
+      "sourceDate": "2024/25 reporting period"
+    },
+    {
+      "id": "vector-bcfma-2021-source-vector",
+      "sourceDate": "2020/21 annual report"
+    },
+    {
+      "id": "vector-bccie-2022-source-vector",
+      "sourceDate": "2022\u20132025 strategic plan; URL uploaded 2022/06"
+    },
+    {
+      "id": "vector-bc-oil-gas-commission-2014",
+      "sourceDate": "2014 annual report, published 2015"
+    },
+    {
+      "id": "vector-partnerships-bc-2012",
+      "sourceDate": "2012/2013 annual report"
+    },
+    {
+      "id": "vector-worksafe-2003-serif-source-vector",
+      "sourceDate": "2003 annual report"
+    },
+    {
+      "id": "vector-worksafebc-2004-tagline-source-vector",
+      "sourceDate": "2004 annual report"
+    },
+    {
+      "id": "vector-worksafebc-2024-colour-source-vector",
+      "sourceDate": "2024 annual report"
+    }
+  ],
+  "existingMainFixes": [
+    {
+      "issue": "Knowledge Network government thumbnails",
+      "state": "Already fixed",
+      "evidence": "src/gallery/galleryLogos.js selects a usable SVG from entry.versions rather than requiring the canonical asset itself to be SVG."
+    },
+    {
+      "issue": "BCEC/PavCo relationship",
+      "state": "Already fixed",
+      "evidence": "src/gallery/collectedCollections.js no longer folds BCEC into PavCo as a mere name change; collectedCollections.test.js covers the asset-transfer distinction."
+    },
+    {
+      "issue": "Dates extracted from prose",
+      "state": "Already fixed",
+      "evidence": "parseSpecimenDate rejects narrative strings, preserving the undated BC Housing-report distinction. Remaining work is to normalize source metadata, not relax parsing."
+    },
+    {
+      "issue": "WorkBC/PSA/PreparedBC mapping",
+      "state": "Excluded from this implementation scope",
+      "evidence": "Root reports open PR #61 covers this; do not duplicate its changes."
+    }
+  ],
+  "limitations": [
+    "The 103 unheld records are research gaps, not proof those bodies had a separate logo.",
+    "Raster-only counts describe collected body records, not whether a related family collection has supplied/reconstructed art.",
+    "Geometry and resolved-style comparisons establish palette equivalence for listed files, not authorization for arbitrary brand recolouring.",
+    "Knowledge Network EPS geometry and colour validation is handled separately by the parent task."
+  ]
+}

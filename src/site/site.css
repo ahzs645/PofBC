@@ -1226,6 +1226,10 @@ input.share__url {
 .gallery__recovered-preview img { max-width: 100%; width: auto; max-height: 420px; object-fit: contain; }
 .gallery__asset-format { font-size: 13px; color: var(--ink-muted); }
 .gallery__asset-downloads { flex-wrap: wrap; }
+.gallery__palette-choices { flex-wrap: wrap; }
+.gallery__palette-sources summary { cursor: pointer; font-weight: 600; }
+.gallery__palette-sources p, .gallery__palette-sources ul { margin-top: 12px; }
+.gallery__palette-sources li + li { margin-top: 6px; }
 .gallery__asset-source { margin: 0; display: grid; gap: 10px; font-size: 14px; }
 .gallery__asset-source > div { display: grid; grid-template-columns: 110px minmax(0, 1fr); gap: 12px; }
 .gallery__asset-source dt { font-weight: 600; }
