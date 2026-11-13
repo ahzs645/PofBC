@@ -276,7 +276,7 @@ export const PatchViewer = ({ patch, org, position, previous, next, onOpen, onCl
               </div>
             )}
             {patch.limitations && <p className="patch__review-limits"><strong>Artwork limitations:</strong> {patch.limitations}</p>}
-            {review && <p className="patch__review-date">Evidence record: {reviewIndex.data.reviewedAt}. Source images keep their original proportions.</p>}
+            {review && <p className="patch__review-date">Evidence record: {review.reviewedAt ?? reviewIndex.data.reviewedAt}. Source images keep their original proportions.</p>}
             {sources.length > 1 && (
               <label className="patch__source-select">
                 <span>Source occurrence</span>
