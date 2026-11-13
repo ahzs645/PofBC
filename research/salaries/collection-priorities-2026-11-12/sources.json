@@ -1,0 +1,458 @@
+{
+  "version": 1,
+  "rowSchema": [
+    "employerSlug",
+    "name",
+    "position",
+    "remuneration",
+    "expenses",
+    "pdfPage"
+  ],
+  "register": "research/audits/evidence-reconciliation-2026-11-12/collection-priorities.json",
+  "importer": "scripts/import_collection_priorities_2026_11_12.py",
+  "coverageNotes": [
+    "Employee schedules accepted from the 12 November 2026 collection-priorities register. Each original matches the register SHA-256; every row was read by two independent methods and the named rows reconcile exactly to the printed controls."
+  ],
+  "sources": [
+    {
+      "id": "unbc-sofi-2021-22-employees",
+      "registerLead": "unbc-sofi-2021-22-approval-follow-through",
+      "employerSlug": "university-of-northern-bc",
+      "employerName": "University of Northern British Columbia",
+      "sector": "Universities and colleges",
+      "year": "2021/22",
+      "slug": "2021-22",
+      "periodType": "fiscal",
+      "periodStart": "2021-04-01",
+      "periodEnd": "2022-03-31",
+      "title": "UNBC Statement of Financial Information 2021/22: employee remuneration (Board package, 16 September 2022)",
+      "sourceUrl": "https://www.unbc.ca/sites/default/files/sections/governance/20220916boardpublicsessionmeetingpackageminusminutes.pdf",
+      "sourceIndexUrl": "https://www.unbc.ca/university-secretary/board-governors/meeting-dates-agendas-and-minutes",
+      "sha256": "c0bb93513dd08d9cf56d573952fc1216634b98f9868981815294938e51045856",
+      "file": "unbc-2021-22-employees.json.gzip",
+      "dataSha256": "2a19e778eb1dac4306b79c63f68f37e5b80bb05373d14170de86a90d1c056ca7",
+      "normalizedSha256": "0c01c7dc1c9942f440227712699c567a97406fa90de470d5394547b87da08b32",
+      "provenanceFile": "evidence/unbc-2021-22-employees.json.gzip",
+      "provenanceSha256": "81fa86970344c567813404e798a893e77286a77859a2d06899c4d888dafd0a0c",
+      "category": "employee-remuneration",
+      "scope": "employee-remuneration",
+      "scopeDescription": "Named employees with remuneration over $75,000; board schedule and aggregate rows excluded",
+      "threshold": 75000,
+      "thresholdComparison": ">",
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "amountPrecision": "cents",
+      "nameDisclosure": "published-full-name",
+      "positionDisclosure": "published",
+      "rowCount": 333,
+      "totalRemuneration": 40670870.8,
+      "totalExpenses": 619232.02,
+      "pages": [
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17
+      ],
+      "printedPages": [
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22
+      ],
+      "status": "verified",
+      "sourceKind": "official",
+      "completeEmployeeSchedule": true,
+      "verifiedOn": "2026-11-13",
+      "notes": [
+        "The complete named employee schedule on physical PDF pages 11-17 (printed package pages 16-22 of 120) of the 16 September 2022 Board public-session package is imported with positions and original cents. The Board of Governors schedule (PDF page 10; board members receive no remuneration) and the below-threshold and grand totals are not employee rows.",
+        "Named remuneration sums exactly to the printed $40,670,870.80 and expenses to the printed $619,232.02. All 80 printed 0.00 expense cells are kept as explicit zeros; the schedule prints no dash or blank expense cells.",
+        "Approval: the approved minutes of the 16 September 2022 Board public session record motion 2022BP09.16.03 approving the Financial Information Act report to March 31, 2022 as presented (item 7(i)(a)).",
+        "The source states that total remuneration excludes employer payments for non-taxable benefits, CPP, EI and WCB and payments under severance agreements, and that accrual accounting causes differences from the financial statements."
+      ],
+      "validation": {
+        "sourceFingerprintLocked": true,
+        "originalFingerprintVerified": true,
+        "registerFingerprint": "c0bb93513dd08d9cf56d573952fc1216634b98f9868981815294938e51045856",
+        "completeEmployeeSchedule": true,
+        "independentReaders": [
+          "Poppler pdftotext -layout lines",
+          "pdfplumber glyph-box word geometry"
+        ],
+        "independentMethod": "pdftotext -layout rows compared field-for-field (page, name, position, literal remuneration and expense cells) with pdfplumber glyph-geometry columns; exact agreement required",
+        "rowsIndependentlyChecked": 333,
+        "allFieldsOrderAndMultiplicityAgree": true,
+        "rowCountsByPdfPage": {
+          "11": 51,
+          "12": 51,
+          "13": 51,
+          "14": 51,
+          "15": 51,
+          "16": 51,
+          "17": 27
+        },
+        "printedControlTotals": [
+          "40670870.80",
+          "619232.02"
+        ],
+        "computedComponentTotals": [
+          "40670870.80",
+          "619232.02"
+        ],
+        "controlResiduals": [
+          "0.00",
+          "0.00"
+        ],
+        "summaryReconciles": true,
+        "zeroExpenseRows": 80,
+        "dashExpenseRows": 0,
+        "blankExpenseRows": 0,
+        "nullExpenseRows": 0,
+        "negativeExpenseRows": 0,
+        "expenseCellConvention": "Printed dash and blank expense cells are null in the normalized rows; the evidence file keeps which was printed. Printed 0.00 stays 0.",
+        "reportingPeriodBasis": "Every schedule page is headed \"FOR THE YEAR ENDED MARCH 31, 2022\"; the approved Board motion covers the Financial Information Act report to March 31, 2022.",
+        "approvalEvidence": {
+          "status": "verified-carried-board-motion",
+          "date": "2022-09-16",
+          "source_url": "https://www.unbc.ca/sites/default/files/sections/governance/20220916boardpublicsessionminutes-approved.pdf",
+          "locator": "PDF/printed page 2, item 7(i)(a), motion 2022BP09.16.03",
+          "supports": "The approved minutes record that the Board approved the Financial Information Act report to March 31, 2022 as presented; the motion carried."
+        },
+        "excludedAggregates": {
+          "belowThresholdRemuneration": 30112798.91,
+          "belowThresholdExpenses": 547360.71,
+          "grandTotalRemuneration": 70783669.71,
+          "grandTotalExpenses": 1166592.73,
+          "boardSchedulePdfPage": 10
+        },
+        "visualReview": "Rendered PDF page 17 and compared the final rows and all three printed control lines; no row values were changed."
+      }
+    },
+    {
+      "id": "sd57-sofi-2023-24-employees",
+      "registerLead": "sd57-sofi-2023-24",
+      "employerSlug": "school-district-57",
+      "employerName": "School District No. 57 (Prince George)",
+      "sector": "School districts",
+      "year": "2023/24",
+      "slug": "2023-24",
+      "periodType": "fiscal",
+      "periodStart": "2023-07-01",
+      "periodEnd": "2024-06-30",
+      "title": "School District No. 57 (Prince George), year ended June 30, 2024: employees",
+      "sourceUrl": "https://22.files.edl.io/607e/11/15/24/215959-e2178279-6c84-4d69-960b-b7ae70f553f1.pdf",
+      "sourceIndexUrl": "https://sd57.scholantisschools.com/apps/pages/index.jsp?uREC_ID=1144483&type=d&pREC_ID=1388703",
+      "sha256": "e6ef623ccd6a1f62a9e49ff3de7e5efb63064b51e85b09168076a0653639fdd7",
+      "file": "sd57-2023-24-employees.json.gzip",
+      "dataSha256": "e873436fa84c18fcc1f31a6af6f3332ba579cdd0bf5e99ee8d75f4b452ea540e",
+      "normalizedSha256": "79c913f5dc3918c567808e73590a743255a52e61556d7518673dca9fd7bddeed",
+      "provenanceFile": "evidence/sd57-2023-24-employees.json.gzip",
+      "provenanceSha256": "642bbdf155e4028861c34460d2ba2eb03c20fe09e81efffd68e99d36afc539fa",
+      "category": "employee-remuneration",
+      "scope": "employee-remuneration",
+      "scopeDescription": "Complete published named employee table above the source $75,000 threshold; trustees are a separate source",
+      "threshold": 75000,
+      "thresholdComparison": ">",
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "amountPrecision": "cents",
+      "nameDisclosure": "published-name-as-disclosed",
+      "positionDisclosure": "published",
+      "rowCount": 822,
+      "totalRemuneration": 84247372.38,
+      "totalExpenses": 858990.53,
+      "pages": [
+        56,
+        57,
+        58,
+        59,
+        60,
+        61,
+        62,
+        63,
+        64,
+        65,
+        66,
+        67,
+        68,
+        69,
+        70,
+        71
+      ],
+      "status": "verified",
+      "sourceKind": "official",
+      "completeEmployeeSchedule": true,
+      "verifiedOn": "2026-11-13",
+      "notes": [
+        "Official fiscal-year payment disclosure from the district Statement of Financial Information 2023/2024 (physical PDF pages 56-71). Employees begin below the \"Elected Officials\" section on page 56; trustees are imported separately as school-trustees, below-threshold totals and employer CPP/EI are excluded.",
+        "Named remuneration sums exactly to the printed $84,247,372.38 and expenses to the printed $858,990.53. 111 printed dash expense cells are null; one printed (23.46) expense cell is kept as -23.46, as the printed control includes it.",
+        "Approval: the SOFI declaration on PDF page 3 is signed by the board chair, superintendent and secretary-treasurer, dated November 14, 2024.",
+        "The report (PDF page 76) explains that the remuneration schedule is cash-basis while the audited statements are accrual-basis, that some salaries are capitalized, and that taxable benefits paid to benefit suppliers appear as remuneration, so totals differ from the financial statements."
+      ],
+      "validation": {
+        "sourceFingerprintLocked": true,
+        "originalFingerprintVerified": true,
+        "registerFingerprint": "e6ef623ccd6a1f62a9e49ff3de7e5efb63064b51e85b09168076a0653639fdd7",
+        "completeEmployeeSchedule": true,
+        "independentReaders": [
+          "Poppler pdftotext -layout lines",
+          "pdfplumber glyph-box word geometry"
+        ],
+        "independentMethod": "pdftotext -layout rows compared field-for-field (page, name, position, literal remuneration and expense cells) with pdfplumber glyph-geometry columns; exact agreement required",
+        "rowsIndependentlyChecked": 822,
+        "allFieldsOrderAndMultiplicityAgree": true,
+        "rowCountsByPdfPage": {
+          "56": 44,
+          "57": 55,
+          "58": 55,
+          "59": 55,
+          "60": 55,
+          "61": 55,
+          "62": 55,
+          "63": 55,
+          "64": 55,
+          "65": 55,
+          "66": 55,
+          "67": 55,
+          "68": 55,
+          "69": 55,
+          "70": 55,
+          "71": 8
+        },
+        "printedControlTotals": [
+          "84247372.38",
+          "858990.53"
+        ],
+        "computedComponentTotals": [
+          "84247372.38",
+          "858990.53"
+        ],
+        "controlResiduals": [
+          "0.00",
+          "0.00"
+        ],
+        "summaryReconciles": true,
+        "zeroExpenseRows": 0,
+        "dashExpenseRows": 111,
+        "blankExpenseRows": 0,
+        "nullExpenseRows": 111,
+        "negativeExpenseRows": 1,
+        "expenseCellConvention": "Printed dash and blank expense cells are null in the normalized rows; the evidence file keeps which was printed. Printed 0.00 stays 0.",
+        "reportingPeriodBasis": "Every schedule page is headed \"Year Ended June 30, 2024\".",
+        "approvalEvidence": {
+          "status": "verified-original-signed-declaration-published",
+          "date": "2024-11-14",
+          "source_url": "https://22.files.edl.io/607e/11/15/24/215959-e2178279-6c84-4d69-960b-b7ae70f553f1.pdf",
+          "locator": "Physical PDF page 3, declaration and signatures; visually inspected",
+          "supports": "The SOFI declaration identifies the board chair, superintendent and secretary treasurer as original signatories, all dated November 14, 2024."
+        },
+        "excludedAggregates": {
+          "electedOfficialsRemuneration": 157468.76,
+          "electedOfficialsExpenses": 50318.76,
+          "belowThresholdRemuneration": 51347360.47,
+          "belowThresholdExpenses": 344768.21,
+          "employeesAndElectedTotalRemuneration": 135752201.61,
+          "employeesAndElectedTotalExpenses": 1254077.5,
+          "employerCppEi": 8193624.69,
+          "electedOfficialsPdfPage": 56
+        },
+        "visualReview": "Rendered PDF page 61 and confirmed the parenthesized (23.46) expense cell and dash cells; no row values were changed."
+      }
+    },
+    {
+      "id": "sd57-sofi-2023-24-trustees",
+      "registerLead": "sd57-sofi-2023-24",
+      "employerSlug": "school-district-57",
+      "employerName": "School District No. 57 (Prince George)",
+      "sector": "School districts",
+      "year": "2023/24",
+      "slug": "2023-24",
+      "periodType": "fiscal",
+      "periodStart": "2023-07-01",
+      "periodEnd": "2024-06-30",
+      "title": "School District No. 57 (Prince George), year ended June 30, 2024: trustees",
+      "sourceUrl": "https://22.files.edl.io/607e/11/15/24/215959-e2178279-6c84-4d69-960b-b7ae70f553f1.pdf",
+      "sourceIndexUrl": "https://sd57.scholantisschools.com/apps/pages/index.jsp?uREC_ID=1144483&type=d&pREC_ID=1388703",
+      "sha256": "e6ef623ccd6a1f62a9e49ff3de7e5efb63064b51e85b09168076a0653639fdd7",
+      "file": "sd57-2023-24-trustees.json.gzip",
+      "dataSha256": "582d64071412b74f1a7241b8efe2821737e4f8b1a0bfda1fe9428222cb385651",
+      "normalizedSha256": "c865dcd1867afcc726cc15d2956ea61b3a908b3bc57b29a239fddc7a9f8a5cb7",
+      "provenanceFile": "evidence/sd57-2023-24-trustees.json.gzip",
+      "provenanceSha256": "0add9db41c0401bfda5ebaba6318a307995b701ea60d80dde8fed13f77f42748",
+      "category": "school-trustees",
+      "scope": "school-trustees",
+      "scopeDescription": "Complete published school trustee (elected officials) remuneration table",
+      "threshold": null,
+      "thresholdComparison": null,
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "amountPrecision": "cents",
+      "nameDisclosure": "published-name-as-disclosed",
+      "positionDisclosure": "published",
+      "rowCount": 7,
+      "totalRemuneration": 157468.76,
+      "totalExpenses": 50318.76,
+      "pages": [
+        56
+      ],
+      "status": "verified",
+      "sourceKind": "official",
+      "completeEmployeeSchedule": false,
+      "verifiedOn": "2026-11-13",
+      "notes": [
+        "The seven trustees listed under \"Elected Officials\" on PDF page 56 are a separate elected cohort, not employees, following the repository convention for school-district trustees. Their remuneration and expenses sum exactly to the printed Total, Elected Officials ($157,468.76; $50,318.76)."
+      ],
+      "validation": {
+        "sourceFingerprintLocked": true,
+        "originalFingerprintVerified": true,
+        "registerFingerprint": "e6ef623ccd6a1f62a9e49ff3de7e5efb63064b51e85b09168076a0653639fdd7",
+        "completeEmployeeSchedule": false,
+        "independentReaders": [
+          "Poppler pdftotext -layout lines",
+          "pdfplumber glyph-box word geometry"
+        ],
+        "independentMethod": "pdftotext -layout rows compared field-for-field with pdfplumber glyph-geometry columns; exact agreement required",
+        "rowsIndependentlyChecked": 7,
+        "allFieldsOrderAndMultiplicityAgree": true,
+        "rowCountsByPdfPage": {
+          "56": 7
+        },
+        "printedControlTotals": [
+          "157468.76",
+          "50318.76"
+        ],
+        "computedComponentTotals": [
+          "157468.76",
+          "50318.76"
+        ],
+        "controlResiduals": [
+          "0.00",
+          "0.00"
+        ],
+        "summaryReconciles": true,
+        "zeroExpenseRows": 0,
+        "dashExpenseRows": 0,
+        "blankExpenseRows": 0,
+        "nullExpenseRows": 0,
+        "negativeExpenseRows": 0,
+        "expenseCellConvention": "Printed dash and blank expense cells are null in the normalized rows; the evidence file keeps which was printed. Printed 0.00 stays 0.",
+        "reportingPeriodBasis": "Schedule page headed \"Year Ended June 30, 2024\".",
+        "approvalEvidence": {
+          "status": "verified-original-signed-declaration-published",
+          "date": "2024-11-14",
+          "source_url": "https://22.files.edl.io/607e/11/15/24/215959-e2178279-6c84-4d69-960b-b7ae70f553f1.pdf",
+          "locator": "Physical PDF page 3, declaration and signatures; visually inspected",
+          "supports": "The SOFI declaration identifies the board chair, superintendent and secretary treasurer as original signatories, all dated November 14, 2024."
+        },
+        "excludedAggregates": {},
+        "visualReview": "Elected-official rows checked against the printed \"Total, Elected Officials\" line."
+      }
+    },
+    {
+      "id": "fort-st-james-sofi-2024-employees",
+      "registerLead": "fort-st-james-sofi-2024",
+      "employerSlug": "district-of-fort-st-james",
+      "employerName": "District of Fort St. James",
+      "sector": "Municipalities",
+      "year": "2024",
+      "slug": "2024",
+      "periodType": "calendar",
+      "periodStart": "2024-01-01",
+      "periodEnd": "2024-12-31",
+      "title": "District of Fort St. James 2024 Statement of Financial Information: employee remuneration",
+      "sourceUrl": "https://www.fortstjames.ca/sites/default/files/2025-06/District%20of%20Fort%20St%20James%20-%202024%20Statement%20of%20Financial%20Information%20w%20checklist-signed.pdf",
+      "sourceIndexUrl": "https://www.fortstjames.ca/government/municipal-reports",
+      "sha256": "50fe1bac12033a84fc154fc5515f9667182da6e1c0ef51cd5b4a662d9cb7f79d",
+      "file": "district-of-fort-st-james-2024-employees.json.gzip",
+      "dataSha256": "a9278762d9ebcbc22f6eb50b983af878e9962587bd0ccfcb7a7e611eac31b195",
+      "normalizedSha256": "735eef6ef298c0bf916b602c19ba588902171afebc3135437c5280bfb3b36da5",
+      "provenanceFile": "evidence/district-of-fort-st-james-2024-employees.json.gzip",
+      "provenanceSha256": "25100395c2eaa8e620d557c6afaeddb0da6e3943b554040fa33d126a89cc2267",
+      "category": "employee-remuneration",
+      "scope": "employee-remuneration",
+      "scopeDescription": "Named employees with remuneration and expenses over $75,000 (the source threshold is on combined remuneration plus expenses)",
+      "threshold": null,
+      "thresholdComparison": null,
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "amountPrecision": "cents",
+      "nameDisclosure": "published-surname-and-initial",
+      "positionDisclosure": "published",
+      "rowCount": 20,
+      "totalRemuneration": 1939961.8,
+      "totalExpenses": 55045.11,
+      "pages": [
+        8
+      ],
+      "status": "verified",
+      "sourceKind": "official",
+      "completeEmployeeSchedule": true,
+      "verifiedOn": "2026-11-13",
+      "notes": [
+        "The scanned page 8 schedule \"Employees with Remuneration and Expenses over $75,000\" is imported in full: 20 named rows with surname and initial, position, remuneration and expenses. Council remuneration and the \"All under $75,000\" aggregate on the same page are not employee rows.",
+        "The source threshold is on remuneration plus expenses. Constantine, C (Human Resources) is listed with remuneration $68,927.28 and expenses $6,437.92 (printed total $75,365.20); the row is preserved as published, not filtered for remuneration below $75,000, and expenses are not merged into pay.",
+        "Named remuneration sums exactly to the printed $1,939,961.80 and expenses to the printed $55,045.11. Four blank expense cells and one printed dash are null; the evidence file records which.",
+        "Approval: the statement approving the included statements and schedules (PDF page 12) is signed by the CFO and the mayor, dated June 10, 2025. The page notes that remuneration comes from T4 reporting and expenses are departmentalized, so figures differ from the financial statements."
+      ],
+      "validation": {
+        "sourceFingerprintLocked": true,
+        "originalFingerprintVerified": true,
+        "registerFingerprint": "50fe1bac12033a84fc154fc5515f9667182da6e1c0ef51cd5b4a662d9cb7f79d",
+        "completeEmployeeSchedule": true,
+        "independentReaders": [
+          "Tesseract OCR of a 300 dpi Poppler render",
+          "visual transcription of the same render"
+        ],
+        "independentMethod": "Scanned page: Tesseract rows required to equal a visual transcription cell for cell; each printed row Total equals remuneration + expenses; named, below-threshold and council controls add to the printed grand totals",
+        "rowsIndependentlyChecked": 20,
+        "allFieldsOrderAndMultiplicityAgree": true,
+        "rowCountsByPdfPage": {
+          "8": 20
+        },
+        "printedControlTotals": [
+          "1939961.80",
+          "55045.11"
+        ],
+        "computedComponentTotals": [
+          "1939961.80",
+          "55045.11"
+        ],
+        "controlResiduals": [
+          "0.00",
+          "0.00"
+        ],
+        "summaryReconciles": true,
+        "zeroExpenseRows": 0,
+        "dashExpenseRows": 1,
+        "blankExpenseRows": 4,
+        "nullExpenseRows": 5,
+        "negativeExpenseRows": 0,
+        "expenseCellConvention": "Printed dash and blank expense cells are null in the normalized rows; the evidence file keeps which was printed. Printed 0.00 stays 0.",
+        "reportingPeriodBasis": "Page 8 is headed \"Schedule of Employee Remuneration and Expenses for the year ended December 31, 2024\".",
+        "approvalEvidence": {
+          "status": "verified-signed-sofi-approval",
+          "date": "2025-06-10",
+          "source_url": "https://www.fortstjames.ca/sites/default/files/2025-06/District%20of%20Fort%20St%20James%20-%202024%20Statement%20of%20Financial%20Information%20w%20checklist-signed.pdf",
+          "locator": "Physical PDF page 12, visually inspected",
+          "supports": "The statement approving all included statements and schedules bears CFO and mayor signatures dated June 10, 2025."
+        },
+        "excludedAggregates": {
+          "councilRemuneration": 82530.4,
+          "councilExpenses": 37898.47,
+          "belowThresholdRemuneration": 738381.47,
+          "belowThresholdExpenses": 15561.26,
+          "grandTotalRemuneration": 2760873.67,
+          "grandTotalExpenses": 108504.84,
+          "employerCpp": 117031.89,
+          "employerEi": 45437.08
+        },
+        "visualReview": "Every row, the dash and blank expense cells and the printed totals were read from 300 dpi crops of page 8."
+      }
+    }
+  ]
+}
