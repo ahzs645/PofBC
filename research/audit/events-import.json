@@ -1,7 +1,7 @@
 {
   "schema": "import-accounting/1",
   "counts": {
-    "accepted": 970,
+    "accepted": 977,
     "corroborating_duplicate": 12,
     "unresolved_unmapped": 26
   },
@@ -20488,6 +20488,211 @@
         ]
       },
       "output_id": "atlas:review-sso-transfer-2010"
+    },
+    {
+      "origin": "atlas/events-shared-services-2026-11-13.json#atlas:ssbc-itsd-receives-bcsc-1996",
+      "disposition": "accepted",
+      "input": {
+        "id": "atlas:ssbc-itsd-receives-bcsc-1996",
+        "subject_id": "information-technology-services-division",
+        "related_subject_ids": [
+          "bc-systems-corporation"
+        ],
+        "related_event_ids": [
+          "atlas:bcsc-operations-to-itsd-1996"
+        ],
+        "event_type": "functions_transferred",
+        "title": "BC Systems Corporation’s employees and business operations, all but the general manager, transferred to the Information Technology Services Division of the Information, Science and Technology Agency",
+        "date": {
+          "start": "1996-03-31",
+          "end": null,
+          "precision": "day",
+          "range_end_inclusive": false
+        },
+        "temporal_status": "source_reported_past",
+        "evidence": {
+          "source_url": "https://www2.gov.bc.ca/assets/gov/british-columbians-our-governments/government-finances/public-accounts/1999-00/sup-e/bc-systems-corporation-fs-1999-00.pdf",
+          "source_title": "British Columbia Systems Corporation, financial statements, year ended March 31, 2000",
+          "locator": "Notes to Financial Statements, General (PDF page 5, a scan)",
+          "basis": "direct_statement_in_official_source",
+          "quote": "On March 31, 1996, with the exception of the General Manager, employees and business operations were transferred to the Information Technology Services Division of the Information, Science and Technology Agency."
+        },
+        "interpretation_notes": "Read from the scan on 2026-11-13. The corporation was not renamed or merged: it continued, winding up, until its dissolution on 30 April 2000 (atlas:bcsc-dissolved-2000). The Information Technology Services ORCS names the division as the corporation’s successor for its records.",
+        "reviewed_on": "2026-11-13"
+      },
+      "output_id": "atlas:ssbc-itsd-receives-bcsc-1996"
+    },
+    {
+      "origin": "atlas/events-shared-services-2026-11-13.json#atlas:ssbc-solutions-bc-launched-2003",
+      "disposition": "accepted",
+      "input": {
+        "id": "atlas:ssbc-solutions-bc-launched-2003",
+        "subject_id": "shared-services-bc",
+        "related_subject_ids": [],
+        "related_event_ids": [
+          "atlas:bcsc-it-succession-2003"
+        ],
+        "event_type": "functions_transferred",
+        "title": "Solutions BC launched in the Ministry of Management Services: payroll, desktop and helpdesk IT and the Corporate Accounting Service, transferred from other ministries, join Procurement and Supply Services and the Common Information Technology division",
+        "date": {
+          "start": "2003-04-01",
+          "end": null,
+          "precision": "day",
+          "range_end_inclusive": false
+        },
+        "temporal_status": "source_reported_past",
+        "evidence": {
+          "source_url": "https://www.bcbudget.gov.bc.ca/Annual_Reports/2002_2003/mser/mser.pdf",
+          "source_title": "Ministry of Management Services, 2002/03 Annual Service Plan Report",
+          "locator": "PDF page 5 (minister’s letter, June 6, 2003); PDF page 15 (“commenced operations April 1, 2003”)",
+          "basis": "direct_statement_in_official_source",
+          "quote": "A key component of this planning phase was the successful transfer of payroll services, information technology desktop and helpdesk services, and the Corporate Accounting Service from their respective ministries to the Ministry of Management Services. Staff from these areas, along with staff from Procurement and Supply Services, and the balance of staff in the Ministry’s Common Information Technology Division, now form Solutions BC — the government’s shared services organization — which was launched April 1, 2003."
+        },
+        "interpretation_notes": "The payroll transfer and consolidation ran from September 2002 to March 2003 (same report); the launch is the organization’s start. The 2003/04 report lists Common Information Technology Services (CITS) as one of its parts. That CITS continued the 1996 Information Technology Services Division, and so BC Systems’ central IT role, rests on a research summary (atlas:bcsc-it-succession-2003) and is not established by this source.",
+        "reviewed_on": "2026-11-13"
+      },
+      "output_id": "atlas:ssbc-solutions-bc-launched-2003"
+    },
+    {
+      "origin": "atlas/events-shared-services-2026-11-13.json#atlas:ssbc-public-service-operations-2005",
+      "disposition": "accepted",
+      "input": {
+        "id": "atlas:ssbc-public-service-operations-2005",
+        "subject_id": "shared-services-bc",
+        "related_subject_ids": [],
+        "event_type": "name_observed",
+        "title": "Called Public Service Operations in the Ministry of Labour and Citizens’ Services’ September 2005 service plan update",
+        "date": {
+          "start": "2005-09",
+          "end": null,
+          "precision": "month",
+          "range_end_inclusive": false
+        },
+        "temporal_status": "source_reported_past",
+        "evidence": {
+          "source_url": "https://www.bcbudget.gov.bc.ca/2005_Sept_Update/sp/lcs/lcs.pdf",
+          "source_title": "Ministry of Labour and Citizens’ Services, 2005/06 – 2007/08 Service Plan Update, September 2005",
+          "locator": "PDF page 6 (core business area); PDF page 33",
+          "basis": "name_observed_in_dated_official_document",
+          "quote": "Public Service Operations, one of the government’s shared services organizations, offers internal corporate management services"
+        },
+        "interpretation_notes": "The same passage in the Ministry of Management Services’ February 2005 service plan (https://www.bcbudget.gov.bc.ca/2005/sp/mser/mser.pdf) reads Solutions BC. An observation of the name in use, not a renaming date; the 2005/06 annual report gives “Shared Services BC (formerly Public Service Operations)”.",
+        "reviewed_on": "2026-11-13"
+      },
+      "output_id": "atlas:ssbc-public-service-operations-2005"
+    },
+    {
+      "origin": "atlas/events-shared-services-2026-11-13.json#atlas:ssbc-name-first-observed-2006",
+      "disposition": "accepted",
+      "input": {
+        "id": "atlas:ssbc-name-first-observed-2006",
+        "subject_id": "shared-services-bc",
+        "related_subject_ids": [],
+        "event_type": "name_first_observed",
+        "title": "Shared Services BC, a core business area of the Ministry of Labour and Citizens’ Services, in its 2006/07 – 2008/09 service plan",
+        "date": {
+          "start": "2006-02",
+          "end": null,
+          "precision": "month",
+          "range_end_inclusive": false
+        },
+        "temporal_status": "source_reported_past",
+        "evidence": {
+          "source_url": "https://www.bcbudget.gov.bc.ca/2006/sp/lcs/lcs.pdf",
+          "source_title": "Ministry of Labour and Citizens’ Services, 2006/07 – 2008/09 Service Plan",
+          "locator": "PDF page 10",
+          "basis": "name_observed_in_dated_official_document"
+        },
+        "interpretation_notes": "Published with Budget 2006 (the file was made on 23 February 2006). The earliest use of the name found; the renaming itself is undated. A Solutions BC letterhead was still in use on 17 August 2006 (research/identity/shared-services-bc-2026-11-12).",
+        "reviewed_on": "2026-11-13"
+      },
+      "output_id": "atlas:ssbc-name-first-observed-2006"
+    },
+    {
+      "origin": "atlas/events-shared-services-2026-11-13.json#atlas:ssbc-bcbc-accommodation-2006",
+      "disposition": "accepted",
+      "input": {
+        "id": "atlas:ssbc-bcbc-accommodation-2006",
+        "subject_id": "shared-services-bc",
+        "related_subject_ids": [
+          "bc-buildings-corporation"
+        ],
+        "event_type": "functions_transferred",
+        "title": "Accommodation and Real Estate Services, formerly BC Buildings Corporation, becomes a service division of Shared Services BC",
+        "date": {
+          "start": "2006-04-01",
+          "end": null,
+          "precision": "day",
+          "range_end_inclusive": false
+        },
+        "temporal_status": "source_reported_past",
+        "evidence": {
+          "source_url": "https://www.bcbudget.gov.bc.ca/annual_reports/2005_2006/lcs/Service_Delivery_CS.htm",
+          "source_title": "Ministry of Labour and Citizens’ Services, 2005/06 Annual Service Plan Report",
+          "locator": "Service Delivery to Citizens and Businesses, Shared Services BC; also the PDF report, page 32, and the 2006/07 – 2008/09 Service Plan, PDF page 10",
+          "basis": "direct_statement_in_official_source",
+          "quote": "The service divisions of Shared Services BC include: Common IT and Payroll Services; Common Business Services; and, as of April 1, 2006, Accommodation and Real Estate Services (formerly BC Buildings Corporation)."
+        },
+        "interpretation_notes": "A Crown corporation’s services taken into a ministry division: the corporation was dissolved under the Public Agency Accommodation Act, not renamed. The September 2005 service plan update had planned BCBC’s integration with Public Service Operations over 2005/06.",
+        "reviewed_on": "2026-11-13"
+      },
+      "output_id": "atlas:ssbc-bcbc-accommodation-2006"
+    },
+    {
+      "origin": "atlas/events-shared-services-2026-11-13.json#atlas:ssbc-three-divisions-2013",
+      "disposition": "accepted",
+      "input": {
+        "id": "atlas:ssbc-three-divisions-2013",
+        "subject_id": "shared-services-bc",
+        "related_subject_ids": [],
+        "event_type": "organizational_milestone",
+        "title": "Shared Services BC described as three divisions of the Ministry of Citizens’ Services and Open Government: Technology Solutions, Logistics and Business Services, and Integrated Workplace Solutions",
+        "date": {
+          "start": "2013",
+          "end": null,
+          "precision": "year",
+          "range_end_inclusive": false
+        },
+        "temporal_status": "source_reported_past",
+        "evidence": {
+          "source_url": "https://docs.openinfo.gov.bc.ca/d64731113a_response_package_ctz-2013-00102.pdf",
+          "source_title": "Ministry of Citizens’ Services and Open Government, minister’s transition binder (FOI release CTZ-2013-00102)",
+          "locator": "Ministry overview, PDF pages 3–4",
+          "basis": "direct_statement_in_official_source",
+          "quote": "Shared Services commonly refers to three divisions within the ministry, Logistics and Business Services, Technology Solutions Division and Integrated Workplace Solutions."
+        },
+        "interpretation_notes": "The same glossary gives Integrated Workplace Solutions as the former BC Accommodation and Real Estate Services division, Technology Solutions as the former Workplace Technology Services division, and “Solutions BC” as “an out of date term for TSD”. The binder is undated; it belongs to the ministry of that name, which stood from 2012 until 2013.",
+        "reviewed_on": "2026-11-13"
+      },
+      "output_id": "atlas:ssbc-three-divisions-2013"
+    },
+    {
+      "origin": "atlas/events-shared-services-2026-11-13.json#atlas:ssbc-last-observed-2015",
+      "disposition": "accepted",
+      "input": {
+        "id": "atlas:ssbc-last-observed-2015",
+        "subject_id": "shared-services-bc",
+        "related_subject_ids": [],
+        "event_type": "name_observed",
+        "title": "Shared Services BC last named, in the Ministry of Technology, Innovation and Citizens’ Services’ report on 2014/15",
+        "date": {
+          "start": "2015",
+          "end": null,
+          "precision": "year",
+          "range_end_inclusive": false
+        },
+        "temporal_status": "source_reported_past",
+        "evidence": {
+          "source_url": "https://www.bcbudget.gov.bc.ca/Annual_Reports/2014_2015/pdf/ministry/mtics.pdf",
+          "source_title": "Ministry of Technology, Innovation and Citizens’ Services, 2014/15 Annual Service Plan Report",
+          "locator": "PDF page 15 (financial discussion); PDF page 16 (capital expenditures)",
+          "basis": "name_observed_in_dated_official_document",
+          "quote": "Shared Services BC continued to look for efficiencies and savings achieved in both office space and systems charges incurred, on behalf of all government ministries."
+        },
+        "interpretation_notes": "The latest use of the name found. The ministry’s February 2015 service plan (https://www.bcbudget.gov.bc.ca/2015/sp/pdf/ministry/mtics.pdf) does not name it and budgets Real Property and Technology Solutions separately. Its end is not established.",
+        "reviewed_on": "2026-11-13"
+      },
+      "output_id": "atlas:ssbc-last-observed-2015"
     },
     {
       "origin": "history/sub-agencies-researched.json#bc-farm-industry-review-board/established",

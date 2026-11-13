@@ -1116,15 +1116,14 @@ const PLACED = {
       'land titles, personal property, company and other registries. Its earlier logo — a hand reaching through a ' +
       'screen — is here; its later logo on the BC mark is under “On the BC mark”.'
   },
+  // The historical body research/history/bodies-shared-services-2026-11-13.json adds.
   'shared-services-bc': {
-    // No node in the government graph is this body; what one would need is in
-    // research/identity/shared-services-bc-2026-11-12/INTEGRATION.md.
-    graphNode: null,
     label: 'Shared Services BC',
     body: 'The government’s shared-services organization, as Solutions BC and Shared Services BC',
-    years: 'from 2003',
-    intro: 'Solutions BC, formed on 1 April 2003, gathered the government’s common IT, payroll, accounting and ' +
-      'procurement services — carrying on, among them, BC Systems’ central IT role. It was soon Shared Services BC.'
+    years: '2003–?',
+    intro: 'Solutions BC, launched on 1 April 2003 in the Ministry of Management Services, gathered the government’s ' +
+      'common IT, payroll, accounting and procurement services. It was Shared Services BC by February 2006, and took in ' +
+      'the former BC Buildings Corporation’s accommodation services that April. The name is last seen in 2015.'
   },
   'sub-bc-cancer': {
     label: 'BC Cancer',
