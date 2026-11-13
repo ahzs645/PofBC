@@ -1,0 +1,44 @@
+{
+  "status": "passed",
+  "source_commit": "620294eec90dba2e69d94b4dde8551108f61fe37",
+  "unchanged_flag_paths": 12,
+  "letter_instances": 39,
+  "all_letter_path_data_matches_committed_glyphs": true,
+  "lettering_adjustments": "Per-row condensation and scale; 16 source-unit vector stroke; clipped descender scaling p=0.5 comma=0.7 y=0.65. Source path d strings unchanged.",
+  "svg_has_raster_images": false,
+  "svg_has_live_text": false,
+  "svg_has_external_dependencies": false,
+  "pdf_pages": 1,
+  "pdf_embedded_raster_images": 0,
+  "pdf_font_dependencies": 0,
+  "pdf_vector_drawing_count": 101,
+  "sources": [
+    {
+      "path": "artwork/flag/spirit-of-bc-flag.svg",
+      "git_blob_sha1": "7bc5c089eb91458a0c8827dae56212552361434b",
+      "source_bytes_unchanged": true
+    },
+    {
+      "path": "src/assets/flagMark.js",
+      "git_blob_sha1": "50be0e64651e66809102f48e5491fecf7ea0cd3d",
+      "source_bytes_unchanged": true
+    },
+    {
+      "path": "src/hydro/serif.js",
+      "git_blob_sha1": "c2bc9ab467b0d2ff9e72489f817eaff2dd865184",
+      "source_bytes_unchanged": true
+    },
+    {
+      "path": "src/hydro/hydroType.js",
+      "git_blob_sha1": "607c4b7f1c0065375df140821567cbd3fbd1f532",
+      "source_bytes_unchanged": true
+    }
+  ],
+  "comparison": "Master projected onto four photo board corners for visual review. No tracing or raster-vectorization was used to construct the artwork.",
+  "limits": [
+    "Original sign typeface not identified",
+    "Source-palette colours retained, not a verified sign paint specification",
+    "White flag-backing cut contour interpreted",
+    "No measured real-world dimensions; normalized 1200 by 1150 drawing units"
+  ]
+}

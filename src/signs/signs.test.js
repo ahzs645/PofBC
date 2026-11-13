@@ -6,10 +6,19 @@ import assert from 'node:assert/strict'
 import { readFileSync } from 'node:fs'
 import { SIGNS, SIGN_SERIES, signIds } from './catalogue.js'
 import { FOREST_SERVICE_SIGNS } from './forest-service/signs.js'
+import { TOURISM_SIGNS } from './tourism/signs.js'
 import { POSTERS } from '../posters/catalogue.js'
 import { FOREST_SERVICE_POSTERS } from '../posters/forest-service/posters.js'
+import { GALLERY_COLLECTIONS } from '../gallery/collections.js'
 
-const DRAWINGS = { lookout: readFileSync(new URL('./forest-service/lookout.svg', import.meta.url), 'utf8') }
+const read = (path) => readFileSync(new URL(path, import.meta.url), 'utf8')
+const DRAWINGS = {
+  lookout: read('./forest-service/lookout.svg'),
+  'super-natural': read('./tourism/super-natural.svg')
+}
+const ALL_SIGNS = { ...FOREST_SERVICE_SIGNS, ...TOURISM_SIGNS }
+const GOVERNMENT = read('../government/historyData.js')
+const GALLERIES = new Set(GALLERY_COLLECTIONS.map(({ id }) => id))
 const idsIn = (selector) => [...selector.matchAll(/#([\w-]+)/g)].map((m) => m[1])
 
 test('every series lists signs that exist, each in the series it names', () => {
@@ -20,7 +29,7 @@ test('every series lists signs that exist, each in the series it names', () => {
 })
 
 test('every part sits on its drawing and names layers the drawing has', () => {
-  for (const [id, { parts, order, regions }] of Object.entries(FOREST_SERVICE_SIGNS)) {
+  for (const [id, { parts, order, regions }] of Object.entries(ALL_SIGNS)) {
     const { view } = SIGNS[id]
     const viewBox = /viewBox="([^"]+)"/.exec(DRAWINGS[id])[1].split(/[\s,]+/).map(Number)
     assert.deepEqual(viewBox, [view.x, view.y, view.w, view.h], `${id}: viewBox`)
@@ -38,7 +47,7 @@ test('every part sits on its drawing and names layers the drawing has', () => {
 })
 
 test('every link lands somewhere that exists, and no text has an em dash', () => {
-  for (const [id, { parts }] of Object.entries(FOREST_SERVICE_SIGNS)) {
+  for (const [id, { parts }] of Object.entries(ALL_SIGNS)) {
     for (const [partId, { panel }] of Object.entries(parts)) {
       const words = [panel.eyebrow, panel.heading, panel.em, panel.lede, ...(panel.blocks ?? []).filter((b) => typeof b === 'string')]
       for (const text of words.filter(Boolean)) assert.ok(!text.includes('—'), `${id}/${partId}: ${text}`)
@@ -47,9 +56,30 @@ test('every link lands somewhere that exists, and no text has an em dash', () =>
           if (to.view === 'posters') {
             assert.ok(POSTERS[to.poster], `${id}/${partId}: no poster ${to.poster}`)
             if (to.part) assert.ok(FOREST_SERVICE_POSTERS[to.poster]?.parts[to.part], `${id}/${partId}: no part ${to.part}`)
-          } else assert.equal(to.view, 'internal', `${id}/${partId}: unexpected view ${to.view}`)
+          } else if (to.view === 'signs') {
+            assert.ok(SIGNS[to.sign] && to.sign !== id, `${id}/${partId}: no other sign ${to.sign}`)
+          } else if (to.view === 'gallery') {
+            assert.ok(GALLERIES.has(to.logos), `${id}/${partId}: no logo collection ${to.logos}`)
+          } else if (to.view === 'government') {
+            assert.ok(GOVERNMENT.includes(`"${to.node}"`), `${id}/${partId}: no body ${to.node}`)
+          } else assert.ok(['internal', 'generator'].includes(to.view), `${id}/${partId}: unexpected view ${to.view}`)
         }
       }
     }
   }
+})
+
+test('every sign has a drawing and a set of parts, and nothing else does', () => {
+  assert.deepEqual(Object.keys(ALL_SIGNS).sort(), signIds().sort())
+  assert.deepEqual(Object.keys(DRAWINGS).sort(), signIds().sort())
+})
+
+test('the welcome sign keeps the flag the generator draws, path for path', async () => {
+  const { FLAG } = await import('../assets/flagMark.js')
+  const drawing = DRAWINGS['super-natural']
+  const group = /<g id="existing-spirit-of-bc-flag"[^>]*>([\s\S]*?)<\/g>/.exec(drawing)[1]
+  const paths = [...group.matchAll(/ d="([^"]+)" fill="([^"]+)"/g)].map(([, d, fill]) => ({ d, fill }))
+  assert.deepEqual(paths, FLAG.shapes.map(({ d, fill }) => ({ d, fill })))
+  // Its ids are prefixed, so it can sit on a page beside another drawing without a collision.
+  for (const generic of ['id="title"', 'id="desc"', 'id="above-baseline"', 'id="below-baseline"']) assert.ok(!drawing.includes(generic), generic)
 })
