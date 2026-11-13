@@ -1,0 +1,36 @@
+{
+  "schema": "record-link-audit/1",
+  "events": 970,
+  "entities": 812,
+  "relatedEntityLinks": 316,
+  "relatedEventLinks": 2,
+  "legalReferences": 1,
+  "issues": [],
+  "unresolvedEntities": [
+    {
+      "event": "atlas:coroners-in-embc-2007",
+      "label": "Emergency Management B.C.",
+      "supplied_id": "emergency-management-bc",
+      "reason": "The Ministry of Public Safety and Solicitor General's 2007/08-2009/10 Service Plan presents Emergency Management B.C. as one of that ministry's core business areas, comprising the Provincial Emergency Program, the Office of the Fire Commissioner and the B.C. Coroners Service (PDF p. 14; resource summary footnote 1, PDF p. 37), and refers to its creation in the minister's message (PDF p. 3). The government register has no node for Emergency Management B.C. or for the Provincial Emergency Program, so the ministry (ministry-of-public-safety-and-solicitor-general-2001) and the Office of the Fire Commissioner are linked instead. The Ministry of Emergency Management and Climate Readiness (2022) is a later ministry, not this 2007 core business area, and Health Emergency Management BC (PHSA) is a different body; neither is substituted. EMBC's creation date and its 2022 transition remain unresearched.",
+      "reviewed_on": "2026-11-13",
+      "source_check": {
+        "url": "https://www.bcbudget.gov.bc.ca/2007/sp/pdf/ministry/pssg.pdf",
+        "retrieved_on": "2026-11-13",
+        "sha256": "8a2d8765aa1bf76b8e6921487a655fe2318f2d8a06ae87051cad4eda610c78dd",
+        "locators": [
+          "PDF p. 3, minister's message",
+          "PDF p. 14, core business area 'Emergency Management B.C.'",
+          "PDF p. 37, resource summary footnote 1"
+        ]
+      }
+    }
+  ],
+  "eventsWithoutSource": [
+    {
+      "event": "atlas:prhc-name-1976-report",
+      "title": "Reported PRHC name treatment in the 1976 ministry annual report (source not retrieved)",
+      "locator": "Ministry of Municipal Affairs and Housing, annual report 1976, printed page 70 (PDF page 73); Legislative Library of British Columbia",
+      "reviewed": null
+    }
+  ]
+}

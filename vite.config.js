@@ -23,6 +23,11 @@ const brandkit = (path) => fileURLToPath(new URL(`./vendor/brandkit/${path}`, im
 // packages this app installs at PlateForge's pinned versions.
 const plateforge = (entry) => fileURLToPath(new URL(`./vendor/plateforge/src/embed/${entry}`, import.meta.url))
 
+// geo-toolkit (maps, map UI) is a submodule too. Its source is TypeScript with Tailwind CSS, so the
+// site imports its compiled dist/, which scripts/build-geo-toolkit.mjs builds as part of
+// build:assets. The Health Maps view draws its map with it.
+const geoToolkit = (entry) => fileURLToPath(new URL(`./vendor/geo-toolkit/dist/${entry}`, import.meta.url))
+
 export default defineConfig(({ command }) => ({
   plugins: [react(), manualPages({ pack: 'bc', mount: 'visual-guides' })],
   // Scan the host entry rather than example applications within vendored repositories.
@@ -37,9 +42,11 @@ export default defineConfig(({ command }) => ({
       { find: /^brandkit\/manuals$/, replacement: brandkit('src/manuals/index.js') },
       { find: /^brandkit$/, replacement: brandkit('src/engine/index.js') },
       { find: /^plateforge\/bc$/, replacement: plateforge('bc.ts') },
-      { find: /^plateforge$/, replacement: plateforge('index.ts') }
+      { find: /^plateforge$/, replacement: plateforge('index.ts') },
+      { find: /^@pgmaps\/geo-toolkit\/styles\.css$/, replacement: geoToolkit('styles.css') },
+      { find: /^@pgmaps\/geo-toolkit\/(map|ui|workspace|format|calculations)$/, replacement: geoToolkit('$1/index.js') }
     ],
-    dedupe: ['react', 'react-dom']
+    dedupe: ['react', 'react-dom', 'maplibre-gl']
   },
   // GitHub Pages serves a project site from a repository subpath; local dev serves it from the
   // root. BASE_PATH lets the workflow pass the real repository name, so renaming the repository

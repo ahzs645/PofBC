@@ -1117,6 +1117,8 @@ const PLACED = {
       'screen — is here; its later logo on the BC mark is under “On the BC mark”.'
   },
   'shared-services-bc': {
+    // No node in the government graph is this body; what one would need is in
+    // research/identity/shared-services-bc-2026-11-12/INTEGRATION.md.
     graphNode: null,
     label: 'Shared Services BC',
     body: 'The government’s shared-services organization, as Solutions BC and Shared Services BC',

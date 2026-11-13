@@ -4059,7 +4059,17 @@ export const COLLECTED_BODIES = [
         "sourceFile": "BC Place grand opening gala programme, 1983",
         "sourceDate": "1983",
         "observedDate": "2026-11-12",
-        "dateNote": "The programme and the annual report are of 1983, the year the stadium opened; the mark's introduction is not dated.",
+        "dateNote": "The programme and the annual report are of 1983, the year the stadium opened. The same signature is in use earlier, on a British Columbia Place advertisement (“Already Paying Its Way”) in the Gulf Islands Driftwood of 22 September 1982, printed page 6: documented use by that date, not its first. The mark’s introduction is not dated.",
+        "alsoSeen": [
+          {
+            "date": "1982-09-22",
+            "source": "https://saltspringarchives.com/driftwood/1982/v23n38p1Sept22-1982.pdf"
+          },
+          {
+            "date": "1983",
+            "source": "https://archive.org/details/micro_IA40243510_1428"
+          }
+        ],
         "evidenceType": "supplied-vector-reconstruction",
         "notes": "The blue b/c/p symbol — bowls on a shared stem inside a fine offset outline — beside “british columbia place” on three staggered lines.",
         "fidelityNote": "A supplied vector reconstruction, not original artwork: the symbol is built geometrically (equal circular bowls on an equilateral grid, two stems, a fine offset outline) and each letter is a custom outline after the scan (no automatic tracing). The wordmark is consistent with ITC Bauhaus; the weight and any modifications are unconfirmed. The blue (#3093D2) is sampled from the scan, not an original specification. The annual-report image is kept as a download.",
@@ -4073,13 +4083,7 @@ export const COLLECTED_BODIES = [
             "sha256": "81f8e81394f8682fb210e8dc99f6b40e4b22fda5a046f7b0e7753e7bcee4785e"
           }
         ],
-        "search": "bc-place-vector-2026-11-12",
-        "alsoSeen": [
-          {
-            "date": "1983",
-            "source": "https://archive.org/details/micro_IA40243510_1428"
-          }
-        ]
+        "search": "bc-place-vector-2026-11-12"
       }
     ]
   },

@@ -1,8 +1,9 @@
 {
   "schema": "import-accounting/1",
   "counts": {
-    "accepted": 792,
-    "unresolved_unmapped": 75
+    "accepted": 795,
+    "unresolved_unmapped": 2,
+    "aggregate_scope": 70
   },
   "rows": [
     {
@@ -1598,7 +1599,7 @@
     },
     {
       "origin": "staffing.json#2",
-      "disposition": "unresolved_unmapped",
+      "disposition": "aggregate_scope",
       "input": {
         "fiscal_year": "2000/01",
         "fiscal_year_ended": "March 31, 2001",
@@ -1613,11 +1614,12 @@
         "source_url": "https://www2.gov.bc.ca/assets/gov/british-columbians-our-governments/government-finances/public-accounts/2000-01/pa-2000-01-crf-supplementary-schedules.pdf",
         "locator": "PDF page 115 (no printed page number found in extracted text); \"Statement of Staff Utilization\""
       },
-      "reason": "No unique ministry/body mapping"
+      "scope": "aggregate",
+      "reason": "A combined, plurally labelled row for the officers of the Legislature. The statement does not list the offices it combines, so its FTEs cannot be attributed to any one office or to the Legislative Assembly row, which the statement prints separately."
     },
     {
       "origin": "staffing.json#3",
-      "disposition": "unresolved_unmapped",
+      "disposition": "aggregate_scope",
       "input": {
         "fiscal_year": "2000/01",
         "fiscal_year_ended": "March 31, 2001",
@@ -1634,7 +1636,8 @@
         "source_url": "https://www2.gov.bc.ca/assets/gov/british-columbians-our-governments/government-finances/public-accounts/2000-01/pa-2000-01-crf-supplementary-schedules.pdf",
         "locator": "PDF page 115 (no printed page number found in extracted text); \"Statement of Staff Utilization\""
       },
-      "reason": "No unique ministry/body mapping"
+      "scope": "aggregate",
+      "reason": "A combined, plurally labelled row for the officers of the Legislature. The statement does not list the offices it combines, so its FTEs cannot be attributed to any one office or to the Legislative Assembly row, which the statement prints separately."
     },
     {
       "origin": "staffing.json#4",
@@ -2478,7 +2481,7 @@
     },
     {
       "origin": "staffing.json#46",
-      "disposition": "unresolved_unmapped",
+      "disposition": "aggregate_scope",
       "input": {
         "fiscal_year": "2000/01",
         "fiscal_year_ended": "March 31, 2001",
@@ -2493,11 +2496,12 @@
         "source_url": "https://www2.gov.bc.ca/assets/gov/british-columbians-our-governments/government-finances/public-accounts/2000-01/pa-2000-01-crf-supplementary-schedules.pdf",
         "locator": "PDF page 115 (no printed page number found in extracted text); \"Statement of Staff Utilization\""
       },
-      "reason": "No unique ministry/body mapping"
+      "scope": "aggregate",
+      "reason": "A residual row for appropriations not shown under a ministry. The statement does not list what it combines, so its FTEs are not attributed to any ministry or body."
     },
     {
       "origin": "staffing.json#47",
-      "disposition": "unresolved_unmapped",
+      "disposition": "aggregate_scope",
       "input": {
         "fiscal_year": "2000/01",
         "fiscal_year_ended": "March 31, 2001",
@@ -2514,7 +2518,8 @@
         "source_url": "https://www2.gov.bc.ca/assets/gov/british-columbians-our-governments/government-finances/public-accounts/2000-01/pa-2000-01-crf-supplementary-schedules.pdf",
         "locator": "PDF page 115 (no printed page number found in extracted text); \"Statement of Staff Utilization\""
       },
-      "reason": "No unique ministry/body mapping"
+      "scope": "aggregate",
+      "reason": "A residual row for appropriations not shown under a ministry. The statement does not list what it combines, so its FTEs are not attributed to any ministry or body."
     },
     {
       "origin": "staffing.json#48",
@@ -2556,7 +2561,7 @@
     },
     {
       "origin": "staffing.json#50",
-      "disposition": "unresolved_unmapped",
+      "disposition": "aggregate_scope",
       "input": {
         "fiscal_year": "2001/02",
         "fiscal_year_ended": "March 31, 2002",
@@ -2570,11 +2575,12 @@
         "source_url": "https://www2.gov.bc.ca/assets/gov/british-columbians-our-governments/government-finances/public-accounts/2001-02/pa-2001-02-crf-supplementary-schedules.pdf",
         "locator": "PDF page 112 (no printed page number found in extracted text); \"Statement of Staff Utilization\""
       },
-      "reason": "No unique ministry/body mapping"
+      "scope": "aggregate",
+      "reason": "A combined, plurally labelled row for the officers of the Legislature. The statement does not list the offices it combines, so its FTEs cannot be attributed to any one office or to the Legislative Assembly row, which the statement prints separately."
     },
     {
       "origin": "staffing.json#51",
-      "disposition": "unresolved_unmapped",
+      "disposition": "aggregate_scope",
       "input": {
         "fiscal_year": "2001/02",
         "fiscal_year_ended": "March 31, 2002",
@@ -2590,7 +2596,8 @@
         "source_url": "https://www2.gov.bc.ca/assets/gov/british-columbians-our-governments/government-finances/public-accounts/2001-02/pa-2001-02-crf-supplementary-schedules.pdf",
         "locator": "PDF page 112 (no printed page number found in extracted text); \"Statement of Staff Utilization\""
       },
-      "reason": "No unique ministry/body mapping"
+      "scope": "aggregate",
+      "reason": "A combined, plurally labelled row for the officers of the Legislature. The statement does not list the offices it combines, so its FTEs cannot be attributed to any one office or to the Legislative Assembly row, which the statement prints separately."
     },
     {
       "origin": "staffing.json#52",
@@ -3392,7 +3399,7 @@
     },
     {
       "origin": "staffing.json#94",
-      "disposition": "unresolved_unmapped",
+      "disposition": "aggregate_scope",
       "input": {
         "fiscal_year": "2001/02",
         "fiscal_year_ended": "March 31, 2002",
@@ -3406,11 +3413,12 @@
         "source_url": "https://www2.gov.bc.ca/assets/gov/british-columbians-our-governments/government-finances/public-accounts/2001-02/pa-2001-02-crf-supplementary-schedules.pdf",
         "locator": "PDF page 112 (no printed page number found in extracted text); \"Statement of Staff Utilization\""
       },
-      "reason": "No unique ministry/body mapping"
+      "scope": "aggregate",
+      "reason": "A residual row for appropriations not shown under a ministry. The statement does not list what it combines, so its FTEs are not attributed to any ministry or body."
     },
     {
       "origin": "staffing.json#95",
-      "disposition": "unresolved_unmapped",
+      "disposition": "aggregate_scope",
       "input": {
         "fiscal_year": "2001/02",
         "fiscal_year_ended": "March 31, 2002",
@@ -3426,7 +3434,8 @@
         "source_url": "https://www2.gov.bc.ca/assets/gov/british-columbians-our-governments/government-finances/public-accounts/2001-02/pa-2001-02-crf-supplementary-schedules.pdf",
         "locator": "PDF page 112 (no printed page number found in extracted text); \"Statement of Staff Utilization\""
       },
-      "reason": "No unique ministry/body mapping"
+      "scope": "aggregate",
+      "reason": "A residual row for appropriations not shown under a ministry. The statement does not list what it combines, so its FTEs are not attributed to any ministry or body."
     },
     {
       "origin": "staffing.json#96",
@@ -3468,7 +3477,7 @@
     },
     {
       "origin": "staffing.json#98",
-      "disposition": "unresolved_unmapped",
+      "disposition": "aggregate_scope",
       "input": {
         "fiscal_year": "2002/03",
         "fiscal_year_ended": "March 31, 2003",
@@ -3482,11 +3491,12 @@
         "source_url": "https://www2.gov.bc.ca/assets/gov/british-columbians-our-governments/government-finances/public-accounts/2002-03/pa-2002-03-crf-supplementary-schedules.pdf",
         "locator": "PDF page 114 (no printed page number found in extracted text); \"Statement of Staff Utilization\""
       },
-      "reason": "No unique ministry/body mapping"
+      "scope": "aggregate",
+      "reason": "A combined, plurally labelled row for the officers of the Legislature. The statement does not list the offices it combines, so its FTEs cannot be attributed to any one office or to the Legislative Assembly row, which the statement prints separately."
     },
     {
       "origin": "staffing.json#99",
-      "disposition": "unresolved_unmapped",
+      "disposition": "aggregate_scope",
       "input": {
         "fiscal_year": "2002/03",
         "fiscal_year_ended": "March 31, 2003",
@@ -3502,7 +3512,8 @@
         "source_url": "https://www2.gov.bc.ca/assets/gov/british-columbians-our-governments/government-finances/public-accounts/2002-03/pa-2002-03-crf-supplementary-schedules.pdf",
         "locator": "PDF page 114 (no printed page number found in extracted text); \"Statement of Staff Utilization\""
       },
-      "reason": "No unique ministry/body mapping"
+      "scope": "aggregate",
+      "reason": "A combined, plurally labelled row for the officers of the Legislature. The statement does not list the offices it combines, so its FTEs cannot be attributed to any one office or to the Legislative Assembly row, which the statement prints separately."
     },
     {
       "origin": "staffing.json#100",
@@ -4304,7 +4315,7 @@
     },
     {
       "origin": "staffing.json#142",
-      "disposition": "unresolved_unmapped",
+      "disposition": "aggregate_scope",
       "input": {
         "fiscal_year": "2002/03",
         "fiscal_year_ended": "March 31, 2003",
@@ -4318,11 +4329,12 @@
         "source_url": "https://www2.gov.bc.ca/assets/gov/british-columbians-our-governments/government-finances/public-accounts/2002-03/pa-2002-03-crf-supplementary-schedules.pdf",
         "locator": "PDF page 114 (no printed page number found in extracted text); \"Statement of Staff Utilization\""
       },
-      "reason": "No unique ministry/body mapping"
+      "scope": "aggregate",
+      "reason": "A residual row for appropriations not shown under a ministry. The statement does not list what it combines, so its FTEs are not attributed to any ministry or body."
     },
     {
       "origin": "staffing.json#143",
-      "disposition": "unresolved_unmapped",
+      "disposition": "aggregate_scope",
       "input": {
         "fiscal_year": "2002/03",
         "fiscal_year_ended": "March 31, 2003",
@@ -4338,7 +4350,8 @@
         "source_url": "https://www2.gov.bc.ca/assets/gov/british-columbians-our-governments/government-finances/public-accounts/2002-03/pa-2002-03-crf-supplementary-schedules.pdf",
         "locator": "PDF page 114 (no printed page number found in extracted text); \"Statement of Staff Utilization\""
       },
-      "reason": "No unique ministry/body mapping"
+      "scope": "aggregate",
+      "reason": "A residual row for appropriations not shown under a ministry. The statement does not list what it combines, so its FTEs are not attributed to any ministry or body."
     },
     {
       "origin": "staffing.json#144",
@@ -4380,7 +4393,7 @@
     },
     {
       "origin": "staffing.json#146",
-      "disposition": "unresolved_unmapped",
+      "disposition": "aggregate_scope",
       "input": {
         "fiscal_year": "2003/04",
         "fiscal_year_ended": "March 31, 2004",
@@ -4394,11 +4407,12 @@
         "source_url": "https://www2.gov.bc.ca/assets/gov/british-columbians-our-governments/government-finances/public-accounts/2003-04/pa-2003-04-crf-supplementary-schedules.pdf",
         "locator": "PDF page 112 (no printed page number found in extracted text); \"Consolidated Revenue Fund Statement of Staff Utilization\""
       },
-      "reason": "No unique ministry/body mapping"
+      "scope": "aggregate",
+      "reason": "A combined, plurally labelled row for the officers of the Legislature. The statement does not list the offices it combines, so its FTEs cannot be attributed to any one office or to the Legislative Assembly row, which the statement prints separately."
     },
     {
       "origin": "staffing.json#147",
-      "disposition": "unresolved_unmapped",
+      "disposition": "aggregate_scope",
       "input": {
         "fiscal_year": "2003/04",
         "fiscal_year_ended": "March 31, 2004",
@@ -4414,7 +4428,8 @@
         "source_url": "https://www2.gov.bc.ca/assets/gov/british-columbians-our-governments/government-finances/public-accounts/2003-04/pa-2003-04-crf-supplementary-schedules.pdf",
         "locator": "PDF page 112 (no printed page number found in extracted text); \"Consolidated Revenue Fund Statement of Staff Utilization\""
       },
-      "reason": "No unique ministry/body mapping"
+      "scope": "aggregate",
+      "reason": "A combined, plurally labelled row for the officers of the Legislature. The statement does not list the offices it combines, so its FTEs cannot be attributed to any one office or to the Legislative Assembly row, which the statement prints separately."
     },
     {
       "origin": "staffing.json#148",
@@ -5178,7 +5193,7 @@
     },
     {
       "origin": "staffing.json#188",
-      "disposition": "unresolved_unmapped",
+      "disposition": "aggregate_scope",
       "input": {
         "fiscal_year": "2003/04",
         "fiscal_year_ended": "March 31, 2004",
@@ -5192,11 +5207,12 @@
         "source_url": "https://www2.gov.bc.ca/assets/gov/british-columbians-our-governments/government-finances/public-accounts/2003-04/pa-2003-04-crf-supplementary-schedules.pdf",
         "locator": "PDF page 112 (no printed page number found in extracted text); \"Consolidated Revenue Fund Statement of Staff Utilization\""
       },
-      "reason": "No unique ministry/body mapping"
+      "scope": "aggregate",
+      "reason": "A residual row for appropriations not shown under a ministry. The statement does not list what it combines, so its FTEs are not attributed to any ministry or body."
     },
     {
       "origin": "staffing.json#189",
-      "disposition": "unresolved_unmapped",
+      "disposition": "aggregate_scope",
       "input": {
         "fiscal_year": "2003/04",
         "fiscal_year_ended": "March 31, 2004",
@@ -5212,7 +5228,8 @@
         "source_url": "https://www2.gov.bc.ca/assets/gov/british-columbians-our-governments/government-finances/public-accounts/2003-04/pa-2003-04-crf-supplementary-schedules.pdf",
         "locator": "PDF page 112 (no printed page number found in extracted text); \"Consolidated Revenue Fund Statement of Staff Utilization\""
       },
-      "reason": "No unique ministry/body mapping"
+      "scope": "aggregate",
+      "reason": "A residual row for appropriations not shown under a ministry. The statement does not list what it combines, so its FTEs are not attributed to any ministry or body."
     },
     {
       "origin": "staffing.json#190",
@@ -5255,7 +5272,7 @@
     },
     {
       "origin": "staffing.json#192",
-      "disposition": "unresolved_unmapped",
+      "disposition": "aggregate_scope",
       "input": {
         "fiscal_year": "2004/05",
         "fiscal_year_ended": "March 31, 2005",
@@ -5269,11 +5286,12 @@
         "source_url": "https://www2.gov.bc.ca/assets/gov/british-columbians-our-governments/government-finances/public-accounts/2004-05/pa-2004-05-crf-supplementary-schedules.pdf",
         "locator": "PDF page 121 (no printed page number found in extracted text); \"Consolidated Revenue Fund Statement of Staff Utilization\""
       },
-      "reason": "No unique ministry/body mapping"
+      "scope": "aggregate",
+      "reason": "A combined, plurally labelled row for the officers of the Legislature. The statement does not list the offices it combines, so its FTEs cannot be attributed to any one office or to the Legislative Assembly row, which the statement prints separately."
     },
     {
       "origin": "staffing.json#193",
-      "disposition": "unresolved_unmapped",
+      "disposition": "aggregate_scope",
       "input": {
         "fiscal_year": "2004/05",
         "fiscal_year_ended": "March 31, 2005",
@@ -5289,7 +5307,8 @@
         "source_url": "https://www2.gov.bc.ca/assets/gov/british-columbians-our-governments/government-finances/public-accounts/2004-05/pa-2004-05-crf-supplementary-schedules.pdf",
         "locator": "PDF page 121 (no printed page number found in extracted text); \"Consolidated Revenue Fund Statement of Staff Utilization\""
       },
-      "reason": "No unique ministry/body mapping"
+      "scope": "aggregate",
+      "reason": "A combined, plurally labelled row for the officers of the Legislature. The statement does not list the offices it combines, so its FTEs cannot be attributed to any one office or to the Legislative Assembly row, which the statement prints separately."
     },
     {
       "origin": "staffing.json#194",
@@ -6053,7 +6072,7 @@
     },
     {
       "origin": "staffing.json#234",
-      "disposition": "unresolved_unmapped",
+      "disposition": "aggregate_scope",
       "input": {
         "fiscal_year": "2004/05",
         "fiscal_year_ended": "March 31, 2005",
@@ -6067,11 +6086,12 @@
         "source_url": "https://www2.gov.bc.ca/assets/gov/british-columbians-our-governments/government-finances/public-accounts/2004-05/pa-2004-05-crf-supplementary-schedules.pdf",
         "locator": "PDF page 121 (no printed page number found in extracted text); \"Consolidated Revenue Fund Statement of Staff Utilization\""
       },
-      "reason": "No unique ministry/body mapping"
+      "scope": "aggregate",
+      "reason": "A residual row for appropriations not shown under a ministry. The statement does not list what it combines, so its FTEs are not attributed to any ministry or body."
     },
     {
       "origin": "staffing.json#235",
-      "disposition": "unresolved_unmapped",
+      "disposition": "aggregate_scope",
       "input": {
         "fiscal_year": "2004/05",
         "fiscal_year_ended": "March 31, 2005",
@@ -6087,7 +6107,8 @@
         "source_url": "https://www2.gov.bc.ca/assets/gov/british-columbians-our-governments/government-finances/public-accounts/2004-05/pa-2004-05-crf-supplementary-schedules.pdf",
         "locator": "PDF page 121 (no printed page number found in extracted text); \"Consolidated Revenue Fund Statement of Staff Utilization\""
       },
-      "reason": "No unique ministry/body mapping"
+      "scope": "aggregate",
+      "reason": "A residual row for appropriations not shown under a ministry. The statement does not list what it combines, so its FTEs are not attributed to any ministry or body."
     },
     {
       "origin": "staffing.json#236",
@@ -6130,7 +6151,7 @@
     },
     {
       "origin": "staffing.json#238",
-      "disposition": "unresolved_unmapped",
+      "disposition": "aggregate_scope",
       "input": {
         "fiscal_year": "2005/06",
         "fiscal_year_ended": "March 31, 2006",
@@ -6144,11 +6165,12 @@
         "source_url": "https://www2.gov.bc.ca/assets/gov/british-columbians-our-governments/government-finances/public-accounts/2005-06/pa-2005-06-crf-supplementary-schedules.pdf",
         "locator": "PDF page 125 (no printed page number found in extracted text); \"Consolidated Revenue Fund Statement of Staff Utilization\""
       },
-      "reason": "No unique ministry/body mapping"
+      "scope": "aggregate",
+      "reason": "A combined, plurally labelled row for the officers of the Legislature. The statement does not list the offices it combines, so its FTEs cannot be attributed to any one office or to the Legislative Assembly row, which the statement prints separately."
     },
     {
       "origin": "staffing.json#239",
-      "disposition": "unresolved_unmapped",
+      "disposition": "aggregate_scope",
       "input": {
         "fiscal_year": "2005/06",
         "fiscal_year_ended": "March 31, 2006",
@@ -6164,7 +6186,8 @@
         "source_url": "https://www2.gov.bc.ca/assets/gov/british-columbians-our-governments/government-finances/public-accounts/2005-06/pa-2005-06-crf-supplementary-schedules.pdf",
         "locator": "PDF page 125 (no printed page number found in extracted text); \"Consolidated Revenue Fund Statement of Staff Utilization\""
       },
-      "reason": "No unique ministry/body mapping"
+      "scope": "aggregate",
+      "reason": "A combined, plurally labelled row for the officers of the Legislature. The statement does not list the offices it combines, so its FTEs cannot be attributed to any one office or to the Legislative Assembly row, which the statement prints separately."
     },
     {
       "origin": "staffing.json#240",
@@ -6928,7 +6951,7 @@
     },
     {
       "origin": "staffing.json#280",
-      "disposition": "unresolved_unmapped",
+      "disposition": "aggregate_scope",
       "input": {
         "fiscal_year": "2005/06",
         "fiscal_year_ended": "March 31, 2006",
@@ -6942,11 +6965,12 @@
         "source_url": "https://www2.gov.bc.ca/assets/gov/british-columbians-our-governments/government-finances/public-accounts/2005-06/pa-2005-06-crf-supplementary-schedules.pdf",
         "locator": "PDF page 125 (no printed page number found in extracted text); \"Consolidated Revenue Fund Statement of Staff Utilization\""
       },
-      "reason": "No unique ministry/body mapping"
+      "scope": "aggregate",
+      "reason": "A residual row for appropriations not shown under a ministry. The statement does not list what it combines, so its FTEs are not attributed to any ministry or body."
     },
     {
       "origin": "staffing.json#281",
-      "disposition": "unresolved_unmapped",
+      "disposition": "aggregate_scope",
       "input": {
         "fiscal_year": "2005/06",
         "fiscal_year_ended": "March 31, 2006",
@@ -6962,7 +6986,8 @@
         "source_url": "https://www2.gov.bc.ca/assets/gov/british-columbians-our-governments/government-finances/public-accounts/2005-06/pa-2005-06-crf-supplementary-schedules.pdf",
         "locator": "PDF page 125 (no printed page number found in extracted text); \"Consolidated Revenue Fund Statement of Staff Utilization\""
       },
-      "reason": "No unique ministry/body mapping"
+      "scope": "aggregate",
+      "reason": "A residual row for appropriations not shown under a ministry. The statement does not list what it combines, so its FTEs are not attributed to any ministry or body."
     },
     {
       "origin": "staffing.json#282",
@@ -7005,7 +7030,7 @@
     },
     {
       "origin": "staffing.json#284",
-      "disposition": "unresolved_unmapped",
+      "disposition": "aggregate_scope",
       "input": {
         "fiscal_year": "2006/07",
         "fiscal_year_ended": "March 31, 2007",
@@ -7019,11 +7044,12 @@
         "source_url": "https://www2.gov.bc.ca/assets/gov/british-columbians-our-governments/government-finances/public-accounts/2006-07/pa-2006-07-crf-supplementary-schedules.pdf",
         "locator": "PDF page 131 (no printed page number found in extracted text); \"Consolidated Revenue Fund Statement of Staff Utilization\""
       },
-      "reason": "No unique ministry/body mapping"
+      "scope": "aggregate",
+      "reason": "A combined, plurally labelled row for the officers of the Legislature. The statement does not list the offices it combines, so its FTEs cannot be attributed to any one office or to the Legislative Assembly row, which the statement prints separately."
     },
     {
       "origin": "staffing.json#285",
-      "disposition": "unresolved_unmapped",
+      "disposition": "aggregate_scope",
       "input": {
         "fiscal_year": "2006/07",
         "fiscal_year_ended": "March 31, 2007",
@@ -7039,7 +7065,8 @@
         "source_url": "https://www2.gov.bc.ca/assets/gov/british-columbians-our-governments/government-finances/public-accounts/2006-07/pa-2006-07-crf-supplementary-schedules.pdf",
         "locator": "PDF page 131 (no printed page number found in extracted text); \"Consolidated Revenue Fund Statement of Staff Utilization\""
       },
-      "reason": "No unique ministry/body mapping"
+      "scope": "aggregate",
+      "reason": "A combined, plurally labelled row for the officers of the Legislature. The statement does not list the offices it combines, so its FTEs cannot be attributed to any one office or to the Legislative Assembly row, which the statement prints separately."
     },
     {
       "origin": "staffing.json#286",
@@ -7804,7 +7831,7 @@
     },
     {
       "origin": "staffing.json#326",
-      "disposition": "unresolved_unmapped",
+      "disposition": "aggregate_scope",
       "input": {
         "fiscal_year": "2006/07",
         "fiscal_year_ended": "March 31, 2007",
@@ -7818,11 +7845,12 @@
         "source_url": "https://www2.gov.bc.ca/assets/gov/british-columbians-our-governments/government-finances/public-accounts/2006-07/pa-2006-07-crf-supplementary-schedules.pdf",
         "locator": "PDF page 131 (no printed page number found in extracted text); \"Consolidated Revenue Fund Statement of Staff Utilization\""
       },
-      "reason": "No unique ministry/body mapping"
+      "scope": "aggregate",
+      "reason": "A residual row for appropriations not shown under a ministry. The statement does not list what it combines, so its FTEs are not attributed to any ministry or body."
     },
     {
       "origin": "staffing.json#327",
-      "disposition": "unresolved_unmapped",
+      "disposition": "aggregate_scope",
       "input": {
         "fiscal_year": "2006/07",
         "fiscal_year_ended": "March 31, 2007",
@@ -7838,7 +7866,8 @@
         "source_url": "https://www2.gov.bc.ca/assets/gov/british-columbians-our-governments/government-finances/public-accounts/2006-07/pa-2006-07-crf-supplementary-schedules.pdf",
         "locator": "PDF page 131 (no printed page number found in extracted text); \"Consolidated Revenue Fund Statement of Staff Utilization\""
       },
-      "reason": "No unique ministry/body mapping"
+      "scope": "aggregate",
+      "reason": "A residual row for appropriations not shown under a ministry. The statement does not list what it combines, so its FTEs are not attributed to any ministry or body."
     },
     {
       "origin": "staffing.json#328",
@@ -7881,7 +7910,7 @@
     },
     {
       "origin": "staffing.json#330",
-      "disposition": "unresolved_unmapped",
+      "disposition": "aggregate_scope",
       "input": {
         "fiscal_year": "2007/08",
         "fiscal_year_ended": "March 31, 2008",
@@ -7895,11 +7924,12 @@
         "source_url": "https://www2.gov.bc.ca/assets/gov/british-columbians-our-governments/government-finances/public-accounts/2007-08/pa-2007-08-crf-supplementary-schedules.pdf",
         "locator": "p. 137 (PDF page 139); \"Consolidated Revenue Fund Statement of Staff Utilization\""
       },
-      "reason": "No unique ministry/body mapping"
+      "scope": "aggregate",
+      "reason": "A combined, plurally labelled row for the officers of the Legislature. The statement does not list the offices it combines, so its FTEs cannot be attributed to any one office or to the Legislative Assembly row, which the statement prints separately."
     },
     {
       "origin": "staffing.json#331",
-      "disposition": "unresolved_unmapped",
+      "disposition": "aggregate_scope",
       "input": {
         "fiscal_year": "2007/08",
         "fiscal_year_ended": "March 31, 2008",
@@ -7915,7 +7945,8 @@
         "source_url": "https://www2.gov.bc.ca/assets/gov/british-columbians-our-governments/government-finances/public-accounts/2007-08/pa-2007-08-crf-supplementary-schedules.pdf",
         "locator": "p. 137 (PDF page 139); \"Consolidated Revenue Fund Statement of Staff Utilization\""
       },
-      "reason": "No unique ministry/body mapping"
+      "scope": "aggregate",
+      "reason": "A combined, plurally labelled row for the officers of the Legislature. The statement does not list the offices it combines, so its FTEs cannot be attributed to any one office or to the Legislative Assembly row, which the statement prints separately."
     },
     {
       "origin": "staffing.json#332",
@@ -8679,7 +8710,7 @@
     },
     {
       "origin": "staffing.json#372",
-      "disposition": "unresolved_unmapped",
+      "disposition": "aggregate_scope",
       "input": {
         "fiscal_year": "2007/08",
         "fiscal_year_ended": "March 31, 2008",
@@ -8693,11 +8724,12 @@
         "source_url": "https://www2.gov.bc.ca/assets/gov/british-columbians-our-governments/government-finances/public-accounts/2007-08/pa-2007-08-crf-supplementary-schedules.pdf",
         "locator": "p. 137 (PDF page 139); \"Consolidated Revenue Fund Statement of Staff Utilization\""
       },
-      "reason": "No unique ministry/body mapping"
+      "scope": "aggregate",
+      "reason": "A residual row for appropriations not shown under a ministry. The statement does not list what it combines, so its FTEs are not attributed to any ministry or body."
     },
     {
       "origin": "staffing.json#373",
-      "disposition": "unresolved_unmapped",
+      "disposition": "aggregate_scope",
       "input": {
         "fiscal_year": "2007/08",
         "fiscal_year_ended": "March 31, 2008",
@@ -8713,7 +8745,8 @@
         "source_url": "https://www2.gov.bc.ca/assets/gov/british-columbians-our-governments/government-finances/public-accounts/2007-08/pa-2007-08-crf-supplementary-schedules.pdf",
         "locator": "p. 137 (PDF page 139); \"Consolidated Revenue Fund Statement of Staff Utilization\""
       },
-      "reason": "No unique ministry/body mapping"
+      "scope": "aggregate",
+      "reason": "A residual row for appropriations not shown under a ministry. The statement does not list what it combines, so its FTEs are not attributed to any ministry or body."
     },
     {
       "origin": "staffing.json#374",
@@ -8756,7 +8789,7 @@
     },
     {
       "origin": "staffing.json#376",
-      "disposition": "unresolved_unmapped",
+      "disposition": "aggregate_scope",
       "input": {
         "fiscal_year": "2008/09",
         "fiscal_year_ended": "March 31, 2009",
@@ -8770,11 +8803,12 @@
         "source_url": "https://www2.gov.bc.ca/assets/gov/british-columbians-our-governments/government-finances/public-accounts/2008-09/pa-2008-09-crf-supplementary-schedules.pdf",
         "locator": "p. 171 (PDF page 173); \"Consolidated Revenue Fund Statement of Staff Utilization\""
       },
-      "reason": "No unique ministry/body mapping"
+      "scope": "aggregate",
+      "reason": "A combined, plurally labelled row for the officers of the Legislature. The statement does not list the offices it combines, so its FTEs cannot be attributed to any one office or to the Legislative Assembly row, which the statement prints separately."
     },
     {
       "origin": "staffing.json#377",
-      "disposition": "unresolved_unmapped",
+      "disposition": "aggregate_scope",
       "input": {
         "fiscal_year": "2008/09",
         "fiscal_year_ended": "March 31, 2009",
@@ -8790,7 +8824,8 @@
         "source_url": "https://www2.gov.bc.ca/assets/gov/british-columbians-our-governments/government-finances/public-accounts/2008-09/pa-2008-09-crf-supplementary-schedules.pdf",
         "locator": "p. 171 (PDF page 173); \"Consolidated Revenue Fund Statement of Staff Utilization\""
       },
-      "reason": "No unique ministry/body mapping"
+      "scope": "aggregate",
+      "reason": "A combined, plurally labelled row for the officers of the Legislature. The statement does not list the offices it combines, so its FTEs cannot be attributed to any one office or to the Legislative Assembly row, which the statement prints separately."
     },
     {
       "origin": "staffing.json#378",
@@ -9555,7 +9590,7 @@
     },
     {
       "origin": "staffing.json#418",
-      "disposition": "unresolved_unmapped",
+      "disposition": "aggregate_scope",
       "input": {
         "fiscal_year": "2008/09",
         "fiscal_year_ended": "March 31, 2009",
@@ -9569,11 +9604,12 @@
         "source_url": "https://www2.gov.bc.ca/assets/gov/british-columbians-our-governments/government-finances/public-accounts/2008-09/pa-2008-09-crf-supplementary-schedules.pdf",
         "locator": "p. 171 (PDF page 173); \"Consolidated Revenue Fund Statement of Staff Utilization\""
       },
-      "reason": "No unique ministry/body mapping"
+      "scope": "aggregate",
+      "reason": "A residual row for appropriations not shown under a ministry. The statement does not list what it combines, so its FTEs are not attributed to any ministry or body."
     },
     {
       "origin": "staffing.json#419",
-      "disposition": "unresolved_unmapped",
+      "disposition": "aggregate_scope",
       "input": {
         "fiscal_year": "2008/09",
         "fiscal_year_ended": "March 31, 2009",
@@ -9589,7 +9625,8 @@
         "source_url": "https://www2.gov.bc.ca/assets/gov/british-columbians-our-governments/government-finances/public-accounts/2008-09/pa-2008-09-crf-supplementary-schedules.pdf",
         "locator": "p. 171 (PDF page 173); \"Consolidated Revenue Fund Statement of Staff Utilization\""
       },
-      "reason": "No unique ministry/body mapping"
+      "scope": "aggregate",
+      "reason": "A residual row for appropriations not shown under a ministry. The statement does not list what it combines, so its FTEs are not attributed to any ministry or body."
     },
     {
       "origin": "staffing.json#420",
@@ -9611,7 +9648,7 @@
     },
     {
       "origin": "staffing.json#421",
-      "disposition": "unresolved_unmapped",
+      "disposition": "aggregate_scope",
       "input": {
         "fiscal_year": "2009/10",
         "fiscal_year_ended": "March 31, 2010",
@@ -9625,7 +9662,8 @@
         "source_url": "https://www2.gov.bc.ca/assets/gov/british-columbians-our-governments/government-finances/public-accounts/2009-10/pa-2009-10-crf-supplementary-schedules.pdf",
         "locator": "p. 132 (PDF page 134); \"Consolidated Revenue Fund Statement of Staff Utilization\""
       },
-      "reason": "No unique ministry/body mapping"
+      "scope": "aggregate",
+      "reason": "A combined, plurally labelled row for the officers of the Legislature. The statement does not list the offices it combines, so its FTEs cannot be attributed to any one office or to the Legislative Assembly row, which the statement prints separately."
     },
     {
       "origin": "staffing.json#422",
@@ -10007,7 +10045,7 @@
     },
     {
       "origin": "staffing.json#443",
-      "disposition": "unresolved_unmapped",
+      "disposition": "aggregate_scope",
       "input": {
         "fiscal_year": "2009/10",
         "fiscal_year_ended": "March 31, 2010",
@@ -10021,7 +10059,8 @@
         "source_url": "https://www2.gov.bc.ca/assets/gov/british-columbians-our-governments/government-finances/public-accounts/2009-10/pa-2009-10-crf-supplementary-schedules.pdf",
         "locator": "p. 132 (PDF page 134); \"Consolidated Revenue Fund Statement of Staff Utilization\""
       },
-      "reason": "No unique ministry/body mapping"
+      "scope": "aggregate",
+      "reason": "A residual row for appropriations not shown under a ministry. The statement does not list what it combines, so its FTEs are not attributed to any ministry or body."
     },
     {
       "origin": "staffing.json#444",
@@ -10043,7 +10082,7 @@
     },
     {
       "origin": "staffing.json#445",
-      "disposition": "unresolved_unmapped",
+      "disposition": "aggregate_scope",
       "input": {
         "fiscal_year": "2010/11",
         "fiscal_year_ended": "March 31, 2011",
@@ -10057,7 +10096,8 @@
         "source_url": "https://www2.gov.bc.ca/assets/gov/british-columbians-our-governments/government-finances/public-accounts/2010-11/pa-2010-11-crf-supplementary-schedules.pdf",
         "locator": "p. 123 (PDF page 125); \"Consolidated Revenue Fund Statement of Staff Utilization\""
       },
-      "reason": "No unique ministry/body mapping"
+      "scope": "aggregate",
+      "reason": "A combined, plurally labelled row for the officers of the Legislature. The statement does not list the offices it combines, so its FTEs cannot be attributed to any one office or to the Legislative Assembly row, which the statement prints separately."
     },
     {
       "origin": "staffing.json#446",
@@ -10385,7 +10425,7 @@
     },
     {
       "origin": "staffing.json#464",
-      "disposition": "unresolved_unmapped",
+      "disposition": "aggregate_scope",
       "input": {
         "fiscal_year": "2010/11",
         "fiscal_year_ended": "March 31, 2011",
@@ -10399,7 +10439,8 @@
         "source_url": "https://www2.gov.bc.ca/assets/gov/british-columbians-our-governments/government-finances/public-accounts/2010-11/pa-2010-11-crf-supplementary-schedules.pdf",
         "locator": "p. 123 (PDF page 125); \"Consolidated Revenue Fund Statement of Staff Utilization\""
       },
-      "reason": "No unique ministry/body mapping"
+      "scope": "aggregate",
+      "reason": "A residual row for appropriations not shown under a ministry. The statement does not list what it combines, so its FTEs are not attributed to any ministry or body."
     },
     {
       "origin": "staffing.json#465",
@@ -10421,7 +10462,7 @@
     },
     {
       "origin": "staffing.json#466",
-      "disposition": "unresolved_unmapped",
+      "disposition": "aggregate_scope",
       "input": {
         "fiscal_year": "2011/12",
         "fiscal_year_ended": "March 31, 2012",
@@ -10435,7 +10476,8 @@
         "source_url": "https://www2.gov.bc.ca/assets/gov/british-columbians-our-governments/government-finances/public-accounts/2011-12/pa-2011-12-crf-supplementary-schedules.pdf",
         "locator": "p. 92 (PDF page 94); \"Consolidated Revenue Fund Statement of Staff Utilization\""
       },
-      "reason": "No unique ministry/body mapping"
+      "scope": "aggregate",
+      "reason": "A combined, plurally labelled row for the officers of the Legislature. The statement does not list the offices it combines, so its FTEs cannot be attributed to any one office or to the Legislative Assembly row, which the statement prints separately."
     },
     {
       "origin": "staffing.json#467",
@@ -10745,7 +10787,7 @@
     },
     {
       "origin": "staffing.json#484",
-      "disposition": "unresolved_unmapped",
+      "disposition": "aggregate_scope",
       "input": {
         "fiscal_year": "2011/12",
         "fiscal_year_ended": "March 31, 2012",
@@ -10759,7 +10801,8 @@
         "source_url": "https://www2.gov.bc.ca/assets/gov/british-columbians-our-governments/government-finances/public-accounts/2011-12/pa-2011-12-crf-supplementary-schedules.pdf",
         "locator": "p. 92 (PDF page 94); \"Consolidated Revenue Fund Statement of Staff Utilization\""
       },
-      "reason": "No unique ministry/body mapping"
+      "scope": "aggregate",
+      "reason": "A residual row for appropriations not shown under a ministry. The statement does not list what it combines, so its FTEs are not attributed to any ministry or body."
     },
     {
       "origin": "staffing.json#485",
@@ -10781,7 +10824,7 @@
     },
     {
       "origin": "staffing.json#486",
-      "disposition": "unresolved_unmapped",
+      "disposition": "aggregate_scope",
       "input": {
         "fiscal_year": "2012/13",
         "fiscal_year_ended": "March 31, 2013",
@@ -10795,7 +10838,8 @@
         "source_url": "https://www2.gov.bc.ca/assets/gov/british-columbians-our-governments/government-finances/public-accounts/2012-13/pa-2012-13-crf-supplementary-schedules.pdf",
         "locator": "p. 90 (PDF page 92); \"Consolidated Revenue Fund Statement of Staff Utilization\""
       },
-      "reason": "No unique ministry/body mapping"
+      "scope": "aggregate",
+      "reason": "A combined, plurally labelled row for the officers of the Legislature. The statement does not list the offices it combines, so its FTEs cannot be attributed to any one office or to the Legislative Assembly row, which the statement prints separately."
     },
     {
       "origin": "staffing.json#487",
@@ -11105,7 +11149,7 @@
     },
     {
       "origin": "staffing.json#504",
-      "disposition": "unresolved_unmapped",
+      "disposition": "aggregate_scope",
       "input": {
         "fiscal_year": "2012/13",
         "fiscal_year_ended": "March 31, 2013",
@@ -11119,7 +11163,8 @@
         "source_url": "https://www2.gov.bc.ca/assets/gov/british-columbians-our-governments/government-finances/public-accounts/2012-13/pa-2012-13-crf-supplementary-schedules.pdf",
         "locator": "p. 90 (PDF page 92); \"Consolidated Revenue Fund Statement of Staff Utilization\""
       },
-      "reason": "No unique ministry/body mapping"
+      "scope": "aggregate",
+      "reason": "A residual row for appropriations not shown under a ministry. The statement does not list what it combines, so its FTEs are not attributed to any ministry or body."
     },
     {
       "origin": "staffing.json#505",
@@ -11141,7 +11186,7 @@
     },
     {
       "origin": "staffing.json#506",
-      "disposition": "unresolved_unmapped",
+      "disposition": "aggregate_scope",
       "input": {
         "fiscal_year": "2013/14",
         "fiscal_year_ended": "March 31, 2014",
@@ -11155,7 +11200,8 @@
         "source_url": "https://www2.gov.bc.ca/assets/gov/british-columbians-our-governments/government-finances/public-accounts/2013-14/pa-2013-14-crf-supplementary-schedules.pdf",
         "locator": "p. 86 (PDF page 88); \"Consolidated Revenue Fund Statement of Staff Utilization\""
       },
-      "reason": "No unique ministry/body mapping"
+      "scope": "aggregate",
+      "reason": "A combined, plurally labelled row for the officers of the Legislature. The statement does not list the offices it combines, so its FTEs cannot be attributed to any one office or to the Legislative Assembly row, which the statement prints separately."
     },
     {
       "origin": "staffing.json#507",
@@ -11501,7 +11547,7 @@
     },
     {
       "origin": "staffing.json#526",
-      "disposition": "unresolved_unmapped",
+      "disposition": "aggregate_scope",
       "input": {
         "fiscal_year": "2013/14",
         "fiscal_year_ended": "March 31, 2014",
@@ -11515,7 +11561,8 @@
         "source_url": "https://www2.gov.bc.ca/assets/gov/british-columbians-our-governments/government-finances/public-accounts/2013-14/pa-2013-14-crf-supplementary-schedules.pdf",
         "locator": "p. 86 (PDF page 88); \"Consolidated Revenue Fund Statement of Staff Utilization\""
       },
-      "reason": "No unique ministry/body mapping"
+      "scope": "aggregate",
+      "reason": "A residual row for appropriations not shown under a ministry. The statement does not list what it combines, so its FTEs are not attributed to any ministry or body."
     },
     {
       "origin": "staffing.json#527",
@@ -11537,7 +11584,7 @@
     },
     {
       "origin": "staffing.json#528",
-      "disposition": "unresolved_unmapped",
+      "disposition": "aggregate_scope",
       "input": {
         "fiscal_year": "2014/15",
         "fiscal_year_ended": "March 31, 2015",
@@ -11551,7 +11598,8 @@
         "source_url": "https://www2.gov.bc.ca/assets/gov/british-columbians-our-governments/government-finances/public-accounts/2014-15/pa-2014-15-crf-supplementary-schedules.pdf",
         "locator": "p. 88 (PDF page 90); \"Consolidated Revenue Fund Statement of Staff Utilization\""
       },
-      "reason": "No unique ministry/body mapping"
+      "scope": "aggregate",
+      "reason": "A combined, plurally labelled row for the officers of the Legislature. The statement does not list the offices it combines, so its FTEs cannot be attributed to any one office or to the Legislative Assembly row, which the statement prints separately."
     },
     {
       "origin": "staffing.json#529",
@@ -11897,7 +11945,7 @@
     },
     {
       "origin": "staffing.json#548",
-      "disposition": "unresolved_unmapped",
+      "disposition": "aggregate_scope",
       "input": {
         "fiscal_year": "2014/15",
         "fiscal_year_ended": "March 31, 2015",
@@ -11911,7 +11959,8 @@
         "source_url": "https://www2.gov.bc.ca/assets/gov/british-columbians-our-governments/government-finances/public-accounts/2014-15/pa-2014-15-crf-supplementary-schedules.pdf",
         "locator": "p. 88 (PDF page 90); \"Consolidated Revenue Fund Statement of Staff Utilization\""
       },
-      "reason": "No unique ministry/body mapping"
+      "scope": "aggregate",
+      "reason": "A residual row for appropriations not shown under a ministry. The statement does not list what it combines, so its FTEs are not attributed to any ministry or body."
     },
     {
       "origin": "staffing.json#549",
@@ -11933,7 +11982,7 @@
     },
     {
       "origin": "staffing.json#550",
-      "disposition": "unresolved_unmapped",
+      "disposition": "aggregate_scope",
       "input": {
         "fiscal_year": "2015/16",
         "fiscal_year_ended": "March 31, 2016",
@@ -11947,7 +11996,8 @@
         "source_url": "https://www2.gov.bc.ca/assets/gov/british-columbians-our-governments/government-finances/public-accounts/2015-16/pa-2015-16-crf-supplementary-schedules.pdf",
         "locator": "p. 98 (PDF page 100); \"Consolidated Revenue Fund Statement of Staff Utilization\""
       },
-      "reason": "No unique ministry/body mapping"
+      "scope": "aggregate",
+      "reason": "A combined, plurally labelled row for the officers of the Legislature. The statement does not list the offices it combines, so its FTEs cannot be attributed to any one office or to the Legislative Assembly row, which the statement prints separately."
     },
     {
       "origin": "staffing.json#551",
@@ -12239,7 +12289,7 @@
     },
     {
       "origin": "staffing.json#567",
-      "disposition": "unresolved_unmapped",
+      "disposition": "accepted",
       "input": {
         "fiscal_year": "2015/16",
         "fiscal_year_ended": "March 31, 2016",
@@ -12253,7 +12303,8 @@
         "source_url": "https://www2.gov.bc.ca/assets/gov/british-columbians-our-governments/government-finances/public-accounts/2015-16/pa-2015-16-crf-supplementary-schedules.pdf",
         "locator": "p. 98 (PDF page 100); \"Consolidated Revenue Fund Statement of Staff Utilization\""
       },
-      "reason": "No unique ministry/body mapping"
+      "output_id": "ministry-of-public-safety-and-solicitor-general-2017",
+      "reason": "Reviewed mapping (atlas/staffing-scope-review.json): The 2015/16 statement prints a Public Safety and Solicitor General row (2,737 FTE) beside the Ministry of Justice row (3,514). OIC 759/2015, approved 11 December 2015, designates Michael Morris as Minister of Public Safety and Solicitor General; the Legislative Library's cabinet list gives his tenure as 2015-12-11 to 2017-07-18 and the repository already attributes that appointment, and the 2016/17 staffing row, to this node. The 2001-2012 node ended with the 2012 merger into Justice and is not used."
     },
     {
       "origin": "staffing.json#568",
@@ -12329,7 +12380,7 @@
     },
     {
       "origin": "staffing.json#572",
-      "disposition": "unresolved_unmapped",
+      "disposition": "aggregate_scope",
       "input": {
         "fiscal_year": "2015/16",
         "fiscal_year_ended": "March 31, 2016",
@@ -12343,7 +12394,8 @@
         "source_url": "https://www2.gov.bc.ca/assets/gov/british-columbians-our-governments/government-finances/public-accounts/2015-16/pa-2015-16-crf-supplementary-schedules.pdf",
         "locator": "p. 98 (PDF page 100); \"Consolidated Revenue Fund Statement of Staff Utilization\""
       },
-      "reason": "No unique ministry/body mapping"
+      "scope": "aggregate",
+      "reason": "A residual row for appropriations not shown under a ministry. The statement does not list what it combines, so its FTEs are not attributed to any ministry or body."
     },
     {
       "origin": "staffing.json#573",
@@ -12365,7 +12417,7 @@
     },
     {
       "origin": "staffing.json#574",
-      "disposition": "unresolved_unmapped",
+      "disposition": "aggregate_scope",
       "input": {
         "fiscal_year": "2016/17",
         "fiscal_year_ended": "March 31, 2017",
@@ -12379,7 +12431,8 @@
         "source_url": "https://www2.gov.bc.ca/assets/gov/british-columbians-our-governments/government-finances/public-accounts/2016-17/pa-2016-17-crf-supplementary-schedules.pdf",
         "locator": "p. 92 (PDF page 91); \"Consolidated Revenue Fund Statement of Staff Utilization\""
       },
-      "reason": "No unique ministry/body mapping"
+      "scope": "aggregate",
+      "reason": "A combined, plurally labelled row for the officers of the Legislature. The statement does not list the offices it combines, so its FTEs cannot be attributed to any one office or to the Legislative Assembly row, which the statement prints separately."
     },
     {
       "origin": "staffing.json#575",
@@ -12761,7 +12814,7 @@
     },
     {
       "origin": "staffing.json#596",
-      "disposition": "unresolved_unmapped",
+      "disposition": "aggregate_scope",
       "input": {
         "fiscal_year": "2016/17",
         "fiscal_year_ended": "March 31, 2017",
@@ -12775,7 +12828,8 @@
         "source_url": "https://www2.gov.bc.ca/assets/gov/british-columbians-our-governments/government-finances/public-accounts/2016-17/pa-2016-17-crf-supplementary-schedules.pdf",
         "locator": "p. 92 (PDF page 91); \"Consolidated Revenue Fund Statement of Staff Utilization\""
       },
-      "reason": "No unique ministry/body mapping"
+      "scope": "aggregate",
+      "reason": "A residual row for appropriations not shown under a ministry. The statement does not list what it combines, so its FTEs are not attributed to any ministry or body."
     },
     {
       "origin": "staffing.json#597",
@@ -12797,7 +12851,7 @@
     },
     {
       "origin": "staffing.json#598",
-      "disposition": "unresolved_unmapped",
+      "disposition": "aggregate_scope",
       "input": {
         "fiscal_year": "2017/18",
         "fiscal_year_ended": "March 31, 2018",
@@ -12811,7 +12865,8 @@
         "source_url": "https://www2.gov.bc.ca/assets/gov/british-columbians-our-governments/government-finances/public-accounts/2017-18/pa-2017-18-crf-supplementary-schedules.pdf",
         "locator": "p. 85 (PDF page 84); \"Consolidated Revenue Fund Statement of Staff Utilization\""
       },
-      "reason": "No unique ministry/body mapping"
+      "scope": "aggregate",
+      "reason": "A combined, plurally labelled row for the officers of the Legislature. The statement does not list the offices it combines, so its FTEs cannot be attributed to any one office or to the Legislative Assembly row, which the statement prints separately."
     },
     {
       "origin": "staffing.json#599",
@@ -13193,7 +13248,7 @@
     },
     {
       "origin": "staffing.json#620",
-      "disposition": "unresolved_unmapped",
+      "disposition": "aggregate_scope",
       "input": {
         "fiscal_year": "2017/18",
         "fiscal_year_ended": "March 31, 2018",
@@ -13207,7 +13262,8 @@
         "source_url": "https://www2.gov.bc.ca/assets/gov/british-columbians-our-governments/government-finances/public-accounts/2017-18/pa-2017-18-crf-supplementary-schedules.pdf",
         "locator": "p. 85 (PDF page 84); \"Consolidated Revenue Fund Statement of Staff Utilization\""
       },
-      "reason": "No unique ministry/body mapping"
+      "scope": "aggregate",
+      "reason": "A residual row for appropriations not shown under a ministry. The statement does not list what it combines, so its FTEs are not attributed to any ministry or body."
     },
     {
       "origin": "staffing.json#621",
@@ -13229,7 +13285,7 @@
     },
     {
       "origin": "staffing.json#622",
-      "disposition": "unresolved_unmapped",
+      "disposition": "aggregate_scope",
       "input": {
         "fiscal_year": "2018/19",
         "fiscal_year_ended": "March 31, 2019",
@@ -13243,7 +13299,8 @@
         "source_url": "https://www2.gov.bc.ca/assets/gov/british-columbians-our-governments/government-finances/public-accounts/2018-19/pa-2018-19-crf-supplementary-schedules.pdf",
         "locator": "p. 88 (PDF page 87); \"Consolidated Revenue Fund Statement of Staff Utilization\""
       },
-      "reason": "No unique ministry/body mapping"
+      "scope": "aggregate",
+      "reason": "A combined, plurally labelled row for the officers of the Legislature. The statement does not list the offices it combines, so its FTEs cannot be attributed to any one office or to the Legislative Assembly row, which the statement prints separately."
     },
     {
       "origin": "staffing.json#623",
@@ -13625,7 +13682,7 @@
     },
     {
       "origin": "staffing.json#644",
-      "disposition": "unresolved_unmapped",
+      "disposition": "aggregate_scope",
       "input": {
         "fiscal_year": "2018/19",
         "fiscal_year_ended": "March 31, 2019",
@@ -13639,7 +13696,8 @@
         "source_url": "https://www2.gov.bc.ca/assets/gov/british-columbians-our-governments/government-finances/public-accounts/2018-19/pa-2018-19-crf-supplementary-schedules.pdf",
         "locator": "p. 88 (PDF page 87); \"Consolidated Revenue Fund Statement of Staff Utilization\""
       },
-      "reason": "No unique ministry/body mapping"
+      "scope": "aggregate",
+      "reason": "A residual row for appropriations not shown under a ministry. The statement does not list what it combines, so its FTEs are not attributed to any ministry or body."
     },
     {
       "origin": "staffing.json#645",
@@ -13661,7 +13719,7 @@
     },
     {
       "origin": "staffing.json#646",
-      "disposition": "unresolved_unmapped",
+      "disposition": "aggregate_scope",
       "input": {
         "fiscal_year": "2019/20",
         "fiscal_year_ended": "March 31, 2020",
@@ -13675,7 +13733,8 @@
         "source_url": "https://www2.gov.bc.ca/assets/gov/british-columbians-our-governments/government-finances/public-accounts/2019-20/pa-2019-20-crf-supplementary-schedules.pdf",
         "locator": "p. 94 (PDF page 96); \"Consolidated Revenue Fund Statement of Staff Utilization\""
       },
-      "reason": "No unique ministry/body mapping"
+      "scope": "aggregate",
+      "reason": "A combined, plurally labelled row for the officers of the Legislature. The statement does not list the offices it combines, so its FTEs cannot be attributed to any one office or to the Legislative Assembly row, which the statement prints separately."
     },
     {
       "origin": "staffing.json#647",
@@ -13697,7 +13756,7 @@
     },
     {
       "origin": "staffing.json#648",
-      "disposition": "unresolved_unmapped",
+      "disposition": "accepted",
       "input": {
         "fiscal_year": "2019/20",
         "fiscal_year_ended": "March 31, 2020",
@@ -13711,7 +13770,8 @@
         "source_url": "https://www2.gov.bc.ca/assets/gov/british-columbians-our-governments/government-finances/public-accounts/2019-20/pa-2019-20-crf-supplementary-schedules.pdf",
         "locator": "p. 94 (PDF page 96); \"Consolidated Revenue Fund Statement of Staff Utilization\""
       },
-      "reason": "No unique ministry/body mapping"
+      "output_id": "ministry-of-advanced-education-skills-and-training-2017",
+      "reason": "Reviewed mapping (atlas/staffing-scope-review.json): The printed name is exactly this node's name, and the fiscal year (1 April 2019 to 31 March 2020) ends before the 26 November 2020 change to 'Advanced Education and Skills Training'. The name matcher found two candidates because it ignores the word 'and'."
     },
     {
       "origin": "staffing.json#649",
@@ -14057,7 +14117,7 @@
     },
     {
       "origin": "staffing.json#668",
-      "disposition": "unresolved_unmapped",
+      "disposition": "aggregate_scope",
       "input": {
         "fiscal_year": "2019/20",
         "fiscal_year_ended": "March 31, 2020",
@@ -14071,7 +14131,8 @@
         "source_url": "https://www2.gov.bc.ca/assets/gov/british-columbians-our-governments/government-finances/public-accounts/2019-20/pa-2019-20-crf-supplementary-schedules.pdf",
         "locator": "p. 94 (PDF page 96); \"Consolidated Revenue Fund Statement of Staff Utilization\""
       },
-      "reason": "No unique ministry/body mapping"
+      "scope": "aggregate",
+      "reason": "A residual row for appropriations not shown under a ministry. The statement does not list what it combines, so its FTEs are not attributed to any ministry or body."
     },
     {
       "origin": "staffing.json#669",
@@ -14093,7 +14154,7 @@
     },
     {
       "origin": "staffing.json#670",
-      "disposition": "unresolved_unmapped",
+      "disposition": "aggregate_scope",
       "input": {
         "fiscal_year": "2020/21",
         "fiscal_year_ended": "March 31, 2021",
@@ -14107,7 +14168,8 @@
         "source_url": "https://www2.gov.bc.ca/assets/gov/british-columbians-our-governments/government-finances/public-accounts/2020-21/pa-2020-21-crf-supplementary-schedules.pdf",
         "locator": "p. 106 (PDF page 108); \"Consolidated Revenue Fund Statement of Staff Utilization\""
       },
-      "reason": "No unique ministry/body mapping"
+      "scope": "aggregate",
+      "reason": "A combined, plurally labelled row for the officers of the Legislature. The statement does not list the offices it combines, so its FTEs cannot be attributed to any one office or to the Legislative Assembly row, which the statement prints separately."
     },
     {
       "origin": "staffing.json#671",
@@ -14129,7 +14191,7 @@
     },
     {
       "origin": "staffing.json#672",
-      "disposition": "unresolved_unmapped",
+      "disposition": "accepted",
       "input": {
         "fiscal_year": "2020/21",
         "fiscal_year_ended": "March 31, 2021",
@@ -14143,7 +14205,8 @@
         "source_url": "https://www2.gov.bc.ca/assets/gov/british-columbians-our-governments/government-finances/public-accounts/2020-21/pa-2020-21-crf-supplementary-schedules.pdf",
         "locator": "p. 106 (PDF page 108); \"Consolidated Revenue Fund Statement of Staff Utilization\""
       },
-      "reason": "No unique ministry/body mapping"
+      "output_id": "ministry-of-advanced-education-and-skills-training-2020",
+      "reason": "Reviewed mapping (atlas/staffing-scope-review.json): The printed name is exactly this node's name, the title in use from 26 November 2020 and at the fiscal year end (31 March 2021). The name matcher found two candidates because it ignores the word 'and'."
     },
     {
       "origin": "staffing.json#673",
@@ -14489,7 +14552,7 @@
     },
     {
       "origin": "staffing.json#692",
-      "disposition": "unresolved_unmapped",
+      "disposition": "aggregate_scope",
       "input": {
         "fiscal_year": "2020/21",
         "fiscal_year_ended": "March 31, 2021",
@@ -14503,7 +14566,8 @@
         "source_url": "https://www2.gov.bc.ca/assets/gov/british-columbians-our-governments/government-finances/public-accounts/2020-21/pa-2020-21-crf-supplementary-schedules.pdf",
         "locator": "p. 106 (PDF page 108); \"Consolidated Revenue Fund Statement of Staff Utilization\""
       },
-      "reason": "No unique ministry/body mapping"
+      "scope": "aggregate",
+      "reason": "A residual row for appropriations not shown under a ministry. The statement does not list what it combines, so its FTEs are not attributed to any ministry or body."
     },
     {
       "origin": "staffing.json#693",
@@ -14525,7 +14589,7 @@
     },
     {
       "origin": "staffing.json#694",
-      "disposition": "unresolved_unmapped",
+      "disposition": "aggregate_scope",
       "input": {
         "fiscal_year": "2021/22",
         "fiscal_year_ended": "March 31, 2022",
@@ -14539,7 +14603,8 @@
         "source_url": "https://www2.gov.bc.ca/assets/gov/british-columbians-our-governments/government-finances/public-accounts/2021-22/pa-2021-22-crf-supplementary-schedules.pdf",
         "locator": "p. 93 (PDF page 95); \"Consolidated Revenue Fund Statement of Staff Utilization\""
       },
-      "reason": "No unique ministry/body mapping"
+      "scope": "aggregate",
+      "reason": "A combined, plurally labelled row for the officers of the Legislature. The statement does not list the offices it combines, so its FTEs cannot be attributed to any one office or to the Legislative Assembly row, which the statement prints separately."
     },
     {
       "origin": "staffing.json#695",
@@ -14957,7 +15022,7 @@
     },
     {
       "origin": "staffing.json#718",
-      "disposition": "unresolved_unmapped",
+      "disposition": "aggregate_scope",
       "input": {
         "fiscal_year": "2021/22",
         "fiscal_year_ended": "March 31, 2022",
@@ -14971,7 +15036,8 @@
         "source_url": "https://www2.gov.bc.ca/assets/gov/british-columbians-our-governments/government-finances/public-accounts/2021-22/pa-2021-22-crf-supplementary-schedules.pdf",
         "locator": "p. 93 (PDF page 95); \"Consolidated Revenue Fund Statement of Staff Utilization\""
       },
-      "reason": "No unique ministry/body mapping"
+      "scope": "aggregate",
+      "reason": "A residual row for appropriations not shown under a ministry. The statement does not list what it combines, so its FTEs are not attributed to any ministry or body."
     },
     {
       "origin": "staffing.json#719",
@@ -14993,7 +15059,7 @@
     },
     {
       "origin": "staffing.json#720",
-      "disposition": "unresolved_unmapped",
+      "disposition": "aggregate_scope",
       "input": {
         "fiscal_year": "2022/23",
         "fiscal_year_ended": "March 31, 2023",
@@ -15007,7 +15073,8 @@
         "source_url": "https://www2.gov.bc.ca/assets/gov/british-columbians-our-governments/government-finances/public-accounts/2022-23/pa-2022-23-crf-supplementary-schedules.pdf",
         "locator": "p. 105 (PDF page 107); \"Consolidated Revenue Fund Statement of Staff Utilization\""
       },
-      "reason": "No unique ministry/body mapping"
+      "scope": "aggregate",
+      "reason": "A combined, plurally labelled row for the officers of the Legislature. The statement does not list the offices it combines, so its FTEs cannot be attributed to any one office or to the Legislative Assembly row, which the statement prints separately."
     },
     {
       "origin": "staffing.json#721",
@@ -15461,7 +15528,7 @@
     },
     {
       "origin": "staffing.json#746",
-      "disposition": "unresolved_unmapped",
+      "disposition": "aggregate_scope",
       "input": {
         "fiscal_year": "2022/23",
         "fiscal_year_ended": "March 31, 2023",
@@ -15475,7 +15542,8 @@
         "source_url": "https://www2.gov.bc.ca/assets/gov/british-columbians-our-governments/government-finances/public-accounts/2022-23/pa-2022-23-crf-supplementary-schedules.pdf",
         "locator": "p. 105 (PDF page 107); \"Consolidated Revenue Fund Statement of Staff Utilization\""
       },
-      "reason": "No unique ministry/body mapping"
+      "scope": "aggregate",
+      "reason": "A residual row for appropriations not shown under a ministry. The statement does not list what it combines, so its FTEs are not attributed to any ministry or body."
     },
     {
       "origin": "staffing.json#747",
@@ -15497,7 +15565,7 @@
     },
     {
       "origin": "staffing.json#748",
-      "disposition": "unresolved_unmapped",
+      "disposition": "aggregate_scope",
       "input": {
         "fiscal_year": "2023/24",
         "fiscal_year_ended": "March 31, 2024",
@@ -15511,7 +15579,8 @@
         "source_url": "https://www2.gov.bc.ca/assets/gov/british-columbians-our-governments/government-finances/public-accounts/2023-24/pa-2023-24-crf-supplementary-schedules.pdf",
         "locator": "p. 104 (PDF page 106); \"Consolidated Revenue Fund Statement of Staff Utilization\""
       },
-      "reason": "No unique ministry/body mapping"
+      "scope": "aggregate",
+      "reason": "A combined, plurally labelled row for the officers of the Legislature. The statement does not list the offices it combines, so its FTEs cannot be attributed to any one office or to the Legislative Assembly row, which the statement prints separately."
     },
     {
       "origin": "staffing.json#749",
@@ -15970,7 +16039,7 @@
     },
     {
       "origin": "staffing.json#774",
-      "disposition": "unresolved_unmapped",
+      "disposition": "aggregate_scope",
       "input": {
         "fiscal_year": "2023/24",
         "fiscal_year_ended": "March 31, 2024",
@@ -15984,7 +16053,8 @@
         "source_url": "https://www2.gov.bc.ca/assets/gov/british-columbians-our-governments/government-finances/public-accounts/2023-24/pa-2023-24-crf-supplementary-schedules.pdf",
         "locator": "p. 104 (PDF page 106); \"Consolidated Revenue Fund Statement of Staff Utilization\""
       },
-      "reason": "No unique ministry/body mapping"
+      "scope": "aggregate",
+      "reason": "A residual row for appropriations not shown under a ministry. The statement does not list what it combines, so its FTEs are not attributed to any ministry or body."
     },
     {
       "origin": "staffing.json#775",
@@ -16006,7 +16076,7 @@
     },
     {
       "origin": "staffing.json#776",
-      "disposition": "unresolved_unmapped",
+      "disposition": "aggregate_scope",
       "input": {
         "fiscal_year": "2024/25",
         "fiscal_year_ended": "March 31, 2025",
@@ -16020,7 +16090,8 @@
         "source_url": "https://www2.gov.bc.ca/assets/gov/british-columbians-our-governments/government-finances/public-accounts/2024-25/pa-2024-25-crf-supplementary-schedules.pdf",
         "locator": "p. 112 (PDF page 114); \"Consolidated Revenue Fund Statement of Staff Utilization\""
       },
-      "reason": "No unique ministry/body mapping"
+      "scope": "aggregate",
+      "reason": "A combined, plurally labelled row for the officers of the Legislature. The statement does not list the offices it combines, so its FTEs cannot be attributed to any one office or to the Legislative Assembly row, which the statement prints separately."
     },
     {
       "origin": "staffing.json#777",
@@ -16474,7 +16545,7 @@
     },
     {
       "origin": "staffing.json#802",
-      "disposition": "unresolved_unmapped",
+      "disposition": "aggregate_scope",
       "input": {
         "fiscal_year": "2024/25",
         "fiscal_year_ended": "March 31, 2025",
@@ -16488,7 +16559,8 @@
         "source_url": "https://www2.gov.bc.ca/assets/gov/british-columbians-our-governments/government-finances/public-accounts/2024-25/pa-2024-25-crf-supplementary-schedules.pdf",
         "locator": "p. 112 (PDF page 114); \"Consolidated Revenue Fund Statement of Staff Utilization\""
       },
-      "reason": "No unique ministry/body mapping"
+      "scope": "aggregate",
+      "reason": "A residual row for appropriations not shown under a ministry. The statement does not list what it combines, so its FTEs are not attributed to any ministry or body."
     },
     {
       "origin": "staffing.json#803",
@@ -16510,7 +16582,7 @@
     },
     {
       "origin": "staffing.json#804",
-      "disposition": "unresolved_unmapped",
+      "disposition": "aggregate_scope",
       "input": {
         "fiscal_year": "2025/26",
         "fiscal_year_ended": "March 31, 2026",
@@ -16524,7 +16596,8 @@
         "source_url": "https://www2.gov.bc.ca/assets/gov/british-columbians-our-governments/government-finances/public-accounts/2025-26/pa-2025-26-crf-supplementary-schedules.pdf",
         "locator": "p. 117 (PDF page 119); \"Consolidated Revenue Fund Statement of Staff Utilization\""
       },
-      "reason": "No unique ministry/body mapping"
+      "scope": "aggregate",
+      "reason": "A combined, plurally labelled row for the officers of the Legislature. The statement does not list the offices it combines, so its FTEs cannot be attributed to any one office or to the Legislative Assembly row, which the statement prints separately."
     },
     {
       "origin": "staffing.json#805",
@@ -16978,7 +17051,7 @@
     },
     {
       "origin": "staffing.json#830",
-      "disposition": "unresolved_unmapped",
+      "disposition": "aggregate_scope",
       "input": {
         "fiscal_year": "2025/26",
         "fiscal_year_ended": "March 31, 2026",
@@ -16992,7 +17065,8 @@
         "source_url": "https://www2.gov.bc.ca/assets/gov/british-columbians-our-governments/government-finances/public-accounts/2025-26/pa-2025-26-crf-supplementary-schedules.pdf",
         "locator": "p. 117 (PDF page 119); \"Consolidated Revenue Fund Statement of Staff Utilization\""
       },
-      "reason": "No unique ministry/body mapping"
+      "scope": "aggregate",
+      "reason": "A residual row for appropriations not shown under a ministry. The statement does not list what it combines, so its FTEs are not attributed to any ministry or body."
     },
     {
       "origin": "parliament-43.json",

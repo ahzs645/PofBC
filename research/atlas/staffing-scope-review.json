@@ -1,0 +1,100 @@
+{
+  "schema": "staffing-scope-review/1",
+  "reviewed_on": "2026-11-13",
+  "applies_to": "atlas/staffing.json measures that the name matcher in scripts/build-government-atlas.mjs cannot attribute to exactly one ministry or body",
+  "method": "Each row is matched on fiscal year, basis and the ministry name as printed. A reviewed mapping names an existing ministry node and the dated evidence for it; an aggregate scope is kept as printed and is never attributed to a single node. The build fails if a mapping no longer matches exactly one measure or names a node that does not exist.",
+  "aggregate_scopes": [
+    {
+      "ministry_as_printed": "Officers of the Legislature",
+      "scope": "aggregate",
+      "reason": "A combined, plurally labelled row for the officers of the Legislature. The statement does not list the offices it combines, so its FTEs cannot be attributed to any one office or to the Legislative Assembly row, which the statement prints separately.",
+      "source_basis": "Statement of Staff Utilization rows as printed (see each measure's source_url and locator); staffing.json comparability note on rows that are not ministries"
+    },
+    {
+      "ministry_as_printed": "Other Appropriations",
+      "scope": "aggregate",
+      "reason": "A residual row for appropriations not shown under a ministry. The statement does not list what it combines, so its FTEs are not attributed to any ministry or body.",
+      "source_basis": "Statement of Staff Utilization rows as printed (see each measure's source_url and locator); staffing.json comparability note on rows that are not ministries"
+    }
+  ],
+  "ministry_mappings": [
+    {
+      "fiscal_year": "2015/16",
+      "basis": "actual",
+      "ministry_as_printed": "Ministry of Public Safety and Solicitor General",
+      "output_id": "ministry-of-public-safety-and-solicitor-general-2017",
+      "reason": "The 2015/16 statement prints a Public Safety and Solicitor General row (2,737 FTE) beside the Ministry of Justice row (3,514). OIC 759/2015, approved 11 December 2015, designates Michael Morris as Minister of Public Safety and Solicitor General; the Legislative Library's cabinet list gives his tenure as 2015-12-11 to 2017-07-18 and the repository already attributes that appointment, and the 2016/17 staffing row, to this node. The 2001-2012 node ended with the 2012 merger into Justice and is not used.",
+      "evidence": [
+        {
+          "url": "https://www2.gov.bc.ca/assets/gov/british-columbians-our-governments/government-finances/public-accounts/2015-16/pa-2015-16-crf-supplementary-schedules.pdf",
+          "locator": "p. 98 (PDF page 100), Consolidated Revenue Fund Statement of Staff Utilization",
+          "retrieved_on": "2026-11-13",
+          "sha256": "6c54bb6fa7056c2c79c9a24248a171a1294b6388058cd275aed3b35f417fdeaf",
+          "supports": "Separate 'Ministry of Public Safety and Solicitor General' row, Actual 2,737, beside 'Ministry of Justice' 3,514."
+        },
+        {
+          "url": "https://www.bclaws.gov.bc.ca/civix/document/id/oic/oic_cur/0759_2015",
+          "locator": "OIC 759/2015, para. (a); approved and ordered 11 December 2015",
+          "retrieved_on": "2026-11-13",
+          "sha256": "f1e99394fe054fcc18d2cef4a9f43027de395984d1e0cf6bced77d3b0e266825",
+          "supports": "Michael Morris designated as Minister of Public Safety and Solicitor General on 11 December 2015."
+        },
+        {
+          "url": "https://www.llbc.leg.bc.ca/public/reference/christyclarkcabinet.pdf",
+          "locator": "Alphabetical list (Morris, Michael) and portfolio list (Public Safety and Solicitor General)",
+          "retrieved_on": "2026-11-13",
+          "sha256": "513bbb1c00c31652f0745fb7b3d7e5330ac4116a1f142c39bf83d7b4a6c9f46b",
+          "supports": "Tenure 2015-12-11 to 2017-07-18 under OICs 759/2015, 192/2017 and 212/2017."
+        }
+      ],
+      "limits": "The node's drawn episode in src/government/episodes.js starts in 2017 (date 2017-07-18), although its own office-holder record starts on 2015-12-11. The episode start was not changed in this pass: an OIC designating a minister does not by itself date the ministry's reconstitution, and changing the episode would alter the drawn lineage and generated history."
+    },
+    {
+      "fiscal_year": "2019/20",
+      "basis": "actual",
+      "ministry_as_printed": "Ministry of Advanced Education, Skills and Training",
+      "output_id": "ministry-of-advanced-education-skills-and-training-2017",
+      "reason": "The printed name is exactly this node's name, and the fiscal year (1 April 2019 to 31 March 2020) ends before the 26 November 2020 change to 'Advanced Education and Skills Training'. The name matcher found two candidates because it ignores the word 'and'.",
+      "evidence": [
+        {
+          "url": "https://www2.gov.bc.ca/assets/gov/british-columbians-our-governments/government-finances/public-accounts/2019-20/pa-2019-20-crf-supplementary-schedules.pdf",
+          "locator": "p. 94 (PDF page 96), Consolidated Revenue Fund Statement of Staff Utilization",
+          "retrieved_on": "2026-11-13",
+          "sha256": "4f612342266d7f3acb63aa2ca3e2ad7e0165ab1c63e434d6145fe0823532b719",
+          "supports": "Row 'Ministry of Advanced Education, Skills and Training', Actual 373."
+        },
+        {
+          "url": "https://www.llbc.leg.bc.ca/public/reference/johnhorgancabinet.pdf",
+          "locator": "Portfolio list: Advanced Education, Skills and Training (Mark, 2017-07-18 to 2020-11-26, OICs 212/2017, 594/2020); Advanced Education and Skills Training (Kang, from 2020-11-26, OIC 594/2020)",
+          "retrieved_on": "2026-11-13",
+          "sha256": "f64767792350c6d123689cb69ac7068d334f0359699e3c7eb5e9b3fa73e4186d",
+          "supports": "The portfolio title changed on 26 November 2020."
+        }
+      ]
+    },
+    {
+      "fiscal_year": "2020/21",
+      "basis": "actual",
+      "ministry_as_printed": "Ministry of Advanced Education and Skills Training",
+      "output_id": "ministry-of-advanced-education-and-skills-training-2020",
+      "reason": "The printed name is exactly this node's name, the title in use from 26 November 2020 and at the fiscal year end (31 March 2021). The name matcher found two candidates because it ignores the word 'and'.",
+      "evidence": [
+        {
+          "url": "https://www2.gov.bc.ca/assets/gov/british-columbians-our-governments/government-finances/public-accounts/2020-21/pa-2020-21-crf-supplementary-schedules.pdf",
+          "locator": "p. 106 (PDF page 108), Consolidated Revenue Fund Statement of Staff Utilization",
+          "retrieved_on": "2026-11-13",
+          "sha256": "de8e111cd49a4cfa1ba397c5485749d576f82e51df27499d8fdd90f118daf043",
+          "supports": "Row 'Ministry of Advanced Education and Skills Training', Actual 383."
+        },
+        {
+          "url": "https://www.llbc.leg.bc.ca/public/reference/johnhorgancabinet.pdf",
+          "locator": "Portfolio list: Advanced Education and Skills Training (Kang, 2020-11-26 to 2022-12-07, OICs 594/2020, 657/2022)",
+          "retrieved_on": "2026-11-13",
+          "sha256": "f64767792350c6d123689cb69ac7068d334f0359699e3c7eb5e9b3fa73e4186d",
+          "supports": "The portfolio title in use from 26 November 2020."
+        }
+      ],
+      "limits": "The fiscal year spans the 26 November 2020 title change. The statement prints one figure for the year under the later name; it is not apportioned between the two nodes."
+    }
+  ]
+}
