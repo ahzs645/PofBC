@@ -228,7 +228,7 @@ const auditsRoot = join(research, '..', 'audits')
 const collectionRegisters = existsSync(auditsRoot) ? readdirSync(auditsRoot).sort()
   .filter((name) => existsSync(join(auditsRoot, name, 'collection-priorities.json')))
   .map((name) => ({ path: `research/audits/${name}/collection-priorities.json`, register: readJson(join(auditsRoot, name, 'collection-priorities.json')) })) : []
-const catalog = sourceCatalog(applyCollectionRegisters(existsSync(backlogPath) ? readJson(backlogPath) : {}, collectionRegisters), manifests)
+const catalog = sourceCatalog(applyCollectionRegisters(existsSync(backlogPath) ? readJson(backlogPath) : {}, collectionRegisters, manifests), manifests)
 let legacyRetained = compiledRecovery.rows.filter((row) => (!importedPartitions.has(`${row.slug}|${row.year}`) || retainedCompiledPartitions.has(`${row.slug}|${row.year}`)) && !excluded.has(`${row.slug}|${row.year}`))
 if (retentionReview?.publishedCompiledBaseline) {
   const reference = retentionReview.publishedCompiledBaseline

@@ -1,0 +1,137 @@
+{
+  "version": 1,
+  "rowSchema": [
+    "employerSlug",
+    "name",
+    "position",
+    "remuneration",
+    "expenses",
+    "pdfPage"
+  ],
+  "register": "research/audits/evidence-reconciliation-2026-11-12/collection-priorities.json",
+  "importer": "scripts/import_collection_priorities_2026_11_12.py",
+  "coverageNotes": [
+    "Employee schedules accepted from the 12 November 2026 collection-priorities register. Each original matches the register SHA-256; every row was read by two independent methods and the named rows reconcile exactly to the printed controls."
+  ],
+  "sources": [
+    {
+      "id": "unbc-sofi-2021-22-employees",
+      "registerLead": "unbc-sofi-2021-22-approval-follow-through",
+      "employerSlug": "university-of-northern-bc",
+      "employerName": "University of Northern British Columbia",
+      "sector": "Universities and colleges",
+      "year": "2021/22",
+      "slug": "2021-22",
+      "periodType": "fiscal",
+      "periodStart": "2021-04-01",
+      "periodEnd": "2022-03-31",
+      "title": "UNBC Statement of Financial Information 2021/22: employee remuneration (Board package, 16 September 2022)",
+      "sourceUrl": "https://www.unbc.ca/sites/default/files/sections/governance/20220916boardpublicsessionmeetingpackageminusminutes.pdf",
+      "sourceIndexUrl": "https://www.unbc.ca/university-secretary/board-governors/meeting-dates-agendas-and-minutes",
+      "sha256": "c0bb93513dd08d9cf56d573952fc1216634b98f9868981815294938e51045856",
+      "file": "unbc-2021-22-employees.json.gzip",
+      "dataSha256": "2a19e778eb1dac4306b79c63f68f37e5b80bb05373d14170de86a90d1c056ca7",
+      "normalizedSha256": "0c01c7dc1c9942f440227712699c567a97406fa90de470d5394547b87da08b32",
+      "provenanceFile": "evidence/unbc-2021-22-employees.json.gzip",
+      "provenanceSha256": "81fa86970344c567813404e798a893e77286a77859a2d06899c4d888dafd0a0c",
+      "category": "employee-remuneration",
+      "scope": "employee-remuneration",
+      "scopeDescription": "Named employees with remuneration over $75,000; board schedule and aggregate rows excluded",
+      "threshold": 75000,
+      "thresholdComparison": ">",
+      "currency": "CAD",
+      "amountUnit": "dollars",
+      "amountPrecision": "cents",
+      "nameDisclosure": "published-full-name",
+      "positionDisclosure": "published",
+      "rowCount": 333,
+      "totalRemuneration": 40670870.8,
+      "totalExpenses": 619232.02,
+      "pages": [
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17
+      ],
+      "printedPages": [
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22
+      ],
+      "status": "verified",
+      "sourceKind": "official",
+      "completeEmployeeSchedule": true,
+      "verifiedOn": "2026-11-13",
+      "notes": [
+        "The complete named employee schedule on physical PDF pages 11-17 (printed package pages 16-22 of 120) of the 16 September 2022 Board public-session package is imported with positions and original cents. The Board of Governors schedule (PDF page 10; board members receive no remuneration) and the below-threshold and grand totals are not employee rows.",
+        "Named remuneration sums exactly to the printed $40,670,870.80 and expenses to the printed $619,232.02. All 80 printed 0.00 expense cells are kept as explicit zeros; the schedule prints no dash or blank expense cells.",
+        "Approval: the approved minutes of the 16 September 2022 Board public session record motion 2022BP09.16.03 approving the Financial Information Act report to March 31, 2022 as presented (item 7(i)(a)).",
+        "The source states that total remuneration excludes employer payments for non-taxable benefits, CPP, EI and WCB and payments under severance agreements, and that accrual accounting causes differences from the financial statements."
+      ],
+      "validation": {
+        "sourceFingerprintLocked": true,
+        "originalFingerprintVerified": true,
+        "registerFingerprint": "c0bb93513dd08d9cf56d573952fc1216634b98f9868981815294938e51045856",
+        "completeEmployeeSchedule": true,
+        "independentReaders": [
+          "Poppler pdftotext -layout lines",
+          "pdfplumber glyph-box word geometry"
+        ],
+        "independentMethod": "pdftotext -layout rows compared field-for-field (page, name, position, literal remuneration and expense cells) with pdfplumber glyph-geometry columns; exact agreement required",
+        "rowsIndependentlyChecked": 333,
+        "allFieldsOrderAndMultiplicityAgree": true,
+        "rowCountsByPdfPage": {
+          "11": 51,
+          "12": 51,
+          "13": 51,
+          "14": 51,
+          "15": 51,
+          "16": 51,
+          "17": 27
+        },
+        "printedControlTotals": [
+          "40670870.80",
+          "619232.02"
+        ],
+        "computedComponentTotals": [
+          "40670870.80",
+          "619232.02"
+        ],
+        "controlResiduals": [
+          "0.00",
+          "0.00"
+        ],
+        "summaryReconciles": true,
+        "zeroExpenseRows": 80,
+        "dashExpenseRows": 0,
+        "blankExpenseRows": 0,
+        "nullExpenseRows": 0,
+        "negativeExpenseRows": 0,
+        "expenseCellConvention": "Printed dash and blank expense cells are null in the normalized rows; the evidence file keeps which was printed. Printed 0.00 stays 0.",
+        "reportingPeriodBasis": "Every schedule page is headed \"FOR THE YEAR ENDED MARCH 31, 2022\"; the approved Board motion covers the Financial Information Act report to March 31, 2022.",
+        "approvalEvidence": {
+          "status": "verified-carried-board-motion",
+          "date": "2022-09-16",
+          "source_url": "https://www.unbc.ca/sites/default/files/sections/governance/20220916boardpublicsessionminutes-approved.pdf",
+          "locator": "PDF/printed page 2, item 7(i)(a), motion 2022BP09.16.03",
+          "supports": "The approved minutes record that the Board approved the Financial Information Act report to March 31, 2022 as presented; the motion carried."
+        },
+        "excludedAggregates": {
+          "belowThresholdRemuneration": 30112798.91,
+          "belowThresholdExpenses": 547360.71,
+          "grandTotalRemuneration": 70783669.71,
+          "grandTotalExpenses": 1166592.73,
+          "boardSchedulePdfPage": 10
+        },
+        "visualReview": "Rendered PDF page 17 and compared the final rows and all three printed control lines; no row values were changed."
+      }
+    }
+  ]
+}

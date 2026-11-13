@@ -14,6 +14,13 @@
     "accepted_employee_rows_added": 0,
     "accepted_source_manifests_added": 0
   },
+  "acceptance_follow_through": {
+    "reviewed_on": "2026-11-13",
+    "note": "The outcome above records the 12 November discovery pass. Leads accepted since then name their accepted manifest sources; the salary build checks each claim (employer, period, document URL, SHA-256 and row count) against those manifests, and the accepted manifest supersedes the lead in the source catalog. Earlier lead states are kept in each lead's acceptance_history.",
+    "accepted_leads": ["unbc-sofi-2021-22-approval-follow-through"],
+    "accepted_employee_rows_added": 333,
+    "accepted_source_manifests_added": 1
+  },
   "acceptance_boundary": "This queue supplements the existing inventory. The salary build reads each lead as the current state of its source (retrieved, approval verified or held), superseding the pinned backlog entry it names and keeping that entry's earlier blocker as dated history; it does not change accepted sources, accepted rows or salary coverage counts. Full row extraction, independent checking and reconciliation remain required for every lead. Downloaded PDFs are working copies, not committed repository artifacts.",
   "shared_acceptance_criteria": [
     "Retain the official original and its SHA-256, reporting-period header, employee schedule pages, and final approval evidence in the source manifest.",
@@ -31,8 +38,14 @@
       "reporting_period": "2021/22",
       "period_end": "2022-03-31",
       "source_status": "located-original-retrieved-approval-verified",
-      "acceptance_status": "awaiting-complete-extraction-and-validation",
-      "accepted_employee_rows": 0,
+      "acceptance_status": "accepted-via-source-manifest",
+      "accepted_employee_rows": 333,
+      "accepted_source_ids": ["unbc-sofi-2021-22-employees"],
+      "accepted_manifest": "research/salaries/collection-priorities-2026-11-12/sources.json",
+      "accepted_on": "2026-11-13",
+      "acceptance_history": [
+        { "reviewed_on": "2026-11-12", "acceptance_status": "awaiting-complete-extraction-and-validation", "accepted_employee_rows": 0 }
+      ],
       "source_url": "https://www.unbc.ca/sites/default/files/sections/governance/20220916boardpublicsessionmeetingpackageminusminutes.pdf",
       "official_index_url": "https://www.unbc.ca/university-secretary/board-governors/meeting-dates-agendas-and-minutes",
       "binary": {

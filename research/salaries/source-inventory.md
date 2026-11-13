@@ -8,14 +8,14 @@ Generated from accepted source manifests and the source backlog by `npm run buil
 | employee-schedule-not-yet-located | 1 |
 | held-for-review | 126 |
 | held-unparsed | 23 |
-| imported | 1515 |
+| imported | 1516 |
 | official-archive-found-awaiting-document-selection | 1 |
 | official-archive-found-awaiting-extraction | 1 |
 | official-source-indexed-awaiting-validation | 2 |
 | partially-imported | 1 |
 | requires-ocr | 17 |
 | scope-review-required | 4 |
-| source-found-awaiting-extraction | 41 |
+| source-found-awaiting-extraction | 40 |
 
 | Employer | Period | Status | Accepted rows | Source | Next action |
 |---|---|---|---:|---|---|
@@ -1550,7 +1550,7 @@ Generated from accepted source manifests and the source backlog by `npm run buil
 | Translink | 2025 | imported | 906 | [South Coast British Columbia Transportation Authority 2025: individual employee remuneration and expenses](https://www.translink.ca/-/media/translink/documents/about-translink/corporate-reports/translink_employee_remuneration/2025-financial-information-act-filing-and-remuneration-report.pdf) | Accepted normalized records are included in the build; see the source manifest for validation and reporting scope. |
 | University of British Columbia (UBC) | 2025/26 | imported | 9,633 | [university-of-bc Statement of Financial Information 2025/26: employee remuneration and expenses](https://vpfo-finance-2024.sites.olt.ubc.ca/files/2026/10/FY26-UBC-Statement-of-Financial-Information.pdf) | Accepted normalized records are included in the build; see the source manifest for validation and reporting scope. |
 | University of Northern British Columbia | 2017/18 | official-source-indexed-awaiting-validation | — | [UNBC board package containing SOFI 2017/18](https://www.unbc.ca/sites/default/files/sections/governance/20180914boardpublicsessionmeetingpackagenominutes.pdf) | Verify the SOFI report period, complete employee table and final approval. Extract and reconcile only the employee schedule; board agenda proposals alone are not final disclosures. |
-| University of Northern British Columbia | 2021/22 | source-found-awaiting-extraction | — | [UNBC board package containing SOFI 2021/22](https://www.unbc.ca/sites/default/files/sections/governance/20220916boardpublicsessionmeetingpackageminusminutes.pdf) | Extract PDF pages 11–17, validate every employee cell including explicit 0.00 expenses, and reconcile both named controls. Preserve the report's exclusions and accounting-basis note. |
+| University of Northern British Columbia | 2021/22 | imported | 333 | [UNBC Statement of Financial Information 2021/22: employee remuneration (Board package, 16 September 2022)](https://www.unbc.ca/sites/default/files/sections/governance/20220916boardpublicsessionmeetingpackageminusminutes.pdf) | Accepted normalized records are included in the build; see the source manifest for validation and reporting scope. |
 | University of Northern British Columbia | 2024/25 | imported | 457 | [UNBC Statement of Financial Information 2024/25: employee remuneration](https://www.unbc.ca/sites/default/files/sections/finance/unbc-sofi-2025-final-submission-be-uploaded-website.pdf) | Accepted normalized records are included in the build; see the source manifest for validation and reporting scope. |
 | University of Northern British Columbia | 2025/26 | official-source-indexed-awaiting-validation | — | [UNBC board package containing SOFI 2025/26](https://www.unbc.ca/sites/default/files/sections/university-secretary/board-governors/2026-09-18-board-public-package-minus-minutescompressed_1.pdf) | Locate a signed final SOFI or approved September 18 minutes, compare the approved version to this fingerprint, then extract and reconcile pages 37–45. Preserve the cash-payment basis and position-as-at-date notes on page 45. |
 | University of the Fraser Valley | 2019/20 | imported | 446 | [University of the Fraser Valley Statement of Financial Information 2019/20: employee remuneration and expenses](https://www.ufv.ca/media/assets/finance/Statement-of-Financial-Information-Year-Ended-March-2020.pdf) | Accepted normalized records are included in the build; see the source manifest for validation and reporting scope. |
