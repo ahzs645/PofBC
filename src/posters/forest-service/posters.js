@@ -172,13 +172,13 @@ export const DONT_GAMBLE = {
   variations: {
     label: 'Colour',
     options: [
-      { id: 'printed', label: 'Printed blue', note: 'As photographed: deep blue, #01375D.' },
+      { id: 'green', label: 'Forest green', note: 'The badge’s colour, as drawn: #003E2D.' },
       {
-        id: 'series-green',
-        label: 'Series green',
-        note: 'An adaptation by this site, not a recorded printing: the blue set in DON’T DROP IT!’s green, #003E2D.',
-        changed: 'in the site’s green adaptation',
-        swap: [['#01375D', '#003E2D']]
+        id: 'as-photographed',
+        label: 'As photographed',
+        note: 'The blue of the supplied photograph, #01375D: the camera’s colour or sun fading, not a printing of the badge.',
+        changed: 'in the photograph’s blue cast',
+        swap: [['#003E2D', '#01375D']]
       }
     ]
   },
@@ -201,10 +201,10 @@ export const DONT_GAMBLE = {
             ['Drawing', '1233 × 1233 units; 43 paths, 10 circles, 12 ellipses']
           ] },
           { palette: [
-            { name: 'Deep blue', value: '#01375D' },
+            { name: 'Forest green', value: '#003E2D' },
             { name: 'Warm cream', value: '#F1D8AC' }
           ] },
-          { note: 'Shown in its printed blue. The photographed badge is a deep blue, and so is the drawing. “Series green” below is this site’s adaptation, setting the blue in DON’T DROP IT!’s forest green; no source shows the badge printed that way, or establishes that the two were issued as a pair.' },
+          { note: 'Drawn in forest green, the green of DON’T DROP IT!. The one supplied photograph shows the badge a deep blue (#01375D); that is the photograph, not the badge: a colour cast from the camera, or a print faded by the sun. “As photographed” below shows that blue for comparison only.' },
           'Where DON’T DROP IT! names the act, this badge makes carelessness a bet: the dice are already in the air.'
         ]
       }

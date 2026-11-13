@@ -191,7 +191,7 @@ const BY_POSTER = {
   ],
   'dont-drop-it': [
     { ...SERVICE_COLLECTION, label: 'B. C. Forest Service' },
-    firePiece('dont-gamble-with-fire', 'Posters · the other fire-prevention badge. The two were photographed in different colours; nothing establishes that they were issued as a pair.'),
+    firePiece('dont-gamble-with-fire', 'Posters · the other fire-prevention badge, in the same green. No record says whether the two were issued as a pair.'),
     firePiece('reward-living-forest', 'Posters · the same care asked for as a bargain: observe the campfire regulations'),
     FIRE_CONTROL_PATCH,
     PREVENTION_BADGE,
@@ -199,7 +199,7 @@ const BY_POSTER = {
   ],
   'dont-gamble-with-fire': [
     { ...SERVICE_COLLECTION, label: 'B. C. Forest Service' },
-    firePiece('dont-drop-it', 'Posters · the other fire-prevention badge, printed green where this one is blue'),
+    firePiece('dont-drop-it', 'Posters · the other fire-prevention badge, in the same green'),
     firePiece('reward-living-forest', 'Posters · the same care asked for as a bargain: observe the campfire regulations'),
     FIRE_CONTROL_PATCH,
     PREVENTION_BADGE,

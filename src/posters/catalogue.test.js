@@ -220,18 +220,17 @@ test('a highlight is a masked copy of a photograph in its own drawing', () => {
   }
 })
 
-test('the gamble badge is drawn in its printed blue, and its green is a named variation', () => {
+test('the two fire-prevention badges share one green; the photograph’s blue is only a comparison', () => {
   const fills = (svg) => new Set([...svg.matchAll(/(?:fill|stroke)="(#[0-9a-f]{6})"/gi)].map((m) => m[1].toUpperCase()))
   const drop = fills(DRAWINGS['dont-drop-it'])
   const gamble = fills(DRAWINGS['dont-gamble-with-fire'])
-  assert.ok(gamble.has('#01375D'), 'the gamble badge is not in the blue it was photographed in')
-  assert.ok(!gamble.has('#003E2D'), 'the gamble badge is drawn in the other badge’s green')
+  assert.ok(drop.has('#003E2D') && gamble.has('#003E2D'))
+  assert.ok(!gamble.has('#01375D'), 'the gamble badge paints the photograph’s blue')
   const { options } = FOREST_SERVICE_POSTERS['dont-gamble-with-fire'].variations
   assert.ok(!options[0].swap, 'the first variation is the drawing as it is')
-  const green = options.find(({ id }) => id === 'series-green')
-  assert.deepEqual(green.swap, [['#01375D', '#003E2D']])
-  assert.ok(drop.has(green.swap[0][1]), 'the adaptation is not DON’T DROP IT!’s green')
-  assert.match(green.note, /adaptation/, 'the green is not labelled as the site’s own')
+  const blue = options.find(({ id }) => id === 'as-photographed')
+  assert.deepEqual(blue.swap, [['#003E2D', '#01375D']])
+  assert.match(blue.note, /not a printing/, 'the blue is not labelled as the photograph’s')
 })
 
 test('every piece is worded for what it is made of, and its exports follow', () => {

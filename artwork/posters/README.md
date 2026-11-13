@@ -17,13 +17,14 @@ palettes and validation records are here.
 | `wildlife-trees/` | Wildlife Trees — Ministry of Forests, Forest Practices Branch | `src/posters/wildlife-trees/wildlife-trees.svg`, a **lighter copy** (below) |
 | `noxious-weeds/` | Beware These Alien Invaders, Shattering the Environment, Explosion in Slow Motion — the Noxious Weeds campaign | `src/posters/noxious-weeds/`, **rebuilt from the PDFs** by `noxious-weeds/build.py` (below) |
 
-**The gamble badge is shown in its printed blue.** The supplied badge, like the photograph it was
-rebuilt from, is deep blue (`#01375D`), and so is the site's copy. The Posters view also offers a
-“Series green” variation, which sets every use of that blue — the field, the pips, the dice outlines
-and the knockout stroke on “with” — in DON’T DROP IT!’s forest green (`#003E2D`). That is this site's
-adaptation, labelled as one wherever it is shown and in the exported file's name; no source shows the
-badge printed green, or establishes that the two badges were issued as a pair. The swap is made on
-the stage (`src/posters/stage/useColourSwap.js`), not in the drawing.
+**The gamble badge is green on the site.** The one supplied photograph shows it deep blue
+(`#01375D`), and the master here was drawn to that photograph. The blue is the photograph's, not the
+badge's — a colour cast from the camera, or sun fading — so the site sets every use of it (the field,
+the pips, the dice outlines and the knockout stroke on “with”) in DON’T DROP IT!’s forest green
+(`#003E2D`). The cream (`#F1D8AC`) is the badge’s own. The Posters view offers an “As photographed”
+comparison that shows the blue, labelled as the photograph's colour and not a printing; the swap is
+made on the stage (`src/posters/stage/useColourSwap.js`). To regenerate the green master, change
+`BLUE` in `dont-gamble-with-fire/source/rebuild_badge.py` or replace the colour in the SVG.
 
 **The Queen of Sidney decal's layers are renamed on the site.** The master names its ten layers with
 a leading number (`02-flag-and-pole`), which a CSS selector cannot name, and the Posters view finds a
