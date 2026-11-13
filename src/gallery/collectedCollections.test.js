@@ -5,7 +5,8 @@ import { createHash } from 'node:crypto'
 import { COLLECTING } from './collectingData.js'
 import { COLLECTED_BODIES } from './collectedData.js'
 import { COLLECTED_COLLECTIONS, CONTINUATIONS, assetUrl, collectedEntriesOf, nodesOf, parseSpecimenDate, researchLabel } from './collectedCollections.js'
-import { GALLERY_COLLECTIONS, collectionById, collectionOfNode, entriesOf, entriesOfNode } from './collections.js'
+import { GALLERY_COLLECTIONS, collectionById, collectionOfNode, entriesOf, entriesOfNode, findGalleryEntry } from './collections.js'
+import { COLLECTED_PALETTES, paletteFor } from './collectedPalettes.js'
 import { HISTORICAL_BODIES } from '../government/historyData.js'
 
 const root = new URL('../../', import.meta.url)
@@ -137,4 +138,33 @@ test('a link to a folded body’s old collection opens the collection that holds
   for (const collection of GALLERY_COLLECTIONS) assert.equal(new Set(nodesOf(collection)).size, nodesOf(collection).length)
   const nodes = GALLERY_COLLECTIONS.flatMap(nodesOf)
   assert.equal(new Set(nodes).size, nodes.length, 'each body is held by one collection')
+})
+
+test('reviewed colour families share an SVG master and retain old source links', () => {
+  for (const [id, group] of Object.entries(COLLECTED_PALETTES)) {
+    const entry = findGalleryEntry(id)
+    assert.ok(entry, id)
+    assert.equal(entry.asset.id, group.masterId, id)
+    assert.equal(entry.asset.format, 'svg', id)
+    assert.equal(entry.asset.isVector, true, id)
+    for (const source of entry.versions) assert.equal(findGalleryEntry(source.id), entry, source.id)
+    for (const palette of group.palettes) for (const alias of palette.sourceIds ?? []) {
+      assert.equal(findGalleryEntry(alias), entry, alias)
+      assert.equal(paletteFor(group, { sourceId: alias }).id, palette.id, alias)
+    }
+  }
+})
+
+test('palette consolidation keeps different lockups separate', () => {
+  const northern = collectedEntriesOf('northern-health')
+  assert.equal(northern.length, 2, 'tagline palettes share one entry; the no-tagline lockup remains separate')
+  assert.equal(northern.filter((entry) => entry.paletteGroup).length, 1)
+  assert.equal(northern.find((entry) => entry.paletteGroup).versions.length, 3)
+  const knowledge = collectedEntriesOf('knowledge-network')
+  assert.equal(knowledge.length, 1)
+  assert.equal(knowledge[0].id, 'source-knowledge-network-knowledge-network-colour-eps', 'existing public link remains stable')
+  assert.equal(knowledge[0].paletteGroup.palettes.length, 4)
+  assert.ok(knowledge[0].versions.some((source) => source.format === 'eps'), 'print source is retained')
+  const fpcc = collectedEntriesOf('first-peoples-cultural-council')
+  assert.equal(fpcc.length, 2, 'different emblem proportions and lettering are not colour-only variants')
 })

@@ -2163,7 +2163,8 @@ export const COLLECTED_BODIES = [
         "darkBackground": false,
         "preview": "identity-collected/northern-health/northern-health-colour-tagline-svg-preview.png",
         "previewWidth": 1200,
-        "previewHeight": 290
+        "previewHeight": 290,
+        "versionLabel": "Full colour with tagline"
       },
       {
         "id": "source-northern-health-northern-health-colour-svg",
@@ -2213,7 +2214,9 @@ export const COLLECTED_BODIES = [
         "darkBackground": false,
         "preview": "identity-collected/northern-health/northern-health-black-tagline-svg-preview.png",
         "previewWidth": 1200,
-        "previewHeight": 290
+        "previewHeight": 290,
+        "versionLabel": "Black with tagline",
+        "variantOf": "source-northern-health-northern-health-colour-tagline-svg"
       },
       {
         "id": "source-northern-health-northern-health-white-tagline-svg",
@@ -2238,7 +2241,9 @@ export const COLLECTED_BODIES = [
         "darkBackground": true,
         "preview": "identity-collected/northern-health/northern-health-white-tagline-svg-preview.png",
         "previewWidth": 1200,
-        "previewHeight": 290
+        "previewHeight": 290,
+        "versionLabel": "White with tagline",
+        "variantOf": "source-northern-health-northern-health-colour-tagline-svg"
       }
     ]
   },
@@ -7360,7 +7365,8 @@ export const COLLECTED_SPECIMENS = [
         "bytes": 5503,
         "darkBackground": false,
         "timelineEra": "strongerbc-2022",
-        "search": "vector-search-2026-10-30"
+        "search": "vector-search-2026-10-30",
+        "versionLabel": "Full colour wordmark"
       },
       {
         "id": "vector-StrongerBC_RGB_rev",
@@ -7385,7 +7391,9 @@ export const COLLECTED_SPECIMENS = [
         "bytes": 5554,
         "darkBackground": true,
         "timelineEra": "strongerbc-2022",
-        "search": "vector-search-2026-10-30"
+        "search": "vector-search-2026-10-30",
+        "versionLabel": "Reversed colour wordmark",
+        "variantOf": "vector-StrongerBC_RGB_pos"
       },
       {
         "id": "vector-StrongerBC_Solid_pos",
@@ -7410,7 +7418,8 @@ export const COLLECTED_SPECIMENS = [
         "bytes": 5502,
         "darkBackground": false,
         "timelineEra": "strongerbc-2022",
-        "search": "vector-search-2026-10-30"
+        "search": "vector-search-2026-10-30",
+        "versionLabel": "Solid wordmark"
       },
       {
         "id": "vector-StrongerBC_Solid_rev",
@@ -7435,7 +7444,9 @@ export const COLLECTED_SPECIMENS = [
         "bytes": 5499,
         "darkBackground": true,
         "timelineEra": "strongerbc-2022",
-        "search": "vector-search-2026-10-30"
+        "search": "vector-search-2026-10-30",
+        "versionLabel": "Reversed solid wordmark",
+        "variantOf": "vector-StrongerBC_Solid_pos"
       }
     ]
   },

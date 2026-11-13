@@ -37,14 +37,15 @@ test('a body can discover dedicated history and shared-shelf artwork without cha
 test('Knowledge Network uses its held SVG colourway while retaining the design download and deep link', () => {
   const id = 'source-knowledge-network-knowledge-network-colour-eps'
   const entry = findGalleryEntry(id)
-  assert.equal(entry.asset.format, 'eps')
+  assert.equal(entry.asset.format, 'svg', 'the gallery uses the shared source SVG')
+  assert.ok(entry.versions.some((source) => source.id === id && source.format === 'eps'), 'original EPS remains a source download')
   for (const theme of ['light', 'dark']) {
     const logos = logosFor('knowledge-network', theme)
     assert.equal(logos.total, 1)
     assert.equal(logos.entries[0].id, id)
     assert.match(logos.entries[0].html, new RegExp(`identity-display/source-knowledge-network-knowledge-network-svg\\.${theme}\\.svg`))
   }
-  assert.equal(entry.asset.format, 'eps', 'thumbnail selection must not mutate gallery downloads')
+  assert.equal(entry.asset.format, 'svg', 'thumbnail selection must not mutate the shared master')
 })
 
 test('the Cancer Foundation keeps its own ownership within the shared visual family', () => {

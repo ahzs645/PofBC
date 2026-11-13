@@ -175,6 +175,10 @@ const SUPERSEDED = {
 // Another colourway of the same design: shown inside the design's entry as a version to switch
 // to, rather than as a separate mark.
 const VARIANT_OF = {
+  'source-northern-health-northern-health-black-tagline-svg': 'source-northern-health-northern-health-colour-tagline-svg',
+  'source-northern-health-northern-health-white-tagline-svg': 'source-northern-health-northern-health-colour-tagline-svg',
+  'vector-StrongerBC_RGB_rev': 'vector-StrongerBC_RGB_pos',
+  'vector-StrongerBC_Solid_rev': 'vector-StrongerBC_Solid_pos',
   'vector-ticorp-2020-reversed-source-vector': 'vector-ticorp-2025-colour-source-vector',
   'vector-infrastructure-bc-2026-reversed-source-vector': 'vector-infrastructure-bc-2026-colour-source-vector',
   'vector-community-living-bc-2014-reversed-source-vector': 'vector-community-living-bc-2023-colour-source-vector',
@@ -201,6 +205,13 @@ const VARIANT_OF = {
 
 // What each version is called inside its design's entry.
 const VERSION_LABELS = {
+  'source-northern-health-northern-health-colour-tagline-svg': 'Full colour with tagline',
+  'source-northern-health-northern-health-black-tagline-svg': 'Black with tagline',
+  'source-northern-health-northern-health-white-tagline-svg': 'White with tagline',
+  'vector-StrongerBC_RGB_pos': 'Full colour wordmark',
+  'vector-StrongerBC_RGB_rev': 'Reversed colour wordmark',
+  'vector-StrongerBC_Solid_pos': 'Solid wordmark',
+  'vector-StrongerBC_Solid_rev': 'Reversed solid wordmark',
   'vector-ticorp-2025-colour-source-vector': 'Full colour',
   'vector-ticorp-2020-reversed-source-vector': 'White',
   'vector-infrastructure-bc-2026-colour-source-vector': 'Full colour',

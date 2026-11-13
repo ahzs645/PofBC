@@ -3,6 +3,7 @@
 import { COLLECTED_BODIES, COLLECTED_SPECIMENS } from './collectedData.js'
 import { COLLECTED_DISPLAY } from './collectedDisplay.js'
 import { RAILWAY_HISTORY } from './railwayHistoryData.js'
+import { COLLECTED_PALETTES } from './collectedPalettes.js'
 
 /**
  * The file a body's card shows: one with a display copy that keeps its own colours on the light
@@ -79,6 +80,16 @@ const designsOf = (assets) => assets.filter((asset) => !asset.variantOf).map((as
   // Undated designs keep their place after the dated ones.
   .sort((a, b) => (Number.isFinite(a.year) ? a.year : 9999) - (Number.isFinite(b.year) ? b.year : 9999) || a.order - b.order)
 
+const paletteMaster = (asset, versions) => {
+  const group = COLLECTED_PALETTES[asset.id]
+  if (!group) return asset
+  const master = versions.find((version) => version.id === group.masterId)
+  if (!master?.isVector || master.format !== 'svg') {
+    throw new Error(`Palette group ${asset.id} has no source SVG: ${group.masterId}`)
+  }
+  return master
+}
+
 /**
  * A collected file as a gallery entry; `timeline` places a program's specimen on its timeline, and
  * `owner` is the body it was collected for, kept when its collection holds a body's successors too.
@@ -88,14 +99,17 @@ const collectedEntry = (asset, timeline, owner, versions = [asset]) => ({
   kind: 'collected',
   ...(timeline ? { timeline } : {}),
   ...(owner ? { owner } : {}),
-  label: versions.length > 1 ? asset.publisher : asset.label,
+  label: COLLECTED_PALETTES[asset.id]?.label ?? (versions.length > 1 ? asset.publisher : asset.label),
   // A card says what the mark is in a sentence; its full account, versions and sources are on its page.
   note: firstSentence(asset.notes),
   // A publication reproducing historical artwork is dated as such, beside the use it records.
   years: asset.sourceReproduction && asset.historicalDateLabel && parseSpecimenDate(asset.specimenDate ?? asset.sourceDate)
     ? `${asset.historicalDateLabel} · reproduced ${parseSpecimenDate(asset.specimenDate ?? asset.sourceDate).label}`
     : seenDates(versions) ? `Seen ${seenDates(versions)}` : 'Logo dates unestablished',
-  asset,
+  // A design can retain an EPS source ID while using its original SVG for the web viewer.
+  // Palette choices share this geometry; the other source files remain available as evidence.
+  asset: paletteMaster(asset, versions),
+  ...(COLLECTED_PALETTES[asset.id] ? { paletteGroup: COLLECTED_PALETTES[asset.id] } : {}),
   ...(versions.length > 1 ? { versions } : {}),
   identity: {
     provenance: asset.reconstruction ? 'third_party_reconstruction' : asset.supplied ? 'original_supplied' : asset.isVector ? 'published_vector' : 'published_raster',
