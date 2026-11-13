@@ -1,0 +1,709 @@
+{
+  "version": 1,
+  "manifestSha256": "2ead801b0b04b9733eed6921feaaaa07745b6f54b0bce67c06241c8ab52365d9",
+  "templateCatalogueSha256": "47df28bb0bced7f30fc828a4e77f26a3b53133ea04537534f607ae9483f3bf30",
+  "counts": {
+    "designs": 168,
+    "cards": 140,
+    "organizations": 22,
+    "byCollection": {
+      "patches": {
+        "designs": 154,
+        "cards": 126,
+        "organizations": 21
+      },
+      "badges": {
+        "designs": 14,
+        "cards": 14,
+        "organizations": 3
+      }
+    },
+    "variantGroups": 9,
+    "variantMembers": 37,
+    "excluded": 108,
+    "mergedAliases": 5,
+    "absorbedAliases": 27,
+    "templateFamilies": 26,
+    "templateMembers": 98,
+    "unclassifiedDesigns": 70
+  },
+  "artwork": {
+    "reconstructedBytes": 28903909,
+    "storedBytes": 8333874,
+    "bytesSavedBySharing": 20570035,
+    "percentSavedBySharing": 71.17,
+    "storedDesignFiles": {
+      "files": 168,
+      "bytes": 1950183
+    },
+    "shared": {
+      "blocks": 61,
+      "bundles": 15,
+      "paths": 294,
+      "bytes": 6383691,
+      "largest": [
+        {
+          "path": "shared/supplied-cos-native-artwork-bd2030f373.svg",
+          "bytes": 4829306
+        },
+        {
+          "path": "shared/paths-73e0faed1f.json",
+          "bytes": 329385
+        },
+        {
+          "path": "shared/paths-93ff36b976.json",
+          "bytes": 291245
+        },
+        {
+          "path": "shared/parks-scenic-arch-centre-art-e511bf1568.svg",
+          "bytes": 144773
+        },
+        {
+          "path": "shared/parks-scenic-arch-centre-art-a3d89d67e6.svg",
+          "bytes": 75106
+        },
+        {
+          "path": "shared/parks-scenic-arch-centre-art-d4ca2aacb9.svg",
+          "bytes": 69555
+        },
+        {
+          "path": "shared/uploaded-bc-modern-arms-da5d14bfd0.svg",
+          "bytes": 58136
+        },
+        {
+          "path": "shared/uploaded-bc-modern-arms-8491a6243c.svg",
+          "bytes": 57464
+        },
+        {
+          "path": "shared/paths-a88adfc261.json",
+          "bytes": 46715
+        },
+        {
+          "path": "shared/parks-scenic-arch-centre-art-df1e1c1c1f.svg",
+          "bytes": 41401
+        }
+      ]
+    }
+  },
+  "previews": {
+    "files": 168,
+    "bytes": 4175688,
+    "uniqueContentCount": 165,
+    "uniqueContentBytes": 4088394,
+    "duplicateBytes": 87294,
+    "duplicates": [
+      {
+        "sha256": "3736c773aea969b565be366b2dc7379fd37c48863376a77127e4d363ce231a75",
+        "bytes": 30162,
+        "paths": [
+          "highways-and-motor-vehicles/previews/S56-O14.webp",
+          "highways-and-motor-vehicles/previews/S56-O16.webp"
+        ]
+      },
+      {
+        "sha256": "8c595abf84f94c71e99681f9745b4198eecb1347b7ed5eb6dad9ebea30f00bda",
+        "bytes": 29432,
+        "paths": [
+          "bc-corrections/previews/S56-O30.webp",
+          "ministry-of-attorney-general/previews/S56-O09.webp"
+        ]
+      },
+      {
+        "sha256": "80c3ef08bf45b91241c53fddcf6bb72bf1e0b05f39f4a5bbae4819a945fd35bb",
+        "bytes": 27700,
+        "paths": [
+          "bc-corrections/previews/S56-O27.webp",
+          "ministry-of-attorney-general/previews/S56-O10.webp"
+        ]
+      }
+    ]
+  },
+  "retainedSourcePackages": {
+    "files": 241,
+    "bytes": 10752381
+  },
+  "metadata": {
+    "files": 4,
+    "bytes": 359062
+  },
+  "allLibraryFiles": {
+    "files": 657,
+    "bytes": 23621005
+  },
+  "variants": [
+    {
+      "id": "parks-scenic-arch",
+      "label": "British Columbia / Parks — scenic arch",
+      "members": [
+        {
+          "id": "S30-O04",
+          "name": "Parks"
+        },
+        {
+          "id": "S27-O04",
+          "name": "Parks · Ranger"
+        }
+      ]
+    },
+    {
+      "id": "forest-shoulder-emblem",
+      "label": "Forest / Service — British Columbia shoulder emblem",
+      "members": [
+        {
+          "id": "S44-O01",
+          "name": "Shoulder photograph"
+        },
+        {
+          "id": "S56-O52",
+          "name": "Collector board"
+        }
+      ]
+    },
+    {
+      "id": "conservation-officer-lower-rocker",
+      "label": "Conservation Officer — separate lower rocker",
+      "members": [
+        {
+          "id": "MC19-O02",
+          "name": "Olive"
+        },
+        {
+          "id": "MC20-O02",
+          "name": "Green and gold"
+        }
+      ]
+    },
+    {
+      "id": "forest-service-oval",
+      "label": "Forest Service / British Columbia — tree oval",
+      "members": [
+        {
+          "id": "FO-forest-service",
+          "name": "Full colour"
+        },
+        {
+          "id": "FO-forest-service-black",
+          "name": "Black & white"
+        },
+        {
+          "id": "FO-forest-service-green",
+          "name": "Forest green"
+        },
+        {
+          "id": "FO-forest-service-reversed",
+          "name": "White on green"
+        },
+        {
+          "id": "FO-forest-service-black-gold",
+          "name": "Black & gold"
+        },
+        {
+          "id": "FO-forest-service-navy-gold",
+          "name": "Navy & gold"
+        },
+        {
+          "id": "FO-wildfire-management",
+          "name": "Wildfire Management"
+        },
+        {
+          "id": "FO-wildfire-management-black",
+          "name": "Wildfire Management · black"
+        },
+        {
+          "id": "FO-fire-control",
+          "name": "Fire Control"
+        },
+        {
+          "id": "FO-airtanker",
+          "name": "Airtanker Operations"
+        }
+      ]
+    },
+    {
+      "id": "forests-oval",
+      "label": "British Columbia / Forests — wildlife oval",
+      "members": [
+        {
+          "id": "FO-forests",
+          "name": "Full colour"
+        },
+        {
+          "id": "FO-forests-black",
+          "name": "Black & white"
+        },
+        {
+          "id": "FO-forests-green",
+          "name": "Forest green"
+        },
+        {
+          "id": "FO-forests-reversed",
+          "name": "White on green"
+        },
+        {
+          "id": "FO-forests-wildfire",
+          "name": "Wildfire Service"
+        }
+      ]
+    },
+    {
+      "id": "long-ministry-oval",
+      "label": "BC / Forests, Lands and Natural Resource Operations — wildlife oval",
+      "members": [
+        {
+          "id": "FO-long-ministry",
+          "name": "Full colour"
+        },
+        {
+          "id": "FO-long-ministry-black",
+          "name": "Black & white"
+        },
+        {
+          "id": "FO-long-ministry-green",
+          "name": "Forest green"
+        },
+        {
+          "id": "FO-long-ministry-reversed",
+          "name": "White on green"
+        },
+        {
+          "id": "FO-long-ministry-wildfire",
+          "name": "Wildfire Service"
+        },
+        {
+          "id": "FO-ministry-of-forests",
+          "name": "Ministry of Forests"
+        }
+      ]
+    },
+    {
+      "id": "forest-service-yellow-sky",
+      "label": "Forest Service / British Columbia — yellow-sky oval",
+      "members": [
+        {
+          "id": "FO-yellow-sky",
+          "name": "Green"
+        },
+        {
+          "id": "FO-yellow-sky-cream",
+          "name": "Cream"
+        },
+        {
+          "id": "FO-yellow-sky-dark",
+          "name": "Dark"
+        }
+      ]
+    },
+    {
+      "id": "forest-service-green-gold",
+      "label": "Forest Service / British Columbia — green and gold oval",
+      "members": [
+        {
+          "id": "FO-green-gold",
+          "name": "Full colour"
+        },
+        {
+          "id": "FO-green-gold-light-band",
+          "name": "Light band"
+        },
+        {
+          "id": "FO-green-gold-black-gold",
+          "name": "Black & gold"
+        },
+        {
+          "id": "FO-green-gold-black",
+          "name": "Black & white"
+        }
+      ]
+    },
+    {
+      "id": "forest-service-parks-oval",
+      "label": "Forest Service / British Columbia / Parks — tree oval",
+      "members": [
+        {
+          "id": "FSP-cream-backing",
+          "name": "Cream backing"
+        },
+        {
+          "id": "FSP-no-backing",
+          "name": "Without backing"
+        },
+        {
+          "id": "FSP-bright-gold",
+          "name": "Bright gold"
+        }
+      ]
+    }
+  ],
+  "templates": [
+    {
+      "id": "forest-service-oval",
+      "label": "Forest Service tree oval",
+      "members": [
+        "FO-forest-service",
+        "FO-forest-service-black",
+        "FO-forest-service-green",
+        "FO-forest-service-reversed",
+        "FO-forest-service-black-gold",
+        "FO-forest-service-navy-gold",
+        "FO-wildfire-management",
+        "FO-wildfire-management-black",
+        "FO-fire-control",
+        "FO-airtanker"
+      ]
+    },
+    {
+      "id": "forests-oval",
+      "label": "Forests wildlife oval",
+      "members": [
+        "FO-forests",
+        "FO-forests-black",
+        "FO-forests-green",
+        "FO-forests-reversed",
+        "FO-forests-wildfire"
+      ]
+    },
+    {
+      "id": "long-ministry-oval",
+      "label": "Long ministry wildlife oval",
+      "members": [
+        "FO-long-ministry",
+        "FO-long-ministry-black",
+        "FO-long-ministry-green",
+        "FO-long-ministry-reversed",
+        "FO-long-ministry-wildfire",
+        "FO-ministry-of-forests"
+      ]
+    },
+    {
+      "id": "forest-service-yellow-sky",
+      "label": "Forest Service yellow-sky oval",
+      "members": [
+        "FO-yellow-sky",
+        "FO-yellow-sky-cream",
+        "FO-yellow-sky-dark"
+      ]
+    },
+    {
+      "id": "forest-service-green-gold",
+      "label": "Forest Service green-and-gold oval",
+      "members": [
+        "FO-green-gold",
+        "FO-green-gold-light-band",
+        "FO-green-gold-black-gold",
+        "FO-green-gold-black"
+      ]
+    },
+    {
+      "id": "forest-service-parks-oval",
+      "label": "Forest Service / Parks tabbed oval",
+      "members": [
+        "FSP-cream-backing",
+        "FSP-no-backing",
+        "FSP-bright-gold"
+      ]
+    },
+    {
+      "id": "forest-shoulder-emblem",
+      "label": "Forest Service shoulder emblem",
+      "members": [
+        "S44-O01",
+        "S56-O52"
+      ]
+    },
+    {
+      "id": "parks-scenic-arch",
+      "label": "BC Parks scenic arch",
+      "members": [
+        "S30-O04",
+        "S27-O04"
+      ]
+    },
+    {
+      "id": "conservation-officer-lower-rocker",
+      "label": "Conservation Officer lower rocker",
+      "members": [
+        "MC19-O02",
+        "MC20-O02"
+      ]
+    },
+    {
+      "id": "provincial-ministry-shield",
+      "label": "Provincial ministry shield",
+      "members": [
+        "S25-O03",
+        "S56-O56",
+        "S25-O05",
+        "S25-O06",
+        "S30-O03",
+        "S56-O41",
+        "S56-O07",
+        "S56-O09",
+        "S56-O10",
+        "S56-O28",
+        "S56-O27",
+        "S56-O30",
+        "S56-O14",
+        "S56-O16",
+        "S56-O18"
+      ]
+    },
+    {
+      "id": "parks-branch-semicircle",
+      "label": "Parks Branch semicircle",
+      "members": [
+        "S29-O01",
+        "S29-O02",
+        "S29-O04"
+      ]
+    },
+    {
+      "id": "parks-branch-title-rocker",
+      "label": "Parks Branch title rocker",
+      "members": [
+        "S25-O02",
+        "S56-O55"
+      ]
+    },
+    {
+      "id": "parks-outdoor-recreation-rocker",
+      "label": "Parks / Outdoor Recreation rocker",
+      "members": [
+        "S25-O04",
+        "S56-O54"
+      ]
+    },
+    {
+      "id": "game-role-cap",
+      "label": "Game Warden / Commissioner / Inspector cap",
+      "members": [
+        "MC05-O01",
+        "MC06-O01",
+        "MC07-O01"
+      ]
+    },
+    {
+      "id": "game-branch-two-line-flash",
+      "label": "Game branch two-line flash",
+      "members": [
+        "MC09-O01",
+        "MC12-O01",
+        "MC14-O01"
+      ]
+    },
+    {
+      "id": "game-division-notched-flash",
+      "label": "Wildlife / Predator division flash",
+      "members": [
+        "MC09-O02",
+        "MC13-O02"
+      ]
+    },
+    {
+      "id": "fish-game-wildlife-shield",
+      "label": "Fish & Game / Fish & Wildlife shield",
+      "members": [
+        "MC16-O01",
+        "MC17-O01",
+        "MC18-O01",
+        "MC19-O01",
+        "MC20-O01",
+        "MC22-O01",
+        "MC23-O01",
+        "S56-O42"
+      ]
+    },
+    {
+      "id": "conservation-compact-shoulder",
+      "label": "Conservation Officer compact shoulder shield",
+      "members": [
+        "MC27-O01",
+        "MC28-O01",
+        "MC29-O01",
+        "MC30-O01"
+      ]
+    },
+    {
+      "id": "conservation-compact-cap",
+      "label": "Conservation Officer compact cap crest",
+      "members": [
+        "MC31-O02",
+        "MC31-O03"
+      ]
+    },
+    {
+      "id": "conservation-service-2004-shoulder",
+      "label": "Conservation Officer Service shoulder",
+      "members": [
+        "MC39-O01",
+        "MC40-O01"
+      ]
+    },
+    {
+      "id": "conservation-centennial-tab",
+      "label": "Conservation centennial tab",
+      "members": [
+        "MC39-O02",
+        "MC40-O02"
+      ]
+    },
+    {
+      "id": "deputy-sheriff-title-rocker",
+      "label": "Deputy Sheriff title rocker",
+      "members": [
+        "S56-O06",
+        "S56-O08"
+      ]
+    },
+    {
+      "id": "corrections-title-rocker",
+      "label": "Corrections title rocker",
+      "members": [
+        "S56-O26",
+        "S56-O29",
+        "S56-O62"
+      ]
+    },
+    {
+      "id": "sheriff-waisted-shield",
+      "label": "Sheriff / Deputy Sheriff waisted shield",
+      "members": [
+        "S56-O02",
+        "S56-O03"
+      ]
+    },
+    {
+      "id": "bcgs-semicircle",
+      "label": "B.C.G.S. semicircle",
+      "members": [
+        "S56-O33",
+        "S56-O34"
+      ]
+    },
+    {
+      "id": "parks-ranger-numbered-metal",
+      "label": "Numbered Park Ranger metal badge",
+      "members": [
+        "S11-O01",
+        "S12-O01",
+        "S17-O01",
+        "S20-O01"
+      ]
+    }
+  ],
+  "repeatedUngroupedAtlasFamilies": [
+    {
+      "family": "ranger-metal-early",
+      "ids": [
+        "S11-O01",
+        "S12-O01",
+        "S17-O01",
+        "S20-O01"
+      ]
+    },
+    {
+      "family": "parks-branch-rocker",
+      "ids": [
+        "S25-O02",
+        "S56-O55"
+      ]
+    },
+    {
+      "family": "parks-lands-housing-shield",
+      "ids": [
+        "S25-O03",
+        "S56-O56"
+      ]
+    },
+    {
+      "family": "parks-outdoor-rocker",
+      "ids": [
+        "S25-O04",
+        "S56-O54"
+      ]
+    },
+    {
+      "family": "bc-co-compact-integrated",
+      "ids": [
+        "MC27-O01",
+        "MC28-O01",
+        "MC29-O01",
+        "MC30-O01"
+      ]
+    },
+    {
+      "family": "bc-co-compact-integrated-1984-v1",
+      "ids": [
+        "MC31-O02",
+        "MC31-O03"
+      ]
+    },
+    {
+      "family": "bc-co-service-2004-shoulder-v1",
+      "ids": [
+        "MC39-O01",
+        "MC40-O01"
+      ]
+    },
+    {
+      "family": "bc-co-centennial-tab-2005-v1",
+      "ids": [
+        "MC39-O02",
+        "MC40-O02"
+      ]
+    },
+    {
+      "family": "moosecop-game-role-cap-v1",
+      "ids": [
+        "MC05-O01",
+        "MC06-O01",
+        "MC07-O01"
+      ]
+    },
+    {
+      "family": "moosecop-early-two-line-flash-v1",
+      "ids": [
+        "MC09-O01",
+        "MC12-O01",
+        "MC14-O01"
+      ]
+    },
+    {
+      "family": "moosecop-division-notch-flash-v1",
+      "ids": [
+        "MC09-O02",
+        "MC13-O02"
+      ]
+    },
+    {
+      "family": "bc-fish-game-wildlife-branch-shield",
+      "ids": [
+        "MC16-O01",
+        "MC17-O01",
+        "MC18-O01",
+        "MC19-O01",
+        "MC20-O01",
+        "MC22-O01",
+        "MC23-O01"
+      ]
+    },
+    {
+      "family": "bc-historical-blazer-crest",
+      "ids": [
+        "MC24-O01",
+        "MC25-O01"
+      ]
+    }
+  ],
+  "checks": {
+    "missingFiles": [],
+    "summaryMismatches": [],
+    "unreferencedGeneratedFiles": []
+  },
+  "notes": [
+    "Artwork counts are logical reconstructed SVG bytes and actual stored file bytes, not compressed HTTP transfer or Git pack size.",
+    "Preview duplicates report identical bytes only; shared appearance does not establish identical historical specimens.",
+    "Source packages retain editable artwork, references and review records; their bytes are not loaded by the library asset globs.",
+    "Eager URL imports register asset addresses. SVG and shared-component bodies are fetched when a drawing opens.",
+    "Run library:verify separately to verify reconstructed SVG hashes. Family matches are review candidates, not proof of one template."
+  ]
+}
