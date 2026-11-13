@@ -204,6 +204,24 @@ def statcan_boundary_lines(fills, clip):
 
 # ---------------------------------------------------------------- registration
 
+# Linear algebra (lstsq, matrix products, the RBF solve, SIMD reductions) differs in its last
+# digits between CPUs: AVX-512 and AVX2 paths in numpy and OpenBLAS round differently. The
+# registration keeps points by distance thresholds and refits on them, so a 1e-13 difference can
+# change which points are kept and, a few iterations later, which LHA a region takes. Every value
+# that feeds such a decision is therefore quantized: coefficients and statistics to 12 significant
+# digits, registered coordinates to the millimetre (the source maps resolve about a kilometre).
+def stable(values, digits=12):
+    values = np.asarray(values, dtype=float)
+    with np.errstate(divide='ignore', invalid='ignore'):
+        scale = np.where(values == 0, 0, np.floor(np.log10(np.abs(np.where(values == 0, 1, values)))))
+    factor = 10.0 ** (digits - 1 - scale)
+    return np.where(values == 0, 0.0, np.round(values * factor) / factor)
+
+
+def millimetres(points):
+    return np.round(np.asarray(points, dtype=float), 3)
+
+
 def terms(xy, order):
     x, y = xy[:, 0], xy[:, 1]
     return np.stack([x ** i * y ** j for i in range(order + 1) for j in range(order + 1 - i)], 1)
@@ -219,9 +237,9 @@ class Registration:
         points = np.asarray(points, dtype=float).reshape(-1, 2)
         if not len(points):
             return points
-        out = terms((points - self.mu) / self.sd, self.order) @ self.coef
+        out = millimetres(terms((points - self.mu) / self.sd, self.order) @ self.coef)
         if self.rbf is not None:
-            out = out + self.rbf(points)
+            out = millimetres(out + millimetres(self.rbf(points)))
         return out
 
     def geometry(self, geometry):
@@ -244,7 +262,7 @@ class Target:
 
 
 def least_squares(source, target, order, mu, sd):
-    return np.linalg.lstsq(terms((source - mu) / sd, order), target, rcond=None)[0]
+    return stable(np.linalg.lstsq(terms((source - mu) / sd, order), target, rcond=None)[0])
 
 
 def icp(points, model, target_points, tree, schedule, max_order):
@@ -265,7 +283,7 @@ INSET_SCHEDULE = [(1, [6000, 4000, 3000, 2000, 1500, 1000, 800, 800]), (2, [800,
 
 
 def fit_unit(unit, points, target_points, tree, initial=None, search=0, rng_seed=0):
-    mu, sd = points.mean(0), points.std()
+    mu, sd = stable(points.mean(0)), float(stable(points.std()))
     if initial is None:
         seeds = np.array(unit['seeds'], dtype=float)
         page, metres = seeds[:, :2], np.array([TO_METRES(lon, lat) for lon, lat in seeds[:, 2:]])
@@ -294,7 +312,7 @@ def fit_unit(unit, points, target_points, tree, initial=None, search=0, rng_seed
         inliers = np.flatnonzero(distance < 2000)
         rng = np.random.default_rng(rng_seed)
         chosen = np.sort(rng.choice(inliers, min(2500, len(inliers)), replace=False))
-        residual = target_points[index[chosen]] - model(points[chosen])
+        residual = millimetres(target_points[index[chosen]] - model(points[chosen]))
         model = Registration(model.order, model.coef, mu, sd,
                              RBFInterpolator(points[chosen], residual, kernel='thin_plate_spline', smoothing=1000, degree=1))
     return model
@@ -311,8 +329,8 @@ def seed_affine(unit):
     seeds = np.array(unit['seeds'], dtype=float)
     page = np.c_[seeds[:, :2], np.ones(len(seeds))]
     metres = np.array([TO_METRES(lon, lat) for lon, lat in seeds[:, 2:]])
-    coef = np.linalg.lstsq(page, metres, rcond=None)[0]
-    return lambda p: np.c_[np.asarray(p), np.ones(len(p))] @ coef
+    coef = stable(np.linalg.lstsq(page, metres, rcond=None)[0])
+    return lambda p: millimetres(np.c_[np.asarray(p), np.ones(len(p))] @ coef)
 
 
 def register_all(settings, sources, target):

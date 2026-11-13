@@ -2655,7 +2655,7 @@ export const HEALTH_BOUNDARIES = {
    "basis": "drawing",
    "confidence": "medium",
    "note": null,
-   "drawingOverlap": 0.7735,
+   "drawingOverlap": 0.7699,
    "areaKm2": 51585,
    "labelPoint": [
     -126.0346,
@@ -2858,9 +2858,9 @@ export const HEALTH_BOUNDARIES = {
     "West Vancouver/Bowen Island"
    ],
    "basis": "drawing",
-   "confidence": "high",
+   "confidence": "medium",
    "note": null,
-   "drawingOverlap": 0.9551,
+   "drawingOverlap": 0.667,
    "areaKm2": 638,
    "labelPoint": [
     -123.0024,
