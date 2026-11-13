@@ -10,7 +10,7 @@ export const RELATIONS = {
   established_by: { label: 'Established by', reverse: 'Established' },
   continued_under: { label: 'Continued under', reverse: 'Continued' },
   reorganized_by: { label: 'Reorganized or renamed by', reverse: 'Reorganized or renamed' },
-  administers: { label: 'Administers', reverse: 'Administered by' },
+  administers: { label: 'Charged with administering', reverse: 'Charged with administering it' },
   ended_by: { label: 'Ended by', reverse: 'Ended' },
   current_legal_basis: { label: 'Legal basis today', reverse: 'The legal basis today of',
     note: 'As the current consolidation cites it: what the body stands on now, not when it began.' },

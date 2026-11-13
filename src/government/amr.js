@@ -26,3 +26,45 @@ export const changesOfAct = (statregId) => AMR_CHANGES.filter((change) => change
 
 /** Whether a boundary (effectiveFrom/effectiveTo) carries a date a reader may be shown as one. */
 export const isDated = (boundary) => Boolean(boundary?.date) && (boundary.basis === 'oic-resume' || boundary.basis === 'oic-checked')
+
+/** An Act's short title, as AMR lists it ("Hospital") or the catalogue names it ("Hospital Act"), for matching. */
+export const actKey = (title) => String(title ?? '').normalize('NFKD').replace(/[̀-ͯ]/g, '')
+  .replace(/[’']/g, '').replace(/\s+Act$/i, '').toLowerCase().replace(/[^a-z0-9]+/g, ' ').trim()
+
+const startOf = (assignment) => assignment.effectiveFrom?.date ?? assignment.effectiveFrom?.between?.[0] ?? assignment.seenIn.first
+/** Whether an assignment is in the latest (current) listing. */
+export const isCurrent = (assignment) => assignment.seenIn.last === 'current'
+
+/**
+ * The Acts a ministry episode was listed as administering, one entry per Act: its runs (one per
+ * minister title or scope) oldest first, whether any run covers only part of the Act, and whether it
+ * is in the current listing.
+ */
+export const actsOfEpisode = (episodeId) => {
+  const byAct = new Map()
+  for (const assignment of assignmentsOfEpisode(episodeId)) {
+    const key = assignment.act.statregId ?? `title:${actKey(assignment.act.title)}`
+    const entry = byAct.get(key) ?? { key, title: assignment.act.title, statregId: assignment.act.statregId ?? null, runs: [] }
+    entry.runs.push(assignment)
+    byAct.set(key, entry)
+  }
+  return [...byAct.values()].map((entry) => {
+    const runs = entry.runs.sort((a, b) => startOf(a).localeCompare(startOf(b)))
+    return { ...entry, runs, partial: runs.some((run) => run.scope === 'partial'), current: runs.some(isCurrent) }
+  }).sort((a, b) => a.title.localeCompare(b.title))
+}
+
+/**
+ * The assignments of the Act with this short title, when exactly one BC Laws document carries it.
+ * A title two Acts share (two Gaming Control Acts) returns `ambiguous` rather than mixing them.
+ */
+export const assignmentsOfActTitle = (title) => {
+  const key = actKey(title)
+  const rows = AMR_ASSIGNMENTS.filter((assignment) => actKey(assignment.act.title) === key)
+  const ids = new Set(rows.map((assignment) => assignment.act.statregId ?? null))
+  if (ids.size > 1) return { ambiguous: true, statregIds: [...ids], assignments: [] }
+  return { ambiguous: false, statregId: [...ids][0] ?? null, assignments: rows.sort((a, b) => startOf(a).localeCompare(startOf(b))) }
+}
+
+/** The BC Laws page of an Act, by its document ID. */
+export const statregUrl = (statregId) => statregId ? `https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/${statregId}` : null

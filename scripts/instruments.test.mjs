@@ -67,3 +67,19 @@ test('B.C. Reg. 293/2001: the five authorities formed by it and the 44 Schedule 
   const northern = ended.filter((relation) => /Northern Health Authority/.test(relation.note))
   assert.equal(northern.length, 13)
 })
+
+test('BC Laws responsibilities join an Act page by short title and a ministry by episode, never by listing period', async () => {
+  const amr = await import('../src/government/amr.js')
+  const teachers = amr.assignmentsOfActTitle('Teachers Act')
+  assert.equal(teachers.ambiguous, false)
+  assert.ok(teachers.assignments.length >= 2)
+  for (const run of teachers.assignments) {
+    // A start is an order's date, two listings it fell between, or "already listed in December 2015".
+    assert.ok(['oic-resume', 'oic-checked', 'bounded', 'before-coverage'].includes(run.effectiveFrom.basis))
+    if (run.effectiveFrom.basis !== 'oic-resume' && run.effectiveFrom.basis !== 'oic-checked') assert.equal(amr.isDated(run.effectiveFrom), false)
+  }
+  const acts = amr.actsOfEpisode('ministry-of-attorney-general-2017')
+  assert.ok(acts.length > 100)
+  assert.equal(new Set(acts.map((act) => act.key)).size, acts.length)
+  assert.equal(amr.actKey('Teachers Act'), amr.actKey('Teachers'))
+})

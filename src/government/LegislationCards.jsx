@@ -6,6 +6,7 @@ import { formatEventDate } from './events.js'
 import { bodiesOfInstrument, instrumentsOfBody, TYPES } from './instruments.js'
 import { FIRST_YEAR, lifeOf, PRESENT_YEAR } from './snapshot.js'
 import { SourceLink } from './AtlasCards.jsx'
+import { AdministeredByCard } from './AmrCards.jsx'
 
 const dateOf = (value) => (value ? formatEventDate({ start: String(value) }) : null)
 const clampYear = (year) => Math.min(PRESENT_YEAR, Math.max(FIRST_YEAR, year))
@@ -21,7 +22,8 @@ const yearFor = (id, from) => {
 const Provisions = ({ provisions }) => (provisions?.length ? <span className="gov-muted"> · {provisions.join(', ')}</span> : null)
 
 /** Each dated event a relationship rests on, or the citation it was read from. */
-const Evidence = ({ relation }) => (relation.evidence ?? [relation]).map((entry, index) => (
+// A relationship from a body's record has its note shown once, above; event evidence keeps each note.
+const Evidence = ({ relation }) => (relation.evidence ?? [{ ...relation, note: null }]).map((entry, index) => (
   <span key={index} className="gov-events__sources">
     {entry.source && <SourceLink source={entry.source} />}
     {(entry.date ?? relation.from) && relation.evidence && <span className="gov-muted"> · {dateOf(entry.date)}</span>}
@@ -80,6 +82,7 @@ export const InstrumentCard = ({ instrument, onGo, onClose }) => {
   const groups = bodiesOfInstrument(instrument)
   const name = (id) => lifeOf(id)?.name ?? id
   return (
+    <>
     <section className="gov-card">
       <p className="gov-muted">{TYPES[instrument.type]}{instrument.citations.length ? ` · ${instrument.citations.join('; ')}` : ''}</p>
       <h2 className="gov-card__heading">{instrument.title}</h2>
@@ -126,5 +129,7 @@ export const InstrumentCard = ({ instrument, onGo, onClose }) => {
       )}
       {!groups.length && !instrument.milestones.length && <p className="gov-muted">No relationship or dated event is recorded for it yet.</p>}
     </section>
+    <AdministeredByCard instrument={instrument} onGo={onGo} />
+    </>
   )
 }
