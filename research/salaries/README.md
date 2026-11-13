@@ -2,6 +2,16 @@
 
 The latest consolidation adds [provincial elected compensation](provincial-elected/README.md), [early provincial deputies and cabinet tables](provincial-early-administration/README.md), [Assembly staff](assembly-staff-recovery/README.md), and [VPD disclosures with explicit overlap controls](vpd-recovery/README.md). [West Vancouver title corrections](west-vancouver-title-recovery/README.md) preserve each original observation and amount. The [current preservation gate](current-preservation-2026-11-06/README.md) verifies original data and receipts; [workforce tables](workforce/README.md) remain a separate aggregate dataset. Earlier release counts below describe their own historical scope.
 
+**Retired check (13 November 2026).** `scripts/check_salary_source_follow_through.py` was the
+release gate for the [2 November follow-through](source-follow-through-2026-11-02/README.md). It
+requires the live registry and source index to equal that release exactly, so every later approved
+collection fails it; CI stopped running it on 5 November. It is kept, unchanged, as the record of
+that release (the current preservation gate imports its functions and pins its bytes), but it is no
+longer a check to run against current data, and the command listed in the 2 November README is
+historical. The [13 November evidence register](../audits/evidence-reconciliation-2026-11-12/collection-priorities.json)
+records today's accepted UNBC 2021/22, SD57 2023/24 and Fort St. James 2024 schedules
+([collection](collection-priorities-2026-11-12/sources.json)).
+
 The [4 November OpenCompensation comparison](opencompensation/README.md) compares
 the saved B.C. employer directory with the published exports and original compilation,
 preserving period uncertainty, source overlap and remuneration/expense distinctions.

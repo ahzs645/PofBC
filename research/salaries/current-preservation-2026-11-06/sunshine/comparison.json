@@ -27,7 +27,7 @@
   "fingerprints": {
     "snapshotSha256": "5955544e5deef4dcc72fcb201137dd943053ef78deeca303026c4a4bc19124f1",
     "aliasesSha256": "f8fbabcea76dfaab15fcfcea12aac2eee5ba2e56203b89d7cb890ec4eec81b4d",
-    "repositoryInputsSha256": "499028b1668c8d7e05e68f745cce157074b4b4e98fbcb7501a9a829330a7e006"
+    "repositoryInputsSha256": "336543bd4986e044de2c894525b116c1051fe2e7987675c06c76e61f9e7807aa"
   },
   "summary": {
     "referenceEmployers": 3,
@@ -41,15 +41,15 @@
     "annualSeriesCompletenessEstablished": false,
     "recordLevelParityChecked": false,
     "repository": {
-      "employers": 280,
-      "rows": 1460511,
-      "namedRows": 1453064,
-      "officialRows": 1232147,
+      "employers": 281,
+      "rows": 1461693,
+      "namedRows": 1454246,
+      "officialRows": 1233329,
       "compiledRows": 228364,
-      "employeeRows": 1198042,
-      "availableEmployerYears": 1279
+      "employeeRows": 1199217,
+      "availableEmployerYears": 1282
     },
-    "repositoryEmployersWithOfficial": 238,
+    "repositoryEmployersWithOfficial": 239,
     "repositoryCompiledOnlyEmployers": 42,
     "repositorySourceTasks": 214,
     "externalReferenceTasks": 3
@@ -3706,6 +3706,29 @@
       ]
     },
     {
+      "slug": "district-of-fort-st-james",
+      "name": "District of Fort St. James",
+      "names": [
+        "District of Fort St. James"
+      ],
+      "sector": "Municipalities",
+      "rows": 20,
+      "namedRows": 20,
+      "officialRows": 20,
+      "compiledRows": 0,
+      "employeeRows": 20,
+      "officialPeriods": [
+        "2024"
+      ],
+      "officialEmployeePeriods": [
+        "2024"
+      ],
+      "compiledEditionLabels": [],
+      "acceptedPeriodCount": 1,
+      "sourceLeadCount": 0,
+      "partialSources": []
+    },
+    {
       "slug": "district-of-highlands",
       "name": "District of Highlands",
       "names": [
@@ -7041,23 +7064,26 @@
         "School District No. 57 (Prince George)"
       ],
       "sector": "School districts",
-      "rows": 848,
-      "namedRows": 848,
-      "officialRows": 848,
+      "rows": 1677,
+      "namedRows": 1677,
+      "officialRows": 1677,
       "compiledRows": 0,
-      "employeeRows": 841,
+      "employeeRows": 1663,
       "officialPeriods": [
+        "2023/24",
         "2024/25"
       ],
       "officialEmployeePeriods": [
+        "2023/24",
         "2024/25"
       ],
       "compiledEditionLabels": [],
-      "acceptedPeriodCount": 1,
-      "sourceLeadCount": 0,
+      "acceptedPeriodCount": 2,
+      "sourceLeadCount": 1,
       "partialSources": [
         "gap-fill-school-native-sd57-2025-employees",
-        "gap-fill-school-native-sd57-2025-trustees"
+        "gap-fill-school-native-sd57-2025-trustees",
+        "sd57-sofi-2023-24-trustees"
       ]
     },
     {
@@ -8414,15 +8440,17 @@
         "University of Northern British Columbia"
       ],
       "sector": "Universities and colleges",
-      "rows": 1416,
-      "namedRows": 1416,
-      "officialRows": 457,
+      "rows": 1749,
+      "namedRows": 1749,
+      "officialRows": 790,
       "compiledRows": 959,
-      "employeeRows": 457,
+      "employeeRows": 790,
       "officialPeriods": [
+        "2021/22",
         "2024/25"
       ],
       "officialEmployeePeriods": [
+        "2021/22",
         "2024/25"
       ],
       "compiledEditionLabels": [
@@ -8430,8 +8458,8 @@
         "2020/21",
         "2023/24"
       ],
-      "acceptedPeriodCount": 1,
-      "sourceLeadCount": 3,
+      "acceptedPeriodCount": 2,
+      "sourceLeadCount": 2,
       "partialSources": []
     },
     {
@@ -9636,30 +9664,30 @@
     },
     {
       "sector": "Municipalities",
-      "employers": 125,
-      "employersWithOfficial": 123,
+      "employers": 126,
+      "employersWithOfficial": 124,
       "compiledOnlyEmployers": 2,
-      "officialRows": 124116,
+      "officialRows": 124136,
       "compiledRows": 28211,
-      "rows": 152327
+      "rows": 152347
     },
     {
       "sector": "School districts",
       "employers": 60,
       "employersWithOfficial": 60,
       "compiledOnlyEmployers": 0,
-      "officialRows": 65098,
+      "officialRows": 65927,
       "compiledRows": 45385,
-      "rows": 110483
+      "rows": 111312
     },
     {
       "sector": "Universities and colleges",
       "employers": 24,
       "employersWithOfficial": 18,
       "compiledOnlyEmployers": 6,
-      "officialRows": 68322,
+      "officialRows": 68655,
       "compiledRows": 44857,
-      "rows": 113179
+      "rows": 113512
     }
   ],
   "queue": [
@@ -12469,6 +12497,23 @@
       "reason": "Earlier audit: Report retrieved, but the reviewed employee layout is absent (scan, font extraction issue or unsupported format); no rows imported. Follow-up: OCR discovery is complete on all 50 physical pages, with 10 two-pass candidate pages retained. Source-specific row, period and control acceptance is still unfinished; no OCR candidate rows are imported."
     },
     {
+      "id": "source-a6e18c6aa987004b",
+      "origin": "repository-source-catalog",
+      "priority": 1,
+      "employerSlug": "school-district-57",
+      "employerName": "School District No. 57 (Prince George)",
+      "referenceEmployer": null,
+      "year": "2022/23",
+      "status": "requires-ocr",
+      "sourceUrl": "https://22.files.edl.io/ecb5/11/15/24/222817-489f5533-61fe-4897-9dbc-86cbb8fb2362.pdf",
+      "sourceId": "sd57-sofi-2022-23",
+      "scope": "employee-remuneration",
+      "repositoryRows": 0,
+      "referenceRecords": null,
+      "nextAction": "OCR or manually extract pages 51–64 with retained page images; independently check every name, position and amount, separate trustees, and reconcile both employee controls before acceptance.",
+      "reason": null
+    },
+    {
       "id": "source-4cfa22bf60ce8446",
       "origin": "repository-source-catalog",
       "priority": 1,
@@ -12520,23 +12565,6 @@
       "reason": null
     },
     {
-      "id": "source-608c836e430f6d15",
-      "origin": "repository-source-catalog",
-      "priority": 1,
-      "employerSlug": "university-of-northern-bc",
-      "employerName": "University of Northern B.C.",
-      "referenceEmployer": null,
-      "year": "2021/22",
-      "status": "official-source-indexed-awaiting-validation",
-      "sourceUrl": "https://www.unbc.ca/sites/default/files/sections/governance/20220916boardpublicsessionmeetingpackageminusminutes.pdf",
-      "sourceId": "unbc-board-sofi-2021-22",
-      "scope": "employee-remuneration",
-      "repositoryRows": 0,
-      "referenceRecords": null,
-      "nextAction": "Verify the SOFI report period, complete employee table and final approval. Extract and reconcile only the employee schedule; board agenda proposals alone are not final disclosures.",
-      "reason": null
-    },
-    {
       "id": "source-198cfc5c6c492807",
       "origin": "repository-source-catalog",
       "priority": 1,
@@ -12546,11 +12574,11 @@
       "year": "2025/26",
       "status": "official-source-indexed-awaiting-validation",
       "sourceUrl": "https://www.unbc.ca/sites/default/files/sections/university-secretary/board-governors/2026-09-18-board-public-package-minus-minutescompressed_1.pdf",
-      "sourceId": "unbc-board-sofi-2025-26",
+      "sourceId": "unbc-sofi-2025-26-approval-hold",
       "scope": "employee-remuneration",
       "repositoryRows": 0,
       "referenceRecords": null,
-      "nextAction": "Verify the SOFI report period, complete employee table and final approval. Extract and reconcile only the employee schedule; board agenda proposals alone are not final disclosures.",
+      "nextAction": "Locate a signed final SOFI or approved September 18 minutes, compare the approved version to this fingerprint, then extract and reconcile pages 37–45. Preserve the cash-payment basis and position-as-at-date notes on page 45.",
       "reason": null
     },
     {
@@ -13356,8 +13384,8 @@
   "inputs": [
     {
       "path": "public/salaries/coverage.json",
-      "bytes": 7709093,
-      "sha256": "d625b4decdbb0e52f5ba0c2dda3a68c8c35ca73a8b0aff0a63baf7873baf1116"
+      "bytes": 7735626,
+      "sha256": "449cb88049b72520beb4aaa1b062442c8463c61e31f471cc425d00c79e887428"
     },
     {
       "path": "public/salaries/employers/abbotsford-police.json.gzip",
@@ -13828,6 +13856,11 @@
       "path": "public/salaries/employers/district-of-elkford.json.gzip",
       "bytes": 838,
       "sha256": "b38f41304c9f7236e8a02b17f1d78e7dd7083b66988c45b827808c1653955828"
+    },
+    {
+      "path": "public/salaries/employers/district-of-fort-st-james.json.gzip",
+      "bytes": 638,
+      "sha256": "c197dfa05f5793d4f1d572223922ebe8b281161534e71ec641ee26af1e22992f"
     },
     {
       "path": "public/salaries/employers/district-of-highlands.json.gzip",
@@ -14336,8 +14369,8 @@
     },
     {
       "path": "public/salaries/employers/school-district-57.json.gzip",
-      "bytes": 16433,
-      "sha256": "29c6380825056eabe20571d5db3d34077fa8d414fe5fcadfe46b1b11951d4720"
+      "bytes": 32246,
+      "sha256": "96cbecddc7b6525855cd1c55274d06a347bea71ea28f7abaa79a3d8277c2188b"
     },
     {
       "path": "public/salaries/employers/school-district-58.json.gzip",
@@ -14576,8 +14609,8 @@
     },
     {
       "path": "public/salaries/employers/university-of-northern-bc.json.gzip",
-      "bytes": 30780,
-      "sha256": "a86fca0f93c10465e56ebd55affb5c6bd0d9367ad13c1f0f2115c92063a3f4aa"
+      "bytes": 36793,
+      "sha256": "835caf8e7bcc024a0d3868b049304615ec09b0c0167333a93331581c426bcdb2"
     },
     {
       "path": "public/salaries/employers/university-of-the-fraser-valley.json.gzip",
@@ -14761,8 +14794,8 @@
     },
     {
       "path": "public/salaries/index.json",
-      "bytes": 11842440,
-      "sha256": "0866d14d10e5a9fa9e4d5bbaaa0e969e45ac6dd92bdcbf7b4d2f5290519393a4"
+      "bytes": 11857841,
+      "sha256": "c33d59e5c587a623f006839efd17b41c47b0462d413d25d452cb7acedaf4a9fd"
     }
   ]
 }

@@ -17,6 +17,8 @@ import { Salaries } from './Salaries.jsx'
 import { StoryText } from './StoryText.jsx'
 import { lifespanOf, ministryAt, officeHoldersTo, pathToPeople, PEOPLE_ID, periodsOf, PRESENT_YEAR } from './snapshot.js'
 import { ElectionStages, EventsCard, EvidenceCard, ParliamentCard, RelationsCard, StaffingCard } from './AtlasCards.jsx'
+import { LegislationCard } from './LegislationCards.jsx'
+import { ActsAdministeredCard } from './AmrCards.jsx'
 import { electionStages, eventsInYear, formatEventDate, typeOf } from './events.js'
 import { PENDING_ELECTION, PREMIERS } from './timelineData.js'
 import { partyColour } from './theme.js'
@@ -665,7 +667,7 @@ const PathToPeople = ({ node, government, onSelect }) => {
   )
 }
 
-export const EntityCard = ({ node, government, theme, onSelect, onJump, onJumpBody, onGo, onOpenInGenerator }) => {
+export const EntityCard = ({ node, government, theme, onSelect, onJump, onJumpBody, onGo, onOpenInGenerator, onOpenInstrument }) => {
   const { year, present, day } = government
   const isBody = !['ministry', 'assembly', 'crown', 'premier', 'people'].includes(node.kind)
   const officeId = node.kind === 'assembly' ? 'speaker' : node.id
@@ -810,7 +812,9 @@ export const EntityCard = ({ node, government, theme, onSelect, onJump, onJumpBo
       {isBody && <LogoCard node={node} theme={theme} />}
       <Salaries key={node.id} node={node} year={year} />
       <EventsCard events={node.events} day={day} />
+      {onOpenInstrument && <LegislationCard node={node} onOpen={onOpenInstrument} />}
       {isMinistry && <MinistryTimeline node={node} year={year} onJump={onJump} />}
+      {isMinistry && <ActsAdministeredCard node={node} onOpenInstrument={onOpenInstrument} />}
       {isBody && onGo && <BodyTimeline node={node} family={family} year={year} onJump={onJump} onJumpBody={onJumpBody} onGo={onGo} />}
       {isMinistry && node.ministers?.length > 0 && (
         <section className="gov-card">

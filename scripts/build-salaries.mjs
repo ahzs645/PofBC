@@ -11,7 +11,7 @@ import { pooledGrowth, stayerRaises, typicalRaise } from '../src/salaries/growth
 import { BODIES, EMPLOYER_ALIASES, bodyOfEmployer, canonicalSlug, employerSector, employerSlug, sectorOf } from './lib/salary-employers.mjs'
 import { governmentSalaryPeriods, salaryIndexModule } from './lib/salary-government.mjs'
 import { periodMean, TOP_PER_PERIOD, topRecords, csvRows, money, median, sha256, yearSlug, reportingPeriodType, applyCompiledReplacements, applyTravelJoinCorrections, applyCompiledRetentionDecisions, preservePublishedCompiledRows, sumMoney, duplicateStats, repeatedCandidates, validateRow, validateReplacementScopes, compiledPartitionsToRetain } from './lib/salary-data.mjs'
-import { sourceCatalog, sourceLeadsFor, hasLocatedSource } from './lib/salary-sources.mjs'
+import { applyCollectionRegisters, sourceCatalog, sourceLeadsFor, hasLocatedSource } from './lib/salary-sources.mjs'
 import { decodedCurrency, isCadPerson, validateRecordAnnotations } from '../src/salaries/recordAnnotations.js'
 import { applyWestVancouverTitleRecovery } from './lib/west-vancouver-title-recovery.mjs'
 import { applyFollowThroughQualifications } from './lib/follow-through-source-qualifications.mjs'
@@ -224,7 +224,11 @@ validateReplacementScopes(baseline, official, sources, reviewed)
 const retainedCompiledPartitions = compiledPartitionsToRetain(official, sources)
 const compiledRecovery = applyCompiledReplacements(baseline, official, sources, manifests.flatMap(({ manifest }) => manifest.compiledReplacements ?? []))
 const backlogPath = join(research, 'source-backlog.json')
-const catalog = sourceCatalog(existsSync(backlogPath) ? readJson(backlogPath) : {}, manifests)
+const auditsRoot = join(research, '..', 'audits')
+const collectionRegisters = existsSync(auditsRoot) ? readdirSync(auditsRoot).sort()
+  .filter((name) => existsSync(join(auditsRoot, name, 'collection-priorities.json')))
+  .map((name) => ({ path: `research/audits/${name}/collection-priorities.json`, register: readJson(join(auditsRoot, name, 'collection-priorities.json')) })) : []
+const catalog = sourceCatalog(applyCollectionRegisters(existsSync(backlogPath) ? readJson(backlogPath) : {}, collectionRegisters, manifests), manifests)
 let legacyRetained = compiledRecovery.rows.filter((row) => (!importedPartitions.has(`${row.slug}|${row.year}`) || retainedCompiledPartitions.has(`${row.slug}|${row.year}`)) && !excluded.has(`${row.slug}|${row.year}`))
 if (retentionReview?.publishedCompiledBaseline) {
   const reference = retentionReview.publishedCompiledBaseline

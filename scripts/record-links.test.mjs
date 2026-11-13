@@ -21,3 +21,14 @@ test('event IDs and legal locators never become organization IDs', () => {
   assert.equal(repeal.legalReferences[0].original_reference, 'A40:s.29')
   assert.ok(!repeal.related?.includes('A40:s.29'))
 })
+
+test('a disputed past event keeps its certainty apart from its temporal status', async () => {
+  const { isConflicting, isAhead } = await import('../src/government/events.js')
+  const disputed = EVENTS.filter((entry) => entry.certainty === 'conflicting')
+  assert.equal(disputed.length, 13)
+  const corrections = EVENTS.find((entry) => entry.id === 'atlas:corr-branch-1950')
+  assert.equal(corrections.status, 'source_reported_past')
+  assert.ok(isConflicting(corrections))
+  assert.ok(!isAhead(corrections, '2026-11-13'))
+  assert.deepEqual(corrections.competingEvents, ['atlas:corr-branch-1951'])
+})

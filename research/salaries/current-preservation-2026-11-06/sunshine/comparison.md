@@ -4,7 +4,7 @@
 
 The supplied snapshot contains **3 employers** and **0 annual observations**. **It is not a complete Sunshine Lists employer inventory.** 3 employer entries contain summary evidence only.
 
-All **1,460,511 published PofBC observations** across **280 employers** were reconciled against the actual employer files: **1,232,147 official-source observations** and **228,364 retained compiled observations**. 238 employers have some official records; 42 have compiled records only.
+All **1,461,693 published PofBC observations** across **281 employers** were reconciled against the actual employer files: **1,233,329 official-source observations** and **228,364 retained compiled observations**. 239 employers have some official records; 42 have compiled records only.
 
 ## Observed reference employers
 
@@ -24,9 +24,9 @@ Reference totals span the source’s own reported years and definitions. The tab
 | Government | 4 | 4 | 0 | 245,881 | 0 |
 | Health authorities | 8 | 8 | 0 | 575,778 | 65,369 |
 | Municipal police | 13 | 2 | 11 | 2,819 | 9,232 |
-| Municipalities | 125 | 123 | 2 | 124,116 | 28,211 |
-| School districts | 60 | 60 | 0 | 65,098 | 45,385 |
-| Universities and colleges | 24 | 18 | 6 | 68,322 | 44,857 |
+| Municipalities | 126 | 124 | 2 | 124,136 | 28,211 |
+| School districts | 60 | 60 | 0 | 65,927 | 45,385 |
+| Universities and colleges | 24 | 18 | 6 | 68,655 | 44,857 |
 
 ## Processing queue
 
@@ -52,5 +52,5 @@ Priority 1 covers missing official employer/period coverage, held partial employ
 - [Work queue](work-queue.csv) is suitable for filtering by employer, period, source status and priority.
 - [Usage and snapshot format](README.md) explains importing a saved snapshot and rerunning the audit.
 
-Repository input fingerprint: `499028b1668c8d7e05e68f745cce157074b4b4e98fbcb7501a9a829330a7e006`.
+Repository input fingerprint: `336543bd4986e044de2c894525b116c1051fe2e7987675c06c76e61f9e7807aa`.
 Reference snapshot fingerprint: `5955544e5deef4dcc72fcb201137dd943053ef78deeca303026c4a4bc19124f1`.

@@ -11,8 +11,8 @@ In any year other than today, a sub-agency is drawn only if it is known to have 
 | Year | Drawn (dated only) | Drawn with "Undated bodies" on |
 |---|---|---|
 | 2026 | 238 | 238 |
-| 2025 | 220 | 237 |
-| 2020 | 163 | 217 |
+| 2025 | 223 | 237 |
+| 2020 | 165 | 217 |
 | 2010 | 92 | 192 |
 | 2000 | 15 | 150 |
 | 1990 | 11 | 82 |

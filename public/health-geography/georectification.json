@@ -111,14 +111,14 @@
       "sourcePoints": 55140,
       "model": "order-3 polynomial + smoothed thin-plate spline",
       "fit": {
-        "medianMetres": 591,
-        "p90Metres": 2249,
+        "medianMetres": 593,
+        "p90Metres": 2252,
         "within1kmShare": 0.679,
-        "within3kmShare": 0.937
+        "within3kmShare": 0.938
       },
       "heldOut": {
         "medianMetres": 676,
-        "p90Metres": 2151,
+        "p90Metres": 2154,
         "within1kmShare": 0.653,
         "within3kmShare": 0.945
       },
@@ -1436,17 +1436,17 @@
       "name": "East Kootenay",
       "framework": "societies",
       "legendNumber": 1,
-      "drawingAreaKm2": 44850,
+      "drawingAreaKm2": 44872,
       "lhaShares": {
         "112": 1.0,
         "113": 0.999,
         "114": 0.992,
         "111": 0.982,
-        "116": 0.981,
+        "116": 0.982,
         "115": 0.978,
-        "121": 0.022,
-        "122": 0.013,
-        "141": 0.013
+        "121": 0.023,
+        "141": 0.014,
+        "122": 0.013
       },
       "snappedLhaCodes": [
         "111",
@@ -1467,9 +1467,9 @@
       "reviewOverride": false,
       "note": null,
       "drawingVsBoundary": {
-        "iou": 0.9778,
-        "sourceCovered": 0.9903,
-        "candidateCovered": 0.9873
+        "iou": 0.9777,
+        "sourceCovered": 0.99,
+        "candidateCovered": 0.9875
       },
       "confidence": "high"
     },
@@ -1478,19 +1478,19 @@
       "name": "Central Kootenay",
       "framework": "societies",
       "legendNumber": 2,
-      "drawingAreaKm2": 28758,
+      "drawingAreaKm2": 28764,
       "lhaShares": {
         "123": 1.0,
         "126": 1.0,
         "125": 0.997,
         "124": 0.991,
-        "127": 0.985,
-        "122": 0.98,
+        "127": 0.986,
+        "122": 0.981,
         "121": 0.97,
         "115": 0.019,
         "141": 0.015,
         "131": 0.013,
-        "136": 0.011
+        "136": 0.012
       },
       "snappedLhaCodes": [
         "121",
@@ -1513,9 +1513,9 @@
       "reviewOverride": false,
       "note": null,
       "drawingVsBoundary": {
-        "iou": 0.9742,
-        "sourceCovered": 0.9885,
-        "candidateCovered": 0.9853
+        "iou": 0.9741,
+        "sourceCovered": 0.9884,
+        "candidateCovered": 0.9854
       },
       "confidence": "high"
     },
@@ -1524,20 +1524,21 @@
       "name": "Coast Garibaldi",
       "framework": "societies",
       "legendNumber": 3,
-      "drawingAreaKm2": 18835,
+      "drawingAreaKm2": 18844,
       "lhaShares": {
         "335": 0.984,
-        "334": 0.955,
-        "333": 0.884,
+        "334": 0.954,
+        "333": 0.883,
         "332": 0.074,
-        "425": 0.052,
-        "331": 0.051,
+        "425": 0.053,
+        "331": 0.053,
         "431": 0.041,
         "432": 0.038,
         "434": 0.027,
-        "147": 0.019,
+        "223": 0.019,
+        "147": 0.018,
         "224": 0.018,
-        "223": 0.017
+        "215": 0.011
       },
       "snappedLhaCodes": [
         "333",
@@ -1552,8 +1553,8 @@
       "reviewOverride": false,
       "note": null,
       "drawingVsBoundary": {
-        "iou": 0.8853,
-        "sourceCovered": 0.9243,
+        "iou": 0.8849,
+        "sourceCovered": 0.9239,
         "candidateCovered": 0.9545
       },
       "confidence": "high"
@@ -1563,18 +1564,18 @@
       "name": "Upper Island/Central Coast",
       "framework": "societies",
       "legendNumber": 4,
-      "drawingAreaKm2": 45729,
+      "drawingAreaKm2": 45762,
       "lhaShares": {
-        "431": 0.933,
+        "431": 0.932,
         "434": 0.876,
-        "432": 0.86,
+        "432": 0.861,
         "433": 0.841,
-        "337": 0.571,
+        "337": 0.572,
         "515": 0.15,
         "336": 0.036,
         "426": 0.018,
         "425": 0.017,
-        "334": 0.015
+        "334": 0.016
       },
       "snappedLhaCodes": [
         "337",
@@ -1593,9 +1594,9 @@
       "reviewOverride": false,
       "note": null,
       "drawingVsBoundary": {
-        "iou": 0.7481,
-        "sourceCovered": 0.9107,
-        "candidateCovered": 0.8073
+        "iou": 0.7484,
+        "sourceCovered": 0.9106,
+        "candidateCovered": 0.8078
       },
       "confidence": "medium"
     },
@@ -1604,7 +1605,7 @@
       "name": "Cariboo",
       "framework": "societies",
       "legendNumber": 5,
-      "drawingAreaKm2": 105761,
+      "drawingAreaKm2": 105750,
       "lhaShares": {
         "146": 0.995,
         "521": 0.994,
@@ -1631,7 +1632,7 @@
       "note": null,
       "drawingVsBoundary": {
         "iou": 0.9418,
-        "sourceCovered": 0.9633,
+        "sourceCovered": 0.9634,
         "candidateCovered": 0.9768
       },
       "confidence": "medium"
@@ -1641,19 +1642,19 @@
       "name": "North West",
       "framework": "societies",
       "legendNumber": 6,
-      "drawingAreaKm2": 239750,
+      "drawingAreaKm2": 239779,
       "lhaShares": {
         "519": 0.999,
         "517": 0.991,
-        "513": 0.989,
+        "513": 0.99,
         "516": 0.988,
         "511": 0.968,
         "514": 0.959,
         "510": 0.879,
-        "512": 0.857,
+        "512": 0.856,
         "515": 0.75,
-        "518": 0.177,
-        "522": 0.013,
+        "518": 0.181,
+        "522": 0.014,
         "337": 0.012
       },
       "snappedLhaCodes": [
@@ -1681,8 +1682,8 @@
       "reviewOverride": false,
       "note": null,
       "drawingVsBoundary": {
-        "iou": 0.9492,
-        "sourceCovered": 0.9889,
+        "iou": 0.9491,
+        "sourceCovered": 0.9888,
         "candidateCovered": 0.9594
       },
       "confidence": "medium"
@@ -1692,11 +1693,11 @@
       "name": "Peace Liard",
       "framework": "societies",
       "legendNumber": 7,
-      "drawingAreaKm2": 186304,
+      "drawingAreaKm2": 186292,
       "lhaShares": {
         "532": 0.998,
-        "533": 0.996,
-        "531": 0.982,
+        "533": 0.995,
+        "531": 0.983,
         "524": 0.022
       },
       "snappedLhaCodes": [
@@ -2105,17 +2106,16 @@
       "name": "Upper Island / Central Coast",
       "framework": "regions-2000",
       "legendNumber": 11,
-      "drawingAreaKm2": 59440,
+      "drawingAreaKm2": 59161,
       "lhaShares": {
         "434": 0.956,
         "433": 0.943,
         "432": 0.933,
-        "431": 0.914,
         "337": 0.914,
+        "431": 0.772,
         "336": 0.29,
         "515": 0.162,
-        "426": 0.052,
-        "425": 0.03,
+        "426": 0.051,
         "334": 0.015
       },
       "snappedLhaCodes": [
@@ -2135,9 +2135,9 @@
       "reviewOverride": false,
       "note": null,
       "drawingVsBoundary": {
-        "iou": 0.7735,
-        "sourceCovered": 0.8146,
-        "candidateCovered": 0.9387
+        "iou": 0.7699,
+        "sourceCovered": 0.8143,
+        "candidateCovered": 0.9339
       },
       "confidence": "medium"
     },
@@ -2361,10 +2361,12 @@
       "name": "North Shore",
       "framework": "regions-2000",
       "legendNumber": 18,
-      "drawingAreaKm2": 623,
+      "drawingAreaKm2": 902,
       "lhaShares": {
         "331": 0.985,
-        "332": 0.93
+        "332": 0.93,
+        "431": 0.142,
+        "425": 0.03
       },
       "snappedLhaCodes": [
         "331",
@@ -2377,11 +2379,11 @@
       "reviewOverride": false,
       "note": null,
       "drawingVsBoundary": {
-        "iou": 0.9551,
-        "sourceCovered": 0.9883,
+        "iou": 0.667,
+        "sourceCovered": 0.683,
         "candidateCovered": 0.966
       },
-      "confidence": "high"
+      "confidence": "medium"
     },
     {
       "id": "statistical-region-19",

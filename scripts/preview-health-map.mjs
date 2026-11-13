@@ -1,6 +1,7 @@
 // Review the real health-map view without the unrelated licensed artwork fonts.
 // npm run preview:health-map; add -- --build for a standalone production build.
 import { mkdtempSync, mkdirSync, writeFileSync, rmSync, cpSync } from 'node:fs'
+import { execFileSync } from 'node:child_process'
 import { dirname, join, resolve } from 'node:path'
 import { fileURLToPath } from 'node:url'
 import { build, createServer } from 'vite'
@@ -8,6 +9,9 @@ import react from '@vitejs/plugin-react'
 import siteConfig from '../vite.config.js'
 
 const root = resolve(dirname(fileURLToPath(import.meta.url)), '..')
+// The map imports geo-toolkit's built dist/ (see vite.config.js), which a fresh checkout lacks; the
+// builder does nothing when it is already built for the pinned commit.
+execFileSync(process.execPath, [join(root, 'scripts/build-geo-toolkit.mjs')], { cwd: root, stdio: 'inherit' })
 const args = process.argv.slice(2)
 const option = (key, fallback) => args.includes(key) ? args[args.indexOf(key) + 1] : fallback
 const temp = mkdtempSync(join(root, '.health-map-preview-'))

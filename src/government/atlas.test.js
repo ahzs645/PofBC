@@ -295,3 +295,14 @@ test('a sub-agency has its full name beside its short one, so a cluster can be r
   assert.equal(sub.name, 'BC Mental Health and Substance Use Services')
   assert.equal(sub.shortName, 'BCMHSUS')
 })
+
+test('a current body with no start but a sourced responsibility period is drawn from that sighting, not founded then', () => {
+  const fii = (year) => governmentIn(year).nodes.find((node) => node.id === 'forestry-innovation-investment')
+  assert.equal(fii(2002), undefined)
+  assert.equal(fii(2010)?.presence, 'seen')
+  assert.equal(fii(2010).firstSeen, '2003')
+  assert.equal(fii(2010).established, null)
+  const bccie = (year) => governmentIn(year).nodes.find((node) => node.id === 'bc-council-for-international-education')
+  assert.equal(bccie(2012), undefined)
+  assert.equal(bccie(2015)?.firstSeen, '2013')
+})
