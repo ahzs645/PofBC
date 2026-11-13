@@ -4,7 +4,10 @@
 import { test } from 'node:test'
 import assert from 'node:assert/strict'
 import { existsSync, readFileSync } from 'node:fs'
-import { POSTERS, SERIES, neighbours, posterIds, seriesOf } from './catalogue.js'
+import { FACETS, POSTERS, SERIES, neighbours, posterIds, seriesOf } from './catalogue.js'
+import { RECORDS } from './records.js'
+import { STORIES } from './stories.js'
+import { MAX_AREA, MAX_EDGE, maxWidthFor } from './export/exportSvg.js'
 import { FOREST_SERVICE_POSTERS } from './forest-service/posters.js'
 import { BC_FERRIES_POSTERS } from './bc-ferries/posters.js'
 import { WILDLIFE_TREES } from './wildlife-trees/posters.js'
@@ -257,6 +260,7 @@ test('every connection says what it is and what it rests on, and leads somewhere
       assert.ok(!(entry.to && entry.href), `${where}: both a place and a page`)
       if (entry.to) assertPlace(entry.to, where)
       if (entry.href) assert.match(entry.href, /^https:\/\//, `${where}: href`)
+      if (entry.record) assert.ok(RECORDS[entry.record] && !entry.to && !entry.href, `${where}: no record ${entry.record}`)
       if (entry.to?.view === 'posters') assert.notEqual(entry.to.poster === id && !entry.to.part, true, `${where}: leads to itself`)
     }
   }
@@ -281,6 +285,74 @@ test('no card dates a piece more firmly than its evidence', () => {
     assert.match(POSTERS[id].when, /^Undated/, `${id}: ${POSTERS[id].when}`)
   }
   assert.match(POSTERS['coastal-forest'].when, /1979–86 or 1988–91/)
+})
+
+test('every record says what it rests on, and is printed where it says', () => {
+  const used = new Set(connectedPosters().flatMap((id) => connectionsOf(id)).map(({ record }) => record).filter(Boolean))
+  assert.deepEqual([...used].sort(), Object.keys(RECORDS).sort(), 'a record no connection opens, or the reverse')
+  for (const [id, record] of Object.entries(RECORDS)) {
+    assert.ok(record.kind && record.title && record.summary && record.limits, `${id}: incomplete`)
+    assert.ok(record.facts.length && record.facts.every(([k, v]) => k && v), `${id}: facts`)
+    assert.ok(record.seenOn.length, `${id}: printed nowhere`)
+    for (const { poster, part, note } of record.seenOn) {
+      assert.ok(note && DEFINITIONS[poster]?.parts[part], `${id}: no part ${poster}/${part}`)
+    }
+    for (const source of record.sources) assert.match(source.href, /^https:\/\//, `${id}: source`)
+  }
+})
+
+test('every piece has a story, and the written ones tell exactly its parts', () => {
+  for (const [id, { parts, order }] of Object.entries(DEFINITIONS)) {
+    assert.ok(order.every((partId) => parts[partId].story?.length), `${id}: a part without a story`)
+    assert.ok(order.every((partId) => parts[partId].panel?.heading), `${id}: a chapter without a heading`)
+  }
+  for (const [id, story] of Object.entries(STORIES)) {
+    assert.deepEqual(Object.keys(story).sort(), [...DEFINITIONS[id].order].sort(), `${id}: the story and the parts differ`)
+  }
+})
+
+test('the leaflet’s pages are the papers the build laid down', () => {
+  const { pages } = NOXIOUS_WEEDS_POSTERS['beware-these-alien-invaders']
+  const svg = DRAWINGS['beware-these-alien-invaders']
+  const papers = [...svg.matchAll(/<g(?: transform="translate\(0 (\d+)\)")?><rect id="btai-paper-\d" width="(\d+)" height="(\d+)"/g)]
+    .map((m) => ({ x: 0, y: Number(m[1] ?? 0), w: Number(m[2]), h: Number(m[3]) }))
+  assert.equal(papers.length, 5)
+  assert.deepEqual(pages.map(({ box }) => box), papers)
+  assert.ok(pages.every(({ label }) => label))
+})
+
+test('the shelf can be filtered: every card names its issuer, subject and format, and says what it is', () => {
+  for (const [id, meta] of Object.entries(POSTERS)) {
+    for (const { key } of FACETS) assert.ok(meta[key], `${id}: ${key}`)
+    assert.ok(meta.blurb?.length > 20 && meta.blurb.length < 110, `${id}: blurb`)
+  }
+  for (const { key } of FACETS) {
+    const values = new Set(Object.values(POSTERS).map((meta) => meta[key]))
+    assert.ok(values.size > 1 && values.size <= 6, `${key}: ${values.size} values is no use as a filter`)
+  }
+})
+
+test('a raster is held to its whole canvas, not its width alone', () => {
+  for (const { view } of Object.values(POSTERS)) {
+    const aspect = view.h / view.w
+    const width = maxWidthFor(aspect)
+    assert.ok(width > 0 && width <= MAX_EDGE && width * aspect <= MAX_EDGE + 1 && width * width * aspect <= MAX_AREA, `${view.w} × ${view.h}`)
+  }
+  // The long sheet: a width a square poster could take is refused.
+  assert.ok(maxWidthFor(3) < 8000)
+  assert.equal(maxWidthFor(1), 10000)
+})
+
+test('Wildlife Trees has the original to compare with, in the drawing’s shape', () => {
+  const jpeg = readFileSync(new URL('./wildlife-trees/reference.jpg', import.meta.url))
+  assert.ok(jpeg.length < 800e3, `the reference is ${Math.round(jpeg.length / 1e3)} KB`)
+  // The first start-of-frame marker holds the picture's size.
+  let at = 2
+  while (jpeg[at + 1] < 0xc0 || jpeg[at + 1] > 0xc2) at += 2 + jpeg.readUInt16BE(at + 2)
+  const height = jpeg.readUInt16BE(at + 5)
+  const width = jpeg.readUInt16BE(at + 7)
+  const { w, h } = POSTERS['wildlife-trees'].view
+  assert.ok(Math.abs(width / height - w / h) < 0.002, `the reference is ${width} × ${height}, not the drawing’s shape`)
 })
 
 test('neighbours step through the posters in catalogue order', () => {

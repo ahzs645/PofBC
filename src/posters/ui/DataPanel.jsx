@@ -38,7 +38,7 @@ const Sources = ({ sources }) => (
   </Item>
 )
 
-const Block = ({ block }) => {
+const Block = ({ block, figures }) => {
   if (typeof block === 'string') return <Item as="p">{block}</Item>
   if (block.h) return <Item as="h3">{block.h}</Item>
   if (block.facts) return <Facts rows={block.facts} />
@@ -46,6 +46,17 @@ const Block = ({ block }) => {
   if (block.palette) return <Palette colours={block.palette} />
   if (block.links) return <Links links={block.links} />
   if (block.sources) return <Sources sources={block.sources} />
+  if (block.figure) {
+    // The picture itself is attached by the poster's loader; the data only names it.
+    const src = figures?.[block.figure]
+    if (!src) return null
+    return (
+      <Item as="figure" className="pv-figure">
+        <a href={src} target="_blank" rel="noopener noreferrer"><img src={src} alt={block.alt} loading="lazy" /></a>
+        <figcaption>{block.caption}</figcaption>
+      </Item>
+    )
+  }
   return null
 }
 
@@ -54,7 +65,7 @@ const Block = ({ block }) => {
  * tour and any named recolouring (`variation`), and ends with the piece's connections from the
  * registry (`poster` is its id there).
  */
-export function DataPanel({ partId, parts, order, onSelect, tour, story, poster, variation }) {
+export function DataPanel({ partId, parts, order, onSelect, tour, story, poster, variation, compare, pages, figures }) {
   const part = parts[partId]
   const { panel } = part
   const steps = order.filter((id) => id !== 'overview')
@@ -68,13 +79,37 @@ export function DataPanel({ partId, parts, order, onSelect, tour, story, poster,
       <Item as="p" className="pv-eyebrow">{eyebrow}</Item>
       <Item as="h2">{panel.heading}{panel.em && <>, <em>{panel.em}</em></>}</Item>
       <Item as="p" className="pv-lede">{panel.lede}</Item>
-      {blocks.slice(0, tail).map((block, i) => <Block key={i} block={block} />)}
+      {blocks.slice(0, tail).map((block, i) => <Block key={i} block={block} figures={figures} />)}
       {partId === 'overview' && (
         <>
           {variation && (
             <Item as="div" className="pv-variation">
               <Segmented label={variation.label} options={variation.options.map(({ id, label }) => ({ value: id, label }))} value={variation.value} onChange={variation.onChange} />
               <p className="pv-muted">{variation.options.find(({ id }) => id === variation.value)?.note}</p>
+            </Item>
+          )}
+          {compare && (
+            <Item as="div" className="pv-variation">
+              <Segmented
+                label="Compare with the original"
+                value={compare.mode}
+                onChange={compare.onMode}
+                options={[{ value: 'reconstruction', label: 'Reconstruction' }, { value: 'original', label: 'Original' }, { value: 'overlay', label: 'Overlay' }]}
+              />
+              {compare.mode === 'overlay' && (
+                <label className="pv-range">
+                  <span>Original</span>
+                  <input type="range" min="0" max="1" step="0.05" value={compare.opacity} onChange={(event) => compare.onOpacity(Number(event.target.value))} aria-label="How strongly the original shows over the reconstruction" />
+                  <span>{Math.round(compare.opacity * 100)}%</span>
+                </label>
+              )}
+              <p className="pv-muted">{compare.reference.caption} The two share one frame: open any part, and both zoom to it.</p>
+            </Item>
+          )}
+          {pages && (
+            <Item as="div" className="pv-row">
+              <button type="button" className="pv-ghost pv-solid" onClick={pages.open}>Read it page by page</button>
+              <span className="pv-muted">{pages.count} pages, with Home, Back and Next</span>
             </Item>
           )}
           {story && (
@@ -103,7 +138,7 @@ export function DataPanel({ partId, parts, order, onSelect, tour, story, poster,
           </Item>
         </>
       )}
-      {blocks.slice(tail).map((block, i) => <Block key={tail + i} block={block} />)}
+      {blocks.slice(tail).map((block, i) => <Block key={tail + i} block={block} figures={figures} />)}
       {partId === 'overview' && poster && <Connections poster={poster} />}
     </Reveal>
   )

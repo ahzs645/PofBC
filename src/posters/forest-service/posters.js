@@ -15,6 +15,7 @@
 // plainly what it is.
 
 import { POSTERS } from '../catalogue.js'
+import { withStories } from '../stories.js'
 
 // ── Shared context ──────────────────────────────────────────────────────────────────────────────
 
@@ -345,7 +346,8 @@ export const REWARD = {
             ['Rebuilt from', 'two supplied photographs of the print'],
             ['Drawing', '348 paths, no images; 297 × 417.7 mm']
           ] },
-          { note: 'An interpretive reconstruction: paper damage, uneven light and print noise were left out, and fine feather, bark and face details are simplified. The bird’s tail and the bear’s eyes, mask, nose and muzzle were redrawn against two small photographs of the print (213 × 292 and 308 × 445 pixels); those support the tail’s segmented rhythm and a more compact face, not the exact edge of each feather or the small planes of the nose. The emblem is the shared emblem drawing in its full colours; the photographed print shows it in a lighter lime.' }
+          { note: 'An interpretive reconstruction: paper damage, uneven light and print noise were left out, and fine feather, bark and face details are simplified. The bird’s tail and the bear’s eyes, mask, nose and muzzle were redrawn against two small photographs of the print (213 × 292 and 308 × 445 pixels); those support the tail’s segmented rhythm and a more compact face, not the exact edge of each feather or the small planes of the nose. The emblem is the shared emblem drawing in its full colours; the photographed print shows it in a lighter lime.' },
+          { figure: 'reward-comparison', alt: 'A proof sheet: the bird’s tail and the bear’s face, each shown in two enlarged photographs of the print, in the earlier drawing, in a first revision and in the drawing as it is now', caption: 'The comparison the tail and face were redrawn from. Both photographs are enlarged from very small pictures and aligned by the illustration’s frame, so they settle broad shapes and placement only. The last column is the drawing shown here.' }
         ]
       }
     },
@@ -595,9 +597,6 @@ export const ENJOY_PROTECT = {
   order: ['overview', 'headline', 'tree', 'character', 'service', 'emblem']
 }
 
-export const FOREST_SERVICE_POSTERS = {
-  'dont-drop-it': DONT_DROP_IT,
-  'dont-gamble-with-fire': DONT_GAMBLE,
-  'reward-living-forest': REWARD,
-  'enjoy-protect-forests': ENJOY_PROTECT
-}
+// Each with its story (../stories.js) attached to its parts.
+export const FOREST_SERVICE_POSTERS = Object.fromEntries([DONT_DROP_IT, DONT_GAMBLE, REWARD, ENJOY_PROTECT]
+  .map((poster) => [poster.id, { ...poster, parts: withStories(poster.id, poster.parts) }]))

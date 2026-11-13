@@ -6,14 +6,17 @@
 // can take over the frame, the stage's class, the panel and the export targets. One whose drawing
 // is too large to wait for (Wildlife Trees) supplies a light stand-in as its drawing and an
 // `upgrade` that resolves to the real one, which replaces it when it arrives. One with named
-// recolourings (`variations`) gets a switch on its overview; the first is the drawing as it is.
+// recolourings (`variations`) gets a switch on its overview; the first is the drawing as it is. One
+// with a picture of the original (`reference`) can be compared with it, the picture laid into the
+// drawing's own frame; one made of pages (`pages`) can be read a page at a time.
 
-import { useCallback, useEffect, useMemo, useState } from 'react'
+import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import { Poster } from './stage/Poster.jsx'
 import { useMedia } from './hooks/useMedia.js'
 import { useKeyboardNav } from './hooks/useKeyboardNav.js'
 import { useTour } from './hooks/useTour.js'
 import { useColourSwap } from './stage/useColourSwap.js'
+import { useReferenceOverlay } from './stage/useReferenceOverlay.js'
 import { Panel } from './ui/Panel.jsx'
 import { Dock } from './ui/Dock.jsx'
 import { DataPanel } from './ui/DataPanel.jsx'
@@ -40,7 +43,7 @@ const writeStory = (on) => {
 }
 
 export function PosterViewer({ meta, series, module, part, onPart, onExit, previous, next, shelf, backLabel = 'Posters', noun = 'poster' }) {
-  const { parts, order, regions, spotlight, svgRaw, prepare, upgrade, variations } = module
+  const { parts, order, regions, spotlight, svgRaw, prepare, upgrade, variations, reference, pages, figures } = module
   const useExtras = module.useExtras ?? noExtras
   const [svg, setSvg] = useState(null)
   // The drawing on the stage: the module's, or once it arrives the one its `upgrade` fetches.
@@ -72,6 +75,13 @@ export function PosterViewer({ meta, series, module, part, onPart, onExit, previ
     setAboutOpen(false)
   }, [])
 
+  // Opening the viewer moves focus into it, unless focus is already there (stepping from one piece
+  // to the next keeps it on the button pressed). The shelf behind is inert meanwhile (ShelfView).
+  const root = useRef(null)
+  useEffect(() => {
+    if (!root.current?.contains(document.activeElement)) root.current?.focus({ preventScroll: true })
+  }, [])
+
   // The page under the viewer stays where it was and does not scroll behind it.
   useEffect(() => {
     const root = document.documentElement
@@ -81,11 +91,20 @@ export function PosterViewer({ meta, series, module, part, onPart, onExit, previ
     return () => { root.style.overflow = before.overflow; root.style.scrollbarGutter = before.gutter }
   }, [])
 
+  // A piece made of pages can be read one page at a time; opening any part leaves that.
+  const [page, setPage] = useState(null)
+  const turnTo = useCallback((n) => {
+    if (n !== null && current !== 'overview') onPart('overview')
+    setAboutOpen(false)
+    setPage(n)
+  }, [current, onPart])
+
   // Navigation: manual moves stop the tour; the tour's own moves do not.
   const tour = useTour({ order, current, onAdvance: (id) => move(id, false), seconds: TOUR_SECONDS })
   const move = useCallback((id, manual = true) => {
     onPart(id ?? 'overview')
     setAboutOpen(false)
+    setPage(null)
     if (manual) tour.stop()
   }, [onPart, tour.stop]) // eslint-disable-line react-hooks/exhaustive-deps
   const select = useCallback((id) => move(id, true), [move])
@@ -116,7 +135,17 @@ export function PosterViewer({ meta, series, module, part, onPart, onExit, previ
   useColourSwap(svg, variation?.swap ?? null)
   const variationControl = variations && { ...variations, value: variation.id, onChange: setVariationId }
 
-  const frame = extras.frame ?? { box: parts[current].box, pad: parts[current].pad, initial: parts.overview.box }
+  // The original, laid into the drawing's frame for comparison.
+  const [compareMode, setCompareMode] = useState('reconstruction')
+  const [compareOpacity, setCompareOpacity] = useState(0.5)
+  useReferenceOverlay(svg, reference ?? null, compareMode, compareOpacity)
+  const compareControl = reference && { reference, mode: compareMode, onMode: setCompareMode, opacity: compareOpacity, onOpacity: setCompareOpacity }
+  const pagesControl = pages && { count: pages.length, open: () => turnTo(0) }
+
+  const paging = pages && page !== null && current === 'overview' && !telling
+  const frame = extras.frame ?? (paging
+    ? { box: pages[page].box, pad: 0.04, initial: parts.overview.box }
+    : { box: parts[current].box, pad: parts[current].pad, initial: parts.overview.box })
   const panelOpen = telling || current !== 'overview' || aboutOpen
   const inset = { right: panelOpen && !narrow ? PANEL_INSET : 0, bottom: DOCK_HEIGHT + (panelOpen && narrow ? Math.round(innerHeight * SHEET_SHARE) : 0) }
   const steps = useMemo(() => order.filter((id) => id !== 'overview').map((id) => ({ id, label: parts[id].label })), [order, parts])
@@ -139,10 +168,10 @@ export function PosterViewer({ meta, series, module, part, onPart, onExit, previ
         onLeave={() => tell(false)}
       />
     )
-    : extras.content ?? <DataPanel partId={current} parts={parts} order={order} onSelect={select} tour={tour} story={canTell ? () => tell(true) : null} poster={meta.id} variation={variationControl} />
+    : extras.content ?? <DataPanel partId={current} parts={parts} order={order} onSelect={select} tour={tour} story={canTell ? () => tell(true) : null} poster={meta.id} variation={variationControl} compare={compareControl} pages={pagesControl} figures={figures} />
 
   return (
-    <div className="pv" role="region" aria-label={`${meta.title}, interactive ${noun}`}>
+    <div className="pv" role="region" aria-label={`${meta.title}, interactive ${noun}`} tabIndex={-1} ref={root}>
       <div className="pv-app">
         <Poster
           svgRaw={drawing.raw}
@@ -163,6 +192,18 @@ export function PosterViewer({ meta, series, module, part, onPart, onExit, previ
                 ? <>The full drawing did not load; this is a preview. <button type="button" className="pv-ghost" onClick={(e) => { e.stopPropagation(); setAttempt((n) => n + 1) }}>Retry</button></>
                 : <><span className="pv-drawing-spinner" aria-hidden="true" />Loading the full drawing; this is a preview</>}
             </p>
+          )}
+          {paging && (
+            <nav className="pv-pager" aria-label="Pages" onClick={(e) => e.stopPropagation()}>
+              <button type="button" className="pv-ghost" disabled={page === 0} onClick={() => turnTo(0)}>Home</button>
+              <button type="button" className="pv-ghost" disabled={page === 0} onClick={() => turnTo(page - 1)} aria-label="Previous page">‹ Back</button>
+              <span className="pv-pager-at" aria-live="polite"><b>{page + 1}</b> / {pages.length} · {pages[page].label}</span>
+              <button type="button" className="pv-ghost pv-solid" disabled={page === pages.length - 1} onClick={() => turnTo(page + 1)} aria-label="Next page">Next ›</button>
+              <button type="button" className="pv-ghost" onClick={() => turnTo(null)}>All pages</button>
+            </nav>
+          )}
+          {compareMode !== 'reconstruction' && reference && (
+            <p className="pv-compare-flag" role="status">{compareMode === 'original' ? 'Showing the original' : 'Original over the reconstruction'} · <button type="button" className="pv-ghost" onClick={(e) => { e.stopPropagation(); setCompareMode('reconstruction') }}>Back to the reconstruction</button></p>
           )}
           {tour.playing && (
             <div className="pv-tour-bar" aria-hidden="true">

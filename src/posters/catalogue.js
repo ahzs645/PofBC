@@ -53,10 +53,17 @@ export const SERIES = [
  * evidence in its panels: a date read off a file or a mark says so. `made` is what the drawing is
  * made of — 'vector', or 'mixed' where it keeps photographs — and words its exports. A drawing too
  * large to fetch on spec says `prefetch: false`, and is loaded only when opened.
+ *
+ * `issuer`, `subject` and `format` are what the shelf filters by (FACETS, below), in a few broad
+ * words each; `blurb` is one line on what the piece asks or says, shown on its card.
  */
 export const POSTERS = {
   'coastal-forest': {
     id: 'coastal-forest',
+    issuer: 'Ministry of Environment',
+    subject: 'Forests and habitat',
+    format: 'Poster',
+    blurb: 'One forest as timber, habitat, a place to be and the source of fish-bearing water.',
     series: 'environment',
     title: 'Coastal Forest',
     when: '1979–86 or 1988–91, from its wording',
@@ -67,6 +74,10 @@ export const POSTERS = {
   },
   'reward-living-forest': {
     id: 'reward-living-forest',
+    issuer: 'BC Forest Service',
+    subject: 'Fire prevention',
+    format: 'Poster',
+    blurb: 'Follow the campfire rules, and the reward is the forest itself.',
     series: 'forest-service',
     title: 'REWARD: A Living Forest',
     when: 'Undated · evergreen-emblem design',
@@ -77,6 +88,10 @@ export const POSTERS = {
   },
   'enjoy-protect-forests': {
     id: 'enjoy-protect-forests',
+    issuer: 'BC Forest Service',
+    subject: 'Forests and habitat',
+    format: 'Sign',
+    blurb: 'An invitation first: enjoy the forest, and look after it.',
     series: 'forest-service',
     title: 'Enjoy & Protect our Forests',
     when: 'Undated · evergreen-emblem design',
@@ -87,6 +102,10 @@ export const POSTERS = {
   },
   'dont-drop-it': {
     id: 'dont-drop-it',
+    issuer: 'BC Forest Service',
+    subject: 'Fire prevention',
+    format: 'Badge',
+    blurb: 'Three words and a lit cigarette: one cause of fire, named.',
     series: 'fire-prevention',
     title: 'DON’T DROP IT!',
     when: 'Undated',
@@ -97,6 +116,10 @@ export const POSTERS = {
   },
   'dont-gamble-with-fire': {
     id: 'dont-gamble-with-fire',
+    issuer: 'BC Forest Service',
+    subject: 'Fire prevention',
+    format: 'Badge',
+    blurb: 'Carelessness as a bet, with the dice already in the air.',
     series: 'fire-prevention',
     title: 'Don’t gamble with FIRE',
     when: 'Undated',
@@ -107,6 +130,10 @@ export const POSTERS = {
   },
   'wildlife-trees': {
     id: 'wildlife-trees',
+    issuer: 'Ministry of Forests',
+    subject: 'Forests and habitat',
+    format: 'Poster',
+    blurb: 'Which dead and dying trees to leave standing, and the animals that need them.',
     series: 'forest-practices',
     title: 'Wildlife Trees',
     when: 'Undated · the artist’s mark suggests 2001',
@@ -118,6 +145,10 @@ export const POSTERS = {
   },
   'beware-these-alien-invaders': {
     id: 'beware-these-alien-invaders',
+    issuer: 'Ministry of Forests',
+    subject: 'Invasive plants',
+    format: 'Screen leaflet',
+    blurb: 'Four weeds to know on sight, as a five-page linked PDF.',
     series: 'noxious-weeds',
     title: 'Beware These Alien Invaders',
     when: 'Undated · PDF made March 1999',
@@ -128,6 +159,10 @@ export const POSTERS = {
   },
   'shattering-the-environment': {
     id: 'shattering-the-environment',
+    issuer: 'Ministry of Forests',
+    subject: 'Invasive plants',
+    format: 'Poster',
+    blurb: 'Giant weeds in a cracked valley: invasion as a broken landscape.',
     series: 'noxious-weeds',
     title: 'Shattering the Environment',
     when: 'Undated · PDF made March 2000',
@@ -138,6 +173,10 @@ export const POSTERS = {
   },
   'explosion-in-slow-motion': {
     id: 'explosion-in-slow-motion',
+    issuer: 'Ministry of Forests',
+    subject: 'Invasive plants',
+    format: 'Poster',
+    blurb: 'Ten weeds as specimens, and how each one spreads.',
     series: 'noxious-weeds',
     title: 'Explosion in Slow Motion',
     when: 'Undated · PDF made March 2000',
@@ -148,6 +187,10 @@ export const POSTERS = {
   },
   'go-bc-ferries': {
     id: 'go-bc-ferries',
+    issuer: 'BC Ferries',
+    subject: 'Coastal travel',
+    format: 'Decal',
+    blurb: 'The ferry system sold as a trip to the coast, its routes round the rim.',
     series: 'bc-ferries',
     title: 'GO B.C. FERRIES',
     when: '1960–64, from its wording',
@@ -158,15 +201,26 @@ export const POSTERS = {
   },
   'queen-of-sidney': {
     id: 'queen-of-sidney',
+    issuer: 'BC Ferries',
+    subject: 'Coastal travel',
+    format: 'Decal',
+    blurb: 'One ship as a souvenir, seen through a ship’s wheel.',
     series: 'bc-ferries',
     title: 'Queen of Sidney',
-    when: 'Undated',
+    when: 'Undated · the ship took this name in 1963',
     made: 'vector',
     view: { x: 0, y: 0, w: 1305, h: 1206 },
     page: { w: 5.2, h: 4.81 },
     background: null
   }
 }
+
+/** What the shelf can be filtered by: a card's field, and what to call it. */
+export const FACETS = [
+  { key: 'issuer', label: 'Issuer' },
+  { key: 'subject', label: 'Subject' },
+  { key: 'format', label: 'Format' }
+]
 
 export const posterIds = () => SERIES.flatMap((series) => series.posters)
 export const seriesOf = (posterId) => SERIES.find((series) => series.posters.includes(posterId)) ?? null

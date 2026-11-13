@@ -12,6 +12,17 @@ export const FORMATS = {
 }
 export const FORMAT_ORDER = ['svg', 'pdf', 'png', 'webp', 'jpeg']
 
+/**
+ * The largest raster drawn: no edge longer than MAX_EDGE pixels and no more than MAX_AREA pixels in
+ * all. Width alone is not enough of a limit: a sheet three times as tall as it is wide makes a
+ * canvas three times the width asked for.
+ */
+export const MAX_EDGE = 16000
+export const MAX_AREA = 100e6
+
+/** The widest raster allowed for a drawing whose height is `aspect` times its width. */
+export const maxWidthFor = (aspect) => Math.floor(Math.min(MAX_EDGE, MAX_EDGE / aspect, Math.sqrt(MAX_AREA / aspect)))
+
 /** Whether this browser can encode the format. Vector formats always can. */
 export const isFormatSupported = (format) => {
   const spec = FORMATS[format]
@@ -56,6 +67,8 @@ const inlineImages = async (root) => {
 export const posterSvgString = async (svgEl, { view, page }) => {
   const clone = svgEl.cloneNode(true)
   clone.querySelector('#hotspots')?.remove()
+  // A reference picture laid over the drawing for comparison is the viewer's, not the poster's.
+  clone.querySelector('#pv-reference')?.remove()
   // A highlight is only for the viewer's spotlight (see useHotspots).
   for (const el of clone.querySelectorAll('[data-highlight]')) el.remove()
   for (const el of clone.querySelectorAll('[style]')) el.removeAttribute('style')
@@ -89,6 +102,8 @@ export const rasterize = async (svg, { width, format, quality = 0.92, background
   const spec = FORMATS[format]
   const vb = viewBoxOf(svg)
   const height = Math.round(width * vb.h / vb.w)
+  const limit = maxWidthFor(vb.h / vb.w)
+  if (width > limit) throw new Error(`At ${width} px wide this drawing would be ${width} × ${height} px, more than a browser can be relied on to draw. The widest it can be exported is ${limit} px; for anything larger, use the PDF or SVG.`)
   // Width/height attributes make the <img> decode at the requested size rather than the SVG's own.
   const doc = new DOMParser().parseFromString(svg, 'image/svg+xml')
   if (doc.querySelector('parsererror')) throw new Error('The drawing is not well-formed SVG.')

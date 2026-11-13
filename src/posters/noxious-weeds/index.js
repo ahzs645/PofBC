@@ -14,6 +14,6 @@ const DRAWINGS = {
 
 export const loaderFor = (id) => async () => {
   const { default: svgRaw } = await DRAWINGS[id]()
-  const { parts, order, regions, spotlight } = NOXIOUS_WEEDS_POSTERS[id]
-  return { svgRaw, prepare, parts, order, regions, spotlight }
+  const { parts, order, regions, spotlight, pages } = NOXIOUS_WEEDS_POSTERS[id]
+  return { svgRaw, prepare, parts, order, regions, spotlight, pages }
 }

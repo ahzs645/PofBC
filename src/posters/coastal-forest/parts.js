@@ -1,13 +1,19 @@
 // What this poster is made of, in the drawing's own units (viewBox 0 0 2400 3600).
 
-export const PARTS = {
-  overview: { label: 'Whole poster', box: { x: 0, y: 0, w: 2400, h: 3600 }, pad: 0.015 },
-  photograph: { label: 'Photograph', hint: 'the supplied image, and the credit under it', box: { x: 154, y: 161, w: 2085, h: 2490 }, pad: 0.03, layer: '#photograph' },
-  title: { label: 'Title', hint: 'Bookman JF Pro with chosen swashes', box: { x: 160, y: 2699, w: 808, h: 129 }, pad: 0.12, layer: '#title' },
-  copy: { label: 'Copy', hint: 'four columns of transcribed text', box: { x: 162, y: 2731, w: 2074, h: 560 }, pad: 0.05, layer: '#copy' },
-  logo: { label: 'Logo', hint: 'the crest identity, and a live studio', box: { x: 1844, y: 3160, w: 425, h: 102 }, pad: 0.35, layer: '#ministry' },
-  slogan: { label: 'Slogan', hint: 'and the story of one tilde', box: { x: 164, y: 3313, w: 2074, h: 105 }, pad: 0.08, layer: '#slogan' }
+import { withStories } from '../stories.js'
+
+// `panel` here is only what story mode shows over a part's chapter (its heading); the panels proper
+// are components of their own (./panels). The stories are in ../stories.js.
+const DESCRIBED = {
+  overview: { label: 'Whole poster', box: { x: 0, y: 0, w: 2400, h: 3600 }, pad: 0.015, panel: { heading: 'Coastal Forest' } },
+  photograph: { label: 'Photograph', hint: 'the supplied image, and the credit under it', box: { x: 154, y: 161, w: 2085, h: 2490 }, pad: 0.03, layer: '#photograph', panel: { heading: 'Mist, conifers and a low sun' } },
+  title: { label: 'Title', hint: 'Bookman JF Pro with chosen swashes', box: { x: 160, y: 2699, w: 808, h: 129 }, pad: 0.12, layer: '#title', panel: { heading: 'A title in swashes' } },
+  copy: { label: 'Copy', hint: 'four columns of transcribed text', box: { x: 162, y: 2731, w: 2074, h: 560 }, pad: 0.05, layer: '#copy', panel: { heading: 'The argument', em: 'one forest, four uses' } },
+  logo: { label: 'Logo', hint: 'the crest identity, and a live studio', box: { x: 1844, y: 3160, w: 425, h: 102 }, pad: 0.35, layer: '#ministry', panel: { heading: 'Ministry of Environment' } },
+  slogan: { label: 'Slogan', hint: 'and the story of one tilde', box: { x: 164, y: 3313, w: 2074, h: 105 }, pad: 0.08, layer: '#slogan', panel: { heading: 'The line at the foot' } }
 }
+
+export const PARTS = withStories('coastal-forest', DESCRIBED)
 
 export const ORDER = ['overview', 'photograph', 'title', 'copy', 'logo', 'slogan']
 export const STEPS = ORDER.filter((id) => id !== 'overview').map((id) => ({ id, label: PARTS[id].label }))

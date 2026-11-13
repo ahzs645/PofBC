@@ -726,7 +726,16 @@ export const NOXIOUS_WEEDS_POSTERS = {
     spotlight: { keep: BEWARE_FOUND.papers },
     regions: ['intro', 'headline', 'invaders', 'start', 'thistle', 'gorse', 'toadflax', 'houndstongue', 'navigation'],
     parts: parts(BEWARE_FOUND, BEWARE_PARTS),
-    order: ['overview', 'headline', 'intro', 'invaders', 'start', 'thistle', 'gorse', 'toadflax', 'houndstongue', 'navigation']
+    order: ['overview', 'headline', 'intro', 'invaders', 'start', 'thistle', 'gorse', 'toadflax', 'houndstongue', 'navigation'],
+    // The leaflet's five screens, where the build laid them one under another: read a page at a time,
+    // as the PDF was, with its own Home, Back and Next.
+    pages: [
+      { label: 'Cover', box: { x: 0, y: 0, w: 684, h: 467 } },
+      { label: 'Bull thistle', box: { x: 0, y: 503, w: 684, h: 468 } },
+      { label: 'Gorse', box: { x: 0, y: 1007, w: 684, h: 468 } },
+      { label: 'Dalmatian toadflax', box: { x: 0, y: 1511, w: 684, h: 468 } },
+      { label: 'Hound’s tongue', box: { x: 0, y: 2015, w: 684, h: 468 } }
+    ]
   },
   [SHATTERING]: {
     id: SHATTERING,

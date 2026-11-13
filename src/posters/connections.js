@@ -7,8 +7,9 @@
 //
 // Data only, and nothing here imports a drawing, so it can be read and tested without a browser.
 //
-// `to` is a place on the site (see site/navigation.jsx); `href` is a page elsewhere. `certainty`
-// is one of CERTAINTY's keys: what the relationship rests on, not how interesting it is.
+// `to` is a place on the site (see site/navigation.jsx); `href` is a page elsewhere; `record` is
+// one of this collection's own records (records.js), opened in place. `certainty` is one of
+// CERTAINTY's keys: what the relationship rests on, not how interesting it is.
 
 import { POSTERS } from './catalogue.js'
 
@@ -111,7 +112,7 @@ const MINISTRY_OF_FORESTS = (year, note) => ({
   to: body('ministry-of-forests-1988', year),
   certainty: 'documented'
 })
-const BRANCH_NOTE = 'The Forest Practices Branch, a unit of the ministry, is the printed issuer. It is not the Forest Practices Board, a separate body; the site has no record for the Branch yet.'
+const BRANCH_NOTE = 'The Forest Practices Branch, a unit of the ministry, is the printed issuer; its record is below.'
 const companion = (poster, note) => ({
   group: 'objects',
   rel: 'Companion piece',
@@ -120,13 +121,22 @@ const companion = (poster, note) => ({
   to: piece(poster),
   certainty: 'printed'
 })
-const credits = (note) => ({
+const CREDITS = {
   group: 'context',
   rel: 'Made by',
-  label: 'Credits, as printed',
-  note,
+  label: 'Who made the weed posters',
+  note: 'Record · the writers, art directors, designer, photographer, illustrator and lithographer, as the posters print them',
+  record: 'noxious-weeds-credits',
   certainty: 'printed'
-})
+}
+const BRANCH = {
+  group: 'issuer',
+  rel: 'Printed unit',
+  label: 'Forest Practices Branch',
+  note: 'Record · the unit named under the ministry in the signature. Not the Forest Practices Board.',
+  record: 'forest-practices-branch',
+  certainty: 'printed'
+}
 
 // ── The connections, by piece ───────────────────────────────────────────────────────────────────
 
@@ -214,6 +224,15 @@ const BY_POSTER = {
       to: body('ministry-of-forests-1988', 2001),
       certainty: 'printed'
     },
+    BRANCH,
+    {
+      group: 'context',
+      rel: 'Made by',
+      label: 'd.g., from the artist’s mark',
+      note: 'Record · the one signature on the sheet, “d.g.01”',
+      record: 'wildlife-trees-artist',
+      certainty: 'inferred'
+    },
     {
       group: 'marks',
       rel: 'Uses mark',
@@ -265,7 +284,7 @@ const BY_POSTER = {
       certainty: 'printed'
     },
     companion('shattering-the-environment', 'Posters · the landscape poster, under the same Noxious Weeds wordmark'),
-    companion('explosion-in-slow-motion', 'Posters · the specimen poster, with the same four weeds among its ten'),
+    companion('explosion-in-slow-motion', 'Posters · the specimen poster: ten weeds, under the same wordmark'),
     {
       group: 'context',
       rel: 'Date evidence',
@@ -283,7 +302,8 @@ const BY_POSTER = {
       to: body('ministry-of-forests-1988', 2000),
       certainty: 'printed'
     },
-    companion('beware-these-alien-invaders', 'Posters · the screen leaflet, with the same four weeds'),
+    BRANCH,
+    companion('beware-these-alien-invaders', 'Posters · the screen leaflet, four weeds under the same wordmark'),
     companion('explosion-in-slow-motion', 'Posters · the specimen poster, credited to the same writers, art directors and photographer'),
     {
       group: 'objects',
@@ -293,7 +313,7 @@ const BY_POSTER = {
       to: piece('wildlife-trees', 'ministry'),
       certainty: 'printed'
     },
-    credits('Copy, Susan Turner and Dwaine Brooke. Art direction, Paul Nystedt and Denton Pendergast. Design, Rocket Science Design. Weed photography, Dion Manastyrski. Background photograph, Gunter Marx Photography. Compositing and film, Watermark Lithography. Names as the poster prints them; none has been identified independently.'),
+    CREDITS,
     {
       group: 'context',
       rel: 'Date evidence',
@@ -311,9 +331,10 @@ const BY_POSTER = {
       to: body('ministry-of-forests-1988', 2000),
       certainty: 'printed'
     },
-    companion('beware-these-alien-invaders', 'Posters · the screen leaflet, whose four weeds are all here'),
+    BRANCH,
+    companion('beware-these-alien-invaders', 'Posters · the screen leaflet, four weeds under the same wordmark'),
     companion('shattering-the-environment', 'Posters · the landscape poster, credited to the same writers, art directors and photographer'),
-    credits('Copy, Susan Turner and Dwaine Brooke. Art direction, Paul Nystedt and Denton Pendergast. Design, Denton Pendergast. Photography, Dion Manastyrski. Illustration, Soren Henrich. Photo-compositing, Watermark Lithography. Names as the poster prints them; none has been identified independently.'),
+    CREDITS,
     {
       group: 'context',
       rel: 'Date evidence',
@@ -365,6 +386,14 @@ const BY_POSTER = {
       note: 'Logos · BC Ferries: the dogwood house flag above the ship',
       to: { view: 'gallery', logos: 'bc-ferries' },
       certainty: 'printed'
+    },
+    {
+      group: 'objects',
+      rel: 'Depicts',
+      label: 'Queen of Sidney, the ship',
+      note: 'Record · built as Sidney, in service from 1960, given this name in 1963',
+      record: 'queen-of-sidney-vessel',
+      certainty: 'documented'
     },
     { ...companion('go-bc-ferries', 'Posters · the Toll Authority’s sticker for the whole system'), rel: 'Also a decal', certainty: 'thematic' }
   ]

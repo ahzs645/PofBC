@@ -596,6 +596,59 @@
 .pv-connection-rel i[data-certainty="thematic"], .pv-connection-rel i[data-certainty="inferred"] { border-style: dashed; color: var(--muted); }
 .pv-link-card.pv-link-plain { display: grid; gap: 2px; padding: 10px 12px; border: 1px dashed var(--line); border-radius: 12px; }
 .pv-variation { margin: 4px 0 14px; display: grid; gap: 6px; }
+.pv-range { display: grid; grid-template-columns: auto 1fr 3.5ch; align-items: center; gap: 10px; font-size: 12.5px; color: var(--muted); }
+.pv-range input { width: 100%; accent-color: var(--mint); }
+/* A record, folded under its connection. */
+.pv-record > summary { display: grid; gap: 2px; cursor: pointer; list-style: none; }
+.pv-record > summary::-webkit-details-marker { display: none; }
+.pv-record[open] > summary b span { display: inline-block; transform: rotate(45deg); }
+.pv-record-body { margin-top: 10px; padding-top: 10px; border-top: 1px solid var(--line); display: grid; gap: 8px; }
+.pv-record-body p { margin: 0; font-size: 13.5px; color: var(--text); }
+.pv-link-card .pv-record-body span { font-size: 12.5px; }
+.pv-record-seen { list-style: none; margin: 0; padding: 0; display: grid; gap: 6px; }
+.pv-record-seen li { display: grid; gap: 1px; }
+.pv-record-seen a { color: var(--mint); font-size: 13.5px; }
+.pv.pv:focus { outline: none; }
+/* Reading a paged piece: Home, Back, where you are, Next. */
+.pv-pager {
+  position: absolute;
+  left: 50%;
+  top: 84px;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 8px;
+  border-radius: 999px;
+  border: 1px solid var(--line-2);
+  background: var(--glass);
+  backdrop-filter: blur(14px);
+  z-index: 3;
+  max-width: calc(100% - 24px);
+}
+.pv-pager-at { font-size: 13px; color: var(--muted); padding: 0 8px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.pv-pager-at b { color: var(--text); font-weight: 600; }
+.pv-compare-flag {
+  position: absolute;
+  left: 20px;
+  bottom: calc(var(--pv-dock-h) + 14px);
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 8px 6px 14px;
+  border-radius: 999px;
+  border: 1px solid var(--line-2);
+  background: var(--glass);
+  backdrop-filter: blur(14px);
+  font-size: 13px;
+  color: var(--text);
+  z-index: 3;
+}
+@media (max-width: 900px) {
+  .pv-pager { top: 70px; }
+  .pv-pager .pv-ghost { padding-inline: 10px; }
+}
 .pv-variation p { margin: 0; }
 .pv-palette { list-style: none; margin: 10px 0 16px; padding: 0; display: grid; gap: 6px; }
 .pv-palette li { display: grid; grid-template-columns: 22px 1fr auto; align-items: center; gap: 10px; font-size: 13.5px; }
@@ -649,6 +702,28 @@
 .posters__card-text { display: grid; align-content: start; gap: 2px; padding: 12px 16px 14px; }
 .posters__title { font-weight: 650; font-size: 16px; }
 .posters__dated { font-size: 12.5px; color: var(--ink-faint); }
+.posters__blurb { font-size: 13.5px; color: var(--ink-muted); line-height: 1.4; }
+/* Browsing: by series or all in one grid, narrowed by issuer, subject and format. */
+.posters__tools {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px 16px;
+  background: var(--surface);
+  border-radius: var(--radius);
+  padding: 12px 20px;
+  margin-bottom: var(--gap);
+}
+.posters__layout { display: inline-flex; border: 1px solid var(--outline); border-radius: 999px; overflow: hidden; }
+.posters__layout button { border: 0; background: none; color: inherit; font: inherit; font-size: 13.5px; padding: 6px 14px; cursor: pointer; }
+.posters__layout button[aria-pressed="true"] { background: var(--ink, currentColor); color: var(--surface); }
+.posters__layout button:focus-visible, .posters__filter select:focus-visible, .posters__clear:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; }
+.posters__filter { display: inline-flex; align-items: center; gap: 6px; font-size: 13px; color: var(--ink-muted); }
+.posters__filter select { font: inherit; font-size: 13.5px; color: inherit; background: var(--surface); border: 1px solid var(--outline); border-radius: 8px; padding: 5px 8px; }
+.posters__count { margin: 0 0 0 auto; font-size: 13px; color: var(--ink-faint); }
+.posters__clear { border: 0; background: none; padding: 0; font: inherit; color: inherit; text-decoration: underline; cursor: pointer; }
+.posters__none { margin: 0; color: var(--ink-muted); }
+.posters__grid--all { grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); }
 @media (max-width: 600px) {
   .posters__intro, .posters__series { padding: 16px; }
   .posters__grid { grid-template-columns: 1fr; }

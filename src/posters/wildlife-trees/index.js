@@ -13,6 +13,7 @@ import drawingUrl from './wildlife-trees.svg?url'
 import previewUrl from './preview.png'
 import { POSTERS } from '../catalogue.js'
 import { WILDLIFE_TREES } from './posters.js'
+import referenceScan from './reference.jpg'
 
 const { w, h } = POSTERS['wildlife-trees'].view
 
@@ -38,9 +39,17 @@ const fetchDrawing = () => {
   return drawing
 }
 
+// The Province's own scan of the sheet, reduced: the original to compare the reconstruction with.
+// It is the whole sheet, so it sits on the whole drawing.
+const REFERENCE = {
+  src: referenceScan,
+  box: WILDLIFE_TREES.parts.overview.box,
+  caption: 'The original is the Province’s scan of the printed sheet (Stand-level Biodiversity Brochure, Side 2), reduced to 1202 pixels wide.'
+}
+
 export const load = async () => {
   const { parts, order, regions, spotlight } = WILDLIFE_TREES
   // Started now, so the download runs while the stand-in is on screen.
   fetchDrawing().catch(() => {})
-  return { svgRaw: STAND_IN, upgrade: fetchDrawing, parts, order, regions, spotlight }
+  return { svgRaw: STAND_IN, upgrade: fetchDrawing, parts, order, regions, spotlight, reference: REFERENCE }
 }

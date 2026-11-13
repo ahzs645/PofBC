@@ -1,7 +1,7 @@
 // The posters: a shelf (see ShelfView.jsx) over the poster catalogue.
 
 import { ShelfView } from './ShelfView.jsx'
-import { POSTERS, SERIES } from './catalogue.js'
+import { FACETS, POSTERS, SERIES } from './catalogue.js'
 import coastalThumb from './coastal-forest/thumbnail.jpg'
 import dropThumb from './forest-service/dont-drop-it.svg?url'
 import gambleThumb from './forest-service/dont-gamble-with-fire.svg?url'
@@ -59,5 +59,6 @@ export const PostersView = () => (
     items={POSTERS}
     loaders={LOADERS}
     thumbnails={THUMBNAILS}
+    facets={FACETS}
   />
 )

@@ -6,9 +6,12 @@
 import { useEffect, useMemo, useState } from 'react'
 import { Dialog } from '../ui/Dialog.jsx'
 import { Segmented } from '../ui/Segmented.jsx'
-import { FORMATS, FORMAT_ORDER, downloadBlob, exportSvg, formatBytes, isFormatSupported } from './exportSvg.js'
+import { FORMATS, FORMAT_ORDER, downloadBlob, exportSvg, formatBytes, isFormatSupported, maxWidthFor } from './exportSvg.js'
 
-/** Pixel widths a custom entry is held to: below this a raster is no use, above it browsers can't draw. */
+/**
+ * Pixel widths a custom entry is held to: below this a raster is no use, above it browsers can't
+ * draw. A tall drawing is held to less, by its whole canvas (see maxWidthFor).
+ */
 const MIN_WIDTH = 200
 const MAX_WIDTH = 8000
 
@@ -29,11 +32,15 @@ export function ExportDialog({ open, onClose, targets, target, onTarget, dpiBase
   const supported = useMemo(() => Object.fromEntries(FORMAT_ORDER.map((f) => [f, isFormatSupported(f)])), [])
   const spec = FORMATS[format]
   const t = targets.find((x) => x.id === target) ?? targets[0]
+  // A target with a fixed page knows its shape, and so the widest raster it can make.
+  const widest = typeof t.inches === 'object' ? Math.min(MAX_WIDTH, maxWidthFor(t.inches.h / t.inches.w)) : MAX_WIDTH
+  const presets = t.widths.filter((w) => w <= widest)
 
   useEffect(() => {
     if (!open) return
     setStatus(null)
-    setWidth(t.widths[Math.min(1, t.widths.length - 1)])
+    const sizes = t.widths.filter((w) => w <= widest)
+    setWidth(sizes[Math.min(1, sizes.length - 1)] ?? widest)
     setCustom(false)
     setBackground(t.backgrounds?.[0]?.value ?? null)
   }, [open, t])
@@ -88,7 +95,7 @@ export function ExportDialog({ open, onClose, targets, target, onTarget, dpiBase
                 if (event.target.value === 'custom') { setCustom(true); setDraft(String(width)) } else { setCustom(false); setWidth(Number(event.target.value)) }
               }}
             >
-              {t.widths.map((w) => <option key={w} value={w}>{w} px{t.dpiBase ? ` · ${Math.round(w / t.dpiBase)} dpi` : ''}</option>)}
+              {presets.map((w) => <option key={w} value={w}>{w} px{t.dpiBase ? ` · ${Math.round(w / t.dpiBase)} dpi` : ''}</option>)}
               <option value="custom">Custom…</option>
             </select>
             {custom && (
@@ -97,7 +104,7 @@ export function ExportDialog({ open, onClose, targets, target, onTarget, dpiBase
                   type="number"
                   inputMode="numeric"
                   min={MIN_WIDTH}
-                  max={MAX_WIDTH}
+                  max={widest}
                   step={50}
                   value={draft}
                   aria-label="Custom pixel width"
@@ -105,7 +112,7 @@ export function ExportDialog({ open, onClose, targets, target, onTarget, dpiBase
                   onChange={(event) => {
                     setDraft(event.target.value)
                     const n = Math.round(Number(event.target.value))
-                    if (n >= MIN_WIDTH && n <= MAX_WIDTH) setWidth(n)
+                    if (n >= MIN_WIDTH && n <= widest) setWidth(n)
                   }}
                   onBlur={() => setDraft(String(width))}
                 />
@@ -113,7 +120,7 @@ export function ExportDialog({ open, onClose, targets, target, onTarget, dpiBase
               </label>
             )}
           </div>
-          {custom && <p className="pv-dialog-note">Any width from {MIN_WIDTH} to {MAX_WIDTH} px.</p>}
+          {custom && <p className="pv-dialog-note">Any width from {MIN_WIDTH} to {widest} px{widest < MAX_WIDTH ? '; this sheet is tall, so its whole canvas sets the limit' : ''}.</p>}
           {t.largeNote && width >= t.largeNote.from && <p className="pv-dialog-note">{t.largeNote.text}</p>}
           {t.backgrounds && (
             <Segmented wrap label="Background" value={background} onChange={setBackground} style={{ marginTop: 8 }} options={t.backgrounds.map((b) => ({

@@ -5,6 +5,7 @@
 // Boxes are in each drawing's own units, measured from its named layers in Chromium.
 
 import { POSTERS } from '../catalogue.js'
+import { withStories } from '../stories.js'
 
 // ── Shared context ──────────────────────────────────────────────────────────────────────────────
 
@@ -242,6 +243,7 @@ export const QUEEN_OF_SIDNEY = {
         em: 'either side of the flag',
         lede: 'The system’s name in plain capitals across the top, split by the flagpole.',
         blocks: [
+          'The ship gives a firmer bound than the wording. She entered service in 1960 as Sidney and was renamed Queen of Sidney in 1963, so a sticker with this name should be no earlier than that; the ship’s record, under Connections on the overview, has the source.',
           'It names British Columbia Ferries, not the Toll Authority. The ferries passed to an authority of their own on 1 April 1964, but the short name is a brand, used loosely; it does not say which body printed the sticker, or when. The decal stays undated until the ship’s naming, livery or a dated listing of the souvenir settles it.',
           'The letters are outlined Nimbus Sans Regular, fitted one by one to the picture: a substitute, not a claim about the original face.',
           { h: 'The authority' },
@@ -360,7 +362,6 @@ export const QUEEN_OF_SIDNEY = {
   order: ['overview', 'lettering', 'flag', 'flowers', 'helm', 'scene', 'ferry', 'ribbon']
 }
 
-export const BC_FERRIES_POSTERS = {
-  'go-bc-ferries': GO_BC_FERRIES,
-  'queen-of-sidney': QUEEN_OF_SIDNEY
-}
+// Each with its story (../stories.js) attached to its parts.
+export const BC_FERRIES_POSTERS = Object.fromEntries([GO_BC_FERRIES, QUEEN_OF_SIDNEY]
+  .map((poster) => [poster.id, { ...poster, parts: withStories(poster.id, poster.parts) }]))

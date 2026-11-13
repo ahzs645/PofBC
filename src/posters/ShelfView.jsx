@@ -22,8 +22,10 @@ import './posters.css'
  * @param {object} props.items       Each piece's catalogue card, by id.
  * @param {object} props.loaders     Each piece's loader: resolves to its drawing and parts.
  * @param {object} props.thumbnails  Each piece's card image URL.
+ * @param {Array}  [props.facets]    [{ key, label }]: card fields the shelf can be filtered by. Given
+ *                                   them, the shelf also offers every piece in one grid.
  */
-export const ShelfView = ({ view, param, title, intro, noun, series, itemsOf, items, loaders, thumbnails }) => {
+export const ShelfView = ({ view, param, title, intro, noun, series, itemsOf, items, loaders, thumbnails, facets }) => {
   const read = () => {
     const params = new URLSearchParams(globalThis.location?.search ?? '')
     const id = items[params.get(param)] ? params.get(param) : null
@@ -34,6 +36,10 @@ export const ShelfView = ({ view, param, title, intro, noun, series, itemsOf, it
   const [failed, setFailed] = useState(false)
   const [attempt, setAttempt] = useState(0)
   const cards = useRef({})
+  const shelfRef = useRef(null)
+  // How the shelf is laid out, and what it is narrowed to: by series, or every piece in one grid.
+  const [layout, setLayout] = useState('series')
+  const [filters, setFilters] = useState({})
   const parentNavigate = useNavigate()
   const order = series.flatMap(itemsOf)
   const seriesOf = (id) => series.find((entry) => itemsOf(entry).includes(id)) ?? null
@@ -92,36 +98,78 @@ export const ShelfView = ({ view, param, title, intro, noun, series, itemsOf, it
   const step = (id) => id && { title: items[id].title, open: () => go({ id, part: 'overview' }) }
   const shelf = { list: order.map((id) => ({ id, title: items[id].title })), index, open: (id) => go({ id, part: 'overview' }) }
 
+  // While a piece is open over the shelf, the shelf cannot be tabbed into or read from behind it.
+  useEffect(() => {
+    const shelfEl = shelfRef.current
+    if (!shelfEl) return
+    if (place.id) shelfEl.setAttribute('inert', '')
+    else shelfEl.removeAttribute('inert')
+  }, [place.id])
+
+  const narrowed = Object.values(filters).some(Boolean)
+  const matches = (id) => Object.entries(filters).every(([key, value]) => !value || items[id][key] === value)
+  const found = order.filter(matches)
+  const valuesOf = (key) => [...new Set(order.map((id) => items[id][key]).filter(Boolean))]
+  const card = (id) => (
+    <SiteLink key={id} to={{ view, [param]: id }} className="posters__card" ref={(element) => { cards.current[id] = element }}>
+      <span className="posters__thumb" style={{ background: items[id].background ?? undefined }}>
+        <img src={thumbnails[id]} alt="" loading="lazy" />
+      </span>
+      <span className="posters__card-text">
+        <span className="posters__title">{items[id].title}</span>
+        {items[id].blurb && <span className="posters__blurb">{items[id].blurb}</span>}
+        <span className="posters__dated">{[items[id].format, items[id].when].filter(Boolean).join(' · ')}</span>
+      </span>
+    </SiteLink>
+  )
+
   return (
     <NavigationContext.Provider value={navigate}>
-      <section className="posters" aria-label={title}>
+      <section className="posters" aria-label={title} ref={shelfRef}>
         {intro && (
           <div className="posters__intro">
             <h2>{title}</h2>
             <p>{intro}</p>
           </div>
         )}
-        {series.map((entry) => (
-          <section key={entry.id} className="posters__series" aria-labelledby={`series-${entry.id}`}>
-            <header className="posters__series-head">
-              <h3 id={`series-${entry.id}`}>{entry.title}</h3>
-              <p className="posters__kind">{entry.kind}</p>
-            </header>
-            <div className="posters__grid">
-              {itemsOf(entry).map((id) => (
-                <SiteLink key={id} to={{ view, [param]: id }} className="posters__card" ref={(element) => { cards.current[id] = element }}>
-                  <span className="posters__thumb" style={{ background: items[id].background ?? undefined }}>
-                    <img src={thumbnails[id]} alt="" loading="lazy" />
-                  </span>
-                  <span className="posters__card-text">
-                    <span className="posters__title">{items[id].title}</span>
-                    <span className="posters__dated">{items[id].when}</span>
-                  </span>
-                </SiteLink>
-              ))}
+        {facets && (
+          <div className="posters__tools" role="group" aria-label={`Browse the ${title.toLowerCase()}`}>
+            <div className="posters__layout" role="group" aria-label="Layout">
+              <button type="button" aria-pressed={layout === 'series'} onClick={() => setLayout('series')}>By series</button>
+              <button type="button" aria-pressed={layout === 'all'} onClick={() => setLayout('all')}>All pieces</button>
             </div>
-          </section>
-        ))}
+            {facets.map(({ key, label }) => (
+              <label key={key} className="posters__filter">
+                <span>{label}</span>
+                <select value={filters[key] ?? ''} onChange={(event) => setFilters((before) => ({ ...before, [key]: event.target.value || null }))}>
+                  <option value="">All</option>
+                  {valuesOf(key).map((value) => <option key={value} value={value}>{value}</option>)}
+                </select>
+              </label>
+            ))}
+            <p className="posters__count" role="status">
+              {narrowed ? `${found.length} of ${order.length}` : order.length} {found.length === 1 && narrowed ? noun : `${noun}s`}
+              {narrowed && <> · <button type="button" className="posters__clear" onClick={() => setFilters({})}>Clear filters</button></>}
+            </p>
+          </div>
+        )}
+        {layout === 'all' || narrowed
+          ? (
+            <section className="posters__series" aria-label={narrowed ? `Matching ${noun}s` : `All ${noun}s`}>
+              {found.length
+                ? <div className="posters__grid posters__grid--all">{found.map(card)}</div>
+                : <p className="posters__none">No {noun} matches all of those. <button type="button" className="posters__clear" onClick={() => setFilters({})}>Clear filters</button></p>}
+            </section>
+          )
+          : series.map((entry) => (
+            <section key={entry.id} className="posters__series" aria-labelledby={`series-${entry.id}`}>
+              <header className="posters__series-head">
+                <h3 id={`series-${entry.id}`}>{entry.title}</h3>
+                <p className="posters__kind">{entry.kind}</p>
+              </header>
+              <div className="posters__grid">{itemsOf(entry).map(card)}</div>
+            </section>
+          ))}
       </section>
 
       {shown && (
