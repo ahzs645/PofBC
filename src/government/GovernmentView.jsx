@@ -30,6 +30,7 @@ import { THEMES } from './theme.js'
 import { CURRENT_AS_OF, CURRENT_SOURCES } from './currentData.js'
 import { HISTORICAL_BODIES, HISTORY_SOURCES, MINISTERS, LOCAL_BODIES } from './historyData.js'
 import { TIMELINE_SOURCES } from './timelineData.js'
+import { AMR_ATTRIBUTION, AMR_COLLECTION, AMR_LICENCE } from './amrLicence.js'
 import './government.css'
 
 // What the view is drawn from, and how far to trust it: read in steps under Sources and caveats.
@@ -463,6 +464,10 @@ export const GovernmentView = ({ onOpenInGenerator, onChangeView }) => {
               <li key={source.id}><a href={source.url} target="_blank" rel="noreferrer">{source.title}</a></li>
             ))}
           </ul>
+          <p className="gov-muted gov-sources__licence">
+            Ministers’ responsibilities for Acts: <a href={AMR_COLLECTION.url} target="_blank" rel="noreferrer">{AMR_COLLECTION.title}</a>,
+            under the <a href={AMR_LICENCE.url} target="_blank" rel="noreferrer">{AMR_LICENCE.name}</a>. {AMR_ATTRIBUTION}
+          </p>
           <details className="gov-sources__more">
             <summary>{HISTORY_SOURCES.length} sources behind the history</summary>
             <ul>

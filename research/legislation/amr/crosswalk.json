@@ -1,0 +1,424 @@
+{
+  "note": "Hand-curated: AMR minister title, and the dates (inclusive, ISO) it holds for, to a PofBC ministry episode id (src/government/episodes.js MINISTRY_EPISODES). Dates are cabinet changes as the AMR listings show them (base OICs 213/2017 from 2017-07-18, 602/2020 from 2020-11-26, 658/2022 from 2022-12-07, 596/2024 from 2024-11-18) and, inside a cabinet, the listings a title first or last appears in. episodeId null means deliberately unmapped (see reason); a title missing here, or matched by two entries, goes to research/audit/amr-review.json. Read by scripts/build-government-amr.mjs, which fails on an unknown episode id.",
+  "entries": [
+    {
+      "amrTitle": "Premier",
+      "validFrom": null,
+      "validTo": null,
+      "episodeId": null,
+      "reason": "The Premier's Acts are administered through the Office of the Premier, which has no ministry episode in PofBC."
+    },
+    {
+      "amrTitle": "Attorney General",
+      "validFrom": "2017-07-18",
+      "validTo": "2024-11-17",
+      "episodeId": "ministry-of-attorney-general-2017"
+    },
+    {
+      "amrTitle": "Attorney General and Minister Responsible for Housing",
+      "validFrom": "2020-11-26",
+      "validTo": "2022-12-06",
+      "episodeId": "ministry-of-attorney-general-2017",
+      "note": "Housing responsibility held by the Attorney General; the ministry stayed the Ministry of Attorney General."
+    },
+    {
+      "amrTitle": "Attorney General and Deputy Premier",
+      "validFrom": "2024-11-18",
+      "validTo": null,
+      "episodeId": "ministry-of-attorney-general-2017"
+    },
+    {
+      "amrTitle": "Minister of Aboriginal Relations and Reconciliation",
+      "validFrom": null,
+      "validTo": "2017-07-17",
+      "episodeId": "ministry-of-aboriginal-relations-and-reconciliation-2005"
+    },
+    {
+      "amrTitle": "Minister of Advanced Education",
+      "validFrom": null,
+      "validTo": "2017-07-17",
+      "episodeId": "ministry-of-advanced-education-2013"
+    },
+    {
+      "amrTitle": "Minister of Advanced Education, Skills and Training",
+      "validFrom": "2017-07-18",
+      "validTo": "2020-11-25",
+      "episodeId": "ministry-of-advanced-education-skills-and-training-2017"
+    },
+    {
+      "amrTitle": "Minister of Advanced Education and Skills Training",
+      "validFrom": "2020-11-26",
+      "validTo": "2022-12-06",
+      "episodeId": "ministry-of-advanced-education-and-skills-training-2020"
+    },
+    {
+      "amrTitle": "Minister of Agriculture",
+      "validFrom": null,
+      "validTo": "2020-11-25",
+      "episodeId": "ministry-of-agriculture-2010"
+    },
+    {
+      "amrTitle": "Minister of Agriculture, Food and Fisheries",
+      "validFrom": "2020-11-26",
+      "validTo": "2022-03-31",
+      "episodeId": "ministry-of-agriculture-food-and-fisheries-2020"
+    },
+    {
+      "amrTitle": "Minister of Agriculture and Food",
+      "validFrom": "2022-05-26",
+      "validTo": null,
+      "episodeId": "ministry-of-agriculture-and-food-2022"
+    },
+    {
+      "amrTitle": "Minister of Children and Family Development",
+      "validFrom": null,
+      "validTo": null,
+      "episodeId": "ministry-of-children-and-family-development-2001"
+    },
+    {
+      "amrTitle": "Minister of Citizens' Services",
+      "validFrom": "2017-07-18",
+      "validTo": null,
+      "episodeId": "ministry-of-citizens-services-2017",
+      "note": "PofBC spells the ministry Citizens’ Services (episodes.js SPELLING)."
+    },
+    {
+      "amrTitle": "Minister of Community, Sport and Cultural Development",
+      "validFrom": null,
+      "validTo": "2017-07-17",
+      "episodeId": "ministry-of-community-sport-and-cultural-development-2010"
+    },
+    {
+      "amrTitle": "Minister of Community, Sport and Cultural Development and Minister Responsible for TransLink",
+      "validFrom": null,
+      "validTo": "2017-07-17",
+      "episodeId": "ministry-of-community-sport-and-cultural-development-2010"
+    },
+    {
+      "amrTitle": "Minister of Education",
+      "validFrom": null,
+      "validTo": "2022-03-31",
+      "episodeId": "ministry-of-education-1998"
+    },
+    {
+      "amrTitle": "Minister of Education and Child Care",
+      "validFrom": "2022-05-26",
+      "validTo": null,
+      "episodeId": "ministry-of-education-and-child-care-2022"
+    },
+    {
+      "amrTitle": "Minister of Emergency Management and Climate Readiness",
+      "validFrom": "2022-12-07",
+      "validTo": null,
+      "episodeId": "ministry-of-emergency-management-and-climate-readiness-2022"
+    },
+    {
+      "amrTitle": "Minister of Energy and Mines",
+      "validFrom": null,
+      "validTo": "2017-07-17",
+      "episodeId": "ministry-of-energy-and-mines-2013"
+    },
+    {
+      "amrTitle": "Minister of Energy and Mines and Minister Responsible for Core Review",
+      "validFrom": null,
+      "validTo": "2017-07-17",
+      "episodeId": "ministry-of-energy-and-mines-2013"
+    },
+    {
+      "amrTitle": "Minister of Energy, Mines and Petroleum Resources",
+      "validFrom": "2017-07-18",
+      "validTo": "2020-11-25",
+      "episodeId": "ministry-of-energy-mines-and-petroleum-resources-2017"
+    },
+    {
+      "amrTitle": "Minister of Energy, Mines and Low Carbon Innovation",
+      "validFrom": "2020-11-26",
+      "validTo": "2024-11-17",
+      "episodeId": "ministry-of-energy-mines-and-low-carbon-innovation-2020"
+    },
+    {
+      "amrTitle": "Minister of Energy and Climate Solutions",
+      "validFrom": "2024-11-18",
+      "validTo": null,
+      "episodeId": "ministry-of-energy-and-climate-solutions-2024"
+    },
+    {
+      "amrTitle": "Minister of Environment",
+      "validFrom": null,
+      "validTo": "2017-07-17",
+      "episodeId": "ministry-of-environment-2005"
+    },
+    {
+      "amrTitle": "Minister of Environment and Climate Change Strategy",
+      "validFrom": "2017-07-18",
+      "validTo": "2024-11-17",
+      "episodeId": "ministry-of-environment-and-climate-change-strategy-2017"
+    },
+    {
+      "amrTitle": "Minister of Environment and Climate Change Strategy and Minister Responsible for TransLink",
+      "validFrom": "2017-07-18",
+      "validTo": "2024-11-17",
+      "episodeId": "ministry-of-environment-and-climate-change-strategy-2017"
+    },
+    {
+      "amrTitle": "Minister of Environment and Parks",
+      "validFrom": "2024-11-18",
+      "validTo": null,
+      "episodeId": "ministry-of-environment-and-parks-2024"
+    },
+    {
+      "amrTitle": "Minister of Finance",
+      "validFrom": null,
+      "validTo": null,
+      "episodeId": "ministry-of-finance-2001"
+    },
+    {
+      "amrTitle": "Minister of Finance and Deputy Premier",
+      "validFrom": "2017-07-18",
+      "validTo": "2020-11-25",
+      "episodeId": "ministry-of-finance-2001"
+    },
+    {
+      "amrTitle": "Minister of Forests, Lands and Natural Resource Operations",
+      "validFrom": null,
+      "validTo": "2017-07-17",
+      "episodeId": "ministry-of-forests-lands-and-natural-resource-operations-2011"
+    },
+    {
+      "amrTitle": "Minister of Forests, Lands, Natural Resource Operations and Rural Development",
+      "validFrom": "2017-07-18",
+      "validTo": "2022-03-31",
+      "episodeId": "ministry-of-forests-lands-natural-resource-operations-and-rural-development-2017"
+    },
+    {
+      "amrTitle": "Minister of Forests",
+      "validFrom": "2022-05-26",
+      "validTo": null,
+      "episodeId": "ministry-of-forests-2022"
+    },
+    {
+      "amrTitle": "Minister of Health",
+      "validFrom": null,
+      "validTo": null,
+      "episodeId": "ministry-of-health-2011"
+    },
+    {
+      "amrTitle": "Minister of Housing",
+      "validFrom": "2022-12-07",
+      "validTo": "2024-11-17",
+      "episodeId": "ministry-of-housing-2022"
+    },
+    {
+      "amrTitle": "Minister of Housing and Municipal Affairs",
+      "validFrom": "2024-11-18",
+      "validTo": null,
+      "episodeId": "ministry-of-housing-and-municipal-affairs-2024"
+    },
+    {
+      "amrTitle": "Minister of Indigenous Relations and Reconciliation",
+      "validFrom": "2017-07-18",
+      "validTo": null,
+      "episodeId": "ministry-of-indigenous-relations-and-reconciliation-2017"
+    },
+    {
+      "amrTitle": "Minister of Infrastructure",
+      "validFrom": "2024-11-18",
+      "validTo": null,
+      "episodeId": "ministry-of-infrastructure-2024"
+    },
+    {
+      "amrTitle": "Minister of International Trade",
+      "validFrom": null,
+      "validTo": "2017-07-17",
+      "episodeId": "ministry-of-international-trade-2013"
+    },
+    {
+      "amrTitle": "Minister of International Trade and Minister Responsible for Asia Pacific Strategy and Multiculturalism",
+      "validFrom": null,
+      "validTo": "2017-07-17",
+      "episodeId": "ministry-of-international-trade-2013"
+    },
+    {
+      "amrTitle": "Minister of Jobs, Tourism and Skills Training",
+      "validFrom": null,
+      "validTo": "2017-07-17",
+      "episodeId": "ministry-of-jobs-tourism-and-skills-training-2012"
+    },
+    {
+      "amrTitle": "Minister of Jobs, Tourism and Skills Training and Minister Responsible for Labour",
+      "validFrom": null,
+      "validTo": "2017-07-17",
+      "episodeId": "ministry-of-jobs-tourism-and-skills-training-2012"
+    },
+    {
+      "amrTitle": "Minister of Jobs, Trade and Technology",
+      "validFrom": "2017-07-18",
+      "validTo": "2020-01-21",
+      "episodeId": "ministry-of-jobs-trade-and-technology-2017"
+    },
+    {
+      "amrTitle": "Minister of Jobs, Economic Development and Competitiveness",
+      "validFrom": "2020-02-06",
+      "validTo": "2020-11-25",
+      "episodeId": "ministry-of-jobs-economic-development-and-competitiveness-2020"
+    },
+    {
+      "amrTitle": "Minister of Jobs, Economic Recovery and Innovation",
+      "validFrom": "2020-11-26",
+      "validTo": "2022-12-06",
+      "episodeId": "ministry-of-jobs-economic-recovery-and-innovation-2020"
+    },
+    {
+      "amrTitle": "Minister of Jobs, Economic Development and Innovation",
+      "validFrom": "2022-12-07",
+      "validTo": "2025-07-16",
+      "episodeId": "ministry-of-jobs-economic-development-and-innovation-2022"
+    },
+    {
+      "amrTitle": "Minister of Jobs and Economic Growth",
+      "validFrom": "2025-08-06",
+      "validTo": null,
+      "episodeId": "ministry-of-jobs-and-economic-growth-2025"
+    },
+    {
+      "amrTitle": "Minister of Justice",
+      "validFrom": null,
+      "validTo": "2017-07-17",
+      "episodeId": "ministry-of-justice-2012"
+    },
+    {
+      "amrTitle": "Minister of Labour",
+      "validFrom": "2017-07-18",
+      "validTo": null,
+      "episodeId": "ministry-of-labour-2017"
+    },
+    {
+      "amrTitle": "Minister of Land, Water and Resource Stewardship",
+      "validFrom": "2022-03-31",
+      "validTo": "2022-12-06",
+      "episodeId": "ministry-of-land-water-and-resource-stewardship-2022"
+    },
+    {
+      "amrTitle": "Minister of Water, Land and Resource Stewardship",
+      "validFrom": "2022-12-07",
+      "validTo": null,
+      "episodeId": "ministry-of-water-land-and-resource-stewardship-2022"
+    },
+    {
+      "amrTitle": "Minister of Mental Health and Addictions",
+      "validFrom": "2017-07-18",
+      "validTo": "2024-11-17",
+      "episodeId": "ministry-of-mental-health-and-addictions-2017"
+    },
+    {
+      "amrTitle": "Minister of Mining and Critical Minerals",
+      "validFrom": "2024-11-18",
+      "validTo": null,
+      "episodeId": "ministry-of-mining-and-critical-minerals-2024"
+    },
+    {
+      "amrTitle": "Minister of Municipal Affairs and Housing",
+      "validFrom": "2017-07-18",
+      "validTo": "2020-11-25",
+      "episodeId": "ministry-of-municipal-affairs-and-housing-2017"
+    },
+    {
+      "amrTitle": "Minister of Municipal Affairs",
+      "validFrom": "2020-11-26",
+      "validTo": "2024-11-17",
+      "episodeId": "ministry-of-municipal-affairs-2020"
+    },
+    {
+      "amrTitle": "Minister of Natural Gas Development",
+      "validFrom": null,
+      "validTo": "2017-07-17",
+      "episodeId": "ministry-of-natural-gas-development-2013"
+    },
+    {
+      "amrTitle": "Minister of Natural Gas Development and Minister Responsible for Housing and Deputy Premier",
+      "validFrom": null,
+      "validTo": "2017-07-17",
+      "episodeId": "ministry-of-natural-gas-development-2013"
+    },
+    {
+      "amrTitle": "Minister of Post-Secondary Education and Future Skills",
+      "validFrom": "2022-12-07",
+      "validTo": null,
+      "episodeId": "ministry-of-post-secondary-education-and-future-skills-2022"
+    },
+    {
+      "amrTitle": "Minister of Public Safety and Solicitor General",
+      "validFrom": null,
+      "validTo": "2017-07-17",
+      "episodeId": null,
+      "reason": "Before July 2017 the Minister of Public Safety and Solicitor General served alongside the Minister of Justice, while episodes.js closes the PSSG ministry in 2012 (merged into Justice) and reopens it in 2017. Which episode stands for this minister's Acts in 2015–2017 needs a decision; not guessed."
+    },
+    {
+      "amrTitle": "Minister of Public Safety and Solicitor General",
+      "validFrom": "2017-07-18",
+      "validTo": null,
+      "episodeId": "ministry-of-public-safety-and-solicitor-general-2017",
+      "note": "The 2017 episode (episodes.js LATER), not the 2001 one."
+    },
+    {
+      "amrTitle": "Minister of Public Safety and Solicitor General and Deputy Premier",
+      "validFrom": "2022-12-07",
+      "validTo": "2024-11-17",
+      "episodeId": "ministry-of-public-safety-and-solicitor-general-2017"
+    },
+    {
+      "amrTitle": "Minister of Small Business and Red Tape Reduction",
+      "validFrom": null,
+      "validTo": "2017-07-17",
+      "episodeId": "ministry-of-small-business-and-red-tape-reduction-2015"
+    },
+    {
+      "amrTitle": "Minister of Small Business and Red Tape Reduction and Minister Responsible for the Liquor Distribution Branch",
+      "validFrom": null,
+      "validTo": "2017-07-17",
+      "episodeId": "ministry-of-small-business-and-red-tape-reduction-2015"
+    },
+    {
+      "amrTitle": "Minister of Social Development and Social Innovation",
+      "validFrom": null,
+      "validTo": "2017-07-17",
+      "episodeId": "ministry-of-social-development-and-social-innovation-2013"
+    },
+    {
+      "amrTitle": "Minister of Social Development and Poverty Reduction",
+      "validFrom": "2017-07-18",
+      "validTo": null,
+      "episodeId": "ministry-of-social-development-and-poverty-reduction-2017"
+    },
+    {
+      "amrTitle": "Minister of Technology, Innovation and Citizens' Services",
+      "validFrom": null,
+      "validTo": "2017-07-17",
+      "episodeId": "ministry-of-technology-innovation-and-citizens-services-2013"
+    },
+    {
+      "amrTitle": "Minister of Tourism, Arts and Culture",
+      "validFrom": "2017-07-18",
+      "validTo": "2020-11-25",
+      "episodeId": "ministry-of-tourism-arts-and-culture-2017"
+    },
+    {
+      "amrTitle": "Minister of Tourism, Arts, Culture and Sport",
+      "validFrom": "2020-11-26",
+      "validTo": null,
+      "episodeId": "ministry-of-tourism-arts-culture-and-sport-2020"
+    },
+    {
+      "amrTitle": "Minister of Transportation and Infrastructure",
+      "validFrom": null,
+      "validTo": "2024-11-17",
+      "episodeId": "ministry-of-transportation-and-infrastructure-2008"
+    },
+    {
+      "amrTitle": "Minister of Transportation and Transit",
+      "validFrom": "2024-11-18",
+      "validTo": null,
+      "episodeId": "ministry-of-transportation-and-transit-2024"
+    }
+  ]
+}
