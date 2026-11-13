@@ -1,5 +1,11 @@
 # Shared Services BC: why the collection has no graph node
 
+**Superseded on 13 November 2026.** The sources listed under “What would settle it” were read, and the body
+now exists: `shared-services-bc` in `research/history/bodies-shared-services-2026-11-13.json` (launched as
+Solutions BC on 1 April 2003; Shared Services BC by February 2006; name last seen in 2015, end untraced), with
+its events in `research/atlas/events-shared-services-2026-11-13.json`. The collection is bound to it. The
+account below is kept as it was written.
+
 Checked 13 November 2026.
 
 `src/gallery/collections.js` places the collection `shared-services-bc` with `graphNode: null`. This is deliberate. The government graph has no node for this body, and this package cannot support adding one.

@@ -408,3 +408,44 @@ test('incorrect expense totals reject an import before changing published data',
     assert.equal(readFileSync(join(f.out, 'sentinel'), 'utf8'), 'working site')
   } finally { rmSync(f.dir, { recursive: true, force: true }) }
 })
+
+test('a later collection register supersedes its pinned backlog lead without accepting rows', async () => {
+  const { applyCollectionRegisters, sourceCatalog } = await import('./lib/salary-sources.mjs')
+  const backlog = { sources: [{ id: 'old', employerSlug: 'university-of-northern-bc', year: '2021/22', sourceUrl: 'https://example.test/sofi.pdf', scope: 'employee-remuneration',
+    status: 'official-source-indexed-awaiting-validation', reviewedOn: '2026-11-02', blockers: [{ reason: 'Direct download returned 403.' }] }] }
+  const lead = (extra) => ({ employer: 'Example', accepted_employee_rows: 0, next_action: 'Extract.', binary: { sha256: 'abc', extraction_mode: 'native-text' }, ...extra })
+  const register = { reviewed_on: '2026-11-12', leads: [
+    lead({ id: 'new', existing_backlog_id: 'old', reporting_period: '2021/22', source_url: 'https://example.test/sofi.pdf', source_status: 'located-original-retrieved-approval-verified' }),
+    lead({ id: 'scan', employer: 'District of Example', employer_slug: 'district-of-example', reporting_period: '2024', source_url: 'https://example.test/scan.pdf', source_status: 'located-original-retrieved-approval-verified', binary: { extraction_mode: 'scanned-pages-no-native-text' } }),
+    lead({ id: 'pending', employer_slug: 'district-of-example', reporting_period: '2025', source_url: 'https://example.test/p.pdf', source_status: 'located-original-retrieved-approval-unverified' })
+  ] }
+  const merged = applyCollectionRegisters(backlog, [{ path: 'register.json', register }])
+  assert.deepEqual(merged.sources.map((entry) => [entry.id, entry.status]), [
+    ['new', 'source-found-awaiting-extraction'], ['scan', 'requires-ocr'], ['pending', 'official-source-indexed-awaiting-validation']])
+  assert.match(merged.sources[0].notes.at(-1), /Earlier state \(backlog reviewed 2026-11-02\): Direct download returned 403/)
+  assert.equal(backlog.sources[0].status, 'official-source-indexed-awaiting-validation')
+  assert.equal(sourceCatalog(merged).find((entry) => entry.id === 'scan').employerName, 'District of Example')
+  assert.throws(() => applyCollectionRegisters(backlog, [{ path: 'r', register: { leads: [lead({ id: 'x', accepted_employee_rows: 5 })] } }]), /accept them through a manifest/)
+})
+
+test('a collection lead accepted through a manifest yields to that manifest and must match it', async () => {
+  const { applyCollectionRegisters, sourceCatalog } = await import('./lib/salary-sources.mjs')
+  const url = 'https://example.test/sofi.pdf'
+  const backlog = { sources: [{ id: 'old', employerSlug: 'university-of-northern-bc', year: '2021/22', sourceUrl: url, scope: 'employee-remuneration', status: 'official-source-indexed-awaiting-validation' }] }
+  const lead = (extra) => ({ id: 'new', employer: 'UNBC', employer_slug: 'university-of-northern-bc', existing_backlog_id: 'old', reporting_period: '2021/22', source_url: url,
+    source_status: 'located-original-retrieved-approval-verified', binary: { sha256: 'a'.repeat(64) }, acceptance_status: 'accepted-via-source-manifest',
+    accepted_employee_rows: 3, accepted_source_ids: ['unbc-2021-22'], ...extra })
+  const source = { id: 'unbc-2021-22', registerLead: 'new', employerSlug: 'university-of-northern-bc', year: '2021/22', sourceUrl: url, sha256: 'a'.repeat(64),
+    file: 'rows.json.gzip', status: 'verified', category: 'employee-remuneration', rowCount: 3 }
+  const manifests = [{ collection: 'c', manifest: { sources: [source] } }]
+  const apply = (extra, loaded = manifests) => applyCollectionRegisters(backlog, [{ path: 'r', register: { reviewed_on: '2026-11-12', leads: [lead(extra)] } }], loaded)
+  const merged = apply({})
+  assert.deepEqual(merged.sources, [])
+  const catalog = sourceCatalog(merged, manifests)
+  assert.deepEqual(catalog.map((entry) => [entry.id, entry.status, entry.rows]), [['unbc-2021-22', 'imported', 3]])
+  assert.throws(() => apply({ accepted_employee_rows: 4 }), /claims 4 accepted rows; its manifests hold 3/)
+  assert.throws(() => apply({ accepted_source_ids: ['missing'] }), /names no accepted manifest source missing/)
+  assert.throws(() => apply({ binary: { sha256: 'b'.repeat(64) } }), /different document/)
+  assert.throws(() => apply({ acceptance_status: 'awaiting-complete-extraction-and-validation' }), /accept them through a manifest/)
+  assert.throws(() => apply({}, null), /accepting manifests are needed/)
+})

@@ -1119,6 +1119,18 @@ export const COLLECTED_DISPLAY = {
    "recoloured": true
   }
  },
+ "bc-trade-1991-rebuilt": {
+  "light": {
+   "file": "identity-display/bc-trade-1991-rebuilt.light.svg",
+   "aspect": 0.8469,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/bc-trade-1991-rebuilt.dark.svg",
+   "aspect": 0.8469,
+   "recoloured": true
+  }
+ },
  "vector-bc-public-service-where-ideas-work-2023-reverse": {
   "light": {
    "file": "identity-display/vector-bc-public-service-where-ideas-work-2023-reverse.light.svg",

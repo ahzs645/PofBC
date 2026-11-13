@@ -1,0 +1,68 @@
+{
+  "runAt": "2026-11-13T18:29:14.255Z",
+  "scope": "Actual React GalleryView and CollectedPaletteView compiled by Vite SSR and mounted with React DOM in JSDOM; real file-backed SVG fetch; no component test doubles.",
+  "baseUrl": "/PofBC/",
+  "totals": {
+    "tests": 10,
+    "passed": 10,
+    "failed": 0
+  },
+  "checks": [
+    {
+      "name": "Knowledge: four colour controls share one fetch, exact SVG/download bytes and correct background",
+      "status": "passed"
+    },
+    {
+      "name": "Gallery: old Knowledge EPS link without logos opens correct collection and palette",
+      "status": "passed"
+    },
+    {
+      "name": "Gallery: old Knowledge SVG link without logos opens correct collection and palette",
+      "status": "passed"
+    },
+    {
+      "name": "Gallery: old Knowledge PNG link without logos opens correct collection and palette",
+      "status": "passed"
+    },
+    {
+      "name": "Gallery: old Northern Health black source opens shared tagline master in black",
+      "status": "passed"
+    },
+    {
+      "name": "Gallery: old StrongerBC RGB reverse opens correct shared vector palette",
+      "status": "passed"
+    },
+    {
+      "name": "Gallery: old StrongerBC Solid reverse opens correct shared vector palette",
+      "status": "passed"
+    },
+    {
+      "name": "Palette loading: failed request has no stale download and retry loads real SVG",
+      "status": "passed"
+    },
+    {
+      "name": "Gallery navigation: leaving a white Knowledge palette clears colour before Northern Health opens",
+      "status": "passed"
+    },
+    {
+      "name": "Gallery reload: explicit selected colour overrides old-source alias and survives remount",
+      "status": "passed"
+    }
+  ],
+  "domErrors": [],
+  "sourceSha256": {
+    "src/gallery/CollectedPaletteView.jsx": "908d51e8f6b5071185e44267222de4014ff64417aaff9dbfd022dfbfc1665894",
+    "src/gallery/CollectedMarkView.jsx": "38f363156327f9b9f28ddc35a84bb7cc23dac23af8835bb868fadc707662bf47",
+    "src/gallery/collectedPalettes.js": "a0769656c2c1afc33e7a31cca7378d1f1337c9af7df11aecc7a138638967438d",
+    "src/gallery/collectedCollections.js": "8666c6c5c554dfbf827102a30a464440329a6c92631365da5518df225b86c838",
+    "src/gallery/collections.js": "8bed4178c8f43ee4c2afa1b45aa362e0df3e7080344e274c19e9f4a3ddbacfdf",
+    "src/gallery/GalleryView.jsx": "dca0d49db871ded9ad47584ec16d21dd0578af69d673c8c2324edbc7a8891b76",
+    "src/gallery/collectedData.js": "e996af499f13f8a7c9ea1c40cd608cfd78579b79ff5bc7ea230f7d9cb0cb0e49"
+  },
+  "limitations": [
+    "JSDOM does not validate physical browser layout, font rendering, image decode, or an actual browser download to disk.",
+    "Network fetch is replaced by reading the real SVG files from the repository public directory; source bodies, palette transform, React components and event handlers are real.",
+    "The SSR bundle is used as a browser-module compilation route; this is not a server-rendered-page assertion.",
+    "This does not replace desktop/mobile browser visual acceptance."
+  ]
+}

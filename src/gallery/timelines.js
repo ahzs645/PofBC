@@ -531,7 +531,7 @@ export const TIMELINES = {
         status: 'held',
         marks: [
           'vector-BCID_StrongerBC_RGB_pos', 'vector-BCID_StrongerBC_RGB_rev', 'vector-BCID_StrongerBC_Solid_pos', 'vector-BCID_StrongerBC_Solid_rev',
-          'vector-StrongerBC_RGB_pos', 'vector-StrongerBC_RGB_rev', 'vector-StrongerBC_Solid_pos', 'vector-StrongerBC_Solid_rev'
+          'vector-StrongerBC_RGB_pos', 'vector-StrongerBC_Solid_pos'
         ],
         years: '2022–present',
         label: 'StrongerBC, the core brand',

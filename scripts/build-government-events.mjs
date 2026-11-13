@@ -143,8 +143,14 @@ for (const name of atlasFiles) {
       // The other bodies the event names (the recipients of a transfer, the parties to a merger), so it
       // is found from each of them too.
       ...(record.related_subject_ids?.length ? { related: record.related_subject_ids } : {}),
+      // How sure the sources are, kept apart from status (past/planned/scheduled): a 1950 founding
+      // can be past and still disputed. Only a qualified certainty is carried; "documented" is the norm.
+      ...(record.certainty && record.certainty !== 'documented' ? { certainty: record.certainty } : {}),
+      ...(record.competing_event_ids?.length ? { competingEvents: record.competing_event_ids } : {}),
       ...(record.related_event_ids?.length ? { relatedEvents: record.related_event_ids } : {}),
       ...(record.related_legal_references?.length ? { legalReferences: record.related_legal_references } : {}),
+      // Instruments the research names for the event explicitly (a policy document, say), for the catalogue.
+      ...(record.instruments?.length ? { instruments: record.instruments } : {}),
       ...(record.unresolved_related_entities?.length ? { unresolvedRelated: record.unresolved_related_entities } : {})
     }, origin: `atlas/${name}#${record.id}`, input: record })
   }
@@ -220,7 +226,7 @@ writeFileSync(OUT, [
   '',
   `export const EVENT_SOURCES = ${json(sources)}`,
   '',
-  '/** {id, subject, type, title, date: {start, end, precision, inclusive}, status, sources, locator, notes, reviewed} */',
+  '/** {id, subject, type, title, date: {start, end, precision, inclusive}, status, certainty?, competingEvents?, sources, locator, notes, reviewed} */',
   'export const EVENTS = [',
   ...events.map((event) => `  ${json(event)},`),
   ']',

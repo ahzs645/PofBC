@@ -788,7 +788,8 @@
       "priority": "high",
       "findings": [
         "The source landscape has purple/blue mountain masses and distinctive snowcaps; the current supplied scene uses a nearly black mountain field and different peak profiles.",
-        "The current trees and water are more intricate than the sewn silhouette, and the title/plate spacing differs between the Parks and Ranger specimens."
+        "The current trees and water are more intricate than the sewn silhouette, and the title/plate spacing differs between the Parks and Ranger specimens.",
+        "The window frame was corrected on 2026-11-13: it now follows the scene's flared shoulders as an even white outline, as the source shows, in place of a square step that left a white wedge in each shoulder."
       ],
       "proposedFix": "Refit the landscape to the actual stitched colour specimens, with separate plate/layout adjustments for Parks and Parks · Ranger.",
       "evidenceLimitations": "Visual comparison preserves the source reference proportions. Perspective, cloth deformation, exact stitch structure and calibrated thread colours are not established by these references.",
@@ -796,7 +797,7 @@
         "S27-O04"
       ],
       "baselineSvgSha256": "0666f016eaf11ec53b17f3698c3614c762b6522782f4c55ff2717fd5d7374395",
-      "reviewedSvgSha256": "0666f016eaf11ec53b17f3698c3614c762b6522782f4c55ff2717fd5d7374395",
+      "reviewedSvgSha256": "f9d643e34b6a3b3c06ecaf39918ceb5aa7821f493f034d2d3badc8117b1af2cc",
       "candidateChanges": []
     },
     {
@@ -805,7 +806,8 @@
       "priority": "high",
       "findings": [
         "The source landscape has purple/blue mountain masses and distinctive snowcaps; the current supplied scene uses a nearly black mountain field and different peak profiles.",
-        "The current trees and water are more intricate than the sewn silhouette, and the title/plate spacing differs between the Parks and Ranger specimens."
+        "The current trees and water are more intricate than the sewn silhouette, and the title/plate spacing differs between the Parks and Ranger specimens.",
+        "The window frame was corrected on 2026-11-13: it now follows the scene's flared shoulders as an even white outline, as the source shows, in place of a square step that left a white wedge in each shoulder."
       ],
       "proposedFix": "Refit the landscape to the actual stitched colour specimens, with separate plate/layout adjustments for Parks and Parks · Ranger.",
       "evidenceLimitations": "Visual comparison preserves the source reference proportions. Perspective, cloth deformation, exact stitch structure and calibrated thread colours are not established by these references.",
@@ -813,7 +815,7 @@
         "S30-O04"
       ],
       "baselineSvgSha256": "9fdc5dc41f37606227a0b08c33e99aeebc53836bbb876458983f67f8c73f0530",
-      "reviewedSvgSha256": "9fdc5dc41f37606227a0b08c33e99aeebc53836bbb876458983f67f8c73f0530",
+      "reviewedSvgSha256": "f9c4de1bc1a7e32611e7b7ef1f906e17a95b85b9ecc3b4509f4d7403a89c44e8",
       "candidateChanges": []
     },
     {
@@ -2817,20 +2819,31 @@
     },
     {
       "id": "S56-O23",
-      "status": "reconstruct",
-      "priority": "high",
+      "status": "source-limited",
+      "priority": "medium",
       "findings": [
-        "The source central 86 mark appears tall and compact; the reconstruction makes a broad, low pair of loops.",
-        "The caption-to-mark spacing and relative scale differ substantially from the photographed Expo badge."
+        "The upper caption visibly reads EMERGENCY; the corrected reconstruction removes the atlas's mistaken CRIME PREVENTION reading.",
+        "The short second row is reconstructed as SERVICE following the user's reading. The 75 × 57 source crop does not establish every letter or exclude a final S, so this transcription remains provisional.",
+        "The corrected composition uses the complete stacked EXPO-over-86 geometry from PofBC's collected expo86-symbol.svg, recoloured gold and scaled uniformly, replacing the broad schematic loops and substitute EXPO lettering.",
+        "The curved crown, tapered sides, blue field, dark edging and thin gold inner border follow the source's broad structure; exact embroidered contours, alphabet and thread colours remain unresolved."
       ],
-      "proposedFix": "Verify the appropriate Expo 86 mark, preserve its aspect ratio, and rebuild the lettering/emblem composition within the shield.",
-      "evidenceLimitations": "Collector-board crop from a 480 × 640 image; blur, perspective, thread texture and uncalibrated colours limit exact contour, alphabet and heraldic-detail claims.",
+      "proposedFix": "Retain the corrected composition and seek a clearer specimen photograph to confirm SERVICE versus SERVICES, the exact embroidered alphabet, border contours and thread colours.",
+      "evidenceLimitations": "The specimen is a 75 × 57 crop of a 480 × 640 collector board. Blur, perspective, thread texture and uncalibrated colours limit exact transcription and geometry. EMERGENCY is visible; SERVICE is a provisional user-supported reading. The reused PofBC Expo logo is Mwtoews's third-party vector reconstruction, not an authenticated historical manufacturing master. No issue date or physical dimensions are inferred.",
       "inspectedOccurrences": [
         "S56-O23"
       ],
       "baselineSvgSha256": "ce38984b19c265c5c0b79aef3d6b925073db55e93475ced0caaa8655d16b47d8",
-      "reviewedSvgSha256": "ce38984b19c265c5c0b79aef3d6b925073db55e93475ced0caaa8655d16b47d8",
-      "candidateChanges": []
+      "reviewedSvgSha256": "a0029b139562dd84c977497fe7aac8b1a39e73218b252d4c3d4ea59173832b96",
+      "candidateChanges": [
+        "Corrected CRIME PREVENTION to EMERGENCY and added the smaller, provisionally transcribed SERVICE row beneath it using outlined letters.",
+        "Reused the exact collected EXPO-over-86 vector from public/identity-collected/expo-86-corporation/expo86-symbol.svg, preserving its geometry and aspect ratio while recolouring it gold.",
+        "Rebuilt the symmetric shield and inset border, then refitted the caption and logo spacing to the source composition."
+      ],
+      "baselineFindings": [
+        "The source central 86 mark appears tall and compact; the reconstruction makes a broad, low pair of loops.",
+        "The caption-to-mark spacing and relative scale differ substantially from the photographed Expo badge."
+      ],
+      "reviewedAt": "2026-11-13"
     },
     {
       "id": "S56-O24",

@@ -14,7 +14,15 @@
     "accepted_employee_rows_added": 0,
     "accepted_source_manifests_added": 0
   },
-  "acceptance_boundary": "This queue supplements the existing inventory; it does not change its accepted-source statuses or salary coverage. Full row extraction, independent checking and reconciliation remain required for every lead. Downloaded PDFs are working copies, not committed repository artifacts.",
+  "acceptance_follow_through": {
+    "reviewed_on": "2026-11-13",
+    "note": "The outcome above records the 12 November discovery pass. Leads accepted since then name their accepted manifest sources; the salary build checks each claim (employer, period, document URL, SHA-256 and row count) against those manifests, and the accepted manifest supersedes the lead in the source catalog. Earlier lead states are kept in each lead's acceptance_history.",
+    "accepted_leads": ["unbc-sofi-2021-22-approval-follow-through", "sd57-sofi-2023-24", "fort-st-james-sofi-2024"],
+    "accepted_employee_rows_added": 1175,
+    "accepted_separate_cohort_rows_added": 7,
+    "accepted_source_manifests_added": 4
+  },
+  "acceptance_boundary": "This queue supplements the existing inventory. The salary build reads each lead as the current state of its source (retrieved, approval verified or held), superseding the pinned backlog entry it names and keeping that entry's earlier blocker as dated history; it does not change accepted sources, accepted rows or salary coverage counts. Full row extraction, independent checking and reconciliation remain required for every lead. Downloaded PDFs are working copies, not committed repository artifacts.",
   "shared_acceptance_criteria": [
     "Retain the official original and its SHA-256, reporting-period header, employee schedule pages, and final approval evidence in the source manifest.",
     "Extract all named employee rows independently of elected/board schedules. Preserve positions, original compensation components, decimal cents, and the distinction between explicit zero, dash and blank cells.",
@@ -31,8 +39,14 @@
       "reporting_period": "2021/22",
       "period_end": "2022-03-31",
       "source_status": "located-original-retrieved-approval-verified",
-      "acceptance_status": "awaiting-complete-extraction-and-validation",
-      "accepted_employee_rows": 0,
+      "acceptance_status": "accepted-via-source-manifest",
+      "accepted_employee_rows": 333,
+      "accepted_source_ids": ["unbc-sofi-2021-22-employees"],
+      "accepted_manifest": "research/salaries/collection-priorities-2026-11-12/sources.json",
+      "accepted_on": "2026-11-13",
+      "acceptance_history": [
+        { "reviewed_on": "2026-11-12", "acceptance_status": "awaiting-complete-extraction-and-validation", "accepted_employee_rows": 0 }
+      ],
       "source_url": "https://www.unbc.ca/sites/default/files/sections/governance/20220916boardpublicsessionmeetingpackageminusminutes.pdf",
       "official_index_url": "https://www.unbc.ca/university-secretary/board-governors/meeting-dates-agendas-and-minutes",
       "binary": {
@@ -111,12 +125,22 @@
       "id": "sd57-sofi-2023-24",
       "priority": 1,
       "employer": "School District No. 57 (Prince George)",
+      "employer_slug": "school-district-57",
       "existing_backlog_id": null,
       "reporting_period": "2023/24",
       "period_end": "2024-06-30",
       "source_status": "located-original-retrieved-approval-verified",
-      "acceptance_status": "awaiting-complete-extraction-and-validation",
-      "accepted_employee_rows": 0,
+      "acceptance_status": "accepted-via-source-manifest",
+      "accepted_employee_rows": 822,
+      "accepted_source_ids": ["sd57-sofi-2023-24-employees"],
+      "accepted_separate_cohorts": [
+        { "source_id": "sd57-sofi-2023-24-trustees", "scope": "school-trustees", "rows": 7, "note": "Elected officials (trustees) from the top of page 56, accepted as a separate school-trustees source following the repository convention; not counted as employee rows." }
+      ],
+      "accepted_manifest": "research/salaries/collection-priorities-2026-11-12/sources.json",
+      "accepted_on": "2026-11-13",
+      "acceptance_history": [
+        { "reviewed_on": "2026-11-12", "acceptance_status": "awaiting-complete-extraction-and-validation", "accepted_employee_rows": 0 }
+      ],
       "source_url": "https://22.files.edl.io/607e/11/15/24/215959-e2178279-6c84-4d69-960b-b7ae70f553f1.pdf",
       "official_index_url": "https://sd57.scholantisschools.com/apps/pages/index.jsp?uREC_ID=1144483&type=d&pREC_ID=1388703",
       "official_source_basis": "The district Financial Reports page links this CDN document as its 2023/2024 Statement of Financial Information.",
@@ -154,6 +178,7 @@
       "id": "sd57-sofi-2022-23",
       "priority": 2,
       "employer": "School District No. 57 (Prince George)",
+      "employer_slug": "school-district-57",
       "existing_backlog_id": null,
       "reporting_period": "2022/23",
       "period_end": "2023-06-30",
@@ -196,12 +221,20 @@
       "id": "fort-st-james-sofi-2024",
       "priority": 1,
       "employer": "District of Fort St. James",
+      "employer_slug": "district-of-fort-st-james",
       "existing_backlog_id": null,
       "reporting_period": "2024",
       "period_end": "2024-12-31",
       "source_status": "located-original-retrieved-approval-verified",
-      "acceptance_status": "awaiting-scan-extraction-and-independent-validation",
-      "accepted_employee_rows": 0,
+      "acceptance_status": "accepted-via-source-manifest",
+      "accepted_employee_rows": 20,
+      "accepted_source_ids": ["fort-st-james-sofi-2024-employees"],
+      "accepted_manifest": "research/salaries/collection-priorities-2026-11-12/sources.json",
+      "accepted_on": "2026-11-13",
+      "acceptance_history": [
+        { "reviewed_on": "2026-11-12", "acceptance_status": "awaiting-scan-extraction-and-independent-validation", "accepted_employee_rows": 0 }
+      ],
+      "scope_issue_resolution": "Constantine, C (remuneration $68,927.28, expenses $6,437.92, printed total $75,365.20) is preserved as published under the source's remuneration-plus-expenses threshold; expenses are not merged into pay and the manifest records no remuneration threshold.",
       "source_url": "https://www.fortstjames.ca/sites/default/files/2025-06/District%20of%20Fort%20St%20James%20-%202024%20Statement%20of%20Financial%20Information%20w%20checklist-signed.pdf",
       "official_index_url": "https://www.fortstjames.ca/government/municipal-reports",
       "binary": {

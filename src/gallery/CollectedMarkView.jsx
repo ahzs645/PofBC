@@ -2,10 +2,19 @@ import { useState } from 'react'
 import { assetUrl, parseSpecimenDate } from './collectedCollections.js'
 import { collectedDisplay } from './tileArt.js'
 import { useSiteTheme } from '../site/useTheme.js'
+import { CollectedPaletteView } from './CollectedPaletteView.jsx'
+import { collectedPreviewFile } from './collectedPalettes.js'
 
 /** A recovered mark is displayed in its source format; raster files stay raster. */
-export const CollectedMarkView = ({ entry }) => {
-  const [version, setVersion] = useState(entry.asset.id)
+export const CollectedMarkView = ({ entry }) => entry.paletteGroup
+  ? <CollectedPaletteView entry={entry} />
+  : <SourceMarkView entry={entry} />
+
+const SourceMarkView = ({ entry }) => {
+  const [version, setVersion] = useState(() => {
+    const requested = new URLSearchParams(globalThis.location?.search ?? '').get('mark')
+    return entry.versions?.find((each) => each.id === requested)?.id ?? entry.asset.id
+  })
   const asset = entry.versions?.find((each) => each.id === version) ?? entry.asset
   const specimenDate = parseSpecimenDate(asset.specimenDate ?? asset.sourceDate)
   const dateLabel = specimenDate
@@ -47,7 +56,7 @@ export const CollectedMarkView = ({ entry }) => {
         </div>
       ) : (
         <div className="gallery__recovered-preview" data-dark={asset.darkBackground || undefined}>
-          <img src={assetUrl(asset.preview || asset.file)} alt={entry.label} />
+          <img src={assetUrl(collectedPreviewFile(asset))} alt={entry.label} />
         </div>
       )}
       <p>{asset.notes}</p>
@@ -56,7 +65,7 @@ export const CollectedMarkView = ({ entry }) => {
         {(asset.downloads ?? []).map((extra) => (
           <a key={extra.file} className="button button--ghost" href={assetUrl(extra.file)} download>{extra.label}</a>
         ))}
-        {asset.preview && asset.preview !== asset.file && (
+        {!asset.isVector && asset.preview && asset.preview !== asset.file && (
           <a className="button button--ghost" href={assetUrl(asset.preview)} download>Download PNG preview</a>
         )}
       </div>

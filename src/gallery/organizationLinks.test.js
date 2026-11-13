@@ -18,7 +18,9 @@ test('organizations discover their own marks on shared gallery shelves in both d
     assert.deepEqual(entriesOfNode(collection, node).map((entry) => entry.id).sort(), [...ids].sort(), node)
     for (const id of ids) assert.equal(findGalleryEntry(id).graphNode, node, id)
     const logos = logosFor(node)
-    assert.deepEqual(logos.entries.map((entry) => entry.id).sort(), [...ids].sort(), node)
+    // The program's published originals are found beside its one-off, from their specimen collection.
+    const originals = { 'sub-workbc': ['vector-workbc-2016', 'vector-workbc-current'], 'bc-public-service-agency': ['vector-bc-public-service-where-ideas-work-2023-reverse'] }[node] ?? []
+    assert.deepEqual(logos.entries.map((entry) => entry.id).sort(), [...ids, ...originals].sort(), node)
     for (const entry of logos.entries) assert.ok(entriesOf(collectionById(entry.collection)).some((candidate) => candidate.id === entry.id))
   }
 })
@@ -37,14 +39,15 @@ test('a body can discover dedicated history and shared-shelf artwork without cha
 test('Knowledge Network uses its held SVG colourway while retaining the design download and deep link', () => {
   const id = 'source-knowledge-network-knowledge-network-colour-eps'
   const entry = findGalleryEntry(id)
-  assert.equal(entry.asset.format, 'eps')
+  assert.equal(entry.asset.format, 'svg', 'the gallery uses the shared source SVG')
+  assert.ok(entry.versions.some((source) => source.id === id && source.format === 'eps'), 'original EPS remains a source download')
   for (const theme of ['light', 'dark']) {
     const logos = logosFor('knowledge-network', theme)
     assert.equal(logos.total, 1)
     assert.equal(logos.entries[0].id, id)
     assert.match(logos.entries[0].html, new RegExp(`identity-display/source-knowledge-network-knowledge-network-svg\\.${theme}\\.svg`))
   }
-  assert.equal(entry.asset.format, 'eps', 'thumbnail selection must not mutate gallery downloads')
+  assert.equal(entry.asset.format, 'svg', 'thumbnail selection must not mutate the shared master')
 })
 
 test('the Cancer Foundation keeps its own ownership within the shared visual family', () => {
@@ -57,4 +60,15 @@ test('the Cancer Foundation keeps its own ownership within the shared visual fam
     assert.ok(!entry.graphNode, 'the Foundation is not a provincial-government node')
   }
   assert.ok(entriesOfNode(collection, 'sub-bc-cancer').some((entry) => entry.id === 'bc-cancer-phsa'))
+})
+
+test('a body panel finds the original specimens of the program its one-off stands for', async () => {
+  const { collectionsOfNode, entriesOfNode } = await import('./collections.js')
+  const held = (node) => collectionsOfNode(node).flatMap((collection) => entriesOfNode(collection, node)).map((entry) => entry.id)
+  assert.ok(['vector-workbc-2016', 'vector-workbc-current'].every((id) => held('sub-workbc').includes(id)))
+  assert.ok(held('bc-public-service-agency').includes('vector-bc-public-service-where-ideas-work-2023-reverse'))
+  const prepared = collectionsOfNode('sub-preparedbc').flatMap((collection) => entriesOfNode(collection, 'sub-preparedbc'))
+  assert.deepEqual(prepared.map((entry) => entry.id), ['prepared-bc'])
+  // Linking it does not make the remake read as the program's own lockup.
+  assert.equal(prepared[0].identity.provenance, 'synthetic_name_variant')
 })

@@ -1,7 +1,7 @@
 {
   "schema": "import-accounting/1",
   "counts": {
-    "accepted": 2501,
+    "accepted": 2505,
     "unresolved_unmapped": 168,
     "intentionally_excluded": 4,
     "conflicting": 1
@@ -24108,6 +24108,39 @@
       }
     },
     {
+      "origin": "bodies.json#bc-trade-development-corporation",
+      "disposition": "accepted",
+      "input": {
+        "id": "bc-trade-development-corporation",
+        "name": "British Columbia Trade Development Corporation",
+        "shortName": "BC Trade",
+        "kind": "crown-corporation",
+        "established": "1989-06-01",
+        "ended": "2003-11-21",
+        "becameId": null,
+        "predecessorIds": [],
+        "responsible": [],
+        "description": "Crown corporation established in 1989 under the Trade Development Corporation Act to help British Columbia businesses develop export markets: advice and technical assistance, market research and overseas business contacts, grants, loans and loan guarantees, investment in export enterprises, and the administration of government export programs. The Act allowed it to be called “B.C. Trade”. Announced in July 1988 as part of an international business development strategy. In March 1996 its functions were combined with those of the British Columbia Investment Office and the ministry’s Industry and Investment Division as the British Columbia Trade and Investment Office (BCTIO), in the Ministry of Employment and Investment. The corporation was then wound up — settling loan guarantees and disposing of investments — and dissolved on 21 November 2003, when its Act was repealed.",
+        "establishedMeaning": "the Trade Development Corporation Act received Royal Assent on 1 June 1989, the date BC Trade’s own launch advertisement gives for the new export organization’s arrival",
+        "source": "https://www.bclaws.gov.bc.ca/civix/document/id/hstats/hstats/1221940092",
+        "otherSources": [
+          "https://lims.leg.bc.ca/hdms/file/Debates/34th3rd/34p_03s_890329p.htm",
+          "https://saltspringarchives.com/driftwood/1989/v30n28July12-1989A.pdf#page=19",
+          "https://www.ourcommons.ca/Archives/Committee/351/fore/evidence/84_95-11-30/fore84_blk-e.html",
+          "https://www2.gov.bc.ca/assets/gov/british-columbians-our-governments/government-finances/financial-economic-review/financial-economic-review-1997.pdf",
+          "https://www2.gov.bc.ca/assets/gov/british-columbians-our-governments/government-finances/public-accounts/2002-03/sup-e/bc-trade-development-corporation-fs-2002-03.pdf",
+          "https://www.bclaws.gov.bc.ca/civix/document/id/consol18/consol18/tlc96456"
+        ],
+        "endedMeaning": "dissolved when its enabling Act was repealed on 21 November 2003 (B.C. Reg. 418/2003; the order in council was approved the day before), its remaining assets, rights, obligations and liabilities passing to the Province; it had stopped operating in March 1996",
+        "operationalEnd": {
+          "date": "1996-03",
+          "meaning": "its functions combined with those of the British Columbia Investment Office and the Industry and Investment Division to form the British Columbia Trade and Investment Office, within the Ministry of Employment and Investment",
+          "source": "https://www2.gov.bc.ca/assets/gov/british-columbians-our-governments/government-finances/financial-economic-review/financial-economic-review-1997.pdf",
+          "locator": "Financial and Economic Review, 1997"
+        }
+      }
+    },
+    {
       "origin": "bodies.json#fraser-valley-health-region",
       "disposition": "accepted",
       "input": {
@@ -28539,6 +28572,177 @@
           "R3HC-006",
           "R3HC-007",
           "R3HC-053"
+        ]
+      }
+    },
+    {
+      "origin": "bodies.json#information-technology-services-division",
+      "disposition": "accepted",
+      "input": {
+        "id": "information-technology-services-division",
+        "name": "Information Technology Services Division",
+        "shortName": "ITSD",
+        "kind": "agency",
+        "established": null,
+        "firstSeen": {
+          "date": "1996-03-31",
+          "source": "https://www2.gov.bc.ca/assets/gov/british-columbians-our-governments/government-finances/public-accounts/1999-00/sup-e/bc-systems-corporation-fs-1999-00.pdf",
+          "locator": "BC Systems Corporation, Notes to Financial Statements, year ended March 31, 2000, General (PDF page 5, a scan; read 2026-11-13): “On March 31, 1996, with the exception of the General Manager, employees and business operations were transferred to the Information Technology Services Division of the Information, Science and Technology Agency.”"
+        },
+        "ended": null,
+        "endStatus": "untraced",
+        "endedMeaning": "No source read here dates its end or says what it became. A research summary on file says it became Common IT Services; the records schedule names Workplace Technology Services as a later successor. Neither is taken as a dated change.",
+        "attestations": [
+          {
+            "date": "1996-03-31",
+            "scope": "received BC Systems Corporation’s employees and business operations",
+            "source": "https://www2.gov.bc.ca/assets/gov/british-columbians-our-governments/government-finances/public-accounts/1999-00/sup-e/bc-systems-corporation-fs-1999-00.pdf",
+            "locator": "Notes to Financial Statements, year ended March 31, 2000, General (PDF page 5)"
+          }
+        ],
+        "becameId": null,
+        "predecessorIds": [
+          "bc-systems-corporation"
+        ],
+        "responsible": [],
+        "description": "Division of the Information, Science and Technology Agency that took over BC Systems Corporation’s employees and operating business, all but the general manager, on 31 March 1996. The Crown corporation itself continued in law until 30 April 2000; the government’s records schedule for information technology services names the division as its successor. When the division was formed, which ministry the agency answered to, and when the division ended or was renamed are not established here.",
+        "source": "https://www2.gov.bc.ca/assets/gov/british-columbians-our-governments/government-finances/public-accounts/1999-00/sup-e/bc-systems-corporation-fs-1999-00.pdf",
+        "otherSources": [
+          "https://www2.gov.bc.ca/assets/gov/british-columbians-our-governments/services-policies-for-government/information-management-technology/records-management/orcs/itse_orcs_amendment_5.pdf"
+        ]
+      }
+    },
+    {
+      "origin": "bodies.json#shared-services-bc",
+      "disposition": "accepted",
+      "input": {
+        "id": "shared-services-bc",
+        "name": "Shared Services BC",
+        "shortName": "SSBC",
+        "kind": "agency",
+        "established": "2003-04-01",
+        "establishedMeaning": "launched as Solutions BC, the Ministry of Management Services’ shared services organization, which “commenced operations April 1, 2003”",
+        "ended": null,
+        "endStatus": "untraced",
+        "endedMeaning": "The name is last used in the ministry’s 2014/15 annual service plan report (2015). The February 2015 service plan no longer names it, and budgets Real Property and Technology Solutions as lines of their own. When the name ended, and whether that ended the organization or only the name, is not established.",
+        "attestations": [
+          {
+            "date": "2003-06-06",
+            "scope": "launched 1 April 2003 as Solutions BC",
+            "source": "https://www.bcbudget.gov.bc.ca/Annual_Reports/2002_2003/mser/mser.pdf",
+            "locator": "Ministry of Management Services, 2002/03 Annual Service Plan Report (letter dated June 6, 2003), PDF pages 5 and 15"
+          },
+          {
+            "date": "2006-02",
+            "scope": "a core business area of the Ministry of Labour and Citizens’ Services, as Shared Services BC",
+            "source": "https://www.bcbudget.gov.bc.ca/2006/sp/lcs/lcs.pdf",
+            "locator": "2006/07 – 2008/09 Service Plan, PDF page 10"
+          },
+          {
+            "date": "2010-03",
+            "scope": "a core business area of the Ministry of Citizens’ Services",
+            "source": "https://www.bcbudget.gov.bc.ca/2010/sp/pdf/ministry/citz.pdf",
+            "locator": "2010/11 – 2012/13 Service Plan (March 2010), PDF page 6"
+          },
+          {
+            "date": "2012-02",
+            "scope": "a vote line of the Ministry of Labour, Citizens’ Services and Open Government",
+            "source": "https://www.bcbudget.gov.bc.ca/2012/sp/pdf/ministry/lctz.pdf",
+            "locator": "2012/13 – 2014/15 Service Plan (February 2012), resource summary, PDF page 27"
+          },
+          {
+            "date": "2013-02",
+            "scope": "named in the Ministry of Citizens’ Services and Open Government’s plan",
+            "source": "https://www.bcbudget.gov.bc.ca/2013/sp/pdf/ministry/citz.pdf",
+            "locator": "2013/14 – 2015/16 Service Plan (February 2013), minister’s letter, PDF page 4; resource summary, PDF page 17"
+          },
+          {
+            "date": "2014-02",
+            "scope": "named in the Ministry of Technology, Innovation and Citizens’ Services’ plan",
+            "source": "https://www.bcbudget.gov.bc.ca/2014/sp/pdf/ministry/mtics.pdf",
+            "locator": "2014/15 – 2016/17 Service Plan (February 2014), PDF pages 4 and 7"
+          },
+          {
+            "date": "2015",
+            "scope": "named in the ministry’s report on 2014/15",
+            "source": "https://www.bcbudget.gov.bc.ca/Annual_Reports/2014_2015/pdf/ministry/mtics.pdf",
+            "locator": "Ministry of Technology, Innovation and Citizens’ Services, 2014/15 Annual Service Plan Report, PDF page 15 (financial discussion) and page 16 (capital expenditures)"
+          }
+        ],
+        "becameId": null,
+        "predecessorIds": [],
+        "names": [
+          {
+            "name": "Solutions BC",
+            "from": "2003-04-01",
+            "to": "2006-02",
+            "source": "https://www.bcbudget.gov.bc.ca/Annual_Reports/2002_2003/mser/mser.pdf",
+            "locator": "2002/03 Annual Service Plan Report, PDF page 5. The end is the first source found that calls it Shared Services BC (the February 2006 service plan), not a dated renaming: the September 2005 service plan update calls it Public Service Operations, and a Solutions BC letterhead was still in use in August 2006"
+          },
+          {
+            "name": "Shared Services BC",
+            "from": "2006-02",
+            "to": null,
+            "source": "https://www.bcbudget.gov.bc.ca/2006/sp/lcs/lcs.pdf",
+            "locator": "2006/07 – 2008/09 Service Plan, PDF page 10: first seen here; the 2005/06 annual report gives “Shared Services BC (formerly Public Service Operations)”"
+          }
+        ],
+        "responsible": [
+          {
+            "ministry": "Ministry of Management Services",
+            "from": "2003-04-01",
+            "to": "2005",
+            "source": "https://www.bcbudget.gov.bc.ca/Annual_Reports/2002_2003/mser/mser.pdf",
+            "locator": "2002/03 Annual Service Plan Report, PDF page 5; also the 2004/05 report, Ministry Role and Services: https://www.bcbudget.gov.bc.ca/Annual_Reports/2004_2005/mser/Ministry_Role_and_Services.htm",
+            "note": "The ministry’s reports place it there through 2004/05. The period closes with the ministry, in 2005; the day the division moved is not given by these sources."
+          },
+          {
+            "ministry": "Ministry of Labour and Citizens’ Services",
+            "from": "2005",
+            "to": "2009",
+            "source": "https://www.bcbudget.gov.bc.ca/2005_Sept_Update/sp/lcs/lcs.pdf",
+            "locator": "2005/06 – 2007/08 Service Plan Update, September 2005, PDF page 6 (as Public Service Operations); 2006/07 – 2008/09 Service Plan, PDF page 10",
+            "note": "Bounded by the ministry’s own years; the days of the 2005 and 2009 moves are not given by these sources."
+          },
+          {
+            "ministry": "Ministry of Citizens’ Services",
+            "from": "2009",
+            "to": "2011",
+            "source": "https://www.bcbudget.gov.bc.ca/2010/sp/pdf/ministry/citz.pdf",
+            "locator": "2010/11 – 2012/13 Service Plan (March 2010), PDF page 6",
+            "note": "Bounded by the ministry’s own years; seen there in March 2010."
+          },
+          {
+            "ministry": "Ministry of Labour, Citizens’ Services and Open Government",
+            "from": "2011",
+            "to": "2012",
+            "source": "https://www.bcbudget.gov.bc.ca/2012/sp/pdf/ministry/lctz.pdf",
+            "locator": "2012/13 – 2014/15 Service Plan (February 2012), resource summary, PDF page 27",
+            "note": "Bounded by the ministry’s own years; seen there in February 2012."
+          },
+          {
+            "ministry": "Ministry of Citizens’ Services and Open Government",
+            "from": "2012",
+            "to": "2013",
+            "source": "https://www.bcbudget.gov.bc.ca/2013/sp/pdf/ministry/citz.pdf",
+            "locator": "2013/14 – 2015/16 Service Plan (February 2013), PDF pages 4 and 17",
+            "note": "Bounded by the ministry’s own years; seen there in February 2013."
+          },
+          {
+            "ministry": "Ministry of Technology, Innovation and Citizens’ Services",
+            "from": "2013",
+            "to": null,
+            "source": "https://www.bcbudget.gov.bc.ca/2014/sp/pdf/ministry/mtics.pdf",
+            "locator": "2014/15 – 2016/17 Service Plan (February 2014), PDF pages 4 and 7; 2014/15 Annual Service Plan Report, PDF page 15",
+            "note": "From the ministry’s formation in 2013; seen there to the 2014/15 report. Like the body’s, this period’s end is untraced."
+          }
+        ],
+        "description": "The government’s internal shared-services organization, a part of the ministry responsible for government services rather than a Crown corporation. Launched on 1 April 2003 as Solutions BC, it brought together the Ministry of Management Services’ Procurement and Supply Services, the payroll, desktop and helpdesk IT services and Corporate Accounting Service transferred from other ministries, and the rest of the ministry’s Common Information Technology division. Called Public Service Operations in September 2005 and Shared Services BC by February 2006, it took over the accommodation and real estate services of the former BC Buildings Corporation on 1 April 2006. In 2013 it was three divisions: Technology Solutions, Logistics and Business Services, and Integrated Workplace Solutions. Its name is last used in 2015. Among its predecessors in function is BC Systems Corporation’s central IT role, but the line from the Information Technology Services Division of 1996 to the Common Information Technology division of 2003 is not established here.",
+        "source": "https://www.bcbudget.gov.bc.ca/Annual_Reports/2002_2003/mser/mser.pdf",
+        "otherSources": [
+          "https://www.bcbudget.gov.bc.ca/Annual_Reports/2003_2004/mser/mser_role.htm",
+          "https://www.bcbudget.gov.bc.ca/annual_reports/2005_2006/lcs/lcs.pdf",
+          "https://docs.openinfo.gov.bc.ca/d64731113a_response_package_ctz-2013-00102.pdf"
         ]
       }
     },
@@ -34822,6 +35026,20 @@
         "to": null,
         "source": "https://www.bcbudget.gov.bc.ca/2026/sp/pdf/ministry/psefs.pdf",
         "note": "The 2023-2026 service plans."
+      }
+    },
+    {
+      "origin": "responsible-bc-trade-2026-11-13.json#bc-trade-development-corporation",
+      "disposition": "accepted",
+      "input": {
+        "ministry": "Ministry of International Business and Immigration",
+        "from": "1989-06-01",
+        "to": null,
+        "source": "https://saltspringarchives.com/driftwood/1989/v30n28July12-1989A.pdf#page=19",
+        "also": [
+          "https://lims.leg.bc.ca/hdms/file/Debates/34th3rd/34p_03s_890329p.htm"
+        ],
+        "note": "BC Trade's July 1989 launch advertisement places it under the Ministry of International Business and Immigration, with the minister, John Jansen, as its chairman; Jansen introduced its Act in March 1989. When the responsibility moved is not established (Premier Harcourt later kept responsibility for the corporation, without a recorded portfolio title)."
       }
     },
     {

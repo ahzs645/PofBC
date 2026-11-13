@@ -800,6 +800,8 @@ const GRAPH_NODES = {
   'bc-online': 'sub-bc-online',
   'bc-bid': 'sub-bc-bid',
   'public-service': 'bc-public-service-agency',
+  // A remake, not the program's own lockup: its card keeps that label wherever it is reached from.
+  'prepared-bc': 'sub-preparedbc',
   'healthlink-bc-logo': 'sub-healthlink-bc'
 }
 
@@ -1096,7 +1098,13 @@ GALLERY_COLLECTIONS.push(...COLLECTED_COLLECTIONS.filter((candidate) =>
   !GALLERY_COLLECTIONS.some((held) => nodesOf(held).includes(candidate.graphNode))))
 // WorkSafeBC's specimens are folded into its collection above; the one-off programs keep theirs.
 // The Department of Travel Industry's is folded into the BC mark collection.
-GALLERY_COLLECTIONS.push(...SPECIMEN_COLLECTIONS.filter((collection) => !['specimens-worksafebc', 'specimens-travel-industry', 'specimens-justice-institute', 'specimens-auditor-general', 'specimens-sub-bc-online', 'specimens-bceid', 'specimens-shared-services-bc', 'specimens-sub-bc-cancer', 'specimens-healthlink-bc'].includes(collection.id)))
+// A program's published specimens belong to the body its one-off stands for (WorkBC's to WorkBC, Where
+// ideas work to the Public Service Agency), so that body's panel finds its original files too.
+GALLERY_COLLECTIONS.push(...SPECIMEN_COLLECTIONS.filter((collection) => !['specimens-worksafebc', 'specimens-travel-industry', 'specimens-justice-institute', 'specimens-auditor-general', 'specimens-sub-bc-online', 'specimens-bceid', 'specimens-shared-services-bc', 'specimens-sub-bc-cancer', 'specimens-healthlink-bc'].includes(collection.id))
+  .map((collection) => {
+    const node = GRAPH_NODES[collection.id.replace(/^specimens-/, '')]
+    return node ? { ...collection, entries: collection.entries.map((entry) => ({ ...entry, graphNode: entry.graphNode ?? node })) } : collection
+  }))
 
 // Public bodies outside the Crown corporations and health authorities the shelf collects for — a
 // post-secondary institute and an officer of the Legislature — whose collections are placed there by hand.
@@ -1116,15 +1124,14 @@ const PLACED = {
       'land titles, personal property, company and other registries. Its earlier logo — a hand reaching through a ' +
       'screen — is here; its later logo on the BC mark is under “On the BC mark”.'
   },
+  // The historical body research/history/bodies-shared-services-2026-11-13.json adds.
   'shared-services-bc': {
-    // No node in the government graph is this body; what one would need is in
-    // research/identity/shared-services-bc-2026-11-12/INTEGRATION.md.
-    graphNode: null,
     label: 'Shared Services BC',
     body: 'The government’s shared-services organization, as Solutions BC and Shared Services BC',
-    years: 'from 2003',
-    intro: 'Solutions BC, formed on 1 April 2003, gathered the government’s common IT, payroll, accounting and ' +
-      'procurement services — carrying on, among them, BC Systems’ central IT role. It was soon Shared Services BC.'
+    years: '2003–?',
+    intro: 'Solutions BC, launched on 1 April 2003 in the Ministry of Management Services, gathered the government’s ' +
+      'common IT, payroll, accounting and procurement services. It was Shared Services BC by February 2006, and took in ' +
+      'the former BC Buildings Corporation’s accommodation services that April. The name is last seen in 2015.'
   },
   'sub-bc-cancer': {
     label: 'BC Cancer',
@@ -1197,7 +1204,9 @@ export const entriesOf = (collection) => collection.eras
 
 export const findGalleryEntry = (id) => GALLERY_COLLECTIONS
   .flatMap(entriesOf)
-  .find((entry) => entry.id === id)
+  .find((entry) => entry.id === id || entry.aliases?.includes(id) ||
+    entry.versions?.some((version) => version.id === id) ||
+    entry.paletteGroup?.palettes.some((palette) => palette.sourceIds?.includes(id)))
 
 /**
  * The timeline a one-off sits on, with each era's marks resolved to the gallery's own entries, so a

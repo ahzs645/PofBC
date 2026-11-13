@@ -1,13 +1,16 @@
-// One patch: inspect its source evidence beside the reconstruction, then preview the drawing sewn
-// by Patcher's digitizer. Source images retain their proportions; no unregistered overlay is implied.
+// One patch: the drawing sewn by Patcher's digitizer on a stage that zooms, with the reconstruction
+// and its source evidence a tab away or side by side. Source images retain their proportions; no
+// unregistered overlay is implied.
 
-import { useEffect, useLayoutEffect, useRef, useState } from 'react'
-import { createDigitizer, renderTextured, writeDst, writeExp } from 'patcher'
+import { useDeferredValue, useEffect, useLayoutEffect, useRef, useState } from 'react'
+import { createDigitizer, profileOf, renderTextured, threadColor, threadColors, writeDst, writeExp } from 'patcher'
 import { LIBRARY, cardLabel, loadPatchSvg, variantsOf } from 'patcher/library'
 import { Segmented } from '../site/Segmented.jsx'
 import { SiteLink } from '../site/navigation.jsx'
 import { FOREST_SERVICE_TIMELINE, historyOf } from './patchHistory.js'
 import { CERTAINTY, postersForPatch } from '../posters/connections.js'
+import { PatchStage } from './PatchStage.jsx'
+import { VIEW_DEFAULTS, exportScale, exportSize, loadView, modeFor, saveView } from './patchView.js'
 
 /** Patcher's own site, which opens a library patch with every digitizing setting exposed. */
 const PATCHER_URL = 'https://ahzs645.github.io/patcher/'
@@ -41,7 +44,15 @@ const FINISHES = [
   { value: 'matte', label: 'Matte', title: 'Polyester or cotton thread' },
   { value: 'glossy', label: 'Glossy', title: 'Rayon thread with a satin sheen' }
 ]
-const LIGHT_DEG = 225
+const GROUNDS = [
+  { value: 'cloth', label: 'Twill', title: 'Sewn on a cloth ground: the largest colour is bare twill, as on most cloth patches' },
+  { value: 'stitched', label: 'Stitched', title: 'Every colour is covered with thread' }
+]
+const MODE_LABELS = { embroidery: 'Embroidery', vector: 'Vector', source: 'Source', compare: 'Compare' }
+/** Sewn results kept so that going back to a setting does not sew it again. */
+const SEWN_LIMIT = 8
+
+const storage = () => { try { return globalThis.localStorage } catch { return null } }
 
 /** The images a design was seen in: one per source (S27-O01 and S27-O03 are both source S27). */
 export const photosOf = (patch) => {
@@ -110,11 +121,13 @@ const download = (blob, name) => {
   setTimeout(() => URL.revokeObjectURL(link.href), 1000)
 }
 
-const textured = (result, finish, scale, canvas) => renderTextured(result, {
+// A profile is what the patch's source photograph shows about how it was made (vendor/patcher
+// library/profiles.json): the thread a drawn colour really is, the cloth, the edge.
+const textured = (result, profile, finish, lightDeg, scale, canvas) => renderTextured(result, {
   scale,
-  lightDeg: LIGHT_DEG,
-  colors: result.palette,
-  borderColor: result.borderColor,
+  lightDeg,
+  colors: threadColors(profile, result.palette),
+  borderColor: threadColor(profile, result.borderColor),
   dropShadow: true,
   finish
 }, canvas)
@@ -130,9 +143,14 @@ const textured = (result, finish, scale, canvas) => renderTextured(result, {
  * @param {() => void} props.onClose
  */
 export const PatchViewer = ({ patch, org, position, previous, next, onOpen, onClose, noun = 'patches' }) => {
-  const [widthMm, setWidthMm] = useState('89')
-  const [border, setBorder] = useState('merrow')
-  const [finish, setFinish] = useState('matte')
+  // How the patch is looked at is kept from one patch to the next, and for the next visit.
+  const [view, setView] = useState(() => loadView(storage()))
+  const set = (change) => setView((current) => { const next = { ...current, ...change }; saveView(storage(), next); return next })
+  const { widthMm, border, finish, ground } = view
+  // Dragging the light re-renders the canvas; let the slider stay ahead of it.
+  const lightDeg = useDeferredValue(view.lightDeg)
+  const sewn = useRef(new Map())
+  const profile = profileOf(patch.id)
   const [sewOut, setSewOut] = useState(null)
   const [status, setStatus] = useState({ patchId: patch.id, phase: 'loading' })
   const [attempt, setAttempt] = useState(0)
@@ -150,7 +168,7 @@ export const PatchViewer = ({ patch, org, position, previous, next, onOpen, onCl
   // result to its input before rendering: effects alone run too late to prevent one stale frame.
   const drawing = loadedDrawing?.patchId === patch.id ? loadedDrawing : null
   const result = sewOut?.patchId === patch.id && sewOut?.drawingUrl === drawing?.url &&
-    sewOut?.widthMm === widthMm && sewOut?.border === border ? sewOut.result : null
+    sewOut?.widthMm === widthMm && sewOut?.border === border && sewOut?.ground === ground ? sewOut.result : null
   const phase = status.patchId === patch.id ? status.phase : 'loading'
   const ready = phase === 'ready' && Boolean(result)
   const busy = !ready && phase !== 'failed-source' && phase !== 'failed-sewing'
@@ -169,6 +187,7 @@ export const PatchViewer = ({ patch, org, position, previous, next, onOpen, onCl
   // A selected occurrence must link to its own full source, never another specimen's image.
   const sourceUrl = source ? source.url : patch.sourceUrl || photosOf(patch).find((photo) => photo.sourceUrl)?.sourceUrl
   const sourceTitle = source?.sourceKind === 'vector' ? 'Vector reference' : 'Source reference'
+  const mode = modeFor(view.mode, showSourceReview)
 
   useEffect(() => {
     if (!showSourceReview) return undefined
@@ -201,6 +220,7 @@ export const PatchViewer = ({ patch, org, position, previous, next, onOpen, onCl
     let url = null
     setLoadedDrawing(null)
     setSewOut(null)
+    sewn.current.clear()
     setStatus({ patchId: patch.id, phase: 'loading' })
     loadPatchSvg(patch)
       .then((text) => {
@@ -215,23 +235,33 @@ export const PatchViewer = ({ patch, org, position, previous, next, onOpen, onCl
   useEffect(() => {
     if (!drawing) return undefined
     let gone = false
+    const key = `${drawing.url}|${widthMm}|${border}|${ground}`
+    const show = (result) => {
+      setSewOut({ patchId: patch.id, drawingUrl: drawing.url, widthMm, border, ground, result })
+      setStatus({ patchId: patch.id, phase: 'ready' })
+    }
+    const kept = sewn.current.get(key)
+    if (kept) { show(kept); return undefined }
     setStatus({ patchId: patch.id, phase: 'sewing' })
-    digitizer.current.digitize(drawing.text, { widthMm: Number(widthMm), border })
-      .then((sewn) => {
-        if (!gone) {
-          setSewOut({ patchId: patch.id, drawingUrl: drawing.url, widthMm, border, result: sewn })
-          setStatus({ patchId: patch.id, phase: 'ready' })
-        }
-      })
-      .catch((error) => { if (!gone) { console.error(error); setStatus({ patchId: patch.id, phase: 'failed-sewing' }) } })
-    return () => { gone = true }
-  }, [drawing, widthMm, border, patch.id])
+    // A short wait, so stepping through several settings sews only the one that is settled on.
+    const timer = setTimeout(() => {
+      digitizer.current.digitize(drawing.text, { ...profileOf(patch.id)?.params, widthMm: Number(widthMm), border, ground })
+        .then((result) => {
+          if (sewn.current.size >= SEWN_LIMIT) sewn.current.delete(sewn.current.keys().next().value)
+          sewn.current.set(key, result)
+          if (!gone) show(result)
+        })
+        .catch((error) => { if (!gone) { console.error(error); setStatus({ patchId: patch.id, phase: 'failed-sewing' }) } })
+    }, 120)
+    return () => { gone = true; clearTimeout(timer) }
+  }, [drawing, widthMm, border, ground, patch.id])
 
+  // The canvas is only mounted in the modes that show it, so drawing follows the mode too.
   useLayoutEffect(() => {
     if (!result || !canvas.current) return
     const ratio = Math.min(2, globalThis.devicePixelRatio || 1)
-    textured(result, finish, (Math.min(16, 3200 / Math.max(result.widthMm, result.heightMm)) * ratio) / 1.4, canvas.current)
-  }, [result, finish])
+    textured(result, profile, finish, lightDeg, (Math.min(16, 3200 / Math.max(result.widthMm, result.heightMm)) * ratio) / 1.4, canvas.current)
+  }, [result, profile, finish, lightDeg, mode])
 
   useEffect(() => {
     const onKey = (event) => {
@@ -250,9 +280,44 @@ export const PatchViewer = ({ patch, org, position, previous, next, onOpen, onCl
   const title = patch.variant ? `${cardLabel(patch)} — ${patch.variant}` : patch.label
   const exportPng = () => {
     if (!ready) return
-    const png = textured(result, finish, Math.min(24, 6000 / Math.max(result.widthMm, result.heightMm)))
+    const png = textured(result, profile, finish, view.lightDeg, exportScale(result))
     png.toBlob((blob) => blob && download(blob, `${name}-embroidered.png`), 'image/png')
   }
+
+  const sourcePane = {
+    key: 'source',
+    label: sourceTitle,
+    node: sourceAvailable
+      ? <img key={sourceKey} src={sourceCropUrl} width={source.width || undefined} height={source.height || undefined} alt={`${title}, source occurrence ${source.occurrenceId}`} draggable={false} onError={() => setFailedSource(sourceKey)} />
+      : <p className="patch__status" role="status">{reviewIndex.status === 'loading' ? 'Loading source…' : sourceCropUrl ? 'This source image could not be loaded.' : 'No source crop is available for this design.'}</p>
+  }
+  const vectorPane = {
+    key: 'vector',
+    label: showSourceReview ? 'Vector reconstruction' : 'Vector',
+    node: (
+      <>
+        <img key={patch.id} className="patch__vector" src={drawing?.url ?? patch.previewUrl} alt={title} draggable={false} />
+        {phase === 'failed-source' && <p className="patch__status" role="alert">The complete vector could not be loaded; the preview is shown. <button type="button" className="button--inline" onClick={() => setAttempt((n) => n + 1)}>Try again</button></p>}
+      </>
+    )
+  }
+  const simulationPane = {
+    key: 'embroidery',
+    label: 'Embroidery simulation',
+    node: (
+      <>
+        <canvas ref={canvas} hidden={!ready} aria-label={`${title}, embroidery simulation`} role="img" />
+        {busy && <p className="patch__status" role="status">{drawing ? 'Sewing…' : 'Loading drawing…'}</p>}
+        {(phase === 'failed-source' || phase === 'failed-sewing') && (
+          <p className="patch__status" role="alert">
+            {phase === 'failed-source' ? 'Load the vector to preview embroidery.' : 'This patch couldn’t be sewn.'} <button type="button" className="button--inline" onClick={() => setAttempt((n) => n + 1)}>Try again</button>
+          </p>
+        )}
+      </>
+    )
+  }
+  const size = ready ? exportSize(result) : null
+  const changed = Object.keys(VIEW_DEFAULTS).some((key) => key !== 'mode' && view[key] !== VIEW_DEFAULTS[key])
 
   return (
     <section className="patch" aria-label={title}>
@@ -272,65 +337,19 @@ export const PatchViewer = ({ patch, org, position, previous, next, onOpen, onCl
 
       <div className="patch__body">
         <div className="patch__visuals">
-          {showSourceReview && <section className="patch__review" aria-label="Source review">
-            <div className="patch__review-heading">
-              <h3>Source comparison</h3>
-              {review && <span className={`patch__review-status patch__review-status--${reviewIsCurrent ? review.status : 'unreviewed'}`}>{reviewIsCurrent ? REVIEW_LABELS[review.status] ?? 'Not yet reviewed' : 'Drawing changed since review'}</span>}
-              {review?.priority === 'high' && <span className="patch__review-priority">High priority</span>}
-            </div>
-            {reviewIndex.status === 'loading' && <p role="status">Loading source review…</p>}
-            {reviewIndex.status === 'failed' && (
-              <p role="status">The source comparison could not be loaded. <button type="button" className="button--inline" onClick={() => setReviewAttempt((n) => n + 1)}>Try again</button></p>
+          <PatchStage
+            resetKey={`${patch.id}:${mode}`}
+            panes={[sourcePane, vectorPane, simulationPane].filter((pane) => (mode === 'compare' ? pane.key !== 'source' || showSourceReview : pane.key === mode))}
+            toolbar={(
+              <Segmented
+                ariaLabel="View"
+                options={Object.keys(MODE_LABELS).filter((id) => showSourceReview || (id !== 'source' && id !== 'compare')).map((id) => ({ value: id, label: MODE_LABELS[id] }))}
+                value={mode}
+                onChange={(value) => set({ mode: value })}
+                compact
+              />
             )}
-            {reviewIndex.status === 'ready' && !review && <p>This design has not yet been reviewed against a source image.</p>}
-            {!reviewIsCurrent && <p>The findings below describe an earlier drawing. The current reconstruction needs another comparison.</p>}
-            {review?.findings?.length > 0 && <ul>{review.findings.map((finding, index) => <li key={index}>{finding}</li>)}</ul>}
-            {candidateChanges.length > 0 && (
-              <div className="patch__candidate">
-                <h4>Partial correction prepared</h4>
-                <ul>{candidateChanges.map((change, index) => <li key={index}>{change}</li>)}</ul>
-              </div>
-            )}
-            {patch.limitations && <p className="patch__review-limits"><strong>Artwork limitations:</strong> {patch.limitations}</p>}
-            {review && <p className="patch__review-date">Evidence record: {reviewIndex.data.reviewedAt}. Source images keep their original proportions.</p>}
-            {sources.length > 1 && (
-              <label className="patch__source-select">
-                <span>Source occurrence</span>
-                <select value={source?.occurrenceId ?? ''} onChange={(event) => setSourceSelection({ patchId: patch.id, occurrenceId: event.target.value })}>
-                  {sources.map((entry) => <option key={entry.occurrenceId} value={entry.occurrenceId}>{entry.occurrenceId}{entry.sourceId && entry.sourceId !== entry.occurrenceId ? ` · ${entry.sourceId}` : ''}</option>)}
-                </select>
-              </label>
-            )}
-          </section>}
-          <div className="patch__stages">
-            {showSourceReview && <figure className="patch__stage patch__stage--source">
-              <figcaption>{sourceTitle}</figcaption>
-              {sourceAvailable
-                ? <img key={sourceKey} src={sourceCropUrl} width={source.width || undefined} height={source.height || undefined} alt={`${title}, source occurrence ${source.occurrenceId}`} onError={() => setFailedSource(sourceKey)} />
-                : <p className="patch__status" role="status">{reviewIndex.status === 'loading' ? 'Loading source…' : sourceCropUrl ? 'This source image could not be loaded.' : 'No source crop is available for this design.'}</p>}
-              <div className="patch__source-caption">
-                {source && <p><strong>{source.occurrenceId}</strong>{Number.isFinite(source.width) && Number.isFinite(source.height) && <> · {source.width} × {source.height} {source.sourceKind === 'vector' ? 'reference units' : 'source pixels'}</>}</p>}
-                {source?.medium && <p>{source.medium}</p>}
-                {source?.note && <p>{source.note}</p>}
-                {sourceUrl && <a href={sourceUrl} target="_blank" rel="noreferrer">Open full source</a>}
-              </div>
-            </figure>}
-            <figure className={showSourceReview ? 'patch__stage patch__stage--vector' : 'patch__stage'}>
-              <figcaption>{showSourceReview ? 'Vector reconstruction' : 'Vector'}</figcaption>
-              <img key={patch.id} src={drawing?.url ?? patch.previewUrl} alt={title} />
-              {phase === 'failed-source' && <p className="patch__status" role="alert">The complete vector could not be loaded; the preview is shown. <button type="button" className="button--inline" onClick={() => setAttempt((n) => n + 1)}>Try again</button></p>}
-            </figure>
-            <figure className={showSourceReview ? 'patch__stage patch__stage--simulation' : 'patch__stage'} aria-busy={busy}>
-              <figcaption>Embroidery simulation</figcaption>
-              <canvas ref={canvas} hidden={!ready} aria-label={`${title}, embroidery simulation`} role="img" />
-              {busy && <p className="patch__status" role="status">{drawing ? 'Sewing…' : 'Loading drawing…'}</p>}
-              {(phase === 'failed-source' || phase === 'failed-sewing') && (
-                <p className="patch__status" role="alert">
-                  {phase === 'failed-source' ? 'Load the vector to preview embroidery.' : 'This patch couldn’t be sewn.'} <button type="button" className="button--inline" onClick={() => setAttempt((n) => n + 1)}>Try again</button>
-                </p>
-              )}
-            </figure>
-          </div>
+          />
         </div>
 
         <aside className="patch__panel">
@@ -348,9 +367,16 @@ export const PatchViewer = ({ patch, org, position, previous, next, onOpen, onCl
               />
             </div>
           )}
-          <Segmented label="Width" options={SIZES} value={widthMm} onChange={setWidthMm} compact />
-          <Segmented label="Edge" options={BORDERS} value={border} onChange={setBorder} compact />
-          <Segmented label="Thread" options={FINISHES} value={finish} onChange={setFinish} compact />
+          <Segmented label="Width" options={SIZES} value={widthMm} onChange={(value) => set({ widthMm: value })} compact />
+          <Segmented label="Edge" options={BORDERS} value={border} onChange={(value) => set({ border: value })} compact />
+          <Segmented label="Ground" options={GROUNDS} value={ground} onChange={(value) => set({ ground: value })} compact />
+          <Segmented label="Thread" options={FINISHES} value={finish} onChange={(value) => set({ finish: value })} compact />
+          <label className="patch__light">
+            <span>Light</span>
+            <input type="range" min="0" max="345" step="15" value={view.lightDeg} onChange={(event) => set({ lightDeg: Number(event.target.value) })} aria-valuetext={`${view.lightDeg} degrees`} />
+            <output>{view.lightDeg}°</output>
+          </label>
+          {changed && <button type="button" className="button--inline patch__reset" onClick={() => set({ ...VIEW_DEFAULTS, mode: view.mode })}>Reset to the default view</button>}
 
           {ready && (
             <>
@@ -360,15 +386,16 @@ export const PatchViewer = ({ patch, org, position, previous, next, onOpen, onCl
                 <div><dt>Threads</dt><dd>{result.palette.length}</dd></div>
               </dl>
               <ul className="patch__threads" aria-label="Thread colours">
-                {result.palette.map((colour, index) => (
-                  <li key={colour} title={`${colour} · ${Math.round(result.coverage[index] * 100)}%`} style={{ background: colour }} />
+                {threadColors(profile, result.palette).map((colour, index) => (
+                  <li key={result.palette[index]} title={`${colour} · ${Math.round(result.coverage[index] * 100)}%${index === result.clothIndex ? ' · cloth' : ''}`} style={{ background: colour }} />
                 ))}
               </ul>
+              {profile && <p className="patch__source">Cloth, edge and thread colours follow the source: {profile.evidence}</p>}
             </>
           )}
 
           <div className="patch__exports">
-            <button type="button" className="button button--primary" disabled={!ready} onClick={exportPng}>PNG</button>
+            <button type="button" className="button button--primary" disabled={!ready} onClick={exportPng} title={size ? `Rendered afresh at ${size.width} × ${size.height} px` : undefined}>PNG</button>
             <button type="button" className="button" disabled={!ready} onClick={() => download(new Blob([writeDst(result, name)]), `${name}.dst`)} title="Tajima machine file">DST</button>
             <button type="button" className="button" disabled={!ready} onClick={() => download(new Blob([writeExp(result)]), `${name}.exp`)} title="Melco machine file">EXP</button>
             {drawing
@@ -417,6 +444,43 @@ export const PatchViewer = ({ patch, org, position, previous, next, onOpen, onCl
             </p>
           )}
         </aside>
+
+        {showSourceReview && <section className="patch__review" aria-label="Source review">
+          <div className="patch__review-heading">
+            <h3>Source comparison</h3>
+            {review && <span className={`patch__review-status patch__review-status--${reviewIsCurrent ? review.status : 'unreviewed'}`}>{reviewIsCurrent ? REVIEW_LABELS[review.status] ?? 'Not yet reviewed' : 'Drawing changed since review'}</span>}
+            {review?.priority === 'high' && <span className="patch__review-priority">High priority</span>}
+          </div>
+          {reviewIndex.status === 'loading' && <p role="status">Loading source review…</p>}
+          {reviewIndex.status === 'failed' && (
+            <p role="status">The source comparison could not be loaded. <button type="button" className="button--inline" onClick={() => setReviewAttempt((n) => n + 1)}>Try again</button></p>
+          )}
+          {reviewIndex.status === 'ready' && !review && <p>This design has not yet been reviewed against a source image.</p>}
+          {!reviewIsCurrent && <p>The findings below describe an earlier drawing. The current reconstruction needs another comparison.</p>}
+          {review?.findings?.length > 0 && <ul>{review.findings.map((finding, index) => <li key={index}>{finding}</li>)}</ul>}
+          {candidateChanges.length > 0 && (
+            <div className="patch__candidate">
+              <h4>Partial correction prepared</h4>
+              <ul>{candidateChanges.map((change, index) => <li key={index}>{change}</li>)}</ul>
+            </div>
+          )}
+          {patch.limitations && <p className="patch__review-limits"><strong>Artwork limitations:</strong> {patch.limitations}</p>}
+          {sources.length > 1 && (
+            <label className="patch__source-select">
+              <span>Source occurrence</span>
+              <select value={source?.occurrenceId ?? ''} onChange={(event) => setSourceSelection({ patchId: patch.id, occurrenceId: event.target.value })}>
+                {sources.map((entry) => <option key={entry.occurrenceId} value={entry.occurrenceId}>{entry.occurrenceId}{entry.sourceId && entry.sourceId !== entry.occurrenceId ? ` · ${entry.sourceId}` : ''}</option>)}
+              </select>
+            </label>
+          )}
+          <div className="patch__source-caption">
+            {source && <p><strong>{source.occurrenceId}</strong>{Number.isFinite(source.width) && Number.isFinite(source.height) && <> · {source.width} × {source.height} {source.sourceKind === 'vector' ? 'reference units' : 'source pixels'}</>}</p>}
+            {source?.medium && <p>{source.medium}</p>}
+            {source?.note && <p>{source.note}</p>}
+            {sourceUrl && <a href={sourceUrl} target="_blank" rel="noreferrer">Open full source</a>}
+          </div>
+          {review && <p className="patch__review-date">Evidence record: {review.reviewedAt ?? reviewIndex.data.reviewedAt}. Source images keep their original proportions.</p>}
+        </section>}
       </div>
     </section>
   )

@@ -14,6 +14,7 @@ import { renderCurrentSvg } from '../current/currentMarks.js'
 import { darkPageInks, renderSuppliedSvg } from './renderSupplied.js'
 import { assetUrl } from './collectedCollections.js'
 import { COLLECTED_DISPLAY } from './collectedDisplay.js'
+import { collectedPreviewFile } from './collectedPalettes.js'
 
 /**
  * A collected file's display copy for a theme (see scripts/build_collected_display.py): its ground
@@ -44,7 +45,7 @@ export const tileArt = (entry, theme = 'light', { cover = false } = {}) => {
       return `<img class="gallery__collected-image gallery__collected-image--clean" src="${escape(assetUrl(display.file))}" alt="${escape(entry.label)}" loading="lazy"` +
         ` style="--logo-scale: ${logoScale(display.aspect)}"${display.plate ? ' data-plate="true"' : ''} />`
     }
-    return `<img class="gallery__collected-image" src="${escape(assetUrl(entry.asset.preview || entry.asset.file))}" alt="${escape(entry.label)}" loading="lazy" data-dark="${entry.asset.darkBackground ? 'true' : 'false'}" />`
+    return `<img class="gallery__collected-image" src="${escape(assetUrl(collectedPreviewFile(entry.asset)))}" alt="${escape(entry.label)}" loading="lazy" data-dark="${entry.asset.darkBackground ? 'true' : 'false'}" />`
   }
   if (entry.kind === 'artwork') {
     const printed = ONE_OFF_MARKS[entry.mark].printed

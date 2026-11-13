@@ -2163,7 +2163,8 @@ export const COLLECTED_BODIES = [
         "darkBackground": false,
         "preview": "identity-collected/northern-health/northern-health-colour-tagline-svg-preview.png",
         "previewWidth": 1200,
-        "previewHeight": 290
+        "previewHeight": 290,
+        "versionLabel": "Full colour with tagline"
       },
       {
         "id": "source-northern-health-northern-health-colour-svg",
@@ -2213,7 +2214,9 @@ export const COLLECTED_BODIES = [
         "darkBackground": false,
         "preview": "identity-collected/northern-health/northern-health-black-tagline-svg-preview.png",
         "previewWidth": 1200,
-        "previewHeight": 290
+        "previewHeight": 290,
+        "versionLabel": "Black with tagline",
+        "variantOf": "source-northern-health-northern-health-colour-tagline-svg"
       },
       {
         "id": "source-northern-health-northern-health-white-tagline-svg",
@@ -2238,7 +2241,9 @@ export const COLLECTED_BODIES = [
         "darkBackground": true,
         "preview": "identity-collected/northern-health/northern-health-white-tagline-svg-preview.png",
         "previewWidth": 1200,
-        "previewHeight": 290
+        "previewHeight": 290,
+        "versionLabel": "White with tagline",
+        "variantOf": "source-northern-health-northern-health-colour-tagline-svg"
       }
     ]
   },
@@ -7094,6 +7099,57 @@ export const COLLECTED_BODIES = [
     "observedDate": "2026-10-22",
     "notes": "At least one exact-name indexed-web query was run for this entity. Results were reviewed for original artwork or dated logo sightings. Name-only legislation, appointments, financial schedules and successor logos were not counted as marks. This limited search pass is not proof that no logo existed. Second pass: Second-pass indexed research reviewed for original artwork. Search results did not establish a recoverable original mark. Names in legislation, funding schedules, ordinary report headings, modern unrelated organizations and successor branding were not counted. This outcome does not establish that no logo existed. The cited 1998/99 Society annual report is a stronger next target than the inspected thesis appendix.",
     "assets": []
+  },
+  {
+    "id": "bc-trade-development-corporation",
+    "name": "British Columbia Trade Development Corporation",
+    "shortName": "BC Trade",
+    "kind": "crown-corporation",
+    "from": 1989,
+    "to": 2003,
+    "current": false,
+    "status": "asset-collected",
+    "observedDate": "2026-11-13",
+    "notes": "The British Columbia Trade Development Corporation, BC Trade, set up in 1989 to help B.C. businesses sell abroad, with market research, overseas business contacts and export financing. Its maple leaf, flag and rising sun, rebuilt from the colour back cover of a 1991 directory it co-published, and seen in black in its July 1989 launch advertisement. Its functions passed to the British Columbia Trade and Investment Office in March 1996; the corporation was wound up and dissolved in November 2003.",
+    "assets": [
+      {
+        "id": "bc-trade-1991-rebuilt",
+        "label": "BC Trade — Maple leaf, flag and rising sun",
+        "file": "identity-collected/bc-trade/bc-trade-1991-rebuilt.svg",
+        "format": "svg",
+        "isVector": true,
+        "supplied": true,
+        "reconstruction": true,
+        "publisher": "British Columbia Trade Development Corporation",
+        "sourcePage": "https://publications.gc.ca/site/eng/9.872851/publication.html",
+        "sourceUrl": "https://publications.gc.ca/collections/collection_2019/isde-ised/Iu44-114-1991-eng.pdf",
+        "sourceLocator": "Rebuilt after the back cover of British Columbia: Software Developers 1991 (PDF page 146); page 145 names BC Trade and Industry, Science and Technology Canada as its publishers",
+        "sourceFile": "British Columbia: Software Developers 1991",
+        "sourceDate": "1991",
+        "observedDate": "2026-11-13",
+        "dateNote": "The 1991 directory is the colour source. The same mark, in black, closes BC Trade’s launch advertisement (“Going the distance for B.C. business”) in the Gulf Islands Driftwood of 12 July 1989, printed page A19: documented use by that date, not its first. The corporation was established by the Trade Development Corporation Act, assented to 1 June 1989; the mark’s introduction and designer are not documented.",
+        "alsoSeen": [
+          {
+            "date": "1989-07-12",
+            "source": "https://saltspringarchives.com/driftwood/1989/v30n28July12-1989A.pdf#page=19"
+          }
+        ],
+        "evidenceType": "supplied-vector-reconstruction",
+        "notes": "A red maple leaf rising behind a waving flag — blue field, five red bands parted by white, a gold sun rising from its base — above “BC TRADE”.",
+        "fidelityNote": "A supplied vector reconstruction, not original artwork: every shape and each of the seven letters is a hand-built outline after a 196 × 218 pixel scan (no automatic tracing), with proportions taken from the 1991 scan and parts checked against a larger restored copy. The lettering is a stylistic reconstruction; its typeface is not identified. The red #B22C20, blue #17447F and gold #EDC445 are read from the scan, not an original specification. Ray tips and separator widths are estimates where the scan is blurred. The 1991 scan is kept as a download.",
+        "sha256": "aad99d83daff04ccd4f215edb01b1bc8915cd834f05bc56aebe04a6febef781e",
+        "bytes": 15871,
+        "darkBackground": false,
+        "downloads": [
+          {
+            "label": "Download 1991 back-cover scan (PNG)",
+            "file": "identity-collected/bc-trade/bc-trade-1991-scan.png",
+            "sha256": "40f3640213ee8614d5b943ff06b8231ecb7926eeb9e322d83e63a440a1c3756e"
+          }
+        ],
+        "search": "bc-trade-vector-2026-11-13"
+      }
+    ]
   }
 ]
 // Published vector specimens of the one-off programs, by the timeline each belongs to.
@@ -7309,7 +7365,8 @@ export const COLLECTED_SPECIMENS = [
         "bytes": 5503,
         "darkBackground": false,
         "timelineEra": "strongerbc-2022",
-        "search": "vector-search-2026-10-30"
+        "search": "vector-search-2026-10-30",
+        "versionLabel": "Full colour wordmark"
       },
       {
         "id": "vector-StrongerBC_RGB_rev",
@@ -7334,7 +7391,9 @@ export const COLLECTED_SPECIMENS = [
         "bytes": 5554,
         "darkBackground": true,
         "timelineEra": "strongerbc-2022",
-        "search": "vector-search-2026-10-30"
+        "search": "vector-search-2026-10-30",
+        "versionLabel": "Reversed colour wordmark",
+        "variantOf": "vector-StrongerBC_RGB_pos"
       },
       {
         "id": "vector-StrongerBC_Solid_pos",
@@ -7359,7 +7418,8 @@ export const COLLECTED_SPECIMENS = [
         "bytes": 5502,
         "darkBackground": false,
         "timelineEra": "strongerbc-2022",
-        "search": "vector-search-2026-10-30"
+        "search": "vector-search-2026-10-30",
+        "versionLabel": "Solid wordmark"
       },
       {
         "id": "vector-StrongerBC_Solid_rev",
@@ -7384,7 +7444,9 @@ export const COLLECTED_SPECIMENS = [
         "bytes": 5499,
         "darkBackground": true,
         "timelineEra": "strongerbc-2022",
-        "search": "vector-search-2026-10-30"
+        "search": "vector-search-2026-10-30",
+        "versionLabel": "Reversed solid wordmark",
+        "variantOf": "vector-StrongerBC_Solid_pos"
       }
     ]
   },
