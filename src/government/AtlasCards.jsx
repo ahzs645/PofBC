@@ -9,7 +9,7 @@
 import { HISTORICAL_CENSUSES, IMPORT_COUNTS } from './researchData.js'
 import { Fragment, useMemo, useState } from 'react'
 import { compareYears } from './compare.js'
-import { EVENT_SOURCES, formatEventDate, isAhead, typeOf } from './events.js'
+import { EVENTS, EVENT_SOURCES, formatEventDate, isAhead, typeOf } from './events.js'
 import { MINISTRY_EPISODES, standsIn } from './episodes.js'
 import { StoryText } from './StoryText.jsx'
 import { storySteps } from './storySteps.js'
@@ -41,7 +41,7 @@ export const EventsCard = ({ events, day, title = 'Origins and changes' }) => {
           const type = typeOf(event)
           const ahead = isAhead(event, day)
           return (
-            <li key={event.id} className="gov-events__item" data-kind={type.kind} data-ahead={ahead || undefined}>
+            <li key={event.id} id={`event-${event.id}`} className="gov-events__item" data-kind={type.kind} data-ahead={ahead || undefined}>
               <span className="gov-events__date">{formatEventDate(event.date)}</span>
               <span className="gov-events__body">
                 <span className="gov-events__type">
@@ -60,6 +60,7 @@ export const EventsCard = ({ events, day, title = 'Origins and changes' }) => {
                       <span className="gov-events__sources">
                         {entry.sources.map((index) => <SourceLink key={index} source={EVENT_SOURCES[index]} />)}
                         {entry.locator && <span className="gov-muted"> · {String(entry.locator)}</span>}
+                        {entry.date && <span className="gov-muted"> · Source date precision: {formatEventDate(entry.date)}</span>}
                         <span className="gov-muted"> · {entry.reviewed ? `Reviewed ${entry.reviewed}` : 'Review date not supplied'}</span>
                         {entry.title && entry.title !== event.title && <span className="gov-muted"> · {entry.title}</span>}
                         {note && !long && <span className="gov-muted"> · {note}</span>}
@@ -68,6 +69,13 @@ export const EventsCard = ({ events, day, title = 'Origins and changes' }) => {
                     </Fragment>
                   )
                 })}
+                {(event.decisions ?? []).map((decision) => <span key={decision.id} className="gov-events__note">Reviewed {decision.decided}: {decision.reason}</span>)}
+                {(event.relatedEvents ?? []).map((id) => {
+                  const related = EVENTS.find((candidate) => candidate.id === id)
+                  return related && <span key={id} className="gov-events__note">Related event: <a href={`#event-${id}`}>{related.title} ({formatEventDate(related.date)})</a></span>
+                })}
+                {(event.legalReferences ?? []).map((reference) => <span key={reference.source_url} className="gov-events__sources"><SourceLink source={{ url: reference.source_url, title: reference.title }} /> · {reference.locator}</span>)}
+                {(event.unresolvedRelated ?? []).map((reference) => <span key={reference.supplied_id} className="gov-events__note">Related organization awaiting a matched record: {reference.label}. {reference.reason}</span>)}
               </span>
             </li>
           )

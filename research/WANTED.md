@@ -1,10 +1,12 @@
 # What to research next
 
-The complete list of what the atlas still needs, as of **21 October 2026, after Round 4**
-(`reviews/round-4-2026-10-21/`). Each item says what is missing, what is already known, the
-document that would settle it, where to look, and what to hand back. An item Round 4 closed is
-ticked and says what closed it; one it narrowed is rewritten as the question that is left. How to add
-an answer is in [`README.md`](README.md).
+The research backlog, with a measured checkpoint as of **12 November 2026**. The dated Round 4
+history of **21 October 2026** (`reviews/round-4-2026-10-21/`) is retained below. Each item says
+what is missing, what is already known, the document that would settle it, where to look, and what
+to hand back. An item Round 4 closed is ticked and says what closed it; later changes are dated.
+How to add an answer is in [`README.md`](README.md). The November reconciliation's sources,
+decisions and remaining limits are in
+[`audits/evidence-reconciliation-2026-11-12/README.md`](audits/evidence-reconciliation-2026-11-12/README.md).
 
 Rules for every hand-back are the same as before: one claim, one source with a locator; keep the
 precision the source gives; say what each date dates (signed, deposited, in force, registered,
@@ -20,20 +22,28 @@ review's complete handoff has it: integrate it, do not research it again), **mod
 
 **Where the atlas stands** (counted across 1871-2026 by `node scripts/measure-government.mjs`):
 
-| Measure | Before Round 4 | After Round 4 | Now |
-|---|---|---|---|
-| Body-years with a stated responsible ministry | 2,610 | 2,741 | 2,754 |
-| Body-years placed beside a ministry by inference | 98 | 99 | 106 |
-| Body-years with no ministry (sub-agencies, partnerships and courts aside) | 498 | 496 | 496 |
-| Sub-agencies with a start / a dated sighting / neither (of 251) | 43 / 50 / 158 | 48 / 65 / 138 | 51 / 176 / 24 |
-| Past sub-agency-years whose parent is inferred from today's | 1,609 of 1,641 | 1,879 of 1,940 | 2,950 of 3,047 |
-| Ministry-years with no minister matched | 17 | 0 | 0 of 2,015 |
-| Bodies whose main source is Wikipedia | 22 | 22 | 22 |
-| Bodies whose start is a year only | 63 | 59 | 59 |
-| Historical bodies with no start at all (listed in lineage only) | 52 | 5 | 5 |
+| Measure | Before Round 4 | After Round 4 | Earlier integration checkpoint | 12 November 2026 |
+|---|---|---|---|---|
+| Body-years with a stated responsible ministry | 2,610 | 2,741 | 2,754 | 2,755 |
+| Body-years placed beside a ministry by inference | 98 | 99 | 106 | 106 |
+| Body-years with no ministry (sub-agencies, partnerships and courts aside) | 498 | 496 | 496 | 551 |
+| Sub-agencies with an established start / a dated sighting / neither (of 251) | 43 / 50 / 158 | 48 / 65 / 138 | 51 / 176 / 24 | 52 / 175 / 24 |
+| Past sub-agency-years whose parent is inferred from today's | 1,609 of 1,641 | 1,879 of 1,940 | 2,950 of 3,047 | 2,956 of 3,073 |
+| Ministry-years with no minister matched | 17 | 0 | 0 of 2,015 | 0 of 2,015 |
+| Bodies whose main source is Wikipedia | 22 | 22 | 22 | 22 |
+| Bodies whose start is a year only | 63 | 59 | 59 | 58 |
+| Historical bodies with no start at all (listed in lineage only) | 52 | 5 | 5 | 5 |
 
-More sub-agency-years are drawn now, because more sub-agencies are shown to exist earlier (the
-earlier branch batch the review found unmerged dated 114 of them); nearly all of those years still
+The earlier columns preserve their recorded checkpoints; they have not been recalculated against
+today's register. Their differences from November are not a measure of this reconciliation alone.
+In particular, the older 496 unplaced body-years is not the current count. The November checkpoint
+still has 551 unplaced body-years and 96.2% of historical sub-agency-years with an inferred parent.
+A dated sighting establishes presence on that date, not an establishment date or a continuous
+parent relationship.
+
+At the earlier integration checkpoint, more sub-agency-years were drawn because more sub-agencies
+were shown to exist earlier (the earlier branch batch the review found unmerged dated 114 of them);
+nearly all of those years still
 place the body under today's parent (F2). The ministry-year count is of annual snapshots, not a
 day-by-day audit of tenures. The inferred body-years rose by seven because MTOC is now drawn as a
 legal shell from 1985 to its last sighting in 1991, beside the ministry that answers for its
@@ -201,15 +211,21 @@ designation days of 51 more councils and corrected the Capital Health Board's st
   2001, MTOC (1980-1985), the WCB review bodies and BC Cancer and BC Transplant before PHSA. *Where:*
   the statute-assignment orders in council at each cabinet change (BC Laws `arc_oic`, searching the
   order texts for each Act's title in the weeks after a swearing-in), then the Estimates and annual
-  reports. *Hand back:* `responsible-*.json`.
+  reports. *Hand back:* `responsible-*.json`. **12 November 2026:** PRHC's responsibility to
+  Employment and Investment is now documented only for 18 February 1998 to 21 July 1999, bounded by
+  OICs 177/1998 and 897/1999 and corroborated by the contemporary Auditor General report. Earlier
+  and later gaps remain; see the [source register](audits/evidence-reconciliation-2026-11-12/prhc-sources.json).
 - [ ] **E2 (P1) Ownership, administration and control, typed.** Round 4 dated Dunhill's 1974 ownership
   stages, Pemco's shareholding (1975, 1976), BC Steamship's provincial ownership and subsidiary, and
   the board-appointment and Crown-agent clauses of the UTA, MTOC, BC Transit and the 1964 Hydro (as
   events). Open: the Vancouver Wharves identity chain (BC Rail's 1993 annual report; registry files
   44407, 59694, 176504, 1282745 and 284435) and Dunhill's end. Needs the line types in G1 to draw.
 - [ ] **E3 (P2) PRHC.** Open: the 1973 acquisition (day and instrument), the 1961 certificate, and
-  its minister from 1973. *Where:* the Public Accounts 1973/74 Housing Fund investment schedule; 1973
-  orders under the Housing Act (`arc_oic`); company 52129's file at the BC Registry.
+  its minister from 1973 outside the bounded period described in E1. *Where:* the Public Accounts
+  1973/74 Housing Fund investment schedule; 1973 orders under the Housing Act (`arc_oic`); company
+  52129's file at the BC Registry. **12 November 2026:** three event URLs were recovered, but the
+  reported 1976 ministry annual report page was not retrieved. Its URL remains `null`, its page
+  locator and typography remain unverified, and its review date has been cleared.
 - [ ] **E4 (P2) The modern ferry structure.** The coastal ferry services contract is recovered: it
   starts 1 April 2003 for an initial term of 60 years, with performance terms of five years first and
   four years after; 18 amendments are catalogued, and amendments 17 and 18 take effect on 1 April 2024
@@ -219,18 +235,26 @@ designation days of 51 more councils and corrected the Capital Health Board's st
 - [ ] **E5 (P2) Pensions and land titles.** The Public Sector Pension Plans Act's 1999/2000
   commencement orders for its corporate provisions; LTSA's 2005 establishment and operating agreement.
 - [ ] **E6 (P2) The 2026 service-plan exemption list and the Public Accounts' reporting entities.**
-  Match each entry to a legal identity and observation date, not by name. Round 4 settled one: BC
-  Enterprise Corporation is BC Place Ltd.'s company (BC0207097), registered 25 March 1980, named BCEC
-  on 20 August 1987, restored in 1993 and dissolved on 27 March 2023; its 1989 end was a cessation.
-  Open: what happened in March 1987, which the atlas gives (the BC Enterprise Corporation Act, SBC
-  1987, and its commencement).
+  Match each entry to a legal identity and observation date, not by name. Round 4 identified BC
+  Enterprise Corporation as BC Place Ltd.'s company (BC0207097), with a 25 March 1980 registration,
+  a 20 August 1987 BCEC name entry, a 1993 restoration and a 27 March 2023 dissolution-status entry.
+  **12 November 2026:** the statute establishes the BC Place-to-BCEC rename with effect from
+  31 March 1987. Audited accounts establish cessation and transfers of certain assets and
+  liabilities on 30 September 1989, with the Province and PavCo as recipients. PavCo was a separate
+  corporation, incorporated 3 May 1984; a later amalgamation formed the present corporation on
+  1 April 2008. BCEC's legal dissolution took effect on 13 March 2023 under the commencement order;
+  the later registry entry remains separately dated. The false BCEC-to-PavCo continuation is
+  removed. Open: the reasons for the legal/registry date differences and the remaining identities
+  in the exemption and reporting lists. See the [history source register](audits/evidence-reconciliation-2026-11-12/history-sources.json).
 - [ ] **E7 (P2) Primary sources for the 22 bodies that rest on Wikipedia.** One body, one enabling Act
   and its commencement (or its incorporation), each. Round 4 found the BC Games Society's registry
   line (registered 26 June 1987, with its names) and Creative BC's (the Film Development Society of
   1987, renamed 25 February 2013). Open for them: what ran the Games from 1977 (a 1977-78 order or
   Estimates vote), and the 2013 merger instrument.
-- [ ] **E8 (P3) Day-level starts for the 59 bodies dated to a year.** Round 4 dated the UTA, MTOC, BC
-  Transit, BC Steamship and BC Hydro. The enabling Act's commencement order, or the incorporation day.
+- [ ] **E8 (P3) Day-level starts for the 58 bodies dated to a year.** Round 4 dated the UTA, MTOC, BC
+  Transit, BC Steamship and BC Hydro. **12 November 2026:** PavCo's former corporation is now dated
+  to 3 May 1984 from its service plan, reducing the earlier count of 59 by one. For each remaining
+  body, recover the enabling Act's commencement order or the incorporation day.
 - [ ] **E9 (P2) Open questions in `history/bodies.json`.** Settled by Round 4: BC Transit's start (the
   1982 rename), MTOC's operational end (1 June 1985), BC Hydro (30 March 1962). Open: when the Liquor
   Administration Branch began to be called the Liquor Distribution Branch, 1973-1976 (the Public
@@ -253,20 +277,25 @@ designation days of 51 more councils and corrected the Capital Health Board's st
   Closed: **Forest Renewal BC's statutory end is 27 June 2002**, when B.C. Reg. 158/2002 was deposited
   (OIC 517/2002, approved 26 June; the Act's ss. 8 and 28): now events. The BC Forest Service
   timeline's 14 June is kept as that compilation reports it; an operational step that day would need
-  its own source.
+  its own source. **12 November 2026:** BC Rail's transaction closing is dated 14 July 2004 from
+  contemporary releases and audited accounts; the TSB's retrospective 15 July date is retained as
+  an attributed claim. A separate next-day operational handover has not been established. The
+  operating business, statutory Crown corporation and public railway infrastructure remain distinct.
 
 ## F. Branches and sub-agencies
 
 - [ ] **F1 (P1) Sub-agency starts and sightings.** 24 of 251 have neither (138 before the review's
   earlier branch batch was merged, 158 before Round 4): 10 marked gone and 14 others, listed in the
-  review's `audit/branch-atlas-impact.json`. Most of the 176 dated by a sighting still lack a start.
+  review's `audit/branch-atlas-impact.json`. **12 November 2026:** 52 have an established start and
+  175 are dated by a sighting; those sightings do not establish a start.
   Two specific ones: the IRR and EMCR divisions (the ministries' 2025/26 organisation charts or
   FOI-released transition binders on docs.openinfo.gov.bc.ca), and Safe Campuses BC (a Wayback
   Machine capture whose page title prints the name, with its date). *Editorial decision needed:* the
   Compliance and Enforcement Collaborative is an inter-agency working group, not its secretariat's
   ministry unit.
-- [ ] **F2 (P1) Sub-agency parents over time.** 2,950 of 3,047 past sub-agency-years place a body under
-  today's parent by inference. The 47 parent rows the earlier batch brought are observations on a
+- [ ] **F2 (P1) Sub-agency parents over time.** **12 November 2026:** 2,956 of 3,073 past
+  sub-agency-years place a body under today's parent by inference (2,950 of 3,047 at the earlier
+  integration checkpoint). The 47 parent rows the earlier batch brought are observations on a
   day, not periods, and are drawn only in their year. *Where:* ministry annual reports' organisation
   charts for 2001, 2005, 2017, 2020, 2022 and 2024; the D1 schedules once integrated.
 - [ ] **F3 (P2) The sheriffs.** The statutory chain 1860-1920 is now events, and the 1974 Police Act
@@ -344,7 +373,11 @@ designation days of 51 more councils and corrected the Capital Health Board's st
 - [ ] **H1 (P2) MLAs, ridings and by-elections** (*supplied, not integrated:* the review's earlier
   election and session tables, with identity and date checks still to do; recovering a file does not
   approve a roster) for every Parliament before the 43rd, reconciled
-  person by person; party at election apart from later caucus changes.
+  person by person; party at election apart from later caucus changes. **12 November 2026:** the
+  separate [2026 final-count register](atlas/election-2026-final-count.json) now records Elections
+  BC's 9 November declaration of 93 elected candidates, with two judicial-recount flags. It does
+  not establish sworn membership, current caucus, the Speaker or a new cabinet. The older
+  officeholder snapshot keeps its own review date; the historical roster work remains open.
 - [ ] **H2 (P3) Sessions and committees** (the Assembly's Journals); 140 older session ends need the
   original Journals before they are called prorogations.
 - [ ] **H3 (P3) Before 1905:** the agencies of the Provincial Secretary and of Lands and Works, from the
@@ -358,6 +391,11 @@ designation days of 51 more councils and corrected the Capital Health Board's st
   agreement (Open Learning Agency to Thompson Rivers University).
 - [ ] **H6 (P3) Logos:** masters, first-use dates and permission for the ICBC, BCLC, BC Ferries, BC
   Transit and WorkSafeBC marks; WorkSafeBC's 1968 design and BC Transit's flag lockups.
+  **12 November 2026:** prose referring to events in a particular year no longer dates an otherwise
+  undated specimen. Two BC Housing records mentioning April 2019 are now undated. Narrative-only
+  report dates need reviewed `specimenDate` metadata; a specimen date still does not establish
+  adoption. BC Cancer's 2017 year and 15 November announcement are explicitly reconciled for that
+  event, preserving both original assertions and their precision.
 
 ## Not research: fixes on our side
 
@@ -368,7 +406,18 @@ operational end is kept apart from a legal one (MTOC). The **local-body register
 (`history/local-hospital-districts.json`, 68 districts, by `reviews/round-4-2026-10-21/local_register.py`)
 and shown on a layer of its own, searchable, with its governance from each instrument and events
 indexed to it. Events keep every body they name. Sub-agency ends are typed by what they were. The
-1978 ministry's old id still opens it. What is left on our side:
+1978 ministry's old id still opens it.
+
+**12 November 2026:** the [record-link audit](audits/evidence-reconciliation-2026-11-12/link-check.json)
+separates organization links, event links and legal references. Its current 970 materialized events
+have no malformed links; it still reports the unmatched 2007 Emergency Management B.C. reference
+and the unretrieved PRHC source. The [event import ledger](audit/events-import.json) separately
+retains 26 unresolved/unmapped inputs. Existing salary observations now connect to BC Rail,
+BC Family Maintenance Agency and JIBC without changing their source scope. Shared gallery shelves
+now link their own organization's designs; the BC Cancer Foundation retains its separate ownership.
+These corrections do not fill the remaining source and model gaps below.
+
+What is left on our side:
 
 - **Local electorates.** A local body's line to the people runs through its own electors (a hospital
   improvement district's landowners), which the atlas does not draw yet.

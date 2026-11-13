@@ -799,7 +799,8 @@ const GRAPH_NODES = {
   'coroners-service': 'sub-bc-coroners-service',
   'bc-online': 'sub-bc-online',
   'bc-bid': 'sub-bc-bid',
-  'public-service': 'bc-public-service-agency'
+  'public-service': 'bc-public-service-agency',
+  'healthlink-bc-logo': 'sub-healthlink-bc'
 }
 
 /** BC Parks' marks, which its own collection holds rather than the Province's shelf. */
@@ -1084,7 +1085,7 @@ export const GALLERY_COLLECTIONS = [
       // A service wordmark in the BC mark's Garamond, held as published.
       ...specimenEntriesOf('bceid'),
       // A service on the BC mark, as its website serves it.
-      ...specimenEntriesOf('healthlink-bc')
+      ...specimenEntriesOf('healthlink-bc').map(withNode)
     ]
   }
 ]
@@ -1139,6 +1140,13 @@ const PLACED = {
       'programs and reports to the Legislative Assembly.'
   }
 }
+// A shared visual identity does not make the fundraising charity part of the agency. These
+// design IDs retain their owner even while the collection shows the family together. The
+// Foundation is not a node in the provincial-government graph.
+const ENTRY_OWNERS = {
+  'bc-cancer-foundation-2018': 'bc-cancer-foundation',
+  'bc-cancer-foundation-2026': 'bc-cancer-foundation'
+}
 for (const [node, place] of Object.entries(PLACED)) {
   const held = SPECIMEN_COLLECTIONS.find((collection) => collection.id === `specimens-${node}`)
   if (!held) continue
@@ -1150,12 +1158,23 @@ for (const [node, place] of Object.entries(PLACED)) {
     graphNode: place.graphNode === undefined ? node : place.graphNode,
     cover: held.entries[0]?.id,
     // A body's files, not a program's: they sit on no timeline.
-    entries: held.entries.map(({ timeline, ...entry }) => ({ ...entry, owner: node }))
+    entries: held.entries.map(({ timeline, ...entry }) => ({ ...entry, owner: ENTRY_OWNERS[entry.id] ?? node }))
   })
 }
 
-/** The collection holding a body's logos — its own, or one it carried on as under a later name. */
-export const collectionOfNode = (node) => GALLERY_COLLECTIONS.find((collection) => nodesOf(collection).includes(node))
+/**
+ * Every collection holding a body's own designs. Its dedicated collection comes first, followed
+ * by shared shelves such as the BC mark. Gallery placement and organization identity are separate.
+ */
+export const collectionsOfNode = (node) => {
+  if (!node) return []
+  const dedicated = GALLERY_COLLECTIONS.filter((collection) => nodesOf(collection).includes(node))
+  return [...dedicated, ...GALLERY_COLLECTIONS.filter((collection) =>
+    !dedicated.includes(collection) && entriesOfNode(collection, node).length > 0)]
+}
+
+/** The preferred collection: the body's own history where held, otherwise a shared shelf. */
+export const collectionOfNode = (node) => collectionsOfNode(node)[0]
 
 /** The collection a link names: by its id, or by the id one of its earlier names had on its own. */
 export const collectionById = (id) => GALLERY_COLLECTIONS.find((collection) => collection.id === id || collection.aliases?.includes(id))
@@ -1165,7 +1184,7 @@ export const collectionById = (id) => GALLERY_COLLECTIONS.find((collection) => c
  * or for the collection's own body, those and every mark not collected for another.
  */
 export const entriesOfNode = (collection, node) => entriesOf(collection)
-  .filter((entry) => (entry.owner ?? collection.graphNode) === node)
+  .filter((entry) => (entry.owner ?? entry.graphNode ?? collection.graphNode) === node)
 
 export const COLLECTIONS_ON_SHELF = (shelf) => GALLERY_COLLECTIONS.filter((collection) => collection.shelf === shelf)
 

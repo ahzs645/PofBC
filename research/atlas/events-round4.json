@@ -2901,14 +2901,14 @@
         "range_end_inclusive": false
       },
       "temporal_status": "source_reported_past",
-      "certainty": "conflicting",
+      "certainty": "documented",
       "evidence": {
         "source_url": "https://orgbook.gov.bc.ca/api/v4/topic/211256/credential-set",
         "locator": "OrgBook BC, registration BC0207097, credential 274645: entity_name_effective 1987-08-20, reason Event:CONVNC (converted legacy name change); credential 274585 holds the earlier name",
         "observed_on": "2026-10-21"
       },
-      "interpretation_notes": "The day the registry gives the new name effect. The atlas starts the body in March 1987 (BC Archives: \"formed in March 1987 by renaming BC Place Ltd.\"); the two are kept apart, since the registry date may be a filing date and the March date an Act or a reorganization. Not resolved here.",
-      "reviewed_on": "2026-10-21",
+      "interpretation_notes": "A registry name-effective observation dated 20 August 1987, retained at its stated date. The statutory rename has legal effect from 31 March 1987 under section 1.1 and the historical note in the British Columbia Enterprise Corporation Act (1987-44-2; B.C. Reg. 299/87). The dates describe distinct records; no filing-day explanation for their difference is asserted.",
+      "reviewed_on": "2026-11-12",
       "round4_claims": [
         "E6",
         "R3E-C008"
@@ -2944,8 +2944,8 @@
       "id": "atlas:round4-bcec-administratively-dissolved-2023",
       "subject_id": "bc-enterprise-corporation",
       "related_subject_ids": [],
-      "event_type": "dissolution",
-      "title": "BC Registries record British Columbia Enterprise Corporation administratively dissolved on 27 March 2023",
+      "event_type": "registry_status_observed",
+      "title": "BC Registries record an administrative dissolution status for BCEC dated 27 March 2023",
       "date": {
         "start": "2023-03-27",
         "end": null,
@@ -2959,8 +2959,8 @@
         "locator": "OrgBook BC, BC0207097, credential 5211037: effective 2023-03-27 23:20 Pacific (2023-03-28 UTC), reason Event:SYSDA, status HIS",
         "observed_on": "2026-10-21"
       },
-      "interpretation_notes": "The legal end of the company, long after it stopped operating (the atlas's 1989 end). Distinct from the repeal of its Act, which Round 3 reports as 13 March 2023 without a retrieved instrument. Kept as an event: the body is not redrawn to 2023 (see body_changes).",
-      "reviewed_on": "2026-10-21",
+      "interpretation_notes": "This is the date of the registry status entry, not the statutory dissolution date. Section 4 of the B.C. Pavilion Corporation Act dissolved BCEC when the Act came into force on 13 March 2023 under B.C. Reg. 71/2023 (OIC 171/2023). The registry observation is preserved separately. The atlas’s 1989 operating end remains distinct from both legal and registry milestones.",
+      "reviewed_on": "2026-11-12",
       "round4_claims": [
         "E6",
         "R3E-C010"

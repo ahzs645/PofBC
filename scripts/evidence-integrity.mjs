@@ -63,7 +63,8 @@ export function eventCollector(accounting) {
   // with its own wording kept, rather than drawing the happening twice.
   const attach = (target, event, origin, input = event, reason) => {
     target.sources = [...new Set([...target.sources, ...event.sources])].sort((a, b) => a - b)
-    target.evidence.push({ sources: event.sources, locator: event.locator, reviewed: event.reviewed ?? null, title: event.title, notes: event.notes, origin })
+    target.evidence.push({ sources: event.sources, locator: event.locator, reviewed: event.reviewed ?? null, title: event.title, notes: event.notes, origin,
+      ...(reason?.startsWith('Reviewed precision refinement:') ? { date: { ...event.date } } : {}) })
     target.origins.push(origin)
     accounting.record(origin, 'corroborating_duplicate', input, { output_id: target.id, reason })
   }

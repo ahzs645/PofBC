@@ -4,7 +4,7 @@ import { readFileSync, existsSync } from 'node:fs'
 import { createHash } from 'node:crypto'
 import { COLLECTING } from './collectingData.js'
 import { COLLECTED_BODIES } from './collectedData.js'
-import { COLLECTED_COLLECTIONS, CONTINUATIONS, assetUrl, nodesOf, researchLabel } from './collectedCollections.js'
+import { COLLECTED_COLLECTIONS, CONTINUATIONS, assetUrl, collectedEntriesOf, nodesOf, parseSpecimenDate, researchLabel } from './collectedCollections.js'
 import { GALLERY_COLLECTIONS, collectionById, collectionOfNode, entriesOf, entriesOfNode } from './collections.js'
 import { HISTORICAL_BODIES } from '../government/historyData.js'
 
@@ -56,6 +56,50 @@ test('collected entries date sightings rather than claiming logo adoption', () =
     // A supplied file is dated only by the sightings of its design it stands for.
     if (entry.asset.supplied && !entry.asset.sourceDate && !entry.asset.alsoSeen?.length) assert.equal(entry.identity.applicability.kind, 'unknown')
   }
+})
+
+test('an event year mentioned inside an undated report cannot date its logo', () => {
+  const entries = collectedEntriesOf('bc-housing').filter((entry) => entry.asset.sourceDate?.startsWith('Undated report describing April 2019'))
+  assert.equal(entries.length, 2, 'both BC Housing specimens remain covered by the regression')
+  for (const entry of entries) {
+    assert.equal(entry.years, 'Logo dates unestablished', entry.id)
+    assert.equal(entry.identity.applicability.kind, 'unknown', entry.id)
+    assert.equal(entry.identity.applicability.years, 'undated', entry.id)
+    assert.match(entry.identity.applicability.note, /does not establish a dated specimen/)
+    assert.doesNotMatch(entry.identity.applicability.note, /This is the date of the cited specimen/)
+  }
+})
+
+test('specimen dates retain precision and fiscal boundaries without extracting years from prose', () => {
+  const cases = [
+    ['2017', 2017, 2017], ['2017-11', 2017, 2017], ['2017-11-15', 2017, 2017],
+    ['1982/83', 1982, 1983], ['1999/00', 1999, 2000], ['2012/2013', 2012, 2013],
+    ['FY2025/26', 2025, 2026], ['2000–2001', 2000, 2001], ['2023-2026', 2023, 2026],
+    ['March 1999', 1999, 1999], ['April–May 2001', 2001, 2001], ['Spring 2000', 2000, 2000],
+    ['c. 1970', 1970, 1970], ['about 1970', 1970, 1970]
+  ]
+  for (const [label, firstYear, lastYear] of cases) {
+    assert.deepEqual(parseSpecimenDate(label), { label, firstYear, lastYear }, label)
+  }
+  for (const prose of ['Events in 2019', '2009 service plan update', '2014 annual report, published 2015',
+    '2023–2026 accessibility plan', 'URL uploaded 2023/05', 'Undated report describing April 2019 events; no adoption date inferred']) {
+    assert.equal(parseSpecimenDate(prose), null, prose)
+  }
+  for (const invalid of ['2023-13', '2023-02-29', '2023-04-31', '2000/99', '2026–2023', null, undefined]) {
+    assert.equal(parseSpecimenDate(invalid), null, String(invalid))
+  }
+})
+
+test('BCEC asset transfers do not fold its logos into PavCo as a former name', () => {
+  const bcec = collectionById('collected-bc-enterprise-corporation')
+  const pavco = collectionById('collected-bc-pavilion-corporation')
+  const place = collectionById('collected-bc-place-ltd')
+  assert.ok(bcec && pavco && place)
+  assert.notEqual(bcec, pavco)
+  assert.notEqual(place, pavco)
+  assert.deepEqual(nodesOf(bcec), ['bc-enterprise-corporation'])
+  assert.deepEqual(nodesOf(pavco), ['bc-pavilion-corporation'])
+  assert.ok(!CONTINUATIONS.some(([from, to]) => from === 'bc-enterprise-corporation' && to === 'bc-pavilion-corporation'))
 })
 
 test('asset links respect both root and project deployments; leads stay uncollected', () => {

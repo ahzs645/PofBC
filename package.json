@@ -99,7 +99,8 @@
     "review:salary-gap-fill": "python3 scripts/review_salary_gap_fill.py",
     "check:salary-preservation": "python3 scripts/check_salary_current_preservation.py",
     "build:salary-search": "node scripts/build-salary-search.mjs",
-    "check:salary-search": "npm run build:salary-search --silent && node scripts/check-salary-search.mjs"
+    "check:salary-search": "npm run build:salary-search --silent && node scripts/check-salary-search.mjs",
+    "check:record-links": "node scripts/check-record-links.mjs"
   },
   "peerDependencies": {
     "react": ">=18",

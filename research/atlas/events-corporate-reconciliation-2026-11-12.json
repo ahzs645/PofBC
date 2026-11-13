@@ -1,0 +1,111 @@
+{
+  "metadata": {
+    "title": "Primary-source reconciliation of BC Place, BCEC and PavCo",
+    "as_of": "2026-11-12",
+    "conventions": {
+      "scope": "Distinct statutory, registry, operational and business-name milestones; no inferred corporate continuation from an asset transfer."
+    }
+  },
+  "events": [
+    {
+      "id": "atlas:pavco-predecessor-incorporated-1984-05-03",
+      "subject_id": "bc-pavilion-corporation",
+      "related_subject_ids": [],
+      "event_type": "legal_establishment",
+      "title": "Former B.C. Pavilion Corporation incorporated under the Company Act",
+      "date": {
+        "start": "1984-05-03",
+        "end": null,
+        "precision": "day",
+        "range_end_inclusive": false
+      },
+      "temporal_status": "source_reported_past",
+      "certainty": "documented",
+      "evidence": {
+        "source_url": "https://www.bcbudget.gov.bc.ca/2004/sp/crownagency/bcpc.pdf",
+        "source_title": "PavCo Service Plan 2004/05–2006/07",
+        "locator": "Printed p. 4, Enabling Legislation",
+        "basis": "direct_statement_in_official_source",
+        "observed_on": "2026-11-12"
+      },
+      "interpretation_notes": "This dates the former PavCo. The present corporation’s 1 April 2008 amalgamation with Vancouver Convention Centre Expansion Project Ltd. remains a separate event; BCEC was not a former name of PavCo.",
+      "reviewed_on": "2026-11-12"
+    },
+    {
+      "id": "atlas:bcplace-bcec-statutory-rename-1987-03-31",
+      "subject_id": "bc-enterprise-corporation",
+      "related_subject_ids": [
+        "bc-place-ltd"
+      ],
+      "event_type": "statutory_name_change",
+      "title": "British Columbia Place Ltd. statutorily renamed British Columbia Enterprise Corporation",
+      "date": {
+        "start": "1987-03-31",
+        "end": null,
+        "precision": "day",
+        "range_end_inclusive": false
+      },
+      "temporal_status": "source_reported_past",
+      "certainty": "documented",
+      "evidence": {
+        "source_url": "https://www.bclaws.gov.bc.ca/civix/document/id/93consol17/93consol17/80002",
+        "source_title": "British Columbia Enterprise Corporation Act, consolidation current to 25 November 1993",
+        "locator": "Section 1.1 and historical note: 1987-44-2, effective 31 March 1987 (B.C. Reg. 299/87)",
+        "basis": "direct_statement_in_official_source",
+        "observed_on": "2026-11-12"
+      },
+      "interpretation_notes": "The statute identifies the continuing company by incorporation certificate 207097. The registry’s 20 August 1987 name-effective entry is kept separately and is not substituted for this statutory effective date.",
+      "reviewed_on": "2026-11-12"
+    },
+    {
+      "id": "atlas:pavco-business-name-1999-09-23",
+      "subject_id": "bc-pavilion-corporation",
+      "related_subject_ids": [],
+      "event_type": "business_name_registration",
+      "title": "B.C. Pavilion Corporation registers PavCo as a business name",
+      "date": {
+        "start": "1999-09-23",
+        "end": null,
+        "precision": "day",
+        "range_end_inclusive": false
+      },
+      "temporal_status": "source_reported_past",
+      "certainty": "documented",
+      "evidence": {
+        "source_url": "https://www.bcbudget.gov.bc.ca/2004/sp/crownagency/bcpc.pdf",
+        "source_title": "PavCo Service Plan 2004/05–2006/07",
+        "locator": "Printed p. 4, Enabling Legislation",
+        "basis": "direct_statement_in_official_source",
+        "observed_on": "2026-11-12"
+      },
+      "interpretation_notes": "Registration under the Partnership Act is a business-name milestone, not the corporation’s incorporation or an asset transfer.",
+      "reviewed_on": "2026-11-12"
+    },
+    {
+      "id": "atlas:bcec-statutory-dissolution-2023-03-13",
+      "subject_id": "bc-enterprise-corporation",
+      "related_subject_ids": [
+        "bc-pavilion-corporation"
+      ],
+      "event_type": "dissolution",
+      "title": "BCEC dissolved when the B.C. Pavilion Corporation Act comes into force",
+      "date": {
+        "start": "2023-03-13",
+        "end": null,
+        "precision": "day",
+        "range_end_inclusive": false
+      },
+      "temporal_status": "source_reported_past",
+      "certainty": "documented",
+      "evidence": {
+        "source_url": "https://free.bcpublications.ca/civix/document/id/lc/bcgaz2/v66n04_71-2023",
+        "source_title": "B.C. Gazette, Part II: B.C. Reg. 71/2023 (OIC 171/2023)",
+        "locator": "Deposited and approved 13 March 2023; operative paragraph (a)",
+        "basis": "direct_statement_in_official_source",
+        "observed_on": "2026-11-12"
+      },
+      "interpretation_notes": "The regulation commences the whole B.C. Pavilion Corporation Act, SBC 2022 c. 33. Section 4 dissolves BCEC; sections 5 and 6 transfer its remaining assets and liabilities to the government. Royal assent on 3 November 2022 and the registry status entry dated 27 March 2023 are separate dates. The statute is https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/22033 .",
+      "reviewed_on": "2026-11-12"
+    }
+  ]
+}

@@ -1,10 +1,9 @@
 {
   "schema": "import-accounting/1",
   "counts": {
-    "accepted": 964,
-    "conflicting": 2,
-    "unresolved_unmapped": 26,
-    "corroborating_duplicate": 11
+    "accepted": 970,
+    "corroborating_duplicate": 12,
+    "unresolved_unmapped": 26
   },
   "rows": [
     {
@@ -744,7 +743,7 @@
     },
     {
       "origin": "atlas/events-bc-cancer-2026-11-12.json#atlas:bccancer-identity-2017",
-      "disposition": "conflicting",
+      "disposition": "accepted",
       "input": {
         "id": "atlas:bccancer-identity-2017",
         "subject_id": "sub-bc-cancer",
@@ -752,7 +751,7 @@
           "provincial-health-services-authority"
         ],
         "event_type": "operating_name_and_identity_change",
-        "title": "BC Cancer Agency takes the simpler name BC Cancer, with a new identity replacing its circular emblem",
+        "title": "BC Cancer and BC Cancer Foundation announce an aligned identity; BC Cancer Agency simplifies its name to BC Cancer",
         "date": {
           "start": "2017-11-15",
           "end": null,
@@ -762,14 +761,54 @@
         "temporal_status": "source_reported_past",
         "evidence": {
           "source_url": "https://bccancerfoundation.com/news-and-media/blog/bc-cancer-and-bc-cancer-foundation-strengthen-partnership-break-down-cancer/",
-          "locator": "BC Cancer Foundation, announcement",
-          "basis": "supplied_research_summary"
+          "locator": "Announcement dated 15 November 2017, opening paragraphs",
+          "basis": "official_announcement_search_index",
+          "source_title": "BC Cancer and BC Cancer Foundation strengthen partnership to break down cancer",
+          "observed_on": "2026-11-12",
+          "access_note": "The official announcement’s indexed text was read on 12 November 2026; direct retrieval returned HTTP 403."
         },
-        "interpretation_notes": "From a research summary supplied on 2026-11-12, which cites this source; it was not re-read in this pass.",
+        "interpretation_notes": "The dated Foundation announcement refines the year-only official BC Cancer history entry for the same joint identity announcement. The two sources are compatible in date precision. This is a public name and branding event; the announcement does not establish a legal corporate rename or merger.",
         "reviewed_on": "2026-11-12"
       },
-      "output_id": "atlas:bccancer-identity-2017:variant:0b7828f198cb7465",
-      "conflict_group": "atlas:bccancer-identity-2017"
+      "output_id": "atlas:bccancer-identity-2017"
+    },
+    {
+      "origin": "atlas/events-divisions.json#atlas:bccancer-identity-2017",
+      "disposition": "corroborating_duplicate",
+      "input": {
+        "id": "atlas:bccancer-identity-2017",
+        "subject_id": "sub-bc-cancer",
+        "subject_key": "bc-cancer",
+        "related_subject_ids": [],
+        "event_type": "operating_name_and_identity_change",
+        "title": "New identity announced (BC Cancer), with the BC Cancer Foundation",
+        "date": {
+          "start": "2017",
+          "end": null,
+          "precision": "year",
+          "range_end_inclusive": false
+        },
+        "temporal_status": "source_reported_past",
+        "certainty": "documented",
+        "evidence": {
+          "source_ids": [
+            "A52"
+          ],
+          "source_url": "https://www.bccancer.bc.ca/about/history",
+          "source_title": "BC Cancer - History",
+          "publisher": "BC Cancer (Provincial Health Services Authority)",
+          "source_date": null,
+          "locator": "Highlights: 2017",
+          "basis": "direct_statement_in_official_source",
+          "excerpt": "BC Cancer, in partnership with the BC Cancer Foundation, announced a new identity that reflects a province-wide mandate of cancer care and research.",
+          "observed_on": "2026-09-25"
+        },
+        "interpretation_notes": "Brand/identity event (name and presumably logo); no artwork or exact date in the source.",
+        "reviewed_on": "2026-09-25",
+        "integration_status": "needs_local_id_mapping_and_review"
+      },
+      "output_id": "atlas:bccancer-identity-2017",
+      "reason": "Reviewed precision refinement: bccancer-identity-date-refinement-2017-11-15. The official BC Cancer history dates the joint BC Cancer/Foundation identity announcement to 2017. The Foundation’s contemporary announcement supplies 15 November 2017 and the simplified public name. These identify the same branding event at compatible precision, not conflicting histories. Retain both original assertions and their dates in evidence and import accounting, while displaying the dated announcement. No general same-year event matching is authorized."
     },
     {
       "origin": "atlas/events-bc-cancer-2026-11-12.json#atlas:bccancer-emblem-2000",
@@ -988,22 +1027,39 @@
         "id": "atlas:bcrail-cn-lease-2004",
         "subject_id": "bc-railway-company",
         "related_subject_ids": [],
-        "event_type": "operations_transferred",
-        "title": "The deal closes: the railway’s operations are leased to CN for an initial 60 years, and the Company keeps the right-of-way, the leased assets, its lands and the Roberts Bank–Langley line",
+        "event_type": "lease_and_operating_rights_transfer",
+        "title": "The BC Rail/CN transaction transfers the freight operating business and long-term railway infrastructure lease to CN",
         "date": {
-          "start": "2004-07-15",
+          "start": "2004-07-14",
           "end": null,
           "precision": "day",
           "range_end_inclusive": false
         },
         "temporal_status": "source_reported_past",
         "evidence": {
-          "source_url": "https://en.wikipedia.org/wiki/BC_Rail",
-          "source_title": "BC Rail — Wikipedia",
-          "basis": "secondary_reference"
+          "source_url": "https://www2.gov.bc.ca/assets/gov/british-columbians-our-governments/government-finances/public-accounts/2004-05/public-accounts-2004-05.pdf",
+          "source_title": "British Columbia Public Accounts 2004/05",
+          "locator": "Printed p. 66, note 33, Significant Events: British Columbia Railway Company (BCRC) Operations",
+          "basis": "direct_statement_in_official_source",
+          "observed_on": "2026-11-12"
         },
-        "interpretation_notes": "Wikipedia gives both $550 million and $1 billion for the deal. A planned sale of the Port Subdivision was cancelled. From the English Wikipedia article on BC Rail (read 2026-11-12), which carries citation-needed tags; its own references were not followed in this pass.",
-        "reviewed_on": "2026-11-12"
+        "interpretation_notes": "The official accounts date completion to 14 July 2004 and describe CN purchasing BC Rail Ltd. shares and BC Rail Partnership interests, while assuming the pre-existing Revitalization Agreement over the railbed and infrastructure. Its initial lease term is 60 years, with renewal provisions. These operating interests are distinct from the continuing Crown parent. The previous Wikipedia-derived 15 July closing assertion is retained in superseded_assertion and is not used as the event date.",
+        "reviewed_on": "2026-11-12",
+        "superseded_assertion": {
+          "title": "The deal closes: the railway’s operations are leased to CN for an initial 60 years, and the Company keeps the right-of-way, the leased assets, its lands and the Roberts Bank–Langley line",
+          "date": {
+            "start": "2004-07-15",
+            "end": null,
+            "precision": "day",
+            "range_end_inclusive": false
+          },
+          "evidence": {
+            "source_url": "https://en.wikipedia.org/wiki/BC_Rail",
+            "source_title": "BC Rail — Wikipedia",
+            "basis": "secondary_reference"
+          },
+          "interpretation_notes": "Wikipedia gives both $550 million and $1 billion for the deal. A planned sale of the Port Subdivision was cancelled. From the English Wikipedia article on BC Rail (read 2026-11-12), which carries citation-needed tags; its own references were not followed in this pass."
+        }
       },
       "output_id": "atlas:bcrail-cn-lease-2004"
     },
@@ -2143,8 +2199,8 @@
           "bc-pavilion-corporation",
           "bc-place-ltd"
         ],
-        "event_type": "functions_transferred",
-        "title": "British Columbia Enterprise Corporation ceases operations; its remaining assets, the stadium among them, pass to the Province and B.C. Pavilion Corporation",
+        "event_type": "asset_transfer",
+        "title": "BCEC ceases operations and transfers certain assets and liabilities to the Province and B.C. Pavilion Corporation",
         "date": {
           "start": "1989-09-30",
           "end": null,
@@ -2153,10 +2209,13 @@
         },
         "temporal_status": "source_reported_past",
         "evidence": {
-          "source_url": "https://search-bcarchives.royalbcmuseum.bc.ca/british-columbia-enterprise-corporation",
-          "locator": "BC Archives authority record"
+          "source_url": "https://www2.gov.bc.ca/assets/gov/british-columbians-our-governments/government-finances/public-accounts/2002-03/sup-e/bc-enterprise-corporation-fs-2002-03.pdf",
+          "source_title": "British Columbia Enterprise Corporation financial statements, year ended 31 March 2003",
+          "locator": "Notes 1 (Nature of business) and 4 (Net assets transferred to shareholders)",
+          "basis": "direct_statement_in_official_source",
+          "observed_on": "2026-11-12"
         },
-        "interpretation_notes": null,
+        "interpretation_notes": "The financial statements distinguish BCEC from PavCo: BCEC became inactive, while certain assets and liabilities went to the Province and, at the shareholder’s direction, to PavCo on 30 September 1989. This transfer does not establish a rename, amalgamation, or dissolution. PavCo’s predecessor had already been incorporated on 3 May 1984. The title is limited to the transfer described in these notes rather than inferring the complete itemized asset schedule.",
         "reviewed_on": "2026-11-12"
       },
       "output_id": "atlas:bcplace-jibc-stadium-to-pavco-1989"
@@ -2300,6 +2359,126 @@
         "reviewed_on": "2026-09-30"
       },
       "output_id": "caws:olympics"
+    },
+    {
+      "origin": "atlas/events-corporate-reconciliation-2026-11-12.json#atlas:pavco-predecessor-incorporated-1984-05-03",
+      "disposition": "accepted",
+      "input": {
+        "id": "atlas:pavco-predecessor-incorporated-1984-05-03",
+        "subject_id": "bc-pavilion-corporation",
+        "related_subject_ids": [],
+        "event_type": "legal_establishment",
+        "title": "Former B.C. Pavilion Corporation incorporated under the Company Act",
+        "date": {
+          "start": "1984-05-03",
+          "end": null,
+          "precision": "day",
+          "range_end_inclusive": false
+        },
+        "temporal_status": "source_reported_past",
+        "certainty": "documented",
+        "evidence": {
+          "source_url": "https://www.bcbudget.gov.bc.ca/2004/sp/crownagency/bcpc.pdf",
+          "source_title": "PavCo Service Plan 2004/05–2006/07",
+          "locator": "Printed p. 4, Enabling Legislation",
+          "basis": "direct_statement_in_official_source",
+          "observed_on": "2026-11-12"
+        },
+        "interpretation_notes": "This dates the former PavCo. The present corporation’s 1 April 2008 amalgamation with Vancouver Convention Centre Expansion Project Ltd. remains a separate event; BCEC was not a former name of PavCo.",
+        "reviewed_on": "2026-11-12"
+      },
+      "output_id": "atlas:pavco-predecessor-incorporated-1984-05-03"
+    },
+    {
+      "origin": "atlas/events-corporate-reconciliation-2026-11-12.json#atlas:bcplace-bcec-statutory-rename-1987-03-31",
+      "disposition": "accepted",
+      "input": {
+        "id": "atlas:bcplace-bcec-statutory-rename-1987-03-31",
+        "subject_id": "bc-enterprise-corporation",
+        "related_subject_ids": [
+          "bc-place-ltd"
+        ],
+        "event_type": "statutory_name_change",
+        "title": "British Columbia Place Ltd. statutorily renamed British Columbia Enterprise Corporation",
+        "date": {
+          "start": "1987-03-31",
+          "end": null,
+          "precision": "day",
+          "range_end_inclusive": false
+        },
+        "temporal_status": "source_reported_past",
+        "certainty": "documented",
+        "evidence": {
+          "source_url": "https://www.bclaws.gov.bc.ca/civix/document/id/93consol17/93consol17/80002",
+          "source_title": "British Columbia Enterprise Corporation Act, consolidation current to 25 November 1993",
+          "locator": "Section 1.1 and historical note: 1987-44-2, effective 31 March 1987 (B.C. Reg. 299/87)",
+          "basis": "direct_statement_in_official_source",
+          "observed_on": "2026-11-12"
+        },
+        "interpretation_notes": "The statute identifies the continuing company by incorporation certificate 207097. The registry’s 20 August 1987 name-effective entry is kept separately and is not substituted for this statutory effective date.",
+        "reviewed_on": "2026-11-12"
+      },
+      "output_id": "atlas:bcplace-bcec-statutory-rename-1987-03-31"
+    },
+    {
+      "origin": "atlas/events-corporate-reconciliation-2026-11-12.json#atlas:pavco-business-name-1999-09-23",
+      "disposition": "accepted",
+      "input": {
+        "id": "atlas:pavco-business-name-1999-09-23",
+        "subject_id": "bc-pavilion-corporation",
+        "related_subject_ids": [],
+        "event_type": "business_name_registration",
+        "title": "B.C. Pavilion Corporation registers PavCo as a business name",
+        "date": {
+          "start": "1999-09-23",
+          "end": null,
+          "precision": "day",
+          "range_end_inclusive": false
+        },
+        "temporal_status": "source_reported_past",
+        "certainty": "documented",
+        "evidence": {
+          "source_url": "https://www.bcbudget.gov.bc.ca/2004/sp/crownagency/bcpc.pdf",
+          "source_title": "PavCo Service Plan 2004/05–2006/07",
+          "locator": "Printed p. 4, Enabling Legislation",
+          "basis": "direct_statement_in_official_source",
+          "observed_on": "2026-11-12"
+        },
+        "interpretation_notes": "Registration under the Partnership Act is a business-name milestone, not the corporation’s incorporation or an asset transfer.",
+        "reviewed_on": "2026-11-12"
+      },
+      "output_id": "atlas:pavco-business-name-1999-09-23"
+    },
+    {
+      "origin": "atlas/events-corporate-reconciliation-2026-11-12.json#atlas:bcec-statutory-dissolution-2023-03-13",
+      "disposition": "accepted",
+      "input": {
+        "id": "atlas:bcec-statutory-dissolution-2023-03-13",
+        "subject_id": "bc-enterprise-corporation",
+        "related_subject_ids": [
+          "bc-pavilion-corporation"
+        ],
+        "event_type": "dissolution",
+        "title": "BCEC dissolved when the B.C. Pavilion Corporation Act comes into force",
+        "date": {
+          "start": "2023-03-13",
+          "end": null,
+          "precision": "day",
+          "range_end_inclusive": false
+        },
+        "temporal_status": "source_reported_past",
+        "certainty": "documented",
+        "evidence": {
+          "source_url": "https://free.bcpublications.ca/civix/document/id/lc/bcgaz2/v66n04_71-2023",
+          "source_title": "B.C. Gazette, Part II: B.C. Reg. 71/2023 (OIC 171/2023)",
+          "locator": "Deposited and approved 13 March 2023; operative paragraph (a)",
+          "basis": "direct_statement_in_official_source",
+          "observed_on": "2026-11-12"
+        },
+        "interpretation_notes": "The regulation commences the whole B.C. Pavilion Corporation Act, SBC 2022 c. 33. Section 4 dissolves BCEC; sections 5 and 6 transfer its remaining assets and liabilities to the government. Royal assent on 3 November 2022 and the registry status entry dated 27 March 2023 are separate dates. The statute is https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/22033 .",
+        "reviewed_on": "2026-11-12"
+      },
+      "output_id": "atlas:bcec-statutory-dissolution-2023-03-13"
     },
     {
       "origin": "atlas/events-crowns.json#atlas:wcb-act-1902-passed",
@@ -3227,7 +3406,7 @@
         "reviewed_on": "2026-09-25",
         "integration_status": "needs_local_id_mapping_and_review"
       },
-      "reason": "Missing subject or date"
+      "reason": "Missing event id, subject or date"
     },
     {
       "origin": "atlas/events-crowns.json#atlas:transit-bcer-1897",
@@ -3256,7 +3435,7 @@
         "reviewed_on": "2026-09-25",
         "integration_status": "needs_local_id_mapping_and_review"
       },
-      "reason": "Missing subject or date"
+      "reason": "Missing event id, subject or date"
     },
     {
       "origin": "atlas/events-crowns.json#atlas:transit-province-buys-bcer-1961",
@@ -3587,7 +3766,7 @@
         "reviewed_on": "2026-09-25",
         "integration_status": "needs_local_id_mapping_and_review"
       },
-      "reason": "Missing subject or date"
+      "reason": "Missing event id, subject or date"
     },
     {
       "origin": "atlas/events-crowns.json#atlas:bcpc-epa-assent-1945",
@@ -3703,7 +3882,7 @@
         "reviewed_on": "2026-09-25",
         "integration_status": "needs_local_id_mapping_and_review"
       },
-      "reason": "Missing subject or date"
+      "reason": "Missing event id, subject or date"
     },
     {
       "origin": "atlas/events-crowns.json#atlas:hydro-pda-1961-vesting",
@@ -4001,7 +4180,7 @@
         "reviewed_on": "2026-09-25",
         "integration_status": "needs_local_id_mapping_and_review"
       },
-      "reason": "Missing subject or date"
+      "reason": "Missing event id, subject or date"
     },
     {
       "origin": "atlas/events-crowns.json#atlas:ferries-blackball-1961",
@@ -4210,7 +4389,7 @@
         "reviewed_on": "2026-09-25",
         "integration_status": "needs_local_id_mapping_and_review"
       },
-      "reason": "Missing subject or date"
+      "reason": "Missing event id, subject or date"
     },
     {
       "origin": "atlas/events-crowns.json#atlas:bcfs-conversion-2003-04-02",
@@ -5144,7 +5323,7 @@
         "reviewed_on": "2026-09-25",
         "integration_status": "needs_local_id_mapping_and_review"
       },
-      "reason": "Missing subject or date"
+      "reason": "Missing event id, subject or date"
     },
     {
       "origin": "atlas/events-crowns.json#atlas:archives-established-1908",
@@ -5173,7 +5352,7 @@
         "reviewed_on": "2026-09-25",
         "integration_status": "needs_local_id_mapping_and_review"
       },
-      "reason": "Missing subject or date"
+      "reason": "Missing event id, subject or date"
     },
     {
       "origin": "atlas/events-crowns.json#atlas:rbcm-museum-act-1913",
@@ -5324,7 +5503,7 @@
           "royal-bc-museum"
         ]
       },
-      "reason": "Missing subject or date"
+      "reason": "Missing event id, subject or date"
     },
     {
       "origin": "atlas/events-crowns.json#atlas:rbcm-imax-2020",
@@ -7269,9 +7448,7 @@
         "id": "atlas:parks-branch-1957-03-28",
         "subject_id": "sub-bc-parks",
         "subject_key": "parks-branch-historical",
-        "related_subject_ids": [
-          "seed:parks-branch-1957"
-        ],
+        "related_subject_ids": [],
         "event_type": "reorganization",
         "title": "Parks and Recreation Division becomes the Parks Branch, reporting to the new Dept. of Recreation and Conservation",
         "date": {
@@ -7315,6 +7492,9 @@
             "locator": "Department of Recreation and Conservation, Report 1957, Introduction (II 7) and Provincial Parks history (before II 24)",
             "note": "The department's own first report dates the Act creating the department to 28 March 1957 and says the Parks and Recreation Division entered it, as the Provincial Parks Branch, on 1 April 1957."
           }
+        ],
+        "related_event_ids": [
+          "pkg:parks-branch-1957"
         ]
       },
       "output_id": "atlas:parks-branch-1957-03-28"
@@ -7356,7 +7536,7 @@
         "reviewed_on": "2026-09-25",
         "integration_status": "needs_local_id_mapping_and_review"
       },
-      "reason": "Missing subject or date"
+      "reason": "Missing event id, subject or date"
     },
     {
       "origin": "atlas/events-divisions.json#atlas:parks-park-act-1965",
@@ -7747,7 +7927,6 @@
         "subject_id": "sub-bc-wildfire-service",
         "subject_key": "bc-wildfire-service-lineage",
         "related_subject_ids": [
-          "seed:wildfire-origin",
           "sub-office-of-the-chief-forester"
         ],
         "event_type": "legislation_assented",
@@ -7775,7 +7954,10 @@
         },
         "interpretation_notes": "Day-precision legal event underlying the 1912 formation claim (seed:wildfire-origin). Separate from the seed, which is a year-only retrospective origin claim.",
         "reviewed_on": "2026-09-25",
-        "integration_status": "needs_local_id_mapping_and_review"
+        "integration_status": "needs_local_id_mapping_and_review",
+        "related_event_ids": [
+          "pkg:wildfire-origin"
+        ]
       },
       "output_id": "atlas:bcws-forest-act-1912"
     },
@@ -8286,7 +8468,7 @@
         "subject_id": "sub-bc-timber-sales",
         "subject_key": "bc-timber-sales",
         "related_subject_ids": [
-          "small-business-forest-enterprise-program"
+          "sub-small-business-forest-enterprise-program"
         ],
         "event_type": "succession",
         "title": "BC Timber Sales replaces the Small Business Forest Enterprise Program",
@@ -9535,7 +9717,6 @@
         "subject_id": "sub-bc-coroners-service",
         "subject_key": "bc-coroners-service",
         "related_subject_ids": [
-          "emergency-management-bc",
           "sub-office-of-the-fire-commissioner"
         ],
         "event_type": "administrative_grouping",
@@ -9563,7 +9744,14 @@
         },
         "interpretation_notes": "Administrative grouping in a service plan, not a statutory reporting change; the Chief Coroner is appointed on the Solicitor General's recommendation.",
         "reviewed_on": "2026-09-25",
-        "integration_status": "needs_local_id_mapping_and_review"
+        "integration_status": "needs_local_id_mapping_and_review",
+        "unresolved_related_entities": [
+          {
+            "label": "Emergency Management B.C.",
+            "supplied_id": "emergency-management-bc",
+            "reason": "The 2007 service plan names this core business area, but the government register has no matching historical entity. Health Emergency Management BC is a different body. Retain this source-supported entity mention pending a dated institutional record."
+          }
+        ]
       },
       "output_id": "atlas:coroners-in-embc-2007"
     },
@@ -9656,7 +9844,7 @@
         "subject_id": "sub-bc-corrections",
         "subject_key": "bc-corrections-branch",
         "related_subject_ids": [
-          "ministry-of-attorney-general"
+          "department-of-the-attorney-general-1871"
         ],
         "event_type": "unit_established",
         "title": "BC Archives: Corrections Branch established in 1951 within the Attorney General's ministry",
@@ -10103,9 +10291,7 @@
         "id": "atlas:pgt-public-trustee-act-repealed-2000",
         "subject_id": "sub-public-guardian-and-trustee",
         "subject_key": "public-guardian-and-trustee",
-        "related_subject_ids": [
-          "A40:s.29"
-        ],
+        "related_subject_ids": [],
         "event_type": "legislation_repealed",
         "title": "Public Trustee Act repealed effective February 28, 2000 (B.C. Reg. 12/2000)",
         "date": {
@@ -10131,7 +10317,16 @@
         },
         "interpretation_notes": "The PGT Act (s. 29) makes the PGT successor in office of the Public Trustee (A40). The PGT Act commencement date is not stated in the text captured; do not assume it equals the repeal date.",
         "reviewed_on": "2026-09-25",
-        "integration_status": "needs_local_id_mapping_and_review"
+        "integration_status": "needs_local_id_mapping_and_review",
+        "related_legal_references": [
+          {
+            "source_id": "A40",
+            "source_url": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/96383_01#section29",
+            "title": "Public Guardian and Trustee Act",
+            "locator": "Section 29: The offices the Public Guardian and Trustee succeeds to",
+            "original_reference": "A40:s.29"
+          }
+        ]
       },
       "output_id": "atlas:pgt-public-trustee-act-repealed-2000"
     },
@@ -10172,7 +10367,7 @@
         "reviewed_on": "2026-09-25",
         "integration_status": "needs_local_id_mapping_and_review"
       },
-      "reason": "Missing subject or date"
+      "reason": "Missing event id, subject or date"
     },
     {
       "origin": "atlas/events-divisions.json#atlas:pep-civil-defence-1950-claim",
@@ -10209,7 +10404,7 @@
         "reviewed_on": "2026-09-25",
         "integration_status": "needs_local_id_mapping_and_review"
       },
-      "reason": "Missing subject or date"
+      "reason": "Missing event id, subject or date"
     },
     {
       "origin": "atlas/events-divisions.json#atlas:pep-renamed-1974",
@@ -10255,7 +10450,7 @@
         "name_before": "Civil Defence (Office of the Provincial Civil Defence Coordinator)",
         "name_after": "Provincial Emergency Programme"
       },
-      "reason": "Missing subject or date"
+      "reason": "Missing event id, subject or date"
     },
     {
       "origin": "atlas/events-divisions.json#atlas:embc-created-2007",
@@ -10295,7 +10490,7 @@
         "reviewed_on": "2026-09-25",
         "integration_status": "needs_local_id_mapping_and_review"
       },
-      "reason": "Missing subject or date"
+      "reason": "Missing event id, subject or date"
     },
     {
       "origin": "atlas/events-divisions.json#atlas:pep-predecessor-of-embc",
@@ -10332,7 +10527,7 @@
         "reviewed_on": "2026-09-25",
         "integration_status": "needs_local_id_mapping_and_review"
       },
-      "reason": "Missing subject or date"
+      "reason": "Missing event id, subject or date"
     },
     {
       "origin": "atlas/events-divisions.json#atlas:rtb-rentalsman-1974",
@@ -10819,43 +11014,6 @@
         "name_after": "BC Cancer Agency"
       },
       "output_id": "atlas:bccancer-short-1994"
-    },
-    {
-      "origin": "atlas/events-divisions.json#atlas:bccancer-identity-2017",
-      "disposition": "conflicting",
-      "input": {
-        "id": "atlas:bccancer-identity-2017",
-        "subject_id": "sub-bc-cancer",
-        "subject_key": "bc-cancer",
-        "related_subject_ids": [],
-        "event_type": "operating_name_and_identity_change",
-        "title": "New identity announced (BC Cancer), with the BC Cancer Foundation",
-        "date": {
-          "start": "2017",
-          "end": null,
-          "precision": "year",
-          "range_end_inclusive": false
-        },
-        "temporal_status": "source_reported_past",
-        "certainty": "documented",
-        "evidence": {
-          "source_ids": [
-            "A52"
-          ],
-          "source_url": "https://www.bccancer.bc.ca/about/history",
-          "source_title": "BC Cancer - History",
-          "publisher": "BC Cancer (Provincial Health Services Authority)",
-          "source_date": null,
-          "locator": "Highlights: 2017",
-          "basis": "direct_statement_in_official_source",
-          "excerpt": "BC Cancer, in partnership with the BC Cancer Foundation, announced a new identity that reflects a province-wide mandate of cancer care and research.",
-          "observed_on": "2026-09-25"
-        },
-        "interpretation_notes": "Brand/identity event (name and presumably logo); no artwork or exact date in the source.",
-        "reviewed_on": "2026-09-25",
-        "integration_status": "needs_local_id_mapping_and_review"
-      },
-      "output_id": "atlas:bccancer-identity-2017:variant:66970feb67107500"
     },
     {
       "origin": "atlas/events-divisions.json#atlas:bccancer-branch-amalgamation-2018",
@@ -14195,7 +14353,7 @@
       "disposition": "accepted",
       "input": {
         "id": "atlas:power-steamship-columbia-power-1994",
-        "subject_id": "columbia-power-corporation",
+        "subject_id": "columbia-power",
         "related_subject_ids": [],
         "event_type": "legal_establishment",
         "title": "Columbia Power Corporation established",
@@ -14460,7 +14618,7 @@
         "subject_id": "provincial-rental-housing-corporation",
         "related_subject_ids": [],
         "event_type": "name_observed",
-        "title": "A page of the Ministry of Municipal Affairs and Housing’s 1976 annual report given to the corporation, its name set in three lines of bold serif capitals",
+        "title": "Reported PRHC name treatment in the 1976 ministry annual report (source not retrieved)",
         "date": {
           "start": "1976",
           "end": null,
@@ -14471,10 +14629,12 @@
         "evidence": {
           "source_url": null,
           "locator": "Ministry of Municipal Affairs and Housing, annual report 1976, printed page 70 (PDF page 73); Legislative Library of British Columbia",
-          "basis": "supplied_research_summary"
+          "basis": "supplied_research_summary",
+          "review_status": "source_not_retrieved",
+          "date_basis": "reporting_year_from_supplied_summary"
         },
-        "interpretation_notes": "A name treatment in a government report, with no emblem, monogram or seal; not evidence of a logo. From research summaries supplied on 2026-11-12, which cite this source; it was not re-read in this pass unless the locator says so.",
-        "reviewed_on": "2026-11-12"
+        "interpretation_notes": "The supplied summary describes three lines of bold serif capitals on printed page 70 (PDF page 73). The original report was not retrieved in this verification pass, so the name treatment remains unverified. The year is the reported coverage year, not an established publication or logo-adoption date. No replacement URL has been guessed.",
+        "reviewed_on": null
       },
       "output_id": "atlas:prhc-name-1976-report"
     },
@@ -14523,11 +14683,14 @@
         },
         "temporal_status": "source_reported_past",
         "evidence": {
-          "source_url": null,
-          "locator": "BC Housing annual report 2000/01, printed page 59 (PDF page 61)",
-          "basis": "supplied_research_summary"
+          "source_url": "https://www.bchousing.org/sites/default/files/media/documents/2000-01-Annual-Report.pdf",
+          "locator": "Printed page 59 (PDF page 61), PRHC financial-statements section heading; page rendered and visually checked",
+          "basis": "primary_source_visual_review",
+          "source_title": "BC Housing Annual Report 2000-2001",
+          "date_basis": "reporting_period_end_year",
+          "review_status": "verified"
         },
-        "interpretation_notes": "A designed section heading within BC Housing’s report; not shown to be a separate PRHC logo. From research summaries supplied on 2026-11-12, which cite this source; it was not re-read in this pass unless the locator says so.",
+        "interpretation_notes": "The orange capitals and narrow ruled box are a section heading within BC Housing’s report, not evidence of a separate PRHC logo. The date records the report’s 2000/01 reporting period; it does not establish an adoption date or exact publication day.",
         "reviewed_on": "2026-11-12"
       },
       "output_id": "atlas:prhc-name-2001-report"
@@ -14551,11 +14714,14 @@
         },
         "temporal_status": "source_reported_past",
         "evidence": {
-          "source_url": null,
-          "locator": "PRHC financial statements",
-          "basis": "supplied_research_summary"
+          "source_url": "https://www.bchousing.org/publications/Provincial-Rental-Housing-Corporation-Financial-Statement-2023.pdf",
+          "locator": "Note 9(b), Səmiq̓wəʔələ (Riverview Lands) redevelopment, printed/PDF page 18",
+          "basis": "primary_source_text_and_visual_review",
+          "source_title": "PRHC Financial Statements, March 31, 2023",
+          "date_basis": "transfer_date_explicitly_reported_in_financial_statements",
+          "review_status": "verified"
         },
-        "interpretation_notes": "The site’s sign protocol of 12 May 2022 (page 2) specifies the BC Housing and Kwikwetlem First Nation logos and graphics for its identity, not a separate PRHC mark. From research summaries supplied on 2026-11-12, which cite this source; it was not re-read in this pass unless the locator says so.",
+        "interpretation_notes": "Note 9(b) reports the February 2, 2015 transfer from the Ministry of Citizens’ Services and states that the land and buildings transferred at book value. This is an asset-ownership event; it does not establish a corporate rename or a logo change.",
         "reviewed_on": "2026-11-12"
       },
       "output_id": "atlas:prhc-riverview-2015"
@@ -14579,14 +14745,51 @@
         },
         "temporal_status": "source_reported_past",
         "evidence": {
-          "source_url": null,
-          "locator": "District of 100 Mile House council agenda, 12 November 2025, PDF page 7",
-          "basis": "supplied_research_summary"
+          "source_url": "https://www.100milehouse.com/sites/default/files/2025-11/2025_Nov_12_Special_Agenda_PKG.pdf",
+          "locator": "PDF page 7, Tyler Baker letter dated November 6, 2025, re 350 Aspen St; downloaded page rendered and visually checked",
+          "basis": "primary_source_visual_review",
+          "source_title": "District of 100 Mile House Special Council agenda, November 12, 2025",
+          "date_basis": "letter_date_not_agenda_meeting_date",
+          "review_status": "verified"
         },
-        "interpretation_notes": "PRHC has no employees; BC Housing acts as its agent, and its correspondence carries BC Housing’s identity. From research summaries supplied on 2026-11-12, which cite this source; it was not re-read in this pass unless the locator says so.",
+        "interpretation_notes": "The letter bears the BC Housing emblem and wordmark and is signed by Tyler Baker, Director Regional Development, Interior Region. Its text identifies PRHC as site owner and BC Housing as manager of Pioneer Haven. This verifies the identity used on this letter, not every item of PRHC correspondence.",
         "reviewed_on": "2026-11-12"
       },
       "output_id": "atlas:prhc-letter-2025"
+    },
+    {
+      "origin": "atlas/events-prhc-2026-11-12.json#atlas:prhc-responsibility-1998",
+      "disposition": "accepted",
+      "input": {
+        "id": "atlas:prhc-responsibility-1998",
+        "subject_id": "provincial-rental-housing-corporation",
+        "related_subject_ids": [
+          "bc-housing",
+          "ministry-of-municipal-affairs-and-housing-1996",
+          "ministry-of-employment-and-investment-1993"
+        ],
+        "event_type": "responsibility_changed",
+        "title": "Housing responsibility, including BC Housing and PRHC, transfers to the Minister of Employment and Investment and Minister Responsible for Housing",
+        "date": {
+          "start": "1998-02-18",
+          "end": null,
+          "precision": "day",
+          "range_end_inclusive": false
+        },
+        "temporal_status": "source_reported_past",
+        "certainty": "documented",
+        "evidence": {
+          "source_url": "https://www.bclaws.gov.bc.ca/civix/document/id/oic/arc_oic/0177_1998",
+          "source_title": "Order in Council 177/1998",
+          "locator": "Approval on PDF page 1; appendix section 15 on printed page 2 (PDF page 3), rendered and visually checked; Auditor General 1999/2000 Report 8, printed page 53 (PDF page 48), corroborates PRHC identity and date",
+          "basis": "primary_source_text_and_visual_review",
+          "date_basis": "order_approval_date_corroborated_by_auditor_general",
+          "review_status": "verified"
+        },
+        "interpretation_notes": "Section 15 prints Provincial Rental Housing Commission; the Auditor General identifies the affected corporation as PRHC. This is ministerial responsibility, not ownership or merger. Section 16 separately assigns statutory administration. The subsequent 1999-07-21 transfer is already recorded as atlas:primary-evidence-bc-housing-responsibility-1999. See research/audits/evidence-reconciliation-2026-11-12/prhc-sources.json for corroboration.",
+        "reviewed_on": "2026-11-12"
+      },
+      "output_id": "atlas:prhc-responsibility-1998"
     },
     {
       "origin": "atlas/events-primary-evidence.json#atlas:primary-evidence-twenty-boards-1995",
@@ -16474,8 +16677,8 @@
         "id": "atlas:railway-cn-operational-transition-2004-07-15",
         "subject_id": "bc-railway-company",
         "related_subject_ids": [],
-        "event_type": "operations_transferred",
-        "title": "CN operational transition on the former BC Rail system",
+        "event_type": "retrospective_date_claim",
+        "title": "TSB’s retrospective account dates CN’s acquisition of the BCR system to 15 July 2004",
         "date": {
           "start": "2004-07-15",
           "end": null,
@@ -16483,15 +16686,16 @@
           "range_end_inclusive": false
         },
         "temporal_status": "source_reported_past",
-        "certainty": "documented",
+        "certainty": "conflicting",
         "evidence": {
           "source_url": "https://tsb.gc.ca/eng/rapports-reports/rail/2005/r05v0141/r05v0141.html",
           "source_title": "Transportation Safety Board railway investigation R05V0141",
           "locator": "Transportation Safety Board report R05V0141, BC Rail/CN acquisition background",
           "basis": "direct_statement_in_source",
-          "observed_on": "2026-11-12"
+          "observed_on": "2026-11-12",
+          "access_note": "The acquisition-date passage was available in the official page’s search index on 12 November 2026; direct page retrieval returned HTTP 403."
         },
-        "interpretation_notes": "The TSB dates CN’s acquisition of the BCR system to 15 July 2004. This operational-history date is kept distinct from the provincial government’s formal transaction closing on 14 July. It does not imply transfer of the Crown parent or public ownership of the corridor to CN.",
+        "interpretation_notes": "An attributed date claim retained for provenance. The TSB describes an acquisition, not a separately established next-day operating transition. Contemporary provincial and CN releases date formal closing to 14 July 2004; CN’s audited statements also date the start of phased integration to 14 July. This record does not establish a distinct 15 July operational milestone or transfer of the Crown parent or publicly owned corridor to CN.",
         "reviewed_on": "2026-11-12"
       },
       "output_id": "atlas:railway-cn-operational-transition-2004-07-15"
@@ -19919,14 +20123,14 @@
           "range_end_inclusive": false
         },
         "temporal_status": "source_reported_past",
-        "certainty": "conflicting",
+        "certainty": "documented",
         "evidence": {
           "source_url": "https://orgbook.gov.bc.ca/api/v4/topic/211256/credential-set",
           "locator": "OrgBook BC, registration BC0207097, credential 274645: entity_name_effective 1987-08-20, reason Event:CONVNC (converted legacy name change); credential 274585 holds the earlier name",
           "observed_on": "2026-10-21"
         },
-        "interpretation_notes": "The day the registry gives the new name effect. The atlas starts the body in March 1987 (BC Archives: \"formed in March 1987 by renaming BC Place Ltd.\"); the two are kept apart, since the registry date may be a filing date and the March date an Act or a reorganization. Not resolved here.",
-        "reviewed_on": "2026-10-21",
+        "interpretation_notes": "A registry name-effective observation dated 20 August 1987, retained at its stated date. The statutory rename has legal effect from 31 March 1987 under section 1.1 and the historical note in the British Columbia Enterprise Corporation Act (1987-44-2; B.C. Reg. 299/87). The dates describe distinct records; no filing-day explanation for their difference is asserted.",
+        "reviewed_on": "2026-11-12",
         "round4_claims": [
           "E6",
           "R3E-C008"
@@ -19972,8 +20176,8 @@
         "id": "atlas:round4-bcec-administratively-dissolved-2023",
         "subject_id": "bc-enterprise-corporation",
         "related_subject_ids": [],
-        "event_type": "dissolution",
-        "title": "BC Registries record British Columbia Enterprise Corporation administratively dissolved on 27 March 2023",
+        "event_type": "registry_status_observed",
+        "title": "BC Registries record an administrative dissolution status for BCEC dated 27 March 2023",
         "date": {
           "start": "2023-03-27",
           "end": null,
@@ -19987,8 +20191,8 @@
           "locator": "OrgBook BC, BC0207097, credential 5211037: effective 2023-03-27 23:20 Pacific (2023-03-28 UTC), reason Event:SYSDA, status HIS",
           "observed_on": "2026-10-21"
         },
-        "interpretation_notes": "The legal end of the company, long after it stopped operating (the atlas's 1989 end). Distinct from the repeal of its Act, which Round 3 reports as 13 March 2023 without a retrieved instrument. Kept as an event: the body is not redrawn to 2023 (see body_changes).",
-        "reviewed_on": "2026-10-21",
+        "interpretation_notes": "This is the date of the registry status entry, not the statutory dissolution date. Section 4 of the B.C. Pavilion Corporation Act dissolved BCEC when the Act came into force on 13 March 2023 under B.C. Reg. 71/2023 (OIC 171/2023). The registry observation is preserved separately. The atlas’s 1989 operating end remains distinct from both legal and registry milestones.",
+        "reviewed_on": "2026-11-12",
         "round4_claims": [
           "E6",
           "R3E-C010"

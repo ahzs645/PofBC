@@ -1,7 +1,7 @@
 {
   "schema": "import-accounting/1",
   "counts": {
-    "accepted": 2500,
+    "accepted": 2501,
     "unresolved_unmapped": 168,
     "intentionally_excluded": 4,
     "conflicting": 1
@@ -22951,13 +22951,17 @@
         "name": "British Columbia Place Ltd.",
         "kind": "crown-corporation",
         "established": "1980-03-25",
-        "ended": "1987-03",
+        "ended": "1987-03-31",
         "becameId": "bc-enterprise-corporation",
         "predecessorIds": [],
         "responsible": [],
-        "description": "Crown corporation established May 1980 (developer of BC Place); renamed British Columbia Enterprise Corporation in March 1987.",
+        "description": "Crown company registered in 1980 to develop BC Place; legislation renamed it British Columbia Enterprise Corporation with effect from 31 March 1987. BC Archives dates its establishment to May 1980; the registry records incorporation on 25 March 1980.",
         "source": "https://search-bcarchives.royalbcmuseum.bc.ca/british-columbia-place-ltd-2",
-        "establishedMeaning": "registered under the Company Act as British Columbia Place Ltd., certificate 207097 (BC Registries BC0207097), the certificate the British Columbia Place Act (SBC 1980 c. 2) names; BC Archives gives May 1980"
+        "establishedMeaning": "registered under the Company Act as British Columbia Place Ltd., certificate 207097 (BC Registries BC0207097), the certificate the British Columbia Place Act (SBC 1980 c. 2) names; BC Archives gives May 1980",
+        "endedMeaning": "statutory rename to British Columbia Enterprise Corporation, effective 31 March 1987 under section 1.1 of the British Columbia Enterprise Corporation Act (1987-44-2; B.C. Reg. 299/87); a separate registry name-change observation is dated 20 August 1987",
+        "otherSources": [
+          "https://www.bclaws.gov.bc.ca/civix/document/id/93consol17/93consol17/80002"
+        ]
       }
     },
     {
@@ -23029,18 +23033,21 @@
         "name": "B.C. Pavilion Corporation",
         "shortName": "PavCo",
         "kind": "crown-corporation",
-        "established": "1984",
+        "established": "1984-05-03",
         "ended": null,
         "becameId": null,
-        "predecessorIds": [
-          "bc-enterprise-corporation"
-        ],
+        "predecessorIds": [],
         "responsible": [],
-        "description": "Crown corporation incorporated in 1984 under the Company Act that took over BC Enterprise Corporation's remaining assets in 1989 and operates BC Place and the Vancouver Convention Centre.",
-        "source": "https://www.bcbudget.gov.bc.ca/2006/sp/crownagency/pavco.pdf",
+        "description": "The former B.C. Pavilion Corporation was incorporated on 3 May 1984. Certain BCEC assets and liabilities passed to the Province and PavCo on 30 September 1989; BCEC was a separate company, not PavCo’s former name. The present PavCo was formed on 1 April 2008 by amalgamating former PavCo and Vancouver Convention Centre Expansion Project Ltd.; it operates BC Place and the Vancouver Convention Centre.",
+        "source": "https://www.bcbudget.gov.bc.ca/2004/sp/crownagency/bcpc.pdf",
         "otherSources": [
-          "https://search-bcarchives.royalbcmuseum.bc.ca/british-columbia-enterprise-corporation"
-        ]
+          "https://search-bcarchives.royalbcmuseum.bc.ca/british-columbia-enterprise-corporation",
+          "https://www2.gov.bc.ca/assets/gov/british-columbians-our-governments/government-finances/public-accounts/2002-03/sup-e/bc-enterprise-corporation-fs-2002-03.pdf",
+          "https://www2.gov.bc.ca/assets/gov/british-columbians-our-governments/government-finances/public-accounts/2024-25/sup-e/bc-pavilion-corporation-fs-2024-25.pdf"
+        ],
+        "establishedMeaning": "incorporation of the former B.C. Pavilion Corporation; the present corporation’s amalgamation on 1 April 2008 is a separate event",
+        "establishedSource": "https://www.bcbudget.gov.bc.ca/2004/sp/crownagency/bcpc.pdf",
+        "establishedLocator": "2004/05–2006/07 service plan, printed p. 4, Enabling Legislation"
       }
     },
     {
@@ -23089,17 +23096,27 @@
         "name": "British Columbia Enterprise Corporation",
         "shortName": "BCEC",
         "kind": "crown-corporation",
-        "established": "1987-03",
+        "established": "1987-03-31",
         "ended": "1989-09-30",
-        "becameId": "bc-pavilion-corporation",
+        "becameId": null,
         "predecessorIds": [
           "bc-place-ltd",
           "bc-development-corporation"
         ],
         "responsible": [],
-        "description": "Crown corporation formed in March 1987 by renaming BC Place Ltd. and merging in the BC Development Corporation; it ceased operations on 30 September 1989, transferring its assets to the Province and B.C. Pavilion Corporation.",
-        "source": "https://search-bcarchives.royalbcmuseum.bc.ca/british-columbia-enterprise-corporation",
-        "endedMeaning": "wound down: it ceased operations and passed its remaining assets to the Province and B.C. Pavilion Corporation (BC Archives). It was not dissolved then: the registry shows the company restored on 2 June 1993 and administratively dissolved on 27 March 2023"
+        "description": "British Columbia Place Ltd. renamed with effect from 31 March 1987, with BC Development Corporation assets and liabilities transferred into it. BCEC ceased operations on 30 September 1989 and transferred certain assets and liabilities to the Province and the separately incorporated B.C. Pavilion Corporation. It remained legally distinct until statutory dissolution on 13 March 2023.",
+        "source": "https://www2.gov.bc.ca/assets/gov/british-columbians-our-governments/government-finances/public-accounts/2002-03/sup-e/bc-enterprise-corporation-fs-2002-03.pdf",
+        "endedMeaning": "cessation of operations on 30 September 1989, not a rename to PavCo or legal dissolution (2002/03 financial statements, notes 1 and 4). Statutory dissolution took effect on 13 March 2023 under section 4 of the B.C. Pavilion Corporation Act and B.C. Reg. 71/2023; the registry’s later 27 March status entry remains a separate observation.",
+        "establishedMeaning": "statutory rename of BC Place Ltd., effective 31 March 1987; not the incorporation of a new company",
+        "establishedSource": "https://www.bclaws.gov.bc.ca/civix/document/id/93consol17/93consol17/80002",
+        "establishedLocator": "Section 1.1 and its historical note (1987-44-2, B.C. Reg. 299/87)",
+        "otherSources": [
+          "https://search-bcarchives.royalbcmuseum.bc.ca/british-columbia-enterprise-corporation",
+          "https://www.bclaws.gov.bc.ca/civix/document/id/93consol17/93consol17/80002",
+          "https://www.bclaws.gov.bc.ca/civix/document/id/94consol18/94consol18/87039",
+          "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/22033",
+          "https://free.bcpublications.ca/civix/document/id/lc/bcgaz2/v66n04_71-2023"
+        ]
       }
     },
     {
@@ -34805,6 +34822,27 @@
         "to": null,
         "source": "https://www.bcbudget.gov.bc.ca/2026/sp/pdf/ministry/psefs.pdf",
         "note": "The 2023-2026 service plans."
+      }
+    },
+    {
+      "origin": "responsible-evidence-reconciliation-2026-11-12.json#provincial-rental-housing-corporation",
+      "disposition": "accepted",
+      "input": {
+        "ministry": "Ministry of Employment and Investment",
+        "from": "1998-02-18",
+        "to": "1999-07-21",
+        "source": "https://www.bclaws.gov.bc.ca/civix/document/id/oic/arc_oic/0177_1998",
+        "also": [
+          "https://www.bclaws.gov.bc.ca/civix/document/id/oic/arc_oic/0897_1999",
+          "https://www.oag.bc.ca/app/uploads/sites/963/2024/08/OAGBC-19990901-social-housing-governance.pdf"
+        ],
+        "locator": "Start: OIC 177/1998 approval, PDF page 1, appendix s. 15, printed page 2 (PDF page 3). End: OIC 897/1999 approval, PDF page 1, appendix s. 23, printed page 4 (PDF page 5). Corroboration: Auditor General 1999/2000 Report 8, printed pages 53 and 35 (PDF pages 48 and 30).",
+        "note": "Express transfers define both bounds: to Employment and Investment on 18 February 1998 and to Social Development and Economic Security on 21 July 1999. The orders print Provincial Rental Housing Commission; the Auditor General identifies the corporation as PRHC. The end is the next transfer date, not dissolution. Ministerial responsibility is distinct from BC Housing's administration or property ownership.",
+        "relation": "ministerial_responsibility",
+        "evidence_status": "documented",
+        "from_basis": "express_transfer_order",
+        "to_basis": "express_subsequent_transfer_order",
+        "reviewed_on": "2026-11-12"
       }
     },
     {

@@ -24,6 +24,7 @@ import { existsSync, readdirSync, readFileSync, writeFileSync } from 'node:fs'
 import { resolve } from 'node:path'
 import { eventCollector, ledger } from './evidence-integrity.mjs'
 import { applyDecisions, readDecisions } from './research-decisions.mjs'
+import { collectEventAssertions } from './lib/event-decisions.mjs'
 
 const ROOT = process.env.GOVERNMENT_RESEARCH || 'research'
 
@@ -112,14 +113,18 @@ if (existsSync(resolve(ROOT, 'package/event_seeds.json'))) {
 
 // ── The follow-up research pass ──────────────────────────────────────────────────────────────────
 
+const atlasAssertions = []
 for (const name of atlasFiles) {
   for (const record of read(`atlas/${name}`).events ?? []) {
     const subject = record.subject_id ?? null
     if (!subject || !record.date?.start) {
-      accounting.record(`atlas/${name}#${record.id ?? 'unknown'}`, 'unresolved_unmapped', record, { reason: 'Missing subject or date' })
+      // Keep rejected assertions in input order too. The collector records these without
+      // producing an event; an editorial decision cannot silently remove an invalid input.
+      atlasAssertions.push({ event: { id: record.id, subject, date: { start: record.date?.start } },
+        origin: `atlas/${name}#${record.id ?? 'unknown'}`, input: record })
       continue
     }
-    add({
+    atlasAssertions.push({ event: {
       id: record.id,
       subject,
       type: record.event_type,
@@ -137,10 +142,14 @@ for (const name of atlasFiles) {
       reviewed: record.reviewed_on ?? null,
       // The other bodies the event names (the recipients of a transfer, the parties to a merger), so it
       // is found from each of them too.
-      ...(record.related_subject_ids?.length ? { related: record.related_subject_ids } : {})
-    }, `atlas/${name}#${record.id}`, record)
+      ...(record.related_subject_ids?.length ? { related: record.related_subject_ids } : {}),
+      ...(record.related_event_ids?.length ? { relatedEvents: record.related_event_ids } : {}),
+      ...(record.related_legal_references?.length ? { legalReferences: record.related_legal_references } : {}),
+      ...(record.unresolved_related_entities?.length ? { unresolvedRelated: record.unresolved_related_entities } : {})
+    }, origin: `atlas/${name}#${record.id}`, input: record })
   }
 }
+collectEventAssertions(atlasAssertions, readDecisions(ROOT), { events, add, attach })
 
 // ── The sub-agency research (history/sub-agencies-researched.json) ──────────────────────────────
 //

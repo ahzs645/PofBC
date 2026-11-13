@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { assetUrl } from './collectedCollections.js'
+import { assetUrl, parseSpecimenDate } from './collectedCollections.js'
 import { collectedDisplay } from './tileArt.js'
 import { useSiteTheme } from '../site/useTheme.js'
 
@@ -7,6 +7,12 @@ import { useSiteTheme } from '../site/useTheme.js'
 export const CollectedMarkView = ({ entry }) => {
   const [version, setVersion] = useState(entry.asset.id)
   const asset = entry.versions?.find((each) => each.id === version) ?? entry.asset
+  const specimenDate = parseSpecimenDate(asset.specimenDate ?? asset.sourceDate)
+  const dateLabel = specimenDate
+    ? asset.sourceReproduction && asset.historicalDateLabel
+      ? `${asset.historicalDateLabel} · reproduced ${specimenDate.label}`
+      : `Seen ${specimenDate.label}`
+    : 'Logo dates unestablished'
   const { name: theme } = useSiteTheme()
   // A version chosen by its colour is shown in that colour: one whose page copy would be redrawn
   // (a white version on the light page) is shown as published, on its own plate.
@@ -17,7 +23,7 @@ export const CollectedMarkView = ({ entry }) => {
       <header className="gallery__head">
         <div>
           <h2>{entry.label}</h2>
-          <p className="gallery__note">{asset.sourceDate ? `Seen ${asset.sourceDate}` : entry.years}</p>
+          <p className="gallery__note">{dateLabel}</p>
         </div>
         <span className="gallery__asset-format">{asset.format.toUpperCase()} · {asset.isVector ? 'Vector artwork' : asset.format === 'svg' ? 'Contains bitmap artwork' : 'Image'}</span>
       </header>
@@ -57,6 +63,7 @@ export const CollectedMarkView = ({ entry }) => {
       <dl className="gallery__asset-source">
         <div><dt>Source</dt><dd>{asset.publisher}{asset.sourceFile ? ` · ${asset.sourceFile}` : ''}</dd></div>
         <div><dt>Collected</dt><dd>{asset.observedDate}</dd></div>
+        {!specimenDate && asset.sourceDate && <div><dt>Source-date context</dt><dd>{asset.sourceDate}</dd></div>}
         {/* How a redrawn file was made stays in its record, not on the page. */}
         {!asset.reconstruction && <div><dt>Artwork</dt><dd>{asset.fidelityNote}</dd></div>}
         {asset.creator && <div><dt>Credit</dt><dd>{asset.creator}</dd></div>}
