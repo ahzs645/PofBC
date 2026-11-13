@@ -1361,3 +1361,7 @@ details.gov-list__section[open] { padding-bottom: 12px; }
 .gov-logos__art.gallery__art[data-image] { padding: 0; }
 .gov-logos__art .gallery__collected-image { height: 96px; padding: 10px; border-radius: 0; }
 .gov-logos__art .gallery__collected-image--clean { --logo-max: 76px; height: calc(var(--logo-max) * var(--logo-scale, 1)); padding: 0; }
+
+/* A run of short links, such as the instruments a body's history only cites. */
+.gov-list-inline { display: flex; flex-wrap: wrap; gap: 4px 12px; margin: 0; padding: 0; list-style: none; }
+.gov-events__title .gov-link-button, .gov-events__sources .gov-link-button { text-align: left; }

@@ -20,7 +20,7 @@ const hostOf = (url) => {
   try { return new URL(url).hostname.replace(/^www\d?\./, '') } catch { return url }
 }
 
-const SourceLink = ({ source }) => source?.url
+export const SourceLink = ({ source }) => source?.url
   ? <a className="gov-source-link" href={source.url} target="_blank" rel="noreferrer">{source.title ?? hostOf(source.url)}</a>
   : null
 

@@ -149,6 +149,8 @@ for (const name of atlasFiles) {
       ...(record.competing_event_ids?.length ? { competingEvents: record.competing_event_ids } : {}),
       ...(record.related_event_ids?.length ? { relatedEvents: record.related_event_ids } : {}),
       ...(record.related_legal_references?.length ? { legalReferences: record.related_legal_references } : {}),
+      // Instruments the research names for the event explicitly (a policy document, say), for the catalogue.
+      ...(record.instruments?.length ? { instruments: record.instruments } : {}),
       ...(record.unresolved_related_entities?.length ? { unresolvedRelated: record.unresolved_related_entities } : {})
     }, origin: `atlas/${name}#${record.id}`, input: record })
   }
