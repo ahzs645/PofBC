@@ -1226,7 +1226,12 @@ input.share__url {
 .gallery__recovered-preview img { max-width: 100%; width: auto; max-height: 420px; object-fit: contain; }
 .gallery__asset-format { font-size: 13px; color: var(--ink-muted); }
 .gallery__asset-downloads { flex-wrap: wrap; }
-.gallery__palette-choices { flex-wrap: wrap; }
+.gallery__palette-choices button { white-space: nowrap; }
+/* Four choices do not fit one row on a phone ("White lettering" broke onto two lines and the
+   buttons came out uneven), so there they sit two by two, like the layout picker. */
+@media (max-width: 560px) {
+  .gallery__palette-choices:has(> :nth-child(4)) { display: grid; grid-template-columns: repeat(2, 1fr); }
+}
 .gallery__palette-sources summary { cursor: pointer; font-weight: 600; }
 .gallery__palette-sources p, .gallery__palette-sources ul { margin-top: 12px; }
 .gallery__palette-sources li + li { margin-top: 6px; }
