@@ -745,6 +745,66 @@ export const COLLECTED_DISPLAY = {
    "recoloured": false
   }
  },
+ "bcdc-prism-1975": {
+  "light": {
+   "file": "identity-display/bcdc-prism-1975.light.svg",
+   "aspect": 2.1709,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/bcdc-prism-1975.dark.svg",
+   "aspect": 2.1709,
+   "recoloured": true
+  }
+ },
+ "bcdc-four-square-serif-1980": {
+  "light": {
+   "file": "identity-display/bcdc-four-square-serif-1980.light.svg",
+   "aspect": 1.2412,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/bcdc-four-square-serif-1980.dark.svg",
+   "aspect": 1.2412,
+   "recoloured": true
+  }
+ },
+ "bcdc-four-square-symbol-1980": {
+  "light": {
+   "file": "identity-display/bcdc-four-square-symbol-1980.light.svg",
+   "aspect": 1.003,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/bcdc-four-square-symbol-1980.dark.svg",
+   "aspect": 1.003,
+   "recoloured": true
+  }
+ },
+ "bcdc-four-square-sans-1981": {
+  "light": {
+   "file": "identity-display/bcdc-four-square-sans-1981.light.svg",
+   "aspect": 1.216,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/bcdc-four-square-sans-1981.dark.svg",
+   "aspect": 1.216,
+   "recoloured": true
+  }
+ },
+ "bcdc-four-square-horizontal-1981": {
+  "light": {
+   "file": "identity-display/bcdc-four-square-horizontal-1981.light.svg",
+   "aspect": 4.5271,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/bcdc-four-square-horizontal-1981.dark.svg",
+   "aspect": 4.5271,
+   "recoloured": true
+  }
+ },
  "bcpc-stacked-white": {
   "light": {
    "file": "identity-display/bcpc-stacked-white.light.svg",

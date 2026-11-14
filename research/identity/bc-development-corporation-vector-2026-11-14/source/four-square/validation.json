@@ -1,0 +1,126 @@
+{
+  "method": "constructed geometry and authored glyph paths; no autotracing",
+  "svg_validation": [
+    {
+      "file": "svg/development-corporation-sans-horizontal-white.svg",
+      "paths": 29,
+      "closed_contours": 43,
+      "raster_images": 0,
+      "live_text": 0
+    },
+    {
+      "file": "svg/development-corporation-sans-horizontal.svg",
+      "paths": 29,
+      "closed_contours": 43,
+      "raster_images": 0,
+      "live_text": 0
+    },
+    {
+      "file": "svg/development-corporation-sans-stacked-white.svg",
+      "paths": 29,
+      "closed_contours": 43,
+      "raster_images": 0,
+      "live_text": 0
+    },
+    {
+      "file": "svg/development-corporation-sans-stacked.svg",
+      "paths": 29,
+      "closed_contours": 43,
+      "raster_images": 0,
+      "live_text": 0
+    },
+    {
+      "file": "svg/development-corporation-serif-stacked-white.svg",
+      "paths": 29,
+      "closed_contours": 41,
+      "raster_images": 0,
+      "live_text": 0
+    },
+    {
+      "file": "svg/development-corporation-serif-stacked.svg",
+      "paths": 29,
+      "closed_contours": 41,
+      "raster_images": 0,
+      "live_text": 0
+    },
+    {
+      "file": "svg/development-corporation-symbol-white.svg",
+      "paths": 4,
+      "closed_contours": 8,
+      "raster_images": 0,
+      "live_text": 0
+    },
+    {
+      "file": "svg/development-corporation-symbol.svg",
+      "paths": 4,
+      "closed_contours": 8,
+      "raster_images": 0,
+      "live_text": 0
+    },
+    {
+      "file": "reference-aligned/development-corporation-sans-horizontal.svg",
+      "paths": 29,
+      "closed_contours": 43,
+      "raster_images": 0,
+      "live_text": 0
+    },
+    {
+      "file": "reference-aligned/development-corporation-sans-stacked.svg",
+      "paths": 29,
+      "closed_contours": 43,
+      "raster_images": 0,
+      "live_text": 0
+    },
+    {
+      "file": "reference-aligned/development-corporation-serif-stacked.svg",
+      "paths": 29,
+      "closed_contours": 41,
+      "raster_images": 0,
+      "live_text": 0
+    },
+    {
+      "file": "reference-aligned/development-corporation-symbol.svg",
+      "paths": 4,
+      "closed_contours": 8,
+      "raster_images": 0,
+      "live_text": 0
+    }
+  ],
+  "pdf_validation": [
+    {
+      "file": "pdf/development-corporation-serif-stacked.pdf",
+      "pages": 1,
+      "raster_images": 0,
+      "font_dependencies": 0,
+      "vector_drawings": 29
+    },
+    {
+      "file": "pdf/development-corporation-symbol.pdf",
+      "pages": 1,
+      "raster_images": 0,
+      "font_dependencies": 0,
+      "vector_drawings": 4
+    },
+    {
+      "file": "pdf/development-corporation-sans-stacked.pdf",
+      "pages": 1,
+      "raster_images": 0,
+      "font_dependencies": 0,
+      "vector_drawings": 29
+    },
+    {
+      "file": "pdf/development-corporation-sans-horizontal.pdf",
+      "pages": 1,
+      "raster_images": 0,
+      "font_dependencies": 0,
+      "vector_drawings": 29
+    }
+  ],
+  "additional_checks": {
+    "portable_standard_library_rebuild": "All 12 SVG files reproduced byte for byte",
+    "white_variants": "All four render white with transparent openings",
+    "pdf_visual_review": "All four final PDF pages rendered with Poppler and inspected",
+    "independent_svg_render": "Serif stacked and sans horizontal exported successfully with Inkscape and inspected",
+    "reference_comparison": "All four source-aligned overlays generated and reviewed; lettering iterated before export"
+  }
+}

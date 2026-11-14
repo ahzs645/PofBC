@@ -25,7 +25,7 @@ const bcCancerNow = read('research/identity/bc-cancer-current-2026-11-12/source-
 const PROGRAM_PACKAGES = ['bc-travel-industry-2026-11-12', 'justice-institute-2026-11-12', 'auditor-general-2026-11-12', 'bc-online-2026-11-12', 'bc-cancer-agency-2026-11-12', 'solutions-bc-vector-2026-11-12', 'healthlink-bc-2026-11-12', 'bc-cancer-modern-2026-11-12']
   .map((search) => ({ search, register: read(`research/identity/${search}/source-register.json`) }))
 // Supplied packages that add a vector to a body, each read with the search it came from.
-const PACKAGES = ['bc-assessment-vector-2026-11-12', 'bc-power-commission-vector-2026-11-12', 'bc-place-vector-2026-11-12', 'bc-railway-vector-2026-11-12', 'bc-railway-dogwood-vector-2026-11-12', 'bc-systems-vector-2026-11-12', 'bc-housing-1978-vector-2026-11-12', 'bc-petroleum-vector-2026-11-12', 'bc-housing-houses-vector-2026-11-12', 'fvhr-vector-2026-11-12', 'bc-steamship-vector-2026-11-12', 'pge-map-vector-2026-11-12', 'ocean-falls-vector-2026-11-12', 'bc-trade-vector-2026-11-13']
+const PACKAGES = ['bc-assessment-vector-2026-11-12', 'bc-power-commission-vector-2026-11-12', 'bc-place-vector-2026-11-12', 'bc-railway-vector-2026-11-12', 'bc-railway-dogwood-vector-2026-11-12', 'bc-systems-vector-2026-11-12', 'bc-housing-1978-vector-2026-11-12', 'bc-petroleum-vector-2026-11-12', 'bc-housing-houses-vector-2026-11-12', 'fvhr-vector-2026-11-12', 'bc-steamship-vector-2026-11-12', 'pge-map-vector-2026-11-12', 'ocean-falls-vector-2026-11-12', 'bc-trade-vector-2026-11-13', 'bc-development-corporation-vector-2026-11-14']
   .map((search) => ({ search, register: read(`research/identity/${search}/source-register.json`) }))
 // A package may bring the body it is for, when the inventory never searched for that body.
 for (const { register: packaged } of PACKAGES) if (packaged.body) {
@@ -267,6 +267,7 @@ const BODY_NOTES = {
   'bc-railway-company': 'Its wordmark is the BCRC acrostic — British Columbia Railway Company stepped down on four lines, with the initials in red — seen in three letterings: the heavier one on its website, and the wide Eurostile of the 2024 report’s cover and the Verdana of its letterhead.',
   'bc-place-ltd': 'The Crown company that built BC Place Stadium (opened 1983) on the False Creek lands that later held Expo 86. Legislation renamed it BC Enterprise Corporation with effect from 31 March 1987. BCEC ceased operations in 1989 and transferred certain assets and liabilities to the Province and the separately incorporated PavCo.',
   'bc-enterprise-corporation': 'BC Place Ltd. renamed with effect from 31 March 1987, with BC Development Corporation assets and liabilities transferred into it. BCEC ceased operations on 30 September 1989 and transferred certain assets and liabilities to the Province and PavCo. It remained a distinct company until statutory dissolution on 13 March 2023. Its held mark comes from a dated 1988 land-sale prospectus.',
+  'bc-development-corporation': 'The Crown corporation the Province set up in 1973 to develop industrial land and lend to and invest in B.C. business: industrial parks around the province and the waterfront redevelopments of Lonsdale Quay in North Vancouver and, through its subsidiary First Capital City Development Company (1977), Westminster Quay in New Westminster. Three identities are held: four prisms beside its four-line name, in its advertisements by September 1975; four squares and “The Development Corporation”, registered from 1980; and the Province’s BC-and-flag mark over its name in its 1984–86 annual reports. Its assets passed to BC Enterprise Corporation on 31 March 1987.',
   'bc-power-commission': 'The public utility that brought power to communities outside BC Electric’s territory from 1945, and one of BC Hydro’s two predecessors (established 1962, amalgamated 1965). Its emblem was on the commission’s red service trucks.',
   'bc-steamship-company': 'The Crown company that ran the Princess Marguerite between Victoria and Seattle from 1975. It sold its ships in 1988 and was renamed Victoria Line Ltd. in 1994.',
   'transportation-investment-corporation': 'One design in full colour and white, both original vector artwork from Pattullo Bridge Replacement Project publications.',
@@ -299,9 +300,14 @@ const ASSET_LABELS = {
   'source-urban-transit-authority-urban-transit-authority-png': 'Urban Transit Authority — signature',
   'source-expo-86-corporation-expo86-symbol-svg': 'Expo 86 — symbol',
   'source-expo-86-corporation-expo86-wordmark-svg': 'Expo 86 — wordmark',
-  'source-fraser-valley-health-region-fraser-valley-health-region-2000-jpg': 'Fraser Valley Health Region — Flower and cross'
+  'source-fraser-valley-health-region-fraser-valley-health-region-2000-jpg': 'Fraser Valley Health Region — Flower and cross',
+  // The inventory called this a geometric corporate symbol; it is the Province's BC and waving flag.
+  'source-bc-development-corporation-bc-development-1985-logo-png': 'British Columbia Development Corporation — The Province’s BC and flag, 1985',
+  'source-bc-development-corporation-bc-development-1985-logo-context-png': 'British Columbia Development Corporation — BC and flag under its name, 1985'
 }
 const ASSET_NOTES = {
+  'source-bc-development-corporation-bc-development-1985-logo-png': 'The Province’s BC lettering and waving flag, as BCDC printed it in the back matter of its eleventh annual report, for the year ended 31 March 1985. The same arrangement is under its name in the 1984 report (PDF page 24); the 1986 report sets the flag beside “Partners in Enterprise”. Scan texture retained.',
+  'source-bc-development-corporation-bc-development-1985-logo-context-png': 'The same page, wider: “British Columbia Development Corporation — A Provincial Crown Corporation working for the people of British Columbia” above the Province’s BC and flag.',
   'source-urban-transit-authority-urban-transit-authority-png': 'The Urban Transit Authority’s signature, drawn in 2020 by Colin Stepney (Cjstepney); a contemporary original is still wanted.',
   'source-expo-86-corporation-expo86-symbol-svg': 'The Expo 86 symbol, as drawn for Wikimedia Commons from merchandise photographs.',
   'source-expo-86-corporation-expo86-wordmark-svg': 'The Expo 86 wordmark, as drawn for Wikipedia in 2008.',

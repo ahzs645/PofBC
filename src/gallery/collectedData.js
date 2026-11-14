@@ -3148,11 +3148,11 @@ export const COLLECTED_BODIES = [
     "current": false,
     "status": "asset-collected",
     "observedDate": "2026-10-22",
-    "notes": "Corporate mark from the 1985 annual report",
+    "notes": "The Crown corporation the Province set up in 1973 to develop industrial land and lend to and invest in B.C. business: industrial parks around the province and the waterfront redevelopments of Lonsdale Quay in North Vancouver and, through its subsidiary First Capital City Development Company (1977), Westminster Quay in New Westminster. Three identities are held: four prisms beside its four-line name, in its advertisements by September 1975; four squares and “The Development Corporation”, registered from 1980; and the Province’s BC-and-flag mark over its name in its 1984–86 annual reports. Its assets passed to BC Enterprise Corporation on 31 March 1987.",
     "assets": [
       {
         "id": "source-bc-development-corporation-bc-development-1985-logo-png",
-        "label": "Corporate symbol, 1985 annual report",
+        "label": "British Columbia Development Corporation — The Province’s BC and flag, 1985",
         "file": "identity-collected/bc-development-corporation/bc-development-1985-logo.png",
         "format": "png",
         "isVector": false,
@@ -3166,7 +3166,7 @@ export const COLLECTED_BODIES = [
         "sourceDate": "1985",
         "observedDate": "2026-10-22",
         "evidenceType": "original-annual-report-crop",
-        "notes": "BC letterform and geometric corporate symbol extracted from the back matter of the eleventh annual report for the year ended 31 March 1985. Scan texture retained.",
+        "notes": "The Province’s BC lettering and waving flag, as BCDC printed it in the back matter of its eleventh annual report, for the year ended 31 March 1985. The same arrangement is under its name in the 1984 report (PDF page 24); the 1986 report sets the flag beside “Partners in Enterprise”. Scan texture retained.",
         "fidelityNote": "Original published drawing or image recovered from the cited source. Method: BC letterform and geometric corporate symbol extracted from the back matter of the eleventh annual report for the year ended 31 March 1985. Scan texture retained.",
         "sha256": "b65bbf865aaf88fc62f1fab81b716b35fb25c80dd5572ec20c71aa3d8b5cfcb7",
         "bytes": 25411,
@@ -3177,7 +3177,7 @@ export const COLLECTED_BODIES = [
       },
       {
         "id": "source-bc-development-corporation-bc-development-1985-logo-context-png",
-        "label": "Corporate symbol and company name, 1985",
+        "label": "British Columbia Development Corporation — BC and flag under its name, 1985",
         "file": "identity-collected/bc-development-corporation/bc-development-1985-logo-context.png",
         "format": "png",
         "isVector": false,
@@ -3191,7 +3191,7 @@ export const COLLECTED_BODIES = [
         "sourceDate": "1985",
         "observedDate": "2026-10-22",
         "evidenceType": "original-annual-report-context-crop",
-        "notes": "Wider crop includes the exact corporate name and the corporate symbol, providing identity evidence.",
+        "notes": "The same page, wider: “British Columbia Development Corporation — A Provincial Crown Corporation working for the people of British Columbia” above the Province’s BC and flag.",
         "fidelityNote": "Original published drawing or image recovered from the cited source. Method: Wider crop includes the exact corporate name and the corporate symbol, providing identity evidence.",
         "sha256": "c342769db2290ba80efb5bbb189f153fa3269baac09d1b7438629139b9942051",
         "bytes": 58653,
@@ -3199,6 +3199,175 @@ export const COLLECTED_BODIES = [
         "dateNote": "A dated sighting is not a complete usage period.",
         "previewWidth": 465,
         "previewHeight": 201
+      },
+      {
+        "id": "bcdc-prism-1975",
+        "label": "British Columbia Development Corporation — Four prisms and four-line name",
+        "file": "identity-collected/bc-development-corporation/bcdc-prism-1975-rebuilt.svg",
+        "format": "svg",
+        "isVector": true,
+        "supplied": true,
+        "reconstruction": true,
+        "publisher": "British Columbia Development Corporation; newspaper scan, UBC Library Open Collections",
+        "sourcePage": "https://open.library.ubc.ca/collections/alderstar/items/1.0420232",
+        "sourceUrl": "https://iiif.library.ubc.ca/image/dams.alderstar.1-0420232.0005/full/2500,/0/default.jpg",
+        "sourceLocator": "Aldergrove Star, 17 September 1975, printed page 6: advertisement for BCDC business-management courses in Langley (lower lockup)",
+        "sourceFile": "Aldergrove Star, 17 September 1975",
+        "sourceDate": "1975-09-17",
+        "observedDate": "2026-11-14",
+        "dateNote": "Documented use by 17 September 1975, not its introduction; the designer is not known. The same lockup is in the Aldergrove Star and the Peninsula Times of 14 January 1976, and the emblem, under the full name, is on BCDC’s G.G. Moore Industrial Park sign at Chetwynd photographed in Action for Industry (1979, PDF page 22). The same advertisements also set the emblem small beside an all-capital sans-serif name.",
+        "alsoSeen": [
+          {
+            "date": "1976-01-14",
+            "source": "https://open.library.ubc.ca/collections/alderstar/items/1.0420388"
+          },
+          {
+            "date": "1976-01-14",
+            "source": "https://open.library.ubc.ca/collections/xpentimes/items/1.0186178"
+          },
+          {
+            "date": "1979",
+            "source": "https://publications.gc.ca/collections/collection_2024/isde-ised/re22/RE22-37-1979-eng.pdf#page=22"
+          }
+        ],
+        "evidenceType": "supplied-vector-reconstruction",
+        "notes": "Four outlined prisms turned about a central gap, beside “British Columbia Development Corporation” on four lines of serif type — the corporation’s first known emblem, from its newspaper advertisements of 1975–76.",
+        "fidelityNote": "A supplied vector reconstruction, not original artwork: one idealized three-face prism repeated through four quarter turns, then scaled vertically by 15/14 to the references, built as filled compound paths with transparent faces (no automatic tracing). The name is outlined Nimbus Roman fitted to the scans — an approximation, not an identification of the original typeface. Black, as printed in newspapers. The 1975 newspaper crop is kept as a download.",
+        "sha256": "7cb7f1adc135d5ab94590a7e2b2b085a3a1fe9139a48ae092392c976108e2ca3",
+        "bytes": 64819,
+        "darkBackground": false,
+        "downloads": [
+          {
+            "label": "Download 1975 Aldergrove Star crop (PNG)",
+            "file": "identity-collected/bc-development-corporation/bcdc-prism-1975-aldergrove-star.png",
+            "sha256": "fcfdef29fe3ed4aef28f291742905b531852064e156645c76626c16b2a65d07b"
+          }
+        ],
+        "search": "bc-development-corporation-vector-2026-11-14"
+      },
+      {
+        "id": "bcdc-four-square-serif-1980",
+        "label": "The Development Corporation — Serif name over four squares",
+        "file": "identity-collected/bc-development-corporation/bcdc-four-square-serif-1980-rebuilt.svg",
+        "format": "svg",
+        "isVector": true,
+        "supplied": true,
+        "reconstruction": true,
+        "publisher": "British Columbia Development Corporation",
+        "sourcePage": "https://ised-isde.canada.ca/cipo/trademark-search/460346",
+        "sourceUrl": "https://ised-isde.canada.ca/cipo/trademark-search/media/460346.png",
+        "sourceLocator": "CIPO application 0460346, trademark specimen",
+        "sourceFile": "Canadian Intellectual Property Office, application 0460346",
+        "sourceDate": "1980-10-22",
+        "observedDate": "2026-11-14",
+        "dateNote": "The specimen of a trademark filed on 22 October 1980 and registered on 25 June 1982 (TMA270427), claiming use in Canada since at least 31 March 1980 — the owner’s claim, not a verified first use. Cancelled by the owner on 3 November 1989, after BCDC’s assets had passed to BC Enterprise Corporation. Filed the same day as First Capital City’s mark (0460347).",
+        "evidenceType": "supplied-vector-reconstruction",
+        "notes": "“The Development Corporation” in three lines of light serif capitals above four thin, square-cornered outlined squares: British Columbia Development Corporation’s second identity, registered as its trademark.",
+        "fidelityNote": "A supplied vector reconstruction, not original artwork: the four outlined squares are constructed geometry and every letter a hand-authored outline after the one-bit CIPO specimen (no automatic tracing). Raster irregularities are regularized; the historical typeface is not identified. Black, as the specimen is; no official colour is recorded. The CIPO specimen is kept as a download.",
+        "sha256": "8b28355abe347943994e28fb85f5a5a90e4c43657f614481e764fece669ee1f3",
+        "bytes": 9104,
+        "darkBackground": false,
+        "downloads": [
+          {
+            "label": "Download CIPO 0460346 specimen (PNG)",
+            "file": "identity-collected/bc-development-corporation/bcdc-cipo-460346-specimen.png",
+            "sha256": "2b1e16f17b1876ff9e121d022cbe80ca0c3e61f5662b26060ca5130d44e91b4c"
+          }
+        ],
+        "search": "bc-development-corporation-vector-2026-11-14"
+      },
+      {
+        "id": "bcdc-four-square-symbol-1980",
+        "label": "The Development Corporation — Four squares",
+        "file": "identity-collected/bc-development-corporation/bcdc-four-square-symbol-1980-rebuilt.svg",
+        "format": "svg",
+        "isVector": true,
+        "supplied": true,
+        "reconstruction": true,
+        "publisher": "British Columbia Development Corporation",
+        "sourcePage": "https://ised-isde.canada.ca/cipo/trademark-search/494945",
+        "sourceUrl": "https://ised-isde.canada.ca/cipo/trademark-search/media/494945.png",
+        "sourceLocator": "CIPO application 0494945, trademark specimen",
+        "sourceFile": "Canadian Intellectual Property Office, application 0494945",
+        "sourceDate": "1982-11-16",
+        "observedDate": "2026-11-14",
+        "dateNote": "The specimen of a trademark for the symbol alone (“Squares Design”), filed on 16 November 1982 and registered on 22 July 1983 (TMA281645), claiming use in Canada since at least 31 March 1980 — the owner’s claim, not a verified first use. Cancelled by the owner on 3 November 1989.",
+        "evidenceType": "supplied-vector-reconstruction",
+        "notes": "The four thin, square-cornered outlined squares alone, as British Columbia Development Corporation registered them.",
+        "fidelityNote": "A supplied vector reconstruction, not original artwork: the four outlined squares are constructed geometry and every letter a hand-authored outline after the one-bit CIPO specimen (no automatic tracing). Raster irregularities are regularized; the historical typeface is not identified. Black, as the specimen is; no official colour is recorded. The CIPO specimen is kept as a download.",
+        "sha256": "829b9fcfe932fb511b916eb7d9afa2fb62185b8be634317e72b1175e27f04ad6",
+        "bytes": 946,
+        "darkBackground": false,
+        "downloads": [
+          {
+            "label": "Download CIPO 0494945 specimen (PNG)",
+            "file": "identity-collected/bc-development-corporation/bcdc-cipo-494945-specimen.png",
+            "sha256": "7004ff7b9ef775470062bb668acd2226099b1e5c5441bb64c9f99ab4ae8cdfe1"
+          }
+        ],
+        "search": "bc-development-corporation-vector-2026-11-14"
+      },
+      {
+        "id": "bcdc-four-square-sans-1981",
+        "label": "The Development Corporation — Bold name over four rounded squares",
+        "file": "identity-collected/bc-development-corporation/bcdc-four-square-sans-1981-rebuilt.svg",
+        "format": "svg",
+        "isVector": true,
+        "supplied": true,
+        "reconstruction": true,
+        "publisher": "British Columbia Development Corporation",
+        "sourcePage": "https://ised-isde.canada.ca/cipo/trademark-search/901351",
+        "sourceUrl": "https://ised-isde.canada.ca/cipo/trademark-search/media/901351.png",
+        "sourceLocator": "CIPO application 0901351, official mark specimen",
+        "sourceFile": "Canadian Intellectual Property Office, application 0901351",
+        "sourceDate": "1981-01-28",
+        "observedDate": "2026-11-14",
+        "dateNote": "The specimen of an official mark requested on 28 January 1981 and advertised on 17 June 1981 (Trade-marks Journal vol. 38, issue 1390); withdrawn on 13 December 1989. An official mark’s dates are its notice, not the design’s first use.",
+        "evidenceType": "supplied-vector-reconstruction",
+        "notes": "“The Development Corporation” in heavy sans-serif capitals above four rounded, heavier outlined squares, adopted as an official mark by British Columbia Development Corporation.",
+        "fidelityNote": "A supplied vector reconstruction, not original artwork: the four outlined squares are constructed geometry and every letter a hand-authored outline after the one-bit CIPO specimen (no automatic tracing). Raster irregularities are regularized; the historical typeface is not identified. Black, as the specimen is; no official colour is recorded. The CIPO specimen is kept as a download.",
+        "sha256": "1e24da884d16e0bd184ad63dacb951a3532db00db5b4cf9ceea56916f6b5f8ca",
+        "bytes": 8826,
+        "darkBackground": false,
+        "downloads": [
+          {
+            "label": "Download CIPO 0901351 specimen (PNG)",
+            "file": "identity-collected/bc-development-corporation/bcdc-cipo-901351-specimen.png",
+            "sha256": "4ec65cb0b74a342d8c2fa3efbf5209d9da869fa2a80b02810a4809b25540f139"
+          }
+        ],
+        "search": "bc-development-corporation-vector-2026-11-14"
+      },
+      {
+        "id": "bcdc-four-square-horizontal-1981",
+        "label": "The Development Corporation — Four rounded squares beside the name",
+        "file": "identity-collected/bc-development-corporation/bcdc-four-square-horizontal-1981-rebuilt.svg",
+        "format": "svg",
+        "isVector": true,
+        "supplied": true,
+        "reconstruction": true,
+        "publisher": "British Columbia Development Corporation",
+        "sourcePage": "https://ised-isde.canada.ca/cipo/trademark-search/901352",
+        "sourceUrl": "https://ised-isde.canada.ca/cipo/trademark-search/media/901352.png",
+        "sourceLocator": "CIPO application 0901352, official mark specimen",
+        "sourceFile": "Canadian Intellectual Property Office, application 0901352",
+        "sourceDate": "1981-03-16",
+        "observedDate": "2026-11-14",
+        "dateNote": "The specimen of an official mark requested on 16 March 1981 and advertised on 2 December 1981 (Trade-marks Journal issue 1414); withdrawn on 13 December 1989. An official mark’s dates are its notice, not the design’s first use.",
+        "evidenceType": "supplied-vector-reconstruction",
+        "notes": "The rounded four squares to the left of “The Development Corporation” on three lines of heavy sans-serif capitals: the horizontal form of the official mark.",
+        "fidelityNote": "A supplied vector reconstruction, not original artwork: the four outlined squares are constructed geometry and every letter a hand-authored outline after the one-bit CIPO specimen (no automatic tracing). Raster irregularities are regularized; the historical typeface is not identified. Black, as the specimen is; no official colour is recorded. The CIPO specimen is kept as a download.",
+        "sha256": "0c1ae610058675bb464bc7b015bd1b009e059ded4aff7d1043d85bbb15b3cfe8",
+        "bytes": 8729,
+        "darkBackground": false,
+        "downloads": [
+          {
+            "label": "Download CIPO 0901352 specimen (PNG)",
+            "file": "identity-collected/bc-development-corporation/bcdc-cipo-901352-specimen.png",
+            "sha256": "c0560040b28b746e2bed649a984ef45d7553d5bf6ddf2cfca8a9ccb843695ac5"
+          }
+        ],
+        "search": "bc-development-corporation-vector-2026-11-14"
       }
     ]
   },
