@@ -395,6 +395,10 @@ if (existsSync(resolve(SOURCE, RESEARCHED))) {
       status: record.evidence_status ?? null,
       ...(established ? { establishedClaim: established } : {}),
       ...(ended ? { ended: ended.date, endedClaim: ended } : {}),
+      // A body known to have ended (or whose end is untraced) on a day no source gives, and the latest
+      // day a source shows it: it is drawn up to that year, and after it only faintly, when asked.
+      ...(!ended && (record.end_status === 'occurred_date_unknown' || record.end_status === 'untraced') ? { endStatus: record.end_status } : {}),
+      ...(!ended && dateOf(record.last_observed) ? { lastObservedClaim: dateOf(record.last_observed) } : {}),
       names: (record.names ?? []).map((row) => periodOf(row, { name: row.name })),
       parents: (record.parents ?? []).map((row) => periodOf(row, { name: row.ministry_as_printed, relation: row.relation ?? 'part_of' })),
       relations: (record.relations ?? []).map((row) => ({

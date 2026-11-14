@@ -1,0 +1,1247 @@
+{
+  "asOf": "2026-11-14",
+  "note": "Audit of B.C. Crown corporation subsidiaries, joint ventures and partly-owned companies against the repo. inRepo is the node id in src/government/historyData.js (subsidiaries use the 'sub-' prefix; research/history/sub-subsidiaries.json uses the same id without it). null means no node, even where a gaps note or a description names the company. Sources other than repo files are primary or contemporary documents. 'lead' means the claim is unverified.",
+  "records": [
+    {
+      "name": "The First Capital City Development Company Limited",
+      "shortName": "First Capital",
+      "parent": "bc-development-corporation",
+      "relationship": "wholly-owned",
+      "established": "1977-08-02",
+      "inRepo": "sub-first-capital-city-development-company",
+      "sources": [
+        {
+          "url": "https://bcombudsperson.ca/wp-content/uploads/2025/08/Special-Report-No-09-Supreme-Court-of-Canada-Judgment.pdf",
+          "locator": "PDF p.24 ('its wholly owned subsidiary, First Capital City Development Company Limited'); PDF p.26 ('August 2, 1977, First Capital was incorporated'); PDF p.48"
+        },
+        {
+          "url": "https://archive.org/details/micro_IA40243510_1434",
+          "locator": "PDF p.11, Summary of accounting policies, Consolidation"
+        },
+        {
+          "url": "https://archive.org/details/micro_IA40243514_1461",
+          "locator": "PDF p.13 (Westminster Quay 'implemented by a subsidiary ... as a cooperative venture' with the City of New Westminster)"
+        },
+        {
+          "url": "https://archive.org/details/micro_IA40243211_0084",
+          "locator": "PDF p.16 (in partnership with the City of New Westminster); PDF p.18 Consolidation"
+        }
+      ],
+      "confidence": "sourced",
+      "note": "Developer of Westminster Quay, New Westminster. Passed to BC Enterprise Corporation with BCDC's other subsidiaries on 1987-03-31 (BCEC ORCS p.4 speaks of BCDC's 'various subsidiary organizations'); end date not found.",
+      "group": "BCDC"
+    },
+    {
+      "name": "Lonsdale Quay Development Company Limited",
+      "parent": "bc-development-corporation",
+      "relationship": "wholly-owned",
+      "established": "1979",
+      "inRepo": "sub-lonsdale-quay-development-company",
+      "sources": [
+        {
+          "url": "https://nsdl.arcabc.ca/_flysystem/repo-service/2025-04/165995-Extracted%20Text.txt",
+          "locator": "North Shore News, 8 May 1983, p.B4: 'a wholly owned subsidiary of the British Columbia Development Corporation, was set up in 1979'"
+        },
+        {
+          "url": "https://archive.org/details/micro_IA40243510_1434",
+          "locator": "PDF p.11 Consolidation; PDF p.20 ('Lonsdale Quay Development Company (a sub[sidiary])')"
+        },
+        {
+          "url": "https://archive.org/details/micro_IA40243512_1344",
+          "locator": "PDF p.17 Consolidation"
+        },
+        {
+          "url": "https://archive.org/details/micro_IA40243514_1461",
+          "locator": "PDF p.15 Consolidation"
+        },
+        {
+          "url": "https://archive.org/details/micro_IA40243211_0084",
+          "locator": "PDF p.18 Consolidation"
+        }
+      ],
+      "confidence": "sourced",
+      "note": "Developer of the 25-acre Lonsdale Quay site, North Vancouver. End date not found.",
+      "group": "BCDC"
+    },
+    {
+      "name": "Duke Point Development Limited",
+      "parent": "bc-development-corporation",
+      "relationship": "wholly-owned",
+      "share": "consolidated subsidiary; percentage not stated",
+      "inRepo": "sub-duke-point-development",
+      "sources": [
+        {
+          "url": "https://archive.org/details/micro_IA40243510_1434",
+          "locator": "PDF p.11 Consolidation"
+        },
+        {
+          "url": "https://archive.org/details/micro_IA40243512_1344",
+          "locator": "PDF p.17 Consolidation"
+        },
+        {
+          "url": "https://archive.org/details/micro_IA40243514_1461",
+          "locator": "PDF p.15 Consolidation"
+        },
+        {
+          "url": "https://archive.org/details/micro_IA40243211_0084",
+          "locator": "PDF p.18 Consolidation; PDF p.16 (Duke Point Industrial Park, Nanaimo, developed 1975-1982)"
+        }
+      ],
+      "confidence": "sourced",
+      "note": "Industrial park and shipping terminal near Nanaimo. Incorporation and end dates not found.",
+      "group": "BCDC"
+    },
+    {
+      "name": "Westminster Quay Public Market Ltd.",
+      "parent": "bc-development-corporation",
+      "relationship": "joint-venture",
+      "share": "subsidiary in 1985; joint venture with Laing Properties Ltd. by 1986 (shares not stated)",
+      "established": "c.1984-85",
+      "inRepo": "sub-westminster-quay-public-market",
+      "sources": [
+        {
+          "url": "https://archive.org/details/micro_IA40243514_1461",
+          "locator": "PDF p.13: 'Westminster Quay Public Market Ltd, a new Development Corporation subsidiary, is scheduled to begin construction in 1985'; 'will ultimately be privatized'"
+        },
+        {
+          "url": "https://archive.org/details/micro_IA40243211_0084",
+          "locator": "PDF p.17: market 'being built and operated on a joint venture basis with Laing Properties Ltd.'; 'Laing Properties has agreed to purchase our remaining interest'"
+        }
+      ],
+      "confidence": "sourced",
+      "note": "Not listed in the consolidation note, so probably held as an investment. Market opened mid-July 1986.",
+      "group": "BCDC"
+    },
+    {
+      "name": "British Columbia Museum of Transportation, Science and Industry",
+      "shortName": "The Transportation Collection (name per brief; not seen in the source)",
+      "parent": "bc-development-corporation",
+      "relationship": "administered",
+      "inRepo": null,
+      "sources": [
+        {
+          "url": "https://archive.org/details/micro_IA40243512_1344",
+          "locator": "PDF p.16: 'a non-profit society administered by the Development Corporation'"
+        }
+      ],
+      "confidence": "sourced",
+      "note": "Collected historic vehicles for display at Expo 86. Society incorporation date not found.",
+      "group": "BCDC"
+    },
+    {
+      "name": "British Columbia Film Centre / The Bridge Studios",
+      "parent": "bc-development-corporation",
+      "relationship": "administered",
+      "established": "1987",
+      "inRepo": null,
+      "sources": [
+        {
+          "url": "https://ised-isde.canada.ca/cipo/trademark-search/0569716",
+          "locator": "CIPO 0569716 THE BRIDGE: owner British Columbia Development Corporation; filed 1986-09-22, registered 1987-11-06 (TMA333795), cancelled by owner 1990-07-13"
+        },
+        {
+          "url": "https://ised-isde.canada.ca/cipo/trademark-search/0903009",
+          "locator": "CIPO 0903009 BRITISH COLUMBIA FILM CENTRE & Design: official mark s.9(1)(n)(iii), requested by British Columbia Development Corporation, 1987"
+        },
+        {
+          "url": "https://archive.org/details/micro_IA40243211_0084",
+          "locator": "PDF p.7 (plans for a studio facility for motion-picture production)"
+        },
+        {
+          "url": "https://cinemacanada.athabascau.ca/index.php/cinema/article/download/3452/3491.pdf",
+          "locator": "Cinema Canada c.1985-86 (BCDC involvement in the studio project); lead"
+        }
+      ],
+      "confidence": "sourced",
+      "note": "A BCDC-owned project and brand. No separate company was found. Later held by BCEC and then PavCo (lead).",
+      "group": "BCDC"
+    },
+    {
+      "name": "Lonsdale Quay Market (Lonsdale Quay Market Corporation)",
+      "parent": "bc-development-corporation",
+      "relationship": "partly-owned",
+      "share": "BCDC 'retains a financial interest'; nature and size unstated",
+      "established": "1984-85",
+      "inRepo": null,
+      "sources": [
+        {
+          "url": "https://archive.org/details/micro_IA40243514_1461",
+          "locator": "PDF p.14: 'Another private sector developer, Lonsdale Quay Market Corporation, began construction of an integrated public market, entertainment, and hotel complex'"
+        },
+        {
+          "url": "https://archive.org/details/micro_IA40243211_0084",
+          "locator": "PDF p.17: 'developed by Intrawest Properties ... We retain a financial interest in the project'"
+        },
+        {
+          "url": "https://nsdl.arcabc.ca/_flysystem/repo-service/2025-03/5404-Extracted%20Text.txt",
+          "locator": "Lonsdale Quay bulletin vol.1 no.3 (Intrawest Properties Ltd. to develop the market)"
+        }
+      ],
+      "confidence": "lead",
+      "note": "Not a BCDC subsidiary: a private developer (Intrawest). The 1990 trademark assignment named in the brief was not checked.",
+      "group": "BCDC"
+    },
+    {
+      "name": "Pacific Isotopes and Pharmaceuticals Ltd.",
+      "parent": "bc-development-corporation",
+      "relationship": "partly-owned",
+      "share": "interest of unstated size",
+      "ended": "by 1983-03-31",
+      "inRepo": null,
+      "sources": [
+        {
+          "url": "https://archive.org/details/micro_IA40243510_1434",
+          "locator": "PDF p.11: 'During the year, the Corporation transferred its interest in Pacific Isotopes and Pharmaceuticals Ltd. to The Terry Fox Medical Research Foundation'"
+        }
+      ],
+      "confidence": "sourced",
+      "group": "BCDC"
+    },
+    {
+      "name": "British Columbia Electric Railway Company Limited",
+      "parent": "bc-electric-company-crown",
+      "relationship": "wholly-owned",
+      "inRepo": null,
+      "sources": [
+        {
+          "url": "https://archive.org/details/McGillLibrary-632604-27827",
+          "locator": "BC Hydro 1964/65 annual report, financial statements Note 5 (Taxes on income): 'British Columbia Electric Company Limited and its wholly-owned subsidiary British Columbia Electric Railway Company Limited'"
+        }
+      ],
+      "confidence": "sourced",
+      "note": "Held by BC Electric after the 1961 takeover and so by the Crown; folded into BC Hydro's operations. Dates not established here.",
+      "group": "BC Hydro"
+    },
+    {
+      "name": "International Power and Engineering Consultants Limited",
+      "shortName": "IPEC",
+      "parent": "bc-hydro",
+      "relationship": "wholly-owned",
+      "inRepo": null,
+      "sources": [
+        {
+          "url": "https://archive.org/details/McGillLibrary-632608-27821",
+          "locator": "BC Hydro 1962/63 annual report, balance sheet: 'Shares of International Power and Engineering Consultants Limited, at cost ... 1,200,000'"
+        },
+        {
+          "url": "https://archive.org/details/McGillLibrary-632593-27842",
+          "locator": "BC Hydro 1969/70 annual report, Construction: 'International Power and Engineering Consultants, Limited, a wholly owned subsidiary of B.C. Hydro'"
+        }
+      ],
+      "confidence": "sourced",
+      "note": "Design and construction engineering subsidiary. Formation and end dates not found.",
+      "group": "BC Hydro"
+    },
+    {
+      "name": "Powertech Labs Inc.",
+      "parent": "bc-hydro",
+      "relationship": "wholly-owned",
+      "established": "1989",
+      "inRepo": "sub-powertech-labs",
+      "sources": [
+        {
+          "url": "https://archive.org/details/McGillLibrary-632592-27884",
+          "locator": "BC Hydro 1989/90 annual report, 'Subsidiary revenue': 'In 1989, Powertech Labs, Westech Information Systems and Western Integrated Technologies were established as subsidiaries'; consolidation note"
+        }
+      ],
+      "confidence": "sourced",
+      "note": "The repo gives 1988; the 1990 annual report says it was established as a subsidiary in 1989.",
+      "group": "BC Hydro"
+    },
+    {
+      "name": "Westech Information Systems Inc.",
+      "parent": "bc-hydro",
+      "relationship": "wholly-owned",
+      "established": "1989",
+      "inRepo": null,
+      "sources": [
+        {
+          "url": "https://archive.org/details/McGillLibrary-632592-27884",
+          "locator": "1989/90 annual report, Subsidiary revenue; Consolidation note"
+        }
+      ],
+      "confidence": "sourced",
+      "group": "BC Hydro"
+    },
+    {
+      "name": "Western Integrated Technologies Inc.",
+      "parent": "bc-hydro",
+      "relationship": "wholly-owned",
+      "established": "1989",
+      "inRepo": null,
+      "sources": [
+        {
+          "url": "https://archive.org/details/McGillLibrary-632592-27884",
+          "locator": "1989/90 annual report, Subsidiary revenue; Consolidation note"
+        }
+      ],
+      "confidence": "sourced",
+      "group": "BC Hydro"
+    },
+    {
+      "name": "British Columbia Power Export Corporation (Powerex Corp.)",
+      "parent": "bc-hydro",
+      "relationship": "wholly-owned",
+      "established": "1988",
+      "inRepo": "sub-powerex",
+      "sources": [
+        {
+          "url": "https://archive.org/details/McGillLibrary-632592-27884",
+          "locator": "1989/90 Consolidation note"
+        },
+        {
+          "url": "https://archive.org/details/micro_IA40244213_0843",
+          "locator": "2012/13 annual report, note 1 (Powerex)"
+        }
+      ],
+      "confidence": "sourced",
+      "group": "BC Hydro"
+    },
+    {
+      "name": "British Columbia Hydro International Limited",
+      "parent": "bc-hydro",
+      "relationship": "wholly-owned",
+      "inRepo": null,
+      "sources": [
+        {
+          "url": "https://archive.org/details/McGillLibrary-632592-27884",
+          "locator": "1989/90 Consolidation note: 'Principal subsidiaries ... all of which are wholly-owned'"
+        }
+      ],
+      "confidence": "sourced",
+      "group": "BC Hydro"
+    },
+    {
+      "name": "Columbia Estate Company, Limited",
+      "parent": "bc-hydro",
+      "relationship": "wholly-owned",
+      "inRepo": null,
+      "sources": [
+        {
+          "url": "https://archive.org/details/McGillLibrary-632592-27884",
+          "locator": "1989/90 Consolidation note"
+        }
+      ],
+      "confidence": "sourced",
+      "group": "BC Hydro"
+    },
+    {
+      "name": "Columbia Hydro Constructors Ltd.",
+      "parent": "bc-hydro",
+      "relationship": "wholly-owned",
+      "inRepo": "sub-columbia-hydro-constructors",
+      "sources": [
+        {
+          "url": "https://archive.org/details/micro_IA40244213_0843",
+          "locator": "2012/13 annual report, note 1: 'principal wholly-owned operating subsidiaries Powerex, Powertech Labs Inc., and Columbia Hydro Constructors Ltd.'"
+        }
+      ],
+      "confidence": "sourced",
+      "group": "BC Hydro"
+    },
+    {
+      "name": "Waneta Dam and Generating Facility (interest)",
+      "parent": "bc-hydro",
+      "relationship": "joint-venture",
+      "share": "one-third (joint operation with Teck)",
+      "inRepo": null,
+      "sources": [
+        {
+          "url": "https://archive.org/details/micro_IA40244213_0843",
+          "locator": "2012/13 annual report, note 1: 'BC Hydro's one third interest in the Waneta Dam and Generating Facility (Waneta), a joint operation'"
+        }
+      ],
+      "confidence": "sourced",
+      "note": "An asset interest, not a company. Lead, unverified: BC Hydro bought Teck's two-thirds in 2018.",
+      "group": "BC Hydro"
+    },
+    {
+      "name": "BCHPA Captive Insurance Company Ltd.",
+      "parent": "bc-hydro",
+      "relationship": "wholly-owned",
+      "inRepo": "sub-bchpa-captive-insurance",
+      "sources": [
+        {
+          "url": "research/history/sub-subsidiaries.json",
+          "locator": "existing repo record"
+        }
+      ],
+      "confidence": "sourced",
+      "group": "BC Hydro"
+    },
+    {
+      "name": "Tongass Power and Light Company",
+      "parent": "bc-hydro",
+      "relationship": "wholly-owned",
+      "inRepo": "sub-tongass-power-and-light",
+      "sources": [
+        {
+          "url": "research/history/sub-subsidiaries.json",
+          "locator": "existing repo record"
+        }
+      ],
+      "confidence": "sourced",
+      "group": "BC Hydro"
+    },
+    {
+      "name": "BC Rail Ltd.",
+      "parent": "bc-railway-company",
+      "relationship": "wholly-owned",
+      "share": "common shares 100% in the group (25% BCR, 75% BCR Properties); public preferred shares from 1984",
+      "established": "1984",
+      "ended": "2004-07-14",
+      "inRepo": null,
+      "sources": [
+        {
+          "url": "https://www.oag.bc.ca/app/uploads/sites/963/2024/08/OAGBC-19860401a-1986reportpart2appendices.pdf",
+          "locator": "PDF p.20 (Public Accounts 1984/85 p.B16): June 1984 issue of Series A preferred shares; 'common shares of BC Rail Ltd. are owned 25% by the Railway and 75% by BCR Properties Ltd.'"
+        },
+        {
+          "url": "https://archive.org/details/micro_IA40243217_0622",
+          "locator": "BC Rail 1987 annual report: group structure and Consolidation note"
+        }
+      ],
+      "confidence": "sourced",
+      "note": "The operating railway company. The end date (sale to CN) is from the repo's own bc-railway-company description. Named only in the bodies.json gaps note.",
+      "group": "BC Rail"
+    },
+    {
+      "name": "BCR Properties Ltd.",
+      "parent": "bc-railway-company",
+      "relationship": "wholly-owned",
+      "inRepo": "sub-bcr-properties",
+      "sources": [
+        {
+          "url": "https://www.oag.bc.ca/app/uploads/sites/963/2024/08/OAGBC-19860401a-1986reportpart2appendices.pdf",
+          "locator": "PDF p.20: 'The Railway holds 100% of the common shares of BCR Properties Ltd.'"
+        }
+      ],
+      "confidence": "sourced",
+      "group": "BC Rail"
+    },
+    {
+      "name": "BCR Marine Ltd.",
+      "parent": "bc-railway-company",
+      "relationship": "wholly-owned",
+      "share": "operating business of the group; percentage not stated",
+      "inRepo": null,
+      "sources": [
+        {
+          "url": "https://archive.org/details/micro_IA40243304_1242",
+          "locator": "BCR Group 2000 annual report: group structure; directors' list 'BCR Marine Ltd. and ... Wharves Limited Partnership'"
+        }
+      ],
+      "confidence": "sourced",
+      "note": "Grouped Canadian Stevedoring, Casco Terminals and Vancouver Wharves.",
+      "group": "BC Rail"
+    },
+    {
+      "name": "Vancouver Wharves (Vancouver Wharves Limited Partnership)",
+      "parent": "bc-railway-company",
+      "relationship": "wholly-owned",
+      "share": "percentage not stated",
+      "inRepo": null,
+      "sources": [
+        {
+          "url": "https://archive.org/details/micro_IA40243304_1242",
+          "locator": "2000 annual report: BCR Marine 'its first full year of operating Canadian Stevedoring, Casco Terminals and Vancouver Wharves'; directors' list"
+        }
+      ],
+      "confidence": "sourced",
+      "note": "Named in the bodies.json gaps note but has no node.",
+      "group": "BC Rail"
+    },
+    {
+      "name": "Canadian Stevedoring Company Limited",
+      "parent": "bc-railway-company",
+      "relationship": "wholly-owned",
+      "established": "acquired c.1999",
+      "inRepo": null,
+      "sources": [
+        {
+          "url": "https://archive.org/details/micro_IA40243304_1242",
+          "locator": "2000 annual report: cash-flow line 'Acquisition of Canadian Stevedoring Company Limited'; its own board listed"
+        }
+      ],
+      "confidence": "sourced",
+      "group": "BC Rail"
+    },
+    {
+      "name": "Casco Terminals",
+      "parent": "bc-railway-company",
+      "relationship": "wholly-owned",
+      "share": "percentage not stated",
+      "inRepo": null,
+      "sources": [
+        {
+          "url": "https://archive.org/details/micro_IA40243304_1242",
+          "locator": "2000 annual report, BCR Marine section"
+        }
+      ],
+      "confidence": "lead",
+      "group": "BC Rail"
+    },
+    {
+      "name": "Finlay Navigation Limited Partnership",
+      "parent": "bc-railway-company",
+      "relationship": "partly-owned",
+      "share": "50% until 2000-09-01, then 100%",
+      "inRepo": null,
+      "sources": [
+        {
+          "url": "https://archive.org/details/micro_IA40243304_1242",
+          "locator": "2000 annual report, note: 'Effective September 1, 2000, the Company acquired the remaining 50% interest in Finlay Navigation Limited Partnership to increase its interest to 100%'"
+        }
+      ],
+      "confidence": "sourced",
+      "group": "BC Rail"
+    },
+    {
+      "name": "BCR Ventures Inc.",
+      "parent": "bc-railway-company",
+      "relationship": "wholly-owned",
+      "established": "1996",
+      "inRepo": null,
+      "sources": [
+        {
+          "url": "https://archive.org/details/micro_IA40243304_1242",
+          "locator": "2000 annual report: 'a joint venture investment company, BCR Ventures Inc.'; 'Established in 1996'"
+        }
+      ],
+      "confidence": "sourced",
+      "note": "Took joint-venture stakes in resource projects along the line.",
+      "group": "BC Rail"
+    },
+    {
+      "name": "BC Rail Partnership (BCR Partnership)",
+      "parent": "bc-railway-company",
+      "relationship": "partly-owned",
+      "ended": "2004-07-14",
+      "inRepo": null,
+      "sources": [
+        {
+          "url": "src/government/historyData.js",
+          "locator": "bc-railway-company description: 'CN acquired the BC Rail Ltd. operating subsidiary and BCR Partnership units at closing on 14 July 2004'"
+        }
+      ],
+      "confidence": "lead",
+      "group": "BC Rail"
+    },
+    {
+      "name": "British Columbia Cellulose Company",
+      "parent": "Province of British Columbia",
+      "relationship": "wholly-owned",
+      "established": "1973",
+      "inRepo": null,
+      "sources": [
+        {
+          "url": "https://www.oag.bc.ca/app/uploads/sites/963/2024/08/OAGBC-19860401a-1986reportpart2appendices.pdf",
+          "locator": "PDF p.19 note 9 (Crown corporation investment); PDF p.20 note 9(b): British Columbia Cellulose Company Repeal Act passed in 1983/84, not yet in force"
+        },
+        {
+          "url": "https://lims.leg.bc.ca/hdms/file/Debates/30th2nd/30p_02s_730416a.htm",
+          "locator": "Hansard 16 Apr 1973: second reading of the British Columbia Cellulose Company Act"
+        }
+      ],
+      "confidence": "sourced",
+      "note": "A Crown holding company for the Province's Canadian Cellulose shares (about 79%, lead). It has no node in the repo.",
+      "group": "BCRIC and the 1970s forest holdings"
+    },
+    {
+      "name": "Canadian Cellulose Company, Limited",
+      "parent": "bc-resources-investment-corporation",
+      "relationship": "partly-owned",
+      "share": "Province (through BC Cellulose Co.) 1973-79; BCRIC 81% in 1979, 100% from 1980",
+      "established": "1973",
+      "inRepo": null,
+      "sources": [
+        {
+          "url": "https://nsdl.arcabc.ca/_flysystem/repo-service/2025-06/36475-Extracted%20Text.txt",
+          "locator": "North Shore News, Jan 1979, p.20: BCRIC assets '9,888,203 shares, or 81 per cent' of CanCel"
+        },
+        {
+          "url": "https://archive.org/details/McGillLibrary-637355-28052",
+          "locator": "BCRIC 1980 annual report: remaining 19% bought, '100 per cent'"
+        },
+        {
+          "url": "https://search.nbca.unbc.ca/index.php/columbia-cellulose-limited",
+          "locator": "UNBC archives: taken over by the Province in 1973, becoming Canadian Cellulose; renamed BC Timber Ltd. in 1981"
+        }
+      ],
+      "confidence": "sourced",
+      "group": "BCRIC and the 1970s forest holdings"
+    },
+    {
+      "name": "Kootenay Forest Products Ltd.",
+      "parent": "bc-resources-investment-corporation",
+      "relationship": "wholly-owned",
+      "ended": "1980",
+      "inRepo": null,
+      "sources": [
+        {
+          "url": "https://nsdl.arcabc.ca/_flysystem/repo-service/2025-06/36475-Extracted%20Text.txt",
+          "locator": "Jan 1979 p.20: '100 per cent of the common shares'"
+        },
+        {
+          "url": "https://archive.org/details/McGillLibrary-637355-28052",
+          "locator": "1980 annual report: amalgamated with Plateau Mills and CanCel"
+        }
+      ],
+      "confidence": "sourced",
+      "note": "Provincially owned before 1979; the acquisition date was not found.",
+      "group": "BCRIC and the 1970s forest holdings"
+    },
+    {
+      "name": "Plateau Mills Ltd.",
+      "parent": "bc-resources-investment-corporation",
+      "relationship": "wholly-owned",
+      "ended": "1980",
+      "inRepo": null,
+      "sources": [
+        {
+          "url": "https://nsdl.arcabc.ca/_flysystem/repo-service/2025-06/36475-Extracted%20Text.txt",
+          "locator": "Jan 1979 p.20: '100 per cent of the common shares of Plateau Mills Ltd.'"
+        },
+        {
+          "url": "https://archive.org/details/McGillLibrary-637355-28052",
+          "locator": "1980 annual report: amalgamated into CanCel"
+        }
+      ],
+      "confidence": "sourced",
+      "group": "BCRIC and the 1970s forest holdings"
+    },
+    {
+      "name": "Westcoast Transmission Company Limited (stake)",
+      "parent": "bc-resources-investment-corporation",
+      "relationship": "partly-owned",
+      "share": "10% (1979); 9.6% (1980)",
+      "inRepo": null,
+      "sources": [
+        {
+          "url": "https://nsdl.arcabc.ca/_flysystem/repo-service/2025-06/36475-Extracted%20Text.txt",
+          "locator": "Jan 1979 p.20: '3,471,375 shares, or 10 per cent'"
+        },
+        {
+          "url": "https://archive.org/details/McGillLibrary-637355-28052",
+          "locator": "1980 annual report: 9.6 per cent"
+        }
+      ],
+      "confidence": "sourced",
+      "group": "BCRIC and the 1970s forest holdings"
+    },
+    {
+      "name": "B.C. Coal Ltd. (formerly Kaiser Resources Ltd.)",
+      "parent": "bc-resources-investment-corporation",
+      "relationship": "partly-owned",
+      "share": "66%",
+      "established": "1980-10",
+      "inRepo": null,
+      "sources": [
+        {
+          "url": "https://archive.org/details/McGillLibrary-637355-28052",
+          "locator": "1980 annual report: 66 per cent acquired October 1980; Japanese shareholders keep one-third"
+        }
+      ],
+      "confidence": "sourced",
+      "group": "BCRIC and the 1970s forest holdings"
+    },
+    {
+      "name": "Westshore Terminals Ltd.",
+      "parent": "bc-resources-investment-corporation",
+      "relationship": "partly-owned",
+      "share": "indirect, through 66%-owned B.C. Coal",
+      "inRepo": null,
+      "sources": [
+        {
+          "url": "https://archive.org/details/McGillLibrary-637355-28052",
+          "locator": "1980 annual report: 'B.C. Coal's wholly-owned subsidiary, Westshore Terminals Ltd.'"
+        }
+      ],
+      "confidence": "sourced",
+      "group": "BCRIC and the 1970s forest holdings"
+    },
+    {
+      "name": "MacMillan Bloedel Limited (stake)",
+      "parent": "bc-resources-investment-corporation",
+      "relationship": "partly-owned",
+      "share": "20%",
+      "established": "1980",
+      "inRepo": null,
+      "sources": [
+        {
+          "url": "https://archive.org/details/McGillLibrary-637355-28052",
+          "locator": "1980 annual report: 20 per cent interest acquired"
+        }
+      ],
+      "confidence": "sourced",
+      "group": "BCRIC and the 1970s forest holdings"
+    },
+    {
+      "name": "Canadian Northern Shield Insurance Company",
+      "parent": "icbc",
+      "relationship": "wholly-owned",
+      "established": "1984",
+      "ended": "1985-02-18",
+      "inRepo": null,
+      "sources": [
+        {
+          "url": "https://archive.org/details/McGillLibrary-634107-40025",
+          "locator": "ICBC 1984 annual report, Report of the Board: 'the Corporation chartered a wholly-owned subsidiary, Canadian Northern Shield Insurance Company'; sold to The Cumis Group on 18 Feb 1985"
+        },
+        {
+          "url": "https://archive.org/details/McGillLibrary-634108-40028",
+          "locator": "ICBC 1985 annual report, notes: general insurance assets 'transferred to a subsidiary company which was sold February 18, 1985'"
+        }
+      ],
+      "confidence": "sourced",
+      "note": "Took over ICBC's General Insurance Division in January 1985.",
+      "group": "ICBC"
+    },
+    {
+      "name": "British Columbia Gas Corporation",
+      "parent": "bc-petroleum-corporation",
+      "relationship": "wholly-owned",
+      "share": "consolidated subsidiary; percentage not stated",
+      "inRepo": null,
+      "sources": [
+        {
+          "url": "https://archive.org/details/micro_IA40243217_1258",
+          "locator": "BC Petroleum Corporation 1987/88 annual report, Note 2 Consolidation: 'the Corporation's subsidiary, British Columbia Gas Corporation'; Note 5"
+        }
+      ],
+      "confidence": "sourced",
+      "group": "BC Petroleum Corporation"
+    },
+    {
+      "name": "B.C. Lottotech International Inc.",
+      "parent": "bclc",
+      "relationship": "wholly-owned",
+      "inRepo": "sub-bc-lottotech-international",
+      "sources": [
+        {
+          "url": "https://archive.org/details/micro_IA40243304_1664",
+          "locator": "BCLC 1999/2000 annual report, note 1(a)(ii): 'a wholly owned subsidiary'"
+        }
+      ],
+      "confidence": "sourced",
+      "group": "BCLC"
+    },
+    {
+      "name": "Inter-Provincial Lottery Corporation (provincial interest)",
+      "parent": "bclc",
+      "relationship": "partly-owned",
+      "share": "one of several provincial members",
+      "inRepo": null,
+      "sources": [
+        {
+          "url": "https://www.oag.bc.ca/app/uploads/sites/963/2024/08/OAGBC-19860401a-1986reportpart2appendices.pdf",
+          "locator": "PDF p.20 note 9(d): BCLC 'represents the interest of the Province in the Inter-Provincial Lottery Corporation games'"
+        }
+      ],
+      "confidence": "lead",
+      "group": "BCLC"
+    },
+    {
+      "name": "Western Canada Lottery Foundation (provincial membership)",
+      "parent": "Province of British Columbia",
+      "relationship": "joint-venture",
+      "ended": "1985-03-29",
+      "inRepo": null,
+      "sources": [
+        {
+          "url": "https://www.oag.bc.ca/app/uploads/sites/963/2024/08/OAGBC-19860401a-1986reportpart2appendices.pdf",
+          "locator": "PDF p.20 note 9(d): Province withdrew by agreement of 29 Mar 1985"
+        }
+      ],
+      "confidence": "sourced",
+      "note": "Named in the bodies.json gaps note but has no node.",
+      "group": "BCLC"
+    },
+    {
+      "name": "CBT Commercial Finance Corp.",
+      "parent": "columbia-basin-trust",
+      "relationship": "wholly-owned",
+      "inRepo": null,
+      "sources": [
+        {
+          "url": "https://www2.gov.bc.ca/assets/gov/british-columbians-our-governments/government-finances/public-accounts/2024-25/sup-e/columbia-basin-trust-fs-2024-25.pdf",
+          "locator": "2024/25 FS, PDF p.12 note 2(i): 'wholly owned and controlled by the Trust and are fully consolidated'"
+        }
+      ],
+      "confidence": "sourced",
+      "group": "Columbia Basin Trust and Columbia Power"
+    },
+    {
+      "name": "CBT Arrow Lakes Power Development Corp.",
+      "parent": "columbia-basin-trust",
+      "relationship": "wholly-owned",
+      "inRepo": null,
+      "sources": [
+        {
+          "url": "https://www2.gov.bc.ca/assets/gov/british-columbians-our-governments/government-finances/public-accounts/2024-25/sup-e/columbia-basin-trust-fs-2024-25.pdf",
+          "locator": "2024/25 FS, PDF p.12 note 2(i): 'wholly owned and controlled by the Trust and are fully consolidated'"
+        }
+      ],
+      "confidence": "sourced",
+      "group": "Columbia Basin Trust and Columbia Power"
+    },
+    {
+      "name": "CBT Brilliant Expansion Power Corp.",
+      "parent": "columbia-basin-trust",
+      "relationship": "wholly-owned",
+      "inRepo": null,
+      "sources": [
+        {
+          "url": "https://www2.gov.bc.ca/assets/gov/british-columbians-our-governments/government-finances/public-accounts/2024-25/sup-e/columbia-basin-trust-fs-2024-25.pdf",
+          "locator": "2024/25 FS, PDF p.12 note 2(i): 'wholly owned and controlled by the Trust and are fully consolidated'"
+        }
+      ],
+      "confidence": "sourced",
+      "group": "Columbia Basin Trust and Columbia Power"
+    },
+    {
+      "name": "CBT Power Corp.",
+      "parent": "columbia-basin-trust",
+      "relationship": "wholly-owned",
+      "inRepo": null,
+      "sources": [
+        {
+          "url": "https://www2.gov.bc.ca/assets/gov/british-columbians-our-governments/government-finances/public-accounts/2024-25/sup-e/columbia-basin-trust-fs-2024-25.pdf",
+          "locator": "2024/25 FS, PDF p.12 note 2(i): 'wholly owned and controlled by the Trust and are fully consolidated'"
+        }
+      ],
+      "confidence": "sourced",
+      "group": "Columbia Basin Trust and Columbia Power"
+    },
+    {
+      "name": "CBT Property Corp.",
+      "parent": "columbia-basin-trust",
+      "relationship": "wholly-owned",
+      "inRepo": null,
+      "sources": [
+        {
+          "url": "https://www2.gov.bc.ca/assets/gov/british-columbians-our-governments/government-finances/public-accounts/2024-25/sup-e/columbia-basin-trust-fs-2024-25.pdf",
+          "locator": "2024/25 FS, PDF p.12 note 2(i): 'wholly owned and controlled by the Trust and are fully consolidated'"
+        }
+      ],
+      "confidence": "sourced",
+      "group": "Columbia Basin Trust and Columbia Power"
+    },
+    {
+      "name": "CBT Waneta Expansion Power Corp.",
+      "parent": "columbia-basin-trust",
+      "relationship": "wholly-owned",
+      "inRepo": null,
+      "sources": [
+        {
+          "url": "https://www2.gov.bc.ca/assets/gov/british-columbians-our-governments/government-finances/public-accounts/2024-25/sup-e/columbia-basin-trust-fs-2024-25.pdf",
+          "locator": "2024/25 FS, PDF p.12 note 2(i): 'wholly owned and controlled by the Trust and are fully consolidated'"
+        }
+      ],
+      "confidence": "sourced",
+      "group": "Columbia Basin Trust and Columbia Power"
+    },
+    {
+      "name": "CBT Real Estate Investment Corp.",
+      "parent": "columbia-basin-trust",
+      "relationship": "wholly-owned",
+      "inRepo": null,
+      "sources": [
+        {
+          "url": "https://www2.gov.bc.ca/assets/gov/british-columbians-our-governments/government-finances/public-accounts/2024-25/sup-e/columbia-basin-trust-fs-2024-25.pdf",
+          "locator": "2024/25 FS, PDF p.12 note 2(i): 'wholly owned and controlled by the Trust and are fully consolidated'"
+        }
+      ],
+      "confidence": "sourced",
+      "group": "Columbia Basin Trust and Columbia Power"
+    },
+    {
+      "name": "Columbia Basin Development Corporation",
+      "parent": "columbia-basin-trust",
+      "relationship": "wholly-owned",
+      "inRepo": null,
+      "sources": [
+        {
+          "url": "https://www2.gov.bc.ca/assets/gov/british-columbians-our-governments/government-finances/public-accounts/2024-25/sup-e/columbia-basin-trust-fs-2024-25.pdf",
+          "locator": "2024/25 FS, PDF p.12 note 2(i): 'wholly owned and controlled by the Trust and are fully consolidated'"
+        }
+      ],
+      "confidence": "sourced",
+      "group": "Columbia Basin Trust and Columbia Power"
+    },
+    {
+      "name": "Columbia Basin Broadband Corporation",
+      "parent": "columbia-basin-trust",
+      "relationship": "wholly-owned",
+      "established": "2011",
+      "inRepo": "sub-columbia-basin-broadband-corporation",
+      "sources": [
+        {
+          "url": "https://www2.gov.bc.ca/assets/gov/british-columbians-our-governments/government-finances/public-accounts/2024-25/sup-e/columbia-basin-trust-fs-2024-25.pdf",
+          "locator": "PDF p.12 note 2(i)"
+        }
+      ],
+      "confidence": "sourced",
+      "group": "Columbia Basin Trust and Columbia Power"
+    },
+    {
+      "name": "Arrow Lakes Power Corporation",
+      "parent": "columbia-power",
+      "relationship": "joint-venture",
+      "share": "50% Columbia Power / 50% CBT (through a CBT subsidiary)",
+      "inRepo": "sub-arrow-lakes-power-corporation",
+      "sources": [
+        {
+          "url": "https://www2.gov.bc.ca/assets/gov/british-columbians-our-governments/government-finances/public-accounts/2024-25/sup-e/columbia-power-corporation-fs-2024-25.pdf",
+          "locator": "2024/25 FS, PDF p.16-17 note 4: 'All four corporations are jointly owned on a 50/50 basis by Columbia Power and the Trust'"
+        },
+        {
+          "url": "https://www2.gov.bc.ca/assets/gov/british-columbians-our-governments/government-finances/public-accounts/2024-25/sup-e/columbia-basin-trust-fs-2024-25.pdf",
+          "locator": "PDF p.12, 22"
+        }
+      ],
+      "confidence": "sourced",
+      "note": "The repo models this as a Columbia Power subsidiary only; it is a 50/50 joint venture with CBT.",
+      "group": "Columbia Basin Trust and Columbia Power"
+    },
+    {
+      "name": "Brilliant Power Corporation",
+      "parent": "columbia-power",
+      "relationship": "joint-venture",
+      "share": "50% Columbia Power / 50% CBT (through a CBT subsidiary)",
+      "inRepo": "sub-brilliant-power-corporation",
+      "sources": [
+        {
+          "url": "https://www2.gov.bc.ca/assets/gov/british-columbians-our-governments/government-finances/public-accounts/2024-25/sup-e/columbia-power-corporation-fs-2024-25.pdf",
+          "locator": "2024/25 FS, PDF p.16-17 note 4: 'All four corporations are jointly owned on a 50/50 basis by Columbia Power and the Trust'"
+        },
+        {
+          "url": "https://www2.gov.bc.ca/assets/gov/british-columbians-our-governments/government-finances/public-accounts/2024-25/sup-e/columbia-basin-trust-fs-2024-25.pdf",
+          "locator": "PDF p.12, 22"
+        }
+      ],
+      "confidence": "sourced",
+      "note": "The repo models this as a Columbia Power subsidiary only; it is a 50/50 joint venture with CBT.",
+      "group": "Columbia Basin Trust and Columbia Power"
+    },
+    {
+      "name": "Brilliant Expansion Power Corporation",
+      "parent": "columbia-power",
+      "relationship": "joint-venture",
+      "share": "50% Columbia Power / 50% CBT (through a CBT subsidiary)",
+      "inRepo": "sub-brilliant-expansion-power-corporation",
+      "sources": [
+        {
+          "url": "https://www2.gov.bc.ca/assets/gov/british-columbians-our-governments/government-finances/public-accounts/2024-25/sup-e/columbia-power-corporation-fs-2024-25.pdf",
+          "locator": "2024/25 FS, PDF p.16-17 note 4: 'All four corporations are jointly owned on a 50/50 basis by Columbia Power and the Trust'"
+        },
+        {
+          "url": "https://www2.gov.bc.ca/assets/gov/british-columbians-our-governments/government-finances/public-accounts/2024-25/sup-e/columbia-basin-trust-fs-2024-25.pdf",
+          "locator": "PDF p.12, 22"
+        }
+      ],
+      "confidence": "sourced",
+      "note": "The repo models this as a Columbia Power subsidiary only; it is a 50/50 joint venture with CBT.",
+      "group": "Columbia Basin Trust and Columbia Power"
+    },
+    {
+      "name": "Waneta Expansion Power Corporation",
+      "parent": "columbia-power",
+      "relationship": "joint-venture",
+      "share": "50% Columbia Power / 50% CBT (through a CBT subsidiary)",
+      "established": "2019-04-17",
+      "inRepo": "sub-waneta-expansion-power-corporation",
+      "sources": [
+        {
+          "url": "https://www2.gov.bc.ca/assets/gov/british-columbians-our-governments/government-finances/public-accounts/2024-25/sup-e/columbia-power-corporation-fs-2024-25.pdf",
+          "locator": "2024/25 FS, PDF p.16-17 note 4: 'All four corporations are jointly owned on a 50/50 basis by Columbia Power and the Trust'"
+        },
+        {
+          "url": "https://www2.gov.bc.ca/assets/gov/british-columbians-our-governments/government-finances/public-accounts/2024-25/sup-e/columbia-basin-trust-fs-2024-25.pdf",
+          "locator": "PDF p.12, 22"
+        }
+      ],
+      "confidence": "sourced",
+      "note": "The repo models this as a Columbia Power subsidiary only; it is a 50/50 joint venture with CBT.",
+      "group": "Columbia Basin Trust and Columbia Power"
+    },
+    {
+      "name": "Waneta Expansion Limited Partnership",
+      "parent": "columbia-power",
+      "relationship": "partly-owned",
+      "share": "Columbia Power 32.5%, CBT 16.5%, Fortis Inc. 51%",
+      "ended": "2019-04-17",
+      "inRepo": null,
+      "sources": [
+        {
+          "url": "https://www2.gov.bc.ca/assets/gov/british-columbians-our-governments/government-finances/public-accounts/2024-25/sup-e/columbia-power-corporation-fs-2024-25.pdf",
+          "locator": "PDF p.16 note 4: Fortis 51%, Columbia Power 32.5%, Trust 16.5%; Fortis's 51% bought 17 Apr 2019 and replaced by WEPC"
+        }
+      ],
+      "confidence": "sourced",
+      "note": "Named in repo text only; no node.",
+      "group": "Columbia Basin Trust and Columbia Power"
+    },
+    {
+      "name": "Mount St. Francis",
+      "parent": "columbia-basin-trust",
+      "relationship": "joint-venture",
+      "share": "50%",
+      "inRepo": null,
+      "sources": [
+        {
+          "url": "https://www2.gov.bc.ca/assets/gov/british-columbians-our-governments/government-finances/public-accounts/2024-25/sup-e/columbia-basin-trust-fs-2024-25.pdf",
+          "locator": "PDF p.12 'Real estate - 50% interest'; PDF p.17, p.21 (Nelson housing facility)"
+        }
+      ],
+      "confidence": "sourced",
+      "group": "Columbia Basin Trust and Columbia Power"
+    },
+    {
+      "name": "Red Mountain Hostel",
+      "parent": "columbia-basin-trust",
+      "relationship": "partly-owned",
+      "share": "75%, reduced in FY2025",
+      "inRepo": null,
+      "sources": [
+        {
+          "url": "https://www2.gov.bc.ca/assets/gov/british-columbians-our-governments/government-finances/public-accounts/2024-25/sup-e/columbia-basin-trust-fs-2024-25.pdf",
+          "locator": "PDF p.13 '(75% interest) is a GBE'; PDF p.20: partner's contributions lowered the Trust's share in FY2025"
+        }
+      ],
+      "confidence": "sourced",
+      "group": "Columbia Basin Trust and Columbia Power"
+    },
+    {
+      "name": "Vancouver Convention Centre Expansion Project Ltd.",
+      "shortName": "VCCEP",
+      "parent": "Province of British Columbia",
+      "relationship": "wholly-owned",
+      "ended": "2008-04-01",
+      "inRepo": null,
+      "sources": [
+        {
+          "url": "https://www2.gov.bc.ca/assets/gov/british-columbians-our-governments/government-finances/public-accounts/2024-25/sup-e/bc-pavilion-corporation-fs-2024-25.pdf",
+          "locator": "2024/25 FS note 1: PavCo formed 2008-04-01 by amalgamating the former B.C. Pavilion Corporation and VCCEP"
+        }
+      ],
+      "confidence": "sourced",
+      "note": "Amalgamated into bc-pavilion-corporation. Named in repo text only. Its ownership before 2008 was not checked.",
+      "group": "Other current Crowns"
+    },
+    {
+      "name": "Knowledge-West Communications Corporation",
+      "parent": "knowledge-network",
+      "relationship": "wholly-owned",
+      "inRepo": null,
+      "sources": [
+        {
+          "url": "https://www2.gov.bc.ca/assets/gov/british-columbians-our-governments/government-finances/public-accounts/2024-25/sup-e/knowledge-network-corporation-fs-2024-25.pdf",
+          "locator": "2024/25 FS: 'wholly-owned subsidiary, Knowledge-West' / '100% owned subsidiary, KWCC'"
+        }
+      ],
+      "confidence": "sourced",
+      "note": "Left out on purpose as inactive (sub-subsidiaries.json gaps).",
+      "group": "Other current Crowns"
+    },
+    {
+      "name": "0939031 B.C. Ltd.",
+      "parent": "forestry-innovation-investment",
+      "relationship": "wholly-owned",
+      "inRepo": null,
+      "sources": [
+        {
+          "url": "https://www2.gov.bc.ca/assets/gov/british-columbians-our-governments/government-finances/public-accounts/2024-25/sup-e/forestry-innovation-investment-fs-2024-25.pdf",
+          "locator": "2024/25 FS note 1"
+        }
+      ],
+      "confidence": "sourced",
+      "note": "Left out on purpose as non-operating; it is the co-owner of FII India.",
+      "group": "Other current Crowns"
+    },
+    {
+      "name": "Unnamed consolidated subsidiary of BC Housing",
+      "parent": "bc-housing",
+      "relationship": "wholly-owned",
+      "inRepo": null,
+      "sources": [
+        {
+          "url": "https://www2.gov.bc.ca/assets/gov/british-columbians-our-governments/government-finances/public-accounts/2024-25/sup-e/bc-housing-management-commission-fs-2024-25.pdf",
+          "locator": "2024/25 FS, auditor's report PDF p.4: 'British Columbia Housing Management Commission and its subsidiary'"
+        }
+      ],
+      "confidence": "lead",
+      "note": "The text layer does not name it (scanned notes). Identify it.",
+      "group": "Other current Crowns"
+    },
+    {
+      "name": "Catamaran Ferries International Inc.",
+      "shortName": "CFI",
+      "parent": "bc-ferry-corporation",
+      "relationship": "wholly-owned",
+      "inRepo": null,
+      "sources": [
+        {
+          "url": "https://www.marinelink.com/amp/news/maritime/catamaran-ferries-international",
+          "locator": "MarineLink news: BC Ferries' wholly owned subsidiary that built the PacifiCats; wound up c.2000"
+        }
+      ],
+      "confidence": "lead",
+      "group": "BC Ferries and transit"
+    },
+    {
+      "name": "British Columbia Ferry Services Inc.",
+      "parent": "bc-ferry-authority",
+      "relationship": "wholly-owned",
+      "established": "2003-04-02",
+      "inRepo": "bc-ferry-services-inc",
+      "sources": [
+        {
+          "url": "src/government/historyData.js",
+          "locator": "bc-ferry-corporation.becameId = 'bc-ferry-services-inc', which has no node"
+        },
+        {
+          "url": "https://www.courthouselibrary.ca/node/1752",
+          "locator": "BC Ferries corporate history"
+        }
+      ],
+      "confidence": "lead",
+      "note": "BC Ferry Authority holds the voting share (lead). This is the dangling id.",
+      "group": "BC Ferries and transit"
+    },
+    {
+      "name": "British Columbia Rapid Transit Company Ltd.",
+      "shortName": "BCRTC",
+      "parent": "bc-transit",
+      "relationship": "wholly-owned",
+      "established": "c.1985",
+      "inRepo": null,
+      "sources": [
+        {
+          "url": "https://free.bcpublications.ca/civix/document/id/consol9/consol9/98030_01",
+          "locator": "Greater Vancouver Transportation Authority Act (1998): lists BCRTC among the authority's subsidiaries after transfer"
+        },
+        {
+          "url": "https://www.translink.ca/about-us/about-translink/operating-companies/british-columbia-rapid-transit-company",
+          "locator": "TransLink: operates SkyTrain and West Coast Express"
+        }
+      ],
+      "confidence": "lead",
+      "note": "Founded 1985 per company profiles (unverified). It went to the GVTA (TransLink) around 1999 and so left the provincial reporting entity.",
+      "group": "BC Ferries and transit"
+    },
+    {
+      "name": "West Coast Express Ltd.",
+      "parent": "bc-transit",
+      "relationship": "wholly-owned",
+      "established": "c.1995",
+      "inRepo": null,
+      "sources": [
+        {
+          "url": "https://www.translink.ca/about-us/about-translink/operating-companies/british-columbia-rapid-transit-company",
+          "locator": "TransLink page (now operated by BCRTC)"
+        }
+      ],
+      "confidence": "lead",
+      "group": "BC Ferries and transit"
+    },
+    {
+      "name": "Rapid Transit Project 2000 Ltd.",
+      "shortName": "RTP 2000",
+      "parent": "Province of British Columbia",
+      "relationship": "wholly-owned",
+      "inRepo": null,
+      "sources": [
+        {
+          "url": "https://en.wikipedia.org/wiki/History_of_the_SkyTrain",
+          "locator": "History of the SkyTrain: RTP 2000, a Crown corporation that built the Millennium Line"
+        },
+        {
+          "url": "https://council.vancouver.ca/001017/present1.htm",
+          "locator": "City of Vancouver 17 Oct 2000: responsible for Millennium Line design and construction"
+        }
+      ],
+      "confidence": "lead",
+      "note": "Parent (BC Transit or the Province) not confirmed.",
+      "group": "BC Ferries and transit"
+    },
+    {
+      "name": "British Columbia Food Exhibitions Ltd. (formerly Surrey Farm Products Investments Ltd.)",
+      "parent": "Province of British Columbia",
+      "relationship": "wholly-owned",
+      "inRepo": null,
+      "sources": [
+        {
+          "url": "https://www.oag.bc.ca/app/uploads/sites/963/2024/08/OAGBC-19860401a-1986reportpart2appendices.pdf",
+          "locator": "PDF p.7 Appendix II; PDF p.19-20 note 9(c): organizing 'Food Pacific 86'; PDF p.80"
+        }
+      ],
+      "confidence": "sourced",
+      "group": "Province-held companies (1985 Public Accounts) with no node"
+    },
+    {
+      "name": "Housing Corporation of British Columbia",
+      "parent": "Province of British Columbia",
+      "relationship": "wholly-owned",
+      "inRepo": null,
+      "sources": [
+        {
+          "url": "https://www.oag.bc.ca/app/uploads/sites/963/2024/08/OAGBC-19860401a-1986reportpart2appendices.pdf",
+          "locator": "PDF p.21 note 9(h): in voluntary liquidation, carried at $1"
+        }
+      ],
+      "confidence": "sourced",
+      "note": "The bodies.json gaps note calls it 'BC Housing Corporation'.",
+      "group": "Province-held companies (1985 Public Accounts) with no node"
+    },
+    {
+      "name": "Pacific Coach Lines Limited",
+      "parent": "Province of British Columbia",
+      "relationship": "wholly-owned",
+      "established": "1979-04-01",
+      "ended": "1984-03-31",
+      "inRepo": null,
+      "sources": [
+        {
+          "url": "https://archive.org/details/McGillLibrary-632602-27869",
+          "locator": "BC Hydro 1978/79 annual report: new company replacing Pacific Stage Lines and Vancouver Island Coach Lines, operating from 1 Apr 1979"
+        },
+        {
+          "url": "https://www.oag.bc.ca/app/uploads/sites/963/2024/08/OAGBC-19860401a-1986reportpart2appendices.pdf",
+          "locator": "PDF p.21 note 9(i): operations ceased 31 Mar 1984, wind-up in progress"
+        }
+      ],
+      "confidence": "sourced",
+      "group": "Province-held companies (1985 Public Accounts) with no node"
+    },
+    {
+      "name": "Vancouver Island Coach Lines",
+      "parent": "Province of British Columbia",
+      "relationship": "wholly-owned",
+      "ended": "1979-04-01",
+      "inRepo": null,
+      "sources": [
+        {
+          "url": "https://archive.org/details/McGillLibrary-632602-27869",
+          "locator": "1978/79 annual report: 'Vancouver Island Coach Lines, a company owned and operated by the Provincial Government'"
+        }
+      ],
+      "confidence": "sourced",
+      "group": "Province-held companies (1985 Public Accounts) with no node"
+    },
+    {
+      "name": "Dunhill Development Corporation",
+      "parent": "Province of British Columbia",
+      "relationship": "wholly-owned",
+      "inRepo": null,
+      "sources": [
+        {
+          "url": "research/history/bodies.json",
+          "locator": "gaps[9]: left out for lack of dates"
+        }
+      ],
+      "confidence": "lead",
+      "group": "Province-held companies (1985 Public Accounts) with no node"
+    }
+  ]
+}

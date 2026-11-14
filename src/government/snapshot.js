@@ -617,6 +617,11 @@ export const governmentIn = (year, { includeUndated = false, includeLocal = fals
     const seenOn = undated && entry.firstObservedClaim?.date ? startOf(entry.firstObservedClaim.date) : null
     const presence = present || (entry.established && stands(entry.established, null)) ? 'dated' : seenOn && seenOn <= day ? 'seen' : 'unconfirmed'
     if (presence === 'unconfirmed' && !(includeUndated && undated)) continue
+    // Ended on a day no source gives (or its end is untraced): drawn to the year a source last shows
+    // it, then only when asked for undated bodies, and faintly — not as still standing today.
+    const lastYear = entry.endStatus && entry.lastObservedClaim?.date ? Number(String(entry.lastObservedClaim.date).slice(0, 4)) : null
+    const pastLastSeen = Boolean(entry.endStatus) && (present || (lastYear !== null && year > lastYear))
+    if (pastLastSeen && !includeUndated) continue
 
     // Where it sat in the year.
     const statedRow = periodOn(entry.parents) ?? (entry.parents ?? []).find(observedIn) ?? null
@@ -642,7 +647,7 @@ export const governmentIn = (year, { includeUndated = false, includeLocal = fals
     }
     const parent = parentId ? drawn.get(parentId) : null
     // An unconfirmed body is shown only beside a parent: with nothing to say it stood, it cannot stand apart.
-    if ((!parent || !parent.branch) && presence === 'unconfirmed') continue
+    if ((!parent || !parent.branch) && (presence === 'unconfirmed' || pastLastSeen)) continue
 
     // What it was called in the year: a dated name, or one observed in this very year.
     const nameRow = present ? null : periodOn(entry.names) ?? (entry.names ?? []).find(observedIn) ?? null
@@ -664,6 +669,7 @@ export const governmentIn = (year, { includeUndated = false, includeLocal = fals
         ? claim(`${entry.name}, from ${entry.established}`, historySource(entry.establishedSource ?? entry.source), reconcile ? { note: 'Collected, not confirmed: the review left this start unresolved.' } : {})
         : null,
       claimOf('First seen', entry.firstObservedClaim),
+      claimOf('Last seen', entry.lastObservedClaim, { note: entry.endStatus === 'untraced' ? 'Its end is not traced.' : 'It has ended; the day is not known.' }),
       claimOf('Ended', entry.endedClaim, decided('ended') ? decisionNote('ended') : { note: 'An exclusive end: it stood until that day.' }),
       nameRow && renamed ? claim(`Known as ${name}${nameRow.coverage === 'observation_only' ? ` in ${nameRow.observedOn}` : ` from ${nameRow.from ?? '?'}${nameRow.to ? ` to ${nameRow.to}` : ''}`}`, historySource(nameRow.source), nameRow.locator ? { note: nameRow.locator } : {}) : null,
       placement === 'stated'
@@ -680,7 +686,7 @@ export const governmentIn = (year, { includeUndated = false, includeLocal = fals
       inferredParent: placement === 'inferred' && Boolean(parent),
       parentToday: entry.parent ?? null,
       // Not shown by any source to exist by this year.
-      uncertain: presence === 'unconfirmed',
+      uncertain: presence === 'unconfirmed' || pastLastSeen,
       presence,
       firstSeen: presence === 'seen' ? String(entry.firstObservedClaim.date) : null,
       reconcile,

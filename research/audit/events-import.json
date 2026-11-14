@@ -1,7 +1,7 @@
 {
   "schema": "import-accounting/1",
   "counts": {
-    "accepted": 986,
+    "accepted": 990,
     "corroborating_duplicate": 12,
     "unresolved_unmapped": 26
   },
@@ -26512,6 +26512,62 @@
         "report_period": "2002/03"
       },
       "reason": "No supported event date; claim retained without inventing a timestamp"
+    },
+    {
+      "origin": "history/sub-agencies-researched.json#first-capital-city-development-company/established",
+      "disposition": "accepted",
+      "input": {
+        "date": "1977-08-02",
+        "precision": "day",
+        "meaning": "incorporation, registered as BC0164330",
+        "evidence": "official_webpage",
+        "source": "https://orgbook.gov.bc.ca/api/v4/topic/167519/credential-set",
+        "locator": "BC Registries BC0164330: registration_date 1977-08-02",
+        "checked": "2026-11-14"
+      },
+      "output_id": "sub:first-capital-city-development-company:established"
+    },
+    {
+      "origin": "history/sub-agencies-researched.json#lonsdale-quay-development-company/established",
+      "disposition": "accepted",
+      "input": {
+        "date": "1979-11-29",
+        "precision": "day",
+        "meaning": "incorporation, registered as BC0200730",
+        "evidence": "official_webpage",
+        "source": "https://orgbook.gov.bc.ca/api/v4/topic/204756/credential-set",
+        "locator": "BC Registries BC0200730: registration_date 1979-11-29",
+        "checked": "2026-11-14"
+      },
+      "output_id": "sub:lonsdale-quay-development-company:established"
+    },
+    {
+      "origin": "history/sub-agencies-researched.json#duke-point-development/first-observed",
+      "disposition": "accepted",
+      "input": {
+        "date": "1983-03-31",
+        "precision": "day",
+        "meaning": "first listed among BCDC’s consolidated subsidiaries",
+        "evidence": "annual_report",
+        "source": "https://archive.org/details/micro_IA40243510_1434",
+        "locator": "BCDC Ninth Annual Report, year ended 31 March 1983, notes to the consolidated financial statements, “Consolidation” (PDF p. 11)",
+        "checked": "2026-11-14"
+      },
+      "output_id": "sub:duke-point-development:first-observed"
+    },
+    {
+      "origin": "history/sub-agencies-researched.json#westminster-quay-public-market/established",
+      "disposition": "accepted",
+      "input": {
+        "date": "1985-05-15",
+        "precision": "day",
+        "meaning": "incorporation, registered as BC0292596",
+        "evidence": "official_webpage",
+        "source": "https://orgbook.gov.bc.ca/api/v4/topic/298977/credential-set",
+        "locator": "BC Registries BC0292596: registration_date 1985-05-15",
+        "checked": "2026-11-14"
+      },
+      "output_id": "sub:westminster-quay-public-market:established"
     }
   ]
 }

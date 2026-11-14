@@ -1,7 +1,7 @@
 {
   "schema": "import-accounting/1",
   "counts": {
-    "accepted": 2505,
+    "accepted": 2509,
     "unresolved_unmapped": 168,
     "intentionally_excluded": 4,
     "conflicting": 1
@@ -64385,6 +64385,325 @@
         "note": "The annual report lists this unit under Safety and Standards. Neither a founding date nor a continuous ministry-parent period is inferred. Dissolution does not terminate the exception for a hearing already in progress.",
         "review": {
           "checked": "2026-09-30"
+        }
+      }
+    },
+    {
+      "origin": "sub-agencies-researched.json#first-capital-city-development-company",
+      "disposition": "accepted",
+      "input": {
+        "id": "first-capital-city-development-company",
+        "name": "The First Capital City Development Company Limited",
+        "shortName": "First Capital City",
+        "kind": "subsidiary",
+        "parent_today": null,
+        "parent_today_name": null,
+        "official_url": null,
+        "source_today": null,
+        "description": "BC Development Corporation’s wholly owned subsidiary, incorporated to direct and manage the redevelopment of downtown and waterfront New Westminster in partnership with the city; it developed Westminster Quay.",
+        "held": {
+          "established": null,
+          "events_on_file": []
+        },
+        "established": {
+          "date": "1977-08-02",
+          "precision": "day",
+          "meaning": "incorporation, registered as BC0164330",
+          "evidence": "official_webpage",
+          "source": "https://orgbook.gov.bc.ca/api/v4/topic/167519/credential-set",
+          "locator": "BC Registries BC0164330: registration_date 1977-08-02",
+          "checked": "2026-11-14"
+        },
+        "ended": null,
+        "end_status": "occurred_date_unknown",
+        "last_observed": {
+          "date": "1986-03-31",
+          "precision": "day",
+          "meaning": "last listed among BCDC’s consolidated subsidiaries",
+          "evidence": "annual_report",
+          "source": "https://archive.org/details/micro_IA40243211_0084",
+          "locator": "BCDC Twelfth Annual Report, year ended 31 March 1986, notes to the consolidated financial statements, “Consolidation” (PDF p. 18)",
+          "checked": "2026-11-14"
+        },
+        "names": [],
+        "parents": [
+          {
+            "ministry_as_printed": "British Columbia Development Corporation",
+            "from": "1977-08-02",
+            "to": "1987-03-31",
+            "from_precision": "day",
+            "to_precision": "day",
+            "relation": "subsidiary_of",
+            "coverage": "documented_period",
+            "evidence": "legal_document",
+            "source": "https://bcombudsperson.ca/wp-content/uploads/2025/08/Special-Report-No-09-Supreme-Court-of-Canada-Judgment.pdf#page=24",
+            "locator": "BC Ombudsman Special Report No. 9: “its wholly owned subsidiary, First Capital City Development Company Limited” (PDF p. 24); incorporated 2 August 1977 to direct and manage the project (PDF p. 26)",
+            "checked": "2026-11-14"
+          },
+          {
+            "ministry_as_printed": "British Columbia Development Corporation",
+            "relation": "subsidiary_of",
+            "observed_on": "1983-03-31",
+            "coverage": "observation_only",
+            "evidence": "annual_report",
+            "source": "https://archive.org/details/micro_IA40243510_1434",
+            "locator": "BCDC Ninth Annual Report, year ended 31 March 1983, notes to the consolidated financial statements, “Consolidation” (PDF p. 11)",
+            "checked": "2026-11-14"
+          },
+          {
+            "ministry_as_printed": "British Columbia Development Corporation",
+            "relation": "subsidiary_of",
+            "observed_on": "1986-03-31",
+            "coverage": "observation_only",
+            "evidence": "annual_report",
+            "source": "https://archive.org/details/micro_IA40243211_0084",
+            "locator": "BCDC Twelfth Annual Report, year ended 31 March 1986, notes to the consolidated financial statements, “Consolidation” (PDF p. 18)",
+            "checked": "2026-11-14"
+          }
+        ],
+        "relations": [],
+        "legal_basis": null,
+        "evidence_status": "documented_partial",
+        "note": "Its trademark, FIRST CAPITAL CITY & Design (CIPO 0460347), was filed the same day as BCDC’s own (0460346). The registry keeps it as a historical company “in voluntary liquidation” with no dissolution date. Its shares, as BCDC property, would have passed to British Columbia Enterprise Corporation on 31 March 1987 with everything else BCDC held (SBC 1987 c. 39 s. 2); no source here names it as a BCEC subsidiary, so the period under BCDC is closed on that day and no later parent is drawn.",
+        "research_events": [],
+        "date_claims": [],
+        "first_observed": null,
+        "review": {
+          "checked": "2026-11-14",
+          "scope": "BCDC subsidiaries (research/history/crown-subsidiaries-audit-2026-11-14.md)",
+          "full_history_complete": false
+        }
+      }
+    },
+    {
+      "origin": "sub-agencies-researched.json#lonsdale-quay-development-company",
+      "disposition": "accepted",
+      "input": {
+        "id": "lonsdale-quay-development-company",
+        "name": "Lonsdale Quay Development Company Limited",
+        "kind": "subsidiary",
+        "parent_today": null,
+        "parent_today_name": null,
+        "official_url": null,
+        "source_today": null,
+        "description": "BC Development Corporation’s wholly owned subsidiary for the redevelopment of the Lonsdale Quay waterfront in North Vancouver, where the BC Rail and ICBC headquarters and a privately built public market and hotel went up in the mid-1980s.",
+        "held": {
+          "established": null,
+          "events_on_file": []
+        },
+        "established": {
+          "date": "1979-11-29",
+          "precision": "day",
+          "meaning": "incorporation, registered as BC0200730",
+          "evidence": "official_webpage",
+          "source": "https://orgbook.gov.bc.ca/api/v4/topic/204756/credential-set",
+          "locator": "BC Registries BC0200730: registration_date 1979-11-29",
+          "checked": "2026-11-14"
+        },
+        "ended": null,
+        "end_status": "occurred_date_unknown",
+        "last_observed": {
+          "date": "1986-03-31",
+          "precision": "day",
+          "meaning": "last listed among BCDC’s consolidated subsidiaries",
+          "evidence": "annual_report",
+          "source": "https://archive.org/details/micro_IA40243211_0084",
+          "locator": "BCDC Twelfth Annual Report, year ended 31 March 1986, notes to the consolidated financial statements, “Consolidation” (PDF p. 18)",
+          "checked": "2026-11-14"
+        },
+        "names": [],
+        "parents": [
+          {
+            "ministry_as_printed": "British Columbia Development Corporation",
+            "from": "1979-11-29",
+            "to": "1987-03-31",
+            "from_precision": "day",
+            "to_precision": "day",
+            "relation": "subsidiary_of",
+            "coverage": "documented_period",
+            "evidence": "newspaper",
+            "source": "https://nsdl.arcabc.ca/_flysystem/repo-service/2025-04/165995-Extracted%20Text.txt",
+            "locator": "North Shore News, 8 May 1983, p. B4: “a wholly owned subsidiary of the British Columbia Development Corporation, was set up in 1979”",
+            "checked": "2026-11-14"
+          },
+          {
+            "ministry_as_printed": "British Columbia Development Corporation",
+            "relation": "subsidiary_of",
+            "observed_on": "1983-03-31",
+            "coverage": "observation_only",
+            "evidence": "annual_report",
+            "source": "https://archive.org/details/micro_IA40243510_1434",
+            "locator": "BCDC Ninth Annual Report, year ended 31 March 1983, notes to the consolidated financial statements, “Consolidation” (PDF p. 11)",
+            "checked": "2026-11-14"
+          },
+          {
+            "ministry_as_printed": "British Columbia Development Corporation",
+            "relation": "subsidiary_of",
+            "observed_on": "1986-03-31",
+            "coverage": "observation_only",
+            "evidence": "annual_report",
+            "source": "https://archive.org/details/micro_IA40243211_0084",
+            "locator": "BCDC Twelfth Annual Report, year ended 31 March 1986, notes to the consolidated financial statements, “Consolidation” (PDF p. 18)",
+            "checked": "2026-11-14"
+          }
+        ],
+        "relations": [],
+        "legal_basis": null,
+        "evidence_status": "documented_partial",
+        "note": "Lonsdale Quay Market was built by a private developer (Intrawest Properties); BCDC kept a financial interest in it (1986 report, PDF p. 17), and the market is not counted here as a subsidiary. The registry keeps the company as historical, “in voluntary liquidation”, with no dissolution date. Its shares, as BCDC property, would have passed to British Columbia Enterprise Corporation on 31 March 1987 with everything else BCDC held (SBC 1987 c. 39 s. 2); no source here names it as a BCEC subsidiary, so the period under BCDC is closed on that day and no later parent is drawn.",
+        "research_events": [],
+        "date_claims": [],
+        "first_observed": null,
+        "review": {
+          "checked": "2026-11-14",
+          "scope": "BCDC subsidiaries (research/history/crown-subsidiaries-audit-2026-11-14.md)",
+          "full_history_complete": false
+        }
+      }
+    },
+    {
+      "origin": "sub-agencies-researched.json#duke-point-development",
+      "disposition": "accepted",
+      "input": {
+        "id": "duke-point-development",
+        "name": "Duke Point Development Limited",
+        "kind": "subsidiary",
+        "parent_today": null,
+        "parent_today_name": null,
+        "official_url": null,
+        "source_today": null,
+        "description": "BC Development Corporation subsidiary for its Duke Point industrial park and deep-sea terminal lands near Nanaimo.",
+        "held": {
+          "established": null,
+          "events_on_file": []
+        },
+        "established": null,
+        "ended": null,
+        "end_status": "untraced",
+        "last_observed": {
+          "date": "1986-03-31",
+          "precision": "day",
+          "meaning": "last listed among BCDC’s consolidated subsidiaries",
+          "evidence": "annual_report",
+          "source": "https://archive.org/details/micro_IA40243211_0084",
+          "locator": "BCDC Twelfth Annual Report, year ended 31 March 1986, notes to the consolidated financial statements, “Consolidation” (PDF p. 18)",
+          "checked": "2026-11-14"
+        },
+        "names": [],
+        "parents": [
+          {
+            "ministry_as_printed": "British Columbia Development Corporation",
+            "relation": "subsidiary_of",
+            "observed_on": "1983-03-31",
+            "coverage": "observation_only",
+            "evidence": "annual_report",
+            "source": "https://archive.org/details/micro_IA40243510_1434",
+            "locator": "BCDC Ninth Annual Report, year ended 31 March 1983, notes to the consolidated financial statements, “Consolidation” (PDF p. 11)",
+            "checked": "2026-11-14"
+          },
+          {
+            "ministry_as_printed": "British Columbia Development Corporation",
+            "relation": "subsidiary_of",
+            "observed_on": "1985-03-31",
+            "coverage": "observation_only",
+            "evidence": "annual_report",
+            "source": "https://archive.org/details/micro_IA40243514_1461",
+            "locator": "BCDC Eleventh Annual Report, year ended 31 March 1985, notes to the consolidated financial statements, “Consolidation”",
+            "checked": "2026-11-14"
+          },
+          {
+            "ministry_as_printed": "British Columbia Development Corporation",
+            "relation": "subsidiary_of",
+            "observed_on": "1986-03-31",
+            "coverage": "observation_only",
+            "evidence": "annual_report",
+            "source": "https://archive.org/details/micro_IA40243211_0084",
+            "locator": "BCDC Twelfth Annual Report, year ended 31 March 1986, notes to the consolidated financial statements, “Consolidation” (PDF p. 18)",
+            "checked": "2026-11-14"
+          }
+        ],
+        "relations": [],
+        "legal_basis": null,
+        "evidence_status": "documented_partial",
+        "note": "Its incorporation and end are not traced: BC Registries’ OrgBook has no company by this exact name (several other Duke Point companies are registered). The share BCDC held is not stated; it is consolidated as a subsidiary company. Its shares, as BCDC property, would have passed to British Columbia Enterprise Corporation on 31 March 1987 with everything else BCDC held (SBC 1987 c. 39 s. 2); no source here names it as a BCEC subsidiary, so the period under BCDC is closed on that day and no later parent is drawn.",
+        "research_events": [],
+        "date_claims": [],
+        "first_observed": {
+          "date": "1983-03-31",
+          "precision": "day",
+          "meaning": "first listed among BCDC’s consolidated subsidiaries",
+          "evidence": "annual_report",
+          "source": "https://archive.org/details/micro_IA40243510_1434",
+          "locator": "BCDC Ninth Annual Report, year ended 31 March 1983, notes to the consolidated financial statements, “Consolidation” (PDF p. 11)",
+          "checked": "2026-11-14"
+        },
+        "review": {
+          "checked": "2026-11-14",
+          "scope": "BCDC subsidiaries (research/history/crown-subsidiaries-audit-2026-11-14.md)",
+          "full_history_complete": false
+        }
+      }
+    },
+    {
+      "origin": "sub-agencies-researched.json#westminster-quay-public-market",
+      "disposition": "accepted",
+      "input": {
+        "id": "westminster-quay-public-market",
+        "name": "Westminster Quay Public Market Ltd.",
+        "kind": "subsidiary",
+        "parent_today": null,
+        "parent_today_name": null,
+        "official_url": null,
+        "source_today": null,
+        "description": "The company formed to build and run the festival market at Westminster Quay, New Westminster: a new BCDC subsidiary in 1985, building the market as a joint venture with Laing Properties Ltd. by 1986. The market opened in 1986.",
+        "held": {
+          "established": null,
+          "events_on_file": []
+        },
+        "established": {
+          "date": "1985-05-15",
+          "precision": "day",
+          "meaning": "incorporation, registered as BC0292596",
+          "evidence": "official_webpage",
+          "source": "https://orgbook.gov.bc.ca/api/v4/topic/298977/credential-set",
+          "locator": "BC Registries BC0292596: registration_date 1985-05-15",
+          "checked": "2026-11-14"
+        },
+        "ended": null,
+        "end_status": "occurred_date_unknown",
+        "last_observed": {
+          "date": "1986-03-31",
+          "precision": "day",
+          "meaning": "the market being built and operated as a joint venture with Laing Properties Ltd., which had agreed to buy BCDC’s remaining interest",
+          "evidence": "annual_report",
+          "source": "https://archive.org/details/micro_IA40243211_0084",
+          "locator": "BCDC Twelfth Annual Report, year ended 31 March 1986, Westminster Quay (PDF p. 17)",
+          "checked": "2026-11-14"
+        },
+        "names": [],
+        "parents": [
+          {
+            "ministry_as_printed": "British Columbia Development Corporation",
+            "relation": "subsidiary_of",
+            "observed_on": "1985-03-31",
+            "coverage": "observation_only",
+            "evidence": "annual_report",
+            "source": "https://archive.org/details/micro_IA40243514_1461",
+            "locator": "BCDC Eleventh Annual Report, year ended 31 March 1985: “Westminster Quay Public Market Ltd, a new Development Corporation subsidiary, is scheduled to begin construction in 1985” (PDF p. 13)",
+            "checked": "2026-11-14"
+          }
+        ],
+        "relations": [],
+        "legal_basis": null,
+        "evidence_status": "documented_partial",
+        "note": "A subsidiary when first reported, it is not among the consolidated companies; by 1986 the market was a joint venture, and Laing Properties had agreed to buy BCDC’s remaining interest. When that sale closed is not traced. The registry keeps it as a dissolved historical company, with no date.",
+        "research_events": [],
+        "date_claims": [],
+        "first_observed": null,
+        "review": {
+          "checked": "2026-11-14",
+          "scope": "BCDC subsidiaries (research/history/crown-subsidiaries-audit-2026-11-14.md)",
+          "full_history_complete": false
         }
       }
     },
