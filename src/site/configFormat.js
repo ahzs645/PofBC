@@ -23,6 +23,7 @@ import { CLEAR_SPACE_ORDER, LAYOUT_ORDER, MARK_ALIGNMENT_ORDER } from '../logo/l
 import { TRANSPARENT } from '../logo/logoColors.js'
 import { DEFAULTS } from './lockupDefaults.js'
 import { wordingFor } from './ministryLink.js'
+import { DOCUMENT_ARMS_LAYOUT_ORDER } from '../documentArms/layouts.js'
 
 // ── Validation ───────────────────────────────────────────────────────────────────────────────────
 //
@@ -54,7 +55,7 @@ export const cleanOneOf = (value, allowed, fallback) => (allowed.includes(value)
 
 // ── Public shape ─────────────────────────────────────────────────────────────────────────────────
 
-export const ERAS = ['historical', 'flag', 'crest', 'current']
+export const ERAS = ['historical', 'flag', 'crest', 'document', 'current']
 
 const backgroundOf = (state) => (
   state.background === TRANSPARENT ? 'transparent' : state.background
@@ -67,7 +68,17 @@ const backgroundOf = (state) => (
  * other is a finished file in one of four colourways — so a configuration describes whichever era
  * is in play rather than carrying a pile of fields that do not apply to it.
  */
-export const toConfig = (state) => (state.era === 'crest'
+export const toConfig = (state) => (state.era === 'document'
+  ? {
+      era: 'document',
+      documentLayout: state.documentLayout,
+      markColor: state.documentMarkColor,
+      textColor: state.linkColors ? state.documentMarkColor : state.documentTextColor,
+      linkColors: state.linkColors,
+      background: state.documentBackground === TRANSPARENT ? 'transparent' : state.documentBackground,
+      clearSpace: state.clearSpace
+    }
+  : state.era === 'crest'
   ? {
       era: 'crest',
       ministry: (state.source === 'manual' ? state.manualMinistry : state.ministry).trim(),
@@ -151,12 +162,13 @@ export const fromConfig = (config) => {
   const era = config.era ?? DEFAULTS.era
   const forFlag = era === 'flag'
   const forCrest = era === 'crest'
+  const forDocument = era === 'document'
   if ('markColor' in config) {
-    const field = forFlag ? 'flagMarkColor' : forCrest ? 'crestMarkColor' : 'markColor'
+    const field = forDocument ? 'documentMarkColor' : forFlag ? 'flagMarkColor' : forCrest ? 'crestMarkColor' : 'markColor'
     patch[field] = cleanColour(config.markColor, DEFAULTS[field])
   }
   if ('textColor' in config) {
-    const field = forFlag ? 'flagTextColor' : forCrest ? 'crestTextColor' : 'textColor'
+    const field = forDocument ? 'documentTextColor' : forFlag ? 'flagTextColor' : forCrest ? 'crestTextColor' : 'textColor'
     patch[field] = cleanColour(config.textColor, DEFAULTS[field])
     // Naming the type's colour separately means the two are no longer meant to move together.
     patch.linkColors = false
@@ -164,13 +176,15 @@ export const fromConfig = (config) => {
   if ('background' in config) {
     // Each era keeps its own background, so which one this sets depends on the era the
     // configuration declares — otherwise a current-era object would quietly recolour the crest.
-    const field = era === 'current'
+    const field = forDocument ? 'documentBackground' : era === 'current'
       ? 'currentBackground'
       : era === 'flag' ? 'flagBackground' : era === 'crest' ? 'crestBackground' : 'background'
     const value = cleanColour(config.background, DEFAULTS[field])
     patch[field] = /^transparent$/i.test(value) ? TRANSPARENT : value
   }
   if ('arrangement' in config) patch.crestArrangement = cleanOneOf(config.arrangement, CREST_ARRANGEMENTS, DEFAULTS.crestArrangement)
+  if ('documentLayout' in config) patch.documentLayout = cleanOneOf(config.documentLayout, DOCUMENT_ARMS_LAYOUT_ORDER, DEFAULTS.documentLayout)
+  if (forDocument && 'linkColors' in config) patch.linkColors = cleanBoolean(config.linkColors, DEFAULTS.linkColors)
   if ('ministryPlacement' in config) patch.crestPlacement = cleanOneOf(config.ministryPlacement, CREST_PLACEMENTS, DEFAULTS.crestPlacement)
   if ('bold' in config) patch.crestBold = cleanBoolean(config.bold, DEFAULTS.crestBold)
   if ('ministryLines' in config) patch.crestAlign = cleanOneOf(config.ministryLines, CREST_ALIGNMENTS, DEFAULTS.crestAlign)
@@ -237,6 +251,7 @@ export const readConfigParam = (search = globalThis.location?.search ?? '') => {
 /** This page's URL carrying a configuration as readable JSON. */
 export const buildConfigUrl = (state, href = globalThis.location?.href ?? '') => {
   const url = new URL(href)
+  url.searchParams.delete('s')
   url.searchParams.set(CONFIG_PARAM, JSON.stringify(toConfig(state)))
   return url.toString()
 }

@@ -29,6 +29,8 @@ import { CREST_ARRANGEMENTS, CREST_PLACEMENTS } from '../crest/crestLayout.js'
 import { crestSize } from '../crest/renderCrestSvg.js'
 import { MINISTRIES, searchMinistries } from '../ministries/ministries.js'
 import { buildShareUrl } from './shareLink.js'
+import { DOCUMENT_ARMS_LAYOUT_ORDER, DOCUMENT_ARMS_LAYOUTS } from '../documentArms/layouts.js'
+import { toConfig } from './configFormat.js'
 
 /** A tool result in the shape WebMCP expects: human-readable text, plus the data behind it. */
 const reply = (text, data) => ({
@@ -48,6 +50,12 @@ const colourSchema = (what) => ({
  * export.
  */
 const describeState = ({ state, lockup }) => {
+  if (state.era === 'document') return {
+    ...toConfig(state),
+    lockupLabel: DOCUMENT_ARMS_LAYOUTS[state.documentLayout]?.label,
+    accuracy: 'reconstruction-study',
+    note: 'Fixed historical document-heading study. Uses the same generated-master arms conversion as the 1919 plate; not a verified historical drawing. Lettering is outlined from open-font stand-ins.'
+  }
   if (state.era === 'current') {
     // A finished file rather than a drawing, so most of what follows does not apply to it.
     return {
@@ -146,16 +154,17 @@ const buildTools = (latest) => [
   {
     name: 'get_lockup_state',
     description:
-      'Read what is currently on screen. There are two identities: the historical era builds crest ' +
-      'lockups from parts and reports wording, colours, alignment and size; the current era serves ' +
-      'the Province’s official ministry marks and reports which one. Call this before changing ' +
-      'anything.',
+      'Read the identity currently on screen, its layout, colours and wording. The document ' +
+      'identity reports its fixed historical heading and reconstruction status; the current ' +
+      'identity reports its ministry mark. Call this before changing anything.',
     inputSchema: { type: 'object', properties: {} },
     execute: () => {
       const state = describeState(latest.current)
       const summary = state.era === 'current'
         ? `${state.ministryCode} mark (${state.language}): “${String(state.wording).replace(/\n/g, ' / ')}”, ` +
           `${state.variantLabel} on ${state.background}.`
+        : state.era === 'document'
+          ? `${state.lockupLabel}: historical document arms reconstruction study, ${state.markColor} on ${state.background}.`
         : `${state.lockupLabel} lockup, ${state.ministry || 'wordmark only'}, ${state.markColor} on ${state.background}.`
 
       return reply(summary, state)
@@ -174,11 +183,17 @@ const buildTools = (latest) => [
       properties: {
         era: {
           type: 'string',
-          enum: ['historical', 'flag', 'crest', 'current'],
+          enum: ['historical', 'flag', 'crest', 'document', 'current'],
           description: 'historical: the older crest lockups built from parts. ' +
             'flag: BC beside the waving provincial flag. ' +
             'crest: the coat of arms with the BRITISH COLUMBIA wordmark. ' +
+            'document: earlier document-heading studies, with fixed wording and provisional arms. ' +
             'current: the Province’s mark with the ministry wording set beside it.'
+        },
+        documentLayout: {
+          type: 'string',
+          enum: DOCUMENT_ARMS_LAYOUT_ORDER,
+          description: 'Document era only. Fixed historical heading arrangement; all are labelled reconstruction studies.'
         },
         ministryCode: {
           type: 'string',
@@ -263,6 +278,7 @@ const buildTools = (latest) => [
       const patch = {}
 
       if (input.era !== undefined) patch.era = input.era
+      if (input.documentLayout !== undefined) patch.documentLayout = input.documentLayout
       if (input.ministryCode !== undefined) patch.currentMinistry = String(input.ministryCode).toUpperCase()
       if (input.wording !== undefined) patch.currentName = String(input.wording)
       if (input.flagPalette !== undefined) patch.flagPalette = input.flagPalette
@@ -314,20 +330,24 @@ const buildTools = (latest) => [
       const { update } = latest.current
       const patch = {}
 
-      if (input.markColor !== undefined) patch.markColor = input.markColor
+      const documentEra = latest.current.state.era === 'document'
+      const markField = documentEra ? 'documentMarkColor' : 'markColor'
+      const textField = documentEra ? 'documentTextColor' : 'textColor'
+      const backgroundField = documentEra ? 'documentBackground' : 'background'
+      if (input.markColor !== undefined) patch[markField] = input.markColor
       if (input.textColor !== undefined) {
-        patch.textColor = input.textColor
+        patch[textField] = input.textColor
         // An explicit type colour means the two are no longer meant to move together.
         patch.linkColors = false
       }
       if (input.background !== undefined) {
-        patch.background = /^transparent$/i.test(input.background) ? TRANSPARENT : input.background
+        patch[backgroundField] = /^transparent$/i.test(input.background) ? TRANSPARENT : input.background
       }
 
       update(patch)
 
       const next = { ...latest.current.state, ...patch }
-      const contrast = describeContrast(next.markColor, next.background)
+      const contrast = describeContrast(next[markField], next[backgroundField])
       return reply(`Colours updated. Contrast ${contrast.ratio ?? '?'}:1 — ${contrast.message}`, { contrast })
     }
   },
