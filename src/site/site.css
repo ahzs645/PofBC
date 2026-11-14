@@ -331,6 +331,23 @@ a { color: inherit; text-underline-offset: 2px; }
 
 .panel > h2 + .panel__hint { margin-top: 0; }
 
+/* Original references remain separate from the exported vector study. */
+/* Five identities share a row: each button takes its label's width, so none breaks onto two lines. */
+.segmented[aria-label='Identity'] button { flex: 1 1 auto; white-space: nowrap; padding-inline: 6px; }
+/* The four headings are too long for one row, even in the desktop panel, so they sit two by two. */
+.document-arms-panel > .field:first-of-type .segmented { display: grid; grid-template-columns: repeat(2, 1fr); }
+.document-arms-panel .segmented button { white-space: nowrap; }
+.segmented[aria-label='Identity'] { flex-wrap: wrap; }
+.document-arms-reference { margin: 16px 4px 0; color: var(--ink-muted); font-size: 13px; line-height: 1.5; }
+.document-arms-reference__status { color: var(--ink); font-weight: 600; margin-bottom: 4px; }
+.document-arms-reference summary, .document-arms-evidence summary { cursor: pointer; color: var(--ink); }
+.document-arms-reference figure { margin: 12px 0 0; }
+.document-arms-reference img { display: block; width: 100%; max-height: 220px; object-fit: contain; background: #fff; border-radius: 6px; }
+.document-arms-reference figcaption { margin-top: 8px; font-size: 12px; }
+.document-arms-evidence { margin-top: 20px; font-size: 13px; line-height: 1.5; }
+.document-arms-evidence ul { padding-left: 18px; }
+.document-arms-evidence li + li { margin-top: 8px; }
+
 .panel__hint {
   margin: 0 0 12px;
   font-size: 13px;

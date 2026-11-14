@@ -28,6 +28,7 @@ export const applyUpdate = (current, patch) => {
     if (patch.markColor !== undefined || patch.linkColors) next.textColor = next.markColor
     if (patch.flagMarkColor !== undefined || patch.linkColors) next.flagTextColor = next.flagMarkColor
     if (patch.crestMarkColor !== undefined || patch.linkColors) next.crestTextColor = next.crestMarkColor
+    if (patch.documentMarkColor !== undefined || patch.linkColors) next.documentTextColor = next.documentMarkColor
   }
 
   // The three lockups disagree about the province wordmark — the centred one is drawn without it —
@@ -115,6 +116,17 @@ export const applyUpdate = (current, patch) => {
  * no colour to move into the foreground, so the brand green stands in for it.
  */
 export const swapColours = (current) => {
+  if (current.era === 'document') {
+    const incoming = resolveColor(current.documentBackground, TRANSPARENT) === TRANSPARENT
+      ? BRAND_COLORS.white
+      : current.documentBackground
+    return {
+      ...current,
+      documentMarkColor: incoming,
+      documentTextColor: current.linkColors ? incoming : current.documentTextColor,
+      documentBackground: current.documentMarkColor
+    }
+  }
   const incoming = resolveColor(current.background, TRANSPARENT) === TRANSPARENT
     ? BRAND_COLORS.green
     : current.background

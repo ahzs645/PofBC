@@ -746,6 +746,29 @@ which one.
 
 ---
 
+## Historic document arms
+
+**Historic** (the historic arms) in the Identity builder adds four fixed historical-heading studies: arms alone,
+split **BRITISH / COLUMBIA**, the two-line government caption, and a blackletter Crown-grant
+heading. Choose the layout, independent arms and lettering colours, background and export margin.
+The supplied reference appears beside the preview and stays out of the exported artwork.
+
+The shared arms path is the same provisional study used on the **1919 cardboard plate**. It is a
+vector conversion of a generated master, **not a verified period engraving**. The original document
+drawings differ. Noto Serif Bold, Barlow Condensed Bold and UnifrakturMaguntia Book are explicitly
+identified open-font stand-ins, not recovered historical typefaces. These choices are stated in
+the interface and the exported SVG metadata. No period standard for these exact headings has
+been verified.
+
+All fixed lettering is outlined, so this identity's preview and export need no font download.
+Readable and compressed share links preserve the layout, palette and colour linkage. A bundle
+exports formats and sizes of the selected heading.
+
+[Evidence, primary sources and archival leads](research/identity/document-arms-2026-11-13/README.md)
+· [Reference comparison](research/identity/document-arms-2026-11-13/review-layouts.png)
+· [Renderer and rebuild instructions](src/documentArms/README.md)
+· [Validation](research/identity/document-arms-2026-11-13/validation.md)
+
 ## Visual guides
 
 **Visual Guides** in the title menu (`?view=guides`) holds identity manuals rebuilt page by page as
