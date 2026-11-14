@@ -396,6 +396,25 @@ const BY_POSTER = {
       certainty: 'documented'
     },
     { ...companion('go-bc-ferries', 'Posters · the Toll Authority’s sticker for the whole system'), rel: 'Also a decal', certainty: 'thematic' }
+  ],
+  // Unlisted on the shelf (catalogue.js), so no other piece points to it.
+  'expo-86-davidson': [
+    {
+      group: 'issuer',
+      rel: 'Issued by',
+      label: 'Expo 86 Corporation',
+      note: 'Government · 1986: “© The Expo 86 Corporation” in the credit line, the Crown corporation that ran the fair',
+      to: body('expo-86-corporation', 1986),
+      certainty: 'printed'
+    },
+    {
+      group: 'marks',
+      rel: 'Uses mark',
+      label: 'Expo 86’s marks',
+      note: 'Logos · Expo 86 Corporation: the stacked EXPO and three-ring 86 at the poster’s foot',
+      to: { view: 'gallery', logos: 'collected-expo-86-corporation' },
+      certainty: 'printed'
+    }
   ]
 }
 

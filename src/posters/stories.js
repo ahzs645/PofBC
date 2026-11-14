@@ -190,6 +190,29 @@ export const STORIES = {
       'Under the wheel a navy ribbon with folded ends carries the name in white capitals: QUEEN OF SIDNEY.',
       'A working ship has become a keepsake, and a single vessel stands for the fleet. The sticker carries no date.'
     ]
+  },
+  'expo-86-davidson': {
+    overview: [
+      'Almost the whole sheet is one image: Robert Davidson’s design in black, red and blue-grey on cream, mirrored down its middle. The fair itself takes only a strip along the foot.',
+      'Read it the way the poster is built: the artwork, the artist’s signature under it, then the fair’s mark, its name and dates, and the fine print.'
+    ],
+    artwork: [
+      'Black formlines swell and taper round heads, eyes and beaks; red and blue-grey fill the spaces they enclose. At the centre is a face under a cross-hatched brow, with two hands below it, an eye in each palm.',
+      'The poster gives the image no title or explanation, and this reading adds none.'
+    ],
+    signature: [
+      'Under the lower right of the design, the artist has signed it: Robert Davidson, 1985, the year before the fair.'
+    ],
+    logo: [
+      'At the lower left, the fair’s own mark — EXPO stacked over the three rings of 86 — printed in the same black as the artwork, so it signs the sheet rather than competing with it.'
+    ],
+    event: [
+      'To the right, the fair’s name, place and dates twice over, in English and in French: The 1986 World Exposition, Vancouver, May 2 to October 13, 1986.'
+    ],
+    credit: [
+      'Last, the fine print along the foot: the artist named, the copyright held by the Expo 86 Corporation, and Printed in Canada.',
+      'That is the poster: an artist’s image given the whole sheet, with the fair content to sign it.'
+    ]
   }
 }
 

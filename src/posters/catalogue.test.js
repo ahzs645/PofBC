@@ -4,7 +4,7 @@
 import { test } from 'node:test'
 import assert from 'node:assert/strict'
 import { existsSync, readFileSync } from 'node:fs'
-import { FACETS, POSTERS, SERIES, neighbours, posterIds, seriesOf } from './catalogue.js'
+import { FACETS, POSTERS, SERIES, listedPosterIds, neighbours, posterIds, seriesOf } from './catalogue.js'
 import { RECORDS } from './records.js'
 import { STORIES } from './stories.js'
 import { MAX_AREA, MAX_EDGE, maxWidthFor } from './export/exportSvg.js'
@@ -12,6 +12,7 @@ import { FOREST_SERVICE_POSTERS } from './forest-service/posters.js'
 import { BC_FERRIES_POSTERS } from './bc-ferries/posters.js'
 import { WILDLIFE_TREES } from './wildlife-trees/posters.js'
 import { NOXIOUS_WEEDS_POSTERS } from './noxious-weeds/posters.js'
+import { EXPO_86_POSTERS } from './expo-86/posters.js'
 import { GALLERY_COLLECTIONS } from '../gallery/collections.js'
 import { ORDER as COASTAL_ORDER, PARTS as COASTAL_PARTS, REGIONS as COASTAL_REGIONS } from './coastal-forest/parts.js'
 import { FOREST_LOGOS } from '../internal/forestLogos.js'
@@ -29,7 +30,8 @@ const DRAWINGS = {
   'wildlife-trees': read('./wildlife-trees/wildlife-trees.svg'),
   'beware-these-alien-invaders': read('./noxious-weeds/beware-these-alien-invaders.svg'),
   'shattering-the-environment': read('./noxious-weeds/shattering-the-environment.svg'),
-  'explosion-in-slow-motion': read('./noxious-weeds/explosion-in-slow-motion.svg')
+  'explosion-in-slow-motion': read('./noxious-weeds/explosion-in-slow-motion.svg'),
+  'expo-86-davidson': read('./expo-86/expo-86-davidson.svg')
 }
 const GOVERNMENT = read('../government/historyData.js')
 
@@ -70,10 +72,11 @@ const DEFINITIONS = {
   ...FOREST_SERVICE_POSTERS,
   ...BC_FERRIES_POSTERS,
   'wildlife-trees': WILDLIFE_TREES,
-  ...NOXIOUS_WEEDS_POSTERS
+  ...NOXIOUS_WEEDS_POSTERS,
+  ...EXPO_86_POSTERS
 }
 // The posters whose panels are data.
-const DATA_POSTERS = { ...FOREST_SERVICE_POSTERS, ...BC_FERRIES_POSTERS, 'wildlife-trees': WILDLIFE_TREES, ...NOXIOUS_WEEDS_POSTERS }
+const DATA_POSTERS = { ...FOREST_SERVICE_POSTERS, ...BC_FERRIES_POSTERS, 'wildlife-trees': WILDLIFE_TREES, ...NOXIOUS_WEEDS_POSTERS, ...EXPO_86_POSTERS }
 
 const idsIn = (selector) => [...selector.matchAll(/#([\w-]+)/g)].map((m) => m[1])
 const partsIn = (selector) => [...selector.matchAll(/\[data-part="([\w-]+)"\]/g)].map((m) => m[1])
@@ -96,6 +99,17 @@ test('every series lists posters that exist, and every poster is in the series i
     for (const id of series.posters) assert.equal(POSTERS[id].series, series.id, `${id} names another series`)
   }
   for (const id of listed) assert.equal(seriesOf(id).id, POSTERS[id].series)
+})
+
+test('an unlisted poster is off the shelf and out of the stepping order, but still a poster', () => {
+  const unlisted = SERIES.filter((series) => series.unlisted).flatMap((series) => series.posters)
+  assert.deepEqual(unlisted, ['expo-86-davidson'])
+  for (const id of unlisted) {
+    assert.ok(POSTERS[id], `${id} has no card, so its address would not open it`)
+    assert.ok(!listedPosterIds().includes(id), `${id} is on the shelf`)
+    assert.deepEqual(neighbours(id), { previous: null, next: null })
+  }
+  for (const id of listedPosterIds()) for (const near of Object.values(neighbours(id))) assert.ok(!unlisted.includes(near), `${id} steps to an unlisted poster`)
 })
 
 test('every poster has a drawing whose viewBox is the catalogue’s', () => {
@@ -356,7 +370,7 @@ test('Wildlife Trees has the original to compare with, in the drawing’s shape'
 })
 
 test('neighbours step through the posters in catalogue order', () => {
-  const ids = posterIds()
+  const ids = listedPosterIds()
   assert.deepEqual(neighbours(ids[0]), { previous: null, next: ids[1] })
   assert.deepEqual(neighbours(ids.at(-1)), { previous: ids.at(-2), next: null })
 })

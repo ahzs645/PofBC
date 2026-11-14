@@ -13,6 +13,7 @@ import wildlifeThumb from './wildlife-trees/thumbnail.jpg'
 import bewareThumb from './noxious-weeds/beware-these-alien-invaders.thumb.jpg'
 import shatteringThumb from './noxious-weeds/shattering-the-environment.thumb.jpg'
 import explosionThumb from './noxious-weeds/explosion-in-slow-motion.thumb.jpg'
+import expoDavidsonThumb from './expo-86/thumbnail.jpg'
 
 // Each poster's drawing and parts, fetched when it is opened.
 const forestService = (id) => () => import('./forest-service/index.js').then((module) => module.loaderFor(id)())
@@ -29,7 +30,9 @@ const LOADERS = {
   'shattering-the-environment': noxiousWeeds('shattering-the-environment'),
   'explosion-in-slow-motion': noxiousWeeds('explosion-in-slow-motion'),
   'go-bc-ferries': bcFerries('go-bc-ferries'),
-  'queen-of-sidney': bcFerries('queen-of-sidney')
+  'queen-of-sidney': bcFerries('queen-of-sidney'),
+  // Unlisted (catalogue.js): opened only from its address.
+  'expo-86-davidson': () => import('./expo-86/index.js').then((module) => module.loaderFor('expo-86-davidson')())
 }
 
 const THUMBNAILS = {
@@ -43,7 +46,8 @@ const THUMBNAILS = {
   'shattering-the-environment': shatteringThumb,
   'explosion-in-slow-motion': explosionThumb,
   'go-bc-ferries': goFerriesThumb,
-  'queen-of-sidney': queenThumb
+  'queen-of-sidney': queenThumb,
+  'expo-86-davidson': expoDavidsonThumb
 }
 
 const postersOf = (series) => series.posters

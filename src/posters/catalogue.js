@@ -44,6 +44,14 @@ export const SERIES = [
     title: 'British Columbia Ferries',
     kind: 'Car decals',
     posters: ['go-bc-ferries', 'queen-of-sidney']
+  },
+  // Unlisted: left off the shelf, but its address opens it (?view=posters&poster=expo-86-davidson).
+  {
+    id: 'expo-86',
+    title: 'Expo 86',
+    kind: 'Art poster · unlisted',
+    unlisted: true,
+    posters: ['expo-86-davidson']
   }
 ]
 
@@ -212,6 +220,20 @@ export const POSTERS = {
     view: { x: 0, y: 0, w: 1305, h: 1206 },
     page: { w: 5.2, h: 4.81 },
     background: null
+  },
+  'expo-86-davidson': {
+    id: 'expo-86-davidson',
+    issuer: 'Expo 86 Corporation',
+    subject: 'Expo 86',
+    format: 'Poster',
+    blurb: 'Robert Davidson’s formline design for the 1986 World Exposition.',
+    series: 'expo-86',
+    title: 'Expo 86 — Robert Davidson',
+    when: 'Artwork signed 1985; for the fair of 1986',
+    made: 'vector',
+    view: { x: 0, y: 0, w: 1200, h: 1600 },
+    page: { w: 23.62, h: 31.5 },
+    background: '#FBE5C1'
   }
 }
 
@@ -223,11 +245,13 @@ export const FACETS = [
 ]
 
 export const posterIds = () => SERIES.flatMap((series) => series.posters)
+/** The posters on the shelf, in reading order: every series but the unlisted ones. */
+export const listedPosterIds = () => SERIES.filter((series) => !series.unlisted).flatMap((series) => series.posters)
 export const seriesOf = (posterId) => SERIES.find((series) => series.posters.includes(posterId)) ?? null
 
 /** The posters either side of one in reading order, across series. */
 export const neighbours = (posterId) => {
-  const ids = posterIds()
+  const ids = listedPosterIds()
   const i = ids.indexOf(posterId)
   return { previous: i > 0 ? ids[i - 1] : null, next: i >= 0 && i < ids.length - 1 ? ids[i + 1] : null }
 }

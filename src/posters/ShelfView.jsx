@@ -17,7 +17,9 @@ import './posters.css'
  * @param {string} props.title       The shelf's heading, and the viewer's way back to it.
  * @param {string} [props.intro]     A heading and one line over the shelf; left out, the shelf starts with its series.
  * @param {string} props.noun        What one piece is called (`poster`, `sign`).
- * @param {Array}  props.series      [{ id, title, kind }], in the order shown.
+ * @param {Array}  props.series      [{ id, title, kind, unlisted? }], in the order shown. An unlisted
+ *                                   series is left off the shelf, out of the stepping order and the
+ *                                   filters, but its pieces still open from their address.
  * @param {Function} props.itemsOf   A series' piece ids, in order.
  * @param {object} props.items       Each piece's catalogue card, by id.
  * @param {object} props.loaders     Each piece's loader: resolves to its drawing and parts.
@@ -41,7 +43,9 @@ export const ShelfView = ({ view, param, title, intro, noun, series, itemsOf, it
   const [layout, setLayout] = useState('series')
   const [filters, setFilters] = useState({})
   const parentNavigate = useNavigate()
-  const order = series.flatMap(itemsOf)
+  // The shelf's own series; an unlisted one is reached only by its address.
+  const listed = series.filter((entry) => !entry.unlisted)
+  const order = listed.flatMap(itemsOf)
   const seriesOf = (id) => series.find((entry) => itemsOf(entry).includes(id)) ?? null
 
   const go = useCallback(({ id, part }) => {
@@ -96,7 +100,8 @@ export const ShelfView = ({ view, param, title, intro, noun, series, itemsOf, it
   const switching = Boolean(shown && shown.id !== meta.id)
   const index = shown ? order.indexOf(shown.id) : -1
   const step = (id) => id && { title: items[id].title, open: () => go({ id, part: 'overview' }) }
-  const shelf = { list: order.map((id) => ({ id, title: items[id].title })), index, open: (id) => go({ id, part: 'overview' }) }
+  // An unlisted piece stands alone: no stepping to the shelf's pieces either side of it.
+  const shelf = index < 0 ? null : { list: order.map((id) => ({ id, title: items[id].title })), index, open: (id) => go({ id, part: 'overview' }) }
 
   // While a piece is open over the shelf, the shelf cannot be tabbed into or read from behind it.
   useEffect(() => {
@@ -161,7 +166,7 @@ export const ShelfView = ({ view, param, title, intro, noun, series, itemsOf, it
                 : <p className="posters__none">No {noun} matches all of those. <button type="button" className="posters__clear" onClick={() => setFilters({})}>Clear filters</button></p>}
             </section>
           )
-          : series.map((entry) => (
+          : listed.map((entry) => (
             <section key={entry.id} className="posters__series" aria-labelledby={`series-${entry.id}`}>
               <header className="posters__series-head">
                 <h3 id={`series-${entry.id}`}>{entry.title}</h3>
@@ -184,8 +189,8 @@ export const ShelfView = ({ view, param, title, intro, noun, series, itemsOf, it
             onExit={exit}
             backLabel={title}
             noun={noun}
-            previous={step(order[index - 1])}
-            next={step(order[index + 1])}
+            previous={index < 0 ? null : step(order[index - 1])}
+            next={index < 0 ? null : step(order[index + 1])}
             shelf={shelf}
           />
         </div>
