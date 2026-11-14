@@ -507,20 +507,35 @@
     },
     {
       "id": "S45-O01",
-      "status": "reconstruct",
-      "priority": "high",
+      "reviewedAt": "2026-11-14",
+      "status": "refine",
+      "priority": "medium",
       "findings": [
-        "The current animal is a highly angular schematic figure; its body, head and legs do not convincingly reproduce the photographed ungulate.",
-        "Map/tree overlap, the reddish inner outline and the lower lettering need a source-specific layout pass."
+        "The central map and evergreen now use the same PofBC emblem components as S48-O01, fitted to this rectangular patch rather than substituting the square patch's frame.",
+        "The animal is rebuilt and the two existing outlined caption rows are independently refitted. The 418 × 479 source crop still leaves the fine antlers, anatomy, lettering and embroidered contours unresolved."
       ],
-      "proposedFix": "Reconstruct the animal silhouette and internal composition first; then refine the two text rows, keeping unresolved small anatomy explicit.",
-      "evidenceLimitations": "Visual comparison preserves the source reference proportions. Perspective, cloth deformation, exact stitch structure and calibrated thread colours are not established by these references.",
+      "proposedFix": "Refine the animal's small contours and the lettering against a sharper, flatter photograph when available. Retain the shared emblem geometry while reviewing its size, placement and cloth-specific outlines in this specimen.",
+      "evidenceLimitations": "The available S45 crop is 418 × 479 pixels and its animal and map detail are blurred. The user identified the animal as a caribou on 2026-11-14; the source photograph does not independently establish species or exact antler contours. Perspective, cloth deformation, physical dimensions, the original alphabet, exact stitch structure and calibrated thread colours remain unverified. S45-O01 and S48-O01 are separate specimens linked by the emblem; sharing its reconstructed components does not establish an issue date or common manufacture.",
       "inspectedOccurrences": [
         "S45-O01"
       ],
       "baselineSvgSha256": "7fb037c68de06c2ee9368331cac8d6538a57055c1767e0bf96a0c5ecf6855972",
-      "reviewedSvgSha256": "7fb037c68de06c2ee9368331cac8d6538a57055c1767e0bf96a0c5ecf6855972",
-      "candidateChanges": []
+      "reviewedSvgSha256": "eb139ad5577d28d72be795df67c6c9bafcc7a572f9b50bb49df847d90e2660ce",
+      "candidateChanges": [
+        "Replaced the schematic map-and-tree drawing with the mainland, islands, evergreen crown and trunk used by S48-O01's PofBC emblem reconstruction.",
+        "Reconstructed the foreground animal using the user's caribou identification, with the remaining uncertainty in fine anatomy recorded explicitly.",
+        "Refitted the B.C. and FOREST SERVICE caption rows and the internal composition for S45's own rectangular cloth frame."
+      ],
+      "baselineFindings": [
+        "The current animal is a highly angular schematic figure; its body, head and legs do not convincingly reproduce the photographed ungulate.",
+        "Map/tree overlap, the reddish inner outline and the lower lettering need a source-specific layout pass."
+      ],
+      "identificationProvenance": {
+        "animal": "caribou",
+        "basis": "User identification in the S45-O01 correction request",
+        "recordedAt": "2026-11-14",
+        "qualification": "Not independently confirmed by the blurred source photograph."
+      }
     },
     {
       "id": "S48-O01",

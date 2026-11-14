@@ -1,0 +1,79 @@
+{
+  "mode": "offline core engine check with alternative SVG rasterizer; not a browser-equivalent verification",
+  "svgSha256": "eb139ad5577d28d72be795df67c6c9bafcc7a572f9b50bb49df847d90e2660ce",
+  "inputRasterizer": "@resvg/resvg-js",
+  "canvasImplementation": "@napi-rs/canvas",
+  "params": {
+    "widthMm": 89,
+    "pxPerMm": 8,
+    "maxColors": 12,
+    "colorTolerance": 30,
+    "fillSpacingMm": 0.4,
+    "fillStitchMm": 3,
+    "fillAngleDeg": 45,
+    "varyAngles": true,
+    "satinMaxWidthMm": 1.6,
+    "satinSpacingMm": 0.3,
+    "satinMaxStitchMm": 7,
+    "minRegionMm2": 0.5,
+    "underlay": true,
+    "pullCompMm": 0.2,
+    "border": "merrow",
+    "borderWidthMm": 3,
+    "borderColor": null,
+    "raiseText": true,
+    "relief": {},
+    "ground": "cloth",
+    "groundColor": null,
+    "fillAngles": {}
+  },
+  "padMm": 4,
+  "raster": {
+    "width": 776,
+    "height": 880,
+    "artW": 712,
+    "artH": 816,
+    "textMaskPixels": 22739
+  },
+  "result": {
+    "stitchCount": 7850,
+    "palette": [
+      "#245e41",
+      "#a8bf57",
+      "#d4d5c1",
+      "#713d30",
+      "#152819",
+      "#a9a28b"
+    ],
+    "coverage": [
+      0.644751692424289,
+      0.1664526172407083,
+      0.059876486312102496,
+      0.05687569770895423,
+      0.050417345172622155,
+      0.02162616114132383
+    ],
+    "blocks": 123,
+    "outlines": 1,
+    "clothIndex": 0,
+    "raisedBlocks": 98
+  },
+  "machine": {
+    "stitches": 8842,
+    "trims": 124,
+    "colorChanges": 6,
+    "longestMm": 4.68187996428785,
+    "widthMm": 82.4,
+    "heightMm": 96.2
+  },
+  "output": {
+    "figure": "figures/S45-O01-embroidery-offline.png",
+    "pngWidth": 1164,
+    "pngHeight": 1320,
+    "pngBytes": 2757525,
+    "dstBytes": 28706
+  },
+  "digitizeMs": 713,
+  "totalMs": 2610,
+  "limitation": "Does not exercise browser SVG rasterization, web workers, browser canvas implementation, UI controls, or interactive exports."
+}

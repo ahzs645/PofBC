@@ -3,8 +3,9 @@
 // don't date the patch itself. Matched on the patch's label, so a Forest Oval variant picks up its
 // own wording (Ministry of Forests, Airtanker Operations, Wildfire Service).
 //
-// The Forest Oval cards are also PofBC's own Internal Logos (Internal Logos → Forests), which keep
-// their dated research there; a patch links to it rather than repeating it.
+// Forest Oval cards and patches carrying the evergreen emblem link to PofBC's Internal Logos
+// (Internal Logos → Forests), which keep their research there. Sharing an emblem does not date
+// either cloth specimen or combine separate patch records.
 
 import { FOREST_LOGOS } from '../internal/forestLogos.js'
 
@@ -76,14 +77,20 @@ const FOREST_OVAL_LOGOS = {
   'forest-service-green-gold': 'forest-service-green-gold'
 }
 
+/** Separate cloth specimens carrying the evergreen emblem, with their own frames and captions. */
+const FOREST_EMBLEM_PATCH_LOGOS = {
+  'S45-O01': 'forest-service-emblem',
+  'S48-O01': 'forest-service-emblem'
+}
+
 /**
- * A patch's dated context: the timeline notes its wording matches, and for a Forest Oval, the
- * Internal Logos entry with its evidence line.
+ * A patch's context: the timeline notes its wording matches, and the related Internal Logos
+ * entry with its evidence line. An emblem link adds no specimen-date claim.
  * @returns {{ notes: {id: string, era: string, text: string}[], logo: {id: string, name: string, evidence: string} | null }}
  */
 export function historyOf(patch) {
   const notes = NOTES.filter((note) => note.test(patch.label)).map(({ id, era, text }) => ({ id, era, text }))
-  const logoId = patch.group ? FOREST_OVAL_LOGOS[patch.group] : undefined
+  const logoId = FOREST_EMBLEM_PATCH_LOGOS[patch.id] ?? (patch.group ? FOREST_OVAL_LOGOS[patch.group] : undefined)
   const logo = logoId ? FOREST_LOGOS.find((entry) => entry.id === logoId) ?? null : null
   return { notes, logo: logo && { id: logo.id, name: logo.name, evidence: logo.evidence } }
 }
