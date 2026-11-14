@@ -23,17 +23,17 @@
     "sourceCrops": 191,
     "variantsWithCrops": 141,
     "unavailableOccurrences": 5,
-    "partialRefinements": 6,
+    "partialRefinements": 7,
     "byStatus": {
-      "refine": 71,
-      "reconstruct": 41,
+      "refine": 72,
+      "reconstruct": 40,
       "retain": 14,
       "interpretation": 12,
       "source-limited": 16
     },
     "byPriority": {
-      "medium": 54,
-      "high": 71,
+      "medium": 55,
+      "high": 70,
       "low": 29
     }
   },
@@ -1875,30 +1875,45 @@
     },
     {
       "id": "S45-O01",
-      "status": "reconstruct",
-      "priority": "high",
+      "reviewedAt": "2026-11-14",
+      "status": "refine",
+      "priority": "medium",
       "findings": [
-        "The current animal is a highly angular schematic figure; its body, head and legs do not convincingly reproduce the photographed ungulate.",
-        "Map/tree overlap, the reddish inner outline and the lower lettering need a source-specific layout pass."
+        "The central map and evergreen now use the same PofBC emblem components as S48-O01, fitted to this rectangular patch rather than substituting the square patch's frame.",
+        "The animal is rebuilt and the two existing outlined caption rows are independently refitted. The 418 × 479 source crop still leaves the fine antlers, anatomy, lettering and embroidered contours unresolved."
       ],
-      "proposedFix": "Reconstruct the animal silhouette and internal composition first; then refine the two text rows, keeping unresolved small anatomy explicit.",
-      "evidenceLimitations": "Visual comparison preserves the source reference proportions. Perspective, cloth deformation, exact stitch structure and calibrated thread colours are not established by these references.",
+      "proposedFix": "Refine the animal's small contours and the lettering against a sharper, flatter photograph when available. Retain the shared emblem geometry while reviewing its size, placement and cloth-specific outlines in this specimen.",
+      "evidenceLimitations": "The available S45 crop is 418 × 479 pixels and its animal and map detail are blurred. The user identified the animal as a caribou on 2026-11-14; the source photograph does not independently establish species or exact antler contours. Perspective, cloth deformation, physical dimensions, the original alphabet, exact stitch structure and calibrated thread colours remain unverified. S45-O01 and S48-O01 are separate specimens linked by the emblem; sharing its reconstructed components does not establish an issue date or common manufacture.",
       "inspectedOccurrences": [
         "S45-O01"
       ],
       "baselineSvgSha256": "7fb037c68de06c2ee9368331cac8d6538a57055c1767e0bf96a0c5ecf6855972",
-      "reviewedSvgSha256": "7fb037c68de06c2ee9368331cac8d6538a57055c1767e0bf96a0c5ecf6855972",
-      "candidateChanges": [],
+      "reviewedSvgSha256": "eb139ad5577d28d72be795df67c6c9bafcc7a572f9b50bb49df847d90e2660ce",
+      "candidateChanges": [
+        "Replaced the schematic map-and-tree drawing with the mainland, islands, evergreen crown and trunk used by S48-O01's PofBC emblem reconstruction.",
+        "Reconstructed the foreground animal using the user's caribou identification, with the remaining uncertainty in fine anatomy recorded explicitly.",
+        "Refitted the B.C. and FOREST SERVICE caption rows and the internal composition for S45's own rectangular cloth frame."
+      ],
+      "baselineFindings": [
+        "The current animal is a highly angular schematic figure; its body, head and legs do not convincingly reproduce the photographed ungulate.",
+        "Map/tree overlap, the reddish inner outline and the lower lettering need a source-specific layout pass."
+      ],
+      "identificationProvenance": {
+        "animal": "caribou",
+        "basis": "User identification in the S45-O01 correction request",
+        "recordedAt": "2026-11-14",
+        "qualification": "Not independently confirmed by the blurred source photograph."
+      },
       "orgId": "bc-forest-service",
       "orgName": "BC Forest Service",
-      "label": "B.C. / Forest Service — map, tree and ungulate rectangle",
+      "label": "B.C. / Forest Service — evergreen emblem and caribou rectangle",
       "variant": null,
       "group": null,
       "medium": "Cloth patch",
-      "svgSha256": "7fb037c68de06c2ee9368331cac8d6538a57055c1767e0bf96a0c5ecf6855972",
-      "currentSvgSha256": "7fb037c68de06c2ee9368331cac8d6538a57055c1767e0bf96a0c5ecf6855972",
+      "svgSha256": "eb139ad5577d28d72be795df67c6c9bafcc7a572f9b50bb49df847d90e2660ce",
+      "currentSvgSha256": "eb139ad5577d28d72be795df67c6c9bafcc7a572f9b50bb49df847d90e2660ce",
       "preview": "bc-forest-service/previews/S45-O01.webp",
-      "limitations": "Clean geometry is interpreted from the supplied source; it is not an authenticated production master. Replacement outlined fonts approximate stitched/painted lettering; camera perspective, stitch texture and uncertain fine detail are not reproduced. Colors are selected from visual reference, without color calibration. Map outline and ungulate anatomy are clean symbolic interpretations; the screenshot cannot establish detailed geographic/antler contours or species.",
+      "limitations": "The mainland, three islands, evergreen crown and trunk use the same PofBC component outlines as S48-O01, fitted independently to S45's rectangular composition with its red-brown outlining. The right-facing animal is built from smooth closed paths with a darker body and pale neck; caribou is the user's identification. The two atlas caption rows retain their substitute outlined glyphs with adjusted fitting. The 418 × 479 source crop cannot establish exact animal anatomy, the original alphabet, physical dimensions or calibrated thread colours. No tracing or source-photo warping. See supplied/forest-service-map-caribou/README.md. The central mark reuses the Forest Service evergreen emblem also present on S48-O01. Caribou follows the user's identification; the blurred source does not independently establish species or fine antler anatomy.",
       "sources": [
         {
           "occurrenceId": "S45-O01",
@@ -8821,14 +8836,14 @@
       "candidateChanges": [],
       "orgId": "justice-institute",
       "orgName": "Justice Institute of British Columbia",
-      "label": "Justice Institute / British Columbia — gold and navy bridge roundel",
+      "label": "Justice Institute / British Columbia — gold and navy roundel",
       "variant": null,
       "group": null,
       "medium": "Cloth patch",
       "svgSha256": "f08546d40a6e0b8616bdb14cef26e4b3a6c9fc7b70f9838adc12ef07f3461ee1",
-      "currentSvgSha256": "f08546d40a6e0b8616bdb14cef26e4b3a6c9fc7b70f9838adc12ef07f3461ee1",
+      "currentSvgSha256": "d149651fc853af76d3c693283f713f35f142cb73cd9d8986f3c1640e1264529b",
       "preview": "justice-institute/previews/S56-O36.webp",
-      "limitations": "Clean hand-designed roundel silhouette and principal visible motif. Only BRITISH COLUMBIA is confidently legible. The remaining caption is omitted rather than invented; affiliation and fine charge details remain unresolved. The atlas left its owner unresolved; the bridge is the Justice Institute of British Columbia's mark, as on its fan shield (S56-O46).",
+      "limitations": "The gold ring, navy disc and BRITISH COLUMBIA lettering are the atlas's reconstruction from a low-resolution collector board; the upper caption (Justice Institute in the photograph) is still left out. The centre is the JIBC monogram from the supplied fan-badge package, in the roundel's gold, fitted by compose.mjs in place of the atlas's schematic bridge, at the width the photograph shows. Thread colours and fine detail are interpreted. The atlas left its owner unresolved; the centre is the Justice Institute of British Columbia's monogram, as on its fan shield (S56-O46).",
       "sources": [
         {
           "occurrenceId": "S56-O36",
@@ -8884,9 +8899,9 @@
       "group": null,
       "medium": "Cloth patch",
       "svgSha256": "55c05c6d80366eaa6b98e757eed3c570edb4f65033e70a397e3f8df933ef6b91",
-      "currentSvgSha256": "55c05c6d80366eaa6b98e757eed3c570edb4f65033e70a397e3f8df933ef6b91",
+      "currentSvgSha256": "6215880570b56d580edc1f7985369b07b5c7620c5825b15ef728a94a6c62ffa8",
       "preview": "justice-institute/previews/S56-O46.webp",
-      "limitations": "Low-resolution collector board: exact typefaces, calibrated colours and fine centre-art details remain interpreted. No issue size or manufacturing master is asserted. Justice Institute identity is confirmed by the visible caption and user reference. Fine channels in the historical triangular institutional monogram remain an interpretation of the board photograph.",
+      "limitations": "Manual vector reconstruction of a supplied image of the badge (JIBC badge vector package): an 11-curve border, the four-part JIBC monogram with real B counters, and 31 individually placed letters from Bookman-derived, hand-corrected letter masters. Not an official master; the typeface is unconfirmed and the blue (#0141A2) is sampled from the image, not an institutional specification. See the package README.",
       "sources": [
         {
           "occurrenceId": "S56-O46",

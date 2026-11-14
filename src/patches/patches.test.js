@@ -116,4 +116,10 @@ test('the BC Forest Service timeline dates the wording it names', async () => {
   assert.deepEqual(eras('BC / Forests, Lands and Natural Resource Operations — wildlife oval · Full colour'), [])
   assert.deepEqual(eras('British Columbia / Ministry of Forests — wildlife oval'), ['From 1976'])
   assert.equal(historyOf({ label: 'x', group: 'forests-oval' }).logo?.id, 'forests')
+  for (const id of ['S45-O01', 'S48-O01']) {
+    const history = historyOf({ id, label: 'x' })
+    assert.equal(history.logo?.id, 'forest-service-emblem')
+    assert.deepEqual(history.notes, [], 'sharing the emblem must not add a specimen date')
+  }
+  assert.equal(historyOf({ id: 'unrelated-patch', label: 'map and tree' }).logo, null)
 })
