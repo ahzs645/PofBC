@@ -23,6 +23,7 @@ import ClipperLib from 'clipper-lib'
 import { buildMedalGroup } from './vendor/medal-forge/model-builder'
 import { DEFAULT_SETTINGS } from './vendor/medal-forge/defaults'
 import { NOMINAL_SIZE_MM, RAISED, bodyFor, metalOf, partFor } from './badgeParts.js'
+import { FIELD_TEXTURES } from './stipple.js'
 
 export const MEDAL_FORGE = {
   repository: 'https://github.com/CatsJuice/medal-forge',
@@ -296,10 +297,15 @@ function reverseWinding (geometry) {
 /**
  * Build a badge.
  * @param {string} svgText  A joined library drawing.
- * @param {{ medium?: string, sizeMm?: number }} [options]  sizeMm: its longer side (illustrative).
+ * @param {{ medium?: string, sizeMm?: number, family?: string }} [options]
+ *   sizeMm: its longer side (illustrative). family: the library's family, which says whether its
+ *   field is textured (stipple.js).
+ * Textured fields get planar UVs in millimetres (u = x, v = y), so a texture repeats at its own
+ * physical size whatever the badge's.
  * @returns {{ group: THREE.Group, metal: string, sizeMm: {width: number, height: number, depth: number}, stats: object }}
  */
-export function buildBadge (svgText, { medium = '', sizeMm = NOMINAL_SIZE_MM } = {}) {
+export function buildBadge (svgText, { medium = '', sizeMm = NOMINAL_SIZE_MM, family = '' } = {}) {
+  const fieldTexture = FIELD_TEXTURES[family] ?? null
   const started = performance.now()
   const prepared = badgePieces(svgText, { medium, sizeMm })
   const { all, svg } = piecesSvg(prepared)
@@ -308,8 +314,6 @@ export function buildBadge (svgText, { medium = '', sizeMm = NOMINAL_SIZE_MM } =
   all.forEach((piece, index) => {
     const engineOffset = Math.min(index * ENGINE_LAYER_STEP, ENGINE_LAYER_CAP)
     const order = piece.part === 'body' ? 0 : (ORDER_SPREAD * index) / count
-    // A bevel adds its own depth on both faces, so a piece spans zOffset − bevel to
-    // zOffset + thickness + bevel. Seat the body's face at z = 0 and every piece's back on it.
     // A bevel adds its own depth on both faces: a piece spans zOffset − bevel to zOffset +
     // thickness + bevel. The body's face is z = 0; every other piece's back bevel is sunk into it.
     shapeSettings[String(index)] = {
@@ -340,8 +344,9 @@ export function buildBadge (svgText, { medium = '', sizeMm = NOMINAL_SIZE_MM } =
     const piece = all[mesh.userData.pathIndex]
     if (!piece) return
     reverseWinding(mesh.geometry)
-    const key = `${piece.part}|${piece.color}|${piece.metalness}|${piece.roughness}`
-    if (!byLook.has(key)) byLook.set(key, { piece, geometries: [] })
+    const texture = piece.part === 'ground' ? fieldTexture : null
+    const key = `${piece.part}|${piece.color}|${piece.metalness}|${piece.roughness}|${texture}`
+    if (!byLook.has(key)) byLook.set(key, { piece, texture, geometries: [] })
     const geometry = mesh.geometry.index ? mesh.geometry.toNonIndexed() : mesh.geometry.clone()
     geometry.applyMatrix4(mesh.matrixWorld)
     for (const name of Object.keys(geometry.attributes)) if (name !== 'position' && name !== 'normal') geometry.deleteAttribute(name)
@@ -350,14 +355,21 @@ export function buildBadge (svgText, { medium = '', sizeMm = NOMINAL_SIZE_MM } =
   const group = new THREE.Group()
   group.name = 'badge'
   let triangles = 0
-  for (const { piece, geometries } of byLook.values()) {
+  for (const { piece, texture, geometries } of byLook.values()) {
     const geometry = mergeGeometries(geometries, false)
     geometries.forEach((g) => g.dispose())
     if (!geometry) continue
+    if (texture) {
+      const position = geometry.getAttribute('position')
+      const uv = new Float32Array(position.count * 2)
+      for (let i = 0; i < position.count; i++) { uv[2 * i] = position.getX(i); uv[2 * i + 1] = position.getY(i) }
+      geometry.setAttribute('uv', new THREE.BufferAttribute(uv, 2))
+    }
     const material = new THREE.MeshStandardMaterial({ color: piece.color, metalness: piece.metalness, roughness: piece.roughness })
     const mesh = new THREE.Mesh(geometry, material)
     mesh.name = `${piece.part} ${piece.color}`
     mesh.userData.part = piece.part
+    if (texture) mesh.userData.texture = texture
     triangles += geometry.getAttribute('position').count / 3
     group.add(mesh)
   }

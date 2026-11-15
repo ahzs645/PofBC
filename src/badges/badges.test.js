@@ -61,3 +61,28 @@ test('stored badge view settings are validated and survive missing storage', () 
   assert.deepEqual(loadBadgeView({ getItem: () => { throw new Error('blocked') } }), BADGE_VIEW_DEFAULTS)
   saveBadgeView({ setItem: () => { throw new Error('quota') } }, BADGE_VIEW_DEFAULTS)
 })
+
+test('struck field textures are deterministic, tile without seams, and keep bumps apart', async () => {
+  const { FIELD_TEXTURES, TEXTURES, heightField, normalMap, placeBumps } = await import('./stipple.js')
+  assert.equal(FIELD_TEXTURES['ranger-metal-early'], 'pebbled')
+  const recipe = { ...TEXTURES.pebbled, size: 128, attempts: 4000 }
+  const bumps = placeBumps(recipe)
+  assert.deepEqual(placeBumps(recipe), bumps)
+  assert.ok(bumps.length > 40)
+  const px = recipe.size / recipe.tileMm
+  const wrap = (d) => d - recipe.size * Math.round(d / recipe.size)
+  for (let i = 0; i < bumps.length; i++) {
+    for (let j = i + 1; j < bumps.length; j++) {
+      const a = bumps[i]
+      const b = bumps[j]
+      assert.ok(Math.hypot(wrap(a.x - b.x), wrap(a.y - b.y)) >= a.r + b.r + recipe.gapMm * px - 1e-9)
+    }
+  }
+  const h = heightField(recipe, bumps)
+  assert.ok(Math.max(...h) <= 1 && Math.max(...h) > 0.9)
+  const n = normalMap(recipe, h)
+  assert.equal(n.length, recipe.size * recipe.size * 4)
+  // Flat ground faces straight out: (128, 128, 255).
+  const flat = [...Array(recipe.size * recipe.size).keys()].find((k) => h[k] === 0 && h[(k + 1) % h.length] === 0 && h[(k + recipe.size) % h.length] === 0 && h[(k - 1 + h.length) % h.length] === 0 && h[(k - recipe.size + h.length) % h.length] === 0)
+  assert.deepEqual([...n.slice(flat * 4, flat * 4 + 3)], [128, 128, 255])
+})

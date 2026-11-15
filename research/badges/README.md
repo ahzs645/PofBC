@@ -45,6 +45,12 @@ scroll and a separate plaque, and a leather badge, so:
   shoulder), fields are satin and darker than the polished relief, and the key light comes low from
   the upper left and casts shadows. On a silver badge the shadows and the finish are what show a
   raised letter at all.
+- **Struck field textures.** The drawings leave texture out, but the photographs show it: the early
+  Park Ranger shields (S11, S12, S17, S20) have a pebbled field of close-set bumps about 1–1.5 mm
+  across, and the green-enamel ones (S14, S18) a fine frosted grain. `stipple.js` makes these as
+  seamless normal maps from seeded random bumps, repeated at their size in millimetres over the
+  field only (the plate, rim and lettering stay smooth), and they go into the GLB as normal textures.
+  Other badges' fields are smooth, as their photographs are.
 - **The metal is read from the badge**: leather by its medium; otherwise a gradient's name (`silver`)
   or the lit paints' hue, gold against grey, by area.
 - The longer side is set to a nominal **65 mm** (the trial's height for S51-O01), and the default

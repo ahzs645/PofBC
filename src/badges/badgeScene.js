@@ -7,6 +7,7 @@ import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js'
 import { RoomEnvironment } from 'three/examples/jsm/environments/RoomEnvironment.js'
 import { GLTFExporter } from 'three/examples/jsm/exporters/GLTFExporter.js'
 import { PreparedBadgeCurvature } from './curvature.js'
+import { TEXTURES, normalMap } from './stipple.js'
 
 /** Camera directions, scaled to the badge's size when used. */
 const VIEWS = {
@@ -83,7 +84,12 @@ export class BadgeScene {
     const box = new THREE.Box3().setFromObject(group)
     const size = box.getSize(new THREE.Vector3())
     this.reach = Math.max(size.x, size.y)
-    group.traverse((o) => { if (o.isMesh) { o.castShadow = true; o.receiveShadow = true } })
+    group.traverse((o) => {
+      if (!o.isMesh) return
+      o.castShadow = true
+      o.receiveShadow = true
+      if (o.userData.texture) this.texture(o.material, o.userData.texture)
+    })
     // The key light's shadow covers the badge and no more, so its texels stay finer than the relief.
     const shadow = this.lights[0].shadow.camera
     const half = this.reach * 0.75
@@ -94,6 +100,31 @@ export class BadgeScene {
     this.controls.minDistance = this.reach * 0.9
     this.controls.maxDistance = this.reach * 3.6
     this.setView(this.viewName)
+  }
+
+  /** Give a field its struck texture (stipple.js): a normal map repeated at its size in mm. */
+  texture (material, name) {
+    const recipe = TEXTURES[name]
+    if (!recipe) return
+    this.textures ??= new Map()
+    if (!this.textures.has(name)) {
+      const map = new THREE.DataTexture(normalMap(recipe), recipe.size, recipe.size, THREE.RGBAFormat)
+      map.wrapS = THREE.RepeatWrapping
+      map.wrapT = THREE.RepeatWrapping
+      map.colorSpace = THREE.NoColorSpace
+      map.magFilter = THREE.LinearFilter
+      map.minFilter = THREE.LinearMipmapLinearFilter
+      map.generateMipmaps = true
+      map.anisotropy = this.renderer.capabilities.getMaxAnisotropy()
+      map.repeat.set(1 / recipe.tileMm, 1 / recipe.tileMm)
+      map.needsUpdate = true
+      this.textures.set(name, map)
+    }
+    material.normalMap = this.textures.get(name)
+    // The bumps' crowns catch the light: a little smoother than a plain satin field.
+    material.roughness = recipe.roughness
+    if (recipe.tone) material.color.multiplyScalar(recipe.tone)
+    material.needsUpdate = true
   }
 
   clearModel () {
@@ -180,6 +211,7 @@ export class BadgeScene {
     this.clearModel()
     this.controls.dispose()
     this.environment.dispose()
+    this.textures?.forEach((map) => map.dispose())
     this.renderer.dispose()
   }
 }

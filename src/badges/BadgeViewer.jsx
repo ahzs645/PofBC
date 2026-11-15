@@ -151,7 +151,7 @@ export const BadgeViewer = ({ patch, org, position, previous, next, onOpen, onCl
     setPhase('building')
     const timer = setTimeout(() => {
       try {
-        const badge = buildBadge(current.text, { medium: patch.medium, sizeMm: NOMINAL_SIZE_MM })
+        const badge = buildBadge(current.text, { medium: patch.medium, sizeMm: NOMINAL_SIZE_MM, family: patch.family })
         scene.setModel(badge.group, { metal: badge.metal })
         scene.setView(cameraRef.current)
         setBuilt({ patchId: patch.id, scene, metal: badge.metal, sizeMm: badge.sizeMm, stats: badge.stats })
@@ -163,7 +163,7 @@ export const BadgeViewer = ({ patch, org, position, previous, next, onOpen, onCl
       }
     }, 30)
     return () => clearTimeout(timer)
-  }, [current, scene, view.mode, patch.id, patch.medium, built?.patchId, built?.scene])
+  }, [current, scene, view.mode, patch.id, patch.medium, patch.family, built?.patchId, built?.scene])
 
   // Bend whenever the model or the curvature changes.
   const ready = phase === 'ready' && built?.patchId === patch.id && built.scene === scene && Boolean(scene)
