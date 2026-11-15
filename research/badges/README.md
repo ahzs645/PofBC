@@ -45,6 +45,13 @@ scroll and a separate plaque, and a leather badge, so:
   shoulder), fields are satin and darker than the polished relief, and the key light comes low from
   the upper left and casts shadows. On a silver badge the shadows and the finish are what show a
   raised letter at all.
+- **Embossed emblems.** In the photographs the provincial arms (and the Parks Branch dogwood)
+  stand up as one sculpted mass, with their detail modelled on it, not as line work on the field.
+  The drawings mark these (`data-component` …`-arms`, `five-petal-dogwood`), so each gets a boss:
+  its outline with the gaps between its parts closed and everything inside filled, raised about
+  0.8 mm with a sloped shoulder, in a darker satin of the metal. The emblem's own pieces stand on
+  it in drawing order, and an "engraved" emblem's plates (S18, S19) become its polished high points
+  over the darker boss.
 - **Struck field textures.** The drawings leave texture out, but the photographs show it: the early
   Park Ranger shields (S11, S12, S17, S20) have a pebbled field of close-set bumps about 1–1.5 mm
   across, and the green-enamel ones (S14, S18) a fine frosted grain. `stipple.js` makes these as

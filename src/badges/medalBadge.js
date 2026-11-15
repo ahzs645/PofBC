@@ -22,7 +22,7 @@ import { mergeGeometries } from 'three/examples/jsm/utils/BufferGeometryUtils.js
 import ClipperLib from 'clipper-lib'
 import { buildMedalGroup } from './vendor/medal-forge/model-builder'
 import { DEFAULT_SETTINGS } from './vendor/medal-forge/defaults'
-import { NOMINAL_SIZE_MM, RAISED, bodyFor, metalOf, partFor } from './badgeParts.js'
+import { EMBOSSED_COMPONENT, METALS, NOMINAL_SIZE_MM, PARTS, RAISED, bodyFor, bossFor, metalOf, partFor } from './badgeParts.js'
 import { FIELD_TEXTURES } from './stipple.js'
 
 export const MEDAL_FORGE = {
@@ -204,6 +204,66 @@ function shoulder (rings, bevelMm, perMm) {
   return { bevel: Math.min(bevelMm, 0.02) }
 }
 
+/** The struck emblem (see EMBOSSED_COMPONENT) an element belongs to, or null. */
+function emblemOf (node) {
+  for (let p = node; p && p.getAttribute; p = p.parentElement) {
+    if (EMBOSSED_COMPONENT.test(p.getAttribute('data-component') ?? '')) return p
+  }
+  return null
+}
+
+/** How far the parts of an emblem are joined across, to make one mass of its line work, in mm. */
+const EMBLEM_JOIN_MM = 0.5
+
+/**
+ * Give each struck emblem the raised mass the photographs show: its outline, with the small gaps
+ * between its parts closed (grown, then shrunk, by EMBLEM_JOIN_MM) and everything inside filled,
+ * raised as a boss. The emblem's own pieces then stand on the boss, not on the field.
+ */
+function withBosses (pieces, metal, perMm) {
+  const groups = new Map()
+  for (const piece of pieces) if (piece.emblem) groups.set(piece.emblem, [...(groups.get(piece.emblem) ?? []), piece])
+  if (!groups.size) return pieces
+  const out = []
+  const done = new Set()
+  for (const piece of pieces) {
+    const members = piece.emblem ? groups.get(piece.emblem) : null
+    if (members && !done.has(piece.emblem)) {
+      done.add(piece.emblem)
+      const join = EMBLEM_JOIN_MM * perMm * SCALE
+      const grow = (rings, delta) => {
+        // The boss's outline is soft anyway: a coarse arc tolerance keeps the busy arms quick.
+        const offset = new ClipperLib.ClipperOffset(2, 0.05 * perMm * SCALE)
+        offset.AddPaths(rings, ClipperLib.JoinType.jtRound, ClipperLib.EndType.etClosedPolygon)
+        const result = []
+        offset.Execute(result, delta)
+        return result
+      }
+      const merged = clip(ClipperLib.ClipType.ctUnion, members.flatMap((m) => m.rings))
+      const solid = grow(grow(merged, join), -join).filter((ring) => ClipperLib.Clipper.Orientation(ring))
+      if (solid.length) {
+        const boss = { kind: 'fill', paint: null, rings: solid, caption: null, border: false, emblem: null, share: 0, ...bossFor(metal) }
+        const shaped = { ...boss, ...shoulder(boss.rings, boss.bevel, perMm) }
+        out.push(shaped)
+        const top = shaped.thickness + shaped.bevel
+        for (const member of members) {
+          member.base = top
+          // Inside an emblem the drawing's order decides what is on top: its dark outlines are drawn
+          // over its light fills, so they must not sink under them as lighter-over-darker would.
+          if (RAISED.has(member.part)) member.thickness = PARTS[member.part].thickness
+          // An "engraved" emblem is drawn as plates of the metal with its detail cut out of them:
+          // those plates are its polished high points, standing over the darker boss.
+          if (member.part === 'plate') {
+            Object.assign(member, { part: 'emblem', thickness: PARTS.emblem.thickness, color: METALS[metal].plate, metalness: metal === 'leather' ? 0 : 1, roughness: METALS[metal].polish })
+          }
+        }
+      }
+    }
+    out.push(piece)
+  }
+  return out
+}
+
 const visible = (paint, opacity) => paint && paint !== 'none' && Number(opacity ?? 1) > 0
 
 /**
@@ -225,7 +285,7 @@ export function badgePieces (svgText, { medium = '', sizeMm = NOMINAL_SIZE_MM } 
     const style = path.userData?.style ?? {}
     const node = path.userData?.node
     if (style.visibility === 'hidden' || style.display === 'none' || Number(style.opacity ?? 1) <= 0) continue
-    const context = { caption: inherited(node, 'data-caption'), border: inherited(node, 'data-role') === 'border' }
+    const context = { caption: inherited(node, 'data-caption'), border: inherited(node, 'data-role') === 'border', emblem: emblemOf(node) }
     if (visible(style.fill, style.fillOpacity)) {
       const rings = fillRings(path, tolerance)
       if (rings.length) raw.push({ kind: 'fill', paint: style.fill, rings, ...context })
@@ -256,7 +316,7 @@ export function badgePieces (svgText, { medium = '', sizeMm = NOMINAL_SIZE_MM } 
     if (!RAISED.has(look.part)) return { ...piece, share, ...look }
     return { ...piece, share, ...look, ...shoulder(piece.rings, look.bevel, perMm) }
   })
-  return { metal, shadows, body: { rings: outline, ...bodyFor(metal) }, pieces }
+  return { metal, shadows, body: { rings: outline, ...bodyFor(metal) }, pieces: withBosses(pieces, metal, perMm) }
 }
 
 /** The pieces as one flat SVG of plain paths, body first, in the order the engine will index them. */
@@ -318,7 +378,7 @@ export function buildBadge (svgText, { medium = '', sizeMm = NOMINAL_SIZE_MM, fa
     // thickness + bevel. The body's face is z = 0; every other piece's back bevel is sunk into it.
     shapeSettings[String(index)] = {
       thickness: piece.thickness,
-      zOffset: (piece.part === 'body' ? -piece.thickness - piece.bevel : order) - engineOffset,
+      zOffset: (piece.part === 'body' ? -piece.thickness - piece.bevel : (piece.base ?? 0) + order) - engineOffset,
       bevel: piece.bevel,
       material: 'brushedGold',
       color: piece.color,

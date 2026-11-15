@@ -57,11 +57,37 @@ export const PARTS = {
   detail: { thickness: 0.3, bevel: 0.05 },
   emblem: { thickness: 0.38, bevel: 0.1 },
   lettering: { thickness: 0.46, bevel: 0.14 },
-  rim: { thickness: 0.5, bevel: 0.16 }
+  rim: { thickness: 0.5, bevel: 0.16 },
+  // The mass a struck emblem (the provincial arms, the dogwood) rises as, under its own line work.
+  boss: { thickness: 0.6, bevel: 0.2 }
 }
 
 /** Parts struck up from the field, whose outlines get a sloped shoulder. */
-export const RAISED = new Set(['detail', 'emblem', 'lettering', 'rim'])
+export const RAISED = new Set(['detail', 'emblem', 'lettering', 'rim', 'boss'])
+
+/**
+ * Drawing components struck as a raised mass in the reference photographs: the provincial arms on
+ * the Park Ranger shields and cap badges (plateforge-historical-arms, uploaded-bc-modern-arms) and
+ * the Parks Branch dogwood (five-petal-dogwood). Matched against data-component.
+ */
+export const EMBOSSED_COMPONENT = /(^|-)arms(-|$)|dogwood/
+
+/**
+ * An emblem's raised mass, with a broad shoulder. In the photographs its low ground, between the
+ * modelled details, is shaded and dull while the details stand bright, so the boss is a darker satin
+ * of the badge's metal and the emblem's polished line work stands on it.
+ */
+export function bossFor (metal) {
+  const base = METALS[metal] ?? METALS.gold
+  return {
+    part: 'boss',
+    color: darken(base.field, 0.55),
+    thickness: PARTS.boss.thickness,
+    bevel: PARTS.boss.bevel,
+    metalness: metal === 'leather' ? 0 : 1,
+    roughness: Math.min(0.9, base.satin + 0.1)
+  }
+}
 
 /** A darkened field: the trial's oxidized body (S51-O01) was metalness 0.65, roughness 0.8, but on a lighter olive ground under this studio light that reads pale, so it is smoother and more metallic, reflecting the room only where the angle catches it. */
 const DARK_FIELD = (leather) => (leather ? { metalness: 0, roughness: 0.85 } : { metalness: 0.85, roughness: 0.5 })
