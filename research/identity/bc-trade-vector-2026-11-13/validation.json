@@ -1,6 +1,6 @@
 {
   "reviewDate": "2026-11-14",
-  "masterSha256": "401eac5ef63151a36620e8339bed96787b9bb8faddbf42c8f64fff4f6b160310",
+  "masterSha256": "aca2fd6ef29080684147c003b240486876cdcf21272e5088d30a853f4901c6fc",
   "svg": {
     "paths": 20,
     "image_elements": 0,
@@ -8,7 +8,7 @@
     "letter_groups": 7,
     "all_paths_closed": true,
     "stroke_attributes": 0,
-    "file_bytes": 14476
+    "file_bytes": 15425
   },
   "pdf": {
     "pages": 1,
@@ -45,10 +45,108 @@
       "wordmark": 0.6281
     },
     "after": {
+      "red": 0.9152,
+      "blue": 0.7646,
+      "gold": 0.8641,
+      "wordmark": 0.7926
+    }
+  },
+  "flagOverlayReview": {
+    "beforeSha256": "401eac5ef63151a36620e8339bed96787b9bb8faddbf42c8f64fff4f6b160310",
+    "registration": "Fixed 4 SVG units per source pixel; unchanged artboard and no independent fitting.",
+    "staticOverlay": "review/flag-overlay.webp",
+    "interactiveOverlay": "review/flag-overlay.html",
+    "before": {
       "red": 0.9106,
       "blue": 0.751,
       "gold": 0.8636,
       "wordmark": 0.7926
-    }
+    },
+    "after": {
+      "red": 0.9152,
+      "blue": 0.7646,
+      "gold": 0.8641,
+      "wordmark": 0.7926
+    },
+    "wordmarkUnchanged": true,
+    "mapleLeafUnchanged": true,
+    "blueSubpaths": 6,
+    "blueSubpathsContinuousAndClosed": true,
+    "capConstructionNote": "The recorded joins and angles are after white-channel editing and before local capping, not the previous PR's geometry. Distances are SVG curve lengths, not measured historic corner radii.",
+    "tangentCaps": [
+      {
+        "id": "blue-terminal-beside-sun",
+        "joinBeforeCap": [
+          474.82,
+          576.586
+        ],
+        "internalAngleBeforeCapDegrees": 34.67,
+        "trimDistance": 6,
+        "capStart": [
+          475.469,
+          570.622
+        ],
+        "capEnd": [
+          478.859,
+          572.149
+        ],
+        "tangentAligned": true
+      },
+      {
+        "id": "upper-blue-terminal",
+        "joinBeforeCap": [
+          567.488,
+          480.02
+        ],
+        "internalAngleBeforeCapDegrees": 18.95,
+        "trimDistance": 10,
+        "capStart": [
+          559.8,
+          486.413
+        ],
+        "capEnd": [
+          558.134,
+          483.553
+        ],
+        "tangentAligned": true
+      },
+      {
+        "id": "right-blue-terminal",
+        "joinBeforeCap": [
+          536.693,
+          607.992
+        ],
+        "internalAngleBeforeCapDegrees": 15.74,
+        "trimDistance": 10,
+        "capStart": [
+          544.126,
+          601.303
+        ],
+        "capEnd": [
+          545.782,
+          603.82
+        ],
+        "tangentAligned": true
+      },
+      {
+        "id": "left-blue-terminal",
+        "joinBeforeCap": [
+          225.98,
+          587.043
+        ],
+        "internalAngleBeforeCapDegrees": 26.94,
+        "trimDistance": 6,
+        "capStart": [
+          220.045,
+          586.179
+        ],
+        "capEnd": [
+          221.105,
+          583.547
+        ],
+        "tangentAligned": true
+      }
+    ],
+    "limitation": "The fixed-mask overlap is a diagnostic, not a historical accuracy percentage. Scan blur cannot establish exact radii."
   }
 }

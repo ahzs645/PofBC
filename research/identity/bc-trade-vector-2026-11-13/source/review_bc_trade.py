@@ -3,7 +3,7 @@
 
 Pixel overlap is a fixed-registration diagnostic, not historical authentication.
 No reference pixels are converted to SVG contours by this review or the builder.
-Requires Inkscape, Pillow, numpy and PyMuPDF; optional --font is a local TTF.
+Requires Inkscape, Pillow, numpy, PyMuPDF and svgpathtools; optional --font is a local TTF.
 """
 import argparse
 import hashlib
@@ -16,6 +16,7 @@ import xml.etree.ElementTree as ET
 import fitz
 import numpy as np
 from PIL import Image, ImageDraw, ImageFont
+from svgpathtools import parse_path
 
 ROOT = Path(__file__).resolve().parent
 PACKAGE = ROOT.parent
@@ -93,6 +94,7 @@ def comparison(reference, before, after, font_path):
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--before", required=True, type=Path, help="Earlier master SVG for comparison")
+    parser.add_argument("--flag-before", type=Path, help="Optional previous PR master for the flag-only revision")
     parser.add_argument("--font", type=str, default=None, help="Optional local TTF for review labels")
     args = parser.parse_args()
     with tempfile.TemporaryDirectory() as tmp:
@@ -136,6 +138,31 @@ def main():
                 "before": overlap(reference, before), "after": overlap(reference, after),
             },
         }
+        if args.flag_before:
+            render(args.flag_before, work / "flag-before.png")
+            flag_before = Image.open(work / "flag-before.png").convert("RGBA")
+            previous_root = ET.parse(args.flag_before).getroot()
+            blue = root.find(".//*[@id='blue-flag-field']")
+            contours = parse_path(blue.get("d")).continuous_subpaths()
+            same_wordmark = (ET.tostring(root.find(".//*[@id='wordmark']")) ==
+                             ET.tostring(previous_root.find(".//*[@id='wordmark']")))
+            same_leaf = (ET.tostring(root.find(".//*[@id='maple-leaf']")) ==
+                         ET.tostring(previous_root.find(".//*[@id='maple-leaf']")))
+            report["flagOverlayReview"] = {
+                "beforeSha256": hashlib.sha256(args.flag_before.read_bytes()).hexdigest(),
+                "registration": "Fixed 4 SVG units per source pixel; unchanged artboard and no independent fitting.",
+                "staticOverlay": "review/flag-overlay.webp",
+                "interactiveOverlay": "review/flag-overlay.html",
+                "before": overlap(reference, flag_before), "after": overlap(reference, after),
+                "wordmarkUnchanged": same_wordmark, "mapleLeafUnchanged": same_leaf,
+                "blueSubpaths": len(contours),
+                "blueSubpathsContinuousAndClosed": all(p.iscontinuous() and p.isclosed() for p in contours),
+                "capConstructionNote": "The recorded joins and angles are after white-channel editing and before local capping, not the previous PR's geometry. Distances are SVG curve lengths, not measured historic corner radii.",
+                "tangentCaps": json.loads((ROOT / "output/bc-trade/flag-corner-review.json").read_text()),
+                "limitation": "The fixed-mask overlap is a diagnostic, not a historical accuracy percentage. Scan blur cannot establish exact radii.",
+            }
+            if not same_wordmark or not same_leaf or not report["flagOverlayReview"]["blueSubpathsContinuousAndClosed"]:
+                raise ValueError("Flag revision changed unrelated geometry or disconnected a blue contour")
         (PACKAGE / "validation.json").write_text(json.dumps(report, indent=2) + "\n")
         print(json.dumps(report, indent=2))
 

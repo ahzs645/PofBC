@@ -8,9 +8,11 @@ from pathlib import Path
 import copy
 from functools import lru_cache
 import json
+import math
 import re
 import subprocess
 import xml.etree.ElementTree as ET
+from svgpathtools import CubicBezier, Path as BezierPath, parse_path
 
 ROOT = Path(__file__).resolve().parent
 OUT = ROOT / "output" / "bc-trade"
@@ -42,12 +44,15 @@ MAPLE = """M 446,52
 
 FLAG = """M 142,440
  C 179,433 220,421 247,425
- C 280,429 292,446 286,493
- C 338,461 404,414 449,410
- C 482,403 511,414 519,435
- C 524,448 521,462 518,471
- C 571,441 627,424 677,419
- L 632,722 L 78,722 L 120,485 Z"""
+ C 282,428 301,445 296,482
+ C 295,489 295,493 301,489
+ C 351,459 405,414 449,410
+ C 483,404 512,414 521,435
+ C 525,445 526,451 525,458
+ C 524,464 524,467 530,464
+ C 579,438 629,423 677,419
+ L 632.5,718.5 Q 632,722 628.5,722
+ L 81.5,722 Q 78,722 78.6,718.5 L 120,485 Z"""
 
 BLUE_FIELD = """M 116,480
  C 165,459 217,438 248,445
@@ -68,8 +73,9 @@ LEFT_UPPER_WHITE = """M 105,497
  C 161,559 128,557 97,564 Z"""
 LEFT_UPPER_RED = """M 103,516
  C 159,507 214,529 239,558
- C 250,573 254,589 250,604
- C 237,584 214,566 184,559
+ C 248,571 253,584 251,595
+ C 250,601 249,602 246,597
+ C 234,580 214,566 184,559
  C 156,551 127,551 99,555 Z"""
 
 # The lower white channels are intentionally wider above the red than below it.
@@ -89,19 +95,20 @@ LEFT_LOWER = """M 89,641
  C 155,666 119,678 84,690 Z"""
 
 CENTRE_WHITE = """M 328,490
- C 356,466 396,442 424,431
- L 400,610 L 317,613 Z"""
+ C 356,466 400,442 431,430
+ L 407,610 L 317,613 Z"""
 CENTRE_RED = """M 344,488
  C 365,470 390,455 413,446
  L 391,610 L 330,610 Z"""
 
-DIAGONAL_WHITE = """M 462,606
- C 518,536 588,443 677,432
+DIAGONAL_WHITE = """M 454,598
+ C 515,540 565,446 677,432
  L 670,481 C 649,493 618,523 589,552
  C 559,588 537,612 506,630 C 492,639 475,635 470,628
- C 468,622 469,615 471,610 Z"""
+ C 462,621 450,605 454,598 Z"""
 DIAGONAL_RED = """M 470,604
- C 522,542 586,459 674,443
+ C 522,542 586,459 667,445
+ C 672,444 674,443 673,448
  L 672,454 C 645,470 616,496 591,522
  L 505,602 C 491,611 480,614 470,604 Z"""
 
@@ -117,8 +124,8 @@ RIGHT_LOWER = """M 479,667
  C 475,673 474,671 479,667 Z"""
 
 SUN = """M 234,738
- C 239,719 240,703 236,687
- C 240,674 242,661 242,648
+ C 239,719 238,703 238,688
+ C 238,674 242,661 242,648
  C 255,652 263,657 267,646
  L 272,602 C 279,609 288,620 294,608
  L 318,566 C 326,582 334,591 342,575
@@ -147,6 +154,94 @@ def layer(root, name, label):
 def path(parent, name, d, colour, **attrs):
     return el("path", {"id":name, "d":clean_path(d), "fill":colour, **attrs}, parent)
 
+
+# These small, named regions contain accidental acute joins in the flag's blue
+# areas. They do not include maple tips, sun rays, or the straight lower edge.
+# Distances are along the authored vector curves (four units per source pixel).
+BLUE_CAPS = [
+    ("upper-blue-terminal", (530, 455, 610, 495), 10),
+    ("blue-terminal-beside-sun", (463, 550, 493, 604), 6),
+    ("right-blue-terminal", (520, 582, 565, 625), 10),
+    ("left-blue-terminal", (206, 570, 242, 609), 6),
+]
+CAP_REVIEW = []
+
+
+def round_selected_joins(d, regions):
+    """Replace selected acute vector joins with tangent-aligned cubic caps.
+
+    This acts on the authored/Boolean vector, never on reference pixels. Only
+    joins inside the named regions and below 65 degrees are eligible. The cap
+    shares the actual endpoint tangent of each retained neighbouring curve.
+    """
+    output = []
+    for subpath in parse_path(d).continuous_subpaths():
+        starts, ends = [0.0] * len(subpath), [1.0] * len(subpath)
+        selected = {}
+        for i, previous in enumerate(subpath):
+            following = subpath[(i + 1) % len(subpath)]
+            vertex = previous.end
+            if abs(vertex - following.start) > 1e-6:
+                continue
+            into, away = previous.derivative(1), following.derivative(0)
+            if abs(into) < 1e-8 or abs(away) < 1e-8:
+                continue
+            dot = ((-into).real * away.real + (-into).imag * away.imag) / abs(into) / abs(away)
+            angle = math.degrees(math.acos(max(-1, min(1, dot))))
+            if angle >= 65:
+                continue
+            for name, (left, top, right, bottom), amount in regions:
+                if not (left < vertex.real < right and top < vertex.imag < bottom):
+                    continue
+                before_length, after_length = previous.length(), following.length()
+                distance = min(amount, before_length * .8, after_length * .8)
+                if distance < 1:
+                    continue
+                ends[i] = previous.ilength(before_length - distance)
+                starts[(i + 1) % len(subpath)] = following.ilength(distance)
+                selected[i] = (name, vertex, angle, distance)
+                break
+        trimmed = []
+        for i, segment in enumerate(subpath):
+            if starts[i] == 0 and ends[i] == 1:
+                trimmed.append(segment)
+                continue
+            piece = segment.cropped(starts[i], ends[i])
+            # Preserve exact shared endpoints. Round-off from de Casteljau
+            # subdivision must not serialize as a new SVG M / closed triangle.
+            if starts[i] == 0:
+                piece.start = segment.start
+            if ends[i] == 1:
+                piece.end = segment.end
+            trimmed.append(piece)
+        parts = []
+        for i, segment in enumerate(trimmed):
+            parts.append(segment)
+            if i not in selected:
+                continue
+            next_segment = trimmed[(i + 1) % len(trimmed)]
+            start, end = segment.end, next_segment.start
+            tangent_in, tangent_out = segment.unit_tangent(1), next_segment.unit_tangent(0)
+            dot = tangent_in.real * tangent_out.real + tangent_in.imag * tangent_out.imag
+            turn = math.acos(max(-1, min(1, dot)))
+            radius = abs(end - start) / max(2 * math.sin(turn / 2), 1e-8)
+            handle = 4 / 3 * math.tan(turn / 4) * radius
+            cap = CubicBezier(start, start + tangent_in * handle,
+                              end - tangent_out * handle, end)
+            parts.append(cap)
+            name, vertex, angle, distance = selected[i]
+            CAP_REVIEW.append({"id": name, "joinBeforeCap": [round(vertex.real, 3), round(vertex.imag, 3)],
+                               "internalAngleBeforeCapDegrees": round(angle, 2),
+                               "trimDistance": round(distance, 3),
+                               "capStart": [round(start.real, 3), round(start.imag, 3)],
+                               "capEnd": [round(end.real, 3), round(end.imag, 3)],
+                               "tangentAligned": True})
+        contour = BezierPath(*parts)
+        if not contour.iscontinuous() or not contour.isclosed():
+            raise ValueError("A flag corner cap disconnected its closed contour")
+        output.append(contour.d() + " Z")
+    return " ".join(output)
+
 @lru_cache(maxsize=1)
 def paint_geometry():
     """Resolve vector overlaps so PDF clipping cannot create coloured hairlines.
@@ -155,6 +250,7 @@ def paint_geometry():
     White channels are cut from underlying colours; strokes become filled paths.
     All source control points above remain simple and individually editable.
     """
+    CAP_REVIEW.clear()
     temp = ROOT / "tmp" / "vector-build"
     temp.mkdir(parents=True, exist_ok=True)
     head = '<svg xmlns="http://www.w3.org/2000/svg" width="784" height="872" viewBox="0 0 784 872">'
@@ -183,6 +279,9 @@ def paint_geometry():
     cutouts += shape(SUN, width=6)
     white = operation(cutouts, "white-channels", expand + "path-union")
     result = {"blue":operation(shape(BLUE_FIELD, "blue") + shape(white), "blue-field", "select-all;path-difference")}
+    result["blue"] = round_selected_joins(result["blue"], BLUE_CAPS)
+    if sorted(item["id"] for item in CAP_REVIEW) != sorted(item[0] for item in BLUE_CAPS):
+        raise ValueError("Expected one tangent cap in each named blue-tip region")
     result["left-lower"] = clean_path(LEFT_LOWER)
     result["right-lower"] = clean_path(RIGHT_LOWER)
     result["sun"] = operation(shape(SUN,"gold",6), "sun-inset", expand + "path-difference")
@@ -252,3 +351,4 @@ if __name__ == "__main__":
     for f in [build(), build("scan-tones"), build(symbol_only=True)]:
         print(f)
     (OUT/"palette.json").write_text(json.dumps(PALETTES,indent=2)+"\n")
+    (OUT/"flag-corner-review.json").write_text(json.dumps(CAP_REVIEW, indent=2)+"\n")

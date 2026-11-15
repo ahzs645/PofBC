@@ -7305,9 +7305,9 @@ export const COLLECTED_BODIES = [
         ],
         "evidenceType": "supplied-vector-reconstruction",
         "notes": "A red maple leaf rising behind a waving flag — blue field, five red bands parted by white, a gold sun rising from its base — above “BC TRADE”.",
-        "fidelityNote": "Manually reconstructed vector, revised against the 196 × 218 pixel colour scan on 2026-11-14 and checked against the 1989 newspaper example. The leaf, varying flag separators, diagonal band and sun use deliberately authored curves; each letter is an independent outline. The open separations in T, R, A, D and E are represented as transparent gaps, as visible in both printed examples. No automatic tracing or raster content. The exact typeface is not identified; small curves and gap widths remain estimates at this scan resolution. Red #B22C20, blue #17447F and gold #EDC445 are approximate display colours, not an original specification. The unchanged 1991 scan remains available for comparison.",
-        "sha256": "401eac5ef63151a36620e8339bed96787b9bb8faddbf42c8f64fff4f6b160310",
-        "bytes": 14476,
+        "fidelityNote": "Manually reconstructed vector, revised against the 196 × 218 pixel colour scan on 2026-11-14 and checked against the 1989 newspaper example. The leaf, varying flag separators, diagonal band and sun use deliberately authored curves; each letter is an independent outline. The open separations in T, R, A, D and E are represented as transparent gaps, as visible in both printed examples. A fixed-registration overlay review further corrects the flag folds, white separators and acute blue ends with local tangent-aligned caps. No automatic tracing or raster content. The exact typeface is not identified; small curves, gap widths and corner radii remain estimates at this scan resolution. Red #B22C20, blue #17447F and gold #EDC445 are approximate display colours, not an original specification. The unchanged 1991 scan remains available for comparison.",
+        "sha256": "aca2fd6ef29080684147c003b240486876cdcf21272e5088d30a853f4901c6fc",
+        "bytes": 15425,
         "darkBackground": false,
         "downloads": [
           {

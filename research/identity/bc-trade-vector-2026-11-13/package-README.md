@@ -38,6 +38,32 @@ specific structure:
 master at identical artboard scale, with enlarged lettering details. The source
 is explicitly labelled as an enlargement; it contains no new image detail.
 
+### Flag overlay follow-up
+
+The flag was checked again with the preceding PR revision superimposed on the
+same original scan. Several blue areas ended in long acute cusps beyond the
+printed pigment. The follow-up shortens the upper central blue tip, eases the
+small blue end beside the sun, and adds small curved caps to the left and
+lower-right blue wedges. Two upper folds move slightly toward the printed
+landmarks and receive curved joins. The upper-left red end and the far end of
+the diagonal red band are also eased. The central white separator is slightly
+wider; the flat base remains, with very small end-corner rounding. A kink on the
+sun's lower-left edge is smoothed. The leaf and lettering are unchanged from the
+preceding PR revision, and the pointed sun rays are retained.
+
+`review/flag-overlay.webp` contains a source/before/after comparison, an actual
+superimposition and six enlarged inspection areas. Magenta is the preceding
+vector; cyan is the correction. `review/flag-overlay.html` is a self-contained
+viewer with revision, outline/fill, opacity, source and crop controls. All its
+images are embedded and it works offline.
+
+Registration stays fixed: one source pixel corresponds to four SVG units, on
+the unchanged 784 x 872 artboard. Visible boundaries are extracted from flattened
+3x SVG renders, so hidden construction paths do not appear in the overlay.
+Neither revision is fitted, rotated or warped separately. The source is enlarged
+with its pixels visible. Its blur supports position comparisons but cannot
+establish an exact original corner radius.
+
 ## Editable construction
 
 The master is `public/identity-collected/bc-trade/bc-trade-1991-rebuilt.svg`.
@@ -49,12 +75,19 @@ Boolean operations resolve overlaps between these vector shapes; they do not
 convert reference pixels into contours. The lower white-channel boundaries are
 independent paths, avoiding uniform stroke-width assumptions.
 
+Four named blue-tip regions receive tangent-aligned cubic caps after the Boolean
+operations. `svgpathtools` trims short lengths of the existing authored curves;
+the cap inherits the two retained endpoint directions. This operates on vector
+geometry, not scan pixels. The builder checks that each named cap is present and
+that every blue subpath remains continuous and closed, including exact shared
+endpoints after curve subdivision.
+
 `source/typography-review/wordmark.svg` contains the seven letter outlines in
 native scan coordinates, scaled by four into the 784 x 872 artboard. Its
 `fill-rule="evenodd"` preserves the B counters. `wordmark-geometry.json` records
 the same construction coordinates. No font file is needed to render the mark.
 
-From the repository root, with Python 3 and Inkscape available:
+From the repository root, with Python 3, `svgpathtools` and Inkscape available:
 
 ```bash
 python3 research/identity/bc-trade-vector-2026-11-13/source/build_bc_trade.py
@@ -77,11 +110,14 @@ historically documented additional marks. They are not separate gallery entries.
 
 `validation.json` records actual SVG structure, a freshly exported vector PDF,
 transparent PNG corners and a fixed-registration comparison against the scan.
-The review script requires Pillow, numpy and PyMuPDF in addition to Inkscape:
+The review script requires Pillow, numpy, PyMuPDF and svgpathtools in addition to
+Inkscape. The overlay script additionally uses scipy:
 
 ```bash
 git show ebd96bb:public/identity-collected/bc-trade/bc-trade-1991-rebuilt.svg > /tmp/bc-trade-before.svg
-python3 research/identity/bc-trade-vector-2026-11-13/source/review_bc_trade.py --before /tmp/bc-trade-before.svg
+git show 29470d25:public/identity-collected/bc-trade/bc-trade-1991-rebuilt.svg > /tmp/bc-trade-flag-before.svg
+python3 research/identity/bc-trade-vector-2026-11-13/source/review_bc_trade.py --before /tmp/bc-trade-before.svg --flag-before /tmp/bc-trade-flag-before.svg
+python3 research/identity/bc-trade-vector-2026-11-13/source/overlay_bc_trade.py --before /tmp/bc-trade-flag-before.svg
 ```
 
 An optional `--font /path/to/font.ttf` controls the comparison sheet's labels.
@@ -89,6 +125,14 @@ The diagnostics compare fixed colour masks at native scan resolution. They are
 not an accuracy percentage or proof of historical authenticity. The gold mask
 is restricted to the sun because blurred red/white edges can appear yellow.
 No independent fit or warp is applied to either candidate.
+
+The two comparisons intentionally use different baselines: the full-logo sheet
+starts before the letter correction, while the flag overlay starts at PR commit
+`29470d25`, after the letter correction. `validation.json` records both hashes and
+checks that the flag follow-up leaves the lettering and maple leaf unchanged.
+Its cap coordinates and angles describe the joins after white-channel edits and
+before capping; they are construction diagnostics, not recovered historical
+measurements.
 
 Existing collection/display checks and the real GalleryView browser review cover
 asset checksums, loading, light/dark display, desktop/mobile layout and downloads.
