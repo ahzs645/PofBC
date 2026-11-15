@@ -22,7 +22,7 @@ import { mergeGeometries } from 'three/examples/jsm/utils/BufferGeometryUtils.js
 import ClipperLib from 'clipper-lib'
 import { buildMedalGroup } from './vendor/medal-forge/model-builder'
 import { DEFAULT_SETTINGS } from './vendor/medal-forge/defaults'
-import { EMBOSSED_COMPONENT, METALS, NOMINAL_SIZE_MM, PARTS, RAISED, bodyFor, bossFor, edgeFor, metalOf, partFor } from './badgeParts.js'
+import { EMBOSSED_COMPONENT, JUNIOR_WARDEN_RELIEF, METALS, NOMINAL_SIZE_MM, PARTS, RAISED, bodyFor, bossFor, edgeFor, metalOf, partFor } from './badgeParts.js'
 import { FIELD_TEXTURES, fieldTexture } from './stipple.js'
 
 export const MEDAL_FORGE = {
@@ -294,26 +294,94 @@ function withBosses (pieces, metal, perMm) {
 
 const visible = (paint, opacity) => paint && paint !== 'none' && Number(opacity ?? 1) > 0
 
+const WARDEN_IDS = ['outer-silhouette', 'outer-rim', 'inner-rim', 'maple-leaf-blade-and-stem']
+const isWardenDrawing = (root, family, medium) => family === JUNIOR_WARDEN_RELIEF.family && /leather/i.test(medium) && WARDEN_IDS.every((id) => root.querySelector(`[id="${id}"]`))
+
+/**
+ * Interpret the named layers of the supplied S01 drawing as tooled relief. In particular, a full
+ * shield painted over another shield is not a raised plate covering the lettering: their difference
+ * is the rim. Vein outlines are 2D edge shading; the filled ribbons are joined and raised on the
+ * leaf. Letter faces and their wider shoulders are also joined separately, retaining their counters.
+ * Unknown artwork falls back to the general classifier rather than silently dropping new shapes.
+ */
+function wardenRelief (raw, perMm) {
+  const named = (id) => raw.find((p) => p.sourceId === id && p.kind === 'fill')
+  const outer = named('outer-silhouette')
+  const rim = named('outer-rim')
+  const field = named('inner-rim')
+  const blade = named('maple-leaf-blade-and-stem')
+  if (!outer || !rim || !field || !blade) return null
+  const isVein = (p) => p.sourceId?.startsWith('maple-leaf-') && p.sourceId !== blade.sourceId
+  if (raw.some((p) => !WARDEN_IDS.includes(p.sourceId) && !p.caption && !isVein(p))) return null
+  const shoulders = raw.filter((p) => p.caption && (p.role === 'relief-boundary' || p.letter === 'dot' || p.letter === 'period'))
+  const faces = raw.filter((p) => p.caption && !shoulders.includes(p))
+  const veins = raw.filter((p) => isVein(p) && p.kind === 'fill')
+  if (!shoulders.length || !faces.length || !veins.length) return null
+  const union = (pieces) => clip(ClipperLib.ClipType.ctUnion, pieces.flatMap((p) => p.rings))
+  const make = (reliefRole, members, rings, color = members[0].paint) => {
+    const recipe = JUNIOR_WARDEN_RELIEF.profiles[reliefRole]
+    // The engine caps bevel at 45% of thickness. Honour that before insetting, so the prepared
+    // surface height and the emitted mesh agree. A failed inset gets a square edge, not a wider
+    // invented outline that could bridge counters or push a vein beyond its supporting blade.
+    const wanted = Math.min(recipe.bevel, (recipe.top - recipe.base) * 0.3)
+    const inset = wanted ? shoulder(rings, wanted, perMm) : { bevel: 0 }
+    const bevel = inset.rings ? inset.bevel : 0
+    return {
+      kind: 'fill', paint: color, rings: inset.rings ?? rings,
+      caption: members.find((p) => p.caption)?.caption ?? null,
+      border: reliefRole === 'rim', emblem: null, share: 0,
+      part: recipe.part, base: recipe.base, top: recipe.top,
+      thickness: recipe.top - recipe.base - bevel, bevel,
+      bevelSegments: bevel ? 2 : 0, color, metalness: 0, roughness: recipe.roughness,
+      reliefRole, sourceIds: [...new Set(members.map((p) => p.sourceId).filter(Boolean))],
+      // These explicit heights replace the generic paint-order offsets.
+      orderedRelief: true
+    }
+  }
+  const leaf = make('leaf-blade', [blade], blade.rings)
+  const ribbon = clip(ClipperLib.ClipType.ctIntersection, union(veins), leaf.rings)
+  if (!ribbon.length) return null
+  const rimBand = clip(ClipperLib.ClipType.ctDifference, rim.rings, field.rings)
+  if (!rimBand.length) return null
+  return {
+    profile: JUNIOR_WARDEN_RELIEF.id,
+    outline: outer.rings,
+    pieces: [
+      make('outer-field', [outer], outer.rings),
+      make('field', [field], field.rings),
+      make('rim', [rim, field], rimBand),
+      make('letter-shoulder', shoulders, union(shoulders), METALS.leather.body),
+      make('letter-face', faces, union(faces)),
+      leaf,
+      make('leaf-veins', veins, ribbon)
+    ]
+  }
+}
+
 /**
  * The drawing as pieces, plus the body.
  * @param {string} svgText  A joined library drawing.
  * @param {{ medium?: string }} [options]
  */
-export function badgePieces (svgText, { medium = '', sizeMm = NOMINAL_SIZE_MM } = {}) {
+export function badgePieces (svgText, { medium = '', sizeMm = NOMINAL_SIZE_MM, family = '' } = {}) {
   const doc = new DOMParser().parseFromString(svgText, 'image/svg+xml')
   if (doc.querySelector('parsererror')) throw new Error('The badge drawing is not valid SVG.')
   const root = doc.documentElement
   const shadows = root.querySelectorAll('[data-intentional-shadow="true"]').length
   root.querySelectorAll('[data-intentional-shadow="true"], text, image, script, foreignObject, metadata').forEach((e) => e.remove())
   const parsed = new SVGLoader().parse(new XMLSerializer().serializeToString(doc))
-  const tolerance = toleranceFor(root)
+  const warden = isWardenDrawing(root, family, medium)
+  // The small, explicit vein ribbons need finer sampling than a coat of arms with thousands of
+  // subpaths. Scope this to the supplied drawing so other badges keep their existing cost bound.
+  const tolerance = toleranceFor(root) * (warden ? 0.2 : 1)
 
   const raw = []
   for (const path of parsed.paths) {
     const style = path.userData?.style ?? {}
     const node = path.userData?.node
     if (style.visibility === 'hidden' || style.display === 'none' || Number(style.opacity ?? 1) <= 0) continue
-    const context = { caption: inherited(node, 'data-caption'), border: inherited(node, 'data-role') === 'border', emblem: emblemOf(node) }
+    const role = inherited(node, 'data-role')
+    const context = { sourceId: inherited(node, 'id'), role, letter: inherited(node, 'data-letter'), caption: inherited(node, 'data-caption'), border: role === 'border', emblem: emblemOf(node) }
     if (visible(style.fill, style.fillOpacity)) {
       const rings = fillRings(path, tolerance)
       if (rings.length) raw.push({ kind: 'fill', paint: style.fill, rings, ...context })
@@ -331,11 +399,15 @@ export function badgePieces (svgText, { medium = '', sizeMm = NOMINAL_SIZE_MM } 
   // The body: everything's outline together, solid (outer contours only).
   const union = clip(ClipperLib.ClipType.ctUnion, raw.flatMap((piece) => piece.rings))
   const smallest = (0.002 * area(union)) * SCALE * SCALE
-  const outline = union.filter((ring) => ClipperLib.Clipper.Orientation(ring) && Math.abs(ClipperLib.Clipper.Area(ring)) > smallest)
+  let outline = union.filter((ring) => ClipperLib.Clipper.Orientation(ring) && Math.abs(ClipperLib.Clipper.Area(ring)) > smallest)
+
+  const sourceOutline = raw.find((piece) => piece.sourceId === 'outer-silhouette' && piece.kind === 'fill')?.rings
+  const relief = warden && metal === 'leather' ? wardenRelief(raw, longerSide(sourceOutline ?? outline) / sizeMm) : null
+  if (relief) outline = relief.outline
 
   const outlineArea = area(outline)
   const perMm = longerSide(outline) / sizeMm
-  const pieces = raw.map((piece) => {
+  const pieces = relief?.pieces ?? raw.map((piece) => {
     const share = area(piece.rings) / outlineArea
     const look = partFor({ ...piece, metal, share })
     // Fine heraldry is hundreds of tiny pieces; a bevel on each would multiply the model several
@@ -351,7 +423,7 @@ export function badgePieces (svgText, { medium = '', sizeMm = NOMINAL_SIZE_MM } 
   // The body's rounded bevel grows back out to the outline from rings inset by it.
   const body = bodyFor(metal)
   const bodyRings = offsetRings(outline, -body.bevel, perMm)
-  return { metal, shadows, perMm, body: { rings: bodyRings.length ? bodyRings : outline, ...body }, outline, pieces: [...edge, ...withBosses(pieces, metal, perMm)] }
+  return { metal, shadows, perMm, profile: relief?.profile ?? null, body: { rings: bodyRings.length ? bodyRings : outline, ...body }, outline, pieces: [...edge, ...withBosses(pieces, metal, perMm)] }
 }
 
 /** The pieces as one flat SVG of plain paths, body first, in the order the engine will index them. */
@@ -430,13 +502,13 @@ function texturedField ({ outline, pieces, perMm }, name) {
 export function buildBadge (svgText, { medium = '', sizeMm = NOMINAL_SIZE_MM, family = '' } = {}) {
   const fieldTexture = FIELD_TEXTURES[family] ?? null
   const started = performance.now()
-  const prepared = badgePieces(svgText, { medium, sizeMm })
+  const prepared = badgePieces(svgText, { medium, sizeMm, family })
   const { all, svg } = piecesSvg(prepared)
   const count = all.length
   const shapeSettings = {}
   all.forEach((piece, index) => {
     const engineOffset = Math.min(index * ENGINE_LAYER_STEP, ENGINE_LAYER_CAP)
-    const order = piece.part === 'body' ? 0 : (ORDER_SPREAD * index) / count
+    const order = piece.part === 'body' || piece.orderedRelief ? 0 : (ORDER_SPREAD * index) / count
     // A bevel adds its own depth on both faces: a piece spans zOffset − bevel to zOffset +
     // thickness + bevel. The body's face is z = 0; every other piece's back bevel is sunk into it.
     shapeSettings[String(index)] = {
@@ -468,7 +540,7 @@ export function buildBadge (svgText, { medium = '', sizeMm = NOMINAL_SIZE_MM, fa
     if (!piece) return
     reverseWinding(mesh.geometry)
     const texture = piece.part === 'ground' ? fieldTexture : null
-    const key = `${piece.part}|${piece.color}|${piece.metalness}|${piece.roughness}|${texture}`
+    const key = `${piece.part}|${piece.color}|${piece.metalness}|${piece.roughness}|${texture}|${piece.reliefRole ?? ''}`
     if (!byLook.has(key)) byLook.set(key, { piece, texture, geometries: [] })
     const geometry = mesh.geometry.index ? mesh.geometry.toNonIndexed() : mesh.geometry.clone()
     geometry.applyMatrix4(mesh.matrixWorld)
@@ -477,6 +549,7 @@ export function buildBadge (svgText, { medium = '', sizeMm = NOMINAL_SIZE_MM, fa
   })
   const group = new THREE.Group()
   group.name = 'badge'
+  if (prepared.profile) group.userData.reliefProfile = prepared.profile
   let triangles = 0
   const field = fieldTexture ? texturedField(prepared, fieldTexture) : null
   for (const { piece, texture, geometries } of byLook.values()) {
@@ -494,8 +567,12 @@ export function buildBadge (svgText, { medium = '', sizeMm = NOMINAL_SIZE_MM, fa
     }
     const material = new THREE.MeshStandardMaterial({ color: piece.color, metalness: piece.metalness, roughness: piece.roughness })
     const mesh = new THREE.Mesh(geometry, material)
-    mesh.name = `${piece.part} ${piece.color}`
+    mesh.name = `${piece.reliefRole ?? piece.part} ${piece.color}`
     mesh.userData.part = piece.part
+    if (piece.reliefRole) {
+      mesh.userData.reliefRole = piece.reliefRole
+      mesh.userData.sourceIds = piece.sourceIds
+    }
     if (texture && field) mesh.userData.fieldMap = field.map
     triangles += geometry.getAttribute('position').count / 3
     group.add(mesh)
@@ -513,6 +590,6 @@ export function buildBadge (svgText, { medium = '', sizeMm = NOMINAL_SIZE_MM, fa
     group,
     metal: prepared.metal,
     sizeMm: { width: size.x, height: size.y, depth: size.z },
-    stats: { pieces: prepared.pieces.length, parts, shadowsLeftOut: prepared.shadows, meshes: group.children.length, triangles, buildMs: Math.round(performance.now() - started) }
+    stats: { pieces: prepared.pieces.length, parts, profile: prepared.profile, shadowsLeftOut: prepared.shadows, meshes: group.children.length, triangles, buildMs: Math.round(performance.now() - started) }
   }
 }

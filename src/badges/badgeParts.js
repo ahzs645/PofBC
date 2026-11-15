@@ -18,6 +18,26 @@
 
 export const NOMINAL_SIZE_MM = 65
 
+/**
+ * The photo-registered Junior Forest Warden drawing has explicit nested relief. Its light vein
+ * faces sit ON its leaf; colour-derived heights alone put them inside the blade. These are display
+ * profiles in nominal millimetres, not measured tooling depths. `top` is kept fixed even when a
+ * narrow outline needs a smaller bevel. The body retains the ordinary leather profile below.
+ */
+export const JUNIOR_WARDEN_RELIEF = Object.freeze({
+  id: 'junior-warden-tooled-v1',
+  family: 'junior-warden',
+  profiles: Object.freeze({
+    'outer-field': { part: 'ground', base: 0, top: 0.035, bevel: 0, roughness: 0.9 },
+    field: { part: 'ground', base: 0.015, top: 0.065, bevel: 0, roughness: 0.9 },
+    rim: { part: 'rim', base: 0.025, top: 0.31, bevel: 0.065, roughness: 0.76 },
+    'letter-shoulder': { part: 'lettering', base: 0.025, top: 0.32, bevel: 0.07, roughness: 0.84 },
+    'letter-face': { part: 'lettering', base: 0.275, top: 0.46, bevel: 0.025, roughness: 0.72 },
+    'leaf-blade': { part: 'emblem', base: 0.025, top: 0.38, bevel: 0.06, roughness: 0.78 },
+    'leaf-veins': { part: 'detail', base: 0.34, top: 0.54, bevel: 0.012, roughness: 0.72 }
+  })
+})
+
 /** Base metals, and the colours their surfaces take. */
 /**
  * Base metals. The reference photographs show the field and the struck relief in different

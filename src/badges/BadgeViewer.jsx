@@ -5,7 +5,7 @@
 // compared Medal Forge and Luster on S51-O01 and preferred Medal Forge for metal badges with raised
 // lettering. Size, relief, finish and curvature are illustrative choices, not measurements.
 
-import { useEffect, useRef, useState } from 'react'
+import { useEffect, useId, useRef, useState } from 'react'
 import { cardLabel, loadPatchSvg, variantsOf } from 'patcher/library'
 import { Segmented } from '../site/Segmented.jsx'
 import { PatchStage } from '../patches/PatchStage.jsx'
@@ -13,14 +13,14 @@ import { PatchHistory, photosOf } from '../patches/PatchDetails.jsx'
 import { METALS, NOMINAL_SIZE_MM } from './badgeParts.js'
 import { MEDAL_FORGE, buildBadge } from './medalBadge.js'
 import { BadgeScene } from './badgeScene.js'
-import { BADGE_VIEW_DEFAULTS, badgeModeFor, loadBadgeView, saveBadgeView } from './badgeView.js'
+import { BADGE_VIEW_DEFAULTS, badgeModeFor, badgeShapeFor, badgeShapeStatus, applyBadgeShape, loadBadgeView, saveBadgeView } from './badgeView.js'
 import { badgeReviewAssetUrl, badgeReviewSources } from './badgeReview.js'
 import './badges.css'
 
 const REVIEW_URL = `${import.meta.env.BASE_URL}badge-review/index.json`
 const REVIEW_LABELS = { refine: 'Needs refinement', reconstruct: 'Needs reconstruction', reviewed: 'Reviewed', unreviewed: 'Not yet reviewed' }
 const MODES = [
-  { value: 'metal', label: 'Metal', title: 'The drawing built as a solid badge' },
+  { value: 'metal', label: '3D', title: 'The drawing built as a solid badge' },
   { value: 'vector', label: 'Vector' }
 ]
 const REVIEW_MODES = [
@@ -60,9 +60,10 @@ const webglAvailable = () => {
 }
 
 /** The 3D stage: a canvas that fills its pane, the mode switch and the camera presets above it. */
-function MetalStage ({ sceneRef, toolbar, status, onReady, label, camera, onCamera }) {
+function BadgeStage ({ sceneRef, toolbar, status, onReady, label, camera, onCamera }) {
   const canvas = useRef(null)
   const pane = useRef(null)
+  const hintId = useId()
   const [failed, setFailed] = useState(false)
 
   useEffect(() => {
@@ -105,9 +106,10 @@ function MetalStage ({ sceneRef, toolbar, status, onReady, label, camera, onCame
       <div ref={pane} className="badge-stage__pane">
         {failed
           ? <p className="patch__status" role="alert">This browser can’t show 3D (WebGL is off or unavailable). The vector is a tab away.</p>
-          : <canvas ref={canvas} tabIndex={0} role="img" aria-label={label} onKeyDown={onKeyDown} />}
+          : <canvas ref={canvas} tabIndex={0} role="img" aria-label={label} aria-describedby={hintId} onKeyDown={onKeyDown} />}
         {!failed && status && <p className="patch__status badge-stage__status" role="status">{status}</p>}
       </div>
+      {!failed && <p id={hintId} className="badge-stage__hint">Drag to rotate · Pinch or scroll to zoom · Arrow keys to turn · R to reset the view</p>}
     </div>
   )
 }
@@ -125,13 +127,17 @@ export const BadgeViewer = ({ patch, org, position, previous, next, onOpen, onCl
   const [phase, setPhase] = useState('loading')
   const [scene, setScene] = useState(null)
   const [bend, setBend] = useState(null)
-  const [exporting, setExporting] = useState(false)
+  const [bendAttempt, setBendAttempt] = useState(0)
+  const [exporting, setExporting] = useState(null)
+  const [exportError, setExportError] = useState(null)
   const [reviewIndex, setReviewIndex] = useState({ status: 'loading', data: null })
   const [reviewAttempt, setReviewAttempt] = useState(0)
   const [sourceSelection, setSourceSelection] = useState(null)
   const [failedSource, setFailedSource] = useState(null)
   const [sourceAttempt, setSourceAttempt] = useState(0)
   const sceneRef = useRef(null)
+  const exportRequest = useRef(null)
+  const exportCurrent = useRef(null)
   // A rebuilt scene (a new badge, or back from the Vector tab) opens at the chosen camera.
   const cameraRef = useRef(view.camera)
   cameraRef.current = view.camera
@@ -169,6 +175,7 @@ export const BadgeViewer = ({ patch, org, position, previous, next, onOpen, onCl
     let url = null
     setDrawing(null)
     setBuilt(null)
+    setBend(null)
     setPhase('loading')
     loadPatchSvg(patch)
       .then((text) => {
@@ -185,14 +192,15 @@ export const BadgeViewer = ({ patch, org, position, previous, next, onOpen, onCl
   useEffect(() => {
     if (!current || !scene || mode !== 'metal') return undefined
     // A stage that remounted (back from the Vector tab) is a new, empty scene.
-    if (built?.patchId === patch.id && built.scene === scene) return undefined
+    if (built?.patchId === patch.id && built.drawing === current && built.scene === scene) return undefined
+    setBend(null)
     setPhase('building')
     const timer = setTimeout(() => {
       try {
         const badge = buildBadge(current.text, { medium: patch.medium, sizeMm: NOMINAL_SIZE_MM, family: patch.family })
         scene.setModel(badge.group, { metal: badge.metal })
         scene.setView(cameraRef.current)
-        setBuilt({ patchId: patch.id, scene, metal: badge.metal, sizeMm: badge.sizeMm, stats: badge.stats })
+        setBuilt({ patchId: patch.id, drawing: current, scene, metal: badge.metal, sizeMm: badge.sizeMm, stats: badge.stats })
         setPhase('ready')
       } catch (error) {
         console.error(error)
@@ -201,16 +209,32 @@ export const BadgeViewer = ({ patch, org, position, previous, next, onOpen, onCl
       }
     }, 30)
     return () => clearTimeout(timer)
-  }, [current, scene, mode, patch.id, patch.medium, patch.family, built?.patchId, built?.scene])
+  }, [current, scene, mode, patch.id, patch.medium, patch.family, built?.patchId, built?.drawing, built?.scene])
 
-  // Bend whenever the model or the curvature changes.
-  const ready = mode === 'metal' && phase === 'ready' && built?.patchId === patch.id && built.scene === scene && Boolean(scene)
-  const maxRise = ready && scene ? scene.maxRise(view.curvature) : 0
-  const rise = Math.min(view.rise, maxRise || view.rise)
+  // A built model is not exportable until its current requested curve has actually been applied.
+  const modelReady = mode === 'metal' && phase === 'ready' && built?.patchId === patch.id && built.drawing === current && built.scene === scene && Boolean(scene)
+  const maxRise = modelReady ? scene.maxRise(view.curvature) : 8
+  const shape = badgeShapeFor(view, maxRise)
+  const shapeStatus = modelReady ? badgeShapeStatus(bend, built, shape) : 'pending'
+  const ready = modelReady && shapeStatus === 'ready'
+  const applied = ready ? bend.result : null
+  const rise = shape.rise
+  exportCurrent.current = ready ? bend : null
   useEffect(() => {
-    if (!ready || !scene) return
-    try { setBend(scene.bend(view.curvature, rise)) } catch (error) { console.error(error) }
-  }, [ready, scene, view.curvature, rise])
+    if (!modelReady) return
+    const next = applyBadgeShape(built, { mode: shape.mode, rise: shape.rise })
+    if (next.error) console.error(next.error)
+    setBend(next)
+  }, [modelReady, built, shape.mode, shape.rise, bendAttempt])
+  useEffect(() => { setBend(null) }, [scene])
+
+  // A pending export belongs to one badge and shape. Navigating or changing either cancels its download.
+  useEffect(() => {
+    exportRequest.current = null
+    setExporting(null)
+    setExportError(null)
+  }, [patch.id, scene, mode, built, shape.mode, shape.rise])
+  useEffect(() => () => { exportRequest.current = null; exportCurrent.current = null }, [])
 
   useEffect(() => {
     const onKey = (event) => {
@@ -226,34 +250,40 @@ export const BadgeViewer = ({ patch, org, position, previous, next, onOpen, onCl
   const name = `${patch.id}-${org.id}`
   const variants = variantsOf(patch)
   const title = patch.variant ? `${cardLabel(patch)} — ${patch.variant}` : patch.label
-  const metal = built ? METALS[built.metal] : null
-  const curveLabel = CURVES.find((c) => c.value === view.curvature)?.label ?? 'Flat'
+  const metal = modelReady ? METALS[built.metal] : null
+  const leather = modelReady ? built.metal === 'leather' : /leather/i.test(patch.medium ?? '')
+  const curveLabel = CURVES.find((c) => c.value === applied?.mode)?.label ?? 'Flat'
 
-  const exportPng = async () => {
-    if (!ready) return
-    download(await scene.png(), `${name}-${built.metal}-${view.curvature}.png`)
-  }
-  const exportGlb = async () => {
-    if (!ready || exporting) return
-    setExporting(true)
+  const exportBadge = async (format) => {
+    if (!ready || exportRequest.current) return
+    const snapshot = bend
+    const request = {}
+    exportRequest.current = request
+    setExporting(format)
+    setExportError(null)
     try {
-      const blob = await scene.glb({
+      const blob = format === 'png' ? await scene.png() : await scene.glb({
         badge: patch.id,
         label: patch.label,
         organization: org.name,
         material: metal.name,
+        catalogueMedium: patch.medium,
         nominalLongerSideMm: NOMINAL_SIZE_MM,
         physicalMeasurements: false,
-        curvature: bend,
+        curvature: snapshot.result,
         engine: MEDAL_FORGE,
         drawingSha256: patch.sha256,
         limitations: 'Interpreted relief, size, finish and curvature; the reverse is generated, without fittings or marks.'
       })
-      download(blob, `${name}-${view.curvature}-${rise.toFixed(1)}mm.glb`)
+      if (exportRequest.current !== request || exportCurrent.current !== snapshot) return
+      download(blob, `${name}-${built.metal}-${snapshot.result.mode}-${snapshot.result.rise.toFixed(1)}mm.${format}`)
     } catch (error) {
-      console.error(error)
+      if (exportRequest.current === request && exportCurrent.current === snapshot) {
+        console.error(error)
+        setExportError(`The ${format.toUpperCase()} export could not be created. Try again or download the SVG.`)
+      }
     } finally {
-      setExporting(false)
+      if (exportRequest.current === request) { exportRequest.current = null; setExporting(null) }
     }
   }
 
@@ -261,7 +291,7 @@ export const BadgeViewer = ({ patch, org, position, previous, next, onOpen, onCl
     : phase === 'building' ? 'Building the badge…'
       : phase === 'failed-build' ? 'This badge couldn’t be built in 3D. The vector is a tab away.'
         : phase === 'failed-source' ? 'The drawing could not be loaded.'
-          : null
+          : modelReady && shapeStatus === 'pending' ? 'Applying the shape…' : null
   const modeSwitch = <Segmented ariaLabel="View" options={sources.length ? [...MODES, ...REVIEW_MODES] : MODES} value={mode} onChange={(value) => set({ mode: value })} compact />
   const sourcePane = {
     key: 'source',
@@ -294,7 +324,7 @@ export const BadgeViewer = ({ patch, org, position, previous, next, onOpen, onCl
       <div className="patch__body">
         <div className="patch__visuals">
           {mode === 'metal'
-            ? <MetalStage
+            ? <BadgeStage
                 sceneRef={sceneRef}
                 toolbar={modeSwitch}
                 status={status}
@@ -313,7 +343,9 @@ export const BadgeViewer = ({ patch, org, position, previous, next, onOpen, onCl
         <aside className="patch__panel">
           <h2>{cardLabel(patch)}</h2>
           <p className="patch__meta">{patch.medium} · {patch.quality}</p>
-          <p className="badge__preliminary">Preliminary 3D view: relief, size, finish and curve are modelling choices, not measurements.</p>
+          {mode === 'metal' && <p className="badge__preliminary">{leather
+            ? 'Shown as tooled leather from the catalogue attribution. Material, size, relief and curvature have not been measured from the specimen.'
+            : 'Illustrative 3D view: size, relief, finish and curvature are modelling choices, not measurements.'}</p>}
 
           {variants && (
             <div className="patch__variants">
@@ -325,44 +357,49 @@ export const BadgeViewer = ({ patch, org, position, previous, next, onOpen, onCl
               />
             </div>
           )}
-          <Segmented label="Shape" options={CURVES} value={view.curvature} onChange={(value) => set({ curvature: value })} compact />
-          <label className="patch__light">
-            <span>Rise</span>
-            <input
-              type="range" min="0" max="8" step="0.5"
-              value={view.rise}
-              disabled={view.curvature === 'flat'}
-              onChange={(event) => set({ rise: Number(event.target.value) })}
-              aria-valuetext={`${rise.toFixed(1)} millimetres`}
-            />
-            <output>{view.curvature === 'flat' ? '—' : `${rise.toFixed(1)} mm`}</output>
-          </label>
-          {ready && view.rise > maxRise && view.curvature !== 'flat' && <p className="patch__source">Held at {maxRise.toFixed(1)} mm, the most this badge’s width allows.</p>}
-          {(view.curvature !== BADGE_VIEW_DEFAULTS.curvature || view.rise !== BADGE_VIEW_DEFAULTS.rise) && (
-            <button type="button" className="button--inline patch__reset" onClick={() => set({ curvature: BADGE_VIEW_DEFAULTS.curvature, rise: BADGE_VIEW_DEFAULTS.rise })}>Reset the shape</button>
-          )}
+          {mode === 'metal' && <>
+            <Segmented label="Shape" options={CURVES} value={view.curvature} onChange={(value) => set({ curvature: value })} compact />
+            <label className="patch__light">
+              <span>Rise</span>
+              <input
+                type="range" min="0" max="8" step="0.5"
+                value={view.rise}
+                disabled={view.curvature === 'flat'}
+                onChange={(event) => set({ rise: Number(event.target.value) })}
+                aria-valuetext={`${rise.toFixed(1)} millimetres`}
+              />
+              <output>{view.curvature === 'flat' ? '—' : `${rise.toFixed(1)} mm`}</output>
+            </label>
+            {modelReady && view.rise > maxRise && view.curvature !== 'flat' && <p className="patch__source">Held at {maxRise.toFixed(1)} mm to keep the whole badge within the selected curve.</p>}
+            {(view.curvature !== BADGE_VIEW_DEFAULTS.curvature || view.rise !== BADGE_VIEW_DEFAULTS.rise) && (
+              <button type="button" className="button--inline patch__reset" onClick={() => set({ curvature: BADGE_VIEW_DEFAULTS.curvature, rise: BADGE_VIEW_DEFAULTS.rise })}>Reset the shape</button>
+            )}
 
-          {ready && (
-            <dl className="patch__facts">
-              <div><dt>Size</dt><dd>{Math.round(built.sizeMm.width)} × {Math.round(built.sizeMm.height)} mm</dd></div>
-              <div><dt>Finish</dt><dd>{metal.name}</dd></div>
-              <div><dt>Pieces</dt><dd>{built.stats.pieces}</dd></div>
-            </dl>
-          )}
-          {ready && (
-            <p className="patch__source">
-              {curveLabel === 'Flat' ? 'Flat' : `${curveLabel}, ${rise.toFixed(1)} mm rise${bend?.radius ? ` (radius ${Math.round(bend.radius)} mm)` : ''}`}.
-              The longer side is set to a nominal {NOMINAL_SIZE_MM} mm. {Math.round(built.stats.triangles).toLocaleString()} triangles.
-            </p>
-          )}
+            {ready && (
+              <dl className="patch__facts">
+                <div><dt>Nominal size</dt><dd>{Math.round(built.sizeMm.width)} × {Math.round(built.sizeMm.height)} mm</dd></div>
+                <div><dt>Finish</dt><dd>{metal.name}</dd></div>
+              </dl>
+            )}
+            {ready && (
+              <p className="patch__source">
+                {curveLabel === 'Flat' ? 'Flat' : `${curveLabel}, ${applied.rise.toFixed(1)} mm rise${applied.radius ? ` (radius ${Math.round(applied.radius)} mm)` : ''}`}.
+                The longer side is set to a nominal {NOMINAL_SIZE_MM} mm.
+              </p>
+            )}
+            {modelReady && shapeStatus === 'failed' && <p className="patch__status" role="alert">The selected curve could not be applied. Choose Flat or <button type="button" className="button--inline" onClick={() => setBendAttempt((n) => n + 1)}>retry the curve</button>. 3D exports are unavailable until the shape is applied.</p>}
+          </>}
 
           <div className="patch__exports">
-            <button type="button" className="button button--primary" disabled={!ready} onClick={exportPng} title="The view as it is now">PNG</button>
-            <button type="button" className="button" disabled={!ready || exporting} onClick={exportGlb} title="The model as it is bent now, in metres">{exporting ? 'GLB…' : 'GLB'}</button>
+            {mode === 'metal' && <>
+              <button type="button" className="button button--primary" disabled={!ready || Boolean(exporting)} onClick={() => exportBadge('png')} title="The view as it is now">{exporting === 'png' ? 'PNG…' : 'PNG'}</button>
+              <button type="button" className="button" disabled={!ready || Boolean(exporting)} onClick={() => exportBadge('glb')} title="The model as it is bent now, in metres">{exporting === 'glb' ? 'GLB…' : 'GLB'}</button>
+            </>}
             {current
               ? <a className="button" href={current.url} download={`${name}.svg`}>SVG</a>
               : <button type="button" className="button" disabled>SVG</button>}
           </div>
+          {exportError && <p className="patch__status" role="alert">{exportError}</p>}
           {(phase === 'failed-source' || (mode === 'metal' && phase === 'failed-build')) && (
             <p className="patch__status" role="alert">
               {phase === 'failed-source' ? 'The drawing could not be loaded.' : 'The 3D model could not be built.'} <button type="button" className="button--inline" onClick={() => setAttempt((n) => n + 1)}>Try again</button>
@@ -373,11 +410,12 @@ export const BadgeViewer = ({ patch, org, position, previous, next, onOpen, onCl
             <summary>How the badge is built</summary>
             <p>
               The drawing goes through the <a href={`${MEDAL_FORGE.repository}/tree/${MEDAL_FORGE.commit}`} target="_blank" rel="noreferrer">Medal Forge</a> geometry
-              core: every painted region is extruded and bevelled over a body that is the outline of the whole badge. Lettering
-              and the rim stand highest, lighter metal above darker, enamel just proud of the field, and dark fields lowest.
-              The illustration’s drawn shadows are left out; the lighting makes its own. The curve bends the whole object,
+              core: the silhouette, rim, lettering and emblems form layers of bevelled relief.
+              {leather ? ' Leather uses a matte finish and shallower tooling, following the catalogue attribution rather than a verified material measurement.' : ' Metal surfaces use raised lettering and emblems above a lower field, with enamel where the drawing records it.'}
+              {' '}The lighting makes its own shadows. The curve bends the whole object,
               front, back and sides, so it stays in the GLB.
             </p>
+            {modelReady && <p>{built.stats.pieces} modelled regions · {Math.round(applied?.triangles ?? built.stats.triangles).toLocaleString()} triangles.</p>}
             <p>
               The size, depths, finish and curvature are not measured from a specimen, and the reverse has no pin, clutch
               or maker’s marks. Fine detail in the drawing (letter shapes, the arms) is its reconstruction, not the die’s.

@@ -87,3 +87,47 @@ test('an impossible bend or an exhausted budget leaves the geometry untouched', 
   prepared.dispose()
   assert.equal(mesh.geometry, original)
 })
+
+test('advertised curvature limits are usable for tall, wide and thick badges', () => {
+  // The old dome limit used the diagonal as the rise. For a 15 × 65 badge it advertised
+  // 20.17 mm, although even the UI's 8 mm maximum cannot be solved over a 15 mm width.
+  for (const dimensions of [[15, 65, 2], [65, 15, 2], [58, 65, 2], [20, 20, 80]]) {
+    const root = new Group()
+    const mesh = new Mesh(new BoxGeometry(...dimensions), new MeshStandardMaterial())
+    root.add(mesh)
+    const prepared = new PreparedBadgeCurvature(root, { maxEdgeLength: 5 })
+    const flat = new Float32Array(mesh.geometry.getAttribute('position').array)
+    try {
+      assert.equal(prepared.maxRise('flat'), 0)
+      for (const mode of ['dome', 'cylinder', 'dome']) {
+        const limit = prepared.maxRise(mode)
+        assert.ok(Number.isFinite(limit) && limit > 0, `${dimensions}: ${mode} limit`)
+        assert.doesNotThrow(() => prepared.apply({ mode, rise: limit }), `${dimensions}: advertised ${mode} limit`)
+        assert.doesNotThrow(() => prepared.apply({ mode, rise: Math.min(8, limit) }), `${dimensions}: UI ${mode} limit`)
+        assert.ok(mesh.geometry.getAttribute('position').array.every(Number.isFinite))
+        prepared.apply({ mode: 'flat', rise: 0 })
+        assert.deepEqual(new Float32Array(mesh.geometry.getAttribute('position').array), flat)
+      }
+      if (dimensions[0] === 15) assert.ok(prepared.maxRise('dome') < prepared.maxRise('cylinder'))
+    } finally {
+      prepared.dispose()
+      mesh.geometry.dispose()
+      mesh.material.dispose()
+    }
+  }
+})
+
+test('curvature limits scale with the model dimensions', () => {
+  const limits = []
+  for (const scale of [1, 2]) {
+    const root = new Group()
+    const mesh = new Mesh(new BoxGeometry(15 * scale, 65 * scale, 2 * scale), new MeshStandardMaterial())
+    root.add(mesh)
+    const prepared = new PreparedBadgeCurvature(root, { maxEdgeLength: 5 * scale })
+    limits.push(['cylinder', 'dome'].map((mode) => prepared.maxRise(mode)))
+    prepared.dispose()
+    mesh.geometry.dispose()
+    mesh.material.dispose()
+  }
+  for (let i = 0; i < limits[0].length; i++) near(limits[1][i], limits[0][i] * 2)
+})
