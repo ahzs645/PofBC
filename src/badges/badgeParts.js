@@ -46,23 +46,27 @@ export function darken (hex, factor) {
  * shaded one dark, so the lighter of two overlapping pieces is the one on top.
  *
  * The reference photographs (S07, S21, S51, the S11 rangers, S01) show lettering, rims and emblems
- * struck well up from the field, about the depth of a letter's stroke; 0.5–0.65 mm at 65 mm.
+ * struck well up from the field, about the depth of a letter's stroke: lettering stands about
+ * 0.9 mm, the arms' boss and detail about 1.4 mm, at 65 mm.
  */
 export const PARTS = {
-  body: { thickness: 1.6, bevel: 0.12 },
+  // The body's edge is rounded front and back (a broad multi-segment bevel), so the border curves
+  // down to the badge's back rather than ending in a flat slab side.
+  body: { thickness: 1.2, bevel: 0.5, segments: 4 },
   ground: { thickness: 0.06, bevel: 0.02 },
   plate: { thickness: 0.1, bevel: 0.03 },
   recess: { thickness: 0.16, bevel: 0.01 },
   enamel: { thickness: 0.18, bevel: 0.015 },
-  detail: { thickness: 0.3, bevel: 0.05 },
-  emblem: { thickness: 0.38, bevel: 0.1 },
-  lettering: { thickness: 0.46, bevel: 0.14 },
-  rim: { thickness: 0.5, bevel: 0.16 },
+  detail: { thickness: 0.45, bevel: 0.07 },
+  emblem: { thickness: 0.56, bevel: 0.14 },
+  lettering: { thickness: 0.7, bevel: 0.2 },
+  rim: { thickness: 0.75, bevel: 0.22 },
   // The mass a struck emblem (the provincial arms, the dogwood) rises as, under its own line work.
-  boss: { thickness: 0.6, bevel: 0.2 },
+  boss: { thickness: 0.9, bevel: 0.28 },
   // The rolled edge: a band just inside the outline that curls up from the field and rounds over
-  // at the badge's edge, as the photographs' borders do. Its bevel is rounded (several segments).
-  edge: { thickness: 0.35, bevel: 0.32, widthMm: 1.05, segments: 4 }
+  // and down at the badge's edge, as the photographs' borders do. Its bevel is rounded (several
+  // segments), and its side runs on down into the body's rounded edge.
+  edge: { thickness: 0.9, bevel: 0.45, widthMm: 1.2, segments: 5 }
 }
 
 /** Parts struck up from the field, whose outlines get a sloped shoulder. */
@@ -113,7 +117,7 @@ const DARK_FIELD = (leather) => (leather ? { metalness: 0, roughness: 0.85 } : {
 export const GROUND_SHARE = 0.35
 
 /** Leather is thicker and its tooling shallower. */
-const LEATHER_BODY = { thickness: 2.4, bevel: 0.25 }
+const LEATHER_BODY = { thickness: 1.8, bevel: 0.5, segments: 4 }
 const LEATHER_RELIEF = 0.6
 
 /** '#abc', '#aabbcc' → { h (degrees), s, l } (0–1), or null for anything else. */
@@ -203,6 +207,7 @@ export function bodyFor (metal) {
     color: base.body,
     thickness: profile.thickness,
     bevel: profile.bevel,
+    bevelSegments: profile.segments,
     metalness: metal === 'leather' ? 0 : 1,
     roughness: base.satin
   }

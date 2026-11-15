@@ -40,7 +40,7 @@ scroll and a separate plaque, and a leather badge, so:
 - **Struck relief, as in the reference photographs.** The atlas snapshot holds a photograph of every
   badge (`dist/assets/sources/`). On most, the lettering, rim and emblem are struck up from the same
   metal as the field: polished high points with sloped shoulders over a darker, satin or oxidized
-  field. So raised parts stand 0.5–0.65 mm (lettering about 0.6 mm), each outline is inset by its
+  field. So raised parts stand high (lettering about 0.9 mm, the arms about 1.4 mm), each outline is inset by its
   bevel so the shoulder slopes from the drawn edge to a narrower top (thinner strokes get a smaller
   shoulder), fields are satin and darker than the polished relief, and the key light comes low from
   the upper left and casts shadows. On a silver badge the shadows and the finish are what show a
@@ -49,13 +49,14 @@ scroll and a separate plaque, and a leather badge, so:
   stand up as one sculpted mass, with their detail modelled on it, not as line work on the field.
   The drawings mark these (`data-component` …`-arms`, `five-petal-dogwood`), so each gets a boss:
   its outline with the gaps between its parts closed and everything inside filled, raised about
-  0.8 mm with a sloped shoulder, in a darker satin of the metal. The emblem's own pieces stand on
+  1.2 mm with a sloped shoulder, in a darker satin of the metal. The emblem's own pieces stand on
   it in drawing order, and an "engraved" emblem's plates (S18, S19) become its polished high points
   over the darker boss.
 - **A rolled edge.** The photographed metal badges have a raised, rounded border that curls up from
   the field and rolls over at the edge. Every metal badge gets one: a band about 1 mm wide inside
-  its outline, raised about 0.7 mm with a rounded (four-segment) bevel, polished. The textured
-  fields stop at it.
+  its outline, rising about 1.3 mm with a rounded bevel, polished, its side running on down into
+  the body, whose edge is itself rounded front and back, so the border curves down to the badge's
+  back rather than ending in a flat slab side. The textured fields stop at it.
 - **Struck field textures.** The drawings leave texture out, but the photographs show it: the early
   Park Ranger shields (S11, S12, S17, S20) have a pebbled field of close-set, irregular bumps about
   0.6–1.3 mm across, and the green-enamel ones (S14, S18) a fine frosted grain. Both leave a smooth

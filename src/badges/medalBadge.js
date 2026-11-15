@@ -212,19 +212,23 @@ function shoulder (rings, bevelMm, perMm) {
 function rolledEdge (outline, metal, perMm) {
   const { widthMm } = PARTS.edge
   const look = edgeFor(metal)
-  const offset = (rings, mm) => {
-    const o = new ClipperLib.ClipperOffset(2, 0.01 * perMm * SCALE)
-    o.AddPaths(rings, ClipperLib.JoinType.jtRound, ClipperLib.EndType.etClosedPolygon)
-    const out = []
-    o.Execute(out, mm * perMm * SCALE)
-    return out
-  }
   // The band, already narrowed by the bevel on both sides.
-  const outer = offset(outline, -look.bevel)
-  const inner = offset(outline, -(widthMm - look.bevel))
+  const outer = offsetRings(outline, -look.bevel, perMm)
+  const inner = offsetRings(outline, -(widthMm - look.bevel), perMm)
   const band = clip(ClipperLib.ClipType.ctDifference, outer, inner)
   if (!band.length) return []
-  return [{ kind: 'fill', paint: null, rings: band, caption: null, border: true, emblem: null, share: 0, ...look }]
+  // Its side starts where the body's rounded edge does, below the field, so the edge's profile runs
+  // from the lip's crown down the badge's side without a step.
+  return [{ kind: 'fill', paint: null, rings: band, caption: null, border: true, emblem: null, share: 0, base: -PARTS.body.bevel, ...look }]
+}
+
+/** Rings grown (mm > 0) or shrunk (mm < 0) by a distance in millimetres, with round joins. */
+function offsetRings (rings, mm, perMm) {
+  const o = new ClipperLib.ClipperOffset(2, 0.01 * perMm * SCALE)
+  o.AddPaths(rings, ClipperLib.JoinType.jtRound, ClipperLib.EndType.etClosedPolygon)
+  const out = []
+  o.Execute(out, mm * perMm * SCALE)
+  return out
 }
 
 /** The struck emblem (see EMBOSSED_COMPONENT) an element belongs to, or null. */
@@ -340,7 +344,10 @@ export function badgePieces (svgText, { medium = '', sizeMm = NOMINAL_SIZE_MM } 
     return { ...piece, share, ...look, ...shoulder(piece.rings, look.bevel, perMm) }
   })
   const edge = metal === 'leather' ? [] : rolledEdge(outline, metal, perMm)
-  return { metal, shadows, perMm, body: { rings: outline, ...bodyFor(metal) }, pieces: [...edge, ...withBosses(pieces, metal, perMm)] }
+  // The body's rounded bevel grows back out to the outline from rings inset by it.
+  const body = bodyFor(metal)
+  const bodyRings = offsetRings(outline, -body.bevel, perMm)
+  return { metal, shadows, perMm, body: { rings: bodyRings.length ? bodyRings : outline, ...body }, outline, pieces: [...edge, ...withBosses(pieces, metal, perMm)] }
 }
 
 /** The pieces as one flat SVG of plain paths, body first, in the order the engine will index them. */
@@ -390,13 +397,13 @@ function boundsOf (rings) {
  * a drawing point (X, Y) at ((X − cx) / perMm, −(Y − cy) / perMm) mm, about the centre of the
  * badge's outline; the texture's frame runs from the field's lower left, y up.
  */
-function texturedField ({ body, pieces, perMm }, name) {
+function texturedField ({ outline, pieces, perMm }, name) {
   const grounds = pieces.filter((p) => p.part === 'ground')
   if (!grounds.length) return null
   const fieldRings = grounds.flatMap((p) => p.rings)
   const raisedRings = pieces.filter((p) => p.part !== 'ground').flatMap((p) => p.rings)
   const f = boundsOf(fieldRings)
-  const o = boundsOf(body.rings)
+  const o = boundsOf(outline)
   const cx = (o.minX + o.maxX) / 2
   const cy = (o.minY + o.maxY) / 2
   const toFrame = (rings) => rings.map((ring) => ring.map((p) => [(p.X / SCALE - f.minX) / perMm, (f.maxY - p.Y / SCALE) / perMm]))
