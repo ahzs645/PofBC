@@ -155,7 +155,7 @@ const initialView = () => {
  */
 const writeView = (view) => {
   const url = salaryPlaceUrl(globalThis.location.href, {})
-  for (const key of ['view', 'year', 'node', 'logos', 'mark', 'internal', 'internal-logo', 'poster', 'sign', 'part', 'guide', 'page', 'org', 'patch', 'group', 'family', 'area', 'chapter', 'story']) url.searchParams.delete(key)
+  for (const key of ['view', 'year', 'node', 'mode', 'compare', 'undated', 'local', 'instrument', 'logos', 'mark', 'subject', 'coverage', 'identity-family', 'identity-state', 'identity-scope', 'identity-query', 'internal', 'internal-logo', 'poster', 'sign', 'part', 'guide', 'page', 'org', 'patch', 'group', 'family', 'area', 'chapter', 'story']) url.searchParams.delete(key)
   if (view !== 'generator') url.searchParams.set('view', view)
   writeHistory(url)
 }
@@ -208,16 +208,8 @@ export const App = () => {
   // its body from the address bar when it opens.
   // A body that no longer stands opens in a year it did, which the caller passes.
   const openInGovernment = (node, year) => {
-    const url = new URL(globalThis.location.href)
-    url.searchParams.delete('logos')
-    url.searchParams.delete('mark')
-    url.searchParams.set('view', 'government')
-    url.searchParams.set('node', node)
-    if (year) url.searchParams.set('year', String(year))
-    else url.searchParams.delete('year')
-    writeHistory(url)
-    setView('government')
-    setVisit((value) => value + 1)
+    // Use a fresh view URL: a prior related/compare mode must not strand a provincial node.
+    navigate({ view: 'government', node, ...(year ? { year } : {}) })
   }
   // The diagram hands a ministry over in the identity of the year it was looking at.
   const openInGenerator = ({ era, name }) => {

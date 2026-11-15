@@ -34,6 +34,7 @@ import { NameSearchResults } from './NameSearchResults.jsx'
 import { nameSearchTokens } from './nameSearch.js'
 import { employerMatcher } from './employerSearch.js'
 import { documentTitle, setDocumentMeta } from '../site/documentMeta.js'
+import { connectRelatedSalaryBodies } from '../government/relatedBodies.js'
 
 const CouncilPayView = lazy(() => import('./CouncilPayView.jsx'))
 const WorkforceView = lazy(() => import('./WorkforceView.jsx'))
@@ -162,8 +163,8 @@ const SalaryRecordsView = ({ onOpenGovernment, navigation }) => {
   const setSector = (value) => setPlace((current) => ({ ...current, sector: value }))
 
   useEffect(() => {
-    loadJson('salaries/people/index.json', { reload: loadVersion > 0 }).then(setIndex, () => setFailed(true))
-    loadJson('salaries/employers/index.json', { reload: loadVersion > 0 }).then(setEmployersIndex, () => setFailed(true))
+    loadJson('salaries/people/index.json', { reload: loadVersion > 0 }).then(connectRelatedSalaryBodies).then(setIndex, () => setFailed(true))
+    loadJson('salaries/employers/index.json', { reload: loadVersion > 0 }).then(connectRelatedSalaryBodies).then(setEmployersIndex, () => setFailed(true))
   }, [loadVersion])
 
   // The year filter is kept as a label, so a shared link survives older years being added.

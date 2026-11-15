@@ -1,29 +1,32 @@
-// A body's logos, where the gallery holds them as vectors: a few drawn here, each a link to its page
-// in Logos, and a link to the rest. A body with none — or only raster scans — shows no card.
+// Source vectors are previewed as before. Registered subjects also have a route to their evidence
+// and acquisition work when only raster specimens, shared identity or source leads are held.
 
 import { useEffect, useState } from 'react'
 import { SiteLink } from '../site/navigation.jsx'
 
 export const LogoCard = ({ node, theme }) => {
-  const [logos, setLogos] = useState(null)
+  const [record, setRecord] = useState(null)
 
   useEffect(() => {
     let live = true
-    setLogos(null)
-    import('../gallery/galleryLogos.js').then(({ logosFor }) => live && setLogos(logosFor(node.id, theme)), () => {})
+    setRecord(null)
+    Promise.all([import('../gallery/galleryLogos.js'), import('../gallery/identityCoverage.js')])
+      .then(([{ logosFor }, { identitySubjectById }]) => live && setRecord({ logos: logosFor(node.id, theme), subject: identitySubjectById(node.id) }), () => {})
     return () => { live = false }
   }, [node.id, theme])
 
-  if (!logos) return null
+  const logos = record?.logos
+  const subject = record?.subject
+  if (!logos && !subject) return null
   return (
     <section className="gov-card gov-logos" aria-labelledby="gov-logos-heading">
       <div className="gov-salaries__head">
-        <h2 id="gov-logos-heading" className="gov-card__heading">Logos</h2>
-        <SiteLink className="gov-salaries__open" to={{ view: 'gallery', logos: logos.collection }}>
+        <h2 id="gov-logos-heading" className="gov-card__heading">{logos ? 'Logos' : 'Identity collection'}</h2>
+        {logos && <SiteLink className="gov-salaries__open" to={{ view: 'gallery', logos: logos.collection }}>
           {logos.collections.length === 1 && logos.total > logos.entries.length ? `All ${logos.total} in Logos →` : 'Open in Logos →'}
-        </SiteLink>
+        </SiteLink>}
       </div>
-      <div className="gov-logos__grid">
+      {logos && <div className="gov-logos__grid">
         {logos.entries.map((entry) => (
           <SiteLink key={entry.id} className="gov-logos__tile" to={{ view: 'gallery', logos: entry.collection, mark: entry.id }} title={entry.label} aria-label={`${entry.label} in Logos`}>
             <span
@@ -35,7 +38,11 @@ export const LogoCard = ({ node, theme }) => {
             />
           </SiteLink>
         ))}
-      </div>
+      </div>}
+      {subject && <p className="gov-muted">
+        {!logos && <>{subject.stateLabel}. </>}
+        <SiteLink to={{ view: 'gallery', subject: subject.id }}>Identity, sources and collection gaps →</SiteLink>
+      </p>}
     </section>
   )
 }

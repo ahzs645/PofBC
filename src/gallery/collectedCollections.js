@@ -1,9 +1,14 @@
 // Downloaded artwork and supplied originals retain their own format and source.
 // A date on a report is a sighting, never an inferred logo adoption date.
 import { COLLECTED_BODIES, COLLECTED_SPECIMENS } from './collectedData.js'
+import { EXPANDED_IDENTITY_BODIES } from './expandedIdentityData.js'
 import { COLLECTED_DISPLAY } from './collectedDisplay.js'
 import { RAILWAY_HISTORY } from './railwayHistoryData.js'
 import { COLLECTED_PALETTES } from './collectedPalettes.js'
+
+// The historical Crown/health importer remains reproducible. Explicit identity subjects extend
+// its output without teaching that importer to mistake services or regional bodies for Crowns.
+export const ALL_COLLECTED_BODIES = [...COLLECTED_BODIES, ...EXPANDED_IDENTITY_BODIES]
 
 /**
  * The file a body's card shows: one with a display copy that keeps its own colours on the light
@@ -112,7 +117,9 @@ const collectedEntry = (asset, timeline, owner, versions = [asset]) => ({
   ...(COLLECTED_PALETTES[asset.id] ? { paletteGroup: COLLECTED_PALETTES[asset.id] } : {}),
   ...(versions.length > 1 ? { versions } : {}),
   identity: {
-    provenance: asset.reconstruction ? 'third_party_reconstruction' : asset.supplied ? 'original_supplied' : asset.isVector ? 'published_vector' : 'published_raster',
+    provenance: asset.reconstruction ? 'third_party_reconstruction' : asset.supplied ? 'original_supplied'
+      : asset.isVector && ['native-pdf-vector-extraction', 'official-vector-master-conversion', 'official-inline-vector-extraction'].includes(asset.evidenceType)
+        ? 'extracted_from_official_vector' : asset.isVector ? 'published_vector' : 'published_raster',
     fidelity: 'source compared',
     fidelityNote: asset.fidelityNote,
     applicability: {
@@ -132,8 +139,13 @@ const collectedEntry = (asset, timeline, owner, versions = [asset]) => ({
   },
 })
 
-const BODIES = new Map(COLLECTED_BODIES.map((body) => [body.id, body]))
-const kindOf = (body) => body.kind === 'health-authority' ? 'health organization' : 'Crown corporation'
+const BODIES = new Map(ALL_COLLECTED_BODIES.map((body) => [body.id, body]))
+const kindOf = (body) => ({
+  'health-authority': 'health organization', 'crown-corporation': 'Crown corporation',
+  'regional-authority': 'regional authority', 'service-brand': 'service identity',
+  'public-institution': 'public institution', 'regional-body': 'regional public body',
+  'independent-office': 'independent office'
+}[body.kind] ?? body.kind?.replace(/-/g, ' ') ?? 'public identity')
 
 /** A body's collected files as gallery entries. */
 export const collectedEntriesOf = (bodyId) => designsOf(BODIES.get(bodyId)?.assets ?? [])
@@ -146,11 +158,12 @@ export const specimenEntriesOf = (program, timeline) => designsOf(COLLECTED_SPEC
 const collectionOf = (body) => ({
   id: `collected-${body.id}`,
   shelf: 'bodies',
-  graphNode: body.id,
+  // Service brands can have artwork without a corresponding legal organization in the atlas.
+  graphNode: Object.hasOwn(body, 'graphNode') ? body.graphNode : body.id,
   fileCollection: true,
   label: body.shortName || body.name,
   body: `${body.current ? 'Current' : 'Former'} ${kindOf(body)}`,
-  years: `${body.from ?? '?'}–${body.current ? 'present' : body.to ?? '?'}`,
+  years: body.from == null && body.to == null ? 'Dates unestablished' : `${body.from ?? '?'}–${body.current ? 'present' : body.to ?? '?'}`,
   // The body's own account where it has one; that its years are not its logos' is said on each card
   // (“Seen …”) and under About.
   intro: body.notes || 'Collected artwork, with its source recorded for each file.',
@@ -264,9 +277,9 @@ const HELD_LINES = LINES.filter((line) => line.every((id) => BODIES.get(id)?.ass
 const IN_A_LINE = new Set(HELD_LINES.flat())
 
 export const COLLECTED_COLLECTIONS = [
-  ...COLLECTED_BODIES.filter((body) => body.assets.length && !IN_A_LINE.has(body.id)).map(collectionOf),
+  ...ALL_COLLECTED_BODIES.filter((body) => body.assets.length && !IN_A_LINE.has(body.id)).map(collectionOf),
   ...HELD_LINES.map(lineCollection)
-].sort((a, b) => COLLECTED_BODIES.findIndex((body) => body.id === a.graphNode) - COLLECTED_BODIES.findIndex((body) => body.id === b.graphNode))
+].sort((a, b) => ALL_COLLECTED_BODIES.findIndex((body) => `collected-${body.id}` === a.id) - ALL_COLLECTED_BODIES.findIndex((body) => `collected-${body.id}` === b.id))
 
 /** The bodies a collection holds the logos of: its own, and those of any names it went by before. */
 export const nodesOf = (collection) => collection.graphNodes ?? (collection.graphNode ? [collection.graphNode] : [])
@@ -283,7 +296,7 @@ export const SPECIMEN_COLLECTIONS = COLLECTED_SPECIMENS.map(({ program, assets }
   entries: designsOf(assets).map(({ asset, versions }) => collectedEntry(asset, program, undefined, versions))
 }))
 
-export const COLLECTION_RESEARCH = new Map(COLLECTED_BODIES.map((body) => [body.id, body]))
+export const COLLECTION_RESEARCH = new Map(ALL_COLLECTED_BODIES.map((body) => [body.id, body]))
 
 export const researchLabel = (record) => {
   if (record?.status === 'source-found') return 'Source located · artwork wanted'

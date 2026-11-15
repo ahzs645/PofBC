@@ -1,4 +1,7 @@
-// How the collecting shelf's list is read out of the government atlas (scripts/build-collecting.mjs).
+// The original automatic Crown/health register (scripts/build-collecting.mjs). These two kinds
+// define this legacy import, not gallery eligibility: identitySubjects.js explicitly selects
+// regional bodies, agencies, officers, institutions and services. identityCoverage.js combines
+// both registers and derives evidence states from actual artwork.
 
 export const COLLECTED_KINDS = ['crown-corporation', 'health-authority']
 
