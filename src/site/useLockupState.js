@@ -9,6 +9,54 @@ import { codeForName } from './ministryLink.js'
 import { readConfigParam } from './configFormat.js'
 import { decodeShare, readShareToken } from './shareLink.js'
 
+/** The viewing surface and contrast of the parts actually present in the selected artwork. */
+export const getPreviewAppearance = (state) => {
+  const background = state.era === 'document'
+    ? state.documentBackground
+    : state.era === 'current'
+      ? state.currentBackground
+      : state.era === 'flag'
+        ? state.flagBackground
+        : state.era === 'crest'
+          ? state.crestBackground
+          : state.background
+  const isTransparent = resolveColor(background, TRANSPARENT) === TRANSPARENT
+  const ink = state.era === 'document'
+    ? { mark: state.documentMarkColor, text: state.linkColors ? state.documentMarkColor : state.documentTextColor }
+    : state.era === 'flag'
+      ? { mark: state.flagMarkColor, text: state.linkColors ? state.flagMarkColor : state.flagTextColor }
+      : state.era === 'crest'
+        ? { mark: state.crestMarkColor, text: state.linkColors ? state.crestMarkColor : state.crestTextColor }
+        : { mark: state.markColor, text: state.textColor }
+  const hasText = state.era !== 'document' || state.documentLayout !== 'emblem'
+
+  const against = (surface) => {
+    const mark = describeContrast(ink.mark, surface)
+    // Arms alone retains the lettering settings for the next heading, but that absent lettering
+    // must not trigger a contrast warning or choose a dark surface for otherwise black arms.
+    if (!hasText) return { ...mark, part: 'mark', differs: false }
+    const text = describeContrast(ink.text, surface)
+    const worst = (mark.ratio ?? Infinity) <= (text.ratio ?? Infinity) ? mark : text
+    return { ...worst, part: worst === mark ? 'mark' : 'text', differs: mark.ratio !== text.ratio }
+  }
+  const contrast = isTransparent
+    ? [
+        { surface: 'On white', ...against(BRAND_COLORS.white) },
+        { surface: 'On black', ...against(BRAND_COLORS.black) }
+      ]
+    : [{ surface: 'Against the background', ...against(background) }]
+
+  // The current identity takes its ink from the published colourway. Other identities use their
+  // visible colours; Auto has no effect on exported artwork or its requested background.
+  const inkIsLight = state.era === 'current'
+    ? ['reverse', 'white'].includes(state.currentVariant)
+    : isLightColor(ink.mark) || (hasText && isLightColor(ink.text))
+  const backdrop = state.backdrop !== 'auto'
+    ? state.backdrop
+    : isTransparent && inkIsLight ? 'dark' : 'light'
+  return { background, isTransparent, contrast, backdrop }
+}
+
 export const useLockupState = () => {
   const [state, setState] = useState(DEFAULTS)
 
@@ -57,15 +105,9 @@ export const useLockupState = () => {
   // Everything an export needs, for each identity.
   // Each era draws on its own background, so everything downstream — preview, export, backdrop,
   // contrast — reads it from here rather than reaching for state.background directly.
-  const background = state.era === 'document'
-    ? state.documentBackground
-    : state.era === 'current'
-    ? state.currentBackground
-    : state.era === 'flag'
-      ? state.flagBackground
-      : state.era === 'crest'
-        ? state.crestBackground
-        : state.background
+  const { background, isTransparent, contrast, backdrop } = useMemo(
+    () => getPreviewAppearance(state), [state]
+  )
 
   const lockup = useMemo(() => ({
     era: state.era,
@@ -116,61 +158,6 @@ export const useLockupState = () => {
     padding: clearSpacePadding(state.clearSpace),
     markAlign: state.markAlign
   }), [state, background])
-
-  const isTransparent = resolveColor(background, TRANSPARENT) === TRANSPARENT
-
-  /**
-   * How the lockup reads.
-   *
-   * A transparent export has no background of its own, so the honest answer is not one number but
-   * two: it is going to land on something, and light and dark surfaces give opposite results. The
-   * worse of the mark and the type is reported for each, since a lockup is only as legible as its
-   * least legible half.
-   */
-  // Each era has its own pair, so the readout has to measure the one on screen.
-  const ink = state.era === 'document'
-    ? { mark: state.documentMarkColor, text: state.linkColors ? state.documentMarkColor : state.documentTextColor }
-    : state.era === 'flag'
-    ? { mark: state.flagMarkColor, text: state.linkColors ? state.flagMarkColor : state.flagTextColor }
-    : state.era === 'crest'
-      ? { mark: state.crestMarkColor, text: state.linkColors ? state.crestMarkColor : state.crestTextColor }
-      : { mark: state.markColor, text: state.textColor }
-
-  const contrast = useMemo(() => {
-    const against = (surface) => {
-      const mark = describeContrast(ink.mark, surface)
-      const text = describeContrast(ink.text, surface)
-      const worst = (mark.ratio ?? Infinity) <= (text.ratio ?? Infinity) ? mark : text
-      return { ...worst, part: worst === mark ? 'mark' : 'text', differs: mark.ratio !== text.ratio }
-    }
-
-    return isTransparent
-      ? [
-          { surface: 'On white', ...against(BRAND_COLORS.white) },
-          { surface: 'On black', ...against(BRAND_COLORS.black) }
-        ]
-      : [{ surface: 'Against the background', ...against(background) }]
-  }, [ink.mark, ink.text, background, isTransparent])
-
-  /**
-   * The preview surface.
-   *
-   * On 'auto' this follows the artwork: a white lockup on a transparent background is invisible on
-   * a light page, which is the one case where the preview actively misleads. Flipping the surface
-   * dark is the fix, and it is the answer to "what happens if this lands on white" too — the
-   * contrast readout above says so in numbers, this shows it.
-   */
-  const backdrop = useMemo(() => {
-    if (state.backdrop !== 'auto') return state.backdrop
-
-    // The current era's ink is decided by the colourway, not by a colour field: reverse and solid
-    // white are the two drawn for dark surfaces, so they are the ones that vanish on a light page.
-    const inkIsLight = state.era === 'current'
-      ? ['reverse', 'white'].includes(state.currentVariant)
-      : isLightColor(ink.mark) || isLightColor(ink.text)
-
-    return isTransparent && inkIsLight ? 'dark' : 'light'
-  }, [state.backdrop, state.era, state.currentVariant, ink.mark, ink.text, isTransparent])
 
   const swapColors = useCallback(() => setState(swapColours), [])
 

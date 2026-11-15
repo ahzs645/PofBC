@@ -1,0 +1,145 @@
+{
+  "candidateCommit": "d3e4fbf55538e3991179a9868496dcf2e28a68c5",
+  "targetId": "museum-report-1960",
+  "coordinateUnits": "Native reference crop pixels, except unscaled candidate bounds in SVG units",
+  "referenceInkBoxHalfOpen": [
+    10,
+    15,
+    218,
+    189
+  ],
+  "referenceInkDimensionsPx": [
+    208,
+    174
+  ],
+  "candidateInkBoxSvgUnitsHalfOpen": [
+    15.75,
+    15.5,
+    877.0,
+    984.25
+  ],
+  "candidateInkDimensionsSvgUnits": [
+    861.25,
+    968.75
+  ],
+  "uniformScale": 0.17961290322580645,
+  "translation": [
+    33.82529032258064,
+    12.216000000000001
+  ],
+  "rotationDegrees": 0,
+  "candidateMappedInkBoxHalfOpen": [
+    36.65419354838709,
+    15.0,
+    191.34580645161287,
+    189.0
+  ],
+  "candidateMappedInkDimensionsPx": [
+    154.69161290322577,
+    174.0
+  ],
+  "candidateWidthFractionAtEqualHeight": 0.7437096774193548,
+  "thresholdSensitivity": [
+    {
+      "threshold": 150,
+      "referenceInkBoxHalfOpen": [
+        11,
+        18,
+        218,
+        189
+      ],
+      "candidateWidthFractionAtEqualHeight": 0.7344179523141654
+    },
+    {
+      "threshold": 170,
+      "referenceInkBoxHalfOpen": [
+        11,
+        16,
+        218,
+        189
+      ],
+      "candidateWidthFractionAtEqualHeight": 0.7430076359669628
+    },
+    {
+      "threshold": 190,
+      "referenceInkBoxHalfOpen": [
+        10,
+        16,
+        218,
+        189
+      ],
+      "candidateWidthFractionAtEqualHeight": 0.7394354838709678
+    },
+    {
+      "threshold": 200,
+      "referenceInkBoxHalfOpen": [
+        10,
+        15,
+        218,
+        189
+      ],
+      "candidateWidthFractionAtEqualHeight": 0.7437096774193548
+    },
+    {
+      "threshold": 210,
+      "referenceInkBoxHalfOpen": [
+        10,
+        15,
+        218,
+        189
+      ],
+      "candidateWidthFractionAtEqualHeight": 0.7437096774193548
+    }
+  ],
+  "nativeComparisons": [
+    {
+      "id": "mining-1954-cover",
+      "cropDimensionsPx": [
+        225,
+        185
+      ],
+      "inkBoxHalfOpen": [
+        11,
+        22,
+        203,
+        169
+      ],
+      "inkDimensionsPx": [
+        192,
+        147
+      ],
+      "luminanceThreshold": 110
+    },
+    {
+      "id": "mining-1954-title",
+      "cropDimensionsPx": [
+        200,
+        180
+      ],
+      "inkBoxHalfOpen": [
+        13,
+        18,
+        186,
+        164
+      ],
+      "inkDimensionsPx": [
+        173,
+        146
+      ],
+      "luminanceThreshold": 140
+    }
+  ],
+  "interpretation": "Difference in full drawing proportions, including scroll tails; not an authenticity score or a claim that these are the same engraving.",
+  "software": {
+    "PyMuPDF": "1.26.6",
+    "Pillow": "13.0.0",
+    "NumPy": "2.3.5"
+  },
+  "inputChecks": [
+    "Frozen candidate hash",
+    "Native cover hash",
+    "Target crop hash and exact pixel reproduction",
+    "Both 1954 PDF hashes",
+    "Both 1954 crop hashes and exact pixel reproduction"
+  ]
+}

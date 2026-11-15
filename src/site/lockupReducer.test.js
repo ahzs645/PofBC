@@ -72,6 +72,53 @@ test('unlinking lets the two diverge, and relinking resolves to the mark', () =>
   assert.equal(applyUpdate(split, { linkColors: true }).textColor, '#006837')
 })
 
+test('relinking another identity preserves the historic palette and its independent lettering on return', () => {
+  const historic = run([
+    { era: 'document' },
+    { linkColors: false },
+    { documentMarkColor: '#000000', documentTextColor: '#9f1d21' }
+  ])
+  const arms = applyUpdate(historic, { era: 'crest' })
+  assert.equal(arms.linkColors, true, 'an unvisited identity keeps its default link')
+  const relinked = applyUpdate(arms, { linkColors: true })
+  assert.equal(relinked.documentTextColor, '#9f1d21', 'inactive lettering is never overwritten')
+  const returned = applyUpdate(relinked, { era: 'document' })
+  assert.equal(returned.linkColors, false, 'the independent lettering is still shown')
+  assert.equal(returned.documentMarkColor, '#000000')
+  assert.equal(returned.documentTextColor, '#9f1d21')
+  assert.equal(applyUpdate(returned, { documentMarkColor: '#234075' }).documentTextColor, '#9f1d21')
+})
+
+test('relinking Historic changes only its own lettering', () => {
+  const separate = {
+    ...DEFAULTS,
+    era: 'document', linkColors: false,
+    documentMarkColor: '#123456', documentTextColor: '#abcdef',
+    textColor: '#e3a82b', flagTextColor: '#9f1d21', crestTextColor: '#006837'
+  }
+  const relinked = applyUpdate(separate, { linkColors: true })
+  assert.equal(relinked.documentTextColor, '#123456')
+  for (const field of ['textColor', 'flagTextColor', 'crestTextColor']) {
+    assert.equal(relinked[field], separate[field], field)
+  }
+})
+
+test('a restored historic share keeps its link choice after another identity is edited', () => {
+  const restored = applyShare(DEFAULTS, {
+    era: 'document', documentLayout: 'government', linkColors: false,
+    documentMarkColor: '#000000', documentTextColor: '#9f1d21'
+  })
+  const returned = run([
+    { era: 'historical' },
+    { linkColors: true, markColor: '#006837' },
+    { era: 'document' }
+  ], restored)
+  assert.equal(returned.documentLayout, 'government')
+  assert.equal(returned.linkColors, false)
+  assert.equal(returned.documentTextColor, '#9f1d21')
+  assert.equal(returned.textColor, '#006837', 'the other identity still accepted its own edit')
+})
+
 // ── Swapping ──────────────────────────────────────────────────────────────────────────────────────
 
 test('swapping exchanges the ink and the background', () => {

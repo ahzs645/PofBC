@@ -1,0 +1,92 @@
+{
+  "schemaVersion": 1,
+  "reviewedOn": "2026-11-14",
+  "status": "Measured comparison and partial structural study; not a verified historical engraving",
+  "candidate": {
+    "commit": "d3e4fbf55538e3991179a9868496dcf2e28a68c5",
+    "file": "candidate-provisional.svg",
+    "sha256": "78ffebf761c67a49a015030fb1925489085e79397afe7f78d955eacb6ca479fb",
+    "renderer": "src/documentArms/renderDocumentArmsSvg.js",
+    "rendererOptions": {"layout": "emblem", "markColor": "#000000", "clearSpaceFactor": 0},
+    "geometrySha256": "4088e448a82160533603140b5c15d9e5e109710410586b98ad6f64ccfd1fc532",
+    "status": "Existing generated-master conversion shared with the 1919 cardboard plate; not authenticated against the chosen specimen"
+  },
+  "target": {
+    "id": "museum-report-1960",
+    "catalogueNumber": 14,
+    "title": "Provincial Museum of Natural History and Anthropology, Report for the Year 1960",
+    "sourceUrl": "https://rbcm.ca/wp-content/uploads/2025/07/annual_report_1960.pdf#page=1",
+    "sourcePdfSha256": "a392cb514522f4b6f0568d9efcd456eeb49c22aa53b9a4eafdb36d81a6c7b679",
+    "page": 1,
+    "reportYear": 1960,
+    "imprintYear": 1961,
+    "imprintEvidencePage": 36,
+    "engravingDate": null,
+    "artist": null,
+    "family": "domed-crown-long-scroll",
+    "nativePageImage": "reference/museum-report-1960-cover.jpg",
+    "nativePageImageSha256": "97753cdabe82a1ea009c1b400624459f3c48f28e163b3430f4ad623bac47133a",
+    "nativePageImageDimensions": [2179, 3162],
+    "pdfImageXref": 254,
+    "nativeCropBoxHalfOpen": [1130, 1550, 1360, 1755],
+    "crop": "reference/museum-report-1960-native.png",
+    "cropSha256": "4dcfdc7ebef695ef7f29f73da781c4880eea98a597c0dd3fd958cb8d7b4d7569",
+    "treatment": "Native embedded JPEG extracted from the PDF without resampling; rectangular crop only. Enlarged views do not add source detail."
+  },
+  "comparisonSources": [
+    {
+      "id": "mining-1954-cover",
+      "title": "Mining in British Columbia, cover",
+      "sourceUrl": "https://cmscontent.nrs.gov.bc.ca/geoscience/publicationcatalogue/Miscellaneous/BCGS_MP-46.pdf#page=1",
+      "sourcePdf": "../document-arms-2026-11-14/reference/mining-bc-1954.pdf",
+      "sourcePdfSha256": "62a96923d795664993e09900335f9737b78187ad1beccdd930944b62671c0beb",
+      "page": 1,
+      "imprintYear": 1954,
+      "nativePageImageDimensions": [1473, 2087],
+      "nativeCropBoxHalfOpen": [615, 1410, 840, 1595],
+      "crop": "reference/mining-1954-cover-native.png",
+      "cropSha256": "44077f12bfac2d7d53686b924008c1f89a15da1198c2081d598efd3be48319ae",
+      "measurementLuminanceThreshold": 110,
+      "assessment": "Separate, broader drawing; strong external outlines but merged small details and grey paper. Not the same specimen as the title page."
+    },
+    {
+      "id": "mining-1954-title",
+      "title": "Mining in British Columbia, title page",
+      "sourceUrl": "https://cmscontent.nrs.gov.bc.ca/geoscience/publicationcatalogue/Miscellaneous/BCGS_MP-46.pdf#page=2",
+      "sourcePdf": "../document-arms-2026-11-14/reference/mining-bc-1954.pdf",
+      "sourcePdfSha256": "62a96923d795664993e09900335f9737b78187ad1beccdd930944b62671c0beb",
+      "page": 2,
+      "imprintYear": 1954,
+      "nativePageImageDimensions": [1472, 2092],
+      "nativeCropBoxHalfOpen": [620, 1430, 820, 1610],
+      "crop": "reference/mining-1954-title-native.png",
+      "cropSha256": "070f7ae7ee901803cf5ae6dd340418a178ecb38974bf6eac325e04e4bb133dde",
+      "measurementLuminanceThreshold": 140,
+      "assessment": "Similar broad domed-crown/long-scroll structure, but smaller and darker than the 1960 specimen. Identical engraving is not established."
+    }
+  ],
+  "registration": {
+    "coordinateSystem": "Native target crop pixels; top-left origin; half-open bounds",
+    "referenceInkLuminanceThreshold": 200,
+    "thresholdSensitivity": [150, 170, 190, 200, 210],
+    "candidateRasterScale": 4,
+    "candidateAlphaThreshold": 127,
+    "method": "Uniformly match the measured full ink height, then align ink bounding-box centres. No rotation, anisotropic scaling, warping, separate part fitting, or automatic feature optimisation.",
+    "rotationDegrees": 0,
+    "physicalScaleClaim": false,
+    "limitation": "This is a common visual scale, not identical physical printed size. Full-width difference includes the source's projecting scroll tails. Fine line and pixel-overlap scores would be misleading for different engravings at this resolution."
+  },
+  "overlay": {
+    "sourceColour": "#007c91",
+    "candidateColour": "#b3296d",
+    "candidateOpacity": 0.66,
+    "sourceTone": "Per-pixel alpha = clip((245 - grayscale) / 160, 0, 1). Analytical tint only; original crop is also shown unchanged.",
+    "purpose": "Show broad geometry mismatches; not an artwork source or similarity score"
+  },
+  "structuralStudy": {
+    "file": "museum-1960-structure.svg",
+    "method": "Manually constructed Bezier curves and line segments in native-crop coordinates, grouped by visible crown envelope, shield sides and motto-scroll structure. No automatic tracing and no reused generated-master anatomy.",
+    "unresolved": ["Lion and its crown", "Stag and antlers", "Ram and horns", "Fine crown ornament", "Union Flag and small shield crown", "Sun rays and waves", "Hatching", "Motto lettering", "Historical heading typefaces"],
+    "scope": "Partial structural scaffold only. Its visible-contour estimates require revision from a better scan; do not present it as a finished coat of arms."
+  }
+}

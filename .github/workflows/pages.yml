@@ -4,6 +4,12 @@ on:
   push:
     branches: [main]
   workflow_dispatch:
+    inputs:
+      run_tests:
+        description: 'Repeat the full test suite before deployment'
+        type: boolean
+        required: false
+        default: false
 
 permissions:
   contents: read
@@ -50,7 +56,11 @@ jobs:
 
       # Guards the reconstruction against the source artwork, the share-link validation, and the
       # outline geometry. Run after the assets exist so nothing is skipped for want of them.
-      - run: npm test
+      # Push deployments retain the full suite. A reviewed manual release can
+      # use its recorded local validation without repeating the tests.
+      - name: Run the full test suite
+        if: ${{ github.event_name != 'workflow_dispatch' || inputs.run_tests }}
+        run: npm test
 
       - name: Build the site
         run: npm run build

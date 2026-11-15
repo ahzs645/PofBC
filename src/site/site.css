@@ -201,9 +201,12 @@ a { color: inherit; text-underline-offset: 2px; }
 
 .layout {
   display: grid;
+  grid-template-columns: minmax(0, 1fr);
   gap: var(--gap);
   align-items: start;
 }
+
+.layout > .stage, .layout > .controls { min-width: 0; }
 
 @media (min-width: 900px) {
   .layout {
@@ -335,8 +338,9 @@ a { color: inherit; text-underline-offset: 2px; }
 /* Five identities share a row: each button takes its label's width, so none breaks onto two lines. */
 .segmented[aria-label='Identity'] button { flex: 1 1 auto; white-space: nowrap; padding-inline: 6px; }
 /* The four headings are too long for one row, even in the desktop panel, so they sit two by two. */
-.document-arms-panel > .field:first-of-type .segmented { display: grid; grid-template-columns: repeat(2, 1fr); }
-.document-arms-panel .segmented button { white-space: nowrap; }
+.document-arms-panel > .field:first-of-type .segmented { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.document-arms-panel .segmented { flex-wrap: wrap; }
+.export-panel .segmented { flex-wrap: wrap; }
 .segmented[aria-label='Identity'] { flex-wrap: wrap; }
 .document-arms-reference { margin: 16px 4px 0; color: var(--ink-muted); font-size: 13px; line-height: 1.5; }
 .document-arms-reference__status { color: var(--ink); font-weight: 600; margin-bottom: 4px; }
@@ -344,6 +348,22 @@ a { color: inherit; text-underline-offset: 2px; }
 .document-arms-reference figure { margin: 12px 0 0; }
 .document-arms-reference img { display: block; width: 100%; max-height: 220px; object-fit: contain; background: #fff; border-radius: 6px; }
 .document-arms-reference figcaption { margin-top: 8px; font-size: 12px; }
+.document-arms-source { margin-top: 16px; padding: 16px; border-radius: var(--radius); background: var(--surface); }
+.document-arms-source__controls { display: grid; gap: 8px; min-width: 0; margin-top: 16px; }
+.document-arms-source__controls label { color: var(--ink); font-weight: 600; }
+.document-arms-source__controls select { width: 100%; min-width: 0; max-width: 100%; color: var(--ink); background: var(--surface); border: 1px solid var(--mid); border-radius: var(--radius-sm); padding: 8px; font: inherit; }
+.document-arms-source__view { display: flex; flex-wrap: wrap; gap: 6px; }
+.document-arms-source__view button[aria-pressed='true'] { background: var(--accent); color: var(--accent-ink); }
+.document-arms-source__view button[aria-pressed='true']:hover:not(:disabled) { background: var(--accent); color: var(--accent-ink); }
+.document-arms-source__record { min-width: 0; overflow-wrap: anywhere; }
+.document-arms-source__status { color: var(--ink); font-weight: 600; margin: 16px 0 2px; }
+.document-arms-source__date { margin: 0; }
+.document-arms-source figure[data-whole-page] img { max-height: 520px; }
+.document-arms-source [data-specimen='official-1906'] img { width: 200px; max-width: 100%; height: auto; margin-inline: auto; }
+.document-arms-source__note { margin: 16px 0 0; padding-top: 12px; border-top: 1px solid var(--outline); font-size: 12px; }
+/* A full source page can make the Historic column taller than the viewport. Let it scroll
+   naturally so every source control and caption stays reachable. */
+.stage:has(.document-arms-reference) { position: static; }
 .document-arms-evidence { margin-top: 20px; font-size: 13px; line-height: 1.5; }
 .document-arms-evidence ul { padding-left: 18px; }
 .document-arms-evidence li + li { margin-top: 8px; }

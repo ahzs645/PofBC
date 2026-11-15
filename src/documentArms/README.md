@@ -26,9 +26,12 @@ SVG carries the caveat, source paths, source checksums and font choices in its
 | `split-blackletter` | British / Columbia | UnifrakturMaguntia Book |
 
 The historical typefaces have **not** been identified. The fonts are modern open-font
-stand-ins. The last layout follows the supplied crown-grant heading, whose date has
-not been established. Its blackletter face is a deliberate study choice, not a claim
-that that face appeared in the source.
+stand-ins. The last layout follows the supplied crown-grant map heading, now matched
+to page 4 of OIC 1121/1978, approved 4 May 1978. This dates its occurrence in the order
+file; the map sheet's creation date and the original grant's issue date remain
+unestablished. Its blackletter face is a deliberate study choice, not a claim that
+that face appeared in the source. See the
+[source-identification follow-up](../../research/identity/document-arms-2026-11-14/README.md).
 
 Noto Serif and Barlow Condensed are the existing pinned `@fontsource` dependencies.
 The unmodified UnifrakturMaguntia source font is held under `fonts/unifrakturmaguntia/`
