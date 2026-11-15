@@ -1,0 +1,80 @@
+{
+  "engine": "Medal Forge a6da89fc2a9416a0651a6db113e8a2a741e6a2ae",
+  "finalAdapter": {
+    "heightMm": 65,
+    "physicalMeasurements": false,
+    "profiles": {
+      "body": {
+        "thickness": 1.8,
+        "zOffset": -1.8,
+        "bevel": 0.1,
+        "color": "#382f20",
+        "roughness": 0.8,
+        "metalness": 0.65
+      },
+      "rim": {
+        "thickness": 0.42,
+        "zOffset": 0.08,
+        "bevel": 0.045,
+        "color": "#c39e5e",
+        "roughness": 0.25,
+        "metalness": 1
+      },
+      "lettering": {
+        "thickness": 0.38,
+        "zOffset": 0.08,
+        "bevel": 0.035,
+        "color": "#caa463",
+        "roughness": 0.27,
+        "metalness": 1
+      },
+      "emblem": {
+        "thickness": 0.32,
+        "zOffset": 0.08,
+        "bevel": 0.035,
+        "color": "#bb9759",
+        "roughness": 0.34,
+        "metalness": 1
+      },
+      "detail": {
+        "thickness": 0.23,
+        "zOffset": 0.08,
+        "bevel": 0.018,
+        "color": "#b79255",
+        "roughness": 0.38,
+        "metalness": 1
+      }
+    },
+    "curvature": "None in engine adapter; apply shared post-generation bend to all layers.",
+    "preparation": {
+      "removedShadowGroups": 0,
+      "expandedStrokes": 45,
+      "expandedContours": 48,
+      "bodyExtendedToOuterRim": true,
+      "preparation": "Original filled curves retained; SVG strokes expanded to closed filled contours using clipper-lib 6.4.2.",
+      "strokeSampling": 24,
+      "strokeArcToleranceSvgUnits": 0.015,
+      "strokeCleanupToleranceSvgUnits": 0.02
+    },
+    "filledSvgShapes": 102,
+    "vertices": 169740,
+    "triangles": 56580,
+    "fixes": [
+      "Cancelled artificial per-path z offsets",
+      "Corrected reflected winding for outward-facing normals"
+    ],
+    "buildMs": 446.5
+  },
+  "displayGeometry": {
+    "vertices": 421164,
+    "triangles": 140388,
+    "meshes": 5,
+    "maxNormalError": 4.678145404390932e-08
+  },
+  "dimensionsAfterNormalization": {
+    "widthMm": 64.58052628822958,
+    "heightMm": 65,
+    "depthMm": 2.4374748648341487
+  },
+  "currentBrowserVerification": "outputs/verification.json"
+}

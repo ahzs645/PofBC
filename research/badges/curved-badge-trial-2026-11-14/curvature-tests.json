@@ -1,0 +1,78 @@
+{
+  "passed": 6,
+  "results": [
+    {
+      "name": "Requested rise is the measured neutral-surface sag at the unbent half-width",
+      "pass": true,
+      "details": {
+        "span": 65,
+        "rise": 4,
+        "radius": 131.35911627806416
+      }
+    },
+    {
+      "name": "Body thickness and raised detail height are preserved along the surface normal",
+      "pass": true,
+      "details": {
+        "bodyThickness": 1.8,
+        "relief": 0.65,
+        "maxError": 1.6653345369377348e-15
+      }
+    },
+    {
+      "name": "Analytic normals remain perpendicular to curved front and reverse surfaces",
+      "pass": true,
+      "details": {
+        "maxDot": 5.835293740958193e-8
+      }
+    },
+    {
+      "name": "Subdivision preserves materials, UV seams, finite unit normals and nested transforms",
+      "pass": true,
+      "details": {
+        "mode": "dome",
+        "rise": 4,
+        "radius": 133.666114881238,
+        "span": 65.56539412260925,
+        "vertices": 30408,
+        "triangles": 10136,
+        "meshes": 1
+      }
+    },
+    {
+      "name": "Invalid curvature and exhausted subdivision budgets leave geometry untouched",
+      "pass": true
+    },
+    {
+      "name": "Actual Luster S51-O01 GLB bends with finite normals and exact flat recovery",
+      "pass": true,
+      "details": {
+        "prepMs": 626,
+        "results": [
+          {
+            "mode": "cylinder",
+            "rise": 4,
+            "radius": 129.61662692063615,
+            "span": 64.56967334626066,
+            "vertices": 372312,
+            "triangles": 124104,
+            "meshes": 3,
+            "applyAndCheckMs": 277,
+            "maxNormalError": 4.156442856562137e-8
+          },
+          {
+            "mode": "dome",
+            "rise": 4,
+            "radius": 129.61662692063615,
+            "span": 64.56967334626066,
+            "vertices": 372312,
+            "triangles": 124104,
+            "meshes": 3,
+            "applyAndCheckMs": 185,
+            "maxNormalError": 4.2927978061158e-8
+          }
+        ]
+      }
+    }
+  ]
+}

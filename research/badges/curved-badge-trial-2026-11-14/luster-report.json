@@ -1,0 +1,183 @@
+{
+  "primaryModel": {
+    "filename": "S51-O01.luster-prepared.glb",
+    "sha256": "38e3bac1a96c66417aea3533828822f82d7bb961cd822ef6c146948a4226f78e",
+    "bytes": 4074428,
+    "generator": "Luster 0.4.0",
+    "format": "glTF 2.0 binary"
+  },
+  "input": {
+    "filename": "S51-O01.prepared.svg",
+    "sha256": "680dea21135725a2fbac3aa2a1ef95cf3503b0d36fad05239603394752895fbb",
+    "paths": 101,
+    "unresolvedSharedPlaceholders": 0,
+    "intentionalShadowGroups": 0
+  },
+  "engine": {
+    "name": "Luster",
+    "version": "0.4.0",
+    "package": "@famio/luster@0.4.0",
+    "packageGitHead": "371943439467c49eb9b4a8f43ac51847d6e192c7",
+    "npmIntegrity": "sha512-0PfvjGunrMxTDfx/XEoLw/7LnMU1mG5ij1s0Nwl+tRMiJ2sM/LZN3XwvW5XodHgNqavkE8+ldI9IHt3AsscMQw==",
+    "wasmSha256": "f3c03834e3c1eb35f8de0d62800d7e2b536660f7d06239735d590f7c63955477",
+    "license": "MIT",
+    "sourceUrl": "https://github.com/famio/Luster"
+  },
+  "settings": {
+    "metalLines": true,
+    "withoutHiddenFaces": false,
+    "glbScaleMetres": 0.06,
+    "metalSrgb": [
+      0.67,
+      0.46,
+      0.23,
+      1
+    ],
+    "curvature": "Flat native output; comparison applies shared bend separately"
+  },
+  "metrics": {
+    "mintMilliseconds": 3024.202386,
+    "vertices": 71116,
+    "triangles": 42208,
+    "meshCount": 3,
+    "dimensionsMillimetres": [
+      59.72425825893879,
+      60.1222924888134,
+      1.7519999528303742
+    ],
+    "boundingMinimumMetres": [
+      -0.02984994277358055,
+      -0.030063381418585777,
+      -0.000750000006519258
+    ],
+    "boundingMaximumMetres": [
+      0.029874315485358238,
+      0.030058911070227623,
+      0.0010019999463111162
+    ]
+  },
+  "materialRoles": [
+    {
+      "name": "gold",
+      "role": "plated",
+      "metallicFactor": 1,
+      "roughnessFactor": 0.16,
+      "baseColorFactorLinear": [
+        0.40644833,
+        0.1788675,
+        0.043233637,
+        1
+      ],
+      "embeddedBaseColorTexture": null,
+      "embeddedNormalTexture": null,
+      "doubleSided": false
+    },
+    {
+      "name": "gold-back",
+      "role": "goldBack",
+      "metallicFactor": 1,
+      "roughnessFactor": 0.4,
+      "baseColorFactorLinear": [
+        0.40644833,
+        0.1788675,
+        0.043233637,
+        1
+      ],
+      "embeddedBaseColorTexture": null,
+      "embeddedNormalTexture": 1,
+      "doubleSided": false
+    },
+    {
+      "name": "faces-0",
+      "role": "field",
+      "metallicFactor": 0,
+      "roughnessFactor": 0.08,
+      "baseColorFactorLinear": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "embeddedBaseColorTexture": 0,
+      "embeddedNormalTexture": null,
+      "doubleSided": false
+    }
+  ],
+  "textures": [
+    {
+      "index": 0,
+      "mimeType": "image/png",
+      "embedded": true,
+      "width": 32,
+      "height": 64,
+      "bytes": 180,
+      "sha256": "42527541e3d63dde43bc70cdbb17a75989fb81861ab538aa1c793d40cb9e2c26",
+      "purpose": "Enamel color atlas"
+    },
+    {
+      "index": 1,
+      "mimeType": "image/png",
+      "embedded": true,
+      "width": 256,
+      "height": 256,
+      "bytes": 150831,
+      "sha256": "9cb94cb49e5efa580844d3e3e6c458af9e55a5ecb4805bcb6f9a914a3d0b578b",
+      "purpose": "Reverse normal map"
+    }
+  ],
+  "validation": {
+    "validMagic": true,
+    "glbVersion": 2,
+    "declaredLengthMatches": true,
+    "jsonChunkTypeValid": true,
+    "binChunkTypeValid": true,
+    "finitePositionsChecked": 71116,
+    "unresolvedInputComponents": false,
+    "unexpectedInputShadows": false
+  },
+  "nativeLimitations": [
+    "Filled lettering is enamel, not raised metal. Recoloring does not change this geometry.",
+    "Physical scale, alloy, relief and curve are interpretation rather than measured specimen properties.",
+    "Engine output is flat. The comparison bend is an external extension.",
+    "The exported model retains microlayers; downstream viewers need suitable near/far clipping for their scene units."
+  ],
+  "speckleInvestigation": {
+    "status": "Resolved in comparison viewer; original GLB unchanged",
+    "cause": "Depth precision loss in millimetre-scaled scene let the pale native underlay compete with the dark upper field",
+    "paleUnderlayZMetres": 0.00039,
+    "darkFieldZMetres": 0.000399,
+    "separationMicrometres": 9,
+    "allTopFaceZMetres": [
+      0.00039,
+      0.0003945,
+      0.000399,
+      0.000426
+    ],
+    "atlasEvidence": "32x64 RGBA atlas contains only four uniform opaque colors plus transparent unused pixels; no scratch or patina texture",
+    "oldCameraClippingMm": {
+      "near": 0.1,
+      "far": 1000
+    },
+    "verifiedCameraClippingMm": {
+      "near": 10,
+      "far": 400
+    },
+    "visualConfirmation": "Root observed speckles completely absent with near=10/far=400 using same original GLB and same subdivision",
+    "withoutHiddenFacesTrial": {
+      "filename": "S51-O01.luster-visible.glb",
+      "triangles": 41562,
+      "result": "All 7,565 front triangles and four top heights retained; no reason to replace native primary model"
+    },
+    "notEvidenceOf": "Historical patina, source scratches, or badge material wear"
+  },
+  "sources": [
+    "https://github.com/famio/Luster/blob/main/docs/how-it-works.md",
+    "https://github.com/famio/Luster/blob/main/web/luster/README.md",
+    "https://registry.npmjs.org/@famio/luster/0.4.0"
+  ],
+  "finalViewerNotes": {
+    "clipping": "Camera near=max(1, distance-to-target-55), far=distance-to-target+55, in the mm display scene.",
+    "remainingLimitation": "A few fine pale seams/flecks remain visible at small viewport sizes, including in the flat untouched native mesh. Not authenticated patina and not introduced by curvature.",
+    "nativeModelUnchanged": true
+  }
+}

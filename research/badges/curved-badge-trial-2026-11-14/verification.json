@@ -1,0 +1,1173 @@
+{
+  "checkedAt": "2026-11-14T23:50:54.719Z",
+  "browserVersion": "138.0.7204.0",
+  "initial": {
+    "pass": true,
+    "failures": [],
+    "models": [
+      {
+        "vertices": 421164,
+        "triangles": 140388,
+        "meshes": 5,
+        "maxNormalError": 4.678145404390932e-8
+      },
+      {
+        "vertices": 372312,
+        "triangles": 124104,
+        "meshes": 3,
+        "maxNormalError": 4.164994837907443e-8
+      }
+    ],
+    "curvature": [
+      {
+        "mode": "cylinder",
+        "rise": 4,
+        "radius": 129.6604306746481,
+        "span": 64.58052628822958,
+        "vertices": 421164,
+        "triangles": 140388,
+        "meshes": 5
+      },
+      {
+        "mode": "cylinder",
+        "rise": 4,
+        "radius": 129.61662903930713,
+        "span": 64.56967387123267,
+        "vertices": 372312,
+        "triangles": 124104,
+        "meshes": 3
+      }
+    ],
+    "dimensions": [
+      {
+        "widthMm": 64.58052628822958,
+        "heightMm": 65,
+        "depthMm": 2.4374748648341487
+      },
+      {
+        "widthMm": 64.56967359128623,
+        "heightMm": 65,
+        "depthMm": 1.8941393651459595
+      }
+    ],
+    "metadata": {
+      "medal": {
+        "heightMm": 65,
+        "physicalMeasurements": false,
+        "profiles": {
+          "body": {
+            "thickness": 1.8,
+            "zOffset": -1.8,
+            "bevel": 0.1,
+            "color": "#382f20",
+            "roughness": 0.8,
+            "metalness": 0.65
+          },
+          "rim": {
+            "thickness": 0.42,
+            "zOffset": 0.08,
+            "bevel": 0.045,
+            "color": "#c39e5e",
+            "roughness": 0.25,
+            "metalness": 1
+          },
+          "lettering": {
+            "thickness": 0.38,
+            "zOffset": 0.08,
+            "bevel": 0.035,
+            "color": "#caa463",
+            "roughness": 0.27,
+            "metalness": 1
+          },
+          "emblem": {
+            "thickness": 0.32,
+            "zOffset": 0.08,
+            "bevel": 0.035,
+            "color": "#bb9759",
+            "roughness": 0.34,
+            "metalness": 1
+          },
+          "detail": {
+            "thickness": 0.23,
+            "zOffset": 0.08,
+            "bevel": 0.018,
+            "color": "#b79255",
+            "roughness": 0.38,
+            "metalness": 1
+          }
+        },
+        "curvature": "None in engine adapter; apply shared post-generation bend to all layers.",
+        "preparation": {
+          "removedShadowGroups": 0,
+          "expandedStrokes": 45,
+          "expandedContours": 48,
+          "bodyExtendedToOuterRim": true,
+          "preparation": "Original filled curves retained; SVG strokes expanded to closed filled contours using clipper-lib 6.4.2.",
+          "strokeSampling": 24,
+          "strokeArcToleranceSvgUnits": 0.015,
+          "strokeCleanupToleranceSvgUnits": 0.02
+        },
+        "filledSvgShapes": 102,
+        "vertices": 169740,
+        "triangles": 56580,
+        "fixes": [
+          "Cancelled artificial per-path z offsets",
+          "Corrected reflected winding for outward-facing normals"
+        ],
+        "buildMs": 446.5
+      },
+      "luster": {
+        "engine": "0.4.0",
+        "packageVersion": "0.4.0",
+        "source": "/workspace/scratch/df28e7a5fe8d/badge-comparison/assets/S51-O01.prepared.svg",
+        "mintMs": 3024.202386,
+        "glbBytes": 4074428,
+        "glbScaleMetres": 0.06,
+        "materials": [
+          {
+            "name": "gold",
+            "role": "plated",
+            "metallic": 1,
+            "roughness": 0.1599999964237213,
+            "color": {
+              "r": 1,
+              "g": 0.800000011920929,
+              "b": 0.5199999809265137,
+              "a": 1
+            }
+          },
+          {
+            "name": "gold-back",
+            "role": "goldBack",
+            "metallic": 1,
+            "roughness": 0.4000000059604645,
+            "color": {
+              "r": 1,
+              "g": 0.800000011920929,
+              "b": 0.5199999809265137,
+              "a": 1
+            }
+          },
+          {
+            "name": "faces-0",
+            "role": "field",
+            "metallic": 0,
+            "roughness": 0.07999999821186066,
+            "color": {
+              "r": 1,
+              "g": 1,
+              "b": 1,
+              "a": 1
+            },
+            "texture": 0
+          }
+        ],
+        "submeshes": [
+          {
+            "name": "gold",
+            "material": 0,
+            "vertexCount": 31850,
+            "triangles": 18822,
+            "min": [
+              -0.4974990487098694,
+              -0.5010563731193542,
+              -0.012500000186264515
+            ],
+            "max": [
+              0.49790525436401367,
+              0.500981867313385,
+              0.016699999570846558
+            ]
+          },
+          {
+            "name": "gold-back",
+            "material": 1,
+            "vertexCount": 185,
+            "triangles": 183,
+            "min": [
+              -0.49598169326782227,
+              -0.49952611327171326,
+              -0.012500000186264515
+            ],
+            "max": [
+              0.49640166759490967,
+              0.4994598627090454,
+              -0.012500000186264515
+            ]
+          },
+          {
+            "name": "faces-0",
+            "material": 2,
+            "vertexCount": 39081,
+            "triangles": 23203,
+            "min": [
+              -0.4916454553604126,
+              -0.4949577748775482,
+              -0.005999999586492777
+            ],
+            "max": [
+              0.49176502227783203,
+              0.4949184060096741,
+              0.007100000511854887
+            ]
+          }
+        ],
+        "totalVertices": 71116,
+        "totalTriangles": 42208,
+        "generatedAt": "2026-11-14T23:32:48.181Z"
+      }
+    },
+    "webglVersion": "WebGL 2.0 (OpenGL ES 3.0 Chromium)",
+    "renderer": {
+      "frame": 44,
+      "calls": 3,
+      "triangles": 124104,
+      "points": 0,
+      "lines": 0
+    }
+  },
+  "flat": {
+    "pass": true,
+    "failures": [],
+    "models": [
+      {
+        "vertices": 421164,
+        "triangles": 140388,
+        "meshes": 5,
+        "maxNormalError": 3.9052393985272715e-8
+      },
+      {
+        "vertices": 372312,
+        "triangles": 124104,
+        "meshes": 3,
+        "maxNormalError": 4.539403586356627e-8
+      }
+    ],
+    "curvature": [
+      {
+        "mode": "flat",
+        "rise": 0,
+        "radius": null,
+        "span": 64.58052628822958,
+        "vertices": 421164,
+        "triangles": 140388,
+        "meshes": 5
+      },
+      {
+        "mode": "flat",
+        "rise": 0,
+        "radius": null,
+        "span": 64.56967387123267,
+        "vertices": 372312,
+        "triangles": 124104,
+        "meshes": 3
+      }
+    ],
+    "dimensions": [
+      {
+        "widthMm": 64.58052628822958,
+        "heightMm": 65,
+        "depthMm": 2.4374748648341487
+      },
+      {
+        "widthMm": 64.56967359128623,
+        "heightMm": 65,
+        "depthMm": 1.8941393651459595
+      }
+    ],
+    "metadata": {
+      "medal": {
+        "heightMm": 65,
+        "physicalMeasurements": false,
+        "profiles": {
+          "body": {
+            "thickness": 1.8,
+            "zOffset": -1.8,
+            "bevel": 0.1,
+            "color": "#382f20",
+            "roughness": 0.8,
+            "metalness": 0.65
+          },
+          "rim": {
+            "thickness": 0.42,
+            "zOffset": 0.08,
+            "bevel": 0.045,
+            "color": "#c39e5e",
+            "roughness": 0.25,
+            "metalness": 1
+          },
+          "lettering": {
+            "thickness": 0.38,
+            "zOffset": 0.08,
+            "bevel": 0.035,
+            "color": "#caa463",
+            "roughness": 0.27,
+            "metalness": 1
+          },
+          "emblem": {
+            "thickness": 0.32,
+            "zOffset": 0.08,
+            "bevel": 0.035,
+            "color": "#bb9759",
+            "roughness": 0.34,
+            "metalness": 1
+          },
+          "detail": {
+            "thickness": 0.23,
+            "zOffset": 0.08,
+            "bevel": 0.018,
+            "color": "#b79255",
+            "roughness": 0.38,
+            "metalness": 1
+          }
+        },
+        "curvature": "None in engine adapter; apply shared post-generation bend to all layers.",
+        "preparation": {
+          "removedShadowGroups": 0,
+          "expandedStrokes": 45,
+          "expandedContours": 48,
+          "bodyExtendedToOuterRim": true,
+          "preparation": "Original filled curves retained; SVG strokes expanded to closed filled contours using clipper-lib 6.4.2.",
+          "strokeSampling": 24,
+          "strokeArcToleranceSvgUnits": 0.015,
+          "strokeCleanupToleranceSvgUnits": 0.02
+        },
+        "filledSvgShapes": 102,
+        "vertices": 169740,
+        "triangles": 56580,
+        "fixes": [
+          "Cancelled artificial per-path z offsets",
+          "Corrected reflected winding for outward-facing normals"
+        ],
+        "buildMs": 446.5
+      },
+      "luster": {
+        "engine": "0.4.0",
+        "packageVersion": "0.4.0",
+        "source": "/workspace/scratch/df28e7a5fe8d/badge-comparison/assets/S51-O01.prepared.svg",
+        "mintMs": 3024.202386,
+        "glbBytes": 4074428,
+        "glbScaleMetres": 0.06,
+        "materials": [
+          {
+            "name": "gold",
+            "role": "plated",
+            "metallic": 1,
+            "roughness": 0.1599999964237213,
+            "color": {
+              "r": 1,
+              "g": 0.800000011920929,
+              "b": 0.5199999809265137,
+              "a": 1
+            }
+          },
+          {
+            "name": "gold-back",
+            "role": "goldBack",
+            "metallic": 1,
+            "roughness": 0.4000000059604645,
+            "color": {
+              "r": 1,
+              "g": 0.800000011920929,
+              "b": 0.5199999809265137,
+              "a": 1
+            }
+          },
+          {
+            "name": "faces-0",
+            "role": "field",
+            "metallic": 0,
+            "roughness": 0.07999999821186066,
+            "color": {
+              "r": 1,
+              "g": 1,
+              "b": 1,
+              "a": 1
+            },
+            "texture": 0
+          }
+        ],
+        "submeshes": [
+          {
+            "name": "gold",
+            "material": 0,
+            "vertexCount": 31850,
+            "triangles": 18822,
+            "min": [
+              -0.4974990487098694,
+              -0.5010563731193542,
+              -0.012500000186264515
+            ],
+            "max": [
+              0.49790525436401367,
+              0.500981867313385,
+              0.016699999570846558
+            ]
+          },
+          {
+            "name": "gold-back",
+            "material": 1,
+            "vertexCount": 185,
+            "triangles": 183,
+            "min": [
+              -0.49598169326782227,
+              -0.49952611327171326,
+              -0.012500000186264515
+            ],
+            "max": [
+              0.49640166759490967,
+              0.4994598627090454,
+              -0.012500000186264515
+            ]
+          },
+          {
+            "name": "faces-0",
+            "material": 2,
+            "vertexCount": 39081,
+            "triangles": 23203,
+            "min": [
+              -0.4916454553604126,
+              -0.4949577748775482,
+              -0.005999999586492777
+            ],
+            "max": [
+              0.49176502227783203,
+              0.4949184060096741,
+              0.007100000511854887
+            ]
+          }
+        ],
+        "totalVertices": 71116,
+        "totalTriangles": 42208,
+        "generatedAt": "2026-11-14T23:32:48.181Z"
+      }
+    },
+    "webglVersion": "WebGL 2.0 (OpenGL ES 3.0 Chromium)",
+    "renderer": {
+      "frame": 76,
+      "calls": 3,
+      "triangles": 124104,
+      "points": 0,
+      "lines": 0
+    }
+  },
+  "dome": {
+    "pass": true,
+    "failures": [],
+    "models": [
+      {
+        "vertices": 421164,
+        "triangles": 140388,
+        "meshes": 5,
+        "maxNormalError": 4.910133166724506e-8
+      },
+      {
+        "vertices": 372312,
+        "triangles": 124104,
+        "meshes": 3,
+        "maxNormalError": 4.115533669413196e-8
+      }
+    ],
+    "curvature": [
+      {
+        "mode": "dome",
+        "rise": 4,
+        "radius": 129.6604306746481,
+        "span": 64.58052628822958,
+        "vertices": 421164,
+        "triangles": 140388,
+        "meshes": 5
+      },
+      {
+        "mode": "dome",
+        "rise": 4,
+        "radius": 129.61662903930713,
+        "span": 64.56967387123267,
+        "vertices": 372312,
+        "triangles": 124104,
+        "meshes": 3
+      }
+    ],
+    "dimensions": [
+      {
+        "widthMm": 64.58052628822958,
+        "heightMm": 65,
+        "depthMm": 2.4374748648341487
+      },
+      {
+        "widthMm": 64.56967359128623,
+        "heightMm": 65,
+        "depthMm": 1.8941393651459595
+      }
+    ],
+    "metadata": {
+      "medal": {
+        "heightMm": 65,
+        "physicalMeasurements": false,
+        "profiles": {
+          "body": {
+            "thickness": 1.8,
+            "zOffset": -1.8,
+            "bevel": 0.1,
+            "color": "#382f20",
+            "roughness": 0.8,
+            "metalness": 0.65
+          },
+          "rim": {
+            "thickness": 0.42,
+            "zOffset": 0.08,
+            "bevel": 0.045,
+            "color": "#c39e5e",
+            "roughness": 0.25,
+            "metalness": 1
+          },
+          "lettering": {
+            "thickness": 0.38,
+            "zOffset": 0.08,
+            "bevel": 0.035,
+            "color": "#caa463",
+            "roughness": 0.27,
+            "metalness": 1
+          },
+          "emblem": {
+            "thickness": 0.32,
+            "zOffset": 0.08,
+            "bevel": 0.035,
+            "color": "#bb9759",
+            "roughness": 0.34,
+            "metalness": 1
+          },
+          "detail": {
+            "thickness": 0.23,
+            "zOffset": 0.08,
+            "bevel": 0.018,
+            "color": "#b79255",
+            "roughness": 0.38,
+            "metalness": 1
+          }
+        },
+        "curvature": "None in engine adapter; apply shared post-generation bend to all layers.",
+        "preparation": {
+          "removedShadowGroups": 0,
+          "expandedStrokes": 45,
+          "expandedContours": 48,
+          "bodyExtendedToOuterRim": true,
+          "preparation": "Original filled curves retained; SVG strokes expanded to closed filled contours using clipper-lib 6.4.2.",
+          "strokeSampling": 24,
+          "strokeArcToleranceSvgUnits": 0.015,
+          "strokeCleanupToleranceSvgUnits": 0.02
+        },
+        "filledSvgShapes": 102,
+        "vertices": 169740,
+        "triangles": 56580,
+        "fixes": [
+          "Cancelled artificial per-path z offsets",
+          "Corrected reflected winding for outward-facing normals"
+        ],
+        "buildMs": 446.5
+      },
+      "luster": {
+        "engine": "0.4.0",
+        "packageVersion": "0.4.0",
+        "source": "/workspace/scratch/df28e7a5fe8d/badge-comparison/assets/S51-O01.prepared.svg",
+        "mintMs": 3024.202386,
+        "glbBytes": 4074428,
+        "glbScaleMetres": 0.06,
+        "materials": [
+          {
+            "name": "gold",
+            "role": "plated",
+            "metallic": 1,
+            "roughness": 0.1599999964237213,
+            "color": {
+              "r": 1,
+              "g": 0.800000011920929,
+              "b": 0.5199999809265137,
+              "a": 1
+            }
+          },
+          {
+            "name": "gold-back",
+            "role": "goldBack",
+            "metallic": 1,
+            "roughness": 0.4000000059604645,
+            "color": {
+              "r": 1,
+              "g": 0.800000011920929,
+              "b": 0.5199999809265137,
+              "a": 1
+            }
+          },
+          {
+            "name": "faces-0",
+            "role": "field",
+            "metallic": 0,
+            "roughness": 0.07999999821186066,
+            "color": {
+              "r": 1,
+              "g": 1,
+              "b": 1,
+              "a": 1
+            },
+            "texture": 0
+          }
+        ],
+        "submeshes": [
+          {
+            "name": "gold",
+            "material": 0,
+            "vertexCount": 31850,
+            "triangles": 18822,
+            "min": [
+              -0.4974990487098694,
+              -0.5010563731193542,
+              -0.012500000186264515
+            ],
+            "max": [
+              0.49790525436401367,
+              0.500981867313385,
+              0.016699999570846558
+            ]
+          },
+          {
+            "name": "gold-back",
+            "material": 1,
+            "vertexCount": 185,
+            "triangles": 183,
+            "min": [
+              -0.49598169326782227,
+              -0.49952611327171326,
+              -0.012500000186264515
+            ],
+            "max": [
+              0.49640166759490967,
+              0.4994598627090454,
+              -0.012500000186264515
+            ]
+          },
+          {
+            "name": "faces-0",
+            "material": 2,
+            "vertexCount": 39081,
+            "triangles": 23203,
+            "min": [
+              -0.4916454553604126,
+              -0.4949577748775482,
+              -0.005999999586492777
+            ],
+            "max": [
+              0.49176502227783203,
+              0.4949184060096741,
+              0.007100000511854887
+            ]
+          }
+        ],
+        "totalVertices": 71116,
+        "totalTriangles": 42208,
+        "generatedAt": "2026-11-14T23:32:48.181Z"
+      }
+    },
+    "webglVersion": "WebGL 2.0 (OpenGL ES 3.0 Chromium)",
+    "renderer": {
+      "frame": 84,
+      "calls": 3,
+      "triangles": 124104,
+      "points": 0,
+      "lines": 0
+    }
+  },
+  "maxRise": {
+    "pass": true,
+    "failures": [],
+    "models": [
+      {
+        "vertices": 421164,
+        "triangles": 140388,
+        "meshes": 5,
+        "maxNormalError": 4.87354150369157e-8
+      },
+      {
+        "vertices": 372312,
+        "triangles": 124104,
+        "meshes": 3,
+        "maxNormalError": 4.1232647185474036e-8
+      }
+    ],
+    "curvature": [
+      {
+        "mode": "cylinder",
+        "rise": 8,
+        "radius": 63.78650997895759,
+        "span": 64.58052628822958,
+        "vertices": 421164,
+        "triangles": 140388,
+        "meshes": 5
+      },
+      {
+        "mode": "cylinder",
+        "rise": 8,
+        "radius": 63.764593455278394,
+        "span": 64.56967387123267,
+        "vertices": 372312,
+        "triangles": 124104,
+        "meshes": 3
+      }
+    ],
+    "dimensions": [
+      {
+        "widthMm": 64.58052628822958,
+        "heightMm": 65,
+        "depthMm": 2.4374748648341487
+      },
+      {
+        "widthMm": 64.56967359128623,
+        "heightMm": 65,
+        "depthMm": 1.8941393651459595
+      }
+    ],
+    "metadata": {
+      "medal": {
+        "heightMm": 65,
+        "physicalMeasurements": false,
+        "profiles": {
+          "body": {
+            "thickness": 1.8,
+            "zOffset": -1.8,
+            "bevel": 0.1,
+            "color": "#382f20",
+            "roughness": 0.8,
+            "metalness": 0.65
+          },
+          "rim": {
+            "thickness": 0.42,
+            "zOffset": 0.08,
+            "bevel": 0.045,
+            "color": "#c39e5e",
+            "roughness": 0.25,
+            "metalness": 1
+          },
+          "lettering": {
+            "thickness": 0.38,
+            "zOffset": 0.08,
+            "bevel": 0.035,
+            "color": "#caa463",
+            "roughness": 0.27,
+            "metalness": 1
+          },
+          "emblem": {
+            "thickness": 0.32,
+            "zOffset": 0.08,
+            "bevel": 0.035,
+            "color": "#bb9759",
+            "roughness": 0.34,
+            "metalness": 1
+          },
+          "detail": {
+            "thickness": 0.23,
+            "zOffset": 0.08,
+            "bevel": 0.018,
+            "color": "#b79255",
+            "roughness": 0.38,
+            "metalness": 1
+          }
+        },
+        "curvature": "None in engine adapter; apply shared post-generation bend to all layers.",
+        "preparation": {
+          "removedShadowGroups": 0,
+          "expandedStrokes": 45,
+          "expandedContours": 48,
+          "bodyExtendedToOuterRim": true,
+          "preparation": "Original filled curves retained; SVG strokes expanded to closed filled contours using clipper-lib 6.4.2.",
+          "strokeSampling": 24,
+          "strokeArcToleranceSvgUnits": 0.015,
+          "strokeCleanupToleranceSvgUnits": 0.02
+        },
+        "filledSvgShapes": 102,
+        "vertices": 169740,
+        "triangles": 56580,
+        "fixes": [
+          "Cancelled artificial per-path z offsets",
+          "Corrected reflected winding for outward-facing normals"
+        ],
+        "buildMs": 446.5
+      },
+      "luster": {
+        "engine": "0.4.0",
+        "packageVersion": "0.4.0",
+        "source": "/workspace/scratch/df28e7a5fe8d/badge-comparison/assets/S51-O01.prepared.svg",
+        "mintMs": 3024.202386,
+        "glbBytes": 4074428,
+        "glbScaleMetres": 0.06,
+        "materials": [
+          {
+            "name": "gold",
+            "role": "plated",
+            "metallic": 1,
+            "roughness": 0.1599999964237213,
+            "color": {
+              "r": 1,
+              "g": 0.800000011920929,
+              "b": 0.5199999809265137,
+              "a": 1
+            }
+          },
+          {
+            "name": "gold-back",
+            "role": "goldBack",
+            "metallic": 1,
+            "roughness": 0.4000000059604645,
+            "color": {
+              "r": 1,
+              "g": 0.800000011920929,
+              "b": 0.5199999809265137,
+              "a": 1
+            }
+          },
+          {
+            "name": "faces-0",
+            "role": "field",
+            "metallic": 0,
+            "roughness": 0.07999999821186066,
+            "color": {
+              "r": 1,
+              "g": 1,
+              "b": 1,
+              "a": 1
+            },
+            "texture": 0
+          }
+        ],
+        "submeshes": [
+          {
+            "name": "gold",
+            "material": 0,
+            "vertexCount": 31850,
+            "triangles": 18822,
+            "min": [
+              -0.4974990487098694,
+              -0.5010563731193542,
+              -0.012500000186264515
+            ],
+            "max": [
+              0.49790525436401367,
+              0.500981867313385,
+              0.016699999570846558
+            ]
+          },
+          {
+            "name": "gold-back",
+            "material": 1,
+            "vertexCount": 185,
+            "triangles": 183,
+            "min": [
+              -0.49598169326782227,
+              -0.49952611327171326,
+              -0.012500000186264515
+            ],
+            "max": [
+              0.49640166759490967,
+              0.4994598627090454,
+              -0.012500000186264515
+            ]
+          },
+          {
+            "name": "faces-0",
+            "material": 2,
+            "vertexCount": 39081,
+            "triangles": 23203,
+            "min": [
+              -0.4916454553604126,
+              -0.4949577748775482,
+              -0.005999999586492777
+            ],
+            "max": [
+              0.49176502227783203,
+              0.4949184060096741,
+              0.007100000511854887
+            ]
+          }
+        ],
+        "totalVertices": 71116,
+        "totalTriangles": 42208,
+        "generatedAt": "2026-11-14T23:32:48.181Z"
+      }
+    },
+    "webglVersion": "WebGL 2.0 (OpenGL ES 3.0 Chromium)",
+    "renderer": {
+      "frame": 88,
+      "calls": 3,
+      "triangles": 124104,
+      "points": 0,
+      "lines": 0
+    }
+  },
+  "riseControlAndFlatModePassed": true,
+  "keyboardOrbitChangedImage": true,
+  "mobile": {
+    "overflow": false,
+    "canvasWidth": 370,
+    "canvasHeight": 918,
+    "geometry": {
+      "pass": true,
+      "failures": [],
+      "models": [
+        {
+          "vertices": 421164,
+          "triangles": 140388,
+          "meshes": 5,
+          "maxNormalError": 4.678145404390932e-8
+        },
+        {
+          "vertices": 372312,
+          "triangles": 124104,
+          "meshes": 3,
+          "maxNormalError": 4.164994837907443e-8
+        }
+      ],
+      "curvature": [
+        {
+          "mode": "cylinder",
+          "rise": 4,
+          "radius": 129.6604306746481,
+          "span": 64.58052628822958,
+          "vertices": 421164,
+          "triangles": 140388,
+          "meshes": 5
+        },
+        {
+          "mode": "cylinder",
+          "rise": 4,
+          "radius": 129.61662903930713,
+          "span": 64.56967387123267,
+          "vertices": 372312,
+          "triangles": 124104,
+          "meshes": 3
+        }
+      ],
+      "dimensions": [
+        {
+          "widthMm": 64.58052628822958,
+          "heightMm": 65,
+          "depthMm": 2.4374748648341487
+        },
+        {
+          "widthMm": 64.56967359128623,
+          "heightMm": 65,
+          "depthMm": 1.8941393651459595
+        }
+      ],
+      "metadata": {
+        "medal": {
+          "heightMm": 65,
+          "physicalMeasurements": false,
+          "profiles": {
+            "body": {
+              "thickness": 1.8,
+              "zOffset": -1.8,
+              "bevel": 0.1,
+              "color": "#382f20",
+              "roughness": 0.8,
+              "metalness": 0.65
+            },
+            "rim": {
+              "thickness": 0.42,
+              "zOffset": 0.08,
+              "bevel": 0.045,
+              "color": "#c39e5e",
+              "roughness": 0.25,
+              "metalness": 1
+            },
+            "lettering": {
+              "thickness": 0.38,
+              "zOffset": 0.08,
+              "bevel": 0.035,
+              "color": "#caa463",
+              "roughness": 0.27,
+              "metalness": 1
+            },
+            "emblem": {
+              "thickness": 0.32,
+              "zOffset": 0.08,
+              "bevel": 0.035,
+              "color": "#bb9759",
+              "roughness": 0.34,
+              "metalness": 1
+            },
+            "detail": {
+              "thickness": 0.23,
+              "zOffset": 0.08,
+              "bevel": 0.018,
+              "color": "#b79255",
+              "roughness": 0.38,
+              "metalness": 1
+            }
+          },
+          "curvature": "None in engine adapter; apply shared post-generation bend to all layers.",
+          "preparation": {
+            "removedShadowGroups": 0,
+            "expandedStrokes": 45,
+            "expandedContours": 48,
+            "bodyExtendedToOuterRim": true,
+            "preparation": "Original filled curves retained; SVG strokes expanded to closed filled contours using clipper-lib 6.4.2.",
+            "strokeSampling": 24,
+            "strokeArcToleranceSvgUnits": 0.015,
+            "strokeCleanupToleranceSvgUnits": 0.02
+          },
+          "filledSvgShapes": 102,
+          "vertices": 169740,
+          "triangles": 56580,
+          "fixes": [
+            "Cancelled artificial per-path z offsets",
+            "Corrected reflected winding for outward-facing normals"
+          ],
+          "buildMs": 446.5
+        },
+        "luster": {
+          "engine": "0.4.0",
+          "packageVersion": "0.4.0",
+          "source": "/workspace/scratch/df28e7a5fe8d/badge-comparison/assets/S51-O01.prepared.svg",
+          "mintMs": 3024.202386,
+          "glbBytes": 4074428,
+          "glbScaleMetres": 0.06,
+          "materials": [
+            {
+              "name": "gold",
+              "role": "plated",
+              "metallic": 1,
+              "roughness": 0.1599999964237213,
+              "color": {
+                "r": 1,
+                "g": 0.800000011920929,
+                "b": 0.5199999809265137,
+                "a": 1
+              }
+            },
+            {
+              "name": "gold-back",
+              "role": "goldBack",
+              "metallic": 1,
+              "roughness": 0.4000000059604645,
+              "color": {
+                "r": 1,
+                "g": 0.800000011920929,
+                "b": 0.5199999809265137,
+                "a": 1
+              }
+            },
+            {
+              "name": "faces-0",
+              "role": "field",
+              "metallic": 0,
+              "roughness": 0.07999999821186066,
+              "color": {
+                "r": 1,
+                "g": 1,
+                "b": 1,
+                "a": 1
+              },
+              "texture": 0
+            }
+          ],
+          "submeshes": [
+            {
+              "name": "gold",
+              "material": 0,
+              "vertexCount": 31850,
+              "triangles": 18822,
+              "min": [
+                -0.4974990487098694,
+                -0.5010563731193542,
+                -0.012500000186264515
+              ],
+              "max": [
+                0.49790525436401367,
+                0.500981867313385,
+                0.016699999570846558
+              ]
+            },
+            {
+              "name": "gold-back",
+              "material": 1,
+              "vertexCount": 185,
+              "triangles": 183,
+              "min": [
+                -0.49598169326782227,
+                -0.49952611327171326,
+                -0.012500000186264515
+              ],
+              "max": [
+                0.49640166759490967,
+                0.4994598627090454,
+                -0.012500000186264515
+              ]
+            },
+            {
+              "name": "faces-0",
+              "material": 2,
+              "vertexCount": 39081,
+              "triangles": 23203,
+              "min": [
+                -0.4916454553604126,
+                -0.4949577748775482,
+                -0.005999999586492777
+              ],
+              "max": [
+                0.49176502227783203,
+                0.4949184060096741,
+                0.007100000511854887
+              ]
+            }
+          ],
+          "totalVertices": 71116,
+          "totalTriangles": 42208,
+          "generatedAt": "2026-11-14T23:32:48.181Z"
+        },
+        "exportRoundtrips": [
+          {
+            "bytes": 13485956,
+            "widthMetres": 0.06405406400024807,
+            "heightMetres": 0.065,
+            "depthMetres": 0.006354864382730424
+          },
+          {
+            "bytes": 18024996,
+            "widthMetres": 0.06429807992133708,
+            "heightMetres": 0.06500000052847071,
+            "depthMetres": 0.005845258596636815
+          }
+        ]
+      },
+      "webglVersion": "WebGL 2.0 (OpenGL ES 3.0 Chromium)",
+      "renderer": {
+        "frame": 120,
+        "calls": 3,
+        "triangles": 124104,
+        "points": 0,
+        "lines": 0
+      }
+    }
+  },
+  "exports": [
+    {
+      "file": "S51-O01-medal-forge-curved.glb",
+      "bytes": 13485956
+    },
+    {
+      "file": "S51-O01-luster-curved.glb",
+      "bytes": 18024996
+    }
+  ],
+  "captures": [
+    "cylinder-front.png",
+    "cylinder-oblique.png",
+    "cylinder-top.png",
+    "cylinder-side.png",
+    "cylinder-back.png",
+    "flat-oblique.png",
+    "dome-oblique.png"
+  ],
+  "externalAssetRequests": [],
+  "pageErrors": [],
+  "consoleWarnings": [],
+  "pass": true
+}
