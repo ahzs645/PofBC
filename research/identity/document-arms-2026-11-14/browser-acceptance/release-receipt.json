@@ -1,0 +1,226 @@
+{
+  "recordedAtUtc": "2026-11-15T05:27:53.622543+00:00",
+  "applicationUrl": "https://projects.ahmadjalil.com/PofBC/",
+  "applicationCommit": "db3f8970d7afba4165e2cb41721a66428b84dcb3",
+  "mergedPullRequests": [
+    {
+      "number": 64,
+      "url": "https://github.com/ahzs645/PofBC/pull/64",
+      "mergeCommit": "a7dc50d71cec44849c7dfa55d28a86c1b1dda8ce"
+    },
+    {
+      "number": 67,
+      "url": "https://github.com/ahzs645/PofBC/pull/67",
+      "mergeCommit": "db3f8970d7afba4165e2cb41721a66428b84dcb3"
+    }
+  ],
+  "workflow": {
+    "id": 43680207030,
+    "html_url": "https://github.com/ahzs645/PofBC/actions/runs/43680207030",
+    "event": "workflow_dispatch",
+    "head_sha": "db3f8970d7afba4165e2cb41721a66428b84dcb3",
+    "status": "completed",
+    "conclusion": "success",
+    "created_at": "2026-11-15T05:14:20Z",
+    "updated_at": "2026-11-15T05:18:53Z"
+  },
+  "jobs": [
+    {
+      "id": 132708979814,
+      "name": "build",
+      "status": "completed",
+      "conclusion": "success",
+      "started_at": "2026-11-15T05:14:23Z",
+      "completed_at": "2026-11-15T05:18:30Z",
+      "steps": [
+        {
+          "name": "Set up job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 1,
+          "started_at": "2026-11-15T05:14:24Z",
+          "completed_at": "2026-11-15T05:14:27Z"
+        },
+        {
+          "name": "Run actions/checkout@v7",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 2,
+          "started_at": "2026-11-15T05:14:27Z",
+          "completed_at": "2026-11-15T05:16:52Z"
+        },
+        {
+          "name": "Run actions/setup-node@v7",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 3,
+          "started_at": "2026-11-15T05:16:52Z",
+          "completed_at": "2026-11-15T05:16:57Z"
+        },
+        {
+          "name": "Check Helvetica is present",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 4,
+          "started_at": "2026-11-15T05:16:57Z",
+          "completed_at": "2026-11-15T05:16:57Z"
+        },
+        {
+          "name": "Run npm ci",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 5,
+          "started_at": "2026-11-15T05:16:57Z",
+          "completed_at": "2026-11-15T05:17:13Z"
+        },
+        {
+          "name": "Run npm run build:assets",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 6,
+          "started_at": "2026-11-15T05:17:13Z",
+          "completed_at": "2026-11-15T05:17:50Z"
+        },
+        {
+          "name": "Run the full test suite",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 7,
+          "started_at": "2026-11-15T05:17:50Z",
+          "completed_at": "2026-11-15T05:17:50Z"
+        },
+        {
+          "name": "Build the site",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 8,
+          "started_at": "2026-11-15T05:17:50Z",
+          "completed_at": "2026-11-15T05:18:13Z"
+        },
+        {
+          "name": "Run actions/configure-pages@v6",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 9,
+          "started_at": "2026-11-15T05:18:13Z",
+          "completed_at": "2026-11-15T05:18:14Z"
+        },
+        {
+          "name": "Run actions/upload-pages-artifact@v5",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 10,
+          "started_at": "2026-11-15T05:18:14Z",
+          "completed_at": "2026-11-15T05:18:26Z"
+        },
+        {
+          "name": "Post Run actions/setup-node@v7",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 19,
+          "started_at": "2026-11-15T05:18:26Z",
+          "completed_at": "2026-11-15T05:18:26Z"
+        },
+        {
+          "name": "Post Run actions/checkout@v7",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 20,
+          "started_at": "2026-11-15T05:18:26Z",
+          "completed_at": "2026-11-15T05:18:27Z"
+        },
+        {
+          "name": "Complete job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 21,
+          "started_at": "2026-11-15T05:18:27Z",
+          "completed_at": "2026-11-15T05:18:29Z"
+        }
+      ]
+    },
+    {
+      "id": 132709892725,
+      "name": "deploy",
+      "status": "completed",
+      "conclusion": "success",
+      "started_at": "2026-11-15T05:18:35Z",
+      "completed_at": "2026-11-15T05:18:53Z",
+      "steps": [
+        {
+          "name": "Set up job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 1,
+          "started_at": "2026-11-15T05:18:35Z",
+          "completed_at": "2026-11-15T05:18:36Z"
+        },
+        {
+          "name": "Run actions/deploy-pages@v5",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 2,
+          "started_at": "2026-11-15T05:18:36Z",
+          "completed_at": "2026-11-15T05:18:52Z"
+        },
+        {
+          "name": "Complete job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 3,
+          "started_at": "2026-11-15T05:18:52Z",
+          "completed_at": "2026-11-15T05:18:52Z"
+        }
+      ]
+    }
+  ],
+  "liveBrowserChecks": [
+    {
+      "check": "Historic reference selector and Detail / Whole page controls",
+      "passed": true
+    },
+    {
+      "check": "Crown-grant Whole page image decoded",
+      "passed": true,
+      "src": "/PofBC/assets/oic-1121-grant-page-C3m6nqBX.png",
+      "naturalWidth": 935,
+      "naturalHeight": 1210
+    },
+    {
+      "check": "Original link opened exact page-4 target in new browser tab",
+      "passed": true,
+      "url": "https://www.bclaws.gov.bc.ca/civix/document/id/oic/arc_oic/1121_1978#page=4",
+      "scope": "Navigation verified; native PDF contents were independently inspected from the retained checksum-verified PDF, not re-rendered in this live browser check."
+    },
+    {
+      "check": "Small-phone document has no horizontal overflow",
+      "passed": true,
+      "viewport": {
+        "width": 320,
+        "height": 568
+      },
+      "documentClientWidth": 305,
+      "documentScrollWidth": 305
+    },
+    {
+      "check": "Temporary viewport override reset",
+      "passed": true
+    }
+  ],
+  "screenshot": {
+    "path": "live-release-source-viewer.png",
+    "sha256": "bdde716cb1922fc8cd824df2fa1d3b03fded7dd00d6e9e29ccc7d259e0424b51"
+  },
+  "browserAcceptanceSourceHashesMatchRelease": {
+    "src/site/site.css": "a4fce8bf491bde0444f26960cb92c29e245f358259917fd39c58a6b7f3738ad4",
+    "src/site/ExportPanel.jsx": "de40f9e067b1699ed7fd75a311ecc23535501eeded823bda5908642ab477166a",
+    "src/site/App.jsx": "5d89754f0567869485cf87e2e690a1529dd3e176032a5a085ef7d193379c0a29",
+    "src/site/DocumentArmsPanel.jsx": "1be547f22996c63228e60b19239554c64b7d5ce04ba3c7efe727bff364a2e67c",
+    "src/site/DocumentArmsPreview.jsx": "a574e78afbcf90e10c03ba0c35ead52600cc0c60da163ca99652be7ddc9149e4",
+    "src/site/lockupReducer.js": "9357f7ab99dd00448ca9e3eb6b39969fb7ed8f381424b1fecf9a6acd02d70eef",
+    "src/site/useLockupState.js": "3302c89601a7696ff73c261deb26be2e80bec38e02812142394f09c6ca7de346",
+    "src/documentArms/evidence.js": "e3e10b557acf1b577f94b69b4d23edaeb5f83c64ee89b0e7dec955633b8eb121"
+  },
+  "scope": "The 57-case matrix in browser-check.json tested the complete local production build. The connected-browser checks here are a separate focused post-deployment review. Neither represents physical iOS or Safari testing.",
+  "documentationCloseout": "Published separately with skip ci; no application redeployment required."
+}

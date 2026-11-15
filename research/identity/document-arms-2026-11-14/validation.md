@@ -171,3 +171,36 @@ unrelated workflows before the intentional manual release.
 The original engraving, exact historical typefaces and period spacing still need
 better primary artwork. The separate measured overlay study does not authenticate
 or replace the generated-master renderer.
+
+## Merged release and live acceptance - 15 November 2026 UTC
+
+[PR #64](https://github.com/ahzs645/PofBC/pull/64) and
+[PR #67](https://github.com/ahzs645/PofBC/pull/67) are merged. The application
+release is commit `db3f8970d7afba4165e2cb41721a66428b84dcb3`.
+
+The intentional manual [Pages run 43680207030](https://github.com/ahzs645/PofBC/actions/runs/43680207030)
+completed successfully at **05:18:53 UTC on 15 November 2026**. Both build and
+deploy jobs passed; the repeated full-test step was explicitly skipped. The asset
+build and production site build ran successfully on the established macOS runner.
+
+A separate live check of [the deployed application](https://projects.ahmadjalil.com/PofBC/)
+confirmed:
+
+- The Historic source selector and Detail / Whole page controls are present.
+- The Crown-grant specimen switches to the complete fourth page of OIC 1121/1978;
+  its live image decoded at **935 x 1210 pixels**.
+- Clicking its original-document link opens the exact BC Laws URL with `#page=4`.
+  This verifies navigation to the correct target; it does not claim a second
+  native PDF rendering inspection in the connected browser.
+- At a 320 x 568 viewport, the document's client and scroll widths were both
+  **305 pixels** after the vertical scrollbar, so there was no horizontal page
+  overflow. The temporary viewport override was reset afterward.
+
+[Live release screenshot](browser-acceptance/live-release-source-viewer.png) ·
+[Release receipt](browser-acceptance/release-receipt.json)
+
+The 57-case production-browser run above remains the complete acceptance matrix;
+the live check is a focused post-deployment review. The eight application source
+hashes in its recorded result match the merged application commit. Documentation
+closeout changes are published separately with `[skip ci]` and do not require a
+second application deployment.

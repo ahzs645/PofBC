@@ -54,6 +54,9 @@ The Museum cover has no flanking government or blackletter heading. Selecting it
 
 ## Next source acquisition
 
+The [focused acquisition pass](source-acquisition.md) records the additional
+routes checked, access limits and identifying metadata for a source request.
+
 Obtain a substantially clearer scan or reproduction master of **this particular engraving**, ideally the 1960 report cover or a demonstrably matching printing. Keep the 1954 cover, 1954 title page and different historical families separately identified. Similar composition is not proof of a shared block.
 
 With a better source, continue the scaffold component by component, preserving meaningful gaps and crossings, then repeat the same-scale comparison. Do not infer eyes, faces, fur hatching or letter shapes from enlargement alone. The [Texas and Beddoe leads](../document-arms-2026-11-14/README.md#guides-and-archival-leads) remain acquisition leads; this work does not inspect their archival contents or contact an archive.

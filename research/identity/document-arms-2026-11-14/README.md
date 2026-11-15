@@ -4,6 +4,28 @@ Reviewed **14 November 2026**. This continues the [13 November investigation](..
 
 [Source comparison sheet](source-evidence-review.png) · [Portable SVG](source-evidence-review.svg) · [Checksums and page/clip coordinates](source-register.json) · [Validation](validation.md)
 
+## Completed integration and artwork review
+
+The [browser acceptance record](validation.md#browser-acceptance-completed---14-november-2026)
+covers the complete application, all nine references, phone-width layouts, colour
+state and five download formats. [PR #67](https://github.com/ahzs645/PofBC/pull/67)
+integrates the source viewer and responsive fixes.
+
+Both PRs below are merged. The [live release receipt](validation.md#merged-release-and-live-acceptance---15-november-2026-utc)
+records the successful Pages deployment and focused live browser review on
+15 November 2026 UTC.
+
+The reconciled [nine-page illustrated catalogue](../arms-variants-2026-11-14/catalogue.pdf)
+contains 32 specimens and 30 linked sources. Its [records and source notes](../arms-variants-2026-11-14/README.md)
+now identify the two supplied headings on pages 1 and 4 of OIC 1121/1978;
+[PR #64](https://github.com/ahzs645/PofBC/pull/64) contains that research integration.
+
+The [first measured overlay and partial structural study](../historic-arms-overlay-2026-11-14/README.md)
+uses the 1960 Museum report cover, printed in 1961, as a separately identified
+arms target. It quantifies the existing drawing's differences without presenting
+the incomplete study as a production replacement. The [source-acquisition record](../historic-arms-overlay-2026-11-14/source-acquisition.md)
+states what was checked for a better scan and the exact remaining acquisition target.
+
 ## Two supplied headings come from the same official record
 
 The complete [Order in Council 1121/1978](https://www.bclaws.gov.bc.ca/civix/document/id/oic/arc_oic/1121_1978) was retrieved and inspected as a **four-page PDF**. The [held copy](reference/oic-1121-1978.pdf) provides the following matches:

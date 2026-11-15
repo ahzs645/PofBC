@@ -9,6 +9,21 @@ Researched 2026-09-26, mostly from Wayback Machine captures of each body's site,
 release archive, and the covers of its published plans and reports. Nothing was downloaded into the
 repo during that original pass.
 
+## Historic document arms
+
+The [14 November source-identification follow-up](document-arms-2026-11-14/README.md)
+connects two supplied headings to OIC 1121/1978 and retains the separate 1954
+mining engravings. Its [browser validation](document-arms-2026-11-14/validation.md)
+records the completed source-viewer, colour-state, responsive and export checks.
+The [illustrated arms catalogue](arms-variants-2026-11-14/catalogue.pdf) contains
+32 specimens and 30 sources, with unknown dates retained explicitly.
+
+The [measured overlay and partial structural study](historic-arms-overlay-2026-11-14/README.md)
+selects the 1960 Museum report cover, printed in 1961, as the first proportion
+target. Its source is too small to authenticate fine engraving detail; the
+production drawing remains provisional. See the [specific source-acquisition target](historic-arms-overlay-2026-11-14/source-acquisition.md)
+before continuing the reconstruction.
+
 ## Subsequent vector recoveries
 
 The notes below preserve the original September research state. The
