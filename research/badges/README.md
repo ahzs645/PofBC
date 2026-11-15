@@ -89,6 +89,21 @@ the lighting makes its own.
   pieces; the larger badges take a few seconds to build, on the page's main thread.
 - WebGL is required for the 3D view; without it the Vector tab still works.
 
+## Known issues
+
+- **S51-O01's inner lettering reads paler than its outer lettering, front-on.** BRITISH COLUMBIA and
+  FOREST SERVICE inside the oval look cream beside the gold of FOREST FIRE and PREVENTION OFFICER
+  when the badge is seen straight on. It is not the material: both captions are the same paint
+  (`#b69552`), the same polished finish (roughness 0.22, fully metallic) and the same height, and
+  seen at an angle (the Oblique camera) the two match. The first guess was that the small inner
+  letters had flat, square tops (the tiny-piece rule left them unbevelled) and so reflected the room
+  evenly; lettering is now exempt from that rule and gets a small shoulder (about 0.07 mm, reduced
+  for its thin strokes), but that did not change the effect. What remains is most likely the
+  studio's brightest reflection landing on the middle of the badge, where the inner emblem sits,
+  from the front camera. The bevel stays as a small improvement. Ways to try next: a softer or
+  differently placed environment light for front views, or a slightly rougher finish on raised
+  parts near the centre.
+
 ## Checks
 
 `node --test src/badges/*.test.js` runs the curvature checks and the part rules. Every library badge
