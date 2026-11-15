@@ -242,13 +242,25 @@ export class PreparedBadgeCurvature {
     for (const state of this.states) state.mesh.geometry = state.geometry
   }
 
-  /** The largest rise a cylinder or dome over this model allows (just under a 90° turn at its edge). */
+  /**
+   * A safe rise for this model's default span/centre and neutralZ = 0. Rise is always measured at
+   * the unbent half-width, including for a dome. Its radius must also keep the farthest corner
+   * below a 90° turn and the back of the badge outside the curvature centre.
+   */
   maxRise (mode) {
+    if (!CURVATURE_MODES.includes(mode)) throw new Error('Unknown curvature mode')
+    if (mode === 'flat') return 0
     const w = this.flatBounds.max.x - this.flatBounds.min.x
     const h = this.flatBounds.max.y - this.flatBounds.min.y
+    const halfWidth = w / 2
+    if (!(halfWidth > 0)) return 0
     // The dome's reach is the half-diagonal; the cylinder's the half-width.
     const reach = mode === 'dome' ? Math.hypot(w, h) / 2 : w / 2
-    return (2 * reach) / Math.PI * 0.95
+    const minRadius = Math.max((2 * reach) / Math.PI, -this.flatBounds.min.z)
+    // Convert the limiting radius back to the same half-width rise radiusForRise() accepts.
+    // Using the diagonal itself as a rise overstates the limit on narrow, tall badges.
+    const limit = 2 * minRadius * Math.sin(halfWidth / (2 * minRadius)) ** 2
+    return limit * 0.95
   }
 
   /** @param {BendOptions} options */

@@ -1,6 +1,9 @@
 /* The badge viewer reuses the patch viewer's layout (patches.css); these are its 3D stage's own. */
+.badge-stage { grid-template-rows: auto minmax(0, 1fr) auto; }
 .badge-stage__cameras { margin-left: auto; min-width: 0; }
 .badge-stage__cameras .field { margin: 0; }
+.badge-stage__cameras .segmented, .badge-stage__tools .segmented { flex-wrap: wrap; }
+.badge-stage__hint { margin: 0; padding: 7px 12px; border-top: 1px solid var(--outline); color: var(--ink-muted); font-size: 12px; line-height: 1.5; }
 .badge-stage__pane {
   position: relative;
   min-height: 0;

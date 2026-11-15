@@ -6,6 +6,7 @@ import * as THREE from 'three'
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js'
 import { RoomEnvironment } from 'three/examples/jsm/environments/RoomEnvironment.js'
 import { GLTFExporter } from 'three/examples/jsm/exporters/GLTFExporter.js'
+import { mergeVertices } from 'three/examples/jsm/utils/BufferGeometryUtils.js'
 import { PreparedBadgeCurvature } from './curvature.js'
 
 /** Camera directions, scaled to the badge's size when used. */
@@ -200,11 +201,22 @@ export class BadgeScene {
   async glb (extras = {}) {
     if (!this.model) throw new Error('No badge to export')
     const wrapper = new THREE.Group()
-    wrapper.add(this.model.clone(true))
+    const snapshot = this.model.clone(true)
+    // Curvature uses separate triangle vertices. Share identical position/normal/UV tuples in the
+    // export while preserving sharp edges, and copy the buffers so later orbit/shape changes cannot
+    // mutate an export that is still encoding its textures. The visible model keeps its own buffers.
+    snapshot.traverse((mesh) => {
+      if (mesh.isMesh) mesh.geometry = mergeVertices(mesh.geometry, 1e-6)
+    })
+    wrapper.add(snapshot)
     wrapper.scale.setScalar(0.001)
     wrapper.userData = extras
-    const buffer = await new GLTFExporter().parseAsync(wrapper, { binary: true, onlyVisible: true })
-    return new Blob([buffer], { type: 'model/gltf-binary' })
+    try {
+      const buffer = await new GLTFExporter().parseAsync(wrapper, { binary: true, onlyVisible: true })
+      return new Blob([buffer], { type: 'model/gltf-binary' })
+    } finally {
+      snapshot.traverse((mesh) => { if (mesh.isMesh) mesh.geometry.dispose() })
+    }
   }
 
   dispose () {

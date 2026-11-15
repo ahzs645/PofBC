@@ -1,7 +1,7 @@
 // How a badge is being looked at, kept from one badge to the next. No React and no DOM.
 
 export const BADGE_VIEW_KEY = 'pofbc.badge-view.v1'
-export const BADGE_MODES = ['metal', 'vector']
+export const BADGE_MODES = ['metal', 'vector', 'source', 'compare']
 export const BADGE_CURVES = ['flat', 'cylinder', 'dome']
 export const BADGE_CAMERAS = ['front', 'oblique', 'top', 'side', 'back']
 export const MAX_RISE_MM = 8
@@ -35,4 +35,34 @@ export function saveBadgeView (storage, view) {
   try {
     storage?.setItem(BADGE_VIEW_KEY, JSON.stringify(normalizeBadgeView(view)))
   } catch { /* private window, quota */ }
+}
+
+// Keep the stored choice and 3D settings when a different badge has no source record.
+// The visible fallback can change as its reference loads without starting a 3D build.
+export const badgeModeFor = (mode, hasSource) => !hasSource && (mode === 'source' || mode === 'compare') ? 'vector' : mode
+
+/** The shape that can actually be applied, without changing the user's saved preference. */
+export function badgeShapeFor (view, maxRise = MAX_RISE_MM) {
+  const current = normalizeBadgeView(view)
+  const limit = Number.isFinite(maxRise) ? Math.max(0, Math.min(MAX_RISE_MM, maxRise)) : 0
+  const rise = current.curvature === 'flat' ? 0 : Math.min(current.rise, limit)
+  return { mode: rise === 0 ? 'flat' : current.curvature, rise }
+}
+
+/** Keep the result tied to the exact model and requested shape; a failed bend is never exportable. */
+export function applyBadgeShape (build, shape) {
+  const state = { build, ...shape, result: null, error: null }
+  try {
+    const result = build.scene.bend(shape.mode, shape.rise)
+    if (!result || result.mode !== shape.mode || result.rise !== shape.rise) throw new Error('The badge shape was not applied.')
+    return { ...state, result }
+  } catch (error) {
+    return { ...state, error }
+  }
+}
+
+/** A new badge, remounted scene or changed rise must wait for its own successful application. */
+export function badgeShapeStatus (applied, build, shape) {
+  if (!build || !applied || applied.build !== build || applied.mode !== shape.mode || applied.rise !== shape.rise) return 'pending'
+  return applied.error || !applied.result ? 'failed' : 'ready'
 }
