@@ -62,27 +62,45 @@ test('stored badge view settings are validated and survive missing storage', () 
   saveBadgeView({ setItem: () => { throw new Error('quota') } }, BADGE_VIEW_DEFAULTS)
 })
 
-test('struck field textures are deterministic, tile without seams, and keep bumps apart', async () => {
-  const { FIELD_TEXTURES, TEXTURES, heightField, normalMap, placeBumps } = await import('./stipple.js')
-  assert.equal(FIELD_TEXTURES['ranger-metal-early'], 'pebbled')
-  const recipe = { ...TEXTURES.pebbled, size: 128, attempts: 4000 }
-  const bumps = placeBumps(recipe)
-  assert.deepEqual(placeBumps(recipe), bumps)
-  assert.ok(bumps.length > 40)
-  const px = recipe.size / recipe.tileMm
-  const wrap = (d) => d - recipe.size * Math.round(d / recipe.size)
-  for (let i = 0; i < bumps.length; i++) {
-    for (let j = i + 1; j < bumps.length; j++) {
-      const a = bumps[i]
-      const b = bumps[j]
-      assert.ok(Math.hypot(wrap(a.x - b.x), wrap(a.y - b.y)) >= a.r + b.r + recipe.gapMm * px - 1e-9)
-    }
+test('rasterizing and distance fields', async () => {
+  const { distanceTo, rasterize } = await import('./stipple.js')
+  // A 10 × 10 mm square with a 4 × 4 mm hole (nonzero: the hole winds the other way), at 4 px/mm.
+  const outer = [[0, 0], [10, 0], [10, 10], [0, 10]]
+  const hole = [[3, 3], [3, 7], [7, 7], [7, 3]]
+  const mask = rasterize([outer, hole], 40, 40, 4)
+  assert.equal(mask[2 * 40 + 2], 1)
+  assert.equal(mask[20 * 40 + 20], 0)
+  assert.equal(mask.reduce((a, b) => a + b, 0), 40 * 40 - 16 * 16)
+  const d = distanceTo(mask, 40, 40, 0, 4)
+  assert.ok(Math.abs(d[20 * 40 + 9] - 0.75) < 0.01)
+})
+
+test('pebbled fields keep the edge band and the relief halo smooth, and are deterministic', async () => {
+  const { TEXTURES, distanceTo, fieldTexture, placeBumps, rasterize } = await import('./stipple.js')
+  const field = [[[0, 0], [30, 0], [30, 30], [0, 30]]]
+  const raised = [[[12, 12], [18, 12], [18, 18], [12, 18]]]
+  const recipe = { ...TEXTURES.pebbled, pxPerMm: 8 }
+  const px = 8
+  const w = 240
+  const h = 240
+  const edge = distanceTo(rasterize(field, w, h, px), w, h, 0, px)
+  const relief = distanceTo(rasterize(raised, w, h, px), w, h, 1, px)
+  const bumps = placeBumps(recipe, { w, h, px, edge, raised: relief })
+  assert.ok(bumps.length > 150, `${bumps.length} bumps`)
+  assert.deepEqual(placeBumps(recipe, { w, h, px, edge, raised: relief }), bumps)
+  for (const b of bumps) {
+    const k = Math.floor(b.y) * w + Math.floor(b.x)
+    assert.ok(edge[k] >= b.r / px + recipe.bandMm - 1e-6)
+    assert.ok(relief[k] >= b.r / px + recipe.haloMm - 1e-6)
   }
-  const h = heightField(recipe, bumps)
-  assert.ok(Math.max(...h) <= 1 && Math.max(...h) > 0.9)
-  const n = normalMap(recipe, h)
-  assert.equal(n.length, recipe.size * recipe.size * 4)
-  // Flat ground faces straight out: (128, 128, 255).
-  const flat = [...Array(recipe.size * recipe.size).keys()].find((k) => h[k] === 0 && h[(k + 1) % h.length] === 0 && h[(k + recipe.size) % h.length] === 0 && h[(k - 1 + h.length) % h.length] === 0 && h[(k - recipe.size + h.length) % h.length] === 0)
-  assert.deepEqual([...n.slice(flat * 4, flat * 4 + 3)], [128, 128, 255])
+  // Irregular: sizes and shapes vary.
+  const radii = bumps.map((b) => b.r / px)
+  assert.ok(Math.max(...radii) - Math.min(...radii) > 0.25, 'bump sizes vary')
+  assert.ok(bumps.some((b) => b.aspect < 0.85))
+  const tex = fieldTexture('pebbled', { width: 30, height: 30, field, raised })
+  assert.equal(tex.data.length, tex.width * tex.height * 4)
+  // The middle of the raised square and the edge band face straight out.
+  const flat = (x, y) => [...tex.data.slice((y * tex.width + x) * 4, (y * tex.width + x) * 4 + 3)]
+  assert.deepEqual(flat(Math.round(tex.width / 2), Math.round(tex.height / 2)), [128, 128, 255])
+  assert.deepEqual(flat(3, Math.round(tex.height / 2)), [128, 128, 255])
 })

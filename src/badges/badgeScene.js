@@ -7,7 +7,6 @@ import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js'
 import { RoomEnvironment } from 'three/examples/jsm/environments/RoomEnvironment.js'
 import { GLTFExporter } from 'three/examples/jsm/exporters/GLTFExporter.js'
 import { PreparedBadgeCurvature } from './curvature.js'
-import { TEXTURES, normalMap } from './stipple.js'
 
 /** Camera directions, scaled to the badge's size when used. */
 const VIEWS = {
@@ -64,6 +63,7 @@ export class BadgeScene {
     this.controls.enableDamping = false
     this.controls.addEventListener('change', () => this.render())
     this.model = null
+    this.modelTextures = []
     this.curvature = null
     this.reach = 65
     this.viewName = 'oblique'
@@ -88,7 +88,7 @@ export class BadgeScene {
       if (!o.isMesh) return
       o.castShadow = true
       o.receiveShadow = true
-      if (o.userData.texture) this.texture(o.material, o.userData.texture)
+      if (o.userData.fieldMap) this.texture(o.material, o.userData.fieldMap)
     })
     // The key light's shadow covers the badge and no more, so its texels stay finer than the relief.
     const shadow = this.lights[0].shadow.camera
@@ -102,28 +102,22 @@ export class BadgeScene {
     this.setView(this.viewName)
   }
 
-  /** Give a field its struck texture (stipple.js): a normal map repeated at its size in mm. */
-  texture (material, name) {
-    const recipe = TEXTURES[name]
-    if (!recipe) return
-    this.textures ??= new Map()
-    if (!this.textures.has(name)) {
-      const map = new THREE.DataTexture(normalMap(recipe), recipe.size, recipe.size, THREE.RGBAFormat)
-      map.wrapS = THREE.RepeatWrapping
-      map.wrapT = THREE.RepeatWrapping
-      map.colorSpace = THREE.NoColorSpace
-      map.magFilter = THREE.LinearFilter
-      map.minFilter = THREE.LinearMipmapLinearFilter
-      map.generateMipmaps = true
-      map.anisotropy = this.renderer.capabilities.getMaxAnisotropy()
-      map.repeat.set(1 / recipe.tileMm, 1 / recipe.tileMm)
-      map.needsUpdate = true
-      this.textures.set(name, map)
-    }
-    material.normalMap = this.textures.get(name)
+  /** Give a field its struck texture: the normal map stipple.js made for this badge's field. */
+  texture (material, field) {
+    const map = new THREE.DataTexture(field.data, field.width, field.height, THREE.RGBAFormat)
+    map.wrapS = THREE.ClampToEdgeWrapping
+    map.wrapT = THREE.ClampToEdgeWrapping
+    map.colorSpace = THREE.NoColorSpace
+    map.magFilter = THREE.LinearFilter
+    map.minFilter = THREE.LinearMipmapLinearFilter
+    map.generateMipmaps = true
+    map.anisotropy = this.renderer.capabilities.getMaxAnisotropy()
+    map.needsUpdate = true
+    this.modelTextures.push(map)
+    material.normalMap = map
     // The bumps' crowns catch the light: a little smoother than a plain satin field.
-    material.roughness = recipe.roughness
-    if (recipe.tone) material.color.multiplyScalar(recipe.tone)
+    material.roughness = field.roughness
+    if (field.tone) material.color.multiplyScalar(field.tone)
     material.needsUpdate = true
   }
 
@@ -133,6 +127,8 @@ export class BadgeScene {
     this.curvature = null
     this.scene.remove(this.model)
     this.model.traverse((o) => { if (o.isMesh) { o.geometry.dispose(); o.material.dispose() } })
+    this.modelTextures.forEach((map) => map.dispose())
+    this.modelTextures = []
     this.model = null
   }
 
@@ -211,7 +207,6 @@ export class BadgeScene {
     this.clearModel()
     this.controls.dispose()
     this.environment.dispose()
-    this.textures?.forEach((map) => map.dispose())
     this.renderer.dispose()
   }
 }

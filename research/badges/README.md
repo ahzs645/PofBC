@@ -53,11 +53,17 @@ scroll and a separate plaque, and a leather badge, so:
   it in drawing order, and an "engraved" emblem's plates (S18, S19) become its polished high points
   over the darker boss.
 - **Struck field textures.** The drawings leave texture out, but the photographs show it: the early
-  Park Ranger shields (S11, S12, S17, S20) have a pebbled field of close-set bumps about 1–1.5 mm
-  across, and the green-enamel ones (S14, S18) a fine frosted grain. `stipple.js` makes these as
-  seamless normal maps from seeded random bumps, repeated at their size in millimetres over the
-  field only (the plate, rim and lettering stay smooth), and they go into the GLB as normal textures.
-  Other badges' fields are smooth, as their photographs are.
+  Park Ranger shields (S11, S12, S17, S20) have a pebbled field of close-set, irregular bumps about
+  0.6–1.3 mm across, and the green-enamel ones (S14, S18) a fine frosted grain. Both leave a smooth
+  band just inside the badge's edge and stop short of the raised parts. `stipple.js` makes each
+  badge its own field texture, following common practice for procedural hammered and peened metal
+  (irregular packed dents with flattened crowns, as Blender's Voronoi "hammered" texture and Modo's
+  peened texture make) and for variable-density stippling (Poisson-disk sampling with a sizing
+  field): the field and the relief are rasterized, distances to the edge and to the relief
+  measured, bumps placed by dart throwing with a gap that widens near the relief and none in the
+  edge band or the relief's halo, each bump an irregular blob of random size and height, and the
+  height field turned into a normal map (which the GLB keeps). Other badges' fields are smooth, as
+  their photographs are.
 - **The metal is read from the badge**: leather by its medium; otherwise a gradient's name (`silver`)
   or the lit paints' hue, gold against grey, by area.
 - The longer side is set to a nominal **65 mm** (the trial's height for S51-O01), and the default

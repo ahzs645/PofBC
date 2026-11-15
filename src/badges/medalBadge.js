@@ -23,7 +23,7 @@ import ClipperLib from 'clipper-lib'
 import { buildMedalGroup } from './vendor/medal-forge/model-builder'
 import { DEFAULT_SETTINGS } from './vendor/medal-forge/defaults'
 import { EMBOSSED_COMPONENT, METALS, NOMINAL_SIZE_MM, PARTS, RAISED, bodyFor, bossFor, metalOf, partFor } from './badgeParts.js'
-import { FIELD_TEXTURES } from './stipple.js'
+import { FIELD_TEXTURES, fieldTexture } from './stipple.js'
 
 export const MEDAL_FORGE = {
   repository: 'https://github.com/CatsJuice/medal-forge',
@@ -316,7 +316,7 @@ export function badgePieces (svgText, { medium = '', sizeMm = NOMINAL_SIZE_MM } 
     if (!RAISED.has(look.part)) return { ...piece, share, ...look }
     return { ...piece, share, ...look, ...shoulder(piece.rings, look.bevel, perMm) }
   })
-  return { metal, shadows, body: { rings: outline, ...bodyFor(metal) }, pieces: withBosses(pieces, metal, perMm) }
+  return { metal, shadows, perMm, body: { rings: outline, ...bodyFor(metal) }, pieces: withBosses(pieces, metal, perMm) }
 }
 
 /** The pieces as one flat SVG of plain paths, body first, in the order the engine will index them. */
@@ -354,14 +354,42 @@ function reverseWinding (geometry) {
   geometry.computeVertexNormals()
 }
 
+/** Bounds of Clipper rings, in drawing units. */
+function boundsOf (rings) {
+  let minX = Infinity; let minY = Infinity; let maxX = -Infinity; let maxY = -Infinity
+  for (const ring of rings) for (const p of ring) { minX = Math.min(minX, p.X); maxX = Math.max(maxX, p.X); minY = Math.min(minY, p.Y); maxY = Math.max(maxY, p.Y) }
+  return { minX: minX / SCALE, minY: minY / SCALE, maxX: maxX / SCALE, maxY: maxY / SCALE }
+}
+
+/**
+ * The field's texture (stipple.js) and how the model's coordinates map onto it. The engine places
+ * a drawing point (X, Y) at ((X − cx) / perMm, −(Y − cy) / perMm) mm, about the centre of the
+ * badge's outline; the texture's frame runs from the field's lower left, y up.
+ */
+function texturedField ({ body, pieces, perMm }, name) {
+  const grounds = pieces.filter((p) => p.part === 'ground')
+  if (!grounds.length) return null
+  const fieldRings = grounds.flatMap((p) => p.rings)
+  const raisedRings = pieces.filter((p) => p.part !== 'ground').flatMap((p) => p.rings)
+  const f = boundsOf(fieldRings)
+  const o = boundsOf(body.rings)
+  const cx = (o.minX + o.maxX) / 2
+  const cy = (o.minY + o.maxY) / 2
+  const toFrame = (rings) => rings.map((ring) => ring.map((p) => [(p.X / SCALE - f.minX) / perMm, (f.maxY - p.Y / SCALE) / perMm]))
+  const widthMm = (f.maxX - f.minX) / perMm
+  const heightMm = (f.maxY - f.minY) / perMm
+  const map = fieldTexture(name, { width: widthMm, height: heightMm, field: toFrame(fieldRings), raised: toFrame(raisedRings) })
+  return { map, widthMm, heightMm, offsetX: (cx - f.minX) / perMm, offsetY: (f.maxY - cy) / perMm }
+}
+
 /**
  * Build a badge.
  * @param {string} svgText  A joined library drawing.
  * @param {{ medium?: string, sizeMm?: number, family?: string }} [options]
  *   sizeMm: its longer side (illustrative). family: the library's family, which says whether its
  *   field is textured (stipple.js).
- * Textured fields get planar UVs in millimetres (u = x, v = y), so a texture repeats at its own
- * physical size whatever the badge's.
+ * A textured field gets its own normal map (stipple.js), made for this badge's field and relief, and
+ * UVs spanning the field's box.
  * @returns {{ group: THREE.Group, metal: string, sizeMm: {width: number, height: number, depth: number}, stats: object }}
  */
 export function buildBadge (svgText, { medium = '', sizeMm = NOMINAL_SIZE_MM, family = '' } = {}) {
@@ -415,21 +443,25 @@ export function buildBadge (svgText, { medium = '', sizeMm = NOMINAL_SIZE_MM, fa
   const group = new THREE.Group()
   group.name = 'badge'
   let triangles = 0
+  const field = fieldTexture ? texturedField(prepared, fieldTexture) : null
   for (const { piece, texture, geometries } of byLook.values()) {
     const geometry = mergeGeometries(geometries, false)
     geometries.forEach((g) => g.dispose())
     if (!geometry) continue
-    if (texture) {
+    if (texture && field) {
       const position = geometry.getAttribute('position')
       const uv = new Float32Array(position.count * 2)
-      for (let i = 0; i < position.count; i++) { uv[2 * i] = position.getX(i); uv[2 * i + 1] = position.getY(i) }
+      for (let i = 0; i < position.count; i++) {
+        uv[2 * i] = (position.getX(i) + field.offsetX) / field.widthMm
+        uv[2 * i + 1] = (position.getY(i) + field.offsetY) / field.heightMm
+      }
       geometry.setAttribute('uv', new THREE.BufferAttribute(uv, 2))
     }
     const material = new THREE.MeshStandardMaterial({ color: piece.color, metalness: piece.metalness, roughness: piece.roughness })
     const mesh = new THREE.Mesh(geometry, material)
     mesh.name = `${piece.part} ${piece.color}`
     mesh.userData.part = piece.part
-    if (texture) mesh.userData.texture = texture
+    if (texture && field) mesh.userData.fieldMap = field.map
     triangles += geometry.getAttribute('position').count / 3
     group.add(mesh)
   }
