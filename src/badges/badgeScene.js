@@ -28,6 +28,9 @@ export class BadgeScene {
     this.renderer.toneMapping = THREE.ACESFilmicToneMapping
     this.renderer.toneMappingExposure = 1.15
     this.renderer.setClearColor(0x000000, 0)
+    // Struck relief reads by its shadows: on a silver badge a raised letter is the field's own colour.
+    this.renderer.shadowMap.enabled = true
+    this.renderer.shadowMap.type = THREE.PCFSoftShadowMap
 
     this.scene = new THREE.Scene()
     const room = new RoomEnvironment()
@@ -36,9 +39,17 @@ export class BadgeScene {
     room.dispose()
     pmrem.dispose()
     this.scene.environment = this.environment
-    this.scene.environmentIntensity = 1.1
-    const key = new THREE.DirectionalLight('#fff0d8', 3)
-    key.position.set(-30, 60, 80)
+    // Less fill from the room than the trial's 1.1, so the key light's shadows are not washed out.
+    this.scene.environmentIntensity = 0.85
+    // From the upper left and lower than the trial's key, so a letter's shoulder catches the light
+    // on one side and drops a short shadow on the other, as in the reference photographs.
+    const key = new THREE.DirectionalLight('#fff0d8', 3.4)
+    key.position.set(-45, 50, 50)
+    key.castShadow = true
+    key.shadow.mapSize.set(2048, 2048)
+    key.shadow.bias = -0.0004
+    key.shadow.normalBias = 0.02
+    this.scene.add(key.target)
     const fill = new THREE.DirectionalLight('#b7d6ee', 1.7)
     fill.position.set(55, 20, 20)
     const rim = new THREE.DirectionalLight('#ffe2b1', 1.3)
@@ -65,13 +76,20 @@ export class BadgeScene {
     this.clearModel()
     const soft = metal === 'leather'
     this.renderer.toneMappingExposure = soft ? 0.72 : 1.15
-    this.lights.forEach((light, i) => { light.intensity = [3, 1.7, 1.3][i] * (soft ? 0.55 : 1) })
+    this.lights.forEach((light, i) => { light.intensity = [3.4, 1.7, 1.3][i] * (soft ? 0.55 : 1) })
     this.model = group
     this.scene.add(group)
     // Keep long triangles short enough to bend smoothly; finer for a small badge.
     const box = new THREE.Box3().setFromObject(group)
     const size = box.getSize(new THREE.Vector3())
     this.reach = Math.max(size.x, size.y)
+    group.traverse((o) => { if (o.isMesh) { o.castShadow = true; o.receiveShadow = true } })
+    // The key light's shadow covers the badge and no more, so its texels stay finer than the relief.
+    const shadow = this.lights[0].shadow.camera
+    const half = this.reach * 0.75
+    Object.assign(shadow, { left: -half, right: half, top: half, bottom: -half, near: 1, far: this.reach * 4 })
+    this.lights[0].position.setLength(this.reach * 1.6)
+    shadow.updateProjectionMatrix()
     this.curvature = new PreparedBadgeCurvature(group, { maxEdgeLength: Math.max(0.8, this.reach / 36), maxVertices: 2_400_000 })
     this.controls.minDistance = this.reach * 0.9
     this.controls.maxDistance = this.reach * 3.6

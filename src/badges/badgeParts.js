@@ -19,28 +19,49 @@
 export const NOMINAL_SIZE_MM = 65
 
 /** Base metals, and the colours their surfaces take. */
+/**
+ * Base metals. The reference photographs show the field and the struck relief in different
+ * finishes: a darker, satin or stippled field, and polished high points that catch the light. On a
+ * silver badge that difference is all that shows a raised letter, so fields are `satin` and raised
+ * parts `polish`.
+ */
 export const METALS = {
-  gold: { name: 'Bronze-gilt', body: '#8f7144', plate: '#b8975e', roughness: 0.32 },
-  silver: { name: 'Silver-finish', body: '#9aa29d', plate: '#c9cfca', roughness: 0.3 },
-  leather: { name: 'Tooled leather', body: '#8a5a30', plate: '#a46d38', roughness: 0.85 }
+  gold: { name: 'Bronze-gilt', body: '#7a5f37', field: '#7d6239', plate: '#b8975e', polish: 0.22, satin: 0.62 },
+  silver: { name: 'Silver-finish', body: '#7e8581', field: '#838a86', plate: '#c9cfca', polish: 0.18, satin: 0.6 },
+  leather: { name: 'Tooled leather', body: '#8a5a30', field: '#a46d38', plate: '#a46d38', polish: 0.7, satin: 0.9 }
+}
+
+/** A colour darkened towards black by `factor` (0–1 kept), as '#rrggbb'. */
+export function darken (hex, factor) {
+  const m = /^#([0-9a-f]{6})$/i.exec(hex)
+  if (!m) return hex
+  return '#' + [0, 2, 4].map((i) => Math.round(parseInt(m[1].slice(i, i + 2), 16) * factor).toString(16).padStart(2, '0')).join('')
 }
 
 /**
- * Each part's relief, in millimetres above the body's face (which is z = 0), and its finish.
- * Raised metal is scaled by its paint's lightness: the atlas paints a lit face light and a shaded
- * one dark, so the lighter of two overlapping pieces is the one on top.
+ * Each part's relief and finish. A piece's back sits just inside the body, so what shows above the
+ * body's face (z = 0) is thickness + bevel: the bevel is the sloped shoulder of a struck letter,
+ * and medalBadge.js insets the outline by it so the shoulder's foot lands on the drawn edge.
+ * Raised metal is scaled a little by its paint's lightness: the atlas paints a lit face light and a
+ * shaded one dark, so the lighter of two overlapping pieces is the one on top.
+ *
+ * The reference photographs (S07, S21, S51, the S11 rangers, S01) show lettering, rims and emblems
+ * struck well up from the field, about the depth of a letter's stroke; 0.5–0.65 mm at 65 mm.
  */
 export const PARTS = {
   body: { thickness: 1.6, bevel: 0.12 },
   ground: { thickness: 0.06, bevel: 0.02 },
   plate: { thickness: 0.1, bevel: 0.03 },
   recess: { thickness: 0.16, bevel: 0.01 },
-  enamel: { thickness: 0.16, bevel: 0.015 },
-  detail: { thickness: 0.23, bevel: 0.018 },
-  emblem: { thickness: 0.32, bevel: 0.035 },
-  lettering: { thickness: 0.38, bevel: 0.035 },
-  rim: { thickness: 0.42, bevel: 0.045 }
+  enamel: { thickness: 0.18, bevel: 0.015 },
+  detail: { thickness: 0.3, bevel: 0.05 },
+  emblem: { thickness: 0.38, bevel: 0.1 },
+  lettering: { thickness: 0.46, bevel: 0.14 },
+  rim: { thickness: 0.5, bevel: 0.16 }
 }
+
+/** Parts struck up from the field, whose outlines get a sloped shoulder. */
+export const RAISED = new Set(['detail', 'emblem', 'lettering', 'rim'])
 
 /** A darkened field: the trial's oxidized body (S51-O01) was metalness 0.65, roughness 0.8, but on a lighter olive ground under this studio light that reads pale, so it is smoother and more metallic, reflecting the room only where the angle catches it. */
 const DARK_FIELD = (leather) => (leather ? { metalness: 0, roughness: 0.85 } : { metalness: 0.85, roughness: 0.5 })
@@ -109,23 +130,25 @@ export function partFor ({ paint, kind = 'fill', caption = null, border = false,
     const thickness = leather && !['ground', 'plate', 'recess'].includes(part) ? profile.thickness * LEATHER_RELIEF : profile.thickness
     return { part, color, thickness: thickness * scale, bevel: profile.bevel, ...finish }
   }
-  const metalFinish = leather ? { metalness: 0, roughness: base.roughness } : { metalness: 1, roughness: base.roughness }
+  const polished = { metalness: leather ? 0 : 1, roughness: base.polish }
+  const satin = { metalness: leather ? 0 : 1, roughness: base.satin }
 
   const ground = kind === 'fill' && share > GROUND_SHARE
-  if (isGradient(paint) || !hsl) return build(ground ? 'ground' : 'plate', base.plate, metalFinish)
+  if (isGradient(paint) || !hsl) return ground ? build('ground', base.field, satin) : build('plate', base.plate, polished)
   // A large field in its own colour: dark ones read as an oxidized or enamelled ground.
   if (ground) {
     // Dark grounds are darkened metal, finished as the trial's oxidized field. A matte non-metal
     // takes so much of the room's light that a dark colour reads pale.
-    const finish = hsl.l < 0.35 ? DARK_FIELD(leather) : metalFinish
-    return build('ground', paint, hsl.s > 0.35 && !isGoldHue(hsl) && !leather ? { metalness: 0, roughness: 0.28 } : finish)
+    if (hsl.s > 0.35 && !isGoldHue(hsl) && !leather) return build('ground', paint, { metalness: 0, roughness: 0.28 })
+    // The photographs' dark fields are deeper than the drawing's paint, which keeps lettering legible on screen.
+    return hsl.l < 0.35 ? build('ground', darken(paint, 0.62), DARK_FIELD(leather)) : build('ground', darken(paint, 0.82), satin)
   }
   if (!leather && hsl.s > 0.35 && !isGoldHue(hsl) && hsl.l > 0.08 && hsl.l < 0.9) {
     return build('enamel', paint, { metalness: 0, roughness: 0.28 })
   }
   if (hsl.l < 0.22) return build('recess', paint, DARK_FIELD(leather))
   const part = border ? 'rim' : caption ? 'lettering' : kind === 'stroke' ? 'detail' : 'emblem'
-  return build(part, paint, metalFinish, 0.7 + 0.45 * hsl.l)
+  return build(part, paint, polished, 0.85 + 0.25 * hsl.l)
 }
 
 /** The body of a badge made of `metal`. */
@@ -137,7 +160,7 @@ export function bodyFor (metal) {
     color: base.body,
     thickness: profile.thickness,
     bevel: profile.bevel,
-    metalness: metal === 'leather' ? 0 : 0.85,
-    roughness: metal === 'leather' ? base.roughness : 0.45
+    metalness: metal === 'leather' ? 0 : 1,
+    roughness: base.satin
   }
 }

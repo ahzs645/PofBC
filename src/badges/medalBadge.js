@@ -22,7 +22,7 @@ import { mergeGeometries } from 'three/examples/jsm/utils/BufferGeometryUtils.js
 import ClipperLib from 'clipper-lib'
 import { buildMedalGroup } from './vendor/medal-forge/model-builder'
 import { DEFAULT_SETTINGS } from './vendor/medal-forge/defaults'
-import { NOMINAL_SIZE_MM, bodyFor, metalOf, partFor } from './badgeParts.js'
+import { NOMINAL_SIZE_MM, RAISED, bodyFor, metalOf, partFor } from './badgeParts.js'
 
 export const MEDAL_FORGE = {
   repository: 'https://github.com/CatsJuice/medal-forge',
@@ -177,6 +177,32 @@ function strokeRings (path, style, tolerance) {
   return out.map((ring) => simplify(ring, Math.max(0.02, tolerance))).filter(Boolean)
 }
 
+/** The longer side of a set of rings' bounds, in drawing units. */
+function longerSide (rings) {
+  let minX = Infinity; let minY = Infinity; let maxX = -Infinity; let maxY = -Infinity
+  for (const ring of rings) for (const p of ring) { minX = Math.min(minX, p.X); maxX = Math.max(maxX, p.X); minY = Math.min(minY, p.Y); maxY = Math.max(maxY, p.Y) }
+  return Math.max(maxX - minX, maxY - minY) / SCALE
+}
+
+/**
+ * A raised piece's outline inset by its bevel, so the bevel's slope rises from the drawn edge to a
+ * narrower top, as a struck letter's shoulder does. A stroke too thin for the full shoulder gets a
+ * smaller one: the top must keep at least half the piece's area.
+ */
+function shoulder (rings, bevelMm, perMm) {
+  const before = Math.abs(rings.reduce((sum, ring) => sum + ClipperLib.Clipper.Area(ring), 0))
+  for (const share of [1, 0.6, 0.35]) {
+    const bevel = bevelMm * share
+    const offset = new ClipperLib.ClipperOffset(2, 0.25 * SCALE * perMm * 0.01)
+    offset.AddPaths(rings, ClipperLib.JoinType.jtRound, ClipperLib.EndType.etClosedPolygon)
+    const inset = []
+    offset.Execute(inset, -bevel * perMm * SCALE)
+    const after = Math.abs(inset.reduce((sum, ring) => sum + ClipperLib.Clipper.Area(ring), 0))
+    if (inset.length && after >= 0.5 * before) return { rings: inset, bevel }
+  }
+  return { bevel: Math.min(bevelMm, 0.02) }
+}
+
 const visible = (paint, opacity) => paint && paint !== 'none' && Number(opacity ?? 1) > 0
 
 /**
@@ -184,7 +210,7 @@ const visible = (paint, opacity) => paint && paint !== 'none' && Number(opacity 
  * @param {string} svgText  A joined library drawing.
  * @param {{ medium?: string }} [options]
  */
-export function badgePieces (svgText, { medium = '' } = {}) {
+export function badgePieces (svgText, { medium = '', sizeMm = NOMINAL_SIZE_MM } = {}) {
   const doc = new DOMParser().parseFromString(svgText, 'image/svg+xml')
   if (doc.querySelector('parsererror')) throw new Error('The badge drawing is not valid SVG.')
   const root = doc.documentElement
@@ -219,9 +245,15 @@ export function badgePieces (svgText, { medium = '' } = {}) {
   const outline = union.filter((ring) => ClipperLib.Clipper.Orientation(ring) && Math.abs(ClipperLib.Clipper.Area(ring)) > smallest)
 
   const outlineArea = area(outline)
+  const perMm = longerSide(outline) / sizeMm
   const pieces = raw.map((piece) => {
     const share = area(piece.rings) / outlineArea
-    return { ...piece, share, ...partFor({ ...piece, metal, share }) }
+    const look = partFor({ ...piece, metal, share })
+    // Fine heraldry is hundreds of tiny pieces; a bevel on each would multiply the model several
+    // times over for nothing visible, so they stand square.
+    if (share < TINY_SHARE || points(piece) > BUSY_POINTS) return { ...piece, share, ...look, bevel: 0 }
+    if (!RAISED.has(look.part)) return { ...piece, share, ...look }
+    return { ...piece, share, ...look, ...shoulder(piece.rings, look.bevel, perMm) }
   })
   return { metal, shadows, body: { rings: outline, ...bodyFor(metal) }, pieces }
 }
@@ -269,7 +301,7 @@ function reverseWinding (geometry) {
  */
 export function buildBadge (svgText, { medium = '', sizeMm = NOMINAL_SIZE_MM } = {}) {
   const started = performance.now()
-  const prepared = badgePieces(svgText, { medium })
+  const prepared = badgePieces(svgText, { medium, sizeMm })
   const { all, svg } = piecesSvg(prepared)
   const count = all.length
   const shapeSettings = {}
@@ -278,12 +310,12 @@ export function buildBadge (svgText, { medium = '', sizeMm = NOMINAL_SIZE_MM } =
     const order = piece.part === 'body' ? 0 : (ORDER_SPREAD * index) / count
     // A bevel adds its own depth on both faces, so a piece spans zOffset − bevel to
     // zOffset + thickness + bevel. Seat the body's face at z = 0 and every piece's back on it.
+    // A bevel adds its own depth on both faces: a piece spans zOffset − bevel to zOffset +
+    // thickness + bevel. The body's face is z = 0; every other piece's back bevel is sunk into it.
     shapeSettings[String(index)] = {
       thickness: piece.thickness,
-      zOffset: (piece.part === 'body' ? -piece.thickness - piece.bevel : order + piece.bevel) - engineOffset,
-      // Fine heraldry is hundreds of tiny pieces; a bevel on each would multiply the model several
-      // times over for nothing visible, so they stand square.
-      bevel: piece.part !== 'body' && (piece.share < TINY_SHARE || points(piece) > BUSY_POINTS) ? 0 : piece.bevel,
+      zOffset: (piece.part === 'body' ? -piece.thickness - piece.bevel : order) - engineOffset,
+      bevel: piece.bevel,
       material: 'brushedGold',
       color: piece.color,
       curveSegments: 24,

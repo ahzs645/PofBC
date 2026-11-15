@@ -37,6 +37,14 @@ scroll and a separate plaque, and a leather badge, so:
   plate of the badge's metal, a saturated colour off the metal's hue is enamel, a near-black is a
   darkened field, and the rest is raised metal. Lighter metal stands above darker, so a lit face
   sits on its drawn shading.
+- **Struck relief, as in the reference photographs.** The atlas snapshot holds a photograph of every
+  badge (`dist/assets/sources/`). On most, the lettering, rim and emblem are struck up from the same
+  metal as the field: polished high points with sloped shoulders over a darker, satin or oxidized
+  field. So raised parts stand 0.5–0.65 mm (lettering about 0.6 mm), each outline is inset by its
+  bevel so the shoulder slopes from the drawn edge to a narrower top (thinner strokes get a smaller
+  shoulder), fields are satin and darker than the polished relief, and the key light comes low from
+  the upper left and casts shadows. On a silver badge the shadows and the finish are what show a
+  raised letter at all.
 - **The metal is read from the badge**: leather by its medium; otherwise a gradient's name (`silver`)
   or the lit paints' hue, gold against grey, by area.
 - The longer side is set to a nominal **65 mm** (the trial's height for S51-O01), and the default
