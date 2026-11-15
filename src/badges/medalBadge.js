@@ -126,30 +126,31 @@ const toClipper = (points) => points.map((p) => ({ X: Math.round(p.x * SCALE), Y
 const ringD = (ring) => ring.map((v, i) => `${i ? 'L' : 'M'}${+(v.X / SCALE).toFixed(4)} ${+(v.Y / SCALE).toFixed(4)}`).join('') + 'Z'
 
 /** Clipper's boolean operations, with the nonzero rule SVG fills default to. */
-function clip (type, subject, clipRings = []) {
+function clip (type, subject, clipRings = [], rule = ClipperLib.PolyFillType.pftNonZero) {
   const clipper = new ClipperLib.Clipper()
   clipper.AddPaths(subject, ClipperLib.PolyType.ptSubject, true)
   if (clipRings.length) clipper.AddPaths(clipRings, ClipperLib.PolyType.ptClip, true)
   const out = []
-  clipper.Execute(type, out, ClipperLib.PolyFillType.pftNonZero, ClipperLib.PolyFillType.pftNonZero)
+  clipper.Execute(type, out, rule, rule)
   return out
 }
 
 /**
- * A filled path's region as non-overlapping rings in absolute coordinates. SVGLoader resolves the
- * fill rule into shapes with holes, but those shapes may overlap one another: the atlas builds a
- * letter such as E from overlapping rectangles. Each shape loses its holes, then all are joined.
+ * A filled path's region as non-overlapping rings in absolute coordinates, under the path's own fill
+ * rule. Its subpaths (SVGLoader has applied its transforms) go to Clipper as they are, rather than
+ * through SVGLoader.createShapes: that does not apply the even-odd rule reliably (two same-way
+ * ellipses under even-odd came back as two hole-less shapes, a solid disc where S51's ring is), and
+ * the atlas builds letters from overlapping nonzero rectangles, which must join.
  */
 function fillRings (path, tolerance) {
-  const solids = []
-  for (const shape of SVGLoader.createShapes(path)) {
-    const { shape: outer, holes } = shape.extractPoints(CURVE_DIVISIONS)
-    const ring = simplify(toClipper(outer), tolerance)
-    if (!ring) continue
-    const hollow = holes.map((hole) => simplify(toClipper(hole), tolerance)).filter(Boolean)
-    solids.push(...(hollow.length ? clip(ClipperLib.ClipType.ctDifference, [ring], hollow) : [ring]))
-  }
-  return solids.length ? clip(ClipperLib.ClipType.ctUnion, solids) : []
+  const rings = path.subPaths
+    .map((subpath) => subpath.getPoints(CURVE_DIVISIONS))
+    .filter((points) => points.length >= 3)
+    .map((points) => simplify(toClipper(points), tolerance))
+    .filter(Boolean)
+  if (!rings.length) return []
+  const rule = path.userData?.style?.fillRule === 'evenodd' ? ClipperLib.PolyFillType.pftEvenOdd : ClipperLib.PolyFillType.pftNonZero
+  return clip(ClipperLib.ClipType.ctUnion, rings, [], rule)
 }
 
 /** A stroked path's outline, as the rings of the solid band it paints. */
@@ -339,7 +340,10 @@ export function badgePieces (svgText, { medium = '', sizeMm = NOMINAL_SIZE_MM } 
     const look = partFor({ ...piece, metal, share })
     // Fine heraldry is hundreds of tiny pieces; a bevel on each would multiply the model several
     // times over for nothing visible, so they stand square.
-    if (share < TINY_SHARE || points(piece) > BUSY_POINTS) return { ...piece, share, ...look, bevel: 0 }
+    // Lettering is exempt from the tiny rule: a caption is a few dozen letters, and without a
+    // shoulder small letters have flat square tops that read pale against bevelled ones.
+    const tiny = share < TINY_SHARE && look.part !== 'lettering'
+    if (tiny || points(piece) > BUSY_POINTS) return { ...piece, share, ...look, bevel: 0 }
     if (!RAISED.has(look.part)) return { ...piece, share, ...look }
     return { ...piece, share, ...look, ...shoulder(piece.rings, look.bevel, perMm) }
   })

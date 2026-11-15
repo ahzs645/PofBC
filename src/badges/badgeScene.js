@@ -30,7 +30,7 @@ export class BadgeScene {
     this.renderer.setClearColor(0x000000, 0)
     // Struck relief reads by its shadows: on a silver badge a raised letter is the field's own colour.
     this.renderer.shadowMap.enabled = true
-    this.renderer.shadowMap.type = THREE.PCFSoftShadowMap
+    this.renderer.shadowMap.type = THREE.PCFShadowMap
 
     this.scene = new THREE.Scene()
     const room = new RoomEnvironment()
@@ -88,7 +88,11 @@ export class BadgeScene {
       if (!o.isMesh) return
       o.castShadow = true
       o.receiveShadow = true
-      if (o.userData.fieldMap) this.texture(o.material, o.userData.fieldMap)
+      if (o.userData.fieldMap) {
+        this.texture(o.material, o.userData.fieldMap)
+        // The pixels now live in the texture; left here, a GLB export would write them out as JSON.
+        delete o.userData.fieldMap
+      }
     })
     // The key light's shadow covers the badge and no more, so its texels stay finer than the relief.
     const shadow = this.lights[0].shadow.camera

@@ -82,8 +82,9 @@ the lighting makes its own.
 
 - Not measured: size, body thickness, relief, finish and radius are illustrative, and the reverse
   is generated, without pins, clutches or maker's marks. The GLB records this in its extras.
-- The drawing is the reconstruction, not the die. The trial's note stands: S51-O01's photograph shows
-  a broad, solid, tiered tree; the vector's thinner pine is what gets built.
+- The drawing is the reconstruction, not the die. S51-O01's inner emblem is now a reviewed reconstruction of a
+  close-up photograph (Patcher's `supplied/forest-fire-prevention-shield/`): the broad, solid, tiered conifer the
+  trial found missing is what gets built. Elsewhere the atlas's interpretations stand.
 - Fine heraldic detail (the provincial arms on the ranger and cap badges) becomes hundreds of small
   pieces; the larger badges take a few seconds to build, on the page's main thread.
 - WebGL is required for the 3D view; without it the Vector tab still works.
