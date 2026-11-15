@@ -22,7 +22,7 @@ import { mergeGeometries } from 'three/examples/jsm/utils/BufferGeometryUtils.js
 import ClipperLib from 'clipper-lib'
 import { buildMedalGroup } from './vendor/medal-forge/model-builder'
 import { DEFAULT_SETTINGS } from './vendor/medal-forge/defaults'
-import { EMBOSSED_COMPONENT, METALS, NOMINAL_SIZE_MM, PARTS, RAISED, bodyFor, bossFor, metalOf, partFor } from './badgeParts.js'
+import { EMBOSSED_COMPONENT, METALS, NOMINAL_SIZE_MM, PARTS, RAISED, bodyFor, bossFor, edgeFor, metalOf, partFor } from './badgeParts.js'
 import { FIELD_TEXTURES, fieldTexture } from './stipple.js'
 
 export const MEDAL_FORGE = {
@@ -204,6 +204,29 @@ function shoulder (rings, bevelMm, perMm) {
   return { bevel: Math.min(bevelMm, 0.02) }
 }
 
+/**
+ * A metal badge's rolled edge: the band between its outline and the outline inset by the edge's
+ * width, itself inset by the bevel so the rounded bevel grows back to the outline. It curls up from
+ * the field on the inside and rounds over at the badge's edge.
+ */
+function rolledEdge (outline, metal, perMm) {
+  const { widthMm } = PARTS.edge
+  const look = edgeFor(metal)
+  const offset = (rings, mm) => {
+    const o = new ClipperLib.ClipperOffset(2, 0.01 * perMm * SCALE)
+    o.AddPaths(rings, ClipperLib.JoinType.jtRound, ClipperLib.EndType.etClosedPolygon)
+    const out = []
+    o.Execute(out, mm * perMm * SCALE)
+    return out
+  }
+  // The band, already narrowed by the bevel on both sides.
+  const outer = offset(outline, -look.bevel)
+  const inner = offset(outline, -(widthMm - look.bevel))
+  const band = clip(ClipperLib.ClipType.ctDifference, outer, inner)
+  if (!band.length) return []
+  return [{ kind: 'fill', paint: null, rings: band, caption: null, border: true, emblem: null, share: 0, ...look }]
+}
+
 /** The struck emblem (see EMBOSSED_COMPONENT) an element belongs to, or null. */
 function emblemOf (node) {
   for (let p = node; p && p.getAttribute; p = p.parentElement) {
@@ -316,7 +339,8 @@ export function badgePieces (svgText, { medium = '', sizeMm = NOMINAL_SIZE_MM } 
     if (!RAISED.has(look.part)) return { ...piece, share, ...look }
     return { ...piece, share, ...look, ...shoulder(piece.rings, look.bevel, perMm) }
   })
-  return { metal, shadows, perMm, body: { rings: outline, ...bodyFor(metal) }, pieces: withBosses(pieces, metal, perMm) }
+  const edge = metal === 'leather' ? [] : rolledEdge(outline, metal, perMm)
+  return { metal, shadows, perMm, body: { rings: outline, ...bodyFor(metal) }, pieces: [...edge, ...withBosses(pieces, metal, perMm)] }
 }
 
 /** The pieces as one flat SVG of plain paths, body first, in the order the engine will index them. */
@@ -411,7 +435,7 @@ export function buildBadge (svgText, { medium = '', sizeMm = NOMINAL_SIZE_MM, fa
       material: 'brushedGold',
       color: piece.color,
       curveSegments: 24,
-      bevelSegments: piece.part === 'body' ? 3 : 1,
+      bevelSegments: piece.bevelSegments ?? (piece.part === 'body' ? 3 : 1),
       depthSteps: 1
     }
   })

@@ -52,6 +52,10 @@ scroll and a separate plaque, and a leather badge, so:
   0.8 mm with a sloped shoulder, in a darker satin of the metal. The emblem's own pieces stand on
   it in drawing order, and an "engraved" emblem's plates (S18, S19) become its polished high points
   over the darker boss.
+- **A rolled edge.** The photographed metal badges have a raised, rounded border that curls up from
+  the field and rolls over at the edge. Every metal badge gets one: a band about 1 mm wide inside
+  its outline, raised about 0.7 mm with a rounded (four-segment) bevel, polished. The textured
+  fields stop at it.
 - **Struck field textures.** The drawings leave texture out, but the photographs show it: the early
   Park Ranger shields (S11, S12, S17, S20) have a pebbled field of close-set, irregular bumps about
   0.6–1.3 mm across, and the green-enamel ones (S14, S18) a fine frosted grain. Both leave a smooth

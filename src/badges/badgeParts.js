@@ -59,11 +59,28 @@ export const PARTS = {
   lettering: { thickness: 0.46, bevel: 0.14 },
   rim: { thickness: 0.5, bevel: 0.16 },
   // The mass a struck emblem (the provincial arms, the dogwood) rises as, under its own line work.
-  boss: { thickness: 0.6, bevel: 0.2 }
+  boss: { thickness: 0.6, bevel: 0.2 },
+  // The rolled edge: a band just inside the outline that curls up from the field and rounds over
+  // at the badge's edge, as the photographs' borders do. Its bevel is rounded (several segments).
+  edge: { thickness: 0.35, bevel: 0.32, widthMm: 1.05, segments: 4 }
 }
 
 /** Parts struck up from the field, whose outlines get a sloped shoulder. */
 export const RAISED = new Set(['detail', 'emblem', 'lettering', 'rim', 'boss'])
+
+/** A metal badge's rolled edge, polished like the rest of its relief. Leather has none. */
+export function edgeFor (metal) {
+  const base = METALS[metal] ?? METALS.gold
+  return {
+    part: 'edge',
+    color: base.plate,
+    thickness: PARTS.edge.thickness,
+    bevel: PARTS.edge.bevel,
+    bevelSegments: PARTS.edge.segments,
+    metalness: 1,
+    roughness: base.polish
+  }
+}
 
 /**
  * Drawing components struck as a raised mass in the reference photographs: the provincial arms on
