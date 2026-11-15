@@ -1,4 +1,4 @@
-// Build the actual patch viewer and dependencies without the unrelated full-site asset pipeline.
+// Build the actual patch and badge viewers without the unrelated full-site asset pipeline.
 // Run: node scripts/check-patch-viewer-build.mjs
 import { cpSync, existsSync, mkdtempSync, readFileSync, readdirSync, rmSync, writeFileSync } from 'node:fs'
 import { createRequire } from 'node:module'
@@ -27,8 +27,9 @@ import '../src/site/site.css'
 import '@fontsource/inter/400.css'
 import '@fontsource/inter/600.css'
 import '@fontsource/inter/700.css'
+const collection = new URLSearchParams(window.location.search).get('view') === 'badges' ? 'badges' : 'patches'
 createRoot(document.getElementById('root')).render(
-  <StrictMode><div className="app"><header className="masthead"><h1 className="masthead__crumbs">Province of BC / Patches</h1></header><PatchesView /></div></StrictMode>
+  <StrictMode><div className="app"><header className="masthead"><h1 className="masthead__crumbs">Province of BC / {collection === 'badges' ? 'Badges' : 'Patches'}</h1></header><PatchesView collection={collection} /></div></StrictMode>
 )
 `)
   await build({
@@ -41,14 +42,18 @@ createRoot(document.getElementById('root')).render(
     logLevel: 'warn',
     build: { ...sourceConfig.build, outDir: output, emptyOutDir: false, reportCompressedSize: false },
   })
-  cpSync(join(root, 'public/patch-review'), join(output, 'patch-review'), { recursive: true })
-  const index = JSON.parse(readFileSync(join(output, 'patch-review/index.json'), 'utf8'))
+  const counts = {}
   let crops = 0
-  for (const patch of index.patches) {
-    for (const source of patch.sources ?? []) {
-      if (!source.cropUrl || /^https?:\/\//.test(source.cropUrl)) continue
-      assert.ok(existsSync(resolve(output, source.cropUrl)), `${patch.id}: missing ${source.cropUrl}`)
-      crops++
+  for (const reviewDir of ['patch-review', 'badge-review']) {
+    cpSync(join(root, 'public', reviewDir), join(output, reviewDir), { recursive: true })
+    const index = JSON.parse(readFileSync(join(output, reviewDir, 'index.json'), 'utf8'))
+    counts[reviewDir] = index.patches.length
+    for (const patch of index.patches) {
+      for (const source of patch.sources ?? []) {
+        if (!source.cropUrl || /^https?:\/\//.test(source.cropUrl)) continue
+        assert.ok(existsSync(resolve(output, source.cropUrl)), `${patch.id}: missing ${source.cropUrl}`)
+        crops++
+      }
     }
   }
   const html = readFileSync(join(output, 'index.html'), 'utf8')
@@ -56,8 +61,9 @@ createRoot(document.getElementById('root')).render(
   const assets = readdirSync(join(output, sourceConfig.build.assetsDir))
   assert.ok(assets.some((name) => name.endsWith('.js')), 'No JS bundle emitted')
   assert.ok(assets.some((name) => name.endsWith('.css')), 'No CSS bundle emitted')
+  assert.ok(assets.some((name) => name.startsWith('BadgeViewer-') && name.endsWith('.js')), 'Dedicated badge viewer missing')
   assert.ok(assets.some((name) => name.includes('worker') && name.endsWith('.js')), 'Patcher digitizing worker missing')
-  console.log(JSON.stringify({ output, base: sourceConfig.base, patchRecords: index.patches.length, sourceCropReferencesChecked: crops, emittedAssetCount: assets.length, result: 'PASS: real patch viewer, CSS, library assets and worker bundled' }, null, 2))
+  console.log(JSON.stringify({ output, base: sourceConfig.base, patchRecords: counts['patch-review'], badgeRecords: counts['badge-review'], sourceCropReferencesChecked: crops, emittedAssetCount: assets.length, result: 'PASS: real patch and badge viewer, CSS, library assets and worker bundled' }, null, 2))
 } finally {
   rmSync(entry, { recursive: true, force: true })
 }

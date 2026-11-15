@@ -1,0 +1,67 @@
+{
+  "version": 1,
+  "reviewedAt": "2026-11-15",
+  "baseline": {
+    "pofbc": "d20b1e1a085d45545b4f154a066d70147c270090",
+    "patcher": "6bf1e105ff7f805f0a524d3951f4960cc485ec84"
+  },
+  "method": "Source photograph recovered from its original Drive URL and verified against the SHA-256 already recorded in the atlas SVG. The crop retains the native photograph coordinates, perspective and any surface curvature. It is a specimen reference, not a rectified manufacturing master.",
+  "coordinateConvention": "Native source pixels [x0,y0,x1,y1]; crop [65,125,604,732], 539 by 607 pixels, with no resampling.",
+  "patches": [
+    {
+      "id": "S01-O01",
+      "reviewedAt": "2026-11-15",
+      "status": "refine",
+      "priority": "high",
+      "label": "Junior Forest Warden / Canadian Forestry Ass’n.",
+      "svgSha256": "5bdc11226f3b7edfb4bdb79bf2783947c0df197751d5f8f182b0ae5be1b7e4fe",
+      "baselineSvgSha256": "ba3b0714455cef51124813dafe88fc73f7c8f65b2c1dbf3a9093d0a86f8748bb",
+      "findings": [
+        "The Drive file is the same 720 by 960 photograph recorded by the existing reconstruction; its SHA-256 matches the atlas provenance.",
+        "The source shows tall, irregular embossed letter forms with larger initials in FOREST WARDEN, CANADIAN and FORESTRY ASSN.; the earlier drawing substitutes uniform font outlines.",
+        "The source maple leaf has serrated contours and branching veins that are simplified in the earlier drawing.",
+        "The catalogue attributes the object to leather. This single front photograph does not independently establish its material, physical dimensions, date or original die geometry."
+      ],
+      "candidateChanges": [
+        "Manually traced shield outline and rim in the 539 by 607 source-crop coordinates.",
+        "Replaced uniform font outlines with individually constructed glyph paths, preserving the photographed changes in letter size, spacing and tilt.",
+        "Retained both dots flanking JUNIOR and the apostrophe and final period in the lower caption.",
+        "Refined the maple leaf against the photograph with a deeper left recess, distinct asymmetric basal lobes, irregular angular margins and tapered branching veins contained within the blade.",
+        "Retained the photograph\u2019s perspective and visible curvature. The drawing does not claim a flattened die master; grain, reflected highlights and shadow contours are omitted."
+      ],
+      "evidenceLimitations": "The photograph supports a trace in its own coordinates. Lighting, embossing, perspective and surface curvature remain in the reference; it cannot establish a flat die master or calibrated material colours.",
+      "sources": [
+        {
+          "occurrenceId": "S01-O01",
+          "sourceId": "S01",
+          "url": "https://drive.google.com/file/d/1INS_YP_UZWb3HuuJuolLxhmbafQ2Fo_W/view",
+          "cropUrl": "badge-review/crops/S01-O01.webp",
+          "sourceKind": "photo",
+          "width": 539,
+          "height": 607,
+          "displayPixels": [
+            539,
+            607
+          ],
+          "sourceDimensions": [
+            720,
+            960
+          ],
+          "bbox": [
+            65,
+            125,
+            604,
+            732
+          ],
+          "sourceFileSha256": "ccff597d5eefc59ddee05a70690de332b3a1844921a5ac9b2652a9e241544f09",
+          "cropSha256": "c2308aa5699d96efdd211ab94795e566e603eb6342b9c2ec0a869342c106990d",
+          "medium": "Embossed badge; catalogued as leather, material unverified from this photograph.",
+          "note": "Lossless crop of the original JPG, without resizing, warping, colour alteration or generated detail. The source is preserved as photographed."
+        }
+      ],
+      "unavailableSources": [],
+      "reviewedSvgSha256": "5bdc11226f3b7edfb4bdb79bf2783947c0df197751d5f8f182b0ae5be1b7e4fe",
+      "currentSvgSha256": "5bdc11226f3b7edfb4bdb79bf2783947c0df197751d5f8f182b0ae5be1b7e4fe"
+    }
+  ]
+}

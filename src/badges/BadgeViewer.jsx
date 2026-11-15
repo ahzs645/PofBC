@@ -13,12 +13,19 @@ import { PatchHistory, photosOf } from '../patches/PatchDetails.jsx'
 import { METALS, NOMINAL_SIZE_MM } from './badgeParts.js'
 import { MEDAL_FORGE, buildBadge } from './medalBadge.js'
 import { BadgeScene } from './badgeScene.js'
-import { BADGE_VIEW_DEFAULTS, loadBadgeView, saveBadgeView } from './badgeView.js'
+import { BADGE_VIEW_DEFAULTS, badgeModeFor, loadBadgeView, saveBadgeView } from './badgeView.js'
+import { badgeReviewAssetUrl, badgeReviewSources } from './badgeReview.js'
 import './badges.css'
 
+const REVIEW_URL = `${import.meta.env.BASE_URL}badge-review/index.json`
+const REVIEW_LABELS = { refine: 'Needs refinement', reconstruct: 'Needs reconstruction', reviewed: 'Reviewed', unreviewed: 'Not yet reviewed' }
 const MODES = [
   { value: 'metal', label: 'Metal', title: 'The drawing built as a solid badge' },
   { value: 'vector', label: 'Vector' }
+]
+const REVIEW_MODES = [
+  { value: 'source', label: 'Source', title: 'The original photograph crop' },
+  { value: 'compare', label: 'Compare', title: 'The source photograph beside the vector' }
 ]
 const CURVES = [
   { value: 'flat', label: 'Flat' },
@@ -119,11 +126,42 @@ export const BadgeViewer = ({ patch, org, position, previous, next, onOpen, onCl
   const [scene, setScene] = useState(null)
   const [bend, setBend] = useState(null)
   const [exporting, setExporting] = useState(false)
+  const [reviewIndex, setReviewIndex] = useState({ status: 'loading', data: null })
+  const [reviewAttempt, setReviewAttempt] = useState(0)
+  const [sourceSelection, setSourceSelection] = useState(null)
+  const [failedSource, setFailedSource] = useState(null)
+  const [sourceAttempt, setSourceAttempt] = useState(0)
   const sceneRef = useRef(null)
   // A rebuilt scene (a new badge, or back from the Vector tab) opens at the chosen camera.
   const cameraRef = useRef(view.camera)
   cameraRef.current = view.camera
   const current = drawing?.patchId === patch.id ? drawing : null
+  const review = reviewIndex.data?.patches.find((entry) => entry?.id === patch.id) ?? null
+  const sources = badgeReviewSources(patch, review)
+  const source = sources.find((entry) => sourceSelection?.patchId === patch.id && entry.occurrenceId === sourceSelection.occurrenceId) ?? sources[0] ?? null
+  const sourceCropUrl = badgeReviewAssetUrl(source?.cropUrl, import.meta.env.BASE_URL)
+  const sourceKey = `${patch.id}:${source?.occurrenceId ?? ''}:${sourceCropUrl ?? ''}`
+  const sourceAvailable = Boolean(sourceCropUrl) && failedSource !== sourceKey
+  const mode = badgeModeFor(view.mode, sources.length > 0)
+  const reviewIsCurrent = !review?.svgSha256 || review.svgSha256 === patch.sha256
+  const candidateChanges = Array.isArray(review?.candidateChanges) ? review.candidateChanges.filter((change) => typeof change === 'string' && change.trim()) : []
+
+  useEffect(() => {
+    let gone = false
+    const controller = new AbortController()
+    setReviewIndex({ status: 'loading', data: null })
+    fetch(REVIEW_URL, { signal: controller.signal })
+      .then((response) => {
+        if (!response.ok) throw new Error(`Badge review: HTTP ${response.status}`)
+        return response.json()
+      })
+      .then((data) => {
+        if (data?.version !== 1 || !Array.isArray(data.patches)) throw new Error('Badge review index is invalid')
+        if (!gone) setReviewIndex({ status: 'ready', data })
+      })
+      .catch((error) => { if (!gone) { console.error(error); setReviewIndex({ status: 'failed', data: null }) } })
+    return () => { gone = true; controller.abort() }
+  }, [reviewAttempt])
 
   // The whole drawing, joined from the library's shared parts.
   useEffect(() => {
@@ -145,7 +183,7 @@ export const BadgeViewer = ({ patch, org, position, previous, next, onOpen, onCl
   // Build the badge once its drawing and the stage are both there. Building takes a moment on a
   // detailed badge, so let "Building…" paint first.
   useEffect(() => {
-    if (!current || !scene || view.mode !== 'metal') return undefined
+    if (!current || !scene || mode !== 'metal') return undefined
     // A stage that remounted (back from the Vector tab) is a new, empty scene.
     if (built?.patchId === patch.id && built.scene === scene) return undefined
     setPhase('building')
@@ -163,10 +201,10 @@ export const BadgeViewer = ({ patch, org, position, previous, next, onOpen, onCl
       }
     }, 30)
     return () => clearTimeout(timer)
-  }, [current, scene, view.mode, patch.id, patch.medium, patch.family, built?.patchId, built?.scene])
+  }, [current, scene, mode, patch.id, patch.medium, patch.family, built?.patchId, built?.scene])
 
   // Bend whenever the model or the curvature changes.
-  const ready = phase === 'ready' && built?.patchId === patch.id && built.scene === scene && Boolean(scene)
+  const ready = mode === 'metal' && phase === 'ready' && built?.patchId === patch.id && built.scene === scene && Boolean(scene)
   const maxRise = ready && scene ? scene.maxRise(view.curvature) : 0
   const rise = Math.min(view.rise, maxRise || view.rise)
   useEffect(() => {
@@ -224,7 +262,19 @@ export const BadgeViewer = ({ patch, org, position, previous, next, onOpen, onCl
       : phase === 'failed-build' ? 'This badge couldn’t be built in 3D. The vector is a tab away.'
         : phase === 'failed-source' ? 'The drawing could not be loaded.'
           : null
-  const modeSwitch = <Segmented ariaLabel="View" options={MODES} value={view.mode} onChange={(value) => set({ mode: value })} compact />
+  const modeSwitch = <Segmented ariaLabel="View" options={sources.length ? [...MODES, ...REVIEW_MODES] : MODES} value={mode} onChange={(value) => set({ mode: value })} compact />
+  const sourcePane = {
+    key: 'source',
+    label: 'Source photograph',
+    node: sourceAvailable
+      ? <img key={`${sourceKey}:${sourceAttempt}`} src={sourceCropUrl} width={source.width} height={source.height} alt={`${title}, source occurrence ${source.occurrenceId}`} draggable={false} onError={() => setFailedSource(sourceKey)} />
+      : <p className="patch__status" role="status">This source image could not be loaded. <button type="button" className="button--inline" onClick={() => { setFailedSource(null); setSourceAttempt((n) => n + 1) }}>Retry source</button></p>
+  }
+  const vectorPane = {
+    key: 'vector',
+    label: sources.length ? 'Vector reconstruction' : 'Vector',
+    node: <img className="patch__vector" src={current?.url ?? patch.previewUrl} alt={title} draggable={false} />
+  }
 
   return (
     <section className="patch badge" aria-label={title}>
@@ -243,7 +293,7 @@ export const BadgeViewer = ({ patch, org, position, previous, next, onOpen, onCl
 
       <div className="patch__body">
         <div className="patch__visuals">
-          {view.mode === 'metal'
+          {mode === 'metal'
             ? <MetalStage
                 sceneRef={sceneRef}
                 toolbar={modeSwitch}
@@ -254,13 +304,9 @@ export const BadgeViewer = ({ patch, org, position, previous, next, onOpen, onCl
                 onCamera={(camera) => set({ camera })}
               />
             : <PatchStage
-                resetKey={`${patch.id}:vector`}
+                resetKey={`${patch.id}:${mode}:${sourceKey}`}
                 toolbar={modeSwitch}
-                panes={[{
-                  key: 'vector',
-                  label: 'Vector',
-                  node: <img className="patch__vector" src={current?.url ?? patch.previewUrl} alt={title} draggable={false} />
-                }]}
+                panes={mode === 'compare' ? [sourcePane, vectorPane] : mode === 'source' ? [sourcePane] : [vectorPane]}
               />}
         </div>
 
@@ -311,13 +357,13 @@ export const BadgeViewer = ({ patch, org, position, previous, next, onOpen, onCl
           )}
 
           <div className="patch__exports">
-            <button type="button" className="button button--primary" disabled={!ready || view.mode !== 'metal'} onClick={exportPng} title="The view as it is now">PNG</button>
-            <button type="button" className="button" disabled={!ready || exporting || view.mode !== 'metal'} onClick={exportGlb} title="The model as it is bent now, in metres">{exporting ? 'GLB…' : 'GLB'}</button>
+            <button type="button" className="button button--primary" disabled={!ready} onClick={exportPng} title="The view as it is now">PNG</button>
+            <button type="button" className="button" disabled={!ready || exporting} onClick={exportGlb} title="The model as it is bent now, in metres">{exporting ? 'GLB…' : 'GLB'}</button>
             {current
               ? <a className="button" href={current.url} download={`${name}.svg`}>SVG</a>
               : <button type="button" className="button" disabled>SVG</button>}
           </div>
-          {(phase === 'failed-source' || phase === 'failed-build') && (
+          {(phase === 'failed-source' || (mode === 'metal' && phase === 'failed-build')) && (
             <p className="patch__status" role="alert">
               {phase === 'failed-source' ? 'The drawing could not be loaded.' : 'The 3D model could not be built.'} <button type="button" className="button--inline" onClick={() => setAttempt((n) => n + 1)}>Try again</button>
             </p>
@@ -349,6 +395,26 @@ export const BadgeViewer = ({ patch, org, position, previous, next, onOpen, onCl
             {photosOf(patch).length <= 1 && patch.sourceUrl && <> · <a href={patch.sourceUrl} target="_blank" rel="noreferrer">source image</a></>}
           </p>
         </aside>
+
+        {(review || reviewIndex.status === 'failed') && <section className="patch__review" aria-label="Source review">
+          <div className="patch__review-heading">
+            <h3>Source comparison</h3>
+            {review && <span className={`patch__review-status patch__review-status--${reviewIsCurrent ? review.status : 'unreviewed'}`}>{reviewIsCurrent ? REVIEW_LABELS[review.status] ?? 'Not yet reviewed' : 'Drawing changed since review'}</span>}
+          </div>
+          {reviewIndex.status === 'failed' && <p role="status">The source comparison could not be loaded. <button type="button" className="button--inline" onClick={() => setReviewAttempt((n) => n + 1)}>Retry comparison</button></p>}
+          {!reviewIsCurrent && <p>The findings below describe an earlier drawing. The current reconstruction needs another comparison.</p>}
+          {review?.findings?.length > 0 && <ul>{review.findings.map((finding, index) => <li key={index}>{finding}</li>)}</ul>}
+          {candidateChanges.length > 0 && <div className="patch__candidate"><h4>Correction prepared</h4><ul>{candidateChanges.map((change, index) => <li key={index}>{change}</li>)}</ul></div>}
+          {review?.evidenceLimitations && <p className="patch__review-limits">{review.evidenceLimitations}</p>}
+          {sources.length > 1 && <label className="patch__source-select"><span>Source occurrence</span><select value={source?.occurrenceId ?? ''} onChange={(event) => setSourceSelection({ patchId: patch.id, occurrenceId: event.target.value })}>{sources.map((entry) => <option key={entry.occurrenceId} value={entry.occurrenceId}>{entry.occurrenceId}</option>)}</select></label>}
+          {source && <div className="patch__source-caption">
+            <p><strong>{source.occurrenceId}</strong> · {source.width} × {source.height} source pixels</p>
+            {source.medium && <p>{source.medium}</p>}
+            {source.note && <p>{source.note}</p>}
+            <a href={source.url} target="_blank" rel="noreferrer">Open full source</a>
+          </div>}
+          {review && <p className="patch__review-date">Evidence record: {review.reviewedAt ?? reviewIndex.data.reviewedAt}. Source images keep their original proportions.</p>}
+        </section>}
       </div>
     </section>
   )
