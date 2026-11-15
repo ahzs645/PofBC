@@ -1,4 +1,6 @@
 {
+  "reviewDate": "2026-11-14",
+  "masterSha256": "401eac5ef63151a36620e8339bed96787b9bb8faddbf42c8f64fff4f6b160310",
   "svg": {
     "paths": 20,
     "image_elements": 0,
@@ -6,7 +8,7 @@
     "letter_groups": 7,
     "all_paths_closed": true,
     "stroke_attributes": 0,
-    "file_bytes": 15871
+    "file_bytes": 14476
   },
   "pdf": {
     "pages": 1,
@@ -22,9 +24,31 @@
   },
   "png": {
     "dimensions": [
-      2352,
-      2616
+      784,
+      872
     ],
     "transparent_corners": true
+  },
+  "sourceComparison": {
+    "sourceDimensions": [
+      196,
+      218
+    ],
+    "registration": "Fixed 4x scan coordinates; no independent fit or warp of either candidate.",
+    "metric": "Intersection over union of fixed colour masks after 196 x 218 downsampling; thresholds in source/review_bc_trade.py.",
+    "limitation": "Diagnostics only, not an accuracy percentage. Scan blur, paper and approximate RGB colours affect masks; gold is restricted to the sun region.",
+    "beforeSha256": "aad99d83daff04ccd4f215edb01b1bc8915cd834f05bc56aebe04a6febef781e",
+    "before": {
+      "red": 0.8952,
+      "blue": 0.6984,
+      "gold": 0.8399,
+      "wordmark": 0.6281
+    },
+    "after": {
+      "red": 0.9106,
+      "blue": 0.751,
+      "gold": 0.8636,
+      "wordmark": 0.7926
+    }
   }
 }
