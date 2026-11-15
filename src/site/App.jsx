@@ -230,6 +230,7 @@ export const App = () => {
   const isFlag = state.era === 'flag'
   const isCrest = state.era === 'crest'
   const isDocument = state.era === 'document'
+  const hasLettering = !isDocument || state.documentLayout !== 'emblem'
   // A one-off from the gallery: its arrangement is the mark, not a choice.
   const isBadge = isFlag && state.flagSymbol === 'badge'
   // The crest era is the only one with lockups to choose between, a province wordmark to show or
@@ -397,7 +398,7 @@ export const App = () => {
           </div>
           {isDocument && (
             <Suspense fallback={null}>
-              <DocumentArmsReference layout={state.documentLayout} />
+              <DocumentArmsReference key={state.documentLayout} layout={state.documentLayout} />
             </Suspense>
           )}
         </section>
@@ -642,7 +643,7 @@ export const App = () => {
             <h2>Colour</h2>
 
             <ColourField
-              label={state.linkColors
+              label={!hasLettering ? 'Arms' : state.linkColors
                 ? (isFlag ? 'Letters and text' : 'Mark and text')
                 : (isFlag ? 'Letters' : 'Mark')}
               value={isDocument ? state.documentMarkColor : isFlag ? state.flagMarkColor : isCrest ? state.crestMarkColor : state.markColor}
@@ -652,16 +653,16 @@ export const App = () => {
               palette={isFlag ? FLAG_SWATCHES : undefined}
             />
 
-            <label className="checkbox">
+            {hasLettering && <label className="checkbox">
               <input
                 type="checkbox"
                 checked={state.linkColors}
                 onChange={(event) => update({ linkColors: event.target.checked })}
               />
               <span>{isFlag ? 'Text matches the letters' : 'Text matches the mark'}</span>
-            </label>
+            </label>}
 
-            {!state.linkColors && (
+            {hasLettering && !state.linkColors && (
               <ColourField
                 label="Text"
                 value={isDocument ? state.documentTextColor : isFlag ? state.flagTextColor : isCrest ? state.crestTextColor : state.textColor}

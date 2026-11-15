@@ -2,6 +2,8 @@
 
 Reviewed **13 November 2026**. This evidence supports the **Historic arms** layout studies in the Identity builder. It does not establish an official reproduction master or a common standard for the three supplied document headings.
 
+**Source-identification update, 14 November 2026:** the statements below that OIC 1121/1978 was not independently retrieved are superseded by the [follow-up investigation](../document-arms-2026-11-14/README.md). Its four-page official PDF has now been inspected: page 1 matches the government-caption crop and page 4 matches the blackletter Crown-grant map heading. The latter is an attachment to the dated order; the map sheet's creation date and the original grant's issue date remain unestablished. This note retains the original investigation's findings and limits as recorded on 13 November.
+
 ## What the examples show
 
 | Reference | Observed heading | Date evidence |
@@ -31,13 +33,15 @@ The lettering is identified only by class: serif capitals, a condensed governmen
 ## Sources and their limits
 
 - **Verified period specimen:** [OIC 832/1978, 6 April 1978](https://www.bclaws.gov.bc.ca/civix/document/id/oic/arc_oic/0832_1978), first PDF page, provides an independent example of the arms-over-government-caption layout. It is a different order from the supplied **1121** crop.
-- **Exact OIC still unresolved:** the [candidate 1121/1978 locator](https://www.bclaws.gov.bc.ca/civix/document/id/oic/arc_oic/1121_1978) could not be retrieved through the research browser. Its number and approval date currently come from the user’s image only.
+- **Exact OIC retrieval unresolved on 13 November; superseded on 14 November:** the [1121/1978 locator](https://www.bclaws.gov.bc.ca/civix/document/id/oic/arc_oic/1121_1978) could not initially be retrieved through the research browser. The [follow-up](../document-arms-2026-11-14/README.md) verifies both the government-caption crop and the blackletter map heading against that official PDF.
 - **Current guide, separate context:** [*The Emblems of British Columbia*](https://www2.gov.bc.ca/assets/gov/british-columbians-our-governments/celebrating-british-columbia/symbols-of-bc/bc-emblems-set.pdf), page 3, discusses present arms reproduction and reverse treatment. After an initial HTTP 502, the four-page PDF was retrieved and page 3 inspected. It does not establish the older headings’ rules.
 - **Archival lead:** the [Dr. Whitney Smith Flag Research Center Collection finding aid](https://www.cah.utexas.edu/documents/finding_aids/smith_dr_whitney_flag_research_center_collection.pdf), PDF page **42**, lists **box 2013-160/83, “British Columbia Visual Identity System.”** The folder’s dates and contents have not been examined.
 
 **No independently verified period graphic standard for these exact document headings was found.** The 1977 manuals should not be applied retrospectively without evidence. Ahmad Jalil’s *The Forgotten Crest* article describes this project and was not counted as independent corroboration.
 
 ## Draft archival enquiry — not sent
+
+Historical draft retained below. The request for a copy or identifier for OIC 1121/1978 is now resolved; consult the [14 November follow-up](../document-arms-2026-11-14/README.md) before reusing this text.
 
 Suggested recipient: [Legislative Library of British Columbia](https://www.leg.bc.ca/learn/legislative-library), `library@leg.bc.ca`, with referral to BC Archives or the King’s Printer if appropriate.
 

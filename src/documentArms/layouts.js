@@ -23,7 +23,7 @@ export const DOCUMENT_ARMS_LAYOUTS = {
   'split-blackletter': {
     label: 'Crown grant heading',
     description: 'British and Columbia in blackletter beside the arms, following the supplied crown grant heading.',
-    hint: 'UnifrakturMaguntia is a modern blackletter stand-in. The supplied crown grant’s original lettering has not been identified.'
+    hint: 'The supplied heading is on the map attached to OIC 1121/1978. UnifrakturMaguntia is a modern stand-in; the original lettering remains unidentified.'
   }
 }
 

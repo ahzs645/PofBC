@@ -751,7 +751,12 @@ which one.
 **Historic** (the historic arms) in the Identity builder adds four fixed historical-heading studies: arms alone,
 split **BRITISH / COLUMBIA**, the two-line government caption, and a blackletter Crown-grant
 heading. Choose the layout, independent arms and lettering colours, background and export margin.
-The supplied reference appears beside the preview and stays out of the exported artwork.
+The reference selector beside the preview offers source details and whole pages. It includes the
+independently retrieved **OIC 1121/1978** government heading (page 1) and Crown-grant map heading
+(page 4), OIC 832/1978, two different engravings in the same 1954 mining booklet, and the Province's
+small illustration of the 1906 design. Original supplied crops remain available. Reference pixels
+stay out of the exported artwork, and the map sheet's unknown creation date stays distinct from
+the order's 1978 approval date.
 
 The shared arms path is the same provisional study used on the **1919 cardboard plate**. It is a
 vector conversion of a generated master, **not a verified period engraving**. The original document
@@ -761,13 +766,16 @@ the interface and the exported SVG metadata. No period standard for these exact 
 been verified.
 
 All fixed lettering is outlined, so this identity's preview and export need no font download.
-Readable and compressed share links preserve the layout, palette and colour linkage. A bundle
+Readable and compressed share links preserve the layout, palette and colour linkage. Each
+identity also remembers its own linked-colour setting while switching between them. Arms alone
+ignores saved lettering when choosing the Auto preview surface or calculating contrast. A bundle
 exports formats and sizes of the selected heading.
 
-[Evidence, primary sources and archival leads](research/identity/document-arms-2026-11-13/README.md)
+[Verified sources and archival leads](research/identity/document-arms-2026-11-14/README.md)
+· [New evidence sheet](research/identity/document-arms-2026-11-14/source-evidence-review.png)
 · [Reference comparison](research/identity/document-arms-2026-11-13/review-layouts.png)
 · [Renderer and rebuild instructions](src/documentArms/README.md)
-· [Validation](research/identity/document-arms-2026-11-13/validation.md)
+· [Continuation validation](research/identity/document-arms-2026-11-14/validation.md)
 
 ## Visual guides
 
@@ -825,7 +833,7 @@ era, oldest first:
 
 | Pack | Era |
 |---|---|
-| `bc-province-engraved-arms` | **Engraved arms, before 1977**: the full coat of arms over formal script. It starts with Grace M. McCarthy's calling card, rebuilt from a photograph as an editable template |
+| `bc-province-engraved-arms` | **Earlier engraved arms**: the full coat of arms over formal script. It starts with Grace M. McCarthy's calling card, rebuilt from a photograph as an editable template. Earlier arms also appear on 1978 documents; 1977 is not a universal cutoff. |
 | `bc-province-1977` | **The Visual Identity Program, 1977**: the crest and ring, the ministerial signatures, stationery, forms, signs and vehicles of the four manuals |
 | `bc-province-flag` | **The flag logo**, about 1983–2005 |
 | `bc-province-arms` | **The coat of arms and BRITISH COLUMBIA wordmark** |

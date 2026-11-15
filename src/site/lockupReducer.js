@@ -11,6 +11,29 @@ import { defaultMarkAlignment, getLayout } from '../logo/layouts.js'
 import { BRAND_COLORS, TRANSPARENT, resolveColor } from '../logo/logoColors.js'
 import { codeForName, wordingFor } from './ministryLink.js'
 
+const COLOUR_FIELDS = {
+  historical: ['markColor', 'textColor'],
+  flag: ['flagMarkColor', 'flagTextColor'],
+  crest: ['crestMarkColor', 'crestTextColor'],
+  document: ['documentMarkColor', 'documentTextColor']
+}
+
+// Keep the public `linkColors` control for the active identity, remembering its setting when
+// leaving. This local map is not part of shared configurations: a link carries only its identity.
+// Remembering the link is as important as retaining the two colours. Otherwise linking another
+// identity would hide the independently chosen lettering colour on return.
+const mergeColourLinks = (current, patch) => {
+  const next = { ...current, ...patch }
+  const previousEra = current.era ?? 'historical'
+  const era = next.era ?? 'historical'
+  const colourLinks = { ...current.colourLinks, [previousEra]: current.linkColors }
+  next.linkColors = patch.linkColors ?? (era === previousEra
+    ? current.linkColors
+    : colourLinks[era] ?? true)
+  next.colourLinks = { ...colourLinks, [era]: next.linkColors }
+  return next
+}
+
 /**
  * Applies a patch, then the rules that follow from it.
  *
@@ -19,16 +42,15 @@ import { codeForName, wordingFor } from './ministryLink.js'
  * @returns {object} The next state.
  */
 export const applyUpdate = (current, patch) => {
-  const next = { ...current, ...patch }
+  const next = mergeColourLinks(current, patch)
 
   // Linking is a one-way pull from the mark, so setting the mark colour carries the type with it,
   // and re-linking after a divergence resolves to the mark rather than to whichever field happened
   // to be edited last. Each era has its own pair, so the link applies to whichever is in play.
-  if (next.linkColors) {
-    if (patch.markColor !== undefined || patch.linkColors) next.textColor = next.markColor
-    if (patch.flagMarkColor !== undefined || patch.linkColors) next.flagTextColor = next.flagMarkColor
-    if (patch.crestMarkColor !== undefined || patch.linkColors) next.crestTextColor = next.crestMarkColor
-    if (patch.documentMarkColor !== undefined || patch.linkColors) next.documentTextColor = next.documentMarkColor
+  const colourFields = COLOUR_FIELDS[next.era ?? 'historical']
+  if (next.linkColors && colourFields) {
+    const [markField, textField] = colourFields
+    if (patch[markField] !== undefined || patch.linkColors) next[textField] = next[markField]
   }
 
   // The three lockups disagree about the province wordmark — the centred one is drawn without it —
@@ -141,8 +163,7 @@ export const swapColours = (current) => {
 
 /** A restored share link states its fields deliberately, so they all count as chosen. */
 export const applyShare = (current, patch) => ({
-  ...current,
-  ...patch,
+  ...mergeColourLinks(current, patch),
   wordmarkTouched: true,
   markAlignTouched: true,
   // A share that carries wording carries it deliberately, so the ministry list must not overwrite
