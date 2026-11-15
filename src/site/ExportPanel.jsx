@@ -126,7 +126,7 @@ export const ExportPanel = ({ lockup, era = 'historical' }) => {
   )
 
   return (
-    <section className="panel">
+    <section className="panel export-panel">
       <h2>Download</h2>
 
       <Segmented ariaLabel="Download as" options={MODES} value={mode} onChange={setMode} />

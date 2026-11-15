@@ -46,7 +46,7 @@ git diff --check
 
 The **complete production build passed**, including the final selected-button
 hover correction. Reference assets remain in the lazy preview, outside the SVG
-renderer/export path. No application dependencies or workflows were changed.
+renderer/export path. No application dependencies were changed.
 The existing Linux TeX Gyre Heros fallback builds the other identities' fonts;
 Historic continues to use its unchanged committed outlines.
 
@@ -80,21 +80,94 @@ final PNG was visually inspected. Rebuild with:
 node research/identity/document-arms-2026-11-14/build-evidence-review.mjs
 ```
 
-## Browser boundary
+## Browser acceptance completed - 14 November 2026
 
-This environment could not provide a fresh browser layout/codec test. Direct
-Chromium failed before opening a page at its process-singleton socket. The
-connected browser's localhost was a separate machine; the Cloud browser could
-not connect to this workspace's Vite port. No permission or network policy was
-weakened. Vite returned HTTP 200 for the index and relevant modules from its own
-process, and the production build and actual React harness succeeded.
+The earlier browser limitation is resolved. The installed Chromium headless shell
+from `@sparticuz/chromium` runs in this environment without the desktop browser's
+process-singleton socket. No environment permissions or network policy were changed.
 
-JSDOM does **not** establish desktop/mobile layout acceptance or a successful
-PDF/PNG/WebP/JPEG browser download for this revision. Those remain visual review
-items for this follow-up. The original merged feature's earlier browser result
-is preserved as historical evidence only.
+The [reproducible browser harness](check-browser.mjs) runs the **complete Vite
+production build**, with no substituted application components. Its
+[recorded result](browser-acceptance/browser-check.json) includes the tested source
+file hashes, production index hash, browser version and actual download hashes.
 
-The original engraving, exact historical typefaces and period spacing rules
-remain unresolved. The new source verification does not authenticate the existing
-generated-master vector study. This candidate is published for review with
-`[skip ci]`; validation ran locally and no workflow dispatch was requested.
+**57 browser checks passed** in Chromium **138.0.7204.0**:
+
+- All four layouts at **1440 x 1000**, **390 x 844** and **320 x 568**, in both
+  light and dark themes: 24 layout/theme/viewport cases, with decoded references,
+  no document overflow, and segmented buttons contained inside their tracks.
+- All **nine** reference specimens at all three widths: decoded images, correct
+  source links/page fragments, alt text, and Detail / Whole page switching for
+  the five document specimens. Switching a reference leaves exported SVG unchanged.
+- Historic's independent text colour and link preference survive linking another
+  identity's colours. Black Arms alone ignores saved white lettering for the Auto
+  backdrop and 21:1 contrast; restoring a heading restores that lettering.
+- Manual preview backgrounds leave transparent export artwork unchanged.
+- Actual **SVG, PDF, PNG, WebP and JPEG** download actions succeed with the correct
+  file signatures. SVG contains outlines and the reconstruction qualification,
+  with no reference images or live text. All three raster files decode at
+  **2048 x 684 pixels**. The one-page PDF was opened and visually inspected using
+  Poppler's rendering: [download review](browser-acceptance/download-pdf.png).
+- A compressed share link reopens the complete application; copying a readable
+  link removes a previous compressed token.
+
+No page/console errors, missing local assets or unintended external requests were
+observed. The script checks external link destinations; the retained original
+PDFs/images are separately verified by their recorded hashes. These are Chromium
+viewport checks, **not physical iPhone or Safari testing**.
+
+### Small-phone fix found by this review
+
+The first 320-pixel run exposed a 357-pixel-wide page. The implicit grid column and
+unbreakable Historic labels imposed their minimum content width on the page. The
+layout now uses a shrinkable grid column and children, long heading labels can
+wrap, and the clear-space and download-format choices can wrap inside their tracks.
+The full browser acceptance was rerun successfully after the fix.
+
+| Viewport | Light | Dark |
+| --- | --- | --- |
+| Desktop | [Screenshot](browser-acceptance/desktop-light.png) | [Screenshot](browser-acceptance/desktop-dark.png) |
+| Phone | [Screenshot](browser-acceptance/phone-light.png) | [Screenshot](browser-acceptance/phone-dark.png) |
+| Small phone | [Screenshot](browser-acceptance/small-phone-light.png) | [Screenshot](browser-acceptance/small-phone-dark.png) |
+
+Reproduce with an installed Playwright and compatible Chromium executable:
+
+```sh
+npm run build:assets
+BASE_PATH=/PofBC/ node node_modules/vite/bin/vite.js build
+POFBC_BROWSER_DEPS=/path/to/browser-dependencies/package.json \
+POFBC_CHROMIUM_EXECUTABLE=/path/to/chromium \
+  node research/identity/document-arms-2026-11-14/check-browser.mjs
+```
+
+Both environment variables are optional when Playwright and its browser are
+available through the project's normal module resolution. Output goes to
+`tmp/historic-browser` unless `POFBC_BROWSER_OUTPUT` is set.
+
+## Fresh local validation and release
+
+- **97 focused tests pass**, zero failures/skips; document-arms geometry reproduces.
+- **23 actual React/JSDOM interaction checks pass** after the responsive fix.
+- Full project suite: **966 pass, zero failures, eight explicitly skipped**, out
+  of 974 checks. Six skips concern optional extracted current-ministry SVG files;
+  two concern exact Helvetica geometry when the documented TeX Gyre Heros fallback
+  is used. Historic's committed outlines do not depend on that fallback.
+- The complete production asset build and Vite build pass.
+- All **14** source/render hashes were freshly rechecked and matched.
+- Independent review of the state, evidence controls and responsive CSS found no
+  blocking defect. `git diff --check` passes.
+
+The complete suite initially lacked research/brandkit files because the inherited
+checkout was sparse. Those tracked inputs were materialized and the full suite
+rerun to the result above; no application change was needed for that setup issue.
+
+The Pages workflow now offers an optional manual `run_tests` input, defaulting to
+false, so a locally reviewed release can build and deploy without repeating its
+full test suite. Main-push deployments retain their existing test behavior. This
+uses the established macOS build and Pages deployment jobs; it does not claim a
+runner-free deployment. Publication and merge commits use `[skip ci]` to avoid
+unrelated workflows before the intentional manual release.
+
+The original engraving, exact historical typefaces and period spacing still need
+better primary artwork. The separate measured overlay study does not authenticate
+or replace the generated-master renderer.

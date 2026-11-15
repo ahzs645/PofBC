@@ -1505,6 +1505,12 @@ never be the reason someone cannot make the logo they need.
 every push to `main`, and can be run by hand from the Actions tab. Enable it once under
 **Settings → Pages → Build and deployment → Source: GitHub Actions**.
 
+For a release already validated locally, merge with `[skip ci]`, then manually run
+**Deploy generator site to GitHub Pages** on `main`. Leave **Repeat the full test
+suite before deployment** unchecked to build and deploy without repeating the
+recorded local tests. Main pushes that run the workflow continue to execute the
+full suite. This still uses the existing macOS build and Pages deployment jobs.
+
 Two things make this workflow unusual:
 
 - **It runs on `macos-latest`, not Ubuntu.** The build subsets the real Helvetica the artwork is set
