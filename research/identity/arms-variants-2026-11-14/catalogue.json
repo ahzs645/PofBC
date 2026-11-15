@@ -139,8 +139,8 @@
     {
       "id": "S20",
       "title": "User-supplied document crops: existing project source register",
-      "url": "https://github.com/ahzs645/PofBC/blob/main/research/identity/document-arms-2026-11-13/source-register.json",
-      "credit": "Images supplied by project owner; copied without alteration. Original archival records incomplete.",
+      "url": "https://github.com/ahzs645/PofBC/blob/d3e4fbf55538e3991179a9868496dcf2e28a68c5/research/identity/document-arms-2026-11-13/source-register.json",
+      "credit": "Images supplied by project owner; copied unchanged. Government and blackletter headings identified in OIC 1121/1978 (S30); split-serif source remains unidentified.",
       "kind": "User-supplied evidence"
     },
     {
@@ -198,6 +198,16 @@
       "title": "Royal BC Museum: annual report archive",
       "url": "https://rbcm.ca/corporate-information/reports-policies/annual-report-archive/",
       "kind": "Official source index"
+    },
+    {
+      "id": "S30",
+      "title": "Order in Council 1121/1978: government heading and map attachment",
+      "url": "https://www.bclaws.gov.bc.ca/civix/document/id/oic/arc_oic/1121_1978",
+      "credit": "Queen's Printer of British Columbia / BC Laws. Approved 4 May 1978; heading on PDF p. 1 and map attachment on p. 4.",
+      "kind": "Contemporary official record",
+      "sourceSha256": "ec6855c051f623c3af29a474743a041fa8b967f9ccc0cc0ab6ec90ae42b2646e",
+      "retainedCopyUrl": "https://github.com/ahzs645/PofBC/blob/d3e4fbf55538e3991179a9868496dcf2e28a68c5/research/identity/document-arms-2026-11-14/reference/oic-1121-1978.pdf",
+      "pages": 4
     }
   ],
   "entries": [
@@ -695,13 +705,14 @@
       "id": "supplied-government-caption",
       "title": "Government-caption heading",
       "section": "04 · The supplied document headings",
-      "dateLabel": "4 May 1978 visible on crop",
+      "dateLabel": "Order approved 4 May 1978",
       "classification": "Document layout",
       "description": "Old arms above the condensed government caption, followed by order number 1121 and an approval line.",
-      "datingNote": "Date read directly from the supplied image; the full order was not independently retrieved.",
+      "datingNote": "The complete OIC was independently retrieved; its first page confirms the heading and approval date. The engraving date remains unknown.",
       "imagePath": "reference/supplied-government-caption.png",
       "sources": [
-        "S20"
+        "S20",
+        "S30"
       ],
       "designFamily": "1906-shield-with-assumed-full-arms",
       "visualSha256": "0c39ca67b02f5a47993c011784ace052c3c5a74f5ae957eb45b3fc6223479f10",
@@ -711,19 +722,24 @@
       ],
       "retrievedOn": "2026-11-14",
       "transformation": "User image copied unchanged",
-      "catalogueNumber": 20
+      "catalogueNumber": 20,
+      "sourcePages": "OIC 1121/1978, PDF p. 1",
+      "documentDate": "1978-05-04",
+      "artworkDate": null,
+      "sourceSha256": "ec6855c051f623c3af29a474743a041fa8b967f9ccc0cc0ab6ec90ae42b2646e"
     },
     {
       "id": "supplied-blackletter",
       "title": "Crown-grant blackletter heading",
       "section": "04 · The supplied document headings",
-      "dateLabel": "Document undated",
-      "classification": "Document layout",
-      "description": "British and Columbia flank the arms in blackletter. The grant number, signatures and tracing annotations belong to the surrounding form.",
-      "datingNote": "User-supplied crop. The scan supports a layout classification, not an exact typeface or printing-block attribution.",
+      "dateLabel": "In 4 May 1978 order; map undated",
+      "classification": "Map attachment / document layout",
+      "description": "Blackletter heading on the Kootenay District map attachment for Provincial Rental Housing Corporation, Crown Grant No. 8498.",
+      "datingNote": "The complete OIC confirms this occurrence. The map creation date and original grant issue date remain unknown.",
       "imagePath": "reference/supplied-blackletter.png",
       "sources": [
-        "S20"
+        "S20",
+        "S30"
       ],
       "designFamily": "1906-shield-with-assumed-full-arms",
       "visualSha256": "8d078c8e5c43f0642056536438cb4af805bdca40f27321da2b3a310164b35677",
@@ -733,7 +749,13 @@
       ],
       "retrievedOn": "2026-11-14",
       "transformation": "User image copied unchanged",
-      "catalogueNumber": 21
+      "catalogueNumber": 21,
+      "sourcePages": "OIC 1121/1978, PDF p. 4",
+      "containingDocumentDate": "1978-05-04",
+      "mapCreationDate": null,
+      "grantIssueDate": null,
+      "artworkDate": null,
+      "sourceSha256": "ec6855c051f623c3af29a474743a041fa8b967f9ccc0cc0ab6ec90ae42b2646e"
     },
     {
       "id": "full-1987-period-report",

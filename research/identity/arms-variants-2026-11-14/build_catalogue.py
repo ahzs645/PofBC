@@ -450,7 +450,7 @@ def index_item(source: dict, width: float) -> tuple[list[Paragraph], float]:
     parts = [heading, url_p]
     if source["credit"]:
         parts.append(paragraph(source["credit"], size=7.2, leading=9.0, colour=MUTED))
-    height = sum(measured(p, width) for p in parts) + 3 * (len(parts) - 1) + 10
+    height = sum(measured(p, width) for p in parts) + 3 * (len(parts) - 1) + 6
     return parts, height
 
 

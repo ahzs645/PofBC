@@ -1,6 +1,6 @@
 # British Columbia arms: a visual catalogue
 
-**32 illustrated specimens, proposals, objects and reproduction treatments, researched 14 November 2026.** This is a source catalogue for the PofBC Identity collection. It extends the [document-heading study](../document-arms-2026-11-13/README.md) with actual dated examples of different drawings.
+**32 illustrated specimens, proposals, objects and reproduction treatments, with 30 linked sources; researched 14 November 2026.** This is a source catalogue for the PofBC Identity collection. It extends the [document-heading study](../document-arms-2026-11-13/README.md) with actual dated examples of different drawings.
 
 Open the [visual catalogue PDF](catalogue.pdf), the [selected variants overview](selected-variants.jpg), the [dated print comparison](printed-comparison.jpg), or the [machine-readable inventory](catalogue.json). The inventory records dates, classifications, source URLs, image hashes and evidence limits for every illustrated entry.
 
@@ -36,7 +36,11 @@ These are research labels for visible differences. They are not official version
 
 The three user images preserve **layouts** of the older full arms: split serif capitals, a condensed government caption, and split blackletter. They do not by themselves establish three different heraldic designs. Their small, dark scans also do not establish that every heading used an identical engraving.
 
-The supplied order crop visibly gives **4 May 1978**, but the two other crops remain undated. The 1970 report independently demonstrates both captioned and arms-only applications within one publication. These distinctions are preserved in entries 15–16 and 19–21. See the [existing source register][S20] and [1970 report][S19].
+The complete four-page **[Order in Council 1121/1978][S30]**, approved **4 May 1978**, independently identifies two supplied headings. Its **page 1** matches the government-caption crop (entry 20); its **page 4** matches the blackletter heading (entry 21) on a map attachment naming **Kootenay District**, **Provincial Rental Housing Corporation** and **Crown Grant No. 8498**. The [held PDF](https://github.com/ahzs645/PofBC/blob/d3e4fbf55538e3991179a9868496dcf2e28a68c5/research/identity/document-arms-2026-11-14/reference/oic-1121-1978.pdf) and [source-identification record](https://github.com/ahzs645/PofBC/blob/d3e4fbf55538e3991179a9868496dcf2e28a68c5/research/identity/document-arms-2026-11-14/README.md) preserve the document and comparison evidence.
+
+The blackletter sheet is a **map attachment, not a complete Crown-grant instrument**. Its presence in the May 1978 order establishes an occurrence; the map's own creation date, original grant's issue date and engraving date remain unknown. The split-serif crop numbered **279** (entry 19) remains unidentified and undated. The original user images are unchanged; the newly identified PDF supplies provenance, not a substitute image or a recovered artwork master.
+
+The 1970 report independently demonstrates both captioned and arms-only applications within one publication. These distinctions are preserved in entries 15–16 and 19–21. See the [source register][S20], [1970 report][S19] and [OIC 1121/1978][S30].
 
 The existing Historic arms renderer remains a **provisional layout study**. The earlier audit identifies its shared geometry as a vector conversion of a generated master. The new evidence supplies better reconstruction targets; it does not retroactively make that existing path an exact historical engraving.
 
@@ -55,6 +59,14 @@ Keep separate choices for **historical design**, **drawing**, **document layout*
 A future reconstruction should start from one named specimen, preserve its proportions and linework, and carry its source and confidence label. The three dated print families are good separate targets. The current guide supplies explicit modern production examples, including reverse rules; it does not establish a period standard for the older headings. [Guide, p. 3][S25]
 
 This research change adds the catalogue and reference imagery. It does not modify the application’s renderer, routes or export behaviour.
+
+## First reconstruction target
+
+Start with **entry 14: the Provincial Museum report for 1960, printed in 1961**, using its **cover / PDF page 1**. Open the [official report](https://rbcm.ca/wp-content/uploads/2025/07/annual_report_1960.pdf#page=1), [held arms crop](reference/museum-report-1960.png) and [dated print comparison](printed-comparison.jpg) together.
+
+This is a practical target for the **composition and proportions** of the domed-crown, long-scroll drawing family. Its light brown printing separates the main contours more clearly than the small, dense 1954 and 1978 heading specimens. That visual similarity does **not** establish an identical engraving or printing block, and the target should retain its own specimen identity.
+
+The native cover image is **2179 × 3162 pixels**, but the arms occupy only about **200 × 175 source pixels**. The saved **276 × 233** rendered crop does not add source detail. Fine hatching, small animal features and exact lettering remain unresolved; obtain a better scan or printing master before claiming an exact reconstruction. A subsequent overlay should align the named specimen to the candidate at a common scale and record which details are source-supported or still uncertain.
 
 ## Date and image policy
 
@@ -114,8 +126,8 @@ The script reads only local catalogue assets. Consult its `--help` output for ou
 | 17 | [Government history illustration](reference/old-full-arms-government.jpg) | 1906-era design family · drawing undated | Undated colour reproduction | [S01][S01] |
 | 18 | [Alternative colour illustration](reference/old-full-arms-colour.jpg) | Pre-1987 design family · drawing undated | Undated colour reproduction | [S10][S10] |
 | 19 | [Split serif heading](reference/supplied-split-serif.png) | Document undated | Document layout | [S20][S20] |
-| 20 | [Government-caption heading](reference/supplied-government-caption.png) | 4 May 1978 visible on crop | Document layout | [S20][S20] |
-| 21 | [Crown-grant blackletter heading](reference/supplied-blackletter.png) | Document undated | Document layout | [S20][S20] |
+| 20 | [Government-caption heading](reference/supplied-government-caption.png) | Order approved 4 May 1978 | Document layout; OIC page 1 | [S20][S20] · [S30][S30] |
+| 21 | [Crown-grant blackletter heading](reference/supplied-blackletter.png) | In 4 May 1978 order; map undated | Map attachment; OIC page 4 | [S20][S20] · [S30][S30] |
 | 22 | [1987 complete arms: period plate](reference/full-1987-period-report.png) | 1987–88 report | Period colour reproduction | [S21][S21] |
 | 23 | [1990 registration painting](reference/full-1990-cha-registration.jpg) | Registered 17 April 1990 | Attributed painting | [S02][S02] |
 | 24 | [Legislature web drawing](reference/full-current-legislature-web.jpg) | Undated · observed 2026 | Current colour drawing | [S22][S22] |
@@ -149,7 +161,7 @@ The script reads only local catalogue assets. Consult its `--help` output for ou
 - **S17 — [Provincial Museum report for 1952; imprint 1953](https://rbcm.ca/wp-content/uploads/2025/07/annual_report_1952.pdf)**. Contemporary official publication.
 - **S18 — [Provincial Museum report for 1960; imprint 1961](https://rbcm.ca/wp-content/uploads/2025/07/annual_report_1960.pdf)**. Contemporary official publication.
 - **S19 — [Recreation and Conservation report for 1970; imprint 1971](https://rbcm.ca/wp-content/uploads/2025/07/annual_report_1970.pdf)**. Contemporary official publication.
-- **S20 — [User-supplied document crops: existing project source register](https://github.com/ahzs645/PofBC/blob/main/research/identity/document-arms-2026-11-13/source-register.json)**. User-supplied evidence. Images supplied by project owner; copied without alteration. Original archival records incomplete.
+- **S20 — [User-supplied document crops: existing project source register](https://github.com/ahzs645/PofBC/blob/d3e4fbf55538e3991179a9868496dcf2e28a68c5/research/identity/document-arms-2026-11-13/source-register.json)**. User-supplied evidence. Images supplied by project owner; copied unchanged. Government and blackletter headings identified in OIC 1121/1978 (S30); split-serif source remains unidentified.
 - **S21 — [Provincial Secretary annual report, year ended 31 March 1988](https://rbcm.ca/wp-content/uploads/2025/07/bca_annual_report_1987_88.pdf)**. Contemporary official publication.
 - **S22 — [Legislature: coat-of-arms history and current drawing](https://www.leg.bc.ca/learn/discover-your-legislature/provincial-and-parliamentary-symbols/bc-coat-of-arms)**. Official history and current specimen.
 - **S23 — [Legislature: Lower Rotunda and the Imredy sculpture](https://www.leg.bc.ca/learn/discover-your-legislature/building-tour/interior-features/upper-rotunda-and-entrance-to-legislative-chamber/lower-rotunda)**. Official object history. Sculpture: Elek Imredy. Photograph: Legislative Assembly of British Columbia.
@@ -159,6 +171,7 @@ The script reads only local catalogue assets. Consult its `--help` output for ou
 - **S27 — [B.C. announcement of the updated Great Seal, 6 May 2023](https://news.gov.bc.ca/releases/2023PREM0027-000660)**. Contemporary official announcement.
 - **S28 — [The Blazon, Summer 2021: historical illustrations and Watt reprint](https://bc-yukon.heraldry.ca/archives/blazon/issues/Blazon-2021-2-Summer.pdf)**. Later survey and reprint of 1987 ceremony history.
 - **S29 — [Royal BC Museum: annual report archive](https://rbcm.ca/corporate-information/reports-policies/annual-report-archive/)**. Official source index.
+- **S30 — [Order in Council 1121/1978](https://www.bclaws.gov.bc.ca/civix/document/id/oic/arc_oic/1121_1978)**. Contemporary official record, approved 4 May 1978. Queen's Printer of British Columbia / BC Laws. Government heading on PDF page 1; blackletter map attachment on page 4. The complete retained PDF is identified by SHA-256 in the inventory.
 
 [S01]: https://www2.gov.bc.ca/gov/content/governments/celebrating-british-columbia/symbols-of-bc/coat-of-arms
 [S02]: https://www.gg.ca/en/heraldry/public-register/project/1406
@@ -179,7 +192,7 @@ The script reads only local catalogue assets. Consult its `--help` output for ou
 [S17]: https://rbcm.ca/wp-content/uploads/2025/07/annual_report_1952.pdf
 [S18]: https://rbcm.ca/wp-content/uploads/2025/07/annual_report_1960.pdf
 [S19]: https://rbcm.ca/wp-content/uploads/2025/07/annual_report_1970.pdf
-[S20]: https://github.com/ahzs645/PofBC/blob/main/research/identity/document-arms-2026-11-13/source-register.json
+[S20]: https://github.com/ahzs645/PofBC/blob/d3e4fbf55538e3991179a9868496dcf2e28a68c5/research/identity/document-arms-2026-11-13/source-register.json
 [S21]: https://rbcm.ca/wp-content/uploads/2025/07/bca_annual_report_1987_88.pdf
 [S22]: https://www.leg.bc.ca/learn/discover-your-legislature/provincial-and-parliamentary-symbols/bc-coat-of-arms
 [S23]: https://www.leg.bc.ca/learn/discover-your-legislature/building-tour/interior-features/upper-rotunda-and-entrance-to-legislative-chamber/lower-rotunda
@@ -189,3 +202,4 @@ The script reads only local catalogue assets. Consult its `--help` output for ou
 [S27]: https://news.gov.bc.ca/releases/2023PREM0027-000660
 [S28]: https://bc-yukon.heraldry.ca/archives/blazon/issues/Blazon-2021-2-Summer.pdf
 [S29]: https://rbcm.ca/corporate-information/reports-policies/annual-report-archive/
+[S30]: https://www.bclaws.gov.bc.ca/civix/document/id/oic/arc_oic/1121_1978
