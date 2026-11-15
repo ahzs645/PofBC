@@ -2477,20 +2477,33 @@
     },
     {
       "id": "S56-O36",
-      "status": "source-limited",
-      "priority": "high",
+      "status": "refine",
+      "priority": "medium",
       "findings": [
-        "The upper band visibly contains lettering in the source but remains blank in the drawing; the existing limitation correctly says it is unresolved.",
-        "The centre is rendered as a schematic triangular bridge; the small source cannot establish all of its internal strokes."
+        "JUSTICE INSTITUTE is now set over the top of the ring in the same outlined face, size and navy as BRITISH COLUMBIA, as the photograph shows, and the centre carries the JIBC monogram.",
+        "The 58 × 57 crop does not establish whether the embroidered captions are capitals or mixed case, or their exact alphabet."
       ],
-      "proposedFix": "Keep the missing caption explicit and seek a clearer roundel; compare an independently verified Justice Institute symbol before replacing the schematic centre.",
+      "proposedFix": "Compare the caption case, alphabet and ring spacing against a sharper photograph of the roundel.",
       "evidenceLimitations": "Collector-board crop from a 480 × 640 image; blur, perspective, thread texture and uncalibrated colours limit exact contour, alphabet and heraldic-detail claims.",
       "inspectedOccurrences": [
         "S56-O36"
       ],
       "baselineSvgSha256": "f08546d40a6e0b8616bdb14cef26e4b3a6c9fc7b70f9838adc12ef07f3461ee1",
-      "reviewedSvgSha256": "f08546d40a6e0b8616bdb14cef26e4b3a6c9fc7b70f9838adc12ef07f3461ee1",
-      "candidateChanges": []
+      "reviewedSvgSha256": "ca100aa0f52416808c3de238ea5aaaadc031820e1340dd7e71f2870705aa0c1f",
+      "candidateChanges": [
+        "Added the upper caption JUSTICE INSTITUTE, mirroring BRITISH COLUMBIA in the same band of the ring.",
+        "Retained the JIBC monogram centre from the supplied fan-badge package."
+      ],
+      "baselineFindings": [
+        "The upper band visibly contains lettering in the source but remains blank in the drawing; the existing limitation correctly says it is unresolved.",
+        "The centre is rendered as a schematic triangular bridge; the small source cannot establish all of its internal strokes."
+      ],
+      "reviewedAt": "2026-11-14",
+      "identificationProvenance": {
+        "basis": "User identification in the 2026-11-14 correction request",
+        "recordedAt": "2026-11-14",
+        "identified": "JUSTICE INSTITUTE as the upper caption"
+      }
     },
     {
       "id": "S56-O46",
@@ -2664,37 +2677,63 @@
     },
     {
       "id": "S56-O47",
-      "status": "source-limited",
+      "status": "refine",
       "priority": "high",
       "findings": [
-        "The current centre is a coarse geometric figure composed of a few angular blocks.",
-        "The 60 × 57 photograph shows a more complex light/dark centre but is insufficient to identify its fine contours reliably."
+        "The wording is corrected: the photograph reads british columbia / police college in lower case, not TRAFFIC OFFICERS, and the patch is filed under the Justice Institute of British Columbia.",
+        "The centre remains the atlas's coarse light-blue and navy figure; the 60 × 57 photograph is insufficient to draw it."
       ],
-      "proposedFix": "Find a larger Traffic Officers roundel and reconstruct the centre; keep this version clearly labelled as a limited-evidence study.",
+      "proposedFix": "Find a larger BC Police College roundel to resolve the centre figure and identify the geometric lower-case typeface.",
       "evidenceLimitations": "Collector-board crop from a 480 × 640 image; blur, perspective, thread texture and uncalibrated colours limit exact contour, alphabet and heraldic-detail claims.",
       "inspectedOccurrences": [
         "S56-O47"
       ],
       "baselineSvgSha256": "0c4dd02b2a3da99307889c79e0e178b51cd9cd421e6aed84e43673f47f576ea1",
-      "reviewedSvgSha256": "0c4dd02b2a3da99307889c79e0e178b51cd9cd421e6aed84e43673f47f576ea1",
-      "candidateChanges": []
+      "reviewedSvgSha256": "6845f778a9bedf54365fbad65e12a34f625cf743fe3d0fb8243c73693f63609c",
+      "candidateChanges": [
+        "Reset both captions in lower case (Poppins SemiBold as a stand-in for the unidentified geometric face).",
+        "Relabelled British Columbia / Police College and moved from Highways and Motor Vehicles to the Justice Institute."
+      ],
+      "baselineFindings": [
+        "The current centre is a coarse geometric figure composed of a few angular blocks.",
+        "The 60 × 57 photograph shows a more complex light/dark centre but is insufficient to identify its fine contours reliably."
+      ],
+      "reviewedAt": "2026-11-14",
+      "identificationProvenance": {
+        "basis": "User identification in the 2026-11-14 correction request",
+        "recordedAt": "2026-11-14",
+        "identified": "British Columbia Police College"
+      }
     },
     {
       "id": "S56-O48",
-      "status": "source-limited",
-      "priority": "high",
+      "status": "refine",
+      "priority": "medium",
       "findings": [
-        "The source centre contains a complex red/blue/white heraldic charge, whereas the drawing reduces it to several coarse polygons.",
-        "The lower MOTOR VEHICLES caption and fan proportions are cleaner and more open than the densely embroidered source."
+        "The fan is Simon Fraser University Security Services, not Motor Vehicles: SIMON FRASER UNIVERSITY follows the upper edge and SECURITY SERVICES the lower edges.",
+        "The centre is now the university's full-colour arms with the motto scroll, matching the photographed red chief, blue/white quarters and blue scroll; the embroidered simplification of the arms is not reproduced."
       ],
-      "proposedFix": "Obtain a close-up for the central charge; improve caption placement only where the source supports it and label the current centre as schematic.",
+      "proposedFix": "Check SERVICES against the user's reading (Security Service) on a sharper photograph, and the arms' embroidered simplification and thread colours.",
       "evidenceLimitations": "Collector-board crop from a 480 × 640 image; blur, perspective, thread texture and uncalibrated colours limit exact contour, alphabet and heraldic-detail claims.",
       "inspectedOccurrences": [
         "S56-O48"
       ],
       "baselineSvgSha256": "511adc581fe187d2b685469ffa9ddff64ccf7ff70d3f13178461b4d44124f27e",
-      "reviewedSvgSha256": "511adc581fe187d2b685469ffa9ddff64ccf7ff70d3f13178461b4d44124f27e",
-      "candidateChanges": []
+      "reviewedSvgSha256": "8ca36ea12cc1b787401a3b703217440f1e508340649dd0dbe6fc61348e4b37f1",
+      "candidateChanges": [
+        "Replaced the coarse polygon centre with Simon Fraser University's arms supplied by the user (2015 brand guidelines vector).",
+        "Reset the captions to SIMON FRASER UNIVERSITY and SECURITY SERVICES; relabelled and moved to Simon Fraser University."
+      ],
+      "baselineFindings": [
+        "The source centre contains a complex red/blue/white heraldic charge, whereas the drawing reduces it to several coarse polygons.",
+        "The lower MOTOR VEHICLES caption and fan proportions are cleaner and more open than the densely embroidered source."
+      ],
+      "reviewedAt": "2026-11-14",
+      "identificationProvenance": {
+        "basis": "User identification in the 2026-11-14 correction request",
+        "recordedAt": "2026-11-14",
+        "identified": "Simon Fraser University Security Service; the photograph reads SERVICES"
+      }
     },
     {
       "id": "S56-O21",
@@ -2733,19 +2772,32 @@
     {
       "id": "S56-O57",
       "status": "refine",
-      "priority": "high",
+      "priority": "medium",
       "findings": [
-        "PATROL is tall and condensed in the source but wide and heavy in the reconstruction.",
-        "The upper University/British Columbia rows are denser, and the central shield has fine details absent from the simplified current version."
+        "The lower edge is now straight, as on the patch, and the centre is the University of British Columbia's arms (open book with TUUM EST, wavy bars and rising sun) in place of the simplified shield.",
+        "PATROL is still wider and heavier than the tall condensed source lettering, and the drawn arms are narrower than the squat embroidered shield."
       ],
-      "proposedFix": "Refit the four caption rows and central shield size, then seek stronger evidence for the small shield details.",
+      "proposedFix": "Refit PATROL and the upper rows to the source's condensed proportions.",
       "evidenceLimitations": "Collector-board crop from a 480 × 640 image; blur, perspective, thread texture and uncalibrated colours limit exact contour, alphabet and heraldic-detail claims.",
       "inspectedOccurrences": [
         "S56-O57"
       ],
       "baselineSvgSha256": "e1a414e80d7961f45fa50f147991ba30af21b8b8b26b695cc09977fe8be26aba",
-      "reviewedSvgSha256": "e1a414e80d7961f45fa50f147991ba30af21b8b8b26b695cc09977fe8be26aba",
-      "candidateChanges": []
+      "reviewedSvgSha256": "c7ea01970d11ed686a6f8c5573311696a954456350682c0a80e7620db63e8c67",
+      "candidateChanges": [
+        "Straightened the bowed base at the depth it reached in the middle.",
+        "Replaced the centre with the public-domain UBC arms from Wikimedia Commons, gold matched to the patch thread."
+      ],
+      "baselineFindings": [
+        "PATROL is tall and condensed in the source but wide and heavy in the reconstruction.",
+        "The upper University/British Columbia rows are denser, and the central shield has fine details absent from the simplified current version."
+      ],
+      "reviewedAt": "2026-11-14",
+      "identificationProvenance": {
+        "basis": "User identification in the 2026-11-14 correction request",
+        "recordedAt": "2026-11-14",
+        "identified": "the UBC coat of arms and a flat base"
+      }
     },
     {
       "id": "S56-O58",
@@ -2766,20 +2818,33 @@
     },
     {
       "id": "S56-O59",
-      "status": "source-limited",
-      "priority": "high",
+      "status": "refine",
+      "priority": "medium",
       "findings": [
-        "The centre in the current version is a simple red/blue shield with a flat book/sun interpretation; the source contains more detail than that construction records.",
-        "The clean large lower caption arcs do not reproduce the compact appearance of the small source lettering."
+        "The patch is the University of Victoria's, not UBC's: the centre is now the UVic shield (three martlets over an open book), with UNIVERSITY OF VICTORIA curving under it and SERVICES across the bottom.",
+        "SERVICES and the arc wording are read from 78 × 62 pixels; the compact embroidered lettering and the shield's stitched simplification are not reproduced exactly."
       ],
-      "proposedFix": "Find a larger UBC Campus Security patch to resolve the charge and lower arcs; keep the present centre identified as interpreted.",
+      "proposedFix": "Confirm the lower wording and arc spacing against a larger UVic Campus Security Services patch.",
       "evidenceLimitations": "Collector-board crop from a 480 × 640 image; blur, perspective, thread texture and uncalibrated colours limit exact contour, alphabet and heraldic-detail claims.",
       "inspectedOccurrences": [
         "S56-O59"
       ],
       "baselineSvgSha256": "f3b0523ebf9b964bdabcd2d5b37025127401dff6556b816125e1e511e581ac51",
-      "reviewedSvgSha256": "f3b0523ebf9b964bdabcd2d5b37025127401dff6556b816125e1e511e581ac51",
-      "candidateChanges": []
+      "reviewedSvgSha256": "c279a4b76ff1ceb78be8e188c5516605976eb9a2a18d69df8b157e220e909126",
+      "candidateChanges": [
+        "Replaced the red/blue interpreted shield with the University of Victoria shield cut from its arms.",
+        "Reset the lower captions to UNIVERSITY OF VICTORIA and SERVICES; relabelled and moved from UBC to the University of Victoria."
+      ],
+      "baselineFindings": [
+        "The centre in the current version is a simple red/blue shield with a flat book/sun interpretation; the source contains more detail than that construction records.",
+        "The clean large lower caption arcs do not reproduce the compact appearance of the small source lettering."
+      ],
+      "reviewedAt": "2026-11-14",
+      "identificationProvenance": {
+        "basis": "User identification in the 2026-11-14 correction request",
+        "recordedAt": "2026-11-14",
+        "identified": "University of Victoria"
+      }
     },
     {
       "id": "S56-O60",
