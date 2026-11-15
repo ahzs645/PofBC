@@ -13,6 +13,8 @@ import './patches.css'
 
 // Browsing needs only metadata and previews. Load the digitizer and export tools when a patch opens.
 const PatchViewer = lazy(() => import('./PatchViewer.jsx').then((module) => ({ default: module.PatchViewer })))
+// Badges are built in 3D rather than sewn (src/badges, preliminary).
+const BadgeViewer = lazy(() => import('../badges/BadgeViewer.jsx').then((module) => ({ default: module.BadgeViewer })))
 
 const COLLECTIONS = {
   patches: { view: 'patches', title: 'Patches', placeholder: 'Sheriff, rocker, Parks…', noun: 'patches' },
@@ -87,12 +89,13 @@ export const PatchesView = ({ collection = 'patches' }) => {
       ? visibleSiblings
       : allCards.filter(({ org }) => org.id === openOrg.id)
     const at = siblings.findIndex(({ patch }) => patch.id === cardId)
+    const Viewer = collection === 'badges' ? BadgeViewer : PatchViewer
     return (
       <Suspense fallback={<section className="patches__intro" aria-label="Loading patch">
         <button type="button" className="button button--ghost" onClick={close}>← All {copy.noun}</button>
-        <p role="status">Loading the patch viewer…</p>
+        <p role="status">Loading the {collection === 'badges' ? 'badge' : 'patch'} viewer…</p>
       </section>}>
-        <PatchViewer
+        <Viewer
           key={cardId}
           patch={open}
           org={openOrg}

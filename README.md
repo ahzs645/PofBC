@@ -647,6 +647,13 @@ being listed.) Filter by organization (`&org=bc-parks`) or search. A patch
 PNG, a Tajima `.dst` or Melco `.exp` machine file, or the SVG, and *Open in Patcher* opens it with
 every digitizing setting exposed.
 
+A badge opens as a solid model instead (preliminary): its drawing built with the
+[Medal Forge](https://github.com/CatsJuice/medal-forge) geometry core as raised metal over a body
+cut to the badge's outline, or as tooled leather, to turn, bend across its width or into a shallow
+dome, and download as a PNG or a GLB model. Size, relief, finish and curve are illustrative, not
+measured. [`research/badges/README.md`](research/badges/README.md) says how it is built and where it
+comes from: the curved badge trial of 14 November 2026, kept with it.
+
 A patch's **History** comes from this site: `src/patches/patchHistory.js` matches the wording on
 it (Lands Department, Forest Service, its parks, Department or Ministry of Forests, Airtanker, Wildfire)
 to the dates the [BC Forest Service timeline](https://bcfs100.for.gov.bc.ca/bscripts/timeline.asp)

@@ -1,0 +1,16 @@
+/* The badge viewer reuses the patch viewer's layout (patches.css); these are its 3D stage's own. */
+.badge-stage__cameras { margin-left: auto; min-width: 0; }
+.badge-stage__cameras .field { margin: 0; }
+.badge-stage__pane {
+  position: relative;
+  min-height: 0;
+  overflow: hidden;
+  /* A soft studio ground, dark enough for polished metal to read in light and dark themes. */
+  background: radial-gradient(ellipse at 50% 40%, #33404a 0%, #1b232a 70%, #151b20 100%);
+}
+.badge-stage__pane canvas { display: block; width: 100%; height: 100%; touch-action: none; cursor: grab; }
+.badge-stage__pane canvas:active { cursor: grabbing; }
+.badge-stage__pane canvas:focus-visible { outline: 2px solid var(--focus, #6aa6ff); outline-offset: -2px; }
+.badge-stage__pane > .patch__status { position: absolute; inset: auto 0 16px; margin: 0; color: #d6dde2; }
+.badge-stage__pane > .patch__status[role='alert'] { inset: 0; display: grid; place-items: center; padding: 24px; }
+.badge__preliminary { margin: 0; padding: 8px 10px; border: 1px dashed var(--outline); border-radius: 6px; font-size: 12px; line-height: 1.5; color: var(--ink-muted); }
