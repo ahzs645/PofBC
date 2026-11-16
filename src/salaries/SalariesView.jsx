@@ -379,8 +379,9 @@ const SalaryRecordsView = ({ onOpenGovernment, navigation }) => {
         <SalarySearchField labelled label="Search people, employers or positions" value={query} onChange={search} />
         {filters && <div className="salaries__desktop-filters">{filters}</div>}
       </div>
-      {introduction}
+      {/* On a phone the search comes first on every page, as it does on a wide screen. */}
       <MobileSalaryFilters query={query} onSearch={search} years={years} counts={periodCounts} range={range} onRange={setRange} sectors={sectors} employers={employersIndex.employers} sector={sector} onSector={setSector} showSector={showSector} showFilters={Boolean(filters)} />
+      {introduction}
       {content}
     </div>
   )
@@ -494,9 +495,11 @@ const SalaryRecordsView = ({ onOpenGovernment, navigation }) => {
   const compiled = new Set(Object.entries(employersIndex.sources ?? {}).filter(([, source]) => source.scope === 'compiled-unverified' || source.sourceKind === 'compiled').map(([id]) => id))
   const official = employersIndex.recordCounts?.official ?? employersIndex.employers.reduce((sum, entry) => sum + entry.coverage.reduce((part, cell, at) => part + (cell?.status === 'available' && !(cell.sourceIds ?? []).some((id) => compiled.has(id)) ? entry.counts[at] : 0), 0), 0)
 
+  // While a search is typed its results come straight under the field: the totals for the whole
+  // collection would only stand between a question and its answer.
   const introduction = (
     <>
-      <section className="salaries__intro" aria-labelledby="salaries-intro">
+      {!typed && <section className="salaries__intro" aria-labelledby="salaries-intro">
         <h2 id="salaries-intro" className="salaries__heading">Public-sector salaries</h2>
         <p className="salaries__about-link"><button type="button" className="salaries__link" onClick={() => go({ browse: 'about', q: '' })}>About these records, privacy and corrections</button></p>
         <dl className="salaries__tiles">
@@ -505,7 +508,7 @@ const SalaryRecordsView = ({ onOpenGovernment, navigation }) => {
           <div><dt>Periods</dt><dd>{years.length}</dd><dd className="salaries__line">{years[0]} – {years.at(-1)}</dd></div>
           <div><dt>From employer reports</dt><dd>{Math.round((official / total) * 100)}%</dd><dd className="salaries__line">{official.toLocaleString('en-CA')} records</dd></div>
         </dl>
-      </section>
+      </section>}
 
       {!typed && (
         <div className="salaries__browse-bar">

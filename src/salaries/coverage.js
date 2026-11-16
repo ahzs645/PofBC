@@ -7,6 +7,23 @@ export const coverageAt = (entry, year) => entry?.coverage?.[year] ?? {
   notes: []
 }
 
+/**
+ * The period an employer's page opens on: the newest for which it has a list of employees, or
+ * failing that the newest it has anything for.
+ *
+ * A health authority's newest period can be this spring's board remuneration, fourteen payments of
+ * a few thousand dollars, a year ahead of its employee schedule. Opening there showed a median of
+ * $1,440 for an employer of twelve thousand. The newest period is still in the picker.
+ */
+export const openingYear = (entry, sources = {}) => {
+  const seen = (entry?.counts ?? []).map((value, at) => (value > 0 ? at : null)).filter((at) => at !== null)
+  const lists = (at) => (entry.coverage?.[at]?.sourceIds ?? []).some((id) => {
+    const source = sources[id]
+    return source?.scope === 'employee-remuneration' || source?.scope === 'compiled-unverified' || source?.sourceKind === 'compiled'
+  })
+  return seen.findLast(lists) ?? seen.at(-1) ?? null
+}
+
 export const scopeLabel = (scope) => ({
   'employee-remuneration': 'Employee remuneration disclosure',
   'named-employees-over-threshold': 'Employee remuneration disclosure above the reporting threshold',

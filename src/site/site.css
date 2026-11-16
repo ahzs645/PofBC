@@ -180,6 +180,15 @@ a { color: inherit; text-underline-offset: 2px; }
 
 .masthead__sun { flex: none; color: var(--sun); }
 .masthead__site { font-weight: 600; }
+/* A phone: the title stays on one line whatever the view is called. The longer names ("Internal
+   Logos", "Coats of Arms") wrapped it onto two, which made the masthead taller on some views than
+   others; the site's name gives way first, since the sun already says it. */
+@media (max-width: 480px) {
+  .masthead { padding-left: 14px; }
+  .masthead__crumbs { flex-wrap: nowrap; gap: 0 6px; font-size: 15px; white-space: nowrap; }
+  .masthead__crumbs > * { flex: none; }
+  .masthead__crumbs > .masthead__site { flex: 0 1 auto; min-width: 0; overflow: hidden; text-overflow: ellipsis; }
+}
 .masthead__slash { color: var(--ink-faint); font-weight: 400; }
 
 /* A square button with an icon in it: the theme toggle. Flat on its card until hovered. */
@@ -1863,7 +1872,7 @@ button.gallery__collecting-status, .gallery__collecting-graph {
 .salaries-filter-sheet__close:hover { background: var(--hover); }
 .salaries-filter-sheet__body { display: grid; gap: 22px; min-height: 0; padding: 18px; overflow-y: auto; overscroll-behavior: contain; }
 .salaries-filter-sheet input[type='search'] { min-width: 0; padding: 11px 44px 11px 12px; border: 1px solid var(--mid); border-radius: 10px; background: var(--surface); color: var(--ink); font: inherit; font-size: 16px; }
-.salaries-filter-sheet .salaries__chips { flex-wrap: wrap; overflow: visible; margin: 0; padding: 0; }
+.salaries-filter-sheet .salaries__chips { flex-wrap: wrap; overflow: visible; margin: 0; padding: 0; -webkit-mask-image: none; mask-image: none; }
 .salaries-filter-sheet .salaries__chips button { min-height: 40px; }
 .salaries-filter-sheet__actions { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 12px 18px max(12px, env(safe-area-inset-bottom)); border-top: 1px solid var(--outline); background: var(--surface); }
 .salaries-filter-sheet__actions .salaries__more { min-height: 44px; min-width: 104px; margin: 0; }
@@ -2035,7 +2044,16 @@ button.gallery__collecting-status, .gallery__collecting-graph {
 .salaries__chips button[aria-pressed='true'] { border-color: var(--ink); background: var(--ink); color: var(--surface); }
 .salaries__chips button[aria-pressed='true'] span { color: inherit; opacity: 0.7; }
 @media (max-width: 640px) {
-  .salaries__chips { flex-wrap: nowrap; overflow-x: auto; margin: 0 -16px; padding: 0 16px 2px; scrollbar-width: none; }
+  /* One row that scrolls sideways; its last 28 pixels fade, so a chip cut off there reads as more
+     to come and not as a row that does not fit. The padding lets the last chip scroll clear of it. */
+  .salaries__chips {
+    flex-wrap: nowrap; overflow-x: auto; margin: 0 -16px; padding: 0 44px 2px 16px; scrollbar-width: none;
+    -webkit-mask-image: linear-gradient(to right, #000 calc(100% - 28px), transparent);
+    mask-image: linear-gradient(to right, #000 calc(100% - 28px), transparent);
+  }
+  /* On a phone the hero's four totals give their figures without the line under each. */
+  .salaries__intro .salaries__tiles .salaries__line { display: none; }
+  .salaries__intro { padding: 16px; }
 }
 
 /* An employer's records: how they are set out (the site's Segmented control), the search within them,
@@ -2202,7 +2220,9 @@ button.gallery__collecting-status, .gallery__collecting-graph {
 .salaries-row__pay .salaries__line a { color: inherit; }
 
 /* A person's years, newest first: a year and its records, or a run of years and why they are empty. */
-.salaries-years { display: grid; margin: 0; padding: 0; list-style: none; }
+/* At a measure the eye can cross: on a wide screen the year was on one side of the page and its
+   amount 1,400 pixels away on the other. */
+.salaries-years { display: grid; max-width: 820px; margin: 0; padding: 0; list-style: none; }
 .salaries-years > li { display: grid; grid-template-columns: 9em minmax(0, 1fr); gap: 12px; padding: 10px 0; border-bottom: 1px solid var(--hover); }
 .salaries-years__label { font-size: 13px; font-weight: 600; color: var(--ink); font-variant-numeric: tabular-nums; }
 .salaries-years__change { display: block; font-size: 12px; font-weight: 400; color: var(--ink-faint); }
