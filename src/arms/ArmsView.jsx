@@ -219,7 +219,7 @@ const Detail = ({ holder, onBack, titleRef }) => (
           </p>
         )}
         <dl className="arms__facts">
-          {holder.granted && <div><dt>Granted</dt><dd>{holder.granted}</dd></div>}
+          {holder.granted && <div><dt>{holder.grantedLabel ?? 'Granted'}</dt><dd>{holder.granted}</dd></div>}
           {holder.registeredInCanada && <div><dt>In Canada</dt><dd>{holder.registeredInCanada}</dd></div>}
           {holder.registered?.length > 0 && <div><dt>Registered</dt><dd>{holder.registered.join(', ')}</dd></div>}
           {holder.register?.volume && <div><dt>Register</dt><dd>{holder.register.volume}</dd></div>}

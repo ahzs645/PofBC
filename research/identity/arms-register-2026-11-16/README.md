@@ -57,6 +57,19 @@ Nicola Valley Institute of Technology and Vancouver Community College.
 ## Images
 
 Images shown in the view are copies of Wikimedia Commons files, in `src/arms/images/`, each credited
-on its page with its author and licence. The Province’s arms are drawn from this repository’s own
+on its page with its author and licence: the Lieutenant Governor’s flag (public domain), UBC’s shield
+(public domain) and UVic’s shield (Robin S. Taylor, CC BY-SA 4.0). Licences and authors were read
+from each Commons file page and confirmed through the Commons API
+([`commons-images.json`](commons-images.json)).
+
+Four more Commons files were identified but not downloaded, because Wikimedia rate-limited the
+download. Each needs a `src/arms/images/` file and an `image` entry in `src/arms/holders.js`:
+
+| Holder | Commons file | Licence |
+| --- | --- | --- |
+| Simon Fraser University | `Simon_Fraser_University_Achievement.png` | CC BY-SA 4.0, Robin S. Taylor |
+| University of Northern B.C. | `University_of_Northern_British_Columbia_Escutcheon.png` | CC BY-SA 4.0, Robin S. Taylor |
+| Royal Roads University | `Royal_Roads_University_Escutcheon.png` | CC BY-SA 4.0, Robin S. Taylor |
+| Vancouver Island University | `Coat_of_Arms_of_Vancouver_Island_University.png` | CC BY 4.0, SheLikesHeraldry | The Province’s arms are drawn from this repository’s own
 vector (`src/assets/crestMark.js`). No Commons file was found for the other bodies. The Sheriff
 Service’s Commons file was not used, because its “own work” claim is doubtful.

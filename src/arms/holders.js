@@ -35,25 +35,21 @@ const EXTRAS = {
   'Simon Fraser University': {
     id: 'simon-fraser-university',
     salaries: 'simon-fraser-university',
-    subject: 'simon-fraser-university',
-    image: { file: 'sfu-arms.png', alt: 'Coat of arms', credit: 'Robin S. Taylor, Wikimedia Commons · CC BY-SA 4.0', page: 'https://commons.wikimedia.org/wiki/File:Simon_Fraser_University_Achievement.png' }
+    subject: 'simon-fraser-university'
   },
   'University of Northern British Columbia': {
     id: 'university-of-northern-bc',
     salaries: 'university-of-northern-bc',
-    subject: 'university-of-northern-bc',
-    image: { file: 'unbc-shield.png', alt: 'Shield', credit: 'Robin S. Taylor, Wikimedia Commons · CC BY-SA 4.0', page: 'https://commons.wikimedia.org/wiki/File:University_of_Northern_British_Columbia_Escutcheon.png' }
+    subject: 'university-of-northern-bc'
   },
   'Royal Roads University': {
     id: 'royal-roads-university',
-    salaries: 'royal-roads-university',
-    image: { file: 'royal-roads-shield.png', alt: 'Shield', credit: 'Robin S. Taylor, Wikimedia Commons · CC BY-SA 4.0', page: 'https://commons.wikimedia.org/wiki/File:Royal_Roads_University_Escutcheon.png' }
+    salaries: 'royal-roads-university'
   },
   'Thompson Rivers University': { id: 'thompson-rivers-university', salaries: 'thompson-rivers-university' },
   'Vancouver Island University': {
     id: 'vancouver-island-university',
-    salaries: 'vancouver-island-university',
-    image: { file: 'viu-arms.png', alt: 'Coat of arms', credit: 'SheLikesHeraldry, Wikimedia Commons · CC BY 4.0', page: 'https://commons.wikimedia.org/wiki/File:Coat_of_Arms_of_Vancouver_Island_University.png' }
+    salaries: 'vancouver-island-university'
   },
   'Kwantlen Polytechnic University': { id: 'kwantlen-polytechnic-university', salaries: 'kwantlen-polytechnic-university' },
   'Emily Carr University of Art and Design': { id: 'emily-carr-university', salaries: 'emily-carr-university' },
@@ -139,10 +135,12 @@ const holder = (entry) => {
     group: entry.group,
     year: String(firstYear(entry)),
     registered: entry.registered.map(capital),
+    grantedLabel: 'In the register',
     granted: `${entry.letters_patent}, ${longDate(entry.date)}`,
     motto: entry.motto ? { text: entry.motto, translation: entry.motto_translation ?? null } : null,
     description: entry.description ?? null,
-    note: [entry.register_notes, entry.note].filter(Boolean).join(' ') || null,
+    // The register's own notes; the research notes stay in register.json.
+    note: entry.register_notes ?? null,
     blazon: byElement(entry.blazon),
     symbolism: byElement(entry.register_symbolism),
     register: { url: entry.register_url, volume: entry.register?.text ?? null },
