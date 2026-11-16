@@ -415,7 +415,7 @@ for (const { search, register: packaged } of PACKAGES) for (const { bodyId, veri
 // images — originals found as vector paths in official PDFs or on official sites, and, where none
 // exists, reconstructions that say so. Each file is checked here for what it claims: no embedded
 // image, no live text, no outside reference.
-const VECTOR_SEARCHES = ['health-bodies-vector-2026-11-16', 'health-regions-lower-mainland-vector-2026-11-16', 'historic-crowns-vector-2026-11-16']
+const VECTOR_SEARCHES = ['health-bodies-vector-2026-11-16', 'health-regions-lower-mainland-vector-2026-11-16', 'historic-crowns-vector-2026-11-16', 'current-bodies-vector-2026-11-16']
 const pureVector = (asset) => {
   const svg = readFileSync(new URL(`public/${asset.file}`, root), 'utf8')
   if (/<(?:\w+:)?(?:image|text|foreignObject|script)\b/i.test(svg) || /(?:xlink:)?href\s*=\s*["'](?!#)/i.test(svg)) {

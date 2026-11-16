@@ -529,6 +529,18 @@ export const COLLECTED_DISPLAY = {
    "recoloured": false
   }
  },
+ "vector-bcib-2026-short-reversed-source-vector": {
+  "light": {
+   "file": "identity-display/vector-bcib-2026-short-reversed-source-vector.light.svg",
+   "aspect": 4.8989,
+   "recoloured": true
+  },
+  "dark": {
+   "file": "identity-display/vector-bcib-2026-short-reversed-source-vector.dark.svg",
+   "aspect": 4.8989,
+   "recoloured": false
+  }
+ },
  "source-innovate-bc-innovate-bc-white-eps": {
   "light": {
    "file": "identity-display/source-innovate-bc-innovate-bc-white-eps.light.svg",
@@ -1995,6 +2007,18 @@ export const COLLECTED_DISPLAY = {
    "recoloured": true
   }
  },
+ "bceid-reversed-rebuilt": {
+  "light": {
+   "file": "identity-display/bceid-reversed-rebuilt.light.svg",
+   "aspect": 4.0509,
+   "recoloured": true
+  },
+  "dark": {
+   "file": "identity-display/bceid-reversed-rebuilt.dark.svg",
+   "aspect": 4.0509,
+   "recoloured": false
+  }
+ },
  "source-expanded-translink-website-logo": {
   "light": {
    "file": "identity-display/source-expanded-translink-website-logo.light.svg",
@@ -2005,6 +2029,18 @@ export const COLLECTED_DISPLAY = {
    "file": "identity-display/source-expanded-translink-website-logo.dark.svg",
    "aspect": 2.2686,
    "recoloured": true
+  }
+ },
+ "source-expanded-metro-vancouver-transit-police-community-report-2025-reversed": {
+  "light": {
+   "file": "identity-display/source-expanded-metro-vancouver-transit-police-community-report-2025-reversed.light.svg",
+   "aspect": 2.1382,
+   "recoloured": true
+  },
+  "dark": {
+   "file": "identity-display/source-expanded-metro-vancouver-transit-police-community-report-2025-reversed.dark.svg",
+   "aspect": 2.1382,
+   "recoloured": false
   }
  },
  "source-expanded-creative-bc-website-logo": {
@@ -2031,6 +2067,18 @@ export const COLLECTED_DISPLAY = {
    "recoloured": true
   }
  },
+ "source-expanded-liquor-distribution-branch-wholesale-site-lockup": {
+  "light": {
+   "file": "identity-display/source-expanded-liquor-distribution-branch-wholesale-site-lockup.light.svg",
+   "aspect": 3.5583,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/source-expanded-liquor-distribution-branch-wholesale-site-lockup.dark.svg",
+   "aspect": 3.5583,
+   "recoloured": true
+  }
+ },
  "source-expanded-sub-bcliquor-website-logo": {
   "light": {
    "file": "identity-display/source-expanded-sub-bcliquor-website-logo.light.svg",
@@ -2053,6 +2101,54 @@ export const COLLECTED_DISPLAY = {
    "file": "identity-display/source-expanded-ldb-wholesale-website-logo.dark.svg",
    "aspect": 3.7495,
    "recoloured": true
+  }
+ },
+ "source-expanded-e-comm-aspire-plan-2019-colour": {
+  "light": {
+   "file": "identity-display/source-expanded-e-comm-aspire-plan-2019-colour.light.svg",
+   "aspect": 4.9103,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/source-expanded-e-comm-aspire-plan-2019-colour.dark.svg",
+   "aspect": 4.9103,
+   "recoloured": true
+  }
+ },
+ "source-expanded-etsi-bc-bylaws-2026-full-name-colour": {
+  "light": {
+   "file": "identity-display/source-expanded-etsi-bc-bylaws-2026-full-name-colour.light.svg",
+   "aspect": 4.3811,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/source-expanded-etsi-bc-bylaws-2026-full-name-colour.light.svg",
+   "aspect": 4.3811,
+   "recoloured": false
+  }
+ },
+ "source-expanded-etsi-bc-rac-terms-2024-full-name-reversed": {
+  "light": {
+   "file": "identity-display/source-expanded-etsi-bc-rac-terms-2024-full-name-reversed.light.svg",
+   "aspect": 4.2857,
+   "recoloured": true
+  },
+  "dark": {
+   "file": "identity-display/source-expanded-etsi-bc-rac-terms-2024-full-name-reversed.dark.svg",
+   "aspect": 4.2857,
+   "recoloured": false
+  }
+ },
+ "source-expanded-bc-pension-corporation-wave-2-plan-colour": {
+  "light": {
+   "file": "identity-display/source-expanded-bc-pension-corporation-wave-2-plan-colour.light.svg",
+   "aspect": 7.0022,
+   "recoloured": true
+  },
+  "dark": {
+   "file": "identity-display/source-expanded-bc-pension-corporation-wave-2-plan-colour.dark.svg",
+   "aspect": 7.0022,
+   "recoloured": false
   }
  },
  "source-expanded-technical-safety-bc-website-logo": {
@@ -2101,6 +2197,18 @@ export const COLLECTED_DISPLAY = {
    "file": "identity-display/source-expanded-sub-playnow-website-logo.dark.svg",
    "aspect": 6.9318,
    "recoloured": true
+  }
+ },
+ "source-expanded-sub-vancouver-convention-centre-sustainability-toolkit-reversed": {
+  "light": {
+   "file": "identity-display/source-expanded-sub-vancouver-convention-centre-sustainability-toolkit-reversed.light.svg",
+   "aspect": 3.5126,
+   "recoloured": true
+  },
+  "dark": {
+   "file": "identity-display/source-expanded-sub-vancouver-convention-centre-sustainability-toolkit-reversed.dark.svg",
+   "aspect": 3.5126,
+   "recoloured": false
   }
  },
  "bc-womens-2024-foundation-impact-report": {
@@ -2160,6 +2268,18 @@ export const COLLECTED_DISPLAY = {
   "dark": {
    "file": "identity-display/source-expanded-university-of-northern-bc-website-logo.dark.svg",
    "aspect": 5.7893,
+   "recoloured": true
+  }
+ },
+ "source-expanded-simon-fraser-university-powerpoint-horizontal-colour": {
+  "light": {
+   "file": "identity-display/source-expanded-simon-fraser-university-powerpoint-horizontal-colour.light.svg",
+   "aspect": 4.2438,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/source-expanded-simon-fraser-university-powerpoint-horizontal-colour.dark.svg",
+   "aspect": 4.2438,
    "recoloured": true
   }
  },
@@ -2292,6 +2412,30 @@ export const COLLECTED_DISPLAY = {
   "dark": {
    "file": "identity-display/source-expanded-bcit-website-logo.light.svg",
    "aspect": 1.0947,
+   "recoloured": false
+  }
+ },
+ "rebuild-expanded-compass-needle-symbol": {
+  "light": {
+   "file": "identity-display/rebuild-expanded-compass-needle-symbol.light.svg",
+   "aspect": 1.003,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/rebuild-expanded-compass-needle-symbol.light.svg",
+   "aspect": 1.003,
+   "recoloured": false
+  }
+ },
+ "rebuild-expanded-compass-c-symbol": {
+  "light": {
+   "file": "identity-display/rebuild-expanded-compass-c-symbol.light.svg",
+   "aspect": 1.003,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/rebuild-expanded-compass-c-symbol.light.svg",
+   "aspect": 1.003,
    "recoloured": false
   }
  },

@@ -1,0 +1,254 @@
+{
+  "package": "current-bodies-vector-2026-11-16",
+  "researchDate": "2026-11-16",
+  "note": "Every source tried, by target. 'used' = the source of a proposed SVG; 'raster-only' = the logo is present but only as an embedded image; 'no-logo' = the document has no usable logo; 'blocked' = not reachable from this session. SHA-256 values are of the downloaded file as served on 2026-11-16.",
+  "targets": [
+    {
+      "target": "source-expanded-bc-pension-corporation-website-logo",
+      "result": "found vector",
+      "sources": [
+        {"url": "https://www.bcpensioncorp.ca/documents/1050273/5100587/Wave+2+Strategic+Plan.pdf/4f11ac1b-fbb0-f14b-85a6-6e635f51ba01?t=1712069307100", "outcome": "used", "locator": "PDF page 1, rect (50,128)-(232,164) pt", "sha256": "54e7f7f482ef2aaeb3f9c1256e2bff3ef1be3724fc8069ae1136139538161302", "pdfCreated": "2024-03-18"},
+        {"url": "https://www.bcpensioncorp.ca/documents/1050273/1050329/bcpc-accessibility-plan.pdf/c2ed6db8-d873-3d37-df4d-c2caffb09699?t=1697471141116", "outcome": "vector, not used", "detail": "Word PDF header logo is vector but CORPORATION is teal, not the website's grey."},
+        {"url": "https://www.bcpensioncorp.ca/documents/1050273/5100587/Plan+2030+Snapshot.pdf/08c457ca-856d-39e2-ab1b-8048fc25ac2d?t=1712069355663", "outcome": "vector, not used", "detail": "Logo with a long decorative dot trail running to the page edge; not the website lockup."},
+        {"url": "https://www.bcpensioncorp.ca/documents/1050273/1050320/2023-24+Annual+Report.pdf/6efc8b9f-ab51-84ab-c17c-41b09ce0d784?t=1727793100679", "outcome": "vector, not used", "detail": "White reversed logo on the cover band."},
+        {"url": "https://www.bcpensioncorp.ca/documents/1050273/15906618/BCPC-annual-report-2022-23.pdf", "outcome": "not used", "detail": "White reversed logo with long dot trail."},
+        {"url": "https://www.bcpensioncorp.ca/documents/1050273/1050323/Wave1-Close-out-Report.pdf/f1039f12-ead9-74ca-8cff-597a3452d32c?t=1721320634123", "outcome": "not used", "detail": "Reversed lockup with Plan 20|30."}
+      ]
+    },
+    {
+      "target": "source-expanded-etsi-bc-website-logo",
+      "result": "found vector of the full-name horizontal lockup; the stacked short-name lockup of the website file was not found as vector",
+      "sources": [
+        {"url": "https://www.etsi-bc.ca/wp-content/uploads/2026/07/ETSI-BC-Bylaw-and-Board-Policy-Manual-with-AI-and-Cybersecurity-2026.pdf", "outcome": "used (colour)", "locator": "PDF page 1, rect (60,58)-(360,140) pt", "sha256": "cbe564eaaf42ac1c6a0374e21a15726305aba8b2f56d907deb95e02eb12f65e6", "pdfCreated": "2026-06-12"},
+        {"url": "https://www.etsi-bc.ca/wp-content/uploads/2024/09/ETSI-BC-Columbia-Kootenay-RAC-Terms-of-Reference-Amended-2024_06_14.pdf", "outcome": "used (reversed)", "locator": "PDF page 1, rect (60,58)-(360,140) pt", "sha256": "cd31464fd8c0e0f0abfcd3b30deb508155ee7d7e83c940b4c299eee5feaee582", "pdfCreated": "2024-09-21"},
+        {"url": "https://www.etsi-bc.ca/wp-content/uploads/2026/07/ETSIBC-Annual-Report-2026-WEB-EMAIL.pdf", "outcome": "not used", "detail": "Cover carries the 20th-anniversary variant."},
+        {"url": "https://www.etsi-bc.ca/wp-content/uploads/2026/03/FINAL-ETSI-BC-Legislative-Review-Committee-Report-2026_03_27.pdf", "outcome": "raster-only"},
+        {"url": "https://www.etsi-bc.ca/wp-content/uploads/2021/05/Legislative-Review-2021.pdf", "outcome": "no-logo"},
+        {"url": "https://www.etsi-bc.ca/wp-content/uploads/2021/03/ETSI-BC-Personal-Information-Protection-Policy-2021_03_31.pdf", "outcome": "no-logo"},
+        {"url": "https://www.etsi-bc.ca/logos/", "outcome": "raster-only", "detail": "Logo page links PNGs and a SharePoint folder that requires a Microsoft sign-in."},
+        {"url": "https://siditbc.sharepoint.com/:f:/g/Ela6Jsq7jxhOu4LILphPqJkB_EjS3R5DvhZYtGGH_10-1w?e=at09B6", "outcome": "blocked", "detail": "Redirects to Microsoft login."},
+        {"url": "https://www.etsi-bc.ca/wp-json/wp/v2/media", "outcome": "no SVG/EPS logo in the media library (only four icon SVGs)"}
+      ]
+    },
+    {
+      "target": "source-expanded-metro-vancouver-transit-police-website-logo",
+      "result": "found vector",
+      "sources": [
+        {"url": "https://transitpolice.ca/wp-content/uploads/_pda/2026/06/2025-Report-to-the-Community.pdf", "outcome": "used", "locator": "PDF page 1, rect (430,685)-(568,756) pt", "sha256": "d809b776d2d71b14fc5734160c32288fbf050a60864f1f3bf3d9cc317f63dcf1", "pdfCreated": "2026-05-29"},
+        {"url": "https://transitpolice.ca/wp-content/uploads/_pda/2026/07/2025-Year-End-Strategic-Plan-Report.pdf", "outcome": "raster-only"},
+        {"url": "https://transitpolice.ca/wp-content/uploads/_pda/2026/09/Board-Report-No.-2026-40_Chief-Officer-Report-September-2026.pdf", "outcome": "raster-only"},
+        {"url": "https://transitpolice.ca/", "outcome": "no logo SVG (inline SVGs are Font Awesome icons)"},
+        {"url": "https://transitpolice.ca/wp-json/wp/v2/media?search=logo", "outcome": "PNG/JPG only"}
+      ]
+    },
+    {
+      "target": "source-expanded-e-comm-website-logo",
+      "result": "found vector (2019 publication; same design as the website logo)",
+      "sources": [
+        {"url": "https://www.ecomm911.ca/wp-content/uploads/2019/05/EC_aSPIRE_Report.pdf", "outcome": "used", "locator": "PDF page 1, rect (55,66)-(220,108) pt", "sha256": "559d6a4556e2d023d544b4f1c68bf2f0b8221e04a796643dddba1634ff2c0239", "pdfCreated": "2019-04-08"},
+        {"url": "https://www.ecomm911.ca/wp-content/uploads/2026/06/2025-E-Comm-Annual-Report-web.pdf", "outcome": "raster-only"},
+        {"url": "https://www.ecomm911.ca/wp-content/uploads/2025/06/E-CommAnnualReport2024-web.pdf", "outcome": "raster-only"},
+        {"url": "https://www.ecomm911.ca/wp-content/uploads/2024/06/2023-E-Comm-Annual-Report-WEB.pdf", "outcome": "raster-only"},
+        {"url": "https://www.ecomm911.ca/wp-content/uploads/2023/06/E-Comm-Annual-Report-2022.pdf", "outcome": "raster-only"},
+        {"url": "https://www.ecomm911.ca/wp-content/uploads/2022/06/ECOM22-001_Annual-Report-2021_June-22_single.pdf", "outcome": "raster-only"},
+        {"url": "https://www.ecomm911.ca/wp-content/uploads/2020/06/E-Comm-2019-Annual-Report.pdf", "outcome": "not used", "detail": "20th-anniversary variant."},
+        {"url": "https://www.ecomm911.ca/wp-content/uploads/2024/06/E-Comm-Governance-Review-Report-June-19.pdf", "outcome": "raster-only"},
+        {"url": "https://www.ecomm911.ca/wp-content/uploads/2024/09/Shareholder-Action-Guide.pdf", "outcome": "raster-only"},
+        {"url": "https://www.ecomm911.ca/wp-content/uploads/2026/09/NG9-1-1-Partner-Communications-Guide-and-Toolkit-Sept-2026-.pdf", "outcome": "raster-only"},
+        {"url": "https://www.ecomm911.ca/wp-content/uploads/2026/10/2026_Pay_Transparency_Report_Final.pdf", "outcome": "raster-only"},
+        {"url": "https://www.ecomm911.ca/wp-content/uploads/2026/03/E-Comm-Action-Plan-Update-March-4.pdf", "outcome": "raster-only"},
+        {"url": "https://www.ecomm911.ca/wp-json/wp/v2/media?search=logo", "outcome": "PNG only (logo_tag_*.png set)"}
+      ]
+    },
+    {
+      "target": "source-expanded-liquor-distribution-branch-website-logo",
+      "result": "found vector (component of an official SVG)",
+      "sources": [
+        {"url": "https://wholesale.bcldb.com/themes/ldbwo/logo.svg", "outcome": "used", "detail": "Adobe Illustrator SVG of the LDB Wholesale Operations logo; its right-hand part is the LDB lockup.", "sha256": "5ebda27de6abaefe8a4599ac55235946009da9a91e7f88ab760e23cc2fd8496e", "lastModified": "2022-03-13"},
+        {"url": "https://wholesale.bcldb.com/themes/ldbwo/img/logo-white.svg", "outcome": "not used", "detail": "White variant of the same file."},
+        {"url": "https://www.bcldb.com/sites/default/files/BCLDB_ASPR%202025_26%20Published%20Final.pdf", "outcome": "no-logo", "detail": "Cover carries only the B.C. government logo."},
+        {"url": "https://www.bcldb.com/sites/default/files/LDB%20Annual%20Service%20Plan%20Report%202024-25%20FINAL.pdf", "outcome": "no-logo"},
+        {"url": "https://www.bcldb.com/sites/default/files/Hospitality%20Liquor%20Market%20Review%20-%20Q1%20-%20June%202026.pdf", "outcome": "raster-only", "detail": "Whole cover is one image."},
+        {"url": "https://www.bcliquorstores.com/sites/default/files/Hospitality_Handbook_June_2025.pdf", "outcome": "raster-only"}
+      ]
+    },
+    {
+      "target": "source-expanded-sub-vancouver-convention-centre-website-logo",
+      "result": "found vector of the one-colour version (the website logo's photographic letter fill is not in it)",
+      "sources": [
+        {"url": "https://assets.vancouverconventioncentre.com/28042026_sustainability_toolkit_final.pdf", "outcome": "used", "locator": "PDF page 16, rect (30,665)-(230,732) pt", "sha256": "9734d020204522500dde470081c210b997d98e91cb63f41f96c3299a6bcb5080", "pdfCreated": "2026-08-20"},
+        {"url": "https://assets.vancouverconventioncentre.com/vcc-logo-original.svg", "outcome": "blocked", "detail": "403 (guessed name)."},
+        {"url": "https://assets.vancouverconventioncentre.com/vcc-logo-white.png", "outcome": "raster-only"}
+      ]
+    },
+    {
+      "target": "source-expanded-simon-fraser-university-website-logo",
+      "result": "found vector",
+      "sources": [
+        {"url": "https://www.sfu.ca/content/dam/sfu/communicators-toolkit/brand/templates/microsoft-office/SFU-PowerPoint-Template-Arial.pptx", "outcome": "used", "locator": "ppt/media/image4.svg", "sha256": "d11058ac81b454b0b68fa431978b326c52b1e14dc9ea300760fb8cab018cb95b", "lastModified": "2025-04-03"},
+        {"url": "https://www.sfu.ca/content/dam/sfu/communicators-toolkit/brand/templates/microsoft-office/SFU-Short-Word-Template_Arial.docx", "outcome": "not used", "detail": "Logo as EMF."},
+        {"url": "https://www.sfu.ca/content/dam/sfu/communicators-toolkit/brand/templates/microsoft-office/SFU_letterhead_Arial.docx", "outcome": "raster-only"},
+        {"url": "https://www.sfu.ca/content/dam/sfu/vpacademic/our-role/academic-planning/pdfs/SFU_IAPR_2025.pdf", "outcome": "vector, not used", "detail": "Stacked logo whose red block bleeds off the top of the cover."},
+        {"url": "https://www.sfu.ca/content/dam/sfu/main/research/strategic-research-plan/implementation-plan/SRP_Midway_Progress_Snapshot.pdf", "outcome": "vector, not used", "detail": "Red SFU block only, no name."},
+        {"url": "https://www.sfu.ca/content/dam/sfu/finance/publications-news/publications/annualreport/2025-26_SFU-Annual-Financial-Report_SignedWebcopy.pdf", "outcome": "raster-only"},
+        {"url": "https://www.sfu.ca/etc/designs/clf/clientlibs/clf4/default/img/", "outcome": "PNG only (SFU@2x.png, SFU_horizontal_reversed_colour_rgb.png); SVG names guessed returned 404"}
+      ]
+    },
+    {
+      "target": "source-bc-infrastructure-benefits-bcib-mobile-png",
+      "result": "found vector (component: helmet + BCIB)",
+      "sources": [
+        {"url": "https://bcib.ca/wp-content/uploads/BCIB_Building-Opportunity-Here-report-F25-26.pdf", "outcome": "used", "locator": "PDF page 1, rect (52,92)-(200,125) pt", "sha256": "6acd3419e553e60287caf1fb0654ec9d3536c7c54dc2768993e342e93c73de8d", "pdfCreated": "2026-09-21"},
+        {"url": "https://bcib.ca/wp-content/uploads/BCIB_year-in-review24-25_9602_FINAL-OnlineUpload.pdf", "outcome": "vector, not used", "detail": "Horizontal tagline lockup (p1, p14) and all-yellow stacked 'BC Infrastructure Benefits' variant (p16)."},
+        {"url": "https://bcib.ca/wp-content/uploads/BCIB_year-in-review23-24_9290_FINAL-online-2.pdf", "outcome": "vector, not used", "detail": "Same variants as 2024/25."}
+      ]
+    },
+    {
+      "target": "source-bc-infrastructure-benefits-bcib-building-opportunity-here-reverse-png",
+      "result": "not found: no source shows the stacked lockup (tagline under BCIB) as vector; the horizontal lockup is already held as vector-bcib-2025-tagline-reversed-source-vector",
+      "sources": [
+        {"url": "https://bcib.ca/wp-content/uploads/BCIB_Building-Opportunity-Here-report-F25-26.pdf", "outcome": "not used", "detail": "Horizontal tagline lockup only."},
+        {"url": "https://bcib.ca/wp-content/uploads/2025_26-Building-Opportunity-Here.pdf", "outcome": "same file as above"},
+        {"url": "https://bcib.ca/wp-content/uploads/BCIB_year-in-review24-25_9602_FINAL-OnlineUpload.pdf", "outcome": "not used", "detail": "Horizontal tagline lockup only."},
+        {"url": "https://bcib.ca/wp-content/uploads/BCIB_year-in-review23-24_9290_FINAL-online-2.pdf", "outcome": "not used"},
+        {"url": "https://bcib.ca/wp-content/uploads/2024-25-BCIB-Service-Plan-Executed-2024-02-09.pdf", "outcome": "no-logo"},
+        {"url": "https://bcib.ca/wp-content/uploads/Accessibility-Plan_20250312_final.pdf", "outcome": "raster-only"},
+        {"url": "https://bcib.ca/wp-content/uploads/HR-Coordinator.pdf", "outcome": "raster-only"},
+        {"url": "https://bcib.ca/wp-content/uploads/Completed-Projects-Report.pdf", "outcome": "raster-only"},
+        {"url": "https://bcib.ca/wp-content/uploads/Highway-1-End-of-Project-Report-2.pdf", "outcome": "raster-only"},
+        {"url": "https://bcib.ca/wp-content/uploads/International-Day-of-the-Worlds-Indigenous-Peoples.pdf", "outcome": "no-logo"}
+      ]
+    },
+    {
+      "target": "bceid-reversed",
+      "result": "reconstructed (EB Garamond)",
+      "sources": [
+        {"url": "https://www.bceid.ca/", "outcome": "raster-only", "detail": "No SVG or inline SVG."},
+        {"url": "https://www.bceid.ca/files/public/AccountProfileManagementGuide.pdf", "outcome": "raster-only"},
+        {"url": "https://www.bceid.ca/assets/images/bceid_rev@2x.png", "outcome": "reconstruction reference"},
+        {"url": "https://raw.githubusercontent.com/google/fonts/main/ofl/ebgaramond/EBGaramond%5Bwght%5D.ttf", "outcome": "font used (SIL OFL)"},
+        {"url": "https://raw.githubusercontent.com/google/fonts/main/ofl/ebgaramond/EBGaramond-Italic%5Bwght%5D.ttf", "outcome": "font used (SIL OFL)"}
+      ]
+    },
+    {
+      "target": "source-expanded-compass-needle-symbol",
+      "result": "reconstructed (geometry)",
+      "sources": [
+        {"url": "https://www.translink.ca/compasscard", "outcome": "raster-only"},
+        {"url": "https://www.translink.ca/-/media/translink/icons/content-pages/handydart/compass_needle_upperright-arrow.svg", "outcome": "serves the same PNG (Sitecore ignores the extension)"},
+        {"url": "https://www.compasscard.ca/", "outcome": "blocked", "detail": "Bot-protection page (Incapsula) instead of content."},
+        {"url": "https://www.translink.ca/-/media/translink/documents/cycling/regional-cycling-strategy/active-transportation-promotion-and-education-toolkit.pdf", "outcome": "no-logo", "detail": "No Compass, CMBC or WCE marks."}
+      ]
+    },
+    {
+      "target": "source-expanded-compass-website-logo",
+      "result": "reconstructed (same geometry as the needle symbol)",
+      "sources": [
+        {"url": "https://www.compasscard.ca/images/sprite-s599e3523b9.png", "outcome": "reconstruction check (81 x 80 crop held in the repo)"}
+      ]
+    },
+    {
+      "target": "source-expanded-coast-mountain-bus-company-route-map-logo",
+      "result": "not done",
+      "sources": [
+        {"url": "https://www.translink.ca/-/media/translink/logos/cmbc_logo.svg", "outcome": "raster-only", "detail": "URL with .svg serves a 695 x 216 PNG (higher resolution than the held 408 x 146 crop)."},
+        {"url": "https://infomaps.translink.ca/Route_Diagrams/196/r403.pdf", "outcome": "raster-only"},
+        {"url": "https://www.translink.ca/-/media/translink/documents/about-translink/corporate-reports/translink_employee_remuneration/2023-financial-information-act-filing-and-remuneration-report.pdf", "outcome": "no-logo"},
+        {"url": "https://www.translink.ca/-/media/translink/documents/about-translink/corporate-reports/translink_employee_remuneration/2019-financial-information-act-filing-and-remuneration-report.pdf", "outcome": "no-logo"},
+        {"url": "https://www.translink.ca/-/media/translink/documents/about-translink/corporate-reports/accountability_reports/2025/accountability_report_2025.pdf", "outcome": "no-logo"},
+        {"url": "https://www.translink.ca/about-us/about-translink/operating-companies/coast-mountain-bus-company", "outcome": "no logo"}
+      ]
+    },
+    {
+      "target": "source-expanded-west-coast-express-performance-report-logo",
+      "result": "not done",
+      "sources": [
+        {"url": "https://www.translink.ca/-/media/translink/logos/wce_logo.svg", "outcome": "raster-only", "detail": "URL with .svg serves a 2114 x 419 PNG (higher resolution than the held 629 x 192 crop)."},
+        {"url": "https://infomaps.translink.ca/Public_Timetables/192/tt997.pdf", "outcome": "raster-only"},
+        {"url": "https://www.translink.ca/-/media/translink/documents/schedules-and-maps/schedules-by-region/2026-schedules/september/coqp149.pdf", "outcome": "no-logo"},
+        {"url": "https://www.translink.ca/about-us/about-translink/operating-companies/west-coast-express", "outcome": "no logo"}
+      ]
+    },
+    {
+      "target": "source-expanded-island-coastal-economic-trust-website-logo",
+      "result": "not done: symbol is raster in every source; wordmark alone is vector",
+      "sources": [
+        {"url": "https://islandcoastaltrust.ca/wp-content/uploads/2026/08/2026-Impact-Report-1.pdf", "outcome": "raster-only (symbol)", "detail": "Cover p1: wordmark as white vector paths, paddle symbol as a 97 x 59 image; same on p63."},
+        {"url": "https://islandcoastaltrust.ca/wp-content/uploads/2026/08/Island-Coastal-Strategic-Plan-2024-2027.pdf", "outcome": "raster-only", "detail": "Quartz PDF of page images."},
+        {"url": "https://islandcoastaltrust.ca/wp-content/uploads/2026/08/Island-Coastal-Economic-Trust-2023-24-Impact-Report-Web.pdf", "outcome": "not used", "detail": "Earlier text-only identity."},
+        {"url": "https://islandcoastaltrust.ca/wp-json/wp/v2/media?search=logo", "outcome": "WebP/PNG only"},
+        {"url": "https://web.archive.org/cdx/search/cdx?url=islandcoastaltrust.ca/*", "outcome": "no logo SVG archived"}
+      ]
+    },
+    {
+      "target": "source-expanded-nechako-kitamaat-development-fund-website-logo",
+      "result": "not done: raster in every source",
+      "sources": [
+        {"url": "https://nkdf.org/uploads/files/annualReports/NKDF_Annual_Report_2025-2026.pdf", "outcome": "raster-only"},
+        {"url": "https://nkdf.org/uploads/files/annualReports/NKDF_Annual_Report_2024-2025.pdf", "outcome": "raster-only"},
+        {"url": "https://nkdf.org/uploads/files/annualReports/NKDF_Annual_Report_2023-2024.pdf", "outcome": "raster-only"},
+        {"url": "https://nkdf.org/uploads/files/annualReports/NKDF_Annual_Report_2021-2022.pdf", "outcome": "raster-only"},
+        {"url": "https://nkdf.org/uploads/files/annualReports/Annual_Report_18-19.pdf", "outcome": "raster-only"},
+        {"url": "https://nkdf.org/uploads/files/annualReports/Annual_Report_2017-2018.pdf", "outcome": "raster-only"},
+        {"url": "https://nkdf.org/uploads/files/annualReports/Annual_Report_2016-2017.pdf", "outcome": "raster-only"},
+        {"url": "https://nkdf.org/uploads/files/annualReports/Annual_Report_2013-2014_Final.pdf", "outcome": "raster-only"},
+        {"url": "https://nkdf.org/uploads/files/annualReports/Annual_Report_2011-2012.pdf", "outcome": "raster-only"},
+        {"url": "https://nkdf.org/uploads/files/annualReports/Annual_Report_2009-2010.pdf", "outcome": "raster-only"},
+        {"url": "https://nkdf.org/uploads/files/annualReports/Annual_Report_2006-2007.pdf", "outcome": "raster-only"},
+        {"url": "https://nkdf.org/uploads/files/annualReports/Annual_Report_2003-2004.pdf", "outcome": "raster-only"},
+        {"url": "https://nkdf.org/uploads/files/annualReports/Annual_Report_1999-2000.pdf", "outcome": "raster-only"},
+        {"url": "https://nkdf.org/uploads/files/businessPlans/NKDF_Business_Plan_2022-2023_Final.pdf", "outcome": "raster-only"},
+        {"url": "https://nkdf.org/uploads/files/businessPlans/NKDF_Business_Plan_2020-2021.pdf", "outcome": "raster-only"},
+        {"url": "https://nkdf.org/uploads/files/businessPlans/NKDF_Business_Plan_2019-2020_Final.pdf", "outcome": "raster-only"},
+        {"url": "https://nkdf.org/uploads/files/businessPlans/NKDF_Business_Plan_2016-2017_Final.pdf", "outcome": "raster-only"},
+        {"url": "https://nkdf.org/media/media-package", "outcome": "no downloadable files"}
+      ]
+    },
+    {
+      "target": "source-expanded-sub-bc-ferry-commission-website-logo",
+      "result": "not done: raster in every source",
+      "sources": [
+        {"url": "https://www.bcferrycommission.ca/download/order-26-03-and-reasons-asset-management-information-program-phase-1-2026-09-25/?wpdmdl=3688", "outcome": "raster-only"},
+        {"url": "https://www.bcferrycommission.ca/wp-content/uploads/2021/02/FC-Service-Plan-and-Budget-Final-FY2022.pdf", "outcome": "raster-only"},
+        {"url": "https://www.bcferrycommission.ca/wp-json/wp/v2/media", "outcome": "PNG only"}
+      ]
+    },
+    {
+      "target": "source-expanded-bc-ferry-authority-2003-website-logo",
+      "result": "not done: the website image is the name set in an unidentified bold serif; the Authority's reports set the name as live text in TheSerif, a different design",
+      "sources": [
+        {"url": "https://www.bcferryauthority.com/wp-content/uploads/2026/09/BCFAuthority_AR_2025_26.pdf", "outcome": "no-logo", "detail": "Name typeset in TheSerif SemiBold on a cover band."},
+        {"url": "https://www.bcferryauthority.com/wp-content/uploads/2025/08/BCFAuthority_AR_2024-25.pdf", "outcome": "no-logo"},
+        {"url": "https://www.bcferryauthority.com/wp-content/uploads/2026/04/BCFA-AGM-APM-Minutes-2025-09-11.pdf", "outcome": "raster-only (BC Ferries logo)"},
+        {"url": "https://www.bcferryauthority.com/wp-content/uploads/2021/04/BCFA-Annual-Report-2003-04.pdf", "outcome": "no-logo (BC Ferries joint report)"}
+      ]
+    },
+    {
+      "target": "source-expanded-northern-development-initiative-trust-website-logo",
+      "result": "not done: site not reachable from this session",
+      "sources": [
+        {"url": "https://www.northerndevelopment.bc.ca/", "outcome": "blocked", "detail": "HTTP 403 to automated requests; fetching the site's PDFs by other routes was declined by the session's permission system."},
+        {"url": "https://web.archive.org/cdx/search/cdx?url=northerndevelopment.bc.ca&matchType=domain&filter=mimetype:application/pdf", "outcome": "listed candidates (e.g. NDIT-2026-2028-Strategic-Plan.pdf) but they were not fetched"},
+        {"url": "https://issuu.com/northerndevelop/docs/ndit2020ar_final_web/3", "outcome": "not tried (Issuu viewer)"}
+      ]
+    },
+    {
+      "target": "source-expanded-sub-bc-cannabis-stores-website-logo",
+      "result": "not done",
+      "sources": [
+        {"url": "https://www.bccannabisstores.com/", "outcome": "raster-only", "detail": "Shopify PNGs; guessed SVG names 404."},
+        {"url": "https://www.bccannabisstores.com/cdn/shop/files/BCCannabisStores-Logo-Green.svg", "outcome": "404"}
+      ]
+    },
+    {
+      "target": "source-expanded-bc-cannabis-wholesale-website-logo",
+      "result": "not done",
+      "sources": [
+        {"url": "https://www.bccannabiswholesale.com/cdn/shop/files/BCCannabisWholesale-Logo-Black-Underline.svg", "outcome": "404"},
+        {"url": "https://www.bccannabiswholesale.com/pages/bcldb-cannabis-supplier-information", "outcome": "raster-only", "detail": "16 supplier PDFs (Word/Excel exports) checked: logos are images or absent."},
+        {"url": "https://cdn.shopify.com/s/files/1/0007/0267/8860/files/LDB_Cannabis_Wholesale_PAD_Agreement_Final_Nov-2022.pdf?v=1669153750", "outcome": "raster-only"},
+        {"url": "https://cdn.shopify.com/s/files/1/0007/0267/8860/files/Operational_Guidelines_for_LPs_with_BCLDB_update_v1.pdf?299", "outcome": "raster-only"}
+      ]
+    }
+  ]
+}

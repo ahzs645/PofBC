@@ -1588,7 +1588,9 @@ export const COLLECTED_BODIES = [
           "vector_type": "raster"
         },
         "previewWidth": 556,
-        "previewHeight": 113
+        "previewHeight": 113,
+        "versionLabel": "Published image",
+        "variantOf": "vector-bcib-2026-short-reversed-source-vector"
       },
       {
         "id": "source-bc-infrastructure-benefits-bcib-building-opportunity-here-reverse-png",
@@ -1664,6 +1666,31 @@ export const COLLECTED_BODIES = [
         "bytes": 19977,
         "darkBackground": true,
         "search": "vector-search-2026-10-30"
+      },
+      {
+        "id": "vector-bcib-2026-short-reversed-source-vector",
+        "label": "BC Infrastructure Benefits — Helmet and BCIB, reversed, 2025/26 report",
+        "file": "identity-collected/bc-infrastructure-benefits/bcib-2026-short-reversed-source-vector.svg",
+        "format": "svg",
+        "isVector": true,
+        "supplied": false,
+        "reconstruction": false,
+        "publisher": "BC Infrastructure Benefits",
+        "sourcePage": "https://bcib.ca/",
+        "sourceUrl": "https://bcib.ca/wp-content/uploads/BCIB_Building-Opportunity-Here-report-F25-26.pdf",
+        "sourceLocator": "PDF page 1",
+        "sourceFile": null,
+        "sourceDate": "2025/26 reporting period; PDF 2026-09",
+        "dateNote": "Publication/capture date or observation, not an adoption date.",
+        "observedDate": "2026-11-16",
+        "evidenceType": "native-pdf-vector-extraction",
+        "notes": "The two-tone yellow helmet and white “BCIB”: the short form the website uses as its mobile logo. On the cover it is followed by “Building Opportunity Here” and the Respectful Onsite Initiative mark, which are left out.",
+        "fidelityNote": "Official publication, original native vector paths extracted; not a supplied standalone master. Helmet and letter paths kept with their source colours; the tagline, separator, neighbouring mark and cover photograph removed. Extracted component of the cover lockup. No tracing, type recreation, or recolouring.",
+        "darkBackground": true,
+        "sha256": "44b1730fe335eee0d8a0b6eb846e3d7e82b89e226937ba690cb0d5f7ffac175d",
+        "bytes": 3442,
+        "search": "current-bodies-vector-2026-11-16",
+        "versionLabel": "Vector"
       }
     ]
   },
@@ -9207,7 +9234,34 @@ export const COLLECTED_SPECIMENS = [
         "darkBackground": true,
         "previewWidth": 220,
         "previewHeight": 58,
-        "search": "bceid-2026-11-12"
+        "search": "bceid-2026-11-12",
+        "versionLabel": "Published image",
+        "variantOf": "bceid-reversed-rebuilt"
+      },
+      {
+        "id": "bceid-reversed-rebuilt",
+        "label": "BCeID — Wordmark, reversed (rebuilt)",
+        "file": "identity-collected/bceid/bceid-reversed-rebuilt.svg",
+        "format": "svg",
+        "isVector": true,
+        "supplied": false,
+        "reconstruction": true,
+        "publisher": "Province of British Columbia (BCeID)",
+        "sourcePage": "https://www.bceid.ca/",
+        "sourceUrl": "https://www.bceid.ca/assets/images/bceid_rev@2x.png",
+        "sourceLocator": "Rebuilt over the website’s 2× reverse logo (220 × 58)",
+        "sourceFile": null,
+        "sourceDate": null,
+        "dateNote": "Rebuilt in 2026 from an undated web image; no adoption date.",
+        "observedDate": "2026-11-16",
+        "evidenceType": "vector-reconstruction",
+        "notes": "“BCeID” in Garamond capitals with an italic e in gold, white for a dark ground, redrawn as outlines over the website image. No vector original was found: the website, its guides and forms carry the wordmark only as images.",
+        "fidelityNote": "Vector reconstruction. Letters set in EB Garamond (SIL Open Font License) and converted to outlines: capitals at weight 400, the e in EB Garamond Italic at weight 600. The original cut of Garamond is not verified. Each letter is scaled to its height in the source image and placed in its measured box; overlap with the source is 0.79 for the capitals and 0.65 for the e (IoU). Colours sampled from the image: white and #E3A82B. No live text, no embedded image.",
+        "darkBackground": true,
+        "sha256": "231df73f779bed67032faa7529f71fcadbdc21036817844fe0dd592867963c68",
+        "bytes": 5581,
+        "search": "current-bodies-vector-2026-11-16",
+        "versionLabel": "Vector reconstruction"
       }
     ]
   }

@@ -33,7 +33,8 @@ export const PROGRAM_ENTRY_OWNERS = {
   'vector-canada-starts-here-bc-jobs-plan-2012': 'pacific-gateway',
   'best-place-on-earth': 'best-place-on-earth',
   'bc-travel-industry-ca-1970': 'department-of-travel-industry',
-  'bceid-reversed': 'bceid'
+  'bceid-reversed': 'bceid',
+  'bceid-reversed-rebuilt': 'bceid'
 }
 
 const subject = ({ id, label, name = label, kind, family = 'provincial-programs', graphNode = null, collectionIds = [], aliases = [], salaryEmployers = [], priority = 2, scope = 'core', sources, nextAction, note, relations = [], ...rest }) => ({

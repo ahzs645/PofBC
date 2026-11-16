@@ -67,11 +67,13 @@ function verifySvg(data, asset) {
 // The 16 November vector searches propose SVGs for logos held only as website images: vector paths
 // taken from the body's own PDFs, or, where none was found, a reconstruction that says so. Their
 // source PDFs are not archived here; each package's source register keeps the URL and checksum.
-const VECTOR_SEARCHES = ['health-bodies-vector-2026-11-16', 'municipal-logos-vector-2026-11-16']
+const VECTOR_SEARCHES = ['health-bodies-vector-2026-11-16', 'municipal-logos-vector-2026-11-16', 'current-bodies-vector-2026-11-16']
 // Finds that are another lockup or version of the logo than the website image: they sit beside
 // it, rather than taking it as one of their versions.
 const OTHER_DESIGN = new Set([
   'bcehs-2024-progress-report-endorsed', // with the PHSA line and a larger name
+  'source-expanded-etsi-bc-bylaws-2026-full-name-colour', // the full name; the website image is the short one, stacked
+  'source-expanded-etsi-bc-rac-terms-2024-full-name-reversed',
   'municipal-fort-st-john-ocp-2025-stacked', // stacked; the website image is horizontal
   'municipal-prince-george-annual-report-2025-horizontal', // horizontal; the website image is stacked
   'municipal-prince-rupert-community-assessment-2024', // the full logo with the arch
