@@ -1182,12 +1182,12 @@ export const COLLECTED_DISPLAY = {
  "bc-trade-1991-rebuilt": {
   "light": {
    "file": "identity-display/bc-trade-1991-rebuilt.light.svg",
-   "aspect": 0.8469,
+   "aspect": 0.8466,
    "recoloured": false
   },
   "dark": {
    "file": "identity-display/bc-trade-1991-rebuilt.dark.svg",
-   "aspect": 0.8469,
+   "aspect": 0.8466,
    "recoloured": true
   }
  },

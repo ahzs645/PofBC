@@ -7305,9 +7305,9 @@ export const COLLECTED_BODIES = [
         ],
         "evidenceType": "supplied-vector-reconstruction",
         "notes": "A red maple leaf rising behind a waving flag — blue field, five red bands parted by white, a gold sun rising from its base — above “BC TRADE”.",
-        "fidelityNote": "A supplied vector reconstruction, not original artwork: every shape and each of the seven letters is a hand-built outline after a 196 × 218 pixel scan (no automatic tracing), with proportions taken from the 1991 scan and parts checked against a larger restored copy. The lettering is a stylistic reconstruction; its typeface is not identified. The red #B22C20, blue #17447F and gold #EDC445 are read from the scan, not an original specification. Ray tips and separator widths are estimates where the scan is blurred. The 1991 scan is kept as a download.",
-        "sha256": "aad99d83daff04ccd4f215edb01b1bc8915cd834f05bc56aebe04a6febef781e",
-        "bytes": 15871,
+        "fidelityNote": "Manually reconstructed vector, revised against the 196 × 218 pixel colour scan on 2026-11-14 and checked against the 1989 newspaper example. The leaf, varying flag separators, diagonal band and sun use deliberately authored curves; each letter is an independent outline. The open separations in T, R, A, D and E are represented as transparent gaps, as visible in both printed examples. A fixed-registration overlay review further corrects the flag folds, white separators and acute blue ends with local tangent-aligned caps. No automatic tracing or raster content. The exact typeface is not identified; small curves, gap widths and corner radii remain estimates at this scan resolution. Red #B22C20, blue #17447F and gold #EDC445 are approximate display colours, not an original specification. The unchanged 1991 scan remains available for comparison.",
+        "sha256": "aca2fd6ef29080684147c003b240486876cdcf21272e5088d30a853f4901c6fc",
+        "bytes": 15425,
         "darkBackground": false,
         "downloads": [
           {
