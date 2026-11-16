@@ -48,6 +48,46 @@ def path_of(items, closed):
     return s + ("Z" if closed and not s.endswith("Z") else "")
 
 
+def cubic_extent(p0, p1, p2, p3):
+    """Exact bounds of a cubic Bézier (MuPDF's drawing rect includes control points)."""
+    import math
+    xs, ys = [p0.x, p3.x], [p0.y, p3.y]
+    for axis, out in ((0, xs), (1, ys)):
+        a0, a1, a2, a3 = (q[axis] for q in (p0, p1, p2, p3))
+        a = -a0 + 3 * a1 - 3 * a2 + a3
+        b = 2 * (a0 - 2 * a1 + a2)
+        c = a1 - a0
+        roots = []
+        if abs(a) < 1e-12:
+            if abs(b) > 1e-12:
+                roots = [-c / b]
+        else:
+            disc = b * b - 4 * a * c
+            if disc >= 0:
+                s = math.sqrt(disc)
+                roots = [(-b + s) / (2 * a), (-b - s) / (2 * a)]
+        for r in roots:
+            if 0 < r < 1:
+                out.append((1 - r) ** 3 * a0 + 3 * (1 - r) ** 2 * r * a1 + 3 * (1 - r) * r * r * a2 + r ** 3 * a3)
+    return pymupdf.Rect(min(xs), min(ys), max(xs), max(ys))
+
+
+def extent(items):
+    """Exact bounds as plain min/max (pymupdf's Rect union skips zero-area rectangles)."""
+    x0 = y0 = float("inf"); x1 = y1 = float("-inf")
+    for kind, *pts in items:
+        if kind == "re":
+            r = pymupdf.Rect(pts[0])
+        elif kind == "qu":
+            r = pts[0].rect
+        elif kind == "l":
+            r = pymupdf.Rect(min(pts[0].x, pts[1].x), min(pts[0].y, pts[1].y), max(pts[0].x, pts[1].x), max(pts[0].y, pts[1].y))
+        else:
+            r = cubic_extent(*pts[:4])
+        x0, y0, x1, y1 = min(x0, r.x0), min(y0, r.y0), max(x1, r.x1), max(y1, r.y1)
+    return pymupdf.Rect(x0, y0, x1, y1)
+
+
 def run(job):
     pdf = SRC / job["pdf"]
     data = pdf.read_bytes()
@@ -88,10 +128,10 @@ def run(job):
                 attrs.append(f'stroke-opacity="{num(dr["stroke_opacity"])}"')
         closed = "f" in dr["type"] or dr.get("closePath")
         shapes.append(f'<path d="{path_of(dr["items"], closed)}" {" ".join(attrs)}/>')
-        r = dr["rect"]
+        r = extent(dr["items"])
         if "s" in dr["type"]:
             r = r + (-dr["width"] / 2, -dr["width"] / 2, dr["width"] / 2, dr["width"] / 2)
-        box = r if box is None else box | r
+        box = r if box is None else pymupdf.Rect(min(box.x0, r.x0), min(box.y0, r.y0), max(box.x1, r.x1), max(box.y1, r.y1))
     m = job.get("margin", 0.5)
     vb = (box.x0 - m, box.y0 - m, box.width + 2 * m, box.height + 2 * m)
     scale = job.get("scale", 4)

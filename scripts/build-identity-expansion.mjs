@@ -64,11 +64,49 @@ function verifySvg(data, asset) {
   assert(/<(?:path|polygon|polyline|circle|ellipse|rect|use)\b/i.test(svg), `Empty SVG: ${asset.file}`)
 }
 
+// The 16 November vector searches propose SVGs for logos held only as website images: vector paths
+// taken from the body's own PDFs, or, where none was found, a reconstruction that says so. Their
+// source PDFs are not archived here; each package's source register keeps the URL and checksum.
+const VECTOR_SEARCHES = ['health-bodies-vector-2026-11-16', 'municipal-logos-vector-2026-11-16']
+// Finds that are another lockup or version of the logo than the website image: they sit beside
+// it, rather than taking it as one of their versions.
+const OTHER_DESIGN = new Set([
+  'bcehs-2024-progress-report-endorsed', // with the PHSA line and a larger name
+  'municipal-fort-st-john-ocp-2025-stacked', // stacked; the website image is horizontal
+  'municipal-prince-george-annual-report-2025-horizontal', // horizontal; the website image is stacked
+  'municipal-prince-rupert-community-assessment-2024', // the full logo with the arch
+  'municipal-smithers-new-residents-guide-2026', // stacked with a slate name, no tagline
+  'municipal-smithers-new-residents-guide-2026-tagline-white' // horizontal, with the tagline
+])
+
+function mergeSearches(manifest, output) {
+  for (const search of VECTOR_SEARCHES) {
+    const proposals = JSON.parse(fs.readFileSync(path.join(root, 'research/identity', search, 'proposed-assets.json'), 'utf8'))
+    for (const { dataFile, bodyId, targetAssetId, asset } of proposals) {
+      if (dataFile !== path.basename(output)) continue
+      const body = manifest.bodies.find((each) => each.id === bodyId)
+      assert(body, `Unknown body for ${asset.id}: ${bodyId}`)
+      assert(asset.search === search && asset.format === 'svg' && asset.isVector, `Unexpected record: ${asset.id}`)
+      body.assets.push(asset)
+      // The website image it stands for becomes one of its versions, so the vector leads the card.
+      const target = body.assets.find((each) => each.id === targetAssetId)
+      if (!target || target.variantOf || OTHER_DESIGN.has(asset.id)) continue
+      const keeper = asset.variantOf ?? asset.id
+      for (const each of body.assets) if (each.variantOf === target.id) each.variantOf = keeper
+      target.variantOf = keeper
+      target.versionLabel ??= 'Published image'
+      const lead = body.assets.find((each) => each.id === keeper)
+      lead.versionLabel ??= lead.reconstruction ? 'Vector reconstruction' : 'Vector'
+    }
+  }
+}
+
 for (const { manifest: manifestFile, output, name, dir } of MANIFESTS) {
   const manifest = JSON.parse(fs.readFileSync(path.join(root, manifestFile), 'utf8'))
   const outputPath = path.join(root, output)
   fileDir = dir
   assert(manifest.schemaVersion === 1, 'Unsupported identity acquisition manifest')
+  mergeSearches(manifest, output)
   for (const source of manifest.sources ?? []) verifyFile(source)
   for (const body of manifest.bodies) {
     assert(!seenBodies.has(body.id), `Duplicate body ID: ${body.id}`)
@@ -80,10 +118,11 @@ for (const { manifest: manifestFile, output, name, dir } of MANIFESTS) {
       seenAssets.add(asset.id)
       assert(asset.sourceUrl?.startsWith('https://') && asset.sourcePage?.startsWith('https://'), `Source attribution missing: ${asset.id}`)
       assert(asset.publisher && asset.sourceLocator && asset.fidelityNote && asset.observedDate, `Incomplete evidence: ${asset.id}`)
-      assert(asset.reconstruction === false && asset.supplied === false, `Unexpected artwork category: ${asset.id}`)
+      // A vector search may add a reconstruction, which must say so; nothing else is rebuilt.
+      assert(asset.supplied === false && (asset.reconstruction === false || (asset.search && asset.evidenceType === 'vector-reconstruction')), `Unexpected artwork category: ${asset.id}`)
       assert(asset.isVector === (asset.format === 'svg'), `Inconsistent vector label: ${asset.id}`)
       const data = verifyFile(asset)
-      assert(checkedFiles.has(asset.sourceFile), `Archived source is missing from the manifest: ${asset.id}`)
+      assert(asset.search || checkedFiles.has(asset.sourceFile), `Archived source is missing from the manifest: ${asset.id}`)
       if (asset.format === 'svg') verifySvg(data, asset)
       if (asset.format === 'png') assert(data.subarray(0, 8).equals(Buffer.from([137, 80, 78, 71, 13, 10, 26, 10])), `Invalid PNG: ${asset.file}`)
       if (asset.format === 'webp') assert(data.toString('ascii', 0, 4) === 'RIFF' && data.toString('ascii', 8, 12) === 'WEBP', `Invalid WebP: ${asset.file}`)

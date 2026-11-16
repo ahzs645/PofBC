@@ -2008,7 +2008,9 @@ export const COLLECTED_BODIES = [
         "bytes": 38524,
         "darkBackground": false,
         "previewWidth": 1080,
-        "previewHeight": 592
+        "previewHeight": 592,
+        "versionLabel": "Published image",
+        "variantOf": "interior-health-stacked-rebuilt"
       },
       {
         "id": "source-interior-health-interior-health-symbol-jpg",
@@ -2032,7 +2034,9 @@ export const COLLECTED_BODIES = [
         "bytes": 31260,
         "darkBackground": false,
         "previewWidth": 1080,
-        "previewHeight": 635
+        "previewHeight": 635,
+        "versionLabel": "Published image",
+        "variantOf": "interior-health-symbol-2024-pdf"
       },
       {
         "id": "vector-interior-health-blue-horizontal-source-extraction",
@@ -2063,6 +2067,56 @@ export const COLLECTED_BODIES = [
             "source": "https://docs.openinfo.gov.bc.ca/Response_Package_TRA-2017-70554.pdf"
           }
         ]
+      },
+      {
+        "id": "interior-health-symbol-2024-pdf",
+        "label": "Interior Health — Symbol, 2024 strategic direction",
+        "file": "identity-collected/interior-health/interior-health-symbol-2024-strategic-direction.svg",
+        "format": "svg",
+        "isVector": true,
+        "supplied": false,
+        "reconstruction": false,
+        "publisher": "Interior Health",
+        "sourcePage": "https://www.interiorhealth.ca/sites/default/files/PDFS/strategic-priorities.pdf",
+        "sourceUrl": "https://www.interiorhealth.ca/sites/default/files/PDFS/strategic-priorities.pdf",
+        "sourceLocator": "PDF page 1, top centre",
+        "sourceFile": "Our Strategic Direction 2024-2027",
+        "sourceDate": "2024-01-24",
+        "observedDate": "2026-11-16",
+        "dateNote": "The document's date, not an adoption date.",
+        "evidenceType": "native-pdf-vector-extraction",
+        "notes": "The figure, head and swoosh on their own, in the blue the PDF gives them.",
+        "fidelityNote": "The PDF's own three paths and colour, extracted with PyMuPDF (research/identity/health-bodies-vector-2026-11-16/scripts/interior_health.py); no tracing or redrawing. The PDF's blue converts to #005ba2, brighter than the website JPG's #2f5088; IH's 2024 wayfinding guideline lists Pantone 653 C as both hex 005AA2 and RGB 47/79/136.",
+        "sha256": "ec972b226b29e4eba09e3d1ccf9b74aa41d71d47934c627b6a3fea7d10e819f0",
+        "bytes": 1179,
+        "darkBackground": false,
+        "search": "health-bodies-vector-2026-11-16",
+        "versionLabel": "Vector"
+      },
+      {
+        "id": "interior-health-stacked-rebuilt",
+        "label": "Interior Health — Stacked (vector reconstruction)",
+        "file": "identity-collected/interior-health/interior-health-stacked-rebuilt.svg",
+        "format": "svg",
+        "isVector": true,
+        "supplied": false,
+        "reconstruction": true,
+        "publisher": "Interior Health",
+        "sourcePage": "https://www.interiorhealth.ca/about-ih/media-centre-and-alerts",
+        "sourceUrl": "https://www.interiorhealth.ca/sites/default/files/PDFS/deciding-to-move-into-long-term-care.pdf",
+        "sourceLocator": "Layout: the stacked JPG on the media centre page. Parts: the horizontal logo on PDF page 1 of Deciding to Move into Long-Term Care (IH #810281)",
+        "sourceFile": "Deciding to Move into Long-Term Care, access guide (IH #810281)",
+        "sourceDate": null,
+        "observedDate": "2026-11-16",
+        "dateNote": "The JPG is undated; the parts' PDF was created 26 March 2024. Neither is an adoption date.",
+        "evidenceType": "vector-reconstruction",
+        "notes": "The symbol over “Interior Health”, in IH Blue.",
+        "fidelityNote": "A reconstruction of the stacked layout, not original stacked artwork: no stacked vector was found. The symbol (3 paths) and the wordmark (14 glyph outlines) are the long-term-care guide's own paths, each scaled uniformly and placed on the boxes they occupy in the official stacked JPG; their fitted heights agree with the JPG within 1%, and an aligned overlay matches closely. Filled #2f4f88, IH Blue as RGB 47/79/136 in IH's wayfinding guideline, which is also the JPG's colour.",
+        "sha256": "323777cfde411581980153e813604f9bbb70d14b7a94f1ed27a4fbd7e26b305d",
+        "bytes": 7229,
+        "darkBackground": false,
+        "search": "health-bodies-vector-2026-11-16",
+        "versionLabel": "Vector reconstruction"
       }
     ]
   },
@@ -2385,7 +2439,8 @@ export const COLLECTED_BODIES = [
         "darkBackground": false,
         "previewWidth": 552,
         "previewHeight": 114,
-        "versionLabel": "Full colour"
+        "versionLabel": "Full colour",
+        "variantOf": "fnha-horizontal-colour-rebuilt"
       },
       {
         "id": "source-first-nations-health-authority-fnha-white-png",
@@ -2411,7 +2466,7 @@ export const COLLECTED_BODIES = [
         "previewWidth": 442,
         "previewHeight": 298,
         "versionLabel": "White",
-        "variantOf": "source-first-nations-health-authority-fnha-horizontal-png"
+        "variantOf": "fnha-horizontal-colour-rebuilt"
       },
       {
         "id": "vector-fnha-icon",
@@ -2487,6 +2542,55 @@ export const COLLECTED_BODIES = [
         "search": "vector-search-2026-10-30",
         "versionLabel": "White lettering",
         "variantOf": "vector-fnha-logo-colour"
+      },
+      {
+        "id": "fnha-white-stacked-2026-pdf",
+        "label": "First Nations Health Authority — White, stacked and centred, 2026 brochure",
+        "file": "identity-collected/first-nations-health-authority/fnha-white-stacked-2026-pdf.svg",
+        "format": "svg",
+        "isVector": true,
+        "supplied": false,
+        "reconstruction": false,
+        "publisher": "First Nations Health Authority",
+        "sourcePage": "https://fnha.ca/",
+        "sourceUrl": "https://fnha.ca/wp-content/uploads/FNHA-Indigenous-End-of-Life-Guide-Brochure.pdf",
+        "sourceLocator": "PDF page 1, front panel, top",
+        "sourceFile": "Indigenous End-of-Life Guide (brochure, version August 2026)",
+        "sourceDate": "2026-08",
+        "observedDate": "2026-11-16",
+        "dateNote": "The brochure's version date, not an adoption date.",
+        "evidenceType": "native-pdf-vector-extraction",
+        "notes": "The thunderbird-and-sun symbol over the centred name and “Health through wellness”, all in white, for a dark ground.",
+        "fidelityNote": "The PDF's own 55 white fills and 2 hairline strokes, extracted with PyMuPDF (scripts/fnha.py); the two strokes have zero width in the PDF and are written at 0.35 pt, their width in another FNHA PDF. No tracing or recolouring.",
+        "sha256": "b7d31df47ba99109cdb9bf85a72908ece47ccb653af68e285588a4dbdab42417",
+        "bytes": 30012,
+        "darkBackground": true,
+        "search": "health-bodies-vector-2026-11-16"
+      },
+      {
+        "id": "fnha-horizontal-colour-rebuilt",
+        "label": "First Nations Health Authority — Full colour, horizontal (vector reconstruction)",
+        "file": "identity-collected/first-nations-health-authority/fnha-horizontal-colour-rebuilt.svg",
+        "format": "svg",
+        "isVector": true,
+        "supplied": false,
+        "reconstruction": true,
+        "publisher": "First Nations Health Authority",
+        "sourcePage": "https://fnha.ca/",
+        "sourceUrl": "https://fnha.ca/wp-content/uploads/FNHA-Caregiving-An-Important-Part-of-Community-Medicine-3.pdf",
+        "sourceLocator": "Layout and lettering: white horizontal logo, PDF page 1 (foot). Symbol: stacked colour logo, PDF page 1 of https://fnha.ca/wp-content/uploads/migrated/Documents/FNHA-Daily-Movement-Guide.pdf",
+        "sourceFile": "Caregiving: An Important Part of Community Medicine; Connect to Change, Movement is Medicine (Daily Movement Guide)",
+        "sourceDate": null,
+        "observedDate": "2026-11-16",
+        "dateNote": "Undated handout; the Daily Movement Guide PDF was created 25 May 2026. Not adoption dates.",
+        "evidenceType": "vector-reconstruction",
+        "notes": "The full-colour symbol beside “First Nations Health Authority” and “Health through wellness” in navy.",
+        "fidelityNote": "Assembled from original FNHA PDF parts, not a found full-colour horizontal file: the lettering is the white horizontal logo's own 48 glyph outlines, filled navy #091631 as in FNHA's colour logos; the symbol is the 30 full-colour paths of the stacked logo in the Daily Movement Guide, scaled uniformly onto the white logo's symbol box (the two boxes have the same proportions to 0.01%). Colours are the PDFs' own as converted by MuPDF.",
+        "sha256": "fe4fbc92701edf3ad5598da407c0b46714910f63ec155d7816ac1404e4506af3",
+        "bytes": 46244,
+        "darkBackground": false,
+        "search": "health-bodies-vector-2026-11-16",
+        "versionLabel": "Vector reconstruction"
       }
     ]
   },
@@ -3173,7 +3277,9 @@ export const COLLECTED_BODIES = [
         "darkBackground": false,
         "dateNote": "A dated sighting is not a complete usage period.",
         "previewWidth": 288,
-        "previewHeight": 124
+        "previewHeight": 124,
+        "versionLabel": "Published image",
+        "variantOf": "bc-development-1985-bc-flag-rebuilt"
       },
       {
         "id": "source-bc-development-corporation-bc-development-1985-logo-context-png",
@@ -3368,6 +3474,31 @@ export const COLLECTED_BODIES = [
           }
         ],
         "search": "bc-development-corporation-vector-2026-11-14"
+      },
+      {
+        "id": "bc-development-1985-bc-flag-rebuilt",
+        "label": "British Columbia Development Corporation — The Province’s BC and flag, 1985 (rebuilt)",
+        "file": "identity-collected/bc-development-corporation/bc-development-1985-bc-flag-rebuilt.svg",
+        "format": "svg",
+        "isVector": true,
+        "supplied": false,
+        "reconstruction": true,
+        "publisher": "British Columbia Development Corporation",
+        "sourcePage": "https://archive.org/details/micro_IA40243514_1461",
+        "sourceUrl": "https://archive.org/download/micro_IA40243514_1461/micro_IA40243514_1461.pdf",
+        "sourceLocator": "PDF page 25",
+        "sourceFile": null,
+        "sourceDate": "1985",
+        "observedDate": "2026-11-16",
+        "dateNote": "The report’s year, not an adoption date.",
+        "evidenceType": "vector-reconstruction",
+        "notes": "The Province’s BC Flag Symbol, horizontal, in one ink, as BCDC printed it under its name in its 1985 annual report.",
+        "fidelityNote": "Put together from the gallery’s own flag artwork (src/assets/flagMark.js, one-ink palette) and its outlined Arial/Helvetica-metric “BC” (the repo’s flag renderer, src/flag/renderFlagSvg.js); the flag’s size and place beside the letters are fitted to the microfiche scan by overlap (IoU 0.68; the scan is blurred and fills in the flag’s white separations). Not original artwork; no tracing.",
+        "sha256": "23ebddc71be1691b4ce1153d73bb542f32a396f74c272a6c4b83d784463cdb0a",
+        "bytes": 5673,
+        "darkBackground": false,
+        "search": "historic-crowns-vector-2026-11-16",
+        "versionLabel": "Vector reconstruction"
       }
     ]
   },
@@ -3670,7 +3801,34 @@ export const COLLECTED_BODIES = [
         "darkBackground": false,
         "dateNote": "A dated sighting is not a complete usage period.",
         "previewWidth": 100,
-        "previewHeight": 274
+        "previewHeight": 274,
+        "versionLabel": "Published image",
+        "variantOf": "bc-buildings-corporation-2000-vector"
+      },
+      {
+        "id": "bc-buildings-corporation-2000-vector",
+        "label": "BC Buildings Corporation — Building and name, 2000 services folder",
+        "file": "identity-collected/bc-buildings-corporation/bc-buildings-corporation-2000-services-folder.svg",
+        "format": "svg",
+        "isVector": true,
+        "supplied": false,
+        "reconstruction": false,
+        "publisher": "British Columbia Buildings Corporation",
+        "sourcePage": "https://web.archive.org/web/20030330190925id_/http://www.bcbc.bc.ca:80/doing_business_with_us/BCBC_Services.pdf",
+        "sourceUrl": "https://web.archive.org/web/20030330190925id_/http://www.bcbc.bc.ca:80/doing_business_with_us/BCBC_Services.pdf",
+        "sourceLocator": "BCBC Services folder (“Reducing your costs. Your people work better. Exceeding your expectations.”), cover, PDF page 1, lower centre",
+        "sourceFile": "BCBC_Services.pdf (sha256 a9a8b4b7…)",
+        "sourceDate": "2000-03",
+        "observedDate": "2026-11-16",
+        "dateNote": "Publication date (PDF created 16 March 2000), not an adoption date.",
+        "evidenceType": "native-pdf-vector-extraction",
+        "notes": "The stacked building of blue and grey slabs over “BC / Buildings / Corporation” in grey — the mark of the 2003 service plan’s small bitmap. The 2001 annual report sets the same drawing reversed in white.",
+        "fidelityNote": "The folder’s own nine filled paths and colours (#006dac, #a6a6a6), extracted with PyMuPDF (scripts/extract.py); lettering already outlined. No tracing, no recolouring. The 2003 bitmap’s blue is slightly greyer.",
+        "sha256": "a5b98d8e3de6e61079ef6259488b3d2caadd5cd5735d562d3b0ecb242e01dbdd",
+        "bytes": 16790,
+        "darkBackground": false,
+        "search": "historic-crowns-vector-2026-11-16",
+        "versionLabel": "Vector"
       },
       {
         "id": "historical-bc-buildings-corporation-2005",
@@ -3828,6 +3986,31 @@ export const COLLECTED_BODIES = [
         "previewHeight": 501
       },
       {
+        "id": "bcric-1979-wordmark-rebuilt",
+        "label": "BCRIC — Green wordmark, 1979 (rebuilt)",
+        "file": "identity-collected/bc-resources-investment-corporation/bcric-1979-wordmark-rebuilt.svg",
+        "format": "svg",
+        "isVector": true,
+        "supplied": false,
+        "reconstruction": true,
+        "publisher": "British Columbia Resources Investment Corporation",
+        "sourcePage": "https://sacda.ufv.ca/collections/2021_03_01_03_003",
+        "sourceUrl": "https://sacda.ufv.ca/sites/default/files/2026-09/2021_03_01_03_003.pdf",
+        "sourceLocator": "PDF page 6",
+        "sourceFile": null,
+        "sourceDate": "1979-08",
+        "observedDate": "2026-11-16",
+        "dateNote": "The brochure’s date, not an adoption date.",
+        "evidenceType": "vector-reconstruction",
+        "notes": "“BCRIC” in a bold serif, green.",
+        "fidelityNote": "Set in Gelasio Bold outlines (an OFL face metric-compatible with Georgia), the closest of ten bold serifs tried (IoU 0.77); letter positions fitted to the scan. The original typeface is not identified, and the serifs and the R’s leg differ in detail. The green (#259d51) is sampled from the scan: an approximation.",
+        "sha256": "3f49b3ce2cb570f3b5737177c5672be209af4d3a8646dc24fbf797b1a3484781",
+        "bytes": 5534,
+        "darkBackground": false,
+        "search": "historic-crowns-vector-2026-11-16",
+        "versionLabel": "Vector reconstruction"
+      },
+      {
         "id": "historical-bcric-1979-brochure-wordmark-raster",
         "label": "Green BCRIC wordmark from August 1979 shareholder brochure",
         "file": "identity-collected/bc-resources-investment-corporation/bcric-1979-brochure-wordmark-raster.png",
@@ -3851,7 +4034,9 @@ export const COLLECTED_BODIES = [
         "darkBackground": false,
         "previewWidth": 567,
         "previewHeight": 187,
-        "search": "historical-vector-followup-2026-10-30"
+        "search": "historical-vector-followup-2026-10-30",
+        "versionLabel": "Published image",
+        "variantOf": "bcric-1979-wordmark-rebuilt"
       }
     ]
   },
@@ -4020,7 +4205,9 @@ export const COLLECTED_BODIES = [
         "id": "source-urban-transit-authority-urban-transit-authority-1980-regional-signature-png",
         "darkBackground": false,
         "dateNote": "A dated sighting is not a complete usage period.",
-        "researchPass": 2
+        "researchPass": 2,
+        "versionLabel": "Published image",
+        "variantOf": "urban-transit-authority-1980-regional-signature-rebuilt"
       },
       {
         "label": "Double-arrow device from UTA regional-service advertisement (1980)",
@@ -4059,7 +4246,9 @@ export const COLLECTED_BODIES = [
         "id": "source-urban-transit-authority-urban-transit-authority-1980-arrow-png",
         "darkBackground": false,
         "dateNote": "A dated sighting is not a complete usage period.",
-        "researchPass": 2
+        "researchPass": 2,
+        "versionLabel": "Published image",
+        "variantOf": "urban-transit-authority-1980-arrow-rebuilt"
       },
       {
         "id": "source-urban-transit-authority-urban-transit-authority-png",
@@ -4086,7 +4275,84 @@ export const COLLECTED_BODIES = [
         "license": "CC BY-SA 4.0",
         "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
         "previewWidth": 1569,
-        "previewHeight": 610
+        "previewHeight": 610,
+        "versionLabel": "Published image",
+        "variantOf": "urban-transit-authority-commons-rebuilt"
+      },
+      {
+        "id": "urban-transit-authority-1980-arrow-rebuilt",
+        "label": "Urban Transit Authority — Double arrow, 1980 (rebuilt)",
+        "file": "identity-collected/urban-transit-authority/urban-transit-authority-1980-arrow-rebuilt.svg",
+        "format": "svg",
+        "isVector": true,
+        "supplied": false,
+        "reconstruction": true,
+        "publisher": "Capital Region Transit System / Urban Transit Authority",
+        "sourcePage": "https://archive.org/details/dailycolonist19800701/page/n11/mode/1up",
+        "sourceUrl": "https://archive.org/download/dailycolonist19800701/1980_07_01_jp2.zip/1980_07_01_jp2/1980_07_01_0011.jp2",
+        "sourceLocator": "The Daily Colonist, 1 July 1980, printed page 12; Dominion Day bus-service advertisement, bottom left",
+        "sourceFile": null,
+        "sourceDate": "1980-07-01",
+        "observedDate": "2026-11-16",
+        "dateNote": "The advertisement’s date, not an adoption date.",
+        "evidenceType": "vector-reconstruction",
+        "notes": "The double-arrow symbol: two arrowheads, one pointing left above a white bar and its half-turn below, printed in black.",
+        "fidelityNote": "Two polygons of 45° and horizontal edges, the lower a half-turn of the upper, their eight dimensions fitted to the 235 × 245 scan by overlap (IoU 0.97). No tracing. Black is the newspaper’s ink, not a known brand colour.",
+        "sha256": "7654c8061d03ec212f3d3f76389d087635f3af1dda115fc4da7bfc0144e38e50",
+        "bytes": 342,
+        "darkBackground": false,
+        "search": "historic-crowns-vector-2026-11-16",
+        "versionLabel": "Vector reconstruction"
+      },
+      {
+        "id": "urban-transit-authority-1980-regional-signature-rebuilt",
+        "label": "Capital Regional District / Urban Transit Authority signature, 1980 (rebuilt)",
+        "file": "identity-collected/urban-transit-authority/urban-transit-authority-1980-regional-signature-rebuilt.svg",
+        "format": "svg",
+        "isVector": true,
+        "supplied": false,
+        "reconstruction": true,
+        "publisher": "Capital Region Transit System / Urban Transit Authority",
+        "sourcePage": "https://archive.org/details/dailycolonist19800701/page/n11/mode/1up",
+        "sourceUrl": "https://archive.org/download/dailycolonist19800701/1980_07_01_jp2.zip/1980_07_01_jp2/1980_07_01_0011.jp2",
+        "sourceLocator": "The Daily Colonist, 1 July 1980, printed page 12; Dominion Day bus-service advertisement, bottom left",
+        "sourceFile": null,
+        "sourceDate": "1980-07-01",
+        "observedDate": "2026-11-16",
+        "dateNote": "The advertisement’s date, not an adoption date.",
+        "evidenceType": "vector-reconstruction",
+        "notes": "“Capital Regional District” at left, the double arrow, “Urban Transit Authority” at right, as the shared regional-service signature printed them. The advertisement’s grey halftone bands and its “6-28” code are left out.",
+        "fidelityNote": "Arrow drawn as in the arrow-only rebuild and fitted to this scan; the two lines are Nimbus Sans Bold (a Helvetica Bold clone) outlines, size, baseline and tracking fitted by overlap. The original typeface is taken to be Helvetica Bold but is not verified.",
+        "sha256": "1db740f1a7eb80ecf3c97dedd6560917a3576d1b7e5e4dd9ad6a89abb546f6a6",
+        "bytes": 13800,
+        "darkBackground": false,
+        "search": "historic-crowns-vector-2026-11-16",
+        "versionLabel": "Vector reconstruction"
+      },
+      {
+        "id": "urban-transit-authority-commons-rebuilt",
+        "label": "Urban Transit Authority — Signature after the 2020 Commons drawing (vector)",
+        "file": "identity-collected/urban-transit-authority/urban-transit-authority-commons-rebuilt.svg",
+        "format": "svg",
+        "isVector": true,
+        "supplied": false,
+        "reconstruction": true,
+        "publisher": "Wikimedia Commons",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:UrbanTransitAuthorityBritishColumbia.png",
+        "sourceUrl": "https://upload.wikimedia.org/wikipedia/commons/9/99/UrbanTransitAuthorityBritishColumbia.png",
+        "sourceLocator": null,
+        "sourceFile": null,
+        "sourceDate": null,
+        "observedDate": "2026-11-16",
+        "dateNote": "The drawing is a 2020 third-party reconstruction; it carries no historical date.",
+        "evidenceType": "vector-reconstruction",
+        "notes": "The white double arrow and “Urban Transit / Authority” on an orange panel, as the 2020 Commons drawing sets them. A vector copy of a third-party reconstruction, not of a contemporary original; the orange panel is that drawing’s.",
+        "fidelityNote": "The arrow is the same 45° construction fitted to the PNG (IoU ≈ 1.00); the lines are Nimbus Sans Regular outlines fitted by overlap (combined IoU 0.92). The orange (#d54d12) is the PNG’s. Nothing here is evidence of the 1978–82 originals.",
+        "sha256": "a74ca5889a7895572e3db9dee6d7f189477f1b231b953008f072798550a8915a",
+        "bytes": 6774,
+        "darkBackground": false,
+        "search": "historic-crowns-vector-2026-11-16",
+        "versionLabel": "Vector reconstruction"
       }
     ]
   },
@@ -4124,7 +4390,9 @@ export const COLLECTED_BODIES = [
         "darkBackground": false,
         "dateNote": "A dated sighting is not a complete usage period.",
         "previewWidth": 613,
-        "previewHeight": 753
+        "previewHeight": 753,
+        "versionLabel": "Published image",
+        "variantOf": "expo86-cipo-1982-rebuilt"
       },
       {
         "id": "source-expo-86-corporation-expo86-original-1986-wordmark-png",
@@ -4149,7 +4417,9 @@ export const COLLECTED_BODIES = [
         "darkBackground": false,
         "dateNote": "A dated sighting is not a complete usage period.",
         "previewWidth": 728,
-        "previewHeight": 192
+        "previewHeight": 192,
+        "versionLabel": "Published image",
+        "variantOf": "expo86-1986-wordmark-rebuilt"
       },
       {
         "id": "source-expo-86-corporation-expo86-symbol-svg",
@@ -4204,6 +4474,56 @@ export const COLLECTED_BODIES = [
         "preview": "identity-collected/expo-86-corporation/expo86-wordmark-svg-preview.png",
         "previewWidth": 1200,
         "previewHeight": 1200
+      },
+      {
+        "id": "expo86-cipo-1982-rebuilt",
+        "label": "Expo 86 — Stacked symbol, after the 1982 trademark drawing (rebuilt)",
+        "file": "identity-collected/expo-86-corporation/expo86-cipo-1982-rebuilt.svg",
+        "format": "svg",
+        "isVector": true,
+        "supplied": false,
+        "reconstruction": true,
+        "publisher": "Expo 86 Corporation",
+        "sourcePage": "https://ised-isde.canada.ca/cipo/trademark-search/901519",
+        "sourceUrl": "https://ised-isde.canada.ca/cipo/trademark-search/media/901519.png",
+        "sourceLocator": "Official mark 901519, design drawing",
+        "sourceFile": null,
+        "sourceDate": "1982-08-16",
+        "observedDate": "2026-11-16",
+        "dateNote": "The record’s filing date, not the start of use.",
+        "evidenceType": "vector-reconstruction",
+        "notes": "“EXPO” over the 86 of three interlocking rings and a diagonal stroke, as the 1982 official-mark drawing draws it — heavier than the Commons rendition already held.",
+        "fidelityNote": "Rings are elliptical annuli, the 6’s stroke a bar, the EXPO letters round-ended monoline strokes (capsules and rings); every dimension fitted to the 613 × 753 drawing by overlap (IoU 0.97). Drawn with true arcs; no tracing, no font.",
+        "sha256": "cc8a61df5f8491a45ae5d4e4b12da7c64d3ad15387319bcd1108c563e4c4120f",
+        "bytes": 2154,
+        "darkBackground": false,
+        "search": "historic-crowns-vector-2026-11-16",
+        "versionLabel": "Vector reconstruction"
+      },
+      {
+        "id": "expo86-1986-wordmark-rebuilt",
+        "label": "Expo 86 — Horizontal wordmark, 1986 (rebuilt)",
+        "file": "identity-collected/expo-86-corporation/expo86-1986-wordmark-rebuilt.svg",
+        "format": "svg",
+        "isVector": true,
+        "supplied": false,
+        "reconstruction": true,
+        "publisher": "Expo 86 Corporation",
+        "sourcePage": "https://www.worldsfairphotos.com/expo86/booklets/time-is-running-out.pdf",
+        "sourceUrl": "https://www.worldsfairphotos.com/expo86/booklets/time-is-running-out.pdf",
+        "sourceLocator": "PDF page 1",
+        "sourceFile": null,
+        "sourceDate": "1986",
+        "observedDate": "2026-11-16",
+        "dateNote": "The leaflet’s copyright year, not an adoption date.",
+        "evidenceType": "vector-reconstruction",
+        "notes": "“EXPO 86” in heavy round-ended letters, white as knocked out of the leaflet’s red. The ™ is left out.",
+        "fidelityNote": "Letters built from round-ended strokes and elliptical rings (the 8 two rings, the 6 a ring and a stroke), every dimension fitted to the leaflet crop by overlap (IoU 0.95). No font, no tracing. The red is the leaflet’s, not part of the mark.",
+        "sha256": "eff49270ba321178607028e2071e0ed7aa6664c6d62ce19b8c1cb6d3fc3bcca6",
+        "bytes": 2275,
+        "darkBackground": true,
+        "search": "historic-crowns-vector-2026-11-16",
+        "versionLabel": "Vector reconstruction"
       }
     ]
   },
@@ -4520,7 +4840,34 @@ export const COLLECTED_BODIES = [
         "darkBackground": false,
         "dateNote": "A dated sighting is not a complete usage period.",
         "previewWidth": 714,
-        "previewHeight": 150
+        "previewHeight": 150,
+        "versionLabel": "Published image",
+        "variantOf": "bcal-1999-letterhead-rebuilt"
+      },
+      {
+        "id": "bcal-1999-letterhead-rebuilt",
+        "label": "BC Assets and Land Corporation — Letterhead name, 1999 (rebuilt)",
+        "file": "identity-collected/bc-assets-and-land-corporation/bcal-1999-letterhead-rebuilt.svg",
+        "format": "svg",
+        "isVector": true,
+        "supplied": false,
+        "reconstruction": true,
+        "publisher": "British Columbia Assets and Land Corporation",
+        "sourcePage": "https://bcnature.org/wp-content/uploads/2020/10/7-Correspondence-31-8-1999-Crown-Lands-007.pdf",
+        "sourceUrl": "https://bcnature.org/wp-content/uploads/2020/10/7-Correspondence-31-8-1999-Crown-Lands-007.pdf",
+        "sourceLocator": "PDF page 1",
+        "sourceFile": null,
+        "sourceDate": "1999-08-31",
+        "observedDate": "2026-11-16",
+        "dateNote": "The letter’s date, not an adoption date.",
+        "evidenceType": "vector-reconstruction",
+        "notes": "“British Columbia / Assets and Land Corporation” in light italic on two lines, as the 1999 letterhead sets it. The letterhead’s vertical rule, outside the held crop, is not drawn.",
+        "fidelityNote": "Set in URW Bookman Light Italic outlines (an ITC Bookman clone), size, baseline and letter positions fitted to the scan by overlap; the fit is close (four faces were tried and Bookman was clearly best), but the original typeface is not verified. Black is the letter’s ink.",
+        "sha256": "c507c9892f2f3afb6ef1822e49edb9bbb05b7373a6140f1a438766bb9f86c07b",
+        "bytes": 24451,
+        "darkBackground": false,
+        "search": "historic-crowns-vector-2026-11-16",
+        "versionLabel": "Vector reconstruction"
       },
       {
         "id": "historical-bc-assets-and-land-corporation-1999",
@@ -4583,7 +4930,34 @@ export const COLLECTED_BODIES = [
         "darkBackground": false,
         "dateNote": "A dated sighting is not a complete usage period.",
         "previewWidth": 276,
-        "previewHeight": 132
+        "previewHeight": 132,
+        "versionLabel": "Published image",
+        "variantOf": "land-and-water-bc-2004-rebuilt"
+      },
+      {
+        "id": "land-and-water-bc-2004-rebuilt",
+        "label": "Land and Water British Columbia Inc. — LWBC lockup, 2004 (rebuilt)",
+        "file": "identity-collected/land-and-water-bc/land-and-water-bc-2004-rebuilt.svg",
+        "format": "svg",
+        "isVector": true,
+        "supplied": false,
+        "reconstruction": true,
+        "publisher": "Land and Water British Columbia Inc.",
+        "sourcePage": "https://www2.gov.bc.ca/assets/gov/british-columbians-our-governments/government-finances/public-accounts/2003-04/sup-e/land-and-water-bc-fs-2003-04.pdf",
+        "sourceUrl": "https://web.archive.org/web/20051217161045id_/http://lwbc.bc.ca:80/05media/reports/2004spr.pdf",
+        "sourceLocator": "Fitted to the colour image on the cover of the 2004/05 Annual Report (PDF page 1, 371 × 180 JPEG); the target is the cover of the 2003/04 financial statements (PDF page 1)",
+        "sourceFile": null,
+        "sourceDate": "2004",
+        "observedDate": "2026-11-16",
+        "dateNote": "The financial statements’ year; the colour reference is the 2004/05 report. Not an adoption date.",
+        "evidenceType": "vector-reconstruction",
+        "notes": "The square emblem — a white triangle cut from an olive square, a teal sun, three bands of water — beside “LWBC” in teal over “LAND AND WATER / BRITISH COLUMBIA INC.” in black.",
+        "fidelityNote": "Square, triangle and sun are constructed shapes; the water bands are cubic curves of constant thickness; all fitted by overlap (IoU 0.98–0.99 for square and sun, 0.80–0.90 for the bands). Lettering is P052 Bold (a Palatino clone) outlines, spacing fitted per letter; the original serif is not identified (IoU 0.67–0.75). Colours are medians sampled from the 2004/05 JPEG: approximations. The greyscale 2003/04 scan shows the bands heavier and more evenly weighted than the colour cover.",
+        "sha256": "2773fe8a492babf6e370862673e0a29c834b58fff4d6f1005a27424987c62234",
+        "bytes": 25786,
+        "darkBackground": false,
+        "search": "historic-crowns-vector-2026-11-16",
+        "versionLabel": "Vector reconstruction"
       },
       {
         "id": "historical-land-and-water-bc-2002",
@@ -4690,7 +5064,9 @@ export const COLLECTED_BODIES = [
         "darkBackground": false,
         "dateNote": "A dated sighting is not a complete usage period.",
         "previewWidth": 681,
-        "previewHeight": 126
+        "previewHeight": 126,
+        "versionLabel": "Published image",
+        "variantOf": "bc-transmission-corporation-2004-vector"
       },
       {
         "id": "vector-bc-transmission-2009",
@@ -4715,6 +5091,31 @@ export const COLLECTED_BODIES = [
         "bytes": 31662,
         "darkBackground": false,
         "search": "vector-search-2026-10-30"
+      },
+      {
+        "id": "bc-transmission-corporation-2004-vector",
+        "label": "British Columbia Transmission Corporation — Full name, 2004 annual report",
+        "file": "identity-collected/bc-transmission-corporation/bc-transmission-corporation-2004-annual-report.svg",
+        "format": "svg",
+        "isVector": true,
+        "supplied": false,
+        "reconstruction": false,
+        "publisher": "British Columbia Transmission Corporation",
+        "sourcePage": "https://web.archive.org/web/20060206200135id_/http://www.bctc.com:80/NR/rdonlyres/499162EE-3BB6-44BE-B799-0B22F16B4709/0/bctc_annual_report_2004.pdf",
+        "sourceUrl": "https://web.archive.org/web/20060206200135id_/http://www.bctc.com:80/NR/rdonlyres/499162EE-3BB6-44BE-B799-0B22F16B4709/0/bctc_annual_report_2004.pdf",
+        "sourceLocator": "2004 Annual Report, back cover, PDF page 55",
+        "sourceFile": "2004 Annual Report (bctc_annual_report_2004.pdf, sha256 9f9a6e05…)",
+        "sourceDate": "2004",
+        "observedDate": "2026-11-16",
+        "dateNote": "Publication date, not an adoption date.",
+        "evidenceType": "native-pdf-vector-extraction",
+        "notes": "The green flag-shaped grid symbol beside “British Columbia Transmission” over “CORPORATION™” — the same drawing as the January 2006 service-plan JPEG (an overlay of the two agrees in outline), as vector paths. The 2005 Annual Report repeats it as vectors.",
+        "fidelityNote": "The report’s own 52 filled paths and colours (#009370, #2eb457, #364a52), extracted with PyMuPDF (scripts/extract.py); the lettering was already outlined in the PDF. No tracing, no recolouring. The 2006 JPEG prints the greens darker; the colours here are the 2004 PDF’s.",
+        "sha256": "0212c4ebadbaa428a6ddf0a8c1cfc8c08362d5905a6cb6cd4e19947a9c1c8828",
+        "bytes": 20256,
+        "darkBackground": false,
+        "search": "historic-crowns-vector-2026-11-16",
+        "versionLabel": "Vector"
       }
     ]
   },
@@ -4784,7 +5185,34 @@ export const COLLECTED_BODIES = [
         "darkBackground": false,
         "dateNote": "A dated sighting is not a complete usage period.",
         "previewWidth": 143,
-        "previewHeight": 113
+        "previewHeight": 113,
+        "versionLabel": "Published image",
+        "variantOf": "pacific-carbon-trust-2011-vector"
+      },
+      {
+        "id": "pacific-carbon-trust-2011-vector",
+        "label": "Pacific Carbon Trust — Stacked mark, 2011 service plan",
+        "file": "identity-collected/pacific-carbon-trust/pacific-carbon-trust-2011-service-plan.svg",
+        "format": "svg",
+        "isVector": true,
+        "supplied": false,
+        "reconstruction": false,
+        "publisher": "Pacific Carbon Trust / Government of British Columbia",
+        "sourcePage": "https://www.bcbudget.gov.bc.ca/2011/sp/pdf/agency/pct.pdf",
+        "sourceUrl": "https://www.bcbudget.gov.bc.ca/2011/sp/pdf/agency/pct.pdf",
+        "sourceLocator": "2011/12 – 2013/14 Service Plan, cover, PDF page 1, lower right",
+        "sourceFile": "pct.pdf (sha256 79eb97b4…)",
+        "sourceDate": "2011-01",
+        "observedDate": "2026-11-16",
+        "dateNote": "Publication date (PDF created 28 January 2011), not an adoption date.",
+        "evidenceType": "native-pdf-vector-extraction",
+        "notes": "The two interlocking C rings, dark and light blue, over “Pacific Carbon Trust”: the design of the 2009 report’s small JPEG, which is squeezed to about half its width there. Earlier than the 2013 vector already held.",
+        "fidelityNote": "The cover’s own 20 filled paths and colours (#006892, #ade0ee), extracted with PyMuPDF (scripts/extract.py); lettering already outlined in the PDF. No tracing, no recolouring.",
+        "sha256": "ef36eb40a5c76f2cadd94ec5529871cd99256ea32552f8d7109d0f99f8897f10",
+        "bytes": 9568,
+        "darkBackground": false,
+        "search": "historic-crowns-vector-2026-11-16",
+        "versionLabel": "Vector"
       }
     ]
   },
@@ -5074,7 +5502,34 @@ export const COLLECTED_BODIES = [
           "vector_type": "raster"
         },
         "previewWidth": 232,
-        "previewHeight": 112
+        "previewHeight": 112,
+        "versionLabel": "Published image",
+        "variantOf": "central-vancouver-island-health-region-1999-emblem-rebuilt"
+      },
+      {
+        "id": "central-vancouver-island-health-region-1999-emblem-rebuilt",
+        "label": "Mountain and wave emblem (vector reconstruction)",
+        "file": "identity-collected/central-vancouver-island-health-region/central-vancouver-island-health-region-1999-emblem-rebuilt.svg",
+        "format": "svg",
+        "isVector": true,
+        "supplied": false,
+        "reconstruction": true,
+        "publisher": "Central Vancouver Island Health Region",
+        "sourcePage": "https://www.hcergo.org/wp-content/uploads/2018/04/The-world-without-linen-bags.pdf",
+        "sourceUrl": "https://www.hcergo.org/wp-content/uploads/2018/04/The-world-without-linen-bags.pdf",
+        "sourceLocator": "PDF page 85 (1-based), the grayscale emblem on a page dated May 1, 1999",
+        "sourceFile": "The World Without Linen Bags (March 2002)",
+        "sourceDate": "1999-05-01",
+        "observedDate": "2026-11-16",
+        "dateNote": "The date on the source page, a sighting, not an adoption date.",
+        "evidenceType": "vector-reconstruction",
+        "notes": "Four peaks, the front one lighter, standing in a wave with two streamers at each end, in greys.",
+        "fidelityNote": "A hand-fitted reconstruction of the 232 × 112 px grayscale emblem, not original artwork. The four peaks are triangles with 45-degree sides (every apex and edge on the scan fits that slope), cut off along the wave's top edge; the wave is one path through hand-picked points, smoothed as Catmull-Rom curves. No bitmap tracing. The greys (#383838–#5b5b5b) are averages measured on a halftoned photocopy; the original colours are not known. The PDF's vector letterhead (page 58) has only a solid black outline of this emblem, so it could not supply the peaks.",
+        "sha256": "e4017fb3c6a3d31ae7e59ee35fb04a52bfdcf4a820df666689febfa7a9e5aa8e",
+        "bytes": 1776,
+        "darkBackground": false,
+        "search": "health-bodies-vector-2026-11-16",
+        "versionLabel": "Vector reconstruction"
       }
     ]
   },
@@ -5635,7 +6090,34 @@ export const COLLECTED_BODIES = [
         "dateNote": "A dated sighting is not a complete usage period.",
         "researchPass": 2,
         "previewWidth": 143,
-        "previewHeight": 176
+        "previewHeight": 176,
+        "versionLabel": "Published image",
+        "variantOf": "north-shore-health-region-annual-report-2000"
+      },
+      {
+        "id": "north-shore-health-region-annual-report-2000",
+        "label": "North Shore Health Region — green boxed logo with Sharing a Vision of Health, 1999/2000 annual report",
+        "file": "identity-collected/north-shore-health-region/north-shore-health-region-annual-report-2000.svg",
+        "format": "svg",
+        "isVector": true,
+        "supplied": false,
+        "reconstruction": false,
+        "publisher": "North Shore Health Region",
+        "sourcePage": "https://web.archive.org/web/20020109181328id_/http://nshr.org:80/annualreport/1999_2000_annual.PDF",
+        "sourceUrl": "https://web.archive.org/web/20020109181328id_/http://nshr.org:80/annualreport/1999_2000_annual.PDF",
+        "sourceLocator": "1999/2000 Annual Report, cover, PDF page 1 (drawings 99–147; page rotated 270°)",
+        "sourceFile": null,
+        "sourceDate": "2000-09",
+        "observedDate": "2026-11-16",
+        "dateNote": "PDF creation date (September 8, 2000) of the 1999/2000 report, not an adoption date.",
+        "evidenceType": "native-pdf-vector-extraction",
+        "notes": "Mountain silhouette, NORTH SHORE, “Health Region” and the “Sharing a Vision of Health” tagline in a green-bordered box; the same design as the November 1999 recruitment advertisement, in colour.",
+        "fidelityNote": "Original QuarkXPress PDF paths and fills extracted with PyMuPDF; only the page rotation is applied. No tracing, retyping or raster. The green is CMYK 100/0/69/30 in the PDF, written as MuPDF’s RGB conversion (#00805F); white fills are the logo’s own ground.",
+        "sha256": "3a4649ecfaa0e684a7cba5ce3d5d20dbbaffe6fd4210cac38a56d2ac11915e2b",
+        "bytes": 31800,
+        "darkBackground": false,
+        "search": "health-regions-lower-mainland-vector-2026-11-16",
+        "versionLabel": "Vector"
       },
       {
         "id": "historical-north-shore-health-region-trail-reversed-raster",
@@ -5950,7 +6432,9 @@ export const COLLECTED_BODIES = [
           "render_scale": 4
         },
         "previewWidth": 332,
-        "previewHeight": 232
+        "previewHeight": 232,
+        "versionLabel": "Published image",
+        "variantOf": "south-fraser-health-region-stacked-1998-rebuilt"
       },
       {
         "id": "source-south-fraser-health-region-south-fraser-health-region-horizontal-1998-png",
@@ -5985,7 +6469,84 @@ export const COLLECTED_BODIES = [
           "render_scale": 4
         },
         "previewWidth": 1248,
-        "previewHeight": 452
+        "previewHeight": 452,
+        "versionLabel": "Published image",
+        "variantOf": "south-fraser-health-region-horizontal-1998-rebuilt"
+      },
+      {
+        "id": "south-fraser-health-region-horizontal-colour-2001-rebuilt",
+        "label": "South Fraser Health Region — horizontal colour logo and tagline, July 2001 (vector reconstruction)",
+        "file": "identity-collected/south-fraser-health-region/south-fraser-health-region-horizontal-colour-2001-rebuilt.svg",
+        "format": "svg",
+        "isVector": true,
+        "supplied": false,
+        "reconstruction": true,
+        "publisher": "South Fraser Health Region",
+        "sourcePage": "https://web.archive.org/web/20030817100250id_/http://www.southfraserhealth.com:80/Images/Business_Opportunities/PDFs/Supply_Chain_Exchange1-1.pdf",
+        "sourceUrl": "https://web.archive.org/web/20030724132955id_/http://www.southfraserhealth.com:80/Images/Whats_Happening/PDFs/Newsletters/SFHR_April_May01.pdf",
+        "sourceLocator": "Layout and colours: Supply Chain Exchange, July 2001, PDF page 1 (raster). Outlines: South Fraser Health Region Newsletter, April–May 2001, PDF page 1 (native vector).",
+        "sourceFile": null,
+        "sourceDate": "2001-07",
+        "observedDate": "2026-11-16",
+        "dateNote": "Publication dates of the two source documents, not an adoption date.",
+        "evidenceType": "vector-reconstruction",
+        "notes": "Four-part teal swirl beside “South Fraser Health Region”, a short rule and “Healthy Individuals / Healthy Communities”, left-aligned.",
+        "fidelityNote": "A vector reconstruction assembled from original vector parts: the symbol, lettering, rule and tagline are the unmodified native outlines from the April–May 2001 newsletter, each moved (not reshaped) to the horizontal layout of the July 2001 raster at one common scale (fitted overlay, IoU 0.92). No typeface substitution. The rule weight (0.42 pt against 0.24 pt in the newsletter) is measured from the raster. Colours (#1D6A79, #004D5F, #68ACB2, #006878; text #004A5A) are averages of the dithered raster under each part and are approximations; an April 2000 PDF letterhead fills the same four parts with #338C95, #006F7A, #80D4C8 and #00A891.",
+        "sha256": "fa591f07e71bdd817a56923b29d4a7d2f488dc4cf2909e6c60dcd89aca3f648a",
+        "bytes": 46600,
+        "darkBackground": false,
+        "search": "health-regions-lower-mainland-vector-2026-11-16",
+        "versionLabel": "Vector reconstruction"
+      },
+      {
+        "id": "south-fraser-health-region-horizontal-1998-rebuilt",
+        "label": "South Fraser Health Region — reversed horizontal logo with Working together for a healthy future, September 1998 (vector reconstruction)",
+        "file": "identity-collected/south-fraser-health-region/south-fraser-health-region-horizontal-1998-rebuilt.svg",
+        "format": "svg",
+        "isVector": true,
+        "supplied": false,
+        "reconstruction": true,
+        "publisher": "South Fraser Health Region",
+        "sourcePage": "https://central.bac-lac.gc.ca/.item?app=Library&id=MQ41801&oclc_number=1006694366&op=pdf",
+        "sourceUrl": "https://nlc-bnc.ca/obj/s4/f2/dsk1/tape9/PQDD_0004/MQ41801.pdf",
+        "sourceLocator": "Layout: Strategic Priorities for Change cover (September 1998), thesis Appendix B-7, PDF page 92. Symbol and name outlines: April–May 2001 newsletter, PDF page 1.",
+        "sourceFile": null,
+        "sourceDate": "1998-09",
+        "observedDate": "2026-11-16",
+        "dateNote": "Cover date of the reproduced document, not an adoption date.",
+        "evidenceType": "vector-reconstruction",
+        "notes": "White swirl and “South Fraser Health Region” reversed out of a black panel, with “Working together for a healthy future” in a pen script below.",
+        "fidelityNote": "A vector reconstruction. The symbol and name are the native 2001 newsletter outlines, which overlay the 1998 scan as the same artwork (one common scale for both name lines); they are reversed in white on a black panel whose edges are measured from the scan. The tagline is set in Yesteryear (SIL OFL), word by word at one scale, and converted to outlines; the original script typeface is not identified and Yesteryear only approximates it. No tracing. Black and white only, as in the scan.",
+        "sha256": "aaa8be220eba1a70ada24d3e5ea65c0f234b2c70e50e44c48c332b37c5dada89",
+        "bytes": 77690,
+        "darkBackground": false,
+        "search": "health-regions-lower-mainland-vector-2026-11-16",
+        "versionLabel": "Vector reconstruction"
+      },
+      {
+        "id": "south-fraser-health-region-stacked-1998-rebuilt",
+        "label": "South Fraser Health Region — stacked logo, February 1998 (vector reconstruction)",
+        "file": "identity-collected/south-fraser-health-region/south-fraser-health-region-stacked-1998-rebuilt.svg",
+        "format": "svg",
+        "isVector": true,
+        "supplied": false,
+        "reconstruction": true,
+        "publisher": "South Fraser Health Region",
+        "sourcePage": "https://central.bac-lac.gc.ca/.item?app=Library&id=MQ41801&oclc_number=1006694366&op=pdf",
+        "sourceUrl": "https://nlc-bnc.ca/obj/s4/f2/dsk1/tape9/PQDD_0004/MQ41801.pdf",
+        "sourceLocator": "Board Reference Manual, printed page 19 (February 1998), thesis Appendix B-2, PDF page 87; symbol outlines from the April–May 2001 newsletter, PDF page 1.",
+        "sourceFile": null,
+        "sourceDate": "1998-02",
+        "observedDate": "2026-11-16",
+        "dateNote": "Date of the reproduced manual, not an adoption date.",
+        "evidenceType": "vector-reconstruction",
+        "notes": "Black swirl above “South Fraser / Health Region” in a heavy serif, centred.",
+        "fidelityNote": "A vector reconstruction. The symbol is the native 2001 newsletter outline of the same emblem, fitted to the scan (ink spread in the photocopied scan closes the thin white gaps that the vector keeps open). The name is set in Enriqueta SemiBold (SIL OFL) and converted to outlines; the original serif (possibly Friz Quadrata) is not verified and Enriqueta is a stand-in of similar weight and proportions. No tracing.",
+        "sha256": "7ad267adec2cc9b6fe95586e6343aea1f70f90d5dc56533c5d347cae89900619",
+        "bytes": 16929,
+        "darkBackground": false,
+        "search": "health-regions-lower-mainland-vector-2026-11-16",
+        "versionLabel": "Vector reconstruction"
       },
       {
         "id": "historical-south-fraser-health-region-stacked-tagline-2001",
@@ -6035,7 +6596,9 @@ export const COLLECTED_BODIES = [
         "darkBackground": false,
         "previewWidth": 606,
         "previewHeight": 252,
-        "search": "historical-vector-followup-2026-10-30"
+        "search": "historical-vector-followup-2026-10-30",
+        "versionLabel": "Published image",
+        "variantOf": "south-fraser-health-region-horizontal-colour-2001-rebuilt"
       }
     ]
   },
@@ -6925,6 +7488,56 @@ export const COLLECTED_BODIES = [
         "previewHeight": 156
       },
       {
+        "id": "simon-fraser-health-region-monochrome-rebuilt",
+        "label": "Simon Fraser Health Region — S symbol, name and region script, monochrome (vector reconstruction)",
+        "file": "identity-collected/simon-fraser-health-region/simon-fraser-health-region-monochrome-rebuilt.svg",
+        "format": "svg",
+        "isVector": true,
+        "supplied": false,
+        "reconstruction": true,
+        "publisher": "Simon Fraser Health Region, Continuum newsletter",
+        "sourcePage": "https://web.archive.org/web/20011123165919id_/http://www.sfhr.com/ccregionalnews/Newsletters/Default.htm",
+        "sourceUrl": "https://web.archive.org/web/20030527161646id_/http://www.sfhr.com/ccregionalnews/Newsletters/January%202001%20Continuum.pdf",
+        "sourceLocator": "Continuum, January 2001, PDF page 12 (image object 256, 1943 × 990 px 1-bit bitmap)",
+        "sourceFile": null,
+        "sourceDate": "2001-01",
+        "observedDate": "2026-11-16",
+        "dateNote": "Printed issue date, not an adoption date.",
+        "evidenceType": "vector-reconstruction",
+        "notes": "Stylized S cut through black blocks beside SIMON / FRASER / HEALTH in spaced capitals, with “region” hand-lettered beneath. The same design appears on the April 1997 letterhead and the 2003 advertisement.",
+        "fidelityNote": "A vector reconstruction fitted to the 1-bit newsletter bitmap (overlay IoU 0.95). S symbol: straight block edges at measured positions and each curved edge a least-squares Bézier chain fitted to edge points sampled from the bitmap. Name: URW Classico (an Optima design) expanded horizontally to 133.5% with fitted tracking, converted to outlines; the original typeface is not verified. The hand-lettered “region” is an outline fitted automatically to the bitmap contour (disclosed bitmap-contour fitting, not a font).",
+        "sha256": "d71f635ba36eaf26d0f2d74b1ef7f9eb11c7f42344f232cf7f1c1033d56c8c0a",
+        "bytes": 19937,
+        "darkBackground": false,
+        "search": "health-regions-lower-mainland-vector-2026-11-16",
+        "versionLabel": "Vector reconstruction"
+      },
+      {
+        "id": "simon-fraser-health-region-colour-rebuilt",
+        "label": "Simon Fraser Health Region — purple and cyan S symbol, name and region script (vector reconstruction)",
+        "file": "identity-collected/simon-fraser-health-region/simon-fraser-health-region-colour-rebuilt.svg",
+        "format": "svg",
+        "isVector": true,
+        "supplied": false,
+        "reconstruction": true,
+        "publisher": "Simon Fraser Health Region",
+        "sourcePage": "https://web.archive.org/web/20011109164705id_/http://www.sfhr.com/inter_ccaboutsfhr/",
+        "sourceUrl": "https://web.archive.org/web/20010825010851id_/http://sfhr.com/inter_ccaboutsfhr/images/sfhr_logo2co.jpg",
+        "sourceLocator": "Colours: original About SFHR website JPEG, archived August 25, 2001. Geometry: Continuum, January 2001, PDF page 12 bitmap.",
+        "sourceFile": null,
+        "sourceDate": "2001-08-25",
+        "observedDate": "2026-11-16",
+        "dateNote": "Archive capture date of the colour JPEG, not a publication or adoption date.",
+        "evidenceType": "vector-reconstruction",
+        "notes": "Purple S symbol and capitals with the hand-lettered “region” in cyan, as on the original website.",
+        "fidelityNote": "The same reconstructed geometry as the monochrome version (fitted to the January 2001 newsletter bitmap; URW Classico expanded to 133.5% for the name, original typeface not verified; “region” fitted to the bitmap contour), checked against the website JPEG at one uniform scale (overlay IoU 0.89). Purple #57046E and cyan #0890AA are averages from the JPEG and are approximations; the JPEG’s capitals render slightly heavier.",
+        "sha256": "bc3bcb8362d379e313ee851c90e11322d9f513148c91d69ae235150727eaef85",
+        "bytes": 19932,
+        "darkBackground": false,
+        "search": "health-regions-lower-mainland-vector-2026-11-16",
+        "versionLabel": "Vector reconstruction"
+      },
+      {
         "id": "historical-simon-fraser-health-region-original-web-colour-2001",
         "label": "Purple and cyan original website logo, archived August 25, 2001",
         "file": "identity-collected/simon-fraser-health-region/simon-fraser-health-region-original-web-colour-2001.jpg",
@@ -6948,7 +7561,9 @@ export const COLLECTED_BODIES = [
         "darkBackground": false,
         "previewWidth": 435,
         "previewHeight": 219,
-        "search": "historical-vector-followup-2026-10-30"
+        "search": "historical-vector-followup-2026-10-30",
+        "versionLabel": "Published image",
+        "variantOf": "simon-fraser-health-region-colour-rebuilt"
       },
       {
         "id": "historical-simon-fraser-health-region-continuum-2001-monochrome",
@@ -6974,7 +7589,9 @@ export const COLLECTED_BODIES = [
         "darkBackground": false,
         "previewWidth": 1943,
         "previewHeight": 990,
-        "search": "historical-vector-followup-2026-10-30"
+        "search": "historical-vector-followup-2026-10-30",
+        "versionLabel": "Published image",
+        "variantOf": "simon-fraser-health-region-monochrome-rebuilt"
       }
     ]
   },
@@ -7088,6 +7705,31 @@ export const COLLECTED_BODIES = [
     "notes": "Original teal Coast Garibaldi Health emblem and name recovered from the society’s archived 2001 website. The original organization page identifies the Community Health Services Society.",
     "assets": [
       {
+        "id": "coast-garibaldi-health-rebuilt",
+        "label": "Coast Garibaldi Health — teal symbol and wordmark (vector reconstruction)",
+        "file": "identity-collected/coast-garibaldi-community-health-services-society/coast-garibaldi-health-rebuilt.svg",
+        "format": "svg",
+        "isVector": true,
+        "supplied": false,
+        "reconstruction": true,
+        "publisher": "Coast Garibaldi Community Health Services Society",
+        "sourcePage": "https://web.archive.org/web/20020301114420id_/http://www.cghealth.org:80/Documents/Community_grants/Grant_Application_Page1_files/oledata.mso",
+        "sourceUrl": "https://web.archive.org/web/20010813123007id_/http://cghealth.org:80/Images/CGHLogo2000.gif",
+        "sourceLocator": "Geometry: 765 × 246 px greyscale logo inside the Word header object (created June 21, 2000) of the Community Grant Application page. Colours: CGHLogo2000.gif, archived August 13, 2001.",
+        "sourceFile": null,
+        "sourceDate": "2000-06-21",
+        "observedDate": "2026-11-16",
+        "dateNote": "Creation date of the embedded Word object; the GIF is a 2001 archive capture. Neither is an adoption date.",
+        "evidenceType": "vector-reconstruction",
+        "notes": "Teal disc with white mountain ridges and a sun, six pale bars crossing it, and “Coast / Garibaldi / Health” in a bold italic serif.",
+        "fidelityNote": "A vector reconstruction, not original artwork. Disc and bars are geometry measured from the 765 × 246 px bitmap preserved in the society’s June 2000 Word header (circle fit, bar centroids); the white ridge and sun lines are stroked Bézier paths fitted to that bitmap’s skeletonised centrelines, clipped to the disc. The name is set in Gelasio Bold Italic (SIL OFL) with fitted tracking and converted to outlines; the original typeface is not verified. Colours (#00948C, bars #A2C4C4) approximate the 2001 GIF.",
+        "sha256": "2378ae105a9cab0ec7eea8100eab87980374458950e54c4315093859e8ea7fdf",
+        "bytes": 31521,
+        "darkBackground": false,
+        "search": "health-regions-lower-mainland-vector-2026-11-16",
+        "versionLabel": "Vector reconstruction"
+      },
+      {
         "id": "historical-coast-garibaldi-community-health-services-society-original-web-colour-2001",
         "label": "Teal Coast Garibaldi Health logo; original GIF archived August 13, 2001",
         "file": "identity-collected/coast-garibaldi-community-health-services-society/coast-garibaldi-community-health-services-society-original-web-colour-2001.gif",
@@ -7111,7 +7753,9 @@ export const COLLECTED_BODIES = [
         "darkBackground": false,
         "previewWidth": 200,
         "previewHeight": 64,
-        "search": "historical-vector-followup-2026-10-30"
+        "search": "historical-vector-followup-2026-10-30",
+        "versionLabel": "Published image",
+        "variantOf": "coast-garibaldi-health-rebuilt"
       }
     ]
   },
@@ -8366,7 +9010,9 @@ export const COLLECTED_SPECIMENS = [
         "darkBackground": false,
         "previewWidth": 684,
         "previewHeight": 186,
-        "search": "shared-services-bc-2026-11-12"
+        "search": "shared-services-bc-2026-11-12",
+        "versionLabel": "Published image",
+        "variantOf": "solutions-bc-2006-letterhead-rebuilt"
       },
       {
         "id": "shared-services-bc-2006-07",
@@ -8398,7 +9044,9 @@ export const COLLECTED_SPECIMENS = [
             "date": "2010-08-09",
             "source": "https://council.vancouver.ca/20110503/documents/a3.pdf"
           }
-        ]
+        ],
+        "versionLabel": "Published image",
+        "variantOf": "shared-services-bc-2006-07-rebuilt"
       },
       {
         "id": "shared-services-bc-2015",
@@ -8424,7 +9072,84 @@ export const COLLECTED_SPECIMENS = [
         "darkBackground": true,
         "previewWidth": 810,
         "previewHeight": 267,
-        "search": "shared-services-bc-2026-11-12"
+        "search": "shared-services-bc-2026-11-12",
+        "versionLabel": "Published image",
+        "variantOf": "shared-services-bc-2015-rebuilt"
+      },
+      {
+        "id": "shared-services-bc-2006-07-rebuilt",
+        "label": "Shared Services BC — On the Best Place on Earth mark (rebuilt)",
+        "file": "identity-collected/shared-services-bc/shared-services-bc-2006-07-rebuilt.svg",
+        "format": "svg",
+        "isVector": true,
+        "supplied": false,
+        "reconstruction": true,
+        "publisher": "Shared Services BC",
+        "sourcePage": "https://www2.gov.bc.ca/assets/gov/british-columbians-our-governments/about-the-bc-government/strategic-partnerships/the-strategic-partnerships-office/high-value-service-contracts/48069_2006_poim_anniversary_report.pdf",
+        "sourceUrl": "https://www2.gov.bc.ca/assets/gov/british-columbians-our-governments/about-the-bc-government/strategic-partnerships/the-strategic-partnerships-office/high-value-service-contracts/48069_2006_poim_anniversary_report.pdf",
+        "sourceLocator": "Payroll Operations and Information Management — Alliance Management Office Report, November 2006 (posted July 2007), PDF page 1",
+        "sourceFile": null,
+        "sourceDate": "2006/07",
+        "observedDate": "2026-11-16",
+        "dateNote": "The report’s date, not an adoption date.",
+        "evidenceType": "vector-reconstruction",
+        "notes": "The BC mark with “The Best Place on Earth”, a gold divider, and “Shared / ServicesBC” in navy with “BC” in gold.",
+        "fidelityNote": "Put together from the gallery’s Best Place on Earth mark (src/assets/oneOffMarks.js, drawn with the gallery’s own one-off renderer) and letters of the Province’s Garamond lifted from the gallery’s one-offs — BC Wildfire Service’s S, e, r, v, i, c and d, BC Stats’ a and s, the tagline’s h, WelcomeBC’s B and C — each scaled by its source’s x-height and placed where the 2015 brochure (the name block, measured there and scaled to this report’s 386 × 109 image, which is cut off at its foot) prints it. Navy (#092871) and gold (#feb100) are sampled from the report’s image; the divider there is paler, likely a hairline’s antialiasing.",
+        "sha256": "001cafde55adc558201d496cb3f9096790440e0658450de5bf5e60db43f68ebf",
+        "bytes": 50864,
+        "darkBackground": false,
+        "search": "historic-crowns-vector-2026-11-16",
+        "versionLabel": "Vector reconstruction"
+      },
+      {
+        "id": "shared-services-bc-2015-rebuilt",
+        "label": "Shared Services BC — Reversed, without tagline, 2015 (rebuilt)",
+        "file": "identity-collected/shared-services-bc/shared-services-bc-2015-rebuilt.svg",
+        "format": "svg",
+        "isVector": true,
+        "supplied": false,
+        "reconstruction": true,
+        "publisher": "Shared Services BC",
+        "sourcePage": "https://www2.gov.bc.ca/assets/gov/british-columbians-our-governments/services-policies-for-government/real-estate-space/rpd_brochure.pdf",
+        "sourceUrl": "https://www2.gov.bc.ca/assets/gov/british-columbians-our-governments/services-policies-for-government/real-estate-space/rpd_brochure.pdf",
+        "sourceLocator": "Real Property brochure, PDF page 16 (created 13 January 2015)",
+        "sourceFile": null,
+        "sourceDate": "2015",
+        "observedDate": "2026-11-16",
+        "dateNote": "The brochure’s date, not an adoption date.",
+        "evidenceType": "vector-reconstruction",
+        "notes": "The BC mark without its tagline, a gold divider and “Shared / ServicesBC” in white with “BC” in gold, for a dark ground (the brochure’s navy is not part of the mark).",
+        "fidelityNote": "Put together from the gallery’s Best Place on Earth mark (src/assets/oneOffMarks.js, drawn with the gallery’s own one-off renderer) and letters of the Province’s Garamond lifted from the gallery’s one-offs — BC Wildfire Service’s S, e, r, v, i, c and d, BC Stats’ a and s, the tagline’s h, WelcomeBC’s B and C — each scaled by its source’s x-height and placed where the brochure (810 × 267 crop) prints it. The brochure’s own artwork is vector but its sun rays are bitmaps, which is why it was not extracted. Mountain blue (#496da6) sampled from the brochure.",
+        "sha256": "d47504e9c10284bb049127d1bb751fa55b69c228abc60785158432a8a7b96be4",
+        "bytes": 36415,
+        "darkBackground": true,
+        "search": "historic-crowns-vector-2026-11-16",
+        "versionLabel": "Vector reconstruction"
+      },
+      {
+        "id": "solutions-bc-2006-letterhead-rebuilt",
+        "label": "Solutions BC — On the BC mark, 2006 letterhead (rebuilt)",
+        "file": "identity-collected/shared-services-bc/solutions-bc-2006-letterhead-rebuilt.svg",
+        "format": "svg",
+        "isVector": true,
+        "supplied": false,
+        "reconstruction": true,
+        "publisher": "Solutions BC",
+        "sourcePage": "https://bcnature.org/wp-content/uploads/2020/10/16-Meeting-amendment-17-8-2006-Cape-Scott-Fixed-Roof-016.pdf",
+        "sourceUrl": "https://bcnature.org/wp-content/uploads/2020/10/16-Meeting-amendment-17-8-2006-Cape-Scott-Fixed-Roof-016.pdf",
+        "sourceLocator": "A government letter (RFP SATP-191, amendment 4) dated 17 August 2006, PDF page 1",
+        "sourceFile": null,
+        "sourceDate": "2006-08-17",
+        "observedDate": "2026-11-16",
+        "dateNote": "The letter’s date, not an adoption date.",
+        "evidenceType": "vector-reconstruction",
+        "notes": "The BC sun-and-mountains symbol, a hairline divider, and “SolutionsBC / Shared Services” in a humanist sans, in one ink as the black-and-white letterhead scan shows it.",
+        "fidelityNote": "The symbol is the gallery’s Best Place on Earth sun and mountains (src/assets/oneOffMarks.js), scaled to the scan’s symbol box with the glow in grey; the lines are PT Sans outlines, size and letter positions fitted to the scan (IoU 0.80 and 0.75, best of five sans faces). The original typeface is not verified; greys are approximations of a black-and-white scan.",
+        "sha256": "986fcfb50d8f958a2f90df4a5e7fc2e14897e359297cb8f23d6bac2d450dc860",
+        "bytes": 28571,
+        "darkBackground": false,
+        "search": "historic-crowns-vector-2026-11-16",
+        "versionLabel": "Vector reconstruction"
       }
     ]
   },

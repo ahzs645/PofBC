@@ -122,7 +122,7 @@ const collectedEntry = (asset, timeline, owner, versions = [asset]) => ({
   ...(versions.length > 1 ? { versions } : {}),
   identity: {
     provenance: asset.reconstruction ? 'third_party_reconstruction' : asset.supplied ? 'original_supplied'
-      : asset.isVector && ['native-pdf-vector-extraction', 'official-vector-master-conversion', 'official-inline-vector-extraction'].includes(asset.evidenceType)
+      : asset.isVector && ['native-pdf-vector-extraction', 'native-pdf-vector-extraction-with-converted-gradients', 'official-vector-master-conversion', 'official-inline-vector-extraction'].includes(asset.evidenceType)
         ? 'extracted_from_official_vector' : asset.isVector ? 'published_vector' : 'published_raster',
     fidelity: 'source compared',
     fidelityNote: asset.fidelityNote,
