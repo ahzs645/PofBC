@@ -1,0 +1,47 @@
+.gov__related-link { white-space: nowrap; text-decoration: none; }
+
+.gov.gov-related {
+  grid-template-columns: minmax(0, 1fr);
+  grid-template-rows: auto;
+  align-content: start;
+}
+
+.gov-related .gov-breadcrumb,
+.gov-related__intro,
+.gov-related__directory,
+.gov-related__detail {
+  min-width: 0;
+  grid-column: auto;
+  grid-row: auto;
+}
+
+.gov-related .gov-breadcrumb { flex-wrap: wrap; }
+.gov-related__intro .gov-description { max-width: 82ch; }
+.gov-related__directory input { box-sizing: border-box; width: 100%; margin-top: 12px; padding: 11px 12px; border: 1px solid var(--gov-mid); border-radius: 8px; color: var(--gov-ink); background: var(--gov-surface); font: inherit; }
+.gov-related__list { display: grid; gap: 4px; margin: 0; padding: 0; list-style: none; }
+.gov-related__list a { display: grid; gap: 4px; padding: 12px; border-radius: 8px; color: var(--gov-ink); text-decoration: none; overflow-wrap: anywhere; }
+.gov-related__list a span { color: var(--gov-ink-3); font-size: 12px; }
+.gov-related__list a:hover,
+.gov-related__list a[aria-current] { background: var(--gov-hover); }
+.gov-related__list a[aria-current] { box-shadow: inset 3px 0 0 var(--gov-link); }
+.gov-related__detail { display: grid; align-content: start; gap: 12px; }
+.gov-related__connections { list-style: none; margin: 12px 0 0; padding: 0; display: grid; gap: 14px; }
+.gov-related__connections li { display: grid; gap: 4px; }
+.gov-related__connections a,
+.gov-related__sources a { color: var(--gov-link); overflow-wrap: anywhere; }
+.gov-related__sources { padding-left: 20px; display: grid; gap: 10px; }
+.gov-related a:focus-visible,
+.gov-related button:focus-visible,
+.gov-related input:focus-visible { outline: 2px solid var(--gov-link); outline-offset: 3px; }
+
+@media (min-width: 900px) {
+  .gov.gov-related { grid-template-columns: minmax(260px, 30%) minmax(0, 1fr); }
+  .gov-related .gov-breadcrumb,
+  .gov-related__intro { grid-column: 1 / -1; }
+  .gov-related__directory { grid-column: 1; align-self: start; }
+  .gov-related__detail { grid-column: 2; }
+}
+
+@media (max-width: 899px) {
+  .gov-related__list { max-height: 270px; overflow-y: auto; overscroll-behavior: contain; }
+}

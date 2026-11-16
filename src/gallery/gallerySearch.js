@@ -4,6 +4,7 @@
 // "Société".
 
 import { GALLERY_COLLECTIONS, entriesOf } from './collections.js'
+import { searchIdentitySubjects } from './identityCoverage.js'
 
 const fold = (text) => String(text ?? '').normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase()
 
@@ -23,8 +24,9 @@ const matches = (words, ...texts) => {
 export const searchGallery = (query, collections = GALLERY_COLLECTIONS) => {
   const words = wordsOf(query)
   if (!words.length) return { collections: [], marks: [] }
+  const aliases = new Set(searchIdentitySubjects(query).flatMap((subject) => subject.collections.map((collection) => collection.id)))
   const found = collections.filter((collection) =>
-    matches(words, collection.label, collection.body, collection.years, collection.intro))
+    aliases.has(collection.id) || matches(words, collection.label, collection.body, collection.years, collection.intro))
   const shown = new Set(found.map((collection) => collection.id))
   const seen = new Set()
   const marks = []

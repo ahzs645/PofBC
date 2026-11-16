@@ -1,0 +1,10 @@
+# Preserve acquired source bytes, including publisher-authored CRLF line endings.
+# The acquisition manifest verifies each file's exact SHA-256 and byte length.
+* -text
+*.pdf binary
+*.ai binary
+*.png binary
+*.jpg binary
+*.webp binary
+*.svg whitespace=cr-at-eol
+*.original.txt whitespace=cr-at-eol

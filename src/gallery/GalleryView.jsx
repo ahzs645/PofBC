@@ -21,7 +21,6 @@ import {
   entriesOfNode, eraStatus, findGalleryEntry, timelineOf
 } from './collections.js'
 import { ASSET_STATUS, WANTED, WANTED_AS_OF } from './wanted.js'
-import { COLLECTING } from './collectingData.js'
 import { HydroStudio } from '../hydro/HydroStudio.jsx'
 import { HydroMarkView } from '../hydro/HydroMarkView.jsx'
 import { hasGlow, renderOneOffSvg, rolesOf } from './renderOneOff.js'
@@ -30,9 +29,12 @@ import { BCTS_FOREST, BCTS_TEAL } from './oneOffs.js'
 import { SuppliedMarkView } from './SuppliedMarkView.jsx'
 import { CollectedMarkView } from './CollectedMarkView.jsx'
 import { RailwayHistory, RailwayHistoryLinks } from './RailwayHistory.jsx'
-import { COLLECTION_RESEARCH, nodesOf, researchLabel } from './collectedCollections.js'
 import { generatorArt, onPage, tileArt } from './tileArt.js'
 import { isSearchShortcut, searchGallery } from './gallerySearch.js'
+import { identitySubjectById, searchIdentitySubjects } from './identityCoverage.js'
+import { IdentityCollectionLinks, IdentityCoverageBrowser, IdentityCoverageOverview, IdentitySearchResults, IdentitySubjectDetail } from './IdentityCoverage.jsx'
+import { galleryPlaceUrl } from './galleryPlace.js'
+import { writeHistory } from '../site/browserHistory.js'
 
 const PALETTE_OPTIONS = FLAG_PALETTE_ORDER.map((value) => ({
   value, label: FLAG_PALETTE_LABELS[value], title: FLAG_PALETTE_HINTS[value]
@@ -659,87 +661,9 @@ const EraSection = ({ era, theme, onOpen, openId, onOpenInGenerator }) => {
 /** A link from a mark to the body it stands for, in the government diagram. */
 const GraphLink = ({ node, onOpenGovernment }) => node && onOpenGovernment && (
   <button type="button" className="gallery__graph-link" onClick={() => onOpenGovernment(node)}>
-    In the government graph <span aria-hidden="true">→</span>
+    Organization in the atlas <span aria-hidden="true">→</span>
   </button>
 )
-
-/**
- * Every Crown corporation and health authority the government atlas holds, so the gallery can be
- * filled body by body: each says whether its marks are collected here, and leads to it in the
- * diagram, in a year it stood. Today's are listed open; former ones are folded away, since there
- * are a hundred and forty of them, most the health system's boards and councils of the 1990s.
- */
-const CollectingShelf = ({ onChoose, onOpenGovernment }) => {
-  // A body is held by its own collection, or by the one it carried on as under a later name.
-  const held = new Map(GALLERY_COLLECTIONS.flatMap((collection) => nodesOf(collection).map((node) => [node, collection])))
-  // A name a body went by before opens at its era of the collection that holds it.
-  const eraOf = (collection, node) => node === collection.graphNode
-    ? undefined
-    : collection.eras?.find((era) => era.entries.some((entry) => entry.owner === node))?.id
-  const groups = [
-    { id: 'crowns-today', label: 'Crown corporations today', bodies: COLLECTING.filter((body) => body.current && body.kind === 'crown-corporation') },
-    { id: 'health-today', label: 'Health authorities today', bodies: COLLECTING.filter((body) => body.current && body.kind === 'health-authority') },
-    { id: 'crowns-former', label: 'Former Crown corporations', folded: true, bodies: COLLECTING.filter((body) => !body.current && body.kind === 'crown-corporation') },
-    { id: 'health-former', label: 'Former health authorities, boards and councils', folded: true, bodies: COLLECTING.filter((body) => !body.current && body.kind === 'health-authority') }
-  ]
-  const years = (body) => `${body.from ?? '?'}–${body.current ? '' : body.to ?? '?'}`
-  // A former body opens in its last year; one whose end is untraced, in its first.
-  const yearIn = (body) => (body.current ? null : body.to ? body.to - 1 : body.from)
-  const list = (bodies) => (
-    <ul className="gallery__collecting-list">
-      {bodies.map((body) => {
-        const collection = held.get(body.id)
-        const research = COLLECTION_RESEARCH.get(body.id)
-        const own = collection ? entriesOfNode(collection, body.id) : []
-        const marks = own.length
-        const files = collection && (collection.fileCollection || own.every((entry) => entry.kind === 'collected'))
-        return (
-          <li key={body.id} className="gallery__collecting-row" data-held={collection ? true : undefined}>
-            <span className="gallery__collecting-name">
-              {body.name}
-              <span className="gallery__collecting-years">{body.shortName ? `${body.shortName} · ` : ''}{years(body)}{body.untraced ? ', end not traced' : ''}</span>
-            </span>
-            {collection
-              ? <button type="button" className="gallery__collecting-status" onClick={() => onChoose(collection.id, eraOf(collection, body.id))}>{marks} {files ? (marks === 1 ? 'file' : 'files') : (marks === 1 ? 'mark' : 'marks')} <span aria-hidden="true">→</span></button>
-              : <span className="gallery__collecting-status" title={research?.notes}>{researchLabel(research)}</span>}
-            {onOpenGovernment && (
-              <button type="button" className="gallery__collecting-graph" onClick={() => onOpenGovernment(body.id, yearIn(body))} title={`${body.name} in the government graph`}>
-                Graph <span aria-hidden="true">→</span>
-              </button>
-            )}
-          </li>
-        )
-      })}
-    </ul>
-  )
-  return (
-    <section className="gallery__shelf" aria-labelledby="shelf-collecting">
-      <h2 id="shelf-collecting" className="gallery__shelf-title">Collecting: every Crown corporation and health authority</h2>
-      <p className="gallery__intro gallery__shelf-intro">
-        The government atlas’s {COLLECTING.filter((body) => body.current).length} standing today and{' '}
-        {COLLECTING.filter((body) => !body.current).length} before. Those with marks here lead to them; the rest are
-        wanted — artwork, or a dated sighting of one, fills a gap.
-      </p>
-      {groups.map((group) => {
-        const count = group.bodies.filter((body) => held.has(body.id)).length
-        const heading = <>{group.label} <span className="gallery__collecting-count">{count} of {group.bodies.length} collected</span></>
-        return group.folded
-          ? (
-            <details key={group.id} className="gallery__collecting-group">
-              <summary className="gallery__collecting-heading">{heading}</summary>
-              {list(group.bodies)}
-            </details>
-            )
-          : (
-            <div key={group.id} className="gallery__collecting-group">
-              <h3 className="gallery__collecting-heading">{heading}</h3>
-              {list(group.bodies)}
-            </div>
-            )
-      })}
-    </section>
-  )
-}
 
 /**
  * A body whose mark has not been obtained. Deliberately unlike a mark's card: an outline with
@@ -787,18 +711,8 @@ const readMark = () => {
  * Where the gallery is lives in the address bar — the collection, and the mark open in it — so a
  * link to BC Hydro's page, or to one of its signatures, opens there.
  */
-const writePlace = (collection, mark) => {
-  if (!globalThis.history?.replaceState) return
-  const url = new URL(globalThis.location.href)
-  for (const [key, value] of [['logos', collection], ['mark', mark]]) {
-    if (value) url.searchParams.set(key, value)
-    else url.searchParams.delete(key)
-  }
-  // A palette belongs to the mark being left, not the next collection or design.
-  url.searchParams.delete('colour')
-  // A section anchor belongs to the page being left, not to a different mark or collection.
-  if (/^#railway-(history|connections|evidence)$/.test(url.hash)) url.hash = ''
-  globalThis.history.replaceState(null, '', url)
+const writePlace = (collection, mark, subject, coverage, filters) => {
+  if (globalThis.location) writeHistory(galleryPlaceUrl(globalThis.location.href, { collection, mark, subject, coverage, filters }))
 }
 
 /**
@@ -843,7 +757,7 @@ const GallerySearch = ({ query, onChange, inputRef }) => (
       ref={inputRef}
       type="search"
       value={query}
-      placeholder="Search logos — BC Hydro, dogwood, 1983…"
+      placeholder="Search logos and identities — TransLink, GVTA, BC Hydro…"
       aria-label="Search the logos"
       aria-keyshortcuts={IS_MAC ? 'Meta+K' : 'Control+K'}
       onChange={(event) => onChange(event.target.value)}
@@ -856,13 +770,15 @@ const GallerySearch = ({ query, onChange, inputRef }) => (
 )
 
 /** What a search finds: the collections, then the logos not already within one of them. */
-const SearchResults = ({ query, theme, onChooseCollection, onOpenMark }) => {
+const SearchResults = ({ query, theme, onChooseCollection, onOpenMark, onOpenSubject }) => {
   const { collections, marks } = searchGallery(query)
-  if (!collections.length && !marks.length) {
+  const subjects = searchIdentitySubjects(query)
+  if (!collections.length && !marks.length && !subjects.length) {
     return <p className="gallery__intro gallery__search-none">Nothing found for “{query.trim()}”.</p>
   }
   return (
     <>
+      <IdentitySearchResults subjects={subjects} onOpen={onOpenSubject} />
       {collections.length > 0 && (
         <section className="gallery__shelf" aria-labelledby="search-collections">
           <h2 id="search-collections" className="gallery__shelf-title">
@@ -895,21 +811,36 @@ export const GalleryView = ({ onOpenGovernment, onOpenInGenerator }) => {
   const { name: theme } = useSiteTheme()
   const [collectionId, setCollectionId] = useState(readCollection)
   const [openId, setOpenId] = useState(readMark)
+  const [subjectId, setSubjectId] = useState(() => readParam('subject'))
+  const [showCoverage, setShowCoverage] = useState(() => readParam('coverage') === '1')
   const open = openId && findGalleryEntry(openId)
   const collection = collectionById(collectionId)
+  const subject = identitySubjectById(subjectId)
 
   // Going back — to all the logos, or from a mark to its collection — returns to where that page was
   // scrolled to when it was left, so the card just opened is where it was. A page not yet seen this
   // visit (one reached by a link) opens at its top, or for all the logos, at the card come back from.
   const scrolled = useRef(new Map())
   const [arrival, setArrival] = useState(null)
-  const go = (nextCollection, nextMark) => {
-    scrolled.current.set(`${collectionId ?? ''}/${openId ?? ''}`, globalThis.scrollY ?? 0)
+  const pageKey = (collection, mark, subject, coverage) => subject ? `subject/${subject}` : coverage ? 'coverage' : `${collection ?? ''}/${mark ?? ''}`
+  const go = (nextCollection, nextMark, nextSubject = null, coverage = false, filters) => {
+    scrolled.current.set(pageKey(collectionId, openId, subjectId, showCoverage), globalThis.scrollY ?? 0)
     setCollectionId(nextCollection)
     setOpenId(nextMark)
-    writePlace(nextCollection, nextMark)
-    setArrival({ from: collectionId, key: `${nextCollection ?? ''}/${nextMark ?? ''}` })
+    setSubjectId(nextSubject)
+    setShowCoverage(coverage)
+    writePlace(nextCollection, nextMark, nextSubject, coverage, filters)
+    setArrival({ from: collectionId, key: pageKey(nextCollection, nextMark, nextSubject, coverage) })
   }
+  // App remounts views on history navigation; the listener also makes the standalone review work.
+  useEffect(() => {
+    const restore = () => {
+      setCollectionId(readCollection()); setOpenId(readMark())
+      setSubjectId(readParam('subject')); setShowCoverage(readParam('coverage') === '1')
+    }
+    globalThis.addEventListener?.('popstate', restore)
+    return () => globalThis.removeEventListener?.('popstate', restore)
+  }, [])
   useLayoutEffect(() => {
     if (!arrival) return
     const saved = scrolled.current.get(arrival.key)
@@ -920,10 +851,10 @@ export const GalleryView = ({ onOpenGovernment, onOpenInGenerator }) => {
     setArrival(null)
   }, [arrival])
   // A collection of one mark and no history opens straight to it: there is nothing to choose between.
-  const choose = (id, era) => {
+  const choose = (id, era, mark) => {
     const chosen = GALLERY_COLLECTIONS.find((candidate) => candidate.id === id)
     const only = chosen && !hasPage(chosen) ? entriesOf(chosen)[0].id : null
-    go(id, only)
+    go(id, mark ?? only)
     if (era) setEraTarget(era)
   }
   const openMark = (id) => {
@@ -932,6 +863,8 @@ export const GalleryView = ({ onOpenGovernment, onOpenInGenerator }) => {
     else go(collectionId, id)
   }
   const home = () => go(null, null)
+  const openSubject = (id) => go(null, null, id)
+  const openRegister = (filters) => go(null, null, null, true, filters)
 
   // Search, on the first page. Cmd-K (Ctrl-K elsewhere) reaches it from any page of the gallery.
   const [query, setQuery] = useState('')
@@ -941,7 +874,7 @@ export const GalleryView = ({ onOpenGovernment, onOpenInGenerator }) => {
     const onKey = (event) => {
       if (!isSearchShortcut(event)) return
       event.preventDefault()
-      if (collectionId || openId) go(null, null)
+      if (collectionId || openId || subjectId || showCoverage) go(null, null)
       setFocusSearch(true)
     }
     globalThis.addEventListener?.('keydown', onKey)
@@ -952,7 +885,7 @@ export const GalleryView = ({ onOpenGovernment, onOpenInGenerator }) => {
     searchInput.current.focus()
     searchInput.current.select()
     setFocusSearch(false)
-  }, [focusSearch, collectionId, openId])
+  }, [focusSearch, collectionId, openId, subjectId, showCoverage])
   const openFound = (id, entry) => {
     if (entry.kind === 'current' && onOpenInGenerator) onOpenInGenerator({ era: 'current', currentName: entry.text })
     else go(id, entry.id)
@@ -984,6 +917,9 @@ export const GalleryView = ({ onOpenGovernment, onOpenInGenerator }) => {
     <EraSection key={era.id} era={era} theme={theme} onOpen={openMark} openId={openId} onOpenInGenerator={onOpenInGenerator} />
   )
 
+  if (subject) return <div className="gallery"><IdentitySubjectDetail subject={subject} theme={theme} onOpenRegister={openRegister} onOpenSubject={openSubject} onChooseCollection={choose} onOpenGovernment={onOpenGovernment} /></div>
+  if (showCoverage || subjectId) return <div className="gallery"><IdentityCoverageBrowser onHome={home} onOpenSubject={openSubject} /></div>
+
   if (open) {
     return (
       <div className="gallery">
@@ -1005,6 +941,7 @@ export const GalleryView = ({ onOpenGovernment, onOpenInGenerator }) => {
           </section>
         )}
         <RailwayHistory history={collection?.railwayHistory} compact />
+        <IdentityCollectionLinks collectionId={collection?.id} onOpenSubject={openSubject} onOpenGovernment={onOpenGovernment} />
         <AboutMark identity={open.identity} />
       </div>
     )
@@ -1017,13 +954,14 @@ export const GalleryView = ({ onOpenGovernment, onOpenInGenerator }) => {
       return (
         <div className="gallery">
           {search}
-          <SearchResults query={query} theme={theme} onChooseCollection={choose} onOpenMark={openFound} />
+          <SearchResults query={query} theme={theme} onChooseCollection={choose} onOpenMark={openFound} onOpenSubject={openSubject} />
         </div>
       )
     }
     return (
       <div className="gallery">
         {search}
+        <IdentityCoverageOverview onOpenRegister={openRegister} onOpenSubject={openSubject} />
         <section className="gallery__shelf" aria-labelledby="shelf-bodies">
           <h2 id="shelf-bodies" className="gallery__shelf-title">Crown corporations and public bodies</h2>
           <div className="gallery__collections">
@@ -1040,7 +978,6 @@ export const GalleryView = ({ onOpenGovernment, onOpenInGenerator }) => {
             ))}
           </div>
         </section>
-        <CollectingShelf onChoose={choose} onOpenGovernment={onOpenGovernment} />
         {/* Shown only while a body is still sought: an empty shelf would read as one still to fill. */}
         {WANTED.length > 0 && (
           <section className="gallery__shelf" aria-labelledby="shelf-wanted">
@@ -1070,6 +1007,7 @@ export const GalleryView = ({ onOpenGovernment, onOpenInGenerator }) => {
         <GraphLink node={collection.graphNode} onOpenGovernment={onOpenGovernment} />
       </div>
       <p className="gallery__intro">{collection.intro}</p>
+      <IdentityCollectionLinks collectionId={collection.id} onOpenSubject={openSubject} onOpenGovernment={onOpenGovernment} />
       <RailwayHistoryLinks history={collection.railwayHistory} />
 
       {timeline}

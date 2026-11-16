@@ -51,6 +51,8 @@
     "build:one-offs": "node scripts/build-one-offs.mjs",
     "build:crown-marks": "node scripts/build-crown-marks.mjs",
     "build:collecting": "node scripts/build-collecting.mjs",
+    "build:identity-expansion": "node scripts/build-identity-expansion.mjs",
+    "check:identity-coverage": "node scripts/build-identity-expansion.mjs --check && node --test \"src/gallery/*.test.js\" scripts/identity-expansion.test.mjs src/government/relatedBodies.test.js src/government/government.test.js src/site/browserHistory.test.js && node scripts/check-identity-render.mjs",
     "build:collected-marks": "node scripts/build-collected-marks.mjs",
     "build:collected-display": "python3 scripts/build_collected_display.py",
     "brandkit:build": "node brandkit/scripts/build.mjs",

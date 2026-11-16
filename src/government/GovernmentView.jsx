@@ -9,7 +9,7 @@
 // Ministry of Forests and Lands open is a link that can be sent.
 
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
-import { canonicalId, MINISTRY_EPISODES, standsIn } from './episodes.js'
+import { MINISTRY_EPISODES, standsIn } from './episodes.js'
 import { ChangesCard, EntityCard, OverviewCard } from './GovernmentPanel.jsx'
 import { InstrumentCard } from './LegislationCards.jsx'
 import { instrumentById } from './instruments.js'
@@ -21,6 +21,7 @@ import { Legend } from './Legend.jsx'
 import { Sheet } from './Sheet.jsx'
 import { StoryText } from './StoryText.jsx'
 import { ViewSwitcher } from '../site/ViewSwitcher.jsx'
+import { SiteLink, useNavigate } from '../site/navigation.jsx'
 import { SunGlyph, ThemeIcon } from '../site/icons.jsx'
 import { useSiteTheme } from '../site/useTheme.js'
 import { layoutGovernment } from './layout.js'
@@ -28,6 +29,9 @@ import { FIRST_YEAR, governmentIn, lifeOf, lifespanOf, lifeYears, PRESENT_YEAR }
 import { TimelineBar } from './TimelineBar.jsx'
 import { THEMES } from './theme.js'
 import { CURRENT_AS_OF, CURRENT_SOURCES } from './currentData.js'
+import { RelatedBodiesView } from './RelatedBodiesView.jsx'
+import { RELATED_BODIES, RELATED_BODY_KINDS, relatedBodyById, relatedBodyPlace } from './relatedBodies.js'
+import { readGovernmentPlace } from './governmentPlace.js'
 import { HISTORICAL_BODIES, HISTORY_SOURCES, MINISTERS, LOCAL_BODIES } from './historyData.js'
 import { TIMELINE_SOURCES } from './timelineData.js'
 import { AMR_ATTRIBUTION, AMR_COLLECTION, AMR_LICENCE } from './amrLicence.js'
@@ -49,26 +53,7 @@ const SOURCES_NOTE = `
   unknown start is not treated as proof a body did not exist.
 `.replace(/\s+/g, ' ').trim()
 
-const validYear = (value) => Number.isInteger(value) && value >= FIRST_YEAR && value <= PRESENT_YEAR
-
-const readParams = () => {
-  const params = new URLSearchParams(globalThis.location?.search ?? '')
-  const year = Number(params.get('year'))
-  const compare = Number(params.get('compare'))
-  const mode = params.get('mode')
-  return {
-    year: validYear(year) ? year : PRESENT_YEAR,
-    // A link made before a ministry's name was corrected names its old id.
-    node: params.get('node') ? canonicalId(params.get('node')) : null,
-    mode: ['graph', 'list', 'compare'].includes(mode) ? mode : 'graph',
-    compare: validYear(compare) ? compare : null,
-    // Unconfirmed bodies are drawn unless the link turns them off; local bodies only when it asks.
-    undated: params.get('undated') !== '0',
-    local: params.get('local') === '1',
-    // An Act, order or policy document's own page (instruments.js).
-    instrument: instrumentById(params.get('instrument') ?? '') ? params.get('instrument') : null
-  }
-}
+const readParams = () => readGovernmentPlace(globalThis.location?.search ?? '')
 
 /**
  * Everything that decides what is on screen goes in the address bar — the year, the body, the view,
@@ -79,13 +64,13 @@ const writeParams = ({ year, node, mode, compare, undated, local, instrument }) 
   const url = new URL(globalThis.location.href)
   url.searchParams.set('view', 'government')
   const set = (key, value) => (value === null || value === undefined || value === false ? url.searchParams.delete(key) : url.searchParams.set(key, String(value)))
-  set('year', year === PRESENT_YEAR ? null : year)
+  set('year', mode === 'related' || year === PRESENT_YEAR ? null : year)
   set('node', node)
   set('mode', mode === 'graph' ? null : mode)
   set('compare', mode === 'compare' ? compare : null)
-  set('undated', undated ? null : 0)
-  set('local', local ? 1 : null)
-  set('instrument', instrument)
+  set('undated', mode === 'related' || undated ? null : 0)
+  set('local', mode !== 'related' && local ? 1 : null)
+  set('instrument', mode === 'related' ? null : instrument)
   globalThis.history.replaceState(null, '', url)
 }
 
@@ -149,7 +134,11 @@ const SEARCH_INDEX = (() => {
     seen.add(key)
     return true
   })
-  return [...today, ...episodes, ...bodies, ...people]
+  const related = RELATED_BODIES.map((body) => ({
+    id: body.id, name: body.name, alias: [body.shortName, ...body.aliases].join(' '),
+    year: PRESENT_YEAR, detail: RELATED_BODY_KINDS[body.kind], related: true
+  }))
+  return [...today, ...episodes, ...bodies, ...people, ...related]
 })()
 
 const normal = (text) => String(text ?? '').toLowerCase().normalize('NFD').replace(/[^a-z0-9 ]+/g, ' ')
@@ -206,7 +195,7 @@ const Search = ({ onPick }) => {
         ref={input}
         type="search"
         value={query}
-        placeholder="Search every ministry since 1871, or a Crown corporation…"
+        placeholder="Search ministries, public bodies or TransLink…"
         onChange={(event) => setQuery(event.target.value)}
         onKeyDown={(event) => { if (event.key === 'Enter' && results[0]) choose(results[0]) }}
         aria-label="Search the government"
@@ -236,6 +225,7 @@ const Search = ({ onPick }) => {
  * @param {(view: string) => void} props.onChangeView
  */
 export const GovernmentView = ({ onOpenInGenerator, onChangeView }) => {
+  const navigate = useNavigate()
   const initial = useMemo(readParams, [])
   const [year, setYear] = useState(initial.year)
   const [selectedId, setSelectedId] = useState(initial.node)
@@ -253,7 +243,7 @@ export const GovernmentView = ({ onOpenInGenerator, onChangeView }) => {
   const narrow = useNarrow()
 
   const government = useMemo(() => governmentIn(year, { includeUndated, includeLocal }), [year, includeUndated, includeLocal])
-  const selected = government.nodes.find((node) => node.id === selectedId) ?? null
+  const selected = mode === 'related' ? relatedBodyById(selectedId) : government.nodes.find((node) => node.id === selectedId) ?? null
   // The chosen body's whole life, kept while the years move through ones it did not exist in.
   const life = useMemo(() => lifeOf(selectedId), [selectedId])
 
@@ -316,6 +306,14 @@ export const GovernmentView = ({ onOpenInGenerator, onChangeView }) => {
   }, [])
 
   const pick = (result) => {
+    if (result.related) {
+      if (navigate) { navigate(relatedBodyPlace(result.id)); return }
+      setPlaying(false)
+      setYear(PRESENT_YEAR)
+      setMode('related')
+      setSelectedId(result.id)
+      return
+    }
     if (result.minister) {
       setPlaying(false)
       setYear(Math.min(PRESENT_YEAR, Math.max(FIRST_YEAR, result.year)))
@@ -382,6 +380,10 @@ export const GovernmentView = ({ onOpenInGenerator, onChangeView }) => {
     <EntityCard node={selected} government={government} theme={themeName} onJumpBody={jumpBody} onGo={go} onSelect={setSelectedId} onJump={jump} onOpenInGenerator={onOpenInGenerator} onOpenInstrument={openInstrument} />
   )
 
+  if (mode === 'related') return <RelatedBodiesView
+    selectedId={selectedId} onChangeView={onChangeView} themeName={themeName} onToggleTheme={toggle}
+  />
+
   return (
     <div className="gov" data-theme={themeName} data-sheeted={sheeted || undefined}>
       <nav className="gov-card gov-breadcrumb" aria-label="Breadcrumb">
@@ -398,6 +400,7 @@ export const GovernmentView = ({ onOpenInGenerator, onChangeView }) => {
         <div className="gov__overlay gov__overlay--top">
           <Search onPick={pick} />
           <div className="gov__tools">
+            <SiteLink className="gov-button gov__related-link" to={{ view: 'government', mode: 'related' }}>Related bodies</SiteLink>
             {!narrow && themeButton}
             <span className="gov-button-group">
               <button type="button" className="gov-button gov-button--icon" disabled={!selected} onClick={() => step(-1)} aria-label="Previous of this kind"><ChevronIcon direction={-1} /></button>
