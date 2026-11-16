@@ -13,6 +13,7 @@ import { changesIn } from './episodes.js'
 import { FIRST_YEAR, PRESENT_YEAR } from './snapshot.js'
 import { ELECTIONS, IDENTITY_ERAS, PENDING_ELECTION, PREMIERS } from './timelineData.js'
 import { partyColour } from './theme.js'
+import { holdScroll } from '../site/holdScroll.js'
 
 const WIDTH = 1000
 const PAD = 8
@@ -80,6 +81,14 @@ export const TimelineBar = ({ year, onYear, playing, onPlay, life = null }) => {
   const track = useRef(null)
   const input = useRef(null)
   const drag = useRef(null)
+  // A step to another year redraws the list or the comparison above the bar, at that year's length;
+  // the bar stays under the finger (holdScroll.js). Scrubbing is left alone: it changes the year at
+  // every move, faster than a hold could settle.
+  const bar = useRef(null)
+  const step = (next) => {
+    holdScroll(bar.current)
+    onYear(next)
+  }
 
   // The track is scrubbed by pointer rather than by the range input under it: iOS moves a range only
   // by its thumb, and this thumb is invisible. A mouse sets the year where it presses; a finger only
@@ -118,16 +127,16 @@ export const TimelineBar = ({ year, onYear, playing, onPlay, life = null }) => {
   for (let decade = Math.ceil(FIRST_YEAR / 10) * 10; decade <= PRESENT_YEAR; decade += 10) decades.push(decade)
 
   return (
-    <div className="gov-timeline">
+    <div className="gov-timeline" ref={bar}>
       <div className="gov-timeline__controls">
         <button type="button" className="gov-button" onClick={onPlay} aria-label={playing ? 'Pause' : 'Play through the years'} title={playing ? 'Pause' : 'Play through the years'}>
           {playing ? '❚❚' : '▶'}
         </button>
-        <button type="button" className="gov-button" disabled={!previous} onClick={() => onYear(previous)} title={stepTitle(previous, 'Back to')} aria-label={stepping ? `Previous in ${life.name ?? 'its'} history` : 'Previous change'}>‹</button>
+        <button type="button" className="gov-button" disabled={!previous} onClick={() => step(previous)} title={stepTitle(previous, 'Back to')} aria-label={stepping ? `Previous in ${life.name ?? 'its'} history` : 'Previous change'}>‹</button>
         {/* Announced when it settles, not on every step of playback. */}
         <output className="gov-timeline__year" aria-live={playing ? 'off' : 'polite'}>{year}</output>
-        <button type="button" className="gov-button" disabled={!next} onClick={() => onYear(next)} title={stepTitle(next, 'On to')} aria-label={stepping ? `Next in ${life.name ?? 'its'} history` : 'Next change'}>›</button>
-        <button type="button" className="gov-button gov-button--text" disabled={year === PRESENT_YEAR} onClick={() => onYear(PRESENT_YEAR)}>Today</button>
+        <button type="button" className="gov-button" disabled={!next} onClick={() => step(next)} title={stepTitle(next, 'On to')} aria-label={stepping ? `Next in ${life.name ?? 'its'} history` : 'Next change'}>›</button>
+        <button type="button" className="gov-button gov-button--text" disabled={year === PRESENT_YEAR} onClick={() => step(PRESENT_YEAR)}>Today</button>
       </div>
 
       <div

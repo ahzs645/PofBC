@@ -2,6 +2,7 @@
 // difference between "stacked" and "centred" is a shape, and a shape is what should be shown.
 
 import { LAYOUT_ORDER, LAYOUTS } from '../logo/layouts.js'
+import { holdScrollFrom } from './holdScroll.js'
 
 // Schematic proportions, not renderings: a real lockup at 46px tall would be an illegible smudge,
 // and this only has to communicate where the mark sits relative to the text.
@@ -53,7 +54,12 @@ export const LayoutPicker = ({ value, onChange }) => (
         key={id}
         type="button"
         aria-pressed={value === id}
-        onClick={() => onChange(id)}
+        // A lockup of another shape resizes the preview above the picker on a phone; the picker
+        // stays under the finger (holdScroll.js).
+        onClick={(event) => {
+          if (value !== id) holdScrollFrom(event)
+          onChange(id)
+        }}
         title={LAYOUTS[id].description}
       >
         <svg viewBox={VIEWBOXES[id]} fill="currentColor" aria-hidden="true" preserveAspectRatio="xMidYMid meet">

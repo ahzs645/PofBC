@@ -20,6 +20,7 @@
 // built from <span>s, so it is valid wherever a <select> was: inside a <p>, a <label>, a button row.
 
 import { Children, Fragment, isValidElement, useCallback, useEffect, useId, useLayoutEffect, useMemo, useRef, useState } from 'react'
+import { holdScroll } from '../holdScroll.js'
 import './ui.css'
 
 const SUPPORTS_POPOVER = typeof HTMLElement !== 'undefined' && 'showPopover' in HTMLElement.prototype
@@ -101,6 +102,9 @@ const Tick = () => (
  * @param {boolean} [props.searchable] Whether the list has a filter box; by default, from 15 options.
  * @param {string} [props.className] Classes for the button.
  * @param {string} [props.menuClassName] Classes for the list.
+ * @param {boolean} [props.keepPlace] For a filter or a choice that changes the page around it: the
+ *   control stays where it is on screen while the page under it changes (holdScroll.js). Left off
+ *   for a select in a fixed sheet or overlay, which does not move with the page.
  */
 export const Select = ({
   value,
@@ -113,6 +117,7 @@ export const Select = ({
   disabled = false,
   className,
   menuClassName,
+  keepPlace = false,
   id,
   title,
   style,
@@ -191,7 +196,9 @@ export const Select = ({
   const choose = (index) => {
     if (!enabled(index)) return
     close()
-    if (!same(options[index].value, value)) onChange?.(String(options[index].value ?? ''))
+    if (same(options[index].value, value)) return
+    if (keepPlace) holdScroll(button.current)
+    onChange?.(String(options[index].value ?? ''))
   }
 
   // Typing a name moves to the first option that starts with it, as a native select does. Letters

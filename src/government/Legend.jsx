@@ -7,6 +7,7 @@
 // legend reads as a key to shape and line alone.
 
 import { useEffect, useRef, useState } from 'react'
+import { holdScroll } from '../site/holdScroll.js'
 
 /** The rows, and which node kinds (or relations) each stands for. */
 export const ENTITY_ROWS = [
@@ -129,6 +130,13 @@ export const Legend = ({ hiddenKinds, hiddenRelations, onToggleKinds, onToggleRe
     }
   }, [open])
 
+  // Hiding a kind shortens the list above the legend, and showing it lengthens it again. The legend
+  // stays where it is on screen (holdScroll.js): by its trigger, which is in the page even while the
+  // rows are in a sheet over it on a phone.
+  const hold = (change) => (...args) => {
+    holdScroll(root.current)
+    change(...args)
+  }
   const rows = ENTITY_ROWS.filter((row) => row.kinds.some((kind) => kind === 'heads' || present.includes(kind)))
   const hiddenRows = rows.filter((row) => row.kinds.every((kind) => hiddenKinds.has(kind))).length + hiddenRelations.size
 
@@ -142,19 +150,19 @@ export const Legend = ({ hiddenKinds, hiddenRelations, onToggleKinds, onToggleRe
               key={row.id}
               label={row.label}
               shown={!row.kinds.every((kind) => hiddenKinds.has(kind))}
-              onToggle={() => onToggleKinds(row.kinds)}
+              onToggle={hold(() => onToggleKinds(row.kinds))}
             >
               <EntitySwatch shape={row.swatch} ink={ink} fill={fill} />
             </Row>
           ))}
           <p className="gov-legend__heading">Relationships</p>
           {RELATION_ROWS.map((row) => (
-            <Row key={row.id} label={row.label} shown={!hiddenRelations.has(row.id)} onToggle={() => onToggleRelation(row.id)}>
+            <Row key={row.id} label={row.label} shown={!hiddenRelations.has(row.id)} onToggle={hold(() => onToggleRelation(row.id))}>
               <RelationSwatch shape={row.swatch} ink={ink} fill={fill} />
             </Row>
           ))}
           <p className="gov-legend__heading">Evidence</p>
-          <Row label="Unconfirmed bodies" shown={Boolean(includeUndated)} onToggle={onToggleUndated}>
+          <Row label="Unconfirmed bodies" shown={Boolean(includeUndated)} onToggle={hold(onToggleUndated)}>
             <EntitySwatch shape="square" ink={ink} fill={fill} dashed />
           </Row>
           <p className="gov-legend__hint">
@@ -163,7 +171,7 @@ export const Legend = ({ hiddenKinds, hiddenRelations, onToggleKinds, onToggleRe
           </p>
           {onToggleLocal && (
             <>
-              <Row label="Local bodies" shown={Boolean(includeLocal)} onToggle={onToggleLocal}>
+              <Row label="Local bodies" shown={Boolean(includeLocal)} onToggle={hold(onToggleLocal)}>
                 <EntitySwatch shape="triangle" ink={ink} fill={fill} />
               </Row>
               <p className="gov-legend__hint">
@@ -173,7 +181,7 @@ export const Legend = ({ hiddenKinds, hiddenRelations, onToggleKinds, onToggleRe
             </>
           )}
           {hiddenRows > 0 && (
-            <button type="button" className="gov-legend__reset" onClick={onReset}>Show all</button>
+            <button type="button" className="gov-legend__reset" onClick={hold(onReset)}>Show all</button>
           )}
           {/* A phone's sheet closes from its own foot, since its trigger may be under it. */}
           <button type="button" className="gov-button gov-legend__done" onClick={() => setOpen(false)}>Done</button>

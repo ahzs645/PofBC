@@ -10,6 +10,7 @@ import { NavigationContext, SiteLink, useNavigate } from '../site/navigation.jsx
 import { PosterViewer } from './PosterViewer.jsx'
 import './posters.css'
 import { Select } from '../site/ui/Select.jsx'
+import { holdScroll } from '../site/holdScroll.js'
 
 /**
  * @param {object} props
@@ -112,6 +113,17 @@ export const ShelfView = ({ view, param, title, intro, noun, series, itemsOf, it
     else shelfEl.removeAttribute('inert')
   }, [place.id])
 
+  // The layout and the filters redraw the shelf below them, often much shorter; the toolbar stays
+  // where it is on screen (holdScroll.js), as each filter's own select does.
+  const tools = useRef(null)
+  const arrange = (next) => {
+    if (next !== layout) holdScroll(tools.current)
+    setLayout(next)
+  }
+  const clear = () => {
+    holdScroll(tools.current)
+    setFilters({})
+  }
   const narrowed = Object.values(filters).some(Boolean)
   const matches = (id) => Object.entries(filters).every(([key, value]) => !value || items[id][key] === value)
   const found = order.filter(matches)
@@ -139,15 +151,15 @@ export const ShelfView = ({ view, param, title, intro, noun, series, itemsOf, it
           </div>
         )}
         {facets && (
-          <div className="posters__tools" role="group" aria-label={`Browse the ${title.toLowerCase()}`}>
+          <div className="posters__tools" role="group" aria-label={`Browse the ${title.toLowerCase()}`} ref={tools}>
             <div className="posters__layout" role="group" aria-label="Layout">
-              <button type="button" aria-pressed={layout === 'series'} onClick={() => setLayout('series')}>By series</button>
-              <button type="button" aria-pressed={layout === 'all'} onClick={() => setLayout('all')}>All pieces</button>
+              <button type="button" aria-pressed={layout === 'series'} onClick={() => arrange('series')}>By series</button>
+              <button type="button" aria-pressed={layout === 'all'} onClick={() => arrange('all')}>All pieces</button>
             </div>
             {facets.map(({ key, label }) => (
               <label key={key} className="posters__filter">
                 <span>{label}</span>
-                <Select value={filters[key] ?? ''} onChange={(value) => setFilters((before) => ({ ...before, [key]: value || null }))}>
+                <Select keepPlace value={filters[key] ?? ''} onChange={(value) => setFilters((before) => ({ ...before, [key]: value || null }))}>
                   <option value="">All</option>
                   {valuesOf(key).map((value) => <option key={value} value={value}>{value}</option>)}
                 </Select>
@@ -155,7 +167,7 @@ export const ShelfView = ({ view, param, title, intro, noun, series, itemsOf, it
             ))}
             <p className="posters__count" role="status">
               {narrowed ? `${found.length} of ${order.length}` : order.length} {found.length === 1 && narrowed ? noun : `${noun}s`}
-              {narrowed && <> · <button type="button" className="posters__clear" onClick={() => setFilters({})}>Clear filters</button></>}
+              {narrowed && <> · <button type="button" className="posters__clear" onClick={clear}>Clear filters</button></>}
             </p>
           </div>
         )}
@@ -164,7 +176,7 @@ export const ShelfView = ({ view, param, title, intro, noun, series, itemsOf, it
             <section className="posters__series" aria-label={narrowed ? `Matching ${noun}s` : `All ${noun}s`}>
               {found.length
                 ? <div className="posters__grid posters__grid--all">{found.map(card)}</div>
-                : <p className="posters__none">No {noun} matches all of those. <button type="button" className="posters__clear" onClick={() => setFilters({})}>Clear filters</button></p>}
+                : <p className="posters__none">No {noun} matches all of those. <button type="button" className="posters__clear" onClick={clear}>Clear filters</button></p>}
             </section>
           )
           : (

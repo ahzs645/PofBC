@@ -10,6 +10,7 @@
 import { useMemo, useRef, useState } from 'react'
 import { ColourField } from '../site/ColourField.jsx'
 import { Segmented } from '../site/Segmented.jsx'
+import { holdScrollFrom } from '../site/holdScroll.js'
 import { TRANSPARENT } from '../logo/logoColors.js'
 import { HydroDownload, saveText } from './HydroDownload.jsx'
 import { HYDRO_STANDARDS } from './standards.js'
@@ -79,7 +80,7 @@ const Slider = ({ name, label, step, unit, settings, update }) => {
 const Check = ({ label, checked, onChange, disabled, note }) => (
   <>
     <label className="checkbox">
-      <Checkbox checked={checked} disabled={disabled} onChange={(checked) => onChange(checked)} />
+      <Checkbox checked={checked} disabled={disabled} onChange={(checked, event) => { holdScrollFrom(event); onChange(checked) }} />
       <span>{label}</span>
     </label>
     {note ? <p className="field__note">{note}</p> : null}
@@ -117,11 +118,15 @@ const TextField = ({ id, label, value, onChange, maxLength = 120, note }) => (
   </div>
 )
 
-/** The presets of one application, each shown as itself — the generator's lockup picker, drawn. */
+/**
+ * The presets of one application, each shown as itself — the generator's lockup picker, drawn. A
+ * preset of another shape resizes the preview above it on a phone; the picker stays under the finger
+ * (holdScroll.js), as the other choices here do.
+ */
 const PresetPicker = ({ all, group, active, onPick }) => (
   <div className="layouts hydro__picker" role="group" aria-label={HYDRO_GROUPS[group]}>
     {Object.entries(HYDRO_PRESETS).filter(([, preset]) => preset.group === group).map(([id, preset]) => (
-      <button key={id} type="button" aria-pressed={id === active} onClick={() => onPick(id)} title={preset.caption}>
+      <button key={id} type="button" aria-pressed={id === active} onClick={(event) => { if (id !== active) holdScrollFrom(event); onPick(id) }} title={preset.caption}>
         <span
           aria-hidden="true"
           // Built by this project's own renderer; every value is escaped where written.

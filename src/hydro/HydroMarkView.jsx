@@ -8,6 +8,7 @@
 import { useMemo, useState } from 'react'
 import { ColourField } from '../site/ColourField.jsx'
 import { Segmented } from '../site/Segmented.jsx'
+import { holdScrollFrom } from '../site/holdScroll.js'
 import { TRANSPARENT, isLightColor } from '../logo/logoColors.js'
 import { HydroDownload } from './HydroDownload.jsx'
 import {
@@ -81,7 +82,10 @@ const CurrentView = ({ initialVariant = 'colour', onClose }) => {
   const [background, setBackground] = useState(CURRENT_VARIANTS[variant].background)
   const [clearSpace, setClearSpace] = useState('symbol')
   const spec = CURRENT_VARIANTS[variant]
-  const pick = (next) => {
+  // Each variation is drawn at its own size in the preview above the picker; the picker stays under
+  // the finger (holdScroll.js).
+  const pick = (event, next) => {
+    if (next !== variant) holdScrollFrom(event)
     setVariant(next)
     setBackground(CURRENT_VARIANTS[next].background)
   }
@@ -126,7 +130,7 @@ const CurrentView = ({ initialVariant = 'colour', onClose }) => {
         <h2>Logo</h2>
         <div className="layouts hydro__picker" role="group" aria-label="Variation">
           {CURRENT_VARIANT_ORDER.map((id) => (
-            <button key={id} type="button" aria-pressed={id === variant} onClick={() => pick(id)} title={CURRENT_VARIANTS[id].hint}>
+            <button key={id} type="button" aria-pressed={id === variant} onClick={(event) => pick(event, id)} title={CURRENT_VARIANTS[id].hint}>
               <span
                 aria-hidden="true"
                 dangerouslySetInnerHTML={{ __html: renderCurrentHydroSvg({ variant: id, clearSpace: 1 / 3, width: 240 }).svg }}

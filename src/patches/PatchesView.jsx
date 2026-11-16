@@ -11,6 +11,7 @@ import {
 } from './patchCatalogue.js'
 import './patches.css'
 import { Select } from '../site/ui/Select.jsx'
+import { holdScroll } from '../site/holdScroll.js'
 
 // Browsing needs only metadata and previews. Load the digitizer and export tools when a patch opens.
 const PatchViewer = lazy(() => import('./PatchViewer.jsx').then((module) => ({ default: module.PatchViewer })))
@@ -154,14 +155,14 @@ export const PatchesView = ({ collection = 'patches' }) => {
         <div className="patches__filters">
           <label className="patches__filter patches__filter--compact">
             <span>Group by</span>
-            <Select value={place.group} onChange={(value) => selectFilter({ group: value })}>
+            <Select keepPlace value={place.group} onChange={(value) => selectFilter({ group: value })}>
               <option value="organization">Organization</option>
               <option value="template">Template family</option>
             </Select>
           </label>
           <label className="patches__filter">
             <span>Organization</span>
-            <Select value={place.org ?? ''} onChange={(value) => selectFilter({ org: value || null })}>
+            <Select keepPlace value={place.org ?? ''} onChange={(value) => selectFilter({ org: value || null })}>
               <option value="">All {organizations.length} organizations</option>
               {sectors.map(({ sector, orgs }) => (
                 <optgroup key={sector.id} label={sector.name}>
@@ -172,7 +173,7 @@ export const PatchesView = ({ collection = 'patches' }) => {
           </label>
           <label className="patches__filter">
             <span>Template family</span>
-            <Select value={place.family ?? ''} onChange={(value) => selectFilter({ family: value || null })}>
+            <Select keepPlace value={place.family ?? ''} onChange={(value) => selectFilter({ family: value || null })}>
               <option value="">All template families</option>
               {familySections.map(({ family, cards }) => <option key={family.id} value={family.id}>{family.label} ({variantCount(cards)} variants)</option>)}
             </Select>
@@ -185,7 +186,7 @@ export const PatchesView = ({ collection = 'patches' }) => {
         {place.group === 'template' && <p className="patches__group-note">Template families bring related layouts together. Each edition keeps its wording, source evidence and variants.</p>}
         {filtering && <div className="patches__results">
           <span role="status">{countLabel(shown.length, 'card')} · {countLabel(matchingVariants, 'matching variant')}</span>
-          <button type="button" className="button button--ghost" onClick={() => selectFilter({ org: null, family: null, q: '' })}>Clear filters</button>
+          <button type="button" className="button button--ghost" onClick={(event) => { holdScroll(event.currentTarget.closest('.patches__intro')); selectFilter({ org: null, family: null, q: '' }) }}>Clear filters</button>
         </div>}
       </div>
 
@@ -212,7 +213,9 @@ export const PatchesView = ({ collection = 'patches' }) => {
                 <section key={org.id} className="patches__org" aria-labelledby={`org-${org.id}`}>
                   <header className="patches__org-head">
                     <h4 id={`org-${org.id}`}>
-                      <a href={hrefFor({ org: org.id, patch: null })} onClick={(event) => { if (isPlainClick(event)) { event.preventDefault(); selectFilter({ org: org.id }) } }}>{org.name}</a>
+                      {/* Narrows the catalogue to this organization: the ones above it go, and its
+                          heading stays under the finger as far as the page allows (holdScroll.js). */}
+                      <a href={hrefFor({ org: org.id, patch: null })} onClick={(event) => { if (isPlainClick(event)) { event.preventDefault(); holdScroll(event.currentTarget); selectFilter({ org: org.id }) } }}>{org.name}</a>
                     </h4>
                     <span className="patches__count">{countLabel(cards.length, 'card')} · {countLabel(variantCount(cards), 'variant')}</span>
                     {org.description && copy.view === 'patches' && <p>{org.description}</p>}

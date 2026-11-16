@@ -8,6 +8,7 @@
 import { useEffect, useId, useRef, useState } from 'react'
 import { cardLabel, loadPatchSvg, variantsOf } from 'patcher/library'
 import { Segmented } from '../site/Segmented.jsx'
+import { holdScroll } from '../site/holdScroll.js'
 import { PatchStage } from '../patches/PatchStage.jsx'
 import { PatchHistory, photosOf } from '../patches/PatchDetails.jsx'
 import { METALS, NOMINAL_SIZE_MM } from './badgeParts.js'
@@ -138,6 +139,7 @@ export const BadgeViewer = ({ patch, org, position, previous, next, onOpen, onCl
   const [failedSource, setFailedSource] = useState(null)
   const [sourceAttempt, setSourceAttempt] = useState(0)
   const sceneRef = useRef(null)
+  const visuals = useRef(null)
   const exportRequest = useRef(null)
   const exportCurrent = useRef(null)
   // A rebuilt scene (a new badge, or back from the Vector tab) opens at the chosen camera.
@@ -294,7 +296,10 @@ export const BadgeViewer = ({ patch, org, position, previous, next, onOpen, onCl
       : phase === 'failed-build' ? 'This badge couldn’t be built in 3D. The vector is a tab away.'
         : phase === 'failed-source' ? 'The drawing could not be loaded.'
           : modelReady && shapeStatus === 'pending' ? 'Applying the shape…' : null
-  const modeSwitch = <Segmented ariaLabel="View" options={sources.length ? [...MODES, ...REVIEW_MODES] : MODES} value={mode} onChange={(value) => set({ mode: value })} compact />
+  // The 3D stage and the flat one each draw this switch in their own toolbar, so the one pressed is
+  // replaced rather than moved. Their toolbars both head the visuals, which stay where they are on
+  // screen instead (holdScroll.js).
+  const modeSwitch = <Segmented ariaLabel="View" options={sources.length ? [...MODES, ...REVIEW_MODES] : MODES} value={mode} onChange={(value) => { holdScroll(visuals.current); set({ mode: value }) }} compact />
   const sourcePane = {
     key: 'source',
     label: 'Source photograph',
@@ -324,7 +329,7 @@ export const BadgeViewer = ({ patch, org, position, previous, next, onOpen, onCl
       </nav>
 
       <div className="patch__body">
-        <div className="patch__visuals">
+        <div className="patch__visuals" ref={visuals}>
           {mode === 'metal'
             ? <BadgeStage
                 sceneRef={sceneRef}
@@ -445,7 +450,7 @@ export const BadgeViewer = ({ patch, org, position, previous, next, onOpen, onCl
           {review?.findings?.length > 0 && <ul>{review.findings.map((finding, index) => <li key={index}>{finding}</li>)}</ul>}
           {candidateChanges.length > 0 && <div className="patch__candidate"><h4>Correction prepared</h4><ul>{candidateChanges.map((change, index) => <li key={index}>{change}</li>)}</ul></div>}
           {review?.evidenceLimitations && <p className="patch__review-limits">{review.evidenceLimitations}</p>}
-          {sources.length > 1 && <label className="patch__source-select"><span>Source occurrence</span><Select value={source?.occurrenceId ?? ''} onChange={(value) => setSourceSelection({ patchId: patch.id, occurrenceId: value })}>{sources.map((entry) => <option key={entry.occurrenceId} value={entry.occurrenceId}>{entry.occurrenceId}</option>)}</Select></label>}
+          {sources.length > 1 && <label className="patch__source-select"><span>Source occurrence</span><Select keepPlace value={source?.occurrenceId ?? ''} onChange={(value) => setSourceSelection({ patchId: patch.id, occurrenceId: value })}>{sources.map((entry) => <option key={entry.occurrenceId} value={entry.occurrenceId}>{entry.occurrenceId}</option>)}</Select></label>}
           {source && <div className="patch__source-caption">
             <p><strong>{source.occurrenceId}</strong> · {source.width} × {source.height} source pixels</p>
             {source.medium && <p>{source.medium}</p>}

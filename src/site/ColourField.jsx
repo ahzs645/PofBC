@@ -4,6 +4,7 @@
 
 import { useId } from 'react'
 import { BRAND_COLORS, TRANSPARENT, parseHex, resolveColor } from '../logo/logoColors.js'
+import { holdScrollFrom } from './holdScroll.js'
 
 // Roughly light to dark, so the row reads as a ramp rather than a jumble. One palette serves the
 // mark, the type and the background — a brand colour is a brand colour wherever it lands.
@@ -22,6 +23,12 @@ export const ColourField = ({ label, value, onChange, allowTransparent = false, 
   const inputId = useId()
   const isTransparent = value === TRANSPARENT
   const hex = parseHex(value) ? value.toLowerCase() : '#006837'
+  // A colour can bring a contrast warning or a note into the preview above the swatches, or take one
+  // away; the swatches stay under the finger (holdScroll.js).
+  const pick = (event, next) => {
+    holdScrollFrom(event)
+    onChange(next)
+  }
 
   return (
     <div className="field">
@@ -35,7 +42,7 @@ export const ColourField = ({ label, value, onChange, allowTransparent = false, 
             aria-pressed={isTransparent}
             aria-label="Transparent"
             title="Transparent"
-            onClick={() => onChange(TRANSPARENT)}
+            onClick={(event) => pick(event, TRANSPARENT)}
           />
         )}
         {palette.map(({ name, value: swatch }) => (
@@ -47,7 +54,7 @@ export const ColourField = ({ label, value, onChange, allowTransparent = false, 
             aria-pressed={!isTransparent && resolveColor(value).toLowerCase() === swatch.toLowerCase()}
             aria-label={name}
             title={`${name} ${swatch}`}
-            onClick={() => onChange(swatch)}
+            onClick={(event) => pick(event, swatch)}
           />
         ))}
       </div>

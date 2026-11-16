@@ -3,6 +3,7 @@
 import { useEffect, useMemo, useState } from 'react'
 import { assetUrl } from './collectedCollections.js'
 import { paletteFor, renderCollectedPalette } from './collectedPalettes.js'
+import { holdScrollFrom } from '../site/holdScroll.js'
 
 const paletteFromLocation = (group) => {
   const params = new URLSearchParams(globalThis.location?.search ?? '')
@@ -73,7 +74,10 @@ export const CollectedPaletteView = ({ entry }) => {
       <div className="segmented gallery__palette-choices" role="group" aria-label="Colour version">
         {group.palettes.map((choice) => (
           <button key={choice.id} type="button" aria-pressed={choice.id === palette.id}
-            onClick={() => choose(choice.id)}>{choice.label}</button>
+            onClick={(event) => {
+              if (choice.id !== palette.id) holdScrollFrom(event)
+              choose(choice.id)
+            }}>{choice.label}</button>
         ))}
       </div>
       <div className="gallery__recovered-preview" data-dark={palette.darkBackground || undefined}

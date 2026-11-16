@@ -15,6 +15,7 @@
 import { useId } from 'react'
 import { ColourField } from '../site/ColourField.jsx'
 import { Segmented } from '../site/Segmented.jsx'
+import { holdScroll } from '../site/holdScroll.js'
 import {
   BCID_PALETTE, CURRENT_VARIANTS, CURRENT_VARIANT_ORDER, LANGUAGES, LANGUAGE_ORDER, recommendedVariant
 } from './currentMarks.js'
@@ -97,6 +98,7 @@ export const CurrentControls = ({ state, update }) => {
       <div className="field">
         <label htmlFor={selectId}>Ministry</label>
         <Select
+          keepPlace
           id={selectId}
           value={selected}
           onChange={(value) => {
@@ -158,7 +160,12 @@ export const CurrentControls = ({ state, update }) => {
               <button
                 type="button"
                 className="button button--ghost button--inline"
-                onClick={() => update({ currentNameTouched: false })}
+                // The official wording can break into more lines or fewer in the preview above, and
+                // this button goes with the edit; its field stays where it is (holdScroll.js).
+                onClick={(event) => {
+                  holdScroll(event.currentTarget.closest('.field'))
+                  update({ currentNameTouched: false })
+                }}
               >
                 Restore the official wording
               </button>

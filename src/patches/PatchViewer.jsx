@@ -412,7 +412,7 @@ export const PatchViewer = ({ patch, org, position, previous, next, onOpen, onCl
           {sources.length > 1 && (
             <label className="patch__source-select">
               <span>Source occurrence</span>
-              <Select value={source?.occurrenceId ?? ''} onChange={(value) => setSourceSelection({ patchId: patch.id, occurrenceId: value })}>
+              <Select keepPlace value={source?.occurrenceId ?? ''} onChange={(value) => setSourceSelection({ patchId: patch.id, occurrenceId: value })}>
                 {sources.map((entry) => <option key={entry.occurrenceId} value={entry.occurrenceId}>{entry.occurrenceId}{entry.sourceId && entry.sourceId !== entry.occurrenceId ? ` · ${entry.sourceId}` : ''}</option>)}
               </Select>
             </label>

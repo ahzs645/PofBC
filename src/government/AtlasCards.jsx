@@ -185,7 +185,7 @@ export const CompareView = ({ year, other, onOther, onPick }) => {
         <p className="gov-compare__pick">
           <label>
             <span className="gov-muted">From </span>
-            <Select value={other} onChange={(value) => onOther(Number(value))}>
+            <Select keepPlace value={other} onChange={(value) => onOther(Number(value))}>
               {years.map((value) => <option key={value} value={value}>{value}</option>)}
             </Select>
           </label>

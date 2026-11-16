@@ -14,6 +14,7 @@
 import { useEffect, useLayoutEffect, useRef, useState } from 'react'
 import { ColourField } from '../site/ColourField.jsx'
 import { Segmented } from '../site/Segmented.jsx'
+import { holdScrollFrom } from '../site/holdScroll.js'
 import { renderFlagSvg } from '../flag/renderFlagSvg.js'
 import { FLAG_PALETTE_HINTS, FLAG_PALETTE_LABELS, FLAG_PALETTE_ORDER, FLAG_SWATCHES } from '../flag/flagPalettes.js'
 import {
@@ -368,7 +369,10 @@ const Detail = ({ entry, onClose }) => {
                   key={preset.id}
                   type="button"
                   aria-pressed={matches(preset)}
-                  onClick={() => setColours(preset)}
+                  onClick={(event) => {
+                    if (!matches(preset)) holdScrollFrom(event)
+                    setColours(preset)
+                  }}
                 >
                   {preset.label}
                 </button>

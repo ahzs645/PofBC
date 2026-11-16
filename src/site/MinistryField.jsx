@@ -8,6 +8,7 @@ import { useId, useMemo } from 'react'
 import { MINISTRY_GROUPS, MINISTRY_LIST_REVIEWED } from '../ministries/ministries.js'
 import { describeMinistry, historicalGroups } from '../ministries/ministryHistory.js'
 import { Select } from './ui/Select.jsx'
+import { holdScrollFrom } from './holdScroll.js'
 
 /**
  * Today's ministries, then every ministry there has been.
@@ -39,16 +40,22 @@ export const MinistryField = ({ source, ministry, manualMinistry, program, onCha
   const selectId = useId()
   const manualId = `${selectId}-manual`
   const programId = `${selectId}-program`
+  // The name the other way may wrap differently in the preview above; the choice stays under the
+  // finger (holdScroll.js).
+  const choose = (event, next) => {
+    if (next !== source) holdScrollFrom(event)
+    onChange({ source: next })
+  }
 
   return (
     <>
       <div className="field">
         <span className="field__label" id={`${selectId}-mode`}>Ministry</span>
         <div className="segmented" role="group" aria-labelledby={`${selectId}-mode`}>
-          <button type="button" aria-pressed={source === 'list'} onClick={() => onChange({ source: 'list' })}>
+          <button type="button" aria-pressed={source === 'list'} onClick={(event) => choose(event, 'list')}>
             From the list
           </button>
-          <button type="button" aria-pressed={source === 'manual'} onClick={() => onChange({ source: 'manual' })}>
+          <button type="button" aria-pressed={source === 'manual'} onClick={(event) => choose(event, 'manual')}>
             Type it in
           </button>
         </div>
@@ -58,6 +65,7 @@ export const MinistryField = ({ source, ministry, manualMinistry, program, onCha
         <div className="field">
           <label htmlFor={selectId}>Ministry or agency</label>
           <Select
+            keepPlace
             id={selectId}
             value={ministry}
             onChange={(value) => onChange({ ministry: value })}

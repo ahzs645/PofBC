@@ -6,6 +6,7 @@ import {
   areaById, areasIn, assetUrl, filterAreas, formatDate, frameworkById, readHealthPlace, relatedAreas,
 } from './healthStoryData.js'
 import { SiteLink } from '../site/navigation.jsx'
+import { holdScrollFrom } from '../site/holdScroll.js'
 import './healthStory.css'
 import { Checkbox } from '../site/ui/Checkbox.jsx'
 import { Select } from '../site/ui/Select.jsx'
@@ -144,7 +145,12 @@ export function HealthStoryView() {
     <section id="hm-atlas" className="hm-atlas" aria-labelledby="hm-atlas-title">
       <h2 id="hm-atlas-title" className="hm-visually-hidden">Map of historical health organizations</h2>
       <div className="hm-tabs" role="tablist" aria-label="Choose a historical map">
-        {FRAMEWORKS.map((entry) => <button type="button" role="tab" key={entry.id} aria-selected={entry.id === framework} onClick={() => chooseFramework(entry.id)}>
+        {FRAMEWORKS.map((entry) => <button type="button" role="tab" key={entry.id} aria-selected={entry.id === framework} onClick={(event) => {
+          // Another map loads in below the tabs, with its own intro and details: the tabs stay
+          // where they are on screen (holdScroll.js).
+          if (entry.id !== framework) holdScrollFrom(event)
+          chooseFramework(entry.id)
+        }}>
           <span>{entry.year}</span>{entry.label}
         </button>)}
       </div>
@@ -171,7 +177,7 @@ export function HealthStoryView() {
       <div className="hm-section-heading"><div><p className="hm-kicker">Every organization</p><h2 id="hm-directory-title">Find a board, council, society or region</h2></div><span className="hm-count">{results.length} of {AREAS.length}</span></div>
       <div className="hm-filters">
         <label className="hm-field"><span>Search names and places</span><input type="search" value={query} onChange={(event) => setQuery(event.target.value)} placeholder="Cariboo, Nelson, Richmond…" /></label>
-        <label className="hm-field"><span>Map</span><Select value={filter} onChange={(value) => setFilter(value)}><option value="all">All maps</option>{FRAMEWORKS.map((entry) => <option key={entry.id} value={entry.id}>{entry.year} · {entry.label}</option>)}</Select></label>
+        <label className="hm-field"><span>Map</span><Select keepPlace value={filter} onChange={(value) => setFilter(value)}><option value="all">All maps</option>{FRAMEWORKS.map((entry) => <option key={entry.id} value={entry.id}>{entry.year} · {entry.label}</option>)}</Select></label>
       </div>
       {FRAMEWORKS.filter((entry) => results.some((area) => area.framework === entry.id)).map((entry) => <div className="hm-group" key={entry.id}>
         <h3>{entry.year} · {entry.label}</h3>

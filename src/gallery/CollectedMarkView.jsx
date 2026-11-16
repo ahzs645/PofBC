@@ -4,6 +4,7 @@ import { collectedDisplay } from './tileArt.js'
 import { useSiteTheme } from '../site/useTheme.js'
 import { CollectedPaletteView } from './CollectedPaletteView.jsx'
 import { collectedPreviewFile } from './collectedPalettes.js'
+import { holdScrollFrom } from '../site/holdScroll.js'
 
 /** A recovered mark is displayed in its source format; raster files stay raster. */
 export const CollectedMarkView = ({ entry }) => entry.paletteGroup
@@ -43,7 +44,10 @@ const SourceMarkView = ({ entry }) => {
               key={each.id}
               type="button"
               aria-pressed={each.id === asset.id}
-              onClick={() => setVersion(each.id)}
+              onClick={(event) => {
+                if (each.id !== asset.id) holdScrollFrom(event)
+                setVersion(each.id)
+              }}
             >
               {each.versionLabel}
             </button>

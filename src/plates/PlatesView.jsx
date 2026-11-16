@@ -16,6 +16,7 @@ import { BRITISH_COLUMBIA } from 'plateforge/bc'
 import { PlateView, regionFamilies, regionSections, samplePlate, setupPlates, statusBadge } from 'plateforge'
 import { searchFor } from '../site/navigation.jsx'
 import { Segmented } from '../site/Segmented.jsx'
+import { holdScroll } from '../site/holdScroll.js'
 import { PlateViewer } from './PlateViewer.jsx'
 import { YearTimeline } from './PlatesTimeline.jsx'
 import { inUse, lanesOf, spanOf } from './timeline.js'
@@ -117,6 +118,7 @@ export const PlatesView = () => {
   const [playing, setPlaying] = useState(false)
   const deferredQuery = useDeferredValue(query)
   const cards = useRef({})
+  const timeline = useRef(null)
   const mode = place.year === null ? 'family' : 'year'
 
   useEffect(() => { setupPlates() }, [])
@@ -211,7 +213,7 @@ export const PlatesView = () => {
         <div className="plates__filters">
           <label className="plates__filter">
             <span>Family</span>
-            <Select value={place.family ?? ''} onChange={(value) => go({ ...place, family: value || null, plate: null })}>
+            <Select keepPlace value={place.family ?? ''} onChange={(value) => go({ ...place, family: value || null, plate: null })}>
               <option value="">All {FAMILIES.length} families</option>
               {FAMILIES.map((family) => <option key={family.id} value={family.id}>{family.label} ({family.formats.length})</option>)}
             </Select>
@@ -233,7 +235,7 @@ export const PlatesView = () => {
 
       {mode === 'year' && (
         <>
-          <section className="plates__family plates__timeline" aria-label="Timeline">
+          <section className="plates__family plates__timeline" aria-label="Timeline" ref={timeline}>
             <YearTimeline
               rows={rows}
               span={SPAN}
@@ -241,7 +243,9 @@ export const PlatesView = () => {
               onYear={setYear}
               playing={playing}
               onPlay={play}
-              onRow={chosen ? undefined : (id) => go({ ...place, family: id })}
+              // Following a family turns its strip into a lane per design, a taller timeline: it stays
+              // where it is on screen (holdScroll.js).
+              onRow={chosen ? undefined : (id) => { holdScroll(timeline.current); go({ ...place, family: id }) }}
               note={chosen
                 ? `${chosen.label}: each bar is one design, across the years it was issued or valid; those in use in ${place.year} are highlighted. Choose “All families” above to see every family again.`
                 : `Each bar is a design, across the years it was issued or valid; those in use in ${place.year} are highlighted. Choose a family to see its designs one by one.`}
@@ -289,7 +293,9 @@ export const PlatesView = () => {
             <h3 id={`plates-${family.id}`}>
               <a
                 href={searchFor({ view: 'plates', family: family.id })}
-                onClick={(event) => { if (isPlainClick(event)) { event.preventDefault(); go({ ...place, family: family.id, plate: null }) } }}
+                // Narrows the plates to this family: the ones above it go, and its heading stays under
+                // the finger as far as the page allows (holdScroll.js).
+                onClick={(event) => { if (isPlainClick(event)) { event.preventDefault(); holdScroll(event.currentTarget); go({ ...place, family: family.id, plate: null }) } }}
               >
                 {family.label}
               </a>

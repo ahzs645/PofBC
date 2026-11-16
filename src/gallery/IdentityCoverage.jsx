@@ -12,6 +12,7 @@ import { entriesOf } from './collections.js'
 import { IDENTITY_KIND_LABELS, IDENTITY_RELATION_LABELS } from './identitySubjects.js'
 import './identityCoverage.css'
 import { Select } from '../site/ui/Select.jsx'
+import { holdScroll } from '../site/holdScroll.js'
 
 const Status = ({ subject }) => (
   <span className="identity-status" data-held={subject.hasArtwork || undefined} title={COVERAGE_STATES[subject.state].description}>
@@ -84,7 +85,12 @@ const MunicipalRegions = ({ subjects, onOpen, onRegion }) => {
         <details key={region} className="identity-region">
           <summary>{region}<span>{inRegion.length} {inRegion.length === 1 ? 'municipality' : 'municipalities'}{located(inRegion)}</span></summary>
           <div className="identity-subject-links">{inRegion.map((subject) => <SubjectButton key={subject.id} subject={subject} onOpen={onOpen} />)}</div>
-          <button type="button" className="gallery__back" onClick={() => onRegion(region)}>Only this region</button>
+          <button type="button" className="gallery__back" onClick={(event) => {
+            // The regions give way to the one region's municipalities: their heading takes the
+            // button's place on screen, so the narrowed list starts under the finger.
+            holdScroll(event.currentTarget, { find: () => document.getElementById('identity-family-municipalities') })
+            onRegion(region)
+          }}>Only this region</button>
         </details>
       ))}
     </div>
@@ -124,14 +130,14 @@ export const IdentityCoverageBrowser = ({ onHome, onOpenSubject }) => {
       </header>
       <div className="identity-filters" role="search" aria-label="Filter identity subjects">
         <label className="identity-filters__query">Name or alias<input type="search" value={filters.query} placeholder="TransLink, GVTA, SeaBus…" onChange={(event) => update({ query: event.target.value })} /></label>
-        <label>Family<Select value={filters.family} onChange={(value) => update({ family: value })}><option value="">All families</option>{COVERAGE_FAMILIES.map((group) => <option key={group.id} value={group.id}>{group.label}</option>)}</Select></label>
-        <label>Evidence<Select value={filters.state} onChange={(value) => update({ state: value })}><option value="">All evidence states</option><option value="held">With artwork</option><option value="missing">Without artwork</option>{Object.entries(COVERAGE_STATES).map(([id, state]) => <option key={id} value={id}>{state.label}</option>)}</Select></label>
-        <label>Region<Select value={filters.region} onChange={(value) => update({ region: value })}><option value="">All regions</option>{MUNICIPAL_REGIONS.map((region) => <option key={region} value={region}>{region}</option>)}</Select></label>
-        <label>Scope<Select value={filters.scope} onChange={(value) => update({ scope: value })}><option value="">All registered subjects</option><option value="core">Public bodies and services</option><option value="institution">Wider institutions</option></Select></label>
+        <label>Family<Select keepPlace value={filters.family} onChange={(value) => update({ family: value })}><option value="">All families</option>{COVERAGE_FAMILIES.map((group) => <option key={group.id} value={group.id}>{group.label}</option>)}</Select></label>
+        <label>Evidence<Select keepPlace value={filters.state} onChange={(value) => update({ state: value })}><option value="">All evidence states</option><option value="held">With artwork</option><option value="missing">Without artwork</option>{Object.entries(COVERAGE_STATES).map(([id, state]) => <option key={id} value={id}>{state.label}</option>)}</Select></label>
+        <label>Region<Select keepPlace value={filters.region} onChange={(value) => update({ region: value })}><option value="">All regions</option>{MUNICIPAL_REGIONS.map((region) => <option key={region} value={region}>{region}</option>)}</Select></label>
+        <label>Scope<Select keepPlace value={filters.scope} onChange={(value) => update({ scope: value })}><option value="">All registered subjects</option><option value="core">Public bodies and services</option><option value="institution">Wider institutions</option></Select></label>
       </div>
       <div className="identity-register__result-heading">
         <p role="status">{summary.subjects} subjects · {summary.held} with artwork · {summary.sources} source leads</p>
-        {Object.values(filters).some(Boolean) && <button type="button" className="gallery__back" onClick={() => update({ query: '', family: '', state: '', scope: '', region: '' })}>Clear filters</button>}
+        {Object.values(filters).some(Boolean) && <button type="button" className="gallery__back" onClick={(event) => { holdScroll(event.currentTarget.parentElement); update({ query: '', family: '', state: '', scope: '', region: '' }) }}>Clear filters</button>}
       </div>
       {(family?.note || family?.description) && <p className="gallery__note">{family.note || family.description}{family.id === 'municipalities' && ` Registry as of ${MUNICIPAL_AS_OF}; filter by regional district with Region.`}</p>}
       {!subjects.length && <p className="identity-empty">No subjects match these filters. Try another name or clear the filters.</p>}

@@ -3,8 +3,9 @@ import { BcLockup } from '../logo/BcLockup.jsx'
 import { CrestLockup } from '../crest/CrestLockup.jsx'
 import { FlagLockup } from '../flag/FlagLockup.jsx'
 import { DocumentArmsPanel } from './DocumentArmsPanel.jsx'
-const DocumentArmsPreview = lazy(() => import('./DocumentArmsPreview.jsx'))
-const DocumentArmsReference = lazy(() => import('./DocumentArmsPreview.jsx').then((module) => ({ default: module.DocumentArmsReference })))
+const loadDocumentArms = () => import('./DocumentArmsPreview.jsx')
+const DocumentArmsPreview = lazy(loadDocumentArms)
+const DocumentArmsReference = lazy(() => loadDocumentArms().then((module) => ({ default: module.DocumentArmsReference })))
 // The current identity's drawing and alphabet come with its lockup and controls, so they are fetched
 // when that identity is chosen (or a link opens on it), not with every page.
 const loadCurrentLockup = () => import('../current/CurrentLockup.jsx')
@@ -60,6 +61,7 @@ import { useAgentTools } from './useAgentTools.js'
 import { useLockupState } from './useLockupState.js'
 import { DEFAULT_TITLE, documentTitle, setDocumentMeta } from './documentMeta.js'
 import { Checkbox } from './ui/Checkbox.jsx'
+import { holdScrollFrom } from './holdScroll.js'
 
 const CLEAR_SPACE_OPTIONS = CLEAR_SPACE_ORDER.map((value) => ({
   value,
@@ -230,6 +232,11 @@ export const App = () => {
     update(generatorPatchFor({ era, name }))
     showView('generator')
     globalThis.scrollTo?.({ top: 0 })
+  }
+  const preloadIdentities = () => {
+    loadDocumentArms().catch(() => {})
+    loadCurrentLockup().catch(() => {})
+    loadCurrentControls().catch(() => {})
   }
   const layout = LAYOUTS[state.layout]
   const isCurrent = state.era === 'current'
@@ -418,7 +425,11 @@ export const App = () => {
         </section>
 
         <div className="controls">
-          <section className="panel">
+          {/* The historic and current identities are drawn from chunks of their own. They are fetched
+              as soon as a finger or the keyboard reaches for this panel, so that by the time a choice
+              lands its drawing has arrived or nearly: the choice is held under the finger only while
+              the stage above settles (holdScroll.js), not for as long as a slow download takes. */}
+          <section className="panel" onPointerDown={preloadIdentities} onFocus={preloadIdentities}>
             <h2>Identity</h2>
             <Segmented
               ariaLabel="Identity"
@@ -504,7 +515,7 @@ export const App = () => {
               <label className="checkbox">
                 <Checkbox
                   checked={state.crestBold}
-                  onChange={(checked) => update({ crestBold: checked })}
+                  onChange={(checked, event) => { holdScrollFrom(event); update({ crestBold: checked }) }}
                 />
                 <span>Set the ministry bold</span>
               </label>
@@ -556,7 +567,7 @@ export const App = () => {
               <label className="checkbox">
                 <Checkbox
                   checked={state.flagProvince}
-                  onChange={(checked) => update({ flagProvince: checked })}
+                  onChange={(checked, event) => { holdScrollFrom(event); update({ flagProvince: checked }) }}
                 />
                 <span>Set “Province of British Columbia” above</span>
               </label>
@@ -586,7 +597,7 @@ export const App = () => {
             <label className="checkbox">
               <Checkbox
                 checked={state.wordmark}
-                onChange={(checked) => update({ wordmark: checked })}
+                onChange={(checked, event) => { holdScrollFrom(event); update({ wordmark: checked }) }}
               />
               <span>Show “Province of British Columbia”</span>
             </label>

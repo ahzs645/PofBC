@@ -21,6 +21,7 @@ import { Legend } from './Legend.jsx'
 import { Sheet } from './Sheet.jsx'
 import { StoryText } from './StoryText.jsx'
 import { ViewSwitcher } from '../site/ViewSwitcher.jsx'
+import { holdScrollFrom } from '../site/holdScroll.js'
 import { SiteLink, useNavigate } from '../site/navigation.jsx'
 import { SunGlyph, ThemeIcon } from '../site/icons.jsx'
 import { useSiteTheme } from '../site/useTheme.js'
@@ -226,6 +227,10 @@ export const GovernmentView = ({ onOpenInGenerator, onChangeView }) => {
   }
 
   const changeYear = useCallback((next) => { setPlaying(false); setYear(next) }, [])
+  const showAs = (event, next) => {
+    if (next !== mode) holdScrollFrom(event)
+    setMode(next)
+  }
 
   /** Moves the timeline to a year the episode stood in, and chooses it. */
   const jump = useCallback((episode, end) => {
@@ -388,10 +393,12 @@ export const GovernmentView = ({ onOpenInGenerator, onChangeView }) => {
               includeLocal={includeLocal}
               onToggleLocal={() => setIncludeLocal((value) => !value)}
             />
+            {/* Under the diagram, the list or the comparison, each its own height: the switch stays
+                under the finger as the one above it is replaced (holdScroll.js). */}
             <div className="gov-segmented" role="group" aria-label="Show as">
-              <button type="button" aria-pressed={mode === 'graph'} onClick={() => setMode('graph')}>Graph</button>
-              <button type="button" aria-pressed={mode === 'list'} onClick={() => setMode('list')}>List</button>
-              <button type="button" aria-pressed={mode === 'compare'} onClick={() => setMode('compare')}>Compare</button>
+              <button type="button" aria-pressed={mode === 'graph'} onClick={(event) => showAs(event, 'graph')}>Graph</button>
+              <button type="button" aria-pressed={mode === 'list'} onClick={(event) => showAs(event, 'list')}>List</button>
+              <button type="button" aria-pressed={mode === 'compare'} onClick={(event) => showAs(event, 'compare')}>Compare</button>
             </div>
           </div>
         </div>
