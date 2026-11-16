@@ -68,3 +68,60 @@ def svg_of(drawings, title, desc="", pad=0.0, colour_map=None):
 def sha(path):
     b = open(path, "rb").read()
     return hashlib.sha256(b).hexdigest(), len(b)
+
+
+def svg_with_clips(page, keep_rect, title, desc="", view=None):
+    """Like svg_of, but honours PyMuPDF's extended clip stack (get_drawings(extended=True)):
+    each 'clip' entry applies to the following entries of deeper level. Fill/stroke entries whose
+    rect lies inside keep_rect are written; clips are written only around kept content.
+    view: optional fitz.Rect for the viewBox (defaults to the kept paths' union)."""
+    keep_rect = fitz.Rect(keep_rect)
+    ext = page.get_drawings(extended=True)
+    defs, body, stack, union, n = [], [], [], None, 0
+    open_groups = []  # (level, state): state = clip id not yet written, True once its <g> is open, None/False otherwise
+
+    def close_to(level):
+        while open_groups and open_groups[-1][0] >= level:
+            lvl, state = open_groups.pop()
+            if state is True:
+                body.append("</g>")
+
+    for e in ext:
+        lvl = e.get("level", 0)
+        if e["type"] in ("clip", "group"):
+            close_to(lvl)
+            if e["type"] == "clip":
+                cid = f"c{len(defs)}"
+                rule = ' clip-rule="evenodd"' if e.get("even_odd") else ""
+                defs.append(f'<clipPath id="{cid}"><path d="{path_d(e["items"])}"{rule}/></clipPath>')
+                open_groups.append((lvl, cid))
+            else:
+                open_groups.append((lvl, None))
+            continue
+        close_to(lvl)
+        if not keep_rect.contains(e["rect"]):
+            continue
+        # open any pending clip groups
+        for k, (l, cid) in enumerate(open_groups):
+            if isinstance(cid, str):
+                body.append(f'<g clip-path="url(#{cid})">'); open_groups[k] = (l, True)
+            elif cid is None:
+                open_groups[k] = (l, False)
+        a = []
+        if e.get("fill") is not None:
+            a.append(f'fill="{hexof(e["fill"])}"' + (' fill-rule="evenodd"' if e.get("even_odd") else ""))
+            if (e.get("fill_opacity") or 1) < 1: a.append(f'fill-opacity="{num(e["fill_opacity"])}"')
+        else:
+            a.append('fill="none"')
+        if e["type"] in ("s", "fs") and e.get("color") is not None:
+            a.append(f'stroke="{hexof(e["color"])}" stroke-width="{num(e.get("width") or 0.35)}"')
+        body.append(f'<path d="{path_d(e["items"])}" {" ".join(a)}/>')
+        union = fitz.Rect(e["rect"]) if union is None else union | e["rect"]
+        n += 1
+    close_to(-1)
+    v = view or union
+    esc = lambda s: s.replace("&", "&amp;").replace("<", "&lt;")
+    svg = (f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="{num(v.x0)} {num(v.y0)} {num(v.width)} {num(v.height)}">'
+           f'<title>{esc(title)}</title>' + (f'<desc>{esc(desc)}</desc>' if desc else "")
+           + "<defs>" + "".join(d for d in defs if f'url(#{d.split(chr(34))[1]})' in "".join(body)) + "</defs>" + "".join(body) + "</svg>\n")
+    return svg, n, union
