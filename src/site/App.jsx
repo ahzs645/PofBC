@@ -1,4 +1,4 @@
-import { Suspense, lazy, useEffect, useState } from 'react'
+import { Suspense, lazy, useEffect, useLayoutEffect, useRef, useState } from 'react'
 import { BcLockup } from '../logo/BcLockup.jsx'
 import { CrestLockup } from '../crest/CrestLockup.jsx'
 import { FlagLockup } from '../flag/FlagLockup.jsx'
@@ -61,7 +61,7 @@ import { useAgentTools } from './useAgentTools.js'
 import { useLockupState } from './useLockupState.js'
 import { DEFAULT_TITLE, documentTitle, setDocumentMeta } from './documentMeta.js'
 import { Checkbox } from './ui/Checkbox.jsx'
-import { holdScrollFrom } from './holdScroll.js'
+import { holdScroll, holdScrollFrom } from './holdScroll.js'
 
 const CLEAR_SPACE_OPTIONS = CLEAR_SPACE_ORDER.map((value) => ({
   value,
@@ -238,6 +238,28 @@ export const App = () => {
     loadCurrentLockup().catch(() => {})
     loadCurrentControls().catch(() => {})
   }
+  // The historic and current identities draw from code of their own, which on a slow connection can
+  // arrive well after the choice: the panel holds its place on screen until it has, so the drawing
+  // landing in the stage above cannot push the choice off the screen. Nothing extra is downloaded.
+  const identityPanel = useRef(null)
+  const IDENTITY_CODE = {
+    document: loadDocumentArms,
+    current: () => Promise.all([loadCurrentLockup(), loadCurrentControls()])
+  }
+  // While the next identity's drawing is on its way, the stage keeps the height of the one it is
+  // replacing rather than shrinking to a line of "Loading…" and growing again when it lands: the
+  // choice below it stays still. Measured after every drawing; read before the switch.
+  const stageFrame = useRef(null)
+  const stageHeight = useRef(0)
+  useLayoutEffect(() => {
+    const frame = stageFrame.current
+    if (frame && !frame.querySelector(':scope > .stage__loading')) stageHeight.current = frame.getBoundingClientRect().height
+  })
+  const chooseIdentity = (era) => {
+    const load = era !== state.era && IDENTITY_CODE[era]
+    if (load) holdScroll(identityPanel.current, { until: load() })
+    update({ era })
+  }
   const layout = LAYOUTS[state.layout]
   const isCurrent = state.era === 'current'
   const isFlag = state.era === 'flag'
@@ -369,13 +391,19 @@ export const App = () => {
       {view === 'generator' && (
       <div className="layout">
         <section className="stage" aria-label="Preview">
-          <div className="stage__frame" data-backdrop={backdrop} data-transparent={isTransparent || undefined}>
+          <div
+            ref={stageFrame}
+            className="stage__frame"
+            data-backdrop={backdrop}
+            data-transparent={isTransparent || undefined}
+            style={stageHeight.current ? { '--stage-held': `${Math.round(stageHeight.current)}px` } : undefined}
+          >
             {isDocument ? (
-              <Suspense fallback={<p role="status">Loading the historical arms study…</p>}>
+              <Suspense fallback={<p role="status" className="stage__loading">Loading the historical arms study…</p>}>
                 <DocumentArmsPreview lockup={lockup} />
               </Suspense>
             ) : isCurrent ? (
-              <Suspense fallback={<p role="status">Loading the current mark…</p>}>
+              <Suspense fallback={<p role="status" className="stage__loading">Loading the current mark…</p>}>
                 <CurrentLockup
                   text={state.currentName}
                   language={state.language}
@@ -427,15 +455,15 @@ export const App = () => {
         <div className="controls">
           {/* The historic and current identities are drawn from chunks of their own. They are fetched
               as soon as a finger or the keyboard reaches for this panel, so that by the time a choice
-              lands its drawing has arrived or nearly: the choice is held under the finger only while
-              the stage above settles (holdScroll.js), not for as long as a slow download takes. */}
-          <section className="panel" onPointerDown={preloadIdentities} onFocus={preloadIdentities}>
+              lands its drawing has usually arrived; on a slow connection, chooseIdentity holds the
+              panel in place until it has. */}
+          <section className="panel" ref={identityPanel} onPointerDown={preloadIdentities} onFocus={preloadIdentities}>
             <h2>Identity</h2>
             <Segmented
               ariaLabel="Identity"
               options={ERA_OPTIONS}
               value={state.era}
-              onChange={(value) => update({ era: value })}
+              onChange={chooseIdentity}
               hint={
                 isDocument
                   ? 'Earlier government document headings. A reconstruction study using the plate artwork; the original engraving and typefaces remain unverified.'

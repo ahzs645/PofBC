@@ -23,6 +23,8 @@ const now = () => globalThis.performance?.now?.() ?? Date.now()
 const HOLD_MS = 1500
 // How long to wait for a control the change replaces (a section loaded on demand) to appear.
 const PATIENCE_MS = 2500
+// The longest a hold waits on `until`: a download that has stalled must not keep the page pinned.
+const UNTIL_MS = 10000
 const READER = ['wheel', 'touchstart', 'keydown', 'pointerdown']
 
 // The page's height is pinned while any hold is running, and let go when the last one ends.
@@ -50,19 +52,27 @@ const shown = (node) => Boolean(node?.isConnected && node.getClientRects().lengt
  * @param {() => Element|null|undefined} [options.find] Finds the control after the change, where the
  *   change replaces it with another (a different section drawing its own copy of the same bar).
  *   Waits for it to appear, if it is loaded on demand.
+ * @param {Promise<unknown>} [options.until] What the change is waiting on, such as the code for what
+ *   it draws. The hold lasts until it settles (and the page has drawn it), however long a slow
+ *   connection takes, up to 10s; without it, the hold lasts 1.5s.
  */
-export const holdScroll = (element, { find } = {}) => {
+export const holdScroll = (element, { find, until } = {}) => {
   if (!element?.getBoundingClientRect || !globalThis.scrollBy) return
   const before = element.getBoundingClientRect().top
   const started = now()
   let found = null
   let done = false
+  // While what the change waits on is still on its way, the hold has no end but the reader's.
+  let waiting = Boolean(until)
+  let arrived = null
+  until?.then(() => {}, () => {}).finally(() => { waiting = false; arrived = now() })
   pin()
 
   const finish = () => {
     if (done) return
     done = true
     READER.forEach((type) => globalThis.removeEventListener?.(type, finish, true))
+    resized?.disconnect()
     unpin()
   }
   // Listened for from the next frame, so the press that made the change does not end the hold.
@@ -92,10 +102,34 @@ export const holdScroll = (element, { find } = {}) => {
       globalThis.scrollBy({ top: top - before, behavior: 'instant' })
       last = { node, top: before }
     }
-    if (now() - found < HOLD_MS) frame(tick)
+    // Held for a moment after the control is found, or after what it waited on arrived, whichever is
+    // later, so that what arrives last is drawn and settled under it too.
+    const since = Math.max(found, arrived ?? 0)
+    if ((waiting && now() - started < UNTIL_MS) || now() - since < HOLD_MS) frame(tick)
     else finish()
   }
   let last = { node: null, top: 0 }
+
+  // Most moves are put right before they are ever seen: the page's size changes when what is above
+  // the control grows or shrinks, and a ResizeObserver hears of it after layout but before paint. A
+  // move that would need the page scrolled past its top or bottom is left to the frames above, to be
+  // put right once the layout has come to rest.
+  const resized = globalThis.ResizeObserver && globalThis.document?.body
+    ? new globalThis.ResizeObserver(() => {
+      if (done) return
+      const node = target()
+      if (!node) return
+      const top = node.getBoundingClientRect().top
+      const moved = top - before
+      if (Math.abs(moved) <= 1) return
+      const root = globalThis.document.documentElement
+      const to = globalThis.scrollY + moved
+      if (to < 0 || to > root.scrollHeight - globalThis.innerHeight) return
+      globalThis.scrollBy({ top: moved, behavior: 'instant' })
+      last = { node, top: before }
+    })
+    : null
+  resized?.observe(globalThis.document.body)
   frame(tick)
 }
 

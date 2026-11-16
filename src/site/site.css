@@ -261,6 +261,11 @@ a { color: inherit; text-underline-offset: 2px; }
   background-color: var(--frame-b);
 }
 
+/* While an identity's drawing is still on its way, the frame keeps the height of the one before
+   (App.jsx), so the controls below it stay still instead of jumping up and back down. */
+.stage__frame:has(> .stage__loading) { min-height: var(--stage-held, 140px); }
+.stage__loading { margin: 0; color: var(--ink-muted); font-size: 14px; }
+
 .stage__frame[data-backdrop='light'] {
   --frame-a: #eceae4;
   --frame-b: #ffffff;
