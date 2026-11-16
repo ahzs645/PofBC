@@ -10,6 +10,7 @@ import {
   aroundCentre, arcPath, CENTRE, COMPACT_GEOMETRY, frameAround, GEOMETRY, lerpAngle, layoutGovernment, readsReversed, rimAt,
   rotationToBottom, SEAM, sealPath, territoryPath, toPoint, VIEWBOX
 } from './layout.js'
+import { nearestWithin } from './nearest.js'
 import { colourOf, fillOf, mix } from './theme.js'
 import { pathToPeople } from './snapshot.js'
 
@@ -369,6 +370,38 @@ export const GovernmentGraph = ({ government, selectedId, onSelect, hiddenKinds,
   const frameBox = useRef(VIEWBOX)
   const { view, zoomBy, reset } = useZoom(svg, frameBox)
   const zoomed = view.s > 1
+
+  // A finger's tap goes to the body it landed nearest (nearest.js), not only to one it landed on.
+  // A native listener registered after the zoom's, so a tap that ended a drag has already been
+  // cancelled by the time this sees it. The mouse is left alone: it can point.
+  const choose = useRef(onSelect)
+  choose.current = onSelect
+  useEffect(() => {
+    const element = svg.current
+    if (!element) return undefined
+    let touchedAt = -Infinity
+    const touched = () => { touchedAt = performance.now() }
+    const tap = (event) => {
+      if (event.defaultPrevented) return
+      // Not every browser says what made a click; one that follows a touch within a moment is a tap.
+      const byFinger = event.pointerType ? event.pointerType !== 'mouse' : performance.now() - touchedAt < 800
+      if (!byFinger || event.target.closest?.('.gov-graph__seal')) return
+      const centres = [...element.querySelectorAll('.gov-graph__node:not([data-hidden])')].map((node) => {
+        const box = (node.querySelector('circle[fill="transparent"]') ?? node).getBoundingClientRect()
+        return { id: node.dataset.id, x: box.left + box.width / 2, y: box.top + box.height / 2 }
+      })
+      const id = nearestWithin({ x: event.clientX, y: event.clientY }, centres)
+      if (!id) return
+      event.stopPropagation()
+      choose.current(id)
+    }
+    element.addEventListener('touchstart', touched, { passive: true })
+    element.addEventListener('click', tap, true)
+    return () => {
+      element.removeEventListener('touchstart', touched)
+      element.removeEventListener('click', tap, true)
+    }
+  }, [])
   const nodes = government.nodes
   const byId = useMemo(() => new Map(nodes.map((node) => [node.id, node])), [nodes])
   // A body under the pointer can leave the diagram without the pointer leaving it — the year moves

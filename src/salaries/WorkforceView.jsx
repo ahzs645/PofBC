@@ -191,7 +191,7 @@ export default function WorkforceView({ place, setPlace, onBrowse }) {
       searchLabel="Search the profile tables" placeholder="Ministry, group or any value"
       searchHelp="Find rows in the chosen Workforce Profiles table that contain every word typed, such as a ministry, a group or an occupation."
       heading="B.C. Public Service workforce"
-      intro={<p>Aggregate figures for the B.C. Public Service as a whole: average headcount and salary from an official freedom-of-information release, and BC Stats’ Workforce Profiles. They count everyone, not just the people named in the payment records.</p>}
+      intro={<p>Headcount and average salary for the whole B.C. Public Service, not only the people named in payment records.</p>}
       tiles={tiles}
     >
       {failed

@@ -1891,10 +1891,19 @@ button.gallery__collecting-status, .gallery__collecting-graph {
   .salaries-disclosure--mobile-notes .salaries-disclosure__line { display: none; }
   .salaries-disclosure--mobile-notes:not(:has(.salaries__caveats)) { display: none; }
   .salaries__browse-bar { flex-wrap: wrap; gap: 6px; }
-  .salaries__browse-bar > .field:first-child:not(.field--compact) { flex: 1 1 100%; min-width: 0; max-width: none; }
+  /* The sections take the row and the layout switch sits at its end. Where the two do not fit (a
+     very narrow phone, or large text) the switch drops to a row of its own, as it used to always. */
+  .salaries__browse-bar > .field:first-child:not(.field--compact) { flex: 1 1 auto; min-width: 0; max-width: none; }
   .salaries__browse-bar .segmented { min-height: 44px; gap: 0; padding: 2px; }
   .salaries__browse-bar .segmented button { flex: 1 1 auto; min-width: 0; min-height: 40px; padding: 4px; font-size: 12px; }
   .salaries__browse-bar .field--compact .segmented button { min-height: 40px; padding: 4px 5px; font-size: 12px; }
+  /* Three pixels a side is the least the five names need to share a 375-pixel phone with the
+     switch; on anything wider they spread to fill the row. */
+  .salaries__browse-bar--sections .field:not(.field--compact) .segmented button { padding: 4px 3px; }
+  .salaries__tab-more { display: none; }
+  /* Beside the sections the switch is one button: it shows the layout a tap would change to. */
+  .salaries__browse-bar--sections .field--compact .segmented button[aria-pressed='true'] { display: none; }
+  .salaries__browse-bar--sections .field--compact .segmented button { min-width: 36px; }
 }
 
 .salaries__hint, .salaries__note { margin: 0; font-size: 14px; color: var(--ink-faint); }
@@ -2051,9 +2060,13 @@ button.gallery__collecting-status, .gallery__collecting-graph {
     -webkit-mask-image: linear-gradient(to right, #000 calc(100% - 28px), transparent);
     mask-image: linear-gradient(to right, #000 calc(100% - 28px), transparent);
   }
-  /* On a phone the hero's four totals give their figures without the line under each. */
-  .salaries__intro .salaries__tiles .salaries__line { display: none; }
+  /* On a phone the collection's four totals give their figures without the line under each. Council
+     pay and Workforce keep theirs: there the line says which year the figure is for. */
+  .salaries__intro--totals .salaries__tiles .salaries__line { display: none; }
   .salaries__intro { padding: 16px; }
+  .salaries__intro .salaries__tiles div { padding: 8px 10px; }
+  .salaries__intro .salaries__tiles dd { font-size: 17px; }
+  .salaries__intro .salaries__tiles .salaries__line { font-size: 12px; }
 }
 
 /* An employer's records: how they are set out (the site's Segmented control), the search within them,
@@ -2246,7 +2259,11 @@ button.gallery__collecting-status, .gallery__collecting-graph {
 .salaries__rank { display: grid; gap: 4px; max-width: 520px; }
 .salaries__rank input { width: 160px; min-height: 36px; padding: 6px 10px; border: 1px solid var(--mid); border-radius: 8px; background: var(--surface); color: var(--ink); font: inherit; }
 .salaries-years__unusual { display: block; margin-top: 2px; font-size: 12px; color: var(--ink-muted); text-decoration: underline dotted; text-underline-offset: 3px; cursor: help; }
-.salaries-about__subhead { margin: 8px 0 0; font-size: 14px; font-weight: 600; }
+/* The page's four parts, each a tap away; and the long reference lists, folded until wanted. */
+.salaries-about__contents { display: flex; flex-wrap: wrap; gap: 6px 18px; font-size: 14px; }
+.salaries-about section { scroll-margin-top: 16px; }
+.salaries-about__fold > summary { cursor: pointer; font-size: 14px; font-weight: 600; padding: 6px 0; }
+.salaries-about__fold[open] > summary { margin-bottom: 6px; }
 .salaries-about__sources { font-size: 14px; }
 .council-pay__links { margin: 0; }
 .council-pay__years .salaries-record + .salaries-record { margin-top: 8px; }

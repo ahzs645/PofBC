@@ -7,11 +7,12 @@ import { Segmented } from '../site/Segmented.jsx'
 import { SalarySearchField } from './MobileFilters.jsx'
 import { LAYOUTS } from './common.jsx'
 
+// On a phone "Council pay" is "Council": the five sections and the layout switch then fit one row.
 export const BROWSE = [
   { value: 'employers', label: 'Employers' },
   { value: 'people', label: 'People' },
   { value: 'positions', label: 'Positions' },
-  { value: 'council', label: 'Council pay' },
+  { value: 'council', label: <>Council<span className="salaries__tab-more"> pay</span></>, ariaLabel: 'Council pay' },
   { value: 'workforce', label: 'Workforce' }
 ]
 
@@ -26,7 +27,7 @@ export const CompanionShell = ({ browse, onBrowse, layout, onLayout, query, onSe
         <SalarySearchField labelled label={searchLabel} ariaLabel={searchLabel} placeholder={placeholder} help={searchHelp} value={query} onChange={onSearch} />
       </div>
     )}
-    <section className="salaries__intro" aria-labelledby={`salaries-${browse}-intro`}>
+    <section className={`salaries__intro salaries__intro--${browse}`} aria-labelledby={`salaries-${browse}-intro`}>
       <div className="salaries__page-heading">
         {back}
         <h2 id={`salaries-${browse}-intro`} className="salaries__heading">{heading}</h2>
@@ -41,7 +42,7 @@ export const CompanionShell = ({ browse, onBrowse, layout, onLayout, query, onSe
         </dl>
       )}
     </section>
-    <div className="salaries__browse-bar">
+    <div className="salaries__browse-bar salaries__browse-bar--sections">
       <Segmented ariaLabel="Browse" value={browse} onChange={onBrowse} options={BROWSE} />
       {onLayout && <Segmented compact ariaLabel="Layout" value={layout} onChange={onLayout} options={LAYOUTS} />}
     </div>

@@ -36,6 +36,7 @@ import { employerMatcher } from './employerSearch.js'
 import { documentTitle, setDocumentMeta } from '../site/documentMeta.js'
 import { connectRelatedSalaryBodies } from '../government/relatedBodies.js'
 import { loadSalaryIndexes } from './browseIndex.js'
+import { BROWSE } from './CompanionShell.jsx'
 
 const CouncilPayView = lazy(() => import('./CouncilPayView.jsx'))
 const WorkforceView = lazy(() => import('./WorkforceView.jsx'))
@@ -499,7 +500,7 @@ const SalaryRecordsView = ({ onOpenGovernment, navigation }) => {
   // collection would only stand between a question and its answer.
   const introduction = (
     <>
-      {!typed && <section className="salaries__intro" aria-labelledby="salaries-intro">
+      {!typed && <section className="salaries__intro salaries__intro--totals" aria-labelledby="salaries-intro">
         <h2 id="salaries-intro" className="salaries__heading">Public-sector salaries</h2>
         <p className="salaries__about-link"><button type="button" className="salaries__link" onClick={() => go({ browse: 'about', q: '' })}>About these records, privacy and corrections</button></p>
         <dl className="salaries__tiles">
@@ -511,12 +512,12 @@ const SalaryRecordsView = ({ onOpenGovernment, navigation }) => {
       </section>}
 
       {!typed && (
-        <div className="salaries__browse-bar">
+        <div className="salaries__browse-bar salaries__browse-bar--sections">
           <Segmented
             ariaLabel="Browse"
             value={browse}
             onChange={(next) => go({ browse: next })}
-            options={[{ value: 'employers', label: 'Employers' }, { value: 'people', label: 'People' }, { value: 'positions', label: 'Positions' }, { value: 'council', label: 'Council pay' }, { value: 'workforce', label: 'Workforce' }]}
+            options={BROWSE}
           />
           <Segmented compact ariaLabel="Layout" value={layout} onChange={(next) => setPlace((current) => ({ ...current, layout: next }))} options={LAYOUTS} />
         </div>
