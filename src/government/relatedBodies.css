@@ -1,47 +1,166 @@
 .gov__related-link { white-space: nowrap; text-decoration: none; }
 
+/* ── Related public bodies (RelatedBodiesView.jsx) ───────────────────────────────────────────────
+   A phone reads down one column: the breadcrumb, the record (or what the catalogue is), then the
+   directory, whole. A wide screen is laid out as the government view: breadcrumb and directory on
+   the left, the record on the right. */
+
 .gov.gov-related {
   grid-template-columns: minmax(0, 1fr);
   grid-template-rows: auto;
   align-content: start;
+  align-items: start;
 }
+.gov-related > * { min-width: 0; grid-column: auto; grid-row: auto; }
 
-.gov-related .gov-breadcrumb,
-.gov-related__intro,
-.gov-related__directory,
-.gov-related__detail {
+/* ── Breadcrumb ── */
+
+/* The page's own name is the crumb that gives way to an ellipsis, once RelatedBodiesView.jsx has
+   folded the crumbs before it to "…" (government.css keeps the site's name whole). */
+.gov-breadcrumb > .gov-breadcrumb__page {
+  flex: 0 1 auto;
   min-width: 0;
-  grid-column: auto;
-  grid-row: auto;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: var(--gov-ink-3);
 }
+/* The last two folds: the sun goes, then the site's name takes the ellipsis so the page's stays. */
+.gov-breadcrumb[data-fold~='sun'] > svg:first-child { display: none; }
+/* It keeps at least "Province…"; a page name that still does not fit undoes this fold. */
+.gov-breadcrumb[data-fold~='site'] > .gov-breadcrumb__site { flex-shrink: 1; min-width: 5.6em; }
+.gov-breadcrumb[data-fold~='site'] > .gov-breadcrumb__page { flex-shrink: 0; max-width: 60%; }
+.gov-breadcrumb__parent {
+  flex: none;
+  margin: 0 -4px;
+  padding: 2px 4px;
+  border-radius: 8px;
+  color: var(--gov-ink-4);
+  text-decoration: none;
+}
+.gov-breadcrumb__parent:hover { background: var(--gov-hover); color: var(--gov-ink); }
 
-.gov-related .gov-breadcrumb { flex-wrap: wrap; }
-.gov-related__intro .gov-description { max-width: 82ch; }
-.gov-related__directory input { box-sizing: border-box; width: 100%; margin-top: 12px; padding: 11px 12px; border: 1px solid var(--gov-mid); border-radius: 8px; color: var(--gov-ink); background: var(--gov-surface); font: inherit; }
-.gov-related__list { display: grid; gap: 4px; margin: 0; padding: 0; list-style: none; }
-.gov-related__list a { display: grid; gap: 4px; padding: 12px; border-radius: 8px; color: var(--gov-ink); text-decoration: none; overflow-wrap: anywhere; }
-.gov-related__list a span { color: var(--gov-ink-3); font-size: 12px; }
-.gov-related__list a:hover,
-.gov-related__list a[aria-current] { background: var(--gov-hover); }
-.gov-related__list a[aria-current] { box-shadow: inset 3px 0 0 var(--gov-link); }
-.gov-related__detail { display: grid; align-content: start; gap: 12px; }
+/* ── The record, or the catalogue's introduction ── */
+
+.gov-related__main { display: grid; align-content: start; gap: 12px; min-width: 0; }
+.gov-related .gov-title { font-size: clamp(24px, 6.4vw, 30px); overflow-wrap: anywhere; }
+.gov-related .gov-description { max-width: 70ch; margin-top: 14px; }
+.gov-related__intro .gov-muted { max-width: 70ch; }
+.gov-related__record > .gov-muted { margin-top: 6px; }
+.gov-related__back {
+  display: none;
+  margin: -6px 0 14px;
+  font-size: 14px;
+  color: var(--gov-ink-3);
+  text-decoration: none;
+}
+.gov-related__back:hover { color: var(--gov-ink); text-decoration: underline; }
+
 .gov-related__connections { list-style: none; margin: 12px 0 0; padding: 0; display: grid; gap: 14px; }
 .gov-related__connections li { display: grid; gap: 4px; }
 .gov-related__connections a,
 .gov-related__sources a { color: var(--gov-link); overflow-wrap: anywhere; }
-.gov-related__sources { padding-left: 20px; display: grid; gap: 10px; }
+.gov-related__sources { margin: 12px 0 0; padding-left: 20px; display: grid; gap: 10px; font-size: 14px; }
+
+/* ── Directory ── */
+
+.gov-related__directory { padding: 20px 12px 12px; }
+.gov-related__directory-head { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; padding: 0 8px; }
+.gov-related__directory-head .gov-card__heading { margin: 0; }
+.gov-related__count { font-size: 13px; font-variant-numeric: tabular-nums; }
+
+/* The government view's own search field: a shade of the card, no box drawn round it. */
+.gov-related__search {
+  box-sizing: border-box;
+  display: block;
+  width: 100%;
+  height: 44px;
+  margin: 12px 0 4px;
+  padding: 0 14px;
+  border: 0;
+  border-radius: 12px;
+  background: var(--gov-hover);
+  color: var(--gov-ink);
+  font: inherit;
+  font-size: 16px;
+}
+.gov-related__search::placeholder { color: var(--gov-ink-4); }
+
+.gov-related__group { margin-top: 14px; }
+.gov-related__group-title {
+  margin: 0 8px 4px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--gov-ink-4);
+}
+.gov-related__list { display: grid; gap: 1px; margin: 0; padding: 0; list-style: none; }
+/* Rows as the government view's list draws them: name over kind, a chevron at the end. */
+.gov-related__item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-height: 52px;
+  padding: 8px;
+  border-radius: 8px;
+  color: var(--gov-ink);
+  text-decoration: none;
+}
+.gov-related__name { flex: 1; min-width: 0; display: grid; gap: 2px; }
+.gov-related__name strong { font-size: 15px; font-weight: 600; overflow-wrap: anywhere; }
+.gov-related__name span { font-size: 12px; color: var(--gov-ink-4); }
+.gov-related__chevron { flex: none; color: var(--gov-ink-4); }
+.gov-related__item:hover { background: var(--gov-hover); }
+.gov-related__item[aria-current] { background: var(--gov-hover); box-shadow: inset 3px 0 0 var(--gov-link); }
+.gov-related__item[aria-current] .gov-related__chevron { color: var(--gov-ink); }
+.gov-related__empty { padding: 8px; }
+
 .gov-related a:focus-visible,
 .gov-related button:focus-visible,
-.gov-related input:focus-visible { outline: 2px solid var(--gov-link); outline-offset: 3px; }
+.gov-related input:focus-visible { outline: 2px solid var(--gov-link); outline-offset: 2px; }
 
-@media (min-width: 900px) {
-  .gov.gov-related { grid-template-columns: minmax(260px, 30%) minmax(0, 1fr); }
-  .gov-related .gov-breadcrumb,
-  .gov-related__intro { grid-column: 1 / -1; }
-  .gov-related__directory { grid-column: 1; align-self: start; }
-  .gov-related__detail { grid-column: 2; }
+@media (prefers-reduced-motion: no-preference) {
+  .gov-related__item, .gov-breadcrumb__parent { transition: background-color 150ms cubic-bezier(0.4, 0, 0.2, 1); }
 }
 
+/* ── Phone ── */
+
 @media (max-width: 899px) {
-  .gov-related__list { max-height: 270px; overflow-y: auto; overscroll-behavior: contain; }
+  .gov-related .gov-breadcrumb { padding: 6px 6px 6px 20px; }
+  .gov-related__back { display: inline-block; }
+  .gov-related .gov-card:not(.gov-breadcrumb) { padding: 20px 20px 24px; }
+  .gov-related .gov-related__directory { padding: 18px 10px 10px; }
+  .gov-related .gov-description { font-size: 15px; }
+}
+@media (max-width: 479px) {
+  .gov-related .gov-breadcrumb { padding-left: 16px; gap: 6px; }
+}
+
+/* ── Wide screen ── */
+
+@media (min-width: 900px) {
+  .gov.gov-related {
+    grid-template-columns: minmax(340px, 38%) minmax(0, 1fr);
+    grid-template-rows: auto 1fr;
+  }
+  /* The theme toggle ends this breadcrumb, so its own padding is the card's right edge. */
+  .gov-related > .gov-breadcrumb { grid-column: 1; grid-row: 1; padding-right: 6px; }
+  /* The directory scrolls in its own column, so the record beside it stays where it is. */
+  .gov-related__directory {
+    grid-column: 1;
+    grid-row: 2;
+    position: sticky;
+    top: 16px;
+    display: flex;
+    flex-direction: column;
+    max-height: calc(100dvh - 92px);
+  }
+  .gov-related__directory > * { flex: none; }
+  .gov-related__directory > .gov-related__groups { flex: 1 1 auto; min-height: 0; overflow-y: auto; overscroll-behavior: contain; scrollbar-width: thin; }
+  .gov-related__main { grid-column: 2; grid-row: 1 / span 2; }
+}
+
+/* The government view's own columns from 1024px, so the breadcrumb is the same card in both. */
+@media (min-width: 1024px) {
+  .gov.gov-related { grid-template-columns: minmax(400px, 40%) minmax(0, 1fr); }
 }

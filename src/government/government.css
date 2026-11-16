@@ -132,7 +132,7 @@
   align-items: center;
   gap: 8px;
   padding: 8px 24px;
-  min-height: 44px;
+  min-height: var(--gov-bar, 44px);
   font-size: 16px;
 }
 
@@ -549,6 +549,18 @@
 .gov__overlay--bottom { bottom: 0; align-items: flex-end; }
 .gov__tools { display: flex; gap: 8px; }
 
+/* On a wide screen the breadcrumb and the diagram's tools share the top line, so they share its
+   height: the search, Related bodies, the theme toggle and the steps are as tall as the breadcrumb
+   card beside them, and their tops and bottoms line up. */
+@media (min-width: 1024px) {
+  .gov__overlay--top .gov-button,
+  .gov__overlay--top .gov-search input { height: var(--gov-bar, 44px); min-width: var(--gov-bar, 44px); }
+  .gov__overlay--top .gov-button--icon { width: var(--gov-bar, 44px); }
+  .gov__overlay--top .gov-button:not(.gov-button--icon) { padding: 0 18px; font-size: 15px; }
+  .gov__overlay--top .gov-search input { padding: 0 16px; font-size: 15px; }
+  .gov__overlay--top .gov-button--icon svg { transform: scale(1.12); }
+}
+
 .gov-search { position: relative; width: min(440px, 100%); }
 
 .gov-search input {
@@ -780,11 +792,17 @@ details.gov-list__section[open] { padding-bottom: 12px; }
 
 /* The breadcrumb carries the site's view switch, in the view's own palette. It stays on one line:
    rather than let the year drop to a second line — which it did for some years and not others, the
-   digits not being the same width — the site's name and the branch give way to an ellipsis. */
-.gov-breadcrumb { flex-wrap: nowrap; white-space: nowrap; }
+   digits not being the same width — it reads from the left for as far as there is room. The site's
+   name and the view switch stay whole, and the last crumb gives way to an ellipsis; only on the
+   narrowest card does the site's name give way too. */
+.gov-breadcrumb { flex-wrap: nowrap; white-space: nowrap; container: gov-crumbs / inline-size; }
 .gov-breadcrumb > * { flex: none; }
 .gov-breadcrumb > .gov-breadcrumb__site,
 .gov-breadcrumb > .gov-breadcrumb__branch { flex: 0 1 auto; min-width: 0; overflow: hidden; text-overflow: ellipsis; }
+.gov-breadcrumb > .gov-breadcrumb__site { flex-shrink: 0; }
+@container gov-crumbs (max-width: 300px) {
+  .gov-breadcrumb > .gov-breadcrumb__site { flex-shrink: 1; }
+}
 .gov-breadcrumb__site { font-weight: 600; }
 /* On a phone the theme toggle ends the row, as in every other view's masthead. */
 .gov-breadcrumb__tools { margin-left: auto; display: flex; }

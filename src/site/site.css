@@ -38,6 +38,10 @@
   --primary-hover: #383633;
   --primary-ink: #ffffff;
   --menu-shadow-token: 0 16px 48px rgba(30, 25, 15, 0.16);
+  /* brandkit's views (stationery, guides) draw their rules and menu borders with --line. Without it
+     they fell back to a fixed light grey, a white edge round every menu in the dark theme. Resolved
+     here from --mid, so it follows the theme with everything else. */
+  --line: var(--mid);
 
   --warn: #8a5a00;
   --danger: #a4232c;

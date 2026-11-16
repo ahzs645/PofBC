@@ -25,14 +25,15 @@ import { SiteLink, useNavigate } from '../site/navigation.jsx'
 import { SunGlyph, ThemeIcon } from '../site/icons.jsx'
 import { useSiteTheme } from '../site/useTheme.js'
 import { layoutGovernment } from './layout.js'
-import { FIRST_YEAR, governmentIn, lifeOf, lifespanOf, lifeYears, PRESENT_YEAR } from './snapshot.js'
+import { FIRST_YEAR, governmentIn, lifeOf, lifespanOf, PRESENT_YEAR } from './snapshot.js'
 import { TimelineBar } from './TimelineBar.jsx'
 import { THEMES } from './theme.js'
 import { CURRENT_AS_OF, CURRENT_SOURCES } from './currentData.js'
 import { RelatedBodiesView } from './RelatedBodiesView.jsx'
-import { RELATED_BODIES, RELATED_BODY_KINDS, relatedBodyById, relatedBodyPlace } from './relatedBodies.js'
+import { search } from './governmentSearch.js'
+import { relatedBodyById, relatedBodyPlace } from './relatedBodies.js'
 import { readGovernmentPlace } from './governmentPlace.js'
-import { HISTORICAL_BODIES, HISTORY_SOURCES, MINISTERS, LOCAL_BODIES } from './historyData.js'
+import { HISTORY_SOURCES } from './historyData.js'
 import { TIMELINE_SOURCES } from './timelineData.js'
 import { AMR_ATTRIBUTION, AMR_COLLECTION, AMR_LICENCE } from './amrLicence.js'
 import './government.css'
@@ -93,70 +94,6 @@ const useNarrow = () => {
   return narrow
 }
 
-/**
- * Search over everything the timeline holds, not just the year on screen: a ministry that ran
- * from 1986 to 1988 is found, and choosing it moves the timeline there.
- */
-const SEARCH_INDEX = (() => {
-  const today = governmentIn(PRESENT_YEAR).nodes
-    .filter((node) => node.kind !== 'ministry')
-    .map((node) => ({ id: node.id, name: node.name, alias: node.shortName, year: PRESENT_YEAR, detail: node.head?.person }))
-  const episodes = MINISTRY_EPISODES.map((episode) => ({
-    id: episode.id,
-    name: episode.name,
-    year: episode.to === null ? PRESENT_YEAR : episode.to === episode.from ? episode.from : episode.to - 1,
-    detail: episode.to ? `${episode.from}–${episode.to}` : `${episode.from}–`
-  }))
-  // Former bodies, and every minister by name, so "Vander Zalm" or "BC Rail" finds its year. A body
-  // is found whatever is known of its life: an untraced end, a start known only by a sighting.
-  const bodies = [...HISTORICAL_BODIES.filter((body) => !body.current && body.name), ...LOCAL_BODIES].filter((body) => lifespanOf(body).from).map((body) => {
-    const life = lifespanOf(body)
-    return {
-      id: body.id,
-      name: body.name,
-      alias: body.shortName,
-      year: Number(String(life.from).slice(0, 4)),
-      detail: `${lifeYears(life)}${body.kind === 'regional-hospital-district' || body.kind === 'hospital-improvement-district' ? ' · local' : ''}`,
-      body,
-      ...(LOCAL_BODIES.includes(body) ? { local: true } : {})
-    }
-  })
-  const ministers = Object.entries(MINISTERS).flatMap(([episodeId, rows]) => rows.map(([person, from, to, title]) => {
-    const episode = MINISTRY_EPISODES.find((entry) => entry.id === episodeId)
-    const start = Math.max(Number(String(from).slice(0, 4)), episode?.from ?? 0)
-    return { id: episodeId, name: person, alias: title, year: start, detail: `${title}, ${String(from).slice(0, 4)}–${to ? String(to).slice(0, 4) : ''}`, minister: true }
-  }))
-  // A term that spans a renaming — the 1976 departments becoming ministries — is one entry, not two.
-  const seen = new Set()
-  const people = ministers.filter((entry) => {
-    const key = `${entry.name}|${entry.detail}`
-    if (seen.has(key)) return false
-    seen.add(key)
-    return true
-  })
-  const related = RELATED_BODIES.map((body) => ({
-    id: body.id, name: body.name, alias: [body.shortName, ...body.aliases].join(' '),
-    year: PRESENT_YEAR, detail: RELATED_BODY_KINDS[body.kind], related: true
-  }))
-  return [...today, ...episodes, ...bodies, ...people, ...related]
-})()
-
-const normal = (text) => String(text ?? '').toLowerCase().normalize('NFD').replace(/[^a-z0-9 ]+/g, ' ')
-
-const search = (query) => {
-  const words = normal(query).split(/\s+/).filter(Boolean)
-  if (!words.length) return []
-  return SEARCH_INDEX
-    .filter((entry) => {
-      // A minister is found by name, not by portfolio, or "forests" would list every minister of it.
-      const haystack = normal(entry.minister ? entry.name : `${entry.name} ${entry.alias ?? ''} ${entry.detail ?? ''}`)
-      return words.every((word) => haystack.includes(word))
-    })
-    // Bodies first, then people; the most recent first within each.
-    .sort((a, b) => Number(Boolean(a.minister)) - Number(Boolean(b.minister)) || b.year - a.year)
-    .slice(0, 10)
-}
-
 const Search = ({ onPick }) => {
   const [open, setOpen] = useState(false)
   const [query, setQuery] = useState('')
@@ -206,7 +143,7 @@ const Search = ({ onPick }) => {
         <ul className="gov-search__results" onMouseDown={(event) => event.preventDefault()}>
           {results.length === 0 && <li className="gov-muted">Nothing by that name. Try “Forests”, “Hydro” or “Ombudsperson”.</li>}
           {results.map((result) => (
-            <li key={result.id}>
+            <li key={result.key}>
               <button type="button" onClick={() => choose(result)}>
                 <span>{result.name}</span>
                 <span className="gov-muted">{result.detail}</span>

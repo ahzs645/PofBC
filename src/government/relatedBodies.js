@@ -31,6 +31,27 @@ export const RELATED_BODY_KINDS = {
   'charitable-society': 'Charitable society'
 }
 
+/**
+ * How the directory lists them: a few families a reader would recognize, rather than one heading per
+ * kind, since most kinds have a single member. Grouping is presentation only; each record keeps its
+ * own kind and governance.
+ */
+export const RELATED_BODY_GROUPS = [
+  { id: 'transit', label: 'Transit in Metro Vancouver', kinds: ['regional-transportation-authority', 'transit-company', 'transit-police'] },
+  { id: 'services', label: 'Regional and public services', kinds: ['regional-federation', 'ferry-authority', 'emergency-communications', 'statutory-authority', 'independent-regulator'] },
+  { id: 'development', label: 'Economic development', kinds: ['development-trust', 'development-society'] },
+  { id: 'learning', label: 'Education and science', kinds: ['public-university', 'public-institute', 'charitable-society'] }
+]
+
+/** The given bodies in their groups, in catalogue order, leaving out groups with none of them. */
+export const groupRelatedBodies = (bodies) => {
+  const groups = RELATED_BODY_GROUPS.map((group) => ({ ...group, bodies: bodies.filter((body) => group.kinds.includes(body.kind)) }))
+  const grouped = new Set(RELATED_BODY_GROUPS.flatMap((group) => group.kinds))
+  const rest = bodies.filter((body) => !grouped.has(body.kind))
+  if (rest.length) groups.push({ id: 'other', label: 'Other organizations', kinds: [], bodies: rest })
+  return groups.filter((group) => group.bodies.length)
+}
+
 const employer = (slug, label, extra = {}) => ({ slug, label, ...extra })
 const relation = (id, label, description, extra = {}) => ({ id, label, description, ...extra })
 const university = (id, name, shortName, officialUrl, slug) => ({

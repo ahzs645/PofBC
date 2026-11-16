@@ -5,8 +5,8 @@ import { HISTORICAL_BODIES, LOCAL_BODIES, SUB_AGENCIES } from './historyData.js'
 import { readGovernmentPlace } from './governmentPlace.js'
 import { governmentIn, PRESENT_YEAR } from './snapshot.js'
 import {
-  RELATED_BODIES, RELATED_BODY_KINDS, RELATED_SALARY_LINKS,
-  connectRelatedSalaryBodies, relatedBodyById, relatedBodyPlace, searchRelatedBodies
+  RELATED_BODIES, RELATED_BODY_GROUPS, RELATED_BODY_KINDS, RELATED_SALARY_LINKS,
+  connectRelatedSalaryBodies, groupRelatedBodies, relatedBodyById, relatedBodyPlace, searchRelatedBodies
 } from './relatedBodies.js'
 import { writeHistory } from '../site/browserHistory.js'
 
@@ -192,4 +192,18 @@ test('existing links and unlisted employer spellings are not replaced or inferre
   assert.equal(connectRelatedSalaryBodies(null), null)
   const invalid = { employers: {} }
   assert.equal(connectRelatedSalaryBodies(invalid), invalid)
+})
+
+test('every kind of related body belongs to exactly one directory group', () => {
+  const placed = RELATED_BODY_GROUPS.flatMap((group) => group.kinds)
+  assert.deepEqual([...placed].sort(), Object.keys(RELATED_BODY_KINDS).sort())
+  assert.equal(new Set(placed).size, placed.length)
+  const grouped = groupRelatedBodies(RELATED_BODIES)
+  assert.equal(grouped.reduce((sum, group) => sum + group.bodies.length, 0), RELATED_BODIES.length)
+  assert.equal(grouped.some((group) => group.id === 'other'), false)
+})
+
+test('a search leaves out the groups it empties', () => {
+  const grouped = groupRelatedBodies(searchRelatedBodies('university'))
+  assert.deepEqual(grouped.map((group) => group.id), ['learning'])
 })

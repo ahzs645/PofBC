@@ -51,7 +51,11 @@ const Chevron = ({ open }) => (
  * @param {(view: string) => void} props.onChange
  * @param {string} [props.className]
  */
-export const ViewSwitcher = ({ view, onChange, className = '' }) => {
+/**
+ * `compact` draws the trigger as "…" where a breadcrumb has no room for the view's name; it still
+ * opens the menu, and is still named for the view it is on.
+ */
+export const ViewSwitcher = ({ view, onChange, className = '', compact = false }) => {
   const [open, setOpen] = useState(false)
   const root = useRef(null)
   const trigger = useRef(null)
@@ -130,8 +134,10 @@ export const ViewSwitcher = ({ view, onChange, className = '' }) => {
         aria-controls={open ? id : undefined}
         onClick={() => setOpen((value) => !value)}
         onKeyDown={(event) => { if (event.key === 'ArrowDown') { event.preventDefault(); setOpen(true) } }}
+        aria-label={compact ? current.label : undefined}
+        title={compact ? current.label : undefined}
       >
-        {current.label}
+        {compact ? '…' : current.label}
         <Chevron open={open} />
       </button>
       {open && <span className="view-switcher__backdrop" aria-hidden="true" onClick={() => setOpen(false)} />}
