@@ -177,4 +177,70 @@ SFU, the Forest History Association of BC newsletters, the Royal BC Museum’s o
 
 ## Signs
 
-<!-- SIGNS -->
+This half of the search was shorter than the posters half: the first attempt failed three times on a
+server error and was redone by hand, so fewer archives were tried. What it did find is better than
+photographs: the Province's own sign manuals, with dimensions.
+
+### Start here
+
+| Pick | Why |
+|---|---|
+| **S1. The 1955 route marker** | The B.C. highway shield: the shield of the arms over a large route number and “B.C.”. The 1955 manual gives a drawing and a table of sizes, so it can be rebuilt to specification, not from a photograph. It could take any route number, as the generator takes any ministry. |
+| **S2. Provincial Park, Picnic Site and Campsite, 1000 FT.** | Three green-on-white signs of one shape with an evergreen, from the same manual. Easy, and close kin to the Forest Service pieces. |
+| **S6. The Stop of Interest sign** | The best-known designed sign the Province has: a green shaped plaque with a dogwood. One drawing would serve all of them, since the Province publishes every sign’s wording as data. |
+| **S3. Destination signs and fingerboards** | White on “bottle green”, with real place names and mileages in the plates. Mostly lettering. |
+| **S7. The Garbage Gobbler** | Not a sign but a painted roadside figure, green and yellow. It pairs with the Junior Gobbler bag (poster 11). |
+
+### The 1955 manual
+
+[*Manual of Standard Traffic Control Devices for Streets and Highways*](https://www2.gov.bc.ca/assets/gov/driving-and-transportation/reports-and-reference/reports-and-studies/external-links-for-tranbc-historical-references/1955-bc-manual-standard-traffic-control-devices-superceded.pdf),
+Province of British Columbia, Department of Highways, Traffic Branch, 1955 (Hon. P.A. Gaglardi,
+Minister). A 299-page scan on the Province’s own site, 4 MB. Each sign has a plate with its drawing, a
+line giving its colours, and a table of size, border, margin, letter height and series, hole centres
+and corner radius, followed by a page on where it is used. It is in black and white: colours are named
+in words (“bottle green”), not shown. The page numbers below are the PDF’s.
+
+| # | Sign | What the plate shows | PDF page | Effort | Status |
+|---|---|---|---|---|---|
+| S1 | Standard and large route markers (G-4, G-5) | A shield carrying the shield of the provincial arms, a large route number and “B.C.”; “black letters, border and crest on white background”, reflectorized | 240, 242 | Medium (the small arms are the work) | Seen |
+| S2 | PROVINCIAL PARK / PICNIC SITE / CAMPSITE 1000 FT. (G-17, G-18, G-19) | A tapered shield with an evergreen; “green letters, tree and border on white background” | 255, 257, 259 | Easy | Seen |
+| S3 | Destination signs (G-1, G-2), fingerboards (G-3) and overhead destination signs (G-14) | G-1 and G-14 are “white letters and border on bottle green background”; the plates read U.S. BORDER 15 / CHILLIWACK 49 / HOPE 81, NORTH THOMPSON HIGHWAY, VICTORIA, SOOKE, NANAIMO 30 | 234–238, 250 | Easy | Seen (250); the others read from the text layer |
+| S4 | HISTORIC SITE 500 FT. (G-15) and VIEWPOINT AHEAD (M-3) | Black on white; green on white | 252, 270 | Easy | Text layer only |
+| S5 | Contractor’s project sign (M-1) | BRITISH COLUMBIA / DEPT. OF PUBLIC WORKS / HIGHWAY PROJECT … DRIVE SLOWLY; black on white, no border | 266 | Easy | Seen |
+| S5b | JCT / JUNCTION (G-12) and the directional arrow markers (G-6 to G-11) | Black on white; the arrowhead is dimensioned | 244, 246 | Easy | Seen |
+| S5c | Others of the period: LOGGING TRUCK (W-78), DO NOT DUMP REFUSE (M-5), NO TRESPASSING, Department of Public Works (M-7), river and creek name boards (G-13, “STAWAMUS RIVER”), district and town entering signs (G-21, G-22) | As named | 227, 272, 276, 248, 261, 263 | Easy | Text layer only |
+
+### Signs known from photographs
+
+| # | Sign | Who and when | What it looks like | Where | Effort | Status |
+|---|---|---|---|---|---|---|
+| S6 | Stop of Interest plaques | Begun in 1958 as a centennial project; 49 signs that year, 40 in 1966, 15 in 1967, more in 1969–71, 1995, 2008 and 2016–19; over 175 in all (the Ministry’s page). The older ones are signed “Department of Recreation & Conservation” | A dark green plaque with a shaped top and bottom, a cream border, a title in capitals, a paragraph of text, the department’s name and a dogwood | [The Ministry’s page](https://www2.gov.bc.ca/gov/content/transportation/driving-and-cycling/traveller-information/stop-of-interest) (its banner shows HISTORIC YALE, close and square-on); [photographs of seventeen](https://explorenorthblog.com/?p=10828); every sign’s wording and place as data: [B.C. Stop of Interest Signs](https://catalogue.data.gov.bc.ca/dataset/bc-stop-of-interest-signs) (linked from the Ministry’s page, not opened) | Medium: one outline and a dogwood, then lettering. No drawing or specification was found | Seen |
+| S7 | Garbage Gobbler | Late 1950s to about 1980; some 250 along highways and in parks, run by Recreation and Conservation with Highways. A plaque on the Revelstoke one credits Len Shaw of the Parks Branch with the design (as reported by the page below) | A standing fibreglass or concrete figure, green with a yellow front, round eyes, a hinged mouth | [BIGDoer, Revelstoke, 2023](https://www.bigdoer.com/?p=58146) (the photographs are the site’s own copyright); a 1997 photograph in the explorenorth page above shows one beside a Stop of Interest sign | Medium: a three-dimensional object, drawn as an elevation | Seen |
+| S8 | The Manning Park “gallows” fire sign | 1947–50, in the park after the 1947 fire; which branch put it up was not confirmed | Not seen | A [news article](https://www.vancouverisawesome.com/local-news/in-1950-bc-parks-suggested-hanging-people-who-started-wildfires-3082075) and a BC Archives photograph, both out of reach | Unknown | Snippet |
+| S9 | Welcome sign at Crowsnest Pass, Highway 3 | Undated photograph in BC Archives’ *Beautiful British Columbia* magazine series (GR-3265) | Not seen | [BC Archives record](https://search-bcarchives.royalbcmuseum.bc.ca/crowsnest-pass-summit-sign/reports) | Unknown | Snippet |
+| S10 | Signs on display at the Provincial Sign Shop, about 1965, and a late-1970s road distance sign | Department of Highways | Not seen | TranBC, “A Look Back at the BC Provincial Sign Shop” (`tranbc.ca/?p=24156`) | Unknown | Snippet |
+
+Nothing was found on the earlier “Beautiful British Columbia” border signs or the “Best Place on
+Earth” ones: the search results were all about the 2025 border signs.
+
+### Manuals and catalogues in use now
+
+Current standards, useful for present-day signs and for checking how an old design ended up.
+
+| Document | What it gives | Status |
+|---|---|---|
+| [Standard Traffic Sign Catalogue](https://www2.gov.bc.ca/gov/content/transportation/transportation-infrastructure/engineering-standards-guidelines/traffic-engineering-safety/traffic-signs-markings), Ministry of Transportation and Transit: sections 1.0–7.0 and supplements 8.0–14.0, each a PDF | A picture, item number and size for every standard sign. [7.0 Guide](https://www2.gov.bc.ca/assets/gov/driving-and-transportation/transportation-infrastructure/engineering-standards-and-guidelines/traffic-engineering-and-safety/traffic-engineering/traffic-signs-and-pavement-markings/standard-traffic-signs/standard-traffic-signs/guide_signs.pdf) (52 pages, March 2026) lists the route markers, including the Yellowhead and Crowsnest ones. [6.0 Information](https://www2.gov.bc.ca/assets/gov/driving-and-transportation/transportation-infrastructure/engineering-standards-and-guidelines/traffic-engineering-and-safety/traffic-engineering/traffic-signs-and-pavement-markings/standard-traffic-signs/standard-traffic-signs/information_signs.pdf) (130 pages, October 2026) lists Stop of Interest Ahead and Entrance (I-007-1, I-009-2), Historic Site Ahead, Viewpoint, Litter Barrel and the Rest Area set. The pictures appear to be placed images, not vector drawings | Both opened; indexes read, plates not examined |
+| [Sign Blank Dimensions](https://www2.gov.bc.ca/assets/gov/driving-and-transportation/transportation-infrastructure/engineering-standards-and-guidelines/traffic-engineering-and-safety/traffic-engineering/traffic-signs-and-pavement-markings/standard-traffic-signs/specifications/sign_blank_dimensions.pdf) and [Specifications for Fabrication and Supply](https://www2.gov.bc.ca/assets/gov/driving-and-transportation/transportation-infrastructure/engineering-standards-and-guidelines/traffic-engineering-and-safety/traffic-engineering/traffic-signs-and-pavement-markings/standard-traffic-signs/specifications/sign_fabrication_specs.pdf) | Blank sizes and materials | Listed, not opened |
+| Supplements: [8.0 Service and Attraction](https://www2.gov.bc.ca/assets/gov/driving-and-transportation/transportation-infrastructure/engineering-standards-and-guidelines/traffic-engineering-and-safety/traffic-engineering/traffic-signs-and-pavement-markings/standard-traffic-signs/supplemental-traffic-signs/service_and_attraction_signs.pdf), [12.0 Circle Route](https://www2.gov.bc.ca/assets/gov/driving-and-transportation/transportation-infrastructure/engineering-standards-and-guidelines/traffic-engineering-and-safety/traffic-engineering/traffic-signs-and-pavement-markings/standard-traffic-signs/supplemental-traffic-signs/circle_route_signs.pdf), [13.0 Visitor Centre](https://www2.gov.bc.ca/assets/gov/driving-and-transportation/transportation-infrastructure/engineering-standards-and-guidelines/traffic-engineering-and-safety/traffic-engineering/traffic-signs-and-pavement-markings/standard-traffic-signs/supplemental-traffic-signs/visitor_centre_signs.pdf), [9.0 Wine Route](https://www2.gov.bc.ca/assets/gov/driving-and-transportation/transportation-infrastructure/engineering-standards-and-guidelines/traffic-engineering-and-safety/traffic-engineering/traffic-signs-and-pavement-markings/standard-traffic-signs/supplemental-traffic-signs/wine_route_signs.pdf) | The tourism-facing sign families | Listed, not opened |
+| [Catalogue of Forest Service Road Signs](https://www2.gov.bc.ca/assets/gov/farming-natural-resources-and-industry/natural-resource-use/resource-roads/engineering-manual/catalog_of_forest_service_road_signs.pdf), Ministry of Forests, 22 January 2026, 53 pages | Each sign with its blank and dimensions, its colours and its typeface (ClearviewHwy). Plain modern signs: PULLOUT 400 m AHEAD, bridge limits and the like | Seen |
+| [Recreation Sites and Trails drawings](https://www2.gov.bc.ca/gov/content/sports-culture/recreation/camping-hiking/sites-trails/program/maintenance-development/drawings) | Trail signs (regulatory, caution, land use) and sign kiosks. No site entrance sign is listed | Listed, not opened |
+
+No BC Parks sign manual was found, and nothing on the routed wooden park entrance signs.
+
+### Not reached
+
+The first attempt was to cover Forest Service ranger station and fire-hazard boards, plantation and
+tree farm licence signs, BC Ferries terminal signs, Government Liquor Store and Government Agent
+signs, PGE and BC Rail stations, SkyTrain in 1986 and Expo 86 site signage. None of these was
+searched. BC Archives would be the place to start for all of them, and it could not be reached from
+here; tranbc.ca’s highway-history posts refused automated requests but open in a browser.
