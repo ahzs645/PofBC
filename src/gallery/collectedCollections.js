@@ -2,13 +2,17 @@
 // A date on a report is a sighting, never an inferred logo adoption date.
 import { COLLECTED_BODIES, COLLECTED_SPECIMENS } from './collectedData.js'
 import { EXPANDED_IDENTITY_BODIES } from './expandedIdentityData.js'
+import { MUNICIPAL_IDENTITY_BODIES } from './municipalIdentityData.js'
 import { COLLECTED_DISPLAY } from './collectedDisplay.js'
 import { RAILWAY_HISTORY } from './railwayHistoryData.js'
 import { COLLECTED_PALETTES } from './collectedPalettes.js'
 
 // The historical Crown/health importer remains reproducible. Explicit identity subjects extend
 // its output without teaching that importer to mistake services or regional bodies for Crowns.
-export const ALL_COLLECTED_BODIES = [...COLLECTED_BODIES, ...EXPANDED_IDENTITY_BODIES]
+export const ALL_COLLECTED_BODIES = [...COLLECTED_BODIES, ...EXPANDED_IDENTITY_BODIES, ...MUNICIPAL_IDENTITY_BODIES]
+
+/** Municipal governments, shelved apart from the provincial bodies. */
+export const isMunicipalBody = (body) => body.kind?.startsWith('municipal-')
 
 /**
  * The file a body's card shows: one with a display copy that keeps its own colours on the light
@@ -144,7 +148,8 @@ const kindOf = (body) => ({
   'health-authority': 'health organization', 'crown-corporation': 'Crown corporation',
   'regional-authority': 'regional authority', 'service-brand': 'service identity',
   'public-institution': 'public institution', 'regional-body': 'regional public body',
-  'independent-office': 'independent office'
+  'independent-office': 'independent office',
+  'municipal-city': 'city', 'municipal-district': 'district municipality', 'municipal-town': 'town', 'municipal-village': 'village'
 }[body.kind] ?? body.kind?.replace(/-/g, ' ') ?? 'public identity')
 
 /** A body's collected files as gallery entries. */
@@ -157,7 +162,7 @@ export const specimenEntriesOf = (program, timeline) => designsOf(COLLECTED_SPEC
 
 const collectionOf = (body) => ({
   id: `collected-${body.id}`,
-  shelf: 'bodies',
+  shelf: isMunicipalBody(body) ? 'municipalities' : 'bodies',
   // Service brands can have artwork without a corresponding legal organization in the atlas.
   graphNode: Object.hasOwn(body, 'graphNode') ? body.graphNode : body.id,
   fileCollection: true,

@@ -35,6 +35,11 @@ test('identity subjects have stable unique keys, readable evidence and a declare
     assert.ok(subject.sources.length, `${subject.id}: no evidence route`)
     for (const source of subject.sources) {
       assert.ok(source.title?.trim(), `${subject.id}: source title missing`)
+      // A printed source with no online copy says so, rather than inventing a link.
+      if (source.url === undefined) {
+        assert.ok(source.citation?.trim(), `${subject.id}: a source needs a URL or a print citation`)
+        continue
+      }
       const url = new URL(source.url)
       assert.equal(url.protocol, 'https:', `${subject.id}: non-HTTPS source`)
       assert.ok(!url.username && !url.password, `${subject.id}: source must not contain credentials`)
@@ -163,7 +168,9 @@ test('uncertainty and a documented shared signature are explicit without fabrica
   }
   for (const subject of IDENTITY_SUBJECTS) {
     if (subject.identityStatus !== undefined) {
-      assert.ok(['shared-identity', 'distinct-unconfirmed'].includes(subject.identityStatus), `${subject.id}: asset coverage must be derived`)
+      // A municipality with no located logo source is recorded as wanted, not as a source lead.
+      const allowed = subject.family === 'municipalities' ? ['artwork-missing'] : ['shared-identity', 'distinct-unconfirmed']
+      assert.ok(allowed.includes(subject.identityStatus), `${subject.id}: asset coverage must be derived`)
     }
     for (const field of ['assets', 'svg', 'isVector', 'held', 'adopted', 'from', 'to']) {
       assert.ok(!(field in subject), `${subject.id}: ${field} requires asset/chronology evidence elsewhere`)

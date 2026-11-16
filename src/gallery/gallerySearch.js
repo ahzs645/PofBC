@@ -5,6 +5,7 @@
 
 import { GALLERY_COLLECTIONS, entriesOf } from './collections.js'
 import { searchIdentitySubjects } from './identityCoverage.js'
+import { nodesOf } from './collectedCollections.js'
 
 const fold = (text) => String(text ?? '').normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase()
 
@@ -21,10 +22,15 @@ const matches = (words, ...texts) => {
  * collection already matches is not listed again on its own.
  * @returns {{ collections: object[], marks: { entry: object, collection: object }[] }}
  */
+const ownCollection = (subject, collection) => subject.collectionIds?.includes(collection.id) ||
+  collection.id === `collected-${subject.id}` || nodesOf(collection).includes(subject.entryOwner ?? subject.id)
+
 export const searchGallery = (query, collections = GALLERY_COLLECTIONS) => {
   const words = wordsOf(query)
   if (!words.length) return { collections: [], marks: [] }
-  const aliases = new Set(searchIdentitySubjects(query).flatMap((subject) => subject.collections.map((collection) => collection.id)))
+  // An alias opens the subject's own collections, not a shared shelf it has one mark on.
+  const aliases = new Set(searchIdentitySubjects(query).flatMap((subject) => subject.collections
+    .filter((collection) => ownCollection(subject, collection)).map((collection) => collection.id)))
   const found = collections.filter((collection) =>
     aliases.has(collection.id) || matches(words, collection.label, collection.body, collection.years, collection.intro))
   const shown = new Set(found.map((collection) => collection.id))

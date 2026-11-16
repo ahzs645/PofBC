@@ -10,6 +10,8 @@ import { count, Paged, RoleIcon } from './common.jsx'
 import { councilCsv, councilFiguresByYear, councilMeasure, councilMunicipalities, councilNotes, councilSourceMap, councilSourceUrl, describeCouncilYears, loadCouncilPay } from './councilPay.js'
 import { formatMoney } from './money.js'
 import { saveText } from './exportCsv.js'
+import { SiteLink } from '../site/navigation.jsx'
+import { MUNICIPAL_PROFILE_BY_COUNCIL } from './municipalProfiles.js'
 import './councilPay.css'
 
 const money = (value, currency = 'CAD') => formatMoney(value, 'Not reported', currency)
@@ -67,6 +69,7 @@ const Municipality = ({ data, place, sources, layout, onEmployer }) => {
       <p className="salaries__meta council-pay__links">
         {place.employerSlug && onEmployer && <><button type="button" className="salaries__link" onClick={() => onEmployer(place.employerSlug)}>Every disclosed salary at {place.name}</button> · </>}
         <button type="button" className="salaries__link" onClick={download}>Download as CSV</button>
+        {MUNICIPAL_PROFILE_BY_COUNCIL[place.name] && <> · <SiteLink className="salaries__link" to={{ view: 'gallery', subject: MUNICIPAL_PROFILE_BY_COUNCIL[place.name] }}>Municipal profile: logo and arms</SiteLink></>}
       </p>
 
       <section aria-labelledby="council-figures">

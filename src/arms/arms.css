@@ -76,7 +76,8 @@
 }
 .arms__municipal li { display: flex; justify-content: space-between; gap: 8px; padding: 4px 0; border-bottom: 1px solid var(--outline); }
 .arms__municipal a { color: var(--ink); }
-.arms__municipal-date { color: var(--ink-muted); font-size: 13px; white-space: nowrap; }
+.arms__municipal-date { margin-left: auto; color: var(--ink-muted); font-size: 13px; white-space: nowrap; }
+.arms__municipal a.arms__municipal-profile { color: var(--ink-muted); font-size: 12px; white-space: nowrap; }
 
 .arms__detail { display: grid; gap: var(--gap); min-width: 0; }
 .arms__back {

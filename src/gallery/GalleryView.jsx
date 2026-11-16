@@ -941,7 +941,7 @@ export const GalleryView = ({ onOpenGovernment, onOpenInGenerator }) => {
           </section>
         )}
         <RailwayHistory history={collection?.railwayHistory} compact />
-        <IdentityCollectionLinks collectionId={collection?.id} onOpenSubject={openSubject} onOpenGovernment={onOpenGovernment} />
+        <IdentityCollectionLinks collectionId={collection?.id} entryId={open.id} onOpenSubject={openSubject} onOpenGovernment={onOpenGovernment} />
         <AboutMark identity={open.identity} />
       </div>
     )
@@ -970,6 +970,24 @@ export const GalleryView = ({ onOpenGovernment, onOpenInGenerator }) => {
             ))}
           </div>
         </section>
+        {COLLECTIONS_ON_SHELF('municipalities').length > 0 && (
+          <section className="gallery__shelf" aria-labelledby="shelf-municipalities">
+            <h2 id="shelf-municipalities" className="gallery__shelf-title">Municipalities</h2>
+            <p className="gallery__intro gallery__shelf-intro">
+              Corporate logos as each municipality’s own website serves them, archived byte-for-byte. They are
+              not adoption dates or complete histories; arms are a separate emblem. The <a href="?view=gallery&coverage=1&identity-family=municipalities" onClick={(event) => {
+                if (event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return
+                event.preventDefault()
+                openRegister({ family: 'municipalities' })
+              }}>register</a> lists all 162 and what is still wanted.
+            </p>
+            <div className="gallery__collections">
+              {COLLECTIONS_ON_SHELF('municipalities').map((entry) => (
+                <CollectionCard key={entry.id} collection={entry} theme={theme} onOpen={() => choose(entry.id)} />
+              ))}
+            </div>
+          </section>
+        )}
         <section className="gallery__shelf" aria-labelledby="shelf-bc-mark">
           <h2 id="shelf-bc-mark" className="gallery__shelf-title">The Province’s one-off marks</h2>
           <div className="gallery__collections">
@@ -1007,7 +1025,7 @@ export const GalleryView = ({ onOpenGovernment, onOpenInGenerator }) => {
         <GraphLink node={collection.graphNode} onOpenGovernment={onOpenGovernment} />
       </div>
       <p className="gallery__intro">{collection.intro}</p>
-      <IdentityCollectionLinks collectionId={collection.id} onOpenSubject={openSubject} onOpenGovernment={onOpenGovernment} />
+      <IdentityCollectionLinks collectionId={collection.id} graphShown={collection.graphNode} onOpenSubject={openSubject} onOpenGovernment={onOpenGovernment} />
       <RailwayHistoryLinks history={collection.railwayHistory} />
 
       {timeline}

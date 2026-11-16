@@ -25,6 +25,7 @@ import { SourceLink } from './DisclosureEvidence.jsx'
 import { filterPositionGroups, matchesRecordQuery } from './viewState.js'
 import { isCadEmployer } from './recordAnnotations.js'
 import { ForeignObservations } from './RecordAnnotation.jsx'
+import { MUNICIPAL_PROFILE_BY_EMPLOYER } from './municipalProfiles.js'
 
 const SHOWS = ['positions', 'people', 'everyone', 'trends']
 
@@ -223,6 +224,8 @@ export const EmployerPage = ({ entry, years, sources, year: wantedYear, show, ro
         <p className="salaries__note">
           {entry.sector}
           {entry.names.length > 1 ? ` · also filed as ${entry.names.slice(0, -1).map((each) => `“${each}”`).join(', ')}` : ''}
+          {/* A municipality is not a provincial body, so its profile is in the collection register. */}
+          {!entry.body && MUNICIPAL_PROFILE_BY_EMPLOYER[entry.slug] && <> · <SiteLink className="salaries__link" to={{ view: 'gallery', subject: MUNICIPAL_PROFILE_BY_EMPLOYER[entry.slug] }}>Municipal profile: logo, arms and council pay</SiteLink></>}
         </p>
         <YearPicker years={years} counts={entry.counts} coverage={entry.coverage} value={year} onChange={pick} />
         <h3 className="salaries__year-title">{reportingYearLabel(years[year])}</h3>

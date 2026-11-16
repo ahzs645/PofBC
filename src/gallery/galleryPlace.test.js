@@ -10,7 +10,7 @@ test('a subject link leaves the prior mark, palette and register filters behind'
 })
 
 test('register filters round-trip in a shareable URL without changing the deployment base', () => {
-  const filters = { family: 'transit', state: 'missing', scope: 'core', query: 'Sea Bus' }
+  const filters = { family: 'municipalities', state: 'missing', scope: 'core', query: 'Sea Bus', region: 'Capital Regional District' }
   const url = galleryPlaceUrl('https://example.org/PofBC/?subject=translink', { coverage: true, filters })
   assert.equal(url.searchParams.get('view'), 'gallery')
   assert.equal(url.searchParams.get('coverage'), '1')
