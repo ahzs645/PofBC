@@ -1,12 +1,16 @@
 import { Suspense, lazy, useEffect, useState } from 'react'
 import { BcLockup } from '../logo/BcLockup.jsx'
-import { CurrentControls } from '../current/CurrentControls.jsx'
-import { CurrentLockup } from '../current/CurrentLockup.jsx'
 import { CrestLockup } from '../crest/CrestLockup.jsx'
 import { FlagLockup } from '../flag/FlagLockup.jsx'
 import { DocumentArmsPanel } from './DocumentArmsPanel.jsx'
 const DocumentArmsPreview = lazy(() => import('./DocumentArmsPreview.jsx'))
 const DocumentArmsReference = lazy(() => import('./DocumentArmsPreview.jsx').then((module) => ({ default: module.DocumentArmsReference })))
+// The current identity's drawing and alphabet come with its lockup and controls, so they are fetched
+// when that identity is chosen (or a link opens on it), not with every page.
+const loadCurrentLockup = () => import('../current/CurrentLockup.jsx')
+const loadCurrentControls = () => import('../current/CurrentControls.jsx')
+const CurrentLockup = lazy(() => loadCurrentLockup().then((module) => ({ default: module.CurrentLockup })))
+const CurrentControls = lazy(() => loadCurrentControls().then((module) => ({ default: module.CurrentControls })))
 // Every other view is loaded when it is opened (viewLoaders.js says why each is its own chunk).
 const lazyView = (id, name) => lazy(() => VIEW_LOADERS[id]().then((module) => ({ default: module[name] })))
 const GalleryView = lazyView('gallery', 'GalleryView')
@@ -21,7 +25,7 @@ const GuidesView = lazyView('guides', 'GuidesView')
 const StationeryView = lazyView('stationery', 'StationeryView')
 const SalariesView = lazyView('salaries', 'SalariesView')
 const HealthStoryView = lazyView('health-map', 'HealthStoryView')
-import { generatorPatchFor } from '../government/eraMark.js'
+import { generatorPatchFor } from '../government/generatorPatch.js'
 import {
   FLAG_PALETTE_ORDER, FLAG_PALETTE_HINTS, FLAG_PALETTE_LABELS, FLAG_SWATCHES
 } from '../flag/flagPalettes.js'
@@ -183,6 +187,18 @@ export const App = () => {
       title: view === 'generator' || !entry ? DEFAULT_TITLE : documentTitle(entry.label),
       description: view === 'generator' || !entry ? GENERATOR_DESCRIPTION : `${entry.description}.`
     })
+  }, [view])
+  // On the generator, the current identity is fetched once the page has settled, so choosing it
+  // does not wait on the network. The other views never ask for it.
+  useEffect(() => {
+    if (view !== 'generator') return undefined
+    const fetchCurrent = () => { loadCurrentLockup().catch(() => {}); loadCurrentControls().catch(() => {}) }
+    if (globalThis.requestIdleCallback) {
+      const id = globalThis.requestIdleCallback(fetchCurrent, { timeout: 4000 })
+      return () => globalThis.cancelIdleCallback?.(id)
+    }
+    const id = setTimeout(fetchCurrent, 1500)
+    return () => clearTimeout(id)
   }, [view])
   const theme = useSiteTheme()
   const showView = (next) => {
@@ -351,14 +367,16 @@ export const App = () => {
                 <DocumentArmsPreview lockup={lockup} />
               </Suspense>
             ) : isCurrent ? (
-              <CurrentLockup
-                text={state.currentName}
-                language={state.language}
-                variant={state.currentVariant}
-                background={state.currentBackground}
-                clearSpaceFactor={lockup.clearSpaceFactor}
-                title="Province of British Columbia ministry mark"
-              />
+              <Suspense fallback={<p role="status">Loading the current mark…</p>}>
+                <CurrentLockup
+                  text={state.currentName}
+                  language={state.language}
+                  variant={state.currentVariant}
+                  background={state.currentBackground}
+                  clearSpaceFactor={lockup.clearSpaceFactor}
+                  title="Province of British Columbia ministry mark"
+                />
+              </Suspense>
             ) : isCrest ? (
               <CrestLockup
                 arrangement={state.crestArrangement}
@@ -426,7 +444,7 @@ export const App = () => {
 
           {isDocument && <DocumentArmsPanel state={state} update={update} clearSpaceOptions={CLEAR_SPACE_OPTIONS} />}
 
-          {isCurrent && <CurrentControls state={state} update={update} />}
+          {isCurrent && <Suspense fallback={null}><CurrentControls state={state} update={update} /></Suspense>}
 
           {isCurrent && (
             <section className="panel">

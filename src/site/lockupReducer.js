@@ -4,7 +4,7 @@
 // when one field should drag another along, and when it should stop — can be tested directly
 // rather than through a rendered component.
 
-import { recommendedVariant } from '../current/currentMarks.js'
+import { recommendedVariant } from '../current/currentVariants.js'
 import { findMinistry } from '../current/ministries.js'
 import { recommendedPalette } from '../flag/flagPalettes.js'
 import { defaultMarkAlignment, getLayout } from '../logo/layouts.js'

@@ -5,7 +5,6 @@
 // any size because the vector is rasterised at the target resolution rather than upscaled.
 
 import { renderLockupSvg, resolveLockup } from '../logo/renderLogoSvg.js'
-import { markSize, renderCurrentSvg } from '../current/currentMarks.js'
 import { flagSize, renderFlagSvg } from '../flag/renderFlagSvg.js'
 import { crestSize, renderCrestSvg } from '../crest/renderCrestSvg.js'
 import { BRAND_FONT_FAMILY, getEmbeddedFaces, getEmbeddedFontCss } from './fontEmbed.js'
@@ -220,11 +219,15 @@ const buildFlagArtwork = ({
  * It comes out as outlines — the mark is the Province's drawing and the wording is set from their
  * alphabet, both already paths — so there is no font to embed and nothing to convert. That is why
  * the outline option does not apply to this era and the PDF path needs no faces registered.
+ *
+ * The drawing and its alphabet are fetched here, on the first current-era export, rather than with
+ * every page: by then the preview has usually loaded them already.
  */
-const buildCurrentArtwork = ({
+const buildCurrentArtwork = async ({
   currentName, language = 'en', currentVariant = 'colour',
   background, clearSpaceFactor = 0, pixelWidth, title
 }) => {
+  const { markSize, renderCurrentSvg } = await import('../current/currentMarks.js')
   const { width, height } = markSize({ text: currentName, language })
   // Measured against this artwork, not the crest's — they are nothing like the same size.
   const padding = clearSpaceFactor * width
@@ -355,7 +358,7 @@ export const renderLogoBlob = async ({
   // flag era's layout needs no font, so its box can be had before any outline has been loaded.
   const current = options.era === 'document'
     ? await buildDocumentArtwork({ ...options, pixelWidth })
-    : options.era === 'current' ? buildCurrentArtwork({ ...options, pixelWidth }) : null
+    : options.era === 'current' ? await buildCurrentArtwork({ ...options, pixelWidth }) : null
   const resolved = current ??
     (options.era === 'flag'
       ? { viewBox: flagViewBox(options) }

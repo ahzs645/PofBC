@@ -115,10 +115,29 @@ export const isAhead = (event, day) => event.status !== 'source_reported_past' &
  */
 export const isConflicting = (event) => event.status === 'conflicting' || event.certainty === 'conflicting' || Boolean(event.conflictGroup)
 
+// Where each subject's events are in EVENTS, as its subject or among its related bodies. The
+// diagram asks for every body's events each time a year is opened, and reading the whole list for
+// each of them was most of that work.
+let positions = null
+const positionsOf = (subject) => {
+  if (!positions) {
+    positions = new Map()
+    EVENTS.forEach((event, at) => {
+      for (const id of new Set([event.subject, ...(event.related ?? [])])) {
+        if (!positions.has(id)) positions.set(id, [])
+        positions.get(id).push(at)
+      }
+    })
+  }
+  return positions.get(subject) ?? []
+}
+
 /** Events about any of these subjects, oldest first. */
 export const eventsFor = (subjects) => {
-  const wanted = new Set(subjects)
-  return EVENTS.filter((event) => wanted.has(event.subject) || (event.related ?? []).some((id) => wanted.has(id)))
+  const wanted = [...new Set(subjects)]
+  if (wanted.length === 1) return positionsOf(wanted[0]).map((at) => EVENTS[at])
+  const found = new Set(wanted.flatMap(positionsOf))
+  return [...found].sort((a, b) => a - b).map((at) => EVENTS[at])
 }
 
 /** Events that fall in `year` — a range counts in every year it touches. */

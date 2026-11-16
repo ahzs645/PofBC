@@ -48,6 +48,8 @@
   color: var(--ink-faint);
 }
 .patches__org { padding-top: 14px; }
+/* An organization off screen is not laid out or painted until it is scrolled near (see plates.css). */
+.patches__org { content-visibility: auto; contain-intrinsic-size: auto 420px; }
 .patches__org + .patches__org { margin-top: 10px; border-top: 1px solid var(--outline); }
 .patches__org-head { display: flex; flex-wrap: wrap; align-items: baseline; gap: 2px 10px; margin-bottom: 12px; }
 .patches__org-head h4 { margin: 0; font-size: 18px; }

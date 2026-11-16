@@ -92,11 +92,19 @@ export const CURRENT_MINISTRIES = [
   'Ministry of Water, Land and Resource Stewardship'
 ]
 
-export const fold = (name) => String(name ?? '')
-  .replace(/[‘’ʼ]/g, "'")
-  .replace(/\s+/g, ' ')
-  .trim()
-  .toLowerCase()
+const folded = new Map()
+// Remembered, because names are compared pairwise all through the diagram (every ministry against
+// every episode, every body against every node): opening one year folds the same few hundred names
+// some tens of thousands of times.
+export const fold = (name) => {
+  const text = String(name ?? '')
+  let result = folded.get(text)
+  if (result === undefined) {
+    result = text.replace(/[‘’ʼ]/g, "'").replace(/\s+/g, ' ').trim().toLowerCase()
+    folded.set(text, result)
+  }
+  return result
+}
 
 export const slugify = (name) => fold(name)
   .replace(/'/g, '')
