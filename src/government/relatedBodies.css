@@ -111,8 +111,11 @@
 .gov-related__name span { font-size: 12px; color: var(--gov-ink-4); }
 .gov-related__chevron { flex: none; color: var(--gov-ink-4); }
 .gov-related__item:hover { background: var(--gov-hover); }
-.gov-related__item[aria-current] { background: var(--gov-hover); box-shadow: inset 3px 0 0 var(--gov-link); }
-.gov-related__item[aria-current] .gov-related__chevron { color: var(--gov-ink); }
+/* The open body is marked as the government view's list marks its own: the row stays lifted, with
+   no coloured edge (one would follow the row's rounded corner into a curve). */
+.gov-related__item[aria-current] { background: var(--gov-hover); }
+.gov-related__item[aria-current] .gov-related__name span,
+.gov-related__item[aria-current] .gov-related__chevron { color: var(--gov-ink-3); }
 .gov-related__empty { padding: 8px; }
 
 .gov-related a:focus-visible,

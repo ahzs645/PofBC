@@ -106,7 +106,7 @@
   :root:not([data-theme="light"]) .hm-fit span { background: #24392c; color: #a8d8b8; }
   :root:not([data-theme="light"]) .hm-fit--medium span { background: #3f3218; color: #ecc97f; }
 }
-.hm-note { margin-top: 10px !important; padding: 8px 10px; border-left: 3px solid var(--hm-select); background: var(--hover); font-size: 13px; }
+.hm-note { margin-top: 10px !important; padding: 8px 12px; border-radius: 8px; background: var(--hover); font-size: 13px; }
 .hm-chips { display: flex; flex-wrap: wrap; gap: 6px; }
 .hm-chips button { min-height: 32px; padding: 4px 10px; border: 1px solid var(--mid); border-radius: 6px; background: var(--surface); color: var(--ink); font-size: 13px; text-align: left; }
 .hm-chips button:hover { background: var(--hover); }
