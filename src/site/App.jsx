@@ -20,6 +20,7 @@ const SignsView = lazy(() => import('../signs/SignsView.jsx').then((module) => (
 const PatchesView = lazy(() => import('../patches/PatchesView.jsx').then((module) => ({ default: module.PatchesView })))
 // Licence plates are drawn by PlateForge (vendor/plateforge), with its B.C. region data and fonts.
 const PlatesView = lazy(() => import('../plates/PlatesView.jsx').then((module) => ({ default: module.PlatesView })))
+const ArmsView = lazy(() => import('../arms/ArmsView.jsx').then((module) => ({ default: module.ArmsView })))
 const GuidesView = lazy(() => import('../guides/GuidesView.jsx').then((module) => ({ default: module.GuidesView })))
 // The stationery brings brandkit's template engine and studio (vendor/brandkit).
 const StationeryView = lazy(() => import('../stationery/StationeryView.jsx').then((module) => ({ default: module.StationeryView })))
@@ -155,7 +156,7 @@ const initialView = () => {
  */
 const writeView = (view) => {
   const url = salaryPlaceUrl(globalThis.location.href, {})
-  for (const key of ['view', 'year', 'node', 'mode', 'compare', 'undated', 'local', 'instrument', 'logos', 'mark', 'subject', 'coverage', 'identity-family', 'identity-state', 'identity-scope', 'identity-query', 'internal', 'internal-logo', 'poster', 'sign', 'part', 'guide', 'page', 'org', 'patch', 'group', 'family', 'area', 'chapter', 'story']) url.searchParams.delete(key)
+  for (const key of ['view', 'year', 'node', 'mode', 'compare', 'undated', 'local', 'instrument', 'logos', 'mark', 'subject', 'coverage', 'identity-family', 'identity-state', 'identity-scope', 'identity-query', 'internal', 'internal-logo', 'poster', 'sign', 'part', 'guide', 'page', 'org', 'patch', 'group', 'family', 'area', 'chapter', 'story', 'holder']) url.searchParams.delete(key)
   if (view !== 'generator') url.searchParams.set('view', view)
   writeHistory(url)
 }
@@ -293,6 +294,12 @@ export const App = () => {
       {view === 'plates' && (
         <Suspense fallback={<p className="gallery__intro" role="status">Loading the licence plates…</p>}>
           <PlatesView key={visit} />
+        </Suspense>
+      )}
+
+      {view === 'arms' && (
+        <Suspense fallback={<p className="gallery__intro" role="status">Loading the coats of arms…</p>}>
+          <ArmsView key={visit} />
         </Suspense>
       )}
 

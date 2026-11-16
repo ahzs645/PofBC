@@ -1,0 +1,167 @@
+.arms { display: grid; gap: var(--gap); min-width: 0; }
+
+.arms__intro {
+  background: var(--surface);
+  border-radius: var(--radius);
+  padding: 20px;
+}
+.arms__intro h2 { margin: 0 0 6px; font-size: 22px; }
+.arms__intro p { margin: 0; max-width: 68ch; color: var(--ink-muted); line-height: 1.55; }
+
+.arms__group { display: grid; gap: 8px; margin-top: 12px; }
+.arms__group h3 { margin: 0; padding: 0 4px; font-size: 18px; }
+.arms__group-description { margin: 0 0 4px; padding: 0 4px; max-width: 68ch; color: var(--ink-muted); line-height: 1.5; }
+
+.arms__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 230px), 1fr));
+  gap: var(--gap);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.arms__grid--feature { grid-template-columns: minmax(0, 640px); }
+
+.arms__card { min-width: 0; }
+.arms__open {
+  display: grid;
+  grid-template-columns: 96px minmax(0, 1fr);
+  align-items: center;
+  gap: 16px;
+  width: 100%;
+  height: 100%;
+  padding: 16px;
+  border: 2px solid transparent;
+  border-radius: var(--radius);
+  background: var(--surface);
+  color: var(--ink);
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+.arms__open:hover { border-color: var(--mid); }
+.arms__open:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; }
+.arms__card--feature .arms__open { grid-template-columns: 150px minmax(0, 1fr); padding: 20px; gap: 24px; }
+
+.arms__art {
+  display: grid;
+  place-items: center;
+  aspect-ratio: 5 / 6;
+  width: 100%;
+  color: var(--ink);
+}
+.arms__art { overflow: hidden; }
+.arms__art img { display: block; width: 100%; height: 100%; object-fit: contain; }
+.arms__art svg { max-width: 100%; max-height: 100%; }
+.arms__art--large { width: min(100%, 260px); }
+.arms__vector { width: 100%; height: 100%; }
+.arms__placeholder { width: 60%; color: var(--ink-faint); }
+
+.arms__card-text { display: grid; gap: 4px; min-width: 0; }
+.arms__card-name { font-weight: 650; font-size: 16px; line-height: 1.3; }
+.arms__card--feature .arms__card-name { font-size: 22px; }
+.arms__card-motto { font-style: italic; color: var(--ink-2); font-size: 14px; }
+.arms__card-meta { color: var(--ink-muted); font-size: 13px; }
+
+.arms__municipal {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 220px), 1fr));
+  gap: 2px 16px;
+  margin: 0;
+  padding: 16px 20px;
+  list-style: none;
+  background: var(--surface);
+  border-radius: var(--radius);
+}
+.arms__municipal li { display: flex; justify-content: space-between; gap: 8px; padding: 4px 0; border-bottom: 1px solid var(--outline); }
+.arms__municipal a { color: var(--ink); }
+.arms__municipal-date { color: var(--ink-muted); font-size: 13px; white-space: nowrap; }
+
+.arms__detail { display: grid; gap: var(--gap); min-width: 0; }
+.arms__back {
+  justify-self: start;
+  border: 0;
+  background: none;
+  padding: 0 4px;
+  color: var(--ink-muted);
+  font: inherit;
+  cursor: pointer;
+}
+.arms__header {
+  display: grid;
+  grid-template-columns: minmax(0, 260px) minmax(0, 1fr);
+  gap: 24px;
+  align-items: start;
+  padding: 20px;
+  background: var(--surface);
+  border-radius: var(--radius);
+}
+.arms__header-text { display: grid; gap: 10px; min-width: 0; }
+.arms__header h2 { margin: 0; font-size: 24px; }
+.arms__header h2:focus { outline: none; }
+.arms__motto { margin: 0; color: var(--ink-2); }
+.arms__facts { display: grid; gap: 4px; margin: 0; }
+.arms__facts div { display: grid; grid-template-columns: 96px minmax(0, 1fr); gap: 8px; }
+.arms__facts dt { color: var(--ink-muted); }
+.arms__facts dd { margin: 0; }
+.arms__description { margin: 0; max-width: 68ch; line-height: 1.55; }
+.arms__note { margin: 0; max-width: 68ch; color: var(--ink-muted); font-size: 14px; line-height: 1.5; }
+.arms__credit { margin: 0; color: var(--ink-faint); font-size: 13px; }
+
+.arms__blazon summary { cursor: pointer; color: var(--ink-2); font-weight: 600; }
+.arms__blazon dl { display: grid; gap: 8px; margin: 10px 0 0; }
+.arms__blazon dt { color: var(--ink-muted); font-size: 13px; }
+.arms__blazon dd { margin: 0; max-width: 68ch; line-height: 1.5; }
+
+.arms__section { padding: 20px; background: var(--surface); border-radius: var(--radius); min-width: 0; }
+.arms__section h3 { margin: 0 0 12px; font-size: 18px; }
+.arms__section .arms__group-description { padding: 0; margin-bottom: 12px; }
+
+.arms__stages {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr));
+  gap: var(--gap);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.arms__stages > li { display: grid; align-content: start; gap: 6px; padding: 14px; border: 1px solid var(--outline); border-radius: var(--radius-sm); }
+.arms__stages p { margin: 0; color: var(--ink-2); line-height: 1.5; font-size: 14px; }
+.arms__stage-year { font-size: 28px; font-weight: 700; line-height: 1; color: var(--sun); }
+
+.arms__specimen-section + .arms__specimen-section { margin-top: 20px; }
+.arms__specimen-section h4 { margin: 0 0 10px; font-size: 15px; color: var(--ink-2); }
+.arms__specimens {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 240px), 1fr));
+  gap: var(--gap);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.arms__specimen figure { display: grid; gap: 10px; margin: 0; height: 100%; align-content: start; }
+.arms__specimen-art {
+  display: block;
+  box-sizing: border-box;
+  overflow: hidden;
+  height: 200px;
+  padding: 10px;
+  background: var(--checker-b);
+  border-radius: var(--radius-sm);
+}
+.arms__specimen-art img { display: block; width: 100%; height: 100%; object-fit: contain; }
+.arms__specimen figcaption { display: grid; gap: 3px; font-size: 14px; }
+.arms__specimen figcaption p { margin: 4px 0 0; color: var(--ink-2); line-height: 1.45; }
+.arms__specimen-number { color: var(--ink-faint); font-size: 12px; font-variant-numeric: tabular-nums; }
+.arms__specimen-date { color: var(--ink-muted); }
+.arms__specimen-class { color: var(--ink-faint); font-size: 13px; }
+
+.arms__sources { display: grid; gap: 4px; margin: 6px 0 0; padding: 0 0 0 18px; font-size: 13px; }
+.arms__sources a { color: var(--ink-2); }
+
+@media (max-width: 640px) {
+  .arms__header { grid-template-columns: minmax(0, 1fr); padding: 16px; }
+  .arms__art--large { width: min(70%, 220px); justify-self: center; }
+  .arms__card--feature .arms__open { grid-template-columns: 96px minmax(0, 1fr); padding: 16px; gap: 16px; }
+  .arms__section { padding: 16px; }
+}
