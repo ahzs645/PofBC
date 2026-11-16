@@ -20,16 +20,16 @@ export const Panel = ({ open, narrow = false, contentKey, onClose, className = '
           initial={narrow ? { opacity: 0, y: 60 } : { opacity: 0, x: 48 }}
           animate={{ opacity: 1, x: 0, y: 0 }}
           exit={narrow ? { opacity: 0, y: 60 } : { opacity: 0, x: 48 }}
-          transition={{ type: 'spring', stiffness: 260, damping: 30 }}
+          transition={{ type: 'spring', stiffness: 520, damping: 44 }}
           onClick={(e) => e.stopPropagation()}
         >
           {onClose && <button type="button" className="pv-panel-close" aria-label="Close" onClick={onClose}>×</button>}
           <motion.div
             key={contentKey}
             className="pv-panel-body"
-            initial={{ opacity: 0, y: 14 }}
+            initial={{ opacity: 0, y: 6 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.28, ease: [0.2, 0.7, 0.2, 1] }}
+            transition={{ duration: 0.16, ease: [0.2, 0.7, 0.2, 1] }}
           >
             {children}
           </motion.div>

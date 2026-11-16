@@ -119,8 +119,8 @@ export const ExportPanel = ({ lockup, era = 'historical' }) => {
       </label>
       <p className="field__note">
         {outlineText
-          ? 'The type becomes shapes. Nothing depends on the font any more, so it cannot be substituted — this is what a printer usually asks for. It can no longer be edited or selected.'
-          : 'The type stays live and selectable, with the font embedded. Keep this unless a printer or another application has asked for outlines.'}
+          ? 'The type becomes shapes: no font to substitute, and no longer editable. What a printer usually asks for.'
+          : 'The type stays live, with the font embedded. Outline it only if a printer asks.'}
       </p>
     </>
   )

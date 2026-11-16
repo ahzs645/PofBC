@@ -5,7 +5,7 @@ import { Item, item } from './Reveal.jsx'
 export const GlyphRow = ({ glyphs, fill = '#eee3c0' }) => (
   <Item as="div" className="pv-glyph-row">
     {glyphs.map((g, i) => (
-      <motion.div key={g.key} className="pv-glyph" variants={item} whileHover={{ y: -3 }} transition={{ delay: i * 0.04 }}>
+      <motion.div key={g.key} className="pv-glyph" variants={item} whileHover={{ y: -3 }} transition={{ delay: i * 0.012 }}>
         <svg viewBox={g.viewBox} aria-hidden="true"><path d={g.d} transform={g.transform} fill={fill} /></svg>
         <b>{g.name}</b>
         <span>{g.letter} · {g.where}</span>

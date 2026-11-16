@@ -1,6 +1,6 @@
 import { useEffect, useLayoutEffect, useRef } from 'react'
 import { useReducedMotion } from 'motion/react'
-import { easeInOutQuint, easeOutQuint, fit, tween } from './zoom.js'
+import { easeOutQuint, easeSwift, fit, tween } from './zoom.js'
 import { meterZoom } from './frameMeter.js'
 
 const setViewBox = (svg, v) => svg.setAttribute('viewBox', `${v.x} ${v.y} ${v.w} ${v.h}`)
@@ -16,7 +16,7 @@ const setViewBox = (svg, v) => svg.setAttribute('viewBox', `${v.x} ${v.y} ${v.w}
  * A new target while a zoom is still running picks up from where that one is, already moving, so
  * stepping quickly through targets reads as one continuous glide rather than a run of restarts.
  */
-export const useViewBoxZoom = (svg, stageRef, { box, pad = 0.05, inset = { right: 0, bottom: 0 }, duration = 1000, initial }) => {
+export const useViewBoxZoom = (svg, stageRef, { box, pad = 0.05, inset = { right: 0, bottom: 0 }, duration = 600, initial }) => {
   const vb = useRef(initial ?? { x: 0, y: 0, w: 1, h: 1 })
   const stop = useRef(null)
   const running = useRef(false)
@@ -51,7 +51,7 @@ export const useViewBoxZoom = (svg, stageRef, { box, pad = 0.05, inset = { right
     const meter = meterZoom()
     stop.current = tween(vb.current, target(), {
       duration: reduced ? 0 : duration,
-      ease: moving ? easeOutQuint : easeInOutQuint,
+      ease: moving ? easeOutQuint : easeSwift,
       onUpdate: (v) => { vb.current = v; setViewBox(svg, v); meter.frame() },
       onComplete: () => { running.current = false; meter.done() }
     })

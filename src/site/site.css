@@ -402,6 +402,34 @@ a { color: inherit; text-underline-offset: 2px; }
   color: var(--ink-2);
 }
 
+/* A label with a "?" beside it, which opens the control's explanation (Segmented.jsx). */
+.field__head { display: flex; align-items: center; gap: 6px; margin-bottom: 6px; }
+.field__head .field__label { margin-bottom: 0; }
+.field__help {
+  flex: none;
+  width: 18px;
+  height: 18px;
+  padding: 0;
+  border: 1px solid var(--ink-faint);
+  border-radius: 50%;
+  background: none;
+  color: var(--ink-muted);
+  font: inherit;
+  font-size: 11px;
+  font-weight: 600;
+  line-height: 1;
+  cursor: pointer;
+  position: relative;
+}
+/* A full-size target around the small circle, for a finger. */
+.field__help::after { content: ''; position: absolute; inset: -10px; }
+.field__help:hover, .field__help[aria-expanded='true'] { color: var(--ink); border-color: currentColor; }
+.field--compact .field__head { margin: 0; }
+
+/* A folded field: its label is the summary (ShareLink.jsx). */
+.field--fold > summary { cursor: pointer; margin-bottom: 0; }
+.field--fold[open] > summary { margin-bottom: 6px; }
+
 .field__note {
   margin: 6px 0 0;
   font-size: 12px;

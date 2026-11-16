@@ -79,6 +79,16 @@ const LazyPlate = ({ format }) => {
   )
 }
 
+/**
+ * Whether a card's second line only says again what its name opens with: "1913 · porcelain" over
+ * "1913", or "1904–12 · leather" over "1904–1912". Most designs are named by their years.
+ */
+export const repeatsLabel = (meta, label) => {
+  if (!meta || meta === label || label.startsWith(meta)) return true
+  const range = /^(\d{4})–(\d{4})$/.exec(meta)
+  return Boolean(range && label.startsWith(`${range[1]}–${range[2].slice(2)}`))
+}
+
 /** A design's card: its drawn sample, name, period or era, and any status PlateForge gives it. */
 const PlateCard = ({ format, meta, href, onOpen, cardRef }) => (
   <a
@@ -91,7 +101,7 @@ const PlateCard = ({ format, meta, href, onOpen, cardRef }) => (
     <span className="plates__card-text">
       <span className="plates__title">{format.label}</span>
       <span className="plates__meta">
-        {meta && meta !== format.label && meta}
+        {!repeatsLabel(meta, format.label) && meta}
         {statusBadge(format) && <span className="plates__status">{statusBadge(format)}</span>}
       </span>
     </span>

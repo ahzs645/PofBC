@@ -9,20 +9,20 @@ import { CERTAINTY, groupedConnections } from '../connections.js'
 import { RECORDS } from '../records.js'
 import { Item } from './Reveal.jsx'
 
-const Head = ({ entry, mark }) => (
+const Head = ({ entry, mark, brief }) => (
   <>
     <span className="pv-connection-rel">{entry.rel} <i data-certainty={entry.certainty}>{CERTAINTY[entry.certainty]}</i></span>
     <b>{entry.label}{mark && <> <span aria-hidden="true">{mark}</span></>}</b>
-    {entry.note && <span>{entry.note}</span>}
+    {entry.note && !brief && <span>{entry.note}</span>}
   </>
 )
 
 /** One of the collection's records, folded under its connection. */
-const Record = ({ entry }) => {
+const Record = ({ entry, brief }) => {
   const record = RECORDS[entry.record]
   return (
     <details className="pv-link-card pv-record">
-      <summary><Head entry={entry} mark="+" /></summary>
+      <summary><Head entry={entry} mark="+" brief={brief} /></summary>
       <div className="pv-record-body">
         <p className="pv-eyebrow">{record.kind}</p>
         <p>{record.summary}</p>
@@ -50,26 +50,29 @@ const Record = ({ entry }) => {
   )
 }
 
-const Card = ({ entry }) => {
-  if (entry.record) return <Record entry={entry} />
-  if (entry.to) return <SiteLink to={entry.to} className="pv-link-card"><Head entry={entry} mark="→" /></SiteLink>
-  if (entry.href) return <a href={entry.href} target="_blank" rel="noopener noreferrer" className="pv-link-card"><Head entry={entry} mark="↗" /></a>
-  return <div className="pv-link-card pv-link-plain"><Head entry={entry} /></div>
+const Card = ({ entry, brief }) => {
+  if (entry.record) return <Record entry={entry} brief={brief} />
+  if (entry.to) return <SiteLink to={entry.to} className="pv-link-card"><Head entry={entry} mark="→" brief={brief} /></SiteLink>
+  if (entry.href) return <a href={entry.href} target="_blank" rel="noopener noreferrer" className="pv-link-card"><Head entry={entry} mark="↗" brief={brief} /></a>
+  return <div className="pv-link-card pv-link-plain"><Head entry={entry} brief={brief} /></div>
 }
 
-/** Nothing at all for a piece the registry does not know (the signs, say). */
-export function Connections({ poster }) {
+/**
+ * Nothing at all for a piece the registry does not know (the signs, say). `brief` leaves each
+ * link's reasoning, and the key to the certainty labels, for the panel's full reading.
+ */
+export function Connections({ poster, brief = false }) {
   const groups = groupedConnections(poster)
   if (!groups.length) return null
   return (
     <>
       <Item as="h3">Connections</Item>
-      <Item as="p" className="pv-muted pv-connections-key">Each link says what it rests on: printed on the piece, documented elsewhere, inferred, or a comparison of theme only.</Item>
+      {!brief && <Item as="p" className="pv-muted pv-connections-key">Each link says what it rests on: printed on the piece, documented elsewhere, inferred, or a comparison of theme only.</Item>}
       {groups.map((group) => (
         <Item as="section" key={group.id} className="pv-connections" aria-label={group.title}>
           <h4>{group.title}</h4>
           <ul className="pv-links">
-            {group.entries.map((entry) => <li key={entry.rel + entry.label}><Card entry={entry} /></li>)}
+            {group.entries.map((entry) => <li key={entry.rel + entry.label}><Card entry={entry} brief={brief} /></li>)}
           </ul>
         </Item>
       ))}

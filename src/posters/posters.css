@@ -79,7 +79,7 @@
 .pv-stage .pv-hs-shape { opacity: 0; outline: none; }
 
 /* The spotlight: everything but the hovered layer settles back. */
-.pv-sheet > svg > g { transition: opacity 320ms ease; }
+.pv-sheet > svg > g { transition: opacity 180ms ease; }
 
 .pv-chip {
   position: absolute;
@@ -207,7 +207,7 @@
 .pv-switch-pick select { position: absolute; inset: 0; width: 100%; opacity: 0; cursor: pointer; font-size: 16px; }
 
 /* A poster comes in with a short fade; the one it replaces dims while the next one loads. */
-.pv-app { animation: pv-enter 320ms ease-out; }
+.pv-app { animation: pv-enter 180ms ease-out; }
 @keyframes pv-enter { from { opacity: 0; transform: scale(0.985); } to { opacity: 1; transform: none; } }
 .pv-switching .pv-stage { opacity: 0.55; transition: opacity 200ms; }
 .pv-brand b, .pv-brand span { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
@@ -672,6 +672,13 @@
   padding: 20px;
   margin-bottom: var(--gap);
 }
+.posters__shelf { display: flex; flex-wrap: wrap; gap: var(--gap); margin-bottom: var(--gap); }
+.posters__shelf > .posters__series {
+  margin-bottom: 0;
+  min-width: 0;
+  max-width: 100%;
+  flex: var(--n, 1) 1 calc(var(--n, 1) * (260px + var(--gap)) - var(--gap) + 40px);
+}
 .posters__series-head { display: flex; align-items: baseline; flex-wrap: wrap; gap: 4px 10px; margin-bottom: 14px; }
 .posters__series-head h3 { margin: 0; font-size: 18px; }
 .posters__series-head .posters__kind { margin: 0; font-size: 13px; color: var(--ink-faint); }
@@ -817,3 +824,6 @@
 
 /* ── Highlights: a part of a photograph kept bright while the spotlight is on it ── */
 .pv-sheet [data-highlight]:not(.pv-lit) { display: none; }
+
+/* "Read more" under a panel's glance (ui/DataPanel.jsx). */
+.pv-more { margin: 14px 0 6px; }

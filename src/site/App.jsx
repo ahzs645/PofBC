@@ -7,25 +7,20 @@ import { FlagLockup } from '../flag/FlagLockup.jsx'
 import { DocumentArmsPanel } from './DocumentArmsPanel.jsx'
 const DocumentArmsPreview = lazy(() => import('./DocumentArmsPreview.jsx'))
 const DocumentArmsReference = lazy(() => import('./DocumentArmsPreview.jsx').then((module) => ({ default: module.DocumentArmsReference })))
-// Loaded when it is opened: the gallery's marks are drawn from their own artwork and renderers,
-// which the generator never needs.
-const GalleryView = lazy(() => import('../gallery/GalleryView.jsx').then((module) => ({ default: module.GalleryView })))
-// Likewise the government diagram, which carries a century and a half of ministries with it.
-const GovernmentView = lazy(() => import('../government/GovernmentView.jsx').then((module) => ({ default: module.GovernmentView })))
-const InternalLogosView = lazy(() => import('../internal/InternalLogosView.jsx').then((module) => ({ default: module.InternalLogosView })))
-// The posters carry their own drawings, photographs and stage, none of which the generator needs.
-const PostersView = lazy(() => import('../posters/PostersView.jsx').then((module) => ({ default: module.PostersView })))
-const SignsView = lazy(() => import('../signs/SignsView.jsx').then((module) => ({ default: module.SignsView })))
-// The patch library and digitizer come from the Patcher submodule (vendor/patcher).
-const PatchesView = lazy(() => import('../patches/PatchesView.jsx').then((module) => ({ default: module.PatchesView })))
-// Licence plates are drawn by PlateForge (vendor/plateforge), with its B.C. region data and fonts.
-const PlatesView = lazy(() => import('../plates/PlatesView.jsx').then((module) => ({ default: module.PlatesView })))
-const ArmsView = lazy(() => import('../arms/ArmsView.jsx').then((module) => ({ default: module.ArmsView })))
-const GuidesView = lazy(() => import('../guides/GuidesView.jsx').then((module) => ({ default: module.GuidesView })))
-// The stationery brings brandkit's template engine and studio (vendor/brandkit).
-const StationeryView = lazy(() => import('../stationery/StationeryView.jsx').then((module) => ({ default: module.StationeryView })))
-const SalariesView = lazy(() => import('../salaries/SalariesView.jsx').then((module) => ({ default: module.SalariesView })))
-const HealthStoryView = lazy(() => import('../health/HealthStoryView.jsx').then((module) => ({ default: module.HealthStoryView })))
+// Every other view is loaded when it is opened (viewLoaders.js says why each is its own chunk).
+const lazyView = (id, name) => lazy(() => VIEW_LOADERS[id]().then((module) => ({ default: module[name] })))
+const GalleryView = lazyView('gallery', 'GalleryView')
+const GovernmentView = lazyView('government', 'GovernmentView')
+const InternalLogosView = lazyView('internal', 'InternalLogosView')
+const PostersView = lazyView('posters', 'PostersView')
+const SignsView = lazyView('signs', 'SignsView')
+const PatchesView = lazyView('patches', 'PatchesView')
+const PlatesView = lazyView('plates', 'PlatesView')
+const ArmsView = lazyView('arms', 'ArmsView')
+const GuidesView = lazyView('guides', 'GuidesView')
+const StationeryView = lazyView('stationery', 'StationeryView')
+const SalariesView = lazyView('salaries', 'SalariesView')
+const HealthStoryView = lazyView('health-map', 'HealthStoryView')
 import { generatorPatchFor } from '../government/eraMark.js'
 import {
   FLAG_PALETTE_ORDER, FLAG_PALETTE_HINTS, FLAG_PALETTE_LABELS, FLAG_SWATCHES
@@ -51,6 +46,7 @@ import { MinistryField } from './MinistryField.jsx'
 import { Segmented } from './Segmented.jsx'
 import { ShareLink } from './ShareLink.jsx'
 import { HIDDEN_VIEWS, ViewSwitcher, VIEWS } from './ViewSwitcher.jsx'
+import { VIEW_LOADERS } from './viewLoaders.js'
 import { NavigationContext, searchFor } from './navigation.jsx'
 import { writeHistory } from './browserHistory.js'
 import { salaryPlaceUrl } from '../salaries/viewState.js'
@@ -578,7 +574,9 @@ export const App = () => {
               />
               <span>Show “Province of British Columbia”</span>
             </label>
-            <p className="field__note">The centred lockup is drawn without it in the source artwork.</p>
+            {state.layout === 'centred' && (
+              <p className="field__note">The centred lockup is drawn without it in the source artwork.</p>
+            )}
 
             {alignsVertically(layout) && (
               <Segmented
@@ -619,11 +617,11 @@ export const App = () => {
                   value={isCrest ? state.crestExtra : state.flagExtra}
                   placeholder={isCrest ? 'Research Branch' : 'Honourable Anthony J. Brummet, Minister'}
                   autoComplete="off"
+                  title="A minister, a place, a bulletin number — as the documents do."
                   onChange={(event) => update(
                     isCrest ? { crestExtra: event.target.value } : { flagExtra: event.target.value }
                   )}
                 />
-                <p className="field__note">A minister, a place, a bulletin number — as the documents do.</p>
               </div>
             )}
             <MinistryField

@@ -2,7 +2,7 @@ import { useEffect } from 'react'
 import { animate, stagger, useReducedMotion } from 'motion/react'
 
 /** While `active`, the elements matching `selector` fade in one after another. */
-export const useGlyphReveal = (svg, selector, active, { each = 0.045, startDelay = 0.45, duration = 0.55 } = {}) => {
+export const useGlyphReveal = (svg, selector, active, { each = 0.02, startDelay = 0.15, duration = 0.3 } = {}) => {
   const reduced = useReducedMotion()
   useEffect(() => {
     if (!svg || !active || !selector || reduced) return

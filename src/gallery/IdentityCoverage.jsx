@@ -36,19 +36,17 @@ export const IdentityCoverageOverview = ({ onOpenRegister, onOpenSubject }) => {
   const summary = coverageSummary()
   const featured = ['translink', 'metro-vancouver', 'liquor-distribution-branch', 'creative-bc'].map(identitySubjectById).filter(Boolean)
   return (
+    // One line above the shelves: the marks are what the page is for, so the register is a way in
+    // from it, not a banner over it.
     <section className="identity-overview" aria-labelledby="identity-overview-heading">
-      <div>
-        <p className="identity-eyebrow">The collection register</p>
-        <h2 id="identity-overview-heading">Explore the families behind the marks</h2>
-        <p>Regional transit, public agencies, service brands and institutions sit alongside the Crown and health collections. Follow their relationships, sources and remaining gaps.</p>
-        <button type="button" className="identity-primary" onClick={() => onOpenRegister()}>Browse the register <span aria-hidden="true">→</span></button>
+      <h2 id="identity-overview-heading" className="identity-overview__title">Collection register</h2>
+      <p className="identity-overview__counts" title="Regional transit, public agencies, service brands and institutions, alongside the Crown and health collections: their relationships, sources and remaining gaps.">
+        <strong>{summary.subjects}</strong> subjects · <strong>{summary.held}</strong> with artwork · <strong>{summary.sources}</strong> leads
+      </p>
+      <div className="identity-featured">
+        {featured.map((subject) => <button type="button" key={subject.id} onClick={() => onOpenSubject(subject.id)}>{subject.label} <span aria-hidden="true">↗</span></button>)}
       </div>
-      <div className="identity-overview__aside">
-        <p className="identity-overview__counts"><strong>{summary.subjects}</strong> subjects tracked · <strong>{summary.held}</strong> with artwork<br />{summary.sources} source leads awaiting artwork</p>
-        <div className="identity-featured">
-          {featured.map((subject) => <button type="button" key={subject.id} onClick={() => onOpenSubject(subject.id)}>{subject.label} <span aria-hidden="true">↗</span></button>)}
-        </div>
-      </div>
+      <button type="button" className="identity-primary" onClick={() => onOpenRegister()}>Browse the register <span aria-hidden="true">→</span></button>
     </section>
   )
 }

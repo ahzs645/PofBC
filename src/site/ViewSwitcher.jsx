@@ -8,6 +8,7 @@
 // is two columns on a wide screen and a scrolling sheet across a phone's, so none falls off the page.
 
 import { useEffect, useId, useLayoutEffect, useRef, useState } from 'react'
+import { preloadView } from './viewLoaders.js'
 
 export const VIEWS = [
   { id: 'generator', label: 'Generator', description: 'A ministry lockup in any of the four identities' },
@@ -147,6 +148,8 @@ export const ViewSwitcher = ({ view, onChange, className = '' }) => {
                 aria-checked={entry.id === view}
                 tabIndex={-1}
                 className="view-switcher__item"
+                onPointerEnter={() => preloadView(entry.id)}
+                onFocus={() => { if (entry.id !== view) preloadView(entry.id) }}
                 onClick={() => choose(entry.id)}
               >
                 <span className="view-switcher__text">

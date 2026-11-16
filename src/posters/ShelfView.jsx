@@ -166,15 +166,21 @@ export const ShelfView = ({ view, param, title, intro, noun, series, itemsOf, it
                 : <p className="posters__none">No {noun} matches all of those. <button type="button" className="posters__clear" onClick={() => setFilters({})}>Clear filters</button></p>}
             </section>
           )
-          : listed.map((entry) => (
-            <section key={entry.id} className="posters__series" aria-labelledby={`series-${entry.id}`}>
-              <header className="posters__series-head">
-                <h3 id={`series-${entry.id}`}>{entry.title}</h3>
-                <p className="posters__kind">{entry.kind}</p>
-              </header>
-              <div className="posters__grid">{itemsOf(entry).map(card)}</div>
-            </section>
-          ))}
+          : (
+            // Each series is as wide as its pieces need (--n of them), so short series share a row
+            // and a shelf of one-piece series is not a column of mostly empty panels.
+            <div className="posters__shelf">
+              {listed.map((entry) => (
+                <section key={entry.id} className="posters__series" style={{ '--n': itemsOf(entry).length }} aria-labelledby={`series-${entry.id}`}>
+                  <header className="posters__series-head">
+                    <h3 id={`series-${entry.id}`}>{entry.title}</h3>
+                    <p className="posters__kind">{entry.kind}</p>
+                  </header>
+                  <div className="posters__grid">{itemsOf(entry).map(card)}</div>
+                </section>
+              ))}
+            </div>
+          )}
       </section>
 
       {shown && (

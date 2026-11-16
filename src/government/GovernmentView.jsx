@@ -10,7 +10,7 @@
 
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import { MINISTRY_EPISODES, standsIn } from './episodes.js'
-import { ChangesCard, EntityCard, OverviewCard } from './GovernmentPanel.jsx'
+import { ChangesCard, EntityCard, OverviewCard, usePreloadSalaries } from './GovernmentPanel.jsx'
 import { InstrumentCard } from './LegislationCards.jsx'
 import { instrumentById } from './instruments.js'
 import { GovernmentGraph } from './GovernmentGraph.jsx'
@@ -226,6 +226,7 @@ const Search = ({ onPick }) => {
  */
 export const GovernmentView = ({ onOpenInGenerator, onChangeView }) => {
   const navigate = useNavigate()
+  usePreloadSalaries()
   const initial = useMemo(readParams, [])
   const [year, setYear] = useState(initial.year)
   const [selectedId, setSelectedId] = useState(initial.node)
