@@ -3,12 +3,18 @@
 //
 // The records are read from research/identity/arms-register-2026-11-16/register.json, as collected
 // (every project page of the register, kept where the recipient is a civil institution in B.C.).
-// This file adds only what the register cannot: a short name and id, the image held in ./images/,
-// and the holder's pages elsewhere on this site.
+// The artwork is the 16 November 2026 acquisition (research/identity/arms-acquisition-2026-11-16),
+// indexed by scripts/build-arms-artwork.py into ./artwork.json with a display copy of each file in
+// ./artwork/. That index also says which register entries belong to one holder (a district that
+// became a city keeps one page) and which picture leads its page. This file adds only what neither
+// can: a short name and id, and the holder's pages elsewhere on this site.
 
 import register from '../../research/identity/arms-register-2026-11-16/register.json' with { type: 'json' }
+import acquisition from './artwork.json' with { type: 'json' }
+import { MUNICIPAL_PROFILE_BY_REGISTER } from '../salaries/municipalProfiles.js'
 
 export const REGISTER_DIR = 'research/identity/arms-register-2026-11-16'
+export const ACQUISITION_DIR = acquisition.source
 
 // Per holder, keyed by the register's name. `salaries` is an employer slug, `subject` a gallery
 // identity subject; both are checked against the site's data by the tests.
@@ -22,7 +28,7 @@ const EXTRAS = {
     name: 'University of British Columbia',
     salaries: 'university-of-bc',
     subject: 'university-of-british-columbia',
-    image: { file: 'ubc-shield.svg', alt: 'Shield', credit: 'Wikimedia Commons · public domain (arms of 1915)', page: 'https://commons.wikimedia.org/wiki/File:British_columbia_univ_coat_arms.svg' }
+    artwork: [{ id: 'commons-ubc-shield', file: 'ubc-shield.svg', title: 'Shield of the University of British Columbia', kind: 'shield', date: '1915 arms', author: 'Unknown, from an idea of UBC’s first president Frank F. Wesbrook · Wikimedia Commons', licence: 'Public domain', page: 'https://commons.wikimedia.org/wiki/File:British_columbia_univ_coat_arms.svg' }]
   },
   'Faculty of Law, University of British Columbia': { id: 'ubc-faculty-of-law', name: 'UBC Faculty of Law' },
   'Green College, University of British Columbia': { id: 'ubc-green-college', name: 'Green College, UBC' },
@@ -30,7 +36,7 @@ const EXTRAS = {
     id: 'university-of-victoria',
     salaries: 'university-of-victoria',
     subject: 'university-of-victoria',
-    image: { file: 'uvic-shield.png', alt: 'Shield', credit: 'Robin S. Taylor, Wikimedia Commons · CC BY-SA 4.0', page: 'https://commons.wikimedia.org/wiki/File:University_of_Victoria_Escutcheon.png' }
+    artwork: [{ id: 'commons-uvic-shield', file: 'uvic-shield.png', title: 'Shield of the University of Victoria', kind: 'shield', date: '2001 registration', author: 'Robin S. Taylor · Wikimedia Commons', licence: 'CC BY-SA 4.0', licenceUrl: 'https://creativecommons.org/licenses/by-sa/4.0/', page: 'https://commons.wikimedia.org/wiki/File:University_of_Victoria_Escutcheon.png' }]
   },
   'Simon Fraser University': {
     id: 'simon-fraser-university',
@@ -123,8 +129,45 @@ const sourceTitle = (url) => {
   return file ? `${hostname.replace(/^www\./, '')}: ${file}` : hostname.replace(/^www\./, '')
 }
 
+// The acquisition's artwork records, as the view shows them. `image` is the display copy in
+// ./artwork/; `original` is the unchanged file under the acquisition's assets/.
+const artworkItem = (id) => {
+  const item = acquisition.artwork[id]
+  return item ? { id, ...item } : null
+}
+
+const acquiredByRegisterUrl = new Map(acquisition.holders.flatMap((held) => held.registerUrls.map((url) => [url, held])))
+
+/** The holder's lead picture: the acquisition's choice, else a file in ./images/. */
+const leadImage = (held, extra) => {
+  const lead = held?.primary ? artworkItem(held.primary) : null
+  if (lead) return { artwork: lead.id, alt: held.primaryAlt ?? null, credit: [lead.author, lead.licence].filter(Boolean).join(' · '), page: lead.page }
+  return extra.image ?? null
+}
+
+const artworkFor = (held, extra) => [
+  ...(held?.artwork ?? []).map(artworkItem).filter(Boolean),
+  ...(extra.artwork ?? [])
+]
+
+/**
+ * Municipal register mottoes carry the register's gloss in the same field ('SALUS ET OPES. This
+ * Latin phrase means "Health and wealth".'); the motto is the text before it.
+ */
+export const motto = (entry) => {
+  if (!entry.motto) return null
+  const [, text, gloss] = entry.motto.match(/^(.*?)[.;]?\s*\*?\s*(This Latin phrase .*)?$/s)
+  const meaning = gloss?.match(/means\s+"([^"]+)"/)?.[1] ?? null
+  return {
+    text: text.trim(),
+    translation: entry.motto_translation ?? meaning,
+    note: gloss && !meaning ? gloss.replace(/^This Latin phrase/, 'The motto') : null
+  }
+}
+
 const holder = (entry) => {
   const extra = EXTRAS[entry.name] ?? {}
+  const held = acquiredByRegisterUrl.get(entry.register_url)
   const links = []
   if (extra.subject) links.push({ label: 'Its logos and identity, in Logos', to: { view: 'gallery', subject: extra.subject } })
   if (extra.salaries) links.push({ label: 'Its published salaries', to: { view: 'salaries', employer: extra.salaries } })
@@ -137,7 +180,7 @@ const holder = (entry) => {
     registered: entry.registered.map(capital),
     grantedLabel: 'In the register',
     granted: `${entry.letters_patent}, ${longDate(entry.date)}`,
-    motto: entry.motto ? { text: entry.motto, translation: entry.motto_translation ?? null } : null,
+    motto: motto(entry),
     description: entry.description ?? null,
     // The register's own notes; the research notes stay in register.json.
     note: entry.register_notes ?? null,
@@ -149,7 +192,8 @@ const holder = (entry) => {
       url: related.register_url,
       relation: related.relation ?? null
     })),
-    image: extra.image ?? null,
+    image: leadImage(held, extra),
+    artwork: artworkFor(held, extra),
     links,
     sources: (entry.sources ?? []).map((url) => ({ title: sourceTitle(url), url }))
   }
@@ -179,13 +223,56 @@ const placeName = (name) => name
   .replace(/^The /, '')
 const fileUnder = (name) => name.replace(/^(City|District|Town|Township|Village|Resort Municipality) of /, '')
 
-export const MUNICIPAL_HOLDERS = entries
+const entryByUrl = new Map(entries.map((entry) => [entry.register_url, entry]))
+
+/**
+ * A local government's page: the acquisition groups its register entries (a district's grant and
+ * the city's confirmation, or a later flag), and the newest leads, as the register's current record.
+ */
+const municipalHolder = (held) => {
+  const records = held.registerUrls.map((url) => entryByUrl.get(url)).filter(Boolean)
+  const main = [...records].sort((a, b) => (b.date ?? '').localeCompare(a.date ?? ''))[0]
+  const base = holder(main)
+  const profiles = [...new Map(records.map(({ register_url: url }) => MUNICIPAL_PROFILE_BY_REGISTER[url]).filter(Boolean).map((profile) => [profile[0], profile])).values()]
+  return {
+    ...base,
+    id: held.id,
+    name: held.name,
+    year: String(Math.min(...records.map(firstYear))),
+    related: records.filter((entry) => entry !== main).map((entry) => ({
+      title: `${placeName(entry.name)}: ${entry.letters_patent}, ${longDate(entry.date)}`,
+      url: entry.register_url,
+      relation: null
+    })),
+    links: profiles.map(([subject, status]) => ({
+      label: status === 'predecessor' ? 'The current municipality’s profile: logo, council pay and salaries' : 'Its profile: logo, council pay and salaries',
+      to: { view: 'gallery', subject }
+    }))
+  }
+}
+
+export const MUNICIPAL_HOLDERS = acquisition.holders
   .filter(({ group }) => group === 'municipal')
-  .map((entry) => ({
-    name: placeName(entry.name),
-    date: entry.date?.slice(0, 4) ?? null,
-    kind: entry.letters_patent,
-    motto: entry.motto ?? null,
-    url: entry.register_url
-  }))
-  .sort((a, b) => fileUnder(a.name).localeCompare(fileUnder(b.name)) || a.name.localeCompare(b.name) || (a.date ?? '').localeCompare(b.date ?? ''))
+  .map(municipalHolder)
+  .sort((a, b) => fileUnder(a.name).localeCompare(fileUnder(b.name)) || a.name.localeCompare(b.name))
+
+/** Bodies outside the register whose arms are documented by their own official sources. */
+export const ADDITIONAL_HOLDERS = acquisition.additionalHolders.map((extra) => {
+  const held = acquisition.holders.find(({ id }) => id === extra.id)
+  return {
+    ...extra,
+    registered: extra.registered ?? [],
+    motto: extra.motto ?? null,
+    blazon: {},
+    symbolism: {},
+    register: null,
+    related: [],
+    image: leadImage(held, {}),
+    artwork: artworkFor(held, {}),
+    links: [],
+    sources: extra.sources ?? []
+  }
+})
+
+/** The Province's and the Lieutenant Governor's artwork, by holder id. */
+export const artworkOf = (id) => artworkFor(acquisition.holders.find((held) => held.id === id), {})

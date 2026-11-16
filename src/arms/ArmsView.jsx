@@ -1,5 +1,5 @@
 // Coats of arms: the Province's, with its dated specimens, and the arms of the public bodies,
-// universities and local governments around it.
+// universities and local governments around it, each with the artwork acquired for it.
 //
 // The place is in the address (`?view=arms&holder=british-columbia`), so a holder can be linked to.
 
@@ -8,15 +8,18 @@ import { ARMS } from '../assets/crestMark.js'
 import { SiteLink } from '../site/navigation.jsx'
 import { writeHistory } from '../site/browserHistory.js'
 import {
-  CATALOGUE_DIR, GROUPS, MUNICIPALITIES, PROVINCE, holderById, holdersInGroup, provinceSections
+  ACQUISITION_DIR, GROUPS, PROVINCE, holderById, holdersInGroup, provinceSections
 } from './armsData.js'
-import { MUNICIPAL_PROFILE_BY_REGISTER } from '../salaries/municipalProfiles.js'
 import './arms.css'
 
 const SPECIMEN_IMAGES = import.meta.glob('../../research/identity/arms-variants-2026-11-14/reference/*', { eager: true, query: '?url', import: 'default' })
 const HOLDER_IMAGES = import.meta.glob('./images/*', { eager: true, query: '?url', import: 'default' })
+const ARTWORK_IMAGES = import.meta.glob('./artwork/*.webp', { eager: true, query: '?url', import: 'default' })
 const specimenUrl = (file) => SPECIMEN_IMAGES[`../../research/identity/arms-variants-2026-11-14/reference/${file}`] ?? null
 const holderImageUrl = (file) => HOLDER_IMAGES[`./images/${file}`] ?? null
+const artworkUrl = (id) => ARTWORK_IMAGES[`./artwork/${id}.webp`] ?? null
+/** An artwork record's display copy: the acquisition's, or a file kept in ./images/. */
+const artworkImageUrl = (item) => (item.file ? holderImageUrl(item.file) : artworkUrl(item.id))
 
 const REPOSITORY = 'https://github.com/ahzs645/PofBC/blob/main'
 
@@ -49,7 +52,7 @@ const Shield = () => (
 
 const HolderImage = ({ holder, label }) => {
   if (holder.image?.kind === 'vector') return <ProvinceArms label={label} />
-  const url = holder.image?.file ? holderImageUrl(holder.image.file) : null
+  const url = holder.image?.artwork ? artworkUrl(holder.image.artwork) : holder.image?.file ? holderImageUrl(holder.image.file) : null
   if (!url) return <Shield />
   return <img src={url} alt={label && holder.image.alt ? `${holder.image.alt} of ${holder.name}` : (label ?? '')} loading="lazy" decoding="async" />
 }
@@ -90,13 +93,14 @@ const Index = ({ onOpen }) => (
       <p>
         The Province’s arms and their dated drawings, and the registered arms of B.C.’s public
         bodies, each linked to its record in the Canadian Heraldic Authority’s register or another
-        primary source.
+        primary source. Each page shows every rendering acquired for it: register paintings, flags,
+        badges, letters patent and later drawings, with the artist and terms of each.
       </p>
     </div>
     <ul className="arms__grid arms__grid--feature">
       <HolderCard holder={PROVINCE} onOpen={onOpen} feature />
     </ul>
-    {GROUPS.filter(({ id }) => id !== 'province' && id !== 'municipal').map((group) => {
+    {GROUPS.filter(({ id }) => id !== 'province').map((group) => {
       const holders = holdersInGroup(group.id)
       if (!holders.length) return null
       return (
@@ -109,33 +113,8 @@ const Index = ({ onOpen }) => (
         </section>
       )
     })}
-    {MUNICIPALITIES.length > 0 && <Municipalities />}
   </>
 )
-
-const Municipalities = () => {
-  const group = GROUPS.find(({ id }) => id === 'municipal')
-  return (
-    <section className="arms__group" aria-labelledby="arms-group-municipal">
-      <h3 id="arms-group-municipal">{group.title}</h3>
-      <p className="arms__group-description">{group.description} Each name opens its register entry; a place with two dates has two registrations.</p>
-      <ul className="arms__municipal">
-        {MUNICIPALITIES.map((place) => (
-          <li key={place.url} title={place.motto ?? undefined}>
-            <External href={place.url}>{place.name}</External>
-            {place.date && <span className="arms__municipal-date" title={place.kind}>{place.date}</span>}
-            {MUNICIPAL_PROFILE_BY_REGISTER[place.url] && (
-              <SiteLink className="arms__municipal-profile" to={{ view: 'gallery', subject: MUNICIPAL_PROFILE_BY_REGISTER[place.url][0] }}
-                title={MUNICIPAL_PROFILE_BY_REGISTER[place.url][1] === 'predecessor' ? 'Granted to a predecessor; opens the current municipality' : 'The municipality’s profile: logo, council pay and salaries'}>
-                {MUNICIPAL_PROFILE_BY_REGISTER[place.url][1] === 'predecessor' ? 'successor’s profile' : 'profile'}
-              </SiteLink>
-            )}
-          </li>
-        ))}
-      </ul>
-    </section>
-  )
-}
 
 const ELEMENTS = [['arms', 'Arms'], ['crest', 'Crest'], ['supporters', 'Supporters'], ['compartment', 'Compartment'], ['motto', 'Motto'], ['badge', 'Badge'], ['flag', 'Flag']]
 
@@ -212,6 +191,73 @@ const Specimens = () => (
   </section>
 )
 
+const KINDS = {
+  arms: 'Arms',
+  shield: 'Shield',
+  'partial-achievement': 'Partial achievement',
+  flag: 'Flag',
+  badge: 'Badge',
+  seal: 'Seal',
+  lockup: 'Lockup',
+  'historical-emblem': 'Historical emblem',
+  'letters-patent': 'Letters patent'
+}
+
+const ArtworkItem = ({ item }) => {
+  const url = artworkImageUrl(item)
+  return (
+    <li className="arms__specimen">
+      <figure>
+        <a className="arms__specimen-art" href={url ?? undefined} target="_blank" rel="noreferrer" aria-label={`${item.title}, full image`}>
+          {url && <img src={url} alt="" loading="lazy" decoding="async" />}
+        </a>
+        <figcaption>
+          <span className="arms__specimen-class">{[KINDS[item.kind] ?? item.kind, item.historical && 'historical', item.vector && 'vector'].filter(Boolean).join(' · ')}</span>
+          <strong>{item.title}</strong>
+          {item.date && <span className="arms__specimen-date">{item.date}</span>}
+          <p className="arms__credit">
+            {item.author}
+            {item.licence && <> · {item.licenceUrl ? <External href={item.licenceUrl}>{item.licence}</External> : item.licence}</>}
+          </p>
+          <ul className="arms__sources">
+            {item.page && <li><External href={item.page}>Source</External></li>}
+            {item.original && <li><External href={`${REPOSITORY}/${ACQUISITION_DIR}/assets/${item.original}`}>Original file ({item.format})</External></li>}
+            {item.alternates?.map((file) => <li key={file}><External href={`${REPOSITORY}/${ACQUISITION_DIR}/assets/${file}`}>Also as {file.split('.').at(-1).toUpperCase()}</External></li>)}
+          </ul>
+        </figcaption>
+      </figure>
+    </li>
+  )
+}
+
+const Artwork = ({ items }) => {
+  const pictures = items.filter(({ kind }) => kind !== 'letters-patent')
+  const letters = items.filter(({ kind }) => kind === 'letters-patent')
+  return (
+    <section className="arms__section" aria-labelledby="arms-artwork">
+      <h3 id="arms-artwork">Artwork</h3>
+      <p className="arms__group-description">
+        Every rendering acquired for this page, unretouched: the register’s paintings, and drawings
+        from the holder, Wikimedia Commons and other sources. A rendering’s date is not always the
+        design’s. Official artwork keeps its owner’s rights; open licences are linked.
+      </p>
+      {pictures.length > 0 && (
+        <ul className="arms__specimens">
+          {pictures.map((item) => <ArtworkItem key={item.id} item={item} />)}
+        </ul>
+      )}
+      {letters.length > 0 && (
+        <details className="arms__letters">
+          <summary>Letters patent and register pages ({letters.length})</summary>
+          <ul className="arms__specimens">
+            {letters.map((item) => <ArtworkItem key={item.id} item={item} />)}
+          </ul>
+        </details>
+      )}
+    </section>
+  )
+}
+
 const Detail = ({ holder, onBack, titleRef }) => (
   <article className="arms__detail" aria-labelledby="arms-holder-name">
     <button type="button" className="arms__back" onClick={onBack}>← Coats of Arms</button>
@@ -225,6 +271,7 @@ const Detail = ({ holder, onBack, titleRef }) => (
             {holder.motto.translation && <> — {holder.motto.translation}</>}
           </p>
         )}
+        {holder.motto?.note && <p className="arms__note">{holder.motto.note}</p>}
         <dl className="arms__facts">
           {holder.granted && <div><dt>{holder.grantedLabel ?? 'Granted'}</dt><dd>{holder.granted}</dd></div>}
           {holder.registeredInCanada && <div><dt>In Canada</dt><dd>{holder.registeredInCanada}</dd></div>}
@@ -244,6 +291,7 @@ const Detail = ({ holder, onBack, titleRef }) => (
       </div>
     </header>
     {holder.stages && <Stages stages={holder.stages} />}
+    {holder.artwork?.length > 0 && <Artwork items={holder.artwork} />}
     {holder.id === PROVINCE.id && <Specimens />}
     {(holder.links?.length > 0 || holder.sources?.length > 0 || holder.register?.url || holder.related?.length > 0) && (
       <section className="arms__section" aria-labelledby="arms-elsewhere">

@@ -64,21 +64,6 @@
 .arms__card-motto { font-style: italic; color: var(--ink-2); font-size: 14px; }
 .arms__card-meta { color: var(--ink-muted); font-size: 13px; }
 
-.arms__municipal {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(min(100%, 220px), 1fr));
-  gap: 2px 16px;
-  margin: 0;
-  padding: 16px 20px;
-  list-style: none;
-  background: var(--surface);
-  border-radius: var(--radius);
-}
-.arms__municipal li { display: flex; justify-content: space-between; gap: 8px; padding: 4px 0; border-bottom: 1px solid var(--outline); }
-.arms__municipal a { color: var(--ink); }
-.arms__municipal-date { margin-left: auto; color: var(--ink-muted); font-size: 13px; white-space: nowrap; }
-.arms__municipal a.arms__municipal-profile { color: var(--ink-muted); font-size: 12px; white-space: nowrap; }
-
 .arms__detail { display: grid; gap: var(--gap); min-width: 0; }
 .arms__back {
   justify-self: start;
@@ -157,6 +142,9 @@
 .arms__specimen-number { color: var(--ink-faint); font-size: 12px; font-variant-numeric: tabular-nums; }
 .arms__specimen-date { color: var(--ink-muted); }
 .arms__specimen-class { color: var(--ink-faint); font-size: 13px; }
+
+.arms__letters { margin-top: 16px; }
+.arms__letters summary { cursor: pointer; color: var(--ink-2); font-weight: 600; margin-bottom: 12px; }
 
 .arms__sources { display: grid; gap: 4px; margin: 6px 0 0; padding: 0 0 0 18px; font-size: 13px; }
 .arms__sources a { color: var(--ink-2); }

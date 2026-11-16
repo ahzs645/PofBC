@@ -3,20 +3,21 @@
 // The Province's entry is built from the arms-variants catalogue
 // (research/identity/arms-variants-2026-11-14/catalogue.json): its design stages, then every dated
 // specimen in catalogue order with its credit and sources. The other holders are plain records in
-// holders.js, each with its register entry. Nothing here imports an image, so it can be tested
-// without a browser; ArmsView.jsx resolves the image files.
+// holders.js, each with its register entry and the artwork acquired for it. Nothing here imports an
+// image, so it can be tested without a browser; ArmsView.jsx resolves the image files.
 
 import catalogue from '../../research/identity/arms-variants-2026-11-14/catalogue.json' with { type: 'json' }
-import { HOLDERS as OTHER_HOLDERS, MUNICIPAL_HOLDERS, PROVINCE_REGISTER } from './holders.js'
+import { ACQUISITION_DIR, ADDITIONAL_HOLDERS, HOLDERS as REGISTER_HOLDERS, MUNICIPAL_HOLDERS, PROVINCE_REGISTER, artworkOf } from './holders.js'
 
 export const CATALOGUE_DIR = 'research/identity/arms-variants-2026-11-14'
+export { ACQUISITION_DIR }
 
 export const GROUPS = [
   { id: 'province', title: 'The Province', description: 'The arms of British Columbia, from the 1895 design to the 1987 grant.' },
   { id: 'crown', title: 'The Crown', description: 'The Lieutenant Governor’s flag of office. The Legislative Assembly, the Great Seal and the courts have no entry in the register.' },
-  { id: 'post-secondary', title: 'Universities and colleges', description: 'Public post-secondary institutions with registered arms.' },
+  { id: 'post-secondary', title: 'Universities and colleges', description: 'Public post-secondary institutions with arms: those in the register, and Douglas College, whose arms the College documents itself.' },
   { id: 'public-body', title: 'Public bodies', description: 'Police, agencies, Crown corporations and other public bodies with registered arms.' },
-  { id: 'municipal', title: 'Municipalities and regional districts', description: 'Local governments whose arms, flags or badges are in the public register.' }
+  { id: 'municipal', title: 'Municipalities', description: 'Local governments whose arms, flags or badges are in the public register. A district that became a city, or a place granted a flag later, keeps one page with every entry.' }
 ]
 
 const sourcesById = new Map(catalogue.sources.map((source) => [source.id, source]))
@@ -69,6 +70,7 @@ export const PROVINCE = {
   motto: { text: 'Splendor sine occasu', translation: 'Splendour without diminishment' },
   description: 'The Union Flag with an antique crown at its centre, over the sun setting into the sea between wavy bars of blue and silver. The 1987 augmentation added the crowned lion crest with its dogwood collar, the wapiti and bighorn ram supporters, and a compartment of Pacific dogwood.',
   image: { kind: 'vector' },
+  artwork: artworkOf('british-columbia'),
   stages: [
     {
       year: '1895',
@@ -100,8 +102,11 @@ export const PROVINCE = {
   }
 }
 
-export const HOLDERS = [PROVINCE, ...OTHER_HOLDERS]
-export const MUNICIPALITIES = MUNICIPAL_HOLDERS
+const GROUP_ORDER = GROUPS.map(({ id }) => id)
+const OTHER_HOLDERS = [...REGISTER_HOLDERS, ...ADDITIONAL_HOLDERS]
+  .sort((a, b) => GROUP_ORDER.indexOf(a.group) - GROUP_ORDER.indexOf(b.group) || a.name.localeCompare(b.name))
+
+export const HOLDERS = [PROVINCE, ...OTHER_HOLDERS, ...MUNICIPAL_HOLDERS]
 
 export const holderById = (id) => HOLDERS.find((holder) => holder.id === id) ?? null
 
