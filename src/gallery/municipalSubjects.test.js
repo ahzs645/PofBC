@@ -4,6 +4,7 @@ import { readFileSync } from 'node:fs'
 import { HISTORICAL_MUNICIPALITIES, MUNICIPAL_SUBJECTS, municipalSubjectId } from './municipalSubjects.js'
 import { IDENTITY_COVERAGE, identitySubjectById, searchIdentitySubjects } from './identityCoverage.js'
 import { GALLERY_COLLECTIONS, entriesOf } from './collections.js'
+import { MUNICIPAL_IDENTITY_BODIES } from './municipalIdentityData.js'
 import { MUNICIPAL_PROFILE_BY_COUNCIL, MUNICIPAL_PROFILE_BY_EMPLOYER } from '../salaries/municipalProfiles.js'
 
 const json = (path) => JSON.parse(readFileSync(new URL(path, import.meta.url)))
@@ -27,7 +28,7 @@ test('every held gallery entry has a registered owner', () => {
   assert.ok(!identitySubjectById('sub-bc-cancer').entries.some((entry) => entry.id.startsWith('bc-cancer-foundation')))
 })
 
-test('the municipal registry is the 161 legal municipalities plus shíshálh, with no logo assumed', () => {
+test('the municipal registry is the 161 legal municipalities plus shíshálh, holding only collected logos', () => {
   assert.equal(MUNICIPAL_SUBJECTS.length, 162)
   assert.equal(MUNICIPAL_SUBJECTS.filter((subject) => subject.municipal.scope === 'current municipality').length, 161)
   assert.equal(MUNICIPAL_SUBJECTS.filter((subject) => subject.municipal.inProvincialLayer).length, 161)
@@ -35,7 +36,13 @@ test('the municipal registry is the 161 legal municipalities plus shíshálh, wi
   assert.equal(new Set(MUNICIPAL_SUBJECTS.map((subject) => subject.municipal.provincialId)).size, 162)
   for (const subject of MUNICIPAL_SUBJECTS) {
     assert.match(subject.municipal.provincialId, subject.municipal.inProvincialLayer ? /^bc-lgaa-\d+$/ : /^bc-shishalh-government-district$/)
-    assert.equal(identitySubjectById(subject.id).hasArtwork, false, `${subject.id}: no municipal logo is held yet`)
+    const collected = MUNICIPAL_IDENTITY_BODIES.find((body) => body.id === subject.id)
+    const coverage = identitySubjectById(subject.id)
+    assert.equal(coverage.hasArtwork, Boolean(collected), `${subject.id}: artwork only from an archived official file`)
+    if (collected) {
+      assert.deepEqual(coverage.collections.map((collection) => collection.id), [`collected-${subject.id}`])
+      assert.equal(coverage.collections[0].shelf, 'municipalities')
+    }
     assert.equal(subject.graphNode, null, `${subject.id}: municipalities are not provincial atlas bodies`)
   }
   for (const pair of [['Langley (City)', 'Langley (Township)'], ['North Vancouver (City)', 'North Vancouver (District)'], ['Sechelt', 'shíshálh Nation Government District']]) {
@@ -83,4 +90,30 @@ test('municipal links point at existing salary, council-pay and register records
   // Predecessor arms stay the predecessor's.
   const abbotsford = byName.get('Abbotsford').municipal.heraldry
   assert.deepEqual(abbotsford.filter((grant) => grant.relation === 'predecessor').map((grant) => grant.recipient).sort(), ['District of Abbotsford', 'District of Matsqui'])
+})
+
+test('collected municipal logos are official website files, verified against the audit where it recorded them', () => {
+  assert.equal(MUNICIPAL_IDENTITY_BODIES.length, 21)
+  const registry = json('../../research/identity/municipalities-2026-11-15/municipalities.json').municipalities
+  for (const body of MUNICIPAL_IDENTITY_BODIES) {
+    const subject = MUNICIPAL_SUBJECTS.find((each) => each.id === body.id)
+    assert.ok(subject, `${body.id}: no registry subject`)
+    assert.equal(body.kind, subject.kind)
+    assert.equal(body.graphNode, null)
+    const lead = registry.find((each) => municipalSubjectId(each.name) === body.id).logoLead
+    const audited = body.assets.find((asset) => asset.sourceUrl === lead.asset)
+    assert.ok(audited, `${body.id}: the audit's located file is not among the collected ones`)
+    assert.equal(audited.sha256, lead.sha256, `${body.id}: bytes differ from the audit's record`)
+    for (const asset of body.assets) {
+      assert.match(asset.evidenceType, /^official-website-(vector|raster)$/)
+      assert.equal(asset.reconstruction, false)
+      assert.match(asset.dateNote, /not a logo adoption date/)
+    }
+  }
+  // Located but not collected: Cloudflare refused the request, or only a guide was found.
+  for (const name of ['Vancouver', 'Kelowna', 'Kitimat']) {
+    const subject = identitySubjectById(municipalSubjectId(name))
+    assert.equal(subject.hasArtwork, false, name)
+    assert.equal(subject.state, 'source-located', name)
+  }
 })

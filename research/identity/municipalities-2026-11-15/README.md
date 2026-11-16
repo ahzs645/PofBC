@@ -16,8 +16,28 @@ sheets.
   corporate logo is unestablished. Jumbo Glacier (dissolved 2021) is under `historical` only.
 - Both Langleys and both North Vancouvers are separate records. Earlier names (Queen Charlotte,
   Fort Nelson, Sechelt Indian Government District) are searchable aliases, not separate subjects.
-- **24 logo source leads** (4 inspected SVGs, 19 inspected rasters, Kitimat's guide lead). These
-  are located sources, not accepted artwork: no municipal logo file has been imported.
+- **24 logo source leads** (4 inspected SVGs, 19 inspected rasters, Kitimat's guide lead).
+
+## Collected logos (16 November 2026)
+
+`assets-manifest.json` records 23 files for 21 municipalities, each downloaded on 16 November 2026
+from the URL the audit located and archived byte-for-byte in `public/identity-municipal/`. For all
+20 files the audit had checksummed, the bytes matched. Two further files are variants the audit
+listed alongside: Quesnel's compact mobile logo and Vanderhoof's full-colour logo (the audit's
+Vanderhoof file is the white header version). Dawson Creek's and Smithers' files are large rasters;
+each has a resized `-preview.png` for the page, and the original stays the evidence.
+`scripts/build-identity-expansion.mjs` verifies every checksum and the SVG safety rules, and
+generates `src/gallery/municipalIdentityData.js`.
+
+Not collected:
+
+- **Vancouver** and **Kelowna**: the files returned a Cloudflare challenge page (HTTP 403) to
+  this download; they remain source leads.
+- **Kitimat**: only a brand-guide lead in a council agenda; the audit advises finding the final
+  adopted guide first.
+
+The observation date is not an adoption date. White versions (Coquitlam, Smithers, Surrey,
+Vanderhoof's header version, and Kamloops' tagline) are shown on a dark ground.
 
 ## Checks made on import
 

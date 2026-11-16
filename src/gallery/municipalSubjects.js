@@ -8,6 +8,7 @@
 // none merges records. Arms granted to a predecessor stay the predecessor's. Regional-district
 // membership is context, not ownership.
 
+import { MUNICIPAL_IDENTITY_BODIES } from './municipalIdentityData.js'
 import registry from '../../research/identity/municipalities-2026-11-15/municipalities.json' with { type: 'json' }
 
 export const MUNICIPAL_REGISTRY_DIR = 'research/identity/municipalities-2026-11-15'
@@ -62,11 +63,11 @@ const uniqueFolded = (values) => {
   })
 }
 
-const leadSources = (lead) => {
+const leadSources = (lead, collected) => {
   if (!lead) return []
   const checked = lead.checked ? `, checked ${lead.checked}` : ''
   return [
-    https(lead.asset) && { title: `Official website logo (${lead.format})`, url: lead.asset, note: `${lead.verification}${checked}. A located source, not yet accepted artwork; it does not date the logo.` },
+    https(lead.asset) && { title: `Official website logo (${lead.format})`, url: lead.asset, note: collected ? 'Archived in the gallery byte-for-byte. Its download date does not date the logo.' : `${lead.verification}${checked}. A located source, not yet accepted artwork; it does not date the logo.` },
     https(lead.sourcePage) && { title: 'Official source page', url: lead.sourcePage },
     https(lead.evidencePage) && lead.evidencePage !== lead.sourcePage && { title: 'Identity and history evidence', url: lead.evidencePage, note: lead.note },
     https(lead.guidePage) && { title: 'Visual identity guidance', url: lead.guidePage, note: lead.guideStatus },
@@ -75,6 +76,8 @@ const leadSources = (lead) => {
 }
 
 const NO_LOGO = 'No corporate logo is held yet. Its arms, council pay and salary records are linked where the site has them; none of them is a corporate logo.'
+const HELD = 'Its logo is held as its official website serves it. Arms, council pay and salary records are linked where the site has them.'
+const COLLECTED = new Set(MUNICIPAL_IDENTITY_BODIES.map((body) => body.id))
 
 const subjectOf = (record) => {
   const lead = record.logoLead
@@ -83,7 +86,7 @@ const subjectOf = (record) => {
   const council = record.councilMunicipality && record.councilMunicipality !== record.name ? [record.councilMunicipality] : []
   const region = record.regionalDistrict && !/^No separate/.test(record.regionalDistrict) ? record.regionalDistrict : null
   const sources = [
-    ...leadSources(lead),
+    ...leadSources(lead, COLLECTED.has(municipalSubjectId(record.name))),
     inLayer
       ? { title: 'Provincial legally defined administrative area record', url: record.boundarySource, note: `Provincial identifier ${record.provincialId}.` }
       : { title: 'Enabling legislation', url: record.boundarySource, note: 'Not in the provincial municipal layer; recorded separately as a self-government district.' },
@@ -110,7 +113,7 @@ const subjectOf = (record) => {
     note: [
       `${MUNICIPAL_KIND_LABELS[KIND_OF_CLASSIFICATION[record.classification]]} ${where}.`,
       record.scope !== 'current municipality' ? record.auditNote : null,
-      NO_LOGO
+      COLLECTED.has(municipalSubjectId(record.name)) ? HELD : NO_LOGO
     ].filter(Boolean).join(' '),
     relations: [],
     // A located logo file is a source lead; without one, the logo is still wanted.

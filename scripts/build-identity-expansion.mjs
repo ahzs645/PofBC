@@ -8,20 +8,23 @@ import { fileURLToPath } from 'node:url'
 import { DOMParser } from '@xmldom/xmldom'
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..')
-const manifestPath = path.join(root, 'research/identity/coverage-expansion-2026-11-15/assets-manifest.json')
-const outputPath = path.join(root, 'src/gallery/expandedIdentityData.js')
-const manifest = JSON.parse(fs.readFileSync(manifestPath, 'utf8'))
+// Each manifest generates its own module; IDs must stay unique across all of them.
+const MANIFESTS = [
+  { manifest: 'research/identity/coverage-expansion-2026-11-15/assets-manifest.json', output: 'src/gallery/expandedIdentityData.js', name: 'EXPANDED_IDENTITY_BODIES', dir: 'identity-expanded' },
+  { manifest: 'research/identity/municipalities-2026-11-15/assets-manifest.json', output: 'src/gallery/municipalIdentityData.js', name: 'MUNICIPAL_IDENTITY_BODIES', dir: 'identity-municipal' }
+]
 const check = process.argv.includes('--check')
 const seenBodies = new Set()
 const seenAssets = new Set()
 const checkedFiles = new Map()
+let fileDir = ''
 
 function assert(condition, message) {
   if (!condition) throw new Error(message)
 }
 
 function verifyFile(record) {
-  assert(typeof record.file === 'string' && /^identity-expanded\/[a-z0-9_./-]+$/.test(record.file) && !record.file.split('/').includes('..'), `Unsafe asset path: ${record.file}`)
+  assert(typeof record.file === 'string' && record.file.startsWith(`${fileDir}/`) && /^[a-z-]+\/[a-z0-9_./-]+$/.test(record.file) && !record.file.split('/').includes('..'), `Unsafe asset path: ${record.file}`)
   const data = fs.readFileSync(path.join(root, 'public', record.file))
   const hash = crypto.createHash('sha256').update(data).digest('hex')
   assert(data.length === record.bytes, `Byte count changed: ${record.file}`)
@@ -61,35 +64,46 @@ function verifySvg(data, asset) {
   assert(/<(?:path|polygon|polyline|circle|ellipse|rect|use)\b/i.test(svg), `Empty SVG: ${asset.file}`)
 }
 
-assert(manifest.schemaVersion === 1, 'Unsupported identity acquisition manifest')
-for (const source of manifest.sources ?? []) verifyFile(source)
-for (const body of manifest.bodies) {
-  assert(!seenBodies.has(body.id), `Duplicate body ID: ${body.id}`)
-  seenBodies.add(body.id)
-  assert(body.assets.length > 0 && body.status === 'asset-collected', `Empty collected body: ${body.id}`)
-  assert(Object.hasOwn(body, 'graphNode'), `graphNode must be explicit, including null: ${body.id}`)
-  for (const asset of body.assets) {
-    assert(!seenAssets.has(asset.id), `Duplicate asset ID: ${asset.id}`)
-    seenAssets.add(asset.id)
-    assert(asset.sourceUrl?.startsWith('https://') && asset.sourcePage?.startsWith('https://'), `Source attribution missing: ${asset.id}`)
-    assert(asset.publisher && asset.sourceLocator && asset.fidelityNote && asset.observedDate, `Incomplete evidence: ${asset.id}`)
-    assert(asset.reconstruction === false && asset.supplied === false, `Unexpected artwork category: ${asset.id}`)
-    assert(asset.isVector === (asset.format === 'svg'), `Inconsistent vector label: ${asset.id}`)
-    const data = verifyFile(asset)
-    assert(checkedFiles.has(asset.sourceFile), `Archived source is missing from the manifest: ${asset.id}`)
-    if (asset.format === 'svg') verifySvg(data, asset)
-    if (asset.format === 'png') assert(data.subarray(0, 8).equals(Buffer.from([137, 80, 78, 71, 13, 10, 26, 10])), `Invalid PNG: ${asset.file}`)
-    if (asset.format === 'webp') assert(data.toString('ascii', 0, 4) === 'RIFF' && data.toString('ascii', 8, 12) === 'WEBP', `Invalid WebP: ${asset.file}`)
-    for (const download of asset.downloads ?? []) verifyFile(download)
+for (const { manifest: manifestFile, output, name, dir } of MANIFESTS) {
+  const manifest = JSON.parse(fs.readFileSync(path.join(root, manifestFile), 'utf8'))
+  const outputPath = path.join(root, output)
+  fileDir = dir
+  assert(manifest.schemaVersion === 1, 'Unsupported identity acquisition manifest')
+  for (const source of manifest.sources ?? []) verifyFile(source)
+  for (const body of manifest.bodies) {
+    assert(!seenBodies.has(body.id), `Duplicate body ID: ${body.id}`)
+    seenBodies.add(body.id)
+    assert(body.assets.length > 0 && body.status === 'asset-collected', `Empty collected body: ${body.id}`)
+    assert(Object.hasOwn(body, 'graphNode'), `graphNode must be explicit, including null: ${body.id}`)
+    for (const asset of body.assets) {
+      assert(!seenAssets.has(asset.id), `Duplicate asset ID: ${asset.id}`)
+      seenAssets.add(asset.id)
+      assert(asset.sourceUrl?.startsWith('https://') && asset.sourcePage?.startsWith('https://'), `Source attribution missing: ${asset.id}`)
+      assert(asset.publisher && asset.sourceLocator && asset.fidelityNote && asset.observedDate, `Incomplete evidence: ${asset.id}`)
+      assert(asset.reconstruction === false && asset.supplied === false, `Unexpected artwork category: ${asset.id}`)
+      assert(asset.isVector === (asset.format === 'svg'), `Inconsistent vector label: ${asset.id}`)
+      const data = verifyFile(asset)
+      assert(checkedFiles.has(asset.sourceFile), `Archived source is missing from the manifest: ${asset.id}`)
+      if (asset.format === 'svg') verifySvg(data, asset)
+      if (asset.format === 'png') assert(data.subarray(0, 8).equals(Buffer.from([137, 80, 78, 71, 13, 10, 26, 10])), `Invalid PNG: ${asset.file}`)
+      if (asset.format === 'webp') assert(data.toString('ascii', 0, 4) === 'RIFF' && data.toString('ascii', 8, 12) === 'WEBP', `Invalid WebP: ${asset.file}`)
+      for (const download of asset.downloads ?? []) verifyFile(download)
+      // A resized copy for the page; the archived file stays the evidence.
+      if (asset.preview) {
+        const preview = verifyFile({ file: asset.preview, sha256: asset.previewSha256, bytes: asset.previewBytes })
+        assert(asset.format === 'png' && preview.subarray(0, 8).equals(Buffer.from([137, 80, 78, 71, 13, 10, 26, 10])) && asset.previewNote, `Invalid preview: ${asset.id}`)
+      }
+    }
+  }
+
+  const source = '// Generated by scripts/build-identity-expansion.mjs from assets-manifest.json.\n'
+    + '// Artwork observation dates and publication dates are not inferred logo adoption dates.\n'
+    + `export const ${name} = ${JSON.stringify(manifest.bodies, null, 2)}\n`
+  if (check) {
+    assert(fs.existsSync(outputPath) && fs.readFileSync(outputPath, 'utf8') === source, `${output} is stale; run node scripts/build-identity-expansion.mjs`)
+  } else {
+    fs.writeFileSync(outputPath, source)
   }
 }
 
-const source = '// Generated by scripts/build-identity-expansion.mjs from assets-manifest.json.\n'
-  + '// Artwork observation dates and publication dates are not inferred logo adoption dates.\n'
-  + `export const EXPANDED_IDENTITY_BODIES = ${JSON.stringify(manifest.bodies, null, 2)}\n`
-if (check) {
-  assert(fs.existsSync(outputPath) && fs.readFileSync(outputPath, 'utf8') === source, 'Expanded identity data is stale; run node scripts/build-identity-expansion.mjs')
-} else {
-  fs.writeFileSync(outputPath, source)
-}
 console.log(`${check ? 'Verified' : 'Generated'} ${seenBodies.size} identity bodies / ${seenAssets.size} source-linked artworks; verified ${checkedFiles.size} files.`)
