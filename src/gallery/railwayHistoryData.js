@@ -12,7 +12,7 @@ export const RAILWAY_HISTORY = {
       "label": "Point Ellice diamond monogram",
       "status": "held",
       "assetIds": [
-        "cariboo-pge-point-ellice-diamond-1929"
+        "pge-point-ellice-diamond-1929-rebuilt"
       ],
       "note": "The tall diamond appears on the steam tug Point Ellice; related stencils were found at Williams Lake. Kennelly cites a photograph dated 19 September 1929 and reports use into the early 1950s. Don Davis is a recollected designer attribution, not a verified credit.",
       "applicability": {
@@ -34,7 +34,7 @@ export const RAILWAY_HISTORY = {
       "label": "Square diamond equipment marks",
       "status": "held",
       "assetIds": [
-        "cariboo-pge-square-diamond-unshaded-c1934",
+        "pge-square-diamond-unshaded-c1934-rebuilt",
         "cariboo-pge-square-diamond-shaded-1935"
       ],
       "note": "A second, squarer diamond family had unshaded and shaded versions. The article associates the first with steam crane 6071 and the shaded version with refrigerator cars, with related examples on Combination Coach 16.",
@@ -57,7 +57,7 @@ export const RAILWAY_HISTORY = {
       "label": "Circular script corporate monogram",
       "status": "held",
       "assetIds": [
-        "cariboo-pge-circular-script-monogram-1935"
+        "pge-circular-script-monogram-1935-rebuilt"
       ],
       "note": "A script PGE monogram on passes and menus. The earliest pass Kennelly had seen was dated 1935; menus often used a single narrow circle. He found no evidence of this mark on rolling stock.",
       "applicability": {
@@ -79,7 +79,7 @@ export const RAILWAY_HISTORY = {
       "label": "Early caribou equipment herald",
       "status": "held",
       "assetIds": [
-        "cariboo-pge-caribou-rolling-stock-1945"
+        "pge-caribou-rolling-stock-1945-rebuilt"
       ],
       "note": "The early caribou appeared on new locomotives and other equipment in the second quarter of 1945. Left- and right-facing versions existed, generally facing forward on the equipment, with exceptions. The final caribou should not be credited directly to Ed Aldridge: his contest-winning submission used a landscape that the railway changed.",
       "applicability": {
@@ -101,7 +101,7 @@ export const RAILWAY_HISTORY = {
       "label": "Revised caribou equipment herald",
       "status": "held",
       "assetIds": [
-        "cariboo-pge-caribou-rolling-stock-mid1946"
+        "pge-caribou-rolling-stock-mid1946-rebuilt"
       ],
       "note": "The equipment herald was revised to a full-profile caribou and appeared in several sizes. Neck shading, chest details and proportions varied. This published illustration was traced by Kennelly from a builder photograph of Mikado 163.",
       "applicability": {
@@ -123,7 +123,7 @@ export const RAILWAY_HISTORY = {
       "label": "Corporate caribou with light lettering",
       "status": "held",
       "assetIds": [
-        "cariboo-pge-caribou-corporate-light-1946"
+        "pge-caribou-corporate-light-1946-rebuilt"
       ],
       "note": "Corporate printing used a different full-profile caribou on a dark circular field. Kennelly dates its first timetable appearance to 30 September 1946. This is distinct from the equipment heralds in use at the same time.",
       "applicability": {
@@ -145,7 +145,7 @@ export const RAILWAY_HISTORY = {
       "label": "Roman lettering on passenger cars",
       "status": "held",
       "assetIds": [
-        "cariboo-pge-caribou-passenger-roman-1947"
+        "pge-caribou-passenger-roman-1947-rebuilt"
       ],
       "note": "Passenger cars gained a Roman-lettered version in 1947. The illustration records the preserved sleeping car Clinton in 1973, while the article traces the design family to sleepers acquired in 1947. It overlapped the corporate and other equipment marks.",
       "applicability": {
@@ -167,8 +167,8 @@ export const RAILWAY_HISTORY = {
       "label": "Corporate caribou with bold lettering",
       "status": "held",
       "assetIds": [
-        "cariboo-pge-caribou-corporate-bold-1948",
-        "source-pacific-great-eastern-railway-pge-scenic-route-brochure-logo-png"
+        "pge-caribou-corporate-bold-1948-rebuilt",
+        "pge-scenic-route-brochure-logo-rebuilt"
       ],
       "note": "Corporate lettering changed to bold between 31 May and 26 September 1948. Front-cover use generally ended on 7 June 1964, while back-cover use continued until the map mark appeared on 19 January 1966. The previously collected colour brochure is retained here as a related, undated print specimen; its filename is not proof of a 1955 publication date.",
       "applicability": {
@@ -195,8 +195,8 @@ export const RAILWAY_HISTORY = {
       "label": "Oval advertising caribou",
       "status": "held",
       "assetIds": [
-        "cariboo-pge-caribou-oval-advertising-1956",
-        "source-pacific-great-eastern-railway-pge-brochure-logo-png"
+        "pge-caribou-oval-advertising-1956-rebuilt",
+        "pge-brochure-logo-rebuilt"
       ],
       "note": "The oval accompanied the Howe Sound extension’s 1956 advertising campaign and appeared on brochures and timetables 73C and 73L. The circular corporate emblem returned by Timetable 75. The article reports no equipment use. The existing red Gateway to an Empire cover crop is a related specimen whose printing year remains uncertain.",
       "applicability": {
@@ -308,7 +308,7 @@ export const RAILWAY_HISTORY = {
       "label": "The continuing BC Railway Company",
       "status": "held",
       "assetIds": [
-        "source-bc-railway-company-bc-railway-company-png",
+        "bcrc-website-wordmark-rebuilt",
         "bcrc-2024-cover-rebuilt",
         "bcrc-2024-letterhead"
       ],

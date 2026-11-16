@@ -1438,7 +1438,7 @@ export const EXPANDED_IDENTITY_BODIES = [
       },
       {
         "id": "bcehs-website-layout-rebuilt",
-        "label": "BC Emergency Health Services — Logo (vector reconstruction)",
+        "label": "BC Emergency Health Services — Logo",
         "file": "identity-expanded/bc-emergency-health-services/bcehs-website-layout-rebuilt.svg",
         "format": "svg",
         "isVector": true,

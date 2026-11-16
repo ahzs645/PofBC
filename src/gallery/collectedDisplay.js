@@ -109,6 +109,18 @@ export const COLLECTED_DISPLAY = {
    "recoloured": true
   }
  },
+ "bcrc-website-wordmark-rebuilt": {
+  "light": {
+   "file": "identity-display/bcrc-website-wordmark-rebuilt.light.svg",
+   "aspect": 2.0215,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/bcrc-website-wordmark-rebuilt.dark.svg",
+   "aspect": 2.0215,
+   "recoloured": true
+  }
+ },
  "bc-assessment-svg": {
   "light": {
    "file": "identity-display/bc-assessment-svg.light.svg",
@@ -862,6 +874,138 @@ export const COLLECTED_DISPLAY = {
   "dark": {
    "file": "identity-display/pge-map-striped.light.svg",
    "aspect": 0.9187,
+   "recoloured": false
+  }
+ },
+ "pge-point-ellice-diamond-1929-rebuilt": {
+  "light": {
+   "file": "identity-display/pge-point-ellice-diamond-1929-rebuilt.light.svg",
+   "aspect": 0.8171,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/pge-point-ellice-diamond-1929-rebuilt.dark.svg",
+   "aspect": 0.8171,
+   "recoloured": true
+  }
+ },
+ "pge-square-diamond-unshaded-c1934-rebuilt": {
+  "light": {
+   "file": "identity-display/pge-square-diamond-unshaded-c1934-rebuilt.light.svg",
+   "aspect": 0.9964,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/pge-square-diamond-unshaded-c1934-rebuilt.dark.svg",
+   "aspect": 0.9964,
+   "recoloured": true
+  }
+ },
+ "pge-circular-script-monogram-1935-rebuilt": {
+  "light": {
+   "file": "identity-display/pge-circular-script-monogram-1935-rebuilt.light.svg",
+   "aspect": 1.0,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/pge-circular-script-monogram-1935-rebuilt.dark.svg",
+   "aspect": 1.0,
+   "recoloured": true
+  }
+ },
+ "pge-caribou-rolling-stock-1945-rebuilt": {
+  "light": {
+   "file": "identity-display/pge-caribou-rolling-stock-1945-rebuilt.light.svg",
+   "aspect": 1.0,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/pge-caribou-rolling-stock-1945-rebuilt.dark.svg",
+   "aspect": 1.0,
+   "recoloured": true
+  }
+ },
+ "pge-caribou-corporate-light-1946-rebuilt": {
+  "light": {
+   "file": "identity-display/pge-caribou-corporate-light-1946-rebuilt.light.svg",
+   "aspect": 1.0,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/pge-caribou-corporate-light-1946-rebuilt.light.svg",
+   "aspect": 1.0,
+   "recoloured": false
+  }
+ },
+ "pge-caribou-corporate-bold-1948-rebuilt": {
+  "light": {
+   "file": "identity-display/pge-caribou-corporate-bold-1948-rebuilt.light.svg",
+   "aspect": 1.0,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/pge-caribou-corporate-bold-1948-rebuilt.light.svg",
+   "aspect": 1.0,
+   "recoloured": false
+  }
+ },
+ "pge-caribou-rolling-stock-mid1946-rebuilt": {
+  "light": {
+   "file": "identity-display/pge-caribou-rolling-stock-mid1946-rebuilt.light.svg",
+   "aspect": 1.0,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/pge-caribou-rolling-stock-mid1946-rebuilt.dark.svg",
+   "aspect": 1.0,
+   "recoloured": true
+  }
+ },
+ "pge-caribou-passenger-roman-1947-rebuilt": {
+  "light": {
+   "file": "identity-display/pge-caribou-passenger-roman-1947-rebuilt.light.svg",
+   "aspect": 1.0,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/pge-caribou-passenger-roman-1947-rebuilt.dark.svg",
+   "aspect": 1.0,
+   "recoloured": true
+  }
+ },
+ "pge-caribou-oval-advertising-1956-rebuilt": {
+  "light": {
+   "file": "identity-display/pge-caribou-oval-advertising-1956-rebuilt.light.svg",
+   "aspect": 1.6185,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/pge-caribou-oval-advertising-1956-rebuilt.light.svg",
+   "aspect": 1.6185,
+   "recoloured": false
+  }
+ },
+ "pge-brochure-logo-rebuilt": {
+  "light": {
+   "file": "identity-display/pge-brochure-logo-rebuilt.light.svg",
+   "aspect": 1.686,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/pge-brochure-logo-rebuilt.light.svg",
+   "aspect": 1.686,
+   "recoloured": false
+  }
+ },
+ "pge-scenic-route-brochure-logo-rebuilt": {
+  "light": {
+   "file": "identity-display/pge-scenic-route-brochure-logo-rebuilt.light.svg",
+   "aspect": 1.0,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/pge-scenic-route-brochure-logo-rebuilt.light.svg",
+   "aspect": 1.0,
    "recoloured": false
   }
  },

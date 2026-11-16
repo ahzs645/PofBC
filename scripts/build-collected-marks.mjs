@@ -415,7 +415,8 @@ for (const { search, register: packaged } of PACKAGES) for (const { bodyId, veri
 // images — originals found as vector paths in official PDFs or on official sites, and, where none
 // exists, reconstructions that say so. Each file is checked here for what it claims: no embedded
 // image, no live text, no outside reference.
-const VECTOR_SEARCHES = ['health-bodies-vector-2026-11-16', 'health-regions-lower-mainland-vector-2026-11-16', 'historic-crowns-vector-2026-11-16', 'current-bodies-vector-2026-11-16']
+const FOLDED = new Map()
+const VECTOR_SEARCHES = ['health-bodies-vector-2026-11-16', 'health-regions-lower-mainland-vector-2026-11-16', 'historic-crowns-vector-2026-11-16', 'current-bodies-vector-2026-11-16', 'railway-marks-vector-2026-11-16']
 const pureVector = (asset) => {
   const svg = readFileSync(new URL(`public/${asset.file}`, root), 'utf8')
   if (/<(?:\w+:)?(?:image|text|foreignObject|script)\b/i.test(svg) || /(?:xlink:)?href\s*=\s*["'](?!#)/i.test(svg)) {
@@ -436,6 +437,7 @@ for (const search of VECTOR_SEARCHES) for (const { dataFile, bodyId, program, ta
   if (sameDesign && !VARIANT_OF[targetAssetId]) {
     for (const [id, keeper] of Object.entries(VARIANT_OF)) if (keeper === targetAssetId) VARIANT_OF[id] = asset.id
     VARIANT_OF[targetAssetId] = asset.id
+    FOLDED.set(targetAssetId, asset.id)
     VERSION_LABELS[targetAssetId] ??= 'Published image'
     VERSION_LABELS[asset.id] ??= asset.reconstruction ? 'Vector reconstruction' : 'Vector'
   }
@@ -540,6 +542,8 @@ if (contextByFile.size) throw new Error('Unassigned railway supporting images')
 const railwayIds = new Set(bodies.filter((body) => ['pacific-great-eastern-railway', 'bc-railway-company'].includes(body.id))
   .flatMap((body) => body.assets.map((asset) => asset.id)))
 const railwayVersions = bodies.flatMap((body) => body.assets).filter((asset) => asset.variantOf)
+// An era that named an image now names the vector drawn in its place, which carries it as a version.
+for (const era of railwayHistory.eras) if (era.assetIds) era.assetIds = era.assetIds.map((id) => FOLDED.get(id) ?? id)
 for (const era of railwayHistory.eras) for (const id of era.assetIds ?? []) {
   if (!railwayIds.delete(id)) throw new Error(`Missing or repeated railway logo: ${id}`)
   // A design's other colourways go with it.

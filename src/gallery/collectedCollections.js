@@ -108,7 +108,10 @@ const collectedEntry = (asset, timeline, owner, versions = [asset]) => ({
   kind: 'collected',
   ...(timeline ? { timeline } : {}),
   ...(owner ? { owner } : {}),
-  label: COLLECTED_PALETTES[asset.id]?.label ?? (versions.length > 1 ? asset.publisher : asset.label),
+  // A design whose versions are colourways is named by its publisher; one whose other version is
+  // the image it was redrawn or found in place of keeps its own name.
+  label: COLLECTED_PALETTES[asset.id]?.label ??
+    (versions.length > 1 && !versions.some((version) => version.versionLabel === 'Published image') ? asset.publisher : asset.label),
   // A card says what the mark is in a sentence; its full account, versions and sources are on its page.
   note: firstSentence(asset.notes),
   // A publication reproducing historical artwork is dated as such, beside the use it records.

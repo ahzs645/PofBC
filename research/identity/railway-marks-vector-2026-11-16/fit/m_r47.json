@@ -1,0 +1,266 @@
+{
+ "config": {
+  "source": "<repo>/public/identity-collected/pacific-great-eastern-railway/pge-caribou-passenger-roman-1947.png",
+  "thr": 128,
+  "centre": [
+   221.2,
+   220.3
+  ],
+  "band": [
+   140.5,
+   196
+  ],
+  "polarity": "pos",
+  "minw": 4,
+  "keepArea": 150,
+  "runs": [
+   {
+    "text": "PACIFICGREATEASTERN",
+    "range": [
+     112,
+     62
+    ],
+    "start": 112,
+    "clockwise": true,
+    "outward_up": true
+   },
+   {
+    "text": "RLY.",
+    "range": [
+     64,
+     110
+    ],
+    "start": 115,
+    "clockwise": false,
+    "outward_up": false
+   }
+  ],
+  "cuts": [
+   [
+    196.34649209882733,
+    83.53997972723775,
+    185.43955697672996,
+    23.522992413291718,
+    2
+   ],
+   [
+    226.77831916202578,
+    81.41197907909202,
+    229.22635850651193,
+    20.461120977110824,
+    2
+   ],
+   [
+    340.3462547975936,
+    148.70970758750244,
+    392.6334601404224,
+    117.29238501798912,
+    2
+   ]
+  ],
+  "title": "Pacific Great Eastern Railway: Roman-lettered passenger-car caribou",
+  "shapes": [
+   {
+    "kind": "ring",
+    "c": [
+     221.51,
+     220.27
+    ],
+    "r": [
+     198.03,
+     210.6
+    ],
+    "stroke": "#1A1A1A"
+   },
+   {
+    "kind": "ring",
+    "c": [
+     220.89,
+     220.28
+    ],
+    "r": [
+     127.69,
+     138.57
+    ],
+    "stroke": "#1A1A1A"
+   }
+  ],
+  "trace": {
+   "region": [
+    "circle",
+    220.89,
+    220.28,
+    126.7
+   ],
+   "polarity": "pos",
+   "fill": "#1A1A1A",
+   "turdsize": 40
+  },
+  "lettering": [
+   {
+    "font": "/usr/share/fonts/opentype/urw-base35/C059-Bold.otf",
+    "size": 52,
+    "xs": 1.05,
+    "fill": "#1A1A1A"
+   },
+   {
+    "font": "/usr/share/fonts/opentype/urw-base35/C059-Bold.otf",
+    "size": 57,
+    "xs": 0.95,
+    "fill": "#1A1A1A"
+   }
+  ],
+  "viewBox": [
+   10.689999999999998,
+   9.379999999999995,
+   432.49,
+   431.18
+  ]
+ },
+ "runs": [
+  {
+   "text": "PACIFICGREATEASTERN",
+   "font": "C059-Bold.otf",
+   "axes": null,
+   "size": 52,
+   "xs": 1.05,
+   "meanIoU": 0.721,
+   "letters": [
+    {
+     "ch": "P",
+     "iou": 0.738,
+     "rotation": 222.25
+    },
+    {
+     "ch": "A",
+     "iou": 0.768,
+     "rotation": 238.37
+    },
+    {
+     "ch": "C",
+     "iou": 0.77,
+     "rotation": 249.21
+    },
+    {
+     "ch": "I",
+     "iou": 0.813,
+     "rotation": 265.09
+    },
+    {
+     "ch": "F",
+     "iou": 0.739,
+     "rotation": -82.04
+    },
+    {
+     "ch": "I",
+     "iou": 0.793,
+     "rotation": -70.12
+    },
+    {
+     "ch": "C",
+     "iou": 0.729,
+     "rotation": -61.2
+    },
+    {
+     "ch": "G",
+     "iou": 0.607,
+     "rotation": -37.71
+    },
+    {
+     "ch": "R",
+     "iou": 0.741,
+     "rotation": -17.3
+    },
+    {
+     "ch": "E",
+     "iou": 0.684,
+     "rotation": -4.15
+    },
+    {
+     "ch": "A",
+     "iou": 0.725,
+     "rotation": 11.14
+    },
+    {
+     "ch": "T",
+     "iou": 0.769,
+     "rotation": 26.45
+    },
+    {
+     "ch": "E",
+     "iou": 0.696,
+     "rotation": 54.18
+    },
+    {
+     "ch": "A",
+     "iou": 0.738,
+     "rotation": 67.69
+    },
+    {
+     "ch": "S",
+     "iou": 0.549,
+     "rotation": 79.81
+    },
+    {
+     "ch": "T",
+     "iou": 0.756,
+     "rotation": 98.56
+    },
+    {
+     "ch": "E",
+     "iou": 0.666,
+     "rotation": 108.15
+    },
+    {
+     "ch": "R",
+     "iou": 0.723,
+     "rotation": 126.37
+    },
+    {
+     "ch": "N",
+     "iou": 0.695,
+     "rotation": 144.0
+    }
+   ]
+  },
+  {
+   "text": "RLY.",
+   "font": "C059-Bold.otf",
+   "axes": null,
+   "size": 57,
+   "xs": 0.95,
+   "meanIoU": 0.7373,
+   "letters": [
+    {
+     "ch": "R",
+     "iou": 0.723,
+     "rotation": 18.29
+    },
+    {
+     "ch": "L",
+     "iou": 0.82,
+     "rotation": 6.6
+    },
+    {
+     "ch": "Y",
+     "iou": 0.794,
+     "rotation": -9.28
+    },
+    {
+     "ch": ".",
+     "iou": 0.612,
+     "rotation": -19.49
+    }
+   ]
+  }
+ ],
+ "trace": {
+  "tool": "potracer 0.0.4",
+  "upsample": 4,
+  "threshold": 128,
+  "turdsize": 40,
+  "alphamax": 1.0,
+  "opttolerance": 0.2,
+  "contours": 17
+ }
+}

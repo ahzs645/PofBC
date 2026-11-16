@@ -1,0 +1,247 @@
+{
+ "config": {
+  "source": "<repo>/public/identity-collected/pacific-great-eastern-railway/pge-caribou-oval-advertising-1956.png",
+  "thr": 128,
+  "centre": [
+   187.74,
+   123.03
+  ],
+  "ellipseBand": [
+   [
+    138.5,
+    84.3
+   ],
+   [
+    181.3,
+    111.3
+   ]
+  ],
+  "normalAxes": [
+   160.0,
+   98.0
+  ],
+  "polarity": "neg",
+  "minw": 4,
+  "keepArea": 150,
+  "runs": [
+   {
+    "text": "PACIFICGREAT",
+    "range": [
+     185,
+     355
+    ],
+    "start": 185,
+    "clockwise": true,
+    "outward_up": true
+   },
+   {
+    "text": "EASTERN",
+    "range": [
+     30,
+     150
+    ],
+    "start": 150,
+    "clockwise": false,
+    "outward_up": false
+   }
+  ],
+  "cuts": [
+   [
+    170,
+    200,
+    170,
+    230,
+    1
+   ]
+  ],
+  "title": "Pacific Great Eastern: oval caribou advertising mark",
+  "shapes": [
+   {
+    "kind": "ellipse",
+    "c": [
+     187.74,
+     123.03
+    ],
+    "rx": 182.96,
+    "ry": 112.86,
+    "fill": "#1A1A1A"
+   },
+   {
+    "kind": "ellipse-ring",
+    "c": [
+     187.84,
+     122.65
+    ],
+    "r": [
+     [
+      132.0,
+      77.96
+     ],
+     [
+      137.0,
+      82.83
+     ]
+    ],
+    "stroke": "#FFFFFF"
+   }
+  ],
+  "trace": {
+   "region": [
+    "ellipse",
+    187.84,
+    122.65,
+    130.9,
+    76.9
+   ],
+   "polarity": "neg",
+   "fill": "#FFFFFF",
+   "turdsize": 40
+  },
+  "lettering": [
+   {
+    "font": "<fonts>/Poppins-Black.ttf",
+    "size": 34,
+    "xs": 1.3,
+    "fill": "#FFFFFF"
+   },
+   {
+    "font": "<fonts>/Poppins-Black.ttf",
+    "size": 31,
+    "xs": 1.45,
+    "fill": "#FFFFFF"
+   }
+  ],
+  "viewBox": [
+   4.5400000000000205,
+   9.930000000000007,
+   370.94,
+   236.13
+  ]
+ },
+ "runs": [
+  {
+   "text": "PACIFICGREAT",
+   "font": "Poppins-Black.ttf",
+   "axes": null,
+   "size": 34,
+   "xs": 1.3,
+   "meanIoU": 0.7881,
+   "letters": [
+    {
+     "ch": "P",
+     "iou": 0.793,
+     "rotation": -54.49
+    },
+    {
+     "ch": "A",
+     "iou": 0.845,
+     "rotation": -34.86
+    },
+    {
+     "ch": "C",
+     "iou": 0.858,
+     "rotation": -20.57
+    },
+    {
+     "ch": "I",
+     "iou": 0.815,
+     "rotation": -14.77
+    },
+    {
+     "ch": "F",
+     "iou": 0.71,
+     "rotation": -7.33
+    },
+    {
+     "ch": "I",
+     "iou": 0.732,
+     "rotation": -7.3
+    },
+    {
+     "ch": "C",
+     "iou": 0.702,
+     "rotation": -1.92
+    },
+    {
+     "ch": "G",
+     "iou": 0.682,
+     "rotation": 11.57
+    },
+    {
+     "ch": "R",
+     "iou": 0.801,
+     "rotation": 16.62
+    },
+    {
+     "ch": "E",
+     "iou": 0.841,
+     "rotation": 26.09
+    },
+    {
+     "ch": "A",
+     "iou": 0.794,
+     "rotation": 38.76
+    },
+    {
+     "ch": "T",
+     "iou": 0.884,
+     "rotation": 59.88
+    }
+   ]
+  },
+  {
+   "text": "EASTERN",
+   "font": "Poppins-Black.ttf",
+   "axes": null,
+   "size": 31,
+   "xs": 1.45,
+   "meanIoU": 0.7867,
+   "letters": [
+    {
+     "ch": "E",
+     "iou": 0.817,
+     "rotation": 21.81
+    },
+    {
+     "ch": "A",
+     "iou": 0.857,
+     "rotation": 13.63
+    },
+    {
+     "ch": "S",
+     "iou": 0.71,
+     "rotation": 3.77
+    },
+    {
+     "ch": "T",
+     "iou": 0.753,
+     "rotation": 2.15
+    },
+    {
+     "ch": "E",
+     "iou": 0.709,
+     "rotation": -0.84
+    },
+    {
+     "ch": "R",
+     "iou": 0.819,
+     "rotation": -10.98
+    },
+    {
+     "ch": "N",
+     "iou": 0.844,
+     "rotation": -21.72
+    }
+   ]
+  }
+ ],
+ "trace": {
+  "tool": "potracer 0.0.4",
+  "upsample": 4,
+  "threshold": 128,
+  "turdsize": 40,
+  "alphamax": 1.0,
+  "opttolerance": 0.2,
+  "contours": 10
+ }
+}
