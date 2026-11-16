@@ -13,12 +13,13 @@ and dark grounds, and leaves the source file alone for download:
    keeping its hue. Only ink that meets the page is redrawn: white lettering inside a green badge
    stays white, because it reads against the badge, not the page.
 
-The copies stay vector: they are recoloured by changing the file's own colour values. Raster files
-(PNG, JPEG, GIF, and EPS previews) are left as they are for now. Per-logo settings are in
-collected-display-overrides.json; the manifest (src/gallery/collectedDisplay.js) records which
+The copies stay vector: they are recoloured by changing the file's own colour values. An EPS is
+first drawn into SVG by Ghostscript and pdftocairo. Raster files (PNG, JPEG, GIF) are left as they
+are. Per-logo settings are in collected-display-overrides.json; the manifest (src/gallery/collectedDisplay.js) records which
 copies were redrawn, so the gallery can say so.
 
-Run: npm run build:collected-display (Python 3 with numpy, scipy and Pillow; Node for resvg)
+Run: npm run build:collected-display (Python 3 with numpy, scipy and Pillow; Node for resvg;
+Ghostscript and Poppler's pdftocairo for EPS files)
 """
 
 import json
@@ -232,11 +233,23 @@ def load(path):
     return np.asarray(image.convert("RGBA"), dtype=float) / 255
 
 
+def source_svg(asset, work):
+    """The file's SVG. An EPS is drawn into one first, unchanged: Ghostscript turns it into a PDF
+    (cropped to its bounding box) and Poppler's pdftocairo writes that PDF's paths as SVG."""
+    source = PUBLIC / asset["file"]
+    if asset["format"] != "eps":
+        return source.read_text(encoding="utf-8")
+    pdf, svg = work / f"{asset['id']}.pdf", work / f"{asset['id']}-eps.svg"
+    subprocess.run(["gs", "-q", "-dNOPAUSE", "-dBATCH", "-dSAFER", "-dEPSCrop", "-sDEVICE=pdfwrite",
+                    "-o", str(pdf), str(source)], check=True, capture_output=True)
+    subprocess.run(["pdftocairo", "-svg", str(pdf), str(svg)], check=True, capture_output=True)
+    return svg.read_text(encoding="utf-8")
+
+
 def build_vector(asset, settings, work):
     """A trimmed, and where its ink needs it, recoloured copy of a vector file. None if the file
     draws its own ground, which the raster route deals with."""
-    source = PUBLIC / asset["file"]
-    text = source.read_text(encoding="utf-8")
+    text = source_svg(asset, work)
     # Make the default black explicit, so lettering drawn with no fill can be recoloured too.
     root_tag = ROOT_TAG.search(text).group(0)
     if not re.search(r"\sfill\s*=", root_tag):
@@ -332,8 +345,11 @@ def build_vector(asset, settings, work):
 
 
 def collected_assets():
-    script = ("import('./src/gallery/collectedData.js').then(({ COLLECTED_BODIES, COLLECTED_SPECIMENS }) =>"
-              " console.log(JSON.stringify([...COLLECTED_BODIES, ...COLLECTED_SPECIMENS].flatMap((each) => each.assets))))")
+    script = ("Promise.all([import('./src/gallery/collectedData.js'), import('./src/gallery/expandedIdentityData.js'),"
+              " import('./src/gallery/municipalIdentityData.js')]).then(([{ COLLECTED_BODIES, COLLECTED_SPECIMENS },"
+              " { EXPANDED_IDENTITY_BODIES }, { MUNICIPAL_IDENTITY_BODIES }]) =>"
+              " console.log(JSON.stringify([...COLLECTED_BODIES, ...COLLECTED_SPECIMENS, ...EXPANDED_IDENTITY_BODIES,"
+              " ...MUNICIPAL_IDENTITY_BODIES].flatMap((each) => each.assets ?? []))))")
     result = subprocess.run(["node", "--input-type=module", "-e", script], cwd=ROOT, capture_output=True, text=True, check=True)
     return json.loads(result.stdout)
 
@@ -360,7 +376,8 @@ def main():
             if only and asset["id"] not in only:
                 continue
             settings = OVERRIDES.get(asset["id"], {})
-            if asset["format"] != "svg" or not asset.get("isVector") or settings.get("skip"):
+            # Every SVG and EPS, including an SVG that embeds a photograph (Innovate BC's disc).
+            if asset["format"] not in ("svg", "eps") or settings.get("skip"):
                 continue
             entry = build_vector(asset, settings, work)
             if entry is None:
