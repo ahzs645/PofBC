@@ -14,7 +14,7 @@
 
 .arms__grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(min(100%, 230px), 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 280px), 1fr));
   gap: var(--gap);
   margin: 0;
   padding: 0;
@@ -25,9 +25,9 @@
 .arms__card { min-width: 0; }
 .arms__open {
   display: grid;
-  grid-template-columns: 96px minmax(0, 1fr);
+  grid-template-columns: 72px minmax(0, 1fr);
   align-items: center;
-  gap: 16px;
+  gap: 14px;
   width: 100%;
   height: 100%;
   padding: 16px;

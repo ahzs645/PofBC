@@ -7,16 +7,16 @@
 // without a browser; ArmsView.jsx resolves the image files.
 
 import catalogue from '../../research/identity/arms-variants-2026-11-14/catalogue.json' with { type: 'json' }
-import { HOLDERS as OTHER_HOLDERS, MUNICIPAL_HOLDERS } from './holders.js'
+import { HOLDERS as OTHER_HOLDERS, MUNICIPAL_HOLDERS, PROVINCE_REGISTER } from './holders.js'
 
 export const CATALOGUE_DIR = 'research/identity/arms-variants-2026-11-14'
 
 export const GROUPS = [
   { id: 'province', title: 'The Province', description: 'The arms of British Columbia, from the 1895 design to the 1987 grant.' },
-  { id: 'crown', title: 'The Crown and the Legislature', description: 'Arms and badges for the offices of the Crown in British Columbia and the Assembly.' },
+  { id: 'crown', title: 'The Crown', description: 'The Lieutenant Governor’s flag of office. The Legislative Assembly, the Great Seal and the courts have no entry in the register.' },
   { id: 'post-secondary', title: 'Universities and colleges', description: 'Public post-secondary institutions with registered arms.' },
   { id: 'public-body', title: 'Public bodies', description: 'Police, agencies, Crown corporations and other public bodies with registered arms.' },
-  { id: 'municipal', title: 'Municipalities and regional districts', description: 'Local governments whose arms are in the public register.' }
+  { id: 'municipal', title: 'Municipalities and regional districts', description: 'Local governments whose arms, flags or badges are in the public register.' }
 ]
 
 const sourcesById = new Map(catalogue.sources.map((source) => [source.id, source]))
@@ -59,8 +59,13 @@ export const PROVINCE = {
   id: 'british-columbia',
   name: 'Province of British Columbia',
   group: 'province',
-  registered: ['Arms', 'Crest', 'Supporters', 'Motto', 'Flag'],
-  granted: 'Shield and motto 31 March 1906; crest, supporters and compartment 15 October 1987',
+  year: '1906',
+  registered: ['Arms', 'Flag'],
+  granted: 'Shield and motto 31 March 1906; crest, supporters and compartment 15 October 1987 (College of Arms, London)',
+  registeredInCanada: PROVINCE_REGISTER?.granted ?? null,
+  register: PROVINCE_REGISTER?.register ?? null,
+  blazon: PROVINCE_REGISTER?.blazon ?? null,
+  symbolism: PROVINCE_REGISTER?.symbolism ?? null,
   motto: { text: 'Splendor sine occasu', translation: 'Splendour without diminishment' },
   description: 'The Union Flag with an antique crown at its centre, over the sun setting into the sea between wavy bars of blue and silver. The 1987 augmentation added the crowned lion crest with its dogwood collar, the wapiti and bighorn ram supporters, and a compartment of Pacific dogwood.',
   image: { kind: 'vector' },

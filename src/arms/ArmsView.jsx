@@ -50,7 +50,7 @@ const HolderImage = ({ holder, label }) => {
   if (holder.image?.kind === 'vector') return <ProvinceArms label={label} />
   const url = holder.image?.file ? holderImageUrl(holder.image.file) : null
   if (!url) return <Shield />
-  return <img src={url} alt={label ?? ''} loading="lazy" decoding="async" />
+  return <img src={url} alt={label && holder.image.alt ? `${holder.image.alt} of ${holder.name}` : (label ?? '')} loading="lazy" decoding="async" />
 }
 
 const External = ({ href, children }) => <a href={href} target="_blank" rel="noreferrer">{children}</a>
@@ -117,12 +117,12 @@ const Municipalities = () => {
   return (
     <section className="arms__group" aria-labelledby="arms-group-municipal">
       <h3 id="arms-group-municipal">{group.title}</h3>
-      <p className="arms__group-description">{group.description} Each name opens its register entry.</p>
+      <p className="arms__group-description">{group.description} Each name opens its register entry; a place with two dates has two registrations.</p>
       <ul className="arms__municipal">
         {MUNICIPALITIES.map((place) => (
-          <li key={place.url}>
+          <li key={place.url} title={place.motto ?? undefined}>
             <External href={place.url}>{place.name}</External>
-            {place.date && <span className="arms__municipal-date">{place.date}</span>}
+            {place.date && <span className="arms__municipal-date" title={place.kind}>{place.date}</span>}
           </li>
         ))}
       </ul>
@@ -130,13 +130,14 @@ const Municipalities = () => {
   )
 }
 
-const Blazon = ({ blazon }) => {
-  const rows = [['Arms', blazon?.arms], ['Crest', blazon?.crest], ['Supporters', blazon?.supporters], ['Compartment', blazon?.compartment], ['Motto', blazon?.motto], ['Badge', blazon?.badge], ['Flag', blazon?.flag]]
-    .filter(([, text]) => text)
+const ELEMENTS = [['arms', 'Arms'], ['crest', 'Crest'], ['supporters', 'Supporters'], ['compartment', 'Compartment'], ['motto', 'Motto'], ['badge', 'Badge'], ['flag', 'Flag']]
+
+const Elements = ({ record, summary }) => {
+  const rows = ELEMENTS.map(([key, term]) => [term, record?.[key]]).filter(([, text]) => text)
   if (!rows.length) return null
   return (
     <details className="arms__blazon">
-      <summary>Blazon</summary>
+      <summary>{summary}</summary>
       <dl>
         {rows.map(([term, text]) => (
           <div key={term}><dt>{term}</dt><dd>{text}</dd></div>
@@ -219,22 +220,32 @@ const Detail = ({ holder, onBack, titleRef }) => (
         )}
         <dl className="arms__facts">
           {holder.granted && <div><dt>Granted</dt><dd>{holder.granted}</dd></div>}
+          {holder.registeredInCanada && <div><dt>In Canada</dt><dd>{holder.registeredInCanada}</dd></div>}
           {holder.registered?.length > 0 && <div><dt>Registered</dt><dd>{holder.registered.join(', ')}</dd></div>}
           {holder.register?.volume && <div><dt>Register</dt><dd>{holder.register.volume}</dd></div>}
         </dl>
         {holder.description && <p className="arms__description">{holder.description}</p>}
         {holder.note && <p className="arms__note">{holder.note}</p>}
-        <Blazon blazon={holder.blazon} />
-        {holder.image?.credit && <p className="arms__credit">Image: {holder.image.credit}</p>}
+        <Elements record={holder.symbolism} summary="Symbolism, from the register" />
+        <Elements record={holder.blazon} summary="Blazon" />
+        {holder.image?.credit && (
+          <p className="arms__credit">
+            {holder.image.alt ? `${holder.image.alt}: ` : 'Image: '}
+            {holder.image.page ? <External href={holder.image.page}>{holder.image.credit}</External> : holder.image.credit}
+          </p>
+        )}
       </div>
     </header>
     {holder.stages && <Stages stages={holder.stages} />}
     {holder.id === PROVINCE.id && <Specimens />}
-    {(holder.links?.length > 0 || holder.sources?.length > 0 || holder.register?.url) && (
+    {(holder.links?.length > 0 || holder.sources?.length > 0 || holder.register?.url || holder.related?.length > 0) && (
       <section className="arms__section" aria-labelledby="arms-elsewhere">
         <h3 id="arms-elsewhere">Sources and related pages</h3>
         <ul className="arms__sources">
           {holder.register?.url && <li><External href={holder.register.url}>Canadian Heraldic Authority: public register entry</External></li>}
+          {holder.related?.map((related) => (
+            <li key={related.url}><External href={related.url}>{related.title}</External>{related.relation && <> — {related.relation}</>}</li>
+          ))}
           {holder.sources?.filter((source) => source.url !== holder.register?.url).map((source) => (
             <li key={source.url}><External href={source.url}>{source.title}</External></li>
           ))}

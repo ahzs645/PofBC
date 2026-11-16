@@ -66,3 +66,29 @@ test('an unknown holder is no holder', () => {
   assert.equal(holderById('nowhere'), null)
   assert.equal(holderById(null), null)
 })
+
+test('register holders have ids, years and link only to real salary employers and gallery subjects', async () => {
+  const { identitySubjectById } = await import('../gallery/identityCoverage.js')
+  const others = HOLDERS.filter(({ group }) => group !== 'province')
+  assert.ok(others.length >= 30, `${others.length} holders`)
+  for (const holder of others) {
+    assert.match(holder.id ?? '', /^[a-z0-9-]+$/, `${holder.name} has an id`)
+    assert.match(holder.year, /^\d{4}$/, `${holder.id} year`)
+    assert.match(holder.register.url, /^https:\/\/www\.gg\.ca\/en\/heraldry\/public-register\/project\/\d+$/, holder.id)
+    for (const { to } of holder.links) {
+      if (to.view === 'salaries') assert.ok(existsSync(`${root}public/salaries/employers/${to.employer}.json.gzip`), `${holder.id}: salaries ${to.employer}`)
+      if (to.view === 'gallery') assert.ok(identitySubjectById(to.subject), `${holder.id}: subject ${to.subject}`)
+    }
+  }
+})
+
+test('the earliest record wins: UBC is dated 1915, the Lieutenant Governor 1982', () => {
+  assert.equal(holderById('university-of-british-columbia').year, '1915')
+  assert.equal(holderById('lieutenant-governor').year, '1982')
+})
+
+test('the Province carries its register record, blazon and symbolism', () => {
+  assert.match(PROVINCE.register.url, /project\/1406$/)
+  assert.match(PROVINCE.blazon.arms, /three bars wavy Azure/)
+  assert.ok(PROVINCE.symbolism.supporters)
+})
