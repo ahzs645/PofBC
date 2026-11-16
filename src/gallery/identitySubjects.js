@@ -12,7 +12,12 @@
 // before an exclusive end or the last documented sighting of an untraced body. It never
 // dates a logo. Values are static to keep the atlas history out of the gallery runtime.
 
+import { RECONCILED_FAMILIES, RECONCILED_SUBJECTS } from './reconciledSubjects.js'
+import { MUNICIPAL_FAMILIES, MUNICIPAL_KIND_LABELS, MUNICIPAL_SUBJECTS } from './municipalSubjects.js'
+
 export const IDENTITY_KIND_LABELS = {
+  ...MUNICIPAL_KIND_LABELS,
+  "campaign": "Campaign or slogan",
   "regional-authority": "Regional authority",
   "public-subsidiary": "Public subsidiary",
   "corporate-subsidiary": "Corporate subsidiary",
@@ -54,7 +59,7 @@ export const IDENTITY_RELATION_LABELS = {
   "shares-identity-with": "Shares identity with"
 }
 
-export const IDENTITY_FAMILIES = [
+const CURATED_FAMILIES = [
   {
     "id": "transit",
     "label": "Transit and fare systems",
@@ -152,7 +157,7 @@ export const IDENTITY_FAMILIES = [
   }
 ]
 
-export const IDENTITY_SUBJECTS = [
+const CURATED_SUBJECTS = [
   {
     "id": "translink",
     "label": "TransLink",
@@ -3360,3 +3365,8 @@ export const IDENTITY_SUBJECTS = [
     "relations": []
   }
 ]
+
+// The reconciled gallery owners and the municipal registry follow the curated subjects.
+// Municipalities come before the historical-research family in the register.
+export const IDENTITY_FAMILIES = [...CURATED_FAMILIES.slice(0, -1), ...RECONCILED_FAMILIES, ...MUNICIPAL_FAMILIES, CURATED_FAMILIES.at(-1)]
+export const IDENTITY_SUBJECTS = [...CURATED_SUBJECTS, ...RECONCILED_SUBJECTS, ...MUNICIPAL_SUBJECTS]

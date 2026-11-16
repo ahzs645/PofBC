@@ -119,8 +119,41 @@ export const coverageSummary = (subjects = IDENTITY_COVERAGE) => ({
   unresolved: subjects.filter((subject) => !subject.hasArtwork && subject.state !== 'source-located').length
 })
 
-export const filterIdentityCoverage = (subjects, { query = '', family = '', state = '', scope = '' } = {}) => {
+/** A municipality's regional district, or the provincial layer's own wording when it has none. */
+export const NO_REGIONAL_DISTRICT = 'No separate regional district'
+export const regionOf = (subject) => subject.municipal ? subject.municipal.regionalDistrict ?? NO_REGIONAL_DISTRICT : null
+
+export const filterIdentityCoverage = (subjects, { query = '', family = '', state = '', scope = '', region = '' } = {}) => {
   const matches = query.trim() ? new Set(searchIdentitySubjects(query, subjects).map((subject) => subject.id)) : null
   return subjects.filter((subject) => (!matches || matches.has(subject.id)) && (!family || subject.family === family) &&
+    (!region || regionOf(subject) === region) &&
     (!scope || subject.scope === scope) && (!state || (state === 'held' ? subject.hasArtwork : state === 'missing' ? !subject.hasArtwork : subject.state === state)))
 }
+
+// A relation is recorded once, on the subject it describes. Its other end shows the inverse, so a
+// parent lists what points to it. Membership of a family is browsing context, not a relation.
+export const INVERSE_RELATION_LABELS = {
+  'related-to': 'Related to',
+  'part-of': 'Includes',
+  'service-of': 'Provides the service',
+  'owned-by': 'Owns',
+  'operated-by': 'Operates',
+  'used-by': 'Uses',
+  'predecessor-of': 'Successor of',
+  'shares-identity-with': 'Shares identity with'
+}
+
+const incoming = new Map()
+for (const subject of IDENTITY_COVERAGE) {
+  for (const relation of subject.relations ?? []) {
+    if (!byId.has(relation.subject)) continue
+    incoming.set(relation.subject, [...(incoming.get(relation.subject) ?? []), { type: relation.type, subject: subject.id, source: relation }])
+  }
+}
+
+/** The subject's own relations, then those recorded on others that point to it, each with its target. */
+export const relationsOf = (subject) => ({
+  outgoing: (subject.relations ?? []).map((relation) => ({ ...relation, target: byId.get(relation.subject) })).filter((relation) => relation.target),
+  incoming: (incoming.get(subject.id) ?? []).map((relation) => ({ ...relation, target: byId.get(relation.subject) }))
+    .sort((a, b) => a.type.localeCompare(b.type) || a.target.label.localeCompare(b.target.label, 'en-CA'))
+})

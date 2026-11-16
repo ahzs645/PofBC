@@ -61,15 +61,34 @@
 .identity-detail aside .identity-subject-link > span:last-child { grid-column: 2; grid-row: 1 / 3; }
 .identity-collection-links { margin: 25px 0; padding: 14px 0; border-top: 1px solid var(--mid); border-bottom: 1px solid var(--mid); }
 .identity-collection-links > div { display: flex; flex-wrap: wrap; gap: 10px 24px; }
+.identity-collection-links > p { margin: 0 0 10px; }
+a.identity-subject-link, .identity-relations a, .identity-collection-links a { text-decoration: none; }
+.identity-relations a { width: fit-content; color: var(--ink); text-decoration: underline; text-underline-offset: 3px; }
+.identity-regions { display: grid; gap: 6px; }
+.identity-region { border-radius: 6px; background: var(--surface); }
+.identity-region > summary { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 4px 14px; padding: 13px 14px; cursor: pointer; color: var(--ink); font-size: 14px; font-weight: 600; }
+.identity-region > summary span { color: var(--ink-faint); font-size: 12px; font-weight: 400; }
+.identity-region[open] { padding-bottom: 12px; }
+.identity-region .identity-subject-links { padding: 0 8px 10px; }
+.identity-region .identity-subject-link { background: var(--page); }
+.identity-region > .gallery__back { margin: 0 14px; }
+.identity-municipal h4 { margin: 22px 0 10px; color: var(--ink); font-size: 14px; font-weight: 600; }
+.identity-municipal__facts { display: grid; gap: 10px; margin: 0 0 18px; font-size: 13px; line-height: 1.5; }
+.identity-municipal__facts dt { color: var(--ink-faint); font-size: 11px; }
+.identity-municipal__facts dd { margin: 2px 0 0; color: var(--ink); overflow-wrap: anywhere; }
+.identity-municipal__facts a, .identity-municipal__links a, .identity-municipal .gallery__note a { color: var(--ink); text-underline-offset: 3px; }
+.identity-municipal__links { list-style: none; display: grid; gap: 8px; margin: 0; padding: 0; font-size: 13px; }
+.identity-municipal__none { color: var(--ink-muted); }
 @media (min-width: 760px) {
   .identity-overview { grid-template-columns: minmax(0, 1.7fr) minmax(0, 1fr); padding: 32px; }
   .identity-filters { grid-template-columns: repeat(3, minmax(0, 1fr)); }
   .identity-filters__query { grid-column: 1 / -1; }
   .identity-detail__columns { grid-template-columns: minmax(0, 2fr) minmax(230px, 1fr); gap: 38px; }
   .identity-method dl > div { display: grid; grid-template-columns: 210px minmax(0, 1fr); gap: 15px; }
+  .identity-municipal__facts { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
 @media (min-width: 1100px) {
-  .identity-filters { grid-template-columns: minmax(0, 1.5fr) repeat(3, minmax(0, 1fr)); }
+  .identity-filters { grid-template-columns: minmax(0, 1.5fr) repeat(4, minmax(0, 1fr)); }
   .identity-filters__query { grid-column: auto; }
 }
 @media (max-width: 520px) {

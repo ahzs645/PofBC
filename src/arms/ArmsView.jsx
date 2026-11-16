@@ -10,6 +10,7 @@ import { writeHistory } from '../site/browserHistory.js'
 import {
   CATALOGUE_DIR, GROUPS, MUNICIPALITIES, PROVINCE, holderById, holdersInGroup, provinceSections
 } from './armsData.js'
+import { MUNICIPAL_PROFILE_BY_REGISTER } from '../salaries/municipalProfiles.js'
 import './arms.css'
 
 const SPECIMEN_IMAGES = import.meta.glob('../../research/identity/arms-variants-2026-11-14/reference/*', { eager: true, query: '?url', import: 'default' })
@@ -123,6 +124,12 @@ const Municipalities = () => {
           <li key={place.url} title={place.motto ?? undefined}>
             <External href={place.url}>{place.name}</External>
             {place.date && <span className="arms__municipal-date" title={place.kind}>{place.date}</span>}
+            {MUNICIPAL_PROFILE_BY_REGISTER[place.url] && (
+              <SiteLink className="arms__municipal-profile" to={{ view: 'gallery', subject: MUNICIPAL_PROFILE_BY_REGISTER[place.url][0] }}
+                title={MUNICIPAL_PROFILE_BY_REGISTER[place.url][1] === 'predecessor' ? 'Granted to a predecessor; opens the current municipality' : 'The municipality’s profile: logo, council pay and salaries'}>
+                {MUNICIPAL_PROFILE_BY_REGISTER[place.url][1] === 'predecessor' ? 'successor’s profile' : 'profile'}
+              </SiteLink>
+            )}
           </li>
         ))}
       </ul>

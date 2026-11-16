@@ -18,6 +18,7 @@
 import { BCTS_ENTRIES, ONE_OFFS } from './oneOffs.js'
 import { COLLECTION_ERAS, TIMELINES, timelineKeyOf } from './timelines.js'
 import { CURRENT_VARIANT_ORDER, CURRENT_VARIANTS } from '../hydro/hydroMarks.js'
+import { PROGRAM_ENTRY_OWNERS } from './reconciledSubjects.js'
 import { COLLECTED_COLLECTIONS, SPECIMEN_COLLECTIONS, collectedEntriesOf, specimenEntriesOf, nodesOf } from './collectedCollections.js'
 
 // ── The identity record ──────────────────────────────────────────────────────────────────────────
@@ -1201,6 +1202,14 @@ export const COLLECTIONS_ON_SHELF = (shelf) => GALLERY_COLLECTIONS.filter((colle
 export const entriesOf = (collection) => collection.eras
   ? collection.eras.flatMap((each) => each.entries)
   : collection.entries
+
+// Program marks published with no owning body (WelcomeBC, StrongerBC and the like) are owned by
+// their program's register subject, so every held entry has an explicit owner.
+for (const collection of GALLERY_COLLECTIONS) {
+  for (const entry of entriesOf(collection)) {
+    if (entry.owner === undefined && PROGRAM_ENTRY_OWNERS[entry.id]) entry.owner = PROGRAM_ENTRY_OWNERS[entry.id]
+  }
+}
 
 export const findGalleryEntry = (id) => GALLERY_COLLECTIONS
   .flatMap(entriesOf)

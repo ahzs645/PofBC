@@ -941,7 +941,7 @@ export const GalleryView = ({ onOpenGovernment, onOpenInGenerator }) => {
           </section>
         )}
         <RailwayHistory history={collection?.railwayHistory} compact />
-        <IdentityCollectionLinks collectionId={collection?.id} onOpenSubject={openSubject} onOpenGovernment={onOpenGovernment} />
+        <IdentityCollectionLinks collectionId={collection?.id} entryId={open.id} onOpenSubject={openSubject} onOpenGovernment={onOpenGovernment} />
         <AboutMark identity={open.identity} />
       </div>
     )
@@ -1007,7 +1007,7 @@ export const GalleryView = ({ onOpenGovernment, onOpenInGenerator }) => {
         <GraphLink node={collection.graphNode} onOpenGovernment={onOpenGovernment} />
       </div>
       <p className="gallery__intro">{collection.intro}</p>
-      <IdentityCollectionLinks collectionId={collection.id} onOpenSubject={openSubject} onOpenGovernment={onOpenGovernment} />
+      <IdentityCollectionLinks collectionId={collection.id} graphShown={collection.graphNode} onOpenSubject={openSubject} onOpenGovernment={onOpenGovernment} />
       <RailwayHistoryLinks history={collection.railwayHistory} />
 
       {timeline}
