@@ -1,18 +1,20 @@
 // A part's panel, drawn from data: the same voice as the coastal poster's hand-written panels,
 // for posters whose parts are described in a data file (see forest-service/posters.js).
 
+import { useState } from 'react'
 import { SiteLink } from '../../site/navigation.jsx'
 import { Facts, Item, Reveal } from './Reveal.jsx'
 import { Connections } from './Connections.jsx'
 import { Segmented } from './Segmented.jsx'
+import { glance } from './glance.js'
 
-const Links = ({ links }) => (
+const Links = ({ links, brief }) => (
   <Item as="ul" className="pv-links">
     {links.map((link) => (
       <li key={link.label + (link.note ?? '')}>
         <SiteLink to={link.to} className="pv-link-card">
           <b>{link.label} <span aria-hidden="true">→</span></b>
-          {link.note && <span>{link.note}</span>}
+          {link.note && !brief && <span>{link.note}</span>}
         </SiteLink>
       </li>
     ))}
@@ -38,13 +40,13 @@ const Sources = ({ sources }) => (
   </Item>
 )
 
-const Block = ({ block, figures }) => {
+const Block = ({ block, figures, brief }) => {
   if (typeof block === 'string') return <Item as="p">{block}</Item>
   if (block.h) return <Item as="h3">{block.h}</Item>
   if (block.facts) return <Facts rows={block.facts} />
   if (block.note) return <Item as="div" className="pv-note"><p>{block.note}</p></Item>
   if (block.palette) return <Palette colours={block.palette} />
-  if (block.links) return <Links links={block.links} />
+  if (block.links) return <Links links={block.links} brief={brief} />
   if (block.sources) return <Sources sources={block.sources} />
   if (block.figure) {
     // The picture itself is attached by the poster's loader; the data only names it.
@@ -60,6 +62,13 @@ const Block = ({ block, figures }) => {
   return null
 }
 
+// A panel opens at a glance: its heading and lede, then what can be scanned (the first table of
+// facts, the colours, a picture, links). The paragraphs, caveats and sources are one press away, and
+// the choice is kept, so a reader who wants every panel in full asks once.
+const FULL_KEY = 'pofbc-panel-full'
+let full = (() => { try { return localStorage.getItem(FULL_KEY) === '1' } catch { return false } })()
+const keepFull = (on) => { full = on; try { localStorage.setItem(FULL_KEY, on ? '1' : '0') } catch { /* private window */ } }
+
 /**
  * One part's panel. On the overview it also lists the parts, as a table of contents, offers the
  * tour and any named recolouring (`variation`), and ends with the piece's connections from the
@@ -71,7 +80,11 @@ export function DataPanel({ partId, parts, order, onSelect, tour, story, poster,
   const steps = order.filter((id) => id !== 'overview')
   const index = steps.indexOf(partId)
   const eyebrow = index >= 0 ? `Part ${index + 1} of ${steps.length} · ${panel.eyebrow}` : panel.eyebrow
-  const blocks = panel.blocks ?? []
+  const [open, setOpen] = useState(full)
+  const toggle = () => { keepFull(!open); setOpen(!open) }
+  const all = panel.blocks ?? []
+  const brief = glance(all)
+  const blocks = open ? all : brief.kept
   // On the overview the contents come before the series links, which are the panel's last block.
   const tail = partId === 'overview' && blocks.findIndex((b) => b.h) >= 0 ? blocks.findIndex((b) => b.h) : blocks.length
   return (
@@ -79,7 +92,12 @@ export function DataPanel({ partId, parts, order, onSelect, tour, story, poster,
       <Item as="p" className="pv-eyebrow">{eyebrow}</Item>
       <Item as="h2">{panel.heading}{panel.em && <>, <em>{panel.em}</em></>}</Item>
       <Item as="p" className="pv-lede">{panel.lede}</Item>
-      {blocks.slice(0, tail).map((block, i) => <Block key={i} block={block} figures={figures} />)}
+      {blocks.slice(0, tail).map((block, i) => <Block key={i} block={block} figures={figures} brief={!open} />)}
+      {brief.held > 0 && (
+        <Item as="div" className="pv-row pv-more">
+          <button type="button" className="pv-ghost" aria-expanded={open} onClick={toggle}>{open ? 'Show less' : 'Read more'}</button>
+        </Item>
+      )}
       {partId === 'overview' && (
         <>
           {variation && (
@@ -138,8 +156,8 @@ export function DataPanel({ partId, parts, order, onSelect, tour, story, poster,
           </Item>
         </>
       )}
-      {blocks.slice(tail).map((block, i) => <Block key={tail + i} block={block} figures={figures} />)}
-      {partId === 'overview' && poster && <Connections poster={poster} />}
+      {blocks.slice(tail).map((block, i) => <Block key={tail + i} block={block} figures={figures} brief={!open} />)}
+      {partId === 'overview' && poster && <Connections poster={poster} brief={!open} />}
     </Reveal>
   )
 }

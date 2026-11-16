@@ -2,7 +2,7 @@
 // it went into, generation by generation (bodyFamily.js) — and,
 // for a ministry, its mark as it would have been set in the year on screen.
 
-import { useMemo, useState } from 'react'
+import { Suspense, lazy, useEffect, useMemo, useState } from 'react'
 import { bodyFamily, elsewhereLine, groupTitle } from './bodyFamily.js'
 import { CURRENT_AS_OF } from './currentData.js'
 import { ELECTION_RESULTS_2026 } from './atlasData.js'
@@ -13,7 +13,6 @@ import { KINDS, RELATIONS } from './GovernmentGraph.jsx'
 import { CROWN_CATEGORIES, CROWN_CATEGORY_SOURCES } from './crownCategories.js'
 import { Card, CardSection, KindIcon } from './PanelCards.jsx'
 import { LogoCard } from './LogoCard.jsx'
-import { Salaries } from './Salaries.jsx'
 import { StoryText } from './StoryText.jsx'
 import { lifespanOf, ministryAt, officeHoldersTo, pathToPeople, PEOPLE_ID, periodsOf, PRESENT_YEAR } from './snapshot.js'
 import { ElectionStages, EventsCard, EvidenceCard, ParliamentCard, RelationsCard, StaffingCard } from './AtlasCards.jsx'
@@ -23,6 +22,25 @@ import { electionStages, eventsInYear, formatEventDate, typeOf } from './events.
 import { PENDING_ELECTION, PREMIERS } from './timelineData.js'
 import { partyColour } from './theme.js'
 import { areaById, healthMapLink } from '../health/healthStoryData.js'
+
+// The pay card brings every employer's totals with it (salaryIndex.js, about twelve megabytes of
+// script), which the diagram itself never reads. It is fetched once the diagram is up and the
+// browser is idle, so the first paint does not wait for it and it is usually there by the time a
+// body is opened.
+const loadSalaries = () => import('./Salaries.jsx')
+const Salaries = lazy(() => loadSalaries().then((module) => ({ default: module.Salaries })))
+const whenIdle = (work) => {
+  if (globalThis.requestIdleCallback) {
+    const id = globalThis.requestIdleCallback(work, { timeout: 4000 })
+    return () => globalThis.cancelIdleCallback?.(id)
+  }
+  const id = setTimeout(work, 1500)
+  return () => clearTimeout(id)
+}
+/** Starts fetching the pay card's data without holding anything up. */
+export const usePreloadSalaries = () => {
+  useEffect(() => whenIdle(() => { loadSalaries().catch(() => {}) }), [])
+}
 
 const BRANCH_LABELS = { legislative: 'Legislative', executive: 'Executive', judicial: 'Judicial' }
 
@@ -810,7 +828,7 @@ export const EntityCard = ({ node, government, theme, onSelect, onJump, onJumpBo
       </section>
 
       {isBody && <LogoCard node={node} theme={theme} />}
-      <Salaries key={node.id} node={node} year={year} />
+      <Suspense fallback={null}><Salaries key={node.id} node={node} year={year} /></Suspense>
       <EventsCard events={node.events} day={day} />
       {onOpenInstrument && <LegislationCard node={node} onOpen={onOpenInstrument} />}
       {isMinistry && <MinistryTimeline node={node} year={year} onJump={onJump} />}

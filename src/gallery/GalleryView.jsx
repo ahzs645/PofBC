@@ -476,11 +476,11 @@ const CollectionCard = ({ collection, onOpen, theme }) => {
       <span className="gallery__collection-text">
         <span className="gallery__collection-title">{collection.label}</span>
         <span className="gallery__note">{collection.body}</span>
-        <span className="gallery__years">
+        {/* Where the artwork came from is said on the collection's own page; here it is a tooltip. */}
+        <span className="gallery__years" title={collectionChips(collection).join(' · ') || undefined}>
           {collection.years} · {count} {collection.fileCollection ? (count === 1 ? 'artwork file' : 'artwork files') : (count === 1 ? 'mark' : 'marks')}
           {collection.eras ? ` · ${collection.eras.length} eras` : ''}
         </span>
-        <Chips labels={collectionChips(collection)} />
       </span>
     </button>
   )

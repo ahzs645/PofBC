@@ -11,7 +11,7 @@ import { SiteLink } from '../site/navigation.jsx'
 import { displayName, EMPLOYER_LAYOUT, personKey, withoutCompiledRepeats } from './people.js'
 import { employerNameKeys } from './nameLinks.js'
 import { meanMoney, titleKey, titleLabel, titleRecords } from './positions.js'
-import { categoryCoverage, coverageAt, expenseLabel, reportingYearLabel, scopeLabel } from './coverage.js'
+import { categoryCoverage, coverageAt, expenseLabel, openingYear, reportingYearLabel, scopeLabel } from './coverage.js'
 import { DisclosureSummary } from './DisclosureEvidence.jsx'
 import { formatMoney as money, formatSummaryMoney as summary, medianMoney as median } from './money.js'
 import { PayChart, YearPicker, shortYear } from './parts.jsx'
@@ -108,7 +108,7 @@ export const EmployerPage = ({ entry, years, sources, year: wantedYear, show, ro
     return () => { live = false }
   }, [entry.slug, loadVersion])
 
-  const year = wantedYear ?? seen.at(-1) ?? 0
+  const year = wantedYear ?? openingYear(entry, sources) ?? 0
   const name = entry.names.at(-1)
   remember?.(name)
   // Keep employee statistics apart from council, board and appointee schedules in the same period.

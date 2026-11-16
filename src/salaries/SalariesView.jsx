@@ -35,6 +35,8 @@ import { nameSearchTokens } from './nameSearch.js'
 import { employerMatcher } from './employerSearch.js'
 import { documentTitle, setDocumentMeta } from '../site/documentMeta.js'
 import { connectRelatedSalaryBodies } from '../government/relatedBodies.js'
+import { loadSalaryIndexes } from './browseIndex.js'
+import { BROWSE } from './CompanionShell.jsx'
 
 const CouncilPayView = lazy(() => import('./CouncilPayView.jsx'))
 const WorkforceView = lazy(() => import('./WorkforceView.jsx'))
@@ -163,8 +165,11 @@ const SalaryRecordsView = ({ onOpenGovernment, navigation }) => {
   const setSector = (value) => setPlace((current) => ({ ...current, sector: value }))
 
   useEffect(() => {
-    loadJson('salaries/people/index.json', { reload: loadVersion > 0 }).then(connectRelatedSalaryBodies).then(setIndex, () => setFailed(true))
-    loadJson('salaries/employers/index.json', { reload: loadVersion > 0 }).then(connectRelatedSalaryBodies).then(setEmployersIndex, () => setFailed(true))
+    // One packed file stands for the two published indexes (browseIndex.js).
+    loadSalaryIndexes(loadJson, { reload: loadVersion > 0 }).then(({ people, employers }) => {
+      setIndex(connectRelatedSalaryBodies(people))
+      setEmployersIndex(connectRelatedSalaryBodies(employers))
+    }, () => setFailed(true))
   }, [loadVersion])
 
   // The year filter is kept as a label, so a shared link survives older years being added.
@@ -375,8 +380,9 @@ const SalaryRecordsView = ({ onOpenGovernment, navigation }) => {
         <SalarySearchField labelled label="Search people, employers or positions" value={query} onChange={search} />
         {filters && <div className="salaries__desktop-filters">{filters}</div>}
       </div>
-      {introduction}
+      {/* On a phone the search comes first on every page, as it does on a wide screen. */}
       <MobileSalaryFilters query={query} onSearch={search} years={years} counts={periodCounts} range={range} onRange={setRange} sectors={sectors} employers={employersIndex.employers} sector={sector} onSector={setSector} showSector={showSector} showFilters={Boolean(filters)} />
+      {introduction}
       {content}
     </div>
   )
@@ -490,9 +496,11 @@ const SalaryRecordsView = ({ onOpenGovernment, navigation }) => {
   const compiled = new Set(Object.entries(employersIndex.sources ?? {}).filter(([, source]) => source.scope === 'compiled-unverified' || source.sourceKind === 'compiled').map(([id]) => id))
   const official = employersIndex.recordCounts?.official ?? employersIndex.employers.reduce((sum, entry) => sum + entry.coverage.reduce((part, cell, at) => part + (cell?.status === 'available' && !(cell.sourceIds ?? []).some((id) => compiled.has(id)) ? entry.counts[at] : 0), 0), 0)
 
+  // While a search is typed its results come straight under the field: the totals for the whole
+  // collection would only stand between a question and its answer.
   const introduction = (
     <>
-      <section className="salaries__intro" aria-labelledby="salaries-intro">
+      {!typed && <section className="salaries__intro salaries__intro--totals" aria-labelledby="salaries-intro">
         <h2 id="salaries-intro" className="salaries__heading">Public-sector salaries</h2>
         <p className="salaries__about-link"><button type="button" className="salaries__link" onClick={() => go({ browse: 'about', q: '' })}>About these records, privacy and corrections</button></p>
         <dl className="salaries__tiles">
@@ -501,15 +509,15 @@ const SalaryRecordsView = ({ onOpenGovernment, navigation }) => {
           <div><dt>Periods</dt><dd>{years.length}</dd><dd className="salaries__line">{years[0]} – {years.at(-1)}</dd></div>
           <div><dt>From employer reports</dt><dd>{Math.round((official / total) * 100)}%</dd><dd className="salaries__line">{official.toLocaleString('en-CA')} records</dd></div>
         </dl>
-      </section>
+      </section>}
 
       {!typed && (
-        <div className="salaries__browse-bar">
+        <div className="salaries__browse-bar salaries__browse-bar--sections">
           <Segmented
             ariaLabel="Browse"
             value={browse}
             onChange={(next) => go({ browse: next })}
-            options={[{ value: 'employers', label: 'Employers' }, { value: 'people', label: 'People' }, { value: 'positions', label: 'Positions' }, { value: 'council', label: 'Council pay' }, { value: 'workforce', label: 'Workforce' }]}
+            options={BROWSE}
           />
           <Segmented compact ariaLabel="Layout" value={layout} onChange={(next) => setPlace((current) => ({ ...current, layout: next }))} options={LAYOUTS} />
         </div>

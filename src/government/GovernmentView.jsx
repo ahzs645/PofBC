@@ -10,7 +10,7 @@
 
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import { MINISTRY_EPISODES, standsIn } from './episodes.js'
-import { ChangesCard, EntityCard, OverviewCard } from './GovernmentPanel.jsx'
+import { ChangesCard, EntityCard, OverviewCard, usePreloadSalaries } from './GovernmentPanel.jsx'
 import { InstrumentCard } from './LegislationCards.jsx'
 import { instrumentById } from './instruments.js'
 import { GovernmentGraph } from './GovernmentGraph.jsx'
@@ -224,8 +224,23 @@ const Search = ({ onPick }) => {
  * @param {(patch: {era: string, name: string}) => void} props.onOpenInGenerator
  * @param {(view: string) => void} props.onChangeView
  */
+/**
+ * A fold whose contents are built when it is first opened. The sources fold holds some 1,200 links
+ * that almost no visit reads; built with the page, they were a third of everything it drew.
+ */
+const Folded = ({ className, summary, children }) => {
+  const [opened, setOpened] = useState(false)
+  return (
+    <details className={className} onToggle={(event) => { if (event.currentTarget.open) setOpened(true) }}>
+      <summary>{summary}</summary>
+      {opened && children()}
+    </details>
+  )
+}
+
 export const GovernmentView = ({ onOpenInGenerator, onChangeView }) => {
   const navigate = useNavigate()
+  usePreloadSalaries()
   const initial = useMemo(readParams, [])
   const [year, setYear] = useState(initial.year)
   const [selectedId, setSelectedId] = useState(initial.node)
@@ -455,8 +470,7 @@ export const GovernmentView = ({ onOpenInGenerator, onChangeView }) => {
             : <OverviewCard government={government} onSelect={setSelectedId} />}
         <ChangesCard key={year} year={year} onSelect={setSelectedId} onJump={jump} />
 
-        <details className="gov-card gov-sources">
-          <summary>Sources and caveats</summary>
+        <Folded className="gov-card gov-sources" summary="Sources and caveats">{() => <>
           <p className="gov-muted">
             <StoryText label="Sources and caveats" text={SOURCES_NOTE} />
           </p>
@@ -471,15 +485,14 @@ export const GovernmentView = ({ onOpenInGenerator, onChangeView }) => {
             Ministers’ responsibilities for Acts: <a href={AMR_COLLECTION.url} target="_blank" rel="noreferrer">{AMR_COLLECTION.title}</a>,
             under the <a href={AMR_LICENCE.url} target="_blank" rel="noreferrer">{AMR_LICENCE.name}</a>. {AMR_ATTRIBUTION}
           </p>
-          <details className="gov-sources__more">
-            <summary>{HISTORY_SOURCES.length} sources behind the history</summary>
+          <Folded className="gov-sources__more" summary={`${HISTORY_SOURCES.length} sources behind the history`}>{() => (
             <ul>
               {HISTORY_SOURCES.map((url) => (
                 <li key={url}><a href={url} target="_blank" rel="noreferrer">{url.replace(/^https?:\/\/(www\.)?/, '')}</a></li>
               ))}
             </ul>
-          </details>
-        </details>
+          )}</Folded>
+        </>}</Folded>
       </div>
 
       {sheeted && (

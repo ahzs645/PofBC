@@ -88,9 +88,9 @@ const Index = ({ onOpen }) => (
     <div className="arms__intro">
       <h2>Coats of Arms</h2>
       <p>
-        The Province’s arms and their dated drawings, and the registered arms of the Crown’s offices,
-        universities, public bodies and local governments in British Columbia. Each entry links to its
-        record in the Canadian Heraldic Authority’s public register or another primary source.
+        The Province’s arms and their dated drawings, and the registered arms of B.C.’s public
+        bodies, each linked to its record in the Canadian Heraldic Authority’s register or another
+        primary source.
       </p>
     </div>
     <ul className="arms__grid arms__grid--feature">

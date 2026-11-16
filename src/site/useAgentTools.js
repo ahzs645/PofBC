@@ -20,7 +20,7 @@ import {
 import { BRAND_COLORS, TRANSPARENT, describeContrast } from '../logo/logoColors.js'
 import { EXPORT_FORMATS, EXPORT_FORMAT_ORDER, SIZE_PRESETS, exportLogo, isFormatSupported } from '../export/exportLogo.js'
 import { resolveLockup } from '../logo/renderLogoSvg.js'
-import { CURRENT_VARIANTS, CURRENT_VARIANT_ORDER, LANGUAGE_ORDER } from '../current/currentMarks.js'
+import { CURRENT_VARIANTS, CURRENT_VARIANT_ORDER, LANGUAGE_ORDER } from '../current/currentVariants.js'
 import { MINISTRIES as CURRENT_MINISTRIES, findMinistry } from '../current/ministries.js'
 import { FLAG_PALETTE_ORDER } from '../flag/flagPalettes.js'
 import { ALL_FLAG_SYMBOLS, NAME_PLACEMENTS } from '../flag/flagLayout.js'

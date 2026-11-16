@@ -13,7 +13,7 @@
 // are what this code has always called them; `lockup`/`secondLine`/`markAlignment` are what the
 // manifest and the tools say. One outward vocabulary is worth a mapping layer.
 
-import { CURRENT_VARIANT_ORDER, LANGUAGE_ORDER } from '../current/currentMarks.js'
+import { CURRENT_VARIANT_ORDER, LANGUAGE_ORDER } from '../current/currentVariants.js'
 import { FLAG_PALETTE_ORDER } from '../flag/flagPalettes.js'
 import { ALL_FLAG_SYMBOLS, NAME_PLACEMENTS } from '../flag/flagLayout.js'
 import {

@@ -13,14 +13,16 @@ export const fit = (box, pad, rect) => {
   return { x: box.x + box.w / 2 - w / 2, y: box.y + box.h / 2 - h / 2, w, h }
 }
 
-export const easeInOutQuint = (p) => (p < 0.5 ? 16 * p ** 5 : 1 - (-2 * p + 2) ** 5 / 2)
 export const easeOutQuint = (p) => 1 - (1 - p) ** 5
+// From rest: it leaves without a jolt but is a tenth of the way there in a tenth of the time, where
+// the quintic above has barely moved by a quarter of it, which reads as the click not registering.
+export const easeSwift = (p) => 1 - (1 - p ** 1.5) ** 4
 
 /**
  * Tweens `from` to `to`, calling onUpdate with a fresh object each frame. Returns a stop function.
  * A zero duration jumps straight to the end.
  */
-export const tween = (from, to, { duration = 900, ease = easeInOutQuint, onUpdate, onComplete } = {}) => {
+export const tween = (from, to, { duration = 600, ease = easeSwift, onUpdate, onComplete } = {}) => {
   if (duration <= 0) {
     onUpdate?.({ ...to })
     onComplete?.()
@@ -29,7 +31,8 @@ export const tween = (from, to, { duration = 900, ease = easeInOutQuint, onUpdat
   const start = performance.now()
   let frame = 0
   const step = (now) => {
-    const p = Math.min(1, (now - start) / duration)
+    // A frame's timestamp is when the frame began, which can be just before `start` was read.
+    const p = Math.min(1, Math.max(0, (now - start) / duration))
     const e = ease(p)
     onUpdate?.({
       x: from.x + (to.x - from.x) * e,

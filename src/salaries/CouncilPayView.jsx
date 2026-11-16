@@ -163,7 +163,7 @@ export default function CouncilPayView({ place, setPlace, onBrowse, onOpen, onEm
       searchLabel="Find a municipality" placeholder="Kamloops, Saanich, Kelowna…" searchHelp="Type the start of any word in a municipality’s name."
       heading={current ? current.name : chosen ?? 'Council pay'}
       back={chosen ? back : null}
-      intro={current ? null : !chosen && <p>Mayor and councillor pay in each municipality: office rates from salary schedules and surveys, and payments to named officials, each with its source. Amounts are in Canadian dollars as published.</p>}
+      intro={current ? null : !chosen && <p>Mayor and councillor pay by municipality: office rates from schedules and surveys, and payments to named officials.</p>}
       tiles={tiles}
     >
       {failed ? <p className="salaries__hint" role="alert">Council pay could not be loaded. <button type="button" className="salaries__link" onClick={() => setAttempt((value) => value + 1)}>Retry</button></p>

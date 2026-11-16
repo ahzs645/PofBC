@@ -22,10 +22,11 @@ try {
   let renders = 0
   for (const subject of model.IDENTITY_COVERAGE) for (const theme of ['light', 'dark']) {
     const html = renderToStaticMarkup(React.createElement(components.IdentitySubjectDetail, { subject, theme, ...callbacks }))
-    assert.ok(html.includes('Artwork held'), `${subject.id}: missing artwork section`)
+    // By the section's id, not its heading's wording, which has changed ("Artwork held" to "Artwork").
+    assert.ok(html.includes('id="identity-artwork"'), `${subject.id}: missing artwork section`)
     assert.ok(!html.includes('src="undefined"'), `${subject.id}: undefined image`)
     if (subject.hasArtwork) assert.match(html, /<(img|svg)\b/, `${subject.id}: artwork does not render`)
-    else assert.ok(html.includes('No accepted artwork yet.'), `${subject.id}: missing evidence must stay visible`)
+    else assert.ok(html.includes('class="identity-empty"'), `${subject.id}: missing evidence must stay visible`)
     for (const [, url] of html.matchAll(/<img\b[^>]*\bsrc="([^"]+)"/g)) {
       assert.ok(url.startsWith('/PofBC/'), `${subject.id}: asset misses the project base: ${url}`)
       assert.ok(existsSync(resolve(root, 'public', url.slice('/PofBC/'.length))), `${subject.id}: missing local image: ${url}`)

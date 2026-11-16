@@ -70,9 +70,8 @@ export const MinistryField = ({ source, ministry, manualMinistry, program, onCha
             ))}
           </select>
           <History name={ministry} />
-          <p className="field__note">
-            Today’s list last reviewed {MINISTRY_LIST_REVIEWED}; the dated ones are every ministry
-            since 1976. Not there? Switch to “Type it in”.
+          <p className="field__note" title={`Today’s list last reviewed ${MINISTRY_LIST_REVIEWED}; the dated ones are every ministry since 1976.`}>
+            Not there? Switch to “Type it in”.
           </p>
         </div>
       ) : (
@@ -89,7 +88,7 @@ export const MinistryField = ({ source, ministry, manualMinistry, program, onCha
             onChange={(event) => onChange({ manualMinistry: event.target.value })}
           />
           <History name={manualMinistry} />
-          <p className="field__note">Long names wrap to the lockup’s measure on their own. Press Enter to force a break.</p>
+          <p className="field__note">Long names wrap on their own. Press Enter to force a break.</p>
         </div>
       )}
 

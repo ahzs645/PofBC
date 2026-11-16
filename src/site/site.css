@@ -180,6 +180,15 @@ a { color: inherit; text-underline-offset: 2px; }
 
 .masthead__sun { flex: none; color: var(--sun); }
 .masthead__site { font-weight: 600; }
+/* A phone: the title stays on one line whatever the view is called. The longer names ("Internal
+   Logos", "Coats of Arms") wrapped it onto two, which made the masthead taller on some views than
+   others; the site's name gives way first, since the sun already says it. */
+@media (max-width: 480px) {
+  .masthead { padding-left: 14px; }
+  .masthead__crumbs { flex-wrap: nowrap; gap: 0 6px; font-size: 15px; white-space: nowrap; }
+  .masthead__crumbs > * { flex: none; }
+  .masthead__crumbs > .masthead__site { flex: 0 1 auto; min-width: 0; overflow: hidden; text-overflow: ellipsis; }
+}
 .masthead__slash { color: var(--ink-faint); font-weight: 400; }
 
 /* A square button with an icon in it: the theme toggle. Flat on its card until hovered. */
@@ -401,6 +410,34 @@ a { color: inherit; text-underline-offset: 2px; }
   font-weight: 600;
   color: var(--ink-2);
 }
+
+/* A label with a "?" beside it, which opens the control's explanation (Segmented.jsx). */
+.field__head { display: flex; align-items: center; gap: 6px; margin-bottom: 6px; }
+.field__head .field__label { margin-bottom: 0; }
+.field__help {
+  flex: none;
+  width: 18px;
+  height: 18px;
+  padding: 0;
+  border: 1px solid var(--ink-faint);
+  border-radius: 50%;
+  background: none;
+  color: var(--ink-muted);
+  font: inherit;
+  font-size: 11px;
+  font-weight: 600;
+  line-height: 1;
+  cursor: pointer;
+  position: relative;
+}
+/* A full-size target around the small circle, for a finger. */
+.field__help::after { content: ''; position: absolute; inset: -10px; }
+.field__help:hover, .field__help[aria-expanded='true'] { color: var(--ink); border-color: currentColor; }
+.field--compact .field__head { margin: 0; }
+
+/* A folded field: its label is the summary (ShareLink.jsx). */
+.field--fold > summary { cursor: pointer; margin-bottom: 0; }
+.field--fold[open] > summary { margin-bottom: 6px; }
 
 .field__note {
   margin: 6px 0 0;
@@ -1835,7 +1872,7 @@ button.gallery__collecting-status, .gallery__collecting-graph {
 .salaries-filter-sheet__close:hover { background: var(--hover); }
 .salaries-filter-sheet__body { display: grid; gap: 22px; min-height: 0; padding: 18px; overflow-y: auto; overscroll-behavior: contain; }
 .salaries-filter-sheet input[type='search'] { min-width: 0; padding: 11px 44px 11px 12px; border: 1px solid var(--mid); border-radius: 10px; background: var(--surface); color: var(--ink); font: inherit; font-size: 16px; }
-.salaries-filter-sheet .salaries__chips { flex-wrap: wrap; overflow: visible; margin: 0; padding: 0; }
+.salaries-filter-sheet .salaries__chips { flex-wrap: wrap; overflow: visible; margin: 0; padding: 0; -webkit-mask-image: none; mask-image: none; }
 .salaries-filter-sheet .salaries__chips button { min-height: 40px; }
 .salaries-filter-sheet__actions { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 12px 18px max(12px, env(safe-area-inset-bottom)); border-top: 1px solid var(--outline); background: var(--surface); }
 .salaries-filter-sheet__actions .salaries__more { min-height: 44px; min-width: 104px; margin: 0; }
@@ -1854,10 +1891,19 @@ button.gallery__collecting-status, .gallery__collecting-graph {
   .salaries-disclosure--mobile-notes .salaries-disclosure__line { display: none; }
   .salaries-disclosure--mobile-notes:not(:has(.salaries__caveats)) { display: none; }
   .salaries__browse-bar { flex-wrap: wrap; gap: 6px; }
-  .salaries__browse-bar > .field:first-child:not(.field--compact) { flex: 1 1 100%; min-width: 0; max-width: none; }
+  /* The sections take the row and the layout switch sits at its end. Where the two do not fit (a
+     very narrow phone, or large text) the switch drops to a row of its own, as it used to always. */
+  .salaries__browse-bar > .field:first-child:not(.field--compact) { flex: 1 1 auto; min-width: 0; max-width: none; }
   .salaries__browse-bar .segmented { min-height: 44px; gap: 0; padding: 2px; }
   .salaries__browse-bar .segmented button { flex: 1 1 auto; min-width: 0; min-height: 40px; padding: 4px; font-size: 12px; }
   .salaries__browse-bar .field--compact .segmented button { min-height: 40px; padding: 4px 5px; font-size: 12px; }
+  /* Three pixels a side is the least the five names need to share a 375-pixel phone with the
+     switch; on anything wider they spread to fill the row. */
+  .salaries__browse-bar--sections .field:not(.field--compact) .segmented button { padding: 4px 3px; }
+  .salaries__tab-more { display: none; }
+  /* Beside the sections the switch is one button: it shows the layout a tap would change to. */
+  .salaries__browse-bar--sections .field--compact .segmented button[aria-pressed='true'] { display: none; }
+  .salaries__browse-bar--sections .field--compact .segmented button { min-width: 36px; }
 }
 
 .salaries__hint, .salaries__note { margin: 0; font-size: 14px; color: var(--ink-faint); }
@@ -2007,7 +2053,20 @@ button.gallery__collecting-status, .gallery__collecting-graph {
 .salaries__chips button[aria-pressed='true'] { border-color: var(--ink); background: var(--ink); color: var(--surface); }
 .salaries__chips button[aria-pressed='true'] span { color: inherit; opacity: 0.7; }
 @media (max-width: 640px) {
-  .salaries__chips { flex-wrap: nowrap; overflow-x: auto; margin: 0 -16px; padding: 0 16px 2px; scrollbar-width: none; }
+  /* One row that scrolls sideways; its last 28 pixels fade, so a chip cut off there reads as more
+     to come and not as a row that does not fit. The padding lets the last chip scroll clear of it. */
+  .salaries__chips {
+    flex-wrap: nowrap; overflow-x: auto; margin: 0 -16px; padding: 0 44px 2px 16px; scrollbar-width: none;
+    -webkit-mask-image: linear-gradient(to right, #000 calc(100% - 28px), transparent);
+    mask-image: linear-gradient(to right, #000 calc(100% - 28px), transparent);
+  }
+  /* On a phone the collection's four totals give their figures without the line under each. Council
+     pay and Workforce keep theirs: there the line says which year the figure is for. */
+  .salaries__intro--totals .salaries__tiles .salaries__line { display: none; }
+  .salaries__intro { padding: 16px; }
+  .salaries__intro .salaries__tiles div { padding: 8px 10px; }
+  .salaries__intro .salaries__tiles dd { font-size: 17px; }
+  .salaries__intro .salaries__tiles .salaries__line { font-size: 12px; }
 }
 
 /* An employer's records: how they are set out (the site's Segmented control), the search within them,
@@ -2174,7 +2233,9 @@ button.gallery__collecting-status, .gallery__collecting-graph {
 .salaries-row__pay .salaries__line a { color: inherit; }
 
 /* A person's years, newest first: a year and its records, or a run of years and why they are empty. */
-.salaries-years { display: grid; margin: 0; padding: 0; list-style: none; }
+/* At a measure the eye can cross: on a wide screen the year was on one side of the page and its
+   amount 1,400 pixels away on the other. */
+.salaries-years { display: grid; max-width: 820px; margin: 0; padding: 0; list-style: none; }
 .salaries-years > li { display: grid; grid-template-columns: 9em minmax(0, 1fr); gap: 12px; padding: 10px 0; border-bottom: 1px solid var(--hover); }
 .salaries-years__label { font-size: 13px; font-weight: 600; color: var(--ink); font-variant-numeric: tabular-nums; }
 .salaries-years__change { display: block; font-size: 12px; font-weight: 400; color: var(--ink-faint); }
@@ -2198,7 +2259,11 @@ button.gallery__collecting-status, .gallery__collecting-graph {
 .salaries__rank { display: grid; gap: 4px; max-width: 520px; }
 .salaries__rank input { width: 160px; min-height: 36px; padding: 6px 10px; border: 1px solid var(--mid); border-radius: 8px; background: var(--surface); color: var(--ink); font: inherit; }
 .salaries-years__unusual { display: block; margin-top: 2px; font-size: 12px; color: var(--ink-muted); text-decoration: underline dotted; text-underline-offset: 3px; cursor: help; }
-.salaries-about__subhead { margin: 8px 0 0; font-size: 14px; font-weight: 600; }
+/* The page's four parts, each a tap away; and the long reference lists, folded until wanted. */
+.salaries-about__contents { display: flex; flex-wrap: wrap; gap: 6px 18px; font-size: 14px; }
+.salaries-about section { scroll-margin-top: 16px; }
+.salaries-about__fold > summary { cursor: pointer; font-size: 14px; font-weight: 600; padding: 6px 0; }
+.salaries-about__fold[open] > summary { margin-bottom: 6px; }
 .salaries-about__sources { font-size: 14px; }
 .council-pay__links { margin: 0; }
 .council-pay__years .salaries-record + .salaries-record { margin-top: 8px; }

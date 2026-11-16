@@ -131,7 +131,7 @@ export const useHotspots = (svg, regions, { onSelect, active, margin = 0.08, spo
         if (NOT_DRAWN.has(child.tagName) || child.id === 'hotspots' || keep.has(child.id)) continue
         if (lit.includes(child)) continue
         if (lit.some((el) => child.contains(el))) { walk(child); continue }
-        child.style.transition = 'opacity 320ms ease'
+        child.style.transition = 'opacity 180ms ease'
         child.style.opacity = String(spotlight.dim ?? 0.32)
         dimmed.current.add(child)
       }

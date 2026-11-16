@@ -111,14 +111,16 @@ export const ShareLink = ({ state, update }) => {
         />
       )}
 
-      <div className="field">
-        <label className="field__label" htmlFor="configuration">Configuration</label>
+      {/* The JSON is for the few who script the generator; it stays folded until asked for. */}
+      <details className="field field--fold">
+        <summary className="field__label">Configuration (JSON)</summary>
         <p className="field__note" style={{ margin: '0 0 6px' }}>
           The current lockup as JSON. Paste one in and press Apply — the field names are the ones in{' '}
           <a href={`${import.meta.env.BASE_URL}capabilities.json`}>capabilities.json</a>.
         </p>
         <textarea
           id="configuration"
+          aria-label="Configuration"
           className="configuration"
           rows={9}
           spellCheck="false"
@@ -133,7 +135,7 @@ export const ShareLink = ({ state, update }) => {
             <button type="button" className="button button--ghost" onClick={() => setDraft('')}>Discard</button>
           )}
         </div>
-      </div>
+      </details>
 
       <p className="export__status" data-tone={status.tone} role="status" aria-live="polite">
         {status.message}

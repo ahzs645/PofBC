@@ -164,3 +164,25 @@ test('reader notes keep what changes how a number reads and leave out transcript
   assert.deepEqual(readerNotes(['a', 'b'], sources), ['The printed asterisk means partial year.', 'Expenses may include third-party supplier payments.'])
   assert.deepEqual(readerNoteSentences('Existing compiled observations are retained and may overlap this official schedule.'), [])
 })
+
+test('an employer page opens on its newest list of employees, not on a later board schedule', async () => {
+  const { openingYear } = await import('./coverage.js')
+  const sources = {
+    staff: { scope: 'employee-remuneration', sourceKind: 'official' },
+    board: { scope: 'board-remuneration', sourceKind: 'official' },
+    old: { scope: 'compiled-unverified', sourceKind: 'compiled' },
+    council: { scope: 'elected-officials', sourceKind: 'official' }
+  }
+  const cell = (...sourceIds) => ({ status: sourceIds.length ? 'available' : 'missing', sourceIds })
+  // Employees to the second-last period, then only the board.
+  assert.equal(openingYear({ counts: [0, 120, 11000, 14], coverage: [cell(), cell('old'), cell('staff'), cell('board')] }, sources), 2)
+  // A period with both opens there.
+  assert.equal(openingYear({ counts: [9000, 11014], coverage: [cell('staff'), cell('staff', 'board')] }, sources), 1)
+  // A compiled edition is a list of employees too.
+  assert.equal(openingYear({ counts: [300, 5], coverage: [cell('old'), cell('board')] }, sources), 0)
+  // With no employee list at all, the newest period it has anything for.
+  assert.equal(openingYear({ counts: [7, 0, 9, 0], coverage: [cell('council'), cell(), cell('council'), cell()] }, sources), 2)
+  // An index without coverage, and an employer with nothing.
+  assert.equal(openingYear({ counts: [0, 4, 6] }, sources), 2)
+  assert.equal(openingYear({ counts: [0, 0] }, sources), null)
+})

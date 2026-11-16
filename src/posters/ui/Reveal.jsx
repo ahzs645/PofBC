@@ -1,15 +1,17 @@
-// Shared entrance choreography for panel content: children arrive in order, a beat apart.
+// Shared entrance choreography for panel content: children arrive in order, a beat apart. The beat
+// is short: a long panel has twenty-odd items, and all of it should be readable within a third of a
+// second of the click that asked for it.
 
 import { motion } from 'motion/react'
 
 export const container = {
   hidden: {},
-  show: { transition: { staggerChildren: 0.055, delayChildren: 0.12 } }
+  show: { transition: { staggerChildren: 0.012, delayChildren: 0 } }
 }
 
 export const item = {
-  hidden: { opacity: 0, y: 14 },
-  show: { opacity: 1, y: 0, transition: { duration: 0.5, ease: [0.2, 0.7, 0.2, 1] } }
+  hidden: { opacity: 0, y: 6 },
+  show: { opacity: 1, y: 0, transition: { duration: 0.2, ease: [0.2, 0.7, 0.2, 1] } }
 }
 
 export const Reveal = ({ children, className }) => (

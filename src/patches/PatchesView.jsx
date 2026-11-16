@@ -122,6 +122,9 @@ export const PatchesView = ({ collection = 'patches' }) => {
         key={patch.id}
         ref={(element) => { cardElements.current[patch.id] = element }}
         className="patches__card"
+        // The template family and the count of source photographs are on the patch's own page; a
+        // card says them only when asked.
+        title={[place.group !== 'template' && template?.label, sourceCount > 1 && `seen in ${sourceCount} sources`].filter(Boolean).join(' · ') || undefined}
         href={hrefFor({ patch: selected.id })}
         onClick={(event) => { if (isPlainClick(event)) { event.preventDefault(); go({ patch: selected.id }) } }}
       >
@@ -135,9 +138,7 @@ export const PatchesView = ({ collection = 'patches' }) => {
           <span className="patches__medium">
             {selected.medium}
             {members.length > 1 && ` · ${countLabel(members.length, 'variant')}`}
-            {sourceCount > 1 && ` · seen in ${sourceCount} sources`}
           </span>
-          {place.group !== 'template' && template && <span className="patches__template-name">{template.label}</span>}
           {generated > 0 && <span className="patches__evidence">{isGeneratedColourway(selected) ? 'Generated colourway' : `Includes ${countLabel(generated, 'generated colourway')}`}</span>}
         </span>
       </a>

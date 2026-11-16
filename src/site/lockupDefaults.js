@@ -4,7 +4,7 @@
 // defined relative to these values — it carries only the fields that differ from them.
 
 import { DEFAULT_MINISTRY_SIZE } from '../crest/crestLayout.js'
-import { BCID } from '../current/currentMarks.js'
+import { BCID } from '../current/currentVariants.js'
 import { findMinistry } from '../current/ministries.js'
 import { DEFAULT_CLEAR_SPACE, DEFAULT_MARK_ALIGNMENT } from '../logo/layouts.js'
 import { BRAND_COLORS } from '../logo/logoColors.js'
