@@ -155,88 +155,140 @@ export const IdentityCoverageBrowser = ({ onHome, onOpenSubject }) => {
   )
 }
 
-/** Incoming relations grouped by type, in the order relationsOf sorted them. */
-const byType = (relations) => [...relations.reduce((groups, relation) => groups.set(relation.type, [...(groups.get(relation.type) ?? []), relation]), new Map())]
-
-const Grant = ({ grant }) => (
-  <li>
-    <a href={grant.registerUrl} target="_blank" rel="noopener noreferrer">{grant.letters}, {grant.date} <span aria-hidden="true">↗</span></a>
-    <p>{grant.relation === 'predecessor' ? `Granted to ${grant.recipient}, a predecessor. These are not the current municipality’s arms.` : `Granted to ${grant.recipient}.`}</p>
-  </li>
+/** A subject as a small link: its name, with a dot that is filled when artwork is held. */
+const SubjectChip = ({ subject, onOpen, label = subject.label }) => (
+  <SubjectLink id={subject.id} onOpen={onOpen} className="identity-chip">
+    <span className="identity-chip__dot" data-held={subject.hasArtwork || undefined} title={subject.stateLabel} aria-hidden="true" />
+    {label}<span className="visually-hidden"> ({subject.stateLabel})</span>
+  </SubjectLink>
 )
 
-/** A municipality's place in the Province's records, and the site's existing records about it. */
+/**
+ * Every relation of a subject as labelled groups: its own ("Part of TransLink") and those recorded
+ * on others that point to it ("Includes BCRTC"), each label once.
+ */
+const connectionGroups = (subject) => {
+  const { outgoing, incoming } = relationsOf(subject)
+  const groups = new Map()
+  const add = (label, relation) => groups.set(label, [...(groups.get(label) ?? []), relation])
+  for (const relation of outgoing) add(relation.label ?? IDENTITY_RELATION_LABELS[relation.type] ?? relation.type.replace(/-/g, ' '), relation)
+  for (const relation of incoming) add(INVERSE_RELATION_LABELS[relation.type] ?? relation.type.replace(/-/g, ' '), relation)
+  return [...groups].map(([label, relations]) => ({ label, relations }))
+}
+
+const External = ({ href, children, className }) => <a className={className} href={href} target="_blank" rel="noopener noreferrer">{children} <span aria-hidden="true">↗</span></a>
+
+/** A municipality's facts, its arms registrations and the site's records about it, compactly. */
 const MunicipalRecords = ({ subject }) => {
   const { municipal } = subject
-  const current = municipal.heraldry.filter((grant) => grant.relation === 'current')
-  const predecessors = municipal.heraldry.filter((grant) => grant.relation === 'predecessor')
   return (
-    <section className="identity-detail__section identity-municipal" aria-labelledby="identity-municipal">
+    <section className="identity-card" aria-labelledby="identity-municipal">
       <h3 id="identity-municipal">Municipal records</h3>
-      <dl className="identity-municipal__facts">
-        <div><dt>Classification</dt><dd>{municipal.classification}</dd></div>
-        <div><dt>Regional district</dt><dd>{municipal.regionalDistrict ?? 'No separate regional district'}</dd></div>
-        <div><dt>{municipal.inProvincialLayer ? 'Provincial identifier' : 'Registry identifier'}</dt><dd><code>{municipal.provincialId}</code></dd></div>
-        {municipal.historicalNames.length > 0 && <div><dt>Earlier names</dt><dd>{municipal.historicalNames.join(' · ')}</dd></div>}
-        <div><dt>Official website</dt><dd><a href={municipal.website} target="_blank" rel="noopener noreferrer">{municipal.website.replace(/^https?:\/\/(www\.)?/, '').replace(/\/$/, '')} <span aria-hidden="true">↗</span></a></dd></div>
+      <dl className="identity-facts">
+        <div><dt>Type</dt><dd>{municipal.classification}</dd></div>
+        <div><dt>Regional district</dt><dd>{municipal.regionalDistrict ?? 'None'}</dd></div>
+        <div><dt>{municipal.inProvincialLayer ? 'Provincial ID' : 'Registry ID'}</dt><dd><code>{municipal.provincialId}</code></dd></div>
+        {municipal.historicalNames.length > 0 && <div><dt>Earlier name</dt><dd>{municipal.historicalNames.join(', ')}</dd></div>}
       </dl>
-      <ul className="identity-municipal__links">
-        {municipal.councilMunicipality
-          ? <li><SiteLink to={{ view: 'salaries', browse: 'council', 'council-municipality': municipal.councilMunicipality }}>Mayor and council pay <span aria-hidden="true">→</span></SiteLink></li>
-          : <li className="identity-municipal__none">No council-pay records yet.</li>}
-        {subject.salaryEmployers.length
-          ? subject.salaryEmployers.map((slug) => <li key={slug}><SiteLink to={{ view: 'salaries', employer: slug }}>Published staff salaries <span aria-hidden="true">→</span></SiteLink></li>)
-          : <li className="identity-municipal__none">No published staff salaries in the site’s records.</li>}
-      </ul>
-      <h4>Arms in the Canadian Heraldic Register</h4>
-      {current.length || predecessors.length
-        ? <ul className="identity-sources">{[...current, ...predecessors].map((grant) => <Grant key={grant.registerUrl} grant={grant} />)}</ul>
-        : <p className="gallery__note">No registration found for this municipality. Arms, a flag or a seal are separate emblems from a corporate logo.</p>}
-      {(current.length > 0 || predecessors.length > 0) && <p className="gallery__note">Arms are a separate emblem from the corporate logo. <SiteLink to={{ view: 'arms' }}>All municipal arms →</SiteLink></p>}
+      <h4>Arms</h4>
+      {municipal.heraldry.length
+        ? <ul className="identity-grants">{municipal.heraldry.map((grant) => (
+          <li key={grant.registerUrl}>
+            <span className="identity-grants__year">{grant.date.slice(0, 4)}</span>
+            <External href={grant.registerUrl}>{grant.letters.replace(/^Grant of /, '').replace(/^Registration of /, 'Registered: ')}</External>
+            {grant.relation === 'predecessor' && <span className="identity-tag" title="Granted to a predecessor; not the current municipality’s arms">{grant.recipient}</span>}
+          </li>
+        ))}</ul>
+        : <p className="identity-muted">None in the Canadian Heraldic Register.</p>}
     </section>
   )
 }
 
 export const IdentitySubjectDetail = ({ subject, theme, onOpenRegister, onOpenSubject, onChooseCollection, onOpenGovernment }) => {
   const family = familyById(subject.family)
-  const { outgoing: related, incoming } = relationsOf(subject)
-  // A municipality's neighbours are the others in its regional district, not the first twelve of 162.
+  const groups = connectionGroups(subject)
+  const connected = new Set(groups.flatMap((group) => group.relations.map((relation) => relation.subject)))
+  // A municipality's neighbours are the others in its regional district, not the first of 162.
+  // Anything already listed as a connection is not listed again.
   const familySubjects = IDENTITY_COVERAGE.filter((item) => item.family === subject.family && item.id !== subject.id &&
-    (!subject.municipal || regionOf(item) === regionOf(subject)))
+    !connected.has(item.id) && (!subject.municipal || regionOf(item) === regionOf(subject)))
+  const familyTitle = subject.municipal ? `Also in ${regionOf(subject).replace(/^No separate regional district$/, 'this group')}` : `More in ${family?.label ?? 'this family'}`
   const heldEntries = subject.entries.map((entry) => ({ entry, collection: subject.collections.find((collection) => entriesOf(collection).some((item) => item.id === entry.id)) }))
+  const { municipal } = subject
+  const kind = IDENTITY_KIND_LABELS[subject.kind] ?? subject.kind.replace(/-/g, ' ')
+  const SHOWN = 16
   return (
     <article className="identity-detail">
       <nav className="gallery__crumbs" aria-label="Gallery"><button type="button" className="gallery__back" onClick={() => onOpenRegister()}>← Collection register</button><span aria-hidden="true">/</span><span aria-current="page">{subject.label}</span></nav>
-      <header className="identity-detail__head">
-        <p className="identity-eyebrow">{family?.label ?? 'Identity subject'} · {IDENTITY_KIND_LABELS[subject.kind] ?? subject.kind.replace(/-/g, ' ')}</p>
+
+      <header className="identity-hero">
+        <p className="identity-eyebrow">{family?.label ?? 'Identity subject'} · {kind}</p>
         <h2>{subject.label}</h2>
-        {subject.name !== subject.label && <p className="identity-detail__name">{subject.name}</p>}
-        <Status subject={subject} />
-        <p>{subject.note}</p>
-        {subject.aliases?.length > 0 && <p className="identity-aliases"><strong>Also indexed:</strong> {subject.aliases.join(' · ')}</p>}
-        {subject.graphNode && onOpenGovernment && <button type="button" className="gallery__graph-link" onClick={() => onOpenGovernment(subject.graphNode, subject.graphYear)}>Organization and salary links <span aria-hidden="true">→</span></button>}
-      </header>
-      <div className="identity-detail__columns">
-        <div>
-          <section className="identity-detail__section" aria-labelledby="identity-artwork">
-            <h3 id="identity-artwork">Artwork held</h3>
-            {heldEntries.length ? <div className="identity-artworks">{heldEntries.map(({ entry, collection }) => (
-              <button key={entry.id} type="button" className="identity-artwork" onClick={() => onChooseCollection(collection.id, null, entry.id)}>
-                <span className="identity-artwork__image" dangerouslySetInnerHTML={{ __html: tileArt(entry, theme) }} />
-                <span className="identity-artwork__label">{entry.label}</span><span className="gallery__note">{entry.years}</span>
-              </button>
-            ))}</div> : <div className="identity-empty"><strong>No accepted artwork yet.</strong><p>{COVERAGE_STATES[subject.state].description}</p></div>}
-          </section>
-          {subject.nextAction && <section className="identity-next" aria-labelledby="identity-next-heading"><p className="identity-eyebrow">Research still open</p><h3 id="identity-next-heading">Next collection work</h3><p>{subject.nextAction}</p></section>}
-          {subject.municipal && <MunicipalRecords subject={subject} />}
-          {subject.sources?.length > 0 && <section className="identity-detail__section" aria-labelledby="identity-sources"><h3 id="identity-sources">Primary sources and acquisition routes</h3><ul className="identity-sources">{subject.sources.map((source, index) => <li key={`${source.url ?? source.title}-${index}`}>{source.url ? <a href={source.url} target="_blank" rel="noopener noreferrer">{source.title} <span aria-hidden="true">↗</span></a> : <span>{source.title}</span>}{(source.note || source.citation) && <p>{source.note ?? source.citation}</p>}</li>)}</ul></section>}
+        {(subject.name !== subject.label || subject.aliases?.length > 0) && (
+          <p className="identity-hero__names">
+            {subject.name !== subject.label && <span>{subject.name}</span>}
+            {subject.aliases?.filter((alias) => alias !== subject.name).length > 0 && <span className="identity-muted">Also {subject.aliases.filter((alias) => alias !== subject.name).join(' · ')}</span>}
+          </p>
+        )}
+        <p className="identity-hero__note">{subject.note}</p>
+        <div className="identity-actions">
+          <Status subject={subject} />
+          {subject.graphNode && onOpenGovernment && <button type="button" className="identity-action" onClick={() => onOpenGovernment(subject.graphNode, subject.graphYear)}>Organization and salaries <span aria-hidden="true">→</span></button>}
+          {municipal?.councilMunicipality && <SiteLink className="identity-action" to={{ view: 'salaries', browse: 'council', 'council-municipality': municipal.councilMunicipality }}>Council pay <span aria-hidden="true">→</span></SiteLink>}
+          {municipal && subject.salaryEmployers.map((slug) => <SiteLink key={slug} className="identity-action" to={{ view: 'salaries', employer: slug }}>Staff salaries <span aria-hidden="true">→</span></SiteLink>)}
+          {municipal?.website && <External className="identity-action" href={municipal.website}>{municipal.website.replace(/^https?:\/\/(www\.)?/, '').replace(/\/$/, '')}</External>}
         </div>
-        <aside>
-          {(related.length > 0 || incoming.length > 0) && <section className="identity-detail__section" aria-labelledby="identity-relationships"><h3 id="identity-relationships">Relationships</h3><ul className="identity-relations">
-            {related.map((relation, index) => <li key={`out-${relation.subject}-${index}`}><span>{relation.label ?? IDENTITY_RELATION_LABELS[relation.type] ?? relation.type.replace(/-/g, ' ')}</span><SubjectLink id={relation.subject} onOpen={onOpenSubject}>{relation.target.label} →</SubjectLink></li>)}
-            {byType(incoming).map(([type, group]) => <li key={`in-${type}`}><span>{INVERSE_RELATION_LABELS[type] ?? type.replace(/-/g, ' ')}</span>{group.map((relation) => <SubjectLink key={relation.subject} id={relation.subject} onOpen={onOpenSubject}>{relation.target.label} →</SubjectLink>)}</li>)}
-          </ul></section>}
-          {familySubjects.length > 0 && <section className="identity-detail__section" aria-labelledby="identity-family"><h3 id="identity-family">{subject.municipal ? `Also in ${regionOf(subject).replace(/^No separate regional district$/, 'this group')}` : 'In this family'}</h3><div className="identity-subject-links">{familySubjects.slice(0, 12).map((item) => <SubjectButton key={item.id} subject={item} onOpen={onOpenSubject} />)}</div>{familySubjects.length > 12 && <button type="button" className="gallery__graph-link" onClick={() => onOpenRegister({ family: subject.family, ...(subject.municipal ? { region: regionOf(subject) } : {}) })}>Browse all {familySubjects.length + 1} subjects →</button>}</section>}
+      </header>
+
+      <div className="identity-layout">
+        <div className="identity-layout__main">
+          <section aria-labelledby="identity-artwork">
+            <h3 id="identity-artwork" className="identity-heading">Artwork <span>{heldEntries.length || ''}</span></h3>
+            {heldEntries.length
+              ? <div className="identity-artworks">{heldEntries.map(({ entry, collection }) => (
+                <button key={entry.id} type="button" className="identity-artwork" onClick={() => onChooseCollection(collection.id, null, entry.id)}>
+                  <span className="identity-artwork__image" dangerouslySetInnerHTML={{ __html: tileArt(entry, theme) }} />
+                  <span className="identity-artwork__label">{entry.label}</span><span className="identity-muted">{entry.years}</span>
+                </button>
+              ))}</div>
+              : <div className="identity-empty"><strong>Still wanted.</strong> {subject.nextAction}</div>}
+          </section>
+
+          {(subject.sources?.length > 0 || (heldEntries.length > 0 && subject.nextAction)) && (
+            <details className="identity-research">
+              <summary>Research notes<span>{[heldEntries.length > 0 && subject.nextAction ? 'next step' : null, subject.sources?.length ? `${subject.sources.length} ${subject.sources.length === 1 ? 'source' : 'sources'}` : null].filter(Boolean).join(' · ')}</span></summary>
+              {heldEntries.length > 0 && subject.nextAction && <p className="identity-research__next"><strong>Next:</strong> {subject.nextAction}</p>}
+              <ul className="identity-sources">{subject.sources.map((source, index) => (
+                <li key={`${source.url ?? source.title}-${index}`}>
+                  {source.url ? <External href={source.url}>{source.title}</External> : <span>{source.title}</span>}
+                  {(source.note || source.citation) && <p>{source.note ?? source.citation}</p>}
+                </li>
+              ))}</ul>
+            </details>
+          )}
+        </div>
+
+        <aside className="identity-layout__side">
+          {municipal && <MunicipalRecords subject={subject} />}
+          {groups.length > 0 && (
+            <section className="identity-card" aria-labelledby="identity-relationships">
+              <h3 id="identity-relationships">Connections</h3>
+              {groups.map(({ label, relations }) => (
+                <div key={label} className="identity-chip-group">
+                  <h4>{label}</h4>
+                  <div className="identity-chips">{relations.map((relation) => <SubjectChip key={relation.subject} subject={relation.target} onOpen={onOpenSubject} />)}</div>
+                </div>
+              ))}
+            </section>
+          )}
+          {familySubjects.length > 0 && (
+            <section className="identity-card" aria-labelledby="identity-family">
+              <h3 id="identity-family">{familyTitle}</h3>
+              <div className="identity-chips">{familySubjects.slice(0, SHOWN).map((item) => <SubjectChip key={item.id} subject={item} onOpen={onOpenSubject} />)}</div>
+              {familySubjects.length > SHOWN && <button type="button" className="identity-more" onClick={() => onOpenRegister({ family: subject.family, ...(municipal ? { region: regionOf(subject) } : {}) })}>All {IDENTITY_COVERAGE.filter((item) => item.family === subject.family && (!municipal || regionOf(item) === regionOf(subject))).length} in the register →</button>}
+            </section>
+          )}
+          {(groups.length > 0 || familySubjects.length > 0) && <p className="identity-legend"><span className="identity-chip__dot" data-held aria-hidden="true" /> artwork held <span className="identity-chip__dot" aria-hidden="true" /> still wanted</p>}
         </aside>
       </div>
     </article>
