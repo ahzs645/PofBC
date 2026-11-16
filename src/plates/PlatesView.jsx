@@ -20,6 +20,7 @@ import { PlateViewer } from './PlateViewer.jsx'
 import { YearTimeline } from './PlatesTimeline.jsx'
 import { inUse, lanesOf, spanOf } from './timeline.js'
 import './plates.css'
+import { Select } from '../site/ui/Select.jsx'
 
 const REGION = BRITISH_COLUMBIA
 const FAMILIES = regionFamilies(REGION)
@@ -210,10 +211,10 @@ export const PlatesView = () => {
         <div className="plates__filters">
           <label className="plates__filter">
             <span>Family</span>
-            <select value={place.family ?? ''} onChange={(event) => go({ ...place, family: event.target.value || null, plate: null })}>
+            <Select value={place.family ?? ''} onChange={(value) => go({ ...place, family: value || null, plate: null })}>
               <option value="">All {FAMILIES.length} families</option>
               {FAMILIES.map((family) => <option key={family.id} value={family.id}>{family.label} ({family.formats.length})</option>)}
-            </select>
+            </Select>
           </label>
           <label className="plates__filter plates__filter--grow">
             <span>Search</span>

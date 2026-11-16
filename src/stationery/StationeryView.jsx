@@ -12,6 +12,7 @@ import { SiteLink } from '../site/navigation.jsx'
 import { createStationeryBrand, ministryLines, PANTONE_462 } from './bcStationery.js'
 import { createHelveticaProvider, loadHelveticaProvider } from './helveticaFonts.js'
 import './stationery.css'
+import { Select } from '../site/ui/Select.jsx'
 
 const STORE = 'pofbc-stationery'
 const INKS = [
@@ -59,7 +60,7 @@ export const StationeryView = () => {
       >
         <label className="field">
           <span className="field__label">Ministry</span>
-          <select value={ministry} onChange={(event) => chooseMinistry(event.target.value)}>
+          <Select value={ministry} onChange={(value) => chooseMinistry(value)}>
             <option value="">Type it below</option>
             {ALL_GROUPS.map((group) => (
               <optgroup key={group.label} label={group.label}>
@@ -68,7 +69,7 @@ export const StationeryView = () => {
                   : <option key={option.value} value={option.value}>{option.label}</option>))}
               </optgroup>
             ))}
-          </select>
+          </Select>
         </label>
         <div className="field">
           <span className="field__label" id="stationery-ink">Symbol</span>

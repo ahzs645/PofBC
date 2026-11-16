@@ -15,8 +15,8 @@
 .identity-register__head { margin: 25px 0; }
 .identity-filters { display: grid; gap: 12px; padding: 20px; background: var(--surface); border-radius: var(--radius); }
 .identity-filters label { display: grid; align-content: start; gap: 7px; min-width: 0; color: var(--ink-muted); font-size: 12px; font-weight: 600; }
-.identity-filters input, .identity-filters select { box-sizing: border-box; width: 100%; min-width: 0; height: 42px; padding: 8px 10px; border: 1px solid var(--mid); border-radius: 5px; background: var(--page); color: var(--ink); font: inherit; font-size: 13px; font-weight: 400; }
-.identity-filters input:focus-visible, .identity-filters select:focus-visible, .identity-register button:focus-visible, .identity-detail button:focus-visible, .identity-overview button:focus-visible { outline: 2px solid var(--focus); outline-offset: 3px; }
+.identity-filters input, .identity-filters .ui-select { box-sizing: border-box; width: 100%; min-width: 0; height: 42px; padding: 8px 10px; border: 1px solid var(--mid); border-radius: 5px; background: var(--page); color: var(--ink); font: inherit; font-size: 13px; font-weight: 400; }
+.identity-filters input:focus-visible, .identity-filters .ui-select:focus-visible, .identity-register button:focus-visible, .identity-detail button:focus-visible, .identity-overview button:focus-visible { outline: 2px solid var(--focus); outline-offset: 3px; }
 .identity-register__result-heading { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 6px; margin: 18px 0 28px; }
 .identity-register__result-heading p { margin: 0; font-size: 13px; color: var(--ink-muted); font-variant-numeric: tabular-nums; }
 .identity-family { margin: 26px 0; }

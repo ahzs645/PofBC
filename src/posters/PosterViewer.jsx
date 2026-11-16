@@ -24,6 +24,7 @@ import { StoryRail } from './ui/StoryRail.jsx'
 import { posterSvgString } from './export/exportSvg.js'
 import { ExportDialog } from './export/ExportDialog.jsx'
 import { posterTarget } from './export/targets.js'
+import { Select } from '../site/ui/Select.jsx'
 
 const PANEL_INSET = 440 + 40
 // Keep in step with --pv-dock-h and the narrow sheet's height in posters.css.
@@ -227,13 +228,17 @@ export function PosterViewer({ meta, series, module, part, onPart, onExit, previ
             {shelf && shelf.list.length > 1 && (
               <div className="pv-switch" role="group" aria-label={`Other ${backLabel.toLowerCase()}`}>
                 <button type="button" className="pv-switch-step" disabled={!previous} onClick={previous?.open} title={previous ? `Previous: ${previous.title} ([)` : undefined} aria-label={previous ? `Previous ${noun}: ${previous.title}` : `No previous ${noun}`}>‹</button>
-                {/* The count reads as "3 / 5"; under it, a native list of every one to jump to. */}
-                <label className="pv-switch-pick" title={`Go to another ${noun}`}>
-                  <span aria-hidden="true"><span className="pv-switch-noun">{noun[0].toUpperCase() + noun.slice(1)} </span>{shelf.index + 1} / {shelf.list.length}</span>
-                  <select aria-label={`Go to another ${noun}`} value={meta.id} onChange={(event) => shelf.open(event.target.value)}>
-                    {shelf.list.map((entry, i) => <option key={entry.id} value={entry.id}>{i + 1}. {entry.title}</option>)}
-                  </select>
-                </label>
+                {/* The count reads as "3 / 5", and opens a list of every one to jump to. */}
+                <Select
+                  className="pv-switch-pick"
+                  title={`Go to another ${noun}`}
+                  aria-label={`Go to another ${noun}`}
+                  value={meta.id}
+                  onChange={(value) => shelf.open(value)}
+                  display={<><span className="pv-switch-noun">{noun[0].toUpperCase() + noun.slice(1)} </span>{shelf.index + 1} / {shelf.list.length}</>}
+                >
+                  {shelf.list.map((entry, i) => <option key={entry.id} value={entry.id}>{i + 1}. {entry.title}</option>)}
+                </Select>
                 <button type="button" className="pv-switch-step" disabled={!next} onClick={next?.open} title={next ? `Next: ${next.title} (])` : undefined} aria-label={next ? `Next ${noun}: ${next.title}` : `No next ${noun}`}>›</button>
               </div>
             )}

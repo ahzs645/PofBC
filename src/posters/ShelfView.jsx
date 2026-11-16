@@ -9,6 +9,7 @@ import { useCallback, useEffect, useRef, useState } from 'react'
 import { NavigationContext, SiteLink, useNavigate } from '../site/navigation.jsx'
 import { PosterViewer } from './PosterViewer.jsx'
 import './posters.css'
+import { Select } from '../site/ui/Select.jsx'
 
 /**
  * @param {object} props
@@ -146,10 +147,10 @@ export const ShelfView = ({ view, param, title, intro, noun, series, itemsOf, it
             {facets.map(({ key, label }) => (
               <label key={key} className="posters__filter">
                 <span>{label}</span>
-                <select value={filters[key] ?? ''} onChange={(event) => setFilters((before) => ({ ...before, [key]: event.target.value || null }))}>
+                <Select value={filters[key] ?? ''} onChange={(value) => setFilters((before) => ({ ...before, [key]: value || null }))}>
                   <option value="">All</option>
                   {valuesOf(key).map((value) => <option key={value} value={value}>{value}</option>)}
-                </select>
+                </Select>
               </label>
             ))}
             <p className="posters__count" role="status">

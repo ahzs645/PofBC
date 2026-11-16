@@ -20,6 +20,7 @@ import { GrowthTip, rateColumn } from './Growth.jsx'
 import { Segmented } from '../site/Segmented.jsx'
 import { employerRanking, employerSnapshot } from './employerStats.js'
 import { EmployerInsights, EMPLOYER_ORDERS, employerRate, useEmployerStatistics } from './EmployerInsights.jsx'
+import { Select } from '../site/ui/Select.jsx'
 
 const within = (range) => (at) => !range || (at >= range[0] && at <= range[1])
 
@@ -85,7 +86,7 @@ export const EmployerBrowse = ({ employers, years, sector, range, layout, onOpen
   const header = <>
     <EmployerInsights rows={rows} years={years} ready={Boolean(statistics)} failed={failed} onRetry={retry} onOpen={onOpen} onOrder={setOrder} />
     <div className="employer-insights__order">
-      <label>Order employers <select aria-label="Order employers" value={order} onChange={(event) => setOrder(event.target.value)}>{EMPLOYER_ORDERS.map(({ value, label }) => <option key={value} value={value}>{label}</option>)}</select></label>
+      <label>Order employers <Select aria-label="Order employers" value={order} onChange={(value) => setOrder(value)}>{EMPLOYER_ORDERS.map(({ value, label }) => <option key={value} value={value}>{label}</option>)}</Select></label>
       {order !== 'sector' && <p className="salaries__meta" role="status">{count(measured.length, 'organization', 'organizations')} with eligible statistics</p>}
     </div>
   </>

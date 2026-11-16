@@ -16,6 +16,8 @@ import { BadgeScene } from './badgeScene.js'
 import { BADGE_VIEW_DEFAULTS, badgeModeFor, badgeShapeFor, badgeShapeStatus, applyBadgeShape, loadBadgeView, saveBadgeView } from './badgeView.js'
 import { badgeReviewAssetUrl, badgeReviewSources } from './badgeReview.js'
 import './badges.css'
+import { Select } from '../site/ui/Select.jsx'
+import { Slider } from '../site/ui/Slider.jsx'
 
 const REVIEW_URL = `${import.meta.env.BASE_URL}badge-review/index.json`
 const REVIEW_LABELS = { refine: 'Needs refinement', reconstruct: 'Needs reconstruction', reviewed: 'Reviewed', unreviewed: 'Not yet reviewed' }
@@ -361,11 +363,10 @@ export const BadgeViewer = ({ patch, org, position, previous, next, onOpen, onCl
             <Segmented label="Shape" options={CURVES} value={view.curvature} onChange={(value) => set({ curvature: value })} compact />
             <label className="patch__light">
               <span>Rise</span>
-              <input
-                type="range" min="0" max="8" step="0.5"
+              <Slider min="0" max="8" step="0.5"
                 value={view.rise}
                 disabled={view.curvature === 'flat'}
-                onChange={(event) => set({ rise: Number(event.target.value) })}
+                onChange={(value) => set({ rise: value })}
                 aria-valuetext={`${rise.toFixed(1)} millimetres`}
               />
               <output>{view.curvature === 'flat' ? '—' : `${rise.toFixed(1)} mm`}</output>
@@ -444,7 +445,7 @@ export const BadgeViewer = ({ patch, org, position, previous, next, onOpen, onCl
           {review?.findings?.length > 0 && <ul>{review.findings.map((finding, index) => <li key={index}>{finding}</li>)}</ul>}
           {candidateChanges.length > 0 && <div className="patch__candidate"><h4>Correction prepared</h4><ul>{candidateChanges.map((change, index) => <li key={index}>{change}</li>)}</ul></div>}
           {review?.evidenceLimitations && <p className="patch__review-limits">{review.evidenceLimitations}</p>}
-          {sources.length > 1 && <label className="patch__source-select"><span>Source occurrence</span><select value={source?.occurrenceId ?? ''} onChange={(event) => setSourceSelection({ patchId: patch.id, occurrenceId: event.target.value })}>{sources.map((entry) => <option key={entry.occurrenceId} value={entry.occurrenceId}>{entry.occurrenceId}</option>)}</select></label>}
+          {sources.length > 1 && <label className="patch__source-select"><span>Source occurrence</span><Select value={source?.occurrenceId ?? ''} onChange={(value) => setSourceSelection({ patchId: patch.id, occurrenceId: value })}>{sources.map((entry) => <option key={entry.occurrenceId} value={entry.occurrenceId}>{entry.occurrenceId}</option>)}</Select></label>}
           {source && <div className="patch__source-caption">
             <p><strong>{source.occurrenceId}</strong> · {source.width} × {source.height} source pixels</p>
             {source.medium && <p>{source.medium}</p>}

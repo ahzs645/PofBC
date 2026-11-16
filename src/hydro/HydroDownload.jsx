@@ -7,6 +7,8 @@
 import { useEffect, useMemo, useRef, useState } from 'react'
 import { Segmented } from '../site/Segmented.jsx'
 import { downloadBlob, EXPORT_FORMAT_ORDER, EXPORT_FORMATS, isFormatSupported, rasterize, renderPdf, SIZE_PRESETS } from '../export/exportLogo.js'
+import { Checkbox } from '../site/ui/Checkbox.jsx'
+import { Select } from '../site/ui/Select.jsx'
 
 export const saveText = (text, name, type) => downloadBlob(new Blob([text], { type: `${type};charset=utf-8` }), name)
 
@@ -88,7 +90,7 @@ export const HydroDownload = ({ fileName, draw, canOutline = false, width: keptW
       {format === 'svg' && canOutline && (
         <>
           <label className="checkbox">
-            <input type="checkbox" checked={outline} onChange={(event) => setOutline(event.target.checked)} />
+            <Checkbox checked={outline} onChange={(checked) => setOutline(checked)} />
             <span>Convert text to outlines</span>
           </label>
           <p className="field__note">
@@ -104,9 +106,9 @@ export const HydroDownload = ({ fileName, draw, canOutline = false, width: keptW
       {!spec.vector && (
         <div className="field">
           <label htmlFor="hydro-width">Width</label>
-          <select id="hydro-width" value={width} onChange={(event) => setWidth(Number(event.target.value))}>
+          <Select id="hydro-width" value={width} onChange={(value) => setWidth(Number(value))}>
             {widths.map((size) => <option key={size} value={size}>{size} px wide</option>)}
-          </select>
+          </Select>
           {widthNote ? <p className="field__note">{widthNote}</p> : null}
         </div>
       )}

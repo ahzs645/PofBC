@@ -81,9 +81,9 @@
 .hm-loading { display: grid; place-content: center; gap: 12px; height: min(70vh, 660px); min-height: 360px; border: 1px solid var(--mid); border-radius: var(--radius-sm); background: var(--hover); color: var(--ink-muted); text-align: center; }
 .hm-map-options { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 20px; padding: 12px 2px 0; font-size: 14px; }
 .hm-toggle { display: inline-flex; align-items: center; gap: 8px; min-height: 36px; font-weight: 600; }
-.hm-toggle input { width: 18px; height: 18px; accent-color: var(--hm-select); }
+.hm-toggle .ui-check { --ui-accent: var(--hm-select); }
 .hm-range { display: inline-flex; align-items: center; gap: 8px; color: var(--ink-muted); }
-.hm-range input { accent-color: var(--hm-select); }
+.hm-range .ui-range { --ui-accent: var(--hm-select); width: 140px; }
 
 .hm-details { position: sticky; top: 12px; padding: 4px 4px 4px 2px; font-size: 14px; line-height: 1.55; overflow-wrap: anywhere; }
 .hm-details--empty { color: var(--ink-muted); padding-top: 24px; }
@@ -118,7 +118,7 @@
 .hm-directory, .hm-method, .hm-sources { padding: 48px 8px 0; }
 .hm-filters { display: grid; grid-template-columns: minmax(0, 1fr) 240px; gap: 12px; margin-bottom: 8px; }
 .hm-field { display: flex; flex-direction: column; gap: 6px; min-width: 0; font-size: 13px; font-weight: 600; }
-.hm-field :is(input, select) { min-height: 44px; width: 100%; padding: 10px 12px; border: 1px solid var(--mid); border-radius: 8px; background: var(--surface); color: var(--ink); font-size: 14px; font-weight: 400; }
+.hm-field :is(input, .ui-select) { min-height: 44px; width: 100%; padding: 10px 12px; border: 1px solid var(--mid); border-radius: 8px; background: var(--surface); color: var(--ink); font-size: 14px; font-weight: 400; }
 .hm-group h3 { margin: 22px 0 10px; font-size: 15px; font-weight: 600; }
 .hm-cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); gap: 8px; margin: 0; padding: 0; list-style: none; }
 .hm-cards button { display: grid; grid-template-columns: 12px minmax(0, 1fr); align-items: center; gap: 2px 10px; width: 100%; min-height: 56px; padding: 9px 12px; border: 1px solid var(--mid); border-radius: 8px; background: var(--surface); color: var(--ink); text-align: left; }

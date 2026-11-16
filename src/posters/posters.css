@@ -23,6 +23,21 @@
   --mono: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
   --radius: 18px;
   --pv-dock-h: 60px;
+  /* The shared controls (src/site/ui) in the viewer's dark glass, whatever the site's theme. */
+  --ui-field-bg: rgba(0, 0, 0, 0.35);
+  --ui-field-ink: var(--text);
+  --ui-field-border: var(--line-2);
+  --ui-field-border-hover: rgba(255, 255, 255, 0.28);
+  --ui-menu-bg: #1a1d1a;
+  --ui-menu-ink: var(--text);
+  --ui-menu-muted: var(--muted);
+  --ui-menu-hover: rgba(255, 255, 255, 0.08);
+  --ui-menu-border: var(--line-2);
+  --ui-menu-shadow: 0 18px 48px rgba(0, 0, 0, 0.55);
+  --ui-accent: var(--amber);
+  --ui-accent-ink: #1a1405;
+  --ui-focus: var(--amber);
+  --ui-range-thumb: var(--text);
   color-scheme: dark;
   scrollbar-color: rgba(255, 255, 255, 0.22) transparent;
 }
@@ -189,9 +204,13 @@
   display: flex;
   align-items: center;
   gap: 4px;
+  width: auto;
   padding: 0 10px;
+  border: 0;
   border-left: 1px solid var(--line-2);
   border-right: 1px solid var(--line-2);
+  border-radius: 0;
+  background: none;
   font-family: var(--mono);
   font-size: 12px;
   color: var(--muted);
@@ -201,10 +220,9 @@
   cursor: pointer;
   transition: background 150ms, color 150ms;
 }
-.pv-switch-pick::after { content: '▾'; font-size: 10px; opacity: 0.7; }
-.pv-switch-pick:hover, .pv-switch-pick:focus-within { background: var(--glass-3); color: var(--text); }
-.pv-switch-pick:focus-within { outline: 2px solid var(--amber); outline-offset: -2px; }
-.pv-switch-pick select { position: absolute; inset: 0; width: 100%; opacity: 0; cursor: pointer; font-size: 16px; }
+.pv-switch-pick .ui-select__chevron { width: 10px; height: 10px; }
+.pv-switch-pick:hover, .pv-switch-pick[data-open] { background: var(--glass-3); color: var(--text); }
+.pv-switch-pick:focus-visible { outline: 2px solid var(--amber); outline-offset: -2px; }
 
 /* A poster comes in with a short fade; the one it replaces dims while the next one loads. */
 .pv-app { animation: pv-enter 180ms ease-out; }
@@ -404,7 +422,7 @@
 .pv-figure figcaption { font-size: 12.5px; color: var(--muted); margin-top: 8px; }
 
 .pv-toggle { display: flex; align-items: center; gap: 10px; margin: 6px 0 14px; font-weight: 500; cursor: pointer; font-size: 14px; }
-.pv-toggle input, .pv-check input { width: 17px; height: 17px; accent-color: var(--amber); margin: 0; }
+.pv-toggle .ui-check, .pv-check .ui-check { --ui-check-size: 17px; }
 .pv-check { display: flex; align-items: center; gap: 8px; font-size: 13.5px; cursor: pointer; }
 
 .pv-glyph-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(68px, 1fr)); gap: 8px; margin: 12px 0 14px; }
@@ -447,7 +465,7 @@
 .pv-control { display: grid; gap: 6px; }
 .pv-control-row { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 10px; }
 .pv-control-label { font-family: var(--mono); font-size: 10.5px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); }
-.pv-studio select, .pv-studio textarea, .pv-studio input[type="text"] {
+.pv-studio .ui-select, .pv-studio textarea, .pv-studio input[type="text"] {
   width: 100%;
   border: 1px solid var(--line-2);
   border-radius: 9px;
@@ -456,7 +474,6 @@
   font-size: 14px;
   color: var(--text);
 }
-.pv-studio select option { color: #111; }
 .pv-studio textarea { resize: vertical; line-height: 1.35; }
 .pv-layouts { display: grid; grid-template-columns: repeat(2, 1fr); gap: 6px; }
 .pv-layout-btn { border: 1px solid var(--line); background: rgba(0, 0, 0, 0.25); border-radius: 10px; padding: 6px 6px 8px; display: grid; gap: 6px; font-size: 12.5px; font-weight: 500; text-align: left; color: var(--muted); transition: transform 150ms, border-color 150ms, color 150ms; }
@@ -485,8 +502,7 @@
   font: inherit;
   font-size: 14px;
 }
-.pv-select { padding-right: 30px; appearance: none; background-image: linear-gradient(45deg, transparent 50%, currentColor 50%), linear-gradient(135deg, currentColor 50%, transparent 50%); background-position: calc(100% - 16px) 50%, calc(100% - 11px) 50%; background-size: 5px 5px; background-repeat: no-repeat; }
-.pv-select option { color: #111; }
+.pv-select { width: auto; padding-right: 10px; }
 .pv-number { display: flex; align-items: center; gap: 8px; color: var(--muted); font-size: 13px; }
 .pv-number input { width: 7.5em; font-variant-numeric: tabular-nums; }
 .pv-select:focus-visible, .pv-number input:focus-visible { outline: 2px solid var(--amber); outline-offset: 1px; }
@@ -562,7 +578,7 @@
   .pv-top { gap: 6px; }
   .pv-switch-pick { padding: 0 9px; letter-spacing: -0.04em; }
   .pv-switch-noun { display: none; }
-  .pv-switch-pick::after { display: none; }
+  .pv-switch-pick .ui-select__chevron { display: none; }
   .pv-top-start { gap: 8px; }
   .pv-brand b { font-size: 15px; }
 }
@@ -597,7 +613,7 @@
 .pv-link-card.pv-link-plain { display: grid; gap: 2px; padding: 10px 12px; border: 1px dashed var(--line); border-radius: 12px; }
 .pv-variation { margin: 4px 0 14px; display: grid; gap: 6px; }
 .pv-range { display: grid; grid-template-columns: auto 1fr 3.5ch; align-items: center; gap: 10px; font-size: 12.5px; color: var(--muted); }
-.pv-range input { width: 100%; accent-color: var(--mint); }
+.pv-range .ui-range { --ui-accent: var(--mint); }
 /* A record, folded under its connection. */
 .pv-record > summary { display: grid; gap: 2px; cursor: pointer; list-style: none; }
 .pv-record > summary::-webkit-details-marker { display: none; }
@@ -724,9 +740,9 @@
 .posters__layout { display: inline-flex; border: 1px solid var(--outline); border-radius: 999px; overflow: hidden; }
 .posters__layout button { border: 0; background: none; color: inherit; font: inherit; font-size: 13.5px; padding: 6px 14px; cursor: pointer; }
 .posters__layout button[aria-pressed="true"] { background: var(--ink, currentColor); color: var(--surface); }
-.posters__layout button:focus-visible, .posters__filter select:focus-visible, .posters__clear:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; }
+.posters__layout button:focus-visible, .posters__filter .ui-select:focus-visible, .posters__clear:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; }
 .posters__filter { display: inline-flex; align-items: center; gap: 6px; font-size: 13px; color: var(--ink-muted); }
-.posters__filter select { font: inherit; font-size: 13.5px; color: inherit; background: var(--surface); border: 1px solid var(--outline); border-radius: 8px; padding: 5px 8px; }
+.posters__filter .ui-select { width: auto; min-height: 0; gap: 6px; font: inherit; font-size: 13.5px; color: inherit; background: var(--surface); border: 1px solid var(--outline); border-radius: 8px; padding: 5px 8px; }
 .posters__count { margin: 0 0 0 auto; font-size: 13px; color: var(--ink-faint); }
 .posters__clear { border: 0; background: none; padding: 0; font: inherit; color: inherit; text-decoration: underline; cursor: pointer; }
 .posters__none { margin: 0; color: var(--ink-muted); }

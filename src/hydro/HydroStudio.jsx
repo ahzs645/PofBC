@@ -20,6 +20,9 @@ import {
   updateHydroSettings, validateHydro
 } from './hydroLayout.js'
 import { renderHydroSheet, renderHydroSvg } from './renderHydroSvg.js'
+import { Checkbox } from '../site/ui/Checkbox.jsx'
+import { Select } from '../site/ui/Select.jsx'
+import { Slider as RangeInput } from '../site/ui/Slider.jsx'
 
 const TYPE_OPTIONS = HYDRO_TYPE_ORDER.map((value) => ({
   value, label: value === 'authority' ? 'Authority' : value === 'gas' ? 'Gas' : HYDRO_TYPES[value], title: HYDRO_TYPES[value]
@@ -61,14 +64,13 @@ const Slider = ({ name, label, step, unit, settings, update }) => {
         {label}
         <output htmlFor={`hydro-${name}`}>{Number(value).toFixed(Number.isInteger(value) ? 0 : 1)}{unit}</output>
       </label>
-      <input
+      <RangeInput
         id={`hydro-${name}`}
-        type="range"
         min={low}
         max={high}
         step={step}
         value={value}
-        onChange={(event) => update(name, Number(event.target.value))}
+        onChange={(value) => update(name, value)}
       />
     </div>
   )
@@ -77,7 +79,7 @@ const Slider = ({ name, label, step, unit, settings, update }) => {
 const Check = ({ label, checked, onChange, disabled, note }) => (
   <>
     <label className="checkbox">
-      <input type="checkbox" checked={checked} disabled={disabled} onChange={(event) => onChange(event.target.checked)} />
+      <Checkbox checked={checked} disabled={disabled} onChange={(checked) => onChange(checked)} />
       <span>{label}</span>
     </label>
     {note ? <p className="field__note">{note}</p> : null}
@@ -282,7 +284,7 @@ export const HydroStudio = ({ initialPreset = 'standard', onClose }) => {
           <div className="stage__bar">
             {isSign && (
               <label className="checkbox hydro__guides">
-                <input type="checkbox" checked={settings.showGuides} onChange={(event) => update('showGuides', event.target.checked)} />
+                <Checkbox checked={settings.showGuides} onChange={(checked) => update('showGuides', checked)} />
                 <span>Guides</span>
               </label>
             )}
@@ -433,11 +435,11 @@ export const HydroStudio = ({ initialPreset = 'standard', onClose }) => {
             <h2>Print</h2>
             <div className="field">
               <label htmlFor="hydro-process">Production method</label>
-              <select id="hydro-process" value={settings.process} onChange={(event) => update('process', event.target.value)}>
+              <Select id="hydro-process" value={settings.process} onChange={(value) => update('process', value)}>
                 <option value="coated">Process · coated</option>
                 <option value="uncoated">Process · uncoated</option>
                 <option value="non-process">Non-process system</option>
-              </select>
+              </Select>
             </div>
             <dl className="hydro__recipe">
               <div><dt><i style={{ background: settings.green }} />Green</dt><dd>{formatRecipe(spec.green)}</dd></div>
@@ -449,10 +451,10 @@ export const HydroStudio = ({ initialPreset = 'standard', onClose }) => {
               <summary>Screen colours</summary>
               <div className="field">
                 <label htmlFor="hydro-palette">Palette</label>
-                <select id="hydro-palette" value={settings.screenPalette} onChange={(event) => update('screenPalette', event.target.value)}>
+                <Select id="hydro-palette" value={settings.screenPalette} onChange={(value) => update('screenPalette', value)}>
                   {Object.entries(HYDRO_SCREEN_PALETTES).map(([value, { label }]) => <option key={value} value={value}>{label}</option>)}
                   <option value="custom">Custom</option>
-                </select>
+                </Select>
               </div>
               <ColourField label="Green" value={settings.green} onChange={(value) => update('green', value)} palette={HYDRO_SWATCHES} />
               <ColourField label="Blue" value={settings.blue} onChange={(value) => update('blue', value)} palette={HYDRO_SWATCHES} />

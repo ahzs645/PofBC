@@ -15,6 +15,7 @@ import { StoryText } from './StoryText.jsx'
 import { storySteps } from './storySteps.js'
 import { governmentIn, PRESENT_YEAR, FIRST_YEAR } from './snapshot.js'
 import { HISTORICAL_BODIES, MINISTERS, SUB_AGENCIES } from './historyData.js'
+import { Select } from '../site/ui/Select.jsx'
 
 const hostOf = (url) => {
   try { return new URL(url).hostname.replace(/^www\d?\./, '') } catch { return url }
@@ -184,9 +185,9 @@ export const CompareView = ({ year, other, onOther, onPick }) => {
         <p className="gov-compare__pick">
           <label>
             <span className="gov-muted">From </span>
-            <select value={other} onChange={(event) => onOther(Number(event.target.value))}>
+            <Select value={other} onChange={(value) => onOther(Number(value))}>
               {years.map((value) => <option key={value} value={value}>{value}</option>)}
-            </select>
+            </Select>
           </label>
           <span className="gov-muted"> to the year on the timeline, </span><strong>{year}</strong>
         </p>

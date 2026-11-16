@@ -15,6 +15,7 @@ import order832Detail from '../../research/identity/document-arms-2026-11-14/ref
 import order832Page from '../../research/identity/document-arms-2026-11-14/reference/oic-832-heading-page.png'
 import grantDetail from '../../research/identity/document-arms-2026-11-14/reference/oic-1121-grant-detail.png'
 import grantPage from '../../research/identity/document-arms-2026-11-14/reference/oic-1121-grant-page.png'
+import { Select } from './ui/Select.jsx'
 
 // Assets stay in this lazy preview module; the geometry and export pipeline never import them.
 const REFERENCE_IMAGES = {
@@ -66,12 +67,12 @@ export function DocumentArmsReference({ layout }) {
         <summary>Compare with source evidence</summary>
         <div className="document-arms-source__controls">
           <label htmlFor={selectId}>Reference specimen</label>
-          <select id={selectId} value={reference.id} onChange={(event) => {
-            setSelected(event.target.value)
+          <Select id={selectId} value={reference.id} onChange={(value) => {
+            setSelected(value)
             setWholePage(false)
           }}>
             {references.map(({ id, label }) => <option key={id} value={id}>{label}</option>)}
-          </select>
+          </Select>
           {images.page && (
             <div className="document-arms-source__view" role="group" aria-label="Reference view">
               <button type="button" className="button button--ghost" aria-pressed={!showPage} onClick={() => setWholePage(false)}>Detail</button>

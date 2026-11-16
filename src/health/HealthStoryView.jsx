@@ -7,6 +7,9 @@ import {
 } from './healthStoryData.js'
 import { SiteLink } from '../site/navigation.jsx'
 import './healthStory.css'
+import { Checkbox } from '../site/ui/Checkbox.jsx'
+import { Select } from '../site/ui/Select.jsx'
+import { Slider } from '../site/ui/Slider.jsx'
 
 const asset = (path) => assetUrl(path, import.meta.env.BASE_URL)
 const km = (metres) => (metres / 1000).toLocaleString('en-CA', { maximumFractionDigits: 1, minimumFractionDigits: 1 })
@@ -154,8 +157,8 @@ export function HealthStoryView() {
                 selectedId={selectedId} onSelect={select} frameworkLabel={current.title} />}
           <div className="hm-map-options">
             {overlayMap ? <>
-              <label className="hm-toggle"><input type="checkbox" checked={overlayOn} onChange={(event) => setOverlayOn(event.target.checked)} /> Show the original printed map, georectified</label>
-              {overlayOn && <label className="hm-range">Opacity <input type="range" min=".2" max="1" step=".05" value={opacity} onChange={(event) => setOpacity(Number(event.target.value))} aria-label="Original map opacity" /></label>}
+              <label className="hm-toggle"><Checkbox checked={overlayOn} onChange={(checked) => setOverlayOn(checked)} /> Show the original printed map, georectified</label>
+              {overlayOn && <label className="hm-range">Opacity <Slider min=".2" max="1" step=".05" value={opacity} onChange={(value) => setOpacity(value)} aria-label="Original map opacity" /></label>}
               {overlayOn && geo.phase === 'updating' && <span className="hm-small" role="status">Loading the original map…</span>}
             </> : <span className="hm-small">This layer is rebuilt from its predecessor organizations, so it has no printed map.</span>}
           </div>
@@ -168,7 +171,7 @@ export function HealthStoryView() {
       <div className="hm-section-heading"><div><p className="hm-kicker">Every organization</p><h2 id="hm-directory-title">Find a board, council, society or region</h2></div><span className="hm-count">{results.length} of {AREAS.length}</span></div>
       <div className="hm-filters">
         <label className="hm-field"><span>Search names and places</span><input type="search" value={query} onChange={(event) => setQuery(event.target.value)} placeholder="Cariboo, Nelson, Richmond…" /></label>
-        <label className="hm-field"><span>Map</span><select value={filter} onChange={(event) => setFilter(event.target.value)}><option value="all">All maps</option>{FRAMEWORKS.map((entry) => <option key={entry.id} value={entry.id}>{entry.year} · {entry.label}</option>)}</select></label>
+        <label className="hm-field"><span>Map</span><Select value={filter} onChange={(value) => setFilter(value)}><option value="all">All maps</option>{FRAMEWORKS.map((entry) => <option key={entry.id} value={entry.id}>{entry.year} · {entry.label}</option>)}</Select></label>
       </div>
       {FRAMEWORKS.filter((entry) => results.some((area) => area.framework === entry.id)).map((entry) => <div className="hm-group" key={entry.id}>
         <h3>{entry.year} · {entry.label}</h3>

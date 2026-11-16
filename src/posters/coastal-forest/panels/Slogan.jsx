@@ -1,6 +1,7 @@
 import { Facts, Item, Reveal } from '../../ui/Reveal.jsx'
 import { GlyphRow } from '../../ui/GlyphRow.jsx'
 import sloganPreview from '../slogan_preview.png'
+import { Checkbox } from '../../../site/ui/Checkbox.jsx'
 
 export function Slogan({ glyphs, highlight, onHighlight }) {
   return (
@@ -8,7 +9,7 @@ export function Slogan({ glyphs, highlight, onHighlight }) {
       <Item as="p" className="pv-eyebrow">Part 5 of 5 · The slogan</Item>
       <Item as="h2">The Environment ~ <em>It’s Your Home!</em></Item>
       <Item as="p" className="pv-lede">The ministry's line of the period, set full width in the same Bookman as the title. Two swash capitals, and one small mark that took its own correction.</Item>
-      <Item as="label" className="pv-toggle"><input type="checkbox" id="hl-slogan" checked={highlight} onChange={(e) => onHighlight(e.target.checked)} /> Highlight the alternates and the tilde</Item>
+      <Item as="label" className="pv-toggle"><Checkbox id="hl-slogan" checked={highlight} onChange={(checked) => onHighlight(checked)} /> Highlight the alternates and the tilde</Item>
       <GlyphRow glyphs={glyphs} />
       <Item as="h3">The tilde</Item>
       <Item as="p">The separator in the original is short, heavy and sits mid-line. The first Bookman rebuild used the font's ordinary ASCII tilde, shrunk to 70 percent and lowered, and it came out thin. The correction switched to the font's heavier spacing tilde, the accent glyph, scaled to 86 percent and nudged into place.</Item>

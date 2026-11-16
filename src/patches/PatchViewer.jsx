@@ -9,6 +9,8 @@ import { Segmented } from '../site/Segmented.jsx'
 import { PatchHistory, photosOf } from './PatchDetails.jsx'
 import { PatchStage } from './PatchStage.jsx'
 import { VIEW_DEFAULTS, exportScale, exportSize, loadView, modeFor, saveView } from './patchView.js'
+import { Select } from '../site/ui/Select.jsx'
+import { Slider } from '../site/ui/Slider.jsx'
 
 /** Patcher's own site, which opens a library patch with every digitizing setting exposed. */
 const PATCHER_URL = 'https://ahzs645.github.io/patcher/'
@@ -315,7 +317,7 @@ export const PatchViewer = ({ patch, org, position, previous, next, onOpen, onCl
           <Segmented label="Thread" options={FINISHES} value={finish} onChange={(value) => set({ finish: value })} compact />
           <label className="patch__light">
             <span>Light</span>
-            <input type="range" min="0" max="345" step="15" value={view.lightDeg} onChange={(event) => set({ lightDeg: Number(event.target.value) })} aria-valuetext={`${view.lightDeg} degrees`} />
+            <Slider min="0" max="345" step="15" value={view.lightDeg} onChange={(value) => set({ lightDeg: value })} aria-valuetext={`${view.lightDeg} degrees`} />
             <output>{view.lightDeg}°</output>
           </label>
           {changed && <button type="button" className="button--inline patch__reset" onClick={() => set({ ...VIEW_DEFAULTS, mode: view.mode })}>Reset to the default view</button>}
@@ -410,9 +412,9 @@ export const PatchViewer = ({ patch, org, position, previous, next, onOpen, onCl
           {sources.length > 1 && (
             <label className="patch__source-select">
               <span>Source occurrence</span>
-              <select value={source?.occurrenceId ?? ''} onChange={(event) => setSourceSelection({ patchId: patch.id, occurrenceId: event.target.value })}>
+              <Select value={source?.occurrenceId ?? ''} onChange={(value) => setSourceSelection({ patchId: patch.id, occurrenceId: value })}>
                 {sources.map((entry) => <option key={entry.occurrenceId} value={entry.occurrenceId}>{entry.occurrenceId}{entry.sourceId && entry.sourceId !== entry.occurrenceId ? ` · ${entry.sourceId}` : ''}</option>)}
-              </select>
+              </Select>
             </label>
           )}
           <div className="patch__source-caption">

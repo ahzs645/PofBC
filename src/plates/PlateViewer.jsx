@@ -9,6 +9,9 @@ import {
 } from 'plateforge'
 import { FamilyStrip } from './PlatesTimeline.jsx'
 import { spanOf } from './timeline.js'
+import { Checkbox } from '../site/ui/Checkbox.jsx'
+import { Select } from '../site/ui/Select.jsx'
+import { Slider } from '../site/ui/Slider.jsx'
 
 /** A fresh serial, keeping the fields a format marks as appearance (finish, decal, palette…). */
 const regenerate = (format, parts) => {
@@ -23,9 +26,9 @@ const Field = ({ field, value, onChange }) => {
     return (
       <div className="plate__field">
         <label htmlFor={id}>{field.label}</label>
-        <select id={id} value={value ?? ''} onChange={(event) => onChange(event.target.value)}>
+        <Select id={id} value={value ?? ''} onChange={(value) => onChange(value)}>
           {field.options.map((option) => <option key={option.value} value={option.value}>{option.label}</option>)}
-        </select>
+        </Select>
       </div>
     )
   }
@@ -41,7 +44,7 @@ const Field = ({ field, value, onChange }) => {
     return (
       <div className="plate__field">
         <label htmlFor={id}>{field.label} <span className="plate__value">{value}</span></label>
-        <input id={id} type="range" min={field.min} max={field.max} step={field.step} value={value ?? ''} onChange={(event) => onChange(event.target.value)} />
+        <Slider id={id} min={field.min} max={field.max} step={field.step} value={value ?? ''} onChange={(next) => onChange(String(next))} />
       </div>
     )
   }
@@ -165,7 +168,7 @@ export const PlateViewer = ({ region, format, family, section, position, previou
           {status && <p className="plate__note" role="status">{status.text}</p>}
 
           <label className="plate__toggle">
-            <input type="checkbox" checked={researchDiesEnabled()} onChange={(event) => setResearchDiesEnabled(event.target.checked)} />
+            <Checkbox checked={researchDiesEnabled()} onChange={(checked) => setResearchDiesEnabled(checked)} />
             Research lettering
           </label>
           <p className="plate__note">

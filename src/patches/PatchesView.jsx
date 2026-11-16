@@ -10,6 +10,7 @@ import {
   patchPlaceParams, patchPlaceUrl, readPatchPlace, sourcePhotoCount, variantCount
 } from './patchCatalogue.js'
 import './patches.css'
+import { Select } from '../site/ui/Select.jsx'
 
 // Browsing needs only metadata and previews. Load the digitizer and export tools when a patch opens.
 const PatchViewer = lazy(() => import('./PatchViewer.jsx').then((module) => ({ default: module.PatchViewer })))
@@ -153,28 +154,28 @@ export const PatchesView = ({ collection = 'patches' }) => {
         <div className="patches__filters">
           <label className="patches__filter patches__filter--compact">
             <span>Group by</span>
-            <select value={place.group} onChange={(event) => selectFilter({ group: event.target.value })}>
+            <Select value={place.group} onChange={(value) => selectFilter({ group: value })}>
               <option value="organization">Organization</option>
               <option value="template">Template family</option>
-            </select>
+            </Select>
           </label>
           <label className="patches__filter">
             <span>Organization</span>
-            <select value={place.org ?? ''} onChange={(event) => selectFilter({ org: event.target.value || null })}>
+            <Select value={place.org ?? ''} onChange={(value) => selectFilter({ org: value || null })}>
               <option value="">All {organizations.length} organizations</option>
               {sectors.map(({ sector, orgs }) => (
                 <optgroup key={sector.id} label={sector.name}>
                   {orgs.map((org) => <option key={org.id} value={org.id}>{org.name} ({org.patches.length} variants)</option>)}
                 </optgroup>
               ))}
-            </select>
+            </Select>
           </label>
           <label className="patches__filter">
             <span>Template family</span>
-            <select value={place.family ?? ''} onChange={(event) => selectFilter({ family: event.target.value || null })}>
+            <Select value={place.family ?? ''} onChange={(value) => selectFilter({ family: value || null })}>
               <option value="">All template families</option>
               {familySections.map(({ family, cards }) => <option key={family.id} value={family.id}>{family.label} ({variantCount(cards)} variants)</option>)}
-            </select>
+            </Select>
           </label>
           <label className="patches__filter patches__filter--grow">
             <span>Search</span>

@@ -11,6 +11,7 @@ import { tileArt } from './tileArt.js'
 import { entriesOf } from './collections.js'
 import { IDENTITY_KIND_LABELS, IDENTITY_RELATION_LABELS } from './identitySubjects.js'
 import './identityCoverage.css'
+import { Select } from '../site/ui/Select.jsx'
 
 const Status = ({ subject }) => (
   <span className="identity-status" data-held={subject.hasArtwork || undefined} title={COVERAGE_STATES[subject.state].description}>
@@ -123,10 +124,10 @@ export const IdentityCoverageBrowser = ({ onHome, onOpenSubject }) => {
       </header>
       <div className="identity-filters" role="search" aria-label="Filter identity subjects">
         <label className="identity-filters__query">Name or alias<input type="search" value={filters.query} placeholder="TransLink, GVTA, SeaBus…" onChange={(event) => update({ query: event.target.value })} /></label>
-        <label>Family<select value={filters.family} onChange={(event) => update({ family: event.target.value })}><option value="">All families</option>{COVERAGE_FAMILIES.map((group) => <option key={group.id} value={group.id}>{group.label}</option>)}</select></label>
-        <label>Evidence<select value={filters.state} onChange={(event) => update({ state: event.target.value })}><option value="">All evidence states</option><option value="held">With artwork</option><option value="missing">Without artwork</option>{Object.entries(COVERAGE_STATES).map(([id, state]) => <option key={id} value={id}>{state.label}</option>)}</select></label>
-        <label>Region<select value={filters.region} onChange={(event) => update({ region: event.target.value })}><option value="">All regions</option>{MUNICIPAL_REGIONS.map((region) => <option key={region} value={region}>{region}</option>)}</select></label>
-        <label>Scope<select value={filters.scope} onChange={(event) => update({ scope: event.target.value })}><option value="">All registered subjects</option><option value="core">Public bodies and services</option><option value="institution">Wider institutions</option></select></label>
+        <label>Family<Select value={filters.family} onChange={(value) => update({ family: value })}><option value="">All families</option>{COVERAGE_FAMILIES.map((group) => <option key={group.id} value={group.id}>{group.label}</option>)}</Select></label>
+        <label>Evidence<Select value={filters.state} onChange={(value) => update({ state: value })}><option value="">All evidence states</option><option value="held">With artwork</option><option value="missing">Without artwork</option>{Object.entries(COVERAGE_STATES).map(([id, state]) => <option key={id} value={id}>{state.label}</option>)}</Select></label>
+        <label>Region<Select value={filters.region} onChange={(value) => update({ region: value })}><option value="">All regions</option>{MUNICIPAL_REGIONS.map((region) => <option key={region} value={region}>{region}</option>)}</Select></label>
+        <label>Scope<Select value={filters.scope} onChange={(value) => update({ scope: value })}><option value="">All registered subjects</option><option value="core">Public bodies and services</option><option value="institution">Wider institutions</option></Select></label>
       </div>
       <div className="identity-register__result-heading">
         <p role="status">{summary.subjects} subjects · {summary.held} with artwork · {summary.sources} source leads</p>

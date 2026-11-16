@@ -1,5 +1,6 @@
 import { Segmented } from '../../ui/Segmented.jsx'
 import { CURRENT_MINISTRIES, CURRENT_VARIANTS, CURRENT_VARIANT_ORDER } from './renderLogo.js'
+import { Select } from '../../../site/ui/Select.jsx'
 
 /** Controls for the current-era mark: language, ministry, wording, colourway. */
 export const CurrentControls = ({ config, set }) => {
@@ -19,10 +20,10 @@ export const CurrentControls = ({ config, set }) => {
       </div>
       <div className="pv-control">
         <label className="pv-control-label" htmlFor="current-pick">Ministry</label>
-        <select id="current-pick" value={config.currentCode} onChange={(e) => set(pick(e.target.value))}>
+        <Select id="current-pick" value={config.currentCode} onChange={(value) => set(pick(value))}>
           <option value="">Custom wording</option>
           {CURRENT_MINISTRIES.map((m) => <option key={m.code} value={m.code}>{m.en.replace(/\n/g, ' ')}</option>)}
-        </select>
+        </Select>
         <textarea id="current-text" rows={3} value={config.currentText} spellCheck={false} aria-label="Ministry wording, line breaks honoured" onChange={(e) => set({ currentText: e.target.value, currentCode: '' })} />
       </div>
       <div className="pv-control">

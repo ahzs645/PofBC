@@ -1,0 +1,270 @@
+/* The site's shared form controls: Select, Checkbox and Slider (src/site/ui).
+ *
+ * Every colour is a custom property with the site's own token behind it, so the controls look like
+ * the generator by default and any view can restyle them by setting the properties on its root:
+ *
+ *   --ui-field-bg, --ui-field-ink, --ui-field-border, --ui-field-border-hover   the closed select
+ *   --ui-menu-bg, --ui-menu-ink, --ui-menu-muted, --ui-menu-hover,
+ *   --ui-menu-border, --ui-menu-shadow                                           the open list
+ *   --ui-accent, --ui-accent-ink                                                 ticks, checks, fills
+ *   --ui-focus                                                                   the keyboard ring
+ *
+ * The rules for the closed select sit in :where(), with no weight, so a view's own rule for its
+ * fields (`.patches__filter .ui-select`) wins without a fight.
+ */
+
+/* ── Select: the button ──────────────────────────────────────────────────────────────────────── */
+
+:where(.ui-select) {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  width: 100%;
+  min-width: 0;
+  min-height: var(--control, 36px);
+  margin: 0;
+  padding: 7px 12px;
+  border: 1px solid var(--ui-field-border, var(--outline));
+  border-radius: var(--radius, 12px);
+  background: var(--ui-field-bg, var(--hover));
+  color: var(--ui-field-ink, var(--ink));
+  font: inherit;
+  /* 16px keeps iOS Safari from zooming the page when the control takes focus. */
+  font-size: 16px;
+  line-height: 1.35;
+  text-align: left;
+  cursor: pointer;
+}
+@media (min-width: 900px) { :where(.ui-select) { font-size: 14px; } }
+:where(.ui-select):hover:not(:disabled) { border-color: var(--ui-field-border-hover, var(--mid)); }
+:where(.ui-select):focus-visible { outline: 2px solid var(--ui-focus, var(--focus)); outline-offset: 2px; }
+:where(.ui-select):disabled { opacity: 0.5; cursor: not-allowed; }
+:where(.ui-select)[data-placeholder] .ui-select__value { color: var(--ui-menu-muted, var(--ink-faint)); }
+
+.ui-select__value {
+  flex: 1 1 auto;
+  min-width: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.ui-select__chevron { flex: none; opacity: 0.65; }
+.ui-select[data-open] .ui-select__chevron { transform: rotate(180deg); }
+
+@media (prefers-reduced-motion: no-preference) {
+  :where(.ui-select) { transition: border-color 120ms, background-color 120ms, color 120ms, box-shadow 120ms; }
+  .ui-select__chevron { transition: transform 150ms; }
+}
+
+/* ── Select: the list ────────────────────────────────────────────────────────────────────────── */
+
+/* In the top layer (popover) or, without it, fixed to the viewport; Select.jsx sets top and left. */
+.ui-select__menu {
+  position: fixed;
+  inset: auto;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  max-height: 360px;
+  margin: 0;
+  padding: 4px;
+  overflow: hidden;
+  border: 1px solid var(--ui-menu-border, var(--mid));
+  border-radius: 10px;
+  background: var(--ui-menu-bg, var(--surface));
+  color: var(--ui-menu-ink, var(--ink));
+  box-shadow: var(--ui-menu-shadow, var(--menu-shadow-token, 0 16px 48px rgba(30, 25, 15, 0.16)));
+  /* The list is a child of whatever held the select, so it resets what a label may have set. */
+  font-family: var(--ui-font, inherit);
+  font-size: 14px;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 1.35;
+  letter-spacing: normal;
+  text-transform: none;
+  text-align: left;
+  white-space: normal;
+  cursor: default;
+}
+.ui-select__menu:not([data-fallback]):not(:popover-open) { display: none; }
+
+@media (prefers-reduced-motion: no-preference) {
+  .ui-select__menu { animation: ui-select-in 120ms ease-out; }
+  .ui-select__menu[data-above] { animation-name: ui-select-in-above; }
+}
+@keyframes ui-select-in { from { opacity: 0; transform: translateY(-4px); } }
+@keyframes ui-select-in-above { from { opacity: 0; transform: translateY(4px); } }
+
+.ui-select__search { display: block; flex: none; padding: 2px 2px 6px; }
+.ui-select__search input {
+  box-sizing: border-box;
+  width: 100%;
+  min-height: 34px;
+  margin: 0;
+  padding: 6px 10px;
+  border: 1px solid var(--ui-menu-border, var(--mid));
+  border-radius: 7px;
+  background: var(--ui-menu-hover, var(--hover));
+  color: inherit;
+  font: inherit;
+  font-size: 14px;
+}
+.ui-select__search input::placeholder { color: var(--ui-menu-muted, var(--ink-faint)); }
+.ui-select__search input:focus-visible { outline: 2px solid var(--ui-focus, var(--focus)); outline-offset: 0; }
+
+.ui-select__list {
+  display: block;
+  flex: 1 1 auto;
+  min-height: 0;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  outline: none;
+}
+
+.ui-select__group { display: block; }
+.ui-select__group + .ui-select__group,
+.ui-select__option + .ui-select__group { margin-top: 4px; }
+.ui-select__group-label {
+  display: block;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  padding: 8px 10px 4px;
+  background: var(--ui-menu-bg, var(--surface));
+  color: var(--ui-menu-muted, var(--ink-faint));
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.ui-select__option {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-height: 32px;
+  padding: 6px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  user-select: none;
+  -webkit-user-select: none;
+}
+.ui-select__option[data-active] { background: var(--ui-menu-hover, var(--hover)); }
+.ui-select__option[aria-selected='true'] { font-weight: 600; }
+.ui-select__option[aria-disabled='true'] { opacity: 0.45; cursor: default; }
+.ui-select__option-label { flex: 1 1 auto; min-width: 0; overflow-wrap: anywhere; }
+.ui-select__tick { flex: none; color: var(--ui-accent, var(--accent)); }
+
+.ui-select__empty { display: block; padding: 10px; color: var(--ui-menu-muted, var(--ink-faint)); }
+
+/* A finger needs a taller row than a pointer, and the filter needs 16px to stop iOS zooming. */
+@media (pointer: coarse) {
+  .ui-select__option { min-height: 44px; }
+  .ui-select__search input { font-size: 16px; min-height: 40px; }
+}
+
+/* ── Checkbox ────────────────────────────────────────────────────────────────────────────────── */
+
+.ui-check {
+  -webkit-appearance: none;
+  appearance: none;
+  display: inline-grid;
+  place-content: center;
+  flex: none;
+  box-sizing: border-box;
+  width: var(--ui-check-size, 18px);
+  height: var(--ui-check-size, 18px);
+  margin: 0;
+  border: 1.5px solid var(--ui-check-border, color-mix(in srgb, currentColor 45%, transparent));
+  border-radius: 5px;
+  background: var(--ui-check-bg, transparent);
+  color: inherit;
+  vertical-align: middle;
+  cursor: pointer;
+}
+.ui-check::before {
+  content: '';
+  /* A length, not a percentage: the grid's track is sized by this, so a percentage would be 0. */
+  width: calc(var(--ui-check-size, 18px) * 0.6);
+  height: calc(var(--ui-check-size, 18px) * 0.6);
+  background: var(--ui-accent-ink, var(--accent-ink, #fff));
+  clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0, 43% 62%);
+  transform: scale(0);
+}
+.ui-check:checked { border-color: var(--ui-accent, var(--accent)); background: var(--ui-accent, var(--accent)); }
+.ui-check:checked::before { transform: scale(1); }
+.ui-check:hover:not(:disabled):not(:checked) { border-color: var(--ui-accent, var(--accent)); }
+.ui-check:focus-visible { outline: 2px solid var(--ui-focus, var(--focus)); outline-offset: 2px; }
+.ui-check:disabled { opacity: 0.45; cursor: not-allowed; }
+@media (prefers-reduced-motion: no-preference) {
+  .ui-check { transition: background-color 120ms, border-color 120ms; }
+  .ui-check::before { transition: transform 120ms ease-out; }
+}
+/* Windows High Contrast drops backgrounds; the tick must still show. */
+@media (forced-colors: active) {
+  .ui-check::before { background: CanvasText; }
+  .ui-check:checked { background: Highlight; border-color: Highlight; }
+}
+
+/* ── Slider ──────────────────────────────────────────────────────────────────────────────────── */
+
+.ui-range {
+  --_accent: var(--ui-accent, var(--accent));
+  --_track: var(--ui-range-track, color-mix(in srgb, currentColor 18%, transparent));
+  --_thumb: var(--ui-range-thumb, var(--surface, #fff));
+  -webkit-appearance: none;
+  appearance: none;
+  box-sizing: border-box;
+  width: 100%;
+  min-width: 60px;
+  height: 22px;
+  margin: 0;
+  padding: 0;
+  background: transparent;
+  color: inherit;
+  cursor: pointer;
+}
+.ui-range::-webkit-slider-runnable-track {
+  height: 4px;
+  border-radius: 999px;
+  background: linear-gradient(to right, var(--_accent) 0 var(--ui-range-fill, 0%), var(--_track) var(--ui-range-fill, 0%) 100%);
+}
+.ui-range::-moz-range-track { height: 4px; border-radius: 999px; background: var(--_track); }
+.ui-range::-moz-range-progress { height: 4px; border-radius: 999px; background: var(--_accent); }
+.ui-range::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  box-sizing: border-box;
+  width: 16px;
+  height: 16px;
+  margin-top: -6px;
+  border: 2px solid var(--_accent);
+  border-radius: 50%;
+  background: var(--_thumb);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
+}
+.ui-range::-moz-range-thumb {
+  box-sizing: border-box;
+  width: 16px;
+  height: 16px;
+  border: 2px solid var(--_accent);
+  border-radius: 50%;
+  background: var(--_thumb);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
+}
+.ui-range:focus-visible { outline: none; }
+.ui-range:focus-visible::-webkit-slider-thumb { box-shadow: 0 0 0 3px color-mix(in srgb, var(--ui-focus, var(--focus)) 45%, transparent); }
+.ui-range:focus-visible::-moz-range-thumb { box-shadow: 0 0 0 3px color-mix(in srgb, var(--ui-focus, var(--focus)) 45%, transparent); }
+.ui-range:hover:not(:disabled)::-webkit-slider-thumb { transform: scale(1.12); }
+.ui-range:hover:not(:disabled)::-moz-range-thumb { transform: scale(1.12); }
+.ui-range:disabled { opacity: 0.45; cursor: not-allowed; }
+@media (pointer: coarse) {
+  .ui-range { height: 32px; }
+  .ui-range::-webkit-slider-thumb { width: 22px; height: 22px; margin-top: -9px; }
+  .ui-range::-moz-range-thumb { width: 22px; height: 22px; }
+}
+@media (forced-colors: active) {
+  .ui-range::-webkit-slider-runnable-track { background: CanvasText; }
+}

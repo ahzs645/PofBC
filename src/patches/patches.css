@@ -15,7 +15,7 @@
 .patches__filter { display: grid; gap: 6px; min-width: 0; flex: 0 1 320px; }
 .patches__filter--compact { flex-basis: 180px; }
 .patches__filter--grow { flex: 1 1 260px; }
-.patches__filter select { width: 100%; min-width: 0; max-width: 100%; }
+.patches__filter .ui-select { width: 100%; min-width: 0; max-width: 100%; }
 .patches__filter > span { font-size: 13px; font-weight: 600; color: var(--ink-2); }
 .patches__filter input {
   width: 100%;
@@ -128,7 +128,7 @@
 .patch__review-date { font-size: 12px; color: var(--ink-faint); }
 .patch__source-select { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 10px; }
 .patch__source-select > span { font-weight: 600; color: var(--ink-2); }
-.patch__source-select select { min-width: 0; max-width: 100%; }
+.patch__source-select .ui-select { width: auto; min-width: 0; max-width: 100%; }
 .patch__source-caption { display: grid; gap: 5px; font-size: 12px; line-height: 1.5; color: var(--ink-muted); overflow-wrap: anywhere; }
 .patch__source-caption:empty { display: none; }
 .patch__source-caption a { color: var(--ink); }
@@ -189,7 +189,7 @@
 .patch__variants .segmented { flex-wrap: wrap; }
 .patch__variants .segmented button { flex: 1 1 auto; min-height: 26px; padding: 3px 10px; font-size: 12px; white-space: nowrap; }
 .patch__light { display: flex; align-items: center; justify-content: space-between; gap: 10px; font-size: 12px; font-weight: 500; color: var(--ink-muted); }
-.patch__light input { flex: 1; min-width: 0; max-width: 190px; margin-left: auto; }
+.patch__light .ui-range { flex: 1; min-width: 0; max-width: 190px; margin-left: auto; }
 .patch__light output { min-width: 34px; text-align: right; font-variant-numeric: tabular-nums; color: var(--ink-2); }
 .patch__reset { justify-self: start; font-size: 12px; }
 .patch__facts { display: grid; grid-template-columns: repeat(3, auto); justify-content: start; gap: 4px 22px; margin: 4px 0 0; }

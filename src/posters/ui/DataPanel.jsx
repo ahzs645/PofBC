@@ -7,6 +7,7 @@ import { Facts, Item, Reveal } from './Reveal.jsx'
 import { Connections } from './Connections.jsx'
 import { Segmented } from './Segmented.jsx'
 import { glance } from './glance.js'
+import { Slider } from '../../site/ui/Slider.jsx'
 
 const Links = ({ links, brief }) => (
   <Item as="ul" className="pv-links">
@@ -117,7 +118,7 @@ export function DataPanel({ partId, parts, order, onSelect, tour, story, poster,
               {compare.mode === 'overlay' && (
                 <label className="pv-range">
                   <span>Original</span>
-                  <input type="range" min="0" max="1" step="0.05" value={compare.opacity} onChange={(event) => compare.onOpacity(Number(event.target.value))} aria-label="How strongly the original shows over the reconstruction" />
+                  <Slider min="0" max="1" step="0.05" value={compare.opacity} onChange={(value) => compare.onOpacity(value)} aria-label="How strongly the original shows over the reconstruction" />
                   <span>{Math.round(compare.opacity * 100)}%</span>
                 </label>
               )}

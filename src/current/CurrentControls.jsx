@@ -22,6 +22,7 @@ import { unsupported } from './currentLayout.js'
 import { BREAKS_STATED, MINISTRIES } from './ministries.js'
 import { chosenName, codeForName } from '../site/ministryLink.js'
 import { ALL_GROUPS, History } from '../site/MinistryField.jsx'
+import { Select } from '../site/ui/Select.jsx'
 
 const LANGUAGE_OPTIONS = LANGUAGE_ORDER.map((value) => ({ value, label: LANGUAGES[value] }))
 
@@ -95,11 +96,10 @@ export const CurrentControls = ({ state, update }) => {
           is what the crest, flag and arms lockups set too. */}
       <div className="field">
         <label htmlFor={selectId}>Ministry</label>
-        <select
+        <Select
           id={selectId}
           value={selected}
-          onChange={(event) => {
-            const { value } = event.target
+          onChange={(value) => {
             if (value.startsWith(BY_NAME)) update({ source: 'list', ministry: value.slice(BY_NAME.length) })
             else update({ currentMinistry: value })
           }}
@@ -121,7 +121,7 @@ export const CurrentControls = ({ state, update }) => {
               ))}
             </optgroup>
           ))}
-        </select>
+        </Select>
         {listed && <History name={state.ministry} />}
       </div>
 

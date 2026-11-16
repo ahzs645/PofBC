@@ -7,6 +7,7 @@ import { useEffect, useMemo, useState } from 'react'
 import { Dialog } from '../ui/Dialog.jsx'
 import { Segmented } from '../ui/Segmented.jsx'
 import { FORMATS, FORMAT_ORDER, downloadBlob, exportSvg, formatBytes, isFormatSupported, maxWidthFor } from './exportSvg.js'
+import { Select } from '../../site/ui/Select.jsx'
 
 /**
  * Pixel widths a custom entry is held to: below this a raster is no use, above it browsers can't
@@ -87,17 +88,17 @@ export function ExportDialog({ open, onClose, targets, target, onTarget, dpiBase
           <span className="pv-control-label">Width</span>
           {/* A list of the usual sizes, or any width typed in. */}
           <div className="pv-width">
-            <select
+            <Select
               className="pv-select"
               aria-label="Pixel width"
               value={custom ? 'custom' : String(width)}
-              onChange={(event) => {
-                if (event.target.value === 'custom') { setCustom(true); setDraft(String(width)) } else { setCustom(false); setWidth(Number(event.target.value)) }
+              onChange={(value) => {
+                if (value === 'custom') { setCustom(true); setDraft(String(width)) } else { setCustom(false); setWidth(Number(value)) }
               }}
             >
               {presets.map((w) => <option key={w} value={w}>{w} px{t.dpiBase ? ` · ${Math.round(w / t.dpiBase)} dpi` : ''}</option>)}
               <option value="custom">Custom…</option>
-            </select>
+            </Select>
             {custom && (
               <label className="pv-number">
                 <input

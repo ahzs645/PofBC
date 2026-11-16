@@ -26,6 +26,7 @@ import { filterPositionGroups, matchesRecordQuery } from './viewState.js'
 import { isCadEmployer } from './recordAnnotations.js'
 import { ForeignObservations } from './RecordAnnotation.jsx'
 import { MUNICIPAL_PROFILE_BY_EMPLOYER } from './municipalProfiles.js'
+import { Select } from '../site/ui/Select.jsx'
 
 const SHOWS = ['positions', 'people', 'everyone', 'trends']
 
@@ -233,10 +234,10 @@ export const EmployerPage = ({ entry, years, sources, year: wantedYear, show, ro
         {categories.length > 1 && (
           <label className="salaries__note salaries__category">
             Disclosure category{' '}
-            <select value={chosenCategory} onChange={(event) => setCategory(event.target.value)}>
+            <Select value={chosenCategory} onChange={(value) => setCategory(value)}>
               <option value="all">All disclosed categories</option>
               {categories.map((scope) => <option key={scope} value={scope}>{scopeLabel(scope)}</option>)}
-            </select>
+            </Select>
           </label>
         )}
         <DisclosureSummary coverage={coverage} sources={sources} className="salaries-disclosure--mobile-notes" />

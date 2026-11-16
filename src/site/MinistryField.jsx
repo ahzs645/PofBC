@@ -7,6 +7,7 @@
 import { useId, useMemo } from 'react'
 import { MINISTRY_GROUPS, MINISTRY_LIST_REVIEWED } from '../ministries/ministries.js'
 import { describeMinistry, historicalGroups } from '../ministries/ministryHistory.js'
+import { Select } from './ui/Select.jsx'
 
 /**
  * Today's ministries, then every ministry there has been.
@@ -56,10 +57,10 @@ export const MinistryField = ({ source, ministry, manualMinistry, program, onCha
       {source === 'list' ? (
         <div className="field">
           <label htmlFor={selectId}>Ministry or agency</label>
-          <select
+          <Select
             id={selectId}
             value={ministry}
-            onChange={(event) => onChange({ ministry: event.target.value })}
+            onChange={(value) => onChange({ ministry: value })}
           >
             {ALL_GROUPS.map((group) => (
               <optgroup key={group.label} label={group.label}>
@@ -68,7 +69,7 @@ export const MinistryField = ({ source, ministry, manualMinistry, program, onCha
                   : <option key={option.value} value={option.value}>{option.label}</option>))}
               </optgroup>
             ))}
-          </select>
+          </Select>
           <History name={ministry} />
           <p className="field__note" title={`Today’s list last reviewed ${MINISTRY_LIST_REVIEWED}; the dated ones are every ministry since 1976.`}>
             Not there? Switch to “Type it in”.

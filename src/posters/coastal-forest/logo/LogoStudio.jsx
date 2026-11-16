@@ -5,6 +5,7 @@ import { LogoPreview } from './LogoPreview.jsx'
 import { CrestControls } from './CrestControls.jsx'
 import { CurrentControls } from './CurrentControls.jsx'
 import { DEFAULT_LOGO, contrastRatio, isOriginalLogo, renderLogo } from './renderLogo.js'
+import { Checkbox } from '../../../site/ui/Checkbox.jsx'
 
 export function LogoStudio({ config, onChange, live, onLive, onExport, eras = { crest: 'Crest era', current: "Today's mark" } }) {
   const svg = useMemo(() => renderLogo(config), [config])
@@ -27,7 +28,7 @@ export function LogoStudio({ config, onChange, live, onLive, onExport, eras = { 
       {config.era === 'crest' ? <CrestControls config={config} set={set} /> : <CurrentControls config={config} set={set} />}
 
       <div className="pv-studio-footer">
-        {onLive && <label className="pv-check"><input type="checkbox" id="live" checked={live} onChange={(e) => onLive(e.target.checked)} /> Show it on the poster</label>}
+        {onLive && <label className="pv-check"><Checkbox id="live" checked={live} onChange={(checked) => onLive(checked)} /> Show it on the poster</label>}
         <button type="button" className="pv-link-btn" disabled={isOriginalLogo(config)} onClick={() => onChange(DEFAULT_LOGO)}>Back to the poster's logo</button>
         {onExport && <button type="button" className="pv-link-btn pv-primary" onClick={onExport}>Export this logo</button>}
       </div>

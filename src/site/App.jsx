@@ -59,6 +59,7 @@ import { useSiteTheme } from './useTheme.js'
 import { useAgentTools } from './useAgentTools.js'
 import { useLockupState } from './useLockupState.js'
 import { DEFAULT_TITLE, documentTitle, setDocumentMeta } from './documentMeta.js'
+import { Checkbox } from './ui/Checkbox.jsx'
 
 const CLEAR_SPACE_OPTIONS = CLEAR_SPACE_ORDER.map((value) => ({
   value,
@@ -501,10 +502,9 @@ export const App = () => {
                 />
               )}
               <label className="checkbox">
-                <input
-                  type="checkbox"
+                <Checkbox
                   checked={state.crestBold}
-                  onChange={(event) => update({ crestBold: event.target.checked })}
+                  onChange={(checked) => update({ crestBold: checked })}
                 />
                 <span>Set the ministry bold</span>
               </label>
@@ -554,10 +554,9 @@ export const App = () => {
               )}
               {!isBadge && (
               <label className="checkbox">
-                <input
-                  type="checkbox"
+                <Checkbox
                   checked={state.flagProvince}
-                  onChange={(event) => update({ flagProvince: event.target.checked })}
+                  onChange={(checked) => update({ flagProvince: checked })}
                 />
                 <span>Set “Province of British Columbia” above</span>
               </label>
@@ -585,10 +584,9 @@ export const App = () => {
             <LayoutPicker value={state.layout} onChange={(value) => update({ layout: value })} />
 
             <label className="checkbox">
-              <input
-                type="checkbox"
+              <Checkbox
                 checked={state.wordmark}
-                onChange={(event) => update({ wordmark: event.target.checked })}
+                onChange={(checked) => update({ wordmark: checked })}
               />
               <span>Show “Province of British Columbia”</span>
             </label>
@@ -669,10 +667,9 @@ export const App = () => {
             />
 
             {hasLettering && <label className="checkbox">
-              <input
-                type="checkbox"
+              <Checkbox
                 checked={state.linkColors}
-                onChange={(event) => update({ linkColors: event.target.checked })}
+                onChange={(checked) => update({ linkColors: checked })}
               />
               <span>{isFlag ? 'Text matches the letters' : 'Text matches the mark'}</span>
             </label>}

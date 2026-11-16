@@ -16,6 +16,8 @@ import { BUNDLE_DEFAULTS, bundleName, exportBundle, planBundle } from '../export
 import { LAYOUTS, LAYOUT_ORDER } from '../logo/layouts.js'
 import { MultiToggle } from './MultiToggle.jsx'
 import { Segmented } from './Segmented.jsx'
+import { Checkbox } from './ui/Checkbox.jsx'
+import { Select } from './ui/Select.jsx'
 
 const MODES = [
   { value: 'single', label: 'One file' },
@@ -110,10 +112,9 @@ export const ExportPanel = ({ lockup, era = 'historical' }) => {
   const outlineControl = (
     <>
       <label className="checkbox">
-        <input
-          type="checkbox"
+        <Checkbox
           checked={outlineText}
-          onChange={(event) => setOutlineText(event.target.checked)}
+          onChange={(checked) => setOutlineText(checked)}
         />
         <span>Convert text to outlines</span>
       </label>
@@ -172,13 +173,13 @@ export const ExportPanel = ({ lockup, era = 'historical' }) => {
           {isRaster ? (
             <div className="field">
               <label htmlFor="export-size">Width</label>
-              <select
+              <Select
                 id="export-size"
                 value={pixelWidth}
-                onChange={(event) => setPixelWidth(Number(event.target.value))}
+                onChange={(value) => setPixelWidth(Number(value))}
               >
                 {SIZE_PRESETS.map((size) => <option key={size} value={size}>{size} px wide</option>)}
-              </select>
+              </Select>
             </div>
           ) : canOutline ? outlineControl : (
             <p className="field__note">
