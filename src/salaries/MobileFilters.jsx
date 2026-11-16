@@ -1,5 +1,6 @@
 import { useEffect, useId, useRef, useState } from 'react'
 import { PeriodRange, rangeLabel } from './parts.jsx'
+import { holdScrollFrom } from '../site/holdScroll.js'
 
 /** One search state, visible on every salary page and also in the mobile filter sheet. */
 export const SalarySearchField = ({ value, onChange, labelled = false, label = 'Search', placeholder, help: helpText, ariaLabel = 'Search a name, an employer or a position' }) => {
@@ -31,9 +32,9 @@ export const SalarySearchField = ({ value, onChange, labelled = false, label = '
 
 export const SalarySectorChips = ({ sectors, employers, value, onChange }) => (
   <div className="salaries__chips" role="group" aria-label="Sector">
-    <button type="button" aria-pressed={value === 'all'} onClick={() => onChange('all')}>All sectors</button>
+    <button type="button" aria-pressed={value === 'all'} onClick={(event) => { holdScrollFrom(event); onChange('all') }}>All sectors</button>
     {sectors.map((name) => (
-      <button key={name} type="button" aria-pressed={value === name} onClick={() => onChange(value === name ? 'all' : name)}>
+      <button key={name} type="button" aria-pressed={value === name} onClick={(event) => { holdScrollFrom(event); onChange(value === name ? 'all' : name) }}>
         {name} <span>{employers.filter((entry) => entry.sector === name).length}</span>
       </button>
     ))}

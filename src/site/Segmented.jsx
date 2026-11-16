@@ -2,8 +2,12 @@
 //
 // Buttons rather than radios: these all sit on one line, the options are short, and every one of
 // them is a live preview change rather than a form value waiting to be submitted.
+//
+// A choice changes what is below the control, never where the reader is: the control stays put on
+// screen while the page under it grows or shrinks (holdScroll.js).
 
-import { useId, useState } from 'react'
+import { useId, useRef, useState } from 'react'
+import { holdScroll } from './holdScroll.js'
 
 /**
  * @param {object} props
@@ -23,6 +27,7 @@ export const Segmented = ({ label, ariaLabel, options, value, onChange, hint, co
   const hintId = useId()
   const [explained, setExplained] = useState(false)
   const shown = hint && (explained || !label)
+  const group = useRef(null)
 
   return (
     <div className={compact ? 'field field--compact' : 'field'}>
@@ -45,6 +50,7 @@ export const Segmented = ({ label, ariaLabel, options, value, onChange, hint, co
         </span>
       ) : null}
       <div
+        ref={group}
         className="segmented"
         role="group"
         aria-labelledby={label ? id : undefined}
@@ -58,7 +64,10 @@ export const Segmented = ({ label, ariaLabel, options, value, onChange, hint, co
             disabled={option.disabled}
             title={option.title}
             aria-label={option.ariaLabel}
-            onClick={() => onChange(option.value)}
+            onClick={() => {
+              if (value !== option.value) holdScroll(group.current)
+              onChange(option.value)
+            }}
           >
             {option.label}
           </button>

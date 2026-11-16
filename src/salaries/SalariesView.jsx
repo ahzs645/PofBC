@@ -25,6 +25,7 @@ import { useSalaryPlace } from './useSalaryPlace.js'
 import { Segmented } from '../site/Segmented.jsx'
 import { EmployerBrowse, EmployerCard, PeopleBrowse, PositionBrowse } from './Browse.jsx'
 import { count, LAYOUTS, loadJson, Paged, PersonIcon, toTop } from './common.jsx'
+import { holdScroll } from '../site/holdScroll.js'
 import { EmployerPage } from './EmployerPage.jsx'
 import { PersonPage } from './PersonPage.jsx'
 import { linkLookup, personRecordShards } from './nameLinks.js'
@@ -41,6 +42,26 @@ import { BROWSE } from './CompanionShell.jsx'
 const CouncilPayView = lazy(() => import('./CouncilPayView.jsx'))
 const WorkforceView = lazy(() => import('./WorkforceView.jsx'))
 const AboutView = lazy(() => import('./AboutView.jsx'))
+
+// Changing section from the tab bar keeps the bar under the reader's finger, even as the section
+// below it is replaced (Council pay and Workforce are loaded on demand and draw their own copy of
+// the bar). About is reached by a link, not a tab, and opens at its top. Called before the change,
+// so the bar is measured where it was; returns what to do once the change is made.
+const BROWSE_BAR = '.salaries__browse-bar--sections'
+const settleBrowse = (browse) => {
+  if (browse === 'about') return toTop
+  const bars = () => [...(globalThis.document?.querySelectorAll(BROWSE_BAR) ?? [])]
+  // The one on screen: while the next section loads, the last is kept in the page, hidden.
+  holdScroll(bars()[0], { find: () => bars().find((bar) => bar.getClientRects().length) })
+  return () => {}
+}
+
+// "All 42 crown corporations →" sits at the foot of a preview and opens that sector's whole list:
+// the reader wants its start, not the page's top and not wherever the preview happened to end.
+const showListStart = () => globalThis.requestAnimationFrame?.(() => {
+  const list = globalThis.document?.querySelector('.salaries__records')
+  if (list && list.getBoundingClientRect().top < 0) list.scrollIntoView({ block: 'start' })
+})
 
 const describeNameGroup = (key, list, name, index) => {
   const latest = list.reduce((best, row) => (row[5] > best[5] || (row[5] === best[5] && (
@@ -89,8 +110,9 @@ export const SalariesView = ({ onOpenGovernment }) => {
   }, [companion, municipality])
   const leaveFor = (label) => (browse) => {
     if (browse === navigation.place.browse) return
+    const settle = settleBrowse(browse)
     navigation.go({ ...navigation.place, browse, q: '', person: null, personAt: null, employer: null, employerYear: null, role: null, title: null, show: null }, label)
-    toTop()
+    settle()
   }
   if (navigation.place.browse === 'about') return (
     <Suspense fallback={<p className="gallery__intro" role="status">Loading…</p>}>
@@ -104,8 +126,9 @@ export const SalariesView = ({ onOpenGovernment }) => {
         setPlace={navigation.setPlace}
         onBrowse={(browse) => {
           if (browse === 'workforce') return
+          const settle = settleBrowse(browse)
           navigation.go({ ...navigation.place, browse, q: '', person: null, personAt: null, employer: null, employerYear: null, role: null, title: null, show: null }, 'Workforce statistics')
-          toTop()
+          settle()
         }}
       />
     </Suspense>
@@ -132,8 +155,9 @@ export const SalariesView = ({ onOpenGovernment }) => {
         }}
         onBrowse={(browse) => {
           if (browse === 'council') return
+          const settle = settleBrowse(browse)
           navigation.go({ ...navigation.place, browse, q: '', person: null, personAt: null, employer: null, employerYear: null, role: null, title: null, show: null }, 'Council pay')
-          toTop()
+          settle()
         }}
       />
     </Suspense>
@@ -327,13 +351,15 @@ const SalaryRecordsView = ({ onOpenGovernment, navigation }) => {
   const pageYear = yearAt >= 0 ? yearAt : null
   const rootLabel = query.trim() ? `All “${query.trim()}” results` : 'Salaries'
 
-  // Going somewhere remembers where from, under the name of the page being left.
-  const go = (next) => {
+  // Going somewhere remembers where from, under the name of the page being left. A new page starts
+  // at its top; a tab on the same page (`settle`, from settleBrowse or holdScroll) keeps the reader's
+  // place.
+  const go = (next, settle = toTop) => {
     goPlace(
       { ...place, person: null, personAt: null, employer: null, role: null, title: null, show: null, ...next },
       place.person || place.employer || place.title ? heading.current ?? rootLabel : rootLabel
     )
-    toTop()
+    settle()
   }
   const goBack = (parentEmployer) => {
     backPlace({
@@ -405,7 +431,8 @@ const SalaryRecordsView = ({ onOpenGovernment, navigation }) => {
           onLayout={(next) => setPlace((current) => ({ ...current, layout: next }))}
           back={back}
           onYear={setYear}
-          onShow={(show) => go({ employer: entry.slug, employerYear: place.employerYear, show })}
+          // A tab of the employer's page: the Segmented holds its bar in place.
+          onShow={(show) => go({ employer: entry.slug, employerYear: place.employerYear, show }, () => {})}
           onRole={(key) => openRole(entry.slug, key, pageYear)}
           onTitle={openTitle}
           onPerson={(name) => openPersonAt(name, entry.slug)}
@@ -516,7 +543,7 @@ const SalaryRecordsView = ({ onOpenGovernment, navigation }) => {
           <Segmented
             ariaLabel="Browse"
             value={browse}
-            onChange={(next) => go({ browse: next })}
+            onChange={(next) => go({ browse: next }, settleBrowse(next))}
             options={BROWSE}
           />
           <Segmented compact ariaLabel="Layout" value={layout} onChange={(next) => setPlace((current) => ({ ...current, layout: next }))} options={LAYOUTS} />
@@ -625,7 +652,7 @@ const SalaryRecordsView = ({ onOpenGovernment, navigation }) => {
 
       {!typed && (
         <section aria-label="Browse" className="salaries__records">
-          {browse === 'employers' && <EmployerBrowse employers={employersIndex.employers} years={employersIndex.years} sector={sector} range={range} layout={layout} onOpen={openEmployer} onSector={(name) => { setSector(name); toTop() }} />}
+          {browse === 'employers' && <EmployerBrowse employers={employersIndex.employers} years={employersIndex.years} sector={sector} range={range} layout={layout} onOpen={openEmployer} onSector={(name) => { setSector(name); showListStart() }} />}
           {browse === 'people' && <PeopleBrowse index={index} sector={sector} range={range} layout={layout} onPerson={openPersonAt} onEmployer={openEmployer} />}
           {browse === 'positions' && <PositionBrowse titlesIndex={titlesIndex} years={years} range={range} layout={layout} onTitle={openTitle} />}
         </section>
