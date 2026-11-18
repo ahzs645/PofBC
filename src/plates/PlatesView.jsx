@@ -14,6 +14,8 @@
 import { useCallback, useDeferredValue, useEffect, useMemo, useRef, useState } from 'react'
 import { BRITISH_COLUMBIA } from 'plateforge/bc'
 import { PlateView, regionFamilies, regionSections, samplePlate, setupPlates, statusBadge } from 'plateforge'
+import { writeHistory } from '../site/browserHistory.js'
+import { useCatalogueIndex } from '../site/useCatalogueIndex.js'
 import { searchFor } from '../site/navigation.jsx'
 import { Segmented } from '../site/Segmented.jsx'
 import { holdScroll } from '../site/holdScroll.js'
@@ -46,15 +48,14 @@ const read = () => {
   return { family, plate, year: Number.isInteger(year) && year >= SPAN[0] && year <= SPAN[1] ? year : null }
 }
 
-const write = ({ family, plate, year }) => {
-  if (!globalThis.history?.replaceState) return
+const urlFor = ({ family, plate, year }) => {
   const url = new URL(globalThis.location.href)
   url.searchParams.set('view', 'plates')
   for (const [key, value] of Object.entries({ family, plate, year })) {
     if (value) url.searchParams.set(key, value)
     else url.searchParams.delete(key)
   }
-  globalThis.history.replaceState(null, '', url)
+  return url
 }
 
 const isPlainClick = (event) => event.button === 0 && !event.metaKey && !event.ctrlKey && !event.shiftKey && !event.altKey
@@ -114,19 +115,20 @@ const periodText = ([from, to]) => (from === to ? String(from) : `${from}–${to
 
 export const PlatesView = () => {
   const [place, setPlace] = useState(read)
-  const [query, setQuery] = useState('')
+  const { query, setQuery, cards, openCard, closeCard } = useCatalogueIndex('plates')
   const [playing, setPlaying] = useState(false)
   const deferredQuery = useDeferredValue(query)
-  const cards = useRef({})
   const timeline = useRef(null)
   const mode = place.year === null ? 'family' : 'year'
 
   useEffect(() => { setupPlates() }, [])
 
-  const go = useCallback((next) => {
+  const go = useCallback((next, card) => {
     setPlace(next)
-    write(next)
-  }, [])
+    const url = urlFor(next)
+    if (card) openCard(url, card)
+    else writeHistory(url, { replace: true })
+  }, [openCard])
 
   // Playing steps a year at a time to today, from the start again if it is already there.
   const placeRef = useRef(place)
@@ -181,10 +183,8 @@ export const PlatesView = () => {
 
   // Back from a plate lands on its card.
   const close = useCallback(() => {
-    const id = place.plate
-    go({ ...place, plate: null })
-    requestAnimationFrame(() => cards.current[id]?.focus())
-  }, [go, place])
+    closeCard(place.plate, () => go({ ...place, plate: null }))
+  }, [closeCard, go, place])
 
   useEffect(() => { if (!open) return; globalThis.scrollTo?.({ top: 0 }) }, [open])
 
@@ -274,7 +274,7 @@ export const PlatesView = () => {
                       format={format}
                       meta={periodText(format.period)}
                       href={searchFor({ view: 'plates', family: place.family, year: place.year, plate: format.id })}
-                      onOpen={() => { setPlaying(false); go({ ...place, plate: format.id }) }}
+                      onOpen={() => { setPlaying(false); go({ ...place, plate: format.id }, format.id) }}
                       cardRef={(element) => { cards.current[format.id] = element }}
                     />
                   ))}
@@ -325,7 +325,7 @@ export const PlatesView = () => {
                       format={format}
                       meta={meta}
                       href={searchFor({ view: 'plates', family: place.family, plate: format.id })}
-                      onOpen={() => go({ ...place, plate: format.id })}
+                      onOpen={() => go({ ...place, plate: format.id }, format.id)}
                       cardRef={(element) => { cards.current[format.id] = element }}
                     />
                   ))}

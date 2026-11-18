@@ -159,7 +159,7 @@ const initialView = () => {
  */
 const writeView = (view) => {
   const url = salaryPlaceUrl(globalThis.location.href, {})
-  for (const key of ['view', 'year', 'node', 'mode', 'compare', 'undated', 'local', 'instrument', 'logos', 'mark', 'subject', 'coverage', 'identity-family', 'identity-state', 'identity-scope', 'identity-query', 'internal', 'internal-logo', 'poster', 'sign', 'part', 'guide', 'page', 'org', 'patch', 'group', 'family', 'area', 'chapter', 'story', 'holder']) url.searchParams.delete(key)
+  for (const key of ['view', 'year', 'node', 'mode', 'compare', 'undated', 'local', 'instrument', 'logos', 'mark', 'subject', 'coverage', 'identity-family', 'identity-state', 'identity-scope', 'identity-query', 'internal', 'internal-logo', 'poster', 'sign', 'part', 'guide', 'page', 'org', 'patch', 'group', 'family', 'plate', 'area', 'chapter', 'story', 'holder']) url.searchParams.delete(key)
   if (view !== 'generator') url.searchParams.set('view', view)
   writeHistory(url)
 }
@@ -421,6 +421,8 @@ export const App = () => {
                 extra={state.crestExtra}
                 bold={state.crestBold}
                 align={state.crestAlign}
+                ministrySize={state.crestMinistrySize}
+                extraStep={state.crestExtraStep}
                 markColor={state.crestMarkColor}
                 textColor={state.linkColors ? state.crestMarkColor : state.crestTextColor}
                 background={state.crestBackground}

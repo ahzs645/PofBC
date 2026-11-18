@@ -138,7 +138,7 @@ export const PatchesView = ({ collection = 'patches' }) => {
           <span className="patches__title">{label}</span>
           {selectedVariant && <span className="patches__matched">Showing {selected.variant || selected.label}</span>}
           <span className="patches__medium">
-            {selected.medium}
+            {[selected.medium, selected.finish].filter(Boolean).join(' · ')}
             {members.length > 1 && ` · ${countLabel(members.length, 'variant')}`}
           </span>
           {generated > 0 && <span className="patches__evidence">{isGeneratedColourway(selected) ? 'Generated colourway' : `Includes ${countLabel(generated, 'generated colourway')}`}</span>}

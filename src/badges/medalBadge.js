@@ -295,10 +295,10 @@ function withBosses (pieces, metal, perMm) {
 const visible = (paint, opacity) => paint && paint !== 'none' && Number(opacity ?? 1) > 0
 
 const WARDEN_IDS = ['outer-silhouette', 'outer-rim', 'inner-rim', 'maple-leaf-blade-and-stem']
-const isWardenDrawing = (root, family, medium) => family === JUNIOR_WARDEN_RELIEF.family && /leather/i.test(medium) && WARDEN_IDS.every((id) => root.querySelector(`[id="${id}"]`))
+const isWardenDrawing = (root, family, medium) => family === JUNIOR_WARDEN_RELIEF.family && /metal/i.test(medium) && WARDEN_IDS.every((id) => root.querySelector(`[id="${id}"]`))
 
 /**
- * Interpret the named layers of the supplied S01 drawing as tooled relief. In particular, a full
+ * Interpret the named layers of the supplied S01 drawing as struck relief. In particular, a full
  * shield painted over another shield is not a raised plate covering the lettering: their difference
  * is the rim. Vein outlines are 2D edge shading; the filled ribbons are joined and raised on the
  * leaf. Letter faces and their wider shoulders are also joined separately, retaining their counters.
@@ -332,7 +332,7 @@ function wardenRelief (raw, perMm) {
       border: reliefRole === 'rim', emblem: null, share: 0,
       part: recipe.part, base: recipe.base, top: recipe.top,
       thickness: recipe.top - recipe.base - bevel, bevel,
-      bevelSegments: bevel ? 2 : 0, color, metalness: 0, roughness: recipe.roughness,
+      bevelSegments: bevel ? 2 : 0, color, metalness: 1, roughness: recipe.roughness,
       reliefRole, sourceIds: [...new Set(members.map((p) => p.sourceId).filter(Boolean))],
       // These explicit heights replace the generic paint-order offsets.
       orderedRelief: true
@@ -350,7 +350,7 @@ function wardenRelief (raw, perMm) {
       make('outer-field', [outer], outer.rings),
       make('field', [field], field.rings),
       make('rim', [rim, field], rimBand),
-      make('letter-shoulder', shoulders, union(shoulders), METALS.leather.body),
+      make('letter-shoulder', shoulders, union(shoulders), METALS.copper.body),
       make('letter-face', faces, union(faces)),
       leaf,
       make('leaf-veins', veins, ribbon)
@@ -363,7 +363,7 @@ function wardenRelief (raw, perMm) {
  * @param {string} svgText  A joined library drawing.
  * @param {{ medium?: string }} [options]
  */
-export function badgePieces (svgText, { medium = '', sizeMm = NOMINAL_SIZE_MM, family = '' } = {}) {
+export function badgePieces (svgText, { medium = '', finish = '', sizeMm = NOMINAL_SIZE_MM, family = '' } = {}) {
   const doc = new DOMParser().parseFromString(svgText, 'image/svg+xml')
   if (doc.querySelector('parsererror')) throw new Error('The badge drawing is not valid SVG.')
   const root = doc.documentElement
@@ -394,7 +394,7 @@ export function badgePieces (svgText, { medium = '', sizeMm = NOMINAL_SIZE_MM, f
   if (!raw.length) throw new Error('The badge drawing has no filled or stroked shapes.')
 
   const area = (rings) => Math.abs(rings.reduce((sum, ring) => sum + ClipperLib.Clipper.Area(ring), 0)) / SCALE / SCALE
-  const metal = metalOf({ medium, paints: raw.map((piece) => ({ paint: piece.paint, area: area(piece.rings) })) })
+  const metal = metalOf({ medium, finish, paints: raw.map((piece) => ({ paint: piece.paint, area: area(piece.rings) })) })
 
   // The body: everything's outline together, solid (outer contours only).
   const union = clip(ClipperLib.ClipType.ctUnion, raw.flatMap((piece) => piece.rings))
@@ -402,7 +402,7 @@ export function badgePieces (svgText, { medium = '', sizeMm = NOMINAL_SIZE_MM, f
   let outline = union.filter((ring) => ClipperLib.Clipper.Orientation(ring) && Math.abs(ClipperLib.Clipper.Area(ring)) > smallest)
 
   const sourceOutline = raw.find((piece) => piece.sourceId === 'outer-silhouette' && piece.kind === 'fill')?.rings
-  const relief = warden && metal === 'leather' ? wardenRelief(raw, longerSide(sourceOutline ?? outline) / sizeMm) : null
+  const relief = warden && metal === 'copper' ? wardenRelief(raw, longerSide(sourceOutline ?? outline) / sizeMm) : null
   if (relief) outline = relief.outline
 
   const outlineArea = area(outline)
@@ -419,7 +419,7 @@ export function badgePieces (svgText, { medium = '', sizeMm = NOMINAL_SIZE_MM, f
     if (!RAISED.has(look.part)) return { ...piece, share, ...look }
     return { ...piece, share, ...look, ...shoulder(piece.rings, look.bevel, perMm) }
   })
-  const edge = metal === 'leather' ? [] : rolledEdge(outline, metal, perMm)
+  const edge = relief || metal === 'leather' ? [] : rolledEdge(outline, metal, perMm)
   // The body's rounded bevel grows back out to the outline from rings inset by it.
   const body = bodyFor(metal)
   const bodyRings = offsetRings(outline, -body.bevel, perMm)
@@ -499,10 +499,10 @@ function texturedField ({ outline, pieces, perMm }, name) {
  * UVs spanning the field's box.
  * @returns {{ group: THREE.Group, metal: string, sizeMm: {width: number, height: number, depth: number}, stats: object }}
  */
-export function buildBadge (svgText, { medium = '', sizeMm = NOMINAL_SIZE_MM, family = '' } = {}) {
-  const fieldTexture = FIELD_TEXTURES[family] ?? null
+export function buildBadge (svgText, { medium = '', finish = '', sizeMm = NOMINAL_SIZE_MM, family = '' } = {}) {
   const started = performance.now()
-  const prepared = badgePieces(svgText, { medium, sizeMm, family })
+  const prepared = badgePieces(svgText, { medium, finish, sizeMm, family })
+  const fieldTexture = prepared.profile === JUNIOR_WARDEN_RELIEF.id ? 'worn-copper' : FIELD_TEXTURES[family] ?? null
   const { all, svg } = piecesSvg(prepared)
   const count = all.length
   const shapeSettings = {}

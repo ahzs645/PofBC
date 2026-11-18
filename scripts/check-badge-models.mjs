@@ -132,7 +132,7 @@ function geometrySummary (group) {
 }
 
 function assertWardenRelief (prepared, model, flat) {
-  assert.equal(prepared.profile, 'junior-warden-tooled-v1')
+  assert.equal(prepared.profile, 'junior-warden-copper-v1')
   const required = ['outer-field', 'field', 'rim', 'letter-shoulder', 'letter-face', 'leaf-blade', 'leaf-veins']
   const byRole = new Map(flat.meshes.filter((mesh) => mesh.reliefRole).map((mesh) => [mesh.reliefRole, mesh]))
   assert.deepEqual([...byRole.keys()].sort(), required.toSorted(), 'The generated mesh retains every semantic relief layer')
@@ -234,7 +234,7 @@ for (const id of ['S01-O01', 'S51-O01']) {
   const svg = joinSvg(readFileSync(join(library, patch.svg), 'utf8'), store)
   const digest = createHash('sha256').update(svg).digest('hex')
   assert.equal(digest, patch.sha256, 'Model input must match the current joined library SVG')
-  const options = { medium: patch.medium, family: patch.family, sizeMm: 65 }
+  const options = { medium: patch.medium, finish: patch.finish, family: patch.family, sizeMm: 65 }
   const prepared = badgePieces(svg, options)
   const model = buildBadge(svg, options)
   const textureHost = { renderer: { capabilities: { getMaxAnisotropy: () => 1 } }, modelTextures: [] }
@@ -244,18 +244,18 @@ for (const id of ['S01-O01', 'S51-O01']) {
       delete mesh.userData.fieldMap
     }
   })
-  assert.equal(model.metal, id === 'S01-O01' ? 'leather' : 'gold')
+  if (!baseline || id !== 'S01-O01') assert.equal(model.metal, id === 'S01-O01' ? 'copper' : 'gold')
   const flat = geometrySummary(model.group)
   assert.equal(flat.zeroNormals, 0, `${id}: flat mesh normals are defined`)
   // The engine sizes the source outline at 65 mm; bevels can extend it by a fraction of a millimetre.
   assert.ok(Math.abs(Math.max(flat.sizeMm[0], flat.sizeMm[1]) - 65) < 0.65, `${id}: nominal longest dimension remains within 1% of 65 mm; got ${flat.sizeMm.join(' × ')}`)
-  if (id === 'S01-O01') assert.ok(flat.meshes.every((mesh) => mesh.metalness === 0), 'Leather has no metallic materials')
-  else assert.ok(flat.meshes.some((mesh) => mesh.metalness > 0.8), 'The metal control badge retains metallic surfaces')
+  if (!baseline && id === 'S01-O01') assert.ok(flat.meshes.every((mesh) => mesh.metalness > 0.8), 'Worn copper surfaces retain metallic reflections')
+  if (id !== 'S01-O01') assert.ok(flat.meshes.some((mesh) => mesh.metalness > 0.8), 'The metal control badge retains metallic surfaces')
   const roles = prepared.pieces.map((piece) => ({ sourceIds: piece.sourceIds ?? [], role: piece.reliefRole ?? null, part: piece.part, thickness: piece.thickness, bevel: piece.bevel, base: piece.base ?? 0 }))
   const relief = id === 'S01-O01' && !baseline ? assertWardenRelief(prepared, model, flat) : null
   if (id === 'S01-O01' && !baseline) {
     assert.equal(badgePieces(svg, { ...options, family: 'other-family' }).profile, null, 'Other families keep the generic path')
-    assert.equal(badgePieces(svg, { ...options, medium: 'Metal badge' }).profile, null, 'The leather profile is not inferred over a metal record')
+    assert.equal(badgePieces(svg, { ...options, medium: 'Leather badge' }).profile, null, 'The copper profile requires a metal record')
     assert.equal(badgePieces(svg.replace('id="maple-leaf-blade-and-stem"', 'id="unrecognized-leaf"'), options).profile, null, 'Changed unrecognized artwork is not forced into the profile')
   }
   const report = { id, inputSha256: digest, medium: patch.medium, family: patch.family, profile: prepared.profile ?? null, metal: model.metal, stats: model.stats, flat, relief, pieces: roles, curves: [], exports: [] }
@@ -275,7 +275,7 @@ for (const id of ['S01-O01', 'S51-O01']) {
         badge: id,
         label: patch.label,
         organization: org.name,
-        material: 'Tooled leather (catalogue attribution, unverified)',
+        material: model.metal === 'copper' ? 'Worn copper tone' : model.metal,
         nominalLongerSideMm: 65,
         physicalMeasurements: false,
         curvature: applied,

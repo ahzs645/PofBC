@@ -7,6 +7,8 @@ import { createDigitizer, profileOf, renderTextured, threadColor, threadColors, 
 import { LIBRARY, cardLabel, loadPatchSvg, variantsOf } from 'patcher/library'
 import { Segmented } from '../site/Segmented.jsx'
 import { PatchHistory, photosOf } from './PatchDetails.jsx'
+import sourceCrops from './sourceCrops.json'
+import { SourceOverlay } from './SourceOverlay.jsx'
 import { PatchStage } from './PatchStage.jsx'
 import { VIEW_DEFAULTS, exportScale, exportSize, loadView, modeFor, saveView } from './patchView.js'
 import { Select } from '../site/ui/Select.jsx'
@@ -48,7 +50,7 @@ const GROUNDS = [
   { value: 'cloth', label: 'Twill', title: 'Sewn on a cloth ground: the largest colour is bare twill, as on most cloth patches' },
   { value: 'stitched', label: 'Stitched', title: 'Every colour is covered with thread' }
 ]
-const MODE_LABELS = { embroidery: 'Embroidery', vector: 'Vector', source: 'Source', compare: 'Compare' }
+const MODE_LABELS = { embroidery: 'Embroidery', vector: 'Vector', source: 'Source', compare: 'Compare', overlay: 'Source overlay' }
 /** Sewn results kept so that going back to a setting does not sew it again. */
 const SEWN_LIMIT = 8
 
@@ -86,7 +88,7 @@ const textured = (result, profile, finish, lightDeg, scale, canvas) => renderTex
  * @param {(patch: object) => void} props.onOpen
  * @param {() => void} props.onClose
  */
-export const PatchViewer = ({ patch, org, position, previous, next, onOpen, onClose, noun = 'patches' }) => {
+export const PatchViewer = ({ patch, org, position, previous, next, onOpen, onClose, noun = 'patches', badgeToolbar = null }) => {
   // How the patch is looked at is kept from one patch to the next, and for the next visit.
   const [view, setView] = useState(() => loadView(storage()))
   const set = (change) => setView((current) => { const next = { ...current, ...change }; saveView(storage(), next); return next })
@@ -105,7 +107,6 @@ export const PatchViewer = ({ patch, org, position, previous, next, onOpen, onCl
   // The whole drawing: library patches are stored with their shared crests and outlines apart, and
   // loadPatchSvg joins them back into the atlas's file (checked against its SHA-256).
   const [loadedDrawing, setLoadedDrawing] = useState(null)
-  const digitizer = useRef(null)
   const canvas = useRef(null)
 
   // Variants share this viewer so width and finish survive a switch. Match every asynchronous
@@ -131,7 +132,19 @@ export const PatchViewer = ({ patch, org, position, previous, next, onOpen, onCl
   // A selected occurrence must link to its own full source, never another specimen's image.
   const sourceUrl = source ? source.url : patch.sourceUrl || photosOf(patch).find((photo) => photo.sourceUrl)?.sourceUrl
   const sourceTitle = source?.sourceKind === 'vector' ? 'Vector reference' : 'Source reference'
-  const mode = modeFor(view.mode, showSourceReview)
+  const reference = sourceCrops[patch.id]
+  const textile = ['Cloth patch', 'Cloth rocker', 'Cloth embroidery'].includes(patch.medium)
+  const [adaptation, setAdaptation] = useState(null)
+  const preferredMode = !textile && view.mode === 'embroidery' && adaptation !== patch.id ? 'vector' : view.mode
+  const mode = badgeToolbar ? 'embroidery' : modeFor(preferredMode, showSourceReview, Boolean(reference))
+  const sew = mode === 'embroidery' || mode === 'compare'
+  const options = Object.entries(MODE_LABELS)
+    .filter(([id]) => id === 'overlay' ? Boolean(reference) : showSourceReview || (id !== 'source' && id !== 'compare'))
+    .map(([value, label]) => ({ value, label: value === 'embroidery' && !textile ? 'Embroidery adaptation' : label }))
+  const modeSwitch = <Segmented ariaLabel="View" options={options} value={mode} onChange={(value) => {
+    if (!textile && value === 'embroidery') setAdaptation(patch.id)
+    set({ mode: value })
+  }} compact />
 
   useEffect(() => {
     if (!showSourceReview) return undefined
@@ -154,12 +167,6 @@ export const PatchViewer = ({ patch, org, position, previous, next, onOpen, onCl
   }, [reviewAttempt, showSourceReview])
 
   useEffect(() => {
-    const instance = createDigitizer()
-    digitizer.current = instance
-    return () => { instance.dispose(); if (digitizer.current === instance) digitizer.current = null }
-  }, [])
-
-  useEffect(() => {
     let gone = false
     let url = null
     setLoadedDrawing(null)
@@ -177,7 +184,7 @@ export const PatchViewer = ({ patch, org, position, previous, next, onOpen, onCl
   }, [patch, attempt])
 
   useEffect(() => {
-    if (!drawing) return undefined
+    if (!drawing || !sew) return undefined
     let gone = false
     const key = `${drawing.url}|${widthMm}|${border}|${ground}`
     const show = (result) => {
@@ -188,17 +195,20 @@ export const PatchViewer = ({ patch, org, position, previous, next, onOpen, onCl
     if (kept) { show(kept); return undefined }
     setStatus({ patchId: patch.id, phase: 'sewing' })
     // A short wait, so stepping through several settings sews only the one that is settled on.
+    let digitizer
     const timer = setTimeout(() => {
-      digitizer.current.digitize(drawing.text, { ...profileOf(patch.id)?.params, widthMm: Number(widthMm), border, ground })
+      digitizer = createDigitizer()
+      digitizer.digitize(drawing.text, { ...profileOf(patch.id)?.params, widthMm: Number(widthMm), border, ground })
         .then((result) => {
+          if (gone) return
           if (sewn.current.size >= SEWN_LIMIT) sewn.current.delete(sewn.current.keys().next().value)
           sewn.current.set(key, result)
-          if (!gone) show(result)
+          show(result)
         })
         .catch((error) => { if (!gone) { console.error(error); setStatus({ patchId: patch.id, phase: 'failed-sewing' }) } })
     }, 120)
-    return () => { gone = true; clearTimeout(timer) }
-  }, [drawing, widthMm, border, ground, patch.id])
+    return () => { gone = true; clearTimeout(timer); digitizer?.dispose() }
+  }, [drawing, widthMm, border, ground, patch.id, sew])
 
   // The canvas is only mounted in the modes that show it, so drawing follows the mode too.
   useLayoutEffect(() => {
@@ -207,9 +217,13 @@ export const PatchViewer = ({ patch, org, position, previous, next, onOpen, onCl
     textured(result, profile, finish, lightDeg, (Math.min(16, 3200 / Math.max(result.widthMm, result.heightMm)) * ratio) / 1.4, canvas.current)
   }, [result, profile, finish, lightDeg, mode])
 
+  const back = useRef(null)
+  useEffect(() => { back.current?.focus({ preventScroll: true }) }, [])
   useEffect(() => {
     const onKey = (event) => {
-      if (event.target.closest?.('input, select, textarea') || event.metaKey || event.ctrlKey || event.altKey) return
+      if (event.defaultPrevented || event.metaKey || event.ctrlKey || event.altKey) return
+      if (event.target.closest?.('input, select, textarea, canvas, [contenteditable="true"], [role="menu"], [role="listbox"]')) return
+      if (event.target !== document.body && !event.target.closest?.('.patch')) return
       if (event.key === 'Escape') onClose()
       else if (event.key === 'ArrowLeft' && previous) onOpen(previous)
       else if (event.key === 'ArrowRight' && next) onOpen(next)
@@ -266,7 +280,7 @@ export const PatchViewer = ({ patch, org, position, previous, next, onOpen, onCl
   return (
     <section className="patch" aria-label={title}>
       <nav className="patch__bar" aria-label={noun === 'badges' ? 'Badges' : 'Patches'}>
-        <button type="button" className="button button--ghost" onClick={onClose}>← All {noun}</button>
+        <button type="button" className="button button--ghost" ref={back} onClick={onClose}>← All {noun}</button>
         <span className="patch__crumb">{org.name} · {position.index + 1} of {position.count}</span>
         {/* On a phone the steps shrink to arrows, so the bar stays one row. */}
         <span className="patch__steps">
@@ -281,24 +295,19 @@ export const PatchViewer = ({ patch, org, position, previous, next, onOpen, onCl
 
       <div className="patch__body">
         <div className="patch__visuals">
-          <PatchStage
+          {mode === 'overlay' ? <div className="patch-stage">
+            <div className="patch-stage__bar"><div className="patch-stage__tools">{modeSwitch}</div></div>
+            <SourceOverlay key={patch.id} record={reference} drawing={drawing} title={title} />
+          </div> : <PatchStage
             resetKey={`${patch.id}:${mode}`}
             panes={[sourcePane, vectorPane, simulationPane].filter((pane) => (mode === 'compare' ? pane.key !== 'source' || showSourceReview : pane.key === mode))}
-            toolbar={(
-              <Segmented
-                ariaLabel="View"
-                options={Object.keys(MODE_LABELS).filter((id) => showSourceReview || (id !== 'source' && id !== 'compare')).map((id) => ({ value: id, label: MODE_LABELS[id] }))}
-                value={mode}
-                onChange={(value) => set({ mode: value })}
-                compact
-              />
-            )}
-          />
+            toolbar={badgeToolbar ?? modeSwitch}
+          />}
         </div>
 
         <aside className="patch__panel">
           <h2>{cardLabel(patch)}</h2>
-          <p className="patch__meta">{patch.medium} · {patch.quality}</p>
+          <p className="patch__meta">{[patch.medium, patch.finish, patch.quality].filter(Boolean).join(' · ')}</p>
 
           {variants && (
             // Above the other controls and wrapping, since a design can have ten variants.
@@ -311,37 +320,41 @@ export const PatchViewer = ({ patch, org, position, previous, next, onOpen, onCl
               />
             </div>
           )}
-          <Segmented label="Width" options={SIZES} value={widthMm} onChange={(value) => set({ widthMm: value })} compact />
-          <Segmented label="Edge" options={BORDERS} value={border} onChange={(value) => set({ border: value })} compact />
-          <Segmented label="Ground" options={GROUNDS} value={ground} onChange={(value) => set({ ground: value })} compact />
-          <Segmented label="Thread" options={FINISHES} value={finish} onChange={(value) => set({ finish: value })} compact />
-          <label className="patch__light">
-            <span>Light</span>
-            <Slider min="0" max="345" step="15" value={view.lightDeg} onChange={(value) => set({ lightDeg: value })} aria-valuetext={`${view.lightDeg} degrees`} />
-            <output>{view.lightDeg}°</output>
-          </label>
-          {changed && <button type="button" className="button--inline patch__reset" onClick={() => set({ ...VIEW_DEFAULTS, mode: view.mode })}>Reset to the default view</button>}
+          {sew && <>
+            <Segmented label="Width" options={SIZES} value={widthMm} onChange={(value) => set({ widthMm: value })} compact />
+            <Segmented label="Edge" options={BORDERS} value={border} onChange={(value) => set({ border: value })} compact />
+            <Segmented label="Ground" options={GROUNDS} value={ground} onChange={(value) => set({ ground: value })} compact />
+            <Segmented label="Thread" options={FINISHES} value={finish} onChange={(value) => set({ finish: value })} compact />
+            <label className="patch__light">
+              <span>Light</span>
+              <Slider min="0" max="345" step="15" value={view.lightDeg} onChange={(value) => set({ lightDeg: value })} aria-valuetext={`${view.lightDeg} degrees`} />
+              <output>{view.lightDeg}°</output>
+            </label>
+            {changed && <button type="button" className="button--inline patch__reset" onClick={() => set({ ...VIEW_DEFAULTS, mode: view.mode })}>Reset to the default view</button>}
 
-          {ready && (
-            <>
-              <dl className="patch__facts">
-                <div><dt>Size</dt><dd>{Math.round(result.widthMm - 2 * result.padMm)} × {Math.round(result.heightMm - 2 * result.padMm)} mm</dd></div>
-                <div><dt>Stitches</dt><dd>{result.stitchCount.toLocaleString()}</dd></div>
-                <div><dt>Threads</dt><dd>{result.palette.length}</dd></div>
-              </dl>
-              <ul className="patch__threads" aria-label="Thread colours">
-                {threadColors(profile, result.palette).map((colour, index) => (
-                  <li key={result.palette[index]} title={`${colour} · ${Math.round(result.coverage[index] * 100)}%${index === result.clothIndex ? ' · cloth' : ''}`} style={{ background: colour }} />
-                ))}
-              </ul>
-              {profile && <p className="patch__source">Cloth, edge and thread colours follow the source: {profile.evidence}</p>}
-            </>
-          )}
+            {ready && (
+              <>
+                <dl className="patch__facts">
+                  <div><dt>Size</dt><dd>{Math.round(result.widthMm - 2 * result.padMm)} × {Math.round(result.heightMm - 2 * result.padMm)} mm</dd></div>
+                  <div><dt>Stitches</dt><dd>{result.stitchCount.toLocaleString()}</dd></div>
+                  <div><dt>Threads</dt><dd>{result.palette.length}</dd></div>
+                </dl>
+                <ul className="patch__threads" aria-label="Thread colours">
+                  {threadColors(profile, result.palette).map((colour, index) => (
+                    <li key={result.palette[index]} title={`${colour} · ${Math.round(result.coverage[index] * 100)}%${index === result.clothIndex ? ' · cloth' : ''}`} style={{ background: colour }} />
+                  ))}
+                </ul>
+                {profile && <p className="patch__source">Cloth, edge and thread colours follow the source: {profile.evidence}</p>}
+              </>
+            )}
 
+          </>}
           <div className="patch__exports">
-            <button type="button" className="button button--primary" disabled={!ready} onClick={exportPng} title={size ? `Rendered afresh at ${size.width} × ${size.height} px` : undefined}>PNG</button>
-            <button type="button" className="button" disabled={!ready} onClick={() => download(new Blob([writeDst(result, name)]), `${name}.dst`)} title="Tajima machine file">DST</button>
-            <button type="button" className="button" disabled={!ready} onClick={() => download(new Blob([writeExp(result)]), `${name}.exp`)} title="Melco machine file">EXP</button>
+            {sew && <>
+              <button type="button" className="button button--primary" disabled={!ready} onClick={exportPng} title={size ? `Rendered afresh at ${size.width} × ${size.height} px` : undefined}>PNG</button>
+              <button type="button" className="button" disabled={!ready} onClick={() => download(new Blob([writeDst(result, name)]), `${name}.dst`)} title="Tajima machine file">DST</button>
+              <button type="button" className="button" disabled={!ready} onClick={() => download(new Blob([writeExp(result)]), `${name}.exp`)} title="Melco machine file">EXP</button>
+            </>}
             {drawing
               ? <a className="button" href={drawing.url} download={`${name}.svg`}>SVG</a>
               : <button type="button" className="button" disabled>SVG</button>}

@@ -293,3 +293,18 @@ test('a restored share puts its wording on every identity', () => {
   assert.equal(restored.manualMinistry, 'Ministry of Widgets')
   assert.equal(restored.currentNameTouched, true)
 })
+
+test('the swap button operates on the active flag or arms palette', () => {
+  for (const era of ['flag', 'crest']) {
+    const initial = { ...DEFAULTS, era }
+    const swapped = swapColours(initial)
+    assert.equal(swapped[era + 'MarkColor'], initial[era + 'Background'])
+    assert.equal(swapped[era + 'TextColor'], initial[era + 'Background'])
+    assert.equal(swapped[era + 'Background'], initial[era + 'MarkColor'])
+    assert.equal(swapped.markColor, initial.markColor)
+    assert.equal(swapped.background, initial.background)
+
+    const separate = { ...initial, linkColors: false, [era + 'TextColor']: '#123456' }
+    assert.equal(swapColours(separate)[era + 'TextColor'], '#123456')
+  }
+})

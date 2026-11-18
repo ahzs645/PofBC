@@ -2,7 +2,7 @@
 // colour and finish. No DOM and no three.js, so it can be tested alone.
 //
 // The curved badge trial (14 November 2026) tuned these for one shield, S51-O01. The library's
-// other badges are silver ranger shields with green enamel, multi-piece cap badges and a leather
+// other badges are silver ranger shields with green enamel, multi-piece cap badges and a worn copper
 // badge, so the parts are read from what every atlas drawing records instead:
 //
 //   - its own markings: data-caption (lettering), data-role="border" (the rim);
@@ -22,10 +22,10 @@ export const NOMINAL_SIZE_MM = 65
  * The photo-registered Junior Forest Warden drawing has explicit nested relief. Its light vein
  * faces sit ON its leaf; colour-derived heights alone put them inside the blade. These are display
  * profiles in nominal millimetres, not measured tooling depths. `top` is kept fixed even when a
- * narrow outline needs a smaller bevel. The body retains the ordinary leather profile below.
+ * narrow outline needs a smaller bevel. The body retains the ordinary metal profile below.
  */
 export const JUNIOR_WARDEN_RELIEF = Object.freeze({
-  id: 'junior-warden-tooled-v1',
+  id: 'junior-warden-copper-v1',
   family: 'junior-warden',
   profiles: Object.freeze({
     'outer-field': { part: 'ground', base: 0, top: 0.035, bevel: 0, roughness: 0.9 },
@@ -48,6 +48,7 @@ export const JUNIOR_WARDEN_RELIEF = Object.freeze({
 export const METALS = {
   gold: { name: 'Bronze-gilt', body: '#7a5f37', field: '#7d6239', plate: '#b8975e', polish: 0.22, satin: 0.62 },
   silver: { name: 'Silver-finish', body: '#7e8581', field: '#838a86', plate: '#c9cfca', polish: 0.18, satin: 0.6 },
+  copper: { name: 'Worn copper tone', body: '#80522e', field: '#895635', plate: '#d09868', polish: 0.4, satin: 0.73 },
   leather: { name: 'Tooled leather', body: '#8a5a30', field: '#a46d38', plate: '#a46d38', polish: 0.7, satin: 0.9 }
 }
 
@@ -164,8 +165,9 @@ const isGoldHue = ({ h, s }) => h >= 22 && h <= 62 && s >= 0.18
  * The badge's base metal, from its medium and paints. `paints` is the drawing's pieces as
  * { paint, area }; a gradient's id says which metal it imitates when it can.
  */
-export function metalOf ({ medium = '', paints = [] }) {
+export function metalOf ({ medium = '', finish = '', paints = [] }) {
   if (/leather/i.test(medium)) return 'leather'
+  if (/copper/i.test(finish)) return 'copper'
   for (const { paint } of paints) {
     if (/silver|steel|chrome|nickel/i.test(paint)) return 'silver'
     if (/gold|brass|bronze|gilt/i.test(paint)) return 'gold'

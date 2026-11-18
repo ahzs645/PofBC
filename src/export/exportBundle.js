@@ -40,11 +40,11 @@ export const planBundle = ({
   const entries = []
   const folder = bundleName(lockup)
 
-  // The current era has one mark per ministry, not a choice of lockups, so it bundles formats and
-  // sizes only and everything lands in one folder.
-  const chosen = lockup.era === 'current' || lockup.era === 'document'
-    ? [null]
-    : LAYOUT_ORDER.filter((id) => layouts.includes(id))
+  // Only the historical identity renders the four named layouts. Other identities
+  // export the chosen arrangement once per format and size.
+  const chosen = (lockup.era ?? 'historical') === 'historical'
+    ? LAYOUT_ORDER.filter((id) => layouts.includes(id))
+    : [null]
 
   for (const layout of chosen) {
     for (const format of Object.keys(EXPORT_FORMATS).filter((id) => formats.includes(id))) {
@@ -112,20 +112,27 @@ const readme = (lockup, entries) => {
     `${entries.length} files of the selected layout.`
   ].join('\n')
 
+  const isCurrent = lockup.era === 'current'
+  const isFlag = lockup.era === 'flag'
+  const isCrest = lockup.era === 'crest'
+  const mark = isCrest ? lockup.crestMarkColor : isFlag ? lockup.flagMarkColor : lockup.markColor
+  const text = isCrest ? lockup.crestTextColor : isFlag ? lockup.flagTextColor : lockup.textColor
+  const extra = isCrest ? lockup.crestExtra : isFlag ? lockup.flagExtra : lockup.program
+
   return [
     'Province of British Columbia — logo bundle',
     '='.repeat(42),
     '',
-    `Ministry:    ${lockup.ministry || '(wordmark only)'}`,
-    lockup.program ? `Second line: ${lockup.program}` : null,
-    `Mark:        ${lockup.markColor}`,
-    `Text:        ${lockup.textColor}`,
+    `Ministry:    ${(isCurrent ? lockup.currentName : lockup.ministry) || '(wordmark only)'}`,
+    extra && !isCurrent ? `Additional line: ${extra}` : null,
+    isCurrent ? `Colourway:   ${lockup.currentVariant}` : `Mark:        ${mark}`,
+    isCurrent ? null : `Text:        ${text}`,
     `Background:  ${lockup.background === 'none' ? 'transparent' : lockup.background}`,
-    lockup.outlineText ? 'Type:        converted to outlines' : 'Type:        live text, font embedded',
+    isCurrent || lockup.outlineText ? 'Type:        converted to outlines' : 'Type:        live text, font embedded',
     '',
     ...(layouts.filter(Boolean).length
       ? ['Lockups', '-------', ...layouts.filter(Boolean).map((id) => `  ${id.padEnd(12)} ${LAYOUTS[id].description}`), '']
-      : ['This is the Province\'s official ministry mark, used exactly as published.', '']),
+      : []),
     'Formats',
     '-------',
     ...formats.map((id) => `  .${EXPORT_FORMATS[id].extension.padEnd(5)} ${FORMAT_NOTES[id]}`),

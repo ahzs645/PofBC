@@ -40,7 +40,7 @@ export function filterCatalogue(cards, { q = '', org = null, family = null } = {
       const template = card.templates.get(member.id)
       if (family && (template?.id ?? OTHER_TEMPLATES) !== family) return false
       const aliases = aliasesOf(member)
-      const text = `${card.label} ${member.label} ${member.variant ?? ''} ${member.id} ${aliases.join(' ')} ${member.medium} ${card.org.name} ${template?.label ?? ''}`.toLowerCase()
+      const text = `${card.label} ${member.label} ${member.variant ?? ''} ${member.id} ${aliases.join(' ')} ${member.medium} ${member.finish ?? ''} ${card.org.name} ${template?.label ?? ''}`.toLowerCase()
       return words.every((word) => text.includes(word))
     })
     if (!matchingMembers.length) return []
@@ -69,8 +69,10 @@ export const variantCount = (cards) => cards.reduce((total, card) => total + (ca
 export function readPatchPlace(search, { collection, orgIds, familyIds, findPatch }) {
   const params = new URLSearchParams(search)
   const patch = findPatch(params.get('patch') ?? '')
+  const requestedOrg = params.get('org')
+  const org = requestedOrg && patch?.collection === collection ? (patch.orgId ?? requestedOrg) : requestedOrg
   return {
-    org: orgIds.includes(params.get('org')) ? params.get('org') : null,
+    org: orgIds.includes(org) ? org : null,
     patch: patch?.collection === collection ? patch.id : null,
     group: params.get('group') === 'template' ? 'template' : 'organization',
     family: familyIds.includes(params.get('family')) ? params.get('family') : null,

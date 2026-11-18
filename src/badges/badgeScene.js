@@ -77,7 +77,7 @@ export class BadgeScene {
   setModel (group, { metal = 'gold' } = {}) {
     this.clearModel()
     const soft = metal === 'leather'
-    this.renderer.toneMappingExposure = soft ? 0.72 : 1.15
+    this.renderer.toneMappingExposure = soft ? 0.72 : metal === 'copper' ? 0.85 : 1.15
     this.lights.forEach((light, i) => { light.intensity = [3.4, 1.7, 1.3][i] * (soft ? 0.55 : 1) })
     this.model = group
     this.scene.add(group)

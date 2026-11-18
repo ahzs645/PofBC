@@ -17,6 +17,7 @@
 import { lazy, Suspense, useEffect, useMemo, useRef, useState } from 'react'
 import { displayName, nameQueryTier, nameReadings, personKey, surnameShard } from './people.js'
 import { displayTitle, keyedTitles, titleKey, titleMatcher } from './positions.js'
+import { filterTitles } from './titleScope.js'
 import { formatMoney as money } from './money.js'
 import { PeriodRange, YearStrip } from './parts.jsx'
 import { MobileSalaryFilters, SalarySearchField, SalarySectorChips } from './MobileFilters.jsx'
@@ -166,9 +167,12 @@ export const SalariesView = ({ onOpenGovernment }) => {
 }
 
 const SalaryRecordsView = ({ onOpenGovernment, navigation }) => {
-  const [index, setIndex] = useState(null)
   const [employersIndex, setEmployersIndex] = useState(null)
+  const [index, setIndex] = useState(null)
   const [titlesIndex, setTitlesIndex] = useState(null)
+  const [titleScopes, setTitleScopes] = useState(null)
+  const [titleFailed, setTitleFailed] = useState(false)
+  const [titleAttempt, setTitleAttempt] = useState(0)
   const [failed, setFailed] = useState(false)
   const [loadVersion, setLoadVersion] = useState(0)
   const { place, setPlace, go: goPlace, goBack: backPlace } = navigation
@@ -183,17 +187,17 @@ const SalaryRecordsView = ({ onOpenGovernment, navigation }) => {
   const queryTokens = useMemo(() => nameSearchTokens(query), [query])
   const wordSearch = !typed.includes(',') && queryTokens.some((token) => token.length >= 2)
   const browse = ['employers', 'people', 'positions'].includes(place.browse) ? place.browse : 'employers'
-  // The cross-employer position index has no sector breakdown. Keep the sector choice for
-  // Employers/People, but omit it from controls and active counts while browsing positions.
-  const showSector = Boolean(typed) || browse !== 'positions'
   const setSector = (value) => setPlace((current) => ({ ...current, sector: value }))
 
   useEffect(() => {
     // One packed file stands for the two published indexes (browseIndex.js).
+    let live = true
     loadSalaryIndexes(loadJson, { reload: loadVersion > 0 }).then(({ people, employers }) => {
+      if (!live) return
       setIndex(connectRelatedSalaryBodies(people))
       setEmployersIndex(connectRelatedSalaryBodies(employers))
-    }, () => setFailed(true))
+    }, () => live && setFailed(true))
+    return () => { live = false }
   }, [loadVersion])
 
   // The year filter is kept as a label, so a shared link survives older years being added.
@@ -241,10 +245,25 @@ const SalaryRecordsView = ({ onOpenGovernment, navigation }) => {
   // Expand supported abbreviations before the minimum-length check so RN and VP can reach the
   // same title matcher used inside employer pages. Other title searches still need three letters.
   const titleQuery = titleKey(query).replace(/[^a-z0-9]/g, '').length >= 3 ? query.trim() : ''
+  const needTitles = Boolean(titleQuery || place.title || place.browse === 'positions')
+  const scopedTitles = sector !== 'all' || Boolean(range)
   useEffect(() => {
-    if (!titleQuery && !place.title && place.browse !== 'positions') return
-    loadJson('salaries/positions/index.json.gzip').then(setTitlesIndex, () => {})
-  }, [titleQuery, place.title, place.browse])
+    if (!needTitles) return undefined
+    let live = true
+    setTitleFailed(false)
+    loadJson('salaries/positions/index.json.gzip').then(
+      (data) => live && setTitlesIndex(data), () => live && setTitleFailed(true))
+    if (scopedTitles) loadJson('salaries/position-scopes.json.gzip').then(
+      (data) => live && setTitleScopes(data), () => live && setTitleFailed(true))
+    return () => { live = false }
+  }, [needTitles, scopedTitles, titleAttempt])
+  const availableTitles = useMemo(() => {
+    if (!needTitles || !titlesIndex || !employersIndex) return null
+    const titles = keyedTitles(titlesIndex)
+    if (!scopedTitles) return titles
+    if (!titleScopes) return null
+    return filterTitles(titles, titleScopes, employersIndex.employers, employersIndex.years, sector, range)
+  }, [needTitles, titlesIndex, employersIndex, titleScopes, scopedTitles, sector, place.year]) // eslint-disable-line react-hooks/exhaustive-deps
 
   useEffect(() => { setReading(null) }, [query])
 
@@ -315,12 +334,12 @@ const SalaryRecordsView = ({ onOpenGovernment, navigation }) => {
   // holding its words, the most widely used first — so "nurse" finds Nurse, then the nursing titles
   // most employers use, ahead of rare ones that merely start with the word.
   const titleMatches = useMemo(() => {
-    if (!titleQuery || !titlesIndex) return []
+    if (!titleQuery || !availableTitles) return []
     const match = titleMatcher(titleQuery)
-    return keyedTitles(titlesIndex).map((title) => ({ title, tier: match(title.key) })).filter(({ tier }) => tier !== null)
+    return availableTitles.map((title) => ({ title, tier: match(title.key) })).filter(({ tier }) => tier !== null)
       .sort((a, b) => (a.tier > 0) - (b.tier > 0) || b.title.employers - a.title.employers || b.title.rows - a.title.rows)
       .map(({ title }) => title)
-  }, [titleQuery, titlesIndex])
+  }, [titleQuery, availableTitles])
 
   // The tab names the page: an employer, a title or a name. A name's page asks not to be indexed.
   const pageEmployer = employersIndex && place.employer
@@ -381,17 +400,20 @@ const SalaryRecordsView = ({ onOpenGovernment, navigation }) => {
   const setYear = (at) => setPlace((current) => ({ ...current, employerYear: years[at] }))
   const yearFromFilter = range ? years[range[1]] : place.employerYear
 
-  const openEmployer = (slug, employerYear = yearFromFilter) => go({ employer: slug, employerYear })
+  const openEmployer = (slug, employerYear) => {
+    const entry = !employerYear && range && employersIndex.employers.find((employer) => employer.slug === slug)
+    const last = entry ? entry.counts.findLastIndex((count, at) => count > 0 && within(at)) : -1
+    go({ employer: slug, employerYear: employerYear ?? years[last] ?? yearFromFilter })
+  }
   const openPerson = (name) => go({ q: name, person: personKey(name) })
   // A name opened from an employer's page shows its records at that employer first; the rest of the
   // name's records are one click away.
   const openPersonAt = (name, slug) => go({ q: name, person: personKey(name), personAt: slug })
   const openPersonKey = (key) => go({ person: key, personAt: place.personAt })
-  const openTitle = (key) => go({
-    title: key,
-    employerYear: yearFromFilter,
-    ...(!place.employer && !place.title && !typed && browse === 'positions' ? { sector: 'all' } : {})
-  })
+  const openTitle = (key) => {
+    const selected = range && availableTitles?.find((title) => title.key === key)
+    go({ title: key, employerYear: selected ? years[selected.last] : yearFromFilter })
+  }
   const openRole = (slug, key, at) => go({ employer: slug, role: key, employerYear: at !== undefined && at !== null && at >= 0 ? years[at] : place.employerYear })
   const search = (text) => {
     if (place.person || place.employer || place.title) go({ q: text })
@@ -407,7 +429,7 @@ const SalaryRecordsView = ({ onOpenGovernment, navigation }) => {
         {filters && <div className="salaries__desktop-filters">{filters}</div>}
       </div>
       {/* On a phone the search comes first on every page, as it does on a wide screen. */}
-      <MobileSalaryFilters query={query} onSearch={search} years={years} counts={periodCounts} range={range} onRange={setRange} sectors={sectors} employers={employersIndex.employers} sector={sector} onSector={setSector} showSector={showSector} showFilters={Boolean(filters)} />
+      <MobileSalaryFilters query={query} onSearch={search} years={years} counts={periodCounts} range={range} onRange={setRange} sectors={sectors} employers={employersIndex.employers} sector={sector} onSector={setSector} showFilters={Boolean(filters)} />
       {introduction}
       {content}
     </div>
@@ -554,11 +576,10 @@ const SalaryRecordsView = ({ onOpenGovernment, navigation }) => {
 
   return withSearch(
     <div className="salaries">
-      {showSector && (
-        <div className="salaries__desktop-filters">
-          <SalarySectorChips sectors={sectors} employers={employersIndex.employers} value={sector} onChange={setSector} />
-        </div>
-      )}
+      <div className="salaries__desktop-filters">
+        <SalarySectorChips sectors={sectors} employers={employersIndex.employers} value={sector} onChange={setSector} />
+      </div>
+      {needTitles && titleFailed && <p className="salaries__hint" role="alert">Position records could not be loaded. <button type="button" onClick={() => setTitleAttempt((value) => value + 1)}>Retry positions</button></p>}
 
       {typed && (
         <>
@@ -611,7 +632,7 @@ const SalaryRecordsView = ({ onOpenGovernment, navigation }) => {
                   ))}
                 </p>
               )}
-              {peopleSettled && !nameSearchFailed && people.length === 0 && !(titleQuery && !titlesIndex) && (
+              {peopleSettled && !nameSearchFailed && people.length === 0 && !(titleQuery && !availableTitles && !titleFailed) && (
                 <p className="salaries__hint">No disclosed name matches “{typed}”{filtered ? ' with these filters' : ''}. Try another part of the name without a comma.</p>
               )}
               {peopleSettled && fullPeople.length === 0 && initialsOnly.length > 0 && (
@@ -639,8 +660,7 @@ const SalaryRecordsView = ({ onOpenGovernment, navigation }) => {
                 <h2 id="salaries-title-results" className="salaries__title">Positions</h2>
                 <p className="salaries__meta">{count(titleMatches.length, 'title', 'titles')} across employers</p>
               </div>
-              <p className="salaries__hint salaries__hint--small">Titles are listed across all sectors and periods. Open a title to see records for the selected sector and period.</p>
-              <Paged list={titleMatches} size={9} reset={query}>
+              <Paged list={titleMatches} size={9} reset={`${query}|${place.year}|${sector}`}>
                 {(page) => <div className="salaries__grid">{page.map((title) => <TitleCard key={title.key} title={title} years={years} onOpen={openTitle} />)}</div>}
               </Paged>
             </section>
@@ -654,7 +674,7 @@ const SalaryRecordsView = ({ onOpenGovernment, navigation }) => {
         <section aria-label="Browse" className="salaries__records">
           {browse === 'employers' && <EmployerBrowse employers={employersIndex.employers} years={employersIndex.years} sector={sector} range={range} layout={layout} onOpen={openEmployer} onSector={(name) => { setSector(name); showListStart() }} />}
           {browse === 'people' && <PeopleBrowse index={index} sector={sector} range={range} layout={layout} onPerson={openPersonAt} onEmployer={openEmployer} />}
-          {browse === 'positions' && <PositionBrowse titlesIndex={titlesIndex} years={years} range={range} layout={layout} onTitle={openTitle} />}
+          {browse === 'positions' && !titleFailed && <PositionBrowse titles={availableTitles} years={years} scoped={scopedTitles} filterKey={`${place.year}|${sector}`} layout={layout} onTitle={openTitle} />}
         </section>
       )}
     </div>,

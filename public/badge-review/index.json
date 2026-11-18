@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "reviewedAt": "2026-11-15",
+  "reviewedAt": "2026-11-17",
   "baseline": {
     "pofbc": "d20b1e1a085d45545b4f154a066d70147c270090",
     "patcher": "6bf1e105ff7f805f0a524d3951f4960cc485ec84"
@@ -10,19 +10,20 @@
   "patches": [
     {
       "id": "S01-O01",
-      "reviewedAt": "2026-11-15",
+      "reviewedAt": "2026-11-17",
       "status": "refine",
       "priority": "high",
       "label": "Junior Forest Warden / Canadian Forestry Ass’n.",
-      "svgSha256": "5bdc11226f3b7edfb4bdb79bf2783947c0df197751d5f8f182b0ae5be1b7e4fe",
+      "svgSha256": "355eb5d404897e7b126e54d67865af78d513849ab391e82b522df7cfbed6e36d",
       "baselineSvgSha256": "ba3b0714455cef51124813dafe88fc73f7c8f65b2c1dbf3a9093d0a86f8748bb",
       "findings": [
         "The Drive file is the same 720 by 960 photograph recorded by the existing reconstruction; its SHA-256 matches the atlas provenance.",
         "The source shows tall, irregular embossed letter forms with larger initials in FOREST WARDEN, CANADIAN and FORESTRY ASSN.; the earlier drawing substitutes uniform font outlines.",
         "The source maple leaf has serrated contours and branching veins that are simplified in the earlier drawing.",
-        "The catalogue attributes the object to leather. This single front photograph does not independently establish its material, physical dimensions, date or original die geometry."
+        "The catalogue identifies a metal badge with a worn copper finish. The photograph records its appearance. Physical dimensions, alloy, date and original die geometry are unverified."
       ],
       "candidateChanges": [
+        "Updated the worn copper finish. The three fill colours and one stroke colour changed while the reviewed path coordinates and registration remained identical.",
         "Manually traced shield outline and rim in the 539 by 607 source-crop coordinates.",
         "Replaced uniform font outlines with individually constructed glyph paths, preserving the photographed changes in letter size, spacing and tilt.",
         "Retained both dots flanking JUNIOR and the apostrophe and final period in the lower caption.",
@@ -55,13 +56,13 @@
           ],
           "sourceFileSha256": "ccff597d5eefc59ddee05a70690de332b3a1844921a5ac9b2652a9e241544f09",
           "cropSha256": "c2308aa5699d96efdd211ab94795e566e603eb6342b9c2ec0a869342c106990d",
-          "medium": "Embossed badge; catalogued as leather, material unverified from this photograph.",
+          "medium": "Metal badge with a worn copper finish.",
           "note": "Lossless crop of the original JPG, without resizing, warping, colour alteration or generated detail. The source is preserved as photographed."
         }
       ],
       "unavailableSources": [],
-      "reviewedSvgSha256": "5bdc11226f3b7edfb4bdb79bf2783947c0df197751d5f8f182b0ae5be1b7e4fe",
-      "currentSvgSha256": "5bdc11226f3b7edfb4bdb79bf2783947c0df197751d5f8f182b0ae5be1b7e4fe"
+      "reviewedSvgSha256": "355eb5d404897e7b126e54d67865af78d513849ab391e82b522df7cfbed6e36d",
+      "currentSvgSha256": "355eb5d404897e7b126e54d67865af78d513849ab391e82b522df7cfbed6e36d"
     }
   ]
 }

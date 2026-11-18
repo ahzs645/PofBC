@@ -5,10 +5,13 @@
 // compared Medal Forge and Luster on S51-O01 and preferred Medal Forge for metal badges with raised
 // lettering. Size, relief, finish and curvature are illustrative choices, not measurements.
 
-import { useEffect, useId, useRef, useState } from 'react'
+import { lazy, Suspense, useEffect, useId, useRef, useState } from 'react'
 import { cardLabel, loadPatchSvg, variantsOf } from 'patcher/library'
 import { Segmented } from '../site/Segmented.jsx'
 import { holdScroll } from '../site/holdScroll.js'
+import { SourceOverlay } from '../patches/SourceOverlay.jsx'
+import { BadgeRelief } from '../patches/BadgeRelief.jsx'
+import sourceCrops from '../patches/sourceCrops.json'
 import { PatchStage } from '../patches/PatchStage.jsx'
 import { PatchHistory, photosOf } from '../patches/PatchDetails.jsx'
 import { METALS, NOMINAL_SIZE_MM } from './badgeParts.js'
@@ -20,10 +23,12 @@ import './badges.css'
 import { Select } from '../site/ui/Select.jsx'
 import { Slider } from '../site/ui/Slider.jsx'
 
+const EmbroideryViewer = lazy(() => import('../patches/PatchViewer.jsx').then((module) => ({ default: module.PatchViewer })))
 const REVIEW_URL = `${import.meta.env.BASE_URL}badge-review/index.json`
 const REVIEW_LABELS = { refine: 'Needs refinement', reconstruct: 'Needs reconstruction', reviewed: 'Reviewed', unreviewed: 'Not yet reviewed' }
 const MODES = [
   { value: 'metal', label: '3D', title: 'The drawing built as a solid badge' },
+  { value: 'relief', label: 'Front relief' },
   { value: 'vector', label: 'Vector' }
 ]
 const REVIEW_MODES = [
@@ -152,7 +157,8 @@ export const BadgeViewer = ({ patch, org, position, previous, next, onOpen, onCl
   const sourceCropUrl = badgeReviewAssetUrl(source?.cropUrl, import.meta.env.BASE_URL)
   const sourceKey = `${patch.id}:${source?.occurrenceId ?? ''}:${sourceCropUrl ?? ''}`
   const sourceAvailable = Boolean(sourceCropUrl) && failedSource !== sourceKey
-  const mode = badgeModeFor(view.mode, sources.length > 0)
+  const reference = sourceCrops[patch.id]
+  const mode = badgeModeFor(view.mode, sources.length > 0, Boolean(reference))
   const reviewIsCurrent = !review?.svgSha256 || review.svgSha256 === patch.sha256
   const candidateChanges = Array.isArray(review?.candidateChanges) ? review.candidateChanges.filter((change) => typeof change === 'string' && change.trim()) : []
 
@@ -201,7 +207,7 @@ export const BadgeViewer = ({ patch, org, position, previous, next, onOpen, onCl
     setPhase('building')
     const timer = setTimeout(() => {
       try {
-        const badge = buildBadge(current.text, { medium: patch.medium, sizeMm: NOMINAL_SIZE_MM, family: patch.family })
+        const badge = buildBadge(current.text, { medium: patch.medium, finish: patch.finish, sizeMm: NOMINAL_SIZE_MM, family: patch.family })
         scene.setModel(badge.group, { metal: badge.metal })
         scene.setView(cameraRef.current)
         setBuilt({ patchId: patch.id, drawing: current, scene, metal: badge.metal, sizeMm: badge.sizeMm, stats: badge.stats })
@@ -213,7 +219,7 @@ export const BadgeViewer = ({ patch, org, position, previous, next, onOpen, onCl
       }
     }, 30)
     return () => clearTimeout(timer)
-  }, [current, scene, mode, patch.id, patch.medium, patch.family, built?.patchId, built?.drawing, built?.scene])
+  }, [current, scene, mode, patch.id, patch.medium, patch.finish, patch.family, built?.patchId, built?.drawing, built?.scene])
 
   // A built model is not exportable until its current requested curve has actually been applied.
   const modelReady = mode === 'metal' && phase === 'ready' && built?.patchId === patch.id && built.drawing === current && built.scene === scene && Boolean(scene)
@@ -240,16 +246,21 @@ export const BadgeViewer = ({ patch, org, position, previous, next, onOpen, onCl
   }, [patch.id, scene, mode, built, shape.mode, shape.rise])
   useEffect(() => () => { exportRequest.current = null; exportCurrent.current = null }, [])
 
+  const back = useRef(null)
+  useEffect(() => { back.current?.focus({ preventScroll: true }) }, [])
   useEffect(() => {
+    if (mode === 'embroidery') return undefined
     const onKey = (event) => {
-      if (event.target.closest?.('input, select, textarea, canvas') || event.metaKey || event.ctrlKey || event.altKey) return
+      if (event.defaultPrevented || event.metaKey || event.ctrlKey || event.altKey) return
+      if (event.target.closest?.('input, select, textarea, canvas, [contenteditable="true"], [role="menu"], [role="listbox"]')) return
+      if (event.target !== document.body && !event.target.closest?.('.patch')) return
       if (event.key === 'Escape') onClose()
       else if (event.key === 'ArrowLeft' && previous) onOpen(previous)
       else if (event.key === 'ArrowRight' && next) onOpen(next)
     }
     globalThis.addEventListener('keydown', onKey)
     return () => globalThis.removeEventListener('keydown', onKey)
-  }, [onClose, onOpen, previous, next])
+  }, [onClose, onOpen, previous, next, mode])
 
   const name = `${patch.id}-${org.id}`
   const variants = variantsOf(patch)
@@ -299,7 +310,11 @@ export const BadgeViewer = ({ patch, org, position, previous, next, onOpen, onCl
   // The 3D stage and the flat one each draw this switch in their own toolbar, so the one pressed is
   // replaced rather than moved. Their toolbars both head the visuals, which stay where they are on
   // screen instead (holdScroll.js).
-  const modeSwitch = <Segmented ariaLabel="View" options={sources.length ? [...MODES, ...REVIEW_MODES] : MODES} value={mode} onChange={(value) => { holdScroll(visuals.current); set({ mode: value }) }} compact />
+  const options = [...MODES]
+  if (sources.length) options.push(...REVIEW_MODES)
+  if (reference) options.push({ value: 'overlay', label: 'Source overlay' })
+  options.push({ value: 'embroidery', label: 'Embroidery adaptation' })
+  const modeSwitch = <Segmented ariaLabel="View" options={options} value={mode} onChange={(value) => { holdScroll(visuals.current); set({ mode: value }) }} compact />
   const sourcePane = {
     key: 'source',
     label: 'Source photograph',
@@ -313,10 +328,17 @@ export const BadgeViewer = ({ patch, org, position, previous, next, onOpen, onCl
     node: <img className="patch__vector" src={current?.url ?? patch.previewUrl} alt={title} draggable={false} />
   }
 
+  if (mode === 'embroidery') {
+    return <Suspense fallback={<p role="status">Loading embroidery adaptation…</p>}>
+      <EmbroideryViewer patch={patch} org={org} position={position} previous={previous} next={next}
+        onOpen={onOpen} onClose={onClose} noun={noun} badgeToolbar={modeSwitch} />
+    </Suspense>
+  }
+
   return (
     <section className="patch badge" aria-label={title}>
       <nav className="patch__bar" aria-label="Badges">
-        <button type="button" className="button button--ghost" onClick={onClose}>← All {noun}</button>
+        <button type="button" className="button button--ghost" ref={back} onClick={onClose}>← All {noun}</button>
         <span className="patch__crumb">{org.name} · {position.index + 1} of {position.count}</span>
         <span className="patch__steps">
           <button type="button" className="button" disabled={!previous} onClick={() => onOpen(previous)} title={previous?.label} aria-label="Previous">
@@ -340,6 +362,13 @@ export const BadgeViewer = ({ patch, org, position, previous, next, onOpen, onCl
                 camera={view.camera}
                 onCamera={(camera) => set({ camera })}
               />
+            : mode === 'overlay' || mode === 'relief'
+            ? <div className="patch-stage">
+                <div className="patch-stage__bar"><div className="patch-stage__tools">{modeSwitch}</div></div>
+                {mode === 'overlay'
+                  ? <SourceOverlay key={patch.id} record={reference} drawing={current} title={title} />
+                  : <BadgeRelief key={patch.id} drawing={current} patch={patch} title={title} failed={phase === 'failed-source'} />}
+              </div>
             : <PatchStage
                 resetKey={`${patch.id}:${mode}:${sourceKey}`}
                 toolbar={modeSwitch}
@@ -349,7 +378,7 @@ export const BadgeViewer = ({ patch, org, position, previous, next, onOpen, onCl
 
         <aside className="patch__panel">
           <h2>{cardLabel(patch)}</h2>
-          <p className="patch__meta">{patch.medium} · {patch.quality}</p>
+          <p className="patch__meta">{[patch.medium, patch.finish, patch.quality].filter(Boolean).join(' · ')}</p>
           {mode === 'metal' && <p className="badge__preliminary">{leather
             ? 'Shown as tooled leather from the catalogue attribution. Material, size, relief and curvature have not been measured from the specimen.'
             : 'Illustrative 3D view: size, relief, finish and curvature are modelling choices, not measurements.'}</p>}

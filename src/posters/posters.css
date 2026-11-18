@@ -59,6 +59,13 @@
 :where(.pv) button { cursor: pointer; }
 :where(.pv) :is(button, [tabindex], a):focus-visible { outline: 2px solid var(--amber); outline-offset: 2px; }
 
+dialog.pv, dialog.pv-dialog-backdrop {
+  width: 100%; height: 100%; max-width: none; max-height: none; margin: 0; border: 0;
+}
+dialog.pv { padding: 0; }
+dialog.pv-dialog-backdrop { color: inherit; font: inherit; }
+dialog.pv-dialog-backdrop::backdrop { background: transparent; }
+
 .pv-app { position: relative; height: 100%; }
 
 /* ── The stage ── */

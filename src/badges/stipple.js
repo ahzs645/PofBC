@@ -49,6 +49,18 @@ export const TEXTURES = {
     tone: 0.78,
     seed: 1917
   },
+  // Fine irregular grain in the recessed copper field of the Warden photograph.
+  'worn-copper': {
+    kind: 'grain',
+    pxPerMm: 16,
+    grainMm: 0.08,
+    haloMm: 0.18,
+    bandMm: 0.8,
+    strength: 0.4,
+    roughness: 0.68,
+    tone: 0.79,
+    seed: 561
+  },
   frosted: {
     kind: 'grain',
     pxPerMm: 24,

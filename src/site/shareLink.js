@@ -13,7 +13,7 @@
 // Between them, a near-default lockup fits in a token shorter than the word "configuration".
 
 import { CLEAR_SPACE_ORDER, LAYOUT_ORDER, MARK_ALIGNMENT_ORDER } from '../logo/layouts.js'
-import { cleanBoolean, cleanColour, cleanOneOf, cleanText, fromConfig, toConfig } from './configFormat.js'
+import { CONFIG_PARAM, cleanBoolean, cleanColour, cleanOneOf, cleanText, fromConfig, toConfig } from './configFormat.js'
 import { DEFAULTS } from './lockupDefaults.js'
 
 export const SHARE_PARAM = 's'
@@ -36,7 +36,8 @@ const KEY_MAP = {
   linkColors: 'k',
   background: 'b',
   clearSpace: 'g',
-  markAlign: 'a'
+  markAlign: 'a',
+  configuration: 'e'
 }
 
 // json-url and its codecs are a few tens of kilobytes, and most visits neither arrive with a link
@@ -73,11 +74,12 @@ const getEngine = () => {
 const pick = (state) => Object.fromEntries(SHARED_FIELDS.map((key) => [key, state[key]]))
 
 /** Compresses a lockup configuration into a URL token. */
-export const encodeShare = async (state) => (await getEngine()).compress(
-  // Keep existing tokens compatible and small. The new document identity carries its public
-  // configuration so the era and its own colours/layout cannot be lost when sharing.
-  state.era === 'document' ? { config: toConfig(state) } : pick(state)
-)
+export const encodeShare = async (state) => {
+  if (state.era === 'document') return (await getEngine()).compress({ config: toConfig(state) })
+  const fields = pick(state)
+  if (state.era !== 'historical') fields.configuration = toConfig(state)
+  return (await getEngine()).compress(fields)
+}
 
 // ── Validation ───────────────────────────────────────────────────────────────────────────────────
 //
@@ -90,7 +92,7 @@ export const sanitizeShare = (raw) => {
   if (!raw || typeof raw !== 'object' || Array.isArray(raw)) return null
   if (Object.hasOwn(raw, 'config')) return fromConfig(raw.config)
 
-  return {
+  const fields = {
     layout: cleanOneOf(raw.layout, LAYOUT_ORDER, DEFAULTS.layout),
     wordmark: cleanBoolean(raw.wordmark, DEFAULTS.wordmark),
     source: cleanOneOf(raw.source, ['list', 'manual'], DEFAULTS.source),
@@ -104,6 +106,11 @@ export const sanitizeShare = (raw) => {
     clearSpace: cleanOneOf(raw.clearSpace, CLEAR_SPACE_ORDER, DEFAULTS.clearSpace),
     markAlign: cleanOneOf(raw.markAlign, MARK_ALIGNMENT_ORDER, DEFAULTS.markAlign)
   }
+
+  const configured = fromConfig(raw.configuration)
+  if (!configured) return fields
+  // The compact link also carries the editor's ministry selection and colour-link switch.
+  return { ...fields, ...configured, source: fields.source, manualMinistry: fields.manualMinistry, linkColors: fields.linkColors }
 }
 
 /** Decodes a token back into a state patch, or null if it is not one of ours. */
@@ -130,7 +137,7 @@ export const readShareToken = (search = globalThis.location?.search ?? '') => (
 export const buildShareUrl = async (state, href = globalThis.location?.href ?? '') => {
   const token = await encodeShare(state)
   const url = new URL(href)
-  url.searchParams.delete('c')
+  url.searchParams.delete(CONFIG_PARAM)
   url.searchParams.set(SHARE_PARAM, token)
   return url.toString()
 }

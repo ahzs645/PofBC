@@ -46,6 +46,7 @@ let totalRows = 0; let namedRows = 0; let officialRows = 0; let duplicateRows = 
 let availableEmployerYears = 0; let atlasFiles = 0
 const named = new Map(); const official = new Map(); const bodyRows = new Map(); const titled = new Map()
 const employerFiles = new Set()
+const acceptedPartitions = new Map()
 for (const employer of employers.employers) {
   const file = `${employer.slug}.json.gzip`
   employerFiles.add(file)
@@ -68,7 +69,11 @@ for (const employer of employers.employers) {
       if (!titled.has(cell)) titled.set(cell, [])
       titled.get(cell).push(pay)
     }
-    if (employers.sources[sourceId].sourceKind !== 'compiled' && employers.sources[sourceId].scope !== 'compiled-unverified') { officialRows += 1; add(official, key) }
+    if (employers.sources[sourceId].sourceKind !== 'compiled' && employers.sources[sourceId].scope !== 'compiled-unverified') {
+      officialRows += 1
+      add(official, key)
+      add(acceptedPartitions, JSON.stringify([employer.slug, years[year], sourceId]))
+    }
     if (employer.body) {
       const bodyKey = `${years[year]}|${employer.body}`
       if (!bodyRows.has(bodyKey)) bodyRows.set(bodyKey, [])
@@ -114,6 +119,7 @@ assert.deepEqual(new Set(readdirSync(join(published, 'people')).filter((file) =>
 // Each title's employer/years hold exactly the positioned rows read independently from the employer files.
 const positions = gzip(join(published, 'positions/index.json.gzip'))
 assert.deepEqual(positions.years, years, 'Position and employer year indices differ')
+const titleScopes = gzip(join(published, 'position-scopes.json.gzip'))
 const titleRows = new Map(positions.titles.map(([label, rows]) => [titleKey(label), rows]))
 const titleLast = new Map(positions.titles.map(([label, , , , last, mean]) => [titleKey(label), [last, mean]]))
 assert.equal(titleRows.size, positions.titles.length, 'A title is listed twice')
@@ -124,13 +130,16 @@ for (const shard of positions.shards) {
     assert.equal(cells.reduce((sum, cell) => sum + cell[2], 0), titleRows.get(key), `Title ${key}: rows`)
     assert.equal(titleLast.get(key)[1], periodMean(cells, titleLast.get(key)[0]), `Title ${key}: last-period average`)
     titleRows.delete(key)
-    for (const [employer, year, count, mean, middle, low, high] of cells) {
+    assert.equal(titleScopes[key]?.length, cells.length, `Title ${key}: filtered index cells`)
+    for (const [at, [employer, year, count, mean, middle, low, high]] of cells.entries()) {
       const pay = titled.get(`${key}|${employer}|${year}`)
       assert.ok(pay, `Title ${key}: unexpected employer/year`)
       titled.delete(`${key}|${employer}|${year}`)
       assert.equal(count, pay.length, `Title ${key}: count`)
+      const totalCents = pay.reduce((sum, value) => sum + cents(value), 0)
+      assert.deepEqual(titleScopes[key][at], [employer, year, count, totalCents], `Title ${key}: filtered index totals`)
       assert.equal(low, Math.min(...pay)); assert.equal(high, Math.max(...pay))
-      assert.ok(Math.abs(cents(mean) - pay.reduce((sum, value) => sum + cents(value), 0) / pay.length) <= 0.5, `Title ${key}: mean`)
+      assert.ok(Math.abs(cents(mean) - totalCents / pay.length) <= 0.5, `Title ${key}: mean`)
       assert.ok(middle >= low && middle <= high, `Title ${key}: median`)
     }
   }
@@ -216,6 +225,10 @@ for (const entry of audit.sourceCatalog ?? []) {
   const rosterOnlyLead = municipalRosterSlugs.has(entry.employerSlug) && entry.status !== 'imported' && !entry.acceptedSourceId && !entry.rows
   assert.ok(publishedEmployer || rosterOnlyLead, `Source catalog: unknown employer ${entry.employerSlug}`)
   if (entry.status === 'imported') {
+    const partition = JSON.stringify([entry.employerSlug, entry.year, entry.acceptedSourceId])
+    assert.ok(acceptedPartitions.has(partition), `Unexpected or repeated source catalog entry: ${partition}`)
+    if (entry.rows != null) assert.equal(entry.rows, acceptedPartitions.get(partition), `Source catalog row count differs for ${partition}`)
+    acceptedPartitions.delete(partition)
     assert.ok(employers.sources[entry.acceptedSourceId], `Source catalog: accepted source missing ${entry.acceptedSourceId}`)
     assert.equal(employers.sources[entry.acceptedSourceId].url, entry.url, 'Source catalog: accepted source URL differs')
     assert.equal(employers.sources[entry.acceptedSourceId].year, entry.year, 'Source catalog: accepted source year differs')
@@ -223,6 +236,8 @@ for (const entry of audit.sourceCatalog ?? []) {
     assert.ok(employer.coverage[years.indexOf(entry.year)]?.sourceIds.includes(entry.acceptedSourceId), 'Source catalog: imported employer/year has no published records from the claimed source')
   }
 }
+
+assert.equal(acceptedPartitions.size, 0, `Source catalog lacks accepted schedules: ${[...acceptedPartitions.keys()].join(', ')}`)
 
 if (process.argv.includes('--write-inventory')) {
   const escape = (value) => String(value).replaceAll('|', '\\|').replaceAll('\n', ' ')
@@ -241,7 +256,7 @@ if (process.argv.includes('--write-inventory')) {
     'Generated by `node scripts/check-salary-exports.mjs --write-inventory` after reconciling all employer, person and atlas exports against the accepted normalized sources.', '',
     `The dataset contains **${count(totalRows)} disclosure rows**, including **${count(officialRows)} rows from official schedules**, across **${employers.employers.length} employers** and **${availableEmployerYears} populated employer/years**. There are **${count(duplicateRows)} duplicate-looking extra rows** still flagged for source review. These are records, not verified distinct people or a workforce census.`, '',
     'The three count columns are the original compiled edition labels. Official replacements use their verified reporting periods; retained compiled rows still have unverified reporting periods. A dash means no imported records. “Held” means a source was found but its records failed the stated validation gate. Blank cells and missing years do not establish that an employer had no employees. The earliest and latest years in the catalog do not establish an employer’s dates of existence.', '',
-    '“Official years” lists accepted source coverage, with the source-specific thresholds and cohorts in [coverage.json](../../public/salaries/coverage.json). A period with both an accepted official schedule and retained compiled rows appears in both columns. It does not promise all payments or employees. Gaps are assessed within the employer’s corresponding calendar or fiscal periods; an incompatible period type is not an additional annual gap. Historical periods before 2006/07 require separate source work.', '',
+    '“Official years” lists periods with records from an accepted schedule. A period appears in both columns when it also contains retained compiled records. Aggregate-only reports appear under review flags. See [coverage.json](../../public/salaries/coverage.json) for source-specific thresholds and cohorts. Gaps are assessed within the employer’s corresponding calendar or fiscal periods; an incompatible period type is not an additional annual gap. Historical periods before 2006/07 require separate source work.', '',
     '| Employer | Sector | 2017/18 rows | 2020/21 rows | 2023/24 rows | Official years | Retained compiled years | Review flags |',
     '|---|---|---:|---:|---:|---|---|---|'
   ]
@@ -250,6 +265,7 @@ if (process.argv.includes('--write-inventory')) {
     employer.coverage.forEach((entry, at) => {
       if (entry.status === 'excluded') flags.push(`${years[at]} held`)
       if (entry.status === 'source-found') flags.push(`${years[at]} source found; extraction pending`)
+      if (entry.status === 'aggregate-only') flags.push(`${years[at]} aggregate payroll only`)
       if (entry.status !== 'available') return
       // A period can hold both an accepted official schedule and a retained compilation; each column
       // reports its own evidence, so the official coverage is not hidden by the compiled rows beside it.

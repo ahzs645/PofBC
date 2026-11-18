@@ -1,6 +1,6 @@
 // The salaries across every employer, before anything is searched: the employers, the highest-paid
 // people, and every position title, each as cards in pages or as one table to sort and filter.
-// All follow the period range; employers and people also follow the chosen sector.
+// All follow the selected period range and sector.
 //
 // The People view groups each period's highest-paid records by name and employer (people/top.json.gzip):
 // the full name index is hundreds of files, loaded a surname at a time by the search instead.
@@ -8,7 +8,7 @@
 import { useEffect, useMemo, useState } from 'react'
 import { displayName, groupHighestPaidRecords } from './people.js'
 import { linkLookup } from './nameLinks.js'
-import { keyedTitles, shortTitle } from './positions.js'
+import { shortTitle } from './positions.js'
 import { reportingYearLabel } from './coverage.js'
 import { formatMoney as money, formatSummaryMoney as summary } from './money.js'
 import { personAnnotation, personCurrency } from './recordAnnotations.js'
@@ -227,11 +227,13 @@ const TITLE_ORDERS = [
  * Every position title across employers, with its average in the last period it was disclosed; or,
  * ordered by how fast its pay moved, only the titles with enough records to say.
  */
-export const PositionBrowse = ({ titlesIndex, years, range, layout, onTitle }) => {
-  const [order, setOrder] = useState('used')
-  const titles = useMemo(() => (titlesIndex ? keyedTitles(titlesIndex) : []), [titlesIndex])
-  const visible = useMemo(() => titles.filter((title) => (!range || (title.first <= range[1] && title.last >= range[0])) && (order === 'used' || MEASURED[order](title)))
-    .sort(order === 'used' ? (a, b) => b.employers - a.employers || b.rows - a.rows : (a, b) => b[order].rate - a[order].rate), [titles, range, order])
+export const PositionBrowse = ({ titles, years, scoped, filterKey, layout, onTitle }) => {
+  const [preferredOrder, setOrder] = useState('used')
+  // The published raise distribution spans all periods and sectors.
+  const order = scoped && preferredOrder === 'raise' ? 'used' : preferredOrder
+  const orders = scoped ? TITLE_ORDERS.filter((option) => option.value !== 'raise') : TITLE_ORDERS
+  const visible = useMemo(() => (titles ?? []).filter((title) => order === 'used' || MEASURED[order](title))
+    .sort(order === 'used' ? (a, b) => b.employers - a.employers || b.rows - a.rows : (a, b) => b[order].rate - a[order].rate), [titles, order])
   const columns = useMemo(() => [
     { id: 'title', header: 'Position', accessorKey: 'label', cell: ({ row, getValue }) => <button type="button" className="salaries__link salaries-row__name" onClick={() => onTitle(row.original.key)}>{getValue()}</button> },
     { id: 'employers', header: 'Employers', accessorKey: 'employers', meta: { kind: 'number', filter: false } },
@@ -239,30 +241,34 @@ export const PositionBrowse = ({ titlesIndex, years, range, layout, onTitle }) =
     { id: 'periods', header: 'Periods', accessorFn: (title) => (title.first === title.last ? years[title.first] : `${years[title.first]}–${years[title.last]}`) },
     { id: 'mean', header: 'Latest average', accessorKey: 'mean', meta: { kind: 'money' }, cell: ({ getValue }) => money(getValue()) },
     rateColumn('growth', 'Average growth', (title) => title.growth?.rate),
-    rateColumn('raise', 'Typical raise', (title) => title.raise?.rate),
-    { id: 'raises', header: 'Raises', accessorFn: (title) => title.raise?.pairs ?? 0, meta: { kind: 'number' } }
-  ], [years, onTitle])
+    ...(scoped ? [] : [
+      rateColumn('raise', 'Typical raise', (title) => title.raise?.rate),
+      { id: 'raises', header: 'Raises', accessorFn: (title) => title.raise?.pairs ?? 0, meta: { kind: 'number' } }
+    ])
+  ], [years, onTitle, scoped])
 
-  if (!titlesIndex) return <p className="salaries__hint" role="status">Loading the positions…</p>
+  if (!titles) return <p className="salaries__hint" role="status">Loading the positions…</p>
   const note = (
     <div className="salaries__browse-bar salaries__browse-bar--position-order">
-      <Segmented compact ariaLabel="Order positions" value={order} onChange={setOrder} options={TITLE_ORDERS} />
+      <Segmented compact ariaLabel="Order positions" value={order} onChange={setOrder} options={orders} />
       <p className="salaries__hint salaries__hint--small salaries__order-note">
         {order === 'used'
           ? 'Grouped titles · latest CAD averages'
           : order === 'growth'
             ? 'Titles whose average could be followed over 10 or more records, fastest first.'
             : 'Titles with 10 or more raises of a name kept under them, largest first.'}
+        {scoped && ' Raise rankings use the full dataset and are available with all sectors and periods selected.'}
         {order !== 'used' && <GrowthTip id="salaries-positions-growth" />}
       </p>
     </div>
   )
+  if (!visible.length) return <>{note}<p className="salaries__hint">No positions match these filters and ordering.</p></>
   const sorting = [order === 'used' ? { id: 'employers', desc: true } : { id: order, desc: true }]
   if (layout === 'table') return <>{note}<DataTable key={order} data={visible} columns={columns} sorting={sorting} label="Positions across employers" /></>
   return (
     <>
       {note}
-      <Paged list={visible} size={24} reset={`${range}|${order}`}>
+      <Paged list={visible} size={24} reset={`${filterKey}|${order}`}>
         {(page) => <div className="salaries__grid">{page.map((title) => <TitleCard key={title.key} title={title} years={years} onOpen={onTitle} measure={order === 'used' ? null : order} />)}</div>}
       </Paged>
     </>

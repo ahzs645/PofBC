@@ -10,7 +10,9 @@
 // with a picture of the original (`reference`) can be compared with it, the picture laid into the
 // drawing's own frame; one made of pages (`pages`) can be read a page at a time.
 
-import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
+import { useCallback, useEffect, useMemo, useState } from 'react'
+import { writeHistory } from '../site/browserHistory.js'
+import { Modal } from './ui/Modal.jsx'
 import { Poster } from './stage/Poster.jsx'
 import { useMedia } from './hooks/useMedia.js'
 import { useKeyboardNav } from './hooks/useKeyboardNav.js'
@@ -40,7 +42,7 @@ const writeStory = (on) => {
   const url = new URL(globalThis.location.href)
   if (on) url.searchParams.set('story', '1')
   else url.searchParams.delete('story')
-  globalThis.history.replaceState(null, '', url)
+  writeHistory(url, { replace: true })
 }
 
 export function PosterViewer({ meta, series, module, part, onPart, onExit, previous, next, shelf, backLabel = 'Posters', noun = 'poster' }) {
@@ -74,13 +76,6 @@ export function PosterViewer({ meta, series, module, part, onPart, onExit, previ
     setTelling(on)
     writeStory(on)
     setAboutOpen(false)
-  }, [])
-
-  // Opening the viewer moves focus into it, unless focus is already there (stepping from one piece
-  // to the next keeps it on the button pressed). The shelf behind is inert meanwhile (ShelfView).
-  const root = useRef(null)
-  useEffect(() => {
-    if (!root.current?.contains(document.activeElement)) root.current?.focus({ preventScroll: true })
   }, [])
 
   // The page under the viewer stays where it was and does not scroll behind it.
@@ -117,8 +112,7 @@ export function PosterViewer({ meta, series, module, part, onPart, onExit, previ
   const openExport = useCallback((target) => { setExportTarget(target); setExportOpen(true) }, [])
 
   useKeyboardNav({
-    // Escape steps out of the story before it steps out of the poster.
-    order, current, onSelect: select, onExit: telling ? () => tell(false) : onExit, enabled: !exportOpen,
+    order, current, onSelect: select, enabled: !exportOpen,
     keys: useMemo(() => ({
       e: () => { if (exportable) setExportOpen(true) },
       p: tour.toggle,
@@ -171,8 +165,14 @@ export function PosterViewer({ meta, series, module, part, onPart, onExit, previ
     )
     : extras.content ?? <DataPanel partId={current} parts={parts} order={order} onSelect={select} tour={tour} story={canTell ? () => tell(true) : null} poster={meta.id} variation={variationControl} compare={compareControl} pages={pagesControl} figures={figures} />
 
+  const dismiss = () => {
+    if (current !== 'overview') select('overview')
+    else if (telling) tell(false)
+    else onExit()
+  }
+
   return (
-    <div className="pv" role="region" aria-label={`${meta.title}, interactive ${noun}`} tabIndex={-1} ref={root}>
+    <Modal className="pv" onDismiss={dismiss} aria-label={`${meta.title}, interactive ${noun}`}>
       <div className="pv-app">
         <Poster
           svgRaw={drawing.raw}
@@ -216,7 +216,7 @@ export function PosterViewer({ meta, series, module, part, onPart, onExit, previ
         <header className="pv-top">
           {/* The way back sits in the title itself: "← Posters │ REWARD: A Living Forest". */}
           <nav className="pv-top-start pv-crumb" aria-label={`${meta.title}, in ${backLabel.toLowerCase()}`}>
-            <button type="button" className="pv-back" onClick={onExit} title={`All ${backLabel.toLowerCase()} (Esc from the whole ${noun})`} aria-label={`Back to all ${backLabel.toLowerCase()}`}>
+            <button type="button" className="pv-back" data-initial-focus onClick={onExit} title={`All ${backLabel.toLowerCase()} (Esc from the whole ${noun})`} aria-label={`Back to all ${backLabel.toLowerCase()}`}>
               <span aria-hidden="true">←</span> <span className="pv-back-label">{backLabel}</span>
             </button>
             <button type="button" className="pv-brand" onClick={() => select('overview')} aria-label={`Back to the whole ${noun}`}>
@@ -257,6 +257,6 @@ export function PosterViewer({ meta, series, module, part, onPart, onExit, previ
 
         <ExportDialog open={exportOpen} onClose={() => setExportOpen(false)} targets={targets} target={exportTarget} onTarget={setExportTarget} />
       </div>
-    </div>
+    </Modal>
   )
 }

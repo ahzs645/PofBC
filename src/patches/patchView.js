@@ -7,7 +7,7 @@ export const WIDTHS = ['76', '89', '102', '127']
 export const BORDERS = ['merrow', 'satin', 'none']
 export const FINISHES = ['matte', 'glossy']
 export const GROUNDS = ['cloth', 'stitched']
-export const MODES = ['embroidery', 'vector', 'source', 'compare']
+export const MODES = ['embroidery', 'vector', 'source', 'compare', 'overlay']
 
 export const VIEW_DEFAULTS = Object.freeze({
   widthMm: '89',
@@ -51,7 +51,11 @@ export const saveView = (storage, view) => {
 }
 
 /** A source comparison needs a source: badges and unreviewed collections fall back to the simulation. */
-export const modeFor = (mode, hasSource) => (!hasSource && (mode === 'source' || mode === 'compare') ? 'embroidery' : mode)
+export const modeFor = (mode, hasSource, hasOverlay = false) => {
+  if (mode === 'overlay' && !hasOverlay) return 'vector'
+  if (!hasSource && (mode === 'source' || mode === 'compare')) return 'embroidery'
+  return mode
+}
 
 // ── Zoom and pan ──
 // The stage's content is drawn with `translate(x, y) scale(k)` about its centre; x and y are in

@@ -12,6 +12,8 @@ test('hexToHsl reads short and long hex and rejects anything else', () => {
 })
 
 test('the base metal follows the medium, a gradient’s name, then the lit paint by area', () => {
+  assert.equal(metalOf({ medium: 'Metal badge', finish: 'Worn copper tone', paints: [{ paint: '#b69552' }] }), 'copper')
+  assert.equal(bodyFor('copper').metalness, 1)
   assert.equal(metalOf({ medium: 'Leather badge', paints: [{ paint: '#b69552' }] }), 'leather')
   assert.equal(metalOf({ medium: 'Metal badge', paints: [{ paint: 'url(#silver)' }, { paint: '#b69552' }] }), 'silver')
   // S51-O01: a large dark olive field under gold lettering is a gold badge.

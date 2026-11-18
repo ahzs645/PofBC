@@ -17,7 +17,7 @@ export const VIEWS = [
   { id: 'posters', label: 'Posters', description: 'Posters by series, every part clickable for its history' },
   { id: 'signs', label: 'Signs', description: 'Signs by series, every part clickable for its history' },
   { id: 'patches', label: 'Patches', description: 'Patches by organization, sewn as embroidery', badge: 'New' },
-  { id: 'badges', label: 'Badges', description: 'Metal and leather badges by organization', badge: 'New' },
+  { id: 'badges', label: 'Badges', description: 'Metal badges by organization', badge: 'New' },
   { id: 'plates', label: 'Licence Plates', description: 'B.C. licence plates since 1904, by family and era, from PlateForge', badge: 'New' },
   { id: 'arms', label: 'Coats of Arms', description: 'The Province’s arms and its dated drawings, and the arms of public bodies and universities', badge: 'New' },
   { id: 'guides', label: 'Visual Guides', description: 'Identity manuals, rebuilt page by page' },
@@ -108,6 +108,7 @@ export const ViewSwitcher = ({ view, onChange, className = '', compact = false }
   // Up and down go through the views in order; where they sit in two columns, left and right cross
   // between them.
   const onMenuKey = (event) => {
+    event.stopPropagation() // Artwork shortcuts underneath the menu must stay idle.
     const index = items.current.indexOf(document.activeElement)
     const across = menu.current && getComputedStyle(menu.current).getPropertyValue('--menu-columns').trim() === '2' ? ROWS : 0
     const move = { ArrowDown: 1, ArrowUp: -1, ArrowRight: across, ArrowLeft: -across }[event.key]

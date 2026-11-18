@@ -617,8 +617,8 @@ loading and viewer, given a catalogue. A sign is added as a poster is: its drawi
 ## Patches
 
 **Patches** in the title menu (`?view=patches`) is the patch library of
-[Patcher](https://github.com/ahzs645/patcher), a git submodule at `vendor/patcher`. It holds 154
-patch and emblem variants in 126 catalogue cards, grouped by organization under sectors. The atlas
+[Patcher](https://github.com/ahzs645/patcher), a git submodule at `vendor/patcher`. Its 126 cards cover
+154 patch designs and variants from the BC Forestry Patch Atlas, grouped by organization under sectors. The atlas
 lists a design once per photograph it appears in; Patcher merges those into one patch (the Parks scenic
 arch, seen in five photographs, is one card), and the viewer links every photograph. Some designs use a better drawing supplied to Patcher in
 place of the atlas's (the Parks Branch elk roundel, the Recreation and Conservation arch, the scenic
@@ -638,21 +638,30 @@ them are the BC Forest Service, BC Parks, the Conservation Officer Service and
 its Fish & Game predecessors, BC Sheriff Service, BC Corrections, Highways and Motor Vehicles, BC
 Hydro's patrol patches and the universities. The atlas's logos, signs, decals and printed emblems
 (the Province's ministry lockups, BC Timber Sales, the BC Hydro, BC Transit and ICBC logos, …) are
-left out by Patcher's `library/orgs.json`. The library's 14 metal and leather badges have their own
-view, **Badges** (`?view=badges`), next to Patches in the title menu, which works the same way.
-(`HIDDEN_VIEWS` in `src/site/ViewSwitcher.jsx` holds any view that should open from a link without
-being listed.) Filter by organization (`&org=bc-parks`) or search. A patch
-(`&patch=S25-O01`) opens its vector drawing beside the same drawing sewn by Patcher's digitizer, at
-3″ to 5″, with a merrow, satin or no edge, in matte or glossy thread. It downloads as an embroidered
-PNG, a Tajima `.dst` or Melco `.exp` machine file, or the SVG, and *Open in Patcher* opens it with
-every digitizing setting exposed.
+left out by Patcher's `library/orgs.json`. The library's 14 metal badges have their own
+view, **Badges** (`?view=badges`), next to Patches in the title menu. **Front relief** lets you turn
+the reconstructed front under a light. The Junior Forest Warden shield has a worn copper tone in
+photograph S01. Its exact alloy is unverified. Choose **Embroidery adaptation** to preview stitches
+and download machine files. Printed and digital designs also offer embroidery as an adaptation.
 
-A badge opens as a solid model instead (preliminary): its drawing built with the
-[Medal Forge](https://github.com/CatsJuice/medal-forge) geometry core as raised metal over a body
-cut to the badge's outline, or as tooled leather, to turn, bend across its width or into a shallow
-dome, and download as a PNG or a GLB model. Size, relief, finish and curve are illustrative, not
-measured. [`research/badges/README.md`](research/badges/README.md) says how it is built and where it
-comes from: the curved badge trial of 14 November 2026, kept with it.
+Filter either catalogue by organization (`&org=bc-parks`) or search by description, current ID or
+a merged atlas ID. On a patch such as `&patch=S25-O01`, you can inspect the vector, preview the
+embroidery at 3″ to 5″, and choose a merrow or satin edge or leave the edge unfinished. Downloads
+include an embroidered PNG, Tajima DST, Melco EXP and the SVG drawing. **Open in Patcher** opens
+the design with the full set of digitizing controls.
+
+The **3D** viewer builds a solid model from the badge outline and raised artwork using the
+[Medal Forge](https://github.com/CatsJuice/medal-forge) geometry core. You can turn the model,
+adjust its curve and download a PNG or GLB. The dimensions, relief and finish are illustrative.
+See [the badge reconstruction notes](research/badges/README.md) for the source and modelling method.
+
+**Source overlay** superimposes the current SVG on a selected reference crop and lets you vary
+the drawing opacity. Each crop carries its own source medium. For example, the Parks Branch dogwood
+cap badge appears in a metal specimen photograph and in a printed catalogue. The crop index is
+`src/patches/sourceCrops.json`. Patch crops and the registered Warden crop come from PofBC's source
+review. The other badge crops use the atlas inventory's native pixel rectangles. The drawing is
+fitted proportionally to the crop. The rotated Ranger group views and two angled forest ovals carry
+individual alignment values. Overlap and perspective can still affect the comparison.
 
 A patch's **History** comes from this site: `src/patches/patchHistory.js` matches the wording on
 it (Lands Department, Forest Service, its parks, Department or Ministry of Forests, Airtanker, Wildfire)

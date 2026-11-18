@@ -1,14 +1,12 @@
 # S01-O01: source-based 3D relief
 
 The Junior Forest Warden badge now uses the named parts of its supplied drawing to build the
-rim, lettering and maple leaf. It keeps the catalogue's **leather** attribution as an unverified
-rendering assumption. It is a visual reconstruction, with nominal dimensions and an invented
+rim, lettering and maple leaf. The catalogue identifies it as a **metal badge with a worn copper finish**. It is a visual reconstruction, with nominal dimensions and an invented
 plain reverse, not a measured specimen or a manufacturing master.
 
 ![Before and after the 3D correction, rendered from the exported models](./S01-O01-3d-comparison.webp)
 
-These are offline Blender renders of the actual exported GLBs, using the same camera, scale and
-studio lighting. They are not screenshots of the WebGL viewer.
+These offline Blender renders document the original geometry correction, before the copper finish update. They are not screenshots of the WebGL viewer.
 
 ## Why the drawing needed a 3D profile
 
@@ -20,7 +18,7 @@ The outer and inner rim paths are full, nested shields. Raising the outer shield
 cover the inner field; their geometric difference is the actual rim band. The letter paths already
 distinguish their wider relief boundaries from their narrower faces, so they can be stacked directly.
 
-`junior-warden-tooled-v1` activates only for a leather record in the `junior-warden` family with the
+`junior-warden-copper-v1` activates only for a copper-finish metal record in the `junior-warden` family with the
 expected named source paths. Unrecognized artwork and other badge families keep the general path.
 
 ## Construction
@@ -88,7 +86,7 @@ BADGE_MODEL_TEST_MODULES=/tmp/badge-model-tools/node_modules node scripts/check-
 ```
 
 It builds the real S01-O01 and S51-O01 models, checks finite positions/normals, the source artwork
-hash, non-metallic leather, the metal control badge, open counters, connected contours, actual front
+hash, metallic copper surfaces, the metal control badge, open counters, connected contours, actual front
 ray hits, curvature limits, exact flat restoration, indexed GLB buffers and unchanged live export
 buffers. The fixed ray points directly catch the buried-vein defect. Flat, cylindrical and domed
 S01 models can be retained with `--output`; the curved examples use a nominal 4 mm rise.
@@ -106,8 +104,8 @@ the revised controls, orbiting and downloads in a WebGL-capable browser.
 ## Evidence and dependency
 
 - [Original source photograph](https://drive.google.com/file/d/1INS_YP_UZWb3HuuJuolLxhmbafQ2Fo_W/view)
-- [Patcher artwork PR #9](https://github.com/ahzs645/patcher/pull/9), pinned at `9a1412328fef46ab56a3da3bd1bca63e0110c5b2`
-- SVG SHA-256: `5bdc11226f3b7edfb4bdb79bf2783947c0df197751d5f8f182b0ae5be1b7e4fe`
+- [Patcher artwork PR #9](https://github.com/ahzs645/patcher/pull/9), reviewed at `9a1412328fef46ab56a3da3bd1bca63e0110c5b2`
+- Geometry review SVG SHA-256: `5bdc11226f3b7edfb4bdb79bf2783947c0df197751d5f8f182b0ae5be1b7e4fe`
 - Previous 3D implementation: PofBC `9345d4cd228cf1526c9d06282a1315096f6e2a5f`
 - [Medal Forge](https://github.com/CatsJuice/medal-forge/tree/a6da89fc2a9416a0651a6db113e8a2a741e6a2ae), vendored under its MIT licence.
 
