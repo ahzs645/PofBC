@@ -16,7 +16,7 @@ In any year other than today, a sub-agency is drawn only if it is known to have 
 | 2010 | 92 | 192 |
 | 2000 | 15 | 150 |
 | 1990 | 11 | 82 |
-| 1980 | 8 | 72 |
+| 1980 | 10 | 74 |
 
 That is deliberate — an undated body can't be placed in 1990 without claiming it existed in 1990 (the Liquor and Cannabis Regulation Branch did not) — but it means the history of the public service below ministry level is almost empty. This brief lists what is needed to fill it.
 
@@ -28,7 +28,7 @@ That is deliberate — an undated body can't be placed in 1990 without claiming 
 
 **By kind:** program 82 · office 48 · division 44 · board 22 · subsidiary 17 · agency 16 · tribunal 10
 
-**Sub-agencies that no longer exist:** 12 (Workers’ Compensation Review Board; Appeal Division of the Workers’ Compensation Board; Small Business Forest Enterprise Program; Electrical Safety Advisory Committee; Electrical Safety Appeal Board; Electrical Safety Board of Review; Elevating Devices Advisory Committee; Elevating Devices Appeal Board; Gas Safety Advisory Committee; Gas Safety Appeal Board; Power Engineers and Boiler and Pressure Vessel Safety Advisory Committee; Power Engineers and Boiler and Pressure Vessel Safety Appeal Board), plus GPEB, end-dated 13 April 2026. Everything else is today's, so a year like 1995 still cannot show most branches that have since closed or merged.
+**Sub-agencies that no longer exist:** 16 (Workers’ Compensation Review Board; Appeal Division of the Workers’ Compensation Board; Small Business Forest Enterprise Program; Electrical Safety Advisory Committee; Electrical Safety Appeal Board; Electrical Safety Board of Review; Elevating Devices Advisory Committee; Elevating Devices Appeal Board; Gas Safety Advisory Committee; Gas Safety Appeal Board; Power Engineers and Boiler and Pressure Vessel Safety Advisory Committee; Power Engineers and Boiler and Pressure Vessel Safety Appeal Board; The First Capital City Development Company Limited; Lonsdale Quay Development Company Limited; Duke Point Development Limited; Westminster Quay Public Market Ltd.), plus GPEB, end-dated 13 April 2026. Everything else is today's, so a year like 1995 still cannot show most branches that have since closed or merged.
 
 **Reviewed (first tranche, 2026-09-26):** 227 records carry reviewed claims; 1 need reconciliation (BC Transplant). The rest are unreviewed.
 
